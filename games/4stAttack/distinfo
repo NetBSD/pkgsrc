@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:07:10 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:43:43 nia Exp $
 
-RMD160 (4stAttack-2.1.4.tar.gz) = df5d420b5024e8634dac646247583179df533e44
+BLAKE2s (4stAttack-2.1.4.tar.gz) = a906644549ecc93fb20bf5fe45705d7e8d37da16dcce6832fa200f5d9eaa7a4e
 SHA512 (4stAttack-2.1.4.tar.gz) = 4819c0915bfe47bb965ea39d49fa007fb18cfa965b15e5e72a4b0ac3be8a03c616d9438c8dedd960ee257e44b48f98f75ced6bed5bfc77f3366328c797b30f3c
 Size (4stAttack-2.1.4.tar.gz) = 1828247 bytes
 SHA1 (patch-aa) = e98b76fff139c121926c95c06ccff0c4ee85bd71

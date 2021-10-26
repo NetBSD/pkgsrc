@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:07:44 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:44:17 nia Exp $
 
-RMD160 (nighthawk-2.1.tgz) = 3973ff63c4525de65ae4dd3803d355c102968997
+BLAKE2s (nighthawk-2.1.tgz) = 3503673c07bb988269971ddcc9ea754fe3beb6171c7abc3adf1a22a0e89783f3
 SHA512 (nighthawk-2.1.tgz) = fd1e448e5da28f86eec772fe932e32a1716a3415b9d9486f87947792ce30c0ec077f2a7596f80e96ae698c51bcc9041261e09d295e86f220aa92d407f9d66548
 Size (nighthawk-2.1.tgz) = 881268 bytes
-RMD160 (nighthawk-2.1a.patch) = 4b4bf8f7c4092ecc5ea231fab83de99977e77306
+BLAKE2s (nighthawk-2.1a.patch) = 164ae11c5ba05afdf26156569dd715f5934a694bde60d6e709e6e4b2d34ee80c
 SHA512 (nighthawk-2.1a.patch) = 8d56724e7e98ec6682f55eda935e23c3496853a7eeef8a48436e34ee37a32bce293ef870344b4eab21c34f199cc9f879d3dbe34ea44c0bc7ab2a6386518d95db
 Size (nighthawk-2.1a.patch) = 8543 bytes
 SHA1 (patch-aa) = 34a11d0be9d7f83e341a85af986042013ad804ba

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:07:38 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:44:11 nia Exp $
 
-RMD160 (libggz-0.0.14.1.tar.gz) = 5136aba62a4e988d97451b00193c10189f7265f2
+BLAKE2s (libggz-0.0.14.1.tar.gz) = 84a18a3651d147f6f36bdbbd99efe49a6996aa968a6374dfb66ee356a3a607f9
 SHA512 (libggz-0.0.14.1.tar.gz) = ca034d8196c151a59d3afec6d37270a974b2f9d9c380f46ef01238077b7c3c1b5686cb5252754523d985963e14c88e27b39da3c362e7accfbe550bdd5837634d
 Size (libggz-0.0.14.1.tar.gz) = 477382 bytes
 SHA1 (patch-aa) = e35fcef50d38f103e7d41694704dc1ce2d73ca00

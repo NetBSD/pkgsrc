@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:07:29 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:44:02 nia Exp $
 
-RMD160 (book_1.02.pgn.gz) = a9e55b2937944de0c5c57a140ad6ebe9fc92c366
+BLAKE2s (book_1.02.pgn.gz) = 8668c6cb9c56d2b671dd5474da90ff59b21f39d4fb4d8f6bcc326ed8c8b6c64a
 SHA512 (book_1.02.pgn.gz) = 2fda39fae66a2afaf0084bd482465de04a65b842276760cde69cb6649c0d3b90c5341e10b4d344e06983bdc97ec8802582d622290bc419b8742d3cd6dd39688a
 Size (book_1.02.pgn.gz) = 26265281 bytes

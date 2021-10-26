@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:07:51 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:44:24 nia Exp $
 
-RMD160 (FOTAQ_Floppy.zip) = fa73b365ce1404a406cc50fb504ba3251548ac18
+BLAKE2s (FOTAQ_Floppy.zip) = 5c1345bc58aa50515fe040c6d7f1d5c338c82584b42c526524270f3dad7f7d69
 SHA512 (FOTAQ_Floppy.zip) = 14ebdde04e312d6e94f8d33f42818fba96b1689beaa874c618066cd533021ca10c4fd3a2f47490e917594c9da9c870450718b833ca2f589582cca4ab8ffeda9d
 Size (FOTAQ_Floppy.zip) = 7109570 bytes

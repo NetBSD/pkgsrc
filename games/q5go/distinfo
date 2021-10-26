@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:07:48 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:44:21 nia Exp $
 
-RMD160 (q5go-1.1.1.tar.gz) = d6694ac4d8c1ba3579cadcf3df7d2bec56bed10d
+BLAKE2s (q5go-1.1.1.tar.gz) = 4348e7aad689f6aa171ef6982a1e18e7ef2e62b9fd1db2694bcfdcec17cf7731
 SHA512 (q5go-1.1.1.tar.gz) = 65ac43887aa92fd652885ba2eae5c9f80ab7bdb89efe6f8bbfa70d7830cd03b0ba8eca78c7b96f8f1b3ec67eecc64e59daafc5a4cb55a9f5c2ceb5ea422a6a4c
 Size (q5go-1.1.1.tar.gz) = 6562089 bytes

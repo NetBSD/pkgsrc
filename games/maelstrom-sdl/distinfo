@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:07:41 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:44:13 nia Exp $
 
-RMD160 (Maelstrom-3.0.6.tar.gz) = 9bfc8b6d822b37c5d6c4e5e07b3c8b1f0c2826e7
+BLAKE2s (Maelstrom-3.0.6.tar.gz) = 5006dcdfb1ccc60f07defdd1935a2bcc8abe19ebcab72e9cf3da48df5aafb25e
 SHA512 (Maelstrom-3.0.6.tar.gz) = a0c8271c34c07046a702ef507f751aaa74cebcdafaec5354c9eb6083d89e74011439ffe4f3a4fcedecfe2d45ff91374f0f81d9d7e691df0ba98ba20f465e9d54
 Size (Maelstrom-3.0.6.tar.gz) = 1013073 bytes
 SHA1 (patch-aa) = bf4b22c11e89517b2c71ef962924a29b88f99deb

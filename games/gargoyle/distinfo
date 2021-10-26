@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:07:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:44:00 nia Exp $
 
-RMD160 (gargoyle-2019.1.tar.gz) = 905477b0479bcd27fed95fdf704658463da417fd
+BLAKE2s (gargoyle-2019.1.tar.gz) = 657f0f6fc009c5b2d812dddbf8e0cb61b6569bbe66bcf247b382ebee5f4b1345
 SHA512 (gargoyle-2019.1.tar.gz) = 59f32be9e5faa542e5d12a03466a92503f15023add1da5370645e15ef5b6c1eb2696456b0f9fcc924a5341b40cc98e9e7bcb1aec0ea05acfd66ccc412e39cbb7
 Size (gargoyle-2019.1.tar.gz) = 14702153 bytes
 SHA1 (patch-Jamrules) = 26376ab4c3ea7950caaf4c6eeb78dcfb78f27a73

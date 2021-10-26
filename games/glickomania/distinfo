@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:07:29 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:44:01 nia Exp $
 
-RMD160 (glickomania-1.0.tar.gz) = fa292d1c542b471c3ed7e7ea371cf25e20375d2b
+BLAKE2s (glickomania-1.0.tar.gz) = c225d6e8f34e97db85e69fc788d2384adabaa04124623c95c1a2ca55e3cc1060
 SHA512 (glickomania-1.0.tar.gz) = 02ea21258881109e12abb9291435d625f5ac79aa1dcbd887e55360387672b76a2ae3dfa281d6cb167d68a4a42ccc63cc682091df17cf88c1a32550ce81171c18
 Size (glickomania-1.0.tar.gz) = 70103 bytes

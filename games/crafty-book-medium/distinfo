@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:07:18 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:43:52 nia Exp $
 
-RMD160 (chessbooks/medium.zip) = c23e90af6bc94e5d081870728f25abe85dc5f582
+BLAKE2s (chessbooks/medium.zip) = 9242534846ec09856e515c18678c1f2246229245d405e4f55100129504a128a9
 SHA512 (chessbooks/medium.zip) = 053b4d8acc514b2d4f2f77414ba77b3f364e29f4dc1e0c421cd45799220ab736a4f748cf45837580e37761641b3b8ef1984b627868b388a31f99924cd84095dc
 Size (chessbooks/medium.zip) = 8714100 bytes

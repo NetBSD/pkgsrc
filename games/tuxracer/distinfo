@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:07:55 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:44:28 nia Exp $
 
-RMD160 (tuxracer-0.61.tar.gz) = 9dc7263521db98eb0d460c57fd20524015dcf13b
+BLAKE2s (tuxracer-0.61.tar.gz) = d347c5ed6fb21af88ebb7e8f000e775be84e3a5c9d7529cac9b689d787c97aae
 SHA512 (tuxracer-0.61.tar.gz) = 65b562889413f98f75dd3e2ec9acb68b1ccf3e87990da3cafe945b85924e7af0acb7459d197ef698c6f961eb596245ce8022146a205bb6cfd269d4d889d55f07
 Size (tuxracer-0.61.tar.gz) = 636628 bytes
-RMD160 (tuxracer-data-0.61.tar.gz) = 67cc0a4cbebd203e2743932995108b113f358609
+BLAKE2s (tuxracer-data-0.61.tar.gz) = 7d986bffa1dcc9096ce8a5fd37c3060dd957869ccb986aa914509dbd7bc0fbd4
 SHA512 (tuxracer-data-0.61.tar.gz) = 26a17babe96441308323fa1afab7ebf2347b80748fb671922c487a549f01c95c6655e8491743d31e93a934cbcbbebf77da06ec6871e7cd7d157690a117e1a912
 Size (tuxracer-data-0.61.tar.gz) = 7402317 bytes
 SHA1 (patch-aa) = 834c16cb60690a2b3199dbe10e3350f67860e924
