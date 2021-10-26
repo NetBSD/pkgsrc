@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2021/10/07 15:05:06 nia Exp $
+$NetBSD: distinfo,v 1.25 2021/10/26 11:25:12 nia Exp $
 
-RMD160 (evilwm-1.1.1.tar.gz) = 22961bdb4408f57faee3901f8553d43dc86cd179
+BLAKE2s (evilwm-1.1.1.tar.gz) = 74eab1c9f3936b50677bff694f70de363096cc26b10702cc16d61b2550bce601
 SHA512 (evilwm-1.1.1.tar.gz) = a11af475f057bf18adef339f4772ff1291a25a19c86b7f18a4ce7821e70b039c256151232da6cca616ceea7d9242a60b055d654ce26e85384c6ba687ede7898d
 Size (evilwm-1.1.1.tar.gz) = 40150 bytes

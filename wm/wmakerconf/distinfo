@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 15:05:13 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:25:20 nia Exp $
 
-RMD160 (wmakerconf-2.11.tar.gz) = 18d661836272ae21f9d79398359b37b97b0a396a
+BLAKE2s (wmakerconf-2.11.tar.gz) = a93b707b62eacef5aa04d018fb3b631aa62790f74507e1c71d95b7860590d1e6
 SHA512 (wmakerconf-2.11.tar.gz) = c867cd62d88f168c91b625776ceb77ad159b75b8a451be02416cc05ed8e0fcfcd8ddc88b97bddc0bbaf30a41ea14ab9e962b4449c65a7ac5677dd832002b0a8e
 Size (wmakerconf-2.11.tar.gz) = 791166 bytes
 SHA1 (patch-aa) = 9b798864a234cbe504970b62b19149ca54eeba7d
