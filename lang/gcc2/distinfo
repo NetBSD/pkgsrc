@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:20:52 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:51:35 nia Exp $
 
-RMD160 (gcc-2.95.3.tar.gz) = 2c506b7e80cb2b4d9953f4f9753d581cb885f610
+BLAKE2s (gcc-2.95.3.tar.gz) = 8f529fd7247b086d5a06a53595dcdbefffefe108c2c8bdd6bd972e1f1a74060f
 SHA512 (gcc-2.95.3.tar.gz) = 50eb27613d5099bbcf2391b11d9818a7ff61f14fa0a01a04f956ce961cf59ccd32c4d7349ea18fdf29c2bec9126c3bda13e13715910b387c25b1bea1a557f485
 Size (gcc-2.95.3.tar.gz) = 12911721 bytes
-RMD160 (gcc-2.95.3-diff-2002-08-29.gz) = cdfa97ed33ad01b5b33f745bdfacf26ec2568b53
+BLAKE2s (gcc-2.95.3-diff-2002-08-29.gz) = 9c3feaf870cfdad75055e5b1e4d23067470eee63b0a97b32f74026fc95cd0383
 SHA512 (gcc-2.95.3-diff-2002-08-29.gz) = bce31d37f36d9ce1f96c1df617c093940e16efda529b27837e387f71dbd8634e77900312ca8a2fe1124d1f5b89d884ae2521456189a53d57a45c1246199bb9d7
 Size (gcc-2.95.3-diff-2002-08-29.gz) = 564720 bytes
 SHA1 (patch-Makefile.in) = 2df7afd44aaf19a1d21ff3f528eb0ea9de1efe65

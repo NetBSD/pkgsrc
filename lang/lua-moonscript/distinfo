@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:20:59 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:51:41 nia Exp $
 
-RMD160 (moonscript-0.5.0.tar.gz) = ad9cf1f54e660423ad1eb714289afe822102dfe0
+BLAKE2s (moonscript-0.5.0.tar.gz) = 09b0c23d59e49bd04d0f5c446a793ec77cb3f88153afe2b437166dc0c82004f8
 SHA512 (moonscript-0.5.0.tar.gz) = f573f9a96502662987de637f7f62b935fab93aa775122c9ae20d98029394e3136e6b519908ce76e1e77c51fbcee162c3ad0aa58eeb1ee56a2b07951437987941
 Size (moonscript-0.5.0.tar.gz) = 124093 bytes

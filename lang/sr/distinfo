@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.24 2021/10/07 14:21:15 nia Exp $
+$NetBSD: distinfo,v 1.25 2021/10/26 10:51:56 nia Exp $
 
-RMD160 (sr233.tar.Z) = 58c90c06abede7a15ca8a68f53b6fdfa575c79df
+BLAKE2s (sr233.tar.Z) = 689f2ee7990857ab65b0fc67794ded3247cc9ec67585c4ba4d54cdd106269f31
 SHA512 (sr233.tar.Z) = 42b1abfe8b682ef765a49810d87d80f39c14f96090a18fec77f37084b6b14fdceff1f99a7bf7720cadc69f0c4b6efd7ce70b5d5c81bf9aa7a609ababdcfab20e
 Size (sr233.tar.Z) = 1424566 bytes
 SHA1 (patch-aa) = 8df83950498d807024f00ba806613aff99a318e9

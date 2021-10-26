@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:21:01 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:51:43 nia Exp $
 
-RMD160 (neko-2.3.0.tar.gz) = b25103c19e167417ab9e307b1d921fd33953585e
+BLAKE2s (neko-2.3.0.tar.gz) = 8e1b6b86122974b6ccf813b9352ad324fe9159c97c5b824b91c64e9f11a2eaa1
 SHA512 (neko-2.3.0.tar.gz) = fec51bed0c5500561635656c7456f3da0599aa6a47a25efe739b3c51f9cdded4a8824ed14ab67bab0905d9082cf6f06b3a76c868cb1b61d440957bcd9fd3f3d2
 Size (neko-2.3.0.tar.gz) = 514044 bytes
 SHA1 (patch-CMakeLists.txt) = 6092f61c14036285653c756cfc89bac13e2e31e8

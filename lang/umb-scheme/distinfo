@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:21:16 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:51:58 nia Exp $
 
-RMD160 (umb-scheme-3.2.tar.Z) = f56954e66568d04d23ff3d535ca72fb1d2f4b1b3
+BLAKE2s (umb-scheme-3.2.tar.Z) = 7bcd91caad6835941f9a3a11efb9ad399024b82bc03a544b1a167d2409e748e2
 SHA512 (umb-scheme-3.2.tar.Z) = 04ad9f856dcb3c8686ebf49077afbc15d1bd85702543c5d8970678e382e63c06f2295ecd0c0d61c26c10065f40e627b40f89549a8946febac3cbb9c2c97ce1ad
 Size (umb-scheme-3.2.tar.Z) = 583249 bytes
 SHA1 (patch-aa) = 99a6d744660242b6c07c547540b9edc2820f6612

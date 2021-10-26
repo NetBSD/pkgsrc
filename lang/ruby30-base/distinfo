@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:21:12 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:51:54 nia Exp $
 
-RMD160 (ruby-3.0.2.tar.xz) = c65c329f89e1b26bb92cd24a83b48bb27f4dc8ff
+BLAKE2s (ruby-3.0.2.tar.xz) = a475450d0808f13669ce156dfa1c49c8a48d6f2c3a51bcd016eca00263ea1df9
 SHA512 (ruby-3.0.2.tar.xz) = 0f702e2d8ca1342a9d4284dbdd234a3588e057b92566353aa7c21835cf09a3932864b2acf459a976960a1704e9befa562155d36b98b7cda8bd99526e10a374c4
 Size (ruby-3.0.2.tar.xz) = 14746080 bytes
 SHA1 (patch-common.mk) = c23eed58427b2fd4ba8fdb3692f609701a666c6d

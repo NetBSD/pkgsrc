@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:21:03 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:51:46 nia Exp $
 
-RMD160 (open-cobol-1.1.tar.gz) = 931cd83d5ebbfae66b6e2601bb100e07a10d61a6
+BLAKE2s (open-cobol-1.1.tar.gz) = f31a90d9d02b9a996926d84c69a51b6af82846c60fba5c0f62cfbe5cb825fcdc
 SHA512 (open-cobol-1.1.tar.gz) = eb06cec456425ba5f4a091ae4ac0bfd14f38549bc147c606a022804f602102df6dbf0d399614f0eda49d50dee17eef55087748853a8cc8bdd1248f94fd09110c
 Size (open-cobol-1.1.tar.gz) = 1007791 bytes
 SHA1 (patch-aa) = fc631a6676e5bb7972963dd2f9035cf1c6014f54

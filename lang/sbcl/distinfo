@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.70 2021/10/07 14:21:13 nia Exp $
+$NetBSD: distinfo,v 1.71 2021/10/26 10:51:55 nia Exp $
 
-RMD160 (sbcl-2.1.7-source.tar.bz2) = 291fc8d7afd56d13dd71ebe8122edca47271c4c8
+BLAKE2s (sbcl-2.1.7-source.tar.bz2) = cf7e0bb60a7cc14eacec01a4e3a9d99a6099fe7a097947a6ad12dcd7183b665d
 SHA512 (sbcl-2.1.7-source.tar.bz2) = 52996bced71d003d7337c237b6078c6d7cece71a0e69ba77e2c735b9d0e92204e50a1e5eeaea946ca2adcc9c3a334b14693735817c0a19a4fbb4caf9cca3b52b
 Size (sbcl-2.1.7-source.tar.bz2) = 6622050 bytes
 SHA1 (patch-ab) = b272bee6fc39ede638cbf71106150044a2977596

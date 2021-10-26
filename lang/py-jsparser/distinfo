@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:21:07 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:51:49 nia Exp $
 
-RMD160 (pyjsparser-2.7.1.tar.gz) = 471b0cddbb50768b6f7ad4183c00a90939b4aadf
+BLAKE2s (pyjsparser-2.7.1.tar.gz) = bcc4cc0849da2dcbd65ffe01d5267b956e8add1bc166505926ef2bcb637b9b11
 SHA512 (pyjsparser-2.7.1.tar.gz) = 811faf1d1fcae363417931e095bf108b27ec8762a12048b658215ecdecc1fd1bbb183f2ec35199ce67e7837aeda6ccf27b6f4bbd62b19fe6a5c9ba6fa7615031
 Size (pyjsparser-2.7.1.tar.gz) = 24196 bytes

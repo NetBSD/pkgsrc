@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:21:12 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:51:53 nia Exp $
 
-RMD160 (ruby-doc-stdlib-0.10.1.tgz) = 242c985fa03aaa6ee54276a28d11e98e9b6c9d59
+BLAKE2s (ruby-doc-stdlib-0.10.1.tgz) = 935ff6d2a6d9c08b03ff88fbf4320d65f37a7c018e9304b422bb895ebb944e2c
 SHA512 (ruby-doc-stdlib-0.10.1.tgz) = 4c7b0c2c2644f65af3dfc4b7425dd3e3cd4719de550c5eba560c266d9b9bcf8da0d52f4916a2533162b3d559bf7a2b1d526871f1cf91e698874c45cd9a934ce6
 Size (ruby-doc-stdlib-0.10.1.tgz) = 2347615 bytes

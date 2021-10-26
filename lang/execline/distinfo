@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:20:50 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:51:34 nia Exp $
 
-RMD160 (execline-2.8.1.0.tar.gz) = bebc7ab9fee8821926bfbd29c3f8fddc37d7c40c
+BLAKE2s (execline-2.8.1.0.tar.gz) = aebaf692e57f752cf8066a5b95293bfa8e6f096a01179048885f72168a213a52
 SHA512 (execline-2.8.1.0.tar.gz) = 4e20ff5cd82941914a639abe2481efd93a7ada6d2431b65813793cc7801463179bc1c58ee73e889747038c859e5fd6e7e668b758fa1785da03e549547ca3c94c
 Size (execline-2.8.1.0.tar.gz) = 97627 bytes
-RMD160 (v2.8.1.0.1.tar.gz) = 7c3354d172c6ffaa1aeb63f36b80b7338cb75c05
+BLAKE2s (v2.8.1.0.1.tar.gz) = 5647d6f8c3889f73b44846b9be09ea5e6db3156d7470293a3ecf55a8e645cf72
 SHA512 (v2.8.1.0.1.tar.gz) = a34e48a9256f34efbe28b7f77b15023d76614b16e9d600d8048d260f26ae401bb68052f51a234644fd8febe2991768194df5dd685f205d72b2dadd7589298389
 Size (v2.8.1.0.1.tar.gz) = 35693 bytes

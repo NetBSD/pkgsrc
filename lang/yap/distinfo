@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.24 2021/10/07 14:21:17 nia Exp $
+$NetBSD: distinfo,v 1.25 2021/10/26 10:51:58 nia Exp $
 
-RMD160 (yap-6.3.3.tar.gz) = 6c92880670d58b1e885cbb52709b61773db65808
+BLAKE2s (yap-6.3.3.tar.gz) = f0c62ab419df786dab9000edffaaffb628a78c56042f2e5d5b8aca06ae81a6fb
 SHA512 (yap-6.3.3.tar.gz) = 4ef45277ec84b6e072fa54afc7d6c18f11c3a0cdf477e35e35a0ce2181c9ff2e693f8735f63a1899373f6baf79ce0a972b37e1ae6ed8271bec60663f477bbe80
 Size (yap-6.3.3.tar.gz) = 7879301 bytes
 SHA1 (patch-aa) = 41b755767d18031ea5a6dc1c225dd8cf29e1d758
