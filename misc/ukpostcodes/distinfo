@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:35:51 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:59:35 nia Exp $
 
-RMD160 (postcodes.zip) = 4709b87b784185f2076979ef3c7b80a9903ab824
+BLAKE2s (postcodes.zip) = 7f90ba5646b50db0b470e67186edc0ad6738362ac13c8c0422af04163fff171d
 SHA512 (postcodes.zip) = 9eb9a0d4d2140744f71bc4fc667fa4e7be501e0c97aa8ce7bbc604cd86ec49c01d6cb810144557f6cddc44563fe4b339478cef5a2fdecc2ad5e23ba8589cd95e
 Size (postcodes.zip) = 36625 bytes

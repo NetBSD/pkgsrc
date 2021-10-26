@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:35:49 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:59:33 nia Exp $
 
-RMD160 (sunwait-0.8.tar.gz) = ffad86c063eac4952141016fde056056d44963b4
+BLAKE2s (sunwait-0.8.tar.gz) = 48255222ed8e06c92d718315bc77c63ed7b86b6aae48ce41c32cc96e581bfba2
 SHA512 (sunwait-0.8.tar.gz) = 974aec925e08d42f6b9d617cd033ab21af314b04a0bab100f9b473e038df7eb65a86de2240ef2d5308af5385c929607d591c6f7b738925622e38040af6368166
 Size (sunwait-0.8.tar.gz) = 20302 bytes
 SHA1 (patch-Makefile) = a3ba723c2868ce7628f5bc4b93633a3abacd5c56

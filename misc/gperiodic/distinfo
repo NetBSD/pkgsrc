@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:35:21 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:59:05 nia Exp $
 
-RMD160 (gperiodic-2.0.10.tar.gz) = 9a4a16c4578342b4044d93e3327623cec98c762e
+BLAKE2s (gperiodic-2.0.10.tar.gz) = fe31317b07cd6ea78b673e433b17cbc3a86b818c5d01ef3eceb08e0a633a301a
 SHA512 (gperiodic-2.0.10.tar.gz) = 23d0074ad5b0f9e25e8eee63f8c375e2448b1ee7c00f89e965b7dd8ce3f60f20251d7699a2f7a767228316144b946a5ac204a3e478c395767133f7fc801b51ba
 Size (gperiodic-2.0.10.tar.gz) = 131213 bytes
 SHA1 (patch-aa) = e567c8ea59d706907e9ea590d16594ba0220d5f7

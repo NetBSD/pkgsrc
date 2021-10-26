@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2021/10/07 14:35:46 nia Exp $
+$NetBSD: distinfo,v 1.27 2021/10/26 10:59:30 nia Exp $
 
-RMD160 (ohai-17.5.2.gem) = bb06bf7e8a114456e53ee6a1e8e678fceed03797
+BLAKE2s (ohai-17.5.2.gem) = 0143703b6ccb5fad4b2ab39b837930f2b3a63034645067674635c31cc0d05676
 SHA512 (ohai-17.5.2.gem) = 47d983efa97fd5cd5da8784c4949017db12331377af08baebdeb9e04bb37f8f2490f8542900709010759bd1094c775ad03a520675baa19d4ba73aa8c72365cc3
 Size (ohai-17.5.2.gem) = 128000 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:35:22 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:59:06 nia Exp $
 
-RMD160 (ini-files-03.zip) = 0e6fa5be5568b19a8939d169479e9eddb7498e28
+BLAKE2s (ini-files-03.zip) = 2e71202f5b0345f533aefbfbb431b3aa634486d0918b831544ef9d0a9ece0806
 SHA512 (ini-files-03.zip) = 28db4b99125d4c74f09e89ecaa612e26472308af0b2f648fa146d8c51342ca7fbbe6fd6bc5aad006d45ef579c52a0fb176d90973dfa644a67d406a31189dcf2b
 Size (ini-files-03.zip) = 7643 bytes

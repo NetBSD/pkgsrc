@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 14:35:48 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 10:59:33 nia Exp $
 
-RMD160 (siag-3.6.1.tar.gz) = 1779b1384956ab6c786de03d6babb21e47cd0e9f
+BLAKE2s (siag-3.6.1.tar.gz) = 081a3ec758949fb4375eb464de080a2dbb487993c199b08aff1352bd1edce57c
 SHA512 (siag-3.6.1.tar.gz) = 8fc7533a2264d2a560189b673893169e2beb75986e8ead751a9143709797fd65a19d4e3bb82ee5b43f3f9020f4bcd90993c8717ce428276e56d3decfc6ff22b4
 Size (siag-3.6.1.tar.gz) = 1526023 bytes
 SHA1 (patch-aa) = d50549158fd83afb0a8cc9cb6ba607161ea45ff9

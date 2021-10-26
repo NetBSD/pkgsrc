@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:35:17 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:59:02 nia Exp $
 
-RMD160 (ec2-ami-tools-1.3-57676.zip) = 64f662c8c7b7607abe9700a03682062bebb8a361
+BLAKE2s (ec2-ami-tools-1.3-57676.zip) = 3a242c34d17270f7e7725c3c895f4e2f7e8399feaf88e251e6e57cc711dc0407
 SHA512 (ec2-ami-tools-1.3-57676.zip) = 5fe93008992451eaa0146333c3ea30af373e6728d41f932bb678d827270256046af6b4515b3607232faf52a38df895929524c8b18b457d53c369ddbb67c8bde4
 Size (ec2-ami-tools-1.3-57676.zip) = 137908 bytes
 SHA1 (patch-aa) = 4b6b7013032cc7c5db1a91dd6c2ed70e98d73659

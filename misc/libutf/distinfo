@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:35:28 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:59:13 nia Exp $
 
-RMD160 (libutf-3.0.tar.gz) = 243a030d9cb0b278ddc3263648a39d88e25f489a
+BLAKE2s (libutf-3.0.tar.gz) = e29053a6c857bf8fec67eab3fef416b6b9b09d93c5f73fa51e2c36247b824700
 SHA512 (libutf-3.0.tar.gz) = 006d3a4933d19a972091622f2e6455685c80e3d6cd0f9cbddeec123b8ba2bffd648910a42b7dd3f1ad5d7028343a93e160734bad5602b65ac4d5055caef915f4
 Size (libutf-3.0.tar.gz) = 55529 bytes
 SHA1 (patch-aa) = 762c7e0e7d45b9dce72ed5e514a3a92c4f8290bd

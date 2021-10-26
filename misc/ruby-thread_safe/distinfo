@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:35:47 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:59:31 nia Exp $
 
-RMD160 (thread_safe-0.3.6.gem) = 87759067eeee663151b225d9551196ece567507a
+BLAKE2s (thread_safe-0.3.6.gem) = 6f776458a5348ea707a85066e7c4483ec5b59742777440991f0d8fec822e4195
 SHA512 (thread_safe-0.3.6.gem) = a11808576392c068e1cb31faad706be2b1bbfa4837c655c2ab1d5a235b62b25ece62065de6b65bd25496fa827ed89eb0796b90467107df255825e01316ff1805
 Size (thread_safe-0.3.6.gem) = 120832 bytes

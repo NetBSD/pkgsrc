@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2021/10/07 14:35:28 nia Exp $
+$NetBSD: distinfo,v 1.22 2021/10/26 10:59:11 nia Exp $
 
-RMD160 (less-563.tar.gz) = ef4480307871e4c0a26a29738b9706788b616357
+BLAKE2s (less-563.tar.gz) = 88f93746bfb78f504bee66b0debefaa3aff070eefec487a3167f8d2b404d8358
 SHA512 (less-563.tar.gz) = 79384ff3faa33aeb86da6027c8b264df78f9f8c799af43dc5340e2ca3d86053c9be168140bfa05734a4217e65ef9939652b004d6a536f64b2e0ef3b74b07f535
 Size (less-563.tar.gz) = 335508 bytes

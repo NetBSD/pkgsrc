@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:35:29 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:59:12 nia Exp $
 
-RMD160 (libkeduvocdocument-20.12.3.tar.xz) = 0ae8b3d8594eb655f1d2a3f04e3b61d4c1304dfc
+BLAKE2s (libkeduvocdocument-20.12.3.tar.xz) = 35eed63bff6ad4fe2f6431022b00b7e38e10e8c7df0321f6706b8edada7ea4fb
 SHA512 (libkeduvocdocument-20.12.3.tar.xz) = 6ae7dfe1e22c0d412efe3c2d10f879b2fa9f853c4f9bcc41a86f4ad0d6031a8be57423cfb7b8badd666cff7666cfff535017882231d589e00d1ceddca6c59684
 Size (libkeduvocdocument-20.12.3.tar.xz) = 211096 bytes

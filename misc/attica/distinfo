@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:35:13 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:58:57 nia Exp $
 
-RMD160 (attica-0.4.2.tar.bz2) = fae94a0a9b9064b3e25a00a759e2ef450bffe7d8
+BLAKE2s (attica-0.4.2.tar.bz2) = 6889cd1447b5ca6886fbdc51296beae3f8c6afa901a89f97422de4ccdb9a4097
 SHA512 (attica-0.4.2.tar.bz2) = cef5d5c4bf01ed45ed8b59db354a4ac7949de435a45e4f753c847cadc15855e25997dedf1ff20c7bc4a2724d2cdba15139c54f0682df7d8cc8750de5be6f716e
 Size (attica-0.4.2.tar.bz2) = 57093 bytes
 SHA1 (patch-lib_listjob__inst.cpp) = c7c4607f41324cb0beaaf2d83be503a5ddfc634c

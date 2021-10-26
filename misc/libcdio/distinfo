@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.33 2021/10/07 14:35:28 nia Exp $
+$NetBSD: distinfo,v 1.34 2021/10/26 10:59:12 nia Exp $
 
-RMD160 (libcdio-2.1.0.tar.bz2) = 6b0e4917cd2dd5cac0b7afdb70789bf0ad2aed79
+BLAKE2s (libcdio-2.1.0.tar.bz2) = 5513848ba888570c7757a1a706126e51da3b252cb93bc5f08159b3a8e45b1a16
 SHA512 (libcdio-2.1.0.tar.bz2) = c290821da55fd9ae366670a58857aa6efcebc9f25b7caea063cf12f9cbda84fe770c5f59f972227fda50517ca58c5f39c0137daa0f93179e3daa45303d8b610f
 Size (libcdio-2.1.0.tar.bz2) = 1759040 bytes
 SHA1 (patch-configure) = 041105379b760fbd3f710da365b55588320d0ac3

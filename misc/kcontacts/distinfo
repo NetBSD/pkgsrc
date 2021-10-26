@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:35:24 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:59:08 nia Exp $
 
-RMD160 (kcontacts-5.80.0.tar.xz) = 71d5295252588a333db5513e0a81c3bc90d7aa50
+BLAKE2s (kcontacts-5.80.0.tar.xz) = 65ca5fbb093abfd9d09ba24527492e99d8335a9d5b781900056e97b74de0b789
 SHA512 (kcontacts-5.80.0.tar.xz) = d68c4f04bc2e642689ea8076819d4844c2d1c5ac086c3d785717b33ae659354cf6351760f3f00605f945f471a426222af54f525c094d9a6da79f49ce09dfff0d
 Size (kcontacts-5.80.0.tar.xz) = 542984 bytes

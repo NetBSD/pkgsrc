@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:35:39 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:59:24 nia Exp $
 
-RMD160 (tryton-4.2/trytond_party_vcarddav-4.2.0.tar.gz) = 81f00fb54a8e825c85a36e55be8eae623c4c3023
+BLAKE2s (tryton-4.2/trytond_party_vcarddav-4.2.0.tar.gz) = c37aefd2fdd0735bd0682d8b73f0ed5c8639608f866ec596a8ba5088a14de13b
 SHA512 (tryton-4.2/trytond_party_vcarddav-4.2.0.tar.gz) = 58b2855949927a9014a04e50b12f7571ad3c70ea426f7c86aa702cc394e6bb1d7caf9c6961a94bba667c2ba6ef344eaeaa4e9a4263f033ed849c3403be5ba061
 Size (tryton-4.2/trytond_party_vcarddav-4.2.0.tar.gz) = 24487 bytes

@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:35:12 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:58:56 nia Exp $
 
-RMD160 (JMdict-20061208/JMdict.dtd) = 3483e45334c835bb0955da5ee1b44d636837dccf
+BLAKE2s (JMdict-20061208/JMdict.dtd) = 6b8324403bd66dbb65130089d0461fc7ffe2df894e5a9ecdff8fcd8681e5ae16
 SHA512 (JMdict-20061208/JMdict.dtd) = 797b902c8412846cdf5c3a9b4c2aa3aceec16114bf76c814e4e82fecb2f1439a6dd942a5b6e94b2e26f06bb12e7f40f9fd83dc6268eee1d89e88b922b4a1c17c
 Size (JMdict-20061208/JMdict.dtd) = 12642 bytes
-RMD160 (JMdict-20061208/JMdict.gz) = 43def55fb0e2fdb434d96e652ec799fcbb33baab
+BLAKE2s (JMdict-20061208/JMdict.gz) = 0136e839d16ebeb81a42840e6df49ef1fe4536bbc71bc3c079716aea2837a1ce
 SHA512 (JMdict-20061208/JMdict.gz) = 6be6b1079b80afed70538d5d4392cf1503830b908dd7697dd6818cde64b85659390aee4c9cda703164b75f7362d249224814628d5d0dee8a7e2904adb333a91f
 Size (JMdict-20061208/JMdict.gz) = 6406060 bytes
-RMD160 (JMdict-20061208/jmdict_proj_desc.html) = 651067ab954ea36393884ab38fd2f5a37a70c37a
+BLAKE2s (JMdict-20061208/jmdict_proj_desc.html) = 734831ac7e343055f4a75bd9d051c71befbe16b54725bdbca1e613c7aecda964
 SHA512 (JMdict-20061208/jmdict_proj_desc.html) = 7c93bb4a7c977b35458388eb607cd494b8586b30a300933ae3509212661c185100d7fc0e6545c062cc0a7bf4c1e4f28b93c28abae0efcc1298b9ce85e5de5252
 Size (JMdict-20061208/jmdict_proj_desc.html) = 5696 bytes
