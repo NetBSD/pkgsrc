@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2021/09/13 06:52:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2021/10/26 12:22:15 adam Exp $
 bin/epylint-${PYVERSSUFFIX}
 bin/pylint-${PYVERSSUFFIX}
 bin/pyreverse-${PYVERSSUFFIX}
@@ -60,9 +60,6 @@ ${PYSITELIB}/pylint/checkers/misc.pyo
 ${PYSITELIB}/pylint/checkers/newstyle.py
 ${PYSITELIB}/pylint/checkers/newstyle.pyc
 ${PYSITELIB}/pylint/checkers/newstyle.pyo
-${PYSITELIB}/pylint/checkers/python3.py
-${PYSITELIB}/pylint/checkers/python3.pyc
-${PYSITELIB}/pylint/checkers/python3.pyo
 ${PYSITELIB}/pylint/checkers/raw_metrics.py
 ${PYSITELIB}/pylint/checkers/raw_metrics.pyc
 ${PYSITELIB}/pylint/checkers/raw_metrics.pyo
@@ -186,6 +183,9 @@ ${PYSITELIB}/pylint/extensions/overlapping_exceptions.pyo
 ${PYSITELIB}/pylint/extensions/redefined_variable_type.py
 ${PYSITELIB}/pylint/extensions/redefined_variable_type.pyc
 ${PYSITELIB}/pylint/extensions/redefined_variable_type.pyo
+${PYSITELIB}/pylint/extensions/set_membership.py
+${PYSITELIB}/pylint/extensions/set_membership.pyc
+${PYSITELIB}/pylint/extensions/set_membership.pyo
 ${PYSITELIB}/pylint/extensions/typing.py
 ${PYSITELIB}/pylint/extensions/typing.pyc
 ${PYSITELIB}/pylint/extensions/typing.pyo
@@ -297,6 +297,9 @@ ${PYSITELIB}/pylint/reporters/text.pyo
 ${PYSITELIB}/pylint/reporters/ureports/__init__.py
 ${PYSITELIB}/pylint/reporters/ureports/__init__.pyc
 ${PYSITELIB}/pylint/reporters/ureports/__init__.pyo
+${PYSITELIB}/pylint/reporters/ureports/base_writer.py
+${PYSITELIB}/pylint/reporters/ureports/base_writer.pyc
+${PYSITELIB}/pylint/reporters/ureports/base_writer.pyo
 ${PYSITELIB}/pylint/reporters/ureports/nodes.py
 ${PYSITELIB}/pylint/reporters/ureports/nodes.pyc
 ${PYSITELIB}/pylint/reporters/ureports/nodes.pyo
@@ -330,6 +333,9 @@ ${PYSITELIB}/pylint/testutils/lint_module_test.pyo
 ${PYSITELIB}/pylint/testutils/output_line.py
 ${PYSITELIB}/pylint/testutils/output_line.pyc
 ${PYSITELIB}/pylint/testutils/output_line.pyo
+${PYSITELIB}/pylint/testutils/pyreverse.py
+${PYSITELIB}/pylint/testutils/pyreverse.pyc
+${PYSITELIB}/pylint/testutils/pyreverse.pyo
 ${PYSITELIB}/pylint/testutils/reporter_for_tests.py
 ${PYSITELIB}/pylint/testutils/reporter_for_tests.pyc
 ${PYSITELIB}/pylint/testutils/reporter_for_tests.pyo
@@ -339,6 +345,9 @@ ${PYSITELIB}/pylint/testutils/tokenize_str.pyo
 ${PYSITELIB}/pylint/testutils/unittest_linter.py
 ${PYSITELIB}/pylint/testutils/unittest_linter.pyc
 ${PYSITELIB}/pylint/testutils/unittest_linter.pyo
+${PYSITELIB}/pylint/typing.py
+${PYSITELIB}/pylint/typing.pyc
+${PYSITELIB}/pylint/typing.pyo
 ${PYSITELIB}/pylint/utils/__init__.py
 ${PYSITELIB}/pylint/utils/__init__.pyc
 ${PYSITELIB}/pylint/utils/__init__.pyo
