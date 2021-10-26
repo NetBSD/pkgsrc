@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:12:49 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:46:49 nia Exp $
 
-RMD160 (tifffile-2021.6.6.tar.gz) = 55b18e308e1b94e6674877e76e342eba9d709c71
+BLAKE2s (tifffile-2021.6.6.tar.gz) = 261ae04483cfdeda114735dc0284dbb22404e6e15914df5dd64049d5c899ce59
 SHA512 (tifffile-2021.6.6.tar.gz) = 218bcc760f604233826a0467db323feb3b81ec0a0527eb3970c463e21be1c9bfc415978afba6028cf1bffcb02b34be4255da02ea319ed2eb7430666670ab2dde
 Size (tifffile-2021.6.6.tar.gz) = 249273 bytes

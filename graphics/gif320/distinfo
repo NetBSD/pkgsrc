@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:12:12 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:46:10 nia Exp $
 
-RMD160 (gif320-3.3.tar.Z) = 8e825b108616d2a1c0d6d2837aea71ad72b5a826
+BLAKE2s (gif320-3.3.tar.Z) = 32f04546ea49560bdeb995fe7fad0a09060b1ed56eedd605f09bbaeb734de4aa
 SHA512 (gif320-3.3.tar.Z) = 5658d9445ed1b61b33fb3949cdccafdad8e3853dd9ba29729d9e67917f29882751fa01dedb5c010fbbe8152ead0814a7527aa4f482cfb647b89d21cf0bb4bf3d
 Size (gif320-3.3.tar.Z) = 43290 bytes
 SHA1 (patch-aa) = 376572c40618c7bf68fa03dfc88d0cda27636b58

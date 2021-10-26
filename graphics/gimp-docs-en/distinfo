@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:12:13 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:46:11 nia Exp $
 
-RMD160 (gimp-help-2.8.2.tar.bz2) = 1b2bd82224abd9eee39e6e795368af28074161e2
+BLAKE2s (gimp-help-2.8.2.tar.bz2) = 87da77e80a8a4c17e66437206b639f90f4001fc95faedca8549b98ba57bfec7a
 SHA512 (gimp-help-2.8.2.tar.bz2) = 3afdaa8b2f005d939d039d2e22c8306145e7b7acaca5ef89279998e87931e99d1fe607f1337f7796d667d5c6be456ba976b3c8a937c9dd6b1888d7158cfbed67
 Size (gimp-help-2.8.2.tar.bz2) = 158504580 bytes
 SHA1 (patch-Makefile.in) = e78332cbcad1417e15d34ae11097210f46b087b1

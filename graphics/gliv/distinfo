@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:12:15 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:46:13 nia Exp $
 
-RMD160 (gliv-1.9.6.tar.bz2) = 23424c5f96ee4c1f05fada5be6a60a9dcc2de781
+BLAKE2s (gliv-1.9.6.tar.bz2) = c9b588f443f4fddd7d09e0d57bd1ca14e1196dcc702ed139c0921a099de3cbd3
 SHA512 (gliv-1.9.6.tar.bz2) = bf6e7108308884d50dc47faec7d65ed27c2ea1521cfc526fb8929675d52b3437276da904c8240c5c227d7bca2d0c268311f4fdc9b2d936fecda33318ad6bce6c
 Size (gliv-1.9.6.tar.bz2) = 518971 bytes
 SHA1 (patch-aa) = f1475d5620665ddbb4c2d2b8de7f0845b71dd64c

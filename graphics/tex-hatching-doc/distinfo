@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:13:04 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:47:03 nia Exp $
 
-RMD160 (tex-hatching-23818/hatching.doc.tar.xz) = 3df52dafd5260cbeca21a56e5c4144090e725c31
+BLAKE2s (tex-hatching-23818/hatching.doc.tar.xz) = fb9dec7960b40150ba7ed5071b4021a86072584e4d3f4451b816410fe494ba25
 SHA512 (tex-hatching-23818/hatching.doc.tar.xz) = e083e2decd8933dae2320fef700facad5bc0fb903410e37b1d423ac3e68efcb5de8d744c92754891e205e15b8259ee2aabffa8ed5fdb72d4037ee39f56a173b8
 Size (tex-hatching-23818/hatching.doc.tar.xz) = 2444 bytes

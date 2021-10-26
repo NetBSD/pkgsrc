@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.67 2021/10/21 19:44:30 schmonz Exp $
+$NetBSD: distinfo,v 1.68 2021/10/26 10:46:17 nia Exp $
 
-RMD160 (graphviz-2.49.2.tar.bz2) = 647b340ab50e68574ce3f77bbc2feda92305b818
+BLAKE2s (graphviz-2.49.2.tar.bz2) = c76589658078461b71086f012fac16b37089fdc3353276e23dfc0e583d6e58bb
 SHA512 (graphviz-2.49.2.tar.bz2) = 7e40c6b0e59b49c9b63e1be09a49fd591846075a3957ecb1d79a01e088932da980454ab52248af4e1e0fd3ef112b6b92f2db37b8ce152598aa16d4e6555847ea
 Size (graphviz-2.49.2.tar.bz2) = 27415158 bytes
 SHA1 (patch-cmd_lefty_os_unix_io.c) = 48f91c79b97928b54ae24af59a9fea173f34dfe5

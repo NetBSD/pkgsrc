@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:13:08 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:47:06 nia Exp $
 
-RMD160 (tex-mpgraphics-29776/mpgraphics.doc.tar.xz) = 54ad7bd910ceaef42d45be5857b6fab449f48783
+BLAKE2s (tex-mpgraphics-29776/mpgraphics.doc.tar.xz) = d4a7b32ea9f8633cb250927b083fdd6d0f15b47aa0bd1fd66e8e08f6f39b6364
 SHA512 (tex-mpgraphics-29776/mpgraphics.doc.tar.xz) = 79c2c6837f3c58f32b061de1911a5fb3564ff88b70399cbdbdbd9552de399e91552acc338a662ab2c97f7b7fb9fa64f8292ce8e40f821f6d8060ddad178d4c28
 Size (tex-mpgraphics-29776/mpgraphics.doc.tar.xz) = 182260 bytes

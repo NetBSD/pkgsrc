@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:12:38 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:46:36 nia Exp $
 
-RMD160 (GDGraph-1.54.tar.gz) = bea2d35746a3464605d8268bdb0ba628a06b0f39
+BLAKE2s (GDGraph-1.54.tar.gz) = c79aa0ae90f545da2a5864a17abbe02aaaf5f2e7cdf947b72fd7333a9496ed1c
 SHA512 (GDGraph-1.54.tar.gz) = 0dd0da5fa0e879cf2addcbfdd02ee8e9e6af715b88b451dc29fe5028f30d7ba7fa0e126d07e7bb4f9a63e40b3be95a9cc0f6c061ea8644ba0ee7fdd2a7964fce
 Size (GDGraph-1.54.tar.gz) = 157158 bytes

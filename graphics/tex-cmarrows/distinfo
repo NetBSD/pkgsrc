@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:13:00 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:46:58 nia Exp $
 
-RMD160 (tex-cmarrows-24378/cmarrows.tar.xz) = 3a70943b8d3321954260d256e96a112bf8292f2f
+BLAKE2s (tex-cmarrows-24378/cmarrows.tar.xz) = c2f87bef42a8af421dc8ab1f067ca9dec53ad8a4346b4ee06fd0c14ebe9fdb10
 SHA512 (tex-cmarrows-24378/cmarrows.tar.xz) = b79e5c70b753e6110e5809eed53e1f54d62f49aea2ec1636bad8abc5afd89fa5ee6a586f49586dc1d8f4b36678b3af5b0011e9947dc52aaa10e53588644a8cb1
 Size (tex-cmarrows-24378/cmarrows.tar.xz) = 10180 bytes

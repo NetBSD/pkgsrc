@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:12:20 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:46:18 nia Exp $
 
-RMD160 (Hermes-1.3.3.tar.bz2) = 6c169d7f33bb0ca5a82aef346ed092bb28936182
+BLAKE2s (Hermes-1.3.3.tar.bz2) = 0b0cdff54dc99916c22048539619b07573761e8a78e279c53c25f6d9a032304f
 SHA512 (Hermes-1.3.3.tar.bz2) = ca08a99da1cb23bb6019dc0d0b1a063053a536230e534bf62614e929f0e778061207e4dfd4ed40ae840a60c3b584e96e243a839d363eb96bfc5ac8755f8e75fa
 Size (Hermes-1.3.3.tar.bz2) = 356380 bytes
 SHA1 (patch-aa) = 459804a7fe816c4b2d37bc0461d923352f99c129

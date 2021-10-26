@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:13:22 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:47:20 nia Exp $
 
-RMD160 (tex-xypic-31859/xypic.doc.tar.xz) = 363f9d18fae2d222e850059c12c008ad9c75e5fc
+BLAKE2s (tex-xypic-31859/xypic.doc.tar.xz) = 3e4b663fce36bf9c67f1127f9dd4cdfcb941b8ad6dc73bc8ff9a99db4be45a3f
 SHA512 (tex-xypic-31859/xypic.doc.tar.xz) = bd2617b3d5245ff2ad26d2503a6983db29ca54cdbd37d9ee4899b24dca743557cafc89d7efcf25552a8ac424b069e897d1f5365cff437e74209ec32640c9a291
 Size (tex-xypic-31859/xypic.doc.tar.xz) = 3923200 bytes

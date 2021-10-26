@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:11:57 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:45:54 nia Exp $
 
-RMD160 (PanoTools.tar.gz) = d4c1b23b09a6b5b901fef6eeb4faaa43536c1469
+BLAKE2s (PanoTools.tar.gz) = a8f034ec9a9dbdf59bf247147601e91ca17138e25b9274712d97395e8a383f9b
 SHA512 (PanoTools.tar.gz) = 57dfb19b5ddd276564a8918b34a886f10c004e7a67bcc5c59b1db41393dc293e257e78d1cf10ba17377af857ca843f3d869220a3ee5b06c69a733c9df9c8930a
 Size (PanoTools.tar.gz) = 516217 bytes

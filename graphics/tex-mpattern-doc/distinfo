@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:13:07 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:47:06 nia Exp $
 
-RMD160 (tex-mpattern-15878/mpattern.doc.tar.xz) = ec7d6db775e26df52274b41f791ebd55694189e1
+BLAKE2s (tex-mpattern-15878/mpattern.doc.tar.xz) = 5cbf7b70cee1a30fd3213b9798913a273454341edd3906dea0f8037649565a29
 SHA512 (tex-mpattern-15878/mpattern.doc.tar.xz) = 041f76d8aaa3a629875871ddf5ccffcb662882155983504d004a13951f4e5cc94518760c382a1afd9fa7127b248bb04752f4b4a70712bae838e51abbc0ab7e04
 Size (tex-mpattern-15878/mpattern.doc.tar.xz) = 11336 bytes

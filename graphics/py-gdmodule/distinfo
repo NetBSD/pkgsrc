@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:12:46 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:46:46 nia Exp $
 
-RMD160 (gdmodule-0.59.tar.gz) = 9aeadc06d30ab2e2fe44f526a20c36ecf0490aa3
+BLAKE2s (gdmodule-0.59.tar.gz) = b0381b5a5f1abb9416cf03bbfcc516cf3a12819e52be5aa3fe82a027e43bb307
 SHA512 (gdmodule-0.59.tar.gz) = 55bfd9d411cba23e6ec5595615b1e4010b0bfbbc2d15ea6766782d20041a32e6ae8227d587dba7c410f79a124a3227152518500c7ce26733ad2384763b60b21d
 Size (gdmodule-0.59.tar.gz) = 76479 bytes

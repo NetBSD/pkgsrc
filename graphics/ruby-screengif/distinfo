@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:12:54 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:46:53 nia Exp $
 
-RMD160 (screengif-0.0.3.gem) = 94dcb4cb6f0a94b29cf457c34aadeb34cc7ba295
+BLAKE2s (screengif-0.0.3.gem) = ec1f9ac1cadf3243b013db42158448d5682fae570a4717a45c8aa488ef43c6af
 SHA512 (screengif-0.0.3.gem) = 04287678bf522b89d62f4d067bcd599b97c3ffe061e3142502e1b93f49ec81cd60fdfab164c7fad9f1bd76b7da12d27b173e986ad5180648ae3e3d74bcb7ef22
 Size (screengif-0.0.3.gem) = 11264 bytes

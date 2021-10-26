@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:12:46 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:46:44 nia Exp $
 
-RMD160 (PyChart-1.39.tar.gz) = 40a19d1eb68d9d628162e080bd3612f8a0ccebcd
+BLAKE2s (PyChart-1.39.tar.gz) = 75bb8e7fae0d24da14911237893152a826658773a94e229183884a4609afaa9a
 SHA512 (PyChart-1.39.tar.gz) = b6af817906610f3907508b72e2e95a68893f65f132c7964c803dcb88ca2e999b57f89ead1c6a66e28796f1ed2df512d16513d093fc8de1505f678edda3e41532
 Size (PyChart-1.39.tar.gz) = 115908 bytes

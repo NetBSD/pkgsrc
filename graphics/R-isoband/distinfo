@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:12:00 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:45:56 nia Exp $
 
-RMD160 (R/isoband_0.2.4.tar.gz) = b35a929bae4ae75c446e896f36e49f6f2990349b
+BLAKE2s (R/isoband_0.2.4.tar.gz) = 61b3c870af8829999d09927e5594529b979ece43c7dcd857a5f64aa7073ce283
 SHA512 (R/isoband_0.2.4.tar.gz) = 8d83afd3b5cecc33721e52b9241fd7cb1fde6b8d9e35da6ca8afbda63e603f71d4208fdb22777d6a992bf26eb66680d85d44ad267cdf89a2a6007afbe2ee8cde
 Size (R/isoband_0.2.4.tar.gz) = 2010708 bytes

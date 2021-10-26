@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.55 2021/10/07 14:12:39 nia Exp $
+$NetBSD: distinfo,v 1.56 2021/10/26 10:46:37 nia Exp $
 
-RMD160 (Image-ExifTool-12.25.tar.gz) = 5378038f8028d56dc2d9f700c775ded2c1926bfb
+BLAKE2s (Image-ExifTool-12.25.tar.gz) = d14d6b9bc4bd14c9b03c901d0d86adfda54463de95188db3e3d2d33f432f8677
 SHA512 (Image-ExifTool-12.25.tar.gz) = bc549b021cf608959ef72f98f24ddd60f331edc0c430593aa076d6967357488430369b6ab7b5b0ebfa7d6dc3b79a77dff9ffd0b740cf334a5062cd46a4741bf7
 Size (Image-ExifTool-12.25.tar.gz) = 4931048 bytes

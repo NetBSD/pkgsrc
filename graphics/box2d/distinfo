@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:12:02 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:46:00 nia Exp $
 
-RMD160 (box2d-2.4.1.tar.gz) = 052f805c1a9c7b788d97f8ca1417f8d2cd4f73ec
+BLAKE2s (box2d-2.4.1.tar.gz) = 55bf7eec8c474f1653f82d659bd4dbcf6cf440f5894b17aee0288fac1689475c
 SHA512 (box2d-2.4.1.tar.gz) = d900f925b77906777719c91488bdc5e2df1ad1f4a8ca39a574229f5e57070e3a843bdd7530e817112605fde6d82145c872d8afdfc65b84531a73199098c81162
 Size (box2d-2.4.1.tar.gz) = 1224516 bytes

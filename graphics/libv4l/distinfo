@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.21 2021/10/07 14:12:31 nia Exp $
+$NetBSD: distinfo,v 1.22 2021/10/26 10:46:29 nia Exp $
 
-RMD160 (v4l-utils-1.20.0.tar.bz2) = fe44cf5b259ccff37302d206395113bf64b79a5c
+BLAKE2s (v4l-utils-1.20.0.tar.bz2) = 42c906ede98e6747e7cd3b17aed317daa32699dcc01d13e601e93442e19f9918
 SHA512 (v4l-utils-1.20.0.tar.bz2) = 179ca8dbbf7af5fa4870b70f17645d7834fe6ba52670ae6b58473efa257db0cd812ce14f16574cc4491c0bcb218835e4c29f1354882a151687eecec97852fc63
 Size (v4l-utils-1.20.0.tar.bz2) = 2030419 bytes
 SHA1 (patch-configure) = 5831acf2dbe102537632036ccf3b8a33be68ccb3

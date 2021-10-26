@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.42 2021/10/07 14:12:51 nia Exp $
+$NetBSD: distinfo,v 1.43 2021/10/26 10:46:50 nia Exp $
 
-RMD160 (rabbit-3.0.0.tar.gz) = 3f72ef3f62013562cb602530f01c1098d9c8f181
+BLAKE2s (rabbit-3.0.0.tar.gz) = 3835225b29335aeba8e87f4c7b21710665a186b5e18e6d747b07b2f9e735d84c
 SHA512 (rabbit-3.0.0.tar.gz) = 5f91dbb7e5c5ae407ddaa1230492837c5f67415afaa512eba9d5d3e4ba40609051ac55115b27e7c0e4515a390f1bef98cb053e0a1baa97d08bce379ff92d479b
 Size (rabbit-3.0.0.tar.gz) = 5328773 bytes

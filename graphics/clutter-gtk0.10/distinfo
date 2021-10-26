@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:12:05 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:46:02 nia Exp $
 
-RMD160 (clutter-gtk0.10-0.10.8/clutter-gtk-0.10.8.tar.gz) = 07629c1b034cccf01aa2d3c24c7fc1f82f01e129
+BLAKE2s (clutter-gtk0.10-0.10.8/clutter-gtk-0.10.8.tar.gz) = b33b3ad6a694b2f1197a40dfd538e50a37ba5c78d8b48be99da22c6182e85fe4
 SHA512 (clutter-gtk0.10-0.10.8/clutter-gtk-0.10.8.tar.gz) = ac8868580ed93b50dc7a7695d2da274ca204c3fd9b7ddd2ee20d95ca6b3a30fc277b40ee27c509c63d8c7166a814b8aa2a84bdcbebec86909c63427a3449cfde
 Size (clutter-gtk0.10-0.10.8/clutter-gtk-0.10.8.tar.gz) = 391461 bytes
 SHA1 (patch-clutter-gtk_Makefile.am) = 01c0ddeaf645216014542b127acb1b316db481ab

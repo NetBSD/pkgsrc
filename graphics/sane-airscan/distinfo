@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:12:55 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:46:53 nia Exp $
 
-RMD160 (sane-airscan-0.99.21.tar.gz) = cf2124e9bb4bc777ca56cd104ce621090d8a2fcc
+BLAKE2s (sane-airscan-0.99.21.tar.gz) = ee6df2891e6baee9f9ccc8e0244215c3968d73bf618cb15a8bd0e674b4d80a2c
 SHA512 (sane-airscan-0.99.21.tar.gz) = ab713995cfba6df4f627cf4bdf16222ddab64010c254d20b6a48f4aed22aef911c0b25c432983eee8ddf4b9d517224c62b032c02769943f2cca3dbdc6cf38010
 Size (sane-airscan-0.99.21.tar.gz) = 191255 bytes
 SHA1 (patch-airscan-netif.c) = 3b06cf883514c8804e2854a5e00ccd9fae957b7c

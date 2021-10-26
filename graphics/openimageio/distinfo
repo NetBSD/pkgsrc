@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.26 2021/10/07 14:12:36 nia Exp $
+$NetBSD: distinfo,v 1.27 2021/10/26 10:46:34 nia Exp $
 
-RMD160 (oiio-2.2.16.0.tar.gz) = c8152a55b50f37a7be0902d03c92810cdf45598b
+BLAKE2s (oiio-2.2.16.0.tar.gz) = 7e5978a58f4a6ebc8f63e9612914b9e0b7b620af26dc9c9ea267a5b5495eb6d2
 SHA512 (oiio-2.2.16.0.tar.gz) = f4919801ade1de1bf4427ffb7f7e36c0a292b1f374b035cec425921fe8df61f7b5c1fbc961884d21ae41a975d7ccc8da884e9404c9f487232c71ec42e6044ea3
 Size (oiio-2.2.16.0.tar.gz) = 29239455 bytes
 SHA1 (patch-src_cmake_compiler.cmake) = 8c06e8e22eb927bbdec288c166a5dc44fbef5acb

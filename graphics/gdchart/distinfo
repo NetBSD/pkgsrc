@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:12:11 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:46:09 nia Exp $
 
-RMD160 (gdchart0.11.5dev.tar.gz) = be9b11eb446738d9e30d78e8ce73b8a418b1f520
+BLAKE2s (gdchart0.11.5dev.tar.gz) = 0513a34339f81744831cc2ff216ec164d78b9677a01071ead66026454d10e828
 SHA512 (gdchart0.11.5dev.tar.gz) = dc08d02c0273fd41d0de193126b5fd8524473e76e17ea972ed1891354ca67dd406c1073f07fe5f11a2623b575499bb7e5633825d43033fdfd2b492d19db957a3
 Size (gdchart0.11.5dev.tar.gz) = 38783 bytes
 SHA1 (patch-ac) = 191ad026f5203cd115deb9c5e7d55f981858d401

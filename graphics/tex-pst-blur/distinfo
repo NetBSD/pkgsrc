@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:13:11 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:47:09 nia Exp $
 
-RMD160 (tex-pst-blur-15878/pst-blur.tar.xz) = 8300864d1a97649cf29dc3dca36cc2a1ae6d9dd0
+BLAKE2s (tex-pst-blur-15878/pst-blur.tar.xz) = 9d316f89a19f01f59fcc2ac1807547e1aae368214dd33c5281cab11d28e7afb6
 SHA512 (tex-pst-blur-15878/pst-blur.tar.xz) = 3f822f15f008dfede572dd600838d4c52c5e90ee1fa4b6bb6928a2e8c3fcb5179131ccdcee91f84e8cf837a2c4bd7c13d8315832a8fbe94e52eb111525932d05
 Size (tex-pst-blur-15878/pst-blur.tar.xz) = 2236 bytes

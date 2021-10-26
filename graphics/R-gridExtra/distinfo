@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:11:58 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:45:56 nia Exp $
 
-RMD160 (R/gridExtra_2.3.tar.gz) = 17f71f8d874d5ad79d210f1c478a86b9829e2399
+BLAKE2s (R/gridExtra_2.3.tar.gz) = 7e44dfcbb337034df1b1d8dd6794293852ec49938d9268b4fb98f69f813028d1
 SHA512 (R/gridExtra_2.3.tar.gz) = 916b5d64bd17295855d4c81b628e900cb16b3eb3b7b0f25ee00a91bfbaf480a0785797508c4671031bc3f2a71a32fa3ecc828420fc33b3139d7e46b3bfefca68
 Size (R/gridExtra_2.3.tar.gz) = 1062844 bytes

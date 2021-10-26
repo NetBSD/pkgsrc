@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:12:38 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:46:37 nia Exp $
 
-RMD160 (Graph-Easy-0.76.tar.gz) = a87d9238059ce2bddfb32aea7da26828dae716a0
+BLAKE2s (Graph-Easy-0.76.tar.gz) = f9413ec5e575514e071b6eb0f1bd7435930ff5c23e1da3e3eee6e2a5b4b452b7
 SHA512 (Graph-Easy-0.76.tar.gz) = c5f93252a047ccb0c02347f9f138217c1d52b10ba67db100de7d57a716b3da8d564ecbddedd795420eccc6fe4733bd9b3e64d1fda7d203b144c6112d6bfbe6d0
 Size (Graph-Easy-0.76.tar.gz) = 467184 bytes

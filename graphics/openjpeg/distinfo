@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2021/10/07 14:12:36 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/26 10:46:35 nia Exp $
 
-RMD160 (openjpeg-2.4.0.tar.gz) = 662070ce960ac0d90fb803385602e34c42c9f910
+BLAKE2s (openjpeg-2.4.0.tar.gz) = ba47d310f5ea2a373a6a8f57368e1b2d12c20b1d6fbad6c8c9abd231f4852eaf
 SHA512 (openjpeg-2.4.0.tar.gz) = 55daab47d33823af94e32e5d345b52c251a5410f0c8e0a13b693f17899eedc8b2bb107489ddcba9ab78ef17dfd7cd80d3c5ec80c1e429189cb041124b67e07a8
 Size (openjpeg-2.4.0.tar.gz) = 2233229 bytes
 SHA1 (patch-CMakeLists.txt) = 3738946db63df4d623c6ce486bd22fa4d57336e2

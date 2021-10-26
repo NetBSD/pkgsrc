@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:12:12 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:46:10 nia Exp $
 
-RMD160 (gfract-0.32.tar.gz) = 6196bd3cc17c4c41bbd0b7df4cbe0691e52de521
+BLAKE2s (gfract-0.32.tar.gz) = e06acd1e2a3a25330bf7f5344f38ebaaba4fea2172da3b8f9e1fb4e2b6c197b1
 SHA512 (gfract-0.32.tar.gz) = 1e04bd8f21691063138ce16e8fd0d84969e2e93a6b13f80423c2c7d7af910b873b4c9f3f05b7c77492551657791af5f7eb33d80ec5e3226ece6bd59756a8e82b
 Size (gfract-0.32.tar.gz) = 34166 bytes
-RMD160 (gfract-palettes-0.1.tar.gz) = 3430c31cb5cb2317a02b1e2cf506c5ffa9601a7c
+BLAKE2s (gfract-palettes-0.1.tar.gz) = 4e933352308eb1ccdea5020652b742d2b98acd4a28fb82efbe9a19a55cdd663a
 SHA512 (gfract-palettes-0.1.tar.gz) = 120e9333024972751b3da0c1e6513c8d7c22162b2627b549b9ea4a79e1bbfc843ecd45d8777f507913eb2e973c9f3c54e600cf6b364d057d52d9406c21f61b8d
 Size (gfract-palettes-0.1.tar.gz) = 223648 bytes
 SHA1 (patch-aa) = 374c5fc29e3b3b07a5b0873ee1d042128b1ae5b8

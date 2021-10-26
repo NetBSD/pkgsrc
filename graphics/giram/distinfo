@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:12:14 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:46:12 nia Exp $
 
-RMD160 (giram-0.3.5.tar.gz) = 4535ff962ceb68f774e2d8b3176dac9dd9eceed1
+BLAKE2s (giram-0.3.5.tar.gz) = 303887d414dc7815b99a8a2e5c3ffb36cfe450c0dee28c036a061e92b9f78a84
 SHA512 (giram-0.3.5.tar.gz) = 50ad888328c25fcef3c62bfca2d3163dbc18a4f5d155e794b45222eeac1fb530347096b5d801ed10cebc345963041abfeed3eb6292e02dd09488c302bfa76558
 Size (giram-0.3.5.tar.gz) = 1028404 bytes
 SHA1 (patch-aa) = a575aba5e5bc501f62b7ccd409f3d45306e8b002

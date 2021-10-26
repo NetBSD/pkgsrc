@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:13:17 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:47:16 nia Exp $
 
-RMD160 (tex-suanpan-15878/suanpan.tar.xz) = b8bf5339d23da17a76f56536d0c316e42c07b04d
+BLAKE2s (tex-suanpan-15878/suanpan.tar.xz) = 57b81df93d334d780042b2b5447a24b32937dac431258c17e413a0eb50146853
 SHA512 (tex-suanpan-15878/suanpan.tar.xz) = 420461f06d33b011e4a28728ebfb735d3318daabeeb16b205f4e92e01e50ddfcd6a9dadf3389e9fa29259168c30533103e78145ac559b051d7b05c1bc5c584d5
 Size (tex-suanpan-15878/suanpan.tar.xz) = 4480 bytes
