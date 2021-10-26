@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.137 2021/10/07 14:30:58 nia Exp $
+$NetBSD: distinfo,v 1.138 2021/10/26 10:57:38 nia Exp $
 
-RMD160 (boost_1_77_0.tar.bz2) = 2f65aacb1d4ec0296dc3cceab761757a2bc55986
+BLAKE2s (boost_1_77_0.tar.bz2) = 11f9651d7078e67a69a97f46dce3131af1f1b3ba5976c26435cd17a66161cbf1
 SHA512 (boost_1_77_0.tar.bz2) = 39b45c9b60bc5a2a4c669a4463d1272c1e093376b2fb374d7f20a84ea10a3e23bb04b335a735a83a04575731f874d9bff77e89acd947524b3fbbae1b26ae1f2f
 Size (boost_1_77_0.tar.bz2) = 110361537 bytes
 SHA1 (patch-boost_archive_basic__archive.hpp) = 1f809170538f83252dc2f368825622f7a9df96f9
