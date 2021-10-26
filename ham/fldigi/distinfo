@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.70 2021/10/07 14:17:20 nia Exp $
+$NetBSD: distinfo,v 1.71 2021/10/26 10:48:37 nia Exp $
 
-RMD160 (fldigi-4.1.01.tar.gz) = 598158a8367a821265893812cec496f0d1fdefaa
+BLAKE2s (fldigi-4.1.01.tar.gz) = 35fb81226f38aa127651f313179736444b858e2987204697173442b6c39c41ea
 SHA512 (fldigi-4.1.01.tar.gz) = f0fa33714b56d396dea59511083546765a34c645aa03875d0c6bb38af89ff79ecad6b5556895a6615d18b6340d50d94beb69e92c4a488fed346863fa1e378633
 Size (fldigi-4.1.01.tar.gz) = 3916445 bytes
 SHA1 (patch-scripts_mkappbundle.sh) = e5029f71ce2474b2781c891faffd74c572d3f3eb
