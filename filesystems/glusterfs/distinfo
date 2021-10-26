@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.72 2021/10/07 13:51:04 nia Exp $
+$NetBSD: distinfo,v 1.73 2021/10/26 10:25:29 nia Exp $
 
-RMD160 (glusterfs-8.2.tar.gz) = 469df65750ae447abacf57ff8b0975810a4ac1b3
+BLAKE2s (glusterfs-8.2.tar.gz) = 8e3161a768b5875b190f44cc3698de3ea9703c2550306c019dc6776c4ab12cd7
 SHA512 (glusterfs-8.2.tar.gz) = e11ffd544cdfd55e4309bcf10d9f6d3cb13b3c0beeaf578e024c9b40df19f5bc5dc6965bca1166e96e05e42041093c48772b160952c235f7456f0898594d01d2
 Size (glusterfs-8.2.tar.gz) = 7761620 bytes
 SHA1 (patch-config.h.in) = 1560806ebd786139b404544461dcda0ec1d60b37

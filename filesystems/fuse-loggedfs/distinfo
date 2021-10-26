@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:51:02 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:25:28 nia Exp $
 
-RMD160 (loggedfs-0.4.tar.bz2) = e2ad904e70fec7c9a188f2bc5d6528adfcb104f2
+BLAKE2s (loggedfs-0.4.tar.bz2) = 619146af01fad7f1cd348f2085a8c0e4ead1b72f03b651731bdb87b7aed2abda
 SHA512 (loggedfs-0.4.tar.bz2) = 146d9a8aed71870cba0fe7463e43ac07056f83e8227437aca79fdaee18a535ff50c8ec4be8c11528a12f4fb3249d81af01e1fad3cd3bdfde245e29feae23d7c5
 Size (loggedfs-0.4.tar.bz2) = 14851 bytes
 SHA1 (patch-aa) = 8d9b6b4ad40e0d8c9c8693746d6fc888002eb4c5

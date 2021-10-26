@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:51:03 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:25:28 nia Exp $
 
-RMD160 (svnfs-0.4.tgz) = 6df496b4a66705407526c7881f8f8ace7f09a3d0
+BLAKE2s (svnfs-0.4.tgz) = b9bd0906f565d56b0664b5a0076b734c9bad9f649429dac26eb9eacf2e1e3dd3
 SHA512 (svnfs-0.4.tgz) = 1ce2bb4e919af211a0904f735bddcb1e913893a86816bcf9968ff4bea55af019d704f04bdc811cdbc2acfafdf2227a72b82757f4c223b8cc4b35300c4c9474c2
 Size (svnfs-0.4.tgz) = 206594 bytes
 SHA1 (patch-aa) = d36413042258fd482e8b97ab62c9c1657e189747
