@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 13:23:27 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:05:19 nia Exp $
 
-RMD160 (libotr-4.1.1.tar.gz) = 528c5ad4ba89f3225bebf5b5ecadf815239fed88
+BLAKE2s (libotr-4.1.1.tar.gz) = c0da7ccb7e5c28d02d6295668b63f3551e9dd840662f8f0e91e70bf9b0a4e483
 SHA512 (libotr-4.1.1.tar.gz) = c957206235b9f627542f23a645c822ea1b318d83fa655f41ed8d9a3c0dddf30b88f0ca82060026af155e48ecb13969dc9270831f20304669794151f666ae5cb0
 Size (libotr-4.1.1.tar.gz) = 655791 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:23:19 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:05:11 nia Exp $
 
-RMD160 (atheme-services-v7.2.11.tar.xz) = 6cd765aef710470f2d980b0351d61611265b096c
+BLAKE2s (atheme-services-v7.2.11.tar.xz) = 9e2d046d6a61ee997c6cf5b6a56691e593b116f4309b527feebc432662be6a88
 SHA512 (atheme-services-v7.2.11.tar.xz) = adcc189b61efe295997a7456022a7595df5b14b55c2139794d380e57fe77efd42221316558391b5440f077fd951143905454b0e9893deec89108fa671b44ef2f
 Size (atheme-services-v7.2.11.tar.xz) = 1051436 bytes

@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 13:23:32 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 10:05:25 nia Exp $
 
-RMD160 (irssi-icb-0.14.tar.gz) = dd104925ece6eabd0112b86b9eb6898846ba8f52
+BLAKE2s (irssi-icb-0.14.tar.gz) = 2d70224b959477210ec89ee90266f246480bdca1b9979480cbdf753d8dbdb5ab
 SHA512 (irssi-icb-0.14.tar.gz) = cbc4328be328375aab9f73bd3100f7a56592022f957c166e0e1a1c4e921f1f7b11fa6d6cb2e8d246056cdfe7377eea2eb52818a62b5c54d66606961e0fafcb65
 Size (irssi-icb-0.14.tar.gz) = 172647 bytes
-RMD160 (silc-client-1.1.8.tar.bz2) = a010384b5e498a62cc6cd69e97602f3118b64d2f
+BLAKE2s (silc-client-1.1.8.tar.bz2) = c6c54c258560920e838d0c776754522b68e03befa2abd850b3743213fe93d495
 SHA512 (silc-client-1.1.8.tar.bz2) = 3b9850557c7f82679a686948f7487ca7bfa53bca320ed798f83f172a1d4eff418c15bcda164bb9ade7051a5e2b19987f0a2145e7e860d0f7f63cd1032206e67d
 Size (silc-client-1.1.8.tar.bz2) = 1532816 bytes
 SHA1 (patch-aa) = 007777f25399402b86a3a54dd5fc8e462c7c7579

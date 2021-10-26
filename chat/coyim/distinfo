@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:23:20 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:05:12 nia Exp $
 
-RMD160 (coyim-0.3.11.tar.gz) = 32b3e81e808951faacc63efaa19ba0d0d5318a93
+BLAKE2s (coyim-0.3.11.tar.gz) = 95414e97fb3683329cfd97502517141be2b21dff0e165a2687cc7d98731aca10
 SHA512 (coyim-0.3.11.tar.gz) = a9d3b9900e78f736617969d4c2ebcb88abbb427dccc0396ed5a655f8ae0d22c3ddba44bdd4e0b4370af97972e883e9ee52b425cbfa226945c6aad7a2a473accb
 Size (coyim-0.3.11.tar.gz) = 3803018 bytes
 SHA1 (patch-vendor_github.com_gotk3_gotk3_gtk_accel.go) = 0be66c744d2492f414a69da6d104d5facacf8519

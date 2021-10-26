@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:23:22 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:05:14 nia Exp $
 
-RMD160 (gloox-1.0.17.tar.bz2) = 1051a978ad1c5462c43b56302cf323ad333c0d34
+BLAKE2s (gloox-1.0.17.tar.bz2) = 527ab319220070755f4ba948dbca344449e402ebff7e321c064de0d2ad3a550a
 SHA512 (gloox-1.0.17.tar.bz2) = 8595586da391fa23f54eff7c8eb514e7000d3569eac3846edc28da02ec2da409f46013de93dd6d4b5185965675fc22ff2c96f031afa581e2d9243469b1b419f2
 Size (gloox-1.0.17.tar.bz2) = 698239 bytes
 SHA1 (patch-configure) = b14cc132665cbcb722589007c36767c0ddfab25f

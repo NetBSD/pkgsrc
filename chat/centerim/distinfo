@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:23:20 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:05:12 nia Exp $
 
-RMD160 (centerim-4.22.10.tar.gz) = 2514c871388edb98b4a8957f965ccee3450b968f
+BLAKE2s (centerim-4.22.10.tar.gz) = 484579b6469cbc73fa4059dca0dbd8291ee63e7d8ba1acc33d1f4af3dff71384
 SHA512 (centerim-4.22.10.tar.gz) = 1cabb6d455e2c1d2bb70a4330f78a34b54dabbc9a7d77d93ef7a08cfae73958670e86dee06b1fb7cb393c248d9682a491edb19a81cb43e7b0f44513c24759116
 Size (centerim-4.22.10.tar.gz) = 2287832 bytes
 SHA1 (patch-aa) = 47ddb8568aa36255ad20b71d999284f023726980

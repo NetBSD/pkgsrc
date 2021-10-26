@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/07 13:23:33 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 10:05:26 nia Exp $
 
-RMD160 (telepathy-glib-0.24.1.tar.gz) = a01ea8180f4cc25f40b5aeadb1564230b46a0b57
+BLAKE2s (telepathy-glib-0.24.1.tar.gz) = fd2f8ff82f2d73eb8726beff1367f6958ea372b74b46e6fe7a77d654d1e0c338
 SHA512 (telepathy-glib-0.24.1.tar.gz) = 2fed94f76a19d6069f671cdd45d2fd8a4b4ad27c4601aff66041ca205456be397c76a86f92cc9bf20fa4eb6d4c15a67ed8196644c143c37e945f382229a63335
 Size (telepathy-glib-0.24.1.tar.gz) = 3898149 bytes

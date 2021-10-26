@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.42 2021/10/07 13:23:32 nia Exp $
+$NetBSD: distinfo,v 1.43 2021/10/26 10:05:25 nia Exp $
 
-RMD160 (silc-client-1.1.8.tar.bz2) = a010384b5e498a62cc6cd69e97602f3118b64d2f
+BLAKE2s (silc-client-1.1.8.tar.bz2) = c6c54c258560920e838d0c776754522b68e03befa2abd850b3743213fe93d495
 SHA512 (silc-client-1.1.8.tar.bz2) = 3b9850557c7f82679a686948f7487ca7bfa53bca320ed798f83f172a1d4eff418c15bcda164bb9ade7051a5e2b19987f0a2145e7e860d0f7f63cd1032206e67d
 Size (silc-client-1.1.8.tar.bz2) = 1532816 bytes
 SHA1 (patch-aa) = 52cc285982176c1680f74059de47d1bde456a871

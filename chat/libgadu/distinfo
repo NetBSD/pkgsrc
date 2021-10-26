@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:23:26 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:05:19 nia Exp $
 
-RMD160 (libgadu-1.12.2.tar.gz) = 5d67b799710d42985b18bef15ddfc9e2f2eb5309
+BLAKE2s (libgadu-1.12.2.tar.gz) = 8c825e38a2c3add2db028ecbe7935135687d6eca7cafdf614c3f33d1bed556cb
 SHA512 (libgadu-1.12.2.tar.gz) = d3b4fde94327ef312b1df668b8eb73fea9325c9258d85aa65e2746b73f00c2606ebe23f3330493a135a0fec1d0f24988f0cec607d4d899d880853ee8bf60e677
 Size (libgadu-1.12.2.tar.gz) = 298884 bytes
 SHA1 (patch-configure.ac) = 7e25edf3aa50ec2bb1cca842686b1af08ecd6530

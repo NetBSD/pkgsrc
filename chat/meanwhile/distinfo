@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:23:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:05:20 nia Exp $
 
-RMD160 (meanwhile-1.0.2.tar.gz) = 2ae78a2f5586c1a106c462c19018872308dd6af0
+BLAKE2s (meanwhile-1.0.2.tar.gz) = 045c8ba24dee7e2c9d4f3c98f0a200d86cddbf86eddaa4f7dd227fc71f1791d4
 SHA512 (meanwhile-1.0.2.tar.gz) = ba356124352ed522bc4c62282e4267960e0d3751c990cc422957ae263c70932264dee2d5e3dfe436325ad53f1833ff541eda4b36a6b78441374256ef54c786e6
 Size (meanwhile-1.0.2.tar.gz) = 479325 bytes
 SHA1 (patch-src_channel_c) = 766515d353e300d9ad40ca00ef5dd04ebf7b21a6

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:23:29 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:05:21 nia Exp $
 
-RMD160 (Net-Jabber-2.0.tar.gz) = 80f1c1dd8c7d1d33f33268b75b76bc25d622fda2
+BLAKE2s (Net-Jabber-2.0.tar.gz) = c0e1a70f6108abca09570032baef60692adeeec3fe72c012120473f4f832d570
 SHA512 (Net-Jabber-2.0.tar.gz) = 2ad275fdef8a7ed17dc464f692b974e71bc3a5df5239943cceaec9509e6454945023e220ddfb42763e18813124f6b7f2d6d43faf3059e0680b753486961a1b4c
 Size (Net-Jabber-2.0.tar.gz) = 112416 bytes

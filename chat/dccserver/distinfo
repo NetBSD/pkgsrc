@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:23:21 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:05:12 nia Exp $
 
-RMD160 (dccserver-0.5.tar.bz2) = 597e25bd658190501b96cf8de9a64eaa07e03de3
+BLAKE2s (dccserver-0.5.tar.bz2) = 568e38e6a15f5000dbf453c8895e336a4f9d32ca3996b7ca0dfa213426988e11
 SHA512 (dccserver-0.5.tar.bz2) = 3204473f5f17e6d303c31b382f7ed957368f5f96d3e0c92f60b833fad34ed3ae98573cb48f07e5a04eccc8d12e07a21367a44b54809c1b7fe62c3e5dcb904077
 Size (dccserver-0.5.tar.bz2) = 114498 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/17 18:14:04 tm Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:05:16 nia Exp $
 
-RMD160 (icbirc-2.1.tar.gz) = 5baa2c98b8d6cbf562234a94c1bb245b856e560c
+BLAKE2s (icbirc-2.1.tar.gz) = dcf38dec0e41384d826da300760b40f5dfd3645491b6c1315240480d72116c15
 SHA512 (icbirc-2.1.tar.gz) = 65307ea451849dab06a59614e4183f4bbb3eb391b5c36a729bc86864d5aeda025ddc22f4d101181e8ebedc8927e83a8d27b33b12e246dab7a04f8b763b5e526d
 Size (icbirc-2.1.tar.gz) = 11257 bytes
 SHA1 (patch-aa) = 19aa0b6fae7f7f85af3546116e0c7d76f5b9c523
