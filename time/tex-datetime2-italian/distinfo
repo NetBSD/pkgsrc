@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:04:18 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:24:41 nia Exp $
 
-RMD160 (datetime2-italian.r37146.tar.xz) = e0fea42965c760e65fc82ca86a33f56b8d10ac01
+BLAKE2s (datetime2-italian.r37146.tar.xz) = 41d70a5a24fae1d3f3b684416e285883f1abd8e756c42df8d96b8eafa11f11bc
 SHA512 (datetime2-italian.r37146.tar.xz) = d099d05904e416d44e9a9ffb337b23e2c1f908dfddbb41cfd7629c4abaa7769c76f50ef687751224ab4ae94a0df4d1962adbad602ed3a7473566e16c5c4bea48
 Size (datetime2-italian.r37146.tar.xz) = 2904 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 15:03:55 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:24:19 nia Exp $
 
-RMD160 (glclock-6.0b6.0.tar.gz) = f0bd207a47a01e3dc3d3da5b107b168a3210d2a3
+BLAKE2s (glclock-6.0b6.0.tar.gz) = 4cc848f16213d44a4122199fc6e5e69e33bbd4c768d004582ca2ece03c32ad45
 SHA512 (glclock-6.0b6.0.tar.gz) = 57b1a3591f1e6fcff2613072986437260d2acf619b93059b7a335d86b629120a0ab035744d4901ab45aa96cc8b963ede70ad625389fdcb291609651ec0a84930
 Size (glclock-6.0b6.0.tar.gz) = 811803 bytes
 SHA1 (patch-GLExtensions.cpp) = e2cd7d8f698a9f3dac3de819df9d316abcc0e822

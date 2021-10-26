@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:04:00 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:24:24 nia Exp $
 
-RMD160 (Data-ICal-DateTime-0.82.tar.gz) = 979458f50ba7f49b7a1a32dcb03852d1e0cf04ca
+BLAKE2s (Data-ICal-DateTime-0.82.tar.gz) = d440426a375df9a16497d7b8edb953851e0462227a52e2a2185fece59bf2d375
 SHA512 (Data-ICal-DateTime-0.82.tar.gz) = 0f117303fcbf06ddb45cc3b9e454440e49995d4a39dedf5db5e6859ca020ae0209287ce0a729e899f656c1df8fe72465df6c28773aa4ef3c5a411a98bde4d2da
 Size (Data-ICal-DateTime-0.82.tar.gz) = 41926 bytes
 SHA1 (patch-Makefile.PL) = fb10e9002bc503ff2652f18a2222fa0310533c32

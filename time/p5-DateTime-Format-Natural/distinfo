@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2021/10/07 15:04:02 nia Exp $
+$NetBSD: distinfo,v 1.22 2021/10/26 11:24:27 nia Exp $
 
-RMD160 (DateTime-Format-Natural-1.12.tar.gz) = 508183cf049a946a39aa94a0f174cfd6b88befcd
+BLAKE2s (DateTime-Format-Natural-1.12.tar.gz) = 9b1ea4d241ba969fb7935df87b47a9a0b758f62ecfc3de6f3bffc64c19f593a4
 SHA512 (DateTime-Format-Natural-1.12.tar.gz) = c2685815e76d7208d2491a01bc93e0c15657325fc1e9b33b85f123085814b9d4554a25b575241605a6c819f1627486b093bf08eeb25bb55531e15a15ddf158c8
 Size (DateTime-Format-Natural-1.12.tar.gz) = 82853 bytes

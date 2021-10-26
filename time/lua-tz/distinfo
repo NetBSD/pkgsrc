@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:03:58 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:24:23 nia Exp $
 
-RMD160 (lua-tz-0.4.1.tar.gz) = c97e7c9a0b1471388333581a8cf6fe8253eba982
+BLAKE2s (lua-tz-0.4.1.tar.gz) = 55ee7d7613fc588a8168ac0e0972f4caecf99ceec077d74884a93083e1bea647
 SHA512 (lua-tz-0.4.1.tar.gz) = 87e53afa85aa66cc0359d9581eb3dd9974f6ceb11cb57b0bfc6745d9bb1b6dbc90520fb6834e5de85b7fc46ff44c5d35dfd7136547a1973585f8cbf8707b45d1
 Size (lua-tz-0.4.1.tar.gz) = 19297 bytes

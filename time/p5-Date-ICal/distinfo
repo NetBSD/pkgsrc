@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:04:00 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:24:24 nia Exp $
 
-RMD160 (Date-ICal-2.678.tar.gz) = 6e5b98c50b96a9e7e935c5d27c9c08608b9b8bb3
+BLAKE2s (Date-ICal-2.678.tar.gz) = 31e62940f5d1a0c884343a2a491e01c08a9f84ae1e3d836cb1817e9b4c83fad0
 SHA512 (Date-ICal-2.678.tar.gz) = 317d793ed058b8cc21090f681f44e19c91282ad29b7c3fd0c2d2ee1bce66244b402ada90ea8c63d4bd25f5c9a5f5984257cbe700cd1d852e799232e421b77fe4
 Size (Date-ICal-2.678.tar.gz) = 43936 bytes

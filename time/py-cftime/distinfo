@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:04:08 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:24:32 nia Exp $
 
-RMD160 (cftime-1.5.0.tar.gz) = 8408909fa42962099dfc06e310b4a8dfddfbfbda
+BLAKE2s (cftime-1.5.0.tar.gz) = 37cb8b03839aef7f8e647ead554dee752e691ba937bffa9eac485d68bfb0361d
 SHA512 (cftime-1.5.0.tar.gz) = 8607d12ac1333e47de1976b0efc96f0f2a141cff19291974300c23b35ea9e389e698de0dc8fe5303b2686c77750e8d4017670c697de16d989c689391109ec510
 Size (cftime-1.5.0.tar.gz) = 44972 bytes

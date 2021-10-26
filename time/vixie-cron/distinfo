@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:04:20 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:24:44 nia Exp $
 
-RMD160 (cron_4.1.shar) = a9a8d3fe6c851d7fcd098676f2edc0bc310f695e
+BLAKE2s (cron_4.1.shar) = 11761807393afe32680329334b0104afec6a44cfeeb952c790df27ec9a92f674
 SHA512 (cron_4.1.shar) = fa1b03591a5471238771249b4353bc456fa56c21340ecdac6480e907a8c5176b234e6bd6b8c486402a61764768e4cb75a466808d374bad125ce4b637f54ba89b
 Size (cron_4.1.shar) = 205506 bytes
 SHA1 (patch-aa) = 98605040a8bd02b85b75baad1dabf53d807c5af8

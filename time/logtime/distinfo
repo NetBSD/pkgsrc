@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:03:58 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:24:22 nia Exp $
 
-RMD160 (logtime-1.2.tar.gz) = 4fd00b4f202abbfb2aa438d16321c330e038b69b
+BLAKE2s (logtime-1.2.tar.gz) = 25a76dd5bb72439a1431010f9cb2169e54f48f296ffe99f3ec772de6b822192e
 SHA512 (logtime-1.2.tar.gz) = 2eabb562dd1fbeefa0c357a57a0e03efa665d434e86742bd1209130c5b3e94953b4987778cf44afc4ae13403d8c26fb5c6f08d74e3e718d8b92c3d6292c218bf
 Size (logtime-1.2.tar.gz) = 1770 bytes
 SHA1 (patch-aa) = d4f52e6f78273b9e8d4ab81a889f5f2bb6b8e631

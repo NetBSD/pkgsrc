@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:04:19 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:24:42 nia Exp $
 
-RMD160 (datetime2-samin.r49346.tar.xz) = 80f76a31d1b2b216aaba65c039af8b7a7fc506d6
+BLAKE2s (datetime2-samin.r49346.tar.xz) = 47b3d8aad9035c8c442f0b2d572f76f357b75af5232d6adbd9e84740176f21fb
 SHA512 (datetime2-samin.r49346.tar.xz) = fc4e6401ce02b1aa7be5fd78e5d5e74aff6ac35cbb6864cbce6d93fe0b2716510f6ccdd290c82286b8e51f37abe8460c0f8340ce0f9135838ecace7502f72784
 Size (datetime2-samin.r49346.tar.xz) = 2588 bytes
