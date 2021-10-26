@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:17:22 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:48:39 nia Exp $
 
-RMD160 (lpcnet_191005_v1.0.tgz) = 2f99dc863a508aa3e0eebed0b8db0bfb5b7f1898
+BLAKE2s (lpcnet_191005_v1.0.tgz) = 19c192cd9e5cabfb7edfee741a2f2e92ad5f5ae3ccf4c9eeb2e8ed5256f33d6c
 SHA512 (lpcnet_191005_v1.0.tgz) = ffa52c492f2ef1ca09c34b321b36d9dd26f6d3a2e807f4601858b45a1c6159b45b846bfaf3d37c74acead955c0ad47c2d06cb08b8347d5ec441cd751f2110167
 Size (lpcnet_191005_v1.0.tgz) = 18396516 bytes
-RMD160 (lpcnetfreedv-0.2.tar.gz) = 85f989b6f364420887f9e13ae3e4a8669541862b
+BLAKE2s (lpcnetfreedv-0.2.tar.gz) = cda3c92d3746fb1819d58f2b8aefece34fc98bc1d4c401f968bf48ae1ac8a43a
 SHA512 (lpcnetfreedv-0.2.tar.gz) = 3fa581512b7431bf4df41a0abc0c4f2b262d57f1bf4756dfb23c774393dccd90bb9f7f874e5192aaabd17ed780007602f363d545d3cfb53bb9ee7022ed4a966c
 Size (lpcnetfreedv-0.2.tar.gz) = 33010807 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.27 2021/10/07 14:17:23 nia Exp $
+$NetBSD: distinfo,v 1.28 2021/10/26 10:48:40 nia Exp $
 
-RMD160 (uhd-3.15.0.0.tar.gz) = b05282c4b3f25bd201e9b91b3652fba9b150c7ae
+BLAKE2s (uhd-3.15.0.0.tar.gz) = cfb452db0e7dfc00aef5fbfefae19135e55f1576bf05f6d3f7b33d1824316d90
 SHA512 (uhd-3.15.0.0.tar.gz) = ef62639d956adb5b4815b8e57bf4d6e62519bcaf509ce87af4f6091b79b4bb78c2bc079ec6f678777c24a146d5d5e1c8f225ad7ac5dba46bec6f8e1cc20309b0
 Size (uhd-3.15.0.0.tar.gz) = 12895934 bytes
 SHA1 (patch-CMakeLists.txt) = 5691ddd6a98f92e649a184cfc092a4eb721c6fe7

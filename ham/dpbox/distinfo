@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:17:20 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:48:37 nia Exp $
 
-RMD160 (dpbox-60000.tar.gz) = 05a14f7601b531fcdd0bc0252d171eed3bfafb7f
+BLAKE2s (dpbox-60000.tar.gz) = 5ef71d0d23db2ff5b0d4ec8052f615a50b51d6abbd1e49a4a8b2a3f6f2a28c1f
 SHA512 (dpbox-60000.tar.gz) = 24258c73e657d1a1daa55d65262acdf967e350956958a807ab786e891938df324a4639b55b51c2dfa0015c3a944cac7f419194edea970a0564d3f370aefb02bc
 Size (dpbox-60000.tar.gz) = 957010 bytes
 SHA1 (patch-aa) = abf41e621eecd933e5d0d46d4fbae7e64fe2ec88

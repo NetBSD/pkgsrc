@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:17:22 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:48:39 nia Exp $
 
-RMD160 (predict-2.2.6.tar.gz) = f98f69d1d9adf01802e93069989a5c0211876a6f
+BLAKE2s (predict-2.2.6.tar.gz) = 0661bc5499978f4745d39d180b48a380419c168458f0cf904d43ba93ad1d0342
 SHA512 (predict-2.2.6.tar.gz) = d1a6bac26335eda1038160f0850c16bf850ec5b9037b57dde32c52f9a5be22426852abe91d69463c3b00903ea2cf35f66fe3cd42ecbdeb2c702f048445d0ad24
 Size (predict-2.2.6.tar.gz) = 1642742 bytes
 SHA1 (patch-predict.c) = d66c416e44d81cca09a6d18da753623f75ae7390

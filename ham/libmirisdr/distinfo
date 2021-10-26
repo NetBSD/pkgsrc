@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:17:22 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:48:39 nia Exp $
 
-RMD160 (libmirisdr-59ba372.tar.gz) = 8c68ade38c2ccdd0c45e7d21c5da6e782d7c27ac
+BLAKE2s (libmirisdr-59ba372.tar.gz) = ac654dcfa8f0f28bf6650eebc8e1d490253b5a67536b1a5afb15260228da3192
 SHA512 (libmirisdr-59ba372.tar.gz) = a63d7c64f053059594972f8c9d69941aeb1f76917bbc540be84631a2bc270986e78e66817f4320254911276cf9b5270069d59ba3809e978361c36cf2aef464ed
 Size (libmirisdr-59ba372.tar.gz) = 45826 bytes
