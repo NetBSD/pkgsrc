@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:17:23 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:48:40 nia Exp $
 
-RMD160 (wwl-1.2.tar.gz) = 048369a3bd2d207b8d56878abcbe0d472d602000
+BLAKE2s (wwl-1.2.tar.gz) = aae82d780f2494ae07c02ae5db3b4143d4d7d479786599fedf1e1adcd855b72f
 SHA512 (wwl-1.2.tar.gz) = e1796024de8a9521f9b1febadba8fb0401f48a38ec4e36b1dd51fc82a29d043b30ab68dd88281e3dcd8677e9ddf08fb2ef3f8ae4e8fcae2b60298c51b413086f
 Size (wwl-1.2.tar.gz) = 2604 bytes
