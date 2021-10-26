@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:05:13 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:25:20 nia Exp $
 
-RMD160 (weewm-0.0.2.tar.bz2) = 8fe602c67e5fbe6ac2ee4a12a5a1704aba4de4e3
+BLAKE2s (weewm-0.0.2.tar.bz2) = cc78b795ecd570009fe66a466f46b4d5fa68893c7dfb245511a73eb3c2dce3f9
 SHA512 (weewm-0.0.2.tar.bz2) = 91eb7c77ce783cd96ffaee390d6683b565dc636eac77c11508eb7a83e631d1f3aef34f0c3be16a938755ac9a4fb48f4699d8330dbfd21e666b8eaf968881ab86
 Size (weewm-0.0.2.tar.bz2) = 44051 bytes
 SHA1 (patch-aa) = 9a7c9b1a5e85f51ed7c52ae39f5b08b95cbc1c08

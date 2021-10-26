@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2021/10/07 15:05:10 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/26 11:25:17 nia Exp $
 
-RMD160 (pekwm-0.1.18.tar.gz) = 7ce46804b83e239dc3b4abb4851f85d12a70e2ed
+BLAKE2s (pekwm-0.1.18.tar.gz) = da0a422c6c9646df3405d3a9b86c30424f69e132100a96b2f44eab4d86b5fcfa
 SHA512 (pekwm-0.1.18.tar.gz) = 7fe04c04089d3375d1f64d456a7a582e88fd1f442c1c710bdef71309c7fe5aab234026ba381eb9a49b3d459b759924b577ba9597156e46e60147a9d845c27e89
 Size (pekwm-0.1.18.tar.gz) = 531611 bytes
 SHA1 (patch-data_Makefile.in) = c746c899463621167afbee0e770f934bb68a92d2

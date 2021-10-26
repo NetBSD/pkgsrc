@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:05:13 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:25:20 nia Exp $
 
-RMD160 (WindowMaker-extra-0.1.tar.gz) = 94334c2c12d20a8fd0cd2a70e54cd3689f043038
+BLAKE2s (WindowMaker-extra-0.1.tar.gz) = fcc4303907d18491d8604899bea7a2dfa00dfcf526c190570ed2cb169f5969c4
 SHA512 (WindowMaker-extra-0.1.tar.gz) = 0fe9b3ffc093942db167d8a01e15c0f6741f3a40959d1434ea4f23e7b9d4a9c13935a61eabef9691e5fdfd4e407564caafce15c2d65d66499960a6764a874ab8
 Size (WindowMaker-extra-0.1.tar.gz) = 238018 bytes
 SHA1 (patch-aa) = 08330bb195997536be4c6c22b36e59f91a1b1f87

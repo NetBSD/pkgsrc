@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:05:09 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:25:16 nia Exp $
 
-RMD160 (NovaWM-0.8_alpha.tar.gz) = 71d81d56b60669cd9323b6590b11064e5b376b3d
+BLAKE2s (NovaWM-0.8_alpha.tar.gz) = 648cb0d54c81464142b96a2b00f5d8b2261ee68d4d72141464a97afd1006bf50
 SHA512 (NovaWM-0.8_alpha.tar.gz) = 3d6004b7abf8b932c21ca9f591ae82e4c440798e3614fc57230534e473e11088f18b3a2eb19d9e440f33ed2c541fcb2a4c0ae61c5841f50b03c9bf413b591938
 Size (NovaWM-0.8_alpha.tar.gz) = 1103082 bytes
 SHA1 (patch-aa) = 8c4b80cce3c5a55a76031fd69bc051155841352c

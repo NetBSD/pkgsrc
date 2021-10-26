@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 15:05:07 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:25:14 nia Exp $
 
-RMD160 (jwm-2.3.7.tar.xz) = cdb51d734b66e3ef733b41c33700732c2b9e3a90
+BLAKE2s (jwm-2.3.7.tar.xz) = ba8f893e582189983c5db910dd1eb4b43e338b717565d4aa2021535852df1502
 SHA512 (jwm-2.3.7.tar.xz) = dab0241518e52aa2e3e1ef3f67b6965ceb683bdb0224de7d3a653d76440606d70e86e35047eda40ea53a80aa227408be77739ad7c53d51f53026e3d113ab7efc
 Size (jwm-2.3.7.tar.xz) = 350332 bytes
 SHA1 (patch-Makefile.in) = 0ae071bfa59770c3b07f8ab6ce138e6d92318e1f

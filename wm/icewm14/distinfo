@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:05:07 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:25:14 nia Exp $
 
-RMD160 (icewm-1.4.2.tar.bz2) = 6aaabad0c235901556951c9d88178adf15e29f51
+BLAKE2s (icewm-1.4.2.tar.bz2) = 9c819ff22406fd31efbb2779e5cc19905540eee25cdcab6210f45f199c259d89
 SHA512 (icewm-1.4.2.tar.bz2) = 0d227d75d2e3e6e5314eb0990375b85a34496e61e8b504ee023decb52b0c3a20bfd65c0d491b738d3742ddf3f21acfabfc8e4d43df51d137f568580b6c5ed0cd
 Size (icewm-1.4.2.tar.bz2) = 1731772 bytes
 SHA1 (patch-src_CMakeLists.txt) = 87a236a6d53937921ffca0044b1497124f8a9d83

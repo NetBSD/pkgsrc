@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 15:05:09 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:25:16 nia Exp $
 
-RMD160 (obconf-2.0.4.tar.gz) = bbcab8ffd09f9a11b5f774c346ae60fcbd3453c3
+BLAKE2s (obconf-2.0.4.tar.gz) = 2c1bd05699fb2c71d368cc8ef0077e923ae334abf6b213e05aa6263cb605001e
 SHA512 (obconf-2.0.4.tar.gz) = b8cf6f363fa8c2f1d21142a3f79687a72f683f564285b05751c822ddf7a421b09c3440cbc5b08eb09d151601c6ada835ff5cc940bf5abeec2210cca26b552294
 Size (obconf-2.0.4.tar.gz) = 456523 bytes
 SHA1 (patch-aa) = 0de087b762e8f545fa361f480a0e2e30e0ac40ee

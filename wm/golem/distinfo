@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 15:05:06 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:25:13 nia Exp $
 
-RMD160 (golem-0.0.5.tar.gz) = 845d67cc96fbf34aca99c50bdccf4c1afdafb7f1
+BLAKE2s (golem-0.0.5.tar.gz) = 024cd51f35e8b73f946b792950fbd173fa9b8a1fa4c0e514f4168e527f596609
 SHA512 (golem-0.0.5.tar.gz) = af02e19ea687e2eea6705f0d394cbe77da53cb57f6d81a15e637993d8851ac83089a195b67e9486ff7d90d7abc69ddbde6143a3a6146bc5c496874c783aee71d
 Size (golem-0.0.5.tar.gz) = 748348 bytes
 SHA1 (patch-aa) = 2c2bb75dce922316a3360cc4e0fdcfdc97209527
