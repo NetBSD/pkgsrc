@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:19:37 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:49:30 nia Exp $
 
-RMD160 (fcitx-qt5-1.2.3.tar.xz) = 49e774083d0156ef1f758fbda57cbb0e86618fea
+BLAKE2s (fcitx-qt5-1.2.3.tar.xz) = fce7ba7b7757344923c01433d51b5bb5003037268df68c62f25963f49e670d90
 SHA512 (fcitx-qt5-1.2.3.tar.xz) = e3e9a76419caca4eeebf3c149a72ee939a25f463d03dd8461caf44cace310278b08e83d460112f240cd54ed05dba3c5e9732198f0c3d0b9d81c3a444c33ab8d3
 Size (fcitx-qt5-1.2.3.tar.xz) = 134124 bytes

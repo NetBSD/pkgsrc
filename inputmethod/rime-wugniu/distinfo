@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:19:47 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:49:40 nia Exp $
 
-RMD160 (rime-wugniu-0.0.0.20200120-abd1ee98efbf170258fcf43875c21a4259e00b61.tar.gz) = d6bdeeef0fec53d1b704fcf3d731cc1a2adaf11c
+BLAKE2s (rime-wugniu-0.0.0.20200120-abd1ee98efbf170258fcf43875c21a4259e00b61.tar.gz) = 3de6ed5125a2601b55636bf73ddd2d9ff1ece99a3711f465ea08867ce907db20
 SHA512 (rime-wugniu-0.0.0.20200120-abd1ee98efbf170258fcf43875c21a4259e00b61.tar.gz) = 257d4bd8d62dda5bce4beb39879fc46b4981590ce16d347ad3e2441f1b9bacabfe3772d8e0cf134a4a70b7dd5490e6bb6b6526e0e45d58d22730217e23407095
 Size (rime-wugniu-0.0.0.20200120-abd1ee98efbf170258fcf43875c21a4259e00b61.tar.gz) = 268955 bytes

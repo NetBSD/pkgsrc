@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:19:43 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:49:37 nia Exp $
 
-RMD160 (librime-1.7.2.tar.gz) = 1350ac1b2fc8d93740e3b1402dce2952d0fdd8d6
+BLAKE2s (librime-1.7.2.tar.gz) = 9d5a3ac67c7c3019196e9c18f847e2b8ae92c0c949a3ba71cf60a5bb6758c2f6
 SHA512 (librime-1.7.2.tar.gz) = 213f14b2f3e09fd93dffe2b6ce0d4a2651f1759c3df2929885ec6a3e036f343f1d07127a82a22378bd95677a5a45395d6bb7d884e12d40a3a160d0e9ef24a6ba
 Size (librime-1.7.2.tar.gz) = 2859403 bytes
 SHA1 (patch-CMakeLists.txt) = 7f2b03ae0451a14fa587cf8089a5021b1149ea14

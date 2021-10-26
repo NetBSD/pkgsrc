@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:19:39 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:49:33 nia Exp $
 
-RMD160 (fcitx5-unikey-5.0.3.tar.xz) = 75c2974f6941ae65e850324b9b3894f309e0bf57
+BLAKE2s (fcitx5-unikey-5.0.3.tar.xz) = 0f4f42e728bf9b053f693f6b4dc2007c3924163ad2612a055cdb85c7494d97cb
 SHA512 (fcitx5-unikey-5.0.3.tar.xz) = a91cb98df9997df7f2e3e12d3b011dd107d88d3727a01e27e16bb339fb584cfc0ceb7216705dc609e7ecd3cdbf24818339f8a0e374e8b9d6ea2ec685a5bcdea5
 Size (fcitx5-unikey-5.0.3.tar.xz) = 66556 bytes
