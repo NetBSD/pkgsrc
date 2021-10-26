@@ -1,4 +1,4 @@
-# $NetBSD: digest.mk,v 1.3 2018/08/22 20:48:37 maya Exp $
+# $NetBSD: digest.mk,v 1.4 2021/10/26 18:46:49 nia Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -40,7 +40,7 @@
 # replace.mk magic to set the TOOLS_DIGEST and DIGEST variables.
 #
 
-DIGEST_REQD?=		20010302
+DIGEST_REQD?=		20211023
 
 .if !defined(TOOLS_IGNORE.digest) && !empty(USE_TOOLS:C/:.*//:Mdigest)
 .  if !empty(PKGPATH:Mpkgtools/digest)
