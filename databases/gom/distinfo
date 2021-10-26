@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:35:09 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:09:18 nia Exp $
 
-RMD160 (gom-0.4.tar.xz) = 312e4b14a815e04fdc369b3f7cf47d899be05b6a
+BLAKE2s (gom-0.4.tar.xz) = b83514177a0f415f13c2327b66ecaec159db0a55e2a35b9ad74a3900bb1b61ba
 SHA512 (gom-0.4.tar.xz) = d847928ce09c53a3f64777c313cb843052e5e001873f29d3f7acf02772cadf0e4b133fb0137aa0463b4ff95dd54810bde87062d8e396ff4fc6d142ba59c8e9c8
 Size (gom-0.4.tar.xz) = 102744 bytes

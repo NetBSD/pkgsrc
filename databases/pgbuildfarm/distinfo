@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:35:31 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:09:43 nia Exp $
 
-RMD160 (build-farm-4_15_1.tgz) = 4b95b8ed1d7b80589fae5f1dbb37e1e1ef0f5c22
+BLAKE2s (build-farm-4_15_1.tgz) = 8cea8b592e4b891024dc2539f7407e200860fb3535b1966c80938e4e60bbfc72
 SHA512 (build-farm-4_15_1.tgz) = 37733e188ab20c0ce090d41b32c0d8f5411e2d2f34827c5fcc6eea7bd4a011bd106aab47c60d70d2b59a03d925bc28fca57010f39727e5b1f6dcfaec02314316
 Size (build-farm-4_15_1.tgz) = 34382 bytes

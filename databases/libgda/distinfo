@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.38 2021/10/07 13:35:13 nia Exp $
+$NetBSD: distinfo,v 1.39 2021/10/26 10:09:22 nia Exp $
 
-RMD160 (libgda-5.2.9.tar.xz) = b96a8548228f932d51bd92c19667a214b1ab1d55
+BLAKE2s (libgda-5.2.9.tar.xz) = df6cb402d934d69519fe0b65370ac8432bf2adf1db4c431f58bb112ddd29fc8f
 SHA512 (libgda-5.2.9.tar.xz) = a28324533298d42aacfce5d9f3d699314ddb5d5fe7e492433dbbe4232fb310b798d312ac08dffd4f4ebef5ceea3c6c49ef3c679ab97b5e9d1f64e3fed50b2231
 Size (libgda-5.2.9.tar.xz) = 12619160 bytes
 SHA1 (patch-data_Makefile.in) = b5c09e1d653f5290db1452537c310767cb6cf5b1

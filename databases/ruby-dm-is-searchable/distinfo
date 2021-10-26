@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:35:46 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:09:59 nia Exp $
 
-RMD160 (dm-is-searchable-1.2.0.gem) = c88fdb2b1e337493de247796406f317527e89096
+BLAKE2s (dm-is-searchable-1.2.0.gem) = 2b16d2223fb25937de8f2942aeb68615e2201b875cde72da1cabcb7c9ba12b7b
 SHA512 (dm-is-searchable-1.2.0.gem) = cd9911a5d93e05c98800aced5fb74426ed5cab70aca73a375f458465693bf7c82052490309ff09cb2b3540adcc2b1777fca5c08d76cff32ab645b991d0360b9a
 Size (dm-is-searchable-1.2.0.gem) = 8704 bytes

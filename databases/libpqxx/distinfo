@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 13:35:13 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:09:22 nia Exp $
 
-RMD160 (libpqxx-7.3.0.tar.gz) = 8c86a6b6152f6d9a42e8d848f26db606afdc5d9c
+BLAKE2s (libpqxx-7.3.0.tar.gz) = 4e73b7e36a8942f30f2c1b344234f082a974c5bb640083049f757824bdd45d90
 SHA512 (libpqxx-7.3.0.tar.gz) = 897af8e1c0ab12df745116e5387d3c31fb8800b6c599f49413ddcc67df7968fb1922c96896c818ce3f34d9649fb6c1d2ea59784f8765fb765481b156be44eaa2
 Size (libpqxx-7.3.0.tar.gz) = 694012 bytes

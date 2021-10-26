@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 13:35:43 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 10:09:56 nia Exp $
 
-RMD160 (arel-9.0.0.gem) = d47f4ba61dbc05e4eb016f046806248ce974207a
+BLAKE2s (arel-9.0.0.gem) = 6829bcca552c34913a3650de0047dabe7db99150507898ce09c2e73030d1c088
 SHA512 (arel-9.0.0.gem) = f722f4b0aa9a83698f4f7d4791c5c298d2893274eab9ad74f6b1ec903d884220157d00d6f205968805ad30d99e466758c315ecd115a81df6fdecb44f1ca9e32b
 Size (arel-9.0.0.gem) = 32768 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:35:34 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:09:48 nia Exp $
 
-RMD160 (pxtools-0.0.20.tar.gz) = 0a040e2007019f367eacee5e95b3a05179e80b3d
+BLAKE2s (pxtools-0.0.20.tar.gz) = d19d671fb604b312134b2cba3400e808ed232ad84926993598d8cd4586d3a5b0
 SHA512 (pxtools-0.0.20.tar.gz) = 24d6cb88decc0fcc2b7a052a38507dc4660ca26cec55144eedea3dc37572783d403c6faa13e7e8d0be6fd82b075291269fd1e21b30356945524b83b99e26b232
 Size (pxtools-0.0.20.tar.gz) = 149990 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:35:11 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:09:20 nia Exp $
 
-RMD160 (mysql-connector-java-3.1.14.tar.gz) = 0a447be57bbfdedf02263c031af79b965b63446a
+BLAKE2s (mysql-connector-java-3.1.14.tar.gz) = 670ab441a1dd13ee7378c054fb0f7999b4e262232ee1f71f085a7b433bb839b3
 SHA512 (mysql-connector-java-3.1.14.tar.gz) = 32f7ac22fa4d3775674153178b69c6e49e5c600fac754566999c7e13368e90c34c107f27aba07a08efa6c98f03e2eb042e376b119ede3e8810fb5357cf27f0ce
 Size (mysql-connector-java-3.1.14.tar.gz) = 28936239 bytes

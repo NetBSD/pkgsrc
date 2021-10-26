@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.30 2021/10/07 13:35:41 nia Exp $
+$NetBSD: distinfo,v 1.31 2021/10/26 10:09:54 nia Exp $
 
-RMD160 (qdbm-1.8.78.tar.gz) = 84c812eaa0ddde822dd37515de67287098bd3a4b
+BLAKE2s (qdbm-1.8.78.tar.gz) = 5051f15f8bcd1ea54c825cb1e7c47d70fed6851ab8f2345cefd55768b3527692
 SHA512 (qdbm-1.8.78.tar.gz) = 480549c56071bf82edf714a611aef863599c858ed63702820ae0890fd2c0029d1a231ed94a8090c74420dd648bd3625d270a5c078b113cbb86a12ef509e19037
 Size (qdbm-1.8.78.tar.gz) = 1015429 bytes
 SHA1 (patch-aa) = aa83e9ce9ebd7aba7c579a641c8d79905b6ee388

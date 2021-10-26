@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:35:32 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:09:44 nia Exp $
 
-RMD160 (php-dbx/dbx-1.1.2.tgz) = a7c7cf7a8489b66b94177e1b4ef293b1db645e3d
+BLAKE2s (php-dbx/dbx-1.1.2.tgz) = b8da05b9aa7143bee84e6074bb3c444865b2305ff52e164589baccf8aa8bea7a
 SHA512 (php-dbx/dbx-1.1.2.tgz) = 890d724d5f1c57952fc5ada8e9b3ab36cac5d9dd70c3296eadefe17fb225ad35d3002224dc03e6e2f21e974dc68c6e1a39b8a44a88ba906ab345599d73f4aeec
 Size (php-dbx/dbx-1.1.2.tgz) = 31348 bytes

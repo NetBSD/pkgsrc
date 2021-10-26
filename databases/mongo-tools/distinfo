@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:35:14 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:09:24 nia Exp $
 
-RMD160 (mongo-tools-4.2.15.tar.gz) = 43a7d9239f2e8ac43ae57e542f99f6278d7ad330
+BLAKE2s (mongo-tools-4.2.15.tar.gz) = 3e098cf2e12a018224e10d0ead8048726039d1b8e9ce407d06f833aedf9f0e9a
 SHA512 (mongo-tools-4.2.15.tar.gz) = f613ab61a4cf029548aa0e5623fef3798642ced791bf52f229e7d14d31de9472bfc3c8bfb3fa7b4542555a17c79ff9a514480c674cb3e45fb99c4f1745fdb9f0
 Size (mongo-tools-4.2.15.tar.gz) = 15028734 bytes
 SHA1 (patch-vendor_github.com_howeyc_gopass_nix.go) = 3eae07c84c7c4c08a9076f9f91ae0b56e7e1183b

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:35:26 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:09:38 nia Exp $
 
-RMD160 (Net-MySQL-0.11.tar.gz) = 3a00aae21832203a609bc29b365a36593f0b3b50
+BLAKE2s (Net-MySQL-0.11.tar.gz) = e76fcfa8037ad71abf4eff4aae10c8214c22cc7df281fa96aef0bda7ef2723df
 SHA512 (Net-MySQL-0.11.tar.gz) = 0bac937a55228b77d4abdf150b68e8ee79cd2eec68bbc6a66bc4ca9edc6e2077d8b982347cf1603bf79099c7f0a79b397b19dafa5f8b2ec7847fe941c7edee01
 Size (Net-MySQL-0.11.tar.gz) = 10429 bytes

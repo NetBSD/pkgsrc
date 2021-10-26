@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:35:17 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:09:27 nia Exp $
 
-RMD160 (AnyEvent-BDB-1.1.tar.gz) = 61e763f28e0f6acc5592b3b68b00aaa3a65d6e6e
+BLAKE2s (AnyEvent-BDB-1.1.tar.gz) = 25695fded6ad9095a03c32b925555acf16a2c6c527048588f129698d28f7dab5
 SHA512 (AnyEvent-BDB-1.1.tar.gz) = f320daed4512fa943440dd82801b411100d9cb765bc89cd70be706cfa60d0a40729f2f04fad83f4a0f9c05dfb62132dbc7448dd75fc218cfabb8a62b7e938cf1
 Size (AnyEvent-BDB-1.1.tar.gz) = 2063 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:35:12 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:09:21 nia Exp $
 
-RMD160 (libdbh2-5.0.16.tar.gz) = 350b9c41cb323020bc168bceedc3b46b1c4abdf2
+BLAKE2s (libdbh2-5.0.16.tar.gz) = ecd1976d69dd48b8a6f961db9870b253b03b694bb587ae5233be1fc10d74265c
 SHA512 (libdbh2-5.0.16.tar.gz) = 07ceacc17f4e5ea0d2bcabc4aa30572414f2c2ed16b967eec65b591a285f162540114502d42a55cc886c477f7f5ca7b9cb8a1c0e5d27ed032e8208d1f014e5eb
 Size (libdbh2-5.0.16.tar.gz) = 530740 bytes
 SHA1 (patch-aa) = 806c02e2e0acf31b454f12e477dc429ab9e19465

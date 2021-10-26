@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:35:43 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:09:57 nia Exp $
 
-RMD160 (awesome_nested_set-3.4.0.gem) = 164e2d204fcdf80431d6ad0cc81d38acd7e432a7
+BLAKE2s (awesome_nested_set-3.4.0.gem) = b7e931bf8cee25b8e28f9bba75124bb2b1ca6ebab87028efa26c323cd0041027
 SHA512 (awesome_nested_set-3.4.0.gem) = 9d65cc55d5d966ca0ed979af8f529688cfa2dd40ae6c4221f3fbc2c01a2f8c6bfb4018457770c6317247277065b5d3606e3627bf1812f3b77a0c1247226b70a0
 Size (awesome_nested_set-3.4.0.gem) = 25600 bytes

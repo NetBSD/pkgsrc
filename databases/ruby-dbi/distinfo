@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:35:44 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:09:58 nia Exp $
 
-RMD160 (dbi-0.4.5.gem) = d92baf34b31d9c9cefdb3780e2e7f20bafd2952c
+BLAKE2s (dbi-0.4.5.gem) = d2668cb3914ac7be7b467740ec90ec903994b3fb49b12b0af43aa94cb14166a6
 SHA512 (dbi-0.4.5.gem) = b7b6dfb22ab2430275868b8b4801b3a3c296c879b2a21394b161541734f4818ba51dc74a0c3906b9879fbbc1f4b4be4b43a98108cf855aae5dd7a5fdfe7632cd
 Size (dbi-0.4.5.gem) = 73728 bytes
 SHA1 (patch-lib_dbi.rb) = 56dfaeb016a498d2f9525a0499d016f0025f329c

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:35:23 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:09:35 nia Exp $
 
-RMD160 (DBIx-Class-UUIDColumns-0.02006.tar.gz) = 18eb378c397730182f0cdbb17ad3826d688cfa82
+BLAKE2s (DBIx-Class-UUIDColumns-0.02006.tar.gz) = 20b746cc14237b4c2b9f9306da79362472baa6d5aa8337e4f9b4b093fcf6922b
 SHA512 (DBIx-Class-UUIDColumns-0.02006.tar.gz) = 9a4b74f2cadd345c0e7b1563099e8c0444d43c89b8f0dfb63f9e9d818df4b2cdddd57b23451edd5b8f145dd0c67f430da1d14cf10ff9ce95fc6a4128bf43c008
 Size (DBIx-Class-UUIDColumns-0.02006.tar.gz) = 29547 bytes
