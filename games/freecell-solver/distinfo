@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:07:26 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:43:59 nia Exp $
 
-RMD160 (freecell-solver-5.14.0.tar.xz) = 66bf3c2f654990b6cf3171f2214d3ae6ac845a41
+BLAKE2s (freecell-solver-5.14.0.tar.xz) = a9c1fdb0a2ae9a82efb40d880266bcd707492d800a0fdacc15255f7f0ef9a6d9
 SHA512 (freecell-solver-5.14.0.tar.xz) = 21c8898673e402514c6d40ae0045d6e9077b1606430465bfb146507fbe098be6ca4f88d976e2dafadbc8e84b5aeb9325b58ce8a384ea4ed6de4f5fec485d51ea
 Size (freecell-solver-5.14.0.tar.xz) = 407912 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:07:55 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:44:28 nia Exp $
 
-RMD160 (tyrquake-0.62.tar.gz) = 6412f1f6f8aa355e298d6ba17cbf86f4af996809
+BLAKE2s (tyrquake-0.62.tar.gz) = 150540d4cb8af17b9863141341b36d656d07185e0e082c6819c5e3ee105f84d7
 SHA512 (tyrquake-0.62.tar.gz) = 16b4c5f6de2e77e09933248c030836ad07c129e8680f7f8b14e526fa865dad15cf94fce25bf2c3cc2e33da9a6ffa849475c02d0a8aa777e5037befd468d1ee4f
 Size (tyrquake-0.62.tar.gz) = 948269 bytes
 SHA1 (patch-Makefile) = 58cd46fcd266d7d766cf3f166c19dc60b1d93e72

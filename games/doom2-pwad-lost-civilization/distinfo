@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:07:21 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:43:54 nia Exp $
 
-RMD160 (joi_lstcv15.zip) = 14543ef38e1f213a14f044603270bbdb6d80bc03
+BLAKE2s (joi_lstcv15.zip) = 7df65d60f066cdf1af591d49b8510675f8fc778eb0f7f3637204d5e0544a25fb
 SHA512 (joi_lstcv15.zip) = 1f11d77b6269eca188ed83126bc2b231f62aa06e05bb6d15b964c3ae18b0cf7ad769a08ce9576b926cf4060e84e0003bbda922fca5534b0eee7b10fac4aa3453
 Size (joi_lstcv15.zip) = 39900946 bytes

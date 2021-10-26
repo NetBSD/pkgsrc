@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:07:50 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:44:23 nia Exp $
 
-RMD160 (robotfindskitten-1.7320508.406.tar.gz) = bfbdbfdc0b7c81cd834a2f2ab005bd301ba5996b
+BLAKE2s (robotfindskitten-1.7320508.406.tar.gz) = 0827123f74e4077c15f2c3b56f705c1318e0a5724b213581e999d0867b12b6e1
 SHA512 (robotfindskitten-1.7320508.406.tar.gz) = 96c8f9968336cda5f079ca4b69a17a76444a3291b1354d594d2a9b89cb0d88296b983c70076da3334774710d811b33a90fe513ba5dca330808e5345e6c920865
 Size (robotfindskitten-1.7320508.406.tar.gz) = 406412 bytes
 SHA1 (patch-configure) = 0ac7bf23c092e6302db9ac040845663cdcab5f2e

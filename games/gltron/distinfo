@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:07:29 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:44:02 nia Exp $
 
-RMD160 (gltron-0.70-source.tar.gz) = 78f624cb622e9bc4847b912a6f7686949c197e54
+BLAKE2s (gltron-0.70-source.tar.gz) = edeecda4ff3b26bf95b47a862e8939689aec60de7132180527321514cb0538ca
 SHA512 (gltron-0.70-source.tar.gz) = 297708a145d995bfd186f1745ffa674ab44238e8c2fb627245de3c1602f578afdd9223fae696107769b3b29da476cd9623ee37183618bfb13a9a9cfa59e41bf2
 Size (gltron-0.70-source.tar.gz) = 2182440 bytes
 SHA1 (patch-Makefile_in) = cd8bec4eccf7b21c9891f314928904d730bfc2ce

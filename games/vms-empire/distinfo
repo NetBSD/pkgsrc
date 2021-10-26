@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:07:56 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:44:29 nia Exp $
 
-RMD160 (vms-empire-1.15.tar.gz) = 8a169fcb3904ad5608be9036fe1650a75cd6436e
+BLAKE2s (vms-empire-1.15.tar.gz) = 02a375604cf012be01e10dcc5df2bfa1c2779d14a686b4f173fad088aef07fe1
 SHA512 (vms-empire-1.15.tar.gz) = 18430b2f40ab293ae52ce7287eaac6a944199935b7b433d1c37343ba7ab178199310bc1f887b21dc6509e885b545c324a1f3de8f477d288d38a7c11b0a184085
 Size (vms-empire-1.15.tar.gz) = 110220 bytes
 SHA1 (patch-aa) = 4898d433cb15bf8321bbfc1a8bf612838f9a2bdc

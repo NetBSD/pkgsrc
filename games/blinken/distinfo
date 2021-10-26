@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:07:15 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:43:48 nia Exp $
 
-RMD160 (blinken-20.12.3.tar.xz) = 54ec857392a9897a7322b4de183cf6839ccfc193
+BLAKE2s (blinken-20.12.3.tar.xz) = 8b96c71bb89be4c9677fe9c259f7e8a7e6b032142f64ba1dd0a016a65960c59e
 SHA512 (blinken-20.12.3.tar.xz) = 0c78fdddb9772f003e73ef12cd09557fa0af469ecdbbbefe1b6c01e236f6d882b93182bdd99427d430eb680a0cfb2346a36df54f626cab568bb86d60e1fe3a84
 Size (blinken-20.12.3.tar.xz) = 2537996 bytes

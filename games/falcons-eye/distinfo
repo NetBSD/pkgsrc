@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2021/10/07 14:07:23 nia Exp $
+$NetBSD: distinfo,v 1.23 2021/10/26 10:43:56 nia Exp $
 
-RMD160 (falcons-eye-1.9.3-20050216-2/nethack_source_331_jtp_193.zip) = a94c3bbdec7a0c034acbe431071342b872c7acc5
+BLAKE2s (falcons-eye-1.9.3-20050216-2/nethack_source_331_jtp_193.zip) = 91f95c960cdb7459d378f1fcf8d3ae044a6b46985c777df9e05662e9bb5bad89
 SHA512 (falcons-eye-1.9.3-20050216-2/nethack_source_331_jtp_193.zip) = 2355164d664e9f5cae8677fff8f4a0860ba6e315d12027c5edb8ff285a7eb76306026c005276b7787b44e902ac74ef449bf2622d7b308fd6eb425e4c30d503b8
 Size (falcons-eye-1.9.3-20050216-2/nethack_source_331_jtp_193.zip) = 8349587 bytes
 SHA1 (patch-aa) = e068ec41aa17aeb8746475ff33fdef3540a664de

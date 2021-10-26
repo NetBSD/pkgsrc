@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:07:26 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:43:59 nia Exp $
 
-RMD160 (fortunes-futurama-0.2nb1/fortunes-futurama-0.2.gz) = ffe4201e354243634361586f8ce6ee80a5632929
+BLAKE2s (fortunes-futurama-0.2nb1/fortunes-futurama-0.2.gz) = 34394cafd7ad85eac418df0ec496d0635d4df9691ecb56efd64b4071d40bb9e8
 SHA512 (fortunes-futurama-0.2nb1/fortunes-futurama-0.2.gz) = 2640ad3e91fc78ab75edf53970033514e14275a92a9c871af65ff4410d585489572a9d46845b9221f5aae9a84a19e396f243759ed4117a95e717522cfb856790
 Size (fortunes-futurama-0.2nb1/fortunes-futurama-0.2.gz) = 17682 bytes
