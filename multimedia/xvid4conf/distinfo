@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:32:21 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:01:20 nia Exp $
 
-RMD160 (xvid4conf-1.12.tar.gz) = 76be4da25e92c022834edd4d0a905bf2b811a396
+BLAKE2s (xvid4conf-1.12.tar.gz) = 2fd3f689b4b5f527d38d5d0b063616c62b63dc1196414d34fdf26b760978f15d
 SHA512 (xvid4conf-1.12.tar.gz) = 277b081563b3e9ec2e3c78cf0ea7c504acf0585c0184ee359d0174be38c4c32b931360ce543193df3b323083d21a58d2ff94380647773c71eebed6928c857f57
 Size (xvid4conf-1.12.tar.gz) = 133494 bytes

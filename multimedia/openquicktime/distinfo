@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:32:16 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:01:14 nia Exp $
 
-RMD160 (openquicktime-1.0-src.tgz) = 53c36cf87e48855460106cec8442ad004681be5c
+BLAKE2s (openquicktime-1.0-src.tgz) = ed508d4db61fab8421fa9591b9afbacc5de91341ad5d0628e1ad2720daeaae24
 SHA512 (openquicktime-1.0-src.tgz) = 3be691ca3c0e31d37d532fad571031ae177aa41845792816473a2a4f2f042e4f6d75cc63fad089691415b59fe75a45352b554220b25ee172db11c5fb482ec2e8
 Size (openquicktime-1.0-src.tgz) = 320144 bytes
 SHA1 (patch-aa) = bf5d0211fbec1d067e9d454d6ed08d1a12d5a55b

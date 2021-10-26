@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:32:17 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:01:14 nia Exp $
 
-RMD160 (xmltv-0.5.69.tar.bz2) = 76f905a04ac18e0ab24237bd81304d7c689782c7
+BLAKE2s (xmltv-0.5.69.tar.bz2) = 7352ab729d0c4f18a04617b63d76294e5df014c641bf63fe351ea080f6edebad
 SHA512 (xmltv-0.5.69.tar.bz2) = b76991bdcf2803f67c0c24b52d44b62ebfc37f177dbfb31a781fefe420ee5a575b522ed6a6669fa9f0462ac866abd382a1b3fe2cf91d3bfab1758f95facd333c
 Size (xmltv-0.5.69.tar.bz2) = 1273028 bytes
 SHA1 (patch-aa) = 96c55dc5927e51c0210b39468884b7171fa497ea

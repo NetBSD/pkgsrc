@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:32:11 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:01:09 nia Exp $
 
-RMD160 (libkcddb-20.12.3.tar.xz) = 127cf8016991b60136de31e4a3b84dc2e1ef12fa
+BLAKE2s (libkcddb-20.12.3.tar.xz) = 0eeae9294eee509791095e0584a9a465aea4b06f9b2349db5e584d749a0b2f58
 SHA512 (libkcddb-20.12.3.tar.xz) = 7659ccb25555a3c9ae496f7ed695a69bd6ac7df1002c94379f5e637a85673ca1194311b8aa04c2b53a2d3b9f41013e38ecd33403ba5fe66c1afc473cefe08af1
 Size (libkcddb-20.12.3.tar.xz) = 425180 bytes

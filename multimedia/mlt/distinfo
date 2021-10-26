@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:32:14 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:01:12 nia Exp $
 
-RMD160 (mlt-6.26.1.tar.gz) = e1181cd38733c89bf7e8be386e15b61fa9700deb
+BLAKE2s (mlt-6.26.1.tar.gz) = 1f1e5779597380f554ed7ca79bf1d44ad19d37762e87a026f288df8bb7e8279e
 SHA512 (mlt-6.26.1.tar.gz) = 6a3ef572cddee48c3089b19b2920de84936aa913a3f35b6f06e4bece2dc7a5a168daecfbaa8111c799b5316f967c37b09d485c000a4eba69af4f7ee3dc8db9e4
 Size (mlt-6.26.1.tar.gz) = 1366022 bytes
 SHA1 (patch-src_framework_mlt__properties.c) = 5e8b30cdabb90ed96a122a2654dc254f74a87374

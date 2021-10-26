@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:32:09 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:01:06 nia Exp $
 
-RMD160 (kdenlive-20.12.3.tar.xz) = 3d5cde722ca1f9ee9e8c80b610b1bce9eb2f5e47
+BLAKE2s (kdenlive-20.12.3.tar.xz) = 3ea9ed698617a52e1609fa4d9c501402db2dc4d9f549efc3fff6130f3159510c
 SHA512 (kdenlive-20.12.3.tar.xz) = b21c9bd59171969ab84b93bab2617333160521c3b99b61a2182f9d9b5e65c3220b6dd960d71fe5eeb032733127392dafd40748b950b9973e0edfb5ae6317380a
 Size (kdenlive-20.12.3.tar.xz) = 11514396 bytes

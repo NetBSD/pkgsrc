@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:32:03 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:00:59 nia Exp $
 
-RMD160 (dragon-20.12.3.tar.xz) = 840294a305547eca2b2219be9f2d240028c9f7b0
+BLAKE2s (dragon-20.12.3.tar.xz) = 517c81388dedacc631ab60527d258f6a93ae7fd88e9abfc8f9f2aa93e94cc0b1
 SHA512 (dragon-20.12.3.tar.xz) = af05801abdf24670286fcfdade58c600b1f0ae4a0316cc95cb8020deafbba7a5b5832e9907b7cc78569d5074d855a348e9aac325305ccb5afd7fdeb0d1e62527
 Size (dragon-20.12.3.tar.xz) = 1656596 bytes

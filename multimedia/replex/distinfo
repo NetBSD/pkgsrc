@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:32:18 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:01:17 nia Exp $
 
-RMD160 (replex-0.1.6.8.tar.gz) = 9b29af523b82e008981169497956e5a590d5c268
+BLAKE2s (replex-0.1.6.8.tar.gz) = ec1acfec23b3cfc3863155aaf5e647e3ad8d9ff0063544a5391d79948da316a9
 SHA512 (replex-0.1.6.8.tar.gz) = cddbc00a4f882eabcfd32fddddd8a087fa7aa27a42546cb187baa496c59622122b77e90d662b2fc57d065d882370c2671fad5e10680e34b9f88b8075064b392c
 Size (replex-0.1.6.8.tar.gz) = 49587 bytes
 SHA1 (patch-aa) = b6b5a9052b9de50b52f3a38a70e3b9010f4a2524
