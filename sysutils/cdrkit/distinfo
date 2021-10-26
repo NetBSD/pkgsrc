@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:57:39 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:19:25 nia Exp $
 
-RMD160 (cdrkit-1.1.9.tar.gz) = ce3c62b98c82f3d524a345a6360d24e1d7ac73d7
+BLAKE2s (cdrkit-1.1.9.tar.gz) = 1fbf1f85044d967e25a6a1edabead95714cc8e69c53d061835d97ab1d84fa658
 SHA512 (cdrkit-1.1.9.tar.gz) = c6d1fe04d384fda22cae009ca60b7aa7990797a6a552130953fb6c677f4989bb29dff4a086c5f720985c5913b7a58a8b5e604f717c0332182772c12dd3147451
 Size (cdrkit-1.1.9.tar.gz) = 1430065 bytes
 SHA1 (patch-aa) = b83c5b64b957db9f2c0b003b2c6088ca9d17aa9a

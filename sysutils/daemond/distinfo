@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:57:41 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:19:27 nia Exp $
 
-RMD160 (daemond-1.0.tar.gz) = 847d0d780910e332474e74bd24e246171401a5ea
+BLAKE2s (daemond-1.0.tar.gz) = 265f449debb2a92888eab6a2478de24c9c523445b7e208b8fe23109d74463cdf
 SHA512 (daemond-1.0.tar.gz) = 4926c80b68890a3471c784eec86c47a4f200aea9fe3a201a5f2115238979b483b3430f74b6d1d29166939a0607b3bdb990650698096e724239008992b489468b
 Size (daemond-1.0.tar.gz) = 1628 bytes
 SHA1 (patch-aa) = cf3eaf396fe0b1793baadcc3af0d151b0e445a1a

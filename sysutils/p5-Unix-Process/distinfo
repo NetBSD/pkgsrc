@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:58:13 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:19:59 nia Exp $
 
-RMD160 (Unix-Process-1.3101.tar.gz) = 4891444332e9296da27e5c07d17a3239b2ece8c7
+BLAKE2s (Unix-Process-1.3101.tar.gz) = c0274018cecaf81ed309d9bfeebf6edd86b91164842aca8a53cdffb1aca28c50
 SHA512 (Unix-Process-1.3101.tar.gz) = 7446a554736f03cbe308de42ad25e2e16489bb74688eda680666bb2b705ef910d413bdb401fefe28f90ecf43df90b9f6487da3f661c59f6f1c098a7ad8e77e8e
 Size (Unix-Process-1.3101.tar.gz) = 3311 bytes

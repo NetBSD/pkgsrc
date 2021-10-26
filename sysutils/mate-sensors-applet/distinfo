@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:58:04 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:19:50 nia Exp $
 
-RMD160 (mate-sensors-applet-1.24.1.tar.xz) = c1cdcb024595e9028983b359ecbbbac993b9a3df
+BLAKE2s (mate-sensors-applet-1.24.1.tar.xz) = b97e95425962a42f5a9738023214bbcf1b7cc90ea724832e9cb252d11000a742
 SHA512 (mate-sensors-applet-1.24.1.tar.xz) = 3bf21d501e067a2ce002c5149f42161cc6917609ceb2396b705e905987cb4d989725ca825c6de7bbe4e950f7a01e755c2cd5b45532d6f65aef690f394741489a
 Size (mate-sensors-applet-1.24.1.tar.xz) = 578964 bytes
 SHA1 (patch-plugins_i2c-proc_i2c-proc-plugin.c) = a630cdff99696fc893df863be43433a00f3c07c4

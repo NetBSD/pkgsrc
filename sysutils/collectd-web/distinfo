@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:57:40 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:19:26 nia Exp $
 
-RMD160 (collectd-web-0.4.1.zip) = 2555cf419ee8e36b3bd59de2d43b205ded6cd88e
+BLAKE2s (collectd-web-0.4.1.zip) = b2adcb79fcac54be24fae15ab9d1521fdb7e135a5483f0eac3e804fc544396c5
 SHA512 (collectd-web-0.4.1.zip) = 836d5b9b8fe7e89797c5ce08d216e39d513fe15791a642b9c42b54e1b49d6be2af257d9270b377ad4a288bccf0092dbfdade65ac56c0c4e6418df0c271291a16
 Size (collectd-web-0.4.1.zip) = 979647 bytes

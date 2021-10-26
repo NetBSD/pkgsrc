@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:03 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:19:49 nia Exp $
 
-RMD160 (cc-1.0.66.crate) = 79a002545a9e0fc3bb4e81d9d4d43d075c060570
+BLAKE2s (cc-1.0.66.crate) = a22ba1b4f3663ba0611013d7aa819645c7fc03f8208babf6f691bd45e37bc696
 SHA512 (cc-1.0.66.crate) = b07a70f88fa0588fb0f6bc7376e985834672cc9914a0713afe01740af6bcf01821d15720d831e8b7ea8b42f5866dbd011a245997f35bf8febc3b13d66089723e
 Size (cc-1.0.66.crate) = 53454 bytes
-RMD160 (lsfp-0.5.0.tar.gz) = fa70b197b4984b3d560c75cbcb1a1df03d73f635
+BLAKE2s (lsfp-0.5.0.tar.gz) = b8caeeef8b832ca14ebf5e9d590c4b8278f8ab8f5f041ad78ce605a7ffb8d6dc
 SHA512 (lsfp-0.5.0.tar.gz) = 79d8decc0438d9ad4f2d1720b9f0a705c2e86871c403597a3d64b6759ce01b8b53d8cde4c33add97214e1167803291d2f73ef9c2c96cfb555854aa627bc7211f
 Size (lsfp-0.5.0.tar.gz) = 12261 bytes

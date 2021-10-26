@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:58:15 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:20:01 nia Exp $
 
-RMD160 (pscpug035.tgz) = 25931ad9d0a5f867a6bb5b1fa6e17ef8180a9880
+BLAKE2s (pscpug035.tgz) = d1a1d379584fb1b514211d5fb920be5d5c5bb2aab9ac9b6139d86019c37d01d9
 SHA512 (pscpug035.tgz) = 649a1bf212e90e9b7d1b80f98c86c80093fac78c42a57e1560c9e4b0b5ce7b72610320931f7e3f78300e1529d7db2cd9f3d18df98ba6a1ff302e72b28efe8ec4
 Size (pscpug035.tgz) = 41552 bytes
 SHA1 (patch-Makefile.in) = c7c7398b5e66458516a2ac70c43b5275a834043a

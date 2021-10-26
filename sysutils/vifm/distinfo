@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/18 11:17:24 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:20:21 nia Exp $
 
-RMD160 (vifm-0.12.tar.bz2) = f19ef2e1e2718c2f84026bcad728ffd2b2c7fc53
+BLAKE2s (vifm-0.12.tar.bz2) = 0186ab0bce741d72d3a0f01c1119d9731f25a9c762f1f63fe7e27387e0530e51
 SHA512 (vifm-0.12.tar.bz2) = 9944c8928303af112fc968eab444304755f8a806b680ec1cd4e767c01121856fbd08990df6706f66bcd561e7ab9a937db96713fc36b9e25e3b8ed89c068e69de
 Size (vifm-0.12.tar.bz2) = 1426579 bytes
 SHA1 (patch-src_Makefile.in) = fc921141351ecc872b4c8b9dc57f1f5a02916019

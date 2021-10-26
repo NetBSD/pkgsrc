@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:57:44 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:19:30 nia Exp $
 
-RMD160 (dfc-3.1.1.tar.gz) = 2caa55133f5757aaf42e82245dde35051e47a6e4
+BLAKE2s (dfc-3.1.1.tar.gz) = c81021eb168ed39155d914b0f907b2bbd458a6b925e52def38f5c29c08cede0c
 SHA512 (dfc-3.1.1.tar.gz) = eac2c8d464d57626efe939f515889cf91510f7e6eb50382d045204d4f1d6b9b9f0af4b1d8974c9cbcff1eb5b8802157e421ec06e5a1e38dac74eba72f43f9701
 Size (dfc-3.1.1.tar.gz) = 52709 bytes
 SHA1 (patch-services-bsd.c) = 8edc22ac323bd14af617177f100d169f61b267a0

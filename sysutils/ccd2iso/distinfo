@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:57:38 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:19:24 nia Exp $
 
-RMD160 (ccd2iso-0.3.tar.gz) = 39b3140c123bc82fc01b2222056a03d3fe521626
+BLAKE2s (ccd2iso-0.3.tar.gz) = e0d49f7f6359d9f638787514aa82fe6038913744bfa94e5a9284fc6488c192b4
 SHA512 (ccd2iso-0.3.tar.gz) = 40e0e5bd792c851dd0549a08a3a0d7226cc05893316dc9575d4c9131dce758d992081355de569e3e66dca310545bf3a17c1cd6431ab97e790fdbe5b19c09adc1
 Size (ccd2iso-0.3.tar.gz) = 158221 bytes

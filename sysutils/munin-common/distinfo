@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:58:07 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:19:53 nia Exp $
 
-RMD160 (munin-2.0.67.tar.gz) = 7c1171c7ce03b9bbc11bc0bac801726d2487b967
+BLAKE2s (munin-2.0.67.tar.gz) = 208af60160d6ddfc98ae0d9c711bffce5d2c2c410710ab586a9a9c1fee00b11b
 SHA512 (munin-2.0.67.tar.gz) = 1f3766b52b99f625ff9cf4d3748a8935abed32b129d2a4714e37118e0116019bee3c1fd0e95da416fb3e39c9be9df17d11bca7f5a835be65ac5147e8b9858417
 Size (munin-2.0.67.tar.gz) = 2252301 bytes
 SHA1 (patch-MANIFEST) = 538cec30723a6d41b732c9dc4a175472fb821609

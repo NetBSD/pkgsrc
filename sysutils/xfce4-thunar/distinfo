@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.27 2021/10/07 14:58:41 nia Exp $
+$NetBSD: distinfo,v 1.28 2021/10/26 11:20:27 nia Exp $
 
-RMD160 (thunar-1.8.17.tar.bz2) = 0b221314d88fef7a48dcf97439478231b4927619
+BLAKE2s (thunar-1.8.17.tar.bz2) = 07a5a84f40773238d9defbac6228bd33ce3874a7c5861f8f6479f4012a7c9c47
 SHA512 (thunar-1.8.17.tar.bz2) = 1e9dcebf5eaaf34f7c2a233306eb33e182ae8aad3bb635477eaf223537629f689be656dc6c699284d748ca52c4dfe1fc7fb4c8120bd836b11d7100e858fa4c66
 Size (thunar-1.8.17.tar.bz2) = 2476026 bytes
 SHA1 (patch-ThunarBulkRename.in) = 5a1604e9e75064d6080f4e9571f62ea8fca10e11

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:57:39 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:19:25 nia Exp $
 
-RMD160 (checkpassword-pam-0.99.tar.gz) = f77c0272d4065358c204bd603fdf5ba7c1792054
+BLAKE2s (checkpassword-pam-0.99.tar.gz) = f16b9ca6136a7776dc8e360534e8a306f5914ddcb222a8fb1d61ef3183b90e21
 SHA512 (checkpassword-pam-0.99.tar.gz) = d7c9cbeec7fb15c07dcc3c6e6b7f38884bdf0fd2fe31d3a38b2f6f58deec57716b5d65387b03cb858c1bf5fbb5dce88e0451bf1b866b88fbc17165100040baec
 Size (checkpassword-pam-0.99.tar.gz) = 83751 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:58:02 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:19:48 nia Exp $
 
-RMD160 (lilo-22.8.src.tar.gz) = b452f4821cbc917b29cf168587652a6f1efd33e1
+BLAKE2s (lilo-22.8.src.tar.gz) = b34e43b77aca1229e11fa699b51354218ac8a45336b357de8d574ab2e0bbf651
 SHA512 (lilo-22.8.src.tar.gz) = b8a22c73b5f6a0c7ddde7c7af6511f9e85d43bae98603bfa0656dfa0685018b3ed713cfd9932bfac33017b83f807c66a3e25d78a16ea9a15bbfddd0e806714cc
 Size (lilo-22.8.src.tar.gz) = 437555 bytes
 SHA1 (patch-aa) = d35ee9dba01e27e27981b8dee8dd8b0bb77bf61b

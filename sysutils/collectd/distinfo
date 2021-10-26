@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.48 2021/10/07 14:57:40 nia Exp $
+$NetBSD: distinfo,v 1.49 2021/10/26 11:19:26 nia Exp $
 
-RMD160 (collectd-5.12.0.tar.bz2) = 9f21d334bbf6a791d3553c16cc533532056cd87f
+BLAKE2s (collectd-5.12.0.tar.bz2) = bf8597bde2bb46fe5f3546d18944dbc40df9b64b3fd1ee43a5882203d4803e0a
 SHA512 (collectd-5.12.0.tar.bz2) = 7a15e4c0ae587db4987d673a790a4f3bea1cab29ce24a506fb21fa7bd2f60bfec70867eaa1c1395cb5b0e0ae81a024fb6109b064da0ef50e7c146d2198871c70
 Size (collectd-5.12.0.tar.bz2) = 1902756 bytes
 SHA1 (patch-Makefile.am) = 03739025e31bfa862a7194ba0e6c86a5031dbe16

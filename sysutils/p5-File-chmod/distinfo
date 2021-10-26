@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:11 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:19:56 nia Exp $
 
-RMD160 (File-chmod-0.42.tar.gz) = c127abeb2776e9960ba29758e8da505ca8ee4a8f
+BLAKE2s (File-chmod-0.42.tar.gz) = 557e4e694454ce295562319f0f3af41ee7ebbba6651f0ee7583d35ab450b0465
 SHA512 (File-chmod-0.42.tar.gz) = 1b6bc41c43434914c0cb160a063f4cc6cbdfef85233b962c5a6885a23aebd7cafe05eb2d59253c7dc7f1cd323cdd3888d82a6ce19a9b7a00aaa8212d40c064d8
 Size (File-chmod-0.42.tar.gz) = 24940 bytes

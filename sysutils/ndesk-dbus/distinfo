@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:58:07 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:19:53 nia Exp $
 
-RMD160 (ndesk-dbus-0.6.1a.tar.gz) = 3e1a3a6e040609ba332b35c6e233d1f002de79fc
+BLAKE2s (ndesk-dbus-0.6.1a.tar.gz) = f26ecee626d73636e016fc9a4b671e48748ed27edf4ddfd2d634c829e43fea9a
 SHA512 (ndesk-dbus-0.6.1a.tar.gz) = 67cf59e51a57c0f61a2470abb0af5cd362955ad0701a1eee6da4a0959a8f1bb1999ff9dc25dd10394ce806d44f6504238a2b50669de4abb89112d2957d96b334
 Size (ndesk-dbus-0.6.1a.tar.gz) = 121667 bytes

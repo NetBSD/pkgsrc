@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.41 2021/10/07 14:58:24 nia Exp $
+$NetBSD: distinfo,v 1.42 2021/10/26 11:20:09 nia Exp $
 
-RMD160 (facter-4.2.3.gem) = 1c93ee9fd96e6690752b22d6a310dc4c96aa3438
+BLAKE2s (facter-4.2.3.gem) = aecce04aea8435051e7806a7b02d377f75c25c66d2fdedf6cf91ea3118ab0366
 SHA512 (facter-4.2.3.gem) = 1ddf8b4de50e1077618c9668630bb7bf417f41e6a16b840b4796e2150c82cbb5ca6b14396ed2045649148debd34298ff0dffa5beca8a01100f0347001e5c371c
 Size (facter-4.2.3.gem) = 156672 bytes

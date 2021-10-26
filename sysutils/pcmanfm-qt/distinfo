@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:58:14 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:20:00 nia Exp $
 
-RMD160 (pcmanfm-qt-0.17.0.tar.xz) = 41c23ea048ec2aff1c791f94da9d5c21a7f59f26
+BLAKE2s (pcmanfm-qt-0.17.0.tar.xz) = 9eadfaabe60f3e95c6d2f148f1283bf351ae8f411133c4c2c51e0af745ac57a1
 SHA512 (pcmanfm-qt-0.17.0.tar.xz) = 6de9083b90a2d06db892941e50dc9817e1ab8cf5bab80e331cd083c4756b7ede1207ca35fc1fc43b81b52651acb57dfd85953ab8f8deef2a2c0d362374726daa
 Size (pcmanfm-qt-0.17.0.tar.xz) = 296000 bytes
 SHA1 (patch-autostart_CMakeLists.txt) = 5dbb1afdfbe9c62132df0674064f436684c87b59

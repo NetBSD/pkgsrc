@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:20:13 nia Exp $
 
-RMD160 (smbldap-tools-0.9.6.tar.gz) = f9a497a29736673226a9c872c50893c31a0db513
+BLAKE2s (smbldap-tools-0.9.6.tar.gz) = fa125f7efb75944936cf4050d78f1a012b8d0f730b1474abef189cf557438e03
 SHA512 (smbldap-tools-0.9.6.tar.gz) = 4e1493744438d0636ecdf2c1e0d09563b5b3ff50ae02e45eea78fc0fbe6c28c2f636bd9e3283aa78dfd7c90f7cb95db22a3af7be31afa2305518cc3385a20e6e
 Size (smbldap-tools-0.9.6.tar.gz) = 304912 bytes
 SHA1 (patch-aa) = f4cb3a5666c780c476c3a53e5b9b2ecdebe42153
