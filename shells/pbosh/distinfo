@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/07 14:56:11 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 11:18:38 nia Exp $
 
-RMD160 (schily-2021-07-29.tar.bz2) = cde4b154b66cbb590faa32aae3448c62979e6c18
+BLAKE2s (schily-2021-07-29.tar.bz2) = 19e70c3d4f724a51774a9e3d1eccfdcc79c7e0cee88a4f1df90aed24b2fc2830
 SHA512 (schily-2021-07-29.tar.bz2) = 095740bf1190440d386145653763d74ad93abf996e6a1e56279b5441990898515356eda0f7b5d07386d2aac1ba1adf0e9dac423ce49ced4fdc13914857b6afc1
 Size (schily-2021-07-29.tar.bz2) = 4927143 bytes
