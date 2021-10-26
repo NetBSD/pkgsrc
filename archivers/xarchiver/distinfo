@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:05:59 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 09:57:19 nia Exp $
 
-RMD160 (xarchiver-0.5.4.17.tar.gz) = 3dc12f6291511587f2cf053bf76f526ca0575b6b
+BLAKE2s (xarchiver-0.5.4.17.tar.gz) = 42d983197bd4936d7b14e7fdb207aac575266ce61f47c21cf6eae39f890210db
 SHA512 (xarchiver-0.5.4.17.tar.gz) = 5b19fd0fb90f99aee0ac2576bc4efce9ef4eef9119fc118815f6d925e3877c0895475fbdf7363d8adfb6371fb7fd73299ea3a7cb3b6d9fff19c89d1d287d3a84
 Size (xarchiver-0.5.4.17.tar.gz) = 1077111 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:06:03 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 09:57:10 nia Exp $
 
-RMD160 (macutil2.0b3.shar.Z) = 5cf3b22d8bdd3a8fa61211e7a0d598ebac9bbfe4
+BLAKE2s (macutil2.0b3.shar.Z) = 5c25db77fd87e60dc4c4271c545d4032dfb29997514eb61aa7efcbbcfc7dd950
 SHA512 (macutil2.0b3.shar.Z) = 5162ed28a7b43f3814c072977c3a41fba0cea832f56c8c28bb78d49f2d3827b139570a363ad6b0c520c039e2a5f3a8f1cbb2cff587bb741b30a8dca051c131a3
 Size (macutil2.0b3.shar.Z) = 167565 bytes
 SHA1 (patch-aa) = 418d0cdd57a0d378902b653cd4ddb8279ff0e0e8

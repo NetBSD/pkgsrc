@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:06:00 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 09:57:08 nia Exp $
 
-RMD160 (lbrate-1.1.tar.gz) = ccf0d889eb597d3beecceb40349ddbf00f0273c8
+BLAKE2s (lbrate-1.1.tar.gz) = e427951db09e26957e0f198ac4dde40d6420c0a9a442f69914611ba720f348f8
 SHA512 (lbrate-1.1.tar.gz) = a14ab609fafa2aa8f751140774ad817edf60c7ccc8d5e55d4446bde8a8cc62a33d6f4b8cd308c22e41642ff3f79550d0087f1294f1016d5ca1bb99757d9a76de
 Size (lbrate-1.1.tar.gz) = 29907 bytes
 SHA1 (patch-aa) = 2a20b1d56a266316ba4968a40f3bc6bed6deaead

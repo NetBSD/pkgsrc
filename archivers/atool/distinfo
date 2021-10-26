@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:05:56 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 09:57:05 nia Exp $
 
-RMD160 (atool-0.39.0.tar.gz) = ca067ba295ff2ad11dc1c9147a13f8a1becaf078
+BLAKE2s (atool-0.39.0.tar.gz) = e010975f320091a6b702d72b9f959acea858358569f76656ca17684a3096409b
 SHA512 (atool-0.39.0.tar.gz) = 2011c13f510a140e71d26f9eac60d07f2cb9004dc278303fd37c5c7f78a6a2366ad9193e7b4e015d9fba8218c59205a6339189ae4775b0afc42328f9607524d3
 Size (atool-0.39.0.tar.gz) = 119307 bytes
 SHA1 (patch-configure) = f7e4c5a07a9886f1ed4eb49f53523bd9bd0643f6

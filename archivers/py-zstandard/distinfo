@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2021/10/07 13:06:09 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/26 09:57:15 nia Exp $
 
-RMD160 (zstandard-0.15.2.tar.gz) = 90309af02d82c8524c4d2b6eabdb5fb2cac46c27
+BLAKE2s (zstandard-0.15.2.tar.gz) = aa61f1e2ee1ef549bb1f6ee55c4da1d58124e314a67c680714834e35cdf52643
 SHA512 (zstandard-0.15.2.tar.gz) = 0102f3522145c80ec096e9dfac34a5bdd2a98b43b50b8c1e99bcfb0057904c551ababeeb82ced5f8b65945d42b39479cbc29472058679af1f8f91b68ae79f70f
 Size (zstandard-0.15.2.tar.gz) = 1012864 bytes
 SHA1 (patch-c-ext_backend__c.c) = 0f8d95683b857bc1960d06a818bc6bee665354ab

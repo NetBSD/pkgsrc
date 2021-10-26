@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:06:08 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 09:57:14 nia Exp $
 
-RMD160 (libarchive-c-2.9.tar.gz) = 5a835ec001d98f989a5c17edd9c27996e9aad6d5
+BLAKE2s (libarchive-c-2.9.tar.gz) = dd51c2315a9ea7fe8b3523108617b91cef8e9ae4eb314693a777a8dcf2d80888
 SHA512 (libarchive-c-2.9.tar.gz) = b154cfe39247050c156d57f657b9668f3b1add879b7fb5b32cbc127becee63d1898fb1c4bd60e7fe72e814f544ddefa6680d582fec28b0feed90940fae8cc238
 Size (libarchive-c-2.9.tar.gz) = 46408 bytes
