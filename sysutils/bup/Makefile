@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2021/05/24 19:54:09 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2021/10/26 00:19:27 gdt Exp $
 
 DISTNAME=	bup-0.32
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bup/}
 # bup has two problems that make packaging difficult.  One is that
@@ -31,6 +31,13 @@ HOMEPAGE=	https://github.com/bup/bup
 COMMENT=	Highly efficient file backup system based on the git packfile format
 LICENSE=	gnu-gpl-v2
 
+USE_LANGUAGES=	c
+HAS_CONFIGURE=	yes
+
+# On macOS 10.13, building bup fails with defaults but builds with
+# USE_CWRAPPERS=no.   The error is
+#   Looking for cpp (/path/to/pkgsrc/sysutils/bup/work/.cwrapper/bin/cpp) (can't run cpp as a pipeline)
+
 DEPENDS+=	par2-[0-9]*:../../archivers/par2
 DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
@@ -55,7 +62,8 @@ MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
 MAKE_FLAGS+=	PANDOC=
 
 USE_TOOLS+=		bash gmake perl:run
-REPLACE_PERL+=		wvtest
+
+CONFIGURE_ENV+=		MAKE=${TOOLS_PATH.gmake}
 
 REPLACE_BASH+=		cmd/import-rdiff-backup-cmd.sh
 REPLACE_BASH+=		t/compare-trees
