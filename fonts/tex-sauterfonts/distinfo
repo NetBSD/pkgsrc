@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:05:16 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:28:29 nia Exp $
 
-RMD160 (tex-sauterfonts-15878/sauterfonts.tar.xz) = b86a7a3feff502e6c16412b14dcb7c459bbb37be
+BLAKE2s (tex-sauterfonts-15878/sauterfonts.tar.xz) = 2c9fb63680de72b8a20647bb5639054059c8badbcd36a3faa2487564c546c4b1
 SHA512 (tex-sauterfonts-15878/sauterfonts.tar.xz) = 292b3338221934027e303ee35016ff0f5974e248519267c1dee1bbc34fab44e4909962741323398497c5e51372e374c4fbf5e3e402cae4aa1391b1ce0e02928d
 Size (tex-sauterfonts-15878/sauterfonts.tar.xz) = 3952 bytes

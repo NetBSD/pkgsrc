@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:42 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:27:54 nia Exp $
 
-RMD160 (tex-esstix-22426/esstix.doc.tar.xz) = 0aa7e9eab706a2fe184d4e0c8fbee0105f667451
+BLAKE2s (tex-esstix-22426/esstix.doc.tar.xz) = c6b1dd343262ae31eefaa965629d6707660c114222dae2132b28a66a15ec6994
 SHA512 (tex-esstix-22426/esstix.doc.tar.xz) = ddb83470af0c91b5d05f7b30814f7bbd7a540756dacdc02dcd4bc20080ea9740673689ed259d24e505223ba69e31abfd5fb965d04a2fbfa55615d014b59c4740
 Size (tex-esstix-22426/esstix.doc.tar.xz) = 286220 bytes

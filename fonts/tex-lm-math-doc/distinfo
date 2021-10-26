@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:05:00 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:28:12 nia Exp $
 
-RMD160 (tex-lm-math-36915/lm-math.doc.tar.xz) = dafdb73d88ca3abc3e8534dfe702a6a46ce1e5b3
+BLAKE2s (tex-lm-math-36915/lm-math.doc.tar.xz) = a89316b1c6b3c53d9c83f93f6e60c99f5e50b990f445e3eef2342503e712d22e
 SHA512 (tex-lm-math-36915/lm-math.doc.tar.xz) = e39e7d2356bcf9526531f3a7e9fc548e601ecd9ce8d4c4e3aff55054cf0dce20ec185fd4692a1d40c1adb7edcf7aae02307c6833bfea567fee6b0de8ccd96497
 Size (tex-lm-math-36915/lm-math.doc.tar.xz) = 94652 bytes

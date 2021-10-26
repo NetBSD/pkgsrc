@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:05:13 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:28:25 nia Exp $
 
-RMD160 (tex-pxfonts-15878/pxfonts.tar.xz) = 17271401ef3fde66af2bf8b052513ee93439ce9f
+BLAKE2s (tex-pxfonts-15878/pxfonts.tar.xz) = c79108e5c888c7cb33a0fff24943f9869461400ca9c73a995823fa3128450f9b
 SHA512 (tex-pxfonts-15878/pxfonts.tar.xz) = 9fdba09313a93b7c2c3e03b616fbff9dabc3f1c74ab95af3f5b4135dc072d27dce6d5d573053f062d2b346704d3cf889ec8ea2f0aed0ce2cba22068db1da5706
 Size (tex-pxfonts-15878/pxfonts.tar.xz) = 459928 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:48 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:28:00 nia Exp $
 
-RMD160 (tex-fouriernc-29646/fouriernc.doc.tar.xz) = 21314dfbb91db7c6438f9f4299400f64914a3a9c
+BLAKE2s (tex-fouriernc-29646/fouriernc.doc.tar.xz) = 55801f24e8e5860507a58718b5f2089bfb7ddde98826cf5fe6a198b19e001586
 SHA512 (tex-fouriernc-29646/fouriernc.doc.tar.xz) = 06e3ab813e2938aa5c39fad41e9bce98c8077308524208856c93c1f3e1e1c8435e67a4cd44f666ce91707b376c5a91659cc6b7da94b2c60675e7b43258ecc3b1
 Size (tex-fouriernc-29646/fouriernc.doc.tar.xz) = 37468 bytes

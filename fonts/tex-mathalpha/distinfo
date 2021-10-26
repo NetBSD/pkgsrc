@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:05:02 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:28:13 nia Exp $
 
-RMD160 (mathalpha.r52305.tar.xz) = 891edb22fd48f0fcffb15ee01f53f9315acc4568
+BLAKE2s (mathalpha.r52305.tar.xz) = b791d453cd015887de59b1a0d1b2915f2a3867dbc4a2a7995f1e75ebed315228
 SHA512 (mathalpha.r52305.tar.xz) = c6b653e5a0b7788ac36ea9ef6ce07dd4fd19a75a82c4115cac5921849477839387b0cccac469dd74b9f4221315ca741c49304eb76213ecacb97dc7e218ac4cc9
 Size (mathalpha.r52305.tar.xz) = 4368 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:05:09 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:28:21 nia Exp $
 
-RMD160 (oldstandard.r57213.tar.xz) = edbbf3a7622203f904f24bddf0ca6188a94dd16c
+BLAKE2s (oldstandard.r57213.tar.xz) = f11846a648ccb9afd447b7664a6ee58abfa98813f52be34bbf16449bb032f418
 SHA512 (oldstandard.r57213.tar.xz) = 848400b102d5ba0ceb56c4d50c65482bf5b3c468f4ed71d0ead25f0612d54552150bf467b50ca5686028797a25e46db195307ba0764473ce520e14e93403140b
 Size (oldstandard.r57213.tar.xz) = 1702320 bytes

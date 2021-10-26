@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:53 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:28:06 nia Exp $
 
-RMD160 (tex-initials-15878/initials.tar.xz) = 1e6b59755b1d93f63847e77f037c000dab3c2d52
+BLAKE2s (tex-initials-15878/initials.tar.xz) = 0bf7bb97dfc55df2b2cc160f1bae22c15b9791cb8af9fab89a900a98be8dd7ff
 SHA512 (tex-initials-15878/initials.tar.xz) = 5f606145d647884ed8819aad05f6ad97cdb3d56a04c1135faf1c077a5c3d1d20508ea1251fd192804015ef2f3796f46f25e4af90c777c66028b5fbdf0ed4c17e
 Size (tex-initials-15878/initials.tar.xz) = 3132660 bytes

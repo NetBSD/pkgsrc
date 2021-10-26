@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:42 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:27:55 nia Exp $
 
-RMD160 (tex-ethiop-t1-15878/ethiop-t1.doc.tar.xz) = 9d0bf458c408c1168cf501c9db78405a0fa514fe
+BLAKE2s (tex-ethiop-t1-15878/ethiop-t1.doc.tar.xz) = 8b20eefe7b26a01d2855289dcbf3a7054688d4f18bd099eeeeab1c5dc3ad60b4
 SHA512 (tex-ethiop-t1-15878/ethiop-t1.doc.tar.xz) = a5e6bef0001a0936522749826503323b8e559ed7e5d9ce81de38d7838b2824420e5631cd12cb2f064dc7990c076a0c5573053f9115493dea31d19a7189fa467f
 Size (tex-ethiop-t1-15878/ethiop-t1.doc.tar.xz) = 7516 bytes

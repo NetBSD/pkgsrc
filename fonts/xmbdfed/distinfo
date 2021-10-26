@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:05:29 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:28:40 nia Exp $
 
-RMD160 (xmbdfed-4.5.tar.gz) = a6c1d9202e6d978dbc0aaa1fb6389a3d14b16c26
+BLAKE2s (xmbdfed-4.5.tar.gz) = fd0e481ef0ea8f206e9b2edeab01270da7e3b636d712ec4b1eb5139fa2a39fb2
 SHA512 (xmbdfed-4.5.tar.gz) = 6d4ff1e7947c087bc654760d730ca56ec476fd8eefed6ed17f6c099968f3484ccc7bde1343bafe6332717494dfd5ab39d2d20dea636741ddcffce0b6e6b5962b
 Size (xmbdfed-4.5.tar.gz) = 282055 bytes
 SHA1 (patch-aa) = 55740a6f3bf01bf149bc953078a0cf75eea4dc11

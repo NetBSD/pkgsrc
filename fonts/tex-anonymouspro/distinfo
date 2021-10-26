@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:17 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:28 nia Exp $
 
-RMD160 (tex-anonymouspro-51631/anonymouspro.tar.xz) = 12aa021b3718d92a781422d70af21cd1101ae36f
+BLAKE2s (tex-anonymouspro-51631/anonymouspro.tar.xz) = 592b9818f7f8582f30d5ad8da0d6fc9cad41a2bbf0caad4f37945034a244d34e
 SHA512 (tex-anonymouspro-51631/anonymouspro.tar.xz) = 105334748bce7fa8a78edd599d6a8466729937f0008c479213a4d3d4b6b3e24b91bd1e124d0e3c1354fd68f99fdf621538696ba9b32ecbf09f5c7202b0b34997
 Size (tex-anonymouspro-51631/anonymouspro.tar.xz) = 415352 bytes

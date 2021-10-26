@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:45 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:57 nia Exp $
 
-RMD160 (tex-fge-37628/fge.doc.tar.xz) = 7ef1726393b5ab8fbd61d54d1773e0876cfa8723
+BLAKE2s (tex-fge-37628/fge.doc.tar.xz) = 9f9a7c45627c1e9a22c5b6415bd5ae592d823ce0b45149840e76f505d869c520
 SHA512 (tex-fge-37628/fge.doc.tar.xz) = 8131a239b64fcd3b4c32afa9cb76372994aa048fc3c55cd3d81c060fb55af2148db256b713935c592a298bae64565afe23f58b3b502eac914ffae769de78f5fa
 Size (tex-fge-37628/fge.doc.tar.xz) = 137820 bytes

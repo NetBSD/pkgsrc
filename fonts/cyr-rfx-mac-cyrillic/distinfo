@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:03:55 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:27:06 nia Exp $
 
-RMD160 (cyr-rfx-20001007/cyr-rfx-mac-cyrillic-1.1.tgz) = 7ee49a14a7772ba2bbaf2d82f4ac77feb6e0afd3
+BLAKE2s (cyr-rfx-20001007/cyr-rfx-mac-cyrillic-1.1.tgz) = 7d554ad2fbfce553e8214da238fd842b69330db9b4b7a2366df63c4fd3378e9d
 SHA512 (cyr-rfx-20001007/cyr-rfx-mac-cyrillic-1.1.tgz) = fb4b501e9ac9533a0d7f295c1c5f1dc4a8dbf4f1e2d76b7c7cc01b3fbde67145d88edc9021bf7b242449ad776ba4ac288a38577cd6d2b21b256d59086f6c2c5a
 Size (cyr-rfx-20001007/cyr-rfx-mac-cyrillic-1.1.tgz) = 429539 bytes

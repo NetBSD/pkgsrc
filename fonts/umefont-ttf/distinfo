@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.56 2021/10/07 14:05:27 nia Exp $
+$NetBSD: distinfo,v 1.57 2021/10/26 10:28:39 nia Exp $
 
-RMD160 (umefont_670.tar.xz) = f45ee5c18517f6882a02278f240dfd3d654973bc
+BLAKE2s (umefont_670.tar.xz) = d77d039b0180ddd771575c43ff314a5563cbda329c808d3e12adcd6de8de145e
 SHA512 (umefont_670.tar.xz) = c7e6fc4e588f066ec8f7a29cfc0703741813f0b51365bae01fc63c5d1ab2a1be5c2b4a68e2b84dafd0a14888084a25baf29f9a24fb25121c38bae8ade311e4db
 Size (umefont_670.tar.xz) = 6900112 bytes

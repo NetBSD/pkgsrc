@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:04:04 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:27:14 nia Exp $
 
-RMD160 (ja-rocknroll-ttf-20201216/RocknRollOne-Regular.ttf) = b0a77ec4f18f8edef695863d6feaf577e9efbb3b
+BLAKE2s (ja-rocknroll-ttf-20201216/RocknRollOne-Regular.ttf) = 45e31e81259d7b38466331907ffc4077a8f4a28bcc6b4a4e29d44175d246a5de
 SHA512 (ja-rocknroll-ttf-20201216/RocknRollOne-Regular.ttf) = 641170a787bb9fdcd28d1d47c3bc9f698f9fcd810d69336bfbb81ee67bca1c665e753d78ebf7a42d3ca3062ff01077d9270423867b3d5e525d607f30f61786dc
 Size (ja-rocknroll-ttf-20201216/RocknRollOne-Regular.ttf) = 5487596 bytes

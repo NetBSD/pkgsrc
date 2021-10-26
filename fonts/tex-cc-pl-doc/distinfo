@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:28 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:27:38 nia Exp $
 
-RMD160 (cc-pl.doc.r58602.tar.xz) = ac99ba807cc2470c71a678defa0d20e0843d9f41
+BLAKE2s (cc-pl.doc.r58602.tar.xz) = c05deb4f7c0f50af178795d9a9290b38fbe04b6a8914ad5dc4d16b6bac62a52f
 SHA512 (cc-pl.doc.r58602.tar.xz) = f5503008430e969a604973e4481f8ab51269a2c3570f757787eb7a1a9d11b8508ec7ca1709a21b9e2299059a9c8ca20e5806093bd24166eb44e167c06e4fd0ee
 Size (cc-pl.doc.r58602.tar.xz) = 1588 bytes

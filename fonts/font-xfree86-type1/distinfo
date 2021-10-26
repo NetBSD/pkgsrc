@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:01 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:11 nia Exp $
 
-RMD160 (font-xfree86-type1-1.0.4.tar.bz2) = d5a8b2fe36a8b4c6309800f9f031391d171c08dc
+BLAKE2s (font-xfree86-type1-1.0.4.tar.bz2) = 9af58db907a4a3e624695ff53f8005002586ca197d2cf67aee7ef0eeda0bdf88
 SHA512 (font-xfree86-type1-1.0.4.tar.bz2) = 2b4afc6cbb7953f8ba4aab7862d16b7b988ea6a4df6de8d41c8340d35a1cd53d6fcc26479ff88189d1de9f42804e4f56d70e9dbd7e75820eab4ac6ae3a96840c
 Size (font-xfree86-type1-1.0.4.tar.bz2) = 126641 bytes

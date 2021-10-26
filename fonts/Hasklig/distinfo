@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:03:49 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:27:00 nia Exp $
 
-RMD160 (Hasklig-1.1.zip) = 0c50743ebd172b69db9a972c0db95c7ea08bf664
+BLAKE2s (Hasklig-1.1.zip) = a45d56f4842171dc6b55d1bde6adef49d30a6552a42abd8a7ad93ec7fad7c6ac
 SHA512 (Hasklig-1.1.zip) = 7621747399c1155faf3f1ba5c73dc4ce829141730fd22c58e97e2f3acf79a45b49dc1cf314af80226dbf3bfbf9a38ceb2de812b46a5d424b6181582429bcc081
 Size (Hasklig-1.1.zip) = 1308041 bytes

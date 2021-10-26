@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:05:17 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:28:29 nia Exp $
 
-RMD160 (tex-sourcecodepro-51163/sourcecodepro.tar.xz) = 1f4869ad6b99ed557157fb88e7db2491532256eb
+BLAKE2s (tex-sourcecodepro-51163/sourcecodepro.tar.xz) = 43fe35d53563d6aeafd24afddbe83de435291709f75fb6b831c8cb714568acdd
 SHA512 (tex-sourcecodepro-51163/sourcecodepro.tar.xz) = 45c41d470f0e84cc35d4c06cacc1beebd7891e98326a0e0f6462c7dc0fdf1eb9f4e0da59ced33e47c2c93c9662eec31efb8cebcab471350eb2c1c198873268e0
 Size (tex-sourcecodepro-51163/sourcecodepro.tar.xz) = 3704752 bytes

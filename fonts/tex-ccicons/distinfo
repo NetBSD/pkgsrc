@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:39 nia Exp $
 
-RMD160 (tex-ccicons-45646/ccicons.tar.xz) = f8c9991ef015b6ae0a5ff15da50ff453bf0e5fb1
+BLAKE2s (tex-ccicons-45646/ccicons.tar.xz) = 371bed6573236c648ee05601fe30dab312ab649d1a62def74d591367e08c7619
 SHA512 (tex-ccicons-45646/ccicons.tar.xz) = bfb807e2140e4e0a65c6c43b62cd2c99cf80bb596ec8365685d1a81f7057f423935e2a57e70814d9fb092d8c1b4a7d3f47301e4db31bb51352f5d266572791db
 Size (tex-ccicons-45646/ccicons.tar.xz) = 15556 bytes

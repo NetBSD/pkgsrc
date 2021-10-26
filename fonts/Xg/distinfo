@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:03:50 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:27:01 nia Exp $
 
-RMD160 (libXg.utf.fonts.tar.gz) = b6314b4b3179c0851b1bb98eac21accaa2f2263c
+BLAKE2s (libXg.utf.fonts.tar.gz) = 6e3a6d24968b83e25ef8b2ac3b125ac390c2d3530e168aebcccb2769c4c50af7
 SHA512 (libXg.utf.fonts.tar.gz) = 7fc2aa976d5d699c39f02256a39d8b5137bfe2dbabd4017ff1770f065daa12782d94473875147b7aaaa385bcd750931f02c6f736008c218670ecf278f10e1797
 Size (libXg.utf.fonts.tar.gz) = 1147674 bytes
 SHA1 (patch-aa) = 26fc6f9d190857ea47a21df17be1b2bd4effea87

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:04:07 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:27:17 nia Exp $
 
-RMD160 (lato-ttf-2.015/Lato2OFL.zip) = b56bb5c54cdb713f6716619fb41a16c9de339b7a
+BLAKE2s (lato-ttf-2.015/Lato2OFL.zip) = 41919e58982acb839228658518edfa33e302624905aaa984a3d8f4ed75fb37d6
 SHA512 (lato-ttf-2.015/Lato2OFL.zip) = 8f05973ef54e27119230f90480b0cb7ba154fa72fea3c8fffa73b9cb93020624e965220e0497220520bd9b0cade5dc67144d7a99895a8c1a6eb00445ae3ccfd7
 Size (lato-ttf-2.015/Lato2OFL.zip) = 6102132 bytes
