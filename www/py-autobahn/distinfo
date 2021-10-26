@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.29 2021/10/07 15:08:11 nia Exp $
+$NetBSD: distinfo,v 1.30 2021/10/26 11:30:28 nia Exp $
 
-RMD160 (autobahn-20.1.2.tar.gz) = 4e9627ba1696f6ba1e1536a5d40cd82683064a64
+BLAKE2s (autobahn-20.1.2.tar.gz) = 62163c1f84e2cf80b69d9b99f1854189c8845311ed58e3e49aa23ca0d2760ebc
 SHA512 (autobahn-20.1.2.tar.gz) = 5a2c2ba937abaf196b4370ce6a873f091ce4d08d438a65d96809c2c9146afc0d174b44e9c245fbe0332f523ef86fae620d7a5d9f2603e714b2b05d3ef980e662
 Size (autobahn-20.1.2.tar.gz) = 612566 bytes
 SHA1 (patch-setup.py) = 53632fc991e747e79a51031952d11ed3456fe0b2

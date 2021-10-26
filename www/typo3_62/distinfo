@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.21 2021/10/07 15:08:56 nia Exp $
+$NetBSD: distinfo,v 1.22 2021/10/26 11:31:11 nia Exp $
 
-RMD160 (typo3_src-6.2.31.tar.gz) = b41ffd85452fb5bbb362fd35bc1c2869a742a844
+BLAKE2s (typo3_src-6.2.31.tar.gz) = 31daf3d4677470b0ad6b1654a7ad11b58fc52aeea3b17aa6c52a88ac64184bba
 SHA512 (typo3_src-6.2.31.tar.gz) = e8221bb74fa1419f252341038d0d02f9e8e2543448876c49d7fa790edfa676cf9991bc509d215cb30e31c2988521b63b83501493bbb34793a046e54bade3b605
 Size (typo3_src-6.2.31.tar.gz) = 20959472 bytes
 SHA1 (patch-typo3_sysext_core_Configuration_DefaultConfiguration.php) = e33544513630b4c931ca8e932847796d4bd694b2

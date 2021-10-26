@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:07:26 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:29:42 nia Exp $
 
-RMD160 (ocsigen-toolkit-2.8.0.tar.gz) = cd70afb764ab1fdefc0101b9bde0cb8cc7dfd2e3
+BLAKE2s (ocsigen-toolkit-2.8.0.tar.gz) = ff79f34d8218ecd8dd4bb7f3a97747f5ec36055d3b1c12b3a8490563b6a975d7
 SHA512 (ocsigen-toolkit-2.8.0.tar.gz) = 7b56ad4a0aeb4640d99db46f157debdba31958909a0bda34803be0f0d316e87399d68a00590c00f00946d38e5058094d69064a9e084edf4f81a29ab6a10dce8e
 Size (ocsigen-toolkit-2.8.0.tar.gz) = 82459 bytes
 SHA1 (patch-Makefile) = 909ebc22c7da39bfdc3bba8efb5d108fafa1aadd

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:07:42 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:29:59 nia Exp $
 
-RMD160 (HTML-Stream-1.60.tar.gz) = 3e8562ca9b7ea9d21aab937f0f9510d7ea8ee838
+BLAKE2s (HTML-Stream-1.60.tar.gz) = b2e03583e2b353b9b14ad1c33357de97fab3864d6335e50af421b3e0bf50f1de
 SHA512 (HTML-Stream-1.60.tar.gz) = 5a34f4677d24f8e3b230dfd0a4c96631d6ce1b4e64cc69499ef18e3e5dafe456044cb31ddb042e5bc7547fc56d0b7624aacc0749059928c9b4779e650e771934
 Size (HTML-Stream-1.60.tar.gz) = 63719 bytes

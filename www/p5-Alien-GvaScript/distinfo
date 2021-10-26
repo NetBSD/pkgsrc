@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 15:07:26 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:29:42 nia Exp $
 
-RMD160 (Alien-GvaScript-1.45.tar.gz) = 65cb05267893f0d55f8d96149f1539fa808cbb06
+BLAKE2s (Alien-GvaScript-1.45.tar.gz) = 43947db4a5187ee0c7ef17f2f230d7a29960eac759fdc75097661f040cfd5d40
 SHA512 (Alien-GvaScript-1.45.tar.gz) = c3eb330c83056272583de848a04b417e6a503d0a2fe76e5c9bb08aa7e705ef1c5e80237f649d302b962ae9b1bc69ba7a95bc98de4df1dd662958400690dcc92a
 Size (Alien-GvaScript-1.45.tar.gz) = 332636 bytes
 SHA1 (patch-aa) = 50df9bee65c8556a9021d2eefc84edc21d87fdec

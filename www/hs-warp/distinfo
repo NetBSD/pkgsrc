@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:07:15 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:29:32 nia Exp $
 
-RMD160 (warp-3.3.15.tar.gz) = 5103d99179e086f4c6d017caec311c4449b5690f
+BLAKE2s (warp-3.3.15.tar.gz) = 94ef09a246cfb58473a3a63083bb2c38a22c98a14f7b6e409eddd00a56ac66e6
 SHA512 (warp-3.3.15.tar.gz) = e2454290aa66e27643e6f74874aa65dec8731b55d5f106262a583563b7d2be8b35d4a222c3cbfbd2f2d61d4a88435fc247c0a469cf2628ebe42a6ff936c78076
 Size (warp-3.3.15.tar.gz) = 65830 bytes

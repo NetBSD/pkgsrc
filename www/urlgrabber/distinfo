@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:08:56 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:31:12 nia Exp $
 
-RMD160 (urlgrabber-3.1.0.tar.gz) = cf470cd2ddd9a92b3fc0f6bed3f53063b72216aa
+BLAKE2s (urlgrabber-3.1.0.tar.gz) = dad4e07790c12d40ec24d38d7cb7f06e450b92aa17d020e5f9ed2f099386aa52
 SHA512 (urlgrabber-3.1.0.tar.gz) = dbdcbbc8b1409bd01a77cb3b6a6bee7aae4ce8acf211fb12766645d191b8bc5ef0cea9ff99e93b9b781c29b88137901de68940b7cbb82c064991d61fef95d9a2
 Size (urlgrabber-3.1.0.tar.gz) = 78848 bytes

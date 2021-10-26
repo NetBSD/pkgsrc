@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:07:13 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:29:29 nia Exp $
 
-RMD160 (haunt-0.2.4.tar.gz) = 06f6056b7a79e044f219736f9b4e59093a335b29
+BLAKE2s (haunt-0.2.4.tar.gz) = b1dd5fef4f51bfd8166449da5db3a7ba8e662d015bbbc3f071aec3ad518c4a37
 SHA512 (haunt-0.2.4.tar.gz) = b705a3d842488bd1149901058be858d7194be60a7ca68db21904e550ae1a7cf34275c67c260555dd9686a15e605794966757f793df5882e44f54a4c08e5ca87a
 Size (haunt-0.2.4.tar.gz) = 301784 bytes

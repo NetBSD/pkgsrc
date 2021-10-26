@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:07:26 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:29:42 nia Exp $
 
-RMD160 (ocsigen-start-2.21.1.tar.gz) = 55fd43cf67c98860957ea246df83adc345567a8a
+BLAKE2s (ocsigen-start-2.21.1.tar.gz) = 5341769e8a014d361cf0de2a371c3541049f1355f27363fa7a84bbb2a9bdbfae
 SHA512 (ocsigen-start-2.21.1.tar.gz) = 5f3f84cd4be76b000af033347890cf94ea53e811f24e52aec6f5c4c06c201460e33f346f0356a6233f5478981190d8105db651273609b92a0d16ad55463c0dd6
 Size (ocsigen-start-2.21.1.tar.gz) = 1047596 bytes
 SHA1 (patch-template.distillery_Makefile.db) = 5e87d8117a59d506979cbe8aa4f3e0208d048107

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:08:58 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:31:14 nia Exp $
 
-RMD160 (websvn-2.2.1.tar.gz) = 02d4d8d264d1a685bbca1c88175baf0da1e45b42
+BLAKE2s (websvn-2.2.1.tar.gz) = d7186dce41166323a8aab00fda80e5d7f122dd18fa44c8e81332c8c5e3a4683b
 SHA512 (websvn-2.2.1.tar.gz) = 4e170ed670ad10fc2f97b0e2fe7d8b5305be315c833f2b78190f3942d71f3c933ffd67481f1a3ab951f8bcef8d321a7e2aa7ad569d024131d8722a829d863713
 Size (websvn-2.2.1.tar.gz) = 664548 bytes
 SHA1 (patch-ag) = 5dbac2f9264001f86db1845d9dc937acd6e080af

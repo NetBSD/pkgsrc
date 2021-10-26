@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:07:24 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:29:40 nia Exp $
 
-RMD160 (nanoblogger-extra-3.4.2.tar.gz) = 2d3ffbace23201ba3120be5ab931eabb6ab52bd3
+BLAKE2s (nanoblogger-extra-3.4.2.tar.gz) = 0cc80028da0e339c6f9c9ef033bbedc55b939b259ea3fa8bcb2eeb303c2c288c
 SHA512 (nanoblogger-extra-3.4.2.tar.gz) = f6fcdda8b9f8661f2bbb25bfa4934623d25719d1d079e93d0354d73a3d4019a5b807fbd46ec5753054e94325f7457e794deb896c33c5c98ecd5ebff81897b66f
 Size (nanoblogger-extra-3.4.2.tar.gz) = 66006 bytes

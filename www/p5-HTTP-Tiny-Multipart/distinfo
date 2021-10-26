@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:07:49 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:30:05 nia Exp $
 
-RMD160 (HTTP-Tiny-Multipart-0.08.tar.gz) = 6a7241c6dd9c17f0c0603763065eb4884d6becdf
+BLAKE2s (HTTP-Tiny-Multipart-0.08.tar.gz) = 2acfcc3aedba4f3e02b0b54b68a63b88bdf9a02f8ff5159a46bb7e4ade9ab646
 SHA512 (HTTP-Tiny-Multipart-0.08.tar.gz) = e8a6452f4a23f359110b54987c2ff261446b1848ddc6f9ecdc37b711978c00d99ffc2ab8189f435d39d7c2d127253608b721f48e11969c8039c1bc9a69609720
 Size (HTTP-Tiny-Multipart-0.08.tar.gz) = 9067 bytes

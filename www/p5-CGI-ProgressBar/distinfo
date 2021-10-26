@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:31 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:29:48 nia Exp $
 
-RMD160 (CGI-ProgressBar-0.05.tar.gz) = be4cba59e064ea4a9a09938c5ac0f1c4a4dac87f
+BLAKE2s (CGI-ProgressBar-0.05.tar.gz) = 142f17d4d24f280687e2403c326b0dcd5997280b53bf1167c436e10ffc4df843
 SHA512 (CGI-ProgressBar-0.05.tar.gz) = f114c07dcca4279390d8ab6e2a7f8a5236c6210c67c0c4c17f39fc3ba75d0df5b7e4412bf22db4ef86a5d3d07785efe5f12b6772e96510d09078f21ac9262e74
 Size (CGI-ProgressBar-0.05.tar.gz) = 8730 bytes

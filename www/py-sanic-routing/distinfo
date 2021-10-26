@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:08:43 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:30:47 nia Exp $
 
-RMD160 (sanic-routing-0.7.1.tar.gz) = 7e82710c67773cbeea3d517e1f09166dafe62fbc
+BLAKE2s (sanic-routing-0.7.1.tar.gz) = 4ddd43c52c11a1517b435171742d77944d279d9a5162a0bda29404f2db15c61a
 SHA512 (sanic-routing-0.7.1.tar.gz) = 353e24884b99d51622564642a9242e4931f5af8f1bb5d7352cef58584fe7b24d0ccaab0619f2063305573ae3d0388194ccdf91807c6e9f23ac307466bbf64b18
 Size (sanic-routing-0.7.1.tar.gz) = 22597 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:08:28 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:30:43 nia Exp $
 
-RMD160 (livereload-2.6.3.tar.gz) = 20b85406b53c7cae2a2019434ca3a3d28516cee7
+BLAKE2s (livereload-2.6.3.tar.gz) = 78f5fdb3057de39e0bfb5a2226657475bfc089328ce4cbda81d1392575d7ce0d
 SHA512 (livereload-2.6.3.tar.gz) = 8a989d8bbfa9f33b986ff9d080f41472667602172f12d2fc6acbc76d84353aea24c71602cecab0719e84442180285cd9ab3af9b5b733706c55e182fd0b10aa7e
 Size (livereload-2.6.3.tar.gz) = 25199 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:08:36 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:30:53 nia Exp $
 
-RMD160 (rekonq-2.4.2.tar.xz) = 8b9777d00684075b02dd75de12b03367e172e1d1
+BLAKE2s (rekonq-2.4.2.tar.xz) = 8bc07631bf7a0daace22c4737999228514f08a569922736492a6232e12f9a669
 SHA512 (rekonq-2.4.2.tar.xz) = 55594dac99b06db7986198f1b6e8efdb0770e2219a33d34db7919d4d0d741ef026b0e12d284ae9b2e1a9b6e40efcdf4f0870e9b0819bff14f45162c5b464ba78
 Size (rekonq-2.4.2.tar.xz) = 5161348 bytes

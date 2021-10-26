@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:17 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:29:34 nia Exp $
 
-RMD160 (jetty-distribution-7.6.8.v20121106.tar.gz) = 3c83ed6ae84eac00a213cd8ed0fc87b1c9479f9f
+BLAKE2s (jetty-distribution-7.6.8.v20121106.tar.gz) = 33fa1166267a33dd6e0dfb778a5c2ae98cb2101e7a39c6f3f7f1180eb87897ea
 SHA512 (jetty-distribution-7.6.8.v20121106.tar.gz) = c8fd3ff8d5e8ecded50daecce71c203dc6f9fef2354749f2f153ed39f31b510d39cd6b9ea6c521b597232b1d5c5985efc571b43885dcede776ce341c897df1ff
 Size (jetty-distribution-7.6.8.v20121106.tar.gz) = 8714368 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:54 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:30:09 nia Exp $
 
-RMD160 (LWP-Online-1.08.tar.gz) = 568cb3986384c388df5ac73e31180558ea692c81
+BLAKE2s (LWP-Online-1.08.tar.gz) = e635c677754d151c8df0db0225cb35ea684dd51d039b942972993b62e615980c
 SHA512 (LWP-Online-1.08.tar.gz) = 2b255f60ee6521757ce3d49cc0720e3985ff17e3db7b7868ced6a9e1c5444dc067c80b7d34dbe7be9679c134f3de1dbe0e9421a1a20ff388c812aacd1d964497
 Size (LWP-Online-1.08.tar.gz) = 32250 bytes

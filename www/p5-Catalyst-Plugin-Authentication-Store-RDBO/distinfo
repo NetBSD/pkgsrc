@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:07:35 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:29:51 nia Exp $
 
-RMD160 (Catalyst-Plugin-Authentication-Store-RDBO-0.002.tar.gz) = 8cb2033633e3ec292c915c913050140e57cc721a
+BLAKE2s (Catalyst-Plugin-Authentication-Store-RDBO-0.002.tar.gz) = 02f56f17a454286c58d3e55fa996b27b10994e09dc7db94b25420a4e0df0c872
 SHA512 (Catalyst-Plugin-Authentication-Store-RDBO-0.002.tar.gz) = cf359dc4c367bc8fb8c17de9df34ebe2295ffaebcb86e42e77dab46d4a0ee72509adb9bd7649504c2e50ada0a334becd86362db0d82a0bfe7640fe6076069843
 Size (Catalyst-Plugin-Authentication-Store-RDBO-0.002.tar.gz) = 11386 bytes

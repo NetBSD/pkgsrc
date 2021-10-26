@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:08:58 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:31:14 nia Exp $
 
-RMD160 (WiLiKi-0.6.2.tgz) = dbe766235c16eeed25427e3ee6c5a4fa984ec4b5
+BLAKE2s (WiLiKi-0.6.2.tgz) = 55cce0db6a69fac8f469445a38dfdb28bccc299eb23e4410ed20a751f391bed3
 SHA512 (WiLiKi-0.6.2.tgz) = fc37d54d19cb3db2c9a4d7161669fcf305d436d996708cc4b0eb0633c7fddf167f00f6a30de95d77bc7a174ee94d04efbd70afac4337d6e7f8cbe890de12ef70
 Size (WiLiKi-0.6.2.tgz) = 133217 bytes

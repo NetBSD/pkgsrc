@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:08:57 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:31:13 nia Exp $
 
-RMD160 (webby-0.9.4.gem) = 0626bbd1175ebfb3a8f6374264c0ca3d7f0db24e
+BLAKE2s (webby-0.9.4.gem) = a930e6c9599a8602a125221d6fad0a31e5ee200278282c0941aa9259ca7b6954
 SHA512 (webby-0.9.4.gem) = 71b7f4970be5b1076de08aae7002da377f7d0c4c4d6cfb8061dc6f23608463c8f9a7cc56961b8407d95485fee9bc267323e18510e0dd1b0d8246e061dfb7ddd8
 Size (webby-0.9.4.gem) = 344064 bytes

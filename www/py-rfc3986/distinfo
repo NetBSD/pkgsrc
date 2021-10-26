@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:08:31 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:30:47 nia Exp $
 
-RMD160 (rfc3986-1.5.0.tar.gz) = cb36589acab1b4169fe51891c0465714cb5145f8
+BLAKE2s (rfc3986-1.5.0.tar.gz) = 5fe71ee013b7d978c12a583c7701cc44b5690725b3579f6a7a10b6bcb09f93ee
 SHA512 (rfc3986-1.5.0.tar.gz) = b291b88b6890f8c9fcfc353e05d1b8c0435be62f22768568ecf714af083b3c51d7a9b301fc9196d37ad4e6eeb8c6a237ba40914098e755b4ccdf36b7df7906c2
 Size (rfc3986-1.5.0.tar.gz) = 49378 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:07:06 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:29:22 nia Exp $
 
-RMD160 (calamaris-2.59.tar.gz) = f1050e0b896eb851412e754b8137484113ddb19b
+BLAKE2s (calamaris-2.59.tar.gz) = 873fe5765b58324c5d91172341f850fe7188fd02b96a0646de26a5384ba1942e
 SHA512 (calamaris-2.59.tar.gz) = 8c8ed820a1af6e21cfe9f03397c159b2261c8253b3395a8d6dbd21064151439406496132917d0ef087eed805c7945cf28f2d12dc1e52340991c18e6a27484ade
 Size (calamaris-2.59.tar.gz) = 56168 bytes
 SHA1 (patch-calamaris) = c71790df2a3e2eb8fe7678471f67e9ddc4000d6f

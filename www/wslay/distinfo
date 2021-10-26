@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:08:58 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:31:14 nia Exp $
 
-RMD160 (wslay-1.1.1.tar.xz) = 83639d73027f3b66929c4abb4b5e34e1b93ba311
+BLAKE2s (wslay-1.1.1.tar.xz) = bc0acba1527b1d13f60fb0bf1d14e2319c46e74fec07cd81b95152844edafc2e
 SHA512 (wslay-1.1.1.tar.xz) = d1101d3d78d0c2c09647d7266483a7a9dc23f991b1dbef37c3d3f4ad5836d75830086ac7d982650461b92771494185a8b80435156b113b17f23b3c03bbceb56b
 Size (wslay-1.1.1.tar.xz) = 278264 bytes

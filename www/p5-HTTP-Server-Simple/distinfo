@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/07 15:07:47 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 11:30:04 nia Exp $
 
-RMD160 (HTTP-Server-Simple-0.52.tar.gz) = 65d40b0b3e048751c683cd427f30cf92e88c2612
+BLAKE2s (HTTP-Server-Simple-0.52.tar.gz) = be570ec553f1530e0c6743876736db492a28074ff436065d42986a7ce5b8fcbc
 SHA512 (HTTP-Server-Simple-0.52.tar.gz) = 57c0aa4ceb7e0f430f577e24c275d96d54ceb15ddf6e53710067f57dac50e8a57661399d0093edf28c1ff7b6ed313471cded48f5792349191b8d60d8d7cde2d1
 Size (HTTP-Server-Simple-0.52.tar.gz) = 36722 bytes

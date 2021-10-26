@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:07:47 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:30:03 nia Exp $
 
-RMD160 (HTTP-Parser-XS-0.17.tar.gz) = 3a7b81044e3c779986b015cb8dc73b9c42aadf10
+BLAKE2s (HTTP-Parser-XS-0.17.tar.gz) = 6095923156ea1c5331195c86c9d6908e28cce894d4cc386511f9982727d9a60a
 SHA512 (HTTP-Parser-XS-0.17.tar.gz) = 44375b93e8aea04bedee283b1796eb6e94a2920be7ae29fe2f7d83491005b4d8f29047ddf52c6d7f62cf5a9f2575d7f6ea7d357e178536f60dd2c3cee08f495e
 Size (HTTP-Parser-XS-0.17.tar.gz) = 86185 bytes

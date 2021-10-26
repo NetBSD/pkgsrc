@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:52 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:30:10 nia Exp $
 
-RMD160 (Net-Curl-0.45.tar.gz) = 647cd51347999067bc90d96e1bf224e4c49a1767
+BLAKE2s (Net-Curl-0.45.tar.gz) = 00e99f2c320a49142847b7c11edd87a2121433deb30d3401729f30a352dc0b32
 SHA512 (Net-Curl-0.45.tar.gz) = 83cc3232e5d99681db2139c28864b07fc5b41bfda8af765feebfff34fdf54bf26636e53dd359cd2e34e51e85fda4fb87c967efbd3c60ba29868da401d0948de9
 Size (Net-Curl-0.45.tar.gz) = 105107 bytes

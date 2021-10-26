@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:46 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:30:03 nia Exp $
 
-RMD160 (HTTP-MultiPartParser-0.02.tar.gz) = 7cf13643b9685a99305c95978a987959db6b0728
+BLAKE2s (HTTP-MultiPartParser-0.02.tar.gz) = a9b28f9d13e9af1ec25ae13827ae55a4afe535f6818a67576dd6e8835cdcf901
 SHA512 (HTTP-MultiPartParser-0.02.tar.gz) = 72a9e92821dae04be63f12b3bbcd22dfbc11ff72ff31b48f2e2bd8fe3095c9cb7992f31deeb1284d7f9986cbcd854f8a21c2110c1d04bd4c3b66307c9d86945d
 Size (HTTP-MultiPartParser-0.02.tar.gz) = 30258 bytes
 SHA1 (patch-Makefile.PL) = 14932aa56222c9d6b548cd0cc294fcb1d18a214d

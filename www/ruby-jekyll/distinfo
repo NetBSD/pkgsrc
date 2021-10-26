@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.24 2021/10/07 15:08:41 nia Exp $
+$NetBSD: distinfo,v 1.25 2021/10/26 11:30:59 nia Exp $
 
-RMD160 (jekyll-4.2.0.gem) = 546cfd6f4513df1e68f033b2df4cfadd0034930f
+BLAKE2s (jekyll-4.2.0.gem) = 2cc3045f4e12a58caf745029a777618ddf97404a55b0d945521dbf9bd28a9258
 SHA512 (jekyll-4.2.0.gem) = bef32d360ca2d6c8bd226f9485f4ed24348cb0f8747e5a230dea42417c8fa821e009a7e92c1f454cb5dd7759011db145e505658feb3e0266910afbe63754cabe
 Size (jekyll-4.2.0.gem) = 124928 bytes
 SHA1 (patch-lib_jekyll_commands_new.rb) = 928f4542aae30671efeaa99f59d61034aa5e38a7

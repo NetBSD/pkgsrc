@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2021/10/07 15:07:15 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 11:29:33 nia Exp $
 
-RMD160 (htmllint-20111128/htmllint.zip) = 0f29b7854b784c9e26fd8a41f81df2d732fed89e
+BLAKE2s (htmllint-20111128/htmllint.zip) = 08ebe4003103b320301e45d1cf82c972869972551d525dc75c2ec7e4dcbdeed9
 SHA512 (htmllint-20111128/htmllint.zip) = 1e9102c10061186e4304283d590aac283408962633358114f6e2007d1430dba2f940452a6819693606c366eff9a66fe5612c5ba789c3ec3476e5edded0c74fd4
 Size (htmllint-20111128/htmllint.zip) = 775997 bytes
 SHA1 (patch-aa) = bc28a6e0c2d988f559a56bb697c093a24831715b

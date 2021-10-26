@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:08:40 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:30:56 nia Exp $
 
-RMD160 (erubis-2.7.0.gem) = d127d4b22006298814c960f6c8f06b799891eca0
+BLAKE2s (erubis-2.7.0.gem) = ac0d63455b1e6e7e9c9abecd7b4f621c30683ca55617ba6019a853b651d64c18
 SHA512 (erubis-2.7.0.gem) = 49b08b28656acaf3b0c88fe064bb0d5f79fd08b834d7eba9294217b0893c5a0244ac5dd54de0e52dd17e828a0110e54b29e8c2d75171d527da957917344a0f27
 Size (erubis-2.7.0.gem) = 173056 bytes

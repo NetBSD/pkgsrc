@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:08:27 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:30:43 nia Exp $
 
-RMD160 (jonpy-0.06.tar.gz) = e1bc4c1b0f0482f0bd627ec212073e04235df047
+BLAKE2s (jonpy-0.06.tar.gz) = 38e200fa72fcf3cb5c974ab9a2ae88a0c0190fe2c68c047e83203329a83d414d
 SHA512 (jonpy-0.06.tar.gz) = 92691b5e01baf02822e09333fb3c72ee249df9462c5bb8f337cd2f4e7d6b426c45d719296e5a25443882476f9dee79744c7cef7f5b5919b8f1226676d1a01026
 Size (jonpy-0.06.tar.gz) = 49022 bytes

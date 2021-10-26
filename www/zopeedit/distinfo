@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:09:00 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:31:15 nia Exp $
 
-RMD160 (zopeedit-0.7-src.tgz) = 9733e2338f819ec515d7bdace17ca447c96ae530
+BLAKE2s (zopeedit-0.7-src.tgz) = a693c219ae340142cbbc50b799f8534a3b5b07fc87246c212ff86c03b5f5dc07
 SHA512 (zopeedit-0.7-src.tgz) = 2b5474e3d345ede879b6a23ed52b6a4b9e5db71462556667c342e5c7f26f345779b09f531da556a7fd9a4df4a06184704fadca695b98fb741ef3d1e210921cbb
 Size (zopeedit-0.7-src.tgz) = 22798 bytes

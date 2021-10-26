@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:51 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:30:07 nia Exp $
 
-RMD160 (Kwiki-PagePrivacy-0.10.tar.gz) = b4610a7b949d0d8cb14fe8fdb3f84142488afece
+BLAKE2s (Kwiki-PagePrivacy-0.10.tar.gz) = db0357be7e6bb7cad9ed0c04138864a414d9aca320e2bb09590be7012419dff1
 SHA512 (Kwiki-PagePrivacy-0.10.tar.gz) = 3bbddbe9dfb2666a5f9129d6c023dde171a83a40a60a3ee0b6742c5ca645e383dc12d52b499ef8f9e42c23bd9e9a10c200c72969ac5d823b06641ed3b5bf39bc
 Size (Kwiki-PagePrivacy-0.10.tar.gz) = 8437 bytes

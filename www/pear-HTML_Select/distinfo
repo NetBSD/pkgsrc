@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:08:06 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:30:22 nia Exp $
 
-RMD160 (pear/HTML_Select-1.3.1.tgz) = 5c1b44929475e327592681b6e097bdbfc1ae13d1
+BLAKE2s (pear/HTML_Select-1.3.1.tgz) = b61dafc8cfb94d8b2b8149aeae49602aaa8c7dec88bd7009e34553db11d48cee
 SHA512 (pear/HTML_Select-1.3.1.tgz) = 57af5201902f00f35b7f77f6c3763e734b21e6b8274f0b41f74e6f77ad1d6e1a110fd09586aa8bb08a257a4b30da1268f19e9aff6fe1d5e840864bd0cd0f0ab8
 Size (pear/HTML_Select-1.3.1.tgz) = 5630 bytes

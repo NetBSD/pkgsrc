@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:38 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:29:54 nia Exp $
 
-RMD160 (CatalystX-CRUD-View-Excel-0.07.tar.gz) = e9291edd5c7613eebc22a7641c23720dc581fd2e
+BLAKE2s (CatalystX-CRUD-View-Excel-0.07.tar.gz) = 7c0397b9977198fc403203d5194006816b49d6039eb7e2fa11ceba5117efcbfa
 SHA512 (CatalystX-CRUD-View-Excel-0.07.tar.gz) = adb93a49e4d35e48ae70248e1f11d2799ced63f1503d181562dd969df6de108215448576b964c534a542026e4734fee840da4a085a98659fb0ace21d88850cb5
 Size (CatalystX-CRUD-View-Excel-0.07.tar.gz) = 4720 bytes

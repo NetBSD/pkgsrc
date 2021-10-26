@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:07:56 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:30:12 nia Exp $
 
-RMD160 (Plack-Handler-AnyEvent-ReverseHTTP-0.04.tar.gz) = b8b998af8b632221226c1cc8bb1c9b61e2062943
+BLAKE2s (Plack-Handler-AnyEvent-ReverseHTTP-0.04.tar.gz) = dc44c6b3eb91d25becd3e29bb8397cdd414e81cab505191cb847da6a9101509e
 SHA512 (Plack-Handler-AnyEvent-ReverseHTTP-0.04.tar.gz) = 782d0da19571a94be0ca47d0c7c13d1fca7cd6edd3f6e95099db5d5c461088943a5e6b198bf962259a7f2a0c54e83165e76918a2177eb4644e132a455cf1eb1c
 Size (Plack-Handler-AnyEvent-ReverseHTTP-0.04.tar.gz) = 42077 bytes

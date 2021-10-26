@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:08:17 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:30:33 nia Exp $
 
-RMD160 (django-taggit-1.4.0.tar.gz) = acc829ab7abdff96794068cbd1dedfeb49433fdd
+BLAKE2s (django-taggit-1.4.0.tar.gz) = 5f23ebdcee742705e41d8ba0fb7c275a30bef94e58cf6291ef132a6edefc5d40
 SHA512 (django-taggit-1.4.0.tar.gz) = 0ee6879e4a319c7f6bb4defe7b9cd3e4140e5af290239958c2decf6644629dc230554d68e153adea9371d434d97c914dff4ddebf8f32b8d6529682e0d08642fd
 Size (django-taggit-1.4.0.tar.gz) = 48757 bytes
 SHA1 (patch-taggit_managers.py) = 1559290b26c15e74cf3aed0bc3a1f1f33e161f6c
