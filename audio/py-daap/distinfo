@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:09:48 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 09:59:24 nia Exp $
 
-RMD160 (PythonDaap-0.7.tar.gz) = c08c1980318c221f51eea446a1e6a060bf0a250d
+BLAKE2s (PythonDaap-0.7.tar.gz) = 11f41fc89c6fec0dfe56cba9d4a485ad2cbf872c83119a7a9bcdf2cab5e1296e
 SHA512 (PythonDaap-0.7.tar.gz) = c0352fbb45a8bb7aadbc2aaadb6ee12ed4db72fe62b1af431d0b14d124756bfcc6d57d3b5f3a59912c250c3b835bca5f9e013dc31ef9ee76808f68e6fc35d182
 Size (PythonDaap-0.7.tar.gz) = 25285 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.63 2021/10/23 12:04:49 thor Exp $
+$NetBSD: distinfo,v 1.64 2021/10/26 09:59:16 nia Exp $
 
-RMD160 (mpg123-1.29.2.tar.bz2) = dfb04608ee5ce8a387e9f6097c36a873cec35ea8
+BLAKE2s (mpg123-1.29.2.tar.bz2) = 64a89f70b8e128965f75df3e3136b6c63e40e6e06a07d6013ba62d551943c8a4
 SHA512 (mpg123-1.29.2.tar.bz2) = ffb82ffbebedeb12783338b5159bf055afd25cb77e1b705bef29f04fa50bcb2ceaf2a6418d0e111fab1151ea956fe48ba3576d978e6b0c8f4ca72c3883608ec0
 Size (mpg123-1.29.2.tar.bz2) = 1069976 bytes
 SHA1 (patch-ad) = f07b637c3fc1d3ea0426013fc25bca8e3aecba56

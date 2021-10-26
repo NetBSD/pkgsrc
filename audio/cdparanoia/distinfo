@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.39 2021/10/07 13:09:15 nia Exp $
+$NetBSD: distinfo,v 1.40 2021/10/26 09:58:50 nia Exp $
 
-RMD160 (cdparanoia-III-10.2.src.tgz) = d6c4ea9cc4aa4d5bcca4985e668ea6142d53cc55
+BLAKE2s (cdparanoia-III-10.2.src.tgz) = 92c07211785581ef3d30338272f4d8642f94c26add7be8a8e4dbb913b0102257
 SHA512 (cdparanoia-III-10.2.src.tgz) = 4ab0a0f5ef44d56c1af72d1fc1035566a1a89c4eeddb9e8baea675fe51c06138d913342afc8bed167d9fa55672fa25a2763ce21f7e24c1232e4739aff20733a7
 Size (cdparanoia-III-10.2.src.tgz) = 183236 bytes
 SHA1 (patch-aa) = 3b1557fd2d8cf2e746397ec92e46ad3723e78c6e

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:09:25 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 09:58:59 nia Exp $
 
-RMD160 (gmpc-lyricwiki-11.8.16.tar.gz) = b62e87a90e155f139b1941feb74905afd748cb4b
+BLAKE2s (gmpc-lyricwiki-11.8.16.tar.gz) = 6696d0a7a1bf01dc20d44dc3b2be5959236958dbe8e00bb2ee0b0f18ac1fc88d
 SHA512 (gmpc-lyricwiki-11.8.16.tar.gz) = 32d9788c15a03973725990d01ef2bdd8979a9fc17c3b70a90f42fff7bd1f5241de2824077b48adddbce66a6c7e8592bb0f729346d48f8cdaa172c1924b6ecd11
 Size (gmpc-lyricwiki-11.8.16.tar.gz) = 306508 bytes

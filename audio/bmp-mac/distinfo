@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:09:14 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 09:58:48 nia Exp $
 
-RMD160 (bmp-mac-0.1.1.tar.gz) = 06bb646030a43b60c2d533cc7e80abbbbe2e31d0
+BLAKE2s (bmp-mac-0.1.1.tar.gz) = f1f23868dc17977e514db313a43f992fb37e69d64cf68dd3b6dc7f39e36e513c
 SHA512 (bmp-mac-0.1.1.tar.gz) = ff29849fe5c69be57b56e55a30fbea61a1a18f4aa43095dfbc0fe3c2d4774d34857915efe9293d49351296f33e62e060517308bd717067774fa611648c4234ac
 Size (bmp-mac-0.1.1.tar.gz) = 293918 bytes
 SHA1 (patch-aa) = 8a6308df232cde13970abf74bc21a4d9f2a0b3d6

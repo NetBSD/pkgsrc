@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 13:09:31 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 09:59:05 nia Exp $
 
-RMD160 (libgpod-0.8.3.tar.bz2) = 96a2b0e48c0af6ecc62fc4aba4e38e8d0579c6cd
+BLAKE2s (libgpod-0.8.3.tar.bz2) = e09dfe859abed20dee090c587e39995b9ede34a0268c6e59c19c292c73967bf8
 SHA512 (libgpod-0.8.3.tar.bz2) = e39f22054c2d2bdf5fc764aa1f692de17a1a06c7c7e9c60883d126b216dacca7840bf818e7e7e039218fe2a64c0920ba96d8cbbe310e11c1c4e68b82e7cbbd8e
 Size (libgpod-0.8.3.tar.bz2) = 801903 bytes
 SHA1 (patch-aa) = 9b90cf13b94259b50fcab19f1041a4aa41eab8c5

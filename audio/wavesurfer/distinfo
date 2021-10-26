@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:09:58 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 09:59:35 nia Exp $
 
-RMD160 (wavesurfer-1.8.5.tar.gz) = 450a58831a5eb54f467f852ff2560e01ae13a090
+BLAKE2s (wavesurfer-1.8.5.tar.gz) = c172747232cf7204b609db5e60b62445ff84efe2425e4e02ef6b722ffb852e84
 SHA512 (wavesurfer-1.8.5.tar.gz) = fae1609043f41b55d40140d94076e6f0970a411c2181137248d4b261a64927e99141ce4088f691ea1a8327136a1b75648f4d492f483dda6eadef506a6cc95642
 Size (wavesurfer-1.8.5.tar.gz) = 278150 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:09:20 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 09:58:54 nia Exp $
 
-RMD160 (OGIspanish-2.0.1.tar.gz) = 293ab7845bbdc25b13bb4f44b807e7b60efa679e
+BLAKE2s (OGIspanish-2.0.1.tar.gz) = 83fb7aa05bb4dc353f460bb9daa07faea149ed3ec4013befd47caae273daf6a0
 SHA512 (OGIspanish-2.0.1.tar.gz) = 6f9a5153fdc4752ea8b8406ea1f9fccdb9c24a2de9b68bc2020daaa03be0df75c468a37d42cd89c34d2015bd645595b1284f0a4787bf6bf04396fd9322623019
 Size (OGIspanish-2.0.1.tar.gz) = 15783 bytes

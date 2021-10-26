@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.32 2021/10/07 13:09:19 nia Exp $
+$NetBSD: distinfo,v 1.33 2021/10/26 09:58:53 nia Exp $
 
-RMD160 (faad2-2.10.0.tar.gz) = 2666b3d3432840d4ec9ccf597015019725530a5d
+BLAKE2s (faad2-2.10.0.tar.gz) = 6347f7b438f164332547290d6cc705ae8f232d2763ce2e3c36be11b7c189df59
 SHA512 (faad2-2.10.0.tar.gz) = 92c8b5e79f85b7a7caac9e7954959c26d74ef148a658dcb37e2c1b303fc2fcc5a0d12f21e7bd476870498109bdd03916a56c13f578186a69d6eceb103222e771
 Size (faad2-2.10.0.tar.gz) = 803225 bytes
 SHA1 (patch-configure.ac) = ed9d4e9d611d27d4add86884996a8e7fc001bc90

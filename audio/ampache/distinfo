@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:09:12 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 09:58:46 nia Exp $
 
-RMD160 (ampache-3.5.3.tar.gz) = b5525793c97f3881d9293c98fe2d7a5cccc7e8a5
+BLAKE2s (ampache-3.5.3.tar.gz) = 4243cc598fe213e421cca10816fbf8ca1f630317b1a5595516dd01442884a1bf
 SHA512 (ampache-3.5.3.tar.gz) = 148c1f238f63955fceb5b31132118eca54aae3a0cd51df85dded1814f952d454c456f69786d8eec15d02fdc44007e7072aba6a5d717d37cdb6af7f42f032a7bc
 Size (ampache-3.5.3.tar.gz) = 1962048 bytes

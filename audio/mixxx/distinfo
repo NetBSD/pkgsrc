@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:09:38 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 09:59:13 nia Exp $
 
-RMD160 (mixxx-2.2.2.tar.gz) = a88f60a02d18939932ed63ed8b016a522fda8fc9
+BLAKE2s (mixxx-2.2.2.tar.gz) = fcaacd44956fc64887918cf4101af8b95399293a5d135ce7798fbc08344c61b8
 SHA512 (mixxx-2.2.2.tar.gz) = 3b9365bd9d9a7d387cd8791d7d9f6315116e04322370db103998d5e055a6de5e159a4605c7de96cbcf13e7d0653cbe53140dca18a8c3f1b688b227be2c4aeb6f
 Size (mixxx-2.2.2.tar.gz) = 35050389 bytes
 SHA1 (patch-build_depends.py) = 0025d32ac9c57a65253fd3c59ea04b244b0f3cd4

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:09:13 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 09:58:48 nia Exp $
 
-RMD160 (bml-0.8.0.tar.gz) = e26abfbe62f00db520133c5161888f51680a47b2
+BLAKE2s (bml-0.8.0.tar.gz) = 79b8e80a4c463b7a9c16ea9b2d5d150ed66225ccf839f107dd7339a255377683
 SHA512 (bml-0.8.0.tar.gz) = 8379d5e7be2f57639ed85ef51272b65c1bb9c07956152673ca2700433bc616639ab0acf109c672326f0d45a4146dd88edbefe72ee16209f1c11ef0b320a2f372
 Size (bml-0.8.0.tar.gz) = 805695 bytes
