@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:49:23 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:23:47 nia Exp $
 
-RMD160 (cmdpack-1.03-src.tar.gz) = a9073592aeb3514e8dd456189d34deb1e5e4952a
+BLAKE2s (cmdpack-1.03-src.tar.gz) = 0946a55dcc9e24cf542201b6aab7cbe3829c47353fd814073485fe03ca3a4f0f
 SHA512 (cmdpack-1.03-src.tar.gz) = fe798c734596866d36b7f26041700ddfc49d85a381cffcc99c06649ee798e920679d3339156ba4acee889c348e1026ce1e2f2bbcc2e0fa882164733d738115c5
 Size (cmdpack-1.03-src.tar.gz) = 80716 bytes

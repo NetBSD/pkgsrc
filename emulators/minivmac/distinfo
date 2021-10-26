@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:49:36 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:23:58 nia Exp $
 
-RMD160 (minivmac-36.04.src.tgz) = 613534f9aa4fd779d245f5511731617df4da3bb6
+BLAKE2s (minivmac-36.04.src.tgz) = 7f1e75a14731f9c5b07e1982fca5de4e2c6c25caf4bf953bd1a4bb45e29709ab
 SHA512 (minivmac-36.04.src.tgz) = 4de672b4a7127466e30676868cf1f49b155a1231eb7d124fd5b4236f628db8351f45db5f24564932745fa7840f6ea40707bfc46d95f3a403165f05b443367a3f
 Size (minivmac-36.04.src.tgz) = 500742 bytes
 SHA1 (patch-setup_WRBGCFLS.i) = 670784065ef5d58b74a20022eec91ff2be42fd42

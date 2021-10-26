@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:49:27 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:23:49 nia Exp $
 
-RMD160 (emulationstation-2.9.0.tar.gz) = af4d9cda5146ed5cd80be5263d1822f527f59e67
+BLAKE2s (emulationstation-2.9.0.tar.gz) = 63c55e85d91597a40866caf9ca2c4b16a132902937993838f9f2d0df05a31bcf
 SHA512 (emulationstation-2.9.0.tar.gz) = e48b0338578b4840f633dbeffc692b3a225b448bf02e5770f2fe8ebf0d27bd8447bff69abbefe4864ec402f057f75b023f165bf708150ec7be0c8d632ac2156a
 Size (emulationstation-2.9.0.tar.gz) = 849388 bytes
 SHA1 (patch-es-app_src_FileFilterIndex.h) = f0adecf824f34d44038b7015360e2102a9962b89

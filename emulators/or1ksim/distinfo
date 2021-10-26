@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:49:36 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:23:59 nia Exp $
 
-RMD160 (or1ksim-0.2.0rc2.tar.gz) = 4111113389484969827e20f8c61caf33176b5407
+BLAKE2s (or1ksim-0.2.0rc2.tar.gz) = abfad343bbd7ef0eab86b3b99f16836347bb124e8cd83a23727f4a8eaec672cb
 SHA512 (or1ksim-0.2.0rc2.tar.gz) = 586a99a8fa829f2e679aaa810bdff67331dff6836a7d11b952561b79d627f149e949363cd45ec2be21d44bc8b88d4399826238306a9c53fc473b85cb5dd7dd77
 Size (or1ksim-0.2.0rc2.tar.gz) = 624729 bytes
 SHA1 (patch-aa) = 5e348fc6e687bab8edb0e5abe545d829cb781792

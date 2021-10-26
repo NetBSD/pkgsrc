@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:49:22 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:23:47 nia Exp $
 
-RMD160 (cannonball-0.34.tar.gz) = ae81b9f2ee5c2fcd1b1699014dc6207c2fc89a17
+BLAKE2s (cannonball-0.34.tar.gz) = 587aacd782483f50720fe7b2e685d7ed7e7140bd7db1f38fa396bee32cccd471
 SHA512 (cannonball-0.34.tar.gz) = 13b2b1bcb2b0e6fa63308663e2a63204438bf2852a4bb264505e946af9a173d5f08eb5af4b4dddf73e44980024a015373caa80cc42a0ccf6eefbe67bbd3a8834
 Size (cannonball-0.34.tar.gz) = 326020 bytes
 SHA1 (patch-src_main_sdl2_renderbase.cpp) = cc151bfe7845827733bab2ec9f1605c090abb8fb

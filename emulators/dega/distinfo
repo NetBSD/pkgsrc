@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:49:26 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:23:48 nia Exp $
 
-RMD160 (dega-1.07.tar.gz) = a20ad5d4ec47b3a8e65e64355557b6018a9dcfc4
+BLAKE2s (dega-1.07.tar.gz) = 25efad1508c0eab5b58d7e14a3a3e5180583e3610034f5f03f70702946dde2ae
 SHA512 (dega-1.07.tar.gz) = bb683c165abfe8fcf3e20d8dc32e690f483e9b3257b0dacca3572d3cd96475f7e9b73a951135fac278d94313673a307131fc760f2e0ea61df911c3f6c93d89dd
 Size (dega-1.07.tar.gz) = 85189 bytes
 SHA1 (patch-Makefile) = 56ea5d81c07ec23f1466c9d8b1ddbfb6eb1a4e37

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:49:34 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:23:56 nia Exp $
 
-RMD160 (libretro-parallel-n64-20200528-9dd669e2f63b320c5942f2fe0b2df275dba99393.tar.gz) = 03ea1e768e32be5284863d748dc417d39c5cb0fd
+BLAKE2s (libretro-parallel-n64-20200528-9dd669e2f63b320c5942f2fe0b2df275dba99393.tar.gz) = df926ab265d7fe2a005f237f229fee3faebd5511eb690bfd85df669fade3222f
 SHA512 (libretro-parallel-n64-20200528-9dd669e2f63b320c5942f2fe0b2df275dba99393.tar.gz) = bc7acd7d9401883ceb834e1ec3ab3fe958ffea6bba4101e25cb983b20b48fdf3f22b20a753c82eaf411240aab5bd459c9880bf52672f38d582a8f072cf76f7e9
 Size (libretro-parallel-n64-20200528-9dd669e2f63b320c5942f2fe0b2df275dba99393.tar.gz) = 5509190 bytes

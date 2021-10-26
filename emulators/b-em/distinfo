@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:49:22 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:23:47 nia Exp $
 
-RMD160 (B-emv2.2Linux.tar.gz) = b6aa6e3e5ba8b24207278211ce17f19b182f93f5
+BLAKE2s (B-emv2.2Linux.tar.gz) = 1c30c7302c813fd3f240cb2269d89cbad839e1e3d3c78b21db17abe851211d91
 SHA512 (B-emv2.2Linux.tar.gz) = 44a9e63906e890ff6c3b9356218be42866d18f435a8772213f384b9dc8b8212bb05638ca4bfd64e07c07b126102bc13036749abb64faf136734acb20a15d96e0
 Size (B-emv2.2Linux.tar.gz) = 4855775 bytes
 SHA1 (patch-src-fdi2raw.c) = 98a00eb3059c92b0c2e8009275e5b4a7dfee9b0c

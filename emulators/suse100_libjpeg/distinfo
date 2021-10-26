@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:49:40 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:24:03 nia Exp $
 
-RMD160 (suse100/i586/libjpeg-6.2.0-739.i586.rpm) = 54c97e7f09ed4b2aaa78dd5cb8e333bcf194ff3f
+BLAKE2s (suse100/i586/libjpeg-6.2.0-739.i586.rpm) = 9b2b9e4909f50567e86f7e1fbbe86dc31515749a1ba95a1ff2f019b586fa4f8d
 SHA512 (suse100/i586/libjpeg-6.2.0-739.i586.rpm) = dd36017d60beb1eef40fa38a3124c80d8424bd30845500d0ff5b0ede2b704942403a01618a83b892abc02038a2b693dad07a1ea0ec7cb1f2e5d9fbdc0c7cd44c
 Size (suse100/i586/libjpeg-6.2.0-739.i586.rpm) = 67238 bytes
-RMD160 (suse100/ppc/libjpeg-6.2.0-739.ppc.rpm) = d1d8f0903804f465e9a942ba9fdd3d80f4f63b5b
+BLAKE2s (suse100/ppc/libjpeg-6.2.0-739.ppc.rpm) = eab308718fcb744128c81d2d98b2130a074ee24b13fad1d8bc3e05243744c6f2
 SHA512 (suse100/ppc/libjpeg-6.2.0-739.ppc.rpm) = f0e71b58a048f2686a2b1cce2d1909087aaae8020779d1d62fc02da8fca49bada17cc8c8b7e5a6ac1a3838dfab13349073e079951cc0dfd6ea03518a73bce196
 Size (suse100/ppc/libjpeg-6.2.0-739.ppc.rpm) = 73677 bytes
-RMD160 (suse100/x86_64/libjpeg-6.2.0-739.x86_64.rpm) = 2e70e92fffd825214bc40220ace5324d99ff1b84
+BLAKE2s (suse100/x86_64/libjpeg-6.2.0-739.x86_64.rpm) = 05e333f18caa225aca576989a9c5a7c9b349e198b7539a14e277011915c15825
 SHA512 (suse100/x86_64/libjpeg-6.2.0-739.x86_64.rpm) = 530e975be4d59b87482704a6785f4acbee1857d26fe09c205c7180d9b20dd43777f1af844f75a7904a2c6d70d75fa6409847ac3b73cbae501dfbf04df9db42ae
 Size (suse100/x86_64/libjpeg-6.2.0-739.x86_64.rpm) = 70061 bytes

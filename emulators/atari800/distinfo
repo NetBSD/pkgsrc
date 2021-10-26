@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.26 2021/10/07 13:49:22 nia Exp $
+$NetBSD: distinfo,v 1.27 2021/10/26 10:23:46 nia Exp $
 
-RMD160 (atari800-4.2.0-src.tgz) = bc8b8c953fe2d1c2907c625beff8427967c74adb
+BLAKE2s (atari800-4.2.0-src.tgz) = 282d1243c844bea25a1f0e9055763be8aaef12f9b2b50b7e0f663e596f88c06e
 SHA512 (atari800-4.2.0-src.tgz) = 1236a8e05bf878e4514ae8e9f1556e0961a7f11ff0333eef415af455d217f712d5c6ededdd343dff6ba1aab777e19997bf9ecb859408187d69fc141301ecba31
 Size (atari800-4.2.0-src.tgz) = 7047710 bytes
-RMD160 (pcxf380.zip) = e3061a54b6e9c88379f4366b2ccad3cf3b8e5270
+BLAKE2s (pcxf380.zip) = 0d2ae9eaa11f62f3a6e8a6d4ee3f26393efcdcf61792adc49b895e33fd439786
 SHA512 (pcxf380.zip) = 98181f0f3a30edcadb3c704dc4afda06708da3982a378e31a47d6b7ac8d3f8661753843de8fc8e599970ee9adf5f94f08213447d0c2dd75486a07f9d98ade78c
 Size (pcxf380.zip) = 590041 bytes
 SHA1 (patch-configure) = cbc99c9073186335148cdaf06bd1f77aabd33e94

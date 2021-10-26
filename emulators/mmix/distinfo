@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:49:36 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:23:58 nia Exp $
 
-RMD160 (mmix-20060918.tar.gz) = c250dcadd7c811407f84d28f0544ad95089d4a06
+BLAKE2s (mmix-20060918.tar.gz) = 6e8638f0e207a41edea12c5b50a800e404766bc0ac7ace26f73ef70283076f17
 SHA512 (mmix-20060918.tar.gz) = 5ab3ddded7b63b8dde88960c5d50444ea2008b57099a2842518ff839b53e0f2b0ca450bf9fb02565a285b5c55f7a008babcc245fe518c6497180b991dbc1d30f
 Size (mmix-20060918.tar.gz) = 305221 bytes
 SHA1 (patch-aa) = 927eabd1b0d1180fb909ca943b511fa325601c7e

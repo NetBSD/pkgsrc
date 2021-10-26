@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:49:27 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:23:49 nia Exp $
 
-RMD160 (freebsd_lib-2.2.7.tar.gz) = 32b862c4d6fab0192dbc59dadd382713990283fd
+BLAKE2s (freebsd_lib-2.2.7.tar.gz) = b7b6155b5589ae49add3bd3e396ee42c144f532f2408b8182e427ea6e87bfc67
 SHA512 (freebsd_lib-2.2.7.tar.gz) = a50b35f914e81832e15a528e80760a8c9e03fc8b4e4607eaceee7e2dd0596847c72d6bb4fa382ce3ac9691dd302da7c1b71554832819f5f8a00f1305d68dd76e
 Size (freebsd_lib-2.2.7.tar.gz) = 1950770 bytes

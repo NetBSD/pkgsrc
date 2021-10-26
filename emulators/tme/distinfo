@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.30 2021/10/07 13:49:39 nia Exp $
+$NetBSD: distinfo,v 1.31 2021/10/26 10:24:14 nia Exp $
 
-RMD160 (tme-0.8.tar.gz) = 6bd505c5fa7810d37f436883383c4ba655df2ded
+BLAKE2s (tme-0.8.tar.gz) = 953482682e7ddb0cb096d4a6b46b70eac6af5378b880f165a0521e5f26d45fe4
 SHA512 (tme-0.8.tar.gz) = 961ccee96d5192ff7373a401834e96d5946f3aa783bd4c8839c6b1f5fa15a768e3241972d1e5049f89b8593ff9db0e9dc2378a50e85dae680327c11bc14323e8
 Size (tme-0.8.tar.gz) = 2100123 bytes
 SHA1 (patch-configure) = 75fb974a21641cf27fefd34837226367042e5d1d

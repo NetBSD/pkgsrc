@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:49:52 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:24:16 nia Exp $
 
-RMD160 (xcopilot-0.6.6.tar.gz) = e267495db384070e7e192043f23290f0004ecd4a
+BLAKE2s (xcopilot-0.6.6.tar.gz) = 1ec9cc037f4a4c355f12e53a4c32433b7d03a719ca7b37c7194c5fc754e89bf3
 SHA512 (xcopilot-0.6.6.tar.gz) = 3f4d789064993a014156caf291db39ab78e6fcf79dc25d6b0fafda4fd64d4ca1d59ce9307375058aacd9b5a8580ef23a7f69c4497185b65110b4968af4239dd5
 Size (xcopilot-0.6.6.tar.gz) = 343264 bytes
 SHA1 (patch-aa) = 3354ed73dfa6c05273c7f430d45bacb0c8adbcf5

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.67 2021/10/07 13:49:29 nia Exp $
+$NetBSD: distinfo,v 1.68 2021/10/26 10:23:51 nia Exp $
 
-RMD160 (gxemul-0.7.0.tar.gz) = 590a2ab904c2999552e33da42f1724d44efb9342
+BLAKE2s (gxemul-0.7.0.tar.gz) = b379c244d2e56b5fec53f9af66974f3ef91cca7cf3ee586d85e1a7c5ab2adbd9
 SHA512 (gxemul-0.7.0.tar.gz) = d977342843e903aedd9dcdf6fdab81ceb5ee1552bf3b90deb77eb59b42e5fad3a65f216ce33cf33259372ff9a10af5b1365827de949f0c61fb9859b417972c71
 Size (gxemul-0.7.0.tar.gz) = 5985021 bytes
 SHA1 (patch-doc_machine__cats.html) = 1c67fbfe42fa86427e3ebdc6720b894123eb4672

@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:49:39 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:24:01 nia Exp $
 
-RMD160 (suse100/i586/alsa-1.0.9-23.2.i586.rpm) = 0ac459200f6245897e88721e4d92e22844be262f
+BLAKE2s (suse100/i586/alsa-1.0.9-23.2.i586.rpm) = bf92d7d745589a38c7800c5217bfd929b0ccac56cf63bf116a87d94eebda0cbb
 SHA512 (suse100/i586/alsa-1.0.9-23.2.i586.rpm) = ffb7aa05a665778f71860bd18044d663d06d4a639e7abdc16139e8369b92843e0a1314348cbf461eed8fb2348d1d3af37ee437343d17f31b4c88cb4d8ae56a6b
 Size (suse100/i586/alsa-1.0.9-23.2.i586.rpm) = 2475415 bytes
-RMD160 (suse100/ppc/alsa-1.0.9-23.2.ppc.rpm) = 8628cfd6ecaa4b353302a0b66aac8c5b4adbef5a
+BLAKE2s (suse100/ppc/alsa-1.0.9-23.2.ppc.rpm) = 8fbaf60a48b06ca204760b08ac79f2d4a22378eacefdf8ef97d3961300b4952d
 SHA512 (suse100/ppc/alsa-1.0.9-23.2.ppc.rpm) = f3bf1ae1c35807657fa7e6bf63baab0224bdbd839b6191afff9d5a5c380e60cc7cdc91c9a54c9b3b9757ac7e210415f5a835fad8fbbf97f1779f035daca41384
 Size (suse100/ppc/alsa-1.0.9-23.2.ppc.rpm) = 2581320 bytes
-RMD160 (suse100/x86_64/alsa-1.0.9-23.2.x86_64.rpm) = e264ae65b85b66962dedcbbf4047c7e5a6cafd01
+BLAKE2s (suse100/x86_64/alsa-1.0.9-23.2.x86_64.rpm) = b5d93bc50c223885a6119d640ff3f5352a9d44d830500a7fb60532d48fde10ce
 SHA512 (suse100/x86_64/alsa-1.0.9-23.2.x86_64.rpm) = d6302bd334ccd24ef29382a9427f413aa060b5722745837e1ef3a3e8894b3001ea7b7fb6130f066451c50f9a78217eea3c7bea8163c63b5113cce6b8e6d2616e
 Size (suse100/x86_64/alsa-1.0.9-23.2.x86_64.rpm) = 2520729 bytes

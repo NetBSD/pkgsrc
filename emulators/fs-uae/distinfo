@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:49:27 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:23:49 nia Exp $
 
-RMD160 (fs-uae-3.0.5.tar.gz) = 6938e0c4c91a9a20cb354833a4721c9a1c1ef39c
+BLAKE2s (fs-uae-3.0.5.tar.gz) = 5a7d3c561f72e6c31e6b5e971642fdc83c0df914f7666024336ad29c8c7c1501
 SHA512 (fs-uae-3.0.5.tar.gz) = b34ffb818040c7bf67022f26e1dbc9ebf06742a354212f2b0d2aa6b8e04c60807893a16ff965c819395f4c3fb3c43c35b38dce848b86fa046a211e12414385c7
 Size (fs-uae-3.0.5.tar.gz) = 4819884 bytes
 SHA1 (patch-manymouse_x11__xinput2.c) = 9b2891d1ce62affb694ac11b2386115799ed6fa9

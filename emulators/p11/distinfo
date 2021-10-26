@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:49:35 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:23:59 nia Exp $
 
-RMD160 (p11-2.10i.tar.bz2) = c5038d908fabf37fe122c6616a13551b2a8265df
+BLAKE2s (p11-2.10i.tar.bz2) = ee8121885ba6390f9806b98b5f8438e41c0f9d1b1802496d247ddb72f7dbaff4
 SHA512 (p11-2.10i.tar.bz2) = f3e219bc2ab8906c26d3702a9b62ed4584e37a5c35c88c2386f3f1bb50caec7b84c4cc21420f50788f419431178099764a999805168792f253ea29a2a97204a8
 Size (p11-2.10i.tar.bz2) = 372597 bytes
 SHA1 (patch-IOProgs_epp__bpf.c) = e8a56c80ba5ec10e142e3a2145446e5fb09d2ea0

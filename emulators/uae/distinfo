@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2021/10/07 13:49:48 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/26 10:24:14 nia Exp $
 
-RMD160 (uae-0.8.25.tar.gz) = 6990dc7aaf43c8bda0d7b86e6d0ae164209d1eb1
+BLAKE2s (uae-0.8.25.tar.gz) = 49c5bc387e30b756e0dcb2d70b3d9e9cdc44eaead1676e5c62661ce6a6034691
 SHA512 (uae-0.8.25.tar.gz) = 987509a18e3ca367d2ad1037afa68dbd9ff36df59713aaede3e40fa381e2157079a5438fbb1ef3f9a7ea5cf681fe87511fdcd4134122a5db5cf2f2f0946df85a
 Size (uae-0.8.25.tar.gz) = 970727 bytes
 SHA1 (patch-aa) = c185427ad9042e0e81ec4990c0ae4b5e6977a74e

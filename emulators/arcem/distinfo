@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:49:21 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:23:46 nia Exp $
 
-RMD160 (HardImage1.gz) = 09176071c9c325b50a3a2074938789f4e6136d44
+BLAKE2s (HardImage1.gz) = 7ea86840d3f5643f4186b4873f807b3ff90938cc4d3df2de3f09aa80e5a780ff
 SHA512 (HardImage1.gz) = 1613cdfc7eb4a16958a5eb030973ff194e7a0e304e02af2111b810c5b2d021c0fb6352c0a592f3ef57e008a21e34126d80c5163de49be3bb3d4d8ddfa6d02ff1
 Size (HardImage1.gz) = 3545800 bytes
-RMD160 (arcem-1.50-src.zip) = 74253d5d6fcf5fc64abc10f95f6fbcd121f7eddf
+BLAKE2s (arcem-1.50-src.zip) = 5a97923ddb1c6a031388eda39aa66684e7669729fe45616b6b562194e7dfba28
 SHA512 (arcem-1.50-src.zip) = 495f58558b51d4796a199a5f34bf3604972f47236c2f0e116af74327ea6800d696503a89fafb20af21307653010642bff5f7962eb7d1ce16a4aea095fb1494f6
 Size (arcem-1.50-src.zip) = 1420685 bytes
-RMD160 (linux.rom.gz) = 5bf035a3e6f054a61de62fcf880c52c996f503c6
+BLAKE2s (linux.rom.gz) = 70d41ceac2ac1151b0dbeefd75737f59d8901a82d4d8eacf3079481bc36276f5
 SHA512 (linux.rom.gz) = a8c78d1fce8bdf93b8c1efe4426c4372049ae1cd3c99ddc8ddbbec16720e52beca54c22a575787ab4e622aa16a07bf72d2efc79a005f04c83233c37aadde9a7d
 Size (linux.rom.gz) = 341085 bytes
 SHA1 (patch-aa) = 0f63d74e077fc3abd18fa6630f0b86d2aca321a5

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:49:34 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:23:56 nia Exp $
 
-RMD160 (libretro-picodrive-20200527-b8fb8f285317632f42ecbbd36cf4fe18ea9189f1.tar.gz) = f7fe39aadc2da256cab70a44542bd496cdeac1f3
+BLAKE2s (libretro-picodrive-20200527-b8fb8f285317632f42ecbbd36cf4fe18ea9189f1.tar.gz) = c9ade46abcd55267ea4b3da864af1c2fa9747ba11bd7cd5c873282fd84f1a6d7
 SHA512 (libretro-picodrive-20200527-b8fb8f285317632f42ecbbd36cf4fe18ea9189f1.tar.gz) = 9f6720421beeef30bfaefc46bd814f0f1a461d0e7517a0f72181aae0acf59086293a225e20e7ac091575ded3455f71e68c242166b32256ba4d0590e995b7561d
 Size (libretro-picodrive-20200527-b8fb8f285317632f42ecbbd36cf4fe18ea9189f1.tar.gz) = 1439548 bytes
 SHA1 (patch-Makefile) = bf73e5c8e3d78e127ec23073e8a4cbba2a95248f

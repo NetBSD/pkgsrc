@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 13:49:51 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:24:14 nia Exp $
 
-RMD160 (ucon64-2.2.1-src.tar.gz) = ca363e350be23fa2f083deb598efab307066b231
+BLAKE2s (ucon64-2.2.1-src.tar.gz) = 284e9898df53397682d44493118a779116f79e4d33d1e274f476214b031b37b6
 SHA512 (ucon64-2.2.1-src.tar.gz) = 34453399151e5ed256fdcf387b9d32a052718b264e51b99a2be251b90589337d13cd317f8d1aa7d3c8e39c8e407b22797d4608ec6d14b99c8673ec74f349f6c2
 Size (ucon64-2.2.1-src.tar.gz) = 1476080 bytes
 SHA1 (patch-libdiscmage_ioapi.h) = a5857b1623a3180d09e19815e261f23491aaad96
