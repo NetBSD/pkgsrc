@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:35:43 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:09:56 nia Exp $
 
-RMD160 (activerecord-odbc-adapter-2.0.gem) = 4c08de38f621c3fd5af05dd6599be6fc9588af40
+BLAKE2s (activerecord-odbc-adapter-2.0.gem) = a41a69dbf1fb78b13b92226d06e42c831be92072dd4c095ba0ae38796307c554
 SHA512 (activerecord-odbc-adapter-2.0.gem) = 38492df60bc87edc8f41ef84f76c43834541cecf365065ea733cf3f2add9f6b7f631707690902bc66ec14e6299d3983c7fe871274ff86a7953cfeb1325c58485
 Size (activerecord-odbc-adapter-2.0.gem) = 80384 bytes
 SHA1 (patch-aa) = 2ac6742263630b6ee2d1e062867e4390efc33a2f

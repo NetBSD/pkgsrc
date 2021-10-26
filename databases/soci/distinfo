@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:35:50 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:10:05 nia Exp $
 
-RMD160 (soci-3.2.2.tar.gz) = d366c1773d23c551404a8e05791afc3a4b6acfdd
+BLAKE2s (soci-3.2.2.tar.gz) = a6e71ef945941b3d56c5ff1db4a063f84f9a8cb95806869be2e60cc6fa326082
 SHA512 (soci-3.2.2.tar.gz) = b18b82f5bb24072852cc02cece311d1d5ddb9cb9a029a2925b9e834905b20eb3ceaa3089f2aaf547771dc3c50eea87c351d2f172041116d1710138fa3b2fb1bf
 Size (soci-3.2.2.tar.gz) = 354047 bytes
 SHA1 (patch-CMakeLists.txt) = 589fed2101a09637cb3f052bf7915dd2bccf0385

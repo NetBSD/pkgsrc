@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2021/10/07 13:35:09 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 10:09:18 nia Exp $
 
-RMD160 (gnats-4.2.0.tar.gz) = 4dc473a242f8047bbe547f7b38a820e48a74bf90
+BLAKE2s (gnats-4.2.0.tar.gz) = b02dc2a4ab9220469eee6d88de21a81a62097963bf9bd0df980b57df6a29791f
 SHA512 (gnats-4.2.0.tar.gz) = 650faa87206889912e27a27daba4c86292fac90250a88e7e6272cc8488fc19dfd6098bdd450553cd6c2c1d446072a8da9395f1ce7b1cd284596994ce53744152
 Size (gnats-4.2.0.tar.gz) = 1264845 bytes
 SHA1 (patch-aa) = 484254c68f456cc78986af3cefaea6724c4eff81

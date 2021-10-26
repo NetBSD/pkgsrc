@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:35:12 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:09:21 nia Exp $
 
-RMD160 (kldap-20.12.3.tar.xz) = 769ddba47f7d7a42c8db9176c3b9294fe8ce5a0f
+BLAKE2s (kldap-20.12.3.tar.xz) = 2b022a3fc2ace95aff4366058ca6defa33129eec5fad03ceed9101256d975e2c
 SHA512 (kldap-20.12.3.tar.xz) = d1220afdd157de224fd65306f1b77f80c1adbe195307bea51c6de5234e9a94122b2c24d38e050ad5dd1a9597b5f7f0f65ea5de73a38c4a309d5692691ed09d54
 Size (kldap-20.12.3.tar.xz) = 164652 bytes
 SHA1 (patch-autotests_testkldap.cpp) = 7994aba5bc9e45fd2ec1ebd3bf2e918fb912e560

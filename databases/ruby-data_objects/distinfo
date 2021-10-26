@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 13:35:43 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:09:57 nia Exp $
 
-RMD160 (data_objects-0.10.17.gem) = af86e8b3b881a3f6ff924c0cae507210453c1dd8
+BLAKE2s (data_objects-0.10.17.gem) = 6bedbd2e7a1d05b33aa136f6606f8371939e209ce8ffb3092e26eaf6531cb342
 SHA512 (data_objects-0.10.17.gem) = 71e1a661bb362692e5dd463858752dc9026189ed3cb88c815b1dd3d1e2a24e69346b54deea6dfb2e9e0983ca926fe880749e5245106993e558048df7d14ddf71
 Size (data_objects-0.10.17.gem) = 29696 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.64 2021/10/07 13:35:42 nia Exp $
+$NetBSD: distinfo,v 1.65 2021/10/26 10:09:55 nia Exp $
 
-RMD160 (redis-6.2.6.tar.gz) = 98607041365692d7feb19bf861b4bb32e799047e
+BLAKE2s (redis-6.2.6.tar.gz) = b86de3ec07ea4ad62d78a65e28fb7dfc76102a9d88b0af0acbe9d3ccac9c7792
 SHA512 (redis-6.2.6.tar.gz) = 9b947d26fd9e208627ed22d318ab3d0775ab0be46d98db1c1d158feac671b984e75ce33e647d196face9643f80768af47e678be1b4e1ddd3eb56dff467c46022
 Size (redis-6.2.6.tar.gz) = 2476542 bytes
 SHA1 (patch-redis.conf) = ee657a9d82711263ceb0fb8f7d8059ed23528fe9

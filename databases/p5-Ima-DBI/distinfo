@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:35:25 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:09:37 nia Exp $
 
-RMD160 (Ima-DBI-0.35.tar.gz) = 5b903ab5a35b45c0684ad0a3e65f605e2dd1e18e
+BLAKE2s (Ima-DBI-0.35.tar.gz) = 73ee82a18937cc792849f40ede799f64e37836a3ad46a3a17305fc4b013485cb
 SHA512 (Ima-DBI-0.35.tar.gz) = 9ccf86b440d0969fc6ebbc5d66db0edbff680eaac33d64d75954b5c6a669219ba8a37cb4914aa8f495e96e990c337f550a439e111ec2278fa133956773b55678
 Size (Ima-DBI-0.35.tar.gz) = 15932 bytes

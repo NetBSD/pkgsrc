@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 13:35:17 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:09:27 nia Exp $
 
-RMD160 (Apache-DBI-1.12.tar.gz) = 40e40acc84ff8ed1ec3a32620b8908de49f23026
+BLAKE2s (Apache-DBI-1.12.tar.gz) = 23f10711446b875c78a763a9a25bc80b234c30d274189ac3ad390d9bccfa4071
 SHA512 (Apache-DBI-1.12.tar.gz) = 5b989856f7b6cb75a7a7a9b1ee8e166a1f5aa03475574d340933f135f813d55806f4bdf878faac49cb72a1b00f4ee23ddedb90909869771f4d613bbfd4ed135b
 Size (Apache-DBI-1.12.tar.gz) = 35017 bytes
