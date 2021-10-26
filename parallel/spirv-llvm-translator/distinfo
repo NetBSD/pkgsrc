@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:46:48 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:10:38 nia Exp $
 
-RMD160 (SPIRV-LLVM-Translator-v12.0.0.tar.gz) = e8ae633ef3e6b1f232defd3fa61a8756247a87c2
+BLAKE2s (SPIRV-LLVM-Translator-v12.0.0.tar.gz) = 5f02cc5219da99335999ace845c3c963fac2ecc547bb362836a622595c43ee6d
 SHA512 (SPIRV-LLVM-Translator-v12.0.0.tar.gz) = c23ef81802d2bf743564762815d7375a804bdf8029efd7430faea0b48b5e30a9778c1175f52309b522a07aadf8ff77461b912c1fb3b95af9b09273a483eac82a
 Size (SPIRV-LLVM-Translator-v12.0.0.tar.gz) = 1378222 bytes
 SHA1 (patch-CMakeLists.txt) = 0ddc0228c5fd49cce32838954795fb03d3a7115d

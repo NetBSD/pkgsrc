@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2021/10/07 14:46:47 nia Exp $
+$NetBSD: distinfo,v 1.23 2021/10/26 11:10:38 nia Exp $
 
-RMD160 (sge-8.1.6.tar.gz) = 231f4d100722c7a99a92e0b9b989125e5d15f295
+BLAKE2s (sge-8.1.6.tar.gz) = 0fb07789c3a66f1792f46f538f152d56bc3c34cc391ed153eb6e071e35c01315
 SHA512 (sge-8.1.6.tar.gz) = 5044acf4b3f37a785a383c6341b51fb026456ffd7e6f9c8bb7d115068f67e15a833fe2b504fa3652710fd54946ae36eabd872f0263f13d558ae4187b824a0aa6
 Size (sge-8.1.6.tar.gz) = 11875229 bytes
 SHA1 (patch-ad) = 8a1c2aa9245bee66068073df7a5434ca37de03c7
