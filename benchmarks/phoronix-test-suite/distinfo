@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:18:33 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:02:54 nia Exp $
 
-RMD160 (phoronix-test-suite-8.8.1.tar.gz) = 4236bc53588a9a32337f0c74d4bc1f44f3fd5300
+BLAKE2s (phoronix-test-suite-8.8.1.tar.gz) = fd55a8d4b1ca1782fdd7a8888e959ca718cd0a95e605c25ed108a09e558bede9
 SHA512 (phoronix-test-suite-8.8.1.tar.gz) = 3395eee510f546447173306152704b9729a39a04062459a8153badcf53c6a63ae294833e377667cf521ee4e73c4b3ed175bacc1e7baa27a33cf6bd1a87338c25
 Size (phoronix-test-suite-8.8.1.tar.gz) = 904758 bytes
 SHA1 (patch-install-sh) = bdabbdccf8bb106cd1d48106cd40822cf997450e
