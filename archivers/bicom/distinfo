@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:05:56 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 09:57:05 nia Exp $
 
-RMD160 (bicom101.zip) = 3aa8c64155026da238f3c1da1c404fb05ec63567
+BLAKE2s (bicom101.zip) = a105577b4d5665fb54c3b0c2aeb69ba8da6566806bafaff4c2f4514459bbbab9
 SHA512 (bicom101.zip) = b29b7a988a8bd869dc9510562dbf9e52bf2d5f0eb4b6c76ebb41ee73bba66cab61e3b2853313c5f7b7005ef5be66ebb6cc073208e26203c63253ff8f28c80856
 Size (bicom101.zip) = 104408 bytes
 SHA1 (patch-bialib_sufftree.h) = 4a3b921bcac546824dfbaed0142c07cfad4dd3c1

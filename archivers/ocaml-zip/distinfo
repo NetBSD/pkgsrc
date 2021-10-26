@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 13:06:04 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 09:57:11 nia Exp $
 
-RMD160 (camlzip-1.07.tar.gz) = 71a16bfcb4cc2e6da4c6ce0e9d14fb9f687fbc5f
+BLAKE2s (camlzip-1.07.tar.gz) = f5d75f3e1716febe1e2d4dcf86940031d6d1f46ad00d2792b268fc173e3266e6
 SHA512 (camlzip-1.07.tar.gz) = b92e9db002b9b398fd132c6ecd8098fac4cc7ddb3f770cc412990dcdf4bd62ba358c762d31fb0b5cd6b32f20d3bf4b3410ca6e86c511a438b92ece940f9831bd
 Size (camlzip-1.07.tar.gz) = 26652 bytes

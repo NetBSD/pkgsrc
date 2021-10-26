@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:06:07 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 09:57:13 nia Exp $
 
-RMD160 (py-brotli/Brotli-1.0.7.zip) = d9924953377fa7d766da673529eb5be03123d08d
+BLAKE2s (py-brotli/Brotli-1.0.7.zip) = a173a326e7de4df5076627c96369a5d405caef2ae3018543460b48d4e0ba3a79
 SHA512 (py-brotli/Brotli-1.0.7.zip) = 1c491fcea970e9c966b27ded03d50b7f77a038f228edb66c9ace383d9ceb4dc17e9f34cf957f3a0e8050847b7476bef7f42f39e10c6fc2a56686b6e29241e248
 Size (py-brotli/Brotli-1.0.7.zip) = 496391 bytes

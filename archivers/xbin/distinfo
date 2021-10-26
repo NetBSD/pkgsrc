@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:06:13 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 09:57:19 nia Exp $
 
-RMD160 (xbinunix.c) = 92a2daccb405c95e7a1b00f4162009f3c4245631
+BLAKE2s (xbinunix.c) = f23069e9a8019c948a9924026f2930c7c3d9a69442b55fc2ff609d2258de2017
 SHA512 (xbinunix.c) = 6b2751085b4762a1fda8cac80982690c61220c3e62cdd80eee39d7a7e06ae8f65e6f1036d128fe2e251e83ea72436cf94016f259aedc085be5f3a4fcb3471513
 Size (xbinunix.c) = 18563 bytes
-RMD160 (xbin.man) = d01696da1c79f1693161417c6a8ced87b5b11c12
+BLAKE2s (xbin.man) = 169fb85efda2ea13c1d9ecfd54ae7dc6423f5f4890ded302b64c2dcb144df7e4
 SHA512 (xbin.man) = 9bd84f5a8acc773b8c8c9ddba67c0f57a15fbd9500993d19140bcbe630fe254443fae0c75a1c591cc995ccc1443bb4d5242c4795136a9d28c192db1e53c438aa
 Size (xbin.man) = 3277 bytes
 SHA1 (patch-aa) = 22a3f2bcf33fde1a51fdce1a3affb8f7526cea59

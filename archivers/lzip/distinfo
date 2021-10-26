@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 13:06:02 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 09:57:09 nia Exp $
 
-RMD160 (lzip-1.22.tar.gz) = 3af3688b207666d6af640a7bec195c067cb28745
+BLAKE2s (lzip-1.22.tar.gz) = f56ce0d932d9f47663bf68dce1b8525a81d089825d23ec8c24a3c55d780198c2
 SHA512 (lzip-1.22.tar.gz) = 318de74effdbdfa79070d28919459a85bf1efe662b818b8af2a3daa964b6c24e3386c37de360c6d5b8b624d549b5c9ed777c6234561129c477e03d92ac2db206
 Size (lzip-1.22.tar.gz) = 120769 bytes

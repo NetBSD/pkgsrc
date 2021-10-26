@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.30 2021/10/07 13:06:08 nia Exp $
+$NetBSD: distinfo,v 1.31 2021/10/26 09:57:14 nia Exp $
 
-RMD160 (lz4-3.1.3.tar.gz) = bfd59804ae64dd80f6986d4d5a8115c7dee6f78c
+BLAKE2s (lz4-3.1.3.tar.gz) = f01b608d3e773464ac6c8496c9a62f8638baaf8f8aa1f8377e480b189ec18622
 SHA512 (lz4-3.1.3.tar.gz) = 170b5330a8ec0eb4d69f3692c54eaa384fd4de78a7e7db95721d2f1e521ae9558f814e63bbb31db2775a81f7cd7eaea1420ad2c96406cff95d25bc5d30811aba
 Size (lz4-3.1.3.tar.gz) = 159016 bytes
 SHA1 (patch-setup.py) = d58d21f4c279f37d737b1dce1d3c266d15247707

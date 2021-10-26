@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:06:03 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 09:57:10 nia Exp $
 
-RMD160 (makeself-2.4.0.run) = 928e1c04a2b1b00da0cfe3962720175f9ca943b4
+BLAKE2s (makeself-2.4.0.run) = 0b318405064236399e3d2eeaa94bfcc50c83f58a9e17f0c05db4b7cf9afe51fc
 SHA512 (makeself-2.4.0.run) = 8c7ad8288f2a0130d25ea2ce75c5d97d437dfde13e1ceb38cf4b250cbb5f8f1718ff25fbcac9f5d56ca37d17a3d2598d7f87bd1d7aad22fe5efe1fd2a8acd8a2
 Size (makeself-2.4.0.run) = 44301 bytes

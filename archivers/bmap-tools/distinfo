@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:05:57 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 09:57:05 nia Exp $
 
-RMD160 (bmap-tools-3.2.tgz) = 3d05b5459f4a763a66a572dc45951d894ef315ad
+BLAKE2s (bmap-tools-3.2.tgz) = a09d001180f27b3a83ccdaf49dfea9fab878b151733841c335124764d121d72a
 SHA512 (bmap-tools-3.2.tgz) = 005adb981daf58ba5c3c26c0e4d27881875661b258667b28aabc209a87d78b7c595c596d9abe47f1c79ef4ba4c891d6b8b01e45256aef8105899f84fd03c1196
 Size (bmap-tools-3.2.tgz) = 87236 bytes

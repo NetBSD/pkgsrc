@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:06:03 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 09:57:10 nia Exp $
 
-RMD160 (lzop-1.04.tar.gz) = 8db21dafffc368a44536c058be83af92ab2d2fc4
+BLAKE2s (lzop-1.04.tar.gz) = b226731802f547f5e8a3269c4d77a4cfd82993ebba09b3546bbab54707f2d845
 SHA512 (lzop-1.04.tar.gz) = 5829b4495ffefab549aa697a05c536ce593c572c9eee6004460583a0090abcd317c6074c4f981dfee6be61ac8d127f02dd37053b6cb782af64db41586a8bbb6e
 Size (lzop-1.04.tar.gz) = 393483 bytes
