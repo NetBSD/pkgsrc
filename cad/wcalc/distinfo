@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:20:32 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:04:17 nia Exp $
 
-RMD160 (wcalc-1.0.tar.gz) = a6db2fb8ca84cdc6ec2bed8d8dfc77439dcb89bf
+BLAKE2s (wcalc-1.0.tar.gz) = dcbb8128e5ae74f0d4d20a72ad9f1e1159d1ddd92dfb3349719e04546501519d
 SHA512 (wcalc-1.0.tar.gz) = 4ba0aa3039379debf2d3e7855abd7ac2952d8259540438158b8c940624764a1e405be03465d542306cd0e5ac91247382108d54d0c4e7b7f73a859d5c01e3b9a5
 Size (wcalc-1.0.tar.gz) = 1363727 bytes
 SHA1 (patch-aa) = b604b7161f6f490a6be9324c05ec65d23f1a6d3a

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:20:26 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:04:09 nia Exp $
 
-RMD160 (cascade-1.4.tar.gz) = dc884dd00a5b393efe90b3d4aeb2284cc509f9f7
+BLAKE2s (cascade-1.4.tar.gz) = 58166941f48454210e3f2768ca2e0caf3f49b7ddb4326a82dcd0d7bc7c38f7e9
 SHA512 (cascade-1.4.tar.gz) = efe6ae54110f083ce81e32695bca4874b85fc59ca56a739232aa2d330e9fe7d6ad18ed1331d823a801207c296212419397d2c0f8307c2e1a7eda4f8e164b031c
 Size (cascade-1.4.tar.gz) = 32106 bytes
 SHA1 (patch-aa) = e0ac31c71c5454254dd3f8ccd317ec69892b0a8d

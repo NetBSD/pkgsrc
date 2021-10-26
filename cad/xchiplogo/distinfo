@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:20:33 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:04:17 nia Exp $
 
-RMD160 (xchiplogo.tar.gz) = 18e86819266942ac95c6852c13afd89d5168b204
+BLAKE2s (xchiplogo.tar.gz) = 5fdd67f5c4b9ee9673416f7376e8f338052bcaaedb1f5645840b99e6d931bb30
 SHA512 (xchiplogo.tar.gz) = edb00c315871d29f4371aa12c0df9b02c049312f7ccba8361d45ddc0706ed7864910242e775462ef3da0df0a7f7a09e092c4b4c3277660320b00dfc3e00a104f
 Size (xchiplogo.tar.gz) = 46652 bytes
 SHA1 (patch-aa) = 1235622f36c63bdeb5e453ac4fa1bce9bb6ec9c1

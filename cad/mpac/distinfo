@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:20:30 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:04:14 nia Exp $
 
-RMD160 (mpac-0.2.2.tar.gz) = 5e67c1f8d5fde6b1496b484d3732fb95cd5511dc
+BLAKE2s (mpac-0.2.2.tar.gz) = 335d9633c7d932632dfe2aef4d9f047b483e0152e33a10391374b74014e23531
 SHA512 (mpac-0.2.2.tar.gz) = 3d8d53b3c63190de2347b0adf15707878bddf9111bf7a84446a11503bc8d49adae2353d53ad5abd8d9442f24a77233347f7f75385a7963a33b92797d009d9390
 Size (mpac-0.2.2.tar.gz) = 29911 bytes
 SHA1 (patch-aa) = f77fdebb18070cfa852fabeff9091d175fd2f30c
