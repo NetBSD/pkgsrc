@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:44:29 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:19:54 nia Exp $
 
-RMD160 (sfslite-1.2.7.tar.gz) = 3e72a4d6cb0975c13b51f13ff615e8a390c36e3b
+BLAKE2s (sfslite-1.2.7.tar.gz) = 5f4fccf18aebe7f22dc5f604fd24cfb925e8cb643a2c7a2b4b7b64c25780dd1d
 SHA512 (sfslite-1.2.7.tar.gz) = b2cd6d60a4349bdc54d973656fffdad9e4a4304dfa0cc8e27584e65bdd1359c2bd2be9552bd42fdd89475929b793509dd01589afe4cb72bb8ba14fca36ccb171
 Size (sfslite-1.2.7.tar.gz) = 1379432 bytes
 SHA1 (patch-aa) = fa1f4a82d0d97375dafa972049aedc7ac0e80885

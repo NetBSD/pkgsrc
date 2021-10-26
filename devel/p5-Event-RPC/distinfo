@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:41:24 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:16:31 nia Exp $
 
-RMD160 (Event-RPC-1.10.tar.gz) = 6f48963d526b717493b68b169aec077b386d69a9
+BLAKE2s (Event-RPC-1.10.tar.gz) = 5708095fb1caa6da534e1d90acecb502f3ef947124cf4c17c5e8eafedeadb423
 SHA512 (Event-RPC-1.10.tar.gz) = bc824ef779c0814ebac096e4152f239c6d3216e358d20491843e46d33f71d5eda4609abc3ee7ed6b3ae96c3689a8cf23f931630cd15bd660213bd41628a7c479
 Size (Event-RPC-1.10.tar.gz) = 51373 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:43:01 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:18:16 nia Exp $
 
-RMD160 (cached-property-1.5.2.tar.gz) = 6e71b64b85916848204c38187573c500b87b9b2c
+BLAKE2s (cached-property-1.5.2.tar.gz) = 28dcb8dde6c4a705dffc888262b38b6e598fe23ff234ef3c6f26719dbd79d5b5
 SHA512 (cached-property-1.5.2.tar.gz) = 626d98a8891a70d858269859cf4e49416464c836d073c1331c21033a4cd9e0e47dc89b53bf393375439992f4993972517dc3cdcbb2cc6f8286f282d3c973e600
 Size (cached-property-1.5.2.tar.gz) = 12244 bytes

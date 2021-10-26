@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.29 2021/10/07 13:43:13 nia Exp $
+$NetBSD: distinfo,v 1.30 2021/10/26 10:18:31 nia Exp $
 
-RMD160 (pygobject-2.28.7.tar.xz) = e9fea538da79ad27c42434d4a2173b3eb636408b
+BLAKE2s (pygobject-2.28.7.tar.xz) = 25fcd43145663a78a3615577d29e85bd3929e561ac70b2744d63c6f6cef19de7
 SHA512 (pygobject-2.28.7.tar.xz) = a5f3ae39f8156bd6234fb6d0ea31eba782fbdd4c292656c31b33e098abe3dcf0774d492cf602a4637cb679af9ecd511b24263349fbfd25708ca70f16cb052dfb
 Size (pygobject-2.28.7.tar.xz) = 744584 bytes
 SHA1 (patch-Makefile.in) = 338e157934b1aee08e87de91e93b220e8cd21ec8

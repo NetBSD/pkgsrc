@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.32 2021/10/07 13:42:43 nia Exp $
+$NetBSD: distinfo,v 1.33 2021/10/26 10:17:56 nia Exp $
 
-RMD160 (Glib-1.3293.tar.gz) = d9f65ff571d9d7dc4a3d68ff29b8eccd2feb5ea4
+BLAKE2s (Glib-1.3293.tar.gz) = c0adbe0bf66c54cfde0b1b34de5b455d804a20bcff453ea3b831978680aae152
 SHA512 (Glib-1.3293.tar.gz) = 139033e207ba9b12eb8701ea9e6e363f6d36e68320cb1a8b4d5943722fe80330594e42fd6d8061794d97dbdb06fdcdd48efea480a254a1e8981ea70e933346d4
 Size (Glib-1.3293.tar.gz) = 302831 bytes
 SHA1 (patch-Makefile.PL) = 55400eef8f24b5d636ce49ad63c7d492b4b52594

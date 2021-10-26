@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:42:30 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:17:42 nia Exp $
 
-RMD160 (Test-LoadAllModules-0.022.tar.gz) = 8cb616f6012ed378b2b74c9009633c508b8ff2d1
+BLAKE2s (Test-LoadAllModules-0.022.tar.gz) = 8dd181a74edeadef5e016b00db9d027f7f1b4d73b74207a6829d5f777867a3fb
 SHA512 (Test-LoadAllModules-0.022.tar.gz) = 1223cc802f900cc14b99a8ebb7c19ca34117ac043d9f0a6b759f3432138fd3f7a9159d4d991a6e107ebc44c04d32714aa793d82f8830286fee96a1d57636862a
 Size (Test-LoadAllModules-0.022.tar.gz) = 45213 bytes
 SHA1 (patch-Makefile.PL) = 963683b5da4a87952b1fff840681e253f8119471

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:40:03 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:15:09 nia Exp $
 
-RMD160 (kdesdk-thumbnailers-4.14.3.tar.xz) = cfcd5da56ccb4b6850efe0adbdb7cc9c6a6655bd
+BLAKE2s (kdesdk-thumbnailers-4.14.3.tar.xz) = eedb79b6337c1f7a6b67a7be0653b1dceb22da518ebcb4d86840b5613036bcf6
 SHA512 (kdesdk-thumbnailers-4.14.3.tar.xz) = acff7269739740088d87877182d689b30ddb66d9bd0f967cb77965fd6cfbbae1de81323ae532843a5d62096d8c4a310bd984e180a00f0916949ba369310c153d
 Size (kdesdk-thumbnailers-4.14.3.tar.xz) = 11384 bytes

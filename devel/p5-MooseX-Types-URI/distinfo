@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:42:01 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:17:09 nia Exp $
 
-RMD160 (MooseX-Types-URI-0.09.tar.gz) = ada6d08f54927c410015449f8eb74fff6a04b356
+BLAKE2s (MooseX-Types-URI-0.09.tar.gz) = 6c56ac3e670b66c26f46c9260517209889d2fba5b2622acbedb1299a68466a3b
 SHA512 (MooseX-Types-URI-0.09.tar.gz) = b55fcb34a7033fe3e9d24b66aea4caf9bbc5508f609cd299fc2a31e1869e8b5b0b2007721a2c62f842890bfabbeb3787137c3c9684268228e6061e7c758b027c
 Size (MooseX-Types-URI-0.09.tar.gz) = 33724 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 13:39:16 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:14:22 nia Exp $
 
-RMD160 (capstone-4.0.2.tar.gz) = d99a45aee7fea4f27d07ff154946b2485b6e4bac
+BLAKE2s (capstone-4.0.2.tar.gz) = d3767b622f0a91b3f38a24817097975ecbf4126b3118b6059dfa4a8b12d01f61
 SHA512 (capstone-4.0.2.tar.gz) = 7f93534517307b737422a8825b66b2a1f3e1cca2049465d60ab12595940154aaf843ba40ed348fce58de58b990c19a0caef289060eb72898cb008a88c470970e
 Size (capstone-4.0.2.tar.gz) = 3439542 bytes
 SHA1 (patch-bindings_python_capstone_____init____.py) = ea410a99d4cd4ee0a109a7225b739971472c387d

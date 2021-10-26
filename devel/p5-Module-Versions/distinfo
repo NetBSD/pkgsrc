@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:41:52 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:17:00 nia Exp $
 
-RMD160 (Module-Versions-0.02.zip) = 33f4c91f49456b1770fce45786fc819098c42062
+BLAKE2s (Module-Versions-0.02.zip) = d85c5a22b70a4d957e0f0b49ef3344ee5ff28645fa4a7c392fc7d29d44f6985e
 SHA512 (Module-Versions-0.02.zip) = 6fa531bb7e20c0110c237a5e9f977dd06d5b533699b15ae89ac7a72ce651eb24af7db35117f5a5ed94141994e7a1b86d9bbec7587aaf2ab5980cad9637f52edf
 Size (Module-Versions-0.02.zip) = 21376 bytes

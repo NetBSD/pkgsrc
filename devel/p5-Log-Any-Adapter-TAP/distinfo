@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:41:44 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:16:52 nia Exp $
 
-RMD160 (Log-Any-Adapter-TAP-0.003003.tar.gz) = 35270d2f902fa05876e3cf2241df8eb27ab37ea8
+BLAKE2s (Log-Any-Adapter-TAP-0.003003.tar.gz) = eef42c485448b9138a90534cd39f38c62d65522cc7ea4c22caf3bc41c07000c9
 SHA512 (Log-Any-Adapter-TAP-0.003003.tar.gz) = fbb8c5893d184c066fe471a207ecca98f2cacfbd98401f35d156cbb8bde567b313d846b75f721643fc470c1a19c162d3d791585f87d47a71e4fd7372252e65a5
 Size (Log-Any-Adapter-TAP-0.003003.tar.gz) = 16314 bytes

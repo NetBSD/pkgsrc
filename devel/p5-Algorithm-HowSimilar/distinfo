@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:40:53 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:16:00 nia Exp $
 
-RMD160 (Algorithm-HowSimilar-0.01.tar.gz) = 10c92f7d67ac1f8936bdc528c6ff8fc0b40b9154
+BLAKE2s (Algorithm-HowSimilar-0.01.tar.gz) = ef2cedcff10884b7eb28c14844db4bb4d1939defb0c193145df09bcb5f945db2
 SHA512 (Algorithm-HowSimilar-0.01.tar.gz) = 709326f7bc4d7db257e4b0787abc1241cd221287a189c03e7c106342b6cc51e2f1585bdd803e606d634d7949fbdd29ae1702f71b84b2dd5656d03deb6593a7d8
 Size (Algorithm-HowSimilar-0.01.tar.gz) = 5714 bytes

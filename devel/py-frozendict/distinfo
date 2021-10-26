@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:43:11 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:18:28 nia Exp $
 
-RMD160 (frozendict-1.2.tar.gz) = f9f5ec836fb3d1711da3eec2101538156ec709df
+BLAKE2s (frozendict-1.2.tar.gz) = 152b968a55904a7e49ab92c3d1c8ed62c1c62c13e63e7e618f7d951d8d6c7081
 SHA512 (frozendict-1.2.tar.gz) = 095cf5f6f8b02bf5666e04200431992bf4b3160aae3464d528bc256b1ab643e29dda78fe94d9e8c983dbfe66cd2459e0559122e17b6b8660c0552adc5318b3da
 Size (frozendict-1.2.tar.gz) = 2650 bytes

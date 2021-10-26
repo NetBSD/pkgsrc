@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:39:29 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:14:34 nia Exp $
 
-RMD160 (edcommon-32-s.tar.gz) = 3a55a14d3ea353fa1802852539535612c48f43db
+BLAKE2s (edcommon-32-s.tar.gz) = 5dded6009e6e5990013e720beac8f8adbdfaad58f3073eb92afbe5adcd8b0e92
 SHA512 (edcommon-32-s.tar.gz) = 2ff826e5ff15707609109a6f70e6f41f323654913f09fecc43c496b43612199086b6e335fb839e87bd8bf08f5d5cef25450e10805c10e938fc4dbdd7d77d08fe
 Size (edcommon-32-s.tar.gz) = 188718 bytes
 SHA1 (patch-aa) = d6dc8e945e23eaf2c8d67649e611fdff79f56f42

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:43:21 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:18:39 nia Exp $
 
-RMD160 (pymacaroons-0.13.0.tar.gz) = ffcebf23570e6f9f194acf40e06264be5d713160
+BLAKE2s (pymacaroons-0.13.0.tar.gz) = 4024cbaf4571c1c83dedd5d154ba1f6476beca1c32be100ff4d0c80717a93700
 SHA512 (pymacaroons-0.13.0.tar.gz) = 1929a63755dcfdc2e154217f3ce65a489b4ffdb8f4f9a27d6eb1f1899eba6d7f3f92c7db4401337e948306b6a97dd3b249196c89533991c9986d5702ad98e4ca
 Size (pymacaroons-0.13.0.tar.gz) = 21083 bytes

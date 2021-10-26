@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:39:45 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:14:52 nia Exp $
 
-RMD160 (asn1-encoding-0.9.6.tar.gz) = 9ead6fa649622caa04ae7a129d740a0670008887
+BLAKE2s (asn1-encoding-0.9.6.tar.gz) = 7757ed61c288e2ad1872fffbbf18e9927f511cbf5a19937916dfa1740bbff7ee
 SHA512 (asn1-encoding-0.9.6.tar.gz) = e31362881ebec21be5dab1c46284ea6e2571dd87f5c730690787303363a01712945ba85969c39bb2e2d76f9bcefce5d3bad247564e4b6959008804346f65fc9c
 Size (asn1-encoding-0.9.6.tar.gz) = 17343 bytes

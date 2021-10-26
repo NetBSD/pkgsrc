@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:34 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:17:46 nia Exp $
 
-RMD160 (Test-Spelling-0.25.tar.gz) = d54fb1d7f2919cc0f6c3bf7349d97bae7c78a221
+BLAKE2s (Test-Spelling-0.25.tar.gz) = 588a5c257d5bc3dd5c2c79585dd7858d96eb00a0f0437d751cf3d5b75c102611
 SHA512 (Test-Spelling-0.25.tar.gz) = 3ecb6ab43609a340a3a2fed2e60495efa0cd118c3516eaeaa3b8d60748661fc9212c8b3b2c1b66d6b42caa2acb6f089b7bef8328d3244dbb48bc70ef29db3999
 Size (Test-Spelling-0.25.tar.gz) = 29273 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:40:12 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:15:18 nia Exp $
 
-RMD160 (libelf-0.8.13.tar.gz) = 06962fbbcd91da25f02b964ad9513b9536f67baa
+BLAKE2s (libelf-0.8.13.tar.gz) = 5db7eef814c259fedd89e094c984b7c6ff2b6f0c354990dfa222c6f67d9f1627
 SHA512 (libelf-0.8.13.tar.gz) = d2a4ea8ccc0bbfecac38fa20fbd96aefa8e86f8af38691fb6991cd9c5a03f587475ecc2365fc89a4954c11a679d93460ee9a5890693112f6133719af3e6582fe
 Size (libelf-0.8.13.tar.gz) = 148529 bytes
 SHA1 (patch-aa) = bb70182806c0541e46af884e324d6ae2b8831665

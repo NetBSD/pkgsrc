@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2021/10/07 13:43:16 nia Exp $
+$NetBSD: distinfo,v 1.23 2021/10/26 10:18:35 nia Exp $
 
-RMD160 (ipykernel-5.5.5.tar.gz) = c913280414227713b9c91c22121dbd5d3fc74a0b
+BLAKE2s (ipykernel-5.5.5.tar.gz) = 9fe72e9689f8b497fdab9b6d9476c33de1c79538a16e5ad4b15ca73a7bb04c4b
 SHA512 (ipykernel-5.5.5.tar.gz) = 580c3a3d5d10c325524287c091a885955981bedb8c7bd8eac569ee19393b258dbfbc7ea8700137071c2c55bfa94b5a7bfae1c687bc5e2d532525c6fc3e043835
 Size (ipykernel-5.5.5.tar.gz) = 112909 bytes

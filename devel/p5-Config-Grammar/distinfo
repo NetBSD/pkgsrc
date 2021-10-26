@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:41:10 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:16:17 nia Exp $
 
-RMD160 (Config-Grammar-1.13.tar.gz) = 43931e32240f829411a14948616de38c569c0cf7
+BLAKE2s (Config-Grammar-1.13.tar.gz) = e2197af97b336d33d6d8554541d625953f1cc246d116ff6d7753d99627ffbbcf
 SHA512 (Config-Grammar-1.13.tar.gz) = 51b165ccec452e48906d3c8972bb68841de93f0ece11104fea837eebefa1569e921a7532f7e4a3d204e73cf4c9b592f8707fc4741481c99b67d1b7a3eb5644d9
 Size (Config-Grammar-1.13.tar.gz) = 26281 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:39:42 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:14:48 nia Exp $
 
-RMD160 (gprbuild-376670f.tar.gz) = 6b38f67ed96bc5d79cb072594e92530be7cb3136
+BLAKE2s (gprbuild-376670f.tar.gz) = 5ca32339eb173ed4a47491604ccb8ec3a0d681e44aa2ab5b76ace27c37d710da
 SHA512 (gprbuild-376670f.tar.gz) = d949ac450800fef4cf48038d613775d9210bc29baf01d03c276a59fce22add56b8e3b3ee0cd9b6353998fd2dc94e835ccf4df77c8559b27cac38cb28d56f4090
 Size (gprbuild-376670f.tar.gz) = 958175 bytes
 SHA1 (patch-share_gprconfig_compilers.xml) = 6046a2930995367448682e97ac06d603d3c9277e

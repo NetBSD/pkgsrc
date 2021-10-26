@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:42:38 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:17:50 nia Exp $
 
-RMD160 (Tie-Cycle-1.226.tar.gz) = 85465825bb6eed4aa16415bb199efc494a90fc28
+BLAKE2s (Tie-Cycle-1.226.tar.gz) = 539bd1e820b18c4ddf96199870219aba581ecccdf5a345fc13473abf2e0b86b8
 SHA512 (Tie-Cycle-1.226.tar.gz) = 74097ea346efd3217e076fee5fec2bcbcd1c0165f6b94c435e022e7aafa581d5b17f2c03768e351c2e404d067b064984c595d7d53b20f5b16e6874c22228ad4e
 Size (Tie-Cycle-1.226.tar.gz) = 11064 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:40:19 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:15:25 nia Exp $
 
-RMD160 (libnfc-1.7.1.tar.bz2) = e0d7a3ce57fd57281145d3c78042b9fbccf85009
+BLAKE2s (libnfc-1.7.1.tar.bz2) = 38bf4b1f5a1621c348461eb63cd33b7b168d85e392a134d6ea3fdbb7ade9197f
 SHA512 (libnfc-1.7.1.tar.bz2) = 6a03d197c450c0ab8f2d16ae8c1f80e206fa909ece84a32dbb962acd0f7ef693a419608cdaa4c2207a1d2593599e44479520d7413eace7fca19d3230442e506c
 Size (libnfc-1.7.1.tar.bz2) = 484309 bytes
 SHA1 (patch-configure) = d0860d7617260826dc66895f0da202950bf12afc

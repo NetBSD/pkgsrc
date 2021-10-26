@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:39:24 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:14:30 nia Exp $
 
-RMD160 (cvsup-i386-1.6/cvsup-static-16.1.h.tgz) = 1c3e8514ea4d761fc6cdc10d4e47d7437aeeaa35
+BLAKE2s (cvsup-i386-1.6/cvsup-static-16.1.h.tgz) = 9a392ff0a86216b30b0da8cfe8c17ef672919d5e0fa025c05649587b67e3a4c6
 SHA512 (cvsup-i386-1.6/cvsup-static-16.1.h.tgz) = 5876a7ae8476d1f99b87004ad3044b95ffb8939520005a95b66feda8256c9c0f413c480488a9e9df7cd719ba257331f7528872935041d0a9bc0ffd7e48974053
 Size (cvsup-i386-1.6/cvsup-static-16.1.h.tgz) = 1291666 bytes

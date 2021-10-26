@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:39:26 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:14:31 nia Exp $
 
-RMD160 (debugcon_printf-20190609-20190609.tar.gz) = 98364ede0073d77e6d58d0edd230bc54764e588d
+BLAKE2s (debugcon_printf-20190609-20190609.tar.gz) = ff28532a964382e89486fef37f46d48916ef9ca12b2f0713fd06919bd0259b63
 SHA512 (debugcon_printf-20190609-20190609.tar.gz) = 35943a4e46f45e4a6fa8d39a8ce1f4095d3eaecbd6c6943624c20aad1e4e75c9d50ec69dba5caf27db7185da0fb9876e2bdfef08651eef4f92473af1e30a41f0
 Size (debugcon_printf-20190609-20190609.tar.gz) = 5706 bytes

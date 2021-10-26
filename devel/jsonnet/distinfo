@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:40:02 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:15:08 nia Exp $
 
-RMD160 (jsonnet-0.13.0.tar.gz) = 9f60a30f4e3850a359eaeec009a358c8292b2421
+BLAKE2s (jsonnet-0.13.0.tar.gz) = 17da79d139fce1d09a381e7a80ddb7a00ce812b01466ddeadeff074ce21c896c
 SHA512 (jsonnet-0.13.0.tar.gz) = d19e5398763e37b79b0ef02368f6bd6215d2df234b5ff7a6d98e2306a0d47290600061c9f868c0c262570b4f0ee9eee6c309bcc93937b12f6c14f8d12339a7d5
 Size (jsonnet-0.13.0.tar.gz) = 21850449 bytes
 SHA1 (patch-Makefile) = fc6dc54470c56b9ce4ccc6658b5ed70693a42967

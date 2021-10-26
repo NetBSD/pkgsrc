@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:43:18 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:18:36 nia Exp $
 
-RMD160 (jersey-0.1.5.tar.gz) = 1166db0b89cc9d81f373883739cbc595bb8d1d73
+BLAKE2s (jersey-0.1.5.tar.gz) = 39efda43c122b6a03f19c5a0bafca8bb5930a8f973f6ea8be35bf8b91f537c91
 SHA512 (jersey-0.1.5.tar.gz) = 7393602282489ac72d997cac866283ff19b460c81dece2cd142b65e44722cd1e83e6fbcaeba79198ee507729fbbd28499d7f8096db3f9c962a6bb7c720914c2f
 Size (jersey-0.1.5.tar.gz) = 14031 bytes

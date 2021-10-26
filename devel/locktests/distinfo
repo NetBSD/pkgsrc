@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:40:26 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:15:32 nia Exp $
 
-RMD160 (locktests.tar.gz) = bc6121d3ae1c94b888fc825d8a5c99fc2e3f8e41
+BLAKE2s (locktests.tar.gz) = f30bbb58adbeed8aef5f00abd76c220e5b606c74e45599316395cd909ea19784
 SHA512 (locktests.tar.gz) = 908bed15535f3329e5f5f7833ff5f993cb69a5242c532372f9fbe4bfadf6e76efa67f877b0dad22c481336eed11eb5d2d01dd37d3910c8be6965e4cf07525533
 Size (locktests.tar.gz) = 12354 bytes

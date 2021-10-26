@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:42:20 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:17:31 nia Exp $
 
-RMD160 (Sub-Install-0.928.tar.gz) = da55b2ce83df175ce242be08b6544ae38854466e
+BLAKE2s (Sub-Install-0.928.tar.gz) = e7603f6c43c87b26a2bd6552e191adfb9e9e0e5b9656debe1bd379d408d65000
 SHA512 (Sub-Install-0.928.tar.gz) = 3f25df9f5992075968830d4235e9f6520c526331b9180391e41483241d43253a61ad8dc381d77aaeb6c6fb841cfc5c097598e62abb46208894275c393a133ade
 Size (Sub-Install-0.928.tar.gz) = 18669 bytes

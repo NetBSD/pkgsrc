@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 13:44:26 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:19:50 nia Exp $
 
-RMD160 (thor-1.1.0.gem) = 79a54615da513e4ebdb5d34c3477871fa0de6725
+BLAKE2s (thor-1.1.0.gem) = df86c8bc67f0c6375864fdc005762b4ed97351d7656b6a3cebe108ea31845509
 SHA512 (thor-1.1.0.gem) = 98e96ad70f8452e590b7c5266c495f4fbe11af2ce38aa2b3295da8cffe4bba7d660fab4faf604011cc4774ee77451d32002c43c74f3c422e1ed50866f7bcd927
 Size (thor-1.1.0.gem) = 56832 bytes

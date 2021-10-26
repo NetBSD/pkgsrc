@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:39:12 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:14:18 nia Exp $
 
-RMD160 (autoconf-2.13.tar.gz) = 0d1fa0992280ed71c0d72487a5a4c246d1c1b18a
+BLAKE2s (autoconf-2.13.tar.gz) = 60a6acc1a363ef4898ad2c2d58ca047813b7be7a1e9270a72845196429805a5d
 SHA512 (autoconf-2.13.tar.gz) = 602584f4c77b7a554aaa068eda5409b68eb0b3229e9c224bffb91c83c4314d25de15bd560a323626ff78f6df339c79e1ef8938c54b78ecadf4dc75c5241290ad
 Size (autoconf-2.13.tar.gz) = 443844 bytes
 SHA1 (patch-aa) = 82b3c0f421f8c5c34b68c625eccff516a4c8cb0c

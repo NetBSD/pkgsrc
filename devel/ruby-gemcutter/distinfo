@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:44:09 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:19:32 nia Exp $
 
-RMD160 (gemcutter-0.7.1.gem) = ce20f8e6bd48ef870deb74640c5fdfa4c8932dab
+BLAKE2s (gemcutter-0.7.1.gem) = b874deaa5b3da5330542c81c36fe1b93557fa3e9a5980b5a098f78db2a1fa8ac
 SHA512 (gemcutter-0.7.1.gem) = 2611bafeb4c1db4a202bcb2e7974dda76cc9df75875c7e78d1f01b211f104dde83f003d0fa95164daeff82e394454280fad0bcbed5c682c1f76181d1f18e8059
 Size (gemcutter-0.7.1.gem) = 9728 bytes

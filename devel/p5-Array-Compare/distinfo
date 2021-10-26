@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2021/10/07 13:40:56 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/26 10:16:03 nia Exp $
 
-RMD160 (Array-Compare-v3.0.8.tar.gz) = 2192029562ab1f7d67128e465c36932fcc1fd7d1
+BLAKE2s (Array-Compare-v3.0.8.tar.gz) = 08ab5f5e6a934ca02f02ceec4f966a2c15bfbe38bc924010478bd3efb2493778
 SHA512 (Array-Compare-v3.0.8.tar.gz) = 648dbf2a65d94c3bfaab34ec765d0ad7e86f5c0b704078278f43a28a668cb70606a039cceab96f31af439f661c2c6538571b142ec938738f3cb94438b40e2838
 Size (Array-Compare-v3.0.8.tar.gz) = 9977 bytes

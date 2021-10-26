@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:42:47 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:18:00 nia Exp $
 
-RMD160 (phabricator-20170609-5885704800a97aadf47aee5654ff2647b40fb4ad.tar.gz) = 857058a1cbc6d8d53d3e9324a0ae4cf63bb3e210
+BLAKE2s (phabricator-20170609-5885704800a97aadf47aee5654ff2647b40fb4ad.tar.gz) = bda9a2e8b6a0c8f446c23ffb97a5df486c27919c53097dd136a3caeb00f4a735
 SHA512 (phabricator-20170609-5885704800a97aadf47aee5654ff2647b40fb4ad.tar.gz) = 407c35cc9af5818ee14438aa650d9e4f04f5531cd818faa1c7d70d65dd9ad04b02859c64580a15223902f81b406e7f1d9f32e50a418f079e0827903edeb044c9
 Size (phabricator-20170609-5885704800a97aadf47aee5654ff2647b40fb4ad.tar.gz) = 8877762 bytes
 SHA1 (patch-src_applications_differential_render_DifferentialChangesetRenderer.php) = 0067d3f0ee6513396a40c98c231cf53e1179e160

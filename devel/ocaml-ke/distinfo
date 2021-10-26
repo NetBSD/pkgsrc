@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:40:43 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:15:50 nia Exp $
 
-RMD160 (ke-0.4.tar.gz) = 753bff712bd002c2303b8596f425b0a41ce58b51
+BLAKE2s (ke-0.4.tar.gz) = 56e663d680ad84db174921c167fa76cac8a29aaa83a60f0a2c0bfa3d14dd1ca1
 SHA512 (ke-0.4.tar.gz) = baf56fe15b6647df6a8e11c32ad9d6e20fb8044ea4a3af930c1cc9e0d00d3f77a2a47f9680e7ca0b820e3f1ca719d067d5eb8349e014b0b6ce9aac2fd1a92467
 Size (ke-0.4.tar.gz) = 19052 bytes

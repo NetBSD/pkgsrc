@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:39:54 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:15:00 nia Exp $
 
-RMD160 (setlocale-1.0.0.10.tar.gz) = 602fe192ee60d5b4f681c45e836c166eb0bc23cf
+BLAKE2s (setlocale-1.0.0.10.tar.gz) = 1b497e3583ec33880341a3ecabee9b8277804d49ed9b325b05dfc3a5c5854dff
 SHA512 (setlocale-1.0.0.10.tar.gz) = ef05da7ed2acfa6f4b7acd988282d545897428272e5d5a9818563afc5138df32268f705946093ba33628ad42de2c19ed9cce139f0e1fa15e4a87c6cd18da02ef
 Size (setlocale-1.0.0.10.tar.gz) = 2096 bytes
 SHA1 (patch-System_Locale_SetLocale.hsc) = b0b9d233b0c1e022d2caaf845799f79a1970b333

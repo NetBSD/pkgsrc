@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:42:58 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:18:13 nia Exp $
 
-RMD160 (backports.shutil_get_terminal_size-1.0.0.tar.gz) = 5bc151cafe9d31e472f4bb39a80ff7d39184dc29
+BLAKE2s (backports.shutil_get_terminal_size-1.0.0.tar.gz) = df39a801dfd3e691ba80aaf89617fd9edf5dfe2efc54c74d335022123a4ab598
 SHA512 (backports.shutil_get_terminal_size-1.0.0.tar.gz) = b74341c6616f9aace5abcc7fd657fc33801b558b6227c533002ccaf588734490b465a4a27d2bdc8047a385771afdcded610edef832dfa5ef24632f4541729050
 Size (backports.shutil_get_terminal_size-1.0.0.tar.gz) = 4279 bytes

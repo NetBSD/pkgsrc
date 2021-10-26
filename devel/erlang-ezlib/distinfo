@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:39:31 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:14:36 nia Exp $
 
-RMD160 (ezlib-1.0.9.tar.gz) = 6764e6c4b22b6dc53719ae5cc852f1d861e92d37
+BLAKE2s (ezlib-1.0.9.tar.gz) = dec930cd16fdb9d3322f6daa4d00588914014252d348743895af0226e93ef1b2
 SHA512 (ezlib-1.0.9.tar.gz) = b1358f4c86f0cdffce544c782e56b332378e991cebc945f0c6d75f25fdae5f011f154ec731c73eadb533087cc4a673c596523aa2300761f1033eb48af3f0e203
 Size (ezlib-1.0.9.tar.gz) = 49395 bytes

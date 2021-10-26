@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:33 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:17:45 nia Exp $
 
-RMD160 (Test-Roo-1.004.tar.gz) = d90e4c6cec6c4ffaa55ab85138e8ae1e233bdf09
+BLAKE2s (Test-Roo-1.004.tar.gz) = 9ace0194bde24ce0ea48e868b44920200cca8d558c0d7ab74573cba9bb288b2d
 SHA512 (Test-Roo-1.004.tar.gz) = 739b26d334d38971aa8e901e518f26ec3142dbfc710d74ed1601143a2a3a134a72ff3caa77567156da7180610e17f2b4dd07fbce4ea3a608bda49c56bed1dc66
 Size (Test-Roo-1.004.tar.gz) = 29662 bytes

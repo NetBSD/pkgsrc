@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:43:02 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:18:18 nia Exp $
 
-RMD160 (click-plugins-1.1.1.tar.gz) = 143f83706fb8ad3eb91716d9b540e09f929a2bd5
+BLAKE2s (click-plugins-1.1.1.tar.gz) = 86442bdda13fcba9b93291e678313cada57e964ec9d000426b8a44b4ecd035e7
 SHA512 (click-plugins-1.1.1.tar.gz) = bbd838f50603ac4e76daf3535fd5d27a17e17549addbc8b582df6d6193b4f07d743101ce52f0b71f326995fdfeac159805025770350ca2e7697f212dce0c4b1a
 Size (click-plugins-1.1.1.tar.gz) = 8164 bytes

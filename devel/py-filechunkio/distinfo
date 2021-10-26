@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:43:10 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:18:27 nia Exp $
 
-RMD160 (filechunkio-1.8.tar.gz) = 486c80f69b1c1d3cbbdd3d183b6f505d6151c588
+BLAKE2s (filechunkio-1.8.tar.gz) = d0042e2ca1e469360a7940457af6957c3ffe717b52e451381eba68d3f792d807
 SHA512 (filechunkio-1.8.tar.gz) = a71fae7211d6ae50c1e7a5a3743a201b591bb6c54e23f7d954f2fad83e539349aa0cc14edff9bb4afd99048ffcb85260d8886437345b99f1e9956983f619da22
 Size (filechunkio-1.8.tar.gz) = 2338 bytes

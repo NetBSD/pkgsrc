@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 13:39:27 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 10:14:33 nia Exp $
 
-RMD160 (diffuse-0.4.8.tar.bz2) = c424ba8e48a86d0eeab2b51b15bb6f81dd23e95d
+BLAKE2s (diffuse-0.4.8.tar.bz2) = fc22ad4941608daab6be047ba5c1069fad14fa764932bcc462a09241d8232f93
 SHA512 (diffuse-0.4.8.tar.bz2) = 0c62976526804a328f1cc1775f842e9575fab50309cc964171af5ee89d8f303d4cbdf66a078ed64bb8826f5a57c2cc7fc59afc1ee87646ece340212d34f2514e
 Size (diffuse-0.4.8.tar.bz2) = 557966 bytes

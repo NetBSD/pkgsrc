@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:40:52 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:15:59 nia Exp $
 
-RMD160 (uuid-1.6.2.tar.gz) = f9cd513577557c4f1d7de869f80035b8844b56d7
+BLAKE2s (uuid-1.6.2.tar.gz) = 3e718c0a71e4dc063415ff766e9a4daccb2af2ea075e69012da0712a1cf6e58c
 SHA512 (uuid-1.6.2.tar.gz) = 16c7e016ce08d7679cc6ee7dec43a886a8c351960acdde99f8f9b590c7232d521bc6e66e4766d969d22c3f835dcc2814fdecc44eef1cd11e7b9b0f9c41b5c03e
 Size (uuid-1.6.2.tar.gz) = 397048 bytes
 SHA1 (patch-aa) = 45bf02ae84db3215fd0bce6a751753f708a33bda

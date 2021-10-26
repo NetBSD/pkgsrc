@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 13:44:39 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 10:20:06 nia Exp $
 
-RMD160 (umbrello-20.12.3.tar.xz) = 826a618cf3f9e9966f772e1b887600dbe4a9c80a
+BLAKE2s (umbrello-20.12.3.tar.xz) = b75a2e1182e0a1a63e00093ae80a6fa80d77cfa530fb8549ce1c468d60296b2b
 SHA512 (umbrello-20.12.3.tar.xz) = 619d83ffd307be57fc8f3dc935dde6bdeffc60186ab675b8f2e530bb6a125ec1e03fccc49772c6d4cc120b3280e56f28344cba2627c3b955f9cd338cd071da6a
 Size (umbrello-20.12.3.tar.xz) = 5555804 bytes

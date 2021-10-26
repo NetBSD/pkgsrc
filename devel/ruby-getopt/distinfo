@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:44:09 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:19:32 nia Exp $
 
-RMD160 (getopt-1.6.0.gem) = 8464cd0fa76c001005f542004f36d89a26992a1c
+BLAKE2s (getopt-1.6.0.gem) = a539c4c4d987edcfb8cb086a984eb411cf1bc37785a949b392dac83bbd9d32c3
 SHA512 (getopt-1.6.0.gem) = b6494a74ff1ea36c88d1522af41fa2bf5b14b10be261691ea6b02ab5f47221bf2c317dc41bae0bb8480feb7d1ebc3a7477773e003de6427996c5053b8614cf1b
 Size (getopt-1.6.0.gem) = 25088 bytes

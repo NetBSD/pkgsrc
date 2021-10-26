@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:44:00 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:19:22 nia Exp $
 
-RMD160 (Ropper-1.11.6.tar.gz) = 4db93bc110a52683d2a5a0fd1a2db87776500084
+BLAKE2s (Ropper-1.11.6.tar.gz) = 5d3cd8250c47611729f0991ac2f36aa031ad916926c583be16d2715d3781642d
 SHA512 (Ropper-1.11.6.tar.gz) = 3609aaa60650c48602a48a2f83702b41227fa749cbfcfd76a2dd880900a69b9fc75208fa875eb262766c66c67727046a0687670cfbd203f77c806facd5fa59e8
 Size (Ropper-1.11.6.tar.gz) = 1466896 bytes

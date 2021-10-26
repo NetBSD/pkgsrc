@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:39:30 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:14:35 nia Exp $
 
-RMD160 (elfsh-0.51b3-portable.tgz) = 278b2c846335d14953b27fa8946763622acb6303
+BLAKE2s (elfsh-0.51b3-portable.tgz) = 2530f564d0cfdee8f1ecfcf2543f766573d1c28cb72bfa0966c0524f5f41434d
 SHA512 (elfsh-0.51b3-portable.tgz) = 3af4a7f031e830c24ecd05701c4ade052845cdd3808f6d5b60f19f8fff3ffa66f2edd1490fc62b9bbd8ac51d7c8aadb045fc2d369c885eb47a33210690f1c9df
 Size (elfsh-0.51b3-portable.tgz) = 136679 bytes
 SHA1 (patch-aa) = 0494158b7daf4d1b55984bf98c161bf70e114430

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:39:30 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:14:35 nia Exp $
 
-RMD160 (electric-fence_2.1.13-0.1.tar.gz) = 75e41de7bef263007f24a1053528959f9f7fe1fa
+BLAKE2s (electric-fence_2.1.13-0.1.tar.gz) = 9f3b4f641221b584d7f7e7048a36102715a9cb310dc8efc9fb2d119616074c0e
 SHA512 (electric-fence_2.1.13-0.1.tar.gz) = 1366b91d7682076a28921f8484e94cc0cbc7e92c038781fd4ab4a98e55b42fc9c2ef779cb4a005d2c9edb391f337c79930db03837ba8cc0b4967dc33c9cd8c9c
 Size (electric-fence_2.1.13-0.1.tar.gz) = 29991 bytes
 SHA1 (patch-aa) = 9b2f1720a92c805d8d4b36631317493124c2f2d7

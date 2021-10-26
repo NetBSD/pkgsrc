@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 13:39:31 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:14:36 nia Exp $
 
-RMD160 (cache_tab-1.0.26.tar.gz) = facf9ab6d3ff2bb65dd9ade9b4af3c5f6e48f325
+BLAKE2s (cache_tab-1.0.26.tar.gz) = 5e66eacb54ab2eff87f69a20a25cf5e54866aee66608a62e353793bd690c01b9
 SHA512 (cache_tab-1.0.26.tar.gz) = d9412484ac4070b67a4808eb30dfb73bee7916f98264df8f6efd0012f594cddc6537de35668b1b6fd8b0f2f2812f7db5c3a44d3171aa451dfa433a8d231e09db
 Size (cache_tab-1.0.26.tar.gz) = 23511 bytes

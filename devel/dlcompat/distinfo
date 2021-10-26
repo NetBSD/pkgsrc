@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 13:39:28 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:14:33 nia Exp $
 
-RMD160 (dlcompat-20030629.tar.gz) = 5748bd440a4d3c7646d3939f5fcedb26c2b5b166
+BLAKE2s (dlcompat-20030629.tar.gz) = f77afc87f25027c781420ef7e2b74f10210b0c6ab93a89a1fed3574e914991d7
 SHA512 (dlcompat-20030629.tar.gz) = e26de78185deaacd1e82744470b970d81dd0021cd303480e025c5adaeccf18de919dfb8df06f5db9834e34bd39b698f96e44ee0b01e8b88d533039033f7d35a7
 Size (dlcompat-20030629.tar.gz) = 54848 bytes
 SHA1 (patch-aa) = 7bc87eb6f4360c4c897bdbafb3b94c6326531b67

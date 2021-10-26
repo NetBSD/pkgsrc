@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:44:12 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:19:35 nia Exp $
 
-RMD160 (libyajl2-2.1.0.gem) = 538f01aacbfde9f55ca25dd40946374560cf144a
+BLAKE2s (libyajl2-2.1.0.gem) = bf94b706a50b827b0fa11839de6baf79027ec1d5aad8507f52e8c07f276b181b
 SHA512 (libyajl2-2.1.0.gem) = 39a96cfffeb234b7d305cef76dccd101fcc0499c55f9643d8531c3f6125401da2f8bfd1db7e08ee3b267734429fe4bc508f2d5bca77db34103dcc8a9e88b152c
 Size (libyajl2-2.1.0.gem) = 129024 bytes

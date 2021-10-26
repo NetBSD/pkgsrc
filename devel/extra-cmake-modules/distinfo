@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2021/10/07 13:39:32 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 10:14:37 nia Exp $
 
-RMD160 (extra-cmake-modules-5.81.0.tar.xz) = 7447c689a9664bec32de355b1d79627d9e059f98
+BLAKE2s (extra-cmake-modules-5.81.0.tar.xz) = 942c61d4dc420645a48936b65a5b59a560b82d439401be24822ed5bd9d4097c4
 SHA512 (extra-cmake-modules-5.81.0.tar.xz) = b01d36c5d16ff2ad6ccbc55c58d95dc14880ff6d55d408d933eba55199c63e665856a93ccf441f9eb154e0a52837e1d78470ed876490ae2f0ae0a60e63f8dc2f
 Size (extra-cmake-modules-5.81.0.tar.xz) = 357528 bytes
 SHA1 (patch-kde-modules_KDECompilerSettings.cmake) = fd20a82370a451aa45d4d8fa59127c76bdc5a441

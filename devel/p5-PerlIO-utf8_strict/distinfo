@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:42:10 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:17:20 nia Exp $
 
-RMD160 (PerlIO-utf8_strict-0.008.tar.gz) = 40ce2ac8d8f8ad1986327d6c6b1293d8f7f0d989
+BLAKE2s (PerlIO-utf8_strict-0.008.tar.gz) = 8dd5da2c3e5ac18b10f01726edfc61137c376de10194ea2cf1ebc3460ddfcaef
 SHA512 (PerlIO-utf8_strict-0.008.tar.gz) = 5a54c379925880abca7f85a2b08c19d54e222a03e06490ff366ee38e68018b5f6a4ab0bb8df15f9581b6265eac550090a35f3a4f52c748c008c9c575af41c911
 Size (PerlIO-utf8_strict-0.008.tar.gz) = 95180 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:44:20 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:19:45 nia Exp $
 
-RMD160 (ruby-redmine_code_review/1.0.0.tar.gz) = 52f50888aaf7c3949767af8e7b0c5a238fff7122
+BLAKE2s (ruby-redmine_code_review/1.0.0.tar.gz) = c171254a17898b498cf00a57bcd5c66fa2f3f08ec5146273bb01d7680cdfd962
 SHA512 (ruby-redmine_code_review/1.0.0.tar.gz) = bf0b7e6ba47b047fa0da79e7398a1cfca66e3db9e00b0161ace5059529802a4d253073ff2e42193f0b6e0425138313c960e6e4c8cd1eacf417a867ed80e5a355
 Size (ruby-redmine_code_review/1.0.0.tar.gz) = 180492 bytes

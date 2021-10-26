@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:43:07 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:18:24 nia Exp $
 
-RMD160 (pydoctor-16.3.0.tar.gz) = 0037d6e733f4192ea9d2d9642dcbf8604793c919
+BLAKE2s (pydoctor-16.3.0.tar.gz) = 46a083e515c3164f3310311de8e5f5e472fff2a1fa65cb3c7208999f16231317
 SHA512 (pydoctor-16.3.0.tar.gz) = d0eb7cd491c32f76cf34b4c27de865b0ff074f172d40cbf65abdaf07c13ebca9bd0dfa4ffa53b33ad1220f1d06981557db978b73cc1e5283a98a1425240a9a26
 Size (pydoctor-16.3.0.tar.gz) = 94811 bytes

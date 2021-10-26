@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:40:19 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:15:25 nia Exp $
 
-RMD160 (liboop-1.0.tar.bz2) = ed257fd810fa38cf1a664a3dec8fbf6a9a69c9fb
+BLAKE2s (liboop-1.0.tar.bz2) = 18bad6034c5568d2439d44d919c5a1e687eaaba646c0ec9bdde120e22284ab97
 SHA512 (liboop-1.0.tar.bz2) = 157385e61af7a5fb055d775f773dc0c455703f86dd3a100b56421b231e8bd78ab9af4712fcfcd07e9344ac2ac4f3cde28e0d966be72061b3b7d50b456ff7818f
 Size (liboop-1.0.tar.bz2) = 215477 bytes
 SHA1 (patch-aa) = aa43fcd1b3ea8da6465d07a1b12cacb5edf5de26

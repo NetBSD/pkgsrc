@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.29 2021/10/07 13:42:52 nia Exp $
+$NetBSD: distinfo,v 1.30 2021/10/26 10:18:06 nia Exp $
 
-RMD160 (pwlib-v1_8_3-src-tar.gz) = 1ce2544ef631c8344543e62988f97022c998bb05
+BLAKE2s (pwlib-v1_8_3-src-tar.gz) = 17e80da09f28c8f3bf92b65e84a5cc791a02d842062ec44abb566adf3cdfb4cf
 SHA512 (pwlib-v1_8_3-src-tar.gz) = 6d6e631e804f987a4a654dc139bc3666c4b3a27214117372f17d6aa1c8bc02ad0a315a38b998f4602ff0845fb9a6b764cc30ffb978d5514836238a7f884ea096
 Size (pwlib-v1_8_3-src-tar.gz) = 1900922 bytes
 SHA1 (patch-aa) = e8dc5e42fc758ec2a437caed47a29495b3017b5e

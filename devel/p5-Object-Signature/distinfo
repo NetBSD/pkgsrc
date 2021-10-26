@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:42:03 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:17:11 nia Exp $
 
-RMD160 (Object-Signature-1.08.tar.gz) = 97fd5650193963610b8fcfa230603ee94b11137a
+BLAKE2s (Object-Signature-1.08.tar.gz) = a0261c9944e1c767486446380515ac4bfce714b171e89ea4329b6825e5e1b2b3
 SHA512 (Object-Signature-1.08.tar.gz) = 7c3c40ae04c976245ae84a5bb6afa72f5cb39ce0d9aa28b3af5cac1cb23c53e4246edd15056b9dcad9a03b54b053299bbbc03233437de5530ceb0a52de48a3ef
 Size (Object-Signature-1.08.tar.gz) = 25746 bytes

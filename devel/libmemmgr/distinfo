@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:40:18 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:15:24 nia Exp $
 
-RMD160 (MemMgr-1.04.tar.gz) = 169ad44bca90cdaa6537f0e0e6cf07fca6367ea8
+BLAKE2s (MemMgr-1.04.tar.gz) = f6989c837f51275aa2920bdfcabac532c3ebc086228e1164cfcb769a186e2bf7
 SHA512 (MemMgr-1.04.tar.gz) = 069e9676384fe9d4559e8661c2d9d629359234d76e5d1223abf25db6c270f63436a485772ed9238872e3fa809f86c2fceee64c5b9204e4c6939efa7f2d80a4e5
 Size (MemMgr-1.04.tar.gz) = 13944 bytes
 SHA1 (patch-aa) = 7e79786da44a041c13d689969eba9f2871c66ca4

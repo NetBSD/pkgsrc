@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:40:40 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:15:47 nia Exp $
 
-RMD160 (checkseum-0.1.0.tar.gz) = 1835dcd9a7c2c01fbe046145e2e4b64267627fd5
+BLAKE2s (checkseum-0.1.0.tar.gz) = 3241a642c86c678625011ca9ff7344c586db4a06f7930751b5760b14d5cffe92
 SHA512 (checkseum-0.1.0.tar.gz) = 6c10fb0ce649c0e603a5d75f580894e8b2fb5540575cb49c3eb42ac5ca7bc1f4eaa52c735e4f91688fdb5c3ec11c94f97663603fb880e84fdcec67ec7a3fb6cb
 Size (checkseum-0.1.0.tar.gz) = 32124 bytes

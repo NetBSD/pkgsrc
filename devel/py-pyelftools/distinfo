@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:43:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:18:48 nia Exp $
 
-RMD160 (pyelftools-0.27.tar.gz) = ce86de5efba5e9dd60b13d52259ab2bbe7a08410
+BLAKE2s (pyelftools-0.27.tar.gz) = eabc68d99da83e2df88ff2d6d0408f8ab5a92a91e4f68f2bee62f9b42d63d513
 SHA512 (pyelftools-0.27.tar.gz) = 87fc8d7f5534126c61fb2d89ce5f2465709f03cd45c10a2b39427415e7d36b1216e7d3d8dff6a359a5cab595bf1de90b01fa1d24c6f4196feef81381e34d2bce
 Size (pyelftools-0.27.tar.gz) = 2636011 bytes

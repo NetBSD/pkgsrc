@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:41:02 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:16:08 nia Exp $
 
-RMD160 (Canary-Stability-2013.tar.gz) = 797d71a3f4e156a0a083c0581b98626ddb8aa0fe
+BLAKE2s (Canary-Stability-2013.tar.gz) = 1b690d892bd680024b8c1e3a539735507e656124865d4266d839f26cfba30f49
 SHA512 (Canary-Stability-2013.tar.gz) = 9dfb0e6d136048050aac7c29e1fc79dc2a7703c8800582aa837c5d9b9934c48bfcb0a9ef1c6b5bb7e71a10a709e7f7431b3c79ea12b8d9f374b33bfd4a3e468d
 Size (Canary-Stability-2013.tar.gz) = 4861 bytes

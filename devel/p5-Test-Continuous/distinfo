@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:42:27 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:17:38 nia Exp $
 
-RMD160 (Test-Continuous-0.76.tar.gz) = 6feccca16c8fc2fe78673990f03ddd8250d4e156
+BLAKE2s (Test-Continuous-0.76.tar.gz) = f5a12e39b0954ba85ccfe6273e9badd6a6d2808ac1c83b0165afd04b95b4413c
 SHA512 (Test-Continuous-0.76.tar.gz) = 22cdf91fa41dee1bac9b807aa12479a630d4c54bfc6f6e2f19918cccd223bd0732cbefef9b9dc23c9cd0147b2c400cf572602d8d38682d45f0565e6f580b7aab
 Size (Test-Continuous-0.76.tar.gz) = 38776 bytes

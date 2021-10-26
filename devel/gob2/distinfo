@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 13:39:41 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:14:47 nia Exp $
 
-RMD160 (gob2-2.0.20.tar.gz) = fdc147b2af85da360f99742428703c27f08418c2
+BLAKE2s (gob2-2.0.20.tar.gz) = 667fe694181b8f87d2ad7d9606b14cd9796d37d654fba77d250c1239b1ba4dc2
 SHA512 (gob2-2.0.20.tar.gz) = 34c2ebe226eaff6d88f1a04e9dd382a5365e5d6ded218373b77abbf2138b87d3f9dfe5eff94469bba55ea13cfb171ba57164fd6d98455598217f8381f20f7bb8
 Size (gob2-2.0.20.tar.gz) = 284820 bytes
 SHA1 (patch-src_main_c) = 53c7d8e9ec4cf71a5718d0e35cc91539bd482a2a

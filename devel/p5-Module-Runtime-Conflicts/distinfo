@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:41:51 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:17:00 nia Exp $
 
-RMD160 (Module-Runtime-Conflicts-0.003.tar.gz) = dc8752bef1bb59cab1ef0d28ccf21ce1d8bdc8a7
+BLAKE2s (Module-Runtime-Conflicts-0.003.tar.gz) = 58fc89c88ca6060e8cb7e63b5e54ed9718416a25679c6ef661c51479c4fa35cd
 SHA512 (Module-Runtime-Conflicts-0.003.tar.gz) = 1b72ea7cc9516721290d5ea433169697b4134b5fc77872d6822e4c395a154bf956d469ab5da2802d587d60dfb13b9784014fe492988cf3f8b5820da2d63e8ca1
 Size (Module-Runtime-Conflicts-0.003.tar.gz) = 24935 bytes

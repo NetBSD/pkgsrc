@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:40:08 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:15:13 nia Exp $
 
-RMD160 (libantlr3c-3.4.tar.gz) = cbfc13e54f02d87cd82e0c4ca2136fa3fb43dff4
+BLAKE2s (libantlr3c-3.4.tar.gz) = 485a71cfd38591a82452cf52ace3ca1b3f9d2a43bc9584530d3470dda9d8e550
 SHA512 (libantlr3c-3.4.tar.gz) = 8edb243d745ff5bf3b15940f124d1255a9ca965cb656a73a558aed7fa07effcd7620f23dc692e5d5169a03200254836dd57af3ce444ba225281a5b721497e211
 Size (libantlr3c-3.4.tar.gz) = 546039 bytes
 SHA1 (patch-configure) = 43b8cf7f549fc38ef4e8eb61651dfadb2357dbd2

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 13:40:04 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:15:10 nia Exp $
 
-RMD160 (kdiff3-1.8.5.tar.xz) = f68b8ad7365b4521dc136333283e313f35c2e427
+BLAKE2s (kdiff3-1.8.5.tar.xz) = 61146f13ab39cee5deb640dde9119efb9ee06feacbcfea32e574fbce59d696f3
 SHA512 (kdiff3-1.8.5.tar.xz) = 5ae736b290a6a1a34dd3e19028fb43b398ad1341982e7717d3de4326938c2dabc11e7e172e5628d2deeddd942b67d6e3af02d074c9b2a1c902c7e1ea8d7f1af4
 Size (kdiff3-1.8.5.tar.xz) = 1045812 bytes

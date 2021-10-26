@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:44:03 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:19:26 nia Exp $
 
-RMD160 (blankslate-3.1.3.gem) = 263161dd22bfeaff4fccd9d7203378b06ae24000
+BLAKE2s (blankslate-3.1.3.gem) = b463b41a0277fc2f20a5280ddb2ce49e8a5edacfba56f3700ac61c695cbbb4f2
 SHA512 (blankslate-3.1.3.gem) = 4164c2e9ecb6a294fbd0d25f70bae36ee9277da3a75aae6c99d37147f8111c40a6cfb85ddc3819e45c361c49fd9c3fc724ecea201763f7f9891b96589226f245
 Size (blankslate-3.1.3.gem) = 8192 bytes

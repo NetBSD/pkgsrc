@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:39:52 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:14:59 nia Exp $
 
-RMD160 (monad-control-1.0.2.3.tar.gz) = 049e21831ed6af9cdf22c1e005aadf7c8cdaac32
+BLAKE2s (monad-control-1.0.2.3.tar.gz) = c0c3d705fd14e2a575a28f78ac8ff817933855e0516ebc7149f6e40c9f75e21f
 SHA512 (monad-control-1.0.2.3.tar.gz) = 59837326ec9f25220cb6c7329c91a5806b0ec7412d6af24c0f0d52c4fd93b084e92edd4f5f61a4f9c4248034fa540c23b65d2aacdfca737ece98bb132b8f08d4
 Size (monad-control-1.0.2.3.tar.gz) = 13864 bytes

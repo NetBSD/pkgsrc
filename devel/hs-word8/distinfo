@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:40:04 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:15:04 nia Exp $
 
-RMD160 (word8-0.1.3.tar.gz) = 9b6df1d754a0cc00122313ac1a8c7b1291de3b7b
+BLAKE2s (word8-0.1.3.tar.gz) = 89af17f0691efb75386d1c4febeb4b4966f9aaa021080927693c1703220a58df
 SHA512 (word8-0.1.3.tar.gz) = e6442eddb582c41f38206a436fc69c476ff97bf1bd5f37aa173d4efd0153744e9d20b71435329b69dc12a7919034082d4195db88bb2f83b462e1ba430b1ad988
 Size (word8-0.1.3.tar.gz) = 6271 bytes

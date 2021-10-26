@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:44:19 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:19:43 nia Exp $
 
-RMD160 (rb-kqueue-0.2.7.gem) = 360147a1ca6071657d64e526e5a167781dbbfda4
+BLAKE2s (rb-kqueue-0.2.7.gem) = 91854c16aa41f68a29e32479f3885a48dcc8dca649568a0ff55a6a8a1ae4e7d7
 SHA512 (rb-kqueue-0.2.7.gem) = d7df7c56288382fae143b0610077bb9ac55435c812f78647380ee85e0dccccb3d73667cad89a5c42581969d936353e929edaccc0b9f6e5e27b47123774e30efc
 Size (rb-kqueue-0.2.7.gem) = 19456 bytes

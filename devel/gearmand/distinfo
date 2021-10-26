@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:39:35 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:14:40 nia Exp $
 
-RMD160 (gearmand-1.1.19.1.tar.gz) = 4c0172568778be383e1c3db5faa6818a6bc78ad4
+BLAKE2s (gearmand-1.1.19.1.tar.gz) = 40119a07ec1cddb8d0d8a594711e430eea3195bcaa625fab19f98ca5c7cf1c98
 SHA512 (gearmand-1.1.19.1.tar.gz) = cbcf85dfd7268aa9acc039eac9505385af3be89eeba48270ddb45739e0ccdcf0d2963d821ccbb6a471396fc9ab2521d096f5d6c2fc3d41b3fb050bd82a795f1f
 Size (gearmand-1.1.19.1.tar.gz) = 1094126 bytes
 SHA1 (patch-benchmark_blobslap__worker.cc) = 12f805d65b36a2f25e5751b8c36a95ac28ec757a

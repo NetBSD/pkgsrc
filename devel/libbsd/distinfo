@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:40:09 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:15:15 nia Exp $
 
-RMD160 (libbsd-0.10.0.tar.xz) = 12ba2b56ce049a1bae5212435fdd17635f1de6ce
+BLAKE2s (libbsd-0.10.0.tar.xz) = 6ce3c0e1456420835c035d607273b4ef5184f6a00e6852ea74e2abb9e6300d90
 SHA512 (libbsd-0.10.0.tar.xz) = b75529785b16c93d31401187f8a58258fbebe565dac071c8311775c913af989f62cd29d5ce2651af3ea6221cffd31cf04826577d3e546ab9ca14340f297777b9
 Size (libbsd-0.10.0.tar.xz) = 393576 bytes

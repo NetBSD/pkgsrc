@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:40:12 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:15:18 nia Exp $
 
-RMD160 (libdwarf-20161124.tar.gz) = f1b30ea2e6a8b337a3eab2007c67e2824972738e
+BLAKE2s (libdwarf-20161124.tar.gz) = 407b6f6c56f94244df51c07384279843f1ad1174941ab1d0c511b771564105e6
 SHA512 (libdwarf-20161124.tar.gz) = 38e480bce5ae8273fd585ec1d8ba94dc3e865a0ef3fcfcf38b5d92fa1ce41f8b8c95a7cf8a6e69e7c6f638a3cc56ebbfb37b6317047309725fa17e7929096799
 Size (libdwarf-20161124.tar.gz) = 1732155 bytes

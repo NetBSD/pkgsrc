@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:39:40 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:14:46 nia Exp $
 
-RMD160 (go-protobuf-1.3.3.tar.gz) = 357c9f9d008d9ccd5f8214660eb9fb4b4173fa60
+BLAKE2s (go-protobuf-1.3.3.tar.gz) = c086424593e96c86688a9f7fd2bbe1955a41a725d1ce1d19aa483a0615c76f89
 SHA512 (go-protobuf-1.3.3.tar.gz) = 92ce3a82390be38154cee03e2abc258a2b8f01b1ddbc15069dfd39e66cad5dd3bb2e85150ce665d6d1354a86ba8f62590448e91e90c724661155820e15879393
 Size (go-protobuf-1.3.3.tar.gz) = 315377 bytes

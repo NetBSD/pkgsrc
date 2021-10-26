@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 13:39:17 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 10:14:23 nia Exp $
 
-RMD160 (cfitsio-3.47.tar.gz) = e0861d0c1d97d26b20a1558f6c8d5c028a6aa8ce
+BLAKE2s (cfitsio-3.47.tar.gz) = dab62fdddd57feb8e347b8151f30b3635bc004b8853380d7a6d03fda5051c474
 SHA512 (cfitsio-3.47.tar.gz) = c0502699e266928dd25abe57730dc4b357ccc9023789fe745324ae01aa688516aceaf37321ee578f0430111d9718f0fec0dc5b54c07f935529560f00b32ce1e3
 Size (cfitsio-3.47.tar.gz) = 4853990 bytes
 SHA1 (patch-aa) = 7613403161f03ce968760c410f9687ac91eac2b8

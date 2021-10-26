@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:41:10 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:16:17 nia Exp $
 
-RMD160 (Config-MVP-2.200012.tar.gz) = a3d71e214f808c0b3514c0b23ad43a3bafef2551
+BLAKE2s (Config-MVP-2.200012.tar.gz) = 4bb298a13fb12e3945ea7de40c1407f2c3d06ecb94bb5f8340b0e40f1632ae91
 SHA512 (Config-MVP-2.200012.tar.gz) = 1da64c93c0298dc9a25b289632ee59e61de0640d545049505825353c1f7c88e039fc09d4037e13bc51c27bea3f10fdca542eea2f15ef9e4694e5dd0d565ef414
 Size (Config-MVP-2.200012.tar.gz) = 34232 bytes

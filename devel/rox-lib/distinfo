@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:44:00 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:19:22 nia Exp $
 
-RMD160 (rox/rox-lib-2.0.2.tgz) = 781c664d06e48d6b7f4839058fe5714ee2825830
+BLAKE2s (rox/rox-lib-2.0.2.tgz) = 73b293ecc0230c7fefde1166f6be34cd4ebdc61faff2291cc15a504e2f709fa7
 SHA512 (rox/rox-lib-2.0.2.tgz) = 13733ca173cecd94a003d13eb757c4a4b921d73ff26a5f4361fd2996409830f18f18ac8e133497d9e913fcf17bd1581f2a802771c145a85f3e67fb941f5e7758
 Size (rox/rox-lib-2.0.2.tgz) = 129183 bytes

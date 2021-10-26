@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:39:04 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:14:03 nia Exp $
 
-RMD160 (R/disposables_1.0.3.tar.gz) = 7da928038ccc4616863cf0b94c823bafdb079465
+BLAKE2s (R/disposables_1.0.3.tar.gz) = ffc9a9938157b22cc2667d1cba259b7986f9eb50a9587c35928c8caf5a251f2c
 SHA512 (R/disposables_1.0.3.tar.gz) = 5c2898471301460e51af48bcd96640d9917d1ad144a4cb26d490904eab8a7407d5a083f09e14ebea9fe3404625babb7be7e4cba130e9ac2106b1824d0bdf0a68
 Size (R/disposables_1.0.3.tar.gz) = 6665 bytes

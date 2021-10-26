@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:41:20 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:16:27 nia Exp $
 
-RMD160 (Devel-Hide-0.0014.tar.gz) = 0b79bfcea388fa2e436d6beb0f136217b963f8e3
+BLAKE2s (Devel-Hide-0.0014.tar.gz) = 4366c38bd91fe7b326d9c76e1b2578027783938156673282d69943b2035c5c78
 SHA512 (Devel-Hide-0.0014.tar.gz) = 395d2c9ca4090398f31a50fe4970b6c4349424c11eaac407c5d2860bdf95c7d00844be9333bd62671baa82e668f6589c5bf61e7da7f99a2a03385e2dfc23cd78
 Size (Devel-Hide-0.0014.tar.gz) = 10036 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:21 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:17:33 nia Exp $
 
-RMD160 (Tee-0.14.tar.gz) = 77840c0255cebcb0740b00dd53b509e2578ab217
+BLAKE2s (Tee-0.14.tar.gz) = fff879323ede7d067e2763af6e83df62d5b6371332090573c38e3d8b4a8efe59
 SHA512 (Tee-0.14.tar.gz) = 53bc60566ee76847a10931241876421b5fc3d418c3b35fde6eb807ce6e6a0b140076288d6eb34b899be3222bab101d637f0ca96a5032751330c2aa16080a8a25
 Size (Tee-0.14.tar.gz) = 11120 bytes

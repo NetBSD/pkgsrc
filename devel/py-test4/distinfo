@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:43:49 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:19:10 nia Exp $
 
-RMD160 (pytest-4.6.10.tar.gz) = 6110c442e2d919076837b3197b6934e9faac05e0
+BLAKE2s (pytest-4.6.10.tar.gz) = 1333913a962023795fe80c87e53a8ee088c49205f06d9599394282521fab48d7
 SHA512 (pytest-4.6.10.tar.gz) = 73668967f6568654cdf92e260ada79d9685fcfc30967499709caeb12527e39a9e886f057c4c73e8a39125c0fbfcd674d905b7023402ce0ab9e836aa77d3888cb
 Size (pytest-4.6.10.tar.gz) = 951516 bytes

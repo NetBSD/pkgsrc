@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:42:18 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:17:29 nia Exp $
 
-RMD160 (Spoon-0.24.tar.gz) = fb2d17bd0e8b46908f8cf50146bccffd4a3c2eee
+BLAKE2s (Spoon-0.24.tar.gz) = 3e4ab6d1e6eed7b77ea11f3ca9c3c73a50f11a39f7f28f1f5a2e19b1442305ba
 SHA512 (Spoon-0.24.tar.gz) = a66555a4855b9ed48ddff4a6ca4e596ad5665b1c9952b2e03a1616866f47a542d7a2b2cc390ca28785b3333737f2e756a0d52b56d692b02d86bf4848a1d309e2
 Size (Spoon-0.24.tar.gz) = 30458 bytes

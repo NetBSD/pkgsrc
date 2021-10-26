@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:42:58 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:18:13 nia Exp $
 
-RMD160 (behave-1.2.6.tar.gz) = 1dc4096d22cdd85f07560f6c84c9af45873e063a
+BLAKE2s (behave-1.2.6.tar.gz) = 155cd2fea934347cddade46255c66c29b24b18f1f3b1ad0ad94841818fb340f0
 SHA512 (behave-1.2.6.tar.gz) = e741204d005aebf217b87e8ff0a6b8a2add4029612b63e994a3e8c12175723c88aabb6a053528130f07b278cf8a6592abd6beecce4fd3ffb5e0046ccfa2cd88d
 Size (behave-1.2.6.tar.gz) = 701696 bytes

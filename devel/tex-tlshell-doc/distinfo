@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:44:36 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:20:03 nia Exp $
 
-RMD160 (tlshell.doc.r58984.tar.xz) = d53559ba9ba16458f1f4adaab6528089c88eb793
+BLAKE2s (tlshell.doc.r58984.tar.xz) = e5f1104164b6b1628df9e0ef64962112d800362eda67f87c79143d99a7d49e67
 SHA512 (tlshell.doc.r58984.tar.xz) = b1c82e220ee817a570eacc445c94ef7f9f846f4cd5967149a5eca0197d2f64176ac85ffe75f7dc4abd9e2dbbe11284bffb384cfadfbf8e9c2186b06b12faa27e
 Size (tlshell.doc.r58984.tar.xz) = 668 bytes

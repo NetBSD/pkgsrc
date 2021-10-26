@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:41:26 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:16:33 nia Exp $
 
-RMD160 (ExtUtils-InstallPaths-0.012.tar.gz) = 08abdd7da44bb2ad820be1d0be6a297360aa74ba
+BLAKE2s (ExtUtils-InstallPaths-0.012.tar.gz) = 662375d4e715829ad80496a07e6bb533e68bba8cab2a4efd0de15618f6ee6524
 SHA512 (ExtUtils-InstallPaths-0.012.tar.gz) = 92a4e9ebb387d330ae67b0716b96b27165d08503d2915d8301b3a6aa185f962940e761d21fd400033e6a814e276918e0662da3740ca2852a53cf0fe54f3d7660
 Size (ExtUtils-InstallPaths-0.012.tar.gz) = 17991 bytes

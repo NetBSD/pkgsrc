@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:41:16 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:16:23 nia Exp $
 
-RMD160 (Data-Validate-IP-0.30.tar.gz) = d47a7e02a190a0a633454d7396f79952771015e7
+BLAKE2s (Data-Validate-IP-0.30.tar.gz) = f5e64dafd06f8645a10ec7ad7bef9747d3f38d379d0809300618453cb0c65ccf
 SHA512 (Data-Validate-IP-0.30.tar.gz) = ac556445f1eec0440be17263bcffce46d0c3b719d3c64022bcb3fc6d1191ed9de94c0e4d6b2c3c5c1704dc7945b14a5c87abfcf2b7dc43ec4f10a4cc6629b761
 Size (Data-Validate-IP-0.30.tar.gz) = 41761 bytes

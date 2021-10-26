@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 13:39:29 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 10:14:34 nia Exp $
 
-RMD160 (libedit-20210419-3.1.tar.gz) = 1c1736960c0155e3b1230602deda62e1758cc825
+BLAKE2s (libedit-20210419-3.1.tar.gz) = da6768f2661deb8cdcdc3baa4985d847aa5dd74d5822771bd108c6c269cdf4f0
 SHA512 (libedit-20210419-3.1.tar.gz) = d5e2cdad18d17fb94e839d02b7b7437378bb85986478d4c95e4105a6ac47fcbbd6bdd0a20a83d23455ed9cb1e178d6c0acbe63f4559096afd506f283c2cc00e9
 Size (libedit-20210419-3.1.tar.gz) = 522387 bytes
 SHA1 (patch-Makefile.am) = c9c49476fcff0da3363874795fcf4b6ebd0f59de

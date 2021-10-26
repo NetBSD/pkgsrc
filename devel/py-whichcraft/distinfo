@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:43:54 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:19:15 nia Exp $
 
-RMD160 (whichcraft-0.6.1.tar.gz) = 8d744ebe458b49e1ab3fa3b8863745aacff1890f
+BLAKE2s (whichcraft-0.6.1.tar.gz) = b23c229afd6212cbc7f3d0954fa25f1eddb86497b2192c40d851b410e94bb2f8
 SHA512 (whichcraft-0.6.1.tar.gz) = 85075289ae5cacb8f45a23776fcbbef3f62a4d8bdf110e1d3f9f25fb4ba44117c459d5f42dec7fd7f5c9680963d6aa1c1e31fc5b9fbe6127395698468f8d77fb
 Size (whichcraft-0.6.1.tar.gz) = 6909 bytes

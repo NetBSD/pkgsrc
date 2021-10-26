@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 13:39:25 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:14:30 nia Exp $
 
-RMD160 (cxref-1.6d.tgz) = 3760f2f074ec26b6702efbd38f24f0bb231488e0
+BLAKE2s (cxref-1.6d.tgz) = 2dc60f371d9ba0bc87480d192b526bd05da5c5c40b8bf8cee1ab7752abdb2f93
 SHA512 (cxref-1.6d.tgz) = 7d2689817d3bfac880948b5bed9090879864db483d960854525e27b1327e63896d77cbb8e8d7a5e33c35918b2846c8ebfbd4201203f0d9e4d33616ac1c290e0b
 Size (cxref-1.6d.tgz) = 415744 bytes
 SHA1 (patch-aa) = 0696dc7e2c027ebbbfb6747ff36ec9f9a36b7a88

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:39:12 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:14:18 nia Exp $
 
-RMD160 (autosetup-0.6.7.tar.gz) = eb272c9d908f89d4cc7cfe8b887a80b91685b4b5
+BLAKE2s (autosetup-0.6.7.tar.gz) = 7deaced793ae1f05c901271c31e4e8e62bc3b3590d860689552e05d829b5749e
 SHA512 (autosetup-0.6.7.tar.gz) = 159284de46f0d38e1311776ac6f789962dc4a27f1e4acc0e3c3dd1e2d6c14f1627e6497504b05a642604e5abe7c9cab44f0c4f4d52dc4f50afb1f15646923cee
 Size (autosetup-0.6.7.tar.gz) = 223528 bytes

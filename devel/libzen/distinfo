@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:40:25 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:15:31 nia Exp $
 
-RMD160 (libzen_0.4.31.tar.bz2) = 6a4db0e45a80a4df79d33c32eab51cf113701879
+BLAKE2s (libzen_0.4.31.tar.bz2) = 4fbae86fa569166191620348524f9c3a1c96c000a2b405dfb5f42690a6ed417f
 SHA512 (libzen_0.4.31.tar.bz2) = ab881b0bf6932c6198649898b03634cdb0c133b4b8cbbb29fd6273b858f7b548cac70a7866622b5b3b5d67f28f9cf4856c95a1cca98bbecdf44291c59fe79765
 Size (libzen_0.4.31.tar.bz2) = 107694 bytes
 SHA1 (patch-Project_GNU_Library_Makefile.am) = fffdcbe420939040f688c53ba333db75da1269bd

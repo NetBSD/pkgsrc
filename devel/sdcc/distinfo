@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2021/10/07 13:44:29 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/26 10:19:54 nia Exp $
 
-RMD160 (sdcc-src-2.8.0.tar.bz2) = b91d6ca5642011f0e735c63e0ed4bc6b33128b9f
+BLAKE2s (sdcc-src-2.8.0.tar.bz2) = 854c361fded0251c002e28936f3c00f4c5efee8349be066039fe6b60e40690d1
 SHA512 (sdcc-src-2.8.0.tar.bz2) = 91f43ea275f4c27e5c475a9dbfe5e9c7d5804a530151420473cbc65a48ca15c65a6e38628e0bf927d89cd8ddb6b6030d5d65aa9cba7963e23ac18bde42951fd5
 Size (sdcc-src-2.8.0.tar.bz2) = 3460693 bytes
 SHA1 (patch-Makefile_in) = 024ed627a88c2d17ac3981c59ec186a8a8ef48d3

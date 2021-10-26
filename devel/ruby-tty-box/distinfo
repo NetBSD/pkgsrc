@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:44:26 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:19:51 nia Exp $
 
-RMD160 (tty-box-0.7.0.gem) = b7b5c21bf5a7e852a52ff6847c39694f20ee8f12
+BLAKE2s (tty-box-0.7.0.gem) = baa9d8e01cc968b439a928665c034a045100ae11dd413bc15b3e8f6595dfd955
 SHA512 (tty-box-0.7.0.gem) = 694cb488268a9a2320cba3a9d6ba7d79e9d06031c790ef1ef363b9025f6a25a270a1fb18accc434f0ec0901da819b5288920ff03e51c299a94f0f8bd9234e1d7
 Size (tty-box-0.7.0.gem) = 13312 bytes

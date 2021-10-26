@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2021/10/07 13:41:23 nia Exp $
+$NetBSD: distinfo,v 1.24 2021/10/26 10:16:30 nia Exp $
 
-RMD160 (Error-0.17029.tar.gz) = 7f07fde5a99fad2259d80753874fb02a409ff5cf
+BLAKE2s (Error-0.17029.tar.gz) = 4805c2dad583dc79ec8cc3f529b6323dcd962f7e831d9b8ea5acb3d8c9aa91a1
 SHA512 (Error-0.17029.tar.gz) = 266ba1feff897c1d162e69a83e595cb40da9a6e1d8b10cc5531626eff392c6da94be03ba722c74827fc2ea0d9d1c1e62e824d9021e098b700db65dd0b3acbd0a
 Size (Error-0.17029.tar.gz) = 33304 bytes

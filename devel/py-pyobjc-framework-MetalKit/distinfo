@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:43:35 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:18:55 nia Exp $
 
-RMD160 (pyobjc-framework-MetalKit-6.2.2.tar.gz) = 4a1ff401c3982cbbda7974ea6d47bbedb3413b60
+BLAKE2s (pyobjc-framework-MetalKit-6.2.2.tar.gz) = 59a5f8eae075594c0bea76bb7d91ee64f96d515f5b13c0eced1f9bebf47e6877
 SHA512 (pyobjc-framework-MetalKit-6.2.2.tar.gz) = 6b115cf9a3ba22ae7973012804e8a1d09f2d293702888526b68dfeeb855150686309a774daaae875a5a132a75b5ed1d4a0d70d05506b2011102ea5756735b61a
 Size (pyobjc-framework-MetalKit-6.2.2.tar.gz) = 20777 bytes

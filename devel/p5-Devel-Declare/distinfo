@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2021/10/07 13:41:19 nia Exp $
+$NetBSD: distinfo,v 1.23 2021/10/26 10:16:26 nia Exp $
 
-RMD160 (Devel-Declare-0.006022.tar.gz) = 93c18e29d4f5edfa029df6519f1c46ba675e12b6
+BLAKE2s (Devel-Declare-0.006022.tar.gz) = 4d618c6ed52e0f923c55655463db2d2ed72a7b076b7e555421670014588b3568
 SHA512 (Devel-Declare-0.006022.tar.gz) = 05b226fdc18a69e0590087d1daeca111af86c3a6865477cb203701e1c8f4a5a03e919f4c6661252ef0ee4204a71667b36caf061374d67a8508dafe4dce155a1e
 Size (Devel-Declare-0.006022.tar.gz) = 126698 bytes
 SHA1 (patch-aa) = b96bc8644140eada9b52080c3eb0a4807e167265

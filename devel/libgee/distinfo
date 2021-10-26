@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2021/10/07 13:40:14 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/26 10:15:20 nia Exp $
 
-RMD160 (libgee-0.20.3.tar.xz) = 970c182ba72b39dcd02cc438b1af3b8cf97ad568
+BLAKE2s (libgee-0.20.3.tar.xz) = 1571cc9da5cd69c88291eb2b5379d0ede609c88c8c86d1f529716c5e9a22e5ef
 SHA512 (libgee-0.20.3.tar.xz) = c7dd32bc02ea9f0f70e7593bc5625139802a52674e5aa07fe6fc815a78517f25590419b2da00e194bf7bf5f1505a138ba133d6dba67c44f9cdcb38389825adf7
 Size (libgee-0.20.3.tar.xz) = 678488 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:42:56 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:18:10 nia Exp $
 
-RMD160 (archinfo-9.0.7491.tar.gz) = 29f30a19c2c62ed4d6ff388ad54e781721627b4b
+BLAKE2s (archinfo-9.0.7491.tar.gz) = 37535296391a99847ab27320c5039645b533fcd33ecf9036e267b2cbb5fb4025
 SHA512 (archinfo-9.0.7491.tar.gz) = ccba1effeef6adad30b11bd9105dc440c2bed9b0686e0f7be5befa8a8d937e20c406fab32eca6c214a346aaa4f15e1064d62943445fec6a82df31b90d17a1fb3
 Size (archinfo-9.0.7491.tar.gz) = 49141 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:43:09 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:18:26 nia Exp $
 
-RMD160 (pyfakefs-3.7.2.tar.gz) = b33252242ccc7ce02f427f10fbf54b34084e2231
+BLAKE2s (pyfakefs-3.7.2.tar.gz) = cc1447b590f6cb2cf1acab599760e0122f91b99e7e4d146cd6bc16abd061a04e
 SHA512 (pyfakefs-3.7.2.tar.gz) = 5978005f79b2204bde1e526ab53e265fd20ee915f634c3d6920c8b940abacca48c5861b4e639b664f813ea5cc458cba9d490b2fd0ede33e98ef00cf527005975
 Size (pyfakefs-3.7.2.tar.gz) = 162031 bytes

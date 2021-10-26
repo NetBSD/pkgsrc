@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:44:12 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:19:36 nia Exp $
 
-RMD160 (little-plugger-1.1.4.gem) = e49387696ea49cb83101996fe3d16fb09414f170
+BLAKE2s (little-plugger-1.1.4.gem) = 37a72812dcd17bffe5b3057a3935becfacc350581b6332430509e30e31286716
 SHA512 (little-plugger-1.1.4.gem) = 79b26509c56084a93997e011870de085f9e5222d631bf410c9bb2a361949e80f3d8be279b26b6c405dd47aedbea72089de212990ae0906f7493a3e8edfa8cb87
 Size (little-plugger-1.1.4.gem) = 10240 bytes

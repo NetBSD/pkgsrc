@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:43:29 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:18:48 nia Exp $
 
-RMD160 (pylint-plugin-utils-0.6.tar.gz) = 6b107ec913f98029716ff1bd1d00de80cd5bd67f
+BLAKE2s (pylint-plugin-utils-0.6.tar.gz) = b9bc545e6945168c75709a032f50ecfae100752f8c6d5e02bf3d5b3560550a70
 SHA512 (pylint-plugin-utils-0.6.tar.gz) = 3bcebf90c1d75ca65ca8265e375a6d878ea3705388934ea32afc701f0aeb4f456a929037d0cf3be90181a0c23f4f8f339fe1e5e34f8f1090b095da686f42c893
 Size (pylint-plugin-utils-0.6.tar.gz) = 10203 bytes

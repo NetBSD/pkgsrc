@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:43:59 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:19:21 nia Exp $
 
-RMD160 (rebar-2.6.4.tar.gz) = a6f2ec66b1accabc4430193212c5702a83e38475
+BLAKE2s (rebar-2.6.4.tar.gz) = adbba435f52296deed05a18ecb2d374969bf374a5d13e1e4e9ee35c23932dce6
 SHA512 (rebar-2.6.4.tar.gz) = 4e53d1ab7db296c60fb039443da7e3b31b63410fc614690c6faa7ec330d9e9393dbc1c8507aa4aea2c99397e1b443ff9d25e4d57ec57f616ee748aa97d055ffa
 Size (rebar-2.6.4.tar.gz) = 213158 bytes

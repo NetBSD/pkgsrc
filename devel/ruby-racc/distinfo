@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/07 13:44:18 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 10:19:42 nia Exp $
 
-RMD160 (racc-1.5.2.gem) = 6166087cd1456c4a50363c767c441f756760741e
+BLAKE2s (racc-1.5.2.gem) = f98dbca98338a5a072dfa46f74c884a4021f83de4a51fad6464bb3b586c2f2ba
 SHA512 (racc-1.5.2.gem) = 3d452141a90a15a3c8a13427f745bbc4e64f28fec22e0f3c12a85f521fc0fdf8ad6900c33346d93b8b2da176c30ce951d4277378f10dad45eb4f66ff68650b37
 Size (racc-1.5.2.gem) = 419840 bytes

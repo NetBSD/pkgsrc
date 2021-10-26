@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2021/10/07 13:43:26 nia Exp $
+$NetBSD: distinfo,v 1.27 2021/10/26 10:18:44 nia Exp $
 
-RMD160 (pbr-5.4.5.tar.gz) = bbf714e59248edf8142149474b86b695929830d8
+BLAKE2s (pbr-5.4.5.tar.gz) = a79d223a76704a9b1672dc4bb468473964dff4dd67e2db4b1f1d24f88a216d20
 SHA512 (pbr-5.4.5.tar.gz) = b53ca10b7af7e365ff99ecf11942d3f047112d69f7e963716d07bc156077b08d79bb708bb93aae342e5e03c83278507b6990137dc34d0ebc11de53bd57ab3654
 Size (pbr-5.4.5.tar.gz) = 120510 bytes

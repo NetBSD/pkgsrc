@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:42:21 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:17:33 nia Exp $
 
-RMD160 (TAP-Formatter-HTML-0.11.tar.gz) = ba0b46d3bd78816ba730f56d9f0055a891cc2ab7
+BLAKE2s (TAP-Formatter-HTML-0.11.tar.gz) = f86d5c99643d49baa36ef07466c0cdfe40e0d3fb71c7fba36aab845120556094
 SHA512 (TAP-Formatter-HTML-0.11.tar.gz) = 931d4231dc6813ea02ed18c7ac23c97a811bffac167c533a2490bf8bea525a902b80e4cbceb2637402fdb67c8ee4308e3ca13b13d8a9f0ff2137a6a1a931386f
 Size (TAP-Formatter-HTML-0.11.tar.gz) = 103183 bytes

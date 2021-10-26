@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:40:52 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:15:59 nia Exp $
 
-RMD160 (Acme-PlayCode-0.12.tar.gz) = 3589080ad683c482e71f269ee07d291583d72aed
+BLAKE2s (Acme-PlayCode-0.12.tar.gz) = b68c73445652d310c690db806251f02923dba73cb08160b613df2d1dfd46e197
 SHA512 (Acme-PlayCode-0.12.tar.gz) = 993efb5b3e39c38e6f297701bd8f10c6ec0a9ec37e0eee5dfaecda8bebecfac9d6ab23b55ad5ef74e3f734954f2945ad86c804a5b24a091022dfc3a9f7fd2941
 Size (Acme-PlayCode-0.12.tar.gz) = 9711 bytes

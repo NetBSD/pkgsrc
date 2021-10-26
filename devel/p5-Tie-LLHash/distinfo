@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:38 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:17:51 nia Exp $
 
-RMD160 (Tie-LLHash-1.004.tar.gz) = 007c6b793815d82bb0f28c44d81b7972cc0f705f
+BLAKE2s (Tie-LLHash-1.004.tar.gz) = 3dc185e3c85a2bacdb4f1b9d890f3b430a8c8d7cca140cb39d3aa3ef8418c2a2
 SHA512 (Tie-LLHash-1.004.tar.gz) = 1fd1f6a6d5696040c27c94a07c389f8c523253fe84ccbdaf7b88e1f6908299360a321af92cc7665224aa1d9d27a3f3452a9d8761113936d11ef2564d7e8003c8
 Size (Tie-LLHash-1.004.tar.gz) = 13897 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:42:45 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:17:58 nia Exp $
 
-RMD160 (p8-platform-2.1.0.1.tar.gz) = 89ddb8b1fc3565fe79c5d8224b6b1244b8c3fdc4
+BLAKE2s (p8-platform-2.1.0.1.tar.gz) = 62c7db73898af4b266802217cb7b979f2fb13c9f3598bd8003afa84909b712ae
 SHA512 (p8-platform-2.1.0.1.tar.gz) = 76e6f1ac64b61e4def7d99965708d0f05698379e0f3e846317174f0bc12a9654b3341afc84bd8a3a70f101ecab6c692dea96b57d7e000dfabf6cedee2b8dcd8a
 Size (p8-platform-2.1.0.1.tar.gz) = 75257 bytes

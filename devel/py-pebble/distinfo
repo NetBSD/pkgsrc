@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:43:26 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:18:44 nia Exp $
 
-RMD160 (Pebble-4.5.3.tar.gz) = 681966f5c1357e80a07cbc96fe97f1913e02c3e3
+BLAKE2s (Pebble-4.5.3.tar.gz) = 16fb8dbc8bf95decf6a069003dbbd2471b8caac856130b3c63d755bb9f416cd4
 SHA512 (Pebble-4.5.3.tar.gz) = e3b17fa6b9ca959560d364e84091e7990921eb9a2aef854c391a5d0e46359b57e5ec1a4239ac97f4c0bb485d0475ad8338c3485c9fdeff7e446a989129738096
 Size (Pebble-4.5.3.tar.gz) = 23411 bytes

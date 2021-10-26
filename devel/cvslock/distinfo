@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:39:24 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:14:30 nia Exp $
 
-RMD160 (cvslock-0.2.tar.gz) = 9e378403302f30ca876ce8f2467598ee4b3077e2
+BLAKE2s (cvslock-0.2.tar.gz) = 0a5f0764cb39386b45ecff597361b10f2dc054fae3f3e49e1245c4b3a61667d9
 SHA512 (cvslock-0.2.tar.gz) = cdef76caae20b384009f97dd74b0cbb1546fc4035aaea18a763a172dca12095a132301e6ff8eb95f21934781e7af926b72ca991aa0e62cfd88d21e9dadc54b66
 Size (cvslock-0.2.tar.gz) = 39237 bytes

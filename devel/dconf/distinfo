@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2021/10/07 13:39:25 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/26 10:14:31 nia Exp $
 
-RMD160 (dconf-0.36.0.tar.xz) = a16546b31001e7841a40324a71383bfe2f403874
+BLAKE2s (dconf-0.36.0.tar.xz) = faa633a2fa9ff521f29dc2dce68f77bb1ad86769b555b354eeb84c6cd1e0db0e
 SHA512 (dconf-0.36.0.tar.xz) = fed0b4ac13dfeff3bbe428a5c25408a0f13610219e561841a3af75cf18f9c630c385989b700c081b79ab53c00bdecf43c7c94979312c047faefbda4b2653d40d
 Size (dconf-0.36.0.tar.xz) = 114828 bytes
 SHA1 (patch-client_meson.build) = c14f83a8577d35c8f32dfa3d9fcbbe1c9e67548b

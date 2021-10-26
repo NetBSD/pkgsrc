@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:39:53 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:14:59 nia Exp $
 
-RMD160 (parser-combinators-1.3.0.tar.gz) = ff2324af1d3345da59f3eb2d609e19589eacb6df
+BLAKE2s (parser-combinators-1.3.0.tar.gz) = 5f0e3b9bf61b4908130e91ac9b4c5d0e4f50c5da39eea8bdaf17718d7611a8f0
 SHA512 (parser-combinators-1.3.0.tar.gz) = f7a4581d229b788e841d844003e058a6c63827c5cadeb6fe8f1b94e2a920b11d3b08a8a7a412fa95e1b75bca24f6957f88162f8d1af5bb174ca7f91ef47c0b71
 Size (parser-combinators-1.3.0.tar.gz) = 11699 bytes

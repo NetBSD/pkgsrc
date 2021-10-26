@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:41:29 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:16:36 nia Exp $
 
-RMD160 (File-Flock-2014.01.tar.gz) = 729f35e4eaf4305290d37d453c25080ce39bccc6
+BLAKE2s (File-Flock-2014.01.tar.gz) = 400b8a0deaaa0750b1ad0a13795aff9437504f6e6919b8b2e63dc24e159cbb77
 SHA512 (File-Flock-2014.01.tar.gz) = 3892d9c126c809709e690391396bc349b95b790b2d1be34bf1d24d728dbbe8b9e5dc7a35f5bf17b420b5912aa6b1e2ef1aa6c6b60b48c4e17685eade7b3fae16
 Size (File-Flock-2014.01.tar.gz) = 12790 bytes

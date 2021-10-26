@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:40:31 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:15:37 nia Exp $
 
-RMD160 (lua-term-0.07.tar.gz) = 796ca95784ad56a8a1e035a5bccd96efde019ba9
+BLAKE2s (lua-term-0.07.tar.gz) = ca86586303b57cfc2da540f9a4aee032c8b7928cdfac822f811123c90556e8bf
 SHA512 (lua-term-0.07.tar.gz) = 2046ba1861ff590c191bb651941c45eb8b6e9a1252b05e78daaeb31837ce1fc7da9ba124aec34dc7842fd304e945754c463ffd75941125ff952e911ba66efa31
 Size (lua-term-0.07.tar.gz) = 4365 bytes
 SHA1 (patch-Makefile) = de8eec3174a4ebb81af1a1df890a92f408bf1fc8

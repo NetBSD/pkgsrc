@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 13:44:13 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:19:36 nia Exp $
 
-RMD160 (logging-2.3.0.gem) = f0ad0f8d79b1231860b41d2e86ff247d929ea71e
+BLAKE2s (logging-2.3.0.gem) = 0f2e63daa7d66ca1a773efdfb76935551f34ad464645600e79473fde4d3bd000
 SHA512 (logging-2.3.0.gem) = 32c0c3570022b2bdaf91fa11c3401bae0069f0450f1c5bc7063ab897e8e542eb4bf2952e533b5189b1f132f8b6a3931a52d8069b27090538ff0772754f154796
 Size (logging-2.3.0.gem) = 89088 bytes

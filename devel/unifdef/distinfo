@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:44:44 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:20:06 nia Exp $
 
-RMD160 (unifdef-2.12.tar.xz) = e4d95adb821c3f195b6ba783ea407f555e983b48
+BLAKE2s (unifdef-2.12.tar.xz) = 33fa798fb63ae990ce5c3b270d5d1d1787ec05f0f9d000dc3175a67ede68b349
 SHA512 (unifdef-2.12.tar.xz) = df78cf931989b5e604e68e0bf00490782d385a575b51584e4be44535b6bde5f9e2abff14510f8f426670d9f6f1abfb5768da5e108bdefd6c9d0c8356a05164b5
 Size (unifdef-2.12.tar.xz) = 66912 bytes

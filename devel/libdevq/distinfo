@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:40:11 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:15:17 nia Exp $
 
-RMD160 (libdevq-0.0.2.tar.xz) = df81ed6172c2f55035ff6804b67d9fea4ba5d5ee
+BLAKE2s (libdevq-0.0.2.tar.xz) = 49e50b4408a15121c5136beed2adf9a13e8913a75c568544ecd42197bd385af6
 SHA512 (libdevq-0.0.2.tar.xz) = b770c060e6ff519dc1f1fdbcdeb68d51bf9b36a621930106f9b7efe7b7fbd77ab5278becf8defa671c2844f6ca1acad6dd15785db8d6aa521049e1439eb0f73f
 Size (libdevq-0.0.2.tar.xz) = 210960 bytes
 SHA1 (patch-configure) = 3a53138ebbd6aa02492ab910051bc060932b51b9

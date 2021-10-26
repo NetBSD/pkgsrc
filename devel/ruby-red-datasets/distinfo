@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:44:44 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:19:43 nia Exp $
 
-RMD160 (red-datasets-0.1.4.gem) = eaa6650daec09a127563b7c5560f53de5c34ffc0
+BLAKE2s (red-datasets-0.1.4.gem) = c2429ece0e370ba4176c42335c3e94864b0715dc8481b157f11ae5016882adc5
 SHA512 (red-datasets-0.1.4.gem) = 7f10303dc51fa8418504d360f64c9571acaea945cfda2a30fade35685c20f3ecb8b7819bb7b0677b3f77e94cb119983061480b44a047f972c743287b4345f2e7
 Size (red-datasets-0.1.4.gem) = 46592 bytes

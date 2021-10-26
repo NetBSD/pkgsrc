@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:39:10 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:14:16 nia Exp $
 
-RMD160 (asio-1.19.2.tar.bz2) = 650d893e0f43dbb506451029bd7e85cdba9499a1
+BLAKE2s (asio-1.19.2.tar.bz2) = c1a3cd89fecf168308798e29329b17f7427cc905024ce02205457185f19405c3
 SHA512 (asio-1.19.2.tar.bz2) = 07f9c29d8f02090b4d4b6a1867bcc07a8e9f3388556dff787ca3ba143022eeb63bfac0b5bc264076fed4db3b2e5ec6b7ff0ebefde40ba4753c832032a72d54cc
 Size (asio-1.19.2.tar.bz2) = 1842597 bytes

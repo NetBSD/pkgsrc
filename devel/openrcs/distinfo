@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:40:52 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:15:59 nia Exp $
 
-RMD160 (openrcs-20110824192219.tar.gz) = 266fd50d49da2fbacd2a7c05e2f545a3a19331ad
+BLAKE2s (openrcs-20110824192219.tar.gz) = 2141ddf9d14c04d983aae1ad5fb39e5f19eb533ca8f0eee5f25fff3e647fa9c3
 SHA512 (openrcs-20110824192219.tar.gz) = 7dcc009f1c8ee0da37bc1d59ecbbf06c1338a136864358164125fa43be69ede73d47501745092266f98346cfcbb4e3d2bce6f27fe1a74b02f765872afbb85e74
 Size (openrcs-20110824192219.tar.gz) = 106878 bytes
 SHA1 (patch-openbsd-compat_Makefile.am) = f231553fb4f4fd8f6ee17cdd7c2422125869a161

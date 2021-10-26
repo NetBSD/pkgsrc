@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:43:03 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:18:19 nia Exp $
 
-RMD160 (compizconfig-python-0.8.4.tar.gz) = e3b784f4cc477f2d1697f9c03fe2e4f95aaf667e
+BLAKE2s (compizconfig-python-0.8.4.tar.gz) = e8d6a74e96e9e1083081f3c73e83e63cbf7657304a0d46f8ae47e1c5f99c4d70
 SHA512 (compizconfig-python-0.8.4.tar.gz) = 8104020b82840b9c3a81dd302bd064ded3b7d709bf275199508def82d824c07d051e610fb5f928fda69bef745c83eb5b6f90ef6012995d1e90a62efbdec41bd0
 Size (compizconfig-python-0.8.4.tar.gz) = 327707 bytes

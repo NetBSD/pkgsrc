@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:09 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:17:19 nia Exp $
 
-RMD160 (Perl6-Export-0.009.tar.gz) = 972764d93c8c0bfc49c5cd91334a14eb44727386
+BLAKE2s (Perl6-Export-0.009.tar.gz) = 32645b166712e0960bce8f5cb4831985e195a68667b7f29c340f4c704d713178
 SHA512 (Perl6-Export-0.009.tar.gz) = d97ec153e0877a668c55271445cc7f200e40732035a6ff1fe5ad2030ca873eb130eae0627ad491dd93b76abfb51e9c01f2267499ec32f8b2e9e5537d9d2c3a5c
 Size (Perl6-Export-0.009.tar.gz) = 4907 bytes

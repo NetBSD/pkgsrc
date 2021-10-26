@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:39:08 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:14:14 nia Exp $
 
-RMD160 (ant-contrib-1.0b3-bin.tar.bz2) = fc561d146db36e48a7c067c6d578b66960145a94
+BLAKE2s (ant-contrib-1.0b3-bin.tar.bz2) = 9ab6574098e452af2da4ece8d58cddcd24ddf5d79dc12a05bba19b05d265afe9
 SHA512 (ant-contrib-1.0b3-bin.tar.bz2) = 4058b056978afe9d3e083c279f131b94dbc227a216331e67fb9ca57b598d7c994f78e6f88b0a63b07638956e5715c5eae0e0de7e4eb1ec075bfd5a72f9fd03a4
 Size (ant-contrib-1.0b3-bin.tar.bz2) = 1446260 bytes

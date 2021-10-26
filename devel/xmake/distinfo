@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:44:42 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:20:09 nia Exp $
 
-RMD160 (xmake-1.06.tgz) = 53ad227e4418c0d1a541c6b41e8e89f2aa9ad020
+BLAKE2s (xmake-1.06.tgz) = 3d9b796b3135828f1fda01f03423fdf26bb38566748aa7efe82955888e0cc46f
 SHA512 (xmake-1.06.tgz) = 558d2106ac8bed076d6eb896f329e92208f9bc6d812b11b7f0d0c247722bd635cf0f03a2331fcbb94096de00749473a767f2eab93bc258d05eb24c3530251948
 Size (xmake-1.06.tgz) = 16013 bytes

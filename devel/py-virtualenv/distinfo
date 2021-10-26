@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.42 2021/10/07 13:43:53 nia Exp $
+$NetBSD: distinfo,v 1.43 2021/10/26 10:19:15 nia Exp $
 
-RMD160 (virtualenv-16.7.9.tar.gz) = 1ec5152c8d82350fd24358cfa0d112fdf70e7094
+BLAKE2s (virtualenv-16.7.9.tar.gz) = e1fdf1a842e05d8b8fe381e5bc41c752fbb6041ac43c2f9a0fcdb55014fcd086
 SHA512 (virtualenv-16.7.9.tar.gz) = ba2d08ec3425929806506c4c33e48d250153b02bd454eb340ab959519dd82ede8b12f2d2ab839e2a8711f29695d3956a457a1ca366a3b4fb4fb26c4c8d48c6cd
 Size (virtualenv-16.7.9.tar.gz) = 5121717 bytes

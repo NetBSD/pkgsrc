@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:44:33 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:19:59 nia Exp $
 
-RMD160 (tevent-0.10.2.tar.gz) = a7863eb10608f027912b1c191e13a9a62ed33134
+BLAKE2s (tevent-0.10.2.tar.gz) = a46bce12d8ece0688c4c6e7465c745668e662c8601e7b8bf595da09fd1bd8d25
 SHA512 (tevent-0.10.2.tar.gz) = 1da8f28898f35daab515892b880d1de601062cc3e2b2570cd62e6913df17b0195a05acb7b484c628cddc0eb8b0cde893105ede3feb32bc5764e7d25684f332ba
 Size (tevent-0.10.2.tar.gz) = 800731 bytes
 SHA1 (patch-buildtools_wafsamba_samba__conftests.py) = 50ff76f5b085f770751ca8bb93c8544cfdcd40d9

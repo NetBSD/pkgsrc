@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:43:01 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:18:16 nia Exp $
 
-RMD160 (CacheControl-0.12.6.tar.gz) = 67bcb07c66fed67504390434cce0e02050336f72
+BLAKE2s (CacheControl-0.12.6.tar.gz) = 38226cd104e4d37c876c65c1452b91a9a2f372df010f1a41fd472a722b0680b1
 SHA512 (CacheControl-0.12.6.tar.gz) = 5269624dd523c4f94b258ba4d35d2fce65779377c601c1ade01b1058a6616319725fde10b188fbc7015ac263537fb11085272fbbb9b595e87c187521066a567a
 Size (CacheControl-0.12.6.tar.gz) = 14616 bytes

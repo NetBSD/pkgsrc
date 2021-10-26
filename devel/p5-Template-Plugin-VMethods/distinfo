@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:22 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:17:34 nia Exp $
 
-RMD160 (Template-Plugin-VMethods-0.03.tar.gz) = a79fd211a1511dbe88b2bcfa78830322d42205f4
+BLAKE2s (Template-Plugin-VMethods-0.03.tar.gz) = 8b4bc0f601a52aeed39f9de89b1a8e2d96d03336683b48fc4131d1e251ac4a46
 SHA512 (Template-Plugin-VMethods-0.03.tar.gz) = ec438c04ab048a3324569c2bf0b7c7c0da584c0f342f1f4491ca7e080ba587a33768a5464178c648e4f7170ea2550f3ce3c93c56d297f8bf4e5fc4b5bc531eae
 Size (Template-Plugin-VMethods-0.03.tar.gz) = 5919 bytes
 SHA1 (patch-aa) = 7596fa408c4e6f81ec2e4e8da1e728692efee2db

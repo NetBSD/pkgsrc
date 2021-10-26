@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:43:07 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:18:23 nia Exp $
 
-RMD160 (docopt-0.6.2.tar.gz) = c2e76c031e12096906b9c6b1f7dc62a9b30336f1
+BLAKE2s (docopt-0.6.2.tar.gz) = 3ba82ceab952ef7ef4c5019d46b387195fb66bcc0014fa9806aac7c9659500ca
 SHA512 (docopt-0.6.2.tar.gz) = af138feccf8c37b374ee44fcda4938a88107d434df13c173214021b1a3348b152a595095a86982b66ac03a11db8e0f1e9e6a3a65c98deea92330311daeb831a3
 Size (docopt-0.6.2.tar.gz) = 25901 bytes

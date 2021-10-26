@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:39:33 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:14:38 nia Exp $
 
-RMD160 (flatbuffers-1.9.0.tar.gz) = 0a73365e0d0f6db5d65b59d4807f457af4a0645e
+BLAKE2s (flatbuffers-1.9.0.tar.gz) = b6952911f0fd51bcf3d7ca796822614582cf3d3338f8a57767728f362b454386
 SHA512 (flatbuffers-1.9.0.tar.gz) = 0ba07dbe5b2fde1d0a6e14ee26ee2816062541d934eda204b846a30c019362f2626761b628c900293928b9b546dba8ca477c13182e022c3e0e0a142fd67f0696
 Size (flatbuffers-1.9.0.tar.gz) = 681752 bytes
 SHA1 (patch-CMakeLists.txt) = 89679eed28e7b5ce1fb6573c14433acdc43058a6

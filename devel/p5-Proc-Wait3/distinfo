@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:42:12 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:17:22 nia Exp $
 
-RMD160 (Proc-Wait3-0.05.tar.gz) = 56ee7d7594b954eb77560a75c2aeda107ab0b61c
+BLAKE2s (Proc-Wait3-0.05.tar.gz) = 62461f92f0975bde024f519935babb8e4b18c36630727ab05fcedb0a0936f38a
 SHA512 (Proc-Wait3-0.05.tar.gz) = 6af398422cc79fb02f544226b22dcbd3b3b25ae186da4e5e2d9f3d172fa0c59c7813d404397a8f47f426bde04d7936d939241d197085277b5e57981ac7be274d
 Size (Proc-Wait3-0.05.tar.gz) = 10248 bytes

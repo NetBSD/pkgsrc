@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:40:46 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:15:52 nia Exp $
 
-RMD160 (ppx_deriving-4.5.tar.gz) = aa41de0c8599054805e3e10e15c02e68f83b8d33
+BLAKE2s (ppx_deriving-4.5.tar.gz) = da8339b5cb56810e5a43d544c0fc7a9bf14de6c2310090b7a9c0aa4b2f9f254c
 SHA512 (ppx_deriving-4.5.tar.gz) = f79153c5231ba1e03a3491fde95ca82ecb62fe05b60a649a374d2fbc5ea5dd9242126de7dfbe917c22fd7077c026c940e18c6b36c5ce0ec4bb6e07f11d2b710b
 Size (ppx_deriving-4.5.tar.gz) = 45886 bytes

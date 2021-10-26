@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:41:39 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:16:47 nia Exp $
 
-RMD160 (IO-Stty-0.04.tar.gz) = 8ea993f9444fe523fe4d8f54c3ca1fccdde057ef
+BLAKE2s (IO-Stty-0.04.tar.gz) = ff61ac4519def52958909203de9c37715c26e65e97c5169c8b7fb67907ded0e6
 SHA512 (IO-Stty-0.04.tar.gz) = 1a75adef5376612c87bb7c76eed96f6d67bd70eaae51dedf65e25a31b0d1d592a89dbf58fc669e956460a4d3889c3d5273c78bd1c7d926113b42e5f97064d38f
 Size (IO-Stty-0.04.tar.gz) = 9686 bytes

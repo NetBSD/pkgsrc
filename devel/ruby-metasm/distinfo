@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:44:13 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:19:37 nia Exp $
 
-RMD160 (metasm-1.0.5.gem) = fae2117ac32f014ebac6891e4256d6a341988d12
+BLAKE2s (metasm-1.0.5.gem) = 0ff40863ab9927eb45ca6a3db607c01c1314fc8d5c9e1e6e3266ed71174bc2e8
 SHA512 (metasm-1.0.5.gem) = 74a6eac47c06e7ff53f4e400fec6c6c73981bc58d09520ce7cdd657b6b74819fc5b9d6168edaf90eeb5c9b2087fd4924df1e21743809065cc1433428efbe1dd8
 Size (metasm-1.0.5.gem) = 803328 bytes

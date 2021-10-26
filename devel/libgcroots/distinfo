@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:40:14 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:15:20 nia Exp $
 
-RMD160 (libgcroots-0.2.3.tar.gz) = eef2db5ea64e6ba20ec68b01b4f0621f45e0ecab
+BLAKE2s (libgcroots-0.2.3.tar.gz) = aad85f32499c9bfa5f3d6769f9947e08440eca5d76a629106bba764e4cf857d7
 SHA512 (libgcroots-0.2.3.tar.gz) = 0ab0d9937f1eb233423b633c8ae969a01570735f8eff2a1871fba6f14ed298d97904e634774ccc4b721f1843df6588258350f67a67ae45f02353c55bb1512a49
 Size (libgcroots-0.2.3.tar.gz) = 379193 bytes
 SHA1 (patch-include_private_gcconfig.h) = c6b57524599cdb09e43a3898c136d20a0a974b3f

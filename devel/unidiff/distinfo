@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:44:39 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:20:06 nia Exp $
 
-RMD160 (part01.gz) = ffa898e575bb89a660efaf332b1bb194bf3f2771
+BLAKE2s (part01.gz) = 478e46bea4cb8942e09f5f72bafd29d827e5d6613d65f0053f0648a8ae45f9e1
 SHA512 (part01.gz) = 30d7cea52eec74777bc5c184065d68e6c233547b7be0135ed73298ad0e2abab749d38427fae3012f455231efbed030186a0f0e3bda396a60eea926ee9e6063bd
 Size (part01.gz) = 6794 bytes
 SHA1 (patch-Makefile) = 907faf2f6109ff5595befabcfacda89f3c489aa3

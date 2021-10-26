@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:42:33 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:17:44 nia Exp $
 
-RMD160 (Test-Pod-Coverage-1.10.tar.gz) = 1d72fe370c23099028b02b20aefb5516cbdf8433
+BLAKE2s (Test-Pod-Coverage-1.10.tar.gz) = e3f4261dda2a778274a1399b858d983f5408ec4f2af6d9b9a500632af8391140
 SHA512 (Test-Pod-Coverage-1.10.tar.gz) = ebcebb900f4367984245d1915937200e2de8586a6e6ea9c9b71588e56caf68808ee73c21e633434ab5c43b80b42dd56cb0cbd4e67519e928270e1eda06c1d02c
 Size (Test-Pod-Coverage-1.10.tar.gz) = 8083 bytes

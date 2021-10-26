@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:41:08 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:16:14 nia Exp $
 
-RMD160 (Class-XPath-1.4.tar.gz) = f853a38cc02c6737828726ff0b8cf828d16cfa95
+BLAKE2s (Class-XPath-1.4.tar.gz) = 7426d53e72b3b9232348894ac6ff481db5db914aabda2903d929a61405521c4d
 SHA512 (Class-XPath-1.4.tar.gz) = 27cc62d8490c7f0ccb99ade0c3d229a0854540be248acab0f295ef64fdc50898cbfbdcded8a57b68e8b05adaa030265e2816cd49a060062a31620fd61c373a15
 Size (Class-XPath-1.4.tar.gz) = 10802 bytes

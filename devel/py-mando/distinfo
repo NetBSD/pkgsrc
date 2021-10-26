@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:43:21 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:18:40 nia Exp $
 
-RMD160 (mando-0.7.0.tar.gz) = 4ce4eb62b906c5c6675350ff1bf09eea90712d05
+BLAKE2s (mando-0.7.0.tar.gz) = a95b98803f2855a4dd12abd69fa6d67fd0dfaafcced37f2ec8cf686ab2c7b211
 SHA512 (mando-0.7.0.tar.gz) = 99f4dbf81cff848d5620648693032dc3217bfc9ac686b08eb486718a632fb8c7a2e60bd9993df88e19c5592a946e4e4aa8966bf2d6282c9762bf0b880565151d
 Size (mando-0.7.0.tar.gz) = 38317 bytes

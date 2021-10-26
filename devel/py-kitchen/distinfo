@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:43:19 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:18:37 nia Exp $
 
-RMD160 (kitchen-1.2.6.tar.gz) = 67fd6269f9eabb6f299022770ee8d1e6395067e7
+BLAKE2s (kitchen-1.2.6.tar.gz) = ac97b2b5ec5ddf01418ac0c37454a68a26822d4332bd539dbb76b55e34015e9f
 SHA512 (kitchen-1.2.6.tar.gz) = 215d9e1f64b2f10362ecc434999b27607ecf091c8abe317f47b8607d82a45a63ba2cdfaef8b560e38c82a5e4ab270bb9b5283f957e8a66423fd93e9b83ed0123
 Size (kitchen-1.2.6.tar.gz) = 255369 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:40:00 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:15:07 nia Exp $
 
-RMD160 (javadeps-1.1.zip) = be8287637ac9d51073e7fa606cae84c1152af7b8
+BLAKE2s (javadeps-1.1.zip) = 59309527af32c8e6e6259129c4386a39bcf785cc359eca979ee81e39c234f493
 SHA512 (javadeps-1.1.zip) = 15cbcb4e1da8b74ba1c764a733ee3f305db1fe42118a8d08cf1b2662bbb54ce4e187ce70d12b8b8074fd43a48d7dab400a2bb283b54b7027e575db61adbb6b99
 Size (javadeps-1.1.zip) = 146544 bytes
 SHA1 (patch-aa) = ed9df1b28acd53f188af85a16bdeda980fb629ba

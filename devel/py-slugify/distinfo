@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/15 11:54:44 adam Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:19:05 nia Exp $
 
-RMD160 (python-slugify-5.0.2.tar.gz) = 57e640b1d0fa313a7eb5538c5100b6fa169e1bdc
+BLAKE2s (python-slugify-5.0.2.tar.gz) = 8f7e45d5450373de94c351a4929d6208729b9e701eace7f474bbdf9030e70dd6
 SHA512 (python-slugify-5.0.2.tar.gz) = 465a13b1579db9e40a109dcadf95e19103681ec31072def717de2032cbe904e81ed9847557c0b37acf086c81082a9a4dcb88d45e928b29b184fcba6528a7779c
 Size (python-slugify-5.0.2.tar.gz) = 11959 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:41:33 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:16:40 nia Exp $
 
-RMD160 (Getopt-ArgvFile-1.11.tar.gz) = e060c6ff7c177add520986d944282ee07f2570f1
+BLAKE2s (Getopt-ArgvFile-1.11.tar.gz) = c28154f835fd86d3e768bd06b69ce4c3b48e27501c12fe02005d5444c3488cff
 SHA512 (Getopt-ArgvFile-1.11.tar.gz) = 832e9ec6de3dfa4aaac68faedd3561cac570761e0de805e084e8dc7b386579cd0a18278aeb262ea82fddbdf8277b17bbd7593c15d41b1d6d7de4739fc8cc8f11
 Size (Getopt-ArgvFile-1.11.tar.gz) = 19469 bytes

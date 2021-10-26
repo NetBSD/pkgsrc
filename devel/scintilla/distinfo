@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:44:28 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:19:54 nia Exp $
 
-RMD160 (scintilla339.tgz) = 22ef0452ffb58d4861255d27a7f2f7bd436f1e1e
+BLAKE2s (scintilla339.tgz) = 58dca19cc74e3439b45350e48bec363ec252e2ded3b7dc7730c7f264642f45e9
 SHA512 (scintilla339.tgz) = 4444fa014374f20335e037db1f30e3ad8ece067a1909a45da499c388e5148b129d1f254cdbf44b4de3ef868a682a8c72f5b27403b2c86342a81a14d24f6dfaa9
 Size (scintilla339.tgz) = 1313246 bytes
 SHA1 (patch-gtk_ScintillaGTK.cxx) = 0639d37f392296f98f928a4b8ca5b2e9dce9035a

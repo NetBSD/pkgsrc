@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:39:01 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:14:07 nia Exp $
 
-RMD160 (R/prettycode_1.1.0.tar.gz) = cd4e05a294ee9dd06a5e231bce3b21ba95651b43
+BLAKE2s (R/prettycode_1.1.0.tar.gz) = 49539865dd9770f4128f0adee549d460f3b266326eb32dec12ff244e74980c81
 SHA512 (R/prettycode_1.1.0.tar.gz) = 9608c881a691dd85d3d103236755032e254410ef65344a26c3a44463a6a1e2dbab87a179375d0ce167ff7ea53459ae55735940cbe33afd594c2e68c169b72449
 Size (R/prettycode_1.1.0.tar.gz) = 209279 bytes

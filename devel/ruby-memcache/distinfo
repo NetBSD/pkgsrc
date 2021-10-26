@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:44:13 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:19:36 nia Exp $
 
-RMD160 (ruby-memcache-0.1.0.tar.bz2) = 3aa4371c0b1da76a96cafa0a509028cdcd03083a
+BLAKE2s (ruby-memcache-0.1.0.tar.bz2) = 1a2583810ed6fa6d01c484facb0d7ebcabaf110582c04c8751e31b0d20541dd3
 SHA512 (ruby-memcache-0.1.0.tar.bz2) = 4116a992c2006ccad023c3bbb423572f18b14099f387baba29bbdb4e48b1c74d2d7899a875b44c3d8624b212b24afba152cd5d0e0692d8c92234562f25ef9704
 Size (ruby-memcache-0.1.0.tar.bz2) = 6237 bytes
 SHA1 (patch-aa) = 9c0d7429ca91b9d1b1f8cc4a6148b646f784095e

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2021/10/07 13:43:28 nia Exp $
+$NetBSD: distinfo,v 1.22 2021/10/26 10:18:47 nia Exp $
 
-RMD160 (py-1.10.0.tar.gz) = a0f9ef1b13959f9414e6a95c00d4a6101f811a5a
+BLAKE2s (py-1.10.0.tar.gz) = a12ea3786164072ac4f2e57ca766d2d6cebd57bc50c5290d345573ad76c809ca
 SHA512 (py-1.10.0.tar.gz) = 7a0eb964067bc01fa4f8ffe70b043abfd4619134fbee2935713e28382085d0b8972c319ed665a643b879b18ce662db8a9bd722937af7cf36c233214eea211dd1
 Size (py-1.10.0.tar.gz) = 206984 bytes

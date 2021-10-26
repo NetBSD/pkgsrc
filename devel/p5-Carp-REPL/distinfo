@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:41:02 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:16:09 nia Exp $
 
-RMD160 (Carp-REPL-0.18.tar.gz) = d4444e47a5c905302d6e9ee8ef1a388e55191d44
+BLAKE2s (Carp-REPL-0.18.tar.gz) = 8e0ed4f4bb845bcebfbad75ffe3c4a420ffe75d23bf20c1f2fed489fc9f9a189
 SHA512 (Carp-REPL-0.18.tar.gz) = de660a1715dcd2c6e0fedaaee91495fd39fbdc569576f14ed8234cfc0118eab079a56e95911500d78f2a9aa8b22da8b394326fedfdc33121af4e587a8be4cb94
 Size (Carp-REPL-0.18.tar.gz) = 13283 bytes

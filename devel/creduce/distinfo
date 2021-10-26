@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:39:22 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:14:28 nia Exp $
 
-RMD160 (creduce-2.10.0.tar.gz) = 183be95aec282812724ec66204952ad33dbc923b
+BLAKE2s (creduce-2.10.0.tar.gz) = 3eec6a8e9380c8b6d8b48ed1191aeb17a63982900cbd733a857396a17ed6f6b0
 SHA512 (creduce-2.10.0.tar.gz) = f2f2cc498cbf78331ea62e533579c84042ddc1ad8eb146adeae6b3a833e0ea4bb26a4ab5f1f61a30500a5a0c9c89cc1d4e4c8547aa9e4a14d3b5d744aeb4f6a7
 Size (creduce-2.10.0.tar.gz) = 779318 bytes
 SHA1 (patch-clang__delta_CommonRenameClassRewriteVisitor.h) = 66527a9c3e0bf8ff778c9a57eb20cda596223300

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:42:12 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:17:22 nia Exp $
 
-RMD160 (Python-Serialise-Marshal-0.02.tar.gz) = 0e1d84368fe473a85b2edfb6bc9fab8ceaf5b006
+BLAKE2s (Python-Serialise-Marshal-0.02.tar.gz) = ef970a9ec05e2131f1dc792c96480d5714e5c9015c3936101ebd7477a74e409f
 SHA512 (Python-Serialise-Marshal-0.02.tar.gz) = a7571cf11ce1516ea3e92ecafb8d5f8fac480691919a8404b2a718c8c42fdbfef848c8442d283f4cc47f069fa59ed6a528f2678b76aff6308c6be84109b2632e
 Size (Python-Serialise-Marshal-0.02.tar.gz) = 8881 bytes

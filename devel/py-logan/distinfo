@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:43:20 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:18:39 nia Exp $
 
-RMD160 (logan-0.7.2.tar.gz) = 174e9126a97a825443983051a4703093d62bd79b
+BLAKE2s (logan-0.7.2.tar.gz) = 44f2c1d43ac665f904eca2cb836b2461ac237df12af19d2af2d5738b266ef736
 SHA512 (logan-0.7.2.tar.gz) = 5f11cd9ddec623e07baab5386971366b4755543a7cd0c03a9b9fcfb7e3b167d341dcad868d590fdb3ca36a5e9a16cee307c039f97f05e189ec4d18375ce85d2b
 Size (logan-0.7.2.tar.gz) = 6769 bytes

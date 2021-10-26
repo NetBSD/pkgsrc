@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:40:41 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:15:48 nia Exp $
 
-RMD160 (duff-0.2.tar.gz) = 0e00e1b7e1e0d10a34c245b8b5066680d763827f
+BLAKE2s (duff-0.2.tar.gz) = 37b651def9c205cc58b90d8424232bc980a4a51ff4df9a8ef550a1be7700155e
 SHA512 (duff-0.2.tar.gz) = e8a10c289e7a1024eeeebf3fa46aec72818cbf28fd28b3da69b9e66add82ac252f652ae70b63a7307c0994193f0b3c27e790d2f751bb652d9200efec1915c284
 Size (duff-0.2.tar.gz) = 15471 bytes

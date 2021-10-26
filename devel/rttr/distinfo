@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:44:01 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:19:23 nia Exp $
 
-RMD160 (rttr-0.9.6-src.tar.gz) = af3da2dc958731f18c68b39645dddfe2c1f23d6f
+BLAKE2s (rttr-0.9.6-src.tar.gz) = 80169d8204f76450d9ab670d8bfa8ce644261d0fdaee5a516b343750848413a5
 SHA512 (rttr-0.9.6-src.tar.gz) = 7e0d4fa87f83feda0b926d4d0e52aaf0f369f25fe7e23e5ffe86c0bba159e8353cef44eed37611a81e8ccc8d6facb36942f940d0d0b965f873177d7078f91cf4
 Size (rttr-0.9.6-src.tar.gz) = 1137269 bytes

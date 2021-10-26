@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:42:42 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:17:55 nia Exp $
 
-RMD160 (circular-require-0.12.tar.gz) = d74abda3419c7f382b3e2007dc348507daa8ce22
+BLAKE2s (circular-require-0.12.tar.gz) = f938cb874d96b7f53be4584340efdd90a3aabb7ba5a5fc0a274d40cb88f49411
 SHA512 (circular-require-0.12.tar.gz) = f07a3dacbdf63d3be829d142ce55b61216e2eb64ec9f52cb58764758dd8dc2d48facd5ca37acf3610f3b4ae3545a5dbff0ffe24afc547e0ff9b9e8d529393047
 Size (circular-require-0.12.tar.gz) = 18614 bytes

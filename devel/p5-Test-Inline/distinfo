@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 13:42:30 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 10:17:41 nia Exp $
 
-RMD160 (Test-Inline-2.214.tar.gz) = 393cb038f77f24815e075a8a15400bc29657e47a
+BLAKE2s (Test-Inline-2.214.tar.gz) = 4da61199c37bcca35301b2b1486fd9b0a1ad90292717d49ff8b2283d7a2f620e
 SHA512 (Test-Inline-2.214.tar.gz) = 25c65bb944d09e5cc17cbd4958e629f0e09209759b4bbbb3ac7cc5b22c6218eb77c724131d465c0df7592f803631c061b1fd02c2d238621f782b732b1d7db2fe
 Size (Test-Inline-2.214.tar.gz) = 60403 bytes
 SHA1 (patch-Makefile.PL) = 31ee61946dd961de257ecde3eee371aef4002df5

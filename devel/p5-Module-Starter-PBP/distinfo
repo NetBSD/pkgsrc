@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:41:52 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:17:00 nia Exp $
 
-RMD160 (Module-Starter-PBP-v0.0.3.tar.gz) = f7ad18f3fcea9b7d9d0d4f3eb7435cd673fa7264
+BLAKE2s (Module-Starter-PBP-v0.0.3.tar.gz) = 3f499c590abd4ef292a1517e6e8ae9a46f817226091e87938fde874b1b4ab7e2
 SHA512 (Module-Starter-PBP-v0.0.3.tar.gz) = ad54b0af2b7888d01668437e403f43f4d184f1de8bd872d278d39022b928317497a1343be70d88d33ec4b576d6efb941280c12462f3dd3f2e9068627020fea66
 Size (Module-Starter-PBP-v0.0.3.tar.gz) = 8004 bytes

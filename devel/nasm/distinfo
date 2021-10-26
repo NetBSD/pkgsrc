@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.35 2021/10/07 13:40:35 nia Exp $
+$NetBSD: distinfo,v 1.36 2021/10/26 10:15:42 nia Exp $
 
-RMD160 (nasm-2.15.05.tar.xz) = a69cec7112525a27a39247e75626654f58759627
+BLAKE2s (nasm-2.15.05.tar.xz) = c8d733a2c17b6712b8c90994d6d0811ad6a5dac3104600cd2ff60366f0361fc7
 SHA512 (nasm-2.15.05.tar.xz) = 512f90a2584f1c5811429274b97c64a2cedf37b9fdeffb1bcd0ea64afd9ecc19a2d7877ca8f1e05393aa324153fc9f39ea51dacbf8d25a7d5a2d7728c925dba7
 Size (nasm-2.15.05.tar.xz) = 995732 bytes
 SHA1 (patch-Makefile.in) = 30f8292c622e86e870427be0ca530ccb8dc3feaa

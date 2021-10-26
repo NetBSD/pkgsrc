@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:42:34 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:17:45 nia Exp $
 
-RMD160 (Test-Reporter-1.62.tar.gz) = cb6ae64cb9e7b3e4899603e7d07a2fe8976a14d4
+BLAKE2s (Test-Reporter-1.62.tar.gz) = 9389929daa0e06f36d34f38f7b60a2dd4f2361af91bba77f9374e3ceb2f010ce
 SHA512 (Test-Reporter-1.62.tar.gz) = 761ffd9154035e787e0567d64f93c5bcd41e3e98c1839b8a5e46a63b637b42cf51b586cf5347aaaa427e6d9a183d0332346fba3cac45e6ac58765797f95aebce
 Size (Test-Reporter-1.62.tar.gz) = 36130 bytes

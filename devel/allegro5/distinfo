@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:39:08 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:14:13 nia Exp $
 
-RMD160 (allegro-5.2.7.0.tar.gz) = 75c3aa46cd701e68c095f894ff02f4f15a028fcd
+BLAKE2s (allegro-5.2.7.0.tar.gz) = 936e64409a9542c6bcbdd6709cf95acd785040e7995f541cc472d399b13e93f2
 SHA512 (allegro-5.2.7.0.tar.gz) = 300bb951c661e7a220d913cca4116aba99afdcb5346af7c57b09bbdfa892d446cd64fde54397c57edb3c5f57d3380fbc2b6c4d9c9e17f48ff8180cfbf59e7d99
 Size (allegro-5.2.7.0.tar.gz) = 7911231 bytes
 SHA1 (patch-src_unix_uxthread.c) = 70fb118d3441b72e38b90353644a2a1bf567c5b6

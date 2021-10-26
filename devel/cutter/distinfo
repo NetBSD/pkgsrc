@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 13:39:23 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:14:28 nia Exp $
 
-RMD160 (cutter-1.2.4.tar.gz) = e744ea0374222c32b7ba5d92ae4279908ba35216
+BLAKE2s (cutter-1.2.4.tar.gz) = 8ddebed4611cb9fc04ba7dd10fb6d96bf2bffa8f41fa5682ddcf2e5faede7ec6
 SHA512 (cutter-1.2.4.tar.gz) = 8f6227aa1cd1af57c9b187f88fde3a33b30e0bde0ef0fe88c70a36aa79381e7807d2c00a75efa1e5a9e0b719f67716b6536eaa2b672b8c216068578519084660
 Size (cutter-1.2.4.tar.gz) = 2523951 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:43:25 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:18:43 nia Exp $
 
-RMD160 (olefile-0.46.zip) = aa90d9d17668567a3d21d0e2c458dd772463fee4
+BLAKE2s (olefile-0.46.zip) = 377df2a1afb9cd9ed580bbb4a12bfe10d28a7f9bb87f1ae88d9f0c5ccf96ebcc
 SHA512 (olefile-0.46.zip) = 2a19c443c1e4519680027ff557b5f737e6d0e707c1932a759ea85105717f4f6393149e0eb04589fe2b2b7e0c474042cfe34801faad38517799483b711001b4ac
 Size (olefile-0.46.zip) = 112226 bytes

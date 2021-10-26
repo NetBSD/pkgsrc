@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:41:18 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:16:25 nia Exp $
 
-RMD160 (Devel-CallParser-0.002.tar.gz) = 00d39e0bb9ede245a861510a96b96206961d065b
+BLAKE2s (Devel-CallParser-0.002.tar.gz) = e0faf8772e3279ae09e3a95ec5b1db2d2aa01e83cdeb377ac97e5e40d0eb6341
 SHA512 (Devel-CallParser-0.002.tar.gz) = ab1f89a618149789a99903e69c913af5d558125a67ef064ecd5a26d25a7553115a1f519d76cf401ad68fb19096155b9c6ea248a9b5286c2113e1d6570338ca2a
 Size (Devel-CallParser-0.002.tar.gz) = 24790 bytes

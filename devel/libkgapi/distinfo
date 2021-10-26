@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:40:17 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:15:23 nia Exp $
 
-RMD160 (libkgapi-2.2.0.tar.bz2) = 4232126e186c2c535b69d7dbbfa107c717db988a
+BLAKE2s (libkgapi-2.2.0.tar.bz2) = cd6052b681a4bb0d3b8b2c4da45f909b99538a758963ea75f38dfd2601dfafd3
 SHA512 (libkgapi-2.2.0.tar.bz2) = c5f37aacb89243d7985d7064aa8941d3d2a6c26685113e876b38c737ea2e1126b40b0f88b0908e7ea8a7bcb2fade1dc528c2f73f22890b9e892c6d18d9d3bb42
 Size (libkgapi-2.2.0.tar.bz2) = 127026 bytes

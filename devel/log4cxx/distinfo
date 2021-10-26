@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:40:26 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:15:32 nia Exp $
 
-RMD160 (apache-log4cxx-0.10.0.tar.gz) = 6df384e5c746c3c6903efae6c9f0d64e4f07a5ad
+BLAKE2s (apache-log4cxx-0.10.0.tar.gz) = 59b31244b30d3a29b61d04fd92660986bc5973c795127c1791d7311a5492fb4f
 SHA512 (apache-log4cxx-0.10.0.tar.gz) = 1c34d80983db5648bc4582ddcf6b4fdefdc6594c2769f95235f5441cd6d03cf279cc8f365e9a687085b113f79ebac9d7d33a54b6aa3b3b808c0e1a56a15ffa37
 Size (apache-log4cxx-0.10.0.tar.gz) = 1667425 bytes
 SHA1 (patch-src_examples_cpp_console.cpp) = 203b987f6a324c906c9ca5a19113190bdb3bfb79

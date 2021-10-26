@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:43:46 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:19:07 nia Exp $
 
-RMD160 (pytest-asyncio-0.15.1.tar.gz) = 6ce54f0a05b2617206fc3457f69f76d1129553a9
+BLAKE2s (pytest-asyncio-0.15.1.tar.gz) = 82d9ba564fada16177f0223f1d29227a58a5f32a591b92164bf76a407fcb85dd
 SHA512 (pytest-asyncio-0.15.1.tar.gz) = 3f1dc7fb467feae367a6d33738e38cc47369472cdb6b67718f1f38d8e572cc14b9da1d0736a7abc4b42d6317b1f3cc2a45ec7e35ba87aa7033b179b48caccc93
 Size (pytest-asyncio-0.15.1.tar.gz) = 13755 bytes

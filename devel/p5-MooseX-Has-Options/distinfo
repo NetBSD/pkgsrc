@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:41:57 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:17:05 nia Exp $
 
-RMD160 (MooseX-Has-Options-0.003.tar.gz) = b91f8af7ae3ba98563b96c540dc1f3339ead6071
+BLAKE2s (MooseX-Has-Options-0.003.tar.gz) = 44866688c60b74666a938519fc6b0e052e397c1e56009bfa948e5636bee90a89
 SHA512 (MooseX-Has-Options-0.003.tar.gz) = b66675bdf137c5b584b06296d23c46a14522304969cbf72d8b8efa873f8563b86b082155d92666b651abaf63bb060c295494d07889ed0aa6e5e56c321fd636b7
 Size (MooseX-Has-Options-0.003.tar.gz) = 13847 bytes

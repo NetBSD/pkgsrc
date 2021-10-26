@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:43:33 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:18:53 nia Exp $
 
-RMD160 (pyobjc-framework-GameController-6.2.2.tar.gz) = a248437647ca09d28f0e7fe21a7ee876d0a7d24a
+BLAKE2s (pyobjc-framework-GameController-6.2.2.tar.gz) = 9c28aef16302b9d31ced16af9713a6218d3357f5e798a37822f1c8c57cb7d3b8
 SHA512 (pyobjc-framework-GameController-6.2.2.tar.gz) = c8f80a03e267e208d7260ff5ce93fef4793bfe5fd9b78b85ce365990572bedff991321f2b453056f6957fb00a56803f744ff644998af577f90bada675eb3d41b
 Size (pyobjc-framework-GameController-6.2.2.tar.gz) = 17159 bytes

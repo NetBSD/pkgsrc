@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:41:06 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:16:12 nia Exp $
 
-RMD160 (Class-Loader-2.03.tar.gz) = 1a95d5bd23cca06db51d40184663d021ef5e554c
+BLAKE2s (Class-Loader-2.03.tar.gz) = eda6ded2e27c487b4c7cf5d2646a33a7bc37e550c13c383ba3b8f6e4cecf88d3
 SHA512 (Class-Loader-2.03.tar.gz) = 1ca245ea55b6fb101c5a6000c833c5a7b6885619811882a693916d4bf9225ecb55127e340647c8d6ff70b18ee5b8ba9f15184c2a70e8b6737762fcd5baf76adc
 Size (Class-Loader-2.03.tar.gz) = 6187 bytes

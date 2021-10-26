@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:17:39 nia Exp $
 
-RMD160 (Test-DistManifest-1.014.tar.gz) = 81c448539c20238fd9a976e38dda44de431d5f62
+BLAKE2s (Test-DistManifest-1.014.tar.gz) = 22a4eb958d2ed3e07b25e36c4b60de4480bd3b119d90283be6dc3253ecaf3ad6
 SHA512 (Test-DistManifest-1.014.tar.gz) = 571d4771c0ca51578df38adbc000e8063e44e56d89217d1dacf3347b6f2f5c18597a67d999b00f51926725198991891d87cab6b6df31ddfca91b051bee7f7140
 Size (Test-DistManifest-1.014.tar.gz) = 35599 bytes

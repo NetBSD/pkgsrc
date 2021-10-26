@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:40:07 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:15:13 nia Exp $
 
-RMD160 (lettuce-0.2.18.tar.gz) = 62eda6f216cd587d13d2323637097ede85454a88
+BLAKE2s (lettuce-0.2.18.tar.gz) = 15dc30b4db331a7d21ad41a28631ca7fbba7ee372552cf8e72b73fd746487151
 SHA512 (lettuce-0.2.18.tar.gz) = e2b299d5965dea9180f2afea170fc27c13661febdfdf6a89d06570b110259881b5ad54eb13d3e6d6a95aeb421e721ec277ad2854ca97ead3442388ef56eed07b
 Size (lettuce-0.2.18.tar.gz) = 46711 bytes

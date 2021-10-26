@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:39:33 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:14:38 nia Exp $
 
-RMD160 (flatzebra-0.1.7.tar.gz) = d96f469ca5568953465824eadc26a1563f6aab60
+BLAKE2s (flatzebra-0.1.7.tar.gz) = d4017d412465afa37c38d6161cff48ce6017dd26d4e2ba0bc7f5d6a434be8f3e
 SHA512 (flatzebra-0.1.7.tar.gz) = 12afbb0ef00dfac21654961da8d2101e9b7b0e6550b9e66bfb4da4faf77cc1dfb7f3da15c8b84c19379eb1ff8bac09324acc694f9282b74ae73a7379686f2374
 Size (flatzebra-0.1.7.tar.gz) = 375938 bytes

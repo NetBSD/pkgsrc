@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:42:51 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:18:04 nia Exp $
 
-RMD160 (pmccabe-2.5-CVS20081026.tar.gz) = 11e11e17df758f371ad77ef30cb5f27a749aefa9
+BLAKE2s (pmccabe-2.5-CVS20081026.tar.gz) = ea5ff3697bfbed11bb97b79333642f9f9f394f0ec8099cb883ba47e9b56bf0ac
 SHA512 (pmccabe-2.5-CVS20081026.tar.gz) = 1e44d64d6ceb35bbf333bb500feaeca7edc8760cc342bfe3a0e08fede071fb2b7f7e24b59007516a29a369a7177dee8f2b8f9e4240a8004fdd0bb5d56ede255f
 Size (pmccabe-2.5-CVS20081026.tar.gz) = 57003 bytes
 SHA1 (patch-aa) = 66a12ff9b5631c25140e008824fb2415545653f1

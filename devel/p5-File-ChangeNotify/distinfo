@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 13:41:27 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 10:16:34 nia Exp $
 
-RMD160 (File-ChangeNotify-0.31.tar.gz) = 02e6fa185d5571c5428204c65572c56b4e958b52
+BLAKE2s (File-ChangeNotify-0.31.tar.gz) = d1c6bc31b05e184a7fb849c6738fdf53241f52b0bbe09def6a85c1789486f3ff
 SHA512 (File-ChangeNotify-0.31.tar.gz) = 0dc7c1c2a3887c09f59465a89f52c4c8a9426e96574fa4764fe90a5f1500541ddbcb233bfcd206c76e0b7dfedf2980b3dc54fab6b45608a5b6fb82143172b25b
 Size (File-ChangeNotify-0.31.tar.gz) = 41447 bytes

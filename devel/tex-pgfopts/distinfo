@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:44:36 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:20:02 nia Exp $
 
-RMD160 (tex-pgfopts-34573/pgfopts.tar.xz) = 485db974c35ea7c8155d4dbdd07700d70cb339e2
+BLAKE2s (tex-pgfopts-34573/pgfopts.tar.xz) = c1388a89c86d36e5f360f36fe8f9ed2ce576502a4dce998b350cf8e69ade1c43
 SHA512 (tex-pgfopts-34573/pgfopts.tar.xz) = 09e89d8b6bbc02aa373b91e3115c3044362c8c0faba0590881b009bfe98c5af6d50d373db7880e237a072b366dbc44b04c49ee2c064ba334ef9178399f7721c0
 Size (tex-pgfopts-34573/pgfopts.tar.xz) = 1944 bytes

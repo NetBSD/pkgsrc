@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:39:21 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:14:27 nia Exp $
 
-RMD160 (cook-2.26.tar.gz) = 8d7839f0ec484585c1db0a4763a5717d792d6513
+BLAKE2s (cook-2.26.tar.gz) = 325f0c8461db21520e3a6ebcf17a41eb692541a387e92c80405c660ee7120ef6
 SHA512 (cook-2.26.tar.gz) = 75d6349a4491589823e2f0e569b2e3d95e2c2bc2217e983bdfa8d89b9e05ea962f66c500bc0a023a2d9c3ce9099aa0459e5595cdf3fce4d0500f50900808cb60
 Size (cook-2.26.tar.gz) = 881301 bytes

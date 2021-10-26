@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/09 12:50:57 wiz Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:18:42 nia Exp $
 
-RMD160 (nose-1.3.7.tar.gz) = 4a3e1bb3121a2620aec0baa51eac1bb5a11cf6e9
+BLAKE2s (nose-1.3.7.tar.gz) = fd3f77dca46410e7ce51a45d487f1b14c070f41c4ab25134f3b78323403c24e8
 SHA512 (nose-1.3.7.tar.gz) = e65c914f621f8da06b9ab11a0ff2763d6e29b82ce2aaed56da0e3773dc899d9deb1f20015789d44c65a5dad7214520f5b659b3f8d7695fb207ad3f78e5cf1b62
 Size (nose-1.3.7.tar.gz) = 280488 bytes

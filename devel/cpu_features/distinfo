@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:39:22 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:14:27 nia Exp $
 
-RMD160 (cpu_features-0.6.0.tar.gz) = b61c55c5e95d8e2f593271fea09d099bdfbcfdbf
+BLAKE2s (cpu_features-0.6.0.tar.gz) = 4c59c3a8b3f9b5beefa5a39fb9cd760eec0f8e95b599954efe11c955042d6296
 SHA512 (cpu_features-0.6.0.tar.gz) = 006a2e05253712cf605ecabccdda63dd9325445f8d145d5e2432c4342332e652f318810997321849be131082db435d88143020fdc85268fba204586cf37eef0d
 Size (cpu_features-0.6.0.tar.gz) = 63255 bytes
 SHA1 (patch-CMakeLists.txt) = a2eace73c45b85fac81b14d3e14b26b89cba74f2

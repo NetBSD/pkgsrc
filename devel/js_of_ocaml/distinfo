@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2021/10/07 13:40:02 nia Exp $
+$NetBSD: distinfo,v 1.24 2021/10/26 10:15:08 nia Exp $
 
-RMD160 (js_of_ocaml-3.8.0.tar.gz) = b633dd3c11a47db9f92072d2d023bcac7459d7bc
+BLAKE2s (js_of_ocaml-3.8.0.tar.gz) = 8092ef2215518edd80d946d481a9f8542928343bb6e0c2c98300e2c06a61473c
 SHA512 (js_of_ocaml-3.8.0.tar.gz) = b38c5e4f606d62ebb5319d6e8b618656d060903a50e87f38e736936963a0cd86cd31b16fde60c523f5ff1c62b5686c1e8b661879ef61a983d86fbeefcf995701
 Size (js_of_ocaml-3.8.0.tar.gz) = 1448308 bytes

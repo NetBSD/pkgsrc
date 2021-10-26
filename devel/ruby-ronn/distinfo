@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:44:21 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:19:46 nia Exp $
 
-RMD160 (ronn-0.7.3.gem) = 2b9b7cce3a81dd20971823cb401f5894e3498c92
+BLAKE2s (ronn-0.7.3.gem) = ddfed137142474cc671ae5f4bfaaa9f6f1b7f878731bb56be5d5c552dcbe19d6
 SHA512 (ronn-0.7.3.gem) = 885418c88d5a1073f9457ea11e29d82d3bb40ad12506589ccfab83ad447445e41282c9688aba5646082ae5ecc6a047fa9439ffae14561152fc61a136474f611c
 Size (ronn-0.7.3.gem) = 61440 bytes

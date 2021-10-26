@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2021/10/07 13:42:54 nia Exp $
+$NetBSD: distinfo,v 1.28 2021/10/26 10:18:08 nia Exp $
 
-RMD160 (zope.interface-5.4.0.tar.gz) = 5f96a4e02233c919ff62cb3e517b3de01e3786d0
+BLAKE2s (zope.interface-5.4.0.tar.gz) = b657335baa2129ee1749ba31eb660357cc2f991500387ede408e3fd1f25c7f0c
 SHA512 (zope.interface-5.4.0.tar.gz) = ef15d63397e05ad9fc44b2d5d786b0399b6973bb5f4866fab839ff612756f3157f2099d0f5c0469b574a5c8b5920a7c2a5c6eab8e8f84c24d5c43e816669bffe
 Size (zope.interface-5.4.0.tar.gz) = 249329 bytes

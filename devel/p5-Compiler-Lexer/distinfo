@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:41:09 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:16:16 nia Exp $
 
-RMD160 (Compiler-Lexer-0.23.tar.gz) = 4245a489164ce4a0738294017e1fd794f3d7029f
+BLAKE2s (Compiler-Lexer-0.23.tar.gz) = 310683f20a28993a10b0951f2703b019ee457ec916a7495b183ad948a7ff333f
 SHA512 (Compiler-Lexer-0.23.tar.gz) = 3fa27b2f66c9b304dc4fd754485906229361af3d54a04c3b305937bedcefa69b8b9c1898e4901d1122757d4f53089041294383883472abf8f350cf1363f32ff1
 Size (Compiler-Lexer-0.23.tar.gz) = 66673 bytes

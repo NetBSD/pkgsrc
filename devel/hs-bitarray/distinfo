@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:39:47 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:14:53 nia Exp $
 
-RMD160 (bitarray-0.0.1.1.tar.gz) = 1dc556a92de12c65e7bb80657a289731b983df89
+BLAKE2s (bitarray-0.0.1.1.tar.gz) = f96c064ac59330279175bccc0eae869e086ab9a0b32ebc5a2acd6f4bc41d6237
 SHA512 (bitarray-0.0.1.1.tar.gz) = 4b51ef2be989949e4ab8b9cab194c2bb5f3895abf9881ddf6009dd234c2c7d01edf01dc4ae96312a36f0b3d43f1b2b975eeaa738f66ccc2ab9a1a10e07582602
 Size (bitarray-0.0.1.1.tar.gz) = 3701 bytes

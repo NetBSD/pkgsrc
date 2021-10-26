@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:39:48 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:14:50 nia Exp $
 
-RMD160 (hlint-3.3.1.tar.gz) = 5a5eeab54af801ae546b912cd1bc44832956e8fe
+BLAKE2s (hlint-3.3.1.tar.gz) = 69584fadac288108e401e785025c2c2520e4cf2a7a8e2db5b2440d44eab165af
 SHA512 (hlint-3.3.1.tar.gz) = 46fabb26361cfd71ceda302669fc4f55d28dffc2a98732be48d7b6c244dd5f546bce1a8179a75487753e6113ad062e7840a4e5feee8a432936fdd65a20283a13
 Size (hlint-3.3.1.tar.gz) = 160882 bytes

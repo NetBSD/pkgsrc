@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:42:51 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:18:05 nia Exp $
 
-RMD160 (pointfree-1.1.1.7.tar.gz) = 6f7e5db28fd3bf2d06ff0f55c141e90ef8193b99
+BLAKE2s (pointfree-1.1.1.7.tar.gz) = dd41c88a5ac9014f15dbd2e37910bb4288371b1ff34d598db588f70d40b1b5cc
 SHA512 (pointfree-1.1.1.7.tar.gz) = e03d9643b659d6a70677ddecb2d9ef26f6f40e94b126e56cd2125638b2c78d2c22f70bb1373a3d6aa97c87e7aef17ae8cd766da62e37f312ecbce9fdb527dd40
 Size (pointfree-1.1.1.7.tar.gz) = 20463 bytes
 SHA1 (patch-pointfree.cabal) = 8be9fbe13cff031351294a56b7ed3370845f991b

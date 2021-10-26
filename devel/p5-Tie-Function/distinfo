@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:42:38 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:17:50 nia Exp $
 
-RMD160 (Tie-Function-0.02.tar.gz) = 34b354caa73cd5ee6657bf361defb5ebec2607bb
+BLAKE2s (Tie-Function-0.02.tar.gz) = c022ad6359009092cd82eaceed261a976ee32766ce4433a8a5f1e5f808466bb7
 SHA512 (Tie-Function-0.02.tar.gz) = d546552f49cfde4f44fc05387e4964b712cee4308a85ee949b64a348b5b60412fc3bebb0cfd90ab8acffb0248ac40ca3dd9379abccd564907ec9dbbc6fef4bb7
 Size (Tie-Function-0.02.tar.gz) = 2173 bytes

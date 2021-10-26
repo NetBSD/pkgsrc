@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:40:17 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:15:23 nia Exp $
 
-RMD160 (libite-1.6.0.tar.xz) = 22458633a9b0e04ea4b3565eac208f1f87b6eb7d
+BLAKE2s (libite-1.6.0.tar.xz) = 6dbbd453a4fd2cd9ab9ce93ca24d28465c190970f265d2547c09e71dd1fffd03
 SHA512 (libite-1.6.0.tar.xz) = f155bab49af6457f875561fbe4da95a133b086d4a4234cc81c9cef42f7e6dd8f7ec748d655e5cad6b8e07b30a3eab089e79dfebd156a5e62f605c899e4b02453
 Size (libite-1.6.0.tar.xz) = 248648 bytes
 SHA1 (patch-makepath.c) = 5769d96a8451ef2d92e8805d16ba260e9383fab4

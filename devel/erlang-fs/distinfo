@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:39:31 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:14:37 nia Exp $
 
-RMD160 (fs-2.12.0.tar.gz) = f5fbced99b7e8f9af6b532174f540d1352ccc219
+BLAKE2s (fs-2.12.0.tar.gz) = 05fee2c498e2dff64b8c8c3c9518162e1c22b3045ec02a5f382d5d32a6f6f699
 SHA512 (fs-2.12.0.tar.gz) = a5a708a9570417359bd4d3d34c26925c09453108fc4fdc8a9f8fbb59a5fa7e0dd4c60a30ebf4c4a2289a2b25a289cb731990600f78eedc4fb8a66ee9bfe2e221
 Size (fs-2.12.0.tar.gz) = 21410 bytes
 SHA1 (patch-src_fs__sup.erl) = 468aadce60bd9beaaa47aff3942006527b127908

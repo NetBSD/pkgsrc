@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:39:29 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:14:34 nia Exp $
 
-RMD160 (ecore-1.7.10.tar.bz2) = 27379aae0e34f0bc59eabffcf1565fae74d33d2d
+BLAKE2s (ecore-1.7.10.tar.bz2) = 88d142e459d98f1c48d217b1415e9dea79fb415efdd4a246d48724a81d6bc9ff
 SHA512 (ecore-1.7.10.tar.bz2) = 24fbe064913c566f885a2e51185b1f1d37c62c0d03ba0d549e9715ba516fb6b3f630ad331f89f66e91de1401b06b01b16916650448dda11d5e1efa24e52eaf39
 Size (ecore-1.7.10.tar.bz2) = 3455136 bytes
 SHA1 (patch-src_lib_ecore_Ecore.h) = 26b030d863d601db8287c02d1ec2dd193f73929c

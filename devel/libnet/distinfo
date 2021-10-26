@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 13:40:19 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:15:25 nia Exp $
 
-RMD160 (libnet-1.2.tar.gz) = b8450c9e0e7ecac670629594a37937bca713dda8
+BLAKE2s (libnet-1.2.tar.gz) = e0a5955e9fffb72e8eacae5745ab3369b019ce673f5ff9c235e5bc9263716550
 SHA512 (libnet-1.2.tar.gz) = 84430f24e000eb7728b1fbb5e620716d13d193e8b9e024cf56a08fbeeeaaf56c9122caaf7647f01e6b38b73212e592fa5cc4e8ff56b1d5f5a73aea462e84edd6
 Size (libnet-1.2.tar.gz) = 649191 bytes
 SHA1 (patch-include_libnet_libnet-structures.h) = e08475bd94a1bc66d2fb0f53a8c802aeaf134aa9

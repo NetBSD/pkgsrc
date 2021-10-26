@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:41:19 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:16:26 nia Exp $
 
-RMD160 (Devel-Cycle-1.12.tar.gz) = cacc652b35622c2ef40c028894b5649e743b180b
+BLAKE2s (Devel-Cycle-1.12.tar.gz) = 24285a65f3a0c21fc372a71ccd5f1cc1a17dd8cc02a80a016e73aeed46a027a5
 SHA512 (Devel-Cycle-1.12.tar.gz) = e2c83829905449d13c86233ad5bfce28e7b4eca61a8ac1e2f73e3c906a2d8580f66ae84d865ef876c38c2d25f0a5a8adeb05f6e94594274d8a5fa1739842d08d
 Size (Devel-Cycle-1.12.tar.gz) = 7276 bytes

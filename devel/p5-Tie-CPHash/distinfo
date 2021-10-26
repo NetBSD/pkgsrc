@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:42:38 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:17:50 nia Exp $
 
-RMD160 (Tie-CPHash-2.000.tar.gz) = 95f0010952a5c0b1c8ae139589aa8e6071f1be73
+BLAKE2s (Tie-CPHash-2.000.tar.gz) = c11b7f629202b0a9f3471b559473385147de03f2f79f2da45231eae04ac5f377
 SHA512 (Tie-CPHash-2.000.tar.gz) = 0fae8b82f0600cd9bc058623eb036309c59cad323d7fba42880bcb539f702c300a59e2eb20fa972caa8c67682ab13a636c1cab895401c0839f0025ae981628e7
 Size (Tie-CPHash-2.000.tar.gz) = 15828 bytes

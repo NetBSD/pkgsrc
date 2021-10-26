@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:43:41 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:19:02 nia Exp $
 
-RMD160 (requests-futures-1.0.0.tar.gz) = 4531ab2bbab75a8ba0e88a77e144391e0fa75b8e
+BLAKE2s (requests-futures-1.0.0.tar.gz) = 6f6f50be85c5730e478810a95d0da06f3fbe9160ebe816a8b807a8dfcae29d79
 SHA512 (requests-futures-1.0.0.tar.gz) = 64b39ed99712df8f1be74b2de97500d89711c0d5d3ba0f2b64e3bab755d0bf82029d7ced13b755ce12a2b86f3b673305b651ba6ff4cfb60aed40c8d5876f202c
 Size (requests-futures-1.0.0.tar.gz) = 10897 bytes
