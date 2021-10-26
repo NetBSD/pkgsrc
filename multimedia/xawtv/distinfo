@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:32:20 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:01:19 nia Exp $
 
-RMD160 (xawtv-3.95.tar.gz) = 1dc7b564bec0515cc409c723904ec9c6f8dae998
+BLAKE2s (xawtv-3.95.tar.gz) = cbe0fc91cf7305d281863b07c9d785fee3f82606174da298a120081c27e4cc68
 SHA512 (xawtv-3.95.tar.gz) = 9c793ee7fa233aafb12decbd9289f09cbad5aa828db1f4dd89a9999e71bebe5faacc4c361cd41cf928931f32310bdb0c24e52c2c7c8d5595c286c163727faa01
 Size (xawtv-3.95.tar.gz) = 555731 bytes
 SHA1 (patch-aa) = 7d2302727681383de7ca447e60f200bfcae73445

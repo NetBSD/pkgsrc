@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:32:19 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:01:17 nia Exp $
 
-RMD160 (SickGear/release_0.23.14.tar.gz) = 21879e0463376a4884fe30addfd9bded5f0f777a
+BLAKE2s (SickGear/release_0.23.14.tar.gz) = ed74accabfa845c5362703b9c7e79fae0ac6143f525f247f008b8e87b012ed1d
 SHA512 (SickGear/release_0.23.14.tar.gz) = ae83677034aadbf87702b71974671d654fabfa6e0bde529872ace1ff43fb2c645af1837efb93e2970b2d34a67e47612911d00c1f68d17a4cca111014ef81e423
 Size (SickGear/release_0.23.14.tar.gz) = 11906111 bytes
 SHA1 (patch-sickgear.py) = 74c33b2c9e7c967e964d9725359350487ebc4c79

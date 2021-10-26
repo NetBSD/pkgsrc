@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:32:19 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:01:17 nia Exp $
 
-RMD160 (SFML-2.5.1-sources.zip) = 3b137887696a223f0c3576b16bae9f0e3535f16f
+BLAKE2s (SFML-2.5.1-sources.zip) = e46066c6e7302910d52094f681054a9360ff3e51cf82b68c501e49ced7bca858
 SHA512 (SFML-2.5.1-sources.zip) = 75b4f3076d817388b78aa060fba6a4c67b2cde3393ec6d9dc66052d9770636572e9bfcd6b63fcb5dc7888e00cda2161cd84b55e07d463159da52ac1142d8d1af
 Size (SFML-2.5.1-sources.zip) = 23283095 bytes
 SHA1 (patch-CMakeLists.txt) = 235842ca31da0d886966e90877d705fd8ef0c5d3

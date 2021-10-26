@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:32:11 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:01:08 nia Exp $
 
-RMD160 (libdvdplay-1.0.1.tar.gz) = 3871a2f845d2d0df077ed2f1f7daf80c5b9a7a1a
+BLAKE2s (libdvdplay-1.0.1.tar.gz) = 11ba297807f4bc8fedc3149cb2f22bca6c313558762afa3caa4f2d1b63b97250
 SHA512 (libdvdplay-1.0.1.tar.gz) = 5d17557bac7bbda17c5cbc2ac272f8f98297f155b0d76b3e85ef360e3cc2531abb36bf27bb795c5042f19d5d30e3a8f223725c2398791e2de61297b7fbe391c4
 Size (libdvdplay-1.0.1.tar.gz) = 227746 bytes

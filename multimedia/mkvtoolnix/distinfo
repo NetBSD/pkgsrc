@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.96 2021/10/11 06:50:59 adam Exp $
+$NetBSD: distinfo,v 1.97 2021/10/26 11:01:12 nia Exp $
 
-RMD160 (mkvtoolnix-62.0.0.tar.xz) = c5d71abe6db8469ddd6eeefdde0eeda055b89c85
+BLAKE2s (mkvtoolnix-62.0.0.tar.xz) = a33045722dc4c7fd941fff8c13826d1f2d4a01eacb766fc8c41b75033f3e287e
 SHA512 (mkvtoolnix-62.0.0.tar.xz) = 9ed7db1b9f09b6d563a08104a6b458c3a02e059a28fc62880d1ffd633b6fdf01ce92542ba52d61fd3836108ca408f3a3ead711bbe01598395e8e05d47b23558c
 Size (mkvtoolnix-62.0.0.tar.xz) = 7666480 bytes
 SHA1 (patch-Rakefile) = 08dbf4a4968008ff258a66e71aa2bddc61c04af6

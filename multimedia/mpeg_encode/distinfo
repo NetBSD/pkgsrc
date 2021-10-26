@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:32:15 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:01:13 nia Exp $
 
-RMD160 (mpeg_encode-1.5b-src.tar.gz) = 24c0a1090076630c292936639c5fb275778f6470
+BLAKE2s (mpeg_encode-1.5b-src.tar.gz) = 709512af317353565306675afea1c1f65fc0e8c186877f4691112c9ba46d8a2b
 SHA512 (mpeg_encode-1.5b-src.tar.gz) = df6f9def3ba05c752ebdc5311c512688d6fae380480009dad55b4183a378685eca79943c075166b21ed3bfd0cce7697761abc6ec795f57c0ed1c60c2a5cba469
 Size (mpeg_encode-1.5b-src.tar.gz) = 2028724 bytes
 SHA1 (patch-aa) = 04221eb3d4cf85b206d27a2f425719ed7c4a5ec1

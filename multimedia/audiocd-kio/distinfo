@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:32:01 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:00:58 nia Exp $
 
-RMD160 (audiocd-kio-20.12.3.tar.xz) = ccfc53f88cf68f3ff2eaa6db6a25aa15c69ce14f
+BLAKE2s (audiocd-kio-20.12.3.tar.xz) = 58eb98c3f8e2caf96d5503921df6f725dcd7fde4013b9f65b7aa8d7979af6933
 SHA512 (audiocd-kio-20.12.3.tar.xz) = 0b5d343f802cee3435fa1aadf39ddba3afa6ec70569bab00da0e0cbda4360618e5384042c913a4e54017f82f27f3f202a509d933762d1b7ef4884d2ba70556bc
 Size (audiocd-kio-20.12.3.tar.xz) = 500672 bytes

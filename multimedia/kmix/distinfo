@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:32:09 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:01:06 nia Exp $
 
-RMD160 (kmix-20.12.3.tar.xz) = 079188ea212919179af359eb5d4efcf950ad4e0b
+BLAKE2s (kmix-20.12.3.tar.xz) = e0a400f4c875e0af7c83c9b2373a238d3b9d79326f2b1c6bb98f110d6f96483a
 SHA512 (kmix-20.12.3.tar.xz) = cd261b9b42e81187136366a8cfcce7296d576553e8ec541785b5d53f9529cfd570af43c952dc0c36a5d3ad22abc56b02dbe040b7aebf5e9353b0ea3e670a6480
 Size (kmix-20.12.3.tar.xz) = 1150476 bytes
 SHA1 (patch-CMakeLists.txt) = 30806caf7b2fb414ba36a84fe42bc6c11c03f33a
