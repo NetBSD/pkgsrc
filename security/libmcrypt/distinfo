@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:53:58 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:17:14 nia Exp $
 
-RMD160 (libmcrypt-2.5.8.tar.bz2) = 4dba23286aa00d88a7f6763629bb3cde7dd2fe6b
+BLAKE2s (libmcrypt-2.5.8.tar.bz2) = 48458e03a57523fcc49d5439f0052e7bbbdbf608e44b3ff98466cbd1a08244bc
 SHA512 (libmcrypt-2.5.8.tar.bz2) = 6c05c42767401d66af67b0922b207d17cdb1c3efdbfdfb5b0c2e651821c48a8a6c6749debfa0206091b8a801f538fabe9f7d95ebc86d82c6b84c8001031d50fe
 Size (libmcrypt-2.5.8.tar.bz2) = 875425 bytes

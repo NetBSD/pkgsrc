@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:53:57 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:17:13 nia Exp $
 
-RMD160 (libfido2-1.5.0.tar.gz) = f7f714ed5899c6bf764e172f3c62d0a7f0134059
+BLAKE2s (libfido2-1.5.0.tar.gz) = 8abdf607588538d6b56c95fbc1cafc50d915e2a730666a46b233b150ecbf57d3
 SHA512 (libfido2-1.5.0.tar.gz) = 240e2368e43846fddf5e98bbcc247468833565bcde4ec27976b88c814d787f1a477241a82b064818aa0eb0a98ff46a65d80b8243f4d0bbd763270e42492354e2
 Size (libfido2-1.5.0.tar.gz) = 407259 bytes
 SHA1 (patch-src_CMakeLists.txt) = ebc7243648b1026f01b4d8ba3572425d7f75264c

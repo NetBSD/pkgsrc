@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:54:14 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:17:30 nia Exp $
 
-RMD160 (Digest-CRC-0.23.tar.gz) = 00b0687be2fc4ae715c497e2bd5f167d61d269f3
+BLAKE2s (Digest-CRC-0.23.tar.gz) = 2617f4a5f09e79249fe97692c6b345d1ec1df1e5f9d92ef0d99ad2bbefc2541f
 SHA512 (Digest-CRC-0.23.tar.gz) = b92e40bf717882b0e694c6552a88f13ac92a569e4484eedfdfc57b7fe867e29a81e228d00c29e9e4ba120cb9e0ca4d10db12cad5af185893ebcd89b1be87d2c1
 Size (Digest-CRC-0.23.tar.gz) = 8237 bytes

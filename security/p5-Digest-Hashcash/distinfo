@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:54:14 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:17:30 nia Exp $
 
-RMD160 (Digest-Hashcash-1.1.tar.gz) = 964cf323724e9dffcceebdc556f49e86773d14b6
+BLAKE2s (Digest-Hashcash-1.1.tar.gz) = 58e10aef487a9100df20238ee59d6436a26313e3d502c093b6a36f3ed3b00c60
 SHA512 (Digest-Hashcash-1.1.tar.gz) = 59fc4f116a963bff455f747c71e29893a15f2505eaec5f66ff6e662d09a0b1b5d0f4451dea081753eacd40fc5079edccd2385e31c0301b48b62bde36bdd7259f
 Size (Digest-Hashcash-1.1.tar.gz) = 18243 bytes

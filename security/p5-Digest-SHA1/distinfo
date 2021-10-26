@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:54:15 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:17:31 nia Exp $
 
-RMD160 (Digest-SHA1-2.13.tar.gz) = a1070dd6c3b626982b4c39d6de05c36001116ac7
+BLAKE2s (Digest-SHA1-2.13.tar.gz) = 1a36415692b32e348bcb1284f736345d2932249d46ffda2442454a010e64b36a
 SHA512 (Digest-SHA1-2.13.tar.gz) = 44d0c57ecc7d2126a0387552e76c9204e45fba174af6ff7abc1c9ae00d549eb7370ee20948caf12fafefedec0098b8231249d14b109c53470ee1d5bf3de3305d
 Size (Digest-SHA1-2.13.tar.gz) = 39078 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 14:54:49 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 11:18:06 nia Exp $
 
-RMD160 (yara-4.1.1.tar.gz) = aa6999b4b5143c03aae26ddd791c7d7a7d5a4092
+BLAKE2s (yara-4.1.1.tar.gz) = 330ff1c1b222bdbf5f559dc3734c1b2fcba1a79c23cb1634ba52e86b8a3f7501
 SHA512 (yara-4.1.1.tar.gz) = b4b3d004181f4a5c7f35103082977f72155b1a80bcde84c09c68951b57c9b6cbb1304591172de72bdbd0b5a36c98a4671c5e4d428dfde809df717c32df4e2922
 Size (yara-4.1.1.tar.gz) = 935770 bytes
 SHA1 (patch-configure.ac) = 1640083582087e1377d1ee378610e35cd09e08d5

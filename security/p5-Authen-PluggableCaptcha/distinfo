@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:54:07 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:17:24 nia Exp $
 
-RMD160 (Authen-PluggableCaptcha-0.05.tar.gz) = dfebd2e942d417e2318c3046deb8ef977f0c83d8
+BLAKE2s (Authen-PluggableCaptcha-0.05.tar.gz) = 2171d3d337e394db7b42fa8d7ca8db6422c393bb6add843575f507d7aa53abd7
 SHA512 (Authen-PluggableCaptcha-0.05.tar.gz) = 60cc674d6b9fc6b4f1f080510973cb0b4d58788bd6027f959121f73a8d6e52ecf10937bacd0001cf4b1593da2f35ec396743cecc0c6cfe604ea13cbb58e588c6
 Size (Authen-PluggableCaptcha-0.05.tar.gz) = 26262 bytes

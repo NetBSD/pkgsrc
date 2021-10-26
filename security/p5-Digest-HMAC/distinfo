@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:54:14 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:17:30 nia Exp $
 
-RMD160 (Digest-HMAC-1.04.tar.gz) = f6afeaa4abddec8802f74c7415d0f18c0e2e802b
+BLAKE2s (Digest-HMAC-1.04.tar.gz) = c1845caf63a9fdf909c31b732802c2809b33bd4833d8551325734d6adf5526d2
 SHA512 (Digest-HMAC-1.04.tar.gz) = d30b62e60bfa9f6c0f0c058e190938f13a08a70a816771a0641226c24045cb6dbd622756f1f88593fd3690442a45636bdcaf35457e9dfea6de5f8a342a538a6d
 Size (Digest-HMAC-1.04.tar.gz) = 14279 bytes

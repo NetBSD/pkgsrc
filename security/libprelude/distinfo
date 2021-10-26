@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.43 2021/10/07 14:53:59 nia Exp $
+$NetBSD: distinfo,v 1.44 2021/10/26 11:17:14 nia Exp $
 
-RMD160 (libprelude-0.9.24.1.tar.gz) = 0a2688cf5c44e834c07eaba36d333155b2ca226d
+BLAKE2s (libprelude-0.9.24.1.tar.gz) = 1eca0af9bdb4f57f0712fb486b7308a86dcbf4c4fd36f059c6a076c45f71d229
 SHA512 (libprelude-0.9.24.1.tar.gz) = f7f86f1f92e84e66f198e04e1d9a6b82c28d8239835919b76bfdb3034270956d915eea0a6c8d9a9eeb519ad02396ab50f14cf820b95c7288d2188ac85923b05c
 Size (libprelude-0.9.24.1.tar.gz) = 2582719 bytes
 SHA1 (patch-aa) = 4781d5d5f726b74e3e2179217ff2db9672c12158

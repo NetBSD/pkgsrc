@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:54:47 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:18:03 nia Exp $
 
-RMD160 (steghide-0.5.1.tar.gz) = e17507444b8bb91e6e29d46ec02fa39f7f2f44e8
+BLAKE2s (steghide-0.5.1.tar.gz) = 38a3ca6889fc8b460ee4922517e7f2ee9257a7fed7f8dc20ed7e5bdcdcbb4621
 SHA512 (steghide-0.5.1.tar.gz) = 6cda3e33e91123fbc5caa112efcacf09180505abd4f6f229878cd443817c60a04498aead02509c7532fd6924225c6b752820c51e452a83c520f228273d610a57
 Size (steghide-0.5.1.tar.gz) = 476125 bytes
 SHA1 (patch-aa) = 7bf2c4237f697a6d50b730aefdc9e922d6794c49

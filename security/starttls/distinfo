@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:54:47 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:18:03 nia Exp $
 
-RMD160 (starttls-0.10.tar.gz) = ad9c3bc690dd1bf11f4f173edf05b2f2eaff1275
+BLAKE2s (starttls-0.10.tar.gz) = a295b727fa8f771362f7cfe8fb51e2d863962fea87025a1c5f86f13abe996fee
 SHA512 (starttls-0.10.tar.gz) = 841976f886cbd8d562aeb4f27d9b4dd843a5ed6ac071f1288353a06eafe090f4d8ca811b8514c33f081e30e169460bd9b581a1c331f88118fd13c9c5a3c25380
 Size (starttls-0.10.tar.gz) = 67295 bytes
 SHA1 (patch-starttls.c) = 205d45e4f4d46c15f0ace549cfd962209cc2a81f

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:54:39 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:17:56 nia Exp $
 
-RMD160 (openvas-omp-0.0.4.gem) = 3f7f3160b3e2be9b62f23c9643eee970fe50c95c
+BLAKE2s (openvas-omp-0.0.4.gem) = cbb17134bd6de19cf11cffdc5be24a0d86b74d866c9c1632632dfe3b9e626f4f
 SHA512 (openvas-omp-0.0.4.gem) = cb62ec9e480ad009eb9f47cd4ac77d385b8d5855748509466e5227e9d729067b279c277d3d53f2de1a89cccba75bccdd1e23b7ae858adeb35e0958fdb004c0e1
 Size (openvas-omp-0.0.4.gem) = 10752 bytes

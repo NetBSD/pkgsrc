@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:54:02 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:17:19 nia Exp $
 
-RMD160 (md4coll.c) = e2e2e83cc2c1b4b0c62039ebc392c4765d8527c0
+BLAKE2s (md4coll.c) = e0521823c4329c71bf465d71c67687dfcc399c401efa6514405f2cacb1047f03
 SHA512 (md4coll.c) = b2d10a9c4405ff9c9a6a6d6e651a3d1c3754c77a1f411704c3ca1681a17794318dcf36a4116e5d2ee9ff29492f341153912fcb16e8c7ac1c1fe9d690f49502fb
 Size (md4coll.c) = 16814 bytes

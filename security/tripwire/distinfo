@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 14:54:48 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 11:18:05 nia Exp $
 
-RMD160 (tripwire-1.2.tar.gz) = f745db5973f14b1abbc0c2e7030f90e6fdac3257
+BLAKE2s (tripwire-1.2.tar.gz) = 725546ad86e34b58eb4cbee415c11b5a949a2ee1580284224b7715a185a9ac51
 SHA512 (tripwire-1.2.tar.gz) = 1408703a33edf17bb77c006db9263bd404ad63a3974293aa4fc0f9bf8e564d1c11a7872eae97e3580342cee96992c8d332c776d165173345af4c439c06bb7f28
 Size (tripwire-1.2.tar.gz) = 299831 bytes
 SHA1 (patch-aa) = e131fff1f7d3e5c589a4d1f6eb9bf4da4a5b970b

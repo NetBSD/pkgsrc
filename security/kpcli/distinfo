@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:53:55 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:17:11 nia Exp $
 
-RMD160 (kpcli-3.3.pl) = bf717c80b1c6448c01250509ac966b99011b045d
+BLAKE2s (kpcli-3.3.pl) = 482807985a31250e4698a72c0cfc14a3d1964b3f1f44f71cb83773ab65f4198d
 SHA512 (kpcli-3.3.pl) = 5a837891a29dc65f0900015124fe3fdd1b7b9878ed2094d7c299c24590feee8e704212bcabf45c63064f97deca1dd2da96aa80c5be4305692f181db45b7e241a
 Size (kpcli-3.3.pl) = 199249 bytes

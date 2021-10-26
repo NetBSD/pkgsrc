@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:53:43 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:17:00 nia Exp $
 
-RMD160 (arirang-1.6.tar.gz) = 4c3f8262d4592a8bb9b4b9693336c1c078fd3b83
+BLAKE2s (arirang-1.6.tar.gz) = 667aeaed64d7733055a01a03c66b251a1634f6f45a34357559d9262110c0d280
 SHA512 (arirang-1.6.tar.gz) = 0a07a4eee0819f0f6d979aae60557beaab2f6e69360a6ac0af37ff58b78cadfcd339720b2f138d091ffa843490e5b9fbd430cbdc89e9b9e4d5269ec277410c6c
 Size (arirang-1.6.tar.gz) = 54170 bytes
 SHA1 (patch-Makefile) = 28c47ff5a915e2abb1e99d027e0af6938fe0bc75

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:54:21 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:17:38 nia Exp $
 
-RMD160 (pkcs11-helper-1.27.0.tar.bz2) = f30d78341e140ebeb45a27289b0afd55b7127363
+BLAKE2s (pkcs11-helper-1.27.0.tar.bz2) = 80529710ded5b83ac36649ab16602546ff4a63bc26e21c3b3f2e72bb6c6a7a80
 SHA512 (pkcs11-helper-1.27.0.tar.bz2) = 5799342cb755dae8b7ba0880d652e9d4b4f1e52a74043015e1185e1e059326cb2689bb51957db98060ac2257dee34e2f047dcf3d52ad59fd49b91fedcfc5332b
 Size (pkcs11-helper-1.27.0.tar.bz2) = 422425 bytes

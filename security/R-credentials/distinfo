@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:53:41 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:16:58 nia Exp $
 
-RMD160 (R/credentials_1.3.0.tar.gz) = 2236380b7609a8cdade7cc40bedcac051ea7a9c3
+BLAKE2s (R/credentials_1.3.0.tar.gz) = 6735708a0cddf2a7606c55d862e105b6648547268f629089b0a00634f2dcb91b
 SHA512 (R/credentials_1.3.0.tar.gz) = b7f3e83a77673c5c94e8d5b5267e422b6bb4f29e4743aa28f42597177b8581bad3f34094157dc19be4ce593aa3df6178f9c7b3a306dd2390d1be08213f4d3b94
 Size (R/credentials_1.3.0.tar.gz) = 230082 bytes

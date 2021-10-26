@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:54:12 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:17:28 nia Exp $
 
-RMD160 (Crypt-RSA-1.99.tar.gz) = 638191fbfd4c29a9b2f2893ba695aed42b1f0f74
+BLAKE2s (Crypt-RSA-1.99.tar.gz) = 47b922c5c113dcd40f9e3bc244b60db218bf818b628c12b8ef8af06bc57e5c65
 SHA512 (Crypt-RSA-1.99.tar.gz) = 69426a3bd8b0d803926ac71b78952a4240831ab6202eae1d9cf1ce6f7c921e74442604f397a65f74d567629d3b2d56587aa8ca62700a458174640b02a05cff6b
 Size (Crypt-RSA-1.99.tar.gz) = 52393 bytes
 SHA1 (patch-Makefile.PL) = 3510b3083da1ff17200ce548eae661408922f550
