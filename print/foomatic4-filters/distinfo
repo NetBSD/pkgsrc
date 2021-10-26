@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:48:55 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:12:06 nia Exp $
 
-RMD160 (foomatic-filters-4.0.17.tar.gz) = e875ac0cd3c0ba0ba018499f4289c2044e6f52d4
+BLAKE2s (foomatic-filters-4.0.17.tar.gz) = 918beef56eeed1c796cd9defc1d60c69840e068d2f6fd5392feb98fdd5b14875
 SHA512 (foomatic-filters-4.0.17.tar.gz) = f07d2ac64a28e9353418deb9dd2009f5ef7676ab268af211edfcd012c231c9081516dae450f2b7910b687f75f7e53c8198fda2508f3fd527120940b4905292dd
 Size (foomatic-filters-4.0.17.tar.gz) = 266276 bytes
 SHA1 (patch-ac) = 2d716c7ea045a0726e18d2283c210b7be0bd465f

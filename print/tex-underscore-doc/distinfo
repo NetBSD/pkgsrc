@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:49 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:15:00 nia Exp $
 
-RMD160 (tex-underscore-18261/underscore.doc.tar.xz) = 753ff4201b965c76c147bfe4607f602af78ac81d
+BLAKE2s (tex-underscore-18261/underscore.doc.tar.xz) = 512ea61d808869962025560f68e257064ae04f1b13b0cfb6893d06aeee8ff743
 SHA512 (tex-underscore-18261/underscore.doc.tar.xz) = 2dbaae3f453a43ad771b6230606cd49c97b126fbe710c5046504877d5b254ac604cb755cfbecbcbdd41a8bf1cd21b78a35c3ab0d193d757da275b6b7650e6fd9
 Size (tex-underscore-18261/underscore.doc.tar.xz) = 246480 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:51 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:15:02 nia Exp $
 
-RMD160 (uptex.doc.r56291.tar.xz) = b10f37d56d95782cd10886b326dfb2a9e8a0bf3b
+BLAKE2s (uptex.doc.r56291.tar.xz) = 56a03336a714ca52313208eb58e88780f9e15c9120a072493602d1b385c6a75f
 SHA512 (uptex.doc.r56291.tar.xz) = 7da25d9527ea65993d9c530d6149f1385b41b8573a106f7812ad4b4d29caf7191d6248b0f104e6f41da86a83a25c59a0f7dbdc1a8f1a9e40e0ae234ca794943d
 Size (uptex.doc.r56291.tar.xz) = 298968 bytes

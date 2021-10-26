@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:51:16 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:14:27 nia Exp $
 
-RMD160 (ptex.r55920.tar.xz) = 08f951a891257b137997b17de80f2cd7d6489282
+BLAKE2s (ptex.r55920.tar.xz) = e6e889e96e1ae1fb037dc03496fa61f8f1a0e4ab0f9d5a013c071d2e97d3e366
 SHA512 (ptex.r55920.tar.xz) = 60a4f0e7568819dd9efbd4bcfb49ba5a424061c809f4ba2e86657e1a688d3aacbf5cb0423e06059a29306cbaa1975dfb7e5349e72656e50100e97d13e42e2ba6
 Size (ptex.r55920.tar.xz) = 692 bytes

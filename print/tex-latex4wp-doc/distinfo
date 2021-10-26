@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:41 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:13:52 nia Exp $
 
-RMD160 (tex-latex4wp-35999/latex4wp.doc.tar.xz) = f947d63b4dc3104bf8462c2df075e10374905833
+BLAKE2s (tex-latex4wp-35999/latex4wp.doc.tar.xz) = 0e5012387d6f9e54c59edf05fbd015748e15c9c30697292787397f2f2f38875a
 SHA512 (tex-latex4wp-35999/latex4wp.doc.tar.xz) = 826120c88b95a8238d2e00c817ab1d59ed735ac0057372ab38a0a51c7e37f9c2822d7b6cd3eadd80dbaee01f5e4371535194415f7ee5ccff9f18845fff94f3a4
 Size (tex-latex4wp-35999/latex4wp.doc.tar.xz) = 785532 bytes

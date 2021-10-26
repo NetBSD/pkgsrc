@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:43 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:54 nia Exp $
 
-RMD160 (letltxmacro.doc.r53022.tar.xz) = a158acbbaafceed5bf9950b20d627156e728f965
+BLAKE2s (letltxmacro.doc.r53022.tar.xz) = e27086f6c18915781ade107604ec94f5d62118732e7957431e4b80de259dc389
 SHA512 (letltxmacro.doc.r53022.tar.xz) = 8be12930acfaa79dbf3d7d3e0a60a518b12392c094e1dc531bfbcd8d9517d4744e99d339b3b7bcfb1e156d0ccbd17ca464126d8530e9f9c13e29d19a6aaeea99
 Size (letltxmacro.doc.r53022.tar.xz) = 290936 bytes

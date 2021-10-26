@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:51:59 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:15:10 nia Exp $
 
-RMD160 (tex-xstring-49946/xstring.doc.tar.xz) = ddd8813f62de3edafed88f2f2698c71d345eb862
+BLAKE2s (tex-xstring-49946/xstring.doc.tar.xz) = e9767b9de79f9eb3bcb4297d6fffd9527e3e702eae07d53b9ebda99ac9cac751
 SHA512 (tex-xstring-49946/xstring.doc.tar.xz) = 6c2ed600c6e5c734bb35b92e6ef3d6ec08919e439b9e601128555174254da1246f3d695c2d78d95aa811909859165768c49666dbbce5fd923645082719db2048
 Size (tex-xstring-49946/xstring.doc.tar.xz) = 656872 bytes

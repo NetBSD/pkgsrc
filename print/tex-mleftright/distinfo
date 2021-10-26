@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:55 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:06 nia Exp $
 
-RMD160 (mleftright.r53021.tar.xz) = d39b732cc73dafc5bdffeacf43b1c5daca32f358
+BLAKE2s (mleftright.r53021.tar.xz) = a71b9670fedbd60861657f3f9c4e53af71a3ef46bc8c131b8ce2691189d8d03d
 SHA512 (mleftright.r53021.tar.xz) = d1423d7e794ff011e6bf436d85bc3d2d933263bee059cac910e1a3375140d0eb0f1682e38c675afe17607d71d253b656a81cc927d22f54a8add2df01571a5e95
 Size (mleftright.r53021.tar.xz) = 2644 bytes

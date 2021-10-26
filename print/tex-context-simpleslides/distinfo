@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:49 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:00 nia Exp $
 
-RMD160 (tex-context-simpleslides-34438/context-simpleslides.tar.xz) = 0535f05482da911a655d8d1e69810fec1aa5c3f7
+BLAKE2s (tex-context-simpleslides-34438/context-simpleslides.tar.xz) = 39d247d1b57c4f2368282177e5d43a72d0a05fe007beb235edaf7a07241cb19f
 SHA512 (tex-context-simpleslides-34438/context-simpleslides.tar.xz) = 87d8fc8a9d255bc3231167c8b28dc12170fd6e0d6c040f5ac2a5b7295f26f7e1ff1ead5e5cc65e66a02cdda725df7c1cd0d379e69d8a2f31074b9343520ca87a
 Size (tex-context-simpleslides-34438/context-simpleslides.tar.xz) = 28984 bytes

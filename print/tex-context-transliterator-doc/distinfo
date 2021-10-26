@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:49 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:00 nia Exp $
 
-RMD160 (tex-context-transliterator-29801/context-transliterator.doc.tar.xz) = 654f3ba221aa4b4c3765cd8a02fda519aa17c3b2
+BLAKE2s (tex-context-transliterator-29801/context-transliterator.doc.tar.xz) = 858e08996df1f10ba405b9819f69ad88b81748c372e421cf072c4ba5c2be5d84
 SHA512 (tex-context-transliterator-29801/context-transliterator.doc.tar.xz) = 80ad7fa7086642cf7245cd7385a0611025f9e51b2c728cd7b8c861825909ebee5af07c92eda53c8b5c3f91d9ae85e78f8120eac6a43fab29d010f7830219bf50
 Size (tex-context-transliterator-29801/context-transliterator.doc.tar.xz) = 186752 bytes

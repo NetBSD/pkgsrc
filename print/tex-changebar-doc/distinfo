@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:37 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:48 nia Exp $
 
-RMD160 (tex-changebar-46919/changebar.doc.tar.xz) = ca8f5e304d5937f4bad45882316328c3515b9c3e
+BLAKE2s (tex-changebar-46919/changebar.doc.tar.xz) = d165b43b42d5915dcd052bb0ddc25b8362d1a0e9196ef9306af46916c0f23485
 SHA512 (tex-changebar-46919/changebar.doc.tar.xz) = e3d83058bb12b1fc2f6ce3c454f9d2886dd57778b71e249ab300130c41092a486e23da7dcade992ec48768abfcb113f67261f8e17f450d47d827c5ec45855d74
 Size (tex-changebar-46919/changebar.doc.tar.xz) = 636452 bytes

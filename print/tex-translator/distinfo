@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:51:46 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:14:57 nia Exp $
 
-RMD160 (translator.r56052.tar.xz) = ae8e7827aaa5f5050e195b66a663563ededaa4bd
+BLAKE2s (translator.r56052.tar.xz) = 1107d31731ba0f8ad04d5ce9beefff26d01762e9cdd52ed99d1e46336f5ac5a6
 SHA512 (translator.r56052.tar.xz) = 87eb30409270c63236f5933a52d7815b529a4aca0d7ecc2cb7cb69199d0597684cd48e25b2f00be80024f734d2f4067650adf457ef942aa8477359a6be20d886
 Size (translator.r56052.tar.xz) = 25580 bytes

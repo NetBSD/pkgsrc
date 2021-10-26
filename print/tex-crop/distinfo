@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:51 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:13:02 nia Exp $
 
-RMD160 (crop.r55424.tar.xz) = 57805640abe08c0c5ef085db28a0c2d43d441bae
+BLAKE2s (crop.r55424.tar.xz) = b170d6f7771fd156749c9759d1a47e443ed0da7594f0902cbf979e16cf0c3a15
 SHA512 (crop.r55424.tar.xz) = f6161e7688d8853d2d9041cfe26360b71a920028df673d04ba38f258c810021752bb7282757ceb98b2e62f7ae52a5f4abcdc61333081d77b205d5431ca62a569
 Size (crop.r55424.tar.xz) = 4680 bytes

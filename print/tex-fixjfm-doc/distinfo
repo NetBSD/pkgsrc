@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:10 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:20 nia Exp $
 
-RMD160 (fixjfm.doc.r47113.tar.xz) = 6847df725fc4d44fce946b493bf17b5d30ff1c78
+BLAKE2s (fixjfm.doc.r47113.tar.xz) = 35675e41d24ede63730ab46ad6d6089cb58af94672403b1de4f91949e83f9661
 SHA512 (fixjfm.doc.r47113.tar.xz) = 5de4126f1f5215fc8132e0449048bd66dc73d8a5cff460d7873205f3cb55c2f8069870d9ffc794d5c173a52acccb5bdbe45b34189fbdd40509bfcdeed804153c
 Size (fixjfm.doc.r47113.tar.xz) = 286260 bytes

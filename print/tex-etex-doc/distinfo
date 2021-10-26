@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:50:04 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:13:14 nia Exp $
 
-RMD160 (tex-etex-31600/etex.doc.tar.xz) = 62d3019039257b485d75dafd67cbf89bb674a88d
+BLAKE2s (tex-etex-31600/etex.doc.tar.xz) = 2edf08758ef1f7e7678d4bfdbfe6df9420b101d8addf3dac1ecb65812d918187
 SHA512 (tex-etex-31600/etex.doc.tar.xz) = 8e7336e891f9d1eb7b9799a6d4e66453095f45c5e390952b0ef50ac09b523c9c6f37fa6063aaee63c15d40f893ac763765492a9c6ed5017ae6acf65be98f7486
 Size (tex-etex-31600/etex.doc.tar.xz) = 189676 bytes

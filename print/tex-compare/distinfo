@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:43 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:54 nia Exp $
 
-RMD160 (compare.r54265.tar.xz) = 2e9bdc62b694f099ca1d4c334533f7dade9cd42b
+BLAKE2s (compare.r54265.tar.xz) = 8dc3b5a8227f9c19e9815bde471795cf037cd2eaa591db555615c7b76f9e590b
 SHA512 (compare.r54265.tar.xz) = 16d6ffeaa66c1165ce4c6795ff2f73e0cc5a811045198db6e7aa2556bc6ff8b20883478011fae9f06400475f9a96a57fea34f7513b7fbbb392aee03dbd30ad01
 Size (compare.r54265.tar.xz) = 708 bytes

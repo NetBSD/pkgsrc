@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:59 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:10 nia Exp $
 
-RMD160 (tex-newunicodechar-47382/newunicodechar.doc.tar.xz) = c4f54aae1d305353cd32c7a894c37c1c5a251a3a
+BLAKE2s (tex-newunicodechar-47382/newunicodechar.doc.tar.xz) = 5de653d6cac354030c50fc5dbf8bf525ce7fddf0a9d25e85ac677a23e9260351
 SHA512 (tex-newunicodechar-47382/newunicodechar.doc.tar.xz) = 75e0e692b0e6787a3614f559281067795ee3ab6cb7f75b6a001d3f1982d52a15124ba3658e78d390665d8bc3240d153dd6766c1aa8922f19abd315b26e7db93a
 Size (tex-newunicodechar-47382/newunicodechar.doc.tar.xz) = 389624 bytes

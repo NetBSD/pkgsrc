@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:08 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:13:19 nia Exp $
 
-RMD160 (tex-feupphdteses-30962/feupphdteses.doc.tar.xz) = 8418897055f7ff17860f1239bd2a31ea587ad359
+BLAKE2s (tex-feupphdteses-30962/feupphdteses.doc.tar.xz) = 02604095656169bf82fce718c120ce71e1a6a9ec4cdea9aa6b42fe3335741102
 SHA512 (tex-feupphdteses-30962/feupphdteses.doc.tar.xz) = c67dba0a8d150c32d4774d03333e3bee5a7867f8457a56cfc4b75215c9292d48a26f04fc384f8964878432894b98227b2a7b32aba48559ecd8045578858af797
 Size (tex-feupphdteses-30962/feupphdteses.doc.tar.xz) = 187324 bytes

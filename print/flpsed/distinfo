@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:48:54 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:12:06 nia Exp $
 
-RMD160 (flpsed-0.7.3.tar.gz) = 2f6cd345ff65d9c5d77197272657170168257a06
+BLAKE2s (flpsed-0.7.3.tar.gz) = 3b106dfcfffb64a718cc117604aa9aa3622431e9d8b3b7bbbf706f461940ac17
 SHA512 (flpsed-0.7.3.tar.gz) = b0a8bf2ea08630d280f83f7c32b4574ba4cf7fd989943492e77d1b73c8d83c81a5df40e64bfff744b5518de845eba21119242ff752e16b20816b225ccb7c3321
 Size (flpsed-0.7.3.tar.gz) = 146788 bytes

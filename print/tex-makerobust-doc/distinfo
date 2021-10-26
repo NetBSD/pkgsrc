@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:50 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:01 nia Exp $
 
-RMD160 (makerobust.doc.r52811.tar.xz) = 3351045e3c7193e60bf1a268ec698efb106a6237
+BLAKE2s (makerobust.doc.r52811.tar.xz) = fb8570768d143aa6c45a0ff5554ae423e6591a6366ff20f3747bcde0177c0215
 SHA512 (makerobust.doc.r52811.tar.xz) = 4503551b0085c7c829d41042083209bc02dfd2391f99cf0fabafb363e288a455e51273bf0f9d4ff5a5fe17050fb5288a7835742e06865407b8400c88244f4e6e
 Size (makerobust.doc.r52811.tar.xz) = 66632 bytes

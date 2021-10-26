@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:59 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:09 nia Exp $
 
-RMD160 (tex-newlfm-15878/newlfm.doc.tar.xz) = 032fdbe5dfe5233619ff7247b2c2189ae553dd72
+BLAKE2s (tex-newlfm-15878/newlfm.doc.tar.xz) = 7ef92eaf0ea3b4a31562c5133c6239a504b438c3ff4458d70a696070fc1ed851
 SHA512 (tex-newlfm-15878/newlfm.doc.tar.xz) = 5125abdb6071c6461e9baf2ff0e8a03cce7491292f511d364ccdfe9604c39ce88b0b84f686d4be2dfa19e5d8a7969af52ab0f7f7086e20eb5271bcc9f415e766
 Size (tex-newlfm-15878/newlfm.doc.tar.xz) = 342272 bytes

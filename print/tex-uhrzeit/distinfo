@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:48 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:59 nia Exp $
 
-RMD160 (tex-uhrzeit-39570/uhrzeit.tar.xz) = 31863b1908d4ad3e355801b81a93fedd48813d76
+BLAKE2s (tex-uhrzeit-39570/uhrzeit.tar.xz) = a5101af161029e0febbc466910e68329122bcc799d1722c3869ab9695c6595f3
 SHA512 (tex-uhrzeit-39570/uhrzeit.tar.xz) = 56f4c5384afc97c2f2cfe158205b1ce4b215988cc87a24bdc562ee869cebc931192ed031a0b3af3d05f3212a2353cfc162f1f39baa0d471768e41f454a6b93b7
 Size (tex-uhrzeit-39570/uhrzeit.tar.xz) = 2056 bytes

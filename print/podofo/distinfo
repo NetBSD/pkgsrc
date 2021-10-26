@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2021/10/07 14:49:02 nia Exp $
+$NetBSD: distinfo,v 1.23 2021/10/26 11:12:13 nia Exp $
 
-RMD160 (podofo-0.9.6.tar.gz) = 71764cd85c7e443654689f84dd8c68fccb24e442
+BLAKE2s (podofo-0.9.6.tar.gz) = 4d56bd684ef53114d2b5a0c23fccf55aeedf930d25d3c88c08803e2e75edd92d
 SHA512 (podofo-0.9.6.tar.gz) = 35c1a457758768bdadc93632385f6b9214824fead279f1b85420443fb2135837cefca9ced476df0d47066f060e9150e12fcd40f60fa1606b177da433feb20130
 Size (podofo-0.9.6.tar.gz) = 995898 bytes
 SHA1 (patch-CMakeLists.txt) = cb576aaf2e6ebe875818aefbba8d83c4ddbae7e4

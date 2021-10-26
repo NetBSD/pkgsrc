@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:55 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:15:05 nia Exp $
 
-RMD160 (tex-vntex-30579/vntex.doc.tar.xz) = 435c4ebeacc5a8b0b0d516cbe678d3774e9d498b
+BLAKE2s (tex-vntex-30579/vntex.doc.tar.xz) = bead5d1de7c8ce96516e59c5f3f55d3a68c71c30c8808ed9b43d84f805b62aff
 SHA512 (tex-vntex-30579/vntex.doc.tar.xz) = 2b2c584d1345d31aef1a338c8a08bfe8ce9e5f6431d912a64773c42d5a6211692beb330a52d540d38dc0504b252625244e27181ce9c059f377b3879d54091959
 Size (tex-vntex-30579/vntex.doc.tar.xz) = 673876 bytes

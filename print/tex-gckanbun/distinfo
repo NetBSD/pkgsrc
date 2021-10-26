@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:36 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:26 nia Exp $
 
-RMD160 (gckanbun.r58754.tar.xz) = e383c31603837ed76b4958236edda7b20e5b0f17
+BLAKE2s (gckanbun.r58754.tar.xz) = 45ad686b24fccac16384ed853698e98b1809866658553637e5376b66bc872525
 SHA512 (gckanbun.r58754.tar.xz) = e3847d0d2d7273f0abf73d3d07524eb07358a7a61f42e9d72516bc20c4521916f1d68d1cf22cd266f7eb9e20b6687e8ff3cb12ef6524b02e713d1b1e653887cb
 Size (gckanbun.r58754.tar.xz) = 1996 bytes

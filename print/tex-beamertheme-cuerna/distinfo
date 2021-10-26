@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:26 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:36 nia Exp $
 
-RMD160 (beamertheme-cuerna.r42161.tar.xz) = c3cfb9299ca7aeecc8d553ae2e6e14ff25802e61
+BLAKE2s (beamertheme-cuerna.r42161.tar.xz) = 0a4f06807999f922badbc0c571b41f5675942e4c53f47cf80e3b6eccd9c07c88
 SHA512 (beamertheme-cuerna.r42161.tar.xz) = f0433d4a4582958ad057fddcddf1f1f992ec98a199943bcf80a7834e37eb7fa5660258edb08e2bd9205628dc1b8a69419c907b6c007a1c63cd1fb335e439125d
 Size (beamertheme-cuerna.r42161.tar.xz) = 2492 bytes

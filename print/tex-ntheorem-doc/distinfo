@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:51:01 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:14:11 nia Exp $
 
-RMD160 (tex-ntheorem.doc-1.31/ntheorem.doc.tar.xz) = 0309f13041e82314cb9521688d2eca1f8fc5b89a
+BLAKE2s (tex-ntheorem.doc-1.31/ntheorem.doc.tar.xz) = 9c71ffcf013f9aad92c2112c781c3e8e1d13be19e204dc5c7a4914c767d87afa
 SHA512 (tex-ntheorem.doc-1.31/ntheorem.doc.tar.xz) = fdea81cedc9ceca6ee29ee006867a05f018f210db2cb59c763adc4bc15db65a7e96ffc93bcd576a4c1a50e7e55d4b199132371686538216eba6fed65dce77ba1
 Size (tex-ntheorem.doc-1.31/ntheorem.doc.tar.xz) = 420704 bytes

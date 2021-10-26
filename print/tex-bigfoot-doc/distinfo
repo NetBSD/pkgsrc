@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:29 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:40 nia Exp $
 
-RMD160 (tex-bigfoot-38248/bigfoot.doc.tar.xz) = 908715502bd53e01725f72889614d3893a93d757
+BLAKE2s (tex-bigfoot-38248/bigfoot.doc.tar.xz) = 9c952023f187639202e65f0fe63f289c3d5fb59f7d23871da6ff10501bd1acdf
 SHA512 (tex-bigfoot-38248/bigfoot.doc.tar.xz) = 0da20ccbbf7d3d2fb2d34a588fb4e5d751f46aa4b6cbcedf3ee0277d3c962cfbdd3d55868077f059f3d6bd8a9bc293d004c6bb641e24c86a3224b868700decd7
 Size (tex-bigfoot-38248/bigfoot.doc.tar.xz) = 736296 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:03 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:14 nia Exp $
 
-RMD160 (tex-options-39030/options.doc.tar.xz) = 4149ca1dff9a4af0e6e06eeac93779d18ced8d4a
+BLAKE2s (tex-options-39030/options.doc.tar.xz) = a369bd70e84abaf390ee3700928466ddd464bcf11ea8f5c68c8290cf725702ab
 SHA512 (tex-options-39030/options.doc.tar.xz) = 4707dba5d91d8aedf4886beb516e24077c17cf0f3c31667210798a9774c26c53f349c53e37b2af6e44945d8d584ee6e6f438b83be3c13d64d25bd478376367e2
 Size (tex-options-39030/options.doc.tar.xz) = 223068 bytes

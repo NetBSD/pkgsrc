@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:49:09 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:12:20 nia Exp $
 
-RMD160 (tex-abc-41157/abc.tar.xz) = c8054c8218ac93aefdd36f65cfc1917be6cbcd1b
+BLAKE2s (tex-abc-41157/abc.tar.xz) = 1540c212fd0a9b468dff3a06c0fd3dc6b88b621c7b309ef475f5cacb1924bb7e
 SHA512 (tex-abc-41157/abc.tar.xz) = b7ff8853603ababd7c0403c262c433e5621df3ea5265eb3a7944874862114d1d4441046b80f3bca523a80eb42739aa4790ad64651a1eb792e60802a3ab42aac8
 Size (tex-abc-41157/abc.tar.xz) = 2604 bytes

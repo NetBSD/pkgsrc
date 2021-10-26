@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:46 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:57 nia Exp $
 
-RMD160 (tex-context-degrade-23167/context-degrade.doc.tar.xz) = 04c1a0b2046f4a5e6590f65dad68186b2f135f68
+BLAKE2s (tex-context-degrade-23167/context-degrade.doc.tar.xz) = 164305c39723a800a7904ec645ad8a98a1682b0fa5434f5598c9367930296118
 SHA512 (tex-context-degrade-23167/context-degrade.doc.tar.xz) = a969c47d2e5e00a2a6c2bbefaa42fd8d2f0155d5760d2ec0e7c6c3e5defe740c948d0f2862b346b6baf004171ae0b66a1ceceaa4226d7dd16f48e80a34f83f7f
 Size (tex-context-degrade-23167/context-degrade.doc.tar.xz) = 180300 bytes

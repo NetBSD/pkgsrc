@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:51:42 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:14:54 nia Exp $
 
-RMD160 (tex-tocbibind-20085/tocbibind.doc.tar.xz) = 7cae13f15e265e1e625c846265296a959439a2e4
+BLAKE2s (tex-tocbibind-20085/tocbibind.doc.tar.xz) = 73c3f5fd2c1fe0465ded72eec76ea9eaece887a37a902a8b878f4408120fb386
 SHA512 (tex-tocbibind-20085/tocbibind.doc.tar.xz) = b7ea00659454fe9c44cd30d7102d073635df61a7ef73c68dea9c58789da2d76b38dd0dba92cc3caba86864d4295ab8a887a239ca465c20dc52525020b739a3cf
 Size (tex-tocbibind-20085/tocbibind.doc.tar.xz) = 311564 bytes

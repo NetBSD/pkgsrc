@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:51:01 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:14:11 nia Exp $
 
-RMD160 (ntgclass.doc.r56959.tar.xz) = 4e863a92ada4d2807658f1681ba70c4c1221caef
+BLAKE2s (ntgclass.doc.r56959.tar.xz) = f45c657f382f859ff7b8216c104d4d2f124f0bfa1ad19bc722c0def310e545cb
 SHA512 (ntgclass.doc.r56959.tar.xz) = a58debb1c6a07c63dfb45ea6647db75bb09217a2c7680318cd6ee56575dfde985ae88ba361ea9ed1adb26ecea430e851599ccfa900292e4847b70e02eff65887
 Size (ntgclass.doc.r56959.tar.xz) = 1711884 bytes

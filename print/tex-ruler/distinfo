@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:22 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:33 nia Exp $
 
-RMD160 (ruler.r54251.tar.xz) = 13fcc1e117316a1d957deb1aff97ec54aeb114aa
+BLAKE2s (ruler.r54251.tar.xz) = 5963f76463a92d35226cfe85f8ad48089b5da6c13349c164f3e153738f1ccb59
 SHA512 (ruler.r54251.tar.xz) = a0ac63735eee4be96fc368bece6eed80058b79689954780990e1da5632448203c4f99d9b13f541a89e523f4a531983d5fefd836b99ed64c2f177723c822f8749
 Size (ruler.r54251.tar.xz) = 6620 bytes

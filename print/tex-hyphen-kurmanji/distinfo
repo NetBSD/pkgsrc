@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:50:28 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:13:38 nia Exp $
 
-RMD160 (hyphen-kurmanji.r58652.tar.xz) = a0e3191e21ff1cbd3aeae10fc925931a454ad64c
+BLAKE2s (hyphen-kurmanji.r58652.tar.xz) = 7d42b9f20b155cf180e20619e1493e0ae706b5642a1f0c230f2c4518f70857a7
 SHA512 (hyphen-kurmanji.r58652.tar.xz) = e5114da178fc841b1079130c01f8729ac94f0e3592dbd479f44a978ea009fd75b410d6130d9badd6227d115d8f6dad3ed4b553dbfbf4f80be5d1c2adf108e2fa
 Size (hyphen-kurmanji.r58652.tar.xz) = 2708 bytes

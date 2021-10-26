@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:15 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:26 nia Exp $
 
-RMD160 (gentombow.r56665.tar.xz) = ec543317412f295cdccae286375fac343738fd14
+BLAKE2s (gentombow.r56665.tar.xz) = bdb61b8d7c4e578b4aa0852af9700d9440e2bc9238a50407cdb6aad63b097e90
 SHA512 (gentombow.r56665.tar.xz) = e97b138d5359c3fa0635bf56001ecc7c6a5afb2ab2a01fd8817cbd956adce97bee67632f4e3ae40d56e5d2ce06bc07ab33b52bbe3978f14bf4957d2647781813
 Size (gentombow.r56665.tar.xz) = 10892 bytes

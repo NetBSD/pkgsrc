@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:51:50 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:15:01 nia Exp $
 
-RMD160 (tex-undolabl-36681/undolabl.tar.xz) = cef4117c9230e82df33cf4592ceb3f073d7adf38
+BLAKE2s (tex-undolabl-36681/undolabl.tar.xz) = afea267f9277c301f1cef55923d40bd1f2fbd6eddcbebacab2c6a880a3d94af6
 SHA512 (tex-undolabl-36681/undolabl.tar.xz) = db01f8a42c969b0180d5d1365b5b10fa628034869c0c63418dc0f9c1cdd6d265468387b97255ffe10e4e16c4ffb8a4ad64987ded8c0371049fa76e95c38d60a9
 Size (tex-undolabl-36681/undolabl.tar.xz) = 2344 bytes

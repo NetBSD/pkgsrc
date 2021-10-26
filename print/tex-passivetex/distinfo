@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:51:06 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:14:17 nia Exp $
 
-RMD160 (tex-passivetex-15878/passivetex.tar.xz) = 1e93eb9e31aa42bebbd233a161a9e4727fff785e
+BLAKE2s (tex-passivetex-15878/passivetex.tar.xz) = f4297ff13c2a8c089d4337e5b6014c2a4d7af8724fc2c6e9970d64a2bbe3b786
 SHA512 (tex-passivetex-15878/passivetex.tar.xz) = aa15ad1ca5110ea73713afb44c801c6227d8df1c465b0b1503d6e0bbe2b092afd68b459ea0ea13968efbfff70c035e409c16c7333f9526287b4645a97e8f1b14
 Size (tex-passivetex-15878/passivetex.tar.xz) = 44632 bytes

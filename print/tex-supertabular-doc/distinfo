@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:51:33 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:14:44 nia Exp $
 
-RMD160 (supertabular.doc.r53658.tar.xz) = 31be4feab99f30016ca3a3d67c4beced467e042f
+BLAKE2s (supertabular.doc.r53658.tar.xz) = 7d82d0726c2f6700716de875681d0edffebb5045b220904aeffbb3692aae6088
 SHA512 (supertabular.doc.r53658.tar.xz) = 0a36abcb782ea20b3c45d5c42a55fb41c04c3707c9c5b0166f90b7494032376d6756f827f1293cf998b56a84192aed36b6224e4abe14646557d130427f3bb63d
 Size (supertabular.doc.r53658.tar.xz) = 259052 bytes

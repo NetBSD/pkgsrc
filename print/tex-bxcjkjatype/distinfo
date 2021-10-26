@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:33 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:43 nia Exp $
 
-RMD160 (bxcjkjatype.r54080.tar.xz) = a3bb437b72f6a22c2bf6d9063d69668dda6e1478
+BLAKE2s (bxcjkjatype.r54080.tar.xz) = 09dfbf485da87e70fb9a05f365cf1cfcc2026ba1cb2e93617d04cdf577a3d87d
 SHA512 (bxcjkjatype.r54080.tar.xz) = f720106c08ffc3b8f9a2c9279325364d5ae91948d3c61b83423d41a55249cdb205bf330c8f08ce6877a7713e82a67a29f1a71e9ff07f9c1225926a61a858fb5a
 Size (bxcjkjatype.r54080.tar.xz) = 8212 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:22 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:33 nia Exp $
 
-RMD160 (hypdestopt.r56253.tar.xz) = ac4089bea2454aed6b39b0f5f0678751de1ab88a
+BLAKE2s (hypdestopt.r56253.tar.xz) = c79e569ffa53a8e5fd27690b52799d8665c450491b0a64b43b8e57e71801458b
 SHA512 (hypdestopt.r56253.tar.xz) = 784fbff599b60abebd3ae794376a65b460c0ac4aa189319e3f245c1feefa5bb501acf75ed345bb6099e301070d0c1e1eaca62129c4e82fae5611526b6aff370d
 Size (hypdestopt.r56253.tar.xz) = 2772 bytes

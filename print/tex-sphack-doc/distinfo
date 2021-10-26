@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:29 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:40 nia Exp $
 
-RMD160 (tex-sphack-20842/sphack.doc.tar.xz) = d2872e4893c828b2b26082870318a9250e07ee76
+BLAKE2s (tex-sphack-20842/sphack.doc.tar.xz) = 72371cf0e0ad0987222317f6f0c5d92ab8204d19251e1f3dd9c5561ac84b9fb8
 SHA512 (tex-sphack-20842/sphack.doc.tar.xz) = 86c1a9527fb5eb9b66bdbc3c348a22e01e54721a81eca854ad817110679ab439f4b49f39b313aeb1012c2b09485c62210531473be6bdd7b48363bd92789829da
 Size (tex-sphack-20842/sphack.doc.tar.xz) = 243456 bytes

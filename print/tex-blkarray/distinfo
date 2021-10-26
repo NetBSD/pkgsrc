@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:30 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:41 nia Exp $
 
-RMD160 (tex-blkarray-36406/blkarray.tar.xz) = f53784dadf0ce1854e137ea1d6f320da3bad6c4c
+BLAKE2s (tex-blkarray-36406/blkarray.tar.xz) = 47322a195503366c483703a4d72e5465689ee1892a5cbbf82d5bda015176bdf8
 SHA512 (tex-blkarray-36406/blkarray.tar.xz) = d72ba4adff55f799837dec2ca212aacba1dfabf200fc2260cc2dc553196c0774c730ba3d90e8612e3b7171fb310e1b7e6a122c9db5ff43c4da72c48459f3400e
 Size (tex-blkarray-36406/blkarray.tar.xz) = 18876 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:06 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:17 nia Exp $
 
-RMD160 (tex-pb-diagram-15878/pb-diagram.doc.tar.xz) = ac87225161ca069d0c4f0f4ff6e509fea23c19bb
+BLAKE2s (tex-pb-diagram-15878/pb-diagram.doc.tar.xz) = f759f7ea57d566bc0d65f0b941ce161f55a3c2b14ed8183423c9a6a032fc40e5
 SHA512 (tex-pb-diagram-15878/pb-diagram.doc.tar.xz) = 1cc3d00b7ac6710ca577d195b9c1cc0bec8f6148ad0e0a5cc514ec349b092eb145ba7987b3bc22f7eff56c068013fdaf2779f2df7274dd5d459890b17dee6d7c
 Size (tex-pb-diagram-15878/pb-diagram.doc.tar.xz) = 123548 bytes

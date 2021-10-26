@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:51:54 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:15:05 nia Exp $
 
-RMD160 (tex-vertbars-49429/vertbars.tar.xz) = 654c94cd5e956d0071397b403d17b9c7072997e7
+BLAKE2s (tex-vertbars-49429/vertbars.tar.xz) = ce7763ad73dba942edfc4814662bacf7785248d5adc45deb681903996487987f
 SHA512 (tex-vertbars-49429/vertbars.tar.xz) = 95bad5de003bf42af1e8f5ce7cd71e1730a070e19a52e2546f17db4ec5cf486db28f137c141250a3af092255c96675b015aabbfaf38e0067cfe4489283bc6227
 Size (tex-vertbars-49429/vertbars.tar.xz) = 1220 bytes

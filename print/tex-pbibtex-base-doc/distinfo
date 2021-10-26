@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:06 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:17 nia Exp $
 
-RMD160 (tex-pbibtex-base-40986/pbibtex-base.doc.tar.xz) = a1388bd80a74ff5d99c9002a3a92071632b31472
+BLAKE2s (tex-pbibtex-base-40986/pbibtex-base.doc.tar.xz) = 8dbb9c8a984224191bdf19dda434e309a95837aad7176faa27cb23c2395dee5a
 SHA512 (tex-pbibtex-base-40986/pbibtex-base.doc.tar.xz) = 47db1807a3118b396f9fbb3350262b7c45f2e7cc2e604fdd524caed60ea1bb6ea33cf40f197fcf9facff6126d71fec44f38d6535e2a56bbe184fa0b77fbfbe28
 Size (tex-pbibtex-base-40986/pbibtex-base.doc.tar.xz) = 846568 bytes
