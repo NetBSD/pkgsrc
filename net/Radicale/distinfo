@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:41:11 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:05:21 nia Exp $
 
-RMD160 (Radicale-1.1.4.tar.gz) = 23d26ed5461e0443df1b64cc59398c33a4fdb80b
+BLAKE2s (Radicale-1.1.4.tar.gz) = c9c77661abade5d4ed2c9553b8547d6b0f81d03a59355dce7a2a553048225e7b
 SHA512 (Radicale-1.1.4.tar.gz) = cea576a303081cb5f7aa936cb6e253a9f4f41ed54ac69a7441047e4b1c012f264258c11fc881836293cb4c3f8c2f7d9a206784b78ff641b21f33c99b8cc6296c
 Size (Radicale-1.1.4.tar.gz) = 47874 bytes
 SHA1 (patch-config) = de1060a10ace5de77dfc8dd25cfae4d6aefa96ee

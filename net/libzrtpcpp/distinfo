@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:41:47 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:05:57 nia Exp $
 
-RMD160 (libzrtpcpp/V4.4.0.tar.gz) = 7018a4507aaa67debb52d54a428750e9f9e01eef
+BLAKE2s (libzrtpcpp/V4.4.0.tar.gz) = 6be8b9adacc5b69a7d1d8f93e875c0cd55d995165e512bcebfddea52c2b1af5f
 SHA512 (libzrtpcpp/V4.4.0.tar.gz) = 56cc44cf05a505b6d62043f4ee621bc00fd38d1b0f27f9d21ed6169aae3d08f948cf2af91f8a094f24db82080fc9c553aa50c34d06926b68cd767f258454c204
 Size (libzrtpcpp/V4.4.0.tar.gz) = 1933037 bytes
 SHA1 (patch-CMakeLists.txt) = 1c56d64b67a381cda790bbdab3892f3be408231f

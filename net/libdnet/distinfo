@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:41:44 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:05:54 nia Exp $
 
-RMD160 (libdnet-1.12.tgz) = 4b849f07c3513522fda65af067928b7e6d504aab
+BLAKE2s (libdnet-1.12.tgz) = d43c2c117f6ddeed5a54f1e45486eb16a2bbdbd2264d7d99f1026c7cc510ec97
 SHA512 (libdnet-1.12.tgz) = b763d2caa77b8d16b531142a5bce3b862ed20198406a00e1fe7f3b45ce308b97d638b0c7f03bd8593fdd206cc1645952839bc340b77537298a3df88599835bf3
 Size (libdnet-1.12.tgz) = 970125 bytes
 SHA1 (patch-aclocal.m4) = b3d2989ecaccdd73d9d753e8ba8bdb2e6c023af6

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/22 13:44:40 gdt Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:06:40 nia Exp $
 
-RMD160 (paho-mqtt-1.6.1.tar.gz) = d6bccf7fdb166109d901a63fafc99432c195ef68
+BLAKE2s (paho-mqtt-1.6.1.tar.gz) = 9132757814cfe21f36fd93ee49a9efe80307a3915dd597b340c587f4f0d7353b
 SHA512 (paho-mqtt-1.6.1.tar.gz) = 74e090eab347f2a629c76aed8116dd9e435f87d8ad7ca4944c1ae48538d34a0a34a83eb672158c5a12452e753838aa55347bf44ec8bfc3d28bd939591a6efbe5
 Size (paho-mqtt-1.6.1.tar.gz) = 99373 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:42:18 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:06:28 nia Exp $
 
-RMD160 (pchar-1.5.tar.gz) = b8e600b9c11cf7e584768c87aadeeb9d7b482949
+BLAKE2s (pchar-1.5.tar.gz) = 092107cd135c40c3d2886203928e53fcebb84302f84900b87e5ac99fb84de739
 SHA512 (pchar-1.5.tar.gz) = 56784589a16638a12230a11a177b8dd97a7abac927624beaaea89e0169423f7242c2b434a36aad1a07d977e6b006fd71eb9132aecb1d35e3e3363eb2d1549d84
 Size (pchar-1.5.tar.gz) = 117678
 SHA1 (patch-PctestIpv6Icmp.cc) = 28f4807aa8776fc45377661f4095b9033ad69d36

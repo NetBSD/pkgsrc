@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:42:23 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:06:33 nia Exp $
 
-RMD160 (pyorbit-2.24.0.tar.bz2) = 55aa1c3ac0739d398d8e9bbda93ef36f7c659360
+BLAKE2s (pyorbit-2.24.0.tar.bz2) = 9038ebc4a1b2902786e5b7e6a49e8e5de196fcdc49d1d6342e464ab57056122d
 SHA512 (pyorbit-2.24.0.tar.bz2) = 07824722831ac39d853bbcb35f543c6a1f24606a0fea8048881b3b9e370769592b2bc92b2ec6c9c6e88a2a7f84838757a115392fba6e1dbc0d29cff6f8da8141
 Size (pyorbit-2.24.0.tar.bz2) = 293054 bytes
 SHA1 (patch-aa) = ff2b97781f72577b2805ddbc4f8e4056874e7f08

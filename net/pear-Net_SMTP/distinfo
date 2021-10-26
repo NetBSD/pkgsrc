@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2021/10/07 14:42:19 nia Exp $
+$NetBSD: distinfo,v 1.22 2021/10/26 11:06:29 nia Exp $
 
-RMD160 (pear/Net_SMTP-1.10.0.tgz) = 93372b0d97d421dd8940b35aaeaa097cf8387159
+BLAKE2s (pear/Net_SMTP-1.10.0.tgz) = 432e0c7fac889e11a4de0f5540ba0729bc88face68ac1fb1a230f39d03dbdf8c
 SHA512 (pear/Net_SMTP-1.10.0.tgz) = 4a742ea4521d6ee4889db365691cb3cd8299b9946618e7a80a10d025c4c3f68a91274829fc48ed9d095632e282b32b6e5fede633a5d48e2d995ce48b3893b218
 Size (pear/Net_SMTP-1.10.0.tgz) = 15350 bytes

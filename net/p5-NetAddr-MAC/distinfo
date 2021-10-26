@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:42:15 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:06:24 nia Exp $
 
-RMD160 (NetAddr-MAC-0.97.tar.gz) = 3c50071cdd6408ec6688cc1fbdca7a671ce1e133
+BLAKE2s (NetAddr-MAC-0.97.tar.gz) = baa38773e8f7a51908a6524d1e265617fd89216f8ddc6da226ee52a3949502d3
 SHA512 (NetAddr-MAC-0.97.tar.gz) = ac89cb5f2d81f3accff5ac240a7a4fda5e50854e2f5921093e4ae1c78aec6c125d1f3949cde6dff61f9196b3107ebb8b6437fe3cb703dcd1de9ef3ce624ac42d
 Size (NetAddr-MAC-0.97.tar.gz) = 29720 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:41:43 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:05:53 nia Exp $
 
-RMD160 (ares-1.1.1.tar.gz) = 2b564f1194f538ba12378034428bd3a22f8e5a98
+BLAKE2s (ares-1.1.1.tar.gz) = 0618957061907368bbc02b99e090e9c83bcf6aceca2f433d243bf8888b8476d0
 SHA512 (ares-1.1.1.tar.gz) = 3fc60eb50d8595ef4cd9803a517ea578a727ba621255c100440305ca3ed95dc9f4c02a15df0705d70e26b8657a243be8eea9994cb653ceeaace739aa1d477d76
 Size (ares-1.1.1.tar.gz) = 65463 bytes
 SHA1 (patch-aa) = cb8aaad721963f958d61b6b9f3d466c522736c56

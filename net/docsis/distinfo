@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:41:23 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:05:33 nia Exp $
 
-RMD160 (docsis-0.9.4.tar.gz) = 7e318cfce452e76fb4eb30bd5e43558837fb707f
+BLAKE2s (docsis-0.9.4.tar.gz) = 22eb990e1768fb00d058810a6ec9a37027c2fc3b3f01eeb6c4c037990f26552a
 SHA512 (docsis-0.9.4.tar.gz) = 71494cacf8672ddc7259b4335d300616427e18e31d10ef4efc245f0607efabc5a075bbdde935d64faa9ee4f353b62e9be214270301ecdaaa982680f77a6eba4f
 Size (docsis-0.9.4.tar.gz) = 506944 bytes
 SHA1 (patch-aa) = 946c40cc7a6545cc67eb666130156193aa17d0bd

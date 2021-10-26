@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 14:41:58 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 11:06:08 nia Exp $
 
-RMD160 (ngrep-1.45.tar.bz2) = d4b89dfa23f6a7c65d3ccefc846362054a46605f
+BLAKE2s (ngrep-1.45.tar.bz2) = f1f4bb58e710f7862b5f9e29fbb98330941e5212b9f48c892bb67f0ab82e661d
 SHA512 (ngrep-1.45.tar.bz2) = 0feb4080f834449d57ae99897c573d2b8148711cfb550fa4ff415169dedb1f0d23f4b03f625660162ca72f8ad06e19874c1af46da6afd8f8fe8dd553558c14f7
 Size (ngrep-1.45.tar.bz2) = 463361 bytes
 SHA1 (patch-aa) = 7185b12af40ce9581e59c28086e4c0bfa481c804

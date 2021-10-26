@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.24 2021/10/07 14:41:13 nia Exp $
+$NetBSD: distinfo,v 1.25 2021/10/26 11:05:22 nia Exp $
 
-RMD160 (aMule-2.3.3.tar.bz2) = a66491555184bee73a7cdebe11d22cb62fff1706
+BLAKE2s (aMule-2.3.3.tar.bz2) = 4a7cc5c69741b485396e85c89b570c54397b625a5cec3d11f54a3edaa6d10c4d
 SHA512 (aMule-2.3.3.tar.bz2) = eb42646dc835fb49f81def5c3ecceca2adceacb6dc9e4a7fec08e9ab8d7bd20d2fa623a33b476a984c7a809e624f61cad3b9b40f68a3363dd936be25cda72211
 Size (aMule-2.3.3.tar.bz2) = 4606514 bytes
 SHA1 (patch-aa) = af77036649caac372890c45840d24a404ab1a7d6

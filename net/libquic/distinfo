@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:41:45 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:05:55 nia Exp $
 
-RMD160 (libquic-0.0.3.tar.gz) = a5225e609fbdbc2e56942b3dcf063359fe5b2e10
+BLAKE2s (libquic-0.0.3.tar.gz) = 9898f85077ce4301d2e34357be21070e86b5169413f6b1090a7c75f493a55896
 SHA512 (libquic-0.0.3.tar.gz) = a04f5285b2448cd763daa9833574e5977e903975dd20980c80020ee4177df6ff6294ee2c1821d97a8ac34e44aae215178f57b52a12826135f5ee4efc8e74643b
 Size (libquic-0.0.3.tar.gz) = 5848330 bytes
 SHA1 (patch-Makefile) = 5cdfd0daf53e61b5d14f6bc1e60c8f03a72da99d

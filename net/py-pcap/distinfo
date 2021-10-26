@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:42:31 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:06:40 nia Exp $
 
-RMD160 (pypcap-1.1.tar.gz) = 119dcc393d42678e6fa8f0b0f8b82536ab1efb13
+BLAKE2s (pypcap-1.1.tar.gz) = d485f746caa2b8ebc7c3526529aad15574b3fa4399f35bd7df0ffd7c4dbc7b99
 SHA512 (pypcap-1.1.tar.gz) = f4fefb48f01b9080446d83fca3793f97aba3b3677d38520c977c49be061568163299a89c5bc6ec552d68c01fc211e1501b75a835eb68412ab8f6e4307eb0b599
 Size (pypcap-1.1.tar.gz) = 22951 bytes
 SHA1 (patch-aa) = 6fb58b55262a9b28bdc9e681b3b3ea07523bd8e3

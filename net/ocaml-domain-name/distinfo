@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:42:01 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:06:10 nia Exp $
 
-RMD160 (ocaml-domain-name-0.3.0.tar.gz) = 479141ad64c43da6ff7bd4accdd63bb1f16da0c5
+BLAKE2s (ocaml-domain-name-0.3.0.tar.gz) = 20b9fb92fc6a39ba8cc81f1dcec13a47b7b29785916f4a5323d5269577b21dd3
 SHA512 (ocaml-domain-name-0.3.0.tar.gz) = 252851f777ec2d0a3c228d262068bc0ade6d57b02ed026683158f778b6011c6d897ab158914baa2c5f12a6bd9175d12a571cb9b26bfb7cf0784bd0ea677dea70
 Size (ocaml-domain-name-0.3.0.tar.gz) = 9356 bytes

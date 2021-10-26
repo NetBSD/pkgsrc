@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:43:00 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:07:07 nia Exp $
 
-RMD160 (ppp-001107.src.tar.gz) = 58ed989cef856d0f3004d7c4bffe2f97f784d797
+BLAKE2s (ppp-001107.src.tar.gz) = 65b224dff1bf47a006baf19b5b7ae0ea6a4b4e5e1679333a8cd0a41006765436
 SHA512 (ppp-001107.src.tar.gz) = 04ea6137db9324c05e4af684bad8938c2ae24c277ba47e7c2795df1ad5785c8e2d5630dfcbba8e69790dcf008ce7c70a45fc53400a718ac813053bb0749e84f9
 Size (ppp-001107.src.tar.gz) = 380594 bytes
 SHA1 (patch-aa) = 8d1efeeb00c37fdd67cb5ee27c840036902e4340

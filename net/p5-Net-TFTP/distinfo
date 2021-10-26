@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:42:13 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:06:23 nia Exp $
 
-RMD160 (Net-TFTP-0.1901.tar.gz) = 9bd8982b38b8e6a008cc0b24a548345959e198cd
+BLAKE2s (Net-TFTP-0.1901.tar.gz) = cec53e4c58a9a31952cf36f3d5a60c4605fe5997e96bbae91720fea39ca24c2c
 SHA512 (Net-TFTP-0.1901.tar.gz) = 8e5ce32838921d8d2b247bd851f2dba5e4982df7c1e7bfb0f867533d59818b624f856bb1575df157b88e56eddde5dd8bf7bc05d21d6972136fb99f02ea3bc667
 Size (Net-TFTP-0.1901.tar.gz) = 10892 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:42:50 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:06:58 nia Exp $
 
-RMD160 (sslh-1.21c.tar.gz) = dca5001a1bde50c08c6bfe40ff9cdb923cd1682c
+BLAKE2s (sslh-1.21c.tar.gz) = f8a6a048eaf9fa88d79a39237bc6aaed761740c93fe03b935586389eee81d3e8
 SHA512 (sslh-1.21c.tar.gz) = 9446c6afe965684c5d6406ac8917338f57d95f8fbfacd7a51193dd5dbac77e1ed5e39eb8e2575e7025a8612b25e9fba7e64832a48c999f366875217b9328da22
 Size (sslh-1.21c.tar.gz) = 111895 bytes
 SHA1 (patch-argtable3.c) = da39a3ee5e6b4b0d3255bfef95601890afd80709

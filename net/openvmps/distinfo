@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:42:03 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:06:12 nia Exp $
 
-RMD160 (vmpsd-1.3.tar.gz) = 1185fbd654d5d0e939fdfa08149d1ebcb3fc0ef2
+BLAKE2s (vmpsd-1.3.tar.gz) = 02cc5cbf17ea64f44a58bba70acc3a1d8b7770b50eb2a54a72f07bd9a2962ccf
 SHA512 (vmpsd-1.3.tar.gz) = e7760f90741acddf6b010918a88c489929a028d9bb0c7bd42fd8b9eac32f3665958617163f2f5ff9d60eee3f36f5326858cd5f009503e4b22c6e50ad4f847651
 Size (vmpsd-1.3.tar.gz) = 95202 bytes
 SHA1 (patch-aa) = 03618ae72addfe881745a0bb94f7943b8c4cb749

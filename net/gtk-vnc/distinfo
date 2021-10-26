@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:41:33 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:05:42 nia Exp $
 
-RMD160 (gtk-vnc-0.5.2.tar.xz) = 2f237d5d3ee52493f52ca4d0f2c636b5ff242ab2
+BLAKE2s (gtk-vnc-0.5.2.tar.xz) = ac97e0655c40965714a9359d1d0d306dacfc55b9d19417d77abe4e1b30af8daf
 SHA512 (gtk-vnc-0.5.2.tar.xz) = e58a0bbb4c5d1802d51936d5869ccad55cd405f6939f49445e224863866a33173e47e055d88f50e60b3f864a7e393faf0c78a219a08ee8a8c1fc8fe108f9824a
 Size (gtk-vnc-0.5.2.tar.xz) = 388112 bytes
 SHA1 (patch-ab) = f59d1260533ed8c8e2932f6af416d8e5a6088650

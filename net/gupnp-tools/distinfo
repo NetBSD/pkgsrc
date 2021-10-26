@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:41:34 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:05:43 nia Exp $
 
-RMD160 (gupnp-tools-0.8.9.tar.xz) = b59c317338bffb9ef2b8b4fba09a703baab73c43
+BLAKE2s (gupnp-tools-0.8.9.tar.xz) = c84d1df0e05db04b7a9a80e53d3f1ac21afe490790db42bb5b4ee8941a083b12
 SHA512 (gupnp-tools-0.8.9.tar.xz) = 2ca7a75f2019fc8ae84e477c3bed727913bdd4d00c27a8eb5d64afd47521b5f73d2c24564e757319cdb7c188bc6e27b7e22c9b08b5dbe74a7416dae0b029c073
 Size (gupnp-tools-0.8.9.tar.xz) = 479616 bytes
 SHA1 (patch-aa) = 4d651ceaa575d6c6c27a9ec2010aeefeb3bfb3ad

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:42:09 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:06:19 nia Exp $
 
-RMD160 (Net-Frame-Dump-1.18.tar.gz) = 504b9670ae187bc1f867aa0f6ad22374ad0bbf43
+BLAKE2s (Net-Frame-Dump-1.18.tar.gz) = 9039819c7322232272e252c8b3a7cfff3599dfa04efde714bb359c3b7b64e71e
 SHA512 (Net-Frame-Dump-1.18.tar.gz) = ab7c826e61d303c3528d64811a4fe41c9c576b5da19eb0d9c667b00e37fd457fe3660aaff90460f3684fb5bda7acc33d8b843ec4b2e3cf5aa17aef2e15d65b28
 Size (Net-Frame-Dump-1.18.tar.gz) = 19709 bytes

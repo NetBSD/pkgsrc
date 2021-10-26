@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:41:55 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:06:04 nia Exp $
 
-RMD160 (check_snmp_environment-0.7/check_snmp_environment.pl) = 256eedb5c6241cdfe1d579a24665815a58f5081d
+BLAKE2s (check_snmp_environment-0.7/check_snmp_environment.pl) = 379a1883baf31dd63ae382603fd119b6a180a7c86604567902c8dc8a15291490
 SHA512 (check_snmp_environment-0.7/check_snmp_environment.pl) = dbb128a5820c15d27076094d39c04ca52ec527beb44289a8261833d7cbe7ee2079f70cbff9210e3043f3e0df05c7b142c9fc0be2b46eee468bfc327953b0079a
 Size (check_snmp_environment-0.7/check_snmp_environment.pl) = 97676 bytes
 SHA1 (patch-aa) = 880a70b25a6b3c6e9b39c108d8261d4f4de7d1c5

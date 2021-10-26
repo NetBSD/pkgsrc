@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:42:18 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:06:28 nia Exp $
 
-RMD160 (parpd-1.7.tar.xz) = d223a80ff5018579e4decf28183e9d448d2fd747
+BLAKE2s (parpd-1.7.tar.xz) = cd9b1aedf7541938d76c26f475d344105a398433674fc88d953b95fbe67488aa
 SHA512 (parpd-1.7.tar.xz) = d682d4ce012e87e0e9b051d96ead61f6dc273a0e193ea45f556e902924a7d02a25b7913af9ed779dced51ce658457f8308e71b34f7bba3adcf4be23973322b40
 Size (parpd-1.7.tar.xz) = 18624 bytes
 SHA1 (patch-parpd.c) = 16978a037b420ba5b1f38a64b5d0b42b8c2cc7f7

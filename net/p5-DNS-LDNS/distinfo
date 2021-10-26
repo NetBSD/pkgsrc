@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:42:04 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:06:13 nia Exp $
 
-RMD160 (ldns-1.6.17.tar.gz) = 5382cfaafa7ec1fadcf390f804fbf14e04d7c03a
+BLAKE2s (ldns-1.6.17.tar.gz) = bb5f9bd31199be33dcafcfc66a6b9dd4a868838d4d3612785cb50327f8c72dff
 SHA512 (ldns-1.6.17.tar.gz) = 5de42b4b8622591db51efb0956735deee9cd5e0bee12249a03b65c5b45d7c51bf9c2edb310ef9d7431af49aef77d968bfa2455a7dedfa80cde3d433436c83785
 Size (ldns-1.6.17.tar.gz) = 1315403 bytes

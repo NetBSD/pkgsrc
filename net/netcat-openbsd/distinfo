@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:41:57 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:06:07 nia Exp $
 
-RMD160 (netcat-openbsd-20131208-126d9bbdca6afb45d9c2d38e4313d2a1a59e35e9.tar.gz) = 70d580f0428b7f5564d3e15611a152510d7dde7e
+BLAKE2s (netcat-openbsd-20131208-126d9bbdca6afb45d9c2d38e4313d2a1a59e35e9.tar.gz) = 0da08ac3d856e79ca0e0dbb7c82ce974bac7e68b51d947f92a89718f37da3bae
 SHA512 (netcat-openbsd-20131208-126d9bbdca6afb45d9c2d38e4313d2a1a59e35e9.tar.gz) = f87ffbfa2b29ccd03a4eea228790c04dd794c839024b69b42707a7fcfebb714a719c9e622b6f6925500cefbf1b75974c8a39fe0661e25270f9a2220583362ec8
 Size (netcat-openbsd-20131208-126d9bbdca6afb45d9c2d38e4313d2a1a59e35e9.tar.gz) = 19533 bytes
 SHA1 (patch-Makefile) = d33814f068d42a4c2decc6bd10e44fa7125bbb8a

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:42:58 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:07:06 nia Exp $
 
-RMD160 (ucspi-unix-1.0.tar.gz) = 126dee569d06cb43bc2cc0195e2f14b8841d097a
+BLAKE2s (ucspi-unix-1.0.tar.gz) = dd59114cd08aad67c3f307bb89ccdf18bc550ed34dd015f80d1a070c865c53f4
 SHA512 (ucspi-unix-1.0.tar.gz) = dc79515908e34cd3bcc8c66f360fe3f4662a5be35c9876b07c609fac0f90e0f498d306d1796ebbade902c7affceece7d18f8acd178a850e42d6d6820d53c1d11
 Size (ucspi-unix-1.0.tar.gz) = 17391 bytes
 SHA1 (patch-unixclient.c) = cc463955783d3e2e6c27d9e7cb6b1091bfad65a5

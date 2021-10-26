@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.31 2021/10/07 14:42:51 nia Exp $
+$NetBSD: distinfo,v 1.32 2021/10/26 11:07:00 nia Exp $
 
-RMD160 (scotty-2.1.11.tar.gz) = 3b4d45f3db73f05b49a46017bf2ffed6d6464b00
+BLAKE2s (scotty-2.1.11.tar.gz) = d49cb08c889b3be42052ecc4d54834b46f634f1b7580fbb61b430a29b8876854
 SHA512 (scotty-2.1.11.tar.gz) = a75eb6bc54e183a8f6b5995122f35133b0f76a7a1061c177d09b4082994d6f05c1b1826bf230945dd699b65d491863c4b74353bc0d4901da5b068217ac376a87
 Size (scotty-2.1.11.tar.gz) = 1381059 bytes
 SHA1 (patch-doc_tkined.1) = 16a73e3bb50d4c40317adfabfc997b9554a35f33

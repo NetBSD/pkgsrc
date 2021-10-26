@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:41:55 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:06:04 nia Exp $
 
-RMD160 (check_spamd-1.6.0.pl) = 98cc8e8c61decd0e230818eebd777c19005b74c9
+BLAKE2s (check_spamd-1.6.0.pl) = ff9ac14b1abc0e515efd53e05ad6b48bdc839748ec72ed15a9236d0907652cf1
 SHA512 (check_spamd-1.6.0.pl) = 5af457123c2c2b8500d068b6f31220e5998c2d3c445637da65c4fd66f7c41b5dd0e20020ba18f0b92b5840a75aed6a48ba93988ee858c571959036974a8ba530
 Size (check_spamd-1.6.0.pl) = 6850 bytes
