@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:21:17 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:51:58 nia Exp $
 
-RMD160 (wsbasic-1_2_7.tar.gz) = 2c194087f59af350bcbebc674e1016035bbcb126
+BLAKE2s (wsbasic-1_2_7.tar.gz) = e4cde1d233d0e11450ebd38b2c70224b04e0d8d555838c353464606f059a831e
 SHA512 (wsbasic-1_2_7.tar.gz) = eed92c9b9b63e40abab0f6af0c6751549c503fc22ec052fca9dd042559f0604bc1892c0bd2f7525cd980709cc8f9a7bb602b41c86cd7b9cab4eecfb0c34006d2
 Size (wsbasic-1_2_7.tar.gz) = 23516 bytes
 SHA1 (patch-aa) = e54f9ecd01dcdb3c8879bc9cdaab7ca5fba4e099

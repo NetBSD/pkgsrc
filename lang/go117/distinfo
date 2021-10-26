@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/09 09:43:38 rillig Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:51:37 nia Exp $
 
-RMD160 (go1.17.2.src.tar.gz) = 746baea495791be0e9f4ed6a162cc4466d4ce4cd
+BLAKE2s (go1.17.2.src.tar.gz) = c0444fda199e0f0b86be1e09bcfa91e16a6c42a7f8951ada60c29e2a077f3210
 SHA512 (go1.17.2.src.tar.gz) = 167220293e02d6994b5cdee5909cbdbe66f692619baeb6ff9ee0d56660eb39cfd9eac2ac510f113d5222dadd5858fd6276bd961365ca42b42c07af5d24d48107
 Size (go1.17.2.src.tar.gz) = 22182111 bytes
 SHA1 (patch-misc_ios_clangwrap.sh) = 0a06403609cb7bce2e6f65444fd322f486761afe

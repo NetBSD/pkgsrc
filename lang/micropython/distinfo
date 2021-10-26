@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:21:00 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:51:42 nia Exp $
 
-RMD160 (micropython-1.9.2/micropython-1.9.2.tar.xz) = 9c22131546c3e49bfa28b5f71994b20ee819d094
+BLAKE2s (micropython-1.9.2/micropython-1.9.2.tar.xz) = 6bec48480d8c23e7ba3ae01eeef1754eaf68cb264465a6c8d888e77d2448e97f
 SHA512 (micropython-1.9.2/micropython-1.9.2.tar.xz) = 67d070d47c19a100d164f9b4e4ec7eba10cf5ee49089f5f4d6a8338a9d72d6cffa41c2f6de73c8b169ba8011961b8ef197241fa5bea6813f77f65ef4cf2f4e4b
 Size (micropython-1.9.2/micropython-1.9.2.tar.xz) = 6699860 bytes
 SHA1 (patch-lib_utils_printf.c) = 6c152cd10a5fb0091d1149a0a50b202df6a6e931

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2021/10/07 14:20:56 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/26 10:51:38 nia Exp $
 
-RMD160 (hugs98-Sep2006.tar.gz) = 99b6b88bd7256efa16e97684f265932d29133c40
+BLAKE2s (hugs98-Sep2006.tar.gz) = 48c90590740b31354b5aaa76198ebfaad008e904530918cdc90ade5f9e1759f0
 SHA512 (hugs98-Sep2006.tar.gz) = d09fb0d7da2fc701896cd25dba2823f30891f84190163de8bea916be3942f156b8647361fbbb394d5322e49c65f21ec864ae947287d4d056c9bb5530a1393b22
 Size (hugs98-Sep2006.tar.gz) = 2157369 bytes
 SHA1 (patch-packages_base_cbits_execvpe.c) = 34ea441872bcb684bf9aafccebfa92030592b584

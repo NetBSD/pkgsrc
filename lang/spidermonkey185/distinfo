@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:21:14 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:51:56 nia Exp $
 
-RMD160 (js185-1.0.0.tar.gz) = 23e6ddc81d5b63e015aecc1a104b2d3d3ced5005
+BLAKE2s (js185-1.0.0.tar.gz) = 46b57fb118dd75620f5ffdce8dec3a70bbe8067f544be55284b6631c82d2e13a
 SHA512 (js185-1.0.0.tar.gz) = 2af7122a7c7007fd7b6668776fe1222515a810b3e43bbf0f76b8f94e1ef406ffd3fb5ccec393021b00274c05b38a77235bc8d6886994c56762fcaf0aa7cf6718
 Size (js185-1.0.0.tar.gz) = 6164605 bytes
 SHA1 (patch-configure) = 77366fff7e8b766b5691d0432b8740d4c8c362a6

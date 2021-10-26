@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:21:16 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:51:57 nia Exp $
 
-RMD160 (tcltutor30b7.tgz) = 02f389c5b5835f5280c20594be5b5415c2ef7e54
+BLAKE2s (tcltutor30b7.tgz) = 8da0952654c1c118e8b18b242470f4850526a2900c4498b7f4d894b05cfe2e1c
 SHA512 (tcltutor30b7.tgz) = 17af025b192eefcfde03bf4f9dc173030a0048e84de4ef42c4525f645e5b5067d9209af0da4b1bc632cfbc6faf9703b96eaf9148324c63e4a3d367671756f0f9
 Size (tcltutor30b7.tgz) = 263363 bytes
 SHA1 (patch-TclTutor.tcl) = edc20e3bc3c8175f8feaa38befbed8537bd42514

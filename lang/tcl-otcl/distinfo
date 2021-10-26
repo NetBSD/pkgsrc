@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:21:16 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:51:57 nia Exp $
 
-RMD160 (otcl-src-1.14.tar.gz) = 2895c4d814246faa468d1854f9cb7c8a3f7ac696
+BLAKE2s (otcl-src-1.14.tar.gz) = fecb28c0b5bea8db357da5f66eac717d78fd8ab7da5336e3e1d09535c3595950
 SHA512 (otcl-src-1.14.tar.gz) = b580a372af61282324c499d6410b4d358c8e9d3474a506f2c0dad8ab730d7a194207856b02c2b338fa59525f7ee60cbb887c386a7f1204d6d7d8a69c0067bed0
 Size (otcl-src-1.14.tar.gz) = 325964 bytes
 SHA1 (patch-aa) = b3308c72cc4f9260608578ff78926f77df343527

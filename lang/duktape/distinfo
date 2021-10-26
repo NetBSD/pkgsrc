@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:20:49 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:51:33 nia Exp $
 
-RMD160 (duktape-2.6.0.tar.xz) = 34eb9d048af0f3e0c8f1755611b936755e9f4ba6
+BLAKE2s (duktape-2.6.0.tar.xz) = 45e6a612b3e8de7a95fd568ab639f4b0a7a17b9e68ca29eaaf077eeff6f3ea1a
 SHA512 (duktape-2.6.0.tar.xz) = d72a2aaa05391fa243861aca6ca6082f91a08b9c5d60c7b246d35d7161532b0048bb67bd8fec7996c700ee317ac2bb52e528582682e5425b0431757d8b1c5be4
 Size (duktape-2.6.0.tar.xz) = 1035160 bytes
 SHA1 (patch-Makefile.cmdline) = 8e19c38b6da425c3fcff644987c0ab6c92b4b1d2

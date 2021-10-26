@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:20:59 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:51:41 nia Exp $
 
-RMD160 (likepython_0.1.tgz) = 492c525bd0e3a39bcdd204fb1218dafef6a2ca80
+BLAKE2s (likepython_0.1.tgz) = 6943ce9bbaa82bdfff71c257824ff312ff65eb75559dd42c9b730649c387695a
 SHA512 (likepython_0.1.tgz) = fb482861287a908f2601a7ff3f8d240184710c5c90704c962f7a6347dd8f1fe7e0b8cdb76f06fa468ccfbc32f35a45bfafc4d6ba00d16d042cbe87711e456a1a
 Size (likepython_0.1.tgz) = 2663 bytes
