@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:47:40 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:21:30 nia Exp $
 
-RMD160 (hexer-1.0.6.tar.gz) = 98840d75640a5d2e41f1a3a9beee6e93297e7b49
+BLAKE2s (hexer-1.0.6.tar.gz) = d0f3282637c19c4aaacac9721ea1a644ddaaf256367881b4586696bab4c45335
 SHA512 (hexer-1.0.6.tar.gz) = fc34037fa815b6f360572aa488a0a19d831d7f4d8a4d71f8882c75f727752b5381a84338a0eba077487e468f443ce954f854e80df710802ea94d6a23ee871630
 Size (hexer-1.0.6.tar.gz) = 129486 bytes
 SHA1 (patch-tio.c) = dc76324d87394dd111a3579c2f02d0bd96d3cb5d

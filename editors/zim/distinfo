@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:47:53 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:21:44 nia Exp $
 
-RMD160 (zim-0.73.5.tar.gz) = 90060e2ee7b3a03a386e39c4c782023211b988a3
+BLAKE2s (zim-0.73.5.tar.gz) = 0436a561d8ad2c4ef0c2f1a5f0fa9e09324fe30a5ab4e30ecbb9f52763f5b789
 SHA512 (zim-0.73.5.tar.gz) = 78a8996a74c04363c6dfe89a8709b87b6d023add2fbd12a494cddfd0fa29cc319f97a6e7b4d41409fc81d3b1baa9d433d338feedacb97172a9adcba7e8fcdcb5
 Size (zim-0.73.5.tar.gz) = 2159901 bytes

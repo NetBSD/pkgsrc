@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:47:39 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:21:29 nia Exp $
 
-RMD160 (gice-0.6.2.tgz) = 2b6547f63a24fc3a33520854b97bafa4572cf2e6
+BLAKE2s (gice-0.6.2.tgz) = dd2c5f47fa687f3a1e7b93bcfa150bf717653a5647949e911740cd2925ff0130
 SHA512 (gice-0.6.2.tgz) = cbcd4c8c56dd0c49dfb40ea377a17c0e285ed85ba2ff8103b92a4bf751ef55ca0031ea40033b339d1931b9a04c5cb98db9a4e49c78f1f7a0ea6578198c8113f4
 Size (gice-0.6.2.tgz) = 202420 bytes
