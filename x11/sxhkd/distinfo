@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:14:14 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:34:29 nia Exp $
 
-RMD160 (sxhkd-0.6.2.tar.gz) = 9fd7d95aa2d44decc2f10134233d0179b96e7012
+BLAKE2s (sxhkd-0.6.2.tar.gz) = 89e5c2c880a5bc75b8897cb57adf7898ec0cfd80331bd9f1da6d42e2798bf897
 SHA512 (sxhkd-0.6.2.tar.gz) = 3f758aec3de76c6336a9008e997317ed7a05db0fcd81025d8f856694c2b8162022e25d9a48876de99056748a2dbe6a561a0e1594973c854ac2c98d44af6b03aa
 Size (sxhkd-0.6.2.tar.gz) = 35711 bytes

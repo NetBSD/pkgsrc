@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:14:01 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:34:16 nia Exp $
 
-RMD160 (neXtaw-0.15.1.tar.gz) = 3cbc34162c07f384d51649a2a71b16294ec2c990
+BLAKE2s (neXtaw-0.15.1.tar.gz) = d23cfe5b89bb9af239b1306d340df3a35770463876ebbd3dec00a002db29df97
 SHA512 (neXtaw-0.15.1.tar.gz) = 5250b2ac6fc746b8de19d0c2504e6c21e0b6c6ac4ef1a841a9793a2fd2dff082b86a987f54f68e0e35ed8f798900a701e6fd9c6cf7b1412a4bd53179fd07cbf1
 Size (neXtaw-0.15.1.tar.gz) = 577459 bytes

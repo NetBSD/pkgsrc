@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 15:14:25 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 11:34:38 nia Exp $
 
-RMD160 (xephem-3.7.7.tar.gz) = 6e451ee5291561bfeb63043ec30ae3b3928e2207
+BLAKE2s (xephem-3.7.7.tar.gz) = f1b7772df786a320b7ce87dce032b95f9f73a400cb310cad2782fb54b4c8ec22
 SHA512 (xephem-3.7.7.tar.gz) = d9cfecf0ce8aa495f66fcf6772ca7df0638cef8b9f18d9d6cbf013846a7575786ae9b5c515abc2058783baa7610320c893ddbc6f68bae28c65661a1c73b88634
 Size (xephem-3.7.7.tar.gz) = 18128523 bytes
 SHA1 (patch-aa) = 50da33421f5773483e7b6078bf01369c74681596

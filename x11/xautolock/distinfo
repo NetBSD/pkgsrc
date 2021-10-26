@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:14:18 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:34:33 nia Exp $
 
-RMD160 (xautolock-pl15.tgz) = 9b6ffc398593bc8bd1de59616fd8e7e7091bd919
+BLAKE2s (xautolock-pl15.tgz) = 47d7e68950ae22c34bbae26e590e5795f2104f575a7dbb1417d4363e7568327c
 SHA512 (xautolock-pl15.tgz) = f1482890c6c58d1e9c59854c0075a93800eaa7289a999eb698c8024774cd138263074025f16e2a752a9391ad2c104b65c32f4fc592df8cd18f61af4418e3954d
 Size (xautolock-pl15.tgz) = 39240 bytes
 SHA1 (patch-aa) = 1cd1346fb50827bed5c8cac3ff65519180f30444

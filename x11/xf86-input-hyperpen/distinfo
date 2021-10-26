@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:14:25 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:34:39 nia Exp $
 
-RMD160 (xf86-input-hyperpen-1.4.1.tar.bz2) = 500b2bff3b91fbdc3814c32dbdef88e553ba2b2a
+BLAKE2s (xf86-input-hyperpen-1.4.1.tar.bz2) = 2f72b4836d0d2984648297efc113309277ad74e089374f243c528b0a624799b9
 SHA512 (xf86-input-hyperpen-1.4.1.tar.bz2) = 0577a4db9d45260c8da0a07af24f7767e2838ab7eb9192f4c232e46ff396c22ba24598641abe9dccbd0c351771f7bd6cebf5d0d9bb15c0ddb41a675d77a85480
 Size (xf86-input-hyperpen-1.4.1.tar.bz2) = 266891 bytes
 SHA1 (patch-src_xf86HyperPen.c) = f2463f0dbbc37ea9125f5ba758b8a982e4613637

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 15:14:24 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:34:38 nia Exp $
 
-RMD160 (xdpyinfo-1.3.2.tar.bz2) = 7afc5b67eb466118e5b09a2d8b2f384141517948
+BLAKE2s (xdpyinfo-1.3.2.tar.bz2) = d58a989cf2efd6c60061147da4e837fc706e460604bdea90f1acc26ff6e0d94b
 SHA512 (xdpyinfo-1.3.2.tar.bz2) = 2c9097c13778c7a7fe5a9b3ee04b28512ff6028231eca91ecdf6104c742be470678920d37a4f540fece7e39dccbea34802271f359ab80618027b2856c8912e7d
 Size (xdpyinfo-1.3.2.tar.bz2) = 141351 bytes

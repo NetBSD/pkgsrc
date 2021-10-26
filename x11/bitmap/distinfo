@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:13:28 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:33:44 nia Exp $
 
-RMD160 (bitmap-1.0.9.tar.bz2) = 7e5fc4364c0f5745780d698cb88223f8785d3597
+BLAKE2s (bitmap-1.0.9.tar.bz2) = 21967abb7af02abf7f73222c2ed6ab33cc8dec777bfc64d83fa104e367cbc9a4
 SHA512 (bitmap-1.0.9.tar.bz2) = 873c626c72a0f4025fe8c8aeedbf3fe4ee5657fb487ad7410406a20da518c0358041dc45c2549926cc10e1d031977073b9d1ddb32830fdce95b716a52fe44456
 Size (bitmap-1.0.9.tar.bz2) = 181401 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 15:14:27 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:34:41 nia Exp $
 
-RMD160 (xf86-video-cirrus-1.5.3.tar.bz2) = 18402fcf23c67d0719e637a835a922e2c8fa1cd7
+BLAKE2s (xf86-video-cirrus-1.5.3.tar.bz2) = 3ddd089baac352ae18bbd0226443cb051d1a9c8149e3fcacfe5d6da0153a525e
 SHA512 (xf86-video-cirrus-1.5.3.tar.bz2) = 6aec70f943d9bf7455782d300bd5e1caab5c90408cdca25b9a3ef314e565082f3249a179fb508be36a61c8a34006c0ace14b9aa41f724f479511a906fa8f4798
 Size (xf86-video-cirrus-1.5.3.tar.bz2) = 338930 bytes

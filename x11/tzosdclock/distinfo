@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:14:15 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:34:30 nia Exp $
 
-RMD160 (tzosdclock_1.0.2.tar.gz) = 19327151cf6606b8bc8747d64189fafe0f630d32
+BLAKE2s (tzosdclock_1.0.2.tar.gz) = d63a43539d0e1dcb161e536ddaf22e516de0b427e1fac1c8d587115909845908
 SHA512 (tzosdclock_1.0.2.tar.gz) = 861c26c63614542958708bc3fa83f41a11041275c3fc1b232bda523d2af6d38235c969bc4e93cb949e614ca04dd324d4d085a817879158c5ec6b3b3d9768a111
 Size (tzosdclock_1.0.2.tar.gz) = 181015 bytes
 SHA1 (patch-aa) = 7405f83132711fb3ea19b02e8a6cf6f07f2026f6

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 15:14:17 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:34:32 nia Exp $
 
-RMD160 (wterm-6.2.9.tar.gz) = 954c6264998456e90a62e25089fb5adc3924b2a8
+BLAKE2s (wterm-6.2.9.tar.gz) = 254e64247e5e528014c9d487ce183f18d4133485f47d75436045ca5f51adc1c7
 SHA512 (wterm-6.2.9.tar.gz) = 31a9ca85f344ab5686ceb03f6f98d00ed944bc66a208d74e6ec75493dbeca8ef7ba2fcff52a49ba1c7988d2c782879231e0fbf90028bdd4f253013426a9c009f
 Size (wterm-6.2.9.tar.gz) = 316773 bytes
 SHA1 (patch-aa) = c4b2da58aefecba9c1acd5058a27dfeb551f7f54

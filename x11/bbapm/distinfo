@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:13:27 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:33:43 nia Exp $
 
-RMD160 (bbapm-0.0.1.tar.gz) = dfcec30fe55b6b5443cfb188527f16c1b2a50fd7
+BLAKE2s (bbapm-0.0.1.tar.gz) = 2311cecf5747d7b8ad737829a04464e91c63f27e232bc88d2937adca348232d0
 SHA512 (bbapm-0.0.1.tar.gz) = 5f0d1031febcb61ad2c45245fda07916a29352b1912db0283b9b8dfff3ee10332a716e3c02c77c6a5550cd5a90c3589d11ca69ff7106e0b6f5c8c8b4543980a4
 Size (bbapm-0.0.1.tar.gz) = 61376 bytes
 SHA1 (patch-aa) = 82be3cca979f6a8ecef1c15f85af44865c998587

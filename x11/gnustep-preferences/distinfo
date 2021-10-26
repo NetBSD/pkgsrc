@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 15:13:34 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:33:50 nia Exp $
 
-RMD160 (Preferences-1.2.0.tar.bz2) = b94629b8a8d44cbbcf7c0a8bff775d89b6865bed
+BLAKE2s (Preferences-1.2.0.tar.bz2) = bde056855a1aee8fd4376e78ee7c1d50b0073de8d9894fdd7fed55ac750f6e55
 SHA512 (Preferences-1.2.0.tar.bz2) = 3202dc953128ae73eaf5f9eaac207981d751557d086f026a3a8737c9c70f22742fd05eb2f9e5e4ddafac7827133682eba93363c90dcd6ba2e5f61598ea4e31ca
 Size (Preferences-1.2.0.tar.bz2) = 52293 bytes
 SHA1 (patch-aa) = ebe63b030deac8865addddcee8e577dd05dae515

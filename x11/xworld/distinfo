@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 15:14:46 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:35:00 nia Exp $
 
-RMD160 (xworld-2.0.tar.gz) = b139357f529a8df535f82fecd74319b0f82605b3
+BLAKE2s (xworld-2.0.tar.gz) = 6c3f94ee6172c8a20e49ce9f9a25b68a5955bb25fd7f8695eb78c698fa917de4
 SHA512 (xworld-2.0.tar.gz) = 5b453ab2dd746d7701f5f8b43da4d0ba9d9e53ee97173ee2ff4e827741a066a8e4d49051fbf8dbd7cb3b041739a41f00ef33a4a4c7113e9ad85699196ccccb3a
 Size (xworld-2.0.tar.gz) = 113385 bytes
 SHA1 (patch-aa) = bae4e8be7dbe302c11012109a2971e7aadb2a357

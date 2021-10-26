@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 15:13:59 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:34:14 nia Exp $
 
-RMD160 (mate-desktop-1.24.1.tar.xz) = 07ca7baadaebd87839ec6b47c44a6f81125ad889
+BLAKE2s (mate-desktop-1.24.1.tar.xz) = 13f67063d759244efc102e76a351602f4e87606d50fdd6e5185d792190b32b54
 SHA512 (mate-desktop-1.24.1.tar.xz) = 0691dd613946d5d67596d98cd489536f5876cb97fb4c5290133b198479b4bfa3835ca52a16a2d0cc5e863d625aedda83ab01e85d67f58a09763673f0f18ebc5a
 Size (mate-desktop-1.24.1.tar.xz) = 1115988 bytes
 SHA1 (patch-schemas_org.mate.interface.gschema.xml.in) = bd3b82a9ffa0eb5a5b464a8bbfa8e8b06eb7b847

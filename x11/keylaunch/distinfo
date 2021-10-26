@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:13:47 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:34:02 nia Exp $
 
-RMD160 (keylaunch_1.3.9.tar.gz) = 4660c6d90db28373134ab0cbf8d9c8d2888f0225
+BLAKE2s (keylaunch_1.3.9.tar.gz) = 891e215a9ea6be27bae1f47b704776204c0c174c810ad96bc1cfe6f862b3c44c
 SHA512 (keylaunch_1.3.9.tar.gz) = 9955bb913dec9c39aa4be86410229b2952738fca2c7a77f7d61d2750c880e4cbd59fd82979c441780b3a5aa5ce12b3a9863526f610feec5c5b30c65476c50c10
 Size (keylaunch_1.3.9.tar.gz) = 80286 bytes

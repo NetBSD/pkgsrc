@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:14:22 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:34:36 nia Exp $
 
-RMD160 (xcursor-themes-1.0.6.tar.bz2) = 28ad97a21ecba76a203c7217c43b5df2d2b5e790
+BLAKE2s (xcursor-themes-1.0.6.tar.bz2) = 98c4185bf4663517f7f967918427c303384d2230cee06915422f467aa831431a
 SHA512 (xcursor-themes-1.0.6.tar.bz2) = 2ad3586a5571a5ddc0001187362b54b839644916164834213af98e58698044aec4392dd6e1e42f1794fda85c8fedf259b09214a9636bd0e71a1629c710f198d3
 Size (xcursor-themes-1.0.6.tar.bz2) = 2363089 bytes

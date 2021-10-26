@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 15:14:10 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:34:26 nia Exp $
 
-RMD160 (rep-gtk_0.90.8.3.tar.xz) = 55db85e43c5ec739a0a471bc3eaf69db1f094fbc
+BLAKE2s (rep-gtk_0.90.8.3.tar.xz) = 35b276452f1f77e3b1512d1501f967f3d959d60faae12cc1556cdd6729755a74
 SHA512 (rep-gtk_0.90.8.3.tar.xz) = d33de562c94731c0ce0fbca574952b9f36c2f2cb084783976486c8751daba5de0d20bc781a06ebd2005e541bbbec3f984453ef65ba6233bb7acfefa31b1acaac
 Size (rep-gtk_0.90.8.3.tar.xz) = 120616 bytes

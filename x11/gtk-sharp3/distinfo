@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:13:35 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:33:51 nia Exp $
 
-RMD160 (gtk-sharp-2.99.3.tar.xz) = 2de9fc7d2f39e58ec447b024a060f01107794175
+BLAKE2s (gtk-sharp-2.99.3.tar.xz) = 93cf497329f795d255114d2b52163d343895eacad61796f24f51d55fe5f9214a
 SHA512 (gtk-sharp-2.99.3.tar.xz) = 31c132b411f4602cdc71e0dfe94bd1f2884f62f2d33e9aeae9eb9c3cd2a58c2d503b06d4b5ac08b3e396b89810669360305c4bc040bce57d22e2eed48c07fb0c
 Size (gtk-sharp-2.99.3.tar.xz) = 1524220 bytes
 SHA1 (patch-gtk_gui-thread-check_profiler_gui-thread-check.c) = 1beb857367b51f85bcecc005a29800bca3b3a031

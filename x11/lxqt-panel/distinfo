@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:13:57 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:34:12 nia Exp $
 
-RMD160 (lxqt-panel-0.17.1.tar.xz) = bb53067a9519c9e49bac658f01ae1971c66684ee
+BLAKE2s (lxqt-panel-0.17.1.tar.xz) = 902ccd3b15f47e0ef22b74f0ddfff2295171bbf61e744aa60d3e417a0971627b
 SHA512 (lxqt-panel-0.17.1.tar.xz) = 439905144029518e46efdd72eb3db17203678e243ca5f7090bf5db902805deaded41f6c59d02bf538fbf24b7951d6da6a924331c685b69d162812249fb9a4e72
 Size (lxqt-panel-0.17.1.tar.xz) = 510212 bytes
 SHA1 (patch-autostart_CMakeLists.txt) = 7c14eb2f2c29b2bcee8833d7d02fc4e1b5a37e57

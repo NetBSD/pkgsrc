@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2021/10/11 10:14:40 tnn Exp $
+$NetBSD: distinfo,v 1.23 2021/10/26 11:34:24 nia Exp $
 
-RMD160 (qtwebkit-5.212.0-alpha4.tar.xz) = af000947daa429945d80e3c23e5cfd0eb13793be
+BLAKE2s (qtwebkit-5.212.0-alpha4.tar.xz) = 20858db08c7d297037d3ced34e441d4b657325c406b475e4e76dd367dc9c500c
 SHA512 (qtwebkit-5.212.0-alpha4.tar.xz) = 33f11270bd030599beff9c1983a6c5ff2d61f407cc8a6825f7f405d46f9184c720fc7f60c7359f08f828db96a2170092875066a0d5c0a21ff09bc48a2603fbf6
 Size (qtwebkit-5.212.0-alpha4.tar.xz) = 12528508 bytes
 SHA1 (patch-CMakeLists.txt) = 6b0d295ed4ec40c6364b0a86c94d19966977f7d7

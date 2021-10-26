@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2021/10/07 15:13:30 nia Exp $
+$NetBSD: distinfo,v 1.24 2021/10/26 11:33:46 nia Exp $
 
-RMD160 (devilspie-0.22.tar.gz) = 0e35409bdbf0e0a29df59e16ab9fd3774a001b62
+BLAKE2s (devilspie-0.22.tar.gz) = ea476c710737730b1eaa39ea25dc4b02c91606744dc109b5622886e62bb80242
 SHA512 (devilspie-0.22.tar.gz) = 832b1ba0328357abe6c89a8b48c75c5a7789d134a0ce86721c413b2a0eacd43bfd8e6f06ca3ffb4386f04edb5a7800592e3545fb3b0637b44d3569be858546b4
 Size (devilspie-0.22.tar.gz) = 192646 bytes
 SHA1 (patch-aa) = 952eb305984180fdcf7c728507660d74277e9f13

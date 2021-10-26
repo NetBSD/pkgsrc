@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 15:14:42 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:34:56 nia Exp $
 
-RMD160 (xrdb-1.2.1.tar.bz2) = 703d635fb650e6e1c94cadfc657c3ebceca20f9f
+BLAKE2s (xrdb-1.2.1.tar.bz2) = df03b7825c2567298cc6161afa06e6c785fe7b4201a3c9bf545a6c00694e35e6
 SHA512 (xrdb-1.2.1.tar.bz2) = d88135cdfea8536523dfb986249ee42761d5363c936352f12f55b4d0c849f21236f7d74d39869c5ec5b549019d6ed89d9096cde4b3c2b4816c2778a8e370b5c9
 Size (xrdb-1.2.1.tar.bz2) = 143216 bytes

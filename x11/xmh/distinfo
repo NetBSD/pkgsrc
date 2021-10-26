@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:14:39 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:34:53 nia Exp $
 
-RMD160 (xmh-1.0.3.tar.bz2) = 8f8c5d9be71785b62949bec56719fae9b0c6a0df
+BLAKE2s (xmh-1.0.3.tar.bz2) = b1a7f60c3611f3edad8ceeef6c9c847e5e807b1cd7fb63944f8feb7577bcdcf9
 SHA512 (xmh-1.0.3.tar.bz2) = acc1fb65fe69891272a25f3f45e7e1e7c57ad075bbaac7b3b53577853fbb07598d3ad3ea01130db6b10e3c347550ce23d709363440cbd73897bc39411640c251
 Size (xmh-1.0.3.tar.bz2) = 212109 bytes

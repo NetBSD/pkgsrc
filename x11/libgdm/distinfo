@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:13:53 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:34:08 nia Exp $
 
-RMD160 (gdm-40.0.tar.gz) = aef9fa9d25f92b671166b9b2a56f9f5811e912cc
+BLAKE2s (gdm-40.0.tar.gz) = f15c9369c76b060de4f2babd67210b47fd1029d02ad6f3573ef348a100c18fe4
 SHA512 (gdm-40.0.tar.gz) = e1280b2e7011f76732d1c7901025f31693c58fd4eaa1483ffa0d7e24a1f14aaf3de64b0fa4d4423be72b77329f36c7a8552406dec9272f67b4756bb1ccbe1ef9
 Size (gdm-40.0.tar.gz) = 1588680 bytes
 SHA1 (patch-build-aux_find-x-server.sh) = 3ef259ca4f867d91aba24fcf1b6b02045b404248

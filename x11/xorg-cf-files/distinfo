@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.32 2021/10/07 15:14:40 nia Exp $
+$NetBSD: distinfo,v 1.33 2021/10/26 11:34:54 nia Exp $
 
-RMD160 (xorg-cf-files-1.0.7.tar.bz2) = dc9d2fefc5cefcdde97332cd7c6ef6527ec8b17c
+BLAKE2s (xorg-cf-files-1.0.7.tar.bz2) = 7c971e7951a9369904f766fb5a9e6c78fd07703131e2a042e858e53480f27fd7
 SHA512 (xorg-cf-files-1.0.7.tar.bz2) = 0dd73b9db9fc16bddc94ef23f11434be6ea2f8e0c7bc5ef3c3bfe6749e13843f88d397eed9f980bbbe9e74147172326bd3c3ccb7adedc9150302756e4b07191e
 Size (xorg-cf-files-1.0.7.tar.bz2) = 345575 bytes
 SHA1 (patch-OpenBSDLib.rules) = 65b02b660839adb6e9c13287396a794a4586d927

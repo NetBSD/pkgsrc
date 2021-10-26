@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:13:30 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:33:47 nia Exp $
 
-RMD160 (driconf-0.9.1.tar.gz) = f32e83a283756dd911356dae220b54ba351df984
+BLAKE2s (driconf-0.9.1.tar.gz) = 7590d156129b1e033788e24d133ab3179648eb16fa2197ddc1ea90d7ca8e3648
 SHA512 (driconf-0.9.1.tar.gz) = 541282ceca9def2a6136782bf74878ff5751e760286176064e8ccfc7d1cc582f09d4d974aaba0168f4ea689da464bee08f7f5a8fd26296d30bc054c7224c7cfc
 Size (driconf-0.9.1.tar.gz) = 102531 bytes
 SHA1 (patch-aa) = db3fd8fb5e2d8438c2dea3025e3c9eda2019cc22

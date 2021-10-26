@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:13:57 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:34:12 nia Exp $
 
-RMD160 (lxqt-runner-0.17.0.tar.xz) = 946d406ed640c72d624a6e5816e38245fa20ceae
+BLAKE2s (lxqt-runner-0.17.0.tar.xz) = c7f3106b431685a36a8dd43165181534e8cf00988559315c167d50125dba7e23
 SHA512 (lxqt-runner-0.17.0.tar.xz) = cafb6c722c803f9f3e1902e7fb3945c7028ec0bdc22b46d7fc0cc0cc305dea8da8c9098baf97e2db30fa82d88d9d59805e403eacadc6d2b311d1b289cde2ad74
 Size (lxqt-runner-0.17.0.tar.xz) = 225672 bytes
 SHA1 (patch-autostart_CMakeLists.txt) = 2c8a3e36ddb9f7c0ac4fafc76fc2ea6fcb6083f9

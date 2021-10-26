@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 15:13:51 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:34:07 nia Exp $
 
-RMD160 (libXres-1.2.1.tar.bz2) = ca21373d10a8ebc5165cef2ba6280a7044440611
+BLAKE2s (libXres-1.2.1.tar.bz2) = e1de2e476897bcf20cee5f4296ddffa1c46d1e722175290ce935ec3876a5c8a8
 SHA512 (libXres-1.2.1.tar.bz2) = c17d28406e17e305dc4976f095e88059735f5bd8c600adf2e556523c9e0dd7fa01dcbf7a9d28a642e77e49a5b30f54bb9b2fc34bfbedce467ee2a020bba5cdf1
 Size (libXres-1.2.1.tar.bz2) = 311025 bytes

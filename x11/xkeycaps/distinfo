@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:14:37 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:34:51 nia Exp $
 
-RMD160 (xkeycaps-2.46.tar.Z) = ee787ac4970204689ec54d14b6072235c7026acb
+BLAKE2s (xkeycaps-2.46.tar.Z) = 5e9777c4fa6690313fd2f2b1e55d0a180e40e6ca676f70f6b057edc86d2eb6b2
 SHA512 (xkeycaps-2.46.tar.Z) = 1bc28b3e69ce03a0b0bf8173c0fa016a683a12c123825d8873eff65f5f02d1b3369096a0c80678383048d93e68e3a607f3bee155f13afe6487a3ffa3dc4f62c5
 Size (xkeycaps-2.46.tar.Z) = 489439 bytes
 SHA1 (patch-aa) = 5038c27bf78b9a4ff9e5fb4d01feb4983f18f091

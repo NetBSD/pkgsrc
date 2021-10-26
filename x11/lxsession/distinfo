@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:13:58 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:34:12 nia Exp $
 
-RMD160 (lxsession-0.5.5.tar.xz) = 1ecbb939e1c7d84ecef3bc8354fa2aaa171dbd14
+BLAKE2s (lxsession-0.5.5.tar.xz) = 58209bd76912c5b940ec7d0bbc5aec7a8a148cbf8eecf0854e4f43877f0aa0df
 SHA512 (lxsession-0.5.5.tar.xz) = 12e25214485cf855b380a5aa91eb536f31536c98f5a50a1115cb4bf8ff884c7cdcd40c69a1502eeb9f4d3e6169e0607d6488ef3152ee184662fee39fe7a04d54
 Size (lxsession-0.5.5.tar.xz) = 422564 bytes
 SHA1 (patch-data_Makefile.in) = ec76ab351a3417b71e80f8201808174e63c8f2da

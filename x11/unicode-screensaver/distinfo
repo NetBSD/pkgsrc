@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:14:16 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:34:30 nia Exp $
 
-RMD160 (unicode-screensaver-0.5.tar.gz) = c4d3ca9e801a72e20c9282e122c5f4c50cc9e17a
+BLAKE2s (unicode-screensaver-0.5.tar.gz) = 57b79deb171332c63e9bb8752565e6314145b719670601d7f66b8498277477d0
 SHA512 (unicode-screensaver-0.5.tar.gz) = c44ef119960c0bde049b0f6b865559366302421180c11803c545e7e96e2dd4fd1188fb32559e9df24adbb026977685ad865449ef1e329e2982db823c3fb876c0
 Size (unicode-screensaver-0.5.tar.gz) = 575263 bytes
 SHA1 (patch-unicode-names.h) = 237b76a55c77632ec60fdab4542afb8dafdffb73

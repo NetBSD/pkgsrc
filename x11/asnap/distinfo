@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:13:27 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:33:43 nia Exp $
 
-RMD160 (asnap.tar.gz) = c29ce5dc651db7b0f09cc695f23885ff37a6f5c3
+BLAKE2s (asnap.tar.gz) = b5fd8b62f07f04e478e1d7b8c6075a4521372c7cad5b3765def63f8f19f0b0aa
 SHA512 (asnap.tar.gz) = d907a21497f1b55802121f5c77062cb9825533d4f442ee19af742600a6036cb2f2320a3141fde3a040d8f8cffe7f60dd34238592526262172f14708d85649aba
 Size (asnap.tar.gz) = 10519 bytes

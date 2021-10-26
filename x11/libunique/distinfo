@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 15:13:54 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:34:09 nia Exp $
 
-RMD160 (libunique-1.1.6.tar.gz) = 15ae8cc81f978554395fcb194ecb11c7bc6a1938
+BLAKE2s (libunique-1.1.6.tar.gz) = d2a631a86f6ed1eafb020b3b354b065ea0875edc6ac243ad37980b79db8aee6f
 SHA512 (libunique-1.1.6.tar.gz) = 6a29901d2e398aa153ffad7d089058ec3337bd66dc1a3d7b87b56ec6450301250ec9d9c6c1de5890828c7d75cc9785892328c64cad88c97ce310d3eda001d7a4
 Size (libunique-1.1.6.tar.gz) = 450569 bytes
 SHA1 (patch-aa) = 03304df00cc8a793c4937f32daa4cd0719d7e8c0
