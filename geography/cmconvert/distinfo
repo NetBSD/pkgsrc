@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:09:23 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:45:08 nia Exp $
 
-RMD160 (cmconvert-1.9.5.tar.gz) = cd0eaf2f4dd329f43003634790fc8b5942ce44dd
+BLAKE2s (cmconvert-1.9.5.tar.gz) = 67be484d8e21c90e8d76fce317dbe9bbe1caddc6d8579b92d55e3cddb5141a5d
 SHA512 (cmconvert-1.9.5.tar.gz) = d0bfceed90a6b3f727176d761faefe614d714177719c96f2b73752b7ebb53d578c3bd9ac659b9a09b9bc5f05dc21832e6486b3ea5e8d99fb0ef06b2709b1a69b
 Size (cmconvert-1.9.5.tar.gz) = 138748 bytes

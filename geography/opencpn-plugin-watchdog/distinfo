@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 14:09:28 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 10:45:12 nia Exp $
 
-RMD160 (watchdog_pi-2.4.6.tar.gz) = a3102e59d1138b777c7db1fa77b54686ca345cb2
+BLAKE2s (watchdog_pi-2.4.6.tar.gz) = 28e4c7a8467fe9e5ec695e2dfbd1251916a9902f4f42cd5a421c66067d2451b3
 SHA512 (watchdog_pi-2.4.6.tar.gz) = fb4346f2e50d931fe00a6391c9ab95c5a26babe9eeb015788bb32a836527504f2f16d47f72fe972eaf3ccd1a216dee523b7108e525606afb51fc0c54fcf37ce8
 Size (watchdog_pi-2.4.6.tar.gz) = 480546 bytes
 SHA1 (patch-cmake_PluginConfigure.cmake) = 2e39c28de3c8be92da03b3023c2fa31a12be32da
