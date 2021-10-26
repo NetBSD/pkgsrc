@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:00:37 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:21:31 nia Exp $
 
-RMD160 (R/jsonlite_1.7.1.tar.gz) = 352a573f97b545d476f1a0a9b4b6f761f7bbdd9b
+BLAKE2s (R/jsonlite_1.7.1.tar.gz) = 278e2d57f75a5073b49cd03085b81b1faebe3f0b712e9b196e9ccb9de8fdeaeb
 SHA512 (R/jsonlite_1.7.1.tar.gz) = 7520f8f573fb2ed94b0e57a60ec26353decf99592f7fe8e699e006fca6cab63fed06ed24207f45fa163541d7b5a878fa82318ca52b0b99d9db8cb2c2ea4ee3a9
 Size (R/jsonlite_1.7.1.tar.gz) = 1057786 bytes

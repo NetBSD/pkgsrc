@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/07 15:02:01 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 11:22:54 nia Exp $
 
-RMD160 (XML-Twig-3.52.tar.gz) = 532413b74b6372e32c9a1e54b0a73ffd24ad31ff
+BLAKE2s (XML-Twig-3.52.tar.gz) = c47fe65506eaa9404a1ad101950c462f4b0bcfc8a36f2b95283b133a41dc2e8c
 SHA512 (XML-Twig-3.52.tar.gz) = 1594e127fb76c0e53d0bd1f0a12fe3874c9523dd2bc55675d5a6cf44d5682ddea481671f786d3a65e6b69f5307c4da1701529f318453a1f8a22685b2dae793a6
 Size (XML-Twig-3.52.tar.gz) = 407769 bytes

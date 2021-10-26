@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:57 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:50 nia Exp $
 
-RMD160 (XML-Filter-SAXT-0.01.tar.gz) = 707fc30ae155b310ede64b01e33a40a776404314
+BLAKE2s (XML-Filter-SAXT-0.01.tar.gz) = 49358ebe8ddef4aab963540283f5d860587e30da034138ad1f603c9cf0ef3586
 SHA512 (XML-Filter-SAXT-0.01.tar.gz) = c73c9a288cf16e53beea52f9e74163ca87bc6fb9332c2c94ce5dfe0c74130a18f1a9db2c453888edacff4b2e23eb2762ae223fedef5126f92d6929e4b616dd32
 Size (XML-Filter-SAXT-0.01.tar.gz) = 2891 bytes

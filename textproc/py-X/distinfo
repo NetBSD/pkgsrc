@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:02:06 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:22:59 nia Exp $
 
-RMD160 (PyX-0.15.tar.gz) = 61ec70ac7fb7b7b8a6fdac5cdb5c9328775c7018
+BLAKE2s (PyX-0.15.tar.gz) = 7fb6d3c748f7832f50bf9e21a7c23821c7cfc3fbb44778669b4984300d10f239
 SHA512 (PyX-0.15.tar.gz) = c312b38b9f204b8a8832ab71da5be8c9afc417a095c8ccf242b3d3ebec63338a9d55abab4e548d1718abadf12ea7652cdad51731acdc8f6acd3d8608aa919919
 Size (PyX-0.15.tar.gz) = 2559840 bytes

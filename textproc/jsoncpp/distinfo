@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 15:01:20 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 11:22:13 nia Exp $
 
-RMD160 (jsoncpp-1.9.4.tar.gz) = c35709d6cc3de960003efdfb06909640bb1da2f9
+BLAKE2s (jsoncpp-1.9.4.tar.gz) = 83b41ae0b6e3b09d87389c6e94de705dc11e3a2ba722d03f3f724a7e67814f6b
 SHA512 (jsoncpp-1.9.4.tar.gz) = adfd4afbdf6b79bd37edcf0e248f07864994f1c4bcb7431f3b44102490ce467f72381908066655fa486dec12f467af0a11f42f859bbf719895974c7339db7d22
 Size (jsoncpp-1.9.4.tar.gz) = 214057 bytes
 SHA1 (patch-CMakeLists.txt) = 8f7ca8b24647eb28de220796b2721051bc4f49ec

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:02:12 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:23:05 nia Exp $
 
-RMD160 (itemadapter-0.2.0.tar.gz) = ee186ff5696cacd722fdbdae65959c7fcb47faaa
+BLAKE2s (itemadapter-0.2.0.tar.gz) = 1888f7065363f50bf2ab1c6a0ea380379062c55006c988d61fa376b0237cec56
 SHA512 (itemadapter-0.2.0.tar.gz) = d44072d164909a0557014ca51f410fb70554f2ad363d08167357f5d73b1eceecad0a873c26fc90742ea17c45b71509db471eef04b405aac1a38f119abfeb23c0
 Size (itemadapter-0.2.0.tar.gz) = 12197 bytes

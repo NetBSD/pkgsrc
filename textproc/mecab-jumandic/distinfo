@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:01:28 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:22:22 nia Exp $
 
-RMD160 (mecab-jumandic-5.1-20070304.tar.gz) = b062285c01b81f497f2f0d9a968917142c269825
+BLAKE2s (mecab-jumandic-5.1-20070304.tar.gz) = e34cd08e6122cd55bfb648ace64f8b1227f1a5cb0afae2559410ec7884616c7c
 SHA512 (mecab-jumandic-5.1-20070304.tar.gz) = a680c7d25a11b0052008e85394f41d5bb8ee423574b08c03a38749b5d10a5cf2aaab49665744c2125310576dc6d9399b05ede82d0fe4a5cb58ca62ccee97b542
 Size (mecab-jumandic-5.1-20070304.tar.gz) = 13115651 bytes

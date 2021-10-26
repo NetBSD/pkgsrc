@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:01:31 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:22:24 nia Exp $
 
-RMD160 (ocaml-xml-light/xml-light-2.4.tar.gz) = e10e04f02e1ca6c1599365eba7a96bb7f54dce27
+BLAKE2s (ocaml-xml-light/xml-light-2.4.tar.gz) = 2e425633ab11282e6b44ff6c8e219fabaf266d8e2dd2e6d053ba6753db7392f7
 SHA512 (ocaml-xml-light/xml-light-2.4.tar.gz) = 029068c6eb48cd1223438dc0f86e1c5e6fd0412d160ea4d79928eec5e5f5843af46260d7240e4260851e9580e7f92d578c764c63c8e0acab348637455493ef02
 Size (ocaml-xml-light/xml-light-2.4.tar.gz) = 16573 bytes
 SHA1 (patch-Makefile) = e0884127c5bf94af4f4f36d64dd50617e6c0695a

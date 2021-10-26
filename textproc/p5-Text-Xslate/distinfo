@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2021/10/07 15:01:52 nia Exp $
+$NetBSD: distinfo,v 1.26 2021/10/26 11:22:46 nia Exp $
 
-RMD160 (Text-Xslate-v3.5.8.tar.gz) = 78299afba5059ad02e617e326bb09ec4541e0e95
+BLAKE2s (Text-Xslate-v3.5.8.tar.gz) = 10b0b78d0ebc8f7f39fd34a73a2cecc1b2dac924e1cf28d75f0a72c97dab1068
 SHA512 (Text-Xslate-v3.5.8.tar.gz) = aace9c026cf2fde48685adc984380c8dc18afbfb25f73e3149e92b5702eeeaa220d8f6204e652a69ec43430c0ee4a499caebd47e24bf924aa853efb6eef03f8e
 Size (Text-Xslate-v3.5.8.tar.gz) = 216321 bytes

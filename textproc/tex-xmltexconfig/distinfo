@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:02:42 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:23:35 nia Exp $
 
-RMD160 (tex-xmltexconfig-35743/xmltexconfig.tar.xz) = 322876557edf643a710bed32d4e933fcef0fcc6c
+BLAKE2s (tex-xmltexconfig-35743/xmltexconfig.tar.xz) = 1194ca2b5ea808d461a220aba5eebbc266155ba2a8c896f28735a710420bfa29
 SHA512 (tex-xmltexconfig-35743/xmltexconfig.tar.xz) = 9ec0d7c93b70d5b864d115a23869eb7a82fd76ea61c9250fcb8fa30f07a8aa724f65400d0b934f2c9fbbaf4529e72a4748a51f7bfb145a83bfd25f5dd1922e08
 Size (tex-xmltexconfig-35743/xmltexconfig.tar.xz) = 456 bytes

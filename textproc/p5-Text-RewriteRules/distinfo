@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 15:01:50 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:22:43 nia Exp $
 
-RMD160 (Text-RewriteRules-0.25.tar.gz) = 0136a179d9faa07489f88facafec56b6c78fd276
+BLAKE2s (Text-RewriteRules-0.25.tar.gz) = 2da12c935b9d91ba9383319d9a1a55c10ceb744c5d31ab7e9eab5dc2c7461193
 SHA512 (Text-RewriteRules-0.25.tar.gz) = 0f5e7ccede5eddb4d154f536c60bdb3bd89d9e4cb50e3e1e480f0edb6eef0dac34f7ec28e61a721b37a359a79f4c35c06b3fab4b6b516b0faff610ba100ad3aa
 Size (Text-RewriteRules-0.25.tar.gz) = 15785 bytes

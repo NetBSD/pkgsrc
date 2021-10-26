@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:51 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:45 nia Exp $
 
-RMD160 (Text-Typography-0.01.tar.gz) = c9b9f3778e36c7edaa7363d81df22d20091cc7ac
+BLAKE2s (Text-Typography-0.01.tar.gz) = 5cafd2089e3d628ff7e71620f9a95015700fb2ce13e15bfd8ca23c011ca16284
 SHA512 (Text-Typography-0.01.tar.gz) = f7bd0d9ef386fb4c7335cf592a3d06830b26d5776c3ccec4bc9b4a563dcbec1c5e1c678fdce6f5f3a2ad8d9d1a2c5d2b75093f66a809995c321078a1888a39c0
 Size (Text-Typography-0.01.tar.gz) = 7913 bytes
 SHA1 (patch-lib_Text_Typography.pm) = 83ff252473bd6fb66db299761eb5b51902079d15

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:57 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:50 nia Exp $
 
-RMD160 (XML-Grove-0.46alpha.tar.gz) = fbd6c83b3e26e9e282a595c6ae7442239c86a2fb
+BLAKE2s (XML-Grove-0.46alpha.tar.gz) = 3398e6ac77ebafe44c236cdeefc99b890a5cb1e75292e93768142b5cc23c1422
 SHA512 (XML-Grove-0.46alpha.tar.gz) = c49f9714721a2291d417849a2f9c6b994f856dc333393954b64f0bd0015c6a9bef8ebfa6bc360f001f496c57f60b793d286e42da3b50c494561d4d4066005d75
 Size (XML-Grove-0.46alpha.tar.gz) = 27336 bytes

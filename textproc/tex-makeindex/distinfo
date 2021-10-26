@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 15:02:42 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:23:34 nia Exp $
 
-RMD160 (tex-makeindex-35872/makeindex.tar.xz) = b6a23a4f08b50d32b0003226b5bc09e2f73c5e9a
+BLAKE2s (tex-makeindex-35872/makeindex.tar.xz) = 112a2c0ffc0248ae3d5a28e4383d36b774f99fd1d75c783795054531e4022205
 SHA512 (tex-makeindex-35872/makeindex.tar.xz) = 066f1ed4c867dfd834cf784fdfe2eac443912538538686f1a391948811fc3bca7edd9ef52bf5f51d7e13e0374486eec6f601217e88b727baeb758611ac320016
 Size (tex-makeindex-35872/makeindex.tar.xz) = 4632 bytes

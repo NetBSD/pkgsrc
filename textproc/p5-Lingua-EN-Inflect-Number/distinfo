@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:35 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:28 nia Exp $
 
-RMD160 (Lingua-EN-Inflect-Number-1.12.tar.gz) = 619455a3ef0a3441941e32213b29b50d8db67eb3
+BLAKE2s (Lingua-EN-Inflect-Number-1.12.tar.gz) = 8adb416ba5858ad1d99bed645e914962bc009f2f80c5041313ed61484daf08ca
 SHA512 (Lingua-EN-Inflect-Number-1.12.tar.gz) = 302c2f891984a7a0b10caa101d06524edc5343a5226ccd32952076e765d434d0ba26ced32d000f85ef01b3cff4510c1456003e222df59a084932e6934947ee08
 Size (Lingua-EN-Inflect-Number-1.12.tar.gz) = 10234 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:19 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:12 nia Exp $
 
-RMD160 (jdom-1.1.1.zip) = 7b20b46822b50e1a7a39a1693ebe01010caf6e61
+BLAKE2s (jdom-1.1.1.zip) = 096e0b01da2bd2388e70faf2d173d9831cab05056904b874869b3baf21f2659b
 SHA512 (jdom-1.1.1.zip) = c63eeb5febd25f6ad1396560d5d4e397b521814568311339b50d299eefbf29b55f721ede603958df4341f55c1ddaadd528bc98109f59384ccf7c2aedd604a5d2
 Size (jdom-1.1.1.zip) = 4054268 bytes

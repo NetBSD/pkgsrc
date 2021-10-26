@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:00:48 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:21:42 nia Exp $
 
-RMD160 (aspell6-sk-2.01-2.tar.bz2) = 9574b4d8a4e1f76dbfff27c852a26d3561876e4b
+BLAKE2s (aspell6-sk-2.01-2.tar.bz2) = ef93006c52735979a91c4e33332e14a57a803ab9a34b0196e70273ba0135bfff
 SHA512 (aspell6-sk-2.01-2.tar.bz2) = 020de459d4ff9c6e0c88428d43c9feea346bf8fadb9fa1233e9e54471ee23f970524a9a47cc6a45d04d6857387c9d9d1ecc1af2062325298354ee6c2d9c314b4
 Size (aspell6-sk-2.01-2.tar.bz2) = 338933 bytes
 SHA1 (patch-aa) = f4668bfe638648c9e7e8ddccf762abffb6d1e810

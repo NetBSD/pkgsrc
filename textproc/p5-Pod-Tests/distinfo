@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:01:40 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:22:34 nia Exp $
 
-RMD160 (Pod-Tests-1.20.tar.gz) = 1235d25962ec9517072862adfde9c8922e58475b
+BLAKE2s (Pod-Tests-1.20.tar.gz) = ed043cf1064d690760b32f637b1ab9b994bf7c05daa3c8e6aca69ae91d61f1a1
 SHA512 (Pod-Tests-1.20.tar.gz) = 2be444cfdce172d9f82f8df5235aca966b1e1af4324f6e3bd02bbbf7c3940a6c2329bcaacf8281b8ae58563b82703fc5c3af333dc2d6bced76b9ddd4c3458bf6
 Size (Pod-Tests-1.20.tar.gz) = 31109 bytes

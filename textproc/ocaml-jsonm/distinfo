@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:30 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:24 nia Exp $
 
-RMD160 (jsonm-1.0.1.tbz) = ed0aa2685dd409cd40f84e53bf78047d67ce556a
+BLAKE2s (jsonm-1.0.1.tbz) = f7d4b194421dd877649367bda0bae96dfe91eef8799a680309778cf399cc2aec
 SHA512 (jsonm-1.0.1.tbz) = e86e225073b429f71063af14ad39b87498609db6a122b39e1a739c5b77fcde487bf6b17235b2f9742b7d22aca0f6d475fdba1b0bab2a6329cf7e681fe43d31a6
 Size (jsonm-1.0.1.tbz) = 21608 bytes

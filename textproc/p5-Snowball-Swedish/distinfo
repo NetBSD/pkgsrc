@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:01:41 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:22:35 nia Exp $
 
-RMD160 (Snowball-Swedish-1.2.tar.gz) = ea464173a8cbbdb2a550bae57807cc7fc0da8423
+BLAKE2s (Snowball-Swedish-1.2.tar.gz) = e5f0fdee46f541b60f1c99779fbdcd45aaffaf3bfe490e238a083ac33d09ac3b
 SHA512 (Snowball-Swedish-1.2.tar.gz) = 799f22c298100fad901cf69b3bcc0b3be109b1557feb5554a1aa2898542b27bff3c7bcea8fa402d850e211751a6a23453521a395460df551d46cbda3a4ab4296
 Size (Snowball-Swedish-1.2.tar.gz) = 185917 bytes

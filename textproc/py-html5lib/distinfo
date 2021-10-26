@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 15:02:11 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:23:04 nia Exp $
 
-RMD160 (html5lib-1.0.1.tar.gz) = aba1f653b8ac0f8748de4408343eeb80c3589f90
+BLAKE2s (html5lib-1.0.1.tar.gz) = 5e8bb01c0afda522a38cfa885472ff8f75d727b6e89d47b53db1b321c52a0fda
 SHA512 (html5lib-1.0.1.tar.gz) = 35939b4450893864da04e735ee5e0addacf1dd34bae6a6909c76572abf6bfded446a78a713dfde91c1485ba45867d7abeb6a45cf0545c16ea968707be7de5dd2
 Size (html5lib-1.0.1.tar.gz) = 252959 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:57 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:50 nia Exp $
 
-RMD160 (XML-Handler-YAWriter-0.23.tar.gz) = 92a863abc770c9f8dd3ee40c0b86729cd50a3d9c
+BLAKE2s (XML-Handler-YAWriter-0.23.tar.gz) = aeffda9c94f3c0f21fa68ae499ae9b766f6eb5b049a5ffb0424939c82196ea26
 SHA512 (XML-Handler-YAWriter-0.23.tar.gz) = 3d41bfa4a33296ae1556b269b0c6ecd732a809fa517805de37aa452aff8394cdf639a68a7a3248e5457297dae4bedf22ea73407de0dbf25ea6a9facccbd4098f
 Size (XML-Handler-YAWriter-0.23.tar.gz) = 25695 bytes
