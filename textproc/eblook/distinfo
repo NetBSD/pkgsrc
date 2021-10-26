@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:00:57 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:21:51 nia Exp $
 
-RMD160 (eblook-1.6.1.tar.gz) = 32c37963d2627642a5799dd2a4222c511143b8d6
+BLAKE2s (eblook-1.6.1.tar.gz) = 08b94f42940194e2610f244bb9c7da9dbead5a1aaacc0b87ed5b7747cdcdf530
 SHA512 (eblook-1.6.1.tar.gz) = 36f4f383a53a0332a2dec0e40d2743c93d35c9f51a7de2d2706bbc18a4fde215d4e345feb175bebf428c1760cb32e73148fb9b336fcde8c0d8b924ee6ecfd6a4
 Size (eblook-1.6.1.tar.gz) = 440727 bytes

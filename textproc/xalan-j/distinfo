@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:02:45 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:23:39 nia Exp $
 
-RMD160 (xalan-j_1_2.tar.gz) = b4eb03ada2d9678afdfe58e286fa83820c2f62a8
+BLAKE2s (xalan-j_1_2.tar.gz) = e0ee0ea8214a02d5c5aa483ca7572f0ce766225a2a5ef0930c525278ba357568
 SHA512 (xalan-j_1_2.tar.gz) = a85c927384911c9ae5fe4d173c605e44e9a0edb20e622241ae80877883a41aa0906a14c670d6f7cbc53530b123e3597ed8b59bba5a855de1d77d491bb439c238
 Size (xalan-j_1_2.tar.gz) = 2686408 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:02:43 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:23:36 nia Exp $
 
-RMD160 (tinyxml2-2.2.0.tar.gz) = 6b0824555d8fe9a97ec32647ac5058b1aaccea6d
+BLAKE2s (tinyxml2-2.2.0.tar.gz) = f00ee481a30c1a07fe676ffe4c2e1f0940c5747c160f1e58b40d75bef4c39f7a
 SHA512 (tinyxml2-2.2.0.tar.gz) = e06edb46f96dcc58cf16c8fef91dd072c9bd6dd296bb9ba3e082db059438f5f31e0689015deee7f1c390788d9bd0e64b6f5c0235c9d2839419ee2ab1784f53c4
 Size (tinyxml2-2.2.0.tar.gz) = 455226 bytes

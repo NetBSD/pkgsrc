@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:02:00 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:53 nia Exp $
 
-RMD160 (XML-SAX-ExpatXS-1.33.tar.gz) = 3e571ad3e3a8d612a88387682099ddf64e2c8eca
+BLAKE2s (XML-SAX-ExpatXS-1.33.tar.gz) = fbf7b4676b7487a704cfd61c27317fb70f845703f2707a2d7b7997849eb81278
 SHA512 (XML-SAX-ExpatXS-1.33.tar.gz) = bf00b444611baf215886534acc6ae16cbc8dc593223698762f3a68f2baca661fe82a6287e1c1c4bf3c5c005f165516eae32b22af7505c502009da0a46aeca40f
 Size (XML-SAX-ExpatXS-1.33.tar.gz) = 156436 bytes
 SHA1 (patch-Makefile.PL) = a8baf01fc0551c3367c6db787a72fabb9823a892

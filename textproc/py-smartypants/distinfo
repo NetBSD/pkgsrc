@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:02:19 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:23:13 nia Exp $
 
-RMD160 (smartypants-2.0.1.tar.gz) = 2fbe33dcca0235f808c7937e3aa602c13972bfdc
+BLAKE2s (smartypants-2.0.1.tar.gz) = 07dcc2bfb73dfc501bc444e070a5e720771996775429813d6dd2bc42adfdc235
 SHA512 (smartypants-2.0.1.tar.gz) = d47a866a5478c3520251f87a93a468a5eea10318b24b2e8d4bc918d533b5a5789aa56d3a8d5fb8ccff9572fb63e5b6f2eafc44f93fb57a19e6621ebef5d64d9d
 Size (smartypants-2.0.1.tar.gz) = 24152 bytes

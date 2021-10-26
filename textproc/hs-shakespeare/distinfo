@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:01:09 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:22:02 nia Exp $
 
-RMD160 (shakespeare-2.0.25.tar.gz) = 60c0e10592c571a23d7de37cefcd13afccca53c2
+BLAKE2s (shakespeare-2.0.25.tar.gz) = e53b19ea218aca9f7cd24660dbfb69c5d7b8d4fa42fd2f2b9bd49103c9bd6eb2
 SHA512 (shakespeare-2.0.25.tar.gz) = 26805c070c712a7bd549a2923f7b39cf9eaf7c9a3451c0c672eeff3b22e4d3f696887f3846e39c73f1c0add6a21becae9e58bb2821c0158298e105e0a1bf8ac2
 Size (shakespeare-2.0.25.tar.gz) = 65816 bytes

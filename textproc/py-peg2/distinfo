@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:02:16 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:23:10 nia Exp $
 
-RMD160 (pyPEG2-2.15.2.tar.gz) = 594103ba8a33086a306a172f27c6d29cf0c1435a
+BLAKE2s (pyPEG2-2.15.2.tar.gz) = e785c9fa58dc8300174d87f0819754ef826d0a43e39b7ca7f064b2933f9dc000
 SHA512 (pyPEG2-2.15.2.tar.gz) = f78e3b1294169167809c5fe05f2a69af2bd6c7c4c1bcbebafb4aa6b8ae6ead181a46b051e41193bc31f49c4b4fa7b1ef231d172217c11d301d0ee21d8e411b6f
 Size (pyPEG2-2.15.2.tar.gz) = 40334 bytes

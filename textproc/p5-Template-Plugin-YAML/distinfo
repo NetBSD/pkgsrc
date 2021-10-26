@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:01:45 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:22:38 nia Exp $
 
-RMD160 (Template-Plugin-YAML-1.23.tar.gz) = aae40ee19885f1d50bd85ec160671f1dcde7517e
+BLAKE2s (Template-Plugin-YAML-1.23.tar.gz) = 4e13201f6ccedcfd9f7cca4300434de8c4c8a5ddb62676a1195385c2403f586c
 SHA512 (Template-Plugin-YAML-1.23.tar.gz) = 22ba20f07446db100fb3aa88716f24d00947d9953fbd6ec9030eed3560ad63032bc892d793fa2b916e1b22b46ad242f5478dbe1908ae080af69ef0fa55e012f9
 Size (Template-Plugin-YAML-1.23.tar.gz) = 2424 bytes

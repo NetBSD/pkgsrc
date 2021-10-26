@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:01:51 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:22:44 nia Exp $
 
-RMD160 (Text-SimpleTable-AutoWidth-0.09.tar.gz) = 5e7666d4eef7c42f164462ce2e6925fcfd1e78bc
+BLAKE2s (Text-SimpleTable-AutoWidth-0.09.tar.gz) = a5fff86d2221f3cf8e4341f6b944dea3e314042c035d2ef124c4c72eb179c060
 SHA512 (Text-SimpleTable-AutoWidth-0.09.tar.gz) = b35d80ee1040ab744b53d29381034ea7ac67c5a6973516efda67b2ab34412bbadec6397d91a452488dd99158b2a4ee84115f3a52c12cb0e771f77fdc05cfb9ab
 Size (Text-SimpleTable-AutoWidth-0.09.tar.gz) = 11138 bytes

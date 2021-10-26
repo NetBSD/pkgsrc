@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:02:28 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:23:18 nia Exp $
 
-RMD160 (Pyphen-0.9.5.tar.gz) = 9df507b33f25538733d8cb189be83c56b11218b4
+BLAKE2s (Pyphen-0.9.5.tar.gz) = 5d795ef0bba334b266021395d19cc5b6f00edb035ddeb9571eaa161ecf80ad34
 SHA512 (Pyphen-0.9.5.tar.gz) = 15b9a29517df2b873b5b8d4739d8fa48a09ab199ab9246c7a4fd25c46253a74a18a88fd9484978476b3b1c8d88fed7729382b9dbe4f425724fe54bcd6227de96
 Size (Pyphen-0.9.5.tar.gz) = 2971389 bytes

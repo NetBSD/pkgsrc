@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:02:48 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:23:41 nia Exp $
 
-RMD160 (yamcha-0.33.tar.gz) = ac21fa16a45efa40775d426cd6229f612a7aa21e
+BLAKE2s (yamcha-0.33.tar.gz) = 105d79cc0de50fb5b36515b8d126245efa1c8462220ff5c530fc88ec48947159
 SHA512 (yamcha-0.33.tar.gz) = 22858a16f877f984fb955a39c625a8231b2c867d58b152d7c8c8626da4e5480bb2cf02e6bb8792e227d283f69d7f49aaed7b053307a55d8a4cd0b42e6d0bfca9
 Size (yamcha-0.33.tar.gz) = 488670 bytes
 SHA1 (patch-aa) = 16120e3f052a1046ee360bbe449d95dfdb6a3990

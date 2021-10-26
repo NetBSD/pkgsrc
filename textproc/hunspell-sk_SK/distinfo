@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:01:15 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:22:08 nia Exp $
 
-RMD160 (hunspell-sk-20090330.zip) = f86f59c3bbc0c3bd15db737754d269b76994f03a
+BLAKE2s (hunspell-sk-20090330.zip) = 80f4377bffb749eab5bea2be79714b5fb856b7a085eae9cabfda9d37f5f654b1
 SHA512 (hunspell-sk-20090330.zip) = a1451a1e9b097f0d0018d22c04a2f502aceade322b39ec9b1b61124c3db15d0db50bd567769f28f9c0766e1681017a48869a3564b7915af60f5e5a54709764e2
 Size (hunspell-sk-20090330.zip) = 665793 bytes

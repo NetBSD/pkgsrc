@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:01:08 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:22:02 nia Exp $
 
-RMD160 (regex-base-0.94.0.1.tar.gz) = 4a1faa02b05239b9927dcf3993f5d4ddda04fcfa
+BLAKE2s (regex-base-0.94.0.1.tar.gz) = 653a1ecd8993dfdc15a4314b05dd24dc4f52ba74701d66f4c3289f3a63e795cd
 SHA512 (regex-base-0.94.0.1.tar.gz) = 2a1f088532c4488e4dea417222b8723436fbffcf8a8a3596d66c5fd4941250e97c0271c23025244ef3f4ba5295cff82ad8b49a6776d9410210efa7f199bc8b7e
 Size (regex-base-0.94.0.1.tar.gz) = 10095 bytes

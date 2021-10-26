@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2021/10/07 15:01:46 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/26 11:22:39 nia Exp $
 
-RMD160 (Text-CSV-2.01.tar.gz) = dc59b8ba83e76811bd637fb0cde4a924addbdf0e
+BLAKE2s (Text-CSV-2.01.tar.gz) = 23415c785523efe3ee3ea5482c40dcfc7a4a0ed0d725ddb74a76c598613a21fb
 SHA512 (Text-CSV-2.01.tar.gz) = 45c215686437e111fcd8d6c0adc9c6e0bac9df37fcd47e7bd9fcf4872859e59a296caae3573b77955cdaf42284b4c88fcc6774bd6ac11d701ae54f6a3741991a
 Size (Text-CSV-2.01.tar.gz) = 134279 bytes

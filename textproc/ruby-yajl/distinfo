@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:02:37 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:23:30 nia Exp $
 
-RMD160 (yajl-ruby-1.4.1.gem) = ed6a73b02ddc41e41dd37e89eab74202856f0bfc
+BLAKE2s (yajl-ruby-1.4.1.gem) = 1f342b1efb5d94ea2197a492d406015aa6d8a3d7b570520313591905a42d09f2
 SHA512 (yajl-ruby-1.4.1.gem) = 24cd82380658d784bbf0a7a16d4048125cc5a856b0e0b4d3bdec29a550a9131d3959f9a75eba0d18d5db8d0a23158fb7ef6ea6f60d221a7bc3d8efc437d52df5
 Size (yajl-ruby-1.4.1.gem) = 557056 bytes

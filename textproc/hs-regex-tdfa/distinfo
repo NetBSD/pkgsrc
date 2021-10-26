@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:01:09 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:22:02 nia Exp $
 
-RMD160 (regex-tdfa-1.3.1.0.tar.gz) = 2fe621d6e90d052aa72312f50c9f145d636e600c
+BLAKE2s (regex-tdfa-1.3.1.0.tar.gz) = ddaa7840914ccdff6a79b594ca45da90a1712000779b44ec9e92f16171d7ee20
 SHA512 (regex-tdfa-1.3.1.0.tar.gz) = becac929003ea2c1a8fe1e890a53d3cb914eeb02090a23d014120d04ee144e24c2c7bdfaadd58a2dd70ed49df1e0059a3f8a94faa4ce0a6efd533ee6019c951f
 Size (regex-tdfa-1.3.1.0.tar.gz) = 77767 bytes
 SHA1 (patch-regex-tdfa.cabal) = d14b1c5571ef5c065d3b71ac72d305bd299493be

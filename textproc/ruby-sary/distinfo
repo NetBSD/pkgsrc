@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:02:34 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:23:27 nia Exp $
 
-RMD160 (sary-ruby-1.2.0.tar.gz) = f35602bea532138b87c6d77b08dbc71f7ebddc41
+BLAKE2s (sary-ruby-1.2.0.tar.gz) = 8f0b5d2b9315634a3cd0b234258f0c85394d1932bcb1f5517dc3b9c8dcfd1c64
 SHA512 (sary-ruby-1.2.0.tar.gz) = d92f7480921562a1fc79b5ddcaf001c167e3cfe3a887cccc47b9ccc1d870f0a431566d1958588e7a579c895524531cb2a0165866526bfa18ec9b5adc1e2b4131
 Size (sary-ruby-1.2.0.tar.gz) = 9155 bytes
 SHA1 (patch-aa) = 27cc4cb9ab605b5a7c1ac8dac813c002dc634e11

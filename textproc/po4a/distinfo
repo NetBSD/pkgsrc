@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.21 2021/10/07 15:02:04 nia Exp $
+$NetBSD: distinfo,v 1.22 2021/10/26 11:22:57 nia Exp $
 
-RMD160 (po4a-0.62.tar.gz) = e0a77314109ce228b200cf9133c54105153b9953
+BLAKE2s (po4a-0.62.tar.gz) = cdd621eacfe5a4f51ac30aca8ec736d8601573c93b4ddb95ed70020db6c2bf8a
 SHA512 (po4a-0.62.tar.gz) = a91a31d9d80bb48ee071f39148572a4ec2b65f472a26696aa517c9d52ad56accf9fbdf971dcf15dd1c492cca7efab328ebffe1f20e98f7fe2532d4bf490a9997
 Size (po4a-0.62.tar.gz) = 3980028 bytes
 SHA1 (patch-Po4aBuilder.pm) = 7a39eaf25bf956386cc707be7f1b9af6219192e5

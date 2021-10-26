@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:02:47 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:23:41 nia Exp $
 
-RMD160 (xmltoman_0.4.orig.tar.gz) = ce61c5184d5ba0a9db63bff2d4635eb644825383
+BLAKE2s (xmltoman_0.4.orig.tar.gz) = 5d144e2e3928014d3d018dd43b64cddf72d96779c9c91a6b3e592f74cf5f071c
 SHA512 (xmltoman_0.4.orig.tar.gz) = 347722731e2101ecd0619f88f4efdbca534810c96977a1281af685e8a61f4c1a826a71a9f0e3af43cc899936640787366a78077f36d23a9efcfeb789dbcfae22
 Size (xmltoman_0.4.orig.tar.gz) = 15250 bytes

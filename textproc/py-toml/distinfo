@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:02:23 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:23:16 nia Exp $
 
-RMD160 (toml-0.10.2.tar.gz) = 0bf696ef18e4bb20549157b5f2a864dd71222738
+BLAKE2s (toml-0.10.2.tar.gz) = 4befaf66a42f4beb400c46a12f0f107d03bc6f720fde07ab0f38f9aa1c41dfcc
 SHA512 (toml-0.10.2.tar.gz) = ede2c8fed610a3827dba828f6e7ab7a8dbd5745e8ef7c0cd955219afdc83b9caea714deee09e853627f05ad1c525dc60426a6e9e16f58758aa028cb4d3db4b39
 Size (toml-0.10.2.tar.gz) = 22253 bytes

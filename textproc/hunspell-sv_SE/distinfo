@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:01:15 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:22:08 nia Exp $
 
-RMD160 (sv-1.27.zip) = 4b469f29470fe69660193f33e99f5ce4db04d56f
+BLAKE2s (sv-1.27.zip) = 97fdfd7e187d02d9d148a563e6cf5eae6a4e9b670533ffd1e09dc8ed2d7b6e65
 SHA512 (sv-1.27.zip) = c8e7eed73be6e8c0d590e63eb0f0b551a748f7041308f44f832419e6a3e2cdd5e0edc0e90510d1b9975ad55e9f5ca48e91b1716d8ceb7fd4aabca82aafbecfca
 Size (sv-1.27.zip) = 284143 bytes

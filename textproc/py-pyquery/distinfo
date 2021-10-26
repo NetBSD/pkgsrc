@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 15:02:18 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:23:11 nia Exp $
 
-RMD160 (pyquery-1.4.3.tar.gz) = 720d4ade091c59b76666ffe2c05f07c422d1e271
+BLAKE2s (pyquery-1.4.3.tar.gz) = d3d884bf731f5e9731141a87d75b5be39a90ecbcec95b36e0c0d085a37c21c17
 SHA512 (pyquery-1.4.3.tar.gz) = cb61326e38f78763ca15de09e3a56dad776b3d4831b54eabf295db0f9af8bf04599642c73f5db3e3172b86d7b66ba2ef626c8cba2dfb458af6ac432d15ea7cba
 Size (pyquery-1.4.3.tar.gz) = 47448 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:01:22 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:22:17 nia Exp $
 
-RMD160 (snowball-2.1.0.tar.gz) = ecdc9606e494447e1f85ff89076f45cec9f0a3dd
+BLAKE2s (snowball-2.1.0.tar.gz) = 721871eda75290a6f9279d94beb5ab1383564dfdf782bf0cc9a8c0fccacc656d
 SHA512 (snowball-2.1.0.tar.gz) = 1efd7d8ab58852987e83247048244882c517e32237c8cb3c0558b66ecfb075733ce8805ebb76041e6e7d6664c236054effe66838e7c524ee529ce869aa8134f0
 Size (snowball-2.1.0.tar.gz) = 220324 bytes
 SHA1 (patch-GNUmakefile) = 0a0c0a1760338fc55374e88b4ab853b47dc24ea0

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:30 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:23 nia Exp $
 
-RMD160 (o3read-0.0.4.tar.gz) = c011a283fdc3ee6ff4c340519a4ef7f32c258f38
+BLAKE2s (o3read-0.0.4.tar.gz) = 21bd1377542a5f0f365ef5c30293ffcb63fe70bc231ada6c10012da6820cfc13
 SHA512 (o3read-0.0.4.tar.gz) = 5287a9d58a77cba47397265de9decac1d4327f0a6065cbf7303451d48126a173ad2763157355c9a41237feac6b467ddff5d7e5ad4b4d6c3870f1d09ae0035879
 Size (o3read-0.0.4.tar.gz) = 21075 bytes
 SHA1 (patch-aa) = ed5039ef9bf3a75955b102f6c0318a680d2f0dd4

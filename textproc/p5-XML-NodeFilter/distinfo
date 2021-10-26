@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:58 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:51 nia Exp $
 
-RMD160 (XML-NodeFilter-0.01.tar.gz) = fa5627fd0ff7d10f96ae48701bd4be537b949a1d
+BLAKE2s (XML-NodeFilter-0.01.tar.gz) = b43f83311d17188f2c6cc2aac97303b028c8ad5146c51081bdb8434d0da9a290
 SHA512 (XML-NodeFilter-0.01.tar.gz) = 365dbebc8dba978862c24f0c6f12b9fddd60a62f5ca7f676f229f62a91cbf72e9494491e071985aba1f8c84bd0a1e8fbed53b9bb805db10693e58b852807ad54
 Size (XML-NodeFilter-0.01.tar.gz) = 6620 bytes

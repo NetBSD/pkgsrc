@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 15:02:39 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:23:32 nia Exp $
 
-RMD160 (sphinx-2.2.11-release.tar.gz) = 5804b4cce64bc03fa20bac26c7391cd661cecc77
+BLAKE2s (sphinx-2.2.11-release.tar.gz) = 0399a166db059549b16b9e041182be23e3286fc5cb352b2246e58f7c8788ebd1
 SHA512 (sphinx-2.2.11-release.tar.gz) = cf1a262a5b0fbf0bd2827ec6ec629edeaf709ce855a6e7b509b65342baaeb26c02717ca63f1578d32c83d21e2fd6d1e92dceb34660e6351b93cd96fd4e623689
 Size (sphinx-2.2.11-release.tar.gz) = 3061998 bytes
 SHA1 (patch-configure) = bf9d86e90a22399ffbfe617e0af75b3158cddd01

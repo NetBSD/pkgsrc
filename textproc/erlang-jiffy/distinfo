@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:00:59 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:21:53 nia Exp $
 
-RMD160 (jiffy-1.0.8.tar.gz) = 93b0bafd6ce84bd7d7dfee063d12ed537a536817
+BLAKE2s (jiffy-1.0.8.tar.gz) = 21f07abfa6d7f80b50f0d464a8b287f3572dd5a38aec104ea1979fca6949e39d
 SHA512 (jiffy-1.0.8.tar.gz) = d248d4e41d780a8f676c4fa7eee6fbdc6f9a5a2867c558cb1ce6f1600093b242fad48d86221a37bfdb7bba0142635f577a4ac3e98106558f5a0ca817dd9a0574
 Size (jiffy-1.0.8.tar.gz) = 1896454 bytes
 SHA1 (patch-Makefile) = 5113cc43fe05c12de2a5f75feb57692695c196c7

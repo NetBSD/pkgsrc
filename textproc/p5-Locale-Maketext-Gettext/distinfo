@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:37 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:30 nia Exp $
 
-RMD160 (Locale-Maketext-Gettext-1.30.tar.gz) = 800bd3e85a7a367aa585c410d10d6d5b5ce77726
+BLAKE2s (Locale-Maketext-Gettext-1.30.tar.gz) = 92e7adfa74849a58744ab2bd4c612ab02e08c0c3e3bcb88acd93085370308186
 SHA512 (Locale-Maketext-Gettext-1.30.tar.gz) = 714b0dac97271ebdefa025155a98ce6c3fea796ed627e4606a86bef96fcf38a3cff6292cf861bcb57c895569739d3ab2a36769838718d0cc45ecf8501e5538c1
 Size (Locale-Maketext-Gettext-1.30.tar.gz) = 55400 bytes

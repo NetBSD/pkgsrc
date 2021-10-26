@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:02:21 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:23:15 nia Exp $
 
-RMD160 (sphinxcontrib-websupport-1.1.2.tar.gz) = 4d7d6c831fae6234ce6a6700ccf0ecbbe42e6d59
+BLAKE2s (sphinxcontrib-websupport-1.1.2.tar.gz) = f16f0cab4fa0fee23e7015d30b609269a3d9a50bbe5792fef1d45a9aa9280ca6
 SHA512 (sphinxcontrib-websupport-1.1.2.tar.gz) = 55754f6304f38abd50f410da164f401a1b9a1d289b19f0077a38f72ce11a2dd64eff0713bb99471e470ff15fbd6a0042d49bab14c92f82cdd61019adbb88397e
 Size (sphinxcontrib-websupport-1.1.2.tar.gz) = 599000 bytes

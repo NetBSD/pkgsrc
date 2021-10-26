@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.138 2021/10/07 15:01:24 nia Exp $
+$NetBSD: distinfo,v 1.139 2021/10/26 11:22:18 nia Exp $
 
-RMD160 (libxml2-2.9.12.tar.gz) = 766b9460b9e62b8152f431747c30c88c868c0c7e
+BLAKE2s (libxml2-2.9.12.tar.gz) = 5981ff71b585818844b511e55f7236daa81a2503b9705a29fd1a5af5141a56c4
 SHA512 (libxml2-2.9.12.tar.gz) = df1c6486e80f0fcf3c506f3599bcfb94b620c00d0b5d26831bc983daa78d58ec58b5057b1ec7c1a26c694f40199c6234ee2a6dcabf65abfa10c447cb5705abbd
 Size (libxml2-2.9.12.tar.gz) = 5681632 bytes
 SHA1 (patch-Makefile.in) = e687eaa9805b855b0c8a944ec5c597bd34954472

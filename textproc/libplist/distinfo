@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 15:01:22 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:22:17 nia Exp $
 
-RMD160 (libplist-1.12.tar.bz2) = c1d6171766329dd809013c9061239636f8cb3998
+BLAKE2s (libplist-1.12.tar.bz2) = ff0aacbd494e6c224b33dc867f4b41199e67629f149f88ac4392f433ee45d957
 SHA512 (libplist-1.12.tar.bz2) = 8af40d8f457ca9a8a9061e9429698c696200714cc05dcbe981e900106c52cd5222edb9dd8d8976bccd0c8997508ed14fb2e10f0ed29383f2ad4f7c5eb7eec0b3
 Size (libplist-1.12.tar.bz2) = 384321 bytes

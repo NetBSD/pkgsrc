@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 15:01:32 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:22:26 nia Exp $
 
-RMD160 (Convert-ASN1-0.27.tar.gz) = 21c8f53ada19fc1370804d9f4f126bce422c63e4
+BLAKE2s (Convert-ASN1-0.27.tar.gz) = 494884a5f58f8ff481af180647a5a17a2727bc474e9ac4ab723e1fb0056ba982
 SHA512 (Convert-ASN1-0.27.tar.gz) = 253bc0c1b2919841497a95bcbd05825217a3013c7f789fd9f3d389808fb015daca91f5c149797574bf32d38e94efb7f1d8df62e9e4c13928ec3b978cc9fd6fe8
 Size (Convert-ASN1-0.27.tar.gz) = 74081 bytes

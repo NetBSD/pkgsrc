@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:01:50 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:22:43 nia Exp $
 
-RMD160 (Text-Shellwords-1.08.tar.gz) = 0645fc2f4d2cf2eb14e588f74ee83e5a786de1af
+BLAKE2s (Text-Shellwords-1.08.tar.gz) = 129863bbd707bb1a06bf99f7163bd0a2709f31bfa6ed1169c62540e73fcfcc64
 SHA512 (Text-Shellwords-1.08.tar.gz) = 478e06cb558c831742436938ae59183ce06ecd1c7aa4c1b19099d6012a4ab656e000e98c07c3128f3e13152d74a01736d4bc600c75d7d9ad9a4e12d57edec549
 Size (Text-Shellwords-1.08.tar.gz) = 2591 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 15:02:34 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:23:28 nia Exp $
 
-RMD160 (stringex-2.8.5.gem) = e2afaf078394397a449016e2caf1abeb240f113b
+BLAKE2s (stringex-2.8.5.gem) = 9b3ccf9b7a3ed3f7d52d68073fa45d3c7dafe524a553059c73c9f63351cc6f57
 SHA512 (stringex-2.8.5.gem) = 53f9908f176f465d2e884e92dffb26abcdf75593c94ee8250253da0eb29eddf489cf5b3f539135659ad4c0e2dd738d2affff6a946c50abd5f36517148d8338ce
 Size (stringex-2.8.5.gem) = 130048 bytes

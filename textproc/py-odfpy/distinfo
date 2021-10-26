@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:02:16 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:23:09 nia Exp $
 
-RMD160 (odfpy-1.4.1.tar.gz) = 70d9b9e69cd91c790002c331eb25f8dc88611846
+BLAKE2s (odfpy-1.4.1.tar.gz) = 8d92a7225f45dbdd943aca444fb1c54f1697470115988ece0b131e6e1e1bfe31
 SHA512 (odfpy-1.4.1.tar.gz) = 576b0eba9bba15d3682b1d0c33c585d02abb0cf9a11b783bc17d5e870ff779749d78d60b3b71d274e3195eed23ba687358d5df39e3fedec4b265b46a270f2fe1
 Size (odfpy-1.4.1.tar.gz) = 717045 bytes
 SHA1 (patch-setup.py) = e488589f283c0662dcac71f0de19bdae49bee92e

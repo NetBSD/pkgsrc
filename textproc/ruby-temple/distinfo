@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:02:35 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:23:28 nia Exp $
 
-RMD160 (temple-0.8.2.gem) = f46618f5d93a0debb1dfe16fd5fd87e2c1e2d2da
+BLAKE2s (temple-0.8.2.gem) = fe60d3d0361c0dd221a922e0b34b795366524ea2d2a67b7082958538191371af
 SHA512 (temple-0.8.2.gem) = 51923b3bf9d4c05255131be62f567ca21305ba023ea5395a08d6970236b2a2833b058f7b3906046b8a57a224b368de12a6d5e426effca39324670fb632f33b67
 Size (temple-0.8.2.gem) = 39424 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:02:14 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:23:07 nia Exp $
 
-RMD160 (loremipsum-1.0.5.tar.gz) = 26cfde0e7d7998c323f24cc49941f4363f8908d9
+BLAKE2s (loremipsum-1.0.5.tar.gz) = 296bdfd8ed8c63ad8680d5eeeca881a50d8c07e72528709ff4b4ac39f7e90c71
 SHA512 (loremipsum-1.0.5.tar.gz) = d1960319abb19496f7898c03e7244dd9e0c8b8885cd2fa008f437a467dd555abe718210895ca869e686556cb07bc0d19baf0a68c5f6f2efc1e2afb8bfa765e97
 Size (loremipsum-1.0.5.tar.gz) = 11345 bytes

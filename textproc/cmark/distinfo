@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/09 19:20:08 adam Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:21:47 nia Exp $
 
-RMD160 (cmark-0.30.2.tar.gz) = 2f4deda50e72393d3caf91add5610dcb34d436fc
+BLAKE2s (cmark-0.30.2.tar.gz) = b164ae5a797abba43c6829af282e271abe94ccecd6a347c2e8216e33320ec2fb
 SHA512 (cmark-0.30.2.tar.gz) = aaa9b2103cf89c522f9b42a2b43c07ecf75e07eb42214c0be5de17682ea1faf9c85e3dd28fe91d446b69a34f9980bcab6e276a99b42540c40c9ee1481b3a0d17
 Size (cmark-0.30.2.tar.gz) = 246033 bytes
 SHA1 (patch-src_CMakeLists.txt) = 6403931bb8c07738d4e8c0f1fc96db67c04addb4

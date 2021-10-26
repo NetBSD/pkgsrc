@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:47 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:40 nia Exp $
 
-RMD160 (Text-Context-EitherSide-1.4.tar.gz) = 795b72f4fa99e0ef1a5529136d0210ee45effeaa
+BLAKE2s (Text-Context-EitherSide-1.4.tar.gz) = bffac38d9b7d402edec534a0ef655b91519921725221149e14ffbbc69c398e0e
 SHA512 (Text-Context-EitherSide-1.4.tar.gz) = 05810a3f72b4d76644157e668d6e7cc651cd9ae83f9c371266c636f01aa89007f6ea60696cb51f61d6dfc7f3505ca1937238fbeb75fba5dcf4de4007484dead7
 Size (Text-Context-EitherSide-1.4.tar.gz) = 4799 bytes

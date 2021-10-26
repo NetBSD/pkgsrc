@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:32 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:25 nia Exp $
 
-RMD160 (Biblio-EndnoteStyle-0.06.tar.gz) = d16583e6f3bcdcd51b1ade6a2bf7e988c3e4f09b
+BLAKE2s (Biblio-EndnoteStyle-0.06.tar.gz) = e17a431f962c1eb28b23b4377211e14cccab34349be0fe8eb88096f858ef5754
 SHA512 (Biblio-EndnoteStyle-0.06.tar.gz) = acbf906b06b3a9550268561641583868f2fbda63dabc882b2c38f7aeb5df829a494ebd84b4044f322d0bda1a938136b792337c537e3ff9099fb750cdf91e02b4
 Size (Biblio-EndnoteStyle-0.06.tar.gz) = 6043 bytes

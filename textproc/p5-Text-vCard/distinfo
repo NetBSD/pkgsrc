@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 15:01:53 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 11:22:46 nia Exp $
 
-RMD160 (Text-vCard-3.09.tar.gz) = 975063edbe201ee73a046072e284b4b85c367b78
+BLAKE2s (Text-vCard-3.09.tar.gz) = 7df10b2121afe3512e5a40cd011c818868e3e25c3a408fa31820b1dbca40c824
 SHA512 (Text-vCard-3.09.tar.gz) = fe28065bab454c5a41907c9e59c809b4de58335407adcfa502dcd4a0b5201ca39a45f7006521c3b4599b1daf9323b634c5925fbc29945411f45bccdc05263192
 Size (Text-vCard-3.09.tar.gz) = 45056 bytes

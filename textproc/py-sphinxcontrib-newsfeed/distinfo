@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:02:21 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:23:14 nia Exp $
 
-RMD160 (sphinxcontrib-newsfeed-0.1.4.tar.gz) = 8b7d5170201b44b900599b202af5614db4cbb66b
+BLAKE2s (sphinxcontrib-newsfeed-0.1.4.tar.gz) = f12f7fed572c5871f267d983e6bb7f0d8293ca8084659371b3da8b6196f68ccf
 SHA512 (sphinxcontrib-newsfeed-0.1.4.tar.gz) = 96d9d0c15fca8b62f945bafc8f0eafa62df9c471f7510e2f153e47b66534e5f3041e5c01df772e6c35a9f09baa70064642f7f0fa43ccfd33dd64c2604494f2fc
 Size (sphinxcontrib-newsfeed-0.1.4.tar.gz) = 10862 bytes
