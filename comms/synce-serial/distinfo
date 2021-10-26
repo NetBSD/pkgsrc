@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:27:09 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:06:06 nia Exp $
 
-RMD160 (synce-serial-0.9.1.tar.gz) = 2db3bb061e9e4dbccf6fbbf01653f03effca8cdf
+BLAKE2s (synce-serial-0.9.1.tar.gz) = 591b82ef3439e465fb42ba89f221964de8594d1067da5f229e7458c4c011c4fc
 SHA512 (synce-serial-0.9.1.tar.gz) = 885939de913265cee74e68d19e36b5b6c24a62b06badb1c6f62a945dbfaa6a38d2e8c7257632d7a2bf400338f8c53d9062c92f4667b0aec886fd62af92157082
 Size (synce-serial-0.9.1.tar.gz) = 286444 bytes

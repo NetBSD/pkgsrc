@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:27:08 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:06:05 nia Exp $
 
-RMD160 (qpage-3.3.tar.Z) = ee35524fea8dfbd2ccd81535efaf76d8490712e1
+BLAKE2s (qpage-3.3.tar.Z) = 329f7f648e2ea2cde28b02252c19a27af15cd4f96ef53a2cbb8626f31e490db5
 SHA512 (qpage-3.3.tar.Z) = d6062fb9e9cd6cfd60cadb923d29d36fd649c27adff2a36fd4e768798b90780153b78e7d0d1a13dcad94971ac98b32c1c5a3b415d5a1b4aa1cfbac564514a3e9
 Size (qpage-3.3.tar.Z) = 225689 bytes

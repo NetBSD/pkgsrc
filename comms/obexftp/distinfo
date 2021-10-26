@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 13:27:06 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:06:02 nia Exp $
 
-RMD160 (obexftp-0.24-Source.tar.gz) = 99fb5fac2460398cd3ab377426fe7b1050b0a6ea
+BLAKE2s (obexftp-0.24-Source.tar.gz) = 02a9eaa60cd264acacc80454a2025f3667fdeea330d09bbe0fc20f7e7dd510ce
 SHA512 (obexftp-0.24-Source.tar.gz) = 785449665f5e9269d7bfd15f379bd8fbad321780292e56341e2089d6894255b7301fc23bb27a80e4e6f6317a130b658dedd307b7ece0fd31ef8f1a109c6f21b9
 Size (obexftp-0.24-Source.tar.gz) = 88154 bytes
