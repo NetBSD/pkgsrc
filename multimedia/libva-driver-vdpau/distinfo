@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:32:13 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:01:10 nia Exp $
 
-RMD160 (vdpau-driver-0.7.4.tar.gz) = 38e3ce37875e991312d1e86d0dfdff2f135e7d11
+BLAKE2s (vdpau-driver-0.7.4.tar.gz) = b87218bc31d48ddd3b65337f32c5a764ab943c89361dd6b307ae87f6f4b46662
 SHA512 (vdpau-driver-0.7.4.tar.gz) = b5caa68c07a6b9b76d593d46d4a1d9f3ac58157a62f8e206a172bf85e0a5ea81541c0b34a9d405a2c818317383deeb448c28cf0ab34cfccbe2a8d0f3a8844117
 Size (vdpau-driver-0.7.4.tar.gz) = 80694 bytes
 SHA1 (patch-configure.ac) = fb044304ea30522b0e2ee5d8fa400df68882d8ec

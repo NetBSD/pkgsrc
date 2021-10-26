@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:32:02 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:00:59 nia Exp $
 
-RMD160 (dirac-1.0.2.tar.gz) = 0af65c4216230b5418667081cecb7bdcdc853d2e
+BLAKE2s (dirac-1.0.2.tar.gz) = 8c6288d20e2b83e90ca70546d1ddf54e6bc2f2600cba1ef93f7376dfba9ebe25
 SHA512 (dirac-1.0.2.tar.gz) = 71d49fe17da4069ea28581565d5a4c4f64565848b51d04b39a646bdaa9afc899a265e9ace34af57fba64b03562e8c2259f882f6f17c1e49d1057cd8e69d1250c
 Size (dirac-1.0.2.tar.gz) = 918366 bytes
 SHA1 (patch-configure) = 62966412a9809f30269a1da8e540ab9a64a59f9d

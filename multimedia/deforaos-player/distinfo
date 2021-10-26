@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:32:02 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:00:59 nia Exp $
 
-RMD160 (Player-0.2.0.tar.gz) = f54d7237a55e679cbecc4e4615603eddb7e55acb
+BLAKE2s (Player-0.2.0.tar.gz) = fac2a5265988ddb4461d547059027af82337e3445ac2b91a302af6b5fd651ea4
 SHA512 (Player-0.2.0.tar.gz) = 2bacfc7673e2e4755c64501842279bc50bae2c739f10158f7ba6050173cfd4b66fa860fd086a80af1b0ca4bb826ee396e957b76c7ba0e64578754d79c99db83c
 Size (Player-0.2.0.tar.gz) = 47822 bytes

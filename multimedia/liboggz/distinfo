@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:32:12 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:01:10 nia Exp $
 
-RMD160 (liboggz-1.1.1.tar.gz) = e85073131bc8ec021b1529487ef21802d01b0260
+BLAKE2s (liboggz-1.1.1.tar.gz) = 92586a86982a7811ea2d5fa69985a07ffac30e4cec9c0f0d265b4fdfb898c6c3
 SHA512 (liboggz-1.1.1.tar.gz) = 8f5fc8ca49cb6f7a1160a9c1932876b771d55985d59ddc1f48497dfc08641414a58244d7a7e52bfcecdb69f52913d0123efd8f92513f8b9064e4abe1442f2cba
 Size (liboggz-1.1.1.tar.gz) = 702261 bytes

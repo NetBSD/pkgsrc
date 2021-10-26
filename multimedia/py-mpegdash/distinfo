@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:32:18 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:01:16 nia Exp $
 
-RMD160 (mpegdash-0.1.5.tar.gz) = df8e5298c1c807a3f4605bc75d82e47ab4f5fcac
+BLAKE2s (mpegdash-0.1.5.tar.gz) = 6c901307b0f650ad3dba21063dc319d4109fde939441f3ddf188d47fa181abef
 SHA512 (mpegdash-0.1.5.tar.gz) = 19ecac5ebb024953af3c603809a0c0de9fe5a3e3a4037c1fff65b35d2f59327cff3efc9fb4629c3f61577134782704b2026007ad95e2d72cd632935b9c6f9bc5
 Size (mpegdash-0.1.5.tar.gz) = 7338 bytes
 SHA1 (patch-setup.py) = 78da8f13219a22f7de972f7597c04625c82ac4e0

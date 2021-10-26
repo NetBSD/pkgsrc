@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:32:16 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:01:13 nia Exp $
 
-RMD160 (ogle-0.9.2.tar.gz) = 16055614b5a3b336aa42a96efc0456bf88f37129
+BLAKE2s (ogle-0.9.2.tar.gz) = b375bde5cc169f689348ec4f72d52f12b9cb17616e7251dbcddd9cd996736a90
 SHA512 (ogle-0.9.2.tar.gz) = c933eed456e36126b4443361fb750309df869ac1dcba0172f0bd143c2ef830ab05e39f172f54bd372a1264b45931cb0b8fc44f8d7252d7a3655420ca794576b9
 Size (ogle-0.9.2.tar.gz) = 488984 bytes
 SHA1 (patch-aa) = 95778b6a78f8d37416428bc27b709ed64bf4533a

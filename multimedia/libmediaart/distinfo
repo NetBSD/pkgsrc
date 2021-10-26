@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:32:12 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:01:09 nia Exp $
 
-RMD160 (libmediaart-1.9.4.tar.xz) = 59f621dd4ad96927ffcb3d584c9484e39ef31dbd
+BLAKE2s (libmediaart-1.9.4.tar.xz) = de1aeb0759c38fc0e2167d26d0cc13402464e08fe74714464774fe4daf265342
 SHA512 (libmediaart-1.9.4.tar.xz) = e2526c22cb656c821da626c43c09d72afded1dfc369e77baea3de17dd6d3bd3b829cf3160e386459f55b9580cbeeb1d621c85876cb62739bc8d4f42429bdce1c
 Size (libmediaart-1.9.4.tar.xz) = 5827928 bytes
 SHA1 (patch-configure) = 9de57c0c2383e23e8b7203f03a794c4636d324bf

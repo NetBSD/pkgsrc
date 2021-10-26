@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:32:02 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:00:59 nia Exp $
 
-RMD160 (clutter-gst-3.0.26.tar.xz) = 5954248240c3baa7314361dc14ae14ea6401271a
+BLAKE2s (clutter-gst-3.0.26.tar.xz) = cde9af596f72a9e253fc94eab8ae20bbf50205ea2d003e1ed02ae0d71faa8f23
 SHA512 (clutter-gst-3.0.26.tar.xz) = c1dca7b6fb7756dd1642e176b2d26f28330388283623c46350a8c979f3dd4af916a9807dfe4937ebd9f747f781a7dad4f0f8eea74ba8423c32bd92610eebcbc7
 Size (clutter-gst-3.0.26.tar.xz) = 402976 bytes

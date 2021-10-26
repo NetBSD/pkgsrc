@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:32:16 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:01:14 nia Exp $
 
-RMD160 (olive-editor-0.1.1.tar.gz) = 7e68543a4642bad659960dc6a6d73f9e54f8bb58
+BLAKE2s (olive-editor-0.1.1.tar.gz) = 6f37af882b8c58d015ca68f1aa1857ea9de8415f81586a585075b128f0bd6ee6
 SHA512 (olive-editor-0.1.1.tar.gz) = 72aefc03956b3a64d4fb69d15f9a5c88429e8988dac7a6f10287265c065e7b85cb7c6c63ea35e07aef34cdc71e6a3611a8622a1916163c08182bab227d8555e1
 Size (olive-editor-0.1.1.tar.gz) = 2237511 bytes
 SHA1 (patch-CMakeLists.txt) = c38f07520052a40dd235768f4ccb7d34885a121a

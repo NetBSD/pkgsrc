@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:32:16 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:01:14 nia Exp $
 
-RMD160 (omxplayer-20170112-12b472eaa75bce25dc63ec61d9233aadb996f3a4.tar.gz) = 99898cc1ac443c5fda20d62e256045baa29bd8d5
+BLAKE2s (omxplayer-20170112-12b472eaa75bce25dc63ec61d9233aadb996f3a4.tar.gz) = b8a57f7f578579ced0052b207ead95715dd09849d4f76a3df343b96568adcb9d
 SHA512 (omxplayer-20170112-12b472eaa75bce25dc63ec61d9233aadb996f3a4.tar.gz) = c9e14c7ed83259e5e2ee23cdf7d11ba498851814e502fffd8e62676a91adaa5ec28a7f34d831a2c9feae46acea21520df79d308de8514198fbecab5eaa912a6f
 Size (omxplayer-20170112-12b472eaa75bce25dc63ec61d9233aadb996f3a4.tar.gz) = 1218873 bytes
 SHA1 (patch-Keyboard.cpp) = 92044ce1077bf043553c7631fad5a779f93ff33c

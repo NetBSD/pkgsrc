@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:32:19 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:01:17 nia Exp $
 
-RMD160 (schroedinger-1.0.11.tar.gz) = 2246f07d2a7310d7a4fa8b79f62b28f65c780322
+BLAKE2s (schroedinger-1.0.11.tar.gz) = 23bc236df4d58d317b3d7e9d61b869e44f514b993100fe2f58fc6844f6a1871a
 SHA512 (schroedinger-1.0.11.tar.gz) = a39dd5360eb87a63379de71d91f48cde309ded91632c0ab8b1dc76b73591f7d0dfa7003c606d1b546d495b18c916aae905a9540b48dff7cbeb5b289e0f880438
 Size (schroedinger-1.0.11.tar.gz) = 1019247 bytes
 SHA1 (patch-testsuite_Makefile.in) = eb906a16273dc39c345cf4310d3a675e0ff8e5b0

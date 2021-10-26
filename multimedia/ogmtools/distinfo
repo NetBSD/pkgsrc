@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:32:16 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:01:14 nia Exp $
 
-RMD160 (ogmtools-1.5.tar.bz2) = 58b917795fcc08904d6dfdcfb6be82d1cd8cb4ca
+BLAKE2s (ogmtools-1.5.tar.bz2) = 48bcecd27e4c6779bcd945755febc3bf782ec0cc25bf6a0ff2613048b9f19c45
 SHA512 (ogmtools-1.5.tar.bz2) = 1ed573531f9783c491a01e419667229b28540ad48c08b46131ae09ce3a4d771e3a54cde5dd09c585c0b85952e82abb3d1353864dc5223736f6eb6480158badee
 Size (ogmtools-1.5.tar.bz2) = 214934 bytes

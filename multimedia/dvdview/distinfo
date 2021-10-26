@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:32:04 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:01:00 nia Exp $
 
-RMD160 (dvdview-1.2.2.tar.gz) = 6563a006ecb788d5c9554016c97fbecb69814dab
+BLAKE2s (dvdview-1.2.2.tar.gz) = 6a58c50b356cfb96e87df8985375db3cebefe47d908c37e8bd0f5ea02ad36ab8
 SHA512 (dvdview-1.2.2.tar.gz) = d67299f08aac102fa10eeaf30d601e46846ba7ce42540a49ecc67e418dd9b204a12610bd9ec594637a9900b08c77bc8ad8db819acd0a750a40b386eca99b7fdb
 Size (dvdview-1.2.2.tar.gz) = 209143 bytes
 SHA1 (patch-aa) = 1851dba28923a5b2dd43673180c35bb8ae92daba

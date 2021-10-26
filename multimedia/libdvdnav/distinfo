@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 14:32:11 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 11:01:08 nia Exp $
 
-RMD160 (libdvdnav-6.1.1.tar.bz2) = bc85a5fe4dbe3f3643b9bcdd634c25d888825ca3
+BLAKE2s (libdvdnav-6.1.1.tar.bz2) = 0dcf48cd3eb1b42f096168ed467c1f89d1b6f3a939264d9838bbb4fc24ec3523
 SHA512 (libdvdnav-6.1.1.tar.bz2) = 889bc987113189bfdfc1ebf603b256e5b228be37196455dcfdc7f66debe18e7298b82b807e86ff18a8925e491395ed4007c87cf18ba1ff1ccc213d86f5342a10
 Size (libdvdnav-6.1.1.tar.bz2) = 367606 bytes

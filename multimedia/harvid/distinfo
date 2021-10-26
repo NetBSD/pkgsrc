@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:32:08 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:01:06 nia Exp $
 
-RMD160 (harvid-0.8.3.tar.gz) = ed77788cd4c219c16f94a10327085a9a3db7ceff
+BLAKE2s (harvid-0.8.3.tar.gz) = 14d5511a81fa537d6a82e3bc8585f42e29487000a897cf8736ae49130c5830a2
 SHA512 (harvid-0.8.3.tar.gz) = 748475602c7279f10790523cbd5cbf34c9cd283ca9e959ac0535fbb5b4ee6d2fcab976c5ddba3fa40862552b49d73df7145f36d26c9fe708063505812537a8ac
 Size (harvid-0.8.3.tar.gz) = 116446 bytes
 SHA1 (patch-libharvid_timecode.h) = dca6192ad3bb7ea2bad3ae69d82fd0e12ec1efd3

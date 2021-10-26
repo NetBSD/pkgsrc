@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:32:17 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:01:15 nia Exp $
 
-RMD160 (enzyme-0.4.1.tar.gz) = dc0b969024ea5ddfaf86e8ff49d441f17a7c8fa2
+BLAKE2s (enzyme-0.4.1.tar.gz) = 379fac5472396f5bc094fa82a1faa687ceb21ae58234238de7408662ae8dc246
 SHA512 (enzyme-0.4.1.tar.gz) = 62a85c076a7eb320249a507dcc9dd26572e3a9b9643e0a960ed114a80c75213e6e5028a726fbcdd0c2c46c53af980a69828a54a66af9a17af3210273376395b3
 Size (enzyme-0.4.1.tar.gz) = 47953 bytes
