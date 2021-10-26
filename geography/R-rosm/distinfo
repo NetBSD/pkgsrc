@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:09:22 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:45:07 nia Exp $
 
-RMD160 (R/rosm_0.2.5.tar.gz) = bc9e4f16eeb3040701b3c1af68b67a160e6988db
+BLAKE2s (R/rosm_0.2.5.tar.gz) = 97ab6801255e692c7391b9279c96f80344c4307491b7918a9ae0c7a7417b858e
 SHA512 (R/rosm_0.2.5.tar.gz) = e191cfda4cc393df849959212b4d61b0295c23312c674c1ae95f9adc4c7e11345e55b1514296398928229e93a1ed325cf40c499db5f94de0367975f5321cbf9f
 Size (R/rosm_0.2.5.tar.gz) = 2583039 bytes

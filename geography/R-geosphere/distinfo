@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:09:20 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:45:05 nia Exp $
 
-RMD160 (R/geosphere_1.5-10.tar.gz) = fc027ac418fa1418c908e6097371ac6f032563fc
+BLAKE2s (R/geosphere_1.5-10.tar.gz) = b3be95c7b75fc78db22875722d6e19cfb293d5f0409d246e0d015c3b70f39c90
 SHA512 (R/geosphere_1.5-10.tar.gz) = 4cea3b9afadba3c4b002976b7152cf7ff5caa5968a06f0c31e7f9d74632cbccf80e5f6191c21dc7e4155338ed79ffdd013ce257011c3cb207b2c912f1ca70f0a
 Size (R/geosphere_1.5-10.tar.gz) = 774048 bytes

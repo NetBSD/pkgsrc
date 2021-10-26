@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:09:32 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:45:17 nia Exp $
 
-RMD160 (xrmap-2.29.tar.bz2) = f8cacc343643a66c8236743c76c80d3c33c44c5c
+BLAKE2s (xrmap-2.29.tar.bz2) = eff48406e4b66a3079fafbbd654783492057a8a3eb538647d556852ef99a2591
 SHA512 (xrmap-2.29.tar.bz2) = a07791f54d9a020fe1aa61aa5d6330d1d434ce1cb5967c1c79b2c500da1feb99f6cbd19281f722d2dd201ecc20905214b0e8ecca217d9fc5de957bd6b0fa89aa
 Size (xrmap-2.29.tar.bz2) = 1072241 bytes
 SHA1 (patch-aa) = 31ae754c428cd96e5c4313b53c26cadefff3e47f

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:09:22 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:45:06 nia Exp $
 
-RMD160 (rnaturalearthhires/7a3f0fc8d8d690fae044dd01eb2f14d3a75c92ed-7a3f0fc8d8d690fae044dd01eb2f14d3a75c92ed.zip) = b5c38abf97c812a8d8f7b5272d570c1f846687b3
+BLAKE2s (rnaturalearthhires/7a3f0fc8d8d690fae044dd01eb2f14d3a75c92ed-7a3f0fc8d8d690fae044dd01eb2f14d3a75c92ed.zip) = 9868fc409f4af957fe1de5e7d1bf759eefc07646b9ad6aeb9e89b9e8968055d2
 SHA512 (rnaturalearthhires/7a3f0fc8d8d690fae044dd01eb2f14d3a75c92ed-7a3f0fc8d8d690fae044dd01eb2f14d3a75c92ed.zip) = 23951d29e1fc296a421b6265b2a819602270f248c20d267bdccab5389846dca36feae622c410ab7cba74aeb619dc7a97cccda927a620d9be2f0f73d6a0693295
 Size (rnaturalearthhires/7a3f0fc8d8d690fae044dd01eb2f14d3a75c92ed-7a3f0fc8d8d690fae044dd01eb2f14d3a75c92ed.zip) = 21925339 bytes

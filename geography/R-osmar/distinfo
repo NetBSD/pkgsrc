@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:09:21 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:45:05 nia Exp $
 
-RMD160 (R/osmar_1.1-7.tar.gz) = 80a13d5ee710db6fdc11bed835664396b87cc14b
+BLAKE2s (R/osmar_1.1-7.tar.gz) = 6ba25304805bcd3857d61bff96e65922364488c28ae7caa358a4edce83ec96ad
 SHA512 (R/osmar_1.1-7.tar.gz) = 0d15df33b379946f654349f156969b26dbb3c2fd567c49399dd2ebc4606a4a16c0e93375691a95bebc078dcf8ff7b1638b7f974ba4e553bd52e4a2fe7fcd2a13
 Size (R/osmar_1.1-7.tar.gz) = 79505 bytes

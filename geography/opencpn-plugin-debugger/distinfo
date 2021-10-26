@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:09:27 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:45:12 nia Exp $
 
-RMD160 (ocpndebugger_pi-20170414-f2cea39ffcbf61c84e2d6066b155d866eaebff0f.tar.gz) = 70b5760b67015a45c681ff5cb2c6312610cd008a
+BLAKE2s (ocpndebugger_pi-20170414-f2cea39ffcbf61c84e2d6066b155d866eaebff0f.tar.gz) = ecfd9ac85f258181ee8d81485d005216fbeb549c717be27c3d5d6ad44d4b04a6
 SHA512 (ocpndebugger_pi-20170414-f2cea39ffcbf61c84e2d6066b155d866eaebff0f.tar.gz) = 007f8c8c3c9334d9e71a2a471744fb7f5db5e67fe6f16440b4fb0134688c946f914505b2b11b5e4cbcb85defb00dd972f9ea7b5610042e8f946930d2a7f1326f
 Size (ocpndebugger_pi-20170414-f2cea39ffcbf61c84e2d6066b155d866eaebff0f.tar.gz) = 124761 bytes
 SHA1 (patch-cmake_PluginConfigure.cmake) = c7d16c96d4fb0a95d421cda029795a0c20323f4c

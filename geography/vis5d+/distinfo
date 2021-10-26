@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:09:32 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:45:17 nia Exp $
 
-RMD160 (vis5d+-1.2.1.tar.gz) = b9eda9ab8a754a968c03ce54622b0c4fe918937d
+BLAKE2s (vis5d+-1.2.1.tar.gz) = 6a661f4e58f7f39130513b6dc5858026cc016ec0dcdb46bd4c924995bdd488b4
 SHA512 (vis5d+-1.2.1.tar.gz) = 4d510762b5eb9d22e5f6b44069d47614ab44abcc2bdab852842bb1fc419a3eed1765c90961671839a5434a108966883f819759f230a3a71672616c585f3e328c
 Size (vis5d+-1.2.1.tar.gz) = 2278840 bytes
 SHA1 (patch-aa) = 114ed11fbf8368554d1f57562a3423010cd155ba
