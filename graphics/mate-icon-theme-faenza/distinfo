@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:12:33 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:46:31 nia Exp $
 
-RMD160 (mate-icon-theme-faenza-1.20.0.tar.xz) = f82376ae9e4a535b6ca00639af686c553e7f9f49
+BLAKE2s (mate-icon-theme-faenza-1.20.0.tar.xz) = 5ecab279a9f1c37280d566bf3a2c3cf7621e03645eb1c88f61d5a1f68bf18a99
 SHA512 (mate-icon-theme-faenza-1.20.0.tar.xz) = 361de34fde13c6a14fdac5aa1af90aa784f639d64c0bf332c18b580cb6b4d1a10d7d188fa6b19ecda125c8bbb1fc5c63ab1d5e9ae31c512f2ec3eea288aa023d
 Size (mate-icon-theme-faenza-1.20.0.tar.xz) = 19327552 bytes

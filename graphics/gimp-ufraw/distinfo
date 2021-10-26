@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.38 2021/10/07 14:12:14 nia Exp $
+$NetBSD: distinfo,v 1.39 2021/10/26 10:46:12 nia Exp $
 
-RMD160 (ufraw-0.22.tar.gz) = 2588acde88dda8c30310b967e7185862072c124c
+BLAKE2s (ufraw-0.22.tar.gz) = 37f6aa87db1a0ccb0497364a8bf40eaf17cf0082b617b8603b74a8e7bc791cf2
 SHA512 (ufraw-0.22.tar.gz) = a42eff5052c18afec90245cf97ceeade78e3f288186cf697ac4abf2e8290d4081db8ac4de3ae47b3774f30a6cb4cbda392099e6fd2125fe751abb40d9b065ad2
 Size (ufraw-0.22.tar.gz) = 1103554 bytes
 SHA1 (patch-dcraw.cc) = 1d379ffa2624ce24b8f7e523d0dcfe7a313ec9c7

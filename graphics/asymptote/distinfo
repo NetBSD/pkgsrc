@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:12:01 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:45:59 nia Exp $
 
-RMD160 (asymptote-2.41.src.tgz) = 2614a78d24126817462a8b7bffd918c84b96b808
+BLAKE2s (asymptote-2.41.src.tgz) = ef93713013de431f94e29fbdaca0f13be53230897ee369e6362d7b03bc20f932
 SHA512 (asymptote-2.41.src.tgz) = 93f737a44b085c2290c4553c765cf49679820e6623bc5b6d0229818409868876275d6f0571abeb76033955fa95ee594e37d10c9901c54755b085e36760fd96cb
 Size (asymptote-2.41.src.tgz) = 3516426 bytes
 SHA1 (patch-configure) = c3d035f0744b8558624863fddbe68205c862a37b

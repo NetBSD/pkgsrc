@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:13:14 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:47:12 nia Exp $
 
-RMD160 (pst-pdf.r56622.tar.xz) = 46a6eb2f5cf2e19b0780c728e55ee3e358415c93
+BLAKE2s (pst-pdf.r56622.tar.xz) = b080cafddfa73362397703e3b090631cb939da09d2a3871257c807c438bbda8d
 SHA512 (pst-pdf.r56622.tar.xz) = 5f5850f0e908bf6b10977bf616aa82ce05d1f0afd4127b5db14379a510ca62614a3552cc85ec0136805fb479201c817442872f9d1074fa6cc1367f41403476e1
 Size (pst-pdf.r56622.tar.xz) = 7512 bytes
 SHA1 (patch-bin_ps4pdf) = e27eb9cce0e9fbf45f332a7ef20f1fbfbc4ac5e9

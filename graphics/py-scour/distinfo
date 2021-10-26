@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:12:53 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:46:48 nia Exp $
 
-RMD160 (scour-0.38.2.tar.gz) = 138e33fb4a0ce7add2bff0804484fa0bf5879680
+BLAKE2s (scour-0.38.2.tar.gz) = 3cb92f09037bea8a6133827dab7bd68b0bec9214e1229fd0e169c6110b655210
 SHA512 (scour-0.38.2.tar.gz) = d4aec9d95f1ef706182f0da8ce1c6314174ef00cfa3276255dac55cf23f9f707ed372494f8f800a69247e82e3db476f7781816c4a9126c142e2cfffdc679e094
 Size (scour-0.38.2.tar.gz) = 52947 bytes

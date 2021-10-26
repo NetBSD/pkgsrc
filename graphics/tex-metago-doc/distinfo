@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:13:05 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:47:03 nia Exp $
 
-RMD160 (tex-metago-15878/metago.doc.tar.xz) = 2783802318cfe68fc1008370ea15cba79ec82a05
+BLAKE2s (tex-metago-15878/metago.doc.tar.xz) = 845564c61a0e5c970b7a5468f54736a63b638b3fc0c0efdc5caf211587b6024f
 SHA512 (tex-metago-15878/metago.doc.tar.xz) = 9759290719d9a71c4e9a101ed62f77c2aee9148bd9d8cffca6072b76e610e964fd121ac0c5d4ffb1f2848a8a97a4de2b7242dd8545e7fe819ae4a8a36aabae4f
 Size (tex-metago-15878/metago.doc.tar.xz) = 27136 bytes

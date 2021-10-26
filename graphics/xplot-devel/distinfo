@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:13:26 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:47:25 nia Exp $
 
-RMD160 (xplot-0.90.8.tar.gz) = ac8877ad7fa1c80afa0281236b3a4992482109c2
+BLAKE2s (xplot-0.90.8.tar.gz) = 3552b5104f2f6ba11cf5e052f70b6fee18ef6a4157403408fd3ea1e90266c573
 SHA512 (xplot-0.90.8.tar.gz) = 7663854df5e9b0adabf6dd7eaf3735fe3e25f246a643099635c6c8ba8eb8e5542f11e7ca2ce45ddd1af82acd818298907d664216498a0ff70b10fd4e5aabeef9
 Size (xplot-0.90.8.tar.gz) = 243259 bytes
 SHA1 (patch-aa) = 48a475a550a2ea9d2bc50f2782d598830802817e

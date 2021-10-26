@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:12:32 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:46:30 nia Exp $
 
-RMD160 (lximage-qt-0.17.0.tar.xz) = 176aa3ddeef391045a6cbe619756a01573ce2cb8
+BLAKE2s (lximage-qt-0.17.0.tar.xz) = e69cdab1587710ea42b824cd88c187d6ee0437cf4b2d686af8c772bbcdec4c69
 SHA512 (lximage-qt-0.17.0.tar.xz) = fb7867f5589fa45f3e2d37dcd0733c49fb5439206b11d2a43020305c5c7d222796aa0cf2dbf19d5fc7829a34d3877241cb4bb36ea2883a41503eadd39deaf8e0
 Size (lximage-qt-0.17.0.tar.xz) = 109772 bytes

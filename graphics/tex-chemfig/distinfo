@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:12:59 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:46:58 nia Exp $
 
-RMD160 (chemfig.r58014.tar.xz) = aee50fbd4707d83a0247e41e196affa99a824131
+BLAKE2s (chemfig.r58014.tar.xz) = 5f93abf0ee8d3f969f4a615123e89fa56a8b629cba6624b338c56f658bec5873
 SHA512 (chemfig.r58014.tar.xz) = ac0f3fff6f24fe83c3a1cd7bfd456cf187c57ae66776c672aab980d267d9552b7b480b0244e3d2e1c8d9f39f1d6524f9e882fc8a71be9fc8a5c0263d4899f718
 Size (chemfig.r58014.tar.xz) = 26356 bytes

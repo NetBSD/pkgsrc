@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:12:19 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:46:18 nia Exp $
 
-RMD160 (guetzli-1.0.1.tar.gz) = 1203667b1a4871d7034b9e4d1224fa6141aabb2a
+BLAKE2s (guetzli-1.0.1.tar.gz) = 919d45b82ddfcd988f64996c786a26f7603a89750650128b0c5d8024972fc793
 SHA512 (guetzli-1.0.1.tar.gz) = 0aba6c7490699fa123d78e2c3b61c5a6ab2660ab4a3d5126f592a667e86f4ca69384e952c9bd20a9527919dae2b412972d9b3e51fc6a6302d4e0cafe81895ef3
 Size (guetzli-1.0.1.tar.gz) = 97251 bytes
 SHA1 (patch-guetzli.make) = 5536ed80fb3c6f2597b96f5730f34af0e0e90d7b

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:13:27 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:47:25 nia Exp $
 
-RMD160 (zathura-djvu-0.2.9.tar.xz) = 6600a07993edcb5bcfaac798b4861f9b634026dd
+BLAKE2s (zathura-djvu-0.2.9.tar.xz) = 13ebec8bf815d44418901031b52266741e619b4e50534fe8ce4d627b81417ed7
 SHA512 (zathura-djvu-0.2.9.tar.xz) = 3c2815e7f1cdfb9fc594dc6ad65359245f322e5fa27f018fb9431747e4d474734f5efd134aaeb9dabde09b01de603b1d1dc7aede883b1ef81266e067b0490726
 Size (zathura-djvu-0.2.9.tar.xz) = 8976 bytes

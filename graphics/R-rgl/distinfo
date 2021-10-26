@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:12:01 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:45:57 nia Exp $
 
-RMD160 (R/rgl_0.107.14.tar.gz) = 6679717a659fb21851ccdf681dd4666fff8903c6
+BLAKE2s (R/rgl_0.107.14.tar.gz) = d585c263bdde95ac46e079f4aadbc0ae761a274cae9bac4220014d19319dd7f0
 SHA512 (R/rgl_0.107.14.tar.gz) = beb99e6144c13d41ac575a1bb13350170c9f81a5bfbb33dc5378258c9db8114e47319b59a54f6f8c6942ceb7bd8d08e58b13d7055dd2cbc2f137cf7d2527508a
 Size (R/rgl_0.107.14.tar.gz) = 2568366 bytes

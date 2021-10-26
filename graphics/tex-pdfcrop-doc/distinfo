@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:13:08 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:47:07 nia Exp $
 
-RMD160 (pdfcrop.doc.r55435.tar.xz) = 37448b269059be653aa06125f1daf5b89d343b38
+BLAKE2s (pdfcrop.doc.r55435.tar.xz) = 8dc9cd902c4c526d1a64d3d6e2f4e8f12cb2fd7ac7af8ce635537f81fdae5e61
 SHA512 (pdfcrop.doc.r55435.tar.xz) = 786fe00793f62e09f225ca0decdd53ad3b2ce03a133a2ae4ba20db9d40352863dc6a8728e005aecfcaec06072e8a0ef454d1f7fbe90bfc5997cfc65c6ab97170
 Size (pdfcrop.doc.r55435.tar.xz) = 10228 bytes

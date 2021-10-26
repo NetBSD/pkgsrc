@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.84 2021/10/07 14:12:27 nia Exp $
+$NetBSD: distinfo,v 1.85 2021/10/26 10:46:20 nia Exp $
 
-RMD160 (inkscape-1.1.1_2021-09-20_3bf5ae0d25.tar.xz) = 1ec2cf2feedd2fa34c704931f43c738a944c21ae
+BLAKE2s (inkscape-1.1.1_2021-09-20_3bf5ae0d25.tar.xz) = a3cd5ffae74aefb0f553393204a36f76eae6d36c4fec8c68040f2c0a903d1904
 SHA512 (inkscape-1.1.1_2021-09-20_3bf5ae0d25.tar.xz) = 22b1b584a344c4f4ebd0b6e84a4af44e472ef47b3971cb97cbb026a4bf7cb5bea49a7de0c2af2a9e439c7c794f775081c8d1904f33eadb49a5389ea01bc0896c
 Size (inkscape-1.1.1_2021-09-20_3bf5ae0d25.tar.xz) = 34221284 bytes
 SHA1 (patch-CMakeScripts_DefineDependsandFlags.cmake) = 26351c300629e28f6523fe2167a2eed5802435cf

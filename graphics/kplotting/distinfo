@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:12:25 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:46:23 nia Exp $
 
-RMD160 (kplotting-5.80.0.tar.xz) = 4ee252d636525a32d3dd72639af6293a5176830c
+BLAKE2s (kplotting-5.80.0.tar.xz) = 98be93c3ca27f2b8e04270595c136425acdcbf8281229b0ee8ee6ffe6a1259e9
 SHA512 (kplotting-5.80.0.tar.xz) = d04d35c44439da9df37e046f09b75908bd9f965fba18941b803543dbe3111f6884cf4a7377461016ec60d1f47c08e84fa994e2784fc135867d74e0b0d3edd2cf
 Size (kplotting-5.80.0.tar.xz) = 31100 bytes

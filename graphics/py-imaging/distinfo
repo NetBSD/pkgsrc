@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.21 2021/10/07 14:12:47 nia Exp $
+$NetBSD: distinfo,v 1.22 2021/10/26 10:46:46 nia Exp $
 
-RMD160 (python/Imaging-1.1.7.tar.gz) = 9af570fe100e250a4860314341fe3e6d695d7fde
+BLAKE2s (python/Imaging-1.1.7.tar.gz) = 572d3908c8b0238136292dafee0dbc06e4dac1cfac0139b760ef4e8882418e48
 SHA512 (python/Imaging-1.1.7.tar.gz) = fec2d39b4db3cb33cd7e7895aba4c3a8a5d4cff28decb9106c88e392cb848edf5593fcd77d11994bb16321837fdb26958787dac2c86d6f7c09996f466bac11f1
 Size (python/Imaging-1.1.7.tar.gz) = 498749 bytes
 SHA1 (patch-PIL_EpsImagePlugin.py) = fbeb7b6091a3011363197c68be999280ba7282aa

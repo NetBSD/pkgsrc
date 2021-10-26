@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:12:06 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:46:04 nia Exp $
 
-RMD160 (Camera-0.3.0.tar.gz) = 57ce22649febe34b8b5b6fe7e563025cd88262bc
+BLAKE2s (Camera-0.3.0.tar.gz) = 358475e628458559b00acc98e54e682374ff40853108761b1a884765eb2bc9f5
 SHA512 (Camera-0.3.0.tar.gz) = ea473be6d2f2403e4e0d62ea77e5486c42c9f0f61c8671f86c114639b3dab2a47228b5fb0b8f2d36cfdc0215291b2f6cd120c0934f30c94d357a5a4e7152aa84
 Size (Camera-0.3.0.tar.gz) = 29024 bytes
 SHA1 (patch-src_widget_Makefile) = 72cb9cc23f36c8be91377869299b26336cb07a93

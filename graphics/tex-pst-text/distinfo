@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:13:15 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:47:13 nia Exp $
 
-RMD160 (tex-pst-text-49542/pst-text.tar.xz) = 61e29c97e267f100e328303aa20c222b6b2d4e1d
+BLAKE2s (tex-pst-text-49542/pst-text.tar.xz) = 730be7d2cf4e53c6236952beb82763dffc7f7d1208d2c89b51154867f7ed6a68
 SHA512 (tex-pst-text-49542/pst-text.tar.xz) = 550e9aea735fc096beae11fcff3ab49a65e0eb40dd3f1dc79e36e5d0d124447bd49f79095e53681f4f504eeea07f7477b07637a307853ed9414984a1022df663
 Size (tex-pst-text-49542/pst-text.tar.xz) = 4200 bytes

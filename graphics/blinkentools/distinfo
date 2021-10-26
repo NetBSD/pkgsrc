@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:12:02 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:46:00 nia Exp $
 
-RMD160 (blinkentools-2.2.tar.gz) = 415bc64ec0aa5fc28897dabd3386b906986dec57
+BLAKE2s (blinkentools-2.2.tar.gz) = 02b6a173b68b28e1735cf4471b251a7fd0e63a26a91b7d002607d5e9defb15db
 SHA512 (blinkentools-2.2.tar.gz) = 608d34437a3b3224c10348598086db8684f41baf66a7cfe486df1d00db18e65cce124e2bd1e6f20f236f3cde46a375e14b840456600aac8e840777f6549e7ade
 Size (blinkentools-2.2.tar.gz) = 515833 bytes
