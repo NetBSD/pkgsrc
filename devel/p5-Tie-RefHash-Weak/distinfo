@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:39 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:17:51 nia Exp $
 
-RMD160 (Tie-RefHash-Weak-0.09.tar.gz) = 37e53d675f82ca3cdd990441a3856d15c0549a20
+BLAKE2s (Tie-RefHash-Weak-0.09.tar.gz) = 9ec5bac992eb816b3fb25e18930e6409af9cf16810a784b75ed24db5cb7e58a2
 SHA512 (Tie-RefHash-Weak-0.09.tar.gz) = d4a5d45829d2bad34a876ad6fbeccb499b962e2b078de28a13a134bb27834f3334b5dbbb4b9de608c7e1db3113628f15d28ec4b9aa564f56585d9ae9ec6864d2
 Size (Tie-RefHash-Weak-0.09.tar.gz) = 7057 bytes

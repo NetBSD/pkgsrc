@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 13:39:12 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 10:14:18 nia Exp $
 
-RMD160 (autogen-5.18.16.tar.xz) = 789d4932f1704508cedf3bee6718778cfb587175
+BLAKE2s (autogen-5.18.16.tar.xz) = a83ce4aa5d9898c1922b274fe730faf7464ceda5201a32978f4f13fdca6a2ae9
 SHA512 (autogen-5.18.16.tar.xz) = 5f12c982dbe27873f5649a96049bf019ff183c90cc0c8a9196556b0ca02e72940cd422f6d6601f68cc7d8763b1124f2765c3b1a6335fc92ba07f84b03d2a53a1
 Size (autogen-5.18.16.tar.xz) = 1046276 bytes
 SHA1 (patch-ae) = 7249600bfc3cdcafdf55a100db775e9d1a9403f0

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:44:04 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:19:27 nia Exp $
 
-RMD160 (celluloid-0.18.0.gem) = 30785b063b14559924a5711f76974290b981a9ef
+BLAKE2s (celluloid-0.18.0.gem) = 720f70c11c279486d86931fccecf77ce4eeab83951f17e35c9c9b2f5be915874
 SHA512 (celluloid-0.18.0.gem) = a9ea6027911a36946eb9b9dfef2ece4c537c97c7e958d37c6a7e75839735a2fb9f22e80b200219cb9ef3478323b601a58c6079720b7c48e2a21404308b658d30
 Size (celluloid-0.18.0.gem) = 84992 bytes

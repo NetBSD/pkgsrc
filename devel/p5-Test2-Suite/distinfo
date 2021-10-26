@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.31 2021/10/11 20:46:20 schmonz Exp $
+$NetBSD: distinfo,v 1.32 2021/10/26 10:17:49 nia Exp $
 
-RMD160 (Test2-Suite-0.000141.tar.gz) = e32ab923832ff0ca7293f6c58d9aa900b18877af
+BLAKE2s (Test2-Suite-0.000141.tar.gz) = d2d703a56603bde00064d3cc88b527d473f80886d352256f12afcaaaff13b1b5
 SHA512 (Test2-Suite-0.000141.tar.gz) = 41d283530a25d1794d4d7836dec37fdaf41c78fd01cc78664f5a6b7c50c4d135f75d712d9a047d406ebf529a5538fecedb4b84886415a68c188b618adb683e91
 Size (Test2-Suite-0.000141.tar.gz) = 227660 bytes

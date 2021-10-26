@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:41:31 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:16:38 nia Exp $
 
-RMD160 (File-Slurper-0.012.tar.gz) = ab16d3b48ed72ce83cdf29ccc6460d8c19a2862c
+BLAKE2s (File-Slurper-0.012.tar.gz) = d5b29d01ae5c64793687bf18e49249c49a1d16dc3fb81c467c54fb5dc8db5098
 SHA512 (File-Slurper-0.012.tar.gz) = 276b510c85b4e28fff4b8bd77c81031367b073426138743efb5d54fe01fa9825409f86090788779e96625b43207d1f864f348cc11554c51d36868dfed568f2bb
 Size (File-Slurper-0.012.tar.gz) = 15517 bytes

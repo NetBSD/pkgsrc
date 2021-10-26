@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:39:00 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:14:06 nia Exp $
 
-RMD160 (R/mockery_0.4.2.tar.gz) = e8b995195d903462aad84873f3755fdf6fe4d5a8
+BLAKE2s (R/mockery_0.4.2.tar.gz) = d07708e6f2e2c8ce11623bae08cb4cd85155577f67ef75605408c4178cbc7581
 SHA512 (R/mockery_0.4.2.tar.gz) = 7952f687cf109cfee21310733dcd9a676e744fc18a21ebf9962f2f3a49927b3285cd8c25e64c5b17bc0216c296218eb7aaef2ca8d284190e3fcb1d2e3bfb1735
 Size (R/mockery_0.4.2.tar.gz) = 19837 bytes

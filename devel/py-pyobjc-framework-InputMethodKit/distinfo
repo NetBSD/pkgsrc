@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 13:43:34 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:18:53 nia Exp $
 
-RMD160 (pyobjc-framework-InputMethodKit-6.2.2.tar.gz) = 29c6a7ef0ae7d4411887346d7eac34aac40843e7
+BLAKE2s (pyobjc-framework-InputMethodKit-6.2.2.tar.gz) = f9ed25906b35694142c01a6c66dd0a9fcbc1df1fb9df5e2ff53d15ff43f79a44
 SHA512 (pyobjc-framework-InputMethodKit-6.2.2.tar.gz) = c071893ec8be5cc08633124daa4ccead81e11857da788ce73a4875476610880039f8edab6377fe4f6402c1c658db28bdf58ba090d1caf56f67b369c20590ac44
 Size (pyobjc-framework-InputMethodKit-6.2.2.tar.gz) = 22040 bytes

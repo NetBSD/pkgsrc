@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:40:09 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:15:14 nia Exp $
 
-RMD160 (libbinio-1.4.tar.bz2) = 4c80c3e5d9f5eb4e3632df85667a14f8714796b1
+BLAKE2s (libbinio-1.4.tar.bz2) = 86654783158c09217f1af8b0d03db72f9a4351bfa13e900e80d568e94551a6af
 SHA512 (libbinio-1.4.tar.bz2) = 974b9ecf4f889350dc5b8509a68af392644804c72a291dc1c0e7738f5b0ca3a28b1819ce35c98ae1e58fc9888481feb596b2ba1704e1b85207f64c050bc0230d
 Size (libbinio-1.4.tar.bz2) = 307664 bytes
 SHA1 (patch-aa) = 2626bddd8422f496076e944b0b641564b0450de9

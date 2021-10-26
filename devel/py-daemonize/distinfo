@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:43:05 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:18:22 nia Exp $
 
-RMD160 (daemonize-2.5.0.tar.gz) = 668aff1473307144cabcba1debf10a2469d641bd
+BLAKE2s (daemonize-2.5.0.tar.gz) = a0dc9336db9fa62308d13234bec7b8f4fb1386ffb7a6afb63a695507389b66cf
 SHA512 (daemonize-2.5.0.tar.gz) = 5043db681b36028e3168cd2ad86235e0962bbdc46ded2f631ab36846083b0817524cddd7a9333997a82b4888b2490391bac2e1cfd043c1ddc129da54d2cbd6bd
 Size (daemonize-2.5.0.tar.gz) = 8759 bytes

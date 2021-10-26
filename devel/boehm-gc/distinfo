@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.67 2021/10/07 13:39:14 nia Exp $
+$NetBSD: distinfo,v 1.68 2021/10/26 10:14:20 nia Exp $
 
-RMD160 (gc-8.0.4.tar.gz) = 928ea053416021fdf70150a7863e1ef27d8cae94
+BLAKE2s (gc-8.0.4.tar.gz) = c1e04bb3f886b382f69ea139c30fa1ebf592e20cd52735739f9424d6474f884a
 SHA512 (gc-8.0.4.tar.gz) = 57ccca15c6e50048d306a30de06c1a844f36103a84c2d1c17cbccbbc0001e17915488baec79737449982da99ce5d14ce527176afae9ae153cbbb5a19d986366e
 Size (gc-8.0.4.tar.gz) = 1160528 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:39:43 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:14:48 nia Exp $
 
-RMD160 (grantlee-0.5.1.tar.gz) = d1a2a161dbbda67054488916418e69f8a567601f
+BLAKE2s (grantlee-0.5.1.tar.gz) = 25dc5fda63bfa0b7a96a2a485535812b253520c5f4648c3ff83733083f3f6486
 SHA512 (grantlee-0.5.1.tar.gz) = 5a57428a35ed70422dad84ae01e9dd5080729ca9c236d54e93b957f021e5da62ef294cdbd7cf11c71887cfd6314dad23d7c5880c9b2f6e8965580339a0d26523
 Size (grantlee-0.5.1.tar.gz) = 1172769 bytes

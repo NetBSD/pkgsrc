@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:42:14 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:17:24 nia Exp $
 
-RMD160 (Role-Basic-0.13.tar.gz) = 2ff6779e1dd932a1e5fc4765a59cd44f902386c3
+BLAKE2s (Role-Basic-0.13.tar.gz) = 4865650700f3d6b3c541a6ab0527d37b5ebd4130bdcc5dd4202bc117f233a986
 SHA512 (Role-Basic-0.13.tar.gz) = 685f758e1afc4441b3ac507d52e0d18b6f64081f74fa0a768c81c7c9fad7b7ec30497002cff22449a65ab78c27671a4fe7a7213c45d28cc4077bb855fcce1438
 Size (Role-Basic-0.13.tar.gz) = 39625 bytes

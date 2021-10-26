@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:38:56 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:14:01 nia Exp $
 
-RMD160 (R/RUnit_0.4.32.tar.gz) = 71a21232479fa2ad8c3fab30364a8a906f0e53d0
+BLAKE2s (R/RUnit_0.4.32.tar.gz) = 23de331f8be91b0e6e4253888db9b921a5ca4b57060e871a136c78a72a7e9456
 SHA512 (R/RUnit_0.4.32.tar.gz) = 5df78b0b653cb122e8edd23fc95e00966c5e54ee5db081efb216e88847d8e292fb69af27932a35f5d51ebaf3a162128fd4a604b8d1e2dc8dfb6a8a72345432e7
 Size (R/RUnit_0.4.32.tar.gz) = 337142 bytes

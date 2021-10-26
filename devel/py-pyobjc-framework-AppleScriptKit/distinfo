@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 13:43:30 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:18:49 nia Exp $
 
-RMD160 (pyobjc-framework-AppleScriptKit-6.2.2.tar.gz) = e098afd1596b4d72d141ba4850f8fa18029379be
+BLAKE2s (pyobjc-framework-AppleScriptKit-6.2.2.tar.gz) = 9e9d7a8029f5fafd83a37d51efabe5fccf3dab78365385b8ddb77abfd2a64c9f
 SHA512 (pyobjc-framework-AppleScriptKit-6.2.2.tar.gz) = 8d23ac6bb8b3790cbbfc8e4f8ec661bc4ee1d3daf2c7df7007b923073bc194979e992df82af35eda798e87abc6049b1e4ae69b74b976b048c4355acf5c5b9cae
 Size (pyobjc-framework-AppleScriptKit-6.2.2.tar.gz) = 10363 bytes

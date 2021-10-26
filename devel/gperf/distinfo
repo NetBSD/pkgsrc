@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 13:39:42 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:14:48 nia Exp $
 
-RMD160 (gperf-3.1.tar.gz) = 0bccbfd60ef68a93b407d9ce157748475775e74b
+BLAKE2s (gperf-3.1.tar.gz) = eb89f251fbae51e8ac7d6db7bea451529e5cea3eaa7fdf63be9bc103dd695ea0
 SHA512 (gperf-3.1.tar.gz) = 855ebce5ff36753238a44f14c95be7afdc3990b085960345ca2caf1a2db884f7db74d406ce9eec2f4a52abb8a063d4ed000a36b317c9a353ef4e25e2cca9a3f4
 Size (gperf-3.1.tar.gz) = 1215925 bytes
 SHA1 (patch-aa) = 00f7ac8096285fba88d43430fa279a035b4c1221

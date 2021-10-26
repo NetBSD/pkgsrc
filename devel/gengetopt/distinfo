@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:39:35 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:14:41 nia Exp $
 
-RMD160 (gengetopt-2.22.6.tar.gz) = e4e147cb4e75b4a0d0e959ae737b3082f534c3da
+BLAKE2s (gengetopt-2.22.6.tar.gz) = d6823a402d362daf76756abcb052df87b1714acaffae68e7aea7421c5fa35a4b
 SHA512 (gengetopt-2.22.6.tar.gz) = dad5baf1b6c4c76ae7f532dd63c6aecdc30f31d68a259b6a26a10197f1fe42dc9147a52ac12a0c3fc4b7cd61d288a343a9223f967a5a9a15a0614330b41f68dc
 Size (gengetopt-2.22.6.tar.gz) = 1056293 bytes
 SHA1 (patch-tests_valgrind__tests.sh.in) = 9b2432c80882ae94012b48ce8f57f74e6050e730

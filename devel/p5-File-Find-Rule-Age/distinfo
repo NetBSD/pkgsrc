@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:41:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:16:35 nia Exp $
 
-RMD160 (File-Find-Rule-Age-0.302.tar.gz) = ef57fff7bd31326847b31f3048dabd40ce6abb08
+BLAKE2s (File-Find-Rule-Age-0.302.tar.gz) = d842d9fb4c49b6faf44e3209df1a198e722059b050b1ee9b1d51d885cb22f446
 SHA512 (File-Find-Rule-Age-0.302.tar.gz) = 72d4aeb1b571b38a5512ee1a275090120a30e67059e949ec72b95aafaf60593560c076f50565fbb139ad43c1a2ffbd1be39e5ccf49ea6a34446532b1094a7c83
 Size (File-Find-Rule-Age-0.302.tar.gz) = 8258 bytes

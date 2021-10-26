@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:41:18 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:16:25 nia Exp $
 
-RMD160 (Devel-Caller-2.06.tar.gz) = 5e99994152eaddb3c8c7d212571eb0bcd1ea5e98
+BLAKE2s (Devel-Caller-2.06.tar.gz) = 1681bc1ac51e86da54d7e7d981105399e2923f893b3a53f3634bc82f737ad019
 SHA512 (Devel-Caller-2.06.tar.gz) = f15a59169e191c8526f613d21c415e5d8d51b59eabf309952468fdee15277b2e8f831a2263a9dc006d9f3144a234fbc9c46ad3ab464b6fc055360c6445b209f9
 Size (Devel-Caller-2.06.tar.gz) = 6540 bytes

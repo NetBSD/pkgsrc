@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 13:40:24 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:15:30 nia Exp $
 
-RMD160 (libvolume_id-0.81.1.tar.bz2) = 222fbe2ff595eeedafe41c9c47987ead34aa455e
+BLAKE2s (libvolume_id-0.81.1.tar.bz2) = 3cd2f531b2a375c5bbca4ac6df71b42ac0842cb108bd2c745e055e9a2596ba66
 SHA512 (libvolume_id-0.81.1.tar.bz2) = a30c08fcdb020e8b7d0e5350d996d7007040d72e3c1caf3244cf7c6e08cc7d5eee9b94edbc04a073519243884be8b27e61c33a3f61c25e7bfb42eb96785d992f
 Size (libvolume_id-0.81.1.tar.bz2) = 23399 bytes
 SHA1 (patch-aa) = d6fe419f1c79823f87d927ecfcc057f9c0e6009e

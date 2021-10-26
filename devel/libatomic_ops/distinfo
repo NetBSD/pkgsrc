@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.27 2021/10/07 13:40:08 nia Exp $
+$NetBSD: distinfo,v 1.28 2021/10/26 10:15:14 nia Exp $
 
-RMD160 (libatomic_ops-7.6.12.tar.gz) = ef5062122d8ec712256c0a91a10c394af5a70b7a
+BLAKE2s (libatomic_ops-7.6.12.tar.gz) = a9579aa5230d344e9c7065675c7f16a664efee4963ebda1c7cc894691b728071
 SHA512 (libatomic_ops-7.6.12.tar.gz) = bbf98a38a80c8fe6b7eab773967edc55b8d48be32b36ed827fb835ee3dcd96d5ec1dc97149714e015e93a0a5b9fc03595797663fdb5a0f673869ea8bfe640df5
 Size (libatomic_ops-7.6.12.tar.gz) = 506313 bytes
 SHA1 (patch-src_atomic__ops.h) = 244324fb2ecf738a9407c128fc33930eb81f26d8

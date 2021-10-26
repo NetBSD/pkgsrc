@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:13 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:17:23 nia Exp $
 
-RMD160 (Regexp-Shellish-0.93.tar.gz) = 1d20b7244a429351fed9577aa06f53e0c53a4e63
+BLAKE2s (Regexp-Shellish-0.93.tar.gz) = 55eae360a4ffbd590807758a5e6703cfded97a3ade31b39d0e5b29aa46cbbf18
 SHA512 (Regexp-Shellish-0.93.tar.gz) = c3ca3654241e567c7d7e8285934c95843a1c2c667c6de2f7269c18e95b0bb96351f523aeae481852fcb0a5723f753f26c85f60876a4754e573cf936ccdee4932
 Size (Regexp-Shellish-0.93.tar.gz) = 3343 bytes

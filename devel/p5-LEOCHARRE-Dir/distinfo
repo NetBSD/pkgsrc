@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:41:42 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:16:50 nia Exp $
 
-RMD160 (LEOCHARRE-Dir-1.09.tar.gz) = 512ecdb8fda14791b2edf0fd7bff5dbe98149d59
+BLAKE2s (LEOCHARRE-Dir-1.09.tar.gz) = 0ac1126049a1b4efcca8a4bca9004b98f904738bfd8bd121d4b1a5c6d498fcba
 SHA512 (LEOCHARRE-Dir-1.09.tar.gz) = 59eadaa8e6854dd9b4a97534352213eb1c5a29929bb624e866de0557440d471f80995c8bec2e3574b6f8cc16c411be3f6f53c1311c843ec5ee091a9f80a8fdeb
 Size (LEOCHARRE-Dir-1.09.tar.gz) = 4270 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:41:46 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:16:53 nia Exp $
 
-RMD160 (Log-Report-Optional-1.07.tar.gz) = 3626825f74e8b0b5fbf19f04d416856376eb2113
+BLAKE2s (Log-Report-Optional-1.07.tar.gz) = 4fe0a04af7c0f9077c991903313f66ae85af609f27c7d34dc8a04468db8789cb
 SHA512 (Log-Report-Optional-1.07.tar.gz) = 5b6c109e76c482aadad78a6b723d694022d0c191230b12ced20b607398eafa2d644e39e0b72ae33ff93b9ccb5450f10263c16023414636e4d05d68adfcb56d66
 Size (Log-Report-Optional-1.07.tar.gz) = 12962 bytes

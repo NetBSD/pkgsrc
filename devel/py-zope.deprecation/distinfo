@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:43:56 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:19:18 nia Exp $
 
-RMD160 (zope.deprecation-4.4.0.tar.gz) = da66ce029e9b7d8c236be25ea4d8b327d1cdf0a0
+BLAKE2s (zope.deprecation-4.4.0.tar.gz) = d4546223a040aa0f0446340b8b0d3f6a04cfcaaff96070796b2b674ce51f3d23
 SHA512 (zope.deprecation-4.4.0.tar.gz) = 62371dc45fad6715f24cdcac1d25b559ed5248da774b5ecd215fb4d0b6fc0ab655bfb9e0fbceda964e8ffb7d70536e43f8fcf09d9f2742904717a6473869fa4a
 Size (zope.deprecation-4.4.0.tar.gz) = 24737 bytes

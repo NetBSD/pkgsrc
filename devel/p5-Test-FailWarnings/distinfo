@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:42:28 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:17:40 nia Exp $
 
-RMD160 (Test-FailWarnings-0.008.tar.gz) = 18064d483c8e9a8376a33943d1eeef5c87640641
+BLAKE2s (Test-FailWarnings-0.008.tar.gz) = b375a8a34b67f1634fea865dd528f106be016568dceabb7e536d2006b1f0143d
 SHA512 (Test-FailWarnings-0.008.tar.gz) = 7bffcc18191326095d99ad01be6426f4d9d927f769a156318f9abfea67da6adfecb657bad89390740c9f531fe69c717afa1d250258eed63d127bf10cbbf2bd51
 Size (Test-FailWarnings-0.008.tar.gz) = 13734 bytes

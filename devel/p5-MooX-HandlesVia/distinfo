@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:41:53 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:17:01 nia Exp $
 
-RMD160 (MooX-HandlesVia-0.001009.tar.gz) = 1179ba0c67dc415715e3105eab20e1315d375bc0
+BLAKE2s (MooX-HandlesVia-0.001009.tar.gz) = f5c16822ebc4eb92a06f4fa3ba2873ef50ebb3955c275a7afaf40a45bc87f9e1
 SHA512 (MooX-HandlesVia-0.001009.tar.gz) = ea3521bf04c52db09068d4fa7cedd3642fd54fc40b5c88cde9340f0a3bb0da03f2aabbe22788a4f33ffedc628fc510c4fb57bdf3f7c9ce1b9316dd1408c2dd40
 Size (MooX-HandlesVia-0.001009.tar.gz) = 24754 bytes

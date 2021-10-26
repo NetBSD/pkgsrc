@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:44:41 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:20:09 nia Exp $
 
-RMD160 (woboq_codebrowser-2.1.tar.gz) = 1c40c800e4523d0ae2a20480293172511eb69fd5
+BLAKE2s (woboq_codebrowser-2.1.tar.gz) = fa869b29b594805f65658fef7ba65f9009918b002731be1f20008b973aca388b
 SHA512 (woboq_codebrowser-2.1.tar.gz) = a3a94c0d253d18371279ce5c2946b18129562a105100b6e0b5eb0177d1e3a2885959ae672922f633569b8e1e324412c4b8eccc1f93f1570356c5954e0edddb08
 Size (woboq_codebrowser-2.1.tar.gz) = 197624 bytes
 SHA1 (patch-generator_annotator.cpp) = d5cd90260584b52e9321ad89af4add5adf6f7c7c

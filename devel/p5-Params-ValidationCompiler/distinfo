@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 13:42:06 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:17:15 nia Exp $
 
-RMD160 (Params-ValidationCompiler-0.30.tar.gz) = 234a29f5649640e4c20f1337a01c370db9204052
+BLAKE2s (Params-ValidationCompiler-0.30.tar.gz) = b9289f88305e47a31af979023cee11be5ebb57c799c9330090b72ec15ee8c950
 SHA512 (Params-ValidationCompiler-0.30.tar.gz) = 5911f9317f0b72e17c72435420a3b6b9f36780ab70715510c46e847970094e730169b9b3085f29cb23ee0aca2e78f7f9edd0d093859a1062869f35c90172bf05
 Size (Params-ValidationCompiler-0.30.tar.gz) = 49796 bytes

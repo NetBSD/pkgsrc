@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:39:43 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:14:49 nia Exp $
 
-RMD160 (scheme-bytestructures-1.0.7.tar.gz) = 1d5ac237f7548bff9bc4fa3fcf67412956afd522
+BLAKE2s (scheme-bytestructures-1.0.7.tar.gz) = d2e3a578b993b03aaca8a2fd005cad64bb5484388ec6358773973d7e97955d2a
 SHA512 (scheme-bytestructures-1.0.7.tar.gz) = 5b757d4e78746dd5e07c7b1b3f90054965dcd98a4cef59d3dd635273625667e24a77995ad570e4b9d2c674869f92c59b14f3f86d05af1d0f790af16ef68cd712
 Size (scheme-bytestructures-1.0.7.tar.gz) = 49112 bytes

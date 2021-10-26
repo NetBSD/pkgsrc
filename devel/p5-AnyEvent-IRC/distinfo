@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:40:55 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:16:01 nia Exp $
 
-RMD160 (AnyEvent-IRC-0.97.tar.gz) = 172b629c301bbf732b41e14a8b0ac72cb7784b1e
+BLAKE2s (AnyEvent-IRC-0.97.tar.gz) = 6b210e06b58d334b3d853795efc9e4d630f6d4b62e86021f8f5780eb7d8e7b1a
 SHA512 (AnyEvent-IRC-0.97.tar.gz) = 3e52bb3e83628a954976c9adc618257551b171ed70fd5ffe03f87c873571139d80cafce228746a932192550255c562ad346b43b3d8f5127570870245aeb5f424
 Size (AnyEvent-IRC-0.97.tar.gz) = 29270 bytes

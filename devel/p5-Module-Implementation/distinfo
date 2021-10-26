@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:41:50 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:16:58 nia Exp $
 
-RMD160 (Module-Implementation-0.09.tar.gz) = 5163bc0a3d166559ca51460cac909d7b885becfe
+BLAKE2s (Module-Implementation-0.09.tar.gz) = 4c92c48a3dda3424d761c12fdcb34d6fad4dcdd6420190195fb23dbdf5a6bcc1
 SHA512 (Module-Implementation-0.09.tar.gz) = 049f967ba1bd8a3914968b34006030ae318d99ac629a0f34736f1c2b5392490c30aa0914e777eaefda7f0f58755d2d3363a266b90db59b53fe145ef68e1d953c
 Size (Module-Implementation-0.09.tar.gz) = 18553 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:42:22 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:17:33 nia Exp $
 
-RMD160 (Template-Plugin-HashMerge-0.01.tar.gz) = 2703c8f5359abdd4470ca39854d1bad818d98d7d
+BLAKE2s (Template-Plugin-HashMerge-0.01.tar.gz) = 88797a9a5c63e01c79ad349f4ebc3d0e4d122e14caf67b4d66b30355580b0ca0
 SHA512 (Template-Plugin-HashMerge-0.01.tar.gz) = b5ed2ffc046dac88f7a6e53a9979b4e6ff759020f165dc3599f224aa69cb016d21d6cf556f879f480c0c67e4422d28fdbaa841fa525f0a661cb7e947b9f45a20
 Size (Template-Plugin-HashMerge-0.01.tar.gz) = 12824 bytes

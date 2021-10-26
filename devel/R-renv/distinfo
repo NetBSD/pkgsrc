@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:39:06 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:14:08 nia Exp $
 
-RMD160 (R/renv_0.14.0.tar.gz) = f59db52cf3e35f2aca7b7e8fe90966853064c188
+BLAKE2s (R/renv_0.14.0.tar.gz) = b01cff52fc73cec608806c2853aff9730e1295f1c59757372e4d20790930281f
 SHA512 (R/renv_0.14.0.tar.gz) = 75062bcd441b9e2925368c8f1d9c37521607048dd550dc0ac12a6323bc651a95e0521c804392f64e4c6e091d6758ea9262e600d6a02cf1f2903dc18c4e0194ba
 Size (R/renv_0.14.0.tar.gz) = 448230 bytes

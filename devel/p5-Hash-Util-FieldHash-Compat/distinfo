@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:41:37 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:16:43 nia Exp $
 
-RMD160 (Hash-Util-FieldHash-Compat-0.11.tar.gz) = 34e9df5698eec405f9d20893705639ab4a0e2bbb
+BLAKE2s (Hash-Util-FieldHash-Compat-0.11.tar.gz) = f861a84313eeefc6541544bf2e347d50de39ab97856123559b2211f9296745dd
 SHA512 (Hash-Util-FieldHash-Compat-0.11.tar.gz) = a38397ba17587d85ed88020c85bd4d7c36798a9e8fa46490017ea84d30c6541f32a621a9ef585d57dbb49f39791d5644f329e956d4be9e0ec01918eb782eae9c
 Size (Hash-Util-FieldHash-Compat-0.11.tar.gz) = 27473 bytes

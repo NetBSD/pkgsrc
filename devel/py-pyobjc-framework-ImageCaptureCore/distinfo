@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:43:34 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:18:53 nia Exp $
 
-RMD160 (pyobjc-framework-ImageCaptureCore-6.2.2.tar.gz) = 508ed7b011c513a523716e64ee92058230f2dab3
+BLAKE2s (pyobjc-framework-ImageCaptureCore-6.2.2.tar.gz) = 4c3c0d0ab76c28aee1f0541b7a0e80e4e4fd838bc3662db769f925b1eb4a45e8
 SHA512 (pyobjc-framework-ImageCaptureCore-6.2.2.tar.gz) = b9527b1cfc68f5749835f5ea6fb37800c8023aa793abbc0f6303b8ae71594e03add39ad40e1d7396d0187b78b5b3fe8813ac721aa4f532b12e8a8877c5d0233f
 Size (pyobjc-framework-ImageCaptureCore-6.2.2.tar.gz) = 41291 bytes

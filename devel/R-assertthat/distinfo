@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:38:56 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:14:01 nia Exp $
 
-RMD160 (R/assertthat_0.2.1.tar.gz) = 1f405695d747b62c59cb2c8e1043897cc9d79e9e
+BLAKE2s (R/assertthat_0.2.1.tar.gz) = 99d93c178ee25a17f8c878af357d1291c94adf10d70529d281ad7e6c31fcb090
 SHA512 (R/assertthat_0.2.1.tar.gz) = e8dbcb9b7c638f7133dea70443debbf739d35df1eb5ef19d5ae2ad7e9669f06184af43477ee061e15d253b3fa32ec203dbe28a4585c2027d4e567c2eb2195337
 Size (R/assertthat_0.2.1.tar.gz) = 12742 bytes

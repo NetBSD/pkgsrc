@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/10/08 06:51:46 adam Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 10:14:20 nia Exp $
 
-RMD160 (blosc-1.21.1.tar.gz) = 851e244875458dd50104e75ddbe1ce84f92ba3f2
+BLAKE2s (blosc-1.21.1.tar.gz) = 90be893816e8ec09e18b49a29f6b039f551676d472a0362d9813b5dabd836943
 SHA512 (blosc-1.21.1.tar.gz) = e06712ffaeaa6892415a6b01219221426c20af4191db6ca923301313daa8f5b0a83a7a3cd273f7013766349ace4e4869590e9c44bd892e57027ca45de53779e7
 Size (blosc-1.21.1.tar.gz) = 1456777 bytes
 SHA1 (patch-CMakeLists.txt) = 70dfc44c1541b1fccd200905acbd16e17a9313e1

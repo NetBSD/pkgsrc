@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:42:48 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:18:00 nia Exp $
 
-RMD160 (php-base58/base58-1.0.2.tgz) = 6b0ab8e9cf200f2c7fcfb8802cc603a13e5fc1f6
+BLAKE2s (php-base58/base58-1.0.2.tgz) = 65dc71f452b6468daa449d9c63b11cd5ddeae85a1c847dfd2fad3e257a91c924
 SHA512 (php-base58/base58-1.0.2.tgz) = 881cecaf68116331d7102c554094a9e65b9a8051cdd20f6c41b378d37baf655aefcbd601d58229ae018e15536c9620305d40e1e2697f88656a53126930612d30
 Size (php-base58/base58-1.0.2.tgz) = 10043 bytes

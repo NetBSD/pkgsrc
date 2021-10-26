@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:18 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:17:29 nia Exp $
 
-RMD160 (Stream-Buffered-0.03.tar.gz) = db02eb938b5c9d23ff08e0b92d2ab3b04dee6d1f
+BLAKE2s (Stream-Buffered-0.03.tar.gz) = f07c98b85c21a5de774c54733dc6fbbd59348038e636a6c53ba4bf1ad41c8c84
 SHA512 (Stream-Buffered-0.03.tar.gz) = cbc418846f61fd46163f85d2ce53c3d08ebc164a4e775b7e9fee4dc143daa3655983723099d1ded53f0054506c550038680d1f95e11d1399fef6ff6b38f9712e
 Size (Stream-Buffered-0.03.tar.gz) = 10348 bytes

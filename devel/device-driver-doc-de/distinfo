@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:39:27 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:14:32 nia Exp $
 
-RMD160 (NetBSD-treiber_schreiben.tar.gz) = 66205ae103e990baa4780cb48b12fd9602735634
+BLAKE2s (NetBSD-treiber_schreiben.tar.gz) = 41dc6ef94c2cf6b317af5149ac86788fde11055050a26637a0cbe4491de99082
 SHA512 (NetBSD-treiber_schreiben.tar.gz) = 07fab3dd5cf345ca7f7c9e161de1367b5c828baa7d063e7a1ffeea9db333d9f1c15c8f92a949964502b359d26c6dbf5bd904023587aac557fe19424e57937e56
 Size (NetBSD-treiber_schreiben.tar.gz) = 449362 bytes

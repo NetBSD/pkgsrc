@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:39:14 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:14:20 nia Exp $
 
-RMD160 (bmkdep-20140112.tar.gz) = 5b898886da404605dc0540829d8020625a675dd7
+BLAKE2s (bmkdep-20140112.tar.gz) = d9eee7abad12a5891ab492a009122f4eeb957aceb6aac4807df27b20419c15c3
 SHA512 (bmkdep-20140112.tar.gz) = c071adeab94907c4a8cb3d8d8fa8fcfb1f93c37c50ec2801dea530e391b9d6117a7c808fdfda6b9d2505535d2ece5d113639fd3f4d0256f58e9748a8a9f3dc9e
 Size (bmkdep-20140112.tar.gz) = 7649 bytes

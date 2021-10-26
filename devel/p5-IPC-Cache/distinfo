@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:41:40 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:16:47 nia Exp $
 
-RMD160 (IPC-Cache-0.02.tar.gz) = a390a47d3149f598ddc9db71e911981c560d2a72
+BLAKE2s (IPC-Cache-0.02.tar.gz) = a8569effb2d7bff8821e982b78c54589a17337357e46f37bed2b35e3485b09af
 SHA512 (IPC-Cache-0.02.tar.gz) = 40acb295c9e4d001a8a80e6d3c65f70c3191f756f2924be74b41d7385b2ce06ad1019b229c01a8e32af0400e7a9be8ec257976c7714794b318108cebe1bf7dba
 Size (IPC-Cache-0.02.tar.gz) = 10667 bytes

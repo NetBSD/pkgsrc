@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:42:11 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:17:21 nia Exp $
 
-RMD160 (Probe-Perl-0.03.tar.gz) = eaf13f0e489305507470d4ddf146e922cac7fdb3
+BLAKE2s (Probe-Perl-0.03.tar.gz) = 3a629b77e4601b104e926cda02ed3707d12fd15a9229a509895279b3206d1c16
 SHA512 (Probe-Perl-0.03.tar.gz) = 739bdb9d1a74eb77ab885a5aca861a1915cadbb1002bb4cb0d21fc6940ae6b3aa64ee52951ac8b2dca41c9e8fe188e17ae5f3c848c4a1caaf66fec5d25bef49c
 Size (Probe-Perl-0.03.tar.gz) = 13096 bytes

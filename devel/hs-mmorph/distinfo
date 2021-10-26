@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:39:52 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:14:58 nia Exp $
 
-RMD160 (mmorph-1.1.5.tar.gz) = ec9268e897f9790467be8863b3a24675cdd91aa8
+BLAKE2s (mmorph-1.1.5.tar.gz) = 5ad736d874bac0e72b2aa289469ceb3fbdd5e1f26055f7d30379347277b91548
 SHA512 (mmorph-1.1.5.tar.gz) = 8429661578ef47f52e45aa4fea71aba2af115a9afc062f6ae2679270cd9d87fbbccb4c21cedfb0d7374d56c30e4dce38683e0cc1c8f37d89cc462067d233a198
 Size (mmorph-1.1.5.tar.gz) = 6925 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 13:42:05 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:17:14 nia Exp $
 
-RMD160 (Package-Stash-0.39.tar.gz) = a4bbcc632ab0a34f6baee15a2aa2389878fedae4
+BLAKE2s (Package-Stash-0.39.tar.gz) = cfeeb39540d04734351e3147a1489b9fb324827126c66a3efa15ab7a78f64b26
 SHA512 (Package-Stash-0.39.tar.gz) = c5a6cd56c86fb9f6c8585ee7f65d0add8e905c586747763c7841a054f3540b6bc505f57952f44bb90a6bb500d0d60d20ad5df7a40944480abbc9d8d43d64e30f
 Size (Package-Stash-0.39.tar.gz) = 55606 bytes

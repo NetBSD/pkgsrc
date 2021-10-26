@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:43:57 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:19:19 nia Exp $
 
-RMD160 (qjson-0.8.1.tar.bz2) = b8b76c253bf241de1fccd411b4fbc67ea96b53fd
+BLAKE2s (qjson-0.8.1.tar.bz2) = b93d2a5520172cfd7bf75bf080df10cce5f2e43fd3bb5dac606949eaa8831b60
 SHA512 (qjson-0.8.1.tar.bz2) = 03e65bbdf6d397f77319867a03377deb419eac46ad91bc06abb7bc68d8f8f2e490db87d909ce51e065f22e5d201f1f73d57f72e14bc378580dbf40b855f1bc72
 Size (qjson-0.8.1.tar.bz2) = 64398 bytes

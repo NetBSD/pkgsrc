@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:38:57 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:14:02 nia Exp $
 
-RMD160 (R/clipr_0.7.1.tar.gz) = 0b8a03bc62ed9971deeae37f224cfac413b3c2d0
+BLAKE2s (R/clipr_0.7.1.tar.gz) = bf6bc8da1cd3d344e28150229c72c7052e5328a8e512391213277a7fe481742f
 SHA512 (R/clipr_0.7.1.tar.gz) = 1c57770f3c765b2ebf8be7146dc7688476900368a4845506cbd21d981e33f53093bce9178c76698f4fc8eed1b3fd086ac4ad4dc63a4682520bb97e49e4ea0839
 Size (R/clipr_0.7.1.tar.gz) = 20882 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:39:29 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:14:34 nia Exp $
 
-RMD160 (easygit-1.7.5.2/eg) = 383e717a8aad0c3207f3b5ce2cd3a567b599ba62
+BLAKE2s (easygit-1.7.5.2/eg) = 20de62e766da7aafe8da84d3b405999ad44fae60d631e7c37ef1c5f6fe63a9b3
 SHA512 (easygit-1.7.5.2/eg) = fa798a18b3d9ae8394faa3a5772ad21c6c439835de977dbce077b79823e022f9aa15e2d603ab16ea592048dab039aed2d647018cd83f7b3ec0b6c0e7679d0eec
 Size (easygit-1.7.5.2/eg) = 283887 bytes

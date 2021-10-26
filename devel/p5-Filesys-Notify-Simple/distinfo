@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:41:33 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:16:39 nia Exp $
 
-RMD160 (Filesys-Notify-Simple-0.14.tar.gz) = c162b94863f84fcfd23d3c89ed8d83e89f30d5db
+BLAKE2s (Filesys-Notify-Simple-0.14.tar.gz) = 313be906ed2e905c457a701c67023c8f8b66d2d4c6297811ac48d1dccf12d0cc
 SHA512 (Filesys-Notify-Simple-0.14.tar.gz) = 45fe097beb925e913af9c48704f5f550931c70673455258249127dff27abe1955e0e968f37c7c0f4c798a20be78b1055362c69ec2906e8e2633b21f68b198208
 Size (Filesys-Notify-Simple-0.14.tar.gz) = 13429 bytes

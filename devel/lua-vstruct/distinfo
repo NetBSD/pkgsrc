@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:40:31 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:15:37 nia Exp $
 
-RMD160 (vstruct-2.1.1.tar.gz) = 1838d8fd70976f4efc0865d22f211caa710ad197
+BLAKE2s (vstruct-2.1.1.tar.gz) = 207ba95ca9e5d895f17067febc9e290418b27f95f0c91fe9f2b4584cc9ece38b
 SHA512 (vstruct-2.1.1.tar.gz) = 8959fc9f90aa6ccffd306227098dc888a2218c0bfe7ef783867a012d5f23053cd58ec21f734eee1f1ad539245576e5f7cc8ff75050ef61e47a8af4a1b074bbac
 Size (vstruct-2.1.1.tar.gz) = 39736 bytes

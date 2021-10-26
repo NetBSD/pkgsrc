@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:43:20 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:18:39 nia Exp $
 
-RMD160 (Logbook-1.5.3.tar.gz) = 8c3ea048b9ec50db36299e59bd8b7c97a8b323b6
+BLAKE2s (Logbook-1.5.3.tar.gz) = 342b48e29d7c2d064ce7d0ddda437e9127ea760f5bd812eff049c16ab02328d3
 SHA512 (Logbook-1.5.3.tar.gz) = 528fe4b324f4eb0e86b0463ab46500135e14049bf1ab6e0b71c808e9850a793525c6cc890eacf7ee16458dc7dcf817f1b1f8d7cf2dfc826a4bef70506dba3120
 Size (Logbook-1.5.3.tar.gz) = 85783 bytes

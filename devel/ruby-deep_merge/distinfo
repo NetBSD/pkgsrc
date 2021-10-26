@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:44:06 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:19:29 nia Exp $
 
-RMD160 (deep_merge-1.2.1.gem) = 1dcf6125c9b19fbe402c95585f8c4f88f9288d82
+BLAKE2s (deep_merge-1.2.1.gem) = 409ded43ff7230678c0419087d5d3785ff9ebe81c4df5eb750f674eb7752ab61
 SHA512 (deep_merge-1.2.1.gem) = ef93e0c4c6a8f389338ea30b2b53271f089b0b8275adf6fc74e7d15a2faf32d62a1b297af9d31c42cb5d816066428c8407a82d874fad14d64384098fc3c5c70c
 Size (deep_merge-1.2.1.gem) = 14336 bytes

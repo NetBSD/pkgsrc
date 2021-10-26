@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 13:40:06 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:15:11 nia Exp $
 
-RMD160 (kpty-5.80.0.tar.xz) = 923eedc406f4909f72ad4bb862a3a4cb1827980c
+BLAKE2s (kpty-5.80.0.tar.xz) = 72971be5a30617c76ad0a43bcf5f401869ceabb354336ad107260ecc597dd026
 SHA512 (kpty-5.80.0.tar.xz) = 406b3170d80bb7a3213e8ed940c517eb97227ea442bfc4175886f0c90c031b2593695973411dc993174d1af0719c3a4365c0f74f2dcede538433dc3081ff3af1
 Size (kpty-5.80.0.tar.xz) = 56224 bytes
 SHA1 (patch-src_ConfigureCheck.cmake) = aa44e7b76545c450bc41265a8077877e9f69506b

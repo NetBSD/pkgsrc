@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:42:45 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:17:58 nia Exp $
 
-RMD160 (palmpower-1.0.2.tar.gz) = 91dda6fb43e120fae05edfe706243890a88d3a46
+BLAKE2s (palmpower-1.0.2.tar.gz) = e7f56502e3e988b95a23aa487457261606998169896bd88e052166e2c51fe8c3
 SHA512 (palmpower-1.0.2.tar.gz) = 867a9a64901dd7a85c6a6ee73c03ec4e9bd31ca481b7f82cb1d515bc1ab1cd12dd0480c1e447c462d33aa4590e5ec8973a57e0fafc9b0cc670088502e69c146a
 Size (palmpower-1.0.2.tar.gz) = 184976 bytes
 SHA1 (patch-aa) = 4f31296add310fb9882e9fb232fd224fd7334385

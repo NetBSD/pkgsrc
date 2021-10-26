@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:41:23 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:16:31 nia Exp $
 
-RMD160 (Eval-LineNumbers-d1d7556/master.zip) = de466fdc77ec5fc9a6c7225c20a3136c445b65f6
+BLAKE2s (Eval-LineNumbers-d1d7556/master.zip) = 7152b202c3d1d8fe37c03c9f69a54fa0ac6a500da8cbed08cf14cfa80029eca5
 SHA512 (Eval-LineNumbers-d1d7556/master.zip) = c2587fe4dcc6aa155b5a87065e37d67a121b10665d43d013d3c6260ec014935247e05309abc43c92bbde637eb8eeb32273e6bbc4e62997f1ce47b6014bfd29cb
 Size (Eval-LineNumbers-d1d7556/master.zip) = 5368 bytes

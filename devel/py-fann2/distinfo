@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:43:09 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:18:26 nia Exp $
 
-RMD160 (fann2-1.0.7.tar.gz) = 65590aaec895a13703d043bf1282a7a4c2d084d6
+BLAKE2s (fann2-1.0.7.tar.gz) = 33a20bb0be0351bd8f4621a3c520cf116d66d7f4c45c5b1d895513f23b1aa5bd
 SHA512 (fann2-1.0.7.tar.gz) = 6080929838dd605897f392c55b18a431944718443a125c60f2d2eebffedb3f45ab955665a377f916f78430fc3a9fc58b2e99a7fd151ed1e553413e40851cf971
 Size (fann2-1.0.7.tar.gz) = 63643 bytes

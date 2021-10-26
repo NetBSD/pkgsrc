@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:40:00 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:14:59 nia Exp $
 
-RMD160 (psqueues-0.2.7.2.tar.gz) = f5eace24fc673ede404c403f8faa6679d835519e
+BLAKE2s (psqueues-0.2.7.2.tar.gz) = 5fb6bc95fe533eaaa5f12b757784b1e14c9a1c33f1c87550f0828d8f6bfa8ba6
 SHA512 (psqueues-0.2.7.2.tar.gz) = cc70bc22568d24b8618d43be7a2261ab7b55005e7e68a49a4d09b323e03954c05fe8d4de2c344760cdfef26b04bc6937bc331f7e310e1bc9b6b512068eed3be3
 Size (psqueues-0.2.7.2.tar.gz) = 27455 bytes

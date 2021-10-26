@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:43:05 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:18:22 nia Exp $
 
-RMD160 (python-daemon-2.3.0.tar.gz) = d319b4f9fc17323f724c52dfd5627e8318bc6f0d
+BLAKE2s (python-daemon-2.3.0.tar.gz) = 025553dee81b9de422e46839bca04539e9a34bc0c3e99e637afbfe2fb724891e
 SHA512 (python-daemon-2.3.0.tar.gz) = 30bb70821aae720d09032c8c666524fa9a1a486314ffff73eb161231a1f2b954914295b4ad41f9c8529bc045fb6d0f89256bc59f8979a4f8a6698e9bd4d7441a
 Size (python-daemon-2.3.0.tar.gz) = 82831 bytes

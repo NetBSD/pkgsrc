@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:19 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:17:30 nia Exp $
 
-RMD160 (String-PerlIdentifier-0.06.tar.gz) = a45a92ffb65cf1aa5b83062a088c57d00c8915c5
+BLAKE2s (String-PerlIdentifier-0.06.tar.gz) = 830285fd0b41ba48867dead81d0773e2329c1c09778bee957eb5b2f881319052
 SHA512 (String-PerlIdentifier-0.06.tar.gz) = e0ba8d02a896a72bfb46334e307146ccd154f4dfbab814793622ee8a035b6c2d9a9a540718a58061ba14e1b1495395745ea631d85b39816ea8dd9e2f745c60b1
 Size (String-PerlIdentifier-0.06.tar.gz) = 13717 bytes
