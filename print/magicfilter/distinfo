@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:48:59 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:12:10 nia Exp $
 
-RMD160 (magicfilter-1.2.tar.gz) = 064aeb611d461664afa5c71d8f8d2edc63480fa2
+BLAKE2s (magicfilter-1.2.tar.gz) = 0a79ea22dbdfc2648d6b28e3ad412fe3a366fade93903f6a34a965ab7add9e65
 SHA512 (magicfilter-1.2.tar.gz) = 5a754abdb778e90880f51cad30b9b49652e49030cd766f989bd8fd3383e58ba8ce4a24b352f7dbd3460d430a7aa8f89643b94af6be9780f378ff2b22dfcfa8f2
 Size (magicfilter-1.2.tar.gz) = 53176 bytes
 SHA1 (patch-aa) = 6fe946d6adc7db746c4ff70ed6a946aebf115d5d

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:27 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:37 nia Exp $
 
-RMD160 (beamertheme-phnompenh.r39100.tar.xz) = fd0290007099fe411f230f05e6f380b713350b33
+BLAKE2s (beamertheme-phnompenh.r39100.tar.xz) = 74b53b91c7ca76226cadd023f8d6fee57e6455b1b617db31d04226b7c6515c1f
 SHA512 (beamertheme-phnompenh.r39100.tar.xz) = 30745bb1f92c230bedd953d32eaa6f2085ad2aa7f147bd3368fe8ebe4f6092ecc615acce55b9573da4dc04c8e89877ba2705a6712cd4c4f67f34dc59eae97880
 Size (beamertheme-phnompenh.r39100.tar.xz) = 784 bytes

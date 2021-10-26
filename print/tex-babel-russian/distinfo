@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:49:22 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:12:33 nia Exp $
 
-RMD160 (babel-russian.r57376.tar.xz) = 5a0e2318e9dd1b089dea927ca2217aea54f91245
+BLAKE2s (babel-russian.r57376.tar.xz) = a27afbb356912b27d6e950419817ef45f1d796a7f31df18cf3f59a50f7ec8c84
 SHA512 (babel-russian.r57376.tar.xz) = 5acec3460294e71e6def384a7863a849e8a5d431dde49c77a4a7803af5373b56fcd376f6e73b237dd230728ab5b536f903b6a1bb19fc478dd5e742293a6e6ca8
 Size (babel-russian.r57376.tar.xz) = 6352 bytes

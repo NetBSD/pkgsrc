@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:50:48 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:13:59 nia Exp $
 
-RMD160 (tex-magaz-24694/magaz.tar.xz) = 8e9413ce3251143908045ffdc9ed0784d48f019e
+BLAKE2s (tex-magaz-24694/magaz.tar.xz) = 03f7ed299e3dba6c1f0197a313f2675b6a9cf3614c983ee17ec9ac0f9b88ad2c
 SHA512 (tex-magaz-24694/magaz.tar.xz) = 77d85716c390ae159a85177dda84eb1978e26d0ac7bc1beabb02f047898407edf8871609edd8e9bd0660039974e38aa54364f4bf61b91c57ceb80f7c0e00a7df
 Size (tex-magaz-24694/magaz.tar.xz) = 4408 bytes

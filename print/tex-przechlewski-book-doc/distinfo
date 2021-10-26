@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:15 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:26 nia Exp $
 
-RMD160 (tex-przechlewski-book-23552/przechlewski-book.doc.tar.xz) = b23e55a69663683acb18a5692d7c538a1d542801
+BLAKE2s (tex-przechlewski-book-23552/przechlewski-book.doc.tar.xz) = d5dbcd88f64a400160aafb9a10b121c59e906e0ea49541d5c92eb5cc3616f307
 SHA512 (tex-przechlewski-book-23552/przechlewski-book.doc.tar.xz) = f6375affbcf671d4229d58ccc87e89d2daa0454f40bcb068f9bf52a2adee09885ab35b2202d3c45539aee5564ab21fba3b2b4544d8e59f759a76add6988d275e
 Size (tex-przechlewski-book-23552/przechlewski-book.doc.tar.xz) = 289780 bytes

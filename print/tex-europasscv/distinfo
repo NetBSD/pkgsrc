@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:50:05 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:13:16 nia Exp $
 
-RMD160 (tex-europasscv-56829/europasscv.tar.xz) = 49043e7d378527ff6693a51d7e88dff21ee2547c
+BLAKE2s (tex-europasscv-56829/europasscv.tar.xz) = ed3f755cf5f85143c63296ac2ca353d705528a08745cc7888bb0e6477e53c208
 SHA512 (tex-europasscv-56829/europasscv.tar.xz) = 35aa159fd84082e1cfb65bd05ea83462400e12edf5a40a89740373954d72b42cc33516452691814359d3bbfae1e96f4605e0d19592c54f4e2e5328542cac42a6
 Size (tex-europasscv-56829/europasscv.tar.xz) = 30320 bytes

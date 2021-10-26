@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:51 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:13:02 nia Exp $
 
-RMD160 (cslatex.r54276.tar.xz) = 01f55ced0dac271bf19a2e0cff254d2d5076c6d4
+BLAKE2s (cslatex.r54276.tar.xz) = b1705bf4d81fcc543a38814dfba195987012f2975e4caf05f568e70fdc902643
 SHA512 (cslatex.r54276.tar.xz) = e937b95e72169408de457003b61b0861b64f7cf781d26a545817923e8239d161bbfefa3f2d5a9175af0ef70ca433bf0f63e4127b50fcff622a5ee30da85c3900
 Size (cslatex.r54276.tar.xz) = 12696 bytes

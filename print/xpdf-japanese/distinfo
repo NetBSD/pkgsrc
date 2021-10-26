@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:52:03 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:15:13 nia Exp $
 
-RMD160 (xpdf-japanese-2011-sep-02.tar.gz) = b5eba416652097b5a1ea347fa3890270a1e8f641
+BLAKE2s (xpdf-japanese-2011-sep-02.tar.gz) = ce173f87f7c8d8f4301f5f3c0839a4ba6c4c30a602f36bff29745257a42fbf3b
 SHA512 (xpdf-japanese-2011-sep-02.tar.gz) = f69f1c222e513177f06de6a5b67c27544e87d46dd21c3b07cf3b4530f9708cf54589d32012d5e3eded14e977d2d3f762a473dbb852a6bef90364c03df7525217
 Size (xpdf-japanese-2011-sep-02.tar.gz) = 1006949 bytes

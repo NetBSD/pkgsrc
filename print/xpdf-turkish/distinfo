@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:52:03 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:15:13 nia Exp $
 
-RMD160 (xpdf-turkish-2011-aug-15.tar.gz) = 660d307ee0802586c9118c06f672de81b68f6599
+BLAKE2s (xpdf-turkish-2011-aug-15.tar.gz) = 5d0ad10168ce13cbb77f3b9d4477dbd917ae9b9607c18cddb964b13184300d27
 SHA512 (xpdf-turkish-2011-aug-15.tar.gz) = a73e90bce8f2a12154b06ef29333a45d96258c0d653d5cb15afd2e5ad9e79a9b617e5f8ebeb20bde545684d50f3bc1349800c99f70c863bdd502c24c266b4fb1
 Size (xpdf-turkish-2011-aug-15.tar.gz) = 1137 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:51:49 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:15:00 nia Exp $
 
-RMD160 (ulem.doc.r53365.tar.xz) = 8588226d5a740c21722719cfda15d58ad8c08670
+BLAKE2s (ulem.doc.r53365.tar.xz) = 99f7f7477f76d0825d7d0d5dbd3fef002bc8dc6744fce0db918c75f3f0e4db7f
 SHA512 (ulem.doc.r53365.tar.xz) = 153dcf2057d267c2f59c7705c4997752e902aa004201f97d52a180419d7c0fea4173c0b5b1a1c8a11bc1703226e55ea55721a4d18c265b30343a5812d1f4e0e7
 Size (ulem.doc.r53365.tar.xz) = 166256 bytes

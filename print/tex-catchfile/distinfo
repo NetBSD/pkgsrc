@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:36 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:47 nia Exp $
 
-RMD160 (catchfile.r53084.tar.xz) = cdca0fecb4dd12d265d57a9d8573df4f86c4c83c
+BLAKE2s (catchfile.r53084.tar.xz) = ec53f4674c01aa1fcbbd34bdd43784ccc55d03d0c9b30afaa8453ddba0adb7d6
 SHA512 (catchfile.r53084.tar.xz) = 6e01a91913a2a81224a533eb7f119283c267682efaa2a6cec11e9db7fc593b0d7a6830b83e482f22e96df208dba598b1c6596a78ae5d4cd17aa4c9a50eeaddea
 Size (catchfile.r53084.tar.xz) = 2748 bytes

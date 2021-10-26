@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:50:12 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:13:23 nia Exp $
 
-RMD160 (tex-font-change-40403/font-change.doc.tar.xz) = cd1fb7092818db050da0065faa0ebf3478733eab
+BLAKE2s (tex-font-change-40403/font-change.doc.tar.xz) = 09bcd57a7ba0e81efc5db1f2ef504e8a6760cee760b17ee54114a99e4ede48b1
 SHA512 (tex-font-change-40403/font-change.doc.tar.xz) = 6b4218039b5b460fdfaeaa3549ea49a15382bfe1417f65dddab70750b7e83657b6517c5cb5d9fdd6da0561272d9fbe07a31a25e06e7ca092d9daa75bc706f8cf
 Size (tex-font-change-40403/font-change.doc.tar.xz) = 1766316 bytes

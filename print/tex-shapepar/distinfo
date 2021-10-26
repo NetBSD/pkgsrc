@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:26 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:37 nia Exp $
 
-RMD160 (tex-shapepar-30708/shapepar.tar.xz) = 2a7c00262e02a1d36a91842248e21a7f473ed635
+BLAKE2s (tex-shapepar-30708/shapepar.tar.xz) = 8945d694f9d69e4f2fef6f8067705f76095d3a0ec04d51cd603c1f92d58bea9c
 SHA512 (tex-shapepar-30708/shapepar.tar.xz) = 3c5ef6324f2e930506246aabc900fe86a4a67183b8d035d381fd701939446c47738c6d8b948c2fb6ea91c7ed6ed39f6eaede85b107518178b7626044964d34b2
 Size (tex-shapepar-30708/shapepar.tar.xz) = 15960 bytes

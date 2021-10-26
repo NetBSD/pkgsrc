@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:24 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:35 nia Exp $
 
-RMD160 (babel-ukrainian.r56674.tar.xz) = a60919c3a2d0ce1e57e976f87e80a3b6b23c5ee9
+BLAKE2s (babel-ukrainian.r56674.tar.xz) = dcccac5bd37293c290842e912749992362b578f5bd081a85b33c697c6090a9a8
 SHA512 (babel-ukrainian.r56674.tar.xz) = 10476b0dda4e80472aa8d3b3628d372da10f8badd37df6beca434e3bf1b9e135972acd5decb63eb6f706b700ef969136117b96ae5a6d6209fd75b9c13d06567c
 Size (babel-ukrainian.r56674.tar.xz) = 5076 bytes

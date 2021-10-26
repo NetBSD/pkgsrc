@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:26 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:37 nia Exp $
 
-RMD160 (tex-shadowtext-26522/shadowtext.doc.tar.xz) = fe87cd06506a505e0def5ccaa6d83a37d276c135
+BLAKE2s (tex-shadowtext-26522/shadowtext.doc.tar.xz) = f0525803dcef825212e76337abdc2567a07c82ee8594783a571da8270898cd30
 SHA512 (tex-shadowtext-26522/shadowtext.doc.tar.xz) = 7e1ebc75d606f9a1cca4a0b3af7082e736ef2e2c1147e6c9ade5e15d376f0c2128b377ad48e93d03b470940acbe1c19e7bf23ec3150ca979da11499bd974265f
 Size (tex-shadowtext-26522/shadowtext.doc.tar.xz) = 145132 bytes

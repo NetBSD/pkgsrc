@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:49:13 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:12:25 nia Exp $
 
-RMD160 (tex-anonchap-17049/anonchap.tar.xz) = d412c5e7b952651019080010914ed7e125f8c4b4
+BLAKE2s (tex-anonchap-17049/anonchap.tar.xz) = acf9084747a996d0178386e1f342627318ffb5d661ff0faa05a65295816d52f4
 SHA512 (tex-anonchap-17049/anonchap.tar.xz) = 6fcd06a9b730fc0aa3a1ce31c776b2b3572bbed62c8e641c53b451f7e0ebf3f810bb7e75e2e1c3cc6cba6c5ca632691b1456f67562bffda1230c24143dc17404
 Size (tex-anonchap-17049/anonchap.tar.xz) = 1452 bytes

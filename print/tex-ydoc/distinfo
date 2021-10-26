@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:52:00 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:15:10 nia Exp $
 
-RMD160 (tex-ydoc-26202/ydoc.tar.xz) = 2def2fed26a9341500469c6d37996e4ec0ebd00d
+BLAKE2s (tex-ydoc-26202/ydoc.tar.xz) = 1c79ec81df57171bded8d2af5e90d0fbc053c65daf3b212542a556b10d3013b8
 SHA512 (tex-ydoc-26202/ydoc.tar.xz) = 02bcc97e4932613e57c3472ce5571d8efbb812aebdfbee03aa5d36cdf5669a45af11a96c9ee32914e616f2a758648383093a25eca2ca0085747a01834d9b15d0
 Size (tex-ydoc-26202/ydoc.tar.xz) = 9112 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:50:37 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:13:48 nia Exp $
 
-RMD160 (tex-kotex-plain-38630/kotex-plain.tar.xz) = e673f85e5759b5185f56f9559fab8e54cd0d6056
+BLAKE2s (tex-kotex-plain-38630/kotex-plain.tar.xz) = e142a42e15da34ac670b90811dd6d9a9f8bfa905219e8aca3173ac938dfa1c3c
 SHA512 (tex-kotex-plain-38630/kotex-plain.tar.xz) = 1d71d725572feec211d7982b8664bdf2476a422a9008c71e35974808c539bddc0394aeb7fca4a86c1815b7ccf50f06060fcf1809181538b1de5599efd9dc7466
 Size (tex-kotex-plain-38630/kotex-plain.tar.xz) = 9056 bytes

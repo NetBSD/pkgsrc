@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:50:08 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:13:18 nia Exp $
 
-RMD160 (fancyhdr.doc.r57672.tar.xz) = b0cea40d984a6907fe620049729fe165555784d4
+BLAKE2s (fancyhdr.doc.r57672.tar.xz) = d0538c0bf1a9b09e433e53d2001a31c9bf8219d38b6adc5d6d4711d686653267
 SHA512 (fancyhdr.doc.r57672.tar.xz) = 6b054701df4a35a4422f0248f6fed134f3321e8fc194b7095f5b0824f6a1d325db23cbe34e973dee061c5a571b76b61618d482f3fa2219911c34c981ac51a1ea
 Size (fancyhdr.doc.r57672.tar.xz) = 784500 bytes

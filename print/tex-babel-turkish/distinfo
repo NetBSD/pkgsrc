@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:24 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:35 nia Exp $
 
-RMD160 (tex-babel-turkish-51560/babel-turkish.tar.xz) = 1a11b532550eaf4d5c4b5d6f3e3ac505e9a3c6af
+BLAKE2s (tex-babel-turkish-51560/babel-turkish.tar.xz) = 6fccf46890892200fe972cfce8a945a16b5521c8163cf7d80c8bc2ed97ed7425
 SHA512 (tex-babel-turkish-51560/babel-turkish.tar.xz) = 02916936992e00e7aa884b46b6f786dd0fe5a0aaa6e2c6c4e28fe72de7fe5260fca7cdd37efc4a775a8d172e3993c98df7cec3d1ad08f01487f7cb0c8f2d179a
 Size (tex-babel-turkish-51560/babel-turkish.tar.xz) = 2932 bytes

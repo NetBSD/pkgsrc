@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:51:57 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:15:07 nia Exp $
 
-RMD160 (xcjk2uni.doc.r54958.tar.xz) = a780ce8cb4688daac1fbb996bd9dcd8bd4cf6c22
+BLAKE2s (xcjk2uni.doc.r54958.tar.xz) = 5967933022ab398343b046894237a95ce877bb1041f62a2bf13ca4eacf7c28b4
 SHA512 (xcjk2uni.doc.r54958.tar.xz) = 6a9958bc6ddf6d167b9d77a513d04f0077c9a8581109c51166410d60d5a243758da62b40bdf5cb1488a50b9ba76ca89261a2d31c3819d8b2738b4a7023ac3f90
 Size (xcjk2uni.doc.r54958.tar.xz) = 124084 bytes

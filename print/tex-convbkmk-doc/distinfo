@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:51 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:02 nia Exp $
 
-RMD160 (convbkmk.doc.r49252.tar.xz) = 1161d9055ff729737d468df8f0b3fc4fa4e73f3b
+BLAKE2s (convbkmk.doc.r49252.tar.xz) = fc967ba76abfde5a1a009b7497ae041e95c3a7a84244519b49375f0b87d26757
 SHA512 (convbkmk.doc.r49252.tar.xz) = 937d436cb9387eac601883ced516fa40f60e606bb4bae0be62e1ded2a31754a1d00461a34ad533cce1cc48f4d11e880233eaac128d80841e0b22f18801e86506
 Size (convbkmk.doc.r49252.tar.xz) = 960 bytes

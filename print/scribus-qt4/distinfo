@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 14:49:06 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 11:12:18 nia Exp $
 
-RMD160 (scribus-1.4.8.tar.xz) = b145de40f078d37a32861791289c185e9582f00b
+BLAKE2s (scribus-1.4.8.tar.xz) = 2cc0fcaddce004be95a97773eb7bf60350d9317a01bff19e8ef560f16baa5fb4
 SHA512 (scribus-1.4.8.tar.xz) = 9f7743e316fff636e02814174839d2dc62ee22fc9973cb333d932ca05b47a63e9030a097c294ec4e811a7487aaf8ce4b983e5eba64fb5482dbd683002597353c
 Size (scribus-1.4.8.tar.xz) = 73114760 bytes
 SHA1 (patch-ah) = 7640b9509d764323d546cbf958521768965d7ff0

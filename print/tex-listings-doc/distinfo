@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:50:44 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:13:56 nia Exp $
 
-RMD160 (listings.doc.r54554.tar.xz) = 1dfb022d6407c7bcaab5140e49d478e4f5e2ab22
+BLAKE2s (listings.doc.r54554.tar.xz) = 5e3490faaadcf75cbb4c0edf99fee778212f0d0f67c6c8ebb10a31f452007d11
 SHA512 (listings.doc.r54554.tar.xz) = 38775e89b09ad00efe1c8fbea71dd5e7321789b24be407fdec53da87966e31b3b79ebbf085d9601f1c0b80177993af7048f58a4086185ead488a9a118d37e7bd
 Size (listings.doc.r54554.tar.xz) = 2163008 bytes

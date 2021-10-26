@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:58 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:15:08 nia Exp $
 
-RMD160 (tex-xfor-doc-1.05/xfor.doc.tar.xz) = 4383633d4fafc560f8759a1caef86c3f101d2973
+BLAKE2s (tex-xfor-doc-1.05/xfor.doc.tar.xz) = e6846a366b6ff59b63f1eaaa46b8335798e57c2cdd2c0b731e2df77a37659334
 SHA512 (tex-xfor-doc-1.05/xfor.doc.tar.xz) = 36ed06850e07556b76f492ff096dcdccddea2f59358af968a30531513cf1b085e59093edf46733a2c6b79315c421f045a7febac905333ad884814da397490ca4
 Size (tex-xfor-doc-1.05/xfor.doc.tar.xz) = 102228 bytes

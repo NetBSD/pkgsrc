@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:49:08 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:12:19 nia Exp $
 
-RMD160 (tex-SIunits-15878/SIunits.doc.tar.xz) = 22197d7422a5e79882fe351fbd68321c3e24bdd5
+BLAKE2s (tex-SIunits-15878/SIunits.doc.tar.xz) = f57bb2bb20358376da6547cdc67db002eee4e842bfd77cfb2ee9e98cf054bb4a
 SHA512 (tex-SIunits-15878/SIunits.doc.tar.xz) = 7c8eade41ad68a4cef0747deea52efca7a967f57d0d1c3c6adc2e907220031acf8cb6d86c21eed444c5ae190b292ab51a69c697a0fe4bd2ab55f7fec746fc7ff
 Size (tex-SIunits-15878/SIunits.doc.tar.xz) = 250180 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:59 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:15:10 nia Exp $
 
-RMD160 (tex-xtab-23347/xtab.tar.xz) = 44c7a0d5da94a3244db86a8b05612265dd299752
+BLAKE2s (tex-xtab-23347/xtab.tar.xz) = 0a794a5174c91f1e32b09450629c00735f8a1e2994717173b5fa010e35157043
 SHA512 (tex-xtab-23347/xtab.tar.xz) = 827009263c9a6e3052fb2a83fb39a4a319870dfd76a6e3cb56de291d644948dad7d8ec6d855fd22571a2dcd1e06f03e5e96c7f9255b10c7c79aa8e089779facb
 Size (tex-xtab-23347/xtab.tar.xz) = 4628 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:50:54 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:14:04 nia Exp $
 
-RMD160 (microtype.doc.r58394.tar.xz) = b91c14ba397a80c7bea7fd1769f2e01914a3ea1c
+BLAKE2s (microtype.doc.r58394.tar.xz) = 57d785199531d24449eb50e09206b1a7324b7093714e161717cdbab32a00b00e
 SHA512 (microtype.doc.r58394.tar.xz) = 7804243348e470dd5fc5bf087daf8292664e378161faabef20d1be8dfbd461b7654fc55fbdba7674d18d4a4d058572968fc3ee05e036b68a67a43d366923cfc3
 Size (microtype.doc.r58394.tar.xz) = 1753892 bytes

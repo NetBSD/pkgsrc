@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:18 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:29 nia Exp $
 
-RMD160 (babel-belarusian.r49022.tar.xz) = 4f3a7e497eda5d1628c0c45a5fb53da680eb1621
+BLAKE2s (babel-belarusian.r49022.tar.xz) = a21fdbecefbc0945d046adb2cddf4ee5c5a4c6001607b1230dc68370f9e7dfd0
 SHA512 (babel-belarusian.r49022.tar.xz) = 5856582f8bf6a98a4fbd560bfca82ccb226267e249f0caf8afc775875d50ec204ea613320534a63062dffd0e050905adb24763a95fec2ef4e8faed70a400d976
 Size (babel-belarusian.r49022.tar.xz) = 5112 bytes

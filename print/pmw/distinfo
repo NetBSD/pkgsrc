@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:49:02 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:12:13 nia Exp $
 
-RMD160 (pmw-4.51.tar.gz) = 38c787ea2d51c600be16412510e64b087fa49789
+BLAKE2s (pmw-4.51.tar.gz) = 8e6b42f18f2426a852c37ec045c74a49146ea9ab271842f80214dd61b4abf282
 SHA512 (pmw-4.51.tar.gz) = 70b85e57464cec234f937e7ff3524ae1c4d4a63ee2f32b55816c5764ce8f29bd910725e7f851fb5de7a41eda3d88b8ad383a2906a7e29dd0f4f5d580d76d1c5f
 Size (pmw-4.51.tar.gz) = 2241739 bytes
 SHA1 (patch-Makefile.in) = 287f7ed907797b42b65d95af7a2798970aec8698

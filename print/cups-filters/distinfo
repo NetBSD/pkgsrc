@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.76 2021/10/07 14:48:52 nia Exp $
+$NetBSD: distinfo,v 1.77 2021/10/26 11:12:04 nia Exp $
 
-RMD160 (cups-filters-1.28.10.tar.xz) = aca405f145860e92273f0a2f183ed1dc4559cceb
+BLAKE2s (cups-filters-1.28.10.tar.xz) = fe2e8a675e77b0693b97e4d5803d4461aa9698f45f97daa4d7b0cc0b3b1b546e
 SHA512 (cups-filters-1.28.10.tar.xz) = d6079633e10c3cfdc744491df03adc73d98dab0d9c0c6d3bc426b751545ae3434ea875e0841cec9358c19336347903f2832b5f801700b371cc1959e031bfa659
 Size (cups-filters-1.28.10.tar.xz) = 1503924 bytes
 SHA1 (patch-filter_gstoraster.c) = 4eef8d91d8ca26a5a874e29885b836e9670d9e5d

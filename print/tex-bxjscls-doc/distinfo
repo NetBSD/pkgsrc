@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:49:34 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:12:44 nia Exp $
 
-RMD160 (bxjscls.doc.r59253.tar.xz) = 82b0ae3bc304802e9831653d6495660d1efd490f
+BLAKE2s (bxjscls.doc.r59253.tar.xz) = e136c47bb0fc52c040f985e635390e4c1e17163afac5695e0a4a9d3579932bdc
 SHA512 (bxjscls.doc.r59253.tar.xz) = 6c922c350ba11095dfa1c0ca9ef6b7b3b23ff7b3a265246cd4938bc85c9c98589d1d423136194341ebc888b57aa8f0a0503ab4283f9ecba023ecf19c728bfe40
 Size (bxjscls.doc.r59253.tar.xz) = 1557524 bytes

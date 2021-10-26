@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:59 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:15:09 nia Exp $
 
-RMD160 (xpatch.r54563.tar.xz) = aa1b8ef056eaf84c0eb9c1e295e33cbf2a0243fe
+BLAKE2s (xpatch.r54563.tar.xz) = 145889ef9ab8150405adde18ea34bc955bb8b3c11d4237bf6e3c4152320918d6
 SHA512 (xpatch.r54563.tar.xz) = d96d078066ee7cd39585754b0ed1aa2bd5680f90eb2a879bb2dcb47cfe834094f0b5fa1373ecd7f80f626c1a8a8fd4823525c33fa0e67f63b0beb4031a35956e
 Size (xpatch.r54563.tar.xz) = 1924 bytes

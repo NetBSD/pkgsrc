@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.29 2021/10/07 14:48:52 nia Exp $
+$NetBSD: distinfo,v 1.30 2021/10/26 11:12:04 nia Exp $
 
-RMD160 (cups-2.3.3op2-source.tar.gz) = a2ed690fab3575ede399a2f54f908b1a9dc32ced
+BLAKE2s (cups-2.3.3op2-source.tar.gz) = 7ecaf87824cbc49d092c65530dcb1471ca24322cdfbdb893664d9986faed85dd
 SHA512 (cups-2.3.3op2-source.tar.gz) = db27dd6fb616bd7ad895b2bdf4ea7b010501358a50dc8f2e7e29558d1cfc088a572b1b35ac512654d3ed410c84df87dc34ca636533a4499117253915d4763117
 Size (cups-2.3.3op2-source.tar.gz) = 7993205 bytes
 SHA1 (patch-ae) = b81d7a2ce457f0d6994d6a084c63aa0a870bb881

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:27 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:37 nia Exp $
 
-RMD160 (tex-showdim-28918/showdim.doc.tar.xz) = 2f15d596f1269d6b0da0e86d06f88c5ae69a6a5d
+BLAKE2s (tex-showdim-28918/showdim.doc.tar.xz) = 5e54c09a67e86a4f388dee37588976974f7c7b4343000fe9ad7b97102b101efa
 SHA512 (tex-showdim-28918/showdim.doc.tar.xz) = 379499f61249865b572299539bcbeb1995f824c079e0a30d4ef47aa3dc13db66c00bba7291ee83fc28cc258f10def406cdcc3ba0215bf81d8efaca678a06a46f
 Size (tex-showdim-28918/showdim.doc.tar.xz) = 928 bytes

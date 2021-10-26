@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:26 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:37 nia Exp $
 
-RMD160 (beamertheme-metropolis.r43031.tar.xz) = 0844e624547f72df1562f8411f82351f09986542
+BLAKE2s (beamertheme-metropolis.r43031.tar.xz) = 46f009ae269bacce745db57c13155879502ee52c22b6e0c11fa96ca8084c23ae
 SHA512 (beamertheme-metropolis.r43031.tar.xz) = dae8058ae5c2883b383a2bcb85bbdc45d0b0a3fab46a4498ea1f3b8568f04d049598fa78b72429adc7e36773905c67801e129378e233582f0fd8eb5ca4327745
 Size (beamertheme-metropolis.r43031.tar.xz) = 6572 bytes

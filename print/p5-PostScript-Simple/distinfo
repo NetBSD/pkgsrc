@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:00 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:11 nia Exp $
 
-RMD160 (PostScript-Simple-0.09.tar.gz) = 45428a9b5648ebb2e878f9dd32516b293b8012d1
+BLAKE2s (PostScript-Simple-0.09.tar.gz) = 3e2e5bae63bae8fb6ee5b6f6013c2b2770eb01767304872fe620a2e670756a47
 SHA512 (PostScript-Simple-0.09.tar.gz) = 28026060f91e7bcc2722df7e7097667aa2baaa85b1c558e08558fbee3395b0326e0564142e7729068afd13bdf523da32073fd6dbe56317db3e554445b4a04b18
 Size (PostScript-Simple-0.09.tar.gz) = 35450 bytes

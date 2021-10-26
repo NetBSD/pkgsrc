@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:49:57 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:13:07 nia Exp $
 
-RMD160 (tex-dhua-24035/dhua.tar.xz) = 1c5e1553879d59697f578f9e2716b9be63d3c28c
+BLAKE2s (tex-dhua-24035/dhua.tar.xz) = c1f7655c2d13d967c92cc7c277a03dfdfbd1ea512a8b3344d5474d8907d18d98
 SHA512 (tex-dhua-24035/dhua.tar.xz) = 58b3e650a64735680200de1362d5b586243b627950b8efbf7c1f298f2fe7c98a5ecd040caf3badeffc44c9017fdad6749da9150b2480a50e02cbe9a8db01ac66
 Size (tex-dhua-24035/dhua.tar.xz) = 4664 bytes

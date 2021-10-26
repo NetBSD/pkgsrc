@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:37 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:48 nia Exp $
 
-RMD160 (tex-changepage-15878/changepage.doc.tar.xz) = a30cabef00a5870f88c803da7b1cf8cdc6c546c3
+BLAKE2s (tex-changepage-15878/changepage.doc.tar.xz) = 2eb385d8cf6ad31a11118875158af8f315a55151595c5bd28e657e859f7c4eb4
 SHA512 (tex-changepage-15878/changepage.doc.tar.xz) = 9fb5bb30cf0deda61933b917ee0c0f10c826f9c4da0a26e7bcd1c40802fbc47ba32b953b167bd003d745b4391771ba1828aa21b435abd15741e27428a60c5ebb
 Size (tex-changepage-15878/changepage.doc.tar.xz) = 274712 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:07 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:13:18 nia Exp $
 
-RMD160 (tex-extsizes-17263/extsizes.doc.tar.xz) = 6ca343102b4a2b6a54f5089f94e2baf52c27f408
+BLAKE2s (tex-extsizes-17263/extsizes.doc.tar.xz) = 3a54bd72fbd36fbc97dccf89de0c900bb33425871a271a41cee53b4629332bc9
 SHA512 (tex-extsizes-17263/extsizes.doc.tar.xz) = e7179dc366c9acc9d886aa6affde9b09d3d8b31aec4f43e94b843295d96b0c2ef4b9486e8921969cfaeb82299b2327c9bc2dc2b76f49b6111408281f7310b685
 Size (tex-extsizes-17263/extsizes.doc.tar.xz) = 195100 bytes

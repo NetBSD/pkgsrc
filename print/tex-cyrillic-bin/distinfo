@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:55 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:13:05 nia Exp $
 
-RMD160 (cyrillic-bin.r53559.tar.xz) = 8613975fa39beca5b031d3f976b3b27ab805d034
+BLAKE2s (cyrillic-bin.r53559.tar.xz) = cb09db91480404749ed80f8df934275c91c59482184f67a320cd79f28765c8a9
 SHA512 (cyrillic-bin.r53559.tar.xz) = cb6d1ed18b1e8cf24d0856fc8a8fe8b2e4c2e5889e68521440386c0fcde8226367242c8adee9d4f127cadaa3f4a4ca2693ee501810d243d426fc8a395a49e3a9
 Size (cyrillic-bin.r53559.tar.xz) = 1500 bytes

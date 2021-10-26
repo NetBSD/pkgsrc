@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:52 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:03 nia Exp $
 
-RMD160 (tex-metapost-examples-15878/metapost-examples.doc.tar.xz) = 3892b97ec339cef7bbb3f03cb3e4fe85de9990dc
+BLAKE2s (tex-metapost-examples-15878/metapost-examples.doc.tar.xz) = 57cdf2523b4e5bad0f2ddea6c39bafb357551090723c249a1b04d7691ed6cea9
 SHA512 (tex-metapost-examples-15878/metapost-examples.doc.tar.xz) = 7b801236c7a82ded89748b25d353ff36c05898e1ee3e97a95bbeb35973861309bfca135bb45ad8645143c49849d28c23d8d29a39d6fb3ad73b4bb11b41102540
 Size (tex-metapost-examples-15878/metapost-examples.doc.tar.xz) = 21252 bytes

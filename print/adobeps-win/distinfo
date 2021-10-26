@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:48:51 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:02 nia Exp $
 
-RMD160 (adobeps-win-1.0.6/winsteng.exe) = 519b9c66dcd358a3a0ea9449526498c139553f15
+BLAKE2s (adobeps-win-1.0.6/winsteng.exe) = 4664e4d8d8600b2fd20b7352691bf2e0302074badad3888cab4d55f539621300
 SHA512 (adobeps-win-1.0.6/winsteng.exe) = 4da2460a85b9d86acdef20ed564ca1e19213f125487ec197eae9c88caf540fce123d2c2decf32978c2a3e55f52a5441cacd7826a7e916557087678532296f889
 Size (adobeps-win-1.0.6/winsteng.exe) = 7740765 bytes
