@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:39:56 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:15:02 nia Exp $
 
-RMD160 (timeit-2.0.tar.gz) = ce48d274616b416d6dd60a135ffe7565915c315a
+BLAKE2s (timeit-2.0.tar.gz) = 882b83ecdfbe16cf6f521822df6bb593d6ca66d178808cbb01f8380680d8357d
 SHA512 (timeit-2.0.tar.gz) = 3cbe554ddb17fbeb5f8be1f6459144921f8be4db0fa9571678980251ca397fca0700df61d0e5bd8466b0b2cdcedac8473ac53debbd9b4e9c239ebb37bec2845b
 Size (timeit-2.0.tar.gz) = 2117 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:38:57 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:14:02 nia Exp $
 
-RMD160 (R/brio_1.1.2.tar.gz) = 74b0276ac9f1a38d97242d704d2d3943ee704d89
+BLAKE2s (R/brio_1.1.2.tar.gz) = ea79560b6825f03dd5ec64a6d89b20be2a6bb81b3c5357fac472730d029d38ff
 SHA512 (R/brio_1.1.2.tar.gz) = 358b2908265e738049797802f76f6ae920f18ee9f6050c197962828a7d3940fedcd6e33bb3f7a5e4b1d6744f1e1e9c558f04c1c36c8734d61e6644b91d3b2539
 Size (R/brio_1.1.2.tar.gz) = 12069 bytes

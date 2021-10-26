@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:43:39 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:18:59 nia Exp $
 
-RMD160 (pyobjc-framework-libdispatch-6.2.2.tar.gz) = 8641455fe3bb50dcd9b856cb451f37b8fcb0ede8
+BLAKE2s (pyobjc-framework-libdispatch-6.2.2.tar.gz) = f6e69b5b5f4520e3ee894885c0ecb8641e77a66578ffc2703f7cbc7cdb4dbfe6
 SHA512 (pyobjc-framework-libdispatch-6.2.2.tar.gz) = 9cd9ea87c32a52b58479f3f2f41ca4a8d5395e3dd5cf2cc5af524875589bb188a2659b7d6aa0b557af75f9a5d0af4e9327a9c6c20055d04c2e2e80be4c079805
 Size (pyobjc-framework-libdispatch-6.2.2.tar.gz) = 26481 bytes

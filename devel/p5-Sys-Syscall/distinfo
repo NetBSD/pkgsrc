@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:21 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:17:32 nia Exp $
 
-RMD160 (Sys-Syscall-0.25.tar.gz) = 84d6b4ee1174e074c8c93c21920f7c566600a417
+BLAKE2s (Sys-Syscall-0.25.tar.gz) = a4a1d1bb7ae9fdbd32cdaf6f454c8ad51fcb5ff841fff22ae86d6ef70e36d934
 SHA512 (Sys-Syscall-0.25.tar.gz) = 8b0641c992865cc7a29874a2166a4f0542039958839c6305cd4c33d17cfbdecd4f4ee74dc8110bfb000e42cabd803a84c6ba39037765d61ccb2bdf60522be87f
 Size (Sys-Syscall-0.25.tar.gz) = 6222 bytes

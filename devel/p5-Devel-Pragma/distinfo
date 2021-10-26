@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:41:21 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:16:28 nia Exp $
 
-RMD160 (Devel-Pragma-1.1.0.tar.gz) = 1f2434e0077c197c04985ffdbb6a2ac884d4e55f
+BLAKE2s (Devel-Pragma-1.1.0.tar.gz) = 340c691783666daee488945d62c8892e47b8a1693acef2fccb905c77d43d6242
 SHA512 (Devel-Pragma-1.1.0.tar.gz) = 3e752f0f37f10f867932f8554b0733af47b1ac35d9d8fb50d3d279127c2b33640cfbb9b2676071a6ba6e2216e6b55629636ad71b4d705c297d88a62bdd1f3df6
 Size (Devel-Pragma-1.1.0.tar.gz) = 58523 bytes

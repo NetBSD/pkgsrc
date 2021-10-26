@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:40:52 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:15:59 nia Exp $
 
-RMD160 (Algorithm-Annotate-0.10.tar.gz) = f068df0cf68b6fd0093319da4137807256d440b5
+BLAKE2s (Algorithm-Annotate-0.10.tar.gz) = 7c8d1000e5ef529e4bff1b37edd7bd6ca9c0f6be562395cb6aed40df7317ead3
 SHA512 (Algorithm-Annotate-0.10.tar.gz) = ee828f91876713db6dbcb3ca97dfee57350f1487f3583ecc1874a6a86eeb13d1bb35ee57dad67a8bd8b050417763ff4efef9db49e7061e355972f7a8aa6d000d
 Size (Algorithm-Annotate-0.10.tar.gz) = 1611 bytes

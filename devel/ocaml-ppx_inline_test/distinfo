@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:40:46 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:15:53 nia Exp $
 
-RMD160 (ppx_inline_test-0.14.1.tar.gz) = 2ebb349640f061ecc001b1ddaffcdd916d410384
+BLAKE2s (ppx_inline_test-0.14.1.tar.gz) = 9ac331e8eec342a7d8573584d7a1542789e594fdcc90f9234240824743baf7f2
 SHA512 (ppx_inline_test-0.14.1.tar.gz) = 24bda655ae8e1110d9550730281ab908a1795b1412545717a06e01143a80f92ba0a9d42cb20c4c9283f0725003a5c41c187bd46732ef2dd724a4714d9d41814e
 Size (ppx_inline_test-0.14.1.tar.gz) = 19683 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:42:33 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:17:44 nia Exp $
 
-RMD160 (Test-Pod-Spelling-CommonMistakes-1.001.tar.gz) = fe476ab346abc29417d77c417e1bf97fe3112781
+BLAKE2s (Test-Pod-Spelling-CommonMistakes-1.001.tar.gz) = 47a5a60953391c5f47e1eb0c731066146e770d346f6629fb3e0cc5d092ca8c38
 SHA512 (Test-Pod-Spelling-CommonMistakes-1.001.tar.gz) = 5f880d2ed9cd83c2a457cb29139d855e36b5c4eb945ac9d0d52c3336b06452cd1923bac22bf18386e128a3563c48af3fab709a41f81fb56109ea84bd280c73fc
 Size (Test-Pod-Spelling-CommonMistakes-1.001.tar.gz) = 23595 bytes

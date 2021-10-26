@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:44:24 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:19:49 nia Exp $
 
-RMD160 (templater-1.0.0.gem) = a2963e7e9da0d11cf851a5f484cfab4500c6103c
+BLAKE2s (templater-1.0.0.gem) = 68cb2af9dce3e8694c183b7f0d7561b5031f98a2bfdea84b4bcb2e6ea3961d95
 SHA512 (templater-1.0.0.gem) = a0bf3ec999b0ce0bfbb91d0b79e185a9fcb031ad82d3a3457f73062aeb380755b1b3096b18cad8df25daff7c95c5c65a0fb76c5ae993ee5c5f76cb22fcf88e9d
 Size (templater-1.0.0.gem) = 32256 bytes

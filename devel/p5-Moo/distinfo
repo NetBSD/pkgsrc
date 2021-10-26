@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.34 2021/10/07 13:41:49 nia Exp $
+$NetBSD: distinfo,v 1.35 2021/10/26 10:17:01 nia Exp $
 
-RMD160 (Moo-2.005004.tar.gz) = ddd7914c86893f1238c90d0c42919fe1e24afe8a
+BLAKE2s (Moo-2.005004.tar.gz) = 0e01ce7a0b75d111411a89a55de64af33fdab8245a0c593d535262c8939141a0
 SHA512 (Moo-2.005004.tar.gz) = a1335d180cd19dc7189bc1663efd5a05650d579c5e5d049fc4059a382d1eeb882fdd9cd2b107fdd40499e22a5c6196fc47c1334145101def531e5f5fd3cd0edf
 Size (Moo-2.005004.tar.gz) = 108339 bytes

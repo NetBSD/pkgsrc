@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:40:32 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:15:38 nia Exp $
 
-RMD160 (magit-1.2.0.tar.gz) = 6afbfd0c29b351e7c78c39ebaf74408b3a10a02d
+BLAKE2s (magit-1.2.0.tar.gz) = 94a52fbcb56fad3c3beec54110e6e4cc86a12192ac20ef6125a25cd9bb91ad47
 SHA512 (magit-1.2.0.tar.gz) = 3f673d38d9f73cdf653108184ed97c1d499492224be3925949ffadb3bb6900a9be664c773dae49da696c6e1daa8bbb70d7446a9f9d7f9a7f8714ca254ed02c3d
 Size (magit-1.2.0.tar.gz) = 163318 bytes

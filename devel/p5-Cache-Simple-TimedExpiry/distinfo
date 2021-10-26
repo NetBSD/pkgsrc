@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:41:01 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:16:08 nia Exp $
 
-RMD160 (Cache-Simple-TimedExpiry-0.27.tar.gz) = 1393f81653dc7b016ad52c47c03978d47eddbd81
+BLAKE2s (Cache-Simple-TimedExpiry-0.27.tar.gz) = 5c4a96f1c9016cb654e9db3d0624535fb02c02516017d54aa14d2881ad58c8b8
 SHA512 (Cache-Simple-TimedExpiry-0.27.tar.gz) = 80317eab341d307ad9d0fd76a92726a2d963deb9a5397ceb1a1383f0f8c5ca07e8553307d15f5a23f0c1b0a2765c1bba83bf1cdfc963e9e3271399c2d12cd79f
 Size (Cache-Simple-TimedExpiry-0.27.tar.gz) = 13110 bytes
 SHA1 (patch-Makefile.PL) = 152eeddeab1c86e8fed1e5c0f1dc72dcc410f5a8

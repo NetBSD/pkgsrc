@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:40:29 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:15:35 nia Exp $
 
-RMD160 (lpeg_patterns-0.5.tar.gz) = 2416e2cf13f50d6f6d9679341ca0673a66f53154
+BLAKE2s (lpeg_patterns-0.5.tar.gz) = 59a9dac13944182aa47342fb94b6962351b62f947f9febcd437d95b7512e966a
 SHA512 (lpeg_patterns-0.5.tar.gz) = 74e36083872cfa7ff8bb03927d075680b490b4d7ba55cee0cad7e1e27e6744809b05286a80967a19cd79f526168f53d362efa2b87c318efad726fa1ba3708f80
 Size (lpeg_patterns-0.5.tar.gz) = 26183 bytes

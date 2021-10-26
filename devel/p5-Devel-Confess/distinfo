@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:41:18 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:16:25 nia Exp $
 
-RMD160 (Devel-Confess-0.009004.tar.gz) = 1661432a137b1f08ccefb3fa4d73307dbafc8cf6
+BLAKE2s (Devel-Confess-0.009004.tar.gz) = 202a769286f1b0d23c5e33e1314b177a7f3e60e441ef022c462b2629bd666ee1
 SHA512 (Devel-Confess-0.009004.tar.gz) = 29f807e378bcb286d111f82f9ad564a610ca9813ba040a137ef149179c6909859f46a4a528eed6aea12162cdb291d8f79c7f7864c64b0ce77a44d16c3d207f25
 Size (Devel-Confess-0.009004.tar.gz) = 23492 bytes

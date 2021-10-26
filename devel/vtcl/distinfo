@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:44:41 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:20:08 nia Exp $
 
-RMD160 (vtcl-1.6.0.tar.gz) = 02c03470bd7449d11f388638adf0aee89f403c67
+BLAKE2s (vtcl-1.6.0.tar.gz) = 5ed837237beb63af6b26ed8da6252200be3d4e038c5c879839c90efcdc881e11
 SHA512 (vtcl-1.6.0.tar.gz) = bfc2ed114af4bee375e820e4b1e47d394a800541eb9917204ef42481a4033927c432d7d2b005d13edd086c7c91bd594908965aae512cc4af9e5654a2bfd296de
 Size (vtcl-1.6.0.tar.gz) = 554727 bytes
 SHA1 (patch-aa) = 64dd6ebd99d74e04f016df01449c0efeba6f776c

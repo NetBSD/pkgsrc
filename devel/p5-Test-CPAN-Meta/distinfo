@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:42:26 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:17:37 nia Exp $
 
-RMD160 (Test-CPAN-Meta-0.25.tar.gz) = 8db2f2f5456c52e5ce048d89bf695daecc0d46f1
+BLAKE2s (Test-CPAN-Meta-0.25.tar.gz) = 74a0f0288c9bca7270dd345a5488d5bb00103987f5235688e2c2822811ac3bd7
 SHA512 (Test-CPAN-Meta-0.25.tar.gz) = 60a3414e1e0f9aaa1a9459aedd76a6d937742a4197d0d5ce9330348138997d372ca3f454c262fb6dd757699168aa7d1c2653c4066060c9c5685a6fe407260580
 Size (Test-CPAN-Meta-0.25.tar.gz) = 17671 bytes

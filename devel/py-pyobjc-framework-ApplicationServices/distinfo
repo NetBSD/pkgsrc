@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:43:30 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:18:49 nia Exp $
 
-RMD160 (pyobjc-framework-ApplicationServices-6.2.2.tar.gz) = 6dc8ccdfd3926b52d880ad7007748045f4b2cd0f
+BLAKE2s (pyobjc-framework-ApplicationServices-6.2.2.tar.gz) = 23b5a1f9df7b2a65affcd22d78d2cc5edcc6dce1f1aca5dee26309af2c18a573
 SHA512 (pyobjc-framework-ApplicationServices-6.2.2.tar.gz) = 61956f35779e28b9c3dacdf53f0c9e84eccd79ef673ddb3da0738dd54b4f72d9c9b8815da0e116a52ff6ac09e261920e5bb5618bc45594a3159902fbb8b58917
 Size (pyobjc-framework-ApplicationServices-6.2.2.tar.gz) = 93809 bytes

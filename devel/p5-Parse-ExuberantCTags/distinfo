@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:07 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:17:16 nia Exp $
 
-RMD160 (Parse-ExuberantCTags-1.02.tar.gz) = 9d80c914f5ab44bfe503997ff3d9562431573252
+BLAKE2s (Parse-ExuberantCTags-1.02.tar.gz) = 6d3e03395a4fb0ef08362c43bee2a3d36e4237f406a904807c77bacb7f8aaf65
 SHA512 (Parse-ExuberantCTags-1.02.tar.gz) = 01cace59056c9924b5344e94bc8a07dec8ef1d43db3bd087f2748f5232ba63061ca0af0ed1a028e3ec86639a339239535e261fc17fd23919d3c7895f1068e7af
 Size (Parse-ExuberantCTags-1.02.tar.gz) = 57545 bytes

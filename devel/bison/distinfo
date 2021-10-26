@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.61 2021/10/08 21:43:05 wiz Exp $
+$NetBSD: distinfo,v 1.62 2021/10/26 10:14:20 nia Exp $
 
-RMD160 (bison-3.8.2.tar.xz) = ece257fb69ba39b80cf46f8b1668346db318e9ca
+BLAKE2s (bison-3.8.2.tar.xz) = 42e13f752cb026f2318bf7555429cd213b3a1feac942d99ad5f34118f40a786b
 SHA512 (bison-3.8.2.tar.xz) = d4d23af6671406e97257892f90651b67f2ab95219831372be032190b7156c10a3435d457857e677445df8b2327aacccc15344acbbc3808a6f332a93cce23b444
 Size (bison-3.8.2.tar.xz) = 2817324 bytes
 SHA1 (patch-lib_isnan.c) = 5b44fc6e2e97e36f91cd784bf3a38ad459fccdab

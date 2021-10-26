@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:43:34 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:18:53 nia Exp $
 
-RMD160 (pyobjc-framework-GameplayKit-6.2.2.tar.gz) = 2b00c6c9d2ff087662125833e39d694f14eb31c9
+BLAKE2s (pyobjc-framework-GameplayKit-6.2.2.tar.gz) = f3c78e4c8e03d18c661af3dd0f23358313daa1ea4c3935af8f2370f6c24f30f5
 SHA512 (pyobjc-framework-GameplayKit-6.2.2.tar.gz) = aedd5d268a4fed58682abd6b1d49848fc370b08d47915678ae309070111f27466b3d10a40856c43c40670e159bbf697ac9203be0a18a805ca6d3f01d1b5e54a9
 Size (pyobjc-framework-GameplayKit-6.2.2.tar.gz) = 26767 bytes

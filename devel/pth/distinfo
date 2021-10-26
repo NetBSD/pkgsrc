@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2021/10/07 13:41:37 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/26 10:18:06 nia Exp $
 
-RMD160 (pth-2.0.7.tar.gz) = 80bc66777ba20d9648b7aaf3f58d593be6416910
+BLAKE2s (pth-2.0.7.tar.gz) = d6e255962384d228e2d2913d1f152c5349ddae3f46a7031712302c73a751bffc
 SHA512 (pth-2.0.7.tar.gz) = f79d74047c50e06f3198356f88647c5c1c8a04ebdd94641fc31d5ab0fd2750d86615fcb81da2f98d7ea73d012a501195d3fa09060571d18dcfdaec5d7a0ecb12
 Size (pth-2.0.7.tar.gz) = 652640 bytes
 SHA1 (patch-Makefile.in) = ee52ef657b753340bf559112ab9ff8365b5e8fc6

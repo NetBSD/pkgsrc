@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:41:47 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:16:55 nia Exp $
 
-RMD160 (Method-Signatures-20170211.tar.gz) = 8429ea8fc92f9416ca9506ea7954ae0277d8b281
+BLAKE2s (Method-Signatures-20170211.tar.gz) = 8f0e3d8fde213f7720d4a92f72cff8a4090921cedc8989650cdaa5632cbb97f4
 SHA512 (Method-Signatures-20170211.tar.gz) = 868ad76bf668a2cacc3d1864ebcea024a2cd37a83f013286985996772d6ee7c40c29e972641f46c015d386c708628a0556ef6c5199bbb9307739d1d3e9abf0ef
 Size (Method-Signatures-20170211.tar.gz) = 83637 bytes

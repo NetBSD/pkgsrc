@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/07 13:40:12 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 10:15:19 nia Exp $
 
-RMD160 (libev-4.33.tar.gz) = 125519f593ed3239ea24522d3692f13df466b8a4
+BLAKE2s (libev-4.33.tar.gz) = 467df297e393e858d572abade96741c4001948cfcfe27106c2ff242e58e4a1ad
 SHA512 (libev-4.33.tar.gz) = c662a65360115e0b2598e3e8824cf7b33360c43a96ac9233f6b6ea2873a10102551773cad0e89e738541e75af9fd4f3e3c11cd2f251c5703aa24f193128b896b
 Size (libev-4.33.tar.gz) = 569527 bytes

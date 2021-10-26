@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:39:51 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:14:58 nia Exp $
 
-RMD160 (indexed-traversable-0.1.1.tar.gz) = 093d395b709d38a310255e9ee5c1601e0e2558ab
+BLAKE2s (indexed-traversable-0.1.1.tar.gz) = a365e43f60fbb933693b5da39bbd3e03943d1c9bc8c68303aae48130aafede43
 SHA512 (indexed-traversable-0.1.1.tar.gz) = 63d6c305f33d97f34c4efaeaede0e5c06c5ff95df9c45307e849de54693c0f93ec017d0e163c64e14bbb498bb2b02a3d54d1cd6a4e75992c8f96609bb73c8dbc
 Size (indexed-traversable-0.1.1.tar.gz) = 8424 bytes

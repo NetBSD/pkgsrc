@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.45 2021/10/07 13:39:15 nia Exp $
+$NetBSD: distinfo,v 1.46 2021/10/26 10:14:21 nia Exp $
 
-RMD160 (bzr-2.7.0.tar.gz) = 8ca32e920d7bf8ebce6f729bced56ebb4030b42f
+BLAKE2s (bzr-2.7.0.tar.gz) = da188380ac5d0dcc904d8bfe55a79e1d381a5598f0769f4d1058a139bb375d50
 SHA512 (bzr-2.7.0.tar.gz) = c39ad3715d865788da74d8de8b469e1dc93d18b6cbcbc569464cdeb9bb2173bf8d7f4f8ee8f7599fbcbbe322817a4c72e785d544e622753699c425c32597d9aa
 Size (bzr-2.7.0.tar.gz) = 11586410 bytes
 SHA1 (patch-CVE-2017-14176) = 65a38a9db017854cdc677d0c45dcb69d4214b549

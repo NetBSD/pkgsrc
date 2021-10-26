@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:40:32 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:15:38 nia Exp $
 
-RMD160 (mad_fcl_v1.7_src.tar.gz) = 6aeaf046f16818fc591702371feeab11c02d4ce7
+BLAKE2s (mad_fcl_v1.7_src.tar.gz) = 8b0d8d51a74bb92ac378ed1d0710f3e0fe0e430986ef44b04124cf35d68e6cb4
 SHA512 (mad_fcl_v1.7_src.tar.gz) = 5abd485f3415f67556de065b9543a29bc111ca915666375a8ee9ca616d6d2b7f908e530f15857af47f405762e390fff3716ad08a6333121770f19b9b2858b887
 Size (mad_fcl_v1.7_src.tar.gz) = 208408 bytes
 SHA1 (patch-aa) = 6aed24b852f6bdb39f51f71ce8d504aff4a5d958

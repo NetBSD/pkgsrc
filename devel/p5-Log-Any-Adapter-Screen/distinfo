@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:41:44 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:16:52 nia Exp $
 
-RMD160 (Log-Any-Adapter-Screen-0.140.tar.gz) = 92044575cb1089cc4f7fa278fb530d708b1766c9
+BLAKE2s (Log-Any-Adapter-Screen-0.140.tar.gz) = 27a2dca8490d33381e8fa937057aaffa54c0b505cd4ecefaa80e260f29b41d37
 SHA512 (Log-Any-Adapter-Screen-0.140.tar.gz) = a7ded27bbc548108169e59964783ba6200c3afd798219bcd9daea47c390128db628c30392eb7eaebb93b5e3b59f51c717599518130b3ba31a1765cca3b4c362c
 Size (Log-Any-Adapter-Screen-0.140.tar.gz) = 18580 bytes

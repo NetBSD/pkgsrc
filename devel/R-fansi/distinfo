@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:38:58 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:14:04 nia Exp $
 
-RMD160 (R/fansi_0.5.0.tar.gz) = 18cfd61c80d11613b1c6a49829345acb570a1b86
+BLAKE2s (R/fansi_0.5.0.tar.gz) = 370df6288ba4f195a7f7aa2232cdcf94205d90d47fe7fac42950467dee35d672
 SHA512 (R/fansi_0.5.0.tar.gz) = cc2c52e5c122d4b99c5af47997ece264e90e7969e40c2f0acca694da8b6b3b6699fa53624ccfeb45e3dfcb3e789865e64e3b8a3c8ba8eac8bddeccb66bb835d4
 Size (R/fansi_0.5.0.tar.gz) = 301724 bytes

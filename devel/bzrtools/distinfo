@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 13:39:16 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:14:22 nia Exp $
 
-RMD160 (bzrtools-2.5.tar.gz) = 15a15d16423d839309c7ec757ff4cd39c6a41487
+BLAKE2s (bzrtools-2.5.tar.gz) = 5bbfdb393f3327a7260d38ae685cd12c1b57d220e1eb767fc81cb88b5ccb1148
 SHA512 (bzrtools-2.5.tar.gz) = 5bc07715a3ed525a9bed5b789ea7a4079c9a56a8ce798b2eff56b27e6eae574fac23b8cc96529a5ea44b8d4ce02c512a7e22d21f046801461ba38a8d2050aa16
 Size (bzrtools-2.5.tar.gz) = 74508 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:42:22 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:17:34 nia Exp $
 
-RMD160 (Term-Animation-2.6.tar.gz) = 8ac2613a90eeec8af8e392a46648fb180d2f48cf
+BLAKE2s (Term-Animation-2.6.tar.gz) = c17cb3281912027bc80a7b74226fd3b038397044c4ed3b37cb5f4256b4d16419
 SHA512 (Term-Animation-2.6.tar.gz) = 5d2c3e18e70d19fead2a2ad2d09bfb03f3f3d569f472ea43449799c089254a14ee9c4e695d5c93bda2a30d6e7538566c16a522ceac3c747a5cf0e522f21f1e18
 Size (Term-Animation-2.6.tar.gz) = 19395 bytes

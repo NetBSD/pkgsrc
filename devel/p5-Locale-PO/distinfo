@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:41:43 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:16:51 nia Exp $
 
-RMD160 (Locale-PO-0.27.tar.gz) = 6d0f60d28783ab799b4cdd682799417640ec870f
+BLAKE2s (Locale-PO-0.27.tar.gz) = d8641f4c69e2844abf6da0e7ffaf8b893a915909d97faa7942aa1ace70fc11f2
 SHA512 (Locale-PO-0.27.tar.gz) = 3158614600af82b13e5d50f658fb20bd13d3b651c30138337cea56af1ec442c96cbdb37b5ee778151246267d10840d21fe17847f52a5096038383f7c1caaa703
 Size (Locale-PO-0.27.tar.gz) = 86957 bytes

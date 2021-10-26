@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.111 2021/10/13 06:56:09 adam Exp $
+$NetBSD: distinfo,v 1.112 2021/10/26 10:14:42 nia Exp $
 
-RMD160 (git-2.33.1.tar.xz) = eb4398bfd5936af6b21531239a425e7931eda488
+BLAKE2s (git-2.33.1.tar.xz) = 6a384ea618714382d587abcdd69f81da48de004445f09075d753e7d11815cab3
 SHA512 (git-2.33.1.tar.xz) = 16d417183232e1057bea754d59cdf4bbacc5f1527d1de6ee04cdd293a2512bfa7208e20f6130816605528b59cb1bc3188c5bddf1a42c1413095ee74e44dd2f91
 Size (git-2.33.1.tar.xz) = 6558636 bytes
 SHA1 (patch-Documentation_Makefile) = 6025adac0fbb4b403f3954e6dac9d690dfb22daa

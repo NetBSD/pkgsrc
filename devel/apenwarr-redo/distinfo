@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:39:09 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:14:14 nia Exp $
 
-RMD160 (redo-0.42c.tar.gz) = 89c434620a0dffb268d06a8e3c6d64ece1398d89
+BLAKE2s (redo-0.42c.tar.gz) = 47ea8c05d2f080c457dc77cf06f97e12e9977de209935b6ba52faa46cedbc6ef
 SHA512 (redo-0.42c.tar.gz) = 764ef84cfb56d5dd883cf80f706a567491e1a679d136219c4db3c122386aad3cfbd28131dc231a91639f596d7b8819c4254e4e7fa38f917996ca8bf3e1a5dc19
 Size (redo-0.42c.tar.gz) = 195222 bytes
 SHA1 (patch-bin_all.do) = 761d24a832fa8067b6123fc02918460f579ffb5a

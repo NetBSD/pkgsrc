@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:40:10 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:15:16 nia Exp $
 
-RMD160 (libdaemon-0.14.tar.gz) = 952ae993fecfe3ec765dfa43b2690a83f1a5c939
+BLAKE2s (libdaemon-0.14.tar.gz) = 2f84b9969b7cc46732403cd8468a5db8f2a8ca0ce1bad234eb73368649bef2d9
 SHA512 (libdaemon-0.14.tar.gz) = a96b25c09bd63cc192c1c5f8b5bf34cc6ad0c32d42ac14b520add611423b6ad3d64091a47e0c7ab9a94476a5e645529abccea3ed6b23596567163fba88131ff2
 Size (libdaemon-0.14.tar.gz) = 340474 bytes
 SHA1 (patch-aa) = f0d309bd98b19a9fcec785edfe686dd33746bf46

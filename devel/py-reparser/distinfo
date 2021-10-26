@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:43:40 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:19:01 nia Exp $
 
-RMD160 (ReParser-1.4.3.tar.gz) = 1a8c5ef2d8339faf2711dd61b6d5ce710b7889f6
+BLAKE2s (ReParser-1.4.3.tar.gz) = 1e202b4b8a793140f9de44063a39223a6e8d15e8ceac8cd68afa27730be467b2
 SHA512 (ReParser-1.4.3.tar.gz) = db02caa6f4f1997cfc7a79283b1b90d3ff96e7fa2e7ba5b119e0060b97d1dd2604640c7d0a8503dbc05613b9b507e7d8732e9448c3ecb59ba85cf340ff1a5e2b
 Size (ReParser-1.4.3.tar.gz) = 4560 bytes

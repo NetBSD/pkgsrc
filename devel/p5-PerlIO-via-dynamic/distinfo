@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:42:10 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:17:20 nia Exp $
 
-RMD160 (PerlIO-via-dynamic-0.14.tar.gz) = 25902404591ecf0125571ab5f650b76240747be5
+BLAKE2s (PerlIO-via-dynamic-0.14.tar.gz) = 9b509d1a3e360f21ccd66eaba1831d6197b90fafd55957189df04bd7e6206641
 SHA512 (PerlIO-via-dynamic-0.14.tar.gz) = d42da05a74ce9ca0d72c549a44c9c1ab20259fb28e9e1042ae6dc9e83e52aa85f18d47b52254716724995d1bdf181ce16c51a7ef7705390fe8a9f041f65ed978
 Size (PerlIO-via-dynamic-0.14.tar.gz) = 35085 bytes

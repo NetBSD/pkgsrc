@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.26 2021/10/07 13:40:25 nia Exp $
+$NetBSD: distinfo,v 1.27 2021/10/26 10:15:31 nia Exp $
 
-RMD160 (lldb-12.0.1.src.tar.xz) = 0712a6e836a052fc20fe6963f0a4d6f0d6b8a7ec
+BLAKE2s (lldb-12.0.1.src.tar.xz) = ff0db22ac57be181a7e5eee5129f00dfa6654f489ebfca0ccd21a0b86ccf3401
 SHA512 (lldb-12.0.1.src.tar.xz) = df3c8e088bf69fb843cd7365fd2df4cefb72c9a313511fb0d0fa3e06e7d12cada35a1d621ec4312c99799e68ff76955423993ce0310c58f74ccd5151984f38ee
 Size (lldb-12.0.1.src.tar.xz) = 9837800 bytes
 SHA1 (patch-cmake_modules_LLDBStandalone.cmake) = 55a8d614cc52872968fc7c7c205c7d6e4021b538

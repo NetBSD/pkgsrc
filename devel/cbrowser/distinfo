@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:39:17 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:14:23 nia Exp $
 
-RMD160 (cbrowser-0.8.tar.gz) = 53dba884b455ca9f7ca5cfb9e80d492a5c554e6e
+BLAKE2s (cbrowser-0.8.tar.gz) = 6e9cb09aaa0fe02a1d4a870b2fc2661fe894b9a4e7d3bf61fc38d7479bffad53
 SHA512 (cbrowser-0.8.tar.gz) = 450bfb3f7161b1e1a3954f2c3f6151c4e23addfc6cecaf7a6e730ecf5a72b192eb041667922d31e4ac0891ff673190cd43e227e272ff495c47026e3390ed46cc
 Size (cbrowser-0.8.tar.gz) = 62895 bytes
 SHA1 (patch-aa) = 441cea8456419d5cbfa81a7a4845d2c16eaf1a1b

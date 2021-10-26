@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:41:45 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:16:53 nia Exp $
 
-RMD160 (Log-LogLite-0.82.tar.gz) = a2df48be85ad8be229d3714c662a46619281efa6
+BLAKE2s (Log-LogLite-0.82.tar.gz) = 87ed249f1fc2582a14055daca01ef2c47d84e0f33e8ff26f603ef456531dc2c0
 SHA512 (Log-LogLite-0.82.tar.gz) = 61da02f4edaac4ab46645ec7662506414fdac0a732492a0a4d4d3463a53f42c2159e10cf4ef4bba33bb3716c8227388334420ac25338790c39a999c6776fe610
 Size (Log-LogLite-0.82.tar.gz) = 5713 bytes

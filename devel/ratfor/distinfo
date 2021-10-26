@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:43:58 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:19:20 nia Exp $
 
-RMD160 (ratfor77.tar.gz) = ce4dfc948060ff2e61afb727e4ade967e81e29a4
+BLAKE2s (ratfor77.tar.gz) = edf9170a6ede22f638c61b2c152fc07930f02c8865eada4c0cde6a1ef0cd485b
 SHA512 (ratfor77.tar.gz) = c1106828e3f8e0d3c3fb5e81fe8c1ee4e6becb103ccb9a50f42f3193fedaf092083d5e62dbf5b8d4461ae34f60e6d0264ecae2c9060bbe78fc44ccebb12e0044
 Size (ratfor77.tar.gz) = 17286 bytes
 SHA1 (patch-aa) = 00f40005d8291389a452d99e58647b00fdf742b7

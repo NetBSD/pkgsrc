@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 13:42:25 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:17:36 nia Exp $
 
-RMD160 (Test-Aggregate-0.375.tar.gz) = 0ab4d767a895115be842a0f8e9c1959ad51f5f75
+BLAKE2s (Test-Aggregate-0.375.tar.gz) = 9ca3e541360b73bdd7aaf78e5d3b0f4c7c4d9a9b5791ebeea39d60da7d817e4e
 SHA512 (Test-Aggregate-0.375.tar.gz) = 3956d7288d5be530cb7224becf11c7cdb75d674b70ad1c48ab5220404041e0e276abaa53b678775fe0c992646ff910be83ac632cb8a2fbf0357de15070aac0db
 Size (Test-Aggregate-0.375.tar.gz) = 34330 bytes

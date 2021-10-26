@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:40:00 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:15:06 nia Exp $
 
-RMD160 (ideaIU-2018.3.5-no-jdk.tar.gz) = d0bda6d8b4bc0c85c1beb918b01febc08942b766
+BLAKE2s (ideaIU-2018.3.5-no-jdk.tar.gz) = a2eca8bc79f2c530d3567481ed1addd3e96602322144063c08ce7b721e837d31
 SHA512 (ideaIU-2018.3.5-no-jdk.tar.gz) = d6179a09fa76c00ce013ebd369a7688861a0888dbaf24e9af49871847e3210adf821dd4024eca5d317fde5ed88148d49ba598e14034b0d2e62b592f18f582b3e
 Size (ideaIU-2018.3.5-no-jdk.tar.gz) = 606611861 bytes
 SHA1 (patch-bin_idea.sh) = 5d00f879376af911f092df4408357f95092294c8

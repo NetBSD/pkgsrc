@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:40:10 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:15:15 nia Exp $
 
-RMD160 (libcutl-1.10.0.tar.bz2) = 79c672563cdcfe9ccc330b2e56ecd166d4e5790f
+BLAKE2s (libcutl-1.10.0.tar.bz2) = b8b818217adb4544ad87828aba9aaa8a57e163d6bf5efd19eceac4979e60d675
 SHA512 (libcutl-1.10.0.tar.bz2) = c03f39e87e660fdd07aa9cccb2d82d411ca8226b56475c74b7b2147b90cdb83d13246bc0c09513e407271bcf568d6a08f92c9006e48d1e7f06e4b18dde34dc5f
 Size (libcutl-1.10.0.tar.bz2) = 763920 bytes
 SHA1 (patch-configure) = a705d5dc194a3d2ff4d1c4ace34ad83f713b4d79

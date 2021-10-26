@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.293 2021/10/15 15:04:47 jperkin Exp $
+$NetBSD: distinfo,v 1.294 2021/10/26 10:14:42 nia Exp $
 
-RMD160 (glib-2.70.0.tar.xz) = 139674d8107c540d5f826fabe0c756a4f4fc84a7
+BLAKE2s (glib-2.70.0.tar.xz) = 66ff8881d2193a3aee46149e93c873f0f416ddf98c6c1669f703882561df6e8c
 SHA512 (glib-2.70.0.tar.xz) = fd3fcaebd34aebe0e63f9dc915b2df026a3f88a5c2254e9f17beea0a59ab0ac563976fca54eb57bd2f7af183c4ae76fb86f05951216bf4159d258b5e7b29696f
 Size (glib-2.70.0.tar.xz) = 4796812 bytes
 SHA1 (patch-gio_gcredentialsprivate.h) = 6547edb518a98c3aca53acc1f98bde83e71b14cb

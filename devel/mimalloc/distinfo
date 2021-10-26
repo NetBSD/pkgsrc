@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:41:00 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:15:40 nia Exp $
 
-RMD160 (mimalloc-2.0.2.tar.gz) = 4c47b2378b87425d1a82981155e77427a63e6b43
+BLAKE2s (mimalloc-2.0.2.tar.gz) = 833bef7e9afe4cb7b78dcc0e8cf09fc2961f1f00eef8f51cb6c555e25b742adc
 SHA512 (mimalloc-2.0.2.tar.gz) = d6f1749a6df86346220fc190a3fd6aa67deff5439b26846c33ff95e91ce5fea73837ee39348dd432db3592575298e6e87856329d0236d2c6959abd8bf7756cdc
 Size (mimalloc-2.0.2.tar.gz) = 910758 bytes

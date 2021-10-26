@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:42:59 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:18:14 nia Exp $
 
-RMD160 (blinker-1.4.tar.gz) = 54a649ae37e54924ebfe75149c3d19b0d25aa1a4
+BLAKE2s (blinker-1.4.tar.gz) = 1e2f6a78c5d6d0c8365ac9a388426ad71c982c7b2adda045c0ce8c6622e89768
 SHA512 (blinker-1.4.tar.gz) = 2f5f71b05c7cc27f5761ba698b05c78c8a491f5285c120e532d24be0c8256daa14e075f3f30e15fb18e7c3f16579af9378a155d058f170e3af9ffdb89e49f56e
 Size (blinker-1.4.tar.gz) = 111476 bytes

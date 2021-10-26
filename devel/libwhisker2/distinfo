@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:40:24 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:15:30 nia Exp $
 
-RMD160 (libwhisker2-2.5.tar.gz) = fd8dc1552499119f3e7086860e9cbbfaf3bf6c25
+BLAKE2s (libwhisker2-2.5.tar.gz) = a78ce70b8faf9d4297f2d87aca8b119e4b5760bd7032e72d8e1a62ef67076405
 SHA512 (libwhisker2-2.5.tar.gz) = ea3cfa7658048b23d4fd773db9ee7fde32758096cf7491d309390247648b7635952d734a0918f53109de37cdd87b675843320539db727fd107e81647b13bce10
 Size (libwhisker2-2.5.tar.gz) = 207569 bytes

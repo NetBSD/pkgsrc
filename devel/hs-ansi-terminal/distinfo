@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:39:45 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:14:51 nia Exp $
 
-RMD160 (ansi-terminal-0.11.tar.gz) = 72fac63242ccad2a93aa6dbeaa72e3b248c717c3
+BLAKE2s (ansi-terminal-0.11.tar.gz) = a22ee2c3a604c3459e8303f295b7fd884a2ef6f19e88e36ca113126ac80dc6ee
 SHA512 (ansi-terminal-0.11.tar.gz) = 2a608da18bbb3d11373dc0c6ee1bf4c890d5d4e39a2b13e547c7a3a4060eb86789d6afa04d1bd9e5df91f3745ea33adea8b15df213d39e75eca296275a74700d
 Size (ansi-terminal-0.11.tar.gz) = 36074 bytes

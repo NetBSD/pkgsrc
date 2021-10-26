@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:43:00 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:18:15 nia Exp $
 
-RMD160 (buildbot-pkg-2.6.0.tar.gz) = 74b05066e413872132f4c842a4f38a48c355e17a
+BLAKE2s (buildbot-pkg-2.6.0.tar.gz) = bfa9f72974aaf43d96aeea3d0a1991dee10f1765b28a6bfd8f5aa0636bd52b6e
 SHA512 (buildbot-pkg-2.6.0.tar.gz) = df885f9ee27a5a440f32508d3ebc922ae908fe2f23e16e358df634cf29e7017506ea5d7634bfb67d55136544afeb2d615e79ed8d4ca491a03bd3fe0940a9ac07
 Size (buildbot-pkg-2.6.0.tar.gz) = 4761 bytes

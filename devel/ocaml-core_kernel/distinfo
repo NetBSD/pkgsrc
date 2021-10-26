@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:40:40 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:15:47 nia Exp $
 
-RMD160 (core_kernel-0.13.1.tar.gz) = 150319ff503552bc3d94943140d536405cedf0cf
+BLAKE2s (core_kernel-0.13.1.tar.gz) = 86246030d0d568cf5b409dcecc33ecb6d79a30072d11c523ed40358b1082a2e7
 SHA512 (core_kernel-0.13.1.tar.gz) = c29d4013f1b6fa84bfe1f5589911aea1ec4949529de68fcf6702f44596ce0ee2f030eba5cbb260a3dd3ef129978103899eb884d71e058eea3604bad3747c9f6d
 Size (core_kernel-0.13.1.tar.gz) = 638728 bytes
 SHA1 (patch-balanced__reducer_src_dune) = e730285aa24a2bc7764e3f8ae8b27ed829e587ff

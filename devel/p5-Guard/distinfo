@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:41:36 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:16:42 nia Exp $
 
-RMD160 (Guard-1.023.tar.gz) = 5e7f3369547370463d6545a83ca31c09452a0402
+BLAKE2s (Guard-1.023.tar.gz) = 0608f8cca2df6a9c716b084d29a796a327e185ad6ae6a3a9a9f2ac53beda8190
 SHA512 (Guard-1.023.tar.gz) = a991d6f9ebfadffbcabaccc45d964c40c46c7212c6de089f0c496040e151236c59cc7dd7076464f0ef96936f2c4cd462fbedf8e729d522f1090682eda976676f
 Size (Guard-1.023.tar.gz) = 7065 bytes

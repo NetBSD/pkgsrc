@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:40:26 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:15:32 nia Exp $
 
-RMD160 (ltsa2.2.zip) = db0d0745849925d11abcfd77dfcc246f0fc7664e
+BLAKE2s (ltsa2.2.zip) = 102b05a1f2c19a1dafc172f163536a9f3d9adf56f575068cc831d2f2d0ee972d
 SHA512 (ltsa2.2.zip) = d94e02e98dff11ba77e5b6be846bb466a0d1b4a0e1b55f6c184644bc6ace72bdb3a85bcac1cd62811448dbf2b44b3f45a0c73ca984cef519b57390a32ac71b3d
 Size (ltsa2.2.zip) = 847014 bytes

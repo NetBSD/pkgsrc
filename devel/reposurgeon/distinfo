@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2021/10/07 13:43:59 nia Exp $
+$NetBSD: distinfo,v 1.22 2021/10/26 10:19:22 nia Exp $
 
-RMD160 (reposurgeon-3.41.tar.xz) = 648f6849d8c9535b1a0575d87ed5c765ff810d31
+BLAKE2s (reposurgeon-3.41.tar.xz) = 6fa67f7bf292785ae237a60d4c2bd3666df9165f75999c7cee2661cbda83e049
 SHA512 (reposurgeon-3.41.tar.xz) = d39b85478e8c16a9df8576ae972fb817d666fdadfb506710acef1e25e4c650e9530b0901e01a68e4efb0d0cbfdf3ac4570c0fcc6271a6da686c5b72062e11bc8
 Size (reposurgeon-3.41.tar.xz) = 504568 bytes

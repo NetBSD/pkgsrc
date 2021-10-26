@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:41:22 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:16:29 nia Exp $
 
-RMD160 (Devel-ebug-0.64.tar.gz) = 3227004c136b4ae30386e627e67ea185dd7a9a16
+BLAKE2s (Devel-ebug-0.64.tar.gz) = d8a96e2806f240fac1958f28e24f0f71b2bceea2f7b704f0bcb54c47646dfb0c
 SHA512 (Devel-ebug-0.64.tar.gz) = e81d6abcf6d3dac3b44a58d9b69399ee36a0e7c646ca8c9a2cdfaae29757ab93471bd80afe2567a82d953c51445ff7c5cffe45b4273a8ca0fe83a98657331101
 Size (Devel-ebug-0.64.tar.gz) = 43110 bytes

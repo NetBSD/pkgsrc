@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:40:05 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:15:11 nia Exp $
 
-RMD160 (ko-po-check-0.8.tar.gz) = 4e8c82c99386b977641c972d0bc6ca9fb2e6efed
+BLAKE2s (ko-po-check-0.8.tar.gz) = 1bdd0b61a9fd34e69d79fe959d5e47c72b56fe39a8d4c4afc14e9272abdad932
 SHA512 (ko-po-check-0.8.tar.gz) = ef9a5529088fd3eb8d428d651bebc6cb75e33f5a713beccafa8fee9338d7612afe5b70c8875e012dcc621aee1d1e099e15cac431a606e0f08f18bb43cad9489d
 Size (ko-po-check-0.8.tar.gz) = 110419 bytes
 SHA1 (patch-aa) = e031d781ac18357ed3f4411233724328fe9d1e94

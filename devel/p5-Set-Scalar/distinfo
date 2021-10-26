@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:42:17 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:17:27 nia Exp $
 
-RMD160 (Set-Scalar-1.29.tar.gz) = c18ac75030209603832e4feb61e3a775d54c0fd8
+BLAKE2s (Set-Scalar-1.29.tar.gz) = 3ebb73b40eb2670ac67cfb196628fa5d81305cb84d262272c778bace4c787d67
 SHA512 (Set-Scalar-1.29.tar.gz) = ee77f72a237ed7d3f0467395009b00163c33e095fe5e8bdc971c8cd0eee8dbc825c83ab486e6f54ed6c1aedf1539cde9d9b1a54b8be703d5dc01ee48017ce45c
 Size (Set-Scalar-1.29.tar.gz) = 21549 bytes

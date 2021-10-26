@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:44:27 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:19:52 nia Exp $
 
-RMD160 (wisper-2.0.1.gem) = 61e74f8a0f43c68b1e99d99a6e8a3dfcb196d304
+BLAKE2s (wisper-2.0.1.gem) = 9602bf67228fcc946689d43ba9a7b32ecf86badf72357d850abd5eaabf983d98
 SHA512 (wisper-2.0.1.gem) = 3518c218c0cb4ceb5d96260f7ac8845fb2f35d4a77c478cb56f1251fc29910a655ce070ebf3c17eaffd7d144ac54b436420bd2b2c4f72a8743f68dfdd72a514c
 Size (wisper-2.0.1.gem) = 26112 bytes

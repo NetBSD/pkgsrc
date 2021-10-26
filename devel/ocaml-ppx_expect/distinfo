@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:40:46 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:15:52 nia Exp $
 
-RMD160 (ppx_expect-0.13.0.tar.gz) = 4d0f99553d423e0760804c287ffdca6ee97a353c
+BLAKE2s (ppx_expect-0.13.0.tar.gz) = ddb7346f437b9f92a91419689d60e1feb6cb63631fafd0e9e594c22c07782888
 SHA512 (ppx_expect-0.13.0.tar.gz) = 3643ff084b9b3c640969ec5cf45d015804cde611202a3f392d29a85fd1becbff93130dc2e3a9d61d2a09d4d74b15697f35cd82e0d2a5c01ffd9d124bfa9dc926
 Size (ppx_expect-0.13.0.tar.gz) = 40160 bytes
 SHA1 (patch-collector_expect__test__collector__stubs.c) = 3b4b0c507a679251a2a9b14c362a02f1fc44538d

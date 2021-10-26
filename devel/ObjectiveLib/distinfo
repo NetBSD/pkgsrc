@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:38:55 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:14:00 nia Exp $
 
-RMD160 (objectivelib-1.0.0.tar.gz) = 688b8430ea1a16482b52506157b58dedbfd35c0c
+BLAKE2s (objectivelib-1.0.0.tar.gz) = 3513d6231508fc95e804365241dbd6baa99b520905a5ef1241b7edba923d615d
 SHA512 (objectivelib-1.0.0.tar.gz) = 1d9c53703600f7ad795bb6cbfee81d3f4e90a01a3b6fe7cbb60b103a9fcb4e912dcf9b97e9e325c27c74c88bcd27c708c36d66c5ea8630c668ddbc62ee3d4834
 Size (objectivelib-1.0.0.tar.gz) = 833390 bytes
 SHA1 (patch-aa) = 3604f398bba598878f731a19aab6ba55006b833d

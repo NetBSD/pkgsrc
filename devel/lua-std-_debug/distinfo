@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:40:31 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:15:37 nia Exp $
 
-RMD160 (std._debug-1.0.1.tar.gz) = d15655bf7d3e801ca720ff5a3a6b1fbf5c94575c
+BLAKE2s (std._debug-1.0.1.tar.gz) = 9a6e824c886200f867a7b3ee69cd806b20fb2ee55f06d363ebd2fb718e20b40d
 SHA512 (std._debug-1.0.1.tar.gz) = 784236ff161c36718a965af6b616b582158a6b919b5258511d1fc8a05cea4b4bd30a7abdda6dae602cfd5f2b47df198c2194e342ed09b80890d69e323df26ca4
 Size (std._debug-1.0.1.tar.gz) = 11992 bytes

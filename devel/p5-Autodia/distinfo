@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:40:57 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:16:03 nia Exp $
 
-RMD160 (Autodia-2.14.tar.gz) = 9cbd7e99350155f2da41fe5db52ebd778bdb1899
+BLAKE2s (Autodia-2.14.tar.gz) = a1c26e192258e3a9c79f9c722102f18fb949c498c98ee5761036197400a56e39
 SHA512 (Autodia-2.14.tar.gz) = 41cd0d9dd8fc66d70aaf987a8a62ed8b916e9a38263c61cc1cb7994e7bfb24843bbd3440bbdad054fccbf0fbbdaa11ec3a35db2a6f926bc87ba65a5f4ac160ee
 Size (Autodia-2.14.tar.gz) = 78070 bytes

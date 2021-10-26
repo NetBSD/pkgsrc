@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:40:38 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:15:45 nia Exp $
 
-RMD160 (async_unix-0.13.1.tar.gz) = ada45108d7ba20c6711d21e0143b6d387ef06d3a
+BLAKE2s (async_unix-0.13.1.tar.gz) = fa9ccfbd0c58c5f7b3aae43e17f7a6ceb1a4b525246672ebd56ab41087d111e1
 SHA512 (async_unix-0.13.1.tar.gz) = bd847acbb63a7c1d4c37b13831f0020640db94091b6d07d1b727c0a83aeccc35a1e60fe3dd96ae6fb6154a7da204885473e5abafae095205c2a6c705ec125810
 Size (async_unix-0.13.1.tar.gz) = 169271 bytes
 SHA1 (patch-src_dune) = 4b9b0b4f70f3de9d968b928549dec7de9b6c12f5

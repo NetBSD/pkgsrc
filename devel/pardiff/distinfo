@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:42:46 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:17:59 nia Exp $
 
-RMD160 (pardiff-0.9.4.tar.gz) = a573efe90c9bcdb2bad85c3c7a2240b0db5878ab
+BLAKE2s (pardiff-0.9.4.tar.gz) = 109e5ad4f06f94bfc58075c3a7f4d4c2220f88fe9e0c25949600ce31eba9b216
 SHA512 (pardiff-0.9.4.tar.gz) = a9e848d963e08c7b5118b4ddd9c89fab24940217a32a6d258b936a89e19b29939db1e0f09327fc495de2d5af0ea65355c42f1846654444959a937084b2d24ed3
 Size (pardiff-0.9.4.tar.gz) = 40325 bytes
 SHA1 (patch-aa) = 9b2853227cf79bf4d0cf7641bce24f9bf82039cb
