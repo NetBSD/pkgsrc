@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:09:20 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:45:05 nia Exp $
 
-RMD160 (R/ggspatial_1.1.5.tar.gz) = 7415e353aedd22bd361e780ece90fe62cfbb9ccb
+BLAKE2s (R/ggspatial_1.1.5.tar.gz) = ff72401f379d479f03c029d019f1ec988d72d89b78fa1ccc4a1099cdbfede603
 SHA512 (R/ggspatial_1.1.5.tar.gz) = 0997aaa176313939224d5a893a67d6ffcb807c13455beec33bab08a3c3fb6a8a242e9b57a9492720317e07d6787b36fb7437b75866491ee1f621fff64afdb660
 Size (R/ggspatial_1.1.5.tar.gz) = 2328659 bytes

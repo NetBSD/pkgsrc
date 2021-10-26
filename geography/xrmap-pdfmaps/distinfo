@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:09:32 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:45:18 nia Exp $
 
-RMD160 (pdfmaps-1.1.tar.gz) = 61bc270888d0ada8c9bae5394985570683818ad6
+BLAKE2s (pdfmaps-1.1.tar.gz) = 2504265c46c4f5050bd70e2bce4e41f4fd50b185b2834e0f279ef5273e42f900
 SHA512 (pdfmaps-1.1.tar.gz) = 930a0a88360d4f6c9062ca16c4df553a2c71ac77058726223df75d42932d122883aec77f673024c7f1a7da293329c81bc3ba8a47916d4cf4e62c9561eb81a198
 Size (pdfmaps-1.1.tar.gz) = 26111867 bytes

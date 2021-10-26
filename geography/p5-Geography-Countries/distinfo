@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:09:29 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:45:14 nia Exp $
 
-RMD160 (Geography-Countries-2009041301.tar.gz) = 4a2a5e9aaa04d8099e43f7bf3d0ed68ff130f9df
+BLAKE2s (Geography-Countries-2009041301.tar.gz) = 5cc621d21ba7d4ed274303506bb8c1bfe6a8621633f0c33751cb64be3f328c43
 SHA512 (Geography-Countries-2009041301.tar.gz) = 4197edced04c7330dfd8ba7fbf137c3b6e47fe6402b3f90bacbfddf790dc38420c500846fd1abf0a4b99a2558d651086f3daffb0e52df9b679f5aacd9a1a203d
 Size (Geography-Countries-2009041301.tar.gz) = 10545 bytes

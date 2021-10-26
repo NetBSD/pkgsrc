@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:09:30 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:45:14 nia Exp $
 
-RMD160 (PDAL-2.2.0-src.tar.gz) = 1561af1cc0f156e7daf783039aa9454009140043
+BLAKE2s (PDAL-2.2.0-src.tar.gz) = 5dbf57ed8d96abbcf5f48aeffc00a636b44b29496d65c9d35fa8af0edc6f846f
 SHA512 (PDAL-2.2.0-src.tar.gz) = c54770973de714473bf6cfe6a69e2c880d516abcf71cce755495304093acb41471b4264cb84f11973a482f3de80a8922d7d8b54994fb91c6b012a6894a8bdac5
 Size (PDAL-2.2.0-src.tar.gz) = 99876283 bytes
