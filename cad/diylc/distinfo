@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:20:26 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:04:10 nia Exp $
 
-RMD160 (diylc-3.28.0.zip) = 2d5ecaf20915cec69d8720381099b711b99bb5dc
+BLAKE2s (diylc-3.28.0.zip) = 33a2b5feec012a6690fed59a2e4d664659a76ae8fc128f64c3fa44b2764b4687
 SHA512 (diylc-3.28.0.zip) = d6c70008afec2ccf20b7113e29f120ab336e970039bbaf6440dcacf93187af4c487f4bc84fa8ac62945b920b8a78373df9d638604c821e1aa0faabbecc514c1a
 Size (diylc-3.28.0.zip) = 5034143 bytes

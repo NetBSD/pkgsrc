@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:20:31 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:04:16 nia Exp $
 
-RMD160 (solvespace-2.3/8f958955f54668c142ded760dc951ffd16d9c71b.tar.gz) = e0d6a2996459984f4f4a10299409911c4b40437d
+BLAKE2s (solvespace-2.3/8f958955f54668c142ded760dc951ffd16d9c71b.tar.gz) = eae48ae5b7b8726f52a4ad72aa10647e0b83d0b4206ce36376a2521f0617bfcb
 SHA512 (solvespace-2.3/8f958955f54668c142ded760dc951ffd16d9c71b.tar.gz) = 40f27cf32c1a2be1f654d82406c2f7d765cf350d3ceb134e3e1a82b17443f7a12dfda1102fe8438b70f13982af675f97fb1a62ad892acb3ed3d2e19b89a7c013
 Size (solvespace-2.3/8f958955f54668c142ded760dc951ffd16d9c71b.tar.gz) = 691686 bytes
-RMD160 (solvespace-2.3/v2.3.tar.gz) = 4abd276311fb3c7990f7b5803fbe760bf273621a
+BLAKE2s (solvespace-2.3/v2.3.tar.gz) = cbe152ac56baecc001f755a3858780ed8bc9e05ba393f9716c9428d66248ed03
 SHA512 (solvespace-2.3/v2.3.tar.gz) = 9d22e467337591cd9a4935124d18733b8337f5785ab5738f4a94300f283ffe7d313569e379ae77e509d14182ffde8c9db7beaebb46ea7c0507c6b05010fe1a56
 Size (solvespace-2.3/v2.3.tar.gz) = 2115940 bytes
 SHA1 (patch-CMakeLists.txt) = c3716d2317b606e7e4367cef4b781f3ab2854c4f
