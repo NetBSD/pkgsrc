@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:19:48 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:49:41 nia Exp $
 
-RMD160 (scim-m17n-0.2.3.tar.gz) = ff857fce6cc3633e4e117bbc2a3cb21418d4e291
+BLAKE2s (scim-m17n-0.2.3.tar.gz) = eac522cd11dbd158c577e5de6f81621013b2098693b4ce68c07e610276b27ce9
 SHA512 (scim-m17n-0.2.3.tar.gz) = c54be4c8c331d5621dcfa6c0c6f302231071dbbaf3ef7aee4117fe2c2616d58e184d3bae720dce27d5cb6567064add6979630090c72f9350391ca9c3e9c404f3
 Size (scim-m17n-0.2.3.tar.gz) = 355801 bytes

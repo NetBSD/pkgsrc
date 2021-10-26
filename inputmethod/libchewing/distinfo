@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:19:43 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:49:37 nia Exp $
 
-RMD160 (libchewing-0.5.1.tar.bz2) = 4d6b48f8a40c99b5c36539a255368e0a622d5f78
+BLAKE2s (libchewing-0.5.1.tar.bz2) = 2a9aefe71927f362c774fbb8c660ce872c11d669f0337e418f019c47066a2827
 SHA512 (libchewing-0.5.1.tar.bz2) = a6551661bb5e56bba59730b93b373db56af7d42f2ab4881fbfff8727689dd2604d42d2e5c0b04820df66a431dfb5fcb73cc5c9b538615da76198ee3635501c1f
 Size (libchewing-0.5.1.tar.bz2) = 3141084 bytes
