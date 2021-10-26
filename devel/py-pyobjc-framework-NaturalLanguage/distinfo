@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:43:36 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:18:55 nia Exp $
 
-RMD160 (pyobjc-framework-NaturalLanguage-6.2.2.tar.gz) = 4d5fb8298954317f6710c5d53f56c3ffe241f804
+BLAKE2s (pyobjc-framework-NaturalLanguage-6.2.2.tar.gz) = d358c44c6d13ea80239f7b7440e7657f7c20e785d66804d2252574fbd917629b
 SHA512 (pyobjc-framework-NaturalLanguage-6.2.2.tar.gz) = 78b6eaf195908442144618a48c05b93469598427af34f73ff7b01238d669a64bcc505eaa5e373dc18a2ee9457603a904ecaaf3ada27d22c12d002060db300211
 Size (pyobjc-framework-NaturalLanguage-6.2.2.tar.gz) = 16430 bytes

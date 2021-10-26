@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:43:52 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:19:13 nia Exp $
 
-RMD160 (unittest-mixins-1.6.tar.gz) = 23be10567ef8127ff8160cdb348700cff97b5231
+BLAKE2s (unittest-mixins-1.6.tar.gz) = b39cc9fe5fb619fff8e462c824da579aa7897e23ce7fe16bdf0c081740e8331f
 SHA512 (unittest-mixins-1.6.tar.gz) = 6f78be17c53ec22a680b49a7541e2159c8f504dbc0b39c3c11e7676e20d3c6201be6cc722929017781658f0f690d1c258e0b148fa5dabb5af25e63b28dac5ffa
 Size (unittest-mixins-1.6.tar.gz) = 14901 bytes

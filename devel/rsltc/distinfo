@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:44:00 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:19:23 nia Exp $
 
-RMD160 (rsltcsrc.tgz) = ca6659b45d8f18dfcb4f9a4d14761f4c2c23d57f
+BLAKE2s (rsltcsrc.tgz) = 52869582ce8b7514addb746a8b00233fa824ddace51804e80c039a63abc8201b
 SHA512 (rsltcsrc.tgz) = 38529267a7b4e39c6363f114d67027e79fb096a2839e8191e843274e0f4010147179659e207048dbdbfebfe2d5d5cd64311e3610b57d992009b4e1f97d8a5872
 Size (rsltcsrc.tgz) = 382133 bytes
 SHA1 (patch-aa) = de51a067a677c99838ccbb800e08c803c240e008

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:42:58 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:18:13 nia Exp $
 
-RMD160 (backports.os-0.1.1.tar.gz) = 0f28ca921590ba10415d2c88c609aef428c7abcb
+BLAKE2s (backports.os-0.1.1.tar.gz) = 0a8c3c9bcea459a96c5fbbd84e8d3896d0f067f4e08ee4ced30176e644a49c9a
 SHA512 (backports.os-0.1.1.tar.gz) = 310887a6d18d63cd0b165442aa300a88208533efdf8b45cd9fb973d139b23fc9a2dae9de36bb84975c166b30a73184f5e63564c7a48683502b2fc093c6a6f865
 Size (backports.os-0.1.1.tar.gz) = 12495 bytes

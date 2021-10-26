@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/07 13:40:34 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 10:15:41 nia Exp $
 
-RMD160 (mob-1.12.0.tar.gz) = b4ecbcf19bb0948df28b0aa1dc70ca84a13be825
+BLAKE2s (mob-1.12.0.tar.gz) = b55f8ff75621e20c0fe907bd00898dccf142779aa6d2b0d77abe32465740d7b0
 SHA512 (mob-1.12.0.tar.gz) = 5ed354b7e3eb1a39d51acef6769b1d88908c41a24a31b254ae037dfe05b5cc17088a01bbd831a3d5badd55886643ceaf09e53fce9680fe6313f689486196551b
 Size (mob-1.12.0.tar.gz) = 39089 bytes

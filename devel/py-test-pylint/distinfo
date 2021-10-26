@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:43:47 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:19:08 nia Exp $
 
-RMD160 (pytest-pylint-0.18.0.tar.gz) = 5487688b7b7611b85cd7f36022a379d5f6006722
+BLAKE2s (pytest-pylint-0.18.0.tar.gz) = 0060906b8cf3a910aa1a238877d50e2b1f75c12056a7b0834212d58876013451
 SHA512 (pytest-pylint-0.18.0.tar.gz) = 6ac313eeccc99fcac947ace3613f7c0daaab33c3a0a1eab5e006a7a5b9961815fe277ae17dbfc5425164d80782b0be2c9091dda5eb81a6ffa397a18bdeaf28c0
 Size (pytest-pylint-0.18.0.tar.gz) = 13468 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 13:42:05 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:17:14 nia Exp $
 
-RMD160 (Package-DeprecationManager-0.17.tar.gz) = d8e6397adac725fc951f903ee1268c7829867ad4
+BLAKE2s (Package-DeprecationManager-0.17.tar.gz) = dc6e5fe2147c221ab9393ead482d03c99028f814a5ade2acb6e1d721821d73b7
 SHA512 (Package-DeprecationManager-0.17.tar.gz) = 57bf79df657895342ca5b8d13f155d85f34d1a85415570b112138b6c50c5d08b421a1707671fbf807918cc334006e4558a626a7201c60096924fc2200c751cde
 Size (Package-DeprecationManager-0.17.tar.gz) = 27647 bytes

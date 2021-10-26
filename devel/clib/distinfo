@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:39:18 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:14:24 nia Exp $
 
-RMD160 (clib-0.3.tar.bz2) = e341cf14a2b302b28c1678d644a8b088dd2ae80a
+BLAKE2s (clib-0.3.tar.bz2) = 68d250d91c7982a47e33d402604c7aa4bbfbe25ea829e2cdf5ab613b89ae17dd
 SHA512 (clib-0.3.tar.bz2) = bf2cf6aea707870d6af0c5a70010422956000a214df8633a5b77ced9dc4726b778cf3d4eb7a747b5cde870219b5909afea85054559010e7481cbcb2396b1404f
 Size (clib-0.3.tar.bz2) = 269607 bytes

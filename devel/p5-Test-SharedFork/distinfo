@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 13:42:34 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:17:46 nia Exp $
 
-RMD160 (Test-SharedFork-0.35.tar.gz) = db18616ca877fd8e856d271774d6fea14fac7b7a
+BLAKE2s (Test-SharedFork-0.35.tar.gz) = ffbf3fea99bad543629295713ce78e9f210ea09507e028e4f9273c47bc93e3fb
 SHA512 (Test-SharedFork-0.35.tar.gz) = e5948dfb34cfaf35a2fb2783c726f1cea2ae2f4bbdc4cbb912f83c877422ceabb3e0323c8c669b3c3a08e6d2a12106309528f0f674657001e6aeb3cb3c1dfd9f
 Size (Test-SharedFork-0.35.tar.gz) = 15502 bytes

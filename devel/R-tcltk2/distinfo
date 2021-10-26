@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:39:03 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:14:09 nia Exp $
 
-RMD160 (R/tcltk2_1.2-11.tar.gz) = d58176bf9d53b592702e901b7b05a0e3a8350cab
+BLAKE2s (R/tcltk2_1.2-11.tar.gz) = db4c27144193cff340345c958be0c0fd502af45ca2b11bc1c07a5a7aa44f2600
 SHA512 (R/tcltk2_1.2-11.tar.gz) = 89b84b834f6b1d822bccc89121ff6cc88a6a6bf6962f9b3925ef1f68da17377105f7915a7a7013db06d5464cfa00223ccb093d4394b88e443d6a26905ac76801
 Size (R/tcltk2_1.2-11.tar.gz) = 833846 bytes

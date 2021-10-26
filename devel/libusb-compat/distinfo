@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:40:23 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:15:29 nia Exp $
 
-RMD160 (libusb-compat-0.1.7/libusb-compat-0.1.7.tar.gz) = 111845e2675c8dfb243a2241e823950c1c4a2f34
+BLAKE2s (libusb-compat-0.1.7/libusb-compat-0.1.7.tar.gz) = 5ea5ef8d901d0099a03b2b07d11e460c720164eb62f6589384d87633e7e928d9
 SHA512 (libusb-compat-0.1.7/libusb-compat-0.1.7.tar.gz) = 8f3b2f9a275987b13278215b28950f9bc4c4cd30d3dc08ff5141ed6486d484981d059588533857eb521a5362ce2eb74c9f9c98f3d0c59d9a288debf9fc95a882
 Size (libusb-compat-0.1.7/libusb-compat-0.1.7.tar.gz) = 374868 bytes

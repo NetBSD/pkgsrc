@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:22 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:17:34 nia Exp $
 
-RMD160 (Term-Prompt-1.04.tar.gz) = 130f4690ac28c4c8c2b42af16d178db1a0d94db3
+BLAKE2s (Term-Prompt-1.04.tar.gz) = f2d43c13e0c503bd87c2ef4acdd7538d65a0378e529a01153637b893d577b02c
 SHA512 (Term-Prompt-1.04.tar.gz) = a7cebb92c2f30d73e3f6a47401acd477127626a273afabbc0151988edb08aa52481b2b11ef56c7fec8c7efbd51b8f6ebe8f0926823f33106e25ccff8bb2c41da
 Size (Term-Prompt-1.04.tar.gz) = 11218 bytes

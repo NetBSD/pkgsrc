@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:42:12 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:17:22 nia Exp $
 
-RMD160 (Proc-Simple-1.32.tar.gz) = 9e04641bbdf2f1df6758bd7690ba35405b00711c
+BLAKE2s (Proc-Simple-1.32.tar.gz) = 5caa6436d4d1e28ab59991f86997488537173efb7823f2db444d00cc3c3b0cf5
 SHA512 (Proc-Simple-1.32.tar.gz) = bb054a7ee2ee36abd2e807b24f5a316902008645e940a9ac3248bfbf2d9ef1a7d0797f14143fa96b09481ec6485a340ea2789929e05da07dd487a76780e1502d
 Size (Proc-Simple-1.32.tar.gz) = 15236 bytes

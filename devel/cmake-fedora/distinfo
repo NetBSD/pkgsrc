@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:39:19 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:14:25 nia Exp $
 
-RMD160 (cmake-fedora-2.6.0-modules-only.tar.gz) = 820fd1f861ccaa596af317ac8cd3e24fb59b26bd
+BLAKE2s (cmake-fedora-2.6.0-modules-only.tar.gz) = 7d837b68f0b8cf8df66e801f5aa6832f6861fea7166144128d7df0ea84546f8c
 SHA512 (cmake-fedora-2.6.0-modules-only.tar.gz) = db0f1193e653bbb860e31e698a254caf7193be51133f81acc01a001c43a850fec3939cee9bcec573fd07376a1d9fccec2db4220af7eb061f5817b2f2ae89388e
 Size (cmake-fedora-2.6.0-modules-only.tar.gz) = 59346 bytes

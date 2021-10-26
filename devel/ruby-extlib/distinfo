@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:44:08 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:19:31 nia Exp $
 
-RMD160 (extlib-0.9.16.gem) = fdc2a39c0b7fa71e7ccb4e46c0f3c56ea0c46525
+BLAKE2s (extlib-0.9.16.gem) = 132ba9122c031dc274324b74a7ae2d08c8979bd4ec4e0d52dde6d575eca59e06
 SHA512 (extlib-0.9.16.gem) = bbad68e431f740d2fca434c26d36e8c0471fc740faf4d342e7a565d0bf68b29abe5ca9d1a1246a3b5120fccead6c9e91dfff10032800317341d993d4b25995e9
 Size (extlib-0.9.16.gem) = 65024 bytes

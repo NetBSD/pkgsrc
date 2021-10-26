@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:41:12 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:16:19 nia Exp $
 
-RMD160 (Data-Buffer-0.04.tar.gz) = 4b2a46b9ace8ea503e5d7cb71910a67379974b50
+BLAKE2s (Data-Buffer-0.04.tar.gz) = 0abbfe41bc17a0824fe74e1a40519e962980e7dd00021915ef6df57476ce83fa
 SHA512 (Data-Buffer-0.04.tar.gz) = 19725145b68a4143e8d1b65029df6715a880fe65298c7295464edb565b47005dab614f788066df1e662759a9e7c76d2c45116e78bf03e351ed57e29fe0d0b921
 Size (Data-Buffer-0.04.tar.gz) = 5497 bytes

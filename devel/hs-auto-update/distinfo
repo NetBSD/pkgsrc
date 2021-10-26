@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:39:59 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:14:52 nia Exp $
 
-RMD160 (auto-update-0.1.6.tar.gz) = 964cc4cdd4ca5a58085fadba530ece89ab6bafee
+BLAKE2s (auto-update-0.1.6.tar.gz) = 27cde86f07e61c7023e6768ca11fa6d5d6d5cd9943cae6b0e07a31de8458fff1
 SHA512 (auto-update-0.1.6.tar.gz) = ff0f4f835d0b24aafbe18dbc42a9c3cc396cea24be3f4b13b5f5dac49b3b21030c941c8b09a5c33ba175c9902d076aa12fc9eb5a6a79c94ee5c9b60935fa047f
 Size (auto-update-0.1.6.tar.gz) = 10929 bytes

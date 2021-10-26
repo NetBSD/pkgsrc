@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:44:20 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:19:45 nia Exp $
 
-RMD160 (ruby-redmine_lightbox2/v0.5.1.tar.gz) = b08fe36f821eacfafb0631962c1286b6254515d3
+BLAKE2s (ruby-redmine_lightbox2/v0.5.1.tar.gz) = fe1000ab715ff172c1bb26d21c673ef53c9ac295860a177084e85a43e487c26b
 SHA512 (ruby-redmine_lightbox2/v0.5.1.tar.gz) = 4cbabd8d77418a1882d4f6679be85cf4a1d12c8a5912d6f1ad88757ca3fa7a2148c5fc3995451280953e82b5a8e301b63a610a6f8b8845873429e3299560bc1f
 Size (ruby-redmine_lightbox2/v0.5.1.tar.gz) = 59312 bytes

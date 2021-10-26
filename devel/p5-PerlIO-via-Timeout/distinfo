@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:42:10 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:17:20 nia Exp $
 
-RMD160 (PerlIO-via-Timeout-0.32.tar.gz) = c82fa01482c1599a7f51b856365bb821b4c52f87
+BLAKE2s (PerlIO-via-Timeout-0.32.tar.gz) = 60123587abbe93500f63aeb53641c62649cdedc3744047dbbc1f2dd1e4df5949
 SHA512 (PerlIO-via-Timeout-0.32.tar.gz) = 52200c0d19da7a19b9b328473b0e7b57a1a3102fd3ace947af8fef8f670aaebe37811daaa2e2b6cf2f6397855a4cfb2424af053322146a8acefd71e1bb30f681
 Size (PerlIO-via-Timeout-0.32.tar.gz) = 13560 bytes

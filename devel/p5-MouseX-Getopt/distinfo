@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:42:01 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:17:09 nia Exp $
 
-RMD160 (MouseX-Getopt-0.38.tar.gz) = cd0e2607b09108b8854843ed7835e7d716cc4e63
+BLAKE2s (MouseX-Getopt-0.38.tar.gz) = 0d1bcaaf0bef90f9f68c4596503af612bd90541df738b7f1dd8792589577ccb4
 SHA512 (MouseX-Getopt-0.38.tar.gz) = 2a1f870f45f8b9ceae5f16421257f7b0b5fe97e09af9968686a00cbf320c56cfd6ad3ba7b2fcf714f22add98b0843a7e2b46f8d9b3c9ce36b2e9840b2ca5e621
 Size (MouseX-Getopt-0.38.tar.gz) = 21854 bytes

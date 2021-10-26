@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:41:48 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:16:56 nia Exp $
 
-RMD160 (Mock-Quick-1.111.tar.gz) = 8ad302398580dedf1da1694db1f83a9329639713
+BLAKE2s (Mock-Quick-1.111.tar.gz) = 86933380c3cb5e9154385de76f1961a0a6d3e7dd3e9551024e29ec736a97e3d3
 SHA512 (Mock-Quick-1.111.tar.gz) = 41efd7cc4f1dbacacac6a1753ac878ff5bd5a28cf8223d5b7abfca86e909910b8992104c250b4a0306a4e65a7783a3a6d372cff068d8cbb17c8e53ce8e0d5044
 Size (Mock-Quick-1.111.tar.gz) = 18595 bytes

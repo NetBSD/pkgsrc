@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:44:39 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:20:05 nia Exp $
 
-RMD160 (trio-1.16.tar.gz) = ce7aaa21611d5cc4c1d888d557bc0a13ad6b0e53
+BLAKE2s (trio-1.16.tar.gz) = 340fa2960342e37839bdaa40420cf6ef4d3bb38c616895c0898577ebaa9ed8b1
 SHA512 (trio-1.16.tar.gz) = 3a8bac3ed001f70f498bd2ab0881ed6d3760bc978bf9ff587c3fc1d5d7a38205f779c5fe445f41edaa9e23c15bc1b4a521916e19161277741bc8e2f744b46c69
 Size (trio-1.16.tar.gz) = 167337 bytes
 SHA1 (patch-Makefile) = 659f9c3c5ddc159f794d9ab3164492803094913e

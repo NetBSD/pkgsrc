@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:39:03 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:14:09 nia Exp $
 
-RMD160 (R/sessioninfo_1.1.1.tar.gz) = 51d9677259691931ef6b5984fe37259f2e313b8f
+BLAKE2s (R/sessioninfo_1.1.1.tar.gz) = 58772e6180e03eae00a62a504ea1d02ff04a982ef8cdb0daf930b59058fc8d51
 SHA512 (R/sessioninfo_1.1.1.tar.gz) = 1bf174a5b98b53fca18572334c4084c3104ea0e85de073c7e0ec12b0e66b7b3d9ccd7f1a1d1e507b29e6b5817a80e11c7c6fd147aeac424a9ca6e8587a577caa
 Size (R/sessioninfo_1.1.1.tar.gz) = 46027 bytes

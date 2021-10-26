@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 13:40:17 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 10:15:23 nia Exp $
 
-RMD160 (liblangtag-0.6.3.tar.bz2) = b8ecae0f83dfb0e8c937053fac4fdf1517ce2be1
+BLAKE2s (liblangtag-0.6.3.tar.bz2) = b93306b432b2133548ee3e65a5f8578ae9eb21b1005c2e9cac9beba1c96c2b91
 SHA512 (liblangtag-0.6.3.tar.bz2) = 3dcfc20704dfaff05aeecdeef74fa81639fb70f930ebc0895fe4707ecd1d5b6221fe889449772811924d0c38329977c9d5fc751c3accbc272834b29c461f1fcf
 Size (liblangtag-0.6.3.tar.bz2) = 755492 bytes

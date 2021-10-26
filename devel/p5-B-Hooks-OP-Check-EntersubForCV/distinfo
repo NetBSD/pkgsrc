@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:40:58 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:16:04 nia Exp $
 
-RMD160 (B-Hooks-OP-Check-EntersubForCV-0.10.tar.gz) = 31a355d931e4674e3cbc615d91482af11e713ad8
+BLAKE2s (B-Hooks-OP-Check-EntersubForCV-0.10.tar.gz) = f124be0d4875a4236d3e58bb7d447a8608ce439de2dfb7e4171c72f7e36f2d15
 SHA512 (B-Hooks-OP-Check-EntersubForCV-0.10.tar.gz) = abfc9daf449f8251f5ed55ff2592827da25e4b49869a78f7548043914585a5582bf2a9f6d1d6d19a8971d14805d45f18c1717cd88dc8ab2cad79c921fd20b9c9
 Size (B-Hooks-OP-Check-EntersubForCV-0.10.tar.gz) = 22812 bytes

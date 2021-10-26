@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:40:29 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:15:34 nia Exp $
 
-RMD160 (lua-inspect-3.1.1.tar.gz) = 9c623b38a0b83f8b6baf771625f5a17d708c7cea
+BLAKE2s (lua-inspect-3.1.1.tar.gz) = 37537b50652088c430997d409d9f3e1536a56191bc419c0f76a53b8e41b40505
 SHA512 (lua-inspect-3.1.1.tar.gz) = d9e6f605033b43ac07f6ab731b1c10f59ebd0a64bb3d6449cef39b2fc43d9ad0eb062a000f76bc9b25222a52a3b344ab3a8af7b6bfe3d92a52447faf5dfbcbbd
 Size (lua-inspect-3.1.1.tar.gz) = 11221 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 13:39:25 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:14:30 nia Exp $
 
-RMD160 (darcs-2.0.2.tar.gz) = e401bd2ab64e2df4c654bdc03355ce215a053195
+BLAKE2s (darcs-2.0.2.tar.gz) = c5f14a953eff0a9093bd3dd201a2248b2cde8db968d60fbd3b699f53c50836af
 SHA512 (darcs-2.0.2.tar.gz) = 878cbb331120d2822c3daba9c189411c46d50d5b0b418615a3495c3e822521d2f77f38970535914811f52bacd17679c59dd139d51b7a878ddefd7dffff87bccb
 Size (darcs-2.0.2.tar.gz) = 1800653 bytes
 SHA1 (patch-aa) = 387f237bfbe1f3d909081c20c5e2ec739d6d6e3c

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:17:39 nia Exp $
 
-RMD160 (Test-EOL-2.02.tar.gz) = a9394206e76465d2afee5473e7eac5fe25f790a9
+BLAKE2s (Test-EOL-2.02.tar.gz) = 32e4b295d348821aa927f3ae16afbf59d5baeb1e7d3b7dfa9a175e7a6503b4a1
 SHA512 (Test-EOL-2.02.tar.gz) = 03f3a60973fde1c0fb9532be957d981bad657fec4db1b77dca865011e1bf39dcbb91a8ee09cc692ab9b372a139371ba66b69c60ae582b687a6ec230fb58a9654
 Size (Test-EOL-2.02.tar.gz) = 32739 bytes

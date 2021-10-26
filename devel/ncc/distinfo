@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:40:36 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:15:42 nia Exp $
 
-RMD160 (ncc-2.8.tar.gz) = dcd8998ff31d1291208bf9ea4ff5a08b2525745d
+BLAKE2s (ncc-2.8.tar.gz) = 0be9e22d398c275b93ddde1b87624720149bdfbbbed5fba7f1fd701f132504de
 SHA512 (ncc-2.8.tar.gz) = 9fd41e37d5316848127ed4d3d8a5a4e88aa7a4545b62194e74bed9169e22c925ef8dbb612482cc29c16b3ceb0a7bcaa44ba04370aa8c898abfee136e96bbc429
 Size (ncc-2.8.tar.gz) = 104536 bytes
 SHA1 (patch-aa) = 65ff800adf6dacab59553d13fa9f31d8b101103f

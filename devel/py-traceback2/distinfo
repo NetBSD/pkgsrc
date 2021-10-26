@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:43:50 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:19:11 nia Exp $
 
-RMD160 (traceback2-1.4.0.tar.gz) = 3baf3da615360e8a4b773325102b49d2acbf5b5d
+BLAKE2s (traceback2-1.4.0.tar.gz) = 1d6970685b28185ce71a411632da499c897eb09db8e5658e9d71e636d74e561b
 SHA512 (traceback2-1.4.0.tar.gz) = 84c7fc291c8f2d4cee10441cdef1820aa453e631dfa91ed58e40fc205e97a9dd2101388d5689e4fdf10edfbf06bdb5b895d1635ae7218ba0c9b697d3f95f9342
 Size (traceback2-1.4.0.tar.gz) = 15872 bytes

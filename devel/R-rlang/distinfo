@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 13:39:02 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:14:08 nia Exp $
 
-RMD160 (R/rlang_0.4.11.tar.gz) = 6135b5c5a0b37f1a1bc640ca192b174fbd568dc8
+BLAKE2s (R/rlang_0.4.11.tar.gz) = d9fdfef74bb158f10953f519c78572dcb0c11d914f225e3e34652b9243f9752b
 SHA512 (R/rlang_0.4.11.tar.gz) = 0448a104034a9f14dd735b1abfd3aa823abaad9a7ee96ca89393b15f2c54dd24f27712cb59e30393c3afeccb834471f3940259e864236212b3b4c797008d79b4
 Size (R/rlang_0.4.11.tar.gz) = 861727 bytes

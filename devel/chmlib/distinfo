@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 13:39:18 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 10:14:24 nia Exp $
 
-RMD160 (chmlib-0.40.tar.bz2) = f79d6b3d94f8eb8aa0c517c0805d2ac8e1128f64
+BLAKE2s (chmlib-0.40.tar.bz2) = 35d93bd8c6e5d66ffce99b75b40615262a66c21bcc21ef27405340479eaad8fb
 SHA512 (chmlib-0.40.tar.bz2) = 3a3e151cf455b19e9e7c163a1d1e5ac52e8196f0b98f77932c72af58f3517824b9244667a18279ae754ccea784f6d6ab0c47465e74e3768ce98bb7dca0ca16e3
 Size (chmlib-0.40.tar.bz2) = 252036 bytes
 SHA1 (patch-aa) = c4a7c21e8ae0cb097e9225cdf7e099395c5ed331

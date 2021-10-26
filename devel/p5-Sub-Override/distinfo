@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:20 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:17:32 nia Exp $
 
-RMD160 (Sub-Override-0.09.tar.gz) = 3b970bab4c39eaa060992d1adbe73d907481488e
+BLAKE2s (Sub-Override-0.09.tar.gz) = 778fc6de75c6d74da6f25637e52da67783d796cfaa610732a1c9ef7fff031fe5
 SHA512 (Sub-Override-0.09.tar.gz) = 35000e8cabb6ca4cc0cac53af99fc9cb8ac14b1e71dbfa27dc58a339cb1b54e439064f2241798e351cc5ad297a2f9e4fde870ca97e2eb09a2430c11af589d412
 Size (Sub-Override-0.09.tar.gz) = 6462 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:43:41 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:19:01 nia Exp $
 
-RMD160 (repoze.lru-0.7.tar.gz) = 7ddad7fdbcf013e9c6d1b30583ab386d8bd6d4f8
+BLAKE2s (repoze.lru-0.7.tar.gz) = e65c896d09920c10ce1282715c620deb212b7808ccb85a6ce92b2cc0327d19be
 SHA512 (repoze.lru-0.7.tar.gz) = c4d8b015931c4265fa8559f99c9d5016835574b368ebe0d49fe503afe908020b2bf29836606134e00c6c0aa436d52a00bb73d6ab80e98d0802f54bd2e4686476
 Size (repoze.lru-0.7.tar.gz) = 19591 bytes

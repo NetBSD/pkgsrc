@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:43:01 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:18:17 nia Exp $
 
-RMD160 (characteristic-14.3.0.tar.gz) = a6b7ad57b30b4c2db3d009fd5a409017da64accd
+BLAKE2s (characteristic-14.3.0.tar.gz) = b627695ffdfec2675775c176f6ed43b07bd2b59d1614cfa1b8bea144b4849612
 SHA512 (characteristic-14.3.0.tar.gz) = e13a86f453cd3688a74188005b82a661a9c73d9f0408d9afe9e0575e69ffe87a5327f51e2c16a9c0a653b738e7c014d5aa08e353835f0aca7897714b7ae56e83
 Size (characteristic-14.3.0.tar.gz) = 26993 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:41:04 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:16:11 nia Exp $
 
-RMD160 (Class-ErrorHandler-0.04.tar.gz) = a7da4eba88674a66f1c64bb830cefb1af93ab0cb
+BLAKE2s (Class-ErrorHandler-0.04.tar.gz) = a0328b87401841bd833815f00b0d707b0e86d88c9d1421f49a95825c84a92dea
 SHA512 (Class-ErrorHandler-0.04.tar.gz) = 9e235da1c2091f9422723af4528305b8ed2b50920a865e6fee76380a8c512fcd837d752f4ea5146df12c506c776e88c1075419ab3809be3296995387df759c83
 Size (Class-ErrorHandler-0.04.tar.gz) = 9821 bytes

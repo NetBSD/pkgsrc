@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:43:57 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:19:19 nia Exp $
 
-RMD160 (quilt-0.66.tar.gz) = 4d7471e3776a07b25f600bcdc4d6bfa8cc29ccfa
+BLAKE2s (quilt-0.66.tar.gz) = f624adf6dfc4722c727df7e76c6aabf15265ab8365117714cca9388be04f95d8
 SHA512 (quilt-0.66.tar.gz) = c2cb75c0937612e1e0da25b713acf629b6b5aacbd8254d8bd17220b63c7b8ca996cd9d0315a32d67d54a4a7dc01b212cdda33afaacf3db063da757f1973306f4
 Size (quilt-0.66.tar.gz) = 413069 bytes
 SHA1 (patch-aa) = 48abaee6f49469f64ee8b85827c84da28a7dac96

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:16 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:17:26 nia Exp $
 
-RMD160 (Schedule-RateLimiter-0.01.tar.gz) = f25430ca3b4714df82daafe0e7ad9a6a74ec3f37
+BLAKE2s (Schedule-RateLimiter-0.01.tar.gz) = 8636e63c50f8da1559723627cd8bd8d566afc3446fc520a8276c9f14be81ec66
 SHA512 (Schedule-RateLimiter-0.01.tar.gz) = 59ffa18a890e4ce01f98d99290663dedde01db210f7198756c97ab257ccdb1ca687776be216a92a992215b710f335265018a66863f3e61bf7ddd5170fd38c8e9
 Size (Schedule-RateLimiter-0.01.tar.gz) = 4844 bytes

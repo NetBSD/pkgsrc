@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2021/10/07 13:44:14 nia Exp $
+$NetBSD: distinfo,v 1.25 2021/10/26 10:19:37 nia Exp $
 
-RMD160 (minitest-5.14.4.gem) = 181570ee707aec0cb7643b4cc2629bb00a2657c5
+BLAKE2s (minitest-5.14.4.gem) = 1d01f6abaed5d88a3c45e7e07848f68caf79d1c2892914f526f99d5fbb08de70
 SHA512 (minitest-5.14.4.gem) = f967a11cfce82e167879905082859273b270e8d8e663a0c1c553964a345fb8564547627b8cf97418ac5bda544bb76c1385438ad74ec8e846666dc2952d55c9e9
 Size (minitest-5.14.4.gem) = 86016 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:42:34 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:17:45 nia Exp $
 
-RMD160 (Test-Requires-Git-1.008.tar.gz) = c4df8bac828f84209aaa10fcfa29d63ceb7b0c70
+BLAKE2s (Test-Requires-Git-1.008.tar.gz) = 5bdb9b5b5bd9a38e5c9d073e1771177f9077573d5cf3293ca2595a54637f8c7e
 SHA512 (Test-Requires-Git-1.008.tar.gz) = bc6d6cf8f371c8b20a139a468a57117c8d49fe1a83150a7597a1bb09c634d5ede2b4617209045ea0e2d707f7ab4aa7e16c9652d604b8ecfc3e9785457c2cb504
 Size (Test-Requires-Git-1.008.tar.gz) = 17410 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:41:17 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:16:24 nia Exp $
 
-RMD160 (Debug-ShowStuff-1.16.tar.gz) = 33c1957f53719bdd39b4b7ebc5062f6e317641ef
+BLAKE2s (Debug-ShowStuff-1.16.tar.gz) = 430eed20a1352fdccc8b6560b48d2c2580bab461b4e66cdff182a351e39257be
 SHA512 (Debug-ShowStuff-1.16.tar.gz) = 7d42e664812d03b4bbbebb307ae4a8f1ab6ff1dfcd1e1f6a9d9b80fdbd227e37732a2309a14174307690f4fca3db62376cf116585cfad10814f0143111af5de9
 Size (Debug-ShowStuff-1.16.tar.gz) = 40315 bytes

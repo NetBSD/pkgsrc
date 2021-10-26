@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:40:46 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:15:53 nia Exp $
 
-RMD160 (ppx_fields_conv-0.14.2.tar.gz) = cf3abd44d5b19f5c5cf366f1074ca07753b8cb73
+BLAKE2s (ppx_fields_conv-0.14.2.tar.gz) = 48986ef9fcb3610851fd509b9e31055683d203c8246839bb4e7e2de296b6aa25
 SHA512 (ppx_fields_conv-0.14.2.tar.gz) = 19cf14f79bd6425519e08089b6de19a79ed3f435cd453eeae6c7fe88d65ae4de4d5b47cf19d086bb2ba41066b344da7062d5153eaba7389da8dcf95c7284b522
 Size (ppx_fields_conv-0.14.2.tar.gz) = 14314 bytes

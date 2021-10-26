@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:41:37 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:16:44 nia Exp $
 
-RMD160 (IO-CaptureOutput-1.1105.tar.gz) = 7c8d7d48775083d4a443663e85d2502e88332326
+BLAKE2s (IO-CaptureOutput-1.1105.tar.gz) = e95c7ac3535a9a4dc00a495a90e91af1bee0b14051587acff430cecc171311d9
 SHA512 (IO-CaptureOutput-1.1105.tar.gz) = 8ca9485982d6bfae08ec322c28efd8f673f2a6705421ac5d680c228c436e7a5c8e18a16ff9712062631c35a91e6d19d9518263135db469c47083ce30814cf064
 Size (IO-CaptureOutput-1.1105.tar.gz) = 26657 bytes

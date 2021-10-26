@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:42:09 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:17:19 nia Exp $
 
-RMD160 (Perl-PrereqScanner-1.024.tar.gz) = 8f1d24286e737b4a75d781c7164fd271de2ee410
+BLAKE2s (Perl-PrereqScanner-1.024.tar.gz) = e78a399c5df230dab9226e41b0fa195b7f87d14abfdf03c64aab03ac80dc4f21
 SHA512 (Perl-PrereqScanner-1.024.tar.gz) = 851cf4a34f3bedc0174a9a34d80cf7de2ead5478a1979356ad43f7cb9bb867c0b8a36ba4bc4341b5e4ecf435e18d04726f1a897232d590e61796b7e34ff14c52
 Size (Perl-PrereqScanner-1.024.tar.gz) = 28758 bytes

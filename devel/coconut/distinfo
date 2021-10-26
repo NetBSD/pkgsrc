@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:39:20 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:14:26 nia Exp $
 
-RMD160 (coconut-0.3.0.tar.gz) = 71098f8eb9a731f990534c98d532707ce93329dc
+BLAKE2s (coconut-0.3.0.tar.gz) = e60151f8fb41b804ae282463e3d32b6069c53bd372310976496854338e850fd1
 SHA512 (coconut-0.3.0.tar.gz) = 1065b067d64b65d9965e2103a618e210b63aa5654e55f4048e1988d85bf9b1fb15594a301c8cd2688cebb517f6aeb426c7c31719b6ba5e5df06e04cabee98b84
 Size (coconut-0.3.0.tar.gz) = 692317 bytes
 SHA1 (patch-aa) = ea9f4b49f55ae74a61f0b72687c973de71b14a7b

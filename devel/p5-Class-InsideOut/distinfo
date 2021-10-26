@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:41:05 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:16:12 nia Exp $
 
-RMD160 (Class-InsideOut-1.14.tar.gz) = 3cff66f7004e0fc19d4fe491d4d425013ffdbefd
+BLAKE2s (Class-InsideOut-1.14.tar.gz) = 73f94e3dc71314d4c8ad59a79cf377f2356f2f8923e7dcb205cf9f4097364976
 SHA512 (Class-InsideOut-1.14.tar.gz) = e1f33edeb8ac2623f48c862cc90fbca63c28707d571017e34db5e3eebb01f4ae333602215eaed9aa562d1aa4b95d8bebff4e6401db101da7fc26537c8554dff4
 Size (Class-InsideOut-1.14.tar.gz) = 49341 bytes

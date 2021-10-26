@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:40:00 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:15:06 nia Exp $
 
-RMD160 (isect-1.6.2.tar.gz) = a53d064d3236343931db1a1835e3bc56af9961ea
+BLAKE2s (isect-1.6.2.tar.gz) = 01a1145d3d7d6fb8a8ea4df9201513cd381f79b983d1a0ea1c4ca7197c0f3b21
 SHA512 (isect-1.6.2.tar.gz) = 2ec497777d2a1ae5c53ddee5e7fc33462b59da0fbd4e480d5ba9de2a0b31167106ee65b51f1020247a078c892b3d2cd4a056029144850fb09313bfeb34d6a898
 Size (isect-1.6.2.tar.gz) = 762227 bytes
 SHA1 (patch-aa) = 2a1c802e43b2f7ba5ea4e25e597eb194a420e0a8

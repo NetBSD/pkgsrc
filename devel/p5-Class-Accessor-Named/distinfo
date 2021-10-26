@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:41:03 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:16:10 nia Exp $
 
-RMD160 (Class-Accessor-Named-0.009.tar.gz) = b39a0c5571722039148119ca27b09f28e5ec11f6
+BLAKE2s (Class-Accessor-Named-0.009.tar.gz) = 824325fbf44abb665a097d2532fb0dfb0af19cf5874764b2f53d6d478a66933c
 SHA512 (Class-Accessor-Named-0.009.tar.gz) = e60b1f155480d3974fb068b2659112827ffcb2f8059ec4d112eb7a144b59bb637f48a0134df09404343d95beee3817c16ccfdd5c8e65404bb8101e44bc73b80c
 Size (Class-Accessor-Named-0.009.tar.gz) = 26376 bytes

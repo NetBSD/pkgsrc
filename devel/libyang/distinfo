@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:40:25 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:15:31 nia Exp $
 
-RMD160 (libyang/v1.0.240.tar.gz) = 9f448ded0a5ac1c660fd349509aa538d1d750518
+BLAKE2s (libyang/v1.0.240.tar.gz) = 79d1562b9471338e243f70d4409c849b4b9f53d66c6d72532250821c1a0b0bee
 SHA512 (libyang/v1.0.240.tar.gz) = 5637037ef25fb96184d444f27a1e921a18a91745bce7e796357a71ca15eb47b9c3ba0833fe8f792e54e9f02ac26be5168fd386d5f957b8f4d695ddc213c17c33
 Size (libyang/v1.0.240.tar.gz) = 1667619 bytes
 SHA1 (patch-compat_compat.h.in) = e06eb93d911360dcb2255736911e7dbd926034a3

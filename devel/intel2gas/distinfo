@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:39:59 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:15:06 nia Exp $
 
-RMD160 (intel2gas-1.3.3.tar.gz) = 84b1bdf8c448967e72637bcf2082d57a2e433d5a
+BLAKE2s (intel2gas-1.3.3.tar.gz) = 7ad52bba1427f1ab622fb74b8441ce04836cf15227d9d7ea16c8b64be0e81f7b
 SHA512 (intel2gas-1.3.3.tar.gz) = 62d6462291404220630e0d6d27f6b95ec2b332aa5c783f7fb416832990cb31f21f1a2826466bd45e5c0035472bddb4354f7f170ea3fc70fb2ecc785dd66db518
 Size (intel2gas-1.3.3.tar.gz) = 48460 bytes
 SHA1 (patch-aa) = adc98eba6f3366b6c828d1273c98e83649d7f9f3

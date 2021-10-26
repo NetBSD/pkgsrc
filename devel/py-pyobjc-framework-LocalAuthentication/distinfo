@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:43:35 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:18:54 nia Exp $
 
-RMD160 (pyobjc-framework-LocalAuthentication-6.2.2.tar.gz) = ed77695c9b3f19905c7fa253ede5098123fd698e
+BLAKE2s (pyobjc-framework-LocalAuthentication-6.2.2.tar.gz) = 7386eac20d2d4f48a071ae48254da8a4702e123306171baf384e90ff5a459158
 SHA512 (pyobjc-framework-LocalAuthentication-6.2.2.tar.gz) = 97db9de959b76e5601153bcd127af23db9ebdc2b13208ecface03563ea2f1f817e42fb1509f990d6b154f9d942edad048f3994ed2e8c0bd84e3852f83dc9c0da
 Size (pyobjc-framework-LocalAuthentication-6.2.2.tar.gz) = 12622 bytes

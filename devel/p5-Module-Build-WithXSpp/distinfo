@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:41:48 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:16:56 nia Exp $
 
-RMD160 (Module-Build-WithXSpp-0.14.tar.gz) = 08d0d9c62bf06c9a289930ee95d746ccb018555b
+BLAKE2s (Module-Build-WithXSpp-0.14.tar.gz) = ec5d7445bacbf0d39152d07b9256f1aa5bd53552c4743e5de93ab2a3badc22aa
 SHA512 (Module-Build-WithXSpp-0.14.tar.gz) = 2d334656128fe9e4b2e06ce23fc33b81bd4302477dcca2ac2cf87a74cbd4d160c7875e2a252e85116dc17a6e9ee53d43457a7d50e0cdd33d3514ad47eac4554c
 Size (Module-Build-WithXSpp-0.14.tar.gz) = 14103 bytes

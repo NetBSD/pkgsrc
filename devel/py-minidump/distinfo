@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:43:22 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:18:41 nia Exp $
 
-RMD160 (minidump-0.0.20.tar.gz) = cb45ac7e872e72fb38821232878f8e428c359c32
+BLAKE2s (minidump-0.0.20.tar.gz) = c9d52366088cdc5a85299913596acd2b12ec09fba893a238496ed9d2bd147ee5
 SHA512 (minidump-0.0.20.tar.gz) = 01d3e2d891ae1f910ede0809ee8966e0ebf75598796955c1ddcba6546616976bc9ae9a9b3e90b16a5ec0a0e6b9ed5f1dd921891d62b820ff73253547d910e929
 Size (minidump-0.0.20.tar.gz) = 58251 bytes

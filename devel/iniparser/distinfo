@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:39:59 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:15:06 nia Exp $
 
-RMD160 (iniparser-3.1.tar.gz) = 164665a6f905dc0a272cbcf6ae33e20a56d0fc6b
+BLAKE2s (iniparser-3.1.tar.gz) = 4af5f7e1c1cbf097ac09dc2597e12e7f5a8da6082095dc45c0c830feb8db2421
 SHA512 (iniparser-3.1.tar.gz) = 8fd8324c5629fdc3e3eff00afb5f0832402ccc760c5b92db82aa29b340ec891419ca2c4fee3a4d4d67cf9bc51c76b095bc0c458e087c2b8e72ac36867c47ae86
 Size (iniparser-3.1.tar.gz) = 39097 bytes
 SHA1 (patch-Makefile) = 51c01cb713c7be6c87ca81ba1111f88fb29f6920

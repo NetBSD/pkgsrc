@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:41:28 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:16:35 nia Exp $
 
-RMD160 (File-DirSync-1.22.tar.gz) = ffda314255e8b3deb6b12be42fcffc39c2c75266
+BLAKE2s (File-DirSync-1.22.tar.gz) = e9aa520e5e0c650a279d727d11d7e41e39b46025ea551c6b402933bce983f9fa
 SHA512 (File-DirSync-1.22.tar.gz) = c0eafba469cd39359dfb77caabab444e1b7d49f4893d289827cef08f35fbb8d13bf30e931da6ffdb54efc94a29480025af25564a2e2e5a1011cd4f0b53b0f2ed
 Size (File-DirSync-1.22.tar.gz) = 16059 bytes

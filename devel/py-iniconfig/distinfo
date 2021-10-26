@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:43:16 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:18:34 nia Exp $
 
-RMD160 (iniconfig-1.1.1.tar.gz) = 867a32cbc565ed7a2452b3eed2330679be142ffe
+BLAKE2s (iniconfig-1.1.1.tar.gz) = c719dad52d2b1e38ab18121a8af7b38029ef6b4a8869e8940375abb3b69a1d8c
 SHA512 (iniconfig-1.1.1.tar.gz) = c9341db7e3ec2204b6a674fca7824cbeb492e3576d5ac3f084b234c82842b28f2f6acbfdb812e183f4334a95b990551f942a4caf548f5ce7ef14885f931535ee
 Size (iniconfig-1.1.1.tar.gz) = 8104 bytes

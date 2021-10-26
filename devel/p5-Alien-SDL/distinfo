@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:40:54 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:16:00 nia Exp $
 
-RMD160 (Alien-SDL-1.446.tar.gz) = bfd9eaf167fd84232465a6fa7f07b332b4c57da1
+BLAKE2s (Alien-SDL-1.446.tar.gz) = 4ef778f9bcd72a4698e73835f06ecf14525787b635b954d89b113c67ada00e44
 SHA512 (Alien-SDL-1.446.tar.gz) = dfb5f104f449857b9567ca93a0c3b15aed2618e27019569c95c4b7469e1f7d5cc390fe2dda9c6add41e9648c1f6efe053d08a4bd0fcc5bc546a217721bea824c
 Size (Alien-SDL-1.446.tar.gz) = 350448 bytes
 SHA1 (patch-Build_PL) = 626da15f7f3d113974c65cf68b46e7ecb456dc5e

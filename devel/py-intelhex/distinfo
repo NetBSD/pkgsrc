@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:43:16 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:18:34 nia Exp $
 
-RMD160 (intelhex/2.3.0.tar.gz) = f91914ce380a00c3b05add33f0de998a26d5593e
+BLAKE2s (intelhex/2.3.0.tar.gz) = a198b5df5de94c9b301ceb4118a7dae6e1adcd791bc2b0a6b9bdd7b988457799
 SHA512 (intelhex/2.3.0.tar.gz) = bf9a7e29641959e26d8ac2ae2702ed5f4f0003f45793b70cd4cd99454d25304b90749e91a73a794a8363e4bc948ba91f274fc9c448567090c581d91f043f4ee9
 Size (intelhex/2.3.0.tar.gz) = 74864 bytes

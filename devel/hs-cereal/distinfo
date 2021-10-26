@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:39:47 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:14:53 nia Exp $
 
-RMD160 (cereal-0.5.8.1.tar.gz) = 6d0880990364cb8703c29582375d22cf464d0044
+BLAKE2s (cereal-0.5.8.1.tar.gz) = 350d530c663e15e57e608921f4bd9fe111a4d4786f4819a9eb1892c75f128f79
 SHA512 (cereal-0.5.8.1.tar.gz) = aced40e81301fbc73c6029be2c4045cf63f81d40361d5939713f3d60db196dc25a70e556e9e74e194e6a3b6cac86997d2bfc8b1f91c630676af7d066268a25b4
 Size (cereal-0.5.8.1.tar.gz) = 20114 bytes

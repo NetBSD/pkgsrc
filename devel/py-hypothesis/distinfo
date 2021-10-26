@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.100 2021/10/07 13:43:15 nia Exp $
+$NetBSD: distinfo,v 1.101 2021/10/26 10:18:33 nia Exp $
 
-RMD160 (hypothesis-6.21.0.tar.gz) = 1a75d76386e10e106aeb8da0f627991c95fe6c8c
+BLAKE2s (hypothesis-6.21.0.tar.gz) = 3efbc3ff17a95f96bf0a06ea39a3910f089a8de05fc43a6c5a3a9d7f3dbf7b4d
 SHA512 (hypothesis-6.21.0.tar.gz) = e58afc32d18c6a4d1cc7835b1d22bc5c917983db458f7f06860eed00cfe537607f4ba91d34dd18c724b572d9763326191b9d0b2712c1e41ead2d9f4c4604fdde
 Size (hypothesis-6.21.0.tar.gz) = 311645 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:44:12 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:19:35 nia Exp $
 
-RMD160 (iruby-0.7.0.gem) = 60ccc47f3801a9835aa26f465b91eae855d3ecb8
+BLAKE2s (iruby-0.7.0.gem) = 34c6d097d046f2860ffc5cb6d7dbf89c68ad0f11ced3e00e58235a22bfb1e059
 SHA512 (iruby-0.7.0.gem) = 8cc4d57d7d741cf9311b1b568c360cb18709b3312266a42581cd31ef2fe517c0449f8de84f8f8605a37bc7ad9df4064189f6ddf9ebf995a00073f3ed3afbbac2
 Size (iruby-0.7.0.gem) = 106496 bytes
 SHA1 (patch-lib_iruby_command.rb) = f5f9ab48a913cfdafafc47e39c39638fd21e3e57

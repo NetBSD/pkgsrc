@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:43:04 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:18:20 nia Exp $
 
-RMD160 (cookiecutter-1.7.3.tar.gz) = 9a42a55f657e276389b74c06ae3e84e395bfdd19
+BLAKE2s (cookiecutter-1.7.3.tar.gz) = 70745ccb80498414c5329a264e83745137fdcd4398d9de22b7d8ba10da915b5e
 SHA512 (cookiecutter-1.7.3.tar.gz) = 231cff1fc51c8159918728a3ca3f21607c9fb236ebf55e2fe2d620345e14451b175e56c3714a7b4c5736cc5e93f47d732691e789184e4140a7889a9e2f9a89a8
 Size (cookiecutter-1.7.3.tar.gz) = 133496 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:41:48 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:16:56 nia Exp $
 
-RMD160 (Mixin-ExtraFields-Param-0.021.tar.gz) = aa297e4c1984a257d2623040e1e8dbf17f24683a
+BLAKE2s (Mixin-ExtraFields-Param-0.021.tar.gz) = b0c7974de00ad7c5445349c7a15d87def13cd9f5c9ca1bb31db8a81bd158b253
 SHA512 (Mixin-ExtraFields-Param-0.021.tar.gz) = cc0f44a8ac926cab7dca6b49e00e9f71006517dc57a85f05bb60c9dc335f6f97c3c940600f74cb51ae06953fad80444df84d0ada0836a371c50151d5d8fafaf1
 Size (Mixin-ExtraFields-Param-0.021.tar.gz) = 14188 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:40:39 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:15:46 nia Exp $
 
-RMD160 (base_quickcheck-0.13.0.tar.gz) = 64bebdf84e9490820274f1a20c2988babe2ff7dc
+BLAKE2s (base_quickcheck-0.13.0.tar.gz) = 833a13839cd10afd72bb15d2718f12a331e009ff5c7da0b4c1243b1a40048784
 SHA512 (base_quickcheck-0.13.0.tar.gz) = da822225afee0a8ae92c9af05ff43e6920a951da53804c5e00ec6ba8b8519a375baaff645ceb3c9c3cc5c211b8c5686bbb28a67e60f78557443a4a63339143b3
 Size (base_quickcheck-0.13.0.tar.gz) = 63020 bytes

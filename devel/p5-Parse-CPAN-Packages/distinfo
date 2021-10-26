@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:42:06 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:17:15 nia Exp $
 
-RMD160 (Parse-CPAN-Packages-2.40.tar.gz) = 5928a63c09de12a61232b0214c896324cd649d44
+BLAKE2s (Parse-CPAN-Packages-2.40.tar.gz) = 9ff78aeed49f01b18ddea871910a0a8bd53bf257dfa26e2d7454206495b8ec29
 SHA512 (Parse-CPAN-Packages-2.40.tar.gz) = d383985139bd03956cc4643c43e731411e6a4acadd6f4436098d3998a9cd37a6bc73087d329141572c170758a3ad130d4e4b50ecd4c67343db00f12413ae1301
 Size (Parse-CPAN-Packages-2.40.tar.gz) = 11575 bytes

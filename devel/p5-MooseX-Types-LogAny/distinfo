@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:00 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:17:08 nia Exp $
 
-RMD160 (MooseX-Types-LogAny-0.001003.tar.gz) = da57276bacf9b11793d7577cddc31247dc63b00e
+BLAKE2s (MooseX-Types-LogAny-0.001003.tar.gz) = dc03b764ffbc9f04f25efc76dee5720566f15bdc43c635f57a31e4252973c658
 SHA512 (MooseX-Types-LogAny-0.001003.tar.gz) = 9ea12ad850cd1e4f9768114f49b5aeead73a448184e273ef34cfc631d39f04321d7eddd5871be75d27fe777c0b4f0742ae9e98850b725acd95222899455ead82
 Size (MooseX-Types-LogAny-0.001003.tar.gz) = 10589 bytes

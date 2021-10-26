@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 13:41:58 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 10:17:06 nia Exp $
 
-RMD160 (MooseX-MethodAttributes-0.32.tar.gz) = 3b866d74308ba3c2afa0b1a7e69b4fbfd1e03c73
+BLAKE2s (MooseX-MethodAttributes-0.32.tar.gz) = 82f7df7029d188c5e4975bd92f496e318d2cc38a394c9a00c6a92ba9ae685176
 SHA512 (MooseX-MethodAttributes-0.32.tar.gz) = 83989095a0b179ae8ceeb38673a60e8e15904c10ddfafd8b07631de9584ff4feec99d0da3b4111408a677659c71fc58dd17cb3dc99d23ed9f4f2289755b0e5cc
 Size (MooseX-MethodAttributes-0.32.tar.gz) = 43359 bytes

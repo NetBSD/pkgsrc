@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:43:13 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:18:31 nia Exp $
 
-RMD160 (google-i18n-address-2.5.0.tar.gz) = 025b73657a1562941a0a01afbdfd19ab2d09f8d7
+BLAKE2s (google-i18n-address-2.5.0.tar.gz) = 5e0d0b81a67ba827672d6d454555232ee571db48a30f24088b72855666fbe7d4
 SHA512 (google-i18n-address-2.5.0.tar.gz) = 53e6217926b19d9a0256209049c8423a7767f09bfaccfc1e2f50e20cb0e6b5700daa1e16a2a090a30c088c484be897406433404bd5c274556d2a35e143bc1f77
 Size (google-i18n-address-2.5.0.tar.gz) = 724831 bytes

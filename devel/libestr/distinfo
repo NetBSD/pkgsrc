@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:40:12 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:15:18 nia Exp $
 
-RMD160 (libestr-0.1.11.tar.gz) = 60da7ca58473ec70d932392b6d65f2b01670082e
+BLAKE2s (libestr-0.1.11.tar.gz) = 948eaed93dddd32fc3e2e158ff57e5f3b26ec42b92ea909aeee2b1b41f71a248
 SHA512 (libestr-0.1.11.tar.gz) = 0ab98c2fa4b58cf6fee89c88602725b8b5e8e5a171a6976cdd8cff4dfc1cd3e5b747868da74fccd1bca66b9fa524ceae1c4f1ad5ee653a44ff81df6916ab5328
 Size (libestr-0.1.11.tar.gz) = 355544 bytes

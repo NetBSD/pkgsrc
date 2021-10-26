@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2021/10/07 13:41:24 nia Exp $
+$NetBSD: distinfo,v 1.22 2021/10/26 10:16:31 nia Exp $
 
-RMD160 (Exception-Class-1.45.tar.gz) = e3bb7ca84ba262db2c0072b830d9a7e8c7c3303f
+BLAKE2s (Exception-Class-1.45.tar.gz) = 73e88b8217a31545242e4dc9eecd10cd32ccead99a13ca6f0c2cd0425701ec5d
 SHA512 (Exception-Class-1.45.tar.gz) = 8eff70c85c8f1cc9e1db2c47b5a815ef902fddd4989783b9fb7e84e3ce75776564cafddd3aedd2c86a5a8b9627021c9cfd094b95ec4956a60dd6703bba3eaf4d
 Size (Exception-Class-1.45.tar.gz) = 50933 bytes

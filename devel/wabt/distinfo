@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:44:41 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:20:08 nia Exp $
 
-RMD160 (wabt-1.0.24.tar.gz) = dd542f459f39ed0ed29aea7ab8584910e3b1f363
+BLAKE2s (wabt-1.0.24.tar.gz) = 667b52fd0188aa9f918e91344deb0c63c19ca76039acccd5f67601238ae2cea2
 SHA512 (wabt-1.0.24.tar.gz) = 6257702f06baace7eded7fd4890cbf23e533f20ee6c40de82a7a4cd32fe931a49efd3cbfc1355c4da49e6fbd3b62b1cf05edf1699313840d4825a2165a3928a8
 Size (wabt-1.0.24.tar.gz) = 1076664 bytes

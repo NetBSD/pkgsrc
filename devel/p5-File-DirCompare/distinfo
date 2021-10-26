@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:41:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:16:35 nia Exp $
 
-RMD160 (File-DirCompare-0.7.tar.gz) = 56f88690f144366e04c75a8ad851162e3d068b38
+BLAKE2s (File-DirCompare-0.7.tar.gz) = c950f3434a6e8a5e019c929ac596a1b6059472558cf248cb1125c4a0daed621a
 SHA512 (File-DirCompare-0.7.tar.gz) = f929296b580aed630c1fa9ce177e835fc1110ec06c9fa3994f66e6dde4a7f253e80237dcafbfda1268bcb4e6abbca6147cc2e5a1317b1a1a3009086033463bc8
 Size (File-DirCompare-0.7.tar.gz) = 9018 bytes

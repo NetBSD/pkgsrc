@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:43:43 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:19:04 nia Exp $
 
-RMD160 (sentry-sdk-1.1.0.tar.gz) = 7c81cb504ced335472c37d59e5e6d98e1a68d1bd
+BLAKE2s (sentry-sdk-1.1.0.tar.gz) = 7df2fdc08d830f246ef749bd214f6bf9365861a4464c44f36572c82d93f8d184
 SHA512 (sentry-sdk-1.1.0.tar.gz) = ecb0f35776142dc0ee413fe6ffa49ea1c2f7a19e73d718c8b8f53841dcc5e719259125dbe8880d282bdce5fd91a37eaeff4ae6d5b917ded153447aa6a1a16a33
 Size (sentry-sdk-1.1.0.tar.gz) = 100168 bytes

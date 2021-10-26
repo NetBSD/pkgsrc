@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:39:31 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:14:36 nia Exp $
 
-RMD160 (ilisp-20021222.tar.gz) = 8fb643c1aa388bfbadf99c23beb5c058183c585e
+BLAKE2s (ilisp-20021222.tar.gz) = ffdc43c6941d701853a1379a548ae275915cff477ae074c4e3c733e8cb931fd2
 SHA512 (ilisp-20021222.tar.gz) = 501cb67181739c4e2ef537425e1dc67d82c653af534fe751bf52a4b22a01839ca0aecf8c3c7c5155541513c857f4e85b59c917b0e8d238c02ccd7e0ac3e7eee1
 Size (ilisp-20021222.tar.gz) = 261641 bytes
 SHA1 (patch-aa) = 87e96dde3d808add1b8048484d9f3342af33362c

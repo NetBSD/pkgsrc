@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:39:56 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:15:02 nia Exp $
 
-RMD160 (th-lift-0.8.2.tar.gz) = 4159f416ef845aa06586f4194e2769b25ffca657
+BLAKE2s (th-lift-0.8.2.tar.gz) = 9054ff13ea8b388752a423c1acd8768167ef144b0efdb16a5161341b57dd1a13
 SHA512 (th-lift-0.8.2.tar.gz) = bda1fd661274d911898eb163427a83db81bf5cc6d7cdd2936a84cb314268be2d38c5753727c1e87e83f8edb61e8bbbd0976001f680830b3bc2d4eb96178505ec
 Size (th-lift-0.8.2.tar.gz) = 14385 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:39:53 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:14:59 nia Exp $
 
-RMD160 (pretty-show-1.10.tar.gz) = 740022240128bf314135d20cd71376ba13831294
+BLAKE2s (pretty-show-1.10.tar.gz) = 20bc1cc9b0cc8abe78b636b3e33bd7e18e4198d664ba8d6171fcd60ae29a1730
 SHA512 (pretty-show-1.10.tar.gz) = 90ecf41790246c85ee7c738de2bb1a23a56a0a1d547cee627cb0a5f6c2691adfc73851ca0ebc928f3584912bc2b1148b115db03eea271e67f55d6a1466db8711
 Size (pretty-show-1.10.tar.gz) = 42233 bytes

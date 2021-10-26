@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:43:08 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:18:25 nia Exp $
 
-RMD160 (execnet-1.9.0.tar.gz) = de3fae0a9a4c7731a11333af8a17f65c17136933
+BLAKE2s (execnet-1.9.0.tar.gz) = 735f3fa8848900b80d6f87bcc32157160b80af3bafba3c39b9da447d18801993
 SHA512 (execnet-1.9.0.tar.gz) = d425e7b6f3708efecb5dfa2c36a837cb55f2c32cf2ec0c1dc11cd1ca6ea614d119d04908b84dd5a3593c87db35e71fee202f843665c853ac3538479f60c83d60
 Size (execnet-1.9.0.tar.gz) = 173884 bytes

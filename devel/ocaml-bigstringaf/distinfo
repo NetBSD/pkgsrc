@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:40:39 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:15:46 nia Exp $
 
-RMD160 (bigstringaf-0.6.0.tar.gz) = fe2b7b7c8fa65b5ae27872b36e2628820859b062
+BLAKE2s (bigstringaf-0.6.0.tar.gz) = 14681c470608272fb1ec9a36265616d595659394bce48769765c50c259a5f678
 SHA512 (bigstringaf-0.6.0.tar.gz) = f9dc0a5d1601d65ad3d0f8f0eea6235d39d38913158209b2f76af2e6589c1e241011dddbdcbcdbce52dd82bb6070475a65813324231df769532853fdf4683193
 Size (bigstringaf-0.6.0.tar.gz) = 11859 bytes

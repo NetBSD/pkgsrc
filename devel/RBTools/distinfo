@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:39:04 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:14:10 nia Exp $
 
-RMD160 (RBTools-0.7.6.tar.gz) = b7065bc2b8b19daab2e15d5444e1c07aba07c08f
+BLAKE2s (RBTools-0.7.6.tar.gz) = ceb46dcc0bcf7c60c8ff381f87fbf255247f00d2c6c607fdb371536e78218bcc
 SHA512 (RBTools-0.7.6.tar.gz) = 46a141370f79f4a9bcf417a2fca0fae6f1cc3d0ce2de9fd5f06df7162ecf051b418d12795adce9b12ed8244800da17f87df8b3f04c79c269b3b292a2033bc958
 Size (RBTools-0.7.6.tar.gz) = 162080 bytes

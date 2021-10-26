@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:41:34 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:16:41 nia Exp $
 
-RMD160 (Getopt-Tabular-0.3.tar.gz) = 694d9d90bfb417954f3a5bffa14cabcaec904076
+BLAKE2s (Getopt-Tabular-0.3.tar.gz) = 0178399bb8f3e91c4ecfea97595d1c6e86e5294f4709d142260ca8021cf01db2
 SHA512 (Getopt-Tabular-0.3.tar.gz) = a289d4861538ae542f7549364573cadd740538f73862d89dd49eaf6bed6f787ba2848246add171aed6aef4d7d36411d00bef70b76885aa948ce0e7fc8801652b
 Size (Getopt-Tabular-0.3.tar.gz) = 26453 bytes

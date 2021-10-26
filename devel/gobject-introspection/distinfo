@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.42 2021/10/07 13:39:41 nia Exp $
+$NetBSD: distinfo,v 1.43 2021/10/26 10:14:47 nia Exp $
 
-RMD160 (gobject-introspection-1.68.0.tar.xz) = 110995510a49188c157e885f56f5f39a16462747
+BLAKE2s (gobject-introspection-1.68.0.tar.xz) = f702638b2a8ddf0e3f692a11e112a437128da0f89b6c40efa3b3acf07ef79fd6
 SHA512 (gobject-introspection-1.68.0.tar.xz) = d2e64c119aa500b624a57baa2cebe9126ab100003d98b771f4fb51cf92748635de352997f702f40656f7c665f3dfedfbfa19912cc7a2d039d254555243bbc381
 Size (gobject-introspection-1.68.0.tar.xz) = 1019732 bytes
 SHA1 (patch-gir_meson.build) = 428739a91aad88fcc003f0e3aaca68f1f8631a91

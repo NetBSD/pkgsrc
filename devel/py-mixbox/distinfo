@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:43:22 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:18:41 nia Exp $
 
-RMD160 (mixbox-1.0.5.tar.gz) = e1a4e6cd02bc1f205665c94cd142ac6b20accdf7
+BLAKE2s (mixbox-1.0.5.tar.gz) = 21959e4217bde073dbfafd4d5d1606def292973c883ea1c9db6e83e66c29ace8
 SHA512 (mixbox-1.0.5.tar.gz) = cc88013146116890c7396eb1fb68022709f31f68b3d863aa2e48513b2c84285c32e322d457cb5b8fdbade785ef0c0101539d10f29941607947cbf810823aa975
 Size (mixbox-1.0.5.tar.gz) = 42198 bytes

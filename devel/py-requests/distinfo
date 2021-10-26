@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.41 2021/10/07 13:43:41 nia Exp $
+$NetBSD: distinfo,v 1.42 2021/10/26 10:19:01 nia Exp $
 
-RMD160 (requests-2.26.0.tar.gz) = 0b532167e01570e015b9abd52bb7d442d93a50bd
+BLAKE2s (requests-2.26.0.tar.gz) = 4e39df8cad0997077e9395e85b88bcbd22c6482600592e727f328ca7a092d436
 SHA512 (requests-2.26.0.tar.gz) = c3397d77f0d2f1afb05661c4b98adad6c1ddaf360906254150b33ab0d9479fd306905bd6d61b8cf8becd9a40bdcf9b03542e8267c644ef19f03f44bfca0bc461
 Size (requests-2.26.0.tar.gz) = 104433 bytes
 SHA1 (patch-requests_____init____.py) = 9915c51b02dd62f5c961ab388422d6f18a1dbedc

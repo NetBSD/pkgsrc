@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:42:55 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:18:08 nia Exp $
 
-RMD160 (ailment-9.0.7491.tar.gz) = e07b11bb136c6209ba67658f8a8dde66638f5a2c
+BLAKE2s (ailment-9.0.7491.tar.gz) = 59ffa316abf80628da9b7ab0bf438ff1b00704cff8a1b5ef84e5913491089c1f
 SHA512 (ailment-9.0.7491.tar.gz) = 65cbaa2bb817134924842a50dc68165702ebb78e18a76f5bb4e6d7ecccb1b72a72c34b1e96581887d5ae734b5c2c03b8a3357582766899a08da4c5ac7538dadd
 Size (ailment-9.0.7491.tar.gz) = 13851 bytes

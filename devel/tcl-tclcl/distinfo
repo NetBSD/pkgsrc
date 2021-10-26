@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 13:44:33 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 10:19:59 nia Exp $
 
-RMD160 (tclcl-src-1.20.tar.gz) = eea14ea193669d60c8e7fab23bf2096d9feaae8a
+BLAKE2s (tclcl-src-1.20.tar.gz) = 9692d1900975af14b267a71063d7d5bf82dc6220e55ba46cc2971019f877ecfc
 SHA512 (tclcl-src-1.20.tar.gz) = 3a9ac4e7c4866674b0b6f140f189328912e2484cd567b1aa243ad402e09099fb6d298da2d78892b73887130df3c94c4d5df5bbaac9822f82fd3fd93d30107540
 Size (tclcl-src-1.20.tar.gz) = 171728 bytes
 SHA1 (patch-Tcl.cc) = 0540b3ac59bb6a55c43f9ed0ef6f88032d2bc9cc

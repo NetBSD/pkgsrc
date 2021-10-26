@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:40:35 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:15:41 nia Exp $
 
-RMD160 (mustach-1.1.1.tar.gz) = 7d3f0a39941e7191fc5034d09d2624bba9bd5c86
+BLAKE2s (mustach-1.1.1.tar.gz) = c2fd04599a5f047351c740847de60e4012e23831590e0d56c984f08cf77d4743
 SHA512 (mustach-1.1.1.tar.gz) = 7210e418533a168a3e6f3948c78e84077b38e3d96aa25b21ed6013f3c42f068d1eb2a5790ebf8bc0fa5a206fc0e79e0c14228ec5e662d41697222fc902084aaa
 Size (mustach-1.1.1.tar.gz) = 28676 bytes

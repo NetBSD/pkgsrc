@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:40:46 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:15:53 nia Exp $
 
-RMD160 (ppx_here-0.13.0.tar.gz) = 28236e3d5242374d67ddeae76b009fbaa3787e61
+BLAKE2s (ppx_here-0.13.0.tar.gz) = 1cce66993b3bfc2f66db7eb7f6eb7fdb6fe5b51c9ce64d78daceeb122fe90402
 SHA512 (ppx_here-0.13.0.tar.gz) = 58db7457950768013da428bdb64675e6dadabb74b364e6e03759b5bed470b408ae154c3e695151d69d3269359358e4a2795d1510b55de33f63ae9cd8035ab002
 Size (ppx_here-0.13.0.tar.gz) = 4987 bytes

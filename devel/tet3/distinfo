@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 13:44:33 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:19:59 nia Exp $
 
-RMD160 (tet3.7-unsup.src.tgz) = 7e266fc77e2a01ece7cd1b041d3ee28426d1bd3d
+BLAKE2s (tet3.7-unsup.src.tgz) = 2c1de107712322b4d53549fb8e54fa84f4577e4e1cb9177b86786a945dd09d41
 SHA512 (tet3.7-unsup.src.tgz) = c3f192a907e521d628f47c5d676f8cb3681f1fae2bed2d458b2d65d05525a6302e024bc90e99bc8ae1b5abade71ca07fb24a3b0dd914d2af8487c54041ca822f
 Size (tet3.7-unsup.src.tgz) = 953406 bytes
 SHA1 (patch-aa) = 37c1da834d026be3b6b79afe40b257fd4104d108

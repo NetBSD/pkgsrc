@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:44:11 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:19:34 nia Exp $
 
-RMD160 (iniparse-1.5.0.gem) = 6a521ee19b66f8fa504d547504aebb26a08c162a
+BLAKE2s (iniparse-1.5.0.gem) = c960007295213d06ca6ab6ab6fe95f5b585f8bc3ab773449b2d2fcdb0f90cfcb
 SHA512 (iniparse-1.5.0.gem) = 6dbf4428dd39c988e4fd4a70e72b3b01de0f4e8c9e0a9d652332e82645282e94cad7d1eea964c8a15a39ed25e1044088723b8dd76e6fdd49bf8c7a2ca72bf657
 Size (iniparse-1.5.0.gem) = 16384 bytes

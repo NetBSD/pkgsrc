@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:41:40 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:16:48 nia Exp $
 
-RMD160 (IPC-PubSub-0.29.tar.gz) = 596636a3bde8755f0b23d83a34d1844753bc22b2
+BLAKE2s (IPC-PubSub-0.29.tar.gz) = 566c2d9da398d56d76186ebf8892ef9138d216b4eb7a429ed4453091ffeb0498
 SHA512 (IPC-PubSub-0.29.tar.gz) = 86b3cf65199142d2796cd4fb1a205fe97af387ff9ac584cbfa7e089608563d9b9335ad94a261dc8ec7c318bba1adb54ce9270c202bb5ee490ab90d66c34ddf2e
 Size (IPC-PubSub-0.29.tar.gz) = 21372 bytes

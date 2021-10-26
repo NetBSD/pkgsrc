@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 13:42:08 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 10:17:18 nia Exp $
 
-RMD160 (Pegex-0.75.tar.gz) = e2609ba058c5575982c96fb4bfbb47eb40c54bde
+BLAKE2s (Pegex-0.75.tar.gz) = 8b9c5687770f20bb214850d3736e6c21c6c2a6ac7ff6913164b73bcc41e76443
 SHA512 (Pegex-0.75.tar.gz) = ff204b21085bc3ce5cf6dac70636443f206272ae9741055e8972eadb720d52a46e542dee5b6559cc308d9fb597d545bb4d148b02499e2f75fa08a6dc689dc30d
 Size (Pegex-0.75.tar.gz) = 148676 bytes

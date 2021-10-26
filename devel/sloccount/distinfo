@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:44:30 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:19:55 nia Exp $
 
-RMD160 (sloccount-2.26.tar.gz) = a5bd1dbe8bd5e5c52ed790990c0d5d8fc49b26ff
+BLAKE2s (sloccount-2.26.tar.gz) = b4fb5a6d956302572a10ea64b85e8602ed6b9805719d305230b08c9f76da0534
 SHA512 (sloccount-2.26.tar.gz) = ed6ab315a56dbdc86c654b94e790c9ea9e2dcad0db26b63c0973c33eb7fa634b4ade0a1f3c6ccfd5172ea95f648c1dd3b0ae2575b0aa44b3fec708c24a6aca54
 Size (sloccount-2.26.tar.gz) = 190948 bytes
 SHA1 (patch-compute__all) = 86bee28f56a366c63f122a417bad92020e748df1

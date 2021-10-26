@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:40:29 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:15:35 nia Exp $
 
-RMD160 (luassert-1.8.0.tar.gz) = a06215e94ef4b9b12356bb0d15eb993800e0bc75
+BLAKE2s (luassert-1.8.0.tar.gz) = c3c65c5b1cd364e784472ad9448c615327814e37637b913bf16a789c2dcd0d18
 SHA512 (luassert-1.8.0.tar.gz) = 18b296fececa6b0d5950b2a20c4d30da3bbf9b0932c568bbb8ca212b5c82a1047b73c52ee72b4505a41a393d41dd21321189367e038dd029152d177e11bafc93
 Size (luassert-1.8.0.tar.gz) = 38874 bytes

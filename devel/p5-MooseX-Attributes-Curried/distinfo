@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:41:56 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:17:04 nia Exp $
 
-RMD160 (MooseX-Attributes-Curried-0.03.tar.gz) = 6d0380fa83ec158148b191bdf59e9bbb4c7be549
+BLAKE2s (MooseX-Attributes-Curried-0.03.tar.gz) = e9c9972e59fd5b811da1b118ec3b8879620167048fb8a615a27d1909b18d6fa0
 SHA512 (MooseX-Attributes-Curried-0.03.tar.gz) = 5a83112a718094266cfc5ebf58c21a35d34917a08b38f5477ef770ed4c6a8ce5c7910471a60b2af6ac2658f3bbe3dcc5a0954b76a905e457efa13e0bde270fac
 Size (MooseX-Attributes-Curried-0.03.tar.gz) = 18079 bytes

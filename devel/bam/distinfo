@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:39:13 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:14:19 nia Exp $
 
-RMD160 (bam-0.5.1.tar.gz) = 7bbfc8b31949381b445bd6113f06fa3cc32d959c
+BLAKE2s (bam-0.5.1.tar.gz) = 0a69902fba13a5f04d98083cb450f26249efd15543eb61c33fc1f1f252dedd31
 SHA512 (bam-0.5.1.tar.gz) = e6f1b3daad6073c58b0e3cbf836bb0a6b66f0c36532d6e6eca9949239ab8b584cc88f892cce6f74974e370a8a688f33a95dde86dd65cc1790e49e5f8aeab0fef
 Size (bam-0.5.1.tar.gz) = 258693 bytes

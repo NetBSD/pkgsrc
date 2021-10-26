@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:40:46 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:15:53 nia Exp $
 
-RMD160 (ppx_fail-0.12.0.tar.gz) = a17ee7cc2a8e51c6a43f6a552e9b2f155f5443d3
+BLAKE2s (ppx_fail-0.12.0.tar.gz) = dff2153f96afdfbbfe5cc52889b518e09e28c03573e31f395f3591551b5fcaef
 SHA512 (ppx_fail-0.12.0.tar.gz) = e6042d8063fd9a7889c0ce70ab4c186f7439cad68bd2057df3afc40f46338bd5350d8011cf8c6b15acab8ea9d5ac6d1e606cddd165adf6de57fcf620fab840de
 Size (ppx_fail-0.12.0.tar.gz) = 3731 bytes

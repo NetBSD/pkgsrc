@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:42:06 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:17:15 nia Exp $
 
-RMD160 (Parallel-Prefork-0.18.tar.gz) = a4e5158534e81c001df86b64f87283124a8d669f
+BLAKE2s (Parallel-Prefork-0.18.tar.gz) = 3a165175a15cc73a603d2af0abfc4dad7b48355aae643dbe963eecffdc399f11
 SHA512 (Parallel-Prefork-0.18.tar.gz) = 9d2dc977d98c3ba263a0d8e189877b59661bfa9fdf97ed5e685271b4b1661522e8288ae8392bd9eeeafb21b37191e55a2bac35cce49d2d5d68e6c3e2d3353c6f
 Size (Parallel-Prefork-0.18.tar.gz) = 28226 bytes
 SHA1 (patch-Makefile.PL) = b6cdf4c025599abb10a7edca0eb679abdc1bc4fc

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:41:01 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:16:08 nia Exp $
 
-RMD160 (Cache-Memcached-Fast-0.26.tar.gz) = b80e94b58ad71afef4cc8bb7a79c2eb1cad16c09
+BLAKE2s (Cache-Memcached-Fast-0.26.tar.gz) = f603d1b0c02f4f6760cb46b4d9b53d91a616d6ca379b80e10811687d5a9bf7b3
 SHA512 (Cache-Memcached-Fast-0.26.tar.gz) = aea565be2d1aaae186c6d985d88e444fa39311338a851f7f05b013affcab0bfcabd258a3df08849b9429b7168ff0d1e59ab27b1e843b217093b2b64786e890b1
 Size (Cache-Memcached-Fast-0.26.tar.gz) = 87887 bytes

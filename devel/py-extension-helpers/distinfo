@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:43:08 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:18:25 nia Exp $
 
-RMD160 (extension-helpers-0.1.tar.gz) = 056e7ad8728abafa51fa2ca4742feb393e30c925
+BLAKE2s (extension-helpers-0.1.tar.gz) = 917ed02b1056f6e7a9ffe5cd23cacd88df3d430b615518fbfae40cfdc8d0a57e
 SHA512 (extension-helpers-0.1.tar.gz) = d8394f5f0de28dfa2c204b918a39b5f3b990057bfdb7a21907b0b9ae3bacd5b95c5f25b32a08a50606fbae35b93629dcfe1fee512c6aa4f4e7c08c22bcfd3fbb
 Size (extension-helpers-0.1.tar.gz) = 24306 bytes

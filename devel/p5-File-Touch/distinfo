@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:41:32 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:16:38 nia Exp $
 
-RMD160 (File-Touch-0.12.tar.gz) = ef49f6e416d1e209d1fd004df1f8b6283341b7f0
+BLAKE2s (File-Touch-0.12.tar.gz) = b212c691fc34fd3e6f26ba7ba5ec267c3229093cb9b4e8bbfd8c4d7dcd616eb2
 SHA512 (File-Touch-0.12.tar.gz) = 0a13b4a2260fb134ba8ab2fc521aa9d92c9724773c06626e90bdb8b67c3ffab99679cb7f9ef6bfa5335c1d4fdf9bdbcfd8a8927f6fed5a0800dd3c9504904b40
 Size (File-Touch-0.12.tar.gz) = 12297 bytes

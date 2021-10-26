@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:41:11 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:16:18 nia Exp $
 
-RMD160 (Convert-Binary-C-0.84.tar.gz) = 50b927bdd5006a24afd95b7b76d9d1202e984037
+BLAKE2s (Convert-Binary-C-0.84.tar.gz) = d4379edccc37ac4aad5ca8bd362174e73c04f537e922d5d5ae2c66e284bb3cfb
 SHA512 (Convert-Binary-C-0.84.tar.gz) = 1c5160b39e5b64dc61c5e6bfeb163728352721ebfdc8c5096557e19293136e0aea613bf166e9b539a3980c39bc98466c99691be7d4f7325dac0c05fdd324440d
 Size (Convert-Binary-C-0.84.tar.gz) = 1348549 bytes

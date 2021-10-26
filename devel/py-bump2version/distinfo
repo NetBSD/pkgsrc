@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:43:01 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:18:16 nia Exp $
 
-RMD160 (bump2version-1.0.1.tar.gz) = f17b1fad05fd623d2a3efaae0523d36b4c8dfddc
+BLAKE2s (bump2version-1.0.1.tar.gz) = da179df614c10571e0c92100c5195d120e971946c5109888faa71ab7805bc63b
 SHA512 (bump2version-1.0.1.tar.gz) = 687ad38eabdac57a3daf66714166ebb41aaf8e1a42292c69a1eb56738955413d310fecc7b36a7c39aba2e7ca1bc20ff38b4cc0d40a722304689f03a1b6dd0be8
 Size (bump2version-1.0.1.tar.gz) = 36236 bytes
