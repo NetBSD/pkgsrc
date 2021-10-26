@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:11:56 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:45:54 nia Exp $
 
-RMD160 (ImageViewer-0.6.3.tar.gz) = 6bc9922c316d1ea507a293d53e9a08d928997b45
+BLAKE2s (ImageViewer-0.6.3.tar.gz) = 2f88defec35c6a3d4e89950c983d19ec8f9a04ec20f607833f77f654a9dc9d11
 SHA512 (ImageViewer-0.6.3.tar.gz) = c929988755f343b9de6ac58470067bd39453f7f1e78e2e9b36867bf303ba559ee2c03fc891a4c286059248200dc02215ee75189472d04e46423c5ae9132e40c5
 Size (ImageViewer-0.6.3.tar.gz) = 50683 bytes

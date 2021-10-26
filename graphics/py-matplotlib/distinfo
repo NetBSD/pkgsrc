@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.45 2021/10/07 14:12:47 nia Exp $
+$NetBSD: distinfo,v 1.46 2021/10/26 10:46:47 nia Exp $
 
-RMD160 (matplotlib-3.4.2.tar.gz) = df71869f624d47434a87acceb23e9b14bdf52d42
+BLAKE2s (matplotlib-3.4.2.tar.gz) = 7c9a59e50b03deb67f9fa21ee52d062c0bc578981448c0030b3a7c35405a3096
 SHA512 (matplotlib-3.4.2.tar.gz) = d4798dd2d6c857db0fe6d4ec85ebabc028b78627311bab17f7b9b30f6aa61d5243114b1cfe9d83293ad66ae47df83add5272f032954990dfc04054a792049f2a
 Size (matplotlib-3.4.2.tar.gz) = 37308683 bytes
 SHA1 (patch-setup.cfg) = 11dd8b9dd84005c8b195d86f0ccd5ff58502edf4

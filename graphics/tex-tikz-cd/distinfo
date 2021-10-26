@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:13:18 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:47:17 nia Exp $
 
-RMD160 (tikz-cd.r59133.tar.xz) = 5afd65b5f8626ee04c61c3869344a7639d234148
+BLAKE2s (tikz-cd.r59133.tar.xz) = ad0f5072bad29ef6348a811675c653edb6202638d31a956aa22d49ad568a5487
 SHA512 (tikz-cd.r59133.tar.xz) = abe5952a90172dd74ddfd02834ec9fc632f26da00450c310eab2528d5b52750e80225219b75e778d1f87b2279e654bb743804da19ec7da91f12e4105f9ec3447
 Size (tikz-cd.r59133.tar.xz) = 6364 bytes

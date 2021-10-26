@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:12:33 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:46:31 nia Exp $
 
-RMD160 (mate-themes-3.22.22.tar.xz) = 258563fa51b746f9a13db497265ee0b10867e678
+BLAKE2s (mate-themes-3.22.22.tar.xz) = 1786a4fd5532c39cc663786c0bbd56e328ccd5d3eed227e0ed989bb893b01785
 SHA512 (mate-themes-3.22.22.tar.xz) = 7bd0b41aa46a69ec79a977f01ae019db428f439622d7b82e5f0e3b69da8afb1f34d6ea932292a41eb7fed4e9f41575b82a5ffe945930d982e1f78f6789b049b7
 Size (mate-themes-3.22.22.tar.xz) = 5900388 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 14:12:10 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 10:46:08 nia Exp $
 
-RMD160 (freeglut-3.2.1.tar.gz) = c9b9d76f61ff56b153367817cfbc1fb5c0816c54
+BLAKE2s (freeglut-3.2.1.tar.gz) = dbc214e87d838971946bb33f36063f3a53cf224b51cb1c463eabf325f40a7a13
 SHA512 (freeglut-3.2.1.tar.gz) = aced4bbcd36269ce6f4ee1982e0f9e3fffbf18c94f785d3215ac9f4809b992e166c7ada496ed6174e13d77c0f7ef3ca4c57d8a282e96cbbe6ff086339ade3b08
 Size (freeglut-3.2.1.tar.gz) = 440228 bytes
 SHA1 (patch-src_fg__joystick.c) = 56a07514b89ff748d5a273f12eb756d475d9de0e

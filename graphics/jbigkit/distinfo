@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:12:22 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:46:20 nia Exp $
 
-RMD160 (jbigkit-2.1.tar.gz) = 71cc51fce3f65d8d9abf9ff52c29edf5469eb52f
+BLAKE2s (jbigkit-2.1.tar.gz) = 89a8bd02633f134248d80250f92dda1099cf8d0f0dc1487ead4848cfd2c9d379
 SHA512 (jbigkit-2.1.tar.gz) = c4127480470ef90db1ef3bd2caa444df10b50ed8df0bc9997db7612cb48b49278baf44965028f1807a21028eb965d677e015466306b44683c4ec75a23e1922cf
 Size (jbigkit-2.1.tar.gz) = 438710 bytes
 SHA1 (patch-Makefile) = 3b5e5814be3f361b1ce5ffdd483e4078b94c4bf6

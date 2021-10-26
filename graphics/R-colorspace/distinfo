@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:11:57 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:45:55 nia Exp $
 
-RMD160 (R/colorspace_2.0-1.tar.gz) = ddc9d72bd5237c326d3525b300de23788f48c718
+BLAKE2s (R/colorspace_2.0-1.tar.gz) = 45e0e58c33b2993e6fe03323c8d325b916b501cff506fc3cca22871d56e8fdae
 SHA512 (R/colorspace_2.0-1.tar.gz) = 59a84c3d08370e6818b26501400c74340fce283e73d549fec53e62c0ae47d476be65a589e8f35cbd17866ce8fbe926bc14021d8196bc82dc2abeec8a0cfd0db7
 Size (R/colorspace_2.0-1.tar.gz) = 2193384 bytes

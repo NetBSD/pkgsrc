@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:12:14 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:46:13 nia Exp $
 
-RMD160 (gle-3.1.0.tar.gz) = 49f217cf79ccc3c7e2802ae4347c15498f43db59
+BLAKE2s (gle-3.1.0.tar.gz) = be95ca539d146fcfe6399afa572008d7091b51d0d5af09899460507feb422532
 SHA512 (gle-3.1.0.tar.gz) = e61ea6c63684807f61769e5dc575499b9f349c4dad9289a831ed783083f59634c09d2e49bd670c7b65518ba8a57005fc566b80a21c2cda11d76689c4d48c5c07
 Size (gle-3.1.0.tar.gz) = 806861 bytes
 SHA1 (patch-aa) = 27606906d948c17fb1b40ebe23f8b5f08f3399b4

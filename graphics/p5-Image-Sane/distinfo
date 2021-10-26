@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:12:51 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:46:38 nia Exp $
 
-RMD160 (Image-Sane-5.tar.gz) = f313d74d543823d613938306067ae4670f6bbdd9
+BLAKE2s (Image-Sane-5.tar.gz) = 0792e351db60f5c4720ecb8828a011238de9836d2d477ea267694533d27915e3
 SHA512 (Image-Sane-5.tar.gz) = b2c9aec6d6ff598284df495c15cb33c9126364b2551d421580c0f2085a1b102bc5758f81f4f857bf6e098eab0a1945d39b8996d22ece23475296362b1f6a640b
 Size (Image-Sane-5.tar.gz) = 47781 bytes

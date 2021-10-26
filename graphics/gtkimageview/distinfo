@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:12:19 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:46:17 nia Exp $
 
-RMD160 (gtkimageview-1.6.4.tar.gz) = 86c8eeb80a8f85b979ae11387d1dccea631483ae
+BLAKE2s (gtkimageview-1.6.4.tar.gz) = 4c1399cded63d929f3f50c5dc6801f17a61b90e1265a65a7375b8e44546d4f90
 SHA512 (gtkimageview-1.6.4.tar.gz) = 4f09f288d3e47dacc9b80500cf9bc7da330171201720a4667693dd60454a4112a4633604b87ab9c5628852a496b8ef56fe8da6817c279b695194eabe1aa37570
 Size (gtkimageview-1.6.4.tar.gz) = 1158148 bytes

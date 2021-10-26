@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:12:37 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:46:35 nia Exp $
 
-RMD160 (Chart-ThreeD-0.01.tar.gz) = ccdbda7014f756c5d2d4dabfa0549839de1c8178
+BLAKE2s (Chart-ThreeD-0.01.tar.gz) = 9566a380255a71edab42aa9a7ec8e00393ffe9d084a27e1eabb2e73f255bc689
 SHA512 (Chart-ThreeD-0.01.tar.gz) = 5ceb2e4800ed04ba11d93923fc2d8799108f105e04c1bcd91c73bcd7b8a0d4b6de7f514502fa2c327254fef9d1bb6bfdba48314c7dbe857e0be4a9687a09f077
 Size (Chart-ThreeD-0.01.tar.gz) = 5565 bytes

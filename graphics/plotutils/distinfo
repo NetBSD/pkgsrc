@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:12:42 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:46:41 nia Exp $
 
-RMD160 (plotutils-2.6.tar.gz) = 2a32244eb20e00b82a0742dde7b690f688e82774
+BLAKE2s (plotutils-2.6.tar.gz) = 4f6b9b330bda2eb43a1574c3e715f1810b3e7941caeef59c47d9ee834507db1e
 SHA512 (plotutils-2.6.tar.gz) = 4e5982605e5c1fbdb7325069c3ab2edd736e37a2eb30a1ec01fdc3541fcee6ed49937d4814c6baf79dab5b6fa42f909e4800c851d0ace3c7cf6d5a8681d0f0e7
 Size (plotutils-2.6.tar.gz) = 3657562 bytes
 SHA1 (patch-aa) = 953805bbe32d8e049cdd4de79cd8b4a77a49fc04

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:13:02 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:47:00 nia Exp $
 
-RMD160 (tex-epsincl-29349/epsincl.tar.xz) = ad362fcb318cc57bf63765d36716d84ec4539ccf
+BLAKE2s (tex-epsincl-29349/epsincl.tar.xz) = 82f0904dc45aae77b2909f729753eb708c57fc0592ce99854f322a003bad0992
 SHA512 (tex-epsincl-29349/epsincl.tar.xz) = 8e949193bb623514dfe7fe6f7c19e1536c52e69724fd8af20884d2743009704571c4661472e81051be7cb19882ef31132c9e8638a64e69b9ac32aa73a89a8ecc
 Size (tex-epsincl-29349/epsincl.tar.xz) = 1920 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:13:09 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:47:07 nia Exp $
 
-RMD160 (tex-pgf-umlsd-33045/pgf-umlsd.doc.tar.xz) = 5f65a5e570a9fe308415214e66c51b00c163c548
+BLAKE2s (tex-pgf-umlsd-33045/pgf-umlsd.doc.tar.xz) = 35190eb1ebe03bd23d82526d60d6ba432a46299fda00d1444daa49f00debbcc3
 SHA512 (tex-pgf-umlsd-33045/pgf-umlsd.doc.tar.xz) = ebbc578e29ddae47dfa7ad838526f8245f4b1f44b7b4e1d35601742ff183f95deccbb9e4277a01d284e7e77356319b477158ad9f974264e0d1b6235ab41c4b6d
 Size (tex-pgf-umlsd-33045/pgf-umlsd.doc.tar.xz) = 222756 bytes

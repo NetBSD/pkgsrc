@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2021/10/07 14:12:21 nia Exp $
+$NetBSD: distinfo,v 1.29 2021/10/26 10:46:20 nia Exp $
 
-RMD160 (ivtools-2.0.4a1.tar.gz) = 58a7dc87414313b5946fe6421fbc356b23890857
+BLAKE2s (ivtools-2.0.4a1.tar.gz) = 1e9e34cd5262e6525a85bcd4d9d827a4da6c6269d78384fc4bd6fd92a0675c83
 SHA512 (ivtools-2.0.4a1.tar.gz) = ff1dac25b33541235faba99af3443f2eaad5e816fabd4d32045076e4dfb998b2af0821bc7325dff3a44cb182db2ed4d50a623e5926f5cf77f6c75f7c215cc3ce
 Size (ivtools-2.0.4a1.tar.gz) = 1829957 bytes
 SHA1 (patch-Makefile.am) = 0fd573d51567569a47f74a3464947f5f39fba816

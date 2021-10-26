@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:12:48 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:46:47 nia Exp $
 
-RMD160 (mcomix-1.2.1.tar.bz2) = db5d4c4ef695384581a504976d09a7e7a28d244e
+BLAKE2s (mcomix-1.2.1.tar.bz2) = f91aba8ce690a6a93267324b96c14eb51b24d8837887bf42503a240e448b3cf2
 SHA512 (mcomix-1.2.1.tar.bz2) = efa4d57edc3a48d9e711767fb3e233ef9b334ff8ba467999e572e60ed747a4ee4aa420c8aa7788b16d7eb6e0901d454d6a405fcec47a8c74098a49491e915cd0
 Size (mcomix-1.2.1.tar.bz2) = 571128 bytes
 SHA1 (patch-mcomix_archive_archive_base.py) = 1098362d435aa0325b1a6b0fe1c12148fedf176c

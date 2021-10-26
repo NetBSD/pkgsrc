@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:12:38 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:46:36 nia Exp $
 
-RMD160 (GIFgraph-1.20.tar.gz) = 3f39ec8df11e78cb5b8392ba1561e5bae6fc6a41
+BLAKE2s (GIFgraph-1.20.tar.gz) = e0dc03b07e0269cd9b563d987067c1a9c3e8c7a9359c56ee5288a14b5c34eae8
 SHA512 (GIFgraph-1.20.tar.gz) = 94fab43ccf924c12a28363792bda84501066ecf3df2ec69c9aab3beb3962b7e2b5af649c67604605acfc9a5734af1c91f6dd58a85f97611468570ff2d24dddef
 Size (GIFgraph-1.20.tar.gz) = 29434 bytes
 SHA1 (patch-Makefile.PL) = 976eee1090154d5f17a902b471ea9fc1bc02783f

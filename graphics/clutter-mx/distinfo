@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:12:05 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:46:02 nia Exp $
 
-RMD160 (mx-1.0.4.tar.bz2) = 4b88d8fa5d6b7db639a497421f5d322df9f98230
+BLAKE2s (mx-1.0.4.tar.bz2) = 67462b37dbd307534cd11d29b3700452e6a8da1f3577d1518f8f82f607542ae6
 SHA512 (mx-1.0.4.tar.bz2) = a6c8fde461e13e087fb5c7fe9bdda3e7f797763ed8bf2e902d4cd9e4b6779496e4112793e49b49d794feca47125b9b49cb3f2af2e52157a3d42724a1f1fe3ffe
 Size (mx-1.0.4.tar.bz2) = 1132646 bytes
 SHA1 (patch-mx_mx-deform-texture.c) = 6f0a4210948d4612adee84aa3e206f7ce9784e2e

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:13:01 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:46:59 nia Exp $
 
-RMD160 (tex-dvipng-29821/dvipng.doc.tar.xz) = 6844ceff1ecab588c323881bbc6eca5d77bebbf0
+BLAKE2s (tex-dvipng-29821/dvipng.doc.tar.xz) = e0cac792debfddbc5be4550a90f9fe85af6d4ec4290306e63051bda48c43a7bb
 SHA512 (tex-dvipng-29821/dvipng.doc.tar.xz) = 586fc0220584d7d6813ae4dee6e41d398149ca8ac8b6ce53496f30b3a0218064bf1d5310c77f566aac66be5c0eb750edce8ff2e6f4949257f3bfb0e054a67118
 Size (tex-dvipng-29821/dvipng.doc.tar.xz) = 271984 bytes

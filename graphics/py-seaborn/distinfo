@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:12:49 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:46:48 nia Exp $
 
-RMD160 (seaborn-0.9.0.tar.gz) = c6fc0b1181a177c1490585f6de6cf83f05df6750
+BLAKE2s (seaborn-0.9.0.tar.gz) = e7891a8848386af61343f716d117f697e7ca909f860ebe7be0424aca2da6d4ea
 SHA512 (seaborn-0.9.0.tar.gz) = 01cc9a8e80102eed6a35be8ef2c3357d1f5eee53004887a5e0eb1f4dcf696987e19b9e371e95fad01fff60042ad5a2873a6d265a43cb506172a50ecd5ba55b3b
 Size (seaborn-0.9.0.tar.gz) = 198184 bytes

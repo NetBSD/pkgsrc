@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:12:45 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:46:44 nia Exp $
 
-RMD160 (blurhash-1.1.4.tar.gz) = 86b25009f4aaba52c43a7f0b97adf50b134fb55a
+BLAKE2s (blurhash-1.1.4.tar.gz) = a7cba54faccd5a93d05c093ef7efebd9bc74b4607782dfb4238ce00e643ea3f7
 SHA512 (blurhash-1.1.4.tar.gz) = eacef78927a1299bec19f73709435b1be55797273888e7856bbfd46d2aa1afa02f54505c15b76dcd6bd15a6817da0171aa412570c33c7ad487bfe10940ef3fd6
 Size (blurhash-1.1.4.tar.gz) = 4738 bytes

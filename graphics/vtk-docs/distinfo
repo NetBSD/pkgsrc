@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:13:24 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:47:23 nia Exp $
 
-RMD160 (vtkDocHtml-9.0.1.tar.gz) = e1a147cfef34bcf5559d65b15aa9cb9c547b7b66
+BLAKE2s (vtkDocHtml-9.0.1.tar.gz) = ba61f9fd41bf85bd11cf9aafbdd177eea09dd2dd9ab2d50514241b8e59a5aa2c
 SHA512 (vtkDocHtml-9.0.1.tar.gz) = 9997fb73ab46d28f107f5a7ef31a86f6948cd3ff88184fd4f1b0cc14dff1b8b6395e420ae2b2a42e772b90b84d8e077cc4543b8b8c9495481c3f8271949f11e4
 Size (vtkDocHtml-9.0.1.tar.gz) = 138707547 bytes

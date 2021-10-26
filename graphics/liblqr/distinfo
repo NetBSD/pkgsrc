@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:12:30 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:46:28 nia Exp $
 
-RMD160 (liblqr-1-0.4.2.tar.bz2) = e69cf09ffeca3b426d5905a4a26b289c383e5260
+BLAKE2s (liblqr-1-0.4.2.tar.bz2) = 9c9df3c304667346d0fe6a329e54139d9248d39ae94d078245a8a2a712854926
 SHA512 (liblqr-1-0.4.2.tar.bz2) = 57d9ed67d5a11c970262263a34b6797576088e14f2ccb01b393eff55bfd22c8bb2b2189e3ed5ff6c187f709c556225fc1fb1038bd0d7e0c03d8839ef0ce998a3
 Size (liblqr-1-0.4.2.tar.bz2) = 344739 bytes

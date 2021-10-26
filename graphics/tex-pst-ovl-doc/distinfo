@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:13:14 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:47:12 nia Exp $
 
-RMD160 (pst-ovl.doc.r54963.tar.xz) = 3fad584d9e3637b80769af8c1a2993a85be0e5a7
+BLAKE2s (pst-ovl.doc.r54963.tar.xz) = fb67939f85c1da8baa4123a647c6d4d6cfaba647688a2868d75f191dd90a3caa
 SHA512 (pst-ovl.doc.r54963.tar.xz) = 755c786cec204ad3dd41043d8dd1bebb33ebbd889580a0a85390ca8efc318076ec9300a8e38b99788bf348a49dbda8ba5f3c758ace788bd9de47c251dd4e0407
 Size (pst-ovl.doc.r54963.tar.xz) = 30000 bytes

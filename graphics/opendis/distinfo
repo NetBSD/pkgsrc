@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:12:36 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:46:34 nia Exp $
 
-RMD160 (opendis-0.0.3.tar.gz) = b8ca66a794d1da7c0c52687c6588f12c84e0a219
+BLAKE2s (opendis-0.0.3.tar.gz) = 0fa1af24eadec963ad9574bcb3c8d839208f7ac0a0eba317142de0a7472e20f0
 SHA512 (opendis-0.0.3.tar.gz) = f8e81ba60eb319375b2371a834cab353892f07a366b2949a13fe10003a062e1f8dc421b7e47606d2f4a0f1f50123a97bf497ee79976f93029fba14d474964db7
 Size (opendis-0.0.3.tar.gz) = 77458 bytes
 SHA1 (patch-aa) = 856ce675b8e21b3193ef730a888abeefd7040fa4

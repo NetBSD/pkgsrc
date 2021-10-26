@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:12:22 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:46:21 nia Exp $
 
-RMD160 (jpeg_ls_v2.2.tar.gz) = e0879e170ee18fae46d148c711a8b5a398586cd9
+BLAKE2s (jpeg_ls_v2.2.tar.gz) = 9edad398e4176d29897975079f8da77539763b81a88f98c4af06f7ea08dac744
 SHA512 (jpeg_ls_v2.2.tar.gz) = 5cdd2e206084de38c85f3d0d38e6504e9c22e1ce86a1e9e4c21373385bdb74518a04129e60075560b6fc1c6bd41e361cf6705d92aa23fe33a686c37af2da135f
 Size (jpeg_ls_v2.2.tar.gz) = 854276 bytes
 SHA1 (patch-Encoder_melcode.c) = 6da84593b3160bf86593de40e837e9712e9848e3

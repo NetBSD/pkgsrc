@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:12:17 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:46:16 nia Exp $
 
-RMD160 (gpick-gpick-0.2.5.tar.gz) = ca88fc19dca8bb9f4ee6cee5162bc0db5448f58f
+BLAKE2s (gpick-gpick-0.2.5.tar.gz) = b949f8fc7664c07ca3a6c870bd88318343348a79e794c771e1b13ee87e38d6ae
 SHA512 (gpick-gpick-0.2.5.tar.gz) = 05ff855e28dcfede0c825d555d5572650ffda9cfaa6462e5b503d2a64cb340eca675b37780dbd3bf43750dbd2d844cb755277eaba7e7a77cb0c3b7e772d552e6
 Size (gpick-gpick-0.2.5.tar.gz) = 329190 bytes
 SHA1 (patch-SConscript) = 391723077ea44372c316dadb78535a0b54fd2f4c

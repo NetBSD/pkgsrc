@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:12:09 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:46:06 nia Exp $
 
-RMD160 (extrema-4.4.5.tar.gz) = 80aac9925fb9a8ce8d68ad2712f14435bc463b89
+BLAKE2s (extrema-4.4.5.tar.gz) = 05d3936a960c40d3f53e413fd7aaa17e19971376c6757a3eaa840540d3748fea
 SHA512 (extrema-4.4.5.tar.gz) = 933caac15b511fc599366d42472d38bfce5031dbfa7bb7139bcd222268307f0141b18eb885948b39e52a6f06980ad7575cb9b56a31ad81d4cd7b2af291402e87
 Size (extrema-4.4.5.tar.gz) = 6536157 bytes
 SHA1 (patch-src_Expression_Expression.h) = 7c6101f9eff147cacfca5ba581785b5c72826894

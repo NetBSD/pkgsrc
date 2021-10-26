@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:12:30 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:46:28 nia Exp $
 
-RMD160 (libpuzzle-0.11.tar.bz2) = 444a66e045790e5f7ffe471e35b9cb40982fac6e
+BLAKE2s (libpuzzle-0.11.tar.bz2) = 25ff00035e6131c8eee5460a2799b8f12a2fa1b77534b019ebf3d91c96e2e879
 SHA512 (libpuzzle-0.11.tar.bz2) = e2f35a3b125dcff3090f490e2904f6aef0b861be811322eaec07023263c6ca28347226bca01300b2c0c903cc40d44133c81f88d83b9afc0e959aa65898b2c026
 Size (libpuzzle-0.11.tar.bz2) = 404403 bytes
 SHA1 (patch-man_puzzle-diff.8) = e6b37d34434d2afc805f85b3bae1b451e75753ec

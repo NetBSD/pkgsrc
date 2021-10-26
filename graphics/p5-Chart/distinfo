@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:12:37 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:46:35 nia Exp $
 
-RMD160 (Chart-2.4.10.tar.gz) = cd78772b1698d0c263cc50238d7013b424c33147
+BLAKE2s (Chart-2.4.10.tar.gz) = d7fef55ad59981de945d1ad26e9dc54860dcc508f0874d167ffea7514c8c5917
 SHA512 (Chart-2.4.10.tar.gz) = e8327c46e0cbcea0ed8f723b7b369f4b694c0d7050d3fab35371e0717938292b5bacd3e367ed87e272dc258db020c378690405f93d23ba0ed546dc29dd59e37d
 Size (Chart-2.4.10.tar.gz) = 1698207 bytes

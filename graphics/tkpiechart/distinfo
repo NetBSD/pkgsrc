@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:13:22 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:47:21 nia Exp $
 
-RMD160 (tkpiechart-5.4.tar.gz) = 91f73b9576f9aa1cf0a9475a52e1f4334b8ef8b7
+BLAKE2s (tkpiechart-5.4.tar.gz) = 965af265e3ff23a7e8a1689f57a8b18e1c8d30e9f281ecf5d894b3f864565ef0
 SHA512 (tkpiechart-5.4.tar.gz) = a55db855f7a496457b73a01fdb8998e4f54bacc084993d7af07ed7901b5694c8377eea72af052e9f2007c75d6f2a89b550200b1ec31893d13408f2cb63d40865
 Size (tkpiechart-5.4.tar.gz) = 45341 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:12:14 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:46:12 nia Exp $
 
-RMD160 (gimp-warp-sharp-1.5/warp-sharp.scm) = dfa51e8eaf90de8a423545d7320aa8e52e8ca6a2
+BLAKE2s (gimp-warp-sharp-1.5/warp-sharp.scm) = 6a9834e8543891fa6c849dc20762d0939b73a9776ab6bbe1da51a9090103adb4
 SHA512 (gimp-warp-sharp-1.5/warp-sharp.scm) = 923978febf18c817bfea871433d8b3694aa1405c567124c2dab361bbc52f204a08f32312303a6a89318a4ec89ccff09791229c214e5fd21bddb6e8639fc0e7d1
 Size (gimp-warp-sharp-1.5/warp-sharp.scm) = 4119 bytes

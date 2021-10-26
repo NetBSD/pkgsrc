@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:12:50 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:46:50 nia Exp $
 
-RMD160 (qvplay-0.95.tar.gz) = a4a42e004f7edd2c786f6f5174630945decf3db9
+BLAKE2s (qvplay-0.95.tar.gz) = 7c5f99f414dcada42c65bfaa057e403855bd84b667abb8f88b105d256fdb7b63
 SHA512 (qvplay-0.95.tar.gz) = bb7c184d1a2e7a3effc7a31d0c9405b5baa21f3e9ac5f4025c02aac89ce98475562b28ee1d817dd7620d4feaac882c1a41026de93e41e93c8b1932685914b5a2
 Size (qvplay-0.95.tar.gz) = 112802 bytes
 SHA1 (patch-aa) = 16bf970bf3cfb4e3d6a62cf733f8c52a713a01c4

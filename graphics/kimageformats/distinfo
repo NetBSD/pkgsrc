@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:12:24 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:46:23 nia Exp $
 
-RMD160 (kimageformats-5.80.0.tar.xz) = 255c6a8c5dd40c430d14d2f596d9f7a67ce41a87
+BLAKE2s (kimageformats-5.80.0.tar.xz) = cd501a8299e00c04ee58b06d77f11e9e7ffad4264485ce7e5452363f3e8c68aa
 SHA512 (kimageformats-5.80.0.tar.xz) = 07669deb80af6ed3055f34ca5ef82583deeafde4a7d2591dd479fa10db48e39007e82cf70645363b742c7f90c73d6d3f5cfcfed7e5cd80ca8856e4d0aa9e9d39
 Size (kimageformats-5.80.0.tar.xz) = 590368 bytes
 SHA1 (patch-CMakeLists.txt) = ac96040c8da9cc316ab418c4f10d0a131557828a

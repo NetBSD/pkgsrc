@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:12:11 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:46:39 nia Exp $
 
-RMD160 (pcl-1.11.1.tar.gz) = 7f0679139ad86db5ae3451a7bfdaaf4ecdf5ceca
+BLAKE2s (pcl-1.11.1.tar.gz) = 51b51c69c2331ac01ade376d35e3658bcb2378738b5dacea50d06568e51091a6
 SHA512 (pcl-1.11.1.tar.gz) = 93dd3180443a1a26f019bfd1e34855014619b3b74326ae93806a2711dba392b1c76f2aa682cc3955c651a45ce829a0c89d1cae7cef09cdea60fcb671aefe4da2
 Size (pcl-1.11.1.tar.gz) = 68515312 bytes
 SHA1 (patch-2d_CMakeLists.txt) = 2ff5d0943e4171a50d0d5cf0646adc4733e7a2ae

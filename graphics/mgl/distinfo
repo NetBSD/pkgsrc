@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:12:23 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:46:32 nia Exp $
 
-RMD160 (mgl2-alpha-020.tar.gz) = 4c1b6772d9b9adc96279b016fb574defb78f1fe7
+BLAKE2s (mgl2-alpha-020.tar.gz) = a27d8ac66a9ca7a269404b63dd68484d722a6bdbfd690a2ddd1b32bca0c59141
 SHA512 (mgl2-alpha-020.tar.gz) = 285e7e77f1dda7619bd216a3e34681786227ae6ae8c5ec4e11dcf8a40912871ab1e0f2ecb270ac1ab8d8fd1aca635e9fdf93168ca9376d1c784db7b667250eec
 Size (mgl2-alpha-020.tar.gz) = 341420 bytes
 SHA1 (patch-aa) = 65104bb4030f3bd393f08d6b81382dc87913f5c7

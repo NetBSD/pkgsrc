@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:13:19 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:47:17 nia Exp $
 
-RMD160 (tex-tikz-3dplot-25087/tikz-3dplot.tar.xz) = d84f2fe2637e1e619b57a9b5e8147f9c267f8bdc
+BLAKE2s (tex-tikz-3dplot-25087/tikz-3dplot.tar.xz) = 88bebc2237ec36cc71744ad2ff482bb171805b709decbedf219bc08e32498de2
 SHA512 (tex-tikz-3dplot-25087/tikz-3dplot.tar.xz) = 97de25beaae9723361d8dedf6beb9d527930cb31f264b8a84fd963a95d85c45decafd4bba17f6ae46ce70e1d01573c4510a86ee4d981658445a82794e73a7a6f
 Size (tex-tikz-3dplot-25087/tikz-3dplot.tar.xz) = 7792 bytes

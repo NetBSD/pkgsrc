@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:12:37 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:46:36 nia Exp $
 
-RMD160 (GD-Barcode-1.15.tar.gz) = b878975e5e53fee84bc095a78f965e0c9dd5ab49
+BLAKE2s (GD-Barcode-1.15.tar.gz) = 314dcfc68f70e870df740a64a175755ec89c87f705a9a09d30aec6c363f7bd14
 SHA512 (GD-Barcode-1.15.tar.gz) = 3128ef0376f2d31b55bdf9e206a16982632a7e7e7eae6d0d846fe0f80f3998a893f22f910a7d053e15b9fd94a9408805a7b862d735e6be03e1fcb9ff7d4d5155
 Size (GD-Barcode-1.15.tar.gz) = 892881 bytes

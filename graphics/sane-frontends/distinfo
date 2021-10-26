@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:12:55 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:46:53 nia Exp $
 
-RMD160 (sane-frontends-1.0.14.tar.gz) = 571599cbebbce53ffc00b701874d5e76dcd90467
+BLAKE2s (sane-frontends-1.0.14.tar.gz) = 47fb595d612548458f028e53b4de863be5760dc1265357b9e02774058eec2469
 SHA512 (sane-frontends-1.0.14.tar.gz) = 51b24a9bd6889e99419c1d6abb30cb14d8f89b6196c5147044697bdb1b39ee029bdc0d7c6e1f1e800491988aa26f658bc974b25040c49d008ca8977673c78710
 Size (sane-frontends-1.0.14.tar.gz) = 231892 bytes
 SHA1 (patch-src_gtkglue.c) = d4de35c61217066b2c27c570c569a3d671b6f6e7

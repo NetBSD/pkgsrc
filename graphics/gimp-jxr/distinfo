@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:12:13 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:46:11 nia Exp $
 
-RMD160 (gimp-jxr-2.0.zip) = c0a401153e580208dcbd6e55789d1e09e46b2cb5
+BLAKE2s (gimp-jxr-2.0.zip) = 499c84937b0183522472f3683c33ac51bcf843ecec521547c726fd405eae28d6
 SHA512 (gimp-jxr-2.0.zip) = bd35c323f2072dfb76a7b49379ce5ff47167ad0afe75e16e2453880808a08d2acfef7cce4493c840c86b70aeff52b5a6e7b1252ace14c376a1e25134def45b03
 Size (gimp-jxr-2.0.zip) = 191840 bytes

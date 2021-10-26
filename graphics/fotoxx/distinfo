@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.26 2021/10/07 14:12:10 nia Exp $
+$NetBSD: distinfo,v 1.27 2021/10/26 10:46:07 nia Exp $
 
-RMD160 (fotoxx-16.02.1.tar.gz) = 53f5e2abbd2281b9dc95c96eb420b174b9204e95
+BLAKE2s (fotoxx-16.02.1.tar.gz) = d124552abe43f5543c7e4c8f81f38f81a9fd4e3860e76b6aa5ecf7f6b9497f14
 SHA512 (fotoxx-16.02.1.tar.gz) = c719c0ddbdcd521551fdd42f32e5e6c70beb352c872f8e60596a2228a196205a07b44830d09c6b7d72b5f8a599561d2ceeaf155d9d6abb7a757d4fc55e0835e7
 Size (fotoxx-16.02.1.tar.gz) = 4894327 bytes
 SHA1 (patch-aa) = 03b9de99e6467b1a7e117ddda92cdc7073c4d495

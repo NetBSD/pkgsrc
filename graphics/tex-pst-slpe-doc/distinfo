@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:13:15 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:47:13 nia Exp $
 
-RMD160 (tex-pst-slpe-24391/pst-slpe.doc.tar.xz) = 62bc17503189fd9b0631598ea3b20a22c43bcab6
+BLAKE2s (tex-pst-slpe-24391/pst-slpe.doc.tar.xz) = ed50f473dfa7a25b8400d14b44f37fd23326142c9b99d48a63e2fba803831a8b
 SHA512 (tex-pst-slpe-24391/pst-slpe.doc.tar.xz) = f8d98f5b6fbce3365b4bd6f486e52e768fce9fdf290e61e2dd81a293d71d9284c7a2352a527bed9a1a99417cc4d76351dbfc57eabc12aaf9b553d6443abe5c3b
 Size (tex-pst-slpe-24391/pst-slpe.doc.tar.xz) = 244892 bytes

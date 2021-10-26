@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:13:26 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:47:25 nia Exp $
 
-RMD160 (xmorph_20060817.tar.gz) = 0ce2138ad0a590b4ecc404758c026d38f720557e
+BLAKE2s (xmorph_20060817.tar.gz) = bbbb0060425bb8ade45189014219aefbbf982baa41df6d926d818699630bfdd2
 SHA512 (xmorph_20060817.tar.gz) = 332bbf7b72b815fe93a780f15be8d17f4035449fb3886a2b5a76e64e43501318cf210cc05b8fb9e3a41d1ca476a45ecf680beafaee74306dbb87dcb8685420ab
 Size (xmorph_20060817.tar.gz) = 1564280 bytes
 SHA1 (patch-ab) = 75079fb481f3875d5c984b5b6a1d395ba139a588

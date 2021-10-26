@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:12:11 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:46:09 nia Exp $
 
-RMD160 (gdk-pixbuf-xlib-2.40.2.tar.xz) = 9e510698d181bb7ee3851425d5254a52acdc08d1
+BLAKE2s (gdk-pixbuf-xlib-2.40.2.tar.xz) = c15a3b7ca5e0ec162b1cc0b2aba86837cca26a9800fca7e1bfb2e44524e7c903
 SHA512 (gdk-pixbuf-xlib-2.40.2.tar.xz) = 246bcace03f4d7d694c4d08f28c7ad044cab63b5cf264b478ee1fe161499e7607c7ffeff93908f1f3b308e5108d78c4b51a3f90b79189d42a1a653c8edc53e37
 Size (gdk-pixbuf-xlib-2.40.2.tar.xz) = 53588 bytes

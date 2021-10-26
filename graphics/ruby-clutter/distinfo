@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:12:52 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:46:51 nia Exp $
 
-RMD160 (clutter-3.4.9.gem) = 7f8478127241d34638ba5369623e6ec9cceec2fb
+BLAKE2s (clutter-3.4.9.gem) = 8ba537d4594d49da1bf697f7bfca5a1b3200f9a9cca55ee50dd2998f440eeb59
 SHA512 (clutter-3.4.9.gem) = c98010cbcd37ab54206cf18c5d5032ec14801c4422400a1aff343e834987cb6250ae0a624385b5109865cc741e03cad67e96e3f1c04de11cc699d41286980f41
 Size (clutter-3.4.9.gem) = 42496 bytes

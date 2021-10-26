@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:13:20 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:47:19 nia Exp $
 
-RMD160 (tex-tikzpfeile-25777/tikzpfeile.doc.tar.xz) = edeef651d8979f52ac8ea9e0c4acafc603d433e3
+BLAKE2s (tex-tikzpfeile-25777/tikzpfeile.doc.tar.xz) = f388e41dcb106c330cdf6785c800deb8d88e28d605c0b7e24a1664508528e253
 SHA512 (tex-tikzpfeile-25777/tikzpfeile.doc.tar.xz) = 86af9fb26dc7d377f871f8140de387335094e3c599582a2ebb5ce3fe145bce1ff936d2cc641a00faeb3fcae9533bbdc86d18ee19075283bc36d1aac01aeb5972
 Size (tex-tikzpfeile-25777/tikzpfeile.doc.tar.xz) = 49016 bytes

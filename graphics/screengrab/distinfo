@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:12:55 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:46:54 nia Exp $
 
-RMD160 (screengrab-2.2.0.tar.xz) = 0b581a5c5c0cbb61f7f29038f408520870f32d0b
+BLAKE2s (screengrab-2.2.0.tar.xz) = 843c8af50c22397d59f6cbadac47531fa2f870b8f046967a1222db449bcd5d98
 SHA512 (screengrab-2.2.0.tar.xz) = 14add5567abcbc03bd5e3e0e017129863ccd69aab83a1dfb3f8e6059af97fa4fff164e42fb3d0b4e8968d661b51b21def7d9c12ca68692a11288c99cdb16237d
 Size (screengrab-2.2.0.tar.xz) = 136940 bytes

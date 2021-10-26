@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 14:12:05 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 10:46:03 nia Exp $
 
-RMD160 (cogl-1.22.0.tar.xz) = 26ae4ec92f142902998343dfe8b93ab4ef00f7d3
+BLAKE2s (cogl-1.22.0.tar.xz) = 349a07926122632bf126258fa551e1c217ea79dc7559f68b781de7b14d7cb8b7
 SHA512 (cogl-1.22.0.tar.xz) = b19edced4282bd2b828357391fd6175feb483acfec87e344b7719215924dc8996dc8162d7b39d62a108d4f3ebd426caeefeab4e16b6c1962cc3383c239d6c359
 Size (cogl-1.22.0.tar.xz) = 1654120 bytes
 SHA1 (patch-cogl-winsys-cogl-winsys-glx.c) = 52be226fb3c62a3275ebec470597937e0b017f96

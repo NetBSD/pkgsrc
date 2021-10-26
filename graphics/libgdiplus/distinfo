@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.44 2021/10/07 14:12:28 nia Exp $
+$NetBSD: distinfo,v 1.45 2021/10/26 10:46:26 nia Exp $
 
-RMD160 (libgdiplus-6.0.5.tar.gz) = dca604e6298a95d55a5e4d45d0186c4e0e592b38
+BLAKE2s (libgdiplus-6.0.5.tar.gz) = c48c9a9b240e61e332563431529391603298a80cf19b529c59b50ace804c41ca
 SHA512 (libgdiplus-6.0.5.tar.gz) = 3c8fb07097c1b3bc922e5b0944374e03b1ddbaf0d955265a95b45e9d45ceda6ac41aff61468d92ad1fe48c0c25062f10a5fa5f17cb0c7626e4480a7edbaf73a8
 Size (libgdiplus-6.0.5.tar.gz) = 1391332 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:12:59 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:46:57 nia Exp $
 
-RMD160 (tex-bclogo-39364/bclogo.doc.tar.xz) = 0333f802074e30fe7be1475208ad8ce739f7eeae
+BLAKE2s (tex-bclogo-39364/bclogo.doc.tar.xz) = 75ddaa5e6d08e024df643a7621c4c3542b786496176c37ada42553390004a60d
 SHA512 (tex-bclogo-39364/bclogo.doc.tar.xz) = 3fed336fd1c3ecc419eb2c8cd3d757615e95c735305e6cc0608c781609b82da59d9f53c90398f1a0766240887ecfe399cbe682e3561810535a6b95b2f38b8700
 Size (tex-bclogo-39364/bclogo.doc.tar.xz) = 662208 bytes

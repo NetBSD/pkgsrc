@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:12:40 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:46:38 nia Exp $
 
-RMD160 (SVG-2.85.tar.gz) = 7e6198cd75f5d58dd65d86dc40c88eb02c31eec0
+BLAKE2s (SVG-2.85.tar.gz) = f2ef3ee3e8754f2f5a85f0a572a1b10a37f7720914b325b2b6680bb03c6a5088
 SHA512 (SVG-2.85.tar.gz) = 7d6a1ef9ffb81ac43e2323f24248a6314bb2b57798e2662708608abad219d3506efdad347eacc3ac448cb27930e0618175577c5ee62552fa53a38ca2ef84595d
 Size (SVG-2.85.tar.gz) = 57407 bytes

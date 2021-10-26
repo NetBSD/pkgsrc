@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:12:20 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:46:19 nia Exp $
 
-RMD160 (igmt_v1.2.tar.gz) = 43a387f06ca9800f472380a61778121fa1e4e103
+BLAKE2s (igmt_v1.2.tar.gz) = f5124e7186601c2c4b67ee1fb954acd852288b0b94596ba3b02886d89d4f5fc7
 SHA512 (igmt_v1.2.tar.gz) = a453290acd74a095b0ed7931338a5d47d83458bc9408ac86dcd52a2a773c4e6187d99128222e4c93baba3b52c6fe1e54fdd1bda978c6bcd5335c2afbac3ef76c
 Size (igmt_v1.2.tar.gz) = 1837311 bytes
 SHA1 (patch-aa) = b40ce475b8833bf0c03dc97e84f5768cd9bab5d8

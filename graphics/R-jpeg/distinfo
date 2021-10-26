@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:11:58 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:45:56 nia Exp $
 
-RMD160 (R/jpeg_0.1-9.tar.gz) = c1972537bef047c10d3422b3772946ac524c6e4c
+BLAKE2s (R/jpeg_0.1-9.tar.gz) = 0811ebafb2f9453d3549aee61eade736d7454438ef9b70d49fe8e8d4364959d4
 SHA512 (R/jpeg_0.1-9.tar.gz) = d023d926b6670d93789f18155a04597db1a53b84251c73931e71c2e619799cc8e0f3823f0d23c65d1ec6454ce1fd77a31b96735053e0de76bb61c0fc1b58dc1a
 Size (R/jpeg_0.1-9.tar.gz) = 18596 bytes

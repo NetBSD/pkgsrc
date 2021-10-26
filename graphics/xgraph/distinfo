@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:13:26 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:47:24 nia Exp $
 
-RMD160 (xgraph-11.3.2-hack.9.tar.gz) = 3d1344b9e97b72886faaedce92b697dbc9503a1b
+BLAKE2s (xgraph-11.3.2-hack.9.tar.gz) = 4109a7c93ec8a4aefebd8f2c725c036e274025e1a8d463c59f8c0b216af838be
 SHA512 (xgraph-11.3.2-hack.9.tar.gz) = 564991e1ab37cf1060a9fa5212f79cd0749f561c5ec66eb1e50df7442acf411687283fa43de758b80c812014b70308ba2d6a6f5cf2479ba822fd602cf2f20ff2
 Size (xgraph-11.3.2-hack.9.tar.gz) = 101979 bytes
 SHA1 (patch-aa) = cc5f9a2c5d2ca604459f581b41fd3e6cc82633d5

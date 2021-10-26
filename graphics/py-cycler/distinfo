@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:12:46 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:46:44 nia Exp $
 
-RMD160 (cycler/cycler-0.10.0.tar.gz) = 0bac2a6eb44639f667ace99aeef391c7352afe19
+BLAKE2s (cycler/cycler-0.10.0.tar.gz) = 92056dad7f4e7db89a6e415feb0840bc4004c090506e2f26ec57fdbd76ba796e
 SHA512 (cycler/cycler-0.10.0.tar.gz) = 685231d455dfdde70eb71415dfe561e07c34579d7b31ef7197f4c1441301635b387fec903d610b35406b619264f4c0cc616562de8f02b8192414c29274b63c01
 Size (cycler/cycler-0.10.0.tar.gz) = 21672 bytes

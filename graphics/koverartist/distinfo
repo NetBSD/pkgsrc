@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:12:25 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:46:23 nia Exp $
 
-RMD160 (38195-koverartist_0.7.6.orig.tar.bz2) = e3fcd0f50dbf93fd0d2ec8abc4405b7173d0a79b
+BLAKE2s (38195-koverartist_0.7.6.orig.tar.bz2) = abd1664c4a92c0f13ed2c43088c34a982440e5b49677e3a49bcfeafcf70363d2
 SHA512 (38195-koverartist_0.7.6.orig.tar.bz2) = 9d5c9a9676ae4e442cbe8b496d85a28c2ef69e5e79e53b56fc117c42cbcf769e5695d55f132f5ebfcaed244abba9e6d699e2ed25d4f49459c5d6434c8590f892
 Size (38195-koverartist_0.7.6.orig.tar.bz2) = 131626 bytes
 SHA1 (patch-aa) = 8b16c6732421138a9719018148ffcb77e6cce0dd
