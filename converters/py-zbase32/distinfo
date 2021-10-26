@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:29:09 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:06:50 nia Exp $
 
-RMD160 (zbase32-1.1.5.tar.gz) = 78cfa5baf90699392653080380f5ab42f6e405c1
+BLAKE2s (zbase32-1.1.5.tar.gz) = 35cf2f6acc1bb00dfec3eae6790a2dc5851c7f52776931d10479bc8c547b060e
 SHA512 (zbase32-1.1.5.tar.gz) = b2b049cdbc312cb56656b611d726527cdb0f598e5c8e0a646d1a144f863698404d8784d477f64402b0e3efd2d0ef5927a74ff0370a1742c1b7a5ad257bdc4f11
 Size (zbase32-1.1.5.tar.gz) = 21745 bytes
