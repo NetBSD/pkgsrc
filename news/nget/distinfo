@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:44:58 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:09:36 nia Exp $
 
-RMD160 (nget-0.27.1.tar.gz) = b90e3d6e2a33e630144a090f68f9bdd818f5e1bd
+BLAKE2s (nget-0.27.1.tar.gz) = 6a6fd8755209719dc901decbbd334ea504db71908ddb25682b72a2fc62114cf4
 SHA512 (nget-0.27.1.tar.gz) = 85379bc67c33f259c18bd205792433b59d08f1c28e3599754e942097dd7f841e4dce6c33dad0a2a4c68f3cd3449a06c5fd127b65e9c2964ef30cd465c4ca9729
 Size (nget-0.27.1.tar.gz) = 490164 bytes
 SHA1 (patch-auto__map_h) = 355d8e02aed69a273a9cf282d6bc868b1b6d1846

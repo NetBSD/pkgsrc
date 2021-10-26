@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:44:57 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:09:34 nia Exp $
 
-RMD160 (hellanzb-0.14.1087.tar.gz) = dde0eec93172c18226e91d2bfdcd8c36f56be1f4
+BLAKE2s (hellanzb-0.14.1087.tar.gz) = f12e243f9c6c1d9223c38e9eb20094fbba7e2257af81400e4a50d0238dfd670a
 SHA512 (hellanzb-0.14.1087.tar.gz) = 81e5282492217656e3250621fd2bec355c90c20a455d25ebcc966e62b5475974394904f83d5befdbe54872daecfbd3b8c093efe5f804872015b5e5a490316cc0
 Size (hellanzb-0.14.1087.tar.gz) = 164628 bytes
 SHA1 (patch-aa) = 18e32e534743063479e9361b3411599a35162c2c

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:44:59 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:09:36 nia Exp $
 
-RMD160 (nntpclnt-1.6.1.tar.gz) = b3d8ec94d74cc1a0f88264756b89c91fabde0750
+BLAKE2s (nntpclnt-1.6.1.tar.gz) = 8997eaa2262565fe645de54f6d630c1778f55e25e16360583e4e6933d0d1c944
 SHA512 (nntpclnt-1.6.1.tar.gz) = 4e12e5d4503fe7bde37390ea33779f6dd22b56a9f3aa317ebcedb4c441e32a2eaed0875d4f383832d0b9e062dfff73cf9133173bbc4609eb3f6d40927a70bc01
 Size (nntpclnt-1.6.1.tar.gz) = 34369 bytes
 SHA1 (patch-aa) = e4c947e9acdd6f814437409e475b819588c444fa
