@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:49:49 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:24:12 nia Exp $
 
-RMD160 (suse131/mozilla-nss-3.23-80.1.i586.rpm) = 5f46941530aaceae04530287c315ce073e28cd7b
+BLAKE2s (suse131/mozilla-nss-3.23-80.1.i586.rpm) = a2e19790edc7b2698a7a3ec85978473cff9f91fd7b7589103d18aa24ff740783
 SHA512 (suse131/mozilla-nss-3.23-80.1.i586.rpm) = e14ac4080a22ed8aa256e6a9c0f581636a1e3bd91a19779a5dc3cb442fc49159ac9f6932ae6dd540f9e01fceb4bf239517ee0a88997d19df4cfe338526d94dac
 Size (suse131/mozilla-nss-3.23-80.1.i586.rpm) = 614399 bytes
-RMD160 (suse131/mozilla-nss-3.23-80.1.x86_64.rpm) = 21bde7b6093ab0201d214d38442682f253c83621
+BLAKE2s (suse131/mozilla-nss-3.23-80.1.x86_64.rpm) = 209db22c5c30a879df4a5379c92606bf268f102ca21af67ce78f6d68143330a6
 SHA512 (suse131/mozilla-nss-3.23-80.1.x86_64.rpm) = 25c1d721dad2968558bf5722a857dcfe66a99cbb56bc71385b5ff47dfadf6d8e7bb7fdcdc7578847aa11db0302e05cad0d20ff3d58869a78c49fbb412fbeeeef
 Size (suse131/mozilla-nss-3.23-80.1.x86_64.rpm) = 624328 bytes

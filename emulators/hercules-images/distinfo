@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:49:30 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:23:52 nia Exp $
 
-RMD160 (mftr33.tar.gz) = 6b5cbc18fede7311dfd6468e8e3a54e664c5041d
+BLAKE2s (mftr33.tar.gz) = 261147aa058ac5e5c0bf2ee7f7e46bd6b029f9cc1bb111187a8226817e3a642f
 SHA512 (mftr33.tar.gz) = 40ab55f35c25f682add33cefdb75d6bd7bda09bbeb76590f2f133930c44cdba105fe600dcaa9e3a8674e3ee8aa5c6ed2f9ac3577e20cc7b61f5426075fda7f5b
 Size (mftr33.tar.gz) = 1709790 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:49:34 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:23:56 nia Exp $
 
-RMD160 (libretro-prosystem-20180812-463dfff97f2e7d707ee5ae238cb2e8e70beb585a.tar.gz) = bb8f5146c69ca80b2f3ef500bb025733b6bc8c19
+BLAKE2s (libretro-prosystem-20180812-463dfff97f2e7d707ee5ae238cb2e8e70beb585a.tar.gz) = dfb36a764d51333299a2323609207b96dfe11a801e1295f60c2f492969983e97
 SHA512 (libretro-prosystem-20180812-463dfff97f2e7d707ee5ae238cb2e8e70beb585a.tar.gz) = 2ad8bc5fa14a6de94b57203b123841f9ed25207e0692a93721fafaee089d8177b239187b0e67aac79cf0db2bf3296320aeaf9e0f078416563710d4a3fa376c2e
 Size (libretro-prosystem-20180812-463dfff97f2e7d707ee5ae238cb2e8e70beb585a.tar.gz) = 74090 bytes

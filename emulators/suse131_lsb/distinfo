@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:49:49 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:24:12 nia Exp $
 
-RMD160 (suse131/lsb-4.0-22.3.1.i586.rpm) = ad5a5a559481233b7c9a889d71110bec897ba4fc
+BLAKE2s (suse131/lsb-4.0-22.3.1.i586.rpm) = 8d86cdda322c4def937bbc0b0324ec88808b026fdb8d55c154c4042d82da6f92
 SHA512 (suse131/lsb-4.0-22.3.1.i586.rpm) = 3d1418f63249fdd5b30f9ef5b0f465b83b1c7f1f9622dd1df63a187549c51bc187acee2f3cbde057d6f96654fbbb28ee22da057631c9798d0f1949cfca2255ea
 Size (suse131/lsb-4.0-22.3.1.i586.rpm) = 8368 bytes
-RMD160 (suse131/lsb-4.0-22.3.1.x86_64.rpm) = 55a1a6dc244eb1f258d249e550d220d875791e13
+BLAKE2s (suse131/lsb-4.0-22.3.1.x86_64.rpm) = a3a15aa4dcd683de5318eaeaf0858bb395fed010e3330495b6c76dbf70f13eb9
 SHA512 (suse131/lsb-4.0-22.3.1.x86_64.rpm) = c4cf3fb1365d5f9fcbedd8fc33327ce87112907cac7b37116d797a508bee80dfdfa99fe50322c4657f62781671f9a07472c394331bef1f933dc50de7e26211af
 Size (suse131/lsb-4.0-22.3.1.x86_64.rpm) = 8744 bytes

@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:49:46 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:24:08 nia Exp $
 
-RMD160 (suse131/dbus-1-glib-0.100.2-2.1.3.i586.rpm) = ccda7d8d4d1816767fdf790e3f80e62e5e715d73
+BLAKE2s (suse131/dbus-1-glib-0.100.2-2.1.3.i586.rpm) = 9f00a1cb5af2b9b260972c9eca7a36aa3da791cbb3297ea74709c9b621f4c5ea
 SHA512 (suse131/dbus-1-glib-0.100.2-2.1.3.i586.rpm) = cc266cea75c5ae1e4ea04cefa0c3c84cdad79b7b72446443b941768f200bf5974afa507427e46ad47ba9be2aac77e08c0fc025a848a3589b1293097cb0bc349b
 Size (suse131/dbus-1-glib-0.100.2-2.1.3.i586.rpm) = 71809 bytes
-RMD160 (suse131/dbus-1-glib-0.100.2-2.1.3.x86_64.rpm) = eeec4de2926baaa25af59323e1f1310215b84dea
+BLAKE2s (suse131/dbus-1-glib-0.100.2-2.1.3.x86_64.rpm) = 65810917ff1bcec33b1308f7fdd66f4a1a30dd10bff4aafe9e06e1221f8deea3
 SHA512 (suse131/dbus-1-glib-0.100.2-2.1.3.x86_64.rpm) = ca01c75f7776ee61b85ddc05ca08e32f92c4b9e31a4dffed93385bcdba84a959106d6e95e23fdc5ffcdda8fec479c5fa775f642bb2b203d76cd26f8e11d51df7
 Size (suse131/dbus-1-glib-0.100.2-2.1.3.x86_64.rpm) = 72039 bytes
