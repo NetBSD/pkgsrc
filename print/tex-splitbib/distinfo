@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:51:30 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:14:40 nia Exp $
 
-RMD160 (tex-splitbib-15878/splitbib.tar.xz) = 462cfe5f64efc92707ecdd9b59911da1274579dc
+BLAKE2s (tex-splitbib-15878/splitbib.tar.xz) = 4adb190267f766fc30af8c400f22ddff871956f7746820cc4890eba169fff5d2
 SHA512 (tex-splitbib-15878/splitbib.tar.xz) = ef44a0d893c6965697fef1b7544be9053498015beabed97760416a58a50faf119d668066ef355c2971cd4758e4f70878cb65e72132fd3ab0efe201e3dc48674d
 Size (tex-splitbib-15878/splitbib.tar.xz) = 4804 bytes

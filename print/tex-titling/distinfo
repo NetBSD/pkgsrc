@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:42 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:53 nia Exp $
 
-RMD160 (tex-titling-15878/titling.tar.xz) = c2a5e93143229bc3e77b736a46cd4b38d3c69368
+BLAKE2s (tex-titling-15878/titling.tar.xz) = 30f195d1bea94710d25063b17e1b9ee616b11cdfecc5b0ee677ccaf44c05bc5a
 SHA512 (tex-titling-15878/titling.tar.xz) = 0ced34911c77fdd122051d2e92fa6f76fb279196693f2511263787f2f7584646dd04bbebf26aac598d917d0041ad56c9373f79433a25deb772468c47565dd434
 Size (tex-titling-15878/titling.tar.xz) = 2528 bytes

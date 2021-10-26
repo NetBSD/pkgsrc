@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:54 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:05 nia Exp $
 
-RMD160 (tex-milog-41610/milog.doc.tar.xz) = 6cb38ca92de8ebda1f0a6c91204e7be165d4029b
+BLAKE2s (tex-milog-41610/milog.doc.tar.xz) = ef2fdda4a1efaeadbfd9a75ed07e1f5b06e35da36a5997671b00c276f4430d1c
 SHA512 (tex-milog-41610/milog.doc.tar.xz) = 2e929ec3dce13279c6f9cf3f98771b5501c01bd0756cc17231d5306b7e1e55725d152e1abe9c4281623bd33565285c2def81b63b71e005ac2faf0c032b61f293
 Size (tex-milog-41610/milog.doc.tar.xz) = 404068 bytes

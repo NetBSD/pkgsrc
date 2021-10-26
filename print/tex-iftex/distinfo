@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:50:32 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:13:43 nia Exp $
 
-RMD160 (iftex.r54159.tar.xz) = b0d977dd97d883e43b70e6812a765ee30eb28933
+BLAKE2s (iftex.r54159.tar.xz) = 8f1fc12e426ac3142b47df0d269cf0928f40c9ca1d2f93a1d3ca27a54d0dc435
 SHA512 (iftex.r54159.tar.xz) = 144772d49d42f957815ce9594e7f005e942c82c948ffdec22a36633e0fd26b0e0c2af94afb7f7113bb6d1f422513987e119077896a9f199db06763be43c8dc22
 Size (iftex.r54159.tar.xz) = 3004 bytes

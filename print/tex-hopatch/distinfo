@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:21 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:32 nia Exp $
 
-RMD160 (hopatch.r56106.tar.xz) = 16cec949d680cedce3c07d7a72744e3ec7afc232
+BLAKE2s (hopatch.r56106.tar.xz) = b116de0b326dddea651a9f7f06cbafa6306607c1a6dc368f710454011ae11ebb
 SHA512 (hopatch.r56106.tar.xz) = 1658c78cf7671e821ed38825f8b0a0dd96b268c80afb0e64b27129c08e6c9375a7c8e3e5019361e100cb11691a0d27fe533aa2d000306a38b752114a0eac4d12
 Size (hopatch.r56106.tar.xz) = 2184 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:16 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:28 nia Exp $
 
-RMD160 (askinclude.doc.r54725.tar.xz) = 5e5ac3915b17b02a85d60b488566323a7bba4485
+BLAKE2s (askinclude.doc.r54725.tar.xz) = 8e480587bf429e63c9fe3dd3da572b844153e31a3f35a41de273c223c7a49d24
 SHA512 (askinclude.doc.r54725.tar.xz) = a06a9170ad1637c35a25c9a0d89f3721ec350a0053cb5b85374fdb5cc67e7d4653e75c2a5f9b47d19700e3e9ab2d70e5c0c419f68715e664185bd30759dc0291
 Size (askinclude.doc.r54725.tar.xz) = 591304 bytes

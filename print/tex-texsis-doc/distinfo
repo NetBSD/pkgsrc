@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:39 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:51 nia Exp $
 
-RMD160 (tex-texsis-31958/texsis.doc.tar.xz) = a73c0f87f7a5eb80043b44698007d048b6769faf
+BLAKE2s (tex-texsis-31958/texsis.doc.tar.xz) = e8a584154079cc94d555429d43a31e7644273415c358fa0aa9c58343cf7745dc
 SHA512 (tex-texsis-31958/texsis.doc.tar.xz) = d4786f3899d6359ea514cc79794194635ba58d96c817e1a06b1ec5099bd94ed47443aed9982feba033afdc72cc0f5888870a4dda8ba2b4390f41d22539537cc0
 Size (tex-texsis-31958/texsis.doc.tar.xz) = 130016 bytes

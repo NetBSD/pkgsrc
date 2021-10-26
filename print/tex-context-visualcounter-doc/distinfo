@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:50 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:01 nia Exp $
 
-RMD160 (tex-context-visualcounter-36190/context-visualcounter.doc.tar.xz) = 57febcff0b9384e44be019a3462f623612555781
+BLAKE2s (tex-context-visualcounter-36190/context-visualcounter.doc.tar.xz) = e56d8785ab66f258c73c1f0daf508c68d25a48186f87ac2d25af520797ac4fb9
 SHA512 (tex-context-visualcounter-36190/context-visualcounter.doc.tar.xz) = f517ae8eb0994d72508d264cc438ff3840ab3cc8ce1d975a5d0c1978739399d2a6fe5ba0da7bf0c0e428925ee47a3b42ae44cd8876ccb3dbb8ff598d680bc660
 Size (tex-context-visualcounter-36190/context-visualcounter.doc.tar.xz) = 263528 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:56 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:13:06 nia Exp $
 
-RMD160 (tex-dblfloatfix-28983/dblfloatfix.tar.xz) = b29f74160f7698d8f16c08798e7d70d9af52e64e
+BLAKE2s (tex-dblfloatfix-28983/dblfloatfix.tar.xz) = d61ba68a895e568e4dbfd139b278f1fd9bc9281146843c6a4143d18d26c68ded
 SHA512 (tex-dblfloatfix-28983/dblfloatfix.tar.xz) = 1bb7227f711637301ceb42cb0392d0a6fad4c2ab24bbb612683bd1f2cd9ee8abc752d19dfacf17ce2e2f710a512bec33f20407c0ecb30de9d2ced48ac96276ed
 Size (tex-dblfloatfix-28983/dblfloatfix.tar.xz) = 2660 bytes

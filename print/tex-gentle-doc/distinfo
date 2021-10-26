@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:15 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:13:26 nia Exp $
 
-RMD160 (tex-gentle-15878/gentle.doc.tar.xz) = 251c59b6c9d50a6bf1c4c2f84bd4a3077f59bbd3
+BLAKE2s (tex-gentle-15878/gentle.doc.tar.xz) = 8797e1f8d89a8a6158f3572cb57cc6f08a7b0c34048dcc53f4d4d8c9f473b11d
 SHA512 (tex-gentle-15878/gentle.doc.tar.xz) = 3fe5623b21be2a49b946d3f6f48cb0d1770e78a029fe0d039d30614343af18ed53b5faebf66bf3823e573091d9e8250b6f5f32b3e8421638023d8ded1615cab8
 Size (tex-gentle-15878/gentle.doc.tar.xz) = 394792 bytes

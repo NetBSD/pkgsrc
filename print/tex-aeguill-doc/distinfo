@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:49:11 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:12:23 nia Exp $
 
-RMD160 (tex-aeguill-15878/aeguill.doc.tar.xz) = 252168600d2c02dd65141da7b704ad0e76227b92
+BLAKE2s (tex-aeguill-15878/aeguill.doc.tar.xz) = 786e8c542a3bdd472adc77d6a39459bb8392e35abe6e0e27a659f07b63bc50f1
 SHA512 (tex-aeguill-15878/aeguill.doc.tar.xz) = f823f3716ddc517e2df499c7f9f9f9ff381599594f20979a1c0a9e3f6f6d6a4561041278021e3b145537829f5f494e683bea00092db03c2cb381c9c3b63abfc9
 Size (tex-aeguill-15878/aeguill.doc.tar.xz) = 26984 bytes

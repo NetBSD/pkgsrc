@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:48:52 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:04 nia Exp $
 
-RMD160 (cups-pdf_3.0.1.tar.gz) = 7851d33a67e5e6df7f0737d0f5fb320411d08487
+BLAKE2s (cups-pdf_3.0.1.tar.gz) = f403f95b253aeec174159178356c413c37b4caefcd0055b387d50d67cb50f7d0
 SHA512 (cups-pdf_3.0.1.tar.gz) = a06580f3056dddbb883c8db0c71b37b883482ae1ac8aa9bcfd85e679c4dcb44278006b7110d2988173d0eeb05b0f19fb39081fad49bf26839235e97fbe27a818
 Size (cups-pdf_3.0.1.tar.gz) = 29754 bytes

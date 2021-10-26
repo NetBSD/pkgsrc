@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:21 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:33 nia Exp $
 
-RMD160 (tex-babel-latvian-46681/babel-latvian.tar.xz) = ea73979d6720c1a5ffdde3187bcf0adb96da7a4b
+BLAKE2s (tex-babel-latvian-46681/babel-latvian.tar.xz) = 77026c20960c94c8a784cae3dfca010c0d14b915d63da47cd6bd9ee253e3e6ab
 SHA512 (tex-babel-latvian-46681/babel-latvian.tar.xz) = 592b549373348ae56695c3d2494669795dcca1c0016526bd486f96b9e624afa51f9e82f3b0e0e5a77944fc3b8a3abcd6957149925c4cc50ec828893803dcb46b
 Size (tex-babel-latvian-46681/babel-latvian.tar.xz) = 4140 bytes

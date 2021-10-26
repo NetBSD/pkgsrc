@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:50:39 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:13:50 nia Exp $
 
-RMD160 (tex-lastpage-36680/lastpage.tar.xz) = 4ba78855fea7e7dc77f74b49aff08a5b3c49d03e
+BLAKE2s (tex-lastpage-36680/lastpage.tar.xz) = 952e06ac015b510b51959b9d7dbe1d1f297a35b4621201f99c03e3e42e04e075
 SHA512 (tex-lastpage-36680/lastpage.tar.xz) = 377d8d570cbc2504c829560b7b0915217e988723fb4502c6602428ffdacfb75b0042ecb2af1735915dfb6a89703ffb8c2c3d65a92809a726401cd05739bf80b7
 Size (tex-lastpage-36680/lastpage.tar.xz) = 3528 bytes

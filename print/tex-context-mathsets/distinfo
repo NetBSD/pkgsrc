@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:48 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:59 nia Exp $
 
-RMD160 (tex-context-mathsets-23167/context-mathsets.tar.xz) = 4f552ce4e6863bb89570ed8fe6b339abdb3e1fe0
+BLAKE2s (tex-context-mathsets-23167/context-mathsets.tar.xz) = 8007df8ef1644dbc83adf76620740b2f936f02f7de1be6c286710485735f4717
 SHA512 (tex-context-mathsets-23167/context-mathsets.tar.xz) = 8b941d6910a63044a150e650918b8c4bd974b75b5692ef192647efbae2de44fef0a034f097c6c29f4deff8243629681e9259d050b83c2122b4df25bc580c0c0a
 Size (tex-context-mathsets-23167/context-mathsets.tar.xz) = 4900 bytes

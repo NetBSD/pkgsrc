@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:50 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:15:01 nia Exp $
 
-RMD160 (uniquecounter.doc.r53162.tar.xz) = 2edaede13ac9151e4259151ae0a5ca916ccb5289
+BLAKE2s (uniquecounter.doc.r53162.tar.xz) = cccf9d9c8aea8fdbe5664a0dc2b5c2ce3b25ff30b0e22f4b3c5ffe45e444fb85
 SHA512 (uniquecounter.doc.r53162.tar.xz) = 4dc74aabd9288ae881c4513886ff917e1e8bf08446d3b34c946bded6a6fa71ea7b6786bf432fec2661cd1db1af6b5875ab329708cc3c443499b83b0325645d0f
 Size (uniquecounter.doc.r53162.tar.xz) = 291268 bytes

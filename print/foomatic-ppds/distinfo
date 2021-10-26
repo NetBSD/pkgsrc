@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:48:55 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:06 nia Exp $
 
-RMD160 (foomatic-filters-ppds-20070207.tar.gz) = c467d5cecd99845635d60a0c53703a9e849c3cdd
+BLAKE2s (foomatic-filters-ppds-20070207.tar.gz) = 415a2d93dcfbc778967cc7b0e4626bccd64c9770a55df620281b40d57cdc3cab
 SHA512 (foomatic-filters-ppds-20070207.tar.gz) = 2400104982a5ffbfc14b581f2026a8e2ae5faad99e74eec8869186fbdfe73e6ec4667c0bdcb478be37be116c5b338d168c9678a928fb7985894b2fe66988f526
 Size (foomatic-filters-ppds-20070207.tar.gz) = 11417022 bytes

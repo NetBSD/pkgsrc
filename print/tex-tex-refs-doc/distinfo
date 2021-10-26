@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:37 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:48 nia Exp $
 
-RMD160 (tex-tex-refs-31946/tex-refs.doc.tar.xz) = 65b48f9bf547292e2fda4d849620929496cd0c9c
+BLAKE2s (tex-tex-refs-31946/tex-refs.doc.tar.xz) = f365095c2c5f04f6f75232e637f86324966fcc485010cfa139929e7c01865bd0
 SHA512 (tex-tex-refs-31946/tex-refs.doc.tar.xz) = 164600d7296798fb266bd77d1b170ed7dbd22a3c7cf3c9f19ced5c413ccf38742df3c1ab42ec538613a727ba1f3194875ce255c64d5d31bea1fa64fb9c9b2c30
 Size (tex-tex-refs-31946/tex-refs.doc.tar.xz) = 423932 bytes

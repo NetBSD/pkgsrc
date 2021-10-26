@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:27 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:37 nia Exp $
 
-RMD160 (beamertheme-upenn-bc.r29937.tar.xz) = d242ada2a041dd580cd292fe8691ea0737b7415c
+BLAKE2s (beamertheme-upenn-bc.r29937.tar.xz) = 8ab260d934143597b2fc8a943b204d91cf2b4c0df7d5b37d3daf83e1abc629a6
 SHA512 (beamertheme-upenn-bc.r29937.tar.xz) = 0c483991348107a2b9102e514ec05838a9ae3e97dceddcbf3b8cc21ae635a272c7d70d97b2e1a0929b7545e50560f16a71f7b290ca16cdfd63177782b993b714
 Size (beamertheme-upenn-bc.r29937.tar.xz) = 1660 bytes

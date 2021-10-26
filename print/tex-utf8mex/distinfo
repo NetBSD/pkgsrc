@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:52 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:15:03 nia Exp $
 
-RMD160 (tex-utf8mex-15878/utf8mex.tar.xz) = fe0f616d30088ff78f008137681ec5036ff7298d
+BLAKE2s (tex-utf8mex-15878/utf8mex.tar.xz) = d7cd46341187e8c322194402599d29e192179cda6706fa8947f3c0bd8cb662ad
 SHA512 (tex-utf8mex-15878/utf8mex.tar.xz) = 5b02bd690296c03e88cc7f79c6532710d161e7d378982b2cb2b1680d5d892d44ce29733966437ab9d95062357b2b5e70259674260a2943253772dc22db8008f1
 Size (tex-utf8mex-15878/utf8mex.tar.xz) = 2868 bytes

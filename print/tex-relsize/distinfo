@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:51:20 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:14:31 nia Exp $
 
-RMD160 (tex-relsize-30707/relsize.tar.xz) = f41e6a7774857ad1f57540cf0bf4cd07666a1d0d
+BLAKE2s (tex-relsize-30707/relsize.tar.xz) = 23e4d1933c3eb6649111becd9f857ea40c5a028947c4046964e04d82c3ef0701
 SHA512 (tex-relsize-30707/relsize.tar.xz) = 510b8be4379ceba6ddb6b12c237ae6f4ea40186e8de4241535445a47b42ed91c8fc3fa5d319fbbc686e97709bb153f27aee8d6507219b22cb7dc52629d91543a
 Size (tex-relsize-30707/relsize.tar.xz) = 5700 bytes

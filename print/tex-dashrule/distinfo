@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:55 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:05 nia Exp $
 
-RMD160 (dashrule.r29579.tar.xz) = df3e3cf02ecd0cde77a785bbc672665f148422f2
+BLAKE2s (dashrule.r29579.tar.xz) = 7c2cd57856e265d1038c8e7d7f8e1888f6245e8accc7a58849bccc572e15d8f0
 SHA512 (dashrule.r29579.tar.xz) = 4b1b993e9044eb2ed4bf6bde0c114b0cd1fe7daed38f8bc5d3e25a2705d55cb41b8a372cce84b0d61093044d970003a4317de98cb468978c8cb1a8315f980940
 Size (dashrule.r29579.tar.xz) = 1488 bytes

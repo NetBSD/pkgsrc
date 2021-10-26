@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:23 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:34 nia Exp $
 
-RMD160 (hyperxmp.doc.r57004.tar.xz) = 360baaa58ab75d2ee22343e36403c02fa2dab89a
+BLAKE2s (hyperxmp.doc.r57004.tar.xz) = 37405149abfe3e51d4b3f5f7da628031a5ef85f7856a308ecd229eb3c1639d5d
 SHA512 (hyperxmp.doc.r57004.tar.xz) = e63bb28383038ca1ac45bf0af92a95e50383b1a9dc3714b3e077a37d92022c4304dd00ab313979c7b7763f2ec6ba8946f6ba71fb09fc0870d02a0ac89be25c53
 Size (hyperxmp.doc.r57004.tar.xz) = 1163204 bytes

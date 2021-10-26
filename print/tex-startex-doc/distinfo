@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:30 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:41 nia Exp $
 
-RMD160 (tex-startex-35718/startex.doc.tar.xz) = 6e8258a17f84cda82c9b315bd61c6200d568c5b1
+BLAKE2s (tex-startex-35718/startex.doc.tar.xz) = ec60615041bd8df7ef3593b2ce7f5fc646cf67d6c2820f813834ef956c3901ff
 SHA512 (tex-startex-35718/startex.doc.tar.xz) = 48f64850181a8572f66eabfa4ec0b64fac04c8e760f50d5acdea933ddee11d4ded7b81e09e5aa369926bc44a8428207ae7d7ce6e84cbca2bd700fe2e24ecdcab
 Size (tex-startex-35718/startex.doc.tar.xz) = 511984 bytes

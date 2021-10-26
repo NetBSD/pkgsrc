@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:49:53 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:13:04 nia Exp $
 
-RMD160 (tex-custom-bib-24729/custom-bib.tar.xz) = 9a2bb1563b7c6deabf27d98e3447c4700ac54365
+BLAKE2s (tex-custom-bib-24729/custom-bib.tar.xz) = b8e95900a9ae018f691c0d742ad5d9bd5e540ef9e1f1ae97403713345462a826
 SHA512 (tex-custom-bib-24729/custom-bib.tar.xz) = d2d628fdea761fec6a14c7449f17bd963e57ca0f90b4d90a63ecfd7b1b613309160c1e2b4258437b42a7ac96168662e0173660d5fae7b3824a182291b574f465
 Size (tex-custom-bib-24729/custom-bib.tar.xz) = 84500 bytes

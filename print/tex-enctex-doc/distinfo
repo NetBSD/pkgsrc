@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:50:00 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:13:11 nia Exp $
 
-RMD160 (tex-enctex-34957/enctex.doc.tar.xz) = 0dfe95bebd20ac9d53de738fa7e5ad7334cfc628
+BLAKE2s (tex-enctex-34957/enctex.doc.tar.xz) = f449648bd0854d54e76a66a0b40fd0853031283fc10e0bbb9cfe44af6b988fba
 SHA512 (tex-enctex-34957/enctex.doc.tar.xz) = 2c488902018fd41044b13972e0f0f5ff683830b5f81ad8283656645df7a5f93bd54c705b42c75ba7b4f4bec2fc85879f6d44c9b8c8d5377775c500e463eb93cc
 Size (tex-enctex-34957/enctex.doc.tar.xz) = 253872 bytes

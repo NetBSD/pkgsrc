@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:58 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:15:14 nia Exp $
 
-RMD160 (yup-r1-rel.tgz) = 6125f3969a7d09b4bcc1d37df6bacb545264438e
+BLAKE2s (yup-r1-rel.tgz) = 758d4dab3ebdfa453fa86fb9510e041cd7724edeb94bd448a6500d97c2c9d440
 SHA512 (yup-r1-rel.tgz) = 4cf72a1a44a963ec138bb0392c5de0e6b06f53839ab25541210b80978cab985281a440cd95b7344b735fa21aba6040a95f8723743c893c7b0b057d526a3ce2f3
 Size (yup-r1-rel.tgz) = 89529 bytes
 SHA1 (patch-aa) = bbc3e7f463c6376c85aead6698af42840debe4a4

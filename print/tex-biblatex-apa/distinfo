@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:49:28 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:12:38 nia Exp $
 
-RMD160 (biblatex-apa.r56208.tar.xz) = 6106afa75b07cb8d1d3940bd6e8ece41048c71f3
+BLAKE2s (biblatex-apa.r56208.tar.xz) = 89df23046cd35706f97c08bfb3c09dc010664f24f8f8121835eaed8f96d9f9f5
 SHA512 (biblatex-apa.r56208.tar.xz) = 59ffdb263b02b4934955037f377164297871b10ab3794dd8a11b70cecaf9e773bdd2b3b2aef24d5085672614a51956ed8083866c6f56c72a8c8eb4c1ef6a775a
 Size (biblatex-apa.r56208.tar.xz) = 24868 bytes

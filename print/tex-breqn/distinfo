@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:49:32 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:12:43 nia Exp $
 
-RMD160 (breqn.r56422.tar.xz) = 843ebe71209cac48808f39e6eac8e7ace90a4cf8
+BLAKE2s (breqn.r56422.tar.xz) = fa506d43696ac7afb3e74c5098718aec4e94ba98f7573756f15dbb0367705928
 SHA512 (breqn.r56422.tar.xz) = ea1df2ebb14d755225368fafac24e2068b317b56c4a42fb10011f1fb9f233a7d40bd83b0063271ac8efcac67725f32e12e0ef63467cb045bd460abe5f84638f7
 Size (breqn.r56422.tar.xz) = 24368 bytes

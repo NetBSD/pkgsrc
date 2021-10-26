@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:50:57 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:14:07 nia Exp $
 
-RMD160 (multirow.r58396.tar.xz) = 763ae7ec089ac4c51f141687df6e1b391a0561e0
+BLAKE2s (multirow.r58396.tar.xz) = 163ccd64f9e38fc71becf81249ed2f2bbb4b18374b411c65c19b2b67d42539c9
 SHA512 (multirow.r58396.tar.xz) = 7591c7994fcac6fe351189c1364b448ac8b82e88bdaa50ec87c72123961a1bddfc02b397d5955eb96b9d47b4bcc9b6c1352eab0016b1dec24e034a95c53323fd
 Size (multirow.r58396.tar.xz) = 2796 bytes

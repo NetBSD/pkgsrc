@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:51:13 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:14:24 nia Exp $
 
-RMD160 (polytable.r55837.tar.xz) = 81dac47fb8c440469d4eb7b6bfacafc27aa716d5
+BLAKE2s (polytable.r55837.tar.xz) = be95dcc17edb620f162d0299b7e2aa4db1051ddf4f58a5956149e526125399fe
 SHA512 (polytable.r55837.tar.xz) = 2ff55bb460357dc11b274ad3233e5ddd67fbfe05e60d25bcc69f1d06f9b0f247831cb5db4123b7ff859dfa88bd56fd5bdfc24aa992e98f5a17d0f883b40fcd2e
 Size (polytable.r55837.tar.xz) = 6408 bytes

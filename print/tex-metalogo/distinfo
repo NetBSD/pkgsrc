@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:52 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:03 nia Exp $
 
-RMD160 (tex-metalogo-18611/metalogo.tar.xz) = 4da4f2b17a0d90ba4c4cb4ef943147b5b67de6ba
+BLAKE2s (tex-metalogo-18611/metalogo.tar.xz) = 37ff438d72be259bb6bdc1de19f0fc4d3a46259125fa74d13d5e6d822e511021
 SHA512 (tex-metalogo-18611/metalogo.tar.xz) = 892d3d7bf94193621f50bcafae09f441a4bd5330472f0fbcbd8756651778daad24ff504a82d0c4607d80254f7d2916e4fb984ef44b08391056946be311bbf2c9
 Size (tex-metalogo-18611/metalogo.tar.xz) = 2220 bytes

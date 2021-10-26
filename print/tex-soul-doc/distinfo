@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:51:29 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:14:40 nia Exp $
 
-RMD160 (soul.doc.r56495.tar.xz) = 6e3e4af6b5605bf844c9a90931734754add25462
+BLAKE2s (soul.doc.r56495.tar.xz) = f4ed60fe655b6ae9b9104e2320bd56d33d49d477e37d98051197ec77ce9b2fdf
 SHA512 (soul.doc.r56495.tar.xz) = 282fb6039f870e869f650ad2c4523dd4222c9d5c01359c6242c33c2b4d29b494e0c047e67ec44adc0830043ab0594d49e9251c6c9b256ff9709e9764d7432e19
 Size (soul.doc.r56495.tar.xz) = 308320 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:44 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:13:55 nia Exp $
 
-RMD160 (tex-listing-1.2/listing.tar.xz) = ac817653c91e8f18f7f593913b644c0f6f82586e
+BLAKE2s (tex-listing-1.2/listing.tar.xz) = 0470f2fa171ccb6f5cca68826b12e1a9bd0636b15e100dad91fb5774963d564c
 SHA512 (tex-listing-1.2/listing.tar.xz) = 82f2d316ad2f5e7595546cb338e6f03e1c4d0aee5976b3a1440ed0cc4818f719ee47d39e81725d3f63f235be55adcd6b36647300775e397c6100010cad48151b
 Size (tex-listing-1.2/listing.tar.xz) = 1952 bytes

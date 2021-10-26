@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:06 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:17 nia Exp $
 
-RMD160 (everysel.r57489.tar.xz) = 5712799132c3aed2b553596e9ec9b81d9144589d
+BLAKE2s (everysel.r57489.tar.xz) = dcf30a6220a95ddcd1c8f3029481f872adacbfd7eafd89f486b640f47d9a095b
 SHA512 (everysel.r57489.tar.xz) = 79b83d48e3e6eedcf1673a30c28fc06eb2ed8e3bd292d6cf914faf5ce2929795e6dd11baae3a207c796abb67ced2a2442af11c2618fd7d565696f8bfd121a0a2
 Size (everysel.r57489.tar.xz) = 2380 bytes

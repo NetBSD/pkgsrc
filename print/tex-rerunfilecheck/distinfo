@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:20 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:31 nia Exp $
 
-RMD160 (rerunfilecheck.r54841.tar.xz) = 4a66c3b626e207e1c1bcca384a4e39bde6399d29
+BLAKE2s (rerunfilecheck.r54841.tar.xz) = 17406850a3ccd2c3a0dcd06397aea516a2acefefa6867176c7ba077c36913e61
 SHA512 (rerunfilecheck.r54841.tar.xz) = 0ac228620001a42add1da0ea4ee7511413789e6c8e139a8a8a9f5cd0423893b324c1ca3644cef7b16bb5d2d4df26baa73b61d7aea2592b752e446b7185ff0cf5
 Size (rerunfilecheck.r54841.tar.xz) = 3124 bytes

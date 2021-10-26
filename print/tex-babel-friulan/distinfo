@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:20 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:31 nia Exp $
 
-RMD160 (tex-babel-friulan-39861/babel-friulan.tar.xz) = bb3ea9ff0d0d14c9c89e10b736bfffb044fc7099
+BLAKE2s (tex-babel-friulan-39861/babel-friulan.tar.xz) = 7d4b4a7f053c3cac2d70aee4c58f3417608826808597f57b1a86f3f2db2c5725
 SHA512 (tex-babel-friulan-39861/babel-friulan.tar.xz) = 248a15bda269eee791945df1664ac668dc37b7cc52e1d59b264f447f2fdd531cc72279e1d4a95a7dbffabf2579aafda8d4b3ec3ef39865248a0349590bb906ed
 Size (tex-babel-friulan-39861/babel-friulan.tar.xz) = 1576 bytes

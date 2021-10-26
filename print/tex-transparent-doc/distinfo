@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:46 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:57 nia Exp $
 
-RMD160 (transparent.doc.r52981.tar.xz) = fd69ce1cff74c4d5895d10e985d91c8c50dd85a4
+BLAKE2s (transparent.doc.r52981.tar.xz) = 380381288ad70904cb211f3c0a44d2a5dba491034a0d06e653744d399049e43b
 SHA512 (transparent.doc.r52981.tar.xz) = 7de04001cea582db36ed0fb0b5f8382a367603d8ce8327d29d773d05af116ae76adddd678b220d2df8abf7c6c619bee9f050f51c5aa255d7b0fb9b576638e049
 Size (transparent.doc.r52981.tar.xz) = 266624 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:26 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:37 nia Exp $
 
-RMD160 (beamertheme-epyt.r41404.tar.xz) = 3ca004caf339a4b65397bbde7fdf0912383b396d
+BLAKE2s (beamertheme-epyt.r41404.tar.xz) = 3655a99758a63bbe0e459124ffb596a76a11597945570ab5c72cbed372db80ac
 SHA512 (beamertheme-epyt.r41404.tar.xz) = 2bf451ccfe095384aeec149e97d7022cefaf997cd19dedffcad5606fc149739cf21b6128ef08e609aaffd6afbaa59b1cdc401cbd3ee4fbe0e997d724b713a620
 Size (beamertheme-epyt.r41404.tar.xz) = 3560 bytes

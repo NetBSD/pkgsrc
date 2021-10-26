@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:48:52 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:12:03 nia Exp $
 
-RMD160 (bww2tex200.tar.gz) = 03936d899d7b4570376c6b67511e5fec35bd5b1c
+BLAKE2s (bww2tex200.tar.gz) = e35923ecd6f951d3e1be0af1f079398697ae007a37febad039430ac5179cc7aa
 SHA512 (bww2tex200.tar.gz) = a35b3d0fe69e167df60e5957ab135ea87f07db17977e2ca641f527c7a5fc70716431a7e225a7b070ac22ffc0e9fcf2c9042783fa373524dda2bb55980663d991
 Size (bww2tex200.tar.gz) = 274364 bytes
 SHA1 (patch-aa) = f2feb22dd5fad84f6e13f6776884ab99572d190c

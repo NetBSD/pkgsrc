@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:25 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:36 nia Exp $
 
-RMD160 (tex-semantic-15878/semantic.tar.xz) = 82a6c77a5f83f4638aef20ce7264490f46e504f3
+BLAKE2s (tex-semantic-15878/semantic.tar.xz) = 51038891771957426d84f0a9dbbc6685f391579cd23ca19e1c6598d4cae2ea1e
 SHA512 (tex-semantic-15878/semantic.tar.xz) = 4d5ce32ffba5d0733dcf65495b131b5b3eb5f4ca3f58a5deca6345382db422e1411c48b86578cc2ecc48b38a007e781c11ceccfdb1b6523bbebc04bb32556b71
 Size (tex-semantic-15878/semantic.tar.xz) = 6612 bytes

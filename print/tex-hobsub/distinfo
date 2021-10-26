@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:21 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:32 nia Exp $
 
-RMD160 (hobsub.r52810.tar.xz) = 69919ce302be84c35fc89314a1d38cfd04f21485
+BLAKE2s (hobsub.r52810.tar.xz) = 07d7de61af484d4de6a21e34be7026ef03c38eec12b65822b997c75d09bf150e
 SHA512 (hobsub.r52810.tar.xz) = 586189051038582c9303935c70bed67975f51472d28b533e4b72ef341d4d93ad8f313774a5c585baf4b72d607101941f01176892499c7ecc5cec3ede2e28a693
 Size (hobsub.r52810.tar.xz) = 1264 bytes

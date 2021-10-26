@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:45 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:56 nia Exp $
 
-RMD160 (tex-context-cyrillicnumbers-29905/context-cyrillicnumbers.doc.tar.xz) = 02815226d74c9dc3b9e0b03e55f21f718952a877
+BLAKE2s (tex-context-cyrillicnumbers-29905/context-cyrillicnumbers.doc.tar.xz) = fef3a582253ae5be969f623c50a4012cb7083ce51018bac7514156bf831ee6eb
 SHA512 (tex-context-cyrillicnumbers-29905/context-cyrillicnumbers.doc.tar.xz) = 6062467457c0d3f65ea0e7bb85a144ddd9a82799bd4196eaa6bd3dfb5c04552770b0180971c9cb06cea5209ed09a09b514912ac0b89c487af4329ad38a9fc4f2
 Size (tex-context-cyrillicnumbers-29905/context-cyrillicnumbers.doc.tar.xz) = 180800 bytes

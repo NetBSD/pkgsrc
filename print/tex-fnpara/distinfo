@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:50:12 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:13:22 nia Exp $
 
-RMD160 (tex-fnpara-25607/fnpara.tar.xz) = 5be228627d1d93edc86c4a52372211c6c9f2f81d
+BLAKE2s (tex-fnpara-25607/fnpara.tar.xz) = 50f4a83eda492bf541f9e2ddd8a5366c3937882b7e3dbd0ce1165ad6fe5692eb
 SHA512 (tex-fnpara-25607/fnpara.tar.xz) = af5d4daa6e1bfcdd5faeb0846cb9267ec7385c4fd367b37241748069998d58bfcdcf85d5bebb6b839f07ed97f96a1e3635beca3e7fd811f1e5cf51161846c30c
 Size (tex-fnpara-25607/fnpara.tar.xz) = 3068 bytes

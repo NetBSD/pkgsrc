@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2021/10/07 14:49:01 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/26 11:12:12 nia Exp $
 
-RMD160 (pdf2djvu-0.9.17.1.tar.xz) = a152a321ea6e3d652b91142a1fdd2e3e46854cf9
+BLAKE2s (pdf2djvu-0.9.17.1.tar.xz) = 3f243acfacab65e0fb81f4b6231d2578e02463517a1a238387897464dcdb24b9
 SHA512 (pdf2djvu-0.9.17.1.tar.xz) = 59f4ea9a396907b3084a69fbec418d057d8625d18486185bafafb5e3273ee18e9441925a294a4829260cc3d14e7e64d69b47637d530e23360b854daeed0ed8bc
 Size (pdf2djvu-0.9.17.1.tar.xz) = 295540 bytes
 SHA1 (patch-configure) = a9528432178995625babbf6e26542373d729401b

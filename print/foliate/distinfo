@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:48:55 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:12:06 nia Exp $
 
-RMD160 (foliate-2.6.3.tar.gz) = 2d332c21c2a9b6dbd9562e2280f66d3501ef4489
+BLAKE2s (foliate-2.6.3.tar.gz) = ce1f7163015478a5faf7bbb5991ee2b0125554fd6f82bf3198b972589b815296
 SHA512 (foliate-2.6.3.tar.gz) = b3dd5bc5a02d3f2210b0c7376426a7ea1668a81fa64fea179da2ab1d852778414cce45171143814d2010d6c03b0287dbbc512884107774ec211e24c6ed8127cb
 Size (foliate-2.6.3.tar.gz) = 4822251 bytes
 SHA1 (patch-src_assets_KindleUnpack_kindleunpack.py) = 2b558fe842669982aec6087e9ce1c72f1fc52315

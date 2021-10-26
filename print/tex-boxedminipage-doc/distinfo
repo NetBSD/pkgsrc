@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:32 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:42 nia Exp $
 
-RMD160 (boxedminipage.doc.r54827.tar.xz) = 36352f4618d8edeecf21edd5c724f27ba194db57
+BLAKE2s (boxedminipage.doc.r54827.tar.xz) = d85bb7d4b00f7d7d84a18d26c038ff5930e58418eacb682bee236799fdb7e471
 SHA512 (boxedminipage.doc.r54827.tar.xz) = 54209e9e5fb8da8db65901c729b78aa3c9b536c3bca4d40437848287d8a07d955a84ea0f13d93e7e702c47c6bf8bece3b6d3f3026d5f78568205746c9009b968
 Size (boxedminipage.doc.r54827.tar.xz) = 336440 bytes

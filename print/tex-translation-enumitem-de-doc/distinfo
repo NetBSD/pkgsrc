@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:45 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:56 nia Exp $
 
-RMD160 (tex-translation-enumitem-de-24196/translation-enumitem-de.doc.tar.xz) = 8443f68021ce258b1d978671e99bc01e05829657
+BLAKE2s (tex-translation-enumitem-de-24196/translation-enumitem-de.doc.tar.xz) = 0892c6d0e66c706d8b22b27161ae4a993f2b6099d783beaf7f3a3ad8fad4e631
 SHA512 (tex-translation-enumitem-de-24196/translation-enumitem-de.doc.tar.xz) = e7813ce94a902b4518dc5ee31b4e9ab0d5e3b9cbea15f2fa7a076e2844c1595db327179e42711a4f1c0bdcdb59c5d8154d927d5a6d26e9d2717bca2892284d12
 Size (tex-translation-enumitem-de-24196/translation-enumitem-de.doc.tar.xz) = 607768 bytes

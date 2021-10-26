@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:51:21 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:14:33 nia Exp $
 
-RMD160 (tex-rotating-16832/rotating.doc.tar.xz) = db5367c711dc6f48b3c5c3c2cb5481d216f31c5b
+BLAKE2s (tex-rotating-16832/rotating.doc.tar.xz) = e695a3996211dacf76cfecb58df7e40ee6a6962411d2b107f5b9ec92a263fc02
 SHA512 (tex-rotating-16832/rotating.doc.tar.xz) = 5b3050c697226bb519d13e88d114635d0bff4fda66f18a1324da3327d2c0cea5f634122a783930ac22fd498e4e1124770f1561f56430bdf67297a963c4c14e4a
 Size (tex-rotating-16832/rotating.doc.tar.xz) = 93940 bytes

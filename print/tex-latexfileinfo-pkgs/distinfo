@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:42 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:13:53 nia Exp $
 
-RMD160 (tex-latexfileinfo-pkgs-26760/latexfileinfo-pkgs.tar.xz) = 0eb72e4fe5724705fcbfef224bb21c5ecab95b1b
+BLAKE2s (tex-latexfileinfo-pkgs-26760/latexfileinfo-pkgs.tar.xz) = 74b00f1741cc8c15fe56b0c0b72ecad68054af31aa9b941c2a363da99ae1b59c
 SHA512 (tex-latexfileinfo-pkgs-26760/latexfileinfo-pkgs.tar.xz) = 36ec80876f12d184fb920e806cb54a174a055f9ac06fa102b5ab87729471524e400002191d4073d9aa512ccb578caff707d7932fcec27e1c56974d45c6ec015e
 Size (tex-latexfileinfo-pkgs-26760/latexfileinfo-pkgs.tar.xz) = 792 bytes

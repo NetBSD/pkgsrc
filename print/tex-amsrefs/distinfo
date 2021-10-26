@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:49:13 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:12:24 nia Exp $
 
-RMD160 (tex-amsrefs-30646/amsrefs.tar.xz) = 845200f17d0d9ba1ef88ce0fe98e2326b61ee374
+BLAKE2s (tex-amsrefs-30646/amsrefs.tar.xz) = 99a88bc14e73848cc88d7cb3e6708874e6438c755bbbed8fbc0aa1f3a859b604
 SHA512 (tex-amsrefs-30646/amsrefs.tar.xz) = 1b09f9be840283638a7624d2f178beb1b42c9da20a03a76fb6a51abc835592b0f4f28fc76c09cefc10588de9d7c027e68e07fecbcd26a26cda1d3a79ec1556bb
 Size (tex-amsrefs-30646/amsrefs.tar.xz) = 27392 bytes

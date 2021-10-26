@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:55 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:15:06 nia Exp $
 
-RMD160 (tex-voss-mathcol-32954/voss-mathcol.doc.tar.xz) = 5c7df3ba783127e08d3f0f1998db2071fef597d9
+BLAKE2s (tex-voss-mathcol-32954/voss-mathcol.doc.tar.xz) = 06525ac2f01c2577c93aee982b4974c8284b413084679fb3631fbc822d92455d
 SHA512 (tex-voss-mathcol-32954/voss-mathcol.doc.tar.xz) = 48b978a6b32c763a44dd31768b6ae00dee6986562255c4eb88c7b56e7e01ccea37390b4adb698b7e007d5aa3ac62aa7ddbbe2372221b3d556c9ea02919239015
 Size (tex-voss-mathcol-32954/voss-mathcol.doc.tar.xz) = 230648 bytes

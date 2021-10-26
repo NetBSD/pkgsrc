@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:50:45 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:13:56 nia Exp $
 
-RMD160 (listofitems.r51923.tar.xz) = e4672a037d7a6bfb719334f8de1ac88c4b50bf67
+BLAKE2s (listofitems.r51923.tar.xz) = cfc7c65b051c01435d50e714238fdacae5baa00d313b2c01978189d520dd6605
 SHA512 (listofitems.r51923.tar.xz) = 9cdbbac3442d2b6cf45659a77dbbf7c1db2252af3c656d277f8c9c1f8cfd98879efb7e6a9957481cd6e892d8f3df1c8ef46c7992b45c6c461dfe936018600917
 Size (listofitems.r51923.tar.xz) = 8420 bytes

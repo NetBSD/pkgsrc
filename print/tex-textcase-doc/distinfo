@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:51:40 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:14:51 nia Exp $
 
-RMD160 (textcase.doc.r52092.tar.xz) = e46279bab6c0d5cf476e12457c238b05e3f4a4e6
+BLAKE2s (textcase.doc.r52092.tar.xz) = 713840b64be3f6806df23b598fbbafdc558018b2d4684c73f92967959394ea4f
 SHA512 (textcase.doc.r52092.tar.xz) = 737c03d99e03a188c80aa8478abb64f05e6a3241185d03746682bf3c5e2e48ed8181e46d1b10c9170b98882bafcfe61e37a0409d42d2506125e9515bc44f0e2c
 Size (textcase.doc.r52092.tar.xz) = 193892 bytes

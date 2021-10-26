@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:19 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:30 nia Exp $
 
-RMD160 (tex-rcsinfo-doc-1.11/rcsinfo.doc.tar.xz) = 2d698f5f0e13503d6cb8c2acafecbc2de77470b6
+BLAKE2s (tex-rcsinfo-doc-1.11/rcsinfo.doc.tar.xz) = 564b649da79a883a88174deac939d7f71cf7c8a70a2932a7bda42d1a3ad90b82
 SHA512 (tex-rcsinfo-doc-1.11/rcsinfo.doc.tar.xz) = 7875ea80570b5d1e6a7ff67cc5f94395e3c1ea06d84bec8f030b8f9e00dbce621f100693d74352bd6590f2caf26297d9d35d8441331231e819178588935eca7a
 Size (tex-rcsinfo-doc-1.11/rcsinfo.doc.tar.xz) = 148312 bytes

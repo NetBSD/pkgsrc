@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:00 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:10 nia Exp $
 
-RMD160 (tex-eijkhout-15878/eijkhout.tar.xz) = d1ee0b2312921779761cdf3c6a7ec57d4fbc10c9
+BLAKE2s (tex-eijkhout-15878/eijkhout.tar.xz) = 3f83a2d63b82426f7f5835cf40694d870af1e56537047a6c3a8f88cd21d466b4
 SHA512 (tex-eijkhout-15878/eijkhout.tar.xz) = 9f68f864656fcf2af108f0a675f29ec084ca6b0667d4ed0f54f5ba135dcf4e21b23791a8b9ad86c8803b53d1530b90053348abe53dd345c3a63a762ee1cdc3db
 Size (tex-eijkhout-15878/eijkhout.tar.xz) = 6972 bytes

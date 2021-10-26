@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:18 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:29 nia Exp $
 
-RMD160 (tex-qtree-15878/qtree.tar.xz) = 7f379538671d53be0b3466db5135ad7d50e4368f
+BLAKE2s (tex-qtree-15878/qtree.tar.xz) = cb573a01f07eae62142685bab4efe253a060b1065c9a6cbecb813fdbcb0b1de3
 SHA512 (tex-qtree-15878/qtree.tar.xz) = d7845805daadcaa1d857c63ae07f94ea9451534c300148094013ef2763a404f13e872cf8fa8d51a7bf2e66796a81c42c33016ab652148cf164e99d180f641f3a
 Size (tex-qtree-15878/qtree.tar.xz) = 8156 bytes

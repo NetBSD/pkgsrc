@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:41 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:52 nia Exp $
 
-RMD160 (tex-cleveref-47525/cleveref.doc.tar.xz) = 0e8607dfc77d03332bcc45e1ae029a898ae5357a
+BLAKE2s (tex-cleveref-47525/cleveref.doc.tar.xz) = 1333adb53259ad2f62a45f4705451bdac871c80615bc91ea71e6cedb41841c55
 SHA512 (tex-cleveref-47525/cleveref.doc.tar.xz) = da89a6208341219e452f56ec0c1bf669e85bc8628e5ff0222887efddfbd702a2c1cd492a8711ca70a2ead820144efbff3830ed10f4d600984f5de97a7aba29dc
 Size (tex-cleveref-47525/cleveref.doc.tar.xz) = 386944 bytes

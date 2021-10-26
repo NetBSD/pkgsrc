@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:34 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:45 nia Exp $
 
-RMD160 (tex-tabls-3.5/tabls.tar.xz) = 1624e5482b7662cbf9f3570615b070b20bb615cb
+BLAKE2s (tex-tabls-3.5/tabls.tar.xz) = ab0cb192b97961a5d622937e0d8b138d4535b3e9d189464796ce5b14f5376984
 SHA512 (tex-tabls-3.5/tabls.tar.xz) = 7b183fab8b6d087c668984b19fd6b4f08eeb7f8917537f21746444b1900a09f93471dc1533519fe44efb64ceaab4df6670d43f7218e447a84500977be753e244
 Size (tex-tabls-3.5/tabls.tar.xz) = 4324 bytes

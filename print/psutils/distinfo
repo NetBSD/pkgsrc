@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:49:03 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:12:14 nia Exp $
 
-RMD160 (psutils-p17.tar.gz) = 1494f37e7ae809f0e446d52d4b3a21cd48690cc0
+BLAKE2s (psutils-p17.tar.gz) = bb9f3b1ca084bb341054bd60befa8f6971af75d37bb911280e0c05d7ec586a9e
 SHA512 (psutils-p17.tar.gz) = 91feff88c885173ab1c4ba6b5ffd0d9e90bfa6105479b074065584fc2a87e78fbe71e4bc90d2e7079d86b467caf092b6744b0ea4234880ba78cad8dd7820de77
 Size (psutils-p17.tar.gz) = 62039 bytes
 SHA1 (patch-aa) = 90961e898a113c4d4fa64e8d44d40469c76f156d

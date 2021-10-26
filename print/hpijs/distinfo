@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:48:56 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:12:07 nia Exp $
 
-RMD160 (hpijs-2.1.4.tar.gz) = b498a578d89bdd2dcc12d2df846f9950df67db8d
+BLAKE2s (hpijs-2.1.4.tar.gz) = 12e49878b66356d6a9935a6e4beb8fbe11590d3159f5fa793c0adbd87dd52791
 SHA512 (hpijs-2.1.4.tar.gz) = f1502bdaf11a0a76592ca7e3ea19e797ae16ea8ab942169163d1caacd61b93e3bbc9f3cafff73d1e137ddeeda8209f11b42d38b1d239bec1d0d4b3d25b1af508
 Size (hpijs-2.1.4.tar.gz) = 1928371 bytes
 SHA1 (patch-aa) = 1d89574d8f54cec6493304a663c0f546bd8df111

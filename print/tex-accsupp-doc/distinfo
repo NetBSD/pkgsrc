@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:10 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:21 nia Exp $
 
-RMD160 (accsupp.doc.r53052.tar.xz) = 144d6aeee272807924a7b998e46728f180dc3a01
+BLAKE2s (accsupp.doc.r53052.tar.xz) = 302e1ee6d1b91269e90da5fc71ba4ca8f362a4426fa30a3ec2a09adb9b79950f
 SHA512 (accsupp.doc.r53052.tar.xz) = 650909f5212a92659d18ba3ef5209ed12c9b9ddff2b3157ea17cdbc8955536f41e43dafcd715e5ec26c1d0c839ffb7b26081ea36150b2f0f50c952c5231a1a20
 Size (accsupp.doc.r53052.tar.xz) = 327132 bytes

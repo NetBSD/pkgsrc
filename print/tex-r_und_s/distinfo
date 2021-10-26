@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:18 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:29 nia Exp $
 
-RMD160 (tex-r_und_s-15878/r_und_s.tar.xz) = faeedb731904784ffd19eab818a960225883a4be
+BLAKE2s (tex-r_und_s-15878/r_und_s.tar.xz) = 9e8cbc232d987a96916266ac3a9f3bcb75b3beab78fec7797770c3c83f4f9e25
 SHA512 (tex-r_und_s-15878/r_und_s.tar.xz) = c70ce084b34fb1f745fa519de0c2b4fe002cd4d58712b09420f3d3c8653baeaa5edaf96f8e3103d3b46f5d5a5486764720fee1cf59d28354c5fbfb728bbae0c8
 Size (tex-r_und_s-15878/r_und_s.tar.xz) = 15424 bytes

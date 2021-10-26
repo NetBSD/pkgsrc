@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:50:35 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:13:46 nia Exp $
 
-RMD160 (jsclasses.r56608.tar.xz) = f9876b76aa7597dafc1e44206f1c05e691535a73
+BLAKE2s (jsclasses.r56608.tar.xz) = 2d82f121c5e04f02333769e9f2f87bd14af6f7cb8b32f72425b4bc075faef0c6
 SHA512 (jsclasses.r56608.tar.xz) = 18c5cd1e63e4fedbf1ec0faf069d40d34dd72ca18af0d634eab16b5c7ce92139cf4892492782f816c0c0deab4706ee1c5a83d052cd122f7d5df35f1d5d2ff4dc
 Size (jsclasses.r56608.tar.xz) = 21760 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:49:16 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:12:28 nia Exp $
 
-RMD160 (tex-ascii-chart-20536/ascii-chart.doc.tar.xz) = 1feb9a624490f9163d0cadab489de719dc34dde1
+BLAKE2s (tex-ascii-chart-20536/ascii-chart.doc.tar.xz) = 99416e371f19851f6dfe784f172f2c2036cac2a96b69e31c2545618f48c1810e
 SHA512 (tex-ascii-chart-20536/ascii-chart.doc.tar.xz) = 4dae0e4c2272dbcd66ae86efb5bdcfdc952c58e9e3c21a291c6265d964095b9149342c680d388de2fec1090046e0400d8e21eb510745d952f02ebda4013cb595
 Size (tex-ascii-chart-20536/ascii-chart.doc.tar.xz) = 26072 bytes

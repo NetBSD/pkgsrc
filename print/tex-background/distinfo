@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:25 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:35 nia Exp $
 
-RMD160 (tex-background-33100/background.tar.xz) = 9c90d6fb49d0a01147567b6974c71dc15c84c120
+BLAKE2s (tex-background-33100/background.tar.xz) = f1c05030ef82479c6e11117da4e267725704722c67053f8ff2a63a9d76654b2a
 SHA512 (tex-background-33100/background.tar.xz) = 06f4e6f27f138d41c27e7b92bb9a67bf6332851db1dfb1cd2c92d25e81e7e5feffb2b6f2b14b559d9d39ac6f35a85a343e535cc6e5fe8e2c0eb36c6435999dd9
 Size (tex-background-33100/background.tar.xz) = 2080 bytes

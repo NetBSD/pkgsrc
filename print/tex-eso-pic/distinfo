@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:50:03 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:13:14 nia Exp $
 
-RMD160 (eso-pic.r56658.tar.xz) = 2f09e51cacc8f535faafec5d53ee1f05fb6c4392
+BLAKE2s (eso-pic.r56658.tar.xz) = 06f9a1aaaecb290eee6e8a4d676c071d4c3efd35de3d2150e7897874323ab5a7
 SHA512 (eso-pic.r56658.tar.xz) = d4020b6d7f1ed44ecfc11938d604595e48dc32a24e2e67742016fbc2022f19ab63c759ec03030d7d3a996cc00f7a08ce8cb1354d0e9234f116080d732e4dc5e8
 Size (eso-pic.r56658.tar.xz) = 3816 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:02 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:13 nia Exp $
 
-RMD160 (tex-octavo-15878/octavo.doc.tar.xz) = 034db4b0ee9dbcb63116b77459db46b330dde851
+BLAKE2s (tex-octavo-15878/octavo.doc.tar.xz) = b94bf402a04a5d0ae68e68de982062464e3bde80488953f8b166bc4f9a28df31
 SHA512 (tex-octavo-15878/octavo.doc.tar.xz) = 123885783600261f21f27624bb0c62ecb1094589a27cbcd00386fa7b4d439179010ceb4f7cbf70b407acaceb0e40a26ac825ab0bfa3e4f52c05be64e54146fd1
 Size (tex-octavo-15878/octavo.doc.tar.xz) = 85184 bytes

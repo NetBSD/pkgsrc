@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:42 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:53 nia Exp $
 
-RMD160 (cmap.r57640.tar.xz) = c225fdffa6d6eb4e3394c5415314c621825486b7
+BLAKE2s (cmap.r57640.tar.xz) = ca2a0424aed1c15135cc560a8c1e4eabdceeb5a318313284ab87c81d3b4c1ee7
 SHA512 (cmap.r57640.tar.xz) = 4857f7ab9719a2b6828582599c98715c61731288899494aed96026dd6ad8bac92028586cb6b008ebaf3fb516d918861f79f544ecd64bca1e6a6183bd8bc398c1
 Size (cmap.r57640.tar.xz) = 5728 bytes

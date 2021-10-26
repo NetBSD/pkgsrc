@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2021/10/07 14:49:59 nia Exp $
+$NetBSD: distinfo,v 1.22 2021/10/26 11:13:09 nia Exp $
 
-RMD160 (dvips.doc.r54279.tar.xz) = b58ebba78cf9bf0eaa9333146dba3390d6f3345e
+BLAKE2s (dvips.doc.r54279.tar.xz) = 930a7cc58f88812d9a4b718f4e09c68d91fb87e9a179ef28f83077debc91a3bd
 SHA512 (dvips.doc.r54279.tar.xz) = 6f97f38327335ea711ec467133d1fa4e3124f3362d177e19af2cca06a50be1cf1de4d9e5b1aacbd1ba9779e0062a49a7572d47c5de918030fd5f78476e2bfac1
 Size (dvips.doc.r54279.tar.xz) = 521496 bytes

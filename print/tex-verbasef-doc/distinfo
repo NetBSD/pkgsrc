@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:53 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:15:04 nia Exp $
 
-RMD160 (tex-verbasef-21922/verbasef.doc.tar.xz) = abb93b19e134830c755d2edea17a3e39ce2f1178
+BLAKE2s (tex-verbasef-21922/verbasef.doc.tar.xz) = 20ecdea80dac49d7230597d51c30a263615389901ebb65ee16226f05c7116b15
 SHA512 (tex-verbasef-21922/verbasef.doc.tar.xz) = 0f2b9fc846f9bb8c3afe03336b94a38f7beebc07dfe927c400d66b0275f977aa37d9f29eac3aa582eed9c869ff965de749daef09f17864d81c013f7d47ac3261
 Size (tex-verbasef-21922/verbasef.doc.tar.xz) = 336980 bytes

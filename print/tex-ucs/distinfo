@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:51:48 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:14:59 nia Exp $
 
-RMD160 (tex-ucs-35853/ucs.tar.xz) = 00af13054ec95d30d82a984dee4b5f74e96663ed
+BLAKE2s (tex-ucs-35853/ucs.tar.xz) = ba319f584e33dd51089b62e348613454f1fde43a6e008819aa16cd919aac99a3
 SHA512 (tex-ucs-35853/ucs.tar.xz) = 218ba39717e7952b4c250de16d8bae7a290d402e74cf2ecb2b1e52f97e252ee520072de8a12c2ac8ff97438d2b49d4c5777006e61f1cc989471d612cc689946d
 Size (tex-ucs-35853/ucs.tar.xz) = 268840 bytes

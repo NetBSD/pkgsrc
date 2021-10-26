@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:29 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:13:39 nia Exp $
 
-RMD160 (hyphen-occitan.r58652.tar.xz) = 4307b0e9c25bcdb5f02cd02da66d90b5e3b2b1d2
+BLAKE2s (hyphen-occitan.r58652.tar.xz) = d03de21760a7fbc1ae5be12217bff62850a3a28e103381fbd789fd8c03ad52f2
 SHA512 (hyphen-occitan.r58652.tar.xz) = b0743d1f6083dac7a347e22aed19d0c5d76119582e4862557a55b817b17dddaa69a2150f14daf6b08689278dd61b27c1b6ed45df5601dd6327bf185a7a46a5c6
 Size (hyphen-occitan.r58652.tar.xz) = 3304 bytes

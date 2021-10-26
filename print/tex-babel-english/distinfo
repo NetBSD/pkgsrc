@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:19 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:30 nia Exp $
 
-RMD160 (tex-babel-english-44495/babel-english.tar.xz) = b2de82e17328c2fdc881e84934d034b272c236c7
+BLAKE2s (tex-babel-english-44495/babel-english.tar.xz) = f41c29ee32a7ba8c5a87d5e64b3f9c44223d150c8c52636e1e719790cd048ab8
 SHA512 (tex-babel-english-44495/babel-english.tar.xz) = 44bc030e03dcece02a8873fb8973e3405ab10d1d9bf313786f8b35e5f6c3a6df7e80a7691070dfb0ca69979db0fce3b9af3d9322e065610232dfd2f6d7fc001d
 Size (tex-babel-english-44495/babel-english.tar.xz) = 3036 bytes

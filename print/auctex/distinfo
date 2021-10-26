@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2021/10/07 14:48:51 nia Exp $
+$NetBSD: distinfo,v 1.23 2021/10/26 11:12:03 nia Exp $
 
-RMD160 (auctex-11.92.tar.gz) = 8013ad7a1d1acbd235996ea1b5bfa5bfa1f3f0a1
+BLAKE2s (auctex-11.92.tar.gz) = 242a53533b3bc7a7de7a343641d0c21a480112ea520951f611e22567e5245d83
 SHA512 (auctex-11.92.tar.gz) = 758bf82903ba0499decf0ade77c7ac70865132a24195d7e8794538b7857c448811b7ef26149a915b60ed3ee34c2ebaddb3282a320bd459c9ee3f461d6ee9b84e
 Size (auctex-11.92.tar.gz) = 1486606 bytes
 SHA1 (patch-configure) = 036377c0acfd73997b06e25d6c62351045847dd7

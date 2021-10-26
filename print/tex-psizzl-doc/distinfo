@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:15 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:27 nia Exp $
 
-RMD160 (tex-psizzl-15878/psizzl.doc.tar.xz) = aa8efa3ec8b0ff4242258eb1e01d0a4ba5c8000a
+BLAKE2s (tex-psizzl-15878/psizzl.doc.tar.xz) = 0f50dc195181913e1b6153df0869f653c0ecb2f3bc1203dc0ebfc1c70567467b
 SHA512 (tex-psizzl-15878/psizzl.doc.tar.xz) = f14f73026200de49a3b08110de540c1e74ef2d59400261de759f97cdd372841c6c26a1406647c2772f865099ea6cc225d281c3e42d2f355e858e12ff25a13a6f
 Size (tex-psizzl-15878/psizzl.doc.tar.xz) = 5448 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:30 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:41 nia Exp $
 
-RMD160 (tex-blindtext-25039/blindtext.tar.xz) = 6f5ac55be6d713869105a95edf84351e23c46f72
+BLAKE2s (tex-blindtext-25039/blindtext.tar.xz) = 555d29e9d499f55ca128439b5006041d3200ca70fc0d56b597c6c33218835c52
 SHA512 (tex-blindtext-25039/blindtext.tar.xz) = d7cd93599204177fefb082de6f2f7ae4d354307ee5c87581525cd81c544149fe2fe868f1cfe19891ced86ae85854f780784be541730eb284c931967add8a8343
 Size (tex-blindtext-25039/blindtext.tar.xz) = 10516 bytes

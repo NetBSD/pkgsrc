@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:47 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:13:02 nia Exp $
 
-RMD160 (tex-cooking-15878/cooking.tar.xz) = 8a759c25d8a1903fbf3077e2758214efb9adef0e
+BLAKE2s (tex-cooking-15878/cooking.tar.xz) = fdabb75817b22a5e2e789508c848c9a7f0cdb5e854219db813e1b7177c6619cb
 SHA512 (tex-cooking-15878/cooking.tar.xz) = 742e98338b4a4729f134504ed1f1d252ec6be4c9b0d5fd99049c48f955872da56909d2221962179fead2b9b39b6daf3c45be4937ba6cbdc2d3f9d9dff28a826d
 Size (tex-cooking-15878/cooking.tar.xz) = 1728 bytes

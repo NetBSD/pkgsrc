@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:15 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:26 nia Exp $
 
-RMD160 (tex-prosper-15878/prosper.doc.tar.xz) = aabb516f449b579d01f594ff1eabc0b6b9f4138b
+BLAKE2s (tex-prosper-15878/prosper.doc.tar.xz) = fc3ed21010711aa66bd869633086cff681c115e45571acf644cc648ce7bd9fd7
 SHA512 (tex-prosper-15878/prosper.doc.tar.xz) = f88a046228e15ba19444ae45321bd8f5eef71e666b228dfe2898bbf8557d466ebd58605b63efbc8b7284b082d0015a5609a774495db689f4e51d431e36e12c85
 Size (tex-prosper-15878/prosper.doc.tar.xz) = 262072 bytes

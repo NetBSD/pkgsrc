@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:27 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:38 nia Exp $
 
-RMD160 (silence.r27028.tar.xz) = 67155721ec6d74e8d5c19020f312383b32e5c14f
+BLAKE2s (silence.r27028.tar.xz) = 35e7047830f00f9affa21f31d06625a6d29ab553ad3c580640d0c70f85f8cf3d
 SHA512 (silence.r27028.tar.xz) = 95f4f095e0f70dcd11482be4f6d52c5ea7a06ad820c08386ad956b9bb9ad593410e59fe9bb5904c3242594d466c495e7793718d4cb707ed3edd1d17ac3c1c1a8
 Size (silence.r27028.tar.xz) = 3620 bytes

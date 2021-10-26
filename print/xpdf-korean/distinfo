@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:52:03 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:15:13 nia Exp $
 
-RMD160 (xpdf-korean-2011-sep-02.tar.gz) = f65f25f110f72d6d5dcb70f62765ee6fdeb71e26
+BLAKE2s (xpdf-korean-2011-sep-02.tar.gz) = af2692f8c7d5de4ea27cbb3cedd1a57a818ac81beea9a9bf71fc428966581f3f
 SHA512 (xpdf-korean-2011-sep-02.tar.gz) = a9ad139ffcc6200514f4fd8fe1bc28775a0f04fe4b315710cfaf1de8e109aee353df4a9ff589cd579bd76df075a47c555326e909ebc7240493a4e14dc6e93f1a
 Size (xpdf-korean-2011-sep-02.tar.gz) = 518995 bytes

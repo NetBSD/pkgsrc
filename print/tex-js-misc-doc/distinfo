@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:35 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:13:46 nia Exp $
 
-RMD160 (tex-js-misc-16211/js-misc.doc.tar.xz) = e76b3d1066ae8a05eb782ece6546e6ff4ba56b13
+BLAKE2s (tex-js-misc-16211/js-misc.doc.tar.xz) = ceef1267323a73d47a14dfae131209a3630b00040e237bac098013d1dbcdd417
 SHA512 (tex-js-misc-16211/js-misc.doc.tar.xz) = dbf9e7f8c9bc2a670d2be00459cc7d36b67a78fbd086470b623a761c7a9a09892a523cb74bff475c790e582ffddc3630c7d2b76dad5f01fa0ccf946905f3d9dc
 Size (tex-js-misc-16211/js-misc.doc.tar.xz) = 18448 bytes

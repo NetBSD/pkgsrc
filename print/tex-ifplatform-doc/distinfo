@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:50:32 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:13:42 nia Exp $
 
-RMD160 (tex-ifplatform-45533/ifplatform.doc.tar.xz) = 341202c6f98addae76065842646a733332a9b296
+BLAKE2s (tex-ifplatform-45533/ifplatform.doc.tar.xz) = a3deca53c8e77e9efeea26462843dad70cb393700c469593cd4e0d64a1863d12
 SHA512 (tex-ifplatform-45533/ifplatform.doc.tar.xz) = b5678b1de625f1afbcfafe997c8dae7eda021c24a997dc08c02bfa07d89d9a3f87b6fc4c563922b602de450778b7c8562c5c3c784da34a889e44c3955db3e841
 Size (tex-ifplatform-45533/ifplatform.doc.tar.xz) = 151716 bytes

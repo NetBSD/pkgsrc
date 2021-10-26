@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:51:29 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:14:39 nia Exp $
 
-RMD160 (snapshot.doc.r56735.tar.xz) = 8a2119b7689f05a8b507c7642fd390f7326fae1d
+BLAKE2s (snapshot.doc.r56735.tar.xz) = 4cfae8000a4ba8edcaea8cd6bf74d8f3c80907798797c0aac8e3efaa90c1dabb
 SHA512 (snapshot.doc.r56735.tar.xz) = b1dda7b3fa9195e5d0e425a4b7facc75f8737446b65b29cd5f3c954dad348055c8544968b3c68f9b2256e8d827ae73b54b765d23b958abc383bef072d9eacfe7
 Size (snapshot.doc.r56735.tar.xz) = 237516 bytes

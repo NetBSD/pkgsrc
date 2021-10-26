@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:46 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:13:57 nia Exp $
 
-RMD160 (tex-ltabptch-17533/ltabptch.doc.tar.xz) = 3c6c8a95b2c94e9013eb9a620013cd42aea48a08
+BLAKE2s (tex-ltabptch-17533/ltabptch.doc.tar.xz) = 4560be34a2c2abe44b451f9ed20f0d4cb1b38737e4387781a122d17872334f86
 SHA512 (tex-ltabptch-17533/ltabptch.doc.tar.xz) = f3eb2ff5ac04eca5915033de660dd8f09b13abfab04a1e2c5c7e24cce85f7690292cc88adc64859f47200a83ebab39491710fc49eea417a58087dbd9dc04677a
 Size (tex-ltabptch-17533/ltabptch.doc.tar.xz) = 267932 bytes

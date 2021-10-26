@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:48:57 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:12:08 nia Exp $
 
-RMD160 (a2ps.pl-1.45) = 2599f86d4433afd3d0ed3490539d87995ce51dab
+BLAKE2s (a2ps.pl-1.45) = dca6bfe02701a9aebfd0112c69555165dd92a24d442ad0589e9f08ea80dc9d3d
 SHA512 (a2ps.pl-1.45) = 6c27e1591a5dc4430f7b20ddbe4e4d99c90c28f8d3d29eb4b592a7652f88c0c05e2940ab730444a36e2ccb7d3116094ffdf8ac60b7998bafc212329b4e981842
 Size (a2ps.pl-1.45) = 27952 bytes
 SHA1 (patch-aa) = 9d9310409aa4ba4f433e880dd940fc760cfae1b6

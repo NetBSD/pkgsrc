@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:03 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:13 nia Exp $
 
-RMD160 (epstopdf-pkg.doc.r53546.tar.xz) = 10815fc18329002c9d96b85477703d01ea1c45a9
+BLAKE2s (epstopdf-pkg.doc.r53546.tar.xz) = b188732556e3330cca0c6201f704908f3505e1679258e94fbb28d34ce257b902
 SHA512 (epstopdf-pkg.doc.r53546.tar.xz) = c098251d55112c0c630e007c85d1c7271e32bba9443ca3c2590b51987053e945e3c52030ef4bd1f6758894cc263e9316bc31683572bd07c24fd0855f01c68be4
 Size (epstopdf-pkg.doc.r53546.tar.xz) = 354368 bytes

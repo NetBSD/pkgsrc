@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:24 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:35 nia Exp $
 
-RMD160 (tex-babel-vietnamese-39246/babel-vietnamese.tar.xz) = 8beab4031e847f6d341c059cf08bd8a54bcc8d22
+BLAKE2s (tex-babel-vietnamese-39246/babel-vietnamese.tar.xz) = 9582e757b677795b39e5a73f2c4aed892bad75c7fabb5b5569fa0338a0bc4c24
 SHA512 (tex-babel-vietnamese-39246/babel-vietnamese.tar.xz) = 82692890c18d7c9171715e825a8c587aef1deae260ce20d955fd4ef3907c04d8c084eca102f63f2e4bce06eacd608ced8edaaa93b0c63247b8fefe76f1aa2499
 Size (tex-babel-vietnamese-39246/babel-vietnamese.tar.xz) = 2480 bytes

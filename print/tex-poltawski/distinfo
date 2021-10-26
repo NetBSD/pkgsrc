@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:12 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:24 nia Exp $
 
-RMD160 (tex-poltawski-20075/poltawski.tar.xz) = c7a0c47c1b0aef8063b8bd1fae6f8d29d504abb1
+BLAKE2s (tex-poltawski-20075/poltawski.tar.xz) = 79327ba6f43b328186bfa31e9024540b606ddc1bb1adada8be593b991654c80f
 SHA512 (tex-poltawski-20075/poltawski.tar.xz) = 88e31a4dac77a2ef57b789c49d8ae8c80261083a88d19a98c97c41073841240fc99dc442e4ff4343bc652619e32c6451a710965903c1636bfeb266ec663381d5
 Size (tex-poltawski-20075/poltawski.tar.xz) = 6817716 bytes

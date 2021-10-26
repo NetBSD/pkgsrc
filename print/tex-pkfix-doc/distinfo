@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:51:10 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:14:21 nia Exp $
 
-RMD160 (tex-pkfix-26032/pkfix.doc.tar.xz) = 6e91e640e9d48bb9bf9522768985988cd47b1fff
+BLAKE2s (tex-pkfix-26032/pkfix.doc.tar.xz) = 8610e57cbae874af2679f0ab09139f0a07fe76c18944dfe1bba1e8d41559d361
 SHA512 (tex-pkfix-26032/pkfix.doc.tar.xz) = 6af4b5b73fab6b98b0c81ea698eef4af9a18798e719e8dcceaac9df11ebd5520d0c07944158382dc320cc96e12ae3cf596a3f2309c4e7c7d244bfa4ebf306e4c
 Size (tex-pkfix-26032/pkfix.doc.tar.xz) = 4380 bytes

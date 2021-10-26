@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:51:44 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:14:55 nia Exp $
 
-RMD160 (tex-tpslifonts-27464/tpslifonts.tar.xz) = d051e30725e9af22c9d0fe22be7107fa7c7dd62f
+BLAKE2s (tex-tpslifonts-27464/tpslifonts.tar.xz) = 22afa98046da9349682877edbe03bff2cfdb436a730fb96f3d9ecc79722829b3
 SHA512 (tex-tpslifonts-27464/tpslifonts.tar.xz) = bd9e62f5ddca54a67dae597ccbba8498f59f38e54e7e803816383ed6c804298ed5f7fb118c14c5ebf789e7e5c256ba487024573faff4bb7f7fcf0846457054ba
 Size (tex-tpslifonts-27464/tpslifonts.tar.xz) = 5332 bytes

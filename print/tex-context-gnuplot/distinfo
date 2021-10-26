@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:47 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:58 nia Exp $
 
-RMD160 (tex-context-gnuplot-30380/context-gnuplot.tar.xz) = 800f5407a08beeb28b6640b51da3766ecb9c26a9
+BLAKE2s (tex-context-gnuplot-30380/context-gnuplot.tar.xz) = 2c32f87ee6315874a0f07db0e3a3221052ae128be057964c62c81cc2bc747e6e
 SHA512 (tex-context-gnuplot-30380/context-gnuplot.tar.xz) = 903de27ff36751a9691350723b2f51f4fa77e0fe17c623cb120450ddc22b0e7358add69c9ba062fb8773dd6c6a28355bbae1459f31f03a24b1d05d7fb570eebc
 Size (tex-context-gnuplot-30380/context-gnuplot.tar.xz) = 18472 bytes

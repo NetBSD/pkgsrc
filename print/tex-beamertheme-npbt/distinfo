@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:27 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:37 nia Exp $
 
-RMD160 (beamertheme-npbt.r54512.tar.xz) = d3a069a1dd4bdc50d4d517ca8ffd06903b18ac68
+BLAKE2s (beamertheme-npbt.r54512.tar.xz) = f8fcdd97301a31c8c44ed10dd4977f02094760e2632afc102a34d1beb7308ac2
 SHA512 (beamertheme-npbt.r54512.tar.xz) = 9125794ab2ebc4d15ab500b67b9943234d80088393d9b31989ae8209359dca97778feaab3d11365ae1b4131f06dad2fe73bb21fae1220b401c5f31f413cff171
 Size (beamertheme-npbt.r54512.tar.xz) = 1457176 bytes

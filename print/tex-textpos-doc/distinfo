@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:51:40 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:14:51 nia Exp $
 
-RMD160 (textpos.doc.r56441.tar.xz) = 9cfbb8f2b36f6038f649c91cda44c612170c24b3
+BLAKE2s (textpos.doc.r56441.tar.xz) = def9713547d9b9888e899e74e3baa94d2c4e754887d57d38cfe4c7e7337b71f2
 SHA512 (textpos.doc.r56441.tar.xz) = 45d9b91df10531c4fa45d9eb668613417baf132f3153ef6fa4de27292730580c46eaf722e6998f9d8129e37db3f5f8828bd70eefd9a74e88571290f95b04eef7
 Size (textpos.doc.r56441.tar.xz) = 331632 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:17 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:28 nia Exp $
 
-RMD160 (atbegshi.doc.r53051.tar.xz) = 963bc54ccdb6494bff1a911ab71e3352d144a500
+BLAKE2s (atbegshi.doc.r53051.tar.xz) = 521a41b48761d3803330d74785083fa968c95ea7afba62ad67329c823b158fea
 SHA512 (atbegshi.doc.r53051.tar.xz) = 8f6402dd0f36d4cc4a4674c0d0b37f012a7d6e557174ca3b58a7a2b33d89475d1e47028cc39d2b77c496bfae0751275369c5f4f49cf53b8c36fb60fce47a6bd3
 Size (atbegshi.doc.r53051.tar.xz) = 400452 bytes

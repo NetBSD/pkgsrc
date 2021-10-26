@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:49:11 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:12:23 nia Exp $
 
-RMD160 (tex-algorithm2e-44846/algorithm2e.doc.tar.xz) = a9ef39d0ee5fa72848c22cd3b5bb960d2b4f881e
+BLAKE2s (tex-algorithm2e-44846/algorithm2e.doc.tar.xz) = 8dd0fe43394ff7628bd75dbbb7f713e118e7fa35a75aabac4aa41a7e54bdd140
 SHA512 (tex-algorithm2e-44846/algorithm2e.doc.tar.xz) = 3093ed074f20d67e07e42bd6a7d519bd68b8c6ed6e12601e5305fd37ad4711e71d2de25497a10ba2201fbb381e62486af54ee76cf5cf903400d89fc912aa91cb
 Size (tex-algorithm2e-44846/algorithm2e.doc.tar.xz) = 559196 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:50:06 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:13:17 nia Exp $
 
-RMD160 (everypage.r56694.tar.xz) = 53207f05f79d4c09e8c7e92f0836d7a9fee2ffca
+BLAKE2s (everypage.r56694.tar.xz) = 0d4166a10bb346a7a0154ab04407fe36f205f7a4e9cd92d9d6b3c1518be2939f
 SHA512 (everypage.r56694.tar.xz) = 032713896e2704667582aa03e8d542062a5eb26188d41b08968955fbd8535aacc8288559112aa264c542e3523f452dd9b2acdd1dc3f66450cdc5c5c902e38b80
 Size (everypage.r56694.tar.xz) = 1772 bytes

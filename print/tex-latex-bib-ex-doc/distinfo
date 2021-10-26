@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:40 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:13:51 nia Exp $
 
-RMD160 (tex-latex-bib-ex-25831/latex-bib-ex.doc.tar.xz) = 731e48ab1d4ecac435ea268e48812514c6492c22
+BLAKE2s (tex-latex-bib-ex-25831/latex-bib-ex.doc.tar.xz) = f29d7547a89f1182ce0a9fd861923d693c107996d061334972c5c606c7637e44
 SHA512 (tex-latex-bib-ex-25831/latex-bib-ex.doc.tar.xz) = 48aab950ddc3e8e361aaf09968b72f4f754f55b2d7e23ecf6fde5a59aa06ccd5a6837806a88bbe2d417cb07547deb1d76445958461bc7a86f77b0917bb768550
 Size (tex-latex-bib-ex-25831/latex-bib-ex.doc.tar.xz) = 49552 bytes

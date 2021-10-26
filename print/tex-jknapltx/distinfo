@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:35 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:13:46 nia Exp $
 
-RMD160 (tex-jknapltx-19440/jknapltx.tar.xz) = 1686e7383c3ff51cee3b8b364ecf3c4a70708d60
+BLAKE2s (tex-jknapltx-19440/jknapltx.tar.xz) = 5306082105878b21edc6d1ef16ddd6ed7e156d3746106a393dd2b7e022e7bc75
 SHA512 (tex-jknapltx-19440/jknapltx.tar.xz) = 779e3e424225ac575784481539112df491d49f8de22d0d0f3a158c4f17cf20a7d0dbf5c03d56469fd35acd88353d5bccc1b853ae0d45e21189fd92849d159aea
 Size (tex-jknapltx-19440/jknapltx.tar.xz) = 9084 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:26 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:36 nia Exp $
 
-RMD160 (tex-beamerposter-47508/beamerposter.doc.tar.xz) = b5821374ffcf19fae17a7c5446ce93f3b1274c1b
+BLAKE2s (tex-beamerposter-47508/beamerposter.doc.tar.xz) = f614ac594c58600c64395222e8f5340410f4da0834d725666fe71ab36f0ed5d3
 SHA512 (tex-beamerposter-47508/beamerposter.doc.tar.xz) = 88ec2b723a551711c33972cb72b7ab9ac13508f583e4e26eaa1c9e6d57d537667259b4f93e7e33fd2a5db8086998f6ddef05c363613be645eb293606d72cd52f
 Size (tex-beamerposter-47508/beamerposter.doc.tar.xz) = 77044 bytes

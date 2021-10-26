@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:25 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:36 nia Exp $
 
-RMD160 (tex-sepnum-20186/sepnum.tar.xz) = e16c25f7ded0293deb5cf9e201115b83afedb568
+BLAKE2s (tex-sepnum-20186/sepnum.tar.xz) = 437a27d61cb8de448165d181b0874a4e5e17b7ec9c6cf143e4a0617395173ed6
 SHA512 (tex-sepnum-20186/sepnum.tar.xz) = 29421946341746c345143ce9745cbdebf3e8b496de96945ceeda57a9441efa3d624369f45e349ff2fbb60fb2aba06f235fd93449b587b00f35bcd565c09ccbcc
 Size (tex-sepnum-20186/sepnum.tar.xz) = 2660 bytes

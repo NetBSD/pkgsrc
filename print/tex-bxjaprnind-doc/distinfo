@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:34 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:44 nia Exp $
 
-RMD160 (bxjaprnind.doc.r45291.tar.xz) = 59287f0967df7409d7f84ac2768b864bdf4517b9
+BLAKE2s (bxjaprnind.doc.r45291.tar.xz) = c119b4ed00d0559551b55a1f95a3dd2aac659149010d6e567cf9b9cfc4420861
 SHA512 (bxjaprnind.doc.r45291.tar.xz) = 0010c6e9d1041013401f59820795e338d9e0f852b2d29212fda0c66cda3e2dbdf59593547a8d83d9c6d78d48fb0372a4335976ad1fcc190c3c71a3b5607a47a4
 Size (bxjaprnind.doc.r45291.tar.xz) = 387396 bytes

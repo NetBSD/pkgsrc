@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:12 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:23 nia Exp $
 
-RMD160 (pmboxdraw.doc.r53046.tar.xz) = d0b4af08cab90baf7a0ba2b6aec4e896f6982b33
+BLAKE2s (pmboxdraw.doc.r53046.tar.xz) = 57cc44b0c03ed0f7c31f4dfc8b0d1ae672425a1ac52ed3c534d6148367405e70
 SHA512 (pmboxdraw.doc.r53046.tar.xz) = 42a439f2f88235faf7302400432d49166861476cdc43708f84780d153bdcbcb55dea1a6b31cde2045d0b99d48c2a4f51ddae8bdee08937308c5de02e9b16a523
 Size (pmboxdraw.doc.r53046.tar.xz) = 594984 bytes
