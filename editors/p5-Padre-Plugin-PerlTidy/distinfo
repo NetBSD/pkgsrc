@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:47:46 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:21:37 nia Exp $
 
-RMD160 (Padre-Plugin-PerlTidy-0.22.tar.gz) = a13fb4f844baf5a73c41816f40696cb8cb883010
+BLAKE2s (Padre-Plugin-PerlTidy-0.22.tar.gz) = e433027017eb662f898e775bfadeaa155d371e701fbd7adcf4a13b79a1aefe2c
 SHA512 (Padre-Plugin-PerlTidy-0.22.tar.gz) = 69bc5c84911ed74bc139c9393f65d927f1358ff12eef378e84e5efb87451e9bc3e4b0826b950fe43a55aeb63044662ea2aa76eb7e8eebca3c520325df603c738
 Size (Padre-Plugin-PerlTidy-0.22.tar.gz) = 26467 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:47:45 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:21:36 nia Exp $
 
-RMD160 (Padre-Plugin-Ecliptic-0.23.tar.gz) = 62c1a26d9917298565e014b5262d4f7d8fd20689
+BLAKE2s (Padre-Plugin-Ecliptic-0.23.tar.gz) = f75943c456b8203c48461b4897ae337f4daa2798cacd89eeaf3e06966c817a84
 SHA512 (Padre-Plugin-Ecliptic-0.23.tar.gz) = ec7a19c64a9b297546e6f6cdf136719ffc4c7542fd300b9c0a52f782c2b7199a8dd95dcea787c99c06d2707c18029593524bb0f1bea5dc035124e8c8e34f0f8c
 Size (Padre-Plugin-Ecliptic-0.23.tar.gz) = 30693 bytes

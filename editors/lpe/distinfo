@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:47:42 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:21:32 nia Exp $
 
-RMD160 (lpe-1.2.6.tar.gz) = f177f115db6303ef91778adda9dcdd005c03cf17
+BLAKE2s (lpe-1.2.6.tar.gz) = f5bd25a9781ccd7027a525978fe9cedc363495a1adc0701a949e8da81485af44
 SHA512 (lpe-1.2.6.tar.gz) = f48eb07e338c3ef7bdfabc46b69a3dd96a91fae83681b5b0b77be07958a5e8c38c1afc4f6f00bdf558dd78e8a025d4c499fd9e1b4d8757721da8659151483dad
 Size (lpe-1.2.6.tar.gz) = 285618 bytes
 SHA1 (patch-aa) = da6223e1dc828e3591cc6cd7e0d13d084fedf119
