@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 14:12:54 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 10:46:53 nia Exp $
 
-RMD160 (ruby-opengl-0.60.1.gem) = fc046485ad0da0a269c5b282cef9f027dad16077
+BLAKE2s (ruby-opengl-0.60.1.gem) = d43243d588a586baf9039e341841c7aab0e24acda2a24f3a81e4fa4eddd9c4d5
 SHA512 (ruby-opengl-0.60.1.gem) = 2ddb8acf3e74f48b173a6f5421f6ba57c82f6871d1f332dfe2c7a73a23de70b0e04d080dff103a03d369314c9b1bed19419e6c68a320d5faa1f310d436379624
 Size (ruby-opengl-0.60.1.gem) = 245248 bytes
 SHA1 (patch-Rakefile) = 3fc0debd15a230e43dde593af79aa3e857fa4c2d

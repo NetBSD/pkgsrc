@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:12:37 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:46:35 nia Exp $
 
-RMD160 (Barcode-Code128-2.21.tar.gz) = fae11114029995ca595d519770ba7b53becfb854
+BLAKE2s (Barcode-Code128-2.21.tar.gz) = 472b712ff5f01f217d7c1afaa25ab4a71c73b7f49ecba08e1b699a0bfd5ee6b4
 SHA512 (Barcode-Code128-2.21.tar.gz) = 64ca60529d6a99fe73757739a3535da279006c0002c8d7d6e8d27f71511dc92db6c85bb55031fd74bff1fb9e80e623a625bfb373e682daca02c8670d51d819aa
 Size (Barcode-Code128-2.21.tar.gz) = 15082 bytes

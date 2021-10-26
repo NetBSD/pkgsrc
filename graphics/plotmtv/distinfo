@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:12:42 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:46:41 nia Exp $
 
-RMD160 (Plotmtv1.4.1.tar.Z) = 451d133b9a189b5d5309f7ee7fd518816b758429
+BLAKE2s (Plotmtv1.4.1.tar.Z) = f5141352adf4d5d2d37fb3bec7dd6d108dfbbe915de1424c63f88ec271ca75c9
 SHA512 (Plotmtv1.4.1.tar.Z) = 0d20bc669e769d56638c892d4d5746a25ac36e8aa9d1b53a19bfdd9243eda284bf8a83cdd6a76374a99fa482826e592b28e273fd8f044a3599781c4ab8b7fb4e
 Size (Plotmtv1.4.1.tar.Z) = 1972882 bytes
 SHA1 (patch-aa) = bfc044bbf46b3a53417c1172080f017138d5bcb0

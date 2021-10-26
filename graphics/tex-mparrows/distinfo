@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:13:07 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:47:05 nia Exp $
 
-RMD160 (tex-mparrows-39729/mparrows.tar.xz) = 6db88779a2f7cf5789487b6b3237ca8aff1a57f1
+BLAKE2s (tex-mparrows-39729/mparrows.tar.xz) = 27a083130013a312d9784a48719cac008e1c244c3236f9591d632ee1314c9abf
 SHA512 (tex-mparrows-39729/mparrows.tar.xz) = ad12eed753db90db8156d62032bc955e4df57861aefe8674dc7b5778f7fcff398311363f988700d1b9c0317aec5bf040864302da2cb39cb7744135e7c1b70251
 Size (tex-mparrows-39729/mparrows.tar.xz) = 1348 bytes

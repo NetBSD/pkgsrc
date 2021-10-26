@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:12:13 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:46:11 nia Exp $
 
-RMD160 (gimp-lqr-plugin-0.7.1.tar.bz2) = d445204a295e4f9d5a5fc0f5fb7081c60bfc8a43
+BLAKE2s (gimp-lqr-plugin-0.7.1.tar.bz2) = 3a8d229a7cd9bc5dfee6f01ab8708a26d743f3225ca43002e8f36c2e3f900461
 SHA512 (gimp-lqr-plugin-0.7.1.tar.bz2) = 6c7b4d6c28e6736a4dbfd4d97f4624f67dce0c88b57ee8688c52f3731971a3128a1968bb91824a9a5b58bdb0ca4bf23d5ae0fbabc3e0b4b422ae723423631d3b
 Size (gimp-lqr-plugin-0.7.1.tar.bz2) = 783423 bytes

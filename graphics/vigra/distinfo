@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 14:13:23 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 10:47:22 nia Exp $
 
-RMD160 (vigra-1.11.1-src.tar.gz) = 7dfb92a2c9a0e29a5075baa5d491c2f09640697e
+BLAKE2s (vigra-1.11.1-src.tar.gz) = 7cd66eef7d4dc5625dea2d8a01a3585fb85e2596705c4048dd6df3f09f30934c
 SHA512 (vigra-1.11.1-src.tar.gz) = 9c1638d626d658fa4b13069e5850b628d91db02bb18b8a9f0a4642fee501ede8a6f4f267d79ca5cd5baf3991e704163345cd18ab7919ff2a93db6bd496096de3
 Size (vigra-1.11.1-src.tar.gz) = 55119047 bytes
 SHA1 (patch-config_FindOpenEXR.cmake) = 8649351dc0a3e1df4827214b53431358c1b70972

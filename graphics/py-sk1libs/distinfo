@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:12:49 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:46:48 nia Exp $
 
-RMD160 (sk1libs-0.9.1.tar.gz) = 38f22205e0b5b6078e31ec6dc4c1d93845533046
+BLAKE2s (sk1libs-0.9.1.tar.gz) = 6f15a6c2e1758a1533195e96a58428df2f5b39257ff6bb8cedb69ff46240a1b3
 SHA512 (sk1libs-0.9.1.tar.gz) = dfb1880d5bb043395e4ec6e0c9dc373f97d43458c20c95a152a1cadacbd41ac9b3cee30dc55544ee67f7c5747c8be38ca2da816c458bb993069d9f29d72f35be
 Size (sk1libs-0.9.1.tar.gz) = 1019443 bytes
 SHA1 (patch-src_imaging_libimagingft___imagingft.c) = a52035a0601193114b98472c1a6c69e033ecb15d

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:13:00 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:46:59 nia Exp $
 
-RMD160 (tex-contour-18950/contour.doc.tar.xz) = 0a1fc3ce70e7229baa8f43a78eca5c69bcf95ae7
+BLAKE2s (tex-contour-18950/contour.doc.tar.xz) = 1b9efe7650d07df1cccaebb20c2e30ce80392c3d08018569f593e9a2654c3ece
 SHA512 (tex-contour-18950/contour.doc.tar.xz) = af1c649d2e5666ee3973395babce4802da2154ba95fa7fc08e378c261a8ea1c5be44053c40c5cc1bd0c74e2c54b659470c3d45063fbbd4330cdc5e664f19bff0
 Size (tex-contour-18950/contour.doc.tar.xz) = 153180 bytes

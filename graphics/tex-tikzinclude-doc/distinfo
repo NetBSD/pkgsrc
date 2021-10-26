@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:13:19 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:47:18 nia Exp $
 
-RMD160 (tex-tikzinclude-28715/tikzinclude.doc.tar.xz) = 3c9a8735dcc8b0d4df7c2cb9eddf2f328a3e1db9
+BLAKE2s (tex-tikzinclude-28715/tikzinclude.doc.tar.xz) = 0ae73d821fe67feb0d3881a3bdc8b3c1a2a31870204daeb220a76a13832a5776
 SHA512 (tex-tikzinclude-28715/tikzinclude.doc.tar.xz) = d00370b75c7fddfd6018cde5c27a894d2a916e8461eec149ea73d7804ed0e6712c752e98dc026c85b177900fbaad427af116257d98f469df582805d03289e8b2
 Size (tex-tikzinclude-28715/tikzinclude.doc.tar.xz) = 171156 bytes

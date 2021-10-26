@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2021/10/07 14:12:45 nia Exp $
+$NetBSD: distinfo,v 1.22 2021/10/26 10:46:44 nia Exp $
 
-RMD160 (blockdiag-2.0.1.tar.gz) = be072c6735233c7c336577cc35bd3ae8626d6483
+BLAKE2s (blockdiag-2.0.1.tar.gz) = 261d190ea2be89928055add193d6856c10ff23c857459a3561e6942629936121
 SHA512 (blockdiag-2.0.1.tar.gz) = 07690882b05d4cf7be04245e183a7c54d9cd4acab3bb4b5e170b7b0f9229d6ea42eba4dc9fab47604c1572d3c4b09de96cffb610c0c31882b9c0b150f0e76d89
 Size (blockdiag-2.0.1.tar.gz) = 2694776 bytes

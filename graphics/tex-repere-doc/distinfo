@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:13:16 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:47:14 nia Exp $
 
-RMD160 (tex-repere-51363/repere.doc.tar.xz) = 02110793969f347f078160fc506715cf6602bad9
+BLAKE2s (tex-repere-51363/repere.doc.tar.xz) = 08c5de0088b3aef349e8a4c656b1d10c1e1d8fdabdd77c32384ca91a340c8ee7
 SHA512 (tex-repere-51363/repere.doc.tar.xz) = 8a68f168573fa33ea635578aeeeb51060c3eae9f09ddd7dae1d49aca6de2a8eab7c857336eee1c17e2d4e1a7bb5f2440cd1901bf9aa61961966f727827cab38f
 Size (tex-repere-51363/repere.doc.tar.xz) = 342484 bytes

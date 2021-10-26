@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 14:13:27 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 10:47:25 nia Exp $
 
-RMD160 (xzgv-0.9.1.tar.gz) = ed388a4def87bf4b0c063e8f2bb61568f8ab68c0
+BLAKE2s (xzgv-0.9.1.tar.gz) = a8485347eb12eb04cd6b0c1ba6fd66fc41d38b823fb7548a3082f09986ee0792
 SHA512 (xzgv-0.9.1.tar.gz) = e57d0eb3f34bc63cb9f2d033856eefdeb6363ce55589b8bc52a8c253e211a4e36d3c0691b4559581d4052810fde445c6ec1832b964c40c5365c3869ce72f7361
 Size (xzgv-0.9.1.tar.gz) = 163419 bytes
 SHA1 (patch-aa) = fa502e0fc4fc94cfc88c4aa41505ac7563d982a6

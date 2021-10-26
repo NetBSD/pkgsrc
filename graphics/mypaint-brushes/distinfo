@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:12:34 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:46:33 nia Exp $
 
-RMD160 (mypaint-brushes-2.0.2.tar.gz) = 4edf7a6280fac8c082f9b75389f45d190dc42254
+BLAKE2s (mypaint-brushes-2.0.2.tar.gz) = f114a2c9926fe253a0138f66d78310e1d024822bcc2d2eaefa0fb6ce6cb3a6cb
 SHA512 (mypaint-brushes-2.0.2.tar.gz) = 89cecd9d78f4de84ada97a3e33fd67b86dfd259880da15c0ecbfad0fceb8c3b0e93790f3c0bff0cc375959bdf6921b01d1f3646e27c3f961715219a349017556
 Size (mypaint-brushes-2.0.2.tar.gz) = 1564926 bytes

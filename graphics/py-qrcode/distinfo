@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:12:49 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:46:48 nia Exp $
 
-RMD160 (qrcode-6.1.tar.gz) = abf05f559e8d64fee4fb4f3e9cc75b5140066473
+BLAKE2s (qrcode-6.1.tar.gz) = cf52a131c44c017a5ca0f699ca0ae4c17ec4e0c857af1f5b9732d2b960a81e0a
 SHA512 (qrcode-6.1.tar.gz) = 4831553932442f5535cba15d5958a656b399112f0f379c28ad9b610c33d88ec6d0613dc7047a2315606e49f027bfd13a15a332ce86b80040d56e1114a0f62251
 Size (qrcode-6.1.tar.gz) = 29363 bytes

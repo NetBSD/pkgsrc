@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:12:34 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:46:32 nia Exp $
 
-RMD160 (mscgen-src-0.20.tar.gz) = 07db2a2eb21b2138298ef07da0f81b4973dc3a4b
+BLAKE2s (mscgen-src-0.20.tar.gz) = 9f63be6b629795d37525db65869d0e7dd9ef45545a8c98a48c72e134a13fc91b
 SHA512 (mscgen-src-0.20.tar.gz) = 12fdea38633a42d6d235520550b16bea0cd3fb67d198b1f956845f4057239d7f80fa961e37f6f8bad9fb03f29ff8c6ffab4f4ae7402eea3083dfddeaf39687e3
 Size (mscgen-src-0.20.tar.gz) = 204818 bytes

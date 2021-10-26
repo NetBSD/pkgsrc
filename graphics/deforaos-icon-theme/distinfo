@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:12:06 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:46:04 nia Exp $
 
-RMD160 (DeforaOS-Artwork-0.1.3.tar.gz) = f635b072b5849179f9db7f548f8251c39bfeddad
+BLAKE2s (DeforaOS-Artwork-0.1.3.tar.gz) = 202435f7b14725235034be3e3204565567db102c0e06247b52a3d2904c2f71a0
 SHA512 (DeforaOS-Artwork-0.1.3.tar.gz) = 43d35b948d7e546025371be18aa1fea7a4f5ed6b34f6bb9e7efa6c67532b6c2699e201f04eb02039d2b79a3523a09e43a46b34303f534870a46c538d584524f4
 Size (DeforaOS-Artwork-0.1.3.tar.gz) = 21400 bytes
 SHA1 (patch-src_convert.sh) = 2dcc716fbb9d01fb19938be3b08dfbdf80326e4a

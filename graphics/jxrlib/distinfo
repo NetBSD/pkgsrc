@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:12:23 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:46:22 nia Exp $
 
-RMD160 (jxrlib_1_1.tar.gz) = 31b378cd0de3ce2c1d19fae3927c67046471d07b
+BLAKE2s (jxrlib_1_1.tar.gz) = c6f566bee0703c5a8c6883d2893232a4522329cbb9bd7ab6aeb5175c4fd91f44
 SHA512 (jxrlib_1_1.tar.gz) = c7d87647601e08b2dc18bda26faea80ad5b09c6e8412769cd203ce9e221b2b58425e9d59a506ae8bf61030195bccb51a9d1e893bf2d18e596b0687918b39e2df
 Size (jxrlib_1_1.tar.gz) = 338240 bytes
 SHA1 (patch-Makefile) = 581bdfdfee20fd1f6d0a2a3d1cf8ce877eb0629b

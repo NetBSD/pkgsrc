@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:12:37 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:46:36 nia Exp $
 
-RMD160 (GD-Graph-sparklines-0.2.tar.gz) = 60390e3c6c57d56a067fe19e7a024a30f6eb8a46
+BLAKE2s (GD-Graph-sparklines-0.2.tar.gz) = 6aa0f3fb1e9202fc0023c2df8fbcf6e6fca8b55a4e4696d03a5f76a2c678e01a
 SHA512 (GD-Graph-sparklines-0.2.tar.gz) = 0d54cf6d308e81c112a95c7f2bb2b33e3ada37ee3d7b94ef1429881d35d553bb3bfa9d7ab2bcddcbc9141fc38e302370e5c18cf816365cf716ccf3061a2cd6a0
 Size (GD-Graph-sparklines-0.2.tar.gz) = 6429 bytes

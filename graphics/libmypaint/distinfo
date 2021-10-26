@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:12:30 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:46:28 nia Exp $
 
-RMD160 (libmypaint-1.6.1.tar.xz) = 1c09037ab87cadddb57345e5fc2057ba4fadfe23
+BLAKE2s (libmypaint-1.6.1.tar.xz) = 57e0406f4f4f88cc9311d6817f811272b51ed263ed6789bb9eb2ac9ee6d0b1c3
 SHA512 (libmypaint-1.6.1.tar.xz) = e9413fd6a5336791ab3228a5ad9e7f06871d075c7ded236942f896a205ba44ea901a945fdc97b8be357453a1505331b59e824fe67500fbcda0cc4f11f79af608
 Size (libmypaint-1.6.1.tar.xz) = 519464 bytes

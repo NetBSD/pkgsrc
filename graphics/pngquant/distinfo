@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:12:43 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:46:42 nia Exp $
 
-RMD160 (pngquant-2.16.0-src.tar.gz) = d254867afdbb7c02ac89dce2293541c6bb7ee873
+BLAKE2s (pngquant-2.16.0-src.tar.gz) = 18cdcd242aa1dcd974d466b80064e5e4596dc6217fb0cfd5f53e45cc2ec49fad
 SHA512 (pngquant-2.16.0-src.tar.gz) = 09d18e84f9e51d6b2199350409da612e40b21695242cb750ee6a7f8a0bfb0139487af8096207fdf29b250da5bfc88f90371251b8b4e9b7b5b46cb6f256540154
 Size (pngquant-2.16.0-src.tar.gz) = 149322 bytes
 SHA1 (patch-configure) = 34165a94074a0e7f35b23794165589551d58ee08

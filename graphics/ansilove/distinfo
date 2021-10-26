@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 14:12:01 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 10:45:58 nia Exp $
 
-RMD160 (ansilove-4.1.5.tar.gz) = 007a1967f1aec67ee63f4f4cc164633af7716551
+BLAKE2s (ansilove-4.1.5.tar.gz) = 3a2f74c3925da35af5b238ddc3a18e2c8ad6d9b2de093d6d3f5e801ba24aef1e
 SHA512 (ansilove-4.1.5.tar.gz) = a84253b07d82b4d0598cf6936115476933636a978805fe243a671bbdbe15d0e589b45f9e4d7b6137e5f7ab22559b9d1a84a0508db5226ccc17e20687e190e553
 Size (ansilove-4.1.5.tar.gz) = 41325 bytes

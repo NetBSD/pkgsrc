@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:12:53 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:46:52 nia Exp $
 
-RMD160 (image_size-2.1.2.gem) = c273d74fefca1594499987806a50e022ec3ae39a
+BLAKE2s (image_size-2.1.2.gem) = 2419f748d2d276566e7555d92b49328b334885be09aaca47c27d3e282ffbc634
 SHA512 (image_size-2.1.2.gem) = 5eb1655bffc5bdc8ba9ce5bcf7526077b15461e147888e2a32676c32f621bfe90aa7b8dee6ebf3f1f63cf76d66304248e85f87418ecdc1e7afddd55b0a3b64bc
 Size (image_size-2.1.2.gem) = 133120 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:13:15 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:47:13 nia Exp $
 
-RMD160 (tex-pst-tree-43272/pst-tree.tar.xz) = feca89afd751a18c604e6126464f45f2d7dd96e1
+BLAKE2s (tex-pst-tree-43272/pst-tree.tar.xz) = 5defed6f814a669cad2c4b9a460040084fb3f5cf299f07a3d728634af3d3e391
 SHA512 (tex-pst-tree-43272/pst-tree.tar.xz) = a1414df9f119bd081af599dfa629a4894f09f4e0d669fae111002a7866e15b4d09c15da52f55289d10d185274220f959f965c617ba724b6edb6b75adf40d6381
 Size (tex-pst-tree-43272/pst-tree.tar.xz) = 6696 bytes

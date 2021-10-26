@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:13:24 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:47:23 nia Exp $
 
-RMD160 (wcslib-7.2.tar.bz2) = fcc3100ca46c317b37c762a80d8583c3a966aaf4
+BLAKE2s (wcslib-7.2.tar.bz2) = a6cebd4c4e52475a24a8447d91e55a0076e49210c61a4bc069d5a05c7943c46c
 SHA512 (wcslib-7.2.tar.bz2) = 31b5800de6530d06788c112abe9581b72980177c19414013314e49a4e8913c5943327c1a8539fef8c585d04ffc598d29490c005a2114d66c82a684bd2226c06d
 Size (wcslib-7.2.tar.bz2) = 2412165 bytes

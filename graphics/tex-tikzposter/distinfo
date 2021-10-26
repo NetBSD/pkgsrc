@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:13:20 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:47:19 nia Exp $
 
-RMD160 (tex-tikzposter-32732/tikzposter.tar.xz) = cef6ffeee032f83f55259625c6a52cf2adcd4bcc
+BLAKE2s (tex-tikzposter-32732/tikzposter.tar.xz) = ca5fa9369fb1bf0fb85c2c023e4b358cca49c4be3dba3a331ab8392eb780fa5a
 SHA512 (tex-tikzposter-32732/tikzposter.tar.xz) = 7f3258e5e7edbdbe9e875db48f78c68c497fd764ad6dd7568e4f7545a9f3c05012026a1fc1155b03e04d9807949f0a0b19ebe5431314989ccf061aea99de2d49
 Size (tex-tikzposter-32732/tikzposter.tar.xz) = 11268 bytes

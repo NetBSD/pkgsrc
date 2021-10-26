@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:13:04 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:47:02 nia Exp $
 
-RMD160 (graphics-pln.r56823.tar.xz) = 36d53bec0a4ad1d1ab2cd79659544168a5acdc74
+BLAKE2s (graphics-pln.r56823.tar.xz) = 5d2c205fef09a241e88605c35170a8ae386b3978797df285c788b8db273e2a9d
 SHA512 (graphics-pln.r56823.tar.xz) = cbb87e4d040c6844cb2e677d352f9fdf9dca7848a894225944f52abf4b1ab9c03d6ea2881074b30bb618eee647ebfb70d8baeb2a82c3446bef40a47487e6b9c0
 Size (graphics-pln.r56823.tar.xz) = 8740 bytes

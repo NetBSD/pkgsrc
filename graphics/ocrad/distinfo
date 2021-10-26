@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:12:35 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:46:34 nia Exp $
 
-RMD160 (ocrad-0.21.tar.gz) = 9477787f07b35165c1091ce2cf8ad76fba3daea1
+BLAKE2s (ocrad-0.21.tar.gz) = 8a657264aa9542472f4c281ce8558a9a8d9c10faa3b8bb571849f6b10ff13d64
 SHA512 (ocrad-0.21.tar.gz) = 29b4f99ab0584ef38038658d0988fb57b5c8daba11b96fda4a33768b0cdb8100c74689de8d270792317a9bd8bb062942e77d4ca44048e6943563a2be4f1f4704
 Size (ocrad-0.21.tar.gz) = 103962 bytes
 SHA1 (patch-aa) = 39729c825c1b9591c7dda23597f7d8f900b42b2c
