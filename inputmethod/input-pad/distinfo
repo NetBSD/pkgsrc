@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:19:42 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:49:36 nia Exp $
 
-RMD160 (input-pad-1.0.3.tar.gz) = 5ed2017c35642c9b5c3135bfa54e307c7b13dff9
+BLAKE2s (input-pad-1.0.3.tar.gz) = 24ccf18c2eecfc661a0ddbea84f748f74280fe827d42dd447e9cec781b773499
 SHA512 (input-pad-1.0.3.tar.gz) = 03ace82455271389e4e3996f597fe3b7c7d7034e476354628e6d4183ea27d7e0894599a7b43a0a19823e3923603f5b0b6fa50a1a9fd65deba7bdc42e49761d66
 Size (input-pad-1.0.3.tar.gz) = 614644 bytes

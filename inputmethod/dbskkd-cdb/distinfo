@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:19:36 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:49:30 nia Exp $
 
-RMD160 (dbskkd-cdb-3.00.tar.gz) = ffd47aef430a9a3326737c1fe47023da22c2bdb8
+BLAKE2s (dbskkd-cdb-3.00.tar.gz) = a109f14283d21b4bbfde1501943468ac02c970c407f9938bb0c3af3aaa5bfad2
 SHA512 (dbskkd-cdb-3.00.tar.gz) = a3fe5a0f2e96828d22a75e4daf36eecaa8d903efe8c8a5f6972178f52dc01cac5df5f3e1d8a2cf684d6b78a9c10c207b655a296ceb456dec9f0e502142de094b
 Size (dbskkd-cdb-3.00.tar.gz) = 9380 bytes

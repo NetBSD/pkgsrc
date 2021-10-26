@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:19:49 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:49:42 nia Exp $
 
-RMD160 (scim-uim-0.2.0.tar.gz) = 4cb0261742e4d67317535da1a01de7fa803139ca
+BLAKE2s (scim-uim-0.2.0.tar.gz) = 21f0a0dbcf3d8f7a8716da1f7dfbe45cfdca3f520076578de24c448420b18ee0
 SHA512 (scim-uim-0.2.0.tar.gz) = 18df8de8ebc02289e21bf54c921b5425f67ef3c379b3c3e4392431dc3b1d9d7f12a25bcbcaaddd264913bacf61ba2be9339845700f541c22f73981e99824c6e9
 Size (scim-uim-0.2.0.tar.gz) = 344389 bytes
 SHA1 (patch-aa) = 0a3df65705bdace3ef6bcea61e46d801611d206f

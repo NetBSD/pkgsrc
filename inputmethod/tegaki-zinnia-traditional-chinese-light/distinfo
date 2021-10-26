@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:19:52 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:49:45 nia Exp $
 
-RMD160 (tegaki-zinnia-traditional-chinese-light-0.3.zip) = 5d444a74c5aa54833c115dcd21a00a18926c45af
+BLAKE2s (tegaki-zinnia-traditional-chinese-light-0.3.zip) = 9385c4b192b1b005aee69024356c5128a6c07d60a89e3ecbdffadd955ce5a3a9
 SHA512 (tegaki-zinnia-traditional-chinese-light-0.3.zip) = 45a5a1c85e45f8e2ee85e9c39e749370f35f2dcbe5987c9b86239c14932fa4cdff6416579ac5a0f6414c5f5eabfaf2d8bd4426f27c73e2c8a3fc06c12cedf854
 Size (tegaki-zinnia-traditional-chinese-light-0.3.zip) = 12600387 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:19:38 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:49:32 nia Exp $
 
-RMD160 (fcitx-mozc-2.26.4276.100.tar.xz) = 1bd5ce4ec04d4be15840651cb570900b3dcb3e01
+BLAKE2s (fcitx-mozc-2.26.4276.100.tar.xz) = 508cd3b3d3cde6fffb37bf222232ede282f3876b2b9438a122bbc5676172ea69
 SHA512 (fcitx-mozc-2.26.4276.100.tar.xz) = 18a67554a154580aa29b76eafc15456e7b3bbbde56a0d2e2efe9e83e203622108f73fd39704db324512cdf2cf56adedcf8570c1aab35d7379c408c8401c743b6
 Size (fcitx-mozc-2.26.4276.100.tar.xz) = 37170744 bytes
 SHA1 (patch-.._scripts_install__fcitx5) = 860da43f7c3ada65a473604259cf7e4d4a1d0b3e

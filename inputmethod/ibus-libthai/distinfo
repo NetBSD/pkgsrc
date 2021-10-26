@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:19:41 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:49:34 nia Exp $
 
-RMD160 (ibus-libthai-0.1.4.tar.xz) = 390391cd800ed0631a3ea3491aa21c9d2b7885cb
+BLAKE2s (ibus-libthai-0.1.4.tar.xz) = 73407d883f5d5e837d5940f1756e3495e5d1d61e145a3879914a9c5812ac3c1f
 SHA512 (ibus-libthai-0.1.4.tar.xz) = 94fee764089276ac6377adb827b851ad122f607890fc2c6e9c0f73718dd4e8959c34f0332f91ba292917ff881788e2716f78e8bbad0aeacd6c19293bf60b1232
 Size (ibus-libthai-0.1.4.tar.xz) = 152304 bytes

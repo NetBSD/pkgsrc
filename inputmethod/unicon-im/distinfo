@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:19:52 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:49:47 nia Exp $
 
-RMD160 (unicon-1.2.tar.gz) = c862f03ba561fe4c3641cf8b364a9bae40a78c03
+BLAKE2s (unicon-1.2.tar.gz) = 2b80cf76d15fc038250ef623a537807a0e035fe95782a13c957eb3a8402f3762
 SHA512 (unicon-1.2.tar.gz) = fa2e25f451b9eac27702fca0a9066532ffbfe118ec95bb3d6035a4279543882aaa23870d3392d2bf3731d9b3b98cfb8955857f7e46bb90693dc21b3dc5a33ee1
 Size (unicon-1.2.tar.gz) = 7815217 bytes
 SHA1 (patch-ImmModules_TL-1_xl__mfile.c) = 733383b9196ec16d2c0ff274487c012631b8e985

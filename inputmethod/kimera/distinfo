@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:19:43 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:49:36 nia Exp $
 
-RMD160 (kimera-2.11.tar.gz) = 0f9d95587a078118a225e3772bfda95612155a1d
+BLAKE2s (kimera-2.11.tar.gz) = 9b9edbcac271751ac0658ed42d8c70164d70a488f3d5aef494af0398b646222f
 SHA512 (kimera-2.11.tar.gz) = b03ca2a665010e2d63100e367c42ebf1b1e68178093b78955bbeb5a73ebb6305f4292f925494e484edd574836ce66375f74766bd43445901c388e8db8d3a8e5b
 Size (kimera-2.11.tar.gz) = 106010 bytes

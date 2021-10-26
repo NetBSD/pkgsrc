@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:19:49 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:49:43 nia Exp $
 
-RMD160 (skktools-1.3.1.tar.gz) = 506ee66cab8d302d267436be36e24aeab8cc7d76
+BLAKE2s (skktools-1.3.1.tar.gz) = a23662c9e6d7ca6e7e34b65fc9f74a23834e9077e3d827f919ddc2c8f72e268f
 SHA512 (skktools-1.3.1.tar.gz) = 204e22f32c6fe2919b799bd92db76af4a1abd9d7a41ce9620cf140d5e886572c8d5ebafa799b11c181c87e054ac4199c54a5a645acc165e2d0b6ddf5bedc648a
 Size (skktools-1.3.1.tar.gz) = 290215 bytes
 SHA1 (patch-Makefile.in) = e0fd23040781df6dcab97ade30f6f04a373eeee3

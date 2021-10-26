@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:19:43 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:49:37 nia Exp $
 
-RMD160 (libhangul-0.1.0.tar.gz) = 53459a293fb3e1d6742138388109ff48c23845a6
+BLAKE2s (libhangul-0.1.0.tar.gz) = 43e85aefc5535af93e477a1752e094109c27937cfac620ef99f23289fa981a4a
 SHA512 (libhangul-0.1.0.tar.gz) = cf84850bf7a41e743457300513c5efdf7b3e18d168f4fdc324aaa8e1be78743752fcb98385764f94c707777ab82cc9444e076808e61fdbd915c9c0d7ea93c534
 Size (libhangul-0.1.0.tar.gz) = 2899845 bytes

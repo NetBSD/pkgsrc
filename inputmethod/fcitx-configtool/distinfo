@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:19:37 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:49:30 nia Exp $
 
-RMD160 (fcitx-configtool-0.4.9.tar.xz) = 29ef8fe2e14bd0a3b36cd33442f577735076a85b
+BLAKE2s (fcitx-configtool-0.4.9.tar.xz) = 81bbf21593b8f8ce2c2da0c805d4224c15af3d17d4b938eb6451d80804f83c53
 SHA512 (fcitx-configtool-0.4.9.tar.xz) = 800c731b370ace833179560260df7ffc9c0235c4f3257e8a99a0194f2fd06b71f738e6c77985871c3368179f944da2165dac5d4a8f7ba083519cb2509a9eb62b
 Size (fcitx-configtool-0.4.9.tar.xz) = 48796 bytes

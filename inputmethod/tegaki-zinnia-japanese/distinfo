@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:19:51 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:49:45 nia Exp $
 
-RMD160 (tegaki-zinnia-japanese-0.3.zip) = bc4c7fae3c849f5fcf53dceeb144521448717aab
+BLAKE2s (tegaki-zinnia-japanese-0.3.zip) = 2cac4948dbeccc02f5dccb19dc464729a218d9015df60ae2132531f7f2313f84
 SHA512 (tegaki-zinnia-japanese-0.3.zip) = fd11f94c8b5446ca22e1119ead20da9ebc01e8033beef664d94c0affc8cef6e315344c4d5e61288358bf7ff4f7c49135dcf5743c4070573f7d8e45e70abba113
 Size (tegaki-zinnia-japanese-0.3.zip) = 18134281 bytes

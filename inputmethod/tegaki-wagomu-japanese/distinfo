@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:19:50 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:49:44 nia Exp $
 
-RMD160 (tegaki-wagomu-japanese-0.3.zip) = 6a9ee258b627ee6aa015474fdef5dd677e0490f2
+BLAKE2s (tegaki-wagomu-japanese-0.3.zip) = 8acc4623a0d728b2463195ea286168f59c75d0af2546f07a771e1f7acc5d5d9e
 SHA512 (tegaki-wagomu-japanese-0.3.zip) = 5657a389dea428ec4ee6bc9594f70e99bf73ccac86ddaebf0adbb476b18580733cae5e93265a89074df2323471f84c8f46cc29bf08d9c1f87f9454956e354ad2
 Size (tegaki-wagomu-japanese-0.3.zip) = 2203883 bytes
