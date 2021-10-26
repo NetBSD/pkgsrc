@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:06:13 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 09:57:19 nia Exp $
 
-RMD160 (thunar-archive-plugin-0.4.0.tar.bz2) = 9fdd853501e55a66113ffc9a917e56e01d434baa
+BLAKE2s (thunar-archive-plugin-0.4.0.tar.bz2) = 256ac3b0507c44ae169b6ecd291db106c7e7538be73bb6a9f9724e0ef5e218e5
 SHA512 (thunar-archive-plugin-0.4.0.tar.bz2) = 6590d8765ac6eab14fae7758e4c47c66b52e79e2e4b01a86d25bd35492590925ca35e4bbade8a9d8f0c73386eaeda6863e2a7a39a2df2904404f7e2bfdd91a44
 Size (thunar-archive-plugin-0.4.0.tar.bz2) = 350011 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:06:12 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 09:57:18 nia Exp $
 
-RMD160 (unshield-1.4.3.tar.gz) = 0f26f1c0d3637762fa06a3c2d60253046f0ed085
+BLAKE2s (unshield-1.4.3.tar.gz) = b88daa123e8fa2f2f1eff1e7b3d3c766fd76a390e9ffbd51155157570c0cefa2
 SHA512 (unshield-1.4.3.tar.gz) = 2f058e0a28d0497e2afe231ded1b1bb16745401398eb1035e628d263351b10a1343c9664f3937b8912755db9dc5236a1b43e9bcba596affb7aa8b036f49382aa
 Size (unshield-1.4.3.tar.gz) = 58822 bytes
 SHA1 (patch-CMakeLists.txt) = cbbcc0265d963e498522053f24557c505fd03539
