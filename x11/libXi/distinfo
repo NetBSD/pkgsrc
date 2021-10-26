@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.31 2021/10/07 15:13:51 nia Exp $
+$NetBSD: distinfo,v 1.32 2021/10/26 11:34:06 nia Exp $
 
-RMD160 (libXi-1.8.tar.bz2) = a625441d87c45b34f9678fd6b634911d29e67b88
+BLAKE2s (libXi-1.8.tar.bz2) = b6f3552f121ff262b17bacecce1aa5788500ec96d5e0f1334d5171ad1e22ebe7
 SHA512 (libXi-1.8.tar.bz2) = 4b2c667a8466eb389f253d77285c3f506c4a2b6c75054c722974a864565d565cc0c5701f8ea773eb929ceb94adfeb737ecd7a0bfc2c240157416a5f343c07aba
 Size (libXi-1.8.tar.bz2) = 494579 bytes

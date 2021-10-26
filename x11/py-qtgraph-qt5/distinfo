@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:14:04 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:34:20 nia Exp $
 
-RMD160 (pyqtgraph-0.12.0.tar.gz) = 14f518eaafc982449e85196dfb1e56c5e2e728ca
+BLAKE2s (pyqtgraph-0.12.0.tar.gz) = 9e56c65750b2278ab18070c0564b1995990dd993ec8f756845f9fa123bbf197b
 SHA512 (pyqtgraph-0.12.0.tar.gz) = a30c7cab0a8a1efff697271fdcc27b1aef55a2766a90562191adc4d6e5ed6fb71da73b4b25ea4e16b7eff33876eb47468c27bc8bcdf1a0abaefa2b6c202c8739
 Size (pyqtgraph-0.12.0.tar.gz) = 893557 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 15:14:36 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 11:34:49 nia Exp $
 
-RMD160 (xinit-1.4.1.tar.bz2) = e393a9a41f9582b955a7f174f3b1b10ece0fa92b
+BLAKE2s (xinit-1.4.1.tar.bz2) = 72c99fcf601489503689354da77a9ad648e3ca2b24da6ed596a9cd47f8986468
 SHA512 (xinit-1.4.1.tar.bz2) = 6cbc5d025a891c419f3f4493381b2fca57a67d78df866d2f16a83426f86bad6eca7f240fac12b25cbcc63df0fec41f625407184e044898602d66483715315340
 Size (xinit-1.4.1.tar.bz2) = 176206 bytes

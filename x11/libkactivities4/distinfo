@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:13:53 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:34:08 nia Exp $
 
-RMD160 (kactivities-4.13.3.tar.xz) = e0c87daffd313b8146b3e110c4f183fb06020cd4
+BLAKE2s (kactivities-4.13.3.tar.xz) = b386d38960a9d51bce1e92e4970f1c5b8f5204f4df20006733c757960fe10f00
 SHA512 (kactivities-4.13.3.tar.xz) = 1d248ae6045a7ae8d54ce5355100cd76be954c2a57be3abaab968d8ff2693d09aa9b1d0242266de4eedf6005bedfde38df69a84a9a5a0b16606fe958159b31bc
 Size (kactivities-4.13.3.tar.xz) = 87476 bytes

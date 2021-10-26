@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:13:31 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:33:48 nia Exp $
 
-RMD160 (elementary.tar.gz) = 95d48806cf4ad5c59b8c21fb8244240ffb799a1e
+BLAKE2s (elementary.tar.gz) = 3f93a91484c0a1c4beb392f32f6ecae0b331193ec207902d6a9176f3dafe9b7c
 SHA512 (elementary.tar.gz) = 771bcc75d6595868e39b0bbcc32ef12b03a602668aed2186f9a18d93b0ec232ac1986b0a36f523c8331a9473069a99e23e168081fb3bcd13d2c916afc20ed45f
 Size (elementary.tar.gz) = 2362700 bytes

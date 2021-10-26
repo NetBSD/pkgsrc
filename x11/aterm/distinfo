@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2021/10/07 15:13:27 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/26 11:33:43 nia Exp $
 
-RMD160 (aterm-1.0.1.tar.bz2) = 74c46af824c19d0c24c26178f0cb38c2d4e66e21
+BLAKE2s (aterm-1.0.1.tar.bz2) = 8b85afbe3fe604e2d99521bb98dc6f8e4751c961e20045a1d1837d2ecb232b97
 SHA512 (aterm-1.0.1.tar.bz2) = 05c78590bba55d892d9f7add384e4ae8d56197dbcd9caff2be4a52d5c162e767a464359ba806fc95961d8035575a2b4a962fc35cfa44f95025b477fa3e15e56b
 Size (aterm-1.0.1.tar.bz2) = 276810 bytes
 SHA1 (patch-aa) = a8ef932bf0dd997915158d5015ce08ede0ce4cd3

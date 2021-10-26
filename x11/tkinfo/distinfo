@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:14:15 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:34:30 nia Exp $
 
-RMD160 (tkinfo-2.8.tar.gz) = bab0bdb683c030a0be6b9bf7b1f596b70b5714a6
+BLAKE2s (tkinfo-2.8.tar.gz) = b2f75bf3aa24db896d7e83fea86dd9a7fd00380020e5895897685a170f605fc4
 SHA512 (tkinfo-2.8.tar.gz) = dfce278a1b33eebcebe3f6f9b5885a8c247f3181d154bc35d8b6d894f1f33043e9e40dd4c8dc336fa100700883295e8a648bece6f04ee556d4fa2f69adaecb76
 Size (tkinfo-2.8.tar.gz) = 56234 bytes
 SHA1 (patch-aa) = 3fe8c55edf9f47d5604e3786e3b87e5d35896f31

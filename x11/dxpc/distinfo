@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 15:13:30 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:33:47 nia Exp $
 
-RMD160 (dxpc-3.9.2.tgz) = 5494459e7c460138e72e900877c61c30265bbb89
+BLAKE2s (dxpc-3.9.2.tgz) = ec374a478085d482e5c0cc7b61d2687ebfb3319359ffc743af5ac363b7bd7b7f
 SHA512 (dxpc-3.9.2.tgz) = 7dd31f024ca9eae763ec82c424483b4dd4ff667ae70666f3de298e5acb75a5028134914f9c58ab07c16a68de53e170ace455653d83ffe6db290b952ca82fad38
 Size (dxpc-3.9.2.tgz) = 199267 bytes

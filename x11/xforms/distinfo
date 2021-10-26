@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2021/10/07 15:14:34 nia Exp $
+$NetBSD: distinfo,v 1.24 2021/10/26 11:34:48 nia Exp $
 
-RMD160 (xforms-1.0.tar.gz) = 2972fb4534d3794b2027e81f4222f20a04cc81f8
+BLAKE2s (xforms-1.0.tar.gz) = 52f8ab136ecaa04eca32fcbcd0c84938aca7f9c1bca8179fe9ae8a5159ec6013
 SHA512 (xforms-1.0.tar.gz) = 5ac45dc8dd906269e593adead5c04084ffbeacb9a3c49228203bffe6c4c541e4a5cffa0d4ec61a80d45843a0dbae14492947ad481c8449759699ce9bd8577223
 Size (xforms-1.0.tar.gz) = 1012878 bytes
 SHA1 (patch-aa) = d33ccbf03d2896c0a0495b0a806a7e258ab010a3

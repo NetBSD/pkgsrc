@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 15:14:36 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 11:34:50 nia Exp $
 
-RMD160 (xkbcomp-1.4.5.tar.bz2) = c22378b5ba551d48619288c6d3028e699a34921a
+BLAKE2s (xkbcomp-1.4.5.tar.bz2) = 704a49038a980b2f8c8b85d62e43de0c62c79dd2227ce42c81e4d4908836c6b5
 SHA512 (xkbcomp-1.4.5.tar.bz2) = 2e84f8d6b083e2e818cb95e5d2a184da00e50d71b280e92d1a71465a9a4348f922f4ddccb42cfeee6f76705bbfc8580ef67aedd0d958aaa1ae6bbcc66ccd8154
 Size (xkbcomp-1.4.5.tar.bz2) = 251617 bytes

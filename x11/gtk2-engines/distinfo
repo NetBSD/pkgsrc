@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.38 2021/10/07 15:13:35 nia Exp $
+$NetBSD: distinfo,v 1.39 2021/10/26 11:33:51 nia Exp $
 
-RMD160 (gtk-engines-2.20.2.tar.bz2) = 941b71cd2346a349d89f68962c2ce28e3520297c
+BLAKE2s (gtk-engines-2.20.2.tar.bz2) = e5ef97d78f50741470bab83c10485ab0cf4b16a45b67ec1fe8b225c092073b39
 SHA512 (gtk-engines-2.20.2.tar.bz2) = 049ae20d47a28b60fe5b0484e3c11bc6cd62d6167478f1d83df3066d618827ca9204767ab1b7a9ca02f542c3fc7929efc1bb85f65d66aaf5d5b15718b6de19e9
 Size (gtk-engines-2.20.2.tar.bz2) = 688171 bytes
 SHA1 (patch-engines_clearlooks_src_animation_c) = 18e9e491be3b669569bf8a30491230ff03f4c135

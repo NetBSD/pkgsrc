@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 15:13:32 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:33:48 nia Exp $
 
-RMD160 (frameworkintegration-5.80.0.tar.xz) = 57e8367255fa112ef6136e804a618fe1f6c87bae
+BLAKE2s (frameworkintegration-5.80.0.tar.xz) = 46898badd295b37cc570fe15b5a87d1dce484d51ab93ffdf9f93a96b5f06cb26
 SHA512 (frameworkintegration-5.80.0.tar.xz) = 3e54729281d5fde4d18eaf7ebe18c6c17d1bb40e336ba0d91ac04aefd65800208efbcca4438a3be3f408860467c80bdf8b16b021c9892fec8f4ee55a13813ee2
 Size (frameworkintegration-5.80.0.tar.xz) = 1755248 bytes

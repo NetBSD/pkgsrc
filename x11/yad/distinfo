@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:13:26 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:35:00 nia Exp $
 
-RMD160 (yad-10.1.tar.xz) = dd77dbd864d74478cc4769cc462c3f8868da6470
+BLAKE2s (yad-10.1.tar.xz) = ef0c33ae07728b528311c02583fad6d03a5b217b6be7073cc9964791d379f483
 SHA512 (yad-10.1.tar.xz) = 2e55779074c64da679eab03c4e5d655470293d9fd7c7e7bc0e653610d5952f37cb96829185fab84471a8fe833f0a9fb2daef18f2ab2936acc1e141d8166a7355
 Size (yad-10.1.tar.xz) = 290776 bytes

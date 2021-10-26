@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:14:34 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:34:48 nia Exp $
 
-RMD160 (xfishtank-2.2.tar.gz) = 3e5ce34369360802cfd65140ba80ba005c08a214
+BLAKE2s (xfishtank-2.2.tar.gz) = fcfde052cf2d95e1ece4537e3276a0fd4e6cf7f6713f146d98f501357bcb9083
 SHA512 (xfishtank-2.2.tar.gz) = fb9560af472bfed35937518dae739816dee4848dda291bc6c975aca4ebf0d10d92f02128647b92fc88838aab084384b2e32d235c8bf17427a67257bf50b49c5e
 Size (xfishtank-2.2.tar.gz) = 360031 bytes
 SHA1 (patch-aa) = 72495a728ef93895b5eea85f27332f7167a1f5ac

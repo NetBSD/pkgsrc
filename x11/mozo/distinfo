@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 15:14:01 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:34:15 nia Exp $
 
-RMD160 (mozo-1.24.1.tar.xz) = e3643920825d1a08b3edb84542d132de2794ff79
+BLAKE2s (mozo-1.24.1.tar.xz) = 8db76bff371fa07fa7518a387fd1e680a23c005ea121a290da6f1f68600db40a
 SHA512 (mozo-1.24.1.tar.xz) = 04b7e93e7302b46a3959f78655de4a6f8b17896be2c506c0e8a9041a9a2d5247e8c2ac00b5c8f86616f6c39a533584923feacfe4b81ae58d41080632af2a24bd
 Size (mozo-1.24.1.tar.xz) = 231032 bytes

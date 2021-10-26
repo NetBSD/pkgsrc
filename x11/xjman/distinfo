@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:14:36 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:34:50 nia Exp $
 
-RMD160 (xjman-0.5.tar.bz2) = 75407d4c4091353079f8f6c0c18a703f70fca01b
+BLAKE2s (xjman-0.5.tar.bz2) = 6de08e78732d3663ed7e7049cfca51d2510faefaa6d5fef74c53ce90352cc406
 SHA512 (xjman-0.5.tar.bz2) = cf9a50041ba622c62a8dcdd40218c210666b40284115ebc52b605e7eb2c42bad2c98f97415075c28b76bfb20a50e38ff3a0b5003a5a32a7711440aa23a57a19b
 Size (xjman-0.5.tar.bz2) = 799554 bytes
