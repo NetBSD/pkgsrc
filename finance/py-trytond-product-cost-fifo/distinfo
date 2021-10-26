@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:53:59 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:26:09 nia Exp $
 
-RMD160 (tryton-4.2/trytond_product_cost_fifo-4.2.0.tar.gz) = cb96952f5ab294bdc56455a318fa793628a8d313
+BLAKE2s (tryton-4.2/trytond_product_cost_fifo-4.2.0.tar.gz) = 51255c77043419102139ea13ba5b54d1b7c96bb7ff56fc61f0d11ce91691923b
 SHA512 (tryton-4.2/trytond_product_cost_fifo-4.2.0.tar.gz) = ddf6be64a3648877bb7713d3d924eb7ca5366b4dd709cfce113ceb8bae2c60222c01bf176c40b55048398304bb54fc8668a799c596b49df992f57d42bbc6388c
 Size (tryton-4.2/trytond_product_cost_fifo-4.2.0.tar.gz) = 20901 bytes

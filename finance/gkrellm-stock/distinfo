@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:53:50 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:26:01 nia Exp $
 
-RMD160 (gkrellstock-0.5.1.tar.gz) = c7ce495ed93fe81cb74488c63c8b95a2fe12d53d
+BLAKE2s (gkrellstock-0.5.1.tar.gz) = d93a73972905b8dd3032f8c81616316b957aa07593eb2874a96f7e75b1d806d4
 SHA512 (gkrellstock-0.5.1.tar.gz) = 040e6271a0b0ca3f7be52cc64076a8d1b538fc7607a9ae54acf1c9dc176b094c1483b10c1813a929dcf47dff4fee8c18b7ca58472343c83edfa58a32edc7776c
 Size (gkrellstock-0.5.1.tar.gz) = 22385 bytes
 SHA1 (patch-aa) = fe5e598211dcf16a8eb828a8c6f4fae19679f017

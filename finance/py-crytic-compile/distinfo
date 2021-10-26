@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:53:53 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:26:04 nia Exp $
 
-RMD160 (crytic-compile-0.1.9.tar.gz) = 050eaba804137ae5df50f8c71c6c89f684649a9a
+BLAKE2s (crytic-compile-0.1.9.tar.gz) = 62596d9a7448f3714aac16212faf7c45bd1751a46f8f077600829c8fd5bc6f76
 SHA512 (crytic-compile-0.1.9.tar.gz) = 8bee6c0f7895b072b37018373ed3311baae4d80387d8ecd7abfe8a2ae97b8604b3e1e307e52f6348c8d2687c59baf78af60020404e3297d937bd21ebef860713
 Size (crytic-compile-0.1.9.tar.gz) = 69764 bytes
