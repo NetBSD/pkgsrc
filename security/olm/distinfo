@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:54:06 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:17:21 nia Exp $
 
-RMD160 (olm-3.2.2.tar.bz2) = dcf8d0e458654c25926fee897e111652b126c034
+BLAKE2s (olm-3.2.2.tar.bz2) = 1bcb375d2380721e31048a03c37420f7b777dba83f7ff97780321f5a68252751
 SHA512 (olm-3.2.2.tar.bz2) = a541299f2fbdaa2be5698a690cd753142311a3206011d70186e1122d575478f91e7feba207fe5d09ce506330dd1f9fbb71dccb3de7014c5333427fdd3b77b668
 Size (olm-3.2.2.tar.bz2) = 475682 bytes

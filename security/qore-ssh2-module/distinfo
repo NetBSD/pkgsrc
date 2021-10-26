@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:54:35 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:17:52 nia Exp $
 
-RMD160 (qore-ssh2-module-1.2.tar.bz2) = cd31cc9c32418a5a9a93a6b3cd5c95a002c10295
+BLAKE2s (qore-ssh2-module-1.2.tar.bz2) = 20e134bf05d6ac86d23347adc983951d8a26e680a2bd47ca5806fe0f3da6941f
 SHA512 (qore-ssh2-module-1.2.tar.bz2) = 1324fe23b520986d2976f2b38c1ecd0d4f7584d68d005af07746d452b848e751ee58503096874f7c061f7232837718ecd3225a6ebb154d38d7dd2a111c6135ab
 Size (qore-ssh2-module-1.2.tar.bz2) = 766015 bytes

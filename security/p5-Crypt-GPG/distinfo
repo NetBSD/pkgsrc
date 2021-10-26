@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:54:10 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:17:26 nia Exp $
 
-RMD160 (Crypt-GPG-1.64.tar.gz) = 39cf937daee37287fe12f01fa243022f089f9457
+BLAKE2s (Crypt-GPG-1.64.tar.gz) = 1fd0986e6af39cd71fd56c2151e86111f2b2f2ccbd2984a7e1dbacbbdf51f09b
 SHA512 (Crypt-GPG-1.64.tar.gz) = 10a5feafe51fd2fa6ed5ab180e749c6524c829189b818e614ad47d09354660b246e498bc6cf4a52f45ac7eb2bf1a76e93fa34aad0c1c02ecc65e8ec238e07228
 Size (Crypt-GPG-1.64.tar.gz) = 19539 bytes

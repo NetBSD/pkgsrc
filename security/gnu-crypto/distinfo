@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:53:49 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:17:06 nia Exp $
 
-RMD160 (gnu-crypto-2.0.1-bin.tar.bz2) = e7c097889d76cf0738817fd65c1d79fb7f693abf
+BLAKE2s (gnu-crypto-2.0.1-bin.tar.bz2) = ef6584df0ce3db9402d1c996292c8911e96a5cfa241860f1d409a07cd5080042
 SHA512 (gnu-crypto-2.0.1-bin.tar.bz2) = 67650dcf94566c6fbafc0784049ffc91e1cb3093341e429cd106b997a3630fa9c60ef81e6bd66b7ac5da92b07f7dce415e36a054ef32342bf66496cc2b44656c
 Size (gnu-crypto-2.0.1-bin.tar.bz2) = 1083808 bytes

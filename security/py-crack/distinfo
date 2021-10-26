@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:54:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:17:43 nia Exp $
 
-RMD160 (pycrack-0.01.tar.gz) = cfad834cd9f65cceeb5174901bac67800b8cf46b
+BLAKE2s (pycrack-0.01.tar.gz) = 6b78e3c6a7c0843b118ab1e6a9e0eede19ab55850dec54a89a7a62a8badb598c
 SHA512 (pycrack-0.01.tar.gz) = 8ee37cfaa266d23aa4c6f20ceaf5b1de7d1c5f5358881c4505538d19cd8c79bfd3e71c425b721020c069940b43947503bf445e743ced4191194683bef776fa06
 Size (pycrack-0.01.tar.gz) = 9195 bytes
 SHA1 (patch-aa) = c380953b710db0f0eeb26f54f2ded55e36014719

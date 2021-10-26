@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:53:44 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:17:00 nia Exp $
 
-RMD160 (bitstir-0.2.tar.gz) = a34412882c2685acd4b6613fbfe8a6c9fa9ebcf1
+BLAKE2s (bitstir-0.2.tar.gz) = 249f1510b03d70fe681c8671b5ab6033552f71c630deeb1d000c31fe2ebf16b4
 SHA512 (bitstir-0.2.tar.gz) = b64305108e5f4101b812334503e5973e94d7813b7848b2a2bcc2638fb01890f3322a6b332240bb03fbc5be3db5d1b5befd12eadc0c511f1825609cf52130d41b
 Size (bitstir-0.2.tar.gz) = 6423 bytes
 SHA1 (patch-bits-avail.c) = 0a121a5878f38cc9debdd644669a15f31ff5fb1c

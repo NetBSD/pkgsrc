@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:54:16 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:17:33 nia Exp $
 
-RMD160 (Net-SSH-Perl-2.14.tar.gz) = 09a218c63f902b692b82f7dd14993eefc0a3a5ef
+BLAKE2s (Net-SSH-Perl-2.14.tar.gz) = 6bfd70f50faf83c795a71015fc36bb3887a46f6a1cfef0b602e0972c6af287ae
 SHA512 (Net-SSH-Perl-2.14.tar.gz) = 49fee3e7969260a97453adfdac7ed3852130a7404ca5016f6d16549e478b8f2808f47c5801f2dbf991cfb33b5f2653d55360ba938d9b36016620a46e1ffea879
 Size (Net-SSH-Perl-2.14.tar.gz) = 256963 bytes
 SHA1 (patch-aa) = d85b70f5f4d4ccb55aabef6671171bf64c6fcdb9

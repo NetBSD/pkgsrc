@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2021/10/07 14:53:47 nia Exp $
+$NetBSD: distinfo,v 1.29 2021/10/26 11:17:03 nia Exp $
 
-RMD160 (dropbear-2020.81.tar.bz2) = 15c78343cc230931d4f5b39bc40cb9beed262c05
+BLAKE2s (dropbear-2020.81.tar.bz2) = c8b6f5a9c588a6b6998fb3c6b5cf77407a560452b812e00c21daf5144d369855
 SHA512 (dropbear-2020.81.tar.bz2) = 2fa9d4d7dcb1c81281f5e47c8a99b7300eb46b3bb605daaec956404eae9124879a8bbbef521dea6da8b3643f3dc6f7f5005e265bfcaba97e89812f5642c294da
 Size (dropbear-2020.81.tar.bz2) = 2289644 bytes
 SHA1 (patch-configure) = 95c82b951d16a5cca92a3d4d7ef67b7eb5f47540

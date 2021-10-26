@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:54:18 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:17:35 nia Exp $
 
-RMD160 (pam_radius-1.4.0.tar.gz) = 765bf1d81243504b6fccbab4032baba424dd8d33
+BLAKE2s (pam_radius-1.4.0.tar.gz) = 8d182bb57309e92ddf64c76592be7636c4727f39288c1977963c3f39698e67e5
 SHA512 (pam_radius-1.4.0.tar.gz) = 3505e3de6777c4129a36d2dbd1ae1dbdc5fe46d752c58a6f2a325f77d6f41f7bd999b886f830c0631e51112f756a16e699f29daa428c2befc79cfab5e5b58624
 Size (pam_radius-1.4.0.tar.gz) = 179458 bytes
 SHA1 (patch-configure) = 88f71bec092c9f9df95fe9de665ba4b37a440af0

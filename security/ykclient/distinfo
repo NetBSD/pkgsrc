@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:54:49 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:18:06 nia Exp $
 
-RMD160 (ykclient-2.15.tar.gz) = ba4c2dbc83d22b3e045c43b484c87042be879a4b
+BLAKE2s (ykclient-2.15.tar.gz) = c9177ca1f1b9c44099971d689fac886ba2f089439018920453584b8079a5dc4b
 SHA512 (ykclient-2.15.tar.gz) = 06e3f923091004385e3beb29147d57b7d8bcfd6b98e3e2a845c14ca515298d88d0cadb39cbd5809688627ca8335e32e1e4ae9b57a2092112d7b77c959cf30fcf
 Size (ykclient-2.15.tar.gz) = 50816 bytes
 SHA1 (patch-hmac.c) = 8e360aaebb27f81a73d031bcf2e8f88bcb648100

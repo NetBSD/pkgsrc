@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:54:00 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:17:17 nia Exp $
 
-RMD160 (log2timeline_0.65.tgz) = c9dad4035bad1dbbf87e82f123aa014f03aa647f
+BLAKE2s (log2timeline_0.65.tgz) = 589ed3f68c95b1460bc835e7734ef894f7b116bc222c8561feab44addef81d1f
 SHA512 (log2timeline_0.65.tgz) = cfc71370c71c30352d55f9647c6f4bd23aee05a5df9fa18f8347a787960df97eccd73eb991e378c3ff6b7c6df7e239d717e6175178d6bdabcf47986438b86a0e
 Size (log2timeline_0.65.tgz) = 579325 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:54:07 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:17:24 nia Exp $
 
-RMD160 (Authen-PAM-0.16.tar.gz) = 22e4df145506a207700a90ad5bcd47f6f7f245d0
+BLAKE2s (Authen-PAM-0.16.tar.gz) = ea6fcf06bb87280bd8ac1cb1b6c1207a07ebcf85990997e153a20c645c0907e7
 SHA512 (Authen-PAM-0.16.tar.gz) = 2419698193697cb8c9ac3a1527a25abefffd9f15f4b492006081b2c8e7fe9e01e00f33e8fed6a07611b725b38ed92d9feb51b8ba61e4c23313cc5ff9ea1c05fd
 Size (Authen-PAM-0.16.tar.gz) = 45922 bytes
 SHA1 (patch-Makefile.PL) = b1b0c39ec12353f766dba2405a3c2487ac22df9a

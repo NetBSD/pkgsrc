@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:54:47 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:18:03 nia Exp $
 
-RMD160 (stegtunnel-0.4.tar.gz) = c06d13c0c22b684fb5141894bae81d3d4d623470
+BLAKE2s (stegtunnel-0.4.tar.gz) = da9cc65d49f64cce51e9b5149c403a48ed15a3099d73ebac3f0f94947427883b
 SHA512 (stegtunnel-0.4.tar.gz) = 4ed63894ff941c25ca68b3cd1ad0baafb0e05ac89db1cbd383d36723380b1785db22e0214c6b682d83c2bdfcc85b1028da07eb3cbe29f3984351b6ea856b900c
 Size (stegtunnel-0.4.tar.gz) = 167291 bytes
 SHA1 (patch-aa) = c4dea849a440bb6520a41def36d3448741a0e4e1

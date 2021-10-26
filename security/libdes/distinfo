@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:53:56 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:17:12 nia Exp $
 
-RMD160 (libdes-4.04b.tar.gz) = 2e9a7f35b3710cc1c549ad1e6f4296467ee51a45
+BLAKE2s (libdes-4.04b.tar.gz) = f37d58a0658fdfa3403e317713770d8f66e3c74507ac96aa2e589725679bf990
 SHA512 (libdes-4.04b.tar.gz) = ec5c2a30910e8e284b10f664eb39970a28fae9dd36d73cff2b647d5eebba58527356559e3f5266626caeae91235bb6a912f0d3a85a16b7ad73fb1ebb46a11bc9
 Size (libdes-4.04b.tar.gz) = 142195 bytes
 SHA1 (patch-aa) = 5ba79dd53609c2ff626af6c010e1f3ea20543d70

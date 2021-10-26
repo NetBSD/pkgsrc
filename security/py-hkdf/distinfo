@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:54:29 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:17:46 nia Exp $
 
-RMD160 (hkdf-0.0.3.tar.gz) = 655173ded611e8c58a3d05225bc18aa2c6896bd7
+BLAKE2s (hkdf-0.0.3.tar.gz) = a2d36a7abf1b7b749b1de3aec6afe276fd1d9474ad33d9e41f219bee0d1e33fb
 SHA512 (hkdf-0.0.3.tar.gz) = c58f9310c151f8d710998d019221713ec71ac8083c42300f5e77326c7b35be341263c40fb485402937c381a6435cbd9899c8d32846a50d1d1e6a4d3e61f58c7d
 Size (hkdf-0.0.3.tar.gz) = 3959 bytes

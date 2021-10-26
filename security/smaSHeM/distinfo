@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:54:44 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:18:01 nia Exp $
 
-RMD160 (smaSHeM-0.4.tar.gz) = e968da7aaba5dfdd4050804f88ae08bf840345ab
+BLAKE2s (smaSHeM-0.4.tar.gz) = 6e4b812b2d56b69aeaa902881bfc4bd70f3d378d87dede22f9d6a04d20e65722
 SHA512 (smaSHeM-0.4.tar.gz) = ad3c1e23f14edc521d3f75b0d815210b2ea07f9e90edb50bf3c8e9cfab68b19a1fc16837cf58eeb855101a2a593b550dfc4770371bbda4dcdbca65f74dcaa343
 Size (smaSHeM-0.4.tar.gz) = 215081 bytes
 SHA1 (patch-src_smaSHeM.cpp) = cb5ace9c3f92819ba10fd1fcbdfad7996862eb37

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.56 2021/10/07 14:54:00 nia Exp $
+$NetBSD: distinfo,v 1.57 2021/10/26 11:17:16 nia Exp $
 
-RMD160 (libtasn1-4.17.0.tar.gz) = 426beeee0bb8b0cd3d3ccbc6234a8c4a06c21be8
+BLAKE2s (libtasn1-4.17.0.tar.gz) = b363af61ce1f4c34f3c4818a021499ae7477aff75d492d2beb719e74dd2a457e
 SHA512 (libtasn1-4.17.0.tar.gz) = 9cbd920196d1e4c8f5aa613259cded2510d40edb583ce20cc2702e2dee9bf32bee85a159c74600ffbebc2af2787e28ed0fe0adf15fc46839283747f4fe166d3d
 Size (libtasn1-4.17.0.tar.gz) = 1906654 bytes

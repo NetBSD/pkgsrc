@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:54:12 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:17:28 nia Exp $
 
-RMD160 (Crypt-RandPasswd-0.07.tar.gz) = 9f380221a07d028d5d62436befa6718912c519db
+BLAKE2s (Crypt-RandPasswd-0.07.tar.gz) = 89332e09c75befc95eb35461e7d648e88306ed1228c53f5d424aa3e6357a08dc
 SHA512 (Crypt-RandPasswd-0.07.tar.gz) = 44f5e22ea8b3abcfa494a1f9c4b36d9701d4886522a69241470645fdc5c3cc517b0b0dc1e2509a12b5ab98e5d4ebb0b07a910d9bba2401f67766657199b2e8f7
 Size (Crypt-RandPasswd-0.07.tar.gz) = 26215 bytes
