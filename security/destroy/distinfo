@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:53:46 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:17:03 nia Exp $
 
-RMD160 (destroy-20040415.tar.gz) = b1132ee8c226b6239c1da5591081d9fbccb9c284
+BLAKE2s (destroy-20040415.tar.gz) = 3977f3a248f45c998b20874032615b5334c69d73b4539c8d8c5b680d1735cdb5
 SHA512 (destroy-20040415.tar.gz) = dcc59f530370f641972ba2b10ddff5d7fd87c3c895a3d93ab9884f0bab70a2445db9e491101bd29f81bfbc05de3a9fad7ddc6b754686f907fb76f47fdffc01b1
 Size (destroy-20040415.tar.gz) = 4261 bytes
 SHA1 (patch-Makefile) = d0dcf65e23697631a190789993f12c5dac05f8f6

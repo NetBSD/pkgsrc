@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:54:12 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:17:28 nia Exp $
 
-RMD160 (Crypt-RIPEMD160-0.08.tar.gz) = 8516b1eceac6f0975a1228a6b8cc1f522e9c4125
+BLAKE2s (Crypt-RIPEMD160-0.08.tar.gz) = d5d30c443764ea65e451a993a6a542aa1e0498692fe9abd1d11d2e81635aabdc
 SHA512 (Crypt-RIPEMD160-0.08.tar.gz) = 435e0239c67aebdeaaa328c10bb6d12934b72c436e4eb21f177281ecd77204fdf300c0a7f38ee59bc1ca61b08cf632989ab513c4ee51c78415c722329ab9486c
 Size (Crypt-RIPEMD160-0.08.tar.gz) = 60041 bytes

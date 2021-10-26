@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:53:40 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:16:56 nia Exp $
 
-RMD160 (2fa-1.2.0.tar.gz) = 11fcc6611762d9d48841b7e8c3ace1d8073bcee7
+BLAKE2s (2fa-1.2.0.tar.gz) = af5b91b7506f2e8b5c13843aff6e9f7fea438631eac8ab42ba6c74153df513e9
 SHA512 (2fa-1.2.0.tar.gz) = 67759b1ef5b800910111f2756599a30f899c0317c30f16846eb132f698a428b3d9d7600de7b98a36bf12ec54760356ea1cb0bc521eeb617dc1434d71f99cb3ea
 Size (2fa-1.2.0.tar.gz) = 6107 bytes
-RMD160 (github.com_atotto_clipboard_@v_v0.1.2.mod) = 6c4c922bc597aaaa10f4e6f853507428d16a49d7
+BLAKE2s (github.com_atotto_clipboard_@v_v0.1.2.mod) = 1211f40837ef80708c30e12f055eb2dcdfd562de960f2aba6761710935863c3a
 SHA512 (github.com_atotto_clipboard_@v_v0.1.2.mod) = 49d95d7db5b42c6948c50dcbee20a5ec6b554e78f8ee4beec2303b318d6289a32be807084806bd17ee8e680e58c2693f753614fdb6788f424c9d7496790b20ba
 Size (github.com_atotto_clipboard_@v_v0.1.2.mod) = 35 bytes
-RMD160 (github.com_atotto_clipboard_@v_v0.1.2.zip) = c188a75faf05866c1f71ce070ca0dc5d1effc4c4
+BLAKE2s (github.com_atotto_clipboard_@v_v0.1.2.zip) = 951c453436454b220ee8b9d4d6a78aba5ad2ea7ff4848a3a7c3e39fbbfbf5b2c
 SHA512 (github.com_atotto_clipboard_@v_v0.1.2.zip) = 5df11a2def2b93ec0465fffaeee22cf12802fd63574dccf977a6153aaddbe95c2a3ce20388fa3c3dba0b41d0cafbfa827ab9e6c311cfeb491e5b09aa907cb6cb
 Size (github.com_atotto_clipboard_@v_v0.1.2.zip) = 7610 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:53:51 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:17:08 nia Exp $
 
-RMD160 (gss-0.0.15.tar.gz) = ba9067a932f5e4ade82b448e613b046c6ab862b4
+BLAKE2s (gss-0.0.15.tar.gz) = fb084be99d4b49e7bafd5b57e289a2b9ec3d14e6619cc72b37ba4f62d2ef2e96
 SHA512 (gss-0.0.15.tar.gz) = 437e347657b7abea66b3dd8add752b752326c88e903adb60384e23f6257741cb349696d9e63c5235009c9215d83625c91aee90e7330151b69ab2a0f3770779df
 Size (gss-0.0.15.tar.gz) = 1383440 bytes

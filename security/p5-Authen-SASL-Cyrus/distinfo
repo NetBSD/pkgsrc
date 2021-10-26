@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:54:08 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:17:24 nia Exp $
 
-RMD160 (Authen-SASL-Cyrus-0.13.tar.gz) = cfbbb278d45a06959990e807c25d19966d57752f
+BLAKE2s (Authen-SASL-Cyrus-0.13.tar.gz) = 6a5fe524913f6da8364a480a0ffca7d2f21b5553d29af773e0d2b74dc5d94c93
 SHA512 (Authen-SASL-Cyrus-0.13.tar.gz) = 6a467a73db95176da10fc59b2d09577d3183bc60854a0343623d6a9d79bd22ca7d7d087b37dc4ed152af0e277a5a860a0de852d695cce215a04ccd278180d906
 Size (Authen-SASL-Cyrus-0.13.tar.gz) = 12145 bytes

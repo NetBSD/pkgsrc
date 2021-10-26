@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:54:03 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:17:20 nia Exp $
 
-RMD160 (nacl-20110221.tar.bz2) = 2b1d6046ff633cb4d98fa548060de1a96930ed3c
+BLAKE2s (nacl-20110221.tar.bz2) = d8fccb5036297da7fe4f4d357cd326f10094ba709b9422ccd1571b13e3981f4d
 SHA512 (nacl-20110221.tar.bz2) = 4c031ceffe6a28dc74b46ac003d485531f78de467c802df73c8b22ca53644dabb7d2e3080b7bdd6583f0d07ad76b6d95bc0ffdce319ca2f80ee041e6fe618656
 Size (nacl-20110221.tar.bz2) = 163415 bytes
 SHA1 (patch-do) = 590961a4b2daf5693a477b06d35c8ea92f8e3173

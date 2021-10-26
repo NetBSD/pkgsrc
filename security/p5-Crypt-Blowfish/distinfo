@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:54:08 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:17:25 nia Exp $
 
-RMD160 (Crypt-Blowfish-2.14.tar.gz) = 720210138a50fad986a6a42a274a28a020aaa2ed
+BLAKE2s (Crypt-Blowfish-2.14.tar.gz) = cec13f3e4699f9a3d205f8599609a5a62d7e499731bda2bdc0c7f753b251ae90
 SHA512 (Crypt-Blowfish-2.14.tar.gz) = be2cdae50bff68858334ad57b124396ebcbfbf9002af4693850e881b9b857a4fa22672b8295b52a5e661381c8f910f3061290bc697770fc7f14c6b64d65496c8
 Size (Crypt-Blowfish-2.14.tar.gz) = 18006 bytes

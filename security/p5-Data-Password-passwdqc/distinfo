@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:54:13 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:17:30 nia Exp $
 
-RMD160 (Data-Password-passwdqc-0.09.tar.gz) = 1770183263e4e73d06585f1b050e8875f41c7c91
+BLAKE2s (Data-Password-passwdqc-0.09.tar.gz) = 229eff539636b2427f3af8ef537b2cf10cdc4c8d36ab4cc13bcb9ba7940f789f
 SHA512 (Data-Password-passwdqc-0.09.tar.gz) = 08d15ee99129a33579d5782d2226e896815e1ab7a4259dea03f251d67b2fe08661623c6ba1f9a61a6bcf36bad4a25cd87a2c31570c4d0c64640590a0dfc24eea
 Size (Data-Password-passwdqc-0.09.tar.gz) = 110136 bytes

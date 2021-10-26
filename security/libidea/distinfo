@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:53:58 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:17:14 nia Exp $
 
-RMD160 (libidea-0.8.2b.tar.gz) = 34a35be2dee6e5ee4024d6eaede4b68e1dad30c7
+BLAKE2s (libidea-0.8.2b.tar.gz) = 42046b89bcdc56d332c8f45e2c21ad9ce5e36323b7e027655560c4577599c2f3
 SHA512 (libidea-0.8.2b.tar.gz) = adeeba6518e8dc965003685b04f415d3325055f556a42bad226c866db0b7f14b958c5248db82eb0dd2cfdbbe1d5296a641d980c58f80c226bceb0ada4a6cfe55
 Size (libidea-0.8.2b.tar.gz) = 9641 bytes
 SHA1 (patch-aa) = 097f76e812b25162e83aa969c66b16fc61806ac4

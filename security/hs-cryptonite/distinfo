@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:53:53 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:17:09 nia Exp $
 
-RMD160 (cryptonite-0.28.tar.gz) = 5fb4103fb30fe3a800ee57b11b6296fbeaf9f782
+BLAKE2s (cryptonite-0.28.tar.gz) = c822acb63b2fcbb372695cd190b3e4ddf15f403119d2e9db2dc826df9587a409
 SHA512 (cryptonite-0.28.tar.gz) = c1e485522938f94f15910a5b5a4a3e4dfecbb62df463c80faaa51e9d883c2612611b8486bd0fd13660766cfb6d62d366fbbd03df2db874d525514aae247b6242
 Size (cryptonite-0.28.tar.gz) = 616309 bytes
 SHA1 (patch-Crypto_Number_Compat.hs) = 982e568d5f7c7d2d3bf5d6453afa72302c42a383

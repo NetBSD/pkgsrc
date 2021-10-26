@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:53:42 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:16:59 nia Exp $
 
-RMD160 (modsecurity-apache_2.7.7.tar.gz) = aa6eb85000d8bee86a5ec3cf6a03ac82a9e76dc6
+BLAKE2s (modsecurity-apache_2.7.7.tar.gz) = 396cb59d03ccf22faf502cf2d3f6e53b9a18f4b2738025fa68c3e265b02a4747
 SHA512 (modsecurity-apache_2.7.7.tar.gz) = 859f72580b6acaae5db180f98ee32ad2cb0f3ef24321d0c2df20ddd9fcfbc6c09c98b672012dc4931a6fd14f3c21c38ed31ab8900940382fcb48b37f30005a7d
 Size (modsecurity-apache_2.7.7.tar.gz) = 1003835 bytes
 SHA1 (patch-apache2_msc__crypt.c) = 01bdb8291c83a8abbd1e990d96a768d9bec0ef89

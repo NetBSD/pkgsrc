@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:54:29 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:17:45 nia Exp $
 
-RMD160 (fido2-0.8.1.tar.gz) = 0d7e1ed6269364eea4749bdb3fdce395bd03d724
+BLAKE2s (fido2-0.8.1.tar.gz) = a6faecdd174133b2f73d5e4e5567fe8d2e08355ec63d5cf57cd189e5f0ffadea
 SHA512 (fido2-0.8.1.tar.gz) = 510c4fa11ff4f431d88171156fbbaf4326c7b7a24586eb1c566e075bb673adf542d07c7b1e2163fb3972d59799ca7d4ddc22f3e79a8f05e2ea1f8bcfe63cc5bc
 Size (fido2-0.8.1.tar.gz) = 208300 bytes
 SHA1 (patch-fido2___pyu2f_____init____.py) = 1a42c219a20a1b98f78c9ca73d419f782d77ff8a

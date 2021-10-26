@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:54:12 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:17:29 nia Exp $
 
-RMD160 (Crypt-Random-Seed-0.03.tar.gz) = e459454717f7446d04de2292957daba972e7c8a4
+BLAKE2s (Crypt-Random-Seed-0.03.tar.gz) = 1fad2eed2ccc731a7e6ee66a371da038183ce063e0fed4d5b240faebfa2c9951
 SHA512 (Crypt-Random-Seed-0.03.tar.gz) = 5ee6ea67c325aa9693c96ef650e3888a599d3d7e25316f869808dc6e06b9dd86f1c200c9097939f74511e2ed59e48df1b28cc96e5f7988076d9f7f5d840a894e
 Size (Crypt-Random-Seed-0.03.tar.gz) = 22175 bytes

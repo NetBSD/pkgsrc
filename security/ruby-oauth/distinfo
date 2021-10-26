@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 14:54:38 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 11:17:55 nia Exp $
 
-RMD160 (oauth-0.5.6.gem) = 57166d8f5b2f55f6639e1185d3789f2d86e0bc8d
+BLAKE2s (oauth-0.5.6.gem) = 91407e3f90e01c63c437f9fce056a626dc6e2f9be1626ef92a899b75e41c24f6
 SHA512 (oauth-0.5.6.gem) = c91cf3e2e794e762a7d5f55c974a23bf8fdf4f74280529a78bc41e690440296ec71761a48c533a7eb09a4610da01155b17dd4b024073040791f52c364e44c0b1
 Size (oauth-0.5.6.gem) = 28672 bytes

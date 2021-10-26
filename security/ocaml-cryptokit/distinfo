@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:54:04 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:17:21 nia Exp $
 
-RMD160 (cryptokit-1.13.tar.gz) = fdce606ee8b15c8b94893691b9feebfadad6bf98
+BLAKE2s (cryptokit-1.13.tar.gz) = 3bbc8dfe46604ef39eb7330c4b155cd47021373b06b537988b4441b29ef0ee22
 SHA512 (cryptokit-1.13.tar.gz) = b739e88660ee7cc5883293554d78006d3b4ba705ae4af52f6402f1c721310b68c46003016b2e16fab4fea86542afa69acc7193c7186771f4a5ad29723a6901f9
 Size (cryptokit-1.13.tar.gz) = 165723 bytes

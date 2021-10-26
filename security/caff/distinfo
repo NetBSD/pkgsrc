@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.38 2021/10/07 14:53:44 nia Exp $
+$NetBSD: distinfo,v 1.39 2021/10/26 11:17:01 nia Exp $
 
-RMD160 (signing-party_2.11.orig.tar.gz) = 58289ade13f85ec20d65d75569cdda5e774f6bee
+BLAKE2s (signing-party_2.11.orig.tar.gz) = f43b008bbfc505d3f6a42f0c8004817ce9de143da0228a0bbbab97dbe2b2e81d
 SHA512 (signing-party_2.11.orig.tar.gz) = 9a34bde415bf779859b48eaab12e5c6a1a3f08d0292cd5cd691518e398fe40a73b878926d3ea1ef12ccca40179933478d03ec16ec4d9200fb726aaade541505d
 Size (signing-party_2.11.orig.tar.gz) = 224706 bytes
 SHA1 (patch-Makefile) = f518793a14adb3ac489cab86d040b40e451bc0da

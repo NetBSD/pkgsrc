@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:54:38 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:17:55 nia Exp $
 
-RMD160 (net-sftp-3.0.0.gem) = 8ee58a19b081007027aa577af474350b1207f082
+BLAKE2s (net-sftp-3.0.0.gem) = 2604345f1618cd7c29d6a391d6a7a56ffd69451ce922a70007fccf7a5d574023
 SHA512 (net-sftp-3.0.0.gem) = 6a05ae03e9e2f97043adaf4856bb4130c3dd4318e5074c1231c367f2cea37edf6001b5d54ba729853d90d34c4d448cc8e2bb7c80edf9e883ee1c7a2593f655e8
 Size (net-sftp-3.0.0.gem) = 54784 bytes
