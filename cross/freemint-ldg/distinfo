@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:30:23 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:07:53 nia Exp $
 
-RMD160 (ldg-SVN-20131104.tar.bz2) = 36b0bf23a7e2cc16236d2b2f20bb1cb1afa7270e
+BLAKE2s (ldg-SVN-20131104.tar.bz2) = 6b7fb1e71a943bcf2ebc1cfc0c6e06ddd38e98cd80ae7bf9c11b637836b14220
 SHA512 (ldg-SVN-20131104.tar.bz2) = b4066b412d41497fc717acd96606378fc780fec8934a199484ad58a456d8764d10c1567b889c7e8b1a15e28728b671705dff2eb80db9e024a829b2cb2593e343
 Size (ldg-SVN-20131104.tar.bz2) = 142828 bytes
 SHA1 (patch-src_devel_gcc.mak) = 7730c5657ca8343bd7fcffee859d3611311ae208
