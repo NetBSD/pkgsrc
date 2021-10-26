@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:09:40 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 09:59:16 nia Exp $
 
-RMD160 (mp3wrap-0.5-src.tar.gz) = e367caeb39b582609db986359b99b43b050be882
+BLAKE2s (mp3wrap-0.5-src.tar.gz) = e052b9f3f35ba163ee06ef7b40c77a1bf0b47bf0a82b751e5777218781281a15
 SHA512 (mp3wrap-0.5-src.tar.gz) = 2dc7a72a12b9245956000443a51cd5341e1d48795b629f6277f9dd26ac9b3ab2511a119478a10daa9516cb2526073956af42f83410aff1e4eae0c972fdd8b0f1
 Size (mp3wrap-0.5-src.tar.gz) = 113008 bytes
 SHA1 (patch-crc.c) = c561ac268e4bdf2ef606f7b27603f4d1f37c4990

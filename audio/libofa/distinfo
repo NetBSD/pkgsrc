@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:09:33 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 09:59:08 nia Exp $
 
-RMD160 (libofa-0.9.3.tar.gz) = 77f393570bb5356026c4b9c7195236bd96cb9143
+BLAKE2s (libofa-0.9.3.tar.gz) = 2a18da144df82f92a8f85004778778f4355891f98ae6975518e78c582d8df09e
 SHA512 (libofa-0.9.3.tar.gz) = 058fb43ea296325d2f7ad1762e1fd3f2ad772754b5d53dbaa1c5cd91ac5041ef82c7ea9ac580825e2391fa7db6803ff7fd5b24faf319280211a4641516126967
 Size (libofa-0.9.3.tar.gz) = 384043 bytes
 SHA1 (patch-aa) = 5873559f25c2dd3ca7cd3beac089167faa1ce49f

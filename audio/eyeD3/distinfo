@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:09:18 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 09:58:53 nia Exp $
 
-RMD160 (eyeD3-0.9.5.tar.gz) = 32caacd2ce61e0eb5ed5743bcbe12404b225f107
+BLAKE2s (eyeD3-0.9.5.tar.gz) = 18a9e79956a0dec19e8f930a291a02b81df0e24e29ee5f4ec895da6402c20c85
 SHA512 (eyeD3-0.9.5.tar.gz) = 74f75bc583a6cf7ee277a581b3ef4111804fd220371b65ab4d0a4491ce8434da6ce48f32e2b845426819948e4cb2b224e8a263137b9fad5297d5b9fd57befd9e
 Size (eyeD3-0.9.5.tar.gz) = 222994 bytes
 SHA1 (patch-Makefile) = d7f902b125c6e92e7191d3b7d46b345525fbc8ad

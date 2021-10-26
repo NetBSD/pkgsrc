@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:09:31 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 09:59:05 nia Exp $
 
-RMD160 (libgig-4.2.0.tar.bz2) = f845d8558171e48ae9486ede63e09b82f522983c
+BLAKE2s (libgig-4.2.0.tar.bz2) = 650dcad46e1eef3344e5abb6ad83f59c040ca70582907f4dc4ed7723b2f3a6b0
 SHA512 (libgig-4.2.0.tar.bz2) = 52c8c749c7852e229c76c17211398dbf5dd5891a1ee9d8e8bc61d55b825c5676595b20b26014e739b9bfd387db36895152b380519609a928a8fa68f4a20279f6
 Size (libgig-4.2.0.tar.bz2) = 746637 bytes
 SHA1 (patch-src_Akai.h) = 61f432c33a7b1a751204b99d380aeab8aa0ae62c

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:09:34 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 09:59:09 nia Exp $
 
-RMD160 (libsmf-1.3.tar.gz) = c6c15191b3c1dff313a3a9f16e8050910c65ede9
+BLAKE2s (libsmf-1.3.tar.gz) = ddcf190a56f47cec73b46ebb91e2207b13f69e122c90eba6b5a51a74cfebbdd0
 SHA512 (libsmf-1.3.tar.gz) = 3c383ec8f2fbe48ddab1008b3ecfe6941c38e33cfd963eabdf07f09c8c04c1b8758c8774b25672f70c29b570f2c250c795979d19b39c5027810b54b07035497d
 Size (libsmf-1.3.tar.gz) = 545850 bytes

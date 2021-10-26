@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:09:52 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 09:59:28 nia Exp $
 
-RMD160 (sidplay-base-1.0.9.tgz) = 4a96d5ebc5510d2b348bc837c184912c7f16789a
+BLAKE2s (sidplay-base-1.0.9.tgz) = e0528b7cbf12705994a519e3f72d52af78af4af230f1786c57335e59105161ce
 SHA512 (sidplay-base-1.0.9.tgz) = 0801d69ccd0ae6ec8521c4b2f4a0fb13bd3980de21d6b83c1fd9872a22ae277a52fb4099ec400034c08d42fba91153973c07a692c8abd2cebe4746884f855928
 Size (sidplay-base-1.0.9.tgz) = 71969 bytes
 SHA1 (patch-aa) = 19152c74918debf52578407b3b08331f969ad8d8

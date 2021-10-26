@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:09:45 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 09:59:21 nia Exp $
 
-RMD160 (MPEG-Audio-Frame-0.10.tar.gz) = 60a9cc57b8128ebf3abd74dfe42d92906640e5e1
+BLAKE2s (MPEG-Audio-Frame-0.10.tar.gz) = 73a45b932a3e6f98ddd8b62e44e64f84a36c99a221b0cb16c3c59112bb017d24
 SHA512 (MPEG-Audio-Frame-0.10.tar.gz) = aaf1cede3c6dd1539167e9f219be2c8e8dd30e8c63a98c3503d98bbbdbde86cf92343bef6c689df5814158ba08e581c46704adfb341fd294ed2b949a9b46d5d1
 Size (MPEG-Audio-Frame-0.10.tar.gz) = 376305 bytes

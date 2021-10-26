@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:09:42 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 09:59:18 nia Exp $
 
-RMD160 (nas-1.9.1.src.tar.gz) = 6d6aa05ae2376fbc8ff3145b73da1d28b190a856
+BLAKE2s (nas-1.9.1.src.tar.gz) = f741c64b4328052df6e288f8f87e853dbf379454a12d955aef3e1111fe59cf7c
 SHA512 (nas-1.9.1.src.tar.gz) = c97cd6dc26fbf100214a5f721cbacab996b6963c88c338db90db342a766b7f3e374686ed0f260257270d72ae720b7f76e02a94a14ea3a2b6cece6bf3005dad9e
 Size (nas-1.9.1.src.tar.gz) = 1454523 bytes
 SHA1 (patch-aa) = 1b504906166df26b57d39c8c7e0099ddad7308b2

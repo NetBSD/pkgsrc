@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 13:09:10 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 09:58:44 nia Exp $
 
-RMD160 (adplug-2.3.3.tar.bz2) = ca5ed305eef77365f9af1104bc3c6f0c116ddef9
+BLAKE2s (adplug-2.3.3.tar.bz2) = 08d7ae235da1d34c4f64552ce83f8bf22a3c4754cb345ab39b2f26950363ff91
 SHA512 (adplug-2.3.3.tar.bz2) = 08647c746df69aa0a3941ee64d3adecd11a46febf51fe1bb9fe16ff01a6fef56321b18618f5ecb66309b8cdac8493a067707759fbdf0e91d556677c6b4c57a44
 Size (adplug-2.3.3.tar.bz2) = 1840460 bytes

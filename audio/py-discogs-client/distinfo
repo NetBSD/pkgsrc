@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:09:48 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 09:59:24 nia Exp $
 
-RMD160 (discogs-client-2.3.0.tar.gz) = 0eb52b41ef537856d39c389fc320f7e95acb7bb2
+BLAKE2s (discogs-client-2.3.0.tar.gz) = 66c078a91ae744ae54e5639fb65f4bd36969838c9e85bf8d633738d1569007e7
 SHA512 (discogs-client-2.3.0.tar.gz) = 1912c0b9a3ff5ef33bcea92e322580458b78c5ad280cfde1f1e180a096bd2afe8f0d22059b985a8efd6fe5a84b54fecbeee521ccc698c694b3d6d3e66f976afc
 Size (discogs-client-2.3.0.tar.gz) = 24716 bytes
