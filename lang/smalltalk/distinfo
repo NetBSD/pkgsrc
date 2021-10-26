@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.30 2021/10/07 14:21:14 nia Exp $
+$NetBSD: distinfo,v 1.31 2021/10/26 10:51:55 nia Exp $
 
-RMD160 (smalltalk-3.2.5.tar.gz) = 04cc87b31e8288fc6a8ce756612d40d91ce40cde
+BLAKE2s (smalltalk-3.2.5.tar.gz) = c30aa57428542161a24a886d937abebe0c0c8da27f3b143f5f2c5e6f7ab712ad
 SHA512 (smalltalk-3.2.5.tar.gz) = 385e5fba2acb8870759e5178282210c09c45685d0cf776bc50f4ed10c9afacf9164547ba8099ea3ed9a92a2a253aa9c2b011a7a9f2dff47ea9cfdf3b42029ebc
 Size (smalltalk-3.2.5.tar.gz) = 5779293 bytes
 SHA1 (patch-ae) = 0de0e6bed47d32e1c3088100c153054461e4f33b

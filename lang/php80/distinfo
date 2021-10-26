@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/22 15:09:52 taca Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:51:48 nia Exp $
 
-RMD160 (php-8.0.12.tar.xz) = 098d8c323e93a37ae6c110c809dbe91e0d059acd
+BLAKE2s (php-8.0.12.tar.xz) = 4dcb0c998fe0dba86c1caccc18eeeea66f14cd01674b0115f4ea67aafd33ff55
 SHA512 (php-8.0.12.tar.xz) = 927b15c4443f3741a5325ec7bf387987b405cd5e64e40fd81f1945bf073adda30eeede8e1f98185f505cb61f969cf1abe05b8dad57a3c4e87971e8037bb16b23
 Size (php-8.0.12.tar.xz) = 10713980 bytes
 SHA1 (patch-build_libtool.m4) = e58a2bcebe9e9d7dc7255354fd9fe57878e3f8a6

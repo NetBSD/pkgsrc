@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:21:06 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:51:48 nia Exp $
 
-RMD160 (asttokens-2.0.5.tar.gz) = d89f2b51463c2e36e4ab4430c99a8dcaff376e57
+BLAKE2s (asttokens-2.0.5.tar.gz) = aff8e9bacbeaf8d88dfa4a54e0f1e346d39a7967f599c5fafafb06f55680307a
 SHA512 (asttokens-2.0.5.tar.gz) = 60b323be72de75b2d612e7d602a202fae46559f0842624d38ff0a22376573c3e4885ad2cece04314ef7f230f8e47ae6fc8d9f39a6bdacc1c74961a5158abd463
 Size (asttokens-2.0.5.tar.gz) = 50218 bytes

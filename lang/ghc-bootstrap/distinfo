@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:20:53 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:51:36 nia Exp $
 
-RMD160 (ghc-6.8.3-src.tar.bz2) = 415cd144f0641a0c5887ad7325e2e775e93044f0
+BLAKE2s (ghc-6.8.3-src.tar.bz2) = 2c14f596ea057828cffceed0fa9d29465f32e0b49cc38b250e55c51d6d0359cc
 SHA512 (ghc-6.8.3-src.tar.bz2) = bd1c24cb4b62dbad6a5b7ff93a77cc5462cd2c633a4ea5bc070a97409762afd9d0a2c65957e37efb4130ded1dc604f409754f0e9eb9a09cf8b3ce5bbd6d19f92
 Size (ghc-6.8.3-src.tar.bz2) = 7092076 bytes
 SHA1 (patch-ac) = 65ba6ec7a78d938af965ebc07aa65fc00fb6b5ce

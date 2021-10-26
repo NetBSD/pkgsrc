@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.30 2021/10/07 14:20:59 nia Exp $
+$NetBSD: distinfo,v 1.31 2021/10/26 10:51:41 nia Exp $
 
-RMD160 (llvm-12.0.1.src.tar.xz) = 678910782ceac9bcd7234fca9d6e358ffbe7a660
+BLAKE2s (llvm-12.0.1.src.tar.xz) = 7fd5bf0ff1277bba7dfec2e1451e833d0dc2e47aa1f3cacfd4940fd992fc3100
 SHA512 (llvm-12.0.1.src.tar.xz) = ff674afb4c8eea699a4756f1bb463f15098a7fa354c733de83c024f8f0cf238cd5f19ae3ec446831c7109235e293e2bf31d8562567ede163c8ec53af7306ba0f
 Size (llvm-12.0.1.src.tar.xz) = 42898504 bytes
 SHA1 (patch-CMakeLists.txt) = 78e2dab2bf73f7e466ca2788fe6444e39b4ebd80

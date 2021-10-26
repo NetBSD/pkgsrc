@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:20:49 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:51:33 nia Exp $
 
-RMD160 (embryo-1.7.10.tar.bz2) = 4043737b811788ac2798a5cd413661d6553dda67
+BLAKE2s (embryo-1.7.10.tar.bz2) = b397474d7b26ca999ad5d62be86ccfdd187534adbda2ed3edd83636079168a3d
 SHA512 (embryo-1.7.10.tar.bz2) = 7be2171b9035d560a21aa232027d2afc46db44293e0d0ab0fdc6d3451a8a750956f09043edf851823ecc9de8c03c554205d84eddabd52f4fbe5938f5fd94d254
 Size (embryo-1.7.10.tar.bz2) = 456473 bytes

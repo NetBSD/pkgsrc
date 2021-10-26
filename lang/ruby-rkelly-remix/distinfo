@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:21:12 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:51:54 nia Exp $
 
-RMD160 (rkelly-remix-0.0.7.gem) = d571495370444bf7af5cc5efd9557bf2cfc91544
+BLAKE2s (rkelly-remix-0.0.7.gem) = 1b939a7be1839195d1142fe266ffb9807f06bc8ae37ed050f5b0e47d9a2ce542
 SHA512 (rkelly-remix-0.0.7.gem) = 5450b4b52b912b6626fcac3e3428dd2b4520dcb62b402e36579c9b34e8a027853e53a0860f33b4efc995517d70a3fab4f75f28ce7ab0b2b0c9e09e72ddd7cd54
 Size (rkelly-remix-0.0.7.gem) = 69632 bytes

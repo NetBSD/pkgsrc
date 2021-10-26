@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.37 2021/10/07 14:20:48 nia Exp $
+$NetBSD: distinfo,v 1.38 2021/10/26 10:51:32 nia Exp $
 
-RMD160 (coq-8.12.2.tar.gz) = d691b0fc0e0b9824f15a8a26d013f8578eb095ce
+BLAKE2s (coq-8.12.2.tar.gz) = 08bb88e3614ded682df5638971af67b3d957a86ab7ac0269bcbf6a7d8c116acd
 SHA512 (coq-8.12.2.tar.gz) = 6b524edbceb5795f04bbd2b52f191bfcf10b611f7a2fa0450c30b72c944f88418d261729476b64603faacfe2be5f7992a2997541e54e6f8691d4dc8b4969198d
 Size (coq-8.12.2.tar.gz) = 6855860 bytes
 SHA1 (patch-Makefile.common) = f53c41884e12bfafa825a8f27c940ab40bd9b9fe

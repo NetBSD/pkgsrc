@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:21:11 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:51:53 nia Exp $
 
-RMD160 (cucumber-gherkin-20.0.1.gem) = 51a9ac3058dca6dfef16aa680526a9ccec0bce8a
+BLAKE2s (cucumber-gherkin-20.0.1.gem) = 66a80a661c042316f5f64da7ec4e61312dc510d090e526b11b0a769117446cff
 SHA512 (cucumber-gherkin-20.0.1.gem) = e9170ffc21291f3d871e92a9c9d69a5f508684c8edd33d179143c7eac96930fefbe66ccd3510aaddb35510a329d6f5fb5c94d25e5ec2031fb4cecee8cb7d9077
 Size (cucumber-gherkin-20.0.1.gem) = 33792 bytes

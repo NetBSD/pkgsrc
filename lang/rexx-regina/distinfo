@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:21:11 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:51:53 nia Exp $
 
-RMD160 (regina301.zip) = 5414434c544295b3a35e14edf3bd9892b20b6055
+BLAKE2s (regina301.zip) = 527b9e194f531297f70eae2af5d83f31ea03a4d8d68d05ff5eb1cc21fe073239
 SHA512 (regina301.zip) = ddf984c4a777728bd1043ab6357c3d5f2a7bc6828312afa6e39562499b9e08e2bc203e95bbef9965691553a6e5a37124521f1a27dfb5d06816255c53d4f23167
 Size (regina301.zip) = 871017 bytes
 SHA1 (patch-aa) = 9c6f6bd372afd4278afe81e1fcbaed2ba40eb047

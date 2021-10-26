@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:20:51 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:51:35 nia Exp $
 
-RMD160 (fort77-1.18.tar.gz) = 9748f9e068b8071a5b89009bfdb533ee2a9b0c11
+BLAKE2s (fort77-1.18.tar.gz) = 0c4bb64b5aa720218c9200bdf4d7adff9b5519b9fcf17c81b115a9c91cebb7be
 SHA512 (fort77-1.18.tar.gz) = c52d10b25f4a8cd62e4363c65a0a35b2bd3adb066a5e66f6271c0f1eb04e9a57b08d64d2a28388b847ae17f3f216e0563838ab617dfd467d94f2bb58a4f50cca
 Size (fort77-1.18.tar.gz) = 6562 bytes

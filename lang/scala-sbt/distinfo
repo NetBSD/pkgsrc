@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:21:13 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:51:55 nia Exp $
 
-RMD160 (sbt-1.2.8.tgz) = b6f5183cb6646d477558476848c23aea6d095181
+BLAKE2s (sbt-1.2.8.tgz) = da7c95f6a98c811cea3ac17bc652926a2028b8ffde1fb0fc7158dbc1509a23f3
 SHA512 (sbt-1.2.8.tgz) = e12d50de4481dc599b8e129b5caf86b4a6a42426612308f9c8dd791525b5ae325e65f1c1db479bdc00fed2421c108a0dcdd00585f90334446e2cef914484719a
 Size (sbt-1.2.8.tgz) = 47179935 bytes
 SHA1 (patch-bin_sbt) = 0a848665cc715a5749d1554ddd67e3184427e769

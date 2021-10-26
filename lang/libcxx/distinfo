@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:20:58 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:51:40 nia Exp $
 
-RMD160 (libcxx-12.0.1.src.tar.xz) = ad12f967c54a55e9f403c5c134f74e6689defeb7
+BLAKE2s (libcxx-12.0.1.src.tar.xz) = abe6e024b0de83f6547a1f16a5e00f4afbe641a34331cecb458d849d661d079c
 SHA512 (libcxx-12.0.1.src.tar.xz) = c9f9a546d6a312ff6e7c85a044ce801fe7bfca1c349767b3f3c5ea16656b8906a8078f25de38138c9844c4b2646238fd17d890438cd10391cd9e4a430f9064a0
 Size (libcxx-12.0.1.src.tar.xz) = 1882840 bytes
-RMD160 (libcxxabi-12.0.1.src.tar.xz) = 981c416f6d12b911d684e31631d2f6b9a03ae7c5
+BLAKE2s (libcxxabi-12.0.1.src.tar.xz) = 7179060766a67620fa3d500e59ba78e61498deb34980880a0f5bc99e664ba8d1
 SHA512 (libcxxabi-12.0.1.src.tar.xz) = c7b236e9afe8d6bba297e1eca12ca0e03fbd1b028b9627154186d27eb2e035cd33eddb72511a38d0827de347a487e180c32c1798759c4283b9fbbf338a015bb9
 Size (libcxxabi-12.0.1.src.tar.xz) = 552980 bytes
-RMD160 (llvm-12.0.1.src.tar.xz) = 678910782ceac9bcd7234fca9d6e358ffbe7a660
+BLAKE2s (llvm-12.0.1.src.tar.xz) = 7fd5bf0ff1277bba7dfec2e1451e833d0dc2e47aa1f3cacfd4940fd992fc3100
 SHA512 (llvm-12.0.1.src.tar.xz) = ff674afb4c8eea699a4756f1bb463f15098a7fa354c733de83c024f8f0cf238cd5f19ae3ec446831c7109235e293e2bf31d8562567ede163c8ec53af7306ba0f
 Size (llvm-12.0.1.src.tar.xz) = 42898504 bytes
 SHA1 (patch-include_____config) = ff0d5a0fcc1431f21ce25667cbc01c2307542212

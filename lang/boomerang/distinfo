@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:20:46 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:51:30 nia Exp $
 
-RMD160 (boomerang-0.2-source.tar.gz) = b0ebefa993fd8da041c9bb4b50da9eb378b218b3
+BLAKE2s (boomerang-0.2-source.tar.gz) = e0f2e5431fb64c92ca9a9a557a6ac5dbbad6056f4aa712867272f2e4d7afc2c2
 SHA512 (boomerang-0.2-source.tar.gz) = 25fb10e2f68002ea64edefa5b9c42f5db515727c7da676308f397d80b7d5052036c0405c3f3a6367eda5937bcaf2f6e15dd2077f0bcf5c214082250de926161f
 Size (boomerang-0.2-source.tar.gz) = 950116 bytes
 SHA1 (patch-common_hbase_baker.ml) = 23887e3421d955f0185d219973a880979c9e2c32

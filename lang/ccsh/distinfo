@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:20:47 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:51:31 nia Exp $
 
-RMD160 (ccsh-0.0.4.tar.gz) = f4e4e0645ec568ad6c466fc0a94e033e870a6c42
+BLAKE2s (ccsh-0.0.4.tar.gz) = f3bfea15d0aec5ea2e9dbf9b4fc1b78c0f179fc07ef0de9a1f9bca6234c9498a
 SHA512 (ccsh-0.0.4.tar.gz) = 114c471870a23682ebc6bf1967bb82af55eb8a56abcb3472492d08a39906d9a6476adb619f2b9a6097c4ccf75f9ea266d297e50de39a277aea4eadea15cc06ba
 Size (ccsh-0.0.4.tar.gz) = 11625 bytes

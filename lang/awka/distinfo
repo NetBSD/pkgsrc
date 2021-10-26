@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:20:46 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:51:30 nia Exp $
 
-RMD160 (awka-0.7.5.tar.gz) = 74d953efd395938572317b24fc702a0646d94f10
+BLAKE2s (awka-0.7.5.tar.gz) = 962f8d471b8944b77727c45c8a578ae399416e387a1ca8afb7667d62bd7f9f12
 SHA512 (awka-0.7.5.tar.gz) = d488ed4757e142cf2baa4564f1b7d4413833e7a6ac33610e0994318dc2e113048b72aa34c8cea18dcf073cb9d4b35be5bac7ef98e43effbfcf4b77d483882851
 Size (awka-0.7.5.tar.gz) = 395499 bytes
 SHA1 (patch-aa) = e721a4513fb16ca08cbf2658d3573b8034780efb

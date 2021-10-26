@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:20:48 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:51:32 nia Exp $
 
-RMD160 (compiler-rt-12.0.1.src.tar.xz) = e89dd1b4d976618117529a0ee22d2da111fac79a
+BLAKE2s (compiler-rt-12.0.1.src.tar.xz) = 967e0734b09b0725e4502aa2cb6aa2b4f6bce23a007ccea1da0403d5e0801b5d
 SHA512 (compiler-rt-12.0.1.src.tar.xz) = 708780aa47ef289a9700eb76c17cc1f3bab19b8245174e612b5f684c48448030263a72eeef1021b10bdffa6ace2df489adcbba9e7a790ccbcd5fe72056f63f92
 Size (compiler-rt-12.0.1.src.tar.xz) = 2201284 bytes
 SHA1 (patch-cmake_config-ix.cmake) = 50e38807363e9d4f18106bb2ff71f5247a24d764

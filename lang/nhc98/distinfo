@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2021/10/07 14:21:02 nia Exp $
+$NetBSD: distinfo,v 1.23 2021/10/26 10:51:44 nia Exp $
 
-RMD160 (nhc98src-1.22.tar.gz) = 99a90d00f77f66938c817c813f11c3d0ea5bf244
+BLAKE2s (nhc98src-1.22.tar.gz) = 8e6e49b45c3c4c891e5a4b504f803d3e8747ce325903d49d4095a0137244d487
 SHA512 (nhc98src-1.22.tar.gz) = 1035fc155c3583d1b6eb36ebf5577b80ef87ddfe88458e9545ffbe888d6dda7b9696d2e7c6469afcaed83062e741afdf0d33d678c227e0d0930c19d15b7e4194
 Size (nhc98src-1.22.tar.gz) = 29854160 bytes
 SHA1 (patch-Makefile.inc) = 4b457e962497595f3201c34220be02f2d6bf867e
