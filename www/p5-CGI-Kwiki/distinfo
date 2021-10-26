@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:30 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:29:47 nia Exp $
 
-RMD160 (CGI-Kwiki-0.18.tar.gz) = 83c18c79eb93ead2614fcd9b533aeb17bc1a1d6f
+BLAKE2s (CGI-Kwiki-0.18.tar.gz) = e933c72dbcab29d4b376e47b2d6be63c783d9c2a32c500303ff1503a6d226ecf
 SHA512 (CGI-Kwiki-0.18.tar.gz) = 50c19e186f918231691da866035933a38ab6ee310f7d5257295bd4a12974ae596dc9b07b62fb5fd7d48c79975a4e2dac05a8cf68481a2dd4bfaad8b1d9eaf2f4
 Size (CGI-Kwiki-0.18.tar.gz) = 76855 bytes
 SHA1 (patch-aa) = 19d182028f5747b0bf9948aa7be3209cb73107cf

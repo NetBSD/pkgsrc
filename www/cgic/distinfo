@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:07:06 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:29:22 nia Exp $
 
-RMD160 (cgic206.tar.gz) = 440c9ca887e1d24f8953567174f1a0eb08ee2d61
+BLAKE2s (cgic206.tar.gz) = 8556b77fae863150dfd3d244ee4bee30a3a8aa71a7c2c6398a822daad4b800b8
 SHA512 (cgic206.tar.gz) = 58da23f0608a40999f726d0f2868cc305538819af41c04190f98b1bea1d9a747c677a790861dafb53c3f64bfdbfdb0edcf9b124952b750e8b26aa85e431466c4
 Size (cgic206.tar.gz) = 50167 bytes
 SHA1 (patch-aa) = e90c34b85194524554ecab21a3edd68f50f41bc3

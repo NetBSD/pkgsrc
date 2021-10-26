@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:08:49 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:31:06 nia Exp $
 
-RMD160 (url_mount-0.2.1.gem) = b6ad540a2141c5f76628bad208efc79704621a2a
+BLAKE2s (url_mount-0.2.1.gem) = fa3a9be7af196f8e52fa440ba567e946f44856db40924856b3fa7916b72b342b
 SHA512 (url_mount-0.2.1.gem) = 7b2cfe7d427aa79781e42a1946b37561aef2e961060ac0a53e3fe2ac967a6851139abeb981f6e700412a6997e785b329d418244fe22625b6215152df5c6f887c
 Size (url_mount-0.2.1.gem) = 16896 bytes

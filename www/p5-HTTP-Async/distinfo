@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:07:45 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:30:01 nia Exp $
 
-RMD160 (HTTP-Async-0.33.tar.gz) = a75c845ce738f4ec24384baa513c70a44c7b8c05
+BLAKE2s (HTTP-Async-0.33.tar.gz) = 1d13f4c901c848f655ddca24277817b629e0b1f9287dd96a0877d7de29a491f3
 SHA512 (HTTP-Async-0.33.tar.gz) = 1e5d36c436376540d7c4c493fd09ad4f9dbfad225328fd1adb3cd136938754726ac273fd7f03aa36f1360c8ce4c161753df17920ccf73e9db1781b95c4c27002
 Size (HTTP-Async-0.33.tar.gz) = 24441 bytes

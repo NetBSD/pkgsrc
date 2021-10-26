@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 15:07:26 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:29:43 nia Exp $
 
-RMD160 (AnyEvent-HTTP-2.25.tar.gz) = 59df4c27c21662e35be915108612922dcb57e7e1
+BLAKE2s (AnyEvent-HTTP-2.25.tar.gz) = 96fc1fdd80f031ee1b0233c900042b7095ef21dcae81d83284a33f9522429279
 SHA512 (AnyEvent-HTTP-2.25.tar.gz) = bc189a6a37cb3c3b6f1c36bd965911e110019fec5b8f82bea60dab2e3cf0dda0117a83a5f0608f7865f457b016f94f1ccc78939e22849bceb82a096edc24de9c
 Size (AnyEvent-HTTP-2.25.tar.gz) = 28514 bytes

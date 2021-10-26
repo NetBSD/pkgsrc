@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:08:10 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:30:23 nia Exp $
 
-RMD160 (dotclear-2.18.1.tar.gz) = c02d7591b10173f180c0d7f0747b077ebdda0b26
+BLAKE2s (dotclear-2.18.1.tar.gz) = 443d6b69eef6b8c14c4647682d703632e0ca5a6b036e67671635fff9ef4cc0c1
 SHA512 (dotclear-2.18.1.tar.gz) = 517755808873eababe8c2c441008c98519573adc648cadfec1d82d24dccccacf38857f088ecd9f8e42c26f5a858496383f918ad77eb4fabde620609814f90a58
 Size (dotclear-2.18.1.tar.gz) = 3017421 bytes
 SHA1 (patch-admin_install_index.php) = b93ea9add67007e720319b1ff8e3d8d95bb95fa7

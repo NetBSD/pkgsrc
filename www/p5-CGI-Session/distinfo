@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 15:07:31 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:29:48 nia Exp $
 
-RMD160 (CGI-Session-4.48.tar.gz) = 1937f19e8d247369826254da3e69459a0fda5efd
+BLAKE2s (CGI-Session-4.48.tar.gz) = a9ed67bc660a9301678c4a1cdd9973c2d8f7f5af4b07029b960a3d361e74e389
 SHA512 (CGI-Session-4.48.tar.gz) = 82d6a498035b91474df712fdae2c9ce7290157ddec36095757f16b5cbce593d3b5115077c722350d1c890c299230f7489a41328ed64b85a0f4c3cfff8aceef54
 Size (CGI-Session-4.48.tar.gz) = 95291 bytes

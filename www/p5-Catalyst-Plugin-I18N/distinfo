@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:07:35 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:29:52 nia Exp $
 
-RMD160 (Catalyst-Plugin-I18N-0.10.tar.gz) = 8f46fb699cd3254f8007c98a805630ea626bb9ae
+BLAKE2s (Catalyst-Plugin-I18N-0.10.tar.gz) = 15af8506bff0757e0bac32e92897012926dc3993d639ddb080de6be7e80e2a9e
 SHA512 (Catalyst-Plugin-I18N-0.10.tar.gz) = 69bec461f447febf2e17807ffd409136a703033af02ac9d8c0c8182d45770f0c3ed8146e121c3bed9c1fdda16ca8659c0b16287eae3312b55b0fd9535ceab052
 Size (Catalyst-Plugin-I18N-0.10.tar.gz) = 32243 bytes

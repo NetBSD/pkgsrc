@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:20 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:29:37 nia Exp $
 
-RMD160 (litmus-0.13.tar.gz) = f84d738abe7f23be4d70af8fd8fe23d59ef265f5
+BLAKE2s (litmus-0.13.tar.gz) = 6cf2ed0ef7196ad48434717f167baf323e0ff0015076e4b49ebcc5e75961a2b8
 SHA512 (litmus-0.13.tar.gz) = a1c04a17cbe4a17b5e0ed768017296256c9f234ae3f238f838f55064855b254246ba1d2e41b07145e1a9587698145b36b67e31488cfce817a9b5b119ee505b1e
 Size (litmus-0.13.tar.gz) = 467532 bytes
 SHA1 (patch-Makefile.in) = 0b3186441891ed2cfa49c56f87b5cf04b3976c11

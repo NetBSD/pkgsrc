@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:08:04 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:30:21 nia Exp $
 
-RMD160 (WWW-Mechanize-GZip-0.14.tar.gz) = 9daed5b82a4df91187e8d86e2ec532fe937d5d23
+BLAKE2s (WWW-Mechanize-GZip-0.14.tar.gz) = b6c2e4286b933fb9067e6019be2bbc26f334b85b0bda3d1532bddc799de30663
 SHA512 (WWW-Mechanize-GZip-0.14.tar.gz) = 091d02f423cb12684e6127f6cdcc43a6d1c5b589ce5463e7d420b6cb6788cd1144709f3bbaf89e74a087c101c43cee25c284b11a8e94b7cd9bec1b766e24eb4e
 Size (WWW-Mechanize-GZip-0.14.tar.gz) = 3527 bytes

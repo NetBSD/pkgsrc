@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 15:07:05 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:29:22 nia Exp $
 
-RMD160 (c_icap_modules-0.5.3.tar.gz) = 350b5dec612dbb9efc1a57792c6ed2ea6a7c8c06
+BLAKE2s (c_icap_modules-0.5.3.tar.gz) = 3d8ec65003310af697a591dc2faaf144336b6d8c41340848ecf24481fa1a1d0c
 SHA512 (c_icap_modules-0.5.3.tar.gz) = 5f3bf494b3a1a0e108b6502252eba39d804bc66fae4be23dc8b19680c0a0b21e6b5f805501f6c26237ff3c81aafbd7a409bf72196813ee5c51cd27994e8b564e
 Size (c_icap_modules-0.5.3.tar.gz) = 452505 bytes
 SHA1 (patch-services_content__filtering_Makefile.in) = cf07c131df55622100106964ae06f4bd946044dc

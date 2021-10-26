@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:08:16 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:30:32 nia Exp $
 
-RMD160 (django-registration-2.4.1.tar.gz) = 988ba17393989358c4e5fb45a2ccfbe06c314cdd
+BLAKE2s (django-registration-2.4.1.tar.gz) = 196a4d9753b2ffea8b8a082f3ff334e7c9faad34ce1bed485246ec17dac7fbbf
 SHA512 (django-registration-2.4.1.tar.gz) = 07de45d0d0cc9d5255847a366cb590f9d1aa9cf5f368d3798a3b495c8551acd1c0dc02583697b5df02da5d61220288139768755cf4a1f3a43b905733bb191bfd
 Size (django-registration-2.4.1.tar.gz) = 1753993 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 15:07:28 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:29:45 nia Exp $
 
-RMD160 (Apache2-AuthCookieDBI-2.19.tar.gz) = 2b4044a637d222a91030236730054dc2c3f12437
+BLAKE2s (Apache2-AuthCookieDBI-2.19.tar.gz) = f63256c9018dcaf3f50c90b82978a8c6a410b4f1915154a418d4e19195df7b3e
 SHA512 (Apache2-AuthCookieDBI-2.19.tar.gz) = 94244afc9387b1ca91c4085ff26dbc9f9f77f3f18e9e659cb41cf3f40e094d62e094e7b1617dea3178c2340199a00dd1b531704f26e3e8f39ab9d3bb26eac4dc
 Size (Apache2-AuthCookieDBI-2.19.tar.gz) = 48370 bytes

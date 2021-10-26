@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:06:59 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:29:15 nia Exp $
 
-RMD160 (R/miniUI_0.1.1.1.tar.gz) = 68c9088d713d9684469bd4ecf35f070d10e0667b
+BLAKE2s (R/miniUI_0.1.1.1.tar.gz) = cef0733867b9709c20e7b02437aeb6cc58ff94d01d2b55bb9ec2c95c44b9f735
 SHA512 (R/miniUI_0.1.1.1.tar.gz) = c70c170a27636652a3eac6e52b1a301e8f85e0282ff9c9652188cc5ca993b3e62d66955831e7e9833b762b05bba092545ed321b43e96657449e2acb9f83eeaf7
 Size (R/miniUI_0.1.1.1.tar.gz) = 97958 bytes

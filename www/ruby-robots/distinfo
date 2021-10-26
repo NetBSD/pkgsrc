@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:08:47 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:31:04 nia Exp $
 
-RMD160 (robots-0.10.1.gem) = a06f050fbea6dec0462fcd50fdf677b638593cfd
+BLAKE2s (robots-0.10.1.gem) = a455914cdbe4fd63c005663fed05ee6974613f962218ea869042139756cb99d9
 SHA512 (robots-0.10.1.gem) = 57d5619e172961128c7e2f4175f299ecde28615680dc9fa2721ab86053515da46cae03b03dbdbf9a03a96387a361eefb013a7b3c3b3e61a26592ec4998d10bc5
 Size (robots-0.10.1.gem) = 10752 bytes

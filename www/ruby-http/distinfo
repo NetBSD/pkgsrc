@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/07 15:08:40 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 11:30:58 nia Exp $
 
-RMD160 (http-4.4.1.gem) = 5a6cf0e6fb5e9071dfe0e6edc72e88f445fbbc23
+BLAKE2s (http-4.4.1.gem) = e19191c4691218de548179c7d980b439ada3a894b95f74ca302c95f0246c7d4d
 SHA512 (http-4.4.1.gem) = 6e43a8ae379d7c8a807a9a03c87bfb5ad1719f9838e26ac7a695220ee2bc50344accc2db268d30da175328fd5468b87ec8532d17ce42a5b74d6c2c4c281d1bc9
 Size (http-4.4.1.gem) = 75776 bytes

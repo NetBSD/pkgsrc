@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:08:26 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:31:14 nia Exp $
 
-RMD160 (wmd-1.0.1.zip) = b929fa11379db53fcaf5dee9b3d8518aa9f09744
+BLAKE2s (wmd-1.0.1.zip) = 1f64f689f83b727a2188dee5b313931f13cc31ed9e6f44e61cca6f575baaa66e
 SHA512 (wmd-1.0.1.zip) = ab84bcacfffd9ccb7513d63bc8e42791fd5d21b513e30bbdacd08c5c1d56d3f1f4d3b5e884f70888f33470e54619e73399172064a0fafe8f973f8913831ac6d4
 Size (wmd-1.0.1.zip) = 30863 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:07:32 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:29:48 nia Exp $
 
-RMD160 (CSS-Minifier-XS-0.13.tar.gz) = 00861b7090be4652a1c01be8f017364e80b989ed
+BLAKE2s (CSS-Minifier-XS-0.13.tar.gz) = 18cb77daefee9f0c1ad7543eb237716108495cb24fd11bffb805ddf57c8bff6d
 SHA512 (CSS-Minifier-XS-0.13.tar.gz) = cd924e9d47e52fc96ed41ce4a8e4bbb3f9eea594b47cc6bb388050f1a2c3154d9dc359bc6c7f6c5f2811489eaba21416b9703d152fa403842aee08f44e148ae6
 Size (CSS-Minifier-XS-0.13.tar.gz) = 25935 bytes

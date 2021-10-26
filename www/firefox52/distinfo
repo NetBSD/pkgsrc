@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.30 2021/10/07 15:07:10 nia Exp $
+$NetBSD: distinfo,v 1.31 2021/10/26 11:29:26 nia Exp $
 
-RMD160 (firefox-52.9.0esr.source.tar.xz) = 8940269f0a515c0066b6ab2eea1da8963d27617b
+BLAKE2s (firefox-52.9.0esr.source.tar.xz) = 68da851ecfe1b03231157bf79732865d3cf81b7c10128a2e2a9e6e7be3963348
 SHA512 (firefox-52.9.0esr.source.tar.xz) = bfca42668ca78a12a9fb56368f4aae5334b1f7a71966fbba4c32b9c5e6597aac79a6e340ac3966779d2d5563eb47c054ab33cc40bfb7306172138ccbd3adb2b9
 Size (firefox-52.9.0esr.source.tar.xz) = 214087304 bytes
 SHA1 (patch-aa) = 31ba818e5f507c0ebdddd178b4801ab81e1bbbe5

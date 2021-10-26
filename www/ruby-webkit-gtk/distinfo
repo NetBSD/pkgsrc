@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:08:49 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:31:06 nia Exp $
 
-RMD160 (webkit-gtk-3.4.9.gem) = 06368421e114520d5f192ef2123670d19c35fa6a
+BLAKE2s (webkit-gtk-3.4.9.gem) = de41faa92da8749346aff66abc8de88399fe04b114cecc3941e8876eba46fd9c
 SHA512 (webkit-gtk-3.4.9.gem) = 717a20b66f4a320a19b796c1c1969276f38340eea7cb5599dcc12ff0e7495bd7f01d67a10a7999ecae8f2d3d978b67f01eaa064419714dada90f21bb57300cec
 Size (webkit-gtk-3.4.9.gem) = 16384 bytes
 SHA1 (patch-dependency-check_Rakefile) = 73d9595d3f5c4338e56136e35187ade2e1e6bffe

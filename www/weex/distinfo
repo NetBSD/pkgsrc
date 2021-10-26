@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:08:58 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:31:14 nia Exp $
 
-RMD160 (weex-2.6.1.5.tar.gz) = adf792c92f95799cfde9d96a54de006ebc840aca
+BLAKE2s (weex-2.6.1.5.tar.gz) = 930b3f2c8a3b93a6d23591eed891421c4c787cdceff76d6595e5259c5e953525
 SHA512 (weex-2.6.1.5.tar.gz) = 4a33761a22f7df4b610b86b74104a1eb4836851345092ac730758026ef5e4fd5e4df3e670b5eefe1230f0ccfce85282ffa79007a0056df774cf1ebce191a90bc
 Size (weex-2.6.1.5.tar.gz) = 206972 bytes
 SHA1 (patch-aa) = f8f092150b3556d78ab8ef66070447724c9c118d

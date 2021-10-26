@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 15:07:55 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 11:30:11 nia Exp $
 
-RMD160 (Net-HTTP-6.21.tar.gz) = 07a0e0b764b88a82c62ea860b9b3a9765b315c65
+BLAKE2s (Net-HTTP-6.21.tar.gz) = 7adf2971e6013fa14884f9e59d988f594f6e90f0de82c1bfcd1aa94d55f65053
 SHA512 (Net-HTTP-6.21.tar.gz) = ca50e54a893e38456dc107c216c6b119cce9c30b2d1ca47607e0fed426a79d2ed660818a5d5a6ef240cae28844c2d7ca613ce81f53e890e7f15b22e4d0e2887b
 Size (Net-HTTP-6.21.tar.gz) = 38914 bytes

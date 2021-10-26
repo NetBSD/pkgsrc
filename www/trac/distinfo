@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.48 2021/10/07 15:08:55 nia Exp $
+$NetBSD: distinfo,v 1.49 2021/10/26 11:31:11 nia Exp $
 
-RMD160 (Trac-1.4.2.tar.gz) = d9ddf6a83834b387c9241cac8000996e128ecbd0
+BLAKE2s (Trac-1.4.2.tar.gz) = bcc9e0110eb90404e5e0013e15252d0fbe8351536087bd88a24ec907fb506573
 SHA512 (Trac-1.4.2.tar.gz) = 7e8074e660711e578da041c13e1d8ef2b83a2cb6ca1119cc4f296f73dadbe71a6f1c60b4326d607e5db2ac0e6a6d6a67678ca5ee33c18cf29dfa655c1c295be1
 Size (Trac-1.4.2.tar.gz) = 5645681 bytes

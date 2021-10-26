@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:27 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:29:43 nia Exp $
 
-RMD160 (Apache-DBILogger-0.93.tar.gz) = 646532f6ed6fdb4088627132a27679fb81cae245
+BLAKE2s (Apache-DBILogger-0.93.tar.gz) = 946ea35978b504ded0601fbc3b5e2745ea9b00bbd2ba028e9d4e222733325d2d
 SHA512 (Apache-DBILogger-0.93.tar.gz) = 074fdb1795aaf4796c0b31fac4b4293b4a8f17c54a4f45a6a54be6cb1530bc0c53ca4f2aabb04d6ab1c7dbc5e0ffe6f01a3d77dcb4f0e16c7cb840b9d6feea37
 Size (Apache-DBILogger-0.93.tar.gz) = 9702 bytes

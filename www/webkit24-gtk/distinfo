@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 15:08:58 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:31:13 nia Exp $
 
-RMD160 (webkitgtk-2.4.11.tar.xz) = e1f72498f911465f5ba152313dd9c62ae8d5eee6
+BLAKE2s (webkitgtk-2.4.11.tar.xz) = d4d5bc9f45d83dbe29bf63b72be88a77654ce69f203858efaf470475be7884c2
 SHA512 (webkitgtk-2.4.11.tar.xz) = 2e2cf01a52b8593765a0a3c2d7f0ad306121660019eb402226bd2826c7d4666dab4e91ca6ccbd29abe0ad3993549f256ed1ab88de22e9c8516d5f40a4edd6bfb
 Size (webkitgtk-2.4.11.tar.xz) = 9869100 bytes
 SHA1 (patch-Source_JavaScriptCore_API_JSStringRef.cpp) = 633d5e3fa945cb443ea8c58337ba6ec78fc093b2

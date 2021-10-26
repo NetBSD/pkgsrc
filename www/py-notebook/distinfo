@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 15:08:29 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:30:44 nia Exp $
 
-RMD160 (notebook-6.0.3.tar.gz) = 92660b516b80d2bc4b28447b53a22f88704d2aad
+BLAKE2s (notebook-6.0.3.tar.gz) = ffca25dace6d631d45101cbb9f3729f7606984ab0cc177b2ac429d78781476f2
 SHA512 (notebook-6.0.3.tar.gz) = fb56d0e10da3f8673e9578cdf04759dc3247547af6be4f479e9b183f3c5bd0a891fbfede187e0f5aca5c6ffdb9cae6ada23fe6dd159aca2d9cdf967f1f150922
 Size (notebook-6.0.3.tar.gz) = 14048151 bytes

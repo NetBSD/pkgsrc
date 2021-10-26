@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:25 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:29:41 nia Exp $
 
-RMD160 (ocurl-0.5.3.tgz) = 588c88adcf6d304f3a1acc8d8fef53c16d4cadcf
+BLAKE2s (ocurl-0.5.3.tgz) = 53b0772041e6c087805e52eb2c707ce10ae996fdf2775c88384d800b63928fa4
 SHA512 (ocurl-0.5.3.tgz) = 29ec901bd47ab0a26123fabdd4a447a30f8170c462aed7079c634bc6993b6e9140eb2a4d42d3d0b2aa65666dbe8a4ff7082ed08daf2e1605da0f552cb5802802
 Size (ocurl-0.5.3.tgz) = 87849 bytes
 SHA1 (patch-Makefile.in) = 2dcf2d6f8ccb12b15dea8cf27cf31e13bbfed8be

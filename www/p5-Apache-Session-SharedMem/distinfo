@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:07:28 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:29:44 nia Exp $
 
-RMD160 (Apache-Session-SharedMem-0.6.tar.gz) = a2ee8813a80d9351c05403475240e9269e299ce2
+BLAKE2s (Apache-Session-SharedMem-0.6.tar.gz) = 0181cf22cd51cdf7879a40348a63c5c77aed4d8bf1fe49f136473eebc80b06e1
 SHA512 (Apache-Session-SharedMem-0.6.tar.gz) = 49405cf407d3436bbd0341ac7113a05975bee1927e32543ec8321ababe8769d8ca656a8b602ddf8697f2e1fc83f7f3e14d0ba612d0a9b8b0de8a2a0d5f121a19
 Size (Apache-Session-SharedMem-0.6.tar.gz) = 3911 bytes

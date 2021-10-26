@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:08:33 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:30:50 nia Exp $
 
-RMD160 (w3lib-1.22.0.tar.gz) = 2e9b10b5770857025006216b7c4d3adc59e22576
+BLAKE2s (w3lib-1.22.0.tar.gz) = 03142dd4be57d6d9a5924d29b4f3e52e886760923e44c259ec34c32a1b72a6fa
 SHA512 (w3lib-1.22.0.tar.gz) = fbc2bbc06808ec5d28e300ce00e2a59cc07a3a15e4a3690d3b6a105b6f33e6e02fab057b27733d9ea69bc99ebc1e7e8e628e1408a00194991ea05f35dae8bf10
 Size (w3lib-1.22.0.tar.gz) = 39121 bytes

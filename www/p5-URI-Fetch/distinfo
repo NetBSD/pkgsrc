@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 15:08:02 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:30:19 nia Exp $
 
-RMD160 (URI-Fetch-0.15.tar.gz) = a56dfeb84ce0f86d6c4796514711905f949e018d
+BLAKE2s (URI-Fetch-0.15.tar.gz) = 48d1bfbfdb29c7e740129d4ec2a808a121f6e07952e074ab89d5daf858d310c3
 SHA512 (URI-Fetch-0.15.tar.gz) = eb630a628920cdee005a7a4be5c82da635050905a6cbb12b06721a11921f54b72d0c307306a413b95e43def7859eb5ac4e0d9d9400c4fe86750cc71210db7203
 Size (URI-Fetch-0.15.tar.gz) = 16808 bytes
 SHA1 (patch-META.json) = 247227107c5f9222009219a241ef1d704d11c993

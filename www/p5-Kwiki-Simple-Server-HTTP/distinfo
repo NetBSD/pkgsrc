@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:07:52 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:30:08 nia Exp $
 
-RMD160 (Kwiki-Simple-Server-HTTP-0.03.tar.gz) = 9f0f82b1950666e8a2dfbcfb0f32480e7dcaa33f
+BLAKE2s (Kwiki-Simple-Server-HTTP-0.03.tar.gz) = 450f6f595b6f39c6aeae06ddc66374fcfeceed3622d936afbabe2090fabc82f7
 SHA512 (Kwiki-Simple-Server-HTTP-0.03.tar.gz) = ed9bffb2f3c2d33dc635c384fccb281cc6f5a9bafe4c10a27f7725fe55d7306ea96e02ca90c5711d5643199d44a7fdb8e3dfae1dc957c9953358e9210f19226e
 Size (Kwiki-Simple-Server-HTTP-0.03.tar.gz) = 7852 bytes

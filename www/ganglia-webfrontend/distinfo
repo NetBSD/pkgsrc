@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 15:07:11 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:29:28 nia Exp $
 
-RMD160 (ganglia-web-3.7.2.tar.gz) = 2abd57780260ea795a702a877dac63de4dfa669c
+BLAKE2s (ganglia-web-3.7.2.tar.gz) = fe4d489912fc7aa7eb674b464ac2b3b098f66277714fcf21dd89a633ba48be58
 SHA512 (ganglia-web-3.7.2.tar.gz) = 033b00923a4cf7f342a44de9e37da67411992054e7f103fa09d91bbd125fb9066cc4e77ae5011810d7d926e2997b48d30e3d505d83239cd4c0a6b996a7679f8d
 Size (ganglia-web-3.7.2.tar.gz) = 704632 bytes
 SHA1 (patch-Makefile) = c246326e81b3df16b3289891e0b6ad37fb8fca55

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:08:39 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:30:55 nia Exp $
 
-RMD160 (crass-1.0.6.gem) = 29d376a9c420778edebafb71563adffd86ede0bd
+BLAKE2s (crass-1.0.6.gem) = e83462f26132aae01da9a0b214c8d817b02cfdbae185189773198b2af9a483f8
 SHA512 (crass-1.0.6.gem) = a05a63bc6718ef578dd5297001ecd3075c5fc2d5d253eeb28f0a88b1e605ce628da98733aced2263c7c549dad8cb36331cebe06b6ea9e426114eb80a2af484ec
 Size (crass-1.0.6.gem) = 18432 bytes

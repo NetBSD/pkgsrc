@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 15:07:13 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:29:29 nia Exp $
 
-RMD160 (h2o-2.2.6.tar.gz) = bf99a74257ccb4c9efbd7e11ce7aab2a7af01a95
+BLAKE2s (h2o-2.2.6.tar.gz) = 9ed1b6d28135be2330e4af53b77f4082c9a3e8ff8a17111ecf70603c128d6f44
 SHA512 (h2o-2.2.6.tar.gz) = f2f28905c01782a0432c9dfdb2f21054e0a4741ac4c5f26802d4b439d0172840aa215aba5dc7c9af62275dcc24de105674a3819384dc38246e43ce3e8263eb20
 Size (h2o-2.2.6.tar.gz) = 16257760 bytes
 SHA1 (patch-CMakeLists.txt) = 32177a5bcf75a0bd4ec3e80e12ef1cb5d284072c

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:08:32 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:30:49 nia Exp $
 
-RMD160 (pytest-httpbin-1.0.0.tar.gz) = d0c36e029eb811f65de8162ce33e4d0d1b96a607
+BLAKE2s (pytest-httpbin-1.0.0.tar.gz) = 434702a78bb1ef70e89901b2e044923463337c23895e27b0aea02c5c38c0f94b
 SHA512 (pytest-httpbin-1.0.0.tar.gz) = 5e890de7f90917c81ea99f5389ff955bc751a8852ced33dc16a4b950ed8966807af58e8ddee5f285e1c94254d90c07f51be619747631bb684a9123746f295d7f
 Size (pytest-httpbin-1.0.0.tar.gz) = 12244 bytes

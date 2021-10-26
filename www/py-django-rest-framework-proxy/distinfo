@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:08:16 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:30:33 nia Exp $
 
-RMD160 (django-rest-framework-proxy-1.6.0.tar.gz) = f99136514aa74af41d987045029797d863db9334
+BLAKE2s (django-rest-framework-proxy-1.6.0.tar.gz) = 01cacf9ba64777fc09321663af60f8b52650d3f2081e979c068d8a2da3a7b266
 SHA512 (django-rest-framework-proxy-1.6.0.tar.gz) = 9ab5d95dc3e6693c948b11ea19e83ac95afeed519a7e9ed6916339e5065daf44c62c3766ec8c68855bc8abd172c0589c2bc13ac24f6eabdb8333370599603db3
 Size (django-rest-framework-proxy-1.6.0.tar.gz) = 5292 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:07:33 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:29:49 nia Exp $
 
-RMD160 (Catalyst-Authentication-Credential-HTTP-1.018.tar.gz) = 3c3d95a0ff1b981e8c6c53b50b650bc3adc406a7
+BLAKE2s (Catalyst-Authentication-Credential-HTTP-1.018.tar.gz) = 6cfc9b6228cec43dbc70356cf1e65f3a3e3ab89740af44b20766a73fea876306
 SHA512 (Catalyst-Authentication-Credential-HTTP-1.018.tar.gz) = 61dfcb2c42eea0b44bfda52681fd57d54a97cc830b9d1ce22838c4b8e8bf08f0a92c12fb2b434c89c194215af85d8be6e13083685597bec5f9b4dadeacca01d3
 Size (Catalyst-Authentication-Credential-HTTP-1.018.tar.gz) = 39956 bytes
