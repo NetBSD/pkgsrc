@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:49:35 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:23:57 nia Exp $
 
-RMD160 (libretro-virtualjaguar-20200521-5a293de747823dc0a9ceba0dd878ef75e9a9d920.tar.gz) = b38e80745ec4dba379b8d0b00c2745fbf62c3844
+BLAKE2s (libretro-virtualjaguar-20200521-5a293de747823dc0a9ceba0dd878ef75e9a9d920.tar.gz) = 5e79feff5f1c3a3039dded05651b0a11b0defe74aab3fd903f511bf57f9f518b
 SHA512 (libretro-virtualjaguar-20200521-5a293de747823dc0a9ceba0dd878ef75e9a9d920.tar.gz) = 5aa48fb0f2d18408a671eff5f7146075c751a6d5c522ad764141b792daa09aa7666b5cd26e4181bb299ea790696d533120f932acd21215892ef8e27087f4dd79
 Size (libretro-virtualjaguar-20200521-5a293de747823dc0a9ceba0dd878ef75e9a9d920.tar.gz) = 980768 bytes

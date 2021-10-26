@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:49:32 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:23:54 nia Exp $
 
-RMD160 (libretro-cap32-20200508-2fe00cafcfcd8dd4f0fcdcbd1f5e2cc1c0669e43.tar.gz) = 20c8957035d7c18c908d721088085c854390f698
+BLAKE2s (libretro-cap32-20200508-2fe00cafcfcd8dd4f0fcdcbd1f5e2cc1c0669e43.tar.gz) = cff7d89436300068daaeac3e0efb88c6f78ffd2d050800e58fc13500e25a432d
 SHA512 (libretro-cap32-20200508-2fe00cafcfcd8dd4f0fcdcbd1f5e2cc1c0669e43.tar.gz) = 75ba2ecc726a445c18008915ff38b62179d565254888b0f65c40c265ec2b6e77745adc070c71a4796970e15a8b20720452dc1a7e321932198b810f282a5267a7
 Size (libretro-cap32-20200508-2fe00cafcfcd8dd4f0fcdcbd1f5e2cc1c0669e43.tar.gz) = 1048314 bytes
 SHA1 (patch-Makefile.common) = be5af7bd5ae9dfb70f982a37f8c0531471bf611f

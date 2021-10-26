@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:49:53 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:24:17 nia Exp $
 
-RMD160 (xyame038.tar.gz) = 8da4752eabe48a241f4d898c7f7d6696df7d2738
+BLAKE2s (xyame038.tar.gz) = da1c28d294b26b2c53e0dc14bea326fde45cf864352b211dedebf0e475a7b4c5
 SHA512 (xyame038.tar.gz) = aac191cea2d84e874580f5726bdd759dcf28cbe1648d29db87bbd311631d8452ca4dcba0b63d10aa5fe4904c94d73b05ab1dadc6248662c24089b76c8536d18f
 Size (xyame038.tar.gz) = 239396 bytes
