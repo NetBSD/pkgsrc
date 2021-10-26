@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:51:01 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:25:26 nia Exp $
 
-RMD160 (archivemount-0.5.3.tar.gz) = 15d396ea8d78a55787f08046e3355d8d4fe564ad
+BLAKE2s (archivemount-0.5.3.tar.gz) = 23533f520f7452ce1833f2ed42d770d81d33ae60ac8e48de73cb6b7fc02e4c34
 SHA512 (archivemount-0.5.3.tar.gz) = c2a56205e9ee548cc8ba6c794adc9bf6f296155a78743803bb3b942919e6b21095ef24143546145dcef37dd57f5abb80adae367764463b39a89695981d4d5dd5
 Size (archivemount-0.5.3.tar.gz) = 20267 bytes
 SHA1 (patch-aa) = c5e139ad695d8e6d102e35cd1d8110f3b952de6f

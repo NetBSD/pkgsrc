@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:51:05 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:25:30 nia Exp $
 
-RMD160 (squashfs-tools-4.4.tar.gz) = 1967b075376dbc05c9683509afd508af89e95d65
+BLAKE2s (squashfs-tools-4.4.tar.gz) = 2a2f1f342699557b6fb2a8fa7d44acbecf645a94122699c1b2941618ac98ded4
 SHA512 (squashfs-tools-4.4.tar.gz) = 133ce437fb8c929933d52cff710b61dd9181f6f8be58250b0d6a59a7bb79a2b350f68f456b06a0e17c469409a71272d586802d570248273ddcd5dad088c00308
 Size (squashfs-tools-4.4.tar.gz) = 241842 bytes
 SHA1 (patch-Makefile) = ee53cb3c16983cb3767df2ccdcf4636bd646fc3c

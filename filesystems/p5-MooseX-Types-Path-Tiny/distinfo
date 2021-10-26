@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:51:05 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:25:30 nia Exp $
 
-RMD160 (MooseX-Types-Path-Tiny-0.012.tar.gz) = a7d08074a3ab5bfc441f2b8fd5554ff6e631cf65
+BLAKE2s (MooseX-Types-Path-Tiny-0.012.tar.gz) = bf0907daa3343af7faf76c4375ef67680828bba4e4df3def223216c515f627f7
 SHA512 (MooseX-Types-Path-Tiny-0.012.tar.gz) = 96f7632a94677e85f88fdae3b818ff54096f088137baef994181fcb352dcd4b6da5993045422923fe232e3818582e067dcfd5c7689713488aee09da8f8285351
 Size (MooseX-Types-Path-Tiny-0.012.tar.gz) = 28898 bytes

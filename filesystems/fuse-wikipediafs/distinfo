@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:51:03 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:25:29 nia Exp $
 
-RMD160 (wikipediafs-0.4.tar.gz) = 440b508f0378dc559bf40bc3d12cc800b21f8a92
+BLAKE2s (wikipediafs-0.4.tar.gz) = e47ae04152706e3db52b639a4cf679ffe7d6f510af0affe086ba2dc14c65ce69
 SHA512 (wikipediafs-0.4.tar.gz) = 0c014c0788ca95b0ff7c18f650427be7fff3c74c99e1e0064191d4f3a53bcb5d31cb8866262fa13f432bd0e64547ab5a01ed53560ab8d66f518d1901a59855b4
 Size (wikipediafs-0.4.tar.gz) = 70957 bytes
