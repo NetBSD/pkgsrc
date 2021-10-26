@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.33 2021/10/07 13:29:08 nia Exp $
+$NetBSD: distinfo,v 1.34 2021/10/26 10:06:50 nia Exp $
 
-RMD160 (simplejson-3.17.5.tar.gz) = f64cca4dd59c4f9b0594ce4464cebdbd453c66b7
+BLAKE2s (simplejson-3.17.5.tar.gz) = 08089041c3071e30ab975324330b5bfcfd28baa555698f974d93169e29c64cd9
 SHA512 (simplejson-3.17.5.tar.gz) = f5af32e4f9b4575323f9c0eb8163e794270a8607710d08a72cece953f57861e3619038798369ea049d82b9b53f293b9d9eefdeb4dd94ab4f043506bc3f1ddfad
 Size (simplejson-3.17.5.tar.gz) = 83182 bytes

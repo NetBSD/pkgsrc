@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:29:00 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:06:41 nia Exp $
 
-RMD160 (jcode.pl-2.13) = 413572cf7f5e4d809c4c6b43475548b289396dd2
+BLAKE2s (jcode.pl-2.13) = 1980cd03ada6f558ad67ee577bf0b8b987b3d520aab73eb425f6ee613b7ea7b5
 SHA512 (jcode.pl-2.13) = e5b83a2c1b81e5a5d3fef81ab36e10c4b3d8175adad864fbb8a4574293d3d26e7ec2292c968c6bc5dd33679829c560ac1c46c11b322deab590af4a14699d322a
 Size (jcode.pl-2.13) = 21093 bytes
 SHA1 (patch-aa) = b4a1adb91ef40c3ba62265312af824bb7fcb0582

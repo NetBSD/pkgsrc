@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 13:29:03 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 10:06:44 nia Exp $
 
-RMD160 (mpack-1.6.tar.gz) = a83330aa15437dc3ca6475cbf6e35b09ab9cef07
+BLAKE2s (mpack-1.6.tar.gz) = b844045be0135c62154fd8664ba5954037617f99fa6e4621c73ef0e22826f226
 SHA512 (mpack-1.6.tar.gz) = 9bff0d2753d78288e428a20c8cbb4596bd9862de4da7f42176731ce5fd459b15883d758f9b1ec7d4e1281cc1aeaaa046cec54aeb0997a7ffed74de07edd84714
 Size (mpack-1.6.tar.gz) = 179850 bytes
 SHA1 (patch-ab) = 8df8609e0a2268346d0a3a806f502b48193128de

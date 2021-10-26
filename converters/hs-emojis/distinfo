@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:28:59 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:06:40 nia Exp $
 
-RMD160 (emojis-0.1.tar.gz) = 7e5da45c3ad673b51924b71eab9dd21d73e3a35c
+BLAKE2s (emojis-0.1.tar.gz) = 5ef8e2979ab153785d480c7f4d03d79a519e94e813f8213d80c681c80d539895
 SHA512 (emojis-0.1.tar.gz) = 587c67bff3f77c362b16c93889762a9aad6fb5250c0bced45f5053f59dd6a11ab2886e53f286bbc4de2b8793be133708b1f9c5d4d52bcef1820f5a7c1ecfa7d2
 Size (emojis-0.1.tar.gz) = 36219 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:29:04 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:06:45 nia Exp $
 
-RMD160 (Convert-UU-0.5201.tar.gz) = 8628cff81fce52e4367bb0582d20f2325e6b5ae5
+BLAKE2s (Convert-UU-0.5201.tar.gz) = 9d09accfe6fa3c6722808bb9a76201d629d378ce283af8df4aaf5ce68277f08b
 SHA512 (Convert-UU-0.5201.tar.gz) = 2f44805dfef3bc0ea3f632c474ddbe8bde12e3b986eb49a21b68a730bb1df7afe8b5a64e57855ff9911a2bfe7f517b14a7ecee9d33b2f3a892871507fe461476
 Size (Convert-UU-0.5201.tar.gz) = 7048 bytes

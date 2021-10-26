@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/17 10:56:37 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 10:06:40 nia Exp $
 
-RMD160 (fribidi-1.0.11.tar.xz) = 924ee8495d1f423f2e5d18e198435eb4c2fbb39e
+BLAKE2s (fribidi-1.0.11.tar.xz) = 80c0c0cb912f0b9bba418f076de6d8820d9a6f8749ff6ef8b4afe5cd1af62416
 SHA512 (fribidi-1.0.11.tar.xz) = 6afde86784de06759f18235ccb44f23261a975f7cce0021b16755065a6a8ed84d7d5fb7fdcaadd691b48011efb4bfc2ee67555e5133a294a418cca1a0c85476c
 Size (fribidi-1.0.11.tar.xz) = 1077004 bytes

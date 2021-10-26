@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:29:06 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:06:47 nia Exp $
 
-RMD160 (Unicode-EastAsianWidth-12.0.tar.gz) = 79bd4d06b22df8903b81b3c0f8992caae30b348c
+BLAKE2s (Unicode-EastAsianWidth-12.0.tar.gz) = f5a113af7c8e20eccc4a1597b2cd2364783f9bb8f5e419d7cb1cce1a652d6812
 SHA512 (Unicode-EastAsianWidth-12.0.tar.gz) = ec11d12b86d9e3676cf612c40f8e75ce1efdd302b5a6fe5d594306cffcf94f91855b5ee979f7646762605453d08d4b6b47f556e56f01b47d8ca1da8455dc138d
 Size (Unicode-EastAsianWidth-12.0.tar.gz) = 52302 bytes
