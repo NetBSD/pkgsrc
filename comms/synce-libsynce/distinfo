@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:27:09 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:06:06 nia Exp $
 
-RMD160 (synce-libsynce-0.9.1.tar.gz) = a8c9d68196dec1b7555f56e8aab622a2817e1cf3
+BLAKE2s (synce-libsynce-0.9.1.tar.gz) = 8b27f627a2947dfde6c404c67e1bcf0b2a30f2b25abe716b05f20c2c3bc6512c
 SHA512 (synce-libsynce-0.9.1.tar.gz) = 5ef1b77b06d6afc97e9918728d4fdeb9069650e43644abaf8fabdb0fd355c4352f008edd760ad6982d1b9a189656341d90c83f60f0930b02466c791e78aecafb
 Size (synce-libsynce-0.9.1.tar.gz) = 356343 bytes
 SHA1 (patch-aa) = bec59abf5b271c4f9a92af85a7cd3e3c19833d61

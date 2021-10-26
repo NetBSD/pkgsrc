@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.34 2021/10/07 13:27:08 nia Exp $
+$NetBSD: distinfo,v 1.35 2021/10/26 10:06:05 nia Exp $
 
-RMD160 (scmxx-0.9.0.tar.bz2) = cab08c6750be9a8463eed96b7c2f3fdb885f4a1e
+BLAKE2s (scmxx-0.9.0.tar.bz2) = 9e2916ec440bc7980ae20f061a1bfbf218df4a05754a2186a90e6c3ddc18a088
 SHA512 (scmxx-0.9.0.tar.bz2) = 755877badfc846fa33ea29a38c9f8408f62d5343e0927438640ac923e8fccfcc1a0ffeae82f707d5ac1632022a15eaa2d9816602420212f171e29505c109f20f
 Size (scmxx-0.9.0.tar.bz2) = 250681 bytes
 SHA1 (patch-aa) = ed2d4e87d15c691272f714a95d9a1f6232b12b83

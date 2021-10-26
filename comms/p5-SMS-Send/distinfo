@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:27:07 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:06:03 nia Exp $
 
-RMD160 (SMS-Send-1.06.tar.gz) = a7b4f712379940554dc929b3ea7c75ca744edfa3
+BLAKE2s (SMS-Send-1.06.tar.gz) = 48400b9215ad31aa22a8fc2c7ab2dfe4d065dc029eb3dcc2d3b7d66d9cea4934
 SHA512 (SMS-Send-1.06.tar.gz) = 7e4fd12d9a8fd1f9a2b77ea441c146becd03b4cacd84d167ded3d569889c797ef8def3293b8996786a6d577274c12c4c8d8a2724a2365012c0f35966d85b313d
 Size (SMS-Send-1.06.tar.gz) = 35184 bytes
 SHA1 (patch-Makefile.PL) = 497bcf7dcc23533afb7b4593837c1b51c11f5c6c
