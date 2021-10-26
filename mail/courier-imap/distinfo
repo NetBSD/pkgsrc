@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.29 2021/10/07 14:25:14 nia Exp $
+$NetBSD: distinfo,v 1.30 2021/10/26 10:53:56 nia Exp $
 
-RMD160 (courier-imap-4.10.0.tar.bz2) = 4c721eb8221a97f13fc1e5525bcbcbb7baedf81d
+BLAKE2s (courier-imap-4.10.0.tar.bz2) = 7b688637f5f8bbeb6aca28817c7249c6a19d644feb83c5fd6f4adfd67171b901
 SHA512 (courier-imap-4.10.0.tar.bz2) = 45885ea67356472338f3b6c0e3c1e8679f8a186edcb6c8fab9daf64a6972235f754ec4fd7696258e0537622a10750741d7629066bd1286cef5cae1f095bed7a4
 Size (courier-imap-4.10.0.tar.bz2) = 3155953 bytes
 SHA1 (patch-aa) = 268f89763de3cd3a02eb5179ca29fbd5478537a2

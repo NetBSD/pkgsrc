@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:25:35 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:54:17 nia Exp $
 
-RMD160 (Mail-Message-3.010.tar.gz) = 81bd9ed554bbe2491df4741719063184a6751bb4
+BLAKE2s (Mail-Message-3.010.tar.gz) = 677af4a2a95c5fe3c3d1a51d60495997a546b6f561b729b1dfd3bb2ff071e16e
 SHA512 (Mail-Message-3.010.tar.gz) = aa2d38968cfe55a5688a1aaa3442fd87bc7b216ab43db40053f65f5d9bc6b397427a56662062c5a17dd6e62d86aa56c217a6394298e78fc64377feeeeef03771
 Size (Mail-Message-3.010.tar.gz) = 258187 bytes

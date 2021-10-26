@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:25:37 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:54:19 nia Exp $
 
-RMD160 (User-Identity-1.00.tar.gz) = 23acb11ef147ef74c1a8410576f35df06b17f4c5
+BLAKE2s (User-Identity-1.00.tar.gz) = fc4b388f972e40f9a66defaaf68af837820198cb18f5e7514dee218607e37960
 SHA512 (User-Identity-1.00.tar.gz) = b39315050aed9064f606d6fb167e42fb55bd411f1573215b544c9f2833c0d39f12700a4fec701317e31d614c55825f250b0b5ce7b3355fb63bc953d07d8fc744
 Size (User-Identity-1.00.tar.gz) = 28871 bytes

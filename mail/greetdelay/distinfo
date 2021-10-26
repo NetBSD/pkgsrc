@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:25:20 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:54:02 nia Exp $
 
-RMD160 (greetdelay-0.03.tar.gz) = 203e5130689346e94f5038bae008cd3494c4a8a7
+BLAKE2s (greetdelay-0.03.tar.gz) = 4d9ee810ab387428a92a6826fa8ac5efa3c9397bec3d1969c5a6b0794c96a221
 SHA512 (greetdelay-0.03.tar.gz) = e82a8c53d818b7a91ff2d6b56061eae077aaf758464d86beeff36bd46950fc8642d185dd1c000d02ac15405795553e137999c83da3f5c4a22fd31adcbee68af9
 Size (greetdelay-0.03.tar.gz) = 1370 bytes
 SHA1 (patch-Makefile) = c8072544020d0309539ce427a600962e7221c3c4

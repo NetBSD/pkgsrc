@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:25:12 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:53:54 nia Exp $
 
-RMD160 (archivemail-0.9.0.tar.gz) = 7d524d7c3b4e089cb50a6c3637254931ccb06b72
+BLAKE2s (archivemail-0.9.0.tar.gz) = da181328d6d0bc6b20a6d85c43cba72c18e8be8c7b10736c4d9c27d43e9a5c7a
 SHA512 (archivemail-0.9.0.tar.gz) = 7c36108919be22f8cf71aea91435084495ceef54c251ede0aca9d981bb9c01119925d334c1d84eb2c53657170ac6bf0897fccd1f9df05c59fc46e1177194dfb2
 Size (archivemail-0.9.0.tar.gz) = 63482 bytes
 SHA1 (patch-setup.py) = b2e79aa27d13d9746b96cce552730de115b9c43b

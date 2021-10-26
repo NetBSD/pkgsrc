@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:25:21 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:54:03 nia Exp $
 
-RMD160 (imapsync-1.607.tgz) = a22b1577278097cb1a79edf3500eab983ab86601
+BLAKE2s (imapsync-1.607.tgz) = ea3200dfd44c9b93f07f5b31d7724dd991d0744054c2fa568c0fabdd76fc2833
 SHA512 (imapsync-1.607.tgz) = 2630d32683f74ec260d322d2d9f13fb30938c077275cd43cece392b43bbdf8989f8ff6df648d520b785a568bf5d6f45d43761bf4fb94649e210611224ad43841
 Size (imapsync-1.607.tgz) = 973467 bytes

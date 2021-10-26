@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2021/10/07 14:25:51 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/26 10:54:33 nia Exp $
 
-RMD160 (wl-2.14.0.tar.gz) = 1a5aa025fc05cbcf2a7d390b1804cc1b22f5df2b
+BLAKE2s (wl-2.14.0.tar.gz) = dd6e3bca6edcc6ad7e8091a8181d8c69804550aa05d28305cedf7751ce0dcf8e
 SHA512 (wl-2.14.0.tar.gz) = edb49c0c9ddbd50cba4ce4cdd1b2d609cee9553d063aeb4775d0b43e0ed83cc6374aa47b11b3ff94a55827f7a9a29f7c1054e0fd9b3a5a25a2c410b241d268d2
 Size (wl-2.14.0.tar.gz) = 1101505 bytes
 SHA1 (patch-aa) = 848a4dda06c77f94c05ea770056690065b0c6c93

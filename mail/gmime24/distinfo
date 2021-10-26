@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2021/10/07 14:25:19 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/26 10:54:01 nia Exp $
 
-RMD160 (gmime-2.4.33.tar.xz) = b344e174d46a0f72b756e69a615816a824c72fc9
+BLAKE2s (gmime-2.4.33.tar.xz) = 48c50082b7235f216e34769b8a63eda88e7ce03021e81d560f23eebdabbeb9ea
 SHA512 (gmime-2.4.33.tar.xz) = 15efb527ea6162b63a4773b0f4b30f0e34cb96e46fd85c5489a9fb4b262b837c8a563eeaf737f82dc805ecce379e5247c32c84f6d8127aea3cb9fdf3c0bcc973
 Size (gmime-2.4.33.tar.xz) = 692336 bytes
 SHA1 (patch-gmime_Makefile.in) = c0e3317128854c741e5098637010bbb7aacc0262

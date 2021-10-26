@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/18 06:51:42 tm Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:54:29 nia Exp $
 
-RMD160 (sieve-connect-0.90.tar.bz2) = 4134aafeecd4b16af55faea78a5c088638f4ac4d
+BLAKE2s (sieve-connect-0.90.tar.bz2) = ac9e470a010999fd6af9430e164af6dc2a3f51c173da9dee88ab546c563ca876
 SHA512 (sieve-connect-0.90.tar.bz2) = 3b4d4a6a7eb7d48f8b2dbc4c302c3de1a2a193282c7b2d25581e1131d6c7598cc2a47edabf8b108e94e0fd1a9cc50e48a103c133dba233f180f12d36c0da0718
 Size (sieve-connect-0.90.tar.bz2) = 46481 bytes

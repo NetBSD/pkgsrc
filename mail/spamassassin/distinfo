@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.78 2021/10/07 14:25:48 nia Exp $
+$NetBSD: distinfo,v 1.79 2021/10/26 10:54:30 nia Exp $
 
-RMD160 (Mail-SpamAssassin-3.4.6.tar.gz) = b16211c5402aac6f0e3f2d7a12cc1062968a6157
+BLAKE2s (Mail-SpamAssassin-3.4.6.tar.gz) = d330863c4775e9dfc3ffb8158e3b145a3e43ff9122e686a074be7c2d1a2cb65d
 SHA512 (Mail-SpamAssassin-3.4.6.tar.gz) = 7910852f04463a7363a2fc3b70a35adadf5714552e57c5b8ca57beaa534ee18d9f06526cdbcf8bcd5781e5ca778f98d2f84ef2efd1872fa550cfe1689440364a
 Size (Mail-SpamAssassin-3.4.6.tar.gz) = 6572574 bytes
-RMD160 (Mail-SpamAssassin-rules-3.4.4.r1873061.tgz) = fb8a8c71dbd6621ca7044600bf9a52f9398b6fcb
+BLAKE2s (Mail-SpamAssassin-rules-3.4.4.r1873061.tgz) = a45930ab88019b844fe7128da7742fa5c6bf68c4d6a02543f10af103575cf525
 SHA512 (Mail-SpamAssassin-rules-3.4.4.r1873061.tgz) = cc2f6949db4662cdcaf5dcef922e69d18320a591deb7fb98c1fb729d91d37f5164052ab6cd2e294657334874fbfc0cccdefc750910e0453cb8da0b3f263b3ede
 Size (Mail-SpamAssassin-rules-3.4.4.r1873061.tgz) = 315930 bytes
 SHA1 (patch-Makefile.PL) = bcf48afe3adce57fbe4ff0de583ca23bf5177aab

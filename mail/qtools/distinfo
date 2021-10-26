@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:25:43 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:54:25 nia Exp $
 
-RMD160 (qtools-0.56.tar.gz) = 0f040d18f02a9772291b1a1ddc55d4d899918684
+BLAKE2s (qtools-0.56.tar.gz) = 675d5fdb729f0721da0dd523dc2b2b274457b92b6b0b33a4de886c898b946215
 SHA512 (qtools-0.56.tar.gz) = 2016ca4f77fc370f6caac56f447325461018dff1f8a61fad305744578f0c26f0495c26d6cba6a8a9d5c86c6ef86635edd69705e9af88f70477a3f6ed121e6085
 Size (qtools-0.56.tar.gz) = 37748 bytes
 SHA1 (patch-Makefile) = 19a8aa95264ffad9e80b7c9be746682b66738ff3

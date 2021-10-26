@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2021/10/07 14:25:40 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/26 10:54:22 nia Exp $
 
-RMD160 (procmail-3.22.tar.gz) = e609ec94ea9ab3b93629c62b3e29add497806483
+BLAKE2s (procmail-3.22.tar.gz) = 33be19e42bd561fcd35520ca56f3ccd4b4cf7a651563f0d847ed5bbc4bddb696
 SHA512 (procmail-3.22.tar.gz) = 3d0658329a55957a8d5741e03b0853b030c4524acef30641663213aa9eefc8264f8cc2b68a00a89e5f9f0f7c916c41a42e1b6c8df562c545ba97d8ab9049a936
 Size (procmail-3.22.tar.gz) = 226817 bytes
 SHA1 (patch-aa) = 6e29885f53d24662c5c69ac906ccc36a26665be2

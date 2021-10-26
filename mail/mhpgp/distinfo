@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:25:26 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:54:08 nia Exp $
 
-RMD160 (mhpgp-20070530/gnupg-scripts-for-mh.tar.gz) = 80c85b96308d177a326945c862f23fbe752eb36b
+BLAKE2s (mhpgp-20070530/gnupg-scripts-for-mh.tar.gz) = bb7c93afa586c15dd29d0ace6ddc1a94bcd084b3febda2613929927fffa93c4e
 SHA512 (mhpgp-20070530/gnupg-scripts-for-mh.tar.gz) = a4d153a25835a0517d9bc50ce6e4bd2f1e4cf4e5370a2742421dabf4ce4115c0b4a3ad5036c7cf77b6c2769b69befcef6947fbe8578ce6dbe2fda7b49f5b6a75
 Size (mhpgp-20070530/gnupg-scripts-for-mh.tar.gz) = 7736 bytes
 SHA1 (patch-mhpgp) = 7d89bc6dfbe3c27b273cce90c0d7da1afe85e947

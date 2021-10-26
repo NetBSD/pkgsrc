@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:25:22 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:54:05 nia Exp $
 
-RMD160 (libsieve-2.3.1.tar.gz) = fcf8255e65d404c017118a8c31531e2d70de194c
+BLAKE2s (libsieve-2.3.1.tar.gz) = b22919bc38e2f32525d4cd06162131d84a4f4ed1ae333020435825e548ab067e
 SHA512 (libsieve-2.3.1.tar.gz) = 6d03f48daf8b85723f04efe673bb246ae79320b1e7862b81d17ea0fe7941b9057012cd217d0593ecd15192ecef572d83d57051a36388e53028bf018c3c5a792f
 Size (libsieve-2.3.1.tar.gz) = 579265 bytes

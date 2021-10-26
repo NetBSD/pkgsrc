@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:25:31 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:54:13 nia Exp $
 
-RMD160 (Email-Reply-1.204.tar.gz) = 7ac056a7e47b05b2ebfa978e078abeb8da2db75b
+BLAKE2s (Email-Reply-1.204.tar.gz) = 04d675176af4b6617439bfa8229cfc57a9493c63bc6ec5576a2c274047f44b07
 SHA512 (Email-Reply-1.204.tar.gz) = 78353abe415fefbf4c70398433584221bf037eab09f4a6a20bcafec4e0a632a5ee07a880e33f806f61fe3a943b7f55c428d90bbc5ea9d5c551eb78e0ff88ac5a
 Size (Email-Reply-1.204.tar.gz) = 19079 bytes
