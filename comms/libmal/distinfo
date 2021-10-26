@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 13:27:04 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:06:00 nia Exp $
 
-RMD160 (libmal-0.44.tar.gz) = da3f6217a32073e688524c15907e2d5e8494abf3
+BLAKE2s (libmal-0.44.tar.gz) = f2748cdbf7f4b51a904fea53c8e99884a5e8c8010c1433e8454a24bbc185d537
 SHA512 (libmal-0.44.tar.gz) = 2823d43deaf11ccfbc38603d4de10a4c153439b79709d42eb02a6f71f8ef66fdc33c3ceeaedf5c67a0723e3fe6d0861aa559f5c4e78051f674bb124777e1d562
 Size (libmal-0.44.tar.gz) = 454980 bytes
 SHA1 (patch-aa) = 4578532862f064677df973bbfc810a7e75d60541

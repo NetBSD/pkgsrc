@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:27:01 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:05:58 nia Exp $
 
-RMD160 (binkd098.zip) = 490df9c7c615349749b767f5fe959d26ecbaadc3
+BLAKE2s (binkd098.zip) = be68f45ae05f5c05c43724f986621c468c13ede58ef570a452510642bb349329
 SHA512 (binkd098.zip) = 901dfde092758a7f930f7b4af18ea8cc6a0f0d8fe37b88fb5b6095986aab981924ac89eefbc80a3582b28c88c7027146908ca295c1b9aec0a2d3d5f0efb03b72
 Size (binkd098.zip) = 306884 bytes
 SHA1 (patch-aa) = 88356eefd5f2ddad26474f57ce29e533c885b0dd

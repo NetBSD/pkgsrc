@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:27:04 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:06:01 nia Exp $
 
-RMD160 (libsyncml-0.4.5.tar.bz2) = 551f27a5173f7d54ca51d6c01c2d601970eee496
+BLAKE2s (libsyncml-0.4.5.tar.bz2) = 0db99cf1e87b536e33593a1efff2898eb00f6f159cf8141dda8faec365e1e10f
 SHA512 (libsyncml-0.4.5.tar.bz2) = 913721d7f3e07f3e38c654b278b5b4d0c0b90db7e88683ed49281c38db60e4c901bdcc56680d03e98166d7f1a76897ffac869483d77037ca2bf94304c917ae93
 Size (libsyncml-0.4.5.tar.bz2) = 374803 bytes
 SHA1 (patch-aa) = 5202525fe8988b5d5c543ec2bd9d29d3cfc3f91a

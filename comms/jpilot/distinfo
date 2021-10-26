@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2021/10/07 13:27:03 nia Exp $
+$NetBSD: distinfo,v 1.29 2021/10/26 10:06:00 nia Exp $
 
-RMD160 (jpilot-1.8.2.tar.gz) = b162f2e2f91ef9fd4fc07026312f0f21ddbc345a
+BLAKE2s (jpilot-1.8.2.tar.gz) = b0bd3864bb8831cc07637fd6722fd33e55f36957b09922e0bd1853f292c575b6
 SHA512 (jpilot-1.8.2.tar.gz) = 733dd51a2acc60760bb1ffaa0d7b4433584a571793d5e4f857492349bae8d032625baf9f0060e619d760628ddda3559bf4be057f45f4dc17ddf1af1ca795c024
 Size (jpilot-1.8.2.tar.gz) = 1740735 bytes
 SHA1 (patch-memo.c) = 0ccc9f8cfa35d79d95e081deb03d47635ac9a981

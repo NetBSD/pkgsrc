@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.43 2021/10/07 13:27:01 nia Exp $
+$NetBSD: distinfo,v 1.44 2021/10/26 10:05:58 nia Exp $
 
-RMD160 (asterisk-16.19.0/asterisk-16.19.0.tar.gz) = 52f07e8b8ba68a65b29cb0ba2e0778dec4263bb6
+BLAKE2s (asterisk-16.19.0/asterisk-16.19.0.tar.gz) = ebf05642620e42ea85df93e1b5ffdfde0de2f5ee3cb13244895f530c55970038
 SHA512 (asterisk-16.19.0/asterisk-16.19.0.tar.gz) = e50b7c42591ff7fedba3e591a4e696ace62731d81b4d054757a91d8997ee454e949c56a4cf19e37c160407b23ec8c654c1b8af18712d09078e6149b5b22c5040
 Size (asterisk-16.19.0/asterisk-16.19.0.tar.gz) = 27872364 bytes
-RMD160 (asterisk-16.19.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 5d660e7664a56086bd60ad49196e1b622a60f106
+BLAKE2s (asterisk-16.19.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f7e5fe212d7e7cdca14c52527a2552311ab7762c3f1464b09ddedc7c66aebde
 SHA512 (asterisk-16.19.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f2f7bf3d5bce3544bc013f913c352f0204a3ce96239987403eb9dce8bc87e64a61d437762323a422a87b2fad1f3bf3e7a5f3d0d340f912a1b1dbfea9479d41d
 Size (asterisk-16.19.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 4253587 bytes
-RMD160 (asterisk-16.19.0/pjproject-2.10.md5) = c33bbef404923860a41e34520871c0fa7533a01d
+BLAKE2s (asterisk-16.19.0/pjproject-2.10.md5) = 6739f51daf24d0567304f773bd49648c1be3a7a4a33c0f3353279fb349168e7e
 SHA512 (asterisk-16.19.0/pjproject-2.10.md5) = bd24048c9c2fdaf06468e44bceca92bd02848d759ef98285d20b50174f865b1aec2928f1ce6c092862397ba83dd1a74da4a7e479eca881df1e9f9d1c211a7054
 Size (asterisk-16.19.0/pjproject-2.10.md5) = 110 bytes
-RMD160 (asterisk-16.19.0/pjproject-2.10.tar.bz2) = 9ffe871976a67e4d29d45fdb2c1fc26b2925ef86
+BLAKE2s (asterisk-16.19.0/pjproject-2.10.tar.bz2) = fac6400fa94cde09a848314b754062364c021e8c13d3fe28493634d4415959f7
 SHA512 (asterisk-16.19.0/pjproject-2.10.tar.bz2) = fe29edccc63a8e72323e1b6f955a8c3475e26aba9cb8f5125546da4409fecc19a09a7950eee6b8e4a3c908943bc043d95130f878ad52958c5eccc617e3bcfb4e
 Size (asterisk-16.19.0/pjproject-2.10.tar.bz2) = 7339188 bytes
 SHA1 (patch-Makefile) = 9f093c599f6c6208721c20387f07865a9cf2fd8e

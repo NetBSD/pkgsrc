@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:27:02 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:05:59 nia Exp $
 
-RMD160 (dl-ezkit-0.8.1-bsd.tar.gz) = f52b91f7a867dc8dee7f487b7f8418de9a206910
+BLAKE2s (dl-ezkit-0.8.1-bsd.tar.gz) = b28b2fabc31fc979cbce3d1d140ab9799cd4e74c74ff7def4a54d51778fc3adc
 SHA512 (dl-ezkit-0.8.1-bsd.tar.gz) = 3d49162bfb4b4d8f19b08396f6531b0ee74213848447cd0780ec7df24aae3d0b586e6c55be8e10e1319233d690be1d9e986030087b3b5d09ae9a407110750b35
 Size (dl-ezkit-0.8.1-bsd.tar.gz) = 32166 bytes
 SHA1 (patch-aa) = 891778644b6e66d704c3efe3688c3fb7abc64e96

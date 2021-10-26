@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:27:04 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:06:01 nia Exp $
 
-RMD160 (libticables2-1.3.3.tar.bz2) = 0d8df15f82fe587caa235672c1ccf357e5066404
+BLAKE2s (libticables2-1.3.3.tar.bz2) = 719c7d098b234974926135aff96ca911594a8c078c0bf73b8a643a03074a39ed
 SHA512 (libticables2-1.3.3.tar.bz2) = 19c9a6bb8319ccf9e9004e10c4addffbee605c3735e53e4a5628b360b0c2e8575076208d14d00d6304eb894d3c69aede6de00120cd26f8c543c6e6cc4adb21a9
 Size (libticables2-1.3.3.tar.bz2) = 495883 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2021/10/07 13:27:05 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 10:06:02 nia Exp $
 
-RMD160 (modemd-970221.tar.gz) = ade5d735e5fd07b91006cf1334a41a43dca7e3d9
+BLAKE2s (modemd-970221.tar.gz) = 097e793d5fac03f2bbe516c19304e6144850bcee4621329431ed5bdfd5f0124b
 SHA512 (modemd-970221.tar.gz) = 33a6581f595a2a5ca6d8beb475e93cb3e933127fe84b50d6e22aad39bd34f55c69b3d0e90e9fb81671ce22f8939b52e51576d6d352d633c9c66b1726c832e129
 Size (modemd-970221.tar.gz) = 56093 bytes
 SHA1 (patch-aa) = 093d70c98c5fa21f3c5fff8dc5092ca0afa365ef
