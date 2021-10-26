@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:49:47 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:24:10 nia Exp $
 
-RMD160 (suse131/cups-libs-1.5.4-12.20.1.i586.rpm) = 4b7d0998ad00f60c97bf911c57daac314c767379
+BLAKE2s (suse131/cups-libs-1.5.4-12.20.1.i586.rpm) = ada1ec73e452cc33e6b3bf3a82666a86d1483d897b5581dca18afd110bcbff48
 SHA512 (suse131/cups-libs-1.5.4-12.20.1.i586.rpm) = a0ea29e7d92a40037c2a70d9beb0b91940ca6d4b05c04768389a5e530c4f754b75abd4401ea37ea80c64622c1011269aaa2388f5a81afa1f15a87cae24bacc2b
 Size (suse131/cups-libs-1.5.4-12.20.1.i586.rpm) = 625832 bytes
-RMD160 (suse131/cups-libs-1.5.4-12.20.1.x86_64.rpm) = 7901019efdc6d9832d8b1d6f0e8a9859c4fce72c
+BLAKE2s (suse131/cups-libs-1.5.4-12.20.1.x86_64.rpm) = db2960dc152c24f11315420dd8b1eaa909915cc3d81cfdd14ccdfb5ba5984b0b
 SHA512 (suse131/cups-libs-1.5.4-12.20.1.x86_64.rpm) = d3f14414fb96f34e85335e804a1f234d0bd1b30a337aa315db41047d4834730b3e737642202a5bf6f57d1a4085af4891ea312597f329cd378861c89893b0d322
 Size (suse131/cups-libs-1.5.4-12.20.1.x86_64.rpm) = 628338 bytes

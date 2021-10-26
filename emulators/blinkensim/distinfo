@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:49:22 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:23:47 nia Exp $
 
-RMD160 (blinkensim-2.2.tar.gz) = 25812177a0def4969fe6d531ba378fbfc6ecb637
+BLAKE2s (blinkensim-2.2.tar.gz) = 6668651331c0e6a6591c765aa53bec39aa9e899f85f95988f8f809abb0074e06
 SHA512 (blinkensim-2.2.tar.gz) = 7ee3bb4cb552b6615e548e1210c9ce2637663500846dc6e9b1df9da1155bf48b433abba5277c97586c2bbb0c670db7c8740ec0e5241e1f5cd43ada7ee362f061
 Size (blinkensim-2.2.tar.gz) = 59111 bytes

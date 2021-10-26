@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:49:41 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:24:04 nia Exp $
 
-RMD160 (suse100/i586/resmgr-0.9.8_SVNr57-2.3.i586.rpm) = db20572c52aac9e0ed62d6f64ee7d59313010d3c
+BLAKE2s (suse100/i586/resmgr-0.9.8_SVNr57-2.3.i586.rpm) = 6314db27e1ad84ef55271c7e8d8d3a7f174d489295bafa88387d7ef25bcd90e3
 SHA512 (suse100/i586/resmgr-0.9.8_SVNr57-2.3.i586.rpm) = 18c8145da692980c076eebed943fba20ea89af6d863432f2b832556460858bb757cd9c66daeb04a2335c37d97035e2fc5315ee1d835a8d54124ed8e18b1d08ed
 Size (suse100/i586/resmgr-0.9.8_SVNr57-2.3.i586.rpm) = 82473 bytes
-RMD160 (suse100/ppc/resmgr-0.9.8_SVNr57-2.3.ppc.rpm) = fda846f65b1806af8f7597bf70a161d8437871f9
+BLAKE2s (suse100/ppc/resmgr-0.9.8_SVNr57-2.3.ppc.rpm) = ca4e5115ea0721f399fcdbf57da1513de8198d9199194415f5c0bc760290bf96
 SHA512 (suse100/ppc/resmgr-0.9.8_SVNr57-2.3.ppc.rpm) = 5db6a3cb84fb2cfdde714c85cc9a1cef9a3d464ae9526daca4130a3d8810f40bdd15ad9af3522b3ec7ddbc627f9a3ba3c34647e4d9c2ce208f2e1cac7536c802
 Size (suse100/ppc/resmgr-0.9.8_SVNr57-2.3.ppc.rpm) = 93401 bytes
-RMD160 (suse100/x86_64/resmgr-0.9.8_SVNr57-2.3.x86_64.rpm) = 1e773120f85641e74b9ca2cbd2f0f261f3c40089
+BLAKE2s (suse100/x86_64/resmgr-0.9.8_SVNr57-2.3.x86_64.rpm) = bb669964c260f89eb7346b8a1d2c00abf376ea8d5e79de27776a2e30dc681925
 SHA512 (suse100/x86_64/resmgr-0.9.8_SVNr57-2.3.x86_64.rpm) = cdea111e410798faee6d21b206bd846598bc0c2b3ed217d6d56c22af0f1f0777688593b4dd9756e74200ed924b8fc2de8a8ce104c9cfcdf93ddedf0057a459a1
 Size (suse100/x86_64/resmgr-0.9.8_SVNr57-2.3.x86_64.rpm) = 86654 bytes

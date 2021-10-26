@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:49:42 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:24:05 nia Exp $
 
-RMD160 (suse121/libfreetype6-2.4.7-9.1.i586.rpm) = 9c2718724f450cef9ab743292b4d34a272c520d0
+BLAKE2s (suse121/libfreetype6-2.4.7-9.1.i586.rpm) = 48a89c25c259adaa45413d5ba9b59e706faaf4313b1a5f45c793534ab10a8af0
 SHA512 (suse121/libfreetype6-2.4.7-9.1.i586.rpm) = 71b858f0b1e1bedb7b3966b728efa5c37166bcdcc86274756d92cd6cfc856c0250482bcf6a5d33a477c99b1fa504270b97d868e1aad9432037cd146920ef23fa
 Size (suse121/libfreetype6-2.4.7-9.1.i586.rpm) = 347541 bytes
-RMD160 (suse121/libfreetype6-2.4.7-9.1.x86_64.rpm) = c34af32f58e0ac811afcc9b706de04a66e484dd7
+BLAKE2s (suse121/libfreetype6-2.4.7-9.1.x86_64.rpm) = 79d13e52739b8a30d2b5598423f24195c337edfb93b93d4c25ccfc2a0f49ec80
 SHA512 (suse121/libfreetype6-2.4.7-9.1.x86_64.rpm) = 11db062e0106b01941819883b91993ba1574dff164b0cdbef49c15b78ab98340352a2e72e98b8aef65e10d06801b3b295d3cb9d617747b7938d7fc8249812523
 Size (suse121/libfreetype6-2.4.7-9.1.x86_64.rpm) = 345156 bytes

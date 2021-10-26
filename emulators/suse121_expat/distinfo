@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:49:42 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:24:05 nia Exp $
 
-RMD160 (suse121/libexpat1-2.0.1-109.7.1.i586.rpm) = 6e7aa59feaac3b21bf684d0021d6278631c7b85b
+BLAKE2s (suse121/libexpat1-2.0.1-109.7.1.i586.rpm) = b628552fae045386ed4e508c7c217b7021b2fa1b134dcfeb68aa245ffd4ed436
 SHA512 (suse121/libexpat1-2.0.1-109.7.1.i586.rpm) = 2d37e83923e1a5eec708286c6f7b7fd2ccea683f15e8d79fc6fbe72b49572f6a090ba81208fd497d3ae785cecf824e02d8611597e93e99829b80b2efabfbf6bb
 Size (suse121/libexpat1-2.0.1-109.7.1.i586.rpm) = 58105 bytes
-RMD160 (suse121/libexpat1-2.0.1-109.7.1.x86_64.rpm) = caa1f763b8128fb76b405028d620a8a89e6dd7a6
+BLAKE2s (suse121/libexpat1-2.0.1-109.7.1.x86_64.rpm) = 12f439142da3cbac09fa39907ead794aa00e6b2759ae5b7e23d7545242cfd233
 SHA512 (suse121/libexpat1-2.0.1-109.7.1.x86_64.rpm) = d873ba0069604b14bc043942a96938787b8ba21da7f0f5088f8119503bfd27e24da575c50403138c68da91c08c629d9cad4d5e2738e46dcb47002d37e4755eea
 Size (suse121/libexpat1-2.0.1-109.7.1.x86_64.rpm) = 58357 bytes

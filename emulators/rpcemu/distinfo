@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:49:38 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:24:00 nia Exp $
 
-RMD160 (rpcemu-0.9.3.tar.gz) = 0e2b74257a0f9bbde1d696e891729ee0900ac27a
+BLAKE2s (rpcemu-0.9.3.tar.gz) = f82445ff79c44c2e61749afed3e55612f8babb88ef3caf3e33e09f0898c39dd7
 SHA512 (rpcemu-0.9.3.tar.gz) = e785f0e911cf96a33a780289f0da69ef0e0d33d3383746825c205653e3aba34d255297cf3bf17c1eb3a5f7cd4c7f5550b7f6cbb10625b9e3d5618fa96c8732b1
 Size (rpcemu-0.9.3.tar.gz) = 384962 bytes
 SHA1 (patch-src-qt5-rpc-qt5.cpp) = 1971048028c3cb17d86ca454e8efdaff305a6e08

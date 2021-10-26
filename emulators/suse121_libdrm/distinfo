@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:49:43 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:24:06 nia Exp $
 
-RMD160 (suse121/libdrm-2.4.26-15.1.2.i586.rpm) = 18b8da0191e9be66b4b16ed67622b368c9c09724
+BLAKE2s (suse121/libdrm-2.4.26-15.1.2.i586.rpm) = 34dc0d8cb63dacb14f166da1b9c62e73fac4b956dbc710c201d0b6d2d6fd3230
 SHA512 (suse121/libdrm-2.4.26-15.1.2.i586.rpm) = bf1e31ef4031807844bab8bc862a101de04f28444a47f81879c80b97142a1466ac53331e33f1c3fe4b1ea460dc3ab3bc88f9ccb08be11d689974f9661f2086a0
 Size (suse121/libdrm-2.4.26-15.1.2.i586.rpm) = 85403 bytes
-RMD160 (suse121/libdrm-2.4.26-15.1.2.x86_64.rpm) = d4a5ddda83d1a4150b753b693928713b7a7ae845
+BLAKE2s (suse121/libdrm-2.4.26-15.1.2.x86_64.rpm) = b64178b8fe4cd330c6cc1bccfd2d15feb6efb702371b291c73712d7fc82df942
 SHA512 (suse121/libdrm-2.4.26-15.1.2.x86_64.rpm) = 0f63e37bef86eb4866c1984ed38e433933e505ca93307f68dc96a2fccb1b6fdcb7b210fbc932baf8d576eff87bcdb96e0d6192e9f1ae342fb8d1b27de71c8b4f
 Size (suse121/libdrm-2.4.26-15.1.2.x86_64.rpm) = 82689 bytes

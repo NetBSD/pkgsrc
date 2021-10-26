@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:49:53 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:24:16 nia Exp $
 
-RMD160 (xroar-0.36.2.tar.gz) = dfca664ee468755907c130b688599ba69e59c0d9
+BLAKE2s (xroar-0.36.2.tar.gz) = 2eb9003199a6f653be1d363763b99fdef3cc4c405c107a26d0f8c3e99f082789
 SHA512 (xroar-0.36.2.tar.gz) = 172f62c8b6a75426a5b0bf7c5c6ea3ed15e3bdaeb622e66c105072ddaf26e4b6849116305910ec389aff635d64dba05a056e353f19677fb1b9f019f3730df24f
 Size (xroar-0.36.2.tar.gz) = 923805 bytes
