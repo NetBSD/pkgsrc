@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 15:08:36 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:30:52 nia Exp $
 
-RMD160 (qDecoder-9.0.1.tar.gz) = 765fb180e80ad55d0a379529af5c46fffd246db5
+BLAKE2s (qDecoder-9.0.1.tar.gz) = 8c850cc0b83d3faadcd6432d69fa5276b88982b924e53624740a8a333d3ae68b
 SHA512 (qDecoder-9.0.1.tar.gz) = 6e6b5044a71459748fead18402087d965035fb96b79fdb9e070e063a7d4b7dd59148ff84ccd3609cea6073cffaefd22ab5a0afe19717e42cf072abcb620f8c79
 Size (qDecoder-9.0.1.tar.gz) = 266821 bytes
 SHA1 (patch-aa) = b142b4be25c7efe6acc5f9e294bc66e0596ff63b

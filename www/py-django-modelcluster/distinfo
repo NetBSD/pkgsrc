@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:08:16 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:30:32 nia Exp $
 
-RMD160 (django-modelcluster-5.1.tar.gz) = abad930e0eecc0c6a31173c9c86f1a91b4b1b838
+BLAKE2s (django-modelcluster-5.1.tar.gz) = 5cd853eac822cacef6ce823b3ef2f847ed457692e7373eb5437ea1e6edf7cdb1
 SHA512 (django-modelcluster-5.1.tar.gz) = bb3d8640a04cabfdebe7f60b571a2b2c4d71bbf5d4ea0ff0e7db5fe9d120e6eab7ec3f1b6992d21aff377045f8ed3e11d1b351ce2f460b33dd4c0f3a8dd749fb
 Size (django-modelcluster-5.1.tar.gz) = 45085 bytes

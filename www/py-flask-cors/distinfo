@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:08:21 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:30:38 nia Exp $
 
-RMD160 (Flask-Cors-3.0.10.tar.gz) = dd6abe91ea5484a25b305cc1856df665f19e9502
+BLAKE2s (Flask-Cors-3.0.10.tar.gz) = 510951ce14560def639a1d94e606277c8b9465fc1dc622a44d8c337a12742945
 SHA512 (Flask-Cors-3.0.10.tar.gz) = 5a44f30936c34901e99060b19860e63835f6621311beecdeb23181bcf1ee99034e751cce29163cb7dd1abdccacc4ae34e491055d6fe7b995a0e635e1520ba6e9
 Size (Flask-Cors-3.0.10.tar.gz) = 30867 bytes

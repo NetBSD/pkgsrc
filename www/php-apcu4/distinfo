@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:08:07 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:30:23 nia Exp $
 
-RMD160 (php-apcu/apcu-4.0.11.tgz) = 506c1a4202c66c0d87aba496fe8523117925b157
+BLAKE2s (php-apcu/apcu-4.0.11.tgz) = b14d31a86b18a64080d22bd8f74d2bcf41c67aadafbee968edd2a64c11c3ca49
 SHA512 (php-apcu/apcu-4.0.11.tgz) = e3b97066240e33850419e96f0fd9df0e66ee3b0fa238c418e07ac639d07439e9edfa1696e56a620e33f1ffc0993c57bde585b0c170b22995e7d5c0ae550b7899
 Size (php-apcu/apcu-4.0.11.tgz) = 119535 bytes
 SHA1 (patch-.._package.xml) = 0d1f0d78be71fe00f62736cfe90f5a6fa1f6cba9

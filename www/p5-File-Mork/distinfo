@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:39 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:29:56 nia Exp $
 
-RMD160 (File-Mork-0.4.tar.gz) = e33f35b08b0b11856949c232a74f4d78dffcc6c9
+BLAKE2s (File-Mork-0.4.tar.gz) = 25d952ccd69d82a6c4eab6965aa772044f0616021fbde3ed0c0ccf08a51c9cd1
 SHA512 (File-Mork-0.4.tar.gz) = 4cabdab4fba3f29f0f87fa9aa9853b6f93cfe620745234d97813992d211fd1fb258d27a79ae6eb1d534a0f8bbd2be962da09fb843638c2b06f99a053dd883bac
 Size (File-Mork-0.4.tar.gz) = 12038 bytes

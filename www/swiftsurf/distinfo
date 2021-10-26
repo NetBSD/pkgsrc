@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:08:54 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:31:10 nia Exp $
 
-RMD160 (swiftsurf-1.2.5.tar.gz) = 243c9c05352e83b5f7b64a8398ea1373e7f8dc59
+BLAKE2s (swiftsurf-1.2.5.tar.gz) = 51940a9c849bfb26b13aafa1b545eca40d5c04bc7c48a569640f6303f4e9a42f
 SHA512 (swiftsurf-1.2.5.tar.gz) = 3e6edc84624a134e5e4ada149e9d6a5444c9e1a57fa3b8b5dfde179c13c58e4bfdcfd4c00a2d563446e56804f3e00f9f373320710544a89e868304d95715ab04
 Size (swiftsurf-1.2.5.tar.gz) = 31950 bytes
 SHA1 (patch-aa) = 8e66aafe9612be3078113cc78b2bf025ddb98380

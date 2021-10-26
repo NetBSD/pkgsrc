@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:08:03 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:30:20 nia Exp $
 
-RMD160 (VRML-1.10.tar.gz) = 1c62afbbbcfd001b4fd7ba06a5b66312af3c06e6
+BLAKE2s (VRML-1.10.tar.gz) = ce143c5fe03401a220f5662953853119d2808859c4f0e149cf58d9a7d3bb07b5
 SHA512 (VRML-1.10.tar.gz) = f8e5e3bd4c947614c7e25e040811f3986791bb371b8129696ab991d415933613076e0ea353180fa3de1cd84fba0cedc5ee29aa5702c659bd6a1b90bf6fdf71c9
 Size (VRML-1.10.tar.gz) = 72049 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:08:59 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:31:15 nia Exp $
 
-RMD160 (z-push-2.2.10.tar.gz) = c489151ae24268192d522cd448c01f3e43463f33
+BLAKE2s (z-push-2.2.10.tar.gz) = 07b14f7fc1a5c775a13406d3d02d9ad3e1b5b519aac04557d51a93ca96fb2370
 SHA512 (z-push-2.2.10.tar.gz) = c7bd33844d3c9014074a54bb5287dbb394a8dca2d12c16ee3a579c2e8380e2d458fc78e848abcddbf703cda19b0d461b0102aafe154c1e1c1a277f45e1757515
 Size (z-push-2.2.10.tar.gz) = 468698 bytes
 SHA1 (patch-config.php) = d580422b5341e4eb86771ce40f28db80e9878501

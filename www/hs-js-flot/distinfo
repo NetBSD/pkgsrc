@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:07:16 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:29:31 nia Exp $
 
-RMD160 (js-flot-0.8.3.tar.gz) = b5df4f0e309d73ab5d1ee7f72e6a650ee22e4c88
+BLAKE2s (js-flot-0.8.3.tar.gz) = 9e3bbbdcf46dcafcd75fb4a6af83593096b51b013fa592ffe543dbd69d597994
 SHA512 (js-flot-0.8.3.tar.gz) = 5732938b37e9036156528c0d34cd99b45405db81d1e70b6651b056075ea8d9b616da1ae709c2de1f2f5be044236a3b81fc358d973769fca26993500ff9d0dabf
 Size (js-flot-0.8.3.tar.gz) = 662691 bytes

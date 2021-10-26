@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:08:19 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:30:35 nia Exp $
 
-RMD160 (djangocms-inherit-0.2.2.tar.gz) = cf3319d8dc0e83c2ed71d3bee54182ead83d98b8
+BLAKE2s (djangocms-inherit-0.2.2.tar.gz) = 58be4bdedb904f72e69ab149c3aacac2ec9feb02664f951083a6e2471e7b61a6
 SHA512 (djangocms-inherit-0.2.2.tar.gz) = f115568789b673a0ff05a3d9fac6ecaf1d7b85bb40fa6265239e0c7d3e68a64c8d163b71f2e75bec9fbb6fc7a70efbd6eb887fe027faf08c79e8052bb19fd466
 Size (djangocms-inherit-0.2.2.tar.gz) = 24909 bytes

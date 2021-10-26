@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:08:51 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:31:08 nia Exp $
 
-RMD160 (spawn-fcgi-1.6.4.tar.gz) = 6f0c9da33b75fa21f2272005a6a408a1d6a04242
+BLAKE2s (spawn-fcgi-1.6.4.tar.gz) = bac3d58fa389f01509d23e48a784ee711bc57ea83725ca778fc70695d37640f9
 SHA512 (spawn-fcgi-1.6.4.tar.gz) = 4e24b026c5322f762f000a223642c46a808c6a4f7d4b83b6a2131022ab557dd618cf64ce73119af00c97b935e5245dc20e0c1e769a3a8f3361ae2bb63616c119
 Size (spawn-fcgi-1.6.4.tar.gz) = 110455 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:17 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:29:34 nia Exp $
 
-RMD160 (Kahua-1.0.1.tgz) = f4ff55bed258486faccbf647344fe719c548a823
+BLAKE2s (Kahua-1.0.1.tgz) = d08bfb265027a8266f86abf164358fe5d0becd17e01050c35f591c4e6a741548
 SHA512 (Kahua-1.0.1.tgz) = b38dfb1eb264ab719d287402001a83dca8f3f1499885115044c9924548b76ba51105161e7a4ffd7f2401bae769303e240ad24a4c0b3510e8b93abf5caa1f687c
 Size (Kahua-1.0.1.tgz) = 491246 bytes
 SHA1 (patch-aa) = 0c0bf9c7795f62b979053019e0a82f12a332f96d

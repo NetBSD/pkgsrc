@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:08:25 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:30:41 nia Exp $
 
-RMD160 (grappelli_safe-0.5.2.tar.gz) = 75d37f914ed30cebfb106412ab5abb25365d794a
+BLAKE2s (grappelli_safe-0.5.2.tar.gz) = eeac37025e07ba15772a56bfc02a6e39d0c46dc0393a88b285215908f489fdcd
 SHA512 (grappelli_safe-0.5.2.tar.gz) = 368d62e735e2efc9480b44c63d1a07bede62cbc86448c4afcd5b4ea1cd963623d21581a6cfdfb5b753ebf90e10c605183c77d48ca18c773b2640abe8b1895f6e
 Size (grappelli_safe-0.5.2.tar.gz) = 82140 bytes

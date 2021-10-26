@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:07:54 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:30:10 nia Exp $
 
-RMD160 (MasonX-Request-WithApacheSession-0.31.tar.gz) = 4f326a8c519e4eb8fa54cfbf482583ae166b0d97
+BLAKE2s (MasonX-Request-WithApacheSession-0.31.tar.gz) = c81e80ac4f7e6a7aa0d5a262731c003d895a951bfe124b264a8e35271815f93e
 SHA512 (MasonX-Request-WithApacheSession-0.31.tar.gz) = 7d40dac031c32e397b6e563151d7921883e42df0428bdabacf1413a8078e581ce20f189d1139150448c04cb71ae46ade28abb7628cecb01dc934e8fbf7e436f7
 Size (MasonX-Request-WithApacheSession-0.31.tar.gz) = 11330 bytes

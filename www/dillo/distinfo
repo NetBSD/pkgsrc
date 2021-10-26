@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.41 2021/10/07 15:07:08 nia Exp $
+$NetBSD: distinfo,v 1.42 2021/10/26 11:29:24 nia Exp $
 
-RMD160 (dillo-3.0.5.tar.bz2) = 404d7b1a0e60526a53a02d4d49ed5b747f4e43fb
+BLAKE2s (dillo-3.0.5.tar.bz2) = 7644d03e1ebf63ad7abcb1a1b629a112b34e5d82026631ccca1e6e13c4a3ef25
 SHA512 (dillo-3.0.5.tar.bz2) = d0e86f57e50da762debf592b6deb94de5ee58f84e0cae1159890262540a463aea8143d2b99c634021c1f273f91c2fe0918f30d72c3eaf91fdb541e741469b155
 Size (dillo-3.0.5.tar.bz2) = 734472 bytes
 SHA1 (patch-configure) = 18dc67f0fe302ee030cb7be2a5fa5ef5976fcece

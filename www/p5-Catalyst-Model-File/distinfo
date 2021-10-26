@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:35 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:29:51 nia Exp $
 
-RMD160 (Catalyst-Model-File-0.10.tar.gz) = 034446c770054bfaa8227945a2a867afb9fb373a
+BLAKE2s (Catalyst-Model-File-0.10.tar.gz) = 3c34552dd690b750e33bbd109a9d9bc467477784886d1e660924bc0fbbfa0ee1
 SHA512 (Catalyst-Model-File-0.10.tar.gz) = a8a6f3bbc5b42410be68c6352a94cc3e3f788910a2938304464ca17aff5213a445630b60176e3630255a4784e0dd050aa2f837714a831503006ba2c9800c261d
 Size (Catalyst-Model-File-0.10.tar.gz) = 21774 bytes

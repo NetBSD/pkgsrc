@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:08:59 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:31:15 nia Exp $
 
-RMD160 (yaws-2.0.6.tar.gz) = 04e05a3db7e269c8c54d8464f5cfe331eab3b383
+BLAKE2s (yaws-2.0.6.tar.gz) = 3b44736925c9e9e6075f10d544477a2cd31504df8affb8fd82084fda5c22ed61
 SHA512 (yaws-2.0.6.tar.gz) = 6e05f3b492fe6bff31a1d74a36c2244e2eaca9b5888d4ce6a08ad5b156b54fc4128428ba28cd7bcc700d2ed5481d28b1de0a947b30c8a5c02ddeab366bd863d6
 Size (yaws-2.0.6.tar.gz) = 1644979 bytes
 SHA1 (patch-ai) = 097339fc81ab7421f90f337b11094b655e7a9bee

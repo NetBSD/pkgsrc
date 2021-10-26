@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:08:01 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:30:18 nia Exp $
 
-RMD160 (Template-Timer-1.00.tar.gz) = 23f4259205563cf4c0133d0c6853127386ff628d
+BLAKE2s (Template-Timer-1.00.tar.gz) = b11926bce7c021670562c8cc27b50428e140303d0a5e7ca7e4d19b0b2228c317
 SHA512 (Template-Timer-1.00.tar.gz) = b9aa5f2f2d7034b0a62bb670afc6711ec7d49aff84cd948ea09d6c55d9b8b2aeb7606150ed0bea5402ba63761fd03ee6fce402598ef82a8235fb8b50c2ba4f43
 Size (Template-Timer-1.00.tar.gz) = 3809 bytes

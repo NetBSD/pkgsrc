@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/10 15:55:47 taca Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:31:08 nia Exp $
 
-RMD160 (squid-4.17.tar.xz) = bbd2ade0960eac70298b78a34bb85cdf6cce617c
+BLAKE2s (squid-4.17.tar.xz) = 017ccf4d7df44393dafc40347e66d3b6d7498c5aef9654ae6401d5a1a5b6f883
 SHA512 (squid-4.17.tar.xz) = cea36de10f128f5beb51bdc89604c16af3a820a5ac27284b2aa181ac87144930489688e1d85ce357fe1ed8a4e96e300277b95034a2475cbf86c9d6923ddf7c0a
 Size (squid-4.17.tar.xz) = 2464204 bytes
 SHA1 (patch-compat_compat.h) = 839381a5e1f46e7d9b822bbb53d82a53c996ddc0

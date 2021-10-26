@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:07:32 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:29:49 nia Exp $
 
-RMD160 (CSS-Squish-0.10.tar.gz) = 9db6b834078d209797e4b570fc8df2258f13643a
+BLAKE2s (CSS-Squish-0.10.tar.gz) = 9b9cc6bfcdf32a5cd2ac665d529012cd8826ace3236017e3e7d28fa9003a4fe0
 SHA512 (CSS-Squish-0.10.tar.gz) = 82140c51a1e0cbed5e63a04134f56f8dcc0b383aa6b7b40574cf6636d3f92373cdd0eb474045daa8c5769cea7cd2b60bc7b36804ebea090541174d9a9e0ba6ac
 Size (CSS-Squish-0.10.tar.gz) = 8646 bytes

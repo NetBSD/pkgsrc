@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:07 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:29:23 nia Exp $
 
-RMD160 (crawl-0.4.tar.gz) = c86898b66c661e6b841170114deba4d8f076651d
+BLAKE2s (crawl-0.4.tar.gz) = 7d632cbda17a909be1b09321cf5e90ad481d697ac67b13d46541e0565cefa713
 SHA512 (crawl-0.4.tar.gz) = 539039b0ad00706e3a99cbc6e962d328479f9aa427d1ae7a9ca29281702111522bca73755f14dcbc6378771d82c0d473bfe767842ea84fc4fc7583bad3f22a8e
 Size (crawl-0.4.tar.gz) = 111084 bytes
 SHA1 (patch-aa) = 874cb3b73cbc56e320c58039ecc9fd98ab258a0b

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:08:05 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:30:22 nia Exp $
 
-RMD160 (WordPress-XMLRPC-2.12.tar.gz) = ce7cc813b2edbf6869fda98eee54d092c7d44f48
+BLAKE2s (WordPress-XMLRPC-2.12.tar.gz) = 824fcb4df624c341cc962de09ecfc8a23dfc61a28c4aa4dc01a6e08568f7be86
 SHA512 (WordPress-XMLRPC-2.12.tar.gz) = b6b7a558226346893b72ec05ca0dd4504b3b55e0240000848d97a4de537a12979d85826d60adadc18fc7ae44a3dfad5191100f26c76978afda9505fa524e30f4
 Size (WordPress-XMLRPC-2.12.tar.gz) = 72506 bytes

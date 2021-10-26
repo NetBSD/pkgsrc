@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:07:57 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:30:13 nia Exp $
 
-RMD160 (Plack-Middleware-JSConcat-0.29.tar.gz) = 19906034f0a26ca7cc6ff76924346a0012effae7
+BLAKE2s (Plack-Middleware-JSConcat-0.29.tar.gz) = f43f868692ebd76f4adefdbaa695c88b8ca59622f06bffae9b547f8236f88835
 SHA512 (Plack-Middleware-JSConcat-0.29.tar.gz) = f1ed5717b05aa6f4ab208bc6e32c210d2a6b9b6b9bb026725eced3182b626439e79773e56035d4883dc734fdc77b16c12e09148611c428c089259b97ee222edd
 Size (Plack-Middleware-JSConcat-0.29.tar.gz) = 40137 bytes

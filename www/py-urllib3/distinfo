@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.29 2021/10/07 15:08:33 nia Exp $
+$NetBSD: distinfo,v 1.30 2021/10/26 11:30:49 nia Exp $
 
-RMD160 (urllib3-1.26.7.tar.gz) = 2680b6fc9bcba26c9d5988a5ee4d036c9b86719c
+BLAKE2s (urllib3-1.26.7.tar.gz) = 1f9d4b1f74c1414e9a981b322564263857cd51268a4718bc35dcc08d9d26fc8e
 SHA512 (urllib3-1.26.7.tar.gz) = 6f5a5e6dd5ff99950fcc051495e0a698153b57e20b6c83d869b54c7fece9616909bcf2fe99efc40815f8722996ad93e430bf765ce5c629b912690c286014b86f
 Size (urllib3-1.26.7.tar.gz) = 291350 bytes

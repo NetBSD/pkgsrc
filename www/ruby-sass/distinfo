@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2021/10/07 15:08:47 nia Exp $
+$NetBSD: distinfo,v 1.26 2021/10/26 11:31:04 nia Exp $
 
-RMD160 (sass-3.7.4.gem) = 9f6865c4b7ae45bdb3f5256539dd6ec9d8592219
+BLAKE2s (sass-3.7.4.gem) = 668156635ff354dfeda0b4ba6fea8c54cfef5e4fdb0f83d8e0c730c197b0c804
 SHA512 (sass-3.7.4.gem) = a79d61cb421c71c945f4e64154fce68e833678f5f248c57777468377492de15e022e69465db100341203b696c76ed7c9ec1b58dd2e1dac400b0e2ce067982236
 Size (sass-3.7.4.gem) = 208896 bytes

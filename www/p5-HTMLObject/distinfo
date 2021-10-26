@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:07:45 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:30:01 nia Exp $
 
-RMD160 (libhtmlobject-perl-2.30.tar.gz) = 17c4da522682aabcd94548a4af12361deaf532eb
+BLAKE2s (libhtmlobject-perl-2.30.tar.gz) = 085c8094daec36be594d2a3f2966438dcf0cfce5438a310a70f8a467da4a28ea
 SHA512 (libhtmlobject-perl-2.30.tar.gz) = c0b1cc93810f8cf31d7c2bd9935893cc0534530715bbad0343f620a9bf24ed79c4d1abe2ce7dd4b524f35db1e4dedec98a3441ca0b045e1492296c73b85e3513
 Size (libhtmlobject-perl-2.30.tar.gz) = 202607 bytes

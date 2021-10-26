@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:08:01 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:30:18 nia Exp $
 
-RMD160 (Template-Toolkit-Simple-0.31.tar.gz) = dd2512e60ff62bd710a1f03d869523fe31da7e67
+BLAKE2s (Template-Toolkit-Simple-0.31.tar.gz) = c39dd30b99be6e7b38aa6eb6582cde4088ce58493e79a50ba094520e3ba456eb
 SHA512 (Template-Toolkit-Simple-0.31.tar.gz) = c38908b29e08b637a8b92dc70e2aff9b72dd5e026bbee5998ab8d0ca06358d3644a07aa9c0d54faa702a9f278f16da4a4a6507ff8db0903f21ea83b9e97f9a13
 Size (Template-Toolkit-Simple-0.31.tar.gz) = 38078 bytes

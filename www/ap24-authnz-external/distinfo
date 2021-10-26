@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:07:03 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:29:19 nia Exp $
 
-RMD160 (mod_authnz_external-3.3.1.tar.gz) = d15f60f91f0903fd45ad24ff3d5b1031d47751b8
+BLAKE2s (mod_authnz_external-3.3.1.tar.gz) = 7db6a85819e4086047396ea873a8f174612a06aa12921d2b1d34d0790bd479d1
 SHA512 (mod_authnz_external-3.3.1.tar.gz) = b19e9e909b98ef79a952e6700f04895065310e604d517be040eaa73d7a50927c352e84b86135841110ec4b088f1c98aad9dc142a58a1b65c38b028cf5c265160
 Size (mod_authnz_external-3.3.1.tar.gz) = 35293 bytes
 SHA1 (patch-aa) = 710a2c1eeeac540a2d4c32723771780b9d14c5b9

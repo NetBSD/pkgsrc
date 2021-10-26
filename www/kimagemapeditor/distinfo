@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:18 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:29:35 nia Exp $
 
-RMD160 (kimagemapeditor-19.08.3.tar.xz) = 7ccf6994b708795d045cd52251e6888f00363e06
+BLAKE2s (kimagemapeditor-19.08.3.tar.xz) = 994b682dca598f128d42ec783884523c1695b41d9a541efd65694051e03c6fe6
 SHA512 (kimagemapeditor-19.08.3.tar.xz) = 8ff978bf252b230f213fee0bd4e29c4744e814dea54720c3d50b0faa88fe9bcce393c934d92e9aea4fa8af36bc174d4b4036d7a7a32230519b139af8764c3751
 Size (kimagemapeditor-19.08.3.tar.xz) = 1070468 bytes

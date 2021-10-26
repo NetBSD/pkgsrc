@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 15:08:06 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:30:22 nia Exp $
 
-RMD160 (passenger-5.3.7.tar.gz) = 0ec1392becd55903c88ec2a52baa41c130b8fb6b
+BLAKE2s (passenger-5.3.7.tar.gz) = 4b0f78b7de007b84c781b0b23cfe33975996e1f110a1c1c48f78fef0a97a8ea6
 SHA512 (passenger-5.3.7.tar.gz) = bbef4881e0e0c698b29b10ff8a7afbc001c31d14fb80ffa27ed6867a92ad23712319733e6162be1f7720ebda421630af2f258f8167fa73c7b5ea594bc8247158
 Size (passenger-5.3.7.tar.gz) = 7195477 bytes
 SHA1 (patch-build_common__library.rb) = fc019cb2774245400e74741d34b43b87b4b8b0c8

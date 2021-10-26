@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:06:59 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:29:15 nia Exp $
 
-RMD160 (R/shinyjs_2.0.0.tar.gz) = f286ee54d834f4de6213328d54782e872863e869
+BLAKE2s (R/shinyjs_2.0.0.tar.gz) = 3802405caa1ec4314c2091ac038e65a43baf1ed01ba40ad6b47aacb9e78618e3
 SHA512 (R/shinyjs_2.0.0.tar.gz) = f81abe6d305cfde17a46f1975d4accecf5f2e6dad39b10e04badd16859e490b02f705db474350f1ecfbc62f9e2258e5d2056c30cb7f3273de3c36e156c4820c1
 Size (R/shinyjs_2.0.0.tar.gz) = 1043727 bytes

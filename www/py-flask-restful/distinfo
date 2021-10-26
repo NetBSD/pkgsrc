@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:08:23 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:30:39 nia Exp $
 
-RMD160 (Flask-RESTful-0.3.9.tar.gz) = 2c8cfe4f262ae8427c8642aace97e40fdbb9e277
+BLAKE2s (Flask-RESTful-0.3.9.tar.gz) = c980b1d05f796099d31b8210f8c756bc83891ab82ead11cd7dfa05440ee91da9
 SHA512 (Flask-RESTful-0.3.9.tar.gz) = b3cab1ca9451c4fddaa30dc5fda6dc4c36d01ec4ee684f433f76935e66fad71b870880a4f197cdc7af8f5786ae630e014f2571635a7e20a13a50ee8b270dd734
 Size (Flask-RESTful-0.3.9.tar.gz) = 109589 bytes

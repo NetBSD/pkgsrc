@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:08:00 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:30:16 nia Exp $
 
-RMD160 (Template-Extract-0.41.tar.gz) = db6774a15a803db740f08f1946afc534fd0dd10a
+BLAKE2s (Template-Extract-0.41.tar.gz) = 659a90ec4e8cb8f051a686c9eaca14c3bdd444a012365092cfd06e6201b35c9a
 SHA512 (Template-Extract-0.41.tar.gz) = be4a930eaf2929a663311bba7bf5265ad0170e75afd1864e1a5e7f13ca644aaea042607841da57c314bb5557d77c951588e22cd040e72a3b83165aa5f6bd4811
 Size (Template-Extract-0.41.tar.gz) = 34441 bytes

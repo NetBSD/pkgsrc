@@ -1,18 +1,18 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:07:12 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:29:28 nia Exp $
 
-RMD160 (github.com_davecgh_go-spew_@v_v1.1.1.mod) = 4852c7da0ba90c40c926de5b2fb9b55666a6d698
+BLAKE2s (github.com_davecgh_go-spew_@v_v1.1.1.mod) = eee11d0ec5d2260dc11d9bfe8f9d523e54530b71cc8357f43c0214b3b74bef5c
 SHA512 (github.com_davecgh_go-spew_@v_v1.1.1.mod) = 5e079462f7e0dff0efda71f580aa185700cfa936b718a19d0e2a8c63212e47a07022dca0c282832d48e5165aae8e82aeeeb2ac3664268f1148fc772010fb860e
 Size (github.com_davecgh_go-spew_@v_v1.1.1.mod) = 34 bytes
-RMD160 (github.com_davecgh_go-spew_@v_v1.1.1.zip) = d9d3f6ce5853fcf7c112c8dc5d1fd49f99166846
+BLAKE2s (github.com_davecgh_go-spew_@v_v1.1.1.zip) = 5281c0e301579c764ebf96f97056ba8fc1a8142d98f2fe44aabb07d7e8ae4f3e
 SHA512 (github.com_davecgh_go-spew_@v_v1.1.1.zip) = 7b4e4df2fea731e23e05437f26f24e32b2e99028d685b72e3a726c1cb616ada4a77ca4fb9db4a6fae48178cc5172e724b74499bc776d63a9110cb97377d5edeb
 Size (github.com_davecgh_go-spew_@v_v1.1.1.zip) = 60320 bytes
-RMD160 (github.com_pelletier_go-toml_@v_v1.8.1.mod) = edd216ba7930abce719986dd53ad0e2e5b79e2c4
+BLAKE2s (github.com_pelletier_go-toml_@v_v1.8.1.mod) = b4903f83bf203598c3448b93da20910d1f686038e9d6d3e36bf268cc96c73423
 SHA512 (github.com_pelletier_go-toml_@v_v1.8.1.mod) = 0e73093ef44bd32ae02910471bd85f6d135cde6d0fbf48780b8a58efb7419e16ac1b01497d451e8d3ee32602b7e32c0673dffbfc822c8f3a2d7670378f47f7cb
 Size (github.com_pelletier_go-toml_@v_v1.8.1.mod) = 88 bytes
-RMD160 (github.com_pelletier_go-toml_@v_v1.8.1.zip) = fbdeaa29456480cb9e713cca4500ba29a3f41feb
+BLAKE2s (github.com_pelletier_go-toml_@v_v1.8.1.zip) = 85dc51ec4091d4b135f4dc0af8e215fec1e1caab673a4e6f497996fb7ccd37ff
 SHA512 (github.com_pelletier_go-toml_@v_v1.8.1.zip) = 09cca3645bbd191ffee980c80c747a8952a37a0e1bfb9615cc1d0c0c3fec7783a9254fa3e31239a036c2bfaabe8028525e9113327c6d72c385c8b9bad3b46017
 Size (github.com_pelletier_go-toml_@v_v1.8.1.zip) = 117762 bytes
-RMD160 (go-ffuf-1.2.1.tar.gz) = 70cb5f4e97799e9311e01d0b541b394aea107e54
+BLAKE2s (go-ffuf-1.2.1.tar.gz) = d2ed7af02f5176d6ed1f3975dea456ed1430f24347f066d88ce2563a5c930be6
 SHA512 (go-ffuf-1.2.1.tar.gz) = 66c505b3807969b94ab35f03fe8af739ef6860120a3b2008ab188c2ac2d14159dd2b6780fa7fa5097a6fef9f882c6a33894b88092570feb8ae8ea02e8d04e020
 Size (go-ffuf-1.2.1.tar.gz) = 38854 bytes
 SHA1 (patch-go.sum) = 619c8496dfa9c052d4b17fbe048a6137574c9733

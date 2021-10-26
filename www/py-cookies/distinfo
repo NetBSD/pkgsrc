@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:08:13 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:30:29 nia Exp $
 
-RMD160 (cookies-2.2.1.tar.gz) = a942793a1d643cb30ddf5d161e4c4b1e5c8dcf31
+BLAKE2s (cookies-2.2.1.tar.gz) = 5a6c9f8973921e5b73eeee70dc5e1e1e8c674af3c2bf32513b017701e6035275
 SHA512 (cookies-2.2.1.tar.gz) = 76f362a9a1d74b87c90c5b91ad806d872612d31f487e4067a627409316f6099602c9e5a429f85ce20adcb0a7b63dd131b9e1ecc5c0c6444d1569367432a719de
 Size (cookies-2.2.1.tar.gz) = 40704 bytes

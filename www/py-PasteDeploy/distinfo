@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:08:10 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:30:26 nia Exp $
 
-RMD160 (PasteDeploy-2.0.1.tar.gz) = 74deee74374af3fc3d99010073288d9caa7ef979
+BLAKE2s (PasteDeploy-2.0.1.tar.gz) = 930d80a0ed3d92ceca63cd67fd8479e337253a35a7ca2580d62d4d92aff554ba
 SHA512 (PasteDeploy-2.0.1.tar.gz) = 24d619f9cec689d26322ea2643082ff02de74092bead103ab3052b330d267fea604cd351f09554ed8e7c0b91b913d1a11f4f4220cda8fbab2419926a4ccf92d0
 Size (PasteDeploy-2.0.1.tar.gz) = 13756 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.84 2021/10/07 15:08:58 nia Exp $
+$NetBSD: distinfo,v 1.85 2021/10/26 11:31:14 nia Exp $
 
-RMD160 (wordpress-5.8.tar.gz) = d5a0d48ce8d89aed0c5b9c8ba78a51a978dead71
+BLAKE2s (wordpress-5.8.tar.gz) = 1c8f198b481a45e86ec9af8571e8bea8bc7abaa04d77fc693f5f5fb29ac7d247
 SHA512 (wordpress-5.8.tar.gz) = 6f3c2f2e2d3d3ac57798533d062f12d1d751dc8c2fd30fb6448d60d50d74b416ecc32f1b3c54efd6a3edfcc227f29b14706e8ffadaf7d9710ab345ee47b88629
 Size (wordpress-5.8.tar.gz) = 15073609 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:08:57 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:31:13 nia Exp $
 
-RMD160 (wApua-0.05.1.tar.gz) = 4db283a75454fc19fc7d1d761994142d64ffe3e9
+BLAKE2s (wApua-0.05.1.tar.gz) = 36150ed48480f2d35e150ac2713c7b9444543df1f30568750bddf2c526aacc1e
 SHA512 (wApua-0.05.1.tar.gz) = 98dc0d8b624141ee49d5e755ee2b6bd4bfd37e585588318c835a7f1a96a99d450359722a0b2b99e292daf176e57b3a3e1f8b033be9106bf4f7dc54288f298379
 Size (wApua-0.05.1.tar.gz) = 35663 bytes
