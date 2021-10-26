@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:28:10 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:55:49 nia Exp $
 
-RMD160 (minisat-2.2.0.tar.gz) = 169ec9116befa9067db9076d26309f7e9ab408dd
+BLAKE2s (minisat-2.2.0.tar.gz) = 470f4789050696a02dfe1193a7bd9b8ec3b9f46ffd39daa914d4c5d605e1681d
 SHA512 (minisat-2.2.0.tar.gz) = cf79b05d43ebdc8fd8081899a1f853370de051cafe6e5b143eaff9827efc542b58062782a3ce2a3d1a03561a9ffd780c9cdc645bb50036eb61e80fa729136e64
 Size (minisat-2.2.0.tar.gz) = 43879 bytes
 SHA1 (patch-core_SolverTypes.h) = 969937eaaaac60b5e2b415ce3282797daacc4890

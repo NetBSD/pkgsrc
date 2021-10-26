@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:28:08 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:55:46 nia Exp $
 
-RMD160 (libint-2.0.0-stable.tgz) = 763bcd528d75a147b261cd4793e33ee648d11b69
+BLAKE2s (libint-2.0.0-stable.tgz) = c83a7271c63f044ad90820c4b2999780e5b929c62122de46407e99fc6fbc9e58
 SHA512 (libint-2.0.0-stable.tgz) = 946ecd8e8725539ef836c6164120962c86a239cfe6dad3cb81cdc086ae4c6f155a8e7d4c398293f7a2da1346744ba4108590a318e6e0c21d2edee0f5cba39c73
 Size (libint-2.0.0-stable.tgz) = 7875292 bytes
 SHA1 (patch-MakeRules.in) = c83d8e36b46aabd82f6395a5e96e502871bf4e1a

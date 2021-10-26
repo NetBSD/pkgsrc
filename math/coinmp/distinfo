@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:27:59 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:55:37 nia Exp $
 
-RMD160 (CoinMP-1.8.4.tgz) = 5d95750160aa03222ecd80593d72c1357ca9dc34
+BLAKE2s (CoinMP-1.8.4.tgz) = ba806967b5522739e7caeaa9fe56fbf7338638d3eb16cb006da7cc5d3ef37de7
 SHA512 (CoinMP-1.8.4.tgz) = 992ffc1a81057e2f044e6e5f67055010727c53c2f8f1b60f7cb23154f45e526af936edcbc38f33c18d3b98b472183b47949c9fd6ef1808479734ad410a0c61cc
 Size (CoinMP-1.8.4.tgz) = 10778373 bytes
 SHA1 (patch-Cbc-configure) = 952f46ebdfe030cbea90ba89293185f3ffd95cd0

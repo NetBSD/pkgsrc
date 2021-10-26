@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:28:11 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:55:49 nia Exp $
 
-RMD160 (minpack-20001130.tar.gz) = 4554f68ef6b2d527b00ae787cb16d2c307794b79
+BLAKE2s (minpack-20001130.tar.gz) = f513fb685f87d1bab7f10bbf30d8d96bccbc16cf41f7af59968cf0646bc4e702
 SHA512 (minpack-20001130.tar.gz) = 7b97acf386360e9d85ff0a776697424a4e85aba142ac4d0f815f6f2b111ff9d5982c05fdd99e4f10c52e47e78a9f24bbd36abd6359be9c4ac82329b354bd4215
 Size (minpack-20001130.tar.gz) = 186179 bytes

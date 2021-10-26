@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:28:19 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:55:57 nia Exp $
 
-RMD160 (pari-2.2/galdata.tgz) = 488afbddf7026dd6d0c9ebbed72cb14c8c37173e
+BLAKE2s (pari-2.2/galdata.tgz) = aeb6f8752e58324f233c0de6f18ce20f29859b514dceb01ecf843cfd9270bb8c
 SHA512 (pari-2.2/galdata.tgz) = bc89c8a42416e8ca25c356b7ad6d80ffcfff127e561fc338df87147a9e370ec71f7ae2eb6bef73d634cc7a8f18c794d7fd5ebfd0a042d3d356526a2eee28125a
 Size (pari-2.2/galdata.tgz) = 53229 bytes

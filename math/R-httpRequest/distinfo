@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:27:50 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:55:28 nia Exp $
 
-RMD160 (R/httpRequest_0.0.10.tar.gz) = c8569904b352a20f779056057ca23c5fd40c8228
+BLAKE2s (R/httpRequest_0.0.10.tar.gz) = 4bfadd22dd14fdbc9d21905c63b4d0b3d45998f73370ef53a8b028f28af25d63
 SHA512 (R/httpRequest_0.0.10.tar.gz) = c38f1f85e8a9fb741978980094ef53130610e98d6a6c1266e5771a9e353669fb05c6766f80f00442badb2e6f03343a9ec6a61f8a88e6c6835199b34a10bc30ae
 Size (R/httpRequest_0.0.10.tar.gz) = 4605 bytes

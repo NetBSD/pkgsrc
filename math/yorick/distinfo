@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:28:35 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:56:13 nia Exp $
 
-RMD160 (yorick-1.6.02.tgz) = a80fc1e76c8ff553e032e95200510b1171db614b
+BLAKE2s (yorick-1.6.02.tgz) = 70b192745fc49ef760ba3475677a3408e3a313945e0ab65001a5e5c585e72004
 SHA512 (yorick-1.6.02.tgz) = 82facfe29acf3b272e2c41a9c91f3d796b471f6a7e7d0a2c75eaca918af503364e7c8d49ea6e2f7d339a4a887669d7184c77395f926aeb4a38183a348c4c45b8
 Size (yorick-1.6.02.tgz) = 2234280 bytes
 SHA1 (patch-aa) = c1fc4e5c8c67216fc3d2e640cd6785b179bfa451

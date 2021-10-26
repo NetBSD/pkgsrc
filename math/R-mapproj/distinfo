@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:27:51 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:55:29 nia Exp $
 
-RMD160 (R/mapproj_1.2.7.tar.gz) = 635d8842c4732b2157d22eace42d37805ad0b5e9
+BLAKE2s (R/mapproj_1.2.7.tar.gz) = ebd2eb1ad3e0ed4905207710ba981f3166818cdcc9e5ba0435d9e216c7dafca6
 SHA512 (R/mapproj_1.2.7.tar.gz) = 20fe8741c00f38db3d2c44c28b9f3524f88a65f55a9823762d5e9848aa26876c93aa1eb7e8e0b09c454c9180aa9d2e2043a614664bda0fc093bb110064d7c075
 Size (R/mapproj_1.2.7.tar.gz) = 25429 bytes

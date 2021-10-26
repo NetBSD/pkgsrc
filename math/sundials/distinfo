@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:28:31 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:56:08 nia Exp $
 
-RMD160 (sundials-4.1.0.tar.gz) = 8c6aedc85db6679034472ad3aca9ef9b75d37c8e
+BLAKE2s (sundials-4.1.0.tar.gz) = 048ce8e4e7317c97f9c51b415ec6b9617ebaa7654a838f0bb1b20a9990f4d85d
 SHA512 (sundials-4.1.0.tar.gz) = 1922dca3f0b8869098670aede802e48abec39607c96304e4efd9b03d195b16920175846fce10641aeebc48c216bda73c8691139dce57ffa7731a6bc8194b81b0
 Size (sundials-4.1.0.tar.gz) = 17221960 bytes

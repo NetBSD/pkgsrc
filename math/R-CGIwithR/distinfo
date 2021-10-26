@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:27:43 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:55:21 nia Exp $
 
-RMD160 (R/CGIwithR_0.73-0.tar.gz) = dbd075191e2bb31e81e609baccc4f9e557db1a0f
+BLAKE2s (R/CGIwithR_0.73-0.tar.gz) = 899d28e1f1b4f6394d79aba0200dd806ab01f6b2c4b3c7240904eac61eea047a
 SHA512 (R/CGIwithR_0.73-0.tar.gz) = 85fcccbcdc34cce2685610677a0b1ab1ffc8ef9a6a5a98d36521c0653130283c78360142943196fcdc815d90d722ac8f05708324f6558a05532a93dd9833626a
 Size (R/CGIwithR_0.73-0.tar.gz) = 191630 bytes

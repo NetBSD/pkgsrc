@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:28:33 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:56:11 nia Exp $
 
-RMD160 (unicode-math.r53609.tar.xz) = 58799a79a7ecbf1c8fa1aac3e9cabc0887fd02d7
+BLAKE2s (unicode-math.r53609.tar.xz) = 6c32a4b5723c9fe213aa9e4facd73f4fef79ceafa530616448748144e7d3ca25
 SHA512 (unicode-math.r53609.tar.xz) = 7ed199c32680ae776c6367cc5d4d1c34826d6652ee50aa16f7952151b339d07809186c93a939f945d7166002ada059b3f02f54fdf5770b0b1cc50c6144d840ca
 Size (unicode-math.r53609.tar.xz) = 42816 bytes

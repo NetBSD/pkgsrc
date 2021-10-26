@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:28:09 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:55:47 nia Exp $
 
-RMD160 (linpack-20010510.tar.gz) = 72015366e8f9342d58c2429896fd75810f2df6f3
+BLAKE2s (linpack-20010510.tar.gz) = 5327d7c0aff3159a49ec8b6ff6d8f3d8aa90b6fe635d6eea86a8b12399c21f8d
 SHA512 (linpack-20010510.tar.gz) = 1d45bda4766791ac8a74d357f4a9f6ef02b3861923efd8aeecfcb92cc1e2177265091848d4e97f26b92d2e845b7fd11769f91d57174dacd609a09aabdacf2246
 Size (linpack-20010510.tar.gz) = 334832 bytes
 SHA1 (patch-aa) = 9993203f6b17bef939df4f958d0f458a5962edee

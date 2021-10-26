@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:27:58 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:55:36 nia Exp $
 
-RMD160 (calcoo-1.3.18.tar.gz) = 40eceb36bd9b260de47591ef777a23fb78e4e94b
+BLAKE2s (calcoo-1.3.18.tar.gz) = 7d199932f4208f5f62dff30d0d6c7ad02bc23d08dcfb0ad541dabb7ecc6ad0b0
 SHA512 (calcoo-1.3.18.tar.gz) = e03fd61abb1e5500a1e4eb91e732ced1c963770ddb85824430511cc5c14d1f5af1095e2fdc7b8b483afba94e3ac8381a001e0a42dccaa182c1a888e90afd14a7
 Size (calcoo-1.3.18.tar.gz) = 133605 bytes

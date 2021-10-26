@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:27:46 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:55:23 nia Exp $
 
-RMD160 (R/VGAM_1.1-1.tar.gz) = 264d8486c35869c1de9ab5f232978b64e5b565ee
+BLAKE2s (R/VGAM_1.1-1.tar.gz) = 60696739cd8556cd20e6bb684bdff8625bd8d2d956a29be536f70bf278691b70
 SHA512 (R/VGAM_1.1-1.tar.gz) = c868bd0ccde59d6d9b15446331c3fc4762d3356bda7063e6b38b7e1bfd7bbedddedb5a94b4e3812173fefc6f8b806123201f6a2a619d8bd038bcb4b4ec268b8e
 Size (R/VGAM_1.1-1.tar.gz) = 2624046 bytes

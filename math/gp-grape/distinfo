@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:28:04 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:55:42 nia Exp $
 
-RMD160 (grape4r1.zoo) = 79f84ed021578f2206416207351b7db3e40f7c13
+BLAKE2s (grape4r1.zoo) = bfe619e2dfa874b8555eb11d7bccc3ec9b4610c448aece2c603d13e1d4ec7405
 SHA512 (grape4r1.zoo) = 109914db2c0ecbcc38169c4a40c854cdf908aafda5267b52c5503c32adbd80c83830e99ebefefaaeda1c6e10d1dea1bd890e093f67bb0b27b4b590be104a1221
 Size (grape4r1.zoo) = 896781 bytes
 SHA1 (patch-aa) = 0265f02ef79ba76f745267d0857ff8db5e1880da

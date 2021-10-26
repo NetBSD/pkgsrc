@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:28:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:56:06 nia Exp $
 
-RMD160 (z3-solver-4.8.9.0.tar.gz) = 3427e05e0d0f4aec20cdd5d01d34d0a9b1676e5b
+BLAKE2s (z3-solver-4.8.9.0.tar.gz) = 4dab8466b7321839504e930daae1d0ef0e3866fbcc73a5e8d457a19bb94a18fb
 SHA512 (z3-solver-4.8.9.0.tar.gz) = bc137b505cc24e54e50b1aa3d7ee4161593de17f14198f926beaaf285f210742635f4be22d61456d19688a73f422ca60a24c84eeecf5e783d1dcf26f65a1b8ab
 Size (z3-solver-4.8.9.0.tar.gz) = 4503933 bytes

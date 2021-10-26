@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/24 07:56:31 wen Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:55:50 nia Exp $
 
-RMD160 (ntl-11.5.1.tar.gz) = 9342e480ab21413534ce2606e0a87917561d86aa
+BLAKE2s (ntl-11.5.1.tar.gz) = 27b1b6170f739199f5aeebc7c995390aaf1116eacfdfa54a322c8c9bbf2cb04d
 SHA512 (ntl-11.5.1.tar.gz) = cf1f642b8a0f9cdc6dda888e07183817dc67ff494e56a852053aeb15b3d2a0e61fbc05824779c5d1f20b8115fba6f97266acf7e0b0b527c25df5989c86d5928f
 Size (ntl-11.5.1.tar.gz) = 2304103 bytes
 SHA1 (patch-mfile) = c40f7c85a6a5719ab30c4423f296d121b25018db

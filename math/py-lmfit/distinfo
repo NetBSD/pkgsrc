@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:28:24 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:56:02 nia Exp $
 
-RMD160 (lmfit-1.0.1.tar.gz) = e641f717229828c32375e6d4f22c66bc998e3a55
+BLAKE2s (lmfit-1.0.1.tar.gz) = 5b2b858893b10255c1c5966cb029e8958eeacd0cc123647c7fdfbccba9e24570
 SHA512 (lmfit-1.0.1.tar.gz) = 1ae3e2cb25625a9b24c261d81c8f1ba0389266724581762f6e0a96140c84e43acd527ab1b83b862bf7b3b4c0b1b9755ee38d0c52e63fe89ea41f2d010b1e5c0d
 Size (lmfit-1.0.1.tar.gz) = 258368 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:28:30 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:56:07 nia Exp $
 
-RMD160 (sc-im-0.8.2.tar.gz) = afabf063feda1800fd07e6ee13b4036c7d5a200f
+BLAKE2s (sc-im-0.8.2.tar.gz) = 0adabda02d35a06311e585951d23a007830b74689a19c910f4d903e0a583d251
 SHA512 (sc-im-0.8.2.tar.gz) = ae02fd31eb7254208de26802ed6d8b21d77ce2d6997f4a2de5bd2f0a002c763f67f53e6c8e49d66ded096ecd8bf50b1117015e9a0356eaf11c3caef22cf4552c
 Size (sc-im-0.8.2.tar.gz) = 1619617 bytes
 SHA1 (patch-src_Makefile) = a8775db5d5a91cb1ee53946e4eff4fe3390a9dc5

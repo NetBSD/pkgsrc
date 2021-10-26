@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:28:15 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:55:53 nia Exp $
 
-RMD160 (Math-Calc-Units-1.07.tar.gz) = ed78a15e46f95203af6d8829bfc650bbf6130920
+BLAKE2s (Math-Calc-Units-1.07.tar.gz) = a52f8d272e37f4310f57bf5fe66874f1196c6a6ed12569f8e0d3bd0dd27ad026
 SHA512 (Math-Calc-Units-1.07.tar.gz) = 0758fd67f650cc8b70777a78c471c29e5a463370e47f810f0eaefa51cb832dbe01b55d7c53cb7d3dc70ee6339857b9f344acd7a68c7ea858394c387e87c52b31
 Size (Math-Calc-Units-1.07.tar.gz) = 34025 bytes

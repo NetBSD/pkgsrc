@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2021/10/07 14:28:19 nia Exp $
+$NetBSD: distinfo,v 1.29 2021/10/26 10:55:57 nia Exp $
 
-RMD160 (pari-2.7.6.tar.gz) = 55a3adf974de63967ce20e1f8fb5925c38229d0c
+BLAKE2s (pari-2.7.6.tar.gz) = 13518517347d8c82eb30790eb4400b5bf20e2df211fe9df8fd54f4bf5d67b2a2
 SHA512 (pari-2.7.6.tar.gz) = 9cc623778068fe06878b2be0e4c60b75b585220e78446ed0c5e0197a3688e32cb901ce8a0e794d6dd310dab036784f73c0c9a608628ef89dd3e40fe3d9f7dc48
 Size (pari-2.7.6.tar.gz) = 3160272 bytes
 SHA1 (patch-Configure) = b2aa2e01b94b73cf9741d942c8bc71c93d6e7e31

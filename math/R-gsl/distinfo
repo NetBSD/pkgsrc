@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:27:50 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:55:27 nia Exp $
 
-RMD160 (R/gsl_2.1-7.tar.gz) = 60816c063c11fcd449e0916eb2eadd686194ece9
+BLAKE2s (R/gsl_2.1-7.tar.gz) = 019b72f8b03853e2533ff69b7417a7543000d1841c0ae8b1a748ec02c2ed0435
 SHA512 (R/gsl_2.1-7.tar.gz) = 0aca4686c5a4d66c0b7385b0c03f22d56b58f04e6d831a8ca7432cf48dae268bd17d973747855a3b43436e72df87a57ccbb50a8eb42371c76dd2debfd005ae99
 Size (R/gsl_2.1-7.tar.gz) = 213803 bytes
