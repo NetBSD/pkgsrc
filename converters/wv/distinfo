@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2021/10/07 13:29:12 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/26 10:06:54 nia Exp $
 
-RMD160 (wv-1.2.9.tar.gz) = c1299c4bb43034d5df244f2452753eafab496857
+BLAKE2s (wv-1.2.9.tar.gz) = b7ade53741b738df787b6fa57a9ebcd23af247a1e9f26dd6d2ae437b03c3e3d6
 SHA512 (wv-1.2.9.tar.gz) = ae5c762012595ce8922bfda8749ad3e9cb055edab30152c3a5feaaf3ca6601f357d1e301b179e9a5860cd99452dd6e63e5f44f5bcc12f8db148bdd334e0200a5
 Size (wv-1.2.9.tar.gz) = 616256 bytes

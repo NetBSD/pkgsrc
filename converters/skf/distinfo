@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.41 2021/10/07 13:29:09 nia Exp $
+$NetBSD: distinfo,v 1.42 2021/10/26 10:06:52 nia Exp $
 
-RMD160 (skf_2.00.4.tar.xz) = 61ad55e6c3ea97194b3ab2583deafe720e5b1a92
+BLAKE2s (skf_2.00.4.tar.xz) = 6ad7ec61d9a566dcfa77131dff6c7e98b77325711b539020ff2aa123c6d32b9b
 SHA512 (skf_2.00.4.tar.xz) = bbed7316d4d869cfacadaedec48cd8ea9ac23632c20f462524fd0cd17af27eb5f04d7df98fd0445ae36220b55ae0c275f983a8000d3df0a35bb6632b95ddbff4
 Size (skf_2.00.4.tar.xz) = 855552 bytes
 SHA1 (patch-aa) = e49fcf49f05d89d6de2b32729b95234436e583f1

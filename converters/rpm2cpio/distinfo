@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:29:10 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:06:51 nia Exp $
 
-RMD160 (rpm2cpio-1.3) = b5ab39d33e9e0ccf7c277f27017597b492c69c86
+BLAKE2s (rpm2cpio-1.3) = 5141e97b06eeabe1ac5a7ef3a9d3abf1a89aba99b51b501856b60f8060a61801
 SHA512 (rpm2cpio-1.3) = b22131a6a2eeeb7312759697ee68803131350f56ac556fee4f494f1a0ded0194e98047cf2e1c2b9313142df43124669bbd558a926360d24089e720d22cb03d6d
 Size (rpm2cpio-1.3) = 3043 bytes

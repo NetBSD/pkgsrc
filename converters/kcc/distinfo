@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:29:00 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:06:41 nia Exp $
 
-RMD160 (kcc-2.3/kcc.tar.gz) = d9dd9a1f80fb0e47f1159bdd98c2dc931314b419
+BLAKE2s (kcc-2.3/kcc.tar.gz) = dfa0c1c86bfccea455d0436a0e58f51586c7a35641d26cdd04d370795edb5cd8
 SHA512 (kcc-2.3/kcc.tar.gz) = db942cb689d16c70898ba56c5231f2f78e8346c5faa8381439a63bd8b8fe5458b0f81c4f1399a9e35aaf23d2727a58a2100a138fe194c7fbc358ffce473c3860
 Size (kcc-2.3/kcc.tar.gz) = 18937 bytes
 SHA1 (patch-aa) = 1b3aff164bfe9a970750849ba8162242a82ed4d3

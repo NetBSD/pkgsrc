@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:28:59 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:06:40 nia Exp $
 
-RMD160 (base16-bytestring-1.0.1.0.tar.gz) = 668589e99a02745c70fbde18ee323059b8596d8a
+BLAKE2s (base16-bytestring-1.0.1.0.tar.gz) = 4fd6f2d21cfa74112bf8d01ab74d78338729bcb2e151bced0aa5b8b46d8e63bd
 SHA512 (base16-bytestring-1.0.1.0.tar.gz) = e95f4422c7442c8a8f05b98e0cc8c7ffe67b59f0e1b89e7016bea1cbad351a3766a0193d3499c721614aa4607cacc9aba9ed275b92188980ae67108abd28d6e6
 Size (base16-bytestring-1.0.1.0.tar.gz) = 7256 bytes
