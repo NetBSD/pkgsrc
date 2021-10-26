@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:25:26 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:54:08 nia Exp $
 
-RMD160 (milter-regex-1.7.tar.gz) = 66868b21eb095f203ef8391e99744506d7ee3cc4
+BLAKE2s (milter-regex-1.7.tar.gz) = 4bf10e562b1906c1eb68f4e085b7cfcd7e7a18ed31b9a2d2af8a1a50f14c69cc
 SHA512 (milter-regex-1.7.tar.gz) = 4da2bff1f23da40539c886e34910d15447a33b63c92e043f2b776cdd3dd75fd45017aa8742e1eee18fd709b9024ef251c5e317b12792da9fc5cd777da08acf31
 Size (milter-regex-1.7.tar.gz) = 19321 bytes
 SHA1 (patch-aa) = fdeaa835b6827f7deced58bf0c26a69e8bfca1f6

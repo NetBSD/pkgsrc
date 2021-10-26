@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:25:44 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:54:26 nia Exp $
 
-RMD160 (quickml-0.7.tar.gz) = bc34b93676eb342a450bc1a2d3b92d7a06603872
+BLAKE2s (quickml-0.7.tar.gz) = 76ea8304fa298661d1444239740375eea1327c88f32525bde547a3cbe1ab1e28
 SHA512 (quickml-0.7.tar.gz) = 48d5ef62430f015ccc58e8111e055064ce10bcf9d7cd5520fe615b869143a24419a360bad9fa0b9908f24c3a92172f8e73d8e2362d28aa1f6a086dd104ddb0a8
 Size (quickml-0.7.tar.gz) = 94147 bytes
 SHA1 (patch-Makefile.in) = d1c73befff63dac3f76dad27d70460527f2a1e2a

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/20 14:04:41 tm Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:54:08 nia Exp $
 
-RMD160 (mime-construct-1.11.tar.gz) = bdd158cd787ef9e3b04f16d374bbff64193dcf8d
+BLAKE2s (mime-construct-1.11.tar.gz) = f38aee209dceb9e44f30ae31404e54c4de4955b69a2532eb550d28de9f0ac4a9
 SHA512 (mime-construct-1.11.tar.gz) = 1192c5a0cd1c7675aaf4d1570c910672d3c3b6585f33e4781de289e8e1d9530c17b6d48083ad68349b46faa8e03be1dfeef16701b12763adc36bfa4f3b399a5f
 Size (mime-construct-1.11.tar.gz) = 12906 bytes

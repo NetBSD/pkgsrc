@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.112 2021/10/07 14:25:16 nia Exp $
+$NetBSD: distinfo,v 1.113 2021/10/26 10:53:58 nia Exp $
 
-RMD160 (dovecot-2.3.16.tar.gz) = 3d67a945f905216f3c0bfcf807951ca8acd51628
+BLAKE2s (dovecot-2.3.16.tar.gz) = 287c6017ed0398ca31f65ea9e0a8b045e12f8cf496e8a2ddf624661d41812010
 SHA512 (dovecot-2.3.16.tar.gz) = 31a9d352c7ead466d65ee0535b1fbd9138e35235f1ebfeedc4eef54cba450663c59708d162eaf0712af1c40f23526ac86aab2eece8cefde3edf690127472fd1e
 Size (dovecot-2.3.16.tar.gz) = 7650008 bytes
 SHA1 (patch-aa) = 3af01aa4a8cea1a3fb840b6243a744de77069611

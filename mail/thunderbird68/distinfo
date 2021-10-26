@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:25:50 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:54:32 nia Exp $
 
-RMD160 (thunderbird-68.12.0.source.tar.xz) = e255f9bafd8e30a83ba49f033870cbe362d43d4d
+BLAKE2s (thunderbird-68.12.0.source.tar.xz) = 42ad5dbe23984378254c6117a4783f7d33fd1793a86d176cddb47ea9baa9d725
 SHA512 (thunderbird-68.12.0.source.tar.xz) = e7559536a9e024747e3ac7c20e4ffde5adf57657d02109ea32c39bf736ad03707fc7a14a0d3f1c91fa6fd69ead3c38d6c32ce78bd468834d9ba7f77f728332c6
 Size (thunderbird-68.12.0.source.tar.xz) = 331226160 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = 775599fae82bf2701b8d45b728537abf3bab86fd

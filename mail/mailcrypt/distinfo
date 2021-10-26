@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:25:23 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:54:05 nia Exp $
 
-RMD160 (mailcrypt-3.5.9.tar.gz) = 462d92036b8e2e115ac4ddb0b5477c191c07cffb
+BLAKE2s (mailcrypt-3.5.9.tar.gz) = 3c14e7eb1080b72c3fd9673899d9e6564c9da67bf84da006529ac2767b96fcdb
 SHA512 (mailcrypt-3.5.9.tar.gz) = df6524ecc42d4c7bdddb34439186690192bc4091a1965e405223106fc71047c33e4bbbd571b030c326efec46961ba0aefd018ff1205d230dc74c34daf93ba079
 Size (mailcrypt-3.5.9.tar.gz) = 172073 bytes

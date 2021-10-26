@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:25:23 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:54:05 nia Exp $
 
-RMD160 (libspf2-1.2.10.tar.gz) = 5557435802896bec31362c1fa028e9e295656455
+BLAKE2s (libspf2-1.2.10.tar.gz) = 5d6334413947d087d5bddbc24012899b660f9894328d6840816be74eaf4ccb86
 SHA512 (libspf2-1.2.10.tar.gz) = 162ce382628c6fcadac3e11f5a12442db622bb23f7ec503e16f5ba7fc88afdd777bce6b093c12a58210355985fd11b74b140f08fab347334d82d953dd183b130
 Size (libspf2-1.2.10.tar.gz) = 508842 bytes
 SHA1 (patch-configure) = 0005180f6b9aedc45663dee6764c438d33078359

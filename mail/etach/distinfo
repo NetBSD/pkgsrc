@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:25:17 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:53:59 nia Exp $
 
-RMD160 (etach-1.2.9.tar.gz) = 470babbcd595a9df74daa0b06505d6efc4802b39
+BLAKE2s (etach-1.2.9.tar.gz) = 65b09c58ec5c00bb1873992562d8936ce52fa91c8cf7054b2028def3d2e6ef64
 SHA512 (etach-1.2.9.tar.gz) = 58b0ddfb73261d1123b4d2b5c285c9529081ae96ec0a17823267599f28b79c01a7ad3e4ab7de9048bef5dc62d215d986fdc2349693df8ef474e273840f4ce7d0
 Size (etach-1.2.9.tar.gz) = 35334 bytes

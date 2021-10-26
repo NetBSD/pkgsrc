@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2021/10/07 14:25:50 nia Exp $
+$NetBSD: distinfo,v 1.22 2021/10/26 10:54:33 nia Exp $
 
-RMD160 (tnef-1.4.18.tar.gz) = e02bb30ae64b9a72a6489f8c5dcce57a53face46
+BLAKE2s (tnef-1.4.18.tar.gz) = 26dec1a9bd477621327b9c90040231b96ea8c628556800cf79e2432e9973dd9c
 SHA512 (tnef-1.4.18.tar.gz) = bc53daaca9c260a804681c040d01f80bbd8b0d3597678c774975e988cdf83dad6b0d6c66b22e0d40ed2300efddef0bc663236ead4dfe687eb33af7f27dbb6000
 Size (tnef-1.4.18.tar.gz) = 4650361 bytes

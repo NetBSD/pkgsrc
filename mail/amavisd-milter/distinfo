@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:25:12 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:53:54 nia Exp $
 
-RMD160 (amavisd-milter-1.6.1.tar.gz) = 81215f05b760bba31f56707a81d8dc8c90d1b025
+BLAKE2s (amavisd-milter-1.6.1.tar.gz) = 7978dfcaecc5c9b475626e49d5430954f80c7fe0bf4e7d989506bae275a5f339
 SHA512 (amavisd-milter-1.6.1.tar.gz) = 28f505a8e130e67decc6c6ff8526f82db24b1b27a11e69f1a112e3e6103f303d333743c2ceaf12bad86979c987cde64f41afb4794c1ca1222cf11a2c3b03c8a5
 Size (amavisd-milter-1.6.1.tar.gz) = 193739 bytes

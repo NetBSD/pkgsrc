@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:25:25 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:54:07 nia Exp $
 
-RMD160 (mailwrapper-19990412.tar.gz) = cafe34e6076e5c748ce43ecb81c3a96ed4d02e29
+BLAKE2s (mailwrapper-19990412.tar.gz) = f81bbc2e2178265116bfd8c45b2dcb86303da4d003420dfe32a7a5b0de8272d2
 SHA512 (mailwrapper-19990412.tar.gz) = 078c0c2f00c7d1aa82cb3c1f6aba8ec97d70d3b427d46a94ad30f1c58673e322b919b5df50398ac42bae3ba37c8a26651e263548d88850713e3ec46b6df5d382
 Size (mailwrapper-19990412.tar.gz) = 6129 bytes
 SHA1 (patch-aa) = b9378b4cb23180f8f4935e9c1ec032928a51de03

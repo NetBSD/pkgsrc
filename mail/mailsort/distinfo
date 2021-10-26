@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:25:25 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:54:06 nia Exp $
 
-RMD160 (mailsort-1.26.tar.gz) = 9c32d16de72a3944e629c5a1096560652067aecc
+BLAKE2s (mailsort-1.26.tar.gz) = b9b8f30ac0cde99ebeda62a8d60ea2d3a7599c001ecde20214c8f460c5862f69
 SHA512 (mailsort-1.26.tar.gz) = 587306c56b7e0c6bda91b528534a72a72dfb225858daaf087b63a5a68415f178659d54d7bb59c3a6ed8300f5dd020eb063091483fc887521cadb94202e356cb5
 Size (mailsort-1.26.tar.gz) = 13422 bytes
