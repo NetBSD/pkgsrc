@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:25:47 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:54:29 nia Exp $
 
-RMD160 (serialmail-0.75.tar.gz) = 2d12152b9c7d007f76b4d129c2795cd192ba9f83
+BLAKE2s (serialmail-0.75.tar.gz) = bfa1c8fbd9f5c2d5e011ce6d3972003e7f790e251ece42f4b0941050fc1263fc
 SHA512 (serialmail-0.75.tar.gz) = f0c7f14330b44f12f8e5f3590416d707bb2daaca84db8fcd236ae05855269005a726d946269c0cbb25f51238fba350420e0e3a1d57f0ab227c447fafcae497dc
 Size (serialmail-0.75.tar.gz) = 55079 bytes
 SHA1 (patch-Makefile) = 4f3c3b0f1a65da9c0598ae6b34ab6b1c2a421eb3

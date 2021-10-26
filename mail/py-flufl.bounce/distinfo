@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:25:40 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:54:23 nia Exp $
 
-RMD160 (flufl.bounce-3.0.tar.gz) = e62dcf28d3aed13ff6e5ba0adf37a8cd2a2fc441
+BLAKE2s (flufl.bounce-3.0.tar.gz) = 5bc1d516937f6da63d3d23979875c9db8730cdcb68b37443534abc9e69b7339f
 SHA512 (flufl.bounce-3.0.tar.gz) = f6effe38c80e1e5e1119d7951a1a32bb9b91fc52db0887eee4ebb74e005ad5cf48351311985a3169649301efe9273d3fe480b3dded7eff3b77b73312d0416f45
 Size (flufl.bounce-3.0.tar.gz) = 89156 bytes

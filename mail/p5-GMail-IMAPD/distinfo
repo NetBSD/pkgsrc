@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:25:32 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:54:14 nia Exp $
 
-RMD160 (GMail-IMAPD-0.94.tar.gz) = 84fb7c633917a55f41c9c2c07f197f9f3b1d179e
+BLAKE2s (GMail-IMAPD-0.94.tar.gz) = e9031ae762a6f0bdee5c174603620a2ae403ceb064bbab6a18091c34ee04e9b0
 SHA512 (GMail-IMAPD-0.94.tar.gz) = 9d89a789587bf6664908479ca9bf3be43edc87b7cda85b743c9bb763fde35cf0681ecbeacc5ad170d90da729364529390aa02acc4147abe6b3d709370de10879
 Size (GMail-IMAPD-0.94.tar.gz) = 9106 bytes

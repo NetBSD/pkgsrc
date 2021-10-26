@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:25:23 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:54:05 nia Exp $
 
-RMD160 (libsrs2-1.0.18.tar.gz) = 7efa96f457ebac45178afa84aeaeb28834a1f4e7
+BLAKE2s (libsrs2-1.0.18.tar.gz) = 811d35df8c27ef25223151f6bcb180b24d4abd68d9fb8c331d27207046aaf889
 SHA512 (libsrs2-1.0.18.tar.gz) = b9c189caa227487e90566f65430345f09a3d545fc286a3eb0c445aee3a74905c1a9248ce78b36a7cfb6a2936f6cd1efbe99ba7b8df49a613a81c6435396f5422
 Size (libsrs2-1.0.18.tar.gz) = 295748 bytes

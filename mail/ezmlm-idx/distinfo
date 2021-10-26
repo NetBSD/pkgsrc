@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.26 2021/10/07 14:25:18 nia Exp $
+$NetBSD: distinfo,v 1.27 2021/10/26 10:54:00 nia Exp $
 
-RMD160 (ezmlm-idx-7.2.2.tar.gz) = 323b22e532651924231e1043dbfaaa2cb35d2afb
+BLAKE2s (ezmlm-idx-7.2.2.tar.gz) = 3e3adcc170b866b7e9d6df724b8ddec6ee193346d009efc7763cfbbf42130f42
 SHA512 (ezmlm-idx-7.2.2.tar.gz) = 4fdd30d6dc254fd0353f34675ea8baa91d95860de1fb23ff5517280c75a8d87405bdd7e180e25eb8f5c0b152a35a11a939f4e7364596e83d81053b1e6019245c
 Size (ezmlm-idx-7.2.2.tar.gz) = 742451 bytes
 SHA1 (patch-BIN) = 7024a403c703f2172882683bad316eaea2956f99

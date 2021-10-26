@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:25:15 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:53:56 nia Exp $
 
-RMD160 (courier-unicode-2.1.tar.bz2) = 6d8dbb7de4793e2df9bca7ce5da97a226d41c2f5
+BLAKE2s (courier-unicode-2.1.tar.bz2) = e34df0f753448c8c17659877be7dd5874b8001626ecbfcb271d46fb934a069ed
 SHA512 (courier-unicode-2.1.tar.bz2) = 1ee0bb3a548bfae4ebdc92ff8eeff5d22705c0df55e37e98880a12f1bfb186034e0c1ea2e1f03073b40e1d11147828304be93467d5d51e394fe39fd57bbbb46e
 Size (courier-unicode-2.1.tar.bz2) = 447917 bytes

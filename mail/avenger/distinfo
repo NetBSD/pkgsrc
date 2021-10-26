@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/20 19:13:09 tm Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:53:55 nia Exp $
 
-RMD160 (avenger-0.8.5.tar.gz) = e15fd96317b141313413073647788079c10a87cd
+BLAKE2s (avenger-0.8.5.tar.gz) = 1b3581e7973a5d40f09037a844563b65e8de89c5e685dd8b5891fb4ab10dc4e2
 SHA512 (avenger-0.8.5.tar.gz) = be896afe2bc66bf6bc4cb87611b7aa7044e7144bd249f66a0fe4aa5d551960cfe7112b452471a98ece01ab35020b4eefea0f8992c1cac14c3a524dc90ff629b3
 Size (avenger-0.8.5.tar.gz) = 910358 bytes
 SHA1 (patch-aa) = c7ae855eab4995164de44c861480f263adbb4bc9

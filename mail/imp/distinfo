@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2021/10/07 14:25:21 nia Exp $
+$NetBSD: distinfo,v 1.29 2021/10/26 10:54:03 nia Exp $
 
-RMD160 (imp-h3-4.3.11.tar.gz) = f8280293b792ee7b9f12545707af1353e9e4fbe2
+BLAKE2s (imp-h3-4.3.11.tar.gz) = 76b7e7433dba9ef663c35effd476e02bdd2e4cce311b3e319264088f9e62d2aa
 SHA512 (imp-h3-4.3.11.tar.gz) = 0cd52a8a2ae521709dfecf08af4c0981b9fbcc1ea4f2531e6d535cb37da9d74cbdd3379fa326616ce8e69b95276763e58e0565493fd26e4da216bad04ca843bd
 Size (imp-h3-4.3.11.tar.gz) = 5576792 bytes

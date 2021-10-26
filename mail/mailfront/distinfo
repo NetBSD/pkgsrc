@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 14:25:23 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 10:54:06 nia Exp $
 
-RMD160 (mailfront-2.22.tar.gz) = 8e4cb0a5bbfbcd06db5ca7c49acc9abd3bffc543
+BLAKE2s (mailfront-2.22.tar.gz) = 6186538eb4ff5bda2fe9fa91b0c4223867eb54351ef06c46d0e3c7af77ec6f94
 SHA512 (mailfront-2.22.tar.gz) = 30e1c561f8836bbaf893897b1e864539c44600c4b605d4c8c51c1156c9227967a4ac9e2e9eb0b48bb1827001aff2c6a94e9f44c59bf10e16b5d98595c6a9f2f6
 Size (mailfront-2.22.tar.gz) = 128355 bytes
 SHA1 (patch-INSTHIER) = 84e52ccc8e86c329f27b97c22e95669962f3595f

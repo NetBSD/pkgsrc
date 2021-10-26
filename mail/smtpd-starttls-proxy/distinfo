@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:25:49 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:54:30 nia Exp $
 
-RMD160 (smtpd-starttls-proxy-0.0.1.0.tar.gz) = b6f0012606b138bd8695e880eba59a8d45615419
+BLAKE2s (smtpd-starttls-proxy-0.0.1.0.tar.gz) = ecfafd449d7bbe5977357b8e755022f18513405d15ed0287ddfdb23d6741f9f9
 SHA512 (smtpd-starttls-proxy-0.0.1.0.tar.gz) = e8268341ef70ad4c254f20079d07d44f3ff4cc28dd5e3327678334b92c270bf4bc0f392d08cda271d8dccb49f723bcbe52b6fcfadf9d188bb89c373fdeb69a56
 Size (smtpd-starttls-proxy-0.0.1.0.tar.gz) = 17997 bytes

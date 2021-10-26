@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:25:48 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:54:30 nia Exp $
 
-RMD160 (spamass-milter-0.4.0.tar.gz) = e7a6d090b0328a314fda8e9872cd93f0e8a9206a
+BLAKE2s (spamass-milter-0.4.0.tar.gz) = f6fb128bf729b935600a5ef5fc1ba21ee0b9b92a8b7db3f02ee16cbd46abaf4b
 SHA512 (spamass-milter-0.4.0.tar.gz) = 21ba9ad3aed9e3452c695e589ce5b9ec5f550b5c4b4c4e04a3d4d2452d3f81417fb4a9525212b554190a1104cc759676d65feab904bb62d0763a9b8d588e29c7
 Size (spamass-milter-0.4.0.tar.gz) = 158646 bytes
 SHA1 (patch-ac) = 7875b8f8ed8f16c9e31d0d4012d327742e395b3c

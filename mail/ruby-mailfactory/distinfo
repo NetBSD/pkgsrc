@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:25:45 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:54:28 nia Exp $
 
-RMD160 (mailfactory-1.4.0.gem) = c70043fecefb17087f8a4c852f2da5de1cc34410
+BLAKE2s (mailfactory-1.4.0.gem) = 3cb94f3a37f6e62562b6cb1b2081125cba886bb1972f2832cd2878438ad277c5
 SHA512 (mailfactory-1.4.0.gem) = d477ca326c89f155f2af7348af37e577eff18f50a4f19aca85bab16977cf8e41b0283b287963fb8362ace484a0de3306062f86cef4dcb78b786fc55c62cf8ce8
 Size (mailfactory-1.4.0.gem) = 9728 bytes

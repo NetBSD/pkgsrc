@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:25:42 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:54:24 nia Exp $
 
-RMD160 (qmhandle-1.3.2.tar.gz) = fea8f069fe8e9ce3ee8c7504a7ae93f4121c7749
+BLAKE2s (qmhandle-1.3.2.tar.gz) = 6ad529ba6afc893f96b3ced061064bb5ddea60db4d7bd11a10808d891759be7c
 SHA512 (qmhandle-1.3.2.tar.gz) = ec6bb344f4d345e4a59ab3acb336a5a76a22c07a9eccac1e1f178b2a96f83afb9a4d669f16f960c254cc203745db96027ef9e6181ea8a16b0bff5e86141ce779
 Size (qmhandle-1.3.2.tar.gz) = 15423 bytes

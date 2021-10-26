@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:25:28 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:54:10 nia Exp $
 
-RMD160 (nmzmail-1.1.tar.gz) = fbca7a1f08f7bfdee116d942fc734093d0d3ce88
+BLAKE2s (nmzmail-1.1.tar.gz) = 0912caede735765e47886ddc7a689292546e692bae6fc8a774c6db255a46cafa
 SHA512 (nmzmail-1.1.tar.gz) = c5b689c587fc0d0359c59a02a2a1f519753e7c8a10aecd2c519f0e788b95ed1023a18bf0d2ee39292f36aae71eebf43d2463ceef7857d01358e56c8f0bd70249
 Size (nmzmail-1.1.tar.gz) = 94326 bytes
