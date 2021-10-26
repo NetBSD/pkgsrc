@@ -1,20 +1,20 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:49:45 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:24:08 nia Exp $
 
-RMD160 (suse131/avahi-utils-0.6.31-16.6.1.i586.rpm) = 07f14402eb760d3680591a14436806a824da59a4
+BLAKE2s (suse131/avahi-utils-0.6.31-16.6.1.i586.rpm) = 63e889a4eca14fefdecf7ae8f3f9989c6c296d52396b8b2dbe52a821b1a434ac
 SHA512 (suse131/avahi-utils-0.6.31-16.6.1.i586.rpm) = fd763a4452b3a8283ed89b3d2fae93244749177f0a94c4312e6f1b2e2696c7f7f8482635616b72c45fefda9a149064cc6a0fbb57162c739d460ac6926e8d3750
 Size (suse131/avahi-utils-0.6.31-16.6.1.i586.rpm) = 35244 bytes
-RMD160 (suse131/avahi-utils-0.6.31-16.6.1.x86_64.rpm) = 4d6f9e9737094a7e2c6465feb302111f53588c70
+BLAKE2s (suse131/avahi-utils-0.6.31-16.6.1.x86_64.rpm) = 9aa8d79975274627a3a6d7937ae320765f6af6bced2fabbcd39bc54d58a8482e
 SHA512 (suse131/avahi-utils-0.6.31-16.6.1.x86_64.rpm) = 5923301b44e7a68bca6d21a6166ccd5d1e1019cd4969d1779ad578987da41f429c63b8620d2ad6be3c0d750289f822c47800a06ce8f33baef62dd1b0b1bcc78a
 Size (suse131/avahi-utils-0.6.31-16.6.1.x86_64.rpm) = 36149 bytes
-RMD160 (suse131/libavahi-client3-0.6.31-16.6.1.i586.rpm) = aba03502d9a20ad005a24a7392591c9b52a4a73f
+BLAKE2s (suse131/libavahi-client3-0.6.31-16.6.1.i586.rpm) = 4f4b1705f1c49469552c064f932460dd1a2460c461e929f000df4d198ec4a47a
 SHA512 (suse131/libavahi-client3-0.6.31-16.6.1.i586.rpm) = 6c40ca24b40eb10cbf2d520ea5578967faf03738a81793d0e947230723d6ff0d74fa70eca0f7e748c66dafda6c71844008ad95f9671f0cc9b88020ed1ca775c4
 Size (suse131/libavahi-client3-0.6.31-16.6.1.i586.rpm) = 33586 bytes
-RMD160 (suse131/libavahi-client3-0.6.31-16.6.1.x86_64.rpm) = ffe311520ba5cccc9fc46d9bfef92a2646ffaa32
+BLAKE2s (suse131/libavahi-client3-0.6.31-16.6.1.x86_64.rpm) = 7da2381e1db23543af1a7298d9af55391748b5a1a3be9b21a3a8613924458f89
 SHA512 (suse131/libavahi-client3-0.6.31-16.6.1.x86_64.rpm) = 694f01b4cd81828bb9de05813a6a12131afe8fffb9245a27eef064c62fe517db56c2bfd3c4a4a55dd5a1c826f2de058e2ca8545c8fa8dc82156de615e493d39a
 Size (suse131/libavahi-client3-0.6.31-16.6.1.x86_64.rpm) = 34211 bytes
-RMD160 (suse131/libavahi-common3-0.6.31-16.6.1.i586.rpm) = b94203035605122806e998883b6382fa2177e73a
+BLAKE2s (suse131/libavahi-common3-0.6.31-16.6.1.i586.rpm) = cc2500d8cfc73a5a0fc842d5491a81002682deaf5bcceaa84eb0d7cc410ffec2
 SHA512 (suse131/libavahi-common3-0.6.31-16.6.1.i586.rpm) = d873e0e0bcd7cc47a9af97694d68174d6ecd3e7dfbf032622040a2a5d034405829b78141070d3749aa6309942407e38bc9f117e876a6b540ac93d86f68e7b759
 Size (suse131/libavahi-common3-0.6.31-16.6.1.i586.rpm) = 31082 bytes
-RMD160 (suse131/libavahi-common3-0.6.31-16.6.1.x86_64.rpm) = d858ba02056f443ceaaf470a065cd0c0092aed71
+BLAKE2s (suse131/libavahi-common3-0.6.31-16.6.1.x86_64.rpm) = 3696e485e7d87faf7a8a9de5de2d02b7cfff42ce50fb9e5bb49e0763b7cb834c
 SHA512 (suse131/libavahi-common3-0.6.31-16.6.1.x86_64.rpm) = 2754a91df7b56c33ccf1f0bd6d985d74d07fe808aea79300d544e39060163e0a8e0b484dbc88a664d9342b5ea33b10a4f532b76eab3bb28491fd3a01ecb761e8
 Size (suse131/libavahi-common3-0.6.31-16.6.1.x86_64.rpm) = 30894 bytes

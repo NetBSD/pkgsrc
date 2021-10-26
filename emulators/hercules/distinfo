@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2021/10/07 13:49:30 nia Exp $
+$NetBSD: distinfo,v 1.23 2021/10/26 10:23:52 nia Exp $
 
-RMD160 (hercules-3.13.tar.gz) = d3b1069a2c05013937c76916da63d80011807a87
+BLAKE2s (hercules-3.13.tar.gz) = 76cebaf4f3cb7372babe13b5572e1436e0a7eee2df6b8fb1acb3a48c0a75ba0d
 SHA512 (hercules-3.13.tar.gz) = 76f75ef3f1eb10c0fac0d6fa1ab9809b8d1dfe3deccbcd69366b05ee58f1ecb8ea0f387f7201ab4722b121478676f00e707ad27b6ecf1980fb09e900de63d718
 Size (hercules-3.13.tar.gz) = 2640742 bytes
 SHA1 (patch-Makefile.in) = 16a9b4e47456b789a906f03c942d4e683f18b87a

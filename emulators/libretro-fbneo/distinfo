@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:49:32 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:23:54 nia Exp $
 
-RMD160 (libretro-fbneo-20200530-301cf7b6eeb3e7683952b98b66f39008f580b26d.tar.gz) = b4d9a8c285aec224e7da70a004e64825548936bf
+BLAKE2s (libretro-fbneo-20200530-301cf7b6eeb3e7683952b98b66f39008f580b26d.tar.gz) = a5b046fd82aceb1d85c03e8cace1dfd52a939bcd9407b2bda24f05bd9a11ad83
 SHA512 (libretro-fbneo-20200530-301cf7b6eeb3e7683952b98b66f39008f580b26d.tar.gz) = 0ef4a27bd9fa0d49f5ea09777f2144a9b0be9c9fced59593ba15e9f4818a305d2ca85a2ef3850cef77032157265376f5f3204b6c81226001c94d85f346829843
 Size (libretro-fbneo-20200530-301cf7b6eeb3e7683952b98b66f39008f580b26d.tar.gz) = 14602038 bytes
 SHA1 (patch-src_burner_libretro_burn__endian.h) = 35b3ea13154bd5380ad5d067f3ec5f32ab18ce36

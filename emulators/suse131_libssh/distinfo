@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:49:48 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:24:11 nia Exp $
 
-RMD160 (suse131/libssh2-1-1.5.0-7.4.1.i586.rpm) = a19ccca6e59c7a2affd580ab8f7bc25bb17861df
+BLAKE2s (suse131/libssh2-1-1.5.0-7.4.1.i586.rpm) = 43826ac4e6d1a8d8c77486ca7bdb4cf6ad5bc7c30418e8f2c2457bac9b538275
 SHA512 (suse131/libssh2-1-1.5.0-7.4.1.i586.rpm) = b4df921e93e18cc1ea54c250e5de118a3a9c268f458c36bfad9d37ef2280f04b310761dfc9cfbefed876825787150b22550223f66c29a68b177bc88a3d975bed
 Size (suse131/libssh2-1-1.5.0-7.4.1.i586.rpm) = 75186 bytes
-RMD160 (suse131/libssh2-1-1.5.0-7.4.1.x86_64.rpm) = 7f7d5d9d53d4cd24998a21cd6fde217393de6fc0
+BLAKE2s (suse131/libssh2-1-1.5.0-7.4.1.x86_64.rpm) = bfcf010fa0b0d5d28a00704cbe7b2d7dbb6f039b4e286de7f972c20e0b641d06
 SHA512 (suse131/libssh2-1-1.5.0-7.4.1.x86_64.rpm) = b891b098489c64ca2da2cb4599b40db295037238e1f36f320278359e936ff393d1f640c3aa25dc0a128678d0410024b9d2a5bb5f32f67cae14259cd64160e7c5
 Size (suse131/libssh2-1-1.5.0-7.4.1.x86_64.rpm) = 76344 bytes

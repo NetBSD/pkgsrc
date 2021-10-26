@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:49:31 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:23:53 nia Exp $
 
-RMD160 (libdsk-1.3.8.tar.gz) = 27b3f8529f131605323a7daade71c3a28a63c273
+BLAKE2s (libdsk-1.3.8.tar.gz) = a4bac3f7478adce839ddb82a6e9ea00ac1ae69baed3f4966986956da354ec039
 SHA512 (libdsk-1.3.8.tar.gz) = 3a043f6abe7cf851e68ec560e56a29ba6130f78341efb1c940f9e907d327484bc46c80d4b3088bf9f7f107e1e19d75be4be3b8ab9bdedd46537ecd93e862f6dc
 Size (libdsk-1.3.8.tar.gz) = 1026597 bytes
 SHA1 (patch-lib_Makefile.in) = e6123124cbe6a883692b317066fe92948b327712

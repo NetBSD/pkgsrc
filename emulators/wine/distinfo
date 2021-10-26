@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.98 2021/10/07 13:49:52 nia Exp $
+$NetBSD: distinfo,v 1.99 2021/10/26 10:24:15 nia Exp $
 
-RMD160 (wine-5.0.5.tar.xz) = 4799ce1fade9d51dd7bf9fc5c568ade496cd71db
+BLAKE2s (wine-5.0.5.tar.xz) = c9e1ea3bae279c971e7ce99c650343912171ce0e81df5dbbbe676dd1f3a579b8
 SHA512 (wine-5.0.5.tar.xz) = 3cf0ccb2eac0868f700296a62aeea9b856522ac63861beb49deed50136a334c450f2d1172f9d0195b4fe0bbf8f808f7350a79122726da1cbf5d21161f6dfca36
 Size (wine-5.0.5.tar.xz) = 22501416 bytes
 SHA1 (patch-configure) = c326ade452067d50504a546d2a9b81c822b14ec9

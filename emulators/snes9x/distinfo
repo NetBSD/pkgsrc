@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.26 2021/10/07 13:49:38 nia Exp $
+$NetBSD: distinfo,v 1.27 2021/10/26 10:24:01 nia Exp $
 
-RMD160 (snes9x-1.60.tar.gz) = c42d3f7c1fce0b6901c8f65dc07a626d9b58c873
+BLAKE2s (snes9x-1.60.tar.gz) = e320ff01777a7be7e23ee17ac0c6e2b61dc9291325cccb77c72eadf2aa4a3334
 SHA512 (snes9x-1.60.tar.gz) = 840b006a8fbd479fd5ceb2d94af4ef6470c5e27a3e6c8ddb0dffc8d3e51f465669144cd428bfce28b2ed4f68e70d8f252f2d8a2cae602ba797791d7e483c14c9
 Size (snes9x-1.60.tar.gz) = 2863228 bytes
 SHA1 (patch-unix_configure) = dcfc4d8c2e2527fc91a1abb0d04a96a15e6a65c8

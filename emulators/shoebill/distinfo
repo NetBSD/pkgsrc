@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:49:38 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:24:00 nia Exp $
 
-RMD160 (shoebill-0.0.5.tar.gz) = 20143081d2418d6961f86626e3d994b2feda8a4b
+BLAKE2s (shoebill-0.0.5.tar.gz) = 8d7fd6c2a3da2d3cead604036c282e13bfca752e4bd4769a5d1434b4e285be0d
 SHA512 (shoebill-0.0.5.tar.gz) = cf8d7945943d6d7a505c233b5c99371f5d37d5d60dd5beeeadbe442ef43b9980e96d51f193d69a03eb58a0a2b13103b4dba311a53c939b633b20753a8c19a772
 Size (shoebill-0.0.5.tar.gz) = 253877 bytes
 SHA1 (patch-core_fpu.c) = a2fe3d42c8a61d580b966fe6c3909e9c61640b92

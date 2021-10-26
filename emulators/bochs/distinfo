@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.35 2021/10/07 13:49:22 nia Exp $
+$NetBSD: distinfo,v 1.36 2021/10/26 10:23:47 nia Exp $
 
-RMD160 (bochs-2.6.9.tar.gz) = d437bbaa04b8bb9f3b42a51860459dcc4e308616
+BLAKE2s (bochs-2.6.9.tar.gz) = 6e781732cd23e7ae27d155a6be4aaf91c998226640468356b6f48e94123da4ef
 SHA512 (bochs-2.6.9.tar.gz) = dfecf3a1bad07f06c2f7bb989d146e4a8eaeca493b598d415f5a4aec2a85eb5524ba417422157608c8b0828832611df487c6923c8f4ad98a147ac089fc514c46
 Size (bochs-2.6.9.tar.gz) = 5169187 bytes
 SHA1 (patch-.bochsrc) = df5b8879ec005fe44bca8bee42c549095012013d

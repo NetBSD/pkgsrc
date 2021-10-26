@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:49:52 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:24:16 nia Exp $
 
-RMD160 (xcpc-20070122.tar.gz) = 4577e5cd3bc1f9f8fa2e32cfb291c4f748ea34ae
+BLAKE2s (xcpc-20070122.tar.gz) = c697a8980248c5ecd4719050a5488e701ef547e34b6a8d0fe8e07bfb595c1800
 SHA512 (xcpc-20070122.tar.gz) = b388943079b2dab9e6c60e104470859785903ec30926dc63d4efd07b272e75f11583edf41c80e56e3bd7e2b80aeddfc0b2aef222b8bf4cf41cc905c640bcf82d
 Size (xcpc-20070122.tar.gz) = 156803 bytes

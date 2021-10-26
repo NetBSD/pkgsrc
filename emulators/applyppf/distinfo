@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:49:21 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:23:46 nia Exp $
 
-RMD160 (applyppf3_src.zip) = ec06579d49ef81148233f51bbacbd3fd948bb403
+BLAKE2s (applyppf3_src.zip) = f20b682886c7052b395c6d73a4d32a8ffe7d61d7b0fa2090974b28206f75e61f
 SHA512 (applyppf3_src.zip) = 4153b4356a3c7d106a53eb0cb5e943a7469060a09bf49cde85e7cb9452821181f18c29ceb9f8f1fdc2ad5a7dbb3a23300bfb373a515e0c7f8373c454be05bcf6
 Size (applyppf3_src.zip) = 5618 bytes
 SHA1 (patch-aa) = 2e35e964870ae2843265496c6770e1d2d8733ece
