@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:46:45 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:10:35 nia Exp $
 
-RMD160 (fastflow/3.0.0.tar.gz) = 865e660ccbd1af36175845047092becfa3b88fd1
+BLAKE2s (fastflow/3.0.0.tar.gz) = 25ebd6f7bb66b1f7d416d663c9ea27444d4f4ee8d4554e8cdd673fb01912f453
 SHA512 (fastflow/3.0.0.tar.gz) = b9358b13c26b341aec5d8b79517e5a8da39c12907c7236bdb5dd2b7762075342d590602fb444fdff08e201e3e8bf050000a5474c7eb62d0838d0f173310079c9
 Size (fastflow/3.0.0.tar.gz) = 512150 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:46:47 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:10:38 nia Exp $
 
-RMD160 (oneTBB-2021.3.0.tar.gz) = f09caab75e92914edfad977d499beb35b87cef48
+BLAKE2s (oneTBB-2021.3.0.tar.gz) = d6d10b35108642bfba06cd85a1d6628affb59aac7951d97f6e7a9b387b1aa172
 SHA512 (oneTBB-2021.3.0.tar.gz) = 969bc8d1dcf50bd12f70633d0319e46308eb1667cdc6f0503b373a35dcb2fe6b2adf59c26bd3c8e2a99a8d2d8b9f64088db5a43e784218b163b3661d12908c0e
 Size (oneTBB-2021.3.0.tar.gz) = 1651329 bytes
 SHA1 (patch-cmake_compilers_Clang.cmake) = e61f17d9df4dd06b2c42a6e450fdc3a452b10516

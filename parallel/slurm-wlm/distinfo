@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:46:47 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:10:38 nia Exp $
 
-RMD160 (slurm-19.05.5.tar.bz2) = 3f94274277a714e7b4bc4f89aa7b246316c4a732
+BLAKE2s (slurm-19.05.5.tar.bz2) = 60115fc8d7cb4b60a7ea83a933ca47671cc5c989ca112aa77ba797e0ed82ed74
 SHA512 (slurm-19.05.5.tar.bz2) = 4a0055a268b3765dbb2fa7510b27d694516e77716d857acea4509702e88b4739c9fff7590b80e33b7a62a5ebd38a748fd4ddf625f7c431b2beccb002d05df6c1
 Size (slurm-19.05.5.tar.bz2) = 6232295 bytes
 SHA1 (patch-etc_init.d.slurm.in) = beaedd5385b4aad04583d2bc5a23557519f74ec5
