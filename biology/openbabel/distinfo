@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 13:19:41 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:03:42 nia Exp $
 
-RMD160 (openbabel-3.1.1.tar.gz) = 74c74c3129d47ecf70f37d17c1caa42693f6be28
+BLAKE2s (openbabel-3.1.1.tar.gz) = 2fd0893c0788fac515338c97961c2671e98286ac7395b8fcd2b3a01311bb0d88
 SHA512 (openbabel-3.1.1.tar.gz) = d46807e8f4e2f0f691e69943e5c5eda9c271271cfca6f66b6df136bbf384502fd3b65a4adf134a4e9e1f2452e1316c9515aa92292b73205b9eb4d7e4d7a85f18
 Size (openbabel-3.1.1.tar.gz) = 36688499 bytes
 SHA1 (patch-cmake_modules_Findcoordgen.cmake) = 5906ee8b00a60640a0a9cfd0481f674bea419ad1

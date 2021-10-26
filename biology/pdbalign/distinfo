@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:19:41 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:03:42 nia Exp $
 
-RMD160 (pdbalign.tar.gz) = 7cc3f416fd3347628e2f21f48f6243ec51342e98
+BLAKE2s (pdbalign.tar.gz) = 7cc43cce492b29e187d8fb8bc93c5081004fa90d48ffa2b7938170aba3259b4a
 SHA512 (pdbalign.tar.gz) = c13a7a59f68219125d1655673b04526b99757227a5082a641b9d8ecca38807730bebe1b2136015a4bdda057f41412b4a945d8d2ebc1bbc8722ffc75556824693
 Size (pdbalign.tar.gz) = 10457 bytes
 SHA1 (patch-aa) = 77293faa3e81fd6cdb093d378b14128208d3f845

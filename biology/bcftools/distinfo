@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:19:37 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:03:36 nia Exp $
 
-RMD160 (bcftools-1.12.tar.gz) = 9d3a16c8266bcdd8f2a10f099aec3fc19da82a98
+BLAKE2s (bcftools-1.12.tar.gz) = 72e0ab50861e7394723dece1e711f5a9ddd134096b8f7526b0007a31a8091329
 SHA512 (bcftools-1.12.tar.gz) = f43074989a01cf4ef32a968935f5e5f3eacf2c04b9aa558d739166e3d96d3a498965d27db6482b2992b5d60fed3d2945ef3fd61fcc79b5dbe062994d49df4ad2
 Size (bcftools-1.12.tar.gz) = 3048508 bytes
 SHA1 (patch-Makefile) = 9dfe7b5dcf77deac6d248d7612440780ec8a3731
