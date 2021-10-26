@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:28:16 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:55:54 nia Exp $
 
-RMD160 (Math-Random-MT-Perl-1.15.tar.gz) = 255da00f3703ec6ba1c0a8023eeabfaf7aa341df
+BLAKE2s (Math-Random-MT-Perl-1.15.tar.gz) = 40bf69433b8c4e740afda851cc0d6c20f79b86d5d441fbe312abf781245ea2f9
 SHA512 (Math-Random-MT-Perl-1.15.tar.gz) = f1469ad4dc7180359bf192824bf9c24b05863c97cbcaed41d44351c068ff5ddbc17b9a71e3844484b8e5a97343273b0b21fdfefe775b530a13a0aa242a3b78fb
 Size (Math-Random-MT-Perl-1.15.tar.gz) = 12782 bytes

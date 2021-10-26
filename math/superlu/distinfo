@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:28:31 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:56:08 nia Exp $
 
-RMD160 (superlu-5.2.1.tar.gz) = 01de8ed1f56c6bcdd43e1137c1f145b829d8d848
+BLAKE2s (superlu-5.2.1.tar.gz) = 5117aa82f3ae63e6c9aaa9906044b5783be52927fba045ebe039a2299dc5bb2b
 SHA512 (superlu-5.2.1.tar.gz) = c5f9ca6055b6861dcc89e31c446c9f57a4e16333f9f24f109e8f375eded878005fa520ab39d2c1dd0ce12f289f9e251aef47da58c975bf5b1f09ca7539194e90
 Size (superlu-5.2.1.tar.gz) = 2468374 bytes

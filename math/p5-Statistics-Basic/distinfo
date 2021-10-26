@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:28:19 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:55:56 nia Exp $
 
-RMD160 (Statistics-Basic-1.6611.tar.gz) = 07d1bff50b9a50385f4c556f43e24d49900d663f
+BLAKE2s (Statistics-Basic-1.6611.tar.gz) = 60faecbd8f96984e364cc0b58ed3be5220393bc588b5af4cfb2ab3aa2a5aa247
 SHA512 (Statistics-Basic-1.6611.tar.gz) = 10d726f9ace2a78753ec6cd91bd2c7cc7958eac11de762c3f4deff1a90e0837269484b7adc2ba22f3de128c3bf3a626cb70a9fd752a3eff5fd60db52cb7a7d68
 Size (Statistics-Basic-1.6611.tar.gz) = 30630 bytes

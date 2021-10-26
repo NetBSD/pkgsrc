@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:27:57 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:55:35 nia Exp $
 
-RMD160 (algae-4.3.6.tar.gz) = 0dfee737c3eccb59563fd85da8d7772937d5795c
+BLAKE2s (algae-4.3.6.tar.gz) = 9cfac2914f75eb1ca0dcd00102dfae2cb7ab3d67d2e74d668302d9807d13f61f
 SHA512 (algae-4.3.6.tar.gz) = 9fb6fcafef3cb6342aabcb5491d08369d3c2e789f324e2118d4764349d41bc0b146b3f146ee5b5bba2975d06556237e1c2371c7651e928695ae7995a2acd939c
 Size (algae-4.3.6.tar.gz) = 1790061 bytes
 SHA1 (patch-aa) = c9808abd82f27eb9b41358d8b962553446b473b8

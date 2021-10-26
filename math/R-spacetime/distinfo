@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:27:55 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:55:32 nia Exp $
 
-RMD160 (R/spacetime_1.2-5.tar.gz) = f080cac0a43acce5fd27c8eed44d436aba40a76e
+BLAKE2s (R/spacetime_1.2-5.tar.gz) = e84467b03888f7feeb1511e3d786a7fec5c8dcab92e8418e6d76286b6c828d50
 SHA512 (R/spacetime_1.2-5.tar.gz) = cd8b3e1b42287612815cc7e281257525d57242802ceec0a059d150c7de5fc35e71f198f948c5c3814dc5ba68109a1625cd3ac2cc9e01c9daa1b04f105c846490
 Size (R/spacetime_1.2-5.tar.gz) = 2571457 bytes

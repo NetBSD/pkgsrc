@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:28:14 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:55:52 nia Exp $
 
-RMD160 (Math-BigInt-Pari-1.3006.tar.gz) = 08aefd40b3ebbdc0f2d544c030df3b232cb8c43d
+BLAKE2s (Math-BigInt-Pari-1.3006.tar.gz) = 05c02bf460418e4161a25ebf08afc0a0c1e2e00f57ce8246a24b2ee4c1dfbde1
 SHA512 (Math-BigInt-Pari-1.3006.tar.gz) = bc1f12e4ca06b9c80da3d58ed993b4a4a948f6506eb5ceb87e7f3d24e07f3dd50fcaccb3d11a95b024be1ab976cdf18c29d51310b4bbb247bfa493dbda148999
 Size (Math-BigInt-Pari-1.3006.tar.gz) = 2449676 bytes

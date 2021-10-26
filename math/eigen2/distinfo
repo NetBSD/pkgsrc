@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:28:01 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:55:38 nia Exp $
 
-RMD160 (eigen2/2.0.17.tar.bz2) = 183c8f7ee3c85ccb447fdcefa3a366f06cca351b
+BLAKE2s (eigen2/2.0.17.tar.bz2) = 19b56719c342bfa41d37a2790453b539dd66f730a1016d4c18c3194807adb2db
 SHA512 (eigen2/2.0.17.tar.bz2) = 8fa0e4507864f61c30de14e3b29d963eb8b777d1a6bb04192d53e1f4c9db323b9fab2ddcedb63bf2af243fe0e26dcd717e97eb72216b6a1d444e455520192c72
 Size (eigen2/2.0.17.tar.bz2) = 367890 bytes
 SHA1 (patch-Eigen_src_Sparse_AmbiVector.h) = 0f98d635b975c67c92a02078fa563759566513df

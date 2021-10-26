@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:28:27 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:56:05 nia Exp $
 
-RMD160 (sklearn-pandas-1.8.0.tar.gz) = 8f0fbf76ca959540ef7898ad8020a8230d1f3ea2
+BLAKE2s (sklearn-pandas-1.8.0.tar.gz) = af83dc687cea16ec36005c847720affaa4c9c83d4f5392fa6ba4e2ddebb9bc8d
 SHA512 (sklearn-pandas-1.8.0.tar.gz) = 8b63eb590e16e4fa37a7912e33f0a69fc5fc8283cd1da03a274e5ae4f1f70b13aca84b178b22651c778b39d07ba2dac189689f1017c111b2528dc818f23c755a
 Size (sklearn-pandas-1.8.0.tar.gz) = 16388 bytes
