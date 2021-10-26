@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:20:26 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:04:10 nia Exp $
 
-RMD160 (dinotrace-9.4f.tar.gz) = e7797841aebdefbb4a0b6f600d5e4a4edef6eaac
+BLAKE2s (dinotrace-9.4f.tar.gz) = aba9111682cd262eb9339dcbc3d9d9422f50712e7387b3d648aeabb9e68f436b
 SHA512 (dinotrace-9.4f.tar.gz) = 91e311b604f6c40076059e138c206a2c9182b0aa5ac803a06a242e894fc9778487d3171ec148e50826c1fc454b4a8b31d88dbc6083ff2a5075dc3fc4f1a7c583
 Size (dinotrace-9.4f.tar.gz) = 304819 bytes

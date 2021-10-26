@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 13:20:28 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 10:04:12 nia Exp $
 
-RMD160 (gnucap-2006-07-08.tar.gz) = 8006dffd189095b81dbf7358caacea870bc054df
+BLAKE2s (gnucap-2006-07-08.tar.gz) = 824de715a7d750d716e4220ee99747da9781bd6197cbc36250e3e38702fb761e
 SHA512 (gnucap-2006-07-08.tar.gz) = 6eb4d54eae7efca48f267e85d53dfeaf504d1f26d61f1a86df24a055a07f3f1525bd2419056a4dcad9f5742566989ac15afda4091b3a531358c7fb854d558cbd
 Size (gnucap-2006-07-08.tar.gz) = 1546670 bytes
 SHA1 (patch-aa) = 60e6484c852adfba3b0bd11a9a5c691e4d228bd7
