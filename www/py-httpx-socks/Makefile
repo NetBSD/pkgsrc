@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2021/07/08 08:37:16 adam Exp $
+# $NetBSD: Makefile,v 1.6 2021/10/26 17:27:29 adam Exp $
 
-DISTNAME=	httpx-socks-0.4.1
+DISTNAME=	httpx-socks-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httpx-socks/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/romis2012/httpx-socks
 COMMENT=	Proxy (HTTP, SOCKS) transports for httpx
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-httpx>=0.18.1:../../www/py-httpx
-DEPENDS+=	${PYPKGPREFIX}-httpcore>=0.13.4:../../www/py-httpcore
+DEPENDS+=	${PYPKGPREFIX}-httpx>=0.20.0:../../www/py-httpx
+DEPENDS+=	${PYPKGPREFIX}-httpcore>=0.13.7:../../www/py-httpcore
 DEPENDS+=	${PYPKGPREFIX}-python-socks>=1.2.4:../../net/py-python-socks
 
 USE_LANGUAGES=	# none
