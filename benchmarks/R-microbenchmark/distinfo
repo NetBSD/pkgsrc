@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:18:28 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:02:50 nia Exp $
 
-RMD160 (R/microbenchmark_1.4-7.tar.gz) = 3a9346a92c642eb60eb30d53adcbf219a94a5b2b
+BLAKE2s (R/microbenchmark_1.4-7.tar.gz) = 2798298b678a78e2417c4dd0675c445668146be3e5dace83a47e9d0950443b31
 SHA512 (R/microbenchmark_1.4-7.tar.gz) = 8056ad3464bd66a1a7bc9827e01516d3e92b9ed45932122ccf19b2ce6aec8904ed9c0868193890821fc5e03b95ff820a76dcefeaa87de326b2cb6b8783c33f30
 Size (R/microbenchmark_1.4-7.tar.gz) = 58535 bytes

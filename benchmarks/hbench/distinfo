@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.21 2021/10/07 13:18:30 nia Exp $
+$NetBSD: distinfo,v 1.22 2021/10/26 10:02:52 nia Exp $
 
-RMD160 (hbench-OS-1.1.tar.gz) = 023131dc9ae6239b9d64671e4128d691b78b310a
+BLAKE2s (hbench-OS-1.1.tar.gz) = 2f38d37c98a634c1d4a569419156fc8275d9a684df1f37f60c8b83750075a03f
 SHA512 (hbench-OS-1.1.tar.gz) = 26e94090cff97a82d751e8a4d2ba64eed938a0e09da81f6f4d3e8469f62209a68986bf2d6265ee7b0b9befe38d2e2e01e7f0915e63fbe999923981571b5c00e9
 Size (hbench-OS-1.1.tar.gz) = 205361 bytes
-RMD160 (hbench-OS-1.1-provisional-patch1.diff) = ba6d79a400c86ad232b74414b6396c2839ca9258
+BLAKE2s (hbench-OS-1.1-provisional-patch1.diff) = 05fa3ce4b796ca7ec8d468eb42d11f7f2826b0ee551b859b3637af3157c191e8
 SHA512 (hbench-OS-1.1-provisional-patch1.diff) = d814adece45cdef9ae5feb71aeaaee9520fae41e02af3d615c86e675c6ef1121ae6142d3766d50eda0a4c9a067e5bb948695ab3464f2a57c09b9806e7045d1d4
 Size (hbench-OS-1.1-provisional-patch1.diff) = 23836 bytes
 SHA1 (patch-aa) = 525e78346621e6c4e34ace6fb1ed79e729aaa259

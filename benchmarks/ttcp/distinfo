@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 13:18:34 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 10:02:56 nia Exp $
 
-RMD160 (ttcp.tar.Z) = b5cb1a8efe0f716d25d58a4950f35bac47b17668
+BLAKE2s (ttcp.tar.Z) = fe18886043572d131fe3d1fadde58d5a858ff353a4e596a8df078e433dd50a03
 SHA512 (ttcp.tar.Z) = 15b988b3ec701fa1edd5d4020cc2207c180bf0ee3fb221459e8061f3fb704082cb1e6d2b18c9c80b22e1e7c0f44de6ba33f2d1e5b5ad7400a0eb4b2838e14e13
 Size (ttcp.tar.Z) = 18163 bytes
 SHA1 (patch-aa) = 96e3a9136bae4057682d2b3cfea2ec8c8bb21eaa

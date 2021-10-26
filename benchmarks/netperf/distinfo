@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 13:18:32 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:02:54 nia Exp $
 
-RMD160 (netperf-2.7.0.tar.bz2) = a3b9b89999362ae4077efcffa509140683d2982b
+BLAKE2s (netperf-2.7.0.tar.bz2) = edf4da8dd37c46f784653720d2bb15b5af871c3c94dc3d770ce239b68763d706
 SHA512 (netperf-2.7.0.tar.bz2) = 5fb37945bead831247de9c8ba86b33f134ba39e753b483df72de97f536d0846538dadf61acc2dee57f04ab5d16a92afab4890e79a5d7ffa863afd526267fffad
 Size (netperf-2.7.0.tar.bz2) = 1024430 bytes
 SHA1 (patch-ah) = b2ee5c6312ed987d6b796fa462dcc3557146580f

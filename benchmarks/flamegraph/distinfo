@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:18:30 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:02:52 nia Exp $
 
-RMD160 (flamegraph-1.0.tar.gz) = 0a25e7b89f4e258a9534a89510f33947f15be982
+BLAKE2s (flamegraph-1.0.tar.gz) = e4b80ffc2b1a499f50245edb891423938d8f06df79cd7cae11a8a3f0d15b4044
 SHA512 (flamegraph-1.0.tar.gz) = 0ae27fd14f76f0db7873a50079efb2bc4fd77ee6550700746b51eeee6813fbebb233d35d744e1b397734da9f89b25c4c0de3567f283cf1218ee7baee46e1b8e8
 Size (flamegraph-1.0.tar.gz) = 1049627 bytes

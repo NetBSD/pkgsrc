@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:18:33 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:02:55 nia Exp $
 
-RMD160 (postmark-1_5.c) = bedffc6a7f85e2636f5a4ec8979b9224f4e5f628
+BLAKE2s (postmark-1_5.c) = a08491a58ee305e43fd75ab8ec771f6675d3522078489d0d89c9bf9b07fb6709
 SHA512 (postmark-1_5.c) = 721298cb5474f3619ddc5d17d54bc1d049eb2eb1412fafe498fb5d074aafbead4c55380e6ece3759651624c90dad6ab4fe5391e870da09791bc533362870866d
 Size (postmark-1_5.c) = 46666 bytes

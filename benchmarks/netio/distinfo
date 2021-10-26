@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 13:18:32 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:02:53 nia Exp $
 
-RMD160 (netio133.zip) = 544a3bcc53db6363c7d2601d63430e102237f75e
+BLAKE2s (netio133.zip) = a78ff5f52aa55a210e381b76a068536e78f4be28f3fac1e55fe8b44d1decf374
 SHA512 (netio133.zip) = 79a4d8ad5a5d9750a19bf7f8f4cc762e6d1a866a63138bfc1cf8614057eb8ade147817e489f93210990ce9d82be03a5053821663212fbee71c4cd46c2f9c9232
 Size (netio133.zip) = 235931 bytes
 SHA1 (patch-Makefile) = 79bff1eb7b526a0f41fbb89e646c66a16b78c23e
