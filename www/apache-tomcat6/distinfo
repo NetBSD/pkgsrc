@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 15:07:03 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 11:29:20 nia Exp $
 
-RMD160 (apache-tomcat-6.0.45.tar.gz) = 5561452f5d2a8c6de5f2334d9f806acfcb69b4ef
+BLAKE2s (apache-tomcat-6.0.45.tar.gz) = f346d7f5bf539c23c7e1b0a7b75143d958e878714adbf0f8cc290ae1b87aedae
 SHA512 (apache-tomcat-6.0.45.tar.gz) = b185080d1daaa30ecfc8870c1c9342007f815308a9dac52aa4d92f101b270aae2cf02fbe1fdb142b19859df34f40452f7448d023383ab2c6b0b823908edd7b1a
 Size (apache-tomcat-6.0.45.tar.gz) = 7073612 bytes

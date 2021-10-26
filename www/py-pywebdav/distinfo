@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:08:30 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:30:46 nia Exp $
 
-RMD160 (PyWebDAV-0.9.8.tar.gz) = a5b66beda58b081ff891248fa5e912bcbc4d4b27
+BLAKE2s (PyWebDAV-0.9.8.tar.gz) = 42edc8de6b20e90efedea214c6370231d38518e468b1b4c524d09413ab08738e
 SHA512 (PyWebDAV-0.9.8.tar.gz) = a920e63f1241e41acd7cf02f342fc81e321c50866b103690eee3352de3b0d51c0c9473079bb639d65402719158c6c8113b2c1b7e0bfdc0b863ceb290bcde0145
 Size (PyWebDAV-0.9.8.tar.gz) = 52605 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:07:52 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:30:08 nia Exp $
 
-RMD160 (Kwiki-UserName-0.14.tar.gz) = f4eb646388af26f173e303d87f077b601e7a3d8b
+BLAKE2s (Kwiki-UserName-0.14.tar.gz) = 6e8e0e9b63f2839af7393abfc3f6663b5d8513774b5be4e49e7b6b78d55aa22a
 SHA512 (Kwiki-UserName-0.14.tar.gz) = cf71fe0f3a060a18870feaa64e79a43a44fd3da37060832f850a1c1b2ed59f740a2ff7e91db570f1a6dd34c004ebc608d19a52d53c9d1047c867f14c9f10757b
 Size (Kwiki-UserName-0.14.tar.gz) = 8047 bytes

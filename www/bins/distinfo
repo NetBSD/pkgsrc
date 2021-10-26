@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.29 2021/10/07 15:07:05 nia Exp $
+$NetBSD: distinfo,v 1.30 2021/10/26 11:29:21 nia Exp $
 
-RMD160 (bins-1.1.29.tar.bz2) = f8c12fc26f89614e87cf4baec5fa57d20c7ab6b6
+BLAKE2s (bins-1.1.29.tar.bz2) = 70b95c36dfe7ffea2c5e4a509e84e040888a86aa5ac040df61a81bb5b2ef065d
 SHA512 (bins-1.1.29.tar.bz2) = 802089658a8ef1d71155359c2daa807bb98d9be0580c247a1f3796efae29d4f1f1d20ff4b5364af208f8808d3d7ffd076e0235840df65888d855c51c401f91b7
 Size (bins-1.1.29.tar.bz2) = 259270 bytes

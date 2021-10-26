@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:08:11 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:30:28 nia Exp $
 
-RMD160 (BeautifulSoup-3.2.2.tar.gz) = 32fbe7c22c640a483888a7384f1929da5aea82d3
+BLAKE2s (BeautifulSoup-3.2.2.tar.gz) = 30e09ac74620bae04f400e1e789e4c1d01a0eb1904301f7a8fcb836dc81e11e6
 SHA512 (BeautifulSoup-3.2.2.tar.gz) = 0dd31919d0623ee6f6a94ab59091e5b40672b9736bb74f90b56a708c7cd4eca8084c0b8fb28121089640a2df0d51de3e591c80524870c126821a1bfa89c839b7
 Size (BeautifulSoup-3.2.2.tar.gz) = 32704 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:07:23 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:29:40 nia Exp $
 
-RMD160 (motyl-1.0.2.tar.gz) = 2f4b51ac06aa3f217362d938c050bf92ed80cc2a
+BLAKE2s (motyl-1.0.2.tar.gz) = ed2fb377f6ada3d3dc8fb085b2bd1ac3b9c9a2600661abc8fe8fdf5380f5c7fa
 SHA512 (motyl-1.0.2.tar.gz) = 6fc33f863e63527568af7090a83e77f9a57f311339a9a456ad0a1c508b2f9be89acb1fde66fced2088b46ccbd1f00eb71fcb711f3766cb9a79072c794d3da1ef
 Size (motyl-1.0.2.tar.gz) = 4394 bytes

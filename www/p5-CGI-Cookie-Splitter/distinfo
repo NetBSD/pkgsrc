@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:07:30 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:29:46 nia Exp $
 
-RMD160 (CGI-Cookie-Splitter-0.05.tar.gz) = 5ca92ab3a2b7584d137b70a758abb6a35a4386d9
+BLAKE2s (CGI-Cookie-Splitter-0.05.tar.gz) = 9e81f8eca7857bebf6bd5d764ceeeb26beefe4feb1470d0a1a5e3a98c58c7de3
 SHA512 (CGI-Cookie-Splitter-0.05.tar.gz) = 4034026b4e0fa3730fac33f46301c73b501c999f94c8a681b74fce7fa22545da16bd98ba6424d2ee1ba78edd1734d1bfc635c1fd0410b1c3c20efa8b42e823a9
 Size (CGI-Cookie-Splitter-0.05.tar.gz) = 26596 bytes

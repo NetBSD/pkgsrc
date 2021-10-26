@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2021/10/07 15:08:57 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/26 11:31:13 nia Exp $
 
-RMD160 (webalizer-2.23-08-src.tar.bz2) = 6f1d2ca90d9a891c878e5edb220684869f9fd32c
+BLAKE2s (webalizer-2.23-08-src.tar.bz2) = 8f97b531ba3c0e1fb811c5864a52eebd05616ffc04c1f07b7bedb81c02411d49
 SHA512 (webalizer-2.23-08-src.tar.bz2) = 23fe6e3ef1c85aa527ffafef16c31c13ad8e1f9feb774557c07a5c8fd6c67986b98180ef16d6cebe62d59c5f7ca214b8292e94ce8f195fa0541de9c5438fb9bd
 Size (webalizer-2.23-08-src.tar.bz2) = 308090 bytes
 SHA1 (patch-ac) = f4885b334b3adb3f8523f959a89e6fe5f7f3b52f

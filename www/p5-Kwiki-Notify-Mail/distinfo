@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:07:51 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:30:07 nia Exp $
 
-RMD160 (Kwiki-Notify-Mail-0.04.tar.gz) = 9d9e4acab7586e821152acf90911fd9facec7cb8
+BLAKE2s (Kwiki-Notify-Mail-0.04.tar.gz) = 8d5f3a899e7239aec989b9d9a00a983fa4b418dfad8bd52b2a06aee7a77c2eff
 SHA512 (Kwiki-Notify-Mail-0.04.tar.gz) = 4647a69828668ee7de6a735bf7440e66ad46d8532271e4a208bb2b6eaa9b167298bd75fb5cd8abfd532e99cc764280999aadc50d96d9afbc5162094b19890525
 Size (Kwiki-Notify-Mail-0.04.tar.gz) = 4958 bytes

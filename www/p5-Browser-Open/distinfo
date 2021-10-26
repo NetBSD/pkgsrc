@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:07:29 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:29:45 nia Exp $
 
-RMD160 (Browser-Open-0.04.tar.gz) = 6a2d22df08dad52bc4ab7dff2d2b4ae95185d26b
+BLAKE2s (Browser-Open-0.04.tar.gz) = 14e1c9d5dcb1726d9ba5fd6312f5307b1d7052067b11e63e0a5126d305a6e8bc
 SHA512 (Browser-Open-0.04.tar.gz) = 70f5559c4dd4a07ed8513340871a2c04b2c4118b8f160e23586fc170d5f9123ab287d6031860096ca6329c03df8f077d96f0af2656efe46a9b1629d92255e7ae
 Size (Browser-Open-0.04.tar.gz) = 4006 bytes

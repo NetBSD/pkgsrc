@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:07:23 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:29:40 nia Exp $
 
-RMD160 (mserv-php-090.tgz) = 9e4dbc38943f3203beaa25418694dc104ad4808a
+BLAKE2s (mserv-php-090.tgz) = b7efe2cb432c107e13d55c3a4a5d9af1661686d4a4868162238a262c032617a7
 SHA512 (mserv-php-090.tgz) = 50a860fe6a769bcda40c6c2afa6009bc2d556dc006c8beda8533b070783633939fd7c113786ab4ebfee39ee7667a4c65c48aa87689d0dff372d6d78169db9b8b
 Size (mserv-php-090.tgz) = 15374 bytes
 SHA1 (patch-aa) = 59c5dd63c7430cfca634e59111bc24e578730584

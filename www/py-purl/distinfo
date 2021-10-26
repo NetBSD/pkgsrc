@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:08:29 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:30:45 nia Exp $
 
-RMD160 (purl-1.5.tar.gz) = 80fb58f9a67c7a7c855ae011dbe2070186bd0b1d
+BLAKE2s (purl-1.5.tar.gz) = 1f3f4f5fe8d35b652f7c80e491c1f6fab83117468e7df264ec31af6b181a0cbe
 SHA512 (purl-1.5.tar.gz) = e7ef3dbe51117c2807a5cd472967d90c9f16fc1090f2edcaf3c4fe0bbc95b8ef8d612d5ca98401caf5a94c5b0335949ac0ac490bc694e571ff516b7bf53fae32
 Size (purl-1.5.tar.gz) = 9965 bytes

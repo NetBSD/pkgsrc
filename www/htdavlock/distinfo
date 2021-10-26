@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:07:14 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:29:32 nia Exp $
 
-RMD160 (htdavlock-0.2.tar.gz) = 966f2d458c4be81787aa571ced31363d1ebaf58a
+BLAKE2s (htdavlock-0.2.tar.gz) = 16fa7f673a0b21cf18375e3017a72b72274170493660d79de0021e89097a550f
 SHA512 (htdavlock-0.2.tar.gz) = ec3b2b6da48417e4ba91e5bde9f9e8c3f49e7eebdb3fe55781538cf7fa8e1d3c98ec315b9e9938cda69f6391d03b609659332aec9ac0c4f1b0b6835b09c1aebd
 Size (htdavlock-0.2.tar.gz) = 84790 bytes

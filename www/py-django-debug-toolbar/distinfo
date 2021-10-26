@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:08:15 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:30:31 nia Exp $
 
-RMD160 (django-debug-toolbar-2.2.tar.gz) = 024aaaeef957ae81e8a5ad3167473f9ab1cdaded
+BLAKE2s (django-debug-toolbar-2.2.tar.gz) = 28ce6970629cb2f8904f126ed75f14ab16ebd9c085697e442785f9cd575cab44
 SHA512 (django-debug-toolbar-2.2.tar.gz) = 5cd9e50852bd7efeb83879c5e9fe10fe6df5087b746e9cb2a0e13e66b3fe0a815a6eaea4b273258e7e682149bc29ad8979268d2be263539c522624e3f16aa5f5
 Size (django-debug-toolbar-2.2.tar.gz) = 322475 bytes
 SHA1 (patch-setup.py) = 07dcd39f3b812803db5a7f59808f103e821c2b07

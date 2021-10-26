@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:07:49 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:30:05 nia Exp $
 
-RMD160 (Handel-1.00014.tar.gz) = dd5c2f23cc20826780670db07139593ac12b6727
+BLAKE2s (Handel-1.00014.tar.gz) = 6ed9d0e30ab07394b853843271490d6ed8c5b247cb07908f8a4d453c9961cb01
 SHA512 (Handel-1.00014.tar.gz) = 3f85a1ecde82e94fe7b0fb49e2b012c4908af3303b368bcf277bf62098ea72c7c9df986565156774506c61d0c5602f454e291337c6e6210070a4dc7f3ab3cac4
 Size (Handel-1.00014.tar.gz) = 316367 bytes

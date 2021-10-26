@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:08:42 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:30:59 nia Exp $
 
-RMD160 (jekyll-coffeescript-2.0.0.gem) = 0b37904f2277ac5ab3d5cfab5422a6852ab29e1b
+BLAKE2s (jekyll-coffeescript-2.0.0.gem) = e2faa5d3ed6a40b6c91494b199d2ac13270d1c663ccc489f3c5630d757f408b6
 SHA512 (jekyll-coffeescript-2.0.0.gem) = 11e81b24dc1f85ace0ee15fad93a3a33defd72e152cdcb6aec8fedb8992e5dbdbafa8ee9ce7339cb9b10b19c04c72a25bd3d46685d99b762a218205a3f3c9fa0
 Size (jekyll-coffeescript-2.0.0.gem) = 4608 bytes

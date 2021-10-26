@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:07:12 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:29:29 nia Exp $
 
-RMD160 (asp2php-0.76.17.tar.gz) = a1173e3ded769234bcfbf38b3cc11f32346c0072
+BLAKE2s (asp2php-0.76.17.tar.gz) = 37be07f98af615fdb79e39e157b59c6e6f5cf82e363933a7eb47c0d31a269b5f
 SHA512 (asp2php-0.76.17.tar.gz) = ee8789ca3bb3df9f5b241344743daa6ef27f5f67642d03c58caddf4681e632017e0e0684023a96980eda585cf2284c840b71fbe5e6aad09540952ddc98cfc193
 Size (asp2php-0.76.17.tar.gz) = 53793 bytes
 SHA1 (patch-aa) = 57f05fff9b58653976de47139e5327a43b40c3c2

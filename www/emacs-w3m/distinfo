@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:07:09 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:29:25 nia Exp $
 
-RMD160 (emacs-w3m-1.4.4.tar.gz) = d57a1296bcfcb422c379c9e8f35311ff2ac7d702
+BLAKE2s (emacs-w3m-1.4.4.tar.gz) = e3876bd65516e166f4c1ef9572a4c1f5a333561c9d65dfdb49560fd515820cca
 SHA512 (emacs-w3m-1.4.4.tar.gz) = 473e16db6e12082d87b808b5bfe52403c570b7be24d9eb6a693d3494516d2b56309e6749428d70b76f789ef6e3dd4e90abf024512b22e21f394b2964aec70647
 Size (emacs-w3m-1.4.4.tar.gz) = 796123 bytes
 SHA1 (patch-aa) = bdbee77c09c115f46384380cc9932a26b3437d17

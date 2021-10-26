@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 15:07:38 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:29:55 nia Exp $
 
-RMD160 (Cookie-Baker-0.11.tar.gz) = 76c99b63643bfa20e87251f9737267c43249f7eb
+BLAKE2s (Cookie-Baker-0.11.tar.gz) = 9ebe7cad4d2610c87f28f65a41da369c365ff9614c96b73bd94a4b590cdd14ad
 SHA512 (Cookie-Baker-0.11.tar.gz) = 0b75d9c74e1daa5d4dd63febd887e6c4825fd1df5f56335bf733b5bf2f24a56f6b76728259799aaf4dedf27efae90c238962585956608b1408a67164c3759ed2
 Size (Cookie-Baker-0.11.tar.gz) = 12496 bytes

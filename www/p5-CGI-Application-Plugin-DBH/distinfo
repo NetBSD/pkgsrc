@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:29 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:29:45 nia Exp $
 
-RMD160 (CGI-Application-Plugin-DBH-4.04.tar.gz) = a8fddddb9bd7d9d06a944a94b9d12efb88d0d0f9
+BLAKE2s (CGI-Application-Plugin-DBH-4.04.tar.gz) = f590845324f2e21ee5bd6988071b79cdedf853b710cdbd988590d84b0dcfe001
 SHA512 (CGI-Application-Plugin-DBH-4.04.tar.gz) = 43891c469c99508d834c8b4318659f89a932176fc4dadda5b09d398a226201438de3277eb54d20aca1bf1ef9206ea63f26afb1580276704224bef95ef572bebd
 Size (CGI-Application-Plugin-DBH-4.04.tar.gz) = 15049 bytes

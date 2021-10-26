@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 15:07:42 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:29:58 nia Exp $
 
-RMD160 (HTML-Scrubber-0.19.tar.gz) = 75901862bbede84fa8ca415641bfb15312ce557b
+BLAKE2s (HTML-Scrubber-0.19.tar.gz) = 4f1ff33b6d3b3ebc95edff0bbb2d1257aa52c35810611816ea3ee42c4977d348
 SHA512 (HTML-Scrubber-0.19.tar.gz) = 6894c58315f38e81d645b999cca180b1e86a64e8ae913df5891a6293c9c4950d99f1d1c5a03b7d584aff381afc49c16fe2e06541203c8dea881479cc981ee262
 Size (HTML-Scrubber-0.19.tar.gz) = 36418 bytes

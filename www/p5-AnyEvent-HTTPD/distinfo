@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:26 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:29:43 nia Exp $
 
-RMD160 (AnyEvent-HTTPD-0.93.tar.gz) = 2586cd2739ccdaba57d4458c611b57c712892bca
+BLAKE2s (AnyEvent-HTTPD-0.93.tar.gz) = d5ee3ccef6d522d0caa249c9d3cd547170c98fb79d227780c97c94ec595c6c40
 SHA512 (AnyEvent-HTTPD-0.93.tar.gz) = a76a8406615878f885b83bb23fa27dc6ea7d5f6f729cda7b8d7759d7770f24a2b041cf9a6417a6173758ce14849990e720eea9ac3f4356aaa470c0ae3aae661f
 Size (AnyEvent-HTTPD-0.93.tar.gz) = 40226 bytes

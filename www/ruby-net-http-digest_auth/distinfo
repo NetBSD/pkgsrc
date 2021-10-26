@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:08:44 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:31:01 nia Exp $
 
-RMD160 (net-http-digest_auth-1.4.1.gem) = 1127dd8fa55e996204a0555b603a3f8b414780dd
+BLAKE2s (net-http-digest_auth-1.4.1.gem) = 75f5ba79fb705262503fb81383ce47a2c06541f1cc08f4940ac338f2d8a30a4e
 SHA512 (net-http-digest_auth-1.4.1.gem) = db62d49815a96cabde5836b00a1df58d6277f9efafae78e27296b1e2f4410ea613aed2181f8e39f08af5bbf6f5f758d682e1250d0afd4fe8243fb0d5c7fe78b7
 Size (net-http-digest_auth-1.4.1.gem) = 13824 bytes

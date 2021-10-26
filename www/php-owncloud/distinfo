@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.47 2021/10/07 15:08:08 nia Exp $
+$NetBSD: distinfo,v 1.48 2021/10/26 11:30:24 nia Exp $
 
-RMD160 (owncloud-10.6.0.tar.bz2) = 105fc423d616a38be7c3e04ad462e1025cd63f41
+BLAKE2s (owncloud-10.6.0.tar.bz2) = 5b560cbd16b7a8ac6169619358b965486c36b6ad44ec705935b6d7d4324f7e46
 SHA512 (owncloud-10.6.0.tar.bz2) = ec4de23b4cd0dc08dde66802285a00c817cc8ccc79237e4ae454af5fecba102fdc892ed24e62b246deebba536728d312f43dcfea9f2f490ba8847a54ac962885
 Size (owncloud-10.6.0.tar.bz2) = 24569416 bytes

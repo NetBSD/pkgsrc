@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 15:07:42 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:30:02 nia Exp $
 
-RMD160 (HTTP-DAV-0.49.tar.gz) = 1cbc6d696244ae7a5373b780ebd1be06a274ed10
+BLAKE2s (HTTP-DAV-0.49.tar.gz) = b7be0d26c0b72808f88eaa727af11fba16c4649bb3297b810f36d16a8ce104a1
 SHA512 (HTTP-DAV-0.49.tar.gz) = 01a097f47d95090fd0fd08a44b440d0ed4f2f04e0bedc41f8e2abedf1879e7cfcae6cf5cf7a415ac89dc610cf0cacf4f75078586bbf6a818f8c6dd36ccb451f6
 Size (HTTP-DAV-0.49.tar.gz) = 107841 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 15:07:30 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:29:47 nia Exp $
 
-RMD160 (CGI-FormBuilder-3.10.tar.gz) = 0a4a87a62c186adfdf97bd0fd7230adf036b35ed
+BLAKE2s (CGI-FormBuilder-3.10.tar.gz) = a90532f43ea90ac2f502b3b8a93a848b234cb5302680caa1ff424787e47eae7a
 SHA512 (CGI-FormBuilder-3.10.tar.gz) = 38d8e6eb729e188074d872b979ad46133152877bb30b95329a2c7275154646a4afb62dc3539cb34781149f424b1d384d05230efe8b174967742625a81765bad5
 Size (CGI-FormBuilder-3.10.tar.gz) = 162346 bytes

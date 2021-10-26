@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 15:07:06 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:29:22 nia Exp $
 
-RMD160 (cgicc-3.2.19.tar.gz) = d7bb8d0c21f0a3ed6c0705b8ec5cdce54d2dc706
+BLAKE2s (cgicc-3.2.19.tar.gz) = 67b9041b7049b89abc33a6d32b030fb2d523ad20bc107325eb4a1fbf1109b294
 SHA512 (cgicc-3.2.19.tar.gz) = c361923cf3ac876bc3fc94dffd040d2be7cd44751d8534f4cfa3545e9f58a8ec35ebcd902a8ce6a19da0efe52db67506d8b02e5cc868188d187ce3092519abdf
 Size (cgicc-3.2.19.tar.gz) = 2456040 bytes

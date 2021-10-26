@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:05 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:29:21 nia Exp $
 
-RMD160 (blur6ex-0.1.198.tar.gz) = f39da7166e80e607381298e4f8a1f366588bb615
+BLAKE2s (blur6ex-0.1.198.tar.gz) = ef43648982c84e8ac24356fb043638674a50585548ed85cd576e2bfe20da0e52
 SHA512 (blur6ex-0.1.198.tar.gz) = 2e8a1906fd8b01fcf98fe61beeb142a8a7265b0c40d0011a01b148a5a50b74f4f14a6788ef88bf8ea6b532c3b8d749dae67eac75f526bd47c63749ebb3b4c350
 Size (blur6ex-0.1.198.tar.gz) = 488371 bytes

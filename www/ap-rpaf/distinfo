@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:07:01 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:29:18 nia Exp $
 
-RMD160 (mod_rpaf-0.8.4.tar.gz) = e292e6e3a20382661bc4919e68dffb82baa6fd76
+BLAKE2s (mod_rpaf-0.8.4.tar.gz) = 5d54a4fe0df79c1a8f52a508a4dbd29a9d6cbd4dbce41295ee45e436df70e2be
 SHA512 (mod_rpaf-0.8.4.tar.gz) = ae3a265bfa829c62721acfed6ed20ecffd48f130e435e14769d65e635aac3e3ac15c57d198ac2a0f3e7479dd4d71f90cc15ab717ed396ca016f8822312ff4305
 Size (mod_rpaf-0.8.4.tar.gz) = 6458 bytes

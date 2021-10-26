@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 15:07:19 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:29:36 nia Exp $
 
-RMD160 (libgtkhtml-2.6.3.tar.bz2) = 153d2f0e49f7a633e3129f625a7b705f87b0b950
+BLAKE2s (libgtkhtml-2.6.3.tar.bz2) = 4cfee225d7cc097a44dc6b3740d23997841e34bec67b2a667fc8092fb883bf4f
 SHA512 (libgtkhtml-2.6.3.tar.bz2) = 19640603c93a9411091d4a61ecddbf54591f6ec076c699c0284c4dae768990b5abc113ff51d5623d1ddd248f5434ff1e75ac813f95a0fc663b050a44763ae63f
 Size (libgtkhtml-2.6.3.tar.bz2) = 392127 bytes
 SHA1 (patch-aa) = 24cb6cba12c9a673b68b7119170db2903ba012a0

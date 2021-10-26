@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:07:14 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:29:32 nia Exp $
 
-RMD160 (xss-sanitize-0.3.6.tar.gz) = 46cc015ada9cd96953d89c93ebcb82b9f51ae599
+BLAKE2s (xss-sanitize-0.3.6.tar.gz) = f22a81e7a0419780463719ed56f6210a61dec2bd411351260b0765bd06ea72ec
 SHA512 (xss-sanitize-0.3.6.tar.gz) = 8d038d807b7fa01a65f4b73d135c87ab75385f4c91ce174b332cd5fd1dc1ebdec26b0c5713cf3f68c27351e19e099815d1b530af3ecb7e4c45e71fec4ae12b4c
 Size (xss-sanitize-0.3.6.tar.gz) = 11655 bytes
