@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:28:29 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:56:06 nia Exp $
 
-RMD160 (quadpack-20001130.tar.gz) = 5f5b6735cf8d400fd6cfcb67f2304bdc97aeea74
+BLAKE2s (quadpack-20001130.tar.gz) = 6537a717c70b00bb1f9316c4ff34d655f10bb5517cdb6f4f94ec3a0bdb0a9935
 SHA512 (quadpack-20001130.tar.gz) = 0c3f05deb91efeec572f3ae85b193a4f807d655a9eaa948f4d4bba023d7baa0c23eb746a62df7f98bd1fcddc327cf0b575a9761b19f9ee3a1b23bd529dd08744
 Size (quadpack-20001130.tar.gz) = 111626 bytes

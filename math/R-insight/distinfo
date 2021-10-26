@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:28:00 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:55:28 nia Exp $
 
-RMD160 (R/insight_0.14.4.tar.gz) = e2d25599cc30074729ea1c9fe84989fcfc1b9a8b
+BLAKE2s (R/insight_0.14.4.tar.gz) = db98fdc0fd6399021f598976054256ca89bdfa7ce2034c765ba5a7896f647ab5
 SHA512 (R/insight_0.14.4.tar.gz) = 1ab27e6d96ef557df5c20aff8e737e9f82a81bfb0088a785b7f51185fe9325b574a3bb06e26b77507b97dd4a400a44982a52ca20ac752ebc81c5df618a82355f
 Size (R/insight_0.14.4.tar.gz) = 841657 bytes

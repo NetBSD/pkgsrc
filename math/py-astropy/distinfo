@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:28:22 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:56:00 nia Exp $
 
-RMD160 (astropy-4.2.tar.gz) = 2125f33572a4910bb16a78d42d2e10b98ac87eca
+BLAKE2s (astropy-4.2.tar.gz) = dc7f492452dc9b489984bd70e8532df6bb294ba76de37a9709392903cb1cbd56
 SHA512 (astropy-4.2.tar.gz) = 14bb90aac13f3fe668114ebe578aac401987e8e2cd2bb9fb0971e5b8e9f8df6a594d454bb53e330807c3854c44d295e2b4dc96b57ccb69e5f53ee11356869d9d
 Size (astropy-4.2.tar.gz) = 7462293 bytes

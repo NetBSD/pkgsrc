@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:28:26 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:56:03 nia Exp $
 
-RMD160 (patsy-0.5.1.tar.gz) = 2ca7512c63fedba257228597444869cd3164fa07
+BLAKE2s (patsy-0.5.1.tar.gz) = 93f0e1c97bb5c60e28d9e011bffe4b4c973ca75d0fa442d9255978a3a1a424e8
 SHA512 (patsy-0.5.1.tar.gz) = aeb56411e68713ec75c0b5344890939f721c460d3c7643b9fd57d7c928421d21408b0f2963348edf27a025842989dbae6fd5cfccd3f9d9497d60a1dffe8d7bdc
 Size (patsy-0.5.1.tar.gz) = 397623 bytes

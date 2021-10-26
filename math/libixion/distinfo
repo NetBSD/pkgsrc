@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:28:08 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:55:46 nia Exp $
 
-RMD160 (libixion-0.16.1.tar.xz) = 766dd3a4b822d43f9e2a7e47c5061616574fa105
+BLAKE2s (libixion-0.16.1.tar.xz) = 04d939500c4d35e9691bf50b49bb844ce7b3b1a6824a9f22650215e80b6d5782
 SHA512 (libixion-0.16.1.tar.xz) = 979c631e9536f6d2c3ae32f7892756ac8889d27c551d80eb9d519bf912bd323da4b6ecd363fe2719e74e04bc3661e5d56e03a582f68f5293ffcac59b74f4c7de
 Size (libixion-0.16.1.tar.xz) = 482500 bytes
 SHA1 (patch-configure.ac) = f5a27ed314e69ecf1ed94d400abd2262a0fce7be

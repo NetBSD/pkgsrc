@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:28:19 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:55:57 nia Exp $
 
-RMD160 (Statistics-Distributions-1.02.tar.gz) = ad31bcd516296395a1ddb63fb4ba1de6d768efc5
+BLAKE2s (Statistics-Distributions-1.02.tar.gz) = 08f6a6aa5a58ffcc1b64cab5efc09e476b6a5e9d66aca3aad54c0dde7c013a44
 SHA512 (Statistics-Distributions-1.02.tar.gz) = 3d6eef8890bc868e30dcf5134bae7859bd796f69f0be99dda46fdf4584e532d8a97d30c650029d7648a702c05b30bcf3130d67081729d746b3b9ac79c542146c
 Size (Statistics-Distributions-1.02.tar.gz) = 5695 bytes

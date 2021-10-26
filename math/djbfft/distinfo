@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:28:00 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:55:38 nia Exp $
 
-RMD160 (djbfft-0.76.tar.gz) = 46de3a7ed5d6ca4b245d02a12d969702e57f7381
+BLAKE2s (djbfft-0.76.tar.gz) = 013cf346dd9bae31883d1e2820380efb7e4f2759fbb2449af63c0a6f363963e2
 SHA512 (djbfft-0.76.tar.gz) = f23e5f80d2737476feea4ed65d7d022c4ca74748a2ff7b3b9338fdea4f72b4009d1c5909325382647feab837bec078231eddc3fc3bd0b5ae3346690e5edef530
 Size (djbfft-0.76.tar.gz) = 80092 bytes
 SHA1 (patch-Makefile) = 74c4df743ff7df57ad96738f53d9a26ca82f1443

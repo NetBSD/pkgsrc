@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:28:13 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:55:51 nia Exp $
 
-RMD160 (otter-3.0.6.tar.gz) = 7bcf1ca173ed06dc34d46a242ec5adbd5dca494b
+BLAKE2s (otter-3.0.6.tar.gz) = 78d80a883a03abd8b42a2349e2daec5ebf089217e79a00ba41057962a98b3d9c
 SHA512 (otter-3.0.6.tar.gz) = 5f40e769b3d96d01d858c1e04679a2bab65842f2a9fb0f247f5a64b3fd6e10d2f41641844c7d3ab8270d03ab42686bb3a6d57f68b4e8e984824823f1014bcac3
 Size (otter-3.0.6.tar.gz) = 764045 bytes
 SHA1 (patch-aa) = 7e36860368e3cbfcc56b1b1c2e25ff6e0b092e17

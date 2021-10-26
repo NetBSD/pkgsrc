@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:28:30 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:56:08 nia Exp $
 
-RMD160 (speedcrunch/release-0.12.0.tar.gz) = 33e42f8c37830877fe05f8e82d0ead58977b4f33
+BLAKE2s (speedcrunch/release-0.12.0.tar.gz) = 772e998fb766aa1edfa8106faa2964a79ed74e9c657312e6dade9ce21ee0d97b
 SHA512 (speedcrunch/release-0.12.0.tar.gz) = 9f93936311e227ed0aff374adae408f212e6d63174154931ecb19a31f1a6f360b9548989bbdc5988d03a7600f2d3e466ef18bf5f071002b99f22b22e773143eb
 Size (speedcrunch/release-0.12.0.tar.gz) = 3667420 bytes
