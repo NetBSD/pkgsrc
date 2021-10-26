@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 13:35:05 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 10:09:14 nia Exp $
 
-RMD160 (abook-0.6.1.tar.gz) = 6b991103fa6b20297e7a18d48bf83b114e618f9a
+BLAKE2s (abook-0.6.1.tar.gz) = 1c5991ec84d1e750bcc77d6460cf7a7095852837945588661a89a2963fc2cb6a
 SHA512 (abook-0.6.1.tar.gz) = 993895ef2fd6d98d50db610699f8f0a28112778065ac56484373eb814afd8ab7371201fc21506c090514f4b29570ec229dc62c606ab068301152567e2c47fe66
 Size (abook-0.6.1.tar.gz) = 319558 bytes
 SHA1 (patch-database.h) = 7debc679591bf0d05c345e36ab38035786ce693b

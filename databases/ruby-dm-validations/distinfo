@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:35:48 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:10:02 nia Exp $
 
-RMD160 (dm-validations-1.2.0.gem) = c723d39da32edc89be1245d8f0834e6a01b3c7ef
+BLAKE2s (dm-validations-1.2.0.gem) = 57be5ecfac764b4557d0493d2767468b5165ad97665d3cd477803d5b49c39ab7
 SHA512 (dm-validations-1.2.0.gem) = 2e2af99f216f1a5dd57b48a9d1b6961d1d1eeaca62bb80450d3618f515ea863e95cd760edb772a72fd70a8fdf2eb4b7d85f33cdbffaa20895915be96cfeb5493
 Size (dm-validations-1.2.0.gem) = 56320 bytes

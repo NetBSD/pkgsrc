@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:35:26 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:09:38 nia Exp $
 
-RMD160 (MLDBM-Sync-0.30.tar.gz) = 4ab6b286db83bac00c26dcfa67d06467bab09f74
+BLAKE2s (MLDBM-Sync-0.30.tar.gz) = 6b7f995464e2f89df4b92b733bffdbab2679b3a538e165b2f9d2d4fd6e10d740
 SHA512 (MLDBM-Sync-0.30.tar.gz) = 6ec51617972eb332a9f99f85315497c1acd462cc8f4d91ebe94e698fbf6aaf7de4776a92b3b5dc1adb50f0dfb7e8146c22e727c1a770a62aa775aee3b16c434c
 Size (MLDBM-Sync-0.30.tar.gz) = 22058 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:35:22 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:09:32 nia Exp $
 
-RMD160 (DBIx-Class-Cursor-Cached-1.001004.tar.gz) = 23d55f5cca7cf09dbd89130bc460cf2925b73dfa
+BLAKE2s (DBIx-Class-Cursor-Cached-1.001004.tar.gz) = 45447b3d2a012481fcb5119329ef21b9fe6732b3d7aea2d16628890816f8cf66
 SHA512 (DBIx-Class-Cursor-Cached-1.001004.tar.gz) = e20f950d505615987444f724615e49929b180af4c837542b163506a89675f4747c182060472d80a8f2bf265d44c719c560e0856176a95fb8c229568e996621b1
 Size (DBIx-Class-Cursor-Cached-1.001004.tar.gz) = 28860 bytes

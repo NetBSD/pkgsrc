@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:35:17 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:09:26 nia Exp $
 
-RMD160 (oraedit-0.1.4.tar.bz2) = 6134ace2d945c5a4ddc485bf974fd56295964cf3
+BLAKE2s (oraedit-0.1.4.tar.bz2) = 8b56ead36d1e2af2105319a9c114879e45f2cf0049ec6f072de4b86847d0291a
 SHA512 (oraedit-0.1.4.tar.bz2) = d6752e0f5cc52e9bba4f5557b2ba1f66024eab6710242db86bed83f6b5ce7e9c38776ebefc90c87e0be96a91118a1a22eba8e09ab4ef9f45135a1df7e865c2c2
 Size (oraedit-0.1.4.tar.bz2) = 9450 bytes

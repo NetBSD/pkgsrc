@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:35:07 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:09:16 nia Exp $
 
-RMD160 (dbfsak-5.0.src.tar.gz) = 0999cb4415540c7d802ac507788b5dc1bc32d760
+BLAKE2s (dbfsak-5.0.src.tar.gz) = 46820a433e71123fc5d4ba4e9c0b7632500586ea68733919508b427ff25a1a0b
 SHA512 (dbfsak-5.0.src.tar.gz) = 017473433f37c37e846d2c971496042cc5729dc78ad4a25b75aa3b7ffe095330e1bf10f0dd80a7b94a21f3f42d319448436690147ffb09542940d80a0b381c9c
 Size (dbfsak-5.0.src.tar.gz) = 18067 bytes
 SHA1 (patch-dbf.c) = f608f456278867366be0f588de4a8a4a1e379f7c

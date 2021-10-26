@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2021/10/07 13:35:44 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 10:10:04 nia Exp $
 
-RMD160 (sdbm.tar.Z) = 33a48f642ad81bb15a7ce4440dca605e97774afa
+BLAKE2s (sdbm.tar.Z) = 9825cf5366caec26e56638579a2367a948bb9a65d48cfcafdd75456538245cc1
 SHA512 (sdbm.tar.Z) = f1de2eaf50826d1446e2f8b9b27adeb07363373b81aecd990eba6ae112dfc3d642dfff6ba27f74aa2eb27ee4d5bee04d2b0a830582d790fef63a1ccfd5661c8d
 Size (sdbm.tar.Z) = 63557 bytes
 SHA1 (patch-aa) = 9ebe008e7119939b5d47abdb1c15cc03e4548698

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:35:32 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:09:44 nia Exp $
 
-RMD160 (pgtcl1.5.tar.gz) = f198066c538a9566f9044e8899423ee31e123349
+BLAKE2s (pgtcl1.5.tar.gz) = b91a0c94394c277553eb90197332f07b6c5ce09873cbf5cf226c207b200feac2
 SHA512 (pgtcl1.5.tar.gz) = e49e907b75e35f16831cef3bc92c902d7f4aa7690b344f74d05bb6cc2806546e2e73bb3f606ab9b6205acc8f23f1c4a585dbdedaba07639a0e9e66c33716507f
 Size (pgtcl1.5.tar.gz) = 486901 bytes
 SHA1 (patch-aa) = 16787a10212b7b89bd0c97b4e066676d58e73a1e
