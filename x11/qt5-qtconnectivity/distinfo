@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 15:14:06 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:34:21 nia Exp $
 
-RMD160 (qtconnectivity-everywhere-src-5.15.2.tar.xz) = ef4356817fd13715d0a8c19c3db37f8f02c4a96a
+BLAKE2s (qtconnectivity-everywhere-src-5.15.2.tar.xz) = 986775ae9ff4f8d4f2fa31ee06dcd4a09d9e5d62d4ed1befdb5a547d2c6d0475
 SHA512 (qtconnectivity-everywhere-src-5.15.2.tar.xz) = a934dcdd28645ba23dd429215643694d9a14449a4c3e1a6154a9a19cb3210f3d80978b46aefff2b110db533fa1816450f2f73a27d80df5330a92799e4cca1b9c
 Size (qtconnectivity-everywhere-src-5.15.2.tar.xz) = 2815492 bytes

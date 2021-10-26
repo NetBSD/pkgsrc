@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:13:54 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:34:09 nia Exp $
 
-RMD160 (libXrandr-1.0.2.tar.bz2) = a75443dabe360398d8de287f6885cd7569190132
+BLAKE2s (libXrandr-1.0.2.tar.bz2) = 23e6ca1bb692c8026261dc092ebba2521123165b861fa26b9675c34f8fd89bb0
 SHA512 (libXrandr-1.0.2.tar.bz2) = d82d5943b638c65272b3a7a56ecac0068c3b50fd023461baae7d2e7955fd08b68efcd6310de563a1e4d4fbf4e88942649871acfc268f0abc15be2500b7d2abab
 Size (libXrandr-1.0.2.tar.bz2) = 187231 bytes
 SHA1 (patch-aa) = a8e0b3ef460f21125ebf9058dcaa3d9066e06841

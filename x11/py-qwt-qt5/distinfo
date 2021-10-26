@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:14:05 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:34:20 nia Exp $
 
-RMD160 (pyqt-qwt-1.02.00.tar.gz) = a25d19cd71baf264b03c02ecd2c86dd4fb3b560c
+BLAKE2s (pyqt-qwt-1.02.00.tar.gz) = 76f50d292845e1a6621cb414891da16bdbb7e77e512d9fa47690be85ad027181
 SHA512 (pyqt-qwt-1.02.00.tar.gz) = f2b54bd4097b726bcf4df897b910d49489efd2bc9d06d239037b0ecb7ed1420c76499e65b84a49efe2e8ba2313857ece92d8d50d157ccc38fda0cc0dac5ab178
 Size (pyqt-qwt-1.02.00.tar.gz) = 103588 bytes
 SHA1 (patch-mk__distinfo.py) = 180ce6d00f21142878f2a01805921d5c1fd63637

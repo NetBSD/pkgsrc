@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:13:36 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:33:53 nia Exp $
 
-RMD160 (gtkglarea-2.0.1.tar.gz) = 117c5a7ff5407114decfc043ebe91650e713bd8b
+BLAKE2s (gtkglarea-2.0.1.tar.gz) = e38113cfd21bbfbed1f402050141a649cc09bdd750c4829406ba013a24835eb3
 SHA512 (gtkglarea-2.0.1.tar.gz) = ff005dc92d52947ac1c46307444a65b5b237ba416f0777c64736440cd31ee4d026d686f8862909ee2d21b40621857396520a004ce8a21f1be32e356c32a02b77
 Size (gtkglarea-2.0.1.tar.gz) = 359862 bytes

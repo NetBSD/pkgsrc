@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:14:11 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:34:26 nia Exp $
 
-RMD160 (rox/rox-session-0.28.tar.bz2) = a70d5ab90aa6ebb679085f09f2b0f95a614fdbf3
+BLAKE2s (rox/rox-session-0.28.tar.bz2) = b48eed676ef17581da0aaea73304d13b901bc3f793da821b039e117cb4b4a938
 SHA512 (rox/rox-session-0.28.tar.bz2) = aea0655c5f59d8906ca80152811d8445a2f8b7ae046e46f18357bfdeb8bf9d93ca3eba251983c675634ce814c0337c66ae74db8369ece4745f07c678f1e9d160
 Size (rox/rox-session-0.28.tar.bz2) = 129900 bytes
 SHA1 (patch-ab) = d83674b5faa03bce2f257f5872a12d7d4bedc284

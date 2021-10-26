@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 15:13:49 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:34:04 nia Exp $
 
-RMD160 (libFS-1.0.8.tar.bz2) = 9253e762e18e530910d405b612380c080e29594a
+BLAKE2s (libFS-1.0.8.tar.bz2) = b329aaf62ba33ff03fc368290ae0102ffe16e08cc6c5d875a7e1777f3f16cea8
 SHA512 (libFS-1.0.8.tar.bz2) = 466198ae5c0b83e3579713d86ddfd0b039f5c5b511cf6d5dc0e9664ee2d40aec9e8929445c8e97394d85faf76a7cf2f81bddb13d23de7ce19919e3b1e36ba56f
 Size (libFS-1.0.8.tar.bz2) = 347880 bytes

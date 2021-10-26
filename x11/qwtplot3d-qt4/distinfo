@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:14:10 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:34:25 nia Exp $
 
-RMD160 (qwtplot3d-0.2.7.tgz) = 0f28462cb95ef6091d73642c8b26ece60d50bfb8
+BLAKE2s (qwtplot3d-0.2.7.tgz) = d0a2f348edba5f0ac9d8e630118e8eb25f569edac58889b4fea8a821fe2941b1
 SHA512 (qwtplot3d-0.2.7.tgz) = 88e6d270695931775f3c1c0e718118e31118dbfe9f5f582834de09ab515fdf9e8a0f90d424f276653fdf1cf0b39e2060282385701a4ab48843420fe55a1dcf0c
 Size (qwtplot3d-0.2.7.tgz) = 183836 bytes
 SHA1 (patch-aa) = e46978e1d3b0b68ed5481861fc99703b8fa44ff3

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:14:38 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:34:52 nia Exp $
 
-RMD160 (xlupe-1.1.tar.gz) = ffa8175de0bd7b1910f25e3f24243db2b0a383fc
+BLAKE2s (xlupe-1.1.tar.gz) = 604794bf6ef1520f098d26464439b796b87dc36bd0948f4141b681e16e1035fc
 SHA512 (xlupe-1.1.tar.gz) = 5ab236e631c2e322b1bf458d8b25d3da78279cc3bb39bc938a0bd5807277cb9ca133667f6e72814a982f9bd902ec817239096077f413f3953ab2aae13d9f9112
 Size (xlupe-1.1.tar.gz) = 10250 bytes

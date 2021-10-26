@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:14:46 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:34:59 nia Exp $
 
-RMD160 (xvkbd-3.5.tar.gz) = c5b5619e919e510f890f025cf48118a6eaa3026c
+BLAKE2s (xvkbd-3.5.tar.gz) = e666f541d91fad7b01777b4a323d23395f92d8937c64256b1e3c5cff4065390f
 SHA512 (xvkbd-3.5.tar.gz) = e847512bf023a540127297420829cb73cc142fa06e3044a6a8b3d051f3fca38427f2a262c50e57afc94317acdd05f9d4e880faf4826887255e081c460bc4d305
 Size (xvkbd-3.5.tar.gz) = 108351 bytes

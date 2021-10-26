@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:14:36 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:34:50 nia Exp $
 
-RMD160 (xkbd-0.8.5.tar.gz) = 04627c2eef418910e3873f06498dcc59b06265ed
+BLAKE2s (xkbd-0.8.5.tar.gz) = 16aafa79a2829f946ad0fc17c74390d8e86cc78163024720f1a9de344e87844b
 SHA512 (xkbd-0.8.5.tar.gz) = 31dbfbdcd59989dbe1eb7bda9e95d88e2801e16b7a1e335fd41a34aef56890911ea414949a52ac55f239d7260a3611d58f2770c49ea5708ee20ee24f55465811
 Size (xkbd-0.8.5.tar.gz) = 231953 bytes
 SHA1 (patch-aa) = e5865181c348e501676e8abd1ad13916eabf0d8d

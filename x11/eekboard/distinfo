@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:13:31 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:33:47 nia Exp $
 
-RMD160 (eekboard-1.0.8.tar.gz) = ac4ac6c78a4057e0b10636c851ad9fe72b0c691c
+BLAKE2s (eekboard-1.0.8.tar.gz) = 252252a3dc5ccef15ba65f30dc5bea80d4b5bf197b920b82d80619c6394e2e8f
 SHA512 (eekboard-1.0.8.tar.gz) = 21ed54e7343db9566d268f1793ea19650eac2884cf5fe2b5647247d65956150017e9cbcbeab5f0e175677079559873abb6ac712099f9e5d635e1e792f0dce659
 Size (eekboard-1.0.8.tar.gz) = 883659 bytes

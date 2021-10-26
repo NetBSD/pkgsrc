@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:14:46 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:35:00 nia Exp $
 
-RMD160 (xwrits-2.24.tar.gz) = a67833f1b4ce31fc4224e5333017a6bd5fd384e4
+BLAKE2s (xwrits-2.24.tar.gz) = 55cd3edb1b1e3c95e2d73b9254488ddb911215d13f908d6158a025e6df6d5195
 SHA512 (xwrits-2.24.tar.gz) = 3b04181fc4947bc6cbd293fa381d46b6eb1f23cf6e3551d431d780ba925c8e49b4e916a4a4fa280175fe79512daa0dd0af50bcbf098f70e381edb6b912c28a2a
 Size (xwrits-2.24.tar.gz) = 190168 bytes

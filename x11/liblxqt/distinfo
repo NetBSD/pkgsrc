@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:13:54 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:34:09 nia Exp $
 
-RMD160 (liblxqt-0.17.0.tar.xz) = cae95dae5b8b774872be6c7e16ae923887966962
+BLAKE2s (liblxqt-0.17.0.tar.xz) = 0d9338486b43c9c3fed3d5215e70fc5188d0059e47cbb284d7ec9ddd1c0855a3
 SHA512 (liblxqt-0.17.0.tar.xz) = 72fd06a1bd8cee422432c3eead9ed8bf15f460848b9a3f7cdb4ee1b31c3896e6af00bc62935fe0fd7d70170010c5f128dcf9c3ecb904366818fbbfc2af3dbbf1
 Size (liblxqt-0.17.0.tar.xz) = 82052 bytes

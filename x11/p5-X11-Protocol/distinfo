@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:14:02 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:34:18 nia Exp $
 
-RMD160 (X11-Protocol-0.56.tar.gz) = 5868e0ee048a32cfbe4759fac09d4aef64d81582
+BLAKE2s (X11-Protocol-0.56.tar.gz) = ecf3555cc3ebeeefcd77e565b3091e98c184a05234867b4c94a0e841222249ff
 SHA512 (X11-Protocol-0.56.tar.gz) = 1c1a6ed15ceff77e8be29ac32a0e72aa2d0a1e62b5e19af2e34055aa001ee281ab584d993ace82f46f00d4da2e7bd4c60e4e31876a43c6c64c3e216beb13fe5f
 Size (X11-Protocol-0.56.tar.gz) = 101227 bytes

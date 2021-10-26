@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 15:13:30 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:33:47 nia Exp $
 
-RMD160 (dunst-1.5.0.tar.gz) = 1a17dd6bc6a03b11ca4c45e8f780fd2abb2e1b3c
+BLAKE2s (dunst-1.5.0.tar.gz) = 807f3e3d3891e9f1dcc3adba56b0a8c2e41e2ccc5626be6a39ab185d34f147f2
 SHA512 (dunst-1.5.0.tar.gz) = 2057dc530adce1dac89f12f4ca55e9186d378ccc2b406e0fa20d43bc69f671dc303b608a4fea781ab1193bd2e159dcbdecf3baf50e27ac9b0f164965b5824c85
 Size (dunst-1.5.0.tar.gz) = 169272 bytes
 SHA1 (patch-Makefile) = 9ef53272ab7b41821a3c4f76fd302f4e143fe28e

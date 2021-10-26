@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:14:43 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:34:57 nia Exp $
 
-RMD160 (xsm-1.0.4.tar.bz2) = d18286b37d5516e5007a27bf54ed1ec7aa7ea31d
+BLAKE2s (xsm-1.0.4.tar.bz2) = eb2174a93fe25516f205971fc105cee02d625692941374556b72df2cca97a029
 SHA512 (xsm-1.0.4.tar.bz2) = d4e4da7c309a4eae126d2b58a13684f4dbc06b09f76dde9c89c707375df2843614f3d83bc44f9cd02f239200db3397abd86796dca0dbafc69f60482b0af5a176
 Size (xsm-1.0.4.tar.bz2) = 170933 bytes

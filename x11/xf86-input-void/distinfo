@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:14:26 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:34:40 nia Exp $
 
-RMD160 (xf86-input-void-1.4.1.tar.bz2) = aa2ff7d1dbf3389d29775860939ff0fa968abacc
+BLAKE2s (xf86-input-void-1.4.1.tar.bz2) = b411d6fa0aebf8836de0144e122b34d634eff0fabe33f4d97d1cfe551e0b8cbd
 SHA512 (xf86-input-void-1.4.1.tar.bz2) = 3cbcba9510635fc4a3b610fb940584417d4b3fcace88670b1289906a7da15614e9a286590cecd1840af4bb3bd0c62f246522b1203700067ec384c3cc11b7e94a
 Size (xf86-input-void-1.4.1.tar.bz2) = 271597 bytes

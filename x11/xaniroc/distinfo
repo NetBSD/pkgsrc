@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:14:18 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:34:33 nia Exp $
 
-RMD160 (xaniroc.src.tar.Z) = d7fd3eddf4192857e2e669e56b8d31e8a2eed019
+BLAKE2s (xaniroc.src.tar.Z) = 8c6d972f8114a61c78e8ca8f6f371925f41538e5e7694ee67c31fc02fe8d8742
 SHA512 (xaniroc.src.tar.Z) = 1606c8fee669acf62e5a0840dbeb7a6232047a41b92dfb955a65054b0b57184a88b929f2174f7f884cd8fd1e25e3e1d38549246266aef5bfb5514b10434b20f3
 Size (xaniroc.src.tar.Z) = 16747 bytes
 SHA1 (patch-aa) = 26e849c5a0650be740009dfeade422cff80e9708

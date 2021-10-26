@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:14:18 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:34:32 nia Exp $
 
-RMD160 (x2goclient-4.1.2.2.tar.gz) = bc8d71587e5c278632150db0a84836963b791b3e
+BLAKE2s (x2goclient-4.1.2.2.tar.gz) = 30f87b2c052c928dfa900d0ee94f7cb0fc1f06e9e288014615503e7aaf2ff591
 SHA512 (x2goclient-4.1.2.2.tar.gz) = 85e6db6a34629512be64376883c205d8bf0696c4697cf216970b57a91ffe68dcf7f38bfda0d396c104602f6991b596c5fb0934e75fa4a93f7d0e41c2b3f5ac4d
 Size (x2goclient-4.1.2.2.tar.gz) = 2576404 bytes
 SHA1 (patch-Makefile) = 6c431a2a9aac9f1b35061a89221553449d5968e4

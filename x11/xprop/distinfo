@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 15:14:42 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:34:55 nia Exp $
 
-RMD160 (xprop-1.2.5.tar.bz2) = c7e85b18706394436c0250b98958168a4bbd39e4
+BLAKE2s (xprop-1.2.5.tar.bz2) = fae39679ec0bbc72f9e5b2ae4dcad7086fd2fd24ec14a27b4620ddcbd54ad026
 SHA512 (xprop-1.2.5.tar.bz2) = 93cfa621fa76ca6e8e780a252c508380b6dc9db39b67bfca16bb9800f0d39110f5d18189409a8577ef79e98bf5eece17f5e23f2218ca72ae8bb04ee7b429d559
 Size (xprop-1.2.5.tar.bz2) = 151216 bytes

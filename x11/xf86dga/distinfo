@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:14:28 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:34:45 nia Exp $
 
-RMD160 (xf86dga-1.0.3.tar.bz2) = 4243e1b567fcc4b649ee413e51ca8987104984f3
+BLAKE2s (xf86dga-1.0.3.tar.bz2) = fc81f5260476e4c0e56db299f94c652bbe78c5d9d2479d9e4e48d3f78aa7b605
 SHA512 (xf86dga-1.0.3.tar.bz2) = 18dbf9b5bbe1bb9c993c742e04e132ee22e376148a499ee159418435477221b00904f36c1a6b1063df788079a4ff5520b4d604abcafaad3b5fd391a3b2c1ec07
 Size (xf86dga-1.0.3.tar.bz2) = 104935 bytes

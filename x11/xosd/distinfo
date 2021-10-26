@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 15:14:40 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 11:34:54 nia Exp $
 
-RMD160 (xosd-2.2.14.tar.gz) = 8a39756c5a46f2897be9bbd47dd86770f42ed648
+BLAKE2s (xosd-2.2.14.tar.gz) = 58fe652d32d3f2ce4a24cc96a1716ca028c60e525c83088382656f6f4b97a733
 SHA512 (xosd-2.2.14.tar.gz) = 3caf6d106d34488f4823e2a58fdff7a69b90f505b8da2443485167ff0362c6f27614c9a5019e738ff1f897d3c2249c934ff60953e3775566d66e8e9b30e4e473
 Size (xosd-2.2.14.tar.gz) = 418331 bytes
 SHA1 (patch-aa) = b555bbb0777dcf0d2475496ae8725b1b2c202fb5

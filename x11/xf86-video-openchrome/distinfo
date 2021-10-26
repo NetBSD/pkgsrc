@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:14:29 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:34:42 nia Exp $
 
-RMD160 (xf86-video-openchrome-0.6.0.tar.bz2) = a18e85e3c98a0ee493ffd85f9b5d325a210dfe32
+BLAKE2s (xf86-video-openchrome-0.6.0.tar.bz2) = 89ab6fa939adc1a0be23d8d36e858e8e07cff27d23e0e8a895747682a0fa4b4d
 SHA512 (xf86-video-openchrome-0.6.0.tar.bz2) = f074e70d54c87a9d6e1b52c2c2d72d7c551dcb59a5f34c0a5f9495db1a6e45db4300d51fabf7eedfbe91f964f9422931c752a49b322715c6aa9ddb0db9dd6004
 Size (xf86-video-openchrome-0.6.0.tar.bz2) = 537619 bytes

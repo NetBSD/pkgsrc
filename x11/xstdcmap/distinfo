@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:14:44 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:34:57 nia Exp $
 
-RMD160 (xstdcmap-1.0.4.tar.bz2) = 38bcc606abf24411722ce599f447a4c28d85781d
+BLAKE2s (xstdcmap-1.0.4.tar.bz2) = 76bbf3f66ca346340db0ab95f7f3ed98ba8480efda84c07c89414db5b7476932
 SHA512 (xstdcmap-1.0.4.tar.bz2) = 2adbb0aec1766341e04090efa962241ff6c9e32c612851b7221cec0ee16852107d406a08ec5251070f39df882c13e3c8c9edcd88f278187a9f373e1727643a8f
 Size (xstdcmap-1.0.4.tar.bz2) = 126269 bytes

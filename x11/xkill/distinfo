@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:14:37 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:34:51 nia Exp $
 
-RMD160 (xkill-1.0.5.tar.bz2) = 220af3a8eaad13e187efb2373b21f42a4a6651fb
+BLAKE2s (xkill-1.0.5.tar.bz2) = 639cf76c6abd468ba519dde57f45d1bd8a00d6d07d00a09b375d39b432957ff4
 SHA512 (xkill-1.0.5.tar.bz2) = 4603a1794f114f5cea2c885020c9d073c8421d1e785c99ff6b936ae97139c8dac8020a187b5bbd0fa6d56ed6fab879441b42ba900cc5f2f5a534dafdc86b9249
 Size (xkill-1.0.5.tar.bz2) = 128146 bytes

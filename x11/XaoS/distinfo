@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2021/10/07 15:13:26 nia Exp $
+$NetBSD: distinfo,v 1.22 2021/10/26 11:33:42 nia Exp $
 
-RMD160 (xaos-4.2.1.tar.gz) = 8ddff5c13e22db46acba0ff04a0b0a8a7cb7edca
+BLAKE2s (xaos-4.2.1.tar.gz) = 33c646f07fab99038c04cf1b1ea0d0bea0d3f10e0d847fbf8757dd58cfc3f848
 SHA512 (xaos-4.2.1.tar.gz) = 58aa2c41d1171d4c8fa684707f4fc7619ab5f23cc902358d8bc3303fdd48b26cefe7d54dbf68a4aba9345a0ca97b752b185db19b67caa8b5e9dba50a8b6ad918
 Size (xaos-4.2.1.tar.gz) = 10916985 bytes

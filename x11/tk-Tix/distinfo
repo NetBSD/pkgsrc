@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 15:14:14 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:34:29 nia Exp $
 
-RMD160 (Tix8.4.3-src.tar.gz) = 99249c4d7a19fcb8c27f11ab1b3ef6102911409d
+BLAKE2s (Tix8.4.3-src.tar.gz) = 370fb79aabadf258b77838c631374fa9fd60fa19e8bb76f80eff6c82e07f46e4
 SHA512 (Tix8.4.3-src.tar.gz) = f13217dad0f52c0b706d2fb8ee0886942db64be0325e5d0d51801dbf9a92a7919c743c1445b76dbfa98815817685205e238e2d63f9366a8745ace1e1e9a01852
 Size (Tix8.4.3-src.tar.gz) = 1831503 bytes
 SHA1 (patch-aa) = 13a02a88a7fae048d0227b9029a56665f06025e7

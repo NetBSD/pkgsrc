@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:13:58 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:34:13 nia Exp $
 
-RMD160 (matchbox-themes-extra-0.3.tar.bz2) = 2c270d3a9d59ba8f047783bb253602b857bb61e5
+BLAKE2s (matchbox-themes-extra-0.3.tar.bz2) = df38e9afc94a70f9ac9161a9abb15b082c5678744e092a6c782037940d2c9001
 SHA512 (matchbox-themes-extra-0.3.tar.bz2) = 2c3e5d5b25219afe8fceb23b6c50f9e2f07a1ec37315adcd6ff9dc26ef28a6530816f7a03b699102b054e374ecc70dd779c687205d268c840b3ed1412076c17d
 Size (matchbox-themes-extra-0.3.tar.bz2) = 639435 bytes

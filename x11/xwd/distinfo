@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 15:14:46 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:35:00 nia Exp $
 
-RMD160 (xwd-1.0.8.tar.bz2) = 2b885e4b112a36bac47e9e10b9d50a5a31ced534
+BLAKE2s (xwd-1.0.8.tar.bz2) = 400f1d247ee2a14549cdf91a8788393328c6f808a5e6c74618ae88ee69937441
 SHA512 (xwd-1.0.8.tar.bz2) = d2aaf42c60d20c4b09f4947d3702058dbfad4633b2c5c8ea62e8897fc9ced1ab3417ce99255a223286d21a731f543019470737e3074f1bc68033b4eb47bc773e
 Size (xwd-1.0.8.tar.bz2) = 151153 bytes

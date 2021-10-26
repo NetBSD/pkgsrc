@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 15:14:43 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:34:57 nia Exp $
 
-RMD160 (xsnow-3.2.2.tar.gz) = 446a9e8405f76309b1c8305830728d05e4cfe1f8
+BLAKE2s (xsnow-3.2.2.tar.gz) = 8d58c193fc6ef6fd2cca879b8ca951ecf425b981760b21f3118379b5b3f7b10e
 SHA512 (xsnow-3.2.2.tar.gz) = 767aad07834b5af0be08f2e0f205cb4bb796b4ecfd4c38a187fea26b4d8c752d231a1f870494ba70b3437e54e8b5f0f745b69aa45f99d7b32d52a0d4b4cc8ba0
 Size (xsnow-3.2.2.tar.gz) = 410575 bytes
 SHA1 (patch-addcopyright.sh) = 087c0f8e64b2ed0fe977a8c05280d38e7261a571

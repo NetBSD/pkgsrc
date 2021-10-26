@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.29 2021/10/07 15:14:06 nia Exp $
+$NetBSD: distinfo,v 1.30 2021/10/26 11:34:22 nia Exp $
 
-RMD160 (qtdeclarative-everywhere-src-5.15.2.tar.xz) = 747c8e854b52a3007c4ccbe62d23439fe0894763
+BLAKE2s (qtdeclarative-everywhere-src-5.15.2.tar.xz) = d9552216fe1d0d016cf825900db6189b4d907e47c5d8d476804fea40daea5306
 SHA512 (qtdeclarative-everywhere-src-5.15.2.tar.xz) = a084e4ace0d6868668c95f1b62598a7dd0f455bfb0943ac8956802d7041436686f20c7ccdde7d6fd6c4b8173c936dd8600cf3b87bf8575f55514edfbb51111d3
 Size (qtdeclarative-everywhere-src-5.15.2.tar.xz) = 21559880 bytes
 SHA1 (patch-src_3rdparty_masm_assembler_ARMv7Assembler.h) = 505b2a585a7ed98e63403a3cc44d839a4f80c01d

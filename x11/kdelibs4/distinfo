@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.58 2021/10/07 15:13:46 nia Exp $
+$NetBSD: distinfo,v 1.59 2021/10/26 11:34:02 nia Exp $
 
-RMD160 (kdelibs-4.14.38.tar.xz) = edf16e14842237950655bf44c073070c5bb7d74b
+BLAKE2s (kdelibs-4.14.38.tar.xz) = 1b2445541c6dc1ce334f888950ea0a6bf994d642eb4db034001f8394335a4b4a
 SHA512 (kdelibs-4.14.38.tar.xz) = 54fbbb9b2f12a47d5aca21c152164ed03cc6a6619bf285e2b93c8e9260042ffd728ef41e1badb217e552de6478687cab5d3caf14af7b32da8caca3468d469e45
 Size (kdelibs-4.14.38.tar.xz) = 11644900 bytes
 SHA1 (patch-ConfigureChecks.cmake) = b03b38108d68d940782fbbb876affd011a39acf4
