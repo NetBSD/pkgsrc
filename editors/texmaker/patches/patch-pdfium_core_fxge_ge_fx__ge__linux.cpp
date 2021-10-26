@@ -1,5 +1,7 @@
-$NetBSD: patch-pdfium_core_fxge_ge_fx__ge__linux.cpp,v 1.2 2019/09/10 16:17:13 nros Exp $
+$NetBSD: patch-pdfium_core_fxge_ge_fx__ge__linux.cpp,v 1.3 2021/10/26 17:56:54 nros Exp $
+
 * Add X11 and pkgsrc font paths
+
 --- pdfium/core/fxge/ge/fx_ge_linux.cpp.orig	2017-04-16 14:53:52.000000000 +0000
 +++ pdfium/core/fxge/ge/fx_ge_linux.cpp
 @@ -1,3 +1,4 @@
