@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 13:53:51 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 10:26:02 nia Exp $
 
-RMD160 (libofx-0.9.15.tar.gz) = f1fdf640a482228176b5e1406e92e72512aaaeea
+BLAKE2s (libofx-0.9.15.tar.gz) = 2ae22165ee88c0a675fd871ec0159a6abbe946764496f839c47fc8e984aff99e
 SHA512 (libofx-0.9.15.tar.gz) = 9d9c5e55bd4ac71d1158c7b8dfe7ecbcaba6f03afdbf3dc2f6d3699c5e4f3fce045400df0217d5f1f4ba45a0ee1b10862b0ebbe1a0f634d756c3b1b88872ce1f
 Size (libofx-0.9.15.tar.gz) = 1298356 bytes
 SHA1 (patch-lib_Makefile.in) = 512cf3dbaa257205ffff18f3953a08eb81d015f4

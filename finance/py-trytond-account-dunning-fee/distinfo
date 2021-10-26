@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:53:56 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:26:06 nia Exp $
 
-RMD160 (tryton-4.2/trytond_account_dunning_fee-4.2.0.tar.gz) = 1e020274aa626e1982a4f741f912b70bbc881929
+BLAKE2s (tryton-4.2/trytond_account_dunning_fee-4.2.0.tar.gz) = 83a0cd9bdc06d4a30c025cedd5d1e444bcf7241fd6875d51f88de64ecc3d9fef
 SHA512 (tryton-4.2/trytond_account_dunning_fee-4.2.0.tar.gz) = b1ff5ad2af074bba5c2a8ac0b43702e11296f875f617a2ae01399b0ef5ea8091b36694a18f00b419830b40e2203a9e0d593397aca93ffe5936bb962a0f5f8c2c
 Size (tryton-4.2/trytond_account_dunning_fee-4.2.0.tar.gz) = 27209 bytes
