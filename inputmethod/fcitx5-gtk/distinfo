@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:19:37 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:49:31 nia Exp $
 
-RMD160 (fcitx5-gtk-5.0.4.tar.xz) = a8134853c85f611cf890cd863f5ede1ab26e8d5e
+BLAKE2s (fcitx5-gtk-5.0.4.tar.xz) = 9f6c6bb56f5d9b4039f478091a9e1fe743f231d09120e3cf6b47c4626dbf8e0a
 SHA512 (fcitx5-gtk-5.0.4.tar.xz) = 9009369e19f2165bcf514f2a229db456ee8aa0d81611a133aa03f69ecd06a27689506edaf3c2d61e0f1928fc47070bb11280308ca5a4dca6ae35bb39a087a407
 Size (fcitx5-gtk-5.0.4.tar.xz) = 49044 bytes
 SHA1 (patch-gtk3_utils.h) = b2b2a5ad72d2ca9767d3352f6d499ecf8b94871a

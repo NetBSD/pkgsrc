@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:19:49 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:49:43 nia Exp $
 
-RMD160 (tamago-tsunagi-5.0.7.1.tar.gz) = 4b193cd1fda1ee21a40565ccca5a37f8b9515f94
+BLAKE2s (tamago-tsunagi-5.0.7.1.tar.gz) = 390d83c45785cd37cf363e83123f9ae5600e5761c0f352df9da6682d8935a2f9
 SHA512 (tamago-tsunagi-5.0.7.1.tar.gz) = dc830a9e7a7c53743c3e51807d9966bb2c0cb20c39a347bd6a3c2015a74fc5015eb9ddb8c9d0d357390e87d8b85122186299a391b6fa484916bbfc7025ec1ea7
 Size (tamago-tsunagi-5.0.7.1.tar.gz) = 314153 bytes
 SHA1 (patch-Makefile.in) = 8cb77ab851229d9b4173451ba9ca46bdfff940b9

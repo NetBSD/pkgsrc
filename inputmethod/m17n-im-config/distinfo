@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:19:44 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:49:37 nia Exp $
 
-RMD160 (m17n-im-config-0.9.0.tar.gz) = 6afddb4dfa2702839144df35ad6139c7403d0a67
+BLAKE2s (m17n-im-config-0.9.0.tar.gz) = 4ce3dccb6e517ed27217148315d646377034acd9e6b02d5ccae91f0abf7efa8b
 SHA512 (m17n-im-config-0.9.0.tar.gz) = b9e1857bebdfa864a6e0f698a7aace5b92d417a2ab32690cd80ac2e4c241de82872180fa701a0cfa85ead7eb1bbc812df2a04346e94096a75051131274fae011
 Size (m17n-im-config-0.9.0.tar.gz) = 383283 bytes
