@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:09:25 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:45:10 nia Exp $
 
-RMD160 (gpspoint-2.030521.tar.gz) = a1be4a5230488965533254a82cf0f57fe7abbfb8
+BLAKE2s (gpspoint-2.030521.tar.gz) = d9d2b2f22ae1841cd57f470dd2a611f2a1b39af2b1e8cd0356cc46cd55166da7
 SHA512 (gpspoint-2.030521.tar.gz) = 2f7b7589f99741f82f015d34617cd3710f83d70914bc7e01af7bf66d2df8a7410f79cf3828ed652b4bd070f27d225436ec8ffc30b1c51bb760005ab85404c6b9
 Size (gpspoint-2.030521.tar.gz) = 235522 bytes
 SHA1 (patch-aa) = 0e5c2cf25fc46c923bbcb11296f24679f7e743ee

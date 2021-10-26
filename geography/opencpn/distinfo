@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.26 2021/10/07 14:09:27 nia Exp $
+$NetBSD: distinfo,v 1.27 2021/10/26 10:45:12 nia Exp $
 
-RMD160 (OpenCPN-5.0.0.zip) = e8ee55b1b00017f2fc885c147e8f69ec13c627aa
+BLAKE2s (OpenCPN-5.0.0.zip) = b29dc2c6cde51a2984e835496ed424f919824df8aa3dd48f14dfa654221b8571
 SHA512 (OpenCPN-5.0.0.zip) = 146fe0bf29424f72138168cd20617aabc2f130d2ffd47b8da4aa1e0aa6d7176093b36d96d8f0d456af1f7805db13ed87be67f4f3af7a7a2d6abf0d5734834f7a
 Size (OpenCPN-5.0.0.zip) = 70056870 bytes
 SHA1 (patch-CMakeLists.txt) = 797928fcc105566f5e5670920f03d38b5a779366

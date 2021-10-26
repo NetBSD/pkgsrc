@@ -1,20 +1,20 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 14:09:29 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 10:45:14 nia Exp $
 
-RMD160 (proj-6.3.2.tar.gz) = 921b822868362fd1a81158542d540fd34a0c44c7
+BLAKE2s (proj-6.3.2.tar.gz) = 7ab49bdf9f94abe976c158d167ba04c92dbe79e2a9fa7b7f654a0aea96ddfd35
 SHA512 (proj-6.3.2.tar.gz) = 6fcaf037fe2895686184b2bf668e48d882afe8245cd6cd625d3fb66ebc34c066738fbe683889a3085bd8fe91f2c3b829064aa2318fa592ff7374cee153617b22
 Size (proj-6.3.2.tar.gz) = 2827685 bytes
-RMD160 (proj-datumgrid-1.8.tar.gz) = 074fcfba2e41cbe81e5be45eddc0e38683d891ef
+BLAKE2s (proj-datumgrid-1.8.tar.gz) = 8372fdaf89e5640fb69edad17b6b62cadc9e61c2cb7a3f1f587020cb4c63a3d8
 SHA512 (proj-datumgrid-1.8.tar.gz) = 23153f5b57d210e37cd6e9e0fced23bdabb1c67476e9fb50eb83a68ae066a5c3675822472f5d558d10ddf36ac1d73d538b75304d112a1bfcd8d0bbd26c6481a5
 Size (proj-datumgrid-1.8.tar.gz) = 6604329 bytes
-RMD160 (proj-datumgrid-europe-1.5.tar.gz) = d48f3599ae8881022203316d9ad4ae43921282f0
+BLAKE2s (proj-datumgrid-europe-1.5.tar.gz) = f988796f271c88a0abd606895c756df921f48150418d111184fd2e4c00be9083
 SHA512 (proj-datumgrid-europe-1.5.tar.gz) = 456a8c27dad7ef8fc1790ef822e7e8dcbc69b79e0a28df8c6b58d24b0ef4a3221cebd8e911a0d84b7f00694247b0fb8f4361a38d7369f921da000c838812f389
 Size (proj-datumgrid-europe-1.5.tar.gz) = 187195036 bytes
-RMD160 (proj-datumgrid-north-america-1.3.tar.gz) = 5db05ceebed69f732119a6c047c036c742308fc5
+BLAKE2s (proj-datumgrid-north-america-1.3.tar.gz) = c39874fcf8ba68b475ee865d18c8514c2c8c402a3472f296e32b684c69e6d35e
 SHA512 (proj-datumgrid-north-america-1.3.tar.gz) = d79b44b2a20aef4ef41ba4d2f91146b54fa94978ef9b7512931ee78bdd373bbbe2c89a6748cef77c3b0e912a5b937ddecb31fd7a9e9fe04e36b9907184830a19
 Size (proj-datumgrid-north-america-1.3.tar.gz) = 452401850 bytes
-RMD160 (proj-datumgrid-oceania-1.1.tar.gz) = 73c802e8438b8a79cf1667b40f6b1baf44bdea58
+BLAKE2s (proj-datumgrid-oceania-1.1.tar.gz) = d8db1a3a2e8905fd68a0bedf0b99a8bd65b5a5caffb799fc1b76fb4c196bae0e
 SHA512 (proj-datumgrid-oceania-1.1.tar.gz) = 8ecd31470305c1433b3ce5e26f44e0a1e2131c6d8a76b2318c1a1cf9241a4f70ca6e8638ff64315d1061e2aa3046a4ca8c4f4336ad682ce18362ee2c956aed6b
 Size (proj-datumgrid-oceania-1.1.tar.gz) = 144248108 bytes
-RMD160 (proj-datumgrid-world-1.0.tar.gz) = a21a6320eb7da3bbf72b7ad685a08255b8f9663d
+BLAKE2s (proj-datumgrid-world-1.0.tar.gz) = 94daa68c7b7f4edcd035b95d601453af79eb5af695af9496d3e80d44e20c2539
 SHA512 (proj-datumgrid-world-1.0.tar.gz) = 9f79f4c24f1a4a472f2747e4bb147c7140a92f3043b283f2a0326775393ebb39f634f2715a4d085dc33eabbbed4c3fb1871753ecf6c238c179ac0bbe83b9ca3e
 Size (proj-datumgrid-world-1.0.tar.gz) = 134373680 bytes

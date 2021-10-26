@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:09:31 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:45:15 nia Exp $
 
-RMD160 (qlandkartegt-1.4.2.tar.gz) = 00847079547f81718fcc45c87a6691862b4d1ff8
+BLAKE2s (qlandkartegt-1.4.2.tar.gz) = c0023f61a9b2a175f379599475f3c082fe15e5f1217d5a633b96abb5b3a4e94b
 SHA512 (qlandkartegt-1.4.2.tar.gz) = 86756f1bf81a65da0c74c5dfb60c20abdd6e905b2b75c725c1e8aa63d2d9de9aad73a90b2ffcde473685a4b4b44de92f9cd6e8d4be854ff3aa55687abcde7626
 Size (qlandkartegt-1.4.2.tar.gz) = 6347471 bytes
 SHA1 (patch-3rdparty_map2gcm_main.cpp) = b0d12e1590cae1ecee1df6b63836c99195d5ed75
