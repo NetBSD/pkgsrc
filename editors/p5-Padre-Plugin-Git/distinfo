@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:47:46 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:21:36 nia Exp $
 
-RMD160 (Padre-Plugin-Git-0.12.tar.gz) = 2c1b2f510c05078447e1d6a84502e552c48f1834
+BLAKE2s (Padre-Plugin-Git-0.12.tar.gz) = fcc0e2e5aa749b18762dcfa933b8e3315bfa51ee7a98bcfbf271d1b37e6fc033
 SHA512 (Padre-Plugin-Git-0.12.tar.gz) = 66ba66f64bea6e0c55f9ad635e2338ebb62e5321f40f1a14bc1cb41df6c85ff8e0dec2dbc71e90b629fb76670f23421e2462c190ec4d9f89632a9f6310a698e6
 Size (Padre-Plugin-Git-0.12.tar.gz) = 49850 bytes

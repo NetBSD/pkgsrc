@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:47:43 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:21:33 nia Exp $
 
-RMD160 (mflteco.tar.gz) = 993ea515f87c17bafc763e3d7dcd55130cf7e83e
+BLAKE2s (mflteco.tar.gz) = d23b0d16544df050c4177a206315d79fbcd64acb1c7092526725f80b5ef31c60
 SHA512 (mflteco.tar.gz) = b64e0f6d344621faad7db836c7b00569a5ee90f0d2b434e4406db8acdbb93d4f9fba213d063a530fc04b0816006af1d712c13e0117d8bf6fef9979b5cd0173e3
 Size (mflteco.tar.gz) = 80566 bytes
 SHA1 (patch-Makefile) = de25d6c3f7f0ab2bbaa69fded66cace2495b154e

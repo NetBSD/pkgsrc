@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:47:46 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:21:36 nia Exp $
 
-RMD160 (Padre-Plugin-Encrypt-0.12.tar.gz) = a87559b79a807923516e574f8b1ca22c3432586d
+BLAKE2s (Padre-Plugin-Encrypt-0.12.tar.gz) = 9fd31768a3375fc07d4e2398eb4d605ef79d7e60eab4de82aa83721195c9202f
 SHA512 (Padre-Plugin-Encrypt-0.12.tar.gz) = 52d7f584203626ace1fedfb200e4c5454b64159f625d52fa0b9268e12eab82bb3e1d323556c4199cd70dec6de68770290f9dd17a132c4beadb0e299382fd0d1d
 Size (Padre-Plugin-Encrypt-0.12.tar.gz) = 13033 bytes

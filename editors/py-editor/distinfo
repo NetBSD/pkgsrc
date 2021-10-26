@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:47:47 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:21:38 nia Exp $
 
-RMD160 (python-editor-1.0.4.tar.gz) = 3426f45bc74c642501f5b52b795cd936a1b01d00
+BLAKE2s (python-editor-1.0.4.tar.gz) = 55e3aba067ba8c1bdd72456a872326e556d5cba5cfd36e4602bd56dbd97e9c20
 SHA512 (python-editor-1.0.4.tar.gz) = c8ce2403bfe6c93935c7f4c384a8618a39cdaefe1ff5b1ff2cf4562866d8b3caa616e428c0a1634a56db934caeb474e7f84f8d5e009b9ed664189fdece8146f6
 Size (python-editor-1.0.4.tar.gz) = 7132 bytes

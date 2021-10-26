@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:47:40 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:21:30 nia Exp $
 
-RMD160 (heme-0.4.2.tar.gz) = 9368e1d86e7f800c30ebce42161524bbc51610f5
+BLAKE2s (heme-0.4.2.tar.gz) = 5c25bdfc0e7ac42be412289246cef9def00415e3fe2ee2d497f47e71ca050a9f
 SHA512 (heme-0.4.2.tar.gz) = b86d25fe6c78ecdcc642aac8334771da96dfd4758ac9ef1e98d4d0368c678d2b9308ea45ecc0f3953539b02161d1112fc2ab03767cf6e1cee6d5763426fd6a3f
 Size (heme-0.4.2.tar.gz) = 21815 bytes
 SHA1 (patch-aa) = d64d01c8f3505b75dfa54f2291b63055b5a17e91
