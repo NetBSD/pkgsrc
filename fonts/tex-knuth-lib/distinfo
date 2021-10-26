@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:57 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:28:08 nia Exp $
 
-RMD160 (knuth-lib.r57963.tar.xz) = e0f412bbe86193bd4081b47899ed40420d46ddcb
+BLAKE2s (knuth-lib.r57963.tar.xz) = 263ba5fa716bdb238d9d2f676ad514bde8b5c2cef4a4592967e389a70c7ad4b9
 SHA512 (knuth-lib.r57963.tar.xz) = 47d50b1966dc5a3adf4921c297d9ed5917035e917098154fc08d1c72ebd0ba70ebfa41735c7ae52c5087d62242bcfa9b0b49914c6da4f392e2d4c56a6d72807d
 Size (knuth-lib.r57963.tar.xz) = 30508 bytes

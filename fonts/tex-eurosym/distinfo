@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:43 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:55 nia Exp $
 
-RMD160 (tex-eurosym-17265-20090910/eurosym.tar.xz) = 258232448415d1474545a61170d97b0c16604d11
+BLAKE2s (tex-eurosym-17265-20090910/eurosym.tar.xz) = 43177ea598e4a7389fedab6ae515ed4f1d4534d7dd4235f42cb27e94d5a7de64
 SHA512 (tex-eurosym-17265-20090910/eurosym.tar.xz) = 80a95a7baadda066519b0e885c36e9b017966e61a1271ecb201f7ede3edeea7bf4966ea7624ca1227bd9bfcee3b14ae1d1a5451ebbf97371186917ae7a7b06f5
 Size (tex-eurosym-17265-20090910/eurosym.tar.xz) = 139816 bytes

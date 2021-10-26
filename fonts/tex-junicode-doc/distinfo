@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:56 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:28:08 nia Exp $
 
-RMD160 (junicode.doc.r53954.tar.xz) = ab271a3b632c21039b79dc2c60a829bf7e708220
+BLAKE2s (junicode.doc.r53954.tar.xz) = 4bcbcac5c3cfee7ede6b533fb11d3d46c357c7e8b1dbb4aaa59e09cd02ba02f5
 SHA512 (junicode.doc.r53954.tar.xz) = f692c94008d88ed2b0b0d91678072cee6cd379e5a3fe58831a69393cb2de3058c0e7320409385a2112b41c9369255ddbc6919520a222adccb38223b5b2576790
 Size (junicode.doc.r53954.tar.xz) = 5756 bytes

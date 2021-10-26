@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:35 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:27:46 nia Exp $
 
-RMD160 (tex-cyklop-18651/cyklop.tar.xz) = 3aafcde496c8c5aaed6abdb2bfaecae7fb172c8f
+BLAKE2s (tex-cyklop-18651/cyklop.tar.xz) = fd4f9c04f88e74adc95bf85f6867e0f469f6b694143c0da7c16e8fd7b06846a6
 SHA512 (tex-cyklop-18651/cyklop.tar.xz) = 22809b22067b895354ff1df374eeb74460ee3d7632003528006f5fbe210a38f52f42daad5c0ade28a7d52ef399981417b31a5af740da350c6d2c005d9c1aa08d
 Size (tex-cyklop-18651/cyklop.tar.xz) = 314668 bytes

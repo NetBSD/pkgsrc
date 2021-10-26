@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:03:57 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:27:07 nia Exp $
 
-RMD160 (font-adobe-100dpi-1.0.3.tar.bz2) = 365326528b430a164ce201cb3f69b67098d588bc
+BLAKE2s (font-adobe-100dpi-1.0.3.tar.bz2) = d89a4b89ec33b69c9da91ea581807a26c6d0b8a5240036550399ced0020c63a6
 SHA512 (font-adobe-100dpi-1.0.3.tar.bz2) = 27ed98dcdbb9c174c7090cdd8fe230f7471d10b5dfc63e092640b5d0fc6ab351bc8ffa9a92bec1755f2780b3d9c1de3ad298c64b70a68b5e6879a8592ef32987
 Size (font-adobe-100dpi-1.0.3.tar.bz2) = 1113104 bytes

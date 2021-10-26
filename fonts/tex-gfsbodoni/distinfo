@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:49 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:28:01 nia Exp $
 
-RMD160 (tex-gfsbodoni-28484/gfsbodoni.tar.xz) = b069b2a78acd5b190636d33e56538165c5a7f170
+BLAKE2s (tex-gfsbodoni-28484/gfsbodoni.tar.xz) = d3ea7fe2d39b623099b8e2d0638f13e0e02fcfd4f0e8699a550e2a2c96f31058
 SHA512 (tex-gfsbodoni-28484/gfsbodoni.tar.xz) = a9e3300cfefefddef7a5da59b9d67d69ea92f10b0c2e52636c723768f650b4edf3a4ab0fb8f62ecea6c75d15858a9282883dbefe26df64be5b4ef315f69d549d
 Size (tex-gfsbodoni-28484/gfsbodoni.tar.xz) = 906208 bytes

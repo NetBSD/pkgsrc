@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:05:01 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:28:13 nia Exp $
 
-RMD160 (tex-manfnt-35799/manfnt.tar.xz) = 15f2973937861e45bb018b68aae372d2a1589531
+BLAKE2s (tex-manfnt-35799/manfnt.tar.xz) = c3ba35c72a0ebd67e72bdf3817b4ce91b0441d56551ef20ae8c2a7c0212d96e7
 SHA512 (tex-manfnt-35799/manfnt.tar.xz) = 3d4ac5ab7d883a823831af38619589dfb74f874a1211277adaf36e6eb75a4a1e97fc8da58c011d7c8ac188a25cb17bac799a9cc37968e2069a7223576f422f31
 Size (tex-manfnt-35799/manfnt.tar.xz) = 1432 bytes

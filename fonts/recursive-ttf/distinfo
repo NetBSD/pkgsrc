@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:12 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:22 nia Exp $
 
-RMD160 (ArrowType-Recursive-1.078.zip) = 9038eebe75921e0c79d41292218e00b92f1343d5
+BLAKE2s (ArrowType-Recursive-1.078.zip) = 30c840e5209e5a2f16c1d9aef3da6dfd7495619f50750ee8f5e60f4c73dc6039
 SHA512 (ArrowType-Recursive-1.078.zip) = 1570a515c5876ab5c6e7c45b4e31ebb15c2948d8fb6f453be1c53df9a7984520b33261ba50c0955755527f011b371b9fb94536af9867b74e16bcc5b514743519
 Size (ArrowType-Recursive-1.078.zip) = 47416419 bytes

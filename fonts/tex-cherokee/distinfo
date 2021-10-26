@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:29 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:27:40 nia Exp $
 
-RMD160 (tex-cherokee-21046/cherokee.tar.xz) = 3846b2528994ba7f1425b1fa5b603f56d86ec6f6
+BLAKE2s (tex-cherokee-21046/cherokee.tar.xz) = 6a4560d5033ab97e7e205a98475bcb629a29e660dc966d6ed992693eba15b050
 SHA512 (tex-cherokee-21046/cherokee.tar.xz) = 037fa6647184260dc5845739320faaa49896b3243774b092a3a4a953b410ce4fc92da87f55b4cedfdccec0ceed1932e11d912aad1cbfa6d4b96599670b7105a3
 Size (tex-cherokee-21046/cherokee.tar.xz) = 4396 bytes

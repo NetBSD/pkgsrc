@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:04:21 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:27:33 nia Exp $
 
-RMD160 (baskervaldx.r57080.tar.xz) = 781fb7cd25d5e851bbec510557f1b0a4c5af412e
+BLAKE2s (baskervaldx.r57080.tar.xz) = 1708115379f73a4ea3edc7b241db70b046939f53f332830f00f5e6190009a449
 SHA512 (baskervaldx.r57080.tar.xz) = 42db4e01e127ca3870f6eb692217a7b0c24857599f01314c41ff6f26664e3559c4a938fac1557e799e273b42df2884955df3dd72f8e0b44456b414b8831fc019
 Size (baskervaldx.r57080.tar.xz) = 679472 bytes

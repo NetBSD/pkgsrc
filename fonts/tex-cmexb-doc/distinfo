@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:04:31 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:27:42 nia Exp $
 
-RMD160 (tex-cmexb-40785/cmexb.doc.tar.xz) = c9d1717a454500f9ad2ad3b79bfbb0d14053ff5a
+BLAKE2s (tex-cmexb-40785/cmexb.doc.tar.xz) = 74e6e2e703c6eed2ba6f632ed886af3498c73841876e03290f9962a8f96c1067
 SHA512 (tex-cmexb-40785/cmexb.doc.tar.xz) = 5ad6c0f16d9b5473cdcb2497522f46015728b888353d31144eeb8c719c2f7476d3fe760f0b949fdd86a5317380ebbd9de47be911f0d39cd1e1f6780e762e25a7
 Size (tex-cmexb-40785/cmexb.doc.tar.xz) = 908 bytes

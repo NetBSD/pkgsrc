@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:15 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:26 nia Exp $
 
-RMD160 (tex-ae-doc-1.4/ae.doc.tar.xz) = 83124cd0339c8cdc33c025ea0dacdc1440623ec1
+BLAKE2s (tex-ae-doc-1.4/ae.doc.tar.xz) = 57b28cfb8e4e672d16bd3406bfc336c62a8cf5b7dc032bd37f94c6f3b5848b35
 SHA512 (tex-ae-doc-1.4/ae.doc.tar.xz) = e2de81466ff1680db50256f19ae68adf59f8bced9561187ea7818a5af57f9575aa8038267251a2ce74d558ff4e69116832c21e36de0d055d3ad8c2068f90f8ce
 Size (tex-ae-doc-1.4/ae.doc.tar.xz) = 7732 bytes

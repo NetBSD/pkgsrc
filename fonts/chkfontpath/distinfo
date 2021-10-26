@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:03:53 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:04 nia Exp $
 
-RMD160 (chkfontpath-1.9.7-1.src.rpm) = de37618ec0fa35a7100c842679e16750a6d7dc3a
+BLAKE2s (chkfontpath-1.9.7-1.src.rpm) = f826cfa60093bfd546c896da9b2fddc2e2b095327478f0ff882448115799a0d1
 SHA512 (chkfontpath-1.9.7-1.src.rpm) = 2d41b10c961bde00520291f8dddd5971174823faa258b9a614bcfb169962bfaa92e98c48e3024a1d7c4e8787b33ee945bebb6e78d9cb93b18e403181aaae777c
 Size (chkfontpath-1.9.7-1.src.rpm) = 13352 bytes
 SHA1 (patch-aa) = fa54e0d9e096b41fa78c010edecfa6fe658fb935

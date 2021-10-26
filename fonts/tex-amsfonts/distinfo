@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:04:16 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:27:27 nia Exp $
 
-RMD160 (tex-amsfonts-29208/amsfonts.tar.xz) = 61ee974b0c149e606a1d7cb877a38f511b92098f
+BLAKE2s (tex-amsfonts-29208/amsfonts.tar.xz) = c059185a23882dee1e16d17549310a5b6819968186fcf3cba52e1fcc82b99b0f
 SHA512 (tex-amsfonts-29208/amsfonts.tar.xz) = f9f80aef9dc6162206b42f79aee591627c18a0965eedbc14ff4b314c1ad8b72bd9f1356fcafa936ef7a220ccb02f356d25985ec601455e2442a51acd4c7858be
 Size (tex-amsfonts-29208/amsfonts.tar.xz) = 3626156 bytes

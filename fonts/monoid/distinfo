@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:04:08 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:27:19 nia Exp $
 
-RMD160 (monoid-0.61/Monoid.zip) = 448981ac1b80ece8c99d3c608ec2d1b5e2178b05
+BLAKE2s (monoid-0.61/Monoid.zip) = 2153d848dffe2f9739ace8b05e558cfb7c0f1b8f5d5b8f8cefe9ef5860da69dd
 SHA512 (monoid-0.61/Monoid.zip) = 99120fba7455ba92d7f87fd5bbd5826cb1c0277fd293d9f6a6e973cc799d8bc51624317d4bdf1d409261af9f696f3f5abd8095806f8d52ecc4a0b6f79bb58d9a
 Size (monoid-0.61/Monoid.zip) = 145031 bytes

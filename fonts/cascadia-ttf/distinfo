@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/08 21:44:30 wiz Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:27:04 nia Exp $
 
-RMD160 (CascadiaCode-2108.26.zip) = 14008ebcb5e91a72a90d71db6af43ad518870933
+BLAKE2s (CascadiaCode-2108.26.zip) = 757b927964a1fbf4a72073cbd681f55b7c28a84d124b6815fbb6488078620f79
 SHA512 (CascadiaCode-2108.26.zip) = 02955e1376c9dca86c49eaea798720ac5338f1ef995a71ee07dccf7d09e48b60eed852dcf1cda687f720e9a4e9c8a4e435e03368aa577606a1d2e898e36c42f8
 Size (CascadiaCode-2108.26.zip) = 24848583 bytes

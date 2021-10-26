@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:05:02 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:28:14 nia Exp $
 
-RMD160 (mathpazo.r52663.tar.xz) = c6c8731696738702d405a13b9e9b280efa21e7a1
+BLAKE2s (mathpazo.r52663.tar.xz) = 89cad7556caed317c8f7a43626af794d4c08eda0c7a5ef0953cab6c582d7fdbb
 SHA512 (mathpazo.r52663.tar.xz) = 72bfba52e37abd933cb7b1b19dd813c3c76438591c94f9c407cabb8a44c8c67f78fae04442027287e5bf30b7239c3703ece4271194716882773eeb50d4cb2f47
 Size (mathpazo.r52663.tar.xz) = 63640 bytes

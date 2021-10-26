@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:03:56 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:21 nia Exp $
 
-RMD160 (oto-0.4.tar.gz) = 5dd93ad47e7a8c8123206de4bf93af1b7c7a7895
+BLAKE2s (oto-0.4.tar.gz) = d58bc3884fb6b04fa14e29c351c1e466a684a5cec2fb4268c1f7aa3cd2173de7
 SHA512 (oto-0.4.tar.gz) = 3dd0e726f1da4f3ec26b69faa95656e60f4e0d570d05fbb956b6e7a6f64d31e66244458dd0c28fbab1e0855ccc2130fb1d8893598a6ac2d01b1da94ca6a2a907
 Size (oto-0.4.tar.gz) = 264000 bytes
 SHA1 (patch-aa) = a7ea2508f7d6d57a892c1f8b3f89bfdf464abd6c

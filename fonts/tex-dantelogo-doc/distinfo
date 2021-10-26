@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:35 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:47 nia Exp $
 
-RMD160 (tex-dantelogo-38599/dantelogo.doc.tar.xz) = fb4fd151301e7da82192bfd52815e63d2ad83568
+BLAKE2s (tex-dantelogo-38599/dantelogo.doc.tar.xz) = b4917f71aede654cb5b4c7297be2f7cf3a3a3f5cbd7edf1ae84fc7b50362f91a
 SHA512 (tex-dantelogo-38599/dantelogo.doc.tar.xz) = d44681ab675da9689c0cc03c80984bacfde850c566aaf642e4a77325f0475238cf9a74af976ad268f99795109e62aadd3938c3de260d597e1731bc1e8a06963b
 Size (tex-dantelogo-38599/dantelogo.doc.tar.xz) = 203152 bytes

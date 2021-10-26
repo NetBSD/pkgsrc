@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:30 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:41 nia Exp $
 
-RMD160 (tex-cm-super-15878/cm-super.doc.tar.xz) = 1f3cd73fcccd646a3bb257eeeffe5bd5a8ae9516
+BLAKE2s (tex-cm-super-15878/cm-super.doc.tar.xz) = 948161a62ddb286b80247b19ab0218a3568a83d4a09afb457053a306e86d740e
 SHA512 (tex-cm-super-15878/cm-super.doc.tar.xz) = 5f4a8a73a81f18b66ecac1efdeb2c86895174033bf2496536d2810fb4cabedc0cb96c6d6573c5dcd2b83e88517fa4300bd6b0a654b37a5017474def54a2723d0
 Size (tex-cm-super-15878/cm-super.doc.tar.xz) = 22568 bytes

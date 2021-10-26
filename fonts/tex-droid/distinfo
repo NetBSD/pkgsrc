@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:37 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:49 nia Exp $
 
-RMD160 (tex-droid-51468/droid.tar.xz) = d554290655a7e5680bb4813e90b5d6bbc4e3a2db
+BLAKE2s (tex-droid-51468/droid.tar.xz) = 710950ac6d05df51bb3f82e0789c11da38f0d905537bbc59f896cafc0e341937
 SHA512 (tex-droid-51468/droid.tar.xz) = e2fa1b84bde04858b16b39a559478005a6585d71ddc9879d6e54130970a1f0f6e45e584f9635f457af8143093872541dda0ad98fd647ef2af309b0d0badc813f
 Size (tex-droid-51468/droid.tar.xz) = 3195452 bytes

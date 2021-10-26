@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:06 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:17 nia Exp $
 
-RMD160 (hanyang-font-pcf.tar.gz) = 3984879746cc2e1656e3818c9d519b3fc67f8091
+BLAKE2s (hanyang-font-pcf.tar.gz) = 9cb03dde9b5c42ac2db88f084ad6a493a2f715a169fa0a888edb1e97d121ae98
 SHA512 (hanyang-font-pcf.tar.gz) = 3ad39acfd47e06a86a2a4a6a089efdedb45d70856a20d909f1350414587bb13034dae81ad3eb818a1f6fdaadb12a076bea2fbff88b76ecdc44418f437f01d185
 Size (hanyang-font-pcf.tar.gz) = 2876501 bytes

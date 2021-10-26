@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:03:50 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:27:01 nia Exp $
 
-RMD160 (TextFonts-20111217/TextFonts.zip) = 10e9954cc81449895085f8ba4cf9141763e1e44b
+BLAKE2s (TextFonts-20111217/TextFonts.zip) = 13b9ade2f5ee9637908880618a98f59c37449505a7b05aebbdc6d9cdc9ef417a
 SHA512 (TextFonts-20111217/TextFonts.zip) = c7b9bf51b0102c63bd3565aac989dd490ad73f031fdc6ada72088a0d9b00299f8b4a4d4241cab39f31f9a45c67cb027b9250a4ac732eb0db4036b450767c1a9f
 Size (TextFonts-20111217/TextFonts.zip) = 2289523 bytes

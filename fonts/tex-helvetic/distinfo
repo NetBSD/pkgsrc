@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:04:52 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:28:04 nia Exp $
 
-RMD160 (tex-helvetic-31835/helvetic.tar.xz) = e58d26c65b35a4100fccd137414175bdf585c1b2
+BLAKE2s (tex-helvetic-31835/helvetic.tar.xz) = 006c8bb617409ea5f43c6fa36e99730841b0d5e987ff3d418e64507850a9c56d
 SHA512 (tex-helvetic-31835/helvetic.tar.xz) = eec23b68e6c6d5cc9205fa47117bb8d109bdf202d5c342bbe0d63e11405da5a10daf76d5ec8b52f344597140147d711ecc6d7dcc234ef0027c8a6dd417da7232
 Size (tex-helvetic-31835/helvetic.tar.xz) = 539892 bytes

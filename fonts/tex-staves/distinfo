@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:05:18 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:28:30 nia Exp $
 
-RMD160 (tex-staves-15878/staves.tar.xz) = 2d1d05de019a90c4cd49290e22ca41b06d25f094
+BLAKE2s (tex-staves-15878/staves.tar.xz) = 25fe24c5f95c312fbde35281ffed6a0b28289d17d16cf29660c79de873b9430a
 SHA512 (tex-staves-15878/staves.tar.xz) = 0b75a1c3be0e08c207166cd723d95cc949ca296d2a67e5ba2d6f69d5615e3e884951062a5062e7e5f2a60e3429040c4591afbb3728c448bf525ff30be9c26dd9
 Size (tex-staves-15878/staves.tar.xz) = 121980 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:49 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:28:02 nia Exp $
 
-RMD160 (tex-gfsdidot-46310/gfsdidot.doc.tar.xz) = 819a38f3710b3d7d8e0141489b09e82c3e58dd7f
+BLAKE2s (tex-gfsdidot-46310/gfsdidot.doc.tar.xz) = 365f7a67ecdd979af56d5960d8328e2f6e5806fd0475e30f328e41c514a0f67f
 SHA512 (tex-gfsdidot-46310/gfsdidot.doc.tar.xz) = 16721250fb94a803de947bfa52b6902e18d53e39969d9314dde2b9cccea64d1f3b37fe21af42122b11c66b731f7ea59df5e3bae3b5a822b7de3527a0159e03ac
 Size (tex-gfsdidot-46310/gfsdidot.doc.tar.xz) = 42644 bytes

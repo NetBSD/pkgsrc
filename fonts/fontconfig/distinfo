@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.69 2021/10/07 14:04:01 nia Exp $
+$NetBSD: distinfo,v 1.70 2021/10/26 10:27:11 nia Exp $
 
-RMD160 (fontconfig-2.13.1.tar.bz2) = a971903874fb0395a7ab2d5705378af1ffce2b2c
+BLAKE2s (fontconfig-2.13.1.tar.bz2) = f6d0899147f7699688153bdd9fab753a65046bb667aac02775c01c82fe40a05a
 SHA512 (fontconfig-2.13.1.tar.bz2) = f97f2a9db294fd72d416a7d76dd7db5934ade2cf76903764b09e7decc33e0e2eed1a1d35c5f1c7fd9ea39e2c7653b9e65365f0c6205e047e95e38ba5000dd100
 Size (fontconfig-2.13.1.tar.bz2) = 1723639 bytes
 SHA1 (patch-aa) = ae9a465321dcaee634faf016e2dd01e2f544af12

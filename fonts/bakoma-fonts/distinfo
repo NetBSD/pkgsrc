@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:03:52 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:27:03 nia Exp $
 
-RMD160 (bakoma-20010719.tar.gz) = c2ccb45c71eff70dd6381a68e04dfbde9d2d3704
+BLAKE2s (bakoma-20010719.tar.gz) = dbb1aba3f262a2f4d7d4bb274cd3c12b0519527825660d5fb49545d981319995
 SHA512 (bakoma-20010719.tar.gz) = da2ff29735f98a74ee167b27e044567f74fe6aa72187ff5badd46dc7cbc11c49a01f2f2ed9c9847532726b0f5c56ec8fb1fd27907346c7f61504415b6bdcbb66
 Size (bakoma-20010719.tar.gz) = 12629149 bytes

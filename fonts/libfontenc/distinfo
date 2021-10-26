@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:04:07 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:27:18 nia Exp $
 
-RMD160 (libfontenc-1.1.4.tar.bz2) = ab732bac248de5cbac8cbf4ccf63a0f12f860431
+BLAKE2s (libfontenc-1.1.4.tar.bz2) = 997326e8255d09fd11926311f519fca1718ddcf5b83962a4e16e398207fd3876
 SHA512 (libfontenc-1.1.4.tar.bz2) = 76fa851d00113241f15fdd5b5bb7e927b8d8b9a82ce3fcb0678b8c7e32cb5e8d898c4bda1d60dafb7748145049d3240627ac34a2360c64e98a7a912ea7c30582
 Size (libfontenc-1.1.4.tar.bz2) = 320492 bytes

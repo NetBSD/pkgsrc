@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:04:18 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:27:29 nia Exp $
 
-RMD160 (tex-arphic-ttf-42675/arphic-ttf.tar.xz) = 6bcebd6ef70da687d0cc07e86cd1b13267552316
+BLAKE2s (tex-arphic-ttf-42675/arphic-ttf.tar.xz) = d31a8a381720fc6b07ad89bef91fa0f3355ee86d7f2c615a75f5ab8b90f09ba2
 SHA512 (tex-arphic-ttf-42675/arphic-ttf.tar.xz) = ed93e88bd0352ae18a1792f06e9490c1a0ac4c0a0f1f45b5a64de73b18e5a989ccb44b9ca229e32dcff25c7ce1c6ca970a0cd99d9d399214cb648690f0faeae2
 Size (tex-arphic-ttf-42675/arphic-ttf.tar.xz) = 12665992 bytes

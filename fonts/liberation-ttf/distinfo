@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:04:07 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:27:18 nia Exp $
 
-RMD160 (liberation-fonts-ttf-2.1.3.tar.gz) = 90f69a65f7be747dea00de5c108ed02254dd99a1
+BLAKE2s (liberation-fonts-ttf-2.1.3.tar.gz) = 9e87e6dc9c7498e1a5c647149f7e55311e0165ff4bd5972491089834c5912bee
 SHA512 (liberation-fonts-ttf-2.1.3.tar.gz) = 72564e075d60ac6018aefc8a28dec839a0599ca0311344ea6cd65880074ba47e8fae803da66372e307b4c08ad82203744b2fb803372ee616dc486714aea13c3a
 Size (liberation-fonts-ttf-2.1.3.tar.gz) = 4998405 bytes
 SHA1 (patch-Makefile) = ce9a1af13c773de0a6ccf4823bb21ef54e677112

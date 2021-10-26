@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:45 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:27:57 nia Exp $
 
-RMD160 (tex-foekfont-15878/foekfont.doc.tar.xz) = 35bf296f4e70e1fd3131f23218f4a01df2076602
+BLAKE2s (tex-foekfont-15878/foekfont.doc.tar.xz) = 3e7c0f63f5476f0569fb72c5f429ed9e5554c5c3b9a1397e776c21b92dc0c8c7
 SHA512 (tex-foekfont-15878/foekfont.doc.tar.xz) = f1456da69dfbb3ca779af5a96c0064834b72f317e41e4b67f9edb019dca8e002478f7212bf9ec8b95b043afac0084a7114d4da7fb1743ab7828496f71a4678bf
 Size (tex-foekfont-15878/foekfont.doc.tar.xz) = 95116 bytes

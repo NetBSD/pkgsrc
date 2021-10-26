@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:05:11 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:28:23 nia Exp $
 
-RMD160 (pl.doc.r58661.tar.xz) = 53f1b60055099cd9faa30e8ea8f4502464f8e169
+BLAKE2s (pl.doc.r58661.tar.xz) = be3079bac6a8192ebcc9957a548c80d1aff48a9e3a6c02ea5dbfc0a27e544133
 SHA512 (pl.doc.r58661.tar.xz) = efde952f17a904492b2c36e49801514b97ac5302b406beca7680a893051bc3821e70cdaad8d01dab479476298154c5ce2db99d43b04cf51cbcc5e16358c9b9f0
 Size (pl.doc.r58661.tar.xz) = 25344 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:04:09 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:27:20 nia Exp $
 
-RMD160 (motoya-fonts-20150923.tar.bz2) = 0547e12ff0688c17b561200305909cfd9947a5ec
+BLAKE2s (motoya-fonts-20150923.tar.bz2) = f2e755dd34db14d46751f081b44de58fbcbcfc809aa7d2d58157c0412e00b634
 SHA512 (motoya-fonts-20150923.tar.bz2) = 1fadc2c88ef00c3decebb4ee86175fbef70d093f1a3c92ac03a44d825b2cedba623d91a8479252608ea29dd4993d02829379c6bccef48ff4ae6cbe4238c61d41
 Size (motoya-fonts-20150923.tar.bz2) = 2712257 bytes

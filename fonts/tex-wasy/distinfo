@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:05:24 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:28:36 nia Exp $
 
-RMD160 (wasy.r53533.tar.xz) = 817577e548468a0a5ac8f07ca2abe02d89f3d6fa
+BLAKE2s (wasy.r53533.tar.xz) = 53e90d4121e8e5f73fdff977d4b092e395e2fd0f76d173f38e7b15e9c383bd47
 SHA512 (wasy.r53533.tar.xz) = 4c747ea3cfab820b803f624a32178a1d09cbb5a3c441ee423abc74caeef9217095491c0c490f11d3a6d6adf052b97492e081b2abedce6cc9c61410a8e878f5b8
 Size (wasy.r53533.tar.xz) = 24132 bytes

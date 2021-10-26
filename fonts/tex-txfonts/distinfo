@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:05:21 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:28:33 nia Exp $
 
-RMD160 (tex-txfonts-15878/txfonts.tar.xz) = dbf62d9e07757cbf4e3714b16720b0812af589df
+BLAKE2s (tex-txfonts-15878/txfonts.tar.xz) = f7a65c2f5cf8d50c52755db8dd950e68844c123fad0ea2b86af06a3b60c729b1
 SHA512 (tex-txfonts-15878/txfonts.tar.xz) = 4fdae120616c3e10a46042bfa5aa7004c3745954483246ce222b055ec31939083072d8d3a0306e057200a23339fc84299544290aa154e2dff9972e248e7b1bfa
 Size (tex-txfonts-15878/txfonts.tar.xz) = 709536 bytes

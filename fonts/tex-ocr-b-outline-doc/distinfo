@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:05:08 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:28:20 nia Exp $
 
-RMD160 (tex-ocr-b-outline-20969/ocr-b-outline.doc.tar.xz) = debdc59db0553816d2f3f72cfa1fa5f12eb4677e
+BLAKE2s (tex-ocr-b-outline-20969/ocr-b-outline.doc.tar.xz) = 516953e51ab10f6aae2dcfc9b519d6691f821ef198bb23ba2f4265610344626f
 SHA512 (tex-ocr-b-outline-20969/ocr-b-outline.doc.tar.xz) = ae36c22810928f25560180e52878bb87b009820d6396764417001547ea7fd3aa124f2db127b5a4f003e4c4684a2b46c554196a6365795415934c8869c9054159
 Size (tex-ocr-b-outline-20969/ocr-b-outline.doc.tar.xz) = 1128 bytes

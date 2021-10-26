@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/07 14:03:51 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 10:27:02 nia Exp $
 
-RMD160 (fonts-alee_13.3.tar.xz) = 51ee0439181fcee128a5254236bef09bdb300134
+BLAKE2s (fonts-alee_13.3.tar.xz) = c35f00c1f881e57d49aa01bd6375ecfb34e8d72a5bff407b6af619b31acfdd13
 SHA512 (fonts-alee_13.3.tar.xz) = fc91a018c0757fce1b899ecf736260b96c7acc9c8ec626fb8d53f8e002d89ca23bdaf3a5712e747cfa63f53463c5471da292af715968a5612a17d7499222bc45
 Size (fonts-alee_13.3.tar.xz) = 213160 bytes

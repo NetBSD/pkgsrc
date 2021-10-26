@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:05:17 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:28:29 nia Exp $
 
-RMD160 (sourcesanspro.r54892.tar.xz) = 99685afa1c332b3d69d13e3490b22cb31c51f89a
+BLAKE2s (sourcesanspro.r54892.tar.xz) = 26cf25a73f41598fc2c2cc1ba4bdb0e1ebb2698e7ea3de53878f104b0ecd68b3
 SHA512 (sourcesanspro.r54892.tar.xz) = 0511dcf736273d80f7143c9dad96dd9f631b016183b4078243ed061d35889fea62e50c5f48e9842ffae7b654fd2e08a21d1c46403e56349c0b515ff2eb62e164
 Size (sourcesanspro.r54892.tar.xz) = 5153396 bytes

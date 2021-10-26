@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:05:08 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:28:20 nia Exp $
 
-RMD160 (tex-ogham-24876/ogham.doc.tar.xz) = 8b141b43da9a3b32d4ded416a4cbfedfb307081e
+BLAKE2s (tex-ogham-24876/ogham.doc.tar.xz) = c69a30d1b00738bf8de044f0cdc04424600d28b68ac345de3e49bf58d5eda513
 SHA512 (tex-ogham-24876/ogham.doc.tar.xz) = 7cf82cbc28e5701a51292976fc39e3cdcbb3f33b8e22265d56db6acb622cad7a3b783fa02537debf7acab7d43c4f7ba9174cc5b34511c5ca49bde6986a0b4fe4
 Size (tex-ogham-24876/ogham.doc.tar.xz) = 11936 bytes

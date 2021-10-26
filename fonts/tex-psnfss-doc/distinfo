@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:05:12 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:28:24 nia Exp $
 
-RMD160 (psnfss.doc.r54694.tar.xz) = f9a415f2d9245a8d2ac5f06ecf87196103e3a706
+BLAKE2s (psnfss.doc.r54694.tar.xz) = 8e91da39f0401a97949202e675502441d4cf21dc18741f0e741a80b4ce3ae973
 SHA512 (psnfss.doc.r54694.tar.xz) = d1c14edccdf43ed2c786394bc04e9fd683b683532a9dc18d592f918ee8899234d23feb738128aa1418f441288cdbf0c6de832f8c4d98023926baeace36365a1d
 Size (psnfss.doc.r54694.tar.xz) = 260860 bytes

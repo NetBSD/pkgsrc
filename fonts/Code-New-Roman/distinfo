@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:03:49 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:27:00 nia Exp $
 
-RMD160 (Code-New-Roman-2.1beta1/cnr_BETA.otf) = ada040d493346ed80fe70ebe8fbe824130307fec
+BLAKE2s (Code-New-Roman-2.1beta1/cnr_BETA.otf) = 644403700c4e1ef47c177d9e9864146cb8a324d049677defd08fbce216ada39b
 SHA512 (Code-New-Roman-2.1beta1/cnr_BETA.otf) = cc0efe2de499fc00a17ef494ba17da1f1cec3fd05e3f172591230a86fcfc7ce9c1f550da089f0c38bc32797fbc9e8e2100e544cd560b53bbfea16d9d22a048c8
 Size (Code-New-Roman-2.1beta1/cnr_BETA.otf) = 379968 bytes

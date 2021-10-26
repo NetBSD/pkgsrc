@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:04:08 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:27:19 nia Exp $
 
-RMD160 (mminstance-1.20.tar.gz) = 6e5d190a8459d8c737782eeec8a7a7d9bf676d8a
+BLAKE2s (mminstance-1.20.tar.gz) = d740548b2ed4dcfa8e17d66c9deeeb8d635b9292dcc7bad56825b1c21a334590
 SHA512 (mminstance-1.20.tar.gz) = 27d320b51e7d8934ea0c479bbe170e28f9315a7b56fedfed30d7a0c81c4374ed8cffeeaca8d135fbcc74c074eb496f177252801e1e6829a27948591a72a645db
 Size (mminstance-1.20.tar.gz) = 191723 bytes
 SHA1 (patch-aa) = d601f1bdaec7de91d64d0b7b9ccabf85522dada2

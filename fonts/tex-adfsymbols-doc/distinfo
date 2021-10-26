@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:15 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:26 nia Exp $
 
-RMD160 (adfsymbols.doc.r54512.tar.xz) = d5fa949f9a03c63a7f171872a5404ee3966f8ca9
+BLAKE2s (adfsymbols.doc.r54512.tar.xz) = 075c9a706cb90047ccf4e271c73409f0a636316b828a35f7254db7299b024ade
 SHA512 (adfsymbols.doc.r54512.tar.xz) = fbdd78030826918a3599a1f843db692390ebdcf4ca9a853d8c2e78706cfafe83ae79d23d09fb097339d8c726608a27436b3bf22725935c55060f1e8579ea1eaf
 Size (adfsymbols.doc.r54512.tar.xz) = 384924 bytes
