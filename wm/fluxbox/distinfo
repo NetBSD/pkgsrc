@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.37 2021/10/07 15:05:06 nia Exp $
+$NetBSD: distinfo,v 1.38 2021/10/26 11:25:12 nia Exp $
 
-RMD160 (fluxbox-1.3.7.tar.bz2) = efb8d458edf2b429fb2999eb184ab3aed6a54f7a
+BLAKE2s (fluxbox-1.3.7.tar.bz2) = c3dfa1e8b204c4874ba372af05402b7a277bb1ebac2e7cc15c92c608ea26bdf7
 SHA512 (fluxbox-1.3.7.tar.bz2) = c40cc765f5d542210e18dca21b98b97a048c6685b605a68e2c64f4e886329f4e6d3a3a7e76b3ca0ce488242f38d0ee2a4d6dfebc9ce97d37c68f84c3948aac8c
 Size (fluxbox-1.3.7.tar.bz2) = 911098 bytes
 SHA1 (patch-aa) = e237a1b172c95fe5f251ab8795ed63c1888be83b

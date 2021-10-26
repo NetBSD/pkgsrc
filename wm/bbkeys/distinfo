@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 15:05:03 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:25:10 nia Exp $
 
-RMD160 (bbkeys-0.9.1.tar.gz) = b498845ea6cd11dd638f203b75e9ec14ca0e62ce
+BLAKE2s (bbkeys-0.9.1.tar.gz) = 72db2db18f7ef416e5da1bc360747c8ef5da2c0a28614d1173a7163e4728f6e7
 SHA512 (bbkeys-0.9.1.tar.gz) = c8643d51dbb8f080cf70149d545f33160d15f00a0c3cefdd6d3856dfdee224ff3f63fce0988669036249c75f70878be63711a697dfaa45d4357d2141a28b13bd
 Size (bbkeys-0.9.1.tar.gz) = 226941 bytes
 SHA1 (patch-Makefile.in) = 3e61b500d79de5cafa5d746b546196c9a9a3a652

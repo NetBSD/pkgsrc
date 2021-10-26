@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2021/10/07 15:05:05 nia Exp $
+$NetBSD: distinfo,v 1.23 2021/10/26 11:25:11 nia Exp $
 
-RMD160 (ctwm-4.0.3.tar.xz) = 8b7e7ab7fbcefd9bc4a8cfcc0d570850896ba385
+BLAKE2s (ctwm-4.0.3.tar.xz) = fe0a2107e13d439474d849bc5f629502f2b95b580ec4823830ab0b31a886a2ec
 SHA512 (ctwm-4.0.3.tar.xz) = f9bb2f8f28a050cce0fc2f1f4e00e79acd7c54055016d8483e045d8f5fa9829f8f5d92bb53f0c1d9500f97d6f52cd827ddd15515c84451ea03551025a8ab831d
 Size (ctwm-4.0.3.tar.xz) = 683684 bytes

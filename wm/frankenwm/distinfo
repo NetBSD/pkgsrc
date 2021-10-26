@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:05:06 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:25:13 nia Exp $
 
-RMD160 (FrankenWM-1.0.23.tar.gz) = d841bb756cdb603de66cdb9290a65c9637b8a69d
+BLAKE2s (FrankenWM-1.0.23.tar.gz) = eae8303865cc2f9a40cd8c8bc2abccf9276902468360ff3531e9f6e347f2467a
 SHA512 (FrankenWM-1.0.23.tar.gz) = d2e00a35e1ba0647962de16b80aeffd2019cd22d319d9e4ab67ae06485bee612df4416ff8220a665fb6ccca8b54b516b8c0c253005b7ccfdd95f285f150ca394
 Size (FrankenWM-1.0.23.tar.gz) = 35497 bytes

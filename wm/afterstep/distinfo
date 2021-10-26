@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.25 2021/10/07 15:05:03 nia Exp $
+$NetBSD: distinfo,v 1.26 2021/10/26 11:25:10 nia Exp $
 
-RMD160 (AfterStep-2.2.12.tar.bz2) = 7893a017f95e4601dd2b21402ad51d414f99291d
+BLAKE2s (AfterStep-2.2.12.tar.bz2) = 7805d82301489abce1fb81b73beeff5c2efee85592281578a06c3bcbe1056ac8
 SHA512 (AfterStep-2.2.12.tar.bz2) = 5cac6ce74b24cbcc5b8e8a6f7cc9308e110f0d09597af1fa0a8730d5f5111932a23332629bc4d372fc8d9583a514d97e35f747b17decf8d4ebfe5e3f20cdbbee
 Size (AfterStep-2.2.12.tar.bz2) = 6132233 bytes
 SHA1 (patch-aa) = 208bcf8a5ec05f3916553f0763f72504ec3fd593
