@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/07 14:47:18 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 11:11:07 nia Exp $
 
-RMD160 (distbb-0.47.2.tar.gz) = d9976ca3e3454cc3effef0af375afa0a634f1ffd
+BLAKE2s (distbb-0.47.2.tar.gz) = b3be61a27daace4ce97925321d82b5b37803b5e55aca59a06fb5ec110579e819
 SHA512 (distbb-0.47.2.tar.gz) = 7724d7dadc6ec3aa244b49ea73903b617eecf02e3861eb76c9b2e56defebf8f4deb4b58be7225e401e5a109f09b8b85e10c2277df042e039da2ed4111cbaa065
 Size (distbb-0.47.2.tar.gz) = 52475 bytes

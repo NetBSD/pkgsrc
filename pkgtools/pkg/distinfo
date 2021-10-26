@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 14:47:19 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 11:11:07 nia Exp $
 
-RMD160 (pkg-1.10.99.7.tar.xz) = c37402ac7cfee2f0a45a521c3057027699f31603
+BLAKE2s (pkg-1.10.99.7.tar.xz) = 61884e04f4a8283925b53d388d19e3e56a0744459230f8d2c66ccd31e1b78ffb
 SHA512 (pkg-1.10.99.7.tar.xz) = 32bfb919da140bb7b75427ea6351aee3a4a297a0e13b5c722bdd5a0b8f488085883df36929fb97ff6fd944b901fa0fc95174b1474a9a4422047ffc626869e43b
 Size (pkg-1.10.99.7.tar.xz) = 2217824 bytes
 SHA1 (patch-scripts_periodic_411.pkg-backup.in) = ec4ff8991b79608c448739b693b2eb527b646c63
