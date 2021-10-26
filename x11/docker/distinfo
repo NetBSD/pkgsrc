@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:13:30 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:33:46 nia Exp $
 
-RMD160 (docker-1.5.tar.gz) = d36883acf4de5c2e97d478a7d29cb66645189748
+BLAKE2s (docker-1.5.tar.gz) = cd27af85b677ace8e3bbcfb47d67c2bf740704e8e339f44eeac99ab069ba0a47
 SHA512 (docker-1.5.tar.gz) = 71b47156c31e5db5620612d3444eb298489fb33da296742c10543838e65677daa1b81bb054e6a7f57b9e2adef47406c32040983cb09988d93778a555e72cd861
 Size (docker-1.5.tar.gz) = 14863 bytes
 SHA1 (patch-aa) = d569e1b93475c726fca06e6b40b86f18bb599096

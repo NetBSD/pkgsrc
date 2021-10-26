@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:13:26 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:33:42 nia Exp $
 
-RMD160 (antiright-3.4.tar.bz2) = 8724edd3bde35494dd27d7d28ec7813ca2d31785
+BLAKE2s (antiright-3.4.tar.bz2) = 3067959e181d2a7222df8951cbc0f0a728dc304e63fb53540fd36dd631fdacb8
 SHA512 (antiright-3.4.tar.bz2) = 51439443c9fffbaafb18501ee473df8dc9816812fce4c22518693b26b01ec9bf6268e88539391ac6f105f0faade79a935f114aa11ba40bbbe9904d3b94547988
 Size (antiright-3.4.tar.bz2) = 193282 bytes

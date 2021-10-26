@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:14:19 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:34:34 nia Exp $
 
-RMD160 (xcalib-source-0.8.tar.gz) = 5cf0674c1c5687d930a1653dc39f9b241000bfda
+BLAKE2s (xcalib-source-0.8.tar.gz) = 75fd007b7e3f2d6943037021851dd70583dbbfccff1ef94ff9ec644d907ad795
 SHA512 (xcalib-source-0.8.tar.gz) = 08d4cf579e566543ef7e5d233a6a49dd34a791a6aac31510d459d2300ec81828cf77ba2c495ee0c5e72e910c1986fc53c9ccd8f8455f097747508dd6adae8216
 Size (xcalib-source-0.8.tar.gz) = 32782 bytes

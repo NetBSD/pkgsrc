@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 15:14:12 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:34:27 nia Exp $
 
-RMD160 (sessreg-1.1.2.tar.bz2) = 089bf648ed9c7cdfd488d2161ff0be562f33ab7f
+BLAKE2s (sessreg-1.1.2.tar.bz2) = 0d14e9a63b0f4b69cf0a1466af5dfbacbf0e1ab0100708ea3115f1aab8ad3b82
 SHA512 (sessreg-1.1.2.tar.bz2) = 7e3c2bdcadb7133aace463b58d8c6108d315ec95d2a42509073eeddc7f02644092a4b3168bd3b426c041736a016291092e0bf8368acd620dbeff96d53d12f98c
 Size (sessreg-1.1.2.tar.bz2) = 137612 bytes

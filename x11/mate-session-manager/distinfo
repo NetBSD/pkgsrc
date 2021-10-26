@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 15:13:59 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:34:14 nia Exp $
 
-RMD160 (mate-session-manager-1.24.3.tar.xz) = bcb6073083369f12bc2349613f1c76cd31b470e8
+BLAKE2s (mate-session-manager-1.24.3.tar.xz) = 4817beb504c134d4d12fe7cb2aa3b144880204e3dce1d02bb8e1c28cb3491dfb
 SHA512 (mate-session-manager-1.24.3.tar.xz) = ea43caa350e5f3abda65001829fa7b84d043a7e8851ff74d1d09671f868b3f0be37ae951acca84f1764b26ec9b187c56791010f1b48bd8195ff8dbd70635446f
 Size (mate-session-manager-1.24.3.tar.xz) = 713004 bytes

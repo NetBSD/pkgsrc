@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:14:43 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:34:56 nia Exp $
 
-RMD160 (xscript.tar.Z) = 1ef8579f0e6a09b9d1b29d2218ae3d213a3f7ac9
+BLAKE2s (xscript.tar.Z) = 25e899ca438e9ea3b3f20a5310f15bfd06c4ac9b8f35fb8ff5eefec26b81f2aa
 SHA512 (xscript.tar.Z) = d396b2b95184e304262ee71d1c01737dd64f18a15b5b667a28fc246c656992d87577375a2150643dc96fd78ff8f2c33132dc49b72e812024d5e635ce5c5dcebd
 Size (xscript.tar.Z) = 122669 bytes
 SHA1 (patch-aa) = 988d5270563e03df0ec74d69d2379733076f9e04

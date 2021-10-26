@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:14:23 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:34:37 nia Exp $
 
-RMD160 (xditview-1.0.5.tar.bz2) = 4a6cef7252d17d74f77f15cd678d98260be13c19
+BLAKE2s (xditview-1.0.5.tar.bz2) = 00cf618a7886dee2291bc4879360358f10626022dc4897bf94a91b8b11a8f4cb
 SHA512 (xditview-1.0.5.tar.bz2) = e20c903f38394b496111267e142d84d11e69a3b89f91869652d1f2ee5c997a13f90bfa2966651b42cd3979a330b348a6e397cc6a74c45b1f3f91643e7c06765d
 Size (xditview-1.0.5.tar.bz2) = 151313 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 15:14:43 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:34:57 nia Exp $
 
-RMD160 (xset-1.2.4.tar.bz2) = 80282e0eb5c0f8f031154d65208890191587d31b
+BLAKE2s (xset-1.2.4.tar.bz2) = 68d68cc70fa42585272a9480c6c12f6e6696566f8c6a6773774ffb17c8637c86
 SHA512 (xset-1.2.4.tar.bz2) = f24714c9a82081a09d3054bbad98553de9366992f22eaf3e2bcadbb58fad1d3dad2547fef6fa9898d8a9df064573c29df9d82a5c801fa92248604c95f65dc83d
 Size (xset-1.2.4.tar.bz2) = 145546 bytes

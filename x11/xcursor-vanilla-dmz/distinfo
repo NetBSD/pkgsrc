@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:14:22 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:34:36 nia Exp $
 
-RMD160 (dmz-cursor-theme_0.4.5.tar.xz) = 53d6ccc344ff022ae008d689346a55ac51975848
+BLAKE2s (dmz-cursor-theme_0.4.5.tar.xz) = e08482bd411f18f7b8ac5322f489588a62bce1709d4f1d71c390b8738323bbbe
 SHA512 (dmz-cursor-theme_0.4.5.tar.xz) = 627fff9e4f690e30c6acbedb06035abc3ca7f6c6656a7e1290d752e115dbd8a41c37a2fe0d7cd7ece697c54dd7a343dd78d3c4604d124158961d95125f899f73
 Size (dmz-cursor-theme_0.4.5.tar.xz) = 947544 bytes

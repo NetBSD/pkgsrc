@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:14:15 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:34:30 nia Exp $
 
-RMD160 (transset-1.0.2.tar.gz) = 707167d0176b9862ea9029c9d3b618e2c61095b9
+BLAKE2s (transset-1.0.2.tar.gz) = 3eef5ef401445eeed827df0181f3a3d82a99a95d54abf463828e27f2bea1dd1d
 SHA512 (transset-1.0.2.tar.gz) = 76fafbe03403554fc245103981aae9877494bfa1aa793baab8b3b95f988b266c647a469d8820ae551b2f708236b58043a3f58aff6ac47b69fc4792f512c816c1
 Size (transset-1.0.2.tar.gz) = 159239 bytes

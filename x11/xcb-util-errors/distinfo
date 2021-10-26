@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:14:20 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:34:34 nia Exp $
 
-RMD160 (xcb-util-errors-1.0.tar.bz2) = c54eb45715287901e3eba1159deb7acdd88cd9d7
+BLAKE2s (xcb-util-errors-1.0.tar.bz2) = 89ded55c349abd4da3c768beee78fb37ecd8b833e970dd9b6896ab58e0b79dfb
 SHA512 (xcb-util-errors-1.0.tar.bz2) = 479b731b7056313955db9471d37416c4c9ab8c4574214fe20b3c0bcc1f57812fc343af6b0196814caaa6cc848dd120c70fab2f142902125cba63a8386d32179d
 Size (xcb-util-errors-1.0.tar.bz2) = 297943 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:14:14 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:34:29 nia Exp $
 
-RMD160 (tile_0.7.3.tar.gz) = 414931082aa29621afd80abd39d17310eae27538
+BLAKE2s (tile_0.7.3.tar.gz) = a931f69fb9acad031975393479994b51372accca3d85ebd8c2b9cc092bf05f5b
 SHA512 (tile_0.7.3.tar.gz) = 689dc10179c5505fb721091ecc3a09b24820279bbcfc1978c1927544002b1958460c9f2aee49035cbb03b8ae20f5e4f1e9411b19204f82afcbc39861d471642b
 Size (tile_0.7.3.tar.gz) = 111272 bytes
 SHA1 (patch-aa) = fd30d12795bb6b4f344cd251665936fc7285f97f

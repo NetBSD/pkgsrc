@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:13:53 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:34:08 nia Exp $
 
-RMD160 (libfm-qt-0.17.1.tar.xz) = 5a70467d04a87dde111cad84eb590e7ff929aa18
+BLAKE2s (libfm-qt-0.17.1.tar.xz) = 071cc9f304ae069b344e2036f81336d7e7c66d5bff822919cf48bea70c6c27f3
 SHA512 (libfm-qt-0.17.1.tar.xz) = 1e1781a01446f381625361a50f77422827e7ac5ab6039b4246369e2281edf78d3ccba866fa472667bcbb6737c44ebc350cb30a0055fc84d1f5d7e1c83e1241c1
 Size (libfm-qt-0.17.1.tar.xz) = 363052 bytes

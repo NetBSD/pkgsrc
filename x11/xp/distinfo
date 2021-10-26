@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:14:40 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:34:54 nia Exp $
 
-RMD160 (xp-1.2b10.tar.gz) = 035f6f7dd3143e220ab454388d1632788e9e2bd3
+BLAKE2s (xp-1.2b10.tar.gz) = b7ff180ca008933a01fd7d88b24e4669971e2e20bc2b780cb00087f4bdeb1948
 SHA512 (xp-1.2b10.tar.gz) = 6c45b91dccdf1a9dc5b836f7ed38a3abd5e309671c19011b0d3d3333049071ec3236bc531a1fada919ca7c43c54f48802b51644971d864860e1250f969073cae
 Size (xp-1.2b10.tar.gz) = 43036 bytes
 SHA1 (patch-ab) = 770f89ca133df9827370caf47280815d9923d52c

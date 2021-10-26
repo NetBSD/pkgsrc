@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 15:13:59 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:34:13 nia Exp $
 
-RMD160 (mate-applets-1.24.1.tar.xz) = 927171771660d506927391935befe239f6082cd3
+BLAKE2s (mate-applets-1.24.1.tar.xz) = d1a0afbdc90e484aefe869db2dd8c9de5f5cd7bb3bc72c9394c1ee634363b35e
 SHA512 (mate-applets-1.24.1.tar.xz) = d29e39a140310fef84cb0fe631568e0177ca5faaf2bf566211a23b32613fd6aabf06dd8ecd81a16e09553c659a7feda9ba372bb62a70504a235be58e07726ed2
 Size (mate-applets-1.24.1.tar.xz) = 8222540 bytes
 SHA1 (patch-configure) = ff3425ea0960eeca617b0fbf672e10206252c92b

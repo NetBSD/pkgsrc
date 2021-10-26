@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:14:13 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:34:28 nia Exp $
 
-RMD160 (slim-1.3.6.tar.gz) = 1bf3269b23275c50b67ada8cb5709e093eb6764f
+BLAKE2s (slim-1.3.6.tar.gz) = 45b562196e1253a1a341b821c866f4d0db9c747c73fda215cac52097af77ed2c
 SHA512 (slim-1.3.6.tar.gz) = 345b1dee5d6f0c3716dfa7c5c16274adbf18586bdaaa6af4f310e24c5a61f79a297ffac921a5ba545523317e9fe120916df226c36b9c9b49c2ac9c1ca21dee0c
 Size (slim-1.3.6.tar.gz) = 232547 bytes
 SHA1 (patch-CMakeLists.txt) = 8eaeba1bb48bcdb825a3809feefb62b7182fde42

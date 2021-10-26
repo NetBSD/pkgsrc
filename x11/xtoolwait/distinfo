@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:14:44 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:34:58 nia Exp $
 
-RMD160 (xtoolwait-1.3.tar.gz) = db75a684c5655d2cafad9eadedcf875e812f98d7
+BLAKE2s (xtoolwait-1.3.tar.gz) = ed46b1115788b914384fcee631b40f8bfe97592f154b49a6d98daed24e880b03
 SHA512 (xtoolwait-1.3.tar.gz) = 36c8446dd7076c18de8f6c582db45cbdc6b7ddc733993ddb08c8bd5c5045621597ae1b3144b92461feabeb14bd50a759f86023848302436ab915faa8c10ebdaa
 Size (xtoolwait-1.3.tar.gz) = 14315 bytes

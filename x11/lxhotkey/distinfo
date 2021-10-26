@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:13:56 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:34:11 nia Exp $
 
-RMD160 (lxhotkey-0.1.1.tar.xz) = b3306f6cb29d0cd5cc0fd90fe9135cc823c3b49a
+BLAKE2s (lxhotkey-0.1.1.tar.xz) = f509063a0a5f27e0f43323f64b72db57bad2c64bc611c14d5838e87b1de0ee05
 SHA512 (lxhotkey-0.1.1.tar.xz) = 5b84a5d28717abf2d93f459f7ec745c0185b784125bc86f19dbbe9b760b55f01bcd2334e68db1f33ad70c1d715efba54395d415b55d58b75849c4298651ac4a3
 Size (lxhotkey-0.1.1.tar.xz) = 287204 bytes
 SHA1 (patch-src_lxhotkey.c) = 5bee473b64d7f08b5d01bf18ebcdbc7f924061dd

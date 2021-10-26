@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:14:27 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:34:41 nia Exp $
 
-RMD160 (xf86-video-dummy-0.3.8.tar.bz2) = 9dfa82f4f9ee2dbca179cd798754d246491cbd21
+BLAKE2s (xf86-video-dummy-0.3.8.tar.bz2) = 8b6f6315c2700700a10c409b68ba65d9d9690a6637cfbc15e94a3b7934453cad
 SHA512 (xf86-video-dummy-0.3.8.tar.bz2) = f534113fd9987e44d2e0d0c53bd1b71be4ba69ec239ecec4aba8fcdcc10597722c54cbc01da38e0975ac7660e4e4028330e4cdd369e755c25ec059d2dfabad80
 Size (xf86-video-dummy-0.3.8.tar.bz2) = 302353 bytes

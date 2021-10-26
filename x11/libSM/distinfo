@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 15:13:49 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:34:04 nia Exp $
 
-RMD160 (libSM-1.2.3.tar.bz2) = f3802831627191ed11aa6f6d67160fd4fbf7e6d4
+BLAKE2s (libSM-1.2.3.tar.bz2) = 59057162d8c85699294dcf64c135fb609183996558ac7c403b5c7ccfa1651ea7
 SHA512 (libSM-1.2.3.tar.bz2) = 74c42e27029db78475e62025b4711dbac5e22d2f8e8a24be98a1c31b03c0fc4afe859928f851800ea0b76854f12147900dc4f27bbfd3d8ea45daaaf24b70a903
 Size (libSM-1.2.3.tar.bz2) = 362595 bytes

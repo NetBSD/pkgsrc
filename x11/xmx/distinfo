@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 15:14:40 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:34:53 nia Exp $
 
-RMD160 (xmx-2.1alpha.pl7.tar.gz) = 18560824a35ffc55ce90fa63d1894362afa45405
+BLAKE2s (xmx-2.1alpha.pl7.tar.gz) = f9435a3d71bcadaaf05d699e7560aeeab43f74ad1380d27953405f82efd0c20f
 SHA512 (xmx-2.1alpha.pl7.tar.gz) = bc4c444b4164372af2c1539ed575a2c0d9d502f24f4813ab14b3b0a9cb72dc6cdf9beb40965493f4f2a4fe23af798fb4258a536d5e97337700bdea927981e4a3
 Size (xmx-2.1alpha.pl7.tar.gz) = 498352 bytes
-RMD160 (xmx-jumbo-patch-20140912.gz) = c7a6a1cc2b408a2bd6e90b903bf80e8417751836
+BLAKE2s (xmx-jumbo-patch-20140912.gz) = d033d1e39732d0301aa9f6fef55568a33d0bc4a97d73b2d2c74bb6ea947b87d6
 SHA512 (xmx-jumbo-patch-20140912.gz) = 907e578cf0922b2eb307b3d9164a71e659a200249ce1ebc6a392957ab662c9a5cdb6c457158e6321b0dd7ba34c97ab8c3156b633b7e45c33c2e112fb6428a9b8
 Size (xmx-jumbo-patch-20140912.gz) = 16477 bytes

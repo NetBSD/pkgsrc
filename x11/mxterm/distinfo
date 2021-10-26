@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:14:01 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:34:16 nia Exp $
 
-RMD160 (mxterm_129.tar.gz) = 67e40886f25c60752d94cdb3bda831baf1863eb9
+BLAKE2s (mxterm_129.tar.gz) = f73fb7e2543b0bc402d4c8aef4559927c2858dd844d4a2de8621c07ef9e72e6e
 SHA512 (mxterm_129.tar.gz) = c4f8f4b0e84d9ab367becb4b734f9ad2845575de4ccada9c8cd2f99e4f69b6a3aabd10fb6cecc7458de91393db3764e1dd1efcc16c4864eb3031bd61943f8152
 Size (mxterm_129.tar.gz) = 743816 bytes
 SHA1 (patch-Tekproc.c) = 28a411a3fcd4a098a60d7406958c9fd629035636

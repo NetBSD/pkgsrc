@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:14:01 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:34:17 nia Exp $
 
-RMD160 (nx-libs-3.5.99.22-lite.tar.gz) = 33db4dcc1d54e956f875b5531637ef2123b154f4
+BLAKE2s (nx-libs-3.5.99.22-lite.tar.gz) = 538f5cb785d53d4afa851506fd3c3d4cfd45c7a8f434e2032f3b847d46b2d313
 SHA512 (nx-libs-3.5.99.22-lite.tar.gz) = 161587f87e52bf274ac7fbad59ceaf8ad111666a966b26d4f9a063fbb53f80f48a7844d343b7d19bf22e48707e925797e126058dbae6081b27dbb22a3346cd90
 Size (nx-libs-3.5.99.22-lite.tar.gz) = 740152 bytes
 SHA1 (patch-nxcomp_src_Socket.cpp) = dce79c91ede78fbc0367f5f9de81a7dbca5ba928
