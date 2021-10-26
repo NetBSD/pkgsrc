@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 15:02:32 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:23:25 nia Exp $
 
-RMD160 (maruku-0.7.3.gem) = 2a4b0914c7f310b92fd112b4d2567fd760030a6e
+BLAKE2s (maruku-0.7.3.gem) = 3799be58f3d8844c2e57d226bfcde298b2b244ff4d5535f39ad7ca2e4f23ddb8
 SHA512 (maruku-0.7.3.gem) = efef3eea7451e32c06c0820834cb98eb5424f6837b2e66e44482679d73d958e1e2c59e790a3e5ba26e0c91ece0a5c17f91877a7797d9a15a73b5344b0d444507
 Size (maruku-0.7.3.gem) = 140288 bytes

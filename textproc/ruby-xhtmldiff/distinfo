@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:02:36 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:23:29 nia Exp $
 
-RMD160 (xhtmldiff-1.2.2.tar.gz) = 81bca58acfd60f985a66564e4fbbc63d6a7af39d
+BLAKE2s (xhtmldiff-1.2.2.tar.gz) = 6f3f3fb9d8b5924e8dd5fd52575d9c5c40da88e418eddb4971587e8de927022f
 SHA512 (xhtmldiff-1.2.2.tar.gz) = 4f3edd60060744dd37078937b449f893ae35f016347bc662046effc7f97c9fa2eb62d323f0631456b1f040fde55e4e02de47160ae13751ce18069d120740b7f9
 Size (xhtmldiff-1.2.2.tar.gz) = 10457 bytes
 SHA1 (patch-packaging_xhtmldiff.gemspec) = 0dfacc055e27e2ca248fa43e0b649c2198869582

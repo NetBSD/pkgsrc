@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:01:14 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:22:08 nia Exp $
 
-RMD160 (hunspell-dictionaries/ms_MY-20050117/ms_MY.zip) = cc15f069dcb7df94cb9be0e2d8dcf32c0269e17a
+BLAKE2s (hunspell-dictionaries/ms_MY-20050117/ms_MY.zip) = 6218b4f2db096daaadbc638a30d52ec819e063e3612f95317a37c9d277851eb0
 SHA512 (hunspell-dictionaries/ms_MY-20050117/ms_MY.zip) = 93709c34991c9d72f4ed18f07ca15140c4398a2b1755b02f0e6131a167a82a08e8d4f9f9023bc8c8807324922b3563a37cbf14b772d291b04d7fe30ee66d0a3a
 Size (hunspell-dictionaries/ms_MY-20050117/ms_MY.zip) = 87736 bytes

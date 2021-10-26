@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:02:30 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:23:23 nia Exp $
 
-RMD160 (htree-0.8.tar.gz) = d418391c17bda2cab3a501f8596ab319b281389f
+BLAKE2s (htree-0.8.tar.gz) = ff291f13ddf2119b47bd7d86b2242d4bd8da545d440b76bddde0053d08affbac
 SHA512 (htree-0.8.tar.gz) = ef8c5de0a1fbc1b2e78738fc4187a50bb88096fedeccc2bd3471283e24e4f3f9bab3998f11e1b3f7a0576ddb1364bf1d1be482ea0ef29187424e11d58f09e976
 Size (htree-0.8.tar.gz) = 151374 bytes

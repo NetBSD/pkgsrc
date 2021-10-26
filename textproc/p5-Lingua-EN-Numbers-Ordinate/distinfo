@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:01:35 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:22:29 nia Exp $
 
-RMD160 (Lingua-EN-Numbers-Ordinate-1.04.tar.gz) = f37defb69fd06ea687becb8de9f1aac425c017b4
+BLAKE2s (Lingua-EN-Numbers-Ordinate-1.04.tar.gz) = 83f476b8e3ef9aafbd05e227d9d6367d0d845b8eb4696a20a8133e72b5cda009
 SHA512 (Lingua-EN-Numbers-Ordinate-1.04.tar.gz) = f8f5cbfc9ae1d7b4e5e134c8fb089f6ec4ecfd90e0168ece874b007ae8b74936e5aecc38344c036c0845ab7a8c192d07c5a2cdad8f96176c71e89e2e4ae1211e
 Size (Lingua-EN-Numbers-Ordinate-1.04.tar.gz) = 12019 bytes

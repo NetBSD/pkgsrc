@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:02:25 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:23:18 nia Exp $
 
-RMD160 (qprint-1.1.tar.gz) = adfe94bba4a841ede9bf7e25df2cc7a7fc6f1915
+BLAKE2s (qprint-1.1.tar.gz) = be51049e378fbc94e8cca28b69681e91ce5bed86303ecd6fdf8ab11466d52030
 SHA512 (qprint-1.1.tar.gz) = 4748f52cc8cabf72a2685fba93ee9957a9a36658a8b0c9fc1994e1779aad59a94b942ed3dd2501c6a35636e7c75e24d512a5de5f95b0ba66ae40acee8bbe1cca
 Size (qprint-1.1.tar.gz) = 358575 bytes

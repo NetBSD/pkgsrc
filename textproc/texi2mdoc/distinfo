@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:02:42 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:23:35 nia Exp $
 
-RMD160 (texi2mdoc-0.1.2.tgz) = 2f641e06996f0e0be13a58525a643495258a1e85
+BLAKE2s (texi2mdoc-0.1.2.tgz) = 6e0358b1e16d51ae4aa8369562bc08fa2831eae83a941f8e43592b678aaf5434
 SHA512 (texi2mdoc-0.1.2.tgz) = 362110ea6a0a530f87454e47340189d12b71dcccae4cccae35f29b9043f728773e43b5ce5d5c8dcfa86f82a659980b462dd579a1e2b5ec56b67a534066a611af
 Size (texi2mdoc-0.1.2.tgz) = 23101 bytes
 SHA1 (patch-Makefile) = ca470c8731c8cc8d84026925961d8560b89000e4

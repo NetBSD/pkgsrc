@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:01:35 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:22:28 nia Exp $
 
-RMD160 (Lingua-EN-Inflect-Phrase-0.20.tar.gz) = 5364a81c91a106b8aa5e15b22cff12ffb5c3af26
+BLAKE2s (Lingua-EN-Inflect-Phrase-0.20.tar.gz) = 5de9780f79e83a6ed4860e63e8c596e780e08b20c85e71891242a39b2753a4db
 SHA512 (Lingua-EN-Inflect-Phrase-0.20.tar.gz) = 880e5e57580a0d178467700539f43029664a40a0b177a3b4fd8bd061db4082bc9618f15b26322ad1321d7fd21f09cb217a4f2bbf4badc72282d869a4e4ffcdc8
 Size (Lingua-EN-Inflect-Phrase-0.20.tar.gz) = 16191 bytes

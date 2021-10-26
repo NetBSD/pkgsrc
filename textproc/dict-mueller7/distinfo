@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:00:55 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:21:49 nia Exp $
 
-RMD160 (Mueller7GPL.tgz) = 1d1a674313d871482f326a898e3d1189e461baf2
+BLAKE2s (Mueller7GPL.tgz) = 08fa9a984253736e499d465b79e13159d6ed0cbe4ce43c4512e77746c0a2ad16
 SHA512 (Mueller7GPL.tgz) = e9f64eb81d28f6371df4904a66100bec686f1a6ab102b4d799ad6d5695d96f4e3fd5da4151360b7d9ff43ed8a3db656d0eea228e6011d8d6bb1288eed7ec30c7
 Size (Mueller7GPL.tgz) = 2386052 bytes

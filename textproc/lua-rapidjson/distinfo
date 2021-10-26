@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:01:26 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:22:20 nia Exp $
 
-RMD160 (lua-rapidjson-0.7.1.tar.gz) = d088e03472480a1847c7ff2be03c9fa551d90968
+BLAKE2s (lua-rapidjson-0.7.1.tar.gz) = b7ef1bb2a7b6795994967fb87586d5fb09d3cef2c34576286e517f3e08b867fa
 SHA512 (lua-rapidjson-0.7.1.tar.gz) = e84157ddf000605cf41faf359eb51223867203cccd3c0d3597b1bc8e237ad6eda85ddf7854d97f1c57551e601f9a4389ac51143b4c51c27d21344b71e5a084dd
 Size (lua-rapidjson-0.7.1.tar.gz) = 196402 bytes
 SHA1 (patch-CMakeLists.txt) = 0cab7e139d29289582bfda81edf6e74d6df00494

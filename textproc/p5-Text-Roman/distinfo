@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:01:50 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:22:43 nia Exp $
 
-RMD160 (Text-Roman-3.5.tar.gz) = 0d14d219790320919bfa5a2f4be5479ffaf9a275
+BLAKE2s (Text-Roman-3.5.tar.gz) = d644416b403b8d5485bf625ff5bbd5774c2316263384a7cc8e494ae5a9d32180
 SHA512 (Text-Roman-3.5.tar.gz) = 597ca054094f58c0983c66ce2b22dbc4d69861b02495663987e6b66dc0044a0d7e18e51ef817ed3c76832d283c01c6f9f51e68af7cb6b186b27553b5a877bc33
 Size (Text-Roman-3.5.tar.gz) = 18122 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:56 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:50 nia Exp $
 
-RMD160 (XML-Filter-DOMFilter-LibXML-0.04.tar.gz) = 2a18f5609766ed906047be2b5f64f3b971be7b90
+BLAKE2s (XML-Filter-DOMFilter-LibXML-0.04.tar.gz) = bddb5a7ce284fba78b64b4656f0001dee33f4f3f243ec67303bc9faf198a91da
 SHA512 (XML-Filter-DOMFilter-LibXML-0.04.tar.gz) = 7a82262ca50b95da663fcc4fdb8de75a8526c623da2e05d4932b3ad4fbc94f72e341e34c32ab92223a5e1161f0807b6fc7caa1b7cacb4724bb0cf8d648c32ae3
 Size (XML-Filter-DOMFilter-LibXML-0.04.tar.gz) = 5382 bytes

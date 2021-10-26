@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:02:15 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:23:08 nia Exp $
 
-RMD160 (mistune-0.8.4.tar.gz) = b63b71998bac291a54fc94f11700aa806bccb92d
+BLAKE2s (mistune-0.8.4.tar.gz) = cb947311d0db69a660f19188e542f02b4518430760c185fc4010806e422cbcfb
 SHA512 (mistune-0.8.4.tar.gz) = 36c3ef5d5537f5cceaa43e4da20a84b27c378cb744a93f0380024faefde490bcb42c453f79002ca049083fc437278f4afb3e10de5462f9eeb9077ca2a2fcaea7
 Size (mistune-0.8.4.tar.gz) = 58322 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:01:55 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:22:48 nia Exp $
 
-RMD160 (XML-Compile-1.63.tar.gz) = ddce0f84f7a0e99cd0773355c4c87527845dedbd
+BLAKE2s (XML-Compile-1.63.tar.gz) = 15da7d48f79d6ee70c4597660a551c3d36c7d9e9d78ee0bdb7e0571bd544a07f
 SHA512 (XML-Compile-1.63.tar.gz) = 92f030ae7d54ef9aa82910e570d011cb98eda1546695a26626e5b17bfde7016d155f50ffe87fd4ae4111d075ad852d44fa7183ec96bf0c5cb2a7fba46a1a13db
 Size (XML-Compile-1.63.tar.gz) = 210240 bytes

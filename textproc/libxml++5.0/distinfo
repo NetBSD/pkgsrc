@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:01:29 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:22:18 nia Exp $
 
-RMD160 (libxml++-5.0.1.tar.xz) = 2bd00b4b9b2ff059954ac834a824d4ca2e2831a9
+BLAKE2s (libxml++-5.0.1.tar.xz) = f6daf03d72fd908fd23cdc3981af8ea2e209470999ef6d97ea967ef3e3be1b60
 SHA512 (libxml++-5.0.1.tar.xz) = a8715b4a383190098f51cce3462e9ff7220f40195e957bea75a2b4fffe623841a3f649c72fe78bb9442dd680f9ac6667e67f706255e6b517d9513a642d754e32
 Size (libxml++-5.0.1.tar.xz) = 779760 bytes

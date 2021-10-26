@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:00:49 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:21:43 nia Exp $
 
-RMD160 (aspell5-tk-0.01-0.tar.bz2) = ddf39521a2802d0976ba9b17685846d128a3376c
+BLAKE2s (aspell5-tk-0.01-0.tar.bz2) = 99cf77dec206a96d4ffc058fff7921660bf44d0d0c73675674c290b32be4ddb2
 SHA512 (aspell5-tk-0.01-0.tar.bz2) = 0a4a0c3be9b9322187677d47f56c091f6c3ae2662b8d6831e9fa2e18720277f76c79e9e0c65ee37474459a19dc5a99519af8492645b241cdc076775afc4a700f
 Size (aspell5-tk-0.01-0.tar.bz2) = 29930 bytes

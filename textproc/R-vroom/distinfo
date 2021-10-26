@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:00:39 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:21:32 nia Exp $
 
-RMD160 (R/vroom_1.5.4.tar.gz) = 27e5e996bb66a13980c8a82f2b2c417faaa0c538
+BLAKE2s (R/vroom_1.5.4.tar.gz) = 507fb4fa786657a5bc905311927222b44b190f7e4ff6e1f8b59f90f4b6afbfb9
 SHA512 (R/vroom_1.5.4.tar.gz) = 10457ef894fd51be4e5e041dc8abbf6003b6f28e389d7bbf936c753d057e8ce1130d61714649671e1674f15d07dda144e28f14b2dc0111c481e720bd3296edc8
 Size (R/vroom_1.5.4.tar.gz) = 721979 bytes

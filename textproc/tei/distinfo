@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:02:09 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:23:33 nia Exp $
 
-RMD160 (tei-4nb3/dtd.zip) = 54f44b49b26405725dc95b65d53d8b644e595317
+BLAKE2s (tei-4nb3/dtd.zip) = e6a22805ba3c539f56c55cdc534260aedb15df2168c891cd0380cf5c9eda5bbf
 SHA512 (tei-4nb3/dtd.zip) = b89eb9f1523e26d228a5f8d49dae582a8f2e8ecbafeeb31582a127b33b219efaec15c109175680457412725f2e30a0da0c97f48df76d3b072f5b242e6c03c4c1
 Size (tei-4nb3/dtd.zip) = 73194 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:02:29 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:23:22 nia Exp $
 
-RMD160 (feed-normalizer-1.5.2.gem) = 4ed6215edda133aabf1ca32957e6ddf7665fcd1f
+BLAKE2s (feed-normalizer-1.5.2.gem) = 294f851eb86de31f4fdc0c2a7261995a8cfa424aa4f567f0062439080c21c014
 SHA512 (feed-normalizer-1.5.2.gem) = 44d98e7a3e18731f4bb5adb372a503e8fd7400a8b1eb4c21c4b68ee831a0f5aaa8b5b01eb5c510a004e4fb660108aa66f8f8805662445b9da4bdfa55bf7a1cec
 Size (feed-normalizer-1.5.2.gem) = 44544 bytes

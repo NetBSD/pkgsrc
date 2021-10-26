@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 15:01:11 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:22:04 nia Exp $
 
-RMD160 (hunspell-1.7.0.tar.gz) = 52c7dbf21f460a0b61ea7d0378ef314773887fde
+BLAKE2s (hunspell-1.7.0.tar.gz) = c9bf2226ad2b9bc5f094914f5e40f961a61120cc102d76f3d4716468940fef59
 SHA512 (hunspell-1.7.0.tar.gz) = 8149b2e8b703a0610c9ca5160c2dfad3cf3b85b16b3f0f5cfcb7ebb802473b2d499e8e2d0a637a97a37a24d62424e82d3880809210d3f043fa17a4970d47c903
 Size (hunspell-1.7.0.tar.gz) = 482156 bytes
 SHA1 (patch-aa) = 8c6102ddb2e449b6f1abc23f679e0f6f38bfd0b5

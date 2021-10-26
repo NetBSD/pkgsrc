@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:02:38 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:23:31 nia Exp $
 
-RMD160 (sdop-0.80.tar.bz2) = 60e2bb4270faab62010b7551c2e958a960a7839e
+BLAKE2s (sdop-0.80.tar.bz2) = 2448ffb51d73941639c3529919afafcd11f3edcd9ed391b3d3e887e2b87569ed
 SHA512 (sdop-0.80.tar.bz2) = 42767a67c39ee71306db6bb78eb4310dd722550ac3c13af49bce59bc54bfc04b1b644a38de8db49cee7aa75c189d2ad530768630522e1b699bfbcbb3db06c92b
 Size (sdop-0.80.tar.bz2) = 2033805 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:01:28 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:22:22 nia Exp $
 
-RMD160 (metauml_lib_0.2.5.tgz) = d4b0ca50c1879eee53f4380a7a20b049f699d432
+BLAKE2s (metauml_lib_0.2.5.tgz) = 7a93923144f067ff4dc27c33e2252a7eea4a794749a95b6e6fbf1b5ba34d3ef4
 SHA512 (metauml_lib_0.2.5.tgz) = c484a219784aaa930565d0f7b3a81575e3ab53c8268c6e89e3c35215ec33c17eb4d53bc2f145353c44e78de1b0dff694c502c5b4e410354e4a42a15a6b809778
 Size (metauml_lib_0.2.5.tgz) = 35462 bytes

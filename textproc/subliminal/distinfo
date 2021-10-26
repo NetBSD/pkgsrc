@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:02:39 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:23:33 nia Exp $
 
-RMD160 (subliminal-2.1.0.tar.gz) = b2d37c118cad7645c69b63aabdc5591731c8416f
+BLAKE2s (subliminal-2.1.0.tar.gz) = 843ab53a31568ec8afb52de1a1f6be6ddcd3cd98668956a0e64a32903e23c047
 SHA512 (subliminal-2.1.0.tar.gz) = cba824329b5590856331b4b83dd753eebbb732979a826cb7e7017c176bce892d28f7fe1f237e27c3afabda113dd8967ce6772006bc9be0abe48c3ea14fe05647
 Size (subliminal-2.1.0.tar.gz) = 52468 bytes

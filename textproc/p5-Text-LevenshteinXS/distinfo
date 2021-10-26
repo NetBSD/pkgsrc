@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:01:48 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:22:41 nia Exp $
 
-RMD160 (Text-LevenshteinXS-0.03.tar.gz) = 4339923a7031fa114bd6a48ea2991034b2e3ef5a
+BLAKE2s (Text-LevenshteinXS-0.03.tar.gz) = e4c65b43d992e6c54bca7252ac3a81ea7bd23e97f1ffa1be175c2e897cf3308e
 SHA512 (Text-LevenshteinXS-0.03.tar.gz) = 406a7da28981f863fb46a9808641a1932dd5f68d3375e62f891e3681402afee86668544628219aa48d1c4e190602f5b896da2dba044124481ad815556f85bc8a
 Size (Text-LevenshteinXS-0.03.tar.gz) = 3063 bytes

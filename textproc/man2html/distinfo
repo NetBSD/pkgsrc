@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:01:27 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:22:21 nia Exp $
 
-RMD160 (man2html3.0.1.tar.gz) = f3463926acc414a5f934e2cf1fd6fd59dcc454bd
+BLAKE2s (man2html3.0.1.tar.gz) = c191ce7ee3c626b10f4451de5a16d7a3793e7fbdd26335973a33639221d7e17b
 SHA512 (man2html3.0.1.tar.gz) = 6a57ff109cfc9d8a31150990f3a2304ee46956feeead9d528344be19ac252afb47bed36a470d3a9e9505ef7134b77a1edf30f5c97e8215c2c5d235cf8aee8565
 Size (man2html3.0.1.tar.gz) = 45371 bytes

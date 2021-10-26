@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:01:01 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:21:55 nia Exp $
 
-RMD160 (go-text-0.3.3.tar.gz) = e10455ee91c3031dd7ef9e55fabad22a253f45f3
+BLAKE2s (go-text-0.3.3.tar.gz) = 613157177ffcda543b4931ff4010e1b4944feae29e9037eeab57ddf66856bd52
 SHA512 (go-text-0.3.3.tar.gz) = e44883e5be2526f58d282160aa9079d57bfd386766a2e8b91acb207dfbc502f9160f1073b952c61e72f12c5709f4b4d901e1269c67fa2e85234a968521f56f8d
 Size (go-text-0.3.3.tar.gz) = 7747332 bytes

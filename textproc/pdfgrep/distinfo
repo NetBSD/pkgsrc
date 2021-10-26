@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 15:02:03 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:22:56 nia Exp $
 
-RMD160 (pdfgrep-2.1.2.tar.gz) = 59fe7845f96c988a3f96cf324a0bb72fcc6d8b97
+BLAKE2s (pdfgrep-2.1.2.tar.gz) = 0a68131d4abe72092556b0b811cbaaca5ead1b71110bfd1bc5b985260737fdd8
 SHA512 (pdfgrep-2.1.2.tar.gz) = 27bc4741e5203b2fd265815a22ad8d702b3455b2ae932641b040fc9ce615bc9ff0abef221eb2ec8aa59c79cb139d31184261d076f9731177129a473d62aa4e5c
 Size (pdfgrep-2.1.2.tar.gz) = 197289 bytes
 SHA1 (patch-src_cache.cc) = 64f38fe8e99792119b79f7af50fb34d77bdffec3

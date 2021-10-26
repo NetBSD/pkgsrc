@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:00:57 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:21:51 nia Exp $
 
-RMD160 (dtdparse-2.0beta6.tar.gz) = 0df38da70ecd8b80b8a4b5c926d9953524e01c71
+BLAKE2s (dtdparse-2.0beta6.tar.gz) = 1f3dc3cbff4cb428d7ff877a3ccd24bc48b7b767c8d8cca4cefda0e4cecc1fd3
 SHA512 (dtdparse-2.0beta6.tar.gz) = d49b95dfb55ff10973ab1e709335d4b27bb9b189ff3242762e3ef38f1151960681830a476810e57036cb1fcb98a9269de0e1925d0eb53f6f52a1b5dbde66eb60
 Size (dtdparse-2.0beta6.tar.gz) = 37950 bytes

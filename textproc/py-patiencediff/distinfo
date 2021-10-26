@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:02:40 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:23:09 nia Exp $
 
-RMD160 (patiencediff-0.2.2.tar.gz) = 0951df305d180dffb2f585473886ca6cd88d42a6
+BLAKE2s (patiencediff-0.2.2.tar.gz) = 3c93f57a0bdac43befdb81bde2ad522f29410dc43c83d23dc39e826910aee2d3
 SHA512 (patiencediff-0.2.2.tar.gz) = 9b1e058604e114cc4ac6e5855d51cb1f9599fd692a48a1d68ff56f4e82cf568fa4d3858fe7bf233b784b07bf2825f7fd1d1ba0ca71371242ae46820ef469ebd6
 Size (patiencediff-0.2.2.tar.gz) = 28799 bytes

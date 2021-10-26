@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:00:36 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:21:30 nia Exp $
 
-RMD160 (R/commonmark_1.7.tar.gz) = 70139893268a6355fc7a69c4fb3e0a3b9d6b050a
+BLAKE2s (R/commonmark_1.7.tar.gz) = b1edd03662cabd28aafe8613d682edc0ce9aa09b7ec413792be0421cb574b67d
 SHA512 (R/commonmark_1.7.tar.gz) = 23f384bae4cc46153f3dc61599234a17a04c9fef2eae0dca744a9a8b43768f8f96f779a0fbb7c3ff9f6ba39d3f3512bb382b32960bf2875cc5a5bb8de4ece5e9
 Size (R/commonmark_1.7.tar.gz) = 134002 bytes

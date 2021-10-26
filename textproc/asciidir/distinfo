@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:00:40 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:21:34 nia Exp $
 
-RMD160 (asciidir-0.6.tar.gz) = 469caef8356762e46d6a7aaff423016204631c99
+BLAKE2s (asciidir-0.6.tar.gz) = 86fc97b5cae1c54d627112a613d39725483fb4be68ba3466e70421092f581408
 SHA512 (asciidir-0.6.tar.gz) = 67c8aca814ed0a9667040cf97c86bdcf99f492ae7fa8b2c5037b0bfad9c1bcf4fad1a077dd033ee7ff368db52691e6c16247e9195eea7dcc3d099570d70cb0d7
 Size (asciidir-0.6.tar.gz) = 137005 bytes

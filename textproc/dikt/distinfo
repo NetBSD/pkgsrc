@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:00:56 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:21:50 nia Exp $
 
-RMD160 (dikt-2j.txz) = 511fa78656eee1754ca60f3afb9d5db76b385883
+BLAKE2s (dikt-2j.txz) = 6226d705c7adf3b957ff61f813b4d92c2dc421900af8c3bee5ff4df1593e8bcf
 SHA512 (dikt-2j.txz) = 9eeaa7993df7b570f026164628b93f3bf3f15cfb41e402f60caddbc319f00542db3c45944ccf03c2f877ddd4e970d2458c27d27d8f7093d9aa37a2bd9f59b42c
 Size (dikt-2j.txz) = 51824 bytes

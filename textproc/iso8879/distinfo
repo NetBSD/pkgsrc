@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:01:16 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:22:10 nia Exp $
 
-RMD160 (ISOEnts.zip) = 8d7c2fb63dec85058073a7e7b6fea97a4f76e5ff
+BLAKE2s (ISOEnts.zip) = 3069e2716fb431ead99ef2a3fa45de9c9289d09202c1e74b6b9797a526252df9
 SHA512 (ISOEnts.zip) = 31c740524737c151a60a0696455892b5d7219c9a7cd3f88d8f07c09cb289ddf90de6d8c27da26eddbe2410e9b5d6283a67527e7ebbd4c3b4cb6ae982cdf449fd
 Size (ISOEnts.zip) = 20510 bytes

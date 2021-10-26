@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:02:46 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:23:39 nia Exp $
 
-RMD160 (xhtml1.tgz) = 923b346b4cd7e2fac147692c95abca93cacfc828
+BLAKE2s (xhtml1.tgz) = e2146f39f936df3f784d8864ed5651f48efb5c50dd8de184499169b0f9ac6c46
 SHA512 (xhtml1.tgz) = 184758381c5e2d36b80fa1e4470e864777383ff7539b48291036f8a3f1dba0b354a32142bfcc9071147fb20bcd4c0d4d541e09e865047938ab4cf9ae5a806412
 Size (xhtml1.tgz) = 232192 bytes

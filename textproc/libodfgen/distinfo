@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 15:01:22 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:22:16 nia Exp $
 
-RMD160 (libodfgen-0.1.7.tar.xz) = b65e5504731bd0d24e411eb44c6371658c9f42f8
+BLAKE2s (libodfgen-0.1.7.tar.xz) = 95ca2863ba2f3ce3a2d9cd64dae59b0f45dcd78751b73151f5e4dbf0bc3b2ad4
 SHA512 (libodfgen-0.1.7.tar.xz) = eaf5c6646a9cacf54cb0416b08526f35d18d0618f3f64cf14f4b24537b0285da2786d2f6d6e2c204c8248f900d37287b2c5af79720b0d49452f67b14c86ea36e
 Size (libodfgen-0.1.7.tar.xz) = 384760 bytes
 SHA1 (patch-src_PageSpan.cxx) = b61c6af1885e3d863671708d1562f37724fbda94

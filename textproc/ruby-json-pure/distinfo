@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.31 2021/10/07 15:02:31 nia Exp $
+$NetBSD: distinfo,v 1.32 2021/10/26 11:23:24 nia Exp $
 
-RMD160 (json_pure-2.5.1.gem) = cb2768a49db409f5e21096b6a6f9d0ec598053ea
+BLAKE2s (json_pure-2.5.1.gem) = 3a38060dbb8aa49d2d40f4409add1d454a8ca08bdc1454b0ae3583afe9d09dcb
 SHA512 (json_pure-2.5.1.gem) = 37ea898ad790ace9869c850e7544e49cd7182d1b44f8982932a4fccfc0766e4653200e767ec96dcba482e1517539b380e7c08b99ee325642432de0f1519d51a7
 Size (json_pure-2.5.1.gem) = 61440 bytes

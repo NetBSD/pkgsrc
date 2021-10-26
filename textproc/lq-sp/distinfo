@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 15:01:25 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:22:19 nia Exp $
 
-RMD160 (lq-sp-1.3.4.12.tar.gz) = 22ec669ac6be310aa75eadf3d8e4a274e27edcbd
+BLAKE2s (lq-sp-1.3.4.12.tar.gz) = 3b3e094dd222ca61bc61b5680fd5f037f84e08f25f873f15594c24190d5e8607
 SHA512 (lq-sp-1.3.4.12.tar.gz) = 22e80e0afc84871e39cdf25eecd354745fc280662b3f293b7b39725e42646635997e16f786af62ec97601ca95a667216b4590384f264227404eba2e917ae2cc0
 Size (lq-sp-1.3.4.12.tar.gz) = 568250 bytes
 SHA1 (patch-Makefile) = 77d9139ff791b1638cc5830ef6b5c66467320bc2

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:02:04 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:57 nia Exp $
 
-RMD160 (php-excel/1.8.1.tar.gz) = 62e30a6d0944507f236cea72a1fe2cac32c948da
+BLAKE2s (php-excel/1.8.1.tar.gz) = 5c46d5a4d236c1cb3a7583b6d8abe1107c6e87720e08967bf35b7a4d369f1282
 SHA512 (php-excel/1.8.1.tar.gz) = ad8763b912ae99995554590440e7e50c299223305e29c8c70e93de6ed4f153187cb9489675d471410fd26846ec28f2a3db533b252927fc8eef0faacd5a1485e9
 Size (php-excel/1.8.1.tar.gz) = 1783922 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:02:49 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:23:42 nia Exp $
 
-RMD160 (yodl-1.31.18.tar.gz) = 71e42d72368a5850de89353880050feb026c58e0
+BLAKE2s (yodl-1.31.18.tar.gz) = 001d516e274fe84968702e97c57fefab4e0bdb01bcb6cdfb322bea70eed1642d
 SHA512 (yodl-1.31.18.tar.gz) = 57c1c871373cb23c4d5be3a666c0de2c0e607cdd3971b89a9bd6630c846d39ca8b34ebe1227111fc75a60795e09a465d0c3b67033930296a3bb05f829f152239
 Size (yodl-1.31.18.tar.gz) = 320053 bytes
 SHA1 (patch-aa) = ecb2e2f61d43e69b685b2821d9601e82cb0647ca

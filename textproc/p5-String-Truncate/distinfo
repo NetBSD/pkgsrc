@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:01:43 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:22:37 nia Exp $
 
-RMD160 (String-Truncate-1.100602.tar.gz) = 5e168d35b4cb523832a6ecc057515ec8141bee27
+BLAKE2s (String-Truncate-1.100602.tar.gz) = b0fdcec3bed1f5c8cbdb0559c1a26751e9ab47b4a3978b195cee20e8791694af
 SHA512 (String-Truncate-1.100602.tar.gz) = 67519f7c4e3b5b7021b71d70468e3b74b0a60b09cf32988bdf0058a10ee4bec80b189ee33f7c2bc67db804d92ceddaac11feb2f39c7f8b941b12f52eee47b90e
 Size (String-Truncate-1.100602.tar.gz) = 16889 bytes

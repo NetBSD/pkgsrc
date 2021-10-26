@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:02:40 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:23:33 nia Exp $
 
-RMD160 (tdom-0.9.1-src.tgz) = b65898bcc97fe69ba92c8edaf8e1eb156abfd0c5
+BLAKE2s (tdom-0.9.1-src.tgz) = ca6661c2bb629d53f358bc611b5cb5c565eeb8f25ea39b60cafe02477a780ded
 SHA512 (tdom-0.9.1-src.tgz) = 40dd5ec942ac4cce2fd78f53caf3a2b5e2fae9fbc5617923d94f07c9f530fa936696d79abe080ade2edbc4f4a86c35898b000180f20d9320edd8bfa3fa19d863
 Size (tdom-0.9.1-src.tgz) = 1100163 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:17 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:11 nia Exp $
 
-RMD160 (br.ispell-2.4.tar.gz) = 03af370a1bc12b965f602e177aa21a9280975589
+BLAKE2s (br.ispell-2.4.tar.gz) = bc36ba8f71ce0f9482b54b57dcc2d222f495809ee19595f79a743585c9ec8721
 SHA512 (br.ispell-2.4.tar.gz) = 17c56c48471ac1763ca6b0cb2b6a788a2ff7a7b2ff5cbbbb14be59e4d8fcf158ffebec79c256b3d20695495c31799a0c6d64e58c38b3b2563d6f982df5e7a514
 Size (br.ispell-2.4.tar.gz) = 125359 bytes
 SHA1 (patch-Makefile) = 12fb745c382764a8386f510cb75b8774e0b66102

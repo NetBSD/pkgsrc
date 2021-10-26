@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:01:41 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:22:34 nia Exp $
 
-RMD160 (Publican-v4.3.1.tar.gz) = e1a4ba0f8f5e57e9882814a19609c6bbe6b22cc8
+BLAKE2s (Publican-v4.3.1.tar.gz) = cd6c13e6f97e1ea2d1f36b15d9e2ba39b8526ec7820a0961e4108a3e52add105
 SHA512 (Publican-v4.3.1.tar.gz) = 7af55f818ed98d28ed1e3b5529a793c5a12e168773889fc893a7c6d590da09524ed2786f50eb3a24a65fe93884ee3d8e4f9b5a84557d0dfa754bf573ea7cecf4
 Size (Publican-v4.3.1.tar.gz) = 4045663 bytes

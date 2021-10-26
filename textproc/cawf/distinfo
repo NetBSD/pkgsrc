@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:00:52 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:21:46 nia Exp $
 
-RMD160 (cawf-4.10/cawf.zip) = 33bce828f0a88c05c32c221a9fd5d1ca5d4ad2b4
+BLAKE2s (cawf-4.10/cawf.zip) = 4cf311409090f4d9894b8ceac57bc53f6c199f484bd09219566c8f5183c01db5
 SHA512 (cawf-4.10/cawf.zip) = d36b6f0c6411c6d01f153d68044e693fa5d05f9145d56995fb656171fe1eb0402b6e2f8ea5f45bdce570b0993f42099dd8a051700904121b9df806562da82d07
 Size (cawf-4.10/cawf.zip) = 287677 bytes
 SHA1 (patch-aa) = 21ff1ae5d3fb3a32cb855c2b4353ffbe62ebcd17

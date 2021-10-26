@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:01:12 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:22:06 nia Exp $
 
-RMD160 (hunspell-dictionaries/en_US-20060207/en_US.zip) = 9f050c67fc0dbdec2cfe1915b3339c9f4543f117
+BLAKE2s (hunspell-dictionaries/en_US-20060207/en_US.zip) = c8353d1e20cecac891a1a6e506a2c392fd3a563ce3fa4c1da054c5bf7bf49be4
 SHA512 (hunspell-dictionaries/en_US-20060207/en_US.zip) = 96297b103f581e479916e7b2183ec71dd390e01b6d5a9474f1a97bd4930610400d567ddc0610446ee1f4d90d1960362640e86fc3cdac20c718aa19c97d8e381b
 Size (hunspell-dictionaries/en_US-20060207/en_US.zip) = 248417 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:57 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:50 nia Exp $
 
-RMD160 (XML-Filter-DetectWS-0.01.tar.gz) = c5b3a26f91e192aaea1a19634434fe33472cafe5
+BLAKE2s (XML-Filter-DetectWS-0.01.tar.gz) = e88518b294f4b2e374af5bb3991aae21a50f3dd3dfbca5c453e39738ced09a54
 SHA512 (XML-Filter-DetectWS-0.01.tar.gz) = 01ff07e8e1f61a6cebfb3cec17407502ab0b0aacc2acd93670b6c97f08237a7ce0af3e7937d4577a3d0ad5f42b54a992ba5c7a00681e667dea8f3a2f7ad38a9b
 Size (XML-Filter-DetectWS-0.01.tar.gz) = 5932 bytes

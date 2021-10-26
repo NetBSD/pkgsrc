@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:17 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:10 nia Exp $
 
-RMD160 (ispell-emacs-3.6/ispell.el.gz) = 2f3c262de1c526fd9c67d840841f484d7a807edc
+BLAKE2s (ispell-emacs-3.6/ispell.el.gz) = 4900645985055711038300449c75823304a90cb7cc6e5d147fdd8080faabee5f
 SHA512 (ispell-emacs-3.6/ispell.el.gz) = e0d83e8fbb615c1b7ccc30f09ffac47023852f65d5a1b38cd385d97ded75b33f6add26e3f4873b43078994c2ee7e15fccf7319beb908299726833a0b0bc0ad34
 Size (ispell-emacs-3.6/ispell.el.gz) = 39944 bytes

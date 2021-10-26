@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:00:54 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:21:48 nia Exp $
 
-RMD160 (cwdiff-0.4.0.tar.gz) = cc23f81d20d7ce9f0407d3600f47ebd9eff32d5f
+BLAKE2s (cwdiff-0.4.0.tar.gz) = 19a1c78a375035c95997d3f5cdd213d54a345bc1fa7ac20d70692d442dd54f14
 SHA512 (cwdiff-0.4.0.tar.gz) = b5deda44d94bd3aa93a68da136f4170996ee02c683c38329cbc16a108e0795e86c3543759e1d7adc3d512d4dcbc416436e733341e1b4f3d96325e999e84a4fbe
 Size (cwdiff-0.4.0.tar.gz) = 4468 bytes

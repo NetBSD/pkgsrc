@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.29 2021/10/07 15:02:38 nia Exp $
+$NetBSD: distinfo,v 1.30 2021/10/26 11:23:32 nia Exp $
 
-RMD160 (source-highlight-3.1.9.tar.gz) = f69de8b826d697633455b2b560851509bbf8bd43
+BLAKE2s (source-highlight-3.1.9.tar.gz) = 0cd88f93a781e7ff22ff13c4fced0b933c99ca77416d67b06e79e85953e3ad11
 SHA512 (source-highlight-3.1.9.tar.gz) = d8e154e9a5d62c77807e4e5d36c0faed5ce2964291be5f8b83e2968a6de52229503689a4ca2109a717ae2632a14b63ec937ca0430c91684c72063f6bc0294195
 Size (source-highlight-3.1.9.tar.gz) = 1717234 bytes
 SHA1 (patch-lib_tests_stdboosterror.h) = 3948726a1e358bfcf83a8529c4a9b452c2907e62

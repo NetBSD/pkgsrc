@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:02:30 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:23:30 nia Exp $
 
-RMD160 (sary-1.2.0.tar.gz) = 0c38bf02edb08dabc3577bfde1357ec8821a27f7
+BLAKE2s (sary-1.2.0.tar.gz) = 0dfd8e661c4e376b0e4ae2aca0dab59ed6f24d214696eb28056347aa35f925c7
 SHA512 (sary-1.2.0.tar.gz) = 0eeae82a384970b4d96f7a0ca3929e74d17b8b3ebc61459ec9fc7172e61c3835ffe2de8aaab7ebd64f54be24d39f6734949ebc98758c28cec299b3bd25020632
 Size (sary-1.2.0.tar.gz) = 393787 bytes
 SHA1 (patch-sary_builder.c) = 9af27aeb24865de4b9059aa3118698da1c8f384f

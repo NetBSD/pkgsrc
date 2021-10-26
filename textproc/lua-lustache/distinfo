@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:01:26 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:22:20 nia Exp $
 
-RMD160 (lustache-1.3.1.tar.gz) = 472eb181bea8f52276f6cdb5292dd70c13b14be2
+BLAKE2s (lustache-1.3.1.tar.gz) = af0eb73c904e10b70c2761691d6df4431473a4f017943d6f20f77100d91b4e22
 SHA512 (lustache-1.3.1.tar.gz) = f1ba0bdd38e60957df1995f32a73a16d1b430072af4e14cce530345c74d542021223c0ef41b0f997f88d762bb194fff7119701cd289e16e3e38dfe3f10d0d9d8
 Size (lustache-1.3.1.tar.gz) = 11414 bytes

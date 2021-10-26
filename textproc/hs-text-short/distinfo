@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:09 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:03 nia Exp $
 
-RMD160 (text-short-0.1.3.tar.gz) = 18f758d202a55670bc1fc748e24d624d48cc1d12
+BLAKE2s (text-short-0.1.3.tar.gz) = 614d095bb7e1499aa50e07cafd85ef93882f1b00716a9afd924f293c159c3279
 SHA512 (text-short-0.1.3.tar.gz) = 6d7a5379dbaf28a201dd44229959a293acb5ff57c4659a6a34af37e46b2e6fc5eb61a00ba26d36dd08795456246429ec20236af8e342fd0d03bfcf6d06d69428
 Size (text-short-0.1.3.tar.gz) = 24435 bytes
 SHA1 (patch-text-short.cabal) = 43632121b9d9689f3a095dce365e93dc3ed1cb83

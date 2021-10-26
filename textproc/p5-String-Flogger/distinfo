@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:42 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:36 nia Exp $
 
-RMD160 (String-Flogger-1.101245.tar.gz) = 680cff1a4bb55d650d5bce8fdf874c98a265760b
+BLAKE2s (String-Flogger-1.101245.tar.gz) = 95a1e3ea9f39bd69a186c27bddc157483945a48f9860f3a570c3bcefdaa80adb
 SHA512 (String-Flogger-1.101245.tar.gz) = 6bd9c413ba1816221278521f6a43d475f4d4748be23034da0340b37e20044afb2d26e03b7529ddac3d98485cc1de69a4b0dcffe75ce61eea1eed7b154ab6e11e
 Size (String-Flogger-1.101245.tar.gz) = 14438 bytes

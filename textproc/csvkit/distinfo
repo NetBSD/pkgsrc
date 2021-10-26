@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:00:53 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:21:48 nia Exp $
 
-RMD160 (csvkit-0.9.0/0.9.0.tar.gz) = 2836ec7769e87ee0fe13829187069ebcbfcac26b
+BLAKE2s (csvkit-0.9.0/0.9.0.tar.gz) = c26f14554b396cd65cc28831d7ea496ad8bcd98f009a7d720025b37cfaf54d37
 SHA512 (csvkit-0.9.0/0.9.0.tar.gz) = f4315a9e6de26d8dcccb127aa1f6b2d0018b84be561797a0d7094b036add5ceb8232d27a4d5e63dffd039524ec96399fa667b3feb40256df82d47be95ff08fbe
 Size (csvkit-0.9.0/0.9.0.tar.gz) = 3928467 bytes
 SHA1 (patch-csvkit_convert_____init____.py) = b2da7ef399cac88c9f4de737aa0b43ee61341ce0

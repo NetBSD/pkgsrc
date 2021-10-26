@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:02:06 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:23:00 nia Exp $
 
-RMD160 (antlr4-python3-runtime-4.7.1.tar.gz) = 29916b2cd3078aaf0f78c9a4f21c4f7e93784b14
+BLAKE2s (antlr4-python3-runtime-4.7.1.tar.gz) = 8c3ed220b0507c5c7d92ed170b0d14cfe9b359573bd6ef6f08342bb0396b2f42
 SHA512 (antlr4-python3-runtime-4.7.1.tar.gz) = a101e40be24476e54630799d99e939a65e625d1ff85c9deb2db945d652f0677fced42387250a3c974ea9399b11b9cfe631877f0ab67ebba992ed61130c9451c7
 Size (antlr4-python3-runtime-4.7.1.tar.gz) = 111381 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 15:01:58 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:22:51 nia Exp $
 
-RMD160 (XML-NamespaceSupport-1.12.tar.gz) = 1031c3ee62fb85c54a07ca0164827aa805a758a0
+BLAKE2s (XML-NamespaceSupport-1.12.tar.gz) = 3b774ce0f858679e2387c292c427a7965311b94116cc4995a6fbf6e822266d34
 SHA512 (XML-NamespaceSupport-1.12.tar.gz) = 8a29698acc152888b3abd53b277f89209252830cc3b57d587a5b66e5019445d7c1858a08fa548d42387c1143b726da1440e36eb0c69b0b59c3770b5f528f38b2
 Size (XML-NamespaceSupport-1.12.tar.gz) = 18012 bytes

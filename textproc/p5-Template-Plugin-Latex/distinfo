@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:01:44 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:22:38 nia Exp $
 
-RMD160 (Template-Plugin-Latex-3.12.tar.gz) = 8f4c8efdf842952c40942eb3c550fcbbad6d61bc
+BLAKE2s (Template-Plugin-Latex-3.12.tar.gz) = 941a4ff9bfb82562826a53c60953ec6dc09412ffbe623c7bd523a704cd9c0cc2
 SHA512 (Template-Plugin-Latex-3.12.tar.gz) = dc962b84c93de8a900b0b0231ef801704dfaa9d1831d170b5307193615a9071978a3a5051ad64eba105cb6943f2a1a70e213ea7d576a2e7408f5d64036914abb
 Size (Template-Plugin-Latex-3.12.tar.gz) = 20067 bytes
 SHA1 (patch-aa) = 92cce4fe7ceff3fd049ca131a4aa802b70df1341

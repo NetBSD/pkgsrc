@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:01:25 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:22:19 nia Exp $
 
-RMD160 (lua-cosmo-16.06.04.tar.gz) = 0ca12a5faa1ea22a074a2e380f25c1ec132a205a
+BLAKE2s (lua-cosmo-16.06.04.tar.gz) = 4f55b98c77b841f2d06f7dd1573238dcafa15d69823ffe10ca2d3b42ab098c6c
 SHA512 (lua-cosmo-16.06.04.tar.gz) = 3bd67d48693c46038f2e644b0ae380a169b8811ca72b03d99847bef7911812f6e447c2edec3440dc93f9ac505397938a57af4a683a7745e48692625398bbe585
 Size (lua-cosmo-16.06.04.tar.gz) = 25798 bytes

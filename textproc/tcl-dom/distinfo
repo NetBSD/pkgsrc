@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:02:40 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:23:33 nia Exp $
 
-RMD160 (TclDOM-1.6.tar.gz) = 0902a2e4f82bae91ca2cc2dd2e14cbf9a6656f2b
+BLAKE2s (TclDOM-1.6.tar.gz) = dd68452970c601b79de85444912e5c925c7e74c97637e6bb58258ec2ee5f50c5
 SHA512 (TclDOM-1.6.tar.gz) = 69ef0df8318f92c6e63d0eed8daa0aea5a55fd9c35189e98900a9dcd10a21963d1be92301d501d5a4286d5f146075bee16c1c99d5427a00d6baa6e2a9b5ae1b9
 Size (TclDOM-1.6.tar.gz) = 28400 bytes

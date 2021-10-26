@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:02:26 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:23:19 nia Exp $
 
-RMD160 (regxml-20100901-d9f326.tar.gz) = 45448c013dc6bdae3a1852e5a99984cb6f2afe71
+BLAKE2s (regxml-20100901-d9f326.tar.gz) = bf4eaa758a19e7749fb80c841b686ec6d977c719f653e2832bef235bc0ac7849
 SHA512 (regxml-20100901-d9f326.tar.gz) = 40282a6731e597118438fd96c87d70ac2b5cde08deaed87adbbc2217f1d7e93503b9dbb43dc46ca9fd0afa15b36dde848b29b444f09c6a6187f4ab0c11cbd70a
 Size (regxml-20100901-d9f326.tar.gz) = 47261 bytes

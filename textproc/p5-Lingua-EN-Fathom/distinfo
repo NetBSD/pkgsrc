@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:01:34 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:22:28 nia Exp $
 
-RMD160 (Lingua-EN-Fathom-1.22.tar.gz) = 6b592c79a01de32b40db13e15312ec3b8817f257
+BLAKE2s (Lingua-EN-Fathom-1.22.tar.gz) = ac7090bef7a2fa3d77d7cd4dc3344dcd6e87f9905227a9b3f48866d9c27c0a82
 SHA512 (Lingua-EN-Fathom-1.22.tar.gz) = 46d997bc4a7621196bdfa58f52751c3eeba6b1d8d6dc913eeffaa86c80d19646fb6aea847fdc3c3d77118b6f1bd279e6915debcea4889576c97ca046a80beb7d
 Size (Lingua-EN-Fathom-1.22.tar.gz) = 10976 bytes

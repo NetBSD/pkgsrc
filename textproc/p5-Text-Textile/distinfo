@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:01:51 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:22:44 nia Exp $
 
-RMD160 (Text-Textile-2.13.tar.gz) = 6cb3cf9a8e1f422c8121036c6ea732380f6ccff3
+BLAKE2s (Text-Textile-2.13.tar.gz) = f105f6482e724ee60d02bddabaf9da3861d15cd5a862359b064d136906cef9fa
 SHA512 (Text-Textile-2.13.tar.gz) = 3803a51f21165964f4860e008124dc00e7b57279dc0be24ac90b98456776879c5269e6d25ca65980d03ca62a57c059caa1b725d48a22d628f72af390f341d605
 Size (Text-Textile-2.13.tar.gz) = 35956 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:02:26 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:23:19 nia Exp $
 
-RMD160 (rarian-0.8.1.tar.bz2) = 2e4c0a4d22a4e0c41d4d3dc8e4a5ad080ee3b6ce
+BLAKE2s (rarian-0.8.1.tar.bz2) = 1744c122dfb4b40f0716a743fe3afe5b3a744bfd7a575bd2d650326df30e614b
 SHA512 (rarian-0.8.1.tar.bz2) = 64f3e7fbe423e45a59453805fe6b4116e0ffad43c7e88fe362d76a326c70936c6b46c4a4dc57cf43e3535c16f2f07fa1b2affa0aaeae637ee3ede48850c1fc60
 Size (rarian-0.8.1.tar.bz2) = 324441 bytes
 SHA1 (patch-librarian_Makefile.in) = 0f41cbaacd43a8f3358671dc9604a1092b7ba971

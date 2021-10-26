@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:01:54 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:22:47 nia Exp $
 
-RMD160 (XML-AutoWriter-0.4.tar.gz) = dca751c46fbb9726c9d58aa9179784b314b0c41c
+BLAKE2s (XML-AutoWriter-0.4.tar.gz) = f5aa10ec5cda4664718c3e06fbc5368a78dac23ac32b8ba9febf7cf1fab9964b
 SHA512 (XML-AutoWriter-0.4.tar.gz) = ef49a052df8686d5e3fa14ff83053b5dfb617a3fac66db47c5f7d539d54423e7a95aa7612e313a581c9f2012f996f4a8019652079ef096ced3b22203de26e992
 Size (XML-AutoWriter-0.4.tar.gz) = 48672 bytes
 SHA1 (patch-Makefile.PL) = 0976d7e6d473f3f5789255c9dd51a4248f150dac

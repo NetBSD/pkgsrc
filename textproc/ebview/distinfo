@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:00:58 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:21:51 nia Exp $
 
-RMD160 (ebview-0.3.6.tar.gz) = c32de00be68c13794f2c1d9c08edc34fc5dcb613
+BLAKE2s (ebview-0.3.6.tar.gz) = d1e894a6262169f6e985405105987004c5360e3189e189c957a737888ef4d05d
 SHA512 (ebview-0.3.6.tar.gz) = a18c5d04657fabc2146693e53973782672163f491c86b1bf6fe165e1ed903caa0ca0df788133f4a48d0a58903836057af354fee25599acb0713d1d0354b15cf3
 Size (ebview-0.3.6.tar.gz) = 564915 bytes
 SHA1 (patch-aa) = 8ecee1eeb1fddb9f1378a3258c8b8ae9a91c1640

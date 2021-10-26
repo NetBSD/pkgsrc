@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:02:06 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:59 nia Exp $
 
-RMD160 (Tempita-0.5.2.tar.gz) = 381576f8de8b7b48533bb35cbede5f09ff527382
+BLAKE2s (Tempita-0.5.2.tar.gz) = 7bc4afeab743339a5598eb8dc6272b0e85ceaf3cae10f1bcca0d15c23170d021
 SHA512 (Tempita-0.5.2.tar.gz) = 582d3ca35dfb2ad44491cf9e526db9f9c34c419f2b03a5ce86a7e5183f7760b380262367c062161d577c3fb3e69e39ee99bbf8e493873e1da1a350ef2f63630d
 Size (Tempita-0.5.2.tar.gz) = 12648 bytes

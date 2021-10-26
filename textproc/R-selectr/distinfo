@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:00:38 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:21:32 nia Exp $
 
-RMD160 (R/selectr_0.4-2.tar.gz) = f5e0274f99a958f06941b2c5f7c50d0ab8b2609d
+BLAKE2s (R/selectr_0.4-2.tar.gz) = 572d4d1c4612afd178aa36ef638e8a7ac437bcd5686943a60716604475412229
 SHA512 (R/selectr_0.4-2.tar.gz) = 4f142e644a206a4a24a7bdffd04acaf4deb34b8e7cc9104b24de20b8bffbefcc424d223df25af5792430fcef051364423b903f385353ba4269bdc1886bf30c1b
 Size (R/selectr_0.4-2.tar.gz) = 41371 bytes

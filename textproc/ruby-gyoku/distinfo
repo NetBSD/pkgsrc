@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:02:30 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:23:23 nia Exp $
 
-RMD160 (gyoku-1.3.1.gem) = 6a005e71a7161bcbb39b79847a2ee81504723f1f
+BLAKE2s (gyoku-1.3.1.gem) = 440ee074f01b0a563cc0213e2caa80976f33a86766b1c7fd4faeb24f2c0d5aea
 SHA512 (gyoku-1.3.1.gem) = 12ebab28273346842d13060386db7d96c71224a4f562f2a4a496ea5dbd2341cdf8850148d6cb37ffb193724f428d82e4978e79de97d4e5205c8d346d69df4745
 Size (gyoku-1.3.1.gem) = 16896 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:01:48 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:22:41 nia Exp $
 
-RMD160 (Text-Hunspell-2.14.tar.gz) = fb9c8e665471354a1290aa8879ce938054258d8b
+BLAKE2s (Text-Hunspell-2.14.tar.gz) = bfda19cf4ecfc164769df5a058c795b78b970ffb7d23b97b431e21bbd6861c39
 SHA512 (Text-Hunspell-2.14.tar.gz) = 927d9e12fd5998dd4999b9b4f3bbc63d0200e7ed021995b27504d1d799363eb598354933adaeb45cb28c02ee7dc655f3948368f8577d08386fb0e8637c349054
 Size (Text-Hunspell-2.14.tar.gz) = 281296 bytes

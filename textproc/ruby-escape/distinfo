@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:02:29 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:23:22 nia Exp $
 
-RMD160 (escape-0.2.tar.gz) = 2590205a221a780080747508f31390b45deea121
+BLAKE2s (escape-0.2.tar.gz) = 1e6caf893122fa3605419a53156b7f47e745a443894e8de44e0cf0bbd4a1bbe9
 SHA512 (escape-0.2.tar.gz) = c95afdaa7da9d9c97beef8607b5c60e4153cb816a274fbf89f75ae59a0bb1be2b52d90580464dd992706ff1f097bbe66c6d5d7a7626b6b49a5742dcdef813ffc
 Size (escape-0.2.tar.gz) = 19317 bytes
 SHA1 (patch-install.rb) = a5207b6f7e71f628355c29e39bdbdbb26b382331

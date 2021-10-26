@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:02:48 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:23:41 nia Exp $
 
-RMD160 (XQilla-2.3.3.tar.gz) = 826ad38f21c5268cc325cd52f3fc7b3843bd3729
+BLAKE2s (XQilla-2.3.3.tar.gz) = b7b57f33ec46e5596110ac5a3e684b09cc92bbc2eacee5d3038a69f33305863b
 SHA512 (XQilla-2.3.3.tar.gz) = 5a27416eaf1d7120c42dbd5c737e112954d4e3782de5ff4c77e29f1bcd1a5712cdc5a76f707d9c3323526a361e46df98d8ee1ca87c760d389d85598a8265054f
 Size (XQilla-2.3.3.tar.gz) = 16170903 bytes
 SHA1 (patch-src_dom-api_impl_XPathDocumentImpl.cpp) = 095c9d2f0b9c1b1155e16fd2c61741779e701117

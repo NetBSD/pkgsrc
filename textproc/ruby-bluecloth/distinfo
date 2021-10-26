@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:02:28 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:23:21 nia Exp $
 
-RMD160 (bluecloth-2.2.0.gem) = 095564d3f162860bfc54d46d6331870d4c3e51ca
+BLAKE2s (bluecloth-2.2.0.gem) = 518016b4e46ab630c3d1dbcdd973790330a2775ed0ffcf60ee1c9958f6a5fe53
 SHA512 (bluecloth-2.2.0.gem) = 498ffc9eddd47ded1df5c60e8ae8647de1e0376c7787c42dad2450c15a237b01a734bd0a2742c56cb59831cddc5b35c88e954abc0a087fc803ce4890c07c2852
 Size (bluecloth-2.2.0.gem) = 94208 bytes

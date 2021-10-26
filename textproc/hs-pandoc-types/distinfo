@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:01:08 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:22:01 nia Exp $
 
-RMD160 (pandoc-types-1.22.tar.gz) = 1b4f8b7b02b805295a62d9aadb634c4254635df8
+BLAKE2s (pandoc-types-1.22.tar.gz) = 4e604ebf825fd9ec271836b9b7c14f92513c85eec2723b6b212a0d41216ce23e
 SHA512 (pandoc-types-1.22.tar.gz) = b5f7c15b31c5ee6faa4d7574baa32d252b1e79350840f2d7ac3f3896b969e18241e514fb06e85aa97d7a74c0904839d04a4d8e5d4ff86d0a2b80957b99279ee0
 Size (pandoc-types-1.22.tar.gz) = 34702 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:01:35 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:22:29 nia Exp $
 
-RMD160 (Lingua-EN-Sentence-0.31.tar.gz) = 0d340ccbd379f1866c88fb0eca790d4e0cf1ca5f
+BLAKE2s (Lingua-EN-Sentence-0.31.tar.gz) = b6177143441d5bd6350a347d1333980e7f93a285d281c7554077705e646145c5
 SHA512 (Lingua-EN-Sentence-0.31.tar.gz) = d7e9d1ab7f8193b848e197176c60874db1c3385ebb3e7d28b7b85ac3dc429a94952b12646d18e77369ee979db6175540c3dbee5f8750a3c377df07940ea93365
 Size (Lingua-EN-Sentence-0.31.tar.gz) = 18074 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:01:46 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:22:39 nia Exp $
 
-RMD160 (Text-Brew-0.02.tar.gz) = f7b5249dde0b184041216ded99764568b3bccba7
+BLAKE2s (Text-Brew-0.02.tar.gz) = ceb7ba90c21dc5ab6443245aeef45bab0105b67d5c18ea904f0b86558f8b8c6d
 SHA512 (Text-Brew-0.02.tar.gz) = 6748a30fdff84427d5846b926ffcd25a4e9f15ba0f572c6f0516ba92552e6172ed536ee35ef922a86637efe9a5b04b470d5734a715b28d4ec120d124050f3877
 Size (Text-Brew-0.02.tar.gz) = 4663 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:00:51 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:21:45 nia Exp $
 
-RMD160 (bibclean-2.11.4.tar.gz) = 9a68c05599911ee0c4c89f5a7c3c4c9d8b3b7fb2
+BLAKE2s (bibclean-2.11.4.tar.gz) = c50ae00b78f9e4c8ea2e3337fe971ce74959d6ad41088cccca1490213bc55187
 SHA512 (bibclean-2.11.4.tar.gz) = 00bfa17b6aa0e11a0419ccebf67fc3f927032ded3055f889cf4738677bd01dae9003021d2d83397adaa451aad45c5409af18132fbd69ad4e0da4b757394563f4
 Size (bibclean-2.11.4.tar.gz) = 2165967 bytes
 SHA1 (patch-aa) = 05275bdaa0f8f7d304905c55faed5f5b5a6ce56e

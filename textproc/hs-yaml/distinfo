@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:10 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:04 nia Exp $
 
-RMD160 (yaml-0.11.5.0.tar.gz) = 033d667a300768c19a3cb7584aa20b498e70e22f
+BLAKE2s (yaml-0.11.5.0.tar.gz) = 32b38ba53f608ed7e3dc36b15b46c875a7e8a5168cd352e3cd171077560c3d34
 SHA512 (yaml-0.11.5.0.tar.gz) = a4209cdbe75413191aed5a72f13a0cc4af04906a3e8ce629711689624f334b31681dcfc2fc89fdae20a874c5e6831e9663a30188d34d8067491ff8958912930b
 Size (yaml-0.11.5.0.tar.gz) = 30049 bytes

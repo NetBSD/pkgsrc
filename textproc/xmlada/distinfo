@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 15:02:47 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:23:40 nia Exp $
 
-RMD160 (xmlada-4.4.0.0.tar.bz2) = 389328c6582e96a139694ce854e1fdc8af6d892b
+BLAKE2s (xmlada-4.4.0.0.tar.bz2) = adb166ea5ba9f770d7549c0c7c240e99b199bf6d303badee62150792aba2b21d
 SHA512 (xmlada-4.4.0.0.tar.bz2) = d275864a38ebeff6c4cea6cf26a122edbbabe5232dc2af57178a104d911983b2ad428d099ce185ce3c81187fdb5396d24e23758cf6c69835d0dea1afe9a7c517
 Size (xmlada-4.4.0.0.tar.bz2) = 632217 bytes
 SHA1 (patch-Makefile.in) = c4358a6395420628e76040523dc780a0130015b0

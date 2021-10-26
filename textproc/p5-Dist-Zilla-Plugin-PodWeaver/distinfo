@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:01:33 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:22:26 nia Exp $
 
-RMD160 (Dist-Zilla-Plugin-PodWeaver-4.008.tar.gz) = 756ab76ed870316ab639dd64969b2dabcec6688c
+BLAKE2s (Dist-Zilla-Plugin-PodWeaver-4.008.tar.gz) = a90a3c64db619a3f98f89dbc6029c237ea4c7b11d353ff9b89eaff9a98e312d0
 SHA512 (Dist-Zilla-Plugin-PodWeaver-4.008.tar.gz) = e780dc2269b9691d0c334866c278fd2dea2eb68a3d84a5c8dad80b2b9277a7396e523a2b8c45b32d7c8b7b1379b7e3f7d68871b40901d3fa3a2bb0d039e824e5
 Size (Dist-Zilla-Plugin-PodWeaver-4.008.tar.gz) = 17501 bytes

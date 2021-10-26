@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:02:02 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:54 nia Exp $
 
-RMD160 (XML-XPathEngine-0.14.tar.gz) = e5093d8732fc2bf6ed23044f41d36d4703bcf701
+BLAKE2s (XML-XPathEngine-0.14.tar.gz) = f4b1c27876487109bb7c021e0f83a290227980fe58e4560cdeb8c7831a4ad2d2
 SHA512 (XML-XPathEngine-0.14.tar.gz) = 2af1733ab3c7601543558b363109385b8fff93da2ac7c502966fee9df5d6c7dd7efe34cc671fa56e68dc2804365229731abd1880812f6f7064b28a9096842ec9
 Size (XML-XPathEngine-0.14.tar.gz) = 26118 bytes

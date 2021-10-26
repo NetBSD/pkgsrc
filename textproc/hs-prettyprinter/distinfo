@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:01:08 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:22:02 nia Exp $
 
-RMD160 (prettyprinter-1.7.0.tar.gz) = dbfd6db8c7f53a9cc92d77accb8f25edf16b2499
+BLAKE2s (prettyprinter-1.7.0.tar.gz) = 24aa9c5819225f112beade3cd45fda6e55259adfef73f093223e35049812634f
 SHA512 (prettyprinter-1.7.0.tar.gz) = 4f1b756b3284a0319bb73229e8445f6d92c3d3d12a879f651df5624389bd6c449b2d9bc440dbf70d8752a6ba574d0539f91950d4bafbe7f9d3fd79d0d30ec95d
 Size (prettyprinter-1.7.0.tar.gz) = 55569 bytes

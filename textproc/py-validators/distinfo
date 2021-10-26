@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 15:02:23 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:23:16 nia Exp $
 
-RMD160 (validators-0.18.2.tar.gz) = 59f36f8f8652a85b79128d446d08838b3038ed2a
+BLAKE2s (validators-0.18.2.tar.gz) = 1e1616b573caea8dcbc6b0c44a9bc992b860b69097ea712fee0bf87857d9065b
 SHA512 (validators-0.18.2.tar.gz) = 8213736508e56b5d4ddaa9c8e707a7ceb398c8b2c41b938d626459d8bf134aa113116f49cef0cd317033a683d18493448ac4107a5f50151899946bbd48197411
 Size (validators-0.18.2.tar.gz) = 30299 bytes

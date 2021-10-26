@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:01:56 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:22:49 nia Exp $
 
-RMD160 (XML-FeedPP-0.95.tar.gz) = 3a0ab770cebf4db74621e01babf2ed571d25142c
+BLAKE2s (XML-FeedPP-0.95.tar.gz) = a479446d17a3fc24a11abf9cf591b1047f989cf7238e0ccf03bd2716fd7916d5
 SHA512 (XML-FeedPP-0.95.tar.gz) = d196b444f47528b12f89a45a132c09f39e9664755f3bb106fe661548406f52996fb44b84da8a212d3cb7f79c4492b640ccd4c81ed8e83d453fadb92876139402
 Size (XML-FeedPP-0.95.tar.gz) = 47192 bytes

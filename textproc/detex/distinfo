@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 15:00:55 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:21:49 nia Exp $
 
-RMD160 (detex-2.8.tar) = 983ea90de9e3559317baf4a71de0e8de47863b7d
+BLAKE2s (detex-2.8.tar) = ae98c5141ac2e2ad8a4e16717a2d3e26c9afffc728f49fb4937b5b99fe8c03ea
 SHA512 (detex-2.8.tar) = 5afd54aebc3a018e9b72a5e5f37d05858b0b90c1165ec725b08995f5338479153a04ff938a2f54543108c66ac2f66d2c06159d331c9cde304ebce32b527c737f
 Size (detex-2.8.tar) = 318976 bytes
 SHA1 (patch-aa) = fc0bfd8144608dbd8b1f8ff74eb2da73e62495e4

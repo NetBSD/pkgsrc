@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:01:23 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:22:17 nia Exp $
 
-RMD160 (libuninameslist-dist-20200413.tar.gz) = fd8802bcdc17fc0f23ee08f8150ec434f30ebc87
+BLAKE2s (libuninameslist-dist-20200413.tar.gz) = 04e981f939d0c10a89693ef22475e6f8352cd6c88659fff009324b51513e7db3
 SHA512 (libuninameslist-dist-20200413.tar.gz) = 88befff4bf7efed149b4e3a5d58a733b2cb6477e103ec34529ff02a88f8c72a6fc9d7b0be9e97cd539a75c8ebe5e4127cdf03a568da2f219157174b9b585b2a3
 Size (libuninameslist-dist-20200413.tar.gz) = 1210689 bytes
