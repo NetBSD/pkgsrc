@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:32:09 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:01:06 nia Exp $
 
-RMD160 (kmediaplayer-5.80.0.tar.xz) = d3fddc22a474526f0fe68e55a51832b664e6a990
+BLAKE2s (kmediaplayer-5.80.0.tar.xz) = 495606f4ef7363eaccd9492bdc5d7c5a29a4ab0acb46b1a2fc583d6e1d89c373
 SHA512 (kmediaplayer-5.80.0.tar.xz) = 9504c38caeed69eefce54e8328e664152d9bd8f1afb666dba4325de29041f5819029fc999e51bf4cff5c306f858a9e78c19e04d575fcda9f016ea252c4b8ddc3
 Size (kmediaplayer-5.80.0.tar.xz) = 9716 bytes

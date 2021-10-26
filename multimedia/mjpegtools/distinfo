@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.29 2021/10/07 14:32:14 nia Exp $
+$NetBSD: distinfo,v 1.30 2021/10/26 11:01:12 nia Exp $
 
-RMD160 (mjpegtools-2.1.0.tar.gz) = b63a26442e440512d946c4591ee604689f6e8159
+BLAKE2s (mjpegtools-2.1.0.tar.gz) = 77195ae3486e1333c2b466169ae3077772bd65b7d3cacb8acaec4568386f59c7
 SHA512 (mjpegtools-2.1.0.tar.gz) = 10d3288f47d7cc4de87fa63f65e0fd4bd0a9af95db77155eecccecae7a7e60ebab83eaec44cf7a2c3d9e627f0cc086eda208abee1a7a74cbf3f85e87bb979ac5
 Size (mjpegtools-2.1.0.tar.gz) = 1844336 bytes
 SHA1 (patch-aa) = 0c46a6a6d5f7e5103cdcc51e03f9d109900cb37b

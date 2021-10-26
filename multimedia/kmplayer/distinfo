@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2021/10/07 14:32:09 nia Exp $
+$NetBSD: distinfo,v 1.29 2021/10/26 11:01:06 nia Exp $
 
-RMD160 (kmplayer-0.12.0b.tar.bz2) = 070d85dc5c6fb86e16dfd1a7ece2a8a3ae16fac6
+BLAKE2s (kmplayer-0.12.0b.tar.bz2) = 570b67128484b078701ddde32e0b67f4e8e681e4ae3f99d75d1bdfba7603e23a
 SHA512 (kmplayer-0.12.0b.tar.bz2) = d34c496d0c24c6d5c1bb675b83fac60da5c9672e4076aed72bac2e9b333e88d031076e7e386ec7b61ae8ece88870f6187c61f483f425aa78edd1e443c7f2e882
 Size (kmplayer-0.12.0b.tar.bz2) = 599496 bytes
 SHA1 (patch-src_CMakeLists.txt) = 407d76078b00e172dc0f33bab7530ab7e6df6d8e

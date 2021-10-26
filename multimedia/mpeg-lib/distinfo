@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:32:15 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:01:12 nia Exp $
 
-RMD160 (mpeg_lib-1.3.1.tar.gz) = 27df1f6568c763df41beeed6382af88377da3e38
+BLAKE2s (mpeg_lib-1.3.1.tar.gz) = 79d3c4d35f357d8937d0834714e02aa80452aafb11af0f4214521afe0bc871ff
 SHA512 (mpeg_lib-1.3.1.tar.gz) = 7c71bf9df583493055174de92d7df18451c942982bb212842442a152bf4017a55b219150fd357d5bc1492e2e31f30fe30327b34f17f20e6fbdedd91c8dba1876
 Size (mpeg_lib-1.3.1.tar.gz) = 152092 bytes
 SHA1 (patch-aa) = 6f43a8a94c8efa3f241891fe479a1b93406d2266

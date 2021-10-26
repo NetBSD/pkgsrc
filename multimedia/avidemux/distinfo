@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.26 2021/10/07 14:32:01 nia Exp $
+$NetBSD: distinfo,v 1.27 2021/10/26 11:00:58 nia Exp $
 
-RMD160 (avidemux_2.5.4.tar.gz) = e20454a558210d5f7ab1418ae4013b618d1001d9
+BLAKE2s (avidemux_2.5.4.tar.gz) = d2347e775845b22c72a423a93547fbfab57e0c2444902ba26d165f7fe7bf9694
 SHA512 (avidemux_2.5.4.tar.gz) = 9cee138e20269c219d9477c36da4a56097219826d8a1a20d921d6ab5e16bff80dbfac687ab4b68d8b3832252360856b2d05ee83a7d6f073305631cd79a7f1883
 Size (avidemux_2.5.4.tar.gz) = 18154965 bytes
 SHA1 (patch-CMakeLists.txt) = e86945a4cf51ae9275f94d2545be4ec3ed711b88
