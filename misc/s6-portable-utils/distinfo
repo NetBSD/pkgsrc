@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:35:48 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:59:32 nia Exp $
 
-RMD160 (s6-portable-utils-2.2.3.3.tar.gz) = a59fd37a08fde3e6ec69cffdbd5fd424907a3129
+BLAKE2s (s6-portable-utils-2.2.3.3.tar.gz) = c33b66dc97ae2f37a98a5a5672bed7eff424b7c6c0cf1a9ab6e2302a7b283f59
 SHA512 (s6-portable-utils-2.2.3.3.tar.gz) = f3f2e2f47ac61bad23e04a7e27cb833c21be610d54b50fc0f69d7a4d8f19e435a97bd1d570eb2b159d3e0a8b135aaa04cf02bd0a8dc216e0f6872af9c7649461
 Size (s6-portable-utils-2.2.3.3.tar.gz) = 50103 bytes

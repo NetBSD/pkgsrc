@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:35:33 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:59:17 nia Exp $
 
-RMD160 (topkg-1.0.3.tbz) = f3e486163f16fef313c3e12ed2482ea00df01fc3
+BLAKE2s (topkg-1.0.3.tbz) = 00708d490ca7bf4265ab1478fefe226bf3db770251b017ec508d3894ffb6a647
 SHA512 (topkg-1.0.3.tbz) = 7e9fe1ee00f358496a73ef09aa3b10576701e29c81e9ab7d340982718e7fdad4e66d670a3ee98f83315e3eebd8553144c75c3d17ca4054202adb3acae8699dee
 Size (topkg-1.0.3.tbz) = 95723 bytes

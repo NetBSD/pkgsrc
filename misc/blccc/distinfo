@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:35:13 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:58:58 nia Exp $
 
-RMD160 (blccc-1.99.tar.gz) = 45c4c3ea9cd637cbc201eb96fa121bc613ddbcf4
+BLAKE2s (blccc-1.99.tar.gz) = 996d2d4827d0623c640663bd19e89515c40ca1f4da476c190c07dd27899a2795
 SHA512 (blccc-1.99.tar.gz) = 07a516ccbd58d5a46e7ececb410bfc0c59c2b2ea1437a98b576ba0743663cd11d1bec1734784eb4559423248483653e14cc88d3c7011dcc9ecb5645f328a0191
 Size (blccc-1.99.tar.gz) = 239507 bytes

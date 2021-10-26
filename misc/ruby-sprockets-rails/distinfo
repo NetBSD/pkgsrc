@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:35:47 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:59:31 nia Exp $
 
-RMD160 (sprockets-rails-3.2.2.gem) = e8e85cb92ea80b5dc2c10467cebc31f7674d82c8
+BLAKE2s (sprockets-rails-3.2.2.gem) = ee5558ff6df4a734fd1bb1b9697b021d888b1cc41d50eac576107a2552e0b884
 SHA512 (sprockets-rails-3.2.2.gem) = 502f302048fb04c62bf247769f3339e236f7473ffdb80bbad7c635e934f182ceacca257f7fc6c3504a37eee66db889aff1b23701c55abb89d4e7046b21a60178
 Size (sprockets-rails-3.2.2.gem) = 15360 bytes

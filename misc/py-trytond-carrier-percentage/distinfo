@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:35:38 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:59:23 nia Exp $
 
-RMD160 (tryton-4.2/trytond_carrier_percentage-4.2.0.tar.gz) = a3aea75f064cf9c46db347ce410e8489f96a2bde
+BLAKE2s (tryton-4.2/trytond_carrier_percentage-4.2.0.tar.gz) = f9f12e8a770a358dcf4a6667dc9be4d1996df7738f022d2c722911dae912f2bd
 SHA512 (tryton-4.2/trytond_carrier_percentage-4.2.0.tar.gz) = 13f939e79acbe0888d64eaf7e5ec5316942cb1fbec0111135995f46d674e98b63e91fcd6b02c214b73a2fc3e7a69a0820a60e493b2377cd0a77b149cd8987a60
 Size (tryton-4.2/trytond_carrier_percentage-4.2.0.tar.gz) = 21901 bytes

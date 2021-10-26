@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:35:17 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:59:01 nia Exp $
 
-RMD160 (dtach-0.9.tar.gz) = 5e07683373a73eab3dae755ef4b7595318b0c3ca
+BLAKE2s (dtach-0.9.tar.gz) = 7f5ae33a00e3a3c24bbdccccaeabdee4e54f1863559cffb7b07f7e85105302c1
 SHA512 (dtach-0.9.tar.gz) = 28c13dc8c96c16b9c6153a3a11fdeb4a4bc72e84e1f2575043b047cd8e600a47232f29544ffd87d82e2575623ec2e999a26e23e9eac25ec81c7722bdf98cfb18
 Size (dtach-0.9.tar.gz) = 60608 bytes

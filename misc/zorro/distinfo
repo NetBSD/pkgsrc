@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:35:55 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:59:39 nia Exp $
 
-RMD160 (zorro-1.1p8.tar.gz) = 85f126b4906dbd680080ba8b88c810361ed2340f
+BLAKE2s (zorro-1.1p8.tar.gz) = 282d17a6a1a03781d45378734e9434f50d96c27c11821127cb3c3114a2148c4e
 SHA512 (zorro-1.1p8.tar.gz) = f440729f1a5f0ca244fe9fe6e7f4d8701b880775ff51774d72f67378ed6eaf14541a8f92aec1a123924743728d6439ece4688063189a1a6a6b66013959a4ac43
 Size (zorro-1.1p8.tar.gz) = 14672 bytes
 SHA1 (patch-ab) = 9c435cdd2192e7ccef543a3f325ec30cf4f9865a

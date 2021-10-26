@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.50 2021/10/07 14:35:37 nia Exp $
+$NetBSD: distinfo,v 1.51 2021/10/26 10:59:22 nia Exp $
 
-RMD160 (anita-2.9.tar.gz) = 221f05a27abd1c496f378cded553e66d084b4782
+BLAKE2s (anita-2.9.tar.gz) = a0abf121beadfb0c40d7ce8aaefa0076311d16d06d9b8425c1b79bda6c33621a
 SHA512 (anita-2.9.tar.gz) = 0c90bb4ce07b620e790a5296d2361a6c692205d76f390dfaa407335e30639fee43e44308b8c1f56810794fed64154711648dcf9a3ba22698491bebf79323d308
 Size (anita-2.9.tar.gz) = 44517 bytes
