@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:07:41 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:44:13 nia Exp $
 
-RMD160 (lugaru-1.2.tar.xz) = 68df569dc665ae7362e5751eda9930cc286351ad
+BLAKE2s (lugaru-1.2.tar.xz) = 776db6ad1420237ca2bfcc984ccfee9388650c7f6d817afd80ee3adc61bde637
 SHA512 (lugaru-1.2.tar.xz) = ca5b82d92d7167ddd51bed51d4511f9b36e5809f67b3f90a336bad690dd839bd66b25139f4a8b5ae5a24370146a6f9b7857d0418004cae275e0939e3292866d2
 Size (lugaru-1.2.tar.xz) = 34519308 bytes
 SHA1 (patch-Source_Utils_ImageIO.cpp) = b450e8842be08c6ff6801c5699649be30df16bf5

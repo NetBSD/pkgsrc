@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:08:03 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:44:36 nia Exp $
 
-RMD160 (xtris-1.15.tar.gz) = 7d5fe32c8187e653fa40451e51c6ddd7fd58ab33
+BLAKE2s (xtris-1.15.tar.gz) = 752db0f80ed940f3421aea32377847652625c4df1c0f60c92f5ca033d7a3ca4d
 SHA512 (xtris-1.15.tar.gz) = a5d5c32a7e1650561464f0fda08c7040ca0061e59b374359894e7f181a2e9dfece7f6bee6ed82295779f3e4ac8e7a607c668c31eeb017d6b641c1fe09dea4791
 Size (xtris-1.15.tar.gz) = 52130 bytes
 SHA1 (patch-aa) = 77fc97b763da632bf867a75f17ffd38dad3ff28d

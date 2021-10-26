@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:08:03 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:44:36 nia Exp $
 
-RMD160 (xworm102.tar.gz) = 57370a5fe48791512434024c5da2dd2c2f7a7d7a
+BLAKE2s (xworm102.tar.gz) = 3b89386c15cb405a915883ff7317290c99a8fc1a1337a794e315cb083c27ed61
 SHA512 (xworm102.tar.gz) = 578ec8a45248f94414969bf400c160ceeb437b8179a2589e96b008759de7e4acc672e69629e39ca87f3ae98f5c60abd16251090aa88d5f574635d0a1f25ee7bc
 Size (xworm102.tar.gz) = 20415 bytes
 SHA1 (patch-aa) = afdc57c408d1659d20bbb6c73e507df28619a7c7

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:07:55 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:44:28 nia Exp $
 
-RMD160 (toppler-1.1.6.tar.gz) = 45691ff9057e22e6aeea413fc77e27561bc46b95
+BLAKE2s (toppler-1.1.6.tar.gz) = ba3a9125511d21f8a911a5a1d3f6e018cfb0b4bc4c7650b9e06cd0f859b27d18
 SHA512 (toppler-1.1.6.tar.gz) = e0f6b7b72e38ba3402ba3608116fb51bf36cad129fb5591db62489829f4ed1ec49a4a3b7b1db4aaa34cd1561ee5228d91577f550aad2d55520ccefdff9bda9e9
 Size (toppler-1.1.6.tar.gz) = 2117137 bytes
 SHA1 (patch-highscore.cc) = d9687131477e699d7b356c6f37b7786cd0edb49e

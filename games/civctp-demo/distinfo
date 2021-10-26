@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:07:17 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:43:50 nia Exp $
 
-RMD160 (lokigames/civctp-demo-10251999.tar.gz) = 279154a957ed54baa573a887a10c4af4825ba84e
+BLAKE2s (lokigames/civctp-demo-10251999.tar.gz) = 3f12fb301e12172295f22f4932f515ef1ac42814203860d6764bb19c9c520352
 SHA512 (lokigames/civctp-demo-10251999.tar.gz) = 099d097833ccd4f170b2c6617b59d70ec41c60e95c5cff6532b8bbd9a5159093561091866b9e72084db09c165f187182cb42557e6bd22264a477a880d14f80a5
 Size (lokigames/civctp-demo-10251999.tar.gz) = 59306712 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:07:42 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:44:15 nia Exp $
 
-RMD160 (moon-buggy-1.0.51.tar.gz) = c04f2e12e3de515be15e49a8738b61f6af25d76b
+BLAKE2s (moon-buggy-1.0.51.tar.gz) = 243b74b637effcba142cb0b57afb3b45231413e470af76c18eca53d9158b9af0
 SHA512 (moon-buggy-1.0.51.tar.gz) = 34da2ca8b79d4f95a762cb7142586d176fd1b58ea6f4375de424d73d6046c2dc3dbae30dddb3a78c8c2563fbfec01d9eaafe27b79cc78ffa22121ad5a2e9dc77
 Size (moon-buggy-1.0.51.tar.gz) = 263572 bytes
 SHA1 (patch-aa) = 7b017fcb8236bec22fabe2187ea57dd5352ea3e8

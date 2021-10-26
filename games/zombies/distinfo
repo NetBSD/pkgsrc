@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 14:08:04 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 10:44:37 nia Exp $
 
-RMD160 (zombies-1.0.tar.gz) = 006fcb8876f6712178ae7486b15c6a27de6270ee
+BLAKE2s (zombies-1.0.tar.gz) = b1b5053c4e270c630e621c8275129b54a58046dd7859d164472b12a23af8a072
 SHA512 (zombies-1.0.tar.gz) = 6e495534fbaa18c4069b2cd6c83736187c0dd24d697bac6af336a5d6aab415c5b7c2f9f85e977018d772451e3ad142b9cb0c2dd7756500f33b7e69d533a3c4c6
 Size (zombies-1.0.tar.gz) = 9482 bytes
 SHA1 (patch-aa) = c10b6e9c2b385d724488726ea7603a6e300e67e9

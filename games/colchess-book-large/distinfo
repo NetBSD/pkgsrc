@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:07:17 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:43:51 nia Exp $
 
-RMD160 (chessbooks/book_large.tgz) = 21edba2ad14d54bafdb0f1b456766d201348fb55
+BLAKE2s (chessbooks/book_large.tgz) = df957e53b561c404879021fc5c22930aefe8f4a83252972f5015968a0366026a
 SHA512 (chessbooks/book_large.tgz) = cf3c99fc4222289381865df7efa81e297e587b666d32b7313881e34fab8d518c7d5cd939fc4ec0ace15109e6bfc62d483c367242274c792011f83301a642e366
 Size (chessbooks/book_large.tgz) = 529290 bytes

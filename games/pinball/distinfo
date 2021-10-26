@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:07:46 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:44:19 nia Exp $
 
-RMD160 (pinball-0.3.20201218.tar.gz) = 40ab38aa36730f541c84636f5c9945db86614e7a
+BLAKE2s (pinball-0.3.20201218.tar.gz) = 59148c87a3e749dafc848ee43cab514fbc7454dcd96a9adde5fb728199a8985c
 SHA512 (pinball-0.3.20201218.tar.gz) = 420181f43193714f777f4035e754bd6dd92cb4d2ebec3d6e57c1e538b850eab0f749eaab0c6a9c01fe2d5b67742c41a1ae0042e7542eae9e0cb0032b2afaf92f
 Size (pinball-0.3.20201218.tar.gz) = 6054158 bytes
 SHA1 (patch-src_Obj3dsUtil.cpp) = 0a7f215e7afdc7724efcbb2a999c4d1c768f5b4f

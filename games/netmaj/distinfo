@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:07:43 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:44:16 nia Exp $
 
-RMD160 (netmaj-2.0.7.tar.gz) = 9d3fd68b7607b2c3064e9dd8310085818f32f93e
+BLAKE2s (netmaj-2.0.7.tar.gz) = c48280a10da6c86546670d4f4939dddc198cb25d13a6f1bd822965aec907a578
 SHA512 (netmaj-2.0.7.tar.gz) = 3ec29352a2aa0390a54a0dbd56046de7ff5ea87227d013b3068c358572dcdbd3737824c47f5c531136b9354b99e170fa3a53cea45ef6ade7949e5968d587cc62
 Size (netmaj-2.0.7.tar.gz) = 213819 bytes
 SHA1 (patch-aa) = 4be6d0148e4579661162315db968512ae570f122

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:07:39 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:44:12 nia Exp $
 
-RMD160 (lincity-ng-2.0.tar.bz2) = 0466d56687f18813f9c0454468c092d1f181123e
+BLAKE2s (lincity-ng-2.0.tar.bz2) = 961bb6e3f7b2ed60c7479307bcc038cc7916edd1fbcc1a17202057e5eb996ecb
 SHA512 (lincity-ng-2.0.tar.bz2) = d85cd398145d1591f8640458c076f2a0b55713c39ede28b67d99adc7b76d38f09b58cd2ec84d9acac11bbaa794f6d97f6200f54efcdd4286315e6b3133284c55
 Size (lincity-ng-2.0.tar.bz2) = 39475719 bytes
 SHA1 (patch-src_tinygettext_TinyGetText.cpp) = 01b0360382be268834e7893f9d46efe60924d77b

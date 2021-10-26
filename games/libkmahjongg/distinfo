@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:07:39 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:44:11 nia Exp $
 
-RMD160 (libkmahjongg-20.12.3.tar.xz) = bfb817d7d30923974ce729a82d912bd919b9c4f2
+BLAKE2s (libkmahjongg-20.12.3.tar.xz) = 0d7ce2a8193c693680b5733b195e446ae44c9ea6bf9d6e3499868a20827d9201
 SHA512 (libkmahjongg-20.12.3.tar.xz) = c4e35ec5f60ab6c401ba278e69ff2d46ccf16fd6a5f88b1dd1fa4914c030c52c7a055e473a9fb14e87ce0ca9ba36d2229ff57fe985bb9fdff29285d43e98df0e
 Size (libkmahjongg-20.12.3.tar.xz) = 1691308 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.39 2021/10/07 14:07:45 nia Exp $
+$NetBSD: distinfo,v 1.40 2021/10/26 10:44:18 nia Exp $
 
-RMD160 (openttd-1.11.2-source.tar.xz) = 19d5edf788076fe562bcc8f095e44dd3910c83b0
+BLAKE2s (openttd-1.11.2-source.tar.xz) = 4e62db05acde1764f23cabd7d6ba5f624c6e5412caae766a57bf8d34d9ba039a
 SHA512 (openttd-1.11.2-source.tar.xz) = 9a6364bf19627db9f8ec58bfa85fa3a8febf1109f3b5fb9053bef810ac2d0c41df91b58f0b253dd45320a29cae2e8485df794afa7b5240f19759f98fd65c35ea
 Size (openttd-1.11.2-source.tar.xz) = 6783972 bytes
 SHA1 (patch-cmake_InstallAndPackage.cmake) = 18b02c11bf59639124c2a852d5a19dda3ae0ff81

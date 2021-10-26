@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:07:59 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:44:32 nia Exp $
 
-RMD160 (xclannad-7hc.tar.gz) = a7bea485587c59d7797aa1bde01f0eb963122d02
+BLAKE2s (xclannad-7hc.tar.gz) = 313c00a10aaeba1fc7bcc69578f2976f5df00414636a27ee19d498cee52ae5ad
 SHA512 (xclannad-7hc.tar.gz) = 5d14c1ca6932d0a013e36c2af51d0d4de2cb73e4c438ccf2bebf03f223a62649203726cc552f975e3177ea614f79c1d2d0d36220116289f0bb8f65a74997ac27
 Size (xclannad-7hc.tar.gz) = 534245 bytes
 SHA1 (patch-Makefile.in) = 3586afaf131737ded3ac1b64bfa56b3c357f3269

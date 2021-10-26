@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:07:26 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:43:58 nia Exp $
 
-RMD160 (fortunes-de_0.20.orig.tar.gz) = 613b983fed197aa79eddf0543febc5cf6753da0b
+BLAKE2s (fortunes-de_0.20.orig.tar.gz) = 4ca91818e8748d5dba52d784124d4f979ad3ea596cf9aae6184b5081cd68db04
 SHA512 (fortunes-de_0.20.orig.tar.gz) = 9c523eb35dbb35e245d44a908ed1e63737f6f50c20db4c05854beea189cc16b47173cbf07bc72cf49f74bc34ffbd7a76c22ab0ed58fcd037a59337225578f782
 Size (fortunes-de_0.20.orig.tar.gz) = 899289 bytes

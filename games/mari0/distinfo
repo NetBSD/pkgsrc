@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:07:41 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:44:14 nia Exp $
 
-RMD160 (mari0-1.6/mari0-source.zip) = 3662726121e8318b244f8cfe0a373b99bc39c467
+BLAKE2s (mari0-1.6/mari0-source.zip) = 74c20bc5978538e48268f2969c513d190ed3ab7411e7a432929f53ea74c20ff0
 SHA512 (mari0-1.6/mari0-source.zip) = 20004035141b80180e58a8d209b588273d2879742ca8d8d59b1d20f9e301d976e260574893ea41a290bab57eade0617c10880a4af00dc3b29329ac4805a8be6c
 Size (mari0-1.6/mari0-source.zip) = 3625226 bytes

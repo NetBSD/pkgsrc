@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:07:48 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:44:21 nia Exp $
 
-RMD160 (renpy-6.18.3-source.tar.bz2) = bbd8deb70015ea1d9eb9403db35f7ba5a4c0ebc4
+BLAKE2s (renpy-6.18.3-source.tar.bz2) = ec282e3742561ccf224cc84afe79802b704b171124e15dfa88bc7811ddbd3537
 SHA512 (renpy-6.18.3-source.tar.bz2) = 7ea99adaf1fbea7a499790fb5b37349fc797f383fb633956a43955c80885b259e26570469c430f4c4c103e62444f60082690489ee6400809f5e9024693261e55
 Size (renpy-6.18.3-source.tar.bz2) = 23244450 bytes
 SHA1 (patch-module_core.c) = 333d6e8704098d7f423869e77b1adbcdd4d79c1f
