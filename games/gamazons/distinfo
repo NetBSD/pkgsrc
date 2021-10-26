@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:07:27 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:44:00 nia Exp $
 
-RMD160 (gamazons-0.83.tar.gz) = 2fd9433846173a7bc53eb7abd9dfbf367460df5e
+BLAKE2s (gamazons-0.83.tar.gz) = b287d74ff646eba666a8716779068f13a4af2b91ea4915dc9470025ae4ab4ca5
 SHA512 (gamazons-0.83.tar.gz) = de07df73e6dd34ce6a69b4fc224f035fbe74a4fef66872ef6215f19cb3f19312c14e395d40d4ffa1388d6a84ccdc68b7ca697bd33ec0aa387f81e6af49d44a88
 Size (gamazons-0.83.tar.gz) = 258614 bytes
 SHA1 (patch-aa) = 9f2db32d979eace078aa0b871142d1c6c13e1d5b

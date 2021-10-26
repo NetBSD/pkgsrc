@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:07:41 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:44:14 nia Exp $
 
-RMD160 (megaglest-3.13.0.tar.gz) = 4160ac3d7fbfa45cb0b4ea32a3d307968c14276d
+BLAKE2s (megaglest-3.13.0.tar.gz) = 97cca4fe7a028d63620cd1f54dedc8f2405e908d51dfe338604550029841fc35
 SHA512 (megaglest-3.13.0.tar.gz) = 9815db81f0e202fe74217ac73ce7ea711d1923fbb56a74514c030483a0a337a3d1ea4028893325d709011067b6649484ee5abd2698bd0d436e958675a40ac357
 Size (megaglest-3.13.0.tar.gz) = 3654897 bytes
 SHA1 (patch-source_shared__lib_sources_platform_common_platform__common.cpp) = b5c398d7504ae8574a4f7117d89d49e5fe3c916c

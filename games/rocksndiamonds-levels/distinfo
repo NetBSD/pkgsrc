@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:07:50 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:44:23 nia Exp $
 
-RMD160 (rockslevels-dx-1.0.tar.gz) = 1fb969e4205aa16318a8a8ae4d33de21b5050c78
+BLAKE2s (rockslevels-dx-1.0.tar.gz) = d664431cf14cdfa6374df87c3b6d5e075bc25d0d9d8eb77d4c1659139dce7338
 SHA512 (rockslevels-dx-1.0.tar.gz) = 2e1bc4484a76bf638e8ce285972b20b6377e0483abb2475e2343d48de1f84ee102f430049d685b89bc1087e0f20b9b6e29370f8e6cae66b480d3650be9991f44
 Size (rockslevels-dx-1.0.tar.gz) = 211151 bytes
-RMD160 (rockslevels-emc-1.0.tar.gz) = d9baa3e625f8857b40dc247f39ae16a53d27f77c
+BLAKE2s (rockslevels-emc-1.0.tar.gz) = 1d204b220dca5e25df5a3450f6e6da15deffdf0ceb303ddcd09a76d36906d300
 SHA512 (rockslevels-emc-1.0.tar.gz) = 9abad888fa00bc305444367c5ab8ffdad95eaca22613573e44d5ecd93b1a9a1cbc931497c064002d90fd3174c4661d0b009ede7746b2fe8da0a00072303a1301
 Size (rockslevels-emc-1.0.tar.gz) = 3824268 bytes
-RMD160 (rockslevels-sp-1.0.tar.gz) = ddfc4b5af5bdbbabd1fd884f14f76257d75e52d3
+BLAKE2s (rockslevels-sp-1.0.tar.gz) = 07344ca9716fd7a751d00bfa7e39823c1d6c2f77465d85497db6993b6fad9abd
 SHA512 (rockslevels-sp-1.0.tar.gz) = 2d44e9238a72846b9d4fbab90288aa3b23af4957ffe0d42d95c523fd22f3587572864b3fc0b277894d2f3f56d6eff52ea009e5b2d59aebc34163a1067662d729
 Size (rockslevels-sp-1.0.tar.gz) = 373564 bytes

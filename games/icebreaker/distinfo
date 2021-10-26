@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:07:32 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:44:04 nia Exp $
 
-RMD160 (icebreaker-1.9.8.tgz) = 830ac7c4f7784b4ceee0cd57c5975f69102c1617
+BLAKE2s (icebreaker-1.9.8.tgz) = 5ad0bfad41d573ee5fc0a34f0f3093f8b01a6902ebcedce7c5105931236e89a7
 SHA512 (icebreaker-1.9.8.tgz) = 03fd280c58efe235d8b9a11cf67f4248febef81b58532b7063619b7da08af7b1d71cc20917b959397748a2167a0aec271aa45f9488bcca56518913bde6017183
 Size (icebreaker-1.9.8.tgz) = 177355 bytes
 SHA1 (patch-Makefile) = 78a42778e7cc7a63a32b70e6f3eb31da5d47b6c4

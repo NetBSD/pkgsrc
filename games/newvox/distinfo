@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:07:44 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:44:17 nia Exp $
 
-RMD160 (newvox-1.0.tar.gz) = 751811081f32ba3c0a685800fd606517302827fc
+BLAKE2s (newvox-1.0.tar.gz) = 76562ef61118f8920bdd252a72a14ef867f01e04726beb8e7be403429e7c3814
 SHA512 (newvox-1.0.tar.gz) = bfc53f13022f6e4e34555584346cd4b80922d930d383a5dc4679af40b5a68327e8986beda3fb8082df9673842eeb224d43b5e460ca7496de453f2f9793b6928f
 Size (newvox-1.0.tar.gz) = 26668 bytes

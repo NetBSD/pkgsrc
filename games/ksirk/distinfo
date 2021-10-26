@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:07:37 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:44:09 nia Exp $
 
-RMD160 (ksirk-20.12.3.tar.xz) = b184de33ef14b2e0f0f36b2dc9a62675750c9482
+BLAKE2s (ksirk-20.12.3.tar.xz) = 53e79679079b1f8b61e4ee366f144b0275e215dc87e3906ad9650705be425c66
 SHA512 (ksirk-20.12.3.tar.xz) = f45d4ba82435f9e76349ca1f6218e3d1cc6e1d3025f86db4bfe0ee724129ad96bd71e9b0b6d21bf60a5e19f460e1b9b7c9a3d7c6c0f229e9d5cf4600bff18672
 Size (ksirk-20.12.3.tar.xz) = 6993564 bytes

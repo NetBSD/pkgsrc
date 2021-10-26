@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:07:11 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:43:44 nia Exp $
 
-RMD160 (KoboDeluxe-0.5.1.tar.bz2) = b196054f2220fe1b479a490723b1f5da4e74aa1f
+BLAKE2s (KoboDeluxe-0.5.1.tar.bz2) = 734f55ff1634b92e7a43b8fac13bf35a252407361b35f8e0034ec2159554ca8a
 SHA512 (KoboDeluxe-0.5.1.tar.bz2) = fc107e4367fd300574823aa40c68311d95de3a403d7c930963b8754aac14293f0624996fd77c4de0677921d11883047b68dd95df81eeb03078c37426ebd58afd
 Size (KoboDeluxe-0.5.1.tar.bz2) = 1781752 bytes
 SHA1 (patch-enemies.h) = a3e9fb60581d7a7bcb079ceda5d1271f923470cd

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:07:20 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:43:53 nia Exp $
 
-RMD160 (devilutionx-1.2.1.tar.gz) = 40aef41b2d86bd90a24975aa68e297c61edff779
+BLAKE2s (devilutionx-1.2.1.tar.gz) = 38022f5b5025687f909001c7ea554ee2d6db1489bdd321fa1fac3749064f1168
 SHA512 (devilutionx-1.2.1.tar.gz) = 9327b127d0ad22d640b1a13fad9bfa00ba0fc512dd7ed362a9e84a80278d84634cd039cba7c98f15425715b11a35dc6ac07d75c816c3cbc818e6ab8c4437cf18
 Size (devilutionx-1.2.1.tar.gz) = 3573200 bytes
 SHA1 (patch-3rdParty_asio_include_asio_detail_impl_kqueue__reactor.ipp) = 1fdf31e70f72d4c4cadb76f64d06c3974e6f61d9

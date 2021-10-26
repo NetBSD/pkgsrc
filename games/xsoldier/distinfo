@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:08:03 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:44:35 nia Exp $
 
-RMD160 (xsoldier-1.8.tar.gz) = 934364a47e77f8ac5fb1f289b933c0252560a2da
+BLAKE2s (xsoldier-1.8.tar.gz) = 96146165fb5a3f089e97c91200a1084f7d75f6a58237751a4ae210e37326a1bd
 SHA512 (xsoldier-1.8.tar.gz) = 2f150c3ba31357cac03024146e3a02c9d69fbdaec8e8214284ee996a52eb58c4cf475192e38524f3e031d71a5f0c3b2c744ef1fc81a52eff8b0a9f44a48f8484
 Size (xsoldier-1.8.tar.gz) = 178220 bytes
 SHA1 (patch-main.c) = cc32312f304924859ea6978137d6c0db329c911b

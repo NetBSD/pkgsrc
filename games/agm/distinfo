@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:07:12 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:43:45 nia Exp $
 
-RMD160 (agm-1.3.1.tar.gz) = b348b99ef9ef58f474d7a0acff572c369bbaf55e
+BLAKE2s (agm-1.3.1.tar.gz) = 6aade09fa09631bd3f508bb9f2dd3e87bcbfecb92aefe7f0b773fd54162e7310
 SHA512 (agm-1.3.1.tar.gz) = 143c6c3a31e542f59bbb0fab4372a2747f78b299fff07b9f136b41c930423b27a56f1c9635efa1248caf05d0449f6e63a0c5ed86d136a1c3ffa6309d64297687
 Size (agm-1.3.1.tar.gz) = 420211 bytes
 SHA1 (patch-Makefile) = c110bb95255a95e704bdf22982e37e70e3f88ea3

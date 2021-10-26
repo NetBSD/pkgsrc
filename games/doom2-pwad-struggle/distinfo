@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:07:21 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:43:54 nia Exp $
 
-RMD160 (doom2-pwad-struggle-20180819/strg.zip) = 031ef27ae7cba305429a155359fd6602d91017ce
+BLAKE2s (doom2-pwad-struggle-20180819/strg.zip) = b36ae39525f0f4e6796f424aa55a8118e9365055ea5f66853030d290451de841
 SHA512 (doom2-pwad-struggle-20180819/strg.zip) = 332f35971d22b3a02c5cfb73afcdfba13f53f6aef70124eaa6d144a653026eb1efd02ad2d511ad1a0412fe5a966ca9eb8525f7bfc5a4f354758cf14fbbab22bc
 Size (doom2-pwad-struggle-20180819/strg.zip) = 20710259 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:07:31 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:44:03 nia Exp $
 
-RMD160 (lokigames/heretic2-demo-x86.run) = d616fa10fa3af57b6ab0ea94462983203cef9fea
+BLAKE2s (lokigames/heretic2-demo-x86.run) = a00bda4b7f70369d796cce1fb361b060299cd97ee74283093f9ae184387e96b8
 SHA512 (lokigames/heretic2-demo-x86.run) = 55bd42368b081d33807bff8860e54943c229c03c0159a55fb862f697b0c440c7915486a1979c40ff4b2f8eaa251db4deef006b7a1a647142f8676ae222fba7e2
 Size (lokigames/heretic2-demo-x86.run) = 53801988 bytes

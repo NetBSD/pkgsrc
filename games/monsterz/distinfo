@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:07:42 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:44:15 nia Exp $
 
-RMD160 (monsterz-0.7.1.tar.gz) = 6497b3c561f4a7c31b903a380d916778e44de5b8
+BLAKE2s (monsterz-0.7.1.tar.gz) = 2dbc8181d6e63a2004081f874902530744c95b7459891f7b82656cf8c6770556
 SHA512 (monsterz-0.7.1.tar.gz) = 62de125251a74e7ff237c90ad88e10a4953b8841251dfec45cc6b77f416677ef6d68cf4308c3190f65896b5bb1312934abd5e438f0341f08c02884585f0e4787
 Size (monsterz-0.7.1.tar.gz) = 1879537 bytes
 SHA1 (patch-aa) = e3b128540f8ce50bbd8fb0a3083b1c7297db1b64

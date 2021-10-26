@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:07:44 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:44:17 nia Exp $
 
-RMD160 (not_pacman-1.4/notpacman-source.zip) = b5c8c4fcfbc314b31da3e4d7d74beb0f7592fc26
+BLAKE2s (not_pacman-1.4/notpacman-source.zip) = a21e2344770c402fa64818fae37c6886f1574cf27db597a03a6d5ec1f0224055
 SHA512 (not_pacman-1.4/notpacman-source.zip) = c64d74cad972c22fe7674b55c0155fcd6e0176c580f53645a0cef7ae1e2c3453807f13fd9bbc9992cdc1176bc1687800f957ef5c11034a2ffe0774ec0118a863
 Size (not_pacman-1.4/notpacman-source.zip) = 439775 bytes

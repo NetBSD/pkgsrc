@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:07:37 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:44:10 nia Exp $
 
-RMD160 (ksquares-20.12.3.tar.xz) = cfe3ee049a7733e7cc7df7e60f6f4b5bc0f8c230
+BLAKE2s (ksquares-20.12.3.tar.xz) = 6b5a8c296e2d500e14acc8a4689e95897c5e1e404729fc6933a83a839bc8b545
 SHA512 (ksquares-20.12.3.tar.xz) = a2b89b21e463bebd1951cf13502640fcd35967a74526bded57883a64ee408fb2eddfe47ae6bcb171c7f4f1d8dc7adc6d81dfc94de99eed7e3cb3e0b5612d23c9
 Size (ksquares-20.12.3.tar.xz) = 266692 bytes

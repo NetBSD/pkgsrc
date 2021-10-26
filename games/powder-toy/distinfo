@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:07:47 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:44:20 nia Exp $
 
-RMD160 (powder-toy-95.0.tar.gz) = 51d796142939821f1c310689899e2e82a18c118f
+BLAKE2s (powder-toy-95.0.tar.gz) = 81726300ddd0245f80b677fb4b03b0dec238830ae7d70a23ee65d367abff972e
 SHA512 (powder-toy-95.0.tar.gz) = e2f8230631a8ee50b3cd4b9d34cf7121663266ea1fd6ffb176b37b569b2e1566fc84ff1abc434bbfd7eb6b55264eb87c11312e8ebdc28f07210efcc9db756910
 Size (powder-toy-95.0.tar.gz) = 1250743 bytes
 SHA1 (patch-SConscript) = 0eef48dccd21eb140672a8087ac05b24f0940e09

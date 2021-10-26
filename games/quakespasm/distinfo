@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:07:49 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:44:22 nia Exp $
 
-RMD160 (quakespasm-0.93.2.tgz) = 64719d57c6969d70642f7dab2a588fc95070c50a
+BLAKE2s (quakespasm-0.93.2.tgz) = 73152e78fbbb9ad2543394b612a490edd5956517cc1715b3cdcf57c991e9bdff
 SHA512 (quakespasm-0.93.2.tgz) = 30e8515aa9c6a64ef76f2440e878493e98e85e8c19356738e35b5bbd6e5f49ed42b4d73dc716cce0e687b4e7e27a65fa97541e89ae7857fb165a63e09385743f
 Size (quakespasm-0.93.2.tgz) = 8527223 bytes
 SHA1 (patch-aa) = 3c46fbc72ffa736be66aa4b96e683406a6b05832

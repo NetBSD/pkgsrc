@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:07:59 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:44:32 nia Exp $
 
-RMD160 (xfreecell-1.0.5b.tgz) = 2629217bf29734bb25b30ca8aaec62ae19d0ff6f
+BLAKE2s (xfreecell-1.0.5b.tgz) = d5afae8fd242f8ba52afdafd767d989502a31c053019cecc51badba8a054f6ad
 SHA512 (xfreecell-1.0.5b.tgz) = b4437d9c78d5a6cb5fabd0157528aef85aa1d01b87875314e122d1eafbe5808af67b7b4dbf4db8e70d3d5193b10e61cc20210725b75c01ca6ff6db2b5840a64c
 Size (xfreecell-1.0.5b.tgz) = 49367 bytes
 SHA1 (patch-aa) = d5235b5a34df4ea12c249d680cc6e674f1c50626

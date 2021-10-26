@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.20 2021/10/07 14:07:59 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/26 10:44:32 nia Exp $
 
-RMD160 (doomsrc.zip) = c88e57b3cc72ca8bbfacbe138f8a3c69a13bf2e1
+BLAKE2s (doomsrc.zip) = 8567d3fbfe68169c7df4a95e5204d46deda194b078ff3fd36cd5aa7e6caa13cf
 SHA512 (doomsrc.zip) = 178b25aa7eeccb361f04234c006a73ca3c52ece21b8a6481e6f364f048f8b6894dbd561c47bb14773e12c4cf2ba6dd576fc5d55e21195fc135f37869627ec126
 Size (doomsrc.zip) = 362698 bytes
-RMD160 (doom-1.8.wad.gz) = 5d951d1f685bedd68033a332a6581b5056213c21
+BLAKE2s (doom-1.8.wad.gz) = 9606b4ea460d8d502044886a86010b95da04eb0ca9e7d6e1e2923cda5ada4840
 SHA512 (doom-1.8.wad.gz) = f64edd2dde5dc09be2861ce80f40ade72874c8c59973da75e10acb84086a4714fe06cfb302afd365ad28fa46e6acc1fd73b0f6ce0e8fed19189e60d1b537bcbd
 Size (doom-1.8.wad.gz) = 1756050 bytes
 SHA1 (patch-aa) = ff3a5f3acb186c1de4e7e0f542274db8b8c908e7

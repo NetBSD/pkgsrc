@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:07:36 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 10:44:09 nia Exp $
 
-RMD160 (koth-0.8.0.tar.bz2) = 3ea8ef52cab309a764e0379031606d2a949e6553
+BLAKE2s (koth-0.8.0.tar.bz2) = 8f8cd31d383e5d27781fbf20b25d1e338c18735aec56915dd38489bc8adf5d79
 SHA512 (koth-0.8.0.tar.bz2) = edda377be9074298c63e85cad5f37f55dc67f0e9a7d075a94207559265ffbf8a5eadbd2dc0e4a06e535e6da9fcfd309d01141ba8be04cf8960b0229e0ce4ab9f
 Size (koth-0.8.0.tar.bz2) = 140569 bytes
 SHA1 (patch-aa) = 74119d2ff66b3187c16e625abab7972cb686d484

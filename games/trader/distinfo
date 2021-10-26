@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:07:59 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:44:28 nia Exp $
 
-RMD160 (trader-7.16.tar.gz) = 460e358223a98c966ab109c9ddd1ed234de0407b
+BLAKE2s (trader-7.16.tar.gz) = 63acfd2feccf7fbfd5e5ccdcca0795c60241ebe0ac4058ae42cb1551359a28b6
 SHA512 (trader-7.16.tar.gz) = a5565f26844c8aa98e18c0e90c75f2e0c4cafb43123b7d6be6228d278912ca76048d41d4d6711a31c9f6e22d5f62b9ba18105366fc4a1ea1cedeac1ba3fec794
 Size (trader-7.16.tar.gz) = 1259294 bytes
 SHA1 (patch-src_utils.c) = 80d5e22f7c01359ba8d881c9c2b1b27fc0882599

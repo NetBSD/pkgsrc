@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 14:07:58 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 10:44:31 nia Exp $
 
-RMD160 (xbill-2.0.tgz) = 8f1551fb5f2bf7b620243ba4787c88c91d00d460
+BLAKE2s (xbill-2.0.tgz) = a102226f8bf40c1f7770ada73e13271457f8713f2ce51b2bb6e21bbc26d9b8ed
 SHA512 (xbill-2.0.tgz) = fee0bbb73ba9fe4863c39ee02d69cc0e6f349dd0a02df67f711ecc7b72e2f4e1ab93037f2de5b675bc592cb8460b7b38f820259bf1e68cf11232e59c35cbb494
 Size (xbill-2.0.tgz) = 46909 bytes
 SHA1 (patch-aa) = c24632f4e81460b200485f2f644d68144a27a2e6

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:07:33 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:44:05 nia Exp $
 
-RMD160 (kajaani-kombat-0.7.tar.gz) = 0f932876dfe5f9f32d9889f0b1720dd9b570b8e2
+BLAKE2s (kajaani-kombat-0.7.tar.gz) = 51bcea28ea05791bc0317b14d76cdd2251a81871ea379c6b19cd9cef3ba89fab
 SHA512 (kajaani-kombat-0.7.tar.gz) = 84f6923b73c9529fa600c533b5a3de9ea9411f81060c5ad9fb85346fa17c9cb70bf6ba8222319e123372b01286a11b40bb355e8ef8c9bec95cd98f4d0e0460cb
 Size (kajaani-kombat-0.7.tar.gz) = 1805504 bytes
 SHA1 (patch-aa) = bc1ec637e480db4ec499b51d9bd9fabd951b1048

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:07:51 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:44:24 nia Exp $
 
-RMD160 (scummvm-tools-2.1.0.tar.xz) = d87c8ed99cc87fa312ce5c6ddad3456b7b8f54a5
+BLAKE2s (scummvm-tools-2.1.0.tar.xz) = 2993c915383828c367845ba06f51e336c62674b9eca57ada64bfea37ec24942a
 SHA512 (scummvm-tools-2.1.0.tar.xz) = 40e0b1a545257922dd1846d520ef0c18ef7a2682a3d7bb1709bcd49b1338ed7cefea438958941586329271d84e01bf189a14e31f5758e500df607d162ee9cc15
 Size (scummvm-tools-2.1.0.tar.xz) = 710124 bytes
 SHA1 (patch-configure) = 5e6054f9a998d7cdf8522e449199b91f6e58392b

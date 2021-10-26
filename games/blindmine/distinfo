@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:07:15 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:43:48 nia Exp $
 
-RMD160 (blindmine-0.3-src.zip) = a50a2e2d67ebe6ffbd7e08be432fa46f65f23f6c
+BLAKE2s (blindmine-0.3-src.zip) = 72a3e72a831c027fc5cc2ffd3cd243f9152e4facf03edd71aff79f2eafb62811
 SHA512 (blindmine-0.3-src.zip) = 7a23d469ee2a11d6890fae5b98fe628738863aae36d2e42ef5941ac068b4094a6ebabcc7286d6502329561ebbf6cd3c707269376750ac122b4129885dd4e6f6d
 Size (blindmine-0.3-src.zip) = 4907878 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:07:28 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:44:01 nia Exp $
 
-RMD160 (genecys-data-0.2.tar.gz) = bc46ee18a3835879e6649f6feec9713b4c02339e
+BLAKE2s (genecys-data-0.2.tar.gz) = 5d05c9566ce59a599dcced552c092657cd4937b4f13586dea19e5b4c404aab6b
 SHA512 (genecys-data-0.2.tar.gz) = 1b931e1c0b15634e757e6856c9e63b676ee1a4c4b10419edbbbeb900653e40cd2bbe9a91b60ba7b72db1fed8d08c5131d819760f05cafa91182dcbd90f60b8c6
 Size (genecys-data-0.2.tar.gz) = 31861311 bytes

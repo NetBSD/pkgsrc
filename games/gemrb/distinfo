@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:07:28 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:44:01 nia Exp $
 
-RMD160 (gemrb-0.9.0.tar.gz) = fdca8562063e7d33a7e4b491e309f7f0782122a6
+BLAKE2s (gemrb-0.9.0.tar.gz) = 7944519a223c36d571db0e9e16cf354f6eb4978e98aeb102dcf6d6ccffaf23da
 SHA512 (gemrb-0.9.0.tar.gz) = bd8916c0e9741723cda26563d789a9ba900244f618d08b257ded2857efb7d088ee598530a5842d61d4d8658c828cb1142aec53db00148dab26fcd2f83886e86e
 Size (gemrb-0.9.0.tar.gz) = 12879077 bytes
 SHA1 (patch-gemrb_core_System_String.cpp) = d86b1279a7979465c48c0805d11386708c18441d

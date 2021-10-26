@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:07:41 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:44:14 nia Exp $
 
-RMD160 (majesty_demo.run) = a792b420c789ae06b7822f935e5c082b1945c38d
+BLAKE2s (majesty_demo.run) = 18259413d07b9e427a8bfd68620cfb09a7e70ff7b736a7b8aeedab5d65f19f7a
 SHA512 (majesty_demo.run) = 67c74e3c11514649fbf1f2aadf529ce4ee62084c5825a2ec213c28ced6ec1d3ff6b6b2858f6f721c032160df794d62e4a73bcf9696ee4ebbb6ed29df1c024e31
 Size (majesty_demo.run) = 43170241 bytes

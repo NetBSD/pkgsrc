@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:07:42 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:44:15 nia Exp $
 
-RMD160 (minetest-5.4.1/minetest-game.tar.gz) = 8c4da408f34ad7a08eb9b4e00491ed4e3faf4990
+BLAKE2s (minetest-5.4.1/minetest-game.tar.gz) = ea6299d774f81028bc648d8bfc104b7f287ed81e3e66824e72ffe0d015f3c0ef
 SHA512 (minetest-5.4.1/minetest-game.tar.gz) = c0c07eaa2d551c50807afa1ab52cf3b8bb695fca87ab96b0e10e3b2d709a0cf48b25b3b21022b8e7e5122e6e4a184e404cd3d132496028f57d0cf3326957899f
 Size (minetest-5.4.1/minetest-game.tar.gz) = 2474325 bytes
-RMD160 (minetest-5.4.1/minetest.tar.gz) = f3a04a0917358380917654e72bfca4baaf421274
+BLAKE2s (minetest-5.4.1/minetest.tar.gz) = 043e192dcc3d687718b02bf17ddac408aeb3516afa66377d1917d7d364fc37f3
 SHA512 (minetest-5.4.1/minetest.tar.gz) = 8f9985c6a658c868ed8971f112eae3c71c2b1535fd433689920be6d42ac2c7eb8453d58ec2825573764ee2f56b651c5e27895b7fd58fada61fbaf4758fc69471
 Size (minetest-5.4.1/minetest.tar.gz) = 11209289 bytes
 SHA1 (patch-CMakeLists.txt) = 50ceef7b158a92900c8d5b6b178d1ab0570e16b1

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:07:13 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:43:46 nia Exp $
 
-RMD160 (angband-4.2.3.tar.gz) = de8a273ee34a779009fe5b836336597df5c997f0
+BLAKE2s (angband-4.2.3.tar.gz) = 88be318c246aa8d78288dc449415a4608e2c1aee8ca8910279a692d1e7bcba88
 SHA512 (angband-4.2.3.tar.gz) = f80a16c40d877c50194be370795acb437778ca88a658a8c95bef637625ab8a88ceb98f45d742e698709b6c81e8b5de6f563f88e957cd71eca208673bb4179e88
 Size (angband-4.2.3.tar.gz) = 25175745 bytes
 SHA1 (patch-configure.ac) = 328bd6a1bd0fa3481f2fd4081e34ec7d025802d8

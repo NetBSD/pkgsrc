@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:07:11 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:43:43 nia Exp $
 
-RMD160 (7kaa-music-2.15.tar.bz2) = 9736abf048457f6d9bc5fb57977ef217ad45fb9f
+BLAKE2s (7kaa-music-2.15.tar.bz2) = 5275b40c8f2a2778fe984e8d1d2ef20344e983139158dbb6bedb0fc5c796c92f
 SHA512 (7kaa-music-2.15.tar.bz2) = e2c7ce14dc6e50581dca9769f03167e59e4be19aa559bfc2a7acd277f72c060935f3158edc735711ce971924b105e8df5984c2c40da8d6f484625e5ce94a7f73
 Size (7kaa-music-2.15.tar.bz2) = 20050332 bytes

@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:07:56 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:44:28 nia Exp $
 
-RMD160 (ufoai-2.2.1-data.tar) = af91dd473f59c73e705181759059bd37ba215f62
+BLAKE2s (ufoai-2.2.1-data.tar) = b80535980e11bf4befdcfd066515e4f4bf0701ad98619aac421545e51dda913c
 SHA512 (ufoai-2.2.1-data.tar) = 69200c035e2f5b4651ed3f3b38f27d3b2d4890d077e23c73f526d70db937caa4585618bc4b8bdbc44ce7cb902da8722c7ce9b62b03d66283dd1775945538e4c6
 Size (ufoai-2.2.1-data.tar) = 390502400 bytes
-RMD160 (ufoai-2.2.1-mappack.tar.bz2) = b8254b2497e7d830c4b839ce37884d86ee4a738d
+BLAKE2s (ufoai-2.2.1-mappack.tar.bz2) = c88a4dfa6630ba10cb942c3594cdb62fdb3e2ad9a763a294954bcfb5612e4116
 SHA512 (ufoai-2.2.1-mappack.tar.bz2) = 6368aa3aa40b1a996a981a2a2c3b741bf75546dd4c06f89d2baf97d77fde7d5bfbbf14c70ac4b350067c446fb8da337159faa677065b5976fbb72ece99eb8612
 Size (ufoai-2.2.1-mappack.tar.bz2) = 72880186 bytes
-RMD160 (ufoai-2.2.1-source.tar.bz2) = 980405a5d38bcbb5ae2cea4e25c54374c7dd8e99
+BLAKE2s (ufoai-2.2.1-source.tar.bz2) = 65c9e6e3b8af53f66183cad37d9b65610f850ac6d4ec26361a7dac0a4b1998fb
 SHA512 (ufoai-2.2.1-source.tar.bz2) = 9a2d47713ded006d949b399f86be44c4c9fdaed641a20388b9ec64964e598879d06e98c7a15147482f1a493f87f6a39a849284cd03bad20573458ac86d7b90d1
 Size (ufoai-2.2.1-source.tar.bz2) = 7640531 bytes
 SHA1 (patch-aa) = 2b196e8d94a1848b42212f32c90a259e56440382

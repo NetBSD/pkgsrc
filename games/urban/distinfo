@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:07:56 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:44:29 nia Exp $
 
-RMD160 (urban-1.5.3.tar.gz) = 55c3aab336f16936139601f50dda4854470f38fb
+BLAKE2s (urban-1.5.3.tar.gz) = ad9c3140d1e291b735b87fbea98ba4a4ffbd80de43514228de30612b9b361a52
 SHA512 (urban-1.5.3.tar.gz) = b85f4cb6732031c5a05667c54f08cdb51afc244e639c42db8cbf00bb93201503911b550e61e5fec378892dc8165411517f1cceed7b0293ce54f13876569a8607
 Size (urban-1.5.3.tar.gz) = 808662 bytes
-RMD160 (sound.tar.gz) = 250815b664b9e3f8415c9850eeb00dce09e3006f
+BLAKE2s (sound.tar.gz) = c5b362814a3a9c54366a2fa177761d08e1778254a40be25a7600af6b48d9dfb1
 SHA512 (sound.tar.gz) = 3a15e4d7542f42b9ce6d0443b2c42598474522f14a78b2effb48f53639c819101f937b58bd0ad7b765ee848e6514cdd344b3ac3a1237b2cb4c3754d523db0daf
 Size (sound.tar.gz) = 8116030 bytes
 SHA1 (patch-aa) = eed2cef240eaf0bee47208918e27b65b6cd897f4

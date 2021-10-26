@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:07:21 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:43:55 nia Exp $
 
-RMD160 (dungeon-gdt-glk.tar.gz) = aed6e4a42c03be0a9bce2248dcab3370e1b1fbde
+BLAKE2s (dungeon-gdt-glk.tar.gz) = 466e70827b091df7e85a847d2e4ac51a659e61b3ffd66a9efe4b643b087fd3ca
 SHA512 (dungeon-gdt-glk.tar.gz) = f5499b3cbc22d53bdb1f49a88f8f7eed5487281413afc616b8767c88758341f03333e97d78cd798f5cd1fbe5b9443ddb27cfd1dacbce92a69056c1a6315ff5b6
 Size (dungeon-gdt-glk.tar.gz) = 262052 bytes
-RMD160 (glkterm-080.tar.gz) = 57e317e816a8c233fd0f2fe24a7c8a54c223edbc
+BLAKE2s (glkterm-080.tar.gz) = 6bfff2bc9e3d4300113762f0546952e6c3534bd45a4efbdd67b85881cd1be392
 SHA512 (glkterm-080.tar.gz) = 2745689d8cf7ad759f048966327f767ed9f8a121da01520a3894ca7aa76156e007e1546b709517ac611bfd648f8a041c39a18d2ce44c26d9a0b0673361532d7b
 Size (glkterm-080.tar.gz) = 91260 bytes
 SHA1 (patch-aa) = 172cc658c3ec2f188448659708e2047d01e426e0

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:07:32 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:44:04 nia Exp $
 
-RMD160 (quake3-latest-pk3s.zip) = 7cc94bb36408e531140c418ebd67a4c0051592ff
+BLAKE2s (quake3-latest-pk3s.zip) = a76f05b92f70246d71b39ee2c9496876a767b35d7fba247220f09f6d0c137e81
 SHA512 (quake3-latest-pk3s.zip) = 43516d3db319d4949662389f7ae3c79631c16ad65f055754e7ffbdbab0d2530baa2331fbddc67e7649437184fae20c66a81ab269b7d41fc86b2b110ab423e91c
 Size (quake3-latest-pk3s.zip) = 26991330 bytes

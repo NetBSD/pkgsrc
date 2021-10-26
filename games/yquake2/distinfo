@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:08:04 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:44:36 nia Exp $
 
-RMD160 (quake2-7.45.tar.xz) = c3b5527486003e2bea9b5f2d55c72e124a4cd3cc
+BLAKE2s (quake2-7.45.tar.xz) = 8eeb32906a0ef8a61b757cacac00c6ae424e08c015d27aaa9aff6c3d3959ebe7
 SHA512 (quake2-7.45.tar.xz) = 1aa161ca03782eba14feecd142d65eb5a9ca5af4b384f21d3e68338cd8d88bd5e71c1678d44285eea692d5d1b2161429270745d880b4caacd6c87c7e76ed404b
 Size (quake2-7.45.tar.xz) = 1997816 bytes
 SHA1 (patch-Makefile) = c9ed23e0361c676d8fe560b591f217dd9f662516

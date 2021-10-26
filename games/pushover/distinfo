@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:07:47 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:44:21 nia Exp $
 
-RMD160 (pushover-0.0.5.tar.gz) = 359f470b3e8f06a0c153e40ed4cb40192994d604
+BLAKE2s (pushover-0.0.5.tar.gz) = ae59fc8459ac7bd2de33f983d966aa130ca630a28ba354b8833d82b3e25d68bd
 SHA512 (pushover-0.0.5.tar.gz) = 93e97baacbefe59dd9e0911b91ec3a7ce52cb11e079162615e6725e0c99df186f8b90c1f70d11e5d9e780e2016e517a8324fddc007fea9fe1a22955bef4619ff
 Size (pushover-0.0.5.tar.gz) = 33173821 bytes

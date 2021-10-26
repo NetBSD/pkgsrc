@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:07:29 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 10:44:02 nia Exp $
 
-RMD160 (gnome-sudoku-40.2.tar.xz) = 97e5555d6968fca6345837cde4a5d8cf2f1c99ca
+BLAKE2s (gnome-sudoku-40.2.tar.xz) = c1275e9b144609706a1442ff320ade953d37f1906277545a717d9d19f7b77b91
 SHA512 (gnome-sudoku-40.2.tar.xz) = 5baaba3bba714eb90c9d1597f83c310c9ef59693d5372b3871afd34b2f1c48a3257cb61f220d3cdf624cb29ad80015e0f5ec88485020b7e351540c69374131fa
 Size (gnome-sudoku-40.2.tar.xz) = 358260 bytes

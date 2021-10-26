@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:07:15 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:43:48 nia Exp $
 
-RMD160 (bluemoon-1.3.2.tar.gz) = cfa576c65b9a1388eb3a27fa99c225a409975ac1
+BLAKE2s (bluemoon-1.3.2.tar.gz) = 4b9edb7b94620533ec6974e2af61df6fd8e611a20dad8659b49ea936b7d68748
 SHA512 (bluemoon-1.3.2.tar.gz) = 5bc1ed68e9433695bfacb6e803e1b72eed5c5bce4356a56020321271a168ebf6a9aa1574dd0837f14e27056a5a711f8d55b25ac094a2bda4fb897ae88208d6c9
 Size (bluemoon-1.3.2.tar.gz) = 21414390 bytes

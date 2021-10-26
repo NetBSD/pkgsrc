@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:07:11 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:43:43 nia Exp $
 
-RMD160 (AitDoB-0.0.20120330-facbecc3cd621efabfcfe5a910cb2da70745fe46.tar.gz) = 35390709a2970d98c710cebc1b3c285acfc6c0a8
+BLAKE2s (AitDoB-0.0.20120330-facbecc3cd621efabfcfe5a910cb2da70745fe46.tar.gz) = ab2cdbce2cd927cca58e461e33fd6dfcad570f805cdf31993c8604cc8ddee4fe
 SHA512 (AitDoB-0.0.20120330-facbecc3cd621efabfcfe5a910cb2da70745fe46.tar.gz) = 531454d225564a9100c777c80e2800dd7cbd665bdaa9c00c1b6f81dab048ac5e93f77d44782334f215b5e0c3b325c7ab78ed07d21236ecc6450b5f0185ece824
 Size (AitDoB-0.0.20120330-facbecc3cd621efabfcfe5a910cb2da70745fe46.tar.gz) = 9978 bytes
 SHA1 (patch-Makefile) = ebcfbf4b20f6e61bf731cdf4f6dbee2f3f985ddd

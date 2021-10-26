@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:08:03 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:44:36 nia Exp $
 
-RMD160 (xvier.tar.Z) = 7059f59f6cb62c715461042008f95601d545ed63
+BLAKE2s (xvier.tar.Z) = 72582caba60c46d4809d4f3dc1c8d9a8d1dfae6bcdb561dbd2112e07be467f9b
 SHA512 (xvier.tar.Z) = c78c651dce96a4eeb7e37725b0fed5e7dcb48ba6ff48697a382c714609f737e4720aa4666b58b18b05322bf38022d32d3e31cbbdf6f88e1a9f093aeb6e15ca48
 Size (xvier.tar.Z) = 61765 bytes
 SHA1 (patch-aa) = e4fe00060e84aa74a50a209d0c14670acb694d83

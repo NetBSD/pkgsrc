@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:07:47 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:44:20 nia Exp $
 
-RMD160 (powermanga-0.93.1.tgz) = baebf0eafa772d6fc827855022bd27e68ba1c716
+BLAKE2s (powermanga-0.93.1.tgz) = d5b9e6f5000c307c8823c56b186cdb3292ce3cc0f878b71485ebbc6859ac9d27
 SHA512 (powermanga-0.93.1.tgz) = 852c0b4550db6c9e4ecd380077d390327f6649b6e8ab4cad246f23e7335e8622008f9fc753e2f474bf9cf7a5654b071e3f117f6a2b5be72ea53709912f4a0f41
 Size (powermanga-0.93.1.tgz) = 11855703 bytes
 SHA1 (patch-src_Makefile.am) = cc4a9a19dd152d0a01989fe6e3b555fe19f19b0c

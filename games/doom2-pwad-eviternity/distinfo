@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:07:20 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:43:54 nia Exp $
 
-RMD160 (doom2-pwad-eviternity-1.0/eviternity.zip) = 3eb23454e032354ee0a102ce9cddeb60da2b43ee
+BLAKE2s (doom2-pwad-eviternity-1.0/eviternity.zip) = 43deada01993b54590c67dbb71acf97fab80794829e7353c784d8e7c0e778ac0
 SHA512 (doom2-pwad-eviternity-1.0/eviternity.zip) = b5ed3dde677066ea7a72c724b6d7572ccac494921a830390c37e7382d6c706f73284fe2aa37f0c752ff02005eb1c88fdd75304208b5093c9c82681d02d817e23
 Size (doom2-pwad-eviternity-1.0/eviternity.zip) = 49938319 bytes

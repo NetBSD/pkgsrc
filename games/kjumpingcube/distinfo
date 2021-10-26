@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:07:35 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:44:08 nia Exp $
 
-RMD160 (kjumpingcube-20.12.3.tar.xz) = b50ffed9eb85bdaab4c00ea38938dbbf0db8df91
+BLAKE2s (kjumpingcube-20.12.3.tar.xz) = 0b0b26489dc48f0f9e74099a5fc0d327a8d7eb43e2ad434bb803cd503488bd5e
 SHA512 (kjumpingcube-20.12.3.tar.xz) = c4df393cf74c18b090d0cf97c04ab28579f75dc2f140921634a6250952747db0bec415a7516031eeda7ce731e15188062a57d652d0b5533193adfcdab48edc9b
 Size (kjumpingcube-20.12.3.tar.xz) = 290892 bytes

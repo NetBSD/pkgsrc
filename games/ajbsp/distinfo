@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:07:12 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:43:45 nia Exp $
 
-RMD160 (ajbsp-v1.01.tar.gz) = 6943aed9fb3bf047ceafc0bf35cbf610b51fa612
+BLAKE2s (ajbsp-v1.01.tar.gz) = cb04a5c486f23ef210b143670090f04621a6c1a9075ef2d6f30a77b38f780139
 SHA512 (ajbsp-v1.01.tar.gz) = a554cd11f95afe351769a78878b8717354750dc2165b8b4f2ab37cf92125aa058c4b08d0e4df5e7c82a9b0c0be578f12bbdf03df8c620295449982271544cba9
 Size (ajbsp-v1.01.tar.gz) = 77251 bytes
 SHA1 (patch-Makefile) = a53066b6ada4271c709e9d69f2038819a2d47158

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 14:07:57 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 10:44:30 nia Exp $
 
-RMD160 (Wormz-1.0b5.tar.gz) = 38411dcc3611d70d5873bf512439cd707372ef9e
+BLAKE2s (Wormz-1.0b5.tar.gz) = 698408ba91bc27200b761b0e3d6319793175a64ad031ec7d1f9d015d12b7164e
 SHA512 (Wormz-1.0b5.tar.gz) = b0dcc1bf7043b8af4417a77f92be11511142b026b4d336ece4a4a81e0ce77d39a30d8d9a18937f3c92daa81701402aab0f95861cd3d82e3221ac4d21ae8c2735
 Size (Wormz-1.0b5.tar.gz) = 436954 bytes
 SHA1 (patch-Common_Utils.cc) = c7fd0d05c95e05e9eb53ec120d5ea83c022f044c

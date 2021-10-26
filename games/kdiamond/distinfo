@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:07:34 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:44:07 nia Exp $
 
-RMD160 (kdiamond-20.12.3.tar.xz) = 5302a88dd04ac89fea1a18913f73a4b093f8885e
+BLAKE2s (kdiamond-20.12.3.tar.xz) = ee130d53bf6b26f948e761158c4af01a85eecedfe687da6104915831d2c4b1b1
 SHA512 (kdiamond-20.12.3.tar.xz) = f7eb5dbdeb709290a2cdb46b03f829ac111ea629dc49d81d61ce0f32eeaf0f23fcf234cd20d44a54013e93dc42e867b0dd802d54ec624d3ab4b5b9c1e8ce8c75
 Size (kdiamond-20.12.3.tar.xz) = 4698168 bytes

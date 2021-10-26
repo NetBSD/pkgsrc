@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:07:45 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:44:18 nia Exp $
 
-RMD160 (openrct2-0.2.4.tar.gz) = f49860012f1b7ef39452d87821ca178045e768bb
+BLAKE2s (openrct2-0.2.4.tar.gz) = 3f96cb44eae26acf77605e6e166fd2c85a0632db82a77019feefd5b30c803699
 SHA512 (openrct2-0.2.4.tar.gz) = 956044b5fa5e55256a33f352d2d1e8a4eb6738b98dc9894807b3628b5c5c08f3229c952fbf8b33ad867771f88c6d7e17ad1a8a4e050f8f269a6152d013afce03
 Size (openrct2-0.2.4.tar.gz) = 6805976 bytes
 SHA1 (patch-src_openrct2-ui_UiContext.Linux.cpp) = 36bd777ed772a0f18d76f699214223cc4011da6c

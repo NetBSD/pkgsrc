@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:08:00 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:44:33 nia Exp $
 
-RMD160 (xjump_2.7.5.orig.tar.gz) = 4f801e6306aafff9b56da86cd3f7ecc7d1a5e0e7
+BLAKE2s (xjump_2.7.5.orig.tar.gz) = fb386de63e8b1a5290052d992967022017b4c3a5291a842e7fd4ee31417d991d
 SHA512 (xjump_2.7.5.orig.tar.gz) = 6ce846d6681bf8b084edc06f8415a57f66d1778ec9af8b9b170f4f37292a8172b3507a08c85032a5b8588b50a7f2eefe205add4c779edd7c7ef8fb6d818d9300
 Size (xjump_2.7.5.orig.tar.gz) = 15940 bytes
 SHA1 (patch-aa) = 14078f2f08eb7905535c954b8aae78a3ab84f269

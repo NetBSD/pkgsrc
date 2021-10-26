@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:07:16 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:43:49 nia Exp $
 
-RMD160 (hands-2.0.bsd386.tar.gz) = 1afd19d701c505614373f855057e0c075785dda2
+BLAKE2s (hands-2.0.bsd386.tar.gz) = 2620fcf0801eb5d991c214d24427ec14620703719fc05b6fa3afa8e448c73788
 SHA512 (hands-2.0.bsd386.tar.gz) = 7db9729fcb4f4bbd9bedad8f9688c7d0f4bbd989d1a8c77ead547760df84daa061e0c6e2b5fd0c529a2b2edf2f91179d0323c51c6cc966dacf77a1966b83a4f3
 Size (hands-2.0.bsd386.tar.gz) = 14015 bytes

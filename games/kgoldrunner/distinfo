@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:07:34 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:44:07 nia Exp $
 
-RMD160 (kgoldrunner-20.12.3.tar.xz) = c71ab3be85b42dc7f83beecb79de1d5fb83d4edd
+BLAKE2s (kgoldrunner-20.12.3.tar.xz) = f302e1a106794d3cd7d0eba96cca2f623de378f34f7c8624b0c928f254f23f4d
 SHA512 (kgoldrunner-20.12.3.tar.xz) = 0cc72a33d0dee5368c034e7f8f5928531e785abd1a62ade58c24e0975af3ac6ec7e5bf89f07f52be720ce5cd8e5f0d6d4fdd4fa02a5bc8d46ecc5175ad419a4b
 Size (kgoldrunner-20.12.3.tar.xz) = 4444752 bytes

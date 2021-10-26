@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:07:18 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:43:51 nia Exp $
 
-RMD160 (corewars-0.9.13.tar.gz) = bb40d2665fb7df4f2c5b787e72112144e51d2c67
+BLAKE2s (corewars-0.9.13.tar.gz) = 424ed84d33a26c31f44831556c8fa6688581b550502abeb607e427fd0c0e15ef
 SHA512 (corewars-0.9.13.tar.gz) = fe4194ac5efa7612a06d80c1218740de17a6dae6228f5e603074ab296f4a195adc68c0d8db5bbc9588947a536a9cfc208b411b024163adfe1cda072d05dd6a71
 Size (corewars-0.9.13.tar.gz) = 203874 bytes

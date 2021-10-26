@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:07:12 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:43:45 nia Exp $
 
-RMD160 (afternoonstalker-1.1.6.tar.gz) = 03205dda62e3de13928032b56ce85f06b282f1d1
+BLAKE2s (afternoonstalker-1.1.6.tar.gz) = 60f1b5c13e4e8805340b524012b75c3771893bb4f0d7aa350bba47c8cebf7066
 SHA512 (afternoonstalker-1.1.6.tar.gz) = 4d823abc5f939bc6322729548abb0adc43b56b5d5e035578f15084f4e8f6ce80bd7b7dc3ffbe71530975b7c02962ea93405e2ad13de8a50303ccfdde543cd6c7
 Size (afternoonstalker-1.1.6.tar.gz) = 186724 bytes

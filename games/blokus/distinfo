@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:07:15 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:43:48 nia Exp $
 
-RMD160 (blokus-1.1.tar.gz) = 2c269521670c97ba36810de38d1d9650b4d9a806
+BLAKE2s (blokus-1.1.tar.gz) = 629d19dd10f9e860c87c0c558e29f53c51aaf13470b1e60e24dfda821da3de7e
 SHA512 (blokus-1.1.tar.gz) = 77535e10fe684efa4eda3aa4f42c0e2834bd81ca4e74b064e00dec1c33ba0abc6e751091496491574db62b3ab588cee95c4f017fb980fb929dc4f7aba50af700
 Size (blokus-1.1.tar.gz) = 539457 bytes
 SHA1 (patch-aa) = 6081587206b69271f22b2d472bd32d7f2fe579ac
