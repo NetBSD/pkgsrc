@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:50 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:01 nia Exp $
 
-RMD160 (tex-context-typescripts-25411/context-typescripts.tar.xz) = ab142fbde09d51984a38c84b2266fb696bbfa92f
+BLAKE2s (tex-context-typescripts-25411/context-typescripts.tar.xz) = 2a6f61aae91e4897c6157b5aeceafef4c7496465a8438090a0fdaf272aa5ae9f
 SHA512 (tex-context-typescripts-25411/context-typescripts.tar.xz) = bea41a82483903e32e19510ee8f97595edb950851931437cda343e9feda12faf4f781144ac591536a30d91c58bb0457d1224eec73203d9b2b44c742a4b35563e
 Size (tex-context-typescripts-25411/context-typescripts.tar.xz) = 9228 bytes

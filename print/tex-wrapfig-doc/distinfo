@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:51:56 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:15:07 nia Exp $
 
-RMD160 (tex-wrapfig-22048/wrapfig.doc.tar.xz) = ebc9a265b72e0a67b1b43bb55d7de2c35289983b
+BLAKE2s (tex-wrapfig-22048/wrapfig.doc.tar.xz) = 795e4ef3cd0983b30b485d7a4745c0e483f54c6d4a362fdb50616a9865b93853
 SHA512 (tex-wrapfig-22048/wrapfig.doc.tar.xz) = eb25cc853b7dd85aa6e24e084852867d39928a27927eb9aa53b36b0e41fff84e273411b21d695339caa69938cfd3556be3bfb6cabbe77a6baf00e45ec9bb254b
 Size (tex-wrapfig-22048/wrapfig.doc.tar.xz) = 337900 bytes

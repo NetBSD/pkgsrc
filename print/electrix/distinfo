@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:48:54 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:05 nia Exp $
 
-RMD160 (electrix-0.2.0.tar.bz2) = 36fa0377bd9bbd4e514eeaeeb951998849c8583c
+BLAKE2s (electrix-0.2.0.tar.bz2) = e3c5aeb74f9023fc494d66dd9286e31b7673d749b8130b8cf42da70b91facf60
 SHA512 (electrix-0.2.0.tar.bz2) = 5092b9126518bed3bc4f7925a273462b8f18e08535af8426a7f8db8b7ad56b3c28139657efa7133235b675e591ee54b140186552e58312885d2e703aaaf82380
 Size (electrix-0.2.0.tar.bz2) = 134220 bytes
 SHA1 (patch-wscript) = be0360e375553aea744e3eddda0abd90eec93549

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:46 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:57 nia Exp $
 
-RMD160 (tex-trimspaces-15878/trimspaces.doc.tar.xz) = 7934514903e979b359ad0beee3bf534d5a630b3d
+BLAKE2s (tex-trimspaces-15878/trimspaces.doc.tar.xz) = 20abc9272c4006b1824ac940ea0d219a3ce7944cb9f6b3ac374ee593c9f0b422
 SHA512 (tex-trimspaces-15878/trimspaces.doc.tar.xz) = 185ac50d198fe9e384641020f951c4b8693330b64af6b684e63f729b3a0dc79764f559ee9a0acc06da680d2a87988e5a78973a747963d63649193b3b3b6fc7e3
 Size (tex-trimspaces-15878/trimspaces.doc.tar.xz) = 148420 bytes

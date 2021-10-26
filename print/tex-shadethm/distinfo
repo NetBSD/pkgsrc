@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:51:26 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:14:36 nia Exp $
 
-RMD160 (tex-shadethm-20319/shadethm.tar.xz) = 52641f35ef1b273d22325dacd90e85657ce9b944
+BLAKE2s (tex-shadethm-20319/shadethm.tar.xz) = ddc479bc1ff3e5b37d89086e2eda562c580d6771b187e7f1e7e2299f20840f5b
 SHA512 (tex-shadethm-20319/shadethm.tar.xz) = a3d1bf5f612396a23f058ae97f11b841b7318436faece136b175b8e17bc06bfc3b20ed4147421aca1bf7e69f931883c7e10c15efc3c2f9e282316911eeb343bb
 Size (tex-shadethm-20319/shadethm.tar.xz) = 7368 bytes

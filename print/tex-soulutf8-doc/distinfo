@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:29 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:40 nia Exp $
 
-RMD160 (soulutf8.doc.r53163.tar.xz) = 1eb0de705d292afbe1b164cc1131251e4e96c5af
+BLAKE2s (soulutf8.doc.r53163.tar.xz) = 2a5f70322876a95628cc322cb3866f9769d5b07cb612077e7270d2722cc7d358
 SHA512 (soulutf8.doc.r53163.tar.xz) = eb3c81518312b6c0cc5b622bbf2b7ae954e42b2a813097d8c3fa681daea0a24c9df14d189ca5d5f2adcbfe479029bb985c3d85278beb6d9694bd61aaefd32103
 Size (soulutf8.doc.r53163.tar.xz) = 347016 bytes

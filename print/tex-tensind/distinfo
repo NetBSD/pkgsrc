@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:36 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:47 nia Exp $
 
-RMD160 (tex-tensind-51481/tensind.tar.xz) = 6b883cfa5bf92b9d9de0a71356844689fb116bf1
+BLAKE2s (tex-tensind-51481/tensind.tar.xz) = ebca155140c2c7a9427581fec7f19daf048416f6dfe63a14277fb4f0c9c554c2
 SHA512 (tex-tensind-51481/tensind.tar.xz) = fc20b6f6b705218b82b5788582d8b017be783e42c87b3f35e7aa99a8215ab0168b7da899c73ef1ebc282bedd5c715e69ed9e1c19b94d9b6369ba8e9986b5c5d6
 Size (tex-tensind-51481/tensind.tar.xz) = 2708 bytes

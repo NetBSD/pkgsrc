@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:54 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:15:05 nia Exp $
 
-RMD160 (vhistory.r30080.tar.xz) = 45bd6a03d3ad554372b72bfc51f15650229c1d07
+BLAKE2s (vhistory.r30080.tar.xz) = 4c18695736398a5734a1a13eaacee13ddf2acb1fd18dc3700161e158f4ab236c
 SHA512 (vhistory.r30080.tar.xz) = f1747b1c112c69cdc506234c571335647b365eb92a4054c70cb08752dc1da92ac4e84d533083cdee76f6398f5f1bf04b20b94cf38ddf13947d4086c5599529fc
 Size (vhistory.r30080.tar.xz) = 8276 bytes

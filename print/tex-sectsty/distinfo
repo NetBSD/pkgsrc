@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:51:24 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:14:35 nia Exp $
 
-RMD160 (tex-sectsty-15878.2010/sectsty.tar.xz) = b4ccb77ad32f7f2c1a0a2dbc74a33d7c5a393c4a
+BLAKE2s (tex-sectsty-15878.2010/sectsty.tar.xz) = e6fb00856184edda6499f90e7cfc971f4f6fad13114b7752e74766991adff99f
 SHA512 (tex-sectsty-15878.2010/sectsty.tar.xz) = fc4f1723094efebef015a92e9adea5b3c2e7c4761e6798db4ee1cbc5a6348858d0ca39e22cd2854bb240039eb5f823af6875c29065e7c5bf49a8b66edd9a1ce1
 Size (tex-sectsty-15878.2010/sectsty.tar.xz) = 4832 bytes

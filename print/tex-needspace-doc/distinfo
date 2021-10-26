@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:50:58 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:14:09 nia Exp $
 
-RMD160 (tex-needspace-29601/needspace.doc.tar.xz) = b1c35b07c86c1fbe81ea906d4100ef1645762143
+BLAKE2s (tex-needspace-29601/needspace.doc.tar.xz) = 66b03bbff9bc958d3c41766bf50e370694fecb88f6eb1c9009d794f45fe3a6b8
 SHA512 (tex-needspace-29601/needspace.doc.tar.xz) = f7a898c0468d2ed816f6baf783e79171d2304d47ab103d559d3c234600533a7f8c213f168fdb1ff234a7155e348af7c49337799cab91750357eabc3f59456759
 Size (tex-needspace-29601/needspace.doc.tar.xz) = 158552 bytes

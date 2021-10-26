@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:49:20 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:12:32 nia Exp $
 
-RMD160 (tex-babel-interlingua-30276/babel-interlingua.tar.xz) = dfdf7eb73bb49598ab4a97accf9e1197eac6d6e0
+BLAKE2s (tex-babel-interlingua-30276/babel-interlingua.tar.xz) = 417f142e96740fa03440a5f17f7b56c4dc523a3e6c8719c25468142d6c2f17d0
 SHA512 (tex-babel-interlingua-30276/babel-interlingua.tar.xz) = 5262690f3bf25cb2de4fe4c1953602c5d727ee819c691431f6d830a5f9dceca48e701bb2c74c30d502664659ce9a23fef2458d1e7adc6ecbe23b7b8099cedafc
 Size (tex-babel-interlingua-30276/babel-interlingua.tar.xz) = 2244 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:50 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:01 nia Exp $
 
-RMD160 (tex-mathdots-34301/mathdots.doc.tar.xz) = a0986fa80542062d259ab1f173f9156e2da6ec10
+BLAKE2s (tex-mathdots-34301/mathdots.doc.tar.xz) = 81f52dc3a17080177219ec8173a3f4f8ded16411476da1ff8a49df60b93194e2
 SHA512 (tex-mathdots-34301/mathdots.doc.tar.xz) = d178ebcaece1076fb769230c50f23f5a886fb12dd668d1db59ffe070a3356065ad3a8f36223e7506dfa3d88b49da15e3f784a7c5fdb59e36448f708af0ccbac6
 Size (tex-mathdots-34301/mathdots.doc.tar.xz) = 397300 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:17 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:29 nia Exp $
 
-RMD160 (atveryend.doc.r53108.tar.xz) = 4ca50da0f76ef9ca2053ce670f2718826df7ab16
+BLAKE2s (atveryend.doc.r53108.tar.xz) = 3d1c7add6e2b81f30e751502eb7dd4549089256d23118e4c0a2974191ae0c08c
 SHA512 (atveryend.doc.r53108.tar.xz) = 5c5948ab7f0ca213bb5fe3ae056cddd392461911e2af7dfff133253f6aae970d525fc752f154921de2186c8a443fa4f90b18d23896a016ebc9ea177d6826613b
 Size (atveryend.doc.r53108.tar.xz) = 376388 bytes

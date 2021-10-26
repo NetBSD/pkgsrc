@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:21 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:32 nia Exp $
 
-RMD160 (hologo.doc.r53048.tar.xz) = 62131868cf49f54577fd23d3acf2c6550d1d95f3
+BLAKE2s (hologo.doc.r53048.tar.xz) = 893e0d3f5fa41e65b759cbc98699acb1eee15809797229943c88d26e538f1e34
 SHA512 (hologo.doc.r53048.tar.xz) = 72a65838829017ca887afe5bdf1f7645209601e267241a5650731a806c08b58670a4934698c4ebf2548d198e0b79619ef33c06d6eccfd5eef9119bee19629105
 Size (hologo.doc.r53048.tar.xz) = 553396 bytes

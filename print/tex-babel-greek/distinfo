@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:49:20 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:12:32 nia Exp $
 
-RMD160 (babel-greek.r56904.tar.xz) = 1946e7efa9d5c493854fbd7c9c577464594e7f6e
+BLAKE2s (babel-greek.r56904.tar.xz) = 5074dc3de69e66af1eb3701b3e39af71fbfa81920b2700b1c605a3c6c67ab170
 SHA512 (babel-greek.r56904.tar.xz) = 6b0ab839f2e8a9562c8292fe8f7661a73148754ed816088be25d06537a58ba95ac34d9440bc4f3f35c3b720188b261b432887f9867ff94b51261076f9d8e0160
 Size (babel-greek.r56904.tar.xz) = 5996 bytes

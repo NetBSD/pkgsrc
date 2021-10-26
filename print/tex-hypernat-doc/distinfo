@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:50:22 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:13:33 nia Exp $
 
-RMD160 (tex-hypernat-17358/hypernat.doc.tar.xz) = 47e339e9f2c2374890735b27984175ff7e462fe6
+BLAKE2s (tex-hypernat-17358/hypernat.doc.tar.xz) = 16ddfa796cf9b1a4e841b8426bf9631b35623e582dc7c391e33752cc6de557f0
 SHA512 (tex-hypernat-17358/hypernat.doc.tar.xz) = 298889f8320910b733e8b0020e1a5019c83d6c5dcd107992af1c1ac33855574a2a179b44243609e2e03c633d07e06bdbe020f53a07aed2cbf3742922127e26a1
 Size (tex-hypernat-17358/hypernat.doc.tar.xz) = 186680 bytes

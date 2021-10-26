@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:51:47 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:14:58 nia Exp $
 
-RMD160 (tex-tufte-latex-37649/tufte-latex.tar.xz) = 3c6567ed08c5aa6c9a64906f284a7a420f23038f
+BLAKE2s (tex-tufte-latex-37649/tufte-latex.tar.xz) = ccf6dcc368960f5e75712382a70c34fc87fe32d27047540184d2bd2d5ff6c078
 SHA512 (tex-tufte-latex-37649/tufte-latex.tar.xz) = 82ec61166922564b0d304ef69e195f7781e1b9dda7ca85dc45f24372d21d39a07b11c58fe963be780cfc54102137326baa46488915d271cb472101f0165a2e6f
 Size (tex-tufte-latex-37649/tufte-latex.tar.xz) = 21536 bytes

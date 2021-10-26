@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:11 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:22 nia Exp $
 
-RMD160 (tex-fncychap-20710/fncychap.tar.xz) = 6f4938bca812a88dce036c52044477f4b42a5170
+BLAKE2s (tex-fncychap-20710/fncychap.tar.xz) = 80e0a83a4a589c41dea870c0036cf81531e0fcdf505f797e03c59b59e14b933c
 SHA512 (tex-fncychap-20710/fncychap.tar.xz) = 8710c078053433f0ec3a4f13ebc07f26d647a5cd3a720efb9067109066d1b71818f13e6a92f33d85662991587fe616f9b933f09f4beff4b4fd1222e7fb0d52f4
 Size (tex-fncychap-20710/fncychap.tar.xz) = 5104 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:51:14 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:14:26 nia Exp $
 
-RMD160 (tex-program-44214/program.doc.tar.xz) = d0db1e1f288bb27a8dbb3bc4ae2cb31e703369a6
+BLAKE2s (tex-program-44214/program.doc.tar.xz) = 51428b5ee84f1d7129ac5ceeff176b4d48189228b78c5cf0f683b2fea5ebac7f
 SHA512 (tex-program-44214/program.doc.tar.xz) = 708f7f2ebea653659e7d789647a095596b6ee882cdbb16aeed7223490762302a57f99cc5ca5667e3880e2a7cf9aba85cf03d25c95d6386a5b68e50c0c2ec01ff
 Size (tex-program-44214/program.doc.tar.xz) = 49872 bytes

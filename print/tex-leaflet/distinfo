@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:50:43 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:13:54 nia Exp $
 
-RMD160 (leaflet.r56878.tar.xz) = b7da763430ae2832056c9852fbff8c55c50fbab8
+BLAKE2s (leaflet.r56878.tar.xz) = a6443999ba8f3692aa986934d7e44b6189481614b898f829ed0e8988c9d3c8e2
 SHA512 (leaflet.r56878.tar.xz) = ec809f2aa4cbc16dd26aae988e2e3b5fcef9284cd31deb126d26989358e52596a50fd63df07095f0bf081c46d1e8af3b3f59572d372be873d9afe1f3db3cee95
 Size (leaflet.r56878.tar.xz) = 5652 bytes

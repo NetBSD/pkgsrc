@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:50:52 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:14:04 nia Exp $
 
-RMD160 (tex-mfnfss-46036/mfnfss.tar.xz) = d2bdfeebec8c28e15d06868a983d4abb1cc9a13d
+BLAKE2s (tex-mfnfss-46036/mfnfss.tar.xz) = 3158a9c727bd8687cd488973f785b73233ea5a3109cfbde4481fcd5b4c73f5dc
 SHA512 (tex-mfnfss-46036/mfnfss.tar.xz) = cbe438e051415adcba7c17aa2ab75267b64cb5c9e7af0a25c1d87c228e9e1ff2e8f302a57acf1c1ce4b18d31aa589079a731bfc09f8d46d81cc1cb030b9496b1
 Size (tex-mfnfss-46036/mfnfss.tar.xz) = 2108 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:48:53 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:12:04 nia Exp $
 
-RMD160 (PDFViewer-0.1.0.tar.gz) = 5e321f8e8ddb59f3581b395f2f58da820ae8038f
+BLAKE2s (PDFViewer-0.1.0.tar.gz) = 59fe3ad792d8164c72ef74af57e10f0f457b41e399d4c0db95b42dfcac95cb6a
 SHA512 (PDFViewer-0.1.0.tar.gz) = 19b4e91a8e6bd1bc75eea4b956142d1f0f6d88122690d5a3bfead21c3984b568f056fae34107516cf4f32521c72222cd17cc2318f2394e2c66ed010c0130d642
 Size (PDFViewer-0.1.0.tar.gz) = 31662 bytes

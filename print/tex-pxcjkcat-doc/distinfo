@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:17 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:28 nia Exp $
 
-RMD160 (pxcjkcat.doc.r47266.tar.xz) = 250887b3635c0de63f64c782018283c6a9727198
+BLAKE2s (pxcjkcat.doc.r47266.tar.xz) = 6e2dd589dd1bb0e136ab97455193187cedebb5f458433dade967548d8a949948
 SHA512 (pxcjkcat.doc.r47266.tar.xz) = 3c822359a68800a29fbc7ceda3293b6be902d9bc61f277003e6e20404c32e9bb6b34638a4bc11aeb943c4bdf6e361386972251b9b015fbe68ead824e5fdc67d6
 Size (pxcjkcat.doc.r47266.tar.xz) = 195556 bytes

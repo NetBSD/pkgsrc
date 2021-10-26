@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:50:57 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:14:08 nia Exp $
 
-RMD160 (tex-natbib-20668/natbib.tar.xz) = f4852348fe33e7e5fccb9d8198d6a8280bcb761c
+BLAKE2s (tex-natbib-20668/natbib.tar.xz) = 3b2b9a243488d732e741b80724e82dc4ed68c83b1d6b27c73bf05fb69a1e2015
 SHA512 (tex-natbib-20668/natbib.tar.xz) = dd497d18f34d205d006684b7ca4984924b3d0c98ad8388bb1751692bd3512e63c4203e022a0ed00c7c43908fc7381c8520decacd7600ba2ec464c30aceb2873f
 Size (tex-natbib-20668/natbib.tar.xz) = 16576 bytes

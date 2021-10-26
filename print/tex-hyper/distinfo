@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:22 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:13:33 nia Exp $
 
-RMD160 (tex-hyper-4.2d/hyper.tar.xz) = e7d3796045a01dbb3c89d2620631e123c73df3d6
+BLAKE2s (tex-hyper-4.2d/hyper.tar.xz) = 49d0d32a6fdf252e52736498b91937b13d54f56e069deb309db700377352e723
 SHA512 (tex-hyper-4.2d/hyper.tar.xz) = f412ff32c12ca733d60bd061d2c862c2508fbbe95ca6e14fba5fb37da3735087c67294f271040ed3ccbe33c9d04330b6f1a7a21a0f54f0a6b534bf1aeea56b95
 Size (tex-hyper-4.2d/hyper.tar.xz) = 15688 bytes

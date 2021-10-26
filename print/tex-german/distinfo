@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:50:16 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:13:27 nia Exp $
 
-RMD160 (tex-german-17039/german.tar.xz) = 43c708bd82100fb6cecf59e94216df9a3a5a77b6
+BLAKE2s (tex-german-17039/german.tar.xz) = 49dbe18f724c9342b2776a23019721673045e27c0bc0caf004c0f34e79d42598
 SHA512 (tex-german-17039/german.tar.xz) = 06314408d8efd0890ea225fabcef80d63a609f812b7544955c790e397bb529e962ab55058aaff655dc7ae163562326ce86135f9407a530303543de8de7d7686f
 Size (tex-german-17039/german.tar.xz) = 6748 bytes

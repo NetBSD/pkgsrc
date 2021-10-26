@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:20 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:31 nia Exp $
 
-RMD160 (tex-babel-georgian-45864/babel-georgian.tar.xz) = a0b6b78741b14f0cecd97f89eae3c398ba7dc572
+BLAKE2s (tex-babel-georgian-45864/babel-georgian.tar.xz) = dc80acad79d98cf8c11ad37eae2d34051f4544d6341f77d38af942a63ef02740
 SHA512 (tex-babel-georgian-45864/babel-georgian.tar.xz) = 74da8bb775637709180690a5582c8cd69a663e86ec7b8b29077de469b607ec9e1c9f76739527785b83054be79b7523cd5a63b1b144e3e708b81fe86d3dafe329
 Size (tex-babel-georgian-45864/babel-georgian.tar.xz) = 5008 bytes

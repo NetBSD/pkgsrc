@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:51:47 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:14:58 nia Exp $
 
-RMD160 (tex-twoinone-17024/twoinone.doc.tar.xz) = e9848a500832b3f355bbc900d6f41207ff1f3db5
+BLAKE2s (tex-twoinone-17024/twoinone.doc.tar.xz) = 721e325a556daa06d0182b62e8540006f2e3059ded55ef79a0af25749d9c4d6b
 SHA512 (tex-twoinone-17024/twoinone.doc.tar.xz) = 03e9d635945d4efb5d330fc1973183b5151cc4401a770409188f9422625ed152f5568fd94f2f5df9fea4dd9ccf93f33355b2cf0cb2ff112e02ec71dd4ea08ff0
 Size (tex-twoinone-17024/twoinone.doc.tar.xz) = 72400 bytes

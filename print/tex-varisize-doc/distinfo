@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:52 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:15:03 nia Exp $
 
-RMD160 (tex-varisize-15878/varisize.doc.tar.xz) = 69ac62b2f9dfe1c7142aca22a362c61eec9ff245
+BLAKE2s (tex-varisize-15878/varisize.doc.tar.xz) = e4f550487519dd918c7ecdcbec454db6b3fccdfea22ebf22fd3961df12fc8928
 SHA512 (tex-varisize-15878/varisize.doc.tar.xz) = f24a6a6837da034c259d95723406cfc185e9ee5ac3e6acd624f2ab6ed29032a790905e7c99267c7d75b3e53334fa6eabf649b3b34167e407dd9c3308a6c8b0e3
 Size (tex-varisize-15878/varisize.doc.tar.xz) = 440 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:49:42 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:12:53 nia Exp $
 
-RMD160 (tex-clrscode-15878/clrscode.tar.xz) = e5038b7ba9a8e4fdcdd2b19f935ef0dbce88f857
+BLAKE2s (tex-clrscode-15878/clrscode.tar.xz) = 2595e8abe07b60edf5bba168de9c623c98f11dd9aba49a5dfdcf7fad0df45066
 SHA512 (tex-clrscode-15878/clrscode.tar.xz) = 226b991548bef004fac31e75ef191350938c1b802f430175e49bb9411c8b35c429f15ab1c74c917deae3612d828bc8900691f4b176f2c7aa232170c0b2b6a59b
 Size (tex-clrscode-15878/clrscode.tar.xz) = 4496 bytes

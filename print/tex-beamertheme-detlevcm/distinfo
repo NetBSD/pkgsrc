@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:26 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:37 nia Exp $
 
-RMD160 (beamertheme-detlevcm.r39048.tar.xz) = 12fc938f7b1717e8f7c8f0bbc420678d989918df
+BLAKE2s (beamertheme-detlevcm.r39048.tar.xz) = 2216bbda6128db7dc1b193af7c460fdcaf6b619ec37a72a7b02a51a396d996a2
 SHA512 (beamertheme-detlevcm.r39048.tar.xz) = cab4d390d7469056f2235c493b9383a4374c4a686810db428cfe622a4c2513f7176df489d22f7e37ae1f8a2d3303443b60c12c577764be2258b345fe9c3dc543
 Size (beamertheme-detlevcm.r39048.tar.xz) = 3064 bytes

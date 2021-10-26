@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:32 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:43 nia Exp $
 
-RMD160 (tex-breakcites-21014/breakcites.doc.tar.xz) = 6a766de0bbb19db950b28abddf11d306ee944f0a
+BLAKE2s (tex-breakcites-21014/breakcites.doc.tar.xz) = abbde2d75fb048eea0a6816eeda74605317ccf1d4040bbc4b98e9886c9f99d41
 SHA512 (tex-breakcites-21014/breakcites.doc.tar.xz) = 1cfb361637498cb0646ef662bbab1b8867030157265c7bb39f53433dfe7a9ddd1be06fd615ca7360896731e8c897a3beee9e1c34485b639753ccd446269a87ae
 Size (tex-breakcites-21014/breakcites.doc.tar.xz) = 148116 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:12 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:23 nia Exp $
 
-RMD160 (alphalph.r53087.tar.xz) = 0063e6d82a9aa49ff181ff079482d433e4dadd5c
+BLAKE2s (alphalph.r53087.tar.xz) = a78100838250a1ce230162d3e3b69c7ce031b572a3e6ecd538def88757ea71ec
 SHA512 (alphalph.r53087.tar.xz) = de17ab4278afc9fb308abc23c19d4d1ce117ef3b66a21b748c102b95722d3395016682e9508e135e2b01bf4ff274964df0fb723ba2f92c81873dd58d73a3a733
 Size (alphalph.r53087.tar.xz) = 3436 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:48:58 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:12:09 nia Exp $
 
-RMD160 (latexmk-463b.zip) = fea0e3df1fbde57391ac8d64c86a2e0567b16161
+BLAKE2s (latexmk-463b.zip) = f36a553f4ba0c2d78027adaa26a0c853249f370cd558ce168327f2c06ec9a96f
 SHA512 (latexmk-463b.zip) = 007cc50e7e6144f4fda77910a6547a606728090cb030003824d8b98c425a81bc02854f36e64d4eab150601c49ca3a0df228f22314dca8a48dfe7846d0977c0fc
 Size (latexmk-463b.zip) = 442972 bytes

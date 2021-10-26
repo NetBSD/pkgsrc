@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:51:49 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:15:00 nia Exp $
 
-RMD160 (tex-ukrhyph-21081/ukrhyph.doc.tar.xz) = c7a20f74ca44d7d57fe165bc4743d55a38d55505
+BLAKE2s (tex-ukrhyph-21081/ukrhyph.doc.tar.xz) = 523344bc553dbe3e65dc325766f28627b27245f2e4d1812f4ec5d1c64d4bf4c7
 SHA512 (tex-ukrhyph-21081/ukrhyph.doc.tar.xz) = 4610fc0c6739c4247581869ba74bc0276af2bfd525821f9de5157937568d818ca9fd755037625d3c2465de8be3f0beecb486afe89871e9b163fd9c34748f5917
 Size (tex-ukrhyph-21081/ukrhyph.doc.tar.xz) = 160944 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:19 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:31 nia Exp $
 
-RMD160 (tex-realboxes-23581/realboxes.doc.tar.xz) = 8911fde994f327644a298149c85857b0d342260c
+BLAKE2s (tex-realboxes-23581/realboxes.doc.tar.xz) = 25452b7fa406d7e4d7a9a76d775a9777a2fc3ad5addaa2497ebf438c2681f599
 SHA512 (tex-realboxes-23581/realboxes.doc.tar.xz) = c608f4d46f7af2af0d36540102dd4a0f2385c948161bd91388cfc1de0c3b04131cb2ca1c6d3f7440f424a2a45c7babf1225c961547bf8261ee46e104ca16a603
 Size (tex-realboxes-23581/realboxes.doc.tar.xz) = 175816 bytes

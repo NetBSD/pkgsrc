@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:42 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:54 nia Exp $
 
-RMD160 (tex-leading-15878/leading.tar.xz) = 2f3245f0d2d77dae0439ad4b642222507e012d7f
+BLAKE2s (tex-leading-15878/leading.tar.xz) = 9829006f833fd40947b89c5f60e4c26f62241c499fed00380b217be54ba5e5f3
 SHA512 (tex-leading-15878/leading.tar.xz) = 105a9099152719d19931e1ca250e308f13c3e4c55916b6ee0e8617dc8dfe64ca9eacc68486bd871f2097a88530a2d3e76588e0e0a61ed323d8554e493ffbd6a6
 Size (tex-leading-15878/leading.tar.xz) = 1144 bytes

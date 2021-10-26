@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:45 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:56 nia Exp $
 
-RMD160 (tex-translation-moreverb-de-23957/translation-moreverb-de.doc.tar.xz) = aef47b7fa34a52f0ec5380fb7515067b85af60e1
+BLAKE2s (tex-translation-moreverb-de-23957/translation-moreverb-de.doc.tar.xz) = 4e10cbb2da87b3bf76581d1e97fdffd99895d4e55bf5c286f5d7f943fbebbdb6
 SHA512 (tex-translation-moreverb-de-23957/translation-moreverb-de.doc.tar.xz) = 6fe9874288d4a5ec0e41222790611d4353bc8eff1dc98e853332168fd1a3c31da285ebd195b1fa8037f8938027c3d55f4a257ab45e0a449b69f063fd3eba1b1c
 Size (tex-translation-moreverb-de-23957/translation-moreverb-de.doc.tar.xz) = 94828 bytes

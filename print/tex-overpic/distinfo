@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:51:04 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:14:15 nia Exp $
 
-RMD160 (overpic.r53889.tar.xz) = 3f92d634d5544b1af95e6776da341936e04f444e
+BLAKE2s (overpic.r53889.tar.xz) = 7cda72732eb1507e00427a4b4362c51d94a15723516e08250433bee88e20c69e
 SHA512 (overpic.r53889.tar.xz) = f6946c04fb1bd17f8708698671c17037688198996cbfac9b358169d1cfbaed9835b1b05b7779f3b4545c3b7de1d0ccd5148757b3cf125983ab0cdb8d895c5e69
 Size (overpic.r53889.tar.xz) = 1728 bytes

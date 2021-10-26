@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:51:50 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:15:01 nia Exp $
 
-RMD160 (updmap-map.r54495.tar.xz) = 95b18c22f41a1e9565ef86966f368b144d1df549
+BLAKE2s (updmap-map.r54495.tar.xz) = ee749d3d0bd10d23c04f182cb876b531f67fd8beec9b3bcf92919076059459f4
 SHA512 (updmap-map.r54495.tar.xz) = f63b2bce923a409e06b76bc12c4a9d163bcfc7162f9b92afd5a9c055494bdddf7e4e8419a3c36ad7c78aeb3cddc476a0bd7008da67237af4175d4e711836d9e7
 Size (updmap-map.r54495.tar.xz) = 301436 bytes

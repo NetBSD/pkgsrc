@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:08 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:13:18 nia Exp $
 
-RMD160 (tex-fancyref-15878/fancyref.tar.xz) = 6dd5f90021a66ccc86fad31905fff5ab9da236c3
+BLAKE2s (tex-fancyref-15878/fancyref.tar.xz) = bd8d57e00908e383749914f70212ae59dbe8404b06d283f900f27dec29253298
 SHA512 (tex-fancyref-15878/fancyref.tar.xz) = fa311968139da183f486fab0bc33a5f94c4403251ec85cfe8f7ddc00cb64805ca4993c3897d5c671f63b2282417690f07e6895ce7ae4e5d31726e2c2d374a74e
 Size (tex-fancyref-15878/fancyref.tar.xz) = 3372 bytes

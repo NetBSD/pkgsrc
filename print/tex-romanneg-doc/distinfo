@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:51:21 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:33 nia Exp $
 
-RMD160 (tex-romanneg-20087/romanneg.doc.tar.xz) = d815c782b472f4eb0beafbc600d287e8a8635bda
+BLAKE2s (tex-romanneg-20087/romanneg.doc.tar.xz) = 11b1bb7b3d85a78234fd8cb7a553397e5b947a5c0186e5b20c996c4e70f63c60
 SHA512 (tex-romanneg-20087/romanneg.doc.tar.xz) = b68907e856103eb99e4ab2ee10035cecca8d5756bd269fb998053d54d2f8f31478045579175dc5d2b8253c4005497cb7498f895cd2f2e379367763fe313674be
 Size (tex-romanneg-20087/romanneg.doc.tar.xz) = 184160 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:44 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:56 nia Exp $
 
-RMD160 (listingsutf8.r53097.tar.xz) = 4e5321524fa6a91f33be8cff6524f4b9da3819d6
+BLAKE2s (listingsutf8.r53097.tar.xz) = ce06137a0ac82b1cff4fdb426003de2e381ae755c67998e04600ea1000f35638
 SHA512 (listingsutf8.r53097.tar.xz) = 846cc046ced340cafd98f009a55e891bfa6bd5715c94c0dbd5b124599c8e3aed1f248f56592795184fa040285001b0d967dfb26b0fb764bdfadcc2eabe8c3122
 Size (listingsutf8.r53097.tar.xz) = 2264 bytes

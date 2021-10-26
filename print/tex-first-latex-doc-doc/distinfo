@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:09 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:13:20 nia Exp $
 
-RMD160 (tex-first-latex-doc-15878/first-latex-doc.doc.tar.xz) = f113de9e7fc5148aa160aeed7f3046158c6f5931
+BLAKE2s (tex-first-latex-doc-15878/first-latex-doc.doc.tar.xz) = c14f0e8572dd7b3adace9e0b5316579d0eea2d479bd78f27a05a5c10593c0c8d
 SHA512 (tex-first-latex-doc-15878/first-latex-doc.doc.tar.xz) = 64d700efd1a8d34ebe8340757a8a70662ed99adc4482c9f68abee638848cdf909b0dc7a1d21dd916bd544d76f547d9aa712e2b202cbc07eb4f9efde4171c3a09
 Size (tex-first-latex-doc-15878/first-latex-doc.doc.tar.xz) = 503812 bytes

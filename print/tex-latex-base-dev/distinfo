@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:50:39 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:13:50 nia Exp $
 
-RMD160 (latex-base-dev.r59474.tar.xz) = 3ffb70c3e78d70ddfdeab407e7c2c616e8534a35
+BLAKE2s (latex-base-dev.r59474.tar.xz) = 4b0ebf5bff96e7e40597baf8057ee13048de4ae772f003b2fe3af9d40a7667c3
 SHA512 (latex-base-dev.r59474.tar.xz) = 45020da589fc42d8a80be76c914724757cc9312a7bee821bfe1bdb54a975583904b01c45fa9dd4d46db962877204a7ace68500b98ce61a8ce75acbb498aa6bb4
 Size (latex-base-dev.r59474.tar.xz) = 215404 bytes

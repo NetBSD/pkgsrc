@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:44 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:55 nia Exp $
 
-RMD160 (tex-context-annotation-36188/context-annotation.doc.tar.xz) = 9bab9c1d2414ff1e799f293df3e467e89d9db74b
+BLAKE2s (tex-context-annotation-36188/context-annotation.doc.tar.xz) = 42345ab6af436c6010ee1f3522668422e33b4e071b112ebe55e0760aad1678ae
 SHA512 (tex-context-annotation-36188/context-annotation.doc.tar.xz) = 28f54219ca0967651e795495c2e6687c440a91f5630126011822881c7be1bfce336d9807e01939353ad70cfd679849d2e3b28eae628b0a788c1c6499a882fd29
 Size (tex-context-annotation-36188/context-annotation.doc.tar.xz) = 47084 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:50:10 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:13:21 nia Exp $
 
-RMD160 (tex-float-15878.2010/float.tar.xz) = b1ad72a7d4838d0dfa2923d5869ec19281d91067
+BLAKE2s (tex-float-15878.2010/float.tar.xz) = a6012054ceb518423ff9def0a8e16898e946d935788d5a26265840bb80340828
 SHA512 (tex-float-15878.2010/float.tar.xz) = 3fc7a8238f251b2981e3bf56037495b4acddb5a35be39998682b0527b562117de6630ac306a66502ad8b85b5793884d0e320b11748a12df60db0be2241fb0cdd
 Size (tex-float-15878.2010/float.tar.xz) = 2696 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:51:05 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:14:16 nia Exp $
 
-RMD160 (parskip.r58358.tar.xz) = dd141b9722888e03f2a8adaa17faab4a2f32b430
+BLAKE2s (parskip.r58358.tar.xz) = 8d02f3d945ffff4581138232b898d84885b8e383820f6d7e43e4fb5404190182
 SHA512 (parskip.r58358.tar.xz) = 2d64232f41b2607712bc67ce77ebc987502924ebaad4f799b6ae2163862a8b833a9c1a7c8871a33b4ed9fdeb74c8368897e1b831c485ab82e084fe3ff0552af3
 Size (parskip.r58358.tar.xz) = 2852 bytes

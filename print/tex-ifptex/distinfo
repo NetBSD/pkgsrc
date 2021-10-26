@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:50:32 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:43 nia Exp $
 
-RMD160 (ifptex.r52626.tar.xz) = 06540b23d1b17fae4406031a21b6ff380a65f6ca
+BLAKE2s (ifptex.r52626.tar.xz) = 993a0ec9a20bfec538a6b4ce7e7cb70c1782222eb3f26b6e06e2c02c90747f17
 SHA512 (ifptex.r52626.tar.xz) = cd06bd01d071c091962451850de4cf78c0ed7604b392e6c0eb59fd66b202ed9f015cac75b6260bfe071b70246cb1d9a70a5bc9f052876469ace54a68ef250e22
 Size (ifptex.r52626.tar.xz) = 3828 bytes

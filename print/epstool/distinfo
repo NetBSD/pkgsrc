@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:48:54 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:12:05 nia Exp $
 
-RMD160 (epstool-3.08.tar.gz) = 5594fee09e105745b390de0d2e7144034d83b8e0
+BLAKE2s (epstool-3.08.tar.gz) = 14bbb694f32cda075f61ea9475dbd31583bb0477eae16409b506a19c5980dfa6
 SHA512 (epstool-3.08.tar.gz) = d6d70825c7d08cca318503bd8c12b48408b6d6cd3a64f26df94890373a3e73b68dc09a4eb454b81893c7ee3c11da791cdfed7466eb1410414cd1b97d80e8abf1
 Size (epstool-3.08.tar.gz) = 191567 bytes
 SHA1 (patch-aa) = 3a1f9b1985c02c1ed9934c93b36e9932a08e9233

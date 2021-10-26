@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:00 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:13:10 nia Exp $
 
-RMD160 (tex-einfuehrung-29349/einfuehrung.doc.tar.xz) = 73017516dd55debc64b5da1106a6d5da92da635c
+BLAKE2s (tex-einfuehrung-29349/einfuehrung.doc.tar.xz) = e611b1c328cb097f19bd842f744e5118493a07620e190dc344741c6321bf7dfc
 SHA512 (tex-einfuehrung-29349/einfuehrung.doc.tar.xz) = 93c4c8549479d830184b75b63833932c48cf091431d55eb89bda4220abb7e2346c9573f5fb14a4caf9d423523ff8825b5e999ef1d13781670afa0387c0d8bf14
 Size (tex-einfuehrung-29349/einfuehrung.doc.tar.xz) = 159096 bytes

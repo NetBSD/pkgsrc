@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:50:57 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:14:08 nia Exp $
 
-RMD160 (tex-mwcls-44352/mwcls.doc.tar.xz) = f5cabe36ce9fc8f192a6e1f1725bb140849fb3ef
+BLAKE2s (tex-mwcls-44352/mwcls.doc.tar.xz) = 9bd9e7e1fd73dabc09718d1af8e73a159a4e5ad76cc55c8c8b45e1e15d38bc68
 SHA512 (tex-mwcls-44352/mwcls.doc.tar.xz) = 6fba9916419b8b5dbb26f9ffc5a62f75738c03688d7b88cc783e4a3643a4479b2082c3ce9a578a7bbeaab97bbd2ef88591e29b39fbbf0e63456c0f4de4ef128b
 Size (tex-mwcls-44352/mwcls.doc.tar.xz) = 138168 bytes

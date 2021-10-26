@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:48 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:59 nia Exp $
 
-RMD160 (tex-context-notes-zh-cn-23171/context-notes-zh-cn.doc.tar.xz) = 7031a2313712dd1811a48b324b3122d61e05513d
+BLAKE2s (tex-context-notes-zh-cn-23171/context-notes-zh-cn.doc.tar.xz) = c0777d49d245cf4f71bd67f722e6aa1f215f9edf994f9612345c7267898a8060
 SHA512 (tex-context-notes-zh-cn-23171/context-notes-zh-cn.doc.tar.xz) = f50c614a6f8a5a19d7374f00e83f956dbfce1401316182d12282f594b7d62cba170893c9f8432f2aa911964b761ae40ca40686634dd2dceacc5f5879ea60b7f8
 Size (tex-context-notes-zh-cn-23171/context-notes-zh-cn.doc.tar.xz) = 858504 bytes

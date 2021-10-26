@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:50:23 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:13:34 nia Exp $
 
-RMD160 (hyphen-arabic.r54568.tar.xz) = 21ad3cdfe995feeda3fb0595a7bd565aab5661b2
+BLAKE2s (hyphen-arabic.r54568.tar.xz) = 5ae77fb0fe43f874bdd759f4f64941a99a7d832a1264151bec8371e19b9a422c
 SHA512 (hyphen-arabic.r54568.tar.xz) = 85012062097dd4b624cb39c68b293169a25ab3c9cd15b4474c3a3ffbe4b8ab13d6856c6c70a580da45a2d210952df2d9760682da3917cfd24d17772dc2ccce7f
 Size (hyphen-arabic.r54568.tar.xz) = 368 bytes

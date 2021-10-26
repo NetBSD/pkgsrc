@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:51:13 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:14:25 nia Exp $
 
-RMD160 (tex-present-50048/present.tar.xz) = 5202d9b0fb40da1da36bddfdd4e93a5024e74fbb
+BLAKE2s (tex-present-50048/present.tar.xz) = 3aef8021ceac4617164c70326e04f833dbb360e736e91f49bb2634c3370de891
 SHA512 (tex-present-50048/present.tar.xz) = 4e24953d9c2f063f83604dc8a7e4bb00d83127ff6d2a53498cddf97e545c6e9e4665fcf995950e40ec7ec93e4eba403c5d3db06772d0dac86bc698c88b7d3efb
 Size (tex-present-50048/present.tar.xz) = 4364 bytes

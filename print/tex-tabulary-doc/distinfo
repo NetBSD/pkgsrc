@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:51:35 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:14:46 nia Exp $
 
-RMD160 (tabulary.doc.r34368.tar.xz) = a2528c08df9f03fc1614d2c57c9aba0fbdc79128
+BLAKE2s (tabulary.doc.r34368.tar.xz) = 336a61dde39971ea226eec7303a54299f6b9a06eb5de842323865bb60b61e148
 SHA512 (tabulary.doc.r34368.tar.xz) = b619c6b3dce1421ad4f06ab5e6f0ecaa6dc4f55076b66303a4e5409b42a4a9e34d218251177234dc0f3dac13046638a75623db0094978badc4db93083660f5e9
 Size (tabulary.doc.r34368.tar.xz) = 255704 bytes

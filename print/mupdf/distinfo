@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.55 2021/10/23 15:22:07 leot Exp $
+$NetBSD: distinfo,v 1.56 2021/10/26 11:12:10 nia Exp $
 
-RMD160 (mupdf-1.19.0-source.tar.gz) = 517eea21fd85bb0650dc1db10c881dee5f02794a
+BLAKE2s (mupdf-1.19.0-source.tar.gz) = bc9aebbacd16bf721bd5cdcf0e2fd3003c1f5737a734ab774a2697741bbf1221
 SHA512 (mupdf-1.19.0-source.tar.gz) = c6bb0e4331212d5d01d2f5e04f7e981b195c144d282db99ddd3ae263ae2e5ff09a727b0b5a50942f1a21cacb46b23f76ff9fe00b67f5fab1eebe9d66158c5d09
 Size (mupdf-1.19.0-source.tar.gz) = 90778757 bytes
 SHA1 (patch-Makelists) = 474ad296aa550272b9d734e2b001af1371ae06ad

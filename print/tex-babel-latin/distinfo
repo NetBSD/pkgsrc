@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:49:21 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:12:33 nia Exp $
 
-RMD160 (tex-babel-latin-38173/babel-latin.tar.xz) = 563f98c90a94906143faad48d1a02264a0fd5dd9
+BLAKE2s (tex-babel-latin-38173/babel-latin.tar.xz) = 3f1f7fafe78b22327b1b980ae2872fc3f8e73dfc12c6c0e3000bb3a0b4774858
 SHA512 (tex-babel-latin-38173/babel-latin.tar.xz) = 0ae0ff408abeaa6c2e02530630d32ef831dd0c1845afc4511d23e45169eeff706cea0ab3bdc449bffff83d9f084b5df0ccba418d2a3bc2c1ed9071238677b936
 Size (tex-babel-latin-38173/babel-latin.tar.xz) = 3000 bytes

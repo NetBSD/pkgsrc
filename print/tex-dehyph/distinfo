@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:56 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:13:06 nia Exp $
 
-RMD160 (tex-dehyph-48599/dehyph.tar.xz) = 8bdef54726192b23affda2a1ab1dbffd45db0bba
+BLAKE2s (tex-dehyph-48599/dehyph.tar.xz) = d848b2d501d96cf72d1b5f3a785d0d42c8b46d1f2e77491b8466322174c7409f
 SHA512 (tex-dehyph-48599/dehyph.tar.xz) = 3fd71f830b2ed720a7ca339143f0b0108a0c7a2d70e5a9fe2643202ecc96be3deae0dcd69f50a0aea82b1c426db02df3f9cb4970e8c027b12d9cab56fad1fd8e
 Size (tex-dehyph-48599/dehyph.tar.xz) = 46552 bytes

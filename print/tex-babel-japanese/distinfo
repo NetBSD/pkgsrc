@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:49:21 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:12:32 nia Exp $
 
-RMD160 (babel-japanese.r57733.tar.xz) = 7f96024a3fadfb747f47319cccf0718ece7d20b8
+BLAKE2s (babel-japanese.r57733.tar.xz) = 5c133b356fee2e4e179b57e39e73082cb49bb093cd6ef5506ef217ce27ee0018
 SHA512 (babel-japanese.r57733.tar.xz) = dae227c586eea1b56fc88937f8a99803994622c07cf54290ca1b5ef6cbfe53ade8aec7064820044284cfd70fb6ee2ba908bbb74dedb54bf3c2f0085815c7eb43
 Size (babel-japanese.r57733.tar.xz) = 2428 bytes

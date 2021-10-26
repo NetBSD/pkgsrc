@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:49:20 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:12:31 nia Exp $
 
-RMD160 (babel-german.r57978.tar.xz) = e4050ba35538ec313b0442314e520a5a8be34ce2
+BLAKE2s (babel-german.r57978.tar.xz) = 00c4975a3afc761a764563f9fa7318b26b03c64ce2e958cdf20c98ec27a68472
 SHA512 (babel-german.r57978.tar.xz) = 0d7ee8aaf0b8df0040e3c7b6e41b999e21d79502dc084ef657392e2e4704101b49ef7b99d5b8059a6f271683c01a09ab19db3ec2a9c923a8bcdd14db819f6107
 Size (babel-german.r57978.tar.xz) = 3964 bytes
