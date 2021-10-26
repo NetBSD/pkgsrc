@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:05:09 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:28:21 nia Exp $
 
-RMD160 (overlock.r56079.tar.xz) = e3d9dbc9d04b79688e98f3ce53c264d9749f3d59
+BLAKE2s (overlock.r56079.tar.xz) = e889fde704dca8bb4cd5619773bf240fca63a6c602a9978c411e0659ff1402c6
 SHA512 (overlock.r56079.tar.xz) = 0c3754d8fce4d3a9b68cd4d8e23d8f53d03ca3e1a1fa81e1af9fc7148bc5376cb8fe15869696667bb109829817178c1f5a6262a10f42c55c00ece4a3e8beef5f
 Size (overlock.r56079.tar.xz) = 590276 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:41 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:27:53 nia Exp $
 
-RMD160 (tex-epigrafica-17210/epigrafica.doc.tar.xz) = 555390b9897cf556cb43ce5c44327ede2895ab5d
+BLAKE2s (tex-epigrafica-17210/epigrafica.doc.tar.xz) = 79483393f6373b06ae75f4d92e95b7b45a892417468a3978a56828bd32fd39aa
 SHA512 (tex-epigrafica-17210/epigrafica.doc.tar.xz) = 8cd4dc3a78bb9c5d5baffee4f655101e1e5842e1928f6a64ebb3ec0b785baa5e906cab0e859b2c073fdfe7fb4755aca3bd0d51e01e68fcdb82791f9a6a848c0e
 Size (tex-epigrafica-17210/epigrafica.doc.tar.xz) = 266312 bytes

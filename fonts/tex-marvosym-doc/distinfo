@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:05:01 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:28:13 nia Exp $
 
-RMD160 (tex-marvosym-29349/marvosym.doc.tar.xz) = 21bbfcbc1750b9d4f6ab28ffcdd7b8897fe779e5
+BLAKE2s (tex-marvosym-29349/marvosym.doc.tar.xz) = dae1105795c84f628476a5a10d2ca5cad6821c5c8c762ace1814fe761434f23c
 SHA512 (tex-marvosym-29349/marvosym.doc.tar.xz) = 727fb22b8cbd504dcd3b0c8e9f8d7540ed35d6fa825c37812767d757c3de6d5c5dcf855fc722d03d86edd08acd9a0bd8672982f31790b6f6da1f27bb6a44a1dc
 Size (tex-marvosym-29349/marvosym.doc.tar.xz) = 426612 bytes

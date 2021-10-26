@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:05:23 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:28:35 nia Exp $
 
-RMD160 (tex-venturisadf-19444/venturisadf.doc.tar.xz) = fe8991202bbffdaba02abfed211debea5f558a00
+BLAKE2s (tex-venturisadf-19444/venturisadf.doc.tar.xz) = 1496f914e08b4d663cedc5e8e1f123132cf4b6e18cda27661515e66ac80cbc6a
 SHA512 (tex-venturisadf-19444/venturisadf.doc.tar.xz) = 85a5518b2974a4de2c446c030c9bbcd59557832d569840d29c59b6258c089b009cf5849d2c204adac4baf3d2f86d8a11d5e2e5448d5aa440b67689c25d92a9b2
 Size (tex-venturisadf-19444/venturisadf.doc.tar.xz) = 412776 bytes

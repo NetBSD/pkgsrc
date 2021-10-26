@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:04:05 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:27:16 nia Exp $
 
-RMD160 (jomolhari-alpha003c.zip) = be14f64b1343a45c1c5abc689bbf5d9284953f0e
+BLAKE2s (jomolhari-alpha003c.zip) = d17e27eefb37629991f9351f50fefd967b8f5ef8efa61b84c80d2f59069e2ac6
 SHA512 (jomolhari-alpha003c.zip) = d3dd179c84c5cfb5cdc4a82ea1356b594973ef056cbc8fa4e23e37f21573b138eded19ef7370803dbe796e80a0d2c72a0866eb9f36e4b511627c770a00e08270
 Size (jomolhari-alpha003c.zip) = 902618 bytes

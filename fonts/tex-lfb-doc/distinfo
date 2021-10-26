@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:58 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:28:10 nia Exp $
 
-RMD160 (tex-lfb-15878/lfb.doc.tar.xz) = 25052177e0fe00ad9cc7ff6ee371820c82121260
+BLAKE2s (tex-lfb-15878/lfb.doc.tar.xz) = 2ba80b90082acf9c0fcea46858dcf5e9e0bd1b87576844de18040f0326701a9b
 SHA512 (tex-lfb-15878/lfb.doc.tar.xz) = 32b7228b37f0e6670e08ba818ef4fb2d671acdbdcadbf00cfbea2e32644c5659403218f485a8637b1f4913153d504f6a4f104ea4563f7156354e6c37e5033388
 Size (tex-lfb-15878/lfb.doc.tar.xz) = 35492 bytes

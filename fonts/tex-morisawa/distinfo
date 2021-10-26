@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:05:05 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:28:17 nia Exp $
 
-RMD160 (morisawa.r46946.tar.xz) = e2c8a608552ca4e014942ad3f34d66ec5e652248
+BLAKE2s (morisawa.r46946.tar.xz) = eb8db8878fb55e5e94b2aba96089dae4d405da5cfa06ac12ac0042aad8740047
 SHA512 (morisawa.r46946.tar.xz) = 7f149fab67905d6b21670becb1c3e3afbc8fb4c45fa3c376960e5a87d7fe17abe091af63930a8385b5bcb63e550fc0b9bb16d522f50f90b911b09599dc5ccafa
 Size (morisawa.r46946.tar.xz) = 8564 bytes

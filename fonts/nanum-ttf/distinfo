@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:09 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:20 nia Exp $
 
-RMD160 (fonts-nanum_20200506.orig.tar.xz) = fa3fe0c9bdb1af95541c74a79eeb0b54665564eb
+BLAKE2s (fonts-nanum_20200506.orig.tar.xz) = f50d759302798ad5379588189b1b0d90ba48861a48022dccc5f653aca54ca6f0
 SHA512 (fonts-nanum_20200506.orig.tar.xz) = 13b686d2151d5fb2b526f1355ea0cc7f91f885678b00dfb009921370a98c94b4956d58f624f4e02bfc2a48e88ecdf7707d1b78c6a24facd3f5bc527ee024aaa6
 Size (fonts-nanum_20200506.orig.tar.xz) = 28854212 bytes

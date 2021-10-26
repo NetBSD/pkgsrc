@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:08 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:18 nia Exp $
 
-RMD160 (misaki_bdf_2012-06-03.tar.gz) = be6969277a71c30519a1e76ecbe316266b2d4001
+BLAKE2s (misaki_bdf_2012-06-03.tar.gz) = 28bd0fe59dba29cfa5d52ca594b7b5c24bda050f865a76c559c0e968865deb78
 SHA512 (misaki_bdf_2012-06-03.tar.gz) = 322c89ca582a11c053ff6425f877c3906d759e2194e3ba354d1db2805da1bf288fab42323976ad74d9879ebb72e711410a597760fe392fd108c082e114d3303a
 Size (misaki_bdf_2012-06-03.tar.gz) = 210238 bytes

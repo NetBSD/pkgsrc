@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:44 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:27:56 nia Exp $
 
-RMD160 (tex-fdsymbol-26722/fdsymbol.tar.xz) = d610d2b7957a67fe222466f99e5d6b0cefdb6bf6
+BLAKE2s (tex-fdsymbol-26722/fdsymbol.tar.xz) = 4cfe3bb9e3776cc77c4c7f60718b031671aea0accdea7dd255dca9932a8be4b5
 SHA512 (tex-fdsymbol-26722/fdsymbol.tar.xz) = 790d9d6512f1b22e90352c7334e1f4cfbe7a1d3a1a26287ccf4f13f83ac4bcfe84e950ce05f6da1a0f4369428c2b0ea14ac5c8f5f06f587be7e82904eab0c29b
 Size (tex-fdsymbol-26722/fdsymbol.tar.xz) = 920164 bytes

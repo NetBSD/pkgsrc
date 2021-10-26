@@ -1,35 +1,35 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:09 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:20 nia Exp $
 
-RMD160 (ms-ttf/andale32.exe) = 6d2bd737acc3ec8ed6ad4ec5503d1a0674ab1228
+BLAKE2s (ms-ttf/andale32.exe) = 091b35e312e80749656d071220c11f25eedd85e1e8e4028773be55a9fddc4869
 SHA512 (ms-ttf/andale32.exe) = 7099c389126d2af146ff082a840c77787f28e59cc8b5fd4147b9a45a34c649bc69ba6ec7c338703950389fce3ac3a7f118f503b7434c7ceb54c89d6210508bd4
 Size (ms-ttf/andale32.exe) = 198384 bytes
-RMD160 (ms-ttf/webdin32.exe) = 5382199cf8558228b13a0977d6254395070a9975
+BLAKE2s (ms-ttf/webdin32.exe) = b036ca61e707a8dcba898d516d103e415668fc5ca3082fcac4518993cbc55d96
 SHA512 (ms-ttf/webdin32.exe) = 2784ce1cee66f0f00f77d84d7aaa52a44d017245e0269558729003205c10a5e5368f9909beee733e77e202730b3cee2b2357fdbdb597a0023c6412e050b3a3ad
 Size (ms-ttf/webdin32.exe) = 185072 bytes
-RMD160 (ms-ttf/trebuc32.exe) = 4cc1485ac7662ff2c8b7ca7bd5e9dda5651a9f00
+BLAKE2s (ms-ttf/trebuc32.exe) = 090dc94f8cbeff0d5b75adf438a678180d19317bb7543c5e236d9123ff64b479
 SHA512 (ms-ttf/trebuc32.exe) = 4ba8afac0a419e30286f5b209b9fabf41aa480ceabb1bf3141deb775793510db826ba915b67fdfe3423d227c3e640bf7d682b26c0ce90f3c0e2cdf8d4831537e
 Size (ms-ttf/trebuc32.exe) = 357200 bytes
-RMD160 (ms-ttf/georgi32.exe) = 9d8f65999a069176352d42060b6e7f5fe7e1fe9d
+BLAKE2s (ms-ttf/georgi32.exe) = 4059fabf3aa856e45d9264040caa0c01bdbbbc39a1d7ee17b4acfe34a6801eb8
 SHA512 (ms-ttf/georgi32.exe) = 33e623179af8a418845fed64f7b176a1e721ee4e0ece29d3135d01b81be4238454dd4eb3d2166e8587bb7cced0c258a294eb55e637855f818deb28853f006ef4
 Size (ms-ttf/georgi32.exe) = 392440 bytes
-RMD160 (ms-ttf/verdan32.exe) = bfb8b359e011186174e3ff22993f91a78f62ff30
+BLAKE2s (ms-ttf/verdan32.exe) = 1b1c6a959f0ba9f33e27e6fcfb344b21ef328531a710caa45b50e0e8ba38e7b0
 SHA512 (ms-ttf/verdan32.exe) = 96749fd17e4efeccdd467cb8f42ce30fc3a9e86eceef8b9c0934a4693d12944b54864006c5852c0d641a5c7b250553e5c6c21d716e446d02ef392299c7833d58
 Size (ms-ttf/verdan32.exe) = 351992 bytes
-RMD160 (ms-ttf/comic32.exe) = 95a096424527f4fcd90d4bd3ae9623c09a7fa4ad
+BLAKE2s (ms-ttf/comic32.exe) = 473db0cc2934f727e8fb57caf0ca168c6d7436cd3ab2cd1fe26b60f6106b04f2
 SHA512 (ms-ttf/comic32.exe) = 6ad11015d568d58f6e4375e04411dd702b5c4e454b82998b5044cd8352dae27fea1df6469a05067ccc8c14f4ba87ec99e8329c104551dde1eb48be8ce2b78708
 Size (ms-ttf/comic32.exe) = 246008 bytes
-RMD160 (ms-ttf/arialb32.exe) = 3f2e4171d26f9eb0b3e0854e020ac5e5d575916b
+BLAKE2s (ms-ttf/arialb32.exe) = e3c68afd1b127be9fae53dd5dd4f5552247f87850c698b212fd125a50e36cbc9
 SHA512 (ms-ttf/arialb32.exe) = 8a947764f2c725f2c506c12ca6f77142402174a0fadeeb72b211931136d82b541bb279b415d74032bc51b00efac9516e5cf68d8d4f172ff8549398ca28722c3a
 Size (ms-ttf/arialb32.exe) = 168176 bytes
-RMD160 (ms-ttf/impact32.exe) = 3129fac881f4ed9e6fc5af706b7a334170b3a97e
+BLAKE2s (ms-ttf/impact32.exe) = ad46716973770247f7daf20a4da233efa658281e35a676ec0985fcc50d92d475
 SHA512 (ms-ttf/impact32.exe) = 6f9318806efbd3b3727e71170cc3ab378d6151887abcb7fad01bd4cb45c2e127f8aea81a3a99bc77c2ce2424fb1acbc230ffc6c23e390c8800710b45b1367c3b
 Size (ms-ttf/impact32.exe) = 173288 bytes
-RMD160 (ms-ttf/arial32.exe) = 46579cf7e4cbaedba2adfa7676197cb8bc9a2c28
+BLAKE2s (ms-ttf/arial32.exe) = 659bd0c55097a057a4e41d4c791ab0d5b621df5712bb03cfdf9e6027e9a4fd27
 SHA512 (ms-ttf/arial32.exe) = 299cb200f72f146fedfb2bb1895c36f5234aa5abd084e7c962ec7b14f087c1f582b51f5fdcb72e48b806ee02661c34766ca8a03bb0f2fadf662aaf46cc5f0e48
 Size (ms-ttf/arial32.exe) = 554208 bytes
-RMD160 (ms-ttf/times32.exe) = 44d5dda0da59084e00120c678a98358b1ea3ad0f
+BLAKE2s (ms-ttf/times32.exe) = 586a86f1204ced66727d40b5d12bc50a4e2bed80f06383fddb70260b15ccff8d
 SHA512 (ms-ttf/times32.exe) = 6035b971290cd0795389c2e8a0f02d2f079468e197a1db791189519e12aaf3fcdaf6e8842a7eeca386ad7f48f85a0b07cc5480b98ee06b0529688fd5550d3ee2
 Size (ms-ttf/times32.exe) = 661728 bytes
-RMD160 (ms-ttf/courie32.exe) = 9e075afda88670230c29b593a5ebf172511e672f
+BLAKE2s (ms-ttf/courie32.exe) = 8c4efd6fdc757c30808aa4f09c10009a183aaeab0d5b51ddaddef2cbd593a509
 SHA512 (ms-ttf/courie32.exe) = 7e2425d578dd626cc2b418efec72c53e35392c60610cf5e4a99c614fa86cb673167fbcc1691fe59b99bcd19e8f261321be9ea7e30fb84c80ce0a312fd47045c5
 Size (ms-ttf/courie32.exe) = 646368 bytes

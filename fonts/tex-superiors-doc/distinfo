@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:05:19 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:28:31 nia Exp $
 
-RMD160 (superiors.doc.r51909.tar.xz) = 0a87c6bc34fa64c36779602770d4244868eb0baa
+BLAKE2s (superiors.doc.r51909.tar.xz) = 10383d956165eda05c06afa463fb00736c90570fbc05833c38f45f136c8c586c
 SHA512 (superiors.doc.r51909.tar.xz) = f96d441d9dbd470023c1ecfe3912336f696dea7dcaf7b3c052aabf9c702869cd0ea27a28ffbd34294149c98d5bc23fe004871faafdfc1eb72fcc4fe2e2591d82
 Size (superiors.doc.r51909.tar.xz) = 327664 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:05:18 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:28:30 nia Exp $
 
-RMD160 (tex-starfont-19982/starfont.tar.xz) = f18d9cb6b07494f12f3bbd930b78700031a4d068
+BLAKE2s (tex-starfont-19982/starfont.tar.xz) = 17b4eb93700a6c5b3070b7abc414bc8e71ac4f8ad7f38a5fc00c1a318faf12a1
 SHA512 (tex-starfont-19982/starfont.tar.xz) = 3bcce4ea2aaa936751d89c2b6b4b6fcaad656af8342772d225eab61436366ccf6e220ebf0266c62b74f41b082731716d378e8cbd3beee13f716165bb820616c1
 Size (tex-starfont-19982/starfont.tar.xz) = 179512 bytes

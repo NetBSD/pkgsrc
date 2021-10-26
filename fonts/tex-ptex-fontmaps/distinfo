@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:05:12 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:28:24 nia Exp $
 
-RMD160 (ptex-fontmaps.r57239.tar.xz) = c71c95deecc056c0e087f851c347fa45c96d0f10
+BLAKE2s (ptex-fontmaps.r57239.tar.xz) = 084ea0c735dc40d9e61b70d194af1cac5e5f6f934e0bacbef0aee66c3639e9e2
 SHA512 (ptex-fontmaps.r57239.tar.xz) = 168de4ff3435d1148bb718b15953dfa79172c6829e95824d998d9fff193c27f7677ae014ba54c507840b9b630dea12168f9a70d30a4cead922a461a52e63d8ab
 Size (ptex-fontmaps.r57239.tar.xz) = 43276 bytes

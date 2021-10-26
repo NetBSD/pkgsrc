@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:04:12 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:27:23 nia Exp $
 
-RMD160 (roboto-fonts-20150923.tar.gz) = 9b247bf4e55a6b5a35aaf446c32fe814ec1d982b
+BLAKE2s (roboto-fonts-20150923.tar.gz) = 8ee21e5f5275781092528e22ba495129ac108e7d3c33306c7e31196be0439e19
 SHA512 (roboto-fonts-20150923.tar.gz) = dce0e34ce161199255c80e44779e27342b63d88bac1221f1f58d03286c77f516b44e5381f7b13270c07a4675bec784b736cfc6322c77d7819e9f33027d450e58
 Size (roboto-fonts-20150923.tar.gz) = 2960665 bytes

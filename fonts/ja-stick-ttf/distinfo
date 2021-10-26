@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:04:04 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:27:15 nia Exp $
 
-RMD160 (ja-stick-ttf-20201216/Stick-Regular.ttf) = 6991a92e7c4b292928a477fd7ac09cd46eab8265
+BLAKE2s (ja-stick-ttf-20201216/Stick-Regular.ttf) = 481562f1da95d4e1fc677e2c6b8f6cf4cc4b0c3bd94633f1fbfe9fc42ab4f281
 SHA512 (ja-stick-ttf-20201216/Stick-Regular.ttf) = 3fa9db3dda145104a4c96f3b6f72eef4627264ff2942fd3a25f09a2fa0354cab9df3fd322a8c898872f260b216f676e8cc876c04f9ea3a7bac3cc3639b7ec57d
 Size (ja-stick-ttf-20201216/Stick-Regular.ttf) = 4197820 bytes

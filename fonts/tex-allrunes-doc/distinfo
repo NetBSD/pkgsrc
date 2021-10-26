@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:04:16 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:27:27 nia Exp $
 
-RMD160 (tex-allrunes-42221/allrunes.doc.tar.xz) = 9732aa3b9c053e5c3fbf74a5a2d2fd75acbe1a6e
+BLAKE2s (tex-allrunes-42221/allrunes.doc.tar.xz) = f0afdf306f6a090e377573acf208bab38987db327b36716cfc878142f4fcf8c5
 SHA512 (tex-allrunes-42221/allrunes.doc.tar.xz) = 16e1e6afd428abc6099281715f08c0f2539e983af49caf81992232fd6ec51896a7b4150226139b747b5a13a19b445c5c61cc13ffe616854012a0c9bfe1393d57
 Size (tex-allrunes-42221/allrunes.doc.tar.xz) = 193508 bytes

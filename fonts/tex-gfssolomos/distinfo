@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:50 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:28:02 nia Exp $
 
-RMD160 (tex-gfssolomos-18651/gfssolomos.tar.xz) = 164c1b5c1c15ae0e7619cd73885d05a201ab76ba
+BLAKE2s (tex-gfssolomos-18651/gfssolomos.tar.xz) = c737bfd55459ce613e9c947382fc59dcf2875fb8a031da30a60cd71294c225ef
 SHA512 (tex-gfssolomos-18651/gfssolomos.tar.xz) = bc35d2821b991bfe2352a13def8f008579d4844ce42646f88879529336725ec545227e9da6d15872a18b7cbb0f3713bd03287e6aa1cf74ba68eec1ef89d520ad
 Size (tex-gfssolomos-18651/gfssolomos.tar.xz) = 102760 bytes

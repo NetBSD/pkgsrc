@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:04:57 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:28:08 nia Exp $
 
-RMD160 (tex-kixfont-18488/kixfont.doc.tar.xz) = 84ace663f32dbd42ee9363827f7c84f6f12f6f9c
+BLAKE2s (tex-kixfont-18488/kixfont.doc.tar.xz) = 8eeebb6911dca35db172ad7d982e8677b7547d90401ce0948fef5060bf4b8c0e
 SHA512 (tex-kixfont-18488/kixfont.doc.tar.xz) = effd38b9ea88e4e0786a957097d26924d2fba790b9dd7e4efaeb80870d1270ea5f165d5904f21e93c959b152cae900bbacc9cdd150e4175add4f9ae2890c3717
 Size (tex-kixfont-18488/kixfont.doc.tar.xz) = 15964 bytes

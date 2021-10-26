@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:05:25 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:28:37 nia Exp $
 
-RMD160 (xits.r55730.tar.xz) = 1db7bd6b66db665d669cff726e3c4a8141ab6d59
+BLAKE2s (xits.r55730.tar.xz) = 898a60cafdda27f012a6bb1d6faa30ed57977e7b09fd2bcc75e86648f7e85f26
 SHA512 (xits.r55730.tar.xz) = 8c47de766f965fcb50399e59d20f030e90a28e2aaac018ab1289a1a26b16cd6c9c7d3fd18f1d2b84fe86a99734bbf2ac9b58bfd723a7854bfe29141ab6acb874
 Size (xits.r55730.tar.xz) = 541240 bytes
