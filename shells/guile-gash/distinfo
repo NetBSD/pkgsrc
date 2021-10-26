@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:56:10 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:18:37 nia Exp $
 
-RMD160 (gash-0.1.tar.gz) = 1cfc0db59584f4ada407c293b5509b88dd84566a
+BLAKE2s (gash-0.1.tar.gz) = 4464c96953edbc82b7a6eaf754ec37f12237aa8cf8ebef95b4844f81fc23812a
 SHA512 (gash-0.1.tar.gz) = 4f90d40eb434e3f735ef727aeeb55d88b1962b0e7d1f02f711961234934a62a40d8f8d8c1004fe8fc825c0b01fab520eaacba28bcf758452e3db3d66098c2c85
 Size (gash-0.1.tar.gz) = 321694 bytes

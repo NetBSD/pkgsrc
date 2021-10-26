@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:56:09 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:18:36 nia Exp $
 
-RMD160 (bash-completion-2.11.tar.xz) = c38855cb1e3379c815d5491234ee589b91c44e3f
+BLAKE2s (bash-completion-2.11.tar.xz) = ba7fc4dbf80764a63f7f821fff6b36389c30afb7e611edfc2b6be7aaf32947ef
 SHA512 (bash-completion-2.11.tar.xz) = 41585f730b5114d397831ba36d10d05643c6a6179e746ddc49aa1cbef61ea5525fd2f09b2e474adee14e647f99df8d5983ee48e29a59d8a30e1daf7fb1837e06
 Size (bash-completion-2.11.tar.xz) = 311004 bytes
 SHA1 (patch-Makefile.in) = 8e7c5425cd82dee3cca1f3543695bf1dd062d073
