@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:19:42 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:03:42 nia Exp $
 
-RMD160 (primer3-src-2.3.6.tar.gz) = 1cd48d0677303efd5ca0ce76ac46c04fd5f29b9c
+BLAKE2s (primer3-src-2.3.6.tar.gz) = 5b890ce07f00aecf3b0fe4ffae6505034da175e997739dd4bf046bd3a07ea6c3
 SHA512 (primer3-src-2.3.6.tar.gz) = 671b420f3bc9b6b9972e19a757925ada170e5f8c0e3e8a90630a48e6cde44abc0e1e09b9ea90129f94b58f835e30440f3d91c14fb4b796fd94eb478b2ca28ead
 Size (primer3-src-2.3.6.tar.gz) = 1667573 bytes
 SHA1 (patch-src_primer3__boulder__main.c) = b99c0aa87d4e6282200d72c502c9c938f6ea2b76

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:19:42 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:03:43 nia Exp $
 
-RMD160 (tree-puzzle-5.2.tar.gz) = 8a69f5ab2ad56a05c0faa6cd02e344c19271bf7a
+BLAKE2s (tree-puzzle-5.2.tar.gz) = 6fd972a74294fec757ff4526bd7b7903c67cac4501c918737e96e4b477000148
 SHA512 (tree-puzzle-5.2.tar.gz) = 5b9a729b120cba59f59ba426acd439cf396826ea01e75361b23387ccb9baf295d2512f21af96071a5f7b7507db4ff4d6b135cf6c5b6233a8b438532d31abe751
 Size (tree-puzzle-5.2.tar.gz) = 875142 bytes
