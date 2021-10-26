@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.73 2021/10/20 08:18:57 jperkin Exp $
+$NetBSD: distinfo,v 1.74 2021/10/26 11:11:08 nia Exp $
 
-RMD160 (pkgin-21.10.1.tar.gz) = 506541d7081bf3d9513de02c7fa7771d63770536
+BLAKE2s (pkgin-21.10.1.tar.gz) = 2ae94d1a82e39f2ee73137b1a5295efa7558efc180770e151e31fa8b242b2f3f
 SHA512 (pkgin-21.10.1.tar.gz) = 8aa3da557845325109d134b99d192e01c87552ae729f3aaa07d6db351add6d1991eec0b6bdd911b6287fbcf04493a3f9ba3a39f893d9c36876fc985468c8e51f
 Size (pkgin-21.10.1.tar.gz) = 247904 bytes
