@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2021/10/07 14:17:23 nia Exp $
+$NetBSD: distinfo,v 1.24 2021/10/26 10:48:40 nia Exp $
 
-RMD160 (tqsl-2.5.7.tar.gz) = a9c184ced044921002cfb749e604ac3f3a4b53ae
+BLAKE2s (tqsl-2.5.7.tar.gz) = 83d05c21ec16fbc1bf8314efa5189e926c1847ece1d6c96324a788f039fbe9f3
 SHA512 (tqsl-2.5.7.tar.gz) = 8ce29ce1a4905590250037e9487fac6db2be590b0406b2c0452b533c28d2c7b804d26b4879b065a99670c24124ff6bdfad1c24c099a75237e5013b7b5bd8470d
 Size (tqsl-2.5.7.tar.gz) = 3526972 bytes
 SHA1 (patch-CMakeLists.txt) = db7383ea82b2cb05abfcd61430c68c90bca1b81b

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:17:21 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:48:38 nia Exp $
 
-RMD160 (gr-fcdproplus_3.7.11.orig.tar.xz) = 571c4e698bd68d3f162cabb9dea03c7d4683ab10
+BLAKE2s (gr-fcdproplus_3.7.11.orig.tar.xz) = a4ad0823f0c5aed09262570373eff4b47d66bf7045e9601782bda2e57358393c
 SHA512 (gr-fcdproplus_3.7.11.orig.tar.xz) = 43931eaba7bc299c063925b83653177c24d1e23bf36074f698d6396d9e4882ac55e4ca1b75c769d7a71c24121f978170c0d4ab3ed447a27492466d7420507bfa
 Size (gr-fcdproplus_3.7.11.orig.tar.xz) = 102896 bytes
