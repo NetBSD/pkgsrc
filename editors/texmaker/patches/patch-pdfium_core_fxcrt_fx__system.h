@@ -1,7 +1,9 @@
-$NetBSD: patch-pdfium_core_fxcrt_include_fx__system.h,v 1.1 2019/09/05 08:07:25 nros Exp $
-* make it build on solaris and BSD systems
---- pdfium/core/fxcrt/include/fx_system.h.orig	2017-04-16 14:53:52.000000000 +0000
-+++ pdfium/core/fxcrt/include/fx_system.h
+$NetBSD: patch-pdfium_core_fxcrt_fx__system.h,v 1.1 2021/10/26 17:56:54 nros Exp $
+
+* build in BSD and solaris
+
+--- pdfium/core/fxcrt/fx_system.h.orig	2019-12-05 18:23:22.000000000 +0000
++++ pdfium/core/fxcrt/fx_system.h
 @@ -40,7 +40,7 @@
  #elif defined(_WIN64)
  #define _FX_OS_ _FX_WIN64_DESKTOP_
