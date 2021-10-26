@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:05:08 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:25:16 nia Exp $
 
-RMD160 (mutter-40.2.tar.xz) = e1499436706aac9f7436813dca2eca3311cc97c4
+BLAKE2s (mutter-40.2.tar.xz) = 54fbe1e25ec9b484de580531301d1f02cfff382a44737f029fd0eba0a810e6ca
 SHA512 (mutter-40.2.tar.xz) = 9582004efde7a4b2ad21c390f4a4558c99709e21bdcac3f161f185612de9aaeb60cbfcf5dd1684726ae18244540aa4b6bcd2b9f362b92eb8c74304c43c9e1113
 Size (mutter-40.2.tar.xz) = 2681840 bytes
 SHA1 (patch-clutter_clutter_clutter-stage-view.c) = abba7a702a612457ba56acf1ecfd9396d28d1a2c

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2021/10/07 15:05:03 nia Exp $
+$NetBSD: distinfo,v 1.24 2021/10/26 11:25:10 nia Exp $
 
-RMD160 (awesome-4.3.tar.xz) = f12f27114c96f0d80314cd54b5c6d1b21cb3ba18
+BLAKE2s (awesome-4.3.tar.xz) = 996ff487c8d2f850bf78d26f151ea5269c96cff94ccae95626ec2e0cb59e55d4
 SHA512 (awesome-4.3.tar.xz) = c5ef1e8dc593e7783b895d22143154aea8f211beeda24672a7ee4ed5112b4f4284043f848a151f3d3c4f569e91308670367a4353f705b20511b36495b22fa3f5
 Size (awesome-4.3.tar.xz) = 1037816 bytes
 SHA1 (patch-CMakeLists.txt) = a3473fdbea318b0cf280a9c29e77798d38d17d70
