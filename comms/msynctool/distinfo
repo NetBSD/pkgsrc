@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:27:05 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:06:02 nia Exp $
 
-RMD160 (msynctool-0.22.tar.bz2) = c28c65b0e80505e17915c9d23c5747320f79f8af
+BLAKE2s (msynctool-0.22.tar.bz2) = c55ce894ff398dd213e01be4f49c40d0cee3b1b670749de5b7f7059a6cc08807
 SHA512 (msynctool-0.22.tar.bz2) = 69bc7e38f8d35e3eaebfb307832eab5e6a47a14197433482c8e1c9ccf6fc05070b0931e4063ad0511909b8a310237fc4bdf838acbd93877c55579499f754027f
 Size (msynctool-0.22.tar.bz2) = 219787 bytes

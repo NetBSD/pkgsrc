@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:27:06 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:06:03 nia Exp $
 
-RMD160 (Data-AMF-0.09.tar.gz) = 5121572c73e654f82156ef9653a040a4d98ae761
+BLAKE2s (Data-AMF-0.09.tar.gz) = d5a412aab3e665a962e838c909655989d06f3502dc134762999c05afedb88e65
 SHA512 (Data-AMF-0.09.tar.gz) = 18d1dcf19b6f2fdaecb27ef6683137e83fdb040fa99c096ecd643bbe09adda260e94b83113d2e1e86f916dcfccc74186fb0adc4fcb967134ae682645292c70d6
 Size (Data-AMF-0.09.tar.gz) = 129205 bytes
 SHA1 (patch-Makefile.PL) = 8fcb91781eec1788845e1297e3af74f827b76cdf
