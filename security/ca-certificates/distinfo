@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:53:44 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:17:01 nia Exp $
 
-RMD160 (ca-certificates_20200601.tar.xz) = a9f1f232f46ecb06c53d5d814c29d3b9aca88323
+BLAKE2s (ca-certificates_20200601.tar.xz) = 9532328cd77238d8a1fca155eab7b91d411dcdb0cd32b6026ddab5e06eab3732
 SHA512 (ca-certificates_20200601.tar.xz) = 7bfd3122430be0a46bd10dcb0e0664561d1e0b2656b9f37677d89f71a1dcb0e668c25ffe08412888125fa9a53ee8245a4b3fc1004c419a159766665b1241113c
 Size (ca-certificates_20200601.tar.xz) = 245668 bytes

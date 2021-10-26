@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:54:30 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:17:46 nia Exp $
 
-RMD160 (kerberos-1.3.1.tar.gz) = a1fc8f59ab040878368bb0d09f9ebc7e6af90f47
+BLAKE2s (kerberos-1.3.1.tar.gz) = 87120c28fc13c67a6b30623755f18c459cb1ccf0faf57284ef8cc99ed5374cc2
 SHA512 (kerberos-1.3.1.tar.gz) = 63608c6ee94bcade567de19bea5e139039b336e181a319184666a0d1a11b1b6cd10cebf7bab52adc67502788c1632ff36a2534de37b4d01a5a32d9003aa74c6e
 Size (kerberos-1.3.1.tar.gz) = 19126 bytes
 SHA1 (patch-setup.py) = a9dbfbba526c9c82f2c3180e3469fc5040362ffe

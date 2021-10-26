@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:54:17 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:17:33 nia Exp $
 
-RMD160 (Tie-EncryptedHash-1.24.tar.gz) = 0943a34aecfc352faba03f0390daa1419ec0d109
+BLAKE2s (Tie-EncryptedHash-1.24.tar.gz) = b439a7ce966b1ee26667b00ff3af3be1eb166bc33992850a005d125c6249d1fc
 SHA512 (Tie-EncryptedHash-1.24.tar.gz) = 1b86af7ed2854f8b5a9f03f22484ecb08021efd87993b3f5786a56764478e022d5e2f2cbb87d4a832743a05e1983174481b95d3545175106a44b9911fc8adef7
 Size (Tie-EncryptedHash-1.24.tar.gz) = 10515 bytes

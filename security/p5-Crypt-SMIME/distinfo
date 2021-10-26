@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:54:12 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:17:29 nia Exp $
 
-RMD160 (Crypt-SMIME-0.27.tar.gz) = e2b11ee072e13b32cdbc75bb618a89be2f483d65
+BLAKE2s (Crypt-SMIME-0.27.tar.gz) = 74bd0c9f8117580b8d555db6c603a0a0d8f3fe6d3894fd90cfba744f30e90402
 SHA512 (Crypt-SMIME-0.27.tar.gz) = 10b752285c4a8c6f8db42dd98ff2dfad82155dd1c21dd57afee32aa2ee176308726469b1d8d69fda5d6ef0aa48fd000f2a4a0dfea80207db8f6078e642f7afaf
 Size (Crypt-SMIME-0.27.tar.gz) = 27977 bytes

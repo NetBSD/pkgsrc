@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:54:46 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:18:03 nia Exp $
 
-RMD160 (sshpass-1.06.tar.gz) = 4759f5b23506537bf95619dd023cdc3178fc3ff3
+BLAKE2s (sshpass-1.06.tar.gz) = 9d5c084966aed4ac31e277198b7f48e28c534525c3bd15849db287ba3a69a99a
 SHA512 (sshpass-1.06.tar.gz) = fc08fcca5aaa5e4958f16d38116d828739a5d53f8e2a83506ef78ee602941a7bfc0e3f07154dc390660df490dbdf7601e0c7ec17c68c9627d72d565e4c6717f8
 Size (sshpass-1.06.tar.gz) = 112205 bytes
 SHA1 (patch-main.c) = c9a5f66833d66a5920e17a2b783fd226cf2f934d

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:54:32 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:17:49 nia Exp $
 
-RMD160 (requests_ntlm-1.1.0.tar.gz) = 0632a5263f2a48b69f4f7d819cfd6dd962478bf7
+BLAKE2s (requests_ntlm-1.1.0.tar.gz) = 798a19f147ee321976a287b2520b3cd33451d6914b1cc1b8dde42e8618cbd194
 SHA512 (requests_ntlm-1.1.0.tar.gz) = 9a74ecd6e4ed5c5e4381d2ee3fb9ff233352b49baa5fae4e0ecc30aaad12fc7a5c1b9dd936f35d4a3815ae7f6ec5bb8581e84128d63ff0e961181408daddb807
 Size (requests_ntlm-1.1.0.tar.gz) = 5183 bytes

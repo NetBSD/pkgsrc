@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:54:34 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:17:50 nia Exp $
 
-RMD160 (trustme-0.9.0.tar.gz) = c0dd389c3f29d5ed2513bee75033f921c8b20a05
+BLAKE2s (trustme-0.9.0.tar.gz) = 7e76db389c0c684198ad72cc8705e53649368b68ec27bb9ef23c8b598a3e8074
 SHA512 (trustme-0.9.0.tar.gz) = f0d983a4c52374f178c0bf96f758fdb5f132e7f7c4bac187c84fbc8dc82dc36d6c801c340bf8871e872178f7b2ac66d6159b5462d073beec9a13a086f64b58b7
 Size (trustme-0.9.0.tar.gz) = 30081 bytes

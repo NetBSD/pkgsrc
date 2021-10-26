@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/10/07 14:54:50 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/10/26 11:18:06 nia Exp $
 
-RMD160 (zebedee-2.5.3.tar.gz) = 2b4bee4c5f66f59628308a6c300b4c9d0c854e30
+BLAKE2s (zebedee-2.5.3.tar.gz) = 2d81925d0da9dbb279da2d03453152a85900a9ef7efd38987f3e8dd03c2496b2
 SHA512 (zebedee-2.5.3.tar.gz) = 05ce8f7bd57fbb07b746c0754f0cb34b7d76270b9d5430fed7108f2025bff5dae87961d4645415700da4438a1fbfdcd538c84763fcbc77593767466d63f3e5c6
 Size (zebedee-2.5.3.tar.gz) = 176088 bytes
 SHA1 (patch-aa) = 0f94fa69d77e13038f96875fede97a6984cdc9c2

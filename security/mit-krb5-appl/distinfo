@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:54:03 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:17:19 nia Exp $
 
-RMD160 (krb5-appl-1.0.3-signed.tar) = 491359af5da2ea3c680811b08d9696eb43794a21
+BLAKE2s (krb5-appl-1.0.3-signed.tar) = 2097e794c2b140ffcc8d02897f146de0458224dd86e1e13c6dd4a46dbe5b9ebf
 SHA512 (krb5-appl-1.0.3-signed.tar) = 1d85be6eb39a01c21308f6b159a375ae4ee331de8052c3990c9252f708d717b8b518f92c424bd6beebe344d940b4813e6ea11dd18df5d7caa4b5effc2513dd23
 Size (krb5-appl-1.0.3-signed.tar) = 634880 bytes
 SHA1 (patch-ab) = 4522fcdb396d2079ac6405926a64f907d94a2593

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:53:46 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:17:03 nia Exp $
 
-RMD160 (dhbitty.c) = 10ecd79130e23115a192e4b9c575fbf901f78e8f
+BLAKE2s (dhbitty.c) = 567b595cc36fd818439fba9b72734d0ca31af43d9039543717fb32fa08677806
 SHA512 (dhbitty.c) = b05fd92cf3d84ac72aa5b8d70ba2cc182306909287b97888b1690dcf4844d2a20a00bdcfaa8cd7abc890be8521fe1f778507dabc02b7f3ec20a9df185c401c6b
 Size (dhbitty.c) = 17140 bytes

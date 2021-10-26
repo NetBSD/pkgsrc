@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:54:49 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:18:06 nia Exp $
 
-RMD160 (yafic-1.2.2.tar.gz) = 976cb8a75bb9cdf75961a60929c5e778049a97b4
+BLAKE2s (yafic-1.2.2.tar.gz) = debd2645d848f2e13fd4833d87fe087be9f2942f5a0a1a2a4730b290211d1167
 SHA512 (yafic-1.2.2.tar.gz) = 8e05a0838fc2063f1c6bb69d660e9ff5c9fbdc4199e1396232327498c04d037b35307c348d64d928e561875f5cf0ad40c24fd097680cd814b2308608cf738957
 Size (yafic-1.2.2.tar.gz) = 96893 bytes
 SHA1 (patch-aa) = 288f5793947fbd844e0cdf7706cabd9b9f37abcc

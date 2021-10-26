@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:54:21 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:17:37 nia Exp $
 
-RMD160 (php-suhosin/suhosin-0.9.38.tar.gz) = 7bcf2dcc9b50605ea5cbb772302963ebbbdf0dc1
+BLAKE2s (php-suhosin/suhosin-0.9.38.tar.gz) = 4842347dd5d479005305c143250f83f16051a235880b876f25c917ebe78c00f7
 SHA512 (php-suhosin/suhosin-0.9.38.tar.gz) = cc4eb38b5d6673cc3f2dc395e5a8b5461d3221019ac9849b747b6d5bae423cd5bd01a75b9432414dc7c26c78bab9f2381a5414712a6906a999f3ec9dc77ebc45
 Size (php-suhosin/suhosin-0.9.38.tar.gz) = 122800 bytes

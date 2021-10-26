@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:53:55 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:17:11 nia Exp $
 
-RMD160 (kwalletmanager-20.12.3.tar.xz) = 14422791100ce2ffecf22520e6f2b2bfaf9e7500
+BLAKE2s (kwalletmanager-20.12.3.tar.xz) = 203cb7a9d3f8fc468896ccf355c707c576ddafc299c2729f9bfd5c3db0692717
 SHA512 (kwalletmanager-20.12.3.tar.xz) = 6cc9cb53813b4dc0e5c7c74a3130fee51dd85c4de9f78e4d3c64d40c4b2ed2b134a24f5fe10d67996077f57c4032a8cf2481e418238c5e5ff73c9f0d9657a6a3
 Size (kwalletmanager-20.12.3.tar.xz) = 773840 bytes

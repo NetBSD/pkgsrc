@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:54:28 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:17:43 nia Exp $
 
-RMD160 (crcmod-1.7.tar.gz) = 503b415394d7c833b22e5a999454c0d67598cd54
+BLAKE2s (crcmod-1.7.tar.gz) = fe09982b51bb5c4a90443243ee0cab9783ecc7045c364e5d658f0fa6e2979d60
 SHA512 (crcmod-1.7.tar.gz) = 3c2f65004761c84f19d6ba95a0af74512108bad5007d9e20f8e684822e4196ce17073e58b47d2fa997e058e3d82782f3393458b6f0e86935418f38877d319a31
 Size (crcmod-1.7.tar.gz) = 89670 bytes

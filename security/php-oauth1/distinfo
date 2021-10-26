@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:54:20 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:17:37 nia Exp $
 
-RMD160 (php-oauth/oauth-1.2.3.tgz) = 506f0644b22323a4d1ad6794433768d83357b5ba
+BLAKE2s (php-oauth/oauth-1.2.3.tgz) = c7301164d262281e7bdae9600c41d5b5b981eb5f79bce1560065b4d1b0429f1d
 SHA512 (php-oauth/oauth-1.2.3.tgz) = ca61dbec8fa51679accb31eab90b8699c7780f2d60a83566ce05667148ee44b7dc70fd8235414d6a3a996b252ad4a236b3e8a549685fd7e890e0874029c455e1
 Size (php-oauth/oauth-1.2.3.tgz) = 45531 bytes
 SHA1 (patch-config.m4) = c64940fc005c3f61a4c2bd8f370a4e16d434c336

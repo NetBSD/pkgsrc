@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.25 2021/10/07 14:54:04 nia Exp $
+$NetBSD: distinfo,v 1.26 2021/10/26 11:17:20 nia Exp $
 
-RMD160 (netpgp-20140220.tar.gz) = 970f55292852d5dbfde3eb17a5fefd6a7c820c4e
+BLAKE2s (netpgp-20140220.tar.gz) = 18946b1bf4b765a0d0388bcca33fe03616ebe35cc02f4a1a2240e788e8c21736
 SHA512 (netpgp-20140220.tar.gz) = ec6cfa0131cd50aee273b81cd64f448258121d7e9c8d4914be39ba59b5c28149bced3866c57f521167480da04b60d9d9bd2b228319dc8baa31328fb7c37e6b96
 Size (netpgp-20140220.tar.gz) = 1521820 bytes
 SHA1 (patch-src_lib_keyring.c) = b924af4877aaab98e542425b5d9427830ddd5b75

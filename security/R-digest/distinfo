@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:53:41 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:16:58 nia Exp $
 
-RMD160 (R/digest_0.6.25.tar.gz) = ed97d2fbb65499d117f8e9a8a03c56016ce2e1b9
+BLAKE2s (R/digest_0.6.25.tar.gz) = 90859635bc1be7ba57d42bf6f2f55b0ecca59822c4b41694b754adb84153fdf4
 SHA512 (R/digest_0.6.25.tar.gz) = 5fb3683a3d20740aee0c98bdd52e60ebad3e7c7ca8db770d360aebf138b81f1623b70cdb382b2b32c5b7b59dbeef529cc2a75a7c5421c8be90c08c5a46bb1bc1
 Size (R/digest_0.6.25.tar.gz) = 145642 bytes

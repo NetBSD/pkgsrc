@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:54:14 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:17:31 nia Exp $
 
-RMD160 (Digest-JHash-0.10.tar.gz) = 01427042e4fbc6552f358fd2dc4bd8a03e4bfaf7
+BLAKE2s (Digest-JHash-0.10.tar.gz) = 73f7ed0851417daf82bcb6af8867ed092ac44112ec13907d058cc8b0079ba2a1
 SHA512 (Digest-JHash-0.10.tar.gz) = 901b5c54c3dc3108829907011f3fc6936f2d1d887404cb91e294c09f83dca50a31270cb5b87aeadaaad03d0764f018f90350179ae773e97ffa48f9761efd1b71
 Size (Digest-JHash-0.10.tar.gz) = 13613 bytes

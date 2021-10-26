@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:54:34 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:17:51 nia Exp $
 
-RMD160 (tryton-4.2/trytond_authentication_sms-4.2.0.tar.gz) = 17bfc6ef1e5ef6268548b64071630683b36ce200
+BLAKE2s (tryton-4.2/trytond_authentication_sms-4.2.0.tar.gz) = 4ba867c3d9e1be37faff508b112acb1401c179051b070ed9cb3fad6684343088
 SHA512 (tryton-4.2/trytond_authentication_sms-4.2.0.tar.gz) = 8bde9bb049e0a6b07fda3d098aa403ca505cc336bfbc39ea724653a015f23e8be67afce76077260c4fe424040c7e185930187d8cd9ad6d39f5cf55c88c3c7b46
 Size (tryton-4.2/trytond_authentication_sms-4.2.0.tar.gz) = 23182 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:54:39 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:17:55 nia Exp $
 
-RMD160 (openid-0.0.1.gem) = 27b341fe74f0ec000cac8d422de9c383e50099e1
+BLAKE2s (openid-0.0.1.gem) = d8ebbfc7f742ee4f0fa074ceca5125445aee7e4b5355ea2ca40840373156283a
 SHA512 (openid-0.0.1.gem) = 2e4dbf6672bc98791eca15f8255a917ed9034651d1e45842c7ff6c024989b3c2a35f832fdee9e87195bc9114857dfa67f7a77048eacc5f2ad79d11fffcfaf6d8
 Size (openid-0.0.1.gem) = 12288 bytes
