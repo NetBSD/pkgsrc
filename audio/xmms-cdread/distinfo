@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:10:01 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 09:59:37 nia Exp $
 
-RMD160 (xmms-cdread-0.14a.tar.gz) = bcea65cf1919071d8036d1219979376d6632ae09
+BLAKE2s (xmms-cdread-0.14a.tar.gz) = 8510aa8e426845bd4f5332aa6986830e2a4cadec3ac0a076d97eb2fe4641246b
 SHA512 (xmms-cdread-0.14a.tar.gz) = ee4340ffd0a3167b53371538665b899d8a95fab7cffd4d7c9f4f56ed31e6fae53b5b83f14c1d84b199a33534845afc0c4103ebeaec5cae39e2dbfa9c4431652a
 Size (xmms-cdread-0.14a.tar.gz) = 153811 bytes
 SHA1 (patch-aa) = 623e9df7f7eb4aef6c5b2ef7445575081067a199

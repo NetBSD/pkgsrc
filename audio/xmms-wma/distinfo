@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 13:10:02 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 09:59:38 nia Exp $
 
-RMD160 (xmms-wma-1.0.5.tar.bz2) = 7c2418fce81f41bffe699e676b62fbb1ca24456a
+BLAKE2s (xmms-wma-1.0.5.tar.bz2) = c70cb3651eb826bc3d437f73ffb0449f698697cda0dd5e5b0bfc698a085f4b08
 SHA512 (xmms-wma-1.0.5.tar.bz2) = 9a1c649e0c36ecd6ff1bdb4462c0a8609785cc92355da642933993520814cd5868443e77aa06fbdb84161166864649ca77507a79428ac1c613f1620dff264f99
 Size (xmms-wma-1.0.5.tar.bz2) = 146687 bytes
 SHA1 (patch-aa) = 817d7969c904d46cced1fbd93c753fa3d84f461a

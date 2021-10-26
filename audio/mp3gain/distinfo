@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:09:39 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 09:59:14 nia Exp $
 
-RMD160 (mp3gain-1_6_2-src.zip) = 28396e3057a5943f134553adf3f084cd4be9b2a5
+BLAKE2s (mp3gain-1_6_2-src.zip) = 360c6f406ff522344fc2aff35f9349eb2f23e453caf0205a60134c036375c7ad
 SHA512 (mp3gain-1_6_2-src.zip) = ec9de6c755120480ccb72b34a0042aea7546ef923090ab04e420d5b189523b4504e29952a3d695d3c42c74348f5c3c9123ff090bcc671e43375711e085d67480
 Size (mp3gain-1_6_2-src.zip) = 71246 bytes

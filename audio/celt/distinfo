@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:09:15 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 09:58:50 nia Exp $
 
-RMD160 (celt-0.11.3.tar.gz) = ae5fadd3e0ef6e0fad66fdb3dc81ce390ca76ca2
+BLAKE2s (celt-0.11.3.tar.gz) = 2815d4dcc854d453155914ca96d43027e8f903bb334fb92b640258d4456ea094
 SHA512 (celt-0.11.3.tar.gz) = 1f7b8c9b0fcb3a31ba81c220f89fb15173f6e7a25f8fa9d6669790cf29cccb5f75fb37a9f41c76bec5e8d8b9de47d65949831d5a843dcffb2f0747801a8c9bde
 Size (celt-0.11.3.tar.gz) = 465020 bytes
 SHA1 (patch-aa) = f7e1478687e92da3ec52dc92e7070e9fcac65efd

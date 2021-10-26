@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:09:12 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 09:58:47 nia Exp $
 
-RMD160 (amsynth-1.12.2.tar.gz) = 78db1078e30f264981a854f4f0ae0c93a6e6f104
+BLAKE2s (amsynth-1.12.2.tar.gz) = 4a263b83f7a5bcad8d9e33a681a482e4fe93ccded1c9d1d90720fa00b31eb508
 SHA512 (amsynth-1.12.2.tar.gz) = a1eef3d5a0d0f0ec1edb93d89b3e456ea133a8445a9be73ba338771ae651a2008aea8dd077a9bcf0cd50e6bcc97ad98ab4c44a9baefd9f3381287afdf3325e8f
 Size (amsynth-1.12.2.tar.gz) = 1607129 bytes
 SHA1 (patch-src_amsynth__lv2.cpp) = 2366430a33c3d6513b75333cbeac98513bb8384f

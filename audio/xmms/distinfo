@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.38 2021/10/07 13:10:01 nia Exp $
+$NetBSD: distinfo,v 1.39 2021/10/26 09:59:37 nia Exp $
 
-RMD160 (xmms-1.2.11.tar.bz2) = 466a624572574c56595ef34f42c43d0b74857b0a
+BLAKE2s (xmms-1.2.11.tar.bz2) = 5cbc0d28ee4f9c8c7c77b5870d2e6ae193992814088a1567a27b61a8d68b1c29
 SHA512 (xmms-1.2.11.tar.bz2) = cc813f5e060b890aabc9d73f427daa94c474e2858390d336eba1d48bd082aeb295ce508d08d01067fe6341d0888af0dc6de185c54d0d2ee8519c915d7b849b94
 Size (xmms-1.2.11.tar.bz2) = 2581032 bytes
 SHA1 (patch-aa) = 91b17156a2d0a48d8610552993357bf522aacbd0

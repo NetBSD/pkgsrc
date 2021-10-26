@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 13:09:24 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 09:58:59 nia Exp $
 
-RMD160 (mp3info-0.8.5a.tgz) = 898b566d9ba2f352949d061d991d92f2c8996ec3
+BLAKE2s (mp3info-0.8.5a.tgz) = 56f9b5733c830c3c7814262e29cd99895b43c4b6eda119ccef0a01e92fc886c0
 SHA512 (mp3info-0.8.5a.tgz) = 30e0ef62deaa090fc115317f6c372f408077dfceed7e05faa6744b8516291e38d21f1742732f6532585f0c3d8c705d8c7026c2bed84c97e1f497d433637affd2
 Size (mp3info-0.8.5a.tgz) = 127482 bytes
 SHA1 (patch-aa) = 68a83e206ed073777ed87814403535616b20f9a2

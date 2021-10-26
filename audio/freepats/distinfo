@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:09:23 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 09:58:58 nia Exp $
 
-RMD160 (freepats-20060219.tar.bz2) = 276fcf5ee008decb3640f22fe753639de072bbf9
+BLAKE2s (freepats-20060219.tar.bz2) = 8801ad6d7cd28584dfac173a79618109a3ba82bf301a81a7dd2604d72ead4f68
 SHA512 (freepats-20060219.tar.bz2) = 6b24bf387a52fac9906906cb52fd5f9d02decdfcecb8d88acea136b200db962ba9beeb3e78bccdd6024b47453d7f093980b01cb0661e1b8d29fedc45ed61cb4f
 Size (freepats-20060219.tar.bz2) = 25791733 bytes

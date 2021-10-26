@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:09:28 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 09:59:02 nia Exp $
 
-RMD160 (ices-0.4.tar.gz) = 2a40856c8dbcef8558c7a85bf247c2c7cdf97c22
+BLAKE2s (ices-0.4.tar.gz) = 4d107b7de5591d0e92dd48cc44f64aa7dcfff2714c8b115578ebc4f93c952d93
 SHA512 (ices-0.4.tar.gz) = a66c811c4156b92efb615c6024477ae979cdca69701b44853bbd1e6c2696d0ddc618f9ee16b0c7c83591ee50b365210c17732c170dca5266d7cebe2bcd5767d3
 Size (ices-0.4.tar.gz) = 372837 bytes
 SHA1 (patch-aa) = 4b1734579176a76dc3de27985b505d631c140ee4

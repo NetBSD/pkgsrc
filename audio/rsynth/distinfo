@@ -1,18 +1,18 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:09:51 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 09:59:27 nia Exp $
 
-RMD160 (rsynth/rsynth-2.0.tar.gz) = 02efbf2e3db504c5c8fb76e8e21253c48900fbfb
+BLAKE2s (rsynth/rsynth-2.0.tar.gz) = 65da03ed5e649ff4c375398eee6b0b51a8f6ae74b5e365b277c24745f9134c83
 SHA512 (rsynth/rsynth-2.0.tar.gz) = f755549d5c5c305342ebc98cec814ecbe7dc4215fd6ed32aceb10536962a32c8ffa620b10b52b9abdcfff2eefd95a6affdaa1bb579ea9abf3259623b72bf4b88
 Size (rsynth/rsynth-2.0.tar.gz) = 110319 bytes
-RMD160 (rsynth/README) = b124502f148751869c03718dca74d61d0ec4a9dd
+BLAKE2s (rsynth/README) = 5c80e230a7cbf56e3761a8bf1bbd52f5e3271a0e7a4d94868990fe2e914e7c0d
 SHA512 (rsynth/README) = 3cfcb0bdea34b6ba6c132a4aa568bf2f608f8b7a11d87df069ab15a4cc2319eb3f7f9d89ef381378c0ac06cc03573155af42031dd0baab27cfbf72ea9ee8a1cd
 Size (rsynth/README) = 3247 bytes
-RMD160 (rsynth/cmudict.0.4.Z) = 9fb75f0625d91ee15d552f886fd9282a51c7474c
+BLAKE2s (rsynth/cmudict.0.4.Z) = bb4c7462c94c6e9cf18f5bd9f866d690f65c0e0d8338441de794a133cedbf01c
 SHA512 (rsynth/cmudict.0.4.Z) = 4e646f559e331003b9601cadf38ab2b45b6eba25a5134dd5e8d7d53dfaf4c889d5e738f30e77b8df0ab908498f2b492cb29cf06f6b391478eea9cc9faeacc6da
 Size (rsynth/cmudict.0.4.Z) = 1069362 bytes
-RMD160 (rsynth/cmulex.0.4.Z) = e43326e44219feb386f54ed4a147d14cb9d31b3d
+BLAKE2s (rsynth/cmulex.0.4.Z) = 7521d7dafee841b770414c8363d0ecc07690279f39a193bcf97cd365afdfeff0
 SHA512 (rsynth/cmulex.0.4.Z) = 26db540685c5fcc3c29aa588c5f12c4c61db0bee76cdee4646fa719add551b1deddab4b4a45501bc473c88996c00acbd3a80f2be92da6fe5ef2d7cb11f638400
 Size (rsynth/cmulex.0.4.Z) = 430761 bytes
-RMD160 (rsynth/phoneset.0.4) = 9565dcb4db24fc0b0cfd16ea31f45994f24e2753
+BLAKE2s (rsynth/phoneset.0.4) = b5557ae7c10e4b198fe1e33731c37b1b5f44f9afc9009730a4b4e677ee6f06a9
 SHA512 (rsynth/phoneset.0.4) = 71c722b976046c50ed4b2864259cd5042213fd08b169e4dc0c5ac22bbc7375115877a1d58387a644fef1acf0b753fd776307536d439ee5535dbbf264586e4987
 Size (rsynth/phoneset.0.4) = 629 bytes
 SHA1 (patch-aa) = d2bab8492ba8d280c1de30a4a006a445441ef906

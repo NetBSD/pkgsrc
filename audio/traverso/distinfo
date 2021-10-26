@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:09:57 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 09:59:33 nia Exp $
 
-RMD160 (traverso-0.49.6.tar.gz) = 176c4815f4184e609684db7ea76c21187551080e
+BLAKE2s (traverso-0.49.6.tar.gz) = 2ae5e2bcbd3d70c5efa8577e74b221dd4109b4b453deca4334cae4351a2b024a
 SHA512 (traverso-0.49.6.tar.gz) = ff802994bd2de214a307143800287c48f3c68f02074524e124d985cb86c03ee5989ea43babdb50f763dd41de6fab67ee3c68c04d635a9c67ba349a3693531f60
 Size (traverso-0.49.6.tar.gz) = 1511714 bytes
 SHA1 (patch-src_core_Sheet.cpp) = a1c59a95e1c517222ffa92b99d304351e688c247
