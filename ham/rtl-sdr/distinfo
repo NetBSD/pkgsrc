@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:17:22 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:48:40 nia Exp $
 
-RMD160 (rtl-sdr-0.6.0.tar.gz) = f02dfa2079f924967e2ee22b2e424e7d4a0ec521
+BLAKE2s (rtl-sdr-0.6.0.tar.gz) = 50020356c0a3008cdcaf5cbf91be0dff72098707a1511c211aa3130bce75fbcf
 SHA512 (rtl-sdr-0.6.0.tar.gz) = a08356a08672f03d86adb662e28923e7998b78c0f49432dc1b1e3844976158c467242e0c5eabf206fd257bdebcf91cd2767dabf13d2ef475f2f3e1d82e23ed75
 Size (rtl-sdr-0.6.0.tar.gz) = 134289 bytes
 SHA1 (patch-cmake_Modules_FindLibUSB.cmake) = 95df1dd9ff3b9d5cf7afc55cc5f80cabe1d90491

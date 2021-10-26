@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:17:22 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:48:39 nia Exp $
 
-RMD160 (osmo-sdr-0.1.tar.bz2) = ed7533605c6fb1247bf8cb379f278cb6627b5f07
+BLAKE2s (osmo-sdr-0.1.tar.bz2) = 09fd2406314ff5601e76c81a0569aa9fea65254d6a7ae63aa24b10783060c090
 SHA512 (osmo-sdr-0.1.tar.bz2) = fb03d8ca7685802be212faa581d429f9d9bb548433929ed6f48bbbc960d29399440b61d0946fcd240230b6276eb934205b827b407161ef4410b4cd6626c6c61e
 Size (osmo-sdr-0.1.tar.bz2) = 29509030 bytes

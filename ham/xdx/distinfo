@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:17:23 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 10:48:41 nia Exp $
 
-RMD160 (xdx-2.5.0.tar.gz) = ff03ec922ca834fce3752f715e85b5059c819eff
+BLAKE2s (xdx-2.5.0.tar.gz) = 6426bf34bb9e7d98bb5cea25117888046ed7ddc89ffa1ffb1349a9e9b88ab6b8
 SHA512 (xdx-2.5.0.tar.gz) = e03ac1fde04f921d33a7075a0f9ddc632336c2c4506e69c3e51386c25080c527eb7195729a89edb895308beff05e7544c93831ad03df6db376b9624063a2972a
 Size (xdx-2.5.0.tar.gz) = 342548 bytes
