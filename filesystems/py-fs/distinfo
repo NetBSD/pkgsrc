@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:51:05 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:25:30 nia Exp $
 
-RMD160 (fs-2.4.13.tar.gz) = 9b87b5271aea8268a55ce98ccf0ca9a4c88925f4
+BLAKE2s (fs-2.4.13.tar.gz) = a05f77fd2fda3d923dd784e31dcfd0b179bb786502436ca6c165255ac9cee47d
 SHA512 (fs-2.4.13.tar.gz) = fc3c3f5bbc437899ecc862db5354ba06cd1cf4042a46adeb84bec02ccc4d3a82600aa7f4819367eb1a2ed1fba8e2971a4ba6e03f0335cb77693159c7968f6833
 Size (fs-2.4.13.tar.gz) = 179654 bytes
