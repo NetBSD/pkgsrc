@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:35:14 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:58:58 nia Exp $
 
-RMD160 (bsdiff-4.3.tar.gz) = 27bb255b5dd5aa56d3a076dac9ca76d238a79a04
+BLAKE2s (bsdiff-4.3.tar.gz) = 55f5c64240dacdb50f8a7a22259fdaed3443521e0dc1effc5ba75231b7fcaf22
 SHA512 (bsdiff-4.3.tar.gz) = bde46b393b74bcc9f05532ea4d45b12c104c4f182fdd49d4176aad5f02a2b357f435819f13a5a7ddefe27df0ca82980f06fad764094014a6d068622263e319c3
 Size (bsdiff-4.3.tar.gz) = 5740 bytes
 SHA1 (patch-Makefile) = 203d6a8acfc001cc23abfba953b7f3d40b10b20e

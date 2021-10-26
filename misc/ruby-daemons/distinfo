@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2021/10/07 14:35:45 nia Exp $
+$NetBSD: distinfo,v 1.22 2021/10/26 10:59:29 nia Exp $
 
-RMD160 (daemons-1.4.1.gem) = 171926eb891f20afac37b4fb22f92efb77933c02
+BLAKE2s (daemons-1.4.1.gem) = cd70f2dfe656c218604ce82803283ea750e782c340315ff7055767a6dc564e8d
 SHA512 (daemons-1.4.1.gem) = c057a7cbafc16f9daa073ce9fd5680f5f978826554073f4e77f2b284aee73567253d471224109d060193572f313e5eaa1509a2113a1564c1508969f658c045c5
 Size (daemons-1.4.1.gem) = 29696 bytes

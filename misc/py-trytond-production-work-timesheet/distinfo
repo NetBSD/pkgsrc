@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:35:41 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:59:25 nia Exp $
 
-RMD160 (tryton-4.2/trytond_production_work_timesheet-4.2.0.tar.gz) = 984307479ec1dc182b77fa512dda2a7bb23a9329
+BLAKE2s (tryton-4.2/trytond_production_work_timesheet-4.2.0.tar.gz) = 61066a96702999e11d6cb40db2cef3aa3f66c46565ba520daab8742d71e9f28c
 SHA512 (tryton-4.2/trytond_production_work_timesheet-4.2.0.tar.gz) = 2560ffc46ea9a11df18c21dbbce15556c88bf55ccea1a02960538c81edf5f1ace08dc29445f83c59d965f49b34f2fd7473f9ee1687e421eb2b036d0b19d9b3fb
 Size (tryton-4.2/trytond_production_work_timesheet-4.2.0.tar.gz) = 21006 bytes

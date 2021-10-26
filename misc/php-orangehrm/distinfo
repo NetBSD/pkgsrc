@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:35:37 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:59:21 nia Exp $
 
-RMD160 (orangehrm-2.7.tar.gz) = 83b9aa7dce284f77833790e64dae183e6db7d1dd
+BLAKE2s (orangehrm-2.7.tar.gz) = c94dc0fe28b6e29c12b0244b57bdaef7ebc2af01ece36b5d171b100f13fe51b3
 SHA512 (orangehrm-2.7.tar.gz) = 49bcbb8e458e994fd64287f852f923d0462d9f063792009186c05473f1e5674e01b46ea1bcc56fe902b53b7b1c713826db303fc489e785f746ed276b9cbabef7
 Size (orangehrm-2.7.tar.gz) = 5815395 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:35:30 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:59:13 nia Exp $
 
-RMD160 (linux.words.2.tar.gz) = cc92acbaa9d3ecf9e457b18ddc8ced24ff9b78d3
+BLAKE2s (linux.words.2.tar.gz) = 6914ea0306f05bb8d61b48d748edfd9d86a18d8dd0ca0b01374828725bfd1bdf
 SHA512 (linux.words.2.tar.gz) = 7d8ee41cc6f74e74264ff811148c3ecd7837b94667537622f0964e56f125e7e3fcde7b519011d66c1a93ff3585dc49864383636985f309140596b7f12b040f47
 Size (linux.words.2.tar.gz) = 138063 bytes

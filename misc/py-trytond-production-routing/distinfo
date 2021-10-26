@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:35:40 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:59:24 nia Exp $
 
-RMD160 (tryton-4.2/trytond_production_routing-4.2.0.tar.gz) = 88ac62c745daf7663490ed33bc033e10aeb6bf7e
+BLAKE2s (tryton-4.2/trytond_production_routing-4.2.0.tar.gz) = 59a5d5415f39c18280116c08ba4d40de4b3548a12d483e2edb121b14e64615bf
 SHA512 (tryton-4.2/trytond_production_routing-4.2.0.tar.gz) = c7d2e9a87fd9e1905e9afb9347d342bf32bd89c21d0af208fb9afdfb6fa5cc2a8acd1d3e7a463de703057465dc42cda5e508dd15199b53448f594ed3bf51fa29
 Size (tryton-4.2/trytond_production_routing-4.2.0.tar.gz) = 25352 bytes

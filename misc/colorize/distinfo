@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:35:15 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:58:59 nia Exp $
 
-RMD160 (colorize_0.3.0.tar.bz2) = 7876cbed6970789ff762ffabe7e652b4f2d6b819
+BLAKE2s (colorize_0.3.0.tar.bz2) = f0446391e7b46887486bbf9046ed0545d1621e10526aa2a6298d1d9b28ebb8fa
 SHA512 (colorize_0.3.0.tar.bz2) = df01b7b15c54e792202be1a75e534fa2565159cfb1b5b428dc61630e6bb876e4b1cc9ada09c926cde016c446a0625f46ae8e8fdce93ea810420c8bbef3b45adb
 Size (colorize_0.3.0.tar.bz2) = 16337 bytes

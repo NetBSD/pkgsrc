@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:35:16 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:59:00 nia Exp $
 
-RMD160 (dgpsip-1.35.tar.gz) = f93440288a8d16f907e38522eac454c0dae3cf18
+BLAKE2s (dgpsip-1.35.tar.gz) = f7397f91f34f765f895288f7b2c0deebe4b70c40e9f619f1e822bf27e99f3faf
 SHA512 (dgpsip-1.35.tar.gz) = a456242e1c8156ae0f6c40c391ba5426dc6db0975351d5f4749b6cc3568290b80131a3bed2b23d46e2321fb3da3c5cdb2f4062c3d2e470db33fc20fd1b1ddcfd
 Size (dgpsip-1.35.tar.gz) = 104868 bytes

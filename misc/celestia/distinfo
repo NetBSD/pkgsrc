@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2021/10/07 14:35:14 nia Exp $
+$NetBSD: distinfo,v 1.29 2021/10/26 10:58:59 nia Exp $
 
-RMD160 (celestia-1.6.1.tar.gz) = 46ffae2896f95d92b0b7aaacfce8d004fb55bf1a
+BLAKE2s (celestia-1.6.1.tar.gz) = d25b3f41db4de388fe36f42f3d4e96c1b630822da5c1e64fe69bdea45225027f
 SHA512 (celestia-1.6.1.tar.gz) = 5b1221e97ee03f7def317e5e29c5100ebe714a4a3aeb8b9818dc9445e4282b6f87026ab35c7b3d5eb02fa6dbb33693977999d14d9648fc4e6d1947abe32a413f
 Size (celestia-1.6.1.tar.gz) = 52600436 bytes
 SHA1 (patch-aa) = 28ada3b952909b6b1aead358e0d9c5f481993982
