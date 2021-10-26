@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:04:10 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:24:34 nia Exp $
 
-RMD160 (ligotimegps-2.0.1.tar.gz) = 79eff913d70189aa0e631b4055a3b3feb63ef641
+BLAKE2s (ligotimegps-2.0.1.tar.gz) = b629a3253132d170c72d0f7ef599edbccd9a9daae5a162554d3af0da56cc1389
 SHA512 (ligotimegps-2.0.1.tar.gz) = 075dfe98d588305aa3fbad47895d54f26d72fc756d175b607fff51913a40b1219f50602c86da35bb47b335b9275775b903bdcfbd053d7df519f3c6df5f71c997
 Size (ligotimegps-2.0.1.tar.gz) = 35191 bytes

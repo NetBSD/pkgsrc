@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:04:18 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:24:42 nia Exp $
 
-RMD160 (datetime2-magyar.r48266.tar.xz) = 421fe7e311a44bc0cc89ea1021d6e7092eeada01
+BLAKE2s (datetime2-magyar.r48266.tar.xz) = 93e9c82e3d2ec02685bac9cc822010aec6183c4740907c14fd0eb78fa23af779
 SHA512 (datetime2-magyar.r48266.tar.xz) = 4d3b27b0409d26431cc06a1ac83485b6d4d63b9bba30a862ac043cc27c25a77805d5c3aeff3a329e1348a32ca4ceaea917f2f840ce1696a58f00325775ae5009
 Size (datetime2-magyar.r48266.tar.xz) = 2536 bytes

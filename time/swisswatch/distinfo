@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:04:14 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:24:38 nia Exp $
 
-RMD160 (swisswatch-0.06.tar.Z) = b6e680bb6b961e5e595d1bd0ff205b49907c1129
+BLAKE2s (swisswatch-0.06.tar.Z) = 8f44024c803f5945bb55bb296a7509114122bc38c900e68ce86dfb1143ae3e44
 SHA512 (swisswatch-0.06.tar.Z) = 893a1af30779c19cb439f45d7df44211aa68fa598a5e42fc61b6fac579d4eb10615070afe37d68ddb0035c46adc9ee92eca8fde8836c648341f23396ed9fcbd1
 Size (swisswatch-0.06.tar.Z) = 32075 bytes
 SHA1 (patch-aa) = 1a3cc95170c811ccc816c4326fb4f2b1a22e4713

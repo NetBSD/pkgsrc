@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:03:57 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:24:21 nia Exp $
 
-RMD160 (time-compat-1.9.5.tar.gz) = 5307b8fd61e83d2ebc8bdb8dd8a2b44a2a1bb67f
+BLAKE2s (time-compat-1.9.5.tar.gz) = 9c2eef9f1560695a5aeb571af003291dac2900f924a7b676ab70aaf6830f91a0
 SHA512 (time-compat-1.9.5.tar.gz) = c5e61242140c5bca4ca3b8e6f9f1058128cce40ac77ed3009a82d511b3ac9c0a2423bf0de1369c49e65a22fb8d864b1c9351994730951e5e302c5d17f131db83
 Size (time-compat-1.9.5.tar.gz) = 59336 bytes
 SHA1 (patch-time-compat.cabal) = 71cbb0962b885cc007ebcba893d5be0f90686918

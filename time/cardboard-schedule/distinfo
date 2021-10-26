@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:03:54 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:24:18 nia Exp $
 
-RMD160 (cs113ins.exe) = 43f103255382187ffcd0bf6d683de524f031afc5
+BLAKE2s (cs113ins.exe) = 17c745a7ff06ffff0d53b5afe467b64f8dff80f0f9cee1e6520b6ebc893a44a5
 SHA512 (cs113ins.exe) = 897156ffbaf9ff3ff7ec740b7aaf3a4af180477835e60de18b43ec51a8eaa37eea0b3d366ef590f69c95c89a6d1497e8064be63f18eabd78f65772c7ff50f416
 Size (cs113ins.exe) = 3258086 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 15:04:21 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:24:45 nia Exp $
 
-RMD160 (wmtime-1.4.tar.gz) = 0d6d59b4f7a3ea28a8b0f88f3c9e7789f44658d9
+BLAKE2s (wmtime-1.4.tar.gz) = 175248a915e4b6b2c5ea592ac5092c97d71dcd749f347828415e2a06d2011399
 SHA512 (wmtime-1.4.tar.gz) = 50d971394d54c97dbb839338b342b7907a4b83a5666f3eeb1710b22a21746d4a05fd45618537ede57fcd88605971d9d949921b926efa1eed36cdb20b012d4780
 Size (wmtime-1.4.tar.gz) = 19045 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 15:04:15 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:24:39 nia Exp $
 
-RMD160 (datetime2-bahasai.r46287.tar.xz) = ef7623ce54f9c502820656591da9bd0196c7b1bb
+BLAKE2s (datetime2-bahasai.r46287.tar.xz) = 7e8be6b367e2126bbb1df2b1e7ae796eaf1b4bfe4934a07a3a42108caa8c6e7f
 SHA512 (datetime2-bahasai.r46287.tar.xz) = 6bc05fa0f1cfbf05008de715f9b278948272cf7894e8c29b52b6ee4ba436e01e5588356fa020fd5453ed2e9bee185cb46c54ee3e808417782587c9509bab17fc
 Size (datetime2-bahasai.r46287.tar.xz) = 2208 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:03:55 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:24:19 nia Exp $
 
-RMD160 (gchore-1.0.tar.gz) = 29abc758894b63dfd528f01bdc2bcf1b17925c4b
+BLAKE2s (gchore-1.0.tar.gz) = 6b0384619d3644da7c7a24709d1c0fb6c57f72b6e63405a85433660436fd7e2c
 SHA512 (gchore-1.0.tar.gz) = 9ddb811e77bad9cab586ebb73d551f7324c916443be5a146640bb7da4e602cfb61ae1240914c375cd2702f39967526b8381da3ccd9f459547f1f12d7691b5bfd
 Size (gchore-1.0.tar.gz) = 112959 bytes
 SHA1 (patch-aa) = 808412199d8fab55d8a5899ad6de2eccc022169a
