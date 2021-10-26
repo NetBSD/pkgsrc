@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:41:14 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:05:24 nia Exp $
 
-RMD160 (batchftp102.tar.gz) = abd392131b18b3381747e7d45263ad0e828c0980
+BLAKE2s (batchftp102.tar.gz) = 588f9a0c47484753692b0f1a18f8a3fd5343c53ce41821e0c79b0de6f53d09fa
 SHA512 (batchftp102.tar.gz) = ef25ba65430b564e72a1e959917be1ac2aa13083db5a41fa76facae708d8298f2743bed43744bcd8ce341cdd17ff26d34500ea6224464c9a357df6a7b5a93d87
 Size (batchftp102.tar.gz) = 20507 bytes
 SHA1 (patch-aa) = 46ce0bce79e930042b437a0ba8011dba7fedfd00

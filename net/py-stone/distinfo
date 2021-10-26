@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:42:34 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:06:44 nia Exp $
 
-RMD160 (stone-3.2.1.tar.gz) = 6d47b31cb85e89e473bf4e15d2e84cc0575fca2e
+BLAKE2s (stone-3.2.1.tar.gz) = c29d31158b73d816e79e0e3a6dd8f64c151936aac51ea78d17703909fedd7962
 SHA512 (stone-3.2.1.tar.gz) = 6cfae8ee63c2e47f3faf561959d48457440f6cf63996efb9da92306b45021c5b55c975444e6907b9b5ea076b431cbc4cfc228d155ebc190eaf32c918f44ab8c5
 Size (stone-3.2.1.tar.gz) = 189351 bytes

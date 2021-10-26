@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:42:20 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:06:30 nia Exp $
 
-RMD160 (fnet.pl-1.4.tar.gz) = 45f911b1232d0fc87a590da560c5d50c2d903ec3
+BLAKE2s (fnet.pl-1.4.tar.gz) = 0dfcbe6720199dbc78c914a9a2d134713fa49bea3761ddab0a5422ba2c42961f
 SHA512 (fnet.pl-1.4.tar.gz) = cf60b60a976bddaba9f7dc6f514cf80112f7ff1ef22e955c06c26a9b28dcac0cb45cc42540c0af1c8d032e750f53bf1793eb6d3a3f7759507a1ae6e0e078e7ce
 Size (fnet.pl-1.4.tar.gz) = 9548 bytes
 SHA1 (patch-aa) = 24310d7982662fb019ccbb7bf1371fe0f6fc7729

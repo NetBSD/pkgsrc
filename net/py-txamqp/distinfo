@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:42:36 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:06:45 nia Exp $
 
-RMD160 (txAMQP-0.8.2.tar.gz) = 9d0e604ff26affc11dfb46c0dda4361fe0bb41e5
+BLAKE2s (txAMQP-0.8.2.tar.gz) = bfa7c4430a01d1bb232278cad63d3af2b7d79142552c851a4c820ac8db989a89
 SHA512 (txAMQP-0.8.2.tar.gz) = 2af6695ce9ec92f06ef52028564072d47d8fd025ae2d39ef7d7c0e8e9c18f4b6e669e6adb4eee59c913e475e692b6bdee94c1661c8144d7c02f04947671a3db7
 Size (txAMQP-0.8.2.tar.gz) = 39673 bytes

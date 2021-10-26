@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:42:42 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:06:51 nia Exp $
 
-RMD160 (netaddr-2.0.4.gem) = cea747fb584844e94a75f4b513f0f09ddd318146
+BLAKE2s (netaddr-2.0.4.gem) = d4a7337a1e026335de63839a094b171815ba90c012c5c27354d76340368d1614
 SHA512 (netaddr-2.0.4.gem) = 32706b85df93ce8cbec8fcb1af16388e42e2b1f8dfcdf1bd35882bdac77f1329366b209391fcf37abedb36d7e40582e6154d8f439136625f2c603a9f0a98788a
 Size (netaddr-2.0.4.gem) = 22016 bytes

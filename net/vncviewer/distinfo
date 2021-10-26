@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 14:43:01 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 11:07:08 nia Exp $
 
-RMD160 (vnc-4_1_3-unixsrc.tar.gz) = 9ef5a3b6f13d1227e5b9399c4d56884639cf9686
+BLAKE2s (vnc-4_1_3-unixsrc.tar.gz) = 012aaa81119f027ee57d2372c6ff277aae209b420f2118a3375bc1c5739aa6e8
 SHA512 (vnc-4_1_3-unixsrc.tar.gz) = 3fdc91c1054a7a8767f3f0d007e28d973699f8cb1d2f628389e8735f6eabee612f750fc722f80a296c03af17aad10ebb1cf1cab4d6f0795b3d567656e41c78a0
 Size (vnc-4_1_3-unixsrc.tar.gz) = 550870 bytes
 SHA1 (patch-aa) = a05aba67ef7a1fd61307d0e31d9fd90b9219b106

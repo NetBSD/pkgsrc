@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:42:36 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:06:55 nia Exp $
 
-RMD160 (ser-0.8.14_src.tar.gz) = 72c3a0793f3dd88584ee65b3751ccf8a3776f840
+BLAKE2s (ser-0.8.14_src.tar.gz) = ba312a445b5bb7df4e0c581596f0b373c93e7a512978f12ae5ea9f3129310344
 SHA512 (ser-0.8.14_src.tar.gz) = 7c5c1cb664d9e2e96035ceb0d1c25c893fbdddd67034fb10f492d01a05ee85e704a2972010763a87aeae378313f2988a450c8c893aac7e2b8fc276ad6d81e60b
 Size (ser-0.8.14_src.tar.gz) = 1551881 bytes
 SHA1 (patch-aa) = 95971192dea5bee4120b4db3b2f0c7810385bb6e

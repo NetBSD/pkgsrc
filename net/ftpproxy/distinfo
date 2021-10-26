@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:41:28 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:05:37 nia Exp $
 
-RMD160 (ftpproxy-1.2.3.tgz) = bf9ccceab0259363fa35c76620b163cde414132b
+BLAKE2s (ftpproxy-1.2.3.tgz) = 547874ddffd24dc6a45cb457bdeb1bc4cdd6202658c1ee6e9d17e607a60bf919
 SHA512 (ftpproxy-1.2.3.tgz) = 02a6d4db3198a630d3f3fcd6c888675026d625443e77479b3c790466343f59ce581716175b99c0102ee4270f0312b4745ecb263eb253bafd67bd41e0183174a8
 Size (ftpproxy-1.2.3.tgz) = 81625 bytes
 SHA1 (patch-aa) = 6240a5d4c73a36edcaeb182ee2aa5b69cc9a1d8e

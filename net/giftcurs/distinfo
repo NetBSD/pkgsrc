@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:41:29 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:05:39 nia Exp $
 
-RMD160 (giFTcurs-0.6.2.tar.gz) = be717156a57804a44137864ab60941d973af8a52
+BLAKE2s (giFTcurs-0.6.2.tar.gz) = fa8abaf0b8e972bf84a72f3fc03eb94fcd87e36aee6c50450e169621cf81767d
 SHA512 (giFTcurs-0.6.2.tar.gz) = 9ab9072844c110bc507a3a5d0bd9593c3b54610b06bba07fb80e90b0bfd1002a3d58529eec4f17150e44f67a90440ba97da2790cd71af67fa08b85ea7d6fad85
 Size (giFTcurs-0.6.2.tar.gz) = 455055 bytes

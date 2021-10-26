@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:41:17 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:05:27 nia Exp $
 
-RMD160 (chksniff-0.2.tar.gz) = ad7475a9c8acc5d527e2abe28b352c1375c6bb11
+BLAKE2s (chksniff-0.2.tar.gz) = f8f3b7becaf3fd74a27b10235d0c907589b96491be2bea427e3209fb8a1bbbaf
 SHA512 (chksniff-0.2.tar.gz) = 74f8974094c2077b1441d06d0f948974ee79f64127edf8670c02b32776e2f87dce6ca02746bd408b79ea8f518c3ce7d26c56c8ba260958052346641cdd90eec5
 Size (chksniff-0.2.tar.gz) = 28419 bytes
 SHA1 (patch-aa) = 00392a03d68fecea9a9eb4427a77b0093af70adc

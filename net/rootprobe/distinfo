@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:42:39 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:06:48 nia Exp $
 
-RMD160 (rootprobe-20030115.tar.gz) = 5e8f25344d016b3f07648ba06a2cc58aa7baca8b
+BLAKE2s (rootprobe-20030115.tar.gz) = 1e8c71b8c89da344b5357fd75128190ac02c21a07fa8fc31785fda85cf86c4eb
 SHA512 (rootprobe-20030115.tar.gz) = f369f9d3e38ad8542a2629a08082bc596b3984ac835e93883805bd02d5fe8e98956d0f83ba4e85e67998d90921b6d4e36e631a544a37fb9e903d3daa5729a526
 Size (rootprobe-20030115.tar.gz) = 20867 bytes
 SHA1 (patch-aa) = 921d75b27a0f49af8b49f11a2880431186f86622

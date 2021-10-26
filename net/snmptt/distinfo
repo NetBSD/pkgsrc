@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:42:48 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:06:56 nia Exp $
 
-RMD160 (snmptt_1.4.2.tgz) = e031eb7ae0601fd0a7c250f5022f6a869af4f969
+BLAKE2s (snmptt_1.4.2.tgz) = da234c5ff0e9b3675f3fed8052b0e2edefe08658aa7fc111d438cde9664c9bd6
 SHA512 (snmptt_1.4.2.tgz) = b8782aa5789227253c1b65c98771de7eba319f1f29b56224415f89d0c687515cd099f0ba7d0e304d43a9d054fa66335fe09d99545f50415745ac86b8b56a2b9d
 Size (snmptt_1.4.2.tgz) = 142697 bytes

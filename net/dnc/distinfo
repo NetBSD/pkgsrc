@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:41:21 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:05:32 nia Exp $
 
-RMD160 (dnc-0.2.0.tar.gz) = e4ccb383d4f9bce73fd5281b2e578b3099049f70
+BLAKE2s (dnc-0.2.0.tar.gz) = 8f7ecaf57a568b10fe4412eb93e20f53d744de344ae8ea47fc05a8d90017b007
 SHA512 (dnc-0.2.0.tar.gz) = c1df898bf3e33bdb0ad04f3da0e25b7bd8d7cea3148857c199064f50047cc11457ca1ee8f3f0a88d06325f3c428b98c4d7128c330f567e70626272cdb58556f2
 Size (dnc-0.2.0.tar.gz) = 2938 bytes
 SHA1 (patch-dnc) = 8496e17e3e2606d96ddf9f454922f697746f5f98

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:42:12 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:06:22 nia Exp $
 
-RMD160 (Net-SFTP-Foreign-1.93.tar.gz) = d98f29255cbe0857829f29aa33ce64ffda9b7e77
+BLAKE2s (Net-SFTP-Foreign-1.93.tar.gz) = 6613195cd7ca5fe880f93110f1924d4f1f2bd82f8452efedc3fad6150bd50a05
 SHA512 (Net-SFTP-Foreign-1.93.tar.gz) = 9ce362525b5323eb253241a3dc833da1206252696b903ded4343d0678f4dc426246cd6192ed6dec033d168604a8fbfdb033a626cba8ce6d3a5f34fef7fcbe909
 Size (Net-SFTP-Foreign-1.93.tar.gz) = 170310 bytes

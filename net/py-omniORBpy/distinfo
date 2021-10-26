@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:42:31 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:06:40 nia Exp $
 
-RMD160 (omniORBpy-3.5.tar.bz2) = 952033782f2da58834f2c5255b2b8286af214d0d
+BLAKE2s (omniORBpy-3.5.tar.bz2) = 7ab9000a846458e37aef4c93ca3fccde35d5e7eccc391fdb94da5a379465e369
 SHA512 (omniORBpy-3.5.tar.bz2) = 15eb3cfc460d80cb4686d984be78b1194647e63e6fe5b971615870d5ff2ed7953d14c60c9536eda3d2fb88c22c258e5024158004a002ca6a5e3ebccb63940c13
 Size (omniORBpy-3.5.tar.bz2) = 607213 bytes
 SHA1 (patch-aa) = da768cb94abd970037675535b5350f84480f6ff3

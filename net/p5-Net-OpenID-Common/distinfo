@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:42:12 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:06:21 nia Exp $
 
-RMD160 (Net-OpenID-Common-1.20.tar.gz) = 82ac52c31328d4201761f6de5fa50313a827742e
+BLAKE2s (Net-OpenID-Common-1.20.tar.gz) = e78fd378ce331d2819708a4c24e3f29cbdf00345aefa84e8a4fd353441d85a33
 SHA512 (Net-OpenID-Common-1.20.tar.gz) = 9d503834e66b8b3f0cef2452b7cec70559723e02b9b846b14eba63aa73f03d58afa8802ffe7517eb5756d78609f3382137303361542f312969aee8c0a46f0c5f
 Size (Net-OpenID-Common-1.20.tar.gz) = 28306 bytes

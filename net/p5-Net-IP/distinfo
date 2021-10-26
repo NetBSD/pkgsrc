@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:42:10 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:06:20 nia Exp $
 
-RMD160 (Net-IP-1.26.tar.gz) = 7676d271e9af3fc17df5233ac8e3592c8d1db491
+BLAKE2s (Net-IP-1.26.tar.gz) = c71e8a9ba216bd43f5375885054fee833eb1229545a01e8c2de8dc5d5473e080
 SHA512 (Net-IP-1.26.tar.gz) = c561f32b6ca5dc082e2bc6c47000a2ca0f5ee7abb47105f5b1bf98cb76723287416de0a767ea63c18f87964df7f3982c7258fe1208afa22cff0378ae3509d9eb
 Size (Net-IP-1.26.tar.gz) = 30866 bytes

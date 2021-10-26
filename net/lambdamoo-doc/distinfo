@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:41:42 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:05:52 nia Exp $
 
-RMD160 (ProgrammersManual.texinfo) = e861fd05a9b14156184ccf7476702d5d2b22d88b
+BLAKE2s (ProgrammersManual.texinfo) = 4304333ac1446c2e72349e044f400d4cf86239fcae45987f884f49cc6df5bf4d
 SHA512 (ProgrammersManual.texinfo) = 258ebdcecf70081644bc9caca94d4b9ad568a3ffa1b62a0c051b48cc17f16e14948246de910a4511e7dc0fb62704aa9b2d933810d3b96f4f568b276d924054a4
 Size (ProgrammersManual.texinfo) = 251661 bytes
-RMD160 (HelpSystem-02Jun93.txt) = 0a117d9e5ef22f1f80989315f64a8849cd09b259
+BLAKE2s (HelpSystem-02Jun93.txt) = df1bcd9d008e6760f902773a7285573f6ea7b23c28eccd656ec845d66978c750
 SHA512 (HelpSystem-02Jun93.txt) = 6168c79ad76148921af4c7764aafc3ea2b5c56d6a4746281b9d632c29f613812dffe60423d39cb1672a08267f7e4a3f395e86222da4452aa87f4b5ea1be48f6a
 Size (HelpSystem-02Jun93.txt) = 364908 bytes
 SHA1 (patch-aa) = cca086713513a23f58f35d46e94b4fecf72258cb

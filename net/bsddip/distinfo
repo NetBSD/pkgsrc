@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:41:16 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:05:25 nia Exp $
 
-RMD160 (bsddip-1.02.tar.Z) = 799b899cee5ef1b8a49c8a0929a2c4f0d17bcbab
+BLAKE2s (bsddip-1.02.tar.Z) = 80015a301e53b7ce945808cd6269929d564442396f72d54bea3b8cc633eb5c4e
 SHA512 (bsddip-1.02.tar.Z) = d9b1d95f79c2bf73bc180f4285d95f6033444a3995c5320835b989dc7786f7bd8b95ce7b221fae5ce8b38bba47ebfa59f8a2d825ca2265452b002c4f0ff43d1d
 Size (bsddip-1.02.tar.Z) = 78191 bytes
 SHA1 (patch-ab) = 64ac16f5582e53085b211d819af7530639c1a803

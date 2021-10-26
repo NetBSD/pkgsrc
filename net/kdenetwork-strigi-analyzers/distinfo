@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:41:40 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:05:50 nia Exp $
 
-RMD160 (kdenetwork-strigi-analyzers-16.04.0.tar.xz) = c8e1b9eda127578653d018a6bf6a45712ccb3d41
+BLAKE2s (kdenetwork-strigi-analyzers-16.04.0.tar.xz) = d6292aa6bc5e4a4089d456efbc135aa73631ad66ddc4f693f7fcb81380c54df2
 SHA512 (kdenetwork-strigi-analyzers-16.04.0.tar.xz) = e8ece5e20ff6f6d71bca15cd860f99f7d698300e1d75d447b1e879604f0774ec5ecc9a49435d543e33d85f03eb8f02a7a1e8e5e1a5301c3484eb97f41a6d61f4
 Size (kdenetwork-strigi-analyzers-16.04.0.tar.xz) = 14788 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:42:06 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:06:16 nia Exp $
 
-RMD160 (Net-AMQP-0.06.tar.gz) = ab88a95b7b3bdbbb186d477de48f38bb4a3420db
+BLAKE2s (Net-AMQP-0.06.tar.gz) = 26e8d9dff77131347178ce757f5684079ddc041bd50207b812755cbffaf38675
 SHA512 (Net-AMQP-0.06.tar.gz) = d764a85833a82e0f23b80fde75f57f958eea919e963a1a860eb1447edcfe6ebc8711b094ee4d79363c92ad30178b8ea6ce067eb06a848cef41533ab04f731d7e
 Size (Net-AMQP-0.06.tar.gz) = 296680 bytes

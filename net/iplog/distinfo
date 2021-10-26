@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:41:38 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:05:48 nia Exp $
 
-RMD160 (iplog-2.2.3.tar.gz) = 879441d6cb3afe5bb8df42411fb821a2c7a0fad7
+BLAKE2s (iplog-2.2.3.tar.gz) = 15240b9438061cba6f2be83c66cf96fdfe722d7805d5c83a9a03faf9c7161cf6
 SHA512 (iplog-2.2.3.tar.gz) = d7669e39b728af366b5199c58d396c6907496b4895ffb1ba0cba54fae0646f9792170f932de1eae9634b5ac356644a5d6d0ccaf7bc77a62641695992245c9aed
 Size (iplog-2.2.3.tar.gz) = 133639 bytes
 SHA1 (patch-aa) = 11c5892a83d9f764246994098663732b30784d6a

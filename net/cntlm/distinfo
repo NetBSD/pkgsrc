@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:41:18 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:05:28 nia Exp $
 
-RMD160 (cntlm-0.35.1.tar.gz) = 65a2b97a6ec8340b41acbd0f29dc1096148a02ac
+BLAKE2s (cntlm-0.35.1.tar.gz) = 9030cff84f891ed9de92a0d28d5dce6a69ef6c2f487f9034df9962abb34efbde
 SHA512 (cntlm-0.35.1.tar.gz) = 1349c5495e21e078b7cfbe45364f94ec0699008ede8cb9b9af700a4770de943ad5e79f6487c6b9e5f92d44ea6cc14f1987b3d35d5932540b633ba1a85e0d3583
 Size (cntlm-0.35.1.tar.gz) = 74188 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:41:14 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:05:23 nia Exp $
 
-RMD160 (awhois.sh-v1.61) = 87a071e8ef065991a124144b73bb78207fc7dfdc
+BLAKE2s (awhois.sh-v1.61) = 419e3e1a420dd7817e547cbc74694357ff1419b341c1a00310ad2d1cb7e24052
 SHA512 (awhois.sh-v1.61) = 6ae48f7e7ec54b7adc714c96ec76ee2ade046e9c748d9f9521ba9ef8717a8b854606e7dc8472325840c487054302398278f4b7881a9454532a9d618786bf3b11
 Size (awhois.sh-v1.61) = 14281 bytes

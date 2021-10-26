@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:41:39 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:05:49 nia Exp $
 
-RMD160 (istgt-20150713.tar.gz) = 517476b0efab5318c3f184eee44d007b4ee796aa
+BLAKE2s (istgt-20150713.tar.gz) = 241cac477a32363f705b8e260e4dec8d148c297989958114b3a8d8cce635f4b1
 SHA512 (istgt-20150713.tar.gz) = 0eb9b030f9ae8c88c55f9eecc06db589e7c34d2746e389f3fc941a17b51361535a6b340d69ed9e9da0c1e2c1d5a0e026dee9f99846d96d9580873cd75cd38a51
 Size (istgt-20150713.tar.gz) = 277063 bytes
 SHA1 (patch-configure) = 2af8f0f5a481d9d5bea97c68af50c99f9efbe781

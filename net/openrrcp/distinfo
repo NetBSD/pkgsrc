@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:42:02 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:06:12 nia Exp $
 
-RMD160 (openrrcp-0.2.1.tar.gz) = 030aea6b5ce380a09610d0b4f5dbfe0ef3a74b14
+BLAKE2s (openrrcp-0.2.1.tar.gz) = 75edec223850942ce750e97f74e54cc49e072e5817e3db99062ad7020ea678e1
 SHA512 (openrrcp-0.2.1.tar.gz) = 4b9d087fd9da6db565c6d612c51a8087c0c8cf7443a3e67d8800aadb900fd6c499d15880b7765006a8b16345cb5fa824bb125018a164d1c6de5945bfc4f867e3
 Size (openrrcp-0.2.1.tar.gz) = 71513 bytes
 SHA1 (patch-lib_libcli.c) = 0f3bb2da61463b97ecc2fd9cf55302afcb3195cf

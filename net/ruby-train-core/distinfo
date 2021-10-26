@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 14:42:44 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:06:52 nia Exp $
 
-RMD160 (train-core-3.8.1.gem) = 87b62d4cfde114bd11c904950df5e864a265d02d
+BLAKE2s (train-core-3.8.1.gem) = 5339b24459952144d03ded31702e526159c4416f274ae17df86d764cf8f2f8b8
 SHA512 (train-core-3.8.1.gem) = 9ffd92041a7244d74a60b129f23fe657250b5787661ef3969ed5ede9381907721ed61a0b143603e175caebaed3d6b5e4a322eb9f27f2f8d8091163ad1bc87f46
 Size (train-core-3.8.1.gem) = 46080 bytes

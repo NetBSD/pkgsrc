@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:41:31 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:05:41 nia Exp $
 
-RMD160 (gofish-1.2.tar.gz) = aa31d5bf52a6a2988df3c451eb1cd09c27d10db5
+BLAKE2s (gofish-1.2.tar.gz) = d168855d0369b36704fe13248d6fc77f7495fc795d429a517e9aa13824d04fc9
 SHA512 (gofish-1.2.tar.gz) = f7999a5e2b4f80d6402f26d9434f844b26b47b43a6b00055e72ba399426672ed299ca759252d8eb732b23a4c2c369a92c11c0d496f16f4bf3a999398cf6c5bee
 Size (gofish-1.2.tar.gz) = 212596 bytes
 SHA1 (patch-aa) = 3ec66d742c26f04787cf3785f62c58599ecf57ff

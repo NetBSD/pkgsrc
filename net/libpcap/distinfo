@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.37 2021/10/07 14:41:45 nia Exp $
+$NetBSD: distinfo,v 1.38 2021/10/26 11:05:55 nia Exp $
 
-RMD160 (libpcap-1.9.1.tar.gz) = 127fab6927919bea9c0ffc0d57efb67e52d07fbe
+BLAKE2s (libpcap-1.9.1.tar.gz) = dba7bec94d9c707f4d64fd0849d0e79b2e93c534b3764a85236ab4261d82b200
 SHA512 (libpcap-1.9.1.tar.gz) = ae0d6b0ad8253e7e059336c0f4ed3850d20d7d2f4dc1d942c2951f99a5443a690f0cc42c6f8fdc4a0ccb19e9e985192ba6f399c4bde2c7076e420f547fddfb08
 Size (libpcap-1.9.1.tar.gz) = 861228 bytes
 SHA1 (patch-Makefile.in) = ca43b1c1e75bc9a3af5e1fa2833f99bdb72eef13

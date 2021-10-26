@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:42:40 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:06:49 nia Exp $
 
-RMD160 (rtmpdump-2.4-git-fa8646daeb19dfd12c181f7d19de708d623704c0.tar.gz) = c11b59337d7b9dd6c8136cc331ee6ade8ed4bc9e
+BLAKE2s (rtmpdump-2.4-git-fa8646daeb19dfd12c181f7d19de708d623704c0.tar.gz) = d44501682f37e3ca446612c99241a0e4f6b17f1c6e845a383124f5439a2f727d
 SHA512 (rtmpdump-2.4-git-fa8646daeb19dfd12c181f7d19de708d623704c0.tar.gz) = 05a55c7170fa4e9b132166deddf7ff78f9b02880a22420ffd7af891f95172a293315b323d40bf6e0b891c2b8874dfa678c28b8671b0c09fe33c100dcf7d680b4
 Size (rtmpdump-2.4-git-fa8646daeb19dfd12c181f7d19de708d623704c0.tar.gz) = 1030982 bytes
 SHA1 (patch-Makefile) = 0001b2c1745f4ee6eae36e780d256ff584631ab9

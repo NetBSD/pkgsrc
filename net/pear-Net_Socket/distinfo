@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:42:19 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:06:29 nia Exp $
 
-RMD160 (pear/Net_Socket-1.2.2.tgz) = 45f6caf0e857da3e6eaa2aae3548cad0c51d324b
+BLAKE2s (pear/Net_Socket-1.2.2.tgz) = 3b9921fcad394fd06088ee8bb50f071523d2c52b3db1f5003650fb0d82ca908a
 SHA512 (pear/Net_Socket-1.2.2.tgz) = fd415fbd4a6801b63cda3168ff275fdeae233a3cc4c62f9bfe561f83f24f89795a7e7ad862641a73bb6d6e3c0da8b56cd00e7e7a1db616de040ea7883d84caa5
 Size (pear/Net_Socket-1.2.2.tgz) = 6903 bytes

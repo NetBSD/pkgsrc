@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:41:59 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:06:08 nia Exp $
 
-RMD160 (nipper-cli-0.12.0.tgz) = c0a83f4c21941556bacee777801288d162b4fdea
+BLAKE2s (nipper-cli-0.12.0.tgz) = cb808c6a87ac1559e65413e2d4402a0f6667f632558e464d5f447b01c85271ab
 SHA512 (nipper-cli-0.12.0.tgz) = f65f1e954d9a054136f0a3ac5ea1c25b46a74fe640860fd45093206402c7bb9e566b33cc03ed144a0fd7951f94d94390100344c24ff5343473374676e807f742
 Size (nipper-cli-0.12.0.tgz) = 34157 bytes
 SHA1 (patch-aa) = 0ffd30ecd32ccb32746b03942e9b47df38508540

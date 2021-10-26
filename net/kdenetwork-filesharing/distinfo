@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:41:40 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:05:50 nia Exp $
 
-RMD160 (kdenetwork-filesharing-4.14.3.tar.xz) = 447a861ee73886ef782c079aba43464e47196527
+BLAKE2s (kdenetwork-filesharing-4.14.3.tar.xz) = 05c6bc48d616042fb42f6450672d08bd5761d403166ee9e88dd77c81b813a147
 SHA512 (kdenetwork-filesharing-4.14.3.tar.xz) = ef37c7d50a86fc0d585a758bea67090d42e60f99e1acb1962cd8c997a9918f51d894cebc607f8a149c2f3daab2dafc7d84b8f12e98a57bb033384f2ee8ae2459
 Size (kdenetwork-filesharing-4.14.3.tar.xz) = 27624 bytes
