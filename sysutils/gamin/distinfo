@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:57:51 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:19:37 nia Exp $
 
-RMD160 (gamin-0.1.10.tar.gz) = fb6ba5ec2d2f49afacf10dda4095f02f5930d686
+BLAKE2s (gamin-0.1.10.tar.gz) = 2216efbdf5028d9f980387b997680d1830e60f579302877fe43060d4cebd9d7f
 SHA512 (gamin-0.1.10.tar.gz) = 21bfe6fcf8fb3117cd5a08c8ce3b8d0d1dd23e478e60a95b76c20d02cc29b050dde086578d81037990484ff891c3e104d2cbbf3d294b4a79346b14a0cae075bb
 Size (gamin-0.1.10.tar.gz) = 653392 bytes
 SHA1 (patch-aa) = 0d3700cf3e1abd4dab2f6e801d31e25e352474a0

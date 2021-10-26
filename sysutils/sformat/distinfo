@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:58:27 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:20:12 nia Exp $
 
-RMD160 (sformat-3.5.tar.gz) = 5dd3e15d1fca7dd961694996bd094e3f2abce28f
+BLAKE2s (sformat-3.5.tar.gz) = 4c61c2bd5aa4e66b7199fe2669e255a35fb96bc66ca53b2b131f932873928c56
 SHA512 (sformat-3.5.tar.gz) = 6dc90e16d396165625816cb5e7252772ed92e9a06aeac49e10c642886491dd9a7eb3f60b60d584e952d23704a175333a8c8fb2b93fa8d3b447f60d555b048fa3
 Size (sformat-3.5.tar.gz) = 526375 bytes
 SHA1 (patch-RULES_rules1_dir) = 25b5f88d65b4d8265417bc97cee63f6346e3b008

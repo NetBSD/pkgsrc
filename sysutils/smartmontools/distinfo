@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.38 2021/10/07 14:58:28 nia Exp $
+$NetBSD: distinfo,v 1.39 2021/10/26 11:20:13 nia Exp $
 
-RMD160 (smartmontools-7.2.tar.gz) = 51a00e9ac83c5f16af20f220b129180c953385a9
+BLAKE2s (smartmontools-7.2.tar.gz) = aec467a55c7e68a4bc916cd4cf2d84de70201f8e0de6ba8330372f51369e9a0c
 SHA512 (smartmontools-7.2.tar.gz) = d7e724295b5d53797b5e4136eea5f5cc278db81e4016ba65142438b8c68c54f85a32c582c147a1590b9bc8f74a58952bcb57b9923dd69d34582530a0985799ea
 Size (smartmontools-7.2.tar.gz) = 992256 bytes
 SHA1 (patch-aa) = bd08aff267f0e9e9307ebc57858e61e35144bf16

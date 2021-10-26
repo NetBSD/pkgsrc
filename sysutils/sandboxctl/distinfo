@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:26 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:20:11 nia Exp $
 
-RMD160 (sandboxctl-1.1.tar.gz) = 52001bd2dade10866d588268094dc7b1d36b93af
+BLAKE2s (sandboxctl-1.1.tar.gz) = 360d17228953cc1143d07c40fe79b2eb45ae0ea8bdf7935cdeca47e95d96661c
 SHA512 (sandboxctl-1.1.tar.gz) = 066c188f3d5a058c2260c30fbbf208b340060cdc37fa84d594a3b409443ef40c07857ef568107aae1027b75f5533f574d84fcfe984941298e7147c19336957f9
 Size (sandboxctl-1.1.tar.gz) = 99040 bytes
 SHA1 (patch-sandbox.subr.in) = 45fa0c7f9e9539317581f5ff2570ff04b78e948b

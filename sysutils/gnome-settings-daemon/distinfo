@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 14:57:53 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 11:19:38 nia Exp $
 
-RMD160 (gnome-settings-daemon-3.38.1.tar.xz) = f6135eb43315eeae8c129cc4d5df233817b93d94
+BLAKE2s (gnome-settings-daemon-3.38.1.tar.xz) = b389cec8875693de8e36f5b67e5712ffe9d66381469a8a5454d7444a8d75434e
 SHA512 (gnome-settings-daemon-3.38.1.tar.xz) = b32c0897d1a5680747bf68e9009ea44cf1a05ef807b772ca6514a278002754d520def7bced929b9004d3aec82a6e82b52637bd2eadd3f6cd54f3d0ac5c8e8cbd
 Size (gnome-settings-daemon-3.38.1.tar.xz) = 1437096 bytes
 SHA1 (patch-meson.build) = ed5b0c7bec805fec149080a2bf21fe39fae339e2

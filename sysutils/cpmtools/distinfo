@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:57:41 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:19:27 nia Exp $
 
-RMD160 (cpmtools-2.13.tar.gz) = ce072d2ff294e7dabbd4cb723a282ab6166d3c08
+BLAKE2s (cpmtools-2.13.tar.gz) = e937e5f83ad03bae6ade7eabd216842b877ec1a93b9c85d97aac986369d8c588
 SHA512 (cpmtools-2.13.tar.gz) = c110736259099d8c473484e82adb986c25d58fd7736204a331a061f06034f80b82523a10190f072ed05cd7bb5758b15ebbabcc0c702e74e0802bb3c08b5d9e6f
 Size (cpmtools-2.13.tar.gz) = 170008 bytes
 SHA1 (patch-aa) = c15fa42a3cfbb2477fba4467fee77ba33f966c89

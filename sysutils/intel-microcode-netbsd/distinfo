@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.38 2021/10/07 14:57:57 nia Exp $
+$NetBSD: distinfo,v 1.39 2021/10/26 11:19:43 nia Exp $
 
-RMD160 (microcode-20210608.tar.gz) = e705d2a062179de5da3b171c64209ae2d4b73957
+BLAKE2s (microcode-20210608.tar.gz) = 6a9cde6c5ecb4f11a53d3944af105060d76110bb92601a6352d44bc69516934f
 SHA512 (microcode-20210608.tar.gz) = 61acd2e76aa019fa0002fbf56c503791080a937ff93d81e020f8f0cc089dc08928b4c7e9884f713b886e2f9d4a8409fea59e39f628ef534a588515e1c3fc861d
 Size (microcode-20210608.tar.gz) = 4782451 bytes

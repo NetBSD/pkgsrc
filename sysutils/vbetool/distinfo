@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:58:35 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:20:21 nia Exp $
 
-RMD160 (vbetool_0.7-1.tar.gz) = b5a5d3a0794f8dbb06c78373e15c26d9536d8303
+BLAKE2s (vbetool_0.7-1.tar.gz) = c7fb3da174b77b34517a3cc7a05babab0bdd7d30793ff5393b2ed01bac36a908
 SHA512 (vbetool_0.7-1.tar.gz) = 38d4ac1294a38147a75047804646fd98b8afa15555532647e5353692314c88fb871aab704267135773b8d771146a6769ecfe215c170421b3aae81fc0e71f6c24
 Size (vbetool_0.7-1.tar.gz) = 176277 bytes
 SHA1 (patch-aa) = d27a3dd8eb1943c3f30351996483a01638521e90

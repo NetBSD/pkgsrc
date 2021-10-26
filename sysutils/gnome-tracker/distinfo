@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:57:53 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:19:39 nia Exp $
 
-RMD160 (tracker-3.0.1.tar.xz) = f83460612da853a63d6d71f82bf8cf8daee3bc3f
+BLAKE2s (tracker-3.0.1.tar.xz) = b2c542ebf83191e9046c0367d4848073ba854db48d3c59cb95beaa50a3fae06c
 SHA512 (tracker-3.0.1.tar.xz) = d1c82c7189dc29d65a0b349d1918e309b3e0606e7a046e523bd7511bb51fea3e1561416f8c140635263a7ca90d99aa9ec24a5841ffebb2ab2d400287ff04c7d5
 Size (tracker-3.0.1.tar.xz) = 1418944 bytes

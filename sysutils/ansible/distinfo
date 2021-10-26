@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.31 2021/10/07 14:57:33 nia Exp $
+$NetBSD: distinfo,v 1.32 2021/10/26 11:19:19 nia Exp $
 
-RMD160 (ansible-3.4.0.tar.gz) = f0ef9c911603cac7e3f8523abf75bfcd51f96ba9
+BLAKE2s (ansible-3.4.0.tar.gz) = 949c15c0f28c86b42d1f2f4a353cd0cc266b27dee25974f905ad5288db052d9d
 SHA512 (ansible-3.4.0.tar.gz) = 0316c6bde7f6be80f7a5855cc711989483b202fd434a5aca9e23045f26671e9b9927a1100ef7b29098a533dd02704ade906dd5b17d2c870f727aa51c5c5ba5a7
 Size (ansible-3.4.0.tar.gz) = 31898355 bytes

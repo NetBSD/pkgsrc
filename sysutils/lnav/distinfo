@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:02 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:19:48 nia Exp $
 
-RMD160 (lnav-0.7.3.tar.bz2) = 8b1795ed44448dd1eb11a51c2a89816ba1634899
+BLAKE2s (lnav-0.7.3.tar.bz2) = b51ac5413e71ad683bcddc0de3be03c7e865e82084afacd4844c200dc450f551
 SHA512 (lnav-0.7.3.tar.bz2) = d5e6e9dad29cde300952f84eec793c31d4ba30b94e7a49f776a93948096cc941ea53440a782aff80edc647c01b6971faec8cbb609f49ea162914c09da1716894
 Size (lnav-0.7.3.tar.bz2) = 399142 bytes
 SHA1 (patch-src_data__parser.hh) = 0f976ff3df94af045d6d2be53cef964060f507ce

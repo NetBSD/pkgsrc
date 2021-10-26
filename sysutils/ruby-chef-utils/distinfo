@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:58:24 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:20:09 nia Exp $
 
-RMD160 (chef-utils-17.4.38.gem) = cd256bf7308631da8e3468bd9d67881b26cdeae1
+BLAKE2s (chef-utils-17.4.38.gem) = 9dbe120a4585d5b6b0600a78ddad87a3997f7114159bcb39ca2298ebf697ff5b
 SHA512 (chef-utils-17.4.38.gem) = d94c4070eb660bfb5a0e34693f2ce0c0500e687ab796fa02c7efba982ae3e9b63241403eba06598c60c7a80ea893ce1c51a006fc82da124c49bdaec69a2a28c3
 Size (chef-utils-17.4.38.gem) = 34816 bytes

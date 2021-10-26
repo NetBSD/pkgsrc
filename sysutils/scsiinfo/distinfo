@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:27 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:20:12 nia Exp $
 
-RMD160 (scsiinfo-4.7.shar) = 64c01795a721e947a90935608aa75226a1f38645
+BLAKE2s (scsiinfo-4.7.shar) = ec49abdac9afcbbf80cdf21ee32edbb9b510224833dd3775c41b0e8aad879065
 SHA512 (scsiinfo-4.7.shar) = 54eab91c6b68de0ed998db4388e182bd6ded527073aec570aded61b4024cc93d64a98ab238e349e1572e9140e0ce02b40314754cd35eebff80f41da9c6f66933
 Size (scsiinfo-4.7.shar) = 198732 bytes
 SHA1 (patch-aa) = 76e00e321de8a0ed8cbbfa47121057831049912a

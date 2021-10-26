@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:58:17 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:20:03 nia Exp $
 
-RMD160 (py-cpuinfo-8.0.0.tar.gz) = 2b89e64c6501a24f2ff28736f6fa937189f5cf7b
+BLAKE2s (py-cpuinfo-8.0.0.tar.gz) = a1cfc684dc13dacafcf684f2b3a5e8e05a0ca984474e12c5c93f86e810dedfa3
 SHA512 (py-cpuinfo-8.0.0.tar.gz) = 77351f9f2fd33b09d0ee998dd2b3eb971bbe9094bee5636356d5a5a2747ebba3c112cccfdf929f77e3b7de3c745f98ecfac8edeb0d84fede100b637b554d4fd9
 Size (py-cpuinfo-8.0.0.tar.gz) = 99791 bytes

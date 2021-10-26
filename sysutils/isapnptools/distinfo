@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:57:58 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:19:43 nia Exp $
 
-RMD160 (isapnptools-1.27.tgz) = 7c5c2ce2c9c1a33d351f35a68c8646bd7818cbab
+BLAKE2s (isapnptools-1.27.tgz) = 4bc3ce65a33085664eb732b6455a8f3d3f64442dd6780cff2990c061b024785f
 SHA512 (isapnptools-1.27.tgz) = ccd1c8f7b66ba7f26d50fcfa64d0397dd1a09866c7c74226acbcb4e08be77717aaa4dde7eabcad5bac4e5f92774c40bca48dbf97069c62cc71355b768eca4d34
 Size (isapnptools-1.27.tgz) = 499639 bytes
 SHA1 (patch-aa) = 150793665a3bb775a02a84a63ad69b244556ac28

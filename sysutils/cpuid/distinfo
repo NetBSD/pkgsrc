@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:57:41 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:19:27 nia Exp $
 
-RMD160 (cpuid-3.3.tar.gz) = 488286ffd5cd2cef880573ac540314674965b7ae
+BLAKE2s (cpuid-3.3.tar.gz) = 8a288a7cdae278f3d5ae13b543734f04be5de6497845da7f80a28f9bc31a6847
 SHA512 (cpuid-3.3.tar.gz) = a5bb3b692dd91ed410f684cfe53428229d9eb88e66c731050168c2e3a9916afcc845b7c4b1eb7753c6bbb2b468997e231c0e7862a915e61a0f9aa2dad2a648b4
 Size (cpuid-3.3.tar.gz) = 5762 bytes

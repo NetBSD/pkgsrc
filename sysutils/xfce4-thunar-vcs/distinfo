@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:58:41 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:20:27 nia Exp $
 
-RMD160 (thunar-vcs-plugin-0.2.0.tar.bz2) = 2f87c567c93710ce4ba42bc418071258f105e0a4
+BLAKE2s (thunar-vcs-plugin-0.2.0.tar.bz2) = ac6b9529c712a8ec050f5ceb5c008fe8745515ea60c3bbb14d14e6f94069586a
 SHA512 (thunar-vcs-plugin-0.2.0.tar.bz2) = c33f54caa2f27de6c8f9e5cb8368f7538ea82730f1364ad974b19017a25bc6a398c19dfe861b0d0133db08ee36e4e209c8d824ce07de0c2ae6da830aca9e7e68
 Size (thunar-vcs-plugin-0.2.0.tar.bz2) = 546608 bytes

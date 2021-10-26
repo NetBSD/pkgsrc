@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:58:38 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:20:23 nia Exp $
 
-RMD160 (wmmemmon-1.0.1.tar.gz) = 8e120a5f039cf206163abfc1cf4287f3f8413a60
+BLAKE2s (wmmemmon-1.0.1.tar.gz) = e7d3589ec394c1d6238e4c5668ee003e9c63f7ae850a651a79db0f4398c3a0b3
 SHA512 (wmmemmon-1.0.1.tar.gz) = d14c0f02848112321e6de5b9207ef61f7f32ad78b099e2b99c73692aa702ba9aeae733497ef107bf03b70f26e398d7a92cfdf9afc42bc0e3c03399e4f8591b0b
 Size (wmmemmon-1.0.1.tar.gz) = 145287 bytes
 SHA1 (patch-aa) = 85098c03d12329cd1363bdee62b6d373152411f3

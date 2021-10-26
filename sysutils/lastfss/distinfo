@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:58:00 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:19:45 nia Exp $
 
-RMD160 (lastfss-0.2.tgz) = 62cedd93d17b93bd7601df5592077f984c0fb0dd
+BLAKE2s (lastfss-0.2.tgz) = e99fa42de0f486a9c5e55e09a386ed522a59b9a83a1bda060286cd4c68acc2fd
 SHA512 (lastfss-0.2.tgz) = 9c3ec573d279cf7ff66171116df54aeba8de41213596cf092f6881cae9da2453a15da428fb59079479e07970dc6f266a544aaeac9ab419f7fab1ddb02e7fe728
 Size (lastfss-0.2.tgz) = 3057 bytes
 SHA1 (patch-lastfss.c) = f87f3e9e1d1478a387195a8d25eb5f5abb870421

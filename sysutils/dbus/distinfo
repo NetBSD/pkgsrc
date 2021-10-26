@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.96 2021/10/07 14:57:42 nia Exp $
+$NetBSD: distinfo,v 1.97 2021/10/26 11:19:28 nia Exp $
 
-RMD160 (dbus-1.12.20.tar.gz) = a41d7941c58da66dc5ca13927a14d0561ddb4a12
+BLAKE2s (dbus-1.12.20.tar.gz) = 48094ee2b00de08613c83e926db5f36f9c004bb07dc394b953a5680d16095ab4
 SHA512 (dbus-1.12.20.tar.gz) = 0964683bc6859374cc94e42e1ec0cdb542cca67971c205fcba4352500b6c0891665b0718e7d85eb060c81cb82e3346c313892bc02384da300ddd306c7eef0056
 Size (dbus-1.12.20.tar.gz) = 2095511 bytes
 SHA1 (patch-am) = ed334bc76911c9db9f5472c58fb762c56255c5b4

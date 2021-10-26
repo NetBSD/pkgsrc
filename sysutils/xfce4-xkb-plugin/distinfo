@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 14:58:42 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 11:20:27 nia Exp $
 
-RMD160 (xfce4-xkb-plugin-0.8.2.tar.bz2) = ac0e5bc116009d9aa2137d886f464573add26de0
+BLAKE2s (xfce4-xkb-plugin-0.8.2.tar.bz2) = 74df5b2edd218ef15b657c2d26d2945c9d43e6b18390c2fc0ba79026f7509b3a
 SHA512 (xfce4-xkb-plugin-0.8.2.tar.bz2) = 3078c11e1c10195480251c455995e4342c27b06949fc754396824f03bed885f32078f4c1436d86782de031cf4f4f806b530ca53116d4bedb54dda19b68ec7062
 Size (xfce4-xkb-plugin-0.8.2.tar.bz2) = 868539 bytes

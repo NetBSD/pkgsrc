@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:58:37 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:20:22 nia Exp $
 
-RMD160 (virtual-server-5.05.gpl.wbm.gz) = a6302a5b1f7991d80a32987ca8351f865d5e27f8
+BLAKE2s (virtual-server-5.05.gpl.wbm.gz) = 36aaed1a18315910775ac1a1377fa7947eaa7761ae051b3b5cfd9dbea01b34a1
 SHA512 (virtual-server-5.05.gpl.wbm.gz) = 8847efcb19eb4a07727f8f2a6f0fd52e39f53612e7f0b7a1a94169dbc7dbea021e48b4e61d7f32f6e3772f3bd63b988234f9ed72c7cf77318d408cbf505951ff
 Size (virtual-server-5.05.gpl.wbm.gz) = 2322648 bytes

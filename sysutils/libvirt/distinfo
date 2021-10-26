@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 14:58:02 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:19:48 nia Exp $
 
-RMD160 (libvirt-1.2.9.tar.gz) = 1efcbb4ad03dd9eb5b4aa18dba268728ae30b644
+BLAKE2s (libvirt-1.2.9.tar.gz) = 4203e998c79d9c44bd12f54f72c4c70f20ffa8228c90f82012ece2a209339c8b
 SHA512 (libvirt-1.2.9.tar.gz) = e91367037622da17b5081ccf471e17d36f474596f19034b30e86f42940939340dc4cf455697e54bf9023005fc45cd9982a0f39d244373dd4d585fd7b9aee918c
 Size (libvirt-1.2.9.tar.gz) = 30154430 bytes
 SHA1 (patch-configure) = d01bd0cf7336d4c0ec0050301095ae0cfac26b7c

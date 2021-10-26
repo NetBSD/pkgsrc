@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:57:41 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:19:27 nia Exp $
 
-RMD160 (cvsreport-0.3.5.tar.gz) = b06e8fc2ebea586223b763454ab3f76a1301288f
+BLAKE2s (cvsreport-0.3.5.tar.gz) = b0444835ef64dc339852ee4b9507046b5506c915109c0690c8a6cfee5af6d892
 SHA512 (cvsreport-0.3.5.tar.gz) = dd37a6e0be23f97341a9708216aa12debd7ca97013423e0e97c34eca3f75a16b13f07f8c46ece482d575e861f8f86a67e260618fe3c923c7d48e8de51023bbb4
 Size (cvsreport-0.3.5.tar.gz) = 38194 bytes
 SHA1 (patch-cvsreport.1) = 7288e87b38ff6f04fd97b85c1348bbca26e96023

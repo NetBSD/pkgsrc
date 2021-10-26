@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:58:13 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:19:59 nia Exp $
 
-RMD160 (Unburden-Home-Dir-0.4.1.1.tar.gz) = 2072a9cd97be58ffa144844cc7d2aff8180cfddb
+BLAKE2s (Unburden-Home-Dir-0.4.1.1.tar.gz) = a0912c4d63285e633d0cc3c0e7fc99f2fd02521bedc509302425fa1b5bf3888b
 SHA512 (Unburden-Home-Dir-0.4.1.1.tar.gz) = 46e49c83a2075f97b2d34d43efc570ecd41fae1f93cfc2e0bb8377fd771013f6508d9e8a549894bdf0917c3bca4b1d9ec1ecdb84de59cfeadcde82dc0f0fc737
 Size (Unburden-Home-Dir-0.4.1.1.tar.gz) = 56774 bytes
 SHA1 (patch-Xsession.d_25unburden-home-dir-xdg) = 17e35f199b082d96ead8402f53f0c1f3a5116d2e

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:58:15 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:20:01 nia Exp $
 
-RMD160 (pluged.tbz) = 741835591ffac0e510bf80b31bca4e4e048bca74
+BLAKE2s (pluged.tbz) = b58377dd18b28674459512925bd8cc48858341fbfb3693459c16b74e0dbb8cae
 SHA512 (pluged.tbz) = bd2fbea9e1bd1a6b312a38292f49757bfba183d67995d2b31389ef5639704c3ee430c2d8558a16775e762fd29dc8a8cd597066a7cb89fbab5ec5dce1ab52efd4
 Size (pluged.tbz) = 5091 bytes
 SHA1 (patch-aa) = da8fd857bb6673d2360b383e8c5464a4b7f92d1e

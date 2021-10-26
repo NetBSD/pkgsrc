@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/07 14:58:22 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/10/26 11:20:08 nia Exp $
 
-RMD160 (roller-1.21.tar.gz) = 6866d869ebda6d2a0be3095057f92778a2fc9910
+BLAKE2s (roller-1.21.tar.gz) = 8fcaa03e100e4cd411ecfc34573025fe3a2149a3ab758d91916b34b6efa82b18
 SHA512 (roller-1.21.tar.gz) = b8320056e16ab2faed8aa692fe3268fb616fd6b28fa79909c3054724cd055e2f17c952e837abffbaed858dafe426e50cb73a08d6824f11f5b5bd846a18cefd4f
 Size (roller-1.21.tar.gz) = 37149 bytes

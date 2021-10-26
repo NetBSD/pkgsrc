@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2021/10/07 14:57:43 nia Exp $
+$NetBSD: distinfo,v 1.23 2021/10/26 11:19:29 nia Exp $
 
-RMD160 (i2c-tools-9cba52b9626413307b994af44695b8a9c0e058be.tar.gz) = 617b32ea7b1af7cee900eb0b8d8cee572e14610b
+BLAKE2s (i2c-tools-9cba52b9626413307b994af44695b8a9c0e058be.tar.gz) = bcd5b5f2563c4d3447dac5bccba8175073c2c94bb4eb1089d66cc859855eb87f
 SHA512 (i2c-tools-9cba52b9626413307b994af44695b8a9c0e058be.tar.gz) = 1008fbf6135fa1e1ed53c679cb76b3f4d6d2cfe1ed8f79516625c80b57c5b9b03e6cec391402f43d1cfd35cd75d642e13413a0f52cb1c164d3525a3493860fc1
 Size (i2c-tools-9cba52b9626413307b994af44695b8a9c0e058be.tar.gz) = 102950 bytes
 SHA1 (patch-decode-dimms) = 8f8f03cb1bae03a5572bb65f88dfce216f98549f

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/17 17:53:08 tm Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:20:19 nia Exp $
 
-RMD160 (ts-1.0.1.tar.gz) = d095e3362de4c4667fb91725e2fd0b9113729e27
+BLAKE2s (ts-1.0.1.tar.gz) = 9761229120e49557fbfd9e668a584ebe9a5647914336d62ef68406361f3993ac
 SHA512 (ts-1.0.1.tar.gz) = f674c53eedc71b87151a517fe01d2979c81ea3f5de92cd3cf54c02b61e919ffda18f1e035fdce2fdb5504e70e7d3f178d38cd61fc39e7d7d1e5618c8cbf1a6ed
 Size (ts-1.0.1.tar.gz) = 65867 bytes
 SHA1 (patch-aa) = da0c59fe30d79516fb9c8c229696b6a7d1ff375a
