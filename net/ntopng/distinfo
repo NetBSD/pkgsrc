@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/07 14:42:00 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/10/26 11:06:09 nia Exp $
 
-RMD160 (ntopng-4.2.tar.gz) = 300a7a875cc8c77a607286ad0d5ddb447e81e6e5
+BLAKE2s (ntopng-4.2.tar.gz) = 1dbf55dc0e6e3824ef7df9232881872b33aafcc8d24062d160c1e1d6adf1ee60
 SHA512 (ntopng-4.2.tar.gz) = e89ec3f35644ae8bc570d9802ecfadbf0067145e23a589df2032e8781e9c954f4166d3abb650ddafc65e4fbad656730ee1abf9c5273d3e09f8173d423436b8ff
 Size (ntopng-4.2.tar.gz) = 57554819 bytes
 SHA1 (patch-Makefile.in) = 39bd64f682f85451cd3f4945c8218af596f591f9

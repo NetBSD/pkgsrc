@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:42:27 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:06:36 nia Exp $
 
-RMD160 (pygoogle-0.6.tar.gz) = 53c3ccea921a6f3845f6299784468f05c39eeb4d
+BLAKE2s (pygoogle-0.6.tar.gz) = a14ec6ce67ae8b70da797a70ad56a1d9f7565f98788f8be38cb2e272f8302f8f
 SHA512 (pygoogle-0.6.tar.gz) = de7674581311ae0e972cc4ca4736748289c2cde6492f16df87b139d555467a64cd97c9d35432673177d61bab4c111b23d644312804bb49d73557a42d00c3b7fb
 Size (pygoogle-0.6.tar.gz) = 61276 bytes

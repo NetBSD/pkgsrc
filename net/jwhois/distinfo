@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.34 2021/10/07 14:41:40 nia Exp $
+$NetBSD: distinfo,v 1.35 2021/10/26 11:05:50 nia Exp $
 
-RMD160 (jwhois-4.0.tar.gz) = 552a61a17c2c4af8c1a5e7cd12e2e0f40d9f7dc8
+BLAKE2s (jwhois-4.0.tar.gz) = 7186ff1b837c8234b806fd4cd1b73df4ca033faf610ea43250598a80d1b2dd1a
 SHA512 (jwhois-4.0.tar.gz) = 5d625c3f1031a8eb8ef766ef5d47a8c1a4396d1ad3344fc9449f80dd71ad84aadf21ba67f5c2f99348f732a4df998eefe699fcec4efcadf87f579b70302a44ae
 Size (jwhois-4.0.tar.gz) = 493007 bytes
 SHA1 (patch-aa) = 65b75e9808a7e7f92fa1f4dece3fd89efb6c5201

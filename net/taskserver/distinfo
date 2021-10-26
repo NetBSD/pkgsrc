@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:42:51 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:06:59 nia Exp $
 
-RMD160 (taskd-1.1.0.tar.gz) = f5256fda0de4dc46a4f09167666e81bed3452f69
+BLAKE2s (taskd-1.1.0.tar.gz) = d248f7df726b6929c803c44982403ffca7620e6eb4f82a6b27acc19d52eb7d76
 SHA512 (taskd-1.1.0.tar.gz) = df2349c354258fd1b014b1a9c78f68dc10c9e5a48357e282e8a760cf4e4aaf4d36486796ad094ee2b050e7506195b778e3316c90ef543a2f8242de313daa13aa
 Size (taskd-1.1.0.tar.gz) = 120115 bytes
 SHA1 (patch-src_TLSServer.cpp) = 6e47c0ef59dc6c265539152b7abce75b5e518d45

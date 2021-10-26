@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:42:11 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:06:21 nia Exp $
 
-RMD160 (Net-Libdnet6-0.28.tar.gz) = b436f0474493fd578ed9e05076620cdcfc6fb43a
+BLAKE2s (Net-Libdnet6-0.28.tar.gz) = f737559a408173388084d17d34311b49b97733cc645bb0174d67e7823a87d53b
 SHA512 (Net-Libdnet6-0.28.tar.gz) = 285804c9f8eaecd4ed26ff4f5c3ea6b58bc985e808fdd7955278b7252b9607b338ef63e22cb589de4f9db01f2100cea2c79df521f4fc55e4c6d8c58bdc3c941b
 Size (Net-Libdnet6-0.28.tar.gz) = 8131 bytes
 SHA1 (patch-_get_routes) = d401a4364a07118282b51469446cdded05a41c6e

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:41:35 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:05:44 nia Exp $
 
-RMD160 (hping2.0.0-rc3.tar.gz) = 345c6b29e48c2f9aea6b8bafb68c258f9ff8b083
+BLAKE2s (hping2.0.0-rc3.tar.gz) = 3a81e70cd6f56ca91aa463c767abe72daaaae2e008a710a0eb8157f24b4e6661
 SHA512 (hping2.0.0-rc3.tar.gz) = a5273ddf98d39f8bd602d7653bb7e024c1d0a48e6619d0e15eac9ce877d4869fd7e5500f86cc2a35b29b95a27012f2e8c6f69d9bb11e6f9bd30edafd459a1a9c
 Size (hping2.0.0-rc3.tar.gz) = 124573 bytes
 SHA1 (patch-aa) = 6d0e1dc19c1573fb15e482620b04a1dcd9366f55

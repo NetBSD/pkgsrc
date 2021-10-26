@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:43:04 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:07:11 nia Exp $
 
-RMD160 (wmnd-0.4.18/wmnd-0.4.18.tar.gz) = e8a94a659d61c538890edf955c036e02eeae399e
+BLAKE2s (wmnd-0.4.18/wmnd-0.4.18.tar.gz) = 8092a49cdc72743cd680450ca2f081d3b5e552ad7bf6d0d446c50ada05baafcc
 SHA512 (wmnd-0.4.18/wmnd-0.4.18.tar.gz) = 409c6b85bbcf4204f60288890471c2fc8860e797bde4c5d9b78d7e2e2353b4b851cf5d0670261c35ab941a5cf86e8067476d053d4e5223916cd8a0b84c7c15a4
 Size (wmnd-0.4.18/wmnd-0.4.18.tar.gz) = 177523 bytes

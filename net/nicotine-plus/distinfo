@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:41:58 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:06:08 nia Exp $
 
-RMD160 (nicotine-plus-2.2.2.tar.gz) = 8a57562b004ee90144845db6fa9b6313144f7e18
+BLAKE2s (nicotine-plus-2.2.2.tar.gz) = 39838519f24852afaf9786c7973fefeac4efe612f05186fe3b2f05d668306c73
 SHA512 (nicotine-plus-2.2.2.tar.gz) = 919f8f8803d4c989bbc003fb10d3aeb7fca6880b44db8a764a04e9a49a231fd4ba1ce0860dac614776ad894277a270939dfa6e1c6f037c3c65a7549157166a6b
 Size (nicotine-plus-2.2.2.tar.gz) = 2252494 bytes

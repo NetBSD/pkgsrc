@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:41:18 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:05:29 nia Exp $
 
-RMD160 (daq-2.0.7.tar.gz) = c915d34c0ba6c7deb469d6969bc1e077a27cf576
+BLAKE2s (daq-2.0.7.tar.gz) = b893f45b7750a6d46bdaada572c8c799b2774b76644ec2007e6652a816bff38a
 SHA512 (daq-2.0.7.tar.gz) = 9bedddbc2d952526ab4e1d65f4507eb914507f8b3b5702ecf7137f8a210c690703469162a117a76cb8376a5639db46bd767fc48789ba7294a0bad26d4cd0ede2
 Size (daq-2.0.7.tar.gz) = 520287 bytes
 SHA1 (patch-sfbpf_Makefile.am) = 3697692267c3ff8e104103065a382e60089c641b

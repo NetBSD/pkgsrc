@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 14:41:25 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 11:05:34 nia Exp $
 
-RMD160 (stun-1.0.43.tar.gz) = ade9a5ed5fc639df1197c83e7cc5f2ffc91eb96e
+BLAKE2s (stun-1.0.43.tar.gz) = b2c9f5a11fda1474e01223a146574dc7e515d1bd871b9cb474271b56e137a6e5
 SHA512 (stun-1.0.43.tar.gz) = dbd786f4e2a11a1d941d5db92f9ea3ec726b0cdf100d3e8b7badca2e6ba086680707765412d154b2fe4958d3a695984c5be25a73725ef80643dbe57f981f9a02
 Size (stun-1.0.43.tar.gz) = 39788 bytes
 SHA1 (patch-Makefile) = fad2069c7df3d94a69428104c1a6f50b9b350202

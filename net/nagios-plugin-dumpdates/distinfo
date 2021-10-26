@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:41:53 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:06:03 nia Exp $
 
-RMD160 (check_dumpdates-0.3.tgz) = 732437bad54e7a011a8a5e66bf97ee0b7610ae9f
+BLAKE2s (check_dumpdates-0.3.tgz) = cf2096ee7cd6ac38fe7a4e38d0db442106975cac0fc51867d81da7c716f4cc6a
 SHA512 (check_dumpdates-0.3.tgz) = e74bad39df99391565ba541b2715270a03a14772c86712d95a73c932e5d17294745adcceb2fb26080300d56b5aebdb1301b3903faad961103590cc5d97f3615f
 Size (check_dumpdates-0.3.tgz) = 2387 bytes

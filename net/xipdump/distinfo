@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:43:05 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:07:12 nia Exp $
 
-RMD160 (xipdump-1.5.4.tgz) = 4202c4c3ac7a749d1b7a25caa9577a6529ee87df
+BLAKE2s (xipdump-1.5.4.tgz) = 3e2417249f0fc006663a2c6aaa7ccf7189efb024514529b878045c04790e2247
 SHA512 (xipdump-1.5.4.tgz) = 92d3a507c6a3c0892f9d839021ecf322e65ca84880b6568c45002aaadd64d17f88863407884e3a4da549d4ab3ec4efad658f13c59761bd4f03957ea2fd1b7077
 Size (xipdump-1.5.4.tgz) = 311526 bytes
 SHA1 (patch-XmgDict.c) = 03834a2ebf1844851c0fdee28ebe988977ceaa0d

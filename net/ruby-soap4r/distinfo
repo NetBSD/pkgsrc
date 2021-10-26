@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:42:44 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:06:52 nia Exp $
 
-RMD160 (soap4r-ruby1.9-2.0.5.gem) = db355ac33f1bc19d3ce69e00d2a727c28f82823f
+BLAKE2s (soap4r-ruby1.9-2.0.5.gem) = 1eccba4e8bafd5b68496d8958dfbe97882577fb2af5c0ee857b483ff95f625b2
 SHA512 (soap4r-ruby1.9-2.0.5.gem) = c5adfcc6149b82ea8308650d621f9199943748c4f88533d2de4d3a79a0483adbd9438f3411f00cc9cbd2eda25d15f29e9079deea2c5531e1668a9bc2054cec84
 Size (soap4r-ruby1.9-2.0.5.gem) = 442368 bytes

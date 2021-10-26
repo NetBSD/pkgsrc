@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:42:38 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:06:47 nia Exp $
 
-RMD160 (rabbitmq-c-0.11.0.tar.gz) = d36384d38bc236688ae42e07502b212501edef34
+BLAKE2s (rabbitmq-c-0.11.0.tar.gz) = 37182f1c9e819bea9dc033cb593788d2109dd654505253d168d21b6592c5a5b7
 SHA512 (rabbitmq-c-0.11.0.tar.gz) = 0c3dbb6e2b862e9f25e3f76df798ea272bbd81de2865950b95adf1f1e5791eb20d7c9d5a76cb7d2fda54bad5f12bdf69cbfa7e9fd1afdede6f9ec729ca2287de
 Size (rabbitmq-c-0.11.0.tar.gz) = 145638 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:42:57 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:07:05 nia Exp $
 
-RMD160 (tvnjviewer-2.7.2-bin.zip) = 9df68d08e7fde88b0a4bee64c7b3673911a8611a
+BLAKE2s (tvnjviewer-2.7.2-bin.zip) = 86cde166047277b5c4d6c20d8682c402265ab2313da8c856554ff74a9a3e7648
 SHA512 (tvnjviewer-2.7.2-bin.zip) = ce5688b272e16d1bbcd5bff4e8a8f255e7d7d70bdd849d97caf14ac20cd77d70fcfbecf550df75a032d80bec7190e28b1ba50a0a715679973391d56e8aaa4b73
 Size (tvnjviewer-2.7.2-bin.zip) = 763317 bytes

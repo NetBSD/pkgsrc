@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:41:33 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:05:42 nia Exp $
 
-RMD160 (guacamole-server-1.0.0.tar.gz) = 45fa0d74dd841a69cd0bf2018b8cb786cc7e431f
+BLAKE2s (guacamole-server-1.0.0.tar.gz) = 93a940e1d8cd0e82275696364a20040f287e7c8fcf67d94184c45ebccf24af07
 SHA512 (guacamole-server-1.0.0.tar.gz) = 70d469e57f77066c1f2e2e3dd4a2ff4a5ca841a937c6774fd62445a3f1833354e0cff09e24892eca7ac8fa5385063972bde8e448a0734b01dc09e9089ca8dc75
 Size (guacamole-server-1.0.0.tar.gz) = 915912 bytes

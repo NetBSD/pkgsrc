@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:42:54 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:07:01 nia Exp $
 
-RMD160 (server_linux) = e0e0f8a4a60578bed837dee8cd2c678ee5dc79f3
+BLAKE2s (server_linux) = 780c69e777346fa70a55fe5efb2036b7f496596d6a3af54767443e25b0730617
 SHA512 (server_linux) = 936b386861804cb1214c184ab638c5963a5b4dba31ccff351ec10b1781958fe370abc7d67abede496ebbdad6b08c4303ec8ff0acb5ae4163ac89e0268ca70859
 Size (server_linux) = 950856 bytes
-RMD160 (ts2_server_rc2_202319.tar.bz2) = b941f5ec105bc86ba124d1a9a2763e0617a8f6bb
+BLAKE2s (ts2_server_rc2_202319.tar.bz2) = cf049e73adfdcccf4653dbc1b2b398c573bf959610bc43991a74998e64d453fa
 SHA512 (ts2_server_rc2_202319.tar.bz2) = 4191dbe4e16420017a089e5251ffb3ae3c1e47c2ee0277c1dc725bf8924dd9e5006142cd3c0fdc073631ac510bacb75aeed9b29b5101663b58fea770e12381f6
 Size (ts2_server_rc2_202319.tar.bz2) = 1155345 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.32 2021/10/07 14:42:48 nia Exp $
+$NetBSD: distinfo,v 1.33 2021/10/26 11:06:57 nia Exp $
 
-RMD160 (socat-1.7.4.1.tar.gz) = de37a31a8bf95ca301263ec6778dbb016b184301
+BLAKE2s (socat-1.7.4.1.tar.gz) = 40fc322f89ca333a35c77cb25d71512404bfd116d36aecedb1773201f37b5d2e
 SHA512 (socat-1.7.4.1.tar.gz) = e43c8b23a841aea5ecc3ac324185ee4ada552a8284ec41b99245def2d8b493bca9caea1af6f646f434a7eda67a1dd71e4e037eea65fce0444840236eadb126a6
 Size (socat-1.7.4.1.tar.gz) = 648888 bytes
 SHA1 (patch-config.h.in) = e0cb8c4075ca96863e458f1c2384dc7a6b69e928

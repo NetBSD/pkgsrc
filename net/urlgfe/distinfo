@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:43:00 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:07:07 nia Exp $
 
-RMD160 (urlgfe-1.0.1.tar.gz) = 64e76580312172bde5bb76e280add53be5a0430a
+BLAKE2s (urlgfe-1.0.1.tar.gz) = f035706ddbceb5fce2c89e0993bbe38109b4b1c871b689a2b07459ab7673ba5b
 SHA512 (urlgfe-1.0.1.tar.gz) = 046aa242208df50476089c4fcfb6beba02bc808511a14b5480c3355e5e100c30d1b7a9296b8ae955977d5ef9cf51c566b97fbfeec4e316a8530d9d2808915e7e
 Size (urlgfe-1.0.1.tar.gz) = 676691 bytes

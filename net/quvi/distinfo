@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:42:37 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:06:47 nia Exp $
 
-RMD160 (quvi-0.4.2.tar.bz2) = aa915e94af728e5014ac044ef555831ace8a656e
+BLAKE2s (quvi-0.4.2.tar.bz2) = 2e9febed0a7f8a9cf4de8f502f13a0df741448282df0f2174b9bbd428a0e3e00
 SHA512 (quvi-0.4.2.tar.bz2) = 97030575ed87b34357634d3d9ef45016ffea9375e4fae4518403c7bae9b8f4b7484798ccb27563541a11bc0d6a94d4d5c1049108bc4536924a57faaa7d5ebf6d
 Size (quvi-0.4.2.tar.bz2) = 129842 bytes

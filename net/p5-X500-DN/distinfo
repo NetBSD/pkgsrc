@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:42:17 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:06:27 nia Exp $
 
-RMD160 (X500-DN-0.29.tar.gz) = 593ea176cf3ec027e3fc542ee8bc6a619fb5c949
+BLAKE2s (X500-DN-0.29.tar.gz) = f7ff19a8fbef3c8cb7553d229b178803121324b52aafc3638aff4d73913efea2
 SHA512 (X500-DN-0.29.tar.gz) = 4d2dc4998261d79dba7c20dd3b4bf65f470852fdccf917739bd9cba557a7d57025763b5afab2cdafebffe0d3ca15e458986d1b26c0b4e3260e54a9e57a7191e4
 Size (X500-DN-0.29.tar.gz) = 5367 bytes

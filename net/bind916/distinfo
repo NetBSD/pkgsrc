@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.24 2021/10/24 06:40:28 taca Exp $
+$NetBSD: distinfo,v 1.25 2021/10/26 11:05:24 nia Exp $
 
-RMD160 (bind-9.16.21.tar.xz) = 57f41616424441caa6cd83e407f8a5043bd70e50
+BLAKE2s (bind-9.16.21.tar.xz) = 86e609635a167aaa650d2792c79283b2412fa46e665e36cea1501ef6b8175873
 SHA512 (bind-9.16.21.tar.xz) = 2cb71e50600fd7409ca7b7e2e9cf4ef6668b07faad7980ac8060e6a76f30a315182d75534ad1dcfb740c225cdf727b2bd6aa9ceb24ab77ffff09b7b5d6eaca2d
 Size (bind-9.16.21.tar.xz) = 5057816 bytes
 SHA1 (patch-bin_dig_dighost.c) = b1073911d80ecd519af98b6678968296ff8c0c98

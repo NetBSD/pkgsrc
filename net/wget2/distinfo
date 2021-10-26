@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:43:07 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:07:10 nia Exp $
 
-RMD160 (wget2-2.0.0.tar.lz) = d803a6dd63602e2f8e7643efc7990ff285817a97
+BLAKE2s (wget2-2.0.0.tar.lz) = 0f5bd2f4f3b1af21ca2c2a1d058faa429ec8a5246b84a6cb8b5b59a5c6c82d2b
 SHA512 (wget2-2.0.0.tar.lz) = 0e58b05cc6ddc8e9e573beacd5e493d266c58d10e13d81967d2509b73f4bee0ef88a0c09e979f223530189b2bfde593eeb68d38c4fa8702761fa2779174004b3
 Size (wget2-2.0.0.tar.lz) = 1956207 bytes
 SHA1 (patch-configure) = 8ab41d49dca4b508081d5465fbfafe6f2087558b

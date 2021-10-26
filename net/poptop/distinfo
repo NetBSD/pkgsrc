@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:42:21 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 11:06:31 nia Exp $
 
-RMD160 (pptpd-1.3.4.tar.gz) = 1c6c748bf9e81d223087998ee0cca821814d19f9
+BLAKE2s (pptpd-1.3.4.tar.gz) = be0bb4df05ccd539ce64e8982b8d01ef1a0b42269b9b52977c7a13915cdc580b
 SHA512 (pptpd-1.3.4.tar.gz) = 382cc7ce9db7f2b6ffe0a075a319267310f736ca1b93e9867e9d5abb3c56edf49d3cf2bba83d6ae778834e0e18a21fddf29444106c8143a3016ca704ac538b1e
 Size (pptpd-1.3.4.tar.gz) = 240942 bytes
 SHA1 (patch-aa) = 40e5873fc582040112e97477e3709e729245d4c9

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:41:32 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:05:41 nia Exp $
 
-RMD160 (gsnmp-0.2.0.tar.gz) = d7a0290af8f75cf13a3ea1db4e0ad14fa6190f9c
+BLAKE2s (gsnmp-0.2.0.tar.gz) = 167649d30ff2bc457b105d52e4238398625b0cdf9eeec9ef2e1b8762928c81ae
 SHA512 (gsnmp-0.2.0.tar.gz) = 24296b2e1a1a247ad1fba9efab1139655ed2ec81687a91ce0fb87d96ca2e6fa3d2c05b7ab208fb13c71c9ee7dfa2804d364dfb35b0d35099fcd755ac169305ad
 Size (gsnmp-0.2.0.tar.gz) = 389559 bytes

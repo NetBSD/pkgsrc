@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:43:05 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:07:12 nia Exp $
 
-RMD160 (xmftp-1.0.4.tar.gz) = 0d31d84430292d71951df78770552be61eb199a3
+BLAKE2s (xmftp-1.0.4.tar.gz) = 8f92e880530b921b67e7b4c1ed4e0a837340de9a145dacd79c0b8a1040610125
 SHA512 (xmftp-1.0.4.tar.gz) = f3c54c0640c8b7d9a6388d8fcfa9617f7eebeae2fea204dc818ad0424e16ecd96ad8250a7f182240a42621cefeb0e840c90c1cfb559551f26001b329e2d38330
 Size (xmftp-1.0.4.tar.gz) = 152614 bytes
 SHA1 (patch-aa) = 455222cbb7396d87844f44acbc2203c36b580952

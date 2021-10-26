@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:41:36 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:05:47 nia Exp $
 
-RMD160 (icingaweb2-2.8.2.tar.gz) = 932199d41d668cdbff18f399b71895653cce8b1f
+BLAKE2s (icingaweb2-2.8.2.tar.gz) = dd708a1d3e499693e830649b0a57d0c6b42f799e81e90637a9764fc6241db37b
 SHA512 (icingaweb2-2.8.2.tar.gz) = 252ecb36751add239897b6344dd622542f892b1850398fe724d0ab91e8d691cefe0b33c727c28aa630c93b76b381aabe69721db034c4de0518f346bbd5b698de
 Size (icingaweb2-2.8.2.tar.gz) = 8514166 bytes
 SHA1 (patch-library_Icinga_Application_webrouter.php) = f055902578f257d1b3a9a471116bb7012213d257

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.97 2021/10/07 14:41:57 nia Exp $
+$NetBSD: distinfo,v 1.98 2021/10/26 11:06:06 nia Exp $
 
-RMD160 (net-snmp-5.8.tar.gz) = 66770d78f2583cda36e90cc35032d7dae2d354c3
+BLAKE2s (net-snmp-5.8.tar.gz) = 3baf340de546040278255692e48b57bab2bbfb595572bcd814fb53be3fd6f65c
 SHA512 (net-snmp-5.8.tar.gz) = 27895a583b23f3e14c48562bc32f3ba83513d81aa848e878be9a3650f0458d45950635c937ef627135f80b757b663e71fab9a3bde4fd91889153998ae3468fe7
 Size (net-snmp-5.8.tar.gz) = 6591680 bytes
 SHA1 (patch-ac) = fa5a32e497a7651f4804082d921bb2e91b17d098

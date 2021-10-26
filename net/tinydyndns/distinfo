@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:42:55 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 11:07:03 nia Exp $
 
-RMD160 (djbdns-1.05.tar.gz) = a832cbfd93e4ccec6a565492a4ee0b3c1b4b68ed
+BLAKE2s (djbdns-1.05.tar.gz) = 0a7d33115f6fc7b461cb2d0150632a1cce36f4074e27b124b3aeac6fbf71ebee
 SHA512 (djbdns-1.05.tar.gz) = 20f066402801d7bec183cb710a5bc51e41f1410024741e5803e26f68f2c13567e48eba793f233dfab903459c3335bc169e24b99d66a4c64e617e1f0779732fa9
 Size (djbdns-1.05.tar.gz) = 85648 bytes
-RMD160 (tinydyndns-0.4.2.tar.gz) = 456b39eb86466ee3ff5b127be104e1f24548e95a
+BLAKE2s (tinydyndns-0.4.2.tar.gz) = 100108de2e72fb2b62ecf6b4c0b96fea6e17b9ee3617e0587e8b89d1cf604a36
 SHA512 (tinydyndns-0.4.2.tar.gz) = a0c2c0ae2025d20852256579dc7c74f3bf3b5800644bafd00b0af6654fc7d6e1c0a3b16e8b85ab73647eb38b2b45bbe18f7a34c000663a7ac51d9fae029fcdc6
 Size (tinydyndns-0.4.2.tar.gz) = 14323 bytes

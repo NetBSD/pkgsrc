@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:43:02 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:07:09 nia Exp $
 
-RMD160 (waste-source.tar.gz) = 3f3b53df78d1f0c457fc088ecdd8828050d07906
+BLAKE2s (waste-source.tar.gz) = 560726f42a25aa0d904e82319b0492f7b46cbb0717c9dac9a25584a5639d0aef
 SHA512 (waste-source.tar.gz) = 187cf6207d7bdd92ec9908fa43af787c9bbfc5badb2a030a7661971b2a16c0f610d8f5bff879f277c4295a7e2b929a4b54113c6f5aad46782acb96956db2ecd4
 Size (waste-source.tar.gz) = 214730 bytes
 SHA1 (patch-aa) = 65757f6acad934ef0aeeed37a303afb0f72059c5

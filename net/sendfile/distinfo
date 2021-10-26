@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2021/10/07 14:42:47 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/10/26 11:06:55 nia Exp $
 
-RMD160 (sendfile-2.1b/sendfile-2.1b.tar.gz) = 44f5cf03e02f1b620da12cccc62ece87f1a98873
+BLAKE2s (sendfile-2.1b/sendfile-2.1b.tar.gz) = 2a7e3854610b19ee3037aa0ba70729039910471d00f49c9bde7e5c9f448a84b0
 SHA512 (sendfile-2.1b/sendfile-2.1b.tar.gz) = 2f6f25950a62e23110d3d5f1d6e95bdcc4d2b4504fabcaee92ea11919229134edbb8ff7fb459475ef7c09cf297f805ccc19fe2fd4cf59900be9462c5d218926f
 Size (sendfile-2.1b/sendfile-2.1b.tar.gz) = 343785 bytes
 SHA1 (patch-aa) = c8dda4a9f30a0961bd5665e12a3752bf4fa602fe
