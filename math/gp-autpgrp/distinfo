@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:28:04 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:55:41 nia Exp $
 
-RMD160 (autpgrp-1.1.zoo) = 2e76c8685951f84f178a15c3d7efe72e048350d7
+BLAKE2s (autpgrp-1.1.zoo) = 5a17bf91cb846bc89121773b3986c7dcc4aafaf13fec06e41e62da814733d4eb
 SHA512 (autpgrp-1.1.zoo) = e94d9aa16e0467b1b7fcc9285073907a10192c1470706eb91a167181e3b65c0cd7745744a23b85b2ef2eaf0e6218c11a14c6c61d4f57ad92d8429fd1094e76ea
 Size (autpgrp-1.1.zoo) = 155816 bytes

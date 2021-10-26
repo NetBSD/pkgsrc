@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:27:55 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:55:33 nia Exp $
 
-RMD160 (R/tensorA_0.36.2.tar.gz) = 65ddc6154f78dd4a7795fef125ab5034ddb39b99
+BLAKE2s (R/tensorA_0.36.2.tar.gz) = dabf6e1dc4dee0fcefa68e1d1966dbcf6cc6617107fdb50736f6975d102bfdc7
 SHA512 (R/tensorA_0.36.2.tar.gz) = 141b9cc135335d9a4d474a5bdbc2518c0503406ad9024fdab83dd068476ab44f563cf6a8e3a1cf0ea52eeb4e0b010c74c9875bce6e94dee0035b60ff45ea1707
 Size (R/tensorA_0.36.2.tar.gz) = 47306 bytes

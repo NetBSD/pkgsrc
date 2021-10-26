@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:27:57 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:55:35 nia Exp $
 
-RMD160 (amath-1.8.3.tar.gz) = 89b36657808ce5fb248206abb89dae7889d73b72
+BLAKE2s (amath-1.8.3.tar.gz) = 513d767f1252c3926815bd42b31905c7b95315aed83b3a81ff8c7c8b42a73803
 SHA512 (amath-1.8.3.tar.gz) = e9fffc25b1c953658f106c3be5ba46a18140c47d58a6321dd5cbc0cb356f9fff674042e6ec8e1d686e197136405ec379f5be60184fc7a489fa43997660863704
 Size (amath-1.8.3.tar.gz) = 250255 bytes

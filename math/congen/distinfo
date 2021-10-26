@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:28:00 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:55:37 nia Exp $
 
-RMD160 (congen-1.7.tar.xz) = 400373940570f90d0fd124e0381fe6df14c25c5e
+BLAKE2s (congen-1.7.tar.xz) = 4964cc6fef919310b35dbe81d63cd1d7c8bf496776f68353fbf147ca4379933a
 SHA512 (congen-1.7.tar.xz) = 5d0dcc405eae0e90ea21ace1a6beb9497b13d4c633d5029df35a262cb89d206842dee7743a784426b8aac9ba70baa00a91e246bfafc9b0c2a13e8e963d562173
 Size (congen-1.7.tar.xz) = 263368 bytes
 SHA1 (patch-configure) = 8080eca2a394d2549463087240aa4a155aef6984

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:28:24 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:56:02 nia Exp $
 
-RMD160 (noise-1.2.2.tar.gz) = 9f91428b7ead51c0bbaa9b845883af28409c0306
+BLAKE2s (noise-1.2.2.tar.gz) = c29e65aa40705cc12d66bf13e6753dcb93e8dc40b4abee340f3c424d10c0e8bb
 SHA512 (noise-1.2.2.tar.gz) = 015a2366f3c8b579691c35848fb4c13c1cd2ec632df6713012531ece46509b34803ba3ef40fdc4eb05151dca35d78dfc4911d9f2da97864aa049762a3251ea98
 Size (noise-1.2.2.tar.gz) = 125615 bytes

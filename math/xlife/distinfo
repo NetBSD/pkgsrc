@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:28:35 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:56:12 nia Exp $
 
-RMD160 (xlife-5.0.tar.gz) = cbfcc570832337ba51703ad5fe86822aa0c5ad7d
+BLAKE2s (xlife-5.0.tar.gz) = d2496e309ee90bd98bb86033683879905330c65078c19f8fe2ae14a10d76b2af
 SHA512 (xlife-5.0.tar.gz) = d876986ead303a4e4fa0fc1562dc91f640189184f4ae0f8994c245fef7188db2573fda35bd31cbeb75cc8927dbc436f6b3e0689db6ba65bac59de9023dda562a
 Size (xlife-5.0.tar.gz) = 214220 bytes
 SHA1 (patch-aa) = a1797c733efa564b361f299650ea521987635feb

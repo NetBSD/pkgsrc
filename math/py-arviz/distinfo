@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:28:21 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:55:59 nia Exp $
 
-RMD160 (arviz-0.9.0.tar.gz) = 37af60260a8682c83f174b6eae1a3cc98e049599
+BLAKE2s (arviz-0.9.0.tar.gz) = 8a10b03559ef1c6083dbeef165499d3fc3570798dff8e5636ebe343f7a292370
 SHA512 (arviz-0.9.0.tar.gz) = 70bf850e2ca2e15c18f5cdf738a2021fc4281ffcef1e04121bc241d912180a5b26cff69342b950ec2321183aa93460ee4dfbaab9ad6d0481be499e6ffd12a5ac
 Size (arviz-0.9.0.tar.gz) = 1435491 bytes

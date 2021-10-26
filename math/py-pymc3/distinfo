@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:28:26 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:56:04 nia Exp $
 
-RMD160 (pymc3-3.7.tar.gz) = 3286dbb723ef2025af308e7fad503f774b68be78
+BLAKE2s (pymc3-3.7.tar.gz) = 84cee7a643956208dde241558e48c5e4f9ee97bdc39d050c55c7c63241bfa4d9
 SHA512 (pymc3-3.7.tar.gz) = 7efa3a86b7c9b34a9574faedb26396431168a63ba2c03e4680537ce5798105d6c3c273954f5c54de324015123fc0afa3b9ba8f88617a4e1f17924f66b5430a05
 Size (pymc3-3.7.tar.gz) = 30780326 bytes

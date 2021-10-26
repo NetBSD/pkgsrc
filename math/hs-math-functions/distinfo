@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:28:07 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:55:44 nia Exp $
 
-RMD160 (math-functions-0.3.4.2.tar.gz) = 9484d8d03e9f863635d2b0011d52578202203011
+BLAKE2s (math-functions-0.3.4.2.tar.gz) = 9587e08857277d25ff25b6a56400338218c48a9f2dc29dc9a06053511732cc67
 SHA512 (math-functions-0.3.4.2.tar.gz) = cb29901294463edbba37e97445bb9ed039bdc43815c9bbd9b9bb92b87393e6e891f5840d337c6c06c7e30d26107d32a59c39ac51436be43dba00d0e2411a9053
 Size (math-functions-0.3.4.2.tar.gz) = 429223 bytes

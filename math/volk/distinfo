@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:28:34 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:56:11 nia Exp $
 
-RMD160 (volk-2.4.1.tar.gz) = 9b27ac0dbb78162f365e9162d090908e3907cdc6
+BLAKE2s (volk-2.4.1.tar.gz) = afb9fb2b121b2cb5e222b741f6a37a9db61d395fd211dbad6019ee3678a415f4
 SHA512 (volk-2.4.1.tar.gz) = 11b4d6428692e759eb634adb8df5cd1603dc45def3d0985f77249fb93c364be30da9d37d325da5e455409f376a88ef2cd6d6e878a1ece4a204f0dded4fbc4d3c
 Size (volk-2.4.1.tar.gz) = 347313 bytes
 SHA1 (patch-CMakeLists.txt) = dbae634e6db7e70132dd3e62593fe8ee0ee096c7

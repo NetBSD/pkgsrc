@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:28:17 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:55:55 nia Exp $
 
-RMD160 (Math-VecStat-0.08.tar.gz) = 28c4d99911ca34ffe128c18f7b9c997388902493
+BLAKE2s (Math-VecStat-0.08.tar.gz) = 99aa96d7338e243028e477d8d35910a36ebb8057a54d4419c566c83fa7a54018
 SHA512 (Math-VecStat-0.08.tar.gz) = 0e88896a7a10846c6ac2ce9264de4b4938000e36bf5e5bb1fd0b8af478b8d02809981067302a2f7b45b29a21fa2ccd60e5f0e628e0bbd634107ab1aff7ac8c9e
 Size (Math-VecStat-0.08.tar.gz) = 4539 bytes

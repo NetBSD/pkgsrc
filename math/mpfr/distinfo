@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.30 2021/10/07 14:28:11 nia Exp $
+$NetBSD: distinfo,v 1.31 2021/10/26 10:55:49 nia Exp $
 
-RMD160 (mpfr-4.1.0.tar.bz2) = 7a6d028b63c864566f62d47a58521e00a2890c28
+BLAKE2s (mpfr-4.1.0.tar.bz2) = f0e5de4ff827b29cd6ad3477bc9fcf926c151f39a0e8cd3374a89445f92a7e46
 SHA512 (mpfr-4.1.0.tar.bz2) = 410208ee0d48474c1c10d3d4a59decd2dfa187064183b09358ec4c4666e34d74383128436b404123b831e585d81a9176b24c7ced9d913967c5fce35d4040a0b4
 Size (mpfr-4.1.0.tar.bz2) = 1747243 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:28:27 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:56:05 nia Exp $
 
-RMD160 (simpleeval-0.9.10.tar.gz) = 199bd9d5481cc9738a5f32bfb24548fab056cc0a
+BLAKE2s (simpleeval-0.9.10.tar.gz) = d6127efed14f524b7485a736b9bf4c6dd431429950f95ed5965e568e688f7d42
 SHA512 (simpleeval-0.9.10.tar.gz) = 50710221b49ff618218375d6d9b4eb9ee12b875ce0cdaaa63e2dfcaa112918f5bfdf8f02bbc3b5be98c7abc312f99563d910985bc5ad86eb846df935fc072eab
 Size (simpleeval-0.9.10.tar.gz) = 26687 bytes

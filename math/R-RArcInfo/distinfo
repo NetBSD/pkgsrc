@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:27:44 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:55:22 nia Exp $
 
-RMD160 (R/RArcInfo_0.4-12.tar.gz) = 2dfc012db4dd9c1ceb23c356054c924ce0334d5b
+BLAKE2s (R/RArcInfo_0.4-12.tar.gz) = 4279fd2217313a340d61e1d03c5c3ea2438c6d09937af9e319844472b655043d
 SHA512 (R/RArcInfo_0.4-12.tar.gz) = ae975471f4076d5b54dd6f015097b882075af1007c82f9d6256afe36a5e94bda0f204f436112c8ca647cdaeb7d4cfbc34970d37a2ce19adef99b3bfd8a0612a4
 Size (R/RArcInfo_0.4-12.tar.gz) = 463131 bytes

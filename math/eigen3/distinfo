@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/07 14:28:01 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/10/26 10:55:38 nia Exp $
 
-RMD160 (eigen-3.3.9.tar.bz2) = f100af009a9b72532653d0e90eb81f12379f97a1
+BLAKE2s (eigen-3.3.9.tar.bz2) = 18892141d38ea2604b5a3735efc4af1328a48e26ae8aec5c3db34c454b1cf291
 SHA512 (eigen-3.3.9.tar.bz2) = 6f222e27480d02d90f258c94a4a4787771491fc30c73d5fb025a8089484fdeb2c65d464172f5c29d0c3096b69ff98027a18a40c04b006da670733a2c75f55b65
 Size (eigen-3.3.9.tar.bz2) = 1667231 bytes
 SHA1 (patch-Eigen_src_Core_IO.h) = 5798b47107799e4b8976af88630e8f79e5d2f18e

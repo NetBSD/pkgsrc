@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:28:29 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:56:06 nia Exp $
 
-RMD160 (ranger-0.4.2.tar.gz) = 7e1b8a1dd4090b18bc47eb4240dad9865e518d87
+BLAKE2s (ranger-0.4.2.tar.gz) = fa7d637432a255a85cce6cb80f17e878bce370efb8dd63544877e86b4873db2b
 SHA512 (ranger-0.4.2.tar.gz) = 1fe97f6986ea7d805efc7c0524aeef5fd86a191c00664a762e3c032e849c26c5ea6e7e3d0688a0b55a01d7349c789440843d4d244fa18b877d655bdbae49f736
 Size (ranger-0.4.2.tar.gz) = 13998218 bytes

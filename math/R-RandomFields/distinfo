@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:27:45 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:55:23 nia Exp $
 
-RMD160 (R/RandomFields_3.3.8.tar.gz) = b6ca48f122fee0d16755fc3f4361d7a7484f9c48
+BLAKE2s (R/RandomFields_3.3.8.tar.gz) = a52665d0f9cf5f892f843e01b79b70ccd2c8dc5004ad9983bcb785ed05a44f71
 SHA512 (R/RandomFields_3.3.8.tar.gz) = b540745e0c1a2b0edce2648edec47d4320d77b17da2908ebe840f3dfb0cb109b61bd21345276cc8f702699e1009dbeb6b5874a1b61262872fcc5b95357c96c84
 Size (R/RandomFields_3.3.8.tar.gz) = 1069371 bytes

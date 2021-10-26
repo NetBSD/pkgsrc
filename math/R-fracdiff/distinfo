@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:27:49 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:55:26 nia Exp $
 
-RMD160 (R/fracdiff_1.4-2.tar.gz) = 1cfba44971eeb6c592eda4170d28fbe3e55dafda
+BLAKE2s (R/fracdiff_1.4-2.tar.gz) = 73759dfbaaf80b059e42bf6b9e44388e013d44120476384a6de3947edbcce7c5
 SHA512 (R/fracdiff_1.4-2.tar.gz) = 6bc7e129d8a19547d624766c13acced7f2833405ce5cf5928d06e18162d4610ffed28b8b93c3facae0264a9ff3e944402432d4781ff4e7c8ffd51f0c35e66701
 Size (R/fracdiff_1.4-2.tar.gz) = 57636 bytes

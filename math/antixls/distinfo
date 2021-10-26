@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:27:57 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:55:35 nia Exp $
 
-RMD160 (antixls-0.2b.perl) = 9ed1d8e68b7f08d6686ce55df7eb518e72865a4b
+BLAKE2s (antixls-0.2b.perl) = 94261acf41932f6c41a478563532df90bfcb348438d4f38402d00bb5d285569d
 SHA512 (antixls-0.2b.perl) = ab5f10c46421a8cfa5b22a245cbe92e8a0354b557618129a54b5988ba0ecd70dcab405b0268b0797914bcbfe11a04fe03b986e618f592fbf7f3236181ae7400e
 Size (antixls-0.2b.perl) = 4082 bytes

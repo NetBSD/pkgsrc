@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:28:02 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:55:40 nia Exp $
 
-RMD160 (fgmp-1.0b5-src-10.10.tar.gz) = b85db676643fab4b5af18372fb719b6946cf11cf
+BLAKE2s (fgmp-1.0b5-src-10.10.tar.gz) = 8cd057a10c1b8fda4bc7bd9e05744638d5be904b259b7fac7f471a0189b9be17
 SHA512 (fgmp-1.0b5-src-10.10.tar.gz) = 21acfe64ddcc7bad076a2d8df7b2f68ec9ecc60503dbdc568a5c05c3e107716ce1bcc2dca50d47f29a3c6b4573b535538bed54a07cb2a28ea9cb67dcd6396c36
 Size (fgmp-1.0b5-src-10.10.tar.gz) = 13429 bytes
 SHA1 (patch-aa) = 78b2dc3acd641e9b5b96e7de2f4ab12d71028ed1

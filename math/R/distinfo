@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.90 2021/10/07 14:27:43 nia Exp $
+$NetBSD: distinfo,v 1.91 2021/10/26 10:55:21 nia Exp $
 
-RMD160 (R-4.1.1.tar.gz) = d0eb885bb3f3da858e023b2983098e927af70aaa
+BLAKE2s (R-4.1.1.tar.gz) = bb8c39ee46c3220929f964d81b2422486b750e0187815aedafeaee1e48eb313e
 SHA512 (R-4.1.1.tar.gz) = 8eef82c0321f53a6a737bb641c4401626682fd01fa21e497ed2b8d6291d94ada47cee46b258bb3052f1097fc087c72982b2625c80420c8fb230ba8fcd962f254
 Size (R-4.1.1.tar.gz) = 33719965 bytes
 SHA1 (patch-configure.ac) = 2732e3e0a39ee64ae4cba5c476f4754ecbd14942

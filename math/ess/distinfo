@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:28:01 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:55:39 nia Exp $
 
-RMD160 (ess-13.09-1.tgz) = e86dd26932de00ee2f224dcc1c8eb0de78e7c2be
+BLAKE2s (ess-13.09-1.tgz) = dff3171643c868ac0973f97f3d63d4af049ff3a2175da5f26f0b62b7db360e2e
 SHA512 (ess-13.09-1.tgz) = 846dccb032cb0780fece51c6647dc3e19d737c8b89a36f3bd0509eea7ea3f75a8d50f05f6d00744dc3253b16e40d1ee38190d9e452f3bcb6545379c059e1f7c5
 Size (ess-13.09-1.tgz) = 3331643 bytes
 SHA1 (patch-aa) = 2e2c39c4c98e37cbbb968d605afd3d98a4199e68

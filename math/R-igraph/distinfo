@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:27:50 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:55:28 nia Exp $
 
-RMD160 (R/igraph_1.2.4.1.tar.gz) = 45e9318e5adaabe6dd7340665672a47fa426aa20
+BLAKE2s (R/igraph_1.2.4.1.tar.gz) = 88c9e34444b1237bafb24ff9b40e107b52ee1ea55b6103dadeb430fb0cd736b3
 SHA512 (R/igraph_1.2.4.1.tar.gz) = f35ed49726aab69d407baececff2d68ce17a750f1cf7ff293f4ecc62de4bc81d544178d86faf1f200359fa83a7410e431e61a2ce2a7a5b360d01c4d310b6f99f
 Size (R/igraph_1.2.4.1.tar.gz) = 2704004 bytes
 SHA1 (patch-configure) = f3f6fc7c3c877f02b9b29c9758f1ac9edb51341c

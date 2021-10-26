@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:28:20 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:55:58 nia Exp $
 
-RMD160 (php-stats/stats-2.0.3.tgz) = f6d383f37775bba1fc2acb1cda29da12db0047c4
+BLAKE2s (php-stats/stats-2.0.3.tgz) = ce4d10b4d68ad5baaeb11ea138db0a88e5a6884a87701bc481388c9e83e72955
 SHA512 (php-stats/stats-2.0.3.tgz) = 68a21296f8892c399d961bc1bba31cb6ebf6e0533fd396fc8527a33aa0b7cc189e718bd22dddbaaaeda183488971f02e87b2d9514085cc2a3d0fc558921a584c
 Size (php-stats/stats-2.0.3.tgz) = 112280 bytes

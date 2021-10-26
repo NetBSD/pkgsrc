@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:28:10 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:55:48 nia Exp $
 
-RMD160 (mesch12b.tar.gz) = 391bb7786b54f18e8d5f368cd9dc20d1fcb7c63b
+BLAKE2s (mesch12b.tar.gz) = 65aa04d5c91f72dfbc09cc0270c42892cdaa0a3af06197d1989f2aee8378da65
 SHA512 (mesch12b.tar.gz) = de61622bdbc21d047e85470ad1a099cb71103f6ed9e1633ff7cc9cc09eb2a15dc24e9f6d4412cde746ca1ceb3b079df10ab07899ac291959d6e2348e43cd66d2
 Size (mesch12b.tar.gz) = 220668 bytes
 SHA1 (patch-aa) = 8a9687ce01e2dd0960604267af6a9f87eb4e306b

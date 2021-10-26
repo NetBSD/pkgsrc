@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:28:30 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:56:08 nia Exp $
 
-RMD160 (stan-math-2.18.1.tar.gz) = 0bacbb412127195d7448c9c5ad595e70c8ea1c26
+BLAKE2s (stan-math-2.18.1.tar.gz) = 0bc9eb1bc38a6e0e40a733224ec3d9e88c6f2c652ab4b1254161022a1c531f05
 SHA512 (stan-math-2.18.1.tar.gz) = bb6e809d1ec8b176235158b4856af17e489d26eb443e647db2b8e89a2671d5f23c91335b513b6ae83717c5f5a96e666e65fa1c0d888fe02e051d126399df7125
 Size (stan-math-2.18.1.tar.gz) = 17531114 bytes

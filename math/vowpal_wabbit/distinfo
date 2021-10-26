@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:28:34 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:56:11 nia Exp $
 
-RMD160 (vowpal_wabbit-8.2.0.tar.gz) = a2e91b3f6d0f2b50f8cef382ce1995016ff074e0
+BLAKE2s (vowpal_wabbit-8.2.0.tar.gz) = a96c4dc0d5b459691e80cd6fa1e98e89abfaed04f997aae10ed64d6fbcde6312
 SHA512 (vowpal_wabbit-8.2.0.tar.gz) = 7f352c7d899e1068969ecf10931ce59efaedb5ffb91277958e96b1c705cb9f9da7397dcded42e101ba98412124e2662ca5cf71b368ab7d80ce7afe650cdd59c6
 Size (vowpal_wabbit-8.2.0.tar.gz) = 13391191 bytes
 SHA1 (patch-vowpalwabbit_accumulate.cc) = 605cb7e6d1bf1efe0051c4a35a609b277b4f7f4d

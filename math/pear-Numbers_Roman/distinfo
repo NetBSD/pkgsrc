@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:28:20 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:55:58 nia Exp $
 
-RMD160 (pear/Numbers_Roman-1.0.2.tgz) = 0ff09482e79415a31a54fb7db663d3b2fad92239
+BLAKE2s (pear/Numbers_Roman-1.0.2.tgz) = f4807d8077d5f8e1d67266c0e5427c1558bfc6e5d2eb69cce05f3cb74f9b6967
 SHA512 (pear/Numbers_Roman-1.0.2.tgz) = b320675ebe221889065da7c56bccc5fefa209818f6691179a3846b84408f46e49d8f0749722bcad490abaab53b05f25ec703350c3d058e59c49ac909ebc97f52
 Size (pear/Numbers_Roman-1.0.2.tgz) = 6210 bytes

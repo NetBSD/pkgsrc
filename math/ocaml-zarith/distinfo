@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:28:12 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:55:50 nia Exp $
 
-RMD160 (Zarith-1.7.tar.gz) = 3af83f38fb7bbaa98f4493f530f3c51a1edf8abb
+BLAKE2s (Zarith-1.7.tar.gz) = eb310ad08e77d9c7b17cc76ab702d8ce3b95fab256b96a5141724d76fa11a687
 SHA512 (Zarith-1.7.tar.gz) = 812b5f9b24ce7a24d3370b8728ff6eeb56e3280fa1573e694fe54e781668c29bf8ff95e94aeff59df948adc85b8acd6b4efe117fb50a124f19b4227bee78e753
 Size (Zarith-1.7.tar.gz) = 89617 bytes
 SHA1 (patch-configure) = a9fadfcaf6c3b0a21ff3d1829af2cb15454904a0

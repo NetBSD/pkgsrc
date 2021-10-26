@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:27:56 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:55:33 nia Exp $
 
-RMD160 (R/tibble_3.1.4.tar.gz) = 92249d2ea09881fd39603aefa9c543966e6cb8c2
+BLAKE2s (R/tibble_3.1.4.tar.gz) = 36a0b57a37a75dd78ed2a65d73b868ba04938d0a32a68eaffa9df536318aad62
 SHA512 (R/tibble_3.1.4.tar.gz) = a66dc2a734b82da304d8e981de7c2a398c81a7cb12f96bf8e52157c4aaea9dd0067eac0b6e4529fc4f9cf9ff7aef7fed29181031e928bb0d82339b22beabed83
 Size (R/tibble_3.1.4.tar.gz) = 737787 bytes

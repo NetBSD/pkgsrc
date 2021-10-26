@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:27:56 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:55:34 nia Exp $
 
-RMD160 (R/tidyr_1.1.3.tar.gz) = 845b090c4f7c1b6d68b4494ebae6774bc7725c07
+BLAKE2s (R/tidyr_1.1.3.tar.gz) = 41f47e1cae18da6230b397347017beb0e08bd9920a5703471b3859c9b86a28fc
 SHA512 (R/tidyr_1.1.3.tar.gz) = e506126251ff53c2e9c5101c4ad47f4f160a8d4e5e43384d7934b733830c80e329bd0850fdfc13de47cf9fde2efcdb80e631e3042011b0510a0fb91fe7c89da5
 Size (R/tidyr_1.1.3.tar.gz) = 707909 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:28:00 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:55:37 nia Exp $
 
-RMD160 (crfsuite/0.12.tar.gz) = 10e6abffbca2b05229b292e324533eab59742f22
+BLAKE2s (crfsuite/0.12.tar.gz) = af1e805cd9e8bc959dd9b12057e39f88fe5c5e6498fb52d05d27e66036766acb
 SHA512 (crfsuite/0.12.tar.gz) = 7cb02c1ac72613bafd639e1ef9a7ce7ddb0d36b2e7038c45f9745ad177344c3f20c7df48dfc1bdce364af1d0a85957a918ed8fee078232d5a2c91ab3796ee7f0
 Size (crfsuite/0.12.tar.gz) = 256160 bytes
 SHA1 (patch-configure.in) = 7c7bc744d32509a354e699e6120db76083db3529

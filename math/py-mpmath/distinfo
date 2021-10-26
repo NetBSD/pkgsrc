@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 14:28:24 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 10:56:02 nia Exp $
 
-RMD160 (mpmath-1.2.1.tar.gz) = 868453f4c96cf7f55334d6e5c7df94297723d617
+BLAKE2s (mpmath-1.2.1.tar.gz) = 02b967d393a0465ae90f5373b0c5633b4c32c1fed3763f8fca5b51439564f84b
 SHA512 (mpmath-1.2.1.tar.gz) = 9644d69f3065a9eb2d90edc5b8c3709703aacbf53741ba4f9f57e2496b9f34bfdf656c247066b9825849c76583603dae77e8ff9c52f87978c53d6863f15dc5e3
 Size (mpmath-1.2.1.tar.gz) = 2144222 bytes

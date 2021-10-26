@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:28:08 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:55:45 nia Exp $
 
-RMD160 (itpp-4.0.7.tar.gz) = 628bad6d3533ea3e486890fe315790f292c4b561
+BLAKE2s (itpp-4.0.7.tar.gz) = c7dfbf460de59741ba4891175b83a450ca5c4f37edc7ee335d1b3c6f1e0790fb
 SHA512 (itpp-4.0.7.tar.gz) = 8147d91dca43cb09c03cb1c2273763c09a6dfcb7dc7463789ae2f0ed1daefd512aa6ea7866183116176f46e79a33f343494e76e89bccfa3e5382229c3f1fb7c0
 Size (itpp-4.0.7.tar.gz) = 1222834 bytes
 SHA1 (patch-configure) = 3a3bf439f54121778336e3268733073f94c3f842

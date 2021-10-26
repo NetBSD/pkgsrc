@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:28:20 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:55:58 nia Exp $
 
-RMD160 (pcg-c-0.94.zip) = fadc610f9ace596a0595f09ba7c91168d08fedf3
+BLAKE2s (pcg-c-0.94.zip) = 727edcecadd22fd729e1cde0f359263c1defe05c8ca57b3df1afe7cf545aa1d1
 SHA512 (pcg-c-0.94.zip) = df1afc788b3c9ef12fde7bdb1057144ea0963345506be37c646575ac5e1432609e06ffd175bcf8245ad7d527a7c3832daff51b7d39317592e8741afc7a74cf51
 Size (pcg-c-0.94.zip) = 207717 bytes
 SHA1 (patch-Makefile) = 8ababb41930af81dbbe1fcf807cf3f4b71c4437b

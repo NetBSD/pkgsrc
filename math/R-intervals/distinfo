@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:27:50 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:55:28 nia Exp $
 
-RMD160 (R/intervals_0.15.2.tar.gz) = 7ed98d01ede70580ddf73d436dfd7d0860fd3359
+BLAKE2s (R/intervals_0.15.2.tar.gz) = 83e6e6b92e575a7120d91b5c62e529e5f139753e4e88e9512039e83234e40c4c
 SHA512 (R/intervals_0.15.2.tar.gz) = 8f9442823b8b2ce5a49cd7ea3e7a2b7ec7f4ff28b0532b3a9674181cf2c037e093fa70aeef8442581e5ef0ab9ace3c9e74828aa87b30dc4e52c46fd3e5448ecc
 Size (R/intervals_0.15.2.tar.gz) = 392467 bytes

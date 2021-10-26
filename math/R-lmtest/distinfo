@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:27:51 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:55:29 nia Exp $
 
-RMD160 (R/lmtest_0.9-37.tar.gz) = 651c6f5bdaaa83bd2fcbf998328386290efd1e3f
+BLAKE2s (R/lmtest_0.9-37.tar.gz) = 9b772503270861669bdcc97fde6ac1b011746945a0d21a7841ca2a0b8eb33746
 SHA512 (R/lmtest_0.9-37.tar.gz) = 2d58a5297b00dd227f5f5187a1be0772c6bb3acc57fbccd32a3673579460cd530d19466e0b49ce9eae91544a003ec19d538c495629a89600bed2bf7e6895292c
 Size (R/lmtest_0.9-37.tar.gz) = 184426 bytes

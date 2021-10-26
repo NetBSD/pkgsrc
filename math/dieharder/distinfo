@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:28:00 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:55:38 nia Exp $
 
-RMD160 (dieharder-3.31.1.tgz) = 77cb8341ea7555850b361f091562844445f37fba
+BLAKE2s (dieharder-3.31.1.tgz) = bbc91111936a007460350a9024540c140b921334c5d2d7ef3086937decdba3bd
 SHA512 (dieharder-3.31.1.tgz) = e01ed4266b4fe5d5fadde3c92c30e430d0ca5f7fedd26b26ed2ab98b7602aa9c35bb5c8fd9314ef2f5235b5087645ab13e5e6550156e26643baa5aeb77088dc5
 Size (dieharder-3.31.1.tgz) = 1149780 bytes
