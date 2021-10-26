@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.53 2021/10/07 13:23:23 nia Exp $
+$NetBSD: distinfo,v 1.54 2021/10/26 10:05:16 nia Exp $
 
-RMD160 (ircii-20210314.tar.bz2) = ec000f99e50a7a39b3822081bea5de46df220ec7
+BLAKE2s (ircii-20210314.tar.bz2) = 0538d59af697b52863b46abf9a5288c576a723f3101d427c8a46744a5383d17d
 SHA512 (ircii-20210314.tar.bz2) = 3dc3a4ddb000133907edb9b867ae7cb0b36488c875f5d4f56e70d7263cf042da6c429f60a8ed6cced89bca077aec42c9d992ea6b56b2ed8b4e91f125eeced310
 Size (ircii-20210314.tar.bz2) = 590626 bytes
 SHA1 (patch-Makefile.in) = 77fd2cfb1ef528faf03a3ef61c4802917fb6c8d5

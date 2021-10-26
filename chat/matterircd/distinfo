@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:23:28 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:05:20 nia Exp $
 
-RMD160 (matterircd-0.19.4.tar.gz) = f39ca9e92f4ceb3aa21a3744f957993056e659b0
+BLAKE2s (matterircd-0.19.4.tar.gz) = 7618ea90576d2946973190e9aa791fea137f3700079c0b7dac0b3dd0eaf6f918
 SHA512 (matterircd-0.19.4.tar.gz) = a259414d865398fb23a2de1c156e81740b1b420f0b0d3a8510034f4f2c1718a0827a8d128084eccc921c34658dd489c087ceade830c1709f3e5b423346db6f63
 Size (matterircd-0.19.4.tar.gz) = 2234367 bytes

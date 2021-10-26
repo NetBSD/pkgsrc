@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:23:33 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:05:26 nia Exp $
 
-RMD160 (telegram-purple_1.3.1.orig.tar.gz) = 050aa7c0a9476cb284091f36d69834d16f4fe77e
+BLAKE2s (telegram-purple_1.3.1.orig.tar.gz) = 3e45ee6310f511d65bf19350b5de374338be88ccab417c5fc711704d028921ef
 SHA512 (telegram-purple_1.3.1.orig.tar.gz) = 3d088ea8b77aeba1d7f26dcd3223420bcd50372d610368b8786eca0cbdb0a11bcc2d93f7948348c5e0305479703f74e5b5ad8e06e782e2df119cfd73a4e4a63e
 Size (telegram-purple_1.3.1.orig.tar.gz) = 509083 bytes
 SHA1 (patch-configure) = a517d347dcaad90e8f24ccd9f92c1216a9f05545

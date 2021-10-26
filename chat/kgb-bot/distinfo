@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:23:24 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:05:17 nia Exp $
 
-RMD160 (App-KGB-1.31.tar.gz) = 981c5109c941a8da120df005ce41009af6b0df8b
+BLAKE2s (App-KGB-1.31.tar.gz) = 500ea17ef747486e7bbf245d9375265c383f46818fb19e39b1cd1d28c41885cf
 SHA512 (App-KGB-1.31.tar.gz) = 3ab9ce23524ec57c8dd35082b6b136ddd078869816b12e236e0118f6df1b6471983946d6a0df94cfed391beed4e061272ae9e9b9f5b2b47122de2e3efe4feb1b
 Size (App-KGB-1.31.tar.gz) = 97753 bytes
 SHA1 (patch-Build.PL) = 5e49e8c654448da10c4116da8a799e4c12d56380
