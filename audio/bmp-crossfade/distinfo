@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:09:14 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 09:58:48 nia Exp $
 
-RMD160 (xmms-crossfade-0.3.11.tar.gz) = a42b319fc8cdfb8cce4d011c5d3818efd8b34bd7
+BLAKE2s (xmms-crossfade-0.3.11.tar.gz) = 3dd3c243ad3ebf91645cd4e7a0bcfa25f495646e4fe36410e0f0dfb28e34e530
 SHA512 (xmms-crossfade-0.3.11.tar.gz) = e5d80d1dd04c6aef11c0c47de66cb2b166582fe40339fc76b56997c1f6c678cf0d7238bb9b8b024d3c18ad44eb94d916b477306b94ea15631e853c6c0401440b
 Size (xmms-crossfade-0.3.11.tar.gz) = 494334 bytes
 SHA1 (patch-config.h.in) = b722f5a018073c06a3b762ad27b11821d2e33614

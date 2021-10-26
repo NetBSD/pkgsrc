@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:09:17 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 09:58:52 nia Exp $
 
-RMD160 (distmp3-0.1.9.tar.bz2) = d9cea57e9974386fc5ac1c790d19e00aa3ff2615
+BLAKE2s (distmp3-0.1.9.tar.bz2) = 844a116abc3f4d5964cf52cf3c24de4ab93c72e68fd94c6db7685e8bd8b4a23c
 SHA512 (distmp3-0.1.9.tar.bz2) = 998a2fef9b96deeaf316a7e33fc6470f0a68642d646bf074c916fffa95c4c019ec9a15122886a6ddb5a1810aae8e6add007b0c6f3c18572f12d212839dc346b0
 Size (distmp3-0.1.9.tar.bz2) = 12133 bytes

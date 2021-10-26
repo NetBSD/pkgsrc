@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.32 2021/10/07 13:09:11 nia Exp $
+$NetBSD: distinfo,v 1.33 2021/10/26 09:58:46 nia Exp $
 
-RMD160 (alsa-lib-1.2.5.1.tar.bz2) = bdffee4ce2f51f643a7264d475c1ec1c475ebc8e
+BLAKE2s (alsa-lib-1.2.5.1.tar.bz2) = e5212f8be6654397b93d9163942c75f9ec8eba53fb5502c8d4cb32829589afac
 SHA512 (alsa-lib-1.2.5.1.tar.bz2) = 01998ffa449e925ff552c13aea47f9540903afdc533086067c78dcaba4d239c347180d3d28bb0000e6d19b7779c7249fcc77a30057930ca22d18ba55e163fa1c
 Size (alsa-lib-1.2.5.1.tar.bz2) = 1069073 bytes
 SHA1 (patch-ad) = 79a0f048751899247ec12990cd02332b977af248

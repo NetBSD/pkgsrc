@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 13:09:13 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 09:58:48 nia Exp $
 
-RMD160 (bladeenc-0.94.2-src-stable.tar.gz) = 4e1e0c2e56abb2e6d87543c9569ecfde720fcf67
+BLAKE2s (bladeenc-0.94.2-src-stable.tar.gz) = a5d93f34d912c29d905de61c9fa3daed7ccf4d3659cbcbf825ad77d09616c852
 SHA512 (bladeenc-0.94.2-src-stable.tar.gz) = 570202a201c3582483078248fae7330d978d69018e4367d51322f84f26875cf84250de6c46527d11624cd6f19d4a98e30421447358b15ce9f256cade28e604ef
 Size (bladeenc-0.94.2-src-stable.tar.gz) = 142949 bytes
 SHA1 (patch-aa) = d204e3d33fa841ea362b28b114ce16e848f4e76a

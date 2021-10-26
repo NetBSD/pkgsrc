@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:09:45 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 09:59:22 nia Exp $
 
-RMD160 (paprefs-0.9.10.tar.gz) = 5a4a504fa6d74a9c3f52428290c20815cf168b87
+BLAKE2s (paprefs-0.9.10.tar.gz) = 459cfc88c37a24151863730acf16587b294dfdfe77b71e260de5b612096ea73a
 SHA512 (paprefs-0.9.10.tar.gz) = 139e8ff9f0b15594d0c01291fc53fad3a7e93e805be6447e9e987e3a869a7bb57bfb8be3f2811feb8f609040724be836a94cd4df21418f0c324fa48e6e49ce8f
 Size (paprefs-0.9.10.tar.gz) = 224140 bytes

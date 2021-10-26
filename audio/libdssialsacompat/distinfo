@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:09:30 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 09:59:05 nia Exp $
 
-RMD160 (libdssialsacompat-1.0.8a.tar.gz) = f3ec6d3131dff0999bd3f1ed24a902f41aececbf
+BLAKE2s (libdssialsacompat-1.0.8a.tar.gz) = 656980b17c76e93c3f6583b2556ab3e71d97dfc735e655fab213df9167c50b3e
 SHA512 (libdssialsacompat-1.0.8a.tar.gz) = c059a7e97acdb3808dee9818115c8786e9d8c7a8bba828e5425ecd8cff688d6dfb7a13db9393d632e0e4edfe6c0dd2a84fda114a3e154cb21af85f261e3058d4
 Size (libdssialsacompat-1.0.8a.tar.gz) = 293394 bytes

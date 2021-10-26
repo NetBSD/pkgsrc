@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:10:02 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 09:59:38 nia Exp $
 
-RMD160 (xmms-nas-0.2.tar.gz) = 512e5d211d744c574301d141d144f0aa2b7bf734
+BLAKE2s (xmms-nas-0.2.tar.gz) = c9c1dd052242e1fab3afed64a5cf34b52cf5e5ae37203e3bc0e829bc9d633781
 SHA512 (xmms-nas-0.2.tar.gz) = ef830571204cbccbca24786aaca1fa4c08ba2fa105a9bffefa114d878e68cd9a7f0176de15d4326cadd3dfc9f7bbc1db454279069f55d6dcd67d1d29529903c1
 Size (xmms-nas-0.2.tar.gz) = 109998 bytes
 SHA1 (patch-aa) = 651427437c8b21c6108c022c79a02bf9f86a979c

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:09:24 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 09:58:58 nia Exp $
 
-RMD160 (gbemol-0.3.2.tar.gz) = 4cf42f5a3029338924f5501d3a648284de8c7553
+BLAKE2s (gbemol-0.3.2.tar.gz) = 5d184e9a4782ace585b0736aecd5f0952135424ef4c6a287862a284081c857e1
 SHA512 (gbemol-0.3.2.tar.gz) = 43ac1ecc78bef23b5593c8f039c2f3cc7c91fcdfbba6ce10472be88ff4bcbfc3793609b1280febf2d6b7a0dffc025707b3ed724446ee1eea52ff6d334974da2c
 Size (gbemol-0.3.2.tar.gz) = 401865 bytes
 SHA1 (patch-aa) = c324caa5b8ff127033b5134265b2c4f24fe20981
