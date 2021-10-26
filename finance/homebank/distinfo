@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 13:53:51 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:26:01 nia Exp $
 
-RMD160 (homebank-5.1.6.tar.gz) = 38dbfa9b53d42cfb3a9ec4602be808a6ef49e6b0
+BLAKE2s (homebank-5.1.6.tar.gz) = fcca82dab5976f615e169195d372af9cc34d0d5b469e1f888d13553c0eb87e35
 SHA512 (homebank-5.1.6.tar.gz) = be7e0f2de44d5eb5d84295c1862b5e1168a36dc0ed66b453163d22ad064b813b38c1495a2cf49e237f41949ca63fa00f530bffdb1012fec99df2f8548ac038a4
 Size (homebank-5.1.6.tar.gz) = 2701911 bytes

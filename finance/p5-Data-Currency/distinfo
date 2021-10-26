@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:53:52 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:26:02 nia Exp $
 
-RMD160 (Data-Currency-0.06000.tar.gz) = 62f2146f8239af93269315b6c3bc1b6c1c45ca3b
+BLAKE2s (Data-Currency-0.06000.tar.gz) = 5a24111817376775dcfbc19237851a5c4fb2f24eb295606a849284700fdd2222
 SHA512 (Data-Currency-0.06000.tar.gz) = 4e62193c87ddbe66375f1bba3527d7329602f1ce790a1a25f581775a92e47606e5f31e5feadbe2dcc4eb0376c288ffdcdabb27d452e7f458aaf05f34a0f1ec4c
 Size (Data-Currency-0.06000.tar.gz) = 17233 bytes
