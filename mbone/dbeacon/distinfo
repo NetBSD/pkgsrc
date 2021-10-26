@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:30:12 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:57:00 nia Exp $
 
-RMD160 (dbeacon-0.3.9.1.tar.gz) = 81ec4cfe1c2890c7cdb5afbbd98fd2d0cf2a57a3
+BLAKE2s (dbeacon-0.3.9.1.tar.gz) = 4fe330fd04c84d1cb58d2c74a08111c9a764797c3bec85583f62fac31846c3ec
 SHA512 (dbeacon-0.3.9.1.tar.gz) = 1605725b4c49b1f3720e5fb886ec3d2230d416215fa39270207fd801496da1b432c4a803ecac947cdde182f1f54d473a0696644f76fd7bbc050c8dbcdda06447
 Size (dbeacon-0.3.9.1.tar.gz) = 43893 bytes
 SHA1 (patch-contrib_matrix.pl) = 50a5db8c19e7500ef210b873c8dd114edde5dc40

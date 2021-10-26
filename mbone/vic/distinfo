@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.19 2021/10/07 14:30:13 nia Exp $
+$NetBSD: distinfo,v 1.20 2021/10/26 10:57:01 nia Exp $
 
-RMD160 (vic-2.8_ov511p0.diff.gz) = 26a9c80697f3fe2650b2ed76875b9a51dd1a01d9
+BLAKE2s (vic-2.8_ov511p0.diff.gz) = 9babc0b21d1c88bd8df4732881fb84650e50362d8c164ed56b7586add1ad7074
 SHA512 (vic-2.8_ov511p0.diff.gz) = e8225715311f6eb010e8427a146b06d9aa2b09d13f40d7774124cd76f47e14c5af66b3b2eddea5273851edaaa1e96207df0172b8fbe40a1ac75cb16bb0b899ff
 Size (vic-2.8_ov511p0.diff.gz) = 8836 bytes
-RMD160 (vicsrc-2.8.tar.gz) = 1c102bfb4effd54bb3ac90e8d86213c392f3e10f
+BLAKE2s (vicsrc-2.8.tar.gz) = 553be0d74587f88149c68d7785242d0ccf843c805ce987f93b8733ce90ad3e88
 SHA512 (vicsrc-2.8.tar.gz) = 1f3e6ee223de4283a51a05ee4a77680b5cacf3a0b3485cf3ef775890832838398e2a65b6affd3c349b328032383a3d0a0f5942da95d64b64198f89b23f0759ac
 Size (vicsrc-2.8.tar.gz) = 605136 bytes
 SHA1 (patch-aa) = 6029ae5ee56452e2a4303a34a5ffa258e266dffb
