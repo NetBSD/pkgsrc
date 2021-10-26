@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:17:20 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:48:37 nia Exp $
 
-RMD160 (cwtext-0.96.tar.gz) = 1d47de9a6441846484e993708b9c0fdd9042e8ba
+BLAKE2s (cwtext-0.96.tar.gz) = 1a59cb5a7181eab83ce42d617d826c29b52de10b1f86e800c07d7a048f33f494
 SHA512 (cwtext-0.96.tar.gz) = 6765c79b6feea2947974bf4654ed1edc83f6c9ddaae1bf37d5ed95dedc4ce9b45d5e41dff7ec50d6586f34901d8f93a3230f1a7e1cf4d52b8a84c851cfbdbd33
 Size (cwtext-0.96.tar.gz) = 16596 bytes
 SHA1 (patch-morse.c) = 19f95a2d66d54708cd13d19468964cfac282b47a
