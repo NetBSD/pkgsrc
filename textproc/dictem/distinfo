@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:00:55 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:21:49 nia Exp $
 
-RMD160 (dictem-1.0.4.tar.gz) = 7d16c8697a2d614649e24c9aa5867040f07df81c
+BLAKE2s (dictem-1.0.4.tar.gz) = b397b03e12a92b8104cb6a0249c4415fdf4e38da7443b5c2339aeacb971cf5d3
 SHA512 (dictem-1.0.4.tar.gz) = d7c30a882e6e9cbae397241468c0bdeae82724626354576a5866b0d3ca9d904277eeb7ce0039895b1d06832eb7b837e3b19774790d1e3ac903eaff988f9a0aa5
 Size (dictem-1.0.4.tar.gz) = 22376 bytes

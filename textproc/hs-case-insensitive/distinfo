@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:01:05 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:21:58 nia Exp $
 
-RMD160 (case-insensitive-1.2.1.0.tar.gz) = d77661f2fc7d35de30c309e005bac8755d9928f1
+BLAKE2s (case-insensitive-1.2.1.0.tar.gz) = 654d720b7482c03f9c19aed1c94c5b12534c8d78f9c19cb9d269c7bfe1f1279a
 SHA512 (case-insensitive-1.2.1.0.tar.gz) = 8e3bab4d1035d0bf96da24c7a4b79953b855c849cb0197bf65dc66b4394a92fea263fcffca4179005507a35234b7f60d873df41bc01a94fb2dfdbd91092e176b
 Size (case-insensitive-1.2.1.0.tar.gz) = 53609 bytes

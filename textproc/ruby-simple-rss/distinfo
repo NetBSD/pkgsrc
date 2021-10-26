@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 15:02:34 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 11:23:27 nia Exp $
 
-RMD160 (simple-rss-1.3.3.gem) = 79546c208d6d3ce0d0c3a67792f16cbb5bacf7c9
+BLAKE2s (simple-rss-1.3.3.gem) = 7713a50de0b0a6c1826e82fb42e9500732e9232bfe4954de38724623e34228b9
 SHA512 (simple-rss-1.3.3.gem) = 7ce7c121889ede58344cf686ac17ab97d75eea6ba5346aedf06294e969f239999a4e19ae416db93f3933f6dae24d7dce22c408d71efb3bbea91cc8091bf43920
 Size (simple-rss-1.3.3.gem) = 33280 bytes

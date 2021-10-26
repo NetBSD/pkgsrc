@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:01:32 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:22:26 nia Exp $
 
-RMD160 (Convert-Translit-1.03.tar.gz) = befd36fc945dcc5efe76f064b147f67adb9128cf
+BLAKE2s (Convert-Translit-1.03.tar.gz) = 599d47b12ec4244729d73feb769b61bd3fccfa8b9db376d7b1698445497ef6f6
 SHA512 (Convert-Translit-1.03.tar.gz) = 546f8f8b0640fc878dda813b85db6f62a1dbe0c53c7d338a2a4d035d0fb7aaf02e9b3860b95f4471edf1363e4de2d3f843017aa4031aef2e7a856a6345d9743a
 Size (Convert-Translit-1.03.tar.gz) = 80253 bytes

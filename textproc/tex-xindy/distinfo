@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:02:42 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:23:35 nia Exp $
 
-RMD160 (xindy.r59003.tar.xz) = b6a346366f6be21eaa43b1e4eea22285986816cf
+BLAKE2s (xindy.r59003.tar.xz) = 3426d13f97ba35228d2c38d01f654cdd05a401468f8a2d4dce41f0c1cc55305d
 SHA512 (xindy.r59003.tar.xz) = a76915adcdabe35c67c1176e0e89505f45faed119e787020c2e9fdb3c405d7dd2deb8b49324589ac11ccfbba50323f52530c99a02e386c3067ed824974c46185
 Size (xindy.r59003.tar.xz) = 143100 bytes

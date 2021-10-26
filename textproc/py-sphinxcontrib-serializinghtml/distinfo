@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:02:21 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:23:14 nia Exp $
 
-RMD160 (sphinxcontrib-serializinghtml-1.1.5.tar.gz) = c8e1910f916f8d07d5e87bc433c964634146773f
+BLAKE2s (sphinxcontrib-serializinghtml-1.1.5.tar.gz) = 0207a60fc392362f76fddb4894ac695b18bec9a34c8a8c0aadf71564039f3a16
 SHA512 (sphinxcontrib-serializinghtml-1.1.5.tar.gz) = c5aabe4d29fd0455c269f8054089fdd61e1de5c35aa407740fc3baae4cfb3235d9fd5515c0489b0becd12abc8f18d0f42aa169ed315c00f30ba87e64ce851667
 Size (sphinxcontrib-serializinghtml-1.1.5.tar.gz) = 21019 bytes

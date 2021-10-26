@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:01:59 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:22:52 nia Exp $
 
-RMD160 (XML-RegExp-0.04.tar.gz) = 8bf7c81adf58b26177bf8910b1cd6e4a5c97c9e9
+BLAKE2s (XML-RegExp-0.04.tar.gz) = 53413ed5970e4bd79d491392da028ba7566fa2d6e2afeeaa0fee3a7a790c7c64
 SHA512 (XML-RegExp-0.04.tar.gz) = f0ade105a35944b7f91b85fb9e2735d4860eba04402a02e8531b546d8ea49990d9c2a56f113b4a291050fc8aa51eeee9675d49b4d9a69aa5da25fa7f3e3c9802
 Size (XML-RegExp-0.04.tar.gz) = 3601 bytes

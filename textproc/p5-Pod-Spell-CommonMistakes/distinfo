@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:01:40 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:22:34 nia Exp $
 
-RMD160 (Pod-Spell-CommonMistakes-1.002.tar.gz) = c2e65eb7589802f3be2be5e39e9204b206993e8f
+BLAKE2s (Pod-Spell-CommonMistakes-1.002.tar.gz) = fd97b219b79dfe10cbd3ba55aca3c027e80e25589239fedd91a46332a15e9c6f
 SHA512 (Pod-Spell-CommonMistakes-1.002.tar.gz) = f6d22852703b6508a9f751fc9083106f2eb5d77f239036fc28ae35e0830de45c7a5b8a7562446e56f3aff5fdb7812ad8e4022be884d92c994628ec301e656334
 Size (Pod-Spell-CommonMistakes-1.002.tar.gz) = 32568 bytes

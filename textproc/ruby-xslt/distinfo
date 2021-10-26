@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/07 15:02:37 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/10/26 11:23:30 nia Exp $
 
-RMD160 (ruby-xslt-0.9.10.gem) = e7dbf24e260ac4bf0d06006c8dd869ddc0320806
+BLAKE2s (ruby-xslt-0.9.10.gem) = 138e7c2897a5b36a50badc786356119fc2648d9d92a44b71944a09eddb56345f
 SHA512 (ruby-xslt-0.9.10.gem) = b196a517b19c6cb91ed6f4543ecfc6b58532e66f460029d2618e792cfe4078342fcb4428642328cbe6d97d1d942a6025ecff617578fc3abe2b0e414bf61ca1c4
 Size (ruby-xslt-0.9.10.gem) = 35328 bytes
 SHA1 (patch-ext_xslt__lib_xslt__lib.c) = d4b9a181f2856dac7bcd4b2c42d76425fd855461

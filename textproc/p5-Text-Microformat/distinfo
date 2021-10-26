@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:01:49 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:22:42 nia Exp $
 
-RMD160 (Text-Microformat-0.04.tar.gz) = e5508a5df2eefd84390b251519756789fd229ff1
+BLAKE2s (Text-Microformat-0.04.tar.gz) = 00df99b3b31a7be5ec0ed3d0cc67e8df779e0ef247b0689db2582d8d0dfa302b
 SHA512 (Text-Microformat-0.04.tar.gz) = 024111390ce785612ce3e33018c5f209eeeb78c162f13860764f69d42b4595dc22f9819d19682839668a3d100e498f927b0e3dd78e6c4b19e073fa2addf71f10
 Size (Text-Microformat-0.04.tar.gz) = 15020 bytes

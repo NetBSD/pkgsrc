@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:02:04 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:22:57 nia Exp $
 
-RMD160 (php-yaml/yaml-2.0.4.tgz) = 0953bc858dea98a08016f49a27fbf346ef061440
+BLAKE2s (php-yaml/yaml-2.0.4.tgz) = fd024bfc4c365fe8266070ed1bce3cc936744b9a0d18feda126d0d3a60664092
 SHA512 (php-yaml/yaml-2.0.4.tgz) = 138e5b4566800fc7d624baf71bc585d6d432755046e598ae9f4099fa565727e04d79bb171289a53eb9e5daa416ffee1b0fb4967c84976ac6cd6fc01b0a05fbae
 Size (php-yaml/yaml-2.0.4.tgz) = 39071 bytes

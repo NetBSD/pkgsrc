@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:01:39 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 11:22:33 nia Exp $
 
-RMD160 (Pod-Elemental-0.103005.tar.gz) = dc7b47c2d7484d07d9da01c938ec943a639a0115
+BLAKE2s (Pod-Elemental-0.103005.tar.gz) = 825628ab6c3476c1d0ff8c86d6953c1b99f7bd70010bcb64ec8cc4d0896098d7
 SHA512 (Pod-Elemental-0.103005.tar.gz) = bd3c6c6d5aef5b0242daddbba7c00b9cabdee4e26111562bb3efcd6032044b581ee8e66877d8ea07baff6b076cd6cccd0f55be210fbb35344a324f93d79ca667
 Size (Pod-Elemental-0.103005.tar.gz) = 37245 bytes

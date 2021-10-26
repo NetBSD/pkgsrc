@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.24 2021/10/07 15:00:39 nia Exp $
+$NetBSD: distinfo,v 1.25 2021/10/26 11:21:33 nia Exp $
 
-RMD160 (antiword-0.37.tar.gz) = 506ca4a7a7fa9fd4574092798a7fffacd9a3a0a0
+BLAKE2s (antiword-0.37.tar.gz) = f0bcc5227c474a6596e84c93f6535a8dd429b4b6cc44a5be6c195ed6ba5cd419
 SHA512 (antiword-0.37.tar.gz) = 6cd8fb9137238417544cf8754829a2d5296055d730ea62a8a025236baa79516190317d146401ff40cde73e1ee2c3c374a2ea01b2e5d24e149310bcabb8bfdce8
 Size (antiword-0.37.tar.gz) = 317884 bytes
 SHA1 (patch-aa) = 544a2b0a35cfaa91165c194b1d65ffc7c39c65e1

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 15:02:34 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/10/26 11:23:27 nia Exp $
 
-RMD160 (rttool-1.0.3.0.gem) = 6a1c545452bd8ca6111c8915e6f69252c45576fb
+BLAKE2s (rttool-1.0.3.0.gem) = b3dd95ca27bc68954a7193d8e53d0192d00c9f1ae2adc401cefbe1bae3c9bbd9
 SHA512 (rttool-1.0.3.0.gem) = a42819f998e818ad2002a6e9acaf7ec0afe29014d2634d0593f7101eb132f60c021a8c034a897b5ae46b4609fcf5445e8f257b448818138794ca60b8e60352bc
 Size (rttool-1.0.3.0.gem) = 34304 bytes

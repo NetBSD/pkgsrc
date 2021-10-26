@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:01:42 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:22:36 nia Exp $
 
-RMD160 (String-Errf-0.008.tar.gz) = d1ec2247f7149969ed455c50e5c062958492acb3
+BLAKE2s (String-Errf-0.008.tar.gz) = d5fc5a0b617eb39c4772196afb41c4eabd791a3c53aa363bfcb62b0f3bb93d2c
 SHA512 (String-Errf-0.008.tar.gz) = 0684613c932ace4b7ee2f44a73a1bfd90ce195203ffb3da8ec5689d7ed912854490288d8e559cd97ff7af5b8c0486abdb357353c1dee4edbdc4b17ada56b156b
 Size (String-Errf-0.008.tar.gz) = 21477 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:01:41 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:22:34 nia Exp $
 
-RMD160 (SGMLSpm-1.03ii.tar.gz) = 919963150640d4c1a2a52439cd0d985c52c71bb3
+BLAKE2s (SGMLSpm-1.03ii.tar.gz) = 9c603730c328e676fefef58c3408a54f60633b2ed092d985c9a9742d0e085aee
 SHA512 (SGMLSpm-1.03ii.tar.gz) = edbac8112561912d5d7a9faee2d920bf763576ace5a9bdef5fc3f235533805643ad8db5f57d96c34ce9ecbf1796399dc531f40ab4b2796a1e130a8f288c901d4
 Size (SGMLSpm-1.03ii.tar.gz) = 93250 bytes
 SHA1 (patch-aa) = 1a7dedb1e66f528cab6f47a9ebfb7a42515091d0

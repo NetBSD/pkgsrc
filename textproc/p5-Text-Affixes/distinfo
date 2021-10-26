@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:45 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:38 nia Exp $
 
-RMD160 (Text-Affixes-0.09.tar.gz) = 3a51c2fa1713f9306b7cde8fa5be6b4c56a68ec7
+BLAKE2s (Text-Affixes-0.09.tar.gz) = 3d0728f1807ec0a3dc212a43ca3d715b2562586ae67a1bdf1126e42ee8e23823
 SHA512 (Text-Affixes-0.09.tar.gz) = 636c3a733da49d8ebdcb0d685eb535351b8d234df8e593233904e4de7e60d9bed6050babc44755e12efcbfabd1755b314503c3979df0d9591f9c8ef472c2e5d7
 Size (Text-Affixes-0.09.tar.gz) = 18444 bytes

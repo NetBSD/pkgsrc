@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/10/07 15:02:29 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/10/26 11:23:22 nia Exp $
 
-RMD160 (ferret-0.11.8.7.gem) = cd7ed8539dd4ab06700816d90f0408db081575de
+BLAKE2s (ferret-0.11.8.7.gem) = fb4dc9309a720b7f086015c3edff8ab2407e98638932c50f13d65ae0d3ea7154
 SHA512 (ferret-0.11.8.7.gem) = ac7cafa25ade9741e0eb95d7372f6dd7ce4ea82368c69ace536b852fd5cc435d05764041ba1bddcc6098665c6e1aa7a12ac9739e45362007f726f3e7a8124df1
 Size (ferret-0.11.8.7.gem) = 608768 bytes
 SHA1 (patch-ext_config.h) = ec58ab6e60abccd10bc7d10b65b7b5c369873800

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 15:01:44 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 11:22:37 nia Exp $
 
-RMD160 (Swim-0.1.48.tar.gz) = 65bb428164d641d740641d06632c53bcb4c84b59
+BLAKE2s (Swim-0.1.48.tar.gz) = 6aa11348a000bd53f6926b5546bd46a297bface0c54d9236b4771b8e48882dfa
 SHA512 (Swim-0.1.48.tar.gz) = 61b19c3169b46a045018d31aa254fce0ac96597c259584869cd9419470cf20e25c1bede2ef8bd5cf1efe196f3d26fdda07dd2314eba308aee4d519f7c3f0bd08
 Size (Swim-0.1.48.tar.gz) = 41258 bytes

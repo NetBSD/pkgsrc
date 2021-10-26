@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:36 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:29 nia Exp $
 
-RMD160 (Lingua-Identify-0.56.tar.gz) = 39c40421c51b00a49ad01cd17b9129d4180d1f44
+BLAKE2s (Lingua-Identify-0.56.tar.gz) = 48767ec5221b0ac617fab508ed65352c854d444bffecd608cd4b532003737199
 SHA512 (Lingua-Identify-0.56.tar.gz) = f8d7f275cf698356d53407843f83d988cd36d39a542a5f09fded0219227a57612860c9a16f7ec27705e4fe143608cf5fc6597e7d7ddcef9857e658aac55766fc
 Size (Lingua-Identify-0.56.tar.gz) = 181032 bytes

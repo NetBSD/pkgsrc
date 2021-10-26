@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 15:02:23 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 11:23:16 nia Exp $
 
-RMD160 (tinycss2-1.1.0.tar.gz) = b44e5d2ab0092ed956e625f7f47697c5a414e1c7
+BLAKE2s (tinycss2-1.1.0.tar.gz) = 1973af626ae9b2140f5e7065c213de449d4d846e89e14f6cdfe6dffb786bc8fc
 SHA512 (tinycss2-1.1.0.tar.gz) = 218d28511802afc89a608def03084f5d460512a41d47280b5c8bfe72314c8ab3b14c98fbb0200bea6b8509c4d6f0107410d340e2d7f1830aaa92669a2699211e
 Size (tinycss2-1.1.0.tar.gz) = 28273 bytes
 SHA1 (patch-setup.py) = 0696c7ac496b4ecbec5fbc045bba7225ce0793ab

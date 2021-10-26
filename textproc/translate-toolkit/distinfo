@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:02:43 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:23:36 nia Exp $
 
-RMD160 (translate-toolkit-3.0.0.tar.gz) = 69577a9b028c83ea87786e530fb7f3ed6651ff82
+BLAKE2s (translate-toolkit-3.0.0.tar.gz) = cefdb4be820ecff2b073c74ba90876876392e6094a95523d1e7f889fc51266a2
 SHA512 (translate-toolkit-3.0.0.tar.gz) = 81590d0d2ca960902c06f24f6ad1d16cd09655e2e19de46f0b30ea43858d0bf379287f46b1f895eefa9a4d6e3d2673a2a713bd0f3684712668b76d339c49afe1
 Size (translate-toolkit-3.0.0.tar.gz) = 6109446 bytes

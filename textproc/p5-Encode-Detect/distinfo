@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:33 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:27 nia Exp $
 
-RMD160 (Encode-Detect-1.01.tar.gz) = 30264410aa80ea030932b8c310b117d4acf25cbe
+BLAKE2s (Encode-Detect-1.01.tar.gz) = 7dd839c239c3fa19adeb61568801eee140de161f2b85a8cc82cdf0c7b06eadd5
 SHA512 (Encode-Detect-1.01.tar.gz) = cc9c81f716dcb61abb321abd84e4ebb95a674d9aa34c4265f58cace38f6d15ef4f2b8338190ae7d200672e047b795a30ce6155f9c1b1c424e25d962579b96224
 Size (Encode-Detect-1.01.tar.gz) = 179698 bytes

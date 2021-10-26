@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 15:02:35 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 11:23:28 nia Exp $
 
-RMD160 (textpow-1.4.0.gem) = b288597f8bfbd419927df0a3ac767c01981ba48c
+BLAKE2s (textpow-1.4.0.gem) = 690c8b845c8cf7aa589918d39d1b9d2808c9ccebe7e517efdf8a208e8c1f79f5
 SHA512 (textpow-1.4.0.gem) = 4166b5546d00549e320768453a9ad43fceb07b826c6e3e88a6e3991e312cc898606e48c526d887d26176f452dedd07fd9bd1bd2db7c5bb9e315d41a582c1fd24
 Size (textpow-1.4.0.gem) = 315392 bytes

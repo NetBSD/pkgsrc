@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 15:01:58 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 11:22:51 nia Exp $
 
-RMD160 (XML-Parser-Lite-0.722.tar.gz) = 302b0caae812f9818f3fd74134050b1d44e32fa9
+BLAKE2s (XML-Parser-Lite-0.722.tar.gz) = 534268423bdcb3dda814b64b39d1d645527fb5cbdd342fa13d3f9e1e11829b46
 SHA512 (XML-Parser-Lite-0.722.tar.gz) = 44e70fd9f350fc4276bd0ded1255beea2ca7c46506b5fa38da21ca21d1bafd084f0cdf7671e0bc37edaa283cc1f10f076e70a9ec7fe00a50d3cdc1aa047f189a
 Size (XML-Parser-Lite-0.722.tar.gz) = 9327 bytes

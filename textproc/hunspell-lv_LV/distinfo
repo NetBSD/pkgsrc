@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 15:01:14 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 11:22:08 nia Exp $
 
-RMD160 (hunspell-dictionaries/lv_LV-0.8b1/lv_LV.zip) = defce0a00e1184a6eabd3114cbcbf9df030fc940
+BLAKE2s (hunspell-dictionaries/lv_LV-0.8b1/lv_LV.zip) = ac3646376a1bf6e8bcdbdad28650e48ebaf7bd16a1427605b035e56712152975
 SHA512 (hunspell-dictionaries/lv_LV-0.8b1/lv_LV.zip) = 6764e851a95f27bd9c77d02ea62b613f27b8c86f4e9a8b419738b7172a3fe56141dbc39b1b809c7e4ca5d5fefdf0d37df295b546f7473a4d6e18879f12e8144d
 Size (hunspell-dictionaries/lv_LV-0.8b1/lv_LV.zip) = 843379 bytes
