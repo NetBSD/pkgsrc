@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5289 2021/10/26 17:17:10 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5290 2021/10/26 17:30:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8050,3 +8050,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-pep517 to 0.12.0 [adam 2021-10-26]
 	Updated www/py-respx to 0.18.2 [adam 2021-10-26]
 	Updated devel/py-mako to 1.1.5 [adam 2021-10-26]
+	Updated devel/py-guppy3 to 3.1.2 [adam 2021-10-26]
+	Updated devel/py-test-asyncio to 0.16.0 [adam 2021-10-26]
+	Updated www/py-httpx-socks to 0.5.1 [adam 2021-10-26]
+	Updated sysutils/py-structlog to 21.2.0 [adam 2021-10-26]
