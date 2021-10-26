@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:12:58 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:46:57 nia Exp $
 
-RMD160 (tex-bbcard-19440/bbcard.tar.xz) = efe50715a39ab94092ab59f3c6236c331f4b44fc
+BLAKE2s (tex-bbcard-19440/bbcard.tar.xz) = e2efb34bba84772e3da9c9ad922d8cde4285f2d8bbcb70f18ec4a9752d4661ad
 SHA512 (tex-bbcard-19440/bbcard.tar.xz) = 9038101975f07ee2f2e17496c4c63a1a1cf201ec1977cf42b650bfc52001a38d3f967918f983cfd3a68852059e5b2a195f5afbb00084e646da52206e46b67b37
 Size (tex-bbcard-19440/bbcard.tar.xz) = 6816 bytes

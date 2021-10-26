@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:12:33 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:46:32 nia Exp $
 
-RMD160 (moka-icon-theme-5.4.0.tar.gz) = ae73d76e3bd7d8bd7382e213db256f75dfda3686
+BLAKE2s (moka-icon-theme-5.4.0.tar.gz) = 8b69959561a44317c6eeb858fd095a9491c8274104491e69a43f6564e017a73b
 SHA512 (moka-icon-theme-5.4.0.tar.gz) = 3cb6889eae3ddfcad68a05fd6cdf5e92b5d78b965b22df1c289f1e274491be8cb967965cbdf430fe218337994b19592546f3cadf8c39ff5e573d6d7e76648238
 Size (moka-icon-theme-5.4.0.tar.gz) = 67442220 bytes

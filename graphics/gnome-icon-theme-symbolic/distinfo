@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:12:16 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:46:14 nia Exp $
 
-RMD160 (gnome-icon-theme-symbolic-3.12.0.tar.xz) = 8df41f2d16dde4135bfb19c99fb7f0982a695cc1
+BLAKE2s (gnome-icon-theme-symbolic-3.12.0.tar.xz) = 0599e308f8d56f4af9afce71270d90334a944f88c064f1a371235c29203155bd
 SHA512 (gnome-icon-theme-symbolic-3.12.0.tar.xz) = e2a662d38c5c1328f384d9bdd73ce54f4e1174a1d88763e4a5f772c2479081f11c81937ba2dc159ce250e433762f14de824516fc68209200d95dc47790471eda
 Size (gnome-icon-theme-symbolic-3.12.0.tar.xz) = 230420 bytes

@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:12:56 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:46:55 nia Exp $
 
-RMD160 (spca5xx-20060402.tar.gz) = 8b18c6e6ce4b394ce657f8abc32a202d66736b3e
+BLAKE2s (spca5xx-20060402.tar.gz) = c5444f256be49aa7100346fe6221e27aa5f5bb5c2d044e676c590606efe68c1d
 SHA512 (spca5xx-20060402.tar.gz) = ec3f41df103d8040467f46877c5c9a243c95673deb4b93303824f1c55482a330271de4ba3a6df37151e2b6273c514c57d821681f4c13fe80a992111c9ff4300d
 Size (spca5xx-20060402.tar.gz) = 195622 bytes
-RMD160 (spca5xx-bsd-0.6b.patch.gz) = 9f97dbc5e5141b6c7fd0ee6cf1049fb06bda1cce
+BLAKE2s (spca5xx-bsd-0.6b.patch.gz) = e0c50030222143a29967395f8327cb247b49571af29da9a83fca5d9769e271f1
 SHA512 (spca5xx-bsd-0.6b.patch.gz) = 9c091455ef1c49a3963955db97be732d01df7f9f0ca749dcfb766f7efe6113d60bec238f1862ded466e228299deb0136d3fd4e679d8c6843eddf3be1591f5dc9
 Size (spca5xx-bsd-0.6b.patch.gz) = 31635 bytes
 SHA1 (patch-aa) = ca5a91f1fe83ca07d6b0a4e3b49e7b73a3c80254

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:12:02 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:45:59 nia Exp $
 
-RMD160 (barcode-0.99.tar.xz) = 57d91ddf49595ef29d83b5c3515727b8a04ccbf8
+BLAKE2s (barcode-0.99.tar.xz) = 6285751d3b05d173117b11911b8f27643636eadd6391a439e79dd7ae81670bfe
 SHA512 (barcode-0.99.tar.xz) = 1f3015ee9cb2e57e38e56fa48fa3a38fa355821801bad3132d3e87b5b88db4f167986c33dc044317cbf18bb62062af36e946daab98235ff7015a00937c8dd41e
 Size (barcode-0.99.tar.xz) = 586028 bytes
 SHA1 (patch-Makefile.in) = 75b316c0e240966cb87eb3c57c0a48b96a615c3e

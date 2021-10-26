@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:13:01 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:46:59 nia Exp $
 
-RMD160 (tex-eepic-15878/eepic.tar.xz) = de4949e0445300763548abbab818e7c16bb16a5c
+BLAKE2s (tex-eepic-15878/eepic.tar.xz) = b1ccdf3127677d43d805da1cc86e4d3ae7ca7e54226d450cccff1a2903d575c8
 SHA512 (tex-eepic-15878/eepic.tar.xz) = 4bad524961023bb7a21092e3510f0614cb5eea4442d8eddb398951ad82293f53916d43a130270a225c60d7c7f192d5448791c3997e43afbaf1f6b6e8cde1d89e
 Size (tex-eepic-15878/eepic.tar.xz) = 11732 bytes

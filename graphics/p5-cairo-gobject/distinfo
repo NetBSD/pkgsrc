@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 14:12:40 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:46:39 nia Exp $
 
-RMD160 (Cairo-GObject-1.005.tar.gz) = 0e92c15f274761c78351d9c3889d1b5f75f1fd0d
+BLAKE2s (Cairo-GObject-1.005.tar.gz) = 1db2d6afaac7a24a64411a8d6b62cbc07825391fbcba55d3f6ea576bc2658d42
 SHA512 (Cairo-GObject-1.005.tar.gz) = 45f1e3ff6f8a90347175c66e5a854acd22285cd48a9aa07344c046add283892d6188e88f69d64798dc5323cb17aa442853915ed2081b5ec4e2a735b89cd11b1e
 Size (Cairo-GObject-1.005.tar.gz) = 16790 bytes

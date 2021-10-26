@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:12:09 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:46:07 nia Exp $
 
-RMD160 (fbm-1.2.tgz) = b23ede1e49ceb7f61f06860eeb342e819bc14a5f
+BLAKE2s (fbm-1.2.tgz) = f6ff86574f2af98989452db9553eb292667fb58292304681c92a353e0046ad4a
 SHA512 (fbm-1.2.tgz) = b06fc4283364753afdcbe639a6a76213357dfcce456649566ca0e7c53d48df007836c5a2c7ee07c902fdb0dbfdc8a335d25781321e3668ec6cae2cbd3c2a12df
 Size (fbm-1.2.tgz) = 214909 bytes
 SHA1 (patch-aa) = c6d838a7f9f818921c15074edf075325a02a320f

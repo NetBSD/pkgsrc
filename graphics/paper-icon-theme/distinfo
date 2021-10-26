@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:12:40 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:46:39 nia Exp $
 
-RMD160 (paper-icon-theme-1.5.0.tar.gz) = 73c229340a81311542aa37e22f315c28beabb0d0
+BLAKE2s (paper-icon-theme-1.5.0.tar.gz) = 3b652020bc8d968a6987d374d189908d82a73e96b33b5c4f56a2afea6bc068c9
 SHA512 (paper-icon-theme-1.5.0.tar.gz) = be84bc332eba0e9c216435a130d3eed180fe1807d81ff7b3aadb3914fc130c9e243fb7fccef8febae1da6655f8e8a1bcf9420afb429e11e4c79bcbbb5bcd291b
 Size (paper-icon-theme-1.5.0.tar.gz) = 48464220 bytes

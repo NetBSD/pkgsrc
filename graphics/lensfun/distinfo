@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/10/07 14:12:26 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/10/26 10:46:24 nia Exp $
 
-RMD160 (lensfun-0.3.2.tar.gz) = 57322f5b6969c90f5549e20229a01e70606cc742
+BLAKE2s (lensfun-0.3.2.tar.gz) = ad91b0dca37f2e765cfaae5537d1817ba86457f54680b488f8dabf1020784065
 SHA512 (lensfun-0.3.2.tar.gz) = 9c6f546fa70e6dc692e66ef378447345be6d3383812934780d326d772d775c1918cbf3447cd91c067655044cf659025763bf47ba2d938a82a3c2de4d60127446
 Size (lensfun-0.3.2.tar.gz) = 784825 bytes

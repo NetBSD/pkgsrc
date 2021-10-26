@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/07 14:13:24 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/10/26 10:47:23 nia Exp $
 
-RMD160 (VTK-9.0.3.tar.gz) = 50bf13836ebd4d3ca7dce8de77382ef222980257
+BLAKE2s (VTK-9.0.3.tar.gz) = 9cdfdff93bc9af1e0c4ee426066896f553a7395ef14a9c499c9cce122c3411ea
 SHA512 (VTK-9.0.3.tar.gz) = 00528011f9206444d09fc6cea05c46930745bb70ea02be6244ab3eb510ae82af772157c025157b1761dc4c6a9ab538b57f814c03a708f30aa3598a421fdc6ae2
 Size (VTK-9.0.3.tar.gz) = 34684378 bytes

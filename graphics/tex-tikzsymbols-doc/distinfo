@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:13:21 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:47:19 nia Exp $
 
-RMD160 (tex-tikzsymbols-49975/tikzsymbols.doc.tar.xz) = 6997e79c99785ec2a003ab59a9755a50043e8c10
+BLAKE2s (tex-tikzsymbols-49975/tikzsymbols.doc.tar.xz) = df64039144ce98d14662f04eab2f5c328324477d91bbf303d32c87a85a5f19f2
 SHA512 (tex-tikzsymbols-49975/tikzsymbols.doc.tar.xz) = 7832876964c239957be72fd6651218a9e3726d130a7e4a1b86787f215ba698094daafefca1aaaef6a5c0614cf34c44c98fba9c3e3ecdad8845bdc699705cfa3e
 Size (tex-tikzsymbols-49975/tikzsymbols.doc.tar.xz) = 541092 bytes

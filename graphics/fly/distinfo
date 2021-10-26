@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 14:12:09 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/10/26 10:46:07 nia Exp $
 
-RMD160 (fly-1.6.5.tar.gz) = 77a14e28bbcadaac67e5e7a009d4d1142b22c268
+BLAKE2s (fly-1.6.5.tar.gz) = bc6484e1cc756eece9a421cef286da8c097530dee1eafae2be83830fb69b8b2f
 SHA512 (fly-1.6.5.tar.gz) = 9688463864605685de6ff3ad8047bc4f20bda3197d63cde7e950c3f3d0985200479a4dfdb1da8c040e28ea8448276339cc2ab754829f05685577eb8d463fa0f2
 Size (fly-1.6.5.tar.gz) = 127349 bytes
 SHA1 (patch-aa) = b28513301c5a4009d629da2f3ebe5065b701fcc0

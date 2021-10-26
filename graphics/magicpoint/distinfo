@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2021/10/07 14:12:32 nia Exp $
+$NetBSD: distinfo,v 1.24 2021/10/26 10:46:31 nia Exp $
 
-RMD160 (magicpoint-1.13a.tar.gz) = 067d7dee3b90ec354975d9ad4ea0c0df48cca191
+BLAKE2s (magicpoint-1.13a.tar.gz) = c520dcae61a5fde88b7f69cb6c6e3b4473ca60da2faffdbddd729d3aee6f5df6
 SHA512 (magicpoint-1.13a.tar.gz) = c2399826d770f6307128eb1a88593404d5b495203319e0c90edf36e91ce82e2e42b1777cbf473f52376aa4645468ac65920839f94b58d7c9d90f08a961273df9
 Size (magicpoint-1.13a.tar.gz) = 890670 bytes
 SHA1 (patch-aa) = 59bc5a8bce25ac27a77ae8d03dd42f354d1d1bff

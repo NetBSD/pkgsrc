@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:13:20 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:47:18 nia Exp $
 
-RMD160 (tex-tikzorbital-36439/tikzorbital.doc.tar.xz) = 679e4827b3c60e22cd9f04bf4de11b77f95fb198
+BLAKE2s (tex-tikzorbital-36439/tikzorbital.doc.tar.xz) = b0749a53e612416bba9e9d382c73ca6e8fa63206dfef835e0cd085613739b904
 SHA512 (tex-tikzorbital-36439/tikzorbital.doc.tar.xz) = 28af1efd85dd456c8dacd8a578043c3ad117349e60b0d7432b883f8f7a06daa2597df9c344c722334d6112f17169746c34199db08dc0f037c5f901bf61cc1bfe
 Size (tex-tikzorbital-36439/tikzorbital.doc.tar.xz) = 197632 bytes

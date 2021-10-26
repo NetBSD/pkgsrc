@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:12:13 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:46:11 nia Exp $
 
-RMD160 (gimp-high-pass-filter-1.2/high-pass.scm) = 8b179ec36d7992b277b49f6bd31637d5eb7bd0c6
+BLAKE2s (gimp-high-pass-filter-1.2/high-pass.scm) = 7cc447ce59d4e62def6746004aacf585786a42b5f02d2cdf3af7f45825caa6f1
 SHA512 (gimp-high-pass-filter-1.2/high-pass.scm) = 26f5221aabf2bbf9ca7587d56955413db92bd346fb2922fc3cc81488be4bcbeb6d16607bc4d823a4f74e9cef7aac62faef5c5914ce11c2c44f4bf84d55cf4397
 Size (gimp-high-pass-filter-1.2/high-pass.scm) = 6297 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:13:20 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:47:19 nia Exp $
 
-RMD160 (tex-tikzscale-30637/tikzscale.tar.xz) = 0a9ee5acfef6680e663dd79696dd6fb94a4f4d9f
+BLAKE2s (tex-tikzscale-30637/tikzscale.tar.xz) = 7f35a0998afccfc9da82e6d11453743371dd7f10c41a9c6827fd353362428b57
 SHA512 (tex-tikzscale-30637/tikzscale.tar.xz) = a42f1a655ac16b3df20554890a86cb14ac43b1278061893357e6283deee45ecf24a19fd22b6ccb602cc192a495b798c02dd80b4fa2331bcc55ac9f826e293d3d
 Size (tex-tikzscale-30637/tikzscale.tar.xz) = 4700 bytes

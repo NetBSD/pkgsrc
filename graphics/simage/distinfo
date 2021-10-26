@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 14:12:56 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:46:54 nia Exp $
 
-RMD160 (simage-1.7.0.tar.gz) = be5e13c0acc345a39f4686e3121222faa3cdbd51
+BLAKE2s (simage-1.7.0.tar.gz) = ed5d124f1ac957d11139c0169f15b3a9a82822106b0b45baf7aac480af0700b3
 SHA512 (simage-1.7.0.tar.gz) = 944ec009dd7041692073ddd9795fdd633fe3bc9101f1c1234e8be3746487a9431aecf52abde01563e719153fbe1ca7d29f9b64042e4a64ea08d6cb14666dd89f
 Size (simage-1.7.0.tar.gz) = 752602 bytes
 SHA1 (patch-src_simage__png.c) = d511a7c45db46c60ea4aacff748b1325e83e396d

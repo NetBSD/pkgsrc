@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2021/10/07 14:13:01 nia Exp $
+$NetBSD: distinfo,v 1.3 2021/10/26 10:46:59 nia Exp $
 
-RMD160 (tex-ellipse-39025/ellipse.tar.xz) = b1503b37e18f21423ccb4583a6bd2b0b098ce552
+BLAKE2s (tex-ellipse-39025/ellipse.tar.xz) = af8b8e49f1ea1552dbcae626a118bb66a75ec2fbd4cffcb120e415806c1a470c
 SHA512 (tex-ellipse-39025/ellipse.tar.xz) = 06a5dadc6d1cec9acd42fce29096c0d2a3e3dcf2ee3639735006aa9682d4702919c4d53ed972bb20f1b28006fae38a4ec9cc4e314cfe422058e6a67e792428ed
 Size (tex-ellipse-39025/ellipse.tar.xz) = 2916 bytes

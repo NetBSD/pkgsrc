@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 14:12:55 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/10/26 10:46:54 nia Exp $
 
-RMD160 (scidavis-0.2.4.tar.bz2) = a265a8fea2e26ca26e0ba08dd3069389bb5f4735
+BLAKE2s (scidavis-0.2.4.tar.bz2) = bdc52b858d88e9c740ffaaf80b9f0386ccc1320ab7816d6b29988f42019929f5
 SHA512 (scidavis-0.2.4.tar.bz2) = 84b385c39aab96ed1abede7a81912d47e1d5fc6f9e9de76d0492aeefe1a2ecec61b9921cc89815bdb5eff810e1fdb2ce1bb6be0b4fda3b061b1902ee2c0517d2
 Size (scidavis-0.2.4.tar.bz2) = 1426695 bytes
 SHA1 (patch-aa) = c128147db8ce84d73f6168ce3c16e5ba0e431ef3

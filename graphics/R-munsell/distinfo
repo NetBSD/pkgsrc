@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:11:59 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/26 10:45:56 nia Exp $
 
-RMD160 (R/munsell_0.5.0.tar.gz) = a1323b160b6939ec8c161bd6d903a508fd72a92a
+BLAKE2s (R/munsell_0.5.0.tar.gz) = 70411bfc2cf38b8441cd3ba2ef0f7ff084a45e51b4e31bcfeca755f327861b82
 SHA512 (R/munsell_0.5.0.tar.gz) = 12a66c2406bf5aecec52a504549e7beeaff67fb67aab9950c24e9e6300b458cf541c818630814433229c1b406a2830a32dc21e10cabcdb4429245d85ba96f8de
 Size (R/munsell_0.5.0.tar.gz) = 182653 bytes
