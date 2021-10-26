@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2021/10/07 13:30:23 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/10/26 10:07:52 nia Exp $
 
-RMD160 (gcc-4.6.4-mint-20130415.patch.bz2) = d3cafafb1caa1a1eb915c5f15f4063d6a70ac4ee
+BLAKE2s (gcc-4.6.4-mint-20130415.patch.bz2) = ca3cc9b4fdeccac20f8fd72c2f0ba521e8c21c4a84850cd50779ad750a0e51bf
 SHA512 (gcc-4.6.4-mint-20130415.patch.bz2) = f04ee11b11297ac31f558cb54b63bac959b599c6c6238988a07ce4d7a6a4130457a0ff4bf12591ba7a2560b1f5998b25f16d308b2ca5d4704784cf17e557136c
 Size (gcc-4.6.4-mint-20130415.patch.bz2) = 11059 bytes
-RMD160 (gcc-4.6.4.tar.bz2) = 6a58b053812cf75622bc4579e020cd9471f46916
+BLAKE2s (gcc-4.6.4.tar.bz2) = 11ee251a0c389ba91c5ad8eea7bc35357728dae8aa641f990107d3217e5f8257
 SHA512 (gcc-4.6.4.tar.bz2) = b5a5395782e0b9e61cda052f6e00c8575d1aa0b7e8db9e34c06e4e45f12ff37b436018536b7fa69a04a4235b5b368895652e3ed8fab2fe11763f9782ed9161dc
 Size (gcc-4.6.4.tar.bz2) = 72006076 bytes
 SHA1 (patch-gcc-4.6.4_gcc_cp_cfns.gperf) = da2735f36dc5a2ab19f92cb13f505cea11442fca
