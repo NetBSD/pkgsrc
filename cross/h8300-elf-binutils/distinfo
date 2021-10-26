@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:30:23 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/10/26 10:07:53 nia Exp $
 
-RMD160 (binutils-2.27.tar.bz2) = e6623d3a90578169790417b8dd83e850c0a81910
+BLAKE2s (binutils-2.27.tar.bz2) = d8da186deaf158d57e7d369acf63a93f30303e6a801c0aa3ec60d6d7b3e2cbb0
 SHA512 (binutils-2.27.tar.bz2) = cf276f84935312361a2ca077e04d0b469d23a3aed979d8ba5d92ea590904ffb2c2e7ed12cc842822bfc402836be86f479660cef3791aa62f3753d8a1a6f564cb
 Size (binutils-2.27.tar.bz2) = 26099568 bytes

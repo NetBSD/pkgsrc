@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:30:26 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/26 10:07:55 nia Exp $
 
-RMD160 (sourceryg++-2013.05-43-nios2-linux-gnu.src.tar.bz2) = de056d240a73236d6d8be4851813d8b15d16808f
+BLAKE2s (sourceryg++-2013.05-43-nios2-linux-gnu.src.tar.bz2) = 35133c71ad49f1c71cc89b6f10a31d9601cc7e0cc027fcc6f88d32e6d2f88103
 SHA512 (sourceryg++-2013.05-43-nios2-linux-gnu.src.tar.bz2) = 1577ed24d5dfe7436a3f96ef8b906459578777f73a0a07aacc97a87708999a72a0eb0b2ce54306de55e43ce9f1e2dc171f06e7256f59b272af399fb1d29b943b
 Size (sourceryg++-2013.05-43-nios2-linux-gnu.src.tar.bz2) = 251136787 bytes
 SHA1 (patch-aa) = 849a0ea918f0a1aee5d1c6cd5b6eba4bbb8beb7f
