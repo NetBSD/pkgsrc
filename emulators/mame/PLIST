@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.58 2021/09/29 08:30:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.59 2021/10/27 09:31:44 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -118,6 +118,7 @@ share/mame/hash/apple2_cass.xml
 share/mame/hash/apple2_flop_clcracked.xml
 share/mame/hash/apple2_flop_misc.xml
 share/mame/hash/apple2_flop_orig.xml
+share/mame/hash/apple2gs_flop_clcracked.xml
 share/mame/hash/apple2gs_flop_misc.xml
 share/mame/hash/apple2gs_flop_orig.xml
 share/mame/hash/apple3.xml
@@ -484,6 +485,7 @@ share/mame/hash/pc1512_flop.xml
 share/mame/hash/pc1512_hdd.xml
 share/mame/hash/pc1640_flop.xml
 share/mame/hash/pc1640_hdd.xml
+share/mame/hash/pc6001_cart.xml
 share/mame/hash/pc8001_flop.xml
 share/mame/hash/pc8001mk2_flop.xml
 share/mame/hash/pc8001mk2sr_flop.xml
