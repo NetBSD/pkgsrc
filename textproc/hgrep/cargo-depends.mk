@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2021/10/24 22:02:29 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2021/10/27 18:49:43 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
@@ -34,6 +34,8 @@ CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.5
 CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.5
 CARGO_CRATE_DEPENDS+=	csv-1.1.6
 CARGO_CRATE_DEPENDS+=	csv-core-0.1.10
+CARGO_CRATE_DEPENDS+=	ctor-0.1.21
+CARGO_CRATE_DEPENDS+=	diff-0.1.12
 CARGO_CRATE_DEPENDS+=	dirs-next-2.0.0
 CARGO_CRATE_DEPENDS+=	dirs-sys-next-0.1.2
 CARGO_CRATE_DEPENDS+=	dtoa-0.4.8
@@ -89,6 +91,7 @@ CARGO_CRATE_DEPENDS+=	onig-6.3.0
 CARGO_CRATE_DEPENDS+=	onig_sys-69.7.1
 CARGO_CRATE_DEPENDS+=	oorandom-11.1.3
 CARGO_CRATE_DEPENDS+=	os_str_bytes-4.2.0
+CARGO_CRATE_DEPENDS+=	output_vt100-0.1.2
 CARGO_CRATE_DEPENDS+=	path_abs-0.5.1
 CARGO_CRATE_DEPENDS+=	pathdiff-0.2.1
 CARGO_CRATE_DEPENDS+=	pcre2-0.2.3
@@ -100,6 +103,7 @@ CARGO_CRATE_DEPENDS+=	plotters-0.3.1
 CARGO_CRATE_DEPENDS+=	plotters-backend-0.3.2
 CARGO_CRATE_DEPENDS+=	plotters-svg-0.3.1
 CARGO_CRATE_DEPENDS+=	ppv-lite86-0.2.14
+CARGO_CRATE_DEPENDS+=	pretty_assertions-1.0.0
 CARGO_CRATE_DEPENDS+=	proc-macro-hack-0.5.19
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.30
 CARGO_CRATE_DEPENDS+=	quote-1.0.10
