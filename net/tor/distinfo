@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.120 2021/10/26 11:07:03 nia Exp $
+$NetBSD: distinfo,v 1.121 2021/10/27 13:16:35 wiz Exp $
 
-BLAKE2s (tor-0.4.6.7.tar.gz) = 5ff08a4fc22a6072a63abe4abfddc00ee73e4fa1d2436045c011f2c7846b5405
-SHA512 (tor-0.4.6.7.tar.gz) = e5f9e235fc4b96f5e63e0bfa4ca412d0d11299a31cb77cae1c199b276d0dfbf3656657ddf910b22625dd49eb726d487666e80e8889db78c9edebbab0d80d9e03
-Size (tor-0.4.6.7.tar.gz) = 7790727 bytes
+BLAKE2s (tor-0.4.6.8.tar.gz) = 42403c0613223bb1ae621a4a175596c8e42e18ef7f4b20725293bb9644e596b2
+SHA512 (tor-0.4.6.8.tar.gz) = ff008ddf10c2a4c9e0d0da28558c7a97a6d42615c8bcad25a74567e3aafaba49df1699e379fd674f93305d222748d16b2f21d0da9a8fd3444b659747e1f1d07b
+Size (tor-0.4.6.8.tar.gz) = 7796485 bytes
