@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2019/12/08 21:46:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2021/10/27 15:25:37 adam Exp $
 bin/pwiz-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -49,6 +49,9 @@ ${PYSITELIB}/playhouse/pool.pyo
 ${PYSITELIB}/playhouse/postgres_ext.py
 ${PYSITELIB}/playhouse/postgres_ext.pyc
 ${PYSITELIB}/playhouse/postgres_ext.pyo
+${PYSITELIB}/playhouse/psycopg3_ext.py
+${PYSITELIB}/playhouse/psycopg3_ext.pyc
+${PYSITELIB}/playhouse/psycopg3_ext.pyo
 ${PYSITELIB}/playhouse/reflection.py
 ${PYSITELIB}/playhouse/reflection.pyc
 ${PYSITELIB}/playhouse/reflection.pyo
