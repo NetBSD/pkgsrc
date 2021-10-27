@@ -54,7 +54,7 @@ ${WRKDIR}/.altinstall: ${ALTERNATIVES_SRC}
 	${SED} ${FILES_SUBST_SED} <${ALTERNATIVES_SRC}; \
 	${ECHO} 'EOF'; \
 	${ECHO} 'if ${TEST} -x ${PKG_ALTERNATIVES}; then'; \
-	${ECHO} '${PKG_ALTERNATIVES} -gs register ./+ALTERNATIVES'; \
+	${ECHO} '${PKG_ALTERNATIVES} -gs register ./+ALTERNATIVES || exit 1'; \
 	${ECHO} 'fi'; \
 	${ECHO} 'fi'; \
 	} >${WRKDIR}/.altinstall
