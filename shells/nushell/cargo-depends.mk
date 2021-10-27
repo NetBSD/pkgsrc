@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.5 2021/10/07 11:48:48 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.6 2021/10/27 10:14:01 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	Inflector-0.11.4
 CARGO_CRATE_DEPENDS+=	addr2line-0.16.0
@@ -249,7 +249,6 @@ CARGO_CRATE_DEPENDS+=	native-tls-0.2.8
 CARGO_CRATE_DEPENDS+=	neso-0.5.0
 CARGO_CRATE_DEPENDS+=	new_debug_unreachable-1.0.4
 CARGO_CRATE_DEPENDS+=	nibble_vec-0.1.0
-CARGO_CRATE_DEPENDS+=	nipper-0.1.9
 CARGO_CRATE_DEPENDS+=	nix-0.20.1
 CARGO_CRATE_DEPENDS+=	nix-0.22.1
 CARGO_CRATE_DEPENDS+=	nodrop-0.1.14
