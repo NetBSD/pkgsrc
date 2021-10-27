@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5298 2021/10/27 10:14:21 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5299 2021/10/27 12:29:35 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8063,3 +8063,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/gh to 2.2.0 [bsiegert 2021-10-27]
 	Updated emulators/mame to 0.237 [wiz 2021-10-27]
 	Updated shells/nushell to 0.39.0 [pin 2021-10-27]
+	Updated devel/php-composer to 2.1.9 [tpaul 2021-10-27]
