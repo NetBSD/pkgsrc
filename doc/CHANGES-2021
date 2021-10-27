@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5302 2021/10/27 18:50:03 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5303 2021/10/27 23:59:04 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8068,3 +8068,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/py-peewee to 3.14.7 [adam 2021-10-27]
 	Updated textproc/py-docutils to 0.18 [adam 2021-10-27]
 	Updated textproc/hgrep to 0.1.8 [pin 2021-10-27]
+	Updated lang/python27 to 2.7.18nb5 [gutteridge 2021-10-27]
