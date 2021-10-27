@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5299 2021/10/27 12:29:35 tpaul Exp $
+$NetBSD: CHANGES-2021,v 1.5300 2021/10/27 13:16:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8064,3 +8064,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/mame to 0.237 [wiz 2021-10-27]
 	Updated shells/nushell to 0.39.0 [pin 2021-10-27]
 	Updated devel/php-composer to 2.1.9 [tpaul 2021-10-27]
+	Updated net/tor to 0.4.6.8 [wiz 2021-10-27]
