@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.94 2021/10/10 03:00:59 gutteridge Exp $
+# $NetBSD: Makefile,v 1.95 2021/10/27 23:58:55 gutteridge Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python27-${PY_DISTVERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -187,6 +187,12 @@ SUBST_STAGE.pkgversion=	pre-configure
 SUBST_FILES.pkgversion=	Lib/lib2to3/pgen2/driver.py
 SUBST_FILES.pkgversion+=Lib/distutils/command/install_egg_info.py
 SUBST_VARS.pkgversion=	PKGVERSION_NOREV
+
+SUBST_CLASSES+=		urllib
+SUBST_MESSAGE.urllib=	Fixing path to urllib.cfg.
+SUBST_STAGE.urllib=	pre-configure
+SUBST_FILES.urllib=	Lib/urlparse.py
+SUBST_VARS.urllib=	PKG_SYSCONFDIR
 
 .include "options.mk"
 
