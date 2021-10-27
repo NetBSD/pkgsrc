@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5300 2021/10/27 13:16:45 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5301 2021/10/27 15:30:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8065,3 +8065,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated shells/nushell to 0.39.0 [pin 2021-10-27]
 	Updated devel/php-composer to 2.1.9 [tpaul 2021-10-27]
 	Updated net/tor to 0.4.6.8 [wiz 2021-10-27]
+	Updated databases/py-peewee to 3.14.7 [adam 2021-10-27]
+	Updated textproc/py-docutils to 0.18 [adam 2021-10-27]
