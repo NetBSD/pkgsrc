@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2021/10/11 12:27:02 tnn Exp $
+# $NetBSD: Makefile,v 1.28 2021/10/27 06:52:15 bsiegert Exp $
 
-DISTNAME=	gh-2.0.0
-PKGREVISION=	2
+DISTNAME=	gh-2.2.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cli/}
 GITHUB_PROJECT=	cli
