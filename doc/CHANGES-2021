@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5294 2021/10/26 20:31:06 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5295 2021/10/27 05:58:55 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8059,3 +8059,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-xopen to 1.2.1 [adam 2021-10-26]
 	Updated devel/py-wheel to 0.37.0 [adam 2021-10-26]
 	Updated sysutils/dua-cli to 2.14.11 [pin 2021-10-26]
+	Updated sysutils/restic to 0.12.1 [bsiegert 2021-10-27]
