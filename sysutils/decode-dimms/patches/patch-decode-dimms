@@ -1,10 +1,10 @@
-$NetBSD: patch-decode-dimms,v 1.18 2020/09/07 14:50:25 pgoyette Exp $
+$NetBSD: patch-decode-dimms,v 1.19 2021/10/28 20:18:21 pgoyette Exp $
 
 Add NetBSD-specific ability to use spdmem(4)'s sysctl values as
 input.  Remove attempts to use linux-specific data sources.
 
---- eeprom/decode-dimms.orig	2020-09-07 07:41:27.782730720 -0700
-+++ eeprom/decode-dimms	2020-09-07 07:42:58.255264706 -0700
+--- eeprom/decode-dimms.orig	2021-07-22 04:10:34.000000000 -0700
++++ eeprom/decode-dimms	2021-10-28 13:01:32.530284359 -0700
 @@ -45,8 +45,9 @@
  use Fcntl qw(:DEFAULT :seek);
  use File::Basename;
@@ -26,7 +26,7 @@ input.  Remove attempts to use linux-specific data sources.
  
  # We consider that no data was written to this area of the SPD EEPROM if
  # all bytes read 0x00 or all bytes read 0xff
-@@ -2436,6 +2437,26 @@
+@@ -2437,6 +2438,26 @@
  	}
  }
  
@@ -53,7 +53,7 @@ input.  Remove attempts to use linux-specific data sources.
  # Read bytes from SPD-EEPROM
  # Note: offset must be a multiple of 16!
  sub readspd($$$)
-@@ -2449,20 +2470,13 @@
+@@ -2450,20 +2471,13 @@
  			$size = @bytes - $offset;
  		}
  		return @bytes[$offset..($offset + $size - 1)];
@@ -80,7 +80,7 @@ input.  Remove attempts to use linux-specific data sources.
  	} else {
  		# Kernel 2.4 with procfs
  		for my $i (0 .. ($size-1)/16) {
-@@ -2528,7 +2542,7 @@
+@@ -2529,7 +2543,7 @@
  # Parse command-line
  foreach (@ARGV) {
  	if ($_ eq '-h' || $_ eq '--help') {
@@ -89,7 +89,7 @@ input.  Remove attempts to use linux-specific data sources.
  			"       $0 -h\n\n",
  			"  -f, --format            Print nice html output\n",
  			"  -b, --bodyonly          Don't print html header\n",
-@@ -2542,6 +2556,8 @@
+@@ -2543,6 +2557,8 @@
  			"  -x,                     Read data from hexdump files\n",
  			"  -X,                     Same as -x except treat multibyte hex\n",
  			"                          data as little endian\n",
@@ -98,7 +98,7 @@ input.  Remove attempts to use linux-specific data sources.
  			"  -h, --help              Display this usage summary\n";
  		print <<"EOF";
  
-@@ -2586,85 +2602,25 @@
+@@ -2587,85 +2603,25 @@
  		$use_hexdump = LITTLEENDIAN;
  		next;
  	}
@@ -192,7 +192,7 @@ input.  Remove attempts to use linux-specific data sources.
  # @dimm is a list of hashes. There's one hash for each EEPROM we found.
  # Each hash has the following keys:
  #  * eeprom: Name of the eeprom data file
-@@ -2677,7 +2633,6 @@
+@@ -2678,7 +2634,6 @@
  #  * chk_spd: The checksum or CRC value found in the EEPROM
  #  * chk_calc: The checksum or CRC computed from the EEPROM data
  # Keys are added over time.
@@ -200,7 +200,7 @@ input.  Remove attempts to use linux-specific data sources.
  
  for my $i (0 .. $#dimm) {
  	my @bytes = readspd(0, 128, $dimm[$i]->{file});
-@@ -2729,7 +2684,7 @@
+@@ -2730,7 +2685,7 @@
  		printl("Decoding EEPROM", $dimm[$current]->{eeprom});
  	}
  
