@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5308 2021/10/28 11:48:04 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5309 2021/10/28 19:53:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8075,3 +8075,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/nss to 3.72 [wiz 2021-10-28]
 	Updated devel/py-mercurial to 5.9.3 [wiz 2021-10-28]
 	Updated devel/py-hg-evolve to 10.4.0 [wiz 2021-10-28]
+	Updated security/py-authlib to 0.15.5 [adam 2021-10-28]
+	Updated devel/py-anyio to 3.3.4 [adam 2021-10-28]
