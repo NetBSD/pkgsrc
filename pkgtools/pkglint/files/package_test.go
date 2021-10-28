@@ -567,8 +567,7 @@ func (s *Suite) Test_Package_loadPackageMakefile__dump(c *check.C) {
 	t.CreateFileLines("category/package/distinfo",
 		CvsID,
 		"",
-		"SHA1 (distfile-1.0.tar.gz) = 12341234...",
-		"RMD160 (distfile-1.0.tar.gz) = 12341234...",
+		"BLAKE2s (distfile-1.0.tar.gz) = 12341234...",
 		"SHA512 (distfile-1.0.tar.gz) = 12341234...",
 		"Size (distfile-1.0.tar.gz) = 12341234...")
 	t.CreateFileLines("category/package/Makefile",
@@ -1397,12 +1396,10 @@ func (s *Suite) Test_Package_checkDistfilesInDistinfo__indirect_conditional_DIST
 	t.CreateFileLines("category/package/distinfo",
 		CvsID,
 		"",
-		"SHA1 (ok-3.tar.gz) = 1234",
-		"RMD160 (ok-3.tar.gz) = 1234",
+		"BLAKE2s (ok-3.tar.gz) = 1234",
 		"SHA512 (ok-3.tar.gz) = 1234",
 		"Size (ok-3.tar.gz) = 1234",
-		"SHA1 (package-1.0.tar.gz) = 1234",
-		"RMD160 (package-1.0.tar.gz) = 1234",
+		"BLAKE2s (package-1.0.tar.gz) = 1234",
 		"SHA512 (package-1.0.tar.gz) = 1234",
 		"Size (package-1.0.tar.gz) = 1234")
 	t.Chdir("category/package")
@@ -1425,19 +1422,17 @@ func (s *Suite) Test_Package_checkDistfilesInDistinfo__unresolvable(c *check.C) 
 		".include \"../../mk/bsd.prefs.mk\"",
 		"",
 		".if ${MACHINE_ARCH} == i386",
-		"DISTFILES+=\t${UNKNOWN}",
+		"DISTFILES+=\t${UNKNOWN} missing-i386-1.0.tar.gz",
 		".endif",
 		"",
-		"DISTFILES+=\tok-3.tar.gz")
+		"DISTFILES+=\tok-3.tar.gz missing-all-1.0.tar.gz")
 	t.CreateFileLines("category/package/distinfo",
 		CvsID,
 		"",
-		"SHA1 (ok-3.tar.gz) = 1234",
-		"RMD160 (ok-3.tar.gz) = 1234",
+		"BLAKE2s (ok-3.tar.gz) = 1234",
 		"SHA512 (ok-3.tar.gz) = 1234",
 		"Size (ok-3.tar.gz) = 1234",
-		"SHA1 (package-1.0.tar.gz) = 1234",
-		"RMD160 (package-1.0.tar.gz) = 1234",
+		"BLAKE2s (package-1.0.tar.gz) = 1234",
 		"SHA512 (package-1.0.tar.gz) = 1234",
 		"Size (package-1.0.tar.gz) = 1234")
 	t.Chdir("category/package")
@@ -1445,8 +1440,15 @@ func (s *Suite) Test_Package_checkDistfilesInDistinfo__unresolvable(c *check.C) 
 
 	G.Check(".")
 
+	// DISTFILES refers to the missing variable UNKNOWN. Therefore, pkglint
+	// skips that part of the variable. It still checks all other files that
+	// are listed somewhere in DISTFILES.
 	t.CheckOutputLines(
-		"WARN: Makefile:23: UNKNOWN is used but not defined.")
+		"WARN: Makefile:23: UNKNOWN is used but not defined.",
+		"WARN: Makefile:23: Distfile \"missing-i386-1.0.tar.gz\" "+
+			"is not mentioned in distinfo.",
+		"WARN: Makefile:26: Distfile \"missing-all-1.0.tar.gz\" "+
+			"is not mentioned in distinfo.")
 }
 
 func (s *Suite) Test_Package_checkDistfilesInDistinfo__indirect_DIST_SUBDIR(c *check.C) {
@@ -1467,11 +1469,11 @@ func (s *Suite) Test_Package_checkDistfilesInDistinfo__indirect_DIST_SUBDIR(c *c
 		CvsID,
 		"",
 		"SHA1 (package-1.0/distfile-other.tar.gz) = 1234",
-		"RMD160 (package-1.0/distfile-other.tar.gz) = 1234",
+		"BLAKE2s (package-1.0/distfile-other.tar.gz) = 1234",
 		"SHA512 (package-1.0/distfile-other.tar.gz) = 1234",
 		"Size (package-1.0/distfile-other.tar.gz) = 1234",
 		"SHA1 (package-1.0/package-1.0.tar.gz) = 1234",
-		"RMD160 (package-1.0/package-1.0.tar.gz) = 1234",
+		"BLAKE2s (package-1.0/package-1.0.tar.gz) = 1234",
 		"SHA512 (package-1.0/package-1.0.tar.gz) = 1234",
 		"Size (package-1.0/package-1.0.tar.gz) = 1234")
 	t.Chdir("category/package")
@@ -1499,8 +1501,7 @@ func (s *Suite) Test_Package_checkDistfilesInDistinfo__depending_on_package_sett
 	t.CreateFileLines("print/tex-varisize/distinfo",
 		CvsID,
 		"",
-		"SHA1 (tex-varisize-15878/varisize.tar.xz) = 1234",
-		"RMD160 (tex-varisize-15878/varisize.tar.xz) = 1234",
+		"BLAKE2s (tex-varisize-15878/varisize.tar.xz) = 1234",
 		"SHA512 (tex-varisize-15878/varisize.tar.xz) = 1234",
 		"Size (tex-varisize-15878/varisize.tar.xz) = 3176 bytes")
 	t.CreateFileLines("print/texlive/package.mk",
@@ -1554,8 +1555,7 @@ func (s *Suite) Test_Package_checkDistfilesInDistinfo__no_distfiles(c *check.C) 
 	t.CreateFileLines("category/package/distinfo",
 		CvsID,
 		"",
-		"SHA1 (distfile-1.0.tar.gz) = 1234",
-		"RMD160 (distfile-1.0.tar.gz) = 1234",
+		"BLAKE2s (distfile-1.0.tar.gz) = 1234",
 		"SHA512 (distfile-1.0.tar.gz) = 1234",
 		"Size (distfile-1.0.tar.gz) = 1234 bytes")
 	t.Chdir("category/package")
@@ -1563,7 +1563,7 @@ func (s *Suite) Test_Package_checkDistfilesInDistinfo__no_distfiles(c *check.C) 
 
 	G.Check(".")
 
-	// For completely empty distinfo files, the check is skipped.
+	// For completely empty DISTFILES, the check is skipped.
 	t.CheckOutputLines(
 		"WARN: distinfo: This file should not exist.")
 }
