@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5306 2021/10/28 10:03:21 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5307 2021/10/28 11:46:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8073,3 +8073,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-pybind11 to 2.8.1 [adam 2021-10-28]
 	Updated x11/libxcvt to 0.1.1 [wiz 2021-10-28]
 	Updated devel/nss to 3.72 [wiz 2021-10-28]
+	Updated devel/py-mercurial to 5.9.3 [wiz 2021-10-28]
