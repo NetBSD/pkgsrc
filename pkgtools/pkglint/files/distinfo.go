@@ -5,6 +5,7 @@ import (
 	"crypto/sha1"
 	"crypto/sha512"
 	"encoding/hex"
+	"golang.org/x/crypto/blake2s"
 	"golang.org/x/crypto/ripemd160"
 	hashpkg "hash"
 	"io"
@@ -146,10 +147,16 @@ func (ck *distinfoLinesChecker) checkAlgorithms(info distinfoFileInfo) {
 	switch {
 	case algorithms == "SHA1" && isPatch != no:
 		return
-	case algorithms == "RMD160, SHA512, Size" && isPatch != yes:
+	case algorithms == "BLAKE2s, SHA512, Size" && isPatch != yes:
 		return
-	case algorithms == "SHA1, RMD160, SHA512, Size" && isPatch != yes:
-		return // TODO: remove as of 2021Q3
+	case G.Wip && algorithms == "RMD160, SHA512, Size" && isPatch != yes:
+		// TODO: remove after 2021Q4. Until then, allow pkgsrc-wip to
+		//  be used with the stable 2021Q3.
+		return
+	case G.Wip && algorithms == "SHA1, BLAKE2s, SHA512, Size" && isPatch != yes:
+		// TODO: remove after 2021Q4. Until then, allow pkgsrc-wip to
+		//  be used with the stable 2021Q3.
+		return
 	}
 
 	switch {
@@ -160,7 +167,7 @@ func (ck *distinfoLinesChecker) checkAlgorithms(info distinfoFileInfo) {
 		line.Errorf("Wrong checksum algorithms %s for %s.", algorithms, filename)
 		line.Explain(
 			"Distfiles that are downloaded from external sources must have the",
-			"checksum algorithms RMD160, SHA512, Size.",
+			"checksum algorithms BLAKE2s, SHA512, Size.",
 			"",
 			"Patch files from pkgsrc must have only the SHA1 hash.")
 
@@ -191,10 +198,10 @@ func (ck *distinfoLinesChecker) checkAlgorithms(info distinfoFileInfo) {
 // added to the distinfo file via an autofix.
 func (ck *distinfoLinesChecker) checkAlgorithmsDistfile(info distinfoFileInfo) {
 	line := info.line()
-	line.Errorf("Expected RMD160, SHA512, Size checksums for %q, got %s.",
+	line.Errorf("Expected BLAKE2s, SHA512, Size checksums for %q, got %s.",
 		info.filename(), info.algorithms())
 
-	algorithms := [...]string{"RMD160", "SHA512", "Size"}
+	algorithms := [...]string{"BLAKE2s", "SHA512", "Size"}
 
 	missing := map[string]bool{}
 	for _, alg := range algorithms {
@@ -266,8 +273,12 @@ func (ck *distinfoLinesChecker) checkAlgorithmsDistfile(info distinfoFileInfo) {
 		switch alg {
 		case "SHA1":
 			return computeHash(sha1.New())
-		case "RMD160":
+		case "RMD160": // TODO: remove after 2021Q4
 			return computeHash(ripemd160.New())
+		case "BLAKE2s":
+			blake, err := blake2s.New256(nil)
+			assertNil(err, "blake2s")
+			return computeHash(blake)
 		case "SHA512":
 			return computeHash(sha512.New())
 		default:
@@ -447,7 +458,9 @@ func (info *distinfoFileInfo) algorithms() string {
 
 func (info *distinfoFileInfo) hasDistfileAlgorithms() bool {
 	h := info.hashes
-	if len(h) == 4 && // TODO: remove as of 2021Q3
+	// TODO: remove after 2021Q4. Until then, allow pkgsrc-wip to
+	//  be used with the stable 2021Q3.
+	if G.Wip && len(h) == 4 &&
 		h[0].algorithm == "SHA1" &&
 		h[1].algorithm == "RMD160" &&
 		h[2].algorithm == "SHA512" &&
@@ -455,7 +468,7 @@ func (info *distinfoFileInfo) hasDistfileAlgorithms() bool {
 		return true
 	}
 	return len(h) == 3 &&
-		h[0].algorithm == "RMD160" &&
+		h[0].algorithm == "BLAKE2s" &&
 		h[1].algorithm == "SHA512" &&
 		h[2].algorithm == "Size"
 }
