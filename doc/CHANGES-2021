@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5304 2021/10/28 09:09:44 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5305 2021/10/28 09:56:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8071,3 +8071,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/python27 to 2.7.18nb5 [gutteridge 2021-10-27]
 	Updated net/haproxy to 2.4.7 [adam 2021-10-28]
 	Updated devel/py-pybind11 to 2.8.1 [adam 2021-10-28]
+	Updated x11/libxcvt to 0.1.1 [wiz 2021-10-28]
