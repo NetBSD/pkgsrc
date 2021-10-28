@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2021/10/13 12:35:29 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2021/10/28 13:05:32 wiz Exp $
 #
 # Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
 
@@ -31,7 +31,7 @@ INSTALLATION_DIRS+=	share/doc/mercurial
 .include "options.mk"
 
 USE_TOOLS+=		bash:test
-# Known test failures as of 5.9.2
+# Known test failures as of 5.9.3
 # test-removeemptydirs.t
 # https://bz.mercurial-scm.org/show_bug.cgi?id=6587
 #
