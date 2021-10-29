@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/10/21 20:48:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/10/29 16:15:08 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -13,6 +13,8 @@ ${PYSITELIB}/sphinxcontrib/htmlhelp/__init__.pyo
 ${PYSITELIB}/sphinxcontrib/htmlhelp/locales/.tx/config
 ${PYSITELIB}/sphinxcontrib/htmlhelp/locales/ar/LC_MESSAGES/sphinxcontrib.htmlhelp.mo
 ${PYSITELIB}/sphinxcontrib/htmlhelp/locales/ar/LC_MESSAGES/sphinxcontrib.htmlhelp.po
+${PYSITELIB}/sphinxcontrib/htmlhelp/locales/bg/LC_MESSAGES/sphinxcontrib.htmlhelp.mo
+${PYSITELIB}/sphinxcontrib/htmlhelp/locales/bg/LC_MESSAGES/sphinxcontrib.htmlhelp.po
 ${PYSITELIB}/sphinxcontrib/htmlhelp/locales/bn/LC_MESSAGES/sphinxcontrib.htmlhelp.mo
 ${PYSITELIB}/sphinxcontrib/htmlhelp/locales/bn/LC_MESSAGES/sphinxcontrib.htmlhelp.po
 ${PYSITELIB}/sphinxcontrib/htmlhelp/locales/ca/LC_MESSAGES/sphinxcontrib.htmlhelp.mo
@@ -92,6 +94,8 @@ ${PYSITELIB}/sphinxcontrib/htmlhelp/locales/sk/LC_MESSAGES/sphinxcontrib.htmlhel
 ${PYSITELIB}/sphinxcontrib/htmlhelp/locales/sl/LC_MESSAGES/sphinxcontrib.htmlhelp.mo
 ${PYSITELIB}/sphinxcontrib/htmlhelp/locales/sl/LC_MESSAGES/sphinxcontrib.htmlhelp.po
 ${PYSITELIB}/sphinxcontrib/htmlhelp/locales/sphinxcontrib.htmlhelp.pot
+${PYSITELIB}/sphinxcontrib/htmlhelp/locales/sq/LC_MESSAGES/sphinxcontrib.htmlhelp.mo
+${PYSITELIB}/sphinxcontrib/htmlhelp/locales/sq/LC_MESSAGES/sphinxcontrib.htmlhelp.po
 ${PYSITELIB}/sphinxcontrib/htmlhelp/locales/sr/LC_MESSAGES/sphinxcontrib.htmlhelp.mo
 ${PYSITELIB}/sphinxcontrib/htmlhelp/locales/sr/LC_MESSAGES/sphinxcontrib.htmlhelp.po
 ${PYSITELIB}/sphinxcontrib/htmlhelp/locales/sr@latin/LC_MESSAGES/sphinxcontrib.htmlhelp.mo
@@ -102,6 +106,8 @@ ${PYSITELIB}/sphinxcontrib/htmlhelp/locales/sv/LC_MESSAGES/sphinxcontrib.htmlhel
 ${PYSITELIB}/sphinxcontrib/htmlhelp/locales/sv/LC_MESSAGES/sphinxcontrib.htmlhelp.po
 ${PYSITELIB}/sphinxcontrib/htmlhelp/locales/ta/LC_MESSAGES/sphinxcontrib.htmlhelp.mo
 ${PYSITELIB}/sphinxcontrib/htmlhelp/locales/ta/LC_MESSAGES/sphinxcontrib.htmlhelp.po
+${PYSITELIB}/sphinxcontrib/htmlhelp/locales/te/LC_MESSAGES/sphinxcontrib.htmlhelp.mo
+${PYSITELIB}/sphinxcontrib/htmlhelp/locales/te/LC_MESSAGES/sphinxcontrib.htmlhelp.po
 ${PYSITELIB}/sphinxcontrib/htmlhelp/locales/tr/LC_MESSAGES/sphinxcontrib.htmlhelp.mo
 ${PYSITELIB}/sphinxcontrib/htmlhelp/locales/tr/LC_MESSAGES/sphinxcontrib.htmlhelp.po
 ${PYSITELIB}/sphinxcontrib/htmlhelp/locales/uk_UA/LC_MESSAGES/sphinxcontrib.htmlhelp.mo
