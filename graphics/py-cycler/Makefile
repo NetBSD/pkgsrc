@@ -1,20 +1,18 @@
-# $NetBSD: Makefile,v 1.2 2016/08/18 11:51:45 richard Exp $
+# $NetBSD: Makefile,v 1.3 2021/10/29 08:37:03 adam Exp $
 
-DISTNAME=		cycler-0.10.0
-PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		1
-CATEGORIES=		graphics python
-MASTER_SITES=		${MASTER_SITE_GITHUB:=matplotlib/}
-GITHUB_PROJECT=		cycler
-GITHUB_TAG=		v${PKGVERSION_NOREV}
-DIST_SUBDIR=		cycler
+DISTNAME=	cycler-0.11.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	graphics python
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/cycler/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://matplotlib.org/cycler
-COMMENT=		Composable style cycles
-LICENSE=		2-clause-bsd
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/matplotlib/cycler
+COMMENT=	Composable style cycles
+LICENSE=	2-clause-bsd
 
-DEPENDS+=		${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
