@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.10 2021/05/16 19:57:35 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/10/29 21:11:25 gutteridge Exp $
 bin/link-generator
 bin/link-parser
 include/link-grammar/dict-api.h
+include/link-grammar/dict-defines.h
 include/link-grammar/dict-structures.h
 include/link-grammar/link-features.h
 include/link-grammar/link-includes.h
