@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2021/10/23 19:27:10 pin Exp $
+# $NetBSD: Makefile,v 1.9 2021/10/29 08:05:08 pin Exp $
 
 DISTNAME=	git-cliff-0.4.2
 CATEGORIES=	devel
@@ -11,6 +11,8 @@ COMMENT=	Highly customizable Changelog Generator
 LICENSE=	gnu-gpl-v3
 
 .include "cargo-depends.mk"
+
+USE_TOOLS+=		pkg-config
 
 INSTALLATION_DIRS=	bin
 
