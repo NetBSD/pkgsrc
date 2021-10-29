@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5319 2021/10/29 17:06:53 scole Exp $
+$NetBSD: CHANGES-2021,v 1.5320 2021/10/29 21:11:39 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8091,3 +8091,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-sphinx to 4.2.0 [adam 2021-10-29]
 	Updated databases/py-peewee to 3.14.8 [adam 2021-10-29]
 	Updated textproc/split-thai to 2.11 [scole 2021-10-29]
+	Updated textproc/link-grammar to 5.10.2 [gutteridge 2021-10-29]
