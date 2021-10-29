@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5316 2021/10/29 08:40:59 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5317 2021/10/29 12:22:13 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8085,3 +8085,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/lighttpd to 1.4.61 [wiz 2021-10-29]
 	Updated graphics/py-cycler to 0.11.0 [adam 2021-10-29]
 	Updated devel/py-dulwich to 0.20.26 [adam 2021-10-29]
+	Updated devel/mob to 2.0.0 [schmonz 2021-10-29]
