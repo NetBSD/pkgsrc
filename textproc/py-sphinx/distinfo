@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.54 2021/10/26 11:23:13 nia Exp $
+$NetBSD: distinfo,v 1.55 2021/10/29 16:16:41 adam Exp $
 
-BLAKE2s (Sphinx-3.5.4.tar.gz) = 34dcc3f6b4e734af4603e75f501bada71ba3603260769c936aa67e60e23b6e47
-SHA512 (Sphinx-3.5.4.tar.gz) = 853379f3b0496772846be9beb072c2c8a69ff899ffe4c6435b448ea639a32138c61403f9c14f62f4f78b2e526a2ee7c05b4196eabdeee37bcae6aa98df992125
-Size (Sphinx-3.5.4.tar.gz) = 5911093 bytes
+BLAKE2s (Sphinx-4.2.0.tar.gz) = 1f1d54e6a70bf5a123c7e02bcc010fc2d1d8875345254331553d6083da36ca19
+SHA512 (Sphinx-4.2.0.tar.gz) = 6c6a2424362805b758c43136a9293dcfb02d45af6e6dc2dd7ed9382f6ae04ecfbd416efeecb42219b67d026a4a0b007500e87b20d81847ab48e2ccfcdca52e75
+Size (Sphinx-4.2.0.tar.gz) = 6503692 bytes
+SHA1 (patch-setup.py) = 6e34e3917deaa935180f52ef340f41601c7e717b
