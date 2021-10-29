@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.102 2021/10/21 07:46:39 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2021/10/29 07:11:36 wiz Exp $
 
-DISTNAME=	lighttpd-1.4.60
-PKGREVISION=	1
+DISTNAME=	lighttpd-1.4.61
 CATEGORIES=	www
 MASTER_SITES=	https://download.lighttpd.net/lighttpd/releases-1.4.x/
 EXTRACT_SUFX=	.tar.xz
@@ -13,7 +12,7 @@ LICENSE=	modified-bsd
 
 USE_LIBTOOL=			yes
 SHLIBTOOL_OVERRIDE=		# empty
-USE_TOOLS+=			pkg-config
+USE_TOOLS+=			pkg-config perl:test
 GNU_CONFIGURE=			yes
 GNU_CONFIGURE_LIBSUBDIR=	${PKGBASE}
 CONFIGURE_ARGS+=		--with-pcre
