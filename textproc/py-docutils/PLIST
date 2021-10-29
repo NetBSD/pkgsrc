@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2021/10/27 15:29:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2021/10/29 16:13:22 adam Exp $
 bin/rst2html-${PYVERSSUFFIX}
 bin/rst2html4-${PYVERSSUFFIX}
 bin/rst2html5-${PYVERSSUFFIX}
@@ -141,6 +141,9 @@ ${PYSITELIB}/docutils/parsers/rst/directives/admonitions.pyo
 ${PYSITELIB}/docutils/parsers/rst/directives/body.py
 ${PYSITELIB}/docutils/parsers/rst/directives/body.pyc
 ${PYSITELIB}/docutils/parsers/rst/directives/body.pyo
+${PYSITELIB}/docutils/parsers/rst/directives/html.py
+${PYSITELIB}/docutils/parsers/rst/directives/html.pyc
+${PYSITELIB}/docutils/parsers/rst/directives/html.pyo
 ${PYSITELIB}/docutils/parsers/rst/directives/images.py
 ${PYSITELIB}/docutils/parsers/rst/directives/images.pyc
 ${PYSITELIB}/docutils/parsers/rst/directives/images.pyo
@@ -425,7 +428,9 @@ ${PYSITELIB}/docutils/writers/s5_html/themes/big-black/framing.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/big-black/pretty.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/big-white/framing.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/big-white/pretty.css
+${PYSITELIB}/docutils/writers/s5_html/themes/default/blank.gif
 ${PYSITELIB}/docutils/writers/s5_html/themes/default/framing.css
+${PYSITELIB}/docutils/writers/s5_html/themes/default/iepngfix.htc
 ${PYSITELIB}/docutils/writers/s5_html/themes/default/opera.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/default/outline.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/default/pretty.css
