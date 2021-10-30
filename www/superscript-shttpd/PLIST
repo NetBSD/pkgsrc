@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2021/10/30 09:14:05 schmonz Exp $
+bin/cgi-config
+bin/cgi-dispatch
+bin/cgi-httpd
+bin/cgi-success
+bin/cgiuser-config
+bin/cgiuser-httpd
+bin/constant-config
+bin/constant-httpd
+bin/echo-config
+bin/echo-httpd
+bin/redir-config
+bin/redir-data
+bin/redir-httpd
