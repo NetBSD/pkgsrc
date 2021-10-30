@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5329 2021/10/30 12:37:48 rhialto Exp $
+$NetBSD: CHANGES-2021,v 1.5330 2021/10/30 14:51:17 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8101,3 +8101,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/p5-YAML-PP to 0.029 [wen 2021-10-30]
 	Added www/superscript-shttpd version 0.53 [schmonz 2021-10-30]
 	Updated fonts/recursive-ttf to 1.082 [rhialto 2021-10-30]
+	Updated fonts/FiraCode to 5.2 [rhialto 2021-10-30]
