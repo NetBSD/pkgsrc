@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:27:00 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/10/30 14:50:50 rhialto Exp $
 
-BLAKE2s (FiraCode-2.tar.gz) = f8c522572f63cdfa7e26ea0f91f21ea57af30b94a3fbe95fc664983db32f7d99
-SHA512 (FiraCode-2.tar.gz) = 313f11f1550d964119c2576bc988ca7d009ebd670c93b3c4a29583f91499166816ed326fdb5a5082ed7c7a33c49263e627a3356cc739aa1a8e34689820081399
-Size (FiraCode-2.tar.gz) = 7100481 bytes
+BLAKE2s (FiraCode-5.2.tar.gz) = 6c436e85a5a9982b474e50c7c3d8eb4da17cd50527d21efcbc8fc0aa77a7e8af
+SHA512 (FiraCode-5.2.tar.gz) = 10247bf8b72f4d44a5b5d727edeae2baee549b6654e12469ad3ab75d3926635b4b2cdfcbb2b9b4c89b28d7c5411c428c00729f94567dad3bc0dc23ff5446ce2d
+Size (FiraCode-5.2.tar.gz) = 4875970 bytes
