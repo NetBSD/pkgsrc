@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5324 2021/10/30 07:46:06 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5325 2021/10/30 08:46:12 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8096,3 +8096,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/p5-PPIx-QuoteLike to 0.018 [wen 2021-10-30]
 	Updated textproc/p5-PDF-API2 to 2.042 [wen 2021-10-30]
 	Updated lang/php73 to 7.3.32 [taca 2021-10-30]
+	Updated textproc/p5-Pod-Eventual to 0.094002 [wen 2021-10-30]
