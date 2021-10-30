@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5327 2021/10/30 09:02:03 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5328 2021/10/30 09:15:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8099,3 +8099,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/p5-Pod-Eventual to 0.094002 [wen 2021-10-30]
 	Updated textproc/p5-Text-Template to 1.60 [wen 2021-10-30]
 	Updated textproc/p5-YAML-PP to 0.029 [wen 2021-10-30]
+	Added www/superscript-shttpd version 0.53 [schmonz 2021-10-30]
