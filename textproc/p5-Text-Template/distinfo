@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 11:22:44 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/10/30 08:55:08 wen Exp $
 
-BLAKE2s (Text-Template-1.59.tar.gz) = 7f8aa3f9279bb4f8b4404a33699585cdd57af68e0851eac91a9efb1444c4bc1e
-SHA512 (Text-Template-1.59.tar.gz) = 18c56dfe10aa3e7af7ea4821c1d8002d89eb7fdf46917877e7e132cfee59783a91953255f79a355f435eff16304ae206e59557328ef51593745ae6c50e3acab7
-Size (Text-Template-1.59.tar.gz) = 50318 bytes
+BLAKE2s (Text-Template-1.60.tar.gz) = 372925c7e357094494db73100ca1cd4826c56318a07be4e4e2be43f5c05c3995
+SHA512 (Text-Template-1.60.tar.gz) = 14dbaa5075691bc83d8f9ea58b6f86d6444948f9cbd7c27b0aac041c833d078940db7554268d3ff45f711a5646181ddb010f31894de23dc7226e79a103492e60
+Size (Text-Template-1.60.tar.gz) = 50312 bytes
