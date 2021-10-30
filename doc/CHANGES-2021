@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5326 2021/10/30 08:56:02 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5327 2021/10/30 09:02:03 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8098,3 +8098,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/php73 to 7.3.32 [taca 2021-10-30]
 	Updated textproc/p5-Pod-Eventual to 0.094002 [wen 2021-10-30]
 	Updated textproc/p5-Text-Template to 1.60 [wen 2021-10-30]
+	Updated textproc/p5-YAML-PP to 0.029 [wen 2021-10-30]
