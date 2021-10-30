@@ -1,8 +1,10 @@
-# $NetBSD: options.mk,v 1.4 2020/01/03 19:23:27 jperkin Exp $
+# $NetBSD: options.mk,v 1.5 2021/10/30 07:46:10 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bison
 PKG_SUPPORTED_OPTIONS=	nls
-PKG_SUGGESTED_OPTIONS=	nls
+# TODO: avoid suggesting nls on macOS/x86_64 versions where bison will crash
+# schmonz reports 11.6 crashes, earlier likely doesn't, 12.0.1 doesn't
+PKG_SUGGESTED_OPTIONS=  nls
 
 PLIST_VARS+=		nls
 
