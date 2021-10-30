@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/01/31 15:44:47 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/10/30 13:46:42 rhialto Exp $
 share/fonts/X11/OTF/RecursiveMonoCslSt-BdItalic.otf
 share/fonts/X11/OTF/RecursiveMonoCslSt-Black.otf
 share/fonts/X11/OTF/RecursiveMonoCslSt-BlkItalic.otf
@@ -64,3 +64,19 @@ share/fonts/X11/OTF/RecursiveSansLnrSt-SmBdItalic.otf
 share/fonts/X11/OTF/RecursiveSansLnrSt-XBlk.otf
 share/fonts/X11/OTF/RecursiveSansLnrSt-XBlkItalic.otf
 @pkgdir share/fonts/X11/OTF
+share/fonts/X11/TTF/RecMonoCasual-Bold-${PKGVERSION}.ttf
+share/fonts/X11/TTF/RecMonoCasual-BoldItalic-${PKGVERSION}.ttf
+share/fonts/X11/TTF/RecMonoCasual-Italic-${PKGVERSION}.ttf
+share/fonts/X11/TTF/RecMonoCasual-Regular-${PKGVERSION}.ttf
+share/fonts/X11/TTF/RecMonoDuotone-Bold-${PKGVERSION}.ttf
+share/fonts/X11/TTF/RecMonoDuotone-BoldItalic-${PKGVERSION}.ttf
+share/fonts/X11/TTF/RecMonoDuotone-Italic-${PKGVERSION}.ttf
+share/fonts/X11/TTF/RecMonoDuotone-Regular-${PKGVERSION}.ttf
+share/fonts/X11/TTF/RecMonoLinear-Bold-${PKGVERSION}.ttf
+share/fonts/X11/TTF/RecMonoLinear-BoldItalic-${PKGVERSION}.ttf
+share/fonts/X11/TTF/RecMonoLinear-Italic-${PKGVERSION}.ttf
+share/fonts/X11/TTF/RecMonoLinear-Regular-${PKGVERSION}.ttf
+share/fonts/X11/TTF/RecMonoSemicasual-Bold-${PKGVERSION}.ttf
+share/fonts/X11/TTF/RecMonoSemicasual-BoldItalic-${PKGVERSION}.ttf
+share/fonts/X11/TTF/RecMonoSemicasual-Italic-${PKGVERSION}.ttf
+share/fonts/X11/TTF/RecMonoSemicasual-Regular-${PKGVERSION}.ttf
