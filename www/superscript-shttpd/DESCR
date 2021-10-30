@@ -1,0 +1,6 @@
+cgi-httpd, cgiuser-httpd, constant-httpd, echo-httpd, and redir-httpd
+are HTTP daemons designed to complement publicfile.
+
+Each instance of an shttpd daemon listens on a separate address, in a
+chroot directory (except for cgiuser-httpd), typically running as a
+nonprivileged user.
