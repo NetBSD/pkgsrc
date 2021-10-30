@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.24 2021/10/23 19:25:30 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.25 2021/10/30 20:00:24 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	adler32-1.2.0
@@ -126,6 +126,7 @@ CARGO_CRATE_DEPENDS+=	ppv-lite86-0.2.10
 CARGO_CRATE_DEPENDS+=	proc-macro-hack-0.5.19
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.28
 CARGO_CRATE_DEPENDS+=	proc-status-0.1.1
+CARGO_CRATE_DEPENDS+=	quick-xml-0.22.0
 CARGO_CRATE_DEPENDS+=	quote-1.0.9
 CARGO_CRATE_DEPENDS+=	rand-0.8.4
 CARGO_CRATE_DEPENDS+=	rand_chacha-0.3.1
@@ -164,8 +165,8 @@ CARGO_CRATE_DEPENDS+=	syn-1.0.74
 CARGO_CRATE_DEPENDS+=	syntect-4.6.0
 CARGO_CRATE_DEPENDS+=	tempfile-3.2.0
 CARGO_CRATE_DEPENDS+=	termimad-0.10.3
-CARGO_CRATE_DEPENDS+=	termimad-0.16.4
-CARGO_CRATE_DEPENDS+=	terminal-clipboard-0.2.1
+CARGO_CRATE_DEPENDS+=	termimad-0.17.0
+CARGO_CRATE_DEPENDS+=	terminal-clipboard-0.3.0
 CARGO_CRATE_DEPENDS+=	termux-clipboard-0.1.0
 CARGO_CRATE_DEPENDS+=	textwrap-0.11.0
 CARGO_CRATE_DEPENDS+=	thiserror-1.0.26
@@ -193,7 +194,7 @@ CARGO_CRATE_DEPENDS+=	winapi-0.3.9
 CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
 CARGO_CRATE_DEPENDS+=	winapi-util-0.1.5
 CARGO_CRATE_DEPENDS+=	winapi-x86_64-pc-windows-gnu-0.4.0
-CARGO_CRATE_DEPENDS+=	x11-clipboard-0.5.2
-CARGO_CRATE_DEPENDS+=	xcb-0.9.0
+CARGO_CRATE_DEPENDS+=	x11-clipboard-0.5.3
+CARGO_CRATE_DEPENDS+=	xcb-0.10.1
 CARGO_CRATE_DEPENDS+=	xml-rs-0.8.4
 CARGO_CRATE_DEPENDS+=	yaml-rust-0.4.5
