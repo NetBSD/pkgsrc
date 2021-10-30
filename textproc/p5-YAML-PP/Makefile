@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2021/09/05 02:29:42 wen Exp $
+# $NetBSD: Makefile,v 1.11 2021/10/30 09:01:22 wen Exp $
 
-DISTNAME=	YAML-PP-0.027
+DISTNAME=	YAML-PP-0.029
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TI/TINITA/}
