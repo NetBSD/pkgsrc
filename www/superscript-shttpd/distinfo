@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/10/30 09:14:05 schmonz Exp $
+
+BLAKE2s (shttpd-0.53.tar.gz) = 60a35da5985a0a68ec7d47a19f2aef7b4b05858f2ba0b15b51f8a8b051c1bee3
+SHA512 (shttpd-0.53.tar.gz) = 35cbe2cd85a90c55c2ada2b13f75b8cf06f0123abfb4609271134c2d7deff99dc9752db37fb3ca1ae2b7131da53285c7a4f5a996edb37cebcdab912396c0b599
+Size (shttpd-0.53.tar.gz) = 54439 bytes
+SHA1 (patch-Makefile) = 7ee8313d7cd38cdb1153c8b5965d018ee27bf769
+SHA1 (patch-leapsecs__read.c) = 395d516f5fa737802903bfde3fa6b479d82da2dc
