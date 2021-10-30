@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5322 2021/10/30 02:17:32 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5323 2021/10/30 02:22:13 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8094,3 +8094,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/link-grammar to 5.10.2 [gutteridge 2021-10-29]
 	Updated mail/neomutt to 20211029 [wiz 2021-10-29]
 	Updated textproc/p5-PPIx-QuoteLike to 0.018 [wen 2021-10-30]
+	Updated textproc/p5-PDF-API2 to 2.042 [wen 2021-10-30]
