@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.39 2021/10/26 11:30:19 nia Exp $
+$NetBSD: distinfo,v 1.40 2021/10/31 08:27:09 schmonz Exp $
 
-BLAKE2s (URI-5.09.tar.gz) = e2f3b47061010c535c4fc3d9083ea33d919d19adb5ae0594bfcd2b4cad54c1e5
-SHA512 (URI-5.09.tar.gz) = b9af77064abb8cb83900a02c18b3d5b8f840559f0f925be71b18bcdb4a24c40d654ccf9969d72b7d8930ea17ae4f4f4291fd327bb0b93c204c8f819a1776b8bb
-Size (URI-5.09.tar.gz) = 108897 bytes
+BLAKE2s (URI-5.10.tar.gz) = 9256e9b05fa1c31db35f2c983124280999e125f54bd5a2ea0e8260e02ff6f0f5
+SHA512 (URI-5.10.tar.gz) = 6ce53b258c2f1115e58ca858beec0c055452993b83abf3ebf23784e00fcbe636f3b7a460a2016923f9fab0e0bbd112475048eb9671d6d1e1c3b4db33a503efb5
+Size (URI-5.10.tar.gz) = 109471 bytes
