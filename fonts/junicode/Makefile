@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2021/10/31 14:10:18 rhialto Exp $
+# $NetBSD: Makefile,v 1.5 2021/10/31 14:11:20 rhialto Exp $
 
 DISTNAME=	junicode-1.002
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=junicode/}
 EXTRACT_SUFX=	.zip
-#EXTRACT_DIR=	${WRKDIR}/junicode
 EXTRACT_DIR=	${WRKSRC}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
