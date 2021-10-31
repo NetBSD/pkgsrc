@@ -1,0 +1,12 @@
+A simple and easy to use Wikipedia Text User Interface.
+
+wiki-tui currently has these features:
+-Browse through Wikipedia (Set the language by changing the url in the config)
+-Uses webscraping and a custom view to display wikipedia articles in the
+terminal
+-Use links to open other articles
+
+These features are planned:
+-View and interact with more elements of wikipedia articles (like tables,
+images, etc.)
+-Better error handling
