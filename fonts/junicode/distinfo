@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:27:16 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/10/31 14:10:18 rhialto Exp $
 
-BLAKE2s (junicode-0-7-8.zip) = 15b0d24a09743f4dc526c348b3a43d2def0d4cfe4066957c365accf8ab9fe1fe
-SHA512 (junicode-0-7-8.zip) = f6c9da3c46a643bf5aa86ddbc42246d30e68644121eaf7ccbc2f3ee8d4a9228fcd6c03fadbc7e92032a12cd00d7b527ce2500bf9d6030e5347f824d96471f65f
-Size (junicode-0-7-8.zip) = 1640500 bytes
+BLAKE2s (junicode-1.002.zip) = 65812b7abcd113fa1cd353079f61795d312fd614dd668186560bae1bd3d1b649
+SHA512 (junicode-1.002.zip) = 1738802f70b0029567be608ed36481864f8f7f029fd1c45d73fa25d092d49c978c51df1c01147b7b176e9b0409d7f15d5713a6daf1b1b269636bc6324b2c6f37
+Size (junicode-1.002.zip) = 1451694 bytes
