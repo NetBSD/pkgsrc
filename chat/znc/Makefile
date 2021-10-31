@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2021/09/29 19:00:24 adam Exp $
+# $NetBSD: Makefile,v 1.28 2021/10/31 07:52:00 kim Exp $
 
 DISTNAME=	znc-1.8.2
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	chat
 MASTER_SITES=	https://znc.in/releases/archive/
 
@@ -21,9 +21,6 @@ GCC_REQD+=	4.7
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
 PLIST_SRC=	PLIST
-PLIST_SUBST+=	ZNC_USER="${ZNC_USER}"
-PLIST_SUBST+=	PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
-PLIST_SUBST+=	PKG_PREFIX="${PREFIX}"
 
 BUILD_DEFS+=	VARBASE
 BUILD_DEFS+=	PKG_SYSCONFDIR
@@ -53,7 +50,6 @@ SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
 SUBST_MESSAGE.man=	Fixing absolute paths in znc.1 manpage.
 SUBST_FILES.man=	man/znc.1
-SUBST_SED.man=		-e 's,\~\/\.znc,${PKG_SYSCONFDIR},g'
 SUBST_SED.man+=		-e 's,\/usr\/local,${PREFIX},g'
 
 .include "options.mk"
