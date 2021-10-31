@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5338 2021/10/31 08:46:10 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5339 2021/10/31 08:49:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8113,3 +8113,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/py-uncompyle6 to 3.8.0 [adam 2021-10-31]
 	Updated devel/cmake to 3.21.4 [adam 2021-10-31]
 	Updated devel/cmake-gui to 3.21.4 [adam 2021-10-31]
+	Updated graphics/p5-GraphViz2 to 2.66 [schmonz 2021-10-31]
