@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 18:28:16 asau Exp $
+# $NetBSD: Makefile,v 1.12 2021/10/31 13:26:22 rhialto Exp $
 
 DISTNAME=	adobe-cidfonts-20000901
 CATEGORIES=	fonts
-MASTER_SITES=	ftp://ftp.oreilly.com/pub/examples/nutshell/cjkv/adobe/samples/
+MASTER_SITES=	http://www.minix3.org/distfiles-backup/adobe-cidfonts/
+# No longer available from ftp://ftp.oreilly.com/pub/examples/nutshell/cjkv/adobe/samples/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Adobe CID-keyed O'Reilly fonts for CJK
