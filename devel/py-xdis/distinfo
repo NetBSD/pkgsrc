@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.36 2021/10/26 10:19:17 nia Exp $
+$NetBSD: distinfo,v 1.37 2021/10/31 08:40:03 adam Exp $
 
-BLAKE2s (xdis-5.0.13.tar.gz) = 29c64444096d9711c12ab1f9481b5a834e014ccbb0d7da4a240d58a73440223b
-SHA512 (xdis-5.0.13.tar.gz) = 364321159410e511cdfc2b941f5b9283323b4c45d15b401f39228938fe7b21b2db5c4345807566e71d1c08653fa3b94dab9b5da1d7ffcab8ec97b2f9cc94a557
-Size (xdis-5.0.13.tar.gz) = 293239 bytes
+BLAKE2s (xdis-6.0.2.tar.gz) = 10777c81bcad1996ed90b467d127b42f7dccf4e2db51c4537168520921ecd87a
+SHA512 (xdis-6.0.2.tar.gz) = f5b3dd17459135d3e53daaec88ca3645483eadc47b9d240eb8e7016639ecfa1fc03f962e2fb31206981feac540e1b070dd8588672c43d8906f6e14578f6eb5fb
+Size (xdis-6.0.2.tar.gz) = 355548 bytes
