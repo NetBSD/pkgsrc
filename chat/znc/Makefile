@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2021/10/31 07:52:00 kim Exp $
+# $NetBSD: Makefile,v 1.29 2021/10/31 08:15:20 kim Exp $
 
 DISTNAME=	znc-1.8.2
 PKGREVISION=	8
@@ -50,7 +50,7 @@ SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
 SUBST_MESSAGE.man=	Fixing absolute paths in znc.1 manpage.
 SUBST_FILES.man=	man/znc.1
-SUBST_SED.man+=		-e 's,\/usr\/local,${PREFIX},g'
+SUBST_SED.man=		-e 's,\/usr\/local,${PREFIX},g'
 
 .include "options.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
