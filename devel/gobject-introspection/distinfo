@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.44 2021/10/31 22:30:50 tnn Exp $
+$NetBSD: distinfo,v 1.45 2021/10/31 22:39:37 tnn Exp $
 
 BLAKE2s (gobject-introspection-1.68.0.tar.xz) = f702638b2a8ddf0e3f692a11e112a437128da0f89b6c40efa3b3acf07ef79fd6
 SHA512 (gobject-introspection-1.68.0.tar.xz) = d2e64c119aa500b624a57baa2cebe9126ab100003d98b771f4fb51cf92748635de352997f702f40656f7c665f3dfedfbfa19912cc7a2d039d254555243bbc381
 Size (gobject-introspection-1.68.0.tar.xz) = 1019732 bytes
-SHA1 (patch-gir_meson.build) = 787c0372b3c0679b91e711f22a936d6134793561
+SHA1 (patch-gir_meson.build) = 428739a91aad88fcc003f0e3aaca68f1f8631a91
 SHA1 (patch-giscanner_ast.py) = 06b3d8903d126028d2d5144c6d6a508209c834b9
 SHA1 (patch-giscanner_ccompiler.py) = f65622421968e9daef19bafc4bd3c3d210546389
 SHA1 (patch-tests_scanner_Regress-1.0-expected.gir) = f6f044a24045d38d78b9c511813be8442ce45b16
