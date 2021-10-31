@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5331 2021/10/30 20:00:45 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5332 2021/10/31 08:25:58 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8103,3 +8103,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated fonts/recursive-ttf to 1.082 [rhialto 2021-10-30]
 	Updated fonts/FiraCode to 5.2 [rhialto 2021-10-30]
 	Updated sysutils/broot to 1.7.0 [pin 2021-10-30]
+	Updated www/p5-WWW-Mechanize to 2.06 [schmonz 2021-10-31]
