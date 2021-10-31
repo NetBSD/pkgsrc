@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1588 2021/10/30 09:14:57 schmonz Exp $
+# $NetBSD: Makefile,v 1.1589 2021/10/31 08:34:50 pin Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -1049,6 +1049,7 @@ SUBDIR+=	webnew
 SUBDIR+=	websvn
 SUBDIR+=	weex
 SUBDIR+=	whisker
+SUBDIR+=	wiki-tui
 SUBDIR+=	wiliki
 SUBDIR+=	wmd
 SUBDIR+=	wordpress
