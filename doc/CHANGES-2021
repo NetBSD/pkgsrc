@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5333 2021/10/31 08:27:18 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.5334 2021/10/31 08:28:59 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8105,3 +8105,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/broot to 1.7.0 [pin 2021-10-30]
 	Updated www/p5-WWW-Mechanize to 2.06 [schmonz 2021-10-31]
 	Updated www/p5-URI to 5.10 [schmonz 2021-10-31]
+	Updated www/p5-libwww to 6.58 [schmonz 2021-10-31]
