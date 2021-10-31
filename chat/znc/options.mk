@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2019/10/01 13:49:58 nia Exp $
+# $NetBSD: options.mk,v 1.4 2021/10/31 07:47:06 kim Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.znc
-PKG_SUPPORTED_OPTIONS=	inet6 nls perl python sasl-cyrus tcl
-PKG_SUGGESTED_OPTIONS=	inet6 nls
+PKG_SUPPORTED_OPTIONS=	icu inet6 nls perl python sasl-cyrus tcl
+PKG_SUGGESTED_OPTIONS=	icu inet6 nls
 
 PKG_OPTIONS_LEGACY_OPTS+=	sasl:sasl-cyrus
 
@@ -15,17 +15,22 @@ CMAKE_ARGS+=	-DWANT_IPV6=ON
 CMAKE_ARGS+=	-DWANT_IPV6=OFF
 .endif
 
+# Charset support
+.if !empty(PKG_OPTIONS:Micu)
+CMAKE_ARGS+=	-DWANT_ICU=ON
+.  include "../../textproc/icu/buildlink3.mk"
+.else
+CMAKE_ARGS+=	-DWANT_ICU=OFF
+.endif
+
 # Native Language support
 .if !empty(PKG_OPTIONS:Mnls)
 USE_TOOLS+=	msgfmt
 PLIST_SRC+=	PLIST.nls
 CMAKE_ARGS+=	-DWANT_I18N=ON
-CMAKE_ARGS+=	-DWANT_ICU=ON
 .  include "../../devel/boost-libs/buildlink3.mk"
-.  include "../../textproc/icu/buildlink3.mk"
 .else
 CMAKE_ARGS+=	-DWANT_I18N=OFF
-CMAKE_ARGS+=	-DWANT_ICU=OFF
 .endif
 
 # Perl support
