@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2021/09/29 19:00:50 adam Exp $
+# $NetBSD: Makefile,v 1.58 2021/10/31 23:43:41 gdt Exp $
 
-DISTNAME=		tqsl-2.5.7
-PKGREVISION=		1
+DISTNAME=		tqsl-2.5.8
 CATEGORIES=		ham
 MASTER_SITES=		http://www.arrl.org/files/file/LoTW%20Instructions/
 
@@ -20,26 +19,18 @@ USE_LANGUAGES+=		c c++11
 USE_LIBTOOL=		yes
 USE_CMAKE=		yes
 
-# There is an unresolved build failure, where -R for /usr/pkg/lib does
-# not precede /usr/X11R7/lib, and on a netbsd-5 system with base xorg,
-# an old version of pixman is found by the pkgsrc cairo.  The root
-# cause (aside from having two pixman versions installed) is ad hoc -L
-# usage in Makefile.am, without matching -R.
-
 CHECK_PORTABILITY_SKIP+=	osx_createdmg.sh
 
-do-configure:
-	(cd ${WRKSRC} ; \
-	cmake \
-	-DBDB_PREFIX=${PREFIX} \
-	-DBDB_INCLUDE_DIR=${PREFIX}/include/db5 \
-	-DCMAKE_BUILD_WITH_INSTALL_RPATH=TRUE \
-	-DCMAKE_INSTALL_PREFIX=${PREFIX} \
-	-DCMAKE_INSTALL_RPATH=${PREFIX}/lib \
-	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=FALSE \
-	-DCMAKE_INSTALL_MANDIR:PATH=${PKGMANDIR} \
-	.)
+# \todo Check/rationalize
+CMAKE_ARGS+=		-DBDB_PREFIX=${PREFIX}
+CMAKE_ARGS+=		-DBDB_INCLUDE_DIR=${PREFIX}/include/db5
+CMAKE_ARGS+=		-DCMAKE_BUILD_WITH_INSTALL_RPATH=TRUE
+CMAKE_ARGS+=		-DCMAKE_INSTALL_PREFIX=${PREFIX}
+CMAKE_ARGS+=		-DCMAKE_INSTALL_RPATH=${PREFIX}/lib
+CMAKE_ARGS+=		-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=FALSE
+CMAKE_ARGS+=		-DCMAKE_INSTALL_MANDIR:PATH=${PKGMANDIR}
 
+# \todo Move to doc
 post-install:
 	(cd ${WRKSRC} ;\
 	${INSTALL_DATA} LICENSE.txt ${DESTDIR}${PREFIX}/share/TrustedQSL/ \
