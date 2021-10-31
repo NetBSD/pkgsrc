@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.10 2017/09/03 08:53:05 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2021/10/31 19:58:56 jklos Exp $
 #
 
 DISTNAME=	nbench-byte-2.2.3
 PKGNAME=	${DISTNAME:S/-byte//}
 CATEGORIES=	benchmarks
-MASTER_SITES=	http://www.tux.org/~mayer/linux/
+MASTER_SITES=	http://www.math.utah.edu/~mayer/linux/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	https://www.tux.org/~mayer/linux/bmark.html
+HOMEPAGE=	https://www.math.utah.edu/~mayer/linux/bmark.html
 COMMENT=	Benchmark tool for CPU, FPU and memory
 
 MAKE_JOBS_SAFE=		no
+MKPIE_SUPPORTED=	no
 
 BUILD_TARGET=	default
 
