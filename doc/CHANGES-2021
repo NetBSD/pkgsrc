@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5336 2021/10/31 08:35:14 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.5337 2021/10/31 08:40:18 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8107,4 +8107,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/p5-URI to 5.10 [schmonz 2021-10-31]
 	Updated www/p5-libwww to 6.58 [schmonz 2021-10-31]
 	Updated www/p5-Mojolicious to 9.22 [schmonz 2021-10-31]
+	Added www/wiki-tui version 0.3.5 [pin 2021-10-31]
 	Updated textproc/p5-Feed-Find to 0.12 [schmonz 2021-10-31]
