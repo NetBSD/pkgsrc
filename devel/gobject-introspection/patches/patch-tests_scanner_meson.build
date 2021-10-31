@@ -1,0 +1,16 @@
+$NetBSD: patch-tests_scanner_meson.build,v 1.1 2021/10/31 23:05:47 tnn Exp $
+
+gircompiler requires libraries from the build area.
+
+--- tests/scanner/meson.build.orig	2021-03-19 14:22:12.000000000 +0000
++++ tests/scanner/meson.build
+@@ -105,6 +105,9 @@ regress_lib = shared_library('regress-1.
+ python_path = run_command(python, ['-c', 'import sys; sys.stdout.write(sys.executable)']).stdout()
+ 
+ gircompiler_command = [
++  'env',
++  'LD_LIBRARY_PATH=' + meson.current_build_dir() + '/../../girepository',
++  'DYLD_LIBRARY_PATH=' + meson.current_build_dir() + '/../../girepository',
+   gircompiler, '-o', '@OUTPUT@', '@INPUT@',
+   '--includedir', join_paths(build_root, 'gir'),
+   '--includedir', meson.current_build_dir(),
