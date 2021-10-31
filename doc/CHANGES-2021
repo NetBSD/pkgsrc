@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5341 2021/10/31 14:10:30 rhialto Exp $
+$NetBSD: CHANGES-2021,v 1.5342 2021/10/31 23:43:48 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8117,3 +8117,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-wrapt to 1.13.3 [adam 2021-10-31]
 	Updated converters/py-base58 to 2.1.1 [adam 2021-10-31]
 	Updated fonts/junicode to 1.002 [rhialto 2021-10-31]
+	Updated ham/trustedQSL to 2.5.8 [gdt 2021-10-31]
