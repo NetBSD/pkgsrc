@@ -1,20 +1,20 @@
-$NetBSD: patch-Makefile.in,v 1.6 2020/08/24 07:52:03 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.7 2021/11/01 07:07:52 wiz Exp $
 
 Correct locale location, use names gawk and pgawk unconditionally.
 Do not install extras.
 
---- Makefile.in.orig	2020-04-14 11:44:52.000000000 +0000
+--- Makefile.in.orig	2021-10-28 16:48:29.000000000 +0000
 +++ Makefile.in
-@@ -340,7 +340,7 @@ CFLAGS = @CFLAGS@
- CPP = @CPP@
- CPPFLAGS = @CPPFLAGS@
+@@ -352,7 +352,7 @@ CPPFLAGS = @CPPFLAGS@
+ CSCOPE = @CSCOPE@
+ CTAGS = @CTAGS@
  CYGPATH_W = @CYGPATH_W@
 -DEFS = -DDEFPATH=$(DEFPATH) -DDEFLIBPATH=$(DEFLIBPATH) -DSHLIBEXT=$(SHLIBEXT) -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"$(datadir)/locale"' -I"$(srcdir)/support"
 +DEFS = -DDEFPATH=$(DEFPATH) -DDEFLIBPATH=$(DEFLIBPATH) -DSHLIBEXT=$(SHLIBEXT) -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"$(prefix)/$(PKGLOCALEDIR)/locale"' -I"$(srcdir)/support"
  DEPDIR = @DEPDIR@
  ECHO_C = @ECHO_C@
  ECHO_N = @ECHO_N@
-@@ -499,7 +499,7 @@ EXTRA_DIST = \
+@@ -507,7 +507,7 @@ EXTRA_DIST = \
  
  # Build in awklib after in doc, since we want to extract
  # sample files if doc/gawk.texi changed.
@@ -23,7 +23,7 @@ Do not install extras.
  include_HEADERS = gawkapi.h
  BUILT_SOURCES = $(srcdir)/pc/Makefile.tst
  
-@@ -1241,9 +1241,7 @@ install-exec-hook:
+@@ -1251,9 +1251,7 @@ install-exec-hook:
  	(cd $(DESTDIR)$(bindir); \
  	name=`echo gawk | sed '$(transform)'` ; \
  	$(LN) $${name}$(EXEEXT) gawk-$(VERSION)$(EXEEXT) 2>/dev/null ; \
