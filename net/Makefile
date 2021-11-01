@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1427 2021/10/07 05:59:10 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1428 2021/11/01 21:47:12 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -329,6 +329,7 @@ SUBDIR+=	libmms
 SUBDIR+=	libnice
 SUBDIR+=	libnids
 SUBDIR+=	libnipper
+SUBDIR+=	libnpupnp
 SUBDIR+=	libpcap
 SUBDIR+=	libquic
 SUBDIR+=	libquvi
