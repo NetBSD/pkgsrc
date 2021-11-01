@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5382 2021/11/01 21:42:10 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5383 2021/11/01 21:43:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8158,3 +8158,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/protobuf to 3.19.0 [wiz 2021-11-01]
 	Updated devel/py-protobuf to 3.19.0 [wiz 2021-11-01]
 	Updated security/tor-browser to 10.5.10 [wiz 2021-11-01]
+	Updated textproc/py-markdown to 3.2.2 [wiz 2021-11-01]
