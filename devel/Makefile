@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3501 2021/10/10 01:13:53 wen Exp $
+# $NetBSD: Makefile,v 1.3502 2021/11/01 14:17:06 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -2984,6 +2984,7 @@ SUBDIR+=	sdcc
 SUBDIR+=	sdcc3
 SUBDIR+=	semantic
 SUBDIR+=	semi
+SUBDIR+=	sfsexp
 SUBDIR+=	sfslite
 SUBDIR+=	sgb
 SUBDIR+=	shtk
