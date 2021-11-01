@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2021/09/28 12:55:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2021/11/01 20:35:16 wiz Exp $
 
-LIBV4L_VERS=	1.20.0
+LIBV4L_VERS=	1.22.1
 DISTNAME=	v4l-utils-${LIBV4L_VERS}
 CATEGORIES=	graphics
 PKGNAME=	libv4l-${LIBV4L_VERS}
