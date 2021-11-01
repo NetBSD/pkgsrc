@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/11/01 21:47:01 wiz Exp $
+
+BLAKE2s (libnpupnp-4.1.5.tar.gz) = 37edfc35471842994f1533175a648febb9a7a0be928545fe9cfc0c2c407c90ec
+SHA512 (libnpupnp-4.1.5.tar.gz) = a7b2f620c846f2127220a062eab76f2c06b3eee4503d9f4922d7d6342feea19381be1486bf1cb033c44275f83ab90be3f8f2c09f0ec6f0af7367c314023c889e
+Size (libnpupnp-4.1.5.tar.gz) = 545672 bytes
+SHA1 (patch-src_threadutil_ThreadPool.cpp) = c08d8d859c3f1a4ba2df511f4e0866ae063c6f0b
