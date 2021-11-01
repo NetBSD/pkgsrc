@@ -95,6 +95,7 @@ cerf			Enable libcerf support.
 cg			Add support for the Cg compiler.
 cgi			Enable CGI support.
 chasen			Use ChaSen as the Japanese Morphological Analzer.
+chromaprint		Enable chromaprint (audio fingerprinting) support.
 cjk			Enable Chinese/Japanese/Korean support.
 clamav			Enable ClamAV support.
 claws-mail-jpilot	Add jpilot support.
@@ -491,6 +492,7 @@ libofx			Enable OFX support.
 libpcap			Enable libpcap support.
 libsmi			Use libsmi for SMI MIB support.
 libsoup			Use libsoup for SOUP support.
+libsoxr			Enable libsoxr (resample) support.
 libspiff		Use libspiff for XML shareable playlist support.
 libssh2			Use libssh2 for SSHv2 protocol support.
 libthai			Use libthai for Thai word segmentation.
@@ -575,12 +577,12 @@ mp4v2			Enable MP4 support using mp4v2.
 mpcdec			Enable Musepack decoder library support.
 mpcenc			Enable Musepack encoder library support.
 mpeg3			Enable libmpeg3 MPEG decoding library support.
-mpi	Enable use of the Message Passing Interface library.
 mpg123			Enable MP3 support using mpg123.
 mpg123-altivec		Enable altivec optimized dithering code.
 mpg123-fifo		Enable FIFO support for the mpg123 control interface.
 mpg123-with-fpu		Enable generic fpu code.
 mpg123-x86-dither	Enable runtime selection of optimized x86 dithering (like MMX or 3Dnow).
+mpi	Enable use of the Message Passing Interface library.
 mplayer-default-cflags	Enable default optimized CFLAGS.
 mplayer-menu		Enable support for user-defined menus.
 mplayer-runtime-cpudetection	Enable CPU detection at run time.
@@ -652,8 +654,8 @@ openmpi-vampirtrace	Build VampirTrace as part of OpenMPI.
 openssl			Enable OpenSSL support.
 opentracker-ipv6-only	Enable IPv6 mode for opentracker (disables IPv4).
 opentracker-restrictions	Enable support for whitelisting and restrict statistics in opentracker.
-oqgraph			Enable the Open Query GRAPH computation engine.
 opus			Enable opus support.
+oqgraph			Enable the Open Query GRAPH computation engine.
 oracle			Enable Oracle support.
 osmesa			Enable off-screen rendering.
 oss			Enable support for the Open Sound System audio library.
@@ -759,6 +761,7 @@ sendmail-milter		Build the milter with support for the Sendmail MTA.
 sendmail-socketmap	Enable Sendmail SOCKETMAP support.
 serf			Use serf HTTP/WebDAV client library.
 serialconsole		Enable use of serial console.
+shine			Enable shine (non-FPU mp3) support.
 shout			Enable SHOUTcast support.
 sidplay			Enable support for the SID audio file format.
 sieve			Enable sieve support.
