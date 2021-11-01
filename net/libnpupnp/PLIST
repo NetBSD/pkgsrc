@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/01 21:47:01 wiz Exp $
+include/npupnp/UpnpGlobal.h
+include/npupnp/UpnpInet.h
+include/npupnp/netif.h
+include/npupnp/upnp.h
+include/npupnp/upnpconfig.h
+include/npupnp/upnpdebug.h
+include/npupnp/upnpdescription.h
+include/npupnp/upnptools.h
+lib/libnpupnp.la
+lib/pkgconfig/libnpupnp.pc
