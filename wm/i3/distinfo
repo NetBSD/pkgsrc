@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.24 2021/10/26 11:25:13 nia Exp $
+$NetBSD: distinfo,v 1.25 2021/11/01 20:42:58 wiz Exp $
 
-BLAKE2s (i3-4.19.2.tar.xz) = 243d76e6ea940766a548ad5a292582a066ed0c948d6f727e0c40952d6e881557
-SHA512 (i3-4.19.2.tar.xz) = 58f08228d842cd3c2bc417b72f6279fcd7050879e5fd4064b2cb00edaf98b6605d5b2361608f9534991a0f8357d3294e881c7e314f33dc075241cc45ca5ed94d
-Size (i3-4.19.2.tar.xz) = 1277396 bytes
+BLAKE2s (i3-4.20.tar.xz) = c074d6f79095505008a7a9bc80121f402d755c3fe7bfeffeff09f651caf12932
+SHA512 (i3-4.20.tar.xz) = 7b184116664d2c3e097341e8008fea91bdc446a05177f50f5472890289e862fb41a11edc1d2b8d004347ce312219cb3d80c75840d3427330e3f0ee256163c198
+Size (i3-4.20.tar.xz) = 1286300 bytes
 SHA1 (patch-etc_config) = d3f649e8d4dc7cae7eb3c1548fa8d81224e4dacb
 SHA1 (patch-etc_config.keycodes) = 6adde0b3a56576805facd951fa9d32bfd6c88011
+SHA1 (patch-libi3_create__socket.c) = 2e2dbf245b8e34fbbb94a734faa6a31db0bf83db
 SHA1 (patch-meson.build) = 013ac42f10aeb1ad05b5496f6283878e53506c46
-SHA1 (patch-src_log.c) = 4ade2bf17399c307339cb8c73ba65d2fe418841d
+SHA1 (patch-src_config__parser.c) = 36b511cc3efc9ed9d3baf6a9f90197915bae4bfb
+SHA1 (patch-src_log.c) = 19b33b43d1716ead4bad36e2afd52ff30af017c1
