@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2021/04/06 14:23:24 adam Exp $
+# $NetBSD: Makefile,v 1.27 2021/11/01 21:05:55 wiz Exp $
 
 DISTNAME=	lv2-1.18.2
 CATEGORIES=	audio
@@ -10,8 +10,6 @@ HOMEPAGE=	https://lv2plug.in/
 COMMENT=	Open standard for audio plugins, used by hundreds of plugins
 LICENSE=	isc
 
-DEPENDS+=	${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
-
 PLIST_SRC+=	${PLIST_SRC_DFLT}
 
 USE_TOOLS+=	pkg-config
@@ -21,7 +19,7 @@ PKGCONFIG_OVERRIDE+=	lv2.pc.in
 
 REPLACE_PYTHON+=	lv2specgen/lv2specgen.py
 
-PYTHON_VERSIONED_DEPENDENCIES=	pygments
+PYTHON_VERSIONED_DEPENDENCIES=	markdown pygments
 
 .include "options.mk"
 
