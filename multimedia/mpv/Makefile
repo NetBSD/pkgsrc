@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.129 2021/10/09 15:35:09 nia Exp $
+# $NetBSD: Makefile,v 1.130 2021/11/01 17:39:26 leot Exp $
 
-DISTNAME=	mpv-0.33.1
-PKGREVISION=	6
+DISTNAME=	mpv-0.34.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mpv-player/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -36,7 +35,7 @@ PKGCONFIG_OVERRIDE+=	libmpv/mpv.pc.in
 SUBST_CLASSES+=		python
 SUBST_SED.python+=	-e "s,python,python${PYVERSSUFFIX},"
 SUBST_SED.python+=	-e "s,rst2man,rst2man-${PYVERSSUFFIX},"
-SUBST_FILES.python+=	wscript
+SUBST_FILES.python+=	wscript wscript_build.py
 SUBST_STAGE.python=	pre-configure
 SUBST_MESSAGE.python=	Fix Python command names.
 
