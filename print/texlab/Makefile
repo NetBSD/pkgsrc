@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/06/28 10:42:49 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2021/11/01 11:53:25 wiz Exp $
 
-DISTNAME=	texlab-3.2.0
+DISTNAME=	texlab-3.3.0
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=latex-lsp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 .include "cargo-depends.mk"
 
 # Depends on an unpublished crate. Can't use cargo.mk to fetch it.
-CITEPROC_REV=	68c7a7c16088b5d7751641ab37299ad064cdb221
+CITEPROC_REV=	5252fbd8d2046a5a7d5cdcee6c6cb39bd0f1a7f3
 DISTFILES=	${DEFAULT_DISTFILES}
 DISTFILES+=	citeproc-rs-${CITEPROC_REV}.tar.gz
 SITES.citeproc-rs-${CITEPROC_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=cormacrelf/}citeproc-rs/archive/${CITEPROC_REV}.tar.gz
