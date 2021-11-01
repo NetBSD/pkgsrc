@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5370 2021/11/01 18:59:06 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5371 2021/11/01 19:41:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8146,3 +8146,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/fzf to 0.27.3 [wiz 2021-11-01]
 	Updated textproc/py-prettytable to 2.3.0 [fcambus 2021-11-01]
 	Updated devel/py-pyparsing to 3.0.0 [wiz 2021-11-01]
+	Updated textproc/py-uritemplate to 4.1.1 [wiz 2021-11-01]
