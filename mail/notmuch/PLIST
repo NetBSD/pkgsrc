@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2021/08/23 03:24:38 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.22 2021/11/01 14:17:32 ryoon Exp $
 bin/notmuch
 ${PLIST.emacs}bin/notmuch-emacs-mua
 include/notmuch.h
@@ -18,12 +18,13 @@ ${PLIST.doc}info/notmuch-reply.info
 ${PLIST.doc}info/notmuch-restore.info
 ${PLIST.doc}info/notmuch-search-terms.info
 ${PLIST.doc}info/notmuch-search.info
+${PLIST.doc}info/notmuch-sexp-queries.info
 ${PLIST.doc}info/notmuch-show.info
 ${PLIST.doc}info/notmuch-tag.info
 ${PLIST.doc}info/notmuch.info
 lib/libnotmuch.so
 lib/libnotmuch.so.5
-lib/libnotmuch.so.5.4.0
+lib/libnotmuch.so.5.5.0
 ${PLIST.doc}man/man1/notmuch-address.1
 ${PLIST.doc}man/man1/notmuch-compact.1
 ${PLIST.doc}man/man1/notmuch-config.1
@@ -43,6 +44,7 @@ ${PLIST.doc}man/man1/notmuch.1
 ${PLIST.doc}man/man5/notmuch-hooks.5
 ${PLIST.doc}man/man7/notmuch-properties.7
 ${PLIST.doc}man/man7/notmuch-search-terms.7
+${PLIST.doc}man/man7/notmuch-sexp-queries.7
 ${PLIST.emacs}share/applications/notmuch-emacs-mua.desktop
 ${PLIST.emacs}share/emacs/site-lisp/coolj.el
 ${PLIST.emacs}share/emacs/site-lisp/coolj.elc
