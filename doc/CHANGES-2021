@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5368 2021/11/01 18:38:47 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5369 2021/11/01 18:53:32 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8144,3 +8144,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/dbip-city-lite to 2021.11 [fcambus 2021-11-01]
 	Updated databases/gdbm to 1.22 [wiz 2021-11-01]
 	Updated sysutils/fzf to 0.27.3 [wiz 2021-11-01]
+	Updated textproc/py-prettytable to 2.3.0 [fcambus 2021-11-01]
