@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.47 2021/10/26 11:18:04 nia Exp $
+$NetBSD: distinfo,v 1.48 2021/11/01 21:41:59 wiz Exp $
 
-BLAKE2s (src-firefox-tor-browser-78.15.0esr-10.5-1-build2.tar.xz) = 985bd49e0f25c361ba8c26982435454a11dea067c3643d3e1751491d0d37dd15
-SHA512 (src-firefox-tor-browser-78.15.0esr-10.5-1-build2.tar.xz) = ede30e87af34fab37bd8b34b702fb7ad5a73aa0d40e89a6136c89941ae3bca4a8b21c9966385c4727b0c79f2ec19bdf7b39342b3b3fc652d7800e10e7c739dab
-Size (src-firefox-tor-browser-78.15.0esr-10.5-1-build2.tar.xz) = 364778700 bytes
-BLAKE2s (tor-browser-linux64-10.5.8_en-US.tar.xz) = 9e407bfca6ebfb1a404968887931338576b569bc61853e055fa5d450bc887729
-SHA512 (tor-browser-linux64-10.5.8_en-US.tar.xz) = 59430f1367e806b172586291101240140e55eee2aa05f595afd23982c5512ff335b51058af2aa7384f1360e01e703a32760af57e3208bf4764f0e5e5a8c807bb
-Size (tor-browser-linux64-10.5.8_en-US.tar.xz) = 83624192 bytes
+BLAKE2s (src-firefox-tor-browser-78.15.0esr-10.5-1-build3.tar.xz) = f35856823bffda23781c137230690dc4be8afea35f6cd0a10c130634c2bf88ef
+SHA512 (src-firefox-tor-browser-78.15.0esr-10.5-1-build3.tar.xz) = 16d60827c46244047d0e4f1a78414cecda7c9b1352d379659503bba53483d1d2cfcd0c2905128a2aff8707d61f8623ae54b749422715c87b8b409e53a13a2465
+Size (src-firefox-tor-browser-78.15.0esr-10.5-1-build3.tar.xz) = 364899456 bytes
+BLAKE2s (tor-browser-linux64-10.5.10_en-US.tar.xz) = 8a78689f919ffdd817b72e12426a9e7d6026c3c14c64eaf6eb8ba8588e719353
+SHA512 (tor-browser-linux64-10.5.10_en-US.tar.xz) = 5aa71acf66ef5c4d4231f27f45f6ce1a28048b7e79b307d01d02bfc9bf9a855bf3754d6fd386dcd1594684a14712f63c51a78339ed436bdb7acd83380e9e4dcd
+Size (tor-browser-linux64-10.5.10_en-US.tar.xz) = 83826292 bytes
 SHA1 (patch-.mozconfig) = 949472d011d40b02146c06e90ed07673667d192b
 SHA1 (patch-aa) = 458ee59cec3d2d1d52b222ab2031720e7a11fc02
 SHA1 (patch-browser_app_profile_000-tor-browser.js) = 84a0a15605fff0e22f3150bce901a296fc920280
