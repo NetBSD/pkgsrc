@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/01 14:15:42 ryoon Exp $
+include/cstring.h
+include/faststack.h
+include/sexp.h
+include/sexp_errors.h
+include/sexp_memory.h
+include/sexp_ops.h
+include/sexp_vis.h
+lib/libsexp.la
+lib/pkgconfig/sfsexp.pc
