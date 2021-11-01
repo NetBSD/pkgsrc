@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.35 2021/10/26 11:34:51 nia Exp $
+$NetBSD: distinfo,v 1.36 2021/11/01 11:56:32 wiz Exp $
 
-BLAKE2s (xkeyboard-config-2.33.tar.bz2) = b712f95d88c6263e9479ba34dfdf9e0f29f38a42b50cf4ca89ceb90484af0d0f
-SHA512 (xkeyboard-config-2.33.tar.bz2) = 084f79350d5dc7f9ebd5b5333d386459b0ab587f6cec27ee2d8d5c3a56b08993f9fafb9d893307f4d43cfeaf2e225c5295ad6297ae8287c68efc48a82638feb1
-Size (xkeyboard-config-2.33.tar.bz2) = 1755990 bytes
+BLAKE2s (xkeyboard-config-2.34.tar.bz2) = ef84877e0538b5c4028db00866f5072bec439a41a536d16f9da803ed98377ae1
+SHA512 (xkeyboard-config-2.34.tar.bz2) = cf3bdb658349b2db9db44ea1a0f7060b890b95520319101d83ba5aefeb0b1e2fd578b6f72a90758438f04bffbe7536cf112b76297fd47c95e02029fd203c51fb
+Size (xkeyboard-config-2.34.tar.bz2) = 1763558 bytes
