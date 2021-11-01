@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/05/24 09:25:13 adam Exp $
+# $NetBSD: Makefile,v 1.5 2021/11/01 18:58:33 wiz Exp $
 
 DISTNAME=	cpplint-1.5.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,12 +11,11 @@ COMMENT=	Static code checker for C++
 LICENSE=	modified-bsd
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
-TEST_DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 #TEST_DEPENDS+=	${PYPKGPREFIX}-testfixtures-[0-9]*:../../devel/py-testfixtures
 TOOL_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test zipp:test
+PYTHON_VERSIONED_DEPENDENCIES=	test:test zipp:test pyparsing:test
 
 .include "../../lang/python/pyversion.mk"
 

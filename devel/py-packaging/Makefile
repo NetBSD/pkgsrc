@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2021/02/03 20:18:44 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2021/11/01 18:58:33 wiz Exp $
 
 DISTNAME=	packaging-20.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,11 +10,10 @@ HOMEPAGE=	https://github.com/pypa/packaging
 COMMENT=	Core utilities for Python packages
 LICENSE=	modified-bsd OR apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.0.2:../../devel/py-pyparsing
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+PYTHON_VERSIONED_DEPENDENCIES=	test:test pyparsing
 
 USE_LANGUAGES=	# none
 
