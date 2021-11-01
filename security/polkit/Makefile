@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2021/06/29 01:58:55 gutteridge Exp $
+# $NetBSD: Makefile,v 1.37 2021/11/01 10:20:48 wiz Exp $
 
-DISTNAME=	polkit-0.119
-PKGREVISION=	1
+DISTNAME=	polkit-0.120
 CATEGORIES=	security
 MASTER_SITES=	http://www.freedesktop.org/software/polkit/releases/
 
@@ -11,6 +10,7 @@ COMMENT=	Authorization Manager
 LICENSE=	gnu-lgpl-v2
 
 TOOL_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
+TOOL_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
 TOOL_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 # autoreconf processing requires gtkdocize
@@ -26,6 +26,9 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config gmake perl
 USE_TOOLS+=		intltool msgfmt msgmerge xgettext
 USE_TOOLS+=		autoconf autoreconf automake
+
+# XXX msgfmt: unknown option -- xml
+_TOOLS_USE_PKGSRC.msgfmt=	yes
 
 # configure: error: *** A compiler with support for C++17 language features is required.
 GCC_REQD+=	7
