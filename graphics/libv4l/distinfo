@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.22 2021/10/26 10:46:29 nia Exp $
+$NetBSD: distinfo,v 1.23 2021/11/01 20:35:16 wiz Exp $
 
-BLAKE2s (v4l-utils-1.20.0.tar.bz2) = 42c906ede98e6747e7cd3b17aed317daa32699dcc01d13e601e93442e19f9918
-SHA512 (v4l-utils-1.20.0.tar.bz2) = 179ca8dbbf7af5fa4870b70f17645d7834fe6ba52670ae6b58473efa257db0cd812ce14f16574cc4491c0bcb218835e4c29f1354882a151687eecec97852fc63
-Size (v4l-utils-1.20.0.tar.bz2) = 2030419 bytes
-SHA1 (patch-configure) = 5831acf2dbe102537632036ccf3b8a33be68ccb3
+BLAKE2s (v4l-utils-1.22.1.tar.bz2) = 3cf8ea5dc9b3ea40ab80a866134c209e479e8518d4bfc0ad4ead2f7f9db0265d
+SHA512 (v4l-utils-1.22.1.tar.bz2) = 8a634d8995d13f453dfaf90ca5d0dfb26f2f4b10a0d200d76a949c46f77040d12fc0a5b35e05d7b1ba68bcfc85a445be5a5ab1d4a7d4eabfe3a254038ccc6170
+Size (v4l-utils-1.22.1.tar.bz2) = 2086238 bytes
+SHA1 (patch-configure) = 2e3cb8299ea079d4c8fde7577402e7e731abe17d
 SHA1 (patch-lib_include_libv4l1-videodev.h) = 84256cb64dd755b8a12edd9844bc362c35f10dd4
 SHA1 (patch-lib_include_libv4l2rds.h) = ca375e9bac291c8cc295a3393e0497eb12a01cb9
 SHA1 (patch-lib_include_libv4lconvert.h) = e5807fa26d4e73a001f829640902cf22c14b6dfe
