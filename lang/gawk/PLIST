@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2019/10/08 14:19:42 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.28 2021/11/01 07:07:52 wiz Exp $
 bin/${PKGNAME}
 bin/gawk
 gnu/bin/awk
@@ -44,6 +44,7 @@ share/awk/group.awk
 share/awk/have_mpfr.awk
 share/awk/inplace.awk
 share/awk/intdiv0.awk
+share/awk/isnumeric.awk
 share/awk/join.awk
 share/awk/libintl.awk
 share/awk/noassign.awk
@@ -60,6 +61,7 @@ share/awk/shellquote.awk
 share/awk/strtonum.awk
 share/awk/walkarray.awk
 share/awk/zerofile.awk
+share/locale/bg/LC_MESSAGES/gawk.mo
 share/locale/ca/LC_MESSAGES/gawk.mo
 share/locale/da/LC_MESSAGES/gawk.mo
 share/locale/de/LC_MESSAGES/gawk.mo
@@ -75,6 +77,7 @@ share/locale/nl/LC_MESSAGES/gawk.mo
 share/locale/pl/LC_MESSAGES/gawk.mo
 share/locale/pt/LC_MESSAGES/gawk.mo
 share/locale/pt_BR/LC_MESSAGES/gawk.mo
+share/locale/sr/LC_MESSAGES/gawk.mo
 share/locale/sv/LC_MESSAGES/gawk.mo
 share/locale/vi/LC_MESSAGES/gawk.mo
 share/locale/zh_CN/LC_MESSAGES/gawk.mo
