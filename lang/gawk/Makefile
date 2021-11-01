@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2020/08/24 07:52:03 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2021/11/01 07:07:52 wiz Exp $
 
-DISTNAME=	gawk-5.1.0
+DISTNAME=	gawk-5.1.1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gawk/}
 EXTRACT_SUFX=	.tar.xz
@@ -23,6 +23,8 @@ MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 
 LDFLAGS.IRIX+=		-lgen
 CPPFLAGS.OSF1+=		-D_OSF_SOURCE
+
+CHECK_PORTABILITY_SKIP+=	doc/gawktexi.in
 
 .include "../../mk/bsd.prefs.mk"
 
