@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.58 2021/10/26 10:18:05 nia Exp $
+$NetBSD: distinfo,v 1.59 2021/11/01 20:52:04 wiz Exp $
 
-BLAKE2s (protobuf-cpp-3.18.1.tar.gz) = 2d275433f970e96e5b5b8c3dbbf8a5fb36fd1fec7dbb47fec4d4011e2670894a
-SHA512 (protobuf-cpp-3.18.1.tar.gz) = 524340259bf084a228b2a3bae9a45b7730fc75e4e523ec928f062a10eaea8b914638007037a1e04ec25db5d23f7d339850cf658b5611c54bde6cf12927651164
-Size (protobuf-cpp-3.18.1.tar.gz) = 4776202 bytes
+BLAKE2s (protobuf-cpp-3.19.0.tar.gz) = 541fb3020eed98c61db8fd584f7f90aa86acf1f85ae42c521a9ea77e305c241c
+SHA512 (protobuf-cpp-3.19.0.tar.gz) = 2961676448e10646d8a9fd98e926f45372735be03cd230eefed1ddd8031fc9755deb13c1cd61ac10253911a94649cdd5fddfbfef9a9e05116f22e2622471c3dd
+Size (protobuf-cpp-3.19.0.tar.gz) = 4798696 bytes
 SHA1 (patch-configure) = e9953648e5b3df015be007c1c424a564d1eb2bef
-SHA1 (patch-src_google_protobuf_port__def.inc) = b9af7b28ebca182f1e23b5db8899005d38c7837c
 SHA1 (patch-third__party_googletest_googlemock_configure) = 9afd8358eef2dffe7639ca70081f60535c116855
