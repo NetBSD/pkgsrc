@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5349 2021/11/01 09:55:07 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5350 2021/11/01 09:58:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8125,3 +8125,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/boehm-gc to 8.0.6 [wiz 2021-11-01]
 	Updated audio/musicpd to 0.23.2 [wiz 2021-11-01]
 	Updated devel/gopls to 0.7.3 [wiz 2021-11-01]
+	Updated net/libcares to 1.18.1 [wiz 2021-11-01]
