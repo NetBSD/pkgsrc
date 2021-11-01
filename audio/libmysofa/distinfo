@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 09:59:08 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/11/01 11:30:43 wiz Exp $
 
-BLAKE2s (libmysofa-1.2.tar.gz) = 2ed702ee2faf155031616310bd169ac6e2a1991a89d780feb99e6cfd212f11f3
-SHA512 (libmysofa-1.2.tar.gz) = 5d6f46b8c3a9c464db25fbb2cda1f7172429f4ac79d95d29396edcb49312cf80fdfc0d46132745892b502be142f80e70126c7bae5891c1423b19bde7df0e8a56
-Size (libmysofa-1.2.tar.gz) = 199998224 bytes
+BLAKE2s (libmysofa-1.2.1.tar.gz) = 33eae86d0a6a3a90f4ba10d66cfe3c3522d0bf65c5a7ea8093f378089ef676a4
+SHA512 (libmysofa-1.2.1.tar.gz) = 2058c94cd09aeeabe40975edd320d7447bd9e535108f32b2a5305c023c7bf89f0c2f44df182390b7e4be8f6ffc9b09c2e35817896bb5e63d3ec9f1bd5b7e972c
+Size (libmysofa-1.2.1.tar.gz) = 200011479 bytes

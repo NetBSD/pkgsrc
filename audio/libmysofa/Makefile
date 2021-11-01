@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2021/02/03 20:13:11 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2021/11/01 11:30:43 wiz Exp $
 
-DISTNAME=	libmysofa-1.2
+DISTNAME=	libmysofa-1.2.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hoene/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
