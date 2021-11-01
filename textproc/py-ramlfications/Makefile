@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/09/29 21:20:16 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2021/11/01 21:05:56 wiz Exp $
 
 DISTNAME=	ramlfications-0.1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,13 +10,14 @@ HOMEPAGE=	https://ramlfications.readthedocs.org/
 COMMENT=	Python RAML parser
 LICENSE=	apache-2.0
 
-# Test dependencies
-BUILD_DEPENDS+=		${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
-BUILD_DEPENDS+=		${PYPKGPREFIX}-termcolor-[0-9]*:../../devel/py-termcolor
-BUILD_DEPENDS+=		${PYPKGPREFIX}-test-localserver-[0-9]*:../../devel/py-test-localserver
-BUILD_DEPENDS+=		${PYPKGPREFIX}-jsonref-[0-9]*:../../textproc/py-jsonref
-BUILD_DEPENDS+=		${PYPKGPREFIX}-markdown2-[0-9]*:../../textproc/py-markdown2
-BUILD_DEPENDS+=		${PYPKGPREFIX}-xmltodict-[0-9]*:../../textproc/py-xmltodict
+TEST_DEPENDS+=		${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
+TEST_DEPENDS+=		${PYPKGPREFIX}-termcolor-[0-9]*:../../devel/py-termcolor
+TEST_DEPENDS+=		${PYPKGPREFIX}-test-localserver-[0-9]*:../../devel/py-test-localserver
+TEST_DEPENDS+=		${PYPKGPREFIX}-jsonref-[0-9]*:../../textproc/py-jsonref
+TEST_DEPENDS+=		${PYPKGPREFIX}-xmltodict-[0-9]*:../../textproc/py-xmltodict
+
+PYTHON_VERSIONED_DEPENDENCIES+=	markdown:test
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

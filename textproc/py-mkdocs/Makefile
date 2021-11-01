@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2018/10/03 10:33:25 adam Exp $
+# $NetBSD: Makefile,v 1.5 2021/11/01 21:05:56 wiz Exp $
 
 DISTNAME=	mkdocs-1.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,9 +13,10 @@ LICENSE=	2-clause-bsd
 DEPENDS+=	${PYPKGPREFIX}-click>=3.3:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.7.1:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-livereload>=2.5.1:../../www/py-livereload
-DEPENDS+=	${PYPKGPREFIX}-markdown>=2.3.1:../../textproc/py-markdown
 DEPENDS+=	${PYPKGPREFIX}-tornado>=5.0:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
+
+PYTHON_VERSIONED_DEPENDENCIES+=	markdown
 
 USE_LANGUAGES=	# none
 
@@ -24,4 +25,5 @@ post-install:
 		${MV} mkdocs mkdocs-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
