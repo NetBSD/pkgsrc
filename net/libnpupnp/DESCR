@@ -1,0 +1,8 @@
+npupnp is an UPnP library derived from the venerable pupnp, based
+on its 1.6.x branch (around 1.6.25).
+
+Main modifications:
+
+ - Support multiple network interfaces
+ - Support multiple root devices (already in the late pupnp versions).
+ - Use libcurl for HTTP client functions.
