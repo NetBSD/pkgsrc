@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5364 2021/11/01 18:11:49 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.5365 2021/11/01 18:13:22 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8140,3 +8140,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/notmuch to 0.34 [ryoon 2021-11-01]
 	Updated multimedia/mpv to 0.34.0 [leot 2021-11-01]
 	Updated net/dbip-asn-lite to 2021.11 [fcambus 2021-11-01]
+	Updated net/dbip-country-lite to 2021.11 [fcambus 2021-11-01]
