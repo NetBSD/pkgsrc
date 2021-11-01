@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/06/07 08:36:00 adam Exp $
+# $NetBSD: Makefile,v 1.7 2021/11/01 18:58:33 wiz Exp $
 
 DISTNAME=	python-docx-0.8.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -13,9 +13,8 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-lxml>=2.3.2:../../textproc/py-lxml
 TEST_DEPENDS+=	${PYPKGPREFIX}-behave-[0-9]*:../../devel/py-behave
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+PYTHON_VERSIONED_DEPENDENCIES=	test:test pyparsing:test
 
 USE_LANGUAGES=	# none
 
