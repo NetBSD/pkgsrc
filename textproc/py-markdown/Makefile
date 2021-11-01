@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/08/31 23:07:06 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2021/11/01 21:06:35 wiz Exp $
 
 DISTNAME=	Markdown-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -13,6 +13,7 @@ LICENSE=	modified-bsd
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
