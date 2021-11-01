@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:15:47 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/11/01 19:50:50 wiz Exp $
 
-BLAKE2s (cmdliner-1.0.3.tbz) = 394692156c0bac9ba3ff9a62f0f44fe8f027ce1fdd0398f4e90aa45f59090a69
-SHA512 (cmdliner-1.0.3.tbz) = aeef78ade9acd0e084190a4ae04dab9589aef94be14e3b737592f0a5822ca747ecde7de030b70cc68316c50a1ee70eabc6eaa3b97cd572fbce85b9f019e37c3e
-Size (cmdliner-1.0.3.tbz) = 49261 bytes
-SHA1 (patch-Makefile) = b662d72eff1693e6e782a8c81bb40801ff90247a
+BLAKE2s (cmdliner-1.0.4.tbz) = 9a9462195d5ca56c1c7919111f6bf7afa6ca38d849420157aa5c29208cba7ef1
+SHA512 (cmdliner-1.0.4.tbz) = 4cd1cc0932b8bbd607160cc9816b35c12a68a358a35ffcb6827f547052dc517e871a91ddbaed0447cb1fa5fdf510cdf5d760e8e5c1e4548f82e1d523e2b3ecb3
+Size (cmdliner-1.0.4.tbz) = 49558 bytes
+SHA1 (patch-Makefile) = f04f85db0f29e011ae6a3d2e2a77d7e2c1b883ae
