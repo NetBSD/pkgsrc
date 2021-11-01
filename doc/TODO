@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21196 2021/11/01 10:06:23 wiz Exp $
+$NetBSD: TODO,v 1.21197 2021/11/01 10:07:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1698,7 +1698,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-usb-1.1.1
 	o py-webpy-0.38
 	o py-wxWidgets-4.0.0
-	o py-yarl-1.7.0
 	o py-yubiauth-0.3.10
 	o py-yubikey-manager-4.0.2
 	o py-z3-4.8.10
