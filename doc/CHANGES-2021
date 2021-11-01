@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5372 2021/11/01 19:50:59 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5373 2021/11/01 19:57:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8148,3 +8148,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-pyparsing to 3.0.0 [wiz 2021-11-01]
 	Updated textproc/py-uritemplate to 4.1.1 [wiz 2021-11-01]
 	Updated devel/ocaml-cmdliner to 1.0.4 [wiz 2021-11-01]
+	Updated net/grpc to 1.41.1 [wiz 2021-11-01]
