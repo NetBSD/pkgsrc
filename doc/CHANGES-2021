@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5344 2021/11/01 07:04:38 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5345 2021/11/01 07:08:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8120,3 +8120,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated ham/trustedQSL to 2.5.8 [gdt 2021-10-31]
 	Updated graphics/ImageMagick to 7.1.0.13 [wiz 2021-11-01]
 	Updated devel/apache-ant to 1.10.12 [wiz 2021-11-01]
+	Updated lang/gawk to 5.1.1 [wiz 2021-11-01]
