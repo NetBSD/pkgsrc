@@ -1,8 +1,8 @@
-$NetBSD: patch-src_Makefile,v 1.1 2019/10/05 17:39:38 nia Exp $
+$NetBSD: patch-src_Makefile,v 1.2 2021/11/01 20:30:28 wiz Exp $
 
 Libtool support.
 
---- src/Makefile.orig	2019-01-06 12:27:52.000000000 +0000
+--- src/Makefile.orig	2021-09-10 08:50:46.000000000 +0000
 +++ src/Makefile
 @@ -4,9 +4,9 @@
  #
@@ -17,23 +17,22 @@ Libtool support.
  
  ###############################################################################
  #
-@@ -14,11 +14,12 @@ INSTALL_BINARY_DIR	=	/usr/bin/
+@@ -14,11 +14,11 @@ INSTALL_BINARY_DIR	=	/usr/bin/
  #
  
  INCLUDES	=	-I.
--LIBRARIES	=	-ldl -lm
+-LIBRARIES	=	-ldl -lm -lsndfile
 -CFLAGS		=	$(INCLUDES) -Wall -Werror -O2 -fPIC 		\
-+LIBRARIES	+=	-lm
-+CFLAGS		+=	$(INCLUDES) -Wall -fPIC 			\
-+			-DDEFAULT_LADSPA_PATH=$(INSTALL_PLUGINS_DIR)
-+CXXFLAGS	+=	$(INCLUDES) -Wall -fPIC 			\
++LIBRARIES	=	-lm -lsndfile
++CFLAGS		=	$(INCLUDES) -Wall -fPIC 		\
  			-DDEFAULT_LADSPA_PATH=$(INSTALL_PLUGINS_DIR)
  BINFLAGS	=	-fPIE -pie
 -CXXFLAGS	=	$(CFLAGS)
++CXXFLAGS	+=	$(CFLAGS)
  PLUGINS		=	../plugins/amp.so				\
  			../plugins/delay.so				\
  			../plugins/filter.so				\
-@@ -27,35 +28,19 @@ PLUGINS		=	../plugins/amp.so				\
+@@ -27,35 +27,19 @@ PLUGINS		=	../plugins/amp.so				\
  PROGRAMS	=	../bin/analyseplugin				\
  			../bin/applyplugin 				\
  			../bin/listplugins
@@ -76,7 +75,7 @@ Libtool support.
  
  ###############################################################################
  #
-@@ -84,19 +69,19 @@ install:	targets
+@@ -84,19 +68,19 @@ install:	targets
  
  /tmp/test.wav:	targets ../snd/noise.wav
  	../bin/listplugins
@@ -109,7 +108,7 @@ Libtool support.
  
  targets:	$(PLUGINS) $(PROGRAMS)
  
-@@ -105,23 +90,32 @@ targets:	$(PLUGINS) $(PROGRAMS)
+@@ -105,23 +89,32 @@ targets:	$(PLUGINS) $(PROGRAMS)
  # PROGRAMS
  #
  
