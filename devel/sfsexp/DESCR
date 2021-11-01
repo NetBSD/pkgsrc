@@ -1,0 +1,10 @@
+This library is intended for developers who wish to manipulate (read,
+parse, modify, and create) symbolic expressions from C or C++
+programs. A symbolic expression, or s-expression, is essentially a
+LISP-like expression such as (a (b c)). S-expressions are able to
+represent complex, structured data without requiring additional
+meta-data describing the structure. They are recursively defined: an
+s-expression is a list of either atoms or s-expressions. In the
+example above, the expression contains an atom "a" and an
+s-expression, which in turn contains two atoms, "b" and "c". They are
+simple, useful, and well understood.
