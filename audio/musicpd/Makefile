@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.250 2021/10/09 15:35:03 nia Exp $
+# $NetBSD: Makefile,v 1.251 2021/11/01 09:51:07 wiz Exp $
 
-DISTNAME=	mpd-0.22.11
+DISTNAME=	mpd-0.23.2
 PKGNAME=	${DISTNAME:S/mpd/musicpd/}
-PKGREVISION=	3
 CATEGORIES=	audio
-MASTER_SITES=	https://www.musicpd.org/download/mpd/0.22/
+MASTER_SITES=	https://www.musicpd.org/download/mpd/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -132,6 +131,7 @@ BUILDLINK_API_DEPENDS.flac+=	flac>=1.2
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

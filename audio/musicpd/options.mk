@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.37 2021/03/15 13:15:56 nia Exp $
+# $NetBSD: options.mk,v 1.38 2021/11/01 09:51:07 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
 
@@ -6,7 +6,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
 PKG_SUPPORTED_OPTIONS+=	jack openal libao pulseaudio
 # codecs
 PKG_SUPPORTED_OPTIONS+=	adplug faad ffmpeg fluidsynth libgme libwildmidi
-PKG_SUPPORTED_OPTIONS+=	mikmod modplug musepack sidplay wavpack
+PKG_SUPPORTED_OPTIONS+=	mikmod modplug musepack wavpack
 # codecs (encoding only)
 PKG_SUPPORTED_OPTIONS+=	lame shine twolame
 # archive formats
@@ -15,6 +15,12 @@ PKG_SUPPORTED_OPTIONS+=	bzip2 zziplib
 PKG_SUPPORTED_OPTIONS+=	avahi curl dbus libmms samba shout upnp
 # misc
 PKG_SUPPORTED_OPTIONS+=	cdparanoia chromaprint musicpd-soundcloud libmpdclient
+
+# no packages yet
+# pipewire
+# snapcast
+# currently broken build:
+# sid
 
 PKG_SUGGESTED_OPTIONS=	curl faad ffmpeg libao musepack samplerate shout vorbis
 PKG_SUGGESTED_OPTIONS+=	wavpack
@@ -119,6 +125,7 @@ MESON_ARGS+=	-Dmms=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibmpdclient)
+BUILDLINK_API_DEPENDS.libmpdclient+=	libmpdclient>=2.11
 .  include "../../audio/libmpdclient/buildlink3.mk"
 .else
 MESON_ARGS+=	-Dlibmpdclient=disabled
@@ -191,11 +198,12 @@ MESON_ARGS+=	-Dsamplerate=disabled
 MESON_ARGS+=	-Dshine=disabled
 .endif
 
-.if !empty(PKG_OPTIONS:Msidplay)
-.  include "../../audio/libsidplay2/buildlink3.mk"
-.else
-MESON_ARGS+=	-Dsidplay=disabled
-.endif
+# src/decoder/plugins/meson.build:170:6: ERROR: C++ shared or static library 'resid-builder' not found
+#.if !empty(PKG_OPTIONS:Msidplay)
+#.  include "../../audio/libsidplay2/buildlink3.mk"
+#.else
+#MESON_ARGS+=	-Dsidplay=disabled
+#.endif
 
 .if !empty(PKG_OPTIONS:Mshout)
 .  include "../../audio/libshout/buildlink3.mk"
@@ -223,6 +231,8 @@ MESON_ARGS+=	-Dvorbis=disabled
 MESON_ARGS+=	-Dvorbisenc=disabled
 .endif
 
+# should switch to libnpupnp, not packaged yet
+# waiting for release https://framagit.org/medoc92/npupnp/-/issues/20
 .if !empty(PKG_OPTIONS:Mupnp)
 .  include "../../net/libupnp/buildlink3.mk"
 .else
