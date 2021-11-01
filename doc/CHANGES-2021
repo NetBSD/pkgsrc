@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5374 2021/11/01 19:58:29 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5375 2021/11/01 20:06:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8150,3 +8150,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ocaml-cmdliner to 1.0.4 [wiz 2021-11-01]
 	Updated net/grpc to 1.41.1 [wiz 2021-11-01]
 	Updated devel/ocaml-cppo to 1.6.7 [wiz 2021-11-01]
+	Updated multimedia/libvpx to 1.11.0 [wiz 2021-11-01]
