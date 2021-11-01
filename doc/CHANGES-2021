@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5366 2021/11/01 18:14:31 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.5367 2021/11/01 18:37:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8142,3 +8142,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/dbip-asn-lite to 2021.11 [fcambus 2021-11-01]
 	Updated net/dbip-country-lite to 2021.11 [fcambus 2021-11-01]
 	Updated net/dbip-city-lite to 2021.11 [fcambus 2021-11-01]
+	Updated databases/gdbm to 1.22 [wiz 2021-11-01]
