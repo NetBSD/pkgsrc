@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2021/10/27 18:49:43 pin Exp $
+$NetBSD: distinfo,v 1.4 2021/11/01 20:39:23 pin Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -201,9 +201,9 @@ Size (hashbrown-0.11.2.crate) = 85713 bytes
 BLAKE2s (hermit-abi-0.1.19.crate) = c731a42a9056a75a3ba26b5ab02c7c60c1fa2f21635d4152de66dc2eb407e097
 SHA512 (hermit-abi-0.1.19.crate) = 1c877fcd562b15d2de9c151fd6c5f3ea4bf48abcb799e6139a180ffad5d64b632f0000d5707bbd92ff23a0e5f349157b9e0f5be8b50f03680b0fa47315dbb78a
 Size (hermit-abi-0.1.19.crate) = 9979 bytes
-BLAKE2s (hgrep-0.1.8.tar.gz) = 73406086ad7d4327a03a9e956fe1fb5a7f9ebeb437c941a103f9b4f6b85c39f9
-SHA512 (hgrep-0.1.8.tar.gz) = 63439f15108ebbc99da69b9c085234f559c06c22be742bb032f93279d70d2314c32db215d29ebe09dbd09596f0e0d8af152e5799de8b67398e85d484c9fc5bb9
-Size (hgrep-0.1.8.tar.gz) = 791776 bytes
+BLAKE2s (hgrep-0.1.9.tar.gz) = 407a127e2b878d4daaedaf01c3baf32d98b3165eb2f0f58a223202347dfb24c6
+SHA512 (hgrep-0.1.9.tar.gz) = 8edd94c44fc027865a8286b853fd30f5024ebb98d2858b6ff0d4adf7cb86ab56a8a4b5f90fa370db1c6867e5b73f0d95863a672389f4774ba06e347387e975ab
+Size (hgrep-0.1.9.tar.gz) = 794517 bytes
 BLAKE2s (ignore-0.4.18.crate) = 8572ea3aa32efc6b519aaa1637d0bff67c2c75d5ca3a53f0c79c2b7af757b4ea
 SHA512 (ignore-0.4.18.crate) = 5d11a2415f015cce6ce72aa3d08a7cfb645ee7f1845b3445a924a92144438f209c992cc15d4ede3099d1eebe3fa28bde4e0eef1a3fbcb9dbced19a42051d21be
 Size (ignore-0.4.18.crate) = 53174 bytes
@@ -231,6 +231,9 @@ Size (lazycell-1.3.0.crate) = 12502 bytes
 BLAKE2s (libc-0.2.104.crate) = 84e10dfa089624326eab9fb16a50f7a06230a58331af345d41980fa817d5ed25
 SHA512 (libc-0.2.104.crate) = 25bfce165d0265827f2bf5de255ba8abea6880d82ec9022744de358d4518f381a0cf1fecc5d741b85ee8f90683b7ca3117743236fa32813ac807721fcb15d029
 Size (libc-0.2.104.crate) = 548775 bytes
+BLAKE2s (libmimalloc-sys-0.1.22.crate) = 24ff3abe62d34403a507a753d2ff4a3878ecb7b673fde076a3e1fefa29b8c0b4
+SHA512 (libmimalloc-sys-0.1.22.crate) = 6ed4965552898ef0c51c6e3fc6962793c6694bea79459c08bed2af211887cba3d605b3949cec2734c59a2314c305fcf78b871d2e688ba3756441e53bd49697f1
+Size (libmimalloc-sys-0.1.22.crate) = 908612 bytes
 BLAKE2s (line-wrap-0.1.1.crate) = 9921e8aeefc2974a46293482243b30f8e1924169f1fe594c749779d39904519e
 SHA512 (line-wrap-0.1.1.crate) = 31976e14355317bab470e6716542d3cfd59083a1808bb199dc2eddd51d05fab122ab054783d0996c1feb53bdb316e6fa24b34cae9ed8e8cdb2702bc43fd805eb
 Size (line-wrap-0.1.1.crate) = 10010 bytes
@@ -249,6 +252,9 @@ Size (memmap2-0.3.1.crate) = 18393 bytes
 BLAKE2s (memoffset-0.6.4.crate) = 960cd37bcaabfd282132df3a823e70b3fbf01cb1ecd693897398a0c4f5620503
 SHA512 (memoffset-0.6.4.crate) = bf8d05b72571ccdef32a93cc4489ab4cb7abd41415d55572d1dfb983053afe3eb2615e968d87a326af90c5702b9959150f985a4186acfd61df9b69a74e99713d
 Size (memoffset-0.6.4.crate) = 7664 bytes
+BLAKE2s (mimalloc-0.1.26.crate) = c01f192eb51cafb0d5f2352d17266b7691171336b063c871a6d4b1d5be8620ae
+SHA512 (mimalloc-0.1.26.crate) = d385f187e61d88366576b3fa84d173af14a955ab476f1c837ee719e35929c9a91f1e02d13398160abb0c20e53ba90e9d100aeaefb651e0c264e9472021d4a3a2
+Size (mimalloc-0.1.26.crate) = 4977 bytes
 BLAKE2s (miniz_oxide-0.4.4.crate) = 46acb405ff6a26e8421ff8bb8000f4bb5f751fd824b4865147ec36a35f364f3c
 SHA512 (miniz_oxide-0.4.4.crate) = 2c6e484a8a53c6b1fb84e2bf9518919e6e5ba84e7716c0bb8e33b53dc0d3432c35f28f19c18368e27c94f6df66b7674f514ef889cf1b19f546bedfb6e6ebaf6f
 Size (miniz_oxide-0.4.4.crate) = 49938 bytes
