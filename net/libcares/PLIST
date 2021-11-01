@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.15 2021/08/10 07:27:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2021/11/01 09:57:53 wiz Exp $
 bin/acountry
 bin/adig
 bin/ahost
 include/ares.h
 include/ares_build.h
 include/ares_dns.h
+include/ares_nameser.h
 include/ares_rules.h
 include/ares_version.h
 lib/cmake/c-ares/c-ares-config-version.cmake
@@ -13,7 +14,7 @@ lib/cmake/c-ares/c-ares-targets-noconfig.cmake
 lib/cmake/c-ares/c-ares-targets.cmake
 lib/libcares.so
 lib/libcares.so.2
-lib/libcares.so.2.4.3
+lib/libcares.so.2.5.1
 lib/libcares_static.a
 lib/pkgconfig/libcares.pc
 man/man1/acountry.1
@@ -58,6 +59,7 @@ man/man3/ares_parse_ptr_reply.3
 man/man3/ares_parse_soa_reply.3
 man/man3/ares_parse_srv_reply.3
 man/man3/ares_parse_txt_reply.3
+man/man3/ares_parse_uri_reply.3
 man/man3/ares_process.3
 man/man3/ares_query.3
 man/man3/ares_save_options.3
