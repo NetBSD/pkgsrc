@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.38 2021/11/01 09:51:07 wiz Exp $
+# $NetBSD: options.mk,v 1.39 2021/11/01 21:51:20 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
 
@@ -231,10 +231,8 @@ MESON_ARGS+=	-Dvorbis=disabled
 MESON_ARGS+=	-Dvorbisenc=disabled
 .endif
 
-# should switch to libnpupnp, not packaged yet
-# waiting for release https://framagit.org/medoc92/npupnp/-/issues/20
 .if !empty(PKG_OPTIONS:Mupnp)
-.  include "../../net/libupnp/buildlink3.mk"
+.  include "../../net/libnpupnp/buildlink3.mk"
 .else
 MESON_ARGS+=	-Dupnp=disabled
 .endif
