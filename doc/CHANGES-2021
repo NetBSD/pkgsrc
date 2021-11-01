@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5379 2021/11/01 20:43:07 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5380 2021/11/01 20:52:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8155,3 +8155,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/libv4l to 1.22.1 [wiz 2021-11-01]
 	Updated textproc/hgrep to 0.1.9 [pin 2021-11-01]
 	Updated wm/i3 to 4.20 [wiz 2021-11-01]
+	Updated devel/protobuf to 3.19.0 [wiz 2021-11-01]
