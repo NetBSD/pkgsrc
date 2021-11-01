@@ -1,8 +1,8 @@
-$NetBSD: patch-src_applyplugin.c,v 1.1 2019/10/05 17:39:38 nia Exp $
+$NetBSD: patch-src_applyplugin.c,v 1.2 2021/11/01 20:30:28 wiz Exp $
 
 Endian support for SunOS and macOS.
 
---- src/applyplugin.c.orig	2019-01-06 12:27:52.000000000 +0000
+--- src/applyplugin.c.orig	2021-09-10 08:50:46.000000000 +0000
 +++ src/applyplugin.c
 @@ -6,7 +6,19 @@
  /*****************************************************************************/
@@ -24,4 +24,4 @@ Endian support for SunOS and macOS.
 +#endif
  #include <errno.h>
  #include <math.h>
- #include <stdlib.h>
+ #include <sndfile.h>
