@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 11:17:38 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/11/01 10:20:48 wiz Exp $
 
-BLAKE2s (polkit-0.119.tar.gz) = af2a89150424c0ea21350c84f370a3ea8facf31c9fd7aadba43ca0ff0fadec74
-SHA512 (polkit-0.119.tar.gz) = 0260fb15da1c4c1f429e8223260981e64e297f1be8ced42f6910f09ea6581b8205aca06c9c601eb4a128acba2f468de0223118f96862ba769f95721894cf1578
-Size (polkit-0.119.tar.gz) = 1387409 bytes
+BLAKE2s (polkit-0.120.tar.gz) = d13513e4e4d643bb1f3581fe3c58d467c8f26cd33711034accee42a1546c9781
+SHA512 (polkit-0.120.tar.gz) = db072769439d5e17d0eed681e7b94251b77828c1474b40fe40b94293903a64333e7fa17515a3270648691f04a1374d8b404405ead6abf292a8eb8483164adc46
+Size (polkit-0.120.tar.gz) = 1626659 bytes
 SHA1 (patch-configure.ac) = e6c26b07908b05e38b9049470bdd5da14f91b9ae
-SHA1 (patch-meson.build) = ca09024832bd68cc0e18fe9c00a27c3e9e6989df
+SHA1 (patch-meson.build) = 707d8065d65ae85909cde193785192cc8e933899
 SHA1 (patch-meson__options.txt) = cb8d920382f3b2dca0d5992abb0adf979a729a1f
 SHA1 (patch-src_polkit_polkitunixprocess.c) = 88818b7b64502f64eade34ad379c07f2b0fd1aea
 SHA1 (patch-src_polkitbackend_Makefile.am) = 3e821914e54ce5d3dc31275cd05d5266a3edc9ba

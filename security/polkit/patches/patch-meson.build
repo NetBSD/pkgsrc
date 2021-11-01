@@ -1,11 +1,11 @@
-$NetBSD: patch-meson.build,v 1.1 2021/06/28 12:38:46 nia Exp $
+$NetBSD: patch-meson.build,v 1.2 2021/11/01 10:20:48 wiz Exp $
 
 Add duktape as javascript engine.
 https://gitlab.freedesktop.org/polkit/polkit/-/merge_requests/35
 
---- meson.build.orig	2021-06-03 13:56:35.000000000 +0000
+--- meson.build.orig	2021-09-29 19:16:29.000000000 +0000
 +++ meson.build
-@@ -126,7 +126,13 @@ expat_dep = dependency('expat')
+@@ -133,7 +133,13 @@ expat_dep = dependency('expat')
  assert(cc.has_header('expat.h', dependencies: expat_dep), 'Can\'t find expat.h. Please install expat.')
  assert(cc.has_function('XML_ParserCreate', dependencies: expat_dep), 'Can\'t find expat library. Please install expat.')
  
@@ -18,9 +18,9 @@ https://gitlab.freedesktop.org/polkit/polkit/-/merge_requests/35
 +  js_dep = dependency('mozjs-78')
 +endif
  
- dbus_dep = dependency('dbus-1')
- dbus_confdir = dbus_dep.get_pkgconfig_variable('datadir', define_variable: ['datadir', pk_prefix / pk_datadir])   #changed from sysconfdir with respect to commit#8eada3836465838
-@@ -350,6 +356,9 @@ if enable_logind
+ dbus_dep = dependency('dbus-1', required: false)
+ dbus_policydir = pk_prefix / pk_datadir / 'dbus-1/system.d'
+@@ -361,6 +367,9 @@ if enable_logind
    output += '        systemdsystemunitdir:     ' + systemd_systemdsystemunitdir + '\n'
  endif
  output += '        polkitd user:             ' + polkitd_user + ' \n'
