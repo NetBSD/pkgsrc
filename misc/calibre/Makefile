@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.255 2021/09/29 10:10:32 wiz Exp $
+# $NetBSD: Makefile,v 1.256 2021/11/01 21:05:56 wiz Exp $
 
 DISTNAME=	calibre-3.40.1
 PKGREVISION=	30
@@ -24,7 +24,6 @@ DEPENDS+=	${PYPKGPREFIX}-elementtree-[0-9]*:../../textproc/py-elementtree
 DEPENDS+=	${PYPKGPREFIX}-feedparser<6.0.0:../../textproc/py-feedparser5
 DEPENDS+=	${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text-2019.8.11
 DEPENDS+=	${PYPKGPREFIX}-html5-parser-[0-9]*:../../textproc/py-html5-parser
-DEPENDS+=	${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
 DEPENDS+=	${PYPKGPREFIX}-mechanize>=0.1.11nb1:../../www/py-mechanize
 DEPENDS+=	${PYPKGPREFIX}-msgpack-[0-9]*:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-netifaces>=0.8:../../net/py-netifaces
@@ -37,6 +36,8 @@ DEPENDS+=	${PYPKGPREFIX}-soupsieve-[0-9]*:../../www/py-soupsieve
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 # for installation
 BUILD_DEPENDS+=	xdg-utils>=1.0.2:../../misc/xdg-utils
+
+PYTHON_VERSIONED_DEPENDENCIES+=	markdown
 
 EXTRACT_USING=	bsdtar
 
@@ -142,4 +143,5 @@ BUILDLINK_API_DEPENDS.py-dbus+=	${PYPKGPREFIX}-dbus>=0.82.2
 .include "../../x11/py-sip/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/py-qt5/buildlink3.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
