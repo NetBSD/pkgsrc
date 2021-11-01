@@ -3,3 +3,5 @@ allows you to write using an easy-to-read, easy-to-write plain text
 format, then convert it to structurally valid XHTML (or HTML).
 
 This package provides a Python implementation.
+
+This package contains the last version supporting Python 2.x.
