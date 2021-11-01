@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/04/06 15:22:38 adam Exp $
+# $NetBSD: Makefile,v 1.7 2021/11/01 21:05:56 wiz Exp $
 
 DISTNAME=	landslide-1.1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,12 +12,11 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.14:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.10.1:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-markdown>=2.6.11:../../textproc/py-markdown
 DEPENDS+=	${PYPKGPREFIX}-six>=1.11.0:../../lang/py-six
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONED_DEPENDENCIES=	pygments
+PYTHON_VERSIONED_DEPENDENCIES=	markdown pygments
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
