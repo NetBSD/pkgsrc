@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5384 2021/11/01 21:47:22 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5385 2021/11/01 23:21:59 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8160,3 +8160,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/tor-browser to 10.5.10 [wiz 2021-11-01]
 	Updated textproc/py-markdown to 3.2.2 [wiz 2021-11-01]
 	Added net/libnpupnp version 4.1.5 [wiz 2021-11-01]
+	Updated time/libical to 3.0.11 [gutteridge 2021-11-01]
