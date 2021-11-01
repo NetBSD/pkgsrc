@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5358 2021/11/01 11:53:34 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5359 2021/11/01 11:56:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8134,3 +8134,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/openexr to 3.1.3 [wiz 2021-11-01]
 	Updated audio/libmysofa to 1.2.1 [wiz 2021-11-01]
 	Updated print/texlab to 3.3.0 [wiz 2021-11-01]
+	Updated x11/xkeyboard-config to 2.34 [wiz 2021-11-01]
