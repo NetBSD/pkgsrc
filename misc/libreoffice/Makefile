@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.271 2021/10/04 14:48:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.272 2021/11/01 14:06:49 ryoon Exp $
 
-VERREL=		7.2.1
+VERREL=		7.2.2
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
@@ -70,7 +70,7 @@ MORE_DISTFILES= \
 	breakpad-b324760c7f53667af128a6b77b790323da04fcb9.tar.xz \
 	0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz \
 	liberation-narrow-fonts-ttf-1.07.6.tar.gz \
-	liberation-fonts-ttf-2.00.4.tar.gz \
+	liberation-fonts-ttf-2.1.4.tar.gz \
 	907d6e99f241876695c19ff3db0b8923-source-code-pro-2.030R-ro-1.050R-it.tar.gz \
 	edc4d741888bc0d38e32dbaa17149596-source-sans-pro-2.010R-ro-1.065R-it.tar.gz \
 	source-serif-pro-3.000R.tar.gz \
