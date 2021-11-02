@@ -1,11 +1,11 @@
-$NetBSD: patch-CMakeLists.txt,v 1.3 2018/07/26 10:19:56 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.4 2021/11/02 18:35:04 adam Exp $
 
 Do not look for X11 on macOS.
 Do not bother with uninstaller.
 
---- CMakeLists.txt.orig	2018-07-22 11:40:33.000000000 +0000
+--- CMakeLists.txt.orig	2021-10-24 00:23:51.000000000 +0000
 +++ CMakeLists.txt
-@@ -68,7 +68,9 @@ find_package(Boost 1.50 REQUIRED COMPONE
+@@ -76,7 +76,9 @@ find_package(ICU REQUIRED COMPONENTS dat
  # no, gettext executables are not required when NLS is deactivated
  find_package(Gettext)
  
@@ -13,9 +13,9 @@ Do not bother with uninstaller.
  find_package(X11)
 +endif(NOT APPLE)
  
- # needed to get some SDL2 defines in... (as of rev31694 -D_GNU_SOURCE=1 is required!)
- set(SDL2_CONFIG "sdl2-config" CACHE STRING "Path to sdl2-config script")
-@@ -601,11 +576,6 @@ endif(ENABLE_GAME)
+ if(NOT WIN32)
+ 	# needed to get some SDL2 defines in... (as of rev31694 -D_GNU_SOURCE=1 is required!)
+@@ -568,11 +570,6 @@ endif()
  # uninstall
  #
  
