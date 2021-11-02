@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.22 2021/10/17 16:41:44 tm Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.23 2021/11/02 18:30:52 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -73,4 +73,19 @@ mail/balsa: security fix
 
 Pullup ticket #6521 - requested by nia
 mail/alpine: security fix
+
+Pullup ticket #6528 - requested by taca
+lang/php73: security fix
+
+Pullup ticket #6524 - requested by taca
+net/bind911: security fix
+
+Pullup ticket #6525 - requested by taca
+net/bind916: security fix
+
+Pullup ticket #6527 - requested by taca
+lang/php74: security fix
+
+Pullup ticket #6526 - requested by taca
+lang/php80: security fix
 
