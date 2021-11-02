@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5393 2021/11/02 12:04:55 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5394 2021/11/02 18:38:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8174,3 +8174,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-grpcio-tools to 1.41.1 [adam 2021-11-02]
 	Updated mail/dovecot2 to 2.3.17 [adam 2021-11-02]
 	Updated mail/dovecot2-pigeonhole to 0.5.17 [adam 2021-11-02]
+	Updated games/wesnoth to 1.16.0 [adam 2021-11-02]
+	Updated audio/faudio to 21.11 [adam 2021-11-02]
