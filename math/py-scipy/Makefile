@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2021/05/03 17:55:01 adam Exp $
+# $NetBSD: Makefile,v 1.50 2021/11/02 18:51:02 adam Exp $
 
-DISTNAME=	scipy-1.6.3
+DISTNAME=	scipy-1.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scipy/}
@@ -11,6 +11,7 @@ COMMENT=	Scientific Algorithms Library for Python
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-pybind11-[0-9]*:../../devel/py-pybind11
+DEPENDS+=	${PYPKGPREFIX}-pythran>=0.9.11:../../math/py-pythran
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
@@ -31,15 +32,16 @@ FFLAGS+=	-fPIC
 
 LDFLAGS.Darwin+=	-headerpad_max_install_names
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36
 
 REPLACE_PYTHON+=	scipy/sparse/linalg/isolve/tests/test_gcrotmk.py
 
-.include "../../mk/bsd.prefs.mk"
+# Prefer boost-headers from PkgSrc which are properly patched.
+post-configure:
+	${RM} -f -r ${WRKSRC}/scipy/_lib/boost/boost
+	${LN} -s ${BUILDLINK_DIR}/include/boost ${WRKSRC}/scipy/_lib/boost/boost
 
-post-extract:
-	${CHMOD} -R g-w ${WRKSRC}
-	${CHMOD} 0644 ${WRKSRC}/scipy/optimize/_shgo_lib/sobol_vec.gz
+.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
 .PHONY: fix-darwin-install-name
@@ -60,6 +62,7 @@ do-test:
 	cd ${WRKDIR} && \
 	${PYTHONBIN} -c "import scipy; scipy.test('full')"
 
+.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../devel/py-pybind11/buildlink3.mk"
 .include "../../lang/python/application.mk"
@@ -67,4 +70,5 @@ do-test:
 .include "../../math/fftw/buildlink3.mk"
 BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.17.3
 .include "../../math/py-numpy/buildlink3.mk"
+.include "../../math/py-pythran/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
