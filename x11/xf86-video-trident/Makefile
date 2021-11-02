@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/01/18 23:36:06 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2021/11/02 08:20:30 nia Exp $
 
 DISTNAME=	xf86-video-trident-1.3.8
 PKGREVISION=	1
@@ -13,6 +13,8 @@ COMMENT=	Modular Xorg Trident video driver
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
+
+RELRO_SUPPORTED=	partial
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 

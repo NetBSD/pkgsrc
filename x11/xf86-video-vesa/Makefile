@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2020/09/10 22:27:04 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2021/11/02 08:20:30 nia Exp $
 
 DISTNAME=	xf86-video-vesa-2.5.0
 CATEGORIES=	x11
@@ -12,6 +12,8 @@ COMMENT=	Modular Xorg VESA video driver
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
+
+RELRO_SUPPORTED=	partial
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 

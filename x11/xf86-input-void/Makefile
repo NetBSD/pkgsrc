@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/01/18 23:36:02 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2021/11/02 08:20:25 nia Exp $
 
 DISTNAME=	xf86-input-void-1.4.1
 PKGREVISION=	2
@@ -13,6 +13,8 @@ COMMENT=	Modular Xorg dummy input driver
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	pkg-config
+
+RELRO_SUPPORTED=	partial
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 

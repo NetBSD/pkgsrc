@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2018/03/07 11:57:43 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2021/11/02 08:20:28 nia Exp $
 
 DISTNAME=	xf86-video-openchrome-0.6.0
 PKGREVISION=	1
@@ -14,6 +14,8 @@ USE_LANGUAGES=	c99
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
+
+RELRO_SUPPORTED=	partial
 
 CONFIGURE_ARGS+=	--enable-maintainer-mode
 CONFIGURE_ARGS+=	--enable-dri
