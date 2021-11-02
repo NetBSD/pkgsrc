@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/01/18 23:36:01 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2021/11/02 08:20:24 nia Exp $
 
 DISTNAME=	xf86-input-mutouch-1.3.0
 PKGREVISION=	2
@@ -14,6 +14,8 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c99
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+
+RELRO_SUPPORTED=	partial
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 23:36:06 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2021/11/02 08:20:29 nia Exp $
 
 DISTNAME=	xf86-video-suntcx-1.1.2
 PKGREVISION=	2
@@ -13,6 +13,8 @@ COMMENT=	TCX video driver for the Xorg X server
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+
+RELRO_SUPPORTED=	partial
 
 .include "options.mk"
 

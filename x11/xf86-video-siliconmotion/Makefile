@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/01/18 23:36:05 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2021/11/02 08:20:29 nia Exp $
 
 DISTNAME=	xf86-video-siliconmotion-1.7.9
 PKGREVISION=	1
@@ -13,6 +13,8 @@ COMMENT=	Modular Xorg Silicon Motion video driver
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
+
+RELRO_SUPPORTED=	partial
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 

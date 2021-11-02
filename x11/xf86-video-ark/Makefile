@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2020/01/18 23:36:02 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2021/11/02 08:20:25 nia Exp $
 
 DISTNAME=	xf86-video-ark-0.7.5
 PKGREVISION=	5
@@ -13,6 +13,8 @@ COMMENT=	Modular Xorg ARK Logic video driver
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
+
+RELRO_SUPPORTED=	partial
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 

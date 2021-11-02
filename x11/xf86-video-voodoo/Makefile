@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/01/18 23:36:07 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2021/11/02 08:20:30 nia Exp $
 
 DISTNAME=	xf86-video-voodoo-1.2.5
 PKGREVISION=	2
@@ -14,6 +14,8 @@ LICENSE=	mit # XXX AND one other
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+
+RELRO_SUPPORTED=	partial
 
 .include "options.mk"
 
