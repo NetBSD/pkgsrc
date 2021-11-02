@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.174 2021/05/24 19:55:15 wiz Exp $
+# $NetBSD: Makefile,v 1.175 2021/11/02 09:44:48 schmonz Exp $
 
 DISTNAME=		ikiwiki_3.20200202.3.orig
 PKGNAME=		${DISTNAME:S/_/-/:S/.orig//}
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		www textproc
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/i/ikiwiki/}
 EXTRACT_SUFX=		.tar.xz
@@ -49,6 +49,11 @@ SUBST_CLASSES+=		buildonce
 SUBST_STAGE.buildonce=	post-configure
 SUBST_FILES.buildonce=	Makefile
 SUBST_SED.buildonce=	-e 's|_vendor_install :: all|_vendor_install ::|'
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	post-configure
+SUBST_FILES.paths=	IkiWiki/Plugin/highlight.pm IkiWiki/Plugin/polygen.pm
+SUBST_VARS.paths=	PREFIX PKG_SYSCONFBASEDIR
 
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
