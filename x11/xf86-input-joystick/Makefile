@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/01/18 23:36:01 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2021/11/02 08:20:24 nia Exp $
 
 DISTNAME=	xf86-input-joystick-1.6.3
 PKGREVISION=	2
@@ -14,6 +14,8 @@ COMMENT=	Joystick input driver for the Xorg X server
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+
+RELRO_SUPPORTED=	partial
 
 PKGCONFIG_OVERRIDE+=	xorg-joystick.pc.in
 
