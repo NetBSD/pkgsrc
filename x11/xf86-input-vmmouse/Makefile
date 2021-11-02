@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2020/06/28 13:52:19 nia Exp $
+# $NetBSD: Makefile,v 1.26 2021/11/02 08:20:25 nia Exp $
 
 DISTNAME=	xf86-input-vmmouse-13.1.0
 PKGREVISION=	2
@@ -14,6 +14,8 @@ USE_LANGUAGES=	c99
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake pkg-config
+
+RELRO_SUPPORTED=	partial
 
 # #error The vmmouse protocol is only supported on x86 architectures.
 ONLY_FOR_PLATFORM+=	*-*-i386 *-*-x86_64

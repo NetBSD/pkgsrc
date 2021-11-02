@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/01/18 23:36:04 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2021/11/02 08:20:28 nia Exp $
 
 DISTNAME=	xf86-video-qxl-0.1.5
 PKGREVISION=	1
@@ -14,6 +14,8 @@ LICENSE=	mit
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+
+RELRO_SUPPORTED=	partial
 
 .include "options.mk"
 
