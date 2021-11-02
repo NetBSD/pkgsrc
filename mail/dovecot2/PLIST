@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.73 2021/06/21 15:32:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.74 2021/11/02 12:03:53 adam Exp $
 bin/doveadm
 bin/doveconf
 bin/dovecot-sysreport
@@ -366,6 +366,7 @@ include/dovecot/mailbox-list-private.h
 include/dovecot/mailbox-list-subscriptions.h
 include/dovecot/mailbox-list.h
 include/dovecot/mailbox-log.h
+include/dovecot/mailbox-match-plugin.h
 include/dovecot/mailbox-recent-flags.h
 include/dovecot/mailbox-search-result-private.h
 include/dovecot/mailbox-tree.h
