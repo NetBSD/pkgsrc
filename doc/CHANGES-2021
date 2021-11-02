@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5385 2021/11/01 23:21:59 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.5386 2021/11/02 06:17:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8161,3 +8161,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-markdown to 3.2.2 [wiz 2021-11-01]
 	Added net/libnpupnp version 4.1.5 [wiz 2021-11-01]
 	Updated time/libical to 3.0.11 [gutteridge 2021-11-01]
+	Updated devel/py-pyparsing to 3.0.4 [adam 2021-11-02]
+	Updated devel/py-rope to 0.21.0 [adam 2021-11-02]
