@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.28 2021/10/04 14:21:21 nia Exp $
+# $NetBSD: clang.mk,v 1.29 2021/11/02 08:14:58 nia Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -55,11 +55,12 @@ _COMPILER_RPATH_FLAG=	${_COMPILER_LD_FLAG}${_LINKER_RPATH_FLAG}
 
 _CTF_CFLAGS=		-gdwarf-2
 
-# The user can choose the level of RELRO.
-.if ${PKGSRC_USE_RELRO} == "partial"
-_RELRO_LDFLAGS=		-Wl,-zrelro
-.else
+# The user or package can choose the level of RELRO.
+.if ${PKGSRC_USE_RELRO} != "partial" && \
+    ${RELRO_SUPPORTED:Uyes:tl} != "partial"
 _RELRO_LDFLAGS=		-Wl,-zrelro -Wl,-znow
+.else
+_RELRO_LDFLAGS=		-Wl,-zrelro
 .endif
 
 # The user can choose the level of stack smashing protection.

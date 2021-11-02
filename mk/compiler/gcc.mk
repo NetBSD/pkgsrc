@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.229 2021/10/08 16:35:57 nia Exp $
+# $NetBSD: gcc.mk,v 1.230 2021/11/02 08:14:58 nia Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -385,11 +385,12 @@ _GCC_CFLAGS+=		${_FORTIFY_CFLAGS}
 CWRAPPERS_APPEND.cc+=	${_FORTIFY_CFLAGS}
 .endif
 
-# The user can choose the level of RELRO.
-.if ${PKGSRC_USE_RELRO} == "partial"
-_RELRO_LDFLAGS=		-Wl,-zrelro
-.else
+# The user or package can choose the level of RELRO.
+.if ${PKGSRC_USE_RELRO} != "partial" && \
+    ${RELRO_SUPPORTED:Uyes:tl} != "partial"
 _RELRO_LDFLAGS=		-Wl,-zrelro -Wl,-znow
+.else
+_RELRO_LDFLAGS=		-Wl,-zrelro
 .endif
 
 _STACK_CHECK_CFLAGS=	-fstack-check
