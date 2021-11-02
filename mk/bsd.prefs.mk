@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.409 2021/07/02 12:03:24 nia Exp $
+# $NetBSD: bsd.prefs.mk,v 1.410 2021/11/02 08:14:58 nia Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -749,7 +749,7 @@ _PKGSRC_USE_FORTIFY=	yes
 #
 _PKGSRC_USE_RELRO=	no
 .if ${PKGSRC_USE_RELRO:tl} != "no" && \
-    ${RELRO_SUPPORTED:Uyes:tl} == "yes" && \
+    ${RELRO_SUPPORTED:Uyes:tl} != "no" && \
     ${_OPSYS_SUPPORTS_RELRO:Uno} == "yes"
 _PKGSRC_USE_RELRO=	yes
 .endif
