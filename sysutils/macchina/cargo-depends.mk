@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.22 2021/10/22 09:19:36 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.23 2021/11/02 09:13:51 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
 CARGO_CRATE_DEPENDS+=	ansi-to-tui-0.4.1
@@ -46,7 +46,7 @@ CARGO_CRATE_DEPENDS+=	jobserver-0.1.24
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.104
 CARGO_CRATE_DEPENDS+=	libgit2-sys-0.12.23+1.2.0
-CARGO_CRATE_DEPENDS+=	libmacchina-3.2.2
+CARGO_CRATE_DEPENDS+=	libmacchina-3.4.2
 CARGO_CRATE_DEPENDS+=	libz-sys-1.1.3
 CARGO_CRATE_DEPENDS+=	lock_api-0.4.5
 CARGO_CRATE_DEPENDS+=	log-0.4.14

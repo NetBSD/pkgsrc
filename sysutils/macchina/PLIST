@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/10/25 05:24:28 pin Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/11/02 09:13:51 pin Exp $
 bin/macchina
-share/examples/macchina/Carbon.toml
+share/examples/macchina/Hydrogen.toml
 share/examples/macchina/macchina.toml
