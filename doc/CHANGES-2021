@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5395 2021/11/02 18:51:33 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5396 2021/11/02 18:56:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8178,3 +8178,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/faudio to 21.11 [adam 2021-11-02]
 	Updated math/py-numpy to 1.21.3 [adam 2021-11-02]
 	Updated math/py-scipy to 1.7.1 [adam 2021-11-02]
+	Updated www/py-httplib2 to 0.20.2 [adam 2021-11-02]
+	Updated www/py-yarl to 1.7.2 [adam 2021-11-02]
