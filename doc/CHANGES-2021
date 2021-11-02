@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5391 2021/11/02 10:17:24 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5392 2021/11/02 11:44:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8169,3 +8169,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ikiwiki to 3.20200202.3nb6 [schmonz 2021-11-02]
 	Updated security/py-OpenSSL to 21.0.0 [adam 2021-11-02]
 	Updated net/py-responses to 0.15.0 [adam 2021-11-02]
+	Updated net/py-grpcio to 1.41.1 [adam 2021-11-02]
+	Updated net/py-grpcio-testing to 1.41.1 [adam 2021-11-02]
+	Updated net/py-grpcio-tools to 1.41.1 [adam 2021-11-02]
