@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.107 2021/08/30 09:33:48 khorben Exp $
+# $NetBSD: Makefile,v 1.108 2021/11/02 12:03:53 adam Exp $
 
 .include "../../mail/dovecot2/Makefile.common"
-
-PKGREVISION=		1
 
 RCD_SCRIPTS=		dovecot
 SMF_NAME=		dovecot
