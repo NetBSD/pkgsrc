@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/01/18 23:36:06 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2021/11/02 08:20:30 nia Exp $
 
 DISTNAME=	xf86-video-tseng-1.2.5
 PKGREVISION=	5
@@ -13,6 +13,8 @@ COMMENT=	Modular Xorg Tseng Labs video driver
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
+
+RELRO_SUPPORTED=	partial
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 

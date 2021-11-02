@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2021/10/17 11:22:57 nia Exp $
+# $NetBSD: Makefile,v 1.46 2021/11/02 08:20:27 nia Exp $
 
 PKGNAME=	xf86-video-intel-2.99.917.20200515
 COMMIT_ID=	5ca3ac1a90af177eb111a965e9b4dd8a27cc58fc
@@ -22,6 +22,8 @@ CONFIGURE_ARGS+=	--enable-dri3
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 USE_TOOLS+=	pkg-config automake autoconf autoreconf
+
+RELRO_SUPPORTED=	partial
 
 .include "../../mk/bsd.prefs.mk"
 

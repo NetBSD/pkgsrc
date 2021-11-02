@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/01/18 23:36:03 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2021/11/02 08:20:26 nia Exp $
 
 DISTNAME=	xf86-video-glint-1.2.9
 PKGREVISION=	1
@@ -15,6 +15,8 @@ CONFIGURE_ARGS+=	--enable-dri
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
+
+RELRO_SUPPORTED=	partial
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/01/18 23:36:03 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2021/11/02 08:20:26 nia Exp $
 
 DISTNAME=	xf86-video-dummy-0.3.8
 PKGREVISION=	1
@@ -13,6 +13,8 @@ COMMENT=	Virtual/offscreen frame buffer driver for the Xorg X server
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+
+RELRO_SUPPORTED=	partial
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 

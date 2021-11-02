@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2020/03/08 18:30:53 maya Exp $
+# $NetBSD: Makefile,v 1.53 2021/11/02 08:20:25 nia Exp $
 
 DISTNAME=	xf86-video-ati-19.1.0
 PKGREVISION=	1
@@ -18,6 +18,8 @@ CONFLICTS+=	xf86-video-ati6-[0-9]*
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake pkg-config
+
+RELRO_SUPPORTED=	partial
 
 CONFIGURE_ARGS+=	--enable-glamor
 

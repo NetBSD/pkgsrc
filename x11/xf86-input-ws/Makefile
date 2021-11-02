@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/01/26 17:32:27 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2021/11/02 08:20:25 nia Exp $
 
 DISTNAME=	xf86-input-ws-1.3.0.20151010
 PKGREVISION=	2
@@ -14,6 +14,8 @@ ONLY_FOR_PLATFORM=	NetBSD-*-* OpenBSD-*-*
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+
+RELRO_SUPPORTED=	partial
 
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
