@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.82.2.1 2021/10/13 21:04:00 tm Exp $
+$NetBSD: distinfo,v 1.82.2.2 2021/11/02 18:42:01 tm Exp $
 
 SHA1 (Python-2.7.18.tar.xz) = 678d4cf483a1c92efd347ee8e1e79326dc82810b
 RMD160 (Python-2.7.18.tar.xz) = 40a514bb05c9e631454ea8466e28f5bb229428ad
@@ -35,7 +35,7 @@ SHA1 (patch-Lib_test_test__unicode.py) = 1bd182bdbd880d0a847f9d8b69277a607f9f052
 SHA1 (patch-Lib_test_test__urllib2.py) = 89baa57daf2f3282e4fc5009915dbc4910b96ef1
 SHA1 (patch-Lib_test_test__urlparse.py) = 257cb3bf7a0e9b5e0dcb204f675959b10953ba7b
 SHA1 (patch-Lib_urllib2.py) = 0cc0dc811bb9544496962e08b040b5c96fb9073c
-SHA1 (patch-Lib_urlparse.py) = ec45dd48966eb806a5c0e79af6a7369fb45b9859
+SHA1 (patch-Lib_urlparse.py) = 69db5325a19474113e72c1feeb895a25534412c4
 SHA1 (patch-Mac_Tools_pythonw.c) = 2b9a60d4b349c240471fd305be69c28e0f654cdc
 SHA1 (patch-Makefile.pre.in) = ceaf34237588b527478ce1f9163c9168382fa201
 SHA1 (patch-Modules___ctypes_callbacks.c) = 8c335edfc9d2ef47988c5bdf1c3dd8473757637b
