@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/01/18 23:36:04 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2021/11/02 08:20:28 nia Exp $
 
 DISTNAME=	xf86-video-r128-6.12.0
 CATEGORIES=	x11
@@ -16,6 +16,8 @@ CONFIGURE_ARGS+=	--enable-dri
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake pkg-config
+
+RELRO_SUPPORTED=	partial
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 

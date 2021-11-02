@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/01/18 23:36:04 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2021/11/02 08:20:28 nia Exp $
 
 DISTNAME=	xf86-video-nouveau-1.0.16
 CATEGORIES=	x11
@@ -13,6 +13,8 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES+=	c99
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+
+RELRO_SUPPORTED=	partial
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 

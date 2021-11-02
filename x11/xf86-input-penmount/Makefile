@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/01/18 23:36:02 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2021/11/02 08:20:25 nia Exp $
 
 DISTNAME=	xf86-input-penmount-1.5.0
 PKGREVISION=	5
@@ -14,6 +14,8 @@ LICENSE=	x11
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+
+RELRO_SUPPORTED=	partial
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 

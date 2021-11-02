@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/01/18 23:36:03 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2021/11/02 08:20:26 nia Exp $
 
 DISTNAME=	xf86-video-ati-6.14.6
 PKGNAME=	${DISTNAME:S/ati/ati6/}
@@ -18,6 +18,8 @@ CONFLICTS+=	xf86-video-ati-[0-9]*
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	automake autoconf autoreconf gmake pkg-config
+
+RELRO_SUPPORTED=	partial
 
 .include "options.mk"
 
