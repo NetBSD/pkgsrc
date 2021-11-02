@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5389 2021/11/02 09:16:47 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5390 2021/11/02 09:44:57 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8166,3 +8166,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/macchina to 5.0.2 [pin 2021-11-02]
 	Updated sysutils/zoxide to 0.7.9 [pin 2021-11-02]
 	Updated www/wiki-tui to 0.4 [pin 2021-11-02]
+	Updated www/ikiwiki to 3.20200202.3nb6 [schmonz 2021-11-02]
