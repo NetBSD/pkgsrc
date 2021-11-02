@@ -1,4 +1,4 @@
-$NetBSD: patch-Lib_urlparse.py,v 1.1.2.2 2021/10/13 21:04:01 tm Exp $
+$NetBSD: patch-Lib_urlparse.py,v 1.1.2.3 2021/11/02 18:42:01 tm Exp $
 
 Fix CVE-2021-23336: Add `separator` argument to parse_qs; warn with default
 Via Fedora:
@@ -42,7 +42,7 @@ https://src.fedoraproject.org/rpms/python2.7/blob/rawhide/f/00359-CVE-2021-23336
 +
 +# The default "separator" for parse_qsl can be specified in a config file.
 +# It's cached after first read.
-+#_QS_SEPARATOR_CONFIG_FILENAME = '/etc/python/urllib.cfg'
++_QS_SEPARATOR_CONFIG_FILENAME = '@PKG_SYSCONFDIR@/python/urllib.cfg'
 +_default_qs_separator = None
 +
 +def parse_qsl(qs, keep_blank_values=0, strict_parsing=0, max_num_fields=None,
