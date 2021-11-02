@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5387 2021/11/02 09:14:10 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5388 2021/11/02 09:15:30 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8164,3 +8164,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-pyparsing to 3.0.4 [adam 2021-11-02]
 	Updated devel/py-rope to 0.21.0 [adam 2021-11-02]
 	Updated sysutils/macchina to 5.0.2 [pin 2021-11-02]
+	Updated sysutils/zoxide to 0.7.9 [pin 2021-11-02]
