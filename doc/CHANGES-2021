@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5402 2021/11/03 12:14:05 nils Exp $
+$NetBSD: CHANGES-2021,v 1.5403 2021/11/03 12:20:43 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8188,3 +8188,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/macchina to 5.0.3 [pin 2021-11-03]
 	Updated devel/php-composer to 2.1.11 [tpaul 2021-11-03]
 	Updated meta-pkgs/bulk-large to 20211103 [nils 2021-11-03]
+	Updated net/terraform-provider-vultr to 2.5.0 [tpaul 2021-11-03]
