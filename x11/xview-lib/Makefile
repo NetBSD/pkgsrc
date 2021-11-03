@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2013/03/25 07:46:41 sbd Exp $
+# $NetBSD: Makefile,v 1.42 2021/11/03 10:37:12 mef Exp $
 
 DISTNAME=		xview3.2p1-X11R6
 PKGNAME=		xview-lib-3.2.1
@@ -20,6 +20,14 @@ NOT_FOR_PLATFORM=	*-*-alpha
 NOT_FOR_PLATFORM+=	Linux-*-*
 
 USE_IMAKE=		yes
+
+SUBST_CLASSES+=		relro
+SUBST_MESSAGE.relro=	Add RELRO support
+SUBST_FILES.relro=	lib/libxview/Makefile
+SUBST_FILES.relro+=	lib/libolgx/Makefile
+SUBST_STAGE.relro=	post-configure
+#      SHLIBLDFLAGS = -shared -Wl,-rpath,$(USRLIBDIRPATH) -Wl,-rpath,$(REALPROJECTROOT)/lib -L $(REALPROJECTROOT)/lib $(SHLIBGLOBALSFLAGS)
+SUBST_SED.relro=	'-e /SHLIBLDFLAGS = /s/-Wl,/-Wl,-z,relro -Wl,-z,now -Wl,/'
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/lib && ${LN} -fs libolgx.so.3.2 libolgx.so.3 && \
