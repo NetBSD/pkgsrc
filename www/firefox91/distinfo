@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:29:27 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/11/03 19:19:40 nia Exp $
 
-BLAKE2s (firefox-91.2.0esr.source.tar.xz) = 70ea440c89520eac427b58d88ecf0b066accb3ac7b7b465a8c571486ec103449
-SHA512 (firefox-91.2.0esr.source.tar.xz) = f4cff7e43ff9927cbab3f02d37d360ee8bb0dbe988e280cb0638ee67bfe3c76e3a0469336de1b212fba66c958d58594b1739aafee1ebb84695d098c1e5c77b9d
-Size (firefox-91.2.0esr.source.tar.xz) = 381665824 bytes
+BLAKE2s (firefox-91.3.0esr.source.tar.xz) = 2a8ef569fb715f63580ea75c615c0244653c6d57af933030f3d488f32c771b18
+SHA512 (firefox-91.3.0esr.source.tar.xz) = 7cf6efd165acc134bf576715580c103a2fc10ab928ede4c18f69908c62a04eb0f60affa8ceafd5883b393c31b85cae6821d0ae063c9e78117456d475947deaa9
+Size (firefox-91.3.0esr.source.tar.xz) = 381117132 bytes
 BLAKE2s (nodejs-output-91.0.tgz) = 5007b8d20d6264a4cd573b465643cff83c2adc75ad7dd9fba97ff5fcae787c9f
 SHA512 (nodejs-output-91.0.tgz) = 3a457101a4aaa5ae955b77c41ba6b0d98eb5dd0ae9d6d8cc77c0c7bc0e844238a9c0d86cd1838ffb6a37ad8851f871c21e4ca1bb59d11e58fc42c5fec88c298c
 Size (nodejs-output-91.0.tgz) = 201061 bytes
@@ -32,6 +32,7 @@ SHA1 (patch-media_libcubeb_src_moz.build) = e4e64a1135cf4157ae5b6f7c1710ebd07695
 SHA1 (patch-media_libpng_pngpriv.h) = c8084332560017cd7c9b519b61d125fa28af0dbc
 SHA1 (patch-media_libtheora_lib_info.c) = f6dbf536d73859a1ff78304c2e9f6a6f74dac01f
 SHA1 (patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc) = f495b64d33db4940c0dfe8c36ddf82aa752b25d9
+SHA1 (patch-modules_fdlibm_src_math__private.h) = 6ae3b0077b4a8c6088c35769fa1972cfc44ea9c1
 SHA1 (patch-mozglue_misc_Uptime.cpp) = daefe25ef1ebc8e4d3735017b9e8ac68c4710a00
 SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 13e512c7ee9fa1e14ba415d62fa853e5fbfc91c0
 SHA1 (patch-security_nss_lib_freebl_mpi_mpi.c) = a7cd867916524770609d1c307a65b315b88456f4
