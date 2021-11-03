@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2021/08/09 11:09:03 nia Exp $
+# $NetBSD: Makefile,v 1.52 2021/11/03 12:11:20 nils Exp $
 
-DISTNAME=	bulk-large-20210809
+DISTNAME=	bulk-large-20211103
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -55,7 +55,7 @@ BUILD_DEPENDS+=	avr-gcc-[0-9]*:../../cross/avr-gcc
 BUILD_DEPENDS+=	avr-libc-[0-9]*:../../cross/avr-libc
 BUILD_DEPENDS+=	avr-gdb-[0-9]*:../../cross/avr-gdb
 BUILD_DEPENDS+=	mariadb-server>=10.5<10.6:../../databases/mariadb105-server
-BUILD_DEPENDS+=	mariadb-server>=10.6<10.7../../databases/mariadb106-server
+BUILD_DEPENDS+=	mariadb-server>=10.6<10.7:../../databases/mariadb106-server
 BUILD_DEPENDS+=	postgresql13-[0-9]*:../../databases/postgresql13
 BUILD_DEPENDS+=	abiword-[0-9]*:../../editors/abiword
 BUILD_DEPENDS+=	emacs26>=26<27:../../editors/emacs26
