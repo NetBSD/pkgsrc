@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# Dummy script to ensure pkgsrc never creates its own DEINSTALL script for
+# this package that uses a pkgsrc shell, as that can cause upgrade issues.
+#
+exit 0
