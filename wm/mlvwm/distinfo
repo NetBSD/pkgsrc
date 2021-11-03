@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:25:15 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/11/03 22:03:22 nia Exp $
 
-BLAKE2s (mlvwm-0.9.3.tar.gz) = 5ea6d83d57ba15e060f98d940795412009f03bf5274bc0c460ff3b40cce0cb96
-SHA512 (mlvwm-0.9.3.tar.gz) = 3898ae2a073cd31d6f83e3a138b6c9d0468fcc94f3aba1f60a83549e1b5120f833e832be81ceeecd37363d694f838828e024fbc4fb349f4039d5440fe78cce77
-Size (mlvwm-0.9.3.tar.gz) = 92454 bytes
+BLAKE2s (mlvwm-0.9.4.tar.gz) = b4d380fc135f6db05fc535b9260da6af944c1be2bef7030202a40d8a3ac26663
+SHA512 (mlvwm-0.9.4.tar.gz) = a018d6615b5eb66b7dc526a3b1c54783caf33bc7be195de443e2c6f3f641e2f850b9a4620f7d8bd5d4da287fee71332df8f2da742a06aaa86aed5257e05df208
+Size (mlvwm-0.9.4.tar.gz) = 552503 bytes
 SHA1 (patch-mlvwm_menus.c) = 0f64cbc336ede3ba489fe8159278d91864b27561
 SHA1 (patch-sample__rc_Mlvwmrc) = de79e74cbf2411e5905586c44ac03145982ddab0
