@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5398 2021/11/03 09:52:59 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5399 2021/11/03 10:39:07 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8184,3 +8184,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-wcmatch to 8.3 [adam 2021-11-03]
 	Updated devel/py-nose2 to 0.10.0 [adam 2021-11-03]
 	Updated net/py-lexicon to 3.8.1 [adam 2021-11-03]
+	Updated devel/ncurses to 6.2nb5 [jperkin 2021-11-03]
