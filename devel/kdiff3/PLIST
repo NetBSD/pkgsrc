@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/01/26 00:03:17 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/11/03 22:00:42 gutteridge Exp $
 bin/kdiff3
 lib/plugins/kf5/kfileitemaction/kdiff3fileitemaction.so
 lib/plugins/kf5/parts/kdiff3part.so
@@ -47,7 +47,6 @@ share/icons/hicolor/32x32/apps/kdiff3.png
 share/icons/hicolor/48x48/apps/kdiff3.png
 share/icons/hicolor/64x64/apps/kdiff3.png
 share/icons/hicolor/scalable/apps/kdiff3.svgz
-share/kservices5/kdiff3part.desktop
 share/kxmlgui5/kdiff3/kdiff3_shell.rc
 share/kxmlgui5/kdiff3part/kdiff3_part.rc
 share/locale/ar/LC_MESSAGES/kdiff3.mo
@@ -148,6 +147,7 @@ share/locale/rw/LC_MESSAGES/kdiff3.mo
 share/locale/sk/LC_MESSAGES/diff_ext.mo
 share/locale/sk/LC_MESSAGES/kdiff3.mo
 share/locale/sk/LC_MESSAGES/kdiff3fileitemactionplugin.mo
+share/locale/sl/LC_MESSAGES/diff_ext.mo
 share/locale/sl/LC_MESSAGES/kdiff3.mo
 share/locale/sl/LC_MESSAGES/kdiff3fileitemactionplugin.mo
 share/locale/sr/LC_MESSAGES/kdiff3.mo
