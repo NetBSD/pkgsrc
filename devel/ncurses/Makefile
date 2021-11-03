@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.111 2021/10/09 07:52:36 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2021/11/03 10:33:58 jperkin Exp $
 
 .include "Makefile.common"
-PKGREVISION=	4
+PKGREVISION=	5
 
 COMMENT=	CRT screen handling and optimization package
 
@@ -21,6 +21,12 @@ post-configure:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/c++/demo.cc \
 		${DESTDIR}${PREFIX}/share/examples/ncurses++demo.cc
+.if ${OPSYS} == "Darwin"
+	# Clashes with "a" versions on case-insensitive file systems
+	${RM} -f ${DESTDIR}${PREFIX}/${TERMINFODIR}/32/2621A 
+	${RM} -f ${DESTDIR}${PREFIX}/${TERMINFODIR}/68/hp2621A
+	${RM} -f ${DESTDIR}${PREFIX}/${TERMINFODIR}/68/hp70092A
+.endif
 	${FIND} ${DESTDIR}${PREFIX}/${TERMINFODIR} -type f -print | ${SORT} | \
 	${SED} -e "s,^${DESTDIR}${PREFIX}/,," >${WRKDIR}/PLIST.terminfo
 	${RM} -f ${DESTDIR}${PREFIX}/lib/terminfo
