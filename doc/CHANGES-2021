@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5407 2021/11/03 21:15:38 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5408 2021/11/03 21:52:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8194,3 +8194,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/firefox91-l10n to 91.3.0 [nia 2021-11-03]
 	Updated textproc/jsoncpp to 1.9.5 [adam 2021-11-03]
 	Updated security/libgpg-error to 1.43 [adam 2021-11-03]
+	Updated chat/dino to 0.2.2 [nia 2021-11-03]
