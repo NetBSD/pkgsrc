@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.235 2021/06/05 14:17:32 nia Exp $
+# $NetBSD: Makefile,v 1.236 2021/11/03 13:37:25 jperkin Exp $
 
 # Notes to package maintainers:
 #
@@ -86,7 +86,7 @@ EGDIR=			${PREFIX}/share/examples/pkg_install
 
 PLIST_SUBST+=		PKG_DBDIR=${PKG_DBDIR}
 
-DEINSTALL_SRC=		# empty
+DEINSTALL_SRC=		${PKGDIR}/DEINSTALL
 INSTALL_SRC=		${PKGDIR}/INSTALL
 FILES_SUBST+=		PKG_DBDIR=${PKG_DBDIR}			\
 			PKG_TOOLS_BIN=${PKG_TOOLS_BIN:Q}	\
