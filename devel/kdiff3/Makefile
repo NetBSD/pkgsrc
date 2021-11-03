@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2021/07/30 12:26:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.77 2021/11/03 22:00:42 gutteridge Exp $
 
-VERSION=	1.8.5
-DISTNAME=	kdiff3-${VERSION}
-PKGREVISION=	3
+DISTNAME=	kdiff3-1.9.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_KDE:=kdiff3/}
 EXTRACT_SUFX=	.tar.xz
@@ -13,19 +11,21 @@ COMMENT=	File and directory diff and merge tool
 LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++17
+GCC_REQD+=	7 # C++17
 
 BUILDLINK_TRANSFORM+=	rm:-Wl,--fatal-warnings
 
 BUILD_DEPENDS+=		extra-cmake-modules>=5.10.0:../../devel/extra-cmake-modules
 TOOLS_DEPENDS.cmake=	cmake>=3.1:../../devel/cmake
 
+.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.kcoreaddons+=	kcoreaddons>=5.70.0
+BUILDLINK_API_DEPENDS.kcoreaddons+=	kcoreaddons>=5.80.0
 .include "../../devel/kcoreaddons/buildlink3.mk"
 .include "../../devel/kcrash/buildlink3.mk"
 .include "../../devel/kdoctools/buildlink3.mk"
-BUILDLINK_API_DEPENDS.ki18n+=	ki18n>=5.70.0
+BUILDLINK_API_DEPENDS.ki18n+=	ki18n>=5.80.0
 .include "../../devel/ki18n/buildlink3.mk"
 .include "../../devel/kio/buildlink3.mk"
 .include "../../devel/kparts/buildlink3.mk"
