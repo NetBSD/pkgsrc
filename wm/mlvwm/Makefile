@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2021/05/04 14:09:52 nia Exp $
-#
+# $NetBSD: Makefile,v 1.14 2021/11/03 22:03:22 nia Exp $
 
-DISTNAME=	mlvwm-0.9.3
+DISTNAME=	mlvwm-0.9.4
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=morgant/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
