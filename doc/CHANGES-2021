@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5409 2021/11/03 21:59:49 nia Exp $
+$NetBSD: CHANGES-2021,v 1.5410 2021/11/03 22:02:14 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8196,3 +8196,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/libgpg-error to 1.43 [adam 2021-11-03]
 	Updated chat/dino to 0.2.2 [nia 2021-11-03]
 	Updated audio/pt2-clone to 1.37 [nia 2021-11-03]
+	Updated devel/kdiff3 to 1.9.3 [gutteridge 2021-11-03]
