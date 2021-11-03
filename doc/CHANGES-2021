@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5404 2021/11/03 15:06:59 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.5405 2021/11/03 19:19:54 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8190,3 +8190,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated meta-pkgs/bulk-large to 20211103 [nils 2021-11-03]
 	Updated net/terraform-provider-vultr to 2.5.0 [tpaul 2021-11-03]
 	Updated www/lighttpd to 1.4.61nb1 [schmonz 2021-11-03]
+	Updated www/firefox91 to 91.3.0 [nia 2021-11-03]
