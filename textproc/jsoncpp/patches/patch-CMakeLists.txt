@@ -1,25 +1,15 @@
-$NetBSD: patch-CMakeLists.txt,v 1.5 2020/09/29 16:49:15 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.6 2021/11/03 20:52:23 adam Exp $
 
 Make so version match symlink versions.
-Remove -Werror=conversion.
 
---- CMakeLists.txt.orig	2020-09-26 02:19:16.000000000 +0000
+--- CMakeLists.txt.orig	2021-11-03 17:53:28.000000000 +0000
 +++ CMakeLists.txt
-@@ -73,7 +73,7 @@ project(jsoncpp
+@@ -76,7 +76,7 @@ project(jsoncpp
          LANGUAGES CXX)
  
  message(STATUS "JsonCpp Version: ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH}")
--set(PROJECT_SOVERSION 24)
+-set(PROJECT_SOVERSION 25)
 +set(PROJECT_SOVERSION ${PROJECT_VERSION_MAJOR})
  
- option(JSONCPP_WITH_TESTS "Compile and (for jsoncpp_check) run JsonCpp test executables" ON)
- option(JSONCPP_WITH_POST_BUILD_UNITTEST "Automatically run unit-tests as a post build step" ON)
-@@ -124,7 +124,7 @@ endif()
- 
- if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-     # using regular Clang or AppleClang
--    add_compile_options(-Wall -Wconversion -Wshadow -Werror=conversion -Werror=sign-compare)
-+    add_compile_options(-Wall -Wconversion -Wshadow -Werror=sign-compare)
- elseif(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-     # using GCC
-     add_compile_options(-Wall -Wconversion -Wshadow -Wextra)
+ include(${CMAKE_CURRENT_SOURCE_DIR}/include/PreventInSourceBuilds.cmake)
+ include(${CMAKE_CURRENT_SOURCE_DIR}/include/PreventInBuildInstalls.cmake)
