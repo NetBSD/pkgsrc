@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/03/22 17:48:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/11/03 09:50:09 adam Exp $
 bin/nose2-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -201,6 +201,9 @@ ${PYSITELIB}/nose2/tests/functional/test_printhooks_plugin.pyo
 ${PYSITELIB}/nose2/tests/functional/test_session.py
 ${PYSITELIB}/nose2/tests/functional/test_session.pyc
 ${PYSITELIB}/nose2/tests/functional/test_session.pyo
+${PYSITELIB}/nose2/tests/functional/test_subtests.py
+${PYSITELIB}/nose2/tests/functional/test_subtests.pyc
+${PYSITELIB}/nose2/tests/functional/test_subtests.pyo
 ${PYSITELIB}/nose2/tests/functional/test_such_dsl.py
 ${PYSITELIB}/nose2/tests/functional/test_such_dsl.pyc
 ${PYSITELIB}/nose2/tests/functional/test_such_dsl.pyo
