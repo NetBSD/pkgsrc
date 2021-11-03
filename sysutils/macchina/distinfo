@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.34 2021/11/02 09:13:51 pin Exp $
+$NetBSD: distinfo,v 1.35 2021/11/03 11:28:14 pin Exp $
 
 BLAKE2s (aho-corasick-0.7.18.crate) = 8925e88e2df4b5ca3b31783f527e1bb31dbe27846f409f631148fa239f3b2935
 SHA512 (aho-corasick-0.7.18.crate) = 7a23b16231a90d23ee60ad4c81bc225410599a4560d33d3a203138fc540c39cf1000100fed3aed40dcc371c3635656a3792545dca5dd1aefbde00d8774eebd00
@@ -138,9 +138,9 @@ Size (libc-0.2.104.crate) = 548775 bytes
 BLAKE2s (libgit2-sys-0.12.23+1.2.0.crate) = c31064f9166b19b847252555d917b34489314c5a4652aabf8bf729cb01d53d3a
 SHA512 (libgit2-sys-0.12.23+1.2.0.crate) = 96a7ed25c1407168c1a2476148f11288d8c606e568f0b5761a7afa04a01cdcff2227db00f19ea0860099bf483214086e652193aa716ef90c3b15cb0f8bb7f5fc
 Size (libgit2-sys-0.12.23+1.2.0.crate) = 1473458 bytes
-BLAKE2s (libmacchina-3.4.2.crate) = 4a7d1bf6597af7782b17703ad149acb87b59f17b98f30fe35d4f9e8893aea38a
-SHA512 (libmacchina-3.4.2.crate) = b690223f699ada2a481d23a01ca128e4501e352b0bc60a6e8e85c107b0090d15bd4640c00e92b96b9c5b9571e9443b6a2eb5a13948ce6e8f329afb316352d28d
-Size (libmacchina-3.4.2.crate) = 72239 bytes
+BLAKE2s (libmacchina-3.4.3.crate) = 32e20c2a586de0845ba04220db054151dcf1ab4602024fff5937f1f67628a141
+SHA512 (libmacchina-3.4.3.crate) = 280d2cdd764e0bf545bc4d030d68764c0294e38c91e2e35b3dfd9334fb5ff8daa3d0c19aad4f3df06732b196fcbe8ebdd9ebfef043ca4bfd56d2ff5648c8c365
+Size (libmacchina-3.4.3.crate) = 31327 bytes
 BLAKE2s (libz-sys-1.1.3.crate) = 7f7b7ae67a2839af4d8824c2f9ff3f1e8b63794723fb3d984374f232b09b41a0
 SHA512 (libz-sys-1.1.3.crate) = 9ad3ac88cb3c436ba046a55123b7a3c96c56a8ae2a1b85a3eb39339e84441b16c82d35630e9aad1d51db83943f2d08cf0bd45e212b7284c224de451a0f0c30bb
 Size (libz-sys-1.1.3.crate) = 1341394 bytes
@@ -150,9 +150,9 @@ Size (lock_api-0.4.5.crate) = 25199 bytes
 BLAKE2s (log-0.4.14.crate) = 6a53d58f64a8f33394bab4d3ebee1ef02f08138aecee9b8ab336e1834f7d06fd
 SHA512 (log-0.4.14.crate) = 796100167663d85a7bc4244cd305e9b3f0a1b1520764b63464698eb136318d0928c40c16f5d19d9f602a5bf769851275bbd48d66b088b0c37be7a6fb62def7cc
 Size (log-0.4.14.crate) = 34582 bytes
-BLAKE2s (macchina-5.0.2.tar.gz) = 65b5b423e855ae932d73fa829dab27afdac9840c94f8849741200be03b986382
-SHA512 (macchina-5.0.2.tar.gz) = 6746d3812d0a58555d6e2f7287717ddb496bf66c2fae5d8fece110e4188913e6cb17c5a0cf6a5de79db484589ad3682b42b10c6cb24ba2e16e024c198adaf879
-Size (macchina-5.0.2.tar.gz) = 50764 bytes
+BLAKE2s (macchina-5.0.3.tar.gz) = cc1a30720d42121beee92c22cc789c80e62de7e492144df68ace5bd48b9e876b
+SHA512 (macchina-5.0.3.tar.gz) = 0ce885a823ed7409d97f6ea6bde8f85e4a0e68b45654bc308351957554c5a7f5ada86ade7b09114e3e92a9e8bab24663ae9ab6c82369336e2f361d287fd6c33e
+Size (macchina-5.0.3.tar.gz) = 50371 bytes
 BLAKE2s (mach-0.3.2.crate) = bf1a5764cf0612d0597472239373d06a2d47249c3337b2a91703f57010ab73de
 SHA512 (mach-0.3.2.crate) = 73622b37915f3445a57cbac5eb378bfee61f5a2383c0dd8bd7c29b5e46447405ebaeb706f3a3274e5afe37b0506afaf1511836cb8897d9d480a3abd41f18fa26
 Size (mach-0.3.2.crate) = 19611 bytes
@@ -339,9 +339,9 @@ Size (unicode-normalization-0.1.19.crate) = 107353 bytes
 BLAKE2s (unicode-segmentation-1.8.0.crate) = 3b772fa911152efe0d4180cd3eade59bc10bb9629186c74a972863ef12d89b71
 SHA512 (unicode-segmentation-1.8.0.crate) = f0779ec42907b665df53f38ea370e661f10e7c72a75917f4cbd055868428c0eac1c7fc194d4bbf048e00f0f3d3e2b3602ae88d7820ad0c73e94a5228b61f6495
 Size (unicode-segmentation-1.8.0.crate) = 94011 bytes
-BLAKE2s (unicode-width-0.1.8.crate) = e37a15fa50f6572607a42a1b936e78e5ffcb92f939dcb9c757f095c6a40bdd75
-SHA512 (unicode-width-0.1.8.crate) = 0abba6da6981a2451e01d93bbd47652c46eb6fb07cc0214f33259fb29945bfd5ee2b302e883ddca8f68e921635f222701b7310e7da2a5e225f854980d1e474b0
-Size (unicode-width-0.1.8.crate) = 16732 bytes
+BLAKE2s (unicode-width-0.1.9.crate) = 2c6be29baaa9f1c7b48cc6251da5aff0f9ee755d8ff1cc058dd0c084643e546c
+SHA512 (unicode-width-0.1.9.crate) = 0f5ec46c57e3b5e50cb8430c89db8d9c129e80ca11a9c398b5312bfe95001e19ca3efbfeb01c3ac09c4ce7e26c6ee1f352f7e114ecef78cefd68c54d2d50f5f4
+Size (unicode-width-0.1.9.crate) = 16745 bytes
 BLAKE2s (unicode-xid-0.2.2.crate) = f490e112605a2f8c1245fe3eac08a20787a04af701715892031431425bba0ae3
 SHA512 (unicode-xid-0.2.2.crate) = 92ffd0dd34e3ca235ecf110b38c447d3ec1faa23d76c112457f28d432f92fa6b5f428bc5e1bfd278f361f55426dd96e19ecb0d3eff6cf250892f069c52bd89a8
 Size (unicode-xid-0.2.2.crate) = 14955 bytes
