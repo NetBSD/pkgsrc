@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5413 2021/11/04 08:19:06 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5414 2021/11/04 13:32:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8201,3 +8201,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/blender to 2.93.5 [mrg 2021-11-04]
 	Updated net/haproxy to 2.4.8 [adam 2021-11-04]
 	Updated net/py-lexicon to 3.8.2 [adam 2021-11-04]
+	Updated devel/py-prompt_toolkit to 3.0.22 [adam 2021-11-04]
+	Updated devel/py-ipython to 7.29.0 [adam 2021-11-04]
