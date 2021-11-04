@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5415 2021/11/04 13:43:36 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5416 2021/11/04 13:52:35 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8205,3 +8205,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-ipython to 7.29.0 [adam 2021-11-04]
 	Updated www/py-django3 to 3.2.9 [adam 2021-11-04]
 	Updated devel/py-flakes to 2.4.0 [adam 2021-11-04]
+	Updated lang/janet to 1.18.1 [nia 2021-11-04]
