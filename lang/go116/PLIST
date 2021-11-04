@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/08/11 19:00:24 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/11/04 19:18:59 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go116/AUTHORS
@@ -3928,6 +3928,7 @@ go116/src/debug/macho/testdata/clang-amd64-darwin.obj.base64
 go116/src/debug/macho/testdata/fat-gcc-386-amd64-darwin-exec.base64
 go116/src/debug/macho/testdata/gcc-386-darwin-exec.base64
 go116/src/debug/macho/testdata/gcc-amd64-darwin-exec-debug.base64
+go116/src/debug/macho/testdata/gcc-amd64-darwin-exec-with-bad-dysym.base64
 go116/src/debug/macho/testdata/gcc-amd64-darwin-exec.base64
 go116/src/debug/macho/testdata/hello.c
 go116/src/debug/pe/file.go
@@ -9210,6 +9211,8 @@ go116/test/fixedbugs/issue4776.go
 go116/test/fixedbugs/issue4785.go
 go116/test/fixedbugs/issue4813.go
 go116/test/fixedbugs/issue4847.go
+go116/test/fixedbugs/issue48473.go
+go116/test/fixedbugs/issue48476.go
 go116/test/fixedbugs/issue4879.dir/a.go
 go116/test/fixedbugs/issue4879.dir/b.go
 go116/test/fixedbugs/issue4879.go
