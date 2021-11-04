@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/01/24 09:19:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/11/04 13:43:11 adam Exp $
 bin/pyflakes-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -59,6 +59,9 @@ ${PYSITELIB}/pyflakes/test/test_imports.pyo
 ${PYSITELIB}/pyflakes/test/test_is_literal.py
 ${PYSITELIB}/pyflakes/test/test_is_literal.pyc
 ${PYSITELIB}/pyflakes/test/test_is_literal.pyo
+${PYSITELIB}/pyflakes/test/test_match.py
+${PYSITELIB}/pyflakes/test/test_match.pyc
+${PYSITELIB}/pyflakes/test/test_match.pyo
 ${PYSITELIB}/pyflakes/test/test_other.py
 ${PYSITELIB}/pyflakes/test/test_other.pyc
 ${PYSITELIB}/pyflakes/test/test_other.pyo
