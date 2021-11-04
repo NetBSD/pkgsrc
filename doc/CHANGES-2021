@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5417 2021/11/04 13:53:19 nia Exp $
+$NetBSD: CHANGES-2021,v 1.5418 2021/11/04 13:56:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8207,3 +8207,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-flakes to 2.4.0 [adam 2021-11-04]
 	Updated lang/janet to 1.18.1 [nia 2021-11-04]
 	Added lang/jpm version 0.0.1 [nia 2021-11-04]
+	Updated graphics/py-Pillow to 8.4.0 [adam 2021-11-04]
+	Updated math/py-asteval to 0.9.25 [adam 2021-11-04]
