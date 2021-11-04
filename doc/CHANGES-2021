@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5419 2021/11/04 14:40:34 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5420 2021/11/04 17:13:15 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8210,3 +8210,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/py-Pillow to 8.4.0 [adam 2021-11-04]
 	Updated math/py-asteval to 0.9.25 [adam 2021-11-04]
 	Updated math/R to 4.1.2 [wen 2021-11-04]
+	Added devel/packr version 2.8.1 [bsiegert 2021-11-04]
