@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5420 2021/11/04 17:13:15 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.5421 2021/11/04 19:20:20 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8211,3 +8211,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/py-asteval to 0.9.25 [adam 2021-11-04]
 	Updated math/R to 4.1.2 [wen 2021-11-04]
 	Added devel/packr version 2.8.1 [bsiegert 2021-11-04]
+	Updated lang/go116 to 1.16.10 [bsiegert 2021-11-04]
