@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/04 13:52:23 nia Exp $
+
+BLAKE2s (jpm-0.0.1.tar.gz) = 1f237a8e842e0723d81efa6d6da30504ef376019fbae6c4a3ecf896b897eae72
+SHA512 (jpm-0.0.1.tar.gz) = 571bd00ab8c31fa792da61816f8e57490b8adbe246ec6a98d4f7ce6d280cceda08e3ae7bced286e3660fa9e99264b24c6d89d5443dfc9f1f0635a3e20f66763c
+Size (jpm-0.0.1.tar.gz) = 32930 bytes
