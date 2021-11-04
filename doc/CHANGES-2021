@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5414 2021/11/04 13:32:20 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5415 2021/11/04 13:43:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8203,3 +8203,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-lexicon to 3.8.2 [adam 2021-11-04]
 	Updated devel/py-prompt_toolkit to 3.0.22 [adam 2021-11-04]
 	Updated devel/py-ipython to 7.29.0 [adam 2021-11-04]
+	Updated www/py-django3 to 3.2.9 [adam 2021-11-04]
+	Updated devel/py-flakes to 2.4.0 [adam 2021-11-04]
