@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2021/06/13 13:10:46 wen Exp $
+@comment $NetBSD: PLIST,v 1.35 2021/11/04 14:38:47 wen Exp $
 bin/R
 bin/Rscript
 info/R-FAQ.info.gz
@@ -1107,6 +1107,9 @@ lib/R/library/survival/doc/compete.pdf
 lib/R/library/survival/doc/concordance.R
 lib/R/library/survival/doc/concordance.Rnw
 lib/R/library/survival/doc/concordance.pdf
+lib/R/library/survival/doc/discrim.R
+lib/R/library/survival/doc/discrim.Rnw
+lib/R/library/survival/doc/discrim.pdf
 lib/R/library/survival/doc/index.html
 lib/R/library/survival/doc/multi.Rnw
 lib/R/library/survival/doc/multi.pdf
