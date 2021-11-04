@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5412 2021/11/04 06:35:58 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5413 2021/11/04 08:19:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8199,3 +8199,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/kdiff3 to 1.9.3 [gutteridge 2021-11-03]
 	Updated wm/mlvwm to 0.9.4 [nia 2021-11-03]
 	Updated graphics/blender to 2.93.5 [mrg 2021-11-04]
+	Updated net/haproxy to 2.4.8 [adam 2021-11-04]
+	Updated net/py-lexicon to 3.8.2 [adam 2021-11-04]
