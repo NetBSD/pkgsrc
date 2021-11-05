@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5426 2021/11/05 12:25:57 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.5427 2021/11/05 12:33:43 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8217,3 +8217,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added textproc/py-lsp-jsonrpc version 1.0.0 [wiz 2021-11-05]
 	Updated converters/bdf2psf to 1.207 [fcambus 2021-11-05]
 	Updated geography/qgis to 3.16.12 [gdt 2021-11-05]
+	Updated ham/chirp to 20211105 [gdt 2021-11-05]
