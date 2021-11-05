@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.609 2021/10/08 16:38:31 nia Exp $
+# $NetBSD: Makefile,v 1.610 2021/11/05 12:37:32 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -117,6 +117,7 @@ SUBDIR+=	jasmin
 SUBDIR+=	jikes
 SUBDIR+=	jimtcl
 SUBDIR+=	joos
+SUBDIR+=	jpm
 SUBDIR+=	js
 SUBDIR+=	kaffe
 SUBDIR+=	kaffe-x11
@@ -205,6 +206,7 @@ SUBDIR+=	py-hy
 SUBDIR+=	py-inflect
 SUBDIR+=	py-js2py
 SUBDIR+=	py-jsparser
+SUBDIR+=	py-lsp-server
 SUBDIR+=	py-mypy
 SUBDIR+=	py-mypy_extensions
 SUBDIR+=	py-parso
