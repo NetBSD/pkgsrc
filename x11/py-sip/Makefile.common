@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2021/10/19 18:59:01 adam Exp $
+# $NetBSD: Makefile.common,v 1.10 2021/11/05 00:51:47 gdt Exp $
 #
 # used by x11/py-sip/Makefile
 # used by x11/py-sip-qt4/Makefile
@@ -8,6 +8,9 @@ DISTNAME=	sip-4.19.25
 CATEGORIES=	x11 devel python
 MASTER_SITES=	https://www.riverbankcomputing.com/static/Downloads/sip/${PKGVERSION_NOREV}/
 
+# Before updating, please check that any new version works with qgis.
+# Apparently, there are problems with 5 and 6 with qgis 3.16 as of
+# 2021-11.
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.riverbankcomputing.com/software/sip/
 
