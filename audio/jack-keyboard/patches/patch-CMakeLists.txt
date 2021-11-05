@@ -1,0 +1,21 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2021/11/05 22:47:06 nia Exp $
+
+Use GNUInstallDirs so man pages are installed to the right OS-specific
+directory.
+
+--- CMakeLists.txt.orig	2021-11-05 22:39:12.941859606 +0000
++++ CMakeLists.txt
+@@ -65,7 +65,9 @@ endif()
+ 
+ target_link_libraries(jack-keyboard -lm)
+ 
+-install(TARGETS jack-keyboard RUNTIME DESTINATION bin)
+-install(FILES pixmaps/jack-keyboard.png DESTINATION share/pixmaps)
+-install(FILES src/jack-keyboard.desktop DESTINATION share/applications)
+-install(FILES man/jack-keyboard.1 DESTINATION man/man1)
++include(GNUInstallDirs)
++
++install(TARGETS jack-keyboard RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
++install(FILES pixmaps/jack-keyboard.png DESTINATION ${CMAKE_INSTALL_DATADIR}/pixmaps)
++install(FILES src/jack-keyboard.desktop DESTINATION ${CMAKE_INSTALL_DATADIR}/applications)
++install(FILES man/jack-keyboard.1 DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
