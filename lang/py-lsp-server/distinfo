@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/11/05 12:36:15 wiz Exp $
+$NetBSD: distinfo,v 1.2 2021/11/05 15:58:23 wiz Exp $
 
 BLAKE2s (python-lsp-server-1.2.4.tar.gz) = 573b63907c47a50b0c3c4c257d9d2a75c4bf3af7af2ca9bb9b9a99092a51ba13
 SHA512 (python-lsp-server-1.2.4.tar.gz) = 862d59426c6e7c19f9d3d2766ec5f9ec818d29988ee72cde9553e4b1725fbbe4230ed2f6d7e8d08983c9ef1ced8d5afe42d6751ea529d3d8799c8930b1e10a26
 Size (python-lsp-server-1.2.4.tar.gz) = 62073 bytes
+SHA1 (patch-pylsp_plugins_flake8__lint.py) = 56907a886c2521ebb607654488fb456ae8f6b02c
