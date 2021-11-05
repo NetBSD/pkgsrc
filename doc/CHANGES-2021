@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5427 2021/11/05 12:33:43 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.5428 2021/11/05 12:37:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8218,3 +8218,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated converters/bdf2psf to 1.207 [fcambus 2021-11-05]
 	Updated geography/qgis to 3.16.12 [gdt 2021-11-05]
 	Updated ham/chirp to 20211105 [gdt 2021-11-05]
+	Added lang/py-lsp-server version 1.2.4 [wiz 2021-11-05]
