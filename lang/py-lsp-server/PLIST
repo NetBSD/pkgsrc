@@ -1,5 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2021/11/05 12:36:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/11/05 13:18:00 adam Exp $
 bin/pylsp-${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pylsp/__init__.py
 ${PYSITELIB}/pylsp/__init__.pyc
 ${PYSITELIB}/pylsp/__init__.pyo
@@ -105,9 +111,3 @@ ${PYSITELIB}/pylsp/uris.pyo
 ${PYSITELIB}/pylsp/workspace.py
 ${PYSITELIB}/pylsp/workspace.pyc
 ${PYSITELIB}/pylsp/workspace.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
