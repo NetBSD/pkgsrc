@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/11/05 12:36:15 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2021/11/05 13:18:00 adam Exp $
 
 DISTNAME=	python-lsp-server-1.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -35,11 +35,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-pylint, py-parso via py-jedi
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} pylsp pylsp-${PYVERSSUFFIX}
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} pylsp pylsp-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} py.test-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} pytest-${PYVERSSUFFIX}
 
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
