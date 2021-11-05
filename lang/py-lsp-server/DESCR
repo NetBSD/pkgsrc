@@ -1,0 +1,4 @@
+A Python 3.6+ implementation of the Language Server Protocol.
+
+This is a fork of the python-language-server project, maintained
+by the Spyder IDE team and the community.
