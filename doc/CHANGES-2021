@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5429 2021/11/05 13:13:07 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5430 2021/11/05 15:01:07 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8220,3 +8220,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated ham/chirp to 20211105 [gdt 2021-11-05]
 	Added lang/py-lsp-server version 1.2.4 [wiz 2021-11-05]
 	Updated www/wiki-tui to 0.4.1 [pin 2021-11-05]
+	Updated textproc/py-prettytable to 2.4.0 [fcambus 2021-11-05]
