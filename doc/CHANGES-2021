@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5422 2021/11/05 11:01:56 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5423 2021/11/05 11:06:35 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8213,3 +8213,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/packr version 2.8.1 [bsiegert 2021-11-04]
 	Updated lang/go116 to 1.16.10 [bsiegert 2021-11-04]
 	Updated lang/py-python-language-server to 0.36.2 [wiz 2021-11-05]
+	Updated textproc/lowdown to 0.10.0 [fcambus 2021-11-05]
