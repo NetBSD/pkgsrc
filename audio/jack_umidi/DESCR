@@ -1,0 +1,2 @@
+jack_umidi is a daemon that converts a BSD/OSS-style raw MIDI device into
+a JACK MIDI device.
