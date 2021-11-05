@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/08/24 08:32:43 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2021/11/05 11:01:47 wiz Exp $
 
-DISTNAME=	python-language-server-0.32.0
+DISTNAME=	python-language-server-0.36.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-language-server/}
@@ -10,18 +10,20 @@ HOMEPAGE=	https://github.com/palantir/python-language-server
 COMMENT=	Implementation of the Language Server Protocol for Python
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-rope-[0-9]*:../../devel/py-rope
-DEPENDS+=	${PYPKGPREFIX}-flakes-[0-9]*:../../devel/py-flakes
-DEPENDS+=	${PYPKGPREFIX}-mccabe-[0-9]*:../../devel/py-mccabe
-DEPENDS+=	${PYPKGPREFIX}-codestyle-[0-9]*:../../devel/py-codestyle
-DEPENDS+=	${PYPKGPREFIX}-docstyle-[0-9]*:../../devel/py-docstyle
+DEPENDS+=	${PYPKGPREFIX}-rope>=0.10.5:../../devel/py-rope
+DEPENDS+=	${PYPKGPREFIX}-flakes>=2.2.0:../../devel/py-flakes
+DEPENDS+=	${PYPKGPREFIX}-flake8>=3.8.0:../../devel/py-flake8
+DEPENDS+=	${PYPKGPREFIX}-mccabe>=0.6.0:../../devel/py-mccabe
+DEPENDS+=	${PYPKGPREFIX}-codestyle>=2.6.0:../../devel/py-codestyle
+DEPENDS+=	${PYPKGPREFIX}-docstyle>=2.0.0:../../devel/py-docstyle
 DEPENDS+=	${PYPKGPREFIX}-autopep8-[0-9]*:../../devel/py-autopep8
 DEPENDS+=	${PYPKGPREFIX}-yapf-[0-9]*:../../devel/py-yapf
 DEPENDS+=	${PYPKGPREFIX}-jedi>=0.17:../../editors/py-jedi
-DEPENDS+=	${PYPKGPREFIX}-jsonrpc-server-[0-9]*:../../textproc/py-jsonrpc-server
-DEPENDS+=	${PYPKGPREFIX}-pylint-[0-9]*:../../devel/py-pylint
+DEPENDS+=	${PYPKGPREFIX}-jsonrpc-server>=0.4.0:../../textproc/py-jsonrpc-server
+DEPENDS+=	${PYPKGPREFIX}-pylint>=2.5.0:../../devel/py-pylint
 DEPENDS+=	${PYPKGPREFIX}-pluggy-[0-9]*:../../devel/py-pluggy
 
+TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
