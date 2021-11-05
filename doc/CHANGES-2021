@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5435 2021/11/05 21:18:11 rhialto Exp $
+$NetBSD: CHANGES-2021,v 1.5436 2021/11/05 22:28:28 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8226,3 +8226,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated fonts/awesome-ttf to 5.15.0 [rhialto 2021-11-05]
 	Updated fonts/consolamono-ttf to 20130127nb1 [rhialto 2021-11-05]
 	Updated fonts/cascadia-ttf to 2110.31 [rhialto 2021-11-05]
+	Updated audio/spotify-player to 0.5.1 [pin 2021-11-05]
