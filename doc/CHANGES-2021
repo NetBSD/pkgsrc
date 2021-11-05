@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5432 2021/11/05 20:45:34 rhialto Exp $
+$NetBSD: CHANGES-2021,v 1.5433 2021/11/05 20:45:56 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8223,3 +8223,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-prettytable to 2.4.0 [fcambus 2021-11-05]
 	Updated fonts/junicode to 1.003 [rhialto 2021-11-05]
 	Updated fonts/awesome-otf to 5.15.0 [rhialto 2021-11-05]
+	Updated fonts/awesome-ttf to 5.15.0 [rhialto 2021-11-05]
