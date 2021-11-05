@@ -1,15 +1,15 @@
-$NetBSD: patch-setup.py,v 1.1 2020/05/18 13:36:49 wiz Exp $
+$NetBSD: patch-setup.py,v 1.2 2021/11/05 11:01:47 wiz Exp $
 
-Accept any ujson.
+Remove upper bound on jedi.
 
---- setup.py.orig	2020-05-13 20:39:42.000000000 +0000
+--- setup.py.orig	2020-12-11 19:24:55.000000000 +0000
 +++ setup.py
-@@ -38,7 +38,7 @@ setup(
-         'jedi>=0.17.0,<0.18.0',
-         'python-jsonrpc-server>=0.3.2',
+@@ -10,7 +10,7 @@ install_requires = [
+         'configparser; python_version<"3.0"',
+         'future>=0.14.0; python_version<"3"',
+         'backports.functools_lru_cache; python_version<"3.2"',
+-        'jedi>=0.17.2,<0.18.0',
++        'jedi>=0.17.2',
+         'python-jsonrpc-server>=0.4.0',
          'pluggy',
--        'ujson<=1.35; platform_system!="Windows"'
-+        'ujson'
-     ],
- 
-     # List additional groups of dependencies here (e.g. development
+         'ujson<=2.0.3 ; platform_system!="Windows" and python_version<"3.0"',
