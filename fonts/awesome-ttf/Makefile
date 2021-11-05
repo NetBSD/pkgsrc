@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2018/12/11 08:46:21 tm Exp $
+# $NetBSD: Makefile,v 1.6 2021/11/05 20:45:06 rhialto Exp $
 #
 
-VERSION=	5.5.0
+VERSION=	5.15.0
 DISTNAME=	fontawesome-free-${VERSION}-web
 PKGNAME=	awesome-ttf-${VERSION}
 CATEGORIES=	fonts
