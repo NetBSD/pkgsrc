@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5430 2021/11/05 15:01:07 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.5431 2021/11/05 18:57:05 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8221,3 +8221,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added lang/py-lsp-server version 1.2.4 [wiz 2021-11-05]
 	Updated www/wiki-tui to 0.4.1 [pin 2021-11-05]
 	Updated textproc/py-prettytable to 2.4.0 [fcambus 2021-11-05]
+	Updated fonts/junicode to 1.003 [rhialto 2021-11-05]
