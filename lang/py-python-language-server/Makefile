@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/11/05 11:01:47 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2021/11/05 13:42:46 wiz Exp $
 
 DISTNAME=	python-language-server-0.36.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -31,7 +31,8 @@ PYTHON_VERSIONED_DEPENDENCIES=	test:test
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-pylint, py-parso via py-jedi
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} pyls pyls-${PYVERSSUFFIX}
+	cd ${DESTDIR}${PREFIX}/bin && \
+		${MV} pyls pyls-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
