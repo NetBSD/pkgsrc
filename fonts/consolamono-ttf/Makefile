@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2014/06/01 16:35:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2021/11/05 21:00:35 rhialto Exp $
 #
 
-VER=		20121116
+VER=		20130127
 DISTNAME=	consolamono
 PKGNAME=	${DISTNAME}-ttf-${VER}
 PKGREVISION=	1
 CATEGORIES=	fonts
-MASTER_SITES=	http://openfontlibrary.org/assets/downloads/consolamono/7c6fa601cdc82be054fb2b8fd7e3c8cc/
+MASTER_SITES=	https://fontlibrary.org/assets/downloads/consolamono/61cc2afcc4eca96efe7c6ebf178d39df/
 DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_SUFX=	.zip
 
