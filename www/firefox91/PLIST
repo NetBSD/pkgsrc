@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/09/16 17:47:13 nia Exp $
+@comment $NetBSD: PLIST,v 1.2.2.1 2021/11/05 19:28:52 bsiegert Exp $
 bin/firefox91
 lib/firefox91/application.ini
 lib/firefox91/browser/chrome/icons/default/default128.png
@@ -9,6 +9,7 @@ lib/firefox91/browser/chrome/icons/default/default64.png
 lib/firefox91/browser/features/doh-rollout@mozilla.org.xpi
 lib/firefox91/browser/features/formautofill@mozilla.org.xpi
 lib/firefox91/browser/features/pictureinpicture@mozilla.org.xpi
+lib/firefox91/browser/features/proxy-failover@mozilla.com.xpi
 lib/firefox91/browser/features/screenshots@mozilla.org.xpi
 lib/firefox91/browser/features/webcompat-reporter@mozilla.org.xpi
 lib/firefox91/browser/features/webcompat@mozilla.org.xpi
