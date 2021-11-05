@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5421 2021/11/04 19:20:20 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.5422 2021/11/05 11:01:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8212,3 +8212,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/R to 4.1.2 [wen 2021-11-04]
 	Added devel/packr version 2.8.1 [bsiegert 2021-11-04]
 	Updated lang/go116 to 1.16.10 [bsiegert 2021-11-04]
+	Updated lang/py-python-language-server to 0.36.2 [wiz 2021-11-05]
