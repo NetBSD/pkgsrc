@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:27:04 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/11/05 21:00:35 rhialto Exp $
 
-BLAKE2s (consolamono-ttf-20121116/consolamono.zip) = b207ef794d80efb9b51c8f090b0fdf8c41478ffcccd6b89a5b99a6f6a50db45f
-SHA512 (consolamono-ttf-20121116/consolamono.zip) = 767a6381dc925bb4ecd9b79050b39ca73690083e58faaf5f0a30b7f47cc33005aa9eb14ed22f15ea634df7d685357d5544524dd8ed3984243e95d93fb55cdfdc
-Size (consolamono-ttf-20121116/consolamono.zip) = 1114416 bytes
+BLAKE2s (consolamono-ttf-20130127/consolamono.zip) = 35ae62f350214968c34ca9efc644e6befa2c6c993d1dc12b26abaa8de74613b7
+SHA512 (consolamono-ttf-20130127/consolamono.zip) = 4225f0493505860ccec04738b3c52f4d6a97bafe5f97fe46c2d3126b1ecd4c7dca2e9f3910379407a57c29f0f89bfed3da843ac61e5f291e1a0fabddf3d27f59
+Size (consolamono-ttf-20130127/consolamono.zip) = 1114546 bytes
