@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/11/05 13:18:00 adam Exp $
+# $NetBSD: Makefile,v 1.3 2021/11/05 15:58:23 wiz Exp $
 
 DISTNAME=	python-lsp-server-1.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -33,6 +33,12 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-pylint, py-parso via py-jedi
+
+SUBST_CLASSES+=		pylint
+SUBST_FILES.pylint+=	test/plugins/test_pylint_lint.py
+SUBST_STAGE.pylint=	pre-build
+SUBST_MESSAGE.pylint=	Fix pylint executable name.
+SUBST_SED.pylint=	-e "s/'pylint'$$/'pylint-${PYVERSSUFFIX}'/"
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
