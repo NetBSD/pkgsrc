@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/05 11:16:38 wiz Exp $
+
+BLAKE2s (python-lsp-jsonrpc-1.0.0.tar.gz) = 28b8d6e7409a0bfc2a81c87508f0c88a7624d5075624c4f14950c6f8fe389342
+SHA512 (python-lsp-jsonrpc-1.0.0.tar.gz) = 447835fc6c3810f486d80f85295089c021b792843bdf88d461c021b8b04407d8f7e6a99c07351a23658a5dff46eb475bc64e51bdec029787cd33330b54d4dfec
+Size (python-lsp-jsonrpc-1.0.0.tar.gz) = 10011 bytes
