@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5433 2021/11/05 20:45:56 rhialto Exp $
+$NetBSD: CHANGES-2021,v 1.5434 2021/11/05 21:00:46 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8224,3 +8224,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated fonts/junicode to 1.003 [rhialto 2021-11-05]
 	Updated fonts/awesome-otf to 5.15.0 [rhialto 2021-11-05]
 	Updated fonts/awesome-ttf to 5.15.0 [rhialto 2021-11-05]
+	Updated fonts/consolamono-ttf to 20130127nb1 [rhialto 2021-11-05]
