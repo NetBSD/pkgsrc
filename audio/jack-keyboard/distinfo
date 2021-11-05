@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/11/05 22:47:06 nia Exp $
+
+BLAKE2s (jack-keyboard-2.7.2.tar.gz) = 91c153299a8ad4e081fe2d4af3f22a2eebc69033061cb350ab851b9450858bba
+SHA512 (jack-keyboard-2.7.2.tar.gz) = d47ab73c3e030a1364703ab0bf9f88865ead5a7ad9b85e88268a57fab30677ca1e731279761b453b8d8f03ec4177da8e550f51e40119e2cfd921fec6f1927534
+Size (jack-keyboard-2.7.2.tar.gz) = 46164 bytes
+SHA1 (patch-CMakeLists.txt) = 2a2b9e5ecd6f2aded1ef23d03cea56c0e3becc89

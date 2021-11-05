@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/05 22:47:06 nia Exp $
+bin/jack-keyboard
+man/man1/jack-keyboard.1
+share/applications/jack-keyboard.desktop
+share/pixmaps/jack-keyboard.png
