@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2021/10/08 18:55:05 bsiegert Exp $
+# $NetBSD: Makefile,v 1.45 2021/11/05 20:02:47 bsiegert Exp $
 
 COMMENT=	Go supplementary cryptography libraries
 DISTNAME=	go-crypto-0.0.20200122
@@ -10,7 +10,7 @@ GITHUB_TAG=	69ecbb4d6d
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/golang/crypto/
 LICENSE=	modified-bsd
-PKGREVISION=	13
+PKGREVISION=	14
 
 GO_SRCPATH=	golang.org/x/crypto
 GO_DIST_BASE=	${GITHUB_PROJECT}-${GITHUB_TAG}*
