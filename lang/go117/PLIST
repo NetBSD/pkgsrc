@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/09/17 13:17:19 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/11/05 19:35:00 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go117/AUTHORS
@@ -359,6 +359,8 @@ go117/misc/cgo/testshared/testdata/issue39777/b/b.go
 go117/misc/cgo/testshared/testdata/issue44031/a/a.go
 go117/misc/cgo/testshared/testdata/issue44031/b/b.go
 go117/misc/cgo/testshared/testdata/issue44031/main/main.go
+go117/misc/cgo/testshared/testdata/issue47837/a/a.go
+go117/misc/cgo/testshared/testdata/issue47837/main/main.go
 go117/misc/cgo/testshared/testdata/trivial/trivial.go
 go117/misc/cgo/testsigfwd/main.go
 go117/misc/cgo/testso/noso_test.go
@@ -2322,6 +2324,7 @@ go117/src/cmd/go/testdata/script/ldflag.txt
 go117/src/cmd/go/testdata/script/link_matching_actionid.txt
 go117/src/cmd/go/testdata/script/link_syso_issue33139.txt
 go117/src/cmd/go/testdata/script/linkname.txt
+go117/src/cmd/go/testdata/script/list_all_gobuild.txt
 go117/src/cmd/go/testdata/script/list_ambiguous_path.txt
 go117/src/cmd/go/testdata/script/list_bad_import.txt
 go117/src/cmd/go/testdata/script/list_case_collision.txt
@@ -4370,6 +4373,7 @@ go117/src/debug/macho/testdata/clang-amd64-darwin.obj.base64
 go117/src/debug/macho/testdata/fat-gcc-386-amd64-darwin-exec.base64
 go117/src/debug/macho/testdata/gcc-386-darwin-exec.base64
 go117/src/debug/macho/testdata/gcc-amd64-darwin-exec-debug.base64
+go117/src/debug/macho/testdata/gcc-amd64-darwin-exec-with-bad-dysym.base64
 go117/src/debug/macho/testdata/gcc-amd64-darwin-exec.base64
 go117/src/debug/macho/testdata/hello.c
 go117/src/debug/pe/file.go
@@ -10010,6 +10014,8 @@ go117/test/fixedbugs/issue48088.dir/b.go
 go117/test/fixedbugs/issue48088.go
 go117/test/fixedbugs/issue4813.go
 go117/test/fixedbugs/issue4847.go
+go117/test/fixedbugs/issue48473.go
+go117/test/fixedbugs/issue48476.go
 go117/test/fixedbugs/issue4879.dir/a.go
 go117/test/fixedbugs/issue4879.dir/b.go
 go117/test/fixedbugs/issue4879.go
