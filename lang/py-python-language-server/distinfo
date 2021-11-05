@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:51:50 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/11/05 11:01:47 wiz Exp $
 
-BLAKE2s (python-language-server-0.32.0.tar.gz) = b7e7dfa8516549ab6957ac123b4166f9c03eacbade9ee24fded813076f9880ef
-SHA512 (python-language-server-0.32.0.tar.gz) = 7c4a6de3998f7a09cca18530e0803629924b26eaec4f1a1a4001996c680fcf35195052013f390569b0f79da94000ec86f92e9d68215dff53018080567e28ca0f
-Size (python-language-server-0.32.0.tar.gz) = 67137 bytes
-SHA1 (patch-setup.py) = b2facb324413b2ce39a5dd753a4dbb122307c726
+BLAKE2s (python-language-server-0.36.2.tar.gz) = fa1077e464b3e66290e5809fc577b3560ccb38a7341231d5a9941e1d3e369576
+SHA512 (python-language-server-0.36.2.tar.gz) = ee909d9332ef76c616d727ebfa36e80fd03ab57df8fc57265de21f0105cc0b64a518b2a8a582f88364d03a7d2a66e1030bcf5b3452ad3a891a3141da9b338373
+Size (python-language-server-0.36.2.tar.gz) = 74499 bytes
+SHA1 (patch-setup.py) = 0b0753461cdf0cd3cb34775f175d2f4e03566324
