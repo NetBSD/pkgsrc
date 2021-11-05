@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5424 2021/11/05 11:17:49 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5425 2021/11/05 11:17:57 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8215,3 +8215,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/py-python-language-server to 0.36.2 [wiz 2021-11-05]
 	Updated textproc/lowdown to 0.10.0 [fcambus 2021-11-05]
 	Added textproc/py-lsp-jsonrpc version 1.0.0 [wiz 2021-11-05]
+	Updated converters/bdf2psf to 1.207 [fcambus 2021-11-05]
