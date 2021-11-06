@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2020/12/03 13:08:49 zafer Exp $
+# $NetBSD: Makefile,v 1.14 2021/11/06 09:46:31 nia Exp $
 
 DISTNAME=	9e
 PKGNAME=	9e-1.0
-CATEGORIES=	plan9 archivers
+CATEGORIES=	archivers plan9
 MASTER_SITES=	https://www.aydogan.net/distfiles/archivers/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
