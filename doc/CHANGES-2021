@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5442 2021/11/06 11:53:30 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5443 2021/11/06 12:04:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8235,3 +8235,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added fonts/UFAS-otf version 20200320 [rhialto 2021-11-06]
 	Updated math/py-numpy to 1.21.4 [adam 2021-11-06]
 	Updated math/py-scipy to 1.7.2 [adam 2021-11-06]
+	Updated graphics/py-matplotlib to 3.4.3 [adam 2021-11-06]
+	Updated math/py-quadprog to 0.1.10 [adam 2021-11-06]
