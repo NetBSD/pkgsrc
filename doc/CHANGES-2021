@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5448 2021/11/06 16:40:48 rhialto Exp $
+$NetBSD: CHANGES-2021,v 1.5449 2021/11/06 16:43:51 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8243,3 +8243,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/split-thai to 2.12 [scole 2021-11-06]
 	Added math/hercules4sdl-decnumber version 3.68.0nb20210105 [rhialto 2021-11-06]
 	Added math/hercules4sdl-softfloat version 3.5.0nb20210105 [rhialto 2021-11-06]
+	Added emulators/hercules4sdl version 4.3 [rhialto 2021-11-06]
