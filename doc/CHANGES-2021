@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5438 2021/11/05 22:47:24 nia Exp $
+$NetBSD: CHANGES-2021,v 1.5439 2021/11/06 04:37:53 fox Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8229,3 +8229,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/spotify-player to 0.5.1 [pin 2021-11-05]
 	Added audio/jack_umidi version 1.1.1 [nia 2021-11-05]
 	Added audio/jack-keyboard version 2.7.2 [nia 2021-11-05]
+	Updated security/wolfssl to 5.0.0 [fox 2021-11-06]
