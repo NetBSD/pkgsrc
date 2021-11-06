@@ -1,0 +1,17 @@
+ANSI C General Decimal Arithmetic Library
+
+The decNumber library implements the General Decimal Arithmetic Specification
+in ANSI C. This specification defines a decimal arithmetic which meets the
+requirements of commercial, financial, and human-oriented applications. It also
+matches the decimal arithmetic in the IEEE 754 Standard for Floating Point
+Arithmetic.
+
+The library fully implements the specification, and hence supports integer,
+fixed-point, and floating-point decimal numbers directly, including infinite,
+NaN (Not a Number), and subnormal values. Both arbitrary-precision and
+fixed-size representations are supported.
+
+Refer to the package's PDF file for more information.
+
+This version is the one used by the SoftDevLabs version of
+Hercules 4.x (Hyperion).

@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/06 16:40:06 rhialto Exp $
+lib/hercules4sdl/decnumber.ERRATA
+lib/hercules4sdl/decnumber.ICU-license.html
+lib/hercules4sdl/decnumber.pdf
+lib/hercules4sdl/decnumber.readme.txt
+lib/hercules4sdl/include/decContext.h
+lib/hercules4sdl/include/decNumber.h
+lib/hercules4sdl/include/decPacked.h
+lib/hercules4sdl/include/decQuad.h
+lib/hercules4sdl/include/decimal128.h
+lib/hercules4sdl/include/decimal32.h
+lib/hercules4sdl/include/decimal64.h
+lib/hercules4sdl/include/decnumber_version.h
+lib/hercules4sdl/lib/libdecNumber_pic.a

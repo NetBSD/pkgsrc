@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/11/06 16:40:06 rhialto Exp $
+
+BLAKE2s (hercules4sdl-decnumber-3.68.0-da6650957d7dea21b5647c1fa80fa432f2891550.tar.gz) = 9501014ab8f362155742d7740ced713ca281b27a0eda98e35926bf615ec1f2ca
+SHA512 (hercules4sdl-decnumber-3.68.0-da6650957d7dea21b5647c1fa80fa432f2891550.tar.gz) = 3b20fa4ecb81eedc90fe919cc06dcb150f74b56771e8521a72648149135923ce3dd19e7b66e0ce660bb66b8e3ff4aa5be38be71b2e9f1de44978e755498f00f2
+Size (hercules4sdl-decnumber-3.68.0-da6650957d7dea21b5647c1fa80fa432f2891550.tar.gz) = 785599 bytes
+SHA1 (patch-cflags.txt) = 8e5833c2d43e7973dcf9d6c442976efefac30b26
