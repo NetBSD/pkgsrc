@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.102 2021/09/12 09:53:53 adam Exp $
+# $NetBSD: Makefile,v 1.103 2021/11/06 08:49:22 adam Exp $
 #
 # Changelog: https://hypothesis.readthedocs.io/en/latest/changes.html
 
-DISTNAME=	hypothesis-6.21.0
+DISTNAME=	hypothesis-6.24.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hypothesis/}
