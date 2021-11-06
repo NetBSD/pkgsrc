@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/06 15:09:26 bsiegert Exp $
+${PERL5_SUB_INSTALLVENDORARCH}/auto/pgFormatter/.packlist
+${PERL5_SUB_INSTALLVENDORLIB}/pgFormatter/Beautify.pm
+${PERL5_SUB_INSTALLVENDORLIB}/pgFormatter/CGI.pm
+${PERL5_SUB_INSTALLVENDORLIB}/pgFormatter/CLI.pm
+${PERL5_SUB_INSTALLVENDORBIN}/pg_format
+${PERL5_SUB_INSTALLVENDORMAN1DIR}/pg_format.1
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/pgFormatter::Beautify.3
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/pgFormatter::CGI.3
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/pgFormatter::CLI.3
+share/doc/pgFormatter/ChangeLog
+share/doc/pgFormatter/LICENSE
+share/doc/pgFormatter/README
+share/doc/pgFormatter/pg_format.conf.sample
