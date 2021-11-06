@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.521 2021/10/01 19:55:37 adam Exp $
+# $NetBSD: Makefile,v 1.522 2021/11/06 16:40:06 rhialto Exp $
 
 COMMENT=	Mathematics
 
@@ -208,6 +208,8 @@ SUBDIR+=	harmgen
 SUBDIR+=	harminv
 SUBDIR+=	heirloom-factor
 SUBDIR+=	heirloom-units
+SUBDIR+=	hercules4sdl-decnumber
+SUBDIR+=	hercules4sdl-softfloat
 SUBDIR+=	herisvm
 SUBDIR+=	hs-bifunctors
 SUBDIR+=	hs-comonad
