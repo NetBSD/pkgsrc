@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 09:57:04 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/11/06 09:49:20 nia Exp $
 
 BLAKE2s (arc-5.21p.tar.gz) = fe9c447c2c1ac5fcc9e03ed5311cf2e2ae37fad1813a9890ecc02ba2e1109b16
 SHA512 (arc-5.21p.tar.gz) = c70c01ec407cc27f6507e2715d8b553277609cb49369a1e65a83d007362a24b69bb09ef2bf168ee36ca6797bd4524644a89e9114d866351ae53fece193c2967c
 Size (arc-5.21p.tar.gz) = 84791 bytes
-SHA1 (patch-aa) = efbb7e0a3a715d871dc98ad4fad58d0ae49f5b02
+SHA1 (patch-aa) = 10a314ddbe3c44d8f74a591740973892e3906713
 SHA1 (patch-ab) = e85c2698747106a7319db07185bfe0b6e2480974
 SHA1 (patch-ac) = 3332d9db5c41fb205ab9f5123b0de0704ae634b3
 SHA1 (patch-ad) = b8c7b8a9a0733fb8f4a8963765d3dcd318988afc
