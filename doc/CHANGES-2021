@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5444 2021/11/06 12:25:01 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5445 2021/11/06 15:09:52 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8239,3 +8239,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/py-quadprog to 0.1.10 [adam 2021-11-06]
 	Updated lang/python39 to 3.9.8 [adam 2021-11-06]
 	Updated lang/py39-html-docs to 3.9.8 [adam 2021-11-06]
+	Added databases/p5-pgFormatter version 5.1 [bsiegert 2021-11-06]
