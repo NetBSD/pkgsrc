@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.341 2021/04/08 15:43:17 nia Exp $
+# $NetBSD: Makefile,v 1.342 2021/11/06 16:43:23 rhialto Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -87,6 +87,7 @@ SUBDIR+=	hatari
 SUBDIR+=	haxm
 SUBDIR+=	hercules
 SUBDIR+=	hercules-images
+SUBDIR+=	hercules4sdl
 SUBDIR+=	ia64sim
 SUBDIR+=	kegs
 SUBDIR+=	keystone

@@ -1,0 +1,45 @@
+$NetBSD: patch-configure.ac,v 1.1 2021/11/06 16:43:23 rhialto Exp $
+
+- Avoid -march=xxx because it makes binaries nonportable.
+- Fix suffix of helper libraries.
+
+--- configure.ac.orig	2020-11-27 18:45:12.000000000 +0000
++++ configure.ac
+@@ -2826,7 +2826,8 @@ if test "$hc_cv_auto_optimize" = "yes"; 
+     if test "$hc_cv_is_intel_x86_arch" = "yes"; then
+ 
+         # Set CPU type
+-        hc_cv_optimization_flags="$hc_cv_optimization_flags -march=$hc_cv_intel_cpu_type"
++	# Don't do this: it makes binaries unportable.
++        #hc_cv_optimization_flags="$hc_cv_optimization_flags -march=$hc_cv_intel_cpu_type"
+ 
+         # Dynamically inline small block string operations
+         # (subroutine calls still made for large area calls)
+@@ -3031,9 +3032,9 @@ test  "$hc_cv_is_mingw"    =  "yes"  && 
+ #------------------------------------------------------#
+ 
+ if test "$hc_cv_opt_debug" = "yes"; then
+-  hc_cv_pkg_lib_suffix=${hc_cv_cpu_bits}d
++  hc_cv_pkg_lib_suffix=d_pic
+ else
+-  hc_cv_pkg_lib_suffix=${hc_cv_cpu_bits}
++  hc_cv_pkg_lib_suffix=_pic
+ fi
+ 
+ AC_CACHE_SAVE()
+@@ -3229,10 +3230,11 @@ extpkg_ldadd="${crypto_libdir}/${crypto_
+ ##----------------------------------------------------------------
+ ##                         DEBUGGING
+ ##----------------------------------------------------------------
+-## AC_MSG_NOTICE( [Using crypto_libdir    = ${crypto_libdir}]    )
+-## AC_MSG_NOTICE( [Using decnumber_libdir = ${decnumber_libdir}] )
+-## AC_MSG_NOTICE( [Using softfloat_libdir = ${softfloat_libdir}] )
+-## AC_MSG_NOTICE( [Using telnet_libdir    = ${telnet_libdir}]    )
++AC_MSG_NOTICE( [Using crypto_libdir    = ${crypto_libdir}]    )
++AC_MSG_NOTICE( [Using decnumber_libdir = ${decnumber_libdir}] )
++AC_MSG_NOTICE( [Using softfloat_libdir = ${softfloat_libdir}] )
++AC_MSG_NOTICE( [Using telnet_libdir    = ${telnet_libdir}]    )
++AC_MSG_NOTICE( [Using extpkg_ldadd     = ${extpkg_ldadd}]    )
+ 
+ EXTPKG_INCDIRS="${extpkg_incdirs}"
+ AC_SUBST(EXTPKG_INCDIRS)
