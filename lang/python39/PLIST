@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/09/01 13:53:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/11/06 12:24:34 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1419,8 +1419,8 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/__init__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/__init__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/__init__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-21.2.3-py3-none-any.whl
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-57.4.0-py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-21.2.4-py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-58.1.0-py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyo
@@ -2661,6 +2661,12 @@ lib/python${PY_VER_SUFFIX}/test/ann_module2.pyo
 lib/python${PY_VER_SUFFIX}/test/ann_module3.py
 lib/python${PY_VER_SUFFIX}/test/ann_module3.pyc
 lib/python${PY_VER_SUFFIX}/test/ann_module3.pyo
+lib/python${PY_VER_SUFFIX}/test/ann_module5.py
+lib/python${PY_VER_SUFFIX}/test/ann_module5.pyc
+lib/python${PY_VER_SUFFIX}/test/ann_module5.pyo
+lib/python${PY_VER_SUFFIX}/test/ann_module6.py
+lib/python${PY_VER_SUFFIX}/test/ann_module6.pyc
+lib/python${PY_VER_SUFFIX}/test/ann_module6.pyo
 lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-alaw.aifc
 lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-pcm16.aiff
 lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-pcm16.au
@@ -5273,9 +5279,6 @@ lib/python${PY_VER_SUFFIX}/tkinter/test/README
 lib/python${PY_VER_SUFFIX}/tkinter/test/__init__.py
 lib/python${PY_VER_SUFFIX}/tkinter/test/__init__.pyc
 lib/python${PY_VER_SUFFIX}/tkinter/test/__init__.pyo
-lib/python${PY_VER_SUFFIX}/tkinter/test/runtktests.py
-lib/python${PY_VER_SUFFIX}/tkinter/test/runtktests.pyc
-lib/python${PY_VER_SUFFIX}/tkinter/test/runtktests.pyo
 lib/python${PY_VER_SUFFIX}/tkinter/test/support.py
 lib/python${PY_VER_SUFFIX}/tkinter/test/support.pyc
 lib/python${PY_VER_SUFFIX}/tkinter/test/support.pyo
@@ -5318,9 +5321,6 @@ lib/python${PY_VER_SUFFIX}/tkinter/test/test_ttk/__init__.pyo
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_ttk/test_extensions.py
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_ttk/test_extensions.pyc
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_ttk/test_extensions.pyo
-lib/python${PY_VER_SUFFIX}/tkinter/test/test_ttk/test_functions.py
-lib/python${PY_VER_SUFFIX}/tkinter/test/test_ttk/test_functions.pyc
-lib/python${PY_VER_SUFFIX}/tkinter/test/test_ttk/test_functions.pyo
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_ttk/test_style.py
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_ttk/test_style.pyc
 lib/python${PY_VER_SUFFIX}/tkinter/test/test_ttk/test_style.pyo
