@@ -1,0 +1,37 @@
+$NetBSD: patch-Makefile,v 1.1 2021/11/06 09:46:31 nia Exp $
+
+Honor CC, CFLAGS, LDFLAGS.
+
+--- Makefile.orig	2000-06-15 13:40:52.000000000 +0000
++++ Makefile
+@@ -1,14 +1,7 @@
+ # Makefile for 9e
+ 
+-CC = gcc 
+-
+-CFLAGS = -g3 -ggdb
+-
+ .PHONY: all clean distclean
+ 
+-LIBS = -lefence
+-
+-HDRS = 9a.h
+ SRCS = 9e.c
+ OBJS = 9e.o
+ 
+@@ -17,7 +10,7 @@ BINARIES = 9e
+ all: $(BINARIES)
+ 
+ 9e: $(OBJS)
+-	$(CC) -o 9e 9e.o $(LIBS)
++	$(CC) $(LDFLAGS) -o 9e 9e.o
+ 
+ clean:
+ 	rm -f *.o *~ a.out
+@@ -26,4 +19,4 @@ clean:
+ distclean: clean
+ 	rm -f ${BINARIES}
+ 
+-# EOF
+\ No newline at end of file
++# EOF
