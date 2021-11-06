@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5447 2021/11/06 16:40:27 rhialto Exp $
+$NetBSD: CHANGES-2021,v 1.5448 2021/11/06 16:40:48 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8242,3 +8242,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added databases/p5-pgFormatter version 5.1 [bsiegert 2021-11-06]
 	Updated textproc/split-thai to 2.12 [scole 2021-11-06]
 	Added math/hercules4sdl-decnumber version 3.68.0nb20210105 [rhialto 2021-11-06]
+	Added math/hercules4sdl-softfloat version 3.5.0nb20210105 [rhialto 2021-11-06]
