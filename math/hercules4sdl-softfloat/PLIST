@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/06 16:40:06 rhialto Exp $
+lib/hercules4sdl/doc/SoftFloat-history.html
+lib/hercules4sdl/doc/SoftFloat-source.html
+lib/hercules4sdl/doc/SoftFloat.html
+lib/hercules4sdl/include/softfloat.h
+lib/hercules4sdl/include/softfloat_types.h
+lib/hercules4sdl/include/softfloat_version.h
+lib/hercules4sdl/lib/libSoftFloat_pic.a
+lib/hercules4sdl/softfloat.LICENSE.txt
+lib/hercules4sdl/softfloat.README.html
+lib/hercules4sdl/softfloat.README.txt
