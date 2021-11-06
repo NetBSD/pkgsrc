@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/06 16:42:10 rhialto Exp $
+lib/hercules4sdl/include/telnet.h
+lib/hercules4sdl/include/telnet_version.h
+lib/hercules4sdl/lib/libtelnet_pic.a
+lib/hercules4sdl/telnet.LICENSE.txt
+lib/hercules4sdl/telnet.README.txt
