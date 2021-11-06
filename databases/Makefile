@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.641 2021/10/08 10:23:43 adam Exp $
+# $NetBSD: Makefile,v 1.642 2021/11/06 15:09:26 bsiegert Exp $
 
 COMMENT=	Databases
 
@@ -241,6 +241,7 @@ SUBDIR+=	p5-Tie-DBI
 SUBDIR+=	p5-YAML-MLDBM
 SUBDIR+=	p5-gdbm
 SUBDIR+=	p5-perl-ldap
+SUBDIR+=	p5-pgFormatter
 SUBDIR+=	p5-postgresql
 SUBDIR+=	p5-qdbm
 SUBDIR+=	p5-sqlrelay
