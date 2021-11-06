@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2021/04/02 16:30:09 nia Exp $
+# $NetBSD: Makefile,v 1.9 2021/11/06 09:33:37 nia Exp $
 
 PKGNAME=	gcc6-aux-${SNAPSHOT}
 PKGREVISION=	${MAIN_PR}
@@ -15,6 +15,8 @@ LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 LANGS=		c ada c++
 USE_TOOLS+=	gmake sed:run perl makeinfo bzip2 patch pod2man tar
 APPLY_DIFFS=	core ada cxx
+
+RELRO_SUPPORTED=	no
 
 .include "Makefile.version"
 .include "../../mk/bsd.prefs.mk"
