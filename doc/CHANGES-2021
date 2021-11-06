@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5450 2021/11/06 16:45:08 rhialto Exp $
+$NetBSD: CHANGES-2021,v 1.5451 2021/11/06 16:45:23 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8245,3 +8245,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added math/hercules4sdl-softfloat version 3.5.0nb20210105 [rhialto 2021-11-06]
 	Added emulators/hercules4sdl version 4.3 [rhialto 2021-11-06]
 	Added net/hercules4sdl-telnet version 1.0.0nb20210105 [rhialto 2021-11-06]
+	Added security/hercules4sdl-crypto version 1.0.0nb20210105 [rhialto 2021-11-06]
