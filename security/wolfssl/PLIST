@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/07/15 04:39:31 fox Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/11/06 04:37:24 fox Exp $
 bin/wolfssl-config
 include/cyassl/callbacks.h
 include/cyassl/certs_test.h
@@ -104,7 +104,9 @@ include/wolfssl/openssl/asn1t.h
 include/wolfssl/openssl/bio.h
 include/wolfssl/openssl/bn.h
 include/wolfssl/openssl/buffer.h
+include/wolfssl/openssl/cmac.h
 include/wolfssl/openssl/cms.h
+include/wolfssl/openssl/compat_types.h
 include/wolfssl/openssl/conf.h
 include/wolfssl/openssl/crypto.h
 include/wolfssl/openssl/des.h
@@ -190,6 +192,7 @@ include/wolfssl/wolfcrypt/hc128.h
 include/wolfssl/wolfcrypt/hmac.h
 include/wolfssl/wolfcrypt/idea.h
 include/wolfssl/wolfcrypt/integer.h
+include/wolfssl/wolfcrypt/kdf.h
 include/wolfssl/wolfcrypt/logging.h
 include/wolfssl/wolfcrypt/md2.h
 include/wolfssl/wolfcrypt/md4.h
