@@ -1,0 +1,31 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/06 11:50:16 rhialto Exp $
+share/doc/UFAS-otf/Aegean.pdf
+share/doc/UFAS-otf/Aegyptus.pdf
+share/doc/UFAS-otf/Akkadian.pdf
+share/doc/UFAS-otf/Assyrian.pdf
+share/doc/UFAS-otf/Cretan Hieroglyphs.pdf
+share/doc/UFAS-otf/Cypro-Minoan Inscriptions.pdf
+share/doc/UFAS-otf/EEMusic.pdf
+share/doc/UFAS-otf/License.pdf
+share/doc/UFAS-otf/Linear A Inscriptions.pdf
+share/doc/UFAS-otf/Maya Hieroglyphs.pdf
+share/doc/UFAS-otf/Textfonts.pdf
+share/doc/UFAS-otf/Unidings.pdf
+share/fonts/X11/OTF/Aegean.otf
+share/fonts/X11/OTF/Aegyptus.otf
+share/fonts/X11/OTF/AegyptusBold.otf
+share/fonts/X11/OTF/Akkadian.otf
+share/fonts/X11/OTF/Alexander.otf
+share/fonts/X11/OTF/Anaktoria.otf
+share/fonts/X11/OTF/Aroania.otf
+share/fonts/X11/OTF/Asea.otf
+share/fonts/X11/OTF/AseaBold.otf
+share/fonts/X11/OTF/AseaBoldItalic.otf
+share/fonts/X11/OTF/AseaItalic.otf
+share/fonts/X11/OTF/Assyrian.otf
+share/fonts/X11/OTF/Avdira.otf
+share/fonts/X11/OTF/CretanHieroglyphs.otf
+share/fonts/X11/OTF/CyproMinoan.otf
+share/fonts/X11/OTF/EEMusic.otf
+share/fonts/X11/OTF/Maya.otf
+share/fonts/X11/OTF/Unidings.otf
