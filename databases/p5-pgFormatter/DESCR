@@ -1,0 +1,6 @@
+A PostgreSQL SQL syntax beautifier that can work as a console program or as a
+CGI.
+
+This SQL formatter/beautifier supports keywords from SQL-92, SQL-99, SQL-2003,
+SQL-2008, SQL-2011 and PostgreSQL specifics keywords. Works with any other
+databases too.
