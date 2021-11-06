@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/04/29 20:33:28 maya Exp $
+# $NetBSD: Makefile,v 1.15 2021/11/06 09:33:37 nia Exp $
 
 PKGNAME=	gcc5-aux-${SNAPSHOT}
 PKGREVISION=	${MAIN_PR}
@@ -15,6 +15,8 @@ LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 LANGS=		c ada c++
 USE_TOOLS+=	gmake sed:run perl makeinfo bzip2 patch pod2man tar
 APPLY_DIFFS=	core ada cxx
+
+RELRO_SUPPORTED=	no
 
 NOT_PAX_MPROTECT_SAFE+=	gcc5-aux/bin/gnatmake
 
