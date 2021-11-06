@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5440 2021/11/06 08:52:45 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5441 2021/11/06 11:51:48 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8232,3 +8232,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/wolfssl to 5.0.0 [fox 2021-11-06]
 	Updated devel/py-hypothesis to 6.24.2 [adam 2021-11-06]
 	Updated devel/py-cachecontrol to 0.12.10 [adam 2021-11-06]
+	Added fonts/UFAS-otf version 20200320 [rhialto 2021-11-06]
