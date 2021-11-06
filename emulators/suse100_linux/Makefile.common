@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2018/04/30 10:41:35 wiz Exp $
+# $NetBSD: Makefile.common,v 1.32 2021/11/06 09:38:11 nia Exp $
 #
 # used by emulators/suse100_alsa/Makefile
 # used by emulators/suse100_alsa/Makefile
@@ -65,6 +65,8 @@ ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-powerpc
 ONLY_FOR_PLATFORM+=	NetBSD-3.99*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-[4-9]*-x86_64
 .endif
+
+RELRO_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
