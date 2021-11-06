@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.836 2021/08/24 10:17:40 mef Exp $
+# $NetBSD: Makefile,v 1.837 2021/11/06 16:42:37 rhialto Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -122,6 +122,7 @@ SUBDIR+=	hackbot
 SUBDIR+=	hashcash
 SUBDIR+=	heimdal
 SUBDIR+=	heirloom-su
+SUBDIR+=	hercules4sdl-crypto
 SUBDIR+=	hitch
 SUBDIR+=	honeyd
 SUBDIR+=	honeyd-arpd

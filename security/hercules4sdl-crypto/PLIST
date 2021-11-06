@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/06 16:42:37 rhialto Exp $
+lib/hercules4sdl/crypto.LICENSE.txt
+lib/hercules4sdl/crypto.README.txt
+lib/hercules4sdl/include/crypto.h
+lib/hercules4sdl/include/crypto_version.h
+lib/hercules4sdl/include/rijndael.h
+lib/hercules4sdl/include/sha1.h
+lib/hercules4sdl/include/sha2.h
+lib/hercules4sdl/include/sshdes.h
+lib/hercules4sdl/lib/libcrypto_pic.a
