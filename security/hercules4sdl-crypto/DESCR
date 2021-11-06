@@ -1,0 +1,8 @@
+Simple AES/DES encryption and SHA1/SHA2 hashing library
+
+Crypto provides a simple implementation of the Rijndael (now AES) and DES
+encryption algorithms as well as the SHA1 and SHA2 hashing algorithms. The
+library is almost a verbatim copy of the code from OpenBSD and PuTTY.
+
+This version is the one used by the SoftDevLabs version of
+Hercules 4.x (Hyperion).
