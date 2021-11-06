@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5443 2021/11/06 12:04:48 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5444 2021/11/06 12:25:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8237,3 +8237,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/py-scipy to 1.7.2 [adam 2021-11-06]
 	Updated graphics/py-matplotlib to 3.4.3 [adam 2021-11-06]
 	Updated math/py-quadprog to 0.1.10 [adam 2021-11-06]
+	Updated lang/python39 to 3.9.8 [adam 2021-11-06]
+	Updated lang/py39-html-docs to 3.9.8 [adam 2021-11-06]
