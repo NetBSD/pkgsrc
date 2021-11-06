@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5439 2021/11/06 04:37:53 fox Exp $
+$NetBSD: CHANGES-2021,v 1.5440 2021/11/06 08:52:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8230,3 +8230,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added audio/jack_umidi version 1.1.1 [nia 2021-11-05]
 	Added audio/jack-keyboard version 2.7.2 [nia 2021-11-05]
 	Updated security/wolfssl to 5.0.0 [fox 2021-11-06]
+	Updated devel/py-hypothesis to 6.24.2 [adam 2021-11-06]
+	Updated devel/py-cachecontrol to 0.12.10 [adam 2021-11-06]
