@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2015/01/04 10:43:44 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2021/11/06 09:49:20 nia Exp $
+
+Honor CC, CFLAGS. Use LDFLAGS when linking.
 
 --- Makefile.orig	2010-08-07 13:06:42.000000000 +0000
 +++ Makefile
@@ -20,3 +22,23 @@ $NetBSD: patch-aa,v 1.5 2015/01/04 10:43:44 wiz Exp $
  
  # Integer-only stdio routines for Atari ST.
  #LIBS=-liio16
+@@ -69,10 +69,10 @@ MOBJ = marc.o arcdata.o arcdos.o arcio.o
+ all:	arc$(PROG) marc$(PROG)
+ 
+ arc$(PROG):	$(OBJS) $(TMCLOCK)
+-	$(CC) $(OPT) -o arc$(PROG) $(OBJS) $(TMCLOCK) $(LIBS)
++	$(CC) $(OPT) $(LDFLAGS) -o arc$(PROG) $(OBJS) $(TMCLOCK) $(LIBS)
+ 
+ marc$(PROG):	$(MOBJ) $(TMCLOCK)
+-	$(CC) $(OPT) -o marc$(PROG) $(MOBJ) $(TMCLOCK) $(LIBS)
++	$(CC) $(OPT) $(LDFLAGS) -o marc$(PROG) $(MOBJ) $(TMCLOCK) $(LIBS)
+ 
+ clean:
+ 	rm -f *.o arc$(PROG) marc$(PROG)
+@@ -137,4 +137,4 @@ install: all
+ 	install -s -m 0755 -D marc $(DESTDIR)$(PREFIX)/bin/marc
+ 	install -m 0644 -D arc.1 $(DESTDIR)$(PREFIX)/share/man/man1/arc.1
+ 	install -m 0644 -D marc.1 $(DESTDIR)$(PREFIX)/share/man/man1/marc.1
+-	 	
+\ No newline at end of file
++	 	
