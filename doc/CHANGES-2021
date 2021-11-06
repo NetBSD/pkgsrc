@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5452 2021/11/06 22:48:11 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5453 2021/11/06 23:58:52 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8247,3 +8247,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added net/hercules4sdl-telnet version 1.0.0nb20210105 [rhialto 2021-11-06]
 	Added security/hercules4sdl-crypto version 1.0.0nb20210105 [rhialto 2021-11-06]
 	Updated textproc/hgrep to 0.2.0 [pin 2021-11-06]
+	Updated time/p5-DateTime-Locale to 1.33 [wen 2021-11-06]
