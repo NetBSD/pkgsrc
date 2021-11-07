@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2018/12/10 08:55:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2021/11/07 12:00:37 wiz Exp $
 include/gc.h
 include/gc/cord.h
 include/gc/cord_pos.h
@@ -8,10 +8,8 @@ include/gc/gc_allocator.h
 include/gc/gc_backptr.h
 include/gc/gc_config_macros.h
 include/gc/gc_cpp.h
-include/gc/gc_gcj.h
 include/gc/gc_inline.h
 include/gc/gc_mark.h
-include/gc/gc_pthread_redirects.h
 include/gc/gc_tiny_fl.h
 include/gc/gc_typed.h
 include/gc/gc_version.h
@@ -21,6 +19,7 @@ include/gc_cpp.h
 lib/libcord.la
 lib/libgc.la
 lib/libgccpp.la
+lib/libgctba.la
 lib/pkgconfig/bdw-gc.pc
 man/man3/gc.3
 share/doc/gc/AUTHORS
@@ -33,6 +32,7 @@ share/doc/gc/README.autoconf
 share/doc/gc/README.cmake
 share/doc/gc/README.cords
 share/doc/gc/README.darwin
+share/doc/gc/README.emscripten
 share/doc/gc/README.environment
 share/doc/gc/README.ews4800
 share/doc/gc/README.hp
