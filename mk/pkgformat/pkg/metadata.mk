@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.31 2020/10/09 20:18:30 jperkin Exp $
+# $NetBSD: metadata.mk,v 1.32 2021/11/07 18:49:28 khorben Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -298,6 +298,7 @@ MESSAGE_SUBST+=	PKGNAME=${PKGNAME}					\
 		EMULSUBDIR=${EMULSUBDIR}				\
 		LOCALBASE=${LOCALBASE}					\
 		X11BASE=${X11BASE}					\
+		SYSCONFBASE=${SYSCONFBASE}				\
 		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}			\
 		ROOT_GROUP=${REAL_ROOT_GROUP}				\
 		ROOT_USER=${REAL_ROOT_USER}
