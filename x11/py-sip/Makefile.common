@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2021/11/05 00:51:47 gdt Exp $
+# $NetBSD: Makefile.common,v 1.11 2021/11/07 11:38:26 adam Exp $
 #
 # used by x11/py-sip/Makefile
 # used by x11/py-sip-qt4/Makefile
@@ -12,7 +12,7 @@ MASTER_SITES=	https://www.riverbankcomputing.com/static/Downloads/sip/${PKGVERSI
 # Apparently, there are problems with 5 and 6 with qgis 3.16 as of
 # 2021-11.
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.riverbankcomputing.com/software/sip/
+HOMEPAGE=	https://riverbankcomputing.com/software/sip/
 
 DISTINFO_FILE=	${.CURDIR}/../../x11/py-sip/distinfo
 PATCHDIR=	${.CURDIR}/../../x11/py-sip/patches

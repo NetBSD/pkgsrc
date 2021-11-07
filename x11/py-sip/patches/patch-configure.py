@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.py,v 1.2 2018/10/07 09:00:09 adam Exp $
+$NetBSD: patch-configure.py,v 1.3 2021/11/07 11:38:26 adam Exp $
 
 Add PYVERSSUFFIX.
 
@@ -9,7 +9,7 @@ Add PYVERSSUFFIX.
          plat_py_lib_dir = lib_dir + "/config"
          plat_bin_dir = sys.exec_prefix + "/bin"
 -        plat_sip_dir = sys.prefix + "/share/sip"
-+        plat_sip_dir = sys.prefix + "/share/sip{}".format(sys.version[0:3])
++        plat_sip_dir = sys.prefix + "/share/sip{}.{}".format(sys.version_info.major, sys.version_info.minor)
  
  
  def create_config(module, template, macros):
@@ -18,7 +18,7 @@ Add PYVERSSUFFIX.
          "sip_version_str":  sip_version_str,
          "platform":         build_platform,
 -        "sip_bin":          os.path.join(sip_bin_dir, "sip"),
-+        "sip_bin":          os.path.join(sip_bin_dir, "sip{}".format(sys.version[0:3])),
++        "sip_bin":          os.path.join(sip_bin_dir, "sip{}.{}".format(sys.version_info.major, sys.version_info.minor)),
          "sip_inc_dir":      sip_inc_dir,
          "sip_root_dir":     sip_root_dir,
          "sip_module_dir":   sip_module_dir,
