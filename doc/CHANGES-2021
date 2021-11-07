@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5454 2021/11/07 00:16:05 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5455 2021/11/07 00:55:27 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8249,3 +8249,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/hgrep to 0.2.0 [pin 2021-11-06]
 	Updated time/p5-DateTime-Locale to 1.33 [wen 2021-11-06]
 	Updated devel/p5-Perl-Tidy to 20211029 [wen 2021-11-07]
+	Updated devel/p5-PPIx-Regexp to 0.081 [wen 2021-11-07]
