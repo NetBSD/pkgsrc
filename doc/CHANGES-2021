@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5470 2021/11/07 13:54:04 nros Exp $
+$NetBSD: CHANGES-2021,v 1.5471 2021/11/07 14:25:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8269,3 +8269,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/glib2 to 2.70.1 [adam 2021-11-07]
 	Updated devel/gdbus-codegen to 2.70.1 [adam 2021-11-07]
 	Updated misc/sword to 1.9.0 [nros 2021-11-07]
+	Updated fonts/harfbuzz to 3.1.0 [adam 2021-11-07]
+	Updated fonts/harfbuzz-icu to 3.1.0 [adam 2021-11-07]
