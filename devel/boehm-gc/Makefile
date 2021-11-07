@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.103 2021/11/07 12:00:37 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2021/11/07 20:59:17 wiz Exp $
 
 DISTNAME=	gc-8.2.0
 PKGNAME=	${DISTNAME:S/gc/boehm-gc/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.hboehm.info/gc/gc_source/
 
@@ -30,6 +31,9 @@ CFLAGS+=		-D_XOPEN_SOURCE
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/gc.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3/gc.3
+# as of 8.2.0, these are installed conditionally, but something is wrong - make sure they get installed
+	${INSTALL_DATA} ${WRKSRC}/include/gc_gcj.h ${DESTDIR}${PREFIX}/include/gc
+	${INSTALL_DATA} ${WRKSRC}/include/gc_pthread_redirects.h ${DESTDIR}${PREFIX}/include/gc
 
 # historical pkgsrc test target, can be removed in one of the next updates
 .PHONY: manual-do-test
