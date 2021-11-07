@@ -1,12 +1,16 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dbus.sh,v 1.10 2016/05/22 23:02:24 youri Exp $
+# $NetBSD: dbus.sh,v 1.11 2021/11/07 19:14:16 khorben Exp $
 #
 # PROVIDE: dbus
 # REQUIRE: DAEMON
 # KEYWORD: shutdown
+#
+# You will need to set some variables in @SYSCONFBASE@/rc.conf to start dbus:
+#
+# dbus=YES
 
-. /etc/rc.subr
+$_rc_subr_loaded . @SYSCONFBASE@/rc.subr
 
 name="dbus"
 rcvar=$name
