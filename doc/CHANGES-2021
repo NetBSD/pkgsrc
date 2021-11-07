@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5463 2021/11/07 12:09:22 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5464 2021/11/07 12:11:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8259,3 +8259,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/py-lmfit to 1.0.3 [adam 2021-11-07]
 	Updated devel/boehm-gc to 8.2.0 [wiz 2021-11-07]
 	Updated graphics/exiv2 to 0.27.5 [wiz 2021-11-07]
+	Updated graphics/libgdiplus to 6.1 [wiz 2021-11-07]
