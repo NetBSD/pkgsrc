@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5461 2021/11/07 11:59:44 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5462 2021/11/07 12:00:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8257,3 +8257,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/matio to 1.5.21 [nros 2021-11-07]
 	Updated devel/py-polib to 1.1.1 [adam 2021-11-07]
 	Updated math/py-lmfit to 1.0.3 [adam 2021-11-07]
+	Updated devel/boehm-gc to 8.2.0 [wiz 2021-11-07]
