@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/10/27 16:59:45 kamil Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/11/07 13:53:30 nros Exp $
 bin/diatheke
 bin/emptyvss
 bin/imp2gbs
@@ -11,7 +11,6 @@ bin/mod2osis
 bin/mod2vpl
 bin/mod2zmod
 bin/osis2mod
-bin/stripaccents
 bin/tei2mod
 bin/vpl2mod
 bin/vs2osisref
@@ -170,7 +169,6 @@ include/sword/thmlxhtml.h
 include/sword/treekey.h
 include/sword/treekeyidx.h
 include/sword/unicodertf.h
-include/sword/untgz.h
 include/sword/url.h
 include/sword/utf16utf8.h
 include/sword/utf8arabicpoints.h
@@ -260,6 +258,7 @@ share/sword/locales.d/locales.conf
 share/sword/locales.d/lt-utf8.conf
 share/sword/locales.d/lv-utf8.conf
 share/sword/locales.d/mt-utf8.conf
+share/sword/locales.d/my-utf8.conf
 share/sword/locales.d/nb-utf8.conf
 share/sword/locales.d/nb.conf
 share/sword/locales.d/nl-utf8.conf
