@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5465 2021/11/07 12:15:39 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5466 2021/11/07 12:18:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8261,3 +8261,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/exiv2 to 0.27.5 [wiz 2021-11-07]
 	Updated graphics/libgdiplus to 6.1 [wiz 2021-11-07]
 	Updated audio/musicpd to 0.23.3 [wiz 2021-11-07]
+	Updated mail/notmuch to 0.34.1 [wiz 2021-11-07]
