@@ -1,4 +1,4 @@
-# $NetBSD: redmine.mk,v 1.3 2021/08/31 15:05:02 taca Exp $
+# $NetBSD: redmine.mk,v 1.4 2021/11/07 17:21:19 khorben Exp $
 
 .if !defined(_RUBY_REDMINE_MK)
 _RUBY_REDMINE_MK=	# defined
@@ -41,7 +41,7 @@ RM_VERSIONS_SUPPORTED?=	42 41
 RM_VERSION_DEFAULT?=	42
 RM_VERSIONS_SUPPORTED?=	42
 .else
-.error "There is no remine support Ruby ${RUBY_VERSION}"
+.error "There is no redmine support Ruby ${RUBY_VERSION}"
 .endif
 
 RM_VERSION?=	# empty
