@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2021/09/19 16:05:15 adam Exp $
+# $NetBSD: Makefile,v 1.50 2021/11/07 17:00:25 wiz Exp $
 
 DISTNAME=	gdk-pixbuf-2.42.6
 PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
@@ -22,7 +22,6 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gdk-pixbuf
 MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/gdk-pixbuf
 
 MESON_ARGS+=			-D installed_tests=false
-MESON_ARGS+=			-D x11=false
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE=		output/meson-private/gdk-pixbuf-2.0.pc
 
