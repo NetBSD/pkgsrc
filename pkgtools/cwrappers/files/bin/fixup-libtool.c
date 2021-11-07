@@ -1,4 +1,4 @@
-/* $NetBSD: fixup-libtool.c,v 1.7 2015/04/19 14:30:07 jperkin Exp $ */
+/* $NetBSD: fixup-libtool.c,v 1.8 2021/11/07 12:38:12 christos Exp $ */
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -127,7 +127,7 @@ process_option(struct processing_option *opt, const char *line, size_t len,
 					continue;
 				if (strncmp(line + 2, r->src, r->src_len))
 					continue;
-				if (line[r->src_len + 2] != '/' &&
+				if (!isabs(line[r->src_len + 2]) &&
 				    len != r->src_len + 2)
 					continue;
 				line += r->src_len + 2;
@@ -144,7 +144,7 @@ process_option(struct processing_option *opt, const char *line, size_t len,
 
 				if (wlen <= len - 2 &&
 				    strncmp(line + 2, wrksrc, wlen) == 0 &&
-				    (line[wlen + 2] == '/' || wlen + 2 == len))
+				    (isabs(line[wlen + 2]) || wlen + 2 == len))
 					return;
 			}
 		}
@@ -170,17 +170,17 @@ process_option(struct processing_option *opt, const char *line, size_t len,
 		goto print_option;
 
 	for (eol = line + len - 3; eol > line; --eol) {
-		if (*eol == '/')
+		if (isabs(*eol))
 			break;
 	}
 
-	if (opt->in_lai && *eol == '/') {
+	if (opt->in_lai && isabs(*eol)) {
 		TAILQ_FOREACH(r, &unwrap_rules, link) {
 			if (eol < line + r->src_len)
 				continue;
 			if (strncmp(line, r->src, r->src_len))
 				continue;
-			if (line[r->src_len] != '/')
+			if (!isabs(*eol))
 				continue;
 			line += r->src_len;
 			len -= r->src_len;
@@ -212,12 +212,12 @@ process_option(struct processing_option *opt, const char *line, size_t len,
 	    len == strlen(opt->lafile))
 		goto print_option;
 
-	if (*line != '/' && line == eol) {
+	if (!isabs(*line) && line == eol) {
 		process_option(opt, "-L./.libs", 9, in_relink);
 		goto print_option;
 	}
 
-	if (*line != '/') {
+	if (!isabs(*line)) {
 		tmp = xasprintf("-L%*.*s/.libs", (int)(eol - line),
 		    (int)(eol - line), line);
 		process_option(opt, tmp, strlen(tmp), in_relink);
@@ -230,7 +230,7 @@ process_option(struct processing_option *opt, const char *line, size_t len,
 
 	wlen = strlen(wrksrc);
 	if (wlen > len ||
-	    (wlen != len && line[wlen] != '/') ||
+	    (wlen != len && !isabs(line[wlen])) ||
 	    strncmp(wrksrc, line, wlen))
 		goto print_option;
 
