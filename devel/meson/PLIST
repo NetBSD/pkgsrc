@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2021/09/27 18:50:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2021/11/07 13:23:05 adam Exp $
 bin/meson
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -285,6 +285,30 @@ ${PYSITELIB}/mesonbuild/interpreter/kwargs.pyo
 ${PYSITELIB}/mesonbuild/interpreter/mesonmain.py
 ${PYSITELIB}/mesonbuild/interpreter/mesonmain.pyc
 ${PYSITELIB}/mesonbuild/interpreter/mesonmain.pyo
+${PYSITELIB}/mesonbuild/interpreter/primitives/__init__.py
+${PYSITELIB}/mesonbuild/interpreter/primitives/__init__.pyc
+${PYSITELIB}/mesonbuild/interpreter/primitives/__init__.pyo
+${PYSITELIB}/mesonbuild/interpreter/primitives/array.py
+${PYSITELIB}/mesonbuild/interpreter/primitives/array.pyc
+${PYSITELIB}/mesonbuild/interpreter/primitives/array.pyo
+${PYSITELIB}/mesonbuild/interpreter/primitives/boolean.py
+${PYSITELIB}/mesonbuild/interpreter/primitives/boolean.pyc
+${PYSITELIB}/mesonbuild/interpreter/primitives/boolean.pyo
+${PYSITELIB}/mesonbuild/interpreter/primitives/dict.py
+${PYSITELIB}/mesonbuild/interpreter/primitives/dict.pyc
+${PYSITELIB}/mesonbuild/interpreter/primitives/dict.pyo
+${PYSITELIB}/mesonbuild/interpreter/primitives/integer.py
+${PYSITELIB}/mesonbuild/interpreter/primitives/integer.pyc
+${PYSITELIB}/mesonbuild/interpreter/primitives/integer.pyo
+${PYSITELIB}/mesonbuild/interpreter/primitives/range.py
+${PYSITELIB}/mesonbuild/interpreter/primitives/range.pyc
+${PYSITELIB}/mesonbuild/interpreter/primitives/range.pyo
+${PYSITELIB}/mesonbuild/interpreter/primitives/string.py
+${PYSITELIB}/mesonbuild/interpreter/primitives/string.pyc
+${PYSITELIB}/mesonbuild/interpreter/primitives/string.pyo
+${PYSITELIB}/mesonbuild/interpreter/type_checking.py
+${PYSITELIB}/mesonbuild/interpreter/type_checking.pyc
+${PYSITELIB}/mesonbuild/interpreter/type_checking.pyo
 ${PYSITELIB}/mesonbuild/interpreterbase/__init__.py
 ${PYSITELIB}/mesonbuild/interpreterbase/__init__.pyc
 ${PYSITELIB}/mesonbuild/interpreterbase/__init__.pyo
@@ -309,6 +333,9 @@ ${PYSITELIB}/mesonbuild/interpreterbase/helpers.pyo
 ${PYSITELIB}/mesonbuild/interpreterbase/interpreterbase.py
 ${PYSITELIB}/mesonbuild/interpreterbase/interpreterbase.pyc
 ${PYSITELIB}/mesonbuild/interpreterbase/interpreterbase.pyo
+${PYSITELIB}/mesonbuild/interpreterbase/operator.py
+${PYSITELIB}/mesonbuild/interpreterbase/operator.pyc
+${PYSITELIB}/mesonbuild/interpreterbase/operator.pyo
 ${PYSITELIB}/mesonbuild/linkers/__init__.py
 ${PYSITELIB}/mesonbuild/linkers/__init__.pyc
 ${PYSITELIB}/mesonbuild/linkers/__init__.pyo
@@ -345,6 +372,9 @@ ${PYSITELIB}/mesonbuild/mesonlib/posix.pyo
 ${PYSITELIB}/mesonbuild/mesonlib/universal.py
 ${PYSITELIB}/mesonbuild/mesonlib/universal.pyc
 ${PYSITELIB}/mesonbuild/mesonlib/universal.pyo
+${PYSITELIB}/mesonbuild/mesonlib/vsenv.py
+${PYSITELIB}/mesonbuild/mesonlib/vsenv.pyc
+${PYSITELIB}/mesonbuild/mesonlib/vsenv.pyo
 ${PYSITELIB}/mesonbuild/mesonlib/win32.py
 ${PYSITELIB}/mesonbuild/mesonlib/win32.pyc
 ${PYSITELIB}/mesonbuild/mesonlib/win32.pyo
@@ -384,6 +414,9 @@ ${PYSITELIB}/mesonbuild/modules/hotdoc.pyo
 ${PYSITELIB}/mesonbuild/modules/i18n.py
 ${PYSITELIB}/mesonbuild/modules/i18n.pyc
 ${PYSITELIB}/mesonbuild/modules/i18n.pyo
+${PYSITELIB}/mesonbuild/modules/java.py
+${PYSITELIB}/mesonbuild/modules/java.pyc
+${PYSITELIB}/mesonbuild/modules/java.pyo
 ${PYSITELIB}/mesonbuild/modules/keyval.py
 ${PYSITELIB}/mesonbuild/modules/keyval.pyc
 ${PYSITELIB}/mesonbuild/modules/keyval.pyo
@@ -474,6 +507,7 @@ ${PYSITELIB}/mesonbuild/scripts/cleantrees.pyo
 ${PYSITELIB}/mesonbuild/scripts/cmake_run_ctgt.py
 ${PYSITELIB}/mesonbuild/scripts/cmake_run_ctgt.pyc
 ${PYSITELIB}/mesonbuild/scripts/cmake_run_ctgt.pyo
+${PYSITELIB}/mesonbuild/scripts/cmd_or_ps.ps1
 ${PYSITELIB}/mesonbuild/scripts/coverage.py
 ${PYSITELIB}/mesonbuild/scripts/coverage.pyc
 ${PYSITELIB}/mesonbuild/scripts/coverage.pyo
