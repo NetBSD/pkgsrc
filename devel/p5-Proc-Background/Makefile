@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2021/09/18 13:51:58 wen Exp $
+# $NetBSD: Makefile,v 1.19 2021/11/07 00:59:13 wen Exp $
 #
 
-DISTNAME=	Proc-Background-1.22
+DISTNAME=	Proc-Background-1.30
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Proc/}
