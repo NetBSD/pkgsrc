@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/05/13 15:36:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/11/07 11:58:47 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -10,9 +10,6 @@ ${PYSITELIB}/lmfit/__init__.pyo
 ${PYSITELIB}/lmfit/_ampgo.py
 ${PYSITELIB}/lmfit/_ampgo.pyc
 ${PYSITELIB}/lmfit/_ampgo.pyo
-${PYSITELIB}/lmfit/_version.py
-${PYSITELIB}/lmfit/_version.pyc
-${PYSITELIB}/lmfit/_version.pyo
 ${PYSITELIB}/lmfit/confidence.py
 ${PYSITELIB}/lmfit/confidence.pyc
 ${PYSITELIB}/lmfit/confidence.pyo
@@ -37,3 +34,6 @@ ${PYSITELIB}/lmfit/parameter.pyo
 ${PYSITELIB}/lmfit/printfuncs.py
 ${PYSITELIB}/lmfit/printfuncs.pyc
 ${PYSITELIB}/lmfit/printfuncs.pyo
+${PYSITELIB}/lmfit/version.py
+${PYSITELIB}/lmfit/version.pyc
+${PYSITELIB}/lmfit/version.pyo
