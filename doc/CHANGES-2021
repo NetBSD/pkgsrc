@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5467 2021/11/07 13:01:34 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5468 2021/11/07 13:07:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8263,3 +8263,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/musicpd to 0.23.3 [wiz 2021-11-07]
 	Updated mail/notmuch to 0.34.1 [wiz 2021-11-07]
 	Updated print/poppler to 21.11.0 [wiz 2021-11-07]
+	Updated wm/i3 to 4.20.1 [wiz 2021-11-07]
