@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2021/02/07 12:38:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/11/07 14:43:37 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -441,6 +441,12 @@ ${PYSITELIB}/stdnum/in_/__init__.pyo
 ${PYSITELIB}/stdnum/in_/aadhaar.py
 ${PYSITELIB}/stdnum/in_/aadhaar.pyc
 ${PYSITELIB}/stdnum/in_/aadhaar.pyo
+${PYSITELIB}/stdnum/in_/epic.py
+${PYSITELIB}/stdnum/in_/epic.pyc
+${PYSITELIB}/stdnum/in_/epic.pyo
+${PYSITELIB}/stdnum/in_/gstin.py
+${PYSITELIB}/stdnum/in_/gstin.pyc
+${PYSITELIB}/stdnum/in_/gstin.pyo
 ${PYSITELIB}/stdnum/in_/pan.py
 ${PYSITELIB}/stdnum/in_/pan.pyc
 ${PYSITELIB}/stdnum/in_/pan.pyo
@@ -497,6 +503,9 @@ ${PYSITELIB}/stdnum/iso7064/mod_97_10.pyo
 ${PYSITELIB}/stdnum/iso9362.py
 ${PYSITELIB}/stdnum/iso9362.pyc
 ${PYSITELIB}/stdnum/iso9362.pyo
+${PYSITELIB}/stdnum/isrc.py
+${PYSITELIB}/stdnum/isrc.pyc
+${PYSITELIB}/stdnum/isrc.pyo
 ${PYSITELIB}/stdnum/issn.py
 ${PYSITELIB}/stdnum/issn.pyc
 ${PYSITELIB}/stdnum/issn.pyo
@@ -686,6 +695,9 @@ ${PYSITELIB}/stdnum/pl/regon.pyo
 ${PYSITELIB}/stdnum/pt/__init__.py
 ${PYSITELIB}/stdnum/pt/__init__.pyc
 ${PYSITELIB}/stdnum/pt/__init__.pyo
+${PYSITELIB}/stdnum/pt/cc.py
+${PYSITELIB}/stdnum/pt/cc.pyc
+${PYSITELIB}/stdnum/pt/cc.pyo
 ${PYSITELIB}/stdnum/pt/nif.py
 ${PYSITELIB}/stdnum/pt/nif.pyc
 ${PYSITELIB}/stdnum/pt/nif.pyo
@@ -731,6 +743,9 @@ ${PYSITELIB}/stdnum/se/orgnr.pyo
 ${PYSITELIB}/stdnum/se/personnummer.py
 ${PYSITELIB}/stdnum/se/personnummer.pyc
 ${PYSITELIB}/stdnum/se/personnummer.pyo
+${PYSITELIB}/stdnum/se/postnummer.py
+${PYSITELIB}/stdnum/se/postnummer.pyc
+${PYSITELIB}/stdnum/se/postnummer.pyo
 ${PYSITELIB}/stdnum/se/vat.py
 ${PYSITELIB}/stdnum/se/vat.pyc
 ${PYSITELIB}/stdnum/se/vat.pyo
@@ -767,6 +782,18 @@ ${PYSITELIB}/stdnum/sv/__init__.pyo
 ${PYSITELIB}/stdnum/sv/nit.py
 ${PYSITELIB}/stdnum/sv/nit.pyc
 ${PYSITELIB}/stdnum/sv/nit.pyo
+${PYSITELIB}/stdnum/th/__init__.py
+${PYSITELIB}/stdnum/th/__init__.pyc
+${PYSITELIB}/stdnum/th/__init__.pyo
+${PYSITELIB}/stdnum/th/moa.py
+${PYSITELIB}/stdnum/th/moa.pyc
+${PYSITELIB}/stdnum/th/moa.pyo
+${PYSITELIB}/stdnum/th/pin.py
+${PYSITELIB}/stdnum/th/pin.pyc
+${PYSITELIB}/stdnum/th/pin.pyo
+${PYSITELIB}/stdnum/th/tin.py
+${PYSITELIB}/stdnum/th/tin.pyc
+${PYSITELIB}/stdnum/th/tin.pyo
 ${PYSITELIB}/stdnum/tr/__init__.py
 ${PYSITELIB}/stdnum/tr/__init__.pyc
 ${PYSITELIB}/stdnum/tr/__init__.pyo
