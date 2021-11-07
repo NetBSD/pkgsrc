@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5456 2021/11/07 01:00:23 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5457 2021/11/07 01:43:18 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8251,3 +8251,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Perl-Tidy to 20211029 [wen 2021-11-07]
 	Updated devel/p5-PPIx-Regexp to 0.081 [wen 2021-11-07]
 	Updated devel/p5-Proc-Background to 1.30 [wen 2021-11-07]
+	Updated devel/p5-B-Keywords to 1.23 [wen 2021-11-07]
