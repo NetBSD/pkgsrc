@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.29 2021/10/26 10:17:19 nia Exp $
+$NetBSD: distinfo,v 1.30 2021/11/07 00:15:13 wen Exp $
 
-BLAKE2s (Perl-Tidy-20210717.tar.gz) = e38cdb07b0c5de8921f2533c57590782ff51dd6a92f5b8c0fa206929dd4e425f
-SHA512 (Perl-Tidy-20210717.tar.gz) = ccc090cb6ffbd803fbaddde3a99391bd07a97fb47d20515c3f3e58c69a1404824a5bb9aa3cbfea6b2119f7140552fde3bc2361d3ea8904a875973817446578b1
-Size (Perl-Tidy-20210717.tar.gz) = 814449 bytes
+BLAKE2s (Perl-Tidy-20211029.tar.gz) = 4054255d5600a9dcb64c85f2274d22c469ae7c1cc52dbe9bce7ae27def19b7ca
+SHA512 (Perl-Tidy-20211029.tar.gz) = a164a986b840be19090ed661b94179dfb1acf36ac95e30e886fc28f93fa0a418d83c99cec7ee7443b2bf276fe517018df53847b2045490cc8dfb0640d702d8ba
+Size (Perl-Tidy-20211029.tar.gz) = 850004 bytes
