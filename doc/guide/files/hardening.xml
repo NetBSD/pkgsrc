@@ -1,4 +1,4 @@
-<!-- $NetBSD: hardening.xml,v 1.4 2021/11/02 08:28:45 nia Exp $ -->
+<!-- $NetBSD: hardening.xml,v 1.5 2021/11/07 11:30:19 nia Exp $ -->
 
 <appendix id="hardening">
 <title>Security hardening</title>
@@ -143,51 +143,6 @@ Currently, this means NetBSD on x86, ARM, SPARC64, m68k, and MIPS.
 </para>
 </sect3>
 
-<sect3 id="hardening.mechanisms.enabled.relro">
-<title>PKGSRC_USE_RELRO</title>
-
-<para>
-This also makes the exploitation of some security vulnerabilities more
-difficult in some cases.
-</para>
-
-<para>Two different mitigation levels are available:</para>
-
-<itemizedlist>
-<listitem>
-<para>
-partial: the ELF sections are reordered so that internal data sections
-precede the program's own data sections, and non-PLT GOT is read-only;
-</para>
-</listitem>
-<listitem>
-<para>
-full: in addition to partial RELRO, every relocation is performed immediately
-when starting the program (with a slight performance impact), allowing the
-entire GOT to be read-only.
-</para>
-</listitem>
-</itemizedlist>
-
-<para>
-This is currently supported by GCC. Many software distributions now enable this
-feature by default, at the "partial" level.
-</para>
-
-<para>
-More details can be found here:
-</para>
-
-<itemizedlist>
-<listitem>
-<para>
-<ulink url="https://www.redhat.com/en/blog/hardening-elf-binaries-using-relocation-read-only-relro">Hardening ELF binaries using Relocation Read-Only (RELRO)</ulink>
-</para>
-</listitem>
-</itemizedlist>
-</sect3>
-</sect2>
-
 <sect2 id="hardening.mechanisms.disabled">
 <title>Not enabled by default</title>
 
@@ -218,6 +173,52 @@ More details can be found here:
 More work likely needs to be done before pkgsrc is fully reproducible.
 </para>
 </sect3>
+
+<sect3 id="hardening.mechanisms.enabled.relro">
+<title>PKGSRC_USE_RELRO</title>
+
+<para>
+This also makes the exploitation of some security vulnerabilities more
+difficult in some cases.
+</para>
+
+<para>Two different mitigation levels are available:</para>
+
+<itemizedlist>
+<listitem>
+<para>
+partial: the ELF sections are reordered so that internal data sections
+precede the program's own data sections, and non-PLT GOT is read-only;
+</para>
+</listitem>
+<listitem>
+<para>
+full: in addition to partial RELRO, every relocation is performed immediately
+when starting the program (with a slight performance impact), allowing the
+entire GOT to be read-only.
+</para>
+</listitem>
+</itemizedlist>
+
+<para>
+This is currently supported by GCC. Many software distributions now enable this
+feature by default, at the "partial" level. However, it cannot yet be enforced
+globally in pkgsrc through cwrappers.
+</para>
+
+<para>
+More details can be found here:
+</para>
+
+<itemizedlist>
+<listitem>
+<para>
+<ulink url="https://www.redhat.com/en/blog/hardening-elf-binaries-using-relocation-read-only-relro">Hardening ELF binaries using Relocation Read-Only (RELRO)</ulink>
+</para>
+</listitem>
+</itemizedlist>
+</sect3>
+</sect2>
 
 <sect3 id="hardening.mechanisms.disabled.stackcheck">
 <title>PKGSRC_USE_STACK_CHECK</title>
