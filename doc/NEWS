@@ -1,4 +1,4 @@
-# $NetBSD: NEWS,v 1.21 2021/10/10 08:39:40 nia Exp $
+# $NetBSD: NEWS,v 1.22 2021/11/07 11:30:19 nia Exp $
 
 PKGSRC NEWS
 ===========
@@ -23,12 +23,6 @@ Increased enabled-by-default hardening options [nia 2021-09-27]
 	Some packages may experience runtime errors on platforms
 	like i386 - usually this is due to unsafe assembly code,
 	which should be disabled when MKPIE is enabled.
-
-	PKGSRC_USE_RELRO was enabled on some architectures.
-	This should not affect the majority of packages that properly
-	honor CFLAGS/LDFLAGS when building.  Packages experiencing
-	problems loading dynamic ELF plugins at runtime should have
-	RELRO disabled.
 
 	PKGSRC_USE_SSP was bumped from "yes" to "strong".  This
 	is not expected to have a noticable effect.
