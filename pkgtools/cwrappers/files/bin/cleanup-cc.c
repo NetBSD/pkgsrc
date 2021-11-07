@@ -1,4 +1,4 @@
-/* $NetBSD: cleanup-cc.c,v 1.3 2016/01/10 19:13:05 bsiegert Exp $ */
+/* $NetBSD: cleanup-cc.c,v 1.4 2021/11/07 12:38:12 christos Exp $ */
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -52,7 +52,7 @@ cleanup_cc(struct arglist *args)
 		if (arg->val[0] != '-')
 			continue;
 		if (strncmp(arg->val, "-Wl,-rpath,", 11) == 0) {
-			if (arg->val[11] == '/')
+			if (isabs(arg->val[11]))
 				continue;
 			argument_unlink(args, &arg);
 			continue;

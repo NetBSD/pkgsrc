@@ -1,4 +1,4 @@
-/* $NetBSD: generic-transform-cc.c,v 1.4 2016/03/14 20:16:08 markd Exp $ */
+/* $NetBSD: generic-transform-cc.c,v 1.5 2021/11/07 12:38:12 christos Exp $ */
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -264,7 +264,7 @@ generic_transform_cc_absolute(struct arglist *args, struct argument *arg)
 	TAILQ_FOREACH(rule, &libpath_rules, link) {
 		if (rule->src_len > len)
 			continue;
-		if (arg->val[rule->src_len] != '/')
+		if (!isabs(arg->val[rule->src_len]))
 			continue;
 		if (strncmp(arg->val, rule->src, rule->src_len))
 			continue;
@@ -297,7 +297,7 @@ generic_transform_libtool_lib(struct arglist *args, struct argument *arg)
 			free(fname);
 			continue;
 		}
-		if (arg2->val[2] == '/') {
+		if (isabs(arg2->val[2])) {
 			if (wrksrc == NULL)
 				return 0;
 			if (strncmp(arg2->val + 2, wrksrc, len))
@@ -346,7 +346,7 @@ generic_transform_cc(struct arglist *args)
 			continue;
 #endif
 
-		if (arg->val[0] == '/') {
+		if (isabs(arg->val[0])) {
 #if defined(WRAPPER_LIBTOOL)
 			generic_transform_cc_absolute(args, arg);
 #endif
@@ -435,14 +435,14 @@ generic_transform_cc(struct arglist *args)
 		} else
 			continue;
 
-		if (*path != '/')
+		if (!isabs(*path))
 			continue;
 
-		while (len > 1 && path[len - 1] == '/')
+		while (len > 1 && isabs(path[len - 1]))
 			--len;
 
 		TAILQ_FOREACH(rule, ruleset, link) {
-			if (rule->src[rule->src_len - 1] == '/') {
+			if (isabs(rule->src[rule->src_len - 1])) {
 				if (rule->src_len - 1 != len)
 					continue;
 				if (memcmp(path, rule->src, len) != 0)
@@ -452,7 +452,7 @@ generic_transform_cc(struct arglist *args)
 			if (rule->src_len > len)
 				continue;
 			if (path[rule->src_len] != '\0' &&
-			    path[rule->src_len] != '/')
+			    !isabs(path[rule->src_len]))
 				continue;
 			if (strncmp(path, rule->src, rule->src_len) == 0)
 				break;
