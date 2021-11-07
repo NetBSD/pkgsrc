@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5468 2021/11/07 13:07:17 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5469 2021/11/07 13:25:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8264,3 +8264,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/notmuch to 0.34.1 [wiz 2021-11-07]
 	Updated print/poppler to 21.11.0 [wiz 2021-11-07]
 	Updated wm/i3 to 4.20.1 [wiz 2021-11-07]
+	Updated devel/meson to 0.60.1 [adam 2021-11-07]
+	Updated devel/glib2-tools to 2.70.1 [adam 2021-11-07]
+	Updated devel/glib2 to 2.70.1 [adam 2021-11-07]
+	Updated devel/gdbus-codegen to 2.70.1 [adam 2021-11-07]
