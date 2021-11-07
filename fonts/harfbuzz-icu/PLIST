@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2021/09/29 20:26:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/11/07 17:18:13 wiz Exp $
 include/harfbuzz/hb-icu.h
 lib/libharfbuzz-icu.so
 lib/libharfbuzz-icu.so.0
-lib/libharfbuzz-icu.so.0.30000.0
+lib/libharfbuzz-icu.so.0.30100.0
 lib/pkgconfig/harfbuzz-icu.pc
