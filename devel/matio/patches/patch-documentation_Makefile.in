@@ -1,0 +1,16 @@
+$NetBSD: patch-documentation_Makefile.in,v 1.1 2021/11/07 10:50:38 nros Exp $
+
+* don't try to install info files, they are not generated even with
+  TEXINFO_REQD set to the latest version.
+
+--- documentation/Makefile.in.orig	2021-11-07 12:33:51.390164116 +0000
++++ documentation/Makefile.in
+@@ -693,7 +693,7 @@ info: info-am
+ 
+ info-am: $(INFO_DEPS)
+ 
+-install-data-am: install-info-am install-man
++install-data-am: install-man
+ 
+ install-dvi: install-dvi-am
+ 
