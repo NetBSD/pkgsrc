@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5460 2021/11/07 10:51:41 nros Exp $
+$NetBSD: CHANGES-2021,v 1.5461 2021/11/07 11:59:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8255,3 +8255,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Cache-FastMmap to 1.57 [wen 2021-11-07]
 	Updated devel/p5-Cache-Memcached-Fast to 0.27 [wen 2021-11-07]
 	Updated devel/matio to 1.5.21 [nros 2021-11-07]
+	Updated devel/py-polib to 1.1.1 [adam 2021-11-07]
+	Updated math/py-lmfit to 1.0.3 [adam 2021-11-07]
