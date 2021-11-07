@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5474 2021/11/07 16:05:13 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5475 2021/11/07 20:59:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8275,3 +8275,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-ruamel-yaml to 0.17.17 [adam 2021-11-07]
 	Updated misc/labelnation to 1.218 [gdt 2021-11-07]
 	Updated www/wiki-tui to 0.4.2 [pin 2021-11-07]
+	Updated devel/boehm-gc to 8.2.0nb1 [wiz 2021-11-07]
