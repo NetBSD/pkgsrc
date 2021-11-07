@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:16:08 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/11/07 01:53:12 wen Exp $
 
-BLAKE2s (Cache-Memcached-Fast-0.26.tar.gz) = f603d1b0c02f4f6760cb46b4d9b53d91a616d6ca379b80e10811687d5a9bf7b3
-SHA512 (Cache-Memcached-Fast-0.26.tar.gz) = aea565be2d1aaae186c6d985d88e444fa39311338a851f7f05b013affcab0bfcabd258a3df08849b9429b7168ff0d1e59ab27b1e843b217093b2b64786e890b1
-Size (Cache-Memcached-Fast-0.26.tar.gz) = 87887 bytes
+BLAKE2s (Cache-Memcached-Fast-0.27.tar.gz) = 97d6735d7a5349e1c2b0850f614ed5c7822fd2c20afa49a1fcf11f179665ec82
+SHA512 (Cache-Memcached-Fast-0.27.tar.gz) = 6e3f7cb6ae317312a16aad7888fb75ec03ff7be5b79aef1702c8bc8a1499995379b42c1afd6c587d419ea4dbe880836c874d4929f968f7a384ab152e5baa03fa
+Size (Cache-Memcached-Fast-0.27.tar.gz) = 88712 bytes
