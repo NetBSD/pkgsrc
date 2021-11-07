@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:59:34 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/11/07 13:53:30 nros Exp $
 
-BLAKE2s (sword-1.8.1.tar.gz) = 3f07bfb8d69c29a12a6ef2fb6d8571e6288143c0bfb0ecf185fccbe7fd5c2187
-SHA512 (sword-1.8.1.tar.gz) = 5c08c070ea0c86b7d929bbf94c89730eb5a487986deb9edf01c08d1710356aecd1ab3bde4437a778e5fc1ceb05b63287612ec6161381c0986a36344c27d2ab36
-Size (sword-1.8.1.tar.gz) = 2449503 bytes
-SHA1 (patch-Makefile.in) = 6508dabcd47e08609e43c76f738c4d4384152354
+BLAKE2s (sword-1.9.0.tar.gz) = 4dc7fde358cfe0f31f71f61a2ef3258d16556bcb8a140b1e903251c22e8aca02
+SHA512 (sword-1.9.0.tar.gz) = 9ed3fbb5024af1f93b1473bae0d95534d02a5b00b3c9d41a0f855cee8106dc4e330844080adbee7c3f74c0e5ce1480bf16c87c842421337a341f641bae11137f
+Size (sword-1.9.0.tar.gz) = 2606652 bytes
+SHA1 (patch-Makefile.in) = b4f8156cc5e2b4f3fc2ac7623c8996692a42697e
