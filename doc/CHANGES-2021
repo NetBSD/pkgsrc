@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5471 2021/11/07 14:25:54 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5472 2021/11/07 14:51:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8271,3 +8271,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/sword to 1.9.0 [nros 2021-11-07]
 	Updated fonts/harfbuzz to 3.1.0 [adam 2021-11-07]
 	Updated fonts/harfbuzz-icu to 3.1.0 [adam 2021-11-07]
+	Updated misc/py-stdnum to 1.17 [adam 2021-11-07]
+	Updated devel/py-ruamel-yaml to 0.17.17 [adam 2021-11-07]
