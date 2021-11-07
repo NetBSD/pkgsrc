@@ -1,4 +1,4 @@
-/* $NetBSD: normalise-cc.c,v 1.5 2017/06/11 19:34:43 joerg Exp $ */
+/* $NetBSD: normalise-cc.c,v 1.6 2021/11/07 12:38:12 christos Exp $ */
 
 /*-
  * Copyright (c) 2009, 2017 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -44,7 +44,7 @@ normalise_path_list(struct arglist *args, struct argument *arg,
 	struct argument *arg2;
 
 	while ((sep = strchr(val, ':')) != NULL) {
-		if (sep == val || (strip_relative && val[0] != '/')) {
+		if (sep == val || (strip_relative && !isabs(val[0]))) {
 			val = sep + 1;
 			continue;
 		}
@@ -53,7 +53,7 @@ normalise_path_list(struct arglist *args, struct argument *arg,
 		arg = arg2;
 		val = sep + 1;
 	}
-	if (val[0] == '\0' || (strip_relative && val[0] != '/'))
+	if (val[0] == '\0' || (strip_relative && !isabs(val[0])))
 		return;
 	arg2 = argument_new(concat(prefix, val));
 	TAILQ_INSERT_AFTER(args, arg, arg2, link);
@@ -151,7 +151,7 @@ normalise_cc(struct arglist *args)
 			arg2 = TAILQ_NEXT(arg2, link);
 			continue;
 		}
-		if (arg->val[0] == '/') {
+		if (isabs(arg->val[0])) {
 			next = strrchr(arg->val, '/');
 			++next;
 			if (strncmp(next, "lib", 3))

@@ -1,4 +1,4 @@
-/* $NetBSD: common.h,v 1.8 2017/11/07 16:49:22 khorben Exp $ */
+/* $NetBSD: common.h,v 1.9 2021/11/07 12:38:12 christos Exp $ */
 
 /*-
  * Copyright (c) 2009, 2017 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -120,5 +120,7 @@ void	fixup_libtool(struct arglist *);
 #ifdef NEED_MI_VECTOR_HASH
 void	mi_vector_hash(const void *, size_t, uint32_t, uint32_t[3]);
 #endif
+
+#define isabs(a) ((a) == '/')
 
 #endif
