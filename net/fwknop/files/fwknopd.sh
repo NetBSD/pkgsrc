@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: fwknopd.sh,v 1.1 2021/05/29 22:39:46 khorben Exp $
+# $NetBSD: fwknopd.sh,v 1.2 2021/11/07 18:37:03 khorben Exp $
 #
 # Startup script for fwknopd
 #
@@ -8,14 +8,14 @@
 # REQUIRE: DAEMON
 # KEYWORD: shutdown
 #
-# You will need to set some variables in /etc/rc.conf to start fwknopd:
+# You will need to set some variables in @SYSCONFBASE@/rc.conf to start fwknopd:
 #
 # fwknopd=YES
 #
 # Optionally, "fwknopd_flags" contains additional parameters for the service.
 # See fwknopd(8) for possible options.
 
-. /etc/rc.subr
+$_rc_subr_loaded . @SYSCONFBASE@/rc.subr
 
 name="fwknopd"
 rcvar=${name}
