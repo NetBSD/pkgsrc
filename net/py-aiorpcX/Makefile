@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/10/17 14:09:25 js Exp $
+# $NetBSD: Makefile,v 1.3 2021/11/08 16:33:15 cirnatdan Exp $
 
-DISTNAME=	aiorpcX-0.18.2
+DISTNAME=	aiorpcX-0.18.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiorpcX/}
