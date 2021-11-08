@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:18:21 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/11/08 16:46:30 adam Exp $
 
-BLAKE2s (curtsies-0.3.5.tar.gz) = 96d72bd7e1488d7e341b20802f1f219283575793a4e7150eef07e5a2a9e4ea30
-SHA512 (curtsies-0.3.5.tar.gz) = e46ab3f79e2385055e4f3f9bc1d2c341605b93c21a0e6c42f4807b1801d37f70cfbdd1006db1ec12257e95d91aedddd95aa31a7de99bbfc09a6f0ee473497747
-Size (curtsies-0.3.5.tar.gz) = 53472 bytes
+BLAKE2s (curtsies-0.3.10.tar.gz) = d88290384dd3aae9ef9b9d31641f87549872430e307627b25ffb1d229041f1f3
+SHA512 (curtsies-0.3.10.tar.gz) = 59dfae36a43f7cdb272f94900da81bc7a1033a6482df5ac5babb329659e16d740f98b9538146f2fe7c79aa2723ec3db10c8ec658539db7d462b02953a33cb4ca
+Size (curtsies-0.3.10.tar.gz) = 53340 bytes
