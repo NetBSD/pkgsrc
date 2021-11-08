@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/11/08 16:37:04 cirnatdan Exp $
+# $NetBSD: Makefile,v 1.8 2021/11/08 16:40:37 cirnatdan Exp $
 
 VERSION=	4.1.5
 DISTNAME=	Electrum-${VERSION}
@@ -30,7 +30,8 @@ DEPENDS+=	${PYPKGPREFIX}-bitstring-[0-9]*:../../devel/py-bitstring
 DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2.0:../../devel/py-attrs
 DEPENDS+=	libsecp256k1>=0.1:../../security/libsecp256k1
 
-REPLACE_PYTHON+=	lib/*.py
+REPLACE_PYTHON+=	electrum/electrum
+REPLACE_PYTHON+=	electrum/scripts/*.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
