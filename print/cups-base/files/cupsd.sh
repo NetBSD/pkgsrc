@@ -1,13 +1,13 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: cupsd.sh,v 1.1 2017/11/12 14:10:15 khorben Exp $
+# $NetBSD: cupsd.sh,v 1.2 2021/11/08 00:56:35 khorben Exp $
 #
 # Common UNIX Printing System daemon
 #
 # PROVIDE: cups
 # REQUIRE: DAEMON
 #
-# You will need to set some variables in /etc/rc.conf to start cupsd:
+# You will need to set some variables in @SYSCONFBASE@/rc.conf to start cupsd:
 #
 # cupsd=YES
 # cupsd_wait=YES	# set to "YES" to wait for cupsd to detect printers;
@@ -16,8 +16,8 @@
 #			#   to respond before we declare it not responding;
 #			#   this variable is optional and defaults to "60".
 
-if [ -f /etc/rc.subr ]; then
-	. /etc/rc.subr
+if [ -f @SYSCONFBASE@/rc.subr ]; then
+	. @SYSCONFBASE@/rc.subr
 fi
 
 name="cupsd"
@@ -63,7 +63,7 @@ cupsd_waitcmd()
 	fi
 }
 
-if [ -f /etc/rc.subr ]; then
+if [ -f @SYSCONFBASE@/rc.subr ]; then
 	load_rc_config $name
 	: ${cupsd_wait:=NO}
 	: ${cupsd_timeout:=60}
