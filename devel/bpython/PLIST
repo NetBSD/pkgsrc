@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/03/20 15:14:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/11/08 16:47:30 adam Exp $
 bin/bpdb
 bin/bpython
 bin/bpython-curses
@@ -39,9 +39,6 @@ ${PYSITELIB}/bpython/autocomplete.pyo
 ${PYSITELIB}/bpython/cli.py
 ${PYSITELIB}/bpython/cli.pyc
 ${PYSITELIB}/bpython/cli.pyo
-${PYSITELIB}/bpython/clipboard.py
-${PYSITELIB}/bpython/clipboard.pyc
-${PYSITELIB}/bpython/clipboard.pyo
 ${PYSITELIB}/bpython/config.py
 ${PYSITELIB}/bpython/config.pyc
 ${PYSITELIB}/bpython/config.pyo
@@ -223,6 +220,6 @@ ${PYSITELIB}/bpython/urwid.pyc
 ${PYSITELIB}/bpython/urwid.pyo
 man/man1/bpython.1
 man/man5/bpython-config.5
-share/appinfo/org.bpython-interpreter.bpython.appdata.xml
 share/applications/org.bpython-interpreter.bpython.desktop
+share/metainfo/org.bpython-interpreter.bpython.metainfo.xml
 share/pixmaps/bpython.png
