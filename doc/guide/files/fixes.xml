@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.164 2021/08/23 18:38:16 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.165 2021/11/08 22:21:33 gutteridge Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1481,14 +1481,17 @@ pre-configure:
     contain a list of scripts, relative to <varname>WRKSRC</varname>,
     that you want adjusted. Every occurrence of
     <filename>*/bin/perl</filename> in a she-bang line will be
-    replaced with the full path to the perl executable.</para>
+    replaced with the full path to the Perl executable.</para>
 
-    <para>If a particular version of perl is needed, set the
+    <para>If a particular version of Perl is needed, set the
     <varname>PERL5_REQD</varname> variable to the version number.  The
     default is <quote>5.0</quote>.</para>
 
     <para>See <xref linkend="perl-modules" /> for information
-    about handling perl modules.</para>
+    about handling Perl modules.</para>
+
+    <para>There is also the <varname>REPLACE_PERL6</varname> variable
+    for the language now known as Raku.</para>
   </sect2>
 
   <sect2 id="shell-scripts">
@@ -1510,7 +1513,20 @@ pre-configure:
   <sect2 id="other-programming-languages">
     <title>Other programming languages</title>
 
-    <para>Currently, there is no special handling for other languages
+    <para>There are further similar REPLACE variables available, e.g.,
+    <varname>REPLACE_AWK</varname> for packages containing awk scripts,
+    and <varname>REPLACE_R</varname> for R. These two, like the others
+    noted above, are defined centrally in
+    <filename>mk/configure/replace-interpreter.mk</filename>. Other
+    languages define these variables within their own dedicated part of
+    the tree, e.g., PHP defines <varname>REPLACE_PHP</varname> in
+    <filename>lang/php/phpversion.mk</filename>, and Python defines
+    <varname>REPLACE_PYTHON</varname> in
+    <filename>lang/python/application.mk</filename>. For other languages,
+    consult the mk files found within their specific directories (the
+    naming convention varies).</para>
+    
+    <para>Currently, special handling for other languages varies
     in pkgsrc.  If a compiler package provides a
     <filename>buildlink3.mk</filename> file, include that, otherwise
     just add a (build) dependency on the appropriate compiler
