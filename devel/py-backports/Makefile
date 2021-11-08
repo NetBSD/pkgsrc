@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2019/12/13 09:08:01 adam Exp $
+# $NetBSD: Makefile,v 1.4 2021/11/08 12:00:18 adam Exp $
 
 PKGNAME=	${PYPKGPREFIX}-backports-1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	# empty
 
@@ -12,9 +12,12 @@ LICENSE=	python-software-foundation
 
 PY_PATCHPLIST=	yes
 
-PYTHON_VERSIONS_ACCEPTED=	27
+.include "../../lang/python/pyversion.mk"
 
 INSTALLATION_DIRS+=	${PYSITELIB}/backports
+.if ${_PYTHON_VERSION} != 27
+INSTALLATION_DIRS+=	${PYSITELIB}/backports/__pycache__
+.endif
 
 do-extract:
 	${MKDIR} ${WRKSRC}
@@ -25,6 +28,10 @@ do-build:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/__init__.* ${DESTDIR}${PREFIX}/${PYSITELIB}/backports/
+.if ${_PYTHON_VERSION} != 27
+	${INSTALL_SCRIPT} ${WRKSRC}/__pycache__/__init__.* \
+		${DESTDIR}${PREFIX}/${PYSITELIB}/backports/__pycache__/
+.endif
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
