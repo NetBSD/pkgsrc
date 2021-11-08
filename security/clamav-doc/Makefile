@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/08/05 14:47:33 prlw1 Exp $
+# $NetBSD: Makefile,v 1.6 2021/11/08 14:50:12 taca Exp $
 
 .include "../../security/clamav/Makefile.common"
 
@@ -12,6 +12,9 @@ USE_TOOLS+=	pax
 DOCDIR=		${PREFIX}/share/doc/clamav
 
 INSTALLATION_DIRS+=	${DOCDIR}/html
+
+pre-install:
+	${CHMOD} -x ${WRKSRC}/docs/html/images/flamegraph.svg
 
 do-install:
 	cd ${WRKSRC}/docs && ${FIND} html -type f -print | \
