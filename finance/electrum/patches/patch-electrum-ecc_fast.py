@@ -1,4 +1,4 @@
-$NetBSD: patch-electrum-ecc_fast.py,v 1.1 2020/11/04 20:45:46 js Exp $
+$NetBSD: patch-electrum-ecc_fast.py,v 1.2 2021/11/08 16:37:05 cirnatdan Exp $
 
 Don't assume libsecp256k1 is in site-packages/electrum.
 
@@ -28,7 +28,7 @@ Don't assume libsecp256k1 is in site-packages/electrum.
      else:  # desktop Linux and similar
 -        library_paths = (os.path.join(os.path.dirname(__file__), 'libsecp256k1.so.0'),
 -                         'libsecp256k1.so.0')
-+        library_paths = (os.patah.join(sysconfig.get_config_var('LIBDIR'), 'libsecp256k1.so.0'),)
++        library_paths = (os.path.join(sysconfig.get_config_var('LIBDIR'), 'libsecp256k1.so.0'),)
  
      exceptions = []
      secp256k1 = None

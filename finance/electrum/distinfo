@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:26:01 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/11/08 16:37:04 cirnatdan Exp $
 
-BLAKE2s (Electrum-4.0.9.tar.gz) = 386a2e787151101e74dd84cb805d629187601f7e7a14daa31047c0d1d12735bb
-SHA512 (Electrum-4.0.9.tar.gz) = ce63131cc58fd9e4fdfec40860d022687b0abaf67cdf40cf6ad7b6ef8be5437c5fcb70e826a4917d05f2644d943eea60c3858fa02342ab46038f6c29a121927a
-Size (Electrum-4.0.9.tar.gz) = 10457149 bytes
-SHA1 (patch-electrum-ecc_fast.py) = fa8b7d784f51890f356429ac9ba48f1bb0a3b7fc
+BLAKE2s (Electrum-4.1.5.tar.gz) = f9a35a7671bb8dfae3e04d9cbbda657cc2919595bc1b2923f87bab883df11580
+SHA512 (Electrum-4.1.5.tar.gz) = fbffd2366c8521e37da21dce0a59ca140f63635df5a2f31d5faafbc1267384bc6c76f66502a19cdcb4d4100f249c12bc336a54795a8b840bf299b5fda4bc1c8e
+Size (Electrum-4.1.5.tar.gz) = 12066769 bytes
+SHA1 (patch-electrum-ecc_fast.py) = 3e500f6b8fda61ae757a1ae6072b66449ab55883
 SHA1 (patch-setup.py) = 7f6472a2278073c15cdfe4c25f911871165b085f
