@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5488 2021/11/08 14:44:46 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.5489 2021/11/08 14:49:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8298,3 +8298,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated geography/qgis to 3.16.13 [gdt 2021-11-08]
 	Updated geography/gdal-lib to 3.3.3 [gdt 2021-11-08]
 	Updated geography/py-gdal to 3.3.3 [gdt 2021-11-08]
+	Updated security/clamav to 0.103.4 [taca 2021-11-08]
