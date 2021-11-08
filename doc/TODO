@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21234 2021/11/07 14:52:15 gdt Exp $
+$NetBSD: TODO,v 1.21235 2021/11/08 10:28:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1223,7 +1223,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mipsel-none-elf-gcc-9.3.0
 	o mit-scheme-bin-9.2
 	o mixxx-2.2.4
-	o modular-xorg-server-21.1.0
+	o modular-xorg-server-21.1.1
 	o modular-xorg-xquartz-21.1.0
 	o modular-xorg-xwayland-21.1.0
 	o monit-5.28.0
