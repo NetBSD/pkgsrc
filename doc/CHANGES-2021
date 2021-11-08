@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5485 2021/11/08 14:00:35 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5486 2021/11/08 14:41:05 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8295,3 +8295,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/postfix-pcre to 3.6.3 [taca 2021-11-08]
 	Updated mail/postfix-pgsql to 3.6.3 [taca 2021-11-08]
 	Updated mail/postfix-sqlite to 3.6.3 [taca 2021-11-08]
+	Updated geography/qgis to 3.16.13 [gdt 2021-11-08]
