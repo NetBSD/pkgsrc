@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21235 2021/11/08 10:28:30 wiz Exp $
+$NetBSD: TODO,v 1.21236 2021/11/08 12:50:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -736,7 +736,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o fuse-unionfs-2.1
 	o fvwm-devel-2.7.0
 	o fvwm2-themes-0.7.0
-	o fzf-0.28.0
 	o gallery3-3.0.9
 	o gammu-1.42.0
 	o ganglia-3.7.5
