@@ -1,4 +1,4 @@
-<!-- $NetBSD: hardening.xml,v 1.5 2021/11/07 11:30:19 nia Exp $ -->
+<!-- $NetBSD: hardening.xml,v 1.6 2021/11/08 22:16:21 gutteridge Exp $ -->
 
 <appendix id="hardening">
 <title>Security hardening</title>
@@ -142,6 +142,7 @@ Currently, this means NetBSD on x86, ARM, SPARC64, m68k, and MIPS.
 <varname>PKGSRC_MKPIE</varname> was enabled by default after the pkgsrc-2021Q3 branch.
 </para>
 </sect3>
+</sect2>
 
 <sect2 id="hardening.mechanisms.disabled">
 <title>Not enabled by default</title>
@@ -218,7 +219,6 @@ More details can be found here:
 </listitem>
 </itemizedlist>
 </sect3>
-</sect2>
 
 <sect3 id="hardening.mechanisms.disabled.stackcheck">
 <title>PKGSRC_USE_STACK_CHECK</title>
