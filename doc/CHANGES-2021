@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5490 2021/11/08 14:50:36 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5491 2021/11/08 15:05:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8300,3 +8300,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated geography/py-gdal to 3.3.3 [gdt 2021-11-08]
 	Updated security/clamav to 0.103.4 [taca 2021-11-08]
 	Updated security/clamav-doc to 0.103.4 [taca 2021-11-08]
+	Updated devel/ruby-redmine42 to 4.2.3 [taca 2021-11-08]
