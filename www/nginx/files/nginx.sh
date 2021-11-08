@@ -1,11 +1,15 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: nginx.sh,v 1.3 2014/04/27 11:05:45 rodent Exp $
+# $NetBSD: nginx.sh,v 1.4 2021/11/08 01:02:01 khorben Exp $
 #
 # PROVIDE: nginx
 # REQUIRE: DAEMON
+#
+# You will need to set some variables in @SYSCONFBASE@/rc.conf to start nginx:
+#
+# nginx=YES
 
-. /etc/rc.subr
+$_rc_subr_loaded . @SYSCONFBASE@/rc.subr
 
 name="nginx"
 rcvar=${name}
