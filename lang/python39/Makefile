@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/06/29 12:43:42 adam Exp $
+# $NetBSD: Makefile,v 1.10 2021/11/08 16:00:16 jperkin Exp $
 
 .include "dist.mk"
 
@@ -43,8 +43,8 @@ PKG_CC=			clang
 PKG_CXX=		clang++
 .endif
 
-# fdatasync()
-LIBS.SunOS+=		-lrt
+LIBS.SunOS+=		-lrt	# fdatasync()
+LIBS.SunOS+=		-luuid
 
 PY_VER_SUFFIX=		3.9
 
