@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:15:14 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/11/08 13:00:33 wiz Exp $
 
-BLAKE2s (gcc-10.3.0.tar.xz) = 6d7c42f9386e5e32a3148122471cb207e5f65d7b5f53b3c9adba2d45a4f28715
-SHA512 (gcc-10.3.0.tar.xz) = 2b2dd7453d48a398c29eaebd1422b70341001b8c90a62aee51e83344e7fdd8a8e45f82a4a9165bd7edc76dada912c932f4b6632c5636760fec4c5d7e402b3f86
-Size (gcc-10.3.0.tar.xz) = 76692288 bytes
+BLAKE2s (gcc-11.2.0.tar.xz) = 528c6e78fd9ace664e49c25ffbccc8f3a7b45aa70e50ea9744b36f5719f4f11e
+SHA512 (gcc-11.2.0.tar.xz) = d53a0a966230895c54f01aea38696f818817b505f1e2bfa65e508753fcd01b2aedb4a61434f41f3a2ddbbd9f41384b96153c684ded3f0fa97c82758d9de5c7cf
+Size (gcc-11.2.0.tar.xz) = 80888824 bytes
 SHA1 (patch-libatomic_configure) = 9ca952bc6e48dc37dd79d3fb050194de460f0898
