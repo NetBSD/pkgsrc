@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5480 2021/11/08 10:28:30 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5481 2021/11/08 12:28:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8282,3 +8282,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated fonts/harfbuzz-icu to 3.1.1 [adam 2021-11-08]
 	Added www/jira-cli version 0.1.1 [fox 2021-11-08]
 	Added net/yt-dlp version 2021.10.22 [wiz 2021-11-08]
+	Updated devel/py-backports to 1.0nb2 [adam 2021-11-08]
+	Added devel/py-backports.cached-property version 1.0.1 [adam 2021-11-08]
