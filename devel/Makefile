@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3504 2021/11/04 17:12:38 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3505 2021/11/08 12:27:36 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2181,6 +2181,7 @@ SUBDIR+=	py-autopep8
 SUBDIR+=	py-babel
 SUBDIR+=	py-backcall
 SUBDIR+=	py-backports
+SUBDIR+=	py-backports.cached-property
 SUBDIR+=	py-backports.functools_lru_cache
 SUBDIR+=	py-backports.os
 SUBDIR+=	py-backports.shutil_get_terminal_size
