@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.143 2021/10/09 15:35:02 nia Exp $
+# $NetBSD: Makefile,v 1.144 2021/11/08 23:30:39 nia Exp $
 
 # NOTES ON UPDATING
 # - Upstream is insisting that packages use their internal modified
@@ -8,7 +8,7 @@
 #   This should be disabled by default, Audacity is offline software.
 # - Please test usage on NetBSD.
 DISTNAME=	audacity-2.4.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=audacity/}
 GITHUB_PROJECT=	Audacity
@@ -74,6 +74,7 @@ CONFIG_SUB_OVERRIDE= \
 PTHREAD_AUTO_VARS=	yes
 
 INSTALLATION_DIRS+=	lib
+INSTALLATION_DIRS+=	share/audacity/plug-ins
 
 # regen Makefile.in to avoid being built as shared libraries
 pre-configure:
@@ -83,6 +84,11 @@ pre-configure:
 post-install:
 	${INSTALL_LIB} ${WRKSRC}/lib-src/FileDialog/.libs/libFileDialog.so.0.0.0 \
 		${DESTDIR}${PREFIX}/lib/libFileDialog.so.0
+	# Install missing plugins.
+	${INSTALL_DATA} ${WRKSRC}/plug-ins/*.ny \
+		${DESTDIR}${PREFIX}/share/audacity/plug-ins
+	${INSTALL_DATA} ${WRKSRC}/nyquist/*.lsp \
+		${DESTDIR}${PREFIX}/share/audacity/nyquist
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
