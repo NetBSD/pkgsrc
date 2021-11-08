@@ -1,0 +1,17 @@
+Yt-dlp is a youtube-dl fork with additional features and fixes.
+The main focus of this project is adding new features and patches
+while also keeping up to date with the original project.
+Some of the new features are:
+* SponsorBlock API integration
+* Format Sorting
+* youtube improvements
+* obtain cookies from browser
+* split video by chapters into files
+* multi-threaded fragment downloads
+* new and fixed/improved extractors
+* subtitle extraction from manifests
+* multiple paths and output templates
+* portable configuration
+* new options
+* plugin extractors
+* differences in default behavior
