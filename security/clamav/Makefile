@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.79 2021/09/29 19:01:15 adam Exp $
+# $NetBSD: Makefile,v 1.80 2021/11/08 14:49:23 taca Exp $
 
-PKGREVISION= 1
 .include "Makefile.common"
 
 COMMENT=	Anti-virus toolkit
@@ -91,6 +90,7 @@ post-install:
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
+.include "../../mail/libmilter/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
