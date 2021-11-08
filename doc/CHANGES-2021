@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5491 2021/11/08 15:05:29 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5492 2021/11/08 15:07:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8301,3 +8301,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/clamav to 0.103.4 [taca 2021-11-08]
 	Updated security/clamav-doc to 0.103.4 [taca 2021-11-08]
 	Updated devel/ruby-redmine42 to 4.2.3 [taca 2021-11-08]
+	Updated devel/ruby-redmine41 to 4.1.5 [taca 2021-11-08]
