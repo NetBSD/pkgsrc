@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5481 2021/11/08 12:28:05 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5482 2021/11/08 12:50:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8284,3 +8284,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added net/yt-dlp version 2021.10.22 [wiz 2021-11-08]
 	Updated devel/py-backports to 1.0nb2 [adam 2021-11-08]
 	Added devel/py-backports.cached-property version 1.0.1 [adam 2021-11-08]
+	Updated sysutils/fzf to 0.28.0 [wiz 2021-11-08]
