@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2021/08/28 15:36:16 js Exp $
+# $NetBSD: Makefile,v 1.7 2021/11/08 16:37:04 cirnatdan Exp $
 
-VERSION=	4.0.9
+VERSION=	4.1.5
 DISTNAME=	Electrum-${VERSION}
 PKGNAME=	electrum-${VERSION}
 PKGREVISION=	1
