@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.102 2021/09/15 12:37:05 adam Exp $
+# $NetBSD: Makefile,v 1.103 2021/11/08 01:02:01 khorben Exp $
 
 DISTNAME=	nginx-1.20.1
-PKGREVISION=	1
+PKGREVISION=	2
 
 MAINTAINER=	joerg@NetBSD.org
 
