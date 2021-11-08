@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5483 2021/11/08 12:54:01 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5484 2021/11/08 13:00:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8286,3 +8286,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/py-backports.cached-property version 1.0.1 [adam 2021-11-08]
 	Updated sysutils/fzf to 0.28.0 [wiz 2021-11-08]
 	Updated lang/vala to 0.54.3 [wiz 2021-11-08]
+	Updated devel/libatomic to 11.2.0 [wiz 2021-11-08]
