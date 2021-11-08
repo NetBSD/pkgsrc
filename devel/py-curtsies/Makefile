@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2021/03/20 15:12:22 adam Exp $
+# $NetBSD: Makefile,v 1.8 2021/11/08 16:46:30 adam Exp $
 
-DISTNAME=	curtsies-0.3.5
+DISTNAME=	curtsies-0.3.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/curtsies/}
@@ -19,6 +19,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pyte-[0-9]*:../../devel/py-pyte
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/pyversion.mk"
+.if ${_PYTHON_VERSION} < 38
+DEPENDS+=	${PYPKGPREFIX}-backports.cached-property-[0-9]*:../../devel/py-backports.cached-property
+.endif
 
 do-test:
 	cd ${WRKSRC}/tests && ${PYTHONBIN} -m unittest discover -v
