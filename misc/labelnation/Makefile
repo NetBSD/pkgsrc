@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/11/07 14:52:08 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2021/11/08 01:09:14 gdt Exp $
 
 DISTNAME=		labelnation-1.218
 CATEGORIES=		misc
@@ -9,6 +9,7 @@ HOMEPAGE=		https://www.red-bean.com/labelnation/
 COMMENT=		Command-line label, business card printing program
 LICENSE=		gnu-gpl-v3
 
+PYTHON_VERSIONS_ACCEPTED=	27
 REPLACE_PYTHON=		labelnation csv_to_ln
 
 USE_LANGUAGES=		# none
