@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1589 2021/10/31 08:34:50 pin Exp $
+# $NetBSD: Makefile,v 1.1590 2021/11/08 09:40:44 fox Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -174,6 +174,7 @@ SUBDIR+=	ikiwiki
 SUBDIR+=	jalbum
 SUBDIR+=	jetty7
 SUBDIR+=	jetty9
+SUBDIR+=	jira-cli
 SUBDIR+=	kahua
 SUBDIR+=	kannel
 SUBDIR+=	kdewebkit
