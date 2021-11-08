@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5493 2021/11/08 16:33:51 cirnatdan Exp $
+$NetBSD: CHANGES-2021,v 1.5494 2021/11/08 16:37:23 cirnatdan Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8303,3 +8303,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-redmine42 to 4.2.3 [taca 2021-11-08]
 	Updated devel/ruby-redmine41 to 4.1.5 [taca 2021-11-08]
 	Updated net/py-aiorpcX to 0.18.7 [dan 2021-11-08]
+	Updated finance/electrum to 4.1.5nb1 [dan 2021-11-08]
