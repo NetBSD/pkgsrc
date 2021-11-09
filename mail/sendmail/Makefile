@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.139 2021/07/04 07:57:13 jnemeth Exp $
+# $NetBSD: Makefile,v 1.140 2021/11/09 22:02:36 jnemeth Exp $
 
 PKGNAME=	sendmail-${DIST_VERS}
-#PKGREVISION=	9
+PKGREVISION=	1
 COMMENT=	The well known Mail Transport Agent
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 postfix-[0-9]*
@@ -29,6 +29,7 @@ MAKE_DIRS_PERMS+=	/${VARBASE}/spool/clientmqueue smmsp smmsp 0770
 MAKE_DIRS_PERMS+=	/${VARBASE}/spool/mqueue ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 
 SPECIAL_PERMS+=		libexec/sendmail/sendmail ${REAL_ROOT_USER} smmsp 2555
+SPECIAL_PERMS+=		libexec/sendmail/mail.local ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 4555
 
 PKG_GROUPS=		smmsp
 PKG_USERS=		smmsp:smmsp
