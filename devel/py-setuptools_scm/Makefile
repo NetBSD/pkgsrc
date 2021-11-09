@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2021/03/05 07:55:44 adam Exp $
+# $NetBSD: Makefile,v 1.26 2021/11/09 23:18:57 wiz Exp $
 
 DISTNAME=	setuptools_scm-5.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,10 +11,9 @@ COMMENT=	Manage your versions by scm tags
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-toml-[0-9]*:../../textproc/py-toml
-TEST_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 TEST_DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+PYTHON_VERSIONED_DEPENDENCIES=	pip:test test:test
 
 USE_LANGUAGES=	# none
 
