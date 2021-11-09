@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2021/05/24 19:56:05 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2021/11/09 10:09:56 nia Exp $
 
 DISTNAME=	wxWidgets-3.0.5.1
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK30/}
@@ -28,6 +28,7 @@ CONFIGURE_ARGS+=	--with-zlib=sys
 CONFIGURE_ARGS+=	--with-regex=builtin
 CONFIGURE_ARGS+=	--disable-webview
 CONFIGURE_ARGS+=	--enable-mediactrl
+CONFIGURE_ARGS+=	--disable-precomp-headers
 # wxregexu symbols are not exported properly as of 3.0.1
 # http://trac.wxwidgets.org/ticket/16571
 CONFIGURE_ARGS+=	--disable-visibility
