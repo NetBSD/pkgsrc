@@ -1,23 +1,11 @@
-$NetBSD: patch-SConscript,v 1.3 2021/08/08 15:20:14 gdt Exp $
-
-Search for asciidoctor from ruby27 also.
-\todo Apply upstream.
+$NetBSD: patch-SConscript,v 1.4 2021/11/09 11:51:11 nia Exp $
 
 gpspipe requires libgpsd for serial.c cfmakeraw() compat.
 \todo Fix upstream?
 
---- SConscript.orig	2021-08-05 22:14:52.000000000 +0000
+--- SConscript.orig	2021-09-21 21:53:44.000000000 +0000
 +++ SConscript
-@@ -1308,6 +1308,8 @@ if not cleaning and not helping:
-     # do we have asciidoctor, perhaps versioned?
-     adoc_prog = env.WhereIs('asciidoctor')
-     if (not adoc_prog):
-+        adoc_prog = env.WhereIs('asciidoctor27')
-+    if (not adoc_prog):
-         adoc_prog = env.WhereIs('asciidoctor26')
- 
-     config.env['manbuild'] = config.env['manbuild'].lower()
-@@ -1901,7 +1903,7 @@ gpsmon = env.Program('gpsmon/gpsmon', gp
+@@ -1930,7 +1930,7 @@ gpsmon = env.Program('gpsmon/gpsmon', gp
                       LIBS=[libgpsd_static, libgps_static],
                       parse_flags=gpsdflags + gpsflags + ncurseslibs)
  gpspipe = env.Program('clients/gpspipe', ['clients/gpspipe.c'],
