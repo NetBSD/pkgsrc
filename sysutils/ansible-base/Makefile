@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2021/10/12 09:26:10 adam Exp $
+# $NetBSD: Makefile,v 1.11 2021/11/09 20:34:41 wiz Exp $
 
 DISTNAME=	ansible-base-2.10.15
 CATEGORIES=	sysutils python
@@ -13,9 +13,10 @@ CONFLICTS+=	ansible<2.10
 
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+
+PYTHON_VERSIONED_DEPENDENCIES+=	packaging
 
 USE_TOOLS+=	gmake
 
@@ -60,6 +61,7 @@ post-install:
 .endfor
 
 .include "../../lang/python/application.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
