@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/10/19 14:58:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/11/09 15:17:01 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -549,6 +549,7 @@ ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Pacific/Guadalcanal.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Pacific/Guam.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Pacific/Honolulu.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Pacific/Johnston.rb
+${GEM_LIBDIR}/lib/tzinfo/data/definitions/Pacific/Kanton.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Pacific/Kiritimati.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Pacific/Kosrae.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Pacific/Kwajalein.rb
