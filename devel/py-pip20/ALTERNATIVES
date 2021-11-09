@@ -1,0 +1,2 @@
+bin/pip @PREFIX@/bin/pip@PYVERSSUFFIX@
+bin/pip@PYMAJORVERSION@ @PREFIX@/bin/pip@PYVERSSUFFIX@
