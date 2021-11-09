@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2021/11/08 00:58:50 jnemeth Exp $
+# $NetBSD: Makefile,v 1.134 2021/11/09 11:11:08 nia Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
@@ -119,7 +119,7 @@ BUILDLINK_TRANSFORM+=	rm:-march=i386
 .endif
 
 PLIST_VARS+=	kqueue
-.if exists(/usr/include/sys/event.h)
+.if defined(PKG_HAVE_KQUEUE)
 PLIST.kqueue=	yes
 .endif
 
@@ -140,7 +140,7 @@ PLIST.mgcp=	yes
 .endif
 
 PLIST_VARS+=	timerfd
-.if ${OPSYS} == "Linux"
+.if defined(PKG_HAVE_TIMERFD)
 PLIST.timerfd=	yes
 .endif
 
