@@ -1,4 +1,4 @@
-# $NetBSD: replace-interpreter.mk,v 1.22 2021/09/09 21:59:36 mef Exp $
+# $NetBSD: replace-interpreter.mk,v 1.23 2021/11/09 17:39:42 gutteridge Exp $
 
 # This file provides common templates for replacing #! interpreters
 # in script files.
@@ -33,7 +33,7 @@
 # pkgsrc infrastructure. All others may be used freely.
 #
 # Keywords: replace_interpreter interpreter interp hashbang #! shebang
-# Keywords: awk bash csh ksh perl sh
+# Keywords: awk bash csh ksh perl R sh
 
 ######################################################################
 ### replace-interpreter (PRIVATE)
