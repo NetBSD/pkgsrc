@@ -6440,10 +6440,13 @@ BUILDLINK_TREE+=        -tiff
       cause unneeded package deletions and rebuilds.  In many cases,
       new versions of packages work just fine with older
       dependencies.</p>
-<p>Also it is not needed to set
+<p>Also, it is not needed to set
       <code class="varname">BUILDLINK_ABI_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
       when it is identical to
-      <code class="varname">BUILDLINK_API_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>.	</p>
+      <code class="varname">BUILDLINK_API_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>.</p>
+<p>Note there is also the distinction that users are able to disable
+      enforcement of ABI dependencies using the <code class="varname">USE_ABI_DEPENDS</code>
+      variable, but there is no equivalent option for API dependencies.</p>
 </div>
 </div>
 <div class="sect1">
@@ -8579,12 +8582,12 @@ pre-configure:
 <p>There are further similar REPLACE variables available, e.g.,
     <code class="varname">REPLACE_AWK</code> for packages containing awk scripts,
     and <code class="varname">REPLACE_R</code> for R. These two, like the others
-    noted above, are defined centrally in
+    noted above, have their actions defined centrally in
     <code class="filename">mk/configure/replace-interpreter.mk</code>. Other
-    languages define these variables within their own dedicated part of
-    the tree, e.g., PHP defines <code class="varname">REPLACE_PHP</code> in
-    <code class="filename">lang/php/phpversion.mk</code>, and Python defines
-    <code class="varname">REPLACE_PYTHON</code> in
+    languages define the actions of these variables within their own
+    dedicated part of the tree, e.g., <code class="varname">REPLACE_PHP</code> is
+    actioned in <code class="filename">lang/php/phpversion.mk</code>, and
+    <code class="varname">REPLACE_PYTHON</code> is actioned in
     <code class="filename">lang/python/application.mk</code>. For other languages,
     consult the mk files found within their specific directories (the
     naming convention varies).</p>
@@ -14337,179 +14340,179 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>python</td>
+<td>r</td>
+</tr>
+<tr>
 <td>readme-all</td>
-</tr>
-<tr>
 <td>recv</td>
+</tr>
+<tr>
 <td>recvfrom</td>
-</tr>
-<tr>
 <td>regcomp</td>
+</tr>
+<tr>
 <td>release-localbase-lock</td>
-</tr>
-<tr>
 <td>release-lock</td>
+</tr>
+<tr>
 <td>relro</td>
-</tr>
-<tr>
 <td>rename</td>
+</tr>
+<tr>
 <td>reorder</td>
-</tr>
-<tr>
 <td>replace</td>
+</tr>
+<tr>
 <td>replace_interpreter</td>
-</tr>
-<tr>
 <td>reproducible</td>
+</tr>
+<tr>
 <td>resolv</td>
-</tr>
-<tr>
 <td>root</td>
+</tr>
+<tr>
 <td>ruby</td>
-</tr>
-<tr>
 <td>send</td>
+</tr>
+<tr>
 <td>sendfile</td>
-</tr>
-<tr>
 <td>sendto</td>
+</tr>
+<tr>
 <td>setenv</td>
-</tr>
-<tr>
 <td>setgid</td>
+</tr>
+<tr>
 <td>setprogname</td>
-</tr>
-<tr>
 <td>setuid</td>
+</tr>
+<tr>
 <td>sh</td>
-</tr>
-<tr>
 <td>shebang</td>
+</tr>
+<tr>
 <td>show</td>
-</tr>
-<tr>
 <td>show-all</td>
+</tr>
+<tr>
 <td>show-build-defs</td>
-</tr>
-<tr>
 <td>show-depends</td>
+</tr>
+<tr>
 <td>show-deps</td>
-</tr>
-<tr>
 <td>show-distfiles</td>
+</tr>
+<tr>
 <td>show-downlevel</td>
-</tr>
-<tr>
 <td>show-subdir-var</td>
+</tr>
+<tr>
 <td>show-tools</td>
-</tr>
-<tr>
 <td>show-var</td>
+</tr>
+<tr>
 <td>show-vars</td>
-</tr>
-<tr>
 <td>snprintf</td>
+</tr>
+<tr>
 <td>socket</td>
-</tr>
-<tr>
 <td>ssp</td>
+</tr>
+<tr>
 <td>st_mode</td>
-</tr>
-<tr>
 <td>stage-install</td>
+</tr>
+<tr>
 <td>strcasestr</td>
-</tr>
-<tr>
 <td>strict</td>
+</tr>
+<tr>
 <td>strip</td>
-</tr>
-<tr>
 <td>strndup</td>
+</tr>
+<tr>
 <td>strnlen</td>
-</tr>
-<tr>
 <td>strsep</td>
+</tr>
+<tr>
 <td>subst</td>
-</tr>
-<tr>
 <td>substitutions</td>
+</tr>
+<tr>
 <td>sun</td>
-</tr>
-<tr>
 <td>sunpro</td>
+</tr>
+<tr>
 <td>sunwspro</td>
-</tr>
-<tr>
 <td>symlink</td>
+</tr>
+<tr>
 <td>test</td>
-</tr>
-<tr>
 <td>test-env</td>
+</tr>
+<tr>
 <td>tex</td>
-</tr>
-<tr>
 <td>texlive</td>
+</tr>
+<tr>
 <td>tmp</td>
-</tr>
-<tr>
 <td>tool</td>
+</tr>
+<tr>
 <td>tools</td>
-</tr>
-<tr>
 <td>tools-libtool-m4-override</td>
+</tr>
+<tr>
 <td>type</td>
-</tr>
-<tr>
 <td>ulimit</td>
+</tr>
+<tr>
 <td>undefined</td>
-</tr>
-<tr>
 <td>undo-replace</td>
+</tr>
+<tr>
 <td>unlimit</td>
-</tr>
-<tr>
 <td>unprivileged</td>
+</tr>
+<tr>
 <td>unprivileged-install-hook</td>
-</tr>
-<tr>
 <td>unstripped</td>
+</tr>
+<tr>
 <td>update</td>
-</tr>
-<tr>
 <td>upload</td>
+</tr>
+<tr>
 <td>upload-distfiles</td>
-</tr>
-<tr>
 <td>use_tools</td>
+</tr>
+<tr>
 <td>user</td>
-</tr>
-<tr>
 <td>utimes</td>
+</tr>
+<tr>
 <td>vasprintf</td>
-</tr>
-<tr>
 <td>verbose</td>
+</tr>
+<tr>
 <td>vsnprintf</td>
-</tr>
-<tr>
 <td>warn</td>
+</tr>
+<tr>
 <td>warning</td>
-</tr>
-<tr>
 <td>warnings</td>
+</tr>
+<tr>
 <td>warnx</td>
-</tr>
-<tr>
 <td>wattr_off</td>
+</tr>
+<tr>
 <td>wattr_on</td>
-</tr>
-<tr>
 <td>work</td>
-<td>wrapper</td>
 </tr>
 <tr>
+<td>wrapper</td>
 <td>wrkdir</td>
-<td> </td>
 </tr>
 </table>
 </div>

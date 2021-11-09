@@ -5360,8 +5360,12 @@ BUILDLINK_ABI_DEPENDS.pkg in a buildlink3.mk file as we don't want to cause
 unneeded package deletions and rebuilds. In many cases, new versions of
 packages work just fine with older dependencies.
 
-Also it is not needed to set BUILDLINK_ABI_DEPENDS.pkg when it is identical to
+Also, it is not needed to set BUILDLINK_ABI_DEPENDS.pkg when it is identical to
 BUILDLINK_API_DEPENDS.pkg.
+
+Note there is also the distinction that users are able to disable enforcement
+of ABI dependencies using the USE_ABI_DEPENDS variable, but there is no
+equivalent option for API dependencies.
 
 18.3. Writing builtin.mk files
 
@@ -7115,12 +7119,12 @@ USE_TOOLS.
 
 There are further similar REPLACE variables available, e.g., REPLACE_AWK for
 packages containing awk scripts, and REPLACE_R for R. These two, like the
-others noted above, are defined centrally in mk/configure/
-replace-interpreter.mk. Other languages define these variables within their own
-dedicated part of the tree, e.g., PHP defines REPLACE_PHP in lang/php/
-phpversion.mk, and Python defines REPLACE_PYTHON in lang/python/application.mk.
-For other languages, consult the mk files found within their specific
-directories (the naming convention varies).
+others noted above, have their actions defined centrally in mk/configure/
+replace-interpreter.mk. Other languages define the actions of these variables
+within their own dedicated part of the tree, e.g., REPLACE_PHP is actioned in
+lang/php/phpversion.mk, and REPLACE_PYTHON is actioned in lang/python/
+application.mk. For other languages, consult the mk files found within their
+specific directories (the naming convention varies).
 
 Currently, special handling for other languages varies in pkgsrc. If a compiler
 package provides a buildlink3.mk file, include that, otherwise just add a
@@ -10181,50 +10185,50 @@ pre-configure-checks-hook        pre-extract
 pre-fetch                        print-go-deps
 print-plist                      print-summary-data
 privileged-install-hook          pypi
-python                           readme-all
-recv                             recvfrom
-regcomp                          release-localbase-lock
-release-lock                     relro
-rename                           reorder
-replace                          replace_interpreter
-reproducible                     resolv
-root                             ruby
-send                             sendfile
-sendto                           setenv
-setgid                           setprogname
-setuid                           sh
-shebang                          show
-show-all                         show-build-defs
-show-depends                     show-deps
-show-distfiles                   show-downlevel
-show-subdir-var                  show-tools
-show-var                         show-vars
-snprintf                         socket
-ssp                              st_mode
-stage-install                    strcasestr
-strict                           strip
-strndup                          strnlen
-strsep                           subst
-substitutions                    sun
-sunpro                           sunwspro
-symlink                          test
-test-env                         tex
-texlive                          tmp
-tool                             tools
-tools-libtool-m4-override        type
-ulimit                           undefined
-undo-replace                     unlimit
-unprivileged                     unprivileged-install-hook
-unstripped                       update
-upload                           upload-distfiles
-use_tools                        user
-utimes                           vasprintf
-verbose                          vsnprintf
-warn                             warning
-warnings                         warnx
-wattr_off                        wattr_on
-work                             wrapper
-wrkdir                            
+python                           r
+readme-all                       recv
+recvfrom                         regcomp
+release-localbase-lock           release-lock
+relro                            rename
+reorder                          replace
+replace_interpreter              reproducible
+resolv                           root
+ruby                             send
+sendfile                         sendto
+setenv                           setgid
+setprogname                      setuid
+sh                               shebang
+show                             show-all
+show-build-defs                  show-depends
+show-deps                        show-distfiles
+show-downlevel                   show-subdir-var
+show-tools                       show-var
+show-vars                        snprintf
+socket                           ssp
+st_mode                          stage-install
+strcasestr                       strict
+strip                            strndup
+strnlen                          strsep
+subst                            substitutions
+sun                              sunpro
+sunwspro                         symlink
+test                             test-env
+tex                              texlive
+tmp                              tool
+tools                            tools-libtool-m4-override
+type                             ulimit
+undefined                        undo-replace
+unlimit                          unprivileged
+unprivileged-install-hook        unstripped
+update                           upload
+upload-distfiles                 use_tools
+user                             utimes
+vasprintf                        verbose
+vsnprintf                        warn
+warning                          warnings
+warnx                            wattr_off
+wattr_on                         work
+wrapper                          wrkdir
 
 Appendix F. Editing guidelines for the pkgsrc guide
 
