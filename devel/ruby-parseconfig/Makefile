@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2021/01/10 15:37:45 taca Exp $
+# $NetBSD: Makefile,v 1.7 2021/11/09 14:11:35 taca Exp $
 
-DISTNAME=	parseconfig-1.1.0
+DISTNAME=	parseconfig-1.1.2
 CATEGORIES=	devel
 
 MAINTAINER=	taca@NetBSD.org
-#HOMEPAGE=	http://www.5dollarwhitebox.org/
+HOMEPAGE=	https://github.com/datafolklabs/ruby-parseconfig/
 COMMENT=	Provides simple parsing of standard *nix style config files
 LICENSE=	mit
 
