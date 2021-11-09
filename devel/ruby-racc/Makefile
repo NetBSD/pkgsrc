@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2021/03/22 13:21:53 schmonz Exp $
+# $NetBSD: Makefile,v 1.28 2021/11/09 14:20:04 taca Exp $
 
-DISTNAME=	racc-1.5.2
-PKGREVISION=	1
+DISTNAME=	racc-1.6.0
 CATEGORIES=	devel
 
 MAINTAINER=	taca@NetBSD.org
