@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:23:04 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/11/09 20:10:28 wiz Exp $
 
-BLAKE2s (html5lib-1.0.1.tar.gz) = 5e8bb01c0afda522a38cfa885472ff8f75d727b6e89d47b53db1b321c52a0fda
-SHA512 (html5lib-1.0.1.tar.gz) = 35939b4450893864da04e735ee5e0addacf1dd34bae6a6909c76572abf6bfded446a78a713dfde91c1485ba45867d7abeb6a45cf0545c16ea968707be7de5dd2
-Size (html5lib-1.0.1.tar.gz) = 252959 bytes
+BLAKE2s (html5lib-1.1.tar.gz) = de98dc78f784829b373e37ad38851c062983d16b91322a32a2a77113e34b3240
+SHA512 (html5lib-1.1.tar.gz) = af7c29591007fded99be6c38e3d0ae5a4ac32d71d26046a615918ae732cb1c1ecbf754f47ceca1a53726c3843f3ecea7af87a7362281b45ff3af495815818626
+Size (html5lib-1.1.tar.gz) = 272215 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2018/02/26 08:24:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/11/09 20:10:28 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -22,9 +22,6 @@ ${PYSITELIB}/html5lib/_trie/__init__.pyo
 ${PYSITELIB}/html5lib/_trie/_base.py
 ${PYSITELIB}/html5lib/_trie/_base.pyc
 ${PYSITELIB}/html5lib/_trie/_base.pyo
-${PYSITELIB}/html5lib/_trie/datrie.py
-${PYSITELIB}/html5lib/_trie/datrie.pyc
-${PYSITELIB}/html5lib/_trie/datrie.pyo
 ${PYSITELIB}/html5lib/_trie/py.py
 ${PYSITELIB}/html5lib/_trie/py.pyc
 ${PYSITELIB}/html5lib/_trie/py.pyo
