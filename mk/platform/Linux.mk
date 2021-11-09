@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.84 2020/12/13 16:26:12 nia Exp $
+# $NetBSD: Linux.mk,v 1.85 2021/11/09 11:05:07 nia Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -184,3 +184,6 @@ GLIBC_VERSION=		${_GLIBC_VERSION_CMD:sh}
 .if defined(NOGCCERROR)
 MAKE_ENV+=	NOGCCERROR=true
 .endif
+
+PKG_HAVE_EVENTFD=	# defined
+PKG_HAVE_TIMERFD=	# defined
