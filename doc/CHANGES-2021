@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5515 2021/11/09 20:10:38 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5516 2021/11/09 20:35:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8327,3 +8327,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/broot to 1.7.1 [pin 2021-11-09]
 	Added net/routinator version 0.10.2 [he 2021-11-09]
 	Updated textproc/py-html5lib to 1.1 [wiz 2021-11-09]
+	Updated devel/py-packaging to 21.2 [wiz 2021-11-09]
