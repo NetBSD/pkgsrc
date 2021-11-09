@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1430 2021/11/08 10:28:20 wiz Exp $
+# $NetBSD: Makefile,v 1.1431 2021/11/09 18:53:05 he Exp $
 #
 
 COMMENT=	Networking tools
@@ -804,6 +804,7 @@ SUBDIR+=	remmina
 SUBDIR+=	restclient-ui
 SUBDIR+=	rinetd
 SUBDIR+=	rootprobe
+SUBDIR+=	routinator
 SUBDIR+=	rp-l2tp
 SUBDIR+=	rp-pppoe
 SUBDIR+=	rsync
