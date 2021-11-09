@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2021/05/24 19:54:16 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2021/11/09 12:04:43 nia Exp $
 
 DISTNAME=	IO-KQueue-0.39
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	p5-Devel-CheckLib-[0-9]*:../../devel/p5-Devel-CheckLib
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !defined(PKG_HAVE_KQUEUE)
+.if !defined(OPSYS_HAS_KQUEUE)
 PKG_FAIL_REASON+=	"Requires kqueue(2)"
 .endif
 
