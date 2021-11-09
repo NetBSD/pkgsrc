@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2020/08/01 17:19:46 tnn Exp $
+# $NetBSD: Makefile.common,v 1.22 2021/11/09 10:12:43 nia Exp $
 #
 # used by x11/wxGTK28/Makefile
 # used by x11/wxGTK28-contrib/Makefile
@@ -33,6 +33,7 @@ CONFIGURE_ARGS+=	--with-zlib=sys
 CONFIGURE_ARGS+=	--with-regex=builtin
 CONFIGURE_ARGS+=	--enable-mediactrl
 CONFIGURE_ARGS+=	--enable-graphics_ctx
+CONFIGURE_ARGS+=	--disable-precomp-headers
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/libexec/wx-2.8
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/wx-2.8
 
