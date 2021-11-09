@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/09 18:53:05 he Exp $
+bin/routinator
+man/man1/routinator.1
+share/doc/routinator/README.md
+share/examples/routinator/routinator.conf.example
