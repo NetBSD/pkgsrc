@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2021/01/02 22:45:43 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.13 2021/11/09 11:11:08 nia Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -462,6 +462,7 @@ lib/asterisk/modules/res_statsd.so
 lib/asterisk/modules/res_stun_monitor.so
 ${PLIST.kqueue}lib/asterisk/modules/res_timing_kqueue.so
 lib/asterisk/modules/res_timing_pthread.so
+${PLIST.timerfd}lib/asterisk/modules/res_timing_timerfd.so
 ${PLIST.jabber}lib/asterisk/modules/res_xmpp.so
 lib/libasteriskssl.so
 lib/libasteriskssl.so.1
