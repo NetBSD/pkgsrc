@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2021/05/24 19:54:21 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2021/11/09 11:11:48 nia Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 PKGREVISION=	5
@@ -37,6 +37,7 @@ ONLY_FOR_PLATFORM=	Linux-2.6*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-[5-9].*-x86_64
 
 SSP_SUPPORTED=		no
+MKPIE_SUPPORTED=	no
 
 CONFLICTS+=		libxen-[0-9]*
 CONFLICTS+=		xenstoretools-[0-9]*
