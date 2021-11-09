@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/11/09 11:09:04 nia Exp $
+# $NetBSD: Makefile,v 1.6 2021/11/09 12:04:43 nia Exp $
 
 GITHUB_PROJECT=	epoll-shim
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -20,15 +20,15 @@ CMAKE_ARGS+=	-DBUILD_TESTING=OFF
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !defined(PKG_HAVE_KQUEUE)
+.if !defined(OPSYS_HAS_KQUEUE)
 PKG_SKIP_REASON+=	"Requires a kqueue implementation"
 .endif
 
 PLIST_VARS+=	eventfd timerfd
-.if !defined(PKG_HAVE_EVENTFD)
+.if !defined(OPSYS_HAS_EVENTFD)
 PLIST.eventfd=	YES
 .endif
-.if !defined(PKG_HAVE_TIMERFD)
+.if !defined(OPSYS_HAS_TIMERFD)
 PLIST.timerfd=	YES
 .endif
 
