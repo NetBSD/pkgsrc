@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5496 2021/11/09 01:40:14 manu Exp $
+$NetBSD: CHANGES-2021,v 1.5497 2021/11/09 01:50:45 manu Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8307,3 +8307,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-curtsies to 0.3.10 [adam 2021-11-08]
 	Updated devel/bpython to 0.22 [adam 2021-11-08]
 	Updated net/nagios-plugin-dotpid to 0.6 [manu 2021-11-09]
+	Updated www/ap2-auth-mellon to 0.18.0 [manu 2021-11-09]
