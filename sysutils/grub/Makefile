@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2021/11/09 10:24:26 nia Exp $
+# $NetBSD: Makefile,v 1.62 2021/11/09 10:25:13 nia Exp $
 
 DISTNAME=	grub-0.97
 PKGREVISION=	10
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 CONFLICTS=	grub2-[0-9]*
 
-ONLY_FOR_PLATFORM=	*-*-i386 NetBSD-[5-9].*-x86_64
+ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
