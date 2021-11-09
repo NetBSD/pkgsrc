@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/10/21 08:56:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/11/09 20:35:14 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -10,15 +10,15 @@ ${PYSITELIB}/packaging/__about__.pyo
 ${PYSITELIB}/packaging/__init__.py
 ${PYSITELIB}/packaging/__init__.pyc
 ${PYSITELIB}/packaging/__init__.pyo
-${PYSITELIB}/packaging/_compat.py
-${PYSITELIB}/packaging/_compat.pyc
-${PYSITELIB}/packaging/_compat.pyo
+${PYSITELIB}/packaging/_manylinux.py
+${PYSITELIB}/packaging/_manylinux.pyc
+${PYSITELIB}/packaging/_manylinux.pyo
+${PYSITELIB}/packaging/_musllinux.py
+${PYSITELIB}/packaging/_musllinux.pyc
+${PYSITELIB}/packaging/_musllinux.pyo
 ${PYSITELIB}/packaging/_structures.py
 ${PYSITELIB}/packaging/_structures.pyc
 ${PYSITELIB}/packaging/_structures.pyo
-${PYSITELIB}/packaging/_typing.py
-${PYSITELIB}/packaging/_typing.pyc
-${PYSITELIB}/packaging/_typing.pyo
 ${PYSITELIB}/packaging/markers.py
 ${PYSITELIB}/packaging/markers.pyc
 ${PYSITELIB}/packaging/markers.pyo
