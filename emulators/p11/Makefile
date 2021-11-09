@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/01/03 04:30:26 dholland Exp $
+# $NetBSD: Makefile,v 1.21 2021/11/09 11:28:56 nia Exp $
 #
 
 DISTNAME=	p11-2.10i
@@ -19,21 +19,26 @@ USE_TOOLS+=		gmake
 PLIST_VARS+=		bpf tap tun
 
 # bfp, tap, and tun tests taken from p11 configure script
-.if exists(/dev/bpf0)
+.if exists(/usr/include/net/bpf.h)
 PLIST.bpf=		yes
-.endif
-.if exists(/dev/tap0) || exists(/dev/net/tun)
-PLIST.tap=		yes
-.endif
-.if exists(/dev/tun) || exists(/dev/tun0) || exists(/dev/net/tun)
-PLIST.tun=		yes
+CONFIGURE_ENV+=		ac_cv_epp_bpf=yes
+.else
+CONFIGURE_ENV+=		ac_cv_epp_bpf=no
 .endif
 
-# Force the bpf, tun, and tap epp backends to be built on DragonFly and fbsd.
-.if ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD"
+.if exists(/usr/include/net/if_tap.h)
 PLIST.tap=		yes
+CONFIGURE_ENV+=		ac_cv_epp_tap=yes
+.else
+CONFIGURE_ENV+=		ac_cv_epp_tap=no
+.endif
+
+.if exists(/usr/include/net/if_tun.h) || \
+    exists(/usr/include/linux/if_tun.h)
 PLIST.tun=		yes
-CONFIGURE_ENV+=		ac_cv_epp_bpf=yes ac_cv_epp_tun=yes ac_cv_epp_tap=yes
+CONFIGURE_ENV+=		ac_cv_epp_tun=yes
+.else
+CONFIGURE_ENV+=		ac_cv_epp_tun=no
 .endif
 
 # override MAKEFLAGS in the build and install stages
