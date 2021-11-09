@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2021/07/22 07:58:50 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2021/11/09 11:56:24 nia Exp $
 
 DISTNAME=	libnet-1.2
 CATEGORIES=	devel net
@@ -12,6 +12,14 @@ LICENSE=	2-clause-bsd
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	--with-link-layer=linux
+.elif exists(/usr/include/net/bpf.h)
+CONFIGURE_ARGS+=	--with-link-layer=bpf
+.endif
 
 .include "options.mk"
 
