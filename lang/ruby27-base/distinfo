@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:51:54 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/11/09 12:14:11 jperkin Exp $
 
 BLAKE2s (ruby-2.7.4.tar.xz) = 5d4aa4e4a67a411a9beddbc849c250ca0d16b4293810fceed0e56f2e10595560
 SHA512 (ruby-2.7.4.tar.xz) = 2cbb70ecfdd69120e789023ddb2b25cab0d03bc33fdc367a8f74ca8a3ee785c18c8ded9de3ecee627c7e275ffb85147e6abf921b6a61e31851b37c7fedf45bf9
 Size (ruby-2.7.4.tar.xz) = 12067588 bytes
 SHA1 (patch-configure) = 5ee800f6824b18efd06e56a659235ea784819f2e
 SHA1 (patch-ext_dbm_extconf.rb) = c998f8735db54b1ae2bc8b6caa359ce88bc7a45b
+SHA1 (patch-ext_openssl_ossl__pkey__rsa.c) = 925fa135abb90b9a1fa16da14b17c0d2b2bec364
 SHA1 (patch-lib_mkmf.rb) = 4a3cd18548dbdf43a13695d4e76f817c0347e335
 SHA1 (patch-lib_rdoc_encoding.rb) = 0e82d2942d9bfcb67dc7c994889d7bc5ec2ae85a
 SHA1 (patch-lib_rdoc_ri_driver.rb) = f4d3e59e35b608acd4edc17916142c7f033e6198
