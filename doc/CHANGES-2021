@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5509 2021/11/09 14:46:53 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5510 2021/11/09 14:51:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8321,3 +8321,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-sexp-processor to 4.16.0 [taca 2021-11-09]
 	Updated devel/ruby-test-unit to 3.5.1 [taca 2021-11-09]
 	Updated devel/ruby-zeitwerk to 2.5.1 [taca 2021-11-09]
+	Updated finance/ruby-activemerchant to 1.124.0 [taca 2021-11-09]
