@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.90 2021/09/18 13:53:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.91 2021/11/09 14:02:52 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -71,7 +71,9 @@ ${GEM_LIBDIR}/doc/release_notes/5.45.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.46.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.47.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.48.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.49.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.5.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.50.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.6.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.7.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.8.0.txt
@@ -126,6 +128,7 @@ ${GEM_LIBDIR}/lib/sequel/adapters/shared/sqlite.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/sqlanywhere.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/sqlite.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/tinytds.rb
+${GEM_LIBDIR}/lib/sequel/adapters/utils/columns_limit_1.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/utils/emulate_offset_with_reverse_and_count.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/utils/emulate_offset_with_row_number.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/utils/mysql_mysql2.rb
@@ -218,6 +221,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/pg_interval.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_json.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_json_ops.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_loose_count.rb
+${GEM_LIBDIR}/lib/sequel/extensions/pg_multirange.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_range.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_range_ops.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_row.rb
@@ -238,6 +242,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/server_logging.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/split_array_nil.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/sql_comments.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/sql_expr.rb
+${GEM_LIBDIR}/lib/sequel/extensions/sql_log_normalizer.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/string_agg.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/string_date_time.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/symbol_aref.rb
