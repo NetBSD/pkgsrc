@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:19:53 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/11/09 14:46:28 taca Exp $
 
-BLAKE2s (zeitwerk-2.4.2.gem) = 147cc4ecddb8aca5782bdc56256aedca89f9593ee2623ce3a768d40961338410
-SHA512 (zeitwerk-2.4.2.gem) = d475b8dbc37f4feadeba283d2ec0865023a1871a5a237ac71f3abd92c92b747120aa95dbc0863d4ff9daddfdf4e1c6ae857382cbefe8e9dae1aa24a719de0c59
-Size (zeitwerk-2.4.2.gem) = 26624 bytes
+BLAKE2s (zeitwerk-2.5.1.gem) = b8c50df87f970328ae7e1a5d59179ebe62537a764b6b0811ee31cadac5a5f527
+SHA512 (zeitwerk-2.5.1.gem) = 7e9013cb2344254404f0130bb82fa04651edfd9f3e4e91d5144308be1eb34e815071073bc7f7a53bc58a2defddbabc434074b6653959ed7ac51d036d8a421cbd
+Size (zeitwerk-2.5.1.gem) = 30208 bytes
