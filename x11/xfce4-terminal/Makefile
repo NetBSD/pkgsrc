@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.62 2021/01/10 17:24:55 gutteridge Exp $
+# $NetBSD: Makefile,v 1.63 2021/11/09 22:38:24 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-terminal-0.8.10
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/apps/xfce4-terminal/0.8/
 
@@ -16,6 +17,5 @@ MAKE_JOBS_SAFE=	no
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../x11/vte3/buildlink3.mk"
 .include "../../x11/libxfce4ui/buildlink3.mk"
-.include "../../x11/xfce4-exo/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
