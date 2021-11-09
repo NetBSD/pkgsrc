@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.65 2021/09/29 19:01:25 adam Exp $
+# $NetBSD: Makefile,v 1.66 2021/11/09 01:50:45 manu Exp $
 
-DISTNAME=	mod_auth_mellon-0.17.0
+DISTNAME=	mod_auth_mellon-0.18.0
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//:S/_/-/g}
 PKGREVISION=	1
 #PKGREVISION=	1
 CATEGORIES=	www security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=latchset/}
 GITHUB_PROJECT=	mod_auth_mellon
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 MAINTAINER=	manu@NetBSD.org
 HOMEPAGE=	https://github.com/latchset/mod_auth_mellon
@@ -16,7 +17,7 @@ LICENSE=	gnu-gpl-v2 # or later
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config autoconf automake
 
 APACHE_MODULE=	YES
 .include "../../mk/apache.mk"
@@ -28,6 +29,9 @@ SUBST_SED.pthflags=	-e 's| -pthread | |g'
 SUBST_NOOP_OK.pthflags=	yes
 
 INSTALLATION_DIRS+=	lib/httpd
+
+pre-configure:
+	cd ${WRKSRC} && ./autogen.sh
 
 do-install:
 	cd ${WRKSRC} &&							\
