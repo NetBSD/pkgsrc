@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.68 2021/11/09 11:05:07 nia Exp $
+# $NetBSD: NetBSD.mk,v 1.69 2021/11/09 12:04:43 nia Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -123,17 +123,17 @@ FFLAGS+=	-mieee
 
 # check for kqueue(2) support, added in NetBSD-1.6J
 .if exists(/usr/include/sys/event.h)
-PKG_HAVE_KQUEUE=	# defined
+OPSYS_HAS_KQUEUE=	# defined
 .endif
 
 # check for eventfd(2) support, added in NetBSD-9.99.x
 .if exists(/usr/include/sys/eventfd.h)
-PKG_HAVE_EVENTFD=	# defined
+OPSYS_HAS_EVENTFD=	# defined
 .endif
 
 # check for timerfd(2) support, added in NetBSD-9.99.x
 .if exists(/usr/include/sys/timerfd.h)
-PKG_HAVE_TIMERFD=	# defined
+OPSYS_HAS_TIMERFD=	# defined
 .endif
 
 # Register support for FORTIFY (with GCC)
