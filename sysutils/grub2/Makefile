@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2021/05/24 19:54:11 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2021/11/09 10:21:35 nia Exp $
 
 DISTNAME=		grub-2.04
 PKGNAME=		${DISTNAME:S/grub/grub2/}
@@ -18,6 +18,8 @@ ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
 
 SSP_SUPPORTED=		no
 FORTIFY_SUPPORTED=	no
+MKPIE_SUPPORTED=	no
+RELRO_SUPPORTED=	no
 
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake flex bison gettext:run awk pkg-config
