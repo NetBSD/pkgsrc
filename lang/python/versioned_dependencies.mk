@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.54 2021/11/09 20:30:07 wiz Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.55 2021/11/09 23:13:36 wiz Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -9,7 +9,7 @@
 # PYTHON_VERSIONED_DEPENDENCIES
 #       The Python package which should be added as a dependency.
 #
-#       Possible values: Pmw Pillow X cairo dialog eliot html2text hypothesis ipython jsonlib markdown more-itertools packaging pygments pyparsing python-digest rsa setuptools sphinx test zipp
+#       Possible values: Pmw Pillow X cairo dialog eliot html2text hypothesis ipython jsonlib markdown more-itertools pip packaging pygments pyparsing python-digest rsa setuptools sphinx test zipp
 #       Default: (nothing)
 #
 
@@ -33,6 +33,7 @@ _SUPPORTED_PACKAGES+=	jsonlib textproc/py-jsonlib textproc/py-jsonlib3
 _SUPPORTED_PACKAGES+=	markdown textproc/py-markdown3 textproc/py-markdown
 _SUPPORTED_PACKAGES+=	more-itertools devel/py-more-itertools2 devel/py-more-itertools
 _SUPPORTED_PACKAGES+=	packaging devel/py-packaging2 devel/py-packaging
+_SUPPORTED_PACKAGES+=	pip devel/py-pip20 devel/py-pip
 _SUPPORTED_PACKAGES+=	pygments textproc/py-pygments25 textproc/py-pygments
 _SUPPORTED_PACKAGES+=	pyparsing devel/py-pyparsing2 devel/py-pyparsing
 _SUPPORTED_PACKAGES+=	python-digest www/py-python-digest www/py-python3-digest
