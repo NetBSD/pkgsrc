@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2021/04/12 00:02:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/11/09 14:08:33 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/APACHE-LICENSE
 ${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/marcel.rb
 ${GEM_LIBDIR}/lib/marcel/magic.rb
 ${GEM_LIBDIR}/lib/marcel/mime_type.rb
