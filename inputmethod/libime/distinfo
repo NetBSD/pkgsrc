@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:49:37 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/11/09 10:15:35 nia Exp $
 
 BLAKE2s (libime-1.0.4/dict.utf8-20210203.tar.xz) = 2287e6830f07221b37f15a59ad5fbcf789fd22f9d7f3122493d0d05e3bd61389
 SHA512 (libime-1.0.4/dict.utf8-20210203.tar.xz) = b0ed22a7898cd7ddb6f4a9f3bed32b270ea3d1080bc060f420cc5e4599892b0afca80364779741bfc19b6466d3d0ded89d8b3465c64c50a8892129971045d7ab
@@ -13,3 +13,4 @@ BLAKE2s (libime-1.0.4/table.tar.gz) = c4f966243472256e078db4e3e82adf89abad963ad7
 SHA512 (libime-1.0.4/table.tar.gz) = 99e1d69c679355fcf3e117a1ef39b131cbd3af841387d2335757247d840b90ff6b7323e16fca98cf7a043033faf250d2e9c6d47b96845d18c278a0cf6f30fec9
 Size (libime-1.0.4/table.tar.gz) = 4144686 bytes
 SHA1 (patch-data_CMakeLists.txt) = 54007355fa7e0adb145e97dd94225dd5a224a668
+SHA1 (patch-test_testhistorybigram.cpp) = 8126138a1ecd4ff74f4ba79d4c517f5a43d985ae
