@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.41 2021/10/26 10:19:50 nia Exp $
+$NetBSD: distinfo,v 1.42 2021/11/09 14:40:55 taca Exp $
 
-BLAKE2s (test-unit-3.4.7.gem) = 3a0a5b01a1c523ca8338f3acdd9395f9c5a163c894dc34d51b79eda2bbfcb503
-SHA512 (test-unit-3.4.7.gem) = b6e93282bf0b11002f66ceece4e3b4e4b4336a703481e55c46e901249d9a1bc0ab41fa7b33dfe5dbcaec631988905eeb94658a61b409b876ef317f3e4fa462c4
-Size (test-unit-3.4.7.gem) = 91648 bytes
+BLAKE2s (test-unit-3.5.1.gem) = 20e57239a72bd210c96e62029e97ceb1bd0a1ec91e50c6067e49dfb5d2ece5a1
+SHA512 (test-unit-3.5.1.gem) = ab9816b49936f81852c2efc512424e35103223a74cf40fe6c92f9df7a8b8bca3d1aeab6872e1670655dc06a11b6251e9bb061884305b9fe7eb40fb65504a8187
+Size (test-unit-3.5.1.gem) = 91648 bytes
