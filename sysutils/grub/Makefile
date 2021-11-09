@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2020/01/18 23:35:17 rillig Exp $
+# $NetBSD: Makefile,v 1.61 2021/11/09 10:24:26 nia Exp $
 
 DISTNAME=	grub-0.97
 PKGREVISION=	10
@@ -21,6 +21,11 @@ INFO_FILES=		YES
 INSTALLATION_DIRS=	share/doc/grub
 
 BUILDLINK_TRANSFORM+=	opt:-fno-builtin:-ffreestanding
+
+SSP_SUPPORTED=		no
+FORTIFY_SUPPORTED=	no
+MKPIE_SUPPORTED=	no
+RELRO_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
