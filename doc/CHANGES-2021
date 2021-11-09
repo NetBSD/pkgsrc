@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5511 2021/11/09 14:53:48 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5512 2021/11/09 15:17:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8323,3 +8323,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-zeitwerk to 2.5.1 [taca 2021-11-09]
 	Updated finance/ruby-activemerchant to 1.124.0 [taca 2021-11-09]
 	Updated graphics/ruby-RMagick to 4.2.3 [taca 2021-11-09]
+	Updated time/ruby-tzinfo-data to 1.2021.5 [taca 2021-11-09]
