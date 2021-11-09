@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5504 2021/11/09 14:17:11 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5505 2021/11/09 14:20:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8316,3 +8316,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-marcel to 1.0.2 [taca 2021-11-09]
 	Updated devel/ruby-parseconfig to 1.1.2 [taca 2021-11-09]
 	Updated devel/ruby-parser to 3.18.0 [taca 2021-11-09]
+	Updated devel/ruby-racc to 1.6.0 [taca 2021-11-09]
