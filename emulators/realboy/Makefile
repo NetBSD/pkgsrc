@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/11/03 19:24:33 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2021/11/09 09:59:27 nia Exp $
 
 DISTNAME=	realboy-0.2.2
 PKGREVISION=	1
@@ -13,6 +13,12 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 INSTALLATION_DIRS=	share/doc/realboy
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${PKGSRC_MKPIE} == "yes"
+CONFIGURE_ARGS+=	--disable-asm
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/realboy
