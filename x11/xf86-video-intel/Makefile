@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2021/11/09 11:06:08 nia Exp $
+# $NetBSD: Makefile,v 1.48 2021/11/09 12:04:43 nia Exp $
 
 PKGNAME=	xf86-video-intel-2.99.917.20200515
 COMMIT_ID=	5ca3ac1a90af177eb111a965e9b4dd8a27cc58fc
@@ -28,7 +28,7 @@ RELRO_SUPPORTED=	partial
 .include "../../mk/bsd.prefs.mk"
 
 PLIST_VARS+=	virtual
-.if defined(PKG_HAVE_TIMERFD)
+.if defined(OPSYS_HAS_TIMERFD)
 PLIST.virtual=	yes
 .endif
 

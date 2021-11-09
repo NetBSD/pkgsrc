@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.106 2021/09/14 10:50:48 schmonz Exp $
+# $NetBSD: Darwin.mk,v 1.107 2021/11/09 12:04:43 nia Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -220,7 +220,7 @@ CONFIGURE_ENV+=		ac_cv_func_poll=no
 
 # check for kqueue(2) support
 .if exists(${_OPSYS_INCLUDE_DIRS}/sys/event.h)
-PKG_HAVE_KQUEUE=	# defined
+OPSYS_HAS_KQUEUE=	# defined
 .endif
 
 # If the deployment target is not set explicitly, the linker in Tiger and prior

@@ -1,4 +1,4 @@
-# $NetBSD: MidnightBSD.mk,v 1.1 2021/03/15 16:21:02 ryoon Exp $
+# $NetBSD: MidnightBSD.mk,v 1.2 2021/11/09 12:04:43 nia Exp $
 #
 # Variable definitions for the MidnightBSD operating system.
 
@@ -68,7 +68,7 @@ SERIAL_DEVICES?=	/dev/cuaa0
 
 # check for kqueue(2) support
 .if exists(/usr/include/sys/event.h)
-PKG_HAVE_KQUEUE=	# defined
+OPSYS_HAS_KQUEUE=	# defined
 .endif
 
 # Register support for SSP on x86 architectures
