@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/01/19 15:04:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/11/09 14:46:28 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.md
@@ -10,6 +10,8 @@ ${GEM_LIBDIR}/lib/zeitwerk/inflector.rb
 ${GEM_LIBDIR}/lib/zeitwerk/kernel.rb
 ${GEM_LIBDIR}/lib/zeitwerk/loader.rb
 ${GEM_LIBDIR}/lib/zeitwerk/loader/callbacks.rb
+${GEM_LIBDIR}/lib/zeitwerk/loader/config.rb
+${GEM_LIBDIR}/lib/zeitwerk/loader/helpers.rb
 ${GEM_LIBDIR}/lib/zeitwerk/real_mod_name.rb
 ${GEM_LIBDIR}/lib/zeitwerk/registry.rb
 ${GEM_LIBDIR}/lib/zeitwerk/version.rb
