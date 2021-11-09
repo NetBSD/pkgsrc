@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/01/11 10:31:59 adam Exp $
+# $NetBSD: Makefile,v 1.6 2021/11/09 23:18:58 wiz Exp $
 
 DISTNAME=	pypiserver-1.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,15 +15,16 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.25.0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-passlib>=1.6:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-watchdog-[0-9]*:../../sysutils/py-watchdog
 TEST_DEPENDS+=	${PYPKGPREFIX}-WebTest-[0-9]*:../../www/py-WebTest
-TEST_DEPENDS+=	${PYPKGPREFIX}-pip>=7:../../devel/py-pip
 TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 TEST_DEPENDS+=	${PYPKGPREFIX}-twine-[0-9]*:../../net/py-twine
+
 .include "../../lang/python/pyversion.mk"
+
 .if ${_PYTHON_VERSION} == 27
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 .endif
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+PYTHON_VERSIONED_DEPENDENCIES=	pip:test test:test
 
 USE_LANGUAGES=	# none
 

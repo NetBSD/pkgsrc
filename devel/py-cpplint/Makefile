@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/11/01 18:58:33 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2021/11/09 23:18:57 wiz Exp $
 
 DISTNAME=	cpplint-1.5.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,9 +13,8 @@ LICENSE=	modified-bsd
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 #TEST_DEPENDS+=	${PYPKGPREFIX}-testfixtures-[0-9]*:../../devel/py-testfixtures
-TOOL_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test zipp:test pyparsing:test
+PYTHON_VERSIONED_DEPENDENCIES=	pip:tool test:test zipp:test pyparsing:test
 
 .include "../../lang/python/pyversion.mk"
 
