@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $NetBSD: buildlink.xml,v 1.44 2020/08/20 13:31:58 bacon Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.45 2021/11/09 17:53:33 gutteridge Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -433,10 +433,14 @@ BUILDLINK_TREE+=        -tiff
       new versions of packages work just fine with older
       dependencies.</para>
 
-      <para>Also it is not needed to set
+      <para>Also, it is not needed to set
       <varname>BUILDLINK_ABI_DEPENDS.<replaceable>pkg</replaceable></varname>
       when it is identical to
-      <varname>BUILDLINK_API_DEPENDS.<replaceable>pkg</replaceable></varname>.	</para>
+      <varname>BUILDLINK_API_DEPENDS.<replaceable>pkg</replaceable></varname>.</para>
+
+      <para>Note there is also the distinction that users are able to disable
+      enforcement of ABI dependencies using the <varname>USE_ABI_DEPENDS</varname>
+      variable, but there is no equivalent option for API dependencies.</para>
     </sect2>
   </sect1>
 
