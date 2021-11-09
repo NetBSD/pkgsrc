@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.19 2021/07/30 17:39:01 adam Exp $
+# $NetBSD: Makefile,v 1.20 2021/11/09 10:17:02 adam Exp $
 
-DISTNAME=	isort-5.9.3
+DISTNAME=	isort-5.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/isort/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/timothycrosley/isort
-COMMENT=	Python utility / library to sort imports
+HOMEPAGE=	https://github.com/PyCQA/isort
+COMMENT=	Python utility/library to sort imports
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0.4.3:../../comms/py-colorama
@@ -24,7 +24,7 @@ post-install:
 .endfor
 
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} test_isort.py
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests/unit/test_isort.py
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
