@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/07/30 17:39:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/11/09 10:17:02 adam Exp $
 bin/isort-${PYVERSSUFFIX}
 bin/isort-identify-imports-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -19,22 +19,17 @@ ${PYSITELIB}/isort/_future/__init__.pyo
 ${PYSITELIB}/isort/_future/_dataclasses.py
 ${PYSITELIB}/isort/_future/_dataclasses.pyc
 ${PYSITELIB}/isort/_future/_dataclasses.pyo
-${PYSITELIB}/isort/_vendored/toml/LICENSE
-${PYSITELIB}/isort/_vendored/toml/__init__.py
-${PYSITELIB}/isort/_vendored/toml/__init__.pyc
-${PYSITELIB}/isort/_vendored/toml/__init__.pyo
-${PYSITELIB}/isort/_vendored/toml/decoder.py
-${PYSITELIB}/isort/_vendored/toml/decoder.pyc
-${PYSITELIB}/isort/_vendored/toml/decoder.pyo
-${PYSITELIB}/isort/_vendored/toml/encoder.py
-${PYSITELIB}/isort/_vendored/toml/encoder.pyc
-${PYSITELIB}/isort/_vendored/toml/encoder.pyo
-${PYSITELIB}/isort/_vendored/toml/ordered.py
-${PYSITELIB}/isort/_vendored/toml/ordered.pyc
-${PYSITELIB}/isort/_vendored/toml/ordered.pyo
-${PYSITELIB}/isort/_vendored/toml/tz.py
-${PYSITELIB}/isort/_vendored/toml/tz.pyc
-${PYSITELIB}/isort/_vendored/toml/tz.pyo
+${PYSITELIB}/isort/_vendored/tomli/LICENSE
+${PYSITELIB}/isort/_vendored/tomli/__init__.py
+${PYSITELIB}/isort/_vendored/tomli/__init__.pyc
+${PYSITELIB}/isort/_vendored/tomli/__init__.pyo
+${PYSITELIB}/isort/_vendored/tomli/_parser.py
+${PYSITELIB}/isort/_vendored/tomli/_parser.pyc
+${PYSITELIB}/isort/_vendored/tomli/_parser.pyo
+${PYSITELIB}/isort/_vendored/tomli/_re.py
+${PYSITELIB}/isort/_vendored/tomli/_re.pyc
+${PYSITELIB}/isort/_vendored/tomli/_re.pyo
+${PYSITELIB}/isort/_vendored/tomli/py.typed
 ${PYSITELIB}/isort/_version.py
 ${PYSITELIB}/isort/_version.pyc
 ${PYSITELIB}/isort/_version.pyo
@@ -123,6 +118,9 @@ ${PYSITELIB}/isort/stdlibs/py27.pyo
 ${PYSITELIB}/isort/stdlibs/py3.py
 ${PYSITELIB}/isort/stdlibs/py3.pyc
 ${PYSITELIB}/isort/stdlibs/py3.pyo
+${PYSITELIB}/isort/stdlibs/py310.py
+${PYSITELIB}/isort/stdlibs/py310.pyc
+${PYSITELIB}/isort/stdlibs/py310.pyo
 ${PYSITELIB}/isort/stdlibs/py35.py
 ${PYSITELIB}/isort/stdlibs/py35.pyc
 ${PYSITELIB}/isort/stdlibs/py35.pyo
