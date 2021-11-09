@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2021/10/13 18:10:56 bouyer Exp $
+# $NetBSD: Makefile,v 1.24 2021/11/09 11:12:35 nia Exp $
 #
 VERSION=	4.13.4
 
@@ -48,6 +48,8 @@ CONFLICTS+=		xenstoretools-[0-9]*
 CHECK_PORTABILITY_SKIP=	tools/examples/* \
 			tools/qemu-xen/scripts/qemu-binfmt-conf.sh
 CHECK_RELRO_SKIP=	libexec/xen/boot/hvmloader
+CHECK_RELRO_SKIP+=	libexec/xen/boot/xen-shim
+CHECK_RELRO_SKIP+=	lib/debug/usr/pkg/libexec/xen/boot/xen-shim-syms
 
 EGDIR=			${PREFIX}/share/examples/xen
 MESSAGE_SUBST+=		EGDIR=${EGDIR}
