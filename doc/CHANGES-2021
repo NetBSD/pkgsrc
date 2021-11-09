@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5500 2021/11/09 10:17:18 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5501 2021/11/09 14:03:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8312,3 +8312,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/yt-dlp to 2021.10.22nb1 [ryoon 2021-11-09]
 	Updated devel/bpython to 0.22.1 [adam 2021-11-09]
 	Updated devel/py-isort to 5.10.1 [adam 2021-11-09]
+	Updated databases/ruby-sequel to 5.50.0 [taca 2021-11-09]
