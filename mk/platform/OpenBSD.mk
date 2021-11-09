@@ -1,4 +1,4 @@
-# $NetBSD: OpenBSD.mk,v 1.42 2017/05/31 22:55:01 jlam Exp $
+# $NetBSD: OpenBSD.mk,v 1.43 2021/11/09 12:04:43 nia Exp $
 #
 # Variable definitions for the OpenBSD operating system.
 
@@ -94,7 +94,7 @@ SERIAL_DEVICES?=	/dev/null
 
 # check for kqueue(2) support, added in OpenBSD-2.9
 .if exists(/usr/include/sys/event.h)
-PKG_HAVE_KQUEUE=	# defined
+OPSYS_HAS_KQUEUE=	# defined
 .endif
 
 _OPSYS_SUPPORTS_CWRAPPERS=	yes

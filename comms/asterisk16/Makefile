@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2021/11/09 11:11:08 nia Exp $
+# $NetBSD: Makefile,v 1.84 2021/11/09 12:04:43 nia Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
@@ -120,7 +120,7 @@ BUILDLINK_TRANSFORM+=	rm:-march=i386
 .endif
 
 PLIST_VARS+=	kqueue
-.if defined(PKG_HAVE_KQUEUE)
+.if defined(OPSYS_HAS_KQUEUE)
 PLIST.kqueue=	yes
 .endif
 
@@ -141,7 +141,7 @@ PLIST.mgcp=	yes
 .endif
 
 PLIST_VARS+=	timerfd
-.if defined(PKG_HAVE_TIMERFD)
+.if defined(OPSYS_HAS_TIMERFD)
 PLIST.timerfd=	yes
 .endif
 

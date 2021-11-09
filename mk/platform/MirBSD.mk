@@ -1,4 +1,4 @@
-# $NetBSD: MirBSD.mk,v 1.13 2017/01/17 22:57:39 wiz Exp $
+# $NetBSD: MirBSD.mk,v 1.14 2021/11/09 12:04:43 nia Exp $
 #
 # Variable definitions for the MirOS BSD operating system.
 
@@ -64,7 +64,7 @@ DEFAULT_SERIAL_DEVICE?=	/dev/null
 SERIAL_DEVICES?=	/dev/null
 .endif
 
-PKG_HAVE_KQUEUE=	# defined
+OPSYS_HAS_KQUEUE=	# defined
 
 _OPSYS_CAN_CHECK_SHLIBS=	no # can't use readelf in check/bsd.check-vars.mk
 

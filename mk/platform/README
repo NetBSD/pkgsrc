@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.6 2017/08/07 23:54:09 maya Exp $
+$NetBSD: README,v 1.7 2021/11/09 12:04:43 nia Exp $
 
 These files contain platform-specific definitions that are used by the
 pkgsrc infrastructure.
@@ -99,7 +99,11 @@ TODO: Document all these variables.
 
     SERIAL_DEVICES is list of supported serial devices
 
-    PKG_HAVE_KQUEUE is defined if kqueue(2) is supported.
+    OPSYS_HAS_EVENTFD is defined if eventfd(2) is supported.
+
+    OPSYS_HAS_TIMERFD is defined if timerfd(2) is supported.
+
+    OPSYS_HAS_KQUEUE is defined if kqueue(2) is supported.
 
     _OPSYS_CAN_CHECK_SHLIBS is "yes" if "check-shlibs" in check/check-shlibs.mk
 	can be performed.
