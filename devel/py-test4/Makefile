@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/10/06 10:51:21 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2021/11/09 20:34:40 wiz Exp $
 
 DISTNAME=	pytest-4.6.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -13,7 +13,6 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-atomicwrites>=1.0:../../devel/py-atomicwrites
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.4.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pluggy>=0.12:../../devel/py-pluggy
 DEPENDS+=	${PYPKGPREFIX}-py>=1.5.0:../../devel/py-py
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
@@ -35,6 +34,7 @@ DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=0.12:../../devel/py-importlib-metad
 
 PYTHON_VERSIONED_DEPENDENCIES+=	more-itertools
 PYTHON_VERSIONED_DEPENDENCIES+=	hypothesis:test
+PYTHON_VERSIONED_DEPENDENCIES+=	packaging
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	bash:build
