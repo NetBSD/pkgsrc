@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/10/27 23:03:55 adam Exp $
+# $NetBSD: Makefile,v 1.22 2021/11/09 20:34:41 wiz Exp $
 
 DISTNAME=	tox-3.20.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-filelock>=3.0.0:../../devel/py-filelock
-DEPENDS+=	${PYPKGPREFIX}-packaging>=14:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pluggy>=0.12.0:../../devel/py-pluggy
 DEPENDS+=	${PYPKGPREFIX}-py>=1.4.17:../../devel/py-py
 DEPENDS+=	${PYPKGPREFIX}-six>=1.14.0:../../lang/py-six
@@ -32,6 +31,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.22.2:../../devel/py-test-xdist
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=0.12:../../devel/py-importlib-metadata
 .endif
 
+PYTHON_VERSIONED_DEPENDENCIES+=	packaging
 PYTHON_VERSIONED_DEPENDENCIES+=	test:test
 
 USE_LANGUAGES=	# none
