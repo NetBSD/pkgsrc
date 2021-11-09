@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2021/09/28 00:16:08 gdt Exp $
+# $NetBSD: Makefile,v 1.60 2021/11/09 11:51:11 nia Exp $
 
 DISTNAME=	gpsd-3.23.1
 CATEGORIES=	geography
@@ -83,7 +83,13 @@ PLIST_SUBST+=	PLIST_DYLIB=
 
 # \todo Consider not including this and using the pre-built man pages.
 .include "../../lang/ruby/rubyversion.mk"
-BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-asciidoctor>=2.0.0:../../textproc/ruby-asciidoctor
+TOOL_DEPENDS+=	${RUBY_PKGPREFIX}-asciidoctor>=2.0.0:../../textproc/ruby-asciidoctor
+
+SUBST_CLASSES+=		ad
+SUBST_STAGE.ad=		pre-build
+SUBST_MESSAGE.ad=	Correcting the asciidoctor binary name.
+SUBST_FILES.ad+=	SConscript
+SUBST_SED.ad+=		-e "s,asciidoctor26,asciidoctor${RUBY_SUFFIX},g"
 
 # \todo Change to TOOLS or BUILD_DEPENDS after scons support is improved.
 .include "../../devel/scons/buildlink3.mk"
