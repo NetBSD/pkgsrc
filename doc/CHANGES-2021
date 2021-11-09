@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5498 2021/11/09 08:51:22 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5499 2021/11/09 09:54:48 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8309,3 +8309,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/nagios-plugin-dotpid to 0.6 [manu 2021-11-09]
 	Updated www/ap2-auth-mellon to 0.18.0 [manu 2021-11-09]
 	Updated sysutils/tiramisu to 2.0.20211107 [pin 2021-11-09]
+	Updated net/yt-dlp to 2021.10.22nb1 [ryoon 2021-11-09]
