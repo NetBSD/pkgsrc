@@ -1,4 +1,4 @@
-# $NetBSD: DragonFly.mk,v 1.52 2018/09/29 11:47:33 sevan Exp $
+# $NetBSD: DragonFly.mk,v 1.53 2021/11/09 12:04:43 nia Exp $
 #
 # Variable definitions for the DragonFly operating system.
 
@@ -57,7 +57,7 @@ _OPSYS_CAN_CHECK_SHLIBS=	yes # use readelf in check/bsd.check-vars.mk
 
 # check for kqueue(2) support
 .if exists(/usr/include/sys/event.h)
-PKG_HAVE_KQUEUE=	# defined
+OPSYS_HAS_KQUEUE=	# defined
 .endif
 
 # check for maximum command line length and set it in configure's environment,

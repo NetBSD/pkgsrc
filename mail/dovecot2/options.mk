@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.13 2020/01/25 10:45:11 jperkin Exp $
+# $NetBSD: options.mk,v 1.14 2021/11/09 12:04:43 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
 PKG_SUPPORTED_OPTIONS=	kqueue pam ssl tcpwrappers
 PKG_SUGGESTED_OPTIONS=	pam ssl tcpwrappers
 
-.if defined(PKG_HAVE_KQUEUE)
+.if defined(OPSYS_HAS_KQUEUE)
 PKG_SUGGESTED_OPTIONS+=	kqueue
 .endif
 PLIST_VARS+=		ssl tcpwrappers

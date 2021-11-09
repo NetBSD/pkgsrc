@@ -1,4 +1,4 @@
-# $NetBSD: Bitrig.mk,v 1.3 2016/03/10 16:58:19 jperkin Exp $
+# $NetBSD: Bitrig.mk,v 1.4 2021/11/09 12:04:43 nia Exp $
 #
 # Variable definitions for the Bitrig operating system.
 
@@ -61,7 +61,7 @@ DEFAULT_SERIAL_DEVICE?=	/dev/null
 SERIAL_DEVICES?=	/dev/null
 .endif
 
-PKG_HAVE_KQUEUE=	# defined
+OPSYS_HAS_KQUEUE=	# defined
 
 _OPSYS_CAN_CHECK_SHLIBS=	no
 
