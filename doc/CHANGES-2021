@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5522 2021/11/10 07:34:10 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5523 2021/11/10 07:42:50 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8334,3 +8334,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/py-pip20 version 20.3.3 [wiz 2021-11-09]
 	Updated devel/py-pip20 to 20.3.4 [wiz 2021-11-09]
 	Updated security/pleaser to 0.5.0 [pin 2021-11-10]
+	Updated audio/jack_umidi to 1.1.2 [nia 2021-11-10]
