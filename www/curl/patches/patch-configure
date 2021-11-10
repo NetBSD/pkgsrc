@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.12 2021/09/15 06:26:01 wiz Exp $
+$NetBSD: patch-configure,v 1.13 2021/11/10 10:55:08 adam Exp $
 
 - Builtin krb5-config in platforms such as solaris do not support
   the gssapi option, and need an explicit -lgss
@@ -6,9 +6,9 @@ $NetBSD: patch-configure,v 1.12 2021/09/15 06:26:01 wiz Exp $
 - Do not strip debug flags.
 - Support Minix.
 
---- configure.orig	2021-09-13 14:46:32.000000000 +0000
+--- configure.orig	2021-11-09 08:16:06.000000000 +0000
 +++ configure
-@@ -4253,6 +4253,7 @@ printf "%s\n" "$as_me: $xc_bad_var_msg l
+@@ -4243,6 +4243,7 @@ printf "%s\n" "$as_me: $xc_bad_var_msg l
          ;;
      esac
    done
@@ -16,7 +16,7 @@ $NetBSD: patch-configure,v 1.12 2021/09/15 06:26:01 wiz Exp $
    if test $xc_bad_var_cflags = yes; then
      { printf "%s\n" "$as_me:${as_lineno-$LINENO}: using CFLAGS: $CFLAGS" >&5
  printf "%s\n" "$as_me: using CFLAGS: $CFLAGS" >&6;}
-@@ -8633,7 +8634,7 @@ else $as_nop
+@@ -8623,7 +8624,7 @@ else $as_nop
      lt_cv_sys_max_cmd_len=8192;
      ;;
  
@@ -25,7 +25,7 @@ $NetBSD: patch-configure,v 1.12 2021/09/15 06:26:01 wiz Exp $
      # This has been around since 386BSD, at least.  Likely further.
      if test -x /sbin/sysctl; then
        lt_cv_sys_max_cmd_len=`/sbin/sysctl -n kern.argmax`
-@@ -9113,12 +9114,8 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu 
+@@ -9103,12 +9104,8 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu 
    lt_cv_deplibs_check_method=pass_all
    ;;
  
@@ -40,7 +40,7 @@ $NetBSD: patch-configure,v 1.12 2021/09/15 06:26:01 wiz Exp $
    ;;
  
  newos6*)
-@@ -13384,14 +13381,13 @@ _LT_EOF
+@@ -13374,14 +13371,13 @@ _LT_EOF
        fi
        ;;
  
@@ -62,7 +62,7 @@ $NetBSD: patch-configure,v 1.12 2021/09/15 06:26:01 wiz Exp $
        ;;
  
      solaris*)
-@@ -14081,15 +14077,13 @@ printf "%s\n" "$lt_cv_irix_exported_symb
+@@ -14071,15 +14067,13 @@ printf "%s\n" "$lt_cv_irix_exported_symb
        esac
        ;;
  
@@ -83,7 +83,7 @@ $NetBSD: patch-configure,v 1.12 2021/09/15 06:26:01 wiz Exp $
        ;;
  
      newsos6)
-@@ -15199,6 +15193,18 @@ fi
+@@ -15189,6 +15183,18 @@ fi
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -102,7 +102,7 @@ $NetBSD: patch-configure,v 1.12 2021/09/15 06:26:01 wiz Exp $
  netbsdelf*-gnu)
    version_type=linux
    need_lib_prefix=no
-@@ -17759,7 +17765,7 @@ squeeze() {
+@@ -17749,7 +17755,7 @@ squeeze() {
  
  
        #
@@ -111,7 +111,7 @@ $NetBSD: patch-configure,v 1.12 2021/09/15 06:26:01 wiz Exp $
      #
      tmp_save_CPPFLAGS="$CPPFLAGS"
      tmp_save_CFLAGS="$CFLAGS"
-@@ -18014,13 +18020,6 @@ printf %s "checking if compiler accepts 
+@@ -18004,13 +18010,6 @@ printf %s "checking if compiler accepts 
        tmp_options="$flags_dbg_yes"
      fi
      #
@@ -125,7 +125,7 @@ $NetBSD: patch-configure,v 1.12 2021/09/15 06:26:01 wiz Exp $
      squeeze CPPFLAGS
      squeeze CFLAGS
    fi
-@@ -20734,7 +20733,7 @@ printf "%s\n" "no" >&6; }
+@@ -20667,7 +20666,7 @@ printf "%s\n" "no" >&6; }
    tst_cflags="no"
    case $host_os in
      darwin*)
@@ -134,20 +134,7 @@ $NetBSD: patch-configure,v 1.12 2021/09/15 06:26:01 wiz Exp $
        ;;
    esac
  
-@@ -24428,7 +24427,11 @@ printf "%s\n" "yes" >&6; }
-      if test -n "$host_alias" -a -f "$GSSAPI_ROOT/bin/$host_alias-krb5-config"; then
-         GSSAPI_INCS=`$GSSAPI_ROOT/bin/$host_alias-krb5-config --cflags gssapi`
-      elif test -f "$KRB5CONFIG"; then
--        GSSAPI_INCS=`$KRB5CONFIG --cflags gssapi`
-+        if `$KRB5CONFIG --cflags gssapi` 2>&1 | grep "Unknown option" >/dev/null; then
-+           GSSAPI_INCS=`$KRB5CONFIG --cflags`
-+        else
-+           GSSAPI_INCS=`$KRB5CONFIG --cflags gssapi`
-+        fi
-      elif test "$GSSAPI_ROOT" != "yes"; then
-         GSSAPI_INCS="-I$GSSAPI_ROOT/include"
-      fi
-@@ -24600,7 +24603,7 @@ printf "%s\n" "#define HAVE_GSSAPI 1" >>
+@@ -24729,7 +24728,7 @@ printf "%s\n" "found" >&6; }
          LIBS="-lgss $LIBS"
          ;;
       *)

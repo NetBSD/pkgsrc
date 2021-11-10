@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.249 2021/10/21 07:46:32 wiz Exp $
+# $NetBSD: Makefile,v 1.250 2021/11/10 10:55:08 adam Exp $
 
-DISTNAME=	curl-7.79.1
-PKGREVISION=	2
+DISTNAME=	curl-7.80.0
 CATEGORIES=	www
 MASTER_SITES=	https://curl.haxx.se/download/
 EXTRACT_SUFX=	.tar.xz
