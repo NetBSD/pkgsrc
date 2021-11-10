@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5528 2021/11/10 11:19:49 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5529 2021/11/10 11:41:55 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8341,3 +8341,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-impacket to 0.9.24 [adam 2021-11-10]
 	Added fonts/altmeister-otf version 0.0.2021.11.07 [wiz 2021-11-10]
 	Added fonts/neumeister-otf version 0.0.2021.11.07 [wiz 2021-11-10]
+	Updated shells/starship to 1.0.0 [pin 2021-11-10]
