@@ -1,4 +1,3 @@
-bin/A.py @PREFIX@/bin/A-@PYVERSSUFFIX@.py
 bin/Get-GPPPassword.py @PREFIX@/bin/Get-GPPPassword-@PYVERSSUFFIX@.py
 bin/GetADUsers.py @PREFIX@/bin/GetADUsers-@PYVERSSUFFIX@.py
 bin/GetNPUsers.py @PREFIX@/bin/GetNPUsers-@PYVERSSUFFIX@.py
@@ -18,6 +17,7 @@ bin/getST.py @PREFIX@/bin/getST-@PYVERSSUFFIX@.py
 bin/getTGT.py @PREFIX@/bin/getTGT-@PYVERSSUFFIX@.py
 bin/goldenPac.py @PREFIX@/bin/goldenPac-@PYVERSSUFFIX@.py
 bin/karmaSMB.py @PREFIX@/bin/karmaSMB-@PYVERSSUFFIX@.py
+bin/keylistattack2.py @PREFIX@/bin/keylistattack2-@PYVERSSUFFIX@.py
 bin/kintercept.py @PREFIX@/bin/kintercept-@PYVERSSUFFIX@.py
 bin/lookupsid.py @PREFIX@/bin/lookupsid-@PYVERSSUFFIX@.py
 bin/mimikatz.py @PREFIX@/bin/mimikatz-@PYVERSSUFFIX@.py
@@ -32,6 +32,7 @@ bin/ping.py @PREFIX@/bin/ping-@PYVERSSUFFIX@.py
 bin/ping6.py @PREFIX@/bin/ping6-@PYVERSSUFFIX@.py
 bin/psexec.py @PREFIX@/bin/psexec-@PYVERSSUFFIX@.py
 bin/raiseChild.py @PREFIX@/bin/raiseChild-@PYVERSSUFFIX@.py
+bin/rbcd.py @PREFIX@/bin/rbcd-@PYVERSSUFFIX@.py
 bin/rdp_check.py @PREFIX@/bin/rdp_check-@PYVERSSUFFIX@.py
 bin/reg.py @PREFIX@/bin/reg-@PYVERSSUFFIX@.py
 bin/registry-read.py @PREFIX@/bin/registry-read-@PYVERSSUFFIX@.py
