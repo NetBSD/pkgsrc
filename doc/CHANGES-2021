@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5526 2021/11/10 10:56:27 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5527 2021/11/10 11:19:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8339,3 +8339,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added sysutils/durt version 1.0.3 [pin 2021-11-10]
 	Updated www/curl to 7.80.0 [adam 2021-11-10]
 	Updated net/py-impacket to 0.9.24 [adam 2021-11-10]
+	Added fonts/altmeister-otf version 0.0.2021.11.07 [wiz 2021-11-10]
