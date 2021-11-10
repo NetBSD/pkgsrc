@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/10 11:19:10 wiz Exp $
+
+BLAKE2s (neumeister-otf-0.0.2021.11.07/neumeister-1000.zip) = 055f7dac4a0419071c5c1f35e8e9beec562a8b4eae7df17410e59a5ec5a60e8a
+SHA512 (neumeister-otf-0.0.2021.11.07/neumeister-1000.zip) = 331e36e5876bc11893d93b2cfa03881d6f6c30376667fafe0f50327d89579b8185582dd3029006c270e862d8252e51134365d620b5f275ee90565ad94ebe19ca
+Size (neumeister-otf-0.0.2021.11.07/neumeister-1000.zip) = 8649249 bytes
