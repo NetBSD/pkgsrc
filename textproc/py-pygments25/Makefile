@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/04/06 14:11:12 adam Exp $
+# $NetBSD: Makefile,v 1.2 2021/11/10 14:18:33 hauke Exp $
 
 DISTNAME=	Pygments-2.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -14,6 +14,8 @@ LICENSE=	2-clause-bsd
 #TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
+
+PYTHON_VERSIONS_ACCEPTED=	27
 
 USE_LANGUAGES=	# none
 
