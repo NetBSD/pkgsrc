@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/10 11:17:28 wiz Exp $
+share/fonts/X11/OTF/FDIAltmeisterA-Regular.otf
+share/fonts/X11/OTF/FDIAltmeisterB-Regular.otf

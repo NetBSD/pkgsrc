@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/10 11:17:28 wiz Exp $
+
+BLAKE2s (altmeister-otf-0.0.2021.11.07/altmeister.zip) = 4bdd009154fab3c6491b71b5c731307e10bb1d4eddbe735541fb1c5cb1e5ce04
+SHA512 (altmeister-otf-0.0.2021.11.07/altmeister.zip) = 638601975cb46bd6dde9e637039487e20f149647cad0a53fee91769279d90d65641a6d0a96ccd758205bd5429cd12bb3838b8d4ec11bf050a12577a25eada233
+Size (altmeister-otf-0.0.2021.11.07/altmeister.zip) = 7095195 bytes
