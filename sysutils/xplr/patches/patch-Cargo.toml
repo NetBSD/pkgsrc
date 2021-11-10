@@ -1,8 +1,8 @@
-$NetBSD: patch-Cargo.toml,v 1.9 2021/10/24 22:07:14 pin Exp $
+$NetBSD: patch-Cargo.toml,v 1.10 2021/11/10 08:44:55 pin Exp $
 
-Don't pull vendored version, use LuaJIT2 from pkgsrc
+Don't pull vendored version, use pkgsrc LuaJIT2
 
---- Cargo.toml.orig	2021-10-24 06:09:29.000000000 +0000
+--- Cargo.toml.orig	2021-11-10 04:54:59.000000000 +0000
 +++ Cargo.toml
 @@ -31,7 +31,7 @@ lazy_static = "1.4.0"
  indexmap = { version = "1.7.0", features = ["serde"] }
@@ -11,5 +11,5 @@ Don't pull vendored version, use LuaJIT2 from pkgsrc
 -mlua = { version = "0.6.6", features = ["luajit", "vendored", "serialize", "send"] }
 +mlua = { version = "0.6.6", features = ["luajit", "serialize", "send"] }
  ansi-to-tui = "0.4.1"
- libc = "0.2.105"
- 
+ libc = "0.2.106"
+ tui-input = { version = "0.1.2", features = [ "serde" ] }
