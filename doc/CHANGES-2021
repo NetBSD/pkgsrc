@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5529 2021/11/10 11:41:55 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5530 2021/11/10 13:33:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8342,3 +8342,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added fonts/altmeister-otf version 0.0.2021.11.07 [wiz 2021-11-10]
 	Added fonts/neumeister-otf version 0.0.2021.11.07 [wiz 2021-11-10]
 	Updated shells/starship to 1.0.0 [pin 2021-11-10]
+	Updated databases/ldb to 2.2.3 [adam 2021-11-10]
+	Updated net/samba4 to 4.13.14 [adam 2021-11-10]
