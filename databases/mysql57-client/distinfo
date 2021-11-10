@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.46 2021/10/26 10:09:25 nia Exp $
+$NetBSD: distinfo,v 1.47 2021/11/10 11:03:52 jperkin Exp $
 
 BLAKE2s (mysql-5.7.36.tar.gz) = 74c80608c6e00d5f24cfc1d864520a4e01d476d94a90b9c44d1e8a4aeb5d3c54
 SHA512 (mysql-5.7.36.tar.gz) = 34badfff21c774a5a05cca5b505725eda440ad3d7aca4de593ec58c13a552fe4c5465e1f17b0493a21971321185ffcfa031267df13188e33503f003bfa8a14b6
@@ -15,7 +15,7 @@ SHA1 (patch-cmake_ldap.cmake) = 9bdc3c311330852286838e6159295ecc5fbdc0ea
 SHA1 (patch-cmake_os_SunOS.cmake) = b71c3e1fafb48ebbba77c19bb1c31556ebe1ad2a
 SHA1 (patch-cmake_plugin.cmake) = 4480438969e297f67890b1974a86fb88a23d28ed
 SHA1 (patch-cmake_readline.cmake) = 96ee989be126c939a4c9ef80f8cbb27e0c0719a5
-SHA1 (patch-cmake_ssl.cmake) = 85ccd0f27fdd6950368ae10fe4b8a013d2e66dfa
+SHA1 (patch-cmake_ssl.cmake) = dd5bb94818d480a42ab5f971f08b3b4cdbb24034
 SHA1 (patch-include_CMakeLists.txt) = 944991702f046ea7a5e2b6ea4dc390f17426e55a
 SHA1 (patch-include_my__compare.h) = f45bac4b488332a668b0005751856279b67401f5
 SHA1 (patch-include_my__global.h) = 3870266cb1dd2cd0d58417dfe21bab19b62100e2
