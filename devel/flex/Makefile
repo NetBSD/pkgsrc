@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2020/09/08 11:21:17 jperkin Exp $
+# $NetBSD: Makefile,v 1.63 2021/11/10 22:59:50 nia Exp $
 
 DISTNAME=	flex-2.6.4
 CATEGORIES=	devel lang
@@ -12,7 +12,9 @@ LICENSE=	2-clause-bsd
 
 BUILD_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
 
-USE_LANGUAGES=		c c++
+# wants stdbool
+USE_LANGUAGES=		c99 c++
+
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gm4:run	gmake makeinfo gettext
