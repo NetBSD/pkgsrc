@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5525 2021/11/10 09:37:51 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5526 2021/11/10 10:56:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8337,3 +8337,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/jack_umidi to 1.1.2 [nia 2021-11-10]
 	Updated sysutils/xplr to 0.16.3 [pin 2021-11-10]
 	Added sysutils/durt version 1.0.3 [pin 2021-11-10]
+	Updated www/curl to 7.80.0 [adam 2021-11-10]
+	Updated net/py-impacket to 0.9.24 [adam 2021-11-10]
