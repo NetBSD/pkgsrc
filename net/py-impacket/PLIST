@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/09/27 19:00:28 adam Exp $
-bin/A-${PYVERSSUFFIX}.py
+@comment $NetBSD: PLIST,v 1.7 2021/11/10 10:56:10 adam Exp $
 bin/Get-GPPPassword-${PYVERSSUFFIX}.py
 bin/GetADUsers-${PYVERSSUFFIX}.py
 bin/GetNPUsers-${PYVERSSUFFIX}.py
@@ -19,6 +18,7 @@ bin/getST-${PYVERSSUFFIX}.py
 bin/getTGT-${PYVERSSUFFIX}.py
 bin/goldenPac-${PYVERSSUFFIX}.py
 bin/karmaSMB-${PYVERSSUFFIX}.py
+bin/keylistattack2-${PYVERSSUFFIX}.py
 bin/kintercept-${PYVERSSUFFIX}.py
 bin/lookupsid-${PYVERSSUFFIX}.py
 bin/mimikatz-${PYVERSSUFFIX}.py
@@ -33,6 +33,7 @@ bin/ping-${PYVERSSUFFIX}.py
 bin/ping6-${PYVERSSUFFIX}.py
 bin/psexec-${PYVERSSUFFIX}.py
 bin/raiseChild-${PYVERSSUFFIX}.py
+bin/rbcd-${PYVERSSUFFIX}.py
 bin/rdp_check-${PYVERSSUFFIX}.py
 bin/reg-${PYVERSSUFFIX}.py
 bin/registry-read-${PYVERSSUFFIX}.py

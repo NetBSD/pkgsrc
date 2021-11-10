@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2021/09/27 19:00:28 adam Exp $
+# $NetBSD: Makefile,v 1.6 2021/11/10 10:56:10 adam Exp $
 
-DISTNAME=	impacket-0.9.23
+DISTNAME=	impacket-0.9.24
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/impacket/}
@@ -10,15 +10,16 @@ HOMEPAGE=	https://www.secureauth.com/labs/open-source-tools/impacket
 COMMENT=	Collection of Python classes for working with network protocols
 LICENSE=	apache-1.1
 
-DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.13.1:../../security/py-OpenSSL
+DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.16.2:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-asn1>=0.2.3:../../security/py-asn1
+DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-cryptodome-[0-9]*:../../security/py-cryptodome
 DEPENDS+=	${PYPKGPREFIX}-flask>=1.0:../../www/py-flask
-DEPENDS+=	${PYPKGPREFIX}-ldap3>=2.6:../../databases/py-ldap3
+DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
+DEPENDS+=	${PYPKGPREFIX}-ldap3>=2.6.1:../../databases/py-ldap3
 DEPENDS+=	${PYPKGPREFIX}-ldapdomaindump>=0.9.0:../../net/py-ldapdomaindump
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
-TEST_DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} == 27
@@ -28,6 +29,7 @@ DEPENDS+=	${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
 SUBST_CLASSES+=		crypto
 SUBST_STAGE.crypto=	pre-configure
 SUBST_MESSAGE.crypto=	Switching from py-cryptodomex to py-cryptodome.
+SUBST_FILES.crypto+=	examples/Get-GPPPassword.py.py
 SUBST_FILES.crypto+=	examples/dpapi.py
 SUBST_FILES.crypto+=	examples/goldenPac.py
 SUBST_FILES.crypto+=	examples/mimikatz.py
@@ -40,6 +42,7 @@ SUBST_FILES.crypto+=	impacket/dcerpc/v5/rpcrt.py
 SUBST_FILES.crypto+=	impacket/dcerpc/v5/samr.py
 SUBST_FILES.crypto+=	impacket/dpapi.py
 SUBST_FILES.crypto+=	impacket/examples/ntlmrelayx/attacks/ldapattack.py
+SUBST_FILES.crypto+=	impacket/examples/ntlmrelayx/clients/dcsyncclient.py
 SUBST_FILES.crypto+=	impacket/examples/secretsdump.py
 SUBST_FILES.crypto+=	impacket/krb5/crypto.py
 SUBST_FILES.crypto+=	impacket/krb5/gssapi.py
@@ -53,11 +56,11 @@ SUBST_FILES.crypto+=	tests/misc/test_dpapi.py
 SUBST_SED.crypto=	-e 's,Cryptodome,Crypto,'
 
 post-install:
-.for bin in A Get-GPPPassword GetADUsers GetNPUsers GetUserSPNs PoC PoC2 addcomputer atexec dcomexec dpapi \
-esentutl exchanger findDelegation getArch getPac getST getTGT goldenPac karmaSMB \
+.for bin in Get-GPPPassword GetADUsers GetNPUsers GetUserSPNs PoC PoC2 addcomputer atexec dcomexec dpapi \
+esentutl exchanger findDelegation getArch getPac getST getTGT goldenPac karmaSMB keylistattack2 \
 kintercept lookupsid mimikatz mqtt_check mssqlclient mssqlinstance netview \
 nmapAnswerMachine ntfs-read ntlmrelayx ping ping6 psexec raiseChild \
-rdp_check reg registry-read rpcdump rpcmap sambaPipe samrdump secretsdump services \
+rbcd rdp_check reg registry-read rpcdump rpcmap sambaPipe samrdump secretsdump services \
 smbclient smbexec smbpasswd smbrelayx smbserver sniff sniffer split testTGT testTGT2 ticketConverter \
 ticketer wmiexec wmipersist wmiquery
 	cd ${DESTDIR}${PREFIX}/bin && \
