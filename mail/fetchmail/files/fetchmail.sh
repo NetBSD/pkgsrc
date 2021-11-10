@@ -1,12 +1,16 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: fetchmail.sh,v 1.3 2011/03/20 01:38:36 shattered Exp $
+# $NetBSD: fetchmail.sh,v 1.4 2021/11/10 19:24:52 khorben Exp $
 #
 # PROVIDE: fetchmail
 # REQUIRE: mail
+#
+# You will need to set some variables in @SYSCONFBASE@/rc.conf to start fetchmail:
+#
+# fetchmail=YES
 
-if [ -f /etc/rc.subr ]; then
-	. /etc/rc.subr
+if [ -f @SYSCONFBASE@/rc.subr ]; then
+	$_rc_subr_loaded . @SYSCONFBASE@/rc.subr
 fi
 
 name="fetchmail"
@@ -29,7 +33,7 @@ start_poll ()
 	@ECHO@ '.'
 }
 
-if [ -f /etc/rc.subr ]; then
+if [ -f @SYSCONFBASE@/rc.subr ]; then
 	load_rc_config $name
 	run_rc_command "$1"
 else
