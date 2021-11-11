@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2019/05/09 11:32:36 leot Exp $
+# $NetBSD: Makefile,v 1.12 2021/11/11 22:47:55 kim Exp $
 #
+
+.include "../../shells/tcsh/Makefile.common"
 
 MAINTAINER=		agc@NetBSD.org
 
@@ -11,13 +13,12 @@ DESCR_SRC=		${.CURDIR}/../../shells/tcsh/DESCR ${.CURDIR}/DESCR
 CONFLICTS=		tcsh-[0-9]*
 
 PKGNAME=		static-${DISTNAME}
-PKGREVISION=		0	# ALWAYS needs to be set; 0 if none.
 
 # SunOS 5.10 stopped shipping static libraries.
 NOT_FOR_PLATFORM+=	SunOS-5.1[0-9]-*
 
-.include "../../shells/tcsh/Makefile"
-
 COMMENT:=		Statically-linked version of the ${COMMENT}
 
 LDFLAGS+=		-static
+
+.include "../../mk/bsd.pkg.mk"

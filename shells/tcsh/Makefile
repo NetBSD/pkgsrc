@@ -1,48 +1,5 @@
-# $NetBSD: Makefile,v 1.99 2021/11/11 10:46:04 kim Exp $
-#
-# used by shells/standalone-tcsh/Makefile
-# used by shells/static-tcsh/Makefile
+# $NetBSD: Makefile,v 1.100 2021/11/11 22:47:55 kim Exp $
 
-DISTNAME=	tcsh-6.23.00
-PKGREVISION?=	0			# use ?= to allow for overrides.
-CATEGORIES=	shells
-MASTER_SITES=	ftp://ftp.astron.com/pub/tcsh/
-MASTER_SITES+=	http://ftp.funet.fi/pub/mirrors/ftp.astron.com/pub/tcsh/
+.include "../../shells/tcsh/Makefile.common"
 
-MAINTAINER?=	pkgsrc-users@NetBSD.org	# use ?= to allow for overrides.
-HOMEPAGE=	https://www.tcsh.org/
-COMMENT=	Extended C-shell with many useful features
-LICENSE=	original-bsd
-
-CONFLICTS?=	static-tcsh-[0-9]*	# use ?= to allow for overrides.
-
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	autoconf:test perl:test
-
-EGDIR=		${PREFIX}/share/examples/tcsh
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-LOWER_OPSYS_VERSUFFIX=	${OS_VERSION:S/5./2./}
-.endif
-
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
-# XXX Should use CONFIGURE_ENV, but the configure script disregards
-# $CC_FOR_GETHOST in the environment and sets it to cc.
-MAKE_FLAGS+=	CC_FOR_GETHOST=${NATIVE_CC:Q}
-.endif
-
-TEST_TARGET=	check
-
-PKG_SHELL?=	bin/tcsh
-
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
-post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/complete.tcsh ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/csh-mode.el ${DESTDIR}${EGDIR}
-
-.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
