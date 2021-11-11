@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2021/10/21 20:33:05 kim Exp $
+# $NetBSD: Makefile,v 1.30 2021/11/11 12:02:48 kim Exp $
 
 DISTNAME=	gmic_2.9.0
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	graphics
 MASTER_SITES=	https://gmic.eu/files/source/
 
