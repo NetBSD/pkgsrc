@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/11 16:53:45 abs Exp $
+
+BLAKE2s (DBD-MariaDB-1.21.tar.gz) = 309cacb2169f92173eaa5367f93fa15babc9b6a78dee4c8e0cb1c221959f2f20
+SHA512 (DBD-MariaDB-1.21.tar.gz) = 0378b33e9cd31ced6f2331967c7ea63a233340bb4a60ef2bbece4843b3a62624875aa1a5e61a9fa1b709ecc8d67810c6fa4fb9ccc01df341e6d94325078f360a
+Size (DBD-MariaDB-1.21.tar.gz) = 179911 bytes
