@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.642 2021/11/06 15:09:26 bsiegert Exp $
+# $NetBSD: Makefile,v 1.643 2021/11/11 16:53:45 abs Exp $
 
 COMMENT=	Databases
 
@@ -155,6 +155,7 @@ SUBDIR+=	p5-Class-DBI-Plugin
 SUBDIR+=	p5-Class-DBI-Plugin-DeepAbstractSearch
 SUBDIR+=	p5-DBD-CSV
 SUBDIR+=	p5-DBD-DB2
+SUBDIR+=	p5-DBD-Mariadb
 SUBDIR+=	p5-DBD-Mock
 SUBDIR+=	p5-DBD-ODBC
 SUBDIR+=	p5-DBD-Oracle
