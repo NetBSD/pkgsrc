@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.29 2019/05/09 11:32:36 leot Exp $
+# $NetBSD: Makefile,v 1.30 2021/11/11 22:47:55 kim Exp $
 #
+
+.include "../../shells/tcsh/Makefile.common"
 
 # FIXME: This is because of PREFIX=/ below.
 CHECK_FILES_SUPPORTED=	no
 NOT_FOR_UNPRIVILEGED=	yes
 
 PKGNAME=		standalone-${DISTNAME}
-PKGREVISION=		0	# ALWAYS needs to be set; 0 if none.
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 PATCHDIR=		${.CURDIR}/../../shells/tcsh/patches
@@ -21,8 +22,6 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-* OpenBSD-*-* SunOS-*-*
 .if ${OS_VARIANT} == "OmniOS"
 NOT_FOR_PLATFORM+=	SunOS-*-*
 .endif
-
-.include "../../shells/tcsh/Makefile"
 
 INSTALLATION_DIRS+=	usr/share/man/man1
 
@@ -43,3 +42,5 @@ DISTINFO_FILE=		${.CURDIR}/../../shells/tcsh/distinfo
 .if ${OPSYS} != "SunOS"
 LDFLAGS+=		-static
 .endif
+
+.include "../../mk/bsd.pkg.mk"
