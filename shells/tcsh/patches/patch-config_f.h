@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.13 2020/07/08 04:06:48 mrg Exp $
+$NetBSD: patch-config_f.h,v 1.1 2021/11/11 13:20:13 kim Exp $
 
 Special adaptation for different NetBSD versions and for OpenBSD.
 Turn on SYSMALLOC for NetBSD until tc.alloc.c gets better.
