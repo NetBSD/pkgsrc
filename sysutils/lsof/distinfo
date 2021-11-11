@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.98 2021/10/26 11:19:49 nia Exp $
+$NetBSD: distinfo,v 1.99 2021/11/11 00:49:34 gutteridge Exp $
 
 BLAKE2s (lsof_4.91.tar.bz2) = 77109e036c36f7d1483e69f2aae2314830dc4d2bdc3bf88a4031832f17e6afef
 SHA512 (lsof_4.91.tar.bz2) = 49f811941dd6303f7cb0655fddb8b1177af5d1b18f2bd1edfab09d2c128aea73daecf09c7a5375979c66ba764c88a6e70c9086b55c3634e3be01ab1aa12e9f92
@@ -9,6 +9,6 @@ SHA1 (patch-ac) = dac0fcdfee97d42c8f23684a4321519b9f8698d9
 SHA1 (patch-ad) = 7f639e8832c2da8e498c33a38ecbc7b3d3a7430a
 SHA1 (patch-ae) = 3f4a7ce54c0646941fd86400f91a2d17e9d2354a
 SHA1 (patch-af) = 300d8042078e1137deead7f82d7ab252bbdbbb43
-SHA1 (patch-ag) = ced30f63961268a6c76bcc1d22a2eb9e1f750480
+SHA1 (patch-ag) = 99ab1c616604e9775522dbc70bfd6a7294964d0a
 SHA1 (patch-ah) = 2de22b9a3733f958298af5e33b66c0653c320f59
 SHA1 (patch-dialects_n+obsd_dnode1.c) = dc8c766760aca4eb2e7d7af3944260dd49795c09
