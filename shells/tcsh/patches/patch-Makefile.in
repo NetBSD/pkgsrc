@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.16 2019/05/09 11:32:36 leot Exp $
+$NetBSD: patch-Makefile.in,v 1.1 2021/11/11 13:20:13 kim Exp $
 
 - Adjust mandir
 - Use BSD_INSTALL_*
