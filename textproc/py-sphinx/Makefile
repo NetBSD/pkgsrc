@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.77 2021/10/29 16:16:41 adam Exp $
+# $NetBSD: Makefile,v 1.78 2021/11/11 08:59:09 adam Exp $
 
-DISTNAME=	Sphinx-4.2.0
+DISTNAME=	Sphinx-4.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Sphinx/}
@@ -24,8 +24,8 @@ DEPENDS+=	${PYPKGPREFIX}-snowballstemmer>=1.1:../../textproc/py-snowballstemmer
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-applehelp-[0-9]*:../../textproc/py-sphinxcontrib-applehelp
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-devhelp-[0-9]*:../../textproc/py-sphinxcontrib-devhelp
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-jsmath-[0-9]*:../../textproc/py-sphinxcontrib-jsmath
-DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-htmlhelp-[0-9]*:../../textproc/py-sphinxcontrib-htmlhelp
-DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-serializinghtml-[0-9]*:../../textproc/py-sphinxcontrib-serializinghtml
+DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-htmlhelp>=2.0.0:../../textproc/py-sphinxcontrib-htmlhelp
+DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-serializinghtml>=1.1.5:../../textproc/py-sphinxcontrib-serializinghtml
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-qthelp-[0-9]*:../../textproc/py-sphinxcontrib-qthelp
 TEST_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
