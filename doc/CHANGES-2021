@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5532 2021/11/11 00:49:43 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.5533 2021/11/11 01:57:16 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8347,3 +8347,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/qbittorrent to 4.3.9 [adam 2021-11-10]
 	Updated devel/py-xdis to 6.0.3 [adam 2021-11-10]
 	Updated sysutils/lsof to 4.91nb5 [gutteridge 2021-11-11]
+	Updated sysutils/auto-admin to 0.7.7 [bacon 2021-11-11]
