@@ -1,4 +1,11 @@
-# $NetBSD: Makefile,v 1.51 2021/11/11 12:02:46 kim Exp $
+# $NetBSD: Makefile,v 1.52 2021/11/11 12:20:26 wiz Exp $
+#
+# When updating this, please also update devel/py-protobuf
+#
+# Please note: this package often changes the major version
+# number of libraries, so please compare binary packages
+# from before and after, and do a recursive PKGREVISION
+# bump if necessary
 
 DISTNAME=	protobuf-cpp-3.19.0
 PKGNAME=	${DISTNAME:S/-cpp//}
