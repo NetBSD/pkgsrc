@@ -1,19 +1,19 @@
-$NetBSD: distinfo,v 1.452 2021/10/29 16:46:04 ryoon Exp $
+$NetBSD: distinfo,v 1.453 2021/11/11 16:48:04 ryoon Exp $
 
-BLAKE2s (firefox-93.0.source.tar.xz) = 073fe2b73140ba0cae75c8e75f47a966c6c6e94c1a6b8c654e0cc359dc03f6e1
-SHA512 (firefox-93.0.source.tar.xz) = b29890e331819d47201b599b9feaaa7eaa0b02088fcbf980efc4f289d43da4f73970bf35ba2f763a2a892fd5318deb68cb9a66e71e9bc0c603642434c7e32e91
-Size (firefox-93.0.source.tar.xz) = 382181136 bytes
-BLAKE2s (nodejs-output-93.0.tgz) = 8d236a09297cee8d3167487c1d30679d8ee8bc438b2d123d2717458a6bd01800
-SHA512 (nodejs-output-93.0.tgz) = fec6958ddb80c22bba58e65530c557993964258baba418e9a03852a683053ca3eec2676000f6e809416dfa5337b7c496f9cda5098ee4b35e6a4f35acdfc65d67
-Size (nodejs-output-93.0.tgz) = 200582 bytes
+BLAKE2s (firefox-94.0.1.source.tar.xz) = 17dcacd79f68ba9b981cdea024c62392d9c7539f3eb77b29ef04172bbd7dda54
+SHA512 (firefox-94.0.1.source.tar.xz) = 634665ed64f2ef205fad03ba023bc915df110c0d4b0a5e36aa470627808fbb3bce5418ea607f909d4e1eaf7d90c5dcacf398b8a434e26906dcfa366292a18b66
+Size (firefox-94.0.1.source.tar.xz) = 383929000 bytes
+BLAKE2s (nodejs-output-94.0.tgz) = c763e334427a0a861e1667e34b361d19474659cc045b7ed3ebfe8864d632c7cb
+SHA512 (nodejs-output-94.0.tgz) = 31aac9132a830877f4bf38575160d60f150a847e8c6c070db5fad4a83ad54cad4e7701c598d4808d89413e7d9ca40e10d751203a2f162e96c47fedd60de1dc9e
+Size (nodejs-output-94.0.tgz) = 200548 bytes
 SHA1 (patch-aa) = 15b8567cee2af9853f6949c80345ffcb1fd3852a
 SHA1 (patch-browser_app_profile_firefox.js) = 89cea0a66457c96ad0b94aaa524aa5942ad781d0
 SHA1 (patch-build_moz.configure_rust.configure) = 25ddfacd29cebbc6db005dbe61a2a7446d480678
 SHA1 (patch-config_gcc-stl-wrapper.template.h) = 9d1f15ff487efa9202114d19ed5668b4e7aa032a
-SHA1 (patch-config_makefiles_rust.mk) = 72d7e9ecee3ccf7ef5f741aac8e35509b41ab7b8
+SHA1 (patch-config_makefiles_rust.mk) = 9a49c534707100c27c1fac06c82ec9245d17898b
 SHA1 (patch-dom_base_nsAttrName.h) = ac7ba441a3b27df2855cf2673eea36b1cb44ad49
 SHA1 (patch-gfx_angle_checkout_src_common_third__party_smhasher_src_PMurHash.cpp) = e458c9c8dc66edc69c1874734af28a77fc5e3993
-SHA1 (patch-gfx_angle_checkout_src_compiler_translator_InfoSink.h) = 2f73c76c48852613e0c55c1680fcc2a9eb3cf4ef
+SHA1 (patch-gfx_angle_checkout_src_compiler_translator_InfoSink.h) = b2adce9e65662283a11b6dcff40e95523e940045
 SHA1 (patch-gfx_skia_skia_src_core_SkCpu.cpp) = 36218819254f3681b9c717d652ea78c9f20d49ad
 SHA1 (patch-gfx_thebes_gfxPlatform.cpp) = 76c244e4e9f947c027feaf516c9b435dfb92ab2b
 SHA1 (patch-gfx_wr_swgl_build.rs) = df6ebfaabb4d27994e59a9d0eaf12c7cf08415fb
@@ -24,7 +24,6 @@ SHA1 (patch-js_src_jit_ProcessExecutableMemory.cpp) = fad103cc698f9828ad58f74223
 SHA1 (patch-js_src_jit_arm64_vixl_MozCpu-vixl.cpp) = fdc522e3fb626b1b8a2ebf19ad60bfc25dfa4183
 SHA1 (patch-js_src_util_NativeStack.cpp) = a0a16d8d8d78d3cc3f4d2a508586f1a7821f7dba
 SHA1 (patch-js_src_vm_ArrayBufferObject.cpp) = 0501fdcae11568ae4ea78e0d2f6b3750b7a67d47
-SHA1 (patch-js_src_wasm_WasmBCRegDefs.h) = ecc21b05e2dcd365ba24d247bec35d1fe79e14f0
 SHA1 (patch-media_ffvpx_libavutil_arm_bswap.h) = de58daa0fd23d4fec50426602b65c9ea5862558a
 SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = 2ef11da83c90c41490db4c0d9809c3e1826b488a
 SHA1 (patch-media_libcubeb_src_moz.build) = e4e64a1135cf4157ae5b6f7c1710ebd076953479
