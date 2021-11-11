@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21241 2021/11/10 10:53:44 wiz Exp $
+$NetBSD: TODO,v 1.21242 2021/11/11 12:06:13 kim Exp $
 
 Suggested new packages
 ======================
@@ -1847,7 +1847,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tcpdstat-0.9
 	o tcpillust-1.00b
 	o tcpslice-1.3
-	o tcsh-6.22.03
 	o tct-1.19
 	o tdir-1.73
 	o tds-1.6.2
