@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2021/05/24 19:49:03 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2021/11/11 17:01:51 ryoon Exp $
 
 DISTNAME=	abcde-2.9.3
 PKGREVISION=	3
@@ -20,7 +20,6 @@ DEPENDS+=	p5-WebService-MusicBrainz>=1.0.4:../../net/p5-WebService-MusicBrainz
 DEPENDS+=	mkcue>=2.1:../../misc/mkcue
 
 NO_BUILD=	yes
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 USE_TOOLS+=	bash:run ftp:run gsed:run perl:run
 REPLACE_BASH=	abcde cddb-tool
