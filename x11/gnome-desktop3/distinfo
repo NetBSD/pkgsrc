@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.22 2021/10/26 11:33:49 nia Exp $
+$NetBSD: distinfo,v 1.23 2021/11/11 09:29:59 prlw1 Exp $
 
-BLAKE2s (gnome-desktop-40.4.tar.xz) = f5b3c7f696d2176aeff08fac569b2212df8f333a6856b4dc2169ea5a5ff25c06
-SHA512 (gnome-desktop-40.4.tar.xz) = 4e91438c17faa2d12e7d6a9914fe4308543bbd5f8821e94dee9052f087110e2a3776109c203de6ef7bf66ae1825fc5e890d969ce2ebab2654cc157e9629fe6fc
-Size (gnome-desktop-40.4.tar.xz) = 721840 bytes
+BLAKE2s (gnome-desktop-40.5.tar.xz) = ea2dd669286947385611bb31edf17595c6571f2373dc32b61423b6e612f5c4a3
+SHA512 (gnome-desktop-40.5.tar.xz) = a65bf42be69d04efd80da6a8c8b08c4adc09db1c6627b93d4eecc3396376bc4407bfad914fc131d16d78b3b3263e635c925ed3dcff92af069525f809bea21afc
+Size (gnome-desktop-40.5.tar.xz) = 722316 bytes
 SHA1 (patch-libgnome-desktop_gnome-languages.c) = 88878085009e36be056b90cce43019095e6d9ddf
 SHA1 (patch-libgnome-desktop_gnome-wall-clock.c) = fb8da1dcb408a78cbc427c69d510eaf2ca8a2fe7
 SHA1 (patch-tests_wall-clock.c) = c3f4cd354538ea4f549f87762b333cb00a92d18d

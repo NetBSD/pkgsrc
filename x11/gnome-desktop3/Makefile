@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2021/09/20 18:20:55 cirnatdan Exp $
+# $NetBSD: Makefile,v 1.51 2021/11/11 09:29:59 prlw1 Exp $
 
-DISTNAME=	gnome-desktop-40.4
+DISTNAME=	gnome-desktop-40.5
 PKGNAME=	${DISTNAME:S/desktop/desktop3/}
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-desktop/${PKGVERSION_NOREV:R}/}
@@ -17,7 +17,7 @@ PKGCONFIG_OVERRIDE+=	libgnome-desktop/gnome-desktop-3.0.pc.in
 
 MESON_ARGS+=		-Dsystemd=disabled
 MESON_ARGS+=		-Dudev=disabled
-MESON_ARGS+=		-Ddistributor="The NetBSD Foundation"
+MESON_ARGS+=		-Dgnome_distributor="The NetBSD Foundation"
 MESON_ARGS+=		-Ddate_in_gnome_version=false
 MESON_ARGS+=		-Ddesktop_docs=false
 MESON_ARGS+=		-Dgtk_doc=false
