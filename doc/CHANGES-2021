@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5531 2021/11/10 16:10:10 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5532 2021/11/11 00:49:43 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8346,3 +8346,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/samba4 to 4.13.14 [adam 2021-11-10]
 	Updated net/qbittorrent to 4.3.9 [adam 2021-11-10]
 	Updated devel/py-xdis to 6.0.3 [adam 2021-11-10]
+	Updated sysutils/lsof to 4.91nb5 [gutteridge 2021-11-11]
