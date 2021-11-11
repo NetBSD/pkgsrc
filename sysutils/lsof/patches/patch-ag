@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.10 2020/03/05 20:49:22 tnn Exp $
+$NetBSD: patch-ag,v 1.11 2021/11/11 00:49:34 gutteridge Exp $
 
 --- Configure.orig	2018-02-14 14:18:55.000000000 +0000
 +++ Configure
-@@ -3077,32 +3077,66 @@ return(0); }
+@@ -3077,32 +3077,78 @@ return(0); }
  	echo "!!!WARNING!!!  Unsupported NetBSD version: $LSOF_VSTR"
  	echo "!!!WARNING!!!  Configuring for NetBSD 3.0"
  	;;
@@ -48,16 +48,28 @@ $NetBSD: patch-ag,v 1.10 2020/03/05 20:49:22 tnn Exp $
 +	LSOF_TSTBIGF=" "
 +	LSOF_VERS="7099000"
 +	;;
++      8.[0123]*)
++	LSOF_TSTBIGF=" "
++	LSOF_VERS="8000000"
++	;;
 +      8.99.*)
 +	LSOF_TSTBIGF=" "
 +	LSOF_VERS="8099000"
++	;;
++      9.[0123].*)
++	LSOF_TSTBIGF=" "
++	LSOF_VERS="9000000"
++	;;
++      9.99.*)
++	LSOF_TSTBIGF=" "
++	LSOF_VERS="9099000"
 +	;;
        *)
  	echo "Unknown NetBSD release: $LSOF_VSTR"
 -	echo Assuming NetBSD 1.6
 -	LSOF_VERS="1006000"
-+	echo Assuming NetBSD 7.0
-+	LSOF_VERS="7000000"
++	echo Assuming NetBSD 9.0
++	LSOF_VERS="9000000"
  	;;
        esac	# }
      fi	# }
@@ -87,7 +99,7 @@ $NetBSD: patch-ag,v 1.10 2020/03/05 20:49:22 tnn Exp $
      then
        grep -q getbootfile ${LSOF_INCLUDE}/util.h
        if test $? -eq 0	# {
-@@ -3501,6 +3535,7 @@ return(0); }
+@@ -3501,6 +3547,7 @@ return(0); }
      fi	# }
      LSOF_TMP2="sys/vnode.h"
      LSOF_NBSD_PTYFS=0
@@ -95,7 +107,7 @@ $NetBSD: patch-ag,v 1.10 2020/03/05 20:49:22 tnn Exp $
      if test -r ${LSOF_INCLUDE}/$LSOF_TMP2	# {
      then
        LSOF_TMP3="${LSOF_INCLUDE}/$LSOF_TMP2"
-@@ -3578,16 +3613,29 @@ return(0); }
+@@ -3578,16 +3625,29 @@ return(0); }
  	  fi	# }
  	fi	# }
        fi	# }
@@ -132,7 +144,7 @@ $NetBSD: patch-ag,v 1.10 2020/03/05 20:49:22 tnn Exp $
  	fi	# }
        fi	# }
      fi	# }
-@@ -3863,6 +3911,28 @@ return(0); }
+@@ -3863,6 +3923,28 @@ return(0); }
  	LSOF_CFGF="$LSOF_CFGF -I`pwd`/dialects/n+obsd/include"
        fi	# }
      fi	# }
@@ -161,7 +173,7 @@ $NetBSD: patch-ag,v 1.10 2020/03/05 20:49:22 tnn Exp $
      LSOF_CFGL="$LSOF_CFGL -lkvm"
      LSOF_DIALECT_DIR=n+obsd
      ;;
-@@ -5607,7 +5677,7 @@ fi	# }
+@@ -5607,7 +5689,7 @@ fi	# }
  echo "" >> $LSOF_MKFC
  if test "X$LSOF_DEBUG" = "X"	# {
  then
