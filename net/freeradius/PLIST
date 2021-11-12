@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2021/06/25 11:42:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2021/11/12 12:27:38 adam Exp $
 bin/dhcpclient
 bin/map_unit
 bin/rad_counter
@@ -210,6 +210,12 @@ share/doc/freeradius/antora/modules/howto/pages/protocols/dhcp/policy_network_op
 share/doc/freeradius/antora/modules/howto/pages/protocols/dhcp/policy_subnet_options.adoc
 share/doc/freeradius/antora/modules/howto/pages/protocols/dhcp/prepare.adoc
 share/doc/freeradius/antora/modules/howto/pages/protocols/dhcp/test.adoc
+share/doc/freeradius/antora/modules/howto/pages/protocols/proxy/enable_proxy_protocol.adoc
+share/doc/freeradius/antora/modules/howto/pages/protocols/proxy/enable_radsec.adoc
+share/doc/freeradius/antora/modules/howto/pages/protocols/proxy/index.adoc
+share/doc/freeradius/antora/modules/howto/pages/protocols/proxy/radsec_client.adoc
+share/doc/freeradius/antora/modules/howto/pages/protocols/proxy/radsec_with_haproxy.adoc
+share/doc/freeradius/antora/modules/howto/pages/protocols/proxy/radsec_with_traefik.adoc
 share/doc/freeradius/antora/modules/installation/nav.adoc
 share/doc/freeradius/antora/modules/installation/pages/dependencies.adoc
 share/doc/freeradius/antora/modules/installation/pages/index.adoc
@@ -508,14 +514,17 @@ share/examples/freeradius/mods-config/sql/counter/mysql/dailycounter.conf
 share/examples/freeradius/mods-config/sql/counter/mysql/expire_on_login.conf
 share/examples/freeradius/mods-config/sql/counter/mysql/monthlycounter.conf
 share/examples/freeradius/mods-config/sql/counter/mysql/noresetcounter.conf
+share/examples/freeradius/mods-config/sql/counter/mysql/weeklycounter.conf
 share/examples/freeradius/mods-config/sql/counter/postgresql/dailycounter.conf
 share/examples/freeradius/mods-config/sql/counter/postgresql/expire_on_login.conf
 share/examples/freeradius/mods-config/sql/counter/postgresql/monthlycounter.conf
 share/examples/freeradius/mods-config/sql/counter/postgresql/noresetcounter.conf
+share/examples/freeradius/mods-config/sql/counter/postgresql/weeklycounter.conf
 share/examples/freeradius/mods-config/sql/counter/sqlite/dailycounter.conf
 share/examples/freeradius/mods-config/sql/counter/sqlite/expire_on_login.conf
 share/examples/freeradius/mods-config/sql/counter/sqlite/monthlycounter.conf
 share/examples/freeradius/mods-config/sql/counter/sqlite/noresetcounter.conf
+share/examples/freeradius/mods-config/sql/counter/sqlite/weeklycounter.conf
 share/examples/freeradius/mods-config/sql/cui/mysql/queries.conf
 share/examples/freeradius/mods-config/sql/cui/mysql/schema.sql
 share/examples/freeradius/mods-config/sql/cui/postgresql/queries.conf
@@ -719,6 +728,7 @@ share/freeradius/dictionary.bskyb
 share/freeradius/dictionary.bt
 share/freeradius/dictionary.cablelabs
 share/freeradius/dictionary.cabletron
+share/freeradius/dictionary.cambium
 share/freeradius/dictionary.camiant
 share/freeradius/dictionary.centec
 share/freeradius/dictionary.checkpoint
