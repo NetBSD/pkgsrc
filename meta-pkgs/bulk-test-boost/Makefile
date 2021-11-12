@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2021/11/12 15:52:02 nia Exp $
+# $NetBSD: Makefile,v 1.9 2021/11/12 16:18:46 nia Exp $
 
 DISTNAME=	bulk-test-boost-20211112
 CATEGORIES=	meta-pkgs
@@ -28,6 +28,7 @@ BUILD_DEPENDS+=		emulationstation-[0-9]*:../../emulators/emulationstation
 BUILD_DEPENDS+=		gnucash-[0-9]*:../../finance/gnucash
 BUILD_DEPENDS+=		gnuradio-core-[0-9]*:../../ham/gnuradio-core
 BUILD_DEPENDS+=		gource-[0-9]*:../../graphics/gource
+BUILD_DEPENDS+=		gpick-[0-9]*:../../graphics/gpick
 BUILD_DEPENDS+=		inkscape-[0-9]*:../../graphics/inkscape
 BUILD_DEPENDS+=		innoextract-[0-9]*:../../archivers/innoextract
 BUILD_DEPENDS+=		kicad-[0-9]*:../../cad/kicad
