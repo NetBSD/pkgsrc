@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:55:52 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/11/12 02:29:53 wen Exp $
 
-BLAKE2s (Math-Base85-0.4.tar.gz) = cb29dd20e7f0d515f24779b88f8eab09a078392829913cf68d489ab7eab1e389
-SHA512 (Math-Base85-0.4.tar.gz) = 3e53d520e8f0f01193fff03486c301920bb212cb3aeba0cf45ed0a9552a9d22661ccd6364062fb0e7755096dcf14af57209b5d0aa2bfcd7ff3af1d0ca1d5278a
-Size (Math-Base85-0.4.tar.gz) = 10567 bytes
+BLAKE2s (Math-Base85-0.5.tar.gz) = 29031619133a0ae2ae8975780cd6c9b63b7561d59600d9e49478a670bb4f87fc
+SHA512 (Math-Base85-0.5.tar.gz) = fc1d5b36e65fc3c87e2a29a0e152bbad1b8878561cc62dc702d1f0591991097926f2dffa00d637c2d189aa707ebcea2ac66e01cc0b45d5daf2df5da51e46f896
+Size (Math-Base85-0.5.tar.gz) = 10316 bytes
