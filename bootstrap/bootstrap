@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.302 2021/07/13 12:43:58 schmonz Exp $
+# $NetBSD: bootstrap,v 1.303 2021/11/12 20:29:05 nia Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -835,6 +835,7 @@ UnixWare)
 	need_awk=yes
 	need_sed=yes
 	whoamiprog=/usr/ucb/whoami
+	machine_arch=`uname -m`
 	CC="gcc -DUNIXWARE"; export CC
 	;;
 *)

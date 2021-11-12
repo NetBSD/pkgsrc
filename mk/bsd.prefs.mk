@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.410 2021/11/02 08:14:58 nia Exp $
+# $NetBSD: bsd.prefs.mk,v 1.411 2021/11/12 20:29:05 nia Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -285,6 +285,12 @@ OS_VARIANT=		SCOOSR5
 OS_VARIANT=		SCOOSR6
 .  endif
 
+.elif ${OPSYS} == "UnixWare"
+SCO_RELEASE?=		sysv5${OPSYS}
+SCO_VERSION!=		${UNAME} -v
+LOWER_VENDOR?=		unknown
+LOWER_OPSYS_VERSUFFIX=	${SCO_RELEASE}${SCO_VERSION}
+
 .elif ${OPSYS} == "Minix"
 LOWER_VENDOR?=		unknown
 LOWER_OPSYS:=		${OPSYS:tl}
@@ -361,6 +367,8 @@ OBJECT_FMT=	SOM
 .elif ${OPSYS} == "Cygwin"
 OBJECT_FMT=	PE
 .elif ${OPSYS} == "SCO_SV"
+OBJECT_FMT=	ELF
+.elif ${OPSYS} == "UnixWare"
 OBJECT_FMT=	ELF
 .endif
 
