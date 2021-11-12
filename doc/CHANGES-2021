@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5541 2021/11/12 02:09:18 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5542 2021/11/12 02:18:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8357,3 +8357,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added databases/p5-DBD-MariaDB version 1.21 [abs 2021-11-11]
 	Updated net/remmina to 1.4.21 [ryoon 2021-11-11]
 	Updated mail/p5-Mail-AuthenticationResults to 2.20210915 [wen 2021-11-12]
+	Updated mail/p5-Mail-Message to 3.011 [wen 2021-11-12]
