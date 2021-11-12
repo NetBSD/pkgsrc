@@ -1,0 +1,19 @@
+$NetBSD: patch-lib_Makefile.in,v 1.1 2021/11/12 12:40:17 nia Exp $
+
+Test for c99 default before using stdbool instead of testing for GCC 2.95.
+PR pkg/56488: Solaris 10 compile issues, stdbool.h requires c99
+
+--- lib/Makefile.in.orig	2018-05-25 16:03:27.000000000 +0000
++++ lib/Makefile.in
+@@ -5804,9 +5804,9 @@ unistring/stdbool.h : $(STDBOOL_H) stdbo
+ 	{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+ 	  echo '#if !defined _GL_STDBOOL_H'; \
+ 	  if test -f /usr/include/stdbool.h; then \
+-	    echo '#if (__GNUC__ > 2 || (__GNUC__ == 2 && __GNUC_MINOR__ >= 95)) || defined _AIX'; \
++	    echo '#if (__STDC_VERSION__ >= 199901L) || defined _AIX'; \
+ 	  else \
+-	    echo '#if (__GNUC__ > 2 || (__GNUC__ == 2 && __GNUC_MINOR__ >= 95))'; \
++	    echo '#if (__STDC_VERSION__ >= 199901L)'; \
+ 	  fi; \
+ 	  echo '#include <stdbool.h>'; \
+ 	  echo '#else'; \
