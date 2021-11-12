@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2021/04/21 11:41:36 adam Exp $
+# $NetBSD: Makefile,v 1.14 2021/11/12 15:44:14 nia Exp $
 #
 
-DISTNAME=	fuse-darling-dmg-20160310
-PKGREVISION=	12
+DISTNAME=	fuse-darling-dmg-1.0.4.20210411
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_GITHUB:=darlinghq/}
 GITHUB_PROJECT=	darling-dmg
-GITHUB_TAG=	b7ce87bfe59c2ed758165c8650402f6d4c84d184
+GITHUB_TAG=	34d3a346039f25a407c64aca1c7ecbdd9af85933
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/darlinghq/darling-dmg
