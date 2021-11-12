@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5545 2021/11/12 02:48:37 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5546 2021/11/12 04:28:01 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8361,3 +8361,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/p5-MIME-Types to 2.22 [wen 2021-11-12]
 	Updated math/p5-Math-Base85 to 0.5 [wen 2021-11-12]
 	Updated math/p5-Math-BigInt-Pari to 1.3008 [wen 2021-11-12]
+	Updated math/p5-Math-BigInt to 1.999827 [wen 2021-11-12]
