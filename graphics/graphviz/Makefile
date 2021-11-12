@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.238 2021/10/21 19:44:30 schmonz Exp $
+# $NetBSD: Makefile,v 1.239 2021/11/12 14:14:14 nia Exp $
 
 DISTNAME=	graphviz-2.49.2
 CATEGORIES=	graphics
@@ -65,6 +65,8 @@ CONFIGURE_ARGS+=	--with-webp
 CONFIGURE_ENV+=		ac_cv_prog_PHP=
 CONFIGURE_ENV+=		ac_cv_prog_RUBY=
 CPPFLAGS+=		-DNO_POSTSCRIPT_ALIAS=1
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 PKGCONFIG_OVERRIDE+=	lib/cdt/libcdt.pc.in
 PKGCONFIG_OVERRIDE+=	lib/cgraph/libcgraph.pc.in
