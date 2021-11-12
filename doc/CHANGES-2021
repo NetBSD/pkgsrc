@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5548 2021/11/12 10:23:14 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5549 2021/11/12 12:31:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8365,3 +8365,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/mob to 2.1.0 [schmonz 2021-11-12]
 	Updated devel/py-rope to 0.21.1 [adam 2021-11-12]
 	Updated finance/py-stripe to 2.62.0 [adam 2021-11-12]
+	Updated net/freeradius to 3.0.25 [adam 2021-11-12]
+	Updated textproc/py-xmlschema to 1.8.2 [adam 2021-11-12]
