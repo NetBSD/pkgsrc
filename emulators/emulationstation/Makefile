@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2021/09/29 19:00:35 adam Exp $
+# $NetBSD: Makefile,v 1.33 2021/11/12 15:38:16 nia Exp $
 
-DISTNAME=	emulationstation-2.9.0
-PKGREVISION=	7
+DISTNAME=	emulationstation-2.9.4
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=RetroPie/}
 GITHUB_PROJECT=	EmulationStation
@@ -14,7 +13,7 @@ LICENSE=	mit
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES+=	c c++11
+USE_LANGUAGES+=	c c++
 GCC_REQD+=	4.7 # C++11
 
 WRKSRC=		${WRKDIR}/EmulationStation-${PKGVERSION_NOREV}
