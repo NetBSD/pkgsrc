@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21243 2021/11/12 15:38:28 nia Exp $
+$NetBSD: TODO,v 1.21244 2021/11/12 19:39:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1626,7 +1626,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-astroquery-0.4
 	o py-cares-3.1.1
 	o py-cassa-1.11.0
-	o py-configparser-5.0.0 [drops python-2.x support]
+	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-django-debug-toolbar-3.2.1
 	o py-django-tagging-0.5.0
 	o py-ephem3-3.7.6.0
@@ -1635,7 +1635,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-gammu-3.1
 	o py-gcovr-4.2
 	o py-goocalendar-0.7.2
-	o py-gstreamer1-1.18.5
+	o py-gstreamer1-1.18.5 [wip]
 	o py-hgview-1.9.0
 	o py-hyperscan-0.2.0
 	o py-input-pad-1.4.2
