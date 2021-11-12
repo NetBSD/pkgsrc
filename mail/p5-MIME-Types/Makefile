@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2021/07/07 08:16:00 wen Exp $
+# $NetBSD: Makefile,v 1.42 2021/11/12 02:21:01 wen Exp $
 
-DISTNAME=	MIME-Types-2.21
+DISTNAME=	MIME-Types-2.22
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MIME/}
