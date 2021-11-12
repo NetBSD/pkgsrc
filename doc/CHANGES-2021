@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5549 2021/11/12 12:31:04 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5550 2021/11/12 15:38:28 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8367,3 +8367,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated finance/py-stripe to 2.62.0 [adam 2021-11-12]
 	Updated net/freeradius to 3.0.25 [adam 2021-11-12]
 	Updated textproc/py-xmlschema to 1.8.2 [adam 2021-11-12]
+	Updated emulators/emulationstation to 2.9.4 [nia 2021-11-12]
