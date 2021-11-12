@@ -1,23 +1,30 @@
-# $NetBSD: Makefile,v 1.31 2021/09/29 19:00:45 adam Exp $
+# $NetBSD: Makefile,v 1.32 2021/11/12 16:17:20 nia Exp $
 
-DISTNAME=	gpick-gpick-0.2.5
-PKGNAME=	${DISTNAME:S/gpick-//}
-PKGREVISION=	24
+DISTNAME=	gpick-0.2.6
 CATEGORIES=	graphics
-MASTER_SITES=	-http://github.com/thezbyg/gpick/archive/gpick-0.2.5.tar.gz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=thezbyg/}
+GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/thezbyg/gpick/
 COMMENT=	Advanced color picker
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	c c++03
-USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config msgfmt msgmerge xgettext
+
+GCC_REQD+=	5 # C++14
+
+TOOL_DEPENDS+=	ragel-[0-9]*:../../devel/ragel
 
 PYTHON_VERSIONS_ACCEPTED=	27	# as of 0.2.5
 
 SCONS_ARGS+=	DESTDIR=${DESTDIR}${PREFIX}
-SCONS_ARGS+=	PKGMANDIR=${PKGMANDIR}
+
+SUBST_CLASSES+=		man
+SUBST_STAGE.man=	pre-configure
+SUBST_FILES.man+=	SConscript
+SUBST_SED.man+=		-e "s,/share/man/man1,/${PKGMANDIR}/man1,g"
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONSBIN} ${SCONS_ARGS}
