@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5543 2021/11/12 02:21:45 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5544 2021/11/12 02:30:45 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8359,3 +8359,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/p5-Mail-AuthenticationResults to 2.20210915 [wen 2021-11-12]
 	Updated mail/p5-Mail-Message to 3.011 [wen 2021-11-12]
 	Updated mail/p5-MIME-Types to 2.22 [wen 2021-11-12]
+	Updated math/p5-Math-Base85 to 0.5 [wen 2021-11-12]
