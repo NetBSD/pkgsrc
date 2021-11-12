@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:22:17 nia Exp $
+$NetBSD: distinfo,v 1.12 2021/11/12 12:40:17 nia Exp $
 
 BLAKE2s (libunistring-0.9.10.tar.gz) = 6af4f8f362e74baf433757d540c157b1fead6e087f65969be54d0716bde97037
 SHA512 (libunistring-0.9.10.tar.gz) = 690082732fbbd47ab4ffbd6f21d85afece0f8e2ded24982f949f4ae52bf0a981b75ea9bc14ab289e0954cde07f31a7a4c2bb65615a8eb5b2bfa65720310b6fc9
 Size (libunistring-0.9.10.tar.gz) = 3744814 bytes
+SHA1 (patch-lib_Makefile.in) = f2335fa6a8b088e701a4d8bd433b45359be5c243
+SHA1 (patch-lib_stdbool.mini.h) = 0b4a3b3e461b517f28e9a58da0f50045467d2d2a
