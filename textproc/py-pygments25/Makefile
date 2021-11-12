@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/11/10 14:18:33 hauke Exp $
+# $NetBSD: Makefile,v 1.3 2021/11/12 22:25:13 adam Exp $
 
 DISTNAME=	Pygments-2.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -12,8 +12,7 @@ LICENSE=	2-clause-bsd
 
 # circular dependency
 #TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test4
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
@@ -27,5 +26,4 @@ do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
