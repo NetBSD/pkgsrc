@@ -1,4 +1,4 @@
-# $NetBSD: config.mk,v 1.1 2021/06/25 20:46:23 adam Exp $
+# $NetBSD: config.mk,v 1.2 2021/11/12 12:27:38 adam Exp $
 
 # cd ${WRKSRC}/raddb; find . -type f | sort | sed 's,^./,EGFILES+=\t,'
 EGFILES+=	certs/Makefile
@@ -101,14 +101,17 @@ EGFILES+=	mods-config/sql/counter/mysql/dailycounter.conf
 EGFILES+=	mods-config/sql/counter/mysql/expire_on_login.conf
 EGFILES+=	mods-config/sql/counter/mysql/monthlycounter.conf
 EGFILES+=	mods-config/sql/counter/mysql/noresetcounter.conf
+EGFILES+=	mods-config/sql/counter/mysql/weeklycounter.conf
 EGFILES+=	mods-config/sql/counter/postgresql/dailycounter.conf
 EGFILES+=	mods-config/sql/counter/postgresql/expire_on_login.conf
 EGFILES+=	mods-config/sql/counter/postgresql/monthlycounter.conf
 EGFILES+=	mods-config/sql/counter/postgresql/noresetcounter.conf
+EGFILES+=	mods-config/sql/counter/postgresql/weeklycounter.conf
 EGFILES+=	mods-config/sql/counter/sqlite/dailycounter.conf
 EGFILES+=	mods-config/sql/counter/sqlite/expire_on_login.conf
 EGFILES+=	mods-config/sql/counter/sqlite/monthlycounter.conf
 EGFILES+=	mods-config/sql/counter/sqlite/noresetcounter.conf
+EGFILES+=	mods-config/sql/counter/sqlite/weeklycounter.conf
 EGFILES+=	mods-config/sql/cui/mysql/queries.conf
 EGFILES+=	mods-config/sql/cui/mysql/schema.sql
 EGFILES+=	mods-config/sql/cui/postgresql/queries.conf
