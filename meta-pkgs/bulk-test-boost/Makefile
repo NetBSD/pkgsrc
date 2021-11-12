@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2021/10/01 11:27:39 adam Exp $
+# $NetBSD: Makefile,v 1.8 2021/11/12 15:52:02 nia Exp $
 
-DISTNAME=	bulk-test-boost-20210529
+DISTNAME=	bulk-test-boost-20211112
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -24,6 +24,7 @@ BUILD_DEPENDS+=		bitcoin-[0-9]*:../../finance/bitcoin
 BUILD_DEPENDS+=		blender-[0-9]*:../../graphics/blender
 BUILD_DEPENDS+=		botan>=2.11:../../security/botan-devel
 BUILD_DEPENDS+=		dnsdist-[0-9]*:../../net/dnsdist
+BUILD_DEPENDS+=		emulationstation-[0-9]*:../../emulators/emulationstation
 BUILD_DEPENDS+=		gnucash-[0-9]*:../../finance/gnucash
 BUILD_DEPENDS+=		gnuradio-core-[0-9]*:../../ham/gnuradio-core
 BUILD_DEPENDS+=		gource-[0-9]*:../../graphics/gource
