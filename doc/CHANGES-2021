@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5551 2021/11/12 15:44:25 nia Exp $
+$NetBSD: CHANGES-2021,v 1.5552 2021/11/12 16:17:30 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8369,3 +8369,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-xmlschema to 1.8.2 [adam 2021-11-12]
 	Updated emulators/emulationstation to 2.9.4 [nia 2021-11-12]
 	Updated filesystems/fuse-darling-dmg to 1.0.4.20210411 [nia 2021-11-12]
+	Updated graphics/gpick to 0.2.6 [nia 2021-11-12]
