@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/01/26 05:26:12 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2021/11/13 10:49:00 nia Exp $
 
-DISTNAME=	libxspf-1.2.0
+DISTNAME=	libxspf-1.2.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libspiff/}
 EXTRACT_SUFX=	.tar.bz2

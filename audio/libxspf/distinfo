@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 09:59:11 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/11/13 10:49:00 nia Exp $
 
-BLAKE2s (libxspf-1.2.0.tar.bz2) = ab2653f6d02d95c550b324a126a94db03966a5503ee35b89d2c68e446379ac18
-SHA512 (libxspf-1.2.0.tar.bz2) = 56667b6df89e30517e2e388e2e3b1c083b19d98d69b4ee328d2784bba57a8d50c6b6ae1876cf17e6f9eb1ff872680c8f33b84b826d1290b890ac173c76bea491
-Size (libxspf-1.2.0.tar.bz2) = 372483 bytes
+BLAKE2s (libxspf-1.2.1.tar.bz2) = 4d260cfe05dc693d0eb58f9ed7b8e7081072d1780f4aa81b005ef28eb5a475df
+SHA512 (libxspf-1.2.1.tar.bz2) = e2ac7c56fe71536c198caffac654056c48c619ca0b8bd97905d564ec7aebb60e74b3cdc94b3a2ae3ca6f195fd56034e0483503dc091f1f4d5808d72d086d2613
+Size (libxspf-1.2.1.tar.bz2) = 479581 bytes
 SHA1 (patch-aa) = 16f441fd7662395244feae0bebf03497c1bba0ed

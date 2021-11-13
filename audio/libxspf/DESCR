@@ -1,7 +1,8 @@
-LibSpiff brings XSPF playlist reading and writing support to your
-C++ application. Both version 0 and 1 are supported. libSpiff is
-the official reference implementation for XSPF of the Xiph.Org
-Foundation.
+libxspf (formerly called libSpiff) brings XSPF playlist reading and writing
+support to your C++ application. Both version 0 and 1 are supported. libxspf
+uses Expat for XML parsing, CppTest for unit testing and uriparser for
+handling URIs. libxspf is the official reference implementation for XSPF of
+the Xiph.Org Foundation.
 
 Features
 
@@ -12,6 +13,6 @@ Features
  * Unicode support
  * Full support for XSPF extensions
  * Full support for XML namespaces
- * Fast (XML parsing is done by Expat)
- * Uses unit testing
- * Liberal license: New BSD license
+ * Fast (as XML parsing is done by Expat)
+ * Extensive unit testing using CppTest
+ * Liberal license (New BSD license)
