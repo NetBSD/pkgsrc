@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5556 2021/11/13 10:20:24 nia Exp $
+$NetBSD: CHANGES-2021,v 1.5557 2021/11/13 10:28:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8376,3 +8376,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed www/firefox78 successor www/firefox91 [nia 2021-11-13]
 	Removed www/firefox78-l10n successor www/firefox91-l10n [nia 2021-11-13]
 	Updated devel/libmtp to 1.1.19 [nia 2021-11-13]
+	Updated audio/libxmp to 4.5.0 [nia 2021-11-13]
