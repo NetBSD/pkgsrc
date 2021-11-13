@@ -1,4 +1,4 @@
-# $NetBSD: fonts.mk,v 1.17 2020/11/06 18:04:27 maya Exp $
+# $NetBSD: fonts.mk,v 1.18 2021/11/13 22:21:20 nia Exp $
 #
 # Install .otf and .ttf font files.
 #
@@ -19,8 +19,8 @@ do-install: install-fonts
 
 install-fonts:
 	@${STEP_MSG} "Installing all .otf and .ttf files from ${WRKSRC}"
-	${FIND} ${WRKSRC} -name ${DESTDIR:T} -prune -o -iname '*.ttf' -exec \
+	${FIND} ${WRKSRC} -name ${DESTDIR:T} -prune -o -name '*.[tT][tT][fF]' -exec \
 		${INSTALL_DATA} "{}" ${DESTDIR}${TTF_FONTS_DIR} ";"
-	${FIND} ${WRKSRC} -name ${DESTDIR:T} -prune -o -iname '*.otf' -exec \
+	${FIND} ${WRKSRC} -name ${DESTDIR:T} -prune -o -name '*.[oO][tT][fF]' -exec \
 		${INSTALL_DATA} "{}" ${DESTDIR}${OTF_FONTS_DIR} ";"
 
