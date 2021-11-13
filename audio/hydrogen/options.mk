@@ -1,10 +1,16 @@
-# $NetBSD: options.mk,v 1.2 2020/06/18 12:57:48 nia Exp $
+# $NetBSD: options.mk,v 1.3 2021/11/13 10:48:03 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.hydrogen
 
 PKG_SUPPORTED_OPTIONS+=		alsa jack portaudio pulseaudio
 PKG_SUGGESTED_OPTIONS.Linux=	alsa
 PKG_SUGGESTED_OPTIONS.*=	portaudio
+
+.include "../../audio/jack/platform.mk"
+.if ${PLATFORM_SUPPORTS_JACK:tl} == "yes"
+PKG_SUPPORTED_OPTIONS+=		jack
+PKG_SUGGESTED_OPTIONS+=		jack
+.endif
 
 .include "../../mk/bsd.options.mk"
 
