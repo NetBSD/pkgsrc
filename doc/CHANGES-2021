@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5553 2021/11/13 09:19:00 cirnatdan Exp $
+$NetBSD: CHANGES-2021,v 1.5554 2021/11/13 09:52:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8371,3 +8371,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated filesystems/fuse-darling-dmg to 1.0.4.20210411 [nia 2021-11-12]
 	Updated graphics/gpick to 0.2.6 [nia 2021-11-12]
 	Updated archivers/gnome-autoar to 0.4.1 [dan 2021-11-13]
+	Updated net/py-lexicon to 3.8.3 [adam 2021-11-13]
+	Updated devel/py-pyparsing to 3.0.6 [adam 2021-11-13]
