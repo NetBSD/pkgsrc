@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5558 2021/11/13 10:49:15 nia Exp $
+$NetBSD: CHANGES-2021,v 1.5559 2021/11/13 10:56:33 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8378,3 +8378,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/libmtp to 1.1.19 [nia 2021-11-13]
 	Updated audio/libxmp to 4.5.0 [nia 2021-11-13]
 	Updated audio/libxspf to 1.2.1 [nia 2021-11-13]
+	Updated audio/soundtouch to 2.3.1 [nia 2021-11-13]
