@@ -1,13 +1,15 @@
-$NetBSD: patch-src_common.h,v 1.3 2019/11/21 23:48:27 nia Exp $
+$NetBSD: patch-src_common.h,v 1.4 2021/11/13 10:28:27 nia Exp $
 
---- src/common.h.orig	2016-10-12 10:30:03.000000000 +0000
+Avoid versioned symbols on SunOS to fix dependencies.
+
+--- src/common.h.orig	2021-06-10 00:24:24.000000000 +0000
 +++ src/common.h
-@@ -10,7 +10,7 @@
- #include "xmp.h"
+@@ -22,7 +22,7 @@
+ #endif
  
- #if defined(__GNUC__) || defined(__clang__)
--#if !defined(WIN32) && !defined(__ANDROID__) && !defined(__APPLE__) && !defined(__AMIGA__) && !defined(B_BEOS_VERSION) && !defined(__ATHEOS__) && !defined(EMSCRIPTEN) && !defined(__MINT__) 
-+#if !defined(WIN32) && !defined(__ANDROID__) && !defined(__APPLE__) && !defined(__AMIGA__) && !defined(B_BEOS_VERSION) && !defined(__ATHEOS__) && !defined(EMSCRIPTEN) && !defined(__MINT__) && !defined(__sun)
+ #if (defined(__GNUC__) || defined(__clang__)) && defined(XMP_SYM_VISIBILITY)
+-#if !defined(_WIN32) && !defined(__ANDROID__) && !defined(__APPLE__) && !defined(LIBXMP_AMIGA) && !defined(__MSDOS__) && !defined(B_BEOS_VERSION) && !defined(__ATHEOS__) && !defined(EMSCRIPTEN) && !defined(__MINT__)
++#if !defined(_WIN32) && !defined(__ANDROID__) && !defined(__APPLE__) && !defined(LIBXMP_AMIGA) && !defined(__MSDOS__) && !defined(B_BEOS_VERSION) && !defined(__ATHEOS__) && !defined(EMSCRIPTEN) && !defined(__MINT__) && !defined(__sun)
  #define USE_VERSIONED_SYMBOLS
  #endif
  #endif
