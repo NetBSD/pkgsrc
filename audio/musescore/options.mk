@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2019/10/20 11:10:47 nia Exp $
+# $NetBSD: options.mk,v 1.3 2021/11/13 10:48:03 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.musescore
 PKG_SUPPORTED_OPTIONS=		alsa jack portaudio pulseaudio
@@ -9,6 +9,12 @@ PKG_SUPPORTED_OPTIONS=		alsa jack portaudio pulseaudio
 PKG_SUGGESTED_OPTIONS=		alsa
 .else
 PKG_SUGGESTED_OPTIONS=		portaudio
+.endif
+
+.include "../../audio/jack/platform.mk"
+.if ${PLATFORM_SUPPORTS_JACK:tl} == "yes"
+PKG_SUPPORTED_OPTIONS+=		jack
+PKG_SUGGESTED_OPTIONS+=		jack
 .endif
 
 .include "../../mk/bsd.options.mk"
