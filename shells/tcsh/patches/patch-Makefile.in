@@ -1,20 +1,32 @@
-$NetBSD: patch-Makefile.in,v 1.1 2021/11/11 13:20:13 kim Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2021/11/13 06:50:03 kim Exp $
 
 - Adjust mandir
-- Use BSD_INSTALL_*
+- Use INSTALL_DATA, INSTALL_PROGRAM, and MKDIR_P
 
---- Makefile.in.orig	2015-08-24 16:09:04.000000000 -0400
-+++ Makefile.in	2016-11-24 10:43:07.000000000 -0500
-@@ -357,7 +357,7 @@
+--- Makefile.in.orig	2021-11-11 09:54:05.000000000 +0000
++++ Makefile.in	2021-11-13 06:25:54.773703072 +0000
+@@ -9,6 +9,10 @@
+ ENVCMD=/usr/bin/env
+ VERSION=@PACKAGE_VERSION@
+ BUILD=tcsh$(EXEEXT)
++INSTALL=@INSTALL@
++INSTALL_DATA=@INSTALL_DATA@
++INSTALL_PROGRAM=@INSTALL_PROGRAM@
++MKDIR_P?=$(INSTALL) -d
+ VPATH=@srcdir@
+ srcdir=@srcdir@
+ 
+@@ -356,7 +360,8 @@
  prefix=@prefix@
  exec_prefix=@exec_prefix@
  bindir=@bindir@
 -mandir=@datarootdir@/man
++datarootdir=@datarootdir@
 +mandir=@mandir@
  MANSECT=1
  DESTBIN=${DESTDIR}${bindir}
  DESTMAN=${DESTDIR}${mandir}/man${MANSECT}
-@@ -597,19 +597,13 @@
+@@ -596,19 +601,15 @@
  	-strip ${DESTBIN}/tcsh$(EXEEXT)
  
  install: tcsh$(EXEEXT) install.catalogs install.man
@@ -22,7 +34,8 @@ $NetBSD: patch-Makefile.in,v 1.1 2021/11/11 13:20:13 kim Exp $
 -	-mv -f ${DESTBIN}/tcsh$(EXEEXT)  ${DESTBIN}/tcsh.old
 -	cp tcsh$(EXEEXT) ${DESTBIN}/tcsh$(EXEEXT)
 -	chmod 755 ${DESTBIN}/tcsh$(EXEEXT)
-+	${BSD_INSTALL_PROGRAM} tcsh${EXEEXT} ${DESTBIN}/tcsh${EXEEXT}
++	$(MKDIR_P) ${DESTBIN}
++	$(INSTALL_PROGRAM) tcsh$(EXEEXT) ${DESTBIN}/tcsh$(EXEEXT)
  
  install.catalogs:
  	@test "x${BUILD_CATALOGS}" = "xyes" && (cd nls; ${MAKE} install DESTDIR=${DESTDIR}) || exit 0
@@ -32,7 +45,8 @@ $NetBSD: patch-Makefile.in,v 1.1 2021/11/11 13:20:13 kim Exp $
 -	-rm -f ${DESTMAN}/tcsh.${MANSECT}
 -	cp $(srcdir)/tcsh.man ${DESTMAN}/tcsh.${MANSECT}
 -	chmod 444 ${DESTMAN}/tcsh.${MANSECT}
-+	${BSD_INSTALL_MAN} tcsh.man ${DESTMAN}/tcsh.${MANSECT}
++	$(MKDIR_P) ${DESTMAN}
++	$(INSTALL_DATA) $(srcdir)/tcsh.man ${DESTMAN}/tcsh.${MANSECT}
  
  # Amiga Unix
  #install.man: tcsh.man
