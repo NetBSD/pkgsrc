@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2021/09/29 09:10:30 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2021/11/13 09:18:47 cirnatdan Exp $
 
-DISTNAME=	gnome-autoar-0.3.2
-PKGREVISION=	1
+DISTNAME=	gnome-autoar-0.4.1
 CATEGORIES=	archivers gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -13,14 +12,13 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config gmake
 USE_LIBTOOL=	yes
-GNU_CONFIGURE=	yes
 
-CONFIGURE_ARGS+=	--disable-schemas-compile
-CONFIGURE_ARGS+=	--enable-introspection
+MESON_ARGS+=	-Dintrospection=enabled
 
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
