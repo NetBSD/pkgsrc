@@ -881,6 +881,7 @@ func (src *Pkgsrc) loadDefaultBuildDefs() {
 		"FETCH_CMD",
 		"FETCH_OUTPUT_ARGS",
 		"FETCH_USING",
+		"MAKE_JOBS",
 		"PKGSRC_RUN_TEST")
 
 	// The following variables are used so often that not every
