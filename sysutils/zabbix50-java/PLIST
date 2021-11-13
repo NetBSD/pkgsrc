@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2020/11/03 23:35:41 otis Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/11/13 20:41:09 otis Exp $
 sbin/zabbix_java/bin/zabbix-java-gateway-${PKGVERSION}.jar
 sbin/zabbix_java/lib/android-json-4.3_r3.1.jar
-sbin/zabbix_java/lib/logback-classic-0.9.27.jar
+sbin/zabbix_java/lib/logback-classic-1.2.3.jar
 sbin/zabbix_java/lib/logback-console.xml
-sbin/zabbix_java/lib/logback-core-0.9.27.jar
+sbin/zabbix_java/lib/logback-core-1.2.3.jar
 sbin/zabbix_java/lib/logback.xml
-sbin/zabbix_java/lib/slf4j-api-1.6.1.jar
+sbin/zabbix_java/lib/slf4j-api-1.7.30.jar
 sbin/zabbix_java/settings.sh
 sbin/zabbix_java/shutdown.sh
 sbin/zabbix_java/startup.sh

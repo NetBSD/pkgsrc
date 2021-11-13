@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:20:29 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/11/13 20:41:10 otis Exp $
 
-BLAKE2s (zabbix-5.0.8.tar.gz) = 9d40094cab0655b2fbf32e48b1735db6afd07c0a9fb396d806e2deabea9f6260
-SHA512 (zabbix-5.0.8.tar.gz) = 19601ace704c8a887ffc9b57da8825d8a28a5d064aac3e59480994bee4156db186d37ecf4bee2208bbafc0cb76c0c7f47de964f99953ce78d0187457255d92e9
-Size (zabbix-5.0.8.tar.gz) = 19474050 bytes
+BLAKE2s (zabbix-5.0.17.tar.gz) = 7b5d674d79c41a0c9d9f6a8431408deaea101c5fe32034c115b3cb0350b9d647
+SHA512 (zabbix-5.0.17.tar.gz) = f7a23b51c3d2fb5f80ec888dc9eaf592dd13de3a61b9d065e6d54e1bb406e18ffef1b8e9d3ef516b2034d94fb7330bd80c2cb7b7d22eed7e57021bc66e1ee159
+Size (zabbix-5.0.17.tar.gz) = 21326776 bytes
 SHA1 (patch-m4_ax__lib__mysql.m4) = 9786c6bff3d22334263921c201bf241a207a46bc
 SHA1 (patch-m4_libssh.m4) = 8b4ac3964caf94bb0e4939d265dcefc08a07a0df
 SHA1 (patch-src_libs_zbxsysinfo_netbsd_net.c) = 468f2112a3d65b0a73f371194ae15ce0df0ad71c
