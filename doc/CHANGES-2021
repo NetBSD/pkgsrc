@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5560 2021/11/13 11:27:47 nia Exp $
+$NetBSD: CHANGES-2021,v 1.5561 2021/11/13 17:06:01 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8380,3 +8380,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/libxspf to 1.2.1 [nia 2021-11-13]
 	Updated audio/soundtouch to 2.3.1 [nia 2021-11-13]
 	Updated multimedia/libaom to 3.2.0 [nia 2021-11-13]
+	Updated sysutils/macchina to 5.0.5 [pin 2021-11-13]
