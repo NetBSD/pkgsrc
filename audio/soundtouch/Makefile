@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/01/26 17:30:45 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2021/11/13 10:56:22 nia Exp $
 
-DISTNAME=	soundtouch-2.1.2
+DISTNAME=	soundtouch-2.3.1
 CATEGORIES=	audio
-MASTER_SITES=	https://gitlab.com/soundtouch/soundtouch/-/archive/${PKGVERSION_NOREV}/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	https://www.surina.net/soundtouch/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.surina.net/soundtouch/

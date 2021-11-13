@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 09:59:29 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/11/13 10:56:22 nia Exp $
 
-BLAKE2s (soundtouch-2.1.2.tar.bz2) = 38b15f715b9ee881a39fc025bd6862d94da8d157c98e348b3f0cbe051ae580c1
-SHA512 (soundtouch-2.1.2.tar.bz2) = d45cb0f94e3df32e9c76722a148f201277b2ddc3e390394c1f4ae1263f13557c6b664e90301b5f62d7561d743ab4903a44a34ab7248880b343d581cebd5f0cd9
-Size (soundtouch-2.1.2.tar.bz2) = 526281 bytes
+BLAKE2s (soundtouch-2.3.1.tar.gz) = fdf40e2cb221dc341d425235f1ef37ea288b56560f5e222cf1209786fa3e5ddd
+SHA512 (soundtouch-2.3.1.tar.gz) = 1eea5c06dc5af633b5c16902c6a951593190daf75bd6aa12e00c745080f9363e9c45ab52ddc434bd905e4195b306cc38c9143e813430c15c19a275ae1a82df24
+Size (soundtouch-2.3.1.tar.gz) = 524664 bytes
