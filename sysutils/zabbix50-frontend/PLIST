@@ -1,5 +1,4 @@
-
-@comment $NetBSD: PLIST,v 1.2 2021/01/30 17:24:02 otis Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/11/13 20:41:09 otis Exp $
 share/examples/${PKGBASE}/httpd-zabbix.conf
 share/examples/${PKGBASE}/php-fpm-zabbix.conf
 share/zabbix/actionconf.php
@@ -35,6 +34,8 @@ share/zabbix/app/controllers/CControllerFavouriteCreate.php
 share/zabbix/app/controllers/CControllerFavouriteDelete.php
 share/zabbix/app/controllers/CControllerGuiEdit.php
 share/zabbix/app/controllers/CControllerGuiUpdate.php
+share/zabbix/app/controllers/CControllerHintboxActionlist.php
+share/zabbix/app/controllers/CControllerHintboxEventlist.php
 share/zabbix/app/controllers/CControllerHost.php
 share/zabbix/app/controllers/CControllerHostMacrosList.php
 share/zabbix/app/controllers/CControllerHostView.php
@@ -234,6 +235,8 @@ share/zabbix/app/views/administration.valuemap.list.php
 share/zabbix/app/views/administration.workingtime.edit.php
 share/zabbix/app/views/dashboard.properties.edit.php
 share/zabbix/app/views/dashboard.sharing.edit.php
+share/zabbix/app/views/hintbox.actionlist.php
+share/zabbix/app/views/hintbox.eventlist.php
 share/zabbix/app/views/hostmacros.list.php
 share/zabbix/app/views/js/administration.authentication.edit.js.php
 share/zabbix/app/views/js/administration.autoreg.edit.js.php
@@ -504,6 +507,7 @@ share/zabbix/include/classes/helpers/CArrayHelper.php
 share/zabbix/include/classes/helpers/CBrandHelper.php
 share/zabbix/include/classes/helpers/CConditionHelper.php
 share/zabbix/include/classes/helpers/CElasticsearchHelper.php
+share/zabbix/include/classes/helpers/CHintBoxHelper.php
 share/zabbix/include/classes/helpers/CHtml.php
 share/zabbix/include/classes/helpers/CMapHelper.php
 share/zabbix/include/classes/helpers/CMathHelper.php
