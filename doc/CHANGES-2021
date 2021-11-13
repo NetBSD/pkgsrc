@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5567 2021/11/13 20:43:33 otis Exp $
+$NetBSD: CHANGES-2021,v 1.5568 2021/11/13 20:43:51 otis Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8402,3 +8402,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/zabbix50-agent to 5.0.17 [root 2021-11-13]
 	Updated sysutils/zabbix50-frontend to 5.0.17 [root 2021-11-13]
 	Updated sysutils/zabbix50-java to 5.0.17 [root 2021-11-13]
+	Updated sysutils/zabbix50-proxy to 5.0.17 [root 2021-11-13]
