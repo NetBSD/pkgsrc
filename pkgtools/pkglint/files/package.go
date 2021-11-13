@@ -1494,7 +1494,11 @@ func (pkg *Package) checkDirent(dirent CurrPath, mode os.FileMode) {
 		}
 
 	case mode&os.ModeSymlink != 0:
-		NewLineWhole(dirent).Warnf("Invalid symlink name.")
+		line := NewLineWhole(dirent)
+		line.Warnf("Invalid symlink name.")
+		line.Explain(
+			"The only symlinks that pkglint ever expects are those to",
+			"WRKDIR, which are usually named 'work' or 'work.*'.")
 
 	default:
 		NewLineWhole(dirent).Errorf("Only files and directories are allowed in pkgsrc.")
