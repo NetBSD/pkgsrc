@@ -1,4 +1,6 @@
-$NetBSD: patch-include_xmp.h,v 1.1 2014/02/27 09:29:10 rxg Exp $
+$NetBSD: patch-include_xmp.h,v 1.2 2021/11/13 10:28:27 nia Exp $
+
+Up max sampling rate to 192 kHz.
 
 --- include/xmp.h.orig	2014-02-22 22:13:36.000000000 +0000
 +++ include/xmp.h
