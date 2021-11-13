@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2021/11/11 22:47:55 kim Exp $
+# $NetBSD: Makefile,v 1.31 2021/11/13 06:53:10 kim Exp $
 #
 
 .include "../../shells/tcsh/Makefile.common"
@@ -23,6 +23,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-* OpenBSD-*-* SunOS-*-*
 NOT_FOR_PLATFORM+=	SunOS-*-*
 .endif
 
+INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	usr/share/man/man1
 
 COMMENT:=		Standalone version of the Extended C-shell
