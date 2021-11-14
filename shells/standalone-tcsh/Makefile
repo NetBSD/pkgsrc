@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2021/11/14 22:15:13 kim Exp $
+# $NetBSD: Makefile,v 1.34 2021/11/14 22:36:12 kim Exp $
 #
 
 # FIXME: This is because of PREFIX=/ below.
@@ -6,7 +6,7 @@ CHECK_FILES_SUPPORTED=	no
 NOT_FOR_UNPRIVILEGED=	yes
 
 PKGNAME=		standalone-${DISTNAME}
-PKGREVISION=		1	# ALWAYS needs to be set; 0 if none.
+PKGREVISION=		1
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 PATCHDIR=		${.CURDIR}/../../shells/tcsh/patches
@@ -22,8 +22,8 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-* OpenBSD-*-* SunOS-*-*
 NOT_FOR_PLATFORM+=	SunOS-*-*
 .endif
 
-# XXX This should use Makefile.common, not Makefile
-.include "../../shells/tcsh/Makefile"
+.include "../../shells/tcsh/Makefile.common"
+.include "../../mk/bsd.pkg.mk"
 
 INSTALLATION_DIRS+=	usr/share/man/man1
 
@@ -32,12 +32,14 @@ MAINTAINER=		agc@NetBSD.org
 
 # FIXME: Packages shall only install into ${LOCALBASE} or a subdirectory.
 PREFIX=			/
+EGDIR=			/usr/share/examples/tcsh
 NOT_FOR_BULK_PLATFORM=	*-*-*
 
 NLSDIR=			usr/share/nls
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--bindir=/bin
 CONFIGURE_ARGS+=	--mandir=/usr/share/man
+CONFIGURE_ARGS+=	--disable-nls-catalogs
 
 DISTINFO_FILE=		${.CURDIR}/../../shells/tcsh/distinfo
 
