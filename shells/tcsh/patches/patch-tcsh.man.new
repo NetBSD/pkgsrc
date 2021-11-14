@@ -1,0 +1,18 @@
+$NetBSD: patch-tcsh.man.new,v 1.1 2021/11/14 22:15:13 kim Exp $
+
+Document ln=target
+
+https://github.com/tcsh-org/tcsh/commit/b98d6544234e9258156f08c8b559ed6253f2bc49.patch
+
+--- tcsh.man.new
++++ tcsh.man.new
+@@ -8997,6 +8997,9 @@ and
+ .Va fi
+ codes from 0 to the
+ numerical codes for your standard fore- and background colors.
++.Pp     
++For symbolic links the "ln" keyword can be set to "target", which makes
++the file color the same as the color of the link target.
+ .RE
+ .TP 8
+ .B MACHTYPE \fR(+)
