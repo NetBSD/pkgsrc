@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/11/08 10:28:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/11/14 14:41:11 ryoon Exp $
 bin/yt-dlp
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -132,6 +132,9 @@ ${PYSITELIB}/yt_dlp/extractor/alura.pyo
 ${PYSITELIB}/yt_dlp/extractor/amara.py
 ${PYSITELIB}/yt_dlp/extractor/amara.pyc
 ${PYSITELIB}/yt_dlp/extractor/amara.pyo
+${PYSITELIB}/yt_dlp/extractor/amazon.py
+${PYSITELIB}/yt_dlp/extractor/amazon.pyc
+${PYSITELIB}/yt_dlp/extractor/amazon.pyo
 ${PYSITELIB}/yt_dlp/extractor/amcnetworks.py
 ${PYSITELIB}/yt_dlp/extractor/amcnetworks.pyc
 ${PYSITELIB}/yt_dlp/extractor/amcnetworks.pyo
@@ -1302,6 +1305,9 @@ ${PYSITELIB}/yt_dlp/extractor/mixcloud.pyo
 ${PYSITELIB}/yt_dlp/extractor/mlb.py
 ${PYSITELIB}/yt_dlp/extractor/mlb.pyc
 ${PYSITELIB}/yt_dlp/extractor/mlb.pyo
+${PYSITELIB}/yt_dlp/extractor/mlssoccer.py
+${PYSITELIB}/yt_dlp/extractor/mlssoccer.pyc
+${PYSITELIB}/yt_dlp/extractor/mlssoccer.pyo
 ${PYSITELIB}/yt_dlp/extractor/mnet.py
 ${PYSITELIB}/yt_dlp/extractor/mnet.pyc
 ${PYSITELIB}/yt_dlp/extractor/mnet.pyo
@@ -1626,6 +1632,9 @@ ${PYSITELIB}/yt_dlp/extractor/pinterest.pyo
 ${PYSITELIB}/yt_dlp/extractor/pladform.py
 ${PYSITELIB}/yt_dlp/extractor/pladform.pyc
 ${PYSITELIB}/yt_dlp/extractor/pladform.pyo
+${PYSITELIB}/yt_dlp/extractor/planetmarathi.py
+${PYSITELIB}/yt_dlp/extractor/planetmarathi.pyc
+${PYSITELIB}/yt_dlp/extractor/planetmarathi.pyo
 ${PYSITELIB}/yt_dlp/extractor/platzi.py
 ${PYSITELIB}/yt_dlp/extractor/platzi.pyc
 ${PYSITELIB}/yt_dlp/extractor/platzi.pyo
@@ -1662,6 +1671,9 @@ ${PYSITELIB}/yt_dlp/extractor/podomatic.pyo
 ${PYSITELIB}/yt_dlp/extractor/pokemon.py
 ${PYSITELIB}/yt_dlp/extractor/pokemon.pyc
 ${PYSITELIB}/yt_dlp/extractor/pokemon.pyo
+${PYSITELIB}/yt_dlp/extractor/polsatgo.py
+${PYSITELIB}/yt_dlp/extractor/polsatgo.pyc
+${PYSITELIB}/yt_dlp/extractor/polsatgo.pyo
 ${PYSITELIB}/yt_dlp/extractor/polskieradio.py
 ${PYSITELIB}/yt_dlp/extractor/polskieradio.pyc
 ${PYSITELIB}/yt_dlp/extractor/polskieradio.pyo
@@ -1737,6 +1749,9 @@ ${PYSITELIB}/yt_dlp/extractor/radiofrance.pyo
 ${PYSITELIB}/yt_dlp/extractor/radiojavan.py
 ${PYSITELIB}/yt_dlp/extractor/radiojavan.pyc
 ${PYSITELIB}/yt_dlp/extractor/radiojavan.pyo
+${PYSITELIB}/yt_dlp/extractor/radiokapital.py
+${PYSITELIB}/yt_dlp/extractor/radiokapital.pyc
+${PYSITELIB}/yt_dlp/extractor/radiokapital.pyo
 ${PYSITELIB}/yt_dlp/extractor/radlive.py
 ${PYSITELIB}/yt_dlp/extractor/radlive.pyc
 ${PYSITELIB}/yt_dlp/extractor/radlive.pyo
@@ -2178,6 +2193,9 @@ ${PYSITELIB}/yt_dlp/extractor/thisoldhouse.pyo
 ${PYSITELIB}/yt_dlp/extractor/threeqsdn.py
 ${PYSITELIB}/yt_dlp/extractor/threeqsdn.pyc
 ${PYSITELIB}/yt_dlp/extractor/threeqsdn.pyo
+${PYSITELIB}/yt_dlp/extractor/threespeak.py
+${PYSITELIB}/yt_dlp/extractor/threespeak.pyc
+${PYSITELIB}/yt_dlp/extractor/threespeak.pyo
 ${PYSITELIB}/yt_dlp/extractor/tiktok.py
 ${PYSITELIB}/yt_dlp/extractor/tiktok.pyc
 ${PYSITELIB}/yt_dlp/extractor/tiktok.pyo
@@ -2568,6 +2586,9 @@ ${PYSITELIB}/yt_dlp/extractor/wistia.pyo
 ${PYSITELIB}/yt_dlp/extractor/worldstarhiphop.py
 ${PYSITELIB}/yt_dlp/extractor/worldstarhiphop.pyc
 ${PYSITELIB}/yt_dlp/extractor/worldstarhiphop.pyo
+${PYSITELIB}/yt_dlp/extractor/wppilot.py
+${PYSITELIB}/yt_dlp/extractor/wppilot.pyc
+${PYSITELIB}/yt_dlp/extractor/wppilot.pyo
 ${PYSITELIB}/yt_dlp/extractor/wsj.py
 ${PYSITELIB}/yt_dlp/extractor/wsj.pyc
 ${PYSITELIB}/yt_dlp/extractor/wsj.pyo
@@ -2747,3 +2768,4 @@ share/bash-completion/completions/yt-dlp
 share/doc/yt_dlp/README.txt
 share/fish/vendor_completions.d/yt-dlp.fish
 share/zsh/site-functions/_yt-dlp
+@pkgdir share/man/man1
