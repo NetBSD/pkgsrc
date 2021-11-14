@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.969 2021/11/10 09:37:24 pin Exp $
+# $NetBSD: Makefile,v 1.970 2021/11/14 17:17:39 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -218,6 +218,7 @@ SUBDIR+=	fatback
 SUBDIR+=	fd-find
 SUBDIR+=	fdtools
 SUBDIR+=	fdupes
+SUBDIR+=	felix
 SUBDIR+=	fff
 SUBDIR+=	file
 SUBDIR+=	filelight
