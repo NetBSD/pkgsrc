@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.86 2021/11/09 12:04:43 nia Exp $
+# $NetBSD: Linux.mk,v 1.87 2021/11/14 14:47:11 schmonz Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -174,8 +174,13 @@ CWRAPPERS_APPEND.ld+=	-m elf_i386
 .for _glibc_path in ${_OPSYS_LIB_DIRS}
 .  if exists(${_glibc_path}/libc.so.6)
 ## Use _CMD so the command only gets run when needed!
-_GLIBC_VERSION_CMD=	${_glibc_path}/libc.so.6 --version | \
-				sed -ne's/^GNU C.*version \(.*\)[,.].*$$/\1/p'
+_GLIBC_VERSION_CMD=	if [ -x ${_glibc_path}/libc.so.6 ]; then \
+				${_glibc_path}/libc.so.6 --version | \
+				sed -ne's/^GNU C.*version \(.*\)[,.].*$$/\1/p'; \
+			else \
+				ldd --version |	\
+				sed -ne's/^ldd.* \(.*\)$$/\1/p'; \
+			fi
 GLIBC_VERSION=		${_GLIBC_VERSION_CMD:sh}
 .  endif
 .endfor
