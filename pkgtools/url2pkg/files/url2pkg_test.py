@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.32 2021/11/14 08:57:15 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.33 2021/11/14 09:20:15 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -456,10 +456,6 @@ def test_Generator_adjust_site_GitHub_archive__tag():
     ]
 
 
-# TODO: There is a simpler package definition for this scenario, see
-# wip/netmask.  That package only defines:
-#	DISTNAME=proj-version
-#	GITHUB_TAG=v${PKGVERSION_NOREV}
 def test_Generator_adjust_site_GitHub_archive__tag_v():
     url = 'https://github.com/org/proj/archive/refs/tags/v1.0.0.tar.gz'
 
@@ -467,13 +463,10 @@ def test_Generator_adjust_site_GitHub_archive__tag_v():
     assert detab(lines) == [
         mkcvsid,
         '',
-        'GITHUB_PROJECT= proj',
-        'GITHUB_TAG=     refs/tags/v1.0.0',
-        'DISTNAME=       v1.0.0',
-        'PKGNAME=        ${GITHUB_PROJECT}-${DISTNAME:S,^v,,}',
+        'GITHUB_TAG=     refs/tags/v${PKGVERSION_NOREV}',
+        'DISTNAME=       proj-1.0.0',
         'CATEGORIES=     pkgtools',
         'MASTER_SITES=   ${MASTER_SITE_GITHUB:=org/}',
-        'DIST_SUBDIR=    ${GITHUB_PROJECT}',
         '',
         'MAINTAINER=     INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
         'HOMEPAGE=       https://github.com/org/proj/',
