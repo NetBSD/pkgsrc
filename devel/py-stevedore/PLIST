@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/04/14 14:05:56 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/11/14 15:13:04 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -10,6 +10,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/stevedore/__init__.py
 ${PYSITELIB}/stevedore/__init__.pyc
 ${PYSITELIB}/stevedore/__init__.pyo
+${PYSITELIB}/stevedore/_cache.py
+${PYSITELIB}/stevedore/_cache.pyc
+${PYSITELIB}/stevedore/_cache.pyo
 ${PYSITELIB}/stevedore/dispatch.py
 ${PYSITELIB}/stevedore/dispatch.pyc
 ${PYSITELIB}/stevedore/dispatch.pyo
@@ -70,6 +73,9 @@ ${PYSITELIB}/stevedore/tests/extension_unimportable.pyo
 ${PYSITELIB}/stevedore/tests/manager.py
 ${PYSITELIB}/stevedore/tests/manager.pyc
 ${PYSITELIB}/stevedore/tests/manager.pyo
+${PYSITELIB}/stevedore/tests/test_cache.py
+${PYSITELIB}/stevedore/tests/test_cache.pyc
+${PYSITELIB}/stevedore/tests/test_cache.pyo
 ${PYSITELIB}/stevedore/tests/test_callback.py
 ${PYSITELIB}/stevedore/tests/test_callback.pyc
 ${PYSITELIB}/stevedore/tests/test_callback.pyo
