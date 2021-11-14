@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2020/12/04 20:45:45 nia Exp $
+# $NetBSD: Makefile,v 1.6 2021/11/14 15:18:16 adam Exp $
 
 DISTNAME=	subliminal-2.1.0
 PKGREVISION=	1
-CATEGORIES=	textproc
+CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/subliminal/}
 
 MAINTAINER=	leot@NetBSD.org
-HOMEPAGE=	https://github.com/Diaoul/subliminal/
+HOMEPAGE=	https://github.com/Diaoul/subliminal
 COMMENT=	Video subtitles downloader
 LICENSE=	mit
 
@@ -25,16 +25,13 @@ DEPENDS+=	${PYPKGPREFIX}-requests>=2.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-stevedore>=1.20.0:../../devel/py-stevedore
 
-.include "../../lang/python/egg.mk"
-
-.if ${_PYTHON_VERSION} < 33
-DEPENDS+=	${PYPKGPREFIX}-futures>=3.0:../../devel/py-futures
-.endif
-
 USE_LANGUAGES=	# none
 
-post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/subliminal ${DESTDIR}${PREFIX}/bin/subliminal-${PYVERSSUFFIX} || ${TRUE}
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-dogpile-cache, py-stevedore
 
-.include "../../lang/python/application.mk"
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} subliminal subliminal-${PYVERSSUFFIX} || ${TRUE}
+
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
