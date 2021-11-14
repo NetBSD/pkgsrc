@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/11/13 12:44:39 rhialto Exp $
+# $NetBSD: Makefile,v 1.3 2021/11/14 08:50:03 jperkin Exp $
 
 PKGNAME=	hercules4sdl-4.3
 DISTNAME=	Release_${PKGVERSION_NOREV}
@@ -33,12 +33,10 @@ SUBST_FILES.prefix=	hercules.cnf
 SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},g'
 
 CONFIGURE_ARGS+=	--enable-extpkgs=${PREFIX}/lib/hercules4sdl
-.if ${OPSYS} == "Darwin"
 # There is a configure check that uses C++ to check if the compiler is
 # GNU, and on Darwin it thinks GNU C++ is needed to create shared
 # libraries, even though no actual C++ is used. Or something.
-CONFIGURE_ENV+=		ac_cv_cxx_compiler_gnu=yes
-.endif
+CONFIGURE_ENV.Darwin+=	ac_cv_cxx_compiler_gnu=yes
 
 INSTALLATION_DIRS+=	share/examples/hercules
 
