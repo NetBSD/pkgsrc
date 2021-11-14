@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/01/26 11:20:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/11/14 18:42:37 adam Exp $
 bin/alembic-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -36,6 +36,7 @@ ${PYSITELIB}/alembic/config.pyc
 ${PYSITELIB}/alembic/config.pyo
 ${PYSITELIB}/alembic/context.py
 ${PYSITELIB}/alembic/context.pyc
+${PYSITELIB}/alembic/context.pyi
 ${PYSITELIB}/alembic/context.pyo
 ${PYSITELIB}/alembic/ddl/__init__.py
 ${PYSITELIB}/alembic/ddl/__init__.pyc
@@ -61,8 +62,15 @@ ${PYSITELIB}/alembic/ddl/postgresql.pyo
 ${PYSITELIB}/alembic/ddl/sqlite.py
 ${PYSITELIB}/alembic/ddl/sqlite.pyc
 ${PYSITELIB}/alembic/ddl/sqlite.pyo
+${PYSITELIB}/alembic/environment.py
+${PYSITELIB}/alembic/environment.pyc
+${PYSITELIB}/alembic/environment.pyo
+${PYSITELIB}/alembic/migration.py
+${PYSITELIB}/alembic/migration.pyc
+${PYSITELIB}/alembic/migration.pyo
 ${PYSITELIB}/alembic/op.py
 ${PYSITELIB}/alembic/op.pyc
+${PYSITELIB}/alembic/op.pyi
 ${PYSITELIB}/alembic/op.pyo
 ${PYSITELIB}/alembic/operations/__init__.py
 ${PYSITELIB}/alembic/operations/__init__.pyc
@@ -82,6 +90,7 @@ ${PYSITELIB}/alembic/operations/schemaobj.pyo
 ${PYSITELIB}/alembic/operations/toimpl.py
 ${PYSITELIB}/alembic/operations/toimpl.pyc
 ${PYSITELIB}/alembic/operations/toimpl.pyo
+${PYSITELIB}/alembic/py.typed
 ${PYSITELIB}/alembic/runtime/__init__.py
 ${PYSITELIB}/alembic/runtime/__init__.pyc
 ${PYSITELIB}/alembic/runtime/__init__.pyo
@@ -103,6 +112,12 @@ ${PYSITELIB}/alembic/script/revision.pyo
 ${PYSITELIB}/alembic/script/write_hooks.py
 ${PYSITELIB}/alembic/script/write_hooks.pyc
 ${PYSITELIB}/alembic/script/write_hooks.pyo
+${PYSITELIB}/alembic/templates/async/README
+${PYSITELIB}/alembic/templates/async/alembic.ini.mako
+${PYSITELIB}/alembic/templates/async/env.py
+${PYSITELIB}/alembic/templates/async/env.pyc
+${PYSITELIB}/alembic/templates/async/env.pyo
+${PYSITELIB}/alembic/templates/async/script.py.mako
 ${PYSITELIB}/alembic/templates/generic/README
 ${PYSITELIB}/alembic/templates/generic/alembic.ini.mako
 ${PYSITELIB}/alembic/templates/generic/env.py
@@ -142,6 +157,36 @@ ${PYSITELIB}/alembic/testing/plugin/bootstrap.pyo
 ${PYSITELIB}/alembic/testing/requirements.py
 ${PYSITELIB}/alembic/testing/requirements.pyc
 ${PYSITELIB}/alembic/testing/requirements.pyo
+${PYSITELIB}/alembic/testing/schemacompare.py
+${PYSITELIB}/alembic/testing/schemacompare.pyc
+${PYSITELIB}/alembic/testing/schemacompare.pyo
+${PYSITELIB}/alembic/testing/suite/__init__.py
+${PYSITELIB}/alembic/testing/suite/__init__.pyc
+${PYSITELIB}/alembic/testing/suite/__init__.pyo
+${PYSITELIB}/alembic/testing/suite/_autogen_fixtures.py
+${PYSITELIB}/alembic/testing/suite/_autogen_fixtures.pyc
+${PYSITELIB}/alembic/testing/suite/_autogen_fixtures.pyo
+${PYSITELIB}/alembic/testing/suite/test_autogen_comments.py
+${PYSITELIB}/alembic/testing/suite/test_autogen_comments.pyc
+${PYSITELIB}/alembic/testing/suite/test_autogen_comments.pyo
+${PYSITELIB}/alembic/testing/suite/test_autogen_computed.py
+${PYSITELIB}/alembic/testing/suite/test_autogen_computed.pyc
+${PYSITELIB}/alembic/testing/suite/test_autogen_computed.pyo
+${PYSITELIB}/alembic/testing/suite/test_autogen_diffs.py
+${PYSITELIB}/alembic/testing/suite/test_autogen_diffs.pyc
+${PYSITELIB}/alembic/testing/suite/test_autogen_diffs.pyo
+${PYSITELIB}/alembic/testing/suite/test_autogen_fks.py
+${PYSITELIB}/alembic/testing/suite/test_autogen_fks.pyc
+${PYSITELIB}/alembic/testing/suite/test_autogen_fks.pyo
+${PYSITELIB}/alembic/testing/suite/test_autogen_identity.py
+${PYSITELIB}/alembic/testing/suite/test_autogen_identity.pyc
+${PYSITELIB}/alembic/testing/suite/test_autogen_identity.pyo
+${PYSITELIB}/alembic/testing/suite/test_environment.py
+${PYSITELIB}/alembic/testing/suite/test_environment.pyc
+${PYSITELIB}/alembic/testing/suite/test_environment.pyo
+${PYSITELIB}/alembic/testing/suite/test_op.py
+${PYSITELIB}/alembic/testing/suite/test_op.pyc
+${PYSITELIB}/alembic/testing/suite/test_op.pyo
 ${PYSITELIB}/alembic/testing/util.py
 ${PYSITELIB}/alembic/testing/util.pyc
 ${PYSITELIB}/alembic/testing/util.pyo
@@ -154,6 +199,9 @@ ${PYSITELIB}/alembic/util/__init__.pyo
 ${PYSITELIB}/alembic/util/compat.py
 ${PYSITELIB}/alembic/util/compat.pyc
 ${PYSITELIB}/alembic/util/compat.pyo
+${PYSITELIB}/alembic/util/editor.py
+${PYSITELIB}/alembic/util/editor.pyc
+${PYSITELIB}/alembic/util/editor.pyo
 ${PYSITELIB}/alembic/util/exc.py
 ${PYSITELIB}/alembic/util/exc.pyc
 ${PYSITELIB}/alembic/util/exc.pyo
