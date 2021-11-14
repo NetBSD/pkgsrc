@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.31 2021/05/25 17:56:24 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.32 2021/11/14 08:57:15 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -431,7 +431,7 @@ def test_Generator_adjust_site_GitHub_archive():
     ]
 
 
-def test_Generator_adjust_site_GitHub_archive_tag():
+def test_Generator_adjust_site_GitHub_archive__tag():
     url = 'https://github.com/org/proj/archive/refs/tags/1.0.0.tar.gz'
 
     lines = Generator(url).generate_Makefile()
@@ -442,6 +442,35 @@ def test_Generator_adjust_site_GitHub_archive_tag():
         'GITHUB_TAG=     refs/tags/1.0.0',
         'DISTNAME=       1.0.0',
         'PKGNAME=        ${GITHUB_PROJECT}-${DISTNAME}',
+        'CATEGORIES=     pkgtools',
+        'MASTER_SITES=   ${MASTER_SITE_GITHUB:=org/}',
+        'DIST_SUBDIR=    ${GITHUB_PROJECT}',
+        '',
+        'MAINTAINER=     INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
+        'HOMEPAGE=       https://github.com/org/proj/',
+        'COMMENT=        TODO: Short description of the package',
+        '#LICENSE=       # TODO: (see mk/license.mk)',
+        '',
+        '# url2pkg-marker (please do not remove this line.)',
+        ".include \"../../mk/bsd.pkg.mk\"",
+    ]
+
+
+# TODO: There is a simpler package definition for this scenario, see
+# wip/netmask.  That package only defines:
+#	DISTNAME=proj-version
+#	GITHUB_TAG=v${PKGVERSION_NOREV}
+def test_Generator_adjust_site_GitHub_archive__tag_v():
+    url = 'https://github.com/org/proj/archive/refs/tags/v1.0.0.tar.gz'
+
+    lines = Generator(url).generate_Makefile()
+    assert detab(lines) == [
+        mkcvsid,
+        '',
+        'GITHUB_PROJECT= proj',
+        'GITHUB_TAG=     refs/tags/v1.0.0',
+        'DISTNAME=       v1.0.0',
+        'PKGNAME=        ${GITHUB_PROJECT}-${DISTNAME:S,^v,,}',
         'CATEGORIES=     pkgtools',
         'MASTER_SITES=   ${MASTER_SITE_GITHUB:=org/}',
         'DIST_SUBDIR=    ${GITHUB_PROJECT}',
