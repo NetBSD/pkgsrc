@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.6 2016/10/10 13:22:22 tsutsui Exp $
+# $NetBSD: options.mk,v 1.7 2021/11/14 18:42:27 tsutsui Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.jwm
-PKG_SUPPORTED_OPTIONS=	debug fribidi jpeg png svg
-PKG_SUGGESTED_OPTIONS=	fribidi jpeg png svg
+PKG_SUPPORTED_OPTIONS=	debug cairo jpeg png svg
+PKG_SUGGESTED_OPTIONS=	cairo jpeg png svg
 
 .include "../../mk/bsd.options.mk"
 
@@ -10,11 +10,10 @@ PKG_SUGGESTED_OPTIONS=	fribidi jpeg png svg
 CONFIGURE_ARGS+=	--enable-debug
 .endif
 
-.if !empty(PKG_OPTIONS:Mfribidi)
-.include "../../converters/fribidi/buildlink3.mk"
-BUILDLINK_API_DEPENDS.fribidi+=   fribidi>=0.19.2
+.if !empty(PKG_OPTIONS:Mcairo)
+.include "../../graphics/cairo/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--disable-fribidi
+CONFIGURE_ARGS+=	--disable-cairo
 .endif
 
 .if !empty(PKG_OPTIONS:Mjpeg)
