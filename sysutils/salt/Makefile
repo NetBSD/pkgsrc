@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2020/08/18 05:26:08 tnn Exp $
+# $NetBSD: Makefile,v 1.74 2021/11/14 20:01:17 adam Exp $
 
-DISTNAME=	salt-2019.2.2
+DISTNAME=	salt-3004
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/salt/}
 
@@ -9,23 +9,21 @@ HOMEPAGE=	http://saltstack.org/
 COMMENT=	Remote execution and configuration management system
 LICENSE=	apache-2.0
 
+DEPENDS+=	${PYPKGPREFIX}-cryptodome>=3.9.8:../../security/py-cryptodome
+DEPENDS+=	${PYPKGPREFIX}-distro>=1.0.1:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
-DEPENDS+=	${PYPKGPREFIX}-msgpack-[0-9]*:../../devel/py-msgpack
-DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.5.6:../../devel/py-msgpack
+DEPENDS+=	${PYPKGPREFIX}-psutil>=5.0.0:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.5.0:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-tornado>=4.3:../../www/py-tornado
-DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
-# zeromq transport requirements
-DEPENDS+=	${PYPKGPREFIX}-cryptodome-[0-9]*:../../security/py-cryptodome
-DEPENDS+=	${PYPKGPREFIX}-zmq>=2.2.0:../../net/py-zmq
+DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-zmq>=19.0.2:../../net/py-zmq
 
-# Some modules are still not (as of 2019.2.0) 3.x compatible.
-PYTHON_VERSIONS_ACCEPTED=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 27
-DEPENDS+= ${PYPKGPREFIX}-futures-[0-9]*:../../devel/py-futures
+.if ${_PYTHON_VERSION} == 36
+DEPENDS+=	${PYPKGPREFIX}-contextvars-[0-9]*:../../devel/py-contextvars
 .endif
 
 BUILD_DEFS+=	VARBASE
@@ -85,5 +83,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/conf/master ${DESTDIR}${EGDIR}/
 	${INSTALL_DATA} ${WRKSRC}/conf/minion ${DESTDIR}${EGDIR}/
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
