@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2020/06/01 19:42:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2021/11/14 20:19:08 adam Exp $
 share/doc/exim/html/spec_html/ch-access_control_lists.html
 share/doc/exim/html/spec_html/ch-adding_a_local_scan_function_to_exim.html
 share/doc/exim/html/spec_html/ch-adding_new_drivers_or_lookup_types.html
@@ -8,7 +8,7 @@ share/doc/exim/html/spec_html/ch-building_and_installing_exim.html
 share/doc/exim/html/spec_html/ch-concept_index.html
 share/doc/exim/html/spec_html/ch-content_scanning_at_acl_time.html
 share/doc/exim/html/spec_html/ch-customizing_bounce_and_warning_messages.html
-share/doc/exim/html/spec_html/ch-dkim_spf_and_dmarc.html
+share/doc/exim/html/spec_html/ch-dkim_spf_srs_and_dmarc.html
 share/doc/exim/html/spec_html/ch-domain_host_address_and_local_part_lists.html
 share/doc/exim/html/spec_html/ch-embedded_perl.html
 share/doc/exim/html/spec_html/ch-encrypted_smtp_connections_using_tlsssl.html
@@ -157,4 +157,32 @@ share/doc/exim/html/static/doc/security/CVE-2019-10149.txt
 share/doc/exim/html/static/doc/security/CVE-2019-13917.txt
 share/doc/exim/html/static/doc/security/CVE-2019-15846.txt
 share/doc/exim/html/static/doc/security/CVE-2019-16928.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/21nails.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/CVE-2020-28007-LFDIR.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/CVE-2020-28008-SPDIR.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/CVE-2020-28009-STDIN.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/CVE-2020-28010-SLCWD.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/CVE-2020-28011-SPRSS.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/CVE-2020-28012-CLOSE.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/CVE-2020-28013-PFPSN.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/CVE-2020-28014-PIDFP.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/CVE-2020-28015-NLEND.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/CVE-2020-28016-PFPZA.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/CVE-2020-28017-RCPTL.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/CVE-2020-28018-OCORK.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/CVE-2020-28019-BDATA.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/CVE-2020-28020-HSIZE.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/CVE-2020-28021-MAUTH.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/CVE-2020-28022-EXOPT.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/CVE-2020-28023-SCHAD.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/CVE-2020-28024-UNGET.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/CVE-2020-28025-BHASH.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/CVE-2020-28026-FGETS.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/CVE-2021-27216-DELETE-PID-FILE.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/CVE-assigments.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/minor-issues.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/patches-4.94+fixes.tar.gz
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/patches1.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/patches2.txt
+share/doc/exim/html/static/doc/security/CVE-2020-qualys/patches3.txt
 share/doc/exim/html/static/js/common.js
