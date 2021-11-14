@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:19:06 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/11/14 15:13:04 adam Exp $
 
-BLAKE2s (stevedore-1.32.0.tar.gz) = 8cf94cc41abc610c72e7d3211b22db613e6b4f309dc969177cbeefa0d26b5abe
-SHA512 (stevedore-1.32.0.tar.gz) = 98c66b9ac827f69737cc2522029108831380b4bf4c633786d9819b52be930f6116ce5bfab58e724a2efad147830fcb6353409322fc5e01617d35d1c8aafb0259
-Size (stevedore-1.32.0.tar.gz) = 510344 bytes
+BLAKE2s (stevedore-3.5.0.tar.gz) = 959e5200b0dd0e2df8c9ace057b6536b42df019bf9f881b85e63e95e76751460
+SHA512 (stevedore-3.5.0.tar.gz) = be0f82230d7d4d3cf18dd913e11093ad90744e32a3021d9f88f0be244f56d0e3606af0adef67674c569c41d885837be3f0fc4d58009e036151cc67963a4f2ab3
+Size (stevedore-3.5.0.tar.gz) = 513548 bytes
