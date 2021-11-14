@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5580 2021/11/14 20:01:50 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5581 2021/11/14 20:20:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8424,3 +8424,8 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-cytoolz to 0.11.2 [adam 2021-11-14]
 	Updated sysutils/salt to 3004 [adam 2021-11-14]
 	Updated sysutils/salt-docs to 3004 [adam 2021-11-14]
+	Updated net/zeromq to 4.3.4 [adam 2021-11-14]
+	Updated net/py-zmq to 22.3.0 [adam 2021-11-14]
+	Updated www/nginx-devel to 1.21.4 [adam 2021-11-14]
+	Updated mail/exim to 4.95 [adam 2021-11-14]
+	Updated mail/exim-html to 4.95 [adam 2021-11-14]
