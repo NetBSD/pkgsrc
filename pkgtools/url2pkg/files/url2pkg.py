@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.32 2021/05/25 17:56:24 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.33 2021/11/14 09:20:15 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -431,10 +431,18 @@ class Generator:
 
         org, proj, tag, distname, ext = m.groups()
 
-        self.github_project = proj
-        self.github_tag = tag
         self.master_sites = f'${{MASTER_SITE_GITHUB:={org}/}}'
         self.homepage = f'https://github.com/{org}/{proj}/'
+
+        m = re.search(r'^refs/tags/v(\d[\d.]*)$', tag)
+        if m:
+            version = m.group(1)
+            self.distfile = f'{proj}-{version}{ext}'
+            self.github_tag = f'refs/tags/v${{PKGVERSION_NOREV}}'
+            return
+
+        self.github_project = proj
+        self.github_tag = tag
         if proj not in tag:
             self.pkgname_prefix = '${GITHUB_PROJECT}-'
             self.dist_subdir = '${GITHUB_PROJECT}'
