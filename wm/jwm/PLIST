@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2017/10/21 18:07:33 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/11/14 18:42:27 tsutsui Exp $
 bin/jwm
 man/man1/jwm.1
 share/examples/jwm/system.jwmrc
 share/jwm/jwm-blue.svg
 share/jwm/jwm-gray.svg
 share/jwm/jwm-orange.svg
+share/jwm/jwm-red.svg
 share/jwm/jwm.xbm
 share/locale/da/LC_MESSAGES/jwm.mo
 share/locale/de/LC_MESSAGES/jwm.mo
@@ -12,10 +13,12 @@ share/locale/es/LC_MESSAGES/jwm.mo
 share/locale/fr/LC_MESSAGES/jwm.mo
 share/locale/hu/LC_MESSAGES/jwm.mo
 share/locale/it/LC_MESSAGES/jwm.mo
+share/locale/lt/LC_MESSAGES/jwm.mo
 share/locale/nl/LC_MESSAGES/jwm.mo
 share/locale/pl/LC_MESSAGES/jwm.mo
 share/locale/pt/LC_MESSAGES/jwm.mo
 share/locale/pt_BR/LC_MESSAGES/jwm.mo
 share/locale/ru/LC_MESSAGES/jwm.mo
+share/locale/tr/LC_MESSAGES/jwm.mo
 share/locale/zh_CN/LC_MESSAGES/jwm.mo
 share/locale/zh_TW/LC_MESSAGES/jwm.mo

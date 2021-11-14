@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2021/04/21 11:42:51 adam Exp $
+# $NetBSD: Makefile,v 1.49 2021/11/14 18:42:27 tsutsui Exp $
 
-DISTNAME=		jwm-2.3.7
-PKGREVISION=		12
+DISTNAME=		jwm-2.4.0
 CATEGORIES=		wm x11
-MASTER_SITES=		http://www.joewing.net/programs/jwm/releases/
+MASTER_SITES=		http://joewing.net/projects/jwm/releases/
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		tsutsui@NetBSD.org
@@ -11,7 +10,7 @@ HOMEPAGE=		https://joewing.net/projects/jwm/
 COMMENT=		Lightweight window manager with virtual desktops
 LICENSE=		mit
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		automake pkg-config
 
 GNU_CONFIGURE=		yes
 
@@ -45,7 +44,9 @@ INSTALLATION_DIRS=	bin
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
+.include "../../devel/pango/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"

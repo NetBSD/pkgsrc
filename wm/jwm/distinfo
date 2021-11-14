@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 11:25:14 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/11/14 18:42:27 tsutsui Exp $
 
-BLAKE2s (jwm-2.3.7.tar.xz) = ba8f893e582189983c5db910dd1eb4b43e338b717565d4aa2021535852df1502
-SHA512 (jwm-2.3.7.tar.xz) = dab0241518e52aa2e3e1ef3f67b6965ceb683bdb0224de7d3a653d76440606d70e86e35047eda40ea53a80aa227408be77739ad7c53d51f53026e3d113ab7efc
-Size (jwm-2.3.7.tar.xz) = 350332 bytes
+BLAKE2s (jwm-2.4.0.tar.xz) = bb9291dae4356bd4f7fb330189129a951d7dbec2b2929fefdc7b250c91c9f695
+SHA512 (jwm-2.4.0.tar.xz) = 3e91aed42eaabb6df508c2b71c78bbc3e7391ea843fba42f565a4d163df55147ddacbb8567d6e21d49a71d7d79d9b58bcd9979b2dee83ba3c1e65a789e5cec41
+Size (jwm-2.4.0.tar.xz) = 296128 bytes
 SHA1 (patch-Makefile.in) = 0ae071bfa59770c3b07f8ab6ce138e6d92318e1f
+SHA1 (patch-po_Makefile.in.in) = d2f300b2e8e0889d301fc77db68fd08d760efdd1
 SHA1 (patch-src_Makefile.in) = db9b310a04e0542fbbacaba7633bfd0a286d778c
