@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/06/02 19:58:00 adam Exp $
+# $NetBSD: Makefile,v 1.3 2021/11/14 15:14:27 adam Exp $
 
-DISTNAME=	doc8-0.8.1
+DISTNAME=	doc8-0.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/doc8/}
@@ -10,14 +10,16 @@ HOMEPAGE=	https://github.com/pycqa/doc8
 COMMENT=	Opinionated style checker for rst styles of documentation
 LICENSE=	apache-2.0
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
-DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
+DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-restructuredtext_lint>=0.7:../../devel/py-restructuredtext_lint
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-stevedore-[0-9]*:../../devel/py-stevedore
 
 USE_LANGUAGES=	# none
+
+PYSETUP=	-c 'from setuptools import setup; setup()'
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
