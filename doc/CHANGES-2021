@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5574 2021/11/14 14:41:52 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.5575 2021/11/14 15:23:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8410,3 +8410,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/hgrep to 0.2.1 [pin 2021-11-14]
 	Updated pkgtools/url2pkg to 21.3.0 [rillig 2021-11-14]
 	Updated net/yt-dlp to 2021.11.10.1 [ryoon 2021-11-14]
+	Updated devel/py-stevedore to 3.5.0 [adam 2021-11-14]
+	Updated devel/py-doc8 to 0.10.1 [adam 2021-11-14]
+	Updated devel/py-dogpile-cache to 1.1.4 [adam 2021-11-14]
+	Updated devel/py-astroid to 2.8.5 [adam 2021-11-14]
