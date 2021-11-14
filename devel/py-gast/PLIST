@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/10/01 19:52:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/11/14 08:36:45 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -18,3 +18,9 @@ ${PYSITELIB}/gast/astn.pyo
 ${PYSITELIB}/gast/gast.py
 ${PYSITELIB}/gast/gast.pyc
 ${PYSITELIB}/gast/gast.pyo
+${PYSITELIB}/gast/unparser.py
+${PYSITELIB}/gast/unparser.pyc
+${PYSITELIB}/gast/unparser.pyo
+${PYSITELIB}/gast/version.py
+${PYSITELIB}/gast/version.pyc
+${PYSITELIB}/gast/version.pyo
