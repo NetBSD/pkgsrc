@@ -1,0 +1,18 @@
+$NetBSD: patch-tcsh.man,v 1.1 2021/11/14 22:15:13 kim Exp $
+
+Document ln=target
+
+https://github.com/tcsh-org/tcsh/commit/b98d6544234e9258156f08c8b559ed6253f2bc49.patch
+
+--- tcsh.man
++++ tcsh.man
+@@ -5088,6 +5088,9 @@ A few terminal programs do not recognize the default end code
+ properly.  If all text gets colorized after you do a directory
+ listing, try changing the \fBno\fR and \fBfi\fR codes from 0 to the
+ numerical codes for your standard fore- and background colors.
++.PP
++For symbolic links the \fBln\fR keyword can be set to \fBtarget\fR, which makes
++the file color the same as the color of the link target.
+ .RE
+ .TP 8
+ .B MACHTYPE \fR(+)
