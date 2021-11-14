@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5579 2021/11/14 18:51:16 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5580 2021/11/14 20:01:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8422,3 +8422,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated comms/py-rich to 10.13.0 [adam 2021-11-14]
 	Updated devel/py-toolz to 0.11.2 [adam 2021-11-14]
 	Updated devel/py-cytoolz to 0.11.2 [adam 2021-11-14]
+	Updated sysutils/salt to 3004 [adam 2021-11-14]
+	Updated sysutils/salt-docs to 3004 [adam 2021-11-14]
