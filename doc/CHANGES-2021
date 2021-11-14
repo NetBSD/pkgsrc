@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5573 2021/11/14 09:20:28 rillig Exp $
+$NetBSD: CHANGES-2021,v 1.5574 2021/11/14 14:41:52 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8409,3 +8409,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-minidump to 0.0.21 [adam 2021-11-14]
 	Updated textproc/hgrep to 0.2.1 [pin 2021-11-14]
 	Updated pkgtools/url2pkg to 21.3.0 [rillig 2021-11-14]
+	Updated net/yt-dlp to 2021.11.10.1 [ryoon 2021-11-14]
