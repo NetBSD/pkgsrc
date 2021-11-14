@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5581 2021/11/14 20:20:01 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5582 2021/11/14 20:41:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8429,3 +8429,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/nginx-devel to 1.21.4 [adam 2021-11-14]
 	Updated mail/exim to 4.95 [adam 2021-11-14]
 	Updated mail/exim-html to 4.95 [adam 2021-11-14]
+	Updated security/py-oath to 1.4.4 [adam 2021-11-14]
+	Updated math/py-patsy to 0.5.2 [adam 2021-11-14]
