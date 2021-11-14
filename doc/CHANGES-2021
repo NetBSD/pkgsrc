@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5576 2021/11/14 15:29:06 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5577 2021/11/14 17:18:05 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8416,3 +8416,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-astroid to 2.8.5 [adam 2021-11-14]
 	Updated devel/py-typed-ast to 1.5.0 [adam 2021-11-14]
 	Updated textproc/py-elementpath to 2.4.0 [adam 2021-11-14]
+	Added sysutils/felix version 0.2.8 [pin 2021-11-14]
