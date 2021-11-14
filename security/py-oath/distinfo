@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:17:48 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/11/14 20:37:46 adam Exp $
 
-BLAKE2s (oath-1.4.3.tar.gz) = 3c4338b1f31468f763e5491f52e0587ce16290d56185c1b69f5ce008631ec516
-SHA512 (oath-1.4.3.tar.gz) = 7bb2288e494138da0ae098ea13945357afb3b76791c2cf34de73a701e3ae7553ec09a4f3ce9e2dd06708b6b4dad42a9725e91febab49bbb1a0ac138097f51935
-Size (oath-1.4.3.tar.gz) = 109858 bytes
+BLAKE2s (oath-1.4.4.tar.gz) = 0f42e9dbbcfb96c1ef7d13c58f13d48dad94c13861f5139394fa4b259f151018
+SHA512 (oath-1.4.4.tar.gz) = b8067dc68882942ec73a9c9e6ea07342ec263116cb53617db0348a51320e13be3627b38eeb1ce4a9ae3e0b0974cdcec176e9a47cc9c2bae7c4409fd6ad0930ab
+Size (oath-1.4.4.tar.gz) = 111072 bytes
