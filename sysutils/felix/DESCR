@@ -1,0 +1,8 @@
+A tui file manager with vim-like key mapping, written in Rust.
+
+While heavliy inspired by the great vifm and trying to implement its pleasan
+ experience in Rust, at the same time this project focuses on the following
+points:
+
+- simple and fast
+- easy to configure how to open files
