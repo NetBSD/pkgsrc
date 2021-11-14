@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/09/10 15:08:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/11/14 15:28:46 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -86,6 +86,9 @@ ${PYSITELIB}/elementpath/xpath1/xpath1_axes.pyo
 ${PYSITELIB}/elementpath/xpath1/xpath1_functions.py
 ${PYSITELIB}/elementpath/xpath1/xpath1_functions.pyc
 ${PYSITELIB}/elementpath/xpath1/xpath1_functions.pyo
+${PYSITELIB}/elementpath/xpath1/xpath1_operators.py
+${PYSITELIB}/elementpath/xpath1/xpath1_operators.pyc
+${PYSITELIB}/elementpath/xpath1/xpath1_operators.pyo
 ${PYSITELIB}/elementpath/xpath1/xpath1_parser.py
 ${PYSITELIB}/elementpath/xpath1/xpath1_parser.pyc
 ${PYSITELIB}/elementpath/xpath1/xpath1_parser.pyo
@@ -98,6 +101,9 @@ ${PYSITELIB}/elementpath/xpath2/xpath2_constructors.pyo
 ${PYSITELIB}/elementpath/xpath2/xpath2_functions.py
 ${PYSITELIB}/elementpath/xpath2/xpath2_functions.pyc
 ${PYSITELIB}/elementpath/xpath2/xpath2_functions.pyo
+${PYSITELIB}/elementpath/xpath2/xpath2_operators.py
+${PYSITELIB}/elementpath/xpath2/xpath2_operators.pyc
+${PYSITELIB}/elementpath/xpath2/xpath2_operators.pyo
 ${PYSITELIB}/elementpath/xpath2/xpath2_parser.py
 ${PYSITELIB}/elementpath/xpath2/xpath2_parser.pyc
 ${PYSITELIB}/elementpath/xpath2/xpath2_parser.pyo
@@ -110,6 +116,12 @@ ${PYSITELIB}/elementpath/xpath30/__init__.pyo
 ${PYSITELIB}/elementpath/xpath30/xpath30_formats.py
 ${PYSITELIB}/elementpath/xpath30/xpath30_formats.pyc
 ${PYSITELIB}/elementpath/xpath30/xpath30_formats.pyo
+${PYSITELIB}/elementpath/xpath30/xpath30_functions.py
+${PYSITELIB}/elementpath/xpath30/xpath30_functions.pyc
+${PYSITELIB}/elementpath/xpath30/xpath30_functions.pyo
+${PYSITELIB}/elementpath/xpath30/xpath30_operators.py
+${PYSITELIB}/elementpath/xpath30/xpath30_operators.pyc
+${PYSITELIB}/elementpath/xpath30/xpath30_operators.pyo
 ${PYSITELIB}/elementpath/xpath30/xpath30_parser.py
 ${PYSITELIB}/elementpath/xpath30/xpath30_parser.pyc
 ${PYSITELIB}/elementpath/xpath30/xpath30_parser.pyo
