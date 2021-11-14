@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2021/09/27 19:18:08 nia Exp $
+# $NetBSD: Makefile.common,v 1.4 2021/11/14 12:51:09 nia Exp $
 #
 # used by editors/emacs27/Makefile
 # used by editors/emacs27-nox11/Makefile
@@ -23,6 +23,8 @@ TEXINFO_REQD=	4.13
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes
 USE_TOOLS+=	autoconf automake gmake gzip makeinfo gm4 gsed
+
+REPLACE_SH+=	autogen.sh
 
 CONFIGURE_ARGS+=	--srcdir=${WRKSRC}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
