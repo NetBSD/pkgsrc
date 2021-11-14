@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2021/05/24 19:53:43 wiz Exp $
+# $NetBSD: Makefile,v 1.120 2021/11/14 08:57:15 rillig Exp $
 
 PKGNAME=	url2pkg-21.1.0
 PKGREVISION=	1
@@ -23,7 +23,7 @@ do-extract:
 
 do-test:
 	${RUN} cd ${WRKSRC} && env PKGSRCDIR=${PKGSRCDIR} MAKE=${MAKE:Q} \
-		${PREFIX}/bin/pytest-${PYVERSSUFFIX}
+		${PREFIX}/bin/pytest-${PYVERSSUFFIX} ${PY_TEST_FLAGS:U}
 
 .include "../../mk/bsd.prefs.mk"
 
