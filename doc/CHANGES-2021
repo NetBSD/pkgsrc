@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5578 2021/11/14 18:42:42 tsutsui Exp $
+$NetBSD: CHANGES-2021,v 1.5579 2021/11/14 18:51:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8418,3 +8418,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-elementpath to 2.4.0 [adam 2021-11-14]
 	Added sysutils/felix version 0.2.8 [pin 2021-11-14]
 	Updated wm/jwm to 2.4.0 [tsutsui 2021-11-14]
+	Updated databases/py-alembic to 1.7.5 [adam 2021-11-14]
+	Updated comms/py-rich to 10.13.0 [adam 2021-11-14]
+	Updated devel/py-toolz to 0.11.2 [adam 2021-11-14]
+	Updated devel/py-cytoolz to 0.11.2 [adam 2021-11-14]
