@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:18:23 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/11/14 15:14:27 adam Exp $
 
-BLAKE2s (doc8-0.8.1.tar.gz) = 7811ad49ef66fc52eaeac0555a642bce11f609934e7eed1a6b71b7ffa878d500
-SHA512 (doc8-0.8.1.tar.gz) = 855a00e24daba0c1a7caa4e888411c356570d2f30c7966bb2e566260edff13bc4c35124fd8d4129231bc7a3bec2ed959d23fb52961a5d8f6d1c67cff22bb35de
-Size (doc8-0.8.1.tar.gz) = 28775 bytes
+BLAKE2s (doc8-0.10.1.tar.gz) = 4d4a4698d3915a774c8b52ad03c0cd032c0338e23d820e23bceadf39b0b202f5
+SHA512 (doc8-0.10.1.tar.gz) = 0d12edbdd39e747c7ad19e52dc826e074ef1ff71cdcf4984d62a5e1c1154e3d78571ff3a522eff13e543ace060d65c6dc43f25d9590ee6a2cdb98eab28e4f91f
+Size (doc8-0.10.1.tar.gz) = 25514 bytes
