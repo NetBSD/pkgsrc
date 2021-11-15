@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2018/05/04 02:53:38 manu Exp $
+$NetBSD: MESSAGE,v 1.5 2021/11/15 18:17:05 wiz Exp $
 
 In order to use this module in your Apache installation, you need to
 add the following to your httpd.conf file:
@@ -13,9 +13,9 @@ backward-incompatible change:
   signing messages from rsa-sha1 to rsa-sha256. If your IdP does not
   allow messages to be signed with that algorithm, you need to add a
   setting switching back to the old algorithm:
-  
+
   MellonSignatureMethod rsa-sha1
-  
+
   Note that this only affects messages sent from mod_auth_mellon to your
   IdP. It does not affect authentication responses or other messages
   sent from your IdP to mod_auth_mellon.
