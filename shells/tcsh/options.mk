@@ -1,6 +1,12 @@
-# $NetBSD: options.mk,v 1.1 2021/11/15 17:11:58 kim Exp $
+# $NetBSD: options.mk,v 1.2 2021/11/15 17:28:59 kim Exp $
 
-PKG_OPTIONS_VAR?=	PKG_OPTIONS.tcsh
+.if !empty(PKGNAME:Mstandalone-tcsh-[0-9]*)
+PKG_OPTIONS_VAR=	PKG_OPTIONS.standalone-tcsh
+.elif !empty(PKGNAME:Mstatic-tcsh-[0-9]*)
+PKG_OPTIONS_VAR=	PKG_OPTIONS.static-tcsh
+.else
+PKG_OPTIONS_VAR=	PKG_OPTIONS.tcsh
+.endif
 
 PKG_SUPPORTED_OPTIONS=	nls
 PKG_SUGGESTED_OPTIONS=	nls
