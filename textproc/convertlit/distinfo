@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/07 15:00:53 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/11/15 18:14:47 wiz Exp $
 
-RMD160 (clit18src.zip) = 6104a7d951ed60ea73705e401be8b55633ea2d47
+BLAKE2s (clit18src.zip) = 4f753b9612793c47bb5120a521f075483c0a89ed9bc8e4293fca4a6bd923e15b
 SHA512 (clit18src.zip) = 0d4b7d525f5164a73a47a00e1c4e93ff50e738a4e6c541ded283c4779e6a67138f601c23a41344517ca5d7f8c9141b25cc6edc7f3967fbf9042e99f647354f36
 Size (clit18src.zip) = 135120 bytes
