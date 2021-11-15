@@ -8,6 +8,5 @@ simple plugin with a clean, generic interface.
 
 GStreamer is released under the LGPL.
 
-This package is part of the 'good' plugins for GStreamer.  It provides the
-oss plugin, which allows playback and recording of sound through the Open
-Sound System audio libraries.
+This package provides the Open Sound System plugin for GStreamer, which
+allows audio playback and recording from sound devices on Unix systems.

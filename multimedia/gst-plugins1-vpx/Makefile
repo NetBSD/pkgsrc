@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.11 2020/03/08 16:50:42 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2021/11/15 22:01:21 wiz Exp $
 
-GST_PLUGINS1_NAME=	vpx
-GST_PLUGINS1_DIRS=	ext/vpx
+PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-vpx/}
+CATEGORIES=	multimedia gnome
 
-PKGREVISION= 1
+COMMENT=	Open source multimedia framework - VP8/VP9 plugin
+
+GST_PLUGINS+=	vpx
+
 .include "../../multimedia/gst-plugins1-good/Makefile.common"
-
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2020/03/08 16:48:42 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2021/11/15 22:01:15 wiz Exp $
 
-GST_PLUGINS1_NAME=	dts
-GST_PLUGINS1_DIRS=	ext/dts
+PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-bad/-dts/}
+CATEGORIES=	audio gnome
 
-PKGREVISION= 1
+COMMENT=	Open source multimedia framework - DTS plugin
+
+GST_EXT_BUILD=	# defined
+GST_PLUGINS+=	dts
+
 .include "../../multimedia/gst-plugins1-bad/Makefile.common"
-
 .include "../../audio/libdca/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

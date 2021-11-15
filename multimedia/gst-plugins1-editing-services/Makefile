@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2021/04/21 11:42:19 adam Exp $
+# $NetBSD: Makefile,v 1.14 2021/11/15 22:01:19 wiz Exp $
 
-DISTNAME=	gstreamer-editing-services-1.16.2
-PKGNAME=	${DISTNAME:S/gstreamer-/gst-plugins1-/1}
-PKGREVISION=	5
+DISTNAME=	gst-editing-services-1.18.5
+PKGNAME=	${DISTNAME:S/gst-/gst-plugins1-/1}
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-editing-services/
 EXTRACT_SUFX=	.tar.xz
@@ -22,12 +21,11 @@ PY_PATCHPLIST=	yes
 # https://gitlab.gnome.org/GNOME/json-glib/issues/35
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/ges
 
-MESON_ARGS+=	-Dgtk_doc=disabled
-
 .include "../../devel/meson/build.mk"
 .include "../../lang/python/extension.mk"
+.include "../../lang/python/tool.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.16.2
+BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.18
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-good/buildlink3.mk"

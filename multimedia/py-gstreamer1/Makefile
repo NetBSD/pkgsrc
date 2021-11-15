@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2020/03/08 16:50:47 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2021/11/15 22:01:22 wiz Exp $
 
-DISTNAME=	gst-python-1.16.2
+DISTNAME=	gst-python-1.18.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gst-python/gstreamer1/}
-PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-python/
 EXTRACT_SUFX=	.tar.xz
@@ -14,17 +13,18 @@ LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
-USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config gmake
-GNU_CONFIGURE=		yes
-CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
-CONFIGURE_ENV.SunOS+=	ac_cv_prog_cc_c99=no
+USE_TOOLS+=		pkg-config
+USE_LANGUAGES=		c c++
 PY_PATCHPLIST=		yes
 TEST_TARGET=		check
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 .include "../../devel/py-gobject3-common/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.16.2
+BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.18.5
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 .include "../../lang/python/extension.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"

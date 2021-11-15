@@ -1,11 +1,15 @@
-# $NetBSD: Makefile,v 1.25 2020/08/17 20:18:25 leot Exp $
+# $NetBSD: Makefile,v 1.26 2021/11/15 22:01:18 wiz Exp $
 
-GST_PLUGINS1_NAME=	pango
-GST_PLUGINS1_DIRS=	ext/pango
-GST_PLUGINS1_FLAGS=	pango
+PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-base/-pango/}
+CATEGORIES=	devel gnome
 
-PKGREVISION= 3
+COMMENT=	Open source multimedia framework - pango plugin
+
+GST_EXT_BUILD=          # defined
+
+GST_PLUGINS+=		pango
+
 .include "../../multimedia/gst-plugins1-base/Makefile.common"
-
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

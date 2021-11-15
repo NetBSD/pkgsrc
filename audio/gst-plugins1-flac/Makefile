@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2020/03/08 16:48:43 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2021/11/15 22:01:16 wiz Exp $
 
-GST_PLUGINS1_NAME=	flac
-GST_PLUGINS1_DIRS=	ext/flac
-GST_PLUGINS1_FLAGS=	flac
+PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-flac/}
+CATEGORIES=	audio gnome
 
-PKGREVISION= 1
+COMMENT=	Open source multimedia framework - FLAC plugin
+
+GST_PLUGINS+=	flac
+
 .include "../../multimedia/gst-plugins1-good/Makefile.common"
-
-BUILDLINK_API_DEPENDS.flac+=	flac>=1.1.3nb1
 .include "../../audio/flac/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

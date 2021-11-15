@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:01:04 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/11/15 22:01:19 wiz Exp $
 
-BLAKE2s (gstreamer-editing-services-1.16.2.tar.xz) = 3a50c39f3b3ce4a240079866e05beb3f1816f6d237fb1d621ae16c361d91a241
-SHA512 (gstreamer-editing-services-1.16.2.tar.xz) = 5c0d4499f02fcc11a2f99e1629971e2df3e23717bf53896b437a5e1fdd451661e8aef61b6270ebd5a5e0173e53c947e62554764de0cd4f692e444238ca64fb66
-Size (gstreamer-editing-services-1.16.2.tar.xz) = 1086324 bytes
-SHA1 (patch-Makefile.in) = 8898f505820046696ccf0ef9a03ea260b98dd6b5
+BLAKE2s (gst-editing-services-1.18.5.tar.xz) = 8ff1e114f841289fa0ea16f8df25ff4664e0295a43c0553f76cf9dbf853ac922
+SHA512 (gst-editing-services-1.18.5.tar.xz) = b2107f2c5f1934721dd029c818f09f62a458ddfb0111060afd0fbbd2e8df9814218750ceff800aedac9878d4c5ae0f3f9fc08b8f8e82cadd1aa14b436737dcad
+Size (gst-editing-services-1.18.5.tar.xz) = 970472 bytes

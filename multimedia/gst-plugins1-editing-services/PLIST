@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/01/10 12:47:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/11/15 22:01:19 wiz Exp $
 bin/ges-launch-1.0
 include/gstreamer-1.0/ges/ges-asset.h
 include/gstreamer-1.0/ges/ges-audio-source.h
@@ -24,6 +24,7 @@ include/gstreamer-1.0/ges/ges-gerror.h
 include/gstreamer-1.0/ges/ges-group.h
 include/gstreamer-1.0/ges/ges-image-source.h
 include/gstreamer-1.0/ges/ges-layer.h
+include/gstreamer-1.0/ges/ges-marker-list.h
 include/gstreamer-1.0/ges/ges-meta-container.h
 include/gstreamer-1.0/ges/ges-multi-file-source.h
 include/gstreamer-1.0/ges/ges-operation-clip.h
@@ -34,16 +35,19 @@ include/gstreamer-1.0/ges/ges-pitivi-formatter.h
 include/gstreamer-1.0/ges/ges-prelude.h
 include/gstreamer-1.0/ges/ges-project.h
 include/gstreamer-1.0/ges/ges-screenshot.h
+include/gstreamer-1.0/ges/ges-source-clip-asset.h
 include/gstreamer-1.0/ges/ges-source-clip.h
 include/gstreamer-1.0/ges/ges-source.h
 include/gstreamer-1.0/ges/ges-test-clip.h
 include/gstreamer-1.0/ges/ges-text-overlay-clip.h
 include/gstreamer-1.0/ges/ges-text-overlay.h
+include/gstreamer-1.0/ges/ges-time-overlay-clip.h
 include/gstreamer-1.0/ges/ges-timeline-element.h
 include/gstreamer-1.0/ges/ges-timeline.h
 include/gstreamer-1.0/ges/ges-title-clip.h
 include/gstreamer-1.0/ges/ges-title-source.h
 include/gstreamer-1.0/ges/ges-track-element-asset.h
+include/gstreamer-1.0/ges/ges-track-element-deprecated.h
 include/gstreamer-1.0/ges/ges-track-element.h
 include/gstreamer-1.0/ges/ges-track.h
 include/gstreamer-1.0/ges/ges-transition-clip.h
@@ -66,7 +70,7 @@ lib/gstreamer-1.0/libgstges.so
 lib/gstreamer-1.0/libgstnle.so
 lib/libges-1.0.so
 lib/libges-1.0.so.0
-lib/libges-1.0.so.0.1602.0
+lib/libges-1.0.so.0.1805.0
 lib/pkgconfig/gst-editing-services-1.0.pc
 ${PYSITELIB}/gi/overrides/GES.py
 man/man1/ges-launch-1.0.1
