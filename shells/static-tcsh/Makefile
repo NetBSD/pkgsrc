@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2021/11/15 17:11:58 kim Exp $
+# $NetBSD: Makefile,v 1.15 2021/11/15 19:56:03 kim Exp $
 #
 
 PKGNAME=		static-${DISTNAME}
@@ -8,9 +8,9 @@ PKGREVISION=		2
 
 MAINTAINER=		agc@NetBSD.org
 
-PATCHDIR=		${.CURDIR}/../../shells/tcsh/patches
-PKGDIR=			${.CURDIR}/../../shells/tcsh
-DESCR_SRC=		${.CURDIR}/../../shells/tcsh/DESCR ${.CURDIR}/DESCR
+PATCHDIR=		../../shells/tcsh/patches
+PKGDIR=			../../shells/tcsh
+DESCR_SRC=		../../shells/tcsh/DESCR DESCR
 
 CONFLICTS=		tcsh-[0-9]*
 
