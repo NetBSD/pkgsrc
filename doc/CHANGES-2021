@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5583 2021/11/15 08:02:31 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5584 2021/11/15 10:08:53 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8433,3 +8433,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/py-patsy to 0.5.2 [adam 2021-11-14]
 	Updated net/rabbitmq to 3.9.9 [adam 2021-11-15]
 	Updated multimedia/mkvtoolnix to 63.0.0 [adam 2021-11-15]
+	Added net/ucspi-udp version 0.88.1 [schmonz 2021-11-15]
