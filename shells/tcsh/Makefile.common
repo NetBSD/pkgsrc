@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2021/11/11 22:47:55 kim Exp $
+# $NetBSD: Makefile.common,v 1.2 2021/11/15 17:11:58 kim Exp $
 #
 # used by shells/standalone-tcsh/Makefile
 # used by shells/static-tcsh/Makefile
@@ -19,9 +19,10 @@ CONFLICTS=	static-tcsh-[0-9]*
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf:test perl:test
 
-EGDIR=		${PREFIX}/share/examples/tcsh
+EGDIR=		share/examples/tcsh
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 .if ${OPSYS} == "SunOS"
 LOWER_OPSYS_VERSUFFIX=	${OS_VERSION:S/5./2./}
@@ -37,11 +38,13 @@ TEST_TARGET=	check
 
 PKG_SHELL=	bin/tcsh
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/complete.tcsh ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/csh-mode.el ${DESTDIR}${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:S/\/$//:Q}/${EGDIR}
+	${INSTALL_DATA} \
+		${WRKSRC}/complete.tcsh \
+		${DESTDIR}${PREFIX:S/\/$//:Q}/${EGDIR}
+	${INSTALL_DATA} \
+		${WRKSRC}/csh-mode.el \
+		${DESTDIR}${PREFIX:S/\/$//:Q}/${EGDIR}
 
 .include "../../mk/termcap.buildlink3.mk"

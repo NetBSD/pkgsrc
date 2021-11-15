@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.101 2021/11/14 22:15:13 kim Exp $
+# $NetBSD: Makefile,v 1.102 2021/11/15 17:11:58 kim Exp $
 
 .include "../../shells/tcsh/Makefile.common"
 
-PKGREVISION=1
+PKGREVISION=	2
 
 .include "../../mk/bsd.pkg.mk"
