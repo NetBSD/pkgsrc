@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2021/11/15 17:32:14 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2021/11/15 17:32:45 wiz Exp $
 #
 # This package is very outdated and should be built from sources
 # rather than using Linux binaries.
@@ -14,7 +14,7 @@ EXTRACT_SUFX=		.tgz
 DISTFILES=		${DISTNAME}-${MAINFILEEXT}${EXTRACT_SUFX} \
 			pvs-${VERSION}-system${EXTRACT_SUFX} \
 			pvs-${VERSION}-libraries${EXTRACT_SUFX}
-#LICENSE=		pvs-license
+LICENSE=		pvs-license
 
 # not quite sure about this, but to be on the safe side:
 RESTRICTED=		Redistribution not permitted - see ${HOMEPAGE}license.html
