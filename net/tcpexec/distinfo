@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/11/15 11:36:58 schmonz Exp $
+
+BLAKE2s (tcpexec/7e02e755aca4cb377910b729e43de8e3fb48eece-7e02e755aca4cb377910b729e43de8e3fb48eece.tar.gz) = 3e833e3aeb0a7bf8023ee870b1e5a1c39c10804037fbb6541470a018c646db0b
+SHA512 (tcpexec/7e02e755aca4cb377910b729e43de8e3fb48eece-7e02e755aca4cb377910b729e43de8e3fb48eece.tar.gz) = d1ad7ff52499a3287cadf4f44ce012a2bb9eeeaca2c77c75caa12fdcff2c09b60fefa396ebcb4dc3478acea1340e8ba322955ed9bb8f73af33a39254e545f801
+Size (tcpexec/7e02e755aca4cb377910b729e43de8e3fb48eece-7e02e755aca4cb377910b729e43de8e3fb48eece.tar.gz) = 4219 bytes
+SHA1 (patch-Makefile) = 17d61c1e7da32f51f528e282152f47601065c31b
+SHA1 (patch-tcpexec.c) = d87d6cde188efc84905348cac092de9488078741
