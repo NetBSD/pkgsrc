@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2021/11/14 22:36:12 kim Exp $
+# $NetBSD: Makefile,v 1.35 2021/11/15 17:11:57 kim Exp $
 #
 
 # FIXME: This is because of PREFIX=/ below.
@@ -6,10 +6,11 @@ CHECK_FILES_SUPPORTED=	no
 NOT_FOR_UNPRIVILEGED=	yes
 
 PKGNAME=		standalone-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 
-WRKSRC=			${WRKDIR}/${DISTNAME}
 PATCHDIR=		${.CURDIR}/../../shells/tcsh/patches
+PKGDIR=			${.CURDIR}/../../shells/tcsh
+DESCR_SRC=		${.CURDIR}/../../shells/tcsh/DESCR ${.CURDIR}/DESCR
 
 # This package only makes sense on platforms that don't themselves ship tcsh
 # in /bin. Otherwise it clobbers the native copy, which really isn't what
@@ -25,24 +26,23 @@ NOT_FOR_PLATFORM+=	SunOS-*-*
 .include "../../shells/tcsh/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
 
-INSTALLATION_DIRS+=	usr/share/man/man1
-
 COMMENT:=		Standalone version of the Extended C-shell
 MAINTAINER=		agc@NetBSD.org
 
 # FIXME: Packages shall only install into ${LOCALBASE} or a subdirectory.
 PREFIX=			/
-EGDIR=			/usr/share/examples/tcsh
+PKGMANDIR=		usr/share/man
+EGDIR=			usr/share/examples/tcsh
+NLSDIR=			usr/share/nls
 NOT_FOR_BULK_PLATFORM=	*-*-*
 
-NLSDIR=			usr/share/nls
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
-CONFIGURE_ARGS+=	--bindir=/bin
-CONFIGURE_ARGS+=	--mandir=/usr/share/man
-CONFIGURE_ARGS+=	--disable-nls-catalogs
+CONFIGURE_ARGS+=	--bindir=${PREFIX:S/\/$//:Q}/bin
+CONFIGURE_ARGS+=	--localedir=${PREFIX:S/\/$//:Q}/${NLSDIR}
+CONFIGURE_ARGS+=	--mandir=${PREFIX:S/\/$//:Q}/${PKGMANDIR}
 
-DISTINFO_FILE=		${.CURDIR}/../../shells/tcsh/distinfo
+PLIST_AWK+=		-f ${.CURDIR}/plist-examples.awk
+PLIST_AWK_ENV+=		EGDIR=${EGDIR}
 
-.if ${OPSYS} != "SunOS"
-LDFLAGS+=		-static
-.endif
+PLIST_AWK+=		-f ${.CURDIR}/plist-nls.awk
+PLIST_AWK_ENV+=		NLSDIR=${NLSDIR}

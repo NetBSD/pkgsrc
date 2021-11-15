@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.5 2015/05/22 08:03:43 kim Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/11/15 17:11:58 kim Exp $
 bin/tcsh
 man/man1/tcsh.1
 share/examples/tcsh/complete.tcsh
 share/examples/tcsh/csh-mode.el
-share/locale/C/LC_MESSAGES/tcsh.cat
-share/locale/de/LC_MESSAGES/tcsh.cat
-share/locale/es/LC_MESSAGES/tcsh.cat
-share/locale/et/LC_MESSAGES/tcsh.cat
-share/locale/fi/LC_MESSAGES/tcsh.cat
-share/locale/fr/LC_MESSAGES/tcsh.cat
-share/locale/gr/LC_MESSAGES/tcsh.cat
-share/locale/it/LC_MESSAGES/tcsh.cat
-share/locale/ja/LC_MESSAGES/tcsh.cat
-share/locale/pl/LC_MESSAGES/tcsh.cat
-share/locale/ru/LC_MESSAGES/tcsh.cat
-share/locale/ru_UA/LC_MESSAGES/tcsh.cat
+${PLIST.nls}share/locale/C/LC_MESSAGES/tcsh.cat
+${PLIST.nls}share/locale/de/LC_MESSAGES/tcsh.cat
+${PLIST.nls}share/locale/es/LC_MESSAGES/tcsh.cat
+${PLIST.nls}share/locale/et/LC_MESSAGES/tcsh.cat
+${PLIST.nls}share/locale/fi/LC_MESSAGES/tcsh.cat
+${PLIST.nls}share/locale/fr/LC_MESSAGES/tcsh.cat
+${PLIST.nls}share/locale/gr/LC_MESSAGES/tcsh.cat
+${PLIST.nls}share/locale/it/LC_MESSAGES/tcsh.cat
+${PLIST.nls}share/locale/ja/LC_MESSAGES/tcsh.cat
+${PLIST.nls}share/locale/pl/LC_MESSAGES/tcsh.cat
+${PLIST.nls}share/locale/ru/LC_MESSAGES/tcsh.cat
+${PLIST.nls}share/locale/ru_UA/LC_MESSAGES/tcsh.cat
