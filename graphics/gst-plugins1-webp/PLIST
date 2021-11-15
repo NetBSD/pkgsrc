@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/15 22:07:34 wiz Exp $
+lib/gstreamer-1.0/libgstwebp.so
