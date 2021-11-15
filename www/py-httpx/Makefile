@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2021/10/21 13:16:15 adam Exp $
+# $NetBSD: Makefile,v 1.16 2021/11/15 17:41:51 adam Exp $
 
-DISTNAME=	httpx-0.20.0
+DISTNAME=	httpx-0.21.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httpx/}
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-charset-normalizer-[0-9]*:../../converters/py-charset-normalizer
-DEPENDS+=	${PYPKGPREFIX}-httpcore>=0.13.3:../../www/py-httpcore
+DEPENDS+=	${PYPKGPREFIX}-httpcore>=0.14.0:../../www/py-httpcore
 DEPENDS+=	${PYPKGPREFIX}-rfc3986>=1.3:../../www/py-rfc3986
 DEPENDS+=	${PYPKGPREFIX}-sniffio-[0-9]*:../../misc/py-sniffio
 
