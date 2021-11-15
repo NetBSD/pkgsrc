@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.180 2021/11/04 05:08:05 mrg Exp $
+# $NetBSD: Makefile,v 1.181 2021/11/15 17:48:15 wiz Exp $
 
 DISTNAME=	blender-2.93.5
 CATEGORIES=	graphics
@@ -46,11 +46,11 @@ CMAKE_ARGS+=	-DWITH_PYTHON_INSTALL_REQUESTS=OFF
 
 PLIST_SUBST+=	BLENDERVER=${PKGVERSION_NOREV:C/[a-z]//}
 
-REPLACE_PYTHON=		release/bin/blender-thumbnailer.py		     \
+REPLACE_PYTHON=		release/bin/blender-thumbnailer.py		\
 			release/scripts/addons/io_curve_svg/svg_util_test.py \
-			release/scripts/addons/io_scene_fbx/fbx2json.py	     \
-			release/scripts/addons/io_scene_fbx/json2fbx.py	     \
-			release/scripts/modules/bl_i18n_utils/merge_po.py    \
+			release/scripts/addons/io_scene_fbx/fbx2json.py	\
+			release/scripts/addons/io_scene_fbx/json2fbx.py	\
+			release/scripts/modules/bl_i18n_utils/merge_po.py \
 			release/scripts/modules/blend_render_info.py
 
 INSTALLATION_DIRS=	bin share/blender
