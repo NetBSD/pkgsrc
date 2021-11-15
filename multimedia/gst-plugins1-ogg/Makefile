@@ -1,10 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2014/08/08 21:31:08 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2021/11/15 22:01:20 wiz Exp $
 
-GST_PLUGINS1_NAME=	ogg
-GST_PLUGINS1_DIRS=	ext/ogg
-GST_PLUGINS1_FLAGS=	ogg
+PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-base/-ogg/}
+CATEGORIES=	multimedia gnome
+
+COMMENT=	Open source multimedia framework - Ogg plugin
+
+GST_EXT_BUILD=	# defined
+GST_PLUGINS+=	ogg
 
 .include "../../multimedia/gst-plugins1-base/Makefile.common"
-
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

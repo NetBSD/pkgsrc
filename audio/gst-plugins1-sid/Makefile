@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2020/03/08 16:48:44 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2021/11/15 22:01:17 wiz Exp $
 
-GST_PLUGINS1_NAME=	sid
-GST_PLUGINS1_DIRS=	ext/sidplay
-GST_PLUGINS1_FLAGS=	sidplay
+PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-ugly/-sid/}
+CATEGORIES=	audio gnome
 
-USE_LANGUAGES=	c c++
+COMMENT=	Open source multimedia framework - Commodore 64 audio plugin
 
-PKGREVISION= 1
+GST_PLUGINS+=	sidplay
+
 .include "../../multimedia/gst-plugins1-ugly/Makefile.common"
-
 .include "../../audio/libsidplay/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
