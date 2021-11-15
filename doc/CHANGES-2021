@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5600 2021/11/15 22:09:18 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5601 2021/11/15 22:10:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8453,3 +8453,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added multimedia/gst-plugins1-aom version 1.18.5 [wiz 2021-11-15]
 	Added multimedia/gst-plugins1-libde265 version 1.18.5 [wiz 2021-11-15]
 	Added multimedia/gst-plugins1-x265 version 1.18.5 [wiz 2021-11-15]
+	Added x11/gst-plugins1-ximagesrc version 1.18.5 [wiz 2021-11-15]
