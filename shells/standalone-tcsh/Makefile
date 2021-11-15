@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2021/11/15 17:11:57 kim Exp $
+# $NetBSD: Makefile,v 1.36 2021/11/15 19:54:11 kim Exp $
 #
 
 # FIXME: This is because of PREFIX=/ below.
@@ -8,9 +8,9 @@ NOT_FOR_UNPRIVILEGED=	yes
 PKGNAME=		standalone-${DISTNAME}
 PKGREVISION=		2
 
-PATCHDIR=		${.CURDIR}/../../shells/tcsh/patches
-PKGDIR=			${.CURDIR}/../../shells/tcsh
-DESCR_SRC=		${.CURDIR}/../../shells/tcsh/DESCR ${.CURDIR}/DESCR
+PATCHDIR=		../../shells/tcsh/patches
+PKGDIR=			../../shells/tcsh
+DESCR_SRC=		../../shells/tcsh/DESCR DESCR
 
 # This package only makes sense on platforms that don't themselves ship tcsh
 # in /bin. Otherwise it clobbers the native copy, which really isn't what
