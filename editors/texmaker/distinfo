@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 17:56:54 nros Exp $
+$NetBSD: distinfo,v 1.21 2021/11/15 17:35:42 wiz Exp $
 
-RMD160 (texmaker-5.1.2.tar.bz2) = 7d91038621ae9090a4aa3b08a19d98da443a90ac
+BLAKE2s (texmaker-5.1.2.tar.bz2) = f7608dee4871a4024a4e9be2489384bdde0b058734bfa15ea54be15eaca4003b
 SHA512 (texmaker-5.1.2.tar.bz2) = a9625bad6401a36b0a9db90d59aa8e4a2e8f692d4937cbe1c159c46360d2b6257a14f6b5df760acfa7969944c93767d463da395dd5486bf619f6f3db31af7885
 Size (texmaker-5.1.2.tar.bz2) = 15199358 bytes
 SHA1 (patch-latexeditor.h) = 2168a70e6911aff17e10997948fbc555d18cd567
