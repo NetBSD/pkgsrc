@@ -1,32 +1,32 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:49:25 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/11/15 17:43:55 wiz Exp $
 
-RMD160 (compat50-alpha-5.0.tar.bz2) = 7811c8a709ee5c212d11ce61b7b43bd52a50008f
+BLAKE2s (compat50-alpha-5.0.tar.bz2) = afdaa9192e9da9ed14c8dce72d7a7f8abaaa6843f4aa0903bd40e0bba13f96cf
 SHA512 (compat50-alpha-5.0.tar.bz2) = 5a07ce4870c8a9e700c51e4a12da8080fbbf3cb0adb34c96ef2cb65b1f942b87e4a76c08f64e436b3b35f9f4b526a3052b668f5f45b602e3c4918ff9864e152a
 Size (compat50-alpha-5.0.tar.bz2) = 143409 bytes
-RMD160 (compat50-arm-5.0.tar.bz2) = b360b6943e88bd06de503d0b4aa1a66f4279786d
+BLAKE2s (compat50-arm-5.0.tar.bz2) = 2fa279ab64dcd03328c14a851caa45f2f0549f0dec31bc2e7c25f6783c7d14b0
 SHA512 (compat50-arm-5.0.tar.bz2) = e60696dce389ea614ac1c9e936aafe02b0a270c2b1e2ff2ac82614987bf6f74d30de246560ffc803b6f3964e022f44407fc506dc7f4ce0bb6276f12dc94ffc5d
 Size (compat50-arm-5.0.tar.bz2) = 135481 bytes
-RMD160 (compat50-i386-5.0.tar.bz2) = 1cc6d215ce32246053f1ce36038d7d372372b3c4
+BLAKE2s (compat50-i386-5.0.tar.bz2) = bfffe4408e788338f257ef30e39060c3586c5730155d9bc9f1bbd46a66000b72
 SHA512 (compat50-i386-5.0.tar.bz2) = 9f25a84821319813c845438a6c86a138b4c263a1767c94bd0503da7295930c16e611f45b9fb0a9d1e2396b456b39ee6d1cdceac3907b8435e96a265526c09b2f
 Size (compat50-i386-5.0.tar.bz2) = 109414 bytes
-RMD160 (compat50-m68k-5.0.tar.bz2) = f5209ce49fb321995da8cbfea54e1fe6ab2caf99
+BLAKE2s (compat50-m68k-5.0.tar.bz2) = 93b11df0473e2e971719b580003e70283899baa0d4883bbc34cf00165cfffb8d
 SHA512 (compat50-m68k-5.0.tar.bz2) = 48a4a5a5e7df2c38ed2ae03d68983915fed8dabd6ca406dbd4d65074f71dbae6b0e6e68c274b39c358d8bab993dbc8b2ad1223db25ecbfb7516a2b6c70aa5f15
 Size (compat50-m68k-5.0.tar.bz2) = 114477 bytes
-RMD160 (compat50-mipseb-5.0.tar.bz2) = a58559869747575f65d48548698e92487781622b
+BLAKE2s (compat50-mipseb-5.0.tar.bz2) = a7efd7124661f9c88d828742997a4fef9fd181f3130b217d1f3ab00619c69318
 SHA512 (compat50-mipseb-5.0.tar.bz2) = d7be0b46b05fd61490a80998da8422f43c91399b21ab1eb7a869b9d7efb410cd8920cbcb29e2cae1845f1ae4692141fab3122dcad14d9e090eee8834255bde97
 Size (compat50-mipseb-5.0.tar.bz2) = 130592 bytes
-RMD160 (compat50-mipsel-5.0.tar.bz2) = c76279cadca7a4359615b1f3c80c6ac577fb1ab4
+BLAKE2s (compat50-mipsel-5.0.tar.bz2) = a18bbcfd8be64a5bc9a2db4a1277d6a2bb9f869008e7eb1baae06a818e1d37c7
 SHA512 (compat50-mipsel-5.0.tar.bz2) = dd6f76b239f7c1092ce94dfed51d965e6871f8d058300ef1d06e89443e713d132648031c75ccf26d562302f6937ec8b2effe639204781b17e841609139ea7b5c
 Size (compat50-mipsel-5.0.tar.bz2) = 132289 bytes
-RMD160 (compat50-powerpc-5.0.tar.bz2) = b85fd2553a06e400ce990e3729f0925f3ba4d73f
+BLAKE2s (compat50-powerpc-5.0.tar.bz2) = a16b5b0822c730fdda23504680978460fc6ca8126ebe4b5402628a36a7a04244
 SHA512 (compat50-powerpc-5.0.tar.bz2) = b53c673cd4b11d66b0af44ccb9de1896df1d8563a2f83102ecb2aa678ff7594a2d141b977d345fa6eb70af33c58accd8c9195ff50dd6c43ad47176b1a797d367
 Size (compat50-powerpc-5.0.tar.bz2) = 133244 bytes
-RMD160 (compat50-sparc-5.0.tar.bz2) = 02df218fecb60c891d400fe21b859d9c7fc94e5a
+BLAKE2s (compat50-sparc-5.0.tar.bz2) = 46da69a6bafd98429bf6535f7348657fc201c188facab7d5ba3b3826058965ab
 SHA512 (compat50-sparc-5.0.tar.bz2) = b4735b5772cd63ab5848428b8474696eee65fba42ef2e6c86a02a61ab19c4a12e79725ad67af6e778cab3a34f2ada07112ddf835e7b1820fcde914548007d45b
 Size (compat50-sparc-5.0.tar.bz2) = 134475 bytes
-RMD160 (compat50-sparc64-5.0.tar.bz2) = 959deca0aba41ba8f097c88dde8ea795ab1d312d
+BLAKE2s (compat50-sparc64-5.0.tar.bz2) = b01e9319db09c7de921ebd2c8732915bcae4b078760fb22a33c81a0889d7201a
 SHA512 (compat50-sparc64-5.0.tar.bz2) = 2bc672a6367fbe03a898744e598a9bde87fe31424bcf2fadb8e53bfe8ac9c9cfa20ca958f5da36f62a6434dc046870d19c69c198a4061881fef3cccd9e5d7f6f
 Size (compat50-sparc64-5.0.tar.bz2) = 254522 bytes
-RMD160 (compat50-x86_64-5.0.tar.bz2) = 0d22c4be6916e9aa66f01bf0c45b8413ce70cb78
+BLAKE2s (compat50-x86_64-5.0.tar.bz2) = dc07aefc22cf36971bc18fbde7fe32225d60362e778365791c09bda6c6e57b0f
 SHA512 (compat50-x86_64-5.0.tar.bz2) = 1618e1b33a0b2be0a9608e97bf699d7c751ac7646d7a36d00ec5cb57aec86a9c12c14d0e09a7b7c6ffcbbbc86b67f498d86d30baeaba39502d171a57cdb35739
 Size (compat50-x86_64-5.0.tar.bz2) = 225598 bytes
