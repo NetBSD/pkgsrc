@@ -1,32 +1,32 @@
-$NetBSD: distinfo,v 1.48 2021/10/07 14:25:42 nia Exp $
+$NetBSD: distinfo,v 1.49 2021/11/15 20:01:51 schmonz Exp $
 
-RMD160 (netqmail-1.05-TAI-leapsecs.patch) = 9fd59001be5a07d914c66127236ebe8c33f64675
+BLAKE2s (netqmail-1.05-TAI-leapsecs.patch) = 9904388c38820c4866fe9b57cddbc0a8d4c12655e903da1b1701142c31454fe2
 SHA512 (netqmail-1.05-TAI-leapsecs.patch) = 2278139b825330a418171ad6dd4667410819591d3828f8b40dda789e1aafe1cefcc638fdc6d9de21a8c0ca6caffb41fbbb44bab2dd80f570e81c6e900c8596f7
 Size (netqmail-1.05-TAI-leapsecs.patch) = 16382 bytes
-RMD160 (netqmail-1.06-tls-20160918-onlyremote-20181107-spp-20181109-smtputf8-20181109.patch) = 1ad6791996f8741917e2b2980c7e5f6a9449e00f
+BLAKE2s (netqmail-1.06-tls-20160918-onlyremote-20181107-spp-20181109-smtputf8-20181109.patch) = eb5736e4fe3bd2ebac518969117a829b4b937f78aa000aa9495020a10008b0e4
 SHA512 (netqmail-1.06-tls-20160918-onlyremote-20181107-spp-20181109-smtputf8-20181109.patch) = a02cad7ef0f57a9eee8a12444a30df4d112ba256fa581124d7f0fb78acee4da53d0211d98de5822f058518d6a872e01e737f28e437b8ed5f8fa392ae8808468b
 Size (netqmail-1.06-tls-20160918-onlyremote-20181107-spp-20181109-smtputf8-20181109.patch) = 6962 bytes
-RMD160 (notqmail-1.07-tls-20190517-qmailremote-20190819-srs-20190819.patch) = a3682ab33bb0e746ae214dbac91e0c8f92c780e2
+BLAKE2s (notqmail-1.07-tls-20190517-qmailremote-20190819-srs-20190819.patch) = 25223e0ede7bd673db51a6df19c2c9bb418ef1e0931ca5dd992b25bd7c22e40f
 SHA512 (notqmail-1.07-tls-20190517-qmailremote-20190819-srs-20190819.patch) = 8b9894d743f6ea7ceb72d34fedaa8afeb61afdfb5b6d929b5c76eb31da27232cb6f952a26b3733c244bfd430750d250bdc0fa92464c6a64f017abd97c84e8c77
 Size (notqmail-1.07-tls-20190517-qmailremote-20190819-srs-20190819.patch) = 24175 bytes
-RMD160 (notqmail-1.07-tls-20200107-onlyremote-20200202.patch) = a6aa94fe9eb306a2ee0a99011110eedce695c75b
+BLAKE2s (notqmail-1.07-tls-20200107-onlyremote-20200202.patch) = df81da03c50bda8929e42fae41bb71f382510cdca099d7aa783997bef73ef500
 SHA512 (notqmail-1.07-tls-20200107-onlyremote-20200202.patch) = 786698a79c7e81349f1ecd12fd14fef03b0c873a0d98482dc506bb0c130214eda3a2f4f3a2c45f03c4ecc4721c6e7de3cf66f7e75f1b40a2f66ea22f53e30b28
 Size (notqmail-1.07-tls-20200107-onlyremote-20200202.patch) = 26972 bytes
-RMD160 (notqmail-1.08.tar.gz) = ea1417fe5aebc24cb1d06e9992d941e91045e3b0
+BLAKE2s (notqmail-1.08.tar.gz) = 677c26c932b4565394f933986e17c654149c169c81d4daeb164b5974364ce72d
 SHA512 (notqmail-1.08.tar.gz) = eca97f74a20522e85435fa76015a72adcc040e1acc401cbdbd7f55f41a720fabc6f251e606ff1d236e44de295f066538ec42aca415b4344c1cd15964f38c7085
 Size (notqmail-1.08.tar.gz) = 225713 bytes
-RMD160 (outgoingip.patch) = 032c653d395e5f599c0998e92debb09d84f90f0f
+BLAKE2s (outgoingip.patch) = a44a8e9ef22965a9366dd460fc737732268d66966d55aba01891ac18c03979f8
 SHA512 (outgoingip.patch) = 876eba3e65eba02f62838e5324cf64985254805ac5ec9417b168caa8c8d150a5185885d49a92d968690438289963bd6569e3de3330daf71a248206cd94227cd2
 Size (outgoingip.patch) = 6839 bytes
-RMD160 (qmail-1.03-maildir-uniq.patch) = 515d8dfc1e455a39f3695d18b5715623bc2e40ff
+BLAKE2s (qmail-1.03-maildir-uniq.patch) = 16a3a73a30a534aff1f9516a05fe3cb19b94aacb1ad92a7c2d7e563ce1bad05d
 SHA512 (qmail-1.03-maildir-uniq.patch) = 66a09cf13e851b1c3045cbe094cf83dbc37712bbd593c0dd2ee5f36cf6eaa055f29f23af16eed3811674ab6fbdec0a383911d2628dfcde5535873ca28b7c961c
 Size (qmail-1.03-maildir-uniq.patch) = 3903 bytes
-RMD160 (qmail-103.patch) = 437f8b3063438bbd82c59557333b3566214afa9c
+BLAKE2s (qmail-103.patch) = 8ae121135f2d35f179c7f6a722af8a7d56d214f8d445edbc152d2d9bb9b37847
 SHA512 (qmail-103.patch) = b81062bb0b0023f474c0b6af40601926e1c04ad395de480d114809e48a8060c06d99bdbdeb6f44d9e24ae1acedabb094b979193d305371aed958f18fc6eee354
 Size (qmail-103.patch) = 2104 bytes
-RMD160 (qmail-queue-custom-error-v2.netqmail-1.05.patch) = e40fe48e048a41d92c052a12aafa1fccf8becba2
+BLAKE2s (qmail-queue-custom-error-v2.netqmail-1.05.patch) = 373381fc88355763333272b56acbbb20a2818e763a3bd9b8a2e7cff33f5be7d4
 SHA512 (qmail-queue-custom-error-v2.netqmail-1.05.patch) = c3710a87cee5458fee7708166afd0d591b58b071eeea8d551c38c2d59c739865478cb1a0fbb8b592933f9bb85b865da6cdb8973fa0d93259605d01347600176c
 Size (qmail-queue-custom-error-v2.netqmail-1.05.patch) = 3873 bytes
-RMD160 (qmail-spp-0.42.tar.gz) = 5511722c52346692488a63bca53106d580a004c7
+BLAKE2s (qmail-spp-0.42.tar.gz) = 42d05876e0ce5423cdc343c16970fa554a91c094e21b7150f5c6d49399eea99c
 SHA512 (qmail-spp-0.42.tar.gz) = 03449862886a0ca20fbadab4c94b34b55d185f8df3261bd68aea99e9ded9edfab4477c6b38a8e0295e9b38b0045615da8b1a906a458f28745eadd3c4d882bcbf
 Size (qmail-spp-0.42.tar.gz) = 18689 bytes
