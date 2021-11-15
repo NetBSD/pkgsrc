@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5586 2021/11/15 12:48:32 jperkin Exp $
+$NetBSD: CHANGES-2021,v 1.5587 2021/11/15 17:45:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8436,3 +8436,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Added net/ucspi-udp version 0.88.1 [schmonz 2021-11-15]
 	Added net/tcpexec version 0.1.1 [schmonz 2021-11-15]
 	Updated pkgtools/pkg_install to 20211115 [jperkin 2021-11-15]
+	Updated www/py-httpcore to 0.14.1 [adam 2021-11-15]
+	Updated www/py-httpx to 0.21.0 [adam 2021-11-15]
+	Updated www/py-respx to 0.19.0 [adam 2021-11-15]
+	Updated www/py-httpx-socks to 0.5.2 [adam 2021-11-15]
