@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5587 2021/11/15 17:45:58 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5588 2021/11/15 19:54:34 kim Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8440,3 +8440,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-httpx to 0.21.0 [adam 2021-11-15]
 	Updated www/py-respx to 0.19.0 [adam 2021-11-15]
 	Updated www/py-httpx-socks to 0.5.2 [adam 2021-11-15]
+	Updated shells/standalone-tcsh to 6.23.00nb2 [kim 2021-11-15]
