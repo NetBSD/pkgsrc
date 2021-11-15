@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.312 2021/08/31 11:50:33 markd Exp $
+# $NetBSD: Makefile,v 1.313 2021/11/15 22:09:36 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -66,6 +66,7 @@ SUBDIR+=	gst-plugins0.10-v4l2
 SUBDIR+=	gst-plugins0.10-vp8
 SUBDIR+=	gst-plugins0.10-x264
 SUBDIR+=	gst-plugins0.10-xvid
+SUBDIR+=	gst-plugins1-aom
 SUBDIR+=	gst-plugins1-bad
 SUBDIR+=	gst-plugins1-base
 SUBDIR+=	gst-plugins1-dvdread
@@ -75,6 +76,7 @@ SUBDIR+=	gst-plugins1-egl-opengl
 SUBDIR+=	gst-plugins1-good
 SUBDIR+=	gst-plugins1-gtk
 SUBDIR+=	gst-plugins1-libav
+SUBDIR+=	gst-plugins1-libde265
 SUBDIR+=	gst-plugins1-mpeg2dec
 SUBDIR+=	gst-plugins1-ogg
 SUBDIR+=	gst-plugins1-omx
@@ -86,6 +88,7 @@ SUBDIR+=	gst-plugins1-v4l2
 SUBDIR+=	gst-plugins1-vaapi
 SUBDIR+=	gst-plugins1-vpx
 SUBDIR+=	gst-plugins1-x264
+SUBDIR+=	gst-plugins1-x265
 SUBDIR+=	gst123
 SUBDIR+=	gstreamer0.10
 SUBDIR+=	gstreamer1
