@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5585 2021/11/15 11:37:48 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.5586 2021/11/15 12:48:32 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8435,3 +8435,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated multimedia/mkvtoolnix to 63.0.0 [adam 2021-11-15]
 	Added net/ucspi-udp version 0.88.1 [schmonz 2021-11-15]
 	Added net/tcpexec version 0.1.1 [schmonz 2021-11-15]
+	Updated pkgtools/pkg_install to 20211115 [jperkin 2021-11-15]
