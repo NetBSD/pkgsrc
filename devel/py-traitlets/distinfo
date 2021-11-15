@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 08:34:06 adam Exp $
+$NetBSD: distinfo,v 1.7 2021/11/15 17:33:51 wiz Exp $
 
-RMD160 (traitlets-5.1.1.tar.gz) = a3d503f0531c93cacb7bac62584db9656c8f6f84
+BLAKE2s (traitlets-5.1.1.tar.gz) = 7f3a8e9f8422c49c428736f3fa422b7ba69f3334de439a5b1fc249dfc47b0eaa
 SHA512 (traitlets-5.1.1.tar.gz) = 6ef5fcde81e1403b4b28c80e636c75f49819e319863dfa654aa5bbb96d18cca82ef8e7878cc8cccdb988d75201c3912fc49c31b673d7182a1f7d3cc78c115112
 Size (traitlets-5.1.1.tar.gz) = 130629 bytes
