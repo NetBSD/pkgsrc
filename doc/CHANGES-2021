@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5608 2021/11/15 22:15:22 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5609 2021/11/15 22:15:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8461,3 +8461,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated multimedia/gst-plugins1-ugly to 1.18.5 [wiz 2021-11-15]
 	Updated multimedia/py-gstreamer1 to 1.18.5 [wiz 2021-11-15]
 	Updated multimedia/gst-plugins1-editing-services to 1.18.5 [wiz 2021-11-15]
+	Updated multimedia/gst-plugins1-libav to 1.18.5 [wiz 2021-11-15]
