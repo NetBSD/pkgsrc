@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 13:49:23 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/11/15 17:43:54 wiz Exp $
 
-RMD160 (compat12-i386-1.2.1.tar.bz2) = 38c9d8dd303f6e8d14837cbc205bb5bbeb23449c
+BLAKE2s (compat12-i386-1.2.1.tar.bz2) = 84ab30586d3263c03e272320aa8ea4574394e003a71f4c5ee347c5c22886dd5f
 SHA512 (compat12-i386-1.2.1.tar.bz2) = c359996d973d06bcbab1432e6a2e38c99156d1bd10b7ddb77f9a87c3cffc692578e5c81cc339daca31e272fec4d1932a3b11dfb4374d85dd6c2c1dd6a21532a5
 Size (compat12-i386-1.2.1.tar.bz2) = 243236 bytes
-RMD160 (compat12-m68k-1.2.1.tar.bz2) = 1ca54e91cb4d0025d30e30ed1fe02438d82a6b82
+BLAKE2s (compat12-m68k-1.2.1.tar.bz2) = 7d48b4fc2a442eb3116e177c8cdfc93a3a8ce4d6df23deb6218e111adae43a50
 SHA512 (compat12-m68k-1.2.1.tar.bz2) = edaf08c3b1494195d66e7b8c1cfcaf438b7a971e89a84946bff74dce453849585d1cb4ca6577b9dc633e779363661244efae65a373609b31bf291fdc35ffcc32
 Size (compat12-m68k-1.2.1.tar.bz2) = 240457 bytes
-RMD160 (compat12-ns32k-1.2.tar.bz2) = 3d0b27a62b825a297b9592730302f7492d94274e
+BLAKE2s (compat12-ns32k-1.2.tar.bz2) = fcecc6bf74fb7d3b0534d0494a87fcb455fb7937faa580ad629721156b03c3ee
 SHA512 (compat12-ns32k-1.2.tar.bz2) = 8b07a76e16a3d2ad8a22eb9f240befabe90bd891bb5dcfb6caf101134d5152e58ce524d8ab4121a60902781f84b2146c7732fe8d621ddc56c7b00a4544ddb2a4
 Size (compat12-ns32k-1.2.tar.bz2) = 235752 bytes
-RMD160 (compat12-sparc-1.2.1.tar.bz2) = d7d19aa0d5ed30185f16b4504474a82183f3a40a
+BLAKE2s (compat12-sparc-1.2.1.tar.bz2) = 9fce75cda66181decb860ec40a98a61aa6f2cc98e7417bc54e16a1230530a584
 SHA512 (compat12-sparc-1.2.1.tar.bz2) = 5a2b1392367f60c23d0d55d6ad5bd26041ae39866f6b56a5282fe880caeb9ac7abe6058cdda05870c72e0ad728e13ee553f829f488eb3a2643f94ee9afb8e8f0
 Size (compat12-sparc-1.2.1.tar.bz2) = 255268 bytes

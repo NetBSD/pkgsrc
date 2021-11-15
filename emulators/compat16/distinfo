@@ -1,32 +1,32 @@
-$NetBSD: distinfo,v 1.5 2021/10/07 13:49:23 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/11/15 17:43:54 wiz Exp $
 
-RMD160 (compat16-alpha-1.6.2.tar.bz2) = af52e20b46d0d5d73c35c2e427afe8dd4c9d048b
+BLAKE2s (compat16-alpha-1.6.2.tar.bz2) = 8142b6b2eba49909afd3f5b68898a6cf75f17b7df1baf5b8e76d4008dd8c8ba6
 SHA512 (compat16-alpha-1.6.2.tar.bz2) = 389778765968e2281bc78cc13c7c260574a512596017a15fd647a4a7a9ff4f2ff04a0d9d306623853001917771ef08f49be8588eda31452b9bce59504b02fcbf
 Size (compat16-alpha-1.6.2.tar.bz2) = 1116516 bytes
-RMD160 (compat16-arm-1.6.2.tar.bz2) = d0cd2bbaf8b6dcabe2330bb4617198f61d81047e
+BLAKE2s (compat16-arm-1.6.2.tar.bz2) = e661a67172febfb7f4799bb7e841dec9dbbb83685a63963aa855865039afc90e
 SHA512 (compat16-arm-1.6.2.tar.bz2) = 8a65ffe94542cd0558ed6c3165f48d9eb74ea9288692dd81af58274ab5470ec91e35182115d93c8a6d81f829076d8a7b535bcd5fc63ca6264a99d4e7cb85fa7c
 Size (compat16-arm-1.6.2.tar.bz2) = 946440 bytes
-RMD160 (compat16-i386-1.6.2.tar.bz2) = cecf04414196a3b529e19378b58bd23a97ce35aa
+BLAKE2s (compat16-i386-1.6.2.tar.bz2) = c816944af9f0957e400d9ac073384c02fb340fb914f31d26607c714460bb5d7c
 SHA512 (compat16-i386-1.6.2.tar.bz2) = abecc57cf7e37704cc22f9248642db00e165d2e941695e8e9f42459250b0218056706eb20a408981bca93f66eb982b077356a73adfe5bf804d38be159ffe2316
 Size (compat16-i386-1.6.2.tar.bz2) = 849911 bytes
-RMD160 (compat16-m68k-1.6.2.tar.bz2) = 0d10f5d64f6ec900f03e5d2bcd15344eeb4e76ff
+BLAKE2s (compat16-m68k-1.6.2.tar.bz2) = fdc5d521b630d743eeb83a37a2517fd7f2a98671e8ba5805b640164e50a6f426
 SHA512 (compat16-m68k-1.6.2.tar.bz2) = ad818172299643555fff0cb99516c99fb89c65dd675fbda7997ff211dd33ad6055f084b2dccd809c1fc0add1cfcd15edad04989313f55177baa54ef12045c8b2
 Size (compat16-m68k-1.6.2.tar.bz2) = 908817 bytes
-RMD160 (compat16-mipseb-1.6.2.tar.bz2) = 7969ebe25ec93ef99c42d34a6f6f450f35baf183
+BLAKE2s (compat16-mipseb-1.6.2.tar.bz2) = 7dd857226bdbab2b5da35aed0b64d92d423123795c08e9ec140bcd0d2f89c454
 SHA512 (compat16-mipseb-1.6.2.tar.bz2) = b6a6112664d49b6ce843d27b24cac56268c798e0a48224db0f9cc7d7cb1db0bd67ddbd7d68d3df4d854c7d46370205dec5bf6ee4887518c415881606c747e5dc
 Size (compat16-mipseb-1.6.2.tar.bz2) = 1267678 bytes
-RMD160 (compat16-mipsel-1.6.2.tar.bz2) = 09a3cef7e7c8df811e7ccd541644a83ad4c72174
+BLAKE2s (compat16-mipsel-1.6.2.tar.bz2) = b1a05d5727df76d32bed7920941820ea7a3e7b9f4a29a0c111823f1795608312
 SHA512 (compat16-mipsel-1.6.2.tar.bz2) = 57f043a878c2575a8268409dcebc4a7d425cd3fa00129f8aef7580fd0ef49cfb3b2bf48eecba290b8cceed8520ef44cd744c07a15f483c6ba068b0120a53aa74
 Size (compat16-mipsel-1.6.2.tar.bz2) = 1266504 bytes
-RMD160 (compat16-powerpc-1.6.2.tar.bz2) = cb71b8671f3e945741340732225b65ec94be6b62
+BLAKE2s (compat16-powerpc-1.6.2.tar.bz2) = 34924e03167bb832ade47871dd85ade01899ad81a607be017cd2ad8afb2ea5ac
 SHA512 (compat16-powerpc-1.6.2.tar.bz2) = 01be80c55d173e0a54e9bd702a6a75af5a54d2fc48cd634b8c24cb35ebeeabc3f4b5cf18ec5f09c37a85d5a7cb6e661f03c9f64b898aaf5495067f8fa6d8ac04
 Size (compat16-powerpc-1.6.2.tar.bz2) = 980269 bytes
-RMD160 (compat16-sparc-1.6.2.tar.bz2) = af3002f85c787cbacc81406710b0b24c1d0426e6
+BLAKE2s (compat16-sparc-1.6.2.tar.bz2) = 7ff31edb225b407e29ec313f428a7ec34f55387aad3c8898e389b2f59582fec5
 SHA512 (compat16-sparc-1.6.2.tar.bz2) = 33828a84bd2ccbad5d2ce5d7ba2b7d6a8711166ecce14e9e06e7a54b16de851e4a65f9a7dfbbb48a5773eebb82e3e5b4205a0268a9d1adace21cdbd40e7e9b95
 Size (compat16-sparc-1.6.2.tar.bz2) = 944819 bytes
-RMD160 (compat16-sparc64-1.6.2.tar.bz2) = 488d55db1fc3ca524289c3abffaf1d1080eb5c63
+BLAKE2s (compat16-sparc64-1.6.2.tar.bz2) = 36028f2d5dff06518cc48489cd8b4d714de8812ff92c4b1048bd14d650eb4d54
 SHA512 (compat16-sparc64-1.6.2.tar.bz2) = 95363c3b2305561df317b38c01140af13b55c36b34fca739da096641f3471181c927be8122c083ce5be16882f35c854c9ae982d35a4c9752e2c73e28e3b03222
 Size (compat16-sparc64-1.6.2.tar.bz2) = 930975 bytes
-RMD160 (compat16-vax-1.6.2.tar.bz2) = b6f5daef6be3f74e977e20aba9033b83a26e1de8
+BLAKE2s (compat16-vax-1.6.2.tar.bz2) = 8054cc6d9efb19982f36132d70c5a9d4ed0193141b90d601b62bb049225fae16
 SHA512 (compat16-vax-1.6.2.tar.bz2) = ee10c76382acbf21bb2ee7ebbbac2143d9134f5529117bf1585771f0f5660e29b63015b70997c9be9dba1712230db28dcfa51357e360a1866aaf4482f00aac52
 Size (compat16-vax-1.6.2.tar.bz2) = 715323 bytes

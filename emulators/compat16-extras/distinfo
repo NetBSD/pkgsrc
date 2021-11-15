@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:49:23 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/11/15 17:43:55 wiz Exp $
 
-RMD160 (compat16-extras-i386-1.6.2.tar.bz2) = 8dd72d861531bd00db90d462244986415076399c
+BLAKE2s (compat16-extras-i386-1.6.2.tar.bz2) = e48c483f1d3780b7114eadd73b53431cae7665a71f087e35a726e4669250c2e8
 SHA512 (compat16-extras-i386-1.6.2.tar.bz2) = b78a764e48cf493c4319b230953426aaa99a8fdd72d565a0a145e4c9ccb0fd4477f39ba315311ebfff3f176669a7372df86355b375f6933ed4f9156fec5625b1
 Size (compat16-extras-i386-1.6.2.tar.bz2) = 3506953 bytes
-RMD160 (compat16-extras-sparc-1.6.2.tar.bz2) = 507b051de677a85111d0de45a6c218271b571ba2
+BLAKE2s (compat16-extras-sparc-1.6.2.tar.bz2) = baa2a2977a9e0aa5cc626c85a8826a99e7433e08fd4b96f72641c145b83deaba
 SHA512 (compat16-extras-sparc-1.6.2.tar.bz2) = a66639779881ba721246202c953dfffbb76a044548ab6b03c7469d85497a6b5323d4302d6a3820a99150b5661779c080ebf407190b83af2796376b7685832666
 Size (compat16-extras-sparc-1.6.2.tar.bz2) = 1595142 bytes

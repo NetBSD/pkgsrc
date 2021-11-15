@@ -1,32 +1,32 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 13:49:23 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/11/15 17:43:54 wiz Exp $
 
-RMD160 (compat15-alpha-1.5.3.tar.bz2) = 7a93ac1f755f3e9702a9950531fc72bbc597e2e5
+BLAKE2s (compat15-alpha-1.5.3.tar.bz2) = e0583ce8473d489f5ca2d6f154dda5d4556d10e954988d0c02d5bd5b338846b3
 SHA512 (compat15-alpha-1.5.3.tar.bz2) = 4b3f9c7d8effa74d6ebe3078c6304a8089ddd0c2b532b4b22a29e25a02ddab86064800887e8714bca83ffd892e96ae8b032eb11c5ac2b265e182fd419701a4e6
 Size (compat15-alpha-1.5.3.tar.bz2) = 1412510 bytes
-RMD160 (compat15-arm-1.5.3.tar.bz2) = 092dcf5df1f6a2c4451c5adf82011d596584521d
+BLAKE2s (compat15-arm-1.5.3.tar.bz2) = 11191d505f643747b2b5d9263ea74854db360426f9b426109f55eaa1c4903d13
 SHA512 (compat15-arm-1.5.3.tar.bz2) = 4effa0c43b958091365d6c28f994e9c9567ea66240b6f7490b090c389cfc7f660fd341aeafeec71b181eef663aeb5d6da3074d53a4dd6055b3912a848eac3b82
 Size (compat15-arm-1.5.3.tar.bz2) = 2738008 bytes
-RMD160 (compat15-i386-1.5.3.tar.bz2) = c1caaeadf8045128fce54294ae09d34dd03c8535
+BLAKE2s (compat15-i386-1.5.3.tar.bz2) = 12e31cf5293e460d893780998d76087b35979e1ab0fd1cd62f2b20839187df21
 SHA512 (compat15-i386-1.5.3.tar.bz2) = 0c2297726fb611722ce1b20262b8cfbf8e6182af613fe4a7dcb61f42f8f0d968aab76ecd1902c841278a5664a7b15ef59d801ee5f59aaa65368ccbf78814c508
 Size (compat15-i386-1.5.3.tar.bz2) = 1008025 bytes
-RMD160 (compat15-m68k-1.5.3.tar.bz2) = 081fa60c92926d3105579cfbcf89b2720f1c2d10
+BLAKE2s (compat15-m68k-1.5.3.tar.bz2) = 499d658e0b2228a99bf69e9ae7e21c4831064b49ec538e1fa77010e53e7f7872
 SHA512 (compat15-m68k-1.5.3.tar.bz2) = 2a0ba716531c61a4fea79d73672616abe18dbf2c7653489b1836a8e2c143dab9d2432793e67f76cb1f6b6a616ff2ee0a81a756ab8b60496ab3957074878b8499
 Size (compat15-m68k-1.5.3.tar.bz2) = 2183410 bytes
-RMD160 (compat15-mipsel-1.5.3.tar.bz2) = d7be8fb7190f4c1eab40bc5164bf5bd6dd319e18
+BLAKE2s (compat15-mipsel-1.5.3.tar.bz2) = 06cdc835ec0c35b6b27ebd468e4e79caaec53db1d3e0b83e56c9e5b84c0f51aa
 SHA512 (compat15-mipsel-1.5.3.tar.bz2) = c2a3fe5375999c8289349ac97446b271b1e7665c144447100e0bc4bc32eb853a7c80d4e96536f5cb2fb343a806214dc035eafa3803a7dc85aedcabac65f9b4f1
 Size (compat15-mipsel-1.5.3.tar.bz2) = 1307378 bytes
-RMD160 (compat15-ns32k-1.5.3.tar.bz2) = ab3be90a62a84c8ec4b47b307026ee3b4a7932c4
+BLAKE2s (compat15-ns32k-1.5.3.tar.bz2) = ac621d2c96b7ca07ca3318a1fb070acbde5132a494c7ae7584e65f9792235b21
 SHA512 (compat15-ns32k-1.5.3.tar.bz2) = f1b7c343c76d0da3929e9e7d90dabf902e45c6d725caa0b828c269c70eadc6fe74e23c1d3397599fc9105adfa96f49152a7f0e3c66c3a9230fb665ced7060aa5
 Size (compat15-ns32k-1.5.3.tar.bz2) = 1524809 bytes
-RMD160 (compat15-powerpc-1.5.3.tar.bz2) = 061cedfef2e28c10a07ab401519934494c9d3f4c
+BLAKE2s (compat15-powerpc-1.5.3.tar.bz2) = e2e003038bbab561d838a3b9b94c7d7a05ef7be111b727ff6fbe93f9a08bc481
 SHA512 (compat15-powerpc-1.5.3.tar.bz2) = 715ed776100f74085171d5477cec0226cd6fd6b3d07eb7b009ece70d758b6b4410e045b57db67f6ea5c8063c8bb834bea8d6cd15635294c8d67e6b84d19a1cb6
 Size (compat15-powerpc-1.5.3.tar.bz2) = 1055544 bytes
-RMD160 (compat15-sparc-1.5.3.tar.bz2) = e2c320d8dedb42cad978029e0a69f3574f5fdfaa
+BLAKE2s (compat15-sparc-1.5.3.tar.bz2) = 6fcaebda37600b8ad06e20df3e22a2ee24ea321f1f152a99ecb17f7ebb24500b
 SHA512 (compat15-sparc-1.5.3.tar.bz2) = fb4a4e44ee9bd435e8861ac4b42a73d7a09fd302a162b8e362a391925615daf6187255aec66dd9477a5cede8608dee141b81948eb3ca3603e40d13ca5e722e5f
 Size (compat15-sparc-1.5.3.tar.bz2) = 965134 bytes
-RMD160 (compat15-sparc64-1.5.2.tar.bz2) = 50d126dc6213c02687aaf7dcb16a7e3236c82b34
+BLAKE2s (compat15-sparc64-1.5.2.tar.bz2) = a6cc98233951db2632ab63b7f293eb7b6d0bb65ee9f021e043b571ea4f270583
 SHA512 (compat15-sparc64-1.5.2.tar.bz2) = 303a28798bda19d5f7b086f941da9bf62924fde61606b7efe5147de56011e98fd6d40bc99d753e44f1a1f2f8a1ae56a9dfcba245c31358ddaa63ebd7c02512ef
 Size (compat15-sparc64-1.5.2.tar.bz2) = 760818 bytes
-RMD160 (compat15-vax-1.5.3.tar.bz2) = d402595ce921bf50fa9b0d63ec5ed5b3abb84880
+BLAKE2s (compat15-vax-1.5.3.tar.bz2) = f6ae4a3319a53c3c3935b03a9ef2b87b0790f3caf46cc7860804ca865c1489f7
 SHA512 (compat15-vax-1.5.3.tar.bz2) = 5979114dbe5bc8019ae82ce80a71db553acc84797dfdc28ce09dac73028c7fac2e6b746dc91882c9fde8649025302513decb1ed0d1fe2ab77918738cdc63b822
 Size (compat15-vax-1.5.3.tar.bz2) = 2060891 bytes
