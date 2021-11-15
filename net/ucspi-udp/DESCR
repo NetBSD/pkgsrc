@@ -1,0 +1,3 @@
+ucspi-udp is a set of command-line tools for building UDP-based
+client/server applications. They are derived from Dan Bernstein's
+ucspi-tcp 0.88.
