@@ -1,0 +1,2 @@
+tcpexec is a minimal UCSPI inetd. It attaches the standard input and
+output of a command to a TCP socket.
