@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2021/09/29 19:00:09 adam Exp $
+# $NetBSD: Makefile,v 1.54 2021/11/15 22:53:59 wiz Exp $
 
 DISTNAME=	libkcddb-${KAPPSVER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	multimedia
 
 HOMEPAGE=	https://www.kde.org/applications/multimedia/
