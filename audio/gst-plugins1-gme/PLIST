@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2019/09/08 10:20:07 nia Exp $
-lib/gstreamer-1.0/libgstgme.la
+@comment $NetBSD: PLIST,v 1.2 2021/11/15 22:01:16 wiz Exp $
+lib/gstreamer-1.0/libgstgme.so

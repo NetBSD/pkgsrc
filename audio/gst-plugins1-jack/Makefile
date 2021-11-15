@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2021/09/08 21:04:55 nia Exp $
+# $NetBSD: Makefile,v 1.8 2021/11/15 22:01:16 wiz Exp $
 
-GST_PLUGINS1_NAME=	jack
-GST_PLUGINS1_DIRS=	ext/jack
+PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-jack/}
+CATEGORIES=	audio gnome
 
-PKGREVISION= 3
+COMMENT=	Open source multimedia framework - JACK plugin
+
+GST_PLUGINS+=	jack
+
 .include "../../multimedia/gst-plugins1-good/Makefile.common"
-
 .include "../../audio/jack/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

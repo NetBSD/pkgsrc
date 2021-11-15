@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2020/03/08 16:48:44 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2021/11/15 22:01:17 wiz Exp $
 
-GST_PLUGINS1_NAME=	soundtouch
-GST_PLUGINS1_DIRS=	ext/soundtouch
+PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-bad/-soundtouch/}
+CATEGORIES=	audio gnome
 
-USE_LANGUAGES=		c c++
-PKGREVISION= 1
+COMMENT=	Open source multimedia framework - SoundTouch plugin
+
+GST_EXT_BUILD=	# defined
+GST_PLUGINS+=	soundtouch
+
 .include "../../multimedia/gst-plugins1-bad/Makefile.common"
-
 .include "../../audio/soundtouch/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
