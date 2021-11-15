@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2021/11/14 22:36:12 kim Exp $
-bin/tcsh
-usr/share/examples/tcsh/complete.tcsh
-usr/share/examples/tcsh/csh-mode.el
-usr/share/man/man1/tcsh.1
