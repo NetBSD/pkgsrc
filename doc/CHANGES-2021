@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5594 2021/11/15 22:05:01 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5595 2021/11/15 22:05:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8447,3 +8447,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added audio/gst-plugins1-lv2 version 1.18.5 [wiz 2021-11-15]
 	Added audio/gst-plugins1-modplug version 1.18.5 [wiz 2021-11-15]
 	Added audio/gst-plugins1-musepack version 1.18.5 [wiz 2021-11-15]
+	Added audio/gst-plugins1-sndfile version 1.18.5 [wiz 2021-11-15]
