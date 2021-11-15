@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.25 2021/02/10 21:44:44 cjep Exp $
+$NetBSD: README,v 1.26 2021/11/15 12:27:47 nia Exp $
 
 To try to get pkgsrc working on your system, please try the following
 as root:
@@ -114,7 +114,8 @@ Platforms with at least a tiny number of users
 ----------------------------------------------
 
   HPUX
-  SCO_SV (README.OpenServer5)
+  SCO OpenServer (README.OpenServer5)
+  SCO UnixWare (no README)
 
 
 Platforms with unknown status
@@ -124,7 +125,6 @@ Platforms with unknown status
   FreeMiNT (no README)
   GNUkFreeBSD
   Minix (no README)
-  UnixWare (no README)
 
 
 Platforms believed to have almost no users
