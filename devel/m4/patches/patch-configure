@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2021/11/15 13:20:04 nia Exp $
+
+PR pkg/56498: "devel/m4" build fails on netbsd-9/sparc
+
+--- configure.orig	2021-05-28 18:49:43.000000000 +0000
++++ configure
+@@ -8835,7 +8835,7 @@ rm -f core conftest.err conftest.$ac_obj
+ fi
+ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: $gl_cv_sparc_v8plus" >&5
+ printf "%s\n" "$gl_cv_sparc_v8plus" >&6; }
+-        if test $gl_cv_sparc_v8plus = no; then
++        if test $gl_cv_sparc_v8plus != no; then
+                               CC="$CC -mcpu=v9"
+           CXX="$CXX -mcpu=v9"
+         fi
