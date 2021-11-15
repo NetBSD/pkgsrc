@@ -1,0 +1,7 @@
+gst_dep = dependency('gstreamer-1.0', version : gst_req)
+gst_base_dep = dependency('gstreamer-base-1.0', version : gst_req)
+pbutils_dep = dependency('gstreamer-pbutils-1.0', version : gst_req)
+audio_dep = dependency('gstreamer-audio-1.0', version : gst_req)
+riff_dep = dependency('gstreamer-riff-1.0', version : gst_req)
+tag_dep = dependency('gstreamer-tag-1.0', version : gst_req)
+video_dep = dependency('gstreamer-video-1.0', version : gst_req)
