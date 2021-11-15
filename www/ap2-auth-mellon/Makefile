@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2021/11/09 01:50:45 manu Exp $
+# $NetBSD: Makefile,v 1.67 2021/11/15 18:17:05 wiz Exp $
 
 DISTNAME=	mod_auth_mellon-0.18.0
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//:S/_/-/g}
@@ -39,10 +39,7 @@ do-install:
 	    ${APXS} -i -S LIBEXECDIR=${DESTDIR}"$${libexecdir}" 	\
 	      -n auth_mellon  mod_auth_mellon.la
 
-BUILDLINK_ABI_DEPENDS.lasso+=	lasso>=2.1.0
-
 .include "../../security/lasso/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
