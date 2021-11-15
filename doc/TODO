@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21251 2021/11/15 22:13:53 wiz Exp $
+$NetBSD: TODO,v 1.21252 2021/11/15 22:15:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1646,7 +1646,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-gammu-3.1
 	o py-gcovr-4.2
 	o py-goocalendar-0.7.2
-	o py-gstreamer1-1.18.5 [wip]
 	o py-hgview-1.9.0
 	o py-hyperscan-0.2.0
 	o py-input-pad-1.4.2
