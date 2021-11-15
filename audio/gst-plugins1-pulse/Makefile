@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.26 2021/07/30 12:26:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2021/11/15 22:01:17 wiz Exp $
 
-GST_PLUGINS1_NAME=	pulse
-GST_PLUGINS1_DIRS=	ext/pulse
-GST_PLUGINS1_FLAGS=	pulse
+PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-pulse/}
+CATEGORIES=	audio gnome
 
-PKGREVISION= 6
+COMMENT=	Open source multimedia framework - PulseAudio plugin
+
+GST_PLUGINS+=	pulse
+
 .include "../../multimedia/gst-plugins1-good/Makefile.common"
-
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

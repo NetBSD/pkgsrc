@@ -1,12 +1,9 @@
-The Speex project aims to build an open-source, patent-free voice
-codec.  Unlike other codecs like MP3 and Ogg Vorbis, Speex is
-specially designed for compressing voice at low bitrates in the
-8-32 kbps/channel range.  Possible applications include Voice over
-IP (VoIP), internet audio streaming, archiving of speech data (e.g.
-voice mail), and audio books.  In some sense, it is meant to be
-complementary to the Ogg Vorbis codec.
+GStreamer is a library that allows the construction of graphs of
+media-handling components, ranging from simple mp3 playback to complex
+audio (mixing) and video (non-linear editing) processing.
 
-GStreamer is released under the LGPL.
+Applications can take advantage of advances in codec and filter technology
+transparently.  Developers can add new codecs and filters by writing a
+simple plugin with a clean, generic interface.
 
-This package is part of the 'good' plugins for GStreamer.  It provides the
-speex plugin, which allows speex encoding.
+This package provides the Speex audio plugin for GStreamer.

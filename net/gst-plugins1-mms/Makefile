@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2020/03/08 16:50:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2021/11/15 22:01:22 wiz Exp $
 
-GST_PLUGINS1_NAME=	mms
-GST_PLUGINS1_FLAGS=	libmms
-GST_PLUGINS1_DIRS=	ext/libmms
+PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-bad/-mms/}
+CATEGORIES=	net gnome
 
-PKGREVISION= 1
+COMMENT=	Open source multimedia framework - MMS plugin
+
+GST_EXT_BUILD=	# defined
+GST_PLUGINS+=	libmms
+
 .include "../../multimedia/gst-plugins1-bad/Makefile.common"
-
-BUILDLINK_API_DEPENDS.libmms+=	libmms>=0.4
 .include "../../net/libmms/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

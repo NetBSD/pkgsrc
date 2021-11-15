@@ -7,5 +7,4 @@ transparently.  Developers can add new codecs and filters by writing a
 simple plugin with a clean, generic interface.
 
 This package provides the dvdread plugin for GStreamer, which allows reading
-of DVD disks.  You'll probably want to install the dvdnav plugin (from the
-gst-plugins0.10-dvdnav package), too.
+of DVD disks.

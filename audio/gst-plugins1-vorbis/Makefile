@@ -1,10 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2014/08/08 21:31:07 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2021/11/15 22:01:17 wiz Exp $
 
-GST_PLUGINS1_NAME=	vorbis
-GST_PLUGINS1_DIRS=	ext/vorbis
-GST_PLUGINS1_FLAGS=	vorbis
+PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-base/-vorbis/}
+CATEGORIES=	audio gnome
+
+COMMENT=	Open source multimedia framework - Vorbis audio plugin
+
+GST_EXT_BUILD=	# defined
+GST_PLUGINS+=	vorbis
 
 .include "../../multimedia/gst-plugins1-base/Makefile.common"
-
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

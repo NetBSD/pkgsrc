@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2020/05/22 12:43:53 adam Exp $
+# $NetBSD: Makefile,v 1.7 2021/11/15 22:01:20 wiz Exp $
 
-GST_PLUGINS1_NAME=	resindvd
-GST_PLUGINS1_FLAGS=	dvdnav
-GST_PLUGINS1_DIRS=	ext/resindvd
+PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-bad/-resindvd/}
+CATEGORIES=	net gnome
 
-PKGREVISION= 2
+COMMENT=	Open source multimedia framework - DVD navigation plugin
+
+GST_EXT_BUILD=	# defined
+GST_PLUGINS+=	resindvd
+
 .include "../../multimedia/gst-plugins1-bad/Makefile.common"
-
 .include "../../multimedia/libdvdnav/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
