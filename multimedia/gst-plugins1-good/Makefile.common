@@ -1,57 +1,127 @@
-# $NetBSD: Makefile.common,v 1.37 2020/05/25 05:02:11 rillig Exp $
-#
-# used by audio/gst-plugins1-flac/Makefile
-# used by audio/gst-plugins1-jack/Makefile
-# used by audio/gst-plugins1-lame/Makefile
-# used by audio/gst-plugins1-mpg123/Makefile
-# used by audio/gst-plugins1-oss/Makefile
-# used by audio/gst-plugins1-pulse/Makefile
-# used by audio/gst-plugins1-speex/Makefile
-# used by audio/gst-plugins1-twolame/Makefile
-# used by audio/gst-plugins1-wavpack/Makefile
-# used by graphics/gst-plugins1-cairo/Makefile
-# used by graphics/gst-plugins1-gdk_pixbuf/Makefile
-# used by graphics/gst-plugins1-jpeg/Makefile
-# used by graphics/gst-plugins1-png/Makefile
-# used by multimedia/gst-plugins1-gtk/Makefile
-# used by multimedia/gst-plugins1-v4l2/Makefile
-# used by multimedia/gst-plugins1-vpx/Makefile
-# used by net/gst-plugins1-soup/Makefile
-# used by x11/gst-plugins1-x11/Makefile
+# $NetBSD: Makefile.common,v 1.38 2021/11/15 22:01:20 wiz Exp $
 
-GST_PLUGINS1_TYPE=	good
-GST_PLUGINS1_VER=	1.16.2
+DISTNAME=	gst-plugins-good-1.18.5
+MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-plugins-good/
+EXTRACT_SUFX=	.tar.xz
 
-# Disable all drivers and features by default.
-#
-# 2020-05-25: Needs to be synced with ./configure, which
-# has many more options that can be disabled.
-.for driver in	aalib \
-		aalibtest \
-		cairo \
-		dv1394 \
-		flac \
-		gst_v4l2 \
-		jack \
-		jpeg \
-		libcaca \
-		libdv \
-		libpng \
-		oss \
-		oss4 \
-		pulse \
-		shout2 \
-		speex \
-		vpx \
-		x \
-		zlib
-CONFIGURE_ARGS+=	--disable-${driver}
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://gstreamer.freedesktop.org/
+LICENSE=	gnu-gpl-v2
+
+USE_LANGUAGES=	c c++
+
+USE_TOOLS+=	pkg-config
+
+DISTINFO_FILE=	${.CURDIR}/../../multimedia/gst-plugins1-good/distinfo
+PATCHDIR=	${.CURDIR}/../../multimedia/gst-plugins1-good/patches
+
+MESON_ARGS+=	-Dasm=disabled
+MESON_ARGS+=	-Dexamples=disabled
+MESON_ARGS+=	-Dorc=disabled
+
+PKGCONFIG_OVERRIDE=		output/pkgconfig/*.pc
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_FOR_BUILD_ONLY=		tool
+
+# grep '^option' meson_options.txt | \
+# sed -e "s/',.*//g" -e "s/option('//g" | \
+# xargs printf 'GST_PLUGINS_SET+=	%s\n'
+GST_PLUGINS_SET+=	alpha
+GST_PLUGINS_SET+=	apetag
+GST_PLUGINS_SET+=	audiofx
+GST_PLUGINS_SET+=	audioparsers
+GST_PLUGINS_SET+=	auparse
+GST_PLUGINS_SET+=	autodetect
+GST_PLUGINS_SET+=	avi
+GST_PLUGINS_SET+=	cutter
+GST_PLUGINS_SET+=	debugutils
+GST_PLUGINS_SET+=	deinterlace
+GST_PLUGINS_SET+=	dtmf
+GST_PLUGINS_SET+=	effectv
+GST_PLUGINS_SET+=	equalizer
+GST_PLUGINS_SET+=	flv
+GST_PLUGINS_SET+=	flx
+GST_PLUGINS_SET+=	goom
+GST_PLUGINS_SET+=	goom2k1
+GST_PLUGINS_SET+=	icydemux
+GST_PLUGINS_SET+=	id3demux
+GST_PLUGINS_SET+=	imagefreeze
+GST_PLUGINS_SET+=	interleave
+GST_PLUGINS_SET+=	isomp4
+GST_PLUGINS_SET+=	law
+GST_PLUGINS_SET+=	level
+GST_PLUGINS_SET+=	matroska
+GST_PLUGINS_SET+=	monoscope
+GST_PLUGINS_SET+=	multifile
+GST_PLUGINS_SET+=	multipart
+GST_PLUGINS_SET+=	replaygain
+GST_PLUGINS_SET+=	rtp
+GST_PLUGINS_SET+=	rtpmanager
+GST_PLUGINS_SET+=	rtsp
+GST_PLUGINS_SET+=	shapewipe
+GST_PLUGINS_SET+=	smpte
+GST_PLUGINS_SET+=	spectrum
+GST_PLUGINS_SET+=	udp
+GST_PLUGINS_SET+=	videobox
+GST_PLUGINS_SET+=	videocrop
+GST_PLUGINS_SET+=	videofilter
+GST_PLUGINS_SET+=	videomixer
+GST_PLUGINS_SET+=	wavenc
+GST_PLUGINS_SET+=	wavparse
+GST_PLUGINS_SET+=	y4m
+GST_PLUGINS_SET+=	aalib
+GST_PLUGINS_SET+=	bz2
+GST_PLUGINS_SET+=	cairo
+GST_PLUGINS_SET+=	directsound
+GST_PLUGINS_SET+=	dv
+GST_PLUGINS_SET+=	dv1394
+GST_PLUGINS_SET+=	flac
+GST_PLUGINS_SET+=	gdk-pixbuf
+GST_PLUGINS_SET+=	gtk3
+GST_PLUGINS_SET+=	jack
+GST_PLUGINS_SET+=	jpeg
+GST_PLUGINS_SET+=	lame
+GST_PLUGINS_SET+=	libcaca
+GST_PLUGINS_SET+=	mpg123
+GST_PLUGINS_SET+=	oss
+GST_PLUGINS_SET+=	oss4
+GST_PLUGINS_SET+=	osxaudio
+GST_PLUGINS_SET+=	osxvideo
+GST_PLUGINS_SET+=	png
+GST_PLUGINS_SET+=	pulse
+GST_PLUGINS_SET+=	qt5
+GST_PLUGINS_SET+=	shout2
+GST_PLUGINS_SET+=	soup
+GST_PLUGINS_SET+=	speex
+GST_PLUGINS_SET+=	taglib
+GST_PLUGINS_SET+=	twolame
+GST_PLUGINS_SET+=	vpx
+GST_PLUGINS_SET+=	waveform
+GST_PLUGINS_SET+=	wavpack
+GST_PLUGINS_SET+=	rpicamsrc
+GST_PLUGINS_SET+=	rpi-header-dir
+GST_PLUGINS_SET+=	rpi-lib-dir
+GST_PLUGINS_SET+=	ximagesrc
+GST_PLUGINS_SET+=	ximagesrc-xshm
+GST_PLUGINS_SET+=	ximagesrc-xfixes
+GST_PLUGINS_SET+=	ximagesrc-xdamage
+GST_PLUGINS_SET+=	v4l2
+GST_PLUGINS_SET+=	v4l2-libv4l2
+GST_PLUGINS_SET+=	v4l2-gudev
+GST_PLUGINS_SET+=	nls
+GST_PLUGINS_SET+=	tests
+
+.for i in ${GST_PLUGINS_SET}
+.  if !empty(GST_PLUGINS:M${i})
+MESON_ARGS+=	-D${i}=enabled
+.  else
+MESON_ARGS+=	-D${i}=disabled
+.  endif
 .endfor
 
-.include "../../multimedia/gst-plugins1-base/plugins.mk"
-.include "../../devel/orc/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gst-plugins1-base+=	gst-plugins1-base>=1.16.2
-.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gstreamer1+=		gstreamer1>=1.16.2
 .include "../../multimedia/gstreamer1/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
+.include "../../lang/python/tool.mk"
+.include "../../devel/meson/build.mk"

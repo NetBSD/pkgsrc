@@ -1,9 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2020/03/08 16:48:43 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2021/11/15 22:01:16 wiz Exp $
 
-GST_PLUGINS1_NAME=	gme
-GST_PLUGINS1_DIRS=	ext/gme
+PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-bad/-gme/}
+CATEGORIES=	audio gnome
 
-PKGREVISION= 1
+COMMENT=	Open source multimedia framework - Game Music Emu plugin
+
+GST_EXT_BUILD=	# defined
+GST_PLUGINS+=	gme
+
 .include "../../multimedia/gst-plugins1-bad/Makefile.common"
 .include "../../audio/game-music-emu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

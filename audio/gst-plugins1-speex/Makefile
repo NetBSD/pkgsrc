@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2020/03/08 16:48:44 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2021/11/15 22:01:17 wiz Exp $
 
-GST_PLUGINS1_NAME=	speex
-GST_PLUGINS1_DIRS=	ext/speex
-GST_PLUGINS1_FLAGS=	speex
+PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-speex/}
+CATEGORIES=	audio gnome
 
-PKGREVISION= 1
+COMMENT=	Open source multimedia framework - Speex plugin
+
+GST_PLUGINS+=	speex
+
 .include "../../multimedia/gst-plugins1-good/Makefile.common"
-
 .include "../../audio/speex/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

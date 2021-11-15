@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.Darwin,v 1.2 2018/05/23 20:43:19 adam Exp $
-lib/gstreamer-1.0/libgstosxaudio.la
-lib/gstreamer-1.0/libgstosxvideo.la

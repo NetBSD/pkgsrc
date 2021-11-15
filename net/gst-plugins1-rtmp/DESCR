@@ -9,4 +9,4 @@ simple plugin with a clean, generic interface.
 GStreamer is released under the LGPL.
 
 This package is part of the 'bad' plugins for GStreamer.  It provides a
-plugin for "rtmp".
+plugin for Adobe's RTMP (Real-Time Messaging Protocol) streaming system.
