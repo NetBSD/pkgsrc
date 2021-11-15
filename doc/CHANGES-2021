@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5589 2021/11/15 19:56:15 kim Exp $
+$NetBSD: CHANGES-2021,v 1.5590 2021/11/15 22:02:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8442,3 +8442,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-httpx-socks to 0.5.2 [adam 2021-11-15]
 	Updated shells/standalone-tcsh to 6.23.00nb2 [kim 2021-11-15]
 	Updated shells/static-tcsh to 6.23.00nb2 [kim 2021-11-15]
+	Added audio/gst-plugins1-fluidsynth version 1.18.5 [wiz 2021-11-15]
