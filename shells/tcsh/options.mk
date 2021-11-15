@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2021/11/15 17:28:59 kim Exp $
+# $NetBSD: options.mk,v 1.3 2021/11/15 19:39:27 kim Exp $
 
 .if !empty(PKGNAME:Mstandalone-tcsh-[0-9]*)
 PKG_OPTIONS_VAR=	PKG_OPTIONS.standalone-tcsh
@@ -12,9 +12,9 @@ PKG_SUPPORTED_OPTIONS=	nls
 PKG_SUGGESTED_OPTIONS=	nls
 .if empty(PKGNAME:Mstatic-tcsh-[0-9]*)
 PKG_SUPPORTED_OPTIONS+=	static
-. if !empty(PKGNAME:Mstandalone-tcsh-[0-9]*) && ${OPSYS} != "SunOS"
+.  if !empty(PKGNAME:Mstandalone-tcsh-[0-9]*) && ${OPSYS} != "SunOS"
 PKG_SUGGESTED_OPTIONS+=	static
-. endif
+.  endif
 .endif
 
 PLIST_VARS+=		nls
