@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.25 2020/10/03 19:08:52 schmonz Exp $
+# $NetBSD: options.mk,v 1.26 2021/11/15 20:30:32 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.djbdns
 PKG_SUPPORTED_OPTIONS+=		djbdns-cachestats djbdns-ignoreip2 djbdns-listenmultiple
@@ -10,7 +10,7 @@ PKG_SUGGESTED_OPTIONS+=		djbdns-mergequeries djbdns-tinydns64
 .if !empty(PKG_OPTIONS:Mdjbdns-cachestats)
 CACHESTATS_PATCH=			djbdns-cachestats.patch
 PATCHFILES+=				${CACHESTATS_PATCH}
-SITES.${CACHESTATS_PATCH}=		http://romana.now.ie/software/
+SITES.${CACHESTATS_PATCH}=		https://lecter.redbrick.dcu.ie/software/
 PATCH_DIST_STRIP.${CACHESTATS_PATCH}=	-p1
 .endif
 

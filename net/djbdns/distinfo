@@ -1,24 +1,21 @@
-$NetBSD: distinfo,v 1.29 2021/10/07 14:41:21 nia Exp $
+$NetBSD: distinfo,v 1.30 2021/11/15 20:30:32 schmonz Exp $
 
-RMD160 (djbdns-1.05.tar.gz) = a832cbfd93e4ccec6a565492a4ee0b3c1b4b68ed
+BLAKE2s (djbdns-1.05.tar.gz) = 0a7d33115f6fc7b461cb2d0150632a1cce36f4074e27b124b3aeac6fbf71ebee
 SHA512 (djbdns-1.05.tar.gz) = 20f066402801d7bec183cb710a5bc51e41f1410024741e5803e26f68f2c13567e48eba793f233dfab903459c3335bc169e24b99d66a4c64e617e1f0779732fa9
 Size (djbdns-1.05.tar.gz) = 85648 bytes
-RMD160 (djbdns-1.05-man-20031023.tar.gz) = 42a5b3305513851dfe1da46df6f405bc81602fbe
+BLAKE2s (djbdns-1.05-man-20031023.tar.gz) = 18402c540774cd75fb70e5effc61add085084cc73ba2274fe9490956fa0745db
 SHA512 (djbdns-1.05-man-20031023.tar.gz) = 98af7bd9033a2205fbbc0f23b7eab45b9756f6ceff5199a62952e19c89c9fe3c03495cb6f8621d388f883c40650309a1509095417df3f54af21a71350c4aa183
 Size (djbdns-1.05-man-20031023.tar.gz) = 17170 bytes
-RMD160 (dnscache-1.05-multiple-ip.patch) = 5061d1c545f66efe9cf2158e6edda613dce79f8e
+BLAKE2s (dnscache-1.05-multiple-ip.patch) = 1e34377db902b93d391909b933ad05d78c8d66c452d60705a56e4192b4d1ca8a
 SHA512 (dnscache-1.05-multiple-ip.patch) = 0a20ea2bc3a72f0879dc1848748f7170efbc41133602a61ec006cb01c1431a77d5d63e618d7fa536522a85647082e4a080fbe0a59c256b0f43117177d40eb504
 Size (dnscache-1.05-multiple-ip.patch) = 7601 bytes
-RMD160 (djbdns-1.05-test28.diff.xz) = 2ee73a5b2080f6b20ded49b74999889f996bb8cc
-SHA512 (djbdns-1.05-test28.diff.xz) = 7fbfeda10221a0a09897c2e744df5606c83113c394ce055d822b0d8733873d72567a88c37905d21c7d2395170fc12b9e9eb133a941aa809f1b9856872ab48230
-Size (djbdns-1.05-test28.diff.xz) = 22072 bytes
-RMD160 (djbdns-1.05-ignoreip2.patch) = bf8a0d38ae7bfb09a8ab2a04600680613db10aaa
+BLAKE2s (djbdns-1.05-ignoreip2.patch) = a6da4ce5cf84e89cb0d27d48f5348f59a4b2721d5838cf00255e5bc7e081953a
 SHA512 (djbdns-1.05-ignoreip2.patch) = 4e7075c7400374c954fcf15b4c30d226a3e952da780cf77e1c303a7b350d069252c999da1f29e56100cb8964d1583e843a0acee1009f88551fea9040ca41145b
 Size (djbdns-1.05-ignoreip2.patch) = 3890 bytes
-RMD160 (djbdns-1.05-multiip.diff) = 2c60f2fbed9410106ead6b007897c34690a5072f
+BLAKE2s (djbdns-1.05-multiip.diff) = 2c8d0400019502e6a74a05e51d4fd3a9899de29c40df2876029b94e83e094fe7
 SHA512 (djbdns-1.05-multiip.diff) = 76a6d8120acf1cbeb1778d1eecc388548a401a59b080656bb8d4e0995de32347fece7c127c1e72c26a3768273d342dfa4491969efb6ac9d7be9172e9908d980c
 Size (djbdns-1.05-multiip.diff) = 5522 bytes
-RMD160 (djbdns-cachestats.patch) = e09994d84573e781ce18b59f909f8bd013de5d8e
+BLAKE2s (djbdns-cachestats.patch) = 76e6facc76923d8216dd3e9151350dfe2375fc00c569cb35b02b084c773a4eaa
 SHA512 (djbdns-cachestats.patch) = e78b6a8fc43f94e5bc5971d85f952ef9cac4fa827b00036994fa51dcebb9c9755c36488ac24a9ec7b92097a38938191147faf8cce84a9e636072684db28a2e62
 Size (djbdns-cachestats.patch) = 2341 bytes
 SHA1 (patch-Makefile) = 0dffb59090ccb4977c65885f062eb37255ccd0d9
