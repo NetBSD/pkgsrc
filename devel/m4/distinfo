@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.51 2021/10/26 10:15:38 nia Exp $
+$NetBSD: distinfo,v 1.52 2021/11/15 13:20:04 nia Exp $
 
 BLAKE2s (m4-1.4.19.tar.gz) = f1380114d839935b2afa53fdd7162dc5df2bbeb6d5eab48528916a138f483cbc
 SHA512 (m4-1.4.19.tar.gz) = f5dd0f02fcae65a176a16af9a8e1747c26e9440c6c224003ba458d3298b777a75ffb189aee9051fb0c4840b2a48278be4a51d959381af0b1d627570f478c58f2
 Size (m4-1.4.19.tar.gz) = 2953876 bytes
+SHA1 (patch-configure) = 941bba8b1a10c3fc305d20abdb247cf45e44d534
 SHA1 (patch-lib_strerror_override.c) = 29905fecf6c92f75c4999f1e3cb56e14fe2f4aae
+SHA1 (patch-m4_sparcv8+.m4) = 761e592a700ea47ac0ba15d960f073115005dedd
