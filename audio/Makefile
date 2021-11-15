@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.642 2021/11/05 22:47:05 nia Exp $
+# $NetBSD: Makefile,v 1.643 2021/11/15 22:05:46 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -176,15 +176,21 @@ SUBDIR+=	gst-plugins1-dts
 SUBDIR+=	gst-plugins1-faac
 SUBDIR+=	gst-plugins1-faad
 SUBDIR+=	gst-plugins1-flac
+SUBDIR+=	gst-plugins1-fluidsynth
 SUBDIR+=	gst-plugins1-gme
 SUBDIR+=	gst-plugins1-jack
+SUBDIR+=	gst-plugins1-ladspa
 SUBDIR+=	gst-plugins1-lame
 SUBDIR+=	gst-plugins1-libvisual
+SUBDIR+=	gst-plugins1-lv2
+SUBDIR+=	gst-plugins1-modplug
 SUBDIR+=	gst-plugins1-mpg123
+SUBDIR+=	gst-plugins1-musepack
 SUBDIR+=	gst-plugins1-opus
 SUBDIR+=	gst-plugins1-oss
 SUBDIR+=	gst-plugins1-pulse
 SUBDIR+=	gst-plugins1-sid
+SUBDIR+=	gst-plugins1-sndfile
 SUBDIR+=	gst-plugins1-soundtouch
 SUBDIR+=	gst-plugins1-speex
 SUBDIR+=	gst-plugins1-twolame
