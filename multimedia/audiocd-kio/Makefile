@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2021/09/29 19:01:02 adam Exp $
+# $NetBSD: Makefile,v 1.57 2021/11/15 22:54:24 wiz Exp $
 
 DISTNAME=	audiocd-kio-${KAPPSVER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	multimedia
 
 HOMEPAGE=	https://kde.org/applications/multimedia/

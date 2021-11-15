@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.204 2021/05/02 11:06:15 nia Exp $
+# $NetBSD: Makefile,v 1.205 2021/11/15 22:54:31 wiz Exp $
 
 DISTNAME=	epiphany-3.36.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/3.36/}
 EXTRACT_SUFX=	.tar.xz
