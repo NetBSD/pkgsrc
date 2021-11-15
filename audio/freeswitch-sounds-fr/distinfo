@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.4 2021/10/07 13:09:23 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/11/15 17:03:08 wiz Exp $
 
-RMD160 (freeswitch/freeswitch-sounds-fr-ca-june-16000-1.0.18.tar.gz) = 1c1b78e32f6f304b05a615573c666d7b00813b2a
+BLAKE2s (freeswitch/freeswitch-sounds-fr-ca-june-16000-1.0.18.tar.gz) = 9168deeb95e7236e4a719940a9ad1a07bc58e31b60ff1d2fa499a55200bad172
 SHA512 (freeswitch/freeswitch-sounds-fr-ca-june-16000-1.0.18.tar.gz) = d3306ad81ac9f3da3da6a526abbe1c315a0c50f89750ac3f930086dcd088a0de64a5dd6c06f0d58d28ba12f59abe871701cc2dcf838bb43a1d8d2ed85b5bff0a
 Size (freeswitch/freeswitch-sounds-fr-ca-june-16000-1.0.18.tar.gz) = 26607279 bytes
-RMD160 (freeswitch/freeswitch-sounds-fr-ca-june-32000-1.0.18.tar.gz) = 6eb6ff54eb259ec5e2159fac44ca8504497e998c
+BLAKE2s (freeswitch/freeswitch-sounds-fr-ca-june-32000-1.0.18.tar.gz) = 910e44ce8458adb1e4cf80cb23d979c949d24ca46125468b21935f28bc248c13
 SHA512 (freeswitch/freeswitch-sounds-fr-ca-june-32000-1.0.18.tar.gz) = 5c49cfc7cd7ab28e947f5ce3e26270f9e2d939caeec928da48760c93b295eb03fe50c7b113a23df9d6f019f788431d0b445e6fc5af172fae239ee08cd288ba42
 Size (freeswitch/freeswitch-sounds-fr-ca-june-32000-1.0.18.tar.gz) = 52075212 bytes
-RMD160 (freeswitch/freeswitch-sounds-fr-ca-june-48000-1.0.18.tar.gz) = a6b562070b01a674943e41538cca80fa20e30329
+BLAKE2s (freeswitch/freeswitch-sounds-fr-ca-june-48000-1.0.18.tar.gz) = 3694fb53a3d9bd44b0276d0b7f18c68fbbbf265656802a22427e35a4f0b3d39c
 SHA512 (freeswitch/freeswitch-sounds-fr-ca-june-48000-1.0.18.tar.gz) = 351fcec1fdd8f201af99d9ec63adacfbb2e16595287eca24c262cde853811669d52486c15eea3346a1c409a84aa837782aadea83ea269267a612592337f7bee4
 Size (freeswitch/freeswitch-sounds-fr-ca-june-48000-1.0.18.tar.gz) = 76712496 bytes
-RMD160 (freeswitch/freeswitch-sounds-fr-ca-june-8000-1.0.18.tar.gz) = 96a619213fb306e1fe97c4346099b565e3b6e71a
+BLAKE2s (freeswitch/freeswitch-sounds-fr-ca-june-8000-1.0.18.tar.gz) = c85af9cb6c2ce64b1751403f1c72775f88be244e576ba5a2fd84558334dd8168
 SHA512 (freeswitch/freeswitch-sounds-fr-ca-june-8000-1.0.18.tar.gz) = 82640dda13288d911b21fd1beb83f08d5a8497d35e2cdb6438c072bdf81981b1836f91be098cfeb42eb10278170a923cfa120113e8d6329bc94742a1b184396b
 Size (freeswitch/freeswitch-sounds-fr-ca-june-8000-1.0.18.tar.gz) = 13468498 bytes
