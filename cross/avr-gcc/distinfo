@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.13 2021/10/07 13:30:21 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/11/15 17:22:41 wiz Exp $
 
-RMD160 (gcc-10.3.0.tar.xz) = 8edb715cf1159fd8de773d0d5208d2e83ca36402
+BLAKE2s (gcc-10.3.0.tar.xz) = 6d7c42f9386e5e32a3148122471cb207e5f65d7b5f53b3c9adba2d45a4f28715
 SHA512 (gcc-10.3.0.tar.xz) = 2b2dd7453d48a398c29eaebd1422b70341001b8c90a62aee51e83344e7fdd8a8e45f82a4a9165bd7edc76dada912c932f4b6632c5636760fec4c5d7e402b3f86
 Size (gcc-10.3.0.tar.xz) = 76692288 bytes
-RMD160 (isl-0.24.tar.bz2) = b3bf8e1ad50207d4eebecc47cb4cffdac6581a57
-SHA512 (isl-0.24.tar.bz2) = aab3bddbda96b801d0f56d2869f943157aad52a6f6e6a61745edd740234c635c38231af20bc3f1a08d416a5e973a90e18249078ed8e4ae2f1d5de57658738e95
-Size (isl-0.24.tar.bz2) = 2261594 bytes
 SHA1 (patch-contrib_download__prerequisites) = 16d02e5b026ce052b61eced69cfd6a627fea65f5
 SHA1 (patch-gcc_configure) = 613d33d859ec3f108046274d09396aeb344e04cf
