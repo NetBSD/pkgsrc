@@ -1,29 +1,56 @@
-# $NetBSD: Makefile.common,v 1.33 2020/05/31 14:47:47 rillig Exp $
-#
-# used by audio/gst-plugins1-a52/Makefile
-# used by audio/gst-plugins1-lame/Makefile
-# used by audio/gst-plugins1-mpg123/Makefile
-# used by audio/gst-plugins1-sid/Makefile
-# used by audio/gst-plugins1-twolame/Makefile
-# used by multimedia/gst-plugins1-dvdread/Makefile
-# used by multimedia/gst-plugins1-mpeg2dec/Makefile
-# used by multimedia/gst-plugins1-x264/Makefile
+# $NetBSD: Makefile.common,v 1.34 2021/11/15 22:01:21 wiz Exp $
 
-GST_PLUGINS1_TYPE=	ugly
-GST_PLUGINS1_VER=	1.16.2
+DISTNAME=	gst-plugins-ugly-1.18.5
+MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-plugins-ugly/
+EXTRACT_SUFX=	.tar.xz
 
-# Disable all drivers and features by default.
-.for driver in	a52dec \
-		amrnb \
-		dvdread \
-		mpeg2dec \
-		sidplay
-CONFIGURE_ARGS+=	--disable-${driver}
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://gstreamer.freedesktop.org/
+LICENSE=	gnu-gpl-v2
+
+USE_LANGUAGES=	c c++
+
+USE_TOOLS+=	pkg-config xgettext
+
+DISTINFO_FILE=	${.CURDIR}/../../multimedia/gst-plugins1-ugly/distinfo
+PATCHDIR=	${.CURDIR}/../../multimedia/gst-plugins1-ugly/patches
+
+PKGCONFIG_OVERRIDE=		output/pkgconfig/*.pc
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_FOR_BUILD_ONLY=		tool
+
+# grep '^option' meson_options.txt | \
+# sed -e "s/',.*//g" -e "s/option('//g" | \
+# xargs printf 'GST_PLUGINS_SET+=	%s\n'
+GST_PLUGINS_SET+=	x264_libraries
+GST_PLUGINS_SET+=	asfdemux
+GST_PLUGINS_SET+=	dvdlpcmdec
+GST_PLUGINS_SET+=	dvdsub
+GST_PLUGINS_SET+=	realmedia
+GST_PLUGINS_SET+=	xingmux
+GST_PLUGINS_SET+=	a52dec
+GST_PLUGINS_SET+=	amrnb
+GST_PLUGINS_SET+=	amrwbdec
+GST_PLUGINS_SET+=	cdio
+GST_PLUGINS_SET+=	dvdread
+GST_PLUGINS_SET+=	mpeg2dec
+GST_PLUGINS_SET+=	sidplay
+GST_PLUGINS_SET+=	x264
+GST_PLUGINS_SET+=	nls
+GST_PLUGINS_SET+=	orc
+GST_PLUGINS_SET+=	tests
+
+.for i in ${GST_PLUGINS_SET}
+.  if !empty(GST_PLUGINS:M${i})
+MESON_ARGS+=	-D${i}=enabled
+.  else
+MESON_ARGS+=	-D${i}=disabled
+.  endif
 .endfor
 
-BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.16.2
-.include "../../multimedia/gstreamer1/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gst-plugins1-base+=	gst-plugins1-base>=1.16.2
-.include "../../multimedia/gst-plugins1-base/plugins.mk"
-.include "../../devel/orc/buildlink3.mk"
+.include "../../devel/meson/build.mk"
+.include "../../lang/python/tool.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
+.include "../../multimedia/gstreamer1/buildlink3.mk"

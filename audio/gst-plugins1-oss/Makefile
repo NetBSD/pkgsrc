@@ -1,23 +1,23 @@
-# $NetBSD: Makefile,v 1.4 2020/11/20 11:40:09 nia Exp $
+# $NetBSD: Makefile,v 1.5 2021/11/15 22:01:17 wiz Exp $
 
-GST_PLUGINS1_NAME=	oss
-GST_PLUGINS1_DIRS=	sys/oss
+PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-oss/}
+CATEGORIES=	audio gnome
 
-PKGREVISION= 1
-.include "../../multimedia/gst-plugins1-good/Makefile.common"
+COMMENT=	Open source multimedia framework - Open Sound System plugin
 
-SUBST_CLASSES+=		devoss
-SUBST_MESSAGE.devoss=	Fixing path to OSS audio device.
-SUBST_STAGE.devoss=	pre-configure
-SUBST_FILES.devoss=	sys/oss/*.c
-SUBST_SED.devoss=	-e 's|/dev/dsp|${DEVOSSAUDIO}|g'
-
-LIBS+=			${LIBOSSAUDIO}
+GST_PLUGINS+=	oss
 
 .include "../../mk/oss.buildlink3.mk"
-
 .if ${OSS_TYPE} == "none"
-PKG_SKIP_REASON+=	"No OSS implementation available."
+PKG_SKIP_REASON+=	"Requires an OSS implementation"
+.else
+LDFLAGS+=		${LIBOSSAUDIO}
+SUBST_CLASSES+=		oss
+SUBST_STAGE.oss=	pre-configure
+SUBST_MESSAGE.oss=	Correcting the path to the OSS device.
+SUBST_FILES.oss+=	sys/oss/*
+SUBST_SED.oss+=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 .endif
 
+.include "../../multimedia/gst-plugins1-good/Makefile.common"
 .include "../../mk/bsd.pkg.mk"

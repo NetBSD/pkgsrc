@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2020/03/08 16:50:00 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2021/11/15 22:01:18 wiz Exp $
 
-GST_PLUGINS1_NAME=	png
-GST_PLUGINS1_DIRS=	ext/libpng
-GST_PLUGINS1_FLAGS=	libpng
+PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-png/}
+CATEGORIES=	graphics gnome
 
-PKGREVISION= 1
+COMMENT=	Open source multimedia framework - PNG image plugin
+
+GST_PLUGINS+=	png
+
 .include "../../multimedia/gst-plugins1-good/Makefile.common"
-
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

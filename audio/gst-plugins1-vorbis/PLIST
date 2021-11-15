@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2012/11/29 08:37:01 ryoon Exp $
-lib/gstreamer-1.0/libgstvorbis.la
+@comment $NetBSD: PLIST,v 1.2 2021/11/15 22:01:17 wiz Exp $
+lib/gstreamer-1.0/libgstvorbis.so

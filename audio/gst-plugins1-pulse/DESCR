@@ -8,6 +8,4 @@ simple plugin with a clean, generic interface.
 
 GStreamer is released under the LGPL.
 
-This package is part of the 'good' plugins for GStreamer.  It provides the
-pulseaudio plugin for GStreamer, which allows playback and recording of
-sound through the Pulseaudio sound daemon.
+This package provides the PulseAudio plugin for GStreamer.

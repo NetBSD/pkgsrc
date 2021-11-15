@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.15 2021/09/29 19:01:06 adam Exp $
+# $NetBSD: Makefile,v 1.16 2021/11/15 22:01:22 wiz Exp $
 
-GST_PLUGINS1_NAME=	rtmp
-GST_PLUGINS1_DIRS=	ext/rtmp
+PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-bad/-rtmp/}
+CATEGORIES=	net gnome
 
-PKGREVISION= 4
+COMMENT=	Open source multimedia framework - RTMP streaming plugin
+
+GST_EXT_BUILD=	# defined
+GST_PLUGINS+=	rtmp
+
 .include "../../multimedia/gst-plugins1-bad/Makefile.common"
-
 .include "../../net/rtmpdump/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,12 +1,5 @@
-GStreamer is a library that allows the construction of graphs of
-media-handling components, ranging from simple Ogg/Vorbis playback to
-complex audio (mixing) and video (non-linear editing) processing.
-
-Applications can take advantage of advances in codec and filter technology
-transparently.  Developers can add new codecs and filters by writing a
-simple plugin with a clean, generic interface.
-
-GStreamer is released under the LGPL.
-
-This package is part of the bad GStreamer plugins; that is, those
-that need more quality, testing or documentation.
+GStreamer Bad Plug-ins is a set of plug-ins that aren't up to par
+compared to the rest. They might be close to being good quality,
+but they're missing something - be it a good code review, some
+documentation, a set of tests, a real live maintainer, or some
+actual wide use.

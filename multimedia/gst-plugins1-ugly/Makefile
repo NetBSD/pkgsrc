@@ -1,8 +1,21 @@
-# $NetBSD: Makefile,v 1.6 2020/03/08 16:47:59 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2021/11/15 22:01:21 wiz Exp $
 
-PKGREVISION= 1
+PKGNAME=	${DISTNAME:S/plugins/plugins1/}
+CATEGORIES=	multimedia gnome
+
+COMMENT=	Open source multimedia framework - ugly plugins
+
+GST_PLUGINS+=	asfdemux
+GST_PLUGINS+=	dvdlpcmdec
+GST_PLUGINS+=	dvdsub
+GST_PLUGINS+=	realmedia
+GST_PLUGINS+=	xingmux
+
+GST_PLUGINS+=	nls
+
+# generated with:
+# find work/gst-*/ -name *.so | sed -e "s,/[^/]*$,:," -e 's,work/[^/]*/,${WRKSRC}/,' | tr -d \\n
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gst/asfdemux:${WRKSRC}/output/gst/dvdlpcmdec:${WRKSRC}/output/gst/dvdsub:${WRKSRC}/output/gst/realmedia:${WRKSRC}/output/gst/xingmux:${WRKSRC}/output/ext/x264
+
 .include "Makefile.common"
-
-COMMENT+=	Ugly plugins
-
 .include "../../mk/bsd.pkg.mk"
