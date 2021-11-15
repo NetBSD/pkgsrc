@@ -1,0 +1,23 @@
+$NetBSD: patch-configure.ac,v 1.1 2021/11/15 22:13:56 nia Exp $
+
+CC_VERSION_OPTS for gcc is modified to avoid going through the link
+stage. If pkgsrc appends or prepends any linker flags through
+CWRAPPERS (e.g. for MKRELRO), getting the version of the compiler may
+fail because GCC will try to link the nonexistent program.
+
+--- configure.ac.orig	2021-09-14 15:53:08.000000000 +0000
++++ configure.ac
+@@ -576,11 +576,11 @@ WARNING: GCC 7.2.0 has a serious bug aff
+          See https://bugzilla.gnome.org/show_bug.cgi?id=787222"
+   fi
+   # For GCC, use -v which has more information than --version.
+-  CC_VERSION_OPTS="-v"
++  CC_VERSION_OPTS="-c -v"
+ else
+   # This is the list of common options used by autotools to check
+   # versions for various compilers.
+-  CC_VERSION_OPTS="--version -v -V -qversion"
++  CC_VERSION_OPTS="-c --version -v -V -qversion"
+ fi
+ 
+ for CC_VERSION_OPT in $CC_VERSION_OPTS; do
