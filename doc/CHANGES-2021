@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5598 2021/11/15 22:08:18 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5599 2021/11/15 22:08:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8451,3 +8451,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added graphics/gst-plugins1-aalib version 1.18.5 [wiz 2021-11-15]
 	Added graphics/gst-plugins1-webp version 1.18.5 [wiz 2021-11-15]
 	Added multimedia/gst-plugins1-aom version 1.18.5 [wiz 2021-11-15]
+	Added multimedia/gst-plugins1-libde265 version 1.18.5 [wiz 2021-11-15]
