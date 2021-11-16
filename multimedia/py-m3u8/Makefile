@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2021/06/07 08:20:16 adam Exp $
+# $NetBSD: Makefile,v 1.25 2021/11/16 19:24:41 adam Exp $
 
 DISTNAME=	m3u8-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-iso8601-[0-9]*:../../time/py-iso8601
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py39-iso8601
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
