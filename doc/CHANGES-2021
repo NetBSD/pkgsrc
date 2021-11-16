@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5633 2021/11/16 16:03:28 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5634 2021/11/16 16:05:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8492,3 +8492,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/py-resolvelib version 0.8.1 [wiz 2021-11-16]
 	Added devel/py-progress version 1.6 [wiz 2021-11-16]
 	Added devel/py-pip-api version 0.0.23 [wiz 2021-11-16]
+	Added security/py-pip-audit version 0.0.5 [wiz 2021-11-16]
