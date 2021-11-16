@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:06:37 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/11/16 14:28:19 wiz Exp $
 
-BLAKE2s (TECkit-2.5.10.tar.gz) = ca59f17f5454277ab44d758ac4816d9946aae7676dd2d4a1ca32bd57cacb5042
-SHA512 (TECkit-2.5.10.tar.gz) = fb05cb73988c8cc695832bbf174d83c0d797dbda96c9d47ef93e0cb21cf356740a0566f89a3ea20fefb52fda0d572d219c95b5c8e1801e6a9a59e520b4e90ff1
-Size (TECkit-2.5.10.tar.gz) = 3025694 bytes
+BLAKE2s (TECkit-2.5.11.tar.gz) = 7e3076ac3c235bdb0f630c8f5e01bf9d11a2652f07a2733100a9800d840397ec
+SHA512 (TECkit-2.5.11.tar.gz) = 0e38c6b203ec767b321a2ca3aa4cf64521aca0dd3ad8c9ffea69d9654ad813767c1dbeefd069cf72518df5c1b7114cc3665084239c63725a1374fc30d4e60dae
+Size (TECkit-2.5.11.tar.gz) = 3032776 bytes
 SHA1 (patch-SFconv_UtfCodec.h) = 4ac9db7a5e23afa0f819fab9747b82e39bce0f78
