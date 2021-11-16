@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/16 08:46:01 pin Exp $
+bin/tuifeed
