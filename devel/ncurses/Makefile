@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.112 2021/11/03 10:33:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.113 2021/11/16 15:19:59 wiz Exp $
 
 .include "Makefile.common"
-PKGREVISION=	5
 
 COMMENT=	CRT screen handling and optimization package
 
@@ -23,7 +22,7 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/ncurses++demo.cc
 .if ${OPSYS} == "Darwin"
 	# Clashes with "a" versions on case-insensitive file systems
-	${RM} -f ${DESTDIR}${PREFIX}/${TERMINFODIR}/32/2621A 
+	${RM} -f ${DESTDIR}${PREFIX}/${TERMINFODIR}/32/2621A
 	${RM} -f ${DESTDIR}${PREFIX}/${TERMINFODIR}/68/hp2621A
 	${RM} -f ${DESTDIR}${PREFIX}/${TERMINFODIR}/68/hp70092A
 .endif
