@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5624 2021/11/16 15:00:47 nia Exp $
+$NetBSD: CHANGES-2021,v 1.5625 2021/11/16 15:03:08 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8483,4 +8483,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/texlab to 3.3.1 [wiz 2021-11-16]
 	Added multimedia/openh264 version 2.1.1 [nia 2021-11-16]
 	Updated editors/Sigil to 1.8.0 [wiz 2021-11-16]
-	Added multimedia/gst-plugins1-openh264 version 1.16.2 [nia 2021-11-16]
+	Added multimedia/gst-plugins1-openh264 version 1.18.5 [nia 2021-11-16]
