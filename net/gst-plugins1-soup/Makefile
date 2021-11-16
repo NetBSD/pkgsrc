@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.35 2021/04/21 11:42:25 adam Exp $
+# $NetBSD: Makefile,v 1.36 2021/11/16 08:41:20 wiz Exp $
 
-GST_PLUGINS1_NAME=	soup
-GST_PLUGINS1_DIRS=	ext/soup
+PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-soup/}
+CATEGORIES=	net gnome
 
-PKGREVISION= 5
+COMMENT=	Open source multimedia framework - HTML (soup) plugin
+
+GST_PLUGINS+=	soup
+
 .include "../../multimedia/gst-plugins1-good/Makefile.common"
-
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
