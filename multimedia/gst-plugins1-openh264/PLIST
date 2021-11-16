@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/16 15:00:32 nia Exp $
+lib/gstreamer-1.0/libgstopenh264.so
