@@ -1,8 +1,8 @@
-#	$NetBSD: Makefile,v 1.1 2020/08/18 20:18:56 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2021/11/16 19:35:49 adam Exp $
 
-DISTNAME=	python-utils-2.4.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/^python-//}
-CATEGORIES=	devel
+DISTNAME=	python-utils-2.5.6
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-utils/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,18 +11,14 @@ COMMENT=	Some convenient utilities not included with standard Python
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-six>=0:../../lang/py-six
-
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8>=0:../../devel/py-test-flake8
 
-# pytest chokes on pytest.ini
-pre-test:
-	${RUN} cd ${WRKSRC} && \
-	${RM} -f pytest.ini
+USE_LANGUAGES=	# none
 
 do-test:
-	${RUN} cd ${WRKSRC} && \
-	${SETENV} ${TEST_ENV} PYTHONPATH=${WRKSRC}/build/lib \
-	pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} _python_utils_tests
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
