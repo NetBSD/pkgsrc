@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 11:07:02 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/11/16 15:45:01 wiz Exp $
 
-BLAKE2s (tigervnc-1.11.0.tar.gz) = fbf25361f593a6d4757e638acc2ec29358ab58c7b12aa0f56df8cdd50f90bf83
-SHA512 (tigervnc-1.11.0.tar.gz) = 262676f065de6dfb72b1482c0ef1e6d8b764f53360ae6114debbe0986eede45d27e283e1452a72cb9b7540657ab347fd36df5b30b72d6db4a0f8cbea5b591025
-Size (tigervnc-1.11.0.tar.gz) = 1346992 bytes
-BLAKE2s (xorg-server-1.20.11.tar.bz2) = 8e9ba331548181b08da9bc2efb055d8c030d9d2bb94f1e87acf165998c39a940
-SHA512 (xorg-server-1.20.11.tar.bz2) = 1017015b9fd5d53788abe3641d877e6df8609841fa5c1847c0a5e133ddcc1b758a5d695304ebd36828099ec201a85b6b70b46f5ea4f81c5bd3a16fa6e175e3c2
-Size (xorg-server-1.20.11.tar.bz2) = 6476116 bytes
-SHA1 (patch-CMakeLists.txt) = e844bee9fa5e1ce755d65333fadd3654a207aee4
+BLAKE2s (tigervnc-1.12.0.tar.gz) = 8ad8402f354811dd8b415fc4d0a10c6286307e1ec11e4e27e90615d741b3284b
+SHA512 (tigervnc-1.12.0.tar.gz) = a16b15e9cda552a49a3934e4174e49d186d06494d90d11582599ab82559014332662aed7760619a6dfb32a8c95f7d63c68ac7d632c29dd662a6b713f036672bb
+Size (tigervnc-1.12.0.tar.gz) = 1561898 bytes
+BLAKE2s (xorg-server-1.20.13.tar.xz) = d5fd79e44b64fb79506673ab2a851b2bfad0ee5dd1bbb6477f645ca05237a9fc
+SHA512 (xorg-server-1.20.13.tar.xz) = 4e0b7bd4e070dc52cb2c51c2056feb133de2c0487d359392ed63abba9702910cd2e2983e9415973d8d6e9672eac78be6f39202687fc56610877914ce722554b3
+Size (xorg-server-1.20.13.tar.xz) = 5122260 bytes
+SHA1 (patch-CMakeLists.txt) = dbe6e4eaaf2dde1bb73dd3cd562c16fed58c8e5b
 SHA1 (patch-common_rfb_util.h) = 73d5fc206e192b936c224cedf5857980fca69eb0
 SHA1 (patch-media_CMakeLists.txt) = cd50f9b7a9405aa523412ef823a32437a3c19ffa
 SHA1 (patch-unix_vncserver_vncserver.in) = 715f16a4be6806778fd0a9d781e920771e35d0ca
