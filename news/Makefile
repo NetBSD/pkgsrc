@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2021/01/07 05:20:35 gutteridge Exp $
+# $NetBSD: Makefile,v 1.48 2021/11/16 08:46:46 pin Exp $
 #
 
 COMMENT=	Network news
@@ -30,6 +30,7 @@ SUBDIR+=	slrn
 SUBDIR+=	suck
 SUBDIR+=	tin
 SUBDIR+=	trn
+SUBDIR+=	tuifeed
 SUBDIR+=	xrn
 
 .include "../mk/misc/category.mk"
