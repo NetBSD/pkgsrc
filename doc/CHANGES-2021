@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5634 2021/11/16 16:05:31 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5635 2021/11/16 16:26:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8493,3 +8493,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/py-progress version 1.6 [wiz 2021-11-16]
 	Added devel/py-pip-api version 0.0.23 [wiz 2021-11-16]
 	Added security/py-pip-audit version 0.0.5 [wiz 2021-11-16]
+	Updated net/libpcap to 1.10.1 [adam 2021-11-16]
+	Updated net/tcpdump to 4.99.1 [adam 2021-11-16]
+	Updated lang/tcl to 8.6.12 [adam 2021-11-16]
+	Updated x11/tk to 8.6.12 [adam 2021-11-16]
