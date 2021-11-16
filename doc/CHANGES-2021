@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5613 2021/11/16 08:52:30 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5614 2021/11/16 10:18:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8466,3 +8466,9 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/xplr to 0.16.4 [pin 2021-11-16]
 	Added news/tuifeed version 0.1.0 [pin 2021-11-16]
 	Removed sysutils/gst-plugins1-gio successor multimedia/gst-plugins1-base [wiz 2021-11-16]
+	Updated databases/postgresql96 to 9.6.24 [adam 2021-11-16]
+	Updated databases/postgresql10 to 10.19 [adam 2021-11-16]
+	Updated databases/postgresql11 to 11.14 [adam 2021-11-16]
+	Updated databases/postgresql12 to 12.9 [adam 2021-11-16]
+	Updated databases/postgresql13 to 13.5 [adam 2021-11-16]
+	Updated databases/postgresql14 to 14.1 [adam 2021-11-16]
