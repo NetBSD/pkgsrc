@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5610 2021/11/16 08:20:20 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5611 2021/11/16 08:22:06 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8463,3 +8463,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated multimedia/gst-plugins1-editing-services to 1.18.5 [wiz 2021-11-15]
 	Updated multimedia/gst-plugins1-libav to 1.18.5 [wiz 2021-11-15]
 	Updated graphics/oxipng to 5.0.1 [pin 2021-11-16]
+	Updated sysutils/xplr to 0.16.4 [pin 2021-11-16]
