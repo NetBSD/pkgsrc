@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/05/16 21:06:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/11/16 15:45:01 wiz Exp $
 bin/Xvnc
 bin/vncconfig
 bin/vncpasswd
@@ -18,6 +18,7 @@ man/man8/vncserver.8
 man/man8/vncsession.8
 sbin/vncsession
 share/applications/vncviewer.desktop
+share/doc/tigervnc/HOWTO.md
 share/doc/tigervnc/LICENCE.TXT
 share/doc/tigervnc/README.rst
 share/examples/tigervnc/tigervnc
@@ -40,6 +41,7 @@ share/locale/es/LC_MESSAGES/tigervnc.mo
 share/locale/fi/LC_MESSAGES/tigervnc.mo
 share/locale/fr/LC_MESSAGES/tigervnc.mo
 share/locale/fur/LC_MESSAGES/tigervnc.mo
+share/locale/he/LC_MESSAGES/tigervnc.mo
 share/locale/hu/LC_MESSAGES/tigervnc.mo
 share/locale/id/LC_MESSAGES/tigervnc.mo
 share/locale/it/LC_MESSAGES/tigervnc.mo
