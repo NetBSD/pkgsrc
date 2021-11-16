@@ -1,6 +1,6 @@
 ${PLIST.llvm}${PLIST.gssapi}lib/postgresql/bitcode/postgres/libpq/be-gssapi-common.bc
 ${PLIST.llvm}${PLIST.gssapi}lib/postgresql/bitcode/postgres/libpq/be-secure-gssapi.bc
-@comment $NetBSD: PLIST,v 1.1 2021/10/08 10:23:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/11/16 10:14:38 adam Exp $
 bin/postgres
 bin/postmaster
 include/postgresql/server/plpgsql.h
@@ -1290,6 +1290,7 @@ share/postgresql/timezone/Pacific/Guadalcanal
 share/postgresql/timezone/Pacific/Guam
 share/postgresql/timezone/Pacific/Honolulu
 share/postgresql/timezone/Pacific/Johnston
+share/postgresql/timezone/Pacific/Kanton
 share/postgresql/timezone/Pacific/Kiritimati
 share/postgresql/timezone/Pacific/Kosrae
 share/postgresql/timezone/Pacific/Kwajalein
