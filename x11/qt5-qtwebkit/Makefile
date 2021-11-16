@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2021/11/15 22:54:02 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2021/11/16 21:28:30 nia Exp $
 
 QTWKVERSION=	5.212.0-alpha4
 DISTNAME=	qtwebkit-${QTWKVERSION}
@@ -100,6 +100,7 @@ post-install:
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-bad/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .endif
