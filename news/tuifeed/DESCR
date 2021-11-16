@@ -1,0 +1,11 @@
+tuifeed is a news feed reader with a fancy terminal user interface.
+It allows you read news from your favourite RSS and Atom sources, which can be
+easily configured in a TOML file.
+
+In order to start using tuifeed, the first thing you need to do is to configure
+the feeds you want to read from.
+
+To open the configuration file you can run tuifeed -c, this will open the
+configuration file in your favourite editor.
+Edit the generated ~/.config/tuifeed/config.toml so it contains at least one
+valid url.
