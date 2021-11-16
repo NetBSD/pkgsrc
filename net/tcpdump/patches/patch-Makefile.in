@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile.in,v 1.1 2021/11/16 16:20:18 adam Exp $
+
+Don't install another copy of VERSION.
+
+--- Makefile.in.orig	2021-06-07 20:21:43.000000000 +0000
++++ Makefile.in
+@@ -418,7 +418,6 @@ install: all
+ 	[ -d $(DESTDIR)$(bindir) ] || \
+ 	    (mkdir -p $(DESTDIR)$(bindir); chmod 755 $(DESTDIR)$(bindir))
+ 	$(INSTALL_PROGRAM) $(PROG) $(DESTDIR)$(bindir)/$(PROG)
+-	$(INSTALL_PROGRAM) $(PROG) $(DESTDIR)$(bindir)/$(PROG).`cat ${srcdir}/VERSION`
+ 	[ -d $(DESTDIR)$(mandir)/man1 ] || \
+ 	    (mkdir -p $(DESTDIR)$(mandir)/man1; chmod 755 $(DESTDIR)$(mandir)/man1)
+ 	$(INSTALL_DATA) $(PROG).1 $(DESTDIR)$(mandir)/man1/$(PROG).1
