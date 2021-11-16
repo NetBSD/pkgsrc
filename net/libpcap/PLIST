@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2019/10/14 20:10:19 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.16 2021/11/16 16:18:48 adam Exp $
 bin/pcap-config
 include/pcap-bpf.h
 include/pcap-int.h
@@ -55,6 +55,7 @@ man/man3/pcap_get_selectable_fd.3
 man/man3/pcap_get_tstamp_precision.3
 man/man3/pcap_geterr.3
 man/man3/pcap_getnonblock.3
+man/man3/pcap_init.3
 man/man3/pcap_inject.3
 man/man3/pcap_is_swapped.3
 man/man3/pcap_lib_version.3
