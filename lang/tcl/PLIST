@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2021/01/20 20:38:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2021/11/16 16:24:39 adam Exp $
 bin/sqlite3_analyzer
 bin/tclsh
 bin/tclsh${BASEVER}
@@ -70,6 +70,7 @@ lib/tcl${BASEVER}/auto.tcl
 lib/tcl${BASEVER}/clock.tcl
 lib/tcl${BASEVER}/encoding/ascii.enc
 lib/tcl${BASEVER}/encoding/big5.enc
+lib/tcl${BASEVER}/encoding/cns11643.enc
 lib/tcl${BASEVER}/encoding/cp1250.enc
 lib/tcl${BASEVER}/encoding/cp1251.enc
 lib/tcl${BASEVER}/encoding/cp1252.enc
@@ -113,6 +114,7 @@ lib/tcl${BASEVER}/encoding/iso2022-kr.enc
 lib/tcl${BASEVER}/encoding/iso2022.enc
 lib/tcl${BASEVER}/encoding/iso8859-1.enc
 lib/tcl${BASEVER}/encoding/iso8859-10.enc
+lib/tcl${BASEVER}/encoding/iso8859-11.enc
 lib/tcl${BASEVER}/encoding/iso8859-13.enc
 lib/tcl${BASEVER}/encoding/iso8859-14.enc
 lib/tcl${BASEVER}/encoding/iso8859-15.enc
@@ -289,19 +291,14 @@ lib/tcl${BASEVER}/platform1.0/pkgIndex.tcl
 lib/tcl${BASEVER}/platform1.0/platform.tcl
 lib/tcl${BASEVER}/safe.tcl
 lib/tcl${BASEVER}/shell1.1/pkgIndex.tcl
-lib/tcl${BASEVER}/shell1.1/shell.tcl
+lib/tcl${BASEVER}/shell1.1/platform/shell.tcl
 lib/tcl${BASEVER}/tclAppInit.c
 lib/tcl${BASEVER}/tclIndex
 lib/tcl${BASEVER}/tcltest2.5/pkgIndex.tcl
 lib/tcl${BASEVER}/tcltest2.5/tcltest.tcl
 lib/tcl${BASEVER}/tm.tcl
 lib/tcl${BASEVER}/word.tcl
-lib/tcl8/${BASEVER}/http-2.9.5.tm
 lib/tcl8/${BASEVER}/tdbc/sqlite3-${TDBC_VERSION}.tm
-lib/tcl8/8.4/platform-1.0.15.tm
-lib/tcl8/8.4/platform/shell-1.1.4.tm
-lib/tcl8/8.5/msgcat-1.6.1.tm
-lib/tcl8/8.5/tcltest-2.5.3.tm
 lib/tclConfig.sh
 lib/tclooConfig.sh
 lib/tdbc${TDBC_VERSION}/libtdbc${TDBC_VERSION}.so
@@ -624,6 +621,7 @@ man/man3/Tcl_GetLinkCountFromStat.3
 man/man3/Tcl_GetLongFromObj.3
 man/man3/Tcl_GetMaster.3
 man/man3/Tcl_GetMathFuncInfo.3
+man/man3/Tcl_GetMemoryInfo.3
 man/man3/Tcl_GetModeFromStat.3
 man/man3/Tcl_GetModificationTimeFromStat.3
 man/man3/Tcl_GetNameOfExecutable.3
@@ -718,6 +716,8 @@ man/man3/Tcl_ListObjReplace.3
 man/man3/Tcl_LoadFile.3
 man/man3/Tcl_LogCommandInfo.3
 man/man3/Tcl_Main.3
+man/man3/Tcl_MainEx.3
+man/man3/Tcl_MainExW.3
 man/man3/Tcl_MakeFileChannel.3
 man/man3/Tcl_MakeSafe.3
 man/man3/Tcl_MakeTcpClientChannel.3
