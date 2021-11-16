@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2021/08/20 05:50:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2021/11/16 12:12:32 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -423,6 +423,9 @@ ${PYSITELIB}/braintree/transaction_line_item.pyo
 ${PYSITELIB}/braintree/transaction_line_item_gateway.py
 ${PYSITELIB}/braintree/transaction_line_item_gateway.pyc
 ${PYSITELIB}/braintree/transaction_line_item_gateway.pyo
+${PYSITELIB}/braintree/transaction_review.py
+${PYSITELIB}/braintree/transaction_review.pyc
+${PYSITELIB}/braintree/transaction_review.pyo
 ${PYSITELIB}/braintree/transaction_search.py
 ${PYSITELIB}/braintree/transaction_search.pyc
 ${PYSITELIB}/braintree/transaction_search.pyo
