@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/16 16:03:12 wiz Exp $
+
+BLAKE2s (pip-api-0.0.23.tar.gz) = a7ba4998ef53bcc23b469453c9918ad110668c9f15b1e29cf97ddb2b2847be15
+SHA512 (pip-api-0.0.23.tar.gz) = 68ac25fc8c3f4dccbd9895900141291aab033a67def7b2da333331b96e3dcfd06ebda90ebe679938e8d126fa6e108f3c7c0805c9e0bf46af55da2f14894d680c
+Size (pip-api-0.0.23.tar.gz) = 106534 bytes
