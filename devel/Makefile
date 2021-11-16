@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3508 2021/11/11 06:38:25 wiz Exp $
+# $NetBSD: Makefile,v 1.3509 2021/11/16 16:03:45 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2445,6 +2445,7 @@ SUBDIR+=	py-pep517
 SUBDIR+=	py-pep8
 SUBDIR+=	py-pexpect
 SUBDIR+=	py-pip
+SUBDIR+=	py-pip-api
 SUBDIR+=	py-pip20
 SUBDIR+=	py-pkgconfig
 SUBDIR+=	py-pkginfo
@@ -2455,6 +2456,7 @@ SUBDIR+=	py-polib
 SUBDIR+=	py-pqueue
 SUBDIR+=	py-prefixspan
 SUBDIR+=	py-pretend
+SUBDIR+=	py-progress
 SUBDIR+=	py-progressbar2
 SUBDIR+=	py-prompt_toolkit
 SUBDIR+=	py-prompt_toolkit1
@@ -2580,6 +2582,7 @@ SUBDIR+=	py-requests-futures
 SUBDIR+=	py-requests-mock
 SUBDIR+=	py-requests-toolbelt
 SUBDIR+=	py-requests-unixsocket
+SUBDIR+=	py-resolvelib
 SUBDIR+=	py-restructuredtext_lint
 SUBDIR+=	py-retry_decorator
 SUBDIR+=	py-rlp
