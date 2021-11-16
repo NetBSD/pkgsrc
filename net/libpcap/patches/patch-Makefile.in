@@ -1,11 +1,11 @@
-$NetBSD: patch-Makefile.in,v 1.2 2019/10/14 20:10:19 triaxx Exp $
+$NetBSD: patch-Makefile.in,v 1.3 2021/11/16 16:18:48 adam Exp $
 
 Add libtoolization.
 Fix manpage installation.
 
---- Makefile.in.orig	2019-09-30 14:39:22.000000000 +0000
+--- Makefile.in.orig	2021-06-07 20:21:35.000000000 +0000
 +++ Makefile.in
-@@ -45,7 +45,7 @@ VPATH = @srcdir@
+@@ -46,7 +46,7 @@ VPATH = @srcdir@
  #
  
  LD = /usr/bin/ld
@@ -14,7 +14,7 @@ Fix manpage installation.
  AR = @AR@
  LN_S = @LN_S@
  MKDEP = @MKDEP@
-@@ -82,7 +82,8 @@ YACC = @YACC@
+@@ -84,7 +84,8 @@ BISON_BYACC = @BISON_BYACC@
  # Explicitly define compilation rule since SunOS 4's make doesn't like gcc.
  # Also, gcc does not remove the .o before forking 'as', which can be a
  # problem if you don't own the file but can write to the directory.
@@ -24,23 +24,29 @@ Fix manpage installation.
  	@rm -f $@
  	$(CC) $(FULL_CFLAGS) -c $(srcdir)/$*.c
  
-@@ -94,13 +95,13 @@ CSRC =	pcap.c gencode.c optimize.c namet
- 	savefile.c sf-pcap.c sf-pcapng.c pcap-common.c \
- 	bpf_image.c bpf_filter.c bpf_dump.c
- GENSRC = scanner.c grammar.c
+@@ -97,7 +98,7 @@ COMMON_C_SRC =	pcap.c gencode.c optimize
+ 		savefile.c sf-pcap.c sf-pcapng.c pcap-common.c \
+ 		bpf_image.c bpf_filter.c bpf_dump.c
+ GENERATED_C_SRC = scanner.c grammar.c
 -LIBOBJS = @LIBOBJS@
 +LIBOBJS = @LTLIBOBJS@
  
- SRC =	$(PSRC) $(FSRC) $(CSRC) $(SSRC) $(GENSRC)
- 
+ SRC =	$(PLATFORM_C_SRC) $(PLATFORM_CXX_SRC) \
+ 	$(MODULE_C_SRC) $(REMOTE_C_SRC) $(COMMON_C_SRC) \
+@@ -106,9 +107,9 @@ SRC =	$(PLATFORM_C_SRC) $(PLATFORM_CXX_S
  # We would like to say "OBJ = $(SRC:.c=.o)" but Ultrix's make cannot
- # hack the extra indirection
--OBJ =	$(PSRC:.c=.o) $(FSRC:.c=.o) $(CSRC:.c=.o) $(SSRC:.c=.o) $(GENSRC:.c=.o) $(LIBOBJS)
-+OBJ =	$(PSRC:.c=.lo) $(FSRC:.c=.lo) $(CSRC:.c=.lo) $(SSRC:.c=.lo) $(GENSRC:.c=.lo) $(LIBOBJS)
+ # hack the extra indirection, and we have to handle PLATFORM_CXX_SRC
+ # differently from the defines for C source
+-OBJ =	$(PLATFORM_C_SRC:.c=.o) $(PLATFORM_CXX_SRC:.cpp=.o) \
+-	$(MODULE_C_SRC:.c=.o) $(REMOTE_C_SRC:.c=.o) $(COMMON_C_SRC:.c=.o) \
+-	$(GENERATED_C_SRC:.c=.o) \
++OBJ =	$(PLATFORM_C_SRC:.c=.lo) $(PLATFORM_CXX_SRC:.cpp=.lo) \
++	$(MODULE_C_SRC:.c=.lo) $(REMOTE_C_SRC:.c=.lo) $(COMMON_C_SRC:.c=.lo) \
++	$(GENERATED_C_SRC:.c=.lo) \
+ 	$(LIBOBJS)
+ 
  PUBHDR = \
- 	pcap.h \
- 	pcap-bpf.h \
-@@ -385,12 +386,10 @@ EXTRA_DIST = \
+@@ -415,12 +416,10 @@ EXTRA_DIST = \
  	Win32/Prj/wpcap.vcxproj \
  	Win32/Prj/wpcap.vcxproj.filters
  
@@ -56,7 +62,7 @@ Fix manpage installation.
  
  shared: libpcap.$(DYEXT)
  
-@@ -477,7 +476,7 @@ scanner.h: scanner.c
+@@ -507,7 +506,7 @@ scanner.h: scanner.c
  		$(MAKE) $(MAKEFLAGS) scanner.c; \
  	fi
  
@@ -64,8 +70,8 @@ Fix manpage installation.
 +scanner.lo: scanner.c grammar.h
  	$(CC) $(FULL_CFLAGS) -c scanner.c
  
- grammar.c: $(srcdir)/grammar.y
-@@ -489,25 +488,25 @@ grammar.h: grammar.c
+ #
+@@ -538,25 +537,25 @@ grammar.h: grammar.c
  		$(MAKE) $(MAKEFLAGS) grammar.c; \
  	fi
  
@@ -98,7 +104,7 @@ Fix manpage installation.
  	$(CC) $(FULL_CFLAGS) -o $@ -c $(srcdir)/missing/strtok_r.c
  
  #
-@@ -553,7 +552,7 @@ testprogs: FORCE
+@@ -601,7 +600,7 @@ testprogs: FORCE
  
  FORCE:
  
@@ -107,7 +113,7 @@ Fix manpage installation.
  	[ -d $(DESTDIR)$(libdir) ] || \
  	    (mkdir -p $(DESTDIR)$(libdir); chmod 755 $(DESTDIR)$(libdir))
  	[ -d $(DESTDIR)$(includedir) ] || \
-@@ -568,62 +567,60 @@ install: install-shared install-archive 
+@@ -616,62 +615,60 @@ install: install-shared install-archive 
  	    (mkdir -p $(DESTDIR)$(mandir)/man@MAN_FILE_FORMATS@; chmod 755 $(DESTDIR)$(mandir)/man@MAN_FILE_FORMATS@)
  	[ -d $(DESTDIR)$(mandir)/man@MAN_MISC_INFO@ ] || \
  	    (mkdir -p $(DESTDIR)$(mandir)/man@MAN_MISC_INFO@; chmod 755 $(DESTDIR)$(mandir)/man@MAN_MISC_INFO@)
@@ -210,7 +216,7 @@ Fix manpage installation.
  	for i in $(MANFILE); do \
  		$(INSTALL_DATA) `echo $$i | sed 's/.manfile.in/.manfile/'` \
  		    $(DESTDIR)$(mandir)/man@MAN_FILE_FORMATS@/`echo $$i | sed 's/.manfile.in/.@MAN_FILE_FORMATS@/'`; done
-@@ -665,15 +662,15 @@ install-shared-shareda: libpcap.shareda
+@@ -713,15 +710,15 @@ install-shared-shareda: libpcap.shareda
  install-shared-none:
  
  install-archive: install-archive-$(DYEXT)
