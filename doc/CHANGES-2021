@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5626 2021/11/16 15:20:08 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5627 2021/11/16 15:20:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8485,3 +8485,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/Sigil to 1.8.0 [wiz 2021-11-16]
 	Added multimedia/gst-plugins1-openh264 version 1.18.5 [nia 2021-11-16]
 	Updated devel/ncurses to 6.3 [wiz 2021-11-16]
+	Updated devel/ncursesw to 6.3 [wiz 2021-11-16]
