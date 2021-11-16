@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5616 2021/11/16 14:24:15 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5617 2021/11/16 14:28:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8476,3 +8476,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-test-testmon to 1.2.2 [adam 2021-11-16]
 	Updated lang/python39 to 3.9.9 [adam 2021-11-16]
 	Updated lang/py39-html-docs to 3.9.9 [adam 2021-11-16]
+	Updated converters/TECkit to 2.5.11 [wiz 2021-11-16]
