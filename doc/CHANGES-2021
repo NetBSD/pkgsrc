@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5615 2021/11/16 12:15:49 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5616 2021/11/16 14:24:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8474,3 +8474,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/postgresql14 to 14.1 [adam 2021-11-16]
 	Updated finance/py-braintree to 4.13.1 [adam 2021-11-16]
 	Updated devel/py-test-testmon to 1.2.2 [adam 2021-11-16]
+	Updated lang/python39 to 3.9.9 [adam 2021-11-16]
+	Updated lang/py39-html-docs to 3.9.9 [adam 2021-11-16]
