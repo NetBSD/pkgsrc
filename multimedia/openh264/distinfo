@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2021/11/16 14:56:36 nia Exp $
+
+BLAKE2s (openh264-2.1.1.tar.gz) = f5fe24f48be8904ba3cf47772d815efce6cccabcb33a6f29918800fe842693fa
+SHA512 (openh264-2.1.1.tar.gz) = f9c2925fa902c6278da40f68b967d25e62db7ce3541e8f5e7a0ee174204b6ecc7026b5853885c361f48ca01d71bacd585fb5b91f01f0c054ece80943f1afcf79
+Size (openh264-2.1.1.tar.gz) = 60239654 bytes
+SHA1 (patch-build_platform-bsd.mk) = f641958f3fd878ff6e06ef361a7b2debb759cfb8
+SHA1 (patch-build_platform-darwin.mk) = e935c97831801e7f8fa21cd1df43b59d17ccb940
+SHA1 (patch-build_platform-linux.mk) = db176a29a2ff1f7c1100d25d535e24a74f5229c9
+SHA1 (patch-codec_common_generate__version.sh) = 5f0d3b33c6730e3da824acb503ceb4c84347a320
