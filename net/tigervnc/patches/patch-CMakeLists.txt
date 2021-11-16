@@ -1,10 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.4 2021/05/16 21:06:43 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.5 2021/11/16 15:45:01 wiz Exp $
 
---- CMakeLists.txt.orig	2021-04-28 15:26:55.658924359 +0000
+--- CMakeLists.txt.orig	2021-11-09 07:51:28.000000000 +0000
 +++ CMakeLists.txt
-@@ -250,6 +250,7 @@ if(UNIX AND NOT APPLE)
-   if(X11_Xrender_FOUND)
-     set(FLTK_LIBRARIES ${FLTK_LIBRARIES} ${X11_Xrender_LIB})
+@@ -262,6 +262,7 @@ if(BUILD_VIEWER)
+       set(FLTK_LIBRARIES ${FLTK_LIBRARIES} ${X11_Xrender_LIB})
+     endif()
    endif()
 +  set(FLTK_LIBRARIES ${FLTK_LIBRARIES} -lpng)
  endif()
