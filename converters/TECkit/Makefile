@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2020/08/24 08:48:58 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2021/11/16 14:28:19 wiz Exp $
 
-DISTNAME=	TECkit-2.5.10
+DISTNAME=	TECkit-2.5.11
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=silnrsi/}
 GITHUB_PROJECT=	teckit
