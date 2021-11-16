@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5612 2021/11/16 08:47:14 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5613 2021/11/16 08:52:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8465,3 +8465,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/oxipng to 5.0.1 [pin 2021-11-16]
 	Updated sysutils/xplr to 0.16.4 [pin 2021-11-16]
 	Added news/tuifeed version 0.1.0 [pin 2021-11-16]
+	Removed sysutils/gst-plugins1-gio successor multimedia/gst-plugins1-base [wiz 2021-11-16]
