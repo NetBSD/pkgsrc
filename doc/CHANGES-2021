@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5630 2021/11/16 15:45:11 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5631 2021/11/16 16:01:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8489,3 +8489,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/protobuf to 3.19.1 [wiz 2021-11-16]
 	Updated devel/py-protobuf to 3.19.1 [wiz 2021-11-16]
 	Updated net/tigervnc to 1.12.0.1.20.13 [wiz 2021-11-16]
+	Added devel/py-resolvelib version 0.8.1 [wiz 2021-11-16]
