@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2021/05/24 19:52:10 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2021/11/16 17:18:05 rhialto Exp $
 
 DISTNAME=		hercules-3.13
 PKGREVISION=		2
@@ -22,6 +22,11 @@ PTHREAD_OPTS+=		require
 
 REPLACE_PERL+=		util/bldlvlck
 USE_TOOLS+=		perl:run
+
+# There is a configure check that uses C++ to check if the compiler is
+# GNU, and on Darwin it thinks GNU C++ is needed to create shared
+# libraries, even though no actual C++ is used. Or something.
+CONFIGURE_ENV.Darwin+=	ac_cv_cxx_compiler_gnu=yes
 
 INSTALLATION_DIRS+=	bin share/examples/hercules
 #CONFIGURE_ARGS+=	--enable-setuid-hercifc=hercules
