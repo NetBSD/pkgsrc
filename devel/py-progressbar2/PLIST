@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2020/08/18 20:19:20 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/11/16 19:42:31 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/progressbar/__about__.py
 ${PYSITELIB}/progressbar/__about__.pyc
 ${PYSITELIB}/progressbar/__about__.pyo
@@ -20,9 +26,3 @@ ${PYSITELIB}/progressbar/utils.pyo
 ${PYSITELIB}/progressbar/widgets.py
 ${PYSITELIB}/progressbar/widgets.pyc
 ${PYSITELIB}/progressbar/widgets.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
