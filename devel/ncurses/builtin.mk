@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.42 2019/11/03 10:39:20 rillig Exp $
+# $NetBSD: builtin.mk,v 1.43 2021/11/16 15:19:59 wiz Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -110,11 +110,11 @@ USE_BUILTIN.ncurses=	no
 # If it is set to chgat, a curses implementation with chgat(3) support
 # is considered good enough.
 .if defined(USE_NCURSES) && empty(USE_NCURSES:M[yY][eE][sS])
-.  if !empty(USE_NCURSES:Mchgat) && !empty(H_CURSES:M__nonexistent__)
+.  if ${USE_NCURSES:U} == chgat && ${H_CURSES:U} == __nonexistent__
 USE_BUILTIN.ncurses=	no
 .  endif
 # same for wsyncup(3)
-.  if !empty(USE_NCURSES:Mwsyncup) && !empty(H_CURSES1:M__nonexistent__)
+.  if ${USE_NCURSES:U} == wsyncup && !empty(H_CURSES1:M__nonexistent__)
 USE_BUILTIN.ncurses=	no
 .  endif
 .endif
