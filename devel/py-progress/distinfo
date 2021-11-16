@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/16 16:01:52 wiz Exp $
+
+BLAKE2s (progress-1.6.tar.gz) = ec046b75eaea155783d4faada1ab1e0cd47cdebe178d20508de680f665b78c02
+SHA512 (progress-1.6.tar.gz) = 58a614bba5a7273a42ba5e9607b3a965fec17f26a4f24563d4c13679ea32b23dda7509c5da81a2a34bebeeedd91154d0457ab8dac95cc7a092add2567249cc94
+Size (progress-1.6.tar.gz) = 7842 bytes
