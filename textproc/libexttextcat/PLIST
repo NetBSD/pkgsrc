@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/01/01 22:29:59 rillig Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/11/16 14:30:51 wiz Exp $
 bin/createfp
 include/libexttextcat/common.h
 include/libexttextcat/constants.h
@@ -34,13 +34,16 @@ share/libexttextcat/bn.lm
 share/libexttextcat/bo.lm
 share/libexttextcat/br.lm
 share/libexttextcat/bs.lm
+share/libexttextcat/buc.lm
 share/libexttextcat/ca.lm
 share/libexttextcat/ckb.lm
 share/libexttextcat/cs.lm
+share/libexttextcat/cv.lm
 share/libexttextcat/cy.lm
 share/libexttextcat/da.lm
 share/libexttextcat/de.lm
 share/libexttextcat/dv.lm
+share/libexttextcat/dz.lm
 share/libexttextcat/ee.lm
 share/libexttextcat/el.lm
 share/libexttextcat/emk-Latn.lm
@@ -52,7 +55,9 @@ share/libexttextcat/eu.lm
 share/libexttextcat/fa.lm
 share/libexttextcat/fi.lm
 share/libexttextcat/fj.lm
+share/libexttextcat/fkv.lm
 share/libexttextcat/fo.lm
+share/libexttextcat/fon.lm
 share/libexttextcat/fpdb.conf
 share/libexttextcat/fr.lm
 share/libexttextcat/fur.lm
@@ -80,23 +85,28 @@ share/libexttextcat/is.lm
 share/libexttextcat/it.lm
 share/libexttextcat/ja.lm
 share/libexttextcat/ka.lm
+share/libexttextcat/kbd.lm
 share/libexttextcat/kk.lm
 share/libexttextcat/kl.lm
 share/libexttextcat/km.lm
 share/libexttextcat/kn.lm
 share/libexttextcat/kng.lm
 share/libexttextcat/ko.lm
+share/libexttextcat/koi.lm
 share/libexttextcat/ktu.lm
 share/libexttextcat/ky.lm
 share/libexttextcat/la.lm
 share/libexttextcat/lb.lm
 share/libexttextcat/lg.lm
+share/libexttextcat/lij.lm
+share/libexttextcat/lld.lm
 share/libexttextcat/ln.lm
 share/libexttextcat/lo.lm
 share/libexttextcat/lt.lm
 share/libexttextcat/lv.lm
 share/libexttextcat/mai.lm
 share/libexttextcat/mi.lm
+share/libexttextcat/min.lm
 share/libexttextcat/mk.lm
 share/libexttextcat/ml.lm
 share/libexttextcat/mn.lm
@@ -108,6 +118,7 @@ share/libexttextcat/my.lm
 share/libexttextcat/nb.lm
 share/libexttextcat/nds.lm
 share/libexttextcat/ne.lm
+share/libexttextcat/nio.lm
 share/libexttextcat/nl.lm
 share/libexttextcat/nn.lm
 share/libexttextcat/nr.lm
@@ -116,11 +127,12 @@ share/libexttextcat/ny.lm
 share/libexttextcat/oc.lm
 share/libexttextcat/om.lm
 share/libexttextcat/pa.lm
+share/libexttextcat/pap.lm
 share/libexttextcat/pl.lm
 share/libexttextcat/plt.lm
 share/libexttextcat/pt.lm
+share/libexttextcat/quh.lm
 share/libexttextcat/quz.lm
-share/libexttextcat/qxa.lm
 share/libexttextcat/rm.lm
 share/libexttextcat/ro.lm
 share/libexttextcat/ru.lm
@@ -142,8 +154,10 @@ share/libexttextcat/sr-Cyrl.lm
 share/libexttextcat/sr-Latn.lm
 share/libexttextcat/ss.lm
 share/libexttextcat/st.lm
+share/libexttextcat/sun.lm
 share/libexttextcat/sv.lm
 share/libexttextcat/sw.lm
+share/libexttextcat/swb.lm
 share/libexttextcat/ta.lm
 share/libexttextcat/tet.lm
 share/libexttextcat/tg.lm
@@ -164,6 +178,7 @@ share/libexttextcat/ur.lm
 share/libexttextcat/uz-Cyrl.lm
 share/libexttextcat/uz.lm
 share/libexttextcat/ve.lm
+share/libexttextcat/vec.lm
 share/libexttextcat/vep.lm
 share/libexttextcat/vi.lm
 share/libexttextcat/wa.lm
