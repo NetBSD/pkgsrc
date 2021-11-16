@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5620 2021/11/16 14:36:31 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5621 2021/11/16 14:47:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8480,3 +8480,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/libexttextcat to 3.4.6 [wiz 2021-11-16]
 	Updated security/libtasn1 to 4.18.0 [wiz 2021-11-16]
 	Updated audio/musicpd to 0.23.4 [wiz 2021-11-16]
+	Updated print/texlab to 3.3.1 [wiz 2021-11-16]
