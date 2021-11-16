@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.39 2021/11/10 08:44:54 pin Exp $
+$NetBSD: distinfo,v 1.40 2021/11/16 08:21:46 pin Exp $
 
 BLAKE2s (ansi-to-tui-0.4.1.crate) = 18f51e9bf565adaee683daf1d73c667adeed85f78c4b72a25166b755a0a444d6
 SHA512 (ansi-to-tui-0.4.1.crate) = b2218bfe552693c1f07b53774e42161be0d0095ffd0facb7b117cfc99b3927ef4c011d1f30141e46cc9ed61cd71b5b57b2053cf5dc110ff7a74c4fef75433a4e
@@ -132,9 +132,9 @@ Size (js-sys-0.3.55.crate) = 70499 bytes
 BLAKE2s (lazy_static-1.4.0.crate) = 0d5f7c2bcfe70610bc27bd6b339ea3e4ca3b7014149714db3a0c199ac6f07cd1
 SHA512 (lazy_static-1.4.0.crate) = e124c0521ec7c950f3c4a066821918da7a9c6e711115d98009ae7c351928fdddead852e7596fea5937a9c30e4e4ce8eee7099b20248b5d6e3b2494b6a6d88cb8
 Size (lazy_static-1.4.0.crate) = 10443 bytes
-BLAKE2s (libc-0.2.106.crate) = ea18c5b4a98ec80a1fd9c1c319bb5dcfc68ab6b4700459aeb5f371e719f86291
-SHA512 (libc-0.2.106.crate) = 8e80cc41c8373b9228d1d21bf5de3f14aaa9ed4eb5aed337041e561f821db0d1a5936d676368443ad2009ed684aa8f0c7762def02df25a891f57288e7e6af2ec
-Size (libc-0.2.106.crate) = 554765 bytes
+BLAKE2s (libc-0.2.107.crate) = 29e4acee992bbe2c91e74c226db977f2f12714023bfbec3732ff04b01c279549
+SHA512 (libc-0.2.107.crate) = df1586889c97d45c95f47495f8285c273c143f1861e632b326345ee66da63c227c064d9e12a6a1b48cfb866c70010a4ad407fed120a1a808da7a345777a8f909
+Size (libc-0.2.107.crate) = 554639 bytes
 BLAKE2s (linked-hash-map-0.5.4.crate) = c9c95074dd072275999910da8ed4eecda472e7d1451ece55c744c3775750afbe
 SHA512 (linked-hash-map-0.5.4.crate) = 2938883357ec0e7d9c9fc5746063ae419c97250ddceeb8de3480c89e97e0a29d175cc9199bdb3ddf81cd5d6a2a1e319ee1644a7309eea96058221074cf87c0b6
 Size (linked-hash-map-0.5.4.crate) = 16166 bytes
@@ -363,10 +363,10 @@ Size (winapi-util-0.1.5.crate) = 10164 bytes
 BLAKE2s (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 85ecec73b9874f5f443e29d99f93a11889e74ddf5a4bfeb929e2355a7cee32f1
 SHA512 (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 4a654af6a5d649dc87e00497245096b35a2894ae66f155cb62389902c3b93ddcc5cf7d0d8b9dd97b291d2d80bc686af2298e80abef6ac69883f4a54e79712513
 Size (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 2947998 bytes
-BLAKE2s (xplr-0.16.3.tar.gz) = 7317f62b27cff15760911c0f3766eee6ba8f1e29cd97e0d8bb344dd5ae6bb2de
-SHA512 (xplr-0.16.3.tar.gz) = a36ee403cae2df4a8b8c732beaa452cf2cf8e3e69472e32b3beb5746dae4a4aee797dc637f8784223b06ab629dab7988c210706a5190a704878c189fe909cc55
-Size (xplr-0.16.3.tar.gz) = 226577 bytes
+BLAKE2s (xplr-0.16.4.tar.gz) = d9be8537eb1cb1387f0dbb38676fad50625b05e6b9a089687d4aa439d0dd382f
+SHA512 (xplr-0.16.4.tar.gz) = 76ef6da41ce7714c80b84ab7878aa19caac1ad0515354754856fd1ac4cce6f63dcad7fcdc8a5cf49bfbcda7fc2f407c9c6e822bcceef94c2a70a1ff17d3e4655
+Size (xplr-0.16.4.tar.gz) = 227202 bytes
 BLAKE2s (yaml-rust-0.4.5.crate) = 65c7c0fe708cb682959e36fbb03b09a35b09d529e5c87364107f5985940a1404
 SHA512 (yaml-rust-0.4.5.crate) = 7621dc8dfd5e7d4a7a8805b2a7e8319b63b852367655f2359d4e3e8fec6c4fad52d75c46ce1161e4c674eac0780b757ce9d34e664e304d8d2beec7afa0363ea0
 Size (yaml-rust-0.4.5.crate) = 47783 bytes
-SHA1 (patch-Cargo.toml) = f1927d7d223504ffd4d2f04818b7562f1472f53c
+SHA1 (patch-Cargo.toml) = 7d60ff04ac3584ca2ac3fd22bbd35a5f7b750a95
