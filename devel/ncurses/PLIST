@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2020/03/04 14:04:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28 2021/11/16 15:19:59 wiz Exp $
 bin/captoinfo
 bin/clear
 bin/infocmp
@@ -35,6 +35,9 @@ lib/libgnumenu.la
 lib/libgnupanel.la
 lib/libncurses++.la
 lib/libncurses.la
+lib/pkgconfig/gnuform.pc
+lib/pkgconfig/gnumenu.pc
+lib/pkgconfig/gnupanel.pc
 lib/pkgconfig/ncurses++.pc
 lib/pkgconfig/ncurses.pc
 man/man1/captoinfo.1
@@ -236,6 +239,7 @@ man/man3/erase.3
 man/man3/erasechar.3
 man/man3/erasechar_sp.3
 man/man3/erasewchar.3
+man/man3/erasewchar_sp.3
 man/man3/exit_curses.3
 man/man3/exit_terminfo.3
 man/man3/extended_color_content.3
@@ -429,6 +433,7 @@ man/man3/keypad.3
 man/man3/killchar.3
 man/man3/killchar_sp.3
 man/man3/killwchar.3
+man/man3/killwchar_sp.3
 man/man3/leaveok.3
 man/man3/legacy_coding.3
 man/man3/link_field.3
@@ -635,6 +640,7 @@ man/man3/redrawwin.3
 man/man3/refresh.3
 man/man3/replace_panel.3
 man/man3/reset_color_pairs.3
+man/man3/reset_color_pairs_sp.3
 man/man3/reset_prog_mode.3
 man/man3/reset_prog_mode_sp.3
 man/man3/reset_shell_mode.3
@@ -721,7 +727,6 @@ man/man3/set_top_row.3
 man/man3/setcchar.3
 man/man3/setscrreg.3
 man/man3/setsyx.3
-man/man3/setterm.3
 man/man3/setupterm.3
 man/man3/show_panel.3
 man/man3/slk_attr.3
@@ -782,6 +787,7 @@ man/man3/tgetnum_sp.3
 man/man3/tgetstr.3
 man/man3/tgetstr_sp.3
 man/man3/tgoto.3
+man/man3/tgoto_sp.3
 man/man3/tigetflag.3
 man/man3/tigetflag_sp.3
 man/man3/tigetnum.3
@@ -795,6 +801,7 @@ man/man3/top_row.3
 man/man3/touchline.3
 man/man3/touchwin.3
 man/man3/tparm.3
+man/man3/tparm_sp.3
 man/man3/tputs.3
 man/man3/tputs_sp.3
 man/man3/trace.3

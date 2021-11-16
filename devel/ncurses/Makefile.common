@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.47 2020/09/07 11:11:41 schmonz Exp $
+# $NetBSD: Makefile.common,v 1.48 2021/11/16 15:19:59 wiz Exp $
 #
 # used by devel/ncurses/Makefile
 # used by devel/ncursesw/Makefile
 
 DISTNAME=	ncurses-${NC_VERS}
-NC_VERS=	6.2
+NC_VERS=	6.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=ncurses/}
 MASTER_SITES+=	ftp://dickey.his.com/ncurses/
@@ -31,6 +31,9 @@ CONFIGURE_ARGS+=	--without-manpage-renames
 CONFIGURE_ARGS+=	--with-default-terminfo-dir=${PREFIX}/${TERMINFODIR}
 CONFIGURE_ARGS+=	--with-terminfo-dirs=${PREFIX}/${TERMINFODIR}
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/ncurses
+CONFIGURE_ARGS+=	--with-form-libname=gnuform
+CONFIGURE_ARGS+=	--with-menu-libname=gnumenu
+CONFIGURE_ARGS+=	--with-panel-libname=gnupanel
 
 SUBST_CLASSES+=		rpath
 SUBST_FILES.rpath+=	misc/ncurses-config
@@ -50,7 +53,7 @@ CONFIGURE_ARGS.Darwin+=	--disable-mixed-case
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 TOOL_DEPENDS+=		ncurses-${NC_VERS}:../../devel/ncurses
 CONFIGURE_ENV+=		BUILD_CC=${NATIVE_CC:Q}
-CONFIGURE_ENV+=		ac_cv_path_TIC_PATH=${LOCALBASE}/bin/tic
+CONFIGURE_ENV+=		ac_cv_path_TIC_PATH=${PREFIX}/bin/tic
 .endif
 
 # If there's no native tbl(1) then the tools infrastructure would pull in
