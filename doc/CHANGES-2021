@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5628 2021/11/16 15:27:44 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5629 2021/11/16 15:27:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8487,3 +8487,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ncurses to 6.3 [wiz 2021-11-16]
 	Updated devel/ncursesw to 6.3 [wiz 2021-11-16]
 	Updated devel/protobuf to 3.19.1 [wiz 2021-11-16]
+	Updated devel/py-protobuf to 3.19.1 [wiz 2021-11-16]
