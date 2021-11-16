@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5635 2021/11/16 16:26:06 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5636 2021/11/16 19:46:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8497,3 +8497,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/tcpdump to 4.99.1 [adam 2021-11-16]
 	Updated lang/tcl to 8.6.12 [adam 2021-11-16]
 	Updated x11/tk to 8.6.12 [adam 2021-11-16]
+	Updated time/py-iso8601 to 1.0.0 [adam 2021-11-16]
+	Updated devel/py-utils to 2.5.6 [adam 2021-11-16]
+	Updated devel/py-progressbar2 to 3.55.0 [adam 2021-11-16]
+	Updated devel/py-factory_boy to 3.2.1 [adam 2021-11-16]
