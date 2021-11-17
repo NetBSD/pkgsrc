@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2021/09/02 11:28:55 pin Exp $
+# $NetBSD: Makefile,v 1.11 2021/11/17 11:18:54 pin Exp $
 
-DISTNAME=	navi-2.17.2
+DISTNAME=	navi-2.18.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=denisidoro/}
-GITHUB_PROJECT=	navi
-GITHUB_TAG=	6f4e04c6fc885d06cc09f29414d605c493007e37
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/denisidoro/navi/
