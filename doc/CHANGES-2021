@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5637 2021/11/17 01:41:54 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.5638 2021/11/17 08:39:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8502,3 +8502,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-progressbar2 to 3.55.0 [adam 2021-11-16]
 	Updated devel/py-factory_boy to 3.2.1 [adam 2021-11-16]
 	Updated wm/enlightenment16 to 1.0.24 [gutteridge 2021-11-17]
+	Updated www/py-httpcore to 0.14.2 [adam 2021-11-17]
+	Updated www/py-httpx to 0.21.1 [adam 2021-11-17]
+	Updated www/py-httpx-socks to 0.6.0 [adam 2021-11-17]
+	Updated converters/py-simplejson to 3.17.6 [adam 2021-11-17]
