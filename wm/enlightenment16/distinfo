@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:25:12 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/11/17 01:41:41 gutteridge Exp $
 
-BLAKE2s (e16-1.0.23.tar.gz) = 26b6e1fbaeb654e7279b8fe38c6dbb94c78ca65dbe3048a7cbddbf87054df412
-SHA512 (e16-1.0.23.tar.gz) = ac41eded614c1a5a2bd05f71137d1d8ed7777b2d60a7544e891684c4832c2e2b71204c8df2ccbd3b1d4e6cd55a454bd1c35204b90e18ba344aa5882035d40522
-Size (e16-1.0.23.tar.gz) = 2427192 bytes
+BLAKE2s (e16-1.0.24.tar.gz) = 788b96ef94e810b9acce1c79b0377a627a5023bcc3caa3bf82adb3ec224949f1
+SHA512 (e16-1.0.24.tar.gz) = 0180c4d248fe0f598c19b4dcc5c770c45c26fae6f7f8cf92c39f7a626bd7613fe8c3bd560da0c950b6af9eac5a8ca52f19110bb84dd1764e35028be9a861b2f8
+Size (e16-1.0.24.tar.gz) = 2415255 bytes
 SHA1 (patch-ac) = ead8161e192ec11fe1144b41939cb136832b9d29
