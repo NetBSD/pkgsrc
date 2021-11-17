@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5643 2021/11/17 11:24:24 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5644 2021/11/17 13:52:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8512,3 +8512,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/navi to 2.18.0 [pin 2021-11-17]
 	Updated shells/nushell to 0.40.0 [pin 2021-11-17]
 	Updated wm/sdorfehs to 1.2 [pin 2021-11-17]
+	Updated filesystems/py-fs to 2.4.14 [adam 2021-11-17]
+	Updated finance/py-stripe to 2.63.0 [adam 2021-11-17]
