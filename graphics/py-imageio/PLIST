@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/04/27 16:21:53 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/11/17 17:27:15 adam Exp $
 bin/imageio_download_bin-${PYVERSSUFFIX}
 bin/imageio_remove_bin-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -13,6 +13,15 @@ ${PYSITELIB}/imageio/__init__.pyo
 ${PYSITELIB}/imageio/__main__.py
 ${PYSITELIB}/imageio/__main__.pyc
 ${PYSITELIB}/imageio/__main__.pyo
+${PYSITELIB}/imageio/config/__init__.py
+${PYSITELIB}/imageio/config/__init__.pyc
+${PYSITELIB}/imageio/config/__init__.pyo
+${PYSITELIB}/imageio/config/extensions.py
+${PYSITELIB}/imageio/config/extensions.pyc
+${PYSITELIB}/imageio/config/extensions.pyo
+${PYSITELIB}/imageio/config/plugins.py
+${PYSITELIB}/imageio/config/plugins.pyc
+${PYSITELIB}/imageio/config/plugins.pyo
 ${PYSITELIB}/imageio/core/__init__.py
 ${PYSITELIB}/imageio/core/__init__.pyc
 ${PYSITELIB}/imageio/core/__init__.pyo
@@ -28,12 +37,18 @@ ${PYSITELIB}/imageio/core/format.pyo
 ${PYSITELIB}/imageio/core/functions.py
 ${PYSITELIB}/imageio/core/functions.pyc
 ${PYSITELIB}/imageio/core/functions.pyo
+${PYSITELIB}/imageio/core/imopen.py
+${PYSITELIB}/imageio/core/imopen.pyc
+${PYSITELIB}/imageio/core/imopen.pyo
 ${PYSITELIB}/imageio/core/request.py
 ${PYSITELIB}/imageio/core/request.pyc
 ${PYSITELIB}/imageio/core/request.pyo
 ${PYSITELIB}/imageio/core/util.py
 ${PYSITELIB}/imageio/core/util.pyc
 ${PYSITELIB}/imageio/core/util.pyo
+${PYSITELIB}/imageio/core/v3_api.py
+${PYSITELIB}/imageio/core/v3_api.pyc
+${PYSITELIB}/imageio/core/v3_api.pyo
 ${PYSITELIB}/imageio/freeze.py
 ${PYSITELIB}/imageio/freeze.pyc
 ${PYSITELIB}/imageio/freeze.pyo
@@ -97,6 +112,9 @@ ${PYSITELIB}/imageio/plugins/pillow.pyo
 ${PYSITELIB}/imageio/plugins/pillow_info.py
 ${PYSITELIB}/imageio/plugins/pillow_info.pyc
 ${PYSITELIB}/imageio/plugins/pillow_info.pyo
+${PYSITELIB}/imageio/plugins/pillow_legacy.py
+${PYSITELIB}/imageio/plugins/pillow_legacy.pyc
+${PYSITELIB}/imageio/plugins/pillow_legacy.pyo
 ${PYSITELIB}/imageio/plugins/pillowmulti.py
 ${PYSITELIB}/imageio/plugins/pillowmulti.pyc
 ${PYSITELIB}/imageio/plugins/pillowmulti.pyo
