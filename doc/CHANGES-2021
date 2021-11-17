@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5641 2021/11/17 11:19:15 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5642 2021/11/17 11:20:52 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8510,3 +8510,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/git to 2.34.0 [adam 2021-11-17]
 	Updated databases/py-asyncpg to 0.25.0 [adam 2021-11-17]
 	Updated sysutils/navi to 2.18.0 [pin 2021-11-17]
+	Updated shells/nushell to 0.40.0 [pin 2021-11-17]
