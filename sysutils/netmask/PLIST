@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/17 17:12:45 sjmulder Exp $
+bin/netmask
+info/netmask.info
+man/man1/netmask.1
