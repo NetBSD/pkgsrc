@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2021/06/13 18:36:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2021/11/17 09:01:40 adam Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -135,7 +135,6 @@ libexec/git-core/git-quiltimport
 libexec/git-core/git-range-diff
 libexec/git-core/git-read-tree
 libexec/git-core/git-rebase
-libexec/git-core/git-rebase--preserve-merges
 libexec/git-core/git-receive-pack
 libexec/git-core/git-reflog
 libexec/git-core/git-remote
