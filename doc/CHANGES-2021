@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5646 2021/11/17 17:06:24 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5647 2021/11/17 17:13:56 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8517,3 +8517,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/texttest to 4.0.8 [schmonz 2021-11-17]
 	Updated devel/py-mako to 1.1.6 [adam 2021-11-17]
 	Updated www/py-httpcore to 0.14.3 [adam 2021-11-17]
+	Added sysutils/netmask version 2.4.4 [sjmulder 2021-11-17]
