@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2021/11/15 22:01:18 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2021/11/17 08:36:03 wiz Exp $
 
-PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-flac/}
-CATEGORIES=	audio gnome
+PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-jpeg/}
+CATEGORIES=	graphics gnome
 
-COMMENT=	Open source multimedia framework - FLAC plugin
+COMMENT=	Open source multimedia framework - JPEG plugin
 
-GST_PLUGINS+=	flac
+GST_PLUGINS+=	jpeg
 
 .include "../../multimedia/gst-plugins1-good/Makefile.common"
-.include "../../audio/flac/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
