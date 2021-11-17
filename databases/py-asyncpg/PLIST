@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/02/10 08:26:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/11/17 09:04:41 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -50,37 +50,15 @@ ${PYSITELIB}/asyncpg/pgproto/__init__.pyc
 ${PYSITELIB}/asyncpg/pgproto/__init__.pyo
 ${PYSITELIB}/asyncpg/pgproto/buffer.pxd
 ${PYSITELIB}/asyncpg/pgproto/buffer.pyx
-${PYSITELIB}/asyncpg/pgproto/codecs/__init__.pxd
-${PYSITELIB}/asyncpg/pgproto/codecs/bits.pyx
-${PYSITELIB}/asyncpg/pgproto/codecs/bytea.pyx
-${PYSITELIB}/asyncpg/pgproto/codecs/context.pyx
-${PYSITELIB}/asyncpg/pgproto/codecs/datetime.pyx
-${PYSITELIB}/asyncpg/pgproto/codecs/float.pyx
-${PYSITELIB}/asyncpg/pgproto/codecs/geometry.pyx
-${PYSITELIB}/asyncpg/pgproto/codecs/hstore.pyx
-${PYSITELIB}/asyncpg/pgproto/codecs/int.pyx
-${PYSITELIB}/asyncpg/pgproto/codecs/json.pyx
-${PYSITELIB}/asyncpg/pgproto/codecs/jsonpath.pyx
-${PYSITELIB}/asyncpg/pgproto/codecs/misc.pyx
-${PYSITELIB}/asyncpg/pgproto/codecs/network.pyx
-${PYSITELIB}/asyncpg/pgproto/codecs/numeric.pyx
-${PYSITELIB}/asyncpg/pgproto/codecs/pg_snapshot.pyx
-${PYSITELIB}/asyncpg/pgproto/codecs/text.pyx
-${PYSITELIB}/asyncpg/pgproto/codecs/tid.pyx
-${PYSITELIB}/asyncpg/pgproto/codecs/uuid.pyx
 ${PYSITELIB}/asyncpg/pgproto/consts.pxi
 ${PYSITELIB}/asyncpg/pgproto/cpythonx.pxd
-${PYSITELIB}/asyncpg/pgproto/debug.h
 ${PYSITELIB}/asyncpg/pgproto/debug.pxd
 ${PYSITELIB}/asyncpg/pgproto/frb.pxd
 ${PYSITELIB}/asyncpg/pgproto/frb.pyx
-${PYSITELIB}/asyncpg/pgproto/hton.h
 ${PYSITELIB}/asyncpg/pgproto/hton.pxd
-${PYSITELIB}/asyncpg/pgproto/pgproto.c
 ${PYSITELIB}/asyncpg/pgproto/pgproto.pxd
 ${PYSITELIB}/asyncpg/pgproto/pgproto.pyx
 ${PYSITELIB}/asyncpg/pgproto/pgproto.so
-${PYSITELIB}/asyncpg/pgproto/tohex.h
 ${PYSITELIB}/asyncpg/pgproto/tohex.pxd
 ${PYSITELIB}/asyncpg/pgproto/types.py
 ${PYSITELIB}/asyncpg/pgproto/types.pyc
@@ -113,13 +91,9 @@ ${PYSITELIB}/asyncpg/protocol/encodings.pyx
 ${PYSITELIB}/asyncpg/protocol/pgtypes.pxi
 ${PYSITELIB}/asyncpg/protocol/prepared_stmt.pxd
 ${PYSITELIB}/asyncpg/protocol/prepared_stmt.pyx
-${PYSITELIB}/asyncpg/protocol/protocol.c
 ${PYSITELIB}/asyncpg/protocol/protocol.pxd
 ${PYSITELIB}/asyncpg/protocol/protocol.pyx
 ${PYSITELIB}/asyncpg/protocol/protocol.so
-${PYSITELIB}/asyncpg/protocol/record/__init__.pxd
-${PYSITELIB}/asyncpg/protocol/record/recordobj.c
-${PYSITELIB}/asyncpg/protocol/record/recordobj.h
 ${PYSITELIB}/asyncpg/protocol/scram.pxd
 ${PYSITELIB}/asyncpg/protocol/scram.pyx
 ${PYSITELIB}/asyncpg/protocol/settings.pxd
