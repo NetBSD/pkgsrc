@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2021/04/16 13:17:39 adam Exp $
+# $NetBSD: Makefile,v 1.7 2021/11/17 13:50:30 adam Exp $
 
-DISTNAME=	fs-2.4.13
+DISTNAME=	fs-2.4.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	filesystems python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fs/}
@@ -14,6 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-appdirs>=1.4.3:../../devel/py-appdirs
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
 TEST_DEPENDS+=	${PYPKGPREFIX}-pyftpdlib-[0-9]*:../../net/py-pyftpdlib
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
