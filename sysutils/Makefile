@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.971 2021/11/16 08:52:30 wiz Exp $
+# $NetBSD: Makefile,v 1.972 2021/11/17 17:13:30 sjmulder Exp $
 #
 
 COMMENT=	System utilities
@@ -451,6 +451,7 @@ SUBDIR+=	ndesk-dbus-glib
 SUBDIR+=	neb-wipe
 SUBDIR+=	neofetch
 SUBDIR+=	netbt-hcidump
+SUBDIR+=	netmask
 SUBDIR+=	news
 SUBDIR+=	nnn
 SUBDIR+=	node_exporter
