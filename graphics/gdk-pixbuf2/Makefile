@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2021/11/07 17:00:25 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2021/11/17 15:14:42 schmonz Exp $
 
 DISTNAME=	gdk-pixbuf-2.42.6
 PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
@@ -20,6 +20,19 @@ USE_TOOLS+=	pkg-config xgettext
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gdk-pixbuf
 # For Darwin
 MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/gdk-pixbuf
+
+.include "../../mk/bsd.prefs.mk"
+
+SUBST_CLASSES+=		dyld
+SUBST_STAGE.dyld=	pre-configure
+SUBST_FILES.dyld=	gdk-pixbuf/meson.build \
+			tests/meson.build \
+			thumbnailer/meson.build
+.if ${OPSYS} == "Darwin"
+SUBST_SED.dyld=		-e 's|@LD_LIBRARY_PATH@|DYLD_LIBRARY_PATH|g'
+.else
+SUBST_SED.dyld=		-e 's|@LD_LIBRARY_PATH@|LD_LIBRARY_PATH|g'
+.endif
 
 MESON_ARGS+=			-D installed_tests=false
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
