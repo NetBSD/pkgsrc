@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2021/11/16 08:46:01 pin Exp $
+$NetBSD: distinfo,v 1.2 2021/11/18 13:08:22 pin Exp $
 
 BLAKE2s (aho-corasick-0.7.18.crate) = 8925e88e2df4b5ca3b31783f527e1bb31dbe27846f409f631148fa239f3b2935
 SHA512 (aho-corasick-0.7.18.crate) = 7a23b16231a90d23ee60ad4c81bc225410599a4560d33d3a203138fc540c39cf1000100fed3aed40dcc371c3635656a3792545dca5dd1aefbde00d8774eebd00
@@ -270,9 +270,9 @@ Size (tui-0.16.0.crate) = 142363 bytes
 BLAKE2s (tui-realm-stdlib-1.0.3.crate) = 5f222cb56b121bd90ca4f10f6cd2298ae855fecad97c1cb981eea902fd2fd1b3
 SHA512 (tui-realm-stdlib-1.0.3.crate) = 514189a00490e2338ae862dc80a77638d377875fe6a45662ecdecadcd262917ec07050d8110070cfc2a341865dd4a7e689ed18f5d231325667ebf3a40ca58619
 Size (tui-realm-stdlib-1.0.3.crate) = 39865 bytes
-BLAKE2s (tuifeed-0.1.0.tar.gz) = 25123d5edbca04b70fa3511a3c4dbf01276ea7b63b1fc339286ce71c3cabf143
-SHA512 (tuifeed-0.1.0.tar.gz) = f7e15c3f9eba223d99314f19eca5a3514a935c6eb9ed043cf2a992c9e026eef6867dbde219da06eeb154cf57b7709b596265a0dbdb6cee739bbecfadecde965c
-Size (tuifeed-0.1.0.tar.gz) = 2096279 bytes
+BLAKE2s (tuifeed-0.1.1.tar.gz) = 79fc1e153dbfcd3ad630b7a1df3e9c779f9f6e73add940057dddfe67c1dffe5d
+SHA512 (tuifeed-0.1.1.tar.gz) = 2632e0bba0fedee28d012e0106b072b11eced60dfe537d52fdf0fc693cacd80b73f3cc479a7f2d33b2f47fa7ca5d6aca8da4180fdb3fca281f20c84ed7e575b8
+Size (tuifeed-0.1.1.tar.gz) = 1714740 bytes
 BLAKE2s (tuirealm-1.0.0.crate) = 5adbf6f3872caed7293ea45de717db9e9614feeb59bc9b95c684b2680f87d5b3
 SHA512 (tuirealm-1.0.0.crate) = efa92b2fa704d9723f040eb8abe2b1c68e2b016c79ec22ac3f277a3d26f750601146213902fc545d3ef6777fd4be35f0df243b29509ba1b52ea54d145c7e59e5
 Size (tuirealm-1.0.0.crate) = 52983 bytes
