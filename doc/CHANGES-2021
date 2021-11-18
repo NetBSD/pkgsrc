@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5656 2021/11/18 20:06:06 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5657 2021/11/18 20:38:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8535,3 +8535,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/py-sympy to 1.9 [adam 2021-11-18]
 	Updated net/py-softlayer to 5.9.7 [adam 2021-11-18]
 	Updated sysutils/broot to 1.7.2 [pin 2021-11-18]
+	Updated shells/bash to 5.1.12 [wiz 2021-11-18]
