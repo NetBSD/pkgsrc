@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5651 2021/11/18 13:08:41 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5652 2021/11/18 14:16:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8523,3 +8523,8 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/nono to 0.2.3 [jun 2021-11-18]
 	Updated sysutils/felix to 0.2.9 [pin 2021-11-18]
 	Updated news/tuifeed to 0.1.1 [pin 2021-11-18]
+	Updated devel/abseil to 20211102.0 [adam 2021-11-18]
+	Updated net/grpc to 1.42.0 [adam 2021-11-18]
+	Updated net/py-grpcio to 1.42.0 [adam 2021-11-18]
+	Updated net/py-grpcio-testing to 1.42.0 [adam 2021-11-18]
+	Updated net/py-grpcio-tools to 1.42.0 [adam 2021-11-18]
