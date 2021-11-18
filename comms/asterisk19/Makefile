@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/11/14 02:30:21 jnemeth Exp $
+# $NetBSD: Makefile,v 1.2 2021/11/18 12:22:30 nia Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
@@ -140,7 +140,7 @@ PLIST.mgcp=	yes
 .endif
 
 PLIST_VARS+=	timerfd
-.if ${OPSYS} == "Linux"
+.if defined(OPSYS_HAS_TIMERFD)
 PLIST.timerfd=	yes
 .endif
 
