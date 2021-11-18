@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2021/11/15 22:01:18 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2021/11/18 20:25:45 nia Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/}
 CATEGORIES=	multimedia gnome
@@ -34,6 +34,8 @@ GST_PLUGINS+=	volume
 GST_PLUGINS+=	introspection
 GST_PLUGINS+=	tools
 GST_PLUGINS+=	nls
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 # for tests
 # generate with:
