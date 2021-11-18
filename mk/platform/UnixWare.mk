@@ -1,4 +1,4 @@
-# $NetBSD: UnixWare.mk,v 1.34 2016/03/10 16:58:19 jperkin Exp $
+# $NetBSD: UnixWare.mk,v 1.35 2021/11/18 13:23:56 nia Exp $
 #
 # Variable definitions for the UnixWare 7 operating system.
 
@@ -31,11 +31,7 @@ _OPSYS_SYSTEM_RPATH?=	/usr/lib
 _OPSYS_LIB_DIRS?=	/usr/lib
 _OPSYS_INCLUDE_DIRS?=	/usr/include
 
-.if exists(/usr/include/netinet/in6.h)
-_OPSYS_HAS_INET6=	yes		# IPv6 is standard
-.else
 _OPSYS_HAS_INET6=	no		# IPv6 is not standard
-.endif
 _OPSYS_HAS_JAVA=	no		# Java is not standard
 _OPSYS_HAS_MANZ=	no		# no MANZ for gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no		# libossaudio is available
