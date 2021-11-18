@@ -1,12 +1,42 @@
-$NetBSD: patch-tcsh.man,v 1.1 2021/11/14 22:15:13 kim Exp $
+$NetBSD: patch-tcsh.man,v 1.2 2021/11/18 10:20:47 kim Exp $
 
 Document ln=target
+Add more detail to "jobs -Z" usage.
 
 https://github.com/tcsh-org/tcsh/commit/b98d6544234e9258156f08c8b559ed6253f2bc49.patch
+https://github.com/tcsh-org/tcsh/commit/a81394cfaca1b9cf4d9cf8d3f4d8c0126b8b09d0.patch
 
---- tcsh.man
-+++ tcsh.man
-@@ -5088,6 +5088,9 @@ A few terminal programs do not recognize the default end code
+--- tcsh.man.orig	2021-11-11 09:54:05.000000000 +0000
++++ tcsh.man	2021-11-18 10:08:01.436706660 +0000
+@@ -2972,16 +2972,22 @@
+ .B inlib \fIshared-library\fR ... (+)
+ Adds each \fIshared-library\fR to the current environment.  There is no way
+ to remove a shared library.  (Domain/OS only)
++.PP
++.B jobs \fR[\fB\-l\fR]
++.PD 0
+ .TP 8
+-.B jobs \fR[\fB\-lZ\fR]
++.B jobs \-Z \fR[\fItitle\fR] (+)
+ Lists the active jobs.  With \fB\-l\fR, lists process
+ IDs in addition to the normal information.  On TCF systems, prints
+ the site on which each job is executing.
+-The \fB-Z\fR option sets the process title using setproctitle(3)
+-where available.
++.PD
++.RS +8
++.PP
++The \fB-Z\fR option sets the process title to \fItitle\fR using
++setproctitle(3) where available.
++If no \fItitle\fR is provided, the process title will be cleared.
++.RE
+ .PP
+-.PD 0
+-.TP 8
+ .B kill \fR[\fB\-s \fIsignal\fR] \fB%\fIjob\fR|\fIpid\fR ...
+ .PD 0
+ .TP 8
+@@ -5088,6 +5094,9 @@
  properly.  If all text gets colorized after you do a directory
  listing, try changing the \fBno\fR and \fBfi\fR codes from 0 to the
  numerical codes for your standard fore- and background colors.
