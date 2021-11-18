@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/07/30 05:46:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/11/18 19:56:27 adam Exp $
 bin/sl-${PYVERSSUFFIX}
 bin/slcli-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -194,6 +194,9 @@ ${PYSITELIB}/SoftLayer/CLI/cdn/__init__.pyo
 ${PYSITELIB}/SoftLayer/CLI/cdn/detail.py
 ${PYSITELIB}/SoftLayer/CLI/cdn/detail.pyc
 ${PYSITELIB}/SoftLayer/CLI/cdn/detail.pyo
+${PYSITELIB}/SoftLayer/CLI/cdn/edit.py
+${PYSITELIB}/SoftLayer/CLI/cdn/edit.pyc
+${PYSITELIB}/SoftLayer/CLI/cdn/edit.pyo
 ${PYSITELIB}/SoftLayer/CLI/cdn/list.py
 ${PYSITELIB}/SoftLayer/CLI/cdn/list.pyc
 ${PYSITELIB}/SoftLayer/CLI/cdn/list.pyo
@@ -947,6 +950,9 @@ ${PYSITELIB}/SoftLayer/CLI/vlan/__init__.pyo
 ${PYSITELIB}/SoftLayer/CLI/vlan/cancel.py
 ${PYSITELIB}/SoftLayer/CLI/vlan/cancel.pyc
 ${PYSITELIB}/SoftLayer/CLI/vlan/cancel.pyo
+${PYSITELIB}/SoftLayer/CLI/vlan/create.py
+${PYSITELIB}/SoftLayer/CLI/vlan/create.pyc
+${PYSITELIB}/SoftLayer/CLI/vlan/create.pyo
 ${PYSITELIB}/SoftLayer/CLI/vlan/detail.py
 ${PYSITELIB}/SoftLayer/CLI/vlan/detail.pyc
 ${PYSITELIB}/SoftLayer/CLI/vlan/detail.pyo
