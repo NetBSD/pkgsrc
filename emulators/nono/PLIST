@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2020/11/27 13:09:37 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/11/18 04:04:29 jun Exp $
 bin/nono
 bin/nono-cli
 share/doc/nono/changes.html
 share/doc/nono/index.html
 share/doc/nono/nono-license.txt
 share/locale/ja/LC_MESSAGES/nono.mo
+share/doc/nono/upgrade-0.2.0.html
