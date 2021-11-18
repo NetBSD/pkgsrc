@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2018/01/28 16:24:12 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2021/11/18 16:05:28 nia Exp $
 
 DISTNAME=		pml-2.03
 PKGNAME=		cross-freemint-${DISTNAME}
@@ -26,6 +26,8 @@ PATCHFILES+=	pml-2.03-mint-20110207.patch.bz2
 # use makeinfo from pkgsrc/devel/gtexinfo.
 TOOL_DEPENDS+=		gtexinfo>=5.1:../../devel/gtexinfo
 TOOLS_PLATFORM.makeinfo=
+
+MKPIE_SUPPORTED=	no
 
 DEPENDS+=	cross-freemint-binutils-[0-9]*:../../cross/freemint-binutils
 DEPENDS+=	cross-freemint-mintbin-[0-9]*:../../cross/freemint-mintbin

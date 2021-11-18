@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/01/28 16:24:12 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2021/11/18 16:05:28 nia Exp $
 
 DISTNAME=		gcc-4.6.4
 PKGNAME=		cross-freemint-${DISTNAME}
@@ -42,6 +42,8 @@ CONFIGURE_ARGS+=	--enable-languages=c,c++
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--disable-multilib
+
+MKPIE_SUPPORTED=	no
 
 MAKE_ENV+=		SHELL=${TOOLS_PATH.bash}
 MAKE_ENV+=		FREEMINT_PREFIX=${FREEMINT_PREFIX}
