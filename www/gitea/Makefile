@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2021/11/05 20:02:49 bsiegert Exp $
+# $NetBSD: Makefile,v 1.61 2021/11/18 02:45:29 khorben Exp $
 
 DISTNAME=	gitea-1.13.4
-PKGREVISION=	10
+PKGREVISION=	11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=go-gitea/}
 CATEGORIES=	www
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -74,7 +74,7 @@ SUBST_CLASSES+=		fix-var
 SUBST_STAGE.fix-var=	pre-configure
 SUBST_MESSAGE.fix-var=	Replace some vars
 SUBST_FILES.fix-var=	${WRKDIR}/app.ini.sample
-SUBST_VARS.fix-var=	VARBASE GITEA_USER
+SUBST_VARS.fix-var=	PKG_SYSCONFDIR VARBASE GITEA_USER
 
 CONF_FILES_PERMS+=	${EGDIR}/app.ini.sample ${PKG_SYSCONFDIR}/conf/app.ini \
 			${GITEA_USER} ${GITEA_GROUP} 0600

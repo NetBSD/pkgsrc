@@ -1,11 +1,15 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: gitea.sh,v 1.3 2021/03/01 23:47:09 khorben Exp $
+# $NetBSD: gitea.sh,v 1.4 2021/11/18 02:45:29 khorben Exp $
 #
 # PROVIDE: gitea
 # REQUIRE: DAEMON
+#
+# You will need to set some variables in @SYSCONFBASE@/rc.conf to start gitea:
+#
+# gitea=YES
 
-. /etc/rc.subr
+$_rc_subr_loaded . @SYSCONFBASE@/rc.subr
 
 name="gitea"
 rcvar=${name}
