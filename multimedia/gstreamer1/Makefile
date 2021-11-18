@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2021/11/15 22:01:21 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2021/11/18 20:25:45 nia Exp $
 
 DISTNAME=	gstreamer-1.18.5
 PKGNAME=	${DISTNAME:S/gstreamer/gstreamer1/}
@@ -14,6 +14,8 @@ LICENSE=	gnu-lgpl-v2
 USE_TOOLS+=		bison flex perl pkg-config xgettext
 TEST_TARGET=		check
 FLEX_REQD=		2.5.31
+
+LDFLAGS.SunOS+=		-lsocket -lnsl -lrt
 
 .include "options.mk"
 
