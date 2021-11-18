@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/08/17 20:18:31 leot Exp $
+# $NetBSD: Makefile,v 1.19 2021/11/18 14:07:59 nia Exp $
 #
 
 DISTNAME=	codeblocks-20.03
@@ -16,6 +16,12 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++11
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(PKGSRC_COMPILER:M*gcc*)
+CONFIGURE_ARGS+=	--disable-pch
+.endif
 
 #CONFIGURE_ARGS+=	--disable-gtk-notebook
 CONFIGURE_ARGS+=	--with-contrib-plugins=AutoVersioning,BrowseTracker,-MouseSap,byogames,cbkoders,codesnippets,codestat,dragscroll,envvars,help,keybinder,libfinder,profiler,regex,exporter,symtab
