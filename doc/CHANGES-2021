@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5648 2021/11/17 17:28:35 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5649 2021/11/18 04:05:35 jun Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8520,3 +8520,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added sysutils/netmask version 2.4.4 [sjmulder 2021-11-17]
 	Updated graphics/py-tifffile to 2021.11.2 [adam 2021-11-17]
 	Updated graphics/py-imageio to 2.10.5 [adam 2021-11-17]
+	Updated emulators/nono to 0.2.3 [jun 2021-11-18]
