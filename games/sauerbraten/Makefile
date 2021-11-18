@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/09/08 21:05:08 nia Exp $
+# $NetBSD: Makefile,v 1.5 2021/11/18 14:45:37 nia Exp $
 
 DISTNAME=	sauerbraten_2020_12_27_linux
 PKGNAME=	sauerbraten-2020_12_27
@@ -18,6 +18,9 @@ USE_LANGUAGES=	c c++03
 WRKSRC=		${WRKDIR}/sauerbraten
 BUILD_DIRS+=	src
 BUILD_TARGET=	client master server
+
+# GCC precompiled headers...
+RELRO_SUPPORTED=	no
 
 LDFLAGS.NetBSD+=	-lrt
 
