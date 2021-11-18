@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2021/05/30 13:45:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.22 2021/11/18 02:23:44 pho Exp $
 
 DISTNAME=	nim-1.4.8
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://nim-lang.org/download/
 EXTRACT_SUFX=	.tar.xz
@@ -20,14 +21,18 @@ INSTALLATION_DIRS=	bin
 post-patch:
 	cd ${WRKSRC}/bin && ${LN} -sf nim-gdb nim-gdb.bash
 
+# nim doesn't honor the environment variable LDFLAGS. In order to
+# support PKGSRC_USE_RELRO, we need to translate the flags to compiler
+# options.
+NIM_FLAGS=	${LDFLAGS:S/^/--passL:/}
 do-build:
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} sh ./build.sh
 	printf '#! %s\nexec %s _=%s/nim/bin/nim %s/nim/bin/nim "$$@"\n' \
 		"${SH}" "${SETENV}" "${PREFIX}" "${PREFIX}" \
 		> ${WRKSRC}/nim-wrapper.sh
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./bin/nim c --skipUserCfg --skipParentCfg --parallelBuild:${_MAKE_JOBS_N} koch
-	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./koch boot --parallelBuild:${_MAKE_JOBS_N} -d:release --skipUserCfg --skipParentCfg
-	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./koch --stable tools --parallelBuild:${_MAKE_JOBS_N} --skipUserCfg --skipParentCfg
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./koch boot --parallelBuild:${_MAKE_JOBS_N} -d:release ${NIM_FLAGS}
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ./koch --stable tools --parallelBuild:${_MAKE_JOBS_N} ${NIM_FLAGS}
 
 do-install:
 	cd ${WRKSRC} && sh ./install.sh ${DESTDIR}${PREFIX}
