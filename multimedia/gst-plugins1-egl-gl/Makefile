@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2020/03/08 16:50:41 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2021/11/18 02:05:18 jun Exp $
+
+CATEGORIES=		multimedia
 
 GST_PLUGINS1_NAME=	gl
 GST_PLUGINS1_FLAGS=	egl
