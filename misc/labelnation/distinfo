@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/11/07 14:52:08 gdt Exp $
+$NetBSD: distinfo,v 1.6 2021/11/18 23:44:33 gdt Exp $
 
-BLAKE2s (labelnation-1.218.tar.gz) = a490b036b6d5983b75fd3ed9679312850726ab8ae46c950401f002cea6b2ecda
-SHA512 (labelnation-1.218.tar.gz) = 4c7b3dda9ecfd6213a3e321835c174023a018a5c58ef4943aec0ca61badcbc4727e801b02444a124df1996a3ade36547b103d3847e145b875c3eb79a9f7d232e
-Size (labelnation-1.218.tar.gz) = 25157 bytes
+BLAKE2s (labelnation-1.230.tar.gz) = f62d5a6f293514c362509a627b9ebcae36d4152e3d94d264e5997faddc8269af
+SHA512 (labelnation-1.230.tar.gz) = a1ccadc06500b60944a9e734b0e0451a725b68dbd9000098d81cd4a7952949f16c4735ff706d1fe3be837e8abd8cd9dd77fdc103b5b22b73463a3b9fd2f09784
+Size (labelnation-1.230.tar.gz) = 26418 bytes
