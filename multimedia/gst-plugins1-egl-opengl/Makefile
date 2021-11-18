@@ -1,19 +1,26 @@
-# $NetBSD: Makefile,v 1.3 2021/11/18 02:06:40 jun Exp $
+# $NetBSD: Makefile,v 1.4 2021/11/18 07:18:02 wiz Exp $
 
-CATEGORIES=		multimedia
+PKGNAME=		${DISTNAME:S/plugins/plugins1/:S/-bad/-egl-opengl/}
+CATEGORIES=		multimedia gnomed
 
-GST_PLUGINS1_NAME=	opengl
-GST_PLUGINS1_FLAGS=	egl
-GST_PLUGINS1_DIRS=	ext/gl
+COMMENT=	Open source multimedia framework - AV1 plugin
 
-ONLY_FOR_PLATFORM=	NetBSD-*-*arm*
+GST_EXT_BUILD=	# defined
+GST_PLUGINS+=	opengl
+
+#GST_PLUGINS1_NAME=	opengl
+#GST_PLUGINS1_FLAGS=	egl
+#GST_PLUGINS1_DIRS=	ext/gl
+
+BROKEN=			"Needs to be updated to gstreamer 1.18.5"
+
+#ONLY_FOR_PLATFORM=	NetBSD-*-*arm*
 
 CFLAGS+=		-I${PREFIX}/include
 CFLAGS+=		-I${PREFIX}/include/interface/vcos/pthreads
 CFLAGS+=		-I${PREFIX}/include/interface/vmcs_host/linux
 LDFLAGS+=		-Wl,-R${PREFIX}/lib -L${PREFIX}/lib
 
-PKGREVISION= 1
 .include "../../multimedia/gst-plugins1-bad/Makefile.common"
 
 .include "../../multimedia/gst-plugins1-egl-gl/buildlink3.mk"
