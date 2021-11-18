@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5654 2021/11/18 19:44:40 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5655 2021/11/18 19:56:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8532,3 +8532,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-humanize to 3.12.0 [adam 2021-11-18]
 	Updated textproc/py-snowballstemmer to 2.2.0 [adam 2021-11-18]
 	Updated math/py-jplephem to 2.16 [adam 2021-11-18]
+	Updated math/py-sympy to 1.9 [adam 2021-11-18]
+	Updated net/py-softlayer to 5.9.7 [adam 2021-11-18]
