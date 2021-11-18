@@ -1,23 +1,23 @@
-$NetBSD: distinfo,v 1.3 2021/10/07 14:20:54 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/11/18 09:17:36 tnn Exp $
 
-RMD160 (go1.14.2.darwin-amd64.tar.gz) = 58e46896bb087e0193d3dd7a93d6e5f6dd7c551f
+BLAKE2s (go1.14.2.darwin-amd64.tar.gz) = 2d592b40cb6efa3cc8483cb100d0e4664e9c7c5a3a0983935c6efa52927758a4
 SHA512 (go1.14.2.darwin-amd64.tar.gz) = 99a7584df26d0269bd5fd550a022fece0daccf2325289ec70dbdcf6a8082b4d7bfdc38ec861ec9f1d0cf4dc52d830a38e6e3c41e4a95f7f2318cc1d41803f597
 Size (go1.14.2.darwin-amd64.tar.gz) = 125040726 bytes
-RMD160 (go1.14.2.linux-386.tar.gz) = 3374d14dba2eeeb1f7f869e9cc13a5a4b1a7b8b4
+BLAKE2s (go1.14.2.linux-386.tar.gz) = c00f6ca636fd368a858a29cb283e0bc5b0fb93b8c85428d4073bba3aee7dff1c
 SHA512 (go1.14.2.linux-386.tar.gz) = e7bd127665f0a69f66345cd91f1df35a5eb914403fd1d653ad4cbb5fef3e31b3b33e6c4a5f2d9c08f8c59eb7775e7fdf0a8dd3d6fb0fa67cc67d52e1d7835e34
 Size (go1.14.2.linux-386.tar.gz) = 104851976 bytes
-RMD160 (go1.14.2.linux-amd64.tar.gz) = 0f9fd1e202ce63b910aeb6b244e8d51ae69220f1
+BLAKE2s (go1.14.2.linux-amd64.tar.gz) = 9310d0ed71522c06fe63cc53c10aa7a3839fe35bbd08662c0f8e4c2fc50e0521
 SHA512 (go1.14.2.linux-amd64.tar.gz) = 41d71c2254ad6f441eec15824fb7fc2b5edbd3fc8786774ae182216981ded7854efc9650b5f6378463da5dfcc5bcaaf3b829e2a30d5fda1276e0e9d7a8d48d8f
 Size (go1.14.2.linux-amd64.tar.gz) = 123658438 bytes
-RMD160 (go1.14.2.linux-arm64.tar.gz) = 7709e1fdbe44e396b8688e7a453952c87a0aa348
+BLAKE2s (go1.14.2.linux-arm64.tar.gz) = 3c5c82280ff260880c27cfe081f5e70451eea23012bbeab0d53e1f0ac51ad259
 SHA512 (go1.14.2.linux-arm64.tar.gz) = c0aae993e75bc40594017aa7912d306a36e728da25f82a7c8c604647c4fbc4ca28c071aa58371b637555f17f534e532e201c1afd07b69411708fd47bb20cc916
 Size (go1.14.2.linux-arm64.tar.gz) = 101012554 bytes
-RMD160 (go1.14.2.linux-armv6l.tar.gz) = 4e6fb97d294490dc62c775bea7f62510e6e574a9
+BLAKE2s (go1.14.2.linux-armv6l.tar.gz) = 88e5d228812ac216f8cad76d701d9db470be76ae9f59d2b5b7a9e28ab036357b
 SHA512 (go1.14.2.linux-armv6l.tar.gz) = 2325e93cb67195ffa61bb9a5371434f082bc7552f7f1f6039aec6a5989463b5c00df55f11a6ab46b44cac3daa25beea96163d60cf5f58ed46b07e65ea02eb8c8
 Size (go1.14.2.linux-armv6l.tar.gz) = 101770334 bytes
-RMD160 (go1.14.2.netbsd-arm64.tar.gz) = 9f8b1c91f906db09f1031a5008d50cf4fedf5a3f
+BLAKE2s (go1.14.2.netbsd-arm64.tar.gz) = e73808a0854376a83ee546966a55be4d15579483e4d7e781198188956000c561
 SHA512 (go1.14.2.netbsd-arm64.tar.gz) = d3750a3092118e05aa9b4a0a59ae2d49950d0c259a92b54c230d98e239725acd240556643ce7019a5d1ea3ecd1ccc37fc6bcc4e8b7a9a0f32d347f4daa4dccbf
 Size (go1.14.2.netbsd-arm64.tar.gz) = 123662640 bytes
-RMD160 (go1.16beta1.darwin-arm64.tar.gz) = e52a589b00650f86e765c7b107686e07df2b18c0
+BLAKE2s (go1.16beta1.darwin-arm64.tar.gz) = 609707c823f86118f67e43e7c79f6fe4cb649f60c4a618f73d9cd4b818030803
 SHA512 (go1.16beta1.darwin-arm64.tar.gz) = 9cc0def8c852e8f2550e8bd5ba0cdbba8892b3ecd8c855fb1e19603ec7fa2e0572d74bce47f62bfb3039024f65c8ff17fca777cef7fd5e25f2dd77ecb66c05d6
 Size (go1.16beta1.darwin-arm64.tar.gz) = 127918903 bytes
