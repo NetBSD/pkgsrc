@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2021/05/24 19:49:26 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2021/11/18 15:43:27 nia Exp $
 
 DISTNAME=		mintlib-CVS-20131219
 PKGNAME=		cross-freemint-${DISTNAME:S/CVS-//}
@@ -32,6 +32,7 @@ CONFIGURE_DIRS=		${GCCNAME}bin
 CONFIGURE_SCRIPT=	../${GCCNAME}/configure
 
 USE_TOOLS+=		bash:run gmake makeinfo bison flex
+USE_LANGUAGES=		c c++
 TOOLS_BROKEN+=		perl
 GNU_CONFIGURE=		yes
 
@@ -52,6 +53,9 @@ MAKE_ENV+=		ARDIR=${FREEMINT_PREFIX}/bin
 MAKE_ENV+=		DESTDIR=${DESTDIR}
 MAKE_ENV+=		CONFIGURE_DIRS=${CONFIGURE_DIRS}
 INFO_FILES=		yes
+
+MKPIE_SUPPORTED=	no
+RELRO_SUPPORTED=	no
 
 INSTALLATION_DIRS+=	bin
 
