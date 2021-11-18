@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5649 2021/11/18 04:05:35 jun Exp $
+$NetBSD: CHANGES-2021,v 1.5650 2021/11/18 13:06:22 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8521,3 +8521,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/py-tifffile to 2021.11.2 [adam 2021-11-17]
 	Updated graphics/py-imageio to 2.10.5 [adam 2021-11-17]
 	Updated emulators/nono to 0.2.3 [jun 2021-11-18]
+	Updated sysutils/felix to 0.2.9 [pin 2021-11-18]
