@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2017/09/04 18:00:56 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2021/11/18 14:12:48 nia Exp $
 
 DISTNAME=		siod
 PKGNAME=		siod-3.0
@@ -18,6 +18,10 @@ MAKE_FILE=		makefile
 MAKE_JOBS_SAFE=		no
 BUILD_TARGET=		${OPSYS:S/Linux/linux/}
 MAKE_ENV+=		CC=${CC:Q}
+
+MKPIE_SUPPORTED=	no
+RELRO_SUPPORTED=	no
+
 CPPFLAGS+=		-Dunix=1
 
 # XXX: cannot check as WRKSRC == WRKDIR so paths are stripped
