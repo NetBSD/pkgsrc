@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/09/08 21:05:08 nia Exp $
+# $NetBSD: Makefile,v 1.7 2021/11/18 14:45:37 nia Exp $
 
 DISTNAME=	redeclipse_2.0.0_nix
 PKGNAME=	redeclipse-2.0.0
@@ -25,6 +25,9 @@ INSTALL_TARGET=	system-install
 
 MAKE_FLAGS+=	prefix=${PREFIX}
 MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
+
+# GCC precompiled headers...
+RELRO_SUPPORTED=	no
 
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
