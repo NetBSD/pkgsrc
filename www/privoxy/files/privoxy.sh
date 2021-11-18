@@ -1,12 +1,17 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: privoxy.sh,v 1.5 2009/02/04 21:20:39 drochner Exp $
+# $NetBSD: privoxy.sh,v 1.6 2021/11/18 03:13:29 khorben Exp $
 #
-
+# Startup script for privoxy
+#
 # PROVIDE: privoxy
 # REQUIRE: DAEMON
+#
+# You will need to set some variables in @SYSCONFBASE@/rc.conf to start privoxy:
+#
+# privoxy=YES
 
-. /etc/rc.subr
+$_rc_subr_loaded . @SYSCONFBASE@/rc.subr
 
 name="privoxy"
 rcvar=$name
