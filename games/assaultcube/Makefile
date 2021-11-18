@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2021/09/29 19:00:37 adam Exp $
+# $NetBSD: Makefile,v 1.14 2021/11/18 14:45:37 nia Exp $
 
 PKGNAME=	assaultcube-1.2.0.2
 PKGREVISION=	11
@@ -18,6 +18,9 @@ BUILD_DIRS=	source/src
 BUILD_TARGET=	client master server
 USE_TOOLS+=	gmake pax pkg-config
 USE_LANGUAGES=	c c++
+
+# GCC precompiled headers...
+RELRO_SUPPORTED=	no
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	libexec
