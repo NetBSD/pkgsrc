@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/01/09 12:21:37 sjmulder Exp $
+# $NetBSD: Makefile,v 1.5 2021/11/19 22:19:39 sjmulder Exp $
 
-DISTNAME=	bcal-2.2
+DISTNAME=	bcal-2.3
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jarun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
