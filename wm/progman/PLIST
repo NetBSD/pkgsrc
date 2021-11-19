@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/19 18:59:09 sjmulder Exp $
+bin/progman
