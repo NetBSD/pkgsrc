@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2021/08/06 10:15:41 micha Exp $
+# $NetBSD: Makefile,v 1.21 2021/11/19 11:13:27 micha Exp $
 
-DISTNAME=	schily-2021-07-29
-PKGNAME=	bosh-20210729
+DISTNAME=	schily-2021-09-18
+PKGNAME=	bosh-20210918
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=schilytools/}
 EXTRACT_SUFX=	.tar.bz2
