@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/20 18:21:52 pin Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/11/19 10:00:59 pin Exp $
 bin/lxqt-about
 share/applications/lxqt-about.desktop
 share/lxqt/translations/lxqt-about/lxqt-about_ar.qm
@@ -48,5 +48,6 @@ share/lxqt/translations/lxqt-about/lxqt-about_sv.qm
 share/lxqt/translations/lxqt-about/lxqt-about_th_TH.qm
 share/lxqt/translations/lxqt-about/lxqt-about_tr.qm
 share/lxqt/translations/lxqt-about/lxqt-about_uk.qm
+share/lxqt/translations/lxqt-about/lxqt-about_vi.qm
 share/lxqt/translations/lxqt-about/lxqt-about_zh_CN.qm
 share/lxqt/translations/lxqt-about/lxqt-about_zh_TW.qm
