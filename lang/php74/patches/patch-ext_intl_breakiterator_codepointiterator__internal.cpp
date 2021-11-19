@@ -1,8 +1,8 @@
-$NetBSD: patch-ext_intl_breakiterator_codepointiterator__internal.cpp,v 1.2 2020/11/08 23:55:44 otis Exp $
+$NetBSD: patch-ext_intl_breakiterator_codepointiterator__internal.cpp,v 1.3 2021/11/19 14:26:28 taca Exp $
 
 Use stdbool true/false macros.
 
---- ext/intl/breakiterator/codepointiterator_internal.cpp.orig	2020-10-27 15:01:59.000000000 +0000
+--- ext/intl/breakiterator/codepointiterator_internal.cpp.orig	2021-11-16 15:31:39.000000000 +0000
 +++ ext/intl/breakiterator/codepointiterator_internal.cpp
 @@ -58,7 +58,7 @@ CodePointBreakIterator& CodePointBreakIt
  		return *this;
@@ -13,8 +13,8 @@ Use stdbool true/false macros.
  
  	//don't bother copying the character iterator, getText() is deprecated
  	clearCurrentCharIter();
-@@ -78,17 +78,17 @@ CodePointBreakIterator::~CodePointBreakI
- UBool CodePointBreakIterator::operator==(const BreakIterator& that) const
+@@ -82,17 +82,17 @@ UBool CodePointBreakIterator::operator==
+ #endif
  {
  	if (typeid(*this) != typeid(that)) {
 -		return FALSE;
@@ -34,7 +34,7 @@ Use stdbool true/false macros.
  }
  
  CodePointBreakIterator* CodePointBreakIterator::clone(void) const
-@@ -109,7 +109,7 @@ CharacterIterator& CodePointBreakIterato
+@@ -113,7 +113,7 @@ CharacterIterator& CodePointBreakIterato
  
  UText *CodePointBreakIterator::getUText(UText *fillIn, UErrorCode &status) const
  {
@@ -43,7 +43,7 @@ Use stdbool true/false macros.
  }
  
  void CodePointBreakIterator::setText(const UnicodeString &text)
-@@ -128,7 +128,7 @@ void CodePointBreakIterator::setText(UTe
+@@ -132,7 +132,7 @@ void CodePointBreakIterator::setText(UTe
  		return;
  	}
  
@@ -52,7 +52,7 @@ Use stdbool true/false macros.
  
  	clearCurrentCharIter();
  }
-@@ -280,7 +280,7 @@ CodePointBreakIterator &CodePointBreakIt
+@@ -284,7 +284,7 @@ CodePointBreakIterator &CodePointBreakIt
  	}
  
  	int64_t pos = utext_getNativeIndex(this->fText);
