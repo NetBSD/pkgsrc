@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:17:18 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/11/19 10:10:35 pin Exp $
 
-BLAKE2s (lxqt-openssh-askpass-0.17.0.tar.xz) = b2c88f5b35f1abb90ae856c5667dd7e44b84848042488344a8279ac835399436
-SHA512 (lxqt-openssh-askpass-0.17.0.tar.xz) = 29923b6503b25e9971d2d5d96c9ef21af62ca046967e1d0902c28bafbed9891490148c19f5fd32fd68b4525c624e67f96ab658919933ed1b3c5e2e320bab4225
-Size (lxqt-openssh-askpass-0.17.0.tar.xz) = 17192 bytes
+BLAKE2s (lxqt-openssh-askpass-1.0.0.tar.xz) = e6e359a26aa772941fe1e8a6e5c463f5e7dacef90e6df9656851882ec4739ee7
+SHA512 (lxqt-openssh-askpass-1.0.0.tar.xz) = fd2e39831cf5df58e146fb43b77ce43958ce5217266626f3edc480c29c3d5f5bad9876efa0c929ec8a03d05989049d97b88c2e51935f259bde47b7dc10dda32a
+Size (lxqt-openssh-askpass-1.0.0.tar.xz) = 17452 bytes
