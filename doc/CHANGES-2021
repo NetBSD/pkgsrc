@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5699 2021/11/19 19:42:18 sjmulder Exp $
+$NetBSD: CHANGES-2021,v 1.5700 2021/11/19 21:55:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8580,3 +8580,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/bind916 to 9.16.23 [taca 2021-11-19]
 	Updated games/woof to 8.0.0 [micha 2021-11-19]
 	Added wm/progman version 1.0 [sjmulder 2021-11-19]
+	Updated print/py-weasyprint to 53.4 [adam 2021-11-19]
+	Updated graphics/libjpeg-turbo to 2.1.2 [adam 2021-11-19]
