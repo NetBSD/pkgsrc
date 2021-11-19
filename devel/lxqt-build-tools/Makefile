@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2021/11/19 09:25:52 pin Exp $
+# $NetBSD: Makefile,v 1.16 2021/11/19 13:54:17 gutteridge Exp $
 
 DISTNAME=	lxqt-build-tools-0.10.0
 CATEGORIES=	devel
@@ -24,6 +24,7 @@ CMAKE_ARGS+=		-DLXQT_ETC_XDG_DIR=${PKG_SYSCONFDIR}
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
+BUILDLINK_API_DEPENDS.qt5-qtbase+=	qt5-qtbase>=5.15.0
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
