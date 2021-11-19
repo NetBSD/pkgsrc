@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2021/07/30 12:27:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2021/11/19 11:44:03 pin Exp $
 
-DISTNAME=	lxqt-panel-0.17.1
-PKGREVISION=	3
+DISTNAME=	lxqt-panel-1.0.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -24,12 +23,10 @@ CMAKE_ARGS+=	-DSYSSTAT_PLUGIN=No
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Linux"
 CMAKE_ARGS+=	-DCPULOAD_PLUGIN=No
-CMAKE_ARGS+=	-DKBINDICATOR_PLUGIN=No
 CMAKE_ARGS+=	-DMOUNT_PLUGIN=No
 CMAKE_ARGS+=	-DSENSORS_PLUGIN=No
 CMAKE_ARGS+=	-DNETWORKMONITOR_PLUGIN=No
 CMAKE_ARGS+=	-DVOLUME_USE_ALSA=No
-CMAKE_ARGS+=	-DBACKLIGHT_PLUGIN=No
 .endif
 
 MENU_CONF=		share/examples/menus
@@ -60,7 +57,7 @@ CONF_FILES+=	${PANEL_CONF}/panel.conf \
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-TOOL_DEPENDS+=	lxqt-build-tools>=0.9:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=0.10.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 DEPENDS+=	lxmenu-data-[0-9]*:../../sysutils/lxmenu-data
 
