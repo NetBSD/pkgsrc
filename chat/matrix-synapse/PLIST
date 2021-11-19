@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2021/10/02 12:23:13 js Exp $
+@comment $NetBSD: PLIST,v 1.19 2021/11/19 14:06:08 js Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -10,6 +10,7 @@ bin/synapse_port_db
 bin/synapse_review_recent_signups
 bin/sync_room_to_group.pl
 bin/synctl
+bin/update_synapse_database
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -209,6 +210,9 @@ ${PYSITELIB}/synapse/config/registration.pyo
 ${PYSITELIB}/synapse/config/repository.py
 ${PYSITELIB}/synapse/config/repository.pyc
 ${PYSITELIB}/synapse/config/repository.pyo
+${PYSITELIB}/synapse/config/retention.py
+${PYSITELIB}/synapse/config/retention.pyc
+${PYSITELIB}/synapse/config/retention.pyo
 ${PYSITELIB}/synapse/config/room.py
 ${PYSITELIB}/synapse/config/room.pyc
 ${PYSITELIB}/synapse/config/room.pyo
@@ -353,9 +357,6 @@ ${PYSITELIB}/synapse/groups/groups_server.pyo
 ${PYSITELIB}/synapse/handlers/__init__.py
 ${PYSITELIB}/synapse/handlers/__init__.pyc
 ${PYSITELIB}/synapse/handlers/__init__.pyo
-${PYSITELIB}/synapse/handlers/_base.py
-${PYSITELIB}/synapse/handlers/_base.pyc
-${PYSITELIB}/synapse/handlers/_base.pyo
 ${PYSITELIB}/synapse/handlers/account_data.py
 ${PYSITELIB}/synapse/handlers/account_data.pyc
 ${PYSITELIB}/synapse/handlers/account_data.pyo
@@ -443,6 +444,9 @@ ${PYSITELIB}/synapse/handlers/register.pyo
 ${PYSITELIB}/synapse/handlers/room.py
 ${PYSITELIB}/synapse/handlers/room.pyc
 ${PYSITELIB}/synapse/handlers/room.pyo
+${PYSITELIB}/synapse/handlers/room_batch.py
+${PYSITELIB}/synapse/handlers/room_batch.pyc
+${PYSITELIB}/synapse/handlers/room_batch.pyo
 ${PYSITELIB}/synapse/handlers/room_list.py
 ${PYSITELIB}/synapse/handlers/room_list.pyc
 ${PYSITELIB}/synapse/handlers/room_list.pyo
@@ -629,6 +633,7 @@ ${PYSITELIB}/synapse/push/pusherpool.pyo
 ${PYSITELIB}/synapse/push/rulekinds.py
 ${PYSITELIB}/synapse/push/rulekinds.pyc
 ${PYSITELIB}/synapse/push/rulekinds.pyo
+${PYSITELIB}/synapse/py.typed
 ${PYSITELIB}/synapse/python_dependencies.py
 ${PYSITELIB}/synapse/python_dependencies.pyc
 ${PYSITELIB}/synapse/python_dependencies.pyo
@@ -819,6 +824,9 @@ ${PYSITELIB}/synapse/rest/admin/__init__.pyo
 ${PYSITELIB}/synapse/rest/admin/_base.py
 ${PYSITELIB}/synapse/rest/admin/_base.pyc
 ${PYSITELIB}/synapse/rest/admin/_base.pyo
+${PYSITELIB}/synapse/rest/admin/background_updates.py
+${PYSITELIB}/synapse/rest/admin/background_updates.pyc
+${PYSITELIB}/synapse/rest/admin/background_updates.pyo
 ${PYSITELIB}/synapse/rest/admin/devices.py
 ${PYSITELIB}/synapse/rest/admin/devices.pyc
 ${PYSITELIB}/synapse/rest/admin/devices.pyo
@@ -1244,6 +1252,9 @@ ${PYSITELIB}/synapse/storage/databases/main/relations.pyo
 ${PYSITELIB}/synapse/storage/databases/main/room.py
 ${PYSITELIB}/synapse/storage/databases/main/room.pyc
 ${PYSITELIB}/synapse/storage/databases/main/room.pyo
+${PYSITELIB}/synapse/storage/databases/main/room_batch.py
+${PYSITELIB}/synapse/storage/databases/main/room_batch.pyc
+${PYSITELIB}/synapse/storage/databases/main/room_batch.pyo
 ${PYSITELIB}/synapse/storage/databases/main/roommember.py
 ${PYSITELIB}/synapse/storage/databases/main/roommember.pyc
 ${PYSITELIB}/synapse/storage/databases/main/roommember.pyo
@@ -1637,6 +1648,13 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/63/02delete_unlinked_email_pusher
 ${PYSITELIB}/synapse/storage/schema/main/delta/63/02populate-rooms-creator.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/63/03session_store.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/63/04add_presence_stream_not_offline_index.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/64/01msc2716_chunk_to_batch_rename.sql.postgres
+${PYSITELIB}/synapse/storage/schema/main/delta/64/01msc2716_chunk_to_batch_rename.sql.sqlite
+${PYSITELIB}/synapse/storage/schema/main/delta/65/01msc2716_insertion_event_edges.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/65/02_thread_relations.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/65/03remove_hidden_devices_from_device_inbox.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/65/04_local_group_updates.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/65/06remove_deleted_devices_from_device_inbox.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_signatures.sql
@@ -1748,6 +1766,9 @@ ${PYSITELIB}/synapse/util/file_consumer.pyo
 ${PYSITELIB}/synapse/util/frozenutils.py
 ${PYSITELIB}/synapse/util/frozenutils.pyc
 ${PYSITELIB}/synapse/util/frozenutils.pyo
+${PYSITELIB}/synapse/util/gai_resolver.py
+${PYSITELIB}/synapse/util/gai_resolver.pyc
+${PYSITELIB}/synapse/util/gai_resolver.pyo
 ${PYSITELIB}/synapse/util/hash.py
 ${PYSITELIB}/synapse/util/hash.pyc
 ${PYSITELIB}/synapse/util/hash.pyo
