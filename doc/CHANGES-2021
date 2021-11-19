@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5679 2021/11/19 11:14:44 micha Exp $
+$NetBSD: CHANGES-2021,v 1.5680 2021/11/19 11:25:25 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8561,3 +8561,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/lxqt-admin to 1.0.0 [pin 2021-11-19]
 	Updated archivers/star to 1.6.1nb16 [micha 2021-11-19]
 	Updated shells/bosh to 20210918 [micha 2021-11-19]
+	Updated shells/pbosh to 20210918 [micha 2021-11-19]
