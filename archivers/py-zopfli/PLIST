@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/19 09:48:38 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/zopfli/__init__.py
+${PYSITELIB}/zopfli/__init__.pyc
+${PYSITELIB}/zopfli/__init__.pyo
+${PYSITELIB}/zopfli/_version.py
+${PYSITELIB}/zopfli/_version.pyc
+${PYSITELIB}/zopfli/_version.pyo
+${PYSITELIB}/zopfli/gzip.py
+${PYSITELIB}/zopfli/gzip.pyc
+${PYSITELIB}/zopfli/gzip.pyo
+${PYSITELIB}/zopfli/zlib.py
+${PYSITELIB}/zopfli/zlib.pyc
+${PYSITELIB}/zopfli/zlib.pyo
+${PYSITELIB}/zopfli/zopfli.so
