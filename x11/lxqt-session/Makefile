@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2021/05/24 19:56:02 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2021/11/19 14:17:44 gutteridge Exp $
 
-DISTNAME=	lxqt-session-0.17.1
-PKGREVISION=	2
+DISTNAME=	lxqt-session-1.0.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -19,7 +18,10 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "Linux"
 CMAKE_ARGS+=	-DWITH_LIBUDEV=OFF
+.endif
 
 AUTOSTART_CONF=		share/examples/autostart
 PKG_SYSCONFSUBDIR=	xdg
@@ -39,7 +41,7 @@ SUBST_SED.prefix=	-e 's,/usr/bin,${PREFIX}/bin,g'
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-TOOL_DEPENDS+=	lxqt-build-tools>=0.9:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=0.10.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 DEPENDS+=	xdg-user-dirs-[0-9]*:../../x11/xdg-user-dirs
 
