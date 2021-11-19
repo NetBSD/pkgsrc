@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2021/08/06 10:24:18 micha Exp $
+# $NetBSD: Makefile,v 1.21 2021/11/19 11:24:28 micha Exp $
 
-DISTNAME=	schily-2021-07-29
-PKGNAME=	pbosh-20210729
+DISTNAME=	schily-2021-09-18
+PKGNAME=	pbosh-20210918
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=schilytools/}
 EXTRACT_SUFX=	.tar.bz2
@@ -48,7 +48,6 @@ post-build:
 .else
 	cd ${WRKSRC} && ${MV} -f sh/sh.1 sh/pbosh.1
 .endif
-
 
 do-install:
 	cd ${WRKSRC}/sh &&						\
