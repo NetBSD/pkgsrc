@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5693 2021/11/19 14:26:59 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5694 2021/11/19 14:28:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8575,3 +8575,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/lxqt-session to 1.0.0 [gutteridge 2021-11-19]
 	Updated chat/matrix-synapse to 1.47.0 [gdt 2021-11-19]
 	Updated lang/php74 to 7.4.26 [taca 2021-11-19]
+	Updated lang/php73 to 7.3.33 [taca 2021-11-19]
