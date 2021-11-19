@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2021/05/24 19:52:23 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2021/11/19 09:44:04 pin Exp $
 
-DISTNAME=	lximage-qt-0.17.0
-PKGREVISION=	2
+DISTNAME=	lximage-qt-1.0.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -22,7 +21,7 @@ CMAKE_ARG_PATH=	..
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-TOOL_DEPENDS+=	lxqt-build-tools>=0.9:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=0.10.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
