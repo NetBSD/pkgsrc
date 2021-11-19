@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/04/20 18:04:47 pin Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/11/19 09:42:53 pin Exp $
 bin/pcmanfm-qt
 man/man1/pcmanfm-qt.1
 share/applications/pcmanfm-qt-desktop-pref.desktop
@@ -28,19 +28,23 @@ share/pcmanfm-qt/translations/pcmanfm-qt_hu.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_id.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_it.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_ja.qm
+share/pcmanfm-qt/translations/pcmanfm-qt_kk.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_ko.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_lt.qm
+share/pcmanfm-qt/translations/pcmanfm-qt_lv.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_nb_NO.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_nl.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_oc.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_pl.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_pt.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_pt_BR.qm
+share/pcmanfm-qt/translations/pcmanfm-qt_ro.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_ru.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_si.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_sk_SK.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_sv.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_tr.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_uk.qm
+share/pcmanfm-qt/translations/pcmanfm-qt_vi.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_zh_CN.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_zh_TW.qm
