@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5661 2021/11/19 09:35:29 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5662 2021/11/19 09:37:40 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8540,3 +8540,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/lxqt-build-tools to 0.10.0 [pin 2021-11-19]
 	Updated x11/libqtxdg to 3.8.0 [pin 2021-11-19]
 	Updated x11/liblxqt to 1.0.0 [pin 2021-11-19]
+	Updated x11/libfm-qt to 1.0.0 [pin 2021-11-19]
