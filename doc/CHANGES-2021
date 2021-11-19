@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5658 2021/11/18 23:44:40 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.5659 2021/11/19 09:26:19 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8537,3 +8537,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/broot to 1.7.2 [pin 2021-11-18]
 	Updated shells/bash to 5.1.12 [wiz 2021-11-18]
 	Updated misc/labelnation to 1.230 [gdt 2021-11-18]
+	Updated devel/lxqt-build-tools to 0.10.0 [pin 2021-11-19]
