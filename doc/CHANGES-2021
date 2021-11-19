@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5682 2021/11/19 11:34:24 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5683 2021/11/19 11:35:37 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8564,3 +8564,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated shells/pbosh to 20210918 [micha 2021-11-19]
 	Updated x11/lxqt-globalkeys to 1.0.0 [pin 2021-11-19]
 	Updated x11/lxqt-notificationd to 1.0.0 [pin 2021-11-19]
+	Updated sysutils/lxqt-powermanagement to 1.0.0 [pin 2021-11-19]
