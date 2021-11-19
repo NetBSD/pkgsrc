@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/20 18:28:19 pin Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/11/19 10:05:02 pin Exp $
 bin/lxqt-sudo
 bin/lxsu
 bin/lxsudo
@@ -16,6 +16,7 @@ share/lxqt/translations/lxqt-sudo/lxqt-sudo_da.qm
 share/lxqt/translations/lxqt-sudo/lxqt-sudo_de.qm
 share/lxqt/translations/lxqt-sudo/lxqt-sudo_el.qm
 share/lxqt/translations/lxqt-sudo/lxqt-sudo_es.qm
+share/lxqt/translations/lxqt-sudo/lxqt-sudo_et.qm
 share/lxqt/translations/lxqt-sudo/lxqt-sudo_fi.qm
 share/lxqt/translations/lxqt-sudo/lxqt-sudo_fr.qm
 share/lxqt/translations/lxqt-sudo/lxqt-sudo_gl.qm
@@ -25,6 +26,7 @@ share/lxqt/translations/lxqt-sudo/lxqt-sudo_hu.qm
 share/lxqt/translations/lxqt-sudo/lxqt-sudo_id.qm
 share/lxqt/translations/lxqt-sudo/lxqt-sudo_it.qm
 share/lxqt/translations/lxqt-sudo/lxqt-sudo_ja.qm
+share/lxqt/translations/lxqt-sudo/lxqt-sudo_ko.qm
 share/lxqt/translations/lxqt-sudo/lxqt-sudo_lt.qm
 share/lxqt/translations/lxqt-sudo/lxqt-sudo_nb_NO.qm
 share/lxqt/translations/lxqt-sudo/lxqt-sudo_nl.qm
