@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5700 2021/11/19 21:55:21 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5701 2021/11/19 22:13:39 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8582,3 +8582,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added wm/progman version 1.0 [sjmulder 2021-11-19]
 	Updated print/py-weasyprint to 53.4 [adam 2021-11-19]
 	Updated graphics/libjpeg-turbo to 2.1.2 [adam 2021-11-19]
+	Updated textproc/libxlsxwriter to 1.1.4 [sjmulder 2021-11-19]
