@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2021/08/10 12:05:40 sjmulder Exp $
+# $NetBSD: Makefile,v 1.18 2021/11/19 22:13:32 sjmulder Exp $
 
-DISTNAME=	libxlsxwriter-1.1.3
+DISTNAME=	libxlsxwriter-1.1.4
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jmcnamara/}
 GITHUB_TAG=	RELEASE_${PKGVERSION_NOREV}
@@ -15,15 +15,19 @@ PYTHON_FOR_BUILD_ONLY=	test
 TEST_TARGET=	test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
+# C++ is used for tests
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
 .include "../../lang/python/pyversion.mk"
 
+MAKE_ENV+=	V=1
 MAKE_ENV+=	OPT_LEVEL=
 # Prefer non-bundled dependencies
 MAKE_ENV+=	USE_SYSTEM_MINIZIP=1
 MAKE_ENV+=	USE_STANDARD_TMPFILE=1
 MAKE_ENV+=	USE_OPENSSL_MD5=1
+MAKE_ENV+=	PYTEST=py.test-${PYVERSSUFFIX}
 
 # minizip has C++ style comments
 BUILDLINK_TRANSFORM+=	rm:-ansi
