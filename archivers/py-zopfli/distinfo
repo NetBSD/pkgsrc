@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/19 09:48:38 adam Exp $
+
+BLAKE2s (zopfli-0.1.9.zip) = f2c4f2fb3356a7c10738f4bd9b9d238ea64e61e0f6c9bf67421a1d8382286316
+SHA512 (zopfli-0.1.9.zip) = 45e7dd3e4aac145ee4737ed6630708799e0606db201f52b42b5090855223652b1d7c5aed9761fe61518c936eaada6b466dccf7a9c6f79c8ca3e8b2d12856d5db
+Size (zopfli-0.1.9.zip) = 79873 bytes
