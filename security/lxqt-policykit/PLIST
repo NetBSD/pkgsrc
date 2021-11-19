@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/20 18:23:38 pin Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/11/19 10:02:40 pin Exp $
 bin/lxqt-policykit-agent
 man/man1/lxqt-policykit-agent.1
 share/examples/autostart/lxqt-policykit-agent.desktop
@@ -13,6 +13,7 @@ share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_da.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_de.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_el.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_es.qm
+share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_et.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_fr.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_gl.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_he.qm
@@ -21,13 +22,16 @@ share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_hu.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_id.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_it.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_ja.qm
+share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_ko.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_lt.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_nb_NO.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_nl.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_pl.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_pt.qm
+share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_ro.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_ru.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_sk_SK.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_tr.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_uk.qm
+share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_vi.qm
 share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_zh_CN.qm
