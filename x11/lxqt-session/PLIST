@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/04/20 18:56:04 pin Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/11/19 14:17:44 gutteridge Exp $
 bin/lxqt-config-session
 bin/lxqt-leave
 bin/lxqt-session
@@ -33,6 +33,7 @@ share/lxqt/translations/lxqt-config-session/lxqt-config-session_eo.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_es.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_es_UY.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_es_VE.qm
+share/lxqt/translations/lxqt-config-session/lxqt-config-session_et.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_eu.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_fi.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_fr.qm
@@ -75,6 +76,7 @@ share/lxqt/translations/lxqt-leave/lxqt-leave_da.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_de.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_el.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_es.qm
+share/lxqt/translations/lxqt-leave/lxqt-leave_et.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_fi.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_fr.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_gl.qm
@@ -93,9 +95,11 @@ share/lxqt/translations/lxqt-leave/lxqt-leave_pt.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_pt_BR.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_ru.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_si.qm
+share/lxqt/translations/lxqt-leave/lxqt-leave_sk.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_sl.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_tr.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_uk.qm
+share/lxqt/translations/lxqt-leave/lxqt-leave_vi.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_zh_CN.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_zh_TW.qm
 share/lxqt/translations/lxqt-session/lxqt-session_ar.qm
@@ -112,6 +116,7 @@ share/lxqt/translations/lxqt-session/lxqt-session_eo.qm
 share/lxqt/translations/lxqt-session/lxqt-session_es.qm
 share/lxqt/translations/lxqt-session/lxqt-session_es_UY.qm
 share/lxqt/translations/lxqt-session/lxqt-session_es_VE.qm
+share/lxqt/translations/lxqt-session/lxqt-session_et.qm
 share/lxqt/translations/lxqt-session/lxqt-session_eu.qm
 share/lxqt/translations/lxqt-session/lxqt-session_fi.qm
 share/lxqt/translations/lxqt-session/lxqt-session_fr.qm
