@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.164 2021/08/30 14:40:11 pin Exp $
+# $NetBSD: Makefile,v 1.165 2021/11/19 19:00:16 sjmulder Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -69,6 +69,7 @@ SUBDIR+=	oroborox
 SUBDIR+=	oroborus
 SUBDIR+=	pekwm
 SUBDIR+=	piewm
+SUBDIR+=	progman
 SUBDIR+=	pwm
 SUBDIR+=	quartz-wm
 SUBDIR+=	qvwm
