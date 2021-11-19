@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/04/20 18:07:39 pin Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/11/19 09:52:55 pin Exp $
 bin/screengrab
 lib/screengrab/libextedit.so
 lib/screengrab/libextedit.so.1.0.0
@@ -28,13 +28,17 @@ share/screengrab/translations/screengrab_it.qm
 share/screengrab/translations/screengrab_ja.qm
 share/screengrab/translations/screengrab_lt.qm
 share/screengrab/translations/screengrab_nb_NO.qm
+share/screengrab/translations/screengrab_nl.qm
+share/screengrab/translations/screengrab_oc.qm
 share/screengrab/translations/screengrab_pl.qm
 share/screengrab/translations/screengrab_pt.qm
 share/screengrab/translations/screengrab_pt_BR.qm
 share/screengrab/translations/screengrab_ru.qm
 share/screengrab/translations/screengrab_si.qm
+share/screengrab/translations/screengrab_sk.qm
 share/screengrab/translations/screengrab_sv.qm
 share/screengrab/translations/screengrab_tr.qm
 share/screengrab/translations/screengrab_uk.qm
+share/screengrab/translations/screengrab_vi.qm
 share/screengrab/translations/screengrab_zh_CN.qm
 share/screengrab/translations/screengrab_zh_TW.qm
