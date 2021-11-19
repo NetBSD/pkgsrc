@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5688 2021/11/19 11:57:04 micha Exp $
+$NetBSD: CHANGES-2021,v 1.5689 2021/11/19 11:57:45 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8570,3 +8570,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/lxqt-panel to 1.0.0 [pin 2021-11-19]
 	Updated meta-pkgs/lxqt to 1.0.0 [pin 2021-11-19]
 	Updated archivers/tartest to 1.24 [micha 2021-11-19]
+	Updated security/mdigest to 1.9 [micha 2021-11-19]
