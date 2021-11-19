@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5694 2021/11/19 14:28:21 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5695 2021/11/19 14:29:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8576,3 +8576,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/matrix-synapse to 1.47.0 [gdt 2021-11-19]
 	Updated lang/php74 to 7.4.26 [taca 2021-11-19]
 	Updated lang/php73 to 7.3.33 [taca 2021-11-19]
+	Updated lang/php80 to 8.0.13 [taca 2021-11-19]
