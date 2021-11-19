@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2021/11/19 18:59:09 sjmulder Exp $
+
+- Disable high DPI mode.
+
+--- Makefile.orig	2021-01-27 19:30:24.000000000 +0000
++++ Makefile
+@@ -41,7 +41,7 @@ CFLAGS+=	-DUSE_GDK_PIXBUF
+ #CFLAGS+=	-g -DDEBUG=1
+ 
+ # use 2x icons, borders, fonts for HiDPI displays; optional
+-CFLAGS+=	-DHIDPI=1
++#CFLAGS+=	-DHIDPI=1
+ 
+ BINDIR=		$(PREFIX)/bin
+ 
