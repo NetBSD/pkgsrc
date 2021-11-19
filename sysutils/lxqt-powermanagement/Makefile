@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2021/05/24 19:54:13 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2021/11/19 11:35:16 pin Exp $
 
-DISTNAME=	lxqt-powermanagement-0.17.1
-PKGREVISION=	1
+DISTNAME=	lxqt-powermanagement-1.0.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -29,7 +28,7 @@ CONF_FILES+=	${AUTOSTART_CONF}/lxqt-powermanagement.desktop \
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-TOOL_DEPENDS+=	lxqt-build-tools>=0.9:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=0.10.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
