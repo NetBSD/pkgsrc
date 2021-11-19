@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/20 18:29:35 pin Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/11/19 10:10:35 pin Exp $
 bin/lxqt-openssh-askpass
 man/man1/lxqt-openssh-askpass.1
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_ar.qm
@@ -13,6 +13,7 @@ share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_de.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_el.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_en_GB.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_es.qm
+share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_et.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_fr.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_gl.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_he.qm
@@ -21,6 +22,7 @@ share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_hu.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_id.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_it.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_ja.qm
+share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_ko.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_lt.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_nb_NO.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_nl.qm
@@ -32,4 +34,5 @@ share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_sk_SK.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_sv.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_tr.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_uk.qm
+share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_vi.qm
 share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_zh_CN.qm
