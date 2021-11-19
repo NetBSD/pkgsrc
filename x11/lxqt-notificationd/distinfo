@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:34:12 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/11/19 11:34:03 pin Exp $
 
-BLAKE2s (lxqt-notificationd-0.17.0.tar.xz) = 7c964ab08b33ce0e66071c38c41b8c249207d34e5b1a7317656adc3ef2444ede
-SHA512 (lxqt-notificationd-0.17.0.tar.xz) = 042d69e01c3015d254ae3472867de0b41587af2285cd26445cd9d6d455de8ef713413431dea9997f2d2e19f70c2c8c73af39ce880d54ecb9fd6c50cd05a7dba4
-Size (lxqt-notificationd-0.17.0.tar.xz) = 53712 bytes
+BLAKE2s (lxqt-notificationd-1.0.0.tar.xz) = 0e47dfaa18df5c104af91bd470d558a9d4e215f6b1c08c59009b9dc6fd71fb4a
+SHA512 (lxqt-notificationd-1.0.0.tar.xz) = e8953c06be5821d875027692589dd80bfc7bca8ff9d7e590dcab2ab80b17ed530983119b0cf9d254ba5b15bf863eb6283896e6ae38a999437e5ccd7d3a50adf9
+Size (lxqt-notificationd-1.0.0.tar.xz) = 57160 bytes
 SHA1 (patch-autostart_CMakeLists.txt) = 4e04483f41a25d9cb4ef6cdf9270f25ba51f6359
