@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5669 2021/11/19 09:53:58 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5670 2021/11/19 09:54:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8551,3 +8551,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added archivers/py-zopfli version 0.1.9 [adam 2021-11-19]
 	Updated archivers/py-brotli to 1.0.9 [adam 2021-11-19]
 	Updated fonts/py-fonttools to 4.28.1 [adam 2021-11-19]
+	Updated audio/pavucontrol-qt to 1.0.0 [pin 2021-11-19]
