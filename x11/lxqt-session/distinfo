@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:34:12 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/11/19 14:17:44 gutteridge Exp $
 
-BLAKE2s (lxqt-session-0.17.1.tar.xz) = 3d4bdc9076a14cbdd88cffd90d07101357f481507b96af1ef65684da82dfa473
-SHA512 (lxqt-session-0.17.1.tar.xz) = a86b2a2f8fafc0e1b706f6a2a44958039c7f324d43357d70c3b13dd4c3197a05e671cb3d4543512ac79cb238ed1386b5de2f76a1aec90b3db870a1c2276153e0
-Size (lxqt-session-0.17.1.tar.xz) = 178976 bytes
+BLAKE2s (lxqt-session-1.0.0.tar.xz) = 4b215c76d328c4fc27ed7d290d7479a2f7a9f17150f9055b32dff4322c2c1f9f
+SHA512 (lxqt-session-1.0.0.tar.xz) = 4f18852a55088fef7f1cd1617501acbd9f3a97a3810527b545625c116c249a3bcc084dc1bb073602e5dd10aa3a771c2ad0aaac10d1fe504832bd53d210136b98
+Size (lxqt-session-1.0.0.tar.xz) = 182600 bytes
 SHA1 (patch-autostart_CMakeLists.txt) = a791cc51e03e794e1bf81bf0d6f8462ba11e2e84
+SHA1 (patch-lxqt-session_CMakeLists.txt) = e11c457b746f4d6006ef66b50427c5ec73aa1c99
+SHA1 (patch-lxqt-session_src_procreaper.cpp) = 871c314cac5a01239d79ef771e7ea13f3e248b4a
