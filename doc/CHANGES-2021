@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5667 2021/11/19 09:52:05 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5668 2021/11/19 09:53:17 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8546,3 +8546,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/lxqt-themes to 1.0.0 [pin 2021-11-19]
 	Updated x11/qtermwidget to 1.0.0 [pin 2021-11-19]
 	Updated x11/qterminal to 1.0.0 [pin 2021-11-19]
+	Updated graphics/screengrab to 2.3.0 [pin 2021-11-19]
