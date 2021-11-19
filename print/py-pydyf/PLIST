@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/19 09:43:08 adam Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/pydyf/__init__.py
+${PYSITELIB}/pydyf/__init__.pyc
+${PYSITELIB}/pydyf/__init__.pyo
