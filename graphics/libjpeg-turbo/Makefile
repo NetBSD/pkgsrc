@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2021/08/10 09:13:54 adam Exp $
+# $NetBSD: Makefile,v 1.24 2021/11/19 21:55:01 adam Exp $
 
-DISTNAME=	libjpeg-turbo-2.1.1
+DISTNAME=	libjpeg-turbo-2.1.2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libjpeg-turbo/}
 
@@ -22,6 +22,8 @@ USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 PKGCONFIG_OVERRIDE=	release/libturbojpeg.pc.in release/libjpeg.pc.in
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKSRC}
+# For Darwin
+TEST_ENV+=		DYLD_LIBRARY_PATH=${WRKSRC}
 TEST_TARGET=		test
 
 # Ask for compatibility with jpeg 8, to get the highest ABI that
