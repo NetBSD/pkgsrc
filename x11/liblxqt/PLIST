@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/20 17:59:40 pin Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/11/19 09:34:56 pin Exp $
 bin/lxqt-backlight_backend
 include/lxqt/LXQt/Application
 include/lxqt/LXQt/AutostartEntry
@@ -39,7 +39,7 @@ include/lxqt/LXQt/lxqtsettings.h
 include/lxqt/LXQt/lxqtsingleapplication.h
 include/lxqt/LXQt/lxqttranslator.h
 lib/liblxqt.so
-lib/liblxqt.so.0
+lib/liblxqt.so.1
 lib/liblxqt.so.${PKGVERSION}
 lib/pkgconfig/lxqt.pc
 share/cmake/lxqt/lxqt-config-version.cmake
