@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/20 18:11:44 pin Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/11/19 09:50:40 pin Exp $
 include/qtermwidget5/Emulation.h
 include/qtermwidget5/Filter.h
 include/qtermwidget5/KeyboardTranslator.h
@@ -10,7 +10,7 @@ lib/cmake/qtermwidget5/qtermwidget5-config.cmake
 lib/cmake/qtermwidget5/qtermwidget5-targets-release.cmake
 lib/cmake/qtermwidget5/qtermwidget5-targets.cmake
 lib/libqtermwidget5.so
-lib/libqtermwidget5.so.0
+lib/libqtermwidget5.so.1
 lib/libqtermwidget5.so.${PKGVERSION}
 lib/pkgconfig/qtermwidget5.pc
 share/qtermwidget5/color-schemes/BlackOnLightYellow.colorscheme
@@ -66,11 +66,14 @@ share/qtermwidget5/translations/qtermwidget_it.qm
 share/qtermwidget5/translations/qtermwidget_ja.qm
 share/qtermwidget5/translations/qtermwidget_lt.qm
 share/qtermwidget5/translations/qtermwidget_nb_NO.qm
+share/qtermwidget5/translations/qtermwidget_nl.qm
 share/qtermwidget5/translations/qtermwidget_pl.qm
 share/qtermwidget5/translations/qtermwidget_pt.qm
 share/qtermwidget5/translations/qtermwidget_pt_BR.qm
 share/qtermwidget5/translations/qtermwidget_ru.qm
 share/qtermwidget5/translations/qtermwidget_si.qm
+share/qtermwidget5/translations/qtermwidget_sk.qm
 share/qtermwidget5/translations/qtermwidget_tr.qm
+share/qtermwidget5/translations/qtermwidget_uk.qm
 share/qtermwidget5/translations/qtermwidget_zh_CN.qm
 share/qtermwidget5/translations/qtermwidget_zh_TW.qm
