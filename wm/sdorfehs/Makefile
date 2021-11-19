@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/11/17 11:22:06 pin Exp $
+# $NetBSD: Makefile,v 1.5 2021/11/19 08:34:35 pin Exp $
 
 DISTNAME=	sdorfehs-1.2
 CATEGORIES=	wm
@@ -18,7 +18,7 @@ SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix+=	Makefile
 SUBST_SED.prefix+=	-e 's,/usr/local,${PREFIX},g'
 SUBST_SED.prefix+=	-e 's,/usr/X11R6,${X11BASE},g'
-SUBST_SED.prefix+=	-e "s,/etc,${PKG_SYSCONFDIR}/,g"
+SUBST_SED.prefix+=	-e 's,/etc,${PKG_SYSCONFDIR}/,g'
 
 INSTALLATION_DIRS=	bin/ ${PKGMANDIR}/man1/
 
