@@ -1,0 +1,29 @@
+$NetBSD: patch-test_cpp_Makefile,v 1.1 2021/11/19 22:13:32 sjmulder Exp $
+
+- Respect LDFLAGS in C++ tests
+- Link libraries required by libxlsxwriter.a with USE_SYSTEM_MINIZIP
+  or USE_OPENSSL_MD5 set.
+
+--- test/cpp/Makefile.orig	2021-10-09 13:44:36.000000000 +0000
++++ test/cpp/Makefile
+@@ -24,6 +24,14 @@ EXES = $(patsubst %.cpp,%,$(SRCS))
+ LIBXLSXWRITER = ../../src/libxlsxwriter.a
+ LIBS = $(LIBXLSXWRITER) -lz
+ 
++ifdef USE_SYSTEM_MINIZIP
++LIBS += -lminizip
++endif
++
++ifdef USE_OPENSSL_MD5
++LIBS += -lcrypto
++endif
++
+ all : $(LIBXLSXWRITER) $(EXES)
+ 
+ $(LIBXLSXWRITER):
+@@ -34,4 +42,4 @@ clean :
+ 
+ # Executable targets.
+ %: %.cpp $(LIBXLSXWRITER)
+-	$(Q)$(CXX) -I$(INC_DIR) $(CXXFLAGS) $< -o $@ $(LIBS)
++	$(Q)$(CXX) -I$(INC_DIR) $(CXXFLAGS) $(LDFLAGS) $< -o $@ $(LIBS)
