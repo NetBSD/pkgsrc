@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5696 2021/11/19 14:33:00 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5697 2021/11/19 16:39:02 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8578,3 +8578,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/php73 to 7.3.33 [taca 2021-11-19]
 	Updated lang/php80 to 8.0.13 [taca 2021-11-19]
 	Updated net/bind916 to 9.16.23 [taca 2021-11-19]
+	Updated games/woof to 8.0.0 [micha 2021-11-19]
