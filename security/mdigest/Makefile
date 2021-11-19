@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2021/06/25 13:50:45 micha Exp $
+# $NetBSD: Makefile,v 1.3 2021/11/19 11:53:45 micha Exp $
 
-DISTNAME=	schily-2021-06-07
-PKGNAME=	mdigest-1.6
+DISTNAME=	schily-2021-09-18
+PKGNAME=	mdigest-1.9
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=schilytools/}
 EXTRACT_SUFX=	.tar.bz2
