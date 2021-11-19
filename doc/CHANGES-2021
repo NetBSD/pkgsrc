@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5668 2021/11/19 09:53:17 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5669 2021/11/19 09:53:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8547,3 +8547,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/qtermwidget to 1.0.0 [pin 2021-11-19]
 	Updated x11/qterminal to 1.0.0 [pin 2021-11-19]
 	Updated graphics/screengrab to 2.3.0 [pin 2021-11-19]
+	Added print/py-pydyf version 0.1.2 [adam 2021-11-19]
+	Added archivers/py-zopfli version 0.1.9 [adam 2021-11-19]
+	Updated archivers/py-brotli to 1.0.9 [adam 2021-11-19]
+	Updated fonts/py-fonttools to 4.28.1 [adam 2021-11-19]
