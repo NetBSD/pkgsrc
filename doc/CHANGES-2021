@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5689 2021/11/19 11:57:45 micha Exp $
+$NetBSD: CHANGES-2021,v 1.5690 2021/11/19 14:06:20 js Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8571,3 +8571,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated meta-pkgs/lxqt to 1.0.0 [pin 2021-11-19]
 	Updated archivers/tartest to 1.24 [micha 2021-11-19]
 	Updated security/mdigest to 1.9 [micha 2021-11-19]
+	Updated chat/matrix-synapse to 1.47.0 [js 2021-11-19]
