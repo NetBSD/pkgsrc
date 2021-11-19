@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2021/05/24 19:52:23 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2021/11/19 09:45:31 pin Exp $
 
-DISTNAME=	lxqt-themes-0.17.0
-PKGREVISION=	1
+DISTNAME=	lxqt-themes-1.0.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -22,7 +21,7 @@ CMAKE_ARG_PATH=	..
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/build
 
-TOOL_DEPENDS+=	lxqt-build-tools>=0.9:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=0.10.0:../../devel/lxqt-build-tools
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
