@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5704 2021/11/20 00:31:18 sjmulder Exp $
+$NetBSD: CHANGES-2021,v 1.5705 2021/11/20 05:58:54 rin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8586,3 +8586,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/sc-im to 0.8.2nb4 [sjmulder 2021-11-19]
 	Updated math/bcal to 2.3 [sjmulder 2021-11-19]
 	Updated devel/mustach to 1.2.2 [sjmulder 2021-11-20]
+	Updated benchmarks/bonnie++ to 1.98nb1 [rin 2021-11-20]
