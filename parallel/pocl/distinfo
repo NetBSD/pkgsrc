@@ -1,14 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:10:37 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/11/20 20:05:36 wiz Exp $
 
-BLAKE2s (pocl-1.7.tar.gz) = b111e491fb84465f30bf56bb78c0bc05f1be26d7954c0891fda2e6990669e7cd
-SHA512 (pocl-1.7.tar.gz) = 23bb82b25a222186c001b2ed413f26253e1e0e16518e98c95173f51491e15d107e6ab1b334ffd490b41199743267d9ad64882a22fea327e17ec9604f9847fc38
-Size (pocl-1.7.tar.gz) = 1577676 bytes
-SHA1 (patch-CMakeLists.txt) = d722efb971d9ce35fd7dfe2e238cbce3660e1eb8
-SHA1 (patch-config.h.in.cmake) = 8f15bf68b3a2c2af00bc8b72f52b383182db6168
-SHA1 (patch-lib_CL_devices_basic_basic.c) = 0220af7515718d44eea38d3a14844c68f75acab4
-SHA1 (patch-lib_CL_devices_common.c) = 44717bf410b948f9b6cd72cbea83dd9214faaa5c
-SHA1 (patch-lib_CL_devices_cpuinfo.c) = 30d8a1103d9eef6fb5b89c1b604dd953828b605b
-SHA1 (patch-lib_CL_devices_devices.c) = 17a5bb001086befdf88452b7e1126d2f5f4b1fc1
-SHA1 (patch-lib_CL_devices_hsa_pocl-hsa.c) = 27acb108cb1e12e4ac0c82e497916f841edc8cb1
-SHA1 (patch-lib_CL_devices_pthread_pthread.c) = 9f169b9a0a1d70ef3efc52dcd7b47a70c364d5d2
-SHA1 (patch-lib_CL_pocl__timing.c) = 6f82ad0eaf22d511745b47bf26f3024f1a25cf6f
+BLAKE2s (pocl-1.8.tar.gz) = 98983933cf43c9010352ecc48a539bc068bc5d1fd6a2a0f37b2973d384a1e3e0
+SHA512 (pocl-1.8.tar.gz) = bcbb3fa3d2234d4c5b0c17863eba0bc4c8f13f863cc58cfd1de49e21fa7bf0aec82b81aec143c81885e3a39274c8ae783b2f03b9a12846e024204d6ed0e59a9d
+Size (pocl-1.8.tar.gz) = 1614545 bytes
+SHA1 (patch-lib_CL_devices_devices.c) = 59824f5f30083651cff47340be0895148836aee3
