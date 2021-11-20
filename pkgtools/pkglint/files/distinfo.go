@@ -153,6 +153,10 @@ func (ck *distinfoLinesChecker) checkAlgorithms(info distinfoFileInfo) {
 		// TODO: remove after 2021Q4. Until then, allow pkgsrc-wip to
 		//  be used with the stable 2021Q3.
 		return
+	case G.Wip && algorithms == "SHA1, RMD160, SHA512, Size" && isPatch != yes:
+		// TODO: remove after 2021Q4. Until then, allow pkgsrc-wip to
+		//  be used with the stable 2021Q3.
+		return
 	case G.Wip && algorithms == "SHA1, BLAKE2s, SHA512, Size" && isPatch != yes:
 		// TODO: remove after 2021Q4. Until then, allow pkgsrc-wip to
 		//  be used with the stable 2021Q3.
