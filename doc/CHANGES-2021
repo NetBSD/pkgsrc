@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5718 2021/11/20 20:56:48 hauke Exp $
+$NetBSD: CHANGES-2021,v 1.5719 2021/11/20 22:58:54 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8573,7 +8573,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/mdigest to 1.9 [micha 2021-11-19]
 	Updated chat/matrix-synapse to 1.47.0 [js 2021-11-19]
 	Updated x11/lxqt-session to 1.0.0 [gutteridge 2021-11-19]
-	Updated chat/matrix-synapse to 1.47.0 [gdt 2021-11-19]
 	Updated lang/php74 to 7.4.26 [taca 2021-11-19]
 	Updated lang/php73 to 7.3.33 [taca 2021-11-19]
 	Updated lang/php80 to 8.0.13 [taca 2021-11-19]
