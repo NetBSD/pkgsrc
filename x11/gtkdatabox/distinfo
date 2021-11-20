@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:33:52 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/11/20 20:56:05 hauke Exp $
 
-BLAKE2s (gtkdatabox-0.9.2.0.tar.gz) = a38c4f84e76c03177ca3191d08153cc773f0e6f4df6deb4ad8812e8344d7eb74
-SHA512 (gtkdatabox-0.9.2.0.tar.gz) = cb36c4ec7b1b4db747520e00c80c037d02c26f60c04bd9d8e4eac06e4e0ec6a605d39e8f11d518751d3137a0ab38631916e98f15cb55cf024b3e5ed37a716f91
-Size (gtkdatabox-0.9.2.0.tar.gz) = 2836730 bytes
+BLAKE2s (gtkdatabox-1.0.0.tar.gz) = 7f69b322a44371fbf3ac3a2b730b83b00e5004ce99b37b299b2936c9ca5541ef
+SHA512 (gtkdatabox-1.0.0.tar.gz) = 63007ab50e1e1eba185a2c05ccc1a8759aded91797688c4b4888728af3527514cc79280851981e36b01e24859fe8e0f95d660a219d456edeb50e0b847d7b9999
+Size (gtkdatabox-1.0.0.tar.gz) = 520992 bytes
