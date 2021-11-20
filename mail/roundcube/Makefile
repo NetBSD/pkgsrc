@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2021/03/07 13:21:57 taca Exp $
+# $NetBSD: Makefile,v 1.95 2021/11/20 15:13:32 taca Exp $
 
 DISTNAME=	roundcubemail-${RC_VERS}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/mail-/-/:S/-complete//}
@@ -48,7 +48,8 @@ CONF_PLUGINS=		acl additional_message_headers database_attachments \
 			krb_authentication managesieve markasjunk \
 			new_user_identity newmail_notifier \
 			redundant_attachments squirrelmail_usercopy
-RC_DOCS=		CHANGELOG INSTALL LICENSE README.md UPGRADING
+RC_DOCS=		CHANGELOG.md INSTALL LICENSE README.md SECURITY.md \
+			UPGRADING
 REPLACE_PHP=		cleandb.sh decrypt.sh deluser.sh gc.sh \
 			indexcontacts.sh initdb.sh installto.sh \
 			moduserprefs.sh msgexport.sh msgimport.sh \
