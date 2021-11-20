@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2021/11/20 05:57:29 rin Exp $
+
+Do not clobber LDFLAGS.
+
+--- configure.orig	2018-09-13 22:07:36.000000000 +0900
++++ configure	2021-11-17 19:51:35.412026321 +0900
+@@ -3963,8 +3963,6 @@
+    linux_pthread="#define LINUX_PTHREAD"
+ fi
+ 
+-LDFLAGS=-lpthread
+-
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ #include <pthread.h>
