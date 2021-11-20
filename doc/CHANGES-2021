@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5716 2021/11/20 20:07:30 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.5717 2021/11/20 20:51:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8601,3 +8601,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated meta-pkgs/bulk-test-llvm to 20211120 [wiz 2021-11-20]
 	Updated parallel/pocl to 1.8 [wiz 2021-11-20]
 	Updated audio/py-mutagen to 1.45.1 [bsiegert 2021-11-20]
+	Updated editors/qtcreator to 5.0.3 [wiz 2021-11-20]
