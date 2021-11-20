@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2021/09/09 01:11:44 khorben Exp $
+# $NetBSD: Makefile,v 1.9 2021/11/20 15:13:33 taca Exp $
 
 PLUGIN=		zipdownload
-PKGREVISION=	1
 
 MAINTAINER=	taca@NetBSD.org
 COMMENT=	Roundcube Webmail ZipDownload plugin
