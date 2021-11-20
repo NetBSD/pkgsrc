@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21269 2021/11/20 19:58:32 wiz Exp $
+$NetBSD: TODO,v 1.21270 2021/11/20 20:07:30 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -1642,7 +1642,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-munkres-1.1.4
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
-	o py-mutagen-1.45.1
 	o py-newt-0.52.21
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
