@@ -1,4 +1,4 @@
-$NetBSD: patch-compiler_rustc__target_src_spec_i586__unknown__netbsd.rs,v 1.4 2021/09/10 15:09:32 jperkin Exp $
+$NetBSD: patch-compiler_rustc__target_src_spec_i586__unknown__netbsd.rs,v 1.5 2021/11/20 16:09:46 he Exp $
 
 Add an i586 / pentium variant, in an effort to support AMD Geode etc.
 
