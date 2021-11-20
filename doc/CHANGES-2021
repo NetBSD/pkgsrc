@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5713 2021/11/20 19:58:32 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5714 2021/11/20 19:59:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8598,3 +8598,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated comms/libhidapi to 0.11.0 [root 2021-11-20]
 	Updated audio/mixxx to 2.3.1 [root 2021-11-20]
 	Updated devel/cvise to 2.4.0 [wiz 2021-11-20]
+	Updated meta-pkgs/bulk-test-llvm to 20211120 [wiz 2021-11-20]
