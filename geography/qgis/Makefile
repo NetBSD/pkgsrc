@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2021/11/15 22:54:17 wiz Exp $
+# $NetBSD: Makefile,v 1.132 2021/11/20 18:51:22 gdt Exp $
 
 # This is intentionally 3.16 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
@@ -71,7 +71,8 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
 # for quickosm
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
-# py-owslib # metasearch
+# for metasearch
+#DEPENDS+=	${PYPKGPREFIX}-wip-[0-9]*:../../wip/py-owslib
 
 CMAKE_ARGS+=	-DWITH_QTWEBKIT=FALSE
 CMAKE_ARGS+=	-DQWT_DIR=${QWT_DIR}
