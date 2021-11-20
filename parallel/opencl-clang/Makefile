@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2021/08/11 20:49:25 nia Exp $
+# $NetBSD: Makefile,v 1.3 2021/11/20 23:16:37 wiz Exp $
 
-DISTNAME=	opencl-clang-v12.0.0
-PKGNAME=	${DISTNAME:S/-v/-/1:S/-1$/.1/g}
+DISTNAME=	opencl-clang-12.0.0
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=intel/}
-GITHUB_PROJECT=	opencl-clang
-GITHUB_TAG=	${DISTNAME:S/opencl-clang-//1}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/intel/opencl-clang
