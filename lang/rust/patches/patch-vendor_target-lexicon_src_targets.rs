@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_target-lexicon_src_targets.rs,v 1.3 2021/09/10 15:09:32 jperkin Exp $
+$NetBSD: patch-vendor_target-lexicon_src_targets.rs,v 1.4 2021/11/20 16:09:46 he Exp $
 
 Add aarch64_eb for NetBSD.
 

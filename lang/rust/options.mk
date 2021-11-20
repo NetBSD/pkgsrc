@@ -1,19 +1,17 @@
-# $NetBSD: options.mk,v 1.16 2021/07/17 13:16:38 jperkin Exp $
+# $NetBSD: options.mk,v 1.17 2021/11/20 16:09:46 he Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
-PKG_SUPPORTED_OPTIONS+=	rust-cargo-static
-PKG_SUPPORTED_OPTIONS+=	rust-llvm
+PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs
 
 .include "../../mk/bsd.fast.prefs.mk"
 
+# The bundled LLVM current has issues building on SunOS.
+.if ${OPSYS} != "SunOS"
+PKG_SUPPORTED_OPTIONS+=		rust-llvm
 # There may be compatibility issues with base LLVM.
-.if !empty(HAVE_LLVM)
-PKG_SUGGESTED_OPTIONS+=	rust-llvm
-.endif
-
-# macOS/arm64 currently cannot used shared llvm
-.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
-PKG_SUGGESTED_OPTIONS+=	rust-llvm
+.  if !empty(HAVE_LLVM)
+PKG_SUGGESTED_OPTIONS+=		rust-llvm
+.  endif
 .endif
 
 # Bundle OpenSSL and curl into the cargo binary when producing
@@ -47,4 +45,13 @@ BUILDLINK_API_DEPENDS.nghttp2+= nghttp2>=1.41.0
 BUILDLINK_API_DEPENDS.curl+= 	curl>=7.67.0
 .include "../../www/curl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.endif
+
+#
+# Install documentation.
+#
+.if !empty(PKG_OPTIONS:Mrust-docs)
+CONFIGURE_ARGS+=	--enable-docs
+.else
+CONFIGURE_ARGS+=	--disable-docs
 .endif

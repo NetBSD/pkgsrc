@@ -1,9 +1,9 @@
-$NetBSD: patch-compiler_rustc__target_src_spec_netbsd__base.rs,v 1.4 2021/09/10 15:09:32 jperkin Exp $
+$NetBSD: patch-compiler_rustc__target_src_spec_netbsd__base.rs,v 1.5 2021/11/20 16:09:46 he Exp $
 
 For the benefit of powerpc, when libatomic-links is installed,
 search the directory containing the symlinks to -latomic.
 
---- compiler/rustc_target/src/spec/netbsd_base.rs.orig	2021-07-26 14:43:01.000000000 +0000
+--- compiler/rustc_target/src/spec/netbsd_base.rs.orig	2021-09-06 18:42:35.000000000 +0000
 +++ compiler/rustc_target/src/spec/netbsd_base.rs
 @@ -1,6 +1,14 @@
 -use crate::spec::{RelroLevel, TargetOptions};
