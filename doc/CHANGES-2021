@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5710 2021/11/20 18:06:30 rillig Exp $
+$NetBSD: CHANGES-2021,v 1.5711 2021/11/20 18:59:16 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8595,3 +8595,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/ruby-xz to 1.0.1 [taca 2021-11-20]
 	Updated lang/rust to 1.56.1 [he 2021-11-20]
 	Updated pkgtools/pkglint to 21.3.4 [rillig 2021-11-20]
+	Updated comms/libhidapi to 0.11.0 [root 2021-11-20]
