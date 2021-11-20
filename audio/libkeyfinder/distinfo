@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/20 18:09:45 nia Exp $
+
+BLAKE2s (libkeyfinder-2.2.5.tar.gz) = 37abe2a1057e320df231cbfcceb0bd39fe8b58f12e1ce5a21cd962e3df5dc611
+SHA512 (libkeyfinder-2.2.5.tar.gz) = 54463d1f1111dc474d3e43723fddd5579ea1a3842f99f43e50e85622a1d6ee6fe42b22c300ce5ba5807cf6b2d7067af741773af95974a42c5d863c53165893eb
+Size (libkeyfinder-2.2.5.tar.gz) = 79220 bytes
