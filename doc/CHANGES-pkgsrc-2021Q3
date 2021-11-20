@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.25 2021/11/05 19:33:22 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.26 2021/11/20 21:51:22 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -97,4 +97,7 @@ firefox91-l10n: dependent update
 
 Pullup ticket #6530 - requested by nia
 www/firefox91: security fix
+
+Pullup ticket #6534 - requested by bsiegert
+mail/mailman: security fix
 
