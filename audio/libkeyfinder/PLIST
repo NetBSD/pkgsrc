@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/20 18:09:45 nia Exp $
+include/keyfinder/audiodata.h
+include/keyfinder/binode.h
+include/keyfinder/chromagram.h
+include/keyfinder/chromatransform.h
+include/keyfinder/chromatransformfactory.h
+include/keyfinder/constants.h
+include/keyfinder/exception.h
+include/keyfinder/fftadapter.h
+include/keyfinder/keyclassifier.h
+include/keyfinder/keyfinder.h
+include/keyfinder/lowpassfilter.h
+include/keyfinder/lowpassfilterfactory.h
+include/keyfinder/spectrumanalyser.h
+include/keyfinder/temporalwindowfactory.h
+include/keyfinder/toneprofiles.h
+include/keyfinder/windowfunctions.h
+include/keyfinder/workspace.h
+lib/cmake/KeyFinder/KeyFinderConfig.cmake
+lib/cmake/KeyFinder/KeyFinderConfigVersion.cmake
+lib/cmake/KeyFinder/KeyFinderTargets-noconfig.cmake
+lib/cmake/KeyFinder/KeyFinderTargets.cmake
+lib/libkeyfinder.so
+lib/libkeyfinder.so.2
+lib/libkeyfinder.so.${PKGVERSION}
+lib/pkgconfig/libkeyfinder.pc
