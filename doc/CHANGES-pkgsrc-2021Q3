@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.26 2021/11/20 21:51:22 tm Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.27 2021/11/20 22:15:59 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -100,4 +100,7 @@ www/firefox91: security fix
 
 Pullup ticket #6534 - requested by bsiegert
 mail/mailman: security fix
+
+Pullup ticket #6532 - requested by bsiegert
+net/zeromq: security fix
 
