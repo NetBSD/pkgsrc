@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2019/07/08 12:52:42 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/11/20 18:59:05 nia Exp $
 include/hidapi/hidapi.h
+include/hidapi/hidapi_libusb.h
 lib/libhidapi.la
 lib/pkgconfig/hidapi.pc
 share/doc/hidapi/AUTHORS.txt
