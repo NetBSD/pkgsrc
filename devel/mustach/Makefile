@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2021/08/19 09:37:50 sjmulder Exp $
+# $NetBSD: Makefile,v 1.8 2021/11/20 00:31:10 sjmulder Exp $
 
-DISTNAME=	mustach-1.1.1
+DISTNAME=	mustach-1.2.2
 CATEGORIES=	devel
 MASTER_SITES=	https://gitlab.com/jobol/mustach/-/archive/${PKGVERSION_NOREV}/
 
@@ -8,6 +8,10 @@ MAINTAINER=	sjmulder@NetBSD.org
 HOMEPAGE=	https://gitlab.com/jobol/mustach
 COMMENT=	C implementation of mustache templating
 LICENSE=	apache-2.0
+
+# 'test' is basic-tests and spec-tests, which downloads files with git
+TEST_TARGET=	basic-tests
+TEST_DEPENDS+=	valgrind-[0-9]*:../../devel/valgrind
 
 USE_TOOLS+=	gmake gsed pkg-config
 

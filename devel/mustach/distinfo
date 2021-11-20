@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:15:41 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/11/20 00:31:10 sjmulder Exp $
 
-BLAKE2s (mustach-1.1.1.tar.gz) = c2fd04599a5f047351c740847de60e4012e23831590e0d56c984f08cf77d4743
-SHA512 (mustach-1.1.1.tar.gz) = 7210e418533a168a3e6f3948c78e84077b38e3d96aa25b21ed6013f3c42f068d1eb2a5790ebf8bc0fa5a206fc0e79e0c14228ec5e662d41697222fc902084aaa
-Size (mustach-1.1.1.tar.gz) = 28676 bytes
+BLAKE2s (mustach-1.2.2.tar.gz) = bfb5bb378dd3f9535a7188bd81d9624242b85f5f30364dc0c8bb179badb1b265
+SHA512 (mustach-1.2.2.tar.gz) = d714dd5a0c58d9bd23826cd56f91b0ad04ff0bb0733b0dfca41100219436ab90b42b8fd3878932f5101cfd2a4f6ae3c85dcaea9010521ef1a17dd00e980363a7
+Size (mustach-1.2.2.tar.gz) = 36229 bytes
+SHA1 (patch-test6_Makefile) = 59d63febabaad20b880ed440587d12d3c5a40599
