@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2021/08/10 20:39:51 triaxx Exp $
+# $NetBSD: Makefile,v 1.26 2021/11/20 23:38:12 hauke Exp $
 
 DISTNAME=	alsa-lib-1.2.5.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.alsa-project.org/pub/lib/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,6 +17,11 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 
 PKGCONFIG_OVERRIDE+=	utils/alsa.pc.in
+
+SUBST_CLASSES+=		conf-path
+SUBST_STAGE.conf-path=	pre-configure
+SUBST_FILES.conf-path=	src/conf/alsa.conf
+SUBST_VARS.conf-path=	VARBASE PKG_SYSCONFDIR
 
 CONFIGURE_ARGS+=	--disable-python
 
