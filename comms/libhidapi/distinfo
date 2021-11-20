@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:06:00 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/11/20 18:59:05 nia Exp $
 
-BLAKE2s (hidapi-0.9.0.tar.gz) = 46a57f44a1f5c539dbb477067ff3dcba8f37d11d10034681e88919c606a5c795
-SHA512 (hidapi-0.9.0.tar.gz) = d9f28d394b78daece7d2dfb946e62349a56b388b3a06241585c6fad5a4e24dc914723de6c0f12a9e51cd23fb245f6b5ac9b3721319646d5ba5912bbe0a3f9a52
-Size (hidapi-0.9.0.tar.gz) = 112963 bytes
+BLAKE2s (hidapi-0.11.0.tar.gz) = 02dafe2ed9d145768a4b36ac2ce9c50292824eec3fde39e9ad3f68f8a65d49c0
+SHA512 (hidapi-0.11.0.tar.gz) = 0de4abc963600d159ce231416c468b9e81a8361e4d2c2202988d6eb2e58a923700e9b9be639fbddc6bc14625131848409e2e88dbc4b34a1f8a726c8fa4692d92
+Size (hidapi-0.11.0.tar.gz) = 232631 bytes
 SHA1 (patch-Makefile.am) = 8e39fc4650601af39c510107ca2b3c85029fb2df
-SHA1 (patch-configure.ac) = ddc85e7421f79ef7d037223802292ed27fbdfdaf
-SHA1 (patch-libusb_Makefile.am) = 4e325f56caff55f6e3b26948a43afd3f30606cd7
+SHA1 (patch-configure.ac) = caf23d94ec0af608f63dfd3acba7b3624af78bdc
+SHA1 (patch-libusb_Makefile.am) = 2caf718bd7538bcc43b7eaea75dc5a7024f12581
