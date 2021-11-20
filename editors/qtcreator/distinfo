@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:21:38 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/11/20 20:51:14 wiz Exp $
 
-BLAKE2s (qt-creator-opensource-src-4.13.2.zip) = 248b4ae00c91184d9b8634ea6d2b4dfe8dc2362b12d4c1819bf69ad3390b6d8d
-SHA512 (qt-creator-opensource-src-4.13.2.zip) = efbe7f4ee6ccfcd32ecd182e4a7c88023df86790771c1621b732530fa8bb1f125f0e809c92806903e401a6192df9b3876cc87bae4b504c4e4fbf2e5407b0203a
-Size (qt-creator-opensource-src-4.13.2.zip) = 65177262 bytes
-SHA1 (patch-qtcreator.pro) = 7f96fc4106ed17e4f7c802ba649392125e23d0c4
+BLAKE2s (qt-creator-opensource-src-5.0.3.zip) = 961dcaa2d6b6e2b739d774f4a7b0090730bad4b5cf5c93a80f28c39caafdd9a3
+SHA512 (qt-creator-opensource-src-5.0.3.zip) = 9ba7d7a1b506039460efedc9defe974c06905b5024f3e33de2328dcac335ba58d24c2c73ed2083f40305c4393507d6257ff755e2bfe3692cffd601f50bfce131
+Size (qt-creator-opensource-src-5.0.3.zip) = 72614121 bytes
+SHA1 (patch-share_share.pro) = e6f9448295a6eeb78b12979684b53ea29649da95
+SHA1 (patch-src_libs_3rdparty_sqlite_sqlite3.c) = fadde723c6e4fe758d9d66e00e95044755913b92
