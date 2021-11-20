@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5707 2021/11/20 15:14:50 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5708 2021/11/20 15:29:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8592,3 +8592,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/roundcube-plugin-enigma to 1.5.0 [taca 2021-11-20]
 	Updated mail/roundcube-plugin-password to 1.5.0 [taca 2021-11-20]
 	Updated mail/roundcube-plugin-zipdownload to 1.5.0 [taca 2021-11-20]
+	Updated archivers/ruby-xz to 1.0.1 [taca 2021-11-20]
