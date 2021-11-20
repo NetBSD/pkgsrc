@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5705 2021/11/20 05:58:54 rin Exp $
+$NetBSD: CHANGES-2021,v 1.5706 2021/11/20 10:39:16 fox Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8587,3 +8587,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/bcal to 2.3 [sjmulder 2021-11-19]
 	Updated devel/mustach to 1.2.2 [sjmulder 2021-11-20]
 	Updated benchmarks/bonnie++ to 1.98nb1 [rin 2021-11-20]
+	Updated www/jira-cli to 0.2.0 [fox 2021-11-20]
