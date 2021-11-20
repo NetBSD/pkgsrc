@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2021/07/23 11:30:16 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2021/11/20 19:58:21 wiz Exp $
 
-DISTNAME=	cvise-2.3.0
+DISTNAME=	cvise-2.4.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=marxin/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

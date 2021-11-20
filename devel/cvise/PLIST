@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/07/23 11:30:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/11/20 19:58:21 wiz Exp $
 bin/cvise
 bin/cvise-delta
 libexec/cvise/clang_delta
@@ -8,6 +8,7 @@ libexec/cvise/topformflat
 share/cvise/__init__.py
 share/cvise/cvise.py
 share/cvise/pass_groups/all.json
+share/cvise/pass_groups/binary.json
 share/cvise/pass_groups/delta.json
 share/cvise/pass_groups/opencl-120.json
 share/cvise/passes/__init__.py
@@ -18,6 +19,7 @@ share/cvise/passes/clang.py
 share/cvise/passes/clangbinarysearch.py
 share/cvise/passes/clex.py
 share/cvise/passes/comments.py
+share/cvise/passes/gcdabinary.py
 share/cvise/passes/ifs.py
 share/cvise/passes/includeincludes.py
 share/cvise/passes/includes.py
@@ -42,6 +44,7 @@ share/cvise/tests/test_ternary.py
 share/cvise/tests/testabstract.py
 share/cvise/utils/__init__.py
 share/cvise/utils/error.py
+share/cvise/utils/misc.py
 share/cvise/utils/nestedmatcher.py
 share/cvise/utils/readkey.py
 share/cvise/utils/statistics.py
