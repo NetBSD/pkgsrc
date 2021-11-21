@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2021/10/26 11:29:38 nia Exp $
+$NetBSD: distinfo,v 1.23 2021/11/21 07:18:19 fcambus Exp $
 
-BLAKE2s (logswan-2.1.10.tar.gz) = 974da0dee09f7e2f90844599a012dbdd055a8560bf8e3160972678d629a19e76
-SHA512 (logswan-2.1.10.tar.gz) = 8d793b3e14155625b1cd96614a47db1fdcea562b6fa6432def6548178c46ac3567681e42815a78ab41247b23feb5011832d6e02a101f430d86961e26c3915433
-Size (logswan-2.1.10.tar.gz) = 24571 bytes
+BLAKE2s (logswan-2.1.11.tar.gz) = fb9c1ab248f5612f255cbe93e720ce7f1d004f32289ae442e4b9cc05449c1dd7
+SHA512 (logswan-2.1.11.tar.gz) = cd93d9562b01829f0a453d05a2cea2a709f3bc50b709f02cbf60171e90a0ffa3ef3600e90270ead82a6fe6d7cdc10a6187a2f222b21c17d9a6c94c9fad842ff0
+Size (logswan-2.1.11.tar.gz) = 23620 bytes
