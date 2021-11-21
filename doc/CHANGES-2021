@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5726 2021/11/21 10:44:26 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5727 2021/11/21 10:51:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8609,3 +8609,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/mimalloc to 2.0.3 [fcambus 2021-11-21]
 	Added devel/py-jaraco.path version 3.3.1 [wiz 2021-11-21]
 	Added devel/py-path version 16.2.0 [wiz 2021-11-21]
+	Added devel/py-jaraco.envs version 2.2.0 [wiz 2021-11-21]
