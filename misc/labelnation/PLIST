@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2013/01/23 21:40:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/11/21 13:30:15 gdt Exp $
 bin/csv_to_ln
 bin/labelnation
-share/doc/labelnation/COPYING
-share/doc/labelnation/README
+share/doc/labelnation/LICENSE.md
+share/doc/labelnation/README.md
 share/examples/labelnation/bcard-ps-1.txt
 share/examples/labelnation/lines-1.txt
 share/examples/labelnation/lines-2.txt
