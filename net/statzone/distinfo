@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:06:58 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/11/21 07:25:02 fcambus Exp $
 
-BLAKE2s (statzone-1.1.0.tar.gz) = 95fb654552fccd2a78e6c03654c17ac76faaa7655e1c5797036734ea0ca36a63
-SHA512 (statzone-1.1.0.tar.gz) = 2b1e79c9566fa57b0fbe0e58245df31d860fb6e425150269b2d3b0c87ee5373c82a39154ad7a8f437fcd51d30b46f4bc230037582ce00b83c769465b4b34ccbe
-Size (statzone-1.1.0.tar.gz) = 18500 bytes
+BLAKE2s (statzone-1.1.1.tar.gz) = b8a10768a023a573551d5133babc4a50359fffa7a62c1a05c7a99ee74dcfd84f
+SHA512 (statzone-1.1.1.tar.gz) = 04ebdf1d9ddc43b1b5cc424ab41de5dc45c52a36ac0fc40e9996899084217aae9ff8967f3980b502c3c2be732537268cf0355b9dcd0704f965db7b4b86f55b6e
+Size (statzone-1.1.1.tar.gz) = 16739 bytes
