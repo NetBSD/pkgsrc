@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5719 2021/11/20 22:58:54 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.5720 2021/11/21 07:11:41 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8602,3 +8602,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/py-mutagen to 1.45.1 [bsiegert 2021-11-20]
 	Updated editors/qtcreator to 5.0.3 [wiz 2021-11-20]
 	Updated x11/gtkdatabox to 1.0.0 [hauke 2021-11-20]
+	Updated converters/bdf2sfd to 1.1.7 [fcambus 2021-11-21]
