@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2021/11/15 13:07:12 nia Exp $
-#
+# $NetBSD: Makefile,v 1.27 2021/11/21 13:09:24 wiz Exp $
 
 DISTNAME=	windowmaker-desktop-1.3
 CATEGORIES=	meta-pkgs x11 windowmaker
@@ -8,6 +7,8 @@ MASTER_SITES=	# empty
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.windowmaker.info/
 COMMENT=	Provides a desktop based on the WindowMaker wm
+
+META_PACKAGE=	yes
 
 DEPENDS+=	windowmaker>=0.80.0:../../wm/windowmaker
 DEPENDS+=	wterm-[0-9]*:../../x11/wterm
@@ -25,7 +26,5 @@ DEPENDS+=	wmMoonClock-[0-9]*:../../time/wmmoonclock
 DEPENDS+=	wmmixer-[0-9]*:../../audio/wmmixer
 .endif
 DEPENDS+=	docker-[0-9]*:../../x11/docker
-
-META_PACKAGE=	yes
 
 .include "../../mk/bsd.pkg.mk"
