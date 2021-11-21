@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5724 2021/11/21 08:56:17 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.5725 2021/11/21 10:37:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8607,3 +8607,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/statzone to 1.1.1 [fcambus 2021-11-21]
 	Updated sysutils/ytree to 2.04 [fcambus 2021-11-21]
 	Updated devel/mimalloc to 2.0.3 [fcambus 2021-11-21]
+	Added devel/py-jaraco.path version 3.3.1 [wiz 2021-11-21]
