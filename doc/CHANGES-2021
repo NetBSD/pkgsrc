@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5731 2021/11/21 14:55:53 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.5732 2021/11/21 15:11:06 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8614,3 +8614,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/labelnation to 1.231 [gdt 2021-11-21]
 	Updated lang/openjdk11 to 1.11.0.13.8 [ryoon 2021-11-21]
 	Updated databases/p5-App-Sqitch to 1.2.0 [schmonz 2021-11-21]
+	Updated cad/py-PyRTL to 0.10.1 [ryoon 2021-11-21]
