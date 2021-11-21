@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2021/11/18 02:23:44 pho Exp $
+# $NetBSD: Makefile,v 1.23 2021/11/21 16:40:02 ryoon Exp $
 
-DISTNAME=	nim-1.4.8
-PKGREVISION=	1
+DISTNAME=	nim-1.6.0
 CATEGORIES=	lang
 MASTER_SITES=	http://nim-lang.org/download/
 EXTRACT_SUFX=	.tar.xz
@@ -38,13 +37,13 @@ do-install:
 	cd ${WRKSRC} && sh ./install.sh ${DESTDIR}${PREFIX}
 	${INSTALL_SCRIPT} ${WRKSRC}/nim-wrapper.sh ${DESTDIR}${PREFIX}/bin/nim
 	${INSTALL} ${WRKSRC}/bin/nimble ${DESTDIR}${PREFIX}/bin/nimble
-	${INSTALL} ${WRKSRC}/bin/nimfind ${DESTDIR}${PREFIX}/bin/nimfind
 	${INSTALL} ${WRKSRC}/bin/nimgrep ${DESTDIR}${PREFIX}/bin/nimgrep
 	${INSTALL} ${WRKSRC}/bin/nimpretty ${DESTDIR}${PREFIX}/bin/nimpretty
 	${INSTALL} ${WRKSRC}/bin/nimsuggest ${DESTDIR}${PREFIX}/bin/nimsuggest
 	${INSTALL} ${WRKSRC}/bin/testament ${DESTDIR}${PREFIX}/bin/testament
 	${INSTALL} ${WRKSRC}/bin/nim-gdb ${DESTDIR}${PREFIX}/bin/nim-gdb
 	${INSTALL} ${WRKSRC}/bin/nim-gdb.bash ${DESTDIR}${PREFIX}/bin/nim-gdb.bash
+	${INSTALL} ${WRKSRC}/bin/nim-gdb ${DESTDIR}${PREFIX}/bin/nim_dbg
 
 do-test:
 	cd ${WRKSRC} && ./bin/nim compile koch.nim
