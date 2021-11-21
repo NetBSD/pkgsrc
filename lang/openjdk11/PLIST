@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/04/10 18:21:44 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/11/21 14:20:08 ryoon Exp $
 bin/openjdk11-jar
 bin/openjdk11-jarsigner
 bin/openjdk11-java
@@ -572,8 +572,6 @@ java/openjdk11/lib/libextnet.diz
 java/openjdk11/lib/libextnet.so
 java/openjdk11/lib/libfontmanager.diz
 java/openjdk11/lib/libfontmanager.so
-java/openjdk11/lib/libharfbuzz.diz
-java/openjdk11/lib/libharfbuzz.so
 java/openjdk11/lib/libinstrument.diz
 java/openjdk11/lib/libinstrument.so
 java/openjdk11/lib/libj2gss.diz
