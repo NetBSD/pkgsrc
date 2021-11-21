@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5722 2021/11/21 07:25:12 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.5723 2021/11/21 07:43:41 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8605,3 +8605,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated converters/bdf2sfd to 1.1.7 [fcambus 2021-11-21]
 	Updated www/logswan to 2.1.11 [fcambus 2021-11-21]
 	Updated net/statzone to 1.1.1 [fcambus 2021-11-21]
+	Updated sysutils/ytree to 2.04 [fcambus 2021-11-21]
