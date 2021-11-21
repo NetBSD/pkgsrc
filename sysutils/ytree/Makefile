@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/01/06 15:57:43 fcambus Exp $
+# $NetBSD: Makefile,v 1.3 2021/11/21 07:43:31 fcambus Exp $
 
-DISTNAME=	ytree-2.03
+DISTNAME=	ytree-2.04
 CATEGORIES=	sysutils
 MASTER_SITES=	https://www.han.de/~werner/
 
