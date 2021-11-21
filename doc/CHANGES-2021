@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5729 2021/11/21 13:29:29 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.5730 2021/11/21 14:20:49 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8612,3 +8612,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/py-jaraco.envs version 2.2.0 [wiz 2021-11-21]
 	Added audio/py-mediafile version 0.8.1 [bsiegert 2021-11-21]
 	Updated misc/labelnation to 1.231 [gdt 2021-11-21]
+	Updated lang/openjdk11 to 1.11.0.13.8 [ryoon 2021-11-21]
