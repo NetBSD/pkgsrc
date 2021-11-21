@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2021/09/29 13:29:29 micha Exp $
+# $NetBSD: Makefile,v 1.20 2021/11/21 14:09:19 ryoon Exp $
 
 DISTNAME=	schily-2021-09-18
 PKGNAME=	smake-1.6
@@ -31,15 +31,11 @@ SUBST_FILES.man=	smake/smake.1
 SUBST_SED.man=		-e "s,/opt/schily/share/lib/smake/defaults.smk,${PREFIX}/share/lib/smake/defaults.smk,g"
 SUBST_MESSAGE.man=	Fix path for default rules in manpage.
 
+BUILD_DIRS=	libschily
+BUILD_DIRS+=	smake
+INSTALL_DIRS=	smake
+
 do-configure:
 	cd ${WRKSRC}/inc && ${MAKE_PROGRAM} ${MAKE_FLAGS}
-
-do-build:
-	cd ${WRKSRC}/libschily && ${MAKE_PROGRAM} ${MAKE_FLAGS}
-	cd ${WRKSRC}/smake && ${MAKE_PROGRAM} ${MAKE_FLAGS}
-
-# Documentation is in ${WRKSRC}/README.compile
-do-install:
-	cd ${WRKSRC}/smake && ${MAKE_PROGRAM} ${MAKE_FLAGS} install
 
 .include "../../mk/bsd.pkg.mk"
