@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5727 2021/11/21 10:51:36 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5728 2021/11/21 11:06:45 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8610,3 +8610,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/py-jaraco.path version 3.3.1 [wiz 2021-11-21]
 	Added devel/py-path version 16.2.0 [wiz 2021-11-21]
 	Added devel/py-jaraco.envs version 2.2.0 [wiz 2021-11-21]
+	Added audio/py-mediafile version 0.8.1 [bsiegert 2021-11-21]
