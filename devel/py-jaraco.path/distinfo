@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2021/11/21 10:37:02 wiz Exp $
+
+BLAKE2s (jaraco.path-3.3.1.tar.gz) = 168b646de8069942f2b9bd5ba2968a6b8b7240f4d23de326b47e319def213228
+SHA512 (jaraco.path-3.3.1.tar.gz) = 00dac02fdc6df469f8661d552b16a8ee6150d86a7df9459264377a03e96fd94608f9782ad4cc2b2df67c64a10f8af26ed650b0bac0b1e59607d429abdbe64309
+Size (jaraco.path-3.3.1.tar.gz) = 13287 bytes
+SHA1 (patch-jaraco_path.py) = 66902a42b2055d628f9a02ba2154abf12db1a28d
+SHA1 (patch-setup.cfg) = 5313ea9fa85ce2f046e537fbe18ca82a29a30b8d
