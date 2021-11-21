@@ -1,21 +1,21 @@
-$NetBSD: distinfo,v 1.7 2021/10/07 14:20:53 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/11/21 03:10:32 pho Exp $
 
-RMD160 (ghc-7.10.3-boot-x86_64-unknown-solaris2.tar.xz) = c9ef4fa2f83b77b964a08b3f3b6d9916a490506f
+BLAKE2s (ghc-7.10.3-boot-x86_64-unknown-solaris2.tar.xz) = 37520557e76b7b434082044f19cbb53008d87381b0381653c72ffbaf165d2964
 SHA512 (ghc-7.10.3-boot-x86_64-unknown-solaris2.tar.xz) = ba0bbfb1cc91fa9741bc3bec5e40a9bfb2c0a6a962674fcbc4e78dfb3c0ed5c267a6789a085f6a6bdeda5bb8ae0f1c995c21697b361427cb37ac860248a6cb9b
 Size (ghc-7.10.3-boot-x86_64-unknown-solaris2.tar.xz) = 55482280 bytes
-RMD160 (ghc-8.0.2-boot-i386-unknown-freebsd.tar.xz) = cdcea446b5ae76ca90cac6fb3ae85c13fed04094
+BLAKE2s (ghc-8.0.2-boot-i386-unknown-freebsd.tar.xz) = 6bc0960a7f61b769d8e5a2961b2e4edc1c642a5e4ed7226af964b2192c67e5f7
 SHA512 (ghc-8.0.2-boot-i386-unknown-freebsd.tar.xz) = 078290c325c8e5b8d861816750d58b4289ad51ac4f39b803b670d7ece5fb46e9fd39c1859ec54770ad9cfc7e423790d0f5a0c58e5881f96b4078763a6b48c0a0
 Size (ghc-8.0.2-boot-i386-unknown-freebsd.tar.xz) = 48217412 bytes
-RMD160 (ghc-8.0.2-boot-x86_64-unknown-freebsd.tar.xz) = bdb8f77acde50922066b20be98435524eb4a2a2b
+BLAKE2s (ghc-8.0.2-boot-x86_64-unknown-freebsd.tar.xz) = a88557421326ffc7c09352d2f655c2398c06e73309e459c03a0a4e875ec287df
 SHA512 (ghc-8.0.2-boot-x86_64-unknown-freebsd.tar.xz) = 48bac6cba21d3d9adb1bb9f2bc41d8b6d19b2f1ab4e113151cc8eba6dfb80f6818ca2bbc84248b126a2dd526a644f1d7695372af0a2bc6538cdb84ad3a45e7d1
 Size (ghc-8.0.2-boot-x86_64-unknown-freebsd.tar.xz) = 48878384 bytes
-RMD160 (ghc-8.0.2-boot-x86_64-unknown-netbsd.tar.xz) = 29f162e0547c686274eb8389c30e8a76b53a51eb
+BLAKE2s (ghc-8.0.2-boot-x86_64-unknown-netbsd.tar.xz) = b2d33487039093373df2d27daf10399007af7299e7e2bdc6ecf6cd87db64dedc
 SHA512 (ghc-8.0.2-boot-x86_64-unknown-netbsd.tar.xz) = 829ac54c9cf5031d93e994424a70093da38a612281ad2e8422a0dbd1e5beb34deecca042ae82706c97c3e4b9ab745140c796e3a6a16903cb04adfac52b8d83da
 Size (ghc-8.0.2-boot-x86_64-unknown-netbsd.tar.xz) = 50132904 bytes
-RMD160 (ghc-8.0.2-src.tar.xz) = 56b74f65e17bcab2ff9d5b8dbced3f9694d531cc
+BLAKE2s (ghc-8.0.2-src.tar.xz) = 378e1d73d609c279affbe6fb3151bbaf808b8bf9412a1ab2f5b42f739f72a73c
 SHA512 (ghc-8.0.2-src.tar.xz) = 58ea3853cd93b556ecdc4abd0be079b2621171b8491f59004ea4e036a4cba4470aaafe6591b942e0a50a64bdc47540e01fe6900212a1ef7087850112d9bfc5ef
 Size (ghc-8.0.2-src.tar.xz) = 10687760 bytes
-RMD160 (netbsd-9.0-amd64-libterminfo.tar.gz) = 5a246633c90ee85f71efcc02d8280bd0c50ab5a7
+BLAKE2s (netbsd-9.0-amd64-libterminfo.tar.gz) = cf57e942d3331df269d8668bc09c59e8a81fbdfa5bb6c671d758d367a23c84ce
 SHA512 (netbsd-9.0-amd64-libterminfo.tar.gz) = 79288d44b84df8848afc2cdfee628cc4fd1ec0334159403ef8ba994d617bc56a7114af3031198afb5f3b8f45c0463a848099431e32bc6725042908576b6f95b8
 Size (netbsd-9.0-amd64-libterminfo.tar.gz) = 27744 bytes
 SHA1 (patch-compiler_main_DynFlags.hs) = c9671ca255b06dfbb732f3c56e3cbe9bfed1c075
