@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5736 2021/11/22 09:17:47 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5737 2021/11/22 09:47:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8621,3 +8621,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/cmake to 3.22.0 [adam 2021-11-22]
 	Updated sysutils/py-xattr to 0.9.8 [adam 2021-11-22]
 	Updated net/py-responses to 0.16.0 [adam 2021-11-22]
+	Updated www/py-django-extensions to 3.1.5 [adam 2021-11-22]
+	Updated devel/py-packaging to 21.3 [adam 2021-11-22]
