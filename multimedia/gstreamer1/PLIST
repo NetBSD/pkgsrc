@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2021/11/15 22:01:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2021/11/22 09:49:43 wiz Exp $
 bin/gst-inspect-1.0
 bin/gst-launch-1.0
 bin/gst-stats-1.0
@@ -162,7 +162,7 @@ man/man1/gst-launch-1.0.1
 man/man1/gst-stats-1.0.1
 man/man1/gst-typefind-1.0.1
 share/aclocal/gst-element-check-1.0.m4
-share/gdb/auto-load/usr/pkg/lib/libgstreamer-1.0.so.0.1805.0-gdb.py
+share/gdb/auto-load${LOCALBASE}/lib/libgstreamer-1.0.so.0.1805.0-gdb.py
 ${PLIST.introspection}share/gir-1.0/Gst-1.0.gir
 ${PLIST.introspection}share/gir-1.0/GstBase-1.0.gir
 ${PLIST.introspection}share/gir-1.0/GstCheck-1.0.gir
