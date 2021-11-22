@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2021/09/12 13:47:52 gdt Exp $
+# $NetBSD: Makefile,v 1.23 2021/11/22 16:23:43 gdt Exp $
 
 # faux version to let me increment the last digit along the branch
-DISTNAME=	unison-2.51.4.70.2
+DISTNAME=	unison-2.51.4.70.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
-# identifies as 2.51.4, but beyond it
-GITHUB_TAG=     a39c5727c9d2f7c419f2cb28f33ebd0177486969
+GITHUB_TAG=     b74f367532e930396e420235e5809cdeaaabbefc
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://www.cis.upenn.edu/~bcpierce/unison/
