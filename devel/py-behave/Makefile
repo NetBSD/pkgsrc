@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/10/11 17:29:58 adam Exp $
+# $NetBSD: Makefile,v 1.5 2021/11/22 11:34:36 adam Exp $
 
 DISTNAME=	behave-1.2.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,8 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.11:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-hamcrest>=1.8:../../devel/py-hamcrest
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=1.1:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose>=1.3:../../devel/py-nose
-TEST_DEPENDS+=	${PYPKGPREFIX}-path.py>=10.1:../../devel/py-path.py
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.0:../../devel/py-path.py
+TEST_DEPENDS+=	${PYPKGPREFIX}-path>=10.1:../../devel/py-path
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.0:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
