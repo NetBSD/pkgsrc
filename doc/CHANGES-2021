@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5743 2021/11/22 21:32:56 khorben Exp $
+$NetBSD: CHANGES-2021,v 1.5744 2021/11/22 22:27:09 jun Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8630,3 +8630,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated time/py-iso8601 to 1.0.1 [adam 2021-11-22]
 	Updated textproc/py-ujson to 4.3.0 [adam 2021-11-22]
 	Updated finance/bitcoin to 22.0 [khorben 2021-11-22]
+	Updated emulators/nono to 0.2.4 [jun 2021-11-23]
