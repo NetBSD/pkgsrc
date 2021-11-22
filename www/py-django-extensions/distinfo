@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2021/10/26 11:30:31 nia Exp $
+$NetBSD: distinfo,v 1.24 2021/11/22 09:39:22 adam Exp $
 
-BLAKE2s (django-extensions-3.1.3.tar.gz) = be11ce52351d9964452546b9a187a6d78e45bf94b11a466fb709bcb50480f996
-SHA512 (django-extensions-3.1.3.tar.gz) = d4c9159899f94a89c158f2b63ab633337dd8a8d7c4dbfb9ea5913262f15b2e765a752a63ecc903bf48b32dd60524687f5c354d99cb5f308edb2a7097086c9b97
-Size (django-extensions-3.1.3.tar.gz) = 614094 bytes
+BLAKE2s (django-extensions-3.1.5.tar.gz) = 8492cc9cde4eecf996e3babd793928aa0ad66dd9dd01df299eea1397d4629949
+SHA512 (django-extensions-3.1.5.tar.gz) = ddefabc53e75f49665040a3191c8c8cc6058803ac6748a6b5e99742d4d112d06a57a220b424cfc2337382304f2b38c64b6de3595156b616d3970f2dc23d156f5
+Size (django-extensions-3.1.5.tar.gz) = 614942 bytes
