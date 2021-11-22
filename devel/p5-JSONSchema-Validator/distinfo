@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/22 11:36:10 wiz Exp $
+
+BLAKE2s (JSONSchema-Validator-0.008.tar.gz) = 71fa7210cfcc5685c417bb89ac9f296d9a26608590b61be6c93ffbb870d50fe4
+SHA512 (JSONSchema-Validator-0.008.tar.gz) = 0ecc9c7e30613ea1496b15221c0304dd001fb9ceb6d91c56b7cd0ce9b6677e1bc6b5f3fc3d7451fc855b24b40e2c1f02fa89504eeb0ddeb58fb26fc3679c12d7
+Size (JSONSchema-Validator-0.008.tar.gz) = 50033 bytes
