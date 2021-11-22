@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3512 2021/11/21 10:51:28 wiz Exp $
+# $NetBSD: Makefile,v 1.3513 2021/11/22 11:36:42 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1508,6 +1508,7 @@ SUBDIR+=	p5-Inline
 SUBDIR+=	p5-Inline-C
 SUBDIR+=	p5-InlineX-C2XS
 SUBDIR+=	p5-Internals
+SUBDIR+=	p5-JSONSchema-Validator
 SUBDIR+=	p5-LEOCHARRE-CLI2
 SUBDIR+=	p5-LEOCHARRE-Debug
 SUBDIR+=	p5-LEOCHARRE-Dir
