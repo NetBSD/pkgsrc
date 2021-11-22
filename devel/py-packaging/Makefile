@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2021/11/09 20:35:14 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2021/11/22 09:46:58 adam Exp $
 
-DISTNAME=	packaging-21.2
+DISTNAME=	packaging-21.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/packaging/}
@@ -10,10 +10,11 @@ HOMEPAGE=	https://github.com/pypa/packaging
 COMMENT=	Core utilities for Python packages
 LICENSE=	modified-bsd OR apache-2.0
 
+DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.0.2:../../devel/py-pyparsing
 TEST_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-PYTHON_VERSIONED_DEPENDENCIES=	test:test pyparsing
 
 USE_LANGUAGES=	# none
 
@@ -23,5 +24,4 @@ do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
