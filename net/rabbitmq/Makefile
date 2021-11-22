@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2021/11/15 06:40:53 adam Exp $
+# $NetBSD: Makefile,v 1.60 2021/11/22 08:58:23 adam Exp $
 
-DISTNAME=	rabbitmq-server-3.9.9
+DISTNAME=	rabbitmq-server-3.9.10
 PKGNAME=	${DISTNAME:S/-server//}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rabbitmq/}
