@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1256 2021/11/23 12:37:06 wiz Exp $
+# $NetBSD: Makefile,v 1.1257 2021/11/23 12:45:16 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -933,6 +933,7 @@ SUBDIR+=	py-natsort
 SUBDIR+=	py-nltk
 SUBDIR+=	py-numpydoc
 SUBDIR+=	py-odfpy
+SUBDIR+=	py-openapi-core
 SUBDIR+=	py-openapi-schema-validator
 SUBDIR+=	py-openapi-spec-validator
 SUBDIR+=	py-openpyxl
