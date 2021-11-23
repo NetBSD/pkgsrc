@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:24:34 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/11/23 21:13:37 adam Exp $
 
-BLAKE2s (monotonic-1.5.tar.gz) = d65e8b1765e04e810a1f3264c252991d672499c3294ca17273bde55c4beef27b
-SHA512 (monotonic-1.5.tar.gz) = 05485e0baa51df95f9812d463306ce0bbe7228170b43aed8faa9d77d2b613ffede6b57b3dd273c352e0d1c04782043bec2f36be88cb1acde182a5aeb0538f970
-Size (monotonic-1.5.tar.gz) = 7525 bytes
+BLAKE2s (monotonic-1.6.tar.gz) = b92f1f188dbd9483bc35b4db1bba0a422abfed6a7e70b61fb4fb060c8c3717eb
+SHA512 (monotonic-1.6.tar.gz) = e4ee3aa349592361695bdf10a302ea37981c3f07883b01b10654c6a89b62ff5ae7fef13d96dab845234f06373d9204c02fca9e10cbaab334b9c41b9fd1fc5193
+Size (monotonic-1.6.tar.gz) = 7615 bytes
