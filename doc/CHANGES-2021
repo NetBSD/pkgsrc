@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5778 2021/11/23 14:47:58 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5779 2021/11/23 15:12:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8666,3 +8666,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed mail/ruby-mime-types2 [taca 2021-11-23]
 	Updated math/ruby-spreadsheet to 1.3.0 [taca 2021-11-23]
 	Updated misc/ruby-bundler to 2.2.32 [taca 2021-11-23]
+	Updated misc/ruby-sprockets-rails to 3.4.1 [taca 2021-11-23]
