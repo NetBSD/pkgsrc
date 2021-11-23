@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5772 2021/11/23 14:30:22 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5773 2021/11/23 14:32:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8660,3 +8660,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/libgphoto2 to 2.5.27 [ryoon 2021-11-23]
 	Updated graphics/gphoto2 to 2.5.27 [ryoon 2021-11-23]
 	Updated games/ruby-squib to 0.18.0 [taca 2021-11-23]
+	Updated graphics/ruby-image_size to 3.0.1 [taca 2021-11-23]
