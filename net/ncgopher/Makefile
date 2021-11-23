@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2021/09/13 20:32:35 pin Exp $
+# $NetBSD: Makefile,v 1.6 2021/11/23 11:46:34 pin Exp $
 
-DISTNAME=	ncgopher-0.2.0
-PKGREVISION=	2
+DISTNAME=	ncgopher-0.3.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jansc/}
-#GITHUB_TAG=	v${PKGVERSION_NOREV}
-GITHUB_PROJECT=	ncgopher
-GITHUB_TAG=	2b4f666882a397b6e859d655ff88dfdf268cee4e
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/jansc/ncgopher/
