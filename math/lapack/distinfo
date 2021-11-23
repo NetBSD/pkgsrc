@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.30 2021/10/26 10:55:46 nia Exp $
+$NetBSD: distinfo,v 1.31 2021/11/23 22:45:01 wiz Exp $
 
-BLAKE2s (lapack-3.9.1.tar.gz) = fe6fd47467781dfd9da6c1e521c9f4810b79874bb4df83f0f723a286f555f214
-SHA512 (lapack-3.9.1.tar.gz) = 1c70892ce22eb1f5c0be1e0384d00dc876622e6254e853616eb7c0379c5d1ecf2f1f94d06389dbfba06b78484daf625d899306a9dc0b31a0646320c814022fdb
-Size (lapack-3.9.1.tar.gz) = 7543209 bytes
+BLAKE2s (lapack-3.10.0.tar.gz) = 57d4953533000589bcf9a478d827dbd5fd0dca18094d30e02b9bd67a21197f00
+SHA512 (lapack-3.10.0.tar.gz) = 56055000c241bab8f318ebd79249ea012c33be0c4c3eca6a78e247f35ad9e8088f46605a0ba52fd5ad3e7898be3b7bc6c50ceb3af327c4986a266b06fe768cbf
+Size (lapack-3.10.0.tar.gz) = 7630775 bytes
 SHA1 (patch-BLAS_SRC_CMakeLists.txt) = 8773f93b1f907ed02d41677a3819f5bb655a331a
+SHA1 (patch-CBLAS_CMakeLists.txt) = e98060150ce7eec343e2465bcad2789be84016f9
 SHA1 (patch-CBLAS_cblas.pc.in) = cc97fbab08024220739929b5ad95c266965da06d
 SHA1 (patch-CBLAS_src_CMakeLists.txt) = 64abbfb4458943483fba8897df0c8bf62c3f949e
-SHA1 (patch-CMakeLists.txt) = 3c8e9125f164625198fb7197982746f43bf4aab5
+SHA1 (patch-CMakeLists.txt) = de1d623f2571752a8ac70fa9d65734ba39770fc5
 SHA1 (patch-LAPACKE_CMakeLists.txt) = 13e4662585088aa53f61f7079d103fdfcf985c4e
 SHA1 (patch-LAPACKE_lapacke.pc.in) = 6bbd72205120501cd60daf0b22b00ef7979fb329
 SHA1 (patch-SRC_CMakeLists.txt) = c0e22574e0c7ff6535c95a6f1f85903bbc1751b0
