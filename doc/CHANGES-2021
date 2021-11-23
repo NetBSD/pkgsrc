@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5790 2021/11/23 21:51:26 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5791 2021/11/23 21:56:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8694,3 +8694,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/broot to 1.7.3 [wiz 2021-11-23]
 	Updated devel/ocaml-cppo to 1.6.8 [wiz 2021-11-23]
 	Updated math/py-xarray to 0.20.1 [adam 2021-11-23]
+	Updated misc/ocaml-topkg to 1.0.4 [wiz 2021-11-23]
