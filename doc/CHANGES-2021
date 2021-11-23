@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5787 2021/11/23 21:27:01 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5788 2021/11/23 21:33:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8691,3 +8691,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-aiorpcX to 0.22.1 [adam 2021-11-23]
 	Updated time/py-monotonic to 1.6 [adam 2021-11-23]
 	Updated graphics/ImageMagick to 7.1.0.15 [wiz 2021-11-23]
+	Updated sysutils/broot to 1.7.3 [wiz 2021-11-23]
