@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2021/07/12 18:58:25 adam Exp $
+# $NetBSD: Makefile,v 1.12 2021/11/23 20:55:44 wiz Exp $
 
 DISTNAME=	zig-0.8.0
 CATEGORIES=	lang
@@ -9,6 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ziglang.org/
 COMMENT=	Programming language designed for robustness and clarity
 LICENSE=	mit
+
+BROKEN=		"Needs a new upstream release that works with llvm-13"
+# https://github.com/ziglang/zig/issues/10187
 
 USE_CMAKE=	yes
 USE_TOOLS+=	bash:run
