@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/04/06 15:28:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/11/23 14:09:25 wiz Exp $
 bin/http-${PYVERSSUFFIX}
 bin/https-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -55,6 +55,9 @@ ${PYSITELIB}/httpie/core.pyo
 ${PYSITELIB}/httpie/downloads.py
 ${PYSITELIB}/httpie/downloads.pyc
 ${PYSITELIB}/httpie/downloads.pyo
+${PYSITELIB}/httpie/encoding.py
+${PYSITELIB}/httpie/encoding.pyc
+${PYSITELIB}/httpie/encoding.pyo
 ${PYSITELIB}/httpie/models.py
 ${PYSITELIB}/httpie/models.pyc
 ${PYSITELIB}/httpie/models.pyo
@@ -73,12 +76,27 @@ ${PYSITELIB}/httpie/output/formatters/headers.pyo
 ${PYSITELIB}/httpie/output/formatters/json.py
 ${PYSITELIB}/httpie/output/formatters/json.pyc
 ${PYSITELIB}/httpie/output/formatters/json.pyo
+${PYSITELIB}/httpie/output/formatters/xml.py
+${PYSITELIB}/httpie/output/formatters/xml.pyc
+${PYSITELIB}/httpie/output/formatters/xml.pyo
+${PYSITELIB}/httpie/output/lexers/__init__.py
+${PYSITELIB}/httpie/output/lexers/__init__.pyc
+${PYSITELIB}/httpie/output/lexers/__init__.pyo
+${PYSITELIB}/httpie/output/lexers/http.py
+${PYSITELIB}/httpie/output/lexers/http.pyc
+${PYSITELIB}/httpie/output/lexers/http.pyo
+${PYSITELIB}/httpie/output/lexers/json.py
+${PYSITELIB}/httpie/output/lexers/json.pyc
+${PYSITELIB}/httpie/output/lexers/json.pyo
 ${PYSITELIB}/httpie/output/processing.py
 ${PYSITELIB}/httpie/output/processing.pyc
 ${PYSITELIB}/httpie/output/processing.pyo
 ${PYSITELIB}/httpie/output/streams.py
 ${PYSITELIB}/httpie/output/streams.pyc
 ${PYSITELIB}/httpie/output/streams.pyo
+${PYSITELIB}/httpie/output/utils.py
+${PYSITELIB}/httpie/output/utils.pyc
+${PYSITELIB}/httpie/output/utils.pyo
 ${PYSITELIB}/httpie/output/writer.py
 ${PYSITELIB}/httpie/output/writer.pyc
 ${PYSITELIB}/httpie/output/writer.pyo
