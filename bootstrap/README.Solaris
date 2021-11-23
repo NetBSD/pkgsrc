@@ -1,4 +1,4 @@
-$NetBSD: README.Solaris,v 1.15 2016/07/03 15:38:12 sevan Exp $
+$NetBSD: README.Solaris,v 1.16 2021/11/23 09:10:03 schmonz Exp $
 
 You will need a working C compiler. Any version of gcc >2.8 should
 work, 2.95.x and 3.x have been tested. SunPro 5 and 8 have been
@@ -125,4 +125,4 @@ installing shells/bash and adding the following lines to your mk.conf:
 
 Then, rebuild the devel/libtool-base package.
 
-bootstrap-pkgsrc has been tested on Solaris 2.6 -> 10.
+bootstrap-pkgsrc has been tested on Solaris 2.6 -> 11.
