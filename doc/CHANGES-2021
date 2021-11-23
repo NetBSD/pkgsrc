@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5785 2021/11/23 21:05:47 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5786 2021/11/23 21:16:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8688,3 +8688,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-rope to 0.22.0 [adam 2021-11-23]
 	Updated comms/py-rich to 10.14.0 [adam 2021-11-23]
 	Updated www/py-websockets to 10.1 [adam 2021-11-23]
+	Updated net/py-aiorpcX to 0.22.1 [adam 2021-11-23]
+	Updated time/py-monotonic to 1.6 [adam 2021-11-23]
