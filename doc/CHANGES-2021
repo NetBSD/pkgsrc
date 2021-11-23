@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5763 2021/11/23 14:07:57 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5764 2021/11/23 14:09:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8650,3 +8650,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-cucumber-expressions to 14.0.0 [taca 2021-11-23]
 	Updated lang/ruby-cucumber-gherkin to 22.0.0 [taca 2021-11-23]
 	Updated devel/ruby-cucumber-tag-expressions to 4.1.0 [taca 2021-11-23]
+	Updated www/py-httpie to 2.6.0 [wiz 2021-11-23]
