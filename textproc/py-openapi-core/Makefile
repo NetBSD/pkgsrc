@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/11/23 12:45:01 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2021/11/23 23:51:43 wiz Exp $
 
 DISTNAME=	openapi-core-0.14.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,6 +28,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-responses-[0-9]*:../../net/py-responses
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-parse
 
 USE_LANGUAGES=	# none
 
