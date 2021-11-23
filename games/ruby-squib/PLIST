@@ -1,8 +1,14 @@
-@comment $NetBSD: PLIST,v 1.8 2021/08/31 15:21:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/11/23 14:30:02 taca Exp $
 bin/squib${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/ISSUE_TEMPLATE/bug_report.md
+${GEM_LIBDIR}/.github/ISSUE_TEMPLATE/feature_request.md
+${GEM_LIBDIR}/.github/ISSUE_TEMPLATE/help-wanted.md
+${GEM_LIBDIR}/.github/ISSUE_TEMPLATE/release-todo.md
+${GEM_LIBDIR}/.github/PULL_REQUEST_TEMPLATE.md
 ${GEM_LIBDIR}/.github/workflows/tests.yml
 ${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.vscode/settings.json
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/Dockerfile
@@ -10,7 +16,6 @@ ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Guardfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/RELEASE TODO.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/squib
 ${GEM_LIBDIR}/lib/squib.rb
@@ -163,6 +168,7 @@ ${GEM_LIBDIR}/samples/hello_world.rb
 ${GEM_LIBDIR}/samples/images/_cairo_access.rb
 ${GEM_LIBDIR}/samples/images/_images.rb
 ${GEM_LIBDIR}/samples/images/_more_load_images.rb
+${GEM_LIBDIR}/samples/images/_placeholders.rb
 ${GEM_LIBDIR}/samples/intro/01_hello.rb
 ${GEM_LIBDIR}/samples/intro/02_options.rb
 ${GEM_LIBDIR}/samples/intro/03_layout.rb
