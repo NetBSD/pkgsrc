@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.31 2021/07/12 18:42:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2021/11/23 20:55:43 wiz Exp $
+bin/analyze-build
 bin/c-index-test
 bin/clang
 bin/clang++
-bin/clang-12
+bin/clang-13
 bin/clang-check
 bin/clang-cl
 bin/clang-cpp
@@ -12,11 +13,14 @@ bin/clang-offload-bundler
 bin/clang-offload-wrapper
 bin/clang-refactor
 bin/clang-rename
+bin/clang-repl
 bin/clang-scan-deps
 bin/diagtool
 bin/git-clang-format
 bin/hmaptool
+bin/intercept-build
 bin/scan-build
+bin/scan-build-py
 bin/scan-view
 include/clang-c/BuildSystem.h
 include/clang-c/CXCompilationDatabase.h
@@ -210,6 +214,7 @@ include/clang/Analysis/DomainSpecific/ObjCNoReturn.h
 include/clang/Analysis/FlowSensitive/DataflowValues.h
 include/clang/Analysis/FlowSensitive/DataflowWorklist.h
 include/clang/Analysis/IssueHash.h
+include/clang/Analysis/MacroExpansionContext.h
 include/clang/Analysis/PathDiagnostic.h
 include/clang/Analysis/ProgramPoint.h
 include/clang/Analysis/RetainSummaryManager.h
@@ -237,11 +242,11 @@ include/clang/Basic/BuiltinsBPF.def
 include/clang/Basic/BuiltinsHexagon.def
 include/clang/Basic/BuiltinsHexagonDep.def
 include/clang/Basic/BuiltinsHexagonMapCustomDep.def
-include/clang/Basic/BuiltinsLe64.def
 include/clang/Basic/BuiltinsMips.def
 include/clang/Basic/BuiltinsNEON.def
 include/clang/Basic/BuiltinsNVPTX.def
 include/clang/Basic/BuiltinsPPC.def
+include/clang/Basic/BuiltinsRISCV.def
 include/clang/Basic/BuiltinsSVE.def
 include/clang/Basic/BuiltinsSystemZ.def
 include/clang/Basic/BuiltinsWebAssembly.def
@@ -254,6 +259,7 @@ include/clang/Basic/CodeGenOptions.def
 include/clang/Basic/CodeGenOptions.h
 include/clang/Basic/CommentOptions.h
 include/clang/Basic/Cuda.h
+include/clang/Basic/DarwinSDKInfo.h
 include/clang/Basic/DebugInfoOptions.h
 include/clang/Basic/Diagnostic.h
 include/clang/Basic/DiagnosticAST.h
@@ -307,6 +313,7 @@ include/clang/Basic/Linkage.h
 include/clang/Basic/MSP430Target.def
 include/clang/Basic/MacroBuilder.h
 include/clang/Basic/Module.h
+include/clang/Basic/NoSanitizeList.h
 include/clang/Basic/ObjCRuntime.h
 include/clang/Basic/OpenCLExtensionTypes.def
 include/clang/Basic/OpenCLExtensions.def
@@ -323,7 +330,7 @@ include/clang/Basic/PlistSupport.h
 include/clang/Basic/PragmaKinds.h
 include/clang/Basic/PrettyStackTrace.h
 include/clang/Basic/ProfileList.h
-include/clang/Basic/SanitizerBlacklist.h
+include/clang/Basic/RISCVVTypes.def
 include/clang/Basic/SanitizerSpecialCaseList.h
 include/clang/Basic/Sanitizers.def
 include/clang/Basic/Sanitizers.h
@@ -334,11 +341,13 @@ include/clang/Basic/Specifiers.h
 include/clang/Basic/Stack.h
 include/clang/Basic/SyncScope.h
 include/clang/Basic/TargetBuiltins.h
+include/clang/Basic/TargetCXXABI.def
 include/clang/Basic/TargetCXXABI.h
 include/clang/Basic/TargetID.h
 include/clang/Basic/TargetInfo.h
 include/clang/Basic/TargetOptions.h
 include/clang/Basic/TemplateKinds.h
+include/clang/Basic/Thunk.h
 include/clang/Basic/TokenKinds.def
 include/clang/Basic/TokenKinds.h
 include/clang/Basic/TypeTraits.h
@@ -362,6 +371,8 @@ include/clang/Basic/arm_sve_builtin_cg.inc
 include/clang/Basic/arm_sve_builtins.inc
 include/clang/Basic/arm_sve_sema_rangechecks.inc
 include/clang/Basic/arm_sve_typeflags.inc
+include/clang/Basic/riscv_vector_builtin_cg.inc
+include/clang/Basic/riscv_vector_builtins.inc
 include/clang/CodeGen/BackendUtil.h
 include/clang/CodeGen/CGFunctionInfo.h
 include/clang/CodeGen/CodeGenABITypes.h
@@ -377,10 +388,10 @@ include/clang/CrossTU/CrossTranslationUnit.h
 include/clang/DirectoryWatcher/DirectoryWatcher.h
 include/clang/Driver/Action.h
 include/clang/Driver/Compilation.h
-include/clang/Driver/DarwinSDKInfo.h
 include/clang/Driver/Distro.h
 include/clang/Driver/Driver.h
 include/clang/Driver/DriverDiagnostic.h
+include/clang/Driver/InputInfo.h
 include/clang/Driver/Job.h
 include/clang/Driver/Multilib.h
 include/clang/Driver/OptionUtils.h
@@ -437,6 +448,8 @@ include/clang/Index/IndexingAction.h
 include/clang/Index/IndexingOptions.h
 include/clang/Index/USRGeneration.h
 include/clang/IndexSerialization/SerializablePathCollection.h
+include/clang/Interpreter/Interpreter.h
+include/clang/Interpreter/PartialTranslationUnit.h
 include/clang/Lex/CodeCompletionHandler.h
 include/clang/Lex/DependencyDirectivesSourceMinimizer.h
 include/clang/Lex/DirectoryLookup.h
@@ -563,7 +576,7 @@ include/clang/StaticAnalyzer/Core/PathSensitive/CheckerHelpers.h
 include/clang/StaticAnalyzer/Core/PathSensitive/ConstraintManager.h
 include/clang/StaticAnalyzer/Core/PathSensitive/CoreEngine.h
 include/clang/StaticAnalyzer/Core/PathSensitive/DynamicCastInfo.h
-include/clang/StaticAnalyzer/Core/PathSensitive/DynamicSize.h
+include/clang/StaticAnalyzer/Core/PathSensitive/DynamicExtent.h
 include/clang/StaticAnalyzer/Core/PathSensitive/DynamicType.h
 include/clang/StaticAnalyzer/Core/PathSensitive/DynamicTypeInfo.h
 include/clang/StaticAnalyzer/Core/PathSensitive/Environment.h
@@ -620,6 +633,8 @@ include/clang/Tooling/FixIt.h
 include/clang/Tooling/Inclusions/HeaderIncludes.h
 include/clang/Tooling/Inclusions/IncludeStyle.h
 include/clang/Tooling/JSONCompilationDatabase.h
+include/clang/Tooling/NodeIntrospection.h
+include/clang/Tooling/NodeIntrospection.inc
 include/clang/Tooling/Refactoring.h
 include/clang/Tooling/Refactoring/ASTSelection.h
 include/clang/Tooling/Refactoring/AtomicChange.h
@@ -725,6 +740,7 @@ lib/clang/${PKGVERSION}/include/avxintrin.h
 lib/clang/${PKGVERSION}/include/avxvnniintrin.h
 lib/clang/${PKGVERSION}/include/bmi2intrin.h
 lib/clang/${PKGVERSION}/include/bmiintrin.h
+lib/clang/${PKGVERSION}/include/builtins.h
 lib/clang/${PKGVERSION}/include/cet.h
 lib/clang/${PKGVERSION}/include/cetintrin.h
 lib/clang/${PKGVERSION}/include/cldemoteintrin.h
@@ -743,9 +759,13 @@ lib/clang/${PKGVERSION}/include/fma4intrin.h
 lib/clang/${PKGVERSION}/include/fmaintrin.h
 lib/clang/${PKGVERSION}/include/fxsrintrin.h
 lib/clang/${PKGVERSION}/include/gfniintrin.h
+lib/clang/${PKGVERSION}/include/hexagon_circ_brev_intrinsics.h
+lib/clang/${PKGVERSION}/include/hexagon_protos.h
+lib/clang/${PKGVERSION}/include/hexagon_types.h
 lib/clang/${PKGVERSION}/include/hresetintrin.h
 lib/clang/${PKGVERSION}/include/htmintrin.h
 lib/clang/${PKGVERSION}/include/htmxlintrin.h
+lib/clang/${PKGVERSION}/include/hvx_hexagon_protos.h
 lib/clang/${PKGVERSION}/include/ia32intrin.h
 lib/clang/${PKGVERSION}/include/immintrin.h
 lib/clang/${PKGVERSION}/include/intrin.h
@@ -787,6 +807,7 @@ lib/clang/${PKGVERSION}/include/ppc_wrappers/xmmintrin.h
 lib/clang/${PKGVERSION}/include/prfchwintrin.h
 lib/clang/${PKGVERSION}/include/ptwriteintrin.h
 lib/clang/${PKGVERSION}/include/rdseedintrin.h
+lib/clang/${PKGVERSION}/include/riscv_vector.h
 lib/clang/${PKGVERSION}/include/rtmintrin.h
 lib/clang/${PKGVERSION}/include/s390intrin.h
 lib/clang/${PKGVERSION}/include/serializeintrin.h
@@ -824,13 +845,15 @@ lib/clang/${PKGVERSION}/include/xsaveintrin.h
 lib/clang/${PKGVERSION}/include/xsaveoptintrin.h
 lib/clang/${PKGVERSION}/include/xsavesintrin.h
 lib/clang/${PKGVERSION}/include/xtestintrin.h
+lib/cmake/clang/AddClang.cmake
 lib/cmake/clang/ClangConfig.cmake
 lib/cmake/clang/ClangTargets-release.cmake
 lib/cmake/clang/ClangTargets.cmake
 lib/libclang-cpp.${SOEXT}
-lib/libclang-cpp.so.12
+lib/libclang-cpp.so.13
 lib/libclang.${SOEXT}
-${PLIST.notdylib}lib/libclang.${SOEXT}.12
+${PLIST.notdylib}lib/libclang.${SOEXT}.13
+${PLIST.notdylib}lib/libclang.${SOEXT}.${PKGVERSION}
 lib/libclangAPINotes.a
 lib/libclangARCMigrate.a
 lib/libclangAST.a
@@ -851,6 +874,7 @@ lib/libclangHandleCXX.a
 lib/libclangHandleLLVM.a
 lib/libclangIndex.a
 lib/libclangIndexSerialization.a
+lib/libclangInterpreter.a
 lib/libclangLex.a
 lib/libclangParse.a
 lib/libclangRewrite.a
@@ -868,8 +892,26 @@ lib/libclangToolingInclusions.a
 lib/libclangToolingRefactoring.a
 lib/libclangToolingSyntax.a
 lib/libclangTransformer.a
+lib/libear/__init__.py
+lib/libear/config.h.in
+lib/libear/ear.c
+lib/libscanbuild/__init__.py
+lib/libscanbuild/analyze.py
+lib/libscanbuild/arguments.py
+lib/libscanbuild/clang.py
+lib/libscanbuild/compilation.py
+lib/libscanbuild/intercept.py
+lib/libscanbuild/report.py
+lib/libscanbuild/resources/scanview.css
+lib/libscanbuild/resources/selectable.js
+lib/libscanbuild/resources/sorttable.js
+lib/libscanbuild/shell.py
+libexec/analyze-c++
+libexec/analyze-cc
 libexec/c++-analyzer
 libexec/ccc-analyzer
+libexec/intercept-c++
+libexec/intercept-cc
 man/man1/scan-build.1
 share/clang/bash-autocomplete.sh
 share/clang/clang-format-bbedit.applescript

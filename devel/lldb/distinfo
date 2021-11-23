@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.27 2021/10/26 10:15:31 nia Exp $
+$NetBSD: distinfo,v 1.28 2021/11/23 20:55:42 wiz Exp $
 
-BLAKE2s (lldb-12.0.1.src.tar.xz) = ff0db22ac57be181a7e5eee5129f00dfa6654f489ebfca0ccd21a0b86ccf3401
-SHA512 (lldb-12.0.1.src.tar.xz) = df3c8e088bf69fb843cd7365fd2df4cefb72c9a313511fb0d0fa3e06e7d12cada35a1d621ec4312c99799e68ff76955423993ce0310c58f74ccd5151984f38ee
-Size (lldb-12.0.1.src.tar.xz) = 9837800 bytes
+BLAKE2s (lldb-13.0.0.src.tar.xz) = bf5efb18d7fecca9d964b4939029a844d8bddbbd2252ba74178f923b63c1cb75
+SHA512 (lldb-13.0.0.src.tar.xz) = 4f3484dc3da7a303e395ec67c812f93b87b626ee3f5cd21fc065942b35a2355bfc034eaaed4a26a13a337bdf86cf4f08d722182432917ee418a5c964c6037a9c
+Size (lldb-13.0.0.src.tar.xz) = 9905788 bytes
 SHA1 (patch-cmake_modules_LLDBStandalone.cmake) = 55a8d614cc52872968fc7c7c205c7d6e4021b538
 SHA1 (patch-source_API_CMakeLists.txt) = edc7bdaa39436dd8df6c5e8172f39c5329fa8cb2
-SHA1 (patch-source_Plugins_ObjectFile_Mach-O_ObjectFileMachO.cpp) = 8c7047e88223724c7800e1c4399885ab704b49ff
 SHA1 (patch-source_Plugins_Process_NetBSD_NativeProcessNetBSD.cpp) = b2fcd2a6fbe7c9c514df657d60b21a93d9d4667c
 SHA1 (patch-source_Plugins_Process_NetBSD_NativeProcessNetBSD.h) = 1a01bed99b146a7c3e8bcdc559dc2755f997ac4c

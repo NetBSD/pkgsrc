@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2021/07/12 18:49:29 adam Exp $
+# $NetBSD: Makefile,v 1.26 2021/11/23 20:55:42 wiz Exp $
 
 DISTNAME=	include-what-you-use-0.16.src
 PKGNAME=	${DISTNAME:S/.src//1}
@@ -17,6 +17,9 @@ USE_LANGUAGES=	c c++14
 GCC_REQD+=	5
 
 CMAKE_ARGS=	-DIWYU_LLVM_ROOT_PATH:PATH=${BUILDLINK_PREFIX.clang}
+
+BROKEN=		"Needs to be updated for llvm-13.0.0"
+# https://github.com/include-what-you-use/include-what-you-use/issues/974
 
 REPLACE_PYTHON=	*.py
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2021/07/12 18:41:02 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2021/11/23 20:55:44 wiz Exp $
 
 BUILDLINK_TREE+=	llvm
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	llvm
 LLVM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.llvm+=	llvm>=10.0.1
+BUILDLINK_ABI_DEPENDS.llvm+=	llvm>=13.0.0
 BUILDLINK_PKGSRCDIR.llvm?=	../../lang/llvm
 
 LLVM_CONFIG_PATH?=		${BUILDLINK_PREFIX.llvm}/bin/llvm-config
@@ -37,7 +38,6 @@ BUILDLINK_FILES.llvm+=		bin/llvm-dis
 BUILDLINK_FILES.llvm+=		bin/llvm-dlltool
 BUILDLINK_FILES.llvm+=		bin/llvm-dwarfdump
 BUILDLINK_FILES.llvm+=		bin/llvm-dwp
-BUILDLINK_FILES.llvm+=		bin/llvm-elfabi
 BUILDLINK_FILES.llvm+=		bin/llvm-exegesis
 BUILDLINK_FILES.llvm+=		bin/llvm-extract
 BUILDLINK_FILES.llvm+=		bin/llvm-gsymutil
@@ -60,6 +60,7 @@ BUILDLINK_FILES.llvm+=		bin/llvm-nm
 BUILDLINK_FILES.llvm+=		bin/llvm-objcopy
 BUILDLINK_FILES.llvm+=		bin/llvm-objdump
 BUILDLINK_FILES.llvm+=		bin/llvm-opt-report
+BUILDLINK_FILES.llvm+=		bin/llvm-otool
 BUILDLINK_FILES.llvm+=		bin/llvm-pdbutil
 BUILDLINK_FILES.llvm+=		bin/llvm-profdata
 BUILDLINK_FILES.llvm+=		bin/llvm-profgen
@@ -69,14 +70,17 @@ BUILDLINK_FILES.llvm+=		bin/llvm-readelf
 BUILDLINK_FILES.llvm+=		bin/llvm-readobj
 BUILDLINK_FILES.llvm+=		bin/llvm-reduce
 BUILDLINK_FILES.llvm+=		bin/llvm-rtdyld
+BUILDLINK_FILES.llvm+=		bin/llvm-sim
 BUILDLINK_FILES.llvm+=		bin/llvm-size
 BUILDLINK_FILES.llvm+=		bin/llvm-split
 BUILDLINK_FILES.llvm+=		bin/llvm-stress
 BUILDLINK_FILES.llvm+=		bin/llvm-strings
 BUILDLINK_FILES.llvm+=		bin/llvm-strip
 BUILDLINK_FILES.llvm+=		bin/llvm-symbolizer
+BUILDLINK_FILES.llvm+=		bin/llvm-tapi-diff
 BUILDLINK_FILES.llvm+=		bin/llvm-tblgen
 BUILDLINK_FILES.llvm+=		bin/llvm-undname
+BUILDLINK_FILES.llvm+=		bin/llvm-windres
 BUILDLINK_FILES.llvm+=		bin/llvm-xray
 BUILDLINK_FILES.llvm+=		bin/not
 BUILDLINK_FILES.llvm+=		bin/obj2yaml
