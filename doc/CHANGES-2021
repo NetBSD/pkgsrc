@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5754 2021/11/23 12:32:52 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5755 2021/11/23 12:37:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8641,3 +8641,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added audio/cutoggvorbis to 0.2 [nia 2021-11-23]
 	Updated net/ncgopher to 0.3.0 [pin 2021-11-23]
 	Added textproc/py-openapi-schema-validator version 0.1.5 [wiz 2021-11-23]
+	Added textproc/py-openapi-spec-validator version 0.3.1 [wiz 2021-11-23]
