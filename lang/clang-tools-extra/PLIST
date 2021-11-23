@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/07/12 18:45:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/11/23 20:55:43 wiz Exp $
 bin/clang-apply-replacements
 bin/clang-change-namespace
 bin/clang-doc
@@ -11,6 +11,7 @@ bin/clangd
 bin/find-all-symbols
 bin/modularize
 bin/pp-trace
+bin/run-clang-tidy
 include/clang-tidy/ClangTidy.h
 include/clang-tidy/ClangTidyCheck.h
 include/clang-tidy/ClangTidyDiagnosticConsumer.h
@@ -41,9 +42,11 @@ include/clang-tidy/abseil/StringFindStrContainsCheck.h
 include/clang-tidy/abseil/TimeComparisonCheck.h
 include/clang-tidy/abseil/TimeSubtractionCheck.h
 include/clang-tidy/abseil/UpgradeDurationConversionsCheck.h
+include/clang-tidy/altera/IdDependentBackwardBranchCheck.h
 include/clang-tidy/altera/KernelNameRestrictionCheck.h
 include/clang-tidy/altera/SingleWorkItemBarrierCheck.h
 include/clang-tidy/altera/StructPackAlignCheck.h
+include/clang-tidy/altera/UnrollLoopsCheck.h
 include/clang-tidy/android/CloexecAccept4Check.h
 include/clang-tidy/android/CloexecAcceptCheck.h
 include/clang-tidy/android/CloexecCheck.h
@@ -69,10 +72,12 @@ include/clang-tidy/bugprone/BranchCloneCheck.h
 include/clang-tidy/bugprone/CopyConstructorInitCheck.h
 include/clang-tidy/bugprone/DanglingHandleCheck.h
 include/clang-tidy/bugprone/DynamicStaticInitializersCheck.h
+include/clang-tidy/bugprone/EasilySwappableParametersCheck.h
 include/clang-tidy/bugprone/ExceptionEscapeCheck.h
 include/clang-tidy/bugprone/FoldInitTypeCheck.h
 include/clang-tidy/bugprone/ForwardDeclarationNamespaceCheck.h
 include/clang-tidy/bugprone/ForwardingReferenceOverloadCheck.h
+include/clang-tidy/bugprone/ImplicitWideningOfMultiplicationResultCheck.h
 include/clang-tidy/bugprone/InaccurateEraseCheck.h
 include/clang-tidy/bugprone/IncorrectRoundingsCheck.h
 include/clang-tidy/bugprone/InfiniteLoopCheck.h
@@ -111,6 +116,7 @@ include/clang-tidy/bugprone/ThrowKeywordMissingCheck.h
 include/clang-tidy/bugprone/TooSmallLoopVariableCheck.h
 include/clang-tidy/bugprone/UndefinedMemoryManipulationCheck.h
 include/clang-tidy/bugprone/UndelegatedConstructorCheck.h
+include/clang-tidy/bugprone/UnhandledExceptionAtNewCheck.h
 include/clang-tidy/bugprone/UnhandledSelfAssignmentCheck.h
 include/clang-tidy/bugprone/UnusedRaiiCheck.h
 include/clang-tidy/bugprone/UnusedReturnValueCheck.h
@@ -131,6 +137,7 @@ include/clang-tidy/cert/StrToNumCheck.h
 include/clang-tidy/cert/ThrownExceptionTypeCheck.h
 include/clang-tidy/cert/VariadicFunctionDefCheck.h
 include/clang-tidy/concurrency/MtUnsafeCheck.h
+include/clang-tidy/concurrency/ThreadCanceltypeAsynchronousCheck.h
 include/clang-tidy/cppcoreguidelines/AvoidGotoCheck.h
 include/clang-tidy/cppcoreguidelines/AvoidNonConstGlobalVariablesCheck.h
 include/clang-tidy/cppcoreguidelines/InitVariablesCheck.h
@@ -139,6 +146,7 @@ include/clang-tidy/cppcoreguidelines/MacroUsageCheck.h
 include/clang-tidy/cppcoreguidelines/NarrowingConversionsCheck.h
 include/clang-tidy/cppcoreguidelines/NoMallocCheck.h
 include/clang-tidy/cppcoreguidelines/OwningMemoryCheck.h
+include/clang-tidy/cppcoreguidelines/PreferMemberInitializerCheck.h
 include/clang-tidy/cppcoreguidelines/ProBoundsArrayToPointerDecayCheck.h
 include/clang-tidy/cppcoreguidelines/ProBoundsConstantArrayIndexCheck.h
 include/clang-tidy/cppcoreguidelines/ProBoundsPointerArithmeticCheck.h
@@ -270,7 +278,6 @@ include/clang-tidy/readability/ConstReturnTypeCheck.h
 include/clang-tidy/readability/ContainerSizeEmptyCheck.h
 include/clang-tidy/readability/ConvertMemberFunctionsToStatic.h
 include/clang-tidy/readability/DeleteNullPointerCheck.h
-include/clang-tidy/readability/DeletedDefaultCheck.h
 include/clang-tidy/readability/ElseAfterReturnCheck.h
 include/clang-tidy/readability/FunctionCognitiveComplexityCheck.h
 include/clang-tidy/readability/FunctionSizeCheck.h
@@ -300,6 +307,7 @@ include/clang-tidy/readability/SimplifySubscriptExprCheck.h
 include/clang-tidy/readability/StaticAccessedThroughInstanceCheck.h
 include/clang-tidy/readability/StaticDefinitionInAnonymousNamespaceCheck.h
 include/clang-tidy/readability/StringCompareCheck.h
+include/clang-tidy/readability/SuspiciousCallArgumentCheck.h
 include/clang-tidy/readability/UniqueptrDeleteReleaseCheck.h
 include/clang-tidy/readability/UppercaseLiteralSuffixCheck.h
 include/clang-tidy/readability/UseAnyOfAllOfCheck.h
@@ -369,5 +377,5 @@ share/clang/clang-include-fixer.el
 share/clang/clang-include-fixer.py
 share/clang/clang-tidy-diff.py
 share/clang/index.js
-share/clang/run-clang-tidy.py
 share/clang/run-find-all-symbols.py
+@pkgdir include/clang-tidy/plugin
