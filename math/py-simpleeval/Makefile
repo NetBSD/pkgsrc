@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2020/01/03 12:17:37 adam Exp $
+# $NetBSD: Makefile,v 1.11 2021/11/23 09:01:47 adam Exp $
 
-DISTNAME=	simpleeval-0.9.10
+DISTNAME=	simpleeval-0.9.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/simpleeval/}
@@ -11,6 +11,8 @@ COMMENT=	Simple, safe single expression evaluator library
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
+
+PYSETUP=	-c 'from setuptools import setup; setup()'
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
