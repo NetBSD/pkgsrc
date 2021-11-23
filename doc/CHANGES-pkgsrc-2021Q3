@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.28 2021/11/20 22:29:23 tm Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.29 2021/11/23 22:32:16 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -106,4 +106,7 @@ net/zeromq: security fix
 
 Pullup ticket #6533 - requested by bsiegert
 www/ap2-auth-mellon: security fix
+
+Pullup ticket #6539 - requested by taca
+devel/ruby-redmine42: security fix
 
