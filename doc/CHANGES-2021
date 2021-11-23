@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5752 2021/11/23 11:46:53 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5753 2021/11/23 11:48:17 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8638,5 +8638,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-setuptools to 59.2.0 [wiz 2021-11-23]
 	Added audio/cutmp3 version 3.0.1 [nia 2021-11-23]
 	Updated textproc/csview to 0.3.9 [pin 2021-11-23]
-	Updated audio/cutoggvorbis to 0.2 [nia 2021-11-23]
+	Added audio/cutoggvorbis to 0.2 [nia 2021-11-23]
 	Updated net/ncgopher to 0.3.0 [pin 2021-11-23]
