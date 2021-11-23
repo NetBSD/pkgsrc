@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5770 2021/11/23 14:25:01 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5771 2021/11/23 14:29:52 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8657,3 +8657,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-parser to 3.18.1 [taca 2021-11-23]
 	Updated devel/ruby-rugged to 1.2.0 [taca 2021-11-23]
 	Updated finance/ruby-braintree to 4.5.0 [taca 2021-11-23]
+	Updated devel/libgphoto2 to 2.5.27 [ryoon 2021-11-23]
+	Updated graphics/gphoto2 to 2.5.27 [ryoon 2021-11-23]
