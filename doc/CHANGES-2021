@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5768 2021/11/23 14:16:23 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5769 2021/11/23 14:20:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8655,3 +8655,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-cucumber-wire to 6.2.0 [taca 2021-11-23]
 	Updated devel/ruby-i18n to 1.8.11 [taca 2021-11-23]
 	Updated devel/ruby-parser to 3.18.1 [taca 2021-11-23]
+	Updated devel/ruby-rugged to 1.2.0 [taca 2021-11-23]
