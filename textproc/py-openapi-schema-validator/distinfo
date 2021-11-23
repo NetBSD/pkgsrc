@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/23 12:32:39 wiz Exp $
+
+BLAKE2s (openapi-schema-validator-0.1.5.tar.gz) = 65c57c0471faf38112242c5524fb3c15e295e2d8ea10e2072cb3883049da1013
+SHA512 (openapi-schema-validator-0.1.5.tar.gz) = f40f3d53aae2246f8f93a69aa6462a4166e8aec29ec260e267098d12d59b46417c77c36755829974fa5741d026d6618a0b75f65a390cd4650581ae50a81e3158
+Size (openapi-schema-validator-0.1.5.tar.gz) = 6936 bytes
