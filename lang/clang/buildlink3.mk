@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2021/07/12 18:42:06 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2021/11/23 20:55:43 wiz Exp $
 
 BUILDLINK_TREE+=	clang
 
@@ -6,13 +6,13 @@ BUILDLINK_TREE+=	clang
 CLANG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.clang+=	clang>=9.0.1
-BUILDLINK_ABI_DEPENDS.clang?=	clang>=12.0.0
+BUILDLINK_ABI_DEPENDS.clang?=	clang>=13.0.0
 BUILDLINK_PKGSRCDIR.clang?=	../../lang/clang
 
 BUILDLINK_FILES.clang+=		bin/c-index-test
 BUILDLINK_FILES.clang+=		bin/clang
 BUILDLINK_FILES.clang+=		bin/clang++
-BUILDLINK_FILES.clang+=		bin/clang-12
+BUILDLINK_FILES.clang+=		bin/clang-13
 BUILDLINK_FILES.clang+=		bin/clang-check
 BUILDLINK_FILES.clang+=		bin/clang-cl
 BUILDLINK_FILES.clang+=		bin/clang-cpp
@@ -23,11 +23,14 @@ BUILDLINK_FILES.clang+=		bin/clang-offload-bundler
 BUILDLINK_FILES.clang+=		bin/clang-offload-wrapper
 BUILDLINK_FILES.clang+=		bin/clang-refactor
 BUILDLINK_FILES.clang+=		bin/clang-rename
+BUILDLINK_FILES.clang+=		bin/clang-repl
 BUILDLINK_FILES.clang+=		bin/clang-scan-deps
 BUILDLINK_FILES.clang+=		bin/diagtool
 BUILDLINK_FILES.clang+=		bin/git-clang-format
 BUILDLINK_FILES.clang+=		bin/hmaptool
+BUILDLINK_FILES.clang+=		bin/intercept-build
 BUILDLINK_FILES.clang+=		bin/scan-build
+BUILDLINK_FILES.clang+=		bin/scan-build-py
 BUILDLINK_FILES.clang+=		bin/scan-view
 
 .include "../../textproc/libxml2/buildlink3.mk"
