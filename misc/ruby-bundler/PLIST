@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2021/05/30 11:08:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.31 2021/11/23 14:47:35 taca Exp $
 bin/bundle2-${RUBY_SUFFIX}
 bin/bundler2-${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -51,6 +51,7 @@ ${GEM_LIBDIR}/lib/bundler/dep_proxy.rb
 ${GEM_LIBDIR}/lib/bundler/dependency.rb
 ${GEM_LIBDIR}/lib/bundler/deployment.rb
 ${GEM_LIBDIR}/lib/bundler/deprecate.rb
+${GEM_LIBDIR}/lib/bundler/digest.rb
 ${GEM_LIBDIR}/lib/bundler/dsl.rb
 ${GEM_LIBDIR}/lib/bundler/endpoint_specification.rb
 ${GEM_LIBDIR}/lib/bundler/env.rb
@@ -204,6 +205,7 @@ ${GEM_LIBDIR}/lib/bundler/templates/newgem/rspec.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/rubocop.yml.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/spec/newgem_spec.rb.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/spec/spec_helper.rb.tt
+${GEM_LIBDIR}/lib/bundler/templates/newgem/standard.yml.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/test/minitest/newgem_test.rb.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/test/minitest/test_helper.rb.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/test/test-unit/newgem_test.rb.tt
@@ -214,11 +216,14 @@ ${GEM_LIBDIR}/lib/bundler/ui/rg_proxy.rb
 ${GEM_LIBDIR}/lib/bundler/ui/shell.rb
 ${GEM_LIBDIR}/lib/bundler/ui/silent.rb
 ${GEM_LIBDIR}/lib/bundler/uri_credentials_filter.rb
+${GEM_LIBDIR}/lib/bundler/vendor/connection_pool/LICENSE
 ${GEM_LIBDIR}/lib/bundler/vendor/connection_pool/lib/connection_pool.rb
-${GEM_LIBDIR}/lib/bundler/vendor/connection_pool/lib/connection_pool/monotonic_time.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/connection_pool/lib/connection_pool/timed_stack.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/connection_pool/lib/connection_pool/version.rb
+${GEM_LIBDIR}/lib/bundler/vendor/connection_pool/lib/connection_pool/wrapper.rb
+${GEM_LIBDIR}/lib/bundler/vendor/fileutils/LICENSE.txt
 ${GEM_LIBDIR}/lib/bundler/vendor/fileutils/lib/fileutils.rb
+${GEM_LIBDIR}/lib/bundler/vendor/molinillo/LICENSE
 ${GEM_LIBDIR}/lib/bundler/vendor/molinillo/lib/molinillo.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/molinillo/lib/molinillo/delegates/resolution_state.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/molinillo/lib/molinillo/delegates/specification_provider.rb
@@ -239,10 +244,12 @@ ${GEM_LIBDIR}/lib/bundler/vendor/molinillo/lib/molinillo/modules/ui.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/molinillo/lib/molinillo/resolution.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/molinillo/lib/molinillo/resolver.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/molinillo/lib/molinillo/state.rb
+${GEM_LIBDIR}/lib/bundler/vendor/net-http-persistent/README.rdoc
 ${GEM_LIBDIR}/lib/bundler/vendor/net-http-persistent/lib/net/http/persistent.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/net-http-persistent/lib/net/http/persistent/connection.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/net-http-persistent/lib/net/http/persistent/pool.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/net-http-persistent/lib/net/http/persistent/timed_stack_multi.rb
+${GEM_LIBDIR}/lib/bundler/vendor/thor/LICENSE.md
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/actions.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/actions/create_file.rb
@@ -275,6 +282,9 @@ ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/shell/html.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/util.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/version.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/tmpdir/lib/tmpdir.rb
+${GEM_LIBDIR}/lib/bundler/vendor/tsort/LICENSE.txt
+${GEM_LIBDIR}/lib/bundler/vendor/tsort/lib/tsort.rb
+${GEM_LIBDIR}/lib/bundler/vendor/uri/LICENSE.txt
 ${GEM_LIBDIR}/lib/bundler/vendor/uri/lib/uri.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/uri/lib/uri/common.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/uri/lib/uri/file.rb
@@ -293,6 +303,7 @@ ${GEM_LIBDIR}/lib/bundler/vendored_molinillo.rb
 ${GEM_LIBDIR}/lib/bundler/vendored_persistent.rb
 ${GEM_LIBDIR}/lib/bundler/vendored_thor.rb
 ${GEM_LIBDIR}/lib/bundler/vendored_tmpdir.rb
+${GEM_LIBDIR}/lib/bundler/vendored_tsort.rb
 ${GEM_LIBDIR}/lib/bundler/vendored_uri.rb
 ${GEM_LIBDIR}/lib/bundler/version.rb
 ${GEM_LIBDIR}/lib/bundler/version_ranges.rb
