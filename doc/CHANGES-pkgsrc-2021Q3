@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.29 2021/11/23 22:32:16 tm Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.30 2021/11/23 22:34:26 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -109,4 +109,7 @@ www/ap2-auth-mellon: security fix
 
 Pullup ticket #6539 - requested by taca
 devel/ruby-redmine42: security fix
+
+Pullup ticket #6540 - requested by taca
+devel/ruby-redmine41: security fix
 
