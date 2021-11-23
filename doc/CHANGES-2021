@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5782 2021/11/23 20:23:32 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5783 2021/11/23 20:58:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8671,3 +8671,16 @@ Changes to the packages collection and infrastructure in 2021:
 	Added www/apisprout version 1.3.0 [wiz 2021-11-23]
 	Updated time/py-iso8601 to 1.0.2 [adam 2021-11-23]
 	Updated devel/py-plumbum to 1.7.1 [adam 2021-11-23]
+	Updated lang/llvm to 13.0.0 [wiz 2021-11-23]
+	Updated lang/clang to 13.0.0 [wiz 2021-11-23]
+	Updated lang/clang-tools to 13.0.0 [wiz 2021-11-23]
+	Updated devel/lld to 13.0.0 [wiz 2021-11-23]
+	Updated devel/lldb to 13.0.0 [wiz 2021-11-23]
+	Updated devel/polly to 13.0.0 [wiz 2021-11-23]
+	Updated lang/compiler-rt to 13.0.0 [wiz 2021-11-23]
+	Updated lang/libcxx to 13.0.0 [wiz 2021-11-23]
+	Updated lang/libcxxabi to 13.0.0 [wiz 2021-11-23]
+	Updated lang/libunwind to 13.0.0 [wiz 2021-11-23]
+	Updated parallel/opencl-clang to 13.0.0 [wiz 2021-11-23]
+	Updated parallel/openmp to 13.0.0 [wiz 2021-11-23]
+	Updated parallel/spirv-llvm-translator to 13.0.0 [wiz 2021-11-23]
