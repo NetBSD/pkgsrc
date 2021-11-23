@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/23 12:42:23 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/dictpath/__init__.py
+${PYSITELIB}/dictpath/__init__.pyc
+${PYSITELIB}/dictpath/__init__.pyo
+${PYSITELIB}/dictpath/accessors.py
+${PYSITELIB}/dictpath/accessors.pyc
+${PYSITELIB}/dictpath/accessors.pyo
+${PYSITELIB}/dictpath/parsers.py
+${PYSITELIB}/dictpath/parsers.pyc
+${PYSITELIB}/dictpath/parsers.pyo
+${PYSITELIB}/dictpath/paths.py
+${PYSITELIB}/dictpath/paths.pyc
+${PYSITELIB}/dictpath/paths.pyo
