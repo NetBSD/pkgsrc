@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.14 2021/06/22 09:36:41 nia Exp $
+$NetBSD: distinfo,v 1.14.4.1 2021/11/23 23:02:20 tm Exp $
 
-SHA1 (ldb-2.2.1.tar.gz) = c334d5a398b7a61c003d3cefbdb5736c49f0013c
-RMD160 (ldb-2.2.1.tar.gz) = 0949458a58ca2c9905574a8f9626501d37e13c2f
-SHA512 (ldb-2.2.1.tar.gz) = a2b1598869e3d9f17c5b82fc2b7289f1f08a7378a1d72609af5ed5cc91fb571ac67d3a8c22d64dad5dcc9fe32520baccd5cc37d5b4fc5f1b00a7064902296344
-Size (ldb-2.2.1.tar.gz) = 1676819 bytes
+SHA1 (ldb-2.2.3.tar.gz) = 8043c810fe79689b1e65824b88b6ba07ffff93bb
+RMD160 (ldb-2.2.3.tar.gz) = 7b28b4e80100afd79783ddab7ea04cd8b508150c
+SHA512 (ldb-2.2.3.tar.gz) = 0fdda9e033cbd04d6b50c76ecf044068353d2abf50c5c9d9c804b8b9e70f6d85bf925ac984a38c2b7a159a384bfc94e5232b05a32cdbc9299dc43930d1b6a985
+Size (ldb-2.2.3.tar.gz) = 1708827 bytes
 SHA1 (patch-buildtools_wafsamba_samba__conftests.py) = 813c639e404e3b301444decae318c702c87f0cc1
 SHA1 (patch-buildtools_wafsamba_samba__install.py) = d801340617da325e3bb70a90350e45cc8e383c2d
 SHA1 (patch-buildtools_wafsamba_samba__utils.py) = 0a587421870c1974175fadbb02dde215f35938f2
