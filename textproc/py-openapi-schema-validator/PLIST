@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/23 12:32:39 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/openapi_schema_validator/__init__.py
+${PYSITELIB}/openapi_schema_validator/__init__.pyc
+${PYSITELIB}/openapi_schema_validator/__init__.pyo
+${PYSITELIB}/openapi_schema_validator/_format.py
+${PYSITELIB}/openapi_schema_validator/_format.pyc
+${PYSITELIB}/openapi_schema_validator/_format.pyo
+${PYSITELIB}/openapi_schema_validator/_types.py
+${PYSITELIB}/openapi_schema_validator/_types.pyc
+${PYSITELIB}/openapi_schema_validator/_types.pyo
+${PYSITELIB}/openapi_schema_validator/_validators.py
+${PYSITELIB}/openapi_schema_validator/_validators.pyc
+${PYSITELIB}/openapi_schema_validator/_validators.pyo
+${PYSITELIB}/openapi_schema_validator/shortcuts.py
+${PYSITELIB}/openapi_schema_validator/shortcuts.pyc
+${PYSITELIB}/openapi_schema_validator/shortcuts.pyo
+${PYSITELIB}/openapi_schema_validator/validators.py
+${PYSITELIB}/openapi_schema_validator/validators.pyc
+${PYSITELIB}/openapi_schema_validator/validators.pyo
