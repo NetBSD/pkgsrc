@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5746 2021/11/23 05:54:05 pho Exp $
+$NetBSD: CHANGES-2021,v 1.5747 2021/11/23 09:04:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8633,3 +8633,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/nono to 0.2.4 [jun 2021-11-23]
 	Updated www/unit to 1.26.0 [gutteridge 2021-11-22]
 	Added sysutils/yadm version 3.1.1 [pho 2021-11-23]
+	Updated math/py-simpleeval to 0.9.11 [adam 2021-11-23]
+	Updated devel/py-anyio to 3.4.0 [adam 2021-11-23]
