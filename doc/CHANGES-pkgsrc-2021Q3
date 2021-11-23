@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.32 2021/11/23 22:49:46 tm Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.33 2021/11/23 22:51:11 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -118,4 +118,7 @@ lang/php74: security fix
 
 Pullup ticket #6542 - requested by taca
 lang/php73: security fix
+
+Pullup ticket #6543 - requested by taca
+lang/php80: security fix
 
