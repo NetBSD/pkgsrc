@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21284 2021/11/23 22:12:12 wiz Exp $
+$NetBSD: TODO,v 1.21285 2021/11/23 22:46:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -518,7 +518,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bioperl-1.7.8
 	o bird-2.0.8
 	o bird6-2.0.8
-	o blas-3.10.0
 	o bliz++-0.10
 	o blur6ex-0.3.462
 	o boolean-7.1
@@ -552,7 +551,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o catch2-2.13.6
 	o catdoc-1.1
 	o catdoc-tk-1.1
-	o cblas-3.10.0
 	o ccache-4.2.1
 	o cddbd-1.5.2
 	o cdhit-4.8.1
@@ -1066,7 +1064,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kxmlgui-5.81.0
 	o kxmlrpcclient-5.81.0
 	o labltk-8.06.7
-	o lapack-3.10.0
 	o lastpass-cli-1.3.3
 	o latexmk-472b
 	o lbdb-49
