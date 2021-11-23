@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/23 05:53:33 pho Exp $
+
+BLAKE2s (yadm-3.1.1.tar.gz) = 52047f27c74e92144406cd48db154eb52ff99e86015657c8e85c69eed514abc4
+SHA512 (yadm-3.1.1.tar.gz) = 6be40ff6b1130be93649bb533d63ddc2dad626bb3022392863b600b31eef2529df443a9eb24915979bef2d1ea4ef04124668723ffb0ce0f86727f481a3997c74
+Size (yadm-3.1.1.tar.gz) = 106890 bytes
