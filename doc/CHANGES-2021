@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5780 2021/11/23 15:29:19 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5781 2021/11/23 15:35:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8668,3 +8668,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/ruby-bundler to 2.2.32 [taca 2021-11-23]
 	Updated misc/ruby-sprockets-rails to 3.4.1 [taca 2021-11-23]
 	Added www/restish version 0.9.0 [wiz 2021-11-23]
+	Added www/apisprout version 1.3.0 [wiz 2021-11-23]
