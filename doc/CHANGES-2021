@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5759 2021/11/23 13:27:16 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5760 2021/11/23 13:38:44 cirnatdan Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8646,3 +8646,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added textproc/py-openapi-core version 0.14.2 [wiz 2021-11-23]
 	Updated chat/matrix-synapse to 1.47.1 [gdt 2021-11-23]
 	Added textproc/py-openapi3 version 1.5.0 [wiz 2021-11-23]
+	Updated x11/zenity to 3.41.0 [dan 2021-11-23]
