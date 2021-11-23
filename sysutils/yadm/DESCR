@@ -1,0 +1,11 @@
+yadm is a tool for managing dotfiles.
+
+* Based on Git, with full range of Git's features
+* Supports system-specific alternative files or templated files
+* Encryption of private data using GnuPG, OpenSSL, transcrypt, or
+  git-crypt
+* Customizable initialization (bootstrapping)
+* Customizable hooks for before and after any operation
+
+Complete features, usage, examples and installation instructions can
+be found on the yadm.io website.

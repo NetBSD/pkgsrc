@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/23 05:53:33 pho Exp $
+bin/yadm
+man/man1/yadm.1
+share/bash-completion/completions/yadm
+share/doc/yadm/CHANGES
+share/doc/yadm/CONTRIBUTORS
+share/doc/yadm/LICENSE
+share/doc/yadm/README.md
+share/examples/yadm/bootstrap/bootstrap-in-dir
+share/examples/yadm/hooks/README.md
+share/examples/yadm/hooks/encrypt_with_checksums/README.md
+share/examples/yadm/hooks/encrypt_with_checksums/post_encrypt
+share/examples/yadm/hooks/encrypt_with_checksums/post_list
+share/examples/yadm/hooks/encrypt_with_checksums/post_status
+share/examples/yadm/hooks/parsing_full_command_example/README.md
+share/examples/yadm/hooks/parsing_full_command_example/pre_log
+share/fish/completions/yadm.fish
+share/zsh/site-functions/_yadm
