@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2021/07/12 18:46:07 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2021/11/23 21:42:02 wiz Exp $
 
 BUILDLINK_TREE+=	libunwind
 
@@ -8,7 +8,6 @@ LIBUNWIND_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.libunwind+=	libunwind>=12.0.0
 BUILDLINK_PKGSRCDIR.libunwind?=		../../lang/libunwind
 
-.include "../../lang/llvm/buildlink3.mk"
 .endif	# LIBUNWIND_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libunwind
