@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.99 2020/12/25 21:47:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.100 2021/11/23 19:42:43 pho Exp $
 
 DISTNAME=	zsh-5.8
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zsh/}
 EXTRACT_SUFX=	.tar.xz
@@ -77,7 +77,6 @@ SUBST_VARS.pkgdb=	PKG_DBDIR
 .include "options.mk"
 
 pre-configure:
-	${RM} ${WRKSRC}/Completion/BSD/Command/_bsd_pkg.orig
 	cd ${WRKSRC};  autoreconf -fiv
 
 post-install:
