@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5784 2021/11/23 21:03:11 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5785 2021/11/23 21:05:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8673,7 +8673,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-plumbum to 1.7.1 [adam 2021-11-23]
 	Updated lang/llvm to 13.0.0 [wiz 2021-11-23]
 	Updated lang/clang to 13.0.0 [wiz 2021-11-23]
-	Updated lang/clang-tools to 13.0.0 [wiz 2021-11-23]
+	Updated lang/clang-tools-extra to 13.0.0 [wiz 2021-11-23]
 	Updated devel/lld to 13.0.0 [wiz 2021-11-23]
 	Updated devel/lldb to 13.0.0 [wiz 2021-11-23]
 	Updated devel/polly to 13.0.0 [wiz 2021-11-23]
