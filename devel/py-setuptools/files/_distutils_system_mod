@@ -1,0 +1,9 @@
+# _distutils_system_mod
+
+import distutils.sysconfig
+
+
+vars(distutils.sysconfig).update(
+    _makefile_tmpl='config-{python_ver}{build_flags}',
+    _sysconfig_name_tmpl='_sysconfigdata_{platform}',
+)
