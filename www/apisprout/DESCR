@@ -1,0 +1,17 @@
+A simple, quick, cross-platform API mock server that returns examples
+specified in an API description document. Features include:
+
+- OpenAPI 3.x support
+  - Uses operation `examples` or generates examples from `schema`
+- Load from a URL or local file (auto reload with `--watch`)
+- CORS headers enabled by default
+- Accept header content negotiation
+  - Example: `Accept: application/*`
+- Prefer header to select response to test specific cases
+  - Example: `Prefer: status=409`
+- Server validation (enabled with `--validate-server`)
+  - Validates scheme, hostname/port, and base path
+  - Supports `localhost` out of the box
+- Request parameter & body validation (enabled with `--validate-request`)
+- Configuration via:
+  - Files (`/etc/apisprout/config.json|yaml`)
