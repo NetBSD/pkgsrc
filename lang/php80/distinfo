@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8.2.1 2021/11/02 18:28:45 tm Exp $
+$NetBSD: distinfo,v 1.8.2.2 2021/11/23 22:50:50 tm Exp $
 
-SHA1 (php-8.0.12.tar.xz) = 1c762150f4fbf60885752572eab0abb15208349a
-RMD160 (php-8.0.12.tar.xz) = 098d8c323e93a37ae6c110c809dbe91e0d059acd
-SHA512 (php-8.0.12.tar.xz) = 927b15c4443f3741a5325ec7bf387987b405cd5e64e40fd81f1945bf073adda30eeede8e1f98185f505cb61f969cf1abe05b8dad57a3c4e87971e8037bb16b23
-Size (php-8.0.12.tar.xz) = 10713980 bytes
+SHA1 (php-8.0.13.tar.xz) = 53e7bfb527c0be4fe1ac1022b9e2895cbc256860
+RMD160 (php-8.0.13.tar.xz) = 7e5038022c46d5085725627410f887d09ce1f36a
+SHA512 (php-8.0.13.tar.xz) = cb00482b74146670c4644f4b5da63b40d9afd111e198cdf1e67bfcf4280501a657b4fbad8fd7580f4e3f537db3c8a9db5f4115d3a466392cefac9866e233fa49
+Size (php-8.0.13.tar.xz) = 10854284 bytes
 SHA1 (patch-build_libtool.m4) = e58a2bcebe9e9d7dc7255354fd9fe57878e3f8a6
 SHA1 (patch-configure) = 6c3d2537eb4d1c2ed05e8e1e411701d316c67d8b
 SHA1 (patch-disable-filter-url) = 0a2c19c18f089448a8d842e99738b292ab9e5640
