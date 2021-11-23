@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/11/23 05:53:33 pho Exp $
+# $NetBSD: Makefile,v 1.2 2021/11/23 07:30:52 pho Exp $
 
 DISTNAME=	yadm-3.1.1
 CATEGORIES=	sysutils
@@ -9,7 +9,7 @@ HOMEPAGE=	https://yadm.io/
 COMMENT=	Yet Another Dotfiles Manager
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	bash:run gawk:run tar:run
+USE_TOOLS+=	bash:run gawk:run pax tar:run
 NO_BUILD=	yes
 
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
@@ -76,7 +76,7 @@ do-install:
 			"${WRKSRC}/$${f}" \
 			"${DESTDIR}${PREFIX}/share/doc/yadm/"; \
 	done
-	( cd "${WRKSRC}/contrib" && ${TAR} -cf - . ) | \
-		( cd "${DESTDIR}${PREFIX}/share/examples/yadm" && ${TAR} -xf - )
+	cd "${WRKSRC}/contrib" && \
+		${PAX} -wr . "${DESTDIR}${PREFIX}/share/examples/yadm"
 
 .include "../../mk/bsd.pkg.mk"
