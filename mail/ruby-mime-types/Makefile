@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2020/03/08 16:04:22 taca Exp $
+# $NetBSD: Makefile,v 1.18 2021/11/23 14:34:55 taca Exp $
 
-DISTNAME=	mime-types-3.3.1
-CATEGORIES=	www
+DISTNAME=	mime-types-3.4.1
+CATEGORIES=	mail
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mime-types/ruby-mime-types/
