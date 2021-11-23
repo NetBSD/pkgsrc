@@ -1,7 +1,7 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2021/05/12 12:24:41 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2021/11/23 11:45:16 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ansi_term-0.11.0
-CARGO_CRATE_DEPENDS+=	anyhow-1.0.38
+CARGO_CRATE_DEPENDS+=	anyhow-1.0.48
 CARGO_CRATE_DEPENDS+=	arrayref-0.3.6
 CARGO_CRATE_DEPENDS+=	arrayvec-0.5.2
 CARGO_CRATE_DEPENDS+=	atty-0.2.14
@@ -42,8 +42,8 @@ CARGO_CRATE_DEPENDS+=	rust-argon2-0.8.3
 CARGO_CRATE_DEPENDS+=	ryu-1.0.5
 CARGO_CRATE_DEPENDS+=	serde-1.0.124
 CARGO_CRATE_DEPENDS+=	strsim-0.8.0
-CARGO_CRATE_DEPENDS+=	structopt-0.3.21
-CARGO_CRATE_DEPENDS+=	structopt-derive-0.4.14
+CARGO_CRATE_DEPENDS+=	structopt-0.3.25
+CARGO_CRATE_DEPENDS+=	structopt-derive-0.4.18
 CARGO_CRATE_DEPENDS+=	syn-1.0.64
 CARGO_CRATE_DEPENDS+=	term-0.6.1
 CARGO_CRATE_DEPENDS+=	term_size-0.3.2
