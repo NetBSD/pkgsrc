@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/23 10:59:40 nia Exp $
+bin/cutmp3
+man/man1/cutmp3.1
+share/cutmp3/COPYING
+share/cutmp3/Changelog
+share/cutmp3/USAGE
+share/cutmp3/exitcodes
