@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2020/11/05 14:23:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.18 2021/11/23 14:20:22 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -77,6 +77,7 @@ ${GEM_LIBDIR}/vendor/libgit2/cmake/FindPCRE2.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/FindPkgLibraries.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/FindSecurity.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/FindStatNsec.cmake
+${GEM_LIBDIR}/vendor/libgit2/cmake/Findfutimens.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/FindmbedTLS.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/IdeSplitSources.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/PkgBuildConfig.cmake
@@ -84,6 +85,7 @@ ${GEM_LIBDIR}/vendor/libgit2/cmake/SanitizeBool.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/SelectGSSAPI.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/SelectHTTPSBackend.cmake
 ${GEM_LIBDIR}/vendor/libgit2/cmake/SelectHashes.cmake
+${GEM_LIBDIR}/vendor/libgit2/deps/chromium-zlib/CMakeLists.txt
 ${GEM_LIBDIR}/vendor/libgit2/deps/http-parser/CMakeLists.txt
 ${GEM_LIBDIR}/vendor/libgit2/deps/http-parser/COPYING
 ${GEM_LIBDIR}/vendor/libgit2/deps/http-parser/http_parser.c
@@ -102,7 +104,9 @@ ${GEM_LIBDIR}/vendor/libgit2/deps/ntlmclient/ntlm.h
 ${GEM_LIBDIR}/vendor/libgit2/deps/ntlmclient/ntlmclient.h
 ${GEM_LIBDIR}/vendor/libgit2/deps/ntlmclient/unicode.h
 ${GEM_LIBDIR}/vendor/libgit2/deps/ntlmclient/unicode_builtin.c
+${GEM_LIBDIR}/vendor/libgit2/deps/ntlmclient/unicode_builtin.h
 ${GEM_LIBDIR}/vendor/libgit2/deps/ntlmclient/unicode_iconv.c
+${GEM_LIBDIR}/vendor/libgit2/deps/ntlmclient/unicode_iconv.h
 ${GEM_LIBDIR}/vendor/libgit2/deps/ntlmclient/utf8.h
 ${GEM_LIBDIR}/vendor/libgit2/deps/ntlmclient/util.c
 ${GEM_LIBDIR}/vendor/libgit2/deps/ntlmclient/util.h
@@ -231,6 +235,7 @@ ${GEM_LIBDIR}/vendor/libgit2/include/git2/strarray.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/submodule.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/alloc.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/commit.h
+${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/commit_graph.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/config.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/cred.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/credential.h
@@ -240,6 +245,7 @@ ${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/hashsig.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/index.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/mempack.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/merge.h
+${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/midx.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/odb_backend.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/openssl.h
 ${GEM_LIBDIR}/vendor/libgit2/include/git2/sys/path.h
@@ -260,10 +266,12 @@ ${GEM_LIBDIR}/vendor/libgit2/include/git2/worktree.h
 ${GEM_LIBDIR}/vendor/libgit2/src/CMakeLists.txt
 ${GEM_LIBDIR}/vendor/libgit2/src/alloc.c
 ${GEM_LIBDIR}/vendor/libgit2/src/alloc.h
+${GEM_LIBDIR}/vendor/libgit2/src/allocators/failalloc.c
+${GEM_LIBDIR}/vendor/libgit2/src/allocators/failalloc.h
 ${GEM_LIBDIR}/vendor/libgit2/src/allocators/stdalloc.c
 ${GEM_LIBDIR}/vendor/libgit2/src/allocators/stdalloc.h
-${GEM_LIBDIR}/vendor/libgit2/src/allocators/win32_crtdbg.c
-${GEM_LIBDIR}/vendor/libgit2/src/allocators/win32_crtdbg.h
+${GEM_LIBDIR}/vendor/libgit2/src/allocators/win32_leakcheck.c
+${GEM_LIBDIR}/vendor/libgit2/src/allocators/win32_leakcheck.h
 ${GEM_LIBDIR}/vendor/libgit2/src/annotated_commit.c
 ${GEM_LIBDIR}/vendor/libgit2/src/annotated_commit.h
 ${GEM_LIBDIR}/vendor/libgit2/src/apply.c
@@ -285,8 +293,6 @@ ${GEM_LIBDIR}/vendor/libgit2/src/blob.c
 ${GEM_LIBDIR}/vendor/libgit2/src/blob.h
 ${GEM_LIBDIR}/vendor/libgit2/src/branch.c
 ${GEM_LIBDIR}/vendor/libgit2/src/branch.h
-${GEM_LIBDIR}/vendor/libgit2/src/buf_text.c
-${GEM_LIBDIR}/vendor/libgit2/src/buf_text.h
 ${GEM_LIBDIR}/vendor/libgit2/src/buffer.c
 ${GEM_LIBDIR}/vendor/libgit2/src/buffer.h
 ${GEM_LIBDIR}/vendor/libgit2/src/cache.c
@@ -299,6 +305,8 @@ ${GEM_LIBDIR}/vendor/libgit2/src/clone.c
 ${GEM_LIBDIR}/vendor/libgit2/src/clone.h
 ${GEM_LIBDIR}/vendor/libgit2/src/commit.c
 ${GEM_LIBDIR}/vendor/libgit2/src/commit.h
+${GEM_LIBDIR}/vendor/libgit2/src/commit_graph.c
+${GEM_LIBDIR}/vendor/libgit2/src/commit_graph.h
 ${GEM_LIBDIR}/vendor/libgit2/src/commit_list.c
 ${GEM_LIBDIR}/vendor/libgit2/src/commit_list.h
 ${GEM_LIBDIR}/vendor/libgit2/src/common.h
@@ -347,8 +355,6 @@ ${GEM_LIBDIR}/vendor/libgit2/src/filter.c
 ${GEM_LIBDIR}/vendor/libgit2/src/filter.h
 ${GEM_LIBDIR}/vendor/libgit2/src/futils.c
 ${GEM_LIBDIR}/vendor/libgit2/src/futils.h
-${GEM_LIBDIR}/vendor/libgit2/src/global.c
-${GEM_LIBDIR}/vendor/libgit2/src/global.h
 ${GEM_LIBDIR}/vendor/libgit2/src/graph.c
 ${GEM_LIBDIR}/vendor/libgit2/src/hash.c
 ${GEM_LIBDIR}/vendor/libgit2/src/hash.h
@@ -383,6 +389,8 @@ ${GEM_LIBDIR}/vendor/libgit2/src/integer.h
 ${GEM_LIBDIR}/vendor/libgit2/src/iterator.c
 ${GEM_LIBDIR}/vendor/libgit2/src/iterator.h
 ${GEM_LIBDIR}/vendor/libgit2/src/khash.h
+${GEM_LIBDIR}/vendor/libgit2/src/libgit2.c
+${GEM_LIBDIR}/vendor/libgit2/src/libgit2.h
 ${GEM_LIBDIR}/vendor/libgit2/src/mailmap.c
 ${GEM_LIBDIR}/vendor/libgit2/src/mailmap.h
 ${GEM_LIBDIR}/vendor/libgit2/src/map.h
@@ -469,7 +477,9 @@ ${GEM_LIBDIR}/vendor/libgit2/src/revert.c
 ${GEM_LIBDIR}/vendor/libgit2/src/revparse.c
 ${GEM_LIBDIR}/vendor/libgit2/src/revwalk.c
 ${GEM_LIBDIR}/vendor/libgit2/src/revwalk.h
-${GEM_LIBDIR}/vendor/libgit2/src/settings.c
+${GEM_LIBDIR}/vendor/libgit2/src/runtime.c
+${GEM_LIBDIR}/vendor/libgit2/src/runtime.h
+${GEM_LIBDIR}/vendor/libgit2/src/settings.h
 ${GEM_LIBDIR}/vendor/libgit2/src/signature.c
 ${GEM_LIBDIR}/vendor/libgit2/src/signature.h
 ${GEM_LIBDIR}/vendor/libgit2/src/sortedcache.c
@@ -483,6 +493,10 @@ ${GEM_LIBDIR}/vendor/libgit2/src/streams/mbedtls.c
 ${GEM_LIBDIR}/vendor/libgit2/src/streams/mbedtls.h
 ${GEM_LIBDIR}/vendor/libgit2/src/streams/openssl.c
 ${GEM_LIBDIR}/vendor/libgit2/src/streams/openssl.h
+${GEM_LIBDIR}/vendor/libgit2/src/streams/openssl_dynamic.c
+${GEM_LIBDIR}/vendor/libgit2/src/streams/openssl_dynamic.h
+${GEM_LIBDIR}/vendor/libgit2/src/streams/openssl_legacy.c
+${GEM_LIBDIR}/vendor/libgit2/src/streams/openssl_legacy.h
 ${GEM_LIBDIR}/vendor/libgit2/src/streams/registry.c
 ${GEM_LIBDIR}/vendor/libgit2/src/streams/registry.h
 ${GEM_LIBDIR}/vendor/libgit2/src/streams/socket.c
@@ -500,8 +514,10 @@ ${GEM_LIBDIR}/vendor/libgit2/src/sysdir.c
 ${GEM_LIBDIR}/vendor/libgit2/src/sysdir.h
 ${GEM_LIBDIR}/vendor/libgit2/src/tag.c
 ${GEM_LIBDIR}/vendor/libgit2/src/tag.h
-${GEM_LIBDIR}/vendor/libgit2/src/thread-utils.c
-${GEM_LIBDIR}/vendor/libgit2/src/thread-utils.h
+${GEM_LIBDIR}/vendor/libgit2/src/thread.c
+${GEM_LIBDIR}/vendor/libgit2/src/thread.h
+${GEM_LIBDIR}/vendor/libgit2/src/threadstate.c
+${GEM_LIBDIR}/vendor/libgit2/src/threadstate.h
 ${GEM_LIBDIR}/vendor/libgit2/src/trace.c
 ${GEM_LIBDIR}/vendor/libgit2/src/trace.h
 ${GEM_LIBDIR}/vendor/libgit2/src/trailer.c
@@ -539,6 +555,8 @@ ${GEM_LIBDIR}/vendor/libgit2/src/unix/posix.h
 ${GEM_LIBDIR}/vendor/libgit2/src/unix/pthread.h
 ${GEM_LIBDIR}/vendor/libgit2/src/unix/realpath.c
 ${GEM_LIBDIR}/vendor/libgit2/src/userdiff.h
+${GEM_LIBDIR}/vendor/libgit2/src/utf8.c
+${GEM_LIBDIR}/vendor/libgit2/src/utf8.h
 ${GEM_LIBDIR}/vendor/libgit2/src/util.c
 ${GEM_LIBDIR}/vendor/libgit2/src/util.h
 ${GEM_LIBDIR}/vendor/libgit2/src/varint.c
@@ -572,10 +590,8 @@ ${GEM_LIBDIR}/vendor/libgit2/src/win32/version.h
 ${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_buffer.c
 ${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_buffer.h
 ${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_common.h
-${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_crtdbg_stacktrace.c
-${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_crtdbg_stacktrace.h
-${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_stack.c
-${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_stack.h
+${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_leakcheck.c
+${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_leakcheck.h
 ${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_util.c
 ${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_util.h
 ${GEM_LIBDIR}/vendor/libgit2/src/win32/win32-compat.h
