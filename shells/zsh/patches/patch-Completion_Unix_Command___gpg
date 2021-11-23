@@ -1,0 +1,26 @@
+$NetBSD: patch-Completion_Unix_Command___gpg,v 1.1 2021/11/23 19:42:43 pho Exp $
+
+Fix an issue in _gpg. Simply typing "gpg2 [TAB]" fails with an error:
+
+  _gpg:176: \[]*} not found
+
+[pho@] I couldn't figure out what was really going on. These nested
+parameter expansions don't look wrong, yet zsh-5.8 somehow fails to
+process them. Maybe it's misinterpreted as an indexed array
+assignment? Creating arrays with unquoted values is a bad idea anyway,
+because they can easily cause shell expansions in a totally unexpected
+way.
+
+--- Completion/Unix/Command/_gpg.orig	2018-12-16 01:39:51.000000000 +0000
++++ Completion/Unix/Command/_gpg
+@@ -173,8 +173,8 @@ fi
+   '--dump-options[show all options]'
+ )
+ 
+-extra=( ${${${args#\([^\)]#\)}#\*}%%[:=\[]*} )
+-extra=( ${allopts:|extra} )
++extra=( "${(@)${(@)${(@)args#\([^\)]#\)}#\*}%%[:=\[]*}" )
++extra=( "${(@)allopts:|extra}" )
+ _arguments -C -s -S -A "-*" $args $extra '*:args:->args' && ret=0
+ 
+ if [[ $state = args ]]; then
