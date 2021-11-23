@@ -1,3 +1,3 @@
-# $NetBSD: version.mk,v 1.2 2021/05/12 14:32:51 thor Exp $
+# $NetBSD: version.mk,v 1.3 2021/11/23 22:45:01 wiz Exp $
 
-NETLIB_BLAS_VERSION=	3.9.1
+NETLIB_BLAS_VERSION=	3.10.0
