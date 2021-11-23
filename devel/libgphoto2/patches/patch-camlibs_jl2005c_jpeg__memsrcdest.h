@@ -1,11 +1,11 @@
-$NetBSD: patch-camlibs_jl2005c_jpeg__memsrcdest.h,v 1.1 2016/02/04 11:57:50 wiz Exp $
+$NetBSD: patch-camlibs_jl2005c_jpeg__memsrcdest.h,v 1.2 2021/11/23 14:28:34 ryoon Exp $
 
 Fix build with jpeg-9b.
 
---- camlibs/jl2005c/jpeg_memsrcdest.h.orig	2012-12-13 08:49:29.000000000 +0000
+--- camlibs/jl2005c/jpeg_memsrcdest.h.orig	2019-02-05 07:18:05.000000000 +0000
 +++ camlibs/jl2005c/jpeg_memsrcdest.h
-@@ -1,7 +1,7 @@
- #include <jpeglib.h>
+@@ -3,7 +3,7 @@
+ #if JPEG_LIB_VERSION < 80 && !defined(MEM_SRCDST_SUPPORTED)
  
  void
 -jpeg_mem_src (j_decompress_ptr cinfo, unsigned char * buffer,

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2021/04/21 11:40:20 adam Exp $
+# $NetBSD: Makefile,v 1.77 2021/11/23 14:28:34 ryoon Exp $
 
-DISTNAME=	libgphoto2-2.5.8
-PKGREVISION=	6
+DISTNAME=	libgphoto2-2.5.27
 CATEGORIES=	devel graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,6 +18,8 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		ac_cv_path_DOXYGEN=false
 CONFIGURE_ARGS+=	--with-gdlib=no
+# Build very old camera libraries (outdated set)
+CONFIGURE_ARGS+=	--with-camlibs=standard,outdated
 PKGCONFIG_OVERRIDE+=	libgphoto2.pc.in libgphoto2_port/libgphoto2_port.pc.in
 
 REPLACE_SH=		packaging/generic/check-ptp-camera
@@ -34,10 +35,6 @@ SUBST_CLASSES.SunOS+=	mapfile
 SUBST_STAGE.mapfile=	pre-configure
 SUBST_FILES.mapfile=	libgphoto2_port/libgphoto2_port/libgphoto2_port.ver
 SUBST_SED.mapfile=	-e '/gpi_gphoto_port_type_map/d'
-
-# remove symbolic link
-post-install:
-	rm ${DESTDIR}${PREFIX}/include/gphoto2/gphoto2
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
