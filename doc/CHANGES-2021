@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5793 2021/11/23 22:12:12 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5794 2021/11/23 22:46:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8697,3 +8697,11 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/ocaml-topkg to 1.0.4 [wiz 2021-11-23]
 	Updated www/nginx to 1.20.2 [wiz 2021-11-23]
 	Updated net/wireshark to 3.4.10 [wiz 2021-11-23]
+	Updated math/blas to 3.10.0 [wiz 2021-11-23]
+	Updated math/blas64 to 3.10.0 [wiz 2021-11-23]
+	Updated math/cblas to 3.10.0 [wiz 2021-11-23]
+	Updated math/cblas64 to 3.10.0 [wiz 2021-11-23]
+	Updated math/lapack to 3.10.0 [wiz 2021-11-23]
+	Updated math/lapack64 to 3.10.0 [wiz 2021-11-23]
+	Updated math/lapacke to 3.10.0 [wiz 2021-11-23]
+	Updated math/lapacke64 to 3.10.0 [wiz 2021-11-23]
