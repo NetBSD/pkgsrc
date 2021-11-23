@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.doc,v 1.3 2021/06/28 18:07:26 wiz Exp $
+@comment $NetBSD: PLIST.doc,v 1.4 2021/11/23 21:26:50 wiz Exp $
 man/man1/ImageMagick.1
 man/man1/Magick++-config.1
 man/man1/MagickCore-config.1
@@ -186,6 +186,7 @@ share/doc/ImageMagick-7/www/Magick++/thumbnail-anatomy-plain.fig
 share/doc/ImageMagick-7/www/Magick++/thumbnail-anatomy-plain.jpg
 share/doc/ImageMagick-7/www/Magick++/thumbnail-sample-framed.jpg
 share/doc/ImageMagick-7/www/Magick++/thumbnail-sample-plain.jpg
+share/doc/ImageMagick-7/www/advanced-linux-installation.html
 share/doc/ImageMagick-7/www/advanced-unix-installation.html
 share/doc/ImageMagick-7/www/advanced-windows-installation.html
 share/doc/ImageMagick-7/www/animate.html
@@ -250,6 +251,7 @@ share/doc/ImageMagick-7/www/api/statistic.html
 share/doc/ImageMagick-7/www/api/stream.html
 share/doc/ImageMagick-7/www/api/transform.html
 share/doc/ImageMagick-7/www/api/version.html
+share/doc/ImageMagick-7/www/api/vision.html
 share/doc/ImageMagick-7/www/api/wand-view.html
 share/doc/ImageMagick-7/www/architecture.html
 share/doc/ImageMagick-7/www/assets/magick.css
