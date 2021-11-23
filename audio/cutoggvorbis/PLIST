@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/23 11:45:47 nia Exp $
+bin/cutoggvorbis
+man/man1/cutoggvorbis.1
+share/cutoggvorbis/COPYING
+share/cutoggvorbis/Changelog
+share/cutoggvorbis/EXITCODES
+share/cutoggvorbis/USAGE
