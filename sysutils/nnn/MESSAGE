@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2021/11/23 23:20:14 sjmulder Exp $
+
+To install the plugins bundled with nnn:
+
+ mkdir -p ~/.config/nnn/plugins
+ cp ${PREFIX}/share/examples/nnn/plugins/* ~/.config/nnn/plugins/
+
+===========================================================================
