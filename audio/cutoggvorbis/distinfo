@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/23 11:45:47 nia Exp $
+
+BLAKE2s (cutoggvorbis-0.2.tar.bz2) = 82cbc5c152e8528088965a1ff2d6f2efc8cb28db7967c5a22929112ce3b364fa
+SHA512 (cutoggvorbis-0.2.tar.bz2) = ae01a21f8271a849a245763056c16a3b12bc7e46e115db2d91c037b3dc306f3fe4e6b02fe61c67775d1d0315e0ee549858a3556027cff9ee69aaf44cc3ff6e7c
+Size (cutoggvorbis-0.2.tar.bz2) = 22875 bytes

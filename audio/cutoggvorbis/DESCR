@@ -1,0 +1,4 @@
+cutoggvorbis is a small and fast command line Ogg/Vorbis editor. It lets
+you select sections of an Ogg/Vorbis interactively or via a timetable and
+save them to separate files without quality loss. It uses ogg123 for playback
+and even works with files bigger than 2GB.
