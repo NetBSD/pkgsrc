@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 2021/07/12 18:47:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/11/23 20:55:42 wiz Exp $
 bin/ld.lld
 bin/ld64.lld
 bin/ld64.lld.darwinnew
+bin/ld64.lld.darwinold
 bin/lld
 bin/lld-link
 bin/wasm-ld
 include/lld/Common/Args.h
+include/lld/Common/Arrays.h
 include/lld/Common/DWARF.h
 include/lld/Common/Driver.h
 include/lld/Common/ErrorHandler.h

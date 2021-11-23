@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_Driver_ToolChains_Solaris.cpp,v 1.7 2021/07/12 18:42:06 adam Exp $
+$NetBSD: patch-lib_Driver_ToolChains_Solaris.cpp,v 1.8 2021/11/23 20:55:43 wiz Exp $
 
 Use compiler-rt instead of libgcc.
 Pull in libcxx correctly.
@@ -7,7 +7,7 @@ Don't specify --dynamic-linker, makes it impossible for the user to use -Wl,-r
 Ensure we reset to -zdefaultextract prior to adding compiler-rt.
 Test removing -Bdynamic for golang.
 
---- lib/Driver/ToolChains/Solaris.cpp.orig	2020-10-07 10:10:48.000000000 +0000
+--- lib/Driver/ToolChains/Solaris.cpp.orig	2021-09-24 16:18:10.000000000 +0000
 +++ lib/Driver/ToolChains/Solaris.cpp
 @@ -50,8 +50,28 @@ void solaris::Linker::ConstructJob(Compi
                                     const InputInfoList &Inputs,
@@ -181,7 +181,7 @@ Test removing -Bdynamic for golang.
  void Solaris::AddClangSystemIncludeArgs(const ArgList &DriverArgs,
                                          ArgStringList &CC1Args) const {
    const Driver &D = getDriver();
-@@ -252,40 +270,20 @@ void Solaris::AddClangSystemIncludeArgs(
+@@ -252,38 +270,20 @@ void Solaris::AddClangSystemIncludeArgs(
      return;
    }
  
@@ -199,17 +199,15 @@ Test removing -Bdynamic for golang.
    addExternCSystemInclude(DriverArgs, CC1Args, D.SysRoot + "/usr/include");
  }
  
--void Solaris::addLibStdCxxIncludePaths(
-+void Solaris::addLibCxxIncludePaths(
+ void Solaris::addLibStdCxxIncludePaths(
      const llvm::opt::ArgList &DriverArgs,
      llvm::opt::ArgStringList &CC1Args) const {
 -  // We need a detected GCC installation on Solaris (similar to Linux)
 -  // to provide libstdc++'s headers.
 -  if (!GCCInstallation.isValid())
 -    return;
-+  addSystemInclude(DriverArgs, CC1Args,
-+                   llvm::sys::path::parent_path(getDriver().getInstalledDir())
-+                   + "/include/c++/v1");
++  // Location of GCC includes is not reliable so do not support it.
++  return;
 +}
  
 -  // By default, look for the C++ headers in an include directory adjacent to
@@ -221,14 +219,13 @@ Test removing -Bdynamic for golang.
 -  const GCCVersion &Version = GCCInstallation.getVersion();
 -
 -  // The primary search for libstdc++ supports multiarch variants.
--  addLibStdCXXIncludePaths(LibDir.str() + "/../include", "/c++/" + Version.Text,
--                           TripleStr,
--                           /*GCCMultiarchTriple*/ "",
--                           /*TargetMultiarchTriple*/ "",
--                           Multilib.includeSuffix(), DriverArgs, CC1Args);
-+void Solaris::addLibStdCxxIncludePaths(
-+    const llvm::opt::ArgList &DriverArgs,
-+    llvm::opt::ArgStringList &CC1Args) const {
-+  // Location of GCC includes is not reliable so do not support it.
-+  return;
+-  addLibStdCXXIncludePaths(LibDir.str() + "/../include/c++/" + Version.Text,
+-                           TripleStr, Multilib.includeSuffix(), DriverArgs,
+-                           CC1Args);
++void Solaris::addLibCxxIncludePaths(
++     const llvm::opt::ArgList &DriverArgs,
++     llvm::opt::ArgStringList &CC1Args) const {
++  addSystemInclude(DriverArgs, CC1Args,
++                   llvm::sys::path::parent_path(getDriver().getInstalledDir())
++                   + "/include/c++/v1");
  }

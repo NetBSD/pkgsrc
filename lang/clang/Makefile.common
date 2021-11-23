@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.46 2020/07/02 10:45:38 wiz Exp $
+# $NetBSD: Makefile.common,v 1.47 2021/11/23 20:55:43 wiz Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-tools-extra/Makefile
 
@@ -31,6 +31,13 @@ CMAKE_ARGS.Darwin+=	-DCMAKE_LIBTOOL=/usr/bin/libtool
 CMAKE_ARGS.Darwin+=	-DDEFAULT_SYSROOT=${OSX_SDK_PATH:Q}
 .endif
 
+# NetBSD < 10 did not provide ENOTRECOVERABLE
+# https://bugs.llvm.org/show_bug.cgi?id=52587
+.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[123456789].*)
+CXXFLAGS+=	-D_GLIBCXX_HAVE_ENOTRECOVERABLE=1
+CXXFLAGS+=	-DENOTRECOVERABLE=98
+.endif
+
 REPLACE_PERL+=		test/make_test_dirs.pl
 REPLACE_PERL+=		tools/scan-build/bin/scan-build
 REPLACE_PERL+=		tools/scan-build/libexec/c++-analyzer
@@ -44,10 +51,24 @@ REPLACE_PYTHON+=	bindings/python/examples/cindex/cindex-dump.py
 REPLACE_PYTHON+=	bindings/python/examples/cindex/cindex-includes.py
 REPLACE_PYTHON+=	docs/tools/dump_ast_matchers.py
 REPLACE_PYTHON+=	docs/tools/dump_format_style.py
+REPLACE_PYTHON+=	docs/tools/generate_formatted_state.py
+REPLACE_PYTHON+=	lib/Tooling/DumpTool/generate_cxx_src_locs.py
+REPLACE_PYTHON+=	test/AST/gen_ast_dump_json_test.py
+REPLACE_PYTHON+=	test/Analysis/check-analyzer-fixit.py
+REPLACE_PYTHON+=	test/Driver/check-time-trace-sections.py
 REPLACE_PYTHON+=	tools/clang-format/clang-format-diff.py
 REPLACE_PYTHON+=	tools/clang-format/git-clang-format
+REPLACE_PYTHON+=	tools/scan-build-py/bin/analyze-build
+REPLACE_PYTHON+=	tools/scan-build-py/bin/intercept-build
+REPLACE_PYTHON+=	tools/scan-build-py/bin/scan-build
+REPLACE_PYTHON+=	tools/scan-build-py/libexec/analyze-c++
+REPLACE_PYTHON+=	tools/scan-build-py/libexec/analyze-cc
+REPLACE_PYTHON+=	tools/scan-build-py/libexec/intercept-c++
+REPLACE_PYTHON+=	tools/scan-build-py/libexec/intercept-cc
 REPLACE_PYTHON+=	tools/scan-build/bin/set-xcode-analyzer
 REPLACE_PYTHON+=	tools/scan-view/bin/scan-view
+REPLACE_PYTHON+=	tools/scan-view/share/Reporter.py
+REPLACE_PYTHON+=	tools/scan-view/share/startfile.py
 REPLACE_PYTHON+=	utils/ABITest/ABITestGen.py
 REPLACE_PYTHON+=	utils/CIndex/completion_logger_server.py
 REPLACE_PYTHON+=	utils/CaptureCmd
@@ -56,15 +77,24 @@ REPLACE_PYTHON+=	utils/FindSpecRefs
 REPLACE_PYTHON+=	utils/FuzzTest
 REPLACE_PYTHON+=	utils/TestUtils/deep-stack.py
 REPLACE_PYTHON+=	utils/analyzer/CmpRuns.py
+REPLACE_PYTHON+=	utils/analyzer/SATest.py
 REPLACE_PYTHON+=	utils/analyzer/SATestAdd.py
 REPLACE_PYTHON+=	utils/analyzer/SATestBuild.py
+REPLACE_PYTHON+=	utils/analyzer/SATestUpdateDiffs.py
 REPLACE_PYTHON+=	utils/analyzer/SumTimerInfo.py
+REPLACE_PYTHON+=	utils/analyzer/exploded-graph-rewriter.py
 REPLACE_PYTHON+=	utils/check_cfc/check_cfc.py
 REPLACE_PYTHON+=	utils/check_cfc/obj_diff.py
 REPLACE_PYTHON+=	utils/check_cfc/test_check_cfc.py
+REPLACE_PYTHON+=	utils/clangdiag.py
+REPLACE_PYTHON+=	utils/convert_arm_neon.py
+REPLACE_PYTHON+=	utils/creduce-clang-crash.py
 REPLACE_PYTHON+=	utils/hmaptool/hmaptool
+REPLACE_PYTHON+=	utils/modfuzz.py
+REPLACE_PYTHON+=	utils/module-deps-to-rsp.py
 REPLACE_PYTHON+=	utils/token-delta.py
 REPLACE_PYTHON+=	www/builtins.py
+REPLACE_PYTHON+=	www/make_cxx_dr_status
 
 .if ${OPSYS} == "NetBSD" && ${PKGSRC_COMPILER:Mclang}
 # command to check if clang is using libc++ or libstdc++

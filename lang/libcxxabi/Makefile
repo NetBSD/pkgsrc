@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2021/07/12 18:46:07 adam Exp $
+# $NetBSD: Makefile,v 1.12 2021/11/23 20:55:43 wiz Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -44,6 +44,8 @@ post-extract:
 	${MKDIR} ${WRKDIR}/build
 	${LN} -f -s ${WRKDIR}/${LIBCXX} ${WRKDIR}/libcxx
 	${LN} -f -s ${WRKDIR}/${LLVMDIST} ${WRKDIR}/llvm
+        # TODO: not sure what should create this and with which contents
+	${TOUCH} ${WRKDIR}/${LIBCXX}/include/__config_site
 
 .include "../../lang/libunwind/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
