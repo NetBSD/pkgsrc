@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2020/08/18 02:12:43 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2021/11/23 07:50:15 pho Exp $
 
 DISTNAME=	password-store-1.7.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=	http://git.zx2c4.com/password-store/snapshot/
 EXTRACT_SUFX=	.tar.xz
@@ -22,7 +22,10 @@ DEPENDS+=	tree>=1.7.0:../../sysutils/tree
 
 EGDIR=			share/examples/password-store
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
-INSTALLATION_DIRS+=	${EGDIR}/contrib ${EGDIR}/completion
+INSTALLATION_DIRS+=	${EGDIR}/contrib
+INSTALLATION_DIRS+=	share/bash-completion/completions
+INSTALLATION_DIRS+=	share/fish/completions
+INSTALLATION_DIRS+=	share/zsh/site-functions
 
 REPLACE_BASH+=	src/password-store.sh
 REPLACE_BASH+=	tests/*.sh
@@ -44,13 +47,16 @@ do-install:
 		${DESTDIR}${PREFIX}/bin/pass
 	${INSTALL_SCRIPT} ${WRKSRC}/man/example-filter.sh	\
 		${DESTDIR}${PREFIX}/${EGDIR}
-	${INSTALL_MAN} ${WRKSRC}/man/pass.1 			\
+	${INSTALL_MAN} ${WRKSRC}/man/pass.1			\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/pass.1
 	cd ${WRKSRC}/contrib &&						\
 		${PAX} -wr * -s',.*\.orig$$,,' -s',.*\.gitignore$$,,'	\
 			${DESTDIR}${PREFIX}/${EGDIR}/contrib
-	cd ${WRKSRC}/src/completion &&					\
-		${PAX} -wr * -s',.*\.orig$$,,' -s',.*\.gitignore$$,,'	\
-			${DESTDIR}${PREFIX}/${EGDIR}/completion
+	${INSTALL_DATA} ${WRKSRC}/src/completion/pass.bash-completion \
+		${DESTDIR}${PREFIX}/share/bash-completion/completions/pass
+	${INSTALL_DATA} ${WRKSRC}/src/completion/pass.fish-completion \
+		${DESTDIR}${PREFIX}/share/fish/completions/pass.fish
+	${INSTALL_DATA} ${WRKSRC}/src/completion/pass.zsh-completion \
+		${DESTDIR}${PREFIX}/share/zsh/site-functions/_pass
 
 .include "../../mk/bsd.pkg.mk"

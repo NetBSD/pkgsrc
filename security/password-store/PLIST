@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2018/06/14 16:08:39 leot Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/11/23 07:50:15 pho Exp $
 bin/pass
 man/man1/pass.1
-share/examples/password-store/completion/pass.bash-completion
-share/examples/password-store/completion/pass.fish-completion
-share/examples/password-store/completion/pass.zsh-completion
+share/bash-completion/completions/pass
 share/examples/password-store/contrib/dmenu/README.md
 share/examples/password-store/contrib/dmenu/passmenu
 share/examples/password-store/contrib/emacs/CHANGELOG.md
@@ -28,3 +26,5 @@ share/examples/password-store/contrib/pass.applescript
 share/examples/password-store/contrib/vim/redact_pass.txt
 share/examples/password-store/contrib/vim/redact_pass.vim
 share/examples/password-store/example-filter.sh
+share/fish/completions/pass.fish
+share/zsh/site-functions/_pass
