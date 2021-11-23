@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/10/07 08:39:56 adam Exp $
+# $NetBSD: Makefile,v 1.3 2021/11/23 21:13:37 adam Exp $
 
-DISTNAME=	monotonic-1.5
+DISTNAME=	monotonic-1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/monotonic/}
