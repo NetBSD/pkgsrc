@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/05/07 19:14:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/11/23 21:45:35 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -204,6 +204,9 @@ ${PYSITELIB}/xarray/core/rolling.pyo
 ${PYSITELIB}/xarray/core/rolling_exp.py
 ${PYSITELIB}/xarray/core/rolling_exp.pyc
 ${PYSITELIB}/xarray/core/rolling_exp.pyo
+${PYSITELIB}/xarray/core/types.py
+${PYSITELIB}/xarray/core/types.pyc
+${PYSITELIB}/xarray/core/types.pyo
 ${PYSITELIB}/xarray/core/utils.py
 ${PYSITELIB}/xarray/core/utils.pyc
 ${PYSITELIB}/xarray/core/utils.pyo
@@ -229,7 +232,16 @@ ${PYSITELIB}/xarray/plot/utils.py
 ${PYSITELIB}/xarray/plot/utils.pyc
 ${PYSITELIB}/xarray/plot/utils.pyo
 ${PYSITELIB}/xarray/py.typed
+${PYSITELIB}/xarray/static/__init__.py
+${PYSITELIB}/xarray/static/__init__.pyc
+${PYSITELIB}/xarray/static/__init__.pyo
+${PYSITELIB}/xarray/static/css/__init__.py
+${PYSITELIB}/xarray/static/css/__init__.pyc
+${PYSITELIB}/xarray/static/css/__init__.pyo
 ${PYSITELIB}/xarray/static/css/style.css
+${PYSITELIB}/xarray/static/html/__init__.py
+${PYSITELIB}/xarray/static/html/__init__.pyc
+${PYSITELIB}/xarray/static/html/__init__.pyo
 ${PYSITELIB}/xarray/static/html/icons-svg-inline.html
 ${PYSITELIB}/xarray/testing.py
 ${PYSITELIB}/xarray/testing.pyc
@@ -237,6 +249,9 @@ ${PYSITELIB}/xarray/testing.pyo
 ${PYSITELIB}/xarray/tests/__init__.py
 ${PYSITELIB}/xarray/tests/__init__.pyc
 ${PYSITELIB}/xarray/tests/__init__.pyo
+${PYSITELIB}/xarray/tests/conftest.py
+${PYSITELIB}/xarray/tests/conftest.pyc
+${PYSITELIB}/xarray/tests/conftest.pyo
 ${PYSITELIB}/xarray/tests/data/bears.nc
 ${PYSITELIB}/xarray/tests/data/example.grib
 ${PYSITELIB}/xarray/tests/data/example.ict
@@ -276,6 +291,9 @@ ${PYSITELIB}/xarray/tests/test_cftimeindex.pyo
 ${PYSITELIB}/xarray/tests/test_cftimeindex_resample.py
 ${PYSITELIB}/xarray/tests/test_cftimeindex_resample.pyc
 ${PYSITELIB}/xarray/tests/test_cftimeindex_resample.pyo
+${PYSITELIB}/xarray/tests/test_coarsen.py
+${PYSITELIB}/xarray/tests/test_coarsen.pyc
+${PYSITELIB}/xarray/tests/test_coarsen.pyo
 ${PYSITELIB}/xarray/tests/test_coding.py
 ${PYSITELIB}/xarray/tests/test_coding.pyc
 ${PYSITELIB}/xarray/tests/test_coding.pyo
@@ -330,6 +348,9 @@ ${PYSITELIB}/xarray/tests/test_formatting_html.pyo
 ${PYSITELIB}/xarray/tests/test_groupby.py
 ${PYSITELIB}/xarray/tests/test_groupby.pyc
 ${PYSITELIB}/xarray/tests/test_groupby.pyo
+${PYSITELIB}/xarray/tests/test_indexes.py
+${PYSITELIB}/xarray/tests/test_indexes.pyc
+${PYSITELIB}/xarray/tests/test_indexes.pyo
 ${PYSITELIB}/xarray/tests/test_indexing.py
 ${PYSITELIB}/xarray/tests/test_indexing.pyc
 ${PYSITELIB}/xarray/tests/test_indexing.pyo
