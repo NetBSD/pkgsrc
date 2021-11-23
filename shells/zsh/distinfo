@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.73 2021/10/26 11:18:39 nia Exp $
+$NetBSD: distinfo,v 1.74 2021/11/23 19:42:43 pho Exp $
 
 BLAKE2s (zsh-5.8.tar.xz) = 3f0edcbb7b47f43f04cd373e98257702a1cfdc4efddcec12172cc1a34ac3b3da
 SHA512 (zsh-5.8.tar.xz) = 96198ecef498b7d7945fecebbe6bf14065fa8c5d81a7662164579eba8206b79575812d292adea1864bc7487ac0818ba900e25f9ab3802449340de80417c2c533
 Size (zsh-5.8.tar.xz) = 3193284 bytes
 SHA1 (patch-Completion_BSD_Command___bsd__pkg) = 1f9e9e896d0424c13b7d01a3d9b7af0a5fcad363
+SHA1 (patch-Completion_Unix_Command___gpg) = 226b6025e646f8c74e7e648f33a1001310c9ce3e
+SHA1 (patch-Config_installfns.sh) = ef0b250a0121c0e4925022e02553aefa23e6cc8d
 SHA1 (patch-aczsh.m4) = 36c270d8d7cf727f48787ef889b2bd89cbf065e2
 SHA1 (patch-configure.ac) = e4c743b627aeb0a409170ed6c0c3d50d274661e0
