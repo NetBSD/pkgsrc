@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:30:42 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/11/23 14:09:25 wiz Exp $
 
-BLAKE2s (httpie-2.4.0.tar.gz) = 30246443ae4b2ced31a2ac1bc59395847e9931ed1ffe994d6e079c7af12f422c
-SHA512 (httpie-2.4.0.tar.gz) = ebe5754df7859479e5f10bb31b702a2b91c8efffbb7438564343ecb478b5e1c13d4643a3f087a693749e84d5830bb346ba2830847f00b8ee2c3e2467bdcb2e42
-Size (httpie-2.4.0.tar.gz) = 220601 bytes
+BLAKE2s (httpie-2.6.0.tar.gz) = 347b9c9ece4f460ffb1256990f6e1863a270e4e61ff31eb5d7d4d0962698bc18
+SHA512 (httpie-2.6.0.tar.gz) = a38e9769c1994fcb4e5f898e5a72283c636ea155f1fc4d594eb59c43fe98115335dec4fddd6d4e396bd11b674715c573d2fc40c4afb732ba31da0cb8e2068fd2
+Size (httpie-2.6.0.tar.gz) = 213960 bytes
