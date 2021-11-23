@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21276 2021/11/23 20:58:32 wiz Exp $
+$NetBSD: TODO,v 1.21277 2021/11/23 21:03:11 adam Exp $
 
 Suggested new packages
 ======================
@@ -1621,7 +1621,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-Scientific-doc-2.5.5
 	o py-astroplan-0.8
 	o py-astroquery-0.4
-	o py-async-timeout-4.0.1
 	o py-cares-3.1.1
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
