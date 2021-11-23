@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1592 2021/11/23 15:29:09 wiz Exp $
+# $NetBSD: Makefile,v 1.1593 2021/11/23 15:35:32 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -58,6 +58,7 @@ SUBDIR+=	apache-tomcat85
 SUBDIR+=	apache-tomcat9
 SUBDIR+=	apache24
 SUBDIR+=	apachetop
+SUBDIR+=	apisprout
 SUBDIR+=	asp2php
 SUBDIR+=	august
 SUBDIR+=	aws
