@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2021/06/10 00:18:52 thor Exp $
+# $NetBSD: Makefile,v 1.45 2021/11/23 22:45:01 wiz Exp $
 
 MAINTAINER=	thomas.orgis@uni-hamburg.de
 COMMENT=	Linear Algebra PACKage (Netlib reference implementation)
-PKGREVISION=	1
 
 LAPACK_COMPONENT=	lapack
 LAPACK_COMPONENT_CMAKE_ARGS= \
