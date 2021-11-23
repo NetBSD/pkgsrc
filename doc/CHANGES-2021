@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5775 2021/11/23 14:37:34 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5776 2021/11/23 14:40:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8663,3 +8663,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/ruby-image_size to 3.0.1 [taca 2021-11-23]
 	Updated mail/ruby-mime-types to 3.4.1 [taca 2021-11-23]
 	Updated mail/ruby-mime-types-data to 3.2021.1115 [taca 2021-11-23]
+	Removed mail/ruby-mime-types2 [taca 2021-11-23]
