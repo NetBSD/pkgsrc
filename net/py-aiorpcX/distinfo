@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/11/08 16:33:15 cirnatdan Exp $
+$NetBSD: distinfo,v 1.5 2021/11/23 21:07:18 adam Exp $
 
-BLAKE2s (aiorpcX-0.18.7.tar.gz) = 272b6070773a6f782de41aa89008c2360d328333cdd1375cf72a066298448495
-SHA512 (aiorpcX-0.18.7.tar.gz) = 7d2c3495a4b4cdd1bd91478324685ee8b131a6e3f5f6665324f508e9b211c0ffb6d5590e7fb603f0919724a1983586aeaffd024f95880026baf43d70167a8bf1
-Size (aiorpcX-0.18.7.tar.gz) = 28206 bytes
+BLAKE2s (aiorpcX-0.22.1.tar.gz) = e16f29c303bf6e9dcf00c42eff71ab2585e3827697fbae278c0a77d4321e4157
+SHA512 (aiorpcX-0.22.1.tar.gz) = 0372c725d80dbaa7ea869957dfeeac522f9f0995b6ac5bb8a9f20ae768dc86d9fdaf831a54611ff09f459fa47c04e9f8f867374b17a485bfe92beb40108a5a11
+Size (aiorpcX-0.22.1.tar.gz) = 28803 bytes
