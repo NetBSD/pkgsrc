@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5783 2021/11/23 20:58:32 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5784 2021/11/23 21:03:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8684,3 +8684,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated parallel/opencl-clang to 13.0.0 [wiz 2021-11-23]
 	Updated parallel/openmp to 13.0.0 [wiz 2021-11-23]
 	Updated parallel/spirv-llvm-translator to 13.0.0 [wiz 2021-11-23]
+	Updated devel/py-async-timeout to 4.0.1 [adam 2021-11-23]
+	Updated devel/py-rope to 0.22.0 [adam 2021-11-23]
+	Updated comms/py-rich to 10.14.0 [adam 2021-11-23]
+	Updated www/py-websockets to 10.1 [adam 2021-11-23]
