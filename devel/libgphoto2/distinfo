@@ -1,20 +1,19 @@
-$NetBSD: distinfo,v 1.32 2021/10/26 10:15:21 nia Exp $
+$NetBSD: distinfo,v 1.33 2021/11/23 14:28:34 ryoon Exp $
 
-BLAKE2s (libgphoto2-2.5.8.tar.bz2) = 9666489a1744b1c9a1c7f684aa59144b0807812daab1be25af5de68bf226eab2
-SHA512 (libgphoto2-2.5.8.tar.bz2) = 142957ce3c80e8ac091005ba51b24fc0b199aa46f1a196cb0cfd71e0101d6020f4dd0ec2deb7209ef9ff7b946453b5fd9faf944047c07eb9962d8d52c876b1f4
-Size (libgphoto2-2.5.8.tar.bz2) = 6941251 bytes
-SHA1 (patch-aj) = 111b26861d59dddf7a8d0998cb7ae6513114fe38
+BLAKE2s (libgphoto2-2.5.27.tar.bz2) = 72792ee75469585fd918c8e2f2430f0523889a9e5340d8e11118aab4e2c636f1
+SHA512 (libgphoto2-2.5.27.tar.bz2) = 7cc82977e62034c539c7e62bff62ee61a299d3adb0c42e88b8e5521e75eedbc22437b9520af8a4bbd7dc0639ce5a8a10b1f5e5e8075e9b73a566da9061c958f8
+Size (libgphoto2-2.5.27.tar.bz2) = 7540660 bytes
+SHA1 (patch-aj) = dc93eb81da17bd74951d841ce7e742fb9af4bbfa
 SHA1 (patch-an) = 60d109d29834c01cdae29bcebde153e35af17884
 SHA1 (patch-ao) = 01e7eea353ef12b97b54aeb34f00abfd1f50c3ff
 SHA1 (patch-camlibs_ax203_jpeg__memsrcdest.c) = 763f39f07023aa82de6e91014a3fbf19e9e79afa
-SHA1 (patch-camlibs_ax203_jpeg__memsrcdest.h) = a78c6fd04f1fb72863ce609ac3ad25ebe12dc51c
+SHA1 (patch-camlibs_ax203_jpeg__memsrcdest.h) = 020f5d89424fc3465b6a3c7f5a39f1e9890bcf8b
 SHA1 (patch-camlibs_barbie_barbie.c) = 0dc3d60155ce221b356d59c173d5842b9b2cc98d
 SHA1 (patch-camlibs_jl2005c_jpeg__memsrcdest.c) = 0b178dc031b0b051a230eff6cc6c322596d1a8ee
-SHA1 (patch-camlibs_jl2005c_jpeg__memsrcdest.h) = 49bff8c0523d9cf87be92856cef3dd9127b983a0
-SHA1 (patch-camlibs_kodak_dc120_dc120.c) = 5b009334d954fcfa7b852281fa0bcc73b7355bbc
-SHA1 (patch-camlibs_kodak_dc120_library.c) = da5842b447e5cf2627c52b2fed64ec9b12d427d5
-SHA1 (patch-camlibs_panasonic_coolshot_library.c) = bb476c660d8ef011f11da119a718357d9672aadf
-SHA1 (patch-camlibs_st2205_st2205.c) = 2269a9d6d143bd74c49e21fafb706c6ee528748e
+SHA1 (patch-camlibs_jl2005c_jpeg__memsrcdest.h) = d19895df6c14746c815c825c55cd3cb2b51a7186
+SHA1 (patch-camlibs_kodak_dc120_dc120.c) = b49d935069ae5c23fb9cedc8bde58c679e59d774
+SHA1 (patch-camlibs_kodak_dc120_library.c) = d68a378bb2c6973d9a05a5fef563527bcefdfe33
+SHA1 (patch-camlibs_panasonic_coolshot_library.c) = ec11dfa52d994d9f0590b8bbc3d747af7213f012
+SHA1 (patch-camlibs_st2205_st2205.c) = c4830f6ce5ec44fae7493349e5cb5cd3d934ec4e
 SHA1 (patch-libgphoto2__port_gphoto2_gphoto2-port-portability.h) = 9f62a7c4213f8be273b6da7b2cbbd1f68e697631
-SHA1 (patch-libgphoto2_gphoto2-file.c) = 2b63f2e3bb3b6ef73c8d860efdda5e342f093eb8
-SHA1 (patch-packaging_generic_check-ptp-camera) = d828f1e36f2d86c6b3cfc68969efddd3fea0784d
+SHA1 (patch-libgphoto2_gphoto2-file.c) = b0be6988f8452836cd79798fd7c65376f2c7c0e0
