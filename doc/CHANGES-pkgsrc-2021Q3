@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.31 2021/11/23 22:47:40 tm Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.32 2021/11/23 22:49:46 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -115,4 +115,7 @@ devel/ruby-redmine41: security fix
 
 Pullup ticket #6541 - requested by taca
 lang/php74: security fix
+
+Pullup ticket #6542 - requested by taca
+lang/php73: security fix
 
