@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.191 2021/11/23 10:32:17 wiz Exp $
+# $NetBSD: Makefile,v 1.192 2021/11/24 22:10:57 wiz Exp $
 
 DISTNAME=	setuptools-59.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -27,13 +27,11 @@ PYSETUPTESTTARGET=	pytest
 
 # This setting, which will soon be default-on again, breaks on NetBSD
 # https://github.com/pypa/setuptools/issues/2364
-# files/_distutils_system_mod should fix this, but I don't know how yet
+# files/_distutils_system_mod needs to be installed into
+# ${PREFIX}/lib/python3.9/site-packages/_distutils_system_mod.py
+# (NOT ${DESTDIR}${PREFIX}) before building this package
 # https://github.com/pypa/distutils/issues/16
 #MAKE_ENV+=	SETUPTOOLS_USE_DISTUTILS=local
-
-#post-extract:
-#	${MKDIR} ${WRKSRC}/build/lib/setuptools/
-#	cp ${FILESDIR}/_distutils_system_mod ${WRKSRC}/build/lib/setuptools/
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
