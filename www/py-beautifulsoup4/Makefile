@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2021/11/24 11:38:10 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2021/11/24 11:48:22 wiz Exp $
 
 DISTNAME=	beautifulsoup4-4.9.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-soupsieve>=1.2:../../www/py-soupsieve
 USE_LANGUAGES=	# none
 
 pre-build:
-	cd ${WRKSRC} && 2to3-${PYVERSSUFFIX} -w bs4
+	cd ${WRKSRC} && 2to3-${PYVERSSUFFIX} -w --no-diffs bs4
 
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} -m unittest discover -s bs4
