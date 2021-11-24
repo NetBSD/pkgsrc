@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2021/05/08 15:18:37 nia Exp $
+# $NetBSD: Makefile,v 1.21 2021/11/24 12:05:18 wiz Exp $
 
-DISTNAME=		ucon64-2.2.1-src
+DISTNAME=		ucon64-2.2.2-src
 PKGNAME=		${DISTNAME:S/-src//}
-PKGREVISION=		3
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ucon64/}
 
@@ -15,14 +14,13 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/src
 
 .include "../../mk/bsd.prefs.mk"
 
-# code assumes 64-bit target on NetBSD
-.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} != "i386"
-CONFIGURE_ARGS+=		--with-libcd64
-.endif
-
-# parallel port I/O cannot work on macOS, even on Intel
-.if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=		--disable-parallel
+# parallel port I/O works on i386 and x86_64, but cannot work on macOS, even on Intel
+.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && ${OPSYS} != "Darwin"
+# --enable-parallel is default
+CONFIGURE_ARGS+=	--with-libcd64
+.else
+# --without-libcd64 is default
+CONFIGURE_ARGS+=	--disable-parallel
 .endif
 
 GNU_CONFIGURE=			yes
