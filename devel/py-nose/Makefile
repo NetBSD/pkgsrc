@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2021/10/09 12:50:45 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2021/11/24 11:54:20 wiz Exp $
 
 DISTNAME=	nose-1.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nose/}
 
@@ -11,22 +12,25 @@ COMMENT=	Unittest-based testing framework for python
 LICENSE=	gnu-lgpl-v2.1
 
 # only needed for a plugin
-#DEPENDS+=	${PYPKGPREFIX}-coverage>=3.0:../../devel/py-coverage
+TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=3.0:../../devel/py-coverage
 
 USE_LANGUAGES=	# none
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
-pre-test:
-	${RUN} cd ${WRKSRC} && \
-	${PYTHONBIN} setup.py build_tests
-
 post-install:
-	${RM} ${DESTDIR}${PREFIX}/bin/nosetests
+	${MV} ${DESTDIR}${PREFIX}/bin/nosetests ${DESTDIR}${PREFIX}/bin/nosetests-${PYVERSSUFFIX} || ${TRUE}
 	${MV} ${DESTDIR}${PREFIX}/man/man1/nosetests.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/nosetests${PYVERSSUFFIX}.1
 
+.include "../../lang/python/egg.mk"
+
+.if ${PYPKGPREFIX} == "py27"
+# only work with python 2.x
 do-test:
 	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} selftest.py
+.else
+pre-build:
+	cd ${WRKSRC} && 2to3-${PYVERSSUFFIX} -w --no-diffs nose
+.endif
 
-.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
