@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.36 2021/11/24 14:31:52 tm Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.37 2021/11/24 19:55:37 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -130,4 +130,7 @@ net/samba4: security fix
 
 Pullup ticket #6535 - requested by bsiegert
 databases/postgresql: security fix
+
+Pullup ticket #6538 - requested by gdt
+chat/matrix-synapse: security update
 
