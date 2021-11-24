@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2018/03/01 08:10:35 adam Exp $
+# $NetBSD: Makefile,v 1.12 2021/11/24 11:34:08 wiz Exp $
 
 DISTNAME=	python-creole-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-textile-[0-9]*:../../textproc/py-textile
-BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=		# none
 
