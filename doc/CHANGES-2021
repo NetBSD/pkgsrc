@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5795 2021/11/23 23:20:21 sjmulder Exp $
+$NetBSD: CHANGES-2021,v 1.5796 2021/11/24 01:10:48 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8706,3 +8706,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/lapacke to 3.10.0 [wiz 2021-11-23]
 	Updated math/lapacke64 to 3.10.0 [wiz 2021-11-23]
 	Updated sysutils/nnn to 4.4 [sjmulder 2021-11-23]
+	Updated geography/geos to 3.10.1 [gdt 2021-11-24]
