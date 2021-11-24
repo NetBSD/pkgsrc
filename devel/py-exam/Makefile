@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/11/26 17:10:16 adam Exp $
+# $NetBSD: Makefile,v 1.2 2021/11/24 10:50:24 wiz Exp $
 
 DISTNAME=	exam-0.10.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Helpers for better testing
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# none
 
