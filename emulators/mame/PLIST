@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.59 2021/10/27 09:31:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.60 2021/11/24 14:07:49 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -130,6 +130,8 @@ share/mame/hash/aquarius_cass.xml
 share/mame/hash/arb.xml
 share/mame/hash/arcadia.xml
 share/mame/hash/archimedes.xml
+share/mame/hash/archimedes_hdd.xml
+share/mame/hash/archimedes_rom.xml
 share/mame/hash/astrocde.xml
 share/mame/hash/atom_cass.xml
 share/mame/hash/atom_flop.xml
@@ -485,6 +487,7 @@ share/mame/hash/pc1512_flop.xml
 share/mame/hash/pc1512_hdd.xml
 share/mame/hash/pc1640_flop.xml
 share/mame/hash/pc1640_hdd.xml
+share/mame/hash/pc200.xml
 share/mame/hash/pc6001_cart.xml
 share/mame/hash/pc8001_flop.xml
 share/mame/hash/pc8001mk2_flop.xml
