@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:09 wiz Exp $
+
+BLAKE2s (nltk_data-senseval-20211124/senseval.zip) = ab71a125f2ec3dd1033edfef58eefc9c1a146c76866573e63eb148690c41878b
+SHA512 (nltk_data-senseval-20211124/senseval.zip) = 4c69145668cbc9d25d4d6893caea417258fc34c23527538f5799d96da19f45aeb271d08f48ea434ee21b7cb499579631556aa517c294743bc64e0f840854ba9b
+Size (nltk_data-senseval-20211124/senseval.zip) = 2151350 bytes

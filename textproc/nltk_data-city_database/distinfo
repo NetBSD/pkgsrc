@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:01 wiz Exp $
+
+BLAKE2s (nltk_data-city_database-20211124/city_database.zip) = 54e5ae80e861421045e2cd908ab4243b1aa47158aae12cc394cdfd4539e2466d
+SHA512 (nltk_data-city_database-20211124/city_database.zip) = ca87a07da6b1fa1ad786d43d2d7083797a4b81f033248d6951fe2162a3b4b35d20eb46d74dc9cb7c9eda202a8b6cfe8899a3b02cb768be9d1f0b4be1a290ec2e
+Size (nltk_data-city_database-20211124/city_database.zip) = 1708 bytes

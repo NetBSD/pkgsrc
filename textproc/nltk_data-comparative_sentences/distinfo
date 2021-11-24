@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:02 wiz Exp $
+
+BLAKE2s (nltk_data-comparative_sentences-20211124/comparative_sentences.zip) = 81d7d5ab3d6bc5eaccb5259282c0ec350733b94092a1923c750fea8a70d8ad6f
+SHA512 (nltk_data-comparative_sentences-20211124/comparative_sentences.zip) = 38b383a8cde09c1e8269f047b89c364177507c57a330c361792e92116743adec6ee25202ddf672af041798cc558b63e1e35478283cfb365ef33f8657a462e978
+Size (nltk_data-comparative_sentences-20211124/comparative_sentences.zip) = 279121 bytes

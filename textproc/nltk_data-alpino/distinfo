@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:00 wiz Exp $
+
+BLAKE2s (nltk_data-alpino-20211124/alpino.zip) = 091b6103b8a66ec804ac48a8bd6fcdc430c2c928f2e538503cbca9aebb80c8ff
+SHA512 (nltk_data-alpino-20211124/alpino.zip) = 0f0b40ca8c36068dabde193299fc00754b42f0ef42f562b96ec413b8f6400db9fe874fa750b198ac92fa7eb3cb8e4bf1ecd463aa95005dd4fb23825e47c4a772
+Size (nltk_data-alpino-20211124/alpino.zip) = 2797255 bytes

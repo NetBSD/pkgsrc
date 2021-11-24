@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:02 wiz Exp $
+
+BLAKE2s (nltk_data-dependency_treebank-20211124/dependency_treebank.zip) = 7b4668e5c1c3bbf26ef38273e5b657c73a5dba90dc4b3be19a88bf10b1f53a26
+SHA512 (nltk_data-dependency_treebank-20211124/dependency_treebank.zip) = b225ace2e2413f0b9ae0e142d81052e64a1bcacb71caf7b07a577c18dec45dc429116abfd12edd3bb1442a111f4fa6e3e33e2b5f113e26dfc4e917268d821736
+Size (nltk_data-dependency_treebank-20211124/dependency_treebank.zip) = 457429 bytes

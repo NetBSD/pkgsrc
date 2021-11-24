@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:01 wiz Exp $
+
+BLAKE2s (nltk_data-bllip_wsj_no_aux-20211124/bllip_wsj_no_aux.zip) = d8088b38d644fe1557cb4750e029fae319b82456369f02b1b62a6402bebe6ae0
+SHA512 (nltk_data-bllip_wsj_no_aux-20211124/bllip_wsj_no_aux.zip) = 03bb1c3b6c27e0049e7b5fc7721e2903c1dea80b55fe35208a4acd67116618a646d98fc5184d3a43ac9ce3dc693fb8ca768a18f20d9d6eb69d91fd2a101cc9e5
+Size (nltk_data-bllip_wsj_no_aux-20211124/bllip_wsj_no_aux.zip) = 24516205 bytes

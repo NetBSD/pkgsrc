@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/24 15:57:07 wiz Exp $
+share/nltk_data/corpora/pl196x/README
+share/nltk_data/corpora/pl196x/a-publi.xml
+share/nltk_data/corpora/pl196x/b-prasa.xml
+share/nltk_data/corpora/pl196x/c-popul.xml
+share/nltk_data/corpora/pl196x/cats.txt
+share/nltk_data/corpora/pl196x/d-proza.xml
+share/nltk_data/corpora/pl196x/e-dramat.xml
+share/nltk_data/corpora/pl196x/flib.xml
+share/nltk_data/corpora/pl196x/fslib.xml
+share/nltk_data/corpora/pl196x/iso88592.xml
+share/nltk_data/corpora/pl196x/morf.xml
+share/nltk_data/corpora/pl196x/pl196x.xml
+share/nltk_data/corpora/pl196x/splitter.py
+share/nltk_data/corpora/pl196x/textids.txt

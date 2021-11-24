@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:11 wiz Exp $
+
+BLAKE2s (nltk_data-unicode_samples-20211124/unicode_samples.zip) = 59ac480ae1a2e828b43c944b9a2810274a91670018ed8d5d6a8ebc6716b765b1
+SHA512 (nltk_data-unicode_samples-20211124/unicode_samples.zip) = 88cac1ef0f43fc491285c0638807f88f52d1baba8964cb2cf37c4ee3e8cd8c080071f108fb553fdc14ed17cb0e80343097c08ac7c1613b0abbd84f559e38fba8
+Size (nltk_data-unicode_samples-20211124/unicode_samples.zip) = 1212 bytes
