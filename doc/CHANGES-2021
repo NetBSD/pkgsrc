@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5796 2021/11/24 01:10:48 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.5797 2021/11/24 09:28:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8707,3 +8707,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/lapacke64 to 3.10.0 [wiz 2021-11-23]
 	Updated sysutils/nnn to 4.4 [sjmulder 2021-11-23]
 	Updated geography/geos to 3.10.1 [gdt 2021-11-24]
+	Removed net/py-caldav [wiz 2021-11-24]
