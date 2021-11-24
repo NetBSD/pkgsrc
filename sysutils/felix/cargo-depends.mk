@@ -1,25 +1,17 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2021/11/14 17:16:53 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2021/11/24 21:31:28 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	autocfg-1.0.1
 CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
-CARGO_CRATE_DEPENDS+=	block-0.1.6
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	chrono-0.4.19
-CARGO_CRATE_DEPENDS+=	clipboard-0.5.0
-CARGO_CRATE_DEPENDS+=	clipboard-win-2.2.0
 CARGO_CRATE_DEPENDS+=	dirs-4.0.0
 CARGO_CRATE_DEPENDS+=	dirs-sys-0.3.6
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.3
 CARGO_CRATE_DEPENDS+=	libc-0.2.102
-CARGO_CRATE_DEPENDS+=	log-0.4.14
-CARGO_CRATE_DEPENDS+=	malloc_buf-0.0.6
 CARGO_CRATE_DEPENDS+=	natord-1.0.9
 CARGO_CRATE_DEPENDS+=	num-integer-0.1.44
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.14
 CARGO_CRATE_DEPENDS+=	numtoa-0.1.0
-CARGO_CRATE_DEPENDS+=	objc-0.2.7
-CARGO_CRATE_DEPENDS+=	objc-foundation-0.1.1
-CARGO_CRATE_DEPENDS+=	objc_id-0.1.1
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.29
 CARGO_CRATE_DEPENDS+=	quote-1.0.9
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.2.10
@@ -39,5 +31,3 @@ CARGO_CRATE_DEPENDS+=	winapi-0.3.9
 CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
 CARGO_CRATE_DEPENDS+=	winapi-util-0.1.5
 CARGO_CRATE_DEPENDS+=	winapi-x86_64-pc-windows-gnu-0.4.0
-CARGO_CRATE_DEPENDS+=	x11-clipboard-0.3.3
-CARGO_CRATE_DEPENDS+=	xcb-0.8.2
