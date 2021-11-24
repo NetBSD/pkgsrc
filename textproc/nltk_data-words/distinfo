@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:13 wiz Exp $
+
+BLAKE2s (nltk_data-words-20211124/words.zip) = 5e8d26b7423832d14fffebf0fad4371ea13f6400c85f35ae5d1b4715f24efc9f
+SHA512 (nltk_data-words-20211124/words.zip) = 2810f05d3fc7ee6b6f8636fa1ff7b4e8c8cdac12b415cc54d15c69102290122ea138ec4fa36cb483f790c1ac10b0f83ae4c2c3e0e8df7e67e90e962ee5dbb0be
+Size (nltk_data-words-20211124/words.zip) = 757777 bytes

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:03 wiz Exp $
+
+BLAKE2s (nltk_data-genesis-20211124/genesis.zip) = aad1fff475694ae45683a8a93c2683e27042c923a3382cd9f27e5f56e6211b37
+SHA512 (nltk_data-genesis-20211124/genesis.zip) = e74f6a8f304bca292bf8e138a739a97633075cf9374c95f43ec75473cd7bbeb0921fe24f7864659e640e694d227e61debd67bc41150bd898b7241a274e28196f
+Size (nltk_data-genesis-20211124/genesis.zip) = 473239 bytes

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:05 wiz Exp $
+
+BLAKE2s (nltk_data-maxent_ne_chunker-20211124/maxent_ne_chunker.zip) = 27f7cf66bad123ba2d178f6a3ec97a7fd1caea56b885c06a4c082f2dd20152e7
+SHA512 (nltk_data-maxent_ne_chunker-20211124/maxent_ne_chunker.zip) = 2ac628c6a1d68a262031cb9dd0b3544da182cfe239a21996c7b7ccb540ce92b9fecb7a7f038ffdaa5c5e3a4d8b7194c7d699fb268004ab3bdb6cd671409c15d7
+Size (nltk_data-maxent_ne_chunker-20211124/maxent_ne_chunker.zip) = 13404747 bytes

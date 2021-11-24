@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:06 wiz Exp $
+
+BLAKE2s (nltk_data-paradigms-20211124/paradigms.zip) = 6b573815ea2ce3ab54507757f23dc7fd8e082892e77ad272622bd6a5827c924f
+SHA512 (nltk_data-paradigms-20211124/paradigms.zip) = 56ee67f12d2e794e3498183ee8cd90e7d691ab06f576ec413580fe1fa7ff49cbec01fc44c5b323fcd764600946a1866338c0babd6eb4cd658e006e4420205fba
+Size (nltk_data-paradigms-20211124/paradigms.zip) = 24902 bytes

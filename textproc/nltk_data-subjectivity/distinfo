@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:10 wiz Exp $
+
+BLAKE2s (nltk_data-subjectivity-20211124/subjectivity.zip) = 00906c5895ea8b43b6bdde8af7357e6b57897a0958c62c7bba28b6f6adf2f4ee
+SHA512 (nltk_data-subjectivity-20211124/subjectivity.zip) = a3cc4d2d20f26c5eabd86fbced2c013e69d46e607013278eb35831a62e57523a17aec1b580ba62c7a867e61a561e1b222d8430f0c1e2d429a9479e12b008c5b7
+Size (nltk_data-subjectivity-20211124/subjectivity.zip) = 521628 bytes

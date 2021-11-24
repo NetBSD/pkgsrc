@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:07 wiz Exp $
+
+BLAKE2s (nltk_data-pl196x-20211124/pl196x.zip) = 71bc79d8cf97cc94ea53cccde1829cb008821962b290899ae8908f4a820e3e5c
+SHA512 (nltk_data-pl196x-20211124/pl196x.zip) = 2fbb2eec61562422ddbb7fad804c450a9b513dc10597c3341b811a3aa64a28ccaa836d736ac79319edba73c8c8eb85d4103573cfae51d649cfcbdd3a758e018d
+Size (nltk_data-pl196x-20211124/pl196x.zip) = 7051453 bytes

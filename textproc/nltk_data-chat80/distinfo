@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:01 wiz Exp $
+
+BLAKE2s (nltk_data-chat80-20211124/chat80.zip) = 62a27bd8cae573d3bdb877965584c63058d183a38668483b52ad6ec2a30eb4c3
+SHA512 (nltk_data-chat80-20211124/chat80.zip) = 2d590ac4a785132be92764dda5577f2d7e7209cc1d58302296707d9ba8dd312dc01cdb104183922de88ba72f7cc3cd4b8fd95b2b18fd41321a27f4b964e4a500
+Size (nltk_data-chat80-20211124/chat80.zip) = 19209 bytes

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:09 wiz Exp $
+
+BLAKE2s (nltk_data-sinica_treebank-20211124/sinica_treebank.zip) = 53f50e587356043333fff95460a3d7c667274ad180c59161055030585195dd8c
+SHA512 (nltk_data-sinica_treebank-20211124/sinica_treebank.zip) = 724fb0905cbd0f903c3a75d70aee8a3e6f29e62971c1501efd8bfb3f4c6619e5fd8a285648e7792ea8e86bbda0a2afc6eecae45ad9f361983bf83b756ab52960
+Size (nltk_data-sinica_treebank-20211124/sinica_treebank.zip) = 899237 bytes

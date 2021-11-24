@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:12 wiz Exp $
+
+BLAKE2s (nltk_data-wmt15_eval-20211124/wmt15_eval.zip) = 1c8c09b81a8e51ad54b5d7ccb582bb63236896947c1657f050e5c2253b0d83f6
+SHA512 (nltk_data-wmt15_eval-20211124/wmt15_eval.zip) = 362395d4c77ebe92f4c19fa8c2000082dc7a2343acc19cccb596ca00db6c40c231b904d807f46e2691cc4c4a0c79d14873b2a1983a494f2ca1485d540d787ceb
+Size (nltk_data-wmt15_eval-20211124/wmt15_eval.zip) = 383096 bytes
