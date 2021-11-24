@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/10/05 09:16:10 adam Exp $
+# $NetBSD: Makefile,v 1.5 2021/11/24 10:59:07 wiz Exp $
 
 DISTNAME=	cymruwhois-1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/JustinAzoff/python-cymruwhois
 COMMENT=	Client for the whois.cymru.com service
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# none
 
