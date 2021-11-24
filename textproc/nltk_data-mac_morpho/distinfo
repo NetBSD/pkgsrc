@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:04 wiz Exp $
+
+BLAKE2s (nltk_data-mac_morpho-20211124/mac_morpho.zip) = 831980d343eb8b453a28577c84f1a3f3677c7fcabcb63fc7ed7d155fa924fec1
+SHA512 (nltk_data-mac_morpho-20211124/mac_morpho.zip) = cb892e0f414d12848d62012409cc1f19ce4c42490dd9ebb233110f75029670b1d413d82602a3b6cfbcc17fce448d7d5c2d1a811059280e154406eaa0e1b5c4a5
+Size (nltk_data-mac_morpho-20211124/mac_morpho.zip) = 3013904 bytes

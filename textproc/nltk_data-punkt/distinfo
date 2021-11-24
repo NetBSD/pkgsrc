@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:08 wiz Exp $
+
+BLAKE2s (nltk_data-punkt-20211124/punkt.zip) = 374af7e4ecde010047e819e059f4bc5430b9e5bff24795931613be2ec81468b4
+SHA512 (nltk_data-punkt-20211124/punkt.zip) = d477823c0cab57a374822cf58dd8bad35b86a504a51dda10de33b27cfd2ca4c89bba946c09f1ed3b28ab4d1cc1e5f3d3781c5f78ebe87458e1df9d48c8841782
+Size (nltk_data-punkt-20211124/punkt.zip) = 13707633 bytes

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:02 wiz Exp $
+
+BLAKE2s (nltk_data-conll2007-20211124/conll2007.zip) = a57f8a221bff7bad096c64530e5aa05fec8136d67eccfd739fe26cdb96b8bb62
+SHA512 (nltk_data-conll2007-20211124/conll2007.zip) = 3be03a672c9a4b823ed8c7cd3b571a7c0120415ef293f0e3044bf967f69b6efd413ee57cfe27a1407ec6fa2aad8e625019ddfcf0eec7a48ef8d745064adefba2
+Size (nltk_data-conll2007-20211124/conll2007.zip) = 1242958 bytes

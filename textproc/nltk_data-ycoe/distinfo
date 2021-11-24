@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:13 wiz Exp $
+
+BLAKE2s (nltk_data-ycoe-20211124/ycoe.zip) = 36369ca0c741861a96528feefd2221b4c700e61a16e6b9f3aed22ce0b1b87636
+SHA512 (nltk_data-ycoe-20211124/ycoe.zip) = e39ce165074d10ff63cb84ea52905d7ecb937797c8123ed113c5609afe1f63ac44d04d48a681002c4eac21dc9076ac74164b886c6f9ce42f3a102c38d1e8e756
+Size (nltk_data-ycoe-20211124/ycoe.zip) = 477 bytes

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:08 wiz Exp $
+
+BLAKE2s (nltk_data-reuters-20211124/reuters.zip) = b9865e2533171067d5216d6c6fe401259d969e95dfb0cca6965b0ec6c16b01f3
+SHA512 (nltk_data-reuters-20211124/reuters.zip) = 21b5a4e114137cd8a52b6e3567c2d72dbe7eac8a3234952896126d9d598fbfa72a7c1e6b7c424b8b016ed345d7350cc562c6d039e2fd6ec0d73c68e13e58605e
+Size (nltk_data-reuters-20211124/reuters.zip) = 6378691 bytes

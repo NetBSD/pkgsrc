@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:04 wiz Exp $
+
+BLAKE2s (nltk_data-jeita-20211124/jeita.zip) = f7fcd4284e9d756a948c4571b0c85f7ad8c5d237c9bab7a7bd0bf7eb99a99d8f
+SHA512 (nltk_data-jeita-20211124/jeita.zip) = 491e6dc27d70ebfd139be4dcd179b02c383f38edbe4290aed85638ecd7c987259b025e4f6f3f1d5bfe2b7aa3eff7188109205417d0acb64759988150f2753129
+Size (nltk_data-jeita-20211124/jeita.zip) = 16531215 bytes

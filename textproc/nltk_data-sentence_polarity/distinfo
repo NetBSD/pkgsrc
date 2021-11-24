@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:09 wiz Exp $
+
+BLAKE2s (nltk_data-sentence_polarity-20211124/sentence_polarity.zip) = 862e91cd800654b97ae6e4b226d21f54dda8676aca40c942a3891c909e097b56
+SHA512 (nltk_data-sentence_polarity-20211124/sentence_polarity.zip) = d3772edc13d46fb835f40a9c6714b95885d3ba2eded37a24c8aad6d3e63ca49a9c79387218e2f67bda2e52d52449daf1dd1e603a4819ae46da78f4e0a38ba599
+Size (nltk_data-sentence_polarity-20211124/sentence_polarity.zip) = 490256 bytes

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:05 wiz Exp $
+
+BLAKE2s (nltk_data-machado-20211124/machado.zip) = e5c26e9c2c5b2dfc81461ee33404a160f2e491633bc964715172d3d7fb06762f
+SHA512 (nltk_data-machado-20211124/machado.zip) = 8ef0b5e768edd4a8b6c6831a6a4a1913ce82a57fc63f08cc29ad8442c49bd4eee27930c674f2ac141fb1f58eebde5486d12e6aa41681cb601ae9ef9562843a69
+Size (nltk_data-machado-20211124/machado.zip) = 6151774 bytes

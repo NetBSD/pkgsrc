@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:05 wiz Exp $
+
+BLAKE2s (nltk_data-masc_tagged-20211124/masc_tagged.zip) = d6c92ebee5f1b4a73b73e2e550e99a2ac28143d260ce7ae0216d5a04eb8dd306
+SHA512 (nltk_data-masc_tagged-20211124/masc_tagged.zip) = 558ee5fc652ca736f0f0238854e75d5d6e7f85e03bd19274b09bca616aaa8edd513db972f89c13232e616945cc3463fb4bfda96c2b3d897448d3b5d9ce370f20
+Size (nltk_data-masc_tagged-20211124/masc_tagged.zip) = 1602143 bytes

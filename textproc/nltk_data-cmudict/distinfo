@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:02 wiz Exp $
+
+BLAKE2s (nltk_data-cmudict-20211124/cmudict.zip) = 3b1cde3698e1305fec3118c745bc377610bd6da346b3e394181d380297a77ca3
+SHA512 (nltk_data-cmudict-20211124/cmudict.zip) = d3b5d3f9675e242487953ffea9b93e8a8f66462fb09321303064c618e2483e13456d7bbb307b2791926a1e843fdc1df0cb29cf185e2adb6fd08f6286295f42c8
+Size (nltk_data-cmudict-20211124/cmudict.zip) = 896069 bytes

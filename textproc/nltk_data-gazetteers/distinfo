@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:03 wiz Exp $
+
+BLAKE2s (nltk_data-gazetteers-20211124/gazetteers.zip) = 653d349c0d2b32839035cec265dbd7dd89856fd024d01b9eca1a27d512386acd
+SHA512 (nltk_data-gazetteers-20211124/gazetteers.zip) = dee3a050b56bec85a97e85d867e404bbb4f5041bf4886f5a00eb3e4149db1ff6f8a5bfa67f0210c48539cbf0140aa2082e2d3e65b4919dc5d7a258dc9616257c
+Size (nltk_data-gazetteers-20211124/gazetteers.zip) = 8265 bytes

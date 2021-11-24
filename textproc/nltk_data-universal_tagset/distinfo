@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:11 wiz Exp $
+
+BLAKE2s (nltk_data-universal_tagset-20211124/universal_tagset.zip) = c37d72d361fcbbe71cece0dd546146d2cd904ca5e9851d2e0b900b4314e72cc5
+SHA512 (nltk_data-universal_tagset-20211124/universal_tagset.zip) = ca8915e8c3bcb8515ffe0da21fb7066d213683ff702bf247d9fa9f7c966c66d06facafef1d600b7223d7aa1e4dfba1a2a75e1bb05b2c5d78beb312b8551d3fed
+Size (nltk_data-universal_tagset-20211124/universal_tagset.zip) = 19095 bytes

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:10 wiz Exp $
+
+BLAKE2s (nltk_data-spanish_grammars-20211124/spanish_grammars.zip) = c8edb4598cd2ea9d2851a0e14b082dae3e80690ac62b21d188c87470de01b973
+SHA512 (nltk_data-spanish_grammars-20211124/spanish_grammars.zip) = 4513347156e9351c259c0e2448198d68354bbc95e0a54561c31a88f13f333ebcba3e294c820cb62036665f2904eb6a7137546cd580e361c0423c30a8aed950b2
+Size (nltk_data-spanish_grammars-20211124/spanish_grammars.zip) = 4047 bytes

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:12 wiz Exp $
+
+BLAKE2s (nltk_data-vader_lexicon-20211124/vader_lexicon.zip) = 1ac5286bb6e8c8c92ab40f094fd2902cbdcfef0681bdd3abe724ca6d7f8d3606
+SHA512 (nltk_data-vader_lexicon-20211124/vader_lexicon.zip) = 55d41757736806a2a0dbcaedef28000b4461eb44dce308c9e06315feb55f843914f743c37b6cf220fc9e61c04f8f7f41dd338438059e2e803fc2b4e91f739923
+Size (nltk_data-vader_lexicon-20211124/vader_lexicon.zip) = 90486 bytes

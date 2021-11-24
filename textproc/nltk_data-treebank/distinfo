@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:11 wiz Exp $
+
+BLAKE2s (nltk_data-treebank-20211124/treebank.zip) = a3ed15a0b5339fbb8d000617b267fa27eceee8b4f17a416c83e9135edd51cf9e
+SHA512 (nltk_data-treebank-20211124/treebank.zip) = f2b3793329259c16b2544cfb544270e9c4b4d25eccbd997c086d3d5915981ceb038f719c097d4c71429aa9e7c4f0e19918db06b249166a2f6153d6b618c96a77
+Size (nltk_data-treebank-20211124/treebank.zip) = 1740034 bytes

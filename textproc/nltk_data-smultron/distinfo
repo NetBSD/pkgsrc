@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:09 wiz Exp $
+
+BLAKE2s (nltk_data-smultron-20211124/smultron.zip) = 90342756f710cc9e57862d609fa1bede4b0bce7f86b77894cc193cfa65bcda02
+SHA512 (nltk_data-smultron-20211124/smultron.zip) = 8872717994269caff4ccf3f52cef273b2ef007efeb8ab89392cb4db3b8e3ba4b8859ab2fd70762b8941bee4558aebba3021869772be17a64e1056968aa605e19
+Size (nltk_data-smultron-20211124/smultron.zip) = 166207 bytes

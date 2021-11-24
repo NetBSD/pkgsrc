@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:03 wiz Exp $
+
+BLAKE2s (nltk_data-floresta-20211124/floresta.zip) = c6fa4e75cf1df4724fcd13acddf858e781719352992f3035e78a52960de335f6
+SHA512 (nltk_data-floresta-20211124/floresta.zip) = 1a71453b9629d622c3468b1e00501683e0415996a62a30c498486354b82f0b3be76080dddc60117c8c9f29de3b34a2166a5de87376a0daeaf8b92bfe5dac668a
+Size (nltk_data-floresta-20211124/floresta.zip) = 1882021 bytes

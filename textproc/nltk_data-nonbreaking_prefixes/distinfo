@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:06 wiz Exp $
+
+BLAKE2s (nltk_data-nonbreaking_prefixes-20211124/nonbreaking_prefixes.zip) = 074a6aa6ade865911d94cdbf3a98aead43726db127c874e8b75ed187d98583a1
+SHA512 (nltk_data-nonbreaking_prefixes-20211124/nonbreaking_prefixes.zip) = 4cddfdacf1c7fe4e93a31333413a83ebea2ea7907f4e6fe99e1c6ff4aed8efc951f4399478cdb88e5d5dc01cfb734b6672f4007b2a17c4784896fecaf4a93cdf
+Size (nltk_data-nonbreaking_prefixes-20211124/nonbreaking_prefixes.zip) = 25437 bytes

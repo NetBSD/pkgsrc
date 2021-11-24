@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:03 wiz Exp $
+
+BLAKE2s (nltk_data-dolch-20211124/dolch.zip) = 206ea577ac06ba875804104b6da01e4a27d4d381d82eb1aae9f6b7b9ad578277
+SHA512 (nltk_data-dolch-20211124/dolch.zip) = 29254c95d11fd2001f486a5c682f7ab7f23fa13472ac4142db3702e2fa994f74ffabc2f571f1feb94a2e65fcb8da97c57a519f24504379b0e369fd27f9f867f0
+Size (nltk_data-dolch-20211124/dolch.zip) = 2116 bytes

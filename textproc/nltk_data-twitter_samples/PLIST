@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/24 15:57:11 wiz Exp $
+share/nltk_data/corpora/twitter_samples/README.md
+share/nltk_data/corpora/twitter_samples/README.txt
+share/nltk_data/corpora/twitter_samples/negative_tweets.json
+share/nltk_data/corpora/twitter_samples/positive_tweets.json
+share/nltk_data/corpora/twitter_samples/tweets.20150430-223406.json

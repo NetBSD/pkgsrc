@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:01 wiz Exp $
+
+BLAKE2s (nltk_data-cess_esp-20211124/cess_esp.zip) = 0708104856e6270da1773b152c2731f9e9f5cc372159f1f2b8156aed99d2efd8
+SHA512 (nltk_data-cess_esp-20211124/cess_esp.zip) = daca83bbe8d725fad5775f5c71946ae534764a758ccf428b3f48674eaa4a5a8342cb35f38ae9715ffa75030771b91f1303bb2b98a55922337e6b39dfa2e7a94a
+Size (nltk_data-cess_esp-20211124/cess_esp.zip) = 2220392 bytes

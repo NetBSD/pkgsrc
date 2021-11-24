@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:08 wiz Exp $
+
+BLAKE2s (nltk_data-pros_cons-20211124/pros_cons.zip) = 42465868e446e25561e4eba738511ab44d3eb0d3901079b9926e725b68468536
+SHA512 (nltk_data-pros_cons-20211124/pros_cons.zip) = 9eea1070b67e648d5e6e84d5a336d95c9eb3192cd0fa4a66f298076ac5907783ecda5cfe1b6e66209a99ec4e326666b14e1cc89ffb4cc8b2b91fed7db77db75f
+Size (nltk_data-pros_cons-20211124/pros_cons.zip) = 746276 bytes

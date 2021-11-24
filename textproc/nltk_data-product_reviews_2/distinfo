@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:07 wiz Exp $
+
+BLAKE2s (nltk_data-product_reviews_2-20211124/product_reviews_2.zip) = 2d6667bfe8cbcd70e3728ce3fa01d5da72077271724bf5764d8d2f8f9297b00b
+SHA512 (nltk_data-product_reviews_2-20211124/product_reviews_2.zip) = 24ddd6e62a62ef81ec88fa5991507f3e7e479caf778d3738bb30ddc74898e03a8629a532147a0e0b899b3b2e0933fbefdd0ec0b0e774fc726c4145d66bf5cd29
+Size (nltk_data-product_reviews_2-20211124/product_reviews_2.zip) = 170698 bytes

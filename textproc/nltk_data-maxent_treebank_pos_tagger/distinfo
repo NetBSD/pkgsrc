@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:05 wiz Exp $
+
+BLAKE2s (nltk_data-maxent_treebank_pos_tagger-20211124/maxent_treebank_pos_tagger.zip) = 4e32eefa51cf0f347a7ddbabbb2f0dd9590ea78caaf22b18f87a17a4d888e6c6
+SHA512 (nltk_data-maxent_treebank_pos_tagger-20211124/maxent_treebank_pos_tagger.zip) = ebcda9d7f843e47fb560530b9b75b44ae97e92102d341453202bdc42aa2e996c76833285134ca5c213d7af5b420065b28170cade92a67ba9a667b1b987b8331d
+Size (nltk_data-maxent_treebank_pos_tagger-20211124/maxent_treebank_pos_tagger.zip) = 10156853 bytes

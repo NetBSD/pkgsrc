@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:06 wiz Exp $
+
+BLAKE2s (nltk_data-nps_chat-20211124/nps_chat.zip) = 45308365def6f4c048dbf5650e8928995b1512dd1f113c8d6e3e98694b5c29e9
+SHA512 (nltk_data-nps_chat-20211124/nps_chat.zip) = a716f3aaba3aedbbdaeaff1c6f1ef607476aa989eaef1c2971b827215f3167952477b203f1543d0fd27e5594c3efa01349c6a0efc1ac423048808f18eae94643
+Size (nltk_data-nps_chat-20211124/nps_chat.zip) = 301366 bytes

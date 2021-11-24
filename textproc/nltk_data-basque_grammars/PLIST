@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/24 15:57:00 wiz Exp $
+share/nltk_data/grammars/basque_grammars.zip

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:03 wiz Exp $
+
+BLAKE2s (nltk_data-gutenberg-20211124/gutenberg.zip) = f125a38cc468539b0783043c4c225ed154e8d4eb0c0746f264d028be8254c108
+SHA512 (nltk_data-gutenberg-20211124/gutenberg.zip) = 7b4442d18b89f9bb8261f23ad2f4d513b470461255633cbebe2b0c310f003effe819f7a86b39a62a6cde1b3fdbf099dabbdaaed520268c99fd1bb933baa97ead
+Size (nltk_data-gutenberg-20211124/gutenberg.zip) = 4251829 bytes

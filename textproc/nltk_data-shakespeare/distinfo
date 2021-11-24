@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:09 wiz Exp $
+
+BLAKE2s (nltk_data-shakespeare-20211124/shakespeare.zip) = 457797096e4ba3460d39cf936cc6400bb626e7b5b2e50b4b5fca95c451b342ed
+SHA512 (nltk_data-shakespeare-20211124/shakespeare.zip) = 72cbbdb237b78df1f6bf27b5504606f805433746b9862dd1ce544ab712783a41fb165f3a4f282a7f1bd58c7dfe6036c14ecb07a82c109f6d326eb95e470002fb
+Size (nltk_data-shakespeare-20211124/shakespeare.zip) = 475458 bytes

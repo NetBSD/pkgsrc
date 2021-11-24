@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:11 wiz Exp $
+
+BLAKE2s (nltk_data-udhr-20211124/udhr.zip) = 02a4599290e4d28ef1ef465a247739a5168f08c6a36a481c2eb4147301cacb91
+SHA512 (nltk_data-udhr-20211124/udhr.zip) = 730f83cb663974edc099427fad0a3c1cd16769f5ef82446a78aa0e12f01b68a4c52037bdb5e3717dd6b08c42655b03d9d0f2f5869c01b117ae2ab8a428df0dcc
+Size (nltk_data-udhr-20211124/udhr.zip) = 1170177 bytes
