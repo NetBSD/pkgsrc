@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2021/09/02 19:20:08 nia Exp $
+# $NetBSD: Makefile,v 1.80 2021/11/24 17:31:01 nia Exp $
 
 DISTNAME=	x264-snapshot-20191217-2245
 PKGNAME=	${DISTNAME:S/-snapshot-/-devel-/:S/-2245$//}
@@ -41,6 +41,10 @@ USE_TOOLS+=		perl
 CONFIGURE_ARGS+=	--disable-opencl
 .endif
 MAKE_ENV+=		SH=${SH:Q}
+
+# tries to use /usr/ucb/install to create multiple directories
+# PR pkg/56512
+MAKE_FLAGS.SunOS+=	INSTALL=${INSTALL}
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 # XXX Consider passing this whether cross-compiling or not.
