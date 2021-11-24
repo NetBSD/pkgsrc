@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2021/11/24 06:35:51 pho Exp $
+# $NetBSD: Makefile,v 1.66 2021/11/24 06:55:41 pho Exp $
 
 DISTNAME=		rxvt-2.7.10
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rxvt/}
 
@@ -56,10 +56,12 @@ post-patch:
 	${SED} < ${WRKSRC}/src/feature.h.orig > ${WRKSRC}/src/feature.h \
 		-e "s:/usr/lib/X11/app-defaults:${PREFIX}/lib/X11/app-defaults:"
 
-INSTALLATION_DIRS=	lib/X11/app-defaults
+EGDIR=			share/examples/${PKGBASE}
+INSTALLATION_DIRS+=	${EGDIR}/app-defaults
+CONF_FILES+=		${EGDIR}/app-defaults/Rxvt ${PREFIX}/lib/X11/app-defaults/Rxvt
 
-pre-install:
-	${INSTALL_DATA} ${FILESDIR}/Rxvt ${DESTDIR}${PREFIX}/lib/X11/app-defaults
+post-install:
+	${INSTALL_DATA} ${FILESDIR}/Rxvt ${DESTDIR}${PREFIX}/${EGDIR}/app-defaults
 
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
