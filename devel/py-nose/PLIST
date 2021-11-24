@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2013/09/11 09:38:53 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/11/24 11:54:20 wiz Exp $
 bin/nosetests-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/nose/__init__.py
 ${PYSITELIB}/nose/__init__.pyc
