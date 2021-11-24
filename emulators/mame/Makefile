@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.141 2021/10/27 09:31:44 wiz Exp $
+# $NetBSD: Makefile,v 1.142 2021/11/24 14:07:49 wiz Exp $
 
-DISTNAME=	mame-0.237
+DISTNAME=	mame-0.238
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mamedev/}
 GITHUB_TAG=	${DISTNAME:S/-//S/.//}
@@ -34,6 +34,8 @@ MAKE_ENV+=	LDOPTS="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.flac}/lib -L${BUILDL
 .else
 MAKE_ENV+=	LDOPTS="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.flac}/lib -L${BUILDLINK_PREFIX.flac}/lib"
 .endif
+
+MAKE_FLAGS+=		PRECOMPILE=0
 
 .if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != "x86_64"
 # \todo Arch detection for aarch64 fails, investigate why

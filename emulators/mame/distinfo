@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.113 2021/10/27 09:31:44 wiz Exp $
+$NetBSD: distinfo,v 1.114 2021/11/24 14:07:49 wiz Exp $
 
-BLAKE2s (mame-0.237.tar.gz) = 3f0a8343e92cbcc36dca578293253f097258743d5350ba9afe4b76b724db6e6f
-SHA512 (mame-0.237.tar.gz) = c6425298894677f0f1bb69504e0fe856454caf51a6c3080422d4105c6273017bcbe4a890941499b0a1ca0307f282fdb7a6e8096c290be21f0d9f32530a3e9e33
-Size (mame-0.237.tar.gz) = 186374918 bytes
-SHA1 (patch-3rdparty_asio_include_asio_detail_config.hpp) = 9b0d6139e853d8efb9d51270bbfa5382feac42a7
-SHA1 (patch-3rdparty_asio_include_asio_detail_impl_kqueue__reactor.ipp) = ad5e2171731864528331f2f1d2d43608b1b4ed01
+BLAKE2s (mame-0.238.tar.gz) = c9634a8283769e01382bfb485e09016e707f7045139d435267c18d66b2eb5811
+SHA512 (mame-0.238.tar.gz) = 55d64274c78885b850764ed1a21585f5f85fd62995f287dafbbf831a645e2abcae9107df668f91a53fb74fd115045f977d10d4268eb31c2ec7fc6163998136a0
+Size (mame-0.238.tar.gz) = 186182656 bytes
 SHA1 (patch-3rdparty_genie_build_gmake.darwin_genie.make) = bb2e8c06d4b5f5869fb48e06390d5ca94a190056
 SHA1 (patch-makefile) = 343fac4d165438a26e2e8077216db1c6c46a5d1e
-SHA1 (patch-scripts_genie.lua) = 6c72b76c9a9ea952a787bf3994680f8711c8b64a
