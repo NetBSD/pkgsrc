@@ -1,36 +1,26 @@
-# $NetBSD: Makefile,v 1.10 2020/12/04 20:45:44 nia Exp $
+# $NetBSD: Makefile,v 1.11 2021/11/24 10:22:32 wiz Exp $
 
-DISTNAME=	0.9.0
-PKGREVISION=	3
-PKGNAME=	csvkit-${DISTNAME}
+DISTNAME=	csvkit-0.9.0
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wireservice/}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	https://github.com/wireservice/csvkit
 COMMENT=	Suite of utilities for converting to and working with CSV
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-nose>=1.1.2:../../devel/py-nose
-DEPENDS+=	${PYPKGPREFIX}-xlrd>=0.9.2:../../textproc/py-xlrd
+BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.0.7:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.2:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.9.3:../../databases/py-sqlalchemy
-DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.0.7:../../textproc/py-sphinx
-DEPENDS+=	${PYPKGPREFIX}-coverage>=1.0.7:../../devel/py-coverage
+DEPENDS+=	${PYPKGPREFIX}-dbf-[0-9]*:../../databases/py-dbf
 DEPENDS+=	${PYPKGPREFIX}-openpyxl>=2.0.3:../../textproc/py-openpyxl
-DEPENDS+=	${PYPKGPREFIX}-jdcal>=0.9.3:../../time/py-jdcal
-DEPENDS+=	${PYPKGPREFIX}-simplejson>=3.6.3:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-six>=1.6.1:../../lang/py-six
-#DEPENDS+=	${PYPKGPREFIX}-tox>=1.3:../../*/py-tox
-
-# csvkit publishes files like "0.9.0.tar.gz"
-DIST_SUBDIR=	${PKGNAME_NOREV}
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.9.3:../../databases/py-sqlalchemy
+DEPENDS+=	${PYPKGPREFIX}-xlrd>=0.9.2:../../textproc/py-xlrd
+TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=3.5.1:../../devel/py-coverage
 
 USE_LANGUAGES=	# none
 
-EGG_NAME=	${PKGNAME_NOREV}
-
-.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
