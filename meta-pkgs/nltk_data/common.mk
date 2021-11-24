@@ -1,4 +1,4 @@
-# $NetBSD: common.mk,v 1.1 2021/11/24 15:56:18 wiz Exp $
+# $NetBSD: common.mk,v 1.2 2021/11/24 17:26:15 wiz Exp $
 
 MASTER_SITES=	https://raw.githubusercontent.com/nltk/nltk_data/gh-pages/packages/${TYPE}/
 EXTRACT_SUFX?=	.zip
@@ -10,6 +10,12 @@ COMMENT?=	Natural Language Toolkit (NLTK) Data
 INSTALLATION_DIRS+=	share/nltk_data/${TYPE}
 
 UNPACK?=	no
+
+RESTRICTED?=		Not investigated if this may be re-distributed.
+NO_BIN_ON_CDROM?=	${RESTRICTED}
+NO_SRC_ON_CDROM?=	${RESTRICTED}
+NO_BIN_ON_FTP?=		${RESTRICTED}
+NO_SRC_ON_FTP?=		${RESTRICTED}
 
 do-build:
 
