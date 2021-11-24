@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2021/09/19 08:41:13 nia Exp $
+# $NetBSD: Makefile,v 1.65 2021/11/24 06:35:51 pho Exp $
 
 DISTNAME=		rxvt-2.7.10
 PKGREVISION=		9
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rxvt/}
 MAINTAINER=		gcw@rxvt.org
 HOMEPAGE=		https://sourceforge.net/projects/rxvt
 COMMENT=		Low memory usage xterm replacement that supports color
+LICENSE=		gnu-gpl-v2
 
 GNU_CONFIGURE=		YES
 
@@ -58,9 +59,7 @@ post-patch:
 INSTALLATION_DIRS=	lib/X11/app-defaults
 
 pre-install:
-	if [ ! -f ${PREFIX}/lib/X11/app-defaults/Rxvt ]; then \
-		${INSTALL_DATA} ${FILESDIR}/Rxvt ${DESTDIR}${PREFIX}/lib/X11/app-defaults; \
-	fi
+	${INSTALL_DATA} ${FILESDIR}/Rxvt ${DESTDIR}${PREFIX}/lib/X11/app-defaults
 
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
