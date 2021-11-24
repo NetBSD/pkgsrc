@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2021/10/21 00:25:16 gdt Exp $
+@comment $NetBSD: PLIST,v 1.19 2021/11/24 01:10:42 gdt Exp $
 bin/geos-config
 bin/geosop
 include/geos/algorithm/Angle.h
@@ -467,7 +467,7 @@ lib/cmake/GEOS/geos-config.cmake
 lib/cmake/GEOS/geos-targets-release.cmake
 lib/cmake/GEOS/geos-targets.cmake
 lib/libgeos.so
-lib/libgeos.so.3.10.0
+lib/libgeos.so.3.10.1
 lib/libgeos_c.so
 lib/libgeos_c.so.1
 lib/libgeos_c.so.1.16.0
