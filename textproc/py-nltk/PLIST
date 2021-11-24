@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/08/10 14:43:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/11/24 16:00:18 wiz Exp $
 bin/nltk-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -605,6 +605,9 @@ ${PYSITELIB}/nltk/stem/api.pyo
 ${PYSITELIB}/nltk/stem/arlstem.py
 ${PYSITELIB}/nltk/stem/arlstem.pyc
 ${PYSITELIB}/nltk/stem/arlstem.pyo
+${PYSITELIB}/nltk/stem/arlstem2.py
+${PYSITELIB}/nltk/stem/arlstem2.pyc
+${PYSITELIB}/nltk/stem/arlstem2.pyo
 ${PYSITELIB}/nltk/stem/cistem.py
 ${PYSITELIB}/nltk/stem/cistem.pyc
 ${PYSITELIB}/nltk/stem/cistem.pyo
@@ -718,10 +721,10 @@ ${PYSITELIB}/nltk/test/classify_fixt.pyo
 ${PYSITELIB}/nltk/test/collections.doctest
 ${PYSITELIB}/nltk/test/collocations.doctest
 ${PYSITELIB}/nltk/test/concordance.doctest
+${PYSITELIB}/nltk/test/conftest.py
+${PYSITELIB}/nltk/test/conftest.pyc
+${PYSITELIB}/nltk/test/conftest.pyo
 ${PYSITELIB}/nltk/test/corpus.doctest
-${PYSITELIB}/nltk/test/corpus_fixt.py
-${PYSITELIB}/nltk/test/corpus_fixt.pyc
-${PYSITELIB}/nltk/test/corpus_fixt.pyo
 ${PYSITELIB}/nltk/test/crubadan.doctest
 ${PYSITELIB}/nltk/test/data.doctest
 ${PYSITELIB}/nltk/test/dependency.doctest
@@ -774,16 +777,7 @@ ${PYSITELIB}/nltk/test/probability_fixt.pyo
 ${PYSITELIB}/nltk/test/propbank.doctest
 ${PYSITELIB}/nltk/test/relextract.doctest
 ${PYSITELIB}/nltk/test/resolution.doctest
-${PYSITELIB}/nltk/test/runtests.py
-${PYSITELIB}/nltk/test/runtests.pyc
-${PYSITELIB}/nltk/test/runtests.pyo
-${PYSITELIB}/nltk/test/segmentation_fixt.py
-${PYSITELIB}/nltk/test/segmentation_fixt.pyc
-${PYSITELIB}/nltk/test/segmentation_fixt.pyo
 ${PYSITELIB}/nltk/test/semantics.doctest
-${PYSITELIB}/nltk/test/semantics_fixt.py
-${PYSITELIB}/nltk/test/semantics_fixt.pyc
-${PYSITELIB}/nltk/test/semantics_fixt.pyo
 ${PYSITELIB}/nltk/test/sentiment.doctest
 ${PYSITELIB}/nltk/test/sentiwordnet.doctest
 ${PYSITELIB}/nltk/test/simple.doctest
@@ -792,9 +786,6 @@ ${PYSITELIB}/nltk/test/tag.doctest
 ${PYSITELIB}/nltk/test/tokenize.doctest
 ${PYSITELIB}/nltk/test/toolbox.doctest
 ${PYSITELIB}/nltk/test/translate.doctest
-${PYSITELIB}/nltk/test/translate_fixt.py
-${PYSITELIB}/nltk/test/translate_fixt.pyc
-${PYSITELIB}/nltk/test/translate_fixt.pyo
 ${PYSITELIB}/nltk/test/tree.doctest
 ${PYSITELIB}/nltk/test/treeprettyprinter.doctest
 ${PYSITELIB}/nltk/test/treetransforms.doctest
@@ -855,6 +846,9 @@ ${PYSITELIB}/nltk/test/unit/test_data.pyo
 ${PYSITELIB}/nltk/test/unit/test_disagreement.py
 ${PYSITELIB}/nltk/test/unit/test_disagreement.pyc
 ${PYSITELIB}/nltk/test/unit/test_disagreement.pyo
+${PYSITELIB}/nltk/test/unit/test_distance.py
+${PYSITELIB}/nltk/test/unit/test_distance.pyc
+${PYSITELIB}/nltk/test/unit/test_distance.pyo
 ${PYSITELIB}/nltk/test/unit/test_freqdist.py
 ${PYSITELIB}/nltk/test/unit/test_freqdist.pyc
 ${PYSITELIB}/nltk/test/unit/test_freqdist.pyo
@@ -867,6 +861,9 @@ ${PYSITELIB}/nltk/test/unit/test_json2csv_corpus.pyo
 ${PYSITELIB}/nltk/test/unit/test_json_serialization.py
 ${PYSITELIB}/nltk/test/unit/test_json_serialization.pyc
 ${PYSITELIB}/nltk/test/unit/test_json_serialization.pyo
+${PYSITELIB}/nltk/test/unit/test_metrics.py
+${PYSITELIB}/nltk/test/unit/test_metrics.pyc
+${PYSITELIB}/nltk/test/unit/test_metrics.pyo
 ${PYSITELIB}/nltk/test/unit/test_naivebayes.py
 ${PYSITELIB}/nltk/test/unit/test_naivebayes.pyc
 ${PYSITELIB}/nltk/test/unit/test_naivebayes.pyo
@@ -879,6 +876,9 @@ ${PYSITELIB}/nltk/test/unit/test_pl196x.pyo
 ${PYSITELIB}/nltk/test/unit/test_pos_tag.py
 ${PYSITELIB}/nltk/test/unit/test_pos_tag.pyc
 ${PYSITELIB}/nltk/test/unit/test_pos_tag.pyo
+${PYSITELIB}/nltk/test/unit/test_ribes.py
+${PYSITELIB}/nltk/test/unit/test_ribes.pyc
+${PYSITELIB}/nltk/test/unit/test_ribes.pyo
 ${PYSITELIB}/nltk/test/unit/test_rte_classify.py
 ${PYSITELIB}/nltk/test/unit/test_rte_classify.pyc
 ${PYSITELIB}/nltk/test/unit/test_rte_classify.pyo
@@ -903,6 +903,9 @@ ${PYSITELIB}/nltk/test/unit/test_tokenize.pyo
 ${PYSITELIB}/nltk/test/unit/test_twitter_auth.py
 ${PYSITELIB}/nltk/test/unit/test_twitter_auth.pyc
 ${PYSITELIB}/nltk/test/unit/test_twitter_auth.pyo
+${PYSITELIB}/nltk/test/unit/test_util.py
+${PYSITELIB}/nltk/test/unit/test_util.pyc
+${PYSITELIB}/nltk/test/unit/test_util.pyo
 ${PYSITELIB}/nltk/test/unit/test_wordnet.py
 ${PYSITELIB}/nltk/test/unit/test_wordnet.pyc
 ${PYSITELIB}/nltk/test/unit/test_wordnet.pyo
@@ -933,20 +936,17 @@ ${PYSITELIB}/nltk/test/unit/translate/test_ibm5.pyo
 ${PYSITELIB}/nltk/test/unit/translate/test_ibm_model.py
 ${PYSITELIB}/nltk/test/unit/translate/test_ibm_model.pyc
 ${PYSITELIB}/nltk/test/unit/translate/test_ibm_model.pyo
+${PYSITELIB}/nltk/test/unit/translate/test_meteor.py
+${PYSITELIB}/nltk/test/unit/translate/test_meteor.pyc
+${PYSITELIB}/nltk/test/unit/translate/test_meteor.pyo
 ${PYSITELIB}/nltk/test/unit/translate/test_nist.py
 ${PYSITELIB}/nltk/test/unit/translate/test_nist.pyc
 ${PYSITELIB}/nltk/test/unit/translate/test_nist.pyo
 ${PYSITELIB}/nltk/test/unit/translate/test_stack_decoder.py
 ${PYSITELIB}/nltk/test/unit/translate/test_stack_decoder.pyc
 ${PYSITELIB}/nltk/test/unit/translate/test_stack_decoder.pyo
-${PYSITELIB}/nltk/test/unit/utils.py
-${PYSITELIB}/nltk/test/unit/utils.pyc
-${PYSITELIB}/nltk/test/unit/utils.pyo
 ${PYSITELIB}/nltk/test/util.doctest
 ${PYSITELIB}/nltk/test/wordnet.doctest
-${PYSITELIB}/nltk/test/wordnet_fixt.py
-${PYSITELIB}/nltk/test/wordnet_fixt.pyc
-${PYSITELIB}/nltk/test/wordnet_fixt.pyo
 ${PYSITELIB}/nltk/test/wordnet_lch.doctest
 ${PYSITELIB}/nltk/test/wsd.doctest
 ${PYSITELIB}/nltk/text.py
@@ -967,6 +967,9 @@ ${PYSITELIB}/nltk/tokenize/casual.pyo
 ${PYSITELIB}/nltk/tokenize/destructive.py
 ${PYSITELIB}/nltk/tokenize/destructive.pyc
 ${PYSITELIB}/nltk/tokenize/destructive.pyo
+${PYSITELIB}/nltk/tokenize/legality_principle.py
+${PYSITELIB}/nltk/tokenize/legality_principle.pyc
+${PYSITELIB}/nltk/tokenize/legality_principle.pyo
 ${PYSITELIB}/nltk/tokenize/mwe.py
 ${PYSITELIB}/nltk/tokenize/mwe.pyc
 ${PYSITELIB}/nltk/tokenize/mwe.pyo
