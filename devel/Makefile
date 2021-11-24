@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3514 2021/11/23 12:42:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3515 2021/11/24 09:39:23 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2152,6 +2152,7 @@ SUBDIR+=	py-ZopeSchema
 SUBDIR+=	py-ZopeTestrunner
 SUBDIR+=	py-absl-py
 SUBDIR+=	py-adb
+SUBDIR+=	py-aenum
 SUBDIR+=	py-ailment
 SUBDIR+=	py-aiocontextvars
 SUBDIR+=	py-aiofiles
