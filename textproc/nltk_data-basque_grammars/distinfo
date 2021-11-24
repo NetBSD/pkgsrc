@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:00 wiz Exp $
+
+BLAKE2s (nltk_data-basque_grammars-20211124/basque_grammars.zip) = f221cb51846ba9be0319d6037f88bcee6e1dad4ea956e13976b9fa57a6522a38
+SHA512 (nltk_data-basque_grammars-20211124/basque_grammars.zip) = 52d07166551dadbf99830052595982b93c0f8c611c4051efc00dc2054a4a219b8a3ee57072f8bac51b34e5eb8e1e5631fc2668bf319d252fca201d798a58455a
+Size (nltk_data-basque_grammars-20211124/basque_grammars.zip) = 4704 bytes

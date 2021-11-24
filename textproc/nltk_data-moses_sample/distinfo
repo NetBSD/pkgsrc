@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:05 wiz Exp $
+
+BLAKE2s (nltk_data-moses_sample-20211124/moses_sample.zip) = 40b3b2b390feb58bf6a041ef3f91f384c73cad2618b801bd6318416a158ba1ea
+SHA512 (nltk_data-moses_sample-20211124/moses_sample.zip) = 54abd8add66ab286f3e016aa3fb7e74be0d4062117f382b13dc34b0091e823144f203e6c9b2c8ccaed6ffdd23e9667fee4aef57c7c95d7a3f4703eff7ee082a6
+Size (nltk_data-moses_sample-20211124/moses_sample.zip) = 10961490 bytes

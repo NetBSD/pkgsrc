@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:09 wiz Exp $
+
+BLAKE2s (nltk_data-sample_grammars-20211124/sample_grammars.zip) = a94464f524ecc11c93d22569bf0d053948b2ee83573a7e6852b8b3bb036a0483
+SHA512 (nltk_data-sample_grammars-20211124/sample_grammars.zip) = c4a99d38f6a85c6639d50b6fe9d0ce14bc87eb9dcb4a1a2dbc6756d756f903d6541d352401a42b20eb4a0df0ad1f41d75d33915b080345a9f88f4ad15f146b34
+Size (nltk_data-sample_grammars-20211124/sample_grammars.zip) = 20293 bytes

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:06 wiz Exp $
+
+BLAKE2s (nltk_data-nombank.1.0-20211124/nombank.1.0.zip) = 1078a68c76659406f91a71ee030f961fa27357575d0d2c12a42460954bac42a5
+SHA512 (nltk_data-nombank.1.0-20211124/nombank.1.0.zip) = 81bcf29898ba1205ccbc8486d14518e95b0189b97b172a54580d4cb4584f4ef32a5284fe0abed0b954e67a318de8f10de5df1a20e6c08976df09cd2c9c66cb32
+Size (nltk_data-nombank.1.0-20211124/nombank.1.0.zip) = 6728397 bytes

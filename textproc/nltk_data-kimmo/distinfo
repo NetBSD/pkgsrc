@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:04 wiz Exp $
+
+BLAKE2s (nltk_data-kimmo-20211124/kimmo.zip) = 4c7c7b669a861aeec9691ce0dae913f9566beba9b10735460eed8cad11f2ee6a
+SHA512 (nltk_data-kimmo-20211124/kimmo.zip) = fe38d5298ffb6dd62223c2002278d9ddf2695f341a29477f44434644bc6766cfe2c73091067f9eb8aea201735eef5012f96ba267f2e6ea3aec41ac206a43cac2
+Size (nltk_data-kimmo-20211124/kimmo.zip) = 186958 bytes

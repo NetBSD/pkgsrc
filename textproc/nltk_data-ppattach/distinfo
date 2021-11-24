@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:07 wiz Exp $
+
+BLAKE2s (nltk_data-ppattach-20211124/ppattach.zip) = fcc878557391e40f1fec499d65b25631b1dbc048ca136101b81bece9486a0840
+SHA512 (nltk_data-ppattach-20211124/ppattach.zip) = 9afa462379522276c8cbb8e8dc14a57cd221272da40056a1ea82daaee44a8464283927a9fcd94b426257bc3a04374db058cfc4fa31435cf8993942d05444befd
+Size (nltk_data-ppattach-20211124/ppattach.zip) = 781714 bytes

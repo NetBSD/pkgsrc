@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:03 wiz Exp $
+
+BLAKE2s (nltk_data-framenet_v17-20211124/framenet_v17.zip) = 6befb2102e3729b73e75e699c13d191b1c0a876a248c092cf6097a5c695e5b80
+SHA512 (nltk_data-framenet_v17-20211124/framenet_v17.zip) = 3696c5bb0fdd59058a8723ba3ca962a0d6422b36d8dcfad0427caa21dae9579b85f2f9af431aa1fc1cb76e823676a996c5a26aca99782017270d03ef3bd77f0d
+Size (nltk_data-framenet_v17-20211124/framenet_v17.zip) = 99207152 bytes

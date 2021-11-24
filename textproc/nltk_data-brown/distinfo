@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:01 wiz Exp $
+
+BLAKE2s (nltk_data-brown-20211124/brown.zip) = 8e26b551a0d3e7bf6b901cb0c082695448f63a14f6d2fe1ba3c959e1bb049c35
+SHA512 (nltk_data-brown-20211124/brown.zip) = f425e022f8f3eb459cf9ad7c90c326920430f7f0ad3e15d5961dfb5146ac355f7e13ba7681a78a26d3c5b146979eb778012aac4ce3dc5d59421a60798dede85d
+Size (nltk_data-brown-20211124/brown.zip) = 3314357 bytes

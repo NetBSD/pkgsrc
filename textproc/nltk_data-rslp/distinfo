@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:08 wiz Exp $
+
+BLAKE2s (nltk_data-rslp-20211124/rslp.zip) = 918844a2e8fd27fef8441ba8fdb717028f818cbd387c0cabfe70ca140793400a
+SHA512 (nltk_data-rslp-20211124/rslp.zip) = 83994b9cf2c925e559c68a03abb1499e3cd308fdb5ac6e698c3b5e2458393d9eae2420b02b4c46fd04527913133a1f19b3a2e5312f07e222e8cf072886f94973
+Size (nltk_data-rslp-20211124/rslp.zip) = 3805 bytes

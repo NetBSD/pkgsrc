@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:12 wiz Exp $
+
+BLAKE2s (nltk_data-verbnet-20211124/verbnet.zip) = 39b8dcfcc07f357761b4fafc2be14ab6cc2d8a9a4bc34d13952b8f7f7badc172
+SHA512 (nltk_data-verbnet-20211124/verbnet.zip) = 00368fb2d5cf1bf818f1d72762d2c40a98067937d71a65ece2ca0f4bfab6f8957b32ba66741901af34258cf3309d00dae433b1092d0b7adb145a791dc3bf859b
+Size (nltk_data-verbnet-20211124/verbnet.zip) = 323661 bytes

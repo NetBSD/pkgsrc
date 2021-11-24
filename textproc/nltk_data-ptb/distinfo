@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:08 wiz Exp $
+
+BLAKE2s (nltk_data-ptb-20211124/ptb.zip) = 9d4b2360b0600c79d71066bfefd608fb201bf813ec044be52c15aba31b762e81
+SHA512 (nltk_data-ptb-20211124/ptb.zip) = dd59d84f20ec52c38063f0961954c063f614b94696307a63fae21839c51c81435d0205fa276f6811d9da7fd083e93f51f0603b5c35dcddc539a9bf59b9dffb6e
+Size (nltk_data-ptb-20211124/ptb.zip) = 6289 bytes

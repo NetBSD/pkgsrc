@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:06 wiz Exp $
+
+BLAKE2s (nltk_data-panlex_swadesh-20211124/panlex_swadesh.zip) = 9125e507bfd927155778597ba4e169ccc321ae9fc7eac04cb295e7561cab0f62
+SHA512 (nltk_data-panlex_swadesh-20211124/panlex_swadesh.zip) = d096be1c6ea54814e448f61048f05df9107c0ca5f75eb3051a009efd4643c94188dde03505b0a4ae29d301268ffc5153eeee7012aae18310f9288fd4ccdb2287
+Size (nltk_data-panlex_swadesh-20211124/panlex_swadesh.zip) = 2861668 bytes

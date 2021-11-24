@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:04 wiz Exp $
+
+BLAKE2s (nltk_data-knbc-20211124/knbc.zip) = 7ee523b09a46bf7973a2fa690dc41142284b41fd77398e84e4025f55cd0bde55
+SHA512 (nltk_data-knbc-20211124/knbc.zip) = 76f2be8b8841fad1a4ffe9b31711614d19090d1571f9d076686f6276908b8b2fa3c7258dc037f1ae7e4eee63aefc041203982bd9d2ea155c944bb713cb1f37e8
+Size (nltk_data-knbc-20211124/knbc.zip) = 8760788 bytes

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:07 wiz Exp $
+
+BLAKE2s (nltk_data-porter_test-20211124/porter_test.zip) = 59658022dae6b2fcff10f1848df56d81274b7ec379c954dad42f2d44912bb9f6
+SHA512 (nltk_data-porter_test-20211124/porter_test.zip) = 8be4d1faad2b64bb3b9bfb2831c5b870d4213929fd087a9c62e217b85df9f1c1946c9cbdefcc51c110b4980f44bccc45a61c683cfc951b0913270fc11517bee6
+Size (nltk_data-porter_test-20211124/porter_test.zip) = 200510 bytes

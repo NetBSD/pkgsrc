@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:01 wiz Exp $
+
+BLAKE2s (nltk_data-book_grammars-20211124/book_grammars.zip) = ec9c18a6f048493c0e35fc1b426e3b77991050395f4627c4dd2262c88cd656af
+SHA512 (nltk_data-book_grammars-20211124/book_grammars.zip) = 8cfa085e8203f9c415d18c0afb3e3cf9963214929f4de71cf5933234e3623e432cfca3a167cd7c2d9cdd4d22496cf959249790789782675cec392d0e0ef5549d
+Size (nltk_data-book_grammars-20211124/book_grammars.zip) = 9103 bytes

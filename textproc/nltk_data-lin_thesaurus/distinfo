@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:04 wiz Exp $
+
+BLAKE2s (nltk_data-lin_thesaurus-20211124/lin_thesaurus.zip) = 1d2c76b15f4b850b747afaf7032a582cd2a659d1176237363a3225f6845c09a7
+SHA512 (nltk_data-lin_thesaurus-20211124/lin_thesaurus.zip) = 7972391164c7fcc90be80f4b673551cfbbaaf78653331023119a4296d6434c5a123dbdd4e631efc732531d1a5d0eb7ed1c9b46a2680d6493f3cb2bcf5c6f6d45
+Size (nltk_data-lin_thesaurus-20211124/lin_thesaurus.zip) = 89154019 bytes

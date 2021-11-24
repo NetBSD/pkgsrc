@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:09 wiz Exp $
+
+BLAKE2s (nltk_data-sentiwordnet-20211124/sentiwordnet.zip) = 94a423a4bca41dddc6169fa7a3dcfc2f108419445f77214319b49fcc08597d59
+SHA512 (nltk_data-sentiwordnet-20211124/sentiwordnet.zip) = cd0ff31abec3b85e3114546918c9152360e3da45fbbaf7b4c76a13a6d288f1d9ea7a4633638080cd0205cc293b4123445106e9b5daddb2ae379d6a08d1c992a5
+Size (nltk_data-sentiwordnet-20211124/sentiwordnet.zip) = 4686546 bytes

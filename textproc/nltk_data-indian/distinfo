@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:04 wiz Exp $
+
+BLAKE2s (nltk_data-indian-20211124/indian.zip) = 29fe65fd0e85d6cfbf5f734376f0c684d300d90d0496f34d4e36b3b984a24c70
+SHA512 (nltk_data-indian-20211124/indian.zip) = 08e9342567bcc607e9007aea8415af2cad1f8a289104b47a61bf569f1391629ebbe25f19aacf53e2b14725edfdf18076331f044e1c2e42d07c96d5c875ff8f9e
+Size (nltk_data-indian-20211124/indian.zip) = 199187 bytes

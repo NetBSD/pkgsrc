@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:05 wiz Exp $
+
+BLAKE2s (nltk_data-mte_teip5-20211124/mte_teip5.zip) = 6fc10c16ae272fc43aa6a152e008f3f3ba898f946887942e5bd3184c0888969e
+SHA512 (nltk_data-mte_teip5-20211124/mte_teip5.zip) = 10ffd9801bc665c4a3af47c0591a04144ead556cbc80604218d97f334139513c7a23ce90c76b2bfe873b16f94bdee5cae00bd99ae9da8c7d0e1e21aabfe99d74
+Size (nltk_data-mte_teip5-20211124/mte_teip5.zip) = 14800561 bytes

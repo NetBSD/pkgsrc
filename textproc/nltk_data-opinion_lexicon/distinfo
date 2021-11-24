@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:06 wiz Exp $
+
+BLAKE2s (nltk_data-opinion_lexicon-20211124/opinion_lexicon.zip) = 678a75aa117f79b780de18419df56dcfd6a66e30dc0d7555a925f20faef60c98
+SHA512 (nltk_data-opinion_lexicon-20211124/opinion_lexicon.zip) = 75b98afa24c4e0284b2858770d7655c5c399066f56c1b9aa03dd51d80f211a694856695f8192570f67f02f0827ab02c3f3b65feb5a56c04bebfae3b58ca56ba1
+Size (nltk_data-opinion_lexicon-20211124/opinion_lexicon.zip) = 24947 bytes
