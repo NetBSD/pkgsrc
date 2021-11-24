@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/24 15:57:07 wiz Exp $
+share/nltk_data/misc/perluniprops.zip

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:10 wiz Exp $
+
+BLAKE2s (nltk_data-swadesh-20211124/swadesh.zip) = 8a23f3dab7a3bd2a4a452609d04e296479ac4b124268bda418810270e9c8ca67
+SHA512 (nltk_data-swadesh-20211124/swadesh.zip) = 90cb32532a5378d05ce34b84b5f8363dbb32f24afac58b0dcc5cdccba98fd7d37def7f4fbe76b11c8c64059bd19df745562bfbf5f4c721d65ce9f4be1348ab76
+Size (nltk_data-swadesh-20211124/swadesh.zip) = 22828 bytes

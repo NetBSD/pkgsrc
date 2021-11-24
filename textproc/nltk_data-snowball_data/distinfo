@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:09 wiz Exp $
+
+BLAKE2s (nltk_data-snowball_data-20211124/snowball_data.zip) = 70f8ebe29f38888808775f97250d616bac9640f6e62902478824692cc7e7f74e
+SHA512 (nltk_data-snowball_data-20211124/snowball_data.zip) = 6c8a9259d88f6f7f499867d83b731de99d7fa4e8827ecedf836f653fc1a810efa9f6c5c6e2720a9e6610bc00978956b6a119bd08b70e3e241c4e9faccddd81d8
+Size (nltk_data-snowball_data-20211124/snowball_data.zip) = 6785405 bytes

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:02 wiz Exp $
+
+BLAKE2s (nltk_data-comtrans-20211124/comtrans.zip) = 13472ef5e406c448de774f114ed3904eb7ed32e27293815d66dae505f751e147
+SHA512 (nltk_data-comtrans-20211124/comtrans.zip) = c631d2d21f5a997548ad979e116e9ac642808bea0faa07fa93c57e0d455abb151b9c7d6badbc0b4ff4390994cb7736e722217a9c3da1c8d51da94d6e85629664
+Size (nltk_data-comtrans-20211124/comtrans.zip) = 11904518 bytes

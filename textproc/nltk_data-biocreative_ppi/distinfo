@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:01 wiz Exp $
+
+BLAKE2s (nltk_data-biocreative_ppi-20211124/biocreative_ppi.zip) = 205fe5a161cecc693324f006913f17eeab601c5292b164fb10d8c979f1211aff
+SHA512 (nltk_data-biocreative_ppi-20211124/biocreative_ppi.zip) = b6dd5eee7849c1161afca851d22106671ba27cef63d4bf7f500b6c92625b31cbf4aa7593ae65c7eac25f532ce93f06faeb78e7131e35b5cc0c2d74a2c06d43d7
+Size (nltk_data-biocreative_ppi-20211124/biocreative_ppi.zip) = 223566 bytes

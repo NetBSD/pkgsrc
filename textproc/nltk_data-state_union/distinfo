@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:10 wiz Exp $
+
+BLAKE2s (nltk_data-state_union-20211124/state_union.zip) = 62b5085e136a4adeee871c1bc6e46beee28f64b0ddae27e7b5613c08e5ad906e
+SHA512 (nltk_data-state_union-20211124/state_union.zip) = a6fc83e6230e57ba66a7af62f0d2a5d44a14530ed1e0e914590b3f8b5bf939967c126a5e6f6899ba9134843893f65212e836d311109393c1200191a5c3163485
+Size (nltk_data-state_union-20211124/state_union.zip) = 808757 bytes

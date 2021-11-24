@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/24 15:57:12 wiz Exp $
+share/nltk_data/models/wmt15_eval/README.txt
+share/nltk_data/models/wmt15_eval/google.ru
+share/nltk_data/models/wmt15_eval/mteval-13a.output
+share/nltk_data/models/wmt15_eval/newstest-2015-100sents.en-ru.google.ru
+share/nltk_data/models/wmt15_eval/newstest-2015-100sents.en-ru.ref.ru
+share/nltk_data/models/wmt15_eval/newstest-2015-100sents.en-ru.src.en
+share/nltk_data/models/wmt15_eval/newstest2015-100sents-enru-google.ru.sgm
+share/nltk_data/models/wmt15_eval/newstest2015-100sents-enru-ref.ru.sgm
+share/nltk_data/models/wmt15_eval/newstest2015-100sents-enru-src.en.sgm
+share/nltk_data/models/wmt15_eval/newstest2015-enru-ref.ru.sgm
+share/nltk_data/models/wmt15_eval/newstest2015-enru-src.en.sgm
+share/nltk_data/models/wmt15_eval/ref.ru
+share/nltk_data/models/wmt15_eval/src.en

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:06 wiz Exp $
+
+BLAKE2s (nltk_data-pe08-20211124/pe08.zip) = 7b187279e3cbe748c427dd79bfa746dbb6a0ba53c7c85f431c8a8a32f07d2fae
+SHA512 (nltk_data-pe08-20211124/pe08.zip) = c0d5fd7df03b0d3e69a45e4f3463cd3a9de76a4d66c39c0b0641ede9ddab34bae1df14d85c85c78b4d375b478b4a4cbefdbc5100aff6c4e59e550903537d3416
+Size (nltk_data-pe08-20211124/pe08.zip) = 80735 bytes

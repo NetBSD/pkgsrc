@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:09 wiz Exp $
+
+BLAKE2s (nltk_data-semcor-20211124/semcor.zip) = 9a9a15606d51f9656fba582f31b8f0a88252e3b99b2369192fdbc7c7ef5752d1
+SHA512 (nltk_data-semcor-20211124/semcor.zip) = a6d45b8c1043d94493fea3abebfb6fd1d690192243739d98f0df8a3e89de3a07da17078bce9797373c2312a249cdfbee41c952f1acce4e17c5cfd12e02d7267f
+Size (nltk_data-semcor-20211124/semcor.zip) = 4397021 bytes
