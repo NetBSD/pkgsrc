@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2021/06/22 09:36:41 nia Exp $
+@comment $NetBSD: PLIST,v 1.38.4.1 2021/11/24 12:45:47 tm Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -225,6 +225,7 @@ ${PYSITELIB}/samba/dcerpc/epmapper.so
 ${PYSITELIB}/samba/dcerpc/idmap.so
 ${PYSITELIB}/samba/dcerpc/initshutdown.so
 ${PYSITELIB}/samba/dcerpc/irpc.so
+${PYSITELIB}/samba/dcerpc/krb5ccache.so
 ${PYSITELIB}/samba/dcerpc/krb5pac.so
 ${PYSITELIB}/samba/dcerpc/lsa.so
 ${PYSITELIB}/samba/dcerpc/mdssvc.so
@@ -389,6 +390,7 @@ ${PYSITELIB}/samba/tests/dcerpc/array.py
 ${PYSITELIB}/samba/tests/dcerpc/bare.py
 ${PYSITELIB}/samba/tests/dcerpc/dnsserver.py
 ${PYSITELIB}/samba/tests/dcerpc/integer.py
+${PYSITELIB}/samba/tests/dcerpc/lsa.py
 ${PYSITELIB}/samba/tests/dcerpc/mdssvc.py
 ${PYSITELIB}/samba/tests/dcerpc/misc.py
 ${PYSITELIB}/samba/tests/dcerpc/raw_protocol.py
@@ -414,6 +416,7 @@ ${PYSITELIB}/samba/tests/docs.py
 ${PYSITELIB}/samba/tests/domain_backup.py
 ${PYSITELIB}/samba/tests/domain_backup_offline.py
 ${PYSITELIB}/samba/tests/dsdb.py
+${PYSITELIB}/samba/tests/dsdb_api.py
 ${PYSITELIB}/samba/tests/dsdb_lock.py
 ${PYSITELIB}/samba/tests/dsdb_schema_attributes.py
 ${PYSITELIB}/samba/tests/emulate/__init__.py
@@ -434,15 +437,35 @@ ${PYSITELIB}/samba/tests/kcc/graph.py
 ${PYSITELIB}/samba/tests/kcc/graph_utils.py
 ${PYSITELIB}/samba/tests/kcc/kcc_utils.py
 ${PYSITELIB}/samba/tests/kcc/ldif_import_export.py
+${PYSITELIB}/samba/tests/krb5/alias_tests.py
+${PYSITELIB}/samba/tests/krb5/as_canonicalization_tests.py
+${PYSITELIB}/samba/tests/krb5/as_req_tests.py
+${PYSITELIB}/samba/tests/krb5/compatability_tests.py
+${PYSITELIB}/samba/tests/krb5/fast_tests.py
 ${PYSITELIB}/samba/tests/krb5/kcrypto.py
+${PYSITELIB}/samba/tests/krb5/kdc_base_test.py
+${PYSITELIB}/samba/tests/krb5/kdc_tests.py
+${PYSITELIB}/samba/tests/krb5/kdc_tgs_tests.py
+${PYSITELIB}/samba/tests/krb5/ms_kile_client_principal_lookup_tests.py
 ${PYSITELIB}/samba/tests/krb5/raw_testcase.py
+${PYSITELIB}/samba/tests/krb5/rfc4120_constants.py
 ${PYSITELIB}/samba/tests/krb5/rfc4120_pyasn1.py
+${PYSITELIB}/samba/tests/krb5/rodc_tests.py
 ${PYSITELIB}/samba/tests/krb5/s4u_tests.py
+${PYSITELIB}/samba/tests/krb5/salt_tests.py
 ${PYSITELIB}/samba/tests/krb5/simple_tests.py
+${PYSITELIB}/samba/tests/krb5/spn_tests.py
+${PYSITELIB}/samba/tests/krb5/test_ccache.py
+${PYSITELIB}/samba/tests/krb5/test_ldap.py
+${PYSITELIB}/samba/tests/krb5/test_min_domain_uid.py
+${PYSITELIB}/samba/tests/krb5/test_rpc.py
+${PYSITELIB}/samba/tests/krb5/test_smb.py
 ${PYSITELIB}/samba/tests/krb5/xrealm_tests.py
 ${PYSITELIB}/samba/tests/krb5_credentials.py
 ${PYSITELIB}/samba/tests/ldap_raw.py
 ${PYSITELIB}/samba/tests/ldap_referrals.py
+${PYSITELIB}/samba/tests/ldap_spn.py
+${PYSITELIB}/samba/tests/ldap_upn_sam_account.py
 ${PYSITELIB}/samba/tests/libsmb.py
 ${PYSITELIB}/samba/tests/loadparm.py
 ${PYSITELIB}/samba/tests/lsa_string.py
@@ -640,6 +663,7 @@ lib/samba/private/libcom_err-samba4.so.0.25
 lib/samba/private/libcommon-auth-samba4.so
 lib/samba/private/libdb-glue-samba4.so
 lib/samba/private/libdbwrap-samba4.so
+lib/samba/private/libdcerpc-pkt-auth-samba4.so
 lib/samba/private/libdcerpc-samba-samba4.so
 lib/samba/private/libdcerpc-samba4.so
 lib/samba/private/libdfs-server-ad-samba4.so
