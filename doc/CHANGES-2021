@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5807 2021/11/24 16:55:08 hauke Exp $
+$NetBSD: CHANGES-2021,v 1.5808 2021/11/24 18:23:25 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8825,3 +8825,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added textproc/nltk_data-ycoe version 20211124 [wiz 2021-11-24]
 	Updated textproc/py-nltk to 3.6.5 [wiz 2021-11-24]
 	Updated sysutils/p5-Unburden-Home-Dir to 0.4.1.3 [hauke 2021-11-24]
+	Updated sysutils/onefetch to 2.11.0 [pin 2021-11-24]
