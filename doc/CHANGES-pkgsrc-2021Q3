@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.34 2021/11/23 23:02:41 tm Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.35 2021/11/24 12:47:09 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -124,4 +124,7 @@ lang/php80: security fix
 
 Pullup ticket #6536 - requested by taca
 databases/ldb: dependency for samba4 security fix
+
+Pullup ticket #6537 - requested by taca
+net/samba4: security fix
 
