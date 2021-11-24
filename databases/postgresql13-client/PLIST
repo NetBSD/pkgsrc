@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/05/18 11:56:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.4.4.1 2021/11/24 14:31:20 tm Exp $
 bin/clusterdb
 bin/createdb
 bin/createuser
@@ -128,6 +128,7 @@ include/postgresql/server/access/twophase.h
 include/postgresql/server/access/twophase_rmgr.h
 include/postgresql/server/access/valid.h
 include/postgresql/server/access/visibilitymap.h
+include/postgresql/server/access/visibilitymapdefs.h
 include/postgresql/server/access/xact.h
 include/postgresql/server/access/xlog.h
 include/postgresql/server/access/xlog_internal.h

@@ -1,20 +1,6 @@
-$NetBSD: distinfo,v 1.22 2021/08/13 11:54:43 adam Exp $
+$NetBSD: distinfo,v 1.22.2.1 2021/11/24 14:31:19 tm Exp $
 
-SHA1 (postgresql-10.18.tar.bz2) = a9f6d96343cc5dcf8b28e6fce5a2955041b14003
-RMD160 (postgresql-10.18.tar.bz2) = fe43854c91bf98c44c22eee2f9b014691d86bf5f
-SHA512 (postgresql-10.18.tar.bz2) = 8a564256b0a5f6375a817cc5db14e56f7f7ee831881a2dc78759e7f2cf708d95fb61ad75a01f13fb05517ab165c991794d837bbb93f60d54f4fb33ca0ac45729
-Size (postgresql-10.18.tar.bz2) = 19197042 bytes
-SHA1 (patch-config_missing) = c2d7d742922ba6861e7660c75b7b53f09e564813
-SHA1 (patch-config_perl.m4) = b3393d0f28e97f89ae20297d85553c508b3896bb
-SHA1 (patch-configure) = b0a758023b3b263ff51b154d0da32cf02520c6cd
-SHA1 (patch-contrib_dblink_dblink.c) = a6f87ab9f2c28a72608d70267b71bd77437b0921
-SHA1 (patch-contrib_uuid-ossp_Makefile) = 2eff5d539a4501dda45d23bc094a5099a456e0af
-SHA1 (patch-src_Makefile.global.in) = 335b57afff23a9684ab0a09257665810c1ba2d1e
-SHA1 (patch-src_Makefile.shlib) = 74ab026a457a4789a1aa1d6423d88ce4a2db7a2e
-SHA1 (patch-src_backend_Makefile) = 480ac63f07fec2eaacffdbee5c5aa104081d0ee4
-SHA1 (patch-src_backend_utils_adt_datetime.c) = d1ea70986634d3bfb663eff789425252656e1289
-SHA1 (patch-src_interfaces_ecpg_pgtypeslib_interval.c) = a15012ae34d4ecd1eb2bc29e4d2c40098ea236fd
-SHA1 (patch-src_interfaces_libpq_Makefile) = 61bcf84eb69b6ec9faabab0b61913766f4b20f8c
-SHA1 (patch-src_makefiles_Makefile.solaris) = 0168f5bc105ffc89d5db40907a08966d8465f5a0
-SHA1 (patch-src_pl_plperl_GNUmakefile) = 6ee3e431f46ce5c2a94df499504b2b8bd458bbef
-SHA1 (patch-src_pl_plperl_plperl.h) = 64d5b891362c114bde5ec48e48bc4855b56ab516
+SHA1 (postgresql-10.19.tar.bz2) = f44edcc4d612f6a1b39c233ee7b1e80feb6d0456
+RMD160 (postgresql-10.19.tar.bz2) = 8e1fd79ea6ddd5388cca8b3a54397ced66458cce
+SHA512 (postgresql-10.19.tar.bz2) = 41b0f5026be7d563e41b54e9ea7199dd466a132d355be0b71a91d41f533d97fbf550eccf2a2ece3d60c5dab5921ebeea3ac4780c18c54b924df52d7423305a22
+Size (postgresql-10.19.tar.bz2) = 19261478 bytes
