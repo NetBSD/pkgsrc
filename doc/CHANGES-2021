@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5805 2021/11/24 15:58:54 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5806 2021/11/24 16:00:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8823,3 +8823,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added textproc/nltk_data-wordnet_ic version 20211124 [wiz 2021-11-24]
 	Added textproc/nltk_data-words version 20211124 [wiz 2021-11-24]
 	Added textproc/nltk_data-ycoe version 20211124 [wiz 2021-11-24]
+	Updated textproc/py-nltk to 3.6.5 [wiz 2021-11-24]
