@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/12/20 14:13:56 adam Exp $
+# $NetBSD: Makefile,v 1.3 2021/11/24 11:28:52 wiz Exp $
 
 DISTNAME=	moto-1.1.19
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,19 +26,22 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.10:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-werkzeug-[0-9]*:../../www/py-werkzeug
 DEPENDS+=	${PYPKGPREFIX}-xmltodict-[0-9]*:../../textproc/py-xmltodict
 
-# TEST_DEPENDS
-BUILD_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
-BUILD_DEPENDS+=	${PYPKGPREFIX}-gdbm-[0-9]*:../../databases/py-gdbm
-BUILD_DEPENDS+=	${PYPKGPREFIX}-lxml>=4.0.0:../../textproc/py-lxml
-BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
-BUILD_DEPENDS+=	${PYPKGPREFIX}-sure>=1.2.24:../../devel/py-sure
-BUILD_DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
+TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
+TEST_DEPENDS+=	${PYPKGPREFIX}-gdbm-[0-9]*:../../databases/py-gdbm
+TEST_DEPENDS+=	${PYPKGPREFIX}-lxml>=4.0.0:../../textproc/py-lxml
+TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-sure>=1.2.24:../../devel/py-sure
+TEST_DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
+
+TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} moto_server moto_server${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
-	cd ${WRKSRC}/tests && nosetests-${PYVERSSUFFIX}
+	#cd ${WRKSRC}/tests && nosetests-${PYVERSSUFFIX}
+	cd ${WRKSRC}/tests && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
