@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:00 wiz Exp $
+
+BLAKE2s (nltk_data-averaged_perceptron_tagger_ru-20211124/averaged_perceptron_tagger_ru.zip) = f9c2584677acd9e40da0ed89308d582ce9aa3c970ee39a6458af1923b294b9b4
+SHA512 (nltk_data-averaged_perceptron_tagger_ru-20211124/averaged_perceptron_tagger_ru.zip) = fd56c7f8188c2ddd6b6239189ffa701c56f2e47376a210bb0c92881969304874f720f27a6965e853db2bf43aff202f09dfea7bb30420590e1a75940493797db6
+Size (nltk_data-averaged_perceptron_tagger_ru-20211124/averaged_perceptron_tagger_ru.zip) = 8628828 bytes

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:11 wiz Exp $
+
+BLAKE2s (nltk_data-universal_treebanks_v20-20211124/universal_treebanks_v20.zip) = ac0c2ca5911fac02242e9e663e623fe4c5cc0b10ebd2149f5864648657bb18d9
+SHA512 (nltk_data-universal_treebanks_v20-20211124/universal_treebanks_v20.zip) = 3dcabe02ff8bb1044f7d9e1c5af294af05291ff33a6c8dc16d3a3c855ccbf3a8261d92ea926e15e0d7f9228ae81e7863a283b156812ad30575c9ea947ecbcc55
+Size (nltk_data-universal_treebanks_v20-20211124/universal_treebanks_v20.zip) = 25908853 bytes

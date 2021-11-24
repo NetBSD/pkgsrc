@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:02 wiz Exp $
+
+BLAKE2s (nltk_data-crubadan-20211124/crubadan.zip) = b992cbf4e22fdb0aa2a17a51a26eece7b862643c1023ad6913bda2e93af7fa14
+SHA512 (nltk_data-crubadan-20211124/crubadan.zip) = cbb6a8c53a89bb68238853da2409b3bf04e832ede977bee673ad966a74f4c732ee6ba844b8171de26a641fc24f2e9f6d4755adeef3524583f8765d3237057726
+Size (nltk_data-crubadan-20211124/crubadan.zip) = 5288655 bytes

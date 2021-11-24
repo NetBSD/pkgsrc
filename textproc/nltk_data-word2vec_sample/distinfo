@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:12 wiz Exp $
+
+BLAKE2s (nltk_data-word2vec_sample-20211124/word2vec_sample.zip) = 18a241f80f80565de328a0d348123af2cd03a0def5bd5224182c8a6bd921a86d
+SHA512 (nltk_data-word2vec_sample-20211124/word2vec_sample.zip) = 09c30a4ab8f9fb6a5b36974b5953260d01cb4f285827fb90a374d054ad775ac978602ab56c452f46f4f8601312e232fd739d2f54dafa44ab8b7b01831cf0d9d1
+Size (nltk_data-word2vec_sample-20211124/word2vec_sample.zip) = 49396025 bytes

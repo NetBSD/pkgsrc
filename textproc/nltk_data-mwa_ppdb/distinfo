@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:05 wiz Exp $
+
+BLAKE2s (nltk_data-mwa_ppdb-20211124/mwa_ppdb.zip) = 512fc63e53539cf7cf59d3d47ad777b04a81710dcc269b65bb0cef65d9838bce
+SHA512 (nltk_data-mwa_ppdb-20211124/mwa_ppdb.zip) = 4fbc2ea7c211298847c5fdfb187ea3d08fe385611fbc51d1a21efbf77c45ca886e4765007204ed03b03ee6431804d8cb4239416e95b7eea20f2f612549a60727
+Size (nltk_data-mwa_ppdb-20211124/mwa_ppdb.zip) = 1594711 bytes

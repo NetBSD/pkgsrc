@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:10 wiz Exp $
+
+BLAKE2s (nltk_data-switchboard-20211124/switchboard.zip) = 30761319b164febfe1a73fca9eca935fccb053a4064803655974dcae035a7b06
+SHA512 (nltk_data-switchboard-20211124/switchboard.zip) = 690e5392dc082c4ac550bde2848aa65117e7a25cbc4bce0887581c531d03be64e21f044ac0a3286648255f0edd7766b1161f5575ad5fd680c7303b34c3226b8f
+Size (nltk_data-switchboard-20211124/switchboard.zip) = 791161 bytes

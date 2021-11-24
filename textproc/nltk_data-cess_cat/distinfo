@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:01 wiz Exp $
+
+BLAKE2s (nltk_data-cess_cat-20211124/cess_cat.zip) = 4c4147357ffe1cf6f1d62acc6c5b4519ad0ae72cec7bcfcbbdb45ffd49bd7103
+SHA512 (nltk_data-cess_cat-20211124/cess_cat.zip) = 6f14beaa98a5f0731fe126c7e10110045c7cac8f7893bea0a6895bc64e6953622f989e93c2e77f6d66d5a3024acc11422584d6563fc3efa84766757e2c5d4127
+Size (nltk_data-cess_cat-20211124/cess_cat.zip) = 5396688 bytes

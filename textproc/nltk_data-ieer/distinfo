@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:04 wiz Exp $
+
+BLAKE2s (nltk_data-ieer-20211124/ieer.zip) = 09449704d1c26e031842711c45efa70730934a31b27b83137768ec0f95be06c7
+SHA512 (nltk_data-ieer-20211124/ieer.zip) = b55545f0ac03282fb85c4a86bb69fd9988db8cc504114bff7b763007e20f559efa61b8ae5b7955c251c1c2dd9d23246e23515b1cd5d8d28225c20ec236c05cd8
+Size (nltk_data-ieer-20211124/ieer.zip) = 166156 bytes

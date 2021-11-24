@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:08 wiz Exp $
+
+BLAKE2s (nltk_data-propbank-20211124/propbank.zip) = cc37b95b4a1edeaa994da7825b15428b43fc78d513239610bcd08fca46e96eb5
+SHA512 (nltk_data-propbank-20211124/propbank.zip) = 6bb6f88648c1f6044d30dbc56ce1924240ddc1420c7abe8ebecf3684d69bc2dc20f1c575a6ae368a39fff40c5ef09f80d94bf317a37301639321085f102b54bf
+Size (nltk_data-propbank-20211124/propbank.zip) = 5323498 bytes

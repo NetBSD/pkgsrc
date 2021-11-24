@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/24 15:57:11 wiz Exp $
+
+BLAKE2s (nltk_data-twitter_samples-20211124/twitter_samples.zip) = c1e4614a362d9baaa5654f6388c0a938be41d86016c24c2f2278b2b9d6d07358
+SHA512 (nltk_data-twitter_samples-20211124/twitter_samples.zip) = 1c950e0135e8da58540ca618a1d52f0359afde44b429bede4005182924736d3edbc0fe52638a2101664490fe7e2eb25d7ab704909b241b9349b8c5aa7a185892
+Size (nltk_data-twitter_samples-20211124/twitter_samples.zip) = 16007673 bytes
