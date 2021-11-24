@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5800 2021/11/24 10:22:40 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5801 2021/11/24 11:54:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8711,3 +8711,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/py-aenum version 3.1.5 [wiz 2021-11-24]
 	Added databases/py-dbf version 0.99.1 [wiz 2021-11-24]
 	Updated textproc/csvkit to 0.9.0nb4 [wiz 2021-11-24]
+	Updated devel/py-nose to 1.3.7nb1 [wiz 2021-11-24]
