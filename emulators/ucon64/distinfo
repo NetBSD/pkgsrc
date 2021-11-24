@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:24:14 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/11/24 12:05:18 wiz Exp $
 
-BLAKE2s (ucon64-2.2.1-src.tar.gz) = 284e9898df53397682d44493118a779116f79e4d33d1e274f476214b031b37b6
-SHA512 (ucon64-2.2.1-src.tar.gz) = 34453399151e5ed256fdcf387b9d32a052718b264e51b99a2be251b90589337d13cd317f8d1aa7d3c8e39c8e407b22797d4608ec6d14b99c8673ec74f349f6c2
-Size (ucon64-2.2.1-src.tar.gz) = 1476080 bytes
-SHA1 (patch-libdiscmage_ioapi.h) = a5857b1623a3180d09e19815e261f23491aaad96
-SHA1 (patch-libdiscmage_misc.c) = df3124b713b9db5379fa2bfd529c5637b6e8f6d0
-SHA1 (patch-misc_ioapi.h) = dc2939f8f404e25a7dcb841555024551f2962984
-SHA1 (patch-misc_misc.c) = 528e1f79df8c01841a95c0632becf8fcd1358255
+BLAKE2s (ucon64-2.2.2-src.tar.gz) = aecd9fab19cf65c2f057e926dcf8fb20406da3d4539a73eed4eb74669c081080
+SHA512 (ucon64-2.2.2-src.tar.gz) = 21e403e6de64c0a76de32032fbafea75f53a96b88b343220cdc8d62ef3bdec252764cacb9bbf98a910477ba451bc05aee8c9f91024b9e5d3149f7ead20d426b5
+Size (ucon64-2.2.2-src.tar.gz) = 1481087 bytes
