@@ -1,6 +1,7 @@
-$NetBSD: patch-setup.py,v 1.2 2015/04/18 18:27:16 cheusov Exp $
+$NetBSD: patch-setup.py,v 1.3 2021/11/24 10:22:32 wiz Exp $
 
 # Fix too strict requirements
+
 --- setup.py.orig	2014-09-09 00:22:49.000000000 +0000
 +++ setup.py
 @@ -8,7 +8,7 @@ install_requires = [
