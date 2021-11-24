@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5799 2021/11/24 09:51:55 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5800 2021/11/24 10:22:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8710,3 +8710,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed net/py-caldav [wiz 2021-11-24]
 	Added devel/py-aenum version 3.1.5 [wiz 2021-11-24]
 	Added databases/py-dbf version 0.99.1 [wiz 2021-11-24]
+	Updated textproc/csvkit to 0.9.0nb4 [wiz 2021-11-24]
