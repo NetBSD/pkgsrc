@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5797 2021/11/24 09:28:33 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5798 2021/11/24 09:39:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8708,3 +8708,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/nnn to 4.4 [sjmulder 2021-11-23]
 	Updated geography/geos to 3.10.1 [gdt 2021-11-24]
 	Removed net/py-caldav [wiz 2021-11-24]
+	Added devel/py-aenum version 3.1.5 [wiz 2021-11-24]
