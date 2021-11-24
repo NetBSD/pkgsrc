@@ -1,3 +1,0 @@
-This project is a CalDAV (RFC4791) client library for Python. A lot of work
-still needs to be done; however, it can read everything, and write a few things
-(create calendars, events, modify events and properties).
