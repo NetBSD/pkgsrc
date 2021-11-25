@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5827 2021/11/25 21:15:01 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5828 2021/11/25 21:19:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8853,3 +8853,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-hypothesis to 6.27.1 [adam 2021-11-25]
 	Updated devel/py-test-mock to 3.6.1 [adam 2021-11-25]
 	Added textproc/py-tomli version 1.2.2 [wiz 2021-11-25]
+	Added devel/py-build version 0.7.0 [wiz 2021-11-25]
