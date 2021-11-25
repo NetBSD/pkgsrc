@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3516 2021/11/25 19:33:58 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3517 2021/11/25 21:18:54 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2200,6 +2200,7 @@ SUBDIR+=	py-blinker
 SUBDIR+=	py-boltons
 SUBDIR+=	py-boost
 SUBDIR+=	py-bugzilla
+SUBDIR+=	py-build
 SUBDIR+=	py-buildbot
 SUBDIR+=	py-buildbot-badges
 SUBDIR+=	py-buildbot-console-view
