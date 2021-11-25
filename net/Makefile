@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1434 2021/11/24 09:28:33 wiz Exp $
+# $NetBSD: Makefile,v 1.1435 2021/11/25 08:19:48 schmonz Exp $
 #
 
 COMMENT=	Networking tools
@@ -138,6 +138,7 @@ SUBDIR+=	exabgp
 SUBDIR+=	ez-ipupdate
 SUBDIR+=	fair-identd
 SUBDIR+=	fastd
+SUBDIR+=	fd-proxy
 SUBDIR+=	fehqlibs
 SUBDIR+=	fetch
 SUBDIR+=	filezilla
