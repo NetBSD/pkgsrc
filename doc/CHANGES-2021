@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5814 2021/11/25 12:12:20 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5815 2021/11/25 14:34:22 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8833,3 +8833,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added net/fd-proxy version 20141025 [schmonz 2021-11-25]
 	Added www/py-multipart version 0.2.4 [wiz 2021-11-25]
 	Added www/py-python-multipart version 0.0.5 [wiz 2021-11-25]
+	Updated www/firefox to 94.0.2 [ryoon 2021-11-25]
