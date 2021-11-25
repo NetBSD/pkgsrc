@@ -1,11 +1,11 @@
-$NetBSD: patch-lib_rubygems_installer.rb,v 1.1 2021/02/14 14:32:41 taca Exp $
+$NetBSD: patch-lib_rubygems_installer.rb,v 1.2 2021/11/25 16:35:52 taca Exp $
 
 * Add install_root option for pkgsrc's rubygems support.
 * Tweak build_info directory with destdir to store build_args.
 
---- lib/rubygems/installer.rb.orig	2020-12-25 03:33:01.000000000 +0000
+--- lib/rubygems/installer.rb.orig	2021-11-24 11:12:15.000000000 +0000
 +++ lib/rubygems/installer.rb
-@@ -158,6 +158,9 @@ class Gem::Installer
+@@ -166,6 +166,9 @@ class Gem::Installer
    #                      foo_exec18.
    # :ignore_dependencies:: Don't raise if a dependency is missing.
    # :install_dir:: The directory to install the gem into.
@@ -15,7 +15,7 @@ $NetBSD: patch-lib_rubygems_installer.rb,v 1.1 2021/02/14 14:32:41 taca Exp $
    # :security_policy:: Use the specified security policy.  See Gem::Security
    # :user_install:: Indicate that the gem should be unpacked into the users
    #                 personal gem directory.
-@@ -669,7 +672,13 @@ class Gem::Installer
+@@ -680,7 +683,13 @@ class Gem::Installer
      # If the user has asked for the gem to be installed in a directory that is
      # the system gem directory, then use the system bin directory, else create
      # (or use) a new bin dir under the gem_home.
@@ -30,8 +30,8 @@ $NetBSD: patch-lib_rubygems_installer.rb,v 1.1 2021/02/14 14:32:41 taca Exp $
      @development         = options[:development]
      @build_root          = options[:build_root]
  
-@@ -906,6 +915,9 @@ TEXT
-     return if @build_args.empty?
+@@ -930,6 +939,9 @@ TEXT
+     return if build_args.empty?
  
      build_info_dir = File.join gem_home, 'build_info'
 +    unless @install_root.nil? or @install_root.empty?
