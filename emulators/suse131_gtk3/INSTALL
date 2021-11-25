@@ -1,0 +1,15 @@
+# $NetBSD: INSTALL,v 1.1 2021/11/25 15:39:48 ryoon Exp $
+#
+# Initialize gtk module configuration.
+#
+case ${STAGE} in
+POST-INSTALL)
+	GNOME_BINDIR="${PKG_PREFIX}/@EMULSUBDIR@/usr/bin"
+	GNOME_LIBDIR="${PKG_PREFIX}/@EMULSUBDIR@/usr/lib@ABISUFFIX@"
+	GNOME_ETCDIR="${PKG_PREFIX}/@EMULSUBDIR@/etc"
+	SUSECONFIG="${PKG_PREFIX}/@EMULSUBDIR@/sbin/SuSEconfig"
+
+	${ECHO} "${PKGNAME}: initializing GTK module configuration"
+	${GNOME_BINDIR}/gtk-query-immodules-3.0@BINSUFFIX@ --update-cache
+	;;
+esac
