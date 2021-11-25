@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5823 2021/11/25 16:36:52 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5824 2021/11/25 19:34:27 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8848,3 +8848,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/ruby27 to 2.7.5 [taca 2021-11-25]
 	Updated lang/ruby30-base to 3.0.3 [taca 2021-11-25]
 	Updated lang/ruby30 to 3.0.3 [taca 2021-11-25]
+	Added devel/py-confuse version 1.6.0 [bsiegert 2021-11-25]
