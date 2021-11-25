@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5810 2021/11/25 00:38:46 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.5811 2021/11/25 08:13:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8828,3 +8828,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/onefetch to 2.11.0 [pin 2021-11-24]
 	Updated sysutils/felix to 0.2.10 [pin 2021-11-24]
 	Updated editors/retext to 7.2.2 [gutteridge 2021-11-25]
+	Updated converters/py-charset-normalizer to 2.0.8 [adam 2021-11-25]
+	Updated devel/py-dotenv to 0.19.2 [adam 2021-11-25]
