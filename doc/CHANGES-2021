@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5819 2021/11/25 15:14:49 leot Exp $
+$NetBSD: CHANGES-2021,v 1.5820 2021/11/25 15:41:04 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8838,3 +8838,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/gnupg2 to 2.2.33 [ryoon 2021-11-25]
 	Updated print/qpdf to 10.4.0 [ryoon 2021-11-25]
 	Updated www/webkit-gtk to 2.34.2 [leot 2021-11-25]
+	Added emulators/suse131_gtk3 version 13.1 [ryoon 2021-11-25]
