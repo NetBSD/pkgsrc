@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1593 2021/11/23 15:35:32 wiz Exp $
+# $NetBSD: Makefile,v 1.1594 2021/11/25 12:11:59 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -781,6 +781,7 @@ SUBDIR+=	py-mezzanine
 SUBDIR+=	py-mod_wsgi
 SUBDIR+=	py-model_mommy
 SUBDIR+=	py-moin
+SUBDIR+=	py-multipart
 SUBDIR+=	py-nbconvert
 SUBDIR+=	py-nbformat
 SUBDIR+=	py-nevow
@@ -796,6 +797,7 @@ SUBDIR+=	py-pylint-django
 SUBDIR+=	py-pystache
 SUBDIR+=	py-python-digest
 SUBDIR+=	py-python-mimeparse
+SUBDIR+=	py-python-multipart
 SUBDIR+=	py-python3-digest
 SUBDIR+=	py-pywebdav
 SUBDIR+=	py-raven
