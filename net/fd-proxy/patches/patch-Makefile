@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2021/11/25 08:18:18 schmonz Exp $
+
+Respect CFLAGS and LDFLAGS.
+
+--- Makefile.orig	2014-10-25 15:50:14.000000000 +0000
++++ Makefile
+@@ -7,7 +7,7 @@ fd-proxy.html: README.md
+ 	pandoc -f markdown -t html $< >$@
+ 
+ fd-proxy: fd-proxy.c
+-	gcc -Wall -O3 -o $@ $<
++	cc ${CFLAGS} ${LDFLAGS} -o $@ $<
+ 
+ rules.cdb: rules.txt
+ 	cat $< |tcprules $@ tmp
