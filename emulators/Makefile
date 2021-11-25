@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.342 2021/11/06 16:43:23 rhialto Exp $
+# $NetBSD: Makefile,v 1.343 2021/11/25 15:42:25 ryoon Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -349,6 +349,7 @@ SUBDIR+=	suse131_glib2
 SUBDIR+=	suse131_glx
 SUBDIR+=	suse131_gstreamer
 SUBDIR+=	suse131_gtk2
+SUBDIR+=	suse131_gtk3
 SUBDIR+=	suse131_krb5
 SUBDIR+=	suse131_libSDL
 SUBDIR+=	suse131_libaudiofile
