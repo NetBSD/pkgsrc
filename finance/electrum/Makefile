@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/11/25 08:51:23 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2021/11/25 19:52:43 adam Exp $
 
 VERSION=	4.1.5
 DISTNAME=	Electrum-${VERSION}
@@ -23,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-dns<2.0:../../net/py-dns
 # Seems to work without qdarkstyle? Commented out as it's currently not packaged
 #DEPENDS+=	${PYPKGPREFIX}-qdarkstyle<2.9:../../
 DEPENDS+=	${PYPKGPREFIX}-aiorpcX>0.18:../../net/py-aiorpcX
-DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.3.0<4.0.0:../../www/py-aiohttp
+DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.3.0:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-aiohttp-socks>=0.3:../../www/py-aiohttp-socks
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-bitstring-[0-9]*:../../devel/py-bitstring
@@ -32,6 +32,9 @@ DEPENDS+=	libsecp256k1>=0.1:../../security/libsecp256k1
 
 REPLACE_PYTHON+=	electrum/electrum
 REPLACE_PYTHON+=	electrum/scripts/*.py
+
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/electrum/electrum.orig
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
