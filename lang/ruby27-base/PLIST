@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/11 12:32:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/11/25 16:01:18 taca Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 bin/erb${RUBY_SUFFIX}
@@ -348,14 +348,6 @@ ${RUBY_LIB}/drb/timeridconv.rb
 ${RUBY_LIB}/drb/unix.rb
 ${RUBY_LIB}/drb/weakidconv.rb
 ${RUBY_LIB}/erb.rb
-${RUBY_LIB}/exe/bundle
-${RUBY_LIB}/exe/bundler
-${RUBY_LIB}/exe/irb
-${RUBY_LIB}/exe/racc
-${RUBY_LIB}/exe/racc2y
-${RUBY_LIB}/exe/rdoc
-${RUBY_LIB}/exe/ri
-${RUBY_LIB}/exe/y2racc
 ${RUBY_LIB}/expect.rb
 ${RUBY_LIB}/fileutils.rb
 ${RUBY_LIB}/find.rb
@@ -1475,7 +1467,7 @@ ${GEM_HOME}/gems/xmlrpc-${RUBY_XML_RPC_VERSION}/xmlrpc.gemspec
 ${GEM_HOME}/specifications/default/benchmark-0.1.0.gemspec
 ${GEM_HOME}/specifications/default/bigdecimal-${RUBY_BIGDECIMAL_VERSION}.gemspec
 ${GEM_HOME}/specifications/default/bundler-${RUBY_BUNDLER_VERSION}.gemspec
-${GEM_HOME}/specifications/default/cgi-0.1.0.gemspec
+${GEM_HOME}/specifications/default/cgi-0.1.0.1.gemspec
 ${GEM_HOME}/specifications/default/csv-${RUBY_CSV_VERSION}.gemspec
 ${GEM_HOME}/specifications/default/date-${RUBY_DATE_VERSION}.gemspec
 ${GEM_HOME}/specifications/default/dbm-${RUBY_DBM_VERSION}.gemspec
