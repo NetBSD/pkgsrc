@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/25 21:18:28 wiz Exp $
+bin/pyproject-build
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/build/__init__.py
+${PYSITELIB}/build/__init__.pyc
+${PYSITELIB}/build/__init__.pyo
+${PYSITELIB}/build/__main__.py
+${PYSITELIB}/build/__main__.pyc
+${PYSITELIB}/build/__main__.pyo
+${PYSITELIB}/build/env.py
+${PYSITELIB}/build/env.pyc
+${PYSITELIB}/build/env.pyo
+${PYSITELIB}/build/py.typed
+${PYSITELIB}/build/util.py
+${PYSITELIB}/build/util.pyc
+${PYSITELIB}/build/util.pyo
