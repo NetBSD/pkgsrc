@@ -1,0 +1,4 @@
+fd-proxy is a very small program, written in C. Its purpose is to
+connect the I/Os of a tcpserver and tcpclient pair (from the ucspi-tcp
+suite) in order to implement a TCP proxy. Setting up such a proxy can be
+done in a single line.
