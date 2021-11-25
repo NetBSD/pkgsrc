@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2020/01/26 17:30:44 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2021/11/25 19:41:22 bsiegert Exp $
 
-DISTNAME=	beets-1.4.9
-PKGREVISION=	1
+DISTNAME=	beets-1.5.0
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/beets/}
 
@@ -11,8 +10,10 @@ COMMENT=	Music geek's media organizer
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode
+DEPENDS+=	${PYPKGPREFIX}-confuse-[0-9]*:../../devel/py-confuse
 DEPENDS+=	${PYPKGPREFIX}-jellyfish-[0-9]*:../../textproc/py-jellyfish
 DEPENDS+=	${PYPKGPREFIX}-last-[0-9]*:../../audio/py-last
+DEPENDS+=	${PYPKGPREFIX}-mediafile-[0-9]*:../../audio/py-mediafile
 DEPENDS+=	${PYPKGPREFIX}-munkres-[0-9]*:../../math/py-munkres
 DEPENDS+=	${PYPKGPREFIX}-musicbrainz-ngs>=0.4:../../audio/py-musicbrainz-ngs
 DEPENDS+=	${PYPKGPREFIX}-mutagen>=1.33:../../audio/py-mutagen

@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.15 2020/01/03 08:42:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2021/11/25 19:41:22 bsiegert Exp $
 bin/beet-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
@@ -105,9 +106,15 @@ ${PYSITELIB}/beetsplug/absubmit.pyo
 ${PYSITELIB}/beetsplug/acousticbrainz.py
 ${PYSITELIB}/beetsplug/acousticbrainz.pyc
 ${PYSITELIB}/beetsplug/acousticbrainz.pyo
+${PYSITELIB}/beetsplug/aura.py
+${PYSITELIB}/beetsplug/aura.pyc
+${PYSITELIB}/beetsplug/aura.pyo
 ${PYSITELIB}/beetsplug/badfiles.py
 ${PYSITELIB}/beetsplug/badfiles.pyc
 ${PYSITELIB}/beetsplug/badfiles.pyo
+${PYSITELIB}/beetsplug/bareasc.py
+${PYSITELIB}/beetsplug/bareasc.pyc
+${PYSITELIB}/beetsplug/bareasc.pyo
 ${PYSITELIB}/beetsplug/beatport.py
 ${PYSITELIB}/beetsplug/beatport.pyc
 ${PYSITELIB}/beetsplug/beatport.pyo
@@ -123,6 +130,9 @@ ${PYSITELIB}/beetsplug/bpd/gstplayer.pyo
 ${PYSITELIB}/beetsplug/bpm.py
 ${PYSITELIB}/beetsplug/bpm.pyc
 ${PYSITELIB}/beetsplug/bpm.pyo
+${PYSITELIB}/beetsplug/bpsync.py
+${PYSITELIB}/beetsplug/bpsync.pyc
+${PYSITELIB}/beetsplug/bpsync.pyo
 ${PYSITELIB}/beetsplug/bucket.py
 ${PYSITELIB}/beetsplug/bucket.pyc
 ${PYSITELIB}/beetsplug/bucket.pyo
@@ -132,9 +142,9 @@ ${PYSITELIB}/beetsplug/chroma.pyo
 ${PYSITELIB}/beetsplug/convert.py
 ${PYSITELIB}/beetsplug/convert.pyc
 ${PYSITELIB}/beetsplug/convert.pyo
-${PYSITELIB}/beetsplug/cue.py
-${PYSITELIB}/beetsplug/cue.pyc
-${PYSITELIB}/beetsplug/cue.pyo
+${PYSITELIB}/beetsplug/deezer.py
+${PYSITELIB}/beetsplug/deezer.pyc
+${PYSITELIB}/beetsplug/deezer.pyo
 ${PYSITELIB}/beetsplug/discogs.py
 ${PYSITELIB}/beetsplug/discogs.pyc
 ${PYSITELIB}/beetsplug/discogs.pyo
@@ -159,6 +169,9 @@ ${PYSITELIB}/beetsplug/fetchart.pyo
 ${PYSITELIB}/beetsplug/filefilter.py
 ${PYSITELIB}/beetsplug/filefilter.pyc
 ${PYSITELIB}/beetsplug/filefilter.pyo
+${PYSITELIB}/beetsplug/fish.py
+${PYSITELIB}/beetsplug/fish.pyc
+${PYSITELIB}/beetsplug/fish.pyo
 ${PYSITELIB}/beetsplug/freedesktop.py
 ${PYSITELIB}/beetsplug/freedesktop.pyc
 ${PYSITELIB}/beetsplug/freedesktop.pyo
@@ -242,6 +255,9 @@ ${PYSITELIB}/beetsplug/mpdstats.pyo
 ${PYSITELIB}/beetsplug/mpdupdate.py
 ${PYSITELIB}/beetsplug/mpdupdate.pyc
 ${PYSITELIB}/beetsplug/mpdupdate.pyo
+${PYSITELIB}/beetsplug/parentwork.py
+${PYSITELIB}/beetsplug/parentwork.pyc
+${PYSITELIB}/beetsplug/parentwork.pyo
 ${PYSITELIB}/beetsplug/permissions.py
 ${PYSITELIB}/beetsplug/permissions.pyc
 ${PYSITELIB}/beetsplug/permissions.pyo
@@ -275,6 +291,9 @@ ${PYSITELIB}/beetsplug/sonosupdate.pyo
 ${PYSITELIB}/beetsplug/spotify.py
 ${PYSITELIB}/beetsplug/spotify.pyc
 ${PYSITELIB}/beetsplug/spotify.pyo
+${PYSITELIB}/beetsplug/subsonicplaylist.py
+${PYSITELIB}/beetsplug/subsonicplaylist.pyc
+${PYSITELIB}/beetsplug/subsonicplaylist.pyo
 ${PYSITELIB}/beetsplug/subsonicupdate.py
 ${PYSITELIB}/beetsplug/subsonicupdate.pyc
 ${PYSITELIB}/beetsplug/subsonicupdate.pyo
@@ -287,6 +306,9 @@ ${PYSITELIB}/beetsplug/thumbnails.pyo
 ${PYSITELIB}/beetsplug/types.py
 ${PYSITELIB}/beetsplug/types.pyc
 ${PYSITELIB}/beetsplug/types.pyo
+${PYSITELIB}/beetsplug/unimported.py
+${PYSITELIB}/beetsplug/unimported.pyc
+${PYSITELIB}/beetsplug/unimported.pyo
 ${PYSITELIB}/beetsplug/web/__init__.py
 ${PYSITELIB}/beetsplug/web/__init__.pyc
 ${PYSITELIB}/beetsplug/web/__init__.pyo
