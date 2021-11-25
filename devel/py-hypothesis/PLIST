@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2021/09/12 09:53:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.35 2021/11/25 20:01:56 adam Exp $
 bin/hypothesis
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -293,6 +293,9 @@ ${PYSITELIB}/hypothesis/utils/conventions.pyo
 ${PYSITELIB}/hypothesis/utils/dynamicvariables.py
 ${PYSITELIB}/hypothesis/utils/dynamicvariables.pyc
 ${PYSITELIB}/hypothesis/utils/dynamicvariables.pyo
+${PYSITELIB}/hypothesis/utils/terminal.py
+${PYSITELIB}/hypothesis/utils/terminal.pyc
+${PYSITELIB}/hypothesis/utils/terminal.pyo
 ${PYSITELIB}/hypothesis/vendor/__init__.py
 ${PYSITELIB}/hypothesis/vendor/__init__.pyc
 ${PYSITELIB}/hypothesis/vendor/__init__.pyo
