@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1259 2021/11/25 08:55:42 wiz Exp $
+# $NetBSD: Makefile,v 1.1260 2021/11/25 21:14:51 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1104,6 +1104,7 @@ SUBDIR+=	py-text-unidecode
 SUBDIR+=	py-textile
 SUBDIR+=	py-tinycss2
 SUBDIR+=	py-toml
+SUBDIR+=	py-tomli
 SUBDIR+=	py-ujson
 SUBDIR+=	py-uritemplate
 SUBDIR+=	py-validators
