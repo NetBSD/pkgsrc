@@ -1,0 +1,16 @@
+Confuse is a configuration library for Python that uses YAML. It takes
+care of defaults, overrides, type checking, command-line integration,
+human-readable errors, and standard OS-specific locations.
+
+Here's what Confuse brings to the table:
+
+-  An utterly sensible API resembling dictionary-and-list structures
+   but providing transparent validation without lots of boilerplate
+   code.
+-  Combine configuration data from multiple sources. Using
+   layering, Confuse allows user-specific configuration to seamlessly
+   override system-wide configuration, which in turn overrides built-in
+   defaults.
+-  Look for configuration files in platform-specific paths.
+-  Integration with command-line arguments via argparse or optparse
+   from the standard library.

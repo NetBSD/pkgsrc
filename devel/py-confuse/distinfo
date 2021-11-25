@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/11/25 19:33:58 bsiegert Exp $
+
+BLAKE2s (confuse-1.6.0.tar.gz) = 78493c6c497b3759cc7f496f03378ded10ba041c599790967161813e33ebf8aa
+SHA512 (confuse-1.6.0.tar.gz) = e8883df408815e83e83f96621d89cb36e97d59db99a1ce01f0ccb28a4d538f58f0ee08d70505b388cd5c9a2aa8a3a75daf074dc72b133ae0b2128eda2d1330a3
+Size (confuse-1.6.0.tar.gz) = 45780 bytes
+SHA1 (patch-setup.py) = 5b1600286d44a5a02dc25ed84dfbf1e507fbd30b

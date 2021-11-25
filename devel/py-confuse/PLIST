@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/25 19:33:58 bsiegert Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/confuse/__init__.py
+${PYSITELIB}/confuse/__init__.pyc
+${PYSITELIB}/confuse/__init__.pyo
+${PYSITELIB}/confuse/core.py
+${PYSITELIB}/confuse/core.pyc
+${PYSITELIB}/confuse/core.pyo
+${PYSITELIB}/confuse/exceptions.py
+${PYSITELIB}/confuse/exceptions.pyc
+${PYSITELIB}/confuse/exceptions.pyo
+${PYSITELIB}/confuse/sources.py
+${PYSITELIB}/confuse/sources.pyc
+${PYSITELIB}/confuse/sources.pyo
+${PYSITELIB}/confuse/templates.py
+${PYSITELIB}/confuse/templates.pyc
+${PYSITELIB}/confuse/templates.pyo
+${PYSITELIB}/confuse/util.py
+${PYSITELIB}/confuse/util.pyc
+${PYSITELIB}/confuse/util.pyo
+${PYSITELIB}/confuse/yaml_util.py
+${PYSITELIB}/confuse/yaml_util.pyc
+${PYSITELIB}/confuse/yaml_util.pyo
