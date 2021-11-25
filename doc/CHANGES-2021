@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5811 2021/11/25 08:13:46 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5812 2021/11/25 08:20:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8830,3 +8830,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/retext to 7.2.2 [gutteridge 2021-11-25]
 	Updated converters/py-charset-normalizer to 2.0.8 [adam 2021-11-25]
 	Updated devel/py-dotenv to 0.19.2 [adam 2021-11-25]
+	Added net/fd-proxy version 20141025 [schmonz 2021-11-25]
