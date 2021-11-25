@@ -1,0 +1,5 @@
+A simple, correct PEP517 package builder.
+
+build will invoke the PEP 517 hooks to build a distribution package.
+It is a simple build tool and does not perform any dependency
+management.
