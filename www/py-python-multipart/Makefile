@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/11/25 12:11:03 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2021/11/25 12:11:19 wiz Exp $
 
 DISTNAME=	python-multipart-0.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-multipart/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/andrew-d/python-multipart
+HOMEPAGE=	https://github.com/andrew-d/python-multipart
 COMMENT=	Streaming multipart parser for Python
 LICENSE=	apache-2.0
 
