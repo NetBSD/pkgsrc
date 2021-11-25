@@ -1,0 +1,14 @@
+# $NetBSD: DEINSTALL,v 1.1 2021/11/25 15:39:48 ryoon Exp $
+#
+# Remove gtk module configuration.
+#
+case ${STAGE} in
+DEINSTALL)
+	GNOME_BINDIR="${PKG_PREFIX}/@EMULSUBDIR@/usr/bin"
+	GNOME_LIBDIR="${PKG_PREFIX}/@EMULSUBDIR@/usr/lib@ABISUFFIX@"
+	GNOME_ETCDIR="${PKG_PREFIX}/@EMULSUBDIR@/etc"
+
+	${ECHO} "${PKGNAME}: removing GTK module configuration"
+	${RM} -f ${GNOME_LIBDIR}/gtk-3.0/3.0.0/immodules.cache
+	;;
+esac
