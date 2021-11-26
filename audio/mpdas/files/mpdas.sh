@@ -1,7 +1,7 @@
-# $NetBSD: mpdas.sh,v 1.2 2011/12/26 13:22:28 joerg Exp $
+# $NetBSD: mpdas.sh,v 1.3 2021/11/26 15:23:05 pho Exp $
 #
 # PROVIDE: mpdas
-# # REQUIRE: DAEMON network
+# REQUIRE: mpd
 # KEYWORD: shutdown
 
 . /etc/rc.subr
