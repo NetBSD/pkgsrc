@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2021/01/14 02:47:39 nat Exp $
+# $NetBSD: Makefile,v 1.49 2021/11/26 17:41:39 pho Exp $
 
 DISTNAME=	BasiliskII-20190405
 PKGREVISION=	4
@@ -17,7 +17,7 @@ CONFIGURE_DIRS=	src/Unix
 BUILD_DIRS=	src/Unix
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	aclocal autoheader autoconf automake
+USE_TOOLS+=	aclocal autoheader autoconf automake autoreconf
 USE_TOOLS+=	msgfmt msgmerge xgettext
 USE_TOOLS+=	pkg-config gmake
 
@@ -48,7 +48,7 @@ post-extract:
 INSTALLATION_DIRS=	share/doc/BasiliskII
 
 pre-configure:
-	cd ${WRKSRC}/src/Unix && NO_CONFIGURE=x ./autogen.sh
+	cd ${WRKSRC}/src/Unix && autoreconf -I m4
 	${MKDIR} ${WRKSRC}/src/Unix/obj
 
 post-install:
