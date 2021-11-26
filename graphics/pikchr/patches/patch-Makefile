@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile,v 1.1 2021/11/26 09:38:52 schmonz Exp $
+
+Honor pkgsrc-provided CFLAGS.
+
+--- Makefile.orig	2021-11-04 18:36:41.000000000 +0000
++++ Makefile
+@@ -1,5 +1,5 @@
+ CC = gcc
+-CFLAGS = -O0 -g -Wall -Wextra
++CFLAGS ?= -O0 -g -Wall -Wextra
+ LIBS = -lm
+ 
+ TCL_PACKAGE_NAME    = pikchr
