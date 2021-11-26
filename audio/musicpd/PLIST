@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2021/11/01 09:51:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2021/11/26 15:14:41 pho Exp $
 bin/mpd
 man/man1/mpd.1
 man/man5/mpd.conf.5
@@ -42,6 +42,7 @@ share/doc/mpd/html/protocol.html
 share/doc/mpd/html/search.html
 share/doc/mpd/html/searchindex.js
 share/doc/mpd/html/user.html
+share/examples/mpd/logrotate.d/mpd
 share/examples/mpd/mpd.conf
 share/examples/mpd/mpdconf.example
 share/icons/hicolor/scalable/apps/mpd.svg

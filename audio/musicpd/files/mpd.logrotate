@@ -1,0 +1,8 @@
+# $NetBSD: mpd.logrotate,v 1.1 2021/11/26 15:14:41 pho Exp $
+
+/var/log/mpd.log {
+    missingok
+    notifempty
+    copytruncate
+    compress
+}
