@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5834 2021/11/26 16:52:19 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5835 2021/11/26 20:19:26 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8860,3 +8860,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/gmp to 6.2.1nb1 [wiz 2021-11-26]
 	Updated net/tigervnc to 1.12.0.1.20.13nb1 [wiz 2021-11-26]
 	Updated shells/fish to 3.3.1nb1 [wiz 2021-11-26]
+	Updated geography/gama to 2.16 [gdt 2021-11-26]
