@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/26 09:38:52 schmonz Exp $
+bin/pikchr
