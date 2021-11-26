@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2021/10/26 11:05:52 nia Exp $
+$NetBSD: distinfo,v 1.27 2021/11/26 23:52:34 he Exp $
 
-BLAKE2s (ldns-1.7.1.tar.gz) = 1eba67c3b9950ac569f69676ffe40962663e7a4ddd0f118f9a680a20e6c899ad
-SHA512 (ldns-1.7.1.tar.gz) = e8f72a4ff4aa544acac5e7be9a8ba38c6b8d388bb26f9a0ed04c1a921622f8582cc8539beafc76a29187a55c94069b7c1875e77522e1a7e7bb3e297dd1e4c2b7
-Size (ldns-1.7.1.tar.gz) = 1244394 bytes
+BLAKE2s (ldns-1.8.0.tar.gz) = cca9780737bece19a0c4c6fd59bab1cb6fa560f65d77609283728e4198ddfd1e
+SHA512 (ldns-1.8.0.tar.gz) = 54b306160bb7fd76d181f4be0a13134017f6f98ae96e0c954409f31f262e9dbe611c4b76fb6dff47bb6155c652ed8d026b52a50dfcf611e54d9c204b314c4fd6
+Size (ldns-1.8.0.tar.gz) = 1283220 bytes
