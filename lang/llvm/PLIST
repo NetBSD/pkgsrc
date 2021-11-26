@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2021/11/23 20:55:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2021/11/26 19:55:13 wiz Exp $
 bin/FileCheck
 bin/bugpoint
 bin/count
@@ -1832,10 +1832,10 @@ lib/libLLVMDemangle.a
 lib/libLLVMDlltoolDriver.a
 lib/libLLVMExecutionEngine.a
 lib/libLLVMExegesis.a
-lib/libLLVMExegesisAArch64.a
-lib/libLLVMExegesisMips.a
-lib/libLLVMExegesisPowerPC.a
-lib/libLLVMExegesisX86.a
+${PLIST.AArch64}lib/libLLVMExegesisAArch64.a
+${PLIST.Mips}lib/libLLVMExegesisMips.a
+${PLIST.PowerPC}lib/libLLVMExegesisPowerPC.a
+${PLIST.X86}lib/libLLVMExegesisX86.a
 lib/libLLVMExtensions.a
 lib/libLLVMFileCheck.a
 lib/libLLVMFrontendOpenACC.a
@@ -1864,7 +1864,7 @@ lib/libLLVMLineEditor.a
 lib/libLLVMLinker.a
 lib/libLLVMMC.a
 lib/libLLVMMCA.a
-lib/libLLVMMCACustomBehaviourAMDGPU.a
+${PLIST.AMDGPU}lib/libLLVMMCACustomBehaviourAMDGPU.a
 lib/libLLVMMCDisassembler.a
 lib/libLLVMMCJIT.a
 lib/libLLVMMCParser.a
