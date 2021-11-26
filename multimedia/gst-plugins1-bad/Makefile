@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2021/11/15 22:01:18 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2021/11/26 18:20:53 nia Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/}
 CATEGORIES=	multimedia gnome
@@ -74,6 +74,8 @@ GST_PLUGINS+=	y4m
 
 GST_PLUGINS+=	introspection
 GST_PLUGINS+=	nls
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "Makefile.common"
 .include "../../devel/gobject-introspection/buildlink3.mk"
