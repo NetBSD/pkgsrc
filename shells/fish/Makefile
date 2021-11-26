@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2021/07/16 08:50:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.32 2021/11/26 16:42:13 wiz Exp $
 
 DISTNAME=		fish-3.3.1
+PKGREVISION=		1
 CATEGORIES=		shells
 MASTER_SITES=		${MASTER_SITE_GITHUB:=fish-shell/}
 GITHUB_PROJECT=		fish-shell
@@ -19,9 +20,6 @@ CMAKE_ARGS+=		-DIntl_INCLUDE_DIR=${PREFIX}/include
 CMAKE_ARGS+=		-DCMAKE_INSTALL_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 PKG_SHELL=		bin/fish
-
-REPLACE_PYTHON+=	share/tools/*.py
-REPLACE_PYTHON+=	share/tools/web_config/webconfig.py
 
 LDFLAGS.SunOS+=		-lintl
 
@@ -55,7 +53,6 @@ post-extract:
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gettext-tools/buildlink3.mk"
-.include "../../lang/python/application.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/curses.buildlink3.mk"
