@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.253 2021/11/16 14:36:21 wiz Exp $
+# $NetBSD: Makefile,v 1.254 2021/11/26 15:14:41 pho Exp $
 
 DISTNAME=	mpd-0.23.4
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/mpd/musicpd/}
 CATEGORIES=	audio
 MASTER_SITES=	https://www.musicpd.org/download/mpd/${PKGVERSION_NOREV:R}/
@@ -68,7 +69,8 @@ SUBST_SED.oss+=		-e "s,/dev/sound/dsp,${DEVOSSAUDIO},g"
 .endif
 
 EGDIR=		${PREFIX}/share/examples/mpd
-CONF_FILES=	${EGDIR}/mpd.conf ${PKG_SYSCONFDIR}/mpd.conf
+CONF_FILES+=	${EGDIR}/mpd.conf ${PKG_SYSCONFDIR}/mpd.conf
+CONF_FILES+=	${EGDIR}/logrotate.d/mpd ${PKG_SYSCONFDIR}/logrotate.d/mpd
 RCD_SCRIPTS=	mpd
 
 FILES_SUBST+=	MPD_USER=${MPD_USER:Q}
@@ -103,7 +105,7 @@ SUBST_FILES.sphinx=	doc/meson.build
 SUBST_MESSAGE.sphinx=	Fixing sphinx binary name.
 SUBST_SED.sphinx+=	-e "s,sphinx-build,sphinx-build-${PYVERSSUFFIX},"
 
-INSTALLATION_DIRS=	${EGDIR}
+INSTALLATION_DIRS=	${EGDIR} ${EGDIR}/logrotate.d
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
@@ -115,6 +117,7 @@ post-extract:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/mpd.conf ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/mpdconf.example ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/mpd.logrotate ${DESTDIR}${EGDIR}/logrotate.d/mpd
 
 .include "../../devel/meson/build.mk"
 BUILDLINK_API_DEPENDS.flac+=	flac>=1.2
