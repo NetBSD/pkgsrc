@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/07/12 21:32:49 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2021/11/26 10:19:20 schmonz Exp $
 
 DISTNAME=		ucspi-tools-1.7
 CATEGORIES=		net security
@@ -22,5 +22,10 @@ INSTALL_MAKE_FLAGS+=	MANDIR=${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR}
 TEST_DEPENDS+=		oksh-[0-9]*:../../shells/oksh
 TEST_TARGET=		test
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux"
+.include "../../devel/libbsd/buildlink3.mk"
+.endif
 .include "../../security/libretls/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
