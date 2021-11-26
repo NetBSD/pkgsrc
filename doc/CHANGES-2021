@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5830 2021/11/26 08:41:02 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5831 2021/11/26 09:40:05 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8856,3 +8856,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/py-build version 0.7.0 [wiz 2021-11-25]
 	Updated x11/xterm to 370 [pin 2021-11-26]
 	Updated security/opendoas to 6.8.1 [pin 2021-11-26]
+	Added graphics/pikchr version 1.0.20211104 [schmonz 2021-11-26]
