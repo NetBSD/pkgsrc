@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.165 2020/02/06 21:52:58 nia Exp $
+# $NetBSD: Makefile.common,v 1.166 2021/11/26 12:05:32 wiz Exp $
 # used by editors/vim/Makefile
 # used by editors/vim-gtk2/Makefile
 # used by editors/vim-gtk3/Makefile
@@ -24,8 +24,6 @@ HOMEPAGE=		https://www.vim.org/
 LICENSE=		vim-license OR gnu-gpl-v2
 
 CONFLICTS+=		vim-kde-[0-9]*
-
-EXTRACT_USING=		gtar
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 GNU_CONFIGURE=		yes
