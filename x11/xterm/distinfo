@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.96 2021/10/26 11:34:58 nia Exp $
+$NetBSD: distinfo,v 1.97 2021/11/26 08:37:29 pin Exp $
 
-BLAKE2s (xterm-369.tgz) = 5bd46602519257f1dc381cda63e0f099b21c5de6a0a2691bb26b0ba1586a2d8e
-SHA512 (xterm-369.tgz) = b574e75e8bc7918f6e637534a39ebbc72cfbc74e4ff3e2b914962722b9c6e60adee49d74ebe1e778bcb35556e04098baa4465d1694fde61fbcca6434e6e706a7
-Size (xterm-369.tgz) = 1461310 bytes
+BLAKE2s (xterm-370.tgz) = b0de2145c7c23212c323705804eac28a4398fcd0f77b386358a60b6445db3ffc
+SHA512 (xterm-370.tgz) = 24f1836c4f5aec175c45db77e9bc829b45ee2c93cf12c20252b22bee470392ef0637cfbbb6e90074b1c038ac023f74a4fb713bbd4abf2b5b86d064667caf38dd
+Size (xterm-370.tgz) = 1500208 bytes
