@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.78 2021/05/24 19:53:05 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2021/11/27 05:58:50 pho Exp $
 
 DISTNAME=	gkrellweather-2.0.7
 PKGNAME=	gkrellm-weather-2.0.7
-PKGREVISION=	48
+PKGREVISION=	49
 CATEGORIES=	misc
 #MASTER_SITES=	http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/
 EXTRACT_SUFX=	.tgz
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	tripledes@eslack.org
 #HOMEPAGE=	http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/
 COMMENT=	Gkrellm2 weather plugin
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	wget>=1.8:../../net/wget
 
