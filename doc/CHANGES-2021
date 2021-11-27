@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5837 2021/11/26 23:53:18 he Exp $
+$NetBSD: CHANGES-2021,v 1.5838 2021/11/27 07:25:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8863,3 +8863,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated geography/gama to 2.16 [gdt 2021-11-26]
 	Updated devel/py-setuptools to 59.3.0 [wiz 2021-11-26]
 	Updated net/ldns to 1.8.0 [he 2021-11-26]
+	Added lang/php81 version 8.1.0 [taca 2021-11-27]
