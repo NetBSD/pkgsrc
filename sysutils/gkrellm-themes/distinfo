@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/27 09:32:09 pho Exp $
+
+BLAKE2s (gkrellm-themes-2003.01.29/GKrellM-Skins.tar.gz) = b8098ad979996f2b20db7055ffd330ff025080a89125404d781c418b3e5aafa0
+SHA512 (gkrellm-themes-2003.01.29/GKrellM-Skins.tar.gz) = 5b8c143cbeee53eaeeea829cd2fef1a71bed3ae506513e642aa4b59063052987b48c5f5310146660ab981fc09690b1016ff7cc355b039dbff98102c32d8a0619
+Size (gkrellm-themes-2003.01.29/GKrellM-Skins.tar.gz) = 3553450 bytes
