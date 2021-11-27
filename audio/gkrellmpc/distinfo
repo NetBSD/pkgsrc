@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/11/27 10:37:24 pho Exp $
+
+BLAKE2s (gkrellmpc-0.1_beta10-da1a6d988162c248e0c86a9af6db8f9a5a094bc8.tar.gz) = 4ced78a2e400528071e5bcc8aad3f143d213e39b1a942fc83dd67fe19962852e
+SHA512 (gkrellmpc-0.1_beta10-da1a6d988162c248e0c86a9af6db8f9a5a094bc8.tar.gz) = 270f1d106e7fa58e0377c8825d3faef9a7c502928c9df5dd384492bf5762b271a65f49abd31f5150b28237783861bff8933aea7114c81b086adbe087f4905ec1
+Size (gkrellmpc-0.1_beta10-da1a6d988162c248e0c86a9af6db8f9a5a094bc8.tar.gz) = 30352 bytes
+SHA1 (patch-mpd.c) = 9c700624d49cab0276bb0de26e394ee073549f3f
