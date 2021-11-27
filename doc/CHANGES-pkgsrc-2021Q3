@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.37 2021/11/24 19:55:37 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.38 2021/11/27 21:45:23 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -133,4 +133,7 @@ databases/postgresql: security fix
 
 Pullup ticket #6538 - requested by gdt
 chat/matrix-synapse: security update
+
+Pullup ticket #6544 - requested by wiz
+devel/gmp: security fix
 
