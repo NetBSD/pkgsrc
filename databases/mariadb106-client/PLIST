@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/08/04 15:47:24 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/11/27 23:40:27 nia Exp $
 bin/mariadb
 bin/mariadb-access
 bin/mariadb-admin
@@ -181,6 +181,7 @@ include/mysql/server/private/my_default.h
 include/mysql/server/private/my_handler_errors.h
 include/mysql/server/private/my_libwrap.h
 include/mysql/server/private/my_md5.h
+include/mysql/server/private/my_minidump.h
 include/mysql/server/private/my_nosys.h
 include/mysql/server/private/my_rdtsc.h
 include/mysql/server/private/my_rnd.h
