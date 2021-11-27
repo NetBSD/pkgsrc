@@ -1,10 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2021/08/04 15:47:24 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2021/11/27 23:40:28 nia Exp $
 
 Allow building a server-only configuration.
 
---- CMakeLists.txt.orig	2021-05-05 21:00:18.000000000 +0000
+--- CMakeLists.txt.orig	2021-11-05 20:03:29.000000000 +0000
 +++ CMakeLists.txt
-@@ -421,8 +421,6 @@ ENDIF()
+@@ -418,8 +418,6 @@ ENDIF()
  
  UNSET (MYSQLD_STATIC_PLUGIN_LIBS CACHE)
  
@@ -13,7 +13,7 @@ Allow building a server-only configuration.
  INCLUDE(cpack_rpm)
  INCLUDE(cpack_deb)
  
-@@ -432,13 +430,11 @@ MARK_AS_ADVANCED(PYTHON_SHEBANG)
+@@ -429,19 +427,16 @@ MARK_AS_ADVANCED(PYTHON_SHEBANG)
  # Add storage engines and plugins.
  CONFIGURE_PLUGINS()
  
@@ -27,7 +27,13 @@ Allow building a server-only configuration.
  ADD_SUBDIRECTORY(extra)
  ADD_SUBDIRECTORY(libservices)
  ADD_SUBDIRECTORY(sql/share)
-@@ -461,23 +457,26 @@ IF(NOT WITHOUT_SERVER)
+ 
+ IF(NOT WITHOUT_SERVER)
+-  ADD_SUBDIRECTORY(tests)
+   ADD_SUBDIRECTORY(sql)
+   OPTION (WITH_EMBEDDED_SERVER "Compile MariaDB with embedded server" OFF)
+   IF(WITH_EMBEDDED_SERVER)
+@@ -460,23 +455,26 @@ IF(NOT WITHOUT_SERVER)
      ADD_SUBDIRECTORY(win/upgrade_wizard)
      ADD_SUBDIRECTORY(win/packaging)
    ENDIF()
@@ -59,3 +65,45 @@ Allow building a server-only configuration.
    ENDIF()
    # minimal target to build only binaries for export
    ADD_CUSTOM_TARGET(import_executables DEPENDS ${EXPORTED})
+@@ -557,41 +555,3 @@ IF(NON_DISTRIBUTABLE_WARNING)
+   MESSAGE(WARNING "
+ You have linked MariaDB with ${NON_DISTRIBUTABLE_WARNING} libraries!  You may not distribute the resulting binary. If you do, you will put yourself into a legal problem with the Free Software Foundation.")
+ ENDIF()
+-
+-IF(NOT WITHOUT_SERVER)
+-  # Define target for minimal mtr-testable build
+-  ADD_CUSTOM_TARGET(minbuild)
+-  ADD_DEPENDENCIES(minbuild
+-   aria_chk
+-   aria_pack
+-   mariadb
+-   mariadb-admin
+-   mariadb-binlog
+-   mariadb-check
+-   mariadb-client-test
+-   mariadb-conv
+-   mariadb-dump
+-   mariadb-import
+-   mariadb-plugin
+-   mariadb-show
+-   mariadb-slap
+-   mariadb-test
+-   mariadb-tzinfo-to-sql
+-   mariadb-upgrade
+-   mariadbd
+-   my_print_defaults
+-   my_safe_process
+-   myisam_ftdump
+-   myisamchk
+-   myisamlog
+-   myisampack
+-   perror
+-   replace)
+-  IF(WIN32)
+-    ADD_DEPENDENCIES(minbuild echo mariadb-install-db my_safe_kill)
+-  ENDIF()
+-  ADD_CUSTOM_TARGET(smoketest
+-    COMMAND perl ./mysql-test-run.pl main.1st
+-    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/mysql-test)
+-  ADD_DEPENDENCIES(smoketest minbuild)
+-ENDIF()
