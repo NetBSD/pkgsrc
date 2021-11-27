@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5841 2021/11/27 10:37:36 pho Exp $
+$NetBSD: CHANGES-2021,v 1.5842 2021/11/27 11:42:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8867,3 +8867,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added meta-pkgs/php81-extensions version 8.1.0 [taca 2021-11-27]
 	Added sysutils/gkrellm-themes version 2003.01.29 [pho 2021-11-27]
 	Added audio/gkrellmpc version 0.1_beta10 [pho 2021-11-27]
+	Updated devel/py-prompt_toolkit to 3.0.23 [adam 2021-11-27]
+	Updated devel/py-ipython to 7.30.0 [adam 2021-11-27]
