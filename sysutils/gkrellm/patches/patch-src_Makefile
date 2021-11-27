@@ -1,7 +1,6 @@
-$NetBSD: patch-src_Makefile,v 1.1 2018/12/29 15:55:50 triaxx Exp $
+$NetBSD: patch-src_Makefile,v 1.2 2021/11/27 04:43:02 pho Exp $
 
-Fix PR pkg/40047
-Thanks to Ondrej Tuma
+Honor LDFLAGS set by pkgsrc while linking gkrellm.
 
 --- src/Makefile.orig	2018-12-29 15:47:29.689517593 +0000
 +++ src/Makefile
@@ -10,7 +9,7 @@ Thanks to Ondrej Tuma
  
  gkrellm static: $(OBJS)
 -	$(CC) $(OBJS) -o gkrellm$(if $(findstring static,$@),.static -static) $(LIBS) $(LINK_FLAGS)
-+	$(CC) $(OBJS) -o gkrellm$(if $(findstring static,$@),.static -static) -Wl,-export-dynamic $(LIBS) $(LINK_FLAGS)
++	$(CC) $(OBJS) -o gkrellm$(if $(findstring static,$@),.static -static) $(LDFLAGS) $(LIBS) $(LINK_FLAGS)
  
  install: gkrellm
  	$(INSTALL_DIR) $(INSTALLDIR)

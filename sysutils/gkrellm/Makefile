@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2021/09/29 19:01:20 adam Exp $
+# $NetBSD: Makefile,v 1.106 2021/11/27 04:43:02 pho Exp $
 .include "Makefile.common"
 
 PKGREVISION=		45
@@ -33,6 +33,11 @@ MAKE_ENV+=		SMANDIR=${PREFIX}/${PKGMANDIR}/man8
 MAKE_FLAGS+=		BINOWNER=${BINOWN} BINGROUP=${BINGRP}
 INSTALL_MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 INSTALL_MAKE_FLAGS+=	SMANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+
+# Fix PR pkg/40047, Thanks to Ondrej Tuma
+.if ${OBJECT_FMT} == "ELF"
+LDFLAGS+=	-Wl,-export-dynamic
+.endif
 
 SUBST_STAGE.gkprefix=	pre-configure
 SUBST_FILES.gkprefix=	src/gkrellm.h
