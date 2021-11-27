@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2014/10/05 16:41:08 wiz Exp $
+# $NetBSD: Makefile.common,v 1.19 2021/11/27 05:37:59 pho Exp $
 #
 # used by sysutils/gkrellm-share/Makefile
 # used by sysutils/gkrellm-server/Makefile
@@ -11,8 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gkrellm.net/
-
-CONFLICTS+=	gkrellm-1*
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	YES
