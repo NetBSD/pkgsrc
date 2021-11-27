@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3517 2021/11/25 21:18:54 wiz Exp $
+# $NetBSD: Makefile,v 1.3518 2021/11/27 16:41:45 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2269,7 +2269,6 @@ SUBDIR+=	py-decorator
 SUBDIR+=	py-deepstate
 SUBDIR+=	py-deprecation
 SUBDIR+=	py-dialog
-SUBDIR+=	py-dialog2
 SUBDIR+=	py-dict2xml
 SUBDIR+=	py-dictpath
 SUBDIR+=	py-distorm3
