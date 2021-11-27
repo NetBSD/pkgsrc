@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:18:23 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/11/27 16:44:22 adam Exp $
 
-BLAKE2s (pythondialog-3.5.2.tar.gz) = 2c6c3845d8ad22d46adfb6470e1e8b4c983f6de4a5cc80b1f90d78edd1a64a73
-SHA512 (pythondialog-3.5.2.tar.gz) = 6ca7d9dfa87492d59bbf321b1f3dc0146084e42a8efc79377b16c2b80eb5485b23ae4a2b35d7401c9915883d2ad3e34e80e0e6ad8b44f04a1bdad0d4eabb95fd
-Size (pythondialog-3.5.2.tar.gz) = 1510472 bytes
+BLAKE2s (pythondialog-3.5.3.tar.gz) = 98d3a526fb5a68f308157702b6dd7fa4d57b35063dfd5639a302669b827c94af
+SHA512 (pythondialog-3.5.3.tar.gz) = 7c32be9dee375324a25eb3743434e4886574603e2197ac28ffde5964ec60247fd81fb0594d8eef007d40683d7551ae9aa9d426af4e8255f602eee9d4be2c29aa
+Size (pythondialog-3.5.3.tar.gz) = 1509854 bytes
