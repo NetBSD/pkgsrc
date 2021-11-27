@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.973 2021/11/23 05:53:33 pho Exp $
+# $NetBSD: Makefile,v 1.974 2021/11/27 09:32:59 pho Exp $
 #
 
 COMMENT=	System utilities
@@ -247,6 +247,7 @@ SUBDIR+=	gkrellm
 SUBDIR+=	gkrellm-est
 SUBDIR+=	gkrellm-server
 SUBDIR+=	gkrellm-share
+SUBDIR+=	gkrellm-themes
 SUBDIR+=	gnome-characters
 SUBDIR+=	gnome-control-center
 SUBDIR+=	gnome-font-viewer
