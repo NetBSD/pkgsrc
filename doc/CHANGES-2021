@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5843 2021/11/27 12:33:34 pho Exp $
+$NetBSD: CHANGES-2021,v 1.5844 2021/11/27 14:28:46 he Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8870,3 +8870,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-prompt_toolkit to 3.0.23 [adam 2021-11-27]
 	Updated devel/py-ipython to 7.30.0 [adam 2021-11-27]
 	Added misc/gkrellsun version 1.0.0 [pho 2021-11-27]
+	Updated security/py-denyhosts to 3.0 [he 2021-11-27]
