@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.555 2021/10/11 10:40:14 pin Exp $
+# $NetBSD: Makefile,v 1.556 2021/11/27 12:34:07 pho Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -84,6 +84,7 @@ SUBDIR+=	gkrellm-launch
 SUBDIR+=	gkrellm-leds
 SUBDIR+=	gkrellm-moon
 SUBDIR+=	gkrellm-weather
+SUBDIR+=	gkrellsun
 SUBDIR+=	gnuls
 SUBDIR+=	goffice0.10
 SUBDIR+=	goffice0.8
