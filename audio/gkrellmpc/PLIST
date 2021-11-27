@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/27 10:37:24 pho Exp $
+lib/gkrellm2/plugins/gkrellmpc.so
+share/doc/gkrellmpc/README.txt
+share/locale/ru/LC_MESSAGES/gkrellmpc.mo
