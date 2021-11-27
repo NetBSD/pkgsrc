@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.647 2021/11/23 11:45:47 nia Exp $
+# $NetBSD: Makefile,v 1.648 2021/11/27 10:38:05 pho Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -129,6 +129,7 @@ SUBDIR+=	freezetag
 SUBDIR+=	game-music-emu
 SUBDIR+=	gbemol
 SUBDIR+=	gkrellm-volume
+SUBDIR+=	gkrellmpc
 SUBDIR+=	glurp
 SUBDIR+=	glyr
 SUBDIR+=	gmp3info
