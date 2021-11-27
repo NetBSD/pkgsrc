@@ -1,0 +1,15 @@
+$NetBSD: patch-src20_Makefile,v 1.1 2021/11/27 12:33:20 pho Exp $
+
+Honor LDFLAGS to support RELRO.
+
+--- src20/Makefile.orig	2006-03-16 18:59:17.000000000 +0000
++++ src20/Makefile
+@@ -35,7 +35,7 @@ all: gkrellsun.so
+ 
+ gkrellsun.so: $(OBJS)
+ 	(cd po && ${MAKE})
+-	$(CC) $(OBJS) -o gkrellsun.so $(LFLAGS) $(LIBS)
++	$(CC) $(OBJS) -o gkrellsun.so $(LFLAGS) $(LDFLAGS) $(LIBS)
+ 
+ suninfo: suninfo.o CalcEphem.o Moon.o MoonRise.o
+ 	$(CC) $^ -o suninfo -lm $(LIBS)
