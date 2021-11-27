@@ -1,12 +1,11 @@
-# $NetBSD: Makefile.common,v 1.13 2021/09/01 06:21:46 nia Exp $
+# $NetBSD: Makefile.common,v 1.14 2021/11/27 22:52:15 nia Exp $
 #
 # used by databases/mariadb105-client/Makefile
 # used by databases/mariadb105-server/Makefile
 
-DISTNAME=	mariadb-10.5.12
+DISTNAME=	mariadb-10.5.13
 CATEGORIES=	databases
-MASTER_SITES=	https://downloads.mariadb.org/f/${DISTNAME}/source/
-MASTER_SITES+=	https://archive.mariadb.org/${DISTNAME}/source/
+MASTER_SITES=	https://archive.mariadb.org/${DISTNAME}/source/
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://mariadb.org/
@@ -47,6 +46,8 @@ CMAKE_ARGS+=		-DINSTALL_LIBDIR="lib"
 CMAKE_ARGS+=		-DINSTALL_MANDIR="${PKGMANDIR}"
 CMAKE_ARGS+=		-DINSTALL_MYSQLSHAREDIR="share/mysql"
 CMAKE_ARGS+=		-DINSTALL_MYSQLTESTDIR=""
+CMAKE_ARGS+=		-DINSTALL_PAMDIR="lib/security"
+CMAKE_ARGS+=		-DINSTALL_PAMDATADIR="share/examples/mariadb_auth_pam"
 CMAKE_ARGS+=		-DINSTALL_PLUGINDIR="lib/mysql/plugin"
 CMAKE_ARGS+=		-DINSTALL_SBINDIR="sbin"
 CMAKE_ARGS+=		-DINSTALL_SCRIPTDIR="bin"
