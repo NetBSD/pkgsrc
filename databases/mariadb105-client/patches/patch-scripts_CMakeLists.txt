@@ -1,8 +1,8 @@
-$NetBSD: patch-scripts_CMakeLists.txt,v 1.2 2021/08/12 10:50:20 nia Exp $
+$NetBSD: patch-scripts_CMakeLists.txt,v 1.3 2021/11/27 22:52:15 nia Exp $
 
 Allow building a server-only configuration.
 
---- scripts/CMakeLists.txt.orig	2021-08-03 08:29:08.000000000 +0000
+--- scripts/CMakeLists.txt.orig	2021-11-05 19:40:05.000000000 +0000
 +++ scripts/CMakeLists.txt
 @@ -208,7 +208,7 @@ SET(pkgdata_locations "$basedir/${INSTAL
  # install mysql_install_db.sh at this point since it needs
@@ -22,9 +22,9 @@ Allow building a server-only configuration.
  SET(mariadb-access_COMPONENT Client)
 +SET(mariadb-convert-table-format_COMPONENT Client)
  SET(mariadb-find-rows_COMPONENT Client)
- SET(mytop_COMPONENT Mytop)
+ SET(mytop_COMPONENT Client)
  
-@@ -314,21 +317,21 @@ ELSE()
+@@ -314,21 +317,24 @@ ELSE()
        mariadbd-safe
        mariadb-dumpslow
      )
@@ -38,13 +38,12 @@ Allow building a server-only configuration.
 +      mariadb-find-rows
 +      mysql_config
 +      mytop
-+      mariadb-hotcopy
-+    )
++      mariadb-hotcopy)
    ENDIF()
--  # Configure this one, for testing, but do not install it.
--  CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/mysql_config.pl.in
--    ${CMAKE_CURRENT_BINARY_DIR}/mysql_config.pl ESCAPE_QUOTES @ONLY)
--  # On Unix, most of the files end up in the bin directory
+   # Configure this one, for testing, but do not install it.
+   CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/mysql_config.pl.in
+     ${CMAKE_CURRENT_BINARY_DIR}/mysql_config.pl ESCAPE_QUOTES @ONLY)
+   # On Unix, most of the files end up in the bin directory
    SET(BIN_SCRIPTS
 -    msql2mysql
 -    mariadb-setpermission
