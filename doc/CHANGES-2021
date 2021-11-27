@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5847 2021/11/27 22:22:37 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5848 2021/11/27 22:39:15 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8875,3 +8875,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-dialog to 3.5.3 [adam 2021-11-27]
 	Updated sysutils/felix to 0.2.11 [pin 2021-11-27]
 	Updated www/badwolf to 1.2.1 [pin 2021-11-27]
+	Updated devel/R-R.utils to 2.11.0 [mef 2021-11-27]
