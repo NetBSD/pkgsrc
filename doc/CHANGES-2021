@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5839 2021/11/27 07:31:26 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5840 2021/11/27 09:32:22 pho Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8865,3 +8865,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/ldns to 1.8.0 [he 2021-11-26]
 	Added lang/php81 version 8.1.0 [taca 2021-11-27]
 	Added meta-pkgs/php81-extensions version 8.1.0 [taca 2021-11-27]
+	Added sysutils/gkrellm-themes version 2003.01.29 [pho 2021-11-27]
