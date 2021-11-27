@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:17:44 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/11/27 14:28:10 he Exp $
 
-BLAKE2s (DenyHosts-2.6.tar.gz) = 1d5eb1d46d769eaa28a10333e8f635b50868f081da8a98c4f4cde80bf8c93ea7
-SHA512 (DenyHosts-2.6.tar.gz) = 331144348d4930e2fa7a057a779bb7504dfa8ec348660e1a73fcd6a9195258408abb7c77de2bcc96724dfc42afbee918320eebfbc3b380d6ac4ff2d275e89600
-Size (DenyHosts-2.6.tar.gz) = 42667 bytes
-SHA1 (patch-aa) = 4bbb07f5918330a8dd828e8cfdf5bad3c4f50893
-SHA1 (patch-ab) = 3bb578421dc776cd42e769978d09872bc79098e8
-SHA1 (patch-ac) = 67eec2ff93ecfffeda2ed92fe7943fa5bc161083
-SHA1 (patch-ad) = 744c65a2f4bec4c5553ba6c15f9ff0b45932e6fb
-SHA1 (patch-ae) = 16f53356508632a8e9f7e905e399614011f7b038
-SHA1 (patch-af) = df52c4b0e842ab311b3a698ba29ad7d20bd7fbf0
+BLAKE2s (denyhosts-3.0.tar.gz) = 01320ec7ccc6cd83ed09ebadb8d64794379c2e513aeb30f5e6dc5f64007863c3
+SHA512 (denyhosts-3.0.tar.gz) = 8a1c796c259049ffab2c88cef780b175ec75c94216841421f831dfbf45f4ba0cdbcfbb0e3dab7200aa79eeb2416db5234ad5016d5770d8ab2f28ef4c9754e70d
+Size (denyhosts-3.0.tar.gz) = 56283 bytes
+SHA1 (patch-daemon-control-dist) = c73ab5d168c8e885ffd7f3a34d5f013c085e38bc
+SHA1 (patch-denyhosts.conf) = 0fdb12f148cbf655904a80a86301ab26bc4e01cd
+SHA1 (patch-setup.py) = 1a59f6110e17f5fb86adf3a97d55ef842a5088e7

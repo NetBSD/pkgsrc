@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2014/03/11 14:05:14 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/11/27 14:28:10 he Exp $
+bin/daemon-control-dist
 bin/denyhosts.py
 ${PYSITELIB}/DenyHosts/__init__.py
 ${PYSITELIB}/DenyHosts/__init__.pyc
@@ -30,9 +31,6 @@ ${PYSITELIB}/DenyHosts/lockfile.pyo
 ${PYSITELIB}/DenyHosts/loginattempt.py
 ${PYSITELIB}/DenyHosts/loginattempt.pyc
 ${PYSITELIB}/DenyHosts/loginattempt.pyo
-${PYSITELIB}/DenyHosts/old-daemon.py
-${PYSITELIB}/DenyHosts/old-daemon.pyc
-${PYSITELIB}/DenyHosts/old-daemon.pyo
 ${PYSITELIB}/DenyHosts/plugin.py
 ${PYSITELIB}/DenyHosts/plugin.pyc
 ${PYSITELIB}/DenyHosts/plugin.pyo
@@ -63,15 +61,6 @@ ${PYSITELIB}/DenyHosts/util.pyo
 ${PYSITELIB}/DenyHosts/version.py
 ${PYSITELIB}/DenyHosts/version.pyc
 ${PYSITELIB}/DenyHosts/version.pyo
-share/denyhosts/CHANGELOG.txt
-share/denyhosts/LICENSE.txt
-share/denyhosts/README.txt
-share/denyhosts/daemon-control-dist
-share/denyhosts/denyhosts.cfg-dist
-share/denyhosts/plugins/README.contrib
-share/denyhosts/plugins/shorewall_allow.sh
-share/denyhosts/plugins/shorewall_deny.sh
-share/denyhosts/plugins/test_deny.py
-share/denyhosts/scripts/restricted_from_invalid.py
-share/denyhosts/scripts/restricted_from_passwd.py
-share/denyhosts/setup.py
+man/man8/denyhosts.8
+share/examples/denyhosts/denyhosts.conf
+@pkgdir etc

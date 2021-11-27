@@ -1,41 +1,45 @@
-# $NetBSD: Makefile,v 1.22 2020/03/20 11:58:19 nia Exp $
+# $NetBSD: Makefile,v 1.23 2021/11/27 14:28:10 he Exp $
 
-VER=		2.6
-DISTNAME=	DenyHosts-${VER}
+VER=		3.0
+DISTNAME=	denyhosts-${VER}
 PKGNAME=	${PYPKGPREFIX}-denyhosts-${VER}
-PKGREVISION=	5
-CATEGORIES=	sysutils
+CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=denyhosts/}
 LICENSE=	gnu-gpl-v2
 
-MAINTAINER=	he@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://denyhosts.sourceforge.net/
 COMMENT=	Watch auth log for invalid ssh login attempts and block hosts
 
 PYDISTUTILSPKG=	yes
 
-CONF_FILES+=	${PREFIX}/share/denyhosts/denyhosts.cfg-dist \
-		${PREFIX}/etc/denyhosts.conf
+EGDIR=		share/examples/denyhosts
+INSTALLATION_DIRS+=	${EGDIR}
+
+CONF_FILES+=	${PREFIX}/${EGDIR}/denyhosts.conf \
+		${PKG_SYSCONFDIR}/denyhosts.conf
 
 FILES_SUBST+=	PYTHONBIN=${PYTHONBIN:Q}
 
 SUBST_CLASSES+=	cf
 SUBST_STAGE.cf=	post-configure
-SUBST_VARS.cf=	VARBASE PREFIX VARBASE PKG_SYSCONFDIR PYTHONBIN
-SUBST_FILES.cf=	setup.py denyhosts.cfg-dist daemon-control-dist
+SUBST_VARS.cf=	VARBASE PREFIX VARBASE PKG_SYSCONFDIR PYTHONBIN PKGMANDIR
+SUBST_FILES.cf=	setup.py denyhosts.conf daemon-control-dist
 
 REPLACE_PYTHON=		daemon-control-dist plugins/test_deny.py setup.py
 REPLACE_PYTHON+=	scripts/restricted_from_invalid.py
 REPLACE_PYTHON+=	scripts/restricted_from_passwd.py
 
 PYTHON_SELF_CONFLICT=		yes
-PYTHON_VERSIONS_ACCEPTED=	27
 
 RCD_SCRIPTS+=	denyhosts
 SMF_NAME=	denyhost
 
-post-configure:
-	${RM} ${WRKDIR}/${DISTNAME}/scripts/*.orig
+DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
+
+post-install:
+	mv ${DESTDIR}/${PKG_SYSCONFDIR}/denyhosts.conf \
+		${DESTDIR}/${PREFIX}/${EGDIR}/denyhosts.conf
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
