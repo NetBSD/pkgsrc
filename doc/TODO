@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21287 2021/11/26 10:06:44 wiz Exp $
+$NetBSD: TODO,v 1.21288 2021/11/27 15:02:01 pho Exp $
 
 Suggested new packages
 ======================
@@ -770,10 +770,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gindent-2.2.12
 	o gitea-1.14.1
 	o gitolite-3.6.12
-	o gkrellm-2.3.5
+	o gkrellm-2.3.11
 	o gkrellm-multiping-2.0.13
-	o gkrellm-server-2.3.5
-	o gkrellm-share-2.3.5
+	o gkrellm-server-2.3.11
+	o gkrellm-share-2.3.11
 	o gkrellm-snmp-1.0
 	o gkrellm-weather-2.0.8 [pkg/51463]
 	o glade-3.38.1
