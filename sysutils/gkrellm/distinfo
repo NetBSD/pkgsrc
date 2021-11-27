@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.48 2021/10/26 11:19:38 nia Exp $
+$NetBSD: distinfo,v 1.49 2021/11/27 04:43:02 pho Exp $
 
 BLAKE2s (gkrellm-2.2.10.tar.bz2) = 7cfeedd45dd708d10725ead8e46f01394da4db5219c9393341c2d66eda03ac73
 SHA512 (gkrellm-2.2.10.tar.bz2) = f3bc055c54bd18c20a59fae471e27c7f4067067525cbc351a0e9fb80a70f7da59c220f36ecabae341e73e0b0e93546edabebff896eed863b515c6d8408a5670a
@@ -27,4 +27,4 @@ SHA1 (patch-av) = 09cbc2fbb8226f8fe56bff458a4772998cae3f32
 SHA1 (patch-aw) = c32ae045dad9754edb88e375b8893cfe161567d0
 SHA1 (patch-ay) = 54ce179dd051509d9fdf857730cf2ddf9b9fe0b3
 SHA1 (patch-az) = 3dbfe97e17a9aad5a6fc8e62b1116ac1fd2ec3a2
-SHA1 (patch-src_Makefile) = 931a61c8a067bde47846044f6fd43a2184df2563
+SHA1 (patch-src_Makefile) = 2f5e83b5d8eca2a2e7dff8e05e85da0ce84fe02e
