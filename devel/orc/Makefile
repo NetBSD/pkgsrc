@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2021/04/12 11:22:42 nia Exp $
+# $NetBSD: Makefile,v 1.20 2021/11/27 11:27:25 adam Exp $
 
 DISTNAME=	orc-0.4.32
 CATEGORIES=	devel
@@ -15,6 +15,8 @@ PKGCONFIG_OVERRIDE+=		output/meson-private/orc-test-0.4.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/${PKGBASE}
+# For Darwin
+MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/${PKGBASE}
 
 MESON_ARGS+=	-Dgtk_doc=disabled
 
