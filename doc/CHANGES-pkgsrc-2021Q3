@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.38 2021/11/27 21:45:23 tm Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.39 2021/11/27 21:53:48 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -136,4 +136,7 @@ chat/matrix-synapse: security update
 
 Pullup ticket #6544 - requested by wiz
 devel/gmp: security fix
+
+Pullup ticket #6545 - requested by taca
+lang/ruby26-base: security fix
 
