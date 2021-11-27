@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2021/11/26 16:42:13 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2021/11/27 12:43:58 wiz Exp $
 
 DISTNAME=		fish-3.3.1
 PKGREVISION=		1
@@ -18,6 +18,7 @@ USE_CMAKE=		yes
 USE_TOOLS+=		msgfmt
 CMAKE_ARGS+=		-DIntl_INCLUDE_DIR=${PREFIX}/include
 CMAKE_ARGS+=		-DCMAKE_INSTALL_SYSCONFDIR=${PKG_SYSCONFDIR}
+CMAKE_ARGS+=		-DBUILD_DOCS=OFF
 
 PKG_SHELL=		bin/fish
 
