@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/10/04 07:45:51 pin Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/11/27 22:22:09 pin Exp $
 bin/badwolf
 man/man1/badwolf.1
 share/applications/badwolf.desktop
@@ -8,10 +8,10 @@ share/badwolf/locale/fr/LC_MESSAGES/Badwolf.mo
 share/badwolf/locale/pt_BR/LC_MESSAGES/Badwolf.mo
 share/badwolf/locale/tr/LC_MESSAGES/Badwolf.mo
 share/badwolf/locale/vi/LC_MESSAGES/Badwolf.mo
-share/doc/${PKGNAME}/KnowledgeBase.md
-share/doc/${PKGNAME}/README.md
-share/doc/${PKGNAME}/interface.txt
-share/doc/${PKGNAME}/usr.bin.badwolf
+share/doc/badwolf-1.2.0/KnowledgeBase.md
+share/doc/badwolf-1.2.0/README.md
+share/doc/badwolf-1.2.0/interface.txt
+share/doc/badwolf-1.2.0/usr.bin.badwolf
 share/icons/hicolor/128x128/apps/badwolf.png
 share/icons/hicolor/24x24/apps/badwolf.png
 share/icons/hicolor/256x256/apps/badwolf.png
