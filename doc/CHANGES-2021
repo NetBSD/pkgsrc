@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5842 2021/11/27 11:42:02 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5843 2021/11/27 12:33:34 pho Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8869,3 +8869,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added audio/gkrellmpc version 0.1_beta10 [pho 2021-11-27]
 	Updated devel/py-prompt_toolkit to 3.0.23 [adam 2021-11-27]
 	Updated devel/py-ipython to 7.30.0 [adam 2021-11-27]
+	Added misc/gkrellsun version 1.0.0 [pho 2021-11-27]
