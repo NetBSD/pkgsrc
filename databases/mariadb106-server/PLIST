@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/08/08 21:22:12 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/11/27 23:40:28 nia Exp $
 bin/aria_chk
 bin/aria_dump_log
 bin/aria_ftdump
@@ -8,7 +8,6 @@ bin/aria_s3_copy
 bin/innochecksum
 ${PLIST.mariabackup}bin/mariabackup
 ${PLIST.mariabackup}bin/mariadb-backup
-bin/mariadb-client-test
 ${PLIST.embedded}bin/mariadb-client-test-embedded
 ${PLIST.embedded}bin/mariadb-embedded
 bin/mariadb-fix-extensions
@@ -27,7 +26,6 @@ bin/myisamchk
 bin/myisamlog
 bin/myisampack
 ${PLIST.rocksdb}bin/myrocks_hotbackup
-bin/mysql_client_test
 ${PLIST.embedded}bin/mysql_client_test_embedded
 ${PLIST.embedded}bin/mysql_embedded
 bin/mysql_fix_extensions
@@ -344,6 +342,7 @@ lib/mysql/plugin/test_versioning.so
 lib/mysql/plugin/type_mysql_json.so
 lib/mysql/plugin/type_test.so
 lib/mysql/plugin/wsrep_info.so
+lib/security/pam_user_map.so
 sbin/mariadbd
 sbin/mysqld
 share/doc/mysql/COPYING
@@ -352,6 +351,7 @@ share/doc/mysql/INSTALL-BINARY
 share/doc/mysql/README-wsrep
 share/doc/mysql/README.md
 share/doc/mysql/THIRDPARTY
+share/examples/mariadb_auth_pam/user_map.conf
 share/mysql/charsets/Index.xml
 share/mysql/charsets/README
 share/mysql/charsets/armscii8.xml
