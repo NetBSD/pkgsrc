@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5845 2021/11/27 16:45:08 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5846 2021/11/27 22:20:58 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8873,3 +8873,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-denyhosts to 3.0 [he 2021-11-27]
 	Removed devel/py-dialog2 [adam 2021-11-27]
 	Updated devel/py-dialog to 3.5.3 [adam 2021-11-27]
+	Updated sysutils/felix to 0.2.11 [pin 2021-11-27]
