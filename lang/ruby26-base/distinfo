@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.11 2021/07/07 15:15:19 taca Exp $
+$NetBSD: distinfo,v 1.11.2.1 2021/11/27 21:53:13 tm Exp $
 
-SHA1 (ruby-2.6.8.tar.xz) = fa5ad518ef31bbf5c3386dbcec7b57196a1e618e
-RMD160 (ruby-2.6.8.tar.xz) = d2604765e5d360efa21f55e6eca90a6e026a52c1
-SHA512 (ruby-2.6.8.tar.xz) = d040ad2238523587d8f356fcb796b8b6ad7f8caff7dd6df09e3f7efcbfa0369e33600e78c7f2bc713ae77c040757cce5c4fec223cb9070209f2bf741899c556d
-Size (ruby-2.6.8.tar.xz) = 11599488 bytes
+SHA1 (ruby-2.6.9.tar.xz) = fc67ca162010aac4af49d73a8c48be5cb2fb5907
+RMD160 (ruby-2.6.9.tar.xz) = 0686248d52eacbebe0c54cc8b7d15cf9bc6fee32
+SHA512 (ruby-2.6.9.tar.xz) = f60aa89e685cea324185eb0d13e6b44caef4e4f761cbf9ea1386ae70e39faf3866ac01e4bb5354574f2583e74290b8c80eaf63d126040d52368be6c771476451
+Size (ruby-2.6.9.tar.xz) = 11590064 bytes
 SHA1 (patch-configure) = ccfad7b5e35e87308e187e6c5fb3ffea57ad763d
 SHA1 (patch-ext_dbm_extconf.rb) = c998f8735db54b1ae2bc8b6caa359ce88bc7a45b
 SHA1 (patch-lib_mkmf.rb) = 75d2261a8282a00cd5f811a5e629302d1667207e
