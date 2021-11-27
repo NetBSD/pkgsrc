@@ -1,0 +1,18 @@
+gkrellsun is a plugin for gkrellm which can display the following:
+
+* Sun's setting time
+* Sun's rising time
+* Sun's estimate time before setting/rising
+* Sun's path and current location on that path
+* Sun's apogee path
+* As of 0.11.0:
+  * Moon displayed as a full image (identical to gkrellmoon).
+  * User can click on image to toggle between Sun/Moon.
+  * Sun/Moon images will be toggled every X minutes (changable).
+  * Moon has a tooltip with more info.
+
+There are currently two background images. One is a static UltraViolet
+image and the other is an Orange image consists of six levels of
+brightness. The text color for each of the Suns' rise/set/eta times
+can be set independantly. The font type and size can also be set for
+all the times.
