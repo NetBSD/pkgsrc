@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2021/10/28 11:47:55 wiz Exp $
+$NetBSD: distinfo,v 1.18 2021/11/28 10:37:19 wiz Exp $
 
-BLAKE2s (hg-evolve-10.4.0.tar.gz) = 4e8b21de1d73cada3606b847a31b8cb42503633cdd8fbcc5e2fc77df63da0ac1
-SHA512 (hg-evolve-10.4.0.tar.gz) = 955e6f6c58cc29e00f6e3262d3dd7096290aa61826f4c4d70a181e24a3cbfc1ee7801b28000b168e4fe36208f46f826b07800270c73c650cf16fcffd48b19355
-Size (hg-evolve-10.4.0.tar.gz) = 853676 bytes
+BLAKE2s (hg-evolve-10.4.1.tar.gz) = f893696adbac7903c18ff80999626f128e3c5603e0b58b12d60f82dad80e09da
+SHA512 (hg-evolve-10.4.1.tar.gz) = f58a79fca81cd4c42442604071a24e6c84ca0225754cfe6a941412cb78ef600e54ff0f78b545b167c7122b17d6f8dcca2c19e7f39e46ab9ab6cba36a007f92f8
+Size (hg-evolve-10.4.1.tar.gz) = 838444 bytes
 SHA1 (patch-hgext3rd_evolve_obsexchange.py) = 12058a8f27c63b259dcc0ffaf77febafcdeeba46
