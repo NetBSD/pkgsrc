@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5868 2021/11/28 14:01:58 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5869 2021/11/28 14:06:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8898,3 +8898,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/apr to 1.7.0nb2 [he 2021-11-28]
 	Added lang/rust-src version 1.56.1 [he 2021-11-28]
 	Updated security/ruby-metasploit-payloads to 2.0.60 [taca 2021-11-28]
+	Updated security/ruby-metasploit_payloads-mettle to 1.0.16 [taca 2021-11-28]
