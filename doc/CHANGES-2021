@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5877 2021/11/28 20:24:42 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5878 2021/11/28 20:27:45 scole Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8910,3 +8910,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-aiofiles to 0.8.0 [adam 2021-11-28]
 	Updated textproc/py-markups to 3.1.3 [adam 2021-11-28]
 	Updated devel/meson to 0.60.2 [adam 2021-11-28]
+	Updated devel/RE-flex to 3.0.12 [scole 2021-11-28]
