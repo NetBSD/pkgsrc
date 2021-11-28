@@ -1,6 +1,10 @@
-$NetBSD: patch-aa,v 1.4 2005/03/22 14:58:55 cube Exp $
+$NetBSD: patch-aa,v 1.5 2021/11/28 05:22:15 pho Exp $
 
---- Makefile.orig	2004-05-16 19:21:50.000000000 +0200
+* Change the hard-coded plugin path.
+* NetBSD requires -lossaudio to use OSS.
+* Honor LDFLAGS to support RELRO.
+
+--- Makefile.orig	2004-08-19 20:07:27.000000000 +0000
 +++ Makefile
 @@ -8,14 +8,14 @@ export PACKAGE LOCALEDIR
  
@@ -19,3 +23,12 @@ $NetBSD: patch-aa,v 1.4 2005/03/22 14:58:55 cube Exp $
  LFLAGS = -shared
  
  OBJS = volume.o mixer.o oss_mixer.o
+@@ -40,7 +40,7 @@ all:	volume.so
+ 	(cd po && ${MAKE} all )
+ 
+ volume.so: $(OBJS)
+-	$(CC) $(OBJS) -o volume.so $(LIBS) $(LFLAGS)
++	$(CC) $(OBJS) -o volume.so $(LIBS) $(LFLAGS) $(LDFLAGS)
+ 
+ clean:
+ 	rm -f *.o core *.so* *.bak *~
