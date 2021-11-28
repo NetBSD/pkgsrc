@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5852 2021/11/27 23:40:57 nia Exp $
+$NetBSD: CHANGES-2021,v 1.5853 2021/11/28 00:50:07 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8880,3 +8880,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/mariadb105-server to 10.5.13 [nia 2021-11-27]
 	Updated databases/mariadb106-client to 10.6.5 [nia 2021-11-27]
 	Updated databases/mariadb106-server to 10.6.5 [nia 2021-11-27]
+	Updated devel/R-cachem to 1.0.6 [mef 2021-11-28]
