@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5871 2021/11/28 14:11:36 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5872 2021/11/28 16:35:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8901,3 +8901,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/ruby-metasploit_payloads-mettle to 1.0.16 [taca 2021-11-28]
 	Added lang/rust-analyzer version 0.0.2021.11.22 [wiz 2021-11-28]
 	Updated security/ruby-oauth to 0.5.8 [taca 2021-11-28]
+	Updated devel/git to 2.34.1 [adam 2021-11-28]
+	Updated textproc/py-sphinx to 4.3.1 [adam 2021-11-28]
