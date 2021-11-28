@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2021/11/28 06:42:46 pho Exp $
+
+ALSA does not automatically use this plugin. To use it by default, copy
+
+	${EGDIR}/asoundrc
+
+to your
+
+	~/.asoundrc
+
+===========================================================================
