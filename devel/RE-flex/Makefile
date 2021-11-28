@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/08/28 19:17:15 scole Exp $
+# $NetBSD: Makefile,v 1.6 2021/11/28 20:22:32 scole Exp $
 
-DISTNAME=	RE-flex-2.1.4
+DISTNAME=	RE-flex-3.0.12
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Genivia/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
