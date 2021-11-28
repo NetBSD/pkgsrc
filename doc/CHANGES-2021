@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5875 2021/11/28 20:04:41 pho Exp $
+$NetBSD: CHANGES-2021,v 1.5876 2021/11/28 20:10:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8906,3 +8906,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/badwolf to 1.2.2 [pin 2021-11-28]
 	Updated mail/getmail to 5.16 [schmonz 2021-11-28]
 	Added archivers/unarchiver version 3.10 [pho 2021-11-28]
+	Updated math/glpk to 5.0 [adam 2021-11-28]
+	Updated devel/py-aiofiles to 0.8.0 [adam 2021-11-28]
