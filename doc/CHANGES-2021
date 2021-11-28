@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5874 2021/11/28 19:51:27 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.5875 2021/11/28 20:04:41 pho Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8905,3 +8905,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-sphinx to 4.3.1 [adam 2021-11-28]
 	Updated www/badwolf to 1.2.2 [pin 2021-11-28]
 	Updated mail/getmail to 5.16 [schmonz 2021-11-28]
+	Added archivers/unarchiver version 3.10 [pho 2021-11-28]
