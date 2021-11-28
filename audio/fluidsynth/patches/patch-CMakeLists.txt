@@ -1,11 +1,11 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2019/10/16 19:25:44 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2021/11/28 10:43:42 wiz Exp $
 
 Allow building ALSA support on more systems.
 
---- CMakeLists.txt.orig	2019-09-27 14:53:27.000000000 +0000
+--- CMakeLists.txt.orig	2021-11-21 15:40:48.000000000 +0000
 +++ CMakeLists.txt
-@@ -75,10 +75,10 @@ option ( enable-readline "compile readli
- option ( enable-threads "enable multi-threading support (such as parallel voice synthesis)" on )
+@@ -93,10 +93,10 @@ option ( enable-threads "enable multi-th
+ option ( enable-openmp "enable OpenMP support (parallelization of soundfont decoding, vectorization of voice mixing, etc.)" on )
  
  # Platform specific options
 -if ( CMAKE_SYSTEM MATCHES "Linux|FreeBSD|DragonFly" )
