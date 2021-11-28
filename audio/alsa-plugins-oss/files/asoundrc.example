@@ -1,0 +1,27 @@
+# $NetBSD: asoundrc.example,v 1.1 2021/11/28 06:42:46 pho Exp $
+# We can't just use "type oss" for pcm.!default because
+# alsa-plugins-oss doesn't support FLOAT_NE, which Firefox uses. See
+# https://mail-index.netbsd.org/pkgsrc-users/2017/02/10/msg024431.html
+
+pcm.oss {
+    type oss
+}
+
+pcm.!default {
+    type plug
+    slave {
+        pcm oss
+        format S16_LE
+    }
+    hint {
+         show {
+              @func refer
+              name defaults.namehint.basic
+         }
+         description "Open Sound System"
+    }
+}
+
+ctl.!default {
+    type oss
+}
