@@ -12,4 +12,6 @@ abstractions" even though some of these abstractions feel like those of
 a high-level language.  Even then, Rust still allows precise control
 like a low-level language would.
 
-This package installs a released binary.
+This package installs a released binary, on architectures supported by
+upstream, or a TNF-built binary, on NetBSD versions not supported by
+upstream.
