@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2021/01/11 01:06:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2021/11/28 08:07:38 taca Exp $
 bin/pdf_callbacks${RUBY_SUFFIX}
 bin/pdf_object${RUBY_SUFFIX}
 bin/pdf_text${RUBY_SUFFIX}
@@ -63,6 +63,7 @@ ${GEM_LIBDIR}/lib/pdf/reader/font.rb
 ${GEM_LIBDIR}/lib/pdf/reader/font_descriptor.rb
 ${GEM_LIBDIR}/lib/pdf/reader/form_xobject.rb
 ${GEM_LIBDIR}/lib/pdf/reader/glyph_hash.rb
+${GEM_LIBDIR}/lib/pdf/reader/glyphlist-zapfdingbats.txt
 ${GEM_LIBDIR}/lib/pdf/reader/glyphlist.txt
 ${GEM_LIBDIR}/lib/pdf/reader/lzw.rb
 ${GEM_LIBDIR}/lib/pdf/reader/null_security_handler.rb
@@ -96,4 +97,5 @@ ${GEM_LIBDIR}/lib/pdf/reader/width_calculator/true_type.rb
 ${GEM_LIBDIR}/lib/pdf/reader/width_calculator/type_one_or_three.rb
 ${GEM_LIBDIR}/lib/pdf/reader/width_calculator/type_zero.rb
 ${GEM_LIBDIR}/lib/pdf/reader/xref.rb
+${GEM_LIBDIR}/lib/pdf/reader/zero_width_runs_filter.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
