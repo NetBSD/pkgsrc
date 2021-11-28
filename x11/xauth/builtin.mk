@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2019/11/03 09:14:18 rillig Exp $
+# $NetBSD: builtin.mk,v 1.4 2021/11/28 23:56:22 wiz Exp $
 
 BUILTIN_PKG:=	xauth
 
@@ -49,7 +49,7 @@ USE_BUILTIN.xauth=	${IS_BUILTIN.xauth}
 USE_BUILTIN.xauth=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.xauth}
 .        if !empty(USE_BUILTIN.xauth:M[yY][eE][sS])
-USE_BUILTIN.xauth!=						\
+USE_BUILTIN.xauth!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.xauth:Q}; then \
 		${ECHO} yes;						\
 	else								\
