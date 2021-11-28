@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2021/11/28 14:49:33 cirnatdan Exp $
+# $NetBSD: Makefile,v 1.102 2021/11/28 15:32:58 cirnatdan Exp $
 #
 
 DISTNAME=	zenity-3.41.0
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Display GNOME dialogs from the command line
 LICENSE=	gnu-lgpl-v2.1
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config perl:run
 USE_TOOLS+=		itstool
 
 TOOL_DEPENDS+=		yelp-tools-[0-9]*:../../textproc/yelp-tools
@@ -21,7 +21,6 @@ REPLACE.perl5.old=	@PERL@
 REPLACE.perl5.new=	${PERL5}
 REPLACE_FILES.perl5=	src/gdialog.in
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
