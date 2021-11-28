@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2017/04/21 21:07:09 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/11/28 07:55:48 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/global_id.rb
+${GEM_LIBDIR}/lib/global_id/fixture_set.rb
 ${GEM_LIBDIR}/lib/global_id/global_id.rb
 ${GEM_LIBDIR}/lib/global_id/identification.rb
 ${GEM_LIBDIR}/lib/global_id/locator.rb
