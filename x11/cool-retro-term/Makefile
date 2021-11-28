@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/07/18 11:49:26 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/11/28 14:48:31 pho Exp $
 
 DISTNAME=	cool-retro-term-1.1.1
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Swordfish90/}
 
@@ -32,6 +33,8 @@ do-configure:
 	    QMAKE_CFLAGS=${CFLAGS:Q} \
 	    QMAKE_CXXFLAGS=${CXXFLAGS:Q} \
 	    QMAKE_LFLAGS=${LDFLAGS:Q}
+
+DEPENDS+=	qt5-qtgraphicaleffects-[0-9]*:../../x11/qt5-qtgraphicaleffects
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
