@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21294 2021/11/28 20:10:45 adam Exp $
+$NetBSD: TODO,v 1.21295 2021/11/28 20:27:45 scole Exp $
 
 Suggested new packages
 ======================
@@ -411,7 +411,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-timeSeries-3062.100
 	o R-tseries-0.10.48
 	o R-uuid-4
-	o RE-flex-3.0.2
 	o SOGo-2.4.1
 	o SOGo-5.2.0
 	o SOPE-2.4.1
