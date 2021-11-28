@@ -1,8 +1,8 @@
-$NetBSD: patch-src_Makefile.in,v 1.1 2020/06/15 15:11:50 scole Exp $
+$NetBSD: patch-src_Makefile.in,v 1.2 2021/11/28 20:22:33 scole Exp $
 
 use libtool
 
---- src/Makefile.in.orig	2020-05-25 23:34:27.000000000 +0000
+--- src/Makefile.in.orig	2021-10-12 02:10:38.000000000 +0000
 +++ src/Makefile.in
 @@ -103,7 +103,7 @@ am__installdirs = "$(DESTDIR)$(bindir)"
  PROGRAMS = $(bin_PROGRAMS)
@@ -13,19 +13,18 @@ use libtool
  AM_V_P = $(am__v_P_@AM_V@)
  am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
  am__v_P_0 = false
-@@ -174,12 +174,13 @@ AUTOCONF = @AUTOCONF@
+@@ -174,11 +174,12 @@ AUTOCONF = @AUTOCONF@
  AUTOHEADER = @AUTOHEADER@
  AUTOMAKE = @AUTOMAKE@
  AWK = @AWK@
 -CC = @CC@
-+CC=	$(LIBTOOL) --mode=compile @CC@
++CC= $(LIBTOOL) --mode=compile @CC@
  CCDEPMODE = @CCDEPMODE@
  CFLAGS = @CFLAGS@
- CPP = @CPP@
  CPPFLAGS = @CPPFLAGS@
 -CXX = @CXX@
 +CXXORIG = @CXX@
-+CXX=	$(LIBTOOL) --mode=compile @CXX@
++CXX= $(LIBTOOL) --mode=compile @CXX@
  CXXCPP = @CXXCPP@
  CXXDEPMODE = @CXXDEPMODE@
  CXXFLAGS = @CXXFLAGS@

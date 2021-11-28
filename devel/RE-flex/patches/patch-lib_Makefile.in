@@ -1,18 +1,17 @@
-$NetBSD: patch-lib_Makefile.in,v 1.1 2020/06/15 15:11:50 scole Exp $
+$NetBSD: patch-lib_Makefile.in,v 1.2 2021/11/28 20:22:33 scole Exp $
 
 use libtool
 
---- lib/Makefile.in.orig	2020-05-25 23:34:27.000000000 +0000
+--- lib/Makefile.in.orig	2021-10-12 02:10:38.000000000 +0000
 +++ lib/Makefile.in
-@@ -241,12 +241,13 @@ AUTOCONF = @AUTOCONF@
+@@ -250,11 +250,12 @@ AUTOCONF = @AUTOCONF@
  AUTOHEADER = @AUTOHEADER@
  AUTOMAKE = @AUTOMAKE@
  AWK = @AWK@
 -CC = @CC@
-+CC=	$(LIBTOOL) --mode=compile @CC@
++CC = $(LIBTOOL) --mode=compile @CC@
  CCDEPMODE = @CCDEPMODE@
  CFLAGS = @CFLAGS@
- CPP = @CPP@
  CPPFLAGS = @CPPFLAGS@
 -CXX = @CXX@
 +CXXORIG = @CXX@
@@ -20,7 +19,7 @@ use libtool
  CXXCPP = @CXXCPP@
  CXXDEPMODE = @CXXDEPMODE@
  CXXFLAGS = @CXXFLAGS@
-@@ -416,15 +417,15 @@ uninstall-libLIBRARIES:
+@@ -425,15 +426,15 @@ uninstall-libLIBRARIES:
  clean-libLIBRARIES:
  	-test -z "$(lib_LIBRARIES)" || rm -f $(lib_LIBRARIES)
  
