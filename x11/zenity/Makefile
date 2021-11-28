@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2021/11/28 15:32:58 cirnatdan Exp $
+# $NetBSD: Makefile,v 1.103 2021/11/28 17:10:08 cirnatdan Exp $
 #
 
 DISTNAME=	zenity-3.41.0
@@ -12,7 +12,7 @@ COMMENT=	Display GNOME dialogs from the command line
 LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=		pkg-config perl:run
-USE_TOOLS+=		itstool
+USE_TOOLS+=		itstool msgfmt
 
 TOOL_DEPENDS+=		yelp-tools-[0-9]*:../../textproc/yelp-tools
 
