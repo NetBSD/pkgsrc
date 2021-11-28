@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2021/05/24 19:54:25 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2021/11/28 19:24:19 nia Exp $
 
 DISTNAME=	hunspell-1.7.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hunspell/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,6 +16,8 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config perl:run autoreconf autoconf automake autopoint
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++03
+
+CPPFLAGS.SunOS+=	-D_XPG6
 
 CONFIGURE_ARGS+=	--with-ui
 
@@ -39,7 +41,7 @@ post-patch:
 	
 
 .include "options.mk"
-
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
