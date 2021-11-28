@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5862 2021/11/28 10:45:15 nia Exp $
+$NetBSD: CHANGES-2021,v 1.5863 2021/11/28 10:46:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8890,3 +8890,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-hg-evolve to 10.4.1 [wiz 2021-11-28]
 	Updated audio/fluidsynth to 2.2.4 [wiz 2021-11-28]
 	Updated audio/fasttracker2 to 1.48 [nia 2021-11-28]
+	Updated graphics/ImageMagick to 7.1.0.16 [wiz 2021-11-28]
