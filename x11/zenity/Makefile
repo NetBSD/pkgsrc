@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2021/11/23 13:38:29 cirnatdan Exp $
+# $NetBSD: Makefile,v 1.101 2021/11/28 14:49:33 cirnatdan Exp $
 #
 
 DISTNAME=	zenity-3.41.0
@@ -11,13 +11,10 @@ HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Display GNOME dialogs from the command line
 LICENSE=	gnu-lgpl-v2.1
 
-USE_PKGLOCALEDIR=	yes
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		intltool msgfmt pkg-config
-USE_TOOLS+=		automake gm4 aclocal xgettext autopoint itstool
+USE_TOOLS+=		pkg-config
+USE_TOOLS+=		itstool
 
 TOOL_DEPENDS+=		yelp-tools-[0-9]*:../../textproc/yelp-tools
-TOOL_DEPENDS+=		autoconf-archive-[0-9]*:../../devel/autoconf-archive
 
 REPLACE_INTERPRETER+=	perl5
 REPLACE.perl5.old=	@PERL@
