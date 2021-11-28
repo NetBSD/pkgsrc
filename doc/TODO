@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21293 2021/11/28 16:35:10 adam Exp $
+$NetBSD: TODO,v 1.21294 2021/11/28 20:10:45 adam Exp $
 
 Suggested new packages
 ======================
@@ -783,7 +783,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o global-6.6.5
 	o glom-1.14.2
 	o gloox-1.0.24
-	o glpk-5.0
 	o glusterfs-9.1
 	o gmic-2.9.7
 	o gnet1-1.1.9
