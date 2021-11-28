@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:18:09 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/11/28 20:10:04 adam Exp $
 
-BLAKE2s (aiofiles-0.7.0.tar.gz) = 791493386b50314e1af3a44ffbbaa39e4ab4054dba74cb26cbf405aea538939d
-SHA512 (aiofiles-0.7.0.tar.gz) = 5085f3c2b80ec64f19577f2af726cb78298b948863c9bdf5747fe82078cfba67952bbf0a94b092e904f6d2e68af7db82c41cdd17d4d43f2c9011af37798f4e88
-Size (aiofiles-0.7.0.tar.gz) = 13557 bytes
+BLAKE2s (aiofiles-0.8.0.tar.gz) = 62cc23a717d180e236f599b18ee2e3d7d8152ba0b5298b27d9104d08701f2c3a
+SHA512 (aiofiles-0.8.0.tar.gz) = 89473300af4c6ea7d055bb9f1e45dc2f815ae0efbedd61271a7bffcc02c9c6e5456a7e19d09b1f300a6faf7a90b54700350103e48c322161ed989eb3357fa08f
+Size (aiofiles-0.8.0.tar.gz) = 14082 bytes
