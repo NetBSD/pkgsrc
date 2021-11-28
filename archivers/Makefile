@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.187 2021/11/19 09:48:38 adam Exp $
+# $NetBSD: Makefile,v 1.188 2021/11/28 20:05:18 pho Exp $
 #
 
 COMMENT=	Archivers and compression tools
@@ -135,6 +135,7 @@ SUBDIR+=	torrentzip
 SUBDIR+=	unace
 SUBDIR+=	unace-bin
 SUBDIR+=	unalz
+SUBDIR+=	unarchiver
 SUBDIR+=	unarj
 SUBDIR+=	undms
 SUBDIR+=	unlzx
