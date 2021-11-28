@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5872 2021/11/28 16:35:10 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5873 2021/11/28 19:49:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8903,3 +8903,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/ruby-oauth to 0.5.8 [taca 2021-11-28]
 	Updated devel/git to 2.34.1 [adam 2021-11-28]
 	Updated textproc/py-sphinx to 4.3.1 [adam 2021-11-28]
+	Updated www/badwolf to 1.2.2 [pin 2021-11-28]
