@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5856 2021/11/28 08:03:01 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5857 2021/11/28 08:08:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8884,3 +8884,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-globalid to 1.0.0 [taca 2021-11-28]
 	Updated net/ruby-netaddr to 2.0.5 [taca 2021-11-28]
 	Updated net/ruby-pcaprub to 0.13.1 [taca 2021-11-28]
+	Updated print/ruby-pdf-reader to 2.6.0 [taca 2021-11-28]
