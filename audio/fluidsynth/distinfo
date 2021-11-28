@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.34 2021/10/26 09:58:57 nia Exp $
+$NetBSD: distinfo,v 1.35 2021/11/28 10:43:42 wiz Exp $
 
-BLAKE2s (fluidsynth-2.2.3.tar.gz) = c150f9150ad773fc56add3df32b15f6b4bec6a17a180f55707f3f41e1fe87616
-SHA512 (fluidsynth-2.2.3.tar.gz) = 67f8da02714350cc0439fbdce763d00cb08d01301a6aaa3e2655e67935048b43e18968c9a52aa64c702b5e30ae2b2b4946f69e8be4af5889fa414c654d4eb13e
-Size (fluidsynth-2.2.3.tar.gz) = 1745344 bytes
-SHA1 (patch-CMakeLists.txt) = 79804b84964e9557180c0f86e36d465fac7126fe
+BLAKE2s (fluidsynth-2.2.4.tar.gz) = a895b4c0016a0ad50e0d26a19760e6aabc345d4b0ea8028ab92deac069f64227
+SHA512 (fluidsynth-2.2.4.tar.gz) = 46c3f0759cc011f34e5ba80684df4e8b593315d564da2341aaea14a5f0ba9cf732933f6ebc8712506f194b044a8e2b198b9e50879ff4221e6a9ab8051e79b48f
+Size (fluidsynth-2.2.4.tar.gz) = 1746638 bytes
+SHA1 (patch-CMakeLists.txt) = 24c923c5e7b39b71b499bd204a7ca74268ea552c
 SHA1 (patch-include_fluidsynth_log.h) = cfc4e180f53e6cac03bea90a0c91d6fd75e39459
 SHA1 (patch-src_drivers_fluid__alsa.c) = a482764f0bbc15b5cf04e6920374b2f4811760aa
