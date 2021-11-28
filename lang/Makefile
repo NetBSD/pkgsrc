@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.612 2021/11/28 13:51:55 he Exp $
+# $NetBSD: Makefile,v 1.613 2021/11/28 14:08:37 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -256,6 +256,7 @@ SUBDIR+=	ruby30
 SUBDIR+=	ruby30-base
 SUBDIR+=	runawk
 SUBDIR+=	rust
+SUBDIR+=	rust-analyzer
 SUBDIR+=	rust-bin
 SUBDIR+=	rust-src
 SUBDIR+=	sablevm
