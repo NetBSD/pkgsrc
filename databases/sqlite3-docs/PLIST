@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.104 2021/06/25 21:21:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.105 2021/11/28 20:48:28 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -20,6 +20,7 @@ share/doc/sqlite3/c3ref/aggregate_context.html
 share/doc/sqlite3/c3ref/aggregate_count.html
 share/doc/sqlite3/c3ref/api_routines.html
 share/doc/sqlite3/c3ref/auto_extension.html
+share/doc/sqlite3/c3ref/autovacuum_pages.html
 share/doc/sqlite3/c3ref/backup.html
 share/doc/sqlite3/c3ref/backup_finish.html
 share/doc/sqlite3/c3ref/bind_blob.html
@@ -270,6 +271,7 @@ share/doc/sqlite3/features.html
 share/doc/sqlite3/fileformat.html
 share/doc/sqlite3/fileformat2.html
 share/doc/sqlite3/fileio.html
+share/doc/sqlite3/flextypegood.html
 share/doc/sqlite3/floatingpoint.html
 share/doc/sqlite3/footprint.html
 share/doc/sqlite3/foreignkeys.html
@@ -631,6 +633,7 @@ share/doc/sqlite3/releaselog/3_35_3.html
 share/doc/sqlite3/releaselog/3_35_4.html
 share/doc/sqlite3/releaselog/3_35_5.html
 share/doc/sqlite3/releaselog/3_36_0.html
+share/doc/sqlite3/releaselog/3_37_0.html
 share/doc/sqlite3/releaselog/3_3_0.html
 share/doc/sqlite3/releaselog/3_3_1.html
 share/doc/sqlite3/releaselog/3_3_10.html
@@ -829,6 +832,7 @@ share/doc/sqlite3/sqlite.css
 share/doc/sqlite3/sqlite.css~
 share/doc/sqlite3/sqlite.html
 share/doc/sqlite3/stmt.html
+share/doc/sqlite3/stricttables.html
 share/doc/sqlite3/support.html
 share/doc/sqlite3/swarmvtab.html
 share/doc/sqlite3/syntax.html
@@ -892,6 +896,7 @@ share/doc/sqlite3/syntax/simple-select-stmt.html
 share/doc/sqlite3/syntax/sql-stmt-list.html
 share/doc/sqlite3/syntax/sql-stmt.html
 share/doc/sqlite3/syntax/table-constraint.html
+share/doc/sqlite3/syntax/table-options.html
 share/doc/sqlite3/syntax/table-or-subquery.html
 share/doc/sqlite3/syntax/type-name.html
 share/doc/sqlite3/syntax/update-stmt-limited.html
