@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2021/11/21 16:06:30 hauke Exp $
+# $NetBSD: Makefile,v 1.16 2021/11/28 06:42:46 pho Exp $
 
 DISTNAME=	alsa-plugins-1.2.5
 PKGNAME=	${DISTNAME:S/plugins/plugins-oss/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.alsa-project.org/pub/plugins/
 EXTRACT_SUFX=	.tar.bz2
@@ -33,6 +33,13 @@ CFLAGS+=	-DDEVOSSAUDIO=\"${DEVOSSAUDIO:U/dev/dsp}\"
 LIBS+=		${LIBOSSAUDIO}
 
 BUILD_DIRS=	oss
+
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+MESSAGE_SUBST+=		EGDIR=${EGDIR}
+INSTALLATION_DIRS+=	${EGDIR}
+post-install:
+	${INSTALL_DATA} "${FILESDIR}/asoundrc.example" \
+		"${DESTDIR}${EGDIR}/asoundrc"
 
 .include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
