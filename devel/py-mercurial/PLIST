@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2021/08/30 17:55:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.36 2021/11/28 10:36:14 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgdemandimport/__init__.py
 ${PYSITELIB}/hgdemandimport/__init__.pyc
@@ -602,6 +602,12 @@ ${PYSITELIB}/mercurial/dirstateutils/__init__.pyo
 ${PYSITELIB}/mercurial/dirstateutils/docket.py
 ${PYSITELIB}/mercurial/dirstateutils/docket.pyc
 ${PYSITELIB}/mercurial/dirstateutils/docket.pyo
+${PYSITELIB}/mercurial/dirstateutils/timestamp.py
+${PYSITELIB}/mercurial/dirstateutils/timestamp.pyc
+${PYSITELIB}/mercurial/dirstateutils/timestamp.pyo
+${PYSITELIB}/mercurial/dirstateutils/v2.py
+${PYSITELIB}/mercurial/dirstateutils/v2.pyc
+${PYSITELIB}/mercurial/dirstateutils/v2.pyo
 ${PYSITELIB}/mercurial/discovery.py
 ${PYSITELIB}/mercurial/discovery.pyc
 ${PYSITELIB}/mercurial/discovery.pyo
@@ -689,6 +695,7 @@ ${PYSITELIB}/mercurial/helptext/internals/cbor.txt
 ${PYSITELIB}/mercurial/helptext/internals/censor.txt
 ${PYSITELIB}/mercurial/helptext/internals/changegroups.txt
 ${PYSITELIB}/mercurial/helptext/internals/config.txt
+${PYSITELIB}/mercurial/helptext/internals/dirstate-v2.txt
 ${PYSITELIB}/mercurial/helptext/internals/extensions.txt
 ${PYSITELIB}/mercurial/helptext/internals/linelog.txt
 ${PYSITELIB}/mercurial/helptext/internals/mergestate.txt
