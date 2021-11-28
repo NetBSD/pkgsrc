@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.348 2021/11/28 00:37:24 taca Exp $
+# $NetBSD: phpversion.mk,v 1.349 2021/11/28 04:08:40 gutteridge Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -38,7 +38,7 @@
 #
 # PHP_CHECK_INSTALLED
 #	Check installed version of PHP.  Should be used by lang/php56,
-#	lang/php73, lang/php74 and lang/php80 only.
+#	lang/php73, lang/php74, lang/php80, and lang/php81 only.
 #
 #	Possible: Yes No
 #	Default: Yes
@@ -139,7 +139,7 @@ _PHP_VERSION_56_INSTALLED=	yes
 _PHP_INSTALLED=			yes
 .endif
 
-# if a version is explicitely required, take it
+# if a version is explicitly required, take it
 .if defined(PHP_VERSION_REQD)
 _PHP_VERSION=	${PHP_VERSION_REQD}
 .endif
@@ -162,7 +162,7 @@ _PHP_VERSION_FIRSTACCEPTED?=	${pv}
 .endif
 .endfor
 .endif
-# if the default is OK for the addon pkg, take this
+# if the default is OK for the add-on pkg, take this
 .if !defined(_PHP_VERSION)
 .if defined(_PHP_VERSION_${PHP_VERSION_DEFAULT}_OK)
 _PHP_VERSION=	${PHP_VERSION_DEFAULT}
@@ -177,7 +177,7 @@ _PHP_VERSION=	${_PHP_VERSION_FIRSTACCEPTED}
 # Variable assignment for multi-PHP packages
 MULTI+=	PHP_VERSION_REQD=${_PHP_VERSION}
 
-# export some of internal variables
+# export some of the internal variables
 PKG_PHP_VERSION:=	${_PHP_VERSION:C/\.[0-9]//}
 PKG_PHP:=		PHP${_PHP_VERSION:C/([0-9])([0-9])/\1.\2/}
 
@@ -189,7 +189,7 @@ PHP_CHECK_INSTALLED?=	Yes
 # if installed PHP isn't compatible with required PHP, bail out
 .if empty(PHP_CHECK_INSTALLED:M[nN][oO])
 .if defined(_PHP_INSTALLED) && !defined(_PHP_VERSION_${_PHP_VERSION}_INSTALLED)
-PKG_FAIL_REASON+=	"Package accepts ${PKG_PHP}, but different version is installed"
+PKG_FAIL_REASON+=	"Package accepts ${PKG_PHP}, but a different version is installed"
 .endif
 .endif
 
@@ -237,7 +237,7 @@ _PHP_VER_MINOR=		${PHP_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\2/}
 PHP_BASE_VERS=	${_PHP_VER_MAJOR}.${_PHP_VER_MINOR}.${PHP_INITIAL_TEENY}
 
 #
-# check installed version aginst required:
+# check installed version against required:
 #
 .if !empty(PHP_CHECK_INSTALLED:M[nN][oO])
 .if defined(_PHP_VERSION_INSTALLED) && ${_PHP_VERSION} != ${_PHP_VERSION_INSTALLED}
