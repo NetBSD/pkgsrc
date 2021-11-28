@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2021/11/28 20:04:21 pho Exp $
+bin/lsar
+bin/unar
+man/man1/lsar.1
+man/man1/unar.1
+share/bash-completion/completions/lsar
+share/bash-completion/completions/unar
