@@ -1,0 +1,5 @@
+This package installs the rust-src rust component, which contains
+the source code to the rust-std library.
+
+This package may be needed by other packages which depends on the
+type definitions for that library.
