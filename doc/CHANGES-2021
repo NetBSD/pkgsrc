@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5861 2021/11/28 10:43:51 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5862 2021/11/28 10:45:15 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8889,3 +8889,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-mercurial to 6.0 [wiz 2021-11-28]
 	Updated devel/py-hg-evolve to 10.4.1 [wiz 2021-11-28]
 	Updated audio/fluidsynth to 2.2.4 [wiz 2021-11-28]
+	Updated audio/fasttracker2 to 1.48 [nia 2021-11-28]
