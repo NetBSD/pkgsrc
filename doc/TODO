@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21289 2021/11/28 08:45:55 wiz Exp $
+$NetBSD: TODO,v 1.21290 2021/11/28 10:36:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1631,7 +1631,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.2
 	o py-marisa-0.2.6
-	o py-mercurial-6.0
 	o py-munkres-1.1.4
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
@@ -1791,6 +1790,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o spin-649
 	o spiped-1.6.1b
 	o spl-1.0pre6
+	o sqlite3-3.37.0
 	o squeak-5.0
 	o squeak-vm-4.10.2.2765
 	o sqwebmail-5.8.2
@@ -1868,7 +1868,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o topgit-0.8
-	o tor-browser-11.0.1
+	o tor-browser-11.0.1 [wip]
 	o torrentzip-2.1.0
 	o toxcore-0.2.12
 	o trafficserver-9.0.1
