@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 09:58:58 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/11/28 05:22:15 pho Exp $
 
 BLAKE2s (gkrellm-volume-2.1.13.tar.gz) = 3e06f29260bb57e914c7939d1860bc476f0309656a74d9ab15228d7f2ced06c8
 SHA512 (gkrellm-volume-2.1.13.tar.gz) = 4f244978ea8b68994540b050244350c7c2389b227541822fde009408378ce0511c32956daea205465a4c4890c68e47f64dcd8b3eca8901963d38fd1852526eb5
 Size (gkrellm-volume-2.1.13.tar.gz) = 42087 bytes
-SHA1 (patch-aa) = 450cbad8d74cdbf3d6795bb81facd7ff4a080a5a
+SHA1 (patch-aa) = 346253261d63191122103529e566a683d08919e0
 SHA1 (patch-ab) = 5f71beea53f24f0c9649db0d855974eff0394352
