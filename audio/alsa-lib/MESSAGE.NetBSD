@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1 2021/11/28 07:04:46 pho Exp $
+
+NetBSD does not natively support ALSA. To let applications play or
+record audio via ALSA, install one of these packages and follow their
+instructions:
+
+	* audio/alsa-plugins-oss
+	* audio/alsa-plugins-pulse
+
+===========================================================================
