@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/11/27 22:22:09 pin Exp $
+$NetBSD: distinfo,v 1.8 2021/11/28 19:48:57 pin Exp $
 
-BLAKE2s (badwolf-1.2.1.tar.gz) = 92937334ca12550b46414479acda0d96d3368861760dbe141408cfa58ec80bec
-SHA512 (badwolf-1.2.1.tar.gz) = 77bc46fea3af8dc73b76ecd0331e45cfbef8522f513c8e6eff50d4ee23ca65a6ae8e4ef9b2ec802a16a87ccf03245ae919f6503160cea427518259929e71b360
-Size (badwolf-1.2.1.tar.gz) = 80104 bytes
+BLAKE2s (badwolf-1.2.2.tar.gz) = d687b4fe3372d80f1fb2970e066fdcb9bca52677a30285f54504b151751240fd
+SHA512 (badwolf-1.2.2.tar.gz) = a390fc35d04bc68e0542921e9ccc73f1fb0f08ff0927292d82bcb214e2fd306ccb2c891912bbcea6885801e1094ece937d93ed2c184bdcb18cd90fec709f2da3
+Size (badwolf-1.2.2.tar.gz) = 79466 bytes
