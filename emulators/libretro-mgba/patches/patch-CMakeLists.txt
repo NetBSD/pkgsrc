@@ -1,6 +1,8 @@
-$NetBSD: patch-CMakeLists.txt,v 1.6 2021/05/02 08:40:00 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.7 2021/11/28 11:34:15 nia Exp $
 
 Fix locale detection.
+
+https://github.com/mgba-emu/mgba/pull/2366
 
 --- CMakeLists.txt.orig	2020-08-04 04:46:14.000000000 +0000
 +++ CMakeLists.txt

@@ -1,6 +1,8 @@
-$NetBSD: patch-include_mgba-util_platform_posix_threading.h,v 1.2 2020/01/25 19:26:19 nia Exp $
+$NetBSD: patch-include_mgba-util_platform_posix_threading.h,v 1.3 2021/11/28 11:34:14 nia Exp $
 
 Support NetBSD pthreads.
+
+https://github.com/mgba-emu/mgba/pull/2366
 
 --- include/mgba-util/platform/posix/threading.h.orig	2020-01-22 02:17:11.000000000 +0000
 +++ include/mgba-util/platform/posix/threading.h

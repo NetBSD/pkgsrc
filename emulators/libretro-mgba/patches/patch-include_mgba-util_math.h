@@ -1,6 +1,8 @@
-$NetBSD: patch-include_mgba-util_math.h,v 1.1 2018/08/12 14:25:09 nia Exp $
+$NetBSD: patch-include_mgba-util_math.h,v 1.2 2021/11/28 11:34:15 nia Exp $
 
 NetBSD defines popcount32 in libc.
+
+https://github.com/mgba-emu/mgba/pull/2366
 
 --- include/mgba-util/math.h.orig	2017-07-16 19:04:50.000000000 +0000
 +++ include/mgba-util/math.h
