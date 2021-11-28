@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:14:10 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/11/28 20:22:32 scole Exp $
 
-BLAKE2s (RE-flex-2.1.4.tar.gz) = c008102666e45ee455de43d3eb35497ac979fbaad989dc271b03e386f683f830
-SHA512 (RE-flex-2.1.4.tar.gz) = bad6c6712851acf957ed24de6ab8be424393996fb8ec0fc590716f33f91002971644ee55867ed4bae52019faa8c7616d9e43474e305f9ac780d4a29b062ced4d
-Size (RE-flex-2.1.4.tar.gz) = 6040596 bytes
+BLAKE2s (RE-flex-3.0.12.tar.gz) = a130ce1a06a7adf65f123b3dd89244f4ce5c209118ed2eb017c5cdcfe640c054
+SHA512 (RE-flex-3.0.12.tar.gz) = b05fd50c451e361ed816810b69eb0384e902b4b27bc6ed6b0ae276600340d84aadf88674ef2e61265a893bd4fb3de8a68b3a9937274fb55173933279307aa15e
+Size (RE-flex-3.0.12.tar.gz) = 6131163 bytes
 SHA1 (patch-examples_gz.l) = 09e92adbd4f6aa0b8fa358d6c0fc4778a67209fd
-SHA1 (patch-lib_Makefile.in) = d7ab58a8af42add67be3ba99d5e78db2a8299e00
-SHA1 (patch-src_Makefile.in) = 5e624262cc0b6fe2126dd44865bad7d0d954cad3
+SHA1 (patch-lib_Makefile.in) = 5a740285bbc09d68bf709938dca1bd6b8b25a4fd
+SHA1 (patch-src_Makefile.in) = f5771cb45d04dc3232cb8a253e756e535af9bf34
