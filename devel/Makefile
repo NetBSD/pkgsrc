@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3518 2021/11/27 16:41:45 adam Exp $
+# $NetBSD: Makefile,v 1.3519 2021/11/29 10:22:58 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -93,6 +93,7 @@ SUBDIR+=	R-usethis
 SUBDIR+=	R-uuid
 SUBDIR+=	R-waldo
 SUBDIR+=	R-whisker
+SUBDIR+=	R-whoami
 SUBDIR+=	R-withr
 SUBDIR+=	R-xfun
 SUBDIR+=	RBTools
