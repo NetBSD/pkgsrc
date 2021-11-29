@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2021/08/05 15:48:22 nia Exp $
+# $NetBSD: Makefile,v 1.30 2021/11/29 16:23:21 jperkin Exp $
 
 DISTNAME=	lilv-0.24.12
 PKGREVISION=	2
@@ -20,7 +20,7 @@ WAF_ARGS+=	--no-bindings
 .include "../../mk/bsd.prefs.mk"
 
 PLIST_VARS+=	lv2bench
-.if (${OPSYS} != "Darwin" || ${OS_VERSION:R:R} >= 16) && ${OPSYS} != "SunOS"
+.if (${OPSYS} != "Darwin" || ${OPSYS_VERSION} >= 101200) && ${OPSYS} != "SunOS"
 # Darwin doesn't have CLOCK_GETTIME so it doesn't compile this
 PLIST.lv2bench=	yes
 .endif
