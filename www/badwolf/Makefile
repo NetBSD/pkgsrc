@@ -1,16 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2021/11/28 19:48:57 pin Exp $
+# $NetBSD: Makefile,v 1.11 2021/11/29 08:53:30 pin Exp $
 
 DISTNAME=	badwolf-1.2.2
 CATEGORIES=	www
-#MASTER_SITES=	https://hacktivis.me/releases/
-MASTER_SITES=	https://gitlab.com/lanodan/badWolf/-/archive/v${PKGVERSION_NOREV}/
+MASTER_SITES=	https://hacktivis.me/releases/
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://hacktivis.me/projects/badwolf
 COMMENT=	Minimalist and privacy-oriented webkit browser
 LICENSE=	modified-bsd
-
-WRKSRC=		${WRKDIR}/badWolf-v1.2.2-ca225a55af3a723ff094c6be87254b66a947a518
 
 USE_TOOLS+=	pkg-config
 
