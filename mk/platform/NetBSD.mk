@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.69 2021/11/09 12:04:43 nia Exp $
+# $NetBSD: NetBSD.mk,v 1.70 2021/11/29 16:14:23 jperkin Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -43,7 +43,7 @@ ULIMIT_CMD_cputime?=		ulimit -t `ulimit -H -t`
 # Native X11 is only supported on NetBSD-5 and later.
 # On NetBSD-5, native X11 has enough issues that we default
 # to modular.
-.if empty(MACHINE_PLATFORM:MNetBSD-[0-5].*)
+.if ${OPSYS_VERSION} >= 060000
 X11_TYPE?=		native
 .endif
 
@@ -137,10 +137,9 @@ OPSYS_HAS_TIMERFD=	# defined
 .endif
 
 # Register support for FORTIFY (with GCC)
-.if !empty(OS_VERSION:M[2-6].*)
 # Disable on older versions, see:
 # http://mail-index.netbsd.org/pkgsrc-users/2017/08/07/msg025435.html
-.else
+.if ${OPSYS_VERSION} >= 070000
 _OPSYS_SUPPORTS_FORTIFY=yes
 .endif
 
