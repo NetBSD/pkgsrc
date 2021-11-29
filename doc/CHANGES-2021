@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5889 2021/11/29 19:31:18 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5890 2021/11/29 20:31:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8925,3 +8925,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/py-lz4 to 3.1.10 [adam 2021-11-29]
 	Updated misc/libreoffice to 7.2.3.2 [ryoon 2021-11-29]
 	Updated misc/py-asciinema to 2.1.0 [wiz 2021-11-29]
+	Updated devel/xxhash to 0.8.1 [adam 2021-11-29]
+	Updated fonts/harfbuzz to 3.1.2 [adam 2021-11-29]
+	Updated fonts/harfbuzz-icu to 3.1.2 [adam 2021-11-29]
+	Updated net/haproxy to 2.5.0 [adam 2021-11-29]
