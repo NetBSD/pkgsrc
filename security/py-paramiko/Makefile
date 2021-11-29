@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2021/10/11 09:34:52 adam Exp $
+# $NetBSD: Makefile,v 1.42 2021/11/29 09:33:19 adam Exp $
 
-DISTNAME=	paramiko-2.8.0
+DISTNAME=	paramiko-2.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/paramiko/}
@@ -19,7 +19,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-relaxed-[0-9]*:../../devel/py-test-relaxed
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"
