@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.411 2021/11/12 20:29:05 nia Exp $
+# $NetBSD: bsd.prefs.mk,v 1.412 2021/11/29 15:57:55 jperkin Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -93,6 +93,19 @@ OS_VERSION=		${_OS_VERSION_CMD:sh}
 MAKEFLAGS+=		OS_VERSION=${OS_VERSION:Q}
 .endif
 
+#
+# OPSYS_VERSION differs from OS_VERSION in that it should always evaluate to
+# an integer, allowing arithmetic expressions to simplify make(1) tests.  The
+# default command is likely correct for most OS, those that need to can set
+# it to a custom command in the later OPSYS-specific section.
+#
+.if !defined(OPSYS_VERSION)
+_OPSYS_VERSION_CMD=	${UNAME} -r | \
+			awk -F. '{printf "%02d%02d%02d", $$1, $$2, $$3}'
+OPSYS_VERSION=		${_OPSYS_VERSION_CMD:sh}
+MAKEFLAGS+=		OPSYS_VERSION=${OPSYS_VERSION:Q}
+.endif
+
 # Preload these for architectures not in all variations of bsd.own.mk,
 # which do not match their GNU names exactly.
 GNU_ARCH.aarch64eb?=	aarch64_be
@@ -161,6 +174,8 @@ OS_VARIANT!=		${UNAME} -s
 LOWER_OPSYS?=		darwin
 LOWER_OPSYS_VERSUFFIX=	${LOWER_OS_VERSION:C/([0-9]*).*/\1/}
 LOWER_VENDOR?=		apple
+_OPSYS_VERSION_CMD=	sw_vers -productVersion | \
+			awk -F. '{printf("%02d%02d%02d", $$1, $$2, $$3)}'
 
 .elif ${OPSYS} == "DragonFly"
 OS_VERSION:=		${OS_VERSION:C/-.*$//}
@@ -299,8 +314,9 @@ LOWER_OPSYS:=		${OPSYS:tl}
 LOWER_OPSYS:=		${OPSYS:tl}
 .endif
 
-# Now commit the [LOWER_]OS_VERSION values computed above, eliding the :sh
+# Now commit the version values computed above, eliding the :sh
 OS_VERSION:=		${OS_VERSION}
+OPSYS_VERSION:=		${OPSYS_VERSION}
 LOWER_OS_VERSION:=	${OS_VERSION:tl}
 
 MAKEFLAGS+=		LOWER_OPSYS=${LOWER_OPSYS:Q}
