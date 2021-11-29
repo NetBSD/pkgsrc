@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5882 2021/11/29 10:22:58 mef Exp $
+$NetBSD: CHANGES-2021,v 1.5883 2021/11/29 10:39:58 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8919,3 +8919,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-setuptools to 59.4.0 [adam 2021-11-29]
 	Updated security/py-paramiko to 2.8.1 [adam 2021-11-29]
 	Added devel/R-whoami version 1.3.0 [mef 2021-11-29]
+	Updated devel/R-desc to 1.4.0 [mef 2021-11-29]
