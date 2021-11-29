@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.303 2021/11/12 20:29:05 nia Exp $
+# $NetBSD: bootstrap,v 1.304 2021/11/29 18:32:51 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -589,7 +589,6 @@ Darwin)
 	machine_arch=`get_machine_arch_darwin`
 	CC=${CC:-"cc -isystem /usr/include"}; export CC
 	check_compiler=yes
-	osrev=`uname -r`
 
 	# Combine major.minor product version for simpler numerical tests.
 	macos_version=`sw_vers -productVersion | \
@@ -610,7 +609,7 @@ Darwin)
 		need_mksh=yes
 	fi
 
-	unset osrev macos_version
+	unset macos_version
 	;;
 DragonFly)
 	root_group=wheel
