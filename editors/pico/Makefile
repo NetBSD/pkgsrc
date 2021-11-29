@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2021/05/14 14:27:31 nia Exp $
+# $NetBSD: Makefile,v 1.81 2021/11/29 16:17:53 jperkin Exp $
 #
 # NOTE:
 # When updating, it is necessary to change the shlib version, located in
@@ -26,7 +26,7 @@ USE_LIBTOOL=		yes
 OPSYSVARS+=		BUILDNAME
 BUILDNAME.Darwin=	osx
 .if ${OPSYS} == "IRIX"
-.  if ${OS_VERSION} >= 6.5
+.  if ${OPSYS_VERSION} >= 060500
 BUILDNAME.IRIX=		sg6
 .  else
 BUILDNAME.IRIX=		sgi
