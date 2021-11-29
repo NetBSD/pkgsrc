@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2020/12/26 08:36:18 nia Exp $
+# $NetBSD: Makefile,v 1.142 2021/11/29 16:24:52 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -71,7 +71,7 @@ PLIST.ocaml-spacetime=	yes
 # clock_gettime(2), required by POSIX, is necessary for the
 # instrumented_runtime feature.
 # It is missing on macOS before 10.12.
-.if ${OPSYS} != "Darwin" || ${OS_VERSION:R:R} >= 16
+.if ${OPSYS} != "Darwin" || ${OPSYS_VERSION} >= 101200
 PLIST.instrumented_runtime=	yes
 .endif
 
