@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.151 2021/10/21 07:46:35 wiz Exp $
+# $NetBSD: Makefile,v 1.152 2021/11/29 16:19:01 jperkin Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -54,7 +54,7 @@ BUILD_TARGET.Darwin=	osx
 .   endif
 .endif
 .if ${OPSYS} == "IRIX"
-.  if ${OS_VERSION} >= 6.5
+.  if ${OPSYS_VERSION} >= 060500
 BUILD_TARGET.IRIX=	sg6
 .  else
 BUILD_TARGET.IRIX=	sgi
