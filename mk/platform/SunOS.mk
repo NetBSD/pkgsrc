@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.81 2021/11/23 10:37:59 nia Exp $
+# $NetBSD: SunOS.mk,v 1.82 2021/11/29 16:14:23 jperkin Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -40,7 +40,7 @@ MOTIF_TYPE_DEFAULT?=	motif
 .endif
 
 # Use SMF by default if available.
-.if empty(OS_VERSION:M5.[0-9])
+.if ${OPSYS_VERSION} >= 051000
 INIT_SYSTEM?=		smf
 .endif
 
@@ -75,7 +75,7 @@ _OPSYS_MISSING_FEATURES=	asprintf
 _OPSYS_MISSING_FEATURES+=	err
 .endif
 
-.if ${OS_VERSION} != "5.11"
+.if ${OPSYS_VERSION} < 051100
 _OPSYS_MISSING_FEATURES+=	strnlen
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: OpenBSD.mk,v 1.43 2021/11/09 12:04:43 nia Exp $
+# $NetBSD: OpenBSD.mk,v 1.44 2021/11/29 16:14:23 jperkin Exp $
 #
 # Variable definitions for the OpenBSD operating system.
 
@@ -61,7 +61,7 @@ _OPSYS_SHLIB_TYPE_cmd=	\
 	*)			echo ELF ;;	\
 	esac
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
-.if ${OS_VERSION} >= 3.4
+.if ${OPSYS_VERSION} >= 030400
 _PATCH_BACKUP_ARG?=	-V simple -z 	# switch to patch(1) for backup suffix
 .else
 _PATCH_BACKUP_ARG?=	-V simple -b 	# switch to patch(1) for backup suffix
