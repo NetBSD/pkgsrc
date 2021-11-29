@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5887 2021/11/29 17:20:13 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5888 2021/11/29 19:30:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8925,3 +8925,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/py-lz4 to 3.1.10 [adam 2021-11-29]
 	Updated misc/libreoffice to 7.2.3.2 [ryoon 2021-11-29]
 	Added multimedia/asciinema version 2.1.0 [wiz 2021-11-29]
+	Updated misc/py-asciinema to 2.1.0 [wiz 2021-11-29]
