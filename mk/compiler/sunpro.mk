@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.49 2015/05/03 23:16:41 joerg Exp $
+# $NetBSD: sunpro.mk,v 1.50 2021/11/29 16:14:23 jperkin Exp $
 #
 # This is the compiler definition for the SUNWspro C compiler.
 #
@@ -64,9 +64,9 @@ PKG_${t}:=		${SUNWSPROBASE}/bin/${n}
 # See PR 37200
 .if !empty(USE_LANGUAGES:Mc99)
 _WRAP_EXTRA_ARGS.CC+=	-xc99
-. if !empty(MACHINE_PLATFORM:MSunOS-5.[89]-*)
+.  if ${OPSYS_VERSION} < 051000
 _WRAP_EXTRA_ARGS.CC+=   -xc99=all,no_lib
-. endif
+.  endif
 .endif
 
 # The Solaris linker uses "-R" for rpath directives.
