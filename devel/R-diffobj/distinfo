@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:03 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/11/29 10:47:58 mef Exp $
 
-BLAKE2s (R/diffobj_0.3.4.tar.gz) = a0b6c25a118ffc6afa8b41bf0720e34d2695d5211e7bd1dcd4e937522f4a75ea
-SHA512 (R/diffobj_0.3.4.tar.gz) = b0c8e846615f3cd85092a806f99526d26235ca3b35e7c99d489dd112525ef7a2e955cecdc8dfeee5e3fabe8aa77212b2d5eeec28a4021a2a44f76f76038d5994
-Size (R/diffobj_0.3.4.tar.gz) = 477614 bytes
+BLAKE2s (R/diffobj_0.3.5.tar.gz) = d45fb7aa3f8221965cbc26f0841baded65a5b5edf59cf72443af13be15531014
+SHA512 (R/diffobj_0.3.5.tar.gz) = 8a35b44ca4d0488e63c2bca4ea95f89b603e2eafabbc374d582e8cd50bc84c2cdb58d5d27ffa14c3f547a67d2a4d3ab5834728e9a84b1c572a2cd846efae0b83
+Size (R/diffobj_0.3.5.tar.gz) = 479276 bytes
