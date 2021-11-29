@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/29 10:20:24 mef Exp $
+
+BLAKE2s (R/whoami_1.3.0.tar.gz) = 4a8983cc77a0962f0244fce70fc5b110db8a587b3a6557165e7d5f66497bf449
+SHA512 (R/whoami_1.3.0.tar.gz) = 872d2da85da3084935370e2852b81ab089aa756516ab681eb9d0a8343e4d2bf2dca728c0441400707155d78e160c79e8bf472b1c6eb110f15a7117e54b0200bd
+Size (R/whoami_1.3.0.tar.gz) = 6929 bytes
