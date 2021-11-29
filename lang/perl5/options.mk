@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2021/05/24 17:46:25 wiz Exp $
+# $NetBSD: options.mk,v 1.17 2021/11/29 16:26:36 jperkin Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.perl
 PKG_OPTIONS_REQUIRED_GROUPS=	perlbits
@@ -46,8 +46,8 @@ PKG_SUGGESTED_OPTIONS+=		perl-64bitnone
 PKG_SUGGESTED_OPTIONS+=		perl-64bitauto
 .endif
 
-.if !empty(MACHINE_PLATFORM:MSunOS-5.1[1-9]-*) || \
-    (${OPSYS} == "Darwin" && ${OS_VERSION:R} >= 9)
+.if (${OPSYS} == "SunOS" && ${OPSYS_VERSION} >= 051100) || \
+    (${OPSYS} == "Darwin" && ${OPSYS_VERSION} >= 100500)
 PKG_SUGGESTED_OPTIONS+=		dtrace
 .endif
 
