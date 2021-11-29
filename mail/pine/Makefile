@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2020/12/04 04:56:02 riastradh Exp $
+# $NetBSD: Makefile,v 1.141 2021/11/29 16:19:38 jperkin Exp $
 
 DISTNAME=	pine4.64
 PKGNAME=	pine-4.64
@@ -28,7 +28,7 @@ BUILDNAME=	osx
 BUILDFILE=	osx
 LIBS+=		-lcurses
 .elif ${OPSYS} == "IRIX"
-.  if ${OS_VERSION} >= 6.5
+.  if ${OPSYS_VERSION} >= 060500
 BUILDNAME=	sg6
 .  else
 BUILDNAME=	sgi
