@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/29 17:19:50 wiz Exp $
+
+BLAKE2s (asciinema-2.1.0.tar.gz) = 2f9c61dc1b8033d6e9eba076a04f67cacaa624905a7035a27a8b0dbbbe07aa22
+SHA512 (asciinema-2.1.0.tar.gz) = 653eaaf7ff4ed49202b7b8b7999b1f969698fd08c7ba73c5fc7e005dafb1cd0116804d6553102556001b52f8539a8d0ad1e4c0c9a8a9aa19edcf48fb3f90c4aa
+Size (asciinema-2.1.0.tar.gz) = 78899 bytes
