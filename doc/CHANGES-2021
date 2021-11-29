@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5884 2021/11/29 10:48:08 mef Exp $
+$NetBSD: CHANGES-2021,v 1.5885 2021/11/29 11:44:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8921,3 +8921,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/R-whoami version 1.3.0 [mef 2021-11-29]
 	Updated devel/R-desc to 1.4.0 [mef 2021-11-29]
 	Updated devel/R-diffobj to 0.3.5 [mef 2021-11-29]
+	Updated devel/py-more-itertools to 8.12.0 [adam 2021-11-29]
+	Updated archivers/py-lz4 to 3.1.10 [adam 2021-11-29]
