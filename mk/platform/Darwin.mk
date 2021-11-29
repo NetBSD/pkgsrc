@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.109 2021/11/29 12:38:44 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.110 2021/11/29 16:14:23 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -30,14 +30,15 @@
 #
 
 # Tiger (and earlier) use Xfree 4.4.0 (and earlier)
-.if empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
+.if ${OPSYS_VERSION} < 100500
 X11_TYPE?=	native
 .endif
 
 .if !defined(CPP) || ${CPP} == "cpp"
 CPP=		${CC} -E ${CPP_PRECOMP_FLAGS}
 .endif
-.if empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
+# bash invoked as /bin/sh on Leopard and newer does not support echo -n.
+.if ${OPSYS_VERSION} >= 100500
 ECHO_N?=	/bin/echo -n
 .else
 ECHO_N?=	${ECHO} -n
@@ -153,14 +154,14 @@ _WRAP_EXTRA_ARGS.LD+=	-arch arm64
 # in the SDK directory.  It may be that this can be set for all versions, but
 # for now keep the legacy behaviour and limit it to Big Sur onwards only.
 #
-.if ${OS_VERSION:R} >= 20
+.if ${OPSYS_VERSION} >= 110000
 DARWIN_NO_SYSTEM_LIBS=	# defined
 _OPSYS_LIB_DIRS?=	${OSX_SDK_PATH}/usr/lib
 .else
 _OPSYS_LIB_DIRS?=	/usr/lib
 .endif
 
-.if ${OS_VERSION:R} >= 6
+.if ${OPSYS_VERSION} >= 100200
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
 .else
 _OPSYS_HAS_INET6=	no	# IPv6 is not standard
@@ -183,8 +184,8 @@ KRB5_DEFAULT?=		mit-krb5
 #
 # Builtin overrides.
 #
-.if !empty(OS_VERSION:M[56].*)
-USE_BUILTIN.dl=		no	# Darwin-[56].* uses devel/dlcompat
+.if ${OPSYS_VERSION} < 100300
+USE_BUILTIN.dl=		no	# Use devel/dlcompat
 .endif
 
 # Builtin defaults which make sense for this platform.
@@ -252,15 +253,14 @@ MAKE_ENV+=	MACOSX_DEPLOYMENT_TARGET="10.4"
 CONFIGURE_ENV+=		gl_cv_func_getcwd_abort_bug=no
 .endif
 
-# Use "/bin/ksh" for buildlink3 wrapper script to improve build performance.
-.if (!empty(OS_VERSION:M9.*) || !empty(OS_VERSION:M1[0-2].*) || \
-     !empty(OS_VERSION:M1[4-9].*)) && \
-    exists(/bin/ksh)
+# Use ksh to improve wrapper script performance, except on buggy Mavericks.
+.if exists(/bin/ksh)
+.  if ${OPSYS_VERSION} < 100900 || ${OPSYS_VERSION} >= 101000
 WRAPPER_BIN_SH?=	/bin/ksh
+.  endif
 .endif
 
-# strnlen(3) wasn't included until Lion, pull it in from libnbcompat on prior
-# releases.
-.if ${OS_VERSION:R} < 11
+# strnlen(3) is available from Lion onwards
+.if ${OPSYS_VERSION} < 100700
 _OPSYS_MISSING_FEATURES+= 	strnlen
 .endif
