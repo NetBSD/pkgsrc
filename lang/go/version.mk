@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.133 2021/11/05 19:35:00 bsiegert Exp $
+# $NetBSD: version.mk,v 1.134 2021/11/29 16:29:34 jperkin Exp $
 
 #
 # If bsd.prefs.mk is included before go-package.mk in a package, then this
@@ -14,10 +14,10 @@ GO14_VERSION=	1.4.3
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD" && ${OS_VERSION:M6.*}
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 070000
 # 1.9 is the last Go version to support NetBSD 6
 GO_VERSION_DEFAULT?=	19
-.elif ${OPSYS} == "Darwin" && ${OS_VERSION:R} < 14
+.elif ${OPSYS} == "Darwin" && ${OPSYS_VERSION} < 101000
 # go 1.11 removed support for osx 10.8 and 10.9
 # https://github.com/golang/go/issues/23122
 # darwin version 13.4 is osx 10.9.5
