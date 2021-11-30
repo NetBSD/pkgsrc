@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.50 2021/10/09 10:56:09 nia Exp $
+# $NetBSD: Makefile,v 1.51 2021/11/30 16:25:40 ryoon Exp $
 
-DISTNAME=	libexif-0.6.23
+DISTNAME=	libexif-0.6.24
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libexif/}
 GITHUB_PROJECT=	libexif
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.tar.xz
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://libexif.github.io/
