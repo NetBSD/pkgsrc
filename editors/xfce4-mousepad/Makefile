@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2021/05/12 00:10:58 gutteridge Exp $
+# $NetBSD: Makefile,v 1.58 2021/11/30 00:45:38 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	0.5.4
+VERSION=	0.5.7
 DISTNAME=	mousepad-${VERSION}
 PKGNAME=	xfce4-mousepad-${VERSION}
 CATEGORIES=	editors
@@ -13,8 +13,9 @@ COMMENT=	Xfce text editor
 
 CONFIGURE_ARGS+=	--enable-gtksourceview4
 
+.include "options.mk"
+
 .include "../../devel/glib2/schemas.mk"
-.include "../../devel/xfce4-conf/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtksourceview4/buildlink3.mk"
