@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21297 2021/11/30 10:35:09 pho Exp $
+$NetBSD: TODO,v 1.21298 2021/11/30 12:34:35 pho Exp $
 
 Suggested new packages
 ======================
@@ -725,7 +725,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o fstrm-0.6.1
 	o ftplibpp-2.0.2
 	o fuse-archivemount-0.8.7
-	o fuse-bindfs-1.15.1
 	o fuse-encfs-1.9.5
 	o fuse-mp3fs-0.91 [needs fixes to work on NetBSD; started in wip]
 	o fuse-sshfs-3.7.1
