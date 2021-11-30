@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5890 2021/11/29 20:31:27 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5891 2021/11/30 00:01:46 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8929,3 +8929,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated fonts/harfbuzz to 3.1.2 [adam 2021-11-29]
 	Updated fonts/harfbuzz-icu to 3.1.2 [adam 2021-11-29]
 	Updated net/haproxy to 2.5.0 [adam 2021-11-29]
+	Updated devel/p5-CPAN-Checksums to 2.13 [wen 2021-11-30]
