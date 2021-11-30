@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/08/28 13:55:44 adam Exp $
+# $NetBSD: Makefile,v 1.5 2021/11/30 07:21:29 pho Exp $
 
 .include "../../net/nmap/Makefile.common"
 
@@ -12,6 +12,8 @@ EXTRACT_ELEMENTS=	${DISTNAME}/zenmap
 
 EGG_NAME=	${PKGNAME:C/-([^0-9])/_\1/g}
 
+# There is an ongoing effort of porting Zenmap to Python 3. See
+# https://github.com/nmap/nmap/issues/1176
 PYTHON_VERSIONS_ACCEPTED=	27
 
 DEPENDS+=	nmap-[0-9]*:../../net/nmap
