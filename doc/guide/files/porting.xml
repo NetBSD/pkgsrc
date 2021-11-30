@@ -1,4 +1,4 @@
-<!-- $NetBSD: porting.xml,v 1.6 2016/06/11 14:58:26 rillig Exp $ -->
+<!-- $NetBSD: porting.xml,v 1.7 2021/11/30 10:00:05 jperkin Exp $ -->
 
 <chapter id="porting"> <?dbhtml filename="porting.html"?>
 <title>Porting pkgsrc</title>
@@ -25,8 +25,7 @@
 	<varlistentry><term><filename>mk/bsd.prefs.mk</filename></term>
 	<listitem><para>Insert code that defines the variables
 	<varname>OPSYS</varname>, <varname>OS_VERSION</varname>,
-	<varname>LOWER_OS_VERSION</varname>,
-	<varname>LOWER_VENDOR</varname>,
+	<varname>OPSYS_VERSION</varname>, <varname>LOWER_VENDOR</varname>,
 	<varname>MACHINE_ARCH</varname>, <varname>OBJECT_FMT</varname>,
 	<varname>APPEND_ELF</varname>, and the other variables that
 	appear in this file.</para></listitem></varlistentry>
