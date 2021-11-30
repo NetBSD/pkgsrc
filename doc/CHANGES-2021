@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5915 2021/11/30 14:19:13 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.5916 2021/11/30 14:19:23 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8954,3 +8954,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated wm/xfce4-wm to 4.16.1 [gutteridge 2021-11-30]
 	Updated x11/xfce4-exo to 4.16.2 [gutteridge 2021-11-30]
 	Updated x11/xfce4-garcon to 4.16.1 [gutteridge 2021-11-30]
+	Updated cad/libredwg to 0.12.3 [gdt 2021-11-30]
