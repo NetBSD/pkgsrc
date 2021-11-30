@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5912 2021/11/30 14:10:57 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.5913 2021/11/30 14:13:37 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8951,3 +8951,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/libxfce4util to 4.16.0 [gutteridge 2021-11-30]
 	Updated devel/xfce4-conf to 4.16.0 [gutteridge 2021-11-30]
 	Updated x11/libxfce4ui to 4.16.1 [gutteridge 2021-11-30]
+	Updated wm/xfce4-wm to 4.16.1 [gutteridge 2021-11-30]
