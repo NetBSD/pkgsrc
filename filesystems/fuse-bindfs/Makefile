@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2017/12/24 09:49:30 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2021/11/30 12:34:24 pho Exp $
 
-DISTNAME=	bindfs-1.8.4
+DISTNAME=	bindfs-1.15.1
 PKGNAME=	fuse-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	filesystems
-MASTER_SITES=	http://bindfs.googlecode.com/files/
+MASTER_SITES=	https://bindfs.org/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://bindfs.org/
@@ -13,9 +12,10 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	autoconf gmake pkg-config
+USE_TOOLS+=	automake autoreconf gmake pkg-config
 
-CPPFLAGS.NetBSD+=	-D_NETBSD_SOURCE
+pre-configure:
+	cd ${WRKSRC} && autoreconf
 
 .include "../../mk/fuse.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
