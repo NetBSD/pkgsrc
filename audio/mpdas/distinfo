@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 09:59:16 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/11/30 10:34:58 pho Exp $
 
-BLAKE2s (mpdas-0.3.2.tar.gz) = 93b070b6d4b9dcbbedf79829949ea21cdabc36d201cf51a22de7a7c0301d1203
-SHA512 (mpdas-0.3.2.tar.gz) = b7bc6a78d9a531684a0b59d6e5b6b9701948d10650f567bfebd7eb408d4f22b8c5aed4ddd9b08968aca828ae59b22404bb19c552fc25cf50cdf8adbd7cd77771
-Size (mpdas-0.3.2.tar.gz) = 14143 bytes
-SHA1 (patch-Makefile) = c4f684b4e06699615f31c2a9297421c059af6d1f
+BLAKE2s (mpdas-0.4.5.tar.gz) = 97c909ed6d2d2d855d6c5b1fbdeb2c115e6d671dc77c94e4db7ad6bed3a3f365
+SHA512 (mpdas-0.4.5.tar.gz) = 18737f20b408a38424c46a611a1184e8e9ab78d1c3bddddc37423c8437007b87c343dfe03fd989c9c54dcc532ed1f567ba854d2ba8e12f344399267dc83daaab
+Size (mpdas-0.4.5.tar.gz) = 19108 bytes
