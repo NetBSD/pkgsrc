@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5895 2021/11/30 00:22:34 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5896 2021/11/30 00:26:38 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8934,3 +8934,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-CPAN-Uploader to 0.103016 [wen 2021-11-30]
 	Updated devel/p5-CPANPLUS to 0.9914 [wen 2021-11-30]
 	Updated devel/p5-Date-Manip to 6.86 [wen 2021-11-30]
+	Updated devel/p5-Devel-Hide to 0.0015 [wen 2021-11-30]
