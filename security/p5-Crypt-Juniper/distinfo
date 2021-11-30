@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/11/30 19:47:35 he Exp $
+
+BLAKE2s (Crypt-Juniper-0.02.tar.gz) = 2aa4160c861108d242227715586c87e74572d2efe23dd1e5841dcb84fd92819a
+SHA512 (Crypt-Juniper-0.02.tar.gz) = 6fe4f9cca431aa341139b95f37e2cc7c075860e901658fcc8c28944636a172c30062366eca7917c2332db078e03bc98ba0b7944f6ab4c0cc3c511d3d1663ace6
+Size (Crypt-Juniper-0.02.tar.gz) = 32304 bytes
