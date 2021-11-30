@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5903 2021/11/30 10:35:09 pho Exp $
+$NetBSD: CHANGES-2021,v 1.5904 2021/11/30 11:26:45 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8942,3 +8942,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/xfce4-whiskermenu-plugin to 2.7.0 [gutteridge 2021-11-30]
 	Updated filesystems/py-fuse-bindings to 1.0.4 [pho 2021-11-30]
 	Updated audio/mpdas to 0.4.5 [pho 2021-11-30]
+	Updated net/lldpd to 1.0.13 [hauke 2021-11-30]
