@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5898 2021/11/30 00:39:22 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5899 2021/11/30 00:45:48 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8937,3 +8937,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Devel-Hide to 0.0015 [wen 2021-11-30]
 	Updated devel/p5-Event to 1.28 [wen 2021-11-30]
 	Updated devel/p5-ExtUtils-Depends to 0.8001 [wen 2021-11-30]
+	Updated editors/xfce4-mousepad to 0.5.7 [gutteridge 2021-11-30]
