@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.240 2021/10/09 15:35:12 nia Exp $
+# $NetBSD: Makefile,v 1.241 2021/11/30 15:41:24 ryoon Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
-PKGREVISION=	1
-SM_VER=		2.53.9
+SM_VER=		2.53.10
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -28,7 +27,7 @@ GCC_REQD+=	6
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
-# See mozilla/config/milestone.txt
+# See config/milestone.txt
 #.include "../../www/firefox60/mozilla-common.mk"
 .include "mozilla-common.mk"
 
@@ -55,14 +54,17 @@ CHECK_INTERPRETER_SKIP+=	lib/seamonkey-sdk/sdk/bin/typelib.py
 CHECK_INTERPRETER_SKIP+=	lib/seamonkey-sdk/sdk/bin/xpidl.py
 CHECK_INTERPRETER_SKIP+=	lib/seamonkey-sdk/sdk/bin/xpt.py
 
-CHECK_WRKREF_SKIP=	lib/seamonkey/chrome/toolkit/content/global/buildconfig.html
-CHECK_WRKREF_SKIP+=	lib/seamonkey/chrome/comm/content/communicator/buildconfig.html
+CHECK_WRKREF_SKIP+=		lib/seamonkey/omni.ja
 
 CKSUM_CRATES+=	third_party/rust/libc
-
 # patch-mozilla_third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_other_mod.rs
 CKSUMS+=	4d9f7091af8e166943ac6f42ce85558909e5b6e61325039bff7adfbcf4b90212
 CKSUMS+=	30c5211b393d9314f880f63e29833785c8b55369102eec21170a0fe0fd1c4a16
+
+CKSUM_CRATES+=	third_party/rust/packed_simd
+# patches/patch-third__party_rust_packed__simd_src_lib.rs
+CKSUMS+=	f2e2d0867734a62e1f468e5d3e15fbd01a15f8aafd5d65a8a3cb7ab95ffd61c4
+CKSUMS+=	41c2a5c5fb42225ce9c6a267653870fdb8af30f933b3b8534d57a15fb96ebb39
 
 SUBST_CLASSES+=		cksum
 SUBST_STAGE.cksum=	pre-configure
