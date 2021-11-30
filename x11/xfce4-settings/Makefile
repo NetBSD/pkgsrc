@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2021/04/21 11:43:03 adam Exp $
+# $NetBSD: Makefile,v 1.65 2021/11/30 14:34:51 gutteridge Exp $
 
-PKGREVISION= 5
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	4.14.3
+VERSION=	4.16.2
 DISTNAME=	xfce4-settings-${VERSION}
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/xfce/xfce4-settings/${VERSION:R}/
@@ -17,6 +16,10 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--enable-sound-settings
 CONFIGURE_ARGS+=	--enable-pluggable-dialogs
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+REPLACE_PYTHON=	dialogs/mime-settings/helpers/xfce4-compose-mail
+
 PKG_SYSCONFSUBDIR=	xdg
 
 CONF_FILES=	${XFCE4_EGBASE}/menus/xfce-settings-manager.menu \
@@ -24,7 +27,9 @@ CONF_FILES=	${XFCE4_EGBASE}/menus/xfce-settings-manager.menu \
 		${XFCE4_EGBASE}/xfconf/xfce-perchannel-xml/xsettings.xml \
 		${PKG_SYSCONFDIR}/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml \
 		${XFCE4_EGBASE}/autostart/xfsettingsd.desktop \
-		${PKG_SYSCONFDIR}/autostart/xfsettingsd.desktop
+		${PKG_SYSCONFDIR}/autostart/xfsettingsd.desktop \
+		${XFCE4_EGBASE}/helpers.rc \
+		${PKG_SYSCONFDIR}/xfce4/helpers.rc
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/menus \
 		${XFCE4_EGBASE}/xfconf/xfce-perchannel-xml \
@@ -32,8 +37,7 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/menus \
 		${PKG_SYSCONFDIR}/xfce4/xfconf/xfce-perchannel-xml
 
 .include "../../audio/libcanberra/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
-.include "../../devel/libwnck/buildlink3.mk"
+.include "../../devel/libwnck3/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
@@ -45,7 +49,9 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/menus \
 .include "../../x11/libxfce4ui/buildlink3.mk"
 .include "../../devel/xfce4-conf/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
+BUILDLINK_API_DEPENDS.xfce4-exo+=	xfce4-exo>=4.16.2
 .include "../../x11/xfce4-exo/buildlink3.mk"
 .include "../../x11/xfce4-garcon/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
