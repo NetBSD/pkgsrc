@@ -1,0 +1,3 @@
+This module provides functions for encrypting and decrypting scrambled
+passwords in Juniper router configurations.  Only passwords starting with
+'$9$' are supported.
