@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5930 2021/11/30 15:06:40 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.5931 2021/11/30 15:10:30 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8969,3 +8969,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated time/xfce4-datetime-plugin to 0.8.1 [gutteridge 2021-11-30]
 	Updated sysutils/xfce4-genmon-plugin to 4.1.1 [gutteridge 2021-11-30]
 	Updated x11/xfce4-notes-plugin to 1.9.0 [gutteridge 2021-11-30]
+	Updated meta-pkgs/xfce4-extras to 4.16.0 [gutteridge 2021-11-30]
