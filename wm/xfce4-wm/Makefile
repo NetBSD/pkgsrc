@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.84 2021/01/19 02:46:19 gutteridge Exp $
+# $NetBSD: Makefile,v 1.85 2021/11/30 14:13:29 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	4.14.6
+VERSION=	4.16.1
 DISTNAME=	xfwm4-${VERSION}
 PKGNAME=	xfce4-wm-${VERSION}
 CATEGORIES=	wm
@@ -13,7 +13,6 @@ COMMENT=	Xfce window manager
 
 .include "../../devel/libwnck3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/libXpresent/buildlink3.mk"
