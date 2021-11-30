@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.414 2021/11/30 09:06:37 jperkin Exp $
+# $NetBSD: bsd.prefs.mk,v 1.415 2021/11/30 09:39:11 jperkin Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -172,7 +172,7 @@ OS_VARIANT!=		${UNAME} -s
 
 .elif ${OPSYS} == "Darwin"
 LOWER_OPSYS?=		darwin
-LOWER_OPSYS_VERSUFFIX=	${LOWER_OS_VERSION:C/([0-9]*).*/\1/}
+LOWER_OPSYS_VERSUFFIX=	${OS_VERSION:C/([0-9]*).*/\1/}
 LOWER_VENDOR?=		apple
 _OPSYS_VERSION_CMD=	sw_vers -productVersion | \
 			awk -F. '{printf("%02d%02d%02d", $$1, $$2, $$3)}'
@@ -185,7 +185,7 @@ LOWER_VENDOR?=		pc
 .elif ${OPSYS} == "FreeBSD"
 OS_VERSION:=		${OS_VERSION:C/-.*$//}
 LOWER_OPSYS?=		freebsd
-LOWER_OPSYS_VERSUFFIX=	${LOWER_OS_VERSION:C/([0-9]*).*/\1/}
+LOWER_OPSYS_VERSUFFIX=	${OS_VERSION:C/([0-9]*).*/\1/}
 .  if ${MACHINE_ARCH} == "i386"
 LOWER_VENDOR?=		pc
 .  endif
@@ -201,7 +201,7 @@ LOWER_VENDOR?=		pc
 LOWER_OPSYS?=		interix
 LOWER_VENDOR?=		pc
 .  if exists(/usr/lib/libc.so.5.2) || exists(/usr/lib/x86/libc.so.5.2)
-LOWER_OPSYS_VERSUFFIX=	${LOWER_OS_VERSION:C/([0-9]*).*/\1/}
+LOWER_OPSYS_VERSUFFIX=	${OS_VERSION:C/([0-9]*).*/\1/}
 .  else
 LOWER_OPSYS_VERSUFFIX?=	3
 .    if exists(/usr/lib/libc.so.3.5)
@@ -215,7 +215,6 @@ OS_VERSION=		3.0
 
 .elif ${OPSYS} == "MirBSD"
 LOWER_OPSYS?=		mirbsd
-LOWER_OS_VERSION=	${OS_VERSION}
 LOWER_OPSYS_VERSUFFIX=	${OS_VERSION}
 LOWER_VENDOR?=		unknown
 
@@ -316,7 +315,6 @@ LOWER_OPSYS:=		${OPSYS:tl}
 
 # Now commit the version values computed above, eliding the :sh
 OS_VERSION:=		${OS_VERSION}
-LOWER_OS_VERSION:=	${OS_VERSION:tl}
 
 MAKEFLAGS+=		LOWER_OPSYS=${LOWER_OPSYS:Q}
 
