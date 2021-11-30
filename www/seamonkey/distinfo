@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.174 2021/10/26 11:31:07 nia Exp $
+$NetBSD: distinfo,v 1.175 2021/11/30 15:41:24 ryoon Exp $
 
-BLAKE2s (seamonkey-2.53.9.source.tar.xz) = 0c551a85fb22c01201516d6521c219a2c24e224e2736ce57d01718c2bdf65796
-SHA512 (seamonkey-2.53.9.source.tar.xz) = 17f7009f2b5a1f337c24f98e2bfac2b63498f6e5b5080cbfc1c541ee60fa07f5116b76b7f20f2fc4e000b8c38c4558c7c9ef10abbdfec52dd597bc25d5a952f4
-Size (seamonkey-2.53.9.source.tar.xz) = 285118824 bytes
+BLAKE2s (seamonkey-2.53.10.source.tar.xz) = ab1e1c5aa3104a353cd9a3252f1a5750f4653adf5e1440ec72b31f5afe9f51ce
+SHA512 (seamonkey-2.53.10.source.tar.xz) = 90e58d0c34218f88ff148a215849bc0561bf93f99850690d8a484e8509631cb8aa6a756126cdaeb38cf2557ceca69989f015156d51131edc1233d242721a3101
+Size (seamonkey-2.53.10.source.tar.xz) = 284344996 bytes
 SHA1 (patch-build_moz.configure_rust.configure) = 38ba5e8a0e41352afc4e767c25388c3c772b0457
 SHA1 (patch-dom_indexedDB_IDBTransaction.h) = 7882f1264889d5f17af0bafa68bfa5aff5b57634
 SHA1 (patch-gfx_angle_checkout_src_compiler_translator_SymbolTable__autogen.cpp) = c002337ca566e5d0124d071bf39e5fb9daa7e059
@@ -33,9 +33,10 @@ SHA1 (patch-mozilla_third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_other_
 SHA1 (patch-mozilla_toolkit_components_terminator_nsTerminator.cpp) = 0d9c8c1ff35321973793bb948c3f43746260b21a
 SHA1 (patch-mozilla_toolkit_library_moz.build) = 1d6b33227700f8f7c2182b5c389fdb9c5487d134
 SHA1 (patch-mozilla_toolkit_moz.configure) = b3cc1701b1cc25a6508c423387fb928940ebb154
-SHA1 (patch-mozilla_toolkit_mozapps_installer_packager.mk) = 216952653a2e8e539b32291ef14059827c81664a
+SHA1 (patch-mozilla_toolkit_mozapps_installer_packager.mk) = c717a71831e4380a77e931c15a1c2d4fea4c88b5
 SHA1 (patch-mozilla_toolkit_xre_glxtest.cpp) = 6d69f6e38fc2af31aa83a39a25252cb81675560b
 SHA1 (patch-mozilla_xpcom_base_nscore.h) = ccacde8a2222fc427e48e012175426ba4886dffb
 SHA1 (patch-mozilla_xpcom_build_BinaryPath.h) = 54d07ee72b6fc60a5a94c99316725866fdebe9aa
 SHA1 (patch-mozilla_xpcom_reflect_xptcall_md_unix_xptcinvoke__sparc64__netbsd.cpp) = 3f172488ed177aca966b9d0e6b953459db8750af
 SHA1 (patch-suite_installer_Makefile.in) = 174fe46811de70b8e8e5f40308355d7616f3570f
+SHA1 (patch-third__party_rust_packed__simd_src_lib.rs) = 284a05cdc984c1bc4184fbafd39d419c68d697d9
