@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2021/05/26 23:45:58 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.34 2021/11/30 14:48:17 gutteridge Exp $
 bin/xfdesktop
 bin/xfdesktop-settings
 man/man1/xfdesktop.1
@@ -6,12 +6,13 @@ share/applications/xfce-backdrop-settings.desktop
 share/backgrounds/xfce/xfce-blue.jpg
 share/backgrounds/xfce/xfce-stripes.png
 share/backgrounds/xfce/xfce-teal.jpg
-share/icons/hicolor/32x32/apps/xfce4-backdrop.png
-share/icons/hicolor/32x32/apps/xfce4-menueditor.png
-share/icons/hicolor/48x48/apps/xfce4-backdrop.png
-share/icons/hicolor/48x48/apps/xfce4-menueditor.png
-share/icons/hicolor/scalable/apps/xfce4-backdrop.svg
-share/icons/hicolor/scalable/apps/xfce4-menueditor.svg
+share/backgrounds/xfce/xfce-verticals.png
+share/icons/hicolor/128x128/apps/org.xfce.xfdesktop.png
+share/icons/hicolor/16x16/apps/org.xfce.xfdesktop.png
+share/icons/hicolor/24x24/apps/org.xfce.xfdesktop.png
+share/icons/hicolor/32x32/apps/org.xfce.xfdesktop.png
+share/icons/hicolor/48x48/apps/org.xfce.xfdesktop.png
+share/icons/hicolor/scalable/apps/org.xfce.xfdesktop.svg
 share/locale/am/LC_MESSAGES/xfdesktop.mo
 share/locale/ar/LC_MESSAGES/xfdesktop.mo
 share/locale/ast/LC_MESSAGES/xfdesktop.mo
