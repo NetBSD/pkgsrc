@@ -1,28 +1,26 @@
-# $NetBSD: Makefile,v 1.104 2021/06/13 08:15:50 nia Exp $
+# $NetBSD: Makefile,v 1.105 2021/11/30 14:04:36 gutteridge Exp $
 
 META_PACKAGE=	yes
 
-PKGREVISION= 7
 .include "Makefile.common"
 
 DISTNAME=	xfce4-${XFCE4_VERSION}
 CATEGORIES=	meta-pkgs
 COMMENT=	Meta-package for the Xfce desktop environment
 
-DEPENDS+=	xfce4-tumbler>=0.2.7:../../x11/xfce4-tumbler
-DEPENDS+=	xfce4-appfinder>=4.14.0:../../sysutils/xfce4-appfinder
-DEPENDS+=	xfce4-desktop>=4.14.1:../../x11/xfce4-desktop
-DEPENDS+=	xfce4-mousepad>=0.4.2:../../editors/xfce4-mousepad
-DEPENDS+=	xfce4-panel>=4.14.0:../../x11/xfce4-panel
-DEPENDS+=	xfce4-power-manager>=1.6.5:../../sysutils/xfce4-power-manager
-DEPENDS+=	xfce4-orage>=4.12.1:../../time/xfce4-orage
-DEPENDS+=	xfce4-settings>=4.14.0:../../x11/xfce4-settings
-DEPENDS+=	xfce4-session>=4.14.0:../../x11/xfce4-session
-DEPENDS+=	xfce4-terminal>=0.8.8:../../x11/xfce4-terminal
-DEPENDS+=	xfce4-thunar>=1.8.9:../../sysutils/xfce4-thunar
-DEPENDS+=	xfce4-wm>=4.14.0:../../wm/xfce4-wm
+DEPENDS+=	xfce4-tumbler>=4.16.0:../../x11/xfce4-tumbler
+DEPENDS+=	xfce4-appfinder>=4.16.1:../../sysutils/xfce4-appfinder
+DEPENDS+=	xfce4-desktop>=4.16.0:../../x11/xfce4-desktop
+DEPENDS+=	xfce4-mousepad>=0.5.7:../../editors/xfce4-mousepad
+DEPENDS+=	xfce4-panel>=4.16.3:../../x11/xfce4-panel
+DEPENDS+=	xfce4-power-manager>=4.16.0:../../sysutils/xfce4-power-manager
+DEPENDS+=	xfce4-settings>=4.16.2:../../x11/xfce4-settings
+DEPENDS+=	xfce4-session>=4.16.0:../../x11/xfce4-session
+DEPENDS+=	xfce4-terminal>=0.8.10:../../x11/xfce4-terminal
+DEPENDS+=	xfce4-thunar>=4.16.10:../../sysutils/xfce4-thunar
+DEPENDS+=	xfce4-wm>=4.16.1:../../wm/xfce4-wm
 DEPENDS+=	xfce4-wm-themes>=4.10.0:../../wm/xfce4-wm-themes
-DEPENDS+=	elementary-xfce-icon-theme>=0.5:../../graphics/elementary-xfce-icon-theme
+DEPENDS+=	elementary-xfce-icon-theme>=0.11:../../graphics/elementary-xfce-icon-theme
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
 pre-extract:
