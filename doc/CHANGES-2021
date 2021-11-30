@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5935 2021/11/30 16:26:43 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.5936 2021/11/30 17:00:38 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8974,3 +8974,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/seamonkey-l10n to 2.53.10 [ryoon 2021-11-30]
 	Updated graphics/libexif to 0.6.24 [ryoon 2021-11-30]
 	Updated sysutils/xfce4-verve-plugin to 2.0.1 [gutteridge 2021-11-30]
+	Removed audio/xfce4-xmms-plugin [gutteridge 2021-11-30]
