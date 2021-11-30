@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2021/10/26 00:19:27 gdt Exp $
+# $NetBSD: Makefile,v 1.57 2021/11/30 05:31:56 pho Exp $
 
 DISTNAME=	bup-0.32
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bup/}
 # bup has two problems that make packaging difficult.  One is that
@@ -45,8 +45,6 @@ DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 # TEST_DEPENDS
 BUILD_DEPENDS+=	rsync-[0-9]*:../../net/rsync
 PYTHON_VERSIONED_DEPENDENCIES=		test
-
-PYTHON_VERSIONS_ACCEPTED=	27	# py-fuse-bindings
 
 DOCDIR=		${WRKDIR}/${MAN_UNPACK}
 
