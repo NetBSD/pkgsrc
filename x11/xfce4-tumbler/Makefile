@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.101 2021/09/29 19:01:31 adam Exp $
+# $NetBSD: Makefile,v 1.102 2021/11/30 14:25:34 gutteridge Exp $
 
-PKGREVISION= 12
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	0.3.0
+VERSION=	4.16.0
 DISTNAME=	tumbler-${VERSION}
 PKGNAME=	xfce4-tumbler-${VERSION}
 CATEGORIES=	x11
@@ -31,7 +30,9 @@ CONF_FILES=	${EGDIR}/tumbler.rc \
 
 .include "options.mk"
 
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
