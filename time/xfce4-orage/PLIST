@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.9 2016/09/17 10:37:49 richard Exp $
+@comment $NetBSD: PLIST,v 1.10 2021/11/30 14:57:00 gutteridge Exp $
 bin/globaltime
 bin/orage
-lib/xfce4/panel/plugins/liborageclock.la
 man/man1/globaltime.1
 man/man1/orage.1
 man/man1/tz_convert.1
