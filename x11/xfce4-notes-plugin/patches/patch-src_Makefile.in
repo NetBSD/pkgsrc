@@ -1,18 +1,10 @@
-$NetBSD: patch-src_Makefile.in,v 1.2 2015/06/29 15:51:11 youri Exp $
+$NetBSD: patch-src_Makefile.in,v 1.3 2021/11/30 15:06:32 gutteridge Exp $
 
-Adjust autostart file location.
---- src/Makefile.in.orig	2015-06-24 21:44:38.000000000 +0000
+Adjust install path.
+
+--- src/Makefile.in.orig	2021-11-29 01:17:56.856244944 +0000
 +++ src/Makefile.in
-@@ -565,7 +565,7 @@ xfce4_notes_LDADD = \
- #
- # Plugin desktop file
- #
--desktopdir = $(datadir)/xfce4/panel-plugins
-+desktopdir = $(datadir)/xfce4/panel/plugins
- desktop_in_files = xfce4-notes-plugin.desktop.in
- desktop_DATA = xfce4-notes-plugin.desktop
- 
-@@ -579,7 +579,7 @@ applications_DATA = xfce4-notes.desktop
+@@ -553,7 +553,7 @@ applications_DATA = xfce4-notes.desktop
  #
  # Autostart desktop file
  #
