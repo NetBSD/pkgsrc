@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 11:24:46 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/11/30 15:01:17 gutteridge Exp $
 
-BLAKE2s (xfce4-datetime-plugin-0.8.0.tar.bz2) = 37d6fb0a9a67b708ac9a45ed3fad7e3029bf4cd3e2c1832417debfe0b76895da
-SHA512 (xfce4-datetime-plugin-0.8.0.tar.bz2) = 936af402bfd3ef199dc05254c57201b90f9554b2d824d74d2825f16d60e9a4c1a03f25811d80bc666a05dd6b47798ef2119f458b55d612e0803f75fc583fe550
-Size (xfce4-datetime-plugin-0.8.0.tar.bz2) = 334063 bytes
+BLAKE2s (xfce4-datetime-plugin-0.8.1.tar.bz2) = b88eb79d13a45615f4c0723f8c13b292dba7721628e7200226c0dcf65dafaaf2
+SHA512 (xfce4-datetime-plugin-0.8.1.tar.bz2) = 2671b3732e9bfca68543ababa69dd16d988ba0acf0f0c8d2eba539143f8764f561053c69de3f89441e32c3098d135ee0cdf630aed5a4db16316455bdfc98120a
+Size (xfce4-datetime-plugin-0.8.1.tar.bz2) = 330734 bytes
