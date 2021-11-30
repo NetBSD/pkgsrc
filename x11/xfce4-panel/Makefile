@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.90 2021/05/02 11:06:16 nia Exp $
+# $NetBSD: Makefile,v 1.91 2021/11/30 14:22:57 gutteridge Exp $
 
-PKGREVISION= 2
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=		xfce4-panel-4.14.4
+DISTNAME=		xfce4-panel-4.16.3
 CATEGORIES=		x11
-MASTER_SITES+=		https://archive.xfce.org/src/xfce/xfce4-panel/4.14/
+MASTER_SITES+=		https://archive.xfce.org/src/xfce/xfce4-panel/4.16/
 
 HOMEPAGE=		https://docs.xfce.org/xfce/xfce4-panel/start
 COMMENT=		Xfce panel
@@ -22,7 +21,6 @@ CONF_FILES+=	${EGDIR}/default.xml ${PKG_SYSCONFDIR}/default.xml
 
 .include "../../devel/libwnck3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libxfce4ui/buildlink3.mk"
 .include "../../x11/xfce4-garcon/buildlink3.mk"
 .include "../../x11/xfce4-exo/buildlink3.mk"
