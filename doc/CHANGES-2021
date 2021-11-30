@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5922 2021/11/30 14:40:30 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.5923 2021/11/30 14:46:22 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8961,3 +8961,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/xfce4-settings to 4.16.2 [gutteridge 2021-11-30]
 	Updated lang/rust-bin to 1.56.1 [gdt 2021-11-30]
 	Updated sysutils/xfce4-appfinder to 4.16.1 [gutteridge 2021-11-30]
+	Updated sysutils/xfce4-thunar to 4.16.10 [gutteridge 2021-11-30]
