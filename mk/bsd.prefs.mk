@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.413 2021/11/29 16:14:23 jperkin Exp $
+# $NetBSD: bsd.prefs.mk,v 1.414 2021/11/30 09:06:37 jperkin Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -316,7 +316,6 @@ LOWER_OPSYS:=		${OPSYS:tl}
 
 # Now commit the version values computed above, eliding the :sh
 OS_VERSION:=		${OS_VERSION}
-OPSYS_VERSION:=		${OPSYS_VERSION}
 LOWER_OS_VERSION:=	${OS_VERSION:tl}
 
 MAKEFLAGS+=		LOWER_OPSYS=${LOWER_OPSYS:Q}
