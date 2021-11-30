@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5938 2021/11/30 17:08:47 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.5939 2021/11/30 17:13:25 pho Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8978,3 +8978,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/py-scipy to 1.7.3 [adam 2021-11-30]
 	Updated comms/py-rich to 10.15.1 [adam 2021-11-30]
 	Removed sysutils/xfce4-quicklauncher-plugin [gutteridge 2021-11-30]
+	Updated filesystems/fuse-archivemount to 0.9.1 [pho 2021-11-30]
