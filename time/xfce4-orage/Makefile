@@ -1,16 +1,22 @@
-# $NetBSD: Makefile,v 1.60 2021/04/21 11:42:50 adam Exp $
-
-PKGREVISION= 24
-.include "../../meta-pkgs/xfce4/Makefile.common"
+# $NetBSD: Makefile,v 1.61 2021/11/30 14:57:00 gutteridge Exp $
 
 VERSION=	4.12.1
+PKGREVISION= 25
 DISTNAME=	orage-${VERSION}
 PKGNAME=	xfce4-orage-${VERSION}
 CATEGORIES=	time
 MASTER_SITES=	http://archive.xfce.org/src/apps/orage/4.12/
 
 HOMEPAGE=	http://www.kolumbus.fi/~w408237/orage/
+LICENSE=	gnu-gpl-v2
 COMMENT=	Xfce time managing application
+
+EXTRACT_SUFX=           .tar.bz2
+
+USE_PKGLOCALEDIR=	yes
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake pkg-config msgfmt msgmerge perl intltool xgettext
 
 # avoid picking up native libpopt, e.g. on Linux
 CONFIGURE_ENV+=	ac_cv_lib_popt_poptGetContext=no
@@ -33,9 +39,10 @@ SUBST_SED.zoneinfo+=	-e 's|iso3166\.tab|tab/country.tab|g'
 .endif
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/xfce4-panel/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../time/libical/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
