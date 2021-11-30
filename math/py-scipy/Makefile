@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2021/11/06 11:53:13 adam Exp $
+# $NetBSD: Makefile,v 1.52 2021/11/30 17:00:44 adam Exp $
 
-DISTNAME=	scipy-1.7.2
+DISTNAME=	scipy-1.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scipy/}
@@ -62,6 +62,7 @@ do-test:
 	cd ${WRKDIR} && \
 	${PYTHONBIN} -c "import scipy; scipy.test('full')"
 
+BUILDLINK_API_DEPENDS.boost-headers+=	boost-headers>=1.77.0nb1
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../devel/py-pybind11/buildlink3.mk"
