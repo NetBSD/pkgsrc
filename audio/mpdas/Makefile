@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.34 2021/11/26 15:23:04 pho Exp $
+# $NetBSD: Makefile,v 1.35 2021/11/30 10:34:58 pho Exp $
 #
 
-DISTNAME=		mpdas-0.3.2
-PKGREVISION=		20
+DISTNAME=		mpdas-0.4.5
 CATEGORIES=		audio
 MASTER_SITES=		http://50hz.ws/mpdas/
 
 MAINTAINER=		gls@NetBSD.org
 HOMEPAGE=		https://50hz.ws/mpdas/
-COMMENT=		Mpdas is an AudioScrobbler client for MPD written in C++
+COMMENT=		AudioScrobbler client for MPD written in C++
 LICENSE=		modified-bsd
 
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c++03
+
+MAKE_FLAGS+=		MANPREFIX="${PREFIX}/${PKGMANDIR}/man1"
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${DOCDIR} ${EGDIR}
 RCD_SCRIPTS=		mpdas
@@ -28,7 +29,6 @@ post-install:
 	${INSTALL_DATA}	${WRKSRC}/mpdasrc.example \
 		${DESTDIR}${PREFIX}/${EGDIR}
 
-.include "../../audio/libmpd/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
+.include "../../audio/libmpdclient/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
