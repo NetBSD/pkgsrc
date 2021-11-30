@@ -1,33 +1,32 @@
-# $NetBSD: Makefile,v 1.59 2021/03/15 11:51:00 nia Exp $
+# $NetBSD: Makefile,v 1.60 2021/11/30 19:21:15 bsiegert Exp $
 
-DISTNAME=	pekwm-0.1.18
+DISTNAME=	pekwm-0.2.0
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pekdon/}
 GITHUB_RELEASE=	release-${PKGVERSION_NOREV}
 
 MAINTAINER=	gls@NetBSD.org
 HOMEPAGE=	https://www.pekwm.se/
-COMMENT=	Window manager based on aewm++
+COMMENT=	Light, unobtrusive, and configurable window manager
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake pkg-config
+USE_CMAKE=	yes
+USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+CMAKE_ARGS+=	-DCMAKE_INSTALL_SYSCONFDIR=${PREFIX}/share/examples
+CMAKE_ARGS+=	-DAWK=${AWK}
+CMAKE_ARGS+=	-DSED=${SED}
+CMAKE_ARGS+=	-DSH=${SH}
+CMAKE_ARG_PATH=	${WRKSRC}
 
-LIBS.SunOS+=	-liconv
+CONFIGURE_DIRS=	build
+BUILD_DIRS=	build
 
-PKG_SYSCONFSUBDIR=	pekwm
-
-EGDIR=			${PREFIX}/share/examples/pekwm
-CONF_FILES=
-.for f in autoproperties config keys menu mouse start vars
-CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
-.endfor
+pre-configure:
+	${MKDIR} ${WRKSRC}/build
 
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
