@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21301 2021/11/30 14:13:37 gutteridge Exp $
+$NetBSD: TODO,v 1.21302 2021/11/30 14:15:35 gutteridge Exp $
 
 Suggested new packages
 ======================
@@ -1948,7 +1948,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o xfce4-datetime-plugin-0.8.1
 	o xfce4-desktop-4.16.0
 	o xfce4-diskperf-plugin-2.6.3
-	o xfce4-exo-4.16.2
 	o xfce4-fsguard-plugin-1.1.2
 	o xfce4-garcon-4.16.1
 	o xfce4-genmon-plugin-4.1.0
