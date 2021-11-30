@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: haskell.sh,v 1.6 2020/06/29 22:00:58 rillig Exp $
+# $NetBSD: haskell.sh,v 1.7 2021/11/30 09:40:10 jperkin Exp $
 #
 # Tests for mk/haskell.mk.
 #
@@ -392,7 +392,6 @@ if test_case_begin 'neither package-id nor package-description'; then
 		'PLIST_SUBST LN=' \
 		'PLIST_SUBST LOWER_VENDOR=' \
 		'PLIST_SUBST LOWER_OPSYS=' \
-		'PLIST_SUBST LOWER_OS_VERSION=' \
 		'PLIST_SUBST PKGBASE=hs-package' \
 		'PLIST_SUBST PKGNAME=hs-package-1.0' \
 		'PLIST_SUBST PKGLOCALEDIR=' \
