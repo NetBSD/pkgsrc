@@ -1,13 +1,15 @@
-@comment $NetBSD: PLIST,v 1.7 2020/05/15 00:14:56 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/11/30 14:08:14 gutteridge Exp $
 bin/xfconf-query
 include/xfce4/xfconf-0/xfconf/xfconf-binding.h
 include/xfce4/xfconf-0/xfconf/xfconf-channel.h
 include/xfce4/xfconf-0/xfconf/xfconf-errors.h
 include/xfce4/xfconf-0/xfconf/xfconf-types.h
 include/xfce4/xfconf-0/xfconf/xfconf.h
+lib/gio/modules/libxfconfgsettingsbackend.la
 lib/libxfconf-0.la
 lib/pkgconfig/libxfconf-0.pc
 lib/xfce4/xfconf/xfconfd
+share/bash-completion/completions/xfconf-query
 share/dbus-1/services/org.xfce.Xfconf.service
 share/gtk-doc/html/xfconf/ch01.html
 share/gtk-doc/html/xfconf/ch02.html
@@ -51,6 +53,7 @@ share/locale/he/LC_MESSAGES/xfconf.mo
 share/locale/hr/LC_MESSAGES/xfconf.mo
 share/locale/hu/LC_MESSAGES/xfconf.mo
 share/locale/hy_AM/LC_MESSAGES/xfconf.mo
+share/locale/hye/LC_MESSAGES/xfconf.mo
 share/locale/id/LC_MESSAGES/xfconf.mo
 share/locale/is/LC_MESSAGES/xfconf.mo
 share/locale/it/LC_MESSAGES/xfconf.mo
