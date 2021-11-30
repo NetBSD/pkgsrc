@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2021/05/27 00:12:17 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.21 2021/11/30 14:46:14 gutteridge Exp $
 bin/thunar
 bin/thunar-settings
 include/thunarx-3/thunarx/thunarx-config.h
@@ -15,7 +15,6 @@ include/thunarx-3/thunarx/thunarx-provider-plugin.h
 include/thunarx-3/thunarx/thunarx-renamer-provider.h
 include/thunarx-3/thunarx/thunarx-renamer.h
 include/thunarx-3/thunarx/thunarx.h
-lib/Thunar/ThunarBulkRename
 lib/Thunar/thunar-sendto-email
 ${PLIST.introspection}lib/girepository-1.0/Thunarx-3.0.typelib
 lib/libthunarx-3.la
@@ -49,6 +48,7 @@ share/gtk-doc/html/thunarx/ThunarxProviderPlugin.html
 share/gtk-doc/html/thunarx/ThunarxRenamer.html
 share/gtk-doc/html/thunarx/ThunarxRenamerProvider.html
 share/gtk-doc/html/thunarx/abstraction.png
+share/gtk-doc/html/thunarx/annotation-glossary.html
 share/gtk-doc/html/thunarx/bulk-rename.png
 share/gtk-doc/html/thunarx/home.png
 share/gtk-doc/html/thunarx/index.html
@@ -72,16 +72,14 @@ share/gtk-doc/html/thunarx/thunarx-writing-extensions.html
 share/gtk-doc/html/thunarx/thunarx.devhelp2
 share/gtk-doc/html/thunarx/up-insensitive.png
 share/gtk-doc/html/thunarx/up.png
-share/icons/hicolor/128x128/apps/Thunar.png
-share/icons/hicolor/16x16/apps/Thunar.png
+share/icons/hicolor/128x128/apps/org.xfce.thunar.png
+share/icons/hicolor/16x16/apps/org.xfce.thunar.png
 share/icons/hicolor/16x16/stock/navigation/stock_folder-copy.png
 share/icons/hicolor/16x16/stock/navigation/stock_folder-move.png
-share/icons/hicolor/24x24/apps/Thunar.png
 share/icons/hicolor/24x24/stock/navigation/stock_folder-copy.png
 share/icons/hicolor/24x24/stock/navigation/stock_folder-move.png
-share/icons/hicolor/48x48/apps/Thunar.png
-share/icons/hicolor/64x64/apps/Thunar.png
-share/icons/hicolor/scalable/apps/Thunar.svg
+share/icons/hicolor/48x48/apps/org.xfce.thunar.png
+share/icons/hicolor/scalable/apps/org.xfce.thunar.svg
 share/locale/am/LC_MESSAGES/thunar.mo
 share/locale/ar/LC_MESSAGES/thunar.mo
 share/locale/ast/LC_MESSAGES/thunar.mo
@@ -147,6 +145,5 @@ share/locale/zh_CN/LC_MESSAGES/thunar.mo
 share/locale/zh_HK/LC_MESSAGES/thunar.mo
 share/locale/zh_TW/LC_MESSAGES/thunar.mo
 share/metainfo/org.xfce.thunar.appdata.xml
-share/pixmaps/Thunar/Thunar-about-logo.png
 share/polkit-1/actions/org.xfce.thunar.policy
 share/xfce4/panel/plugins/thunar-tpa.desktop
