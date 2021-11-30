@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5924 2021/11/30 14:48:24 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.5925 2021/11/30 14:52:41 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8963,3 +8963,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/xfce4-appfinder to 4.16.1 [gutteridge 2021-11-30]
 	Updated sysutils/xfce4-thunar to 4.16.10 [gutteridge 2021-11-30]
 	Updated x11/xfce4-desktop to 4.16.0 [gutteridge 2021-11-30]
+	Updated sysutils/xfce4-power-manager to 4.16.0 [gutteridge 2021-11-30]
