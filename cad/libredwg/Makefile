@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/05/24 19:49:12 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2021/11/30 13:21:59 gdt Exp $
 #
 
-DISTNAME=		libredwg-0.12
-PKGREVISION=		2
+DISTNAME=		libredwg-0.12.2
 CATEGORIES=		cad
 MASTER_SITES=		https://ftp.gnu.org/gnu/libredwg/
 EXTRACT_SUFX=		.tar.xz
