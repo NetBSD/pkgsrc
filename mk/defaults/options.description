@@ -307,6 +307,7 @@ groonga-httpd		Enable nginx used for groonga-httpd.
 groonga-suggest-learner	Enable Groonga suggest learner.
 gsasl			Enable SASL support with gsasl.
 gsl			Use GNU Scientific Library.
+gspell			Enable gspell support.
 gssapi			Enable gssapi (Kerberos V) support.
 gstreamer		Enable gstreamer support.
 gstreamer-gstcheck	Enable gstcheck support in gstreamer.
