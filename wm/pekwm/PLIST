@@ -1,6 +1,18 @@
-@comment $NetBSD: PLIST,v 1.12 2021/03/15 11:51:00 nia Exp $
+@comment $NetBSD: PLIST,v 1.13 2021/11/30 19:21:15 bsiegert Exp $
 bin/pekwm
+bin/pekwm_bg
+bin/pekwm_ctrl
+bin/pekwm_dialog
+bin/pekwm_panel
+bin/pekwm_screenshot
+bin/pekwm_theme
+bin/pekwm_wm
 man/man1/pekwm.1
+man/man1/pekwm_bg.1
+man/man1/pekwm_dialog.1
+man/man1/pekwm_panel.1
+man/man1/pekwm_screenshot.1
+man/man1/pekwm_theme.1
 share/examples/pekwm/autoproperties
 share/examples/pekwm/autoproperties_typerules
 share/examples/pekwm/config
@@ -11,14 +23,16 @@ share/examples/pekwm/mouse
 share/examples/pekwm/mouse_click
 share/examples/pekwm/mouse_sloppy
 share/examples/pekwm/mouse_system
+share/examples/pekwm/panel
 share/examples/pekwm/start
 share/examples/pekwm/vars
-share/pekwm/scripts/pekwm_screenshot.sh
 share/pekwm/scripts/pekwm_themeset.sh
 share/pekwm/scripts/pekwm_ws_menu.sh
 share/pekwm/themes/default-plain/theme
 share/pekwm/themes/default/arrow.png
 share/pekwm/themes/default/arrow_focus.png
+share/pekwm/themes/default/backgrounds/pekwm_generated-1920x1080.png
+share/pekwm/themes/default/backgrounds/pekwm_generated-2560x1440.png
 share/pekwm/themes/default/bottom-border.png
 share/pekwm/themes/default/bottom-border_unfocus.png
 share/pekwm/themes/default/bottom-left.png
@@ -45,6 +59,7 @@ share/pekwm/themes/default/left-border_unfocus.png
 share/pekwm/themes/default/menu-bottom.png
 share/pekwm/themes/default/menu-bottom_unfocus.png
 share/pekwm/themes/default/menuline.png
+share/pekwm/themes/default/panel.png
 share/pekwm/themes/default/right-border.png
 share/pekwm/themes/default/right-border_unfocus.png
 share/pekwm/themes/default/tab-separator.png
@@ -59,4 +74,3 @@ share/pekwm/themes/default/top-left_unfocus.png
 share/pekwm/themes/default/top-right-no-buttons.png
 share/pekwm/themes/default/top-right.png
 share/pekwm/themes/default/top-right_unfocus.png
-share/pekwm/themes/pion/theme

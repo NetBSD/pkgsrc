@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.21 2021/10/26 11:25:17 nia Exp $
+$NetBSD: distinfo,v 1.22 2021/11/30 19:21:15 bsiegert Exp $
 
-BLAKE2s (pekwm-0.1.18.tar.gz) = da0a422c6c9646df3405d3a9b86c30424f69e132100a96b2f44eab4d86b5fcfa
-SHA512 (pekwm-0.1.18.tar.gz) = 7fe04c04089d3375d1f64d456a7a582e88fd1f442c1c710bdef71309c7fe5aab234026ba381eb9a49b3d459b759924b577ba9597156e46e60147a9d845c27e89
-Size (pekwm-0.1.18.tar.gz) = 531611 bytes
-SHA1 (patch-data_Makefile.in) = c746c899463621167afbee0e770f934bb68a92d2
+BLAKE2s (pekwm-0.2.0.tar.gz) = 7363adcde565b79911ef729e628be3dea4d6b2e22158798862e7e8d9c01a8c44
+SHA512 (pekwm-0.2.0.tar.gz) = a4ecfa4a60a0b8676fe8ed66f17c9057b2fcdfc6c5a7eb0c22ebe3f7c3cc045ff5950dccd93552da587644c92b3af87de8223b4c9a00abea18074337dbf0abd0
+Size (pekwm-0.2.0.tar.gz) = 938147 bytes
+SHA1 (patch-doc_CmakeLists.txt) = 4a3eac69e5bc10e6a2c342b394ff20474c4df1f5
