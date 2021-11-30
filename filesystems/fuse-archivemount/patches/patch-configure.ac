@@ -1,0 +1,21 @@
+$NetBSD: patch-configure.ac,v 1.1 2021/11/30 17:13:14 pho Exp $
+
+On NetBSD there's no <fuse/fuse_lowlevel.h>. The file has to be
+#include'd as <fuse_lowlevel.h>.
+
+--- configure.ac.orig	2020-04-20 11:28:23.000000000 +0000
++++ configure.ac
+@@ -23,6 +23,13 @@ PKG_CHECK_MODULES([FUSE], [fuse >= 2.6],
+ AC_SUBST([FUSE_LIBS])
+ AC_SUBST([FUSE_CFLAGS])
+ 
++CPPFLAGS_saved="$CPPFLAGS"
++CPPFLAGS="$CPPFLAGS $FUSE_CFLAGS"
++AC_CHECK_HEADERS([fuse/fuse_lowlevel.h fuse_lowlevel.h])
++AC_CHECK_LIB([fuse], [fuse_mount])
++AC_CHECK_FUNCS([fuse_chan_fd])
++CPPFLAGS="$CPPFLAGS_saved"
++
+ 
+ # Check for libarchive (no pkg-config support)
+ AC_CHECK_LIB([archive], [archive_read_new], [ARCHIVE_LIBS=-larchive],
