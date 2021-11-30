@@ -1,0 +1,42 @@
+$NetBSD: patch-configure.ac,v 1.1 2021/11/30 12:34:24 pho Exp $
+
+* Fix shell portability.
+* Fix an incorrect logic to detect fuse >= 2.6.
+
+--- configure.ac.orig	2021-11-30 11:00:36.957203334 +0000
++++ configure.ac
+@@ -17,11 +17,11 @@ AC_ARG_WITH([fuse2],
+ AC_ARG_WITH([fuse3],
+     [AS_HELP_STRING([--with-fuse3], [link against libfuse 3.x (default: autodetect, preferring 3.x)])])
+ 
+-if test x"$enable_debug_output" == "xyes" ; then
++if test x"$enable_debug_output" = "xyes" ; then
+     AC_DEFINE([BINDFS_DEBUG], [1], [Define to 1 to enable debugging messages])
+ fi
+ 
+-if test x"$with_core_foundation" == "xyes" ; then
++if test x"$with_core_foundation" = "xyes" ; then
+     AC_MSG_NOTICE([Linking with Core Foundation])
+     LDFLAGS="${LDFLAGS} -framework CoreFoundation"
+ fi
+@@ -69,7 +69,7 @@ AC_DEFUN([CHECK_FUSE2],
+             AC_DEFINE([HAVE_FUSE_29], [1], [Have FUSE >= 2.9.0])
+             AC_DEFINE([FUSE_USE_VERSION], [26], [FUSE API VERSION = 2.6])
+         ],
+-        [PKG_CHECK_MODULES([fuse], [fuse >= 2.8.0],
++        [PKG_CHECK_MODULES([fuse], [fuse >= 2.6.0],
+             [
+                 AC_DEFINE([FUSE_USE_VERSION], [26], [FUSE API VERSION = 2.6])
+             ],
+@@ -88,9 +88,9 @@ AC_DEFUN([CHECK_FUSE3],
+     )]
+ )
+ 
+-AS_IF([test "x$with_fuse2" == "xyes"],
++AS_IF([test "x$with_fuse2" = "xyes"],
+     [CHECK_FUSE2([AC_MSG_ERROR([FUSE 2 not found])])],
+-    [AS_IF([test "x$with_fuse3" == "xyes"],
++    [AS_IF([test "x$with_fuse3" = "xyes"],
+         [CHECK_FUSE3([AC_MSG_ERROR([FUSE 3 not found])])],
+         [CHECK_FUSE3([CHECK_FUSE2([AC_MSG_ERROR([FUSE not found])])])]
+     )]
