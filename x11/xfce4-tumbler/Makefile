@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2021/11/30 14:25:34 gutteridge Exp $
+# $NetBSD: Makefile,v 1.103 2021/11/30 14:26:41 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -30,7 +30,6 @@ CONF_FILES=	${EGDIR}/tumbler.rc \
 
 .include "options.mk"
 
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
