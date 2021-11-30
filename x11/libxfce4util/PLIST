@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2019/08/17 18:32:33 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.21 2021/11/30 14:05:58 gutteridge Exp $
 include/xfce4/libxfce4util/libxfce4util-config.h
 include/xfce4/libxfce4util/libxfce4util.h
 include/xfce4/libxfce4util/xfce-debug.h
@@ -22,6 +22,7 @@ share/gtk-doc/html/libxfce4util/left-insensitive.png
 share/gtk-doc/html/libxfce4util/left.png
 share/gtk-doc/html/libxfce4util/libxfce4util-File-Utilities.html
 share/gtk-doc/html/libxfce4util/libxfce4util-Internationalisation.html
+share/gtk-doc/html/libxfce4util/libxfce4util-Miscellaneous-Utilities.html
 share/gtk-doc/html/libxfce4util/libxfce4util-POSIX-Signal-Handling.html
 share/gtk-doc/html/libxfce4util/libxfce4util-Resource-Config-File-Support.html
 share/gtk-doc/html/libxfce4util/libxfce4util-Resource-lookup-functions.html
@@ -62,10 +63,12 @@ share/locale/fi/LC_MESSAGES/libxfce4util.mo
 share/locale/fr/LC_MESSAGES/libxfce4util.mo
 share/locale/gl/LC_MESSAGES/libxfce4util.mo
 share/locale/he/LC_MESSAGES/libxfce4util.mo
+share/locale/hi/LC_MESSAGES/libxfce4util.mo
 share/locale/hr/LC_MESSAGES/libxfce4util.mo
 share/locale/hu/LC_MESSAGES/libxfce4util.mo
 share/locale/hy/LC_MESSAGES/libxfce4util.mo
 share/locale/hy_AM/LC_MESSAGES/libxfce4util.mo
+share/locale/hye/LC_MESSAGES/libxfce4util.mo
 share/locale/id/LC_MESSAGES/libxfce4util.mo
 share/locale/ie/LC_MESSAGES/libxfce4util.mo
 share/locale/is/LC_MESSAGES/libxfce4util.mo
@@ -88,6 +91,7 @@ share/locale/ro/LC_MESSAGES/libxfce4util.mo
 share/locale/ru/LC_MESSAGES/libxfce4util.mo
 share/locale/si/LC_MESSAGES/libxfce4util.mo
 share/locale/sk/LC_MESSAGES/libxfce4util.mo
+share/locale/sl/LC_MESSAGES/libxfce4util.mo
 share/locale/sq/LC_MESSAGES/libxfce4util.mo
 share/locale/sr/LC_MESSAGES/libxfce4util.mo
 share/locale/sv/LC_MESSAGES/libxfce4util.mo

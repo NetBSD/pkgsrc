@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.61 2020/08/31 18:13:21 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2021/11/30 14:05:58 gutteridge Exp $
 
-PKGREVISION= 4
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	libxfce4util-4.14.0
+DISTNAME=	libxfce4util-4.16.0
 CATEGORIES=	x11
-MASTER_SITES+=	http://archive.xfce.org/src/xfce/libxfce4util/4.14/
+MASTER_SITES+=	https://archive.xfce.org/src/xfce/libxfce4util/4.16/
 
 COMMENT=	Xfce basic library
 
