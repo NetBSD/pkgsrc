@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.20 2021/11/06 11:53:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2021/11/30 17:00:44 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/scipy/HACKING.rst.txt
 ${PYSITELIB}/scipy/INSTALL.rst.txt
 ${PYSITELIB}/scipy/LICENSE.txt
@@ -1733,6 +1733,15 @@ ${PYSITELIB}/scipy/stats/_binned_statistic.pyo
 ${PYSITELIB}/scipy/stats/_binomtest.py
 ${PYSITELIB}/scipy/stats/_binomtest.pyc
 ${PYSITELIB}/scipy/stats/_binomtest.pyo
+${PYSITELIB}/scipy/stats/_boost/__init__.py
+${PYSITELIB}/scipy/stats/_boost/__init__.pyc
+${PYSITELIB}/scipy/stats/_boost/__init__.pyo
+${PYSITELIB}/scipy/stats/_boost/beta_ufunc.so
+${PYSITELIB}/scipy/stats/_boost/binom_ufunc.so
+${PYSITELIB}/scipy/stats/_boost/nbinom_ufunc.so
+${PYSITELIB}/scipy/stats/_boost/setup.py
+${PYSITELIB}/scipy/stats/_boost/setup.pyc
+${PYSITELIB}/scipy/stats/_boost/setup.pyo
 ${PYSITELIB}/scipy/stats/_bootstrap.py
 ${PYSITELIB}/scipy/stats/_bootstrap.pyc
 ${PYSITELIB}/scipy/stats/_bootstrap.pyo
