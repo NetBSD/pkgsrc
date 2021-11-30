@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.45 2020/08/31 18:11:38 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2021/11/30 15:03:49 gutteridge Exp $
 
-PKGREVISION= 4
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	4.0.2
+VERSION=	4.1.1
 DISTNAME=	xfce4-genmon-plugin-${VERSION}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://archive.xfce.org/src/panel-plugins/xfce4-genmon-plugin/${VERSION:R}/
+MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-genmon-plugin/${VERSION:R}/
 
 HOMEPAGE=	https://goodies.xfce.org/projects/panel-plugins/xfce4-genmon-plugin
 COMMENT=	Xfce general purpose monitor plugin

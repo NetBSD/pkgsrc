@@ -1,18 +1,9 @@
-$NetBSD: patch-panel-plugin_cmdspawn.c,v 1.3 2018/05/17 09:57:42 jperkin Exp $
+$NetBSD: patch-panel-plugin_cmdspawn.c,v 1.4 2021/11/30 15:03:49 gutteridge Exp $
 
 Fix SunOS build.
 
 --- panel-plugin/cmdspawn.c.orig	2017-10-29 00:52:07.000000000 +0000
 +++ panel-plugin/cmdspawn.c
-@@ -12,7 +12,7 @@
-  *  version 2.1 of the License, or (at your option) any later version.
- 
-  *  This library is distributed in the hope that it will be useful,
-- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
-+ *  but WITHGENMON_OUT ANY WARRANTY; without even the implied warranty of
-  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-  *  Lesser General Public License for more details.
- 
 @@ -24,6 +24,7 @@
  /* Posix-compliance to make sure that only the calling thread is
     duplicated, not the whole process (e.g Solaris) */
