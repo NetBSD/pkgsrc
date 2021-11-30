@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.71 2021/06/13 08:15:50 nia Exp $
+# $NetBSD: Makefile.common,v 1.72 2021/11/30 14:04:36 gutteridge Exp $
 #
 # used by archivers/xfce4-thunar-archive/Makefile
-# used by audio/xfce4-xmms-plugin/Makefile
 # used by devel/xfce4-conf/Makefile
 # used by devel/xfce4-dev-tools/Makefile
 # used by comms/xfce4-modemlights-plugin/Makefile
@@ -25,7 +24,6 @@
 # used by sysutils/xfce4-mount-plugin/Makefile
 # used by sysutils/xfce4-netload-plugin/Makefile
 # used by sysutils/xfce4-power-manager/Makefile
-# used by sysutils/xfce4-quicklauncher-plugin/Makefile
 # used by sysutils/xfce4-systemload-plugin/Makefile
 # used by sysutils/xfce4-taskmanager/Makefile
 # used by sysutils/xfce4-thunar-vcs/Makefile
@@ -34,7 +32,6 @@
 # used by sysutils/xfce4-xkb-plugin/Makefile
 # used by textproc/xfce4-dict/Makefile
 # used by time/xfce4-datetime-plugin/Makefile
-# used by time/xfce4-orage/Makefile
 # used by time/xfce4-timer-plugin/Makefile
 # used by wm/xfce4-wm-themes/Makefile
 # used by wm/xfce4-wm/Makefile
@@ -61,14 +58,14 @@
 # used by x11/xfce4-whiskermenu-plugin/Makefile
 # used by x11/xfce4-wmdock-plugin/Makefile
 
-MASTER_SITES=		http://archive.xfce.org/src/xfce/
+MASTER_SITES=		https://archive.xfce.org/src/xfce/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		youri@NetBSD.org
 HOMEPAGE=		https://www.xfce.org/
 LICENSE=		gnu-gpl-v2
 
-XFCE4_VERSION=		4.14.0
+XFCE4_VERSION=		4.16.0
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
@@ -79,4 +76,7 @@ XFCE4_EGBASE=		${PREFIX}/share/examples/xfce4
 
 CONFIGURE_ARGS.Darwin+=	--disable-visibility
 
+BUILDLINK_API_DEPENDS.glib2+=   glib2>=2.50.0
+.include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk3+=    gtk3+>=3.22.0
 .include "../../x11/gtk3/buildlink3.mk"
