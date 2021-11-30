@@ -1,13 +1,13 @@
-$NetBSD: patch-mozilla_toolkit_mozapps_installer_packager.mk,v 1.2 2021/02/08 12:26:20 ryoon Exp $
+$NetBSD: patch-mozilla_toolkit_mozapps_installer_packager.mk,v 1.3 2021/11/30 15:41:24 ryoon Exp $
 
---- toolkit/mozapps/installer/packager.mk.orig	2020-02-17 23:39:43.000000000 +0000
+--- toolkit/mozapps/installer/packager.mk.orig	2021-10-26 16:49:55.000000000 +0000
 +++ toolkit/mozapps/installer/packager.mk
-@@ -125,7 +125,7 @@ endif
+@@ -127,7 +127,7 @@ endif
  	  (cd $(DESTDIR)$(installdir) && tar -xf -)
  	$(NSINSTALL) -D $(DESTDIR)$(bindir)
  	$(RM) -f $(DESTDIR)$(bindir)/$(MOZ_APP_NAME)
 -	ln -s $(installdir)/$(MOZ_APP_NAME) $(DESTDIR)$(bindir)
 +	#ln -s $(installdir)/$(MOZ_APP_NAME) $(DESTDIR)$(bindir)
  
- checksum:
- 	mkdir -p `dirname $(CHECKSUM_FILE)`
+ upload:
+ 	$(PYTHON) -u $(MOZILLA_DIR)/build/upload.py --base-path $(DIST) $(UPLOAD_FILES)
