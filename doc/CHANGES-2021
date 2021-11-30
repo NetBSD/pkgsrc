@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5897 2021/11/30 00:36:08 wen Exp $
+$NetBSD: CHANGES-2021,v 1.5898 2021/11/30 00:39:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8936,3 +8936,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-Date-Manip to 6.86 [wen 2021-11-30]
 	Updated devel/p5-Devel-Hide to 0.0015 [wen 2021-11-30]
 	Updated devel/p5-Event to 1.28 [wen 2021-11-30]
+	Updated devel/p5-ExtUtils-Depends to 0.8001 [wen 2021-11-30]
