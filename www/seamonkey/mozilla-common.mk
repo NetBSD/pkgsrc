@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.9 2021/09/02 11:54:00 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.10 2021/11/30 15:41:24 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -94,7 +94,7 @@ CONFIGURE_ARGS+=	--with-system-bz2
 #CONFIGURE_ARGS+=	--with-system-libevent=${BUILDLINK_PREFIX.libevent}
 CONFIGURE_ARGS+=	--disable-crashreporter
 CONFIGURE_ARGS+=	--disable-necko-wifi
-CONFIGURE_ARGS+=	--enable-chrome-format=flat
+CONFIGURE_ARGS+=	--enable-chrome-format=omni
 #CONFIGURE_ARGS+=	--disable-libjpeg-turbo
 
 CONFIGURE_ARGS+=	--disable-gconf
