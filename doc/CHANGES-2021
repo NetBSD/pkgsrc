@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5907 2021/11/30 13:22:06 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.5908 2021/11/30 13:51:22 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8946,3 +8946,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated filesystems/fuse-bindfs to 1.15.1 [pho 2021-11-30]
 	Updated graphics/darktable to 3.6.1 [dan 2021-11-30]
 	Updated cad/libredwg to 0.12.2 [gdt 2021-11-30]
+	Updated audio/ncspot to 0.9.1 [pin 2021-11-30]
