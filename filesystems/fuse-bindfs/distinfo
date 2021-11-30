@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:25:26 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/11/30 12:34:24 pho Exp $
 
-BLAKE2s (bindfs-1.8.4.tar.gz) = 80e066965eed55720f97c3d483895d1fb4ea03f7443cee2905e87cd92c979703
-SHA512 (bindfs-1.8.4.tar.gz) = ff65a4cfe5d05ac43ca19e8b54a9d17e0e7202b8c46082251dcf4805dc28a41865014dd9cde1367cd66ca1cc171f81e3f79eb643fb206cbaf0cbb4353985809c
-Size (bindfs-1.8.4.tar.gz) = 305725 bytes
-SHA1 (patch-aa) = 72053cb69ae5002c4b6cae562e3331c566a6b392
+BLAKE2s (bindfs-1.15.1.tar.gz) = 0aa3194987049c03e5cff3b816e14e8dab4d0b89de7e1b7fdeca54400b06e61a
+SHA512 (bindfs-1.15.1.tar.gz) = da9003f141b7aa2c23651b3b836b1d979bf1b19915f307c05e40ae6906aab738036cc8b5df6caeec158e4fa6b7bca71489ea7884ff1607c6fea72a603a048d59
+Size (bindfs-1.15.1.tar.gz) = 415676 bytes
+SHA1 (patch-configure.ac) = 2b3c89e80f96e70ab1f921b81fc99fef8307d3b3
+SHA1 (patch-src_bindfs.c) = 7daba2605ae0086933209d8b5ef0c88dccb3f9a0
