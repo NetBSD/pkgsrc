@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.124 2021/09/29 19:00:44 adam Exp $
+# $NetBSD: Makefile,v 1.125 2021/11/30 13:00:15 cirnatdan Exp $
 
-DISTNAME=	darktable-3.0.0
-PKGREVISION=	17
+DISTNAME=	darktable-3.6.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=darktable-org/}
 GITHUB_PROJECT=	darktable
@@ -69,7 +68,7 @@ BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.7.14.1nb1
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.if ${OPSYS} != "SunOS"
+.if ${OPSYS} != "SunOS" && ${OPSYS} != "Linux"
 .include "../../devel/libinotify/buildlink3.mk"
 .endif
 .include "../../devel/libgphoto2/buildlink3.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2020/01/05 02:30:08 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.16 2021/11/30 13:00:15 cirnatdan Exp $
 bin/darktable
 bin/darktable-chart
 bin/darktable-cli
@@ -15,12 +15,10 @@ lib/darktable/plugins/imageio/format/libpfm.so
 lib/darktable/plugins/imageio/format/libpng.so
 lib/darktable/plugins/imageio/format/libppm.so
 lib/darktable/plugins/imageio/format/libtiff.so
+lib/darktable/plugins/imageio/format/libxcf.so
 lib/darktable/plugins/imageio/storage/libdisk.so
 lib/darktable/plugins/imageio/storage/libemail.so
-lib/darktable/plugins/imageio/storage/libfacebook.so
-lib/darktable/plugins/imageio/storage/libflickr.so
 lib/darktable/plugins/imageio/storage/libgallery.so
-lib/darktable/plugins/imageio/storage/libgooglephoto.so
 lib/darktable/plugins/imageio/storage/liblatex.so
 lib/darktable/plugins/imageio/storage/libpiwigo.so
 lib/darktable/plugins/libashift.so
@@ -32,11 +30,15 @@ lib/darktable/plugins/libbilateral.so
 lib/darktable/plugins/libbloom.so
 lib/darktable/plugins/libborders.so
 lib/darktable/plugins/libcacorrect.so
+lib/darktable/plugins/libcacorrectrgb.so
+lib/darktable/plugins/libcensorize.so
 lib/darktable/plugins/libchannelmixer.so
+lib/darktable/plugins/libchannelmixerrgb.so
 lib/darktable/plugins/libclahe.so
 lib/darktable/plugins/libclipping.so
 lib/darktable/plugins/libcolisa.so
 lib/darktable/plugins/libcolorbalance.so
+lib/darktable/plugins/libcolorbalancergb.so
 lib/darktable/plugins/libcolorchecker.so
 lib/darktable/plugins/libcolorcontrast.so
 lib/darktable/plugins/libcolorcorrection.so
@@ -47,6 +49,7 @@ lib/darktable/plugins/libcolorout.so
 lib/darktable/plugins/libcolorreconstruct.so
 lib/darktable/plugins/libcolortransfer.so
 lib/darktable/plugins/libcolorzones.so
+lib/darktable/plugins/libcrop.so
 lib/darktable/plugins/libdefringe.so
 lib/darktable/plugins/libdemosaic.so
 lib/darktable/plugins/libdenoiseprofile.so
@@ -74,6 +77,7 @@ lib/darktable/plugins/liblowpass.so
 lib/darktable/plugins/liblut3d.so
 lib/darktable/plugins/libmask_manager.so
 lib/darktable/plugins/libmonochrome.so
+lib/darktable/plugins/libnegadoctor.so
 lib/darktable/plugins/libnlmeans.so
 lib/darktable/plugins/liboverexposed.so
 lib/darktable/plugins/libprofile_gamma.so
@@ -119,6 +123,7 @@ lib/darktable/plugins/lighttable/libhistory.so
 lib/darktable/plugins/lighttable/libimage.so
 lib/darktable/plugins/lighttable/libimage_infos.so
 lib/darktable/plugins/lighttable/libimport.so
+lib/darktable/plugins/lighttable/libioporder.so
 lib/darktable/plugins/lighttable/liblighttable_mode.so
 lib/darktable/plugins/lighttable/liblive_view.so
 lib/darktable/plugins/lighttable/libmasks.so
@@ -126,7 +131,6 @@ lib/darktable/plugins/lighttable/libmetadata.so
 lib/darktable/plugins/lighttable/libmetadata_view.so
 lib/darktable/plugins/lighttable/libmodule_toolbox.so
 lib/darktable/plugins/lighttable/libmodulegroups.so
-lib/darktable/plugins/lighttable/libmodulelist.so
 lib/darktable/plugins/lighttable/libnavigation.so
 lib/darktable/plugins/lighttable/libprint_settings.so
 lib/darktable/plugins/lighttable/libratings.so
@@ -145,7 +149,11 @@ lib/darktable/views/liblighttable.so
 lib/darktable/views/libprint.so
 lib/darktable/views/libslideshow.so
 lib/darktable/views/libtethering.so
-share/appdata/darktable.appdata.xml
+man/man1/darktable-cli.1
+man/man1/darktable-cltest.1
+man/man1/darktable-cmstest.1
+man/man1/darktable-generate-cache.1
+man/man1/darktable.1
 share/applications/darktable.desktop
 share/darktable/darktable.bash
 share/darktable/darktablerc
@@ -155,6 +163,7 @@ share/darktable/lua/darktable/debug.lua
 share/darktable/luarc
 share/darktable/noiseprofiles.json
 share/darktable/pixmaps/dt_logo_128x128.png
+share/darktable/pixmaps/dt_text.svg
 share/darktable/pixmaps/idbutton-1.png
 share/darktable/pixmaps/idbutton-1.svg
 share/darktable/pixmaps/idbutton-2.png
@@ -315,6 +324,11 @@ share/darktable/watermarks/darktable.svg
 share/darktable/watermarks/hasselblad.svg
 share/darktable/watermarks/promo.svg
 share/darktable/watermarks/simple-text.svg
+share/doc/darktable/AUTHORS
+share/doc/darktable/LICENSE
+share/doc/darktable/README.md
+share/doc/darktable/TRANSLATORS.md
+share/doc/darktable/darktablerc.html
 share/icons/hicolor/16x16/apps/darktable.png
 share/icons/hicolor/22x22/apps/darktable.png
 share/icons/hicolor/24x24/apps/darktable.png
@@ -326,18 +340,17 @@ share/icons/hicolor/scalable/apps/darktable-1.svg
 share/icons/hicolor/scalable/apps/darktable-2.svg
 share/icons/hicolor/scalable/apps/darktable-3.svg
 share/icons/hicolor/scalable/apps/darktable.svg
-share/locale/ca/LC_MESSAGES/darktable.mo
-share/locale/cs/LC_MESSAGES/darktable.mo
-share/locale/da/LC_MESSAGES/darktable.mo
+share/locale/af/LC_MESSAGES/darktable.mo
 share/locale/de/LC_MESSAGES/darktable.mo
+share/locale/eo/LC_MESSAGES/darktable.mo
 share/locale/es/LC_MESSAGES/darktable.mo
 share/locale/fr/LC_MESSAGES/darktable.mo
 share/locale/he/LC_MESSAGES/darktable.mo
 share/locale/hu/LC_MESSAGES/darktable.mo
 share/locale/it/LC_MESSAGES/darktable.mo
-share/locale/ja/LC_MESSAGES/darktable.mo
-share/locale/nb/LC_MESSAGES/darktable.mo
 share/locale/nl/LC_MESSAGES/darktable.mo
-share/locale/pl/LC_MESSAGES/darktable.mo
+share/locale/pt_BR/LC_MESSAGES/darktable.mo
 share/locale/ru/LC_MESSAGES/darktable.mo
 share/locale/sl/LC_MESSAGES/darktable.mo
+share/locale/uk/LC_MESSAGES/darktable.mo
+share/metainfo/darktable.appdata.xml
