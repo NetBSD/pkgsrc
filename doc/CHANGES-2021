@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5942 2021/11/30 23:36:11 rjs Exp $
+$NetBSD: CHANGES-2021,v 1.5943 2021/12/01 01:04:50 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8982,3 +8982,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated wm/pekwm to 0.2.0 [bsiegert 2021-11-30]
 	Added security/p5-Crypt-Juniper version 0.02 [he 2021-11-30]
 	Updated lang/sbcl to 2.1.10 [rjs 2021-11-30]
+	Updated geography/viking to 1.10 [gdt 2021-12-01]
