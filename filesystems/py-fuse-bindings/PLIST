@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/11/30 05:25:57 pho Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/12/01 16:37:37 pho Exp $
 ${PYSITELIB}/fuse.py
 ${PYSITELIB}/fuse.pyc
 ${PYSITELIB}/fuse.pyo
@@ -16,5 +16,5 @@ ${PYSITELIB}/fuseparts/setcompatwrap.pyo
 ${PYSITELIB}/fuseparts/subbedopts.py
 ${PYSITELIB}/fuseparts/subbedopts.pyc
 ${PYSITELIB}/fuseparts/subbedopts.pyo
-share/examples/py39-fuse-bindings/hello.py
-share/examples/py39-fuse-bindings/xmp.py
+share/examples/${PYPKGPREFIX}-fuse-bindings/hello.py
+share/examples/${PYPKGPREFIX}-fuse-bindings/xmp.py
