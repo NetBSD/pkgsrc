@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5945 2021/12/01 04:46:10 pho Exp $
+$NetBSD: CHANGES-2021,v 1.5946 2021/12/01 08:46:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8985,3 +8985,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated geography/viking to 1.10 [gdt 2021-12-01]
 	Updated emulators/xroar to 1.0.2 [ryoon 2021-12-01]
 	Updated filesystems/fuse-encfs to 1.9.5 [pho 2021-12-01]
+	Updated lang/py-parso to 0.8.3 [adam 2021-12-01]
+	Updated net/py-scp to 0.14.1 [adam 2021-12-01]
