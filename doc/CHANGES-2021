@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5957 2021/12/01 22:42:05 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.5958 2021/12/01 22:43:37 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9001,3 +9001,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-prometheus_client to 0.12.0 [adam 2021-12-01]
 	Updated editors/vim to 8.2.3172nb1 [wiz 2021-12-01]
 	Updated audio/libopenmpt to 0.5.13 [fcambus 2021-12-01]
+	Updated devel/xa65 to 2.3.12 [fcambus 2021-12-01]
