@@ -1,4 +1,4 @@
-$NetBSD: patch-src_mp3fs.cc,v 1.1 2021/12/01 14:35:15 pho Exp $
+$NetBSD: patch-src_mp3fs.cc,v 1.2 2021/12/01 14:41:15 pho Exp $
 
 Hunk #0:
     <fuse_common.h> is not meant to be directly #include'd by user
@@ -9,7 +9,7 @@ Hunk #1:
     Work around an issue in librefuse <fuse_opt.h>. It has been
     incompatible with C++11 compilers. Fixed in HEAD:
     * http://mail-index.netbsd.org/source-changes/2021/12/01/msg134169.html
-    * http://mail-index.netbsd.org/source-changes/2021/12/01/msg134169.html
+    * http://mail-index.netbsd.org/source-changes/2021/12/01/msg134170.html
 
 --- src/mp3fs.cc.orig	2021-01-31 04:07:18.000000000 +0000
 +++ src/mp3fs.cc
