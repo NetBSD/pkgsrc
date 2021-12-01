@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.89 2021/10/26 09:57:18 nia Exp $
+$NetBSD: distinfo,v 1.90 2021/12/01 12:18:09 adam Exp $
 
-BLAKE2s (unrarsrc-6.0.7.tar.gz) = a8c6c8b85051e834cd682d4a75470c36f7a310dd0e7501b387f80f7ebe39ae4a
-SHA512 (unrarsrc-6.0.7.tar.gz) = 2c50d1f58f5189e59dad36eb25aa50a34572f583242e624846c9791c5609e83d4ee76314d785771fe514ec3378749dcb86e4c97a8d2a3ab7b469df49a5c5f412
-Size (unrarsrc-6.0.7.tar.gz) = 232903 bytes
+BLAKE2s (unrarsrc-6.1.2.tar.gz) = f3ddd00be318526531e4a371ff9e25108436b208426a12a5f4b29c6ea1f7c17f
+SHA512 (unrarsrc-6.1.2.tar.gz) = 7a34db3a5383046a2b2bd5c7abfeb6b80c81666609caf619a700bda09bca908731b03985ad9d2b5d889605807832109fae11b7091d86c1a67c2e46288a42b777
+Size (unrarsrc-6.1.2.tar.gz) = 234257 bytes
 SHA1 (patch-makefile) = b467d681dacd3230c6b8761400e6c5566663eae4
