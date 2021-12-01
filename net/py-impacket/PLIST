@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/11/10 10:56:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/12/01 16:29:05 adam Exp $
 bin/Get-GPPPassword-${PYVERSSUFFIX}.py
 bin/GetADUsers-${PYVERSSUFFIX}.py
 bin/GetNPUsers-${PYVERSSUFFIX}.py
@@ -180,6 +180,9 @@ ${PYSITELIB}/impacket/dcerpc/v5/nspi.pyo
 ${PYSITELIB}/impacket/dcerpc/v5/oxabref.py
 ${PYSITELIB}/impacket/dcerpc/v5/oxabref.pyc
 ${PYSITELIB}/impacket/dcerpc/v5/oxabref.pyo
+${PYSITELIB}/impacket/dcerpc/v5/par.py
+${PYSITELIB}/impacket/dcerpc/v5/par.pyc
+${PYSITELIB}/impacket/dcerpc/v5/par.pyo
 ${PYSITELIB}/impacket/dcerpc/v5/rpch.py
 ${PYSITELIB}/impacket/dcerpc/v5/rpch.pyc
 ${PYSITELIB}/impacket/dcerpc/v5/rpch.pyo
@@ -252,6 +255,12 @@ ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/dcsyncattack.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/httpattack.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/httpattack.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/httpattack.pyo
+${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/httpattacks/__init__.py
+${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/httpattacks/__init__.pyc
+${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/httpattacks/__init__.pyo
+${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/httpattacks/adcsattack.py
+${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/httpattacks/adcsattack.pyc
+${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/httpattacks/adcsattack.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/imapattack.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/imapattack.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/attacks/imapattack.pyo
