@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/01/18 23:35:53 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2021/12/01 13:01:15 nia Exp $
 
 DISTNAME=		libXtst-1.2.3
 PKGREVISION=		1
@@ -33,8 +33,9 @@ SUBST_FILES.sofix+=	man/XTestCompareCursorWithWindow.man
 SUBST_STAGE.sofix=	post-configure
 SUBST_MESSAGE.sofix=	Fix .so arguments.
 
+X11_BUILTIN_NAME?=		libXtst
+.include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
-
 .include "../../x11/xorgproto/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libX11+=	libX11>=1.6
 .include "../../x11/libX11/buildlink3.mk"
