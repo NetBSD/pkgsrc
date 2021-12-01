@@ -1,16 +1,19 @@
-# $NetBSD: Makefile,v 1.11 2020/03/08 16:49:30 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2021/12/01 02:52:57 pho Exp $
 #
 
 DISTNAME=	cryptofs-0.6.0
 PKGNAME=	fuse-${DISTNAME}
 PKGREVISION=	6
 CATEGORIES=	filesystems
-#MASTER_SITES=	http://reboot.animeirc.de/cryptofs/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=reboot/}
+GITHUB_PROJECT=	cryptofs
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://reboot.animeirc.de/cryptofs/
+HOMEPAGE=	https://reboot.github.io/cryptofs/
 COMMENT=	FUSE encrypted filesystem
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config
