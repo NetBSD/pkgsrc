@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2021/06/06 21:05:08 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2021/12/01 13:01:13 nia Exp $
 
 DISTNAME=		libX11-1.7.2
 CATEGORIES=		x11 devel
@@ -44,6 +44,8 @@ CONFIGURE_ENV+=		CC_FOR_BUILD=${NATIVE_CC:Q}
 TOOL_DEPENDS+=		xorgproto-[0-9]*:../../x11/xorgproto
 .endif
 
+X11_BUILTIN_NAME?=		libX11
+.include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
 .include "../../x11/libXdmcp/buildlink3.mk"
