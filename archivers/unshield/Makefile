@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2020/01/18 21:48:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2021/12/01 09:34:13 adam Exp $
 
-DISTNAME=	unshield-1.4.3
-PKGREVISION=	1
+DISTNAME=	unshield-1.5.0
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=twogood/}
 
@@ -13,6 +12,7 @@ LICENSE=	mit
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+CMAKE_ARGS+=	-DBUILD_SHARED=ON
 
 LDFLAGS+=	-liconv
 
