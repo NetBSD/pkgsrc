@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:25:28 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/12/01 14:35:15 pho Exp $
 
-BLAKE2s (mp3fs-0.13.tar.gz) = 003d01e14336dcbd03bf7380c414f57308d68488aca5e7e1313cfa429f1c2e94
-SHA512 (mp3fs-0.13.tar.gz) = 0bcbd55c3a17a8e94a29794e3225b9c18f0501a5c987f3a32e206dc3db489f778dab2cc6c2b841ec640da7a319e4be1104868c1a1e54f19f6e30491c272792ee
-Size (mp3fs-0.13.tar.gz) = 301642 bytes
-SHA1 (patch-aa) = 0013f729158988403ea7ed7aa3a3102e9531ef91
-SHA1 (patch-ab) = 0e76e444566e2e0ff0c31a6aa64dcd82a931f397
-SHA1 (patch-src_class.h) = 2a0c03c20ffce50c1270d552215edb052f3ecf50
+BLAKE2s (mp3fs-1.1.1.tar.gz) = 0b576b8ee68fc3a7d21c241bd475fad3921c0200074e05d50756addf9bb1789a
+SHA512 (mp3fs-1.1.1.tar.gz) = b1e4f403666122056f924514a7e63ddd53dc00346d7750e37e8150ad5f13294129595d79398677c69726fb2abf942d4ddb8fdcac3b1312a01ed467475f22592b
+Size (mp3fs-1.1.1.tar.gz) = 804399 bytes
+SHA1 (patch-src_fuseops.cc) = e12d4287b0a4d49f779996364f3ee9a360f04100
+SHA1 (patch-src_mp3fs.cc) = baf76d4db37a10f064159e955161e738f3a0ad1f
