@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.19 2020/01/18 21:49:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2021/12/01 04:45:51 pho Exp $
 #
 
 GITHUB_PROJECT=	encfs
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	encfs-1.9.4
+DISTNAME=	encfs-1.9.5
 PKGNAME=	fuse-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vgough/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.arg0.net/encfs
+HOMEPAGE=	https://vgough.github.io/encfs/
 COMMENT=	FUSE Encrypted Filesystem
 LICENSE=	gnu-gpl-v3
 
