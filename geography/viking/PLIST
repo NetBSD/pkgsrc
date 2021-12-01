@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2021/03/22 00:21:13 gdt Exp $
+@comment $NetBSD: PLIST,v 1.14 2021/12/01 01:04:42 gdt Exp $
 bin/viking
 man/man1/viking.1
 share/applications/viking.desktop
@@ -15,6 +15,7 @@ share/help/C/viking/figures/Goto_Main_Window.png
 share/help/C/viking/figures/LayersTracksList.png
 share/help/C/viking/figures/LayersTracksStatistics.png
 share/help/C/viking/figures/Maps_download_region_dialog.png
+share/help/C/viking/figures/Panel_Stats_Tab.png
 share/help/C/viking/figures/Track_elevation_graph.png
 share/help/C/viking/figures/Track_properties.png
 share/help/C/viking/figures/Track_statistics.png
