@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5946 2021/12/01 08:46:40 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5947 2021/12/01 09:34:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8987,3 +8987,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated filesystems/fuse-encfs to 1.9.5 [pho 2021-12-01]
 	Updated lang/py-parso to 0.8.3 [adam 2021-12-01]
 	Updated net/py-scp to 0.14.1 [adam 2021-12-01]
+	Updated textproc/ugrep to 3.3.9 [adam 2021-12-01]
+	Updated archivers/unshield to 1.5.0 [adam 2021-12-01]
