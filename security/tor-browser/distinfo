@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.48 2021/11/01 21:41:59 wiz Exp $
+$NetBSD: distinfo,v 1.49 2021/12/01 13:11:03 wiz Exp $
 
 BLAKE2s (src-firefox-tor-browser-78.15.0esr-10.5-1-build3.tar.xz) = f35856823bffda23781c137230690dc4be8afea35f6cd0a10c130634c2bf88ef
 SHA512 (src-firefox-tor-browser-78.15.0esr-10.5-1-build3.tar.xz) = 16d60827c46244047d0e4f1a78414cecda7c9b1352d379659503bba53483d1d2cfcd0c2905128a2aff8707d61f8623ae54b749422715c87b8b409e53a13a2465
@@ -47,6 +47,7 @@ SHA1 (patch-third__party_rust_authenticator_src_netbsd_transaction.rs) = 0f3d490
 SHA1 (patch-third__party_rust_authenticator_src_netbsd_uhid.rs) = e0856c37eb1d73bca431da6048132233eace44bb
 SHA1 (patch-third__party_rust_getrandom_src_lib.rs) = 2ad80d10ebfeef0dc27435fc2c16be7b5e5d444a
 SHA1 (patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs) = 3755f32fea84900cc0f00af3d9f53ed5fcfb0b4b
+SHA1 (patch-third__party_rust_packed__simd_src_lib.rs) = e382f07c37862e25a2e43dcb1bdc733a115a13c2
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = 5a516d377d491e0504aaf2d7aed04bb9ebeccc56
 SHA1 (patch-toolkit_modules_subprocess_subprocess__shared__unix.js) = 22a39e54e042ab2270a3cb54e4e307c8900cad12
 SHA1 (patch-toolkit_moz.configure) = 00bf26bfa813db8e8c9a1d99629ae948874caf30
