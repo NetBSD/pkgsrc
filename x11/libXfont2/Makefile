@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2021/08/02 10:41:14 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2021/12/01 13:01:14 nia Exp $
 
 DISTNAME=		libXfont2-2.0.5
 CATEGORIES=		x11 devel fonts
@@ -20,8 +20,9 @@ PKGCONFIG_OVERRIDE+=	xfont2.pc.in
 CONFIGURE_ARGS+=	--disable-devel-docs
 CPPFLAGS.NetBSD+=	-D_OPENBSD_SOURCE
 
+X11_BUILTIN_NAME?=		libXfont2
+.include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
-
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../fonts/libfontenc/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/01/18 23:35:52 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2021/12/01 13:01:14 nia Exp $
 
 DISTNAME=		libXpm-3.5.13
 CATEGORIES=		graphics x11
@@ -40,8 +40,9 @@ CONFIGURE_ARGS+=	XPM_CFLAGS=${XPM_CFLAGS:Q} \
 			SXPM_LIBS=${SXPM_LIBS:Q}
 .endif
 
+X11_BUILTIN_NAME?=		libXmu
+.include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
-
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"

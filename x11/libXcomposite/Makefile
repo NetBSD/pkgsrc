@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/01/18 23:35:51 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2021/12/01 13:01:13 nia Exp $
 
 DISTNAME=		libXcomposite-0.4.5
 CATEGORIES=		x11 devel
@@ -16,9 +16,10 @@ USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	xcomposite.pc.in
 
+X11_BUILTIN_NAME?=		libXcomposite
+.include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

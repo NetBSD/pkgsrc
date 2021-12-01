@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2021/08/02 10:47:05 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2021/12/01 13:01:14 nia Exp $
 
 DISTNAME=	libXft-2.3.4
 CATEGORIES=	x11 fonts
@@ -16,6 +16,8 @@ USE_LIBTOOL=		YES
 USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE=	xft.pc.in
 
+X11_BUILTIN_NAME?=		libXft
+.include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"

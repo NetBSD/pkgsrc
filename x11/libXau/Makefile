@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/01/18 23:35:50 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2021/12/01 13:01:13 nia Exp $
 
 DISTNAME=		libXau-1.0.9
 CATEGORIES=		x11 devel
@@ -20,8 +20,9 @@ PKGCONFIG_OVERRIDE+=	xau.pc.in
 
 CPPFLAGS.OSF1+=		-pthread # Required by compiler if including pthread.h
 
+X11_BUILTIN_NAME?=		libXau
+.include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
-
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

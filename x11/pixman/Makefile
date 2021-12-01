@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2021/05/24 19:56:03 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2021/12/01 13:01:16 nia Exp $
 
 DISTNAME=	pixman-0.40.0
 PKGREVISION=	2
@@ -24,4 +24,6 @@ USE_TOOLS+=	pkg-config perl
 PKGCONFIG_OVERRIDE+=	pixman-1.pc.in
 PKGCONFIG_OVERRIDE+=	pixman-1-uninstalled.pc.in
 
+X11_BUILTIN_NAME?=		pixman
+.include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../mk/bsd.pkg.mk"
