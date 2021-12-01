@@ -1,4 +1,4 @@
-$NetBSD: patch-encfs_main.cpp,v 1.4 2019/04/10 12:33:02 gdt Exp $
+$NetBSD: patch-encfs_main.cpp,v 1.5 2021/12/01 04:45:52 pho Exp $
 
 Work around older FUSE API on NetBSD.
   
@@ -6,9 +6,9 @@ Work around older FUSE API on NetBSD.
 \todo Enhance API in NetBSD.
 \todo File with encfs upstream.
 
---- encfs/main.cpp.orig	2018-01-28 21:07:41.000000000 +0000
+--- encfs/main.cpp.orig	2018-04-27 08:52:22.000000000 +0000
 +++ encfs/main.cpp
-@@ -530,7 +530,9 @@ void *encfs_init(fuse_conn_info *conn) {
+@@ -619,7 +619,9 @@ void *encfs_init(fuse_conn_info *conn) {
    auto *ctx = (EncFS_Context *)fuse_get_context()->private_data;
  
    // set fuse connection options
@@ -16,5 +16,5 @@ Work around older FUSE API on NetBSD.
    conn->async_read = 1u;
 +#endif
  
-   // if an idle timeout is specified, then setup a thread to monitor the
-   // filesystem.
+ #ifdef __CYGWIN__
+   // WinFsp needs this to partially handle read-only FS
