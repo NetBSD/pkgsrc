@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/01/18 23:35:50 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2021/12/01 13:01:12 nia Exp $
 
 DISTNAME=		libICE-1.0.10
 CATEGORIES=		x11 devel
@@ -17,8 +17,9 @@ PKGCONFIG_OVERRIDE+=	ice.pc.in
 
 .include "options.mk"
 
+X11_BUILTIN_NAME?=		libICE
+.include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
-
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/xtrans/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

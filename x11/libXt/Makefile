@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2021/01/24 15:54:00 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2021/12/01 13:01:15 nia Exp $
 
 DISTNAME=		libXt-1.2.1
 CATEGORIES=		x11 devel
@@ -33,6 +33,8 @@ CPPFLAGS.OSF1+=		-pthread # Required by compiler if including pthread.h
 TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 
+X11_BUILTIN_NAME?=		libXt
+.include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

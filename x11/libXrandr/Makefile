@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/01/18 23:35:52 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2021/12/01 13:01:15 nia Exp $
 
 DISTNAME=		libXrandr-1.5.2
 CATEGORIES=		x11 devel
@@ -20,6 +20,8 @@ PKGCONFIG_OVERRIDE+=	xrandr.pc.in
 
 CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
+X11_BUILTIN_NAME?=		libXrandr
+.include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 BUILDLINK_API_DEPENDS.libX11+=	libX11>=1.6
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
