@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2021/11/01 21:41:59 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2021/12/01 13:11:03 wiz Exp $
 #
 # How to update this package:
 #
@@ -105,6 +105,12 @@ CKSUM_CRATES+=	third_party/rust/getrandom
 # patch-third__party_rust_getrandom_src_lib.rs
 CKSUMS+=	0e52f6bde42d7bb05c297ce1c25b9879d61b28caba98f6226a152bff538db6c2
 CKSUMS+=	394425b4ba03c21c494e64d993678f7014575b1e3d590b9ee452b5c2d83ec4ac
+
+CKSUM_CRATES+=	third_party/rust/packed_simd
+
+# patch-third__party_rust_packed__simd_src_lib.rs
+CKSUMS+=	2924d414fe7d32bb5f0bb92596a5af654f934d92f81dc1fd9b1a6c580388e5bd
+CKSUMS+=	99e70e436baa1d2080a46b38a146522fa6a8f2c60e1fa0a4d3aa125dc425734b
 
 SUBST_CLASSES+=		cksum
 SUBST_STAGE.cksum=	pre-configure
