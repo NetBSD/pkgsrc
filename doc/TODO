@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21318 2021/12/01 17:04:21 wiz Exp $
+$NetBSD: TODO,v 1.21319 2021/12/01 21:37:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1841,11 +1841,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o terraform-provider-local-2.1.0
 	o terraform-provider-null-3.1.0
 	o terraform-provider-random-3.1.0
+	o tesseract-5.0
 	o tetrinetx-1.40c
 	o texworks-0.6.6
 	o tfmxplay-1.1.6
 	o threadweaver-5.81.0
-	o thunderbird-91
+	o thunderbird-91.3.0
 	o tightvnc-2.7.10
 	o tile-0.7.4
 	o tkcon-2.7.3
@@ -1894,7 +1895,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o verilator-4.204
 	o vfu-4.09
 	o vicq-0.4.2
-	o vim-8.2.2792
 	o vinagre-3.16.1
 	o vino-3.16.0
 	o virt-manager-3.2.0

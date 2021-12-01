@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5955 2021/12/01 20:58:01 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5956 2021/12/01 21:37:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8999,3 +8999,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/unrar to 6.1.2 [adam 2021-12-01]
 	Updated security/py-josepy to 1.11.0 [adam 2021-12-01]
 	Updated net/py-prometheus_client to 0.12.0 [adam 2021-12-01]
+	Updated editors/vim to 8.2.3172nb1 [wiz 2021-12-01]
