@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5949 2021/12/01 12:21:07 jperkin Exp $
+$NetBSD: CHANGES-2021,v 1.5950 2021/12/01 14:33:17 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -8991,3 +8991,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/unshield to 1.5.0 [adam 2021-12-01]
 	Updated games/woof to 8.1.0 [micha 2021-12-01]
 	Updated pkgtools/pkgin to 21.12.0 [jperkin 2021-12-01]
+	Updated net/yt-dlp to 2021.12.1 [ryoon 2021-12-01]
