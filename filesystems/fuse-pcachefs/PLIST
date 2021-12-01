@@ -1,17 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2016/02/05 21:01:46 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/01 16:59:49 pho Exp $
 bin/pcachefs
-${PYSITELIB}/pCacheFS-0.2-py2.7.egg-info/PKG-INFO
-${PYSITELIB}/pCacheFS-0.2-py2.7.egg-info/SOURCES.txt
-${PYSITELIB}/pCacheFS-0.2-py2.7.egg-info/dependency_links.txt
-${PYSITELIB}/pCacheFS-0.2-py2.7.egg-info/entry_points.txt
-${PYSITELIB}/pCacheFS-0.2-py2.7.egg-info/requires.txt
-${PYSITELIB}/pCacheFS-0.2-py2.7.egg-info/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pcachefs/__init__.py
 ${PYSITELIB}/pcachefs/__init__.pyc
 ${PYSITELIB}/pcachefs/__init__.pyo
-${PYSITELIB}/pcachefs/factory.py
-${PYSITELIB}/pcachefs/factory.pyc
-${PYSITELIB}/pcachefs/factory.pyo
 ${PYSITELIB}/pcachefs/pcachefs.py
 ${PYSITELIB}/pcachefs/pcachefs.pyc
 ${PYSITELIB}/pcachefs/pcachefs.pyo
@@ -24,3 +21,4 @@ ${PYSITELIB}/pcachefs/ranges.pyo
 ${PYSITELIB}/pcachefs/vfs.py
 ${PYSITELIB}/pcachefs/vfs.pyc
 ${PYSITELIB}/pcachefs/vfs.pyo
+share/doc/fuse-pcachefs/README.md
