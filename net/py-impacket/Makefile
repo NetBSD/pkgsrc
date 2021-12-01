@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/11/10 10:56:10 adam Exp $
+# $NetBSD: Makefile,v 1.7 2021/12/01 16:29:05 adam Exp $
 
 DISTNAME=	impacket-0.9.24
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -29,7 +29,7 @@ DEPENDS+=	${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
 SUBST_CLASSES+=		crypto
 SUBST_STAGE.crypto=	pre-configure
 SUBST_MESSAGE.crypto=	Switching from py-cryptodomex to py-cryptodome.
-SUBST_FILES.crypto+=	examples/Get-GPPPassword.py.py
+SUBST_FILES.crypto+=	examples/Get-GPPPassword.py
 SUBST_FILES.crypto+=	examples/dpapi.py
 SUBST_FILES.crypto+=	examples/goldenPac.py
 SUBST_FILES.crypto+=	examples/mimikatz.py
