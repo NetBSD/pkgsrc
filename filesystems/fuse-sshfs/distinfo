@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:25:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/12/02 07:28:40 pho Exp $
 
-BLAKE2s (sshfs-2.7.tar.gz) = 127adb5052b76f8d0a3d54fe83b2ac9acde72b788f113baccabaec09bdcd42df
-SHA512 (sshfs-2.7.tar.gz) = e8b00bc3661140d59c6735f1f76d1bd4c63ebc04b578cbcebca88c2f1df8b2cea18c86ff24bef5d40ce286319b55d906632bea53e6b37aff76744072250aec1b
-Size (sshfs-2.7.tar.gz) = 153014 bytes
+BLAKE2s (sshfs-3.7.2.tar.xz) = a770780be6c0d5b26ebb9b7b43c35c8a689e226a619f03cdaee847598c81d025
+SHA512 (sshfs-3.7.2.tar.xz) = 1612d515869a8b38c0bc3d79eaf80e8b4da1a9710c9668e6ec23e6b77313063ae0bee66ab9e9e0f70d98eaa1334425b2087dd93cc4618af3ac6ac191acf7f838
+Size (sshfs-3.7.2.tar.xz) = 53160 bytes
+SHA1 (patch-cache.c) = 9a089852ab3ad77d2b77c4323c5d65ed9f05036a
+SHA1 (patch-meson.build) = dd9549c3d099a4137089757bd743c8c0bbb63b35
+SHA1 (patch-sshfs.c) = 4f06a3c945de2f4b3b8e5935b28c6fca0d50a355
+SHA1 (patch-utils_install__helper.sh) = 7e31f031ecf40731acb4a96b0c23543b7015c290
