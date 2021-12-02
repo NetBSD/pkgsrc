@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5966 2021/12/02 11:25:19 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5967 2021/12/02 11:43:46 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9012,3 +9012,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-xmlschema to 1.9.0 [adam 2021-12-02]
 	Updated devel/py-hypothesis to 6.29.3 [adam 2021-12-02]
 	Updated archivers/py-zstandard to 0.16.0 [adam 2021-12-02]
+	Updated audio/ncspot to 0.9.2 [pin 2021-12-02]
