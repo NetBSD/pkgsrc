@@ -1,0 +1,16 @@
+$NetBSD: patch-fuse_CMakeLists.txt,v 1.1 2021/12/02 10:02:01 pho Exp $
+
+Pretend filesystems/fuse is not installed even if it
+is. Modules/FindPkgConfig.cmake from devel/cmake automatically appends
+default paths to PKG_CONFIG_PATH and manages to find fuse.pc.
+TODO: We should probably fix that.
+
+--- fuse/CMakeLists.txt.orig	2021-12-02 09:55:29.248772087 +0000
++++ fuse/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ 
+-find_package ( Fuse )
++set(Fuse_FOUND FALSE)
+ 
+ if ( Fuse_FOUND )
+   include_directories ( ${Fuse_INCLUDE_DIRS} )
