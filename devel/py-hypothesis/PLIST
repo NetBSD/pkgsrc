@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2021/11/25 20:01:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2021/12/02 11:15:26 adam Exp $
 bin/hypothesis
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -7,6 +7,9 @@ ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/_hypothesis_pytestplugin.py
+${PYSITELIB}/_hypothesis_pytestplugin.pyc
+${PYSITELIB}/_hypothesis_pytestplugin.pyo
 ${PYSITELIB}/hypothesis/__init__.py
 ${PYSITELIB}/hypothesis/__init__.pyc
 ${PYSITELIB}/hypothesis/__init__.pyo
