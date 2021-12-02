@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2021/08/28 18:37:34 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.12 2021/12/02 08:16:51 pho Exp $
 bin/chattr
 bin/compile_et
 bin/lsattr
@@ -98,5 +98,26 @@ sbin/tune2fs
 share/et/et_c.awk
 share/et/et_h.awk
 share/examples/ext2fs/mke2fs.conf
+${PLIST.nls}share/locale/ca/LC_MESSAGES/e2fsprogs.mo
+${PLIST.nls}share/locale/cs/LC_MESSAGES/e2fsprogs.mo
+${PLIST.nls}share/locale/da/LC_MESSAGES/e2fsprogs.mo
+${PLIST.nls}share/locale/de/LC_MESSAGES/e2fsprogs.mo
+${PLIST.nls}share/locale/eo/LC_MESSAGES/e2fsprogs.mo
+${PLIST.nls}share/locale/es/LC_MESSAGES/e2fsprogs.mo
+${PLIST.nls}share/locale/fi/LC_MESSAGES/e2fsprogs.mo
+${PLIST.nls}share/locale/fr/LC_MESSAGES/e2fsprogs.mo
+${PLIST.nls}share/locale/hu/LC_MESSAGES/e2fsprogs.mo
+${PLIST.nls}share/locale/id/LC_MESSAGES/e2fsprogs.mo
+${PLIST.nls}share/locale/it/LC_MESSAGES/e2fsprogs.mo
+${PLIST.nls}share/locale/ms/LC_MESSAGES/e2fsprogs.mo
+${PLIST.nls}share/locale/nl/LC_MESSAGES/e2fsprogs.mo
+${PLIST.nls}share/locale/pl/LC_MESSAGES/e2fsprogs.mo
+${PLIST.nls}share/locale/pt/LC_MESSAGES/e2fsprogs.mo
+${PLIST.nls}share/locale/sr/LC_MESSAGES/e2fsprogs.mo
+${PLIST.nls}share/locale/sv/LC_MESSAGES/e2fsprogs.mo
+${PLIST.nls}share/locale/tr/LC_MESSAGES/e2fsprogs.mo
+${PLIST.nls}share/locale/uk/LC_MESSAGES/e2fsprogs.mo
+${PLIST.nls}share/locale/vi/LC_MESSAGES/e2fsprogs.mo
+${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/e2fsprogs.mo
 share/ss/ct_c.awk
 share/ss/ct_c.sed
