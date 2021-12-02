@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2021/02/28 18:35:32 adam Exp $
+# $NetBSD: Makefile,v 1.20 2021/12/02 11:24:50 adam Exp $
 
-DISTNAME=	zstandard-0.15.2
+DISTNAME=	zstandard-0.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zstandard/}
@@ -17,7 +17,7 @@ PYSETUPBUILDARGS+=	--system-zstd
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-BUILDLINK_API_DEPENDS.zstd+=	zstd>=1.4.8
+BUILDLINK_API_DEPENDS.zstd+=	zstd>=1.5.0
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
