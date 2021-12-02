@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2021/12/02 18:15:29 nia Exp $
+# $NetBSD: Makefile,v 1.9 2021/12/02 18:17:55 nia Exp $
 
 DISTNAME=	xf86-video-suntcx-1.1.2
 PKGREVISION=	2
@@ -15,6 +15,8 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
 RELRO_SUPPORTED=	partial
+
+ONLY_FOR_PLATFORM+=	*-*-sparc *-*-sparc64
 
 .include "options.mk"
 
