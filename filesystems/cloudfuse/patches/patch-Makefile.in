@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2021/12/02 07:44:44 pho Exp $
+
+Honor LDFLAGS to support RELRO.
+
+--- Makefile.in.orig	2021-12-02 07:41:24.551202241 +0000
++++ Makefile.in
+@@ -26,7 +26,7 @@ $(bindir):
+ 	$(MKDIR_P) $(bindir)
+ 
+ cloudfuse: $(SOURCES) $(HEADERS)
+-	$(CC) $(CFLAGS) -o cloudfuse $(SOURCES) $(LIBS)
++	$(CC) $(CFLAGS) -o cloudfuse $(SOURCES) $(LIBS) $(LDFLAGS)
+ 
+ clean:
+ 	/bin/rm -f cloudfuse
