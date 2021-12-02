@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2018/07/18 00:06:15 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2021/12/02 12:02:05 pho Exp $
 #
 
 DISTNAME=	fuse-sparsebundlefs-20160928
@@ -9,7 +9,7 @@ GITHUB_TAG=	f3ccd20bd6393b05c9949810feb0e0b366b86348
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/torarnv/sparsebundlefs
-COMMENT=	FUSE filesystem for reading Mac OS sparse-bundle disk images.
+COMMENT=	FUSE filesystem for reading Mac OS sparse-bundle disk images
 LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	c c++03
