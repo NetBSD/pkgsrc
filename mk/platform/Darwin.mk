@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.110 2021/11/29 16:14:23 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.111 2021/12/02 09:44:03 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -251,13 +251,6 @@ MAKE_ENV+=	MACOSX_DEPLOYMENT_TARGET="10.4"
 # See https://openradar.appspot.com/radar?id=6160634819379200
 .if defined(GNU_CONFIGURE) && !empty(OS_VERSION:M15.[01].0)
 CONFIGURE_ENV+=		gl_cv_func_getcwd_abort_bug=no
-.endif
-
-# Use ksh to improve wrapper script performance, except on buggy Mavericks.
-.if exists(/bin/ksh)
-.  if ${OPSYS_VERSION} < 100900 || ${OPSYS_VERSION} >= 101000
-WRAPPER_BIN_SH?=	/bin/ksh
-.  endif
 .endif
 
 # strnlen(3) is available from Lion onwards
