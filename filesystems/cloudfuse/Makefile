@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2021/09/29 19:00:35 adam Exp $
+# $NetBSD: Makefile,v 1.32 2021/12/02 07:44:44 pho Exp $
 
 DISTNAME=	1003a82
 PKGNAME=	cloudfuse-20120124
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	filesystems
 MASTER_SITES=	https://github.com/redbo/cloudfuse/tarball/
 DIST_SUBDIR=	cloudfuse
@@ -25,6 +25,5 @@ post-install:
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../filesystems/fuse/buildlink3.mk"
-
+.include "../../mk/fuse.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
