@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5959 2021/12/02 00:44:19 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.5960 2021/12/02 07:28:49 pho Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9003,3 +9003,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/libopenmpt to 0.5.13 [fcambus 2021-12-01]
 	Updated devel/xa65 to 2.3.12 [fcambus 2021-12-01]
 	Updated editors/xfce4-mousepad to 0.5.8 [gutteridge 2021-12-02]
+	Updated filesystems/fuse-sshfs to 3.7.2 [pho 2021-12-02]
