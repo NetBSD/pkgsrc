@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5958 2021/12/01 22:43:37 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.5959 2021/12/02 00:44:19 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9002,3 +9002,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/vim to 8.2.3172nb1 [wiz 2021-12-01]
 	Updated audio/libopenmpt to 0.5.13 [fcambus 2021-12-01]
 	Updated devel/xa65 to 2.3.12 [fcambus 2021-12-01]
+	Updated editors/xfce4-mousepad to 0.5.8 [gutteridge 2021-12-02]
