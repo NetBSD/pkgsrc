@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2021/11/25 14:42:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.128 2021/12/02 16:16:17 ryoon Exp $
 
 DISTNAME=	gnupg-2.2.33
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg2-/}
@@ -19,7 +19,7 @@ SUPERSEDES+=	dirmngr-[0-9]*
 
 BUILD_DEFS+=		VARBASE
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config makeinfo
+USE_TOOLS+=		pkg-config makeinfo
 USE_LIBTOOL=		yes
 INFO_FILES=		yes
 GNU_CONFIGURE=		yes
