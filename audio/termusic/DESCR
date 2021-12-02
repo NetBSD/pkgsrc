@@ -1,7 +1,21 @@
 Terminal Music Player written in Rust.
 
-As a contributor of gomu, https://github.com/issadarkthing/gomu I met serious
-problems during development. The main problem is data race condition.
-So I basically rewrite the player in rust, and hope to solve the problem.
+Listen to music freely as both in freedom and free of charge!
+
+Freedom: As time goes by, online service providers controls pretty much
+everything we listen. Complicated copyright issues make things worse.
+If my favorite song cannot be found in a website, probably I'll just not listen
+to them for years.
+
+Free of charge: you can download from youtube, netease,migu and kugou for free.
+No need to register monthly paid membership for several websites.
+
+As a contributor of GOMU, I met serious problems during development. The main
+problem is data race condition. So I basically rewrite the player in rust, and
+hope to solve the problem.
+
+As for now, mp3, m4a, flac, wav and ogg/vorbis are supported.
+By the way, for mobile devices, I recommend sync your music library with mobile
+by verysync and listen to them with vinyl(which I contributed also).
 
 If you wish to download mp3 from youtube, install youtube-dl.
