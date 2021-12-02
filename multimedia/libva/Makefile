@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.22 2020/02/05 14:14:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.23 2021/12/02 16:58:47 tnn Exp $
 
 DISTNAME=	libva-2.6.1
 CATEGORIES=	multimedia
-MASTER_SITES=	${MASTER_SITE_GITHUB:=01org/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=intel/}
 EXTRACT_SUFX=	.tar.gz
 GITHUB_TAG=	2.6.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/01org/libva
+HOMEPAGE=	https://github.com/intel/libva
 COMMENT=	Video Acceleration API
 LICENSE=	mit
 
