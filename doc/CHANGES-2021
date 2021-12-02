@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5963 2021/12/02 08:06:34 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.5964 2021/12/02 10:39:35 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9007,3 +9007,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/dbip-asn-lite to 2021.12 [fcambus 2021-12-02]
 	Updated net/dbip-city-lite to 2021.12 [fcambus 2021-12-02]
 	Updated net/dbip-country-lite to 2021.12 [fcambus 2021-12-02]
+	Updated www/logswan to 2.1.12 [fcambus 2021-12-02]
