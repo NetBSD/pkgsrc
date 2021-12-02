@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2021/11/02 08:20:25 nia Exp $
+# $NetBSD: Makefile,v 1.54 2021/12/02 18:15:26 nia Exp $
 
 DISTNAME=	xf86-video-ati-19.1.0
 PKGREVISION=	1
@@ -25,11 +25,12 @@ CONFIGURE_ARGS+=	--enable-glamor
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
-BUILDLINK_API_DEPENDS.modular-xorg-server+=	modular-xorg-server>=1.18.1
-.include "../../x11/modular-xorg-server/buildlink3.mk"
-
+X11_BUILTIN_NAME=	xf86-video-ati
+.include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.58
 .include "../../x11/libdrm/buildlink3.mk"
+BUILDLINK_API_DEPENDS.modular-xorg-server+=	modular-xorg-server>=1.18.1
+.include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

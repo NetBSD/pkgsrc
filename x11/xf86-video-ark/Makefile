@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2021/11/02 08:20:25 nia Exp $
+# $NetBSD: Makefile,v 1.21 2021/12/02 18:15:26 nia Exp $
 
 DISTNAME=	xf86-video-ark-0.7.5
 PKGREVISION=	5
@@ -18,6 +18,8 @@ RELRO_SUPPORTED=	partial
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
+X11_BUILTIN_NAME=	xf86-video-ark
+.include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
 BUILDLINK_DEPMETHOD.libXext?=	build
