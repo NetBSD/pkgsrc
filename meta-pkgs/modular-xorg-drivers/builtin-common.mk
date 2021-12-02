@@ -1,10 +1,12 @@
-# $NetBSD: builtin-common.mk,v 1.1 2021/12/02 17:40:40 nia Exp $
+# $NetBSD: builtin-common.mk,v 1.2 2021/12/02 18:22:07 nia Exp $
 
 BUILTIN_PKG:=	${X11_BUILTIN_NAME}
 
 BUILTIN_FIND_FILES_VAR:=		${X11_DRV_NAME:tu}
 BUILTIN_FIND_FILES.${X11_DRV_NAME:tu}=	${X11BASE}/lib/modules/drivers/${X11_DRV_NAME}.so
+BUILTIN_FIND_FILES.${X11_DRV_NAME:tu}+=	${X11BASE}/lib/modules/input/${X11_DRV_NAME}.so
 BUILTIN_FIND_FILES.${X11_DRV_NAME:tu}+=	${X11BASE}/lib/xorg/modules/drivers/${X11_DRV_NAME}.so
+BUILTIN_FIND_FILES.${X11_DRV_NAME:tu}+=	${X11BASE}/lib/xorg/modules/input/${X11_DRV_NAME}.so
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
