@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/07/30 22:47:18 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2021/12/02 16:40:18 tnn Exp $
 #
 
 V=		5.1.10
@@ -9,7 +9,7 @@ MASTER_SITES=	https://gitlab.com/kicad/libraries/kicad-packages3D/-/archive/${V}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://kicad-pcb.org/
+HOMEPAGE=	https://www.kicad.org/
 COMMENT=	3D models for rendering and the MCAD software
 LICENSE=	cc-by-sa-v4.0
 WRKSRC=		${WRKDIR}/kicad-packages3D-${V}
