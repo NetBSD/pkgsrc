@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2021/11/02 08:20:24 nia Exp $
+# $NetBSD: Makefile,v 1.9 2021/12/03 12:50:13 nia Exp $
 
 DISTNAME=	xf86-input-mutouch-1.3.0
 PKGREVISION=	2
@@ -19,6 +19,8 @@ RELRO_SUPPORTED=	partial
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
+X11_BUILTIN_NAME=	xf86-input-mutouch
+.include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
