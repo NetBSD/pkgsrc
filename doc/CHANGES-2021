@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5969 2021/12/02 12:35:18 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5970 2021/12/03 01:05:29 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9016,3 +9016,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/termusic to 0.6.0 [pin 2021-12-02]
 	Updated graphics/graphviz to 2.49.3 [adam 2021-12-02]
 	Updated graphics/pngquant to 2.17.0 [adam 2021-12-02]
+	Updated www/unit to 1.26.1 [gutteridge 2021-12-03]
