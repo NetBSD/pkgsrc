@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2021/07/13 12:05:48 wiz Exp $
+# $NetBSD: Makefile,v 1.131 2021/12/03 13:05:59 nia Exp $
 
 DISTNAME=	xorg-server-${XORG_VERSION}
 PKGNAME=	modular-${DISTNAME}
@@ -21,4 +21,6 @@ CONFIGURE_ARGS+=	--disable-kdrive
 
 .include "options.mk"
 
+X11_BUILTIN_NAME=	modular-xorg-server
+.include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../mk/bsd.pkg.mk"
