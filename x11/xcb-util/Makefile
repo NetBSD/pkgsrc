@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2021/12/01 13:01:16 nia Exp $
+# $NetBSD: Makefile,v 1.14 2021/12/03 12:36:32 nia Exp $
 
 DISTNAME=	xcb-util-0.4.0
 CATEGORIES=	x11
@@ -19,7 +19,7 @@ PKGCONFIG_OVERRIDE+=	xcb-event.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-aux.pc.in
 
 .include "../../devel/gperf/buildlink3.mk"
-X11_BUILTIN_NAME=	xcb-proto
+X11_BUILTIN_NAME=	xcb-util
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
