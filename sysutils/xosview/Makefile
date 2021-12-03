@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.78 2021/07/17 08:10:48 dholland Exp $
+# $NetBSD: Makefile,v 1.79 2021/12/03 13:06:57 micha Exp $
 
-DISTNAME=	xosview-1.22
-PKGREVISION=	1
+DISTNAME=	xosview-1.23
 CATEGORIES=	sysutils x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hills/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.pogo.org.uk/~mark/xosview/
 COMMENT=	X11 graphical display of OS statistics
+LICENSE=	gnu-gpl-v2 AND original-bsd
 
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c gnu++03
