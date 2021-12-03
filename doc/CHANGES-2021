@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5980 2021/12/03 17:08:50 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.5981 2021/12/03 20:57:48 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9028,3 +9028,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/cdrtools to 3.02a10 [micha 2021-12-03]
 	Updated www/lighttpd to 1.4.62 [schmonz 2021-12-03]
 	Updated lang/go116 to 1.16.11 [bsiegert 2021-12-03]
+	Removed multimedia/adobe-flash-player [tsutsui 2021-12-03]
