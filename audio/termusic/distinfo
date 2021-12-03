@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2021/12/02 11:44:16 pin Exp $
+$NetBSD: distinfo,v 1.21 2021/12/03 08:29:50 pin Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -57,9 +57,9 @@ Size (color_quant-1.1.0.crate) = 6649 bytes
 BLAKE2s (console-0.14.1.crate) = c62fe59f301a7e0571d216dd989d556b3f11f5004ecbc8f70e7615733fc542f3
 SHA512 (console-0.14.1.crate) = 2c85d1938faca5163dd7eede2a8a07569e536c92fd0fbc7f6e6ed91c60fa7f947f0ae101817ed943b0668c4d98ddfd3149033c83614786b5d841b19a8b011c91
 Size (console-0.14.1.crate) = 22844 bytes
-BLAKE2s (crc32fast-1.2.2.crate) = f0f5756780b6407d158b15d932854bf8e206e48d56c704c671ff9b4a22b4ebdc
-SHA512 (crc32fast-1.2.2.crate) = a8dd0ebc180acf47ea89391949c58c430751663c07fa2476176aed6a6e19f58c5737ce4afc1a7ab9781370eab6515f25416456b3fa77e475e2c8abdb3ae3e918
-Size (crc32fast-1.2.2.crate) = 38113 bytes
+BLAKE2s (crc32fast-1.3.0.crate) = c62a3c18c050a8e43069984c6758574c80092ee1baed906f0acd011aa1b00652
+SHA512 (crc32fast-1.3.0.crate) = 6ff361acfc0bb134672b30fb438f6d3ac93841d06332a6ff156025620b23870a79a4ceacf57d4b14ea1744838cffcfb77b413352d055809e74acd853ae912673
+Size (crc32fast-1.3.0.crate) = 38565 bytes
 BLAKE2s (crossbeam-channel-0.5.1.crate) = fa3946862d6c6657de81dfa9024d422baa65f2593b737adcdf5835ce5f905e7c
 SHA512 (crossbeam-channel-0.5.1.crate) = f15aff67e9105584f5fe41e1ee650ae4fdd0d0ca0fa9202ee83c6f6025398a300decaa50d1b4682e8afb9bd6e11e95b69bcf23f68ae117419aa84df14ee7747b
 Size (crossbeam-channel-0.5.1.crate) = 86919 bytes
@@ -468,9 +468,9 @@ Size (termcolor-1.1.2.crate) = 17287 bytes
 BLAKE2s (terminal_size-0.1.17.crate) = ea59269fe3bf9b397940ef374c11f53bec37aa94079b597891b72a70582225d9
 SHA512 (terminal_size-0.1.17.crate) = 96ec1bc8abd597f01ae59da567036d5d40b422764a4da662e2030c3ef4ce80a983c8b6a4ef1f34d88e649e0b1ea27b206d56a31924bcd2d31ff7e5a2e96d4201
 Size (terminal_size-0.1.17.crate) = 9141 bytes
-BLAKE2s (termusic-0.6.0.tar.gz) = 2a31f11c62fda25e60391fb7d691887876444b5be2627031821f1c473c965da8
-SHA512 (termusic-0.6.0.tar.gz) = d03ebacba51eb92621a4a588ac719dd507a5ad2452b42be38e1318e26a4c61b668c4808e4fbaae3aad7667850e2705eee671f168af9543ca4daf26a23424097a
-Size (termusic-0.6.0.tar.gz) = 3091168 bytes
+BLAKE2s (termusic-0.6.1.tar.gz) = e979ebc255113ced0d2057871e385b904775634869a6e53ace74e7cbd6906723
+SHA512 (termusic-0.6.1.tar.gz) = dd43a137fb4be5f962460f65e87e8fc4120bfe786498b6267f1dced91508e1eee7b83dc741f149c1701abd76e2657dd5374224771e6c08e80766b8a2475f0bd5
+Size (termusic-0.6.1.tar.gz) = 3083842 bytes
 BLAKE2s (textwrap-0.14.2.crate) = fd4222c5777268724d53efad1778b87a3f176dbf175fc0a3442ddb39c87deab7
 SHA512 (textwrap-0.14.2.crate) = 521ab37e03aae8fcce5b909541399fc90a23020e353f95102c658fa94ffc56b9bdff43f47fb3da6e30f5c9cc9447fab72fe21d7276dfa21fe5a1a5a1c874e371
 Size (textwrap-0.14.2.crate) = 52016 bytes
