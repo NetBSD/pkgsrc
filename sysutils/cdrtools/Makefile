@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2021/12/03 15:13:26 micha Exp $
+# $NetBSD: Makefile,v 1.124 2021/12/03 17:45:34 ryoon Exp $
 
 DISTNAME=	schily-2021-09-18
 PKGNAME=	cdrtools-3.02a10
@@ -41,8 +41,9 @@ SUBST_CLASSES+=		install
 SUBST_STAGE.install=	post-configure
 SUBST_MESSAGE.install=	Preparing INSTALL.pkgsrc file ...
 SUBST_FILES.install=	${WRKDIR}/INSTALL.pkgsrc
-SUBST_SED.install=	-e 's,PKGNAME_NOREV,${PKGNAME_NOREV},'
-SUBST_SED.install+=	-e 's,CDRECORD_CONF,${PKG_SYSCONFDIR}/cdrecord,'
+SUBST_VARS.install=	PKGNAME_NOREV
+SUBST_VARS.install+=	PKG_SYSCONFDIR
+SUBST_VARS.install+=	LOCALBASE
 
 # Shared platform specific code for schilytools (provided by smake package)
 .include "../../devel/smake/Makefile.common"
