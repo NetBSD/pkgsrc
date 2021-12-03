@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/06/21 04:32:36 rillig Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/12/03 07:52:32 wiz Exp $
 ${PLIST.html}share/doc/pkgsrc/binary.html
 ${PLIST.html}share/doc/pkgsrc/build.html
 ${PLIST.html}share/doc/pkgsrc/buildlink.html
@@ -17,6 +17,7 @@ ${PLIST.html}share/doc/pkgsrc/ftp-layout.html
 ${PLIST.html}share/doc/pkgsrc/getting.html
 ${PLIST.html}share/doc/pkgsrc/global.css
 ${PLIST.html}share/doc/pkgsrc/gnome.html
+${PLIST.html}share/doc/pkgsrc/hardening.html
 ${PLIST.html}share/doc/pkgsrc/help-devel.html
 ${PLIST.html}share/doc/pkgsrc/help-topics.html
 ${PLIST.html}share/doc/pkgsrc/help-user.html
@@ -28,8 +29,8 @@ ${PLIST.html}share/doc/pkgsrc/logs.html
 ${PLIST.html}share/doc/pkgsrc/makefile.html
 ${PLIST.html}share/doc/pkgsrc/options.html
 ${PLIST.html}share/doc/pkgsrc/pkginstall.html
-${PLIST.html}share/doc/pkgsrc/pkgsrc.html
 ${PLIST.epub}share/doc/pkgsrc/pkgsrc.epub
+${PLIST.html}share/doc/pkgsrc/pkgsrc.html
 ${PLIST.pdf}share/doc/pkgsrc/pkgsrc.pdf
 ${PLIST.pdf}share/doc/pkgsrc/pkgsrc.ps
 ${PLIST.ascii}share/doc/pkgsrc/pkgsrc.txt
