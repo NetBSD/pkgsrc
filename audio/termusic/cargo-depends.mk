@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.16 2021/12/02 11:44:16 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.17 2021/12/03 08:29:50 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	adler32-1.2.0
@@ -19,7 +19,7 @@ CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	chunked_transfer-1.4.0
 CARGO_CRATE_DEPENDS+=	color_quant-1.1.0
 CARGO_CRATE_DEPENDS+=	console-0.14.1
-CARGO_CRATE_DEPENDS+=	crc32fast-1.2.2
+CARGO_CRATE_DEPENDS+=	crc32fast-1.3.0
 CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.1
 CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.1
 CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.5
