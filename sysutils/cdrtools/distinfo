@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.93 2021/10/26 11:19:25 nia Exp $
+$NetBSD: distinfo,v 1.94 2021/12/03 15:13:26 micha Exp $
 
-BLAKE2s (cdrtools-3.01.tar.bz2) = 469790e82a576c92618ede01e19b78e2eeb9103b647b03b00c96b837afbc6614
-SHA512 (cdrtools-3.01.tar.bz2) = 54f06496e47184e324fc9d8b1153d3c806ed43c3c57e2a8d79a79afe12aa5334e82fa500fe1b1bf49307ad7dfabe687f6e1ad914fc2f0c5c429d8e6a34c293eb
-Size (cdrtools-3.01.tar.bz2) = 2087416 bytes
-SHA1 (patch-cdda2wav-setuid.c) = 64bdccf89061abe667584f0b78a4c9ce72e68b33
+BLAKE2s (schily-2021-09-18.tar.bz2) = 1ee4b41d2f684e695d40cf03e4335ad0e699cbf0bb99b46e197e202d79ccc949
+SHA512 (schily-2021-09-18.tar.bz2) = d25765074ac39ca2db63cb9841288dd4457f55588e0389a58ad78da62f745a766b4608d3d137a1908e2ca60511784d5f0af67bab1d1612478dbf120188ed5f31
+Size (schily-2021-09-18.tar.bz2) = 4952788 bytes
