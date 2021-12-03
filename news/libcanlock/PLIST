@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/05/20 15:33:39 micha Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/12/03 10:50:56 micha Exp $
 bin/canlock
 include/libcanlock-3/canlock.h
 lib/libcanlock.la
@@ -9,3 +9,4 @@ man/man3/cl_get_key.3
 man/man3/cl_get_lock.3
 man/man3/cl_split.3
 man/man3/cl_verify.3
+man/man3/cl_verify_multi.3
