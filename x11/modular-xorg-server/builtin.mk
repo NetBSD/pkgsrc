@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2021/12/03 13:05:31 nia Exp $
+# $NetBSD: builtin.mk,v 1.2 2021/12/03 13:44:01 ryoon Exp $
 
 BUILTIN_PKG:=	modular-xorg-server
 
@@ -30,7 +30,6 @@ MAKEVARS+=		IS_BUILTIN.modular-xorg-server
 
 # we're more worried about existence, rather than actual version
 BUILTIN_VERSION.modular-xorg-server=	1.20.13
-$
 BUILTIN_PKG.modular-xorg-server=	modular-xorg-server-${BUILTIN_VERSION.modular-xorg-server}
 .endif
 MAKEVARS+=		BUILTIN_PKG.modular-xorg-server
