@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.27 2021/11/18 20:05:47 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.28 2021/12/03 08:28:34 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	adler32-1.2.0
@@ -29,7 +29,7 @@ CARGO_CRATE_DEPENDS+=	cli-log-0.1.0
 CARGO_CRATE_DEPENDS+=	cli-log-2.0.0
 CARGO_CRATE_DEPENDS+=	clipboard-win-4.2.2
 CARGO_CRATE_DEPENDS+=	color_quant-1.1.0
-CARGO_CRATE_DEPENDS+=	coolor-0.3.0
+CARGO_CRATE_DEPENDS+=	coolor-0.3.1
 CARGO_CRATE_DEPENDS+=	crc32fast-1.2.1
 CARGO_CRATE_DEPENDS+=	crossbeam-0.8.1
 CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.1
@@ -38,9 +38,9 @@ CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.5
 CARGO_CRATE_DEPENDS+=	crossbeam-queue-0.3.2
 CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.5
 CARGO_CRATE_DEPENDS+=	crossterm-0.19.0
-CARGO_CRATE_DEPENDS+=	crossterm-0.21.0
+CARGO_CRATE_DEPENDS+=	crossterm-0.22.1
 CARGO_CRATE_DEPENDS+=	crossterm_winapi-0.7.0
-CARGO_CRATE_DEPENDS+=	crossterm_winapi-0.8.0
+CARGO_CRATE_DEPENDS+=	crossterm_winapi-0.9.0
 CARGO_CRATE_DEPENDS+=	csv-1.1.6
 CARGO_CRATE_DEPENDS+=	csv-core-0.1.10
 CARGO_CRATE_DEPENDS+=	csv2svg-0.1.5
@@ -166,7 +166,7 @@ CARGO_CRATE_DEPENDS+=	syn-1.0.81
 CARGO_CRATE_DEPENDS+=	syntect-4.6.0
 CARGO_CRATE_DEPENDS+=	tempfile-3.2.0
 CARGO_CRATE_DEPENDS+=	termimad-0.10.3
-CARGO_CRATE_DEPENDS+=	termimad-0.19.0
+CARGO_CRATE_DEPENDS+=	termimad-0.19.3
 CARGO_CRATE_DEPENDS+=	terminal-clipboard-0.3.1
 CARGO_CRATE_DEPENDS+=	termux-clipboard-0.1.0
 CARGO_CRATE_DEPENDS+=	textwrap-0.11.0
