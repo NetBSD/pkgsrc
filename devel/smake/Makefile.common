@@ -1,10 +1,11 @@
-# $NetBSD: Makefile.common,v 1.7 2021/06/25 13:41:48 micha Exp $
+# $NetBSD: Makefile.common,v 1.8 2021/12/03 15:15:39 micha Exp $
 # used by archivers/star/Makefile
 # used by archivers/tartest/Makefile
 # used by devel/smake/Makefile
 # used by security/mdigest/Makefile
 # used by shells/bosh/Makefile
 # used by shells/pbosh/Makefile
+# used by sysutils/cdrtools/Makefile
 
 # All packages based on the schilytools tarball should include this Makefile
 # fragment to inherit and share the same pkgsrc platform specific code.
