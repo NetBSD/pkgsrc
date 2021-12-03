@@ -8,3 +8,5 @@ articles and can be used to extract and unfold a single header field.
 
 canlock-hfp (Header Field Parser) is intended to process RFC 8315 header fields
 ("Cancel-Lock" and "Cancel-Key").
+
+There is also libcanlock-hp, a library to access the header parsers.
