@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5975 2021/12/03 11:42:50 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.5976 2021/12/03 13:09:47 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9022,3 +9022,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated news/libcanlock to 3.3.0 [micha 2021-12-03]
 	Updated news/canlock-hp to 3.3.0 [micha 2021-12-03]
 	Updated mail/isync to 1.4.4 [wiz 2021-12-03]
+	Updated sysutils/xosview to 1.23 [micha 2021-12-03]
