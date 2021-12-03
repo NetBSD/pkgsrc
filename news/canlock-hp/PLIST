@@ -1,5 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2018/08/27 15:13:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/03 10:59:16 micha Exp $
 bin/canlock-hfp
 bin/canlock-mhp
+include/libcanlock-3/canlock-hp.h
+lib/libcanlock-hp.la
+lib/pkgconfig/libcanlock-hp-3.pc
 man/man1/canlock-hfp.1
 man/man1/canlock-mhp.1
+man/man3/cl_hp_get_field.3
+man/man3/cl_hp_parse_field.3
+man/man3/cl_hp_unfold_field.3

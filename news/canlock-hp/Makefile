@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2021/01/11 12:23:19 micha Exp $
+# $NetBSD: Makefile,v 1.7 2021/12/03 10:59:16 micha Exp $
 
-DISTNAME=	libcanlock-3.2.2
+DISTNAME=	libcanlock-3.3.0
 PKGNAME=	${DISTNAME:S/libcanlock/canlock-hp/}
 CATEGORIES=	news
 MASTER_SITES=	http://micha.freeshell.org/libcanlock/src/
@@ -11,14 +11,16 @@ HOMEPAGE=	http://micha.freeshell.org/canlock-hp/
 COMMENT=	Parsers for RFC 5536 message headers and RFC 8315 header fields
 LICENSE=	mit
 
-GNU_CONFIGURE=	yes
+USE_TOOLS+=	lex yacc
+USE_LANGUAGES+=	c99
+USE_LIBTOOL=	yes
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-pc-files
+CONFIGURE_ARGS+=	--with-pkgconfigdir=${PREFIX}/lib/pkgconfig
+
 CONFIGURE_DIRS=	hp
 BUILD_DIRS=	hp
-
-USE_LANGUAGES+=	c99
-
-USE_TOOLS+=	lex yacc
-
 TEST_TARGET=	test
 
 .include "../../mk/bsd.pkg.mk"
