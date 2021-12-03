@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/02/21 13:19:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/12/03 15:13:26 micha Exp $
 bin/btcflash
 bin/cdda2mp3
 bin/cdda2ogg
@@ -74,6 +74,7 @@ man/man8/isodump.8
 man/man8/isoinfo.8
 man/man8/isovfy.8
 man/man8/mkisofs.8
+share/doc/cdrtools/INSTALL.pkgsrc
 share/doc/cdrtools/cdda2wav/README
 share/doc/cdrtools/cdrecord/README
 share/doc/cdrtools/cdrecord/README.ATAPI
