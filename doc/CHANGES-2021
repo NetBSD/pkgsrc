@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5971 2021/12/03 08:28:54 pin Exp $
+$NetBSD: CHANGES-2021,v 1.5972 2021/12/03 08:30:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9018,3 +9018,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/pngquant to 2.17.0 [adam 2021-12-02]
 	Updated www/unit to 1.26.1 [gutteridge 2021-12-03]
 	Updated sysutils/broot to 1.7.4 [pin 2021-12-03]
+	Updated audio/termusic to 0.6.1 [pin 2021-12-03]
