@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2020/01/18 23:36:09 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2021/12/03 13:03:19 nia Exp $
 
 DISTNAME=		xinit-1.4.1
 CATEGORIES=		x11
@@ -24,5 +24,7 @@ INSTALL_MAKE_FLAGS+=	xinitrcdir=${PREFIX}/share/examples/xinit
 CONF_FILES=		${PREFIX}/share/examples/xinit/xinitrc ${PREFIX}/etc/X11/xinit/xinitrc
 MAKE_DIRS=		${PREFIX}/etc/X11/xinit
 
+X11_BUILTIN_NAME=	xinit
+.include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
