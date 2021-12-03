@@ -1,0 +1,14 @@
+The location of the PKGNAME_NOREV `defaults' file has been set to:
+
+   CDRECORD_CONF
+
+This is the pkgsrc standard config file location, NOT the PKGNAME_NOREV
+standard location, which is /etc/default/cdrecord.
+
+The reason for this is that pkgsrc packages should not use configuration
+files outside ${LOCALBASE} unless they are explicitly set by the user.
+
+
+You will need to stop Solaris volume management before using PKGNAME_NOREV:
+
+    /etc/init.d/volmgt stop
