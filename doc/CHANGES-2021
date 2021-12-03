@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5977 2021/12/03 13:31:19 adam Exp $
+$NetBSD: CHANGES-2021,v 1.5978 2021/12/03 15:17:14 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9025,3 +9025,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/xosview to 1.23 [micha 2021-12-03]
 	Updated audio/faudio to 21.12 [adam 2021-12-03]
 	Updated net/rabbitmq to 3.9.11 [adam 2021-12-03]
+	Updated sysutils/cdrtools to 3.02a10 [micha 2021-12-03]
