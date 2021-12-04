@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5981 2021/12/03 20:57:48 tsutsui Exp $
+$NetBSD: CHANGES-2021,v 1.5982 2021/12/04 10:06:37 js Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9029,3 +9029,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/lighttpd to 1.4.62 [schmonz 2021-12-03]
 	Updated lang/go116 to 1.16.11 [bsiegert 2021-12-03]
 	Removed multimedia/adobe-flash-player [tsutsui 2021-12-03]
+	Updated devel/fossil to 2.17 [js 2021-12-04]
