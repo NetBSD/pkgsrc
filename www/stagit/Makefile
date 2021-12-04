@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2021/05/28 07:35:43 fcambus Exp $
+# $NetBSD: Makefile,v 1.8 2021/12/04 12:45:27 fcambus Exp $
 
-DISTNAME=	stagit-0.9.6
+DISTNAME=	stagit-1.0
 CATEGORIES=	www
 MASTER_SITES=	https://codemadness.org/releases/stagit/
 
