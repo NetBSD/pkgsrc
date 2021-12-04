@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5984 2021/12/04 12:45:39 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.5985 2021/12/04 14:49:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9032,3 +9032,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/fossil to 2.17 [js 2021-12-04]
 	Updated devel/binaryen to 103 [fcambus 2021-12-04]
 	Updated www/stagit to 1.0 [fcambus 2021-12-04]
+	Updated www/php-nextcloud to 22.2.3 [ryoon 2021-12-04]
