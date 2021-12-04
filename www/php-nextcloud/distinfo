@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.49 2021/10/26 11:30:24 nia Exp $
+$NetBSD: distinfo,v 1.50 2021/12/04 14:47:59 ryoon Exp $
 
-BLAKE2s (nextcloud-22.1.1.tar.bz2) = 1c197e345e21674a5b1e3e9b605670e3ef7feade7c9116f6c6dd1174579bba15
-SHA512 (nextcloud-22.1.1.tar.bz2) = 0b418d7d0e0e825ec9259334e377449a8dcd183dc907b094361c70b51b00732353996fdbf12f17c06cfa6bb918221cac56ee3051df0308ff453bb2d727e9c0ad
-Size (nextcloud-22.1.1.tar.bz2) = 145195483 bytes
+BLAKE2s (nextcloud-22.2.3.tar.bz2) = 0168ca4a12a9e77ef67f2974faf7d5b984cce80c03b6239794d696d09d9723e4
+SHA512 (nextcloud-22.2.3.tar.bz2) = d451454ba82d75d5c3639734b5b855ff320168a709fbd9ccc4e1e73c39446936787385cbdd64326743b262e057264eba291642dd0ed66d01c386f8261cc0c1fa
+Size (nextcloud-22.2.3.tar.bz2) = 130819469 bytes
