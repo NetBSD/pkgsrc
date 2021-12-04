@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5982 2021/12/04 10:06:37 js Exp $
+$NetBSD: CHANGES-2021,v 1.5983 2021/12/04 12:37:19 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9030,3 +9030,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/go116 to 1.16.11 [bsiegert 2021-12-03]
 	Removed multimedia/adobe-flash-player [tsutsui 2021-12-03]
 	Updated devel/fossil to 2.17 [js 2021-12-04]
+	Updated devel/binaryen to 103 [fcambus 2021-12-04]
