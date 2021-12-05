@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5990 2021/12/05 15:29:55 taca Exp $
+$NetBSD: CHANGES-2021,v 1.5991 2021/12/05 16:22:54 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9038,3 +9038,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/include-what-you-use to 0.17 [wiz 2021-12-05]
 	Updated archivers/ruby-xz to 1.0.2 [taca 2021-12-05]
 	Updated databases/ruby-sequel to 5.51.0 [taca 2021-12-05]
+	Updated converters/cbmconvert to 2.1.4 [rhialto 2021-12-05]
