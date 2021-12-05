@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/01/18 21:50:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2021/12/05 18:34:17 maya Exp $
 
 GITHUB_PROJECT=	bsdec2-image-upload
-DISTNAME=	1.2.2
+DISTNAME=	1.4.5
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cperciva/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
@@ -13,7 +12,7 @@ HOMEPAGE=	https://github.com/cperciva/bsdec2-image-upload/
 COMMENT=	Tool for creating Amazon EC2 AMIs
 LICENSE=	2-clause-bsd
 
-WRKSRC=		${WRKDIR}/bsdec2-image-upload-1.2.2
+WRKSRC=		${WRKDIR}/bsdec2-image-upload-${PKGVERSION_NOREV}
 
 MAKE_ENV+=	NOMAN=1
 CFLAGS+=	-DCERTFILE=\"${PREFIX}/share/mozilla-rootcerts/cacert.pem\"
@@ -31,7 +30,7 @@ CFLAGS+=	-Wno-unknown-warning-option -Wno-pointer-sign \
 INSTALLATION_DIRS+=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bsdec2-image-upload ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bsdec2-image-upload/bsdec2-image-upload ${DESTDIR}${PREFIX}/bin
 
 DEPENDS+=	mozilla-rootcerts>=1.0:../../security/mozilla-rootcerts
 .include "../../security/openssl/buildlink3.mk"
