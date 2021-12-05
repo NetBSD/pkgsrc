@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.105 2021/12/03 15:55:54 schmonz Exp $
+# $NetBSD: Makefile,v 1.106 2021/12/05 18:15:19 schmonz Exp $
 
-DISTNAME=	lighttpd-1.4.62
+DISTNAME=	lighttpd-1.4.63
 CATEGORIES=	www
 MASTER_SITES=	https://download.lighttpd.net/lighttpd/releases-1.4.x/
 EXTRACT_SUFX=	.tar.xz
@@ -18,6 +18,7 @@ GNU_CONFIGURE_LIBSUBDIR=	${PKGBASE}
 CONFIGURE_ARGS+=		--with-pcre2
 # used for digest auth when no SSL library is available
 CONFIGURE_ARGS+=		--without-nettle
+CONFIGURE_ARGS+=		--with-xxhash
 TEST_TARGET=			check
 
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
@@ -77,6 +78,7 @@ post-install:
 	done;							\
 	${INSTALL_DATA} config/vhosts.d/*.template ${DESTDIR}${EGDIR}/vhosts.d
 
+.include "../../devel/xxhash/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
