@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5993 2021/12/05 18:34:34 maya Exp $
+$NetBSD: CHANGES-2021,v 1.5994 2021/12/05 20:51:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9041,3 +9041,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated converters/cbmconvert to 2.1.4 [rhialto 2021-12-05]
 	Updated www/lighttpd to 1.4.63 [schmonz 2021-12-05]
 	Updated sysutils/bsdec2-image-upload to 1.4.5 [maya 2021-12-05]
+	Updated devel/lazygit to 0.31.4 [wiz 2021-12-05]
