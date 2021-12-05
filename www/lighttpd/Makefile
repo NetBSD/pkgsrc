@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2021/12/05 18:15:19 schmonz Exp $
+# $NetBSD: Makefile,v 1.107 2021/12/05 18:17:24 schmonz Exp $
 
 DISTNAME=	lighttpd-1.4.63
 CATEGORIES=	www
@@ -16,9 +16,9 @@ USE_TOOLS+=			pkg-config perl:test
 GNU_CONFIGURE=			yes
 GNU_CONFIGURE_LIBSUBDIR=	${PKGBASE}
 CONFIGURE_ARGS+=		--with-pcre2
+CONFIGURE_ARGS+=		--with-xxhash
 # used for digest auth when no SSL library is available
 CONFIGURE_ARGS+=		--without-nettle
-CONFIGURE_ARGS+=		--with-xxhash
 TEST_TARGET=			check
 
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
