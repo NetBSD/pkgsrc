@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:19:23 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/12/05 18:34:17 maya Exp $
 
-BLAKE2s (bsdec2-image-upload/1.2.2.tar.gz) = 0fb4517ae26cc36b434ce0da8a222a8f2f75ff2ab45f8158ecb898844834630e
-SHA512 (bsdec2-image-upload/1.2.2.tar.gz) = 366a8515ca99f6fc3c313d7f00e505747043f5405d0a28c4d7fd895c7bbe6692936ee9875ae608cc07b3b91c7a627c95f9869a2e15f54816998b7dd9c7c61a51
-Size (bsdec2-image-upload/1.2.2.tar.gz) = 25013 bytes
-SHA1 (patch-main.c) = 54da1068a235b60e44cee55339d375867ca4fd47
+BLAKE2s (bsdec2-image-upload/1.4.5.tar.gz) = a251bb0dba312422d6d63aab68a7b0aa2da8399140803f95d5df8a9033b58f65
+SHA512 (bsdec2-image-upload/1.4.5.tar.gz) = 450e91fa254c8d9befb12a02a6668573a5b83eda4a83b325e1ea43e28c6d6e30f4464f490d1060d428cc67d83591c2684f712afb48a9de1b8d36be49dddf096b
+Size (bsdec2-image-upload/1.4.5.tar.gz) = 38081 bytes
