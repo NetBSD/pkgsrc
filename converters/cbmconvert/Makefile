@@ -1,22 +1,24 @@
-# $NetBSD: Makefile,v 1.19 2012/10/03 00:20:09 asau Exp $
+# $NetBSD: Makefile,v 1.20 2021/12/05 16:22:44 rhialto Exp $
 
-DISTNAME=		cbmconvert-2.1.2
-CATEGORIES=		converters archivers
-MASTER_SITES=		ftp://ftp.zimmers.net/pub/cbm/crossplatform/converters/unix/
+DISTNAME=	cbmconvert-2.1.4
+CATEGORIES=	converters archivers
+MASTER_SITES=	${MASTER_SITE_GITHUB:=dr-m/}
+GITHUB_PROJECT=	cbmconvert
+GITHUB_TAG=	${PKGNAME_NOREV}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-COMMENT=		Converts files to and from various C64/C128/CBM formats
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/dr-m/cbmconvert/
+COMMENT=	Converts files to and from various C64/C128/CBM formats
+LICENSE=	gnu-gpl-v2
 
-MAKE_FILE=		Makefile.unix
-MAKE_FLAGS+=		CFLAGS=${CFLAGS:M*:Q}
+USE_LANGUAGES+=	c
+
+USE_CMAKE=	yes
+#CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
+
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/cbmconvert
 
-do-install:
-.for f in cbmconvert disk2zip zip2disk
-	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${f}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-.endfor
-	${INSTALL_DATA} ${WRKSRC}/cbmconvert.html \
-		${DESTDIR}${PREFIX}/share/doc/cbmconvert
+do-test:
+	cd ${WRKSRC} && ctest -C Debug
 
 .include "../../mk/bsd.pkg.mk"
