@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2021/11/20 15:28:40 taca Exp $
+# $NetBSD: Makefile,v 1.22 2021/12/05 15:26:13 taca Exp $
 
-DISTNAME=	ruby-xz-1.0.1
+DISTNAME=	ruby-xz-1.0.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
 CATEGORIES=	archivers
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	https://github.com/Quintus/ruby-xz
+HOMEPAGE=	https://github.com/win93/ruby-xz
 COMMENT=	Ruby bindings for liblzma
 LICENSE=	mit
 
