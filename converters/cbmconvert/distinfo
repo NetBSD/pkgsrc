@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:06:38 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/12/05 16:22:44 rhialto Exp $
 
-BLAKE2s (cbmconvert-2.1.2.tar.gz) = f584841fefb39145d655e24bb01fc2b1f265ade2d1f825f868486c4c64deec1b
-SHA512 (cbmconvert-2.1.2.tar.gz) = 87a30b7c0981c579daf2a8ec72183108c4f81e311e16c5be4f5886cdb3901334f22f088ab9d7b776c2a8aa91e0feb391bad42943c82132b721155a36584a461e
-Size (cbmconvert-2.1.2.tar.gz) = 62666 bytes
+BLAKE2s (cbmconvert-2.1.4.tar.gz) = 0722c21332d1ae239a23774d13418146d51c8bc4e46a084cb485041ded221476
+SHA512 (cbmconvert-2.1.4.tar.gz) = 2e031577349b7a8d99e11a07817981335e95b99939ff731db3718b65029db176170cbe49f40e84a81c8c68b216e57df95687422f9889456511edaa49c61b13ce
+Size (cbmconvert-2.1.4.tar.gz) = 64597 bytes
+SHA1 (patch-CMakeLists.txt) = a162de1286e323917befcee3d38317d870a4d2a1

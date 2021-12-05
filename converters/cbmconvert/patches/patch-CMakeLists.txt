@@ -1,0 +1,33 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2021/12/05 16:22:45 rhialto Exp $
+
+- Declare "C" as the used language, so that cmake won't try to detect C++.
+- Correct the location of the manual pages for pkgsrc.
+
+--- CMakeLists.txt.orig	2021-12-05 11:58:51.000000000 +0000
++++ CMakeLists.txt
+@@ -18,13 +18,15 @@ ENDIF()
+ 
+ IF (CMAKE_VERSION VERSION_GREATER_EQUAL 3.12)
+   PROJECT (cbmconvert VERSION ${VERSION}
++    LANGUAGES C
+     DESCRIPTION "Create and convert Commodore 8-bit binary file archives"
+     HOMEPAGE_URL "https://github.com/dr-m/cbmconvert/")
+ ELSEIF (CMAKE_VERSION VERSION_GREATER_EQUAL 3.9)
+   PROJECT (cbmconvert VERSION ${VERSION}
++    LANGUAGES C
+     DESCRIPTION "Create and convert Commodore 8-bit binary file archives")
+ ELSE()
+-  PROJECT (cbmconvert VERSION ${VERSION})
++  PROJECT (cbmconvert VERSION ${VERSION} LANGUAGES C)
+ ENDIF()
+ 
+ SET (CPACK_PACKAGE_DESCRIPTION
+@@ -49,7 +51,7 @@ IF (WIN32)
+ ELSE()
+   INSTALL(FILES cbmconvert.html DESTINATION "share/doc/cbmconvert")
+   INSTALL(FILES cbmconvert.1 zip2disk.1 disk2zip.1
+-    DESTINATION "share/man/man1")
++    DESTINATION "man/man1")
+ ENDIF()
+ INSTALL(TARGETS cbmconvert zip2disk disk2zip)
+ 
