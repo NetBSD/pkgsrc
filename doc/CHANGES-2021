@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5992 2021/12/05 18:15:28 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.5993 2021/12/05 18:34:34 maya Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9040,3 +9040,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/ruby-sequel to 5.51.0 [taca 2021-12-05]
 	Updated converters/cbmconvert to 2.1.4 [rhialto 2021-12-05]
 	Updated www/lighttpd to 1.4.63 [schmonz 2021-12-05]
+	Updated sysutils/bsdec2-image-upload to 1.4.5 [maya 2021-12-05]
