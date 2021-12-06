@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.88 2020/08/09 23:18:30 joerg Exp $
+# $NetBSD: Makefile,v 1.89 2021/12/06 11:21:19 wiz Exp $
 
 PKGNAME=	pbulk-0.70
 COMMENT=	Modular bulk build framework
 
 .include "../../pkgtools/pbulk/Makefile.common"
+.include "../../pkgtools/pbulk/options.mk"
 
 USE_TOOLS+=	awk:run bzip2:run digest:run gzip:run make:run \
 		mail:run sed:run tar:run
-DEPENDS+=	rsync-[0-9]*:../../net/rsync
 DEPENDS+=	pbulk-base>=0.38:../../pkgtools/pbulk-base
 
 .include "../../mk/bsd.prefs.mk"
