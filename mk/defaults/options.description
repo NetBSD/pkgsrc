@@ -667,6 +667,7 @@ p5-module-build-dist-authoring		Enable building distfiles.
 p5-module-build-license-creation	Enable license creation.
 pam			Enable PAM support.
 pango			Enable Pango support.
+pbulk-rsync		Depend on rsync.
 pcb-motif		Use Motif for the gui instead of GTK for cad/pcb.
 pcre			Enable Perl-compatible regular expressions.
 pcre2			Use Perl Compatible Regular Expressions, API version 2.
