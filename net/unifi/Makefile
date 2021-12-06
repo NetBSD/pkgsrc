@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2021/09/07 00:53:57 gdt Exp $
+# $NetBSD: Makefile,v 1.30 2021/12/06 15:33:27 abs Exp $
 
 DISTNAME=	unifi-6.2.26
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	-http://dl.ubnt.com/unifi/${PKGVERSION_NOREV}/UniFi.unix.zip
 EXTRACT_SUFX=	.zip
@@ -24,6 +25,7 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 DISTFILES=		${DEFAULT_DISTFILES}
 EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 
+
 # Unifi bundles snappy-java-1.0.5.jar, which contains native code.
 # We can use the bundled snappy-java but we must recompile the native portion
 # because it only ship linux binaries. The rcd script takes care of loading the
@@ -42,7 +44,7 @@ DISTFILES+=		${SNAPPY}.tar.gz
 EXTRACT_ONLY+=		${SNAPPY}.tar.gz
 
 CHECK_SHLIBS_SKIP=	unifi/lib/native/*
-INSTALLATION_DIRS=	unifi
+INSTALLATION_DIRS=	unifi share/doc/unifi
 
 # Emulated JDK doesn't work due to epoll issues.  Also, would require
 # matching emulated native libraries, and we only compile actual
@@ -54,9 +56,7 @@ USE_LANGUAGES=		c c++	# for snappy JNI library
 USE_TOOLS+=		gmake pax
 WRKSRC=			${WRKDIR}
 
-# Upstream documents 3.4.15, but 3.4.4 actually works.  Avoid mongodb4 because it
-# has a problematic license.
-DEPENDS+=		mongodb>=3.4.4:../../databases/mongodb3
+.include "options.mk"
 
 FILES_SUBST+=		UNIFI_USER=${UNIFI_USER:Q} UNIFI_GROUP=${UNIFI_GROUP:Q}
 FILES_SUBST+=		JAVA=${PKG_JAVA_HOME}/bin/java
@@ -113,6 +113,7 @@ do-build:
 do-install:
 	cd ${WRKSRC}/UniFi && pax -rw . ${DESTDIR}${PREFIX}/unifi
 	${INSTALL_LIB} ${WRKDIR}/${SNAPPY_JAVA}/target/snappy-1.0.5-Default/libsnappyjava.so ${DESTDIR}${PREFIX}/unifi/lib
+	${INSTALL_DATA} ${FILESDIR}/README.mongodb ${DESTDIR}${PREFIX}/share/doc/unifi
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
