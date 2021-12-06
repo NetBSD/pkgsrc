@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:14:25 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/12/06 12:41:47 fcambus Exp $
 
-BLAKE2s (cloc-1.90.tar.gz) = c055bd4dc553cced16cb83c6b80b18989e386d31289c00cfe1c3977bc28c88db
-SHA512 (cloc-1.90.tar.gz) = 368692b308e8da04246c059814bc24433c128d7937ec2efc12359af17dec0026bda9c982097eab0318852a89cc48098e845bfc10f2ed7340dce824d6ae1415c9
-Size (cloc-1.90.tar.gz) = 614306 bytes
+BLAKE2s (cloc-1.92.tar.gz) = d2e1047d302da4db581db803ad61d50fcb3002d3b1fd84cf7c760ae42161c61c
+SHA512 (cloc-1.92.tar.gz) = e5f73f3e9c8599138031938d839e22ed11ce9318bb10b3815c023f30388c25bbd2d61db27c16a9ba488b33756f35da39db6fd6ead8ed8ff070b9d3e2af068e09
+Size (cloc-1.92.tar.gz) = 612600 bytes
 SHA1 (patch-Unix_Makefile) = b797a50124177380837d00ff72dd119c508c87c3
