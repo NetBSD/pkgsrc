@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6007 2021/12/06 21:46:29 pin Exp $
+$NetBSD: CHANGES-2021,v 1.6008 2021/12/06 22:09:45 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9056,3 +9056,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-cryptodome to 3.12.0 [adam 2021-12-06]
 	Updated security/pleaser to 0.5.1 [pin 2021-12-06]
 	Added x11/citron version 0.3.0 [pin 2021-12-06]
+	Added wm/leftwm version 0.2.10 [pin 2021-12-06]
