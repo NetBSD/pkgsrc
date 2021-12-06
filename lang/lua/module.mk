@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.11 2020/07/11 15:33:51 nia Exp $
+# $NetBSD: module.mk,v 1.12 2021/12/06 18:54:32 nia Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # install Lua modules.
@@ -71,8 +71,9 @@ PLIST_SUBST+=		LUA_EXAMPLESDIR=${LUA_EXAMPLESDIR}
 LUA_LINKER_MAGIC?=	yes
 
 .if !empty(LUA_LINKER_MAGIC:M[yY][eE][sS])
-LDFLAGS.Cygwin+=	-llua${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR}
-LDFLAGS.Darwin+=	-bundle -undefined dynamic_lookup
+BUILDLINK_TRANSFORM.Darwin+=	rm:-shared
+LDFLAGS.Cygwin+=		-llua${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR}
+LDFLAGS.Darwin+=		-bundle -undefined dynamic_lookup
 .endif
 
 .if ${_LUA_VERSION} != "51" && ${_LUA_VERSION} != "52"
