@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2021/10/09 08:40:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2021/12/06 19:20:37 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -138,6 +138,18 @@ ${PYSITELIB}/Crypto/Hash/HMAC.py
 ${PYSITELIB}/Crypto/Hash/HMAC.pyc
 ${PYSITELIB}/Crypto/Hash/HMAC.pyi
 ${PYSITELIB}/Crypto/Hash/HMAC.pyo
+${PYSITELIB}/Crypto/Hash/KMAC128.py
+${PYSITELIB}/Crypto/Hash/KMAC128.pyc
+${PYSITELIB}/Crypto/Hash/KMAC128.pyi
+${PYSITELIB}/Crypto/Hash/KMAC128.pyo
+${PYSITELIB}/Crypto/Hash/KMAC256.py
+${PYSITELIB}/Crypto/Hash/KMAC256.pyc
+${PYSITELIB}/Crypto/Hash/KMAC256.pyi
+${PYSITELIB}/Crypto/Hash/KMAC256.pyo
+${PYSITELIB}/Crypto/Hash/KangarooTwelve.py
+${PYSITELIB}/Crypto/Hash/KangarooTwelve.pyc
+${PYSITELIB}/Crypto/Hash/KangarooTwelve.pyi
+${PYSITELIB}/Crypto/Hash/KangarooTwelve.pyo
 ${PYSITELIB}/Crypto/Hash/MD2.py
 ${PYSITELIB}/Crypto/Hash/MD2.pyc
 ${PYSITELIB}/Crypto/Hash/MD2.pyi
@@ -210,6 +222,14 @@ ${PYSITELIB}/Crypto/Hash/SHAKE256.py
 ${PYSITELIB}/Crypto/Hash/SHAKE256.pyc
 ${PYSITELIB}/Crypto/Hash/SHAKE256.pyi
 ${PYSITELIB}/Crypto/Hash/SHAKE256.pyo
+${PYSITELIB}/Crypto/Hash/TupleHash128.py
+${PYSITELIB}/Crypto/Hash/TupleHash128.pyc
+${PYSITELIB}/Crypto/Hash/TupleHash128.pyi
+${PYSITELIB}/Crypto/Hash/TupleHash128.pyo
+${PYSITELIB}/Crypto/Hash/TupleHash256.py
+${PYSITELIB}/Crypto/Hash/TupleHash256.pyc
+${PYSITELIB}/Crypto/Hash/TupleHash256.pyi
+${PYSITELIB}/Crypto/Hash/TupleHash256.pyo
 ${PYSITELIB}/Crypto/Hash/_BLAKE2b.${SOEXT}
 ${PYSITELIB}/Crypto/Hash/_BLAKE2s.${SOEXT}
 ${PYSITELIB}/Crypto/Hash/_MD2.${SOEXT}
@@ -416,6 +436,12 @@ ${PYSITELIB}/Crypto/SelfTest/Hash/test_CMAC.pyo
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_HMAC.py
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_HMAC.pyc
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_HMAC.pyo
+${PYSITELIB}/Crypto/SelfTest/Hash/test_KMAC.py
+${PYSITELIB}/Crypto/SelfTest/Hash/test_KMAC.pyc
+${PYSITELIB}/Crypto/SelfTest/Hash/test_KMAC.pyo
+${PYSITELIB}/Crypto/SelfTest/Hash/test_KangarooTwelve.py
+${PYSITELIB}/Crypto/SelfTest/Hash/test_KangarooTwelve.pyc
+${PYSITELIB}/Crypto/SelfTest/Hash/test_KangarooTwelve.pyo
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_MD2.py
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_MD2.pyc
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_MD2.pyo
@@ -461,6 +487,9 @@ ${PYSITELIB}/Crypto/SelfTest/Hash/test_SHA512.pyo
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_SHAKE.py
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_SHAKE.pyc
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_SHAKE.pyo
+${PYSITELIB}/Crypto/SelfTest/Hash/test_TupleHash.py
+${PYSITELIB}/Crypto/SelfTest/Hash/test_TupleHash.pyc
+${PYSITELIB}/Crypto/SelfTest/Hash/test_TupleHash.pyo
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_cSHAKE.py
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_cSHAKE.pyc
 ${PYSITELIB}/Crypto/SelfTest/Hash/test_cSHAKE.pyo
