@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2021/12/06 22:08:27 pin Exp $
+bin/leftwm
+bin/leftwm-check
+bin/leftwm-command
+bin/leftwm-state
+bin/leftwm-worker
+man/man1/leftwm.1
+share/xsessions/leftwm.desktop
