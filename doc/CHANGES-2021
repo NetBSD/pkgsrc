@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5999 2021/12/06 13:55:08 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6000 2021/12/06 13:55:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9047,3 +9047,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/p5-Algorithm-Backoff version 0.009 [schmonz 2021-12-06]
 	Updated databases/p5-App-Sqitch to 1.2.1 [schmonz 2021-12-06]
 	Updated misc/py-trytond-party to 4.2.1nb1 [wiz 2021-12-06]
+	Removed finance/py-vatnumber [wiz 2021-12-06]
