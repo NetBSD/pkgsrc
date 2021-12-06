@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.839 2021/11/30 19:51:11 he Exp $
+# $NetBSD: Makefile,v 1.840 2021/12/06 14:51:33 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -481,7 +481,6 @@ SUBDIR+=	py-keyrings.alt
 SUBDIR+=	py-lasso
 SUBDIR+=	py-libnacl
 SUBDIR+=	py-libtaxii
-SUBDIR+=	py-m2crypto
 SUBDIR+=	py-mcrypt
 SUBDIR+=	py-mohawk
 SUBDIR+=	py-nacl
