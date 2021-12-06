@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2021/12/06 21:45:07 pin Exp $
+bin/citron

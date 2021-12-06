@@ -1,0 +1,5 @@
+citron is:
+
+-a non-intrusive alternative to panels.
+-extremely fast, thanks to libmacchina.
+-works across different distributions, window managers and desktop environments.
