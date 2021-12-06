@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6003 2021/12/06 15:18:06 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6004 2021/12/06 15:23:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9051,3 +9051,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/py-FormEncode to 2.0.1 [wiz 2021-12-06]
 	Removed security/py-m2crypto [wiz 2021-12-06]
 	Updated textproc/py-parse_type to 0.5.6 [wiz 2021-12-06]
+	Updated textproc/py-pybtex-docutils to 1.0.1 [wiz 2021-12-06]
