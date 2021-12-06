@@ -1,0 +1,10 @@
+This distribution provides several classes that implement various
+backoff strategies for setting delay between retry attempts:
+
+- Algorithm::Backoff::Constant
+- Algorithm::Backoff::Exponential
+- Algorithm::Backoff::Fibonacci
+- Algorithm::Backoff::LILD
+- Algorithm::Backoff::LIMD
+- Algorithm::Backoff::MILD
+- Algorithm::Backoff::MIMD
