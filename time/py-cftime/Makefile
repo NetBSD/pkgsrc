@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/06/29 08:42:02 nia Exp $
+# $NetBSD: Makefile,v 1.6 2021/12/06 15:38:18 wiz Exp $
 
 DISTNAME=	cftime-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,13 +13,12 @@ LICENSE=	gnu-gpl-v3
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
-# This pulls too many unnecessary dependencies.
-#PYSETUPTESTTARGET=	pytest
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36 # py-numpy
 
+TEST_ENV+=	PYTHONPATH=build/lib
 do-test:
+	cd ${WRKSRC}/build && ${LN} -sf lib.* lib
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} test
-
-PYTHON_VERSIONS_INCOMPATIBLE+=	36	# py-numpy
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/egg.mk"
