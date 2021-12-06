@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/09/03 08:53:16 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.6 2021/12/06 14:59:35 wiz Exp $
 
 DISTNAME=	anyjson-0.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,4 +13,10 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+
+.if ${PYPKGPREFIX} != "py27"
+post-extract:
+	cd ${WRKSRC} && 2to3-${PYVERSSUFFIX} -w --no-diffs anyjson
+.endif
+
 .include "../../mk/bsd.pkg.mk"
