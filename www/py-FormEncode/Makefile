@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2020/03/22 12:28:28 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2021/12/06 14:41:21 wiz Exp $
 
-DISTNAME=	FormEncode-1.3.1
+DISTNAME=	FormEncode-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/FormEncode/}
@@ -10,17 +10,22 @@ HOMEPAGE=	http://formencode.org/
 COMMENT=	HTML form validation, generation, and conversion package
 LICENSE=	python-software-foundation
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm_git_archive-[0-9]*:../../devel/py-setuptools_scm_git_archive
 TEST_DEPENDS+=	${PYPKGPREFIX}-country-[0-9]*:../../geography/py-country
 TEST_DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
-TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/pyversion.mk"
-.if ${PYPKGPREFIX} == py27
-TEST_DEPENDS=	# none; py-country is incompatible with py27
-do-test:
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-country
+
+PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
+
+INSTALLATION_DIRS+=	share/doc/${PYPKGPREFIX}-FormEncode
+
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/LICENSE.txt ${DESTDIR}${PREFIX}/share/doc/${PYPKGPREFIX}-FormEncode
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
