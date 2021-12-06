@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3519 2021/11/29 10:22:58 mef Exp $
+# $NetBSD: Makefile,v 1.3520 2021/12/06 12:45:04 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1088,6 +1088,7 @@ SUBDIR+=	ossp-uuid
 SUBDIR+=	p5-Acme-Damn
 SUBDIR+=	p5-Acme-PlayCode
 SUBDIR+=	p5-Algorithm-Annotate
+SUBDIR+=	p5-Algorithm-Backoff
 SUBDIR+=	p5-Algorithm-C3
 SUBDIR+=	p5-Algorithm-CheckDigits
 SUBDIR+=	p5-Algorithm-Dependency
