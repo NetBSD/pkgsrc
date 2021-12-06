@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/11/25 21:24:09 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2021/12/06 15:23:59 wiz Exp $
 
 DISTNAME=	tomli-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,6 +22,8 @@ SUBST_MESSAGE.version=	Setting version.
 
 post-extract:
 	${CP} ${FILESDIR}/setup.py ${WRKSRC}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
