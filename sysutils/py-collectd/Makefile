@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/08/31 18:11:34 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2021/12/06 14:54:32 wiz Exp $
 
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=		3
@@ -10,6 +10,10 @@ COMMENT=		Statistics collection daemon - python plugin
 
 CONFIGURE_ARGS+=	--enable-python
 CONFIGURE_ENV+=		PYTHON_CONFIG=${PREFIX}/bin/python${PYVERSSUFFIX}-config
+
+# installed by collectd package
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/lib/libcollectdclient.*
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
