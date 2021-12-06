@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2021/11/10 07:33:51 pin Exp $
+# $NetBSD: Makefile,v 1.14 2021/12/06 21:42:26 pin Exp $
 
-DISTNAME=	please-0.5.0
-PKGNAME=	pleaser-0.5.0
+DISTNAME=	please-0.5.1
+PKGNAME=	pleaser-0.5.1
 CATEGORIES=	security
 MASTER_SITES=	https://gitlab.com/edneville/please/-/archive/v${PKGVERSION_NOREV}/
 
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 .include "cargo-depends.mk"
 
-WRKSRC=			${WRKDIR}/please-v0.5.0-2509df45b77e2178f9261e81fd272a6d9d45f2c1
+WRKSRC=			${WRKDIR}/please-v0.5.1-ce9627c714e46d9ea1d157ee43c78a7523f45d80
 
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing paths.
