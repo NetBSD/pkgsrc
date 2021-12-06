@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.165 2021/11/19 19:00:16 sjmulder Exp $
+# $NetBSD: Makefile,v 1.166 2021/12/06 22:09:13 pin Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -49,6 +49,7 @@ SUBDIR+=	icewm14
 SUBDIR+=	icewmconf
 SUBDIR+=	jwm
 SUBDIR+=	larswm
+SUBDIR+=	leftwm
 SUBDIR+=	libAppleWM
 SUBDIR+=	lwm
 SUBDIR+=	marco
