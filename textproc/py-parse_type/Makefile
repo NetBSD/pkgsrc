@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2021/10/11 17:27:08 adam Exp $
+# $NetBSD: Makefile,v 1.4 2021/12/06 15:17:56 wiz Exp $
 
-DISTNAME=	parse_type-0.5.2
+DISTNAME=	parse_type-0.5.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/parse_type/}
+#MASTER_SITES=	${MASTER_SITE_PYPI:=p/parse_type/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jenisys/}
+GITHUB_PROJECT=	parse_type
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jenisys/parse_type
