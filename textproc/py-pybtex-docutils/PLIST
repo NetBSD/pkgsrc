@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2018/07/26 16:02:31 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/06 15:22:57 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/zip-safe
-${PYSITELIB}/pybtex_docutils.py
-${PYSITELIB}/pybtex_docutils.pyc
-${PYSITELIB}/pybtex_docutils.pyo
+${PYSITELIB}/pybtex_docutils/__init__.py
+${PYSITELIB}/pybtex_docutils/__init__.pyc
+${PYSITELIB}/pybtex_docutils/__init__.pyo
+${PYSITELIB}/pybtex_docutils/py.typed

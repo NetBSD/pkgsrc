@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2019/10/22 06:45:05 adam Exp $
+# $NetBSD: Makefile,v 1.4 2021/12/06 15:22:57 wiz Exp $
 
-DISTNAME=	pybtex-docutils-0.2.2
+DISTNAME=	pybtex-docutils-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pybtex-docutils/}
@@ -12,9 +12,10 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.8:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-pybtex>=0.16:../../textproc/py-pybtex
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
