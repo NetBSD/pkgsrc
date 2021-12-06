@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/07/15 18:30:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/06 14:41:21 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -18,6 +18,7 @@ ${PYSITELIB}/docs/modules.txt
 ${PYSITELIB}/docs/whatsnew-0-to-1.2.4.txt
 ${PYSITELIB}/docs/whatsnew-1.2.5.txt
 ${PYSITELIB}/docs/whatsnew-1.3.txt
+${PYSITELIB}/docs/whatsnew-2.0.txt
 ${PYSITELIB}/formencode/__init__.py
 ${PYSITELIB}/formencode/__init__.pyc
 ${PYSITELIB}/formencode/__init__.pyo
@@ -82,6 +83,8 @@ ${PYSITELIB}/formencode/i18n/ko/LC_MESSAGES/FormEncode.mo
 ${PYSITELIB}/formencode/i18n/ko/LC_MESSAGES/FormEncode.po
 ${PYSITELIB}/formencode/i18n/lt/LC_MESSAGES/FormEncode.mo
 ${PYSITELIB}/formencode/i18n/lt/LC_MESSAGES/FormEncode.po
+${PYSITELIB}/formencode/i18n/mk/LC_MESSAGES/FormEncode.mo
+${PYSITELIB}/formencode/i18n/mk/LC_MESSAGES/FormEncode.po
 ${PYSITELIB}/formencode/i18n/nb_NO/LC_MESSAGES/FormEncode.mo
 ${PYSITELIB}/formencode/i18n/nb_NO/LC_MESSAGES/FormEncode.po
 ${PYSITELIB}/formencode/i18n/nl/LC_MESSAGES/FormEncode.mo
@@ -100,6 +103,8 @@ ${PYSITELIB}/formencode/i18n/sl/LC_MESSAGES/FormEncode.mo
 ${PYSITELIB}/formencode/i18n/sl/LC_MESSAGES/FormEncode.po
 ${PYSITELIB}/formencode/i18n/sr/LC_MESSAGES/FormEncode.mo
 ${PYSITELIB}/formencode/i18n/sr/LC_MESSAGES/FormEncode.po
+${PYSITELIB}/formencode/i18n/sr@latin/LC_MESSAGES/FormEncode.mo
+${PYSITELIB}/formencode/i18n/sr@latin/LC_MESSAGES/FormEncode.po
 ${PYSITELIB}/formencode/i18n/sv/LC_MESSAGES/FormEncode.mo
 ${PYSITELIB}/formencode/i18n/sv/LC_MESSAGES/FormEncode.po
 ${PYSITELIB}/formencode/i18n/tr/LC_MESSAGES/FormEncode.mo
@@ -156,6 +161,9 @@ ${PYSITELIB}/formencode/tests/test_email.pyo
 ${PYSITELIB}/formencode/tests/test_htmlfill.py
 ${PYSITELIB}/formencode/tests/test_htmlfill.pyc
 ${PYSITELIB}/formencode/tests/test_htmlfill.pyo
+${PYSITELIB}/formencode/tests/test_htmlfill_control.py
+${PYSITELIB}/formencode/tests/test_htmlfill_control.pyc
+${PYSITELIB}/formencode/tests/test_htmlfill_control.pyo
 ${PYSITELIB}/formencode/tests/test_htmlgen.py
 ${PYSITELIB}/formencode/tests/test_htmlgen.pyc
 ${PYSITELIB}/formencode/tests/test_htmlgen.pyo
@@ -186,3 +194,4 @@ ${PYSITELIB}/formencode/validators.pyo
 ${PYSITELIB}/formencode/variabledecode.py
 ${PYSITELIB}/formencode/variabledecode.pyc
 ${PYSITELIB}/formencode/variabledecode.pyo
+share/doc/${PYPKGPREFIX}-FormEncode/LICENSE.txt

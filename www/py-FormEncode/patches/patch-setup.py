@@ -1,16 +1,15 @@
-$NetBSD: patch-setup.py,v 1.1 2017/10/27 15:47:31 adam Exp $
+$NetBSD: patch-setup.py,v 1.2 2021/12/06 14:41:21 wiz Exp $
 
-dnspython3 has been superseded by the regular dnspython
+Remove hardcoded version limits.
 
---- setup.py.orig	2017-10-27 15:37:17.000000000 +0000
+--- setup.py.orig	2021-10-05 12:14:00.000000000 +0000
 +++ setup.py
-@@ -14,8 +14,7 @@ version = '1.3.1'
- if not '2.6' <= sys.version < '3.0' and not '3.2' <= sys.version:
-     raise ImportError('Python version not supported')
+@@ -16,7 +16,7 @@ if not (2,7) <= sys.version_info[:2] < (
  
--tests_require = ['nose', 'pycountry',
--    'dnspython' if sys.version < '3.0' else 'dnspython3']
-+tests_require = ['nose', 'pycountry', 'dnspython']
+ tests_require = [
+     'pytest<4.7' if sys.version_info[:2] < (3,0) else 'pytest',
+-    'dnspython==1.16.0' if sys.version_info[:2] < (3,0) else 'dnspython>=2.0.0',
++    'dnspython',
+     'pycountry<19' if sys.version_info < (3,0) else 'pycountry']
  
- doctests = ['docs/htmlfill.txt', 'docs/Validator.txt',
-     'formencode/tests/non_empty.txt']
+ setup_requires = [
