@@ -1,0 +1,20 @@
+Ubiquiti recommends using mongodb 3.6 with Unifi.
+
+Unifi in pkgsrc can use either mongodb3 or mongodb4
+- mongodb3 (the default, and the last 3.4 version of mongodb before
+  the switch to server-side-public-license)
+- mongodb4 (requires the 'new' server-side-public-license, and
+  is not officially supported by Ubiquiti)
+
+Recommended process of switching between them:
+- Login to unifi, and download a full backup
+- Shut down unifi
+- Install new unifi version
+- Rename away the old unifi/data directory (this also provides
+  a rollback option if you need to revert) & create new empty data
+  directory
+- Start up unifi
+- If you have customised data/system.properties for unifi.http.port
+  and similar, shut down unifi (now that a new data/system.properties
+  is present), merge the changes across in an editor then start unifi
+- Go to the web interface and select upload backup
