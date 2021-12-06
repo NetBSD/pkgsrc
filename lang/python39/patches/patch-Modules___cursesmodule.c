@@ -1,6 +1,7 @@
-$NetBSD: patch-Modules___cursesmodule.c,v 1.1 2021/12/06 16:03:06 wiz Exp $
+$NetBSD: patch-Modules___cursesmodule.c,v 1.2 2021/12/06 16:36:15 wiz Exp $
 
 NetBSD curses compatibility.
+https://bugs.python.org/issue46000
 
 --- Modules/_cursesmodule.c.orig	2021-11-15 17:43:00.000000000 +0000
 +++ Modules/_cursesmodule.c
