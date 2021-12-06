@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.5996 2021/12/06 12:42:00 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.5997 2021/12/06 12:45:23 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9044,3 +9044,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/lazygit to 0.31.4 [wiz 2021-12-05]
 	Updated textproc/py-relatorio to 0.10.0 [mef 2021-12-06]
 	Updated devel/cloc to 1.92 [fcambus 2021-12-06]
+	Added devel/p5-Algorithm-Backoff version 0.009 [schmonz 2021-12-06]
