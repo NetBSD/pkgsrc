@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2021/11/21 14:55:44 schmonz Exp $
+# $NetBSD: Makefile,v 1.32 2021/12/06 12:48:15 schmonz Exp $
 
-DISTNAME=		App-Sqitch-v1.2.0
+DISTNAME=		App-Sqitch-v1.2.1
 PKGNAME=		p5-${DISTNAME:S/-v/-/}
 CATEGORIES=		databases perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=App/}
@@ -10,6 +10,7 @@ HOMEPAGE=		https://sqitch.org/
 COMMENT=		Sensible database change management
 LICENSE=		mit
 
+DEPENDS+=		p5-Algorithm-Backoff>=0.006:../../devel/p5-Algorithm-Backoff
 DEPENDS+=		p5-Class-XSAccessor>=1.18:../../devel/p5-Class-XSAccessor
 DEPENDS+=		p5-Clone-[0-9]*:../../devel/p5-Clone
 DEPENDS+=		p5-Config-GitLike>=1.15:../../devel/p5-Config-GitLike
