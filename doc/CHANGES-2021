@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6005 2021/12/06 19:20:53 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6006 2021/12/06 21:42:45 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9054,3 +9054,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-pybtex-docutils to 1.0.1 [wiz 2021-12-06]
 	Updated net/libtorrent-rasterbar to 1.2.15 [adam 2021-12-06]
 	Updated security/py-cryptodome to 3.12.0 [adam 2021-12-06]
+	Updated security/pleaser to 0.5.1 [pin 2021-12-06]
