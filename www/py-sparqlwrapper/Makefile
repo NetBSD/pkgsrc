@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/05/05 09:54:42 adam Exp $
+# $NetBSD: Makefile,v 1.10 2021/12/06 14:14:35 wiz Exp $
 
 DISTNAME=	SPARQLWrapper-1.8.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -15,6 +15,9 @@ DEPENDS+=	${PYPKGPREFIX}-rdflib>=4.0:../../textproc/py-rdflib
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-networkx via py-rdflib
+
+post-extract:
+	cd ${WRKSRC} && 2to3-${PYVERSSUFFIX} -w --no-diffs SPARQLWrapper
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
