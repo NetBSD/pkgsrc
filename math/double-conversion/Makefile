@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2019/06/02 14:15:45 mef Exp $
+# $NetBSD: Makefile,v 1.2 2021/12/07 18:11:02 wiz Exp $
 
-DISTNAME=	double-conversion-3.1.5
+DISTNAME=	double-conversion-3.1.6
 CATEGORIES=	math converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
-GITHUB_PROJECT=	double-conversion
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-EXTRACT_USING=	bsdtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/google/double-conversion/
