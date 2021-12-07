@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2021/08/29 20:00:43 khorben Exp $
+# $NetBSD: Makefile,v 1.5 2021/12/07 10:51:22 khorben Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-octoprint-1.6.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OctoPrint/}
 GITHUB_PROJECT=	OctoPrint
@@ -29,7 +29,6 @@ DEPENDS+=	${PYPKGPREFIX}-flask-babel>=1.0:../../www/py-flask-babel
 DEPENDS+=	${PYPKGPREFIX}-flask-login>=0.5:../../www/py-flask-login
 DEPENDS+=	${PYPKGPREFIX}-future>=0.18.2:../../devel/py-future
 DEPENDS+=	${PYPKGPREFIX}-immutabledict>=2.0.0:../../devel/py-immutabledict
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=0.18.2:../../devel/py-importlib-metadata
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.11.2:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-markdown>=3.1:../../textproc/py-markdown
 DEPENDS+=	${PYPKGPREFIX}-netaddr>=0.7.19:../../net/py-netaddr
