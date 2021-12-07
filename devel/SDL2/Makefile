@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2021/09/08 21:04:58 nia Exp $
+# $NetBSD: Makefile,v 1.60 2021/12/07 20:31:27 wiz Exp $
 
-DISTNAME=	SDL2-2.0.16
-PKGREVISION=	1
+DISTNAME=	SDL2-2.0.18
 CATEGORIES=	devel
 MASTER_SITES=	https://www.libsdl.org/release/
 
