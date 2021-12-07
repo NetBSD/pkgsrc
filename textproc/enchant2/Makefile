@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2021/08/15 13:25:33 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2021/12/07 18:32:18 wiz Exp $
 
-DISTNAME=		enchant-2.3.1
+DISTNAME=		enchant-2.3.2
 PKGNAME=		${DISTNAME:S/enchant/enchant2/}
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=AbiWord/}
@@ -28,8 +28,8 @@ CONF_FILES=		${PREFIX}/share/examples/enchant.ordering ${PREFIX}/share/enchant/e
 CONFIGURE_ARGS+=	--without-hspell
 CONFIGURE_ARGS+=	--without-voikko
 
-# Status as of 2.2.7:
-# FAILURE: 230 out of 425 tests failed (385 failures).
+# As of 2.3.2
+# FAILURE: 230 out of 425 tests failed (390 failures).
 TEST_TARGET=		check
 
 # C++11
