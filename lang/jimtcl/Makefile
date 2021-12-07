@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2021/05/06 15:19:39 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2021/12/07 17:51:20 jperkin Exp $
 
-DISTNAME=	jimtcl-0.80
-PKGREVISION=	1
+DISTNAME=	jimtcl-0.81
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=msteveb/}
 
@@ -23,12 +22,20 @@ CONFIGURE_ARGS+=	--disable-jim-regexp
 REPLACE_INTERPRETER+=	jimsh
 REPLACE.jimsh.old=	/usr/bin/env jimsh
 REPLACE.jimsh.new=	${PREFIX}/bin/jimsh
-REPLACE_FILES.jimsh=	build-jim-ext.in
+REPLACE_FILES.jimsh=	build-jim-ext.in jimdb
 
 TEST_TARGET=	test
 
+OPSYSVARS+=	SOEXT SONAME
+SOEXT.Darwin=	dylib
+SONAME.Darwin=	libjim.${PKGVERSION_NOREV}.${SOEXT}
+SOEXT.*=	so
+SONAME.*=	libjim.${SOEXT}.${PKGVERSION_NOREV}
+
+PLIST_SUBST+=	SOEXT=${SOEXT} SONAME=${SONAME}
+
 post-install:
-	${LN} -sf libjim.so.${PKGVERSION_NOREV} ${DESTDIR}${PREFIX}/lib/libjim.so
+	${LN} -sf ${SONAME} ${DESTDIR}${PREFIX}/lib/libjim.${SOEXT}
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
