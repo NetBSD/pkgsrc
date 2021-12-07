@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2021/11/16 16:04:40 wiz Exp $
+$NetBSD: distinfo,v 1.2 2021/12/07 20:27:07 wiz Exp $
 
-BLAKE2s (pip-audit-0.0.5.tar.gz) = c60ea00a1e24ff8e0677ae3d8d7d72b606e919475534b108de32174b2cad7826
-SHA512 (pip-audit-0.0.5.tar.gz) = 018aa04901baee74399314faa3afeebd141be91d4bba7621f5c657281458ae5a7d90db60e3059d9bfec858dc0e4251b9c56321b8d22d2533edf9db1154180a03
-Size (pip-audit-0.0.5.tar.gz) = 31766 bytes
-SHA1 (patch-setup.py) = 2171a0cc6c3b737844cce29f1c38d1099115f640
+BLAKE2s (pip-audit-1.1.0.tar.gz) = c31697d727e3fe5413a281f37b24e83732afbc20dfead2e436a4680d3fc6e8a4
+SHA512 (pip-audit-1.1.0.tar.gz) = 77c0552f840ca17fb9a80e9dd594bf8faf74aad5331e1689ad6b7c436d29589fd1b5db9db3e41a16679934fe1856ad0d0821ee5c52a5d4508fda6236bdf27f22
+Size (pip-audit-1.1.0.tar.gz) = 41526 bytes
