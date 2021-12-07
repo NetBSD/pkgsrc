@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:51:39 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/12/07 17:51:20 jperkin Exp $
 
-BLAKE2s (jimtcl-0.80.tar.gz) = a55c037039b8e5a6cd70889cdf57113669c189bc05285e3418b7f770c58a4f52
-SHA512 (jimtcl-0.80.tar.gz) = 37f14263f2101caaa632acf5e426dd7f1d6f75143875359c1daed59a039a9c64bbdf7941ce12b76bf9b209521b3967fd2b1d94a6afde7b2a8dd173d160858225
-Size (jimtcl-0.80.tar.gz) = 3130592 bytes
+BLAKE2s (jimtcl-0.81.tar.gz) = b21d50988993b0dc9ca0a987c0120a5d42699c747329480b99ab249b807385f7
+SHA512 (jimtcl-0.81.tar.gz) = 5f798b15fd32673e2e2769e25c4dfeee43696e5bbd2d3ec3fd2f312fa49da9ef057fb4de81a10d3812dc07fb2e40ed79924b024e537e064d3213b10e06a416b6
+Size (jimtcl-0.81.tar.gz) = 3977705 bytes
+SHA1 (patch-autosetup_cc-shared.tcl) = 02b663ec07499c04fec1e0c462fdede37dc9ab3f
+SHA1 (patch-jim-aio.c) = 0da49b824d60e5d6303dd69922f5953272434925
