@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6027 2021/12/07 18:18:05 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6028 2021/12/07 18:27:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9083,3 +9083,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/double-conversion to 3.1.6 [wiz 2021-12-07]
 	Updated math/gsl to 2.7.1 [wiz 2021-12-07]
 	Updated audio/mpc to 0.34 [wiz 2021-12-07]
+	Updated misc/dpkg to 1.21.1 [adam 2021-12-07]
+	Updated sysutils/open-vm-tools to 11.3.5 [adam 2021-12-07]
