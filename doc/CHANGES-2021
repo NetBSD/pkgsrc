@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6018 2021/12/07 17:51:30 jperkin Exp $
+$NetBSD: CHANGES-2021,v 1.6019 2021/12/07 18:03:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9074,3 +9074,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/dovecot2 to 2.3.17.1 [adam 2021-12-07]
 	Updated mail/dovecot2-pigeonhole to 0.5.17.1 [adam 2021-12-07]
 	Updated lang/jimtcl to 0.81 [jperkin 2021-12-07]
+	Added devel/py-types-setuptools version 57.4.4 [wiz 2021-12-07]
