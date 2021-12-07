@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2021/12/07 18:04:46 wiz Exp $
+bin/cyclonedx-bom-${PYVERSSUFFIX}
+bin/cyclonedx-py-${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/cyclonedx_py/__init__.py
+${PYSITELIB}/cyclonedx_py/__init__.pyc
+${PYSITELIB}/cyclonedx_py/__init__.pyo
+${PYSITELIB}/cyclonedx_py/client.py
+${PYSITELIB}/cyclonedx_py/client.pyc
+${PYSITELIB}/cyclonedx_py/client.pyo
