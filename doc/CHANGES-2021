@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6012 2021/12/07 08:38:22 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6013 2021/12/07 09:31:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9061,3 +9061,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/xfce4-weather-plugin to 0.11.0 [gutteridge 2021-12-07]
 	Updated x11/xscope to 1.4.2 [wiz 2021-12-07]
 	Updated x11/libX11 to 1.7.3 [wiz 2021-12-07]
+	Updated lang/python310 to 3.10.1 [adam 2021-12-07]
+	Updated lang/py310-html-docs to 3.10.1 [adam 2021-12-07]
