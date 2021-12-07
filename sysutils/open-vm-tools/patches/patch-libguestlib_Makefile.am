@@ -1,0 +1,14 @@
+$NetBSD: patch-libguestlib_Makefile.am,v 1.3 2021/12/07 18:25:46 adam Exp $
+
+Do not link against dl.
+
+--- libguestlib/Makefile.am.orig	2021-12-07 13:10:18.901007820 +0000
++++ libguestlib/Makefile.am
+@@ -51,7 +51,6 @@ libguestlib_la_SOURCES += $(libguestlib_
+ endif
+ 
+ libguestlib_la_LDFLAGS =
+-libguestlib_la_LDFLAGS += -Wl,-ldl
+ libguestlib_la_LDFLAGS += -Wl,-lrt
+ # We require GCC, so we're fine passing compiler-specific flags.
+ # Needed for OS's that don't link shared libraries against libc by default, e.g. FreeBSD
