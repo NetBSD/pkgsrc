@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/12/07 18:02:14 wiz Exp $
+
+BLAKE2s (packageurl-python-0.9.6.tar.gz) = c8c92c13c16f1d9b87bdd6dc0e478cf09d331585bdd222b308be6f2a7e830c98
+SHA512 (packageurl-python-0.9.6.tar.gz) = 62395abacccf1d2d57c6e8989b4138be57dde07c29f1d88ba78ffcfe487a144cb24842f3e7ec17afcfcf5720b1ca9af1f2a47014c46a6d1d9d64453dd9eedb07
+Size (packageurl-python-0.9.6.tar.gz) = 27910 bytes
