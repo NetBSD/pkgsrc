@@ -1,12 +1,11 @@
-$NetBSD: patch-setup.py,v 1.1 2021/10/05 19:07:13 adam Exp $
+$NetBSD: patch-setup.py,v 1.2 2021/12/07 09:31:09 adam Exp $
 
 Disable certain modules, so they can be built as separate packages.
 Do not look for ncursesw.
 Assume panel_library is correct; this is a fix for ncurses' gnupanel
 which will get transformed to panel in buildlink.
-Also look for uuid/uuid.h.
 
---- setup.py.orig	2021-07-10 00:51:07.000000000 +0000
+--- setup.py.orig	2021-12-06 18:23:39.000000000 +0000
 +++ setup.py
 @@ -45,6 +45,7 @@ with warnings.catch_warnings():
          DeprecationWarning
@@ -25,7 +24,7 @@ Also look for uuid/uuid.h.
  
  # --list-module-names option used by Tools/scripts/generate_module_names.py
  LIST_MODULE_NAMES = False
-@@ -246,6 +247,16 @@ def grep_headers_for(function, headers):
+@@ -249,6 +250,16 @@ def grep_headers_for(function, headers):
      return False
  
  
@@ -42,7 +41,7 @@ Also look for uuid/uuid.h.
  def find_file(filename, std_dirs, paths):
      """Searches for the directory where a given file is located,
      and returns a possibly-empty list of additional directories, or None
-@@ -804,15 +815,15 @@ class PyBuildExt(build_ext):
+@@ -821,15 +832,15 @@ class PyBuildExt(build_ext):
                          add_dir_to_list(dir_list, directory)
  
      def configure_compiler(self):
@@ -67,7 +66,7 @@ Also look for uuid/uuid.h.
          self.add_multiarch_paths()
          self.add_ldflags_cppflags()
  
-@@ -860,6 +871,9 @@ class PyBuildExt(build_ext):
+@@ -877,6 +888,9 @@ class PyBuildExt(build_ext):
              self.lib_dirs += ['/usr/lib/hpux64', '/usr/lib/hpux32']
  
          if MACOS:
@@ -77,7 +76,7 @@ Also look for uuid/uuid.h.
              # This should work on any unixy platform ;-)
              # If the user has bothered specifying additional -I and -L flags
              # in OPT and LDFLAGS we might as well use them here.
-@@ -1087,8 +1101,6 @@ class PyBuildExt(build_ext):
+@@ -1104,8 +1118,6 @@ class PyBuildExt(build_ext):
          # use the same library for the readline and curses modules.
          if 'curses' in readline_termcap_library:
              curses_library = readline_termcap_library
@@ -86,7 +85,7 @@ Also look for uuid/uuid.h.
          # Issue 36210: OSS provided ncurses does not link on AIX
          # Use IBM supplied 'curses' for successful build of _curses
          elif AIX and self.compiler.find_library_file(self.lib_dirs, 'curses'):
-@@ -1192,8 +1204,7 @@ class PyBuildExt(build_ext):
+@@ -1209,8 +1221,7 @@ class PyBuildExt(build_ext):
          # If the curses module is enabled, check for the panel module
          # _curses_panel needs some form of ncurses
          skip_curses_panel = True if AIX else False
@@ -96,7 +95,7 @@ Also look for uuid/uuid.h.
              self.add(Extension('_curses_panel', ['_curses_panel.c'],
                             include_dirs=curses_includes,
                             define_macros=curses_defines,
-@@ -1438,6 +1449,31 @@ class PyBuildExt(build_ext):
+@@ -1455,6 +1466,31 @@ class PyBuildExt(build_ext):
          dbm_order = ['gdbm']
          # The standard Unix dbm module:
          if not CYGWIN:
@@ -128,7 +127,7 @@ Also look for uuid/uuid.h.
              config_args = [arg.strip("'")
                             for arg in sysconfig.get_config_var("CONFIG_ARGS").split()]
              dbm_args = [arg for arg in config_args
-@@ -1449,7 +1485,7 @@ class PyBuildExt(build_ext):
+@@ -1466,7 +1502,7 @@ class PyBuildExt(build_ext):
              dbmext = None
              for cand in dbm_order:
                  if cand == "ndbm":
@@ -137,16 +136,7 @@ Also look for uuid/uuid.h.
                          # Some systems have -lndbm, others have -lgdbm_compat,
                          # others don't have either
                          if self.compiler.find_library_file(self.lib_dirs,
-@@ -1845,6 +1881,8 @@ class PyBuildExt(build_ext):
-     def detect_uuid(self):
-         # Build the _uuid module if possible
-         uuid_incs = find_file("uuid.h", self.inc_dirs, ["/usr/include/uuid"])
-+        if uuid_incs is None:
-+            uuid_incs = find_file("uuid/uuid.h", self.inc_dirs, [])
-         if uuid_incs is not None:
-             if self.compiler.find_library_file(self.lib_dirs, 'uuid'):
-                 uuid_libs = ['uuid']
-@@ -2308,10 +2346,7 @@ class PyBuildExt(build_ext):
+@@ -2326,10 +2362,7 @@ class PyBuildExt(build_ext):
              sources = ['_decimal/_decimal.c']
              depends = ['_decimal/docstrings.h']
          else:
@@ -158,7 +148,7 @@ Also look for uuid/uuid.h.
              libraries = ['m']
              sources = [
                '_decimal/_decimal.c',
-@@ -2727,7 +2762,7 @@ def main():
+@@ -2745,7 +2778,7 @@ def main():
            # If you change the scripts installed here, you also need to
            # check the PyBuildScripts command above, and change the links
            # created by the bininstall target in Makefile.pre.in
