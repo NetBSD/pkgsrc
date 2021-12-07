@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/12/07 18:03:07 wiz Exp $
+
+BLAKE2s (requirements-parser-0.2.0.tar.gz) = 1cc80db095483c64f42b8a583eb3f225396e4355a6126b51b2827234af77cf06
+SHA512 (requirements-parser-0.2.0.tar.gz) = 3275df037428c2e5884f75b0921835608e4c56705d4d7230ce6f7599e3752adfbc55f8deb4c3e11ab73680f5ad8de9f12e1e9827c494023ff1944a134c90a652
+Size (requirements-parser-0.2.0.tar.gz) = 6269 bytes
