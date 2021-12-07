@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/11/20 18:59:05 nia Exp $
+# $NetBSD: Makefile,v 1.5 2021/12/07 16:42:13 jperkin Exp $
 
 GITHUB_PROJECT=	hidapi
 GITHUB_TAG=	${GITHUB_PROJECT}-0.11.0
@@ -23,6 +23,14 @@ USE_LIBTOOL=	yes
 PKGCONFIG_OVERRIDE+=	pc/hidapi-hidraw.pc.in
 PKGCONFIG_OVERRIDE+=	pc/hidapi-libusb.pc.in
 PKGCONFIG_OVERRIDE+=	pc/hidapi.pc.in
+
+PLIST_VARS+=	libusb
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Darwin"
+PLIST.libusb=	yes
+.endif
 
 pre-configure:
 	cd ${WRKSRC} && ${SH} ./bootstrap
