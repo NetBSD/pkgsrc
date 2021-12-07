@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2021/10/05 19:07:13 adam Exp $
+$NetBSD: patch-configure,v 1.2 2021/12/07 09:31:09 adam Exp $
 
 Use gnu99 instead of c99 to avoid "alloca() undefined" problems.
 Fix linking on Darwin; don't use -stack_size.
@@ -6,9 +6,9 @@ Changes for consistency across pkgsrc platforms.
 Simplify _sysconfigdata to include only platform name.
 detect netcan/can.h on NetBSD
 
---- configure.orig	2021-09-07 13:18:28.000000000 +0000
+--- configure.orig	2021-12-06 18:23:39.000000000 +0000
 +++ configure
-@@ -7028,7 +7028,7 @@ UNIVERSAL_ARCH_FLAGS=
+@@ -7040,7 +7040,7 @@ UNIVERSAL_ARCH_FLAGS=
  # tweak BASECFLAGS based on compiler and platform
  case $GCC in
  yes)
@@ -17,7 +17,7 @@ detect netcan/can.h on NetBSD
  
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking for -Wextra" >&5
  $as_echo_n "checking for -Wextra... " >&6; }
-@@ -8652,6 +8652,17 @@ if test "x$ac_cv_type___uint128_t" = xye
+@@ -8664,6 +8664,17 @@ if test "x$ac_cv_type___uint128_t" = xye
  $as_echo "#define HAVE_GCC_UINT128_T 1" >>confdefs.h
  
  fi
@@ -35,15 +35,22 @@ detect netcan/can.h on NetBSD
  
  
  # Sizes and alignments of various common basic types
-@@ -9778,7 +9789,6 @@ then
+@@ -9884,13 +9895,12 @@ then
+ 		# small for the default recursion limit. Increase the stack size
  		# to ensure that tests don't crash
- 		# Note: This matches the value of THREAD_STACK_SIZE in
- 		# thread_pthread.h
--		LINKFORSHARED="-Wl,-stack_size,1000000 $LINKFORSHARED"
+     stack_size="1000000"  # 16 MB
+-    if test "$with_ubsan" == "yes"
++    if test "$with_ubsan" = "yes"
+     then
+         # Undefined behavior sanitizer requires an even deeper stack
+         stack_size="4000000"  # 64 MB
+     fi
  
- 		if test "$enable_framework"
- 		then
-@@ -14520,10 +14530,10 @@ _ACEOF
+-    LINKFORSHARED="-Wl,-stack_size,$stack_size $LINKFORSHARED"
+ 
+ 
+ cat >>confdefs.h <<_ACEOF
+@@ -14751,10 +14761,10 @@ _ACEOF
  if ac_fn_c_try_compile "$LINENO"; then :
  
  
@@ -56,7 +63,7 @@ detect netcan/can.h on NetBSD
    if test "$ax_cv_c_float_words_bigendian" = unknown; then
      ax_cv_c_float_words_bigendian=no
    else
-@@ -15424,7 +15434,7 @@ _ACEOF
+@@ -15655,7 +15665,7 @@ _ACEOF
  fi
  
  
@@ -65,7 +72,7 @@ detect netcan/can.h on NetBSD
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking LDVERSION" >&5
  $as_echo_n "checking LDVERSION... " >&6; }
-@@ -15477,11 +15487,7 @@ fi
+@@ -15708,11 +15718,7 @@ fi
  
  
  
