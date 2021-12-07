@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2021/11/11 19:53:09 nia Exp $
+# $NetBSD: Makefile,v 1.92 2021/12/07 12:24:22 jperkin Exp $
 
 DISTNAME=	libvpx-1.11.0
 CATEGORIES=	multimedia
@@ -40,9 +40,7 @@ REPLACE_PERL=		build/make/ads2gas.pl
 .if ${OPSYS} == "Darwin"
 BUILDLINK_TRANSFORM+=	rm:-Wl,-Bsymbolic
 .  if ${MACHINE_ARCH} == "i386"
-.    if !empty(OS_VERSION:M1[8-9].*)
-CONFIGURE_ARGS+=	--target=x86-darwin17-gcc
-.    elif !empty(OS_VERSION:M1[0-7].*)
+.    if !empty(OS_VERSION:M1[0-9].*)
 CONFIGURE_ARGS+=	--target=x86-darwin${OS_VERSION:C/\.[0-9]*//g}-gcc
 .    elif !empty(OS_VERSION:M9.*)
 CONFIGURE_ARGS+=	--target=x86-darwin9-gcc
@@ -50,7 +48,7 @@ CONFIGURE_ARGS+=	--target=x86-darwin9-gcc
 CONFIGURE_ARGS+=	--target=x86-darwin8-gcc
 .    endif
 .  elif ${MACHINE_ARCH} == "x86_64"
-.    if !empty(OS_VERSION:M1[0-7].*)
+.    if !empty(OS_VERSION:M1[0-9].*)
 CONFIGURE_ARGS+=	--target=x86_64-darwin${OS_VERSION:C/\.[0-9]*//g}-gcc
 .    elif !empty(OS_VERSION:M2[0-9].*)
 CONFIGURE_ARGS+=	--target=x86_64-darwin20-gcc
@@ -103,7 +101,7 @@ CONFIGURE_ENV.MirBSD+=		RTCD_OPTIONS='--disable-sse2 --disable-sse3 --disable-ss
 CONFIGURE_ARGS.MirBSD+=		--disable-runtime-cpu-detect
 
 # Under Solaris 10 its /usr/xpg4/bin/tr is not sufficient. PR pkg/48508
-.if !empty(MACHINE_PLATFORM:MSunOS-5.10*)
+.if !empty(MACHINE_PLATFORM:MSunOS-5.10-*)
 BUILD_DEPENDS=		coreutils-[0-9]*:../../sysutils/coreutils
 TOOLS_PLATFORM.tr=	${PREFIX}/bin/gtr
 .endif
@@ -118,8 +116,8 @@ PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 # PR pkg/48508: newer gas from binutils is required to compile ssse3 code.
 .if !empty(MACHINE_PLATFORM:MNetBSD-5.*) || \
-	!empty(MACHINE_PLATFORM:MSunOS-5.10*) || \
-	!empty(MACHINE_PLATFORM:MOpenBSD-5*)
+	!empty(MACHINE_PLATFORM:MSunOS-5.10-*) || \
+	!empty(MACHINE_PLATFORM:MOpenBSD-5.*)
 .include "../../devel/binutils/buildlink3.mk"
 .include "../../devel/binutils/override-as.mk"
 .endif
