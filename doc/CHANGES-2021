@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6031 2021/12/07 19:53:37 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6032 2021/12/07 20:27:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9088,3 +9088,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/enchant2 to 2.3.2 [wiz 2021-12-07]
 	Updated lang/rust-analyzer to 0.0.2021.12.06 [wiz 2021-12-07]
 	Updated devel/py-pip-api to 0.0.26 [wiz 2021-12-07]
+	Updated security/py-pip-audit to 1.1.0 [wiz 2021-12-07]
