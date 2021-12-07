@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:12:14 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/12/07 10:51:22 khorben Exp $
 
 BLAKE2s (OctoPrint-1.6.1.tar.gz) = 7cef202ac3c03f93060546e177cb6568fbc734224894d4f3bf83517635c846bf
 SHA512 (OctoPrint-1.6.1.tar.gz) = 4b485ea395c9012f79dd772971cfb9c3b90676d147887560bc618597f898af65bae838522a7ead75e08563d7c61a98c8b63d71c605d1c73e7b8dbd51e8090680
 Size (OctoPrint-1.6.1.tar.gz) = 6174286 bytes
-SHA1 (patch-setup.py) = ffecbfba1b52f19dfa1fd95daa9d1799fc7ae769
+SHA1 (patch-setup.py) = e205a683e90120c94ac7309dd5d8b5eb00a31b2e
 SHA1 (patch-src_octoprint_util_comm.py) = 6f73998c3b51a17436e16b9a86b1e8b368f6cd2c
