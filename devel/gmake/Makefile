@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.115 2021/05/24 19:49:57 wiz Exp $
+# $NetBSD: Makefile,v 1.116 2021/12/07 12:06:16 jperkin Exp $
 
 DISTNAME=	make-4.3
 PKGNAME=	g${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=make/}
 
@@ -30,6 +30,20 @@ CONFIGURE_ARGS.MirBSD+=	ac_cv_func_strndup=no
 CONFIGURE_ARGS+=	ac_cv_func_getloadavg_setgid=no
 
 .include "../../mk/bsd.prefs.mk"
+
+#
+# Keep in sync with devel/bmake, the goal is to ensure we use the same shell
+# that was selected by bootstrap.
+#
+.if ${TOOLS_PLATFORM.sh:M?*/bin/mksh}
+DEPENDS+=	mksh-[0-9]*:../../shells/mksh
+CPPFLAGS+=	-DPKGSRC_DEFAULT_SHELL="\"${PREFIX}/bin/mksh\""
+.elif ${TOOLS_PLATFORM.sh:M?*/bin/pdksh}
+DEPENDS+=	pdksh-[0-9]*:../../shells/pdksh
+CPPFLAGS+=	-DPKGSRC_DEFAULT_SHELL="\"${PREFIX}/bin/pdksh\""
+.elif ${OPSYS} == "SunOS" && exists(/usr/bin/bash)
+CPPFLAGS+=	-DPKGSRC_DEFAULT_SHELL="\"/usr/bin/bash\""
+.endif
 
 # kernel bug, fixed in NetBSD 9.99.82
 .if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[0-9].*)
