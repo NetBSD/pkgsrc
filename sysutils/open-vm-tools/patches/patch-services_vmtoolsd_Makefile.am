@@ -1,25 +1,25 @@
-$NetBSD: patch-services_vmtoolsd_Makefile.am,v 1.1 2016/10/09 03:41:56 ryoon Exp $
+$NetBSD: patch-services_vmtoolsd_Makefile.am,v 1.2 2021/12/07 18:25:46 adam Exp $
 
---- services/vmtoolsd/Makefile.am.orig	2016-02-16 20:06:48.000000000 +0000
+--- services/vmtoolsd/Makefile.am.orig	2021-08-31 09:02:49.000000000 +0000
 +++ services/vmtoolsd/Makefile.am
-@@ -15,8 +15,10 @@
+@@ -15,6 +15,7 @@
  ### Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  ################################################################################
  
 +EGDIR = @datarootdir@/examples
-+
  bin_PROGRAMS = vmtoolsd
--pamdir = $(PAM_PREFIX)/pam.d
-+pamdir = $(EGDIR)/vmware-tools/pam.d
- 
  
  vmtoolsd_CPPFLAGS =
-@@ -83,7 +85,7 @@ install-data-hook:
+@@ -79,9 +80,9 @@ install-data-hook:
  	@INSTVMSG@ vmtoolsd $(srcdir)/l10n $(DESTDIR)$(datadir)
  
  install-exec-hook:
 -	$(INSTALL) -d $(DESTDIR)/etc/vmware-tools
+-	$(INSTALL) -d $(DESTDIR)/$(PAM_PREFIX)/pam.d/
+-	$(INSTALL) $(top_srcdir)/pam/generic $(DESTDIR)/$(PAM_PREFIX)/pam.d/vmtoolsd
 +	$(INSTALL) -d $(DESTDIR)/${EGDIR}/vmware-tools
++	$(INSTALL) -d $(DESTDIR)/$(EGDIR)/vmware-tools/pam.d
++	$(INSTALL) $(top_srcdir)/pam/generic $(DESTDIR)/$(EGDIR)/vmware-tools/pam.d/vmtoolsd
  
  uninstall-hook:
- 	rm -rf $(DESTDIR)/etc/vmware-tools
+ 	rm -f $(DESTDIR)/$(PAM_PREFIX)/pam.d/vmtoolsd
