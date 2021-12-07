@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/12/07 18:04:46 wiz Exp $
+
+BLAKE2s (cyclonedx-bom-1.5.3.tar.gz) = 2ec162099866b2c90ffc6918c7eede31032a28fb5bcd1ab506b941b7b0593d29
+SHA512 (cyclonedx-bom-1.5.3.tar.gz) = beaf553fd9052dd07b8b8126120b133e714d8ce85b50354018ee2840fb95b8c4ddb3bf3baec65c62ea954ae7d4ba9f2579e4a0b16f490d512102ec51a24f6a33
+Size (cyclonedx-bom-1.5.3.tar.gz) = 11699 bytes
