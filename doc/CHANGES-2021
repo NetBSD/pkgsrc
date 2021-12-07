@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6015 2021/12/07 10:08:25 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6016 2021/12/07 12:06:25 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9069,3 +9069,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/glib2-tools to 2.70.2 [adam 2021-12-07]
 	Updated devel/glib2 to 2.70.2 [adam 2021-12-07]
 	Updated devel/gdbus-codegen to 2.70.2 [adam 2021-12-07]
+	Updated devel/gmake to 4.3nb3 [jperkin 2021-12-07]
