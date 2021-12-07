@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6029 2021/12/07 18:32:27 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6030 2021/12/07 19:50:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9086,3 +9086,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/dpkg to 1.21.1 [adam 2021-12-07]
 	Updated sysutils/open-vm-tools to 11.3.5 [adam 2021-12-07]
 	Updated textproc/enchant2 to 2.3.2 [wiz 2021-12-07]
+	Updated lang/rust-analyzer to 0.0.2021.12.06 [wiz 2021-12-07]
