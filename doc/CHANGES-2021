@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6021 2021/12/07 18:04:03 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6022 2021/12/07 18:04:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9077,3 +9077,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/py-types-setuptools version 57.4.4 [wiz 2021-12-07]
 	Added devel/py-types-toml version 0.10.1 [wiz 2021-12-07]
 	Added devel/py-packageurl version 0.9.6 [wiz 2021-12-07]
+	Added devel/py-requirements-parser version 0.2.0 [wiz 2021-12-07]
