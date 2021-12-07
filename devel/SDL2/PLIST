@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2021/01/02 15:54:03 nia Exp $
+@comment $NetBSD: PLIST,v 1.12 2021/12/07 20:31:27 wiz Exp $
 bin/sdl2-config
 include/SDL2/SDL.h
 include/SDL2/SDL_assert.h
@@ -17,6 +17,7 @@ include/SDL2/SDL_filesystem.h
 include/SDL2/SDL_gamecontroller.h
 include/SDL2/SDL_gesture.h
 include/SDL2/SDL_haptic.h
+include/SDL2/SDL_hidapi.h
 include/SDL2/SDL_hints.h
 include/SDL2/SDL_joystick.h
 include/SDL2/SDL_keyboard.h
