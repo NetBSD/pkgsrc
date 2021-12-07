@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6025 2021/12/07 18:11:13 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6026 2021/12/07 18:16:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9081,3 +9081,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added security/py-cyclonedx-python-lib version 0.11.1 [wiz 2021-12-07]
 	Added security/py-cyclonedx-bom version 1.5.3 [wiz 2021-12-07]
 	Updated math/double-conversion to 3.1.6 [wiz 2021-12-07]
+	Updated math/gsl to 2.7.1 [wiz 2021-12-07]
