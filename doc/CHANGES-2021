@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6009 2021/12/07 01:02:20 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.6010 2021/12/07 01:16:59 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9058,3 +9058,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added x11/citron version 0.3.0 [pin 2021-12-06]
 	Added wm/leftwm version 0.2.10 [pin 2021-12-06]
 	Updated x11/xfce4-screenshooter to 1.9.9 [gutteridge 2021-12-07]
+	Updated misc/xfce4-weather-plugin to 0.11.0 [gutteridge 2021-12-07]
