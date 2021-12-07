@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6017 2021/12/07 17:02:14 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6018 2021/12/07 17:51:30 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9073,3 +9073,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/glibmm to 2.66.2 [adam 2021-12-07]
 	Updated mail/dovecot2 to 2.3.17.1 [adam 2021-12-07]
 	Updated mail/dovecot2-pigeonhole to 0.5.17.1 [adam 2021-12-07]
+	Updated lang/jimtcl to 0.81 [jperkin 2021-12-07]
