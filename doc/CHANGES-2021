@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6014 2021/12/07 09:44:29 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6015 2021/12/07 10:08:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9065,3 +9065,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/py310-html-docs to 3.10.1 [adam 2021-12-07]
 	Updated textproc/ugrep to 3.3.10 [adam 2021-12-07]
 	Updated devel/py-cython to 0.29.25 [adam 2021-12-07]
+	Updated sysutils/ansible-base to 2.10.16 [adam 2021-12-07]
+	Updated devel/glib2-tools to 2.70.2 [adam 2021-12-07]
+	Updated devel/glib2 to 2.70.2 [adam 2021-12-07]
+	Updated devel/gdbus-codegen to 2.70.2 [adam 2021-12-07]
