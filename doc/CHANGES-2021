@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6010 2021/12/07 01:16:59 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.6011 2021/12/07 07:24:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9059,3 +9059,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added wm/leftwm version 0.2.10 [pin 2021-12-06]
 	Updated x11/xfce4-screenshooter to 1.9.9 [gutteridge 2021-12-07]
 	Updated misc/xfce4-weather-plugin to 0.11.0 [gutteridge 2021-12-07]
+	Updated x11/xscope to 1.4.2 [wiz 2021-12-07]
