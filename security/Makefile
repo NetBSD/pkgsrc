@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.840 2021/12/06 14:51:33 wiz Exp $
+# $NetBSD: Makefile,v 1.841 2021/12/07 18:05:37 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -462,6 +462,8 @@ SUBDIR+=	py-cryptography
 SUBDIR+=	py-cryptography_vectors
 SUBDIR+=	py-cryptopp
 SUBDIR+=	py-cybox
+SUBDIR+=	py-cyclonedx-bom
+SUBDIR+=	py-cyclonedx-python-lib
 SUBDIR+=	py-denyhosts
 SUBDIR+=	py-ecdsa
 SUBDIR+=	py-fido2
