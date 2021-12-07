@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/01/01 06:56:01 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/12/07 18:25:45 adam Exp $
 bin/vmhgfs-fuse
 bin/vmtoolsd
 bin/vmware-checkvm
@@ -38,8 +38,19 @@ share/examples/vmware-tools/statechange.subr
 share/examples/vmware-tools/suspend-vm-default
 share/open-vm-tools/messages/de/toolboxcmd.vmsg
 share/open-vm-tools/messages/de/vmtoolsd.vmsg
+share/open-vm-tools/messages/en/toolboxcmd.vmsg
+share/open-vm-tools/messages/en/vmtoolsd.vmsg
+share/open-vm-tools/messages/es/toolboxcmd.vmsg
+share/open-vm-tools/messages/es/vmtoolsd.vmsg
+share/open-vm-tools/messages/fr/toolboxcmd.vmsg
+share/open-vm-tools/messages/fr/vmtoolsd.vmsg
+share/open-vm-tools/messages/it/toolboxcmd.vmsg
+share/open-vm-tools/messages/it/vmtoolsd.vmsg
 share/open-vm-tools/messages/ja/toolboxcmd.vmsg
 share/open-vm-tools/messages/ja/vmtoolsd.vmsg
 share/open-vm-tools/messages/ko/toolboxcmd.vmsg
 share/open-vm-tools/messages/ko/vmtoolsd.vmsg
 share/open-vm-tools/messages/zh_CN/toolboxcmd.vmsg
+share/open-vm-tools/messages/zh_CN/vmtoolsd.vmsg
+share/open-vm-tools/messages/zh_TW/toolboxcmd.vmsg
+share/open-vm-tools/messages/zh_TW/vmtoolsd.vmsg
