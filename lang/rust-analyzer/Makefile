@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2021/11/28 14:07:31 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2021/12/07 19:50:34 wiz Exp $
 
-DISTNAME=	rust-analyzer-2021-11-22
+DISTNAME=	rust-analyzer-2021-12-06
 PKGNAME=	${DISTNAME:C/-2([0-9]*)-([0-9]*)-([0-9]*)/-0.0.2\1.\2.\3/}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rust-analyzer/}
 GITHUB_PROJECT=	rust-analyzer
-GITHUB_TAG=	2021-11-22
+GITHUB_TAG=	${DISTNAME:S/rust-analyzer-//}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/rust-analyzer/rust-analyzer/
