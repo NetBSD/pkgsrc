@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.59 2021/12/01 13:01:13 nia Exp $
+# $NetBSD: Makefile,v 1.60 2021/12/07 08:38:13 wiz Exp $
 
-DISTNAME=		libX11-1.7.2
+DISTNAME=		libX11-1.7.3
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
