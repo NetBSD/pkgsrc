@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_rpcChannel_rpcChannel.c,v 1.1 2016/12/23 04:11:03 ryoon Exp $
+$NetBSD: patch-lib_rpcChannel_rpcChannel.c,v 1.2 2021/12/07 18:25:46 adam Exp $
 
---- lib/rpcChannel/rpcChannel.c.orig	2016-09-29 10:07:22.000000000 +0000
+--- lib/rpcChannel/rpcChannel.c.orig	2021-08-31 09:03:11.000000000 +0000
 +++ lib/rpcChannel/rpcChannel.c
-@@ -272,7 +272,11 @@ RpcChannelXdrWrapper(RpcInData *data,
+@@ -308,7 +308,11 @@ RpcChannelXdrWrapper(RpcInData *data,
           goto exit;
        }
  
@@ -12,9 +12,9 @@ $NetBSD: patch-lib_rpcChannel_rpcChannel.c,v 1.1 2016/12/23 04:11:03 ryoon Exp $
        if (!xdrProc(&xdrs, copy.result, 0)) {
 +#endif
           ret = RPCIN_SETRETVALS(data, "XDR serialization failed.", FALSE);
-          DynXdr_Destroy(&xdrs, TRUE);
-          goto exit;
-@@ -330,7 +334,11 @@ RpcChannel_BuildXdrCommand(const char *c
+ 
+          /*
+@@ -378,7 +382,11 @@ RpcChannel_BuildXdrCommand(const char *c
        goto exit;
     }
  
