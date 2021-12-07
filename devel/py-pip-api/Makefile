@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2021/11/16 16:03:12 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2021/12/07 19:53:29 wiz Exp $
 
-DISTNAME=	pip-api-0.0.23
+DISTNAME=	pip-api-0.0.26
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip-api/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.org/project/pip-audit/
+HOMEPAGE=	https://pypi.org/project/pip-api/
 COMMENT=	Unofficial, importable pip API
 LICENSE=	apache-2.0
 
@@ -18,11 +18,11 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONED_DEPENDENCIES+=	pip
 
-# does not fully work, needs pip-api installed first
-# if this is done, as of 0.0.23:
-# 27 passed, 5 warnings, 15 errors
+# As of 0.0.26:
+# 33 passed, 8 warnings, 17 errors
+TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
