@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.41 2021/11/19 14:27:56 taca Exp $
+$NetBSD: distinfo,v 1.42 2021/12/08 23:55:19 tnn Exp $
 
 BLAKE2s (php-7.3.33.tar.xz) = 70274d12e2c97a29a17782f4ae630b50b804de3d5018fc2f3efcf7a6ea366628
 SHA512 (php-7.3.33.tar.xz) = b05edb3e87775c0b2d7bd5990e47751279076e6ef2356f59dc917f4a1447d95894f596cd8de711f03278650ff74ff9f2687ed96cec69d2d669a6af563a455e25
@@ -6,7 +6,8 @@ Size (php-7.3.33.tar.xz) = 12143820 bytes
 SHA1 (patch-configure) = 08b80528ba90c705398e8841c232382663479a3b
 SHA1 (patch-disable-filter-url) = 0a2c19c18f089448a8d842e99738b292ab9e5640
 SHA1 (patch-ext_gd_config.m4) = eaecfb31b18700dd642c067ed82748d4f6be2335
-SHA1 (patch-ext_intl_breakiterator_codepointiterator__internal.cpp) = c6702b071a1881ed35a1c1adc0e07ce53335e2e7
+SHA1 (patch-ext_intl_breakiterator_codepointiterator__internal.cpp) = b6faa82ae8effc838288aed8dd809b610ce51a91
+SHA1 (patch-ext_intl_breakiterator_codepointiterator__internal.h) = 031a7095b3b15aa88881e2f5251960f19eedc326
 SHA1 (patch-ext_intl_collator_collator__sort.c) = 7fdb751cabb24eb4097cfb5cf23ba217a9893530
 SHA1 (patch-ext_intl_dateformat_dateformat__attr.c) = 08a26ec534b67ed029426e4aa3bd26cb6761aead
 SHA1 (patch-ext_intl_normalizer_normalizer__normalize.c) = 10a215438db81c9f1f002f9409ebd56de6d65617
