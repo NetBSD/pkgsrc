@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2020/08/17 20:17:47 leot Exp $
+# $NetBSD: Makefile,v 1.7 2021/12/08 16:02:46 adam Exp $
 
 DISTNAME=	velox-0.0.3.20200119
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=niacat/}
 GITHUB_PROJECT=	velox

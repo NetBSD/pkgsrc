@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2020/04/30 18:52:33 wiedi Exp $
+# $NetBSD: Makefile,v 1.9 2021/12/08 16:06:34 adam Exp $
 #
 
 DISTNAME=	menu-cache-1.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 EXTRACT_SUFX=	.tar.xz

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2021/11/16 10:17:39 adam Exp $
+# $NetBSD: Makefile,v 1.19 2021/12/08 16:03:44 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/12-/}
+PKGREVISION=	1
 COMMENT=	Robust, next generation, object-relational DBMS
 
 DEPENDS+=	postgresql12-client>=${PKGVERSION_NOREV}:../../databases/postgresql12-client

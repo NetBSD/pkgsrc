@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2021/09/29 19:00:13 adam Exp $
+# $NetBSD: Makefile,v 1.35 2021/12/08 16:02:38 adam Exp $
 
 DISTNAME=	efreet-1.7.10
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	sysutils devel
 MASTER_SITES=	https://download.enlightenment.org/att/releases/
 EXTRACT_SUFX=	.tar.bz2

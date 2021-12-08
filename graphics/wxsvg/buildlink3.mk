@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.48 2020/09/19 14:11:30 schmonz Exp $
+# $NetBSD: buildlink3.mk,v 1.49 2021/12/08 16:02:14 adam Exp $
 
 BUILDLINK_TREE+=	wxsvg
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	wxsvg
 WXSVG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.wxsvg+=	wxsvg>=1.0beta5
-BUILDLINK_ABI_DEPENDS.wxsvg+=	wxsvg>=1.5.20nb3
+BUILDLINK_ABI_DEPENDS.wxsvg+=	wxsvg>=1.5.22nb1
 BUILDLINK_PKGSRCDIR.wxsvg?=	../../graphics/wxsvg
 
 .include "../../devel/pango/buildlink3.mk"

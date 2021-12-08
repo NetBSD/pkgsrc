@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/11/18 09:32:17 cirnatdan Exp $
+# $NetBSD: Makefile,v 1.6 2021/12/08 16:07:07 adam Exp $
 
 DISTNAME=	gdm-40.0
 PKGNAME=	lib${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
 GITHUB_PROJECT=	gdm

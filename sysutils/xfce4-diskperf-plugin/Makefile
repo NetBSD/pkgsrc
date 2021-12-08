@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2020/08/31 18:11:38 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2021/12/08 16:06:40 adam Exp $
 
-PKGREVISION= 4
+PKGREVISION= 5
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-diskperf-plugin-2.6.2

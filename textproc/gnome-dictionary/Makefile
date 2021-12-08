@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/05/02 10:24:52 nia Exp $
+# $NetBSD: Makefile,v 1.6 2021/12/08 16:06:44 adam Exp $
 
 DISTNAME=	gnome-dictionary-3.26.1
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
+PKGREVISION=	1
 CATEGORIES=	textproc gnome
 EXTRACT_SUFX=	.tar.xz
 

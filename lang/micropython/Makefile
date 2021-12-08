@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2020/03/08 16:42:28 bsiegert Exp $
+# $NetBSD: Makefile,v 1.9 2021/12/08 16:05:21 adam Exp $
 
 DISTNAME=	micropython-1.9.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang
 MASTER_SITES=	http://micropython.org/resources/source/
 EXTRACT_SUFX=	.tar.xz

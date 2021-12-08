@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2020/03/08 16:48:34 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2021/12/08 16:03:03 adam Exp $
 
 BUILDLINK_TREE+=	xfce4-garcon
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xfce4-garcon
 XFCE4_GARCON_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-garcon+=	xfce4-garcon>=0.4.0
-BUILDLINK_ABI_DEPENDS.xfce4-garcon+=	xfce4-garcon>=0.6.4nb1
+BUILDLINK_ABI_DEPENDS.xfce4-garcon+=	xfce4-garcon>=4.16.1
 BUILDLINK_PKGSRCDIR.xfce4-garcon?=	../../x11/xfce4-garcon
 
 .include "../../x11/libxfce4ui/buildlink3.mk"

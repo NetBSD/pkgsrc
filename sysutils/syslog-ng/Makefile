@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2021/09/16 12:02:12 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2021/12/08 16:06:37 adam Exp $
 
+PKGREVISION= 1
 .include "../../sysutils/syslog-ng/Makefile.common"
 
 CONFIGURE_ARGS+=	--enable-stomp
