@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2021/11/05 20:02:50 bsiegert Exp $
+# $NetBSD: Makefile,v 1.57 2021/12/08 01:51:47 tnn Exp $
 
-DISTNAME=	grafana-8.1.3
-PKGREVISION=	3
+DISTNAME=	grafana-8.3.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -20,6 +19,8 @@ DISTFILES+=			${FE_DISTNAME}
 SITES.${FE_DISTNAME}=		https://dl.grafana.com/oss/release/
 EXTRACT_DIR.${FE_DISTNAME}=	${WRKDIR}/linux
 
+BUILD_DEPENDS+=			go-wire-[0-9]*:../../devel/go-wire
+
 CHECK_PORTABILITY_SKIP=		packaging/* devenv/*
 CHECK_PORTABILITY_SKIP+=	packages/grafana-toolkit/docker/*
 
@@ -33,7 +34,7 @@ LOGDIR=		${VARBASE}/log/grafana
 SUBST_CLASSES+=		fix-cfg
 SUBST_STAGE.fix-cfg=	pre-configure
 SUBST_MESSAGE.fix-cfg=	Adding pkgsrc paths in sample config
-SUBST_FILES.fix-cfg=	conf/sample.ini pkg/cmd/grafana-server/main.go
+SUBST_FILES.fix-cfg=	conf/sample.ini pkg/cmd/grafana-server/commands/cli.go
 SUBST_SED.fix-cfg=	-e 's,^;\(data = \).*,\1${DATADIR},g'
 SUBST_SED.fix-cfg+=	-e 's,^;\(logs = \).*,\1${LOGDIR},g'
 SUBST_SED.fix-cfg+=	-e 's,^;\(plugins = \).*,\1${PLUGINDIR},g'
@@ -43,7 +44,7 @@ SUBST_VARS.fix-cfg=	DATADIR PKG_SYSCONFDIR PREFIX
 SUBST_CLASSES+=		build
 SUBST_STAGE.build=	pre-build
 SUBST_MESSAGE.build=	Fixing go path in build.go
-SUBST_FILES.build=	build.go
+SUBST_FILES.build=	pkg/build/cmd.go
 SUBST_VARS.build=	GO
 
 BUILD_DEFS+=		GRAFANA_USER GRAFANA_GROUP VARBASE
@@ -73,7 +74,12 @@ INSTALLATION_DIRS+=	share/grafana/public
 CONF_FILES+=	${PREFIX}/share/grafana/conf/sample.ini \
 		${PKG_SYSCONFDIR}/grafana.conf
 
+BUILD_MAKE_FLAGS+=	GO=${GO}
+BUILD_MAKE_FLAGS+=	WIRE=${PREFIX}/bin/wire
+
+# These comands come from Makefile, build-go target.
 do-build:
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/wire gen -tags oss ./pkg/server ./pkg/cmd/grafana-cli/runner
 	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${GO} run build.go build
 
 do-install:
