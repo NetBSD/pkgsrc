@@ -1,4 +1,4 @@
-$NetBSD: patch-src_aarch64_ffi.c,v 1.2 2021/12/08 08:20:17 adam Exp $
+$NetBSD: patch-src_aarch64_ffi.c,v 1.3 2021/12/08 22:28:37 tnn Exp $
 
 For closures, aarch64 needs explicit invalidation of the code segments
 i-cache after data is written through the data mapping.
@@ -12,7 +12,7 @@ right now so for now skip doing the cache flush.
  
    /* Also flush the cache for code mapping.  */
 -#ifdef _WIN32
-+#ifdef _WIN32 || defined(__NetBSD__)
++#if defined(_WIN32) || defined(__NetBSD__)
 +  // ffi_data_to_code_pointer is broken on NetBSD
    // Not using dlmalloc.c for Windows ARM64 builds
    // so calling ffi_data_to_code_pointer() isn't necessary
