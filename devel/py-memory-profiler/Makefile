@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2021/06/29 08:41:59 nia Exp $
+# $NetBSD: Makefile,v 1.6 2021/12/08 08:09:21 adam Exp $
 
-DISTNAME=	memory_profiler-0.58.0
+DISTNAME=	memory_profiler-0.59.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/memory_profiler/}
@@ -15,8 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-matplotlib
-PYTHON_VERSIONS_INCOMPATIBLE+=	36	# py-numpy
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36	# py-matplotlib
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
