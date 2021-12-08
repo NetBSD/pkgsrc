@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2020/08/17 20:17:48 leot Exp $
+# $NetBSD: Makefile,v 1.27 2021/12/08 16:02:48 adam Exp $
 #
 
 DISTNAME=	Keyboard-0.4.0
 PKGNAME=	deforaos-keyboard-0.4.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Keyboard/
 

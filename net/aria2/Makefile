@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2021/09/29 14:54:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.91 2021/12/08 16:05:54 adam Exp $
 
 DISTNAME=	aria2-1.36.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aria2/}
 GITHUB_RELEASE=	release-${PKGVERSION_NOREV}

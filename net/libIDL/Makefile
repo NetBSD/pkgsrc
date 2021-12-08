@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2020/03/08 16:48:03 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2021/12/08 16:02:28 adam Exp $
 
 DISTNAME=	libIDL-0.8.14
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libIDL/0.8/}
 

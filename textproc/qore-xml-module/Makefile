@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2021/04/21 11:42:48 adam Exp $
+# $NetBSD: Makefile,v 1.13 2021/12/08 16:06:46 adam Exp $
 
 DISTNAME=	qore-xml-module-1.4.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qorelanguage/}
 EXTRACT_SUFX=	.tar.bz2

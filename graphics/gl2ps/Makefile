@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2021/05/05 13:00:56 thor Exp $
+# $NetBSD: Makefile,v 1.3 2021/12/08 16:02:09 adam Exp $
 
 DISTNAME=	gl2ps-1.4.2
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://geuz.org/gl2ps/src/
 EXTRACT_SUFX=	.tgz

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2021/11/01 21:47:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2021/12/08 16:02:29 adam Exp $
 
 BUILDLINK_TREE+=	libnpupnp
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libnpupnp
 LIBNPUPNP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libnpupnp+=	libnpupnp>=4.1.5
+BUILDLINK_ABI_DEPENDS.libnpupnp?=		libnpupnp>=4.1.5
 BUILDLINK_PKGSRCDIR.libnpupnp?=		../../net/libnpupnp
 
 .include "../../textproc/expat/buildlink3.mk"

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2020/03/08 16:48:51 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2021/12/08 16:03:23 adam Exp $
 #
 
 DISTNAME=		azara-2.7-src
 PKGNAME=		azara-2.7
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		biology
 MASTER_SITES=		http://www.ccpn.ac.uk/download/azara/
 

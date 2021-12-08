@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2021/08/14 07:39:42 nia Exp $
+# $NetBSD: Makefile,v 1.23 2021/12/08 16:05:08 adam Exp $
 #
 
 DISTNAME=	zathura-cb-0.1.9
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://pwmt.org/projects/zathura-cb/download/
 EXTRACT_SUFX=	.tar.xz

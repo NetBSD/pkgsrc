@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/03/08 16:48:00 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2021/12/08 16:02:25 adam Exp $
 
 DISTNAME=	libmediaart-1.9.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libmediaart/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

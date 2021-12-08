@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2021/09/12 14:11:43 tsutsui Exp $
+# $NetBSD: Makefile,v 1.9 2021/12/08 16:03:02 adam Exp $
 #
 
 DISTNAME=		gtk2-3.4.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		x11
 
 MAINTAINER=		tsutsui@NetBSD.org

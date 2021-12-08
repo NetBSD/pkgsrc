@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2020/03/08 16:48:46 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2021/12/08 16:03:15 adam Exp $
 #
 
 DISTNAME=	libsmf-1.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libsmf/}
 
