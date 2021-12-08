@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2021/03/22 07:05:31 adam Exp $
+# $NetBSD: Makefile,v 1.77 2021/12/08 16:01:53 adam Exp $
 
 DISTNAME=	gobject-introspection-1.68.0
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -42,6 +43,8 @@ SUBST_FILES.libdirs=	giscanner/ccompiler.py
 SUBST_VARS.libdirs=	_OPSYS_LIB_DIRS
 
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/girepository
+# For Darwin
+MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/girepository
 
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.58.0
 .include "../../devel/glib2/buildlink3.mk"

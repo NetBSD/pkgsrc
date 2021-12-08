@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2020/03/08 16:47:54 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2021/12/08 16:02:19 adam Exp $
 #
 
 DISTNAME=	libsylph-1.1.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	mail
 MASTER_SITES=	http://sylpheed.sraoss.jp/sylpheed/libsylph/
 EXTRACT_SUFX=	.tar.bz2

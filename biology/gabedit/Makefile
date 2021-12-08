@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2020/08/17 20:18:13 leot Exp $
+# $NetBSD: Makefile,v 1.18 2021/12/08 16:03:23 adam Exp $
 
 PKGNAME=	gabedit-2.4.8
-PKGREVISION=	11
+PKGREVISION=	12
 DISTNAME=	GabeditSrc248
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gabedit/}

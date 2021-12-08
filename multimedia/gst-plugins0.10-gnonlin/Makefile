@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2021/04/21 11:42:18 adam Exp $
+# $NetBSD: Makefile,v 1.18 2021/12/08 16:05:47 adam Exp $
 #
 
 DISTNAME=	gnonlin-0.10.17
 PKGNAME=	gst-gnonlin-0.10.17
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gnonlin/
 EXTRACT_SUFX=	.tar.bz2

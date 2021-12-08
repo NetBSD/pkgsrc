@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2020/10/18 09:47:41 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2021/12/08 16:03:03 adam Exp $
 
 BUILDLINK_TREE+=	vte3
 
@@ -9,7 +9,7 @@ VTE3_BUILDLINK3_MK:=
 GCC_REQD+=		7
 
 BUILDLINK_API_DEPENDS.vte3+=	vte3>=0.52.2
-BUILDLINK_ABI_DEPENDS.vte3+=	vte3>=0.60.3nb2
+BUILDLINK_ABI_DEPENDS.vte3+=	vte3>=0.60.3nb12
 BUILDLINK_PKGSRCDIR.vte3?=	../../x11/vte3
 
 .include "../../devel/glib2/buildlink3.mk"

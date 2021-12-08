@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2021/11/15 22:54:27 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2021/12/08 16:06:15 adam Exp $
 
 DISTNAME=	scribus-1.5.6pre20200611
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=scribusproject/}
 GITHUB_PROJECT=	scribus

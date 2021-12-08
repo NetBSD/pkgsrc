@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2021/04/21 11:41:06 adam Exp $
+# $NetBSD: Makefile,v 1.32 2021/12/08 16:01:45 adam Exp $
 
 DISTNAME=	libtelepathy-0.3.3
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/libtelepathy/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2020/03/08 16:47:36 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2021/12/08 16:01:56 adam Exp $
 
 BUILDLINK_TREE+=	libdbusmenu-glib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libdbusmenu-glib
 LIBDBUSMENU_GLIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libdbusmenu-glib+=	libdbusmenu-glib>=12.10.2
-BUILDLINK_ABI_DEPENDS.libdbusmenu-glib?=		libdbusmenu-glib>=12.10.2nb8
+BUILDLINK_ABI_DEPENDS.libdbusmenu-glib?=		libdbusmenu-glib>=12.10.2nb13
 BUILDLINK_PKGSRCDIR.libdbusmenu-glib?=		../../devel/libdbusmenu-glib
 
 .include "../../devel/glib2/buildlink3.mk"

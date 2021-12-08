@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/05/03 19:01:07 pho Exp $
+# $NetBSD: Makefile,v 1.6 2021/12/08 16:05:21 adam Exp $
 
 DISTNAME=	idris-1.3.3
 PKGNAME=	${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 
 MAINTAINER=	pho@cielonegro.org

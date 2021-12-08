@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2020/08/17 20:19:24 leot Exp $
+# $NetBSD: Makefile,v 1.9 2021/12/08 16:05:30 adam Exp $
 
 DISTNAME=	trojita-0.4.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=trojita/}
 EXTRACT_SUFX=	.tar.bz2

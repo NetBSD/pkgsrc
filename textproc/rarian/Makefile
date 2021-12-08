@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2021/04/21 11:42:48 adam Exp $
+# $NetBSD: Makefile,v 1.18 2021/12/08 16:06:46 adam Exp $
 #
 
 DISTNAME=	rarian-0.8.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	textproc
 MASTER_SITES=	https://rarian.freedesktop.org/Releases/
 MASTER_SITES+=	${MASTER_SITE_GNOME:=sources/rarian/0.8/}

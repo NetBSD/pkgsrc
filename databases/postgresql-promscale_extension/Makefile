@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2021/08/25 11:38:35 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2021/12/08 16:03:42 adam Exp $
 
 DISTNAME=	promscale_extension-0.2.0
-PKGREVISION=	2
+PKGREVISION=	3
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=timescale/}

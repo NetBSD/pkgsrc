@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2021/11/16 09:24:10 nia Exp $
+# $NetBSD: Makefile,v 1.5 2021/12/08 16:02:10 adam Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-gdk_pixbuf/}
+PKGREVISION=	1
 CATEGORIES=	graphics gnome
 
 COMMENT=	Open source multimedia framework - GDK Pixbuf plugin

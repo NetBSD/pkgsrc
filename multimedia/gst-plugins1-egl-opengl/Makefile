@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2021/11/18 16:54:18 nia Exp $
+# $NetBSD: Makefile,v 1.6 2021/12/08 16:05:48 adam Exp $
 
 PKGNAME=		${DISTNAME:S/plugins/plugins1/:S/-bad/-egl-opengl/}
+PKGREVISION=		1
 CATEGORIES=		multimedia gnomed
 
 COMMENT=	Open source multimedia framework - AV1 plugin

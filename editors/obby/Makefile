@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2021/09/29 19:00:07 adam Exp $
+# $NetBSD: Makefile,v 1.20 2021/12/08 16:02:04 adam Exp $
 #
 
 DISTNAME=	obby-0.4.8
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	editors
 MASTER_SITES=	http://releases.0x539.de/obby/
 

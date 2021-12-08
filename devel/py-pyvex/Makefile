@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2020/09/28 22:56:38 khorben Exp $
+# $NetBSD: Makefile,v 1.8 2021/12/08 16:04:05 adam Exp $
 
+PKGREVISION= 1
 .include "../../devel/py-angr/version.mk"
 
 DISTNAME=	pyvex-${ANGR_VERSION}

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2020/03/08 16:51:53 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2021/12/08 16:07:17 adam Exp $
 #
 
 DISTNAME=	xicc-0.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 MASTER_SITES=	http://www.burtonini.com/computing/
 

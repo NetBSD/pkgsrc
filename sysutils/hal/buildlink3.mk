@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2020/03/08 16:48:11 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2021/12/08 16:02:38 adam Exp $
 
 BUILDLINK_TREE+=	hal
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hal
 HAL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hal+=	hal>=0.5.11
-BUILDLINK_ABI_DEPENDS.hal+=	hal>=0.5.14nb23
+BUILDLINK_ABI_DEPENDS.hal+=	hal>=0.5.14nb27
 BUILDLINK_PKGSRCDIR.hal?=	../../sysutils/hal
 
 .include "../../sysutils/dbus/buildlink3.mk"
