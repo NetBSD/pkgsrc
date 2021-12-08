@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2021/10/26 12:22:15 adam Exp $
+# $NetBSD: Makefile,v 1.57 2021/12/08 16:23:48 adam Exp $
 
-DISTNAME=	pylint-2.11.1
+DISTNAME=	pylint-2.12.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylint/}
@@ -10,11 +10,11 @@ HOMEPAGE=	https://www.pylint.org/
 COMMENT=	Python source code analyzer
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-astroid>=2.8.0:../../devel/py-astroid
+DEPENDS+=	${PYPKGPREFIX}-astroid>=2.9.0:../../devel/py-astroid
 DEPENDS+=	${PYPKGPREFIX}-isort>=4.2.5:../../devel/py-isort
 DEPENDS+=	${PYPKGPREFIX}-mccabe>=0.6:../../devel/py-mccabe
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2.2.0:../../misc/py-platformdirs
-DEPENDS+=	${PYPKGPREFIX}-toml>=0.7.1:../../textproc/py-toml
+DEPENDS+=	${PYPKGPREFIX}-toml>=0.9.2:../../textproc/py-toml
 
 USE_LANGUAGES=	# none
 
@@ -22,7 +22,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10.0:../../devel/py-typing-extensions
 .endif
 
 post-install:
