@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2021/10/26 12:22:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2021/12/08 16:23:48 adam Exp $
 bin/epylint-${PYVERSSUFFIX}
 bin/pylint-${PYVERSSUFFIX}
 bin/pyreverse-${PYVERSSUFFIX}
@@ -66,9 +66,9 @@ ${PYSITELIB}/pylint/checkers/raw_metrics.pyo
 ${PYSITELIB}/pylint/checkers/refactoring/__init__.py
 ${PYSITELIB}/pylint/checkers/refactoring/__init__.pyc
 ${PYSITELIB}/pylint/checkers/refactoring/__init__.pyo
-${PYSITELIB}/pylint/checkers/refactoring/len_checker.py
-${PYSITELIB}/pylint/checkers/refactoring/len_checker.pyc
-${PYSITELIB}/pylint/checkers/refactoring/len_checker.pyo
+${PYSITELIB}/pylint/checkers/refactoring/implicit_booleaness_checker.py
+${PYSITELIB}/pylint/checkers/refactoring/implicit_booleaness_checker.pyc
+${PYSITELIB}/pylint/checkers/refactoring/implicit_booleaness_checker.pyo
 ${PYSITELIB}/pylint/checkers/refactoring/not_checker.py
 ${PYSITELIB}/pylint/checkers/refactoring/not_checker.pyc
 ${PYSITELIB}/pylint/checkers/refactoring/not_checker.pyo
@@ -90,9 +90,15 @@ ${PYSITELIB}/pylint/checkers/stdlib.pyo
 ${PYSITELIB}/pylint/checkers/strings.py
 ${PYSITELIB}/pylint/checkers/strings.pyc
 ${PYSITELIB}/pylint/checkers/strings.pyo
+${PYSITELIB}/pylint/checkers/threading_checker.py
+${PYSITELIB}/pylint/checkers/threading_checker.pyc
+${PYSITELIB}/pylint/checkers/threading_checker.pyo
 ${PYSITELIB}/pylint/checkers/typecheck.py
 ${PYSITELIB}/pylint/checkers/typecheck.pyc
 ${PYSITELIB}/pylint/checkers/typecheck.pyo
+${PYSITELIB}/pylint/checkers/unsupported_version.py
+${PYSITELIB}/pylint/checkers/unsupported_version.pyc
+${PYSITELIB}/pylint/checkers/unsupported_version.pyo
 ${PYSITELIB}/pylint/checkers/utils.py
 ${PYSITELIB}/pylint/checkers/utils.pyc
 ${PYSITELIB}/pylint/checkers/utils.pyo
@@ -156,6 +162,9 @@ ${PYSITELIB}/pylint/extensions/code_style.pyo
 ${PYSITELIB}/pylint/extensions/comparetozero.py
 ${PYSITELIB}/pylint/extensions/comparetozero.pyc
 ${PYSITELIB}/pylint/extensions/comparetozero.pyo
+${PYSITELIB}/pylint/extensions/comparison_placement.py
+${PYSITELIB}/pylint/extensions/comparison_placement.pyc
+${PYSITELIB}/pylint/extensions/comparison_placement.pyo
 ${PYSITELIB}/pylint/extensions/confusing_elif.py
 ${PYSITELIB}/pylint/extensions/confusing_elif.pyc
 ${PYSITELIB}/pylint/extensions/confusing_elif.pyo
@@ -174,6 +183,9 @@ ${PYSITELIB}/pylint/extensions/empty_comment.pyo
 ${PYSITELIB}/pylint/extensions/emptystring.py
 ${PYSITELIB}/pylint/extensions/emptystring.pyc
 ${PYSITELIB}/pylint/extensions/emptystring.pyo
+${PYSITELIB}/pylint/extensions/for_any_all.py
+${PYSITELIB}/pylint/extensions/for_any_all.pyc
+${PYSITELIB}/pylint/extensions/for_any_all.pyo
 ${PYSITELIB}/pylint/extensions/mccabe.py
 ${PYSITELIB}/pylint/extensions/mccabe.pyc
 ${PYSITELIB}/pylint/extensions/mccabe.pyo
@@ -231,9 +243,6 @@ ${PYSITELIB}/pylint/message/message_definition.pyo
 ${PYSITELIB}/pylint/message/message_definition_store.py
 ${PYSITELIB}/pylint/message/message_definition_store.pyc
 ${PYSITELIB}/pylint/message/message_definition_store.pyo
-${PYSITELIB}/pylint/message/message_handler_mix_in.py
-${PYSITELIB}/pylint/message/message_handler_mix_in.pyc
-${PYSITELIB}/pylint/message/message_handler_mix_in.pyo
 ${PYSITELIB}/pylint/message/message_id_store.py
 ${PYSITELIB}/pylint/message/message_id_store.pyc
 ${PYSITELIB}/pylint/message/message_id_store.pyo
@@ -312,6 +321,9 @@ ${PYSITELIB}/pylint/testutils/__init__.pyo
 ${PYSITELIB}/pylint/testutils/checker_test_case.py
 ${PYSITELIB}/pylint/testutils/checker_test_case.pyc
 ${PYSITELIB}/pylint/testutils/checker_test_case.pyo
+${PYSITELIB}/pylint/testutils/configuration_test.py
+${PYSITELIB}/pylint/testutils/configuration_test.pyc
+${PYSITELIB}/pylint/testutils/configuration_test.pyo
 ${PYSITELIB}/pylint/testutils/constants.py
 ${PYSITELIB}/pylint/testutils/constants.pyc
 ${PYSITELIB}/pylint/testutils/constants.pyo
@@ -333,6 +345,9 @@ ${PYSITELIB}/pylint/testutils/lint_module_test.pyo
 ${PYSITELIB}/pylint/testutils/output_line.py
 ${PYSITELIB}/pylint/testutils/output_line.pyc
 ${PYSITELIB}/pylint/testutils/output_line.pyo
+${PYSITELIB}/pylint/testutils/primer.py
+${PYSITELIB}/pylint/testutils/primer.pyc
+${PYSITELIB}/pylint/testutils/primer.pyo
 ${PYSITELIB}/pylint/testutils/pyreverse.py
 ${PYSITELIB}/pylint/testutils/pyreverse.pyc
 ${PYSITELIB}/pylint/testutils/pyreverse.pyo
@@ -354,9 +369,15 @@ ${PYSITELIB}/pylint/utils/__init__.pyo
 ${PYSITELIB}/pylint/utils/ast_walker.py
 ${PYSITELIB}/pylint/utils/ast_walker.pyc
 ${PYSITELIB}/pylint/utils/ast_walker.pyo
+${PYSITELIB}/pylint/utils/docs.py
+${PYSITELIB}/pylint/utils/docs.pyc
+${PYSITELIB}/pylint/utils/docs.pyo
 ${PYSITELIB}/pylint/utils/file_state.py
 ${PYSITELIB}/pylint/utils/file_state.pyc
 ${PYSITELIB}/pylint/utils/file_state.pyo
+${PYSITELIB}/pylint/utils/linterstats.py
+${PYSITELIB}/pylint/utils/linterstats.pyc
+${PYSITELIB}/pylint/utils/linterstats.pyo
 ${PYSITELIB}/pylint/utils/pragma_parser.py
 ${PYSITELIB}/pylint/utils/pragma_parser.pyc
 ${PYSITELIB}/pylint/utils/pragma_parser.pyo
