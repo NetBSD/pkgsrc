@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2021/04/21 11:40:40 adam Exp $
+# $NetBSD: Makefile,v 1.20 2021/12/08 16:02:41 adam Exp $
 
 DISTNAME=	gdome2-0.8.1
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	devel
 MASTER_SITES=	http://gdome2.cs.unibo.it/tarball/
 

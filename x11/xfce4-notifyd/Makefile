@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.31 2021/05/02 11:06:16 nia Exp $
+# $NetBSD: Makefile,v 1.32 2021/12/08 16:07:16 adam Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 VERSION=	0.6.2
 DISTNAME=	xfce4-notifyd-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/apps/xfce4-notifyd/${VERSION:R}/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2020/03/08 16:49:13 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2021/12/08 16:03:58 adam Exp $
 
 DISTNAME=	guile-www-2.39
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel www
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/guile-www/
 EXTRACT_SUFX=	.tar.xz

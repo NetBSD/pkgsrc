@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2021/09/29 19:00:04 adam Exp $
+# $NetBSD: Makefile,v 1.36 2021/12/08 16:03:36 adam Exp $
 
 DISTNAME=	libetonyek-0.1.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	converters
 MASTER_SITES=	http://dev-www.libreoffice.org/src/
 EXTRACT_SUFX=	.tar.xz

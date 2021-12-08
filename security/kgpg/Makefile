@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2021/09/29 19:01:16 adam Exp $
+# $NetBSD: Makefile,v 1.65 2021/12/08 16:06:18 adam Exp $
 
 DISTNAME=	kgpg-16.08.0
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	security
 COMMENT=	KDE encryption tool
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.08.0/src/}

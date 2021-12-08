@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2021/07/21 14:40:31 taca Exp $
+# $NetBSD: Makefile,v 1.77 2021/12/08 16:06:49 adam Exp $
 
 DISTNAME=	awesome-4.3
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	wm lua
 EXTRACT_SUFX=	.tar.xz
 MASTER_SITES=	${MASTER_SITE_GITHUB:=awesomeWM/}

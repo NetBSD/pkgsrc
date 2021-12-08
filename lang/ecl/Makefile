@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2021/07/21 08:46:10 yhardy Exp $
+# $NetBSD: Makefile,v 1.29 2021/12/08 16:05:20 adam Exp $
 
 DISTNAME=		ecl-21.2.1
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		https://common-lisp.net/project/ecl/static/files/release/
 EXTRACT_SUFX=		.tgz

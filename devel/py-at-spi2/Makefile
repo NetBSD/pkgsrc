@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2021/08/18 09:53:10 prlw1 Exp $
+# $NetBSD: Makefile,v 1.30 2021/12/08 16:04:05 adam Exp $
 
 DISTNAME=	pyatspi-2.38.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyatspi/at-spi2/}
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pyatspi/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

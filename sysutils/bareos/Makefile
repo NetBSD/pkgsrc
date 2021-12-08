@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2021/08/11 10:24:05 kardel Exp $
+# $NetBSD: Makefile,v 1.10 2021/12/08 16:06:26 adam Exp $
 
 CONFLICTS=		bareos-clientonly-[0-9]* bacula-clientonly-[0-9]* bacula-[0-9]*
 
 COMMENT=		Backup Archiving REcovery Open Sourced
+PKGREVISION=		1
 
 RCD_SCRIPTS=		bareos bareos-dir bareos-sd bareos-fd
 

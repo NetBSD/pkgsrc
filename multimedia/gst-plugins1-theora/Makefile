@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/11/15 22:01:21 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2021/12/08 16:05:48 adam Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-base/-theora/}
+PKGREVISION=	1
 CATEGORIES=	multimedia gnome
 
 COMMENT=	Open source multimedia framework - Theora video plugin

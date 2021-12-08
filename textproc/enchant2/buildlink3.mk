@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2020/10/26 17:19:29 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2021/12/08 16:02:41 adam Exp $
 
 BUILDLINK_TREE+=	enchant2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	enchant2
 ENCHANT2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.enchant2+=	enchant2>=2
-BUILDLINK_ABI_DEPENDS.enchant2+=	enchant2>=2.2.8nb1
+BUILDLINK_ABI_DEPENDS.enchant2+=	enchant2>=2.3.2
 BUILDLINK_PKGSRCDIR.enchant2?=		../../textproc/enchant2
 
 GCC_REQD+=	4.8

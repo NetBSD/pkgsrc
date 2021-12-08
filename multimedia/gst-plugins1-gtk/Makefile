@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2021/11/16 08:45:14 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2021/12/08 16:02:23 adam Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-gtk/}
+PKGREVISION=	1
 CATEGORIES=	multimedia x11 gnome
 
 COMMENT=	Open source multimedia framework - GTK plugin

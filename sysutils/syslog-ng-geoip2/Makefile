@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2021/09/16 09:23:25 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2021/12/08 16:06:38 adam Exp $
 
 SYSLOG_MOD=		geoip2
 SYSLOG_MOD_TARGET=	geoip2-plugin
 COMMENT=		Syslog-ng GeoIP module
+PKGREVISION=		1
 
 .include "../../sysutils/syslog-ng/module.mk"
 

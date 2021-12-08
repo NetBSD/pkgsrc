@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.128 2021/10/09 15:35:05 nia Exp $
+# $NetBSD: Makefile,v 1.129 2021/12/08 16:02:06 adam Exp $
 
 DISTNAME=	simgear-2020.3.11
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flightgear/release-${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -29,12 +29,16 @@ LDFLAGS.SunOS+=		-lsocket -lnsl
 pre-configure:
 	cd ${WRKSRC} && ${MKDIR} sgbuild
 
+.include "../../mk/bsd.prefs.mk"
+
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.if ${OPSYS} != "Darwin"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
+.endif
 .include "../../graphics/osg/buildlink3.mk"
 .include "../../net/udns/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"

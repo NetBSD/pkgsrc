@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2021/09/22 12:57:49 nia Exp $
+# $NetBSD: Makefile,v 1.9 2021/12/08 16:04:17 adam Exp $
 
 DISTNAME=	melonDS-0.8.3
 PKGNAME=	${DISTNAME:S/DS/ds/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Arisotura/}
 

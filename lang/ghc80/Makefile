@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2021/09/27 14:30:48 nia Exp $
+# $NetBSD: Makefile,v 1.15 2021/12/08 16:02:15 adam Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
 DISTNAME=	ghc-8.0.2-src
 PKGNAME=	${DISTNAME:S/-src$//}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	lang
 MASTER_SITES=	https://downloads.haskell.org/~ghc/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz

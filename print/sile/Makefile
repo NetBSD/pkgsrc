@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2021/05/24 19:53:48 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2021/12/08 16:06:15 adam Exp $
 
 DISTNAME=	sile-0.10.15
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sile-typesetter/}
 GITHUB_PROJECT=	sile

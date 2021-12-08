@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2020/03/08 16:47:31 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2021/12/08 16:01:50 adam Exp $
 
 BUILDLINK_TREE+=	at-spi2-core
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	at-spi2-core
 AT_SPI2_CORE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.at-spi2-core+=	at-spi2-core>=2.3.2
-BUILDLINK_ABI_DEPENDS.at-spi2-core+=	at-spi2-core>=2.35.1nb1
+BUILDLINK_ABI_DEPENDS.at-spi2-core+=	at-spi2-core>=2.40.3
 BUILDLINK_PKGSRCDIR.at-spi2-core?=	../../devel/at-spi2-core
 
 .include "../../devel/glib2/buildlink3.mk"

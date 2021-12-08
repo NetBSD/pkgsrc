@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2021/05/24 19:53:40 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2021/12/08 16:06:10 adam Exp $
 
 PKGNAME=	gridscheduler-2011.11.1
-PKGREVISION=	10
+PKGREVISION=	11
 DISTNAME=	GE2011.11p1
 CATEGORIES=	parallel sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gridscheduler/}

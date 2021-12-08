@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2021/11/11 12:02:50 kim Exp $
+# $NetBSD: Makefile,v 1.17 2021/12/08 16:06:27 adam Exp $
 
 COLLECTD_PACKAGE=	write_prometheus
 
 COMMENT=		Statistics collection daemon - write_prometheus plugin
-PKGREVISION=		4
+PKGREVISION=		5
 
 .include "../../devel/protobuf-c/buildlink3.mk"
 COLLECTD_LIB.protobuf-c=${BUILDLINK_PREFIX.protobuf-c}

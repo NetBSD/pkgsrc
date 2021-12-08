@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2021/11/20 20:05:36 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2021/12/08 16:06:11 adam Exp $
 
 DISTNAME=	pocl-1.8
+PKGREVISION=	1
 CATEGORIES=	parallel
 MASTER_SITES=	http://portablecl.org/downloads/
 

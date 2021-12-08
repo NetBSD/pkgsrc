@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2021/11/23 20:55:44 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2021/12/08 16:02:30 adam Exp $
 
 DISTNAME=	opencl-clang-13.0.0
+PKGREVISION=	1
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=intel/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

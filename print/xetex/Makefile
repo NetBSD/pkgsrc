@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.113 2021/06/06 01:17:20 markd Exp $
+# $NetBSD: Makefile,v 1.114 2021/12/08 16:06:15 adam Exp $
 
+PKGREVISION= 1
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	xetex-0.999993

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2021/05/02 11:06:14 nia Exp $
+# $NetBSD: Makefile,v 1.8 2021/12/08 16:02:36 adam Exp $
 
 DISTNAME=	accountsservice-0.6.42
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.freedesktop.org/software/accountsservice/
 EXTRACT_SUFX=	.tar.xz

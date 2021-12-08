@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2020/07/07 14:58:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2021/12/08 16:05:23 adam Exp $
 #
 
 DISTNAME=	sablevm-1.13
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	lang
 MASTER_SITES=	http://sablevm.org/download/release/1.13/
 

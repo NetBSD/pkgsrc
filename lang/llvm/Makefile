@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2021/07/19 16:18:48 tnn Exp $
+# $NetBSD: Makefile,v 1.67 2021/12/08 16:05:21 adam Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -21,6 +21,7 @@
 # Always update all */buildlink3.mk to require the latest stable release
 # version in BUILDLINK_API_DEPENDS, as there is no backwards compatibility
 
+PKGREVISION= 1
 .include "version.mk"
 
 DISTNAME=	llvm-${LLVM_VERSION}.src

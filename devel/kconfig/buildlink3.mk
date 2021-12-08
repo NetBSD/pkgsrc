@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2021/06/16 10:33:51 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2021/12/08 16:01:53 adam Exp $
 
 BUILDLINK_TREE+=	kconfig
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kconfig
 KCONFIG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kconfig+=	kconfig>=5.18.0
-BUILDLINK_ABI_DEPENDS.kconfig?=	kconfig>=5.80.0nb1
+BUILDLINK_ABI_DEPENDS.kconfig?=	kconfig>=5.80.0nb3
 BUILDLINK_PKGSRCDIR.kconfig?=	../../devel/kconfig
 
 BUILDLINK_FILES.kconfig+=	libexec/kf5/*

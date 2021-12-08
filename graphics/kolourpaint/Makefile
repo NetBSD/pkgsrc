@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2021/11/15 22:54:18 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2021/12/08 16:04:59 adam Exp $
 
 DISTNAME=	kolourpaint-${KAPPSVER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://kde.org/applications/graphics/kolourpaint/

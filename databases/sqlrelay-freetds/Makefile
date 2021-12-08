@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2021/09/29 19:00:29 adam Exp $
+# $NetBSD: Makefile,v 1.34 2021/12/08 16:03:50 adam Exp $
 
 PKGNAME=	${DISTNAME:S/sqlrelay/sqlrelay-freetds/}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	FreeTDS support for SQL Relay
 
 .include "../../databases/sqlrelay/Makefile.common"

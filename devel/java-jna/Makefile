@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2021/02/02 01:18:24 gutteridge Exp $
+# $NetBSD: Makefile,v 1.9 2021/12/08 16:03:58 adam Exp $
 
 DISTNAME=	jna-5.2.0
 PKGNAME=	java-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_GITHUB:=java-native-access/}
 GITHUB_PROJECT=	jna

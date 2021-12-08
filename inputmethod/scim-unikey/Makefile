@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2020/08/17 20:19:19 leot Exp $
+# $NetBSD: Makefile,v 1.39 2021/12/08 16:05:19 adam Exp $
 #
 
 DISTNAME=	scim-unikey-0.3.1
-PKGREVISION=	33
+PKGREVISION=	34
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://scim-unikey.googlecode.com/files/
 

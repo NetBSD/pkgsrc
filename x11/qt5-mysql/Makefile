@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2021/06/23 20:33:18 nia Exp $
+# $NetBSD: Makefile,v 1.52 2021/12/08 16:02:58 adam Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-mysql-${QTVERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	Qt5 MySQL plugin
 
 CFLAGS+=		-I${BUILDLINK_PREFIX.mysql-client}/include/mysql

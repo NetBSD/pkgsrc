@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/10/03 10:12:54 nia Exp $
+# $NetBSD: Makefile,v 1.2 2021/12/08 16:02:29 adam Exp $
 
 DISTNAME=	libslirp-4.3.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://elmarco.fedorapeople.org/
 EXTRACT_SUFX=	.tar.xz

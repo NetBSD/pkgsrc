@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2020/08/17 20:17:32 leot Exp $
+# $NetBSD: Makefile,v 1.34 2021/12/08 16:02:13 adam Exp $
 
 DISTNAME=	qimageblitz-0.0.6
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_KDE:=qimageblitz/}
 EXTRACT_SUFX=	.tar.bz2

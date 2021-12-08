@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2020/08/17 20:20:29 leot Exp $
+# $NetBSD: Makefile,v 1.17 2021/12/08 16:07:07 adam Exp $
 
 DISTNAME=	lxappearance-0.6.3
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 EXTRACT_SUFX=	.tar.xz
