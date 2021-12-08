@@ -1,6 +1,5 @@
-# $NetBSD: Makefile.common,v 1.31 2017/10/15 23:19:12 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.32 2021/12/08 16:08:48 adam Exp $
 #
-# used by audio/gnome-vfs-cdda/Makefile
 # used by net/gnome-vfs-smb/Makefile
 # used by sysutils/gnome-vfs/Makefile
 
