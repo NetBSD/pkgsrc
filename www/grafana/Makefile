@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2021/12/08 01:51:47 tnn Exp $
+# $NetBSD: Makefile,v 1.58 2021/12/08 14:48:22 tnn Exp $
 
 DISTNAME=	grafana-8.3.1
 CATEGORIES=	www
@@ -73,9 +73,6 @@ INSTALLATION_DIRS+=	share/grafana/public
 
 CONF_FILES+=	${PREFIX}/share/grafana/conf/sample.ini \
 		${PKG_SYSCONFDIR}/grafana.conf
-
-BUILD_MAKE_FLAGS+=	GO=${GO}
-BUILD_MAKE_FLAGS+=	WIRE=${PREFIX}/bin/wire
 
 # These comands come from Makefile, build-go target.
 do-build:
