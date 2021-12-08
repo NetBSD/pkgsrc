@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/12/07 20:27:07 wiz Exp $
+$NetBSD: distinfo,v 1.3 2021/12/08 14:35:00 wiz Exp $
 
 BLAKE2s (pip-audit-1.1.0.tar.gz) = c31697d727e3fe5413a281f37b24e83732afbc20dfead2e436a4680d3fc6e8a4
 SHA512 (pip-audit-1.1.0.tar.gz) = 77c0552f840ca17fb9a80e9dd594bf8faf74aad5331e1689ad6b7c436d29589fd1b5db9db3e41a16679934fe1856ad0d0821ee5c52a5d4508fda6236bdf27f22
 Size (pip-audit-1.1.0.tar.gz) = 41526 bytes
+SHA1 (patch-test_dependency__source_test__pip.py) = 8cdbbcba2e6d3207cef84046170e3cfb0bb8de59
