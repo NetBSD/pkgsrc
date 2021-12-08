@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2021/09/29 19:01:00 adam Exp $
+# $NetBSD: Makefile,v 1.56 2021/12/08 16:05:39 adam Exp $
 
 DISTNAME=	kde-wallpapers-15.08.3
 PKGNAME=	${DISTNAME:S/-1/4-1/}
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	misc
 COMMENT=	Wallpapers for the KDE integrated X11 desktop
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.3/src/}

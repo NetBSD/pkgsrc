@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2021/05/24 19:54:13 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2021/12/08 16:06:34 adam Exp $
 
 DISTNAME=	mc-4.6.1
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.ibiblio.org/pub/Linux/utils/file/managers/mc/
 MASTER_SITES+=	${MASTER_SITE_SUNSITE:=utils/file/managers/mc/}

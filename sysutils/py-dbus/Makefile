@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2021/07/29 10:00:06 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2021/12/08 16:02:40 adam Exp $
 
 DISTNAME=	dbus-python-1.2.18
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus-python/
 

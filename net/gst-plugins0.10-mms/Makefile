@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2021/04/21 11:42:24 adam Exp $
+# $NetBSD: Makefile,v 1.14 2021/12/08 16:05:59 adam Exp $
 #
 
 GST_PLUGINS0.10_NAME=	mms
 GST_PLUGINS0.10_FLAGS=	libmms
 GST_PLUGINS0.10_DIRS=	ext/libmms
-PKGREVISION=		6
+PKGREVISION=		7
 
 .include "../../multimedia/gst-plugins0.10-bad/Makefile.common"
 

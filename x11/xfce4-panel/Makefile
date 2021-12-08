@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.91 2021/11/30 14:22:57 gutteridge Exp $
+# $NetBSD: Makefile,v 1.92 2021/12/08 16:03:04 adam Exp $
 
+PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=		xfce4-panel-4.16.3

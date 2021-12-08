@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2020/11/10 13:36:51 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2021/12/08 16:02:08 adam Exp $
 
 BUILDLINK_TREE+=	colord-gtk
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	colord-gtk
 COLORD_GTK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.colord-gtk+=	colord-gtk>=0.2.0
+BUILDLINK_ABI_DEPENDS.colord-gtk?=	colord-gtk>=0.2.0
 BUILDLINK_PKGSRCDIR.colord-gtk?=	../../graphics/colord-gtk
 
 .include "../../x11/gtk3/buildlink3.mk"

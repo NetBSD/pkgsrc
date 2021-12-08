@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2020/08/17 20:17:44 leot Exp $
+# $NetBSD: Makefile,v 1.50 2021/12/08 16:02:39 adam Exp $
 
 DISTNAME=	libgksu-2.0.12
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	sysutils
 MASTER_SITES=	http://people.debian.org/~kov/gksu/
 

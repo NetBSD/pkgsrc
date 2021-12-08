@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/08/17 20:20:13 leot Exp $
+# $NetBSD: Makefile,v 1.7 2021/12/08 16:06:47 adam Exp $
 
-PKGREVISION= 4
+PKGREVISION= 5
 .include "../../textproc/xxdiff/Makefile.common"
 
 COMMENT=	Graphical file comparator and merge tool

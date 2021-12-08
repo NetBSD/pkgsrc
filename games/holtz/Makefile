@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2021/09/29 19:00:39 adam Exp $
+# $NetBSD: Makefile,v 1.53 2021/12/08 16:04:31 adam Exp $
 
 DISTNAME=	holtz-1.4.0
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=holtz/}
 

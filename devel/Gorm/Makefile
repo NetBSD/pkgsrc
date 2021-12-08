@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.73 2021/04/21 11:41:21 adam Exp $
+# $NetBSD: Makefile,v 1.74 2021/12/08 16:03:51 adam Exp $
 
 DISTNAME=	gorm-1.2.20
 PKGNAME=	Gorm-1.2.20
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=dev-apps/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/03/08 16:47:28 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2021/12/08 16:01:47 adam Exp $
 #
 
 DISTNAME=	libticalcs2-1.1.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tilp/}
 EXTRACT_SUFX=	.tar.bz2

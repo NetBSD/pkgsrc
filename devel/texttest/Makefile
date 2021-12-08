@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2021/11/17 15:15:51 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2021/12/08 16:04:07 adam Exp $
 
 DISTNAME=		TextTest-4.0.8
 PKGNAME=		${DISTNAME:tl}
+PKGREVISION=		1
 CATEGORIES=		devel python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=texttest/}
 
