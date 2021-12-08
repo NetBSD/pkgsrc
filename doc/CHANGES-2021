@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6035 2021/12/08 01:32:02 tnn Exp $
+$NetBSD: CHANGES-2021,v 1.6036 2021/12/08 01:52:22 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9092,3 +9092,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/SDL2 to 2.0.18 [wiz 2021-12-07]
 	Updated net/xfce4-wavelan-plugin to 0.6.2 [gutteridge 2021-12-08]
 	Added devel/go-wire version 0.5.0.20210831 [tnn 2021-12-08]
+	Updated www/grafana to 8.3.1 [tnn 2021-12-08]
