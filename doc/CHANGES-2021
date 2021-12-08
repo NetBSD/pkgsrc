@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6038 2021/12/08 08:25:31 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6039 2021/12/08 14:51:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9097,3 +9097,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-memory-profiler to 0.59.0 [adam 2021-12-08]
 	Updated devel/libffi to 3.4.2 [adam 2021-12-08]
 	Updated textproc/icu to 70.1 [adam 2021-12-08]
+	Updated misc/ruby-bundler to 2.2.33 [taca 2021-12-08]
