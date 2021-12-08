@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2021/04/19 10:51:51 nia Exp $
+# $NetBSD: Makefile,v 1.10 2021/12/08 16:04:54 adam Exp $
 
 DISTNAME=	glfw-3.3.4
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=glfw/}
 

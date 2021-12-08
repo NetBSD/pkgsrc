@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2021/04/21 15:37:12 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2021/12/08 16:04:35 adam Exp $
 
 DISTNAME=		KnightCap-3.6
 PKGNAME=		knightcap-3.6
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		games
 #MASTER_SITES=		ftp://ftp.samba.org/pub/KnightCap/
 

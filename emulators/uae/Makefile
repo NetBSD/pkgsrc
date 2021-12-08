@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.85 2020/08/17 20:18:39 leot Exp $
+# $NetBSD: Makefile,v 1.86 2021/12/08 16:04:19 adam Exp $
 
 DISTNAME=	uae-0.8.25
-PKGREVISION=	35
+PKGREVISION=	36
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.freiburg.linux.de/~uae/bin/sources/develop/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2021/04/21 11:40:56 adam Exp $
+# $NetBSD: Makefile,v 1.21 2021/12/08 16:03:11 adam Exp $
 
 DISTNAME=		gst-fluendo-mp3-0.10.32
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		audio
 MASTER_SITES=		http://core.fluendo.com/gstreamer/src/gst-fluendo-mp3/
 EXTRACT_SUFX=		.tar.bz2

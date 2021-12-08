@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2021/08/29 17:08:47 tsutsui Exp $
+# $NetBSD: Makefile,v 1.8 2021/12/08 16:07:14 adam Exp $
 #
 
 DISTNAME=		vte-3.4.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		x11
 
 MAINTAINER=		pkgsrc-users@NetBSD.org

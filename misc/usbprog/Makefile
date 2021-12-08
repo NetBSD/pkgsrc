@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2021/09/29 19:01:01 adam Exp $
+# $NetBSD: Makefile,v 1.61 2021/12/08 16:05:43 adam Exp $
 #
 
 DISTNAME=	usbprog-0.2.0
-PKGREVISION=	56
+PKGREVISION=	57
 CATEGORIES=	misc
 MASTER_SITES=	http://download.berlios.de/usbprog/
 EXTRACT_SUFX=	.tar.bz2

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/11/19 18:59:09 sjmulder Exp $
+# $NetBSD: Makefile,v 1.2 2021/12/08 16:06:51 adam Exp $
 
 DISTNAME=	progman-1.0
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jcs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

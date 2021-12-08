@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2021/07/05 19:08:49 gdt Exp $
+# $NetBSD: Makefile,v 1.19 2021/12/08 16:02:06 adam Exp $
 
 DISTNAME=	libgeotiff-1.7.0
+PKGREVISION=	1
 CATEGORIES=	geography
 MASTER_SITES=	https://download.osgeo.org/geotiff/libgeotiff/
 

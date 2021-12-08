@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2021/06/27 07:13:47 nia Exp $
+# $NetBSD: Makefile,v 1.59 2021/12/08 16:07:14 adam Exp $
 
 DISTNAME=		tint2-v17.0.1
 PKGNAME=		${DISTNAME:S/-v/-/}
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		https://gitlab.com/o9000/tint2/-/archive/v${PKGVERSION_NOREV}/
 EXTRACT_SUFX=		.tar.bz2

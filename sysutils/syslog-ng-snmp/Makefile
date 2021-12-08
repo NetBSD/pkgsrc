@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2021/09/17 09:41:44 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2021/12/08 16:06:38 adam Exp $
 
 SYSLOG_MOD=		snmp
 SYSLOG_MOD_DIR=		afsnmp
 COMMENT=		Syslog-ng AFSNMP module
+PKGREVISION=		1
 
 .include "../../sysutils/syslog-ng/module.mk"
 

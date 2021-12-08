@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2021/11/10 16:07:38 adam Exp $
+# $NetBSD: Makefile,v 1.37 2021/12/08 16:06:06 adam Exp $
 
 DISTNAME=	qbittorrent-4.3.9
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qbittorrent/}
 GITHUB_PROJECT=	qBittorrent

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2020/03/08 16:47:31 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2021/12/08 16:01:51 adam Exp $
 #
 
 BUILDLINK_TREE+=	cutter
@@ -8,7 +8,7 @@ CUTTER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cutter+=	cutter>=1.1.3
 BUILDLINK_DEPMETHOD.cutter?=	build
-BUILDLINK_ABI_DEPENDS.cutter+=	cutter>=1.2.4nb24
+BUILDLINK_ABI_DEPENDS.cutter+=	cutter>=1.2.4nb31
 BUILDLINK_PKGSRCDIR.cutter?=	../../devel/cutter
 
 .include "../../devel/glib2/buildlink3.mk"

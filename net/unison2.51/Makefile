@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2021/06/24 15:24:56 gdt Exp $
+# $NetBSD: Makefile,v 1.35 2021/12/08 16:06:08 adam Exp $
 
 # Currently, 2.51.x is the standard approach, and thus this package
 # produces a "unison-2.51.x" package which installs a "unison" binary.
@@ -6,6 +6,7 @@
 # multiple unison packages, with whichever is the standard approach
 # using the unversioned name.
 DISTNAME=	unison-2.51.4
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

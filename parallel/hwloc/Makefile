@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2021/04/21 11:40:36 adam Exp $
+# $NetBSD: Makefile,v 1.30 2021/12/08 16:02:30 adam Exp $
 
 DISTNAME=	hwloc-1.11.13
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.open-mpi.org/software/hwloc/v${PKGVERSION_NOREV:R}/downloads/
 EXTRACT_SUFX=	.tar.bz2

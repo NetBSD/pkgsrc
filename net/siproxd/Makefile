@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2021/05/14 12:10:53 nia Exp $
+# $NetBSD: Makefile,v 1.7 2021/12/08 16:06:07 adam Exp $
 
 DISTNAME=	siproxd-0.8.3
 #PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=siproxd/}
 

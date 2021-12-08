@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2021/04/21 11:42:10 adam Exp $
+# $NetBSD: Makefile,v 1.6 2021/12/08 16:05:34 adam Exp $
 
 DISTNAME=	lumina-calculator-1.6.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lumina-desktop/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

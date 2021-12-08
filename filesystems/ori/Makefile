@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2021/04/21 11:41:37 adam Exp $
+# $NetBSD: Makefile,v 1.15 2021/12/08 16:04:22 adam Exp $
 
 DISTNAME=	ori-0.8.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	filesystems
 MASTER_SITES=	https://bitbucket.org/orifs/ori/downloads/
 EXTRACT_SUFX=	.tar.xz

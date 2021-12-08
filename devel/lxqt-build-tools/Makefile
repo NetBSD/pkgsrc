@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2021/11/19 13:54:17 gutteridge Exp $
+# $NetBSD: Makefile,v 1.17 2021/12/08 16:04:02 adam Exp $
 
 DISTNAME=	lxqt-build-tools-0.10.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
