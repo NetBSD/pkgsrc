@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2021/11/23 14:47:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.32 2021/12/08 14:51:21 taca Exp $
 bin/bundle2-${RUBY_SUFFIX}
 bin/bundler2-${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -203,6 +203,7 @@ ${GEM_LIBDIR}/lib/bundler/templates/newgem/lib/newgem/version.rb.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/newgem.gemspec.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/rspec.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/rubocop.yml.tt
+${GEM_LIBDIR}/lib/bundler/templates/newgem/sig/newgem.rbs.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/spec/newgem_spec.rb.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/spec/spec_helper.rb.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/standard.yml.tt
@@ -216,6 +217,7 @@ ${GEM_LIBDIR}/lib/bundler/ui/rg_proxy.rb
 ${GEM_LIBDIR}/lib/bundler/ui/shell.rb
 ${GEM_LIBDIR}/lib/bundler/ui/silent.rb
 ${GEM_LIBDIR}/lib/bundler/uri_credentials_filter.rb
+${GEM_LIBDIR}/lib/bundler/vendor/.document
 ${GEM_LIBDIR}/lib/bundler/vendor/connection_pool/LICENSE
 ${GEM_LIBDIR}/lib/bundler/vendor/connection_pool/lib/connection_pool.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/connection_pool/lib/connection_pool/timed_stack.rb
