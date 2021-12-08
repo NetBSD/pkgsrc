@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6036 2021/12/08 01:52:22 tnn Exp $
+$NetBSD: CHANGES-2021,v 1.6037 2021/12/08 08:09:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9093,3 +9093,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/xfce4-wavelan-plugin to 0.6.2 [gutteridge 2021-12-08]
 	Added devel/go-wire version 0.5.0.20210831 [tnn 2021-12-08]
 	Updated www/grafana to 8.3.1 [tnn 2021-12-08]
+	Updated devel/cmake to 3.22.1 [adam 2021-12-08]
+	Updated devel/py-memory-profiler to 0.59.0 [adam 2021-12-08]
