@@ -1,20 +1,20 @@
-$NetBSD: patch-src_powerpc_ffi__powerpc.h,v 1.1 2020/03/21 16:08:34 rin Exp $
+$NetBSD: patch-src_powerpc_ffi__powerpc.h,v 1.2 2021/12/08 08:20:17 adam Exp $
 
 Workaround for ILP32 powerpc, which doesn't have 128-bit-length data types.
 
---- src/powerpc/ffi_powerpc.h.orig	2019-11-18 20:35:19.000000000 +0900
-+++ src/powerpc/ffi_powerpc.h	2020-03-22 00:31:24.149783131 +0900
+--- src/powerpc/ffi_powerpc.h.orig	2021-06-27 15:17:08.000000000 +0000
++++ src/powerpc/ffi_powerpc.h
 @@ -57,6 +57,7 @@ typedef union
    double d;
  } ffi_dblfl;
  
 +#ifdef POWERPC64
- #if defined(__FLOAT128_TYPE__)
+ #if defined(__FLOAT128_TYPE__) && defined(__HAVE_FLOAT128)
  typedef _Float128 float128;
  #elif defined(__FLOAT128__)
 @@ -64,6 +65,7 @@ typedef __float128 float128;
  #else
- typedef __int128 float128;
+ typedef char float128[16] __attribute__((aligned(16)));
  #endif
 +#endif /* POWERPC64 */
  
