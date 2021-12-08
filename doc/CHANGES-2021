@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6040 2021/12/08 16:24:07 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6041 2021/12/08 16:28:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9100,3 +9100,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/ruby-bundler to 2.2.33 [taca 2021-12-08]
 	Updated devel/py-astroid to 2.9.0 [adam 2021-12-08]
 	Updated devel/py-pylint to 2.12.2 [adam 2021-12-08]
+	Updated textproc/py-regex to 2021.11.10 [adam 2021-12-08]
+	Updated net/py-minio to 7.1.2 [adam 2021-12-08]
