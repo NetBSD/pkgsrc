@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3521 2021/12/07 18:03:29 wiz Exp $
+# $NetBSD: Makefile,v 1.3522 2021/12/08 01:32:02 tnn Exp $
 #
 
 COMMENT=	Development utilities
@@ -435,6 +435,7 @@ SUBDIR+=	go-review
 SUBDIR+=	go-siphash
 SUBDIR+=	go-sys
 SUBDIR+=	go-tools
+SUBDIR+=	go-wire
 SUBDIR+=	go-xerrors
 SUBDIR+=	gob2
 SUBDIR+=	gobject-introspection
