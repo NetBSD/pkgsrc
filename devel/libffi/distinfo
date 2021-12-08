@@ -1,18 +1,17 @@
-$NetBSD: distinfo,v 1.58 2021/10/26 10:15:19 nia Exp $
+$NetBSD: distinfo,v 1.59 2021/12/08 08:20:17 adam Exp $
 
-BLAKE2s (libffi-3.3.tar.gz) = ced14508de91f54b4bc5af39f6127def7ca9eea755dc764fa0c30bf19962bf93
-SHA512 (libffi-3.3.tar.gz) = 61513801a156f11420f541d325de697131846487122d6bdcf5491b18b4da788589f5c0bb07e88e396495d3be5830d74e9135595e2b8ddbfe95c448d8597fbd6f
-Size (libffi-3.3.tar.gz) = 1305466 bytes
+BLAKE2s (libffi-3.4.2.tar.gz) = a5773b741a815ea113d4b8e2ec62a0ea59a6cfb61367c39bc99276670efd5dfb
+SHA512 (libffi-3.4.2.tar.gz) = 31bad35251bf5c0adb998c88ff065085ca6105cf22071b9bd4b5d5d69db4fadf16cadeec9baca944c4bb97b619b035bb8279de8794b922531fddeb0779eb7fb1
+Size (libffi-3.4.2.tar.gz) = 1351355 bytes
 SHA1 (patch-configure) = 604b205963e01c2dce7d5636543920abdd9c8638
-SHA1 (patch-configure_host) = 368d7add3d857be804b784f6c32281b0c940e7bd
-SHA1 (patch-src_aarch64_ffi.c) = c5bd73abcb7445b073eb3e61feda212ee3396246
+SHA1 (patch-configure_host) = a4c99cd0fbbbe0f2c806d662b85a6e2c56b31168
+SHA1 (patch-src_aarch64_ffi.c) = a13638a78280f32c4da828ec560ce7a70bb71474
 SHA1 (patch-src_arm_sysv.S) = 9aaa8e12e627d68126fbc4ff02e06ed45c94da1a
-SHA1 (patch-src_closures.c) = f818bd0384f146a17964e2320df1321d8b83ec73
+SHA1 (patch-src_closures.c) = 13c426ad678439d2781477aa2b10497a22223427
 SHA1 (patch-src_m68k_ffi.c) = 5179cfd150bc7de15eb1c5ee0a327016c2c32b3e
 SHA1 (patch-src_m88k_elfbsd.S) = 6572c7fa39c00096cb4a80bb88993ff1b4aaa8cc
 SHA1 (patch-src_mips_ffi.c) = 7353f68f73917af6bff0b90393ac3404ea54fb99
-SHA1 (patch-src_mips_ffitarget.h) = 7fe62634803ccb5a168e76d597409c9af809c448
+SHA1 (patch-src_mips_ffitarget.h) = 86f144b1dd62d912f1b03016772e2715f336bf6d
 SHA1 (patch-src_powerpc_ffi.c) = b68a93d0f8552efaa8c50256da3af3bde5de7059
-SHA1 (patch-src_powerpc_ffi__darwin.c) = 8da71571830bb5613fc3dc34a6f9707a0e7e7586
-SHA1 (patch-src_powerpc_ffi__powerpc.h) = 573b6f0f496ed7b8b6bc0df197515020519ae024
+SHA1 (patch-src_powerpc_ffi__powerpc.h) = fafb125b28069d5108726ac7b2d4efdc4fdadf92
 SHA1 (patch-testsuite_libffi.call_float2.c) = 2a42a428b0cc55065968c7f0748026da12b70b9d
