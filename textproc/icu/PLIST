@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2021/04/21 08:30:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.51 2021/12/08 08:21:05 adam Exp $
 bin/derb
 bin/genbrk
 bin/gencfu
@@ -6,6 +6,7 @@ bin/gencnval
 bin/gendict
 bin/genrb
 bin/icu-config
+bin/icuexportdata
 bin/icuinfo
 bin/makeconv
 bin/pkgdata
@@ -205,28 +206,28 @@ lib/icu/current
 lib/icu/pkgdata.inc
 lib/libicudata.a
 lib/libicudata.so
-lib/libicudata.so.69
 lib/libicudata.so.${PKGVERSION}
+lib/libicudata.so.70
 lib/libicui18n.a
 lib/libicui18n.so
-lib/libicui18n.so.69
 lib/libicui18n.so.${PKGVERSION}
+lib/libicui18n.so.70
 lib/libicuio.a
 lib/libicuio.so
-lib/libicuio.so.69
 lib/libicuio.so.${PKGVERSION}
+lib/libicuio.so.70
 lib/libicutest.a
 lib/libicutest.so
-lib/libicutest.so.69
 lib/libicutest.so.${PKGVERSION}
+lib/libicutest.so.70
 lib/libicutu.a
 lib/libicutu.so
-lib/libicutu.so.69
 lib/libicutu.so.${PKGVERSION}
+lib/libicutu.so.70
 lib/libicuuc.a
 lib/libicuuc.so
-lib/libicuuc.so.69
 lib/libicuuc.so.${PKGVERSION}
+lib/libicuuc.so.70
 lib/pkgconfig/icu-i18n.pc
 lib/pkgconfig/icu-io.pc
 lib/pkgconfig/icu-uc.pc
@@ -237,6 +238,7 @@ man/man1/gencnval.1
 man/man1/gendict.1
 man/man1/genrb.1
 man/man1/icu-config.1
+man/man1/icuexportdata.1
 man/man1/makeconv.1
 man/man1/pkgdata.1
 man/man1/uconv.1
