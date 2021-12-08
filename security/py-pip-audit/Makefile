@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/12/07 20:27:07 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2021/12/08 14:35:00 wiz Exp $
 
 DISTNAME=	pip-audit-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -41,8 +41,7 @@ post-install:
 	${RM} -r ${DESTDIR}${PREFIX}/${PYSITELIB}/test
 
 # as of 1.1.0
-# 2 failed, 59 passed
-# https://github.com/trailofbits/pip-audit/issues/195
+# 1 failed, 60 passed
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib:${WRKSRC}/build/lib/test
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
