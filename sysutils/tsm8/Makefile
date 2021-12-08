@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2021/05/24 19:54:20 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2021/12/08 16:41:09 hauke Exp $
 
 DISTNAME=	tsm-${PKGVER}
 PKGVER=		8.1.12.0
 PKGNAME=	${DISTNAME:C/-/8-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.software.ibm.com/storage/tivoli-storage-management/maintenance/client/v8r1/Linux/LinuxX86/BA/v8112/
 DISTFILES=	${PKGVER}-TIV-TSMBAC-LinuxX86.tar
@@ -39,7 +39,7 @@ NOT_FOR_PLATFORM=	Linux-*-* NetBSD-[0-1].*-*
 
 EMUL_PLATFORMS=		linux-x86_64
 #EMUL_REQD=		suse>=13.1
-EMUL_MODULES.linux=	base
+EMUL_MODULES.linux=	base locale
 RUN_LDCONFIG=		yes
 
 .include "../../mk/bsd.prefs.mk"
