@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/12/31 09:51:56 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2021/12/09 09:49:30 schmonz Exp $
 
 DISTNAME=	quartz-wm-1.3.1
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	http://xquartz.macosforge.org/downloads/src/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xquartz.macosforge.org/downloads/src/
+HOMEPAGE=	https://gitlab.freedesktop.org/xorg/app/quartz-wm
 COMMENT=	Aqua Window Manager for the X Window System on OS X
 LICENSE=	apple-public-source-license
 
