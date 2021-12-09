@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3522 2021/12/08 01:32:02 tnn Exp $
+# $NetBSD: Makefile,v 1.3523 2021/12/09 16:37:28 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3090,6 +3090,7 @@ SUBDIR+=	tla
 SUBDIR+=	tlsh
 SUBDIR+=	tmake
 SUBDIR+=	tokei
+SUBDIR+=	tomlplusplus
 SUBDIR+=	topgit
 SUBDIR+=	tpasm
 SUBDIR+=	tradcpp
