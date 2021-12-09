@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6051 2021/12/09 16:37:38 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6052 2021/12/09 16:53:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9112,3 +9112,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/etlegacy to 2.78.1 [nia 2021-12-09]
 	Updated games/etlegacy-server to 2.78.1 [nia 2021-12-09]
 	Added devel/tomlplusplus version 2.5.0 [wiz 2021-12-09]
+	Updated audio/termusic to 0.6.2 [pin 2021-12-09]
