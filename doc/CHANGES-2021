@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6044 2021/12/09 10:15:06 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.6045 2021/12/09 10:16:13 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9105,3 +9105,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/nodejs to 14.18.2 [adam 2021-12-08]
 	Updated chat/matrix-synapse to 1.48.0 [gdt 2021-12-09]
 	Updated www/htmldoc to 1.9.13 [fcambus 2021-12-09]
+	Updated www/htmldoc-x11 to 1.9.13 [fcambus 2021-12-09]
