@@ -1,0 +1,13 @@
+TOML library for C++
+
+Features
+
+* Supports the latest TOML release (v1.0.0), plus optional support
+  for some unreleased TOML features
+* Supports serializing to JSON
+* Proper UTF-8 handling (incl. BOM)
+* C++17 (plus some C++20 features where available, e.g. experimental
+  support for char8_t strings)
+* Header-only (optional!)
+* Doesn't require RTTI
+* Works with or without exceptions
