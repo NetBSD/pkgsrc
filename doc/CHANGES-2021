@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6055 2021/12/09 17:26:27 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.6056 2021/12/09 20:00:04 kim Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9116,3 +9116,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated shells/nushell to 0.41.0 [pin 2021-12-09]
 	Updated lang/go116 to 1.16.12 [bsiegert 2021-12-09]
 	Updated lang/go117 to 1.17.5 [bsiegert 2021-12-09]
+	Updated shells/tcsh to 6.23.01 [kim 2021-12-09]
