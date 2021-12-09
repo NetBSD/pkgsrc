@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6049 2021/12/09 16:11:39 nia Exp $
+$NetBSD: CHANGES-2021,v 1.6050 2021/12/09 16:12:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9110,3 +9110,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/lua-rocks to 3.8.0 [nia 2021-12-09]
 	Updated www/lua-web-sanitize to 1.1.0 [nia 2021-12-09]
 	Updated games/etlegacy to 2.78.1 [nia 2021-12-09]
+	Updated games/etlegacy-server to 2.78.1 [nia 2021-12-09]
