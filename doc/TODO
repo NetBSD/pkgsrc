@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21335 2021/12/08 08:25:31 adam Exp $
+$NetBSD: TODO,v 1.21336 2021/12/09 16:37:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1585,6 +1585,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o prelude-lml-3.1.0
 	o prelude-manager-3.1.0
 	o prison-5.81.0
+	o privoxy-3.0.33
 	o profanity-0.10.0
 	o profit-2.5.3
 	o proj-8.0.0
