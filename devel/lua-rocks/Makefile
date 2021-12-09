@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2021/05/02 07:48:22 nia Exp $
+# $NetBSD: Makefile,v 1.18 2021/12/09 15:11:07 nia Exp $
 
-DISTNAME=	luarocks-3.7.0
+DISTNAME=	luarocks-3.8.0
 PKGNAME=	${DISTNAME:S/luarocks/${LUA_PKGPREFIX}-rocks/}
 CATEGORIES=	devel lua
 MASTER_SITES=	https://luarocks.org/releases/
