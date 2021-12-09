@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.60 2021/10/26 10:51:47 nia Exp $
+$NetBSD: distinfo,v 1.61 2021/12/09 00:13:07 tnn Exp $
 
 BLAKE2s (PHP-5.6.31-OpenSSL-1.1.0-compatibility-20170801.patch) = 9eaf6505d80e90147fd0b993fb501620030eea24ccd69e42c49d8faf50d47775
 SHA512 (PHP-5.6.31-OpenSSL-1.1.0-compatibility-20170801.patch) = bbe39ad27a5a82c705692c921b214c5630227ed9852f0432340f74533b5e618d9bea01bff75a4b7a1f1b72876b6d092d2db4533758d9a927f274cff7361f3eb4
@@ -11,7 +11,8 @@ SHA1 (patch-configure) = a5623b0cbb3331fd0a537b26c0ae48315d52dbe2
 SHA1 (patch-disable-filter-url) = a2b08912d81f2872bf1834fa4cefddb044c9d0f8
 SHA1 (patch-ext_gd_config.m4) = b92ab4c7fe8aceaef7787a607a7d2eac258fee19
 SHA1 (patch-ext_imap_config.m4) = 9c6ed6966366c4fe1b7cfd34b5910e2ff0e68577
-SHA1 (patch-ext_intl_breakiterator_codepointiterator__internal.cpp) = f4cf2a1cc650ed9a4291924c2ed9fcbd7061e33b
+SHA1 (patch-ext_intl_breakiterator_codepointiterator__internal.cpp) = 98ff92cbc5e4a92310a168e9959dd702b18e0783
+SHA1 (patch-ext_intl_breakiterator_codepointiterator__internal.h) = 01424bd7758505d9800b7f7e9e09d153b908506f
 SHA1 (patch-ext_intl_collator_collator__convert.c) = 91f5b8458eebc0c2f3871f76a522f627e4cf4fbf
 SHA1 (patch-ext_intl_collator_collator__error.c) = 94a26ee166506f7f77dd762e9c789d0e803f2b3c
 SHA1 (patch-ext_intl_collator_collator__locale.c) = ab48d5fac5a80b1c4c25fef61993a889a8014e3f
