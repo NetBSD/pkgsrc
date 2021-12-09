@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6045 2021/12/09 10:16:13 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.6046 2021/12/09 10:23:07 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9106,3 +9106,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/matrix-synapse to 1.48.0 [gdt 2021-12-09]
 	Updated www/htmldoc to 1.9.13 [fcambus 2021-12-09]
 	Updated www/htmldoc-x11 to 1.9.13 [fcambus 2021-12-09]
+	Updated audio/libopenmpt to 0.5.14 [fcambus 2021-12-09]
