@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/05/15 07:22:39 nia Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/12/09 10:14:53 fcambus Exp $
 bin/htmldoc
 man/man1/htmldoc.1
 share/applications/htmldoc.desktop
@@ -82,5 +82,5 @@ share/htmldoc/fonts/Times-Roman.afm
 share/htmldoc/fonts/Times-Roman.pfa
 share/icons/hicolor/128x128/apps/htmldoc.png
 share/icons/hicolor/256x256/apps/htmldoc.png
+share/icons/hicolor/32x32/apps/htmldoc.png
 share/mime/packages/htmldoc.xml
-share/pixmaps/htmldoc.xpm
