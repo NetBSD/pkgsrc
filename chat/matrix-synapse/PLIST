@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2021/11/19 14:06:08 js Exp $
+@comment $NetBSD: PLIST,v 1.20 2021/12/09 01:26:10 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -1651,10 +1651,12 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/63/04add_presence_stream_not_offl
 ${PYSITELIB}/synapse/storage/schema/main/delta/64/01msc2716_chunk_to_batch_rename.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/delta/64/01msc2716_chunk_to_batch_rename.sql.sqlite
 ${PYSITELIB}/synapse/storage/schema/main/delta/65/01msc2716_insertion_event_edges.sql
-${PYSITELIB}/synapse/storage/schema/main/delta/65/02_thread_relations.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/65/03remove_hidden_devices_from_device_inbox.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/65/04_local_group_updates.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/65/05_remove_room_stats_historical_and_user_stats_historical.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/65/06remove_deleted_devices_from_device_inbox.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/65/07_arbitrary_relations.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/65/08_device_inbox_background_updates.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_signatures.sql

@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.28 2021/11/23 12:47:51 gdt Exp $
+$NetBSD: distinfo,v 1.29 2021/12/09 01:26:10 gdt Exp $
 
-BLAKE2s (matrix-synapse-1.47.1.tar.gz) = 95f11702c331d6ddbbefe5d851b0f25336e8e15591dc74bcd53c35af9f4fa17b
-SHA512 (matrix-synapse-1.47.1.tar.gz) = 29ebfcf43e7766a638cd26e17430772625651cd8d28c8637ae5d2550207a0131f7eeab0cbe2d8e9e4914ffa13cbafe830ef0e80b22a356ac5abe6a88733ad97c
-Size (matrix-synapse-1.47.1.tar.gz) = 7566339 bytes
+BLAKE2s (matrix-synapse-1.48.0.tar.gz) = 9069ce3478d2dcf1365df2131cca0e93c12c0d3ea8bc089148732fe78b3a9414
+SHA512 (matrix-synapse-1.48.0.tar.gz) = d7005258f75d415c2172fba0842f9e7d493228d854af6de39a2e0e46e28ca19dd5542327e81e3f93082216f629b7b57e070fc4e36cf9c511688127e75aaae95b
+Size (matrix-synapse-1.48.0.tar.gz) = 7591198 bytes
 SHA1 (patch-synapse_handlers_room.py) = f9a62add7171898ec0ea76360f0a4c9969609537
 SHA1 (patch-synapse_python_dependencies.py) = 914ae3a34a9367b2d479d393ddc7a07cbff65b36
