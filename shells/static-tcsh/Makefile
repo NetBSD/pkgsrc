@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2021/11/18 10:20:47 kim Exp $
+# $NetBSD: Makefile,v 1.17 2021/12/09 19:55:39 kim Exp $
 #
 
 PKGNAME=		static-${DISTNAME}
-PKGREVISION=		3
 
 .include "../../shells/tcsh/Makefile.common"
 
