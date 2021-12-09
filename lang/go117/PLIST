@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/11/05 19:35:00 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/12/09 17:25:56 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go117/AUTHORS
@@ -4987,6 +4987,7 @@ go117/src/go/types/testdata/fixedbugs/issue45635.go2
 go117/src/go/types/testdata/fixedbugs/issue45985.go2
 go117/src/go/types/testdata/fixedbugs/issue46403.src
 go117/src/go/types/testdata/fixedbugs/issue46404.go1
+go117/src/go/types/testdata/fixedbugs/issue48819.src
 go117/src/go/types/testdata/fixedbugs/issue6977.src
 go117/src/go/types/token_test.go
 go117/src/go/types/type.go
@@ -10013,6 +10014,7 @@ go117/test/fixedbugs/issue48088.dir/a.go
 go117/test/fixedbugs/issue48088.dir/b.go
 go117/test/fixedbugs/issue48088.go
 go117/test/fixedbugs/issue4813.go
+go117/test/fixedbugs/issue48289.go
 go117/test/fixedbugs/issue4847.go
 go117/test/fixedbugs/issue48473.go
 go117/test/fixedbugs/issue48476.go
@@ -10021,10 +10023,13 @@ go117/test/fixedbugs/issue4879.dir/b.go
 go117/test/fixedbugs/issue4879.go
 go117/test/fixedbugs/issue4909a.go
 go117/test/fixedbugs/issue4909b.go
+go117/test/fixedbugs/issue49122.go
+go117/test/fixedbugs/issue49249.go
 go117/test/fixedbugs/issue4932.dir/foo.go
 go117/test/fixedbugs/issue4932.dir/state.go
 go117/test/fixedbugs/issue4932.dir/state2.go
 go117/test/fixedbugs/issue4932.go
+go117/test/fixedbugs/issue49378.go
 go117/test/fixedbugs/issue4964.dir/a.go
 go117/test/fixedbugs/issue4964.dir/b.go
 go117/test/fixedbugs/issue4964.go
