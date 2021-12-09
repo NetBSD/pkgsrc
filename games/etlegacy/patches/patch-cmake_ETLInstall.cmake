@@ -1,15 +1,15 @@
-$NetBSD: patch-cmake_ETLInstall.cmake,v 1.1 2019/04/11 20:56:34 nia Exp $
+$NetBSD: patch-cmake_ETLInstall.cmake,v 1.2 2021/12/09 16:10:59 nia Exp $
 
 Install man pages to PKGMANDIR.
 
---- cmake/ETLInstall.cmake.orig	2019-01-05 19:54:35.000000000 +0000
+--- cmake/ETLInstall.cmake.orig	2021-11-01 20:57:18.000000000 +0000
 +++ cmake/ETLInstall.cmake
-@@ -37,7 +37,7 @@ if(UNIX)
- 		DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mime/packages"
+@@ -42,7 +42,7 @@ if(UNIX AND NOT APPLE)
+ 		DESTINATION "${INSTALL_DEFAULT_SHAREDIR}/metainfo"
  	)
- 		install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/docs/linux/man/man6/"
--		DESTINATION "${CMAKE_INSTALL_PREFIX}/share/man/man6"
-+		DESTINATION "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_MANDIR}/man6"
+ 	install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/docs/linux/man/man6/"
+-		DESTINATION "${INSTALL_DEFAULT_SHAREDIR}/man/man6"
++		DESTINATION "${CMAKE_INSTALL_MANDIR}/man6"
  	)
- 	
- 	if(FEATURE_RENDERER2)
+ 	install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/docs/INSTALL.txt"
+ 		DESTINATION "${INSTALL_DEFAULT_SHAREDIR}/doc/etlegacy"

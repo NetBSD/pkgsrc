@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.4 2020/05/23 10:28:33 rillig Exp $
+# $NetBSD: Makefile.common,v 1.5 2021/12/09 16:10:58 nia Exp $
 # used by games/etlegacy/Makefile
 # used by games/etlegacy-server/Makefile
 
-ETL_VERSION=	2.76
+ETL_VERSION=	2.78.1
 CATEGORIES=	games
 
 DIST_SUBDIR=	etlegacy-${PKGVERSION_NOREV}
@@ -46,6 +46,7 @@ CMAKE_ARGS+=	-DBUNDLED_OPENSSL=OFF
 CMAKE_ARGS+=	-DBUNDLED_SDL=OFF
 CMAKE_ARGS+=	-DBUNDLED_SQLITE3=OFF
 CMAKE_ARGS+=	-DBUNDLED_THEORA=OFF
+CMAKE_ARGS+=	-DBUNDLED_WOLFSSL=OFF
 CMAKE_ARGS+=	-DBUNDLED_ZLIB=OFF
 
 # don't try to build i386 binaries on amd64
@@ -82,7 +83,7 @@ PLIST_SUBST+=	ARCH_STRING="i386"
 PLIST_SUBST+=	ARCH_STRING="arm"
 .else
 # maybe architecture-neutral shared objects could be generated
-PKG_SKIP_REASON+=\
+PKG_SKIP_REASON+= \
 	"unsupported MACHINE_ARCH, add it to ETLPlatform.cmake"
 .endif
 

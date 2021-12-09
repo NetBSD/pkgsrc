@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.6 2019/11/22 21:38:31 nia Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/12/09 16:10:58 nia Exp $
 ${PLIST.client}bin/etl
 bin/etlded
 man/man6/etl.6
 man/man6/etlded.6
-share/applications/etlegacy.desktop
-share/etlegacy/COPYING.txt
-share/etlegacy/INSTALL.txt
+share/applications/com.etlegacy.ETLegacy.desktop
+share/doc/etlegacy/INSTALL.txt
 share/etlegacy/etmain/campaigncycle.cfg
 share/etlegacy/etmain/etl_server.cfg
+share/etlegacy/etmain/etl_server_comp.cfg
 share/etlegacy/etmain/legacy.cfg
 share/etlegacy/etmain/lmscycle.cfg
 share/etlegacy/etmain/mapvotecycle.cfg
+share/etlegacy/etmain/mapvoteplayerscount.cfg
 share/etlegacy/etmain/objectivecycle.cfg
 share/etlegacy/legacy/description.txt
-share/etlegacy/legacy/etl_bin_${PKGVERSION}-dirty.pk3
-share/etlegacy/legacy/pak3_${PKGVERSION}-dirty.pk3
+share/etlegacy/legacy/legacy_2.78-dirty.pk3
 share/icons/hicolor/scalable/apps/etl.svg
+share/licenses/etlegacy/COPYING.txt
+share/metainfo/com.etlegacy.ETLegacy.metainfo.xml
 share/mime/packages/etlegacy.xml
