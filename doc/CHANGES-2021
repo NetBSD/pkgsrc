@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6046 2021/12/09 10:23:07 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.6047 2021/12/09 15:11:18 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9107,3 +9107,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/htmldoc to 1.9.13 [fcambus 2021-12-09]
 	Updated www/htmldoc-x11 to 1.9.13 [fcambus 2021-12-09]
 	Updated audio/libopenmpt to 0.5.14 [fcambus 2021-12-09]
+	Updated devel/lua-rocks to 3.8.0 [nia 2021-12-09]
