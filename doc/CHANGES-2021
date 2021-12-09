@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6053 2021/12/09 16:56:50 pin Exp $
+$NetBSD: CHANGES-2021,v 1.6054 2021/12/09 17:26:11 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9114,3 +9114,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/tomlplusplus version 2.5.0 [wiz 2021-12-09]
 	Updated audio/termusic to 0.6.2 [pin 2021-12-09]
 	Updated shells/nushell to 0.41.0 [pin 2021-12-09]
+	Updated lang/go116 to 1.16.12 [bsiegert 2021-12-09]
