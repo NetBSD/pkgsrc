@@ -1,4 +1,6 @@
-$NetBSD: patch-ext_intl_breakiterator_codepointiterator__internal.cpp,v 1.1 2020/11/16 12:10:05 ryoon Exp $
+$NetBSD: patch-ext_intl_breakiterator_codepointiterator__internal.cpp,v 1.2 2021/12/09 00:13:07 tnn Exp $
+
+php56-intl: fix icu>=70 fallout. Backport from php74-intl.
 
 --- ext/intl/breakiterator/codepointiterator_internal.cpp.orig	2019-01-09 09:54:13.000000000 +0000
 +++ ext/intl/breakiterator/codepointiterator_internal.cpp
@@ -11,8 +13,15 @@ $NetBSD: patch-ext_intl_breakiterator_codepointiterator__internal.cpp,v 1.1 2020
  
  	//don't bother copying the character iterator, getText() is deprecated
  	clearCurrentCharIter();
-@@ -75,17 +75,17 @@ CodePointBreakIterator::~CodePointBreakI
+@@ -72,20 +72,24 @@ CodePointBreakIterator::~CodePointBreakI
+ 	clearCurrentCharIter();
+ }
+ 
++#if U_ICU_VERSION_MAJOR_NUM >= 70
++bool CodePointBreakIterator::operator==(const BreakIterator& that) const
++#else
  UBool CodePointBreakIterator::operator==(const BreakIterator& that) const
++#endif
  {
  	if (typeid(*this) != typeid(that)) {
 -		return FALSE;
@@ -32,7 +41,7 @@ $NetBSD: patch-ext_intl_breakiterator_codepointiterator__internal.cpp,v 1.1 2020
  }
  
  CodePointBreakIterator* CodePointBreakIterator::clone(void) const
-@@ -106,7 +106,7 @@ CharacterIterator& CodePointBreakIterato
+@@ -106,7 +110,7 @@ CharacterIterator& CodePointBreakIterato
  
  UText *CodePointBreakIterator::getUText(UText *fillIn, UErrorCode &status) const
  {
@@ -41,7 +50,7 @@ $NetBSD: patch-ext_intl_breakiterator_codepointiterator__internal.cpp,v 1.1 2020
  }
  
  void CodePointBreakIterator::setText(const UnicodeString &text)
-@@ -125,7 +125,7 @@ void CodePointBreakIterator::setText(UTe
+@@ -125,7 +129,7 @@ void CodePointBreakIterator::setText(UTe
  		return;
  	}
  
@@ -50,7 +59,7 @@ $NetBSD: patch-ext_intl_breakiterator_codepointiterator__internal.cpp,v 1.1 2020
  
  	clearCurrentCharIter();
  }
-@@ -277,7 +277,7 @@ CodePointBreakIterator &CodePointBreakIt
+@@ -277,7 +281,7 @@ CodePointBreakIterator &CodePointBreakIt
  	}
  
  	int64_t pos = utext_getNativeIndex(this->fText);
