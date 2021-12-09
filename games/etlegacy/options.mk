@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2019/06/30 23:33:40 nia Exp $
+# $NetBSD: options.mk,v 1.3 2021/12/09 16:10:58 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.etlegacy
 PKG_SUPPORTED_OPTIONS=		lua ogg theora freetype sqlite3
@@ -8,7 +8,7 @@ PKG_SUGGESTED_OPTIONS=		lua ogg theora freetype sqlite3
 
 .if !empty(PKG_OPTIONS:Mlua)
 CMAKE_ARGS+=	-DFEATURE_LUA=ON
-.include "../../lang/lua53/buildlink3.mk"
+.include "../../lang/lua54/buildlink3.mk"
 .else
 CMAKE_ARGS+=	-DFEATURE_LUA=OFF
 .endif
