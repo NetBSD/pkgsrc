@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21336 2021/12/09 16:37:38 wiz Exp $
+$NetBSD: TODO,v 1.21337 2021/12/09 16:47:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1608,6 +1608,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-cares-3.1.1
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
+	o py-django-4.0
 	o py-django-debug-toolbar-3.2.1
 	o py-django-tagging-0.5.0
 	o py-ephem3-3.7.6.0
@@ -1860,6 +1861,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o top-3.8beta1
 	o topgit-0.8
 	o tor-browser-11.0.1 [wip]
+	o tor-browser-11.0.2
 	o torrentzip-2.1.0
 	o toxcore-0.2.12
 	o trafficserver-9.0.1
