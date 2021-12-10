@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2021/12/08 16:01:49 adam Exp $
+# $NetBSD: Makefile,v 1.106 2021/12/10 14:26:23 gdt Exp $
 
 # Note that the directory is still postgis2, for historical reasons.
 # It remains, due to inertia, until there is a good basis to be sure
@@ -66,6 +66,7 @@ REPLACE_PERL+=		utils/create_spatial_ref_sys_config_dump.pl
 INSTALL_ENV+=		mkinstalldirs=${INSTALL_DATA_DIR:Q}
 
 TEST_TARGET=		check
+# https://trac.osgeo.org/postgis/wiki/DevWikiGettingABackTrace#Usingwithregressiontests
 
 # TEST_DEPENDS
 .include "../../devel/cunit/buildlink3.mk"
