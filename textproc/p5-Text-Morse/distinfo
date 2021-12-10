@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/12/10 18:42:53 hubertf Exp $
+
+BLAKE2s (Text-Morse-0.07.tar.gz) = a9a510ba92d6555c3b49017f8a59a54895f685277f50b091c4e1c9e017056036
+SHA512 (Text-Morse-0.07.tar.gz) = 9e8e1b82962395b98f7f8b17f26b4c472d20595754f195eb3c892b6127e2e52c24b199a9b95d4cff0b684bd0de3129e728965f674ca14c2f6e4d7b14ab3dba82
+Size (Text-Morse-0.07.tar.gz) = 7161 bytes
