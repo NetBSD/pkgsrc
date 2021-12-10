@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 10:15:36 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/12/10 13:16:20 nia Exp $
 
-BLAKE2s (lua-penlight/penlight-1.10.0.tar.gz) = 49348dc9e0047836ed6a83fd28c108eea440397b4444e28be19efa6f3b71a041
-SHA512 (lua-penlight/penlight-1.10.0.tar.gz) = 47128b09d1f7d41e8cac7ecc50338b7ebe9095b6768a43f961e27156aac7129e192909e771711e3d2fbd87d3ef475d5934874e0b7ad44f1e40ab4c1cee00736d
-Size (lua-penlight/penlight-1.10.0.tar.gz) = 413134 bytes
+BLAKE2s (lua-penlight/penlight-1.11.0.tar.gz) = 4cf99b35319908a6fd0b4f6290bf25b1914fa4bacbd0d375e5c3724434cf9cd2
+SHA512 (lua-penlight/penlight-1.11.0.tar.gz) = dbf5b1a558cf7279db793c6e0b63a7cd5eade87c4c6c12d7de3c1416f85008b2fef44c90fd1268761a64d3f8f18a971a1b645ba55278032611fb04cd2276d23b
+Size (lua-penlight/penlight-1.11.0.tar.gz) = 413442 bytes
