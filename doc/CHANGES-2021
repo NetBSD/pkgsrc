@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6077 2021/12/10 18:20:26 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6078 2021/12/10 23:08:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9160,3 +9160,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/ncspot to 0.9.3 [pin 2021-12-10]
 	Updated textproc/ugrep to 3.3.11 [adam 2021-12-10]
 	Updated textproc/py-ICU to 2.8 [adam 2021-12-10]
+	Updated lang/python310 to 3.10.1nb2 [wiz 2021-12-10]
