@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:15:36 nia Exp $
+$NetBSD: distinfo,v 1.13 2021/12/10 13:20:54 nia Exp $
 
-BLAKE2s (luaposix-35.0.tar.gz) = e0f9d84d4f6c317290b5d20b35073b158b0d77e691f573341641be119740fbed
-SHA512 (luaposix-35.0.tar.gz) = 4bb61892b78d9e59418a9a6360b9f611fb9b5438b9261a2c6672f053a1b21dfd9a2060b8d2f0d3eac6185773cf84672c1769c081c4ab53d2ddae2232e4a9269b
-Size (luaposix-35.0.tar.gz) = 178091 bytes
+BLAKE2s (luaposix-35.1.tar.gz) = ebbb1dba0a7c5f3c34e24e0bf7361360aa033c23d3f5f5dcfc8d1b459aef4e67
+SHA512 (luaposix-35.1.tar.gz) = f2c36bf69c0d73b4a2c6ab0915f81473addce427c22e82e2d1c334016dec7fecb4365fc980fa6adb0de21ad1a60bc75b73f58579e8a423990ad2067c9ae37775
+Size (luaposix-35.1.tar.gz) = 180002 bytes
