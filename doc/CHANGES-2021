@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6065 2021/12/10 09:15:31 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6066 2021/12/10 12:00:23 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9144,3 +9144,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-certbot-dns-route53 to 1.22.0 [adam 2021-12-10]
 	Updated security/py-certbot-dns-sakuracloud to 1.22.0 [adam 2021-12-10]
 	Updated security/py-certbot-nginx to 1.22.0 [adam 2021-12-10]
+	Updated databases/promscale to 0.7.1 [tnn 2021-12-10]
+	Updated databases/postgresql-timescaledb to 2.5.1 [tnn 2021-12-10]
+	Updated databases/postgresql-promscale_extension to 0.3.0 [tnn 2021-12-10]
+	Updated databases/timescaledb-tune to 0.12.0 [tnn 2021-12-10]
