@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6064 2021/12/10 09:06:30 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6065 2021/12/10 09:15:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9128,3 +9128,19 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated comms/py-rich to 10.15.2 [adam 2021-12-10]
 	Updated devel/py-cffi to 1.15.0 [adam 2021-12-10]
 	Updated devel/py-ipython to 7.30.1 [adam 2021-12-10]
+	Updated security/py-acme to 1.22.0 [adam 2021-12-10]
+	Updated security/py-certbot to 1.22.0 [adam 2021-12-10]
+	Updated security/py-certbot-apache to 1.22.0 [adam 2021-12-10]
+	Updated security/py-certbot-dns-digitalocean to 1.22.0 [adam 2021-12-10]
+	Updated security/py-certbot-dns-dnsimple to 1.22.0 [adam 2021-12-10]
+	Updated security/py-certbot-dns-dnsmadeeasy to 1.22.0 [adam 2021-12-10]
+	Updated security/py-certbot-dns-gehirn to 1.22.0 [adam 2021-12-10]
+	Updated security/py-certbot-dns-google to 1.22.0 [adam 2021-12-10]
+	Updated security/py-certbot-dns-linode to 1.22.0 [adam 2021-12-10]
+	Updated security/py-certbot-dns-luadns to 1.22.0 [adam 2021-12-10]
+	Updated security/py-certbot-dns-nsone to 1.22.0 [adam 2021-12-10]
+	Updated security/py-certbot-dns-ovh to 1.22.0 [adam 2021-12-10]
+	Updated security/py-certbot-dns-rfc2136 to 1.22.0 [adam 2021-12-10]
+	Updated security/py-certbot-dns-route53 to 1.22.0 [adam 2021-12-10]
+	Updated security/py-certbot-dns-sakuracloud to 1.22.0 [adam 2021-12-10]
+	Updated security/py-certbot-nginx to 1.22.0 [adam 2021-12-10]
