@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1260 2021/11/25 21:14:51 wiz Exp $
+# $NetBSD: Makefile,v 1.1261 2021/12/10 18:42:53 hubertf Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -791,6 +791,7 @@ SUBDIR+=	p5-Text-Markdown
 SUBDIR+=	p5-Text-Markdown-Discount
 SUBDIR+=	p5-Text-MicroTemplate
 SUBDIR+=	p5-Text-Microformat
+SUBDIR+=	p5-Text-Morse
 SUBDIR+=	p5-Text-MultiMarkdown
 SUBDIR+=	p5-Text-Ngram
 SUBDIR+=	p5-Text-Nimble
