@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.2 2021/07/25 16:46:45 tnn Exp $
+# $NetBSD: go-modules.mk,v 1.3 2021/12/10 11:59:34 tnn Exp $
 
 GO_MODULE_FILES+=	github.com/fatih/color/@v/v1.9.0.mod
 GO_MODULE_FILES+=	github.com/fatih/color/@v/v1.9.0.zip
