@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2021/05/13 10:16:19 nia Exp $
+# $NetBSD: Makefile,v 1.22 2021/12/10 13:23:56 nia Exp $
 
-VERSION=		1.0.1
-DISTNAME=		luasec-${VERSION}
-PKGNAME=		${DISTNAME:S/luasec/${LUA_PKGPREFIX}-sec/}
+DISTNAME=		luasec-1.0.2
+PKGNAME=		${LUA_PKGPREFIX}-${DISTNAME:S/^luasec-/sec-/}
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_GITHUB:=brunoos/}
-GITHUB_TAG=		v${VERSION}
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 GITHUB_PROJECT=		${DISTNAME:S/-${PKGVERSION_NOREV}//}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
