@@ -147,7 +147,8 @@ gboolean get_cpu_usage (gushort *cpu_count, gfloat *cpu_user, gfloat *cpu_system
 /* vmtotal values in #pg */
 #define pagetok(nb) ((nb) * (getpagesize()))
 
-gboolean get_memory_usage (guint64 *memory_total, guint64 *memory_free,
+gboolean get_memory_usage (guint64 *memory_total,
+		guint64 *memory_available, guint64 *memory_free,
 		guint64 *memory_cache, guint64 *memory_buffers,
 		guint64 *swap_total, guint64 *swap_free)
 {
@@ -173,6 +174,7 @@ gboolean get_memory_usage (guint64 *memory_total, guint64 *memory_free,
 	*memory_free = pagetok((guint64)vmtotal.t_free);
 	*memory_cache = 0;
 	*memory_buffers = pagetok(vmtotal.t_rm - vmtotal.t_arm);
+	*memory_available = *memory_free + *memory_cache + *memory_buffers;
 
 	/* get swap stats */
 	if ((nswap = swapctl(SWAP_NSWAP, 0, 0)) == 0)
