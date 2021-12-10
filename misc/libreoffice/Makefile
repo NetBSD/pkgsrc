@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.275 2021/12/08 16:05:42 adam Exp $
+# $NetBSD: Makefile,v 1.276 2021/12/10 19:00:13 tsutsui Exp $
 
 VERREL=		7.2.3
 VERRC=		2
@@ -262,6 +262,12 @@ MAKE_ENV+=		SHELL=${BASH}
 #MAKE_ENV+=		LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
 BUILD_MAKE_FLAGS+=	VERBOSE=true
 #BUILD_MAKE_FLAGS+=	GMAKE_OPTIONS+=-p
+
+.if ${MACHINE_ARCH} == "i386"
+# XXX: avoid unexpected substitution in the include path (work.i386 -> work.1)
+#      when ${OBJMACHINE} is set (PR/56440)
+CFLAGS+=		-Ui386
+.endif
 
 .if ${OPSYS} != "Linux"
 BUILDLINK_TRANSFORM+=	rm:-ldl
