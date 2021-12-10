@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6068 2021/12/10 13:11:51 nia Exp $
+$NetBSD: CHANGES-2021,v 1.6069 2021/12/10 13:16:33 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9150,3 +9150,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/timescaledb-tune to 0.12.0 [tnn 2021-12-10]
 	Updated time/lua-date to 2.2 [nia 2021-12-10]
 	Updated devel/lua-inspect to 3.1.2 [nia 2021-12-10]
+	Updated devel/lua-penlight to 1.11.0 [nia 2021-12-10]
