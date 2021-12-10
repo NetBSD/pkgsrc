@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6071 2021/12/10 13:24:07 nia Exp $
+$NetBSD: CHANGES-2021,v 1.6072 2021/12/10 14:32:18 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9153,3 +9153,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/lua-penlight to 1.11.0 [nia 2021-12-10]
 	Updated devel/lua-posix to 35.1 [nia 2021-12-10]
 	Updated security/lua-sec to 1.0.2 [nia 2021-12-10]
+	Updated www/firefox91 to 91.4.0 [nia 2021-12-10]
