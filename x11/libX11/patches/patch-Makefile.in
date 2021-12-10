@@ -1,12 +1,12 @@
-$NetBSD: patch-Makefile.in,v 1.8 2021/12/07 08:38:13 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.9 2021/12/10 08:54:44 wiz Exp $
 
 Avoid unnecessary auto* due to patch-aa modifying configure.ac.
 
---- Makefile.in.orig	2021-12-07 01:40:02.000000000 +0000
+--- Makefile.in.orig	2021-12-10 04:18:59.000000000 +0000
 +++ Makefile.in
-@@ -92,8 +92,7 @@ subdir = .
- ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
- am__aclocal_m4_deps = $(top_srcdir)/m4/ax_define_dir.m4 \
+@@ -95,8 +95,7 @@ am__aclocal_m4_deps = $(top_srcdir)/m4/a
+ 	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
+ 	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
  	$(top_srcdir)/configure.ac
 -am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 -	$(ACLOCAL_M4)
