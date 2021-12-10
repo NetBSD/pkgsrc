@@ -1,8 +1,8 @@
-$NetBSD: patch-src_kerberosgss.c,v 1.1 2016/06/09 02:06:18 markd Exp $
+$NetBSD: patch-src_kerberosgss.c,v 1.2 2021/12/10 22:42:35 joerg Exp $
 
 Support heimdal
 
---- src/kerberosgss.c.orig	2016-01-25 17:51:33.000000000 +0000
+--- src/kerberosgss.c.orig	2021-01-07 23:03:04.000000000 +0000
 +++ src/kerberosgss.c
 @@ -43,7 +43,7 @@ char* server_principal_details(const cha
      int code;
@@ -31,7 +31,28 @@ Support heimdal
      }
      
      while ((code = krb5_kt_next_entry(kcontext, kt, &entry, &cursor)) == 0) {
-@@ -115,9 +115,8 @@ char* server_principal_details(const cha
+@@ -99,12 +99,20 @@ char* server_principal_details(const cha
+             }
+             strcpy(result, pname);
+             krb5_free_unparsed_name(kcontext, pname);
++#ifdef HEIMDAL
++            krb5_kt_free_entry(kcontext, &entry);
++#else
+             krb5_free_keytab_entry_contents(kcontext, &entry);
++#endif
+             break;
+         }
+         
+         krb5_free_unparsed_name(kcontext, pname);
++#ifdef HEIMDAL
++        krb5_kt_free_entry(kcontext, &entry);
++#else
+         krb5_free_keytab_entry_contents(kcontext, &entry);
++#endif
+     }
+     
+     if (result == NULL) {
+@@ -115,9 +123,8 @@ char* server_principal_details(const cha
      }
      
  end:

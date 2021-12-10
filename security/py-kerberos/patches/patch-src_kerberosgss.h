@@ -1,10 +1,10 @@
-$NetBSD: patch-src_kerberosgss.h,v 1.1 2016/06/09 02:06:18 markd Exp $
+$NetBSD: patch-src_kerberosgss.h,v 1.2 2021/12/10 22:42:35 joerg Exp $
 
 Support heimdal
 
---- src/kerberosgss.h.orig	2016-01-25 17:51:33.000000000 +0000
+--- src/kerberosgss.h.orig	2021-01-07 23:03:04.000000000 +0000
 +++ src/kerberosgss.h
-@@ -14,9 +14,16 @@
+@@ -14,11 +14,20 @@
   * limitations under the License.
   **/
  
@@ -19,5 +19,9 @@ Support heimdal
  #include <gssapi/gssapi_krb5.h>
 +#endif
  
++#ifndef HEIMDAL
  #define krb5_get_err_text(context,code) error_message(code)
++#endif
  
+ #define AUTH_GSS_ERROR      -1
+ #define AUTH_GSS_COMPLETE    1
