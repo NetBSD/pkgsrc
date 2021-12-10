@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6073 2021/12/10 14:32:38 nia Exp $
+$NetBSD: CHANGES-2021,v 1.6074 2021/12/10 17:18:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9155,3 +9155,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/lua-sec to 1.0.2 [nia 2021-12-10]
 	Updated www/firefox91 to 91.4.0 [nia 2021-12-10]
 	Updated www/firefox91-l10n to 91.4.0 [nia 2021-12-10]
+	Updated x11/citron to 0.4.1 [pin 2021-12-10]
