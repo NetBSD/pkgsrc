@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6062 2021/12/10 08:54:53 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6063 2021/12/10 08:55:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9124,3 +9124,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/wireshark to 3.6.0 [adam 2021-12-10]
 	Updated devel/py-prompt_toolkit to 3.0.24 [adam 2021-12-10]
 	Updated x11/libX11 to 1.7.3.1 [wiz 2021-12-10]
+	Updated textproc/py-jsonpickle to 2.0.0 [adam 2021-12-10]
+	Updated comms/py-rich to 10.15.2 [adam 2021-12-10]
