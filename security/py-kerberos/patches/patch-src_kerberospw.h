@@ -1,10 +1,10 @@
-$NetBSD: patch-src_kerberospw.h,v 1.1 2016/06/09 02:06:18 markd Exp $
+$NetBSD: patch-src_kerberospw.h,v 1.2 2021/12/10 22:42:35 joerg Exp $
 
 Support heimdal
 
---- src/kerberospw.h.orig	2015-03-26 21:53:18.000000000 +0000
+--- src/kerberospw.h.orig	2021-01-07 23:03:04.000000000 +0000
 +++ src/kerberospw.h
-@@ -15,9 +15,15 @@
+@@ -15,11 +15,19 @@
   *
   **/
  
@@ -18,5 +18,9 @@ Support heimdal
  #include <gssapi/gssapi_krb5.h>
 +#endif
  
++#ifndef HEIMDAL
  #define krb5_get_err_text(context,code) error_message(code)
++#endif
  
+ int change_user_krb5pwd(
+     const char *user, const char* oldpswd, const char *newpswd
