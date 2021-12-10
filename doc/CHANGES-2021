@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6076 2021/12/10 17:21:28 pin Exp $
+$NetBSD: CHANGES-2021,v 1.6077 2021/12/10 18:20:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9158,3 +9158,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/citron to 0.4.1 [pin 2021-12-10]
 	Updated sysutils/felix to 0.2.12 [pin 2021-12-10]
 	Updated audio/ncspot to 0.9.3 [pin 2021-12-10]
+	Updated textproc/ugrep to 3.3.11 [adam 2021-12-10]
+	Updated textproc/py-ICU to 2.8 [adam 2021-12-10]
