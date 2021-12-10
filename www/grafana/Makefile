@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2021/12/09 17:50:14 bsiegert Exp $
+# $NetBSD: Makefile,v 1.60 2021/12/10 12:29:21 tnn Exp $
 
 DISTNAME=	grafana-8.3.1
 PKGREVISION=	1
@@ -77,8 +77,8 @@ CONF_FILES+=	${PREFIX}/share/grafana/conf/sample.ini \
 
 # These comands come from Makefile, build-go target.
 do-build:
-	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/wire gen -tags oss ./pkg/server ./pkg/cmd/grafana-cli/runner
-	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${GO} run build.go build
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${PREFIX}/bin/wire gen -tags oss ./pkg/server ./pkg/cmd/grafana-cli/runner
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} run build.go build
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/*/grafana-cli ${DESTDIR}${PREFIX}/bin/
