@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6066 2021/12/10 12:00:23 tnn Exp $
+$NetBSD: CHANGES-2021,v 1.6067 2021/12/10 13:08:58 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9148,3 +9148,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/postgresql-timescaledb to 2.5.1 [tnn 2021-12-10]
 	Updated databases/postgresql-promscale_extension to 0.3.0 [tnn 2021-12-10]
 	Updated databases/timescaledb-tune to 0.12.0 [tnn 2021-12-10]
+	Updated time/lua-date to 2.2 [nia 2021-12-10]
