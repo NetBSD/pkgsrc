@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6059 2021/12/09 22:39:26 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6060 2021/12/10 00:00:17 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9120,3 +9120,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated shells/static-tcsh to 6.23.01 [kim 2021-12-09]
 	Updated shells/standalone-tcsh to 6.23.01 [kim 2021-12-09]
 	Updated lang/vala to 0.54.4 [wiz 2021-12-09]
+	Updated sysutils/xfce4-taskmanager to 1.4.2 [gutteridge 2021-12-10]
