@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/07/14 12:41:21 nia Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/12/10 13:20:54 nia Exp $
 ${LUA_CDIR}/posix/ctype.so
 ${LUA_CDIR}/posix/dirent.so
 ${LUA_CDIR}/posix/errno.so
@@ -49,6 +49,8 @@ ${LUA_DOCDIR}/examples/lock.lua
 ${LUA_DOCDIR}/examples/lock.lua.html
 ${LUA_DOCDIR}/examples/netlink-uevent.lua
 ${LUA_DOCDIR}/examples/netlink-uevent.lua.html
+${LUA_DOCDIR}/examples/packet-socket.lua
+${LUA_DOCDIR}/examples/packet-socket.lua.html
 ${LUA_DOCDIR}/examples/ping.lua
 ${LUA_DOCDIR}/examples/ping.lua.html
 ${LUA_DOCDIR}/examples/poll.lua
