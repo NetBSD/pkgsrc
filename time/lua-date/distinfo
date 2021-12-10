@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:24:23 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/12/10 13:08:46 nia Exp $
 
-BLAKE2s (lua-date-2.1.3.tar.gz) = 4604f08dd9f8af1b725f7a4d281390eb4126f10a0d85676576e0f1195651b15d
-SHA512 (lua-date-2.1.3.tar.gz) = ea0249cced36b564c2181c172ee75c73667f3349d75ef4f9f16d8af8d5415631b7e27ed2824952a19ee5a8c93ec757163bef32d5972547cb5e315b52885f0bd6
-Size (lua-date-2.1.3.tar.gz) = 30072 bytes
+BLAKE2s (lua-date-2.2.tar.gz) = 7d0ce7b473a6bec726594b0a49248f1cc1d2c18aad9ed0bf966918a1b9337cbc
+SHA512 (lua-date-2.2.tar.gz) = cebf3532d3b127df1b8439bb395fa81929c89cd897930164c6e391d6a65dd93fe2f03ebd0c77312a6a2ed1ed7fa24308862ca7ca44c5bf84cbe7150ef2dce429
+Size (lua-date-2.2.tar.gz) = 31084 bytes
