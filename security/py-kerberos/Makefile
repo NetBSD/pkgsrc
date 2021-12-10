@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/10/21 07:46:38 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2021/12/10 22:42:35 joerg Exp $
 
 DISTNAME=	kerberos-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,8 +11,8 @@ HOMEPAGE=	https://github.com/apple/ccs-pykerberos
 COMMENT=	Python Kerberos implementation
 LICENSE=	apache-2.0
 
-# uses krb5_free_keytab_entry_contents, which only mit-krb5 provides
-KRB5_ACCEPTED=	mit-krb5
+# When updating, try to build with the following:
+#CFLAGS+=	-Werror=implicit-function-declaration
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/krb5.buildlink3.mk"
