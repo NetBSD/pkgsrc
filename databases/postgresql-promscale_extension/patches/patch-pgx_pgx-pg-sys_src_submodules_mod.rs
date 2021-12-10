@@ -1,9 +1,9 @@
-$NetBSD: patch-pgx_pgx-pg-sys_src_submodules_mod.rs,v 1.1 2021/08/25 11:06:28 tnn Exp $
+$NetBSD: patch-pgx_pgx-pg-sys_src_submodules_mod.rs,v 1.2 2021/12/10 11:44:19 tnn Exp $
 
 NetBSD support
 
---- pgx/pgx-pg-sys/src/submodules/mod.rs.orig	2021-04-14 16:14:29.000000000 +0000
-+++ pgx/pgx-pg-sys/src/submodules/mod.rs
+--- ../vendor/pgx-pg-sys-0.2.0/src/submodules/mod.rs.orig	1973-11-29 21:33:09.000000000 +0000
++++ ../vendor/pgx-pg-sys-0.2.0/src/submodules/mod.rs
 @@ -20,6 +20,15 @@ extern "C" {
      ) -> std::os::raw::c_int;
  }
@@ -17,6 +17,6 @@ NetBSD support
 +    ) -> std::os::raw::c_int;
 +}
 +
- #[cfg(target_os = "macos")]
+ #[cfg(any(target_os = "macos", target_os = "freebsd"))]
  extern "C" {
      pub(crate) fn sigsetjmp(
