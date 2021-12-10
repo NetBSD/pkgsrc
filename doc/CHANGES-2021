@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6061 2021/12/10 08:38:47 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6062 2021/12/10 08:54:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9123,3 +9123,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/xfce4-taskmanager to 1.4.2 [gutteridge 2021-12-10]
 	Updated net/wireshark to 3.6.0 [adam 2021-12-10]
 	Updated devel/py-prompt_toolkit to 3.0.24 [adam 2021-12-10]
+	Updated x11/libX11 to 1.7.3.1 [wiz 2021-12-10]
