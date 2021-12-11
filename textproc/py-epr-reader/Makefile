@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2021/04/26 21:19:28 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2021/12/11 21:47:09 adam Exp $
 
-DISTNAME=	epr-reader-2.4.10
+DISTNAME=	epr-reader-2.4.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/epr-reader/}
