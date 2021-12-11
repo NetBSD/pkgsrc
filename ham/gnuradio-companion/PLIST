@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2021/04/07 16:14:07 tnn Exp $
+@comment $NetBSD: PLIST,v 1.12 2021/12/11 14:57:49 tnn Exp $
 bin/gnuradio-companion
 bin/grcc
 ${PYSITELIB}/gnuradio/grc/__init__.py
@@ -393,6 +393,7 @@ share/gnuradio/grc/blocks/blocks_interleaved_short_to_complex.block.yml
 share/gnuradio/grc/blocks/blocks_keep_m_in_n.block.yml
 share/gnuradio/grc/blocks/blocks_keep_one_in_n.block.yml
 share/gnuradio/grc/blocks/blocks_magphase_to_complex.block.yml
+share/gnuradio/grc/blocks/blocks_matrix_interleaver.block.yml
 share/gnuradio/grc/blocks/blocks_max_xx.block.yml
 share/gnuradio/grc/blocks/blocks_message_debug.block.yml
 share/gnuradio/grc/blocks/blocks_message_strobe.block.yml
