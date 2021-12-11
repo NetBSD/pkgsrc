@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:23:03 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/12/11 21:47:09 adam Exp $
 
-BLAKE2s (epr-reader-2.4.10.tar.gz) = e8f66edd008b7d82079bb73ce8e54aa75aff80379a28e7c9a06458a30b7cdad4
-SHA512 (epr-reader-2.4.10.tar.gz) = 30b147c6f78149a9f8072fe841c98d8eec05e5fe470432f5721445d92507ee00fe6ea7958ff7aa382d5a690b38f4615ff71c85b2eb6fc0e863c99da40023b29c
-Size (epr-reader-2.4.10.tar.gz) = 16315 bytes
+BLAKE2s (epr-reader-2.4.11.tar.gz) = d66208ef24c97bf39a598c59ac0b984d497bdc69af103ac88088f6c16aab39cf
+SHA512 (epr-reader-2.4.11.tar.gz) = ee653821367b360216f3069bee00c7643a03322c9b87292fde6bb415134d7488588b2c8e83f7e45bbfbf35984dcc148b44955e41ade014c1c85c78655bf9843a
+Size (epr-reader-2.4.11.tar.gz) = 16591 bytes
