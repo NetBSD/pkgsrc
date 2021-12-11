@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2021/07/21 20:00:51 tnn Exp $
+@comment $NetBSD: PLIST,v 1.34 2021/12/11 14:57:50 tnn Exp $
 bin/gnuradio-config-info
 bin/gr_filter_design
 include/gnuradio/analog/agc.h
@@ -374,25 +374,25 @@ lib/cmake/gnuradio/gnuradio-runtimeConfig.cmake
 lib/cmake/gnuradio/gnuradio-runtimeTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-runtimeTargets.cmake
 lib/libgnuradio-analog.so
-lib/libgnuradio-analog.so.3.9.2
+lib/libgnuradio-analog.so.3.9.4
 lib/libgnuradio-analog.so.${PKGVERSION}
 lib/libgnuradio-audio.so
-lib/libgnuradio-audio.so.3.9.2
+lib/libgnuradio-audio.so.3.9.4
 lib/libgnuradio-audio.so.${PKGVERSION}
 lib/libgnuradio-blocks.so
-lib/libgnuradio-blocks.so.3.9.2
+lib/libgnuradio-blocks.so.3.9.4
 lib/libgnuradio-blocks.so.${PKGVERSION}
 lib/libgnuradio-fft.so
-lib/libgnuradio-fft.so.3.9.2
+lib/libgnuradio-fft.so.3.9.4
 lib/libgnuradio-fft.so.${PKGVERSION}
 lib/libgnuradio-filter.so
-lib/libgnuradio-filter.so.3.9.2
+lib/libgnuradio-filter.so.3.9.4
 lib/libgnuradio-filter.so.${PKGVERSION}
 lib/libgnuradio-pmt.so
-lib/libgnuradio-pmt.so.3.9.2
+lib/libgnuradio-pmt.so.3.9.4
 lib/libgnuradio-pmt.so.${PKGVERSION}
 lib/libgnuradio-runtime.so
-lib/libgnuradio-runtime.so.3.9.2
+lib/libgnuradio-runtime.so.3.9.4
 lib/libgnuradio-runtime.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-analog.pc
 lib/pkgconfig/gnuradio-audio.pc
@@ -445,6 +445,9 @@ ${PYSITELIB}/gnuradio/blocks/__init__.py
 ${PYSITELIB}/gnuradio/blocks/__init__.pyc
 ${PYSITELIB}/gnuradio/blocks/__init__.pyo
 ${PYSITELIB}/gnuradio/blocks/blocks_python.so
+${PYSITELIB}/gnuradio/blocks/matrix_interleaver.py
+${PYSITELIB}/gnuradio/blocks/matrix_interleaver.pyc
+${PYSITELIB}/gnuradio/blocks/matrix_interleaver.pyo
 ${PYSITELIB}/gnuradio/blocks/msg_meta_to_pair.py
 ${PYSITELIB}/gnuradio/blocks/msg_meta_to_pair.pyc
 ${PYSITELIB}/gnuradio/blocks/msg_meta_to_pair.pyo
@@ -598,6 +601,7 @@ share/gnuradio/examples/audio/multi_tone.py
 share/gnuradio/examples/audio/noise.py
 share/gnuradio/examples/audio/spectrum_inversion.py
 share/gnuradio/examples/audio/test_resampler.py
+share/gnuradio/examples/blocks/matrix_interleaver.grc
 share/gnuradio/examples/blocks/matrix_multiplexer.grc
 share/gnuradio/examples/blocks/msg_to_var.grc
 share/gnuradio/examples/blocks/peak_detector2.grc

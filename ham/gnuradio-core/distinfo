@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.44 2021/10/26 10:48:38 nia Exp $
+$NetBSD: distinfo,v 1.45 2021/12/11 14:57:50 tnn Exp $
 
-BLAKE2s (gnuradio-3.9.2.0.tar.gz) = 7abe7d1e9b514c91277c8373f03b108bc719daa1cc49eac43c8034be7152f2d8
-SHA512 (gnuradio-3.9.2.0.tar.gz) = 4a2807d6713fff10906354553ef5810b81ef4116573fdf15b122e8fc18373c56e1685b8592a8f0f08c0524c4983f3d7d4774bdada98dff0990d028f71cbd7898
-Size (gnuradio-3.9.2.0.tar.gz) = 4219714 bytes
-SHA1 (patch-gnuradio-runtime_lib_constants.cc.in) = e3ca88db06eef0a38387ddbfbd9a4d3b6262b9a6
+BLAKE2s (gnuradio-3.9.4.0.tar.gz) = 33705adfc5e619f88647e17c1cd05ea8c3bebeac88c4a528f5d01940fe3f71f6
+SHA512 (gnuradio-3.9.4.0.tar.gz) = 61c8a943f3cc0b33e4d4994b9e0bf5f79458bb21a2648fe6094dfb9b50edea7452f1bd35e6b1e566e331cf7fb4ea2a342d59bbd8798d5710d80eb037f427a183
+Size (gnuradio-3.9.4.0.tar.gz) = 4243680 bytes
+SHA1 (patch-gnuradio-runtime_lib_constants.cc.in) = 1c82722bc97a1f6b8d58a80d45ce096fb4267870
 SHA1 (patch-gr-audio_lib_CMakeLists.txt) = 9adacb93a20b2be596a23985306cbfd5f93c80a8
 SHA1 (patch-gr-audio_lib_alsa_alsa__impl_h) = cfa9b629e5cf21198cfd53cf27a908b5874866f4

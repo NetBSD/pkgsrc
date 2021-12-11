@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2021/06/27 08:08:59 tnn Exp $
+@comment $NetBSD: PLIST,v 1.12 2021/12/11 14:57:50 tnn Exp $
 include/gnuradio/digital/adaptive_algorithm.h
 include/gnuradio/digital/adaptive_algorithm_cma.h
 include/gnuradio/digital/adaptive_algorithm_lms.h
@@ -24,11 +24,13 @@ include/gnuradio/digital/correlate_access_code_tag_bb.h
 include/gnuradio/digital/correlate_access_code_tag_ff.h
 include/gnuradio/digital/costas_loop_cc.h
 include/gnuradio/digital/cpmmod_bc.h
+include/gnuradio/digital/crc16_async_bb.h
 include/gnuradio/digital/crc32.h
 include/gnuradio/digital/crc32_async_bb.h
 include/gnuradio/digital/crc32_bb.h
 include/gnuradio/digital/decision_feedback_equalizer.h
 include/gnuradio/digital/descrambler_bb.h
+include/gnuradio/digital/diff_coding_type.h
 include/gnuradio/digital/diff_decoder_bb.h
 include/gnuradio/digital/diff_encoder_bb.h
 include/gnuradio/digital/diff_phasor_cc.h
@@ -90,7 +92,7 @@ lib/cmake/gnuradio/gnuradio-digitalConfig.cmake
 lib/cmake/gnuradio/gnuradio-digitalTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-digitalTargets.cmake
 lib/libgnuradio-digital.so
-lib/libgnuradio-digital.so.3.9.2
+lib/libgnuradio-digital.so.3.9.4
 lib/libgnuradio-digital.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-digital.pc
 ${PYSITELIB}/gnuradio/digital/__init__.py
@@ -241,6 +243,7 @@ share/gnuradio/grc/blocks/digital_correlate_access_code_tag_xx.block.yml
 share/gnuradio/grc/blocks/digital_correlate_access_code_xx_ts.block.yml
 share/gnuradio/grc/blocks/digital_costas_loop_cc.block.yml
 share/gnuradio/grc/blocks/digital_cpmmod_bc.block.yml
+share/gnuradio/grc/blocks/digital_crc16_async_bb.block.yml
 share/gnuradio/grc/blocks/digital_crc32_async_bb.block.yml
 share/gnuradio/grc/blocks/digital_crc32_bb.block.yml
 share/gnuradio/grc/blocks/digital_decision_feedback_equalizer.block.yml
