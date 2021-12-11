@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:30:58 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/12/11 15:34:30 taca Exp $
 
-BLAKE2s (http_parser.rb-0.6.0.gem) = c1968fae8d959a341425e34cf0cda383e1f0c110d9836ffa2c82148196b95d77
-SHA512 (http_parser.rb-0.6.0.gem) = 51c29bfc85de8cedb4e98fec84c955252556abaa4d0848fbc38b232879ffc946c72acf38440e8e9f1e31a8b734a68d43a96924af5f48ac4f1a054153ec913a08
-Size (http_parser.rb-0.6.0.gem) = 177664 bytes
+BLAKE2s (http_parser.rb-0.8.0.gem) = 944278a889084b30f47f71f05b7d10ea68065ae2b1de06c9184111d36d9f3f31
+SHA512 (http_parser.rb-0.8.0.gem) = 228e8a617154411c43a548f10d2d8d2cae2d97970f621b4ef2955de94ed1943611cff22659cd75d63a09a0a02396993ab646ee29303d99856b46a80253a618c8
+Size (http_parser.rb-0.8.0.gem) = 195072 bytes
