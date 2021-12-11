@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6111 2021/12/11 15:36:24 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6112 2021/12/11 15:39:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9213,3 +9213,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated meta-pkgs/gnuradio to 3.9.4.0 [tnn 2021-12-11]
 	Updated www/ruby-http_parser.rb to 0.8.0 [taca 2021-12-11]
 	Updated www/ruby-mechanize to 2.8.3 [taca 2021-12-11]
+	Updated www/ruby-puma to 5.5.2 [taca 2021-12-11]
