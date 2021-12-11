@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6122 2021/12/11 21:02:12 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6123 2021/12/11 21:13:09 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9229,3 +9229,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-rsa to 4.8 [adam 2021-12-11]
 	Updated converters/py-charset-normalizer to 2.0.9 [adam 2021-12-11]
 	Updated math/py-quadprog to 0.1.11 [adam 2021-12-11]
+	Updated time/libical to 3.0.12 [gutteridge 2021-12-11]
