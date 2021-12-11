@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.27 2021/10/07 14:21:15 nia Exp $
+$NetBSD: distinfo,v 1.28 2021/12/11 14:57:14 wiz Exp $
 
-RMD160 (UnlimitedJCEPolicyJDK7.zip) = a4a6a284579f43d2df3532d279e143d2f03c2c3f
+BLAKE2s (UnlimitedJCEPolicyJDK7.zip) = 78abaf4284908db58251c54876f5735a53a5ceccd5d111bb1f6b423211f9e11f
 SHA512 (UnlimitedJCEPolicyJDK7.zip) = 02eca7da8f3fffea388431d5352290535a63d53a1f5c795d6511ccba62445787a0ee6ad4bc1852e5262860b6d607ba2a8c6a3dbb0c3e1d7c3a67ac7bbc783204
 Size (UnlimitedJCEPolicyJDK7.zip) = 7426 bytes
-RMD160 (jre-7u80-linux-x64.tar.gz) = 942f0da61dde6b760c24fd144fee2555d05497a3
+BLAKE2s (jre-7u80-linux-x64.tar.gz) = 961c7237135718ed5be7281f1d0632ca579fbad3e6d3936f1c28e72de9a6c0cd
 SHA512 (jre-7u80-linux-x64.tar.gz) = e61e78ab1be0313690e8ab8d6cbae7366dd78aa4716f47c8908178196b658b94ee318dd04043965a72c34d8ef5c1cb4902afaa2188e76eb944256f090339107d
 Size (jre-7u80-linux-x64.tar.gz) = 47110223 bytes
 RMD160 (jre-7u80-solaris-i586.tar.gz) = 98bbc8c74b76d54756fd036dbc42f15c937ff3aa
