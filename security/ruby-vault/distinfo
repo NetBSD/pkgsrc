@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/12/11 14:07:31 taca Exp $
+
+BLAKE2s (vault-0.16.0.gem) = d81b0dcf22656296f4d959c39683413e6ceaa5fd3f7990ab0539d8002e9559b0
+SHA512 (vault-0.16.0.gem) = 4bb8e6c4472d483734be9f12ecb898d531a0a7f4df92ef26d9f83fd2cccbe58f4fee1fa870c0d6737d93c84929cbcb211fef6caad74f5a5f895cce0776ca51cd
+Size (vault-0.16.0.gem) = 49664 bytes
