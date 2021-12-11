@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2021/01/14 15:05:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2021/12/11 14:41:21 taca Exp $
 bin/yard${RUBY_SUFFIX}
 bin/yardoc${RUBY_SUFFIX}
 bin/yri${RUBY_SUFFIX}
@@ -13,7 +13,6 @@ ${GEM_LIBDIR}/.github/workflows/gem.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.rubocop.yml
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/.yardopts_guide
 ${GEM_LIBDIR}/.yardopts_i18n
@@ -279,6 +278,7 @@ ${GEM_LIBDIR}/lib/yard/verifier.rb
 ${GEM_LIBDIR}/lib/yard/version.rb
 ${GEM_LIBDIR}/po/ja.po
 ${GEM_LIBDIR}/samus.json
+${GEM_LIBDIR}/tasks/prepare_tag.rake
 ${GEM_LIBDIR}/tasks/update_error_map.rake
 ${GEM_LIBDIR}/templates/default/class/dot/setup.rb
 ${GEM_LIBDIR}/templates/default/class/dot/superklass.erb
