@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6123 2021/12/11 21:13:09 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.6124 2021/12/11 21:57:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9230,3 +9230,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated converters/py-charset-normalizer to 2.0.9 [adam 2021-12-11]
 	Updated math/py-quadprog to 0.1.11 [adam 2021-12-11]
 	Updated time/libical to 3.0.12 [gutteridge 2021-12-11]
+	Updated textproc/py-epr-reader to 2.4.11 [adam 2021-12-11]
+	Updated math/py-xarray to 0.20.2 [adam 2021-12-11]
