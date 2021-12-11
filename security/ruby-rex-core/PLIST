@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/10/12 16:18:13 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/11 13:53:21 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
@@ -19,6 +19,7 @@ ${GEM_LIBDIR}/lib/rex/io/socket_abstraction.rb
 ${GEM_LIBDIR}/lib/rex/io/stream.rb
 ${GEM_LIBDIR}/lib/rex/io/stream_abstraction.rb
 ${GEM_LIBDIR}/lib/rex/io/stream_server.rb
+${GEM_LIBDIR}/lib/rex/stopwatch.rb
 ${GEM_LIBDIR}/lib/rex/sync.rb
 ${GEM_LIBDIR}/lib/rex/sync/event.rb
 ${GEM_LIBDIR}/lib/rex/sync/read_write_lock.rb
