@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2021/09/19 17:54:44 taca Exp $
+# $NetBSD: Makefile,v 1.23 2021/12/11 15:35:58 taca Exp $
 
-DISTNAME=	mechanize-2.8.2
+DISTNAME=	mechanize-2.8.3
 CATEGORIES=	www
 
 MAINTAINER=	minskim@NetBSD.org
@@ -9,10 +9,10 @@ COMMENT=	Library to automate interaction with websites
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.8<3:../../net/ruby-addressable
-DEPENDS+=	${RUBY_PKGPREFIX}-domain_name>=0.5.20190701<1:../../net/ruby-domain_name
-DEPENDS+=	${RUBY_PKGPREFIX}-http-cookie>=1.0<2:../../www/ruby-http-cookie
+DEPENDS+=	${RUBY_PKGPREFIX}-domain_name>=0.5.20190701:../../net/ruby-domain_name
+DEPENDS+=	${RUBY_PKGPREFIX}-http-cookie>=1.0.3:../../www/ruby-http-cookie
 DEPENDS+=	${RUBY_PKGPREFIX}-mime-types>=3.0<4:../../mail/ruby-mime-types
-DEPENDS+=	${RUBY_PKGPREFIX}-net-http-digest_auth>=1.4.1<2:../../www/ruby-net-http-digest_auth
+DEPENDS+=	${RUBY_PKGPREFIX}-net-http-digest_auth>=1.4.1:../../www/ruby-net-http-digest_auth
 DEPENDS+=	${RUBY_PKGPREFIX}-net-http-persistent>=2.5.2:../../www/ruby-net-http-persistent
 DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri>=1.11.2:../../textproc/ruby-nokogiri
 DEPENDS+=	${RUBY_PKGPREFIX}-rubyntlm>=0.6.3:../../security/ruby-rubyntlm
