@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2021/02/24 19:14:38 adam Exp $
+# $NetBSD: Makefile,v 1.12 2021/12/11 20:06:49 adam Exp $
 
-DISTNAME=	rsa-4.7.2
+DISTNAME=	rsa-4.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rsa/}
@@ -11,8 +11,6 @@ COMMENT=	Pure-Python RSA implementation
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-asn1>=0.1.3:../../security/py-asn1
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-mypy-[0-9]*:../../lang/py-mypy
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
