@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6080 2021/12/11 07:25:05 wen Exp $
+$NetBSD: CHANGES-2021,v 1.6081 2021/12/11 10:00:35 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9163,3 +9163,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/python310 to 3.10.1nb2 [wiz 2021-12-10]
 	Updated databases/p5-SQL-Abstract-Limit to 0.143 [wen 2021-12-11]
 	Updated www/moodle to 3.11.4 [wen 2021-12-11]
+	Added graphics/raleigh-reloaded version 1.3 [tsutsui 2021-12-11]
