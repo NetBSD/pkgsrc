@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6102 2021/12/11 14:36:07 rhialto Exp $
+$NetBSD: CHANGES-2021,v 1.6103 2021/12/11 14:38:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9185,3 +9185,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/ruby-specinfra to 2.83.1 [taca 2021-12-11]
 	Updated textproc/ruby-kramdown-rfc2629 to 1.5.21 [taca 2021-12-11]
 	Updated emulators/simh to 4.0.0.20211211 [rhialto 2021-12-11]
+	Updated textproc/ruby-review to 5.3.0 [taca 2021-12-11]
