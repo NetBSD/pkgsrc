@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/11/23 21:45:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/12/11 21:57:35 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -95,6 +95,9 @@ ${PYSITELIB}/xarray/convert.pyo
 ${PYSITELIB}/xarray/core/__init__.py
 ${PYSITELIB}/xarray/core/__init__.pyc
 ${PYSITELIB}/xarray/core/__init__.pyo
+${PYSITELIB}/xarray/core/_reductions.py
+${PYSITELIB}/xarray/core/_reductions.pyc
+${PYSITELIB}/xarray/core/_reductions.pyo
 ${PYSITELIB}/xarray/core/_typed_ops.py
 ${PYSITELIB}/xarray/core/_typed_ops.pyc
 ${PYSITELIB}/xarray/core/_typed_ops.pyi
@@ -414,6 +417,9 @@ ${PYSITELIB}/xarray/util/__init__.pyo
 ${PYSITELIB}/xarray/util/generate_ops.py
 ${PYSITELIB}/xarray/util/generate_ops.pyc
 ${PYSITELIB}/xarray/util/generate_ops.pyo
+${PYSITELIB}/xarray/util/generate_reductions.py
+${PYSITELIB}/xarray/util/generate_reductions.pyc
+${PYSITELIB}/xarray/util/generate_reductions.pyo
 ${PYSITELIB}/xarray/util/print_versions.py
 ${PYSITELIB}/xarray/util/print_versions.pyc
 ${PYSITELIB}/xarray/util/print_versions.pyo
