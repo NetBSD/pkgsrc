@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/09/19 17:12:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/12/11 13:55:35 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/verify.yml
 ${GEM_LIBDIR}/.gitignore
@@ -16,6 +16,7 @@ ${GEM_LIBDIR}/data/templates/to_mem_pshreflection.ps1.template
 ${GEM_LIBDIR}/data/templates/to_mem_rc4.ps1.template
 ${GEM_LIBDIR}/lib/rex/powershell.rb
 ${GEM_LIBDIR}/lib/rex/powershell/command.rb
+${GEM_LIBDIR}/lib/rex/powershell/exceptions.rb
 ${GEM_LIBDIR}/lib/rex/powershell/function.rb
 ${GEM_LIBDIR}/lib/rex/powershell/obfu.rb
 ${GEM_LIBDIR}/lib/rex/powershell/output.rb
