@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 11:17:49 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/12/11 20:06:49 adam Exp $
 
-BLAKE2s (rsa-4.7.2.tar.gz) = 65515273a97b0adfeca1311b3d28adad0f6316e6cf55f90d683280bc096fc0fc
-SHA512 (rsa-4.7.2.tar.gz) = 63f561774dbaa10511167cba31e0f852e32b3250f2803edaa2729dc2b28baa2c42cb79dfbd49e38eb42ce82f665ed4c3d9dcc810c37380401e2c62202b1c7948
-Size (rsa-4.7.2.tar.gz) = 39711 bytes
+BLAKE2s (rsa-4.8.tar.gz) = 39a7384ac03dd11e06048b7bef761bcbc638f8fd3259e4e68521fac78c128089
+SHA512 (rsa-4.8.tar.gz) = 9dd030eb64aefe62aeefca3e8dbf90a363ef2220409a60911b6f3668dd8f36bd03ee40ea243fe8db98776e654131bfa301b781d4fc50e34f2aafd6d47165b6ba
+Size (rsa-4.8.tar.gz) = 28396 bytes
