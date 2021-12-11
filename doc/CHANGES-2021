@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6118 2021/12/11 17:28:38 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.6119 2021/12/11 17:40:43 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9220,3 +9220,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated cad/libredwg to 0.12.4 [gdt 2021-12-11]
 	Updated www/drupal8 to 8.9.20 [taca 2021-12-11]
 	Updated net/unifi to 6.5.54 [gdt 2021-12-11]
+	Updated ham/uhd to 4.1.0.4 [tnn 2021-12-11]
