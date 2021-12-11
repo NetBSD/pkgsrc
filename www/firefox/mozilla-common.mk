@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.211 2021/11/12 20:14:31 gutteridge Exp $
+# $NetBSD: mozilla-common.mk,v 1.212 2021/12/11 14:10:01 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -103,6 +103,8 @@ CONFIGURE_ARGS+=	--disable-icf
 CONFIGURE_ARGS+=	--disable-updater
 
 #CONFIGURE_ARGS+=	--with-libclang-path=${PREFIX}/lib
+
+CONFIGURE_ARGS+=	--without-wasm-sandboxed-libraries
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
