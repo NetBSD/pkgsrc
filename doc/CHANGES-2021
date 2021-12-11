@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6115 2021/12/11 15:50:48 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6116 2021/12/11 16:01:06 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9217,3 +9217,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-rack-cache to 1.13.0 [taca 2021-12-11]
 	Updated www/ruby-raindrops to 0.20.0 [taca 2021-12-11]
 	Updated www/ruby-selenium-webdriver to 4.1.0 [taca 2021-12-11]
+	Updated cad/libredwg to 0.12.4 [gdt 2021-12-11]
