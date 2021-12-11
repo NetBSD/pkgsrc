@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6104 2021/12/11 14:39:50 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6105 2021/12/11 14:41:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9187,3 +9187,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/simh to 4.0.0.20211211 [rhialto 2021-12-11]
 	Updated textproc/ruby-review to 5.3.0 [taca 2021-12-11]
 	Updated textproc/ruby-unicode-display_width to 2.1.0 [taca 2021-12-11]
+	Updated textproc/ruby-yard to 0.9.27 [taca 2021-12-11]
