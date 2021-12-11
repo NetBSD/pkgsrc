@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2021/09/29 19:00:51 adam Exp $
+# $NetBSD: Makefile,v 1.63 2021/12/11 17:39:56 tnn Exp $
 
-DISTNAME=	uhd-3.15.0.0
-PKGREVISION=	5
+DISTNAME=	uhd-4.1.0.4
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=EttusResearch/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -9,7 +8,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/EttusResearch/uhd
 COMMENT=	USRP (Universal Software Radio Peripheral) Hardware Drivers
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
@@ -43,10 +42,13 @@ EXTRACT_USING=		gtar
 WRKSRC=			${WRKDIR}/${DISTNAME}/host
 
 # The files with their name uhd-xxxx, are moved down from uhd/xxxx for this process.
+REPLACE_PYTHON+=	utils/convert_cal_data.py
 REPLACE_PYTHON+=	utils/converter_benchmark.py
 REPLACE_PYTHON+=	utils/latency/graph.py
 REPLACE_PYTHON+=	utils/latency/run_tests.py
+REPLACE_PYTHON+=	utils/rfnoc_image_builder.py
 REPLACE_PYTHON+=	utils/uhd_images_downloader.py.in
+REPLACE_PYTHON+=	utils/uhd_power_cal.py
 REPLACE_PYTHON+=	utils/usrp2_card_burner.py
 REPLACE_PYTHON+=	utils/usrp2_card_burner_gui.py
 REPLACE_PYTHON+=	utils/usrp2_recovery.py
@@ -62,6 +64,11 @@ REPLACE_PYTHON+=	tests/devtest/tx_waveforms_test.py
 REPLACE_PYTHON+=	tests/devtest/uhd_test_base.py
 REPLACE_PYTHON+=	tests/devtest/usrp_probe.py
 REPLACE_PYTHON+=	tests/devtest/usrp_probe_test.py
+REPLACE_PYTHON+=	tests/streaming_performance/batch_run_benchmark_rate.py
+REPLACE_PYTHON+=	tests/streaming_performance/run_E3xx_max_rate_tests.py
+REPLACE_PYTHON+=	tests/streaming_performance/run_N3xx_max_rate_tests.py
+REPLACE_PYTHON+=	tests/streaming_performance/run_X3xx_max_rate_tests.py
+
 
 INSTALLATION_DIRS+=	share/uhd
 INSTALLATION_DIRS+=	share/uhd/firmware
