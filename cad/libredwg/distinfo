@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/11/30 14:19:16 gdt Exp $
+$NetBSD: distinfo,v 1.6 2021/12/11 16:00:59 gdt Exp $
 
-BLAKE2s (libredwg-0.12.3.tar.xz) = 1fd90dbb712b66cb999601942a57502c2f4df71a6b6e8a5507b36f7b82811c73
-SHA512 (libredwg-0.12.3.tar.xz) = 4d86ce1c974c626e98d608f1650c74cd22eba84eb92a760c634663fa7cdd2d198f3a0f4e4ee3dece900c511c510a509c05de02f9595bccef70ef36144437de8c
-Size (libredwg-0.12.3.tar.xz) = 9528116 bytes
+BLAKE2s (libredwg-0.12.4.tar.xz) = 595836278d293c37b657ac6de23f41776add70563183b2c089e7053b6b289303
+SHA512 (libredwg-0.12.4.tar.xz) = 291aa254d84d97408cac27cb136e525f2a8a8b78849a61c5a390397d014c02ab6ebe786d6029c43edd5fc11e7079dfc0b375c4c468a8ee603b74f4df2a3bc20f
+Size (libredwg-0.12.4.tar.xz) = 9535732 bytes
+SHA1 (patch-configure) = f685d2a8c6df804cc90736f30b0682e82a6db9a4
