@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6086 2021/12/11 13:40:16 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.6087 2021/12/11 13:44:55 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9169,3 +9169,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-test-unit to 3.5.2 [taca 2021-12-11]
 	Updated net/ruby-ruby_smb to 2.0.12 [taca 2021-12-11]
 	Updated graphics/ristretto to 0.12.1 [gutteridge 2021-12-11]
+	Updated sysutils/xfce4-netload-plugin to 1.4.0 [gutteridge 2021-12-11]
