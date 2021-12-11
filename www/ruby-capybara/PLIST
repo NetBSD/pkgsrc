@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2021/01/26 15:02:11 taca Exp $
+@comment $NetBSD: PLIST,v 1.18 2021/12/11 14:44:13 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/History.md
@@ -21,6 +21,7 @@ ${GEM_LIBDIR}/lib/capybara/node/element.rb
 ${GEM_LIBDIR}/lib/capybara/node/finders.rb
 ${GEM_LIBDIR}/lib/capybara/node/matchers.rb
 ${GEM_LIBDIR}/lib/capybara/node/simple.rb
+${GEM_LIBDIR}/lib/capybara/queries/active_element_query.rb
 ${GEM_LIBDIR}/lib/capybara/queries/ancestor_query.rb
 ${GEM_LIBDIR}/lib/capybara/queries/base_query.rb
 ${GEM_LIBDIR}/lib/capybara/queries/current_path_query.rb
@@ -140,6 +141,7 @@ ${GEM_LIBDIR}/lib/capybara/spec/public/test.js
 ${GEM_LIBDIR}/lib/capybara/spec/session/accept_alert_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/accept_confirm_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/accept_prompt_spec.rb
+${GEM_LIBDIR}/lib/capybara/spec/session/active_element_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/all_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/ancestor_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/assert_all_of_selectors_spec.rb
@@ -239,6 +241,7 @@ ${GEM_LIBDIR}/lib/capybara/spec/views/frame_two.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/header_links.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/host_links.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/initial_alert.erb
+${GEM_LIBDIR}/lib/capybara/spec/views/layout.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/obscured.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/offset.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/path.erb
@@ -268,7 +271,6 @@ ${GEM_LIBDIR}/lib/capybara/spec/views/with_scope_other.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/with_simple_html.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/with_slow_unload.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/with_sortable_js.erb
-${GEM_LIBDIR}/lib/capybara/spec/views/with_title.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/with_unload_alert.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/with_windows.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/within_frames.erb
