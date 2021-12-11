@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2021/11/06 12:04:29 adam Exp $
+# $NetBSD: Makefile,v 1.6 2021/12/11 21:01:51 adam Exp $
 
-DISTNAME=	quadprog-0.1.10
+DISTNAME=	quadprog-0.1.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=q/quadprog/}
