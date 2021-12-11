@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2020/03/16 15:32:14 taca Exp $
+# $NetBSD: Makefile,v 1.14 2021/12/11 15:50:00 taca Exp $
 
-DISTNAME=	selenium-webdriver-3.142.7
+DISTNAME=	selenium-webdriver-4.1.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,15 +13,10 @@ DEPENDS+=	${RUBY_PKGPREFIX}-zip>=1.2.2:../../archivers/ruby-zip
 
 USE_LANGUAGES=	# none
 
-OVERRIDE_GEMSPEC+= \
-	:files lib/selenium/webdriver/firefox/native/linux/amd64/x_ignore_nofocus.so= \
-	lib/selenium/webdriver/firefox/native/linux/x86/x_ignore_nofocus.so=
-
-#
-# XXX: Remove this unportable garbage. Breaks on non-Linux targets.
-pre-configure:
-	${RM} ${WRKSRC}/lib/selenium/webdriver/firefox/native/linux/amd64/x_ignore_nofocus.so
-	${RM} ${WRKSRC}/lib/selenium/webdriver/firefox/native/linux/x86/x_ignore_nofocus.so
+.include "../../lang/ruby/rubyversion.mk"
+.if ${RUBY_VER} == "26" || ${RUBY_VER} == "27"
+DEPENDS+=	${RUBY_PKGPREFIX}-rexml>=0:../../textproc/ruby-rexml
+.endif
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
