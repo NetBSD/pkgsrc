@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/02/28 15:14:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/12/11 13:32:46 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
@@ -8,11 +8,15 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/regexp_parser.rb
 ${GEM_LIBDIR}/lib/regexp_parser/error.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression.rb
+${GEM_LIBDIR}/lib/regexp_parser/expression/base.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/alternation.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/anchor.rb
-${GEM_LIBDIR}/lib/regexp_parser/expression/classes/backref.rb
+${GEM_LIBDIR}/lib/regexp_parser/expression/classes/backreference.rb
+${GEM_LIBDIR}/lib/regexp_parser/expression/classes/character_set.rb
+${GEM_LIBDIR}/lib/regexp_parser/expression/classes/character_set/intersection.rb
+${GEM_LIBDIR}/lib/regexp_parser/expression/classes/character_set/range.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/conditional.rb
-${GEM_LIBDIR}/lib/regexp_parser/expression/classes/escape.rb
+${GEM_LIBDIR}/lib/regexp_parser/expression/classes/escape_sequence.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/free_space.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/group.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/keep.rb
@@ -20,9 +24,6 @@ ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/literal.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/posix_class.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/property.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/root.rb
-${GEM_LIBDIR}/lib/regexp_parser/expression/classes/set.rb
-${GEM_LIBDIR}/lib/regexp_parser/expression/classes/set/intersection.rb
-${GEM_LIBDIR}/lib/regexp_parser/expression/classes/set/range.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/type.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/match.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/match_length.rb
@@ -45,20 +46,20 @@ ${GEM_LIBDIR}/lib/regexp_parser/scanner/scanner.rl
 ${GEM_LIBDIR}/lib/regexp_parser/syntax.rb
 ${GEM_LIBDIR}/lib/regexp_parser/syntax/any.rb
 ${GEM_LIBDIR}/lib/regexp_parser/syntax/base.rb
-${GEM_LIBDIR}/lib/regexp_parser/syntax/tokens.rb
-${GEM_LIBDIR}/lib/regexp_parser/syntax/tokens/anchor.rb
-${GEM_LIBDIR}/lib/regexp_parser/syntax/tokens/assertion.rb
-${GEM_LIBDIR}/lib/regexp_parser/syntax/tokens/backref.rb
-${GEM_LIBDIR}/lib/regexp_parser/syntax/tokens/character_set.rb
-${GEM_LIBDIR}/lib/regexp_parser/syntax/tokens/character_type.rb
-${GEM_LIBDIR}/lib/regexp_parser/syntax/tokens/conditional.rb
-${GEM_LIBDIR}/lib/regexp_parser/syntax/tokens/escape.rb
-${GEM_LIBDIR}/lib/regexp_parser/syntax/tokens/group.rb
-${GEM_LIBDIR}/lib/regexp_parser/syntax/tokens/keep.rb
-${GEM_LIBDIR}/lib/regexp_parser/syntax/tokens/meta.rb
-${GEM_LIBDIR}/lib/regexp_parser/syntax/tokens/posix_class.rb
-${GEM_LIBDIR}/lib/regexp_parser/syntax/tokens/quantifier.rb
-${GEM_LIBDIR}/lib/regexp_parser/syntax/tokens/unicode_property.rb
+${GEM_LIBDIR}/lib/regexp_parser/syntax/token.rb
+${GEM_LIBDIR}/lib/regexp_parser/syntax/token/anchor.rb
+${GEM_LIBDIR}/lib/regexp_parser/syntax/token/assertion.rb
+${GEM_LIBDIR}/lib/regexp_parser/syntax/token/backreference.rb
+${GEM_LIBDIR}/lib/regexp_parser/syntax/token/character_set.rb
+${GEM_LIBDIR}/lib/regexp_parser/syntax/token/character_type.rb
+${GEM_LIBDIR}/lib/regexp_parser/syntax/token/conditional.rb
+${GEM_LIBDIR}/lib/regexp_parser/syntax/token/escape.rb
+${GEM_LIBDIR}/lib/regexp_parser/syntax/token/group.rb
+${GEM_LIBDIR}/lib/regexp_parser/syntax/token/keep.rb
+${GEM_LIBDIR}/lib/regexp_parser/syntax/token/meta.rb
+${GEM_LIBDIR}/lib/regexp_parser/syntax/token/posix_class.rb
+${GEM_LIBDIR}/lib/regexp_parser/syntax/token/quantifier.rb
+${GEM_LIBDIR}/lib/regexp_parser/syntax/token/unicode_property.rb
 ${GEM_LIBDIR}/lib/regexp_parser/syntax/version_lookup.rb
 ${GEM_LIBDIR}/lib/regexp_parser/syntax/versions.rb
 ${GEM_LIBDIR}/lib/regexp_parser/syntax/versions/1.8.6.rb
@@ -73,6 +74,7 @@ ${GEM_LIBDIR}/lib/regexp_parser/syntax/versions/2.5.0.rb
 ${GEM_LIBDIR}/lib/regexp_parser/syntax/versions/2.6.0.rb
 ${GEM_LIBDIR}/lib/regexp_parser/syntax/versions/2.6.2.rb
 ${GEM_LIBDIR}/lib/regexp_parser/syntax/versions/2.6.3.rb
+${GEM_LIBDIR}/lib/regexp_parser/syntax/versions/3.1.0.rb
 ${GEM_LIBDIR}/lib/regexp_parser/token.rb
 ${GEM_LIBDIR}/lib/regexp_parser/version.rb
 ${GEM_LIBDIR}/regexp_parser.gemspec
@@ -133,9 +135,8 @@ ${GEM_LIBDIR}/spec/scanner/refcalls_spec.rb
 ${GEM_LIBDIR}/spec/scanner/sets_spec.rb
 ${GEM_LIBDIR}/spec/scanner/types_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/spec/support/runner.rb
+${GEM_LIBDIR}/spec/support/capturing_stderr.rb
 ${GEM_LIBDIR}/spec/support/shared_examples.rb
-${GEM_LIBDIR}/spec/support/warning_extractor.rb
 ${GEM_LIBDIR}/spec/syntax/syntax_spec.rb
 ${GEM_LIBDIR}/spec/syntax/syntax_token_map_spec.rb
 ${GEM_LIBDIR}/spec/syntax/versions/1.8.6_spec.rb
