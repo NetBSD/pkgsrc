@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6108 2021/12/11 14:53:15 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6109 2021/12/11 14:58:45 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9191,3 +9191,23 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-capybara to 3.36.0 [taca 2021-12-11]
 	Updated www/ruby-em-websocket to 0.5.3 [taca 2021-12-11]
 	Updated www/ruby-ethon to 0.15.0 [taca 2021-12-11]
+	Updated math/volk to 2.5.0 [tnn 2021-12-11]
+	Updated ham/gnuradio-channels to 3.9.4.0 [tnn 2021-12-11]
+	Updated ham/gnuradio-companion to 3.9.4.0 [tnn 2021-12-11]
+	Updated ham/gnuradio-core to 3.9.4.0 [tnn 2021-12-11]
+	Updated ham/gnuradio-ctrlport to 3.9.4.0 [tnn 2021-12-11]
+	Updated ham/gnuradio-digital to 3.9.4.0 [tnn 2021-12-11]
+	Updated ham/gnuradio-doxygen to 3.9.4.0 [tnn 2021-12-11]
+	Updated ham/gnuradio-dtv to 3.9.4.0 [tnn 2021-12-11]
+	Updated ham/gnuradio-fec to 3.9.4.0 [tnn 2021-12-11]
+	Updated ham/gnuradio-network to 3.9.4.0 [tnn 2021-12-11]
+	Updated ham/gnuradio-qtgui to 3.9.4.0 [tnn 2021-12-11]
+	Updated ham/gnuradio-soapy-sdr to 3.9.4.0 [tnn 2021-12-11]
+	Updated ham/gnuradio-trellis to 3.9.4.0 [tnn 2021-12-11]
+	Updated ham/gnuradio-uhd to 3.9.4.0 [tnn 2021-12-11]
+	Updated ham/gnuradio-utils to 3.9.4.0 [tnn 2021-12-11]
+	Updated ham/gnuradio-video-sdl to 3.9.4.0 [tnn 2021-12-11]
+	Updated ham/gnuradio-vocoder to 3.9.4.0 [tnn 2021-12-11]
+	Updated ham/gnuradio-wavelet to 3.9.4.0 [tnn 2021-12-11]
+	Updated ham/gnuradio-zeromq to 3.9.4.0 [tnn 2021-12-11]
+	Updated meta-pkgs/gnuradio to 3.9.4.0 [tnn 2021-12-11]
