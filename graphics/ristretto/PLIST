@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.6 2019/07/18 02:53:28 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/12/11 13:40:03 gutteridge Exp $
 bin/ristretto
-share/applications/ristretto.desktop
-share/icons/hicolor/128x128/apps/ristretto.png
-share/icons/hicolor/16x16/apps/ristretto.png
-share/icons/hicolor/48x48/apps/ristretto.png
-share/icons/hicolor/scalable/apps/ristretto.svg
+share/applications/org.xfce.ristretto.desktop
+share/icons/hicolor/128x128/apps/org.xfce.ristretto.png
+share/icons/hicolor/16x16/apps/org.xfce.ristretto.png
+share/icons/hicolor/24x24/apps/org.xfce.ristretto.png
+share/icons/hicolor/32x32/apps/org.xfce.ristretto.png
+share/icons/hicolor/48x48/apps/org.xfce.ristretto.png
+share/icons/hicolor/scalable/apps/org.xfce.ristretto.svg
 share/locale/ar/LC_MESSAGES/ristretto.mo
 share/locale/ast/LC_MESSAGES/ristretto.mo
 share/locale/be/LC_MESSAGES/ristretto.mo
@@ -17,6 +19,7 @@ share/locale/el/LC_MESSAGES/ristretto.mo
 share/locale/en_AU/LC_MESSAGES/ristretto.mo
 share/locale/en_GB/LC_MESSAGES/ristretto.mo
 share/locale/es/LC_MESSAGES/ristretto.mo
+share/locale/et/LC_MESSAGES/ristretto.mo
 share/locale/eu/LC_MESSAGES/ristretto.mo
 share/locale/fi/LC_MESSAGES/ristretto.mo
 share/locale/fr/LC_MESSAGES/ristretto.mo
@@ -25,6 +28,7 @@ share/locale/he/LC_MESSAGES/ristretto.mo
 share/locale/hr/LC_MESSAGES/ristretto.mo
 share/locale/hu/LC_MESSAGES/ristretto.mo
 share/locale/hy_AM/LC_MESSAGES/ristretto.mo
+share/locale/hye/LC_MESSAGES/ristretto.mo
 share/locale/id/LC_MESSAGES/ristretto.mo
 share/locale/ie/LC_MESSAGES/ristretto.mo
 share/locale/is/LC_MESSAGES/ristretto.mo
@@ -58,4 +62,4 @@ share/locale/ur_PK/LC_MESSAGES/ristretto.mo
 share/locale/vi/LC_MESSAGES/ristretto.mo
 share/locale/zh_CN/LC_MESSAGES/ristretto.mo
 share/locale/zh_TW/LC_MESSAGES/ristretto.mo
-share/metainfo/ristretto.appdata.xml
+share/metainfo/org.xfce.ristretto.appdata.xml
