@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2021/09/19 17:12:30 taca Exp $
+# $NetBSD: Makefile,v 1.8 2021/12/11 13:55:35 taca Exp $
 
-DISTNAME=	rex-powershell-0.1.93
+DISTNAME=	rex-powershell-0.1.94
 CATEGORIES=	security
 
 MAINTAINER=	minskim@NetBSD.org
