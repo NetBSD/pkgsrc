@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.90 2021/05/24 19:55:16 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2021/12/11 07:24:00 wen Exp $
 
-DISTNAME=	moodle-3.10.2
-PKGREVISION=	1
+DISTNAME=	moodle-3.11.4
 CATEGORIES=	www
-MASTER_SITES=	https://download.moodle.org/stable310/
+MASTER_SITES=	https://download.moodle.org/stable311/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	wen@NetBSD.org
@@ -64,17 +63,6 @@ SUBST_VARS.conf+=	MOODLEDATADIR
 SUBST_SED.conf+=	-e "/Order allow,deny/d"
 SUBST_SED.conf+=	-e "s,Allow from all,Require all granted,g"
 .endif
-
-SUBST_CLASSES+=		php
-SUBST_MESSAGE.php=	Fixing the path of php.
-SUBST_STAGE.php=	pre-configure
-SUBST_FILES.php=	admin/cli/mysql_engine.php admin/cli/maintenance.php admin/cli/cron.php
-SUBST_FILES.php+=	admin/cli/reset_password.php admin/cli/automated_backups.php
-SUBST_FILES.php+=	admin/cli/install.php admin/cli/install_database.php admin/cli/upgrade.php
-SUBST_FILES.php+=	admin/mailout-debugger.php admin/process_email.php
-SUBST_FILES.php+=	auth/db/cli/sync_users.php
-SUBST_FILES.php+=	enrol/database/cli/sync.php enrol/category/cli/sync.php
-SUBST_SED.php=		-e "s,/usr/bin/php,${PREFIX}/bin/php,g"
 
 SUBST_CLASSES+=		perl
 SUBST_MESSAGE.perl=	Fixing the path of perl.
