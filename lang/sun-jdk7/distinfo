@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2021/10/07 14:21:15 nia Exp $
+$NetBSD: distinfo,v 1.24 2021/12/11 14:58:02 wiz Exp $
 
-RMD160 (jdk-7u80-linux-x64.tar.gz) = c519e687374915166441995d4e3951b52bb2f82b
+BLAKE2s (jdk-7u80-linux-x64.tar.gz) = e6e073614473d9b699859afb50be5ccab3125394c87d63b09a4abe42cc83a4ec
 SHA512 (jdk-7u80-linux-x64.tar.gz) = a772878f740e87835bafc82841e8f4c1dfbe8bc79e072d3f6c5c74d3a206eb9001a53b474d91a22819c7c0d6407ed88993635c39738779c2b08c22c7a1c2e9e9
 Size (jdk-7u80-linux-x64.tar.gz) = 153530841 bytes
 RMD160 (jdk-7u80-solaris-i586.tar.gz) = 7723b082c30ffdfba8a66d0632632732e104342a
