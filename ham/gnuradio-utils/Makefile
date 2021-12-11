@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2021/12/08 16:05:10 adam Exp $
+# $NetBSD: Makefile,v 1.35 2021/12/11 14:57:51 tnn Exp $
 
 PKGNAME=	gnuradio-utils-${VERSION}
-PKGREVISION=	3
 COMMENT=	Utilities in GNU Radio
 
 .include	"../../ham/gnuradio-core/Makefile.common"
