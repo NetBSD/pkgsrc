@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6088 2021/12/11 13:46:51 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6089 2021/12/11 13:50:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9171,3 +9171,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/ristretto to 0.12.1 [gutteridge 2021-12-11]
 	Updated sysutils/xfce4-netload-plugin to 1.4.0 [gutteridge 2021-12-11]
 	Updated security/ruby-metasploit-payloads to 2.0.66 [taca 2021-12-11]
+	Updated security/ruby-metasploit_payloads-mettle to 1.0.17 [taca 2021-12-11]
