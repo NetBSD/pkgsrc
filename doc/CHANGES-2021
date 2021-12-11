@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6107 2021/12/11 14:49:46 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6108 2021/12/11 14:53:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9190,3 +9190,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/ruby-yard to 0.9.27 [taca 2021-12-11]
 	Updated www/ruby-capybara to 3.36.0 [taca 2021-12-11]
 	Updated www/ruby-em-websocket to 0.5.3 [taca 2021-12-11]
+	Updated www/ruby-ethon to 0.15.0 [taca 2021-12-11]
