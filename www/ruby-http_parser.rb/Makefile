@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2017/07/30 22:32:27 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2021/12/11 15:34:30 taca Exp $
 
-DISTNAME=	http_parser.rb-0.6.0
+DISTNAME=	http_parser.rb-0.8.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

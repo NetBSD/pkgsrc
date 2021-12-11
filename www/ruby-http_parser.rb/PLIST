@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.5 2015/03/08 15:17:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/12/11 15:34:30 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/ruby_http_parser.${RUBY_DLEXT}
+${GEM_LIBDIR}/.github/workflows/linux.yml
+${GEM_LIBDIR}/.github/workflows/windows.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.gitmodules
 ${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/LICENSE-MIT
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
@@ -66,10 +67,12 @@ ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/tools/const_char.rb
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/tools/lowcase.rb
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser-java/tools/parse_tests.rb
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser/AUTHORS
-${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser/CONTRIBUTIONS
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser/LICENSE-MIT
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser/Makefile
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser/README.md
+${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser/bench.c
+${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser/contrib/parsertrace.c
+${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser/contrib/url_parser.c
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser/http_parser.c
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser/http_parser.gyp
 ${GEM_LIBDIR}/ext/ruby_http_parser/vendor/http-parser/http_parser.h
