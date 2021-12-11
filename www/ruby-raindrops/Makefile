@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2021/06/02 15:15:52 taca Exp $
+# $NetBSD: Makefile,v 1.15 2021/12/11 15:44:20 taca Exp $
 
-DISTNAME=	raindrops-0.19.2
+DISTNAME=	raindrops-0.20.0
 CATEGORIES=	www
 
-MAINTAINER=	pkgsrc@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://yhbt.net/raindrops/
 COMMENT=	Real-time statistics for Rack HTTP servers
 LICENSE=	gnu-lgpl-v2.1 OR gnu-lgpl-v3
