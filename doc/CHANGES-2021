@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6120 2021/12/11 19:56:35 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6121 2021/12/11 20:07:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9225,3 +9225,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-typed-ast to 1.5.1 [adam 2021-12-11]
 	Updated www/py-uvicorn to 0.16.0 [adam 2021-12-11]
 	Updated textproc/py-humanize to 3.13.1 [adam 2021-12-11]
+	Updated devel/py-sarge to 0.1.7 [adam 2021-12-11]
+	Updated security/py-rsa to 4.8 [adam 2021-12-11]
