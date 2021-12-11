@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6113 2021/12/11 15:41:05 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6114 2021/12/11 15:44:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9215,3 +9215,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-mechanize to 2.8.3 [taca 2021-12-11]
 	Updated www/ruby-puma to 5.5.2 [taca 2021-12-11]
 	Updated www/ruby-rack-cache to 1.13.0 [taca 2021-12-11]
+	Updated www/ruby-raindrops to 0.20.0 [taca 2021-12-11]
