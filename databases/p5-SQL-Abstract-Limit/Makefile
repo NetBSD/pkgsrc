@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2021/05/24 19:49:42 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2021/12/11 03:56:33 wen Exp $
 #
 
-DISTNAME=	SQL-Abstract-Limit-0.141
-PKGNAME=	p5-SQL-Abstract-Limit-0.14.1
-PKGREVISION=	12
+DISTNAME=	SQL-Abstract-Limit-0.143
+PKGNAME=	p5-SQL-Abstract-Limit-0.14.3
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=SQL/}
 
