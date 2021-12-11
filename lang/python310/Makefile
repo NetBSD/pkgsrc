@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/12/10 23:08:03 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2021/12/11 10:13:18 wiz Exp $
 
 PKGREVISION= 2
 .include "dist.mk"
@@ -113,7 +113,6 @@ REPLACE_FILES.python+=	Lib/pydoc.py
 REPLACE_FILES.python+=	Lib/quopri.py
 REPLACE_FILES.python+=	Lib/smtpd.py
 REPLACE_FILES.python+=	Lib/smtplib.py
-REPLACE_FILES.python+=	Lib/symbol.py
 REPLACE_FILES.python+=	Lib/tabnanny.py
 REPLACE_FILES.python+=	Lib/tarfile.py
 REPLACE_FILES.python+=	Lib/test/bisect_cmd.py
