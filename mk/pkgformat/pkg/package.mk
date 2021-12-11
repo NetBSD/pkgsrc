@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.16 2017/08/19 00:30:19 jlam Exp $
+# $NetBSD: package.mk,v 1.17 2021/12/11 09:01:23 schmonz Exp $
 
 .if defined(PKG_SUFX)
 WARNINGS+=		"PKG_SUFX is deprecated, please use PKG_COMPRESSION"
@@ -66,7 +66,8 @@ ${PKGFILE}: ${STAGE_PKGFILE}
 	@${STEP_MSG} "Creating binary package ${.TARGET}"
 	${RUN} ${MKDIR} ${.TARGET:H};					\
 	${LN} -f ${STAGE_PKGFILE} ${PKGFILE} 2>/dev/null ||		\
-		${CP} -pf ${STAGE_PKGFILE} ${PKGFILE}
+		${CP} -pf ${STAGE_PKGFILE} ${PKGFILE} 2>/dev/null ||	\
+		${CP} -f ${STAGE_PKGFILE} ${PKGFILE}
 .endif
 
 ######################################################################
