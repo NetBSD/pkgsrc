@@ -1,33 +1,30 @@
-# $NetBSD: Makefile,v 1.21 2021/09/29 19:00:50 adam Exp $
+# $NetBSD: Makefile,v 1.22 2021/12/11 13:59:07 tnn Exp $
 
-DISTNAME=		gr-fcdproplus_3.7.11.orig
-PKGNAME=		${DISTNAME:S/_/-/S/.orig//}
-PKGREVISION=		18
+DISTNAME=		gr-fcdproplus-3.8.0.20200811
 CATEGORIES=		ham
-MASTER_SITES+=		${MASTER_SITE_DEBIAN:=pool/main/g/gr-fcdproplus/}
-EXTRACT_SUFX=		.tar.xz
+MASTER_SITES=		${MASTER_SITE_GITHUB:=dl1ksv/}
+GITHUB_TAG=		575fcafbb8f36dc11d95a305f331660612a44596
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/dl1ksv/gr-fcdproplus
 COMMENT=		Addon for funcube dongle pro+ to GNU Radio
 LICENSE=		gnu-gpl-v2
 
+BUILD_DEPENDS+= swig3-[0-9]*:../../devel/swig3
+
 USE_LANGUAGES=		c c++
 USE_TOOLS=		cmake
 USE_CMAKE=		yes
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+CFLAGS+=		-I${PREFIX}/include/libusb-1.0
 CXXFLAGS+=		-I${PREFIX}/include/libusb-1.0
 
 # Suppress warning for developer
 CMAKE_ARGS+=		-Wno-dev
 CMAKE_ARGS+=		-DGNURADIO_RUNTIME_INCLUDE_DIRS=${PREFIX}/include
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
-
-CFLAGS+=		-I${PREFIX}/include/libusb-1.0
-
-# Old-style print use via cmake
-PYTHON_VERSIONS_ACCEPTED=	27
+CMAKE_ARGS+=		-DENABLE_DOXYGEN=OFF
+#CMAKE_ARGS+=		-DDOXY_FILE_PATH=${PREFIX}/share/gnuradio/modtool/templates/gr-newmod/docs/doxygen
 
 .include	"../../devel/boost-headers/buildlink3.mk"
 .include	"../../devel/boost-libs/buildlink3.mk"
@@ -35,5 +32,6 @@ PYTHON_VERSIONS_ACCEPTED=	27
 .include	"../../lang/python/application.mk"
 .include	"../../lang/python/pyversion.mk"
 .include 	"../../ham/gnuradio-core/buildlink3.mk"
+.include 	"../../ham/gnuradio-utils/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
