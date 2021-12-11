@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6116 2021/12/11 16:01:06 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.6117 2021/12/11 16:26:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9218,3 +9218,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-raindrops to 0.20.0 [taca 2021-12-11]
 	Updated www/ruby-selenium-webdriver to 4.1.0 [taca 2021-12-11]
 	Updated cad/libredwg to 0.12.4 [gdt 2021-12-11]
+	Updated www/drupal8 to 8.9.20 [taca 2021-12-11]
