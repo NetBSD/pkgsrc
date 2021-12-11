@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6092 2021/12/11 13:58:39 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6093 2021/12/11 14:00:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9175,3 +9175,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/ruby-rex-core to 0.1.20 [taca 2021-12-11]
 	Updated security/ruby-rex-powershell to 0.1.94 [taca 2021-12-11]
 	Updated security/ruby-rex-socket to 0.1.34 [taca 2021-12-11]
+	Updated security/ruby-rex-sslscan to 0.1.7 [taca 2021-12-11]
