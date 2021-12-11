@@ -1,4 +1,6 @@
-$NetBSD: patch-Python_thread__pthread.h,v 1.1 2021/10/05 19:07:13 adam Exp $
+$NetBSD: patch-Python_thread__pthread.h,v 1.2 2021/12/11 10:40:58 wiz Exp $
+
+https://bugs.python.org/issue46045
 
 --- Python/thread_pthread.h.orig	2013-05-15 16:33:00.000000000 +0000
 +++ Python/thread_pthread.h
