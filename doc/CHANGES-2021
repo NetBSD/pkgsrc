@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6119 2021/12/11 17:40:43 tnn Exp $
+$NetBSD: CHANGES-2021,v 1.6120 2021/12/11 19:56:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9221,3 +9221,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/drupal8 to 8.9.20 [taca 2021-12-11]
 	Updated net/unifi to 6.5.54 [gdt 2021-12-11]
 	Updated ham/uhd to 4.1.0.4 [tnn 2021-12-11]
+	Updated sysutils/py-xattr to 0.9.9 [adam 2021-12-11]
+	Updated devel/py-typed-ast to 1.5.1 [adam 2021-12-11]
+	Updated www/py-uvicorn to 0.16.0 [adam 2021-12-11]
+	Updated textproc/py-humanize to 3.13.1 [adam 2021-12-11]
