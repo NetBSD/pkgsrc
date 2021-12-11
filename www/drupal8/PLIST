@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2021/08/29 14:51:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.32 2021/12/11 16:26:06 taca Exp $
 share/drupal/.csslintrc
 share/drupal/.editorconfig
 share/drupal/.eslintignore
@@ -62,7 +62,7 @@ share/drupal/core/assets/vendor/backbone/backbone-min.map
 share/drupal/core/assets/vendor/backbone/backbone.js
 share/drupal/core/assets/vendor/ckeditor/CHANGES.md
 share/drupal/core/assets/vendor/ckeditor/LICENSE.md
-share/drupal/core/assets/vendor/ckeditor/bender-runner.config.json
+share/drupal/core/assets/vendor/ckeditor/SECURITY.md
 share/drupal/core/assets/vendor/ckeditor/build-config.js
 share/drupal/core/assets/vendor/ckeditor/ckeditor.js
 share/drupal/core/assets/vendor/ckeditor/lang/_translationstatus.txt
@@ -16172,6 +16172,7 @@ share/drupal/vendor/composer/installers/src/Composer/Installers/OntoWikiInstalle
 share/drupal/vendor/composer/installers/src/Composer/Installers/OsclassInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/OxidInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/PPIInstaller.php
+share/drupal/vendor/composer/installers/src/Composer/Installers/PantheonInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/PhiftyInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/PhpBBInstaller.php
 share/drupal/vendor/composer/installers/src/Composer/Installers/PimcoreInstaller.php
