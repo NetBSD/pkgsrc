@@ -1,19 +1,18 @@
-$NetBSD: patch-include_volk_volk__complex.h,v 1.1 2020/08/01 04:35:09 tnn Exp $
+$NetBSD: patch-include_volk_volk__complex.h,v 1.2 2021/12/11 14:03:21 tnn Exp $
 
 For some reason <tgmath.h> is only available in C++ mode ...
 
---- include/volk/volk_complex.h.orig	2020-05-09 10:58:32.000000000 +0000
+--- include/volk/volk_complex.h.orig	2021-06-05 11:01:46.000000000 +0000
 +++ include/volk/volk_complex.h
-@@ -58,7 +58,12 @@ inline T lv_conj(const T& x)
- #if __STDC_VERSION__ >= 199901L /* C99 check */
- /* this allows us to conj in lv_conj without the double detour for single-precision floats
-  */
-+#if defined(__NetBSD__) && !defined(__cplusplus)
+@@ -56,7 +56,11 @@ inline T lv_conj(const T& x)
+ #else /* __cplusplus */
+ 
+ #include <complex.h>
++#if defined(__NetBSD__)
 +#include <math.h>
-+#include <complex.h> 
 +#else
  #include <tgmath.h>
 +#endif
- #endif /* C99 check */
  
- #include <complex.h>
+ typedef char complex lv_8sc_t;
+ typedef short complex lv_16sc_t;
