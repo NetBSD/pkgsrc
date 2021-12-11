@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2021/09/29 19:00:59 adam Exp $
+# $NetBSD: Makefile,v 1.8 2021/12/11 14:03:21 tnn Exp $
 
-DISTNAME=	volk-2.4.1
-PKGREVISION=	2
+DISTNAME=	volk-2.5.0
 CATEGORIES=	math ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gnuradio/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
