@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6097 2021/12/11 14:11:35 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.6098 2021/12/11 14:12:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9180,3 +9180,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added security/ruby-vault version 0.16.0 [taca 2021-12-11]
 	Updated sysutils/xfce4-systemload-plugin to 1.3.1 [gutteridge 2021-12-11]
 	Updated www/firefox to 95.0 [ryoon 2021-12-11]
+	Updated www/firefox-l10n to 95.0 [ryoon 2021-12-11]
