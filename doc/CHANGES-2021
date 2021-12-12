@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6158 2021/12/12 16:19:21 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.6159 2021/12/12 16:23:50 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9271,3 +9271,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/php-http3 to 3.2.4 [taca 2021-12-12]
 	Removed comms/xfce4-modemlights-plugin [gutteridge 2021-12-12]
 	Removed x11/xfce4-kbdleds-plugin [gutteridge 2021-12-12]
+	Removed x11/xfce4-wmdock-plugin [gutteridge 2021-12-12]
