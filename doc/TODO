@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21345 2021/12/12 09:33:42 wiz Exp $
+$NetBSD: TODO,v 1.21346 2021/12/12 09:37:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -365,7 +365,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o GNUMail-1.2.2
 	o Gorm-1.2.26
 	o HElib-2.1.0
-	o ImageMagick-7.1.0.17
 	o ImageMagick6-6.9.12.8
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
@@ -1864,8 +1863,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o topgit-0.8
-	o tor-browser-11.0.1 [wip]
-	o tor-browser-11.0.2
+	o tor-browser-11.0.2 [wip]
 	o torrentzip-2.1.0
 	o toxcore-0.2.12
 	o trafficserver-9.0.1
