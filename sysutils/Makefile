@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.975 2021/11/30 17:05:40 gutteridge Exp $
+# $NetBSD: Makefile,v 1.976 2021/12/12 16:30:55 gutteridge Exp $
 #
 
 COMMENT=	System utilities
@@ -865,7 +865,6 @@ SUBDIR+=	xfce4-cpugraph-plugin
 SUBDIR+=	xfce4-diskperf-plugin
 SUBDIR+=	xfce4-fsguard-plugin
 SUBDIR+=	xfce4-genmon-plugin
-SUBDIR+=	xfce4-gvfs-mount-plugin
 SUBDIR+=	xfce4-mount-plugin
 SUBDIR+=	xfce4-netload-plugin
 SUBDIR+=	xfce4-power-manager
