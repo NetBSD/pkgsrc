@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.255 2021/12/08 16:03:17 adam Exp $
+# $NetBSD: Makefile,v 1.256 2021/12/12 09:48:34 wiz Exp $
 
-DISTNAME=	mpd-0.23.4
-PKGREVISION=	2
+DISTNAME=	mpd-0.23.5
 PKGNAME=	${DISTNAME:S/mpd/musicpd/}
 CATEGORIES=	audio
 MASTER_SITES=	https://www.musicpd.org/download/mpd/${PKGVERSION_NOREV:R}/
@@ -128,7 +127,7 @@ BUILDLINK_API_DEPENDS.flac+=	flac>=1.2
 .include "../../audio/mpg123/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/versioned_dependencies.mk"

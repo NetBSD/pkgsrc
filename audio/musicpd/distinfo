@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.132 2021/11/16 14:36:21 wiz Exp $
+$NetBSD: distinfo,v 1.133 2021/12/12 09:48:34 wiz Exp $
 
-BLAKE2s (mpd-0.23.4.tar.xz) = e4b5cbe4dca952c43b50745c52889d49497c1b1bddefaa444f505394c6fe1b72
-SHA512 (mpd-0.23.4.tar.xz) = fb476b108a7be842663683fe6ca6737cffad73c0f09874f9d052121d188d16f69b144e993d1691f2edfac713db24aa3c28302b399f4720b29c09c909860c0938
-Size (mpd-0.23.4.tar.xz) = 768768 bytes
+BLAKE2s (mpd-0.23.5.tar.xz) = a3f8429cb42390fa111bfc8dd7a615df942bbcea7a270a6e6546b43e0628a60d
+SHA512 (mpd-0.23.5.tar.xz) = 3a870e79bb82c9e8877958d271e933daa3dd970a4510aff4aeea91feab521d7927cd59c7f1ea16a36e84ff879e4f24e4347602ac449c5da31853acb5a3b46f34
+Size (mpd-0.23.5.tar.xz) = 770700 bytes
 SHA1 (patch-src_net_IPv6Address.hxx) = 3e0ad6e63a970a17d0d8b2403acc538d8b08342e
