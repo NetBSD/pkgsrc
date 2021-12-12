@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:22:21 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/12/12 13:55:13 taca Exp $
 
-BLAKE2s (marisa-0.2.4.tar.gz) = cc7a83d2b20b99daf896d9988e71d79f3dbfcf59b45a56bdc0134adf2ae0a809
-SHA512 (marisa-0.2.4.tar.gz) = 71aee3ae034d1ce725d986bef43472d61bd64f0af3ccda01bb019cce03f0872629b6a1b305e717056bef06e036372323b2a67e5dc69705d6a74e028b5e2553e4
-Size (marisa-0.2.4.tar.gz) = 502552 bytes
+BLAKE2s (marisa-0.2.6.tar.gz) = 7d6cf163daf31423a4d13b303f5c81bb7ed1e5d0a5dc1f9d4f8038b6e65a0e64
+SHA512 (marisa-0.2.6.tar.gz) = c094e4b22e1457efdd20f2b978ee421b53e36ed94e4fdbd8944136c0ba23da4f6ba9fe3a2c64729c1426aee4dbe8098bfa5eebb943ae7fdaa4eec760485c564d
+Size (marisa-0.2.6.tar.gz) = 168332 bytes
 SHA1 (patch-bindings_python_setup.py) = 6c7d1800986077fd5c1e8d4b96b49762a381420a
