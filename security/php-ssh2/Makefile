@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2021/01/03 07:38:19 taca Exp $
+# $NetBSD: Makefile,v 1.17 2021/12/12 15:20:00 taca Exp $
 #
 
 MODNAME=		ssh2
-PECL_VERSION=		1.2
+PECL_VERSION=		1.3.1
 CATEGORIES+=		security
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
