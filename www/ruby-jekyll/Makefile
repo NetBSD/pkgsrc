@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2021/01/18 14:53:38 taca Exp $
+# $NetBSD: Makefile,v 1.41 2021/12/12 13:40:33 taca Exp $
 
-DISTNAME=	jekyll-4.2.0
+DISTNAME=	jekyll-4.2.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,7 +17,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-watch>=2.0<3:../../www/ruby-jekyll-watch
 DEPENDS+=	${RUBY_PKGPREFIX}-kramdown>=2.3<3:../../textproc/ruby-kramdown
 DEPENDS+=	${RUBY_PKGPREFIX}-kramdown-parser-gfm>=1.0.1<2:../../textproc/ruby-kramdown-parser-gfm
 DEPENDS+=	${RUBY_PKGPREFIX}-liquid>=4.0<5:../../www/ruby-liquid
-DEPENDS+=	${RUBY_PKGPREFIX}-mercenary>=0.4.0:../../devel/ruby-mercenary
+DEPENDS+=	${RUBY_PKGPREFIX}-mercenary>=0.4.0<0.5:../../devel/ruby-mercenary
 DEPENDS+=	${RUBY_PKGPREFIX}-pathutil>=0.9<1:../../devel/ruby-pathutil
 DEPENDS+=	${RUBY_PKGPREFIX}-rouge>=3.0<4:../../www/ruby-rouge
 DEPENDS+=	${RUBY_PKGPREFIX}-safe_yaml>=1.0<2:../../textproc/ruby-safe_yaml
