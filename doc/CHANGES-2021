@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6152 2021/12/12 15:15:39 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6153 2021/12/12 15:20:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9265,3 +9265,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/php-xdebug to 3.1.2 [taca 2021-12-12]
 	Updated sysutils/auto-admin to 0.7.8 [bacon 2021-12-12]
 	Updated graphics/php-imagick to 3.6.0 [taca 2021-12-12]
+	Updated security/php-ssh2 to 1.3.1 [taca 2021-12-12]
