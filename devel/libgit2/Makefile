@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.54 2021/12/08 16:04:01 adam Exp $
+# $NetBSD: Makefile,v 1.55 2021/12/12 14:48:44 taca Exp $
 
-DISTNAME=	libgit2-1.1.0
-PKGREVISION=	3
+DISTNAME=	libgit2-1.2.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libgit2/}
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://libgit2.org/
