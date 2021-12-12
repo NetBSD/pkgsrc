@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:20:09 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/12/12 13:18:14 taca Exp $
 
-BLAKE2s (chef-zero-15.0.9.gem) = b8a98fc035a0ac10c1e75f1e310b23162b061800a2c68f723dc9f69e6ecf1277
-SHA512 (chef-zero-15.0.9.gem) = 9e8651c8b586ab6c86560508ffee0f1ae02db6d572822fb3bbe16aa3fdb98371a52527043b6aa9ec48ee0dc9484492b2fe15e528a14b074f25d5f9db554f09a0
-Size (chef-zero-15.0.9.gem) = 70656 bytes
+BLAKE2s (chef-zero-15.0.11.gem) = 88e37da4e651b019d05bbc4105b76c2d7a188cfd16bfab7d744cf34da298382c
+SHA512 (chef-zero-15.0.11.gem) = c2e41e319cdaa9ad16aa1ac0af211b87d3a7b17bf54155eefb138fb82727c1ce5f2fdd8dfade4cc2a4a6ce8e5a0fd9aff73e866b98ec9871673431f800d30624
+Size (chef-zero-15.0.11.gem) = 70656 bytes
