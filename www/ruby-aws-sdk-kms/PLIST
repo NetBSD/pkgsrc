@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2021/12/12 12:54:28 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/lib/aws-sdk-kms.rb
+${GEM_LIBDIR}/lib/aws-sdk-kms/client.rb
+${GEM_LIBDIR}/lib/aws-sdk-kms/client_api.rb
+${GEM_LIBDIR}/lib/aws-sdk-kms/customizations.rb
+${GEM_LIBDIR}/lib/aws-sdk-kms/errors.rb
+${GEM_LIBDIR}/lib/aws-sdk-kms/resource.rb
+${GEM_LIBDIR}/lib/aws-sdk-kms/types.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
