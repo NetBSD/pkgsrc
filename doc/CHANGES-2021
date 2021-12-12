@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6124 2021/12/11 21:57:56 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6125 2021/12/12 03:14:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9232,3 +9232,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated time/libical to 3.0.12 [gutteridge 2021-12-11]
 	Updated textproc/py-epr-reader to 2.4.11 [adam 2021-12-11]
 	Updated math/py-xarray to 0.20.2 [adam 2021-12-11]
+	Updated cad/klayout to 0.27.5 [mef 2021-12-12]
