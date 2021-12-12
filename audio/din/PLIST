@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/07/12 14:58:35 fox Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/12/12 23:26:01 fox Exp $
 bin/din
 share/applications/din.desktop
 share/din/factory/2600
@@ -357,6 +357,8 @@ share/din/factory/get-selection.help.tcl
 share/din/factory/get-style.help.tcl
 share/din/factory/get-var.help.tcl
 share/din/factory/globals
+share/din/factory/gravmod.crv
+share/din/factory/gravmod.ed
 share/din/factory/harmonics
 share/din/factory/harmonics.help.tcl
 share/din/factory/harmonics.patch.tcl
