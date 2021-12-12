@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6129 2021/12/12 09:41:10 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6130 2021/12/12 09:48:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9237,3 +9237,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/autoconf-archive to 2021.02.19 [wiz 2021-12-12]
 	Updated graphics/ImageMagick to 7.1.0.17 [wiz 2021-12-12]
 	Updated mail/notmuch to 0.34.2 [wiz 2021-12-12]
+	Updated audio/musicpd to 0.23.5 [wiz 2021-12-12]
