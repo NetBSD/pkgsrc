@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/08/30 15:11:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/12 12:48:19 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
@@ -145,7 +145,6 @@ ${GEM_LIBDIR}/lib/aws-sdk-sso/client.rb
 ${GEM_LIBDIR}/lib/aws-sdk-sso/client_api.rb
 ${GEM_LIBDIR}/lib/aws-sdk-sso/customizations.rb
 ${GEM_LIBDIR}/lib/aws-sdk-sso/errors.rb
-${GEM_LIBDIR}/lib/aws-sdk-sso/plugins/content_type.rb
 ${GEM_LIBDIR}/lib/aws-sdk-sso/resource.rb
 ${GEM_LIBDIR}/lib/aws-sdk-sso/types.rb
 ${GEM_LIBDIR}/lib/aws-sdk-sts.rb
