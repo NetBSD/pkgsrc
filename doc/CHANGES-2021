@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6135 2021/12/12 12:49:00 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6136 2021/12/12 12:51:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9243,3 +9243,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/msmtp to 1.8.19 [schmonz 2021-12-12]
 	Updated www/ruby-aws-partitions to 1.540.0 [taca 2021-12-12]
 	Updated www/ruby-aws-sdk-core to 3.124.0 [taca 2021-12-12]
+	Updated www/ruby-aws-sdk-secretsmanager to 1.53.0 [taca 2021-12-12]
