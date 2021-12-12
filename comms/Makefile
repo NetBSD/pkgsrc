@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2021/11/14 02:31:12 jnemeth Exp $
+# $NetBSD: Makefile,v 1.127 2021/12/12 16:09:46 gutteridge Exp $
 #
 
 COMMENT=	Telephony and serial communication utilities
@@ -88,7 +88,6 @@ SUBDIR+=	tilp2
 SUBDIR+=	tio
 SUBDIR+=	tkhylafax
 SUBDIR+=	tn3270
-SUBDIR+=	xfce4-modemlights-plugin
 SUBDIR+=	xisp
 SUBDIR+=	xtel
 
