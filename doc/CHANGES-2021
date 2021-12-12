@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6159 2021/12/12 16:23:50 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.6160 2021/12/12 16:32:34 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9272,3 +9272,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed comms/xfce4-modemlights-plugin [gutteridge 2021-12-12]
 	Removed x11/xfce4-kbdleds-plugin [gutteridge 2021-12-12]
 	Removed x11/xfce4-wmdock-plugin [gutteridge 2021-12-12]
+	Removed sysutils/xfce4-gvfs-mount-plugin [gutteridge 2021-12-12]
