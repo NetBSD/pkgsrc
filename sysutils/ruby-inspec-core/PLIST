@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/08/31 16:50:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/12/12 13:16:23 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
@@ -116,7 +116,11 @@ ${GEM_LIBDIR}/lib/inspec/resources/bash.rb
 ${GEM_LIBDIR}/lib/inspec/resources/bond.rb
 ${GEM_LIBDIR}/lib/inspec/resources/bridge.rb
 ${GEM_LIBDIR}/lib/inspec/resources/bsd_service.rb
+${GEM_LIBDIR}/lib/inspec/resources/cassandra.rb
+${GEM_LIBDIR}/lib/inspec/resources/cassandradb_conf.rb
+${GEM_LIBDIR}/lib/inspec/resources/cassandradb_session.rb
 ${GEM_LIBDIR}/lib/inspec/resources/chocolatey_package.rb
+${GEM_LIBDIR}/lib/inspec/resources/chrony_conf.rb
 ${GEM_LIBDIR}/lib/inspec/resources/command.rb
 ${GEM_LIBDIR}/lib/inspec/resources/cpan.rb
 ${GEM_LIBDIR}/lib/inspec/resources/cran.rb
@@ -146,6 +150,8 @@ ${GEM_LIBDIR}/lib/inspec/resources/groups.rb
 ${GEM_LIBDIR}/lib/inspec/resources/grub_conf.rb
 ${GEM_LIBDIR}/lib/inspec/resources/host.rb
 ${GEM_LIBDIR}/lib/inspec/resources/http.rb
+${GEM_LIBDIR}/lib/inspec/resources/ibmdb2_conf.rb
+${GEM_LIBDIR}/lib/inspec/resources/ibmdb2_session.rb
 ${GEM_LIBDIR}/lib/inspec/resources/iis_app.rb
 ${GEM_LIBDIR}/lib/inspec/resources/iis_app_pool.rb
 ${GEM_LIBDIR}/lib/inspec/resources/iis_site.rb
@@ -170,6 +176,7 @@ ${GEM_LIBDIR}/lib/inspec/resources/mongodb_conf.rb
 ${GEM_LIBDIR}/lib/inspec/resources/mongodb_session.rb
 ${GEM_LIBDIR}/lib/inspec/resources/mount.rb
 ${GEM_LIBDIR}/lib/inspec/resources/mssql_session.rb
+${GEM_LIBDIR}/lib/inspec/resources/mssql_sys_conf.rb
 ${GEM_LIBDIR}/lib/inspec/resources/mysql.rb
 ${GEM_LIBDIR}/lib/inspec/resources/mysql_conf.rb
 ${GEM_LIBDIR}/lib/inspec/resources/mysql_session.rb
@@ -182,6 +189,9 @@ ${GEM_LIBDIR}/lib/inspec/resources/oneget.rb
 ${GEM_LIBDIR}/lib/inspec/resources/opa.rb
 ${GEM_LIBDIR}/lib/inspec/resources/opa_api.rb
 ${GEM_LIBDIR}/lib/inspec/resources/opa_cli.rb
+${GEM_LIBDIR}/lib/inspec/resources/oracle.rb
+${GEM_LIBDIR}/lib/inspec/resources/oracledb_conf.rb
+${GEM_LIBDIR}/lib/inspec/resources/oracledb_listener_conf.rb
 ${GEM_LIBDIR}/lib/inspec/resources/oracledb_session.rb
 ${GEM_LIBDIR}/lib/inspec/resources/os.rb
 ${GEM_LIBDIR}/lib/inspec/resources/os_env.rb
@@ -215,6 +225,8 @@ ${GEM_LIBDIR}/lib/inspec/resources/shadow.rb
 ${GEM_LIBDIR}/lib/inspec/resources/ssh_config.rb
 ${GEM_LIBDIR}/lib/inspec/resources/sshd_config.rb
 ${GEM_LIBDIR}/lib/inspec/resources/ssl.rb
+${GEM_LIBDIR}/lib/inspec/resources/sybase_conf.rb
+${GEM_LIBDIR}/lib/inspec/resources/sybase_session.rb
 ${GEM_LIBDIR}/lib/inspec/resources/sys_info.rb
 ${GEM_LIBDIR}/lib/inspec/resources/systemd_service.rb
 ${GEM_LIBDIR}/lib/inspec/resources/sysv_service.rb
