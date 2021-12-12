@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6155 2021/12/12 15:26:12 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6156 2021/12/12 15:31:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9268,3 +9268,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/php-ssh2 to 1.3.1 [taca 2021-12-12]
 	Updated textproc/php-yaml to 2.2.2 [taca 2021-12-12]
 	Updated www/php-apcu to 5.1.21 [taca 2021-12-12]
+	Updated www/php-http3 to 3.2.4 [taca 2021-12-12]
