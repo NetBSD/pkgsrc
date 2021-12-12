@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6137 2021/12/12 12:55:37 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6138 2021/12/12 13:00:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9245,3 +9245,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-aws-sdk-core to 3.124.0 [taca 2021-12-12]
 	Updated www/ruby-aws-sdk-secretsmanager to 1.53.0 [taca 2021-12-12]
 	Added www/ruby-aws-sdk-kms version 1.52.0 [taca 2021-12-12]
+	Added www/ruby-aws-sdk-s3 version 1.109.0 [taca 2021-12-12]
