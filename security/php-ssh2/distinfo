@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:17:37 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/12/12 15:20:00 taca Exp $
 
-BLAKE2s (php-ssh2/ssh2-1.2.tgz) = f5a5b382bb24a1492c3eeb1d3740e1e2563aff17193f35237c13d164cc7aa8fa
-SHA512 (php-ssh2/ssh2-1.2.tgz) = 7b7d311cd5f88835e124d70a0295468f75d0fa6936a58808c936d1a185bb630b9e02c21f49b4bd777194a7b104aa3ff85c4fbf480f43d5906787e532ba2d3e04
-Size (php-ssh2/ssh2-1.2.tgz) = 32447 bytes
+BLAKE2s (php-ssh2/ssh2-1.3.1.tgz) = 1f1ca5178e8d6d70c7317cc1508ee7e5a81fae86c2f782529d27325281d3795e
+SHA512 (php-ssh2/ssh2-1.3.1.tgz) = c74d4f699853148b53cdca0eaf8837bfdbdd21d185761606acadf2442e84dbefdb00cde207e0ce4794ae1e4f8692a38ed903b6d11fdc57bca7b54a4250da9a76
+Size (php-ssh2/ssh2-1.3.1.tgz) = 33838 bytes
