@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2021/06/03 15:09:37 taca Exp $
+# $NetBSD: Makefile,v 1.52 2021/12/12 13:38:01 taca Exp $
 
-DISTNAME=		puppet-7.7.0
+DISTNAME=		puppet-7.12.1
 CATEGORIES=		sysutils
 #MASTER_SITES=		http://puppetlabs.com/downloads/puppet/
 
@@ -37,8 +37,8 @@ SUBST_FILES.prefix+=	lib/puppet/face/module/uninstall.rb
 SUBST_FILES.prefix+=	lib/puppet/face/module/upgrade.rb
 SUBST_FILES.prefix+=	lib/puppet/reference/configuration.rb
 SUBST_FILES.prefix+=	lib/puppet/util/run_mode.rb
-SUBST_FILES.prefix+=	ext/solaris/smf/puppetd.xml
-SUBST_FILES.prefix+=	ext/solaris/smf/puppetmasterd.xml
+SUBST_FILES.prefix+=	ext/solaris/smf/puppet
+SUBST_FILES.prefix+=	ext/solaris/smf/puppet.xml
 SUBST_FILES.prefix+=	man/man5/puppet.conf.5
 SUBST_FILES.prefix+=	man/man8/puppet-apply.8
 SUBST_FILES.prefix+=	man/man8/puppet-module.8
