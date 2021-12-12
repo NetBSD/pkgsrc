@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6143 2021/12/12 13:18:37 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6144 2021/12/12 13:20:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9253,3 +9253,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/ruby-ohai to 17.7.12 [taca 2021-12-12]
 	Updated sysutils/ruby-inspec-core to 4.50.3 [taca 2021-12-12]
 	Updated sysutils/ruby-chef-zero to 15.0.11 [taca 2021-12-12]
+	Updated sysutils/ruby-childprocess to 4.1.0 [taca 2021-12-12]
