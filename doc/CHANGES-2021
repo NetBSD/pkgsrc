@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6156 2021/12/12 15:31:47 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6157 2021/12/12 16:12:35 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9269,3 +9269,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/php-yaml to 2.2.2 [taca 2021-12-12]
 	Updated www/php-apcu to 5.1.21 [taca 2021-12-12]
 	Updated www/php-http3 to 3.2.4 [taca 2021-12-12]
+	Removed comms/xfce4-modemlights-plugin [gutteridge 2021-12-12]
