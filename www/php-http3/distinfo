@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:30:24 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/12/12 15:31:02 taca Exp $
 
-BLAKE2s (php-http/pecl_http-3.2.3.tgz) = 747fa510341db550dc8a66c01044351a0deb7db819b4ac02ddc96f6207f9eff1
-SHA512 (php-http/pecl_http-3.2.3.tgz) = e955e3246db9a9172081dd9a077154139c585bfce546e91839052bbab4d0db9d0695122574a66891ceba5c0b7e8a8f0768274e1516521ccb95cd19504dc13666
-Size (php-http/pecl_http-3.2.3.tgz) = 220204 bytes
+BLAKE2s (php-http/pecl_http-3.2.4.tgz) = b57c18f479d630c48f06a9282e6945688323f160b08dc407fbf0a2693b9be309
+SHA512 (php-http/pecl_http-3.2.4.tgz) = 59c41d57c94a6e50e2f0b261130a24791b2845246f783b55e7f644f9a897d3650da364c5b38a860761b4a23f9266ed05000d6348bae2a7941e59d6bf5fb61a9e
+Size (php-http/pecl_http-3.2.4.tgz) = 220631 bytes
