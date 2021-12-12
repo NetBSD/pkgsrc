@@ -1,21 +1,21 @@
-$NetBSD: patch-ae,v 1.5 2018/03/21 15:13:44 taca Exp $
+$NetBSD: patch-ae,v 1.6 2021/12/12 13:38:01 taca Exp $
 
 Fix detection of useradd user management under NetBSD.
 
 NetBSD doesn't have chage but can use the -e and -f flags to passwd to
 achieve the same.
 
---- lib/puppet/provider/user/useradd.rb.orig	2018-02-19 12:04:27.000000000 +0000
+--- lib/puppet/provider/user/useradd.rb.orig	2021-12-05 14:14:58.639678002 +0000
 +++ lib/puppet/provider/user/useradd.rb
-@@ -9,14 +9,23 @@ Puppet::Type.type(:user).provide :userad
-     install Ruby's shadow password library (often known as `ruby-libshadow`)
-     if you wish to manage user passwords."
+@@ -12,14 +12,23 @@ Puppet::Type.type(:user).provide :userad
+     To use the `forcelocal` parameter, you need to install the `libuser` package (providing
+     `/usr/sbin/lgroupadd` and `/usr/sbin/luseradd`)."
  
--  commands :add => "useradd", :delete => "userdel", :modify => "usermod", :password => "chage"
+-  commands :add => "useradd", :delete => "userdel", :modify => "usermod", :password => "chage", :chpasswd  => "chpasswd"
 +  if %w{NetBSD}.include? Facter.value(:operatingsystem)
 +    commands :add => "useradd", :delete => "userdel", :modify => "usermod", :password => "passwd"
 +  else
-+    commands :add => "useradd", :delete => "userdel", :modify => "usermod", :password => "chage"
++    commands :add => "useradd", :delete => "userdel", :modify => "usermod", :password => "chage", :chpasswd  => "chpasswd"
 +  end
  
    options :home, :flag => "-d", :method => :dir
