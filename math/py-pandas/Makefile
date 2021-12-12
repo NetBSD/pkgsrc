@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2021/11/21 16:31:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.35 2021/12/12 20:30:49 adam Exp $
 
-DISTNAME=	pandas-1.3.4
+DISTNAME=	pandas-1.3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pandas/}
