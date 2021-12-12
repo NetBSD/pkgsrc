@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6134 2021/12/12 12:47:03 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6135 2021/12/12 12:49:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9242,3 +9242,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/py-pip-audit to 1.1.1 [wiz 2021-12-12]
 	Updated mail/msmtp to 1.8.19 [schmonz 2021-12-12]
 	Updated www/ruby-aws-partitions to 1.540.0 [taca 2021-12-12]
+	Updated www/ruby-aws-sdk-core to 3.124.0 [taca 2021-12-12]
