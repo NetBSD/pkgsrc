@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6138 2021/12/12 13:00:40 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6139 2021/12/12 13:08:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9246,3 +9246,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-aws-sdk-secretsmanager to 1.53.0 [taca 2021-12-12]
 	Added www/ruby-aws-sdk-kms version 1.52.0 [taca 2021-12-12]
 	Added www/ruby-aws-sdk-s3 version 1.109.0 [taca 2021-12-12]
+	Updated sysutils/ruby-chef to 17.8.25 [taca 2021-12-12]
+	Updated sysutils/ruby-chef-config to 17.8.25 [taca 2021-12-12]
+	Updated sysutils/ruby-chef-utils to 17.8.25 [taca 2021-12-12]
