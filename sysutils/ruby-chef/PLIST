@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2021/08/31 16:41:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/12/12 13:07:02 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
@@ -124,12 +124,18 @@ ${GEM_LIBDIR}/lib/chef/client.rb
 ${GEM_LIBDIR}/lib/chef/compliance/default_attributes.rb
 ${GEM_LIBDIR}/lib/chef/compliance/fetcher/automate.rb
 ${GEM_LIBDIR}/lib/chef/compliance/fetcher/chef_server.rb
+${GEM_LIBDIR}/lib/chef/compliance/input.rb
+${GEM_LIBDIR}/lib/chef/compliance/input_collection.rb
+${GEM_LIBDIR}/lib/chef/compliance/profile.rb
+${GEM_LIBDIR}/lib/chef/compliance/profile_collection.rb
 ${GEM_LIBDIR}/lib/chef/compliance/reporter/automate.rb
 ${GEM_LIBDIR}/lib/chef/compliance/reporter/chef_server_automate.rb
 ${GEM_LIBDIR}/lib/chef/compliance/reporter/cli.rb
 ${GEM_LIBDIR}/lib/chef/compliance/reporter/compliance_enforcer.rb
 ${GEM_LIBDIR}/lib/chef/compliance/reporter/json_file.rb
 ${GEM_LIBDIR}/lib/chef/compliance/runner.rb
+${GEM_LIBDIR}/lib/chef/compliance/waiver.rb
+${GEM_LIBDIR}/lib/chef/compliance/waiver_collection.rb
 ${GEM_LIBDIR}/lib/chef/config.rb
 ${GEM_LIBDIR}/lib/chef/config_fetcher.rb
 ${GEM_LIBDIR}/lib/chef/constants.rb
@@ -169,6 +175,7 @@ ${GEM_LIBDIR}/lib/chef/digester.rb
 ${GEM_LIBDIR}/lib/chef/dsl.rb
 ${GEM_LIBDIR}/lib/chef/dsl/chef_vault.rb
 ${GEM_LIBDIR}/lib/chef/dsl/cheffish.rb
+${GEM_LIBDIR}/lib/chef/dsl/compliance.rb
 ${GEM_LIBDIR}/lib/chef/dsl/data_query.rb
 ${GEM_LIBDIR}/lib/chef/dsl/declare_resource.rb
 ${GEM_LIBDIR}/lib/chef/dsl/definitions.rb
@@ -176,6 +183,7 @@ ${GEM_LIBDIR}/lib/chef/dsl/include_attribute.rb
 ${GEM_LIBDIR}/lib/chef/dsl/include_recipe.rb
 ${GEM_LIBDIR}/lib/chef/dsl/platform_introspection.rb
 ${GEM_LIBDIR}/lib/chef/dsl/powershell.rb
+${GEM_LIBDIR}/lib/chef/dsl/reader_helpers.rb
 ${GEM_LIBDIR}/lib/chef/dsl/reboot_pending.rb
 ${GEM_LIBDIR}/lib/chef/dsl/recipe.rb
 ${GEM_LIBDIR}/lib/chef/dsl/registry_helper.rb
@@ -518,7 +526,9 @@ ${GEM_LIBDIR}/lib/chef/resource/dsc_script.rb
 ${GEM_LIBDIR}/lib/chef/resource/execute.rb
 ${GEM_LIBDIR}/lib/chef/resource/file.rb
 ${GEM_LIBDIR}/lib/chef/resource/file/verification.rb
+${GEM_LIBDIR}/lib/chef/resource/file/verification/json.rb
 ${GEM_LIBDIR}/lib/chef/resource/file/verification/systemd_unit.rb
+${GEM_LIBDIR}/lib/chef/resource/file/verification/yaml.rb
 ${GEM_LIBDIR}/lib/chef/resource/freebsd_package.rb
 ${GEM_LIBDIR}/lib/chef/resource/gem_package.rb
 ${GEM_LIBDIR}/lib/chef/resource/group.rb
@@ -539,6 +549,8 @@ ${GEM_LIBDIR}/lib/chef/resource/homebrew_update.rb
 ${GEM_LIBDIR}/lib/chef/resource/hostname.rb
 ${GEM_LIBDIR}/lib/chef/resource/http_request.rb
 ${GEM_LIBDIR}/lib/chef/resource/ifconfig.rb
+${GEM_LIBDIR}/lib/chef/resource/inspec_input.rb
+${GEM_LIBDIR}/lib/chef/resource/inspec_waiver.rb
 ${GEM_LIBDIR}/lib/chef/resource/inspec_waiver_file_entry.rb
 ${GEM_LIBDIR}/lib/chef/resource/ips_package.rb
 ${GEM_LIBDIR}/lib/chef/resource/kernel_module.rb
@@ -686,10 +698,12 @@ ${GEM_LIBDIR}/lib/chef/sandbox.rb
 ${GEM_LIBDIR}/lib/chef/scan_access_control.rb
 ${GEM_LIBDIR}/lib/chef/search/query.rb
 ${GEM_LIBDIR}/lib/chef/secret_fetcher.rb
+${GEM_LIBDIR}/lib/chef/secret_fetcher/akeyless_vault.rb
 ${GEM_LIBDIR}/lib/chef/secret_fetcher/aws_secrets_manager.rb
 ${GEM_LIBDIR}/lib/chef/secret_fetcher/azure_key_vault.rb
 ${GEM_LIBDIR}/lib/chef/secret_fetcher/base.rb
 ${GEM_LIBDIR}/lib/chef/secret_fetcher/example.rb
+${GEM_LIBDIR}/lib/chef/secret_fetcher/hashi_vault.rb
 ${GEM_LIBDIR}/lib/chef/server_api.rb
 ${GEM_LIBDIR}/lib/chef/server_api_versions.rb
 ${GEM_LIBDIR}/lib/chef/shell.rb
@@ -818,6 +832,7 @@ ${GEM_LIBDIR}/spec/data/apt/var/www/apt/dists/sid/main/binary-amd64/Release
 ${GEM_LIBDIR}/spec/data/apt/var/www/apt/dists/sid/main/binary-i386/Packages
 ${GEM_LIBDIR}/spec/data/apt/var/www/apt/pool/main/c/chef-integration-test/chef-integration-test_1.0-1_amd64.deb
 ${GEM_LIBDIR}/spec/data/apt/var/www/apt/pool/main/c/chef-integration-test/chef-integration-test_1.1-1_amd64.deb
+${GEM_LIBDIR}/spec/data/archive_file/test_archive.tar.gz
 ${GEM_LIBDIR}/spec/data/bad-config.rb
 ${GEM_LIBDIR}/spec/data/bootstrap/encrypted_data_bag_secret
 ${GEM_LIBDIR}/spec/data/bootstrap/no_proxy.erb
@@ -1202,6 +1217,7 @@ ${GEM_LIBDIR}/spec/functional/rebooter_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/aix_service_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/aixinit_service_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/apt_package_spec.rb
+${GEM_LIBDIR}/spec/functional/resource/archive_file_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/bash_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/batch_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/bff_spec.rb
@@ -1222,6 +1238,7 @@ ${GEM_LIBDIR}/spec/functional/resource/insserv_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/launchd_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/link_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/locale_spec.rb
+${GEM_LIBDIR}/spec/functional/resource/macos_userdefaults_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/mount_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/msu_package_spec.rb
 ${GEM_LIBDIR}/spec/functional/resource/ohai_spec.rb
@@ -1306,6 +1323,7 @@ ${GEM_LIBDIR}/spec/support/platforms/prof/gc.rb
 ${GEM_LIBDIR}/spec/support/platforms/prof/win32.rb
 ${GEM_LIBDIR}/spec/support/platforms/win32/spec_service.rb
 ${GEM_LIBDIR}/spec/support/recipe_dsl_helper.rb
+${GEM_LIBDIR}/spec/support/ruby_installer.rb
 ${GEM_LIBDIR}/spec/support/shared/context/config.rb
 ${GEM_LIBDIR}/spec/support/shared/context/win32.rb
 ${GEM_LIBDIR}/spec/support/shared/functional/diff_disabled.rb
@@ -1344,6 +1362,7 @@ ${GEM_LIBDIR}/spec/unit/api_client_spec.rb
 ${GEM_LIBDIR}/spec/unit/api_client_v1_spec.rb
 ${GEM_LIBDIR}/spec/unit/application/agent_spec.rb
 ${GEM_LIBDIR}/spec/unit/application/apply_spec.rb
+${GEM_LIBDIR}/spec/unit/application/base_spec.rb
 ${GEM_LIBDIR}/spec/unit/application/client_spec.rb
 ${GEM_LIBDIR}/spec/unit/application/exit_code_spec.rb
 ${GEM_LIBDIR}/spec/unit/application/server_spec.rb
@@ -1366,10 +1385,13 @@ ${GEM_LIBDIR}/spec/unit/chef_spec.rb
 ${GEM_LIBDIR}/spec/unit/client_spec.rb
 ${GEM_LIBDIR}/spec/unit/compliance/fetcher/automate_spec.rb
 ${GEM_LIBDIR}/spec/unit/compliance/fetcher/chef_server_spec.rb
+${GEM_LIBDIR}/spec/unit/compliance/input_spec.rb
+${GEM_LIBDIR}/spec/unit/compliance/profile_spec.rb
 ${GEM_LIBDIR}/spec/unit/compliance/reporter/automate_spec.rb
 ${GEM_LIBDIR}/spec/unit/compliance/reporter/chef_server_automate_spec.rb
 ${GEM_LIBDIR}/spec/unit/compliance/reporter/compliance_enforcer_spec.rb
 ${GEM_LIBDIR}/spec/unit/compliance/runner_spec.rb
+${GEM_LIBDIR}/spec/unit/compliance/waiver_spec.rb
 ${GEM_LIBDIR}/spec/unit/config_fetcher_spec.rb
 ${GEM_LIBDIR}/spec/unit/config_spec.rb
 ${GEM_LIBDIR}/spec/unit/cookbook/chefignore_spec.rb
@@ -1474,6 +1496,7 @@ ${GEM_LIBDIR}/spec/unit/mixin/uris_spec.rb
 ${GEM_LIBDIR}/spec/unit/mixin/user_context_spec.rb
 ${GEM_LIBDIR}/spec/unit/mixin/versioned_api_spec.rb
 ${GEM_LIBDIR}/spec/unit/mixin/which.rb
+${GEM_LIBDIR}/spec/unit/mixin/why_run_spec.rb
 ${GEM_LIBDIR}/spec/unit/mixin/windows_architecture_helper_spec.rb
 ${GEM_LIBDIR}/spec/unit/mixin/xml_escape_spec.rb
 ${GEM_LIBDIR}/spec/unit/monologger_spec.rb
@@ -1656,7 +1679,9 @@ ${GEM_LIBDIR}/spec/unit/resource/dpkg_package_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/dsc_resource_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/dsc_script_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/execute_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/file/verification/json_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/file/verification/systemd_unit_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/file/verification/yaml_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/file/verification_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/file_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/freebsd_package_spec.rb
@@ -1670,7 +1695,9 @@ ${GEM_LIBDIR}/spec/unit/resource/homebrew_update_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/hostname_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/http_request_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/ifconfig_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/inspec_input_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/inspec_waiver_file_entry_spec.rb
+${GEM_LIBDIR}/spec/unit/resource/inspec_waiver_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/ips_package_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/kernel_module_spec.rb
 ${GEM_LIBDIR}/spec/unit/resource/ksh_spec.rb
@@ -1797,8 +1824,10 @@ ${GEM_LIBDIR}/spec/unit/run_status_spec.rb
 ${GEM_LIBDIR}/spec/unit/runner_spec.rb
 ${GEM_LIBDIR}/spec/unit/scan_access_control_spec.rb
 ${GEM_LIBDIR}/spec/unit/search/query_spec.rb
+${GEM_LIBDIR}/spec/unit/secret_fetcher/akeyless_vault_spec.rb
 ${GEM_LIBDIR}/spec/unit/secret_fetcher/aws_secrets_manager_spec.rb
 ${GEM_LIBDIR}/spec/unit/secret_fetcher/azure_key_vault_spec.rb
+${GEM_LIBDIR}/spec/unit/secret_fetcher/hashi_vault_spec.rb
 ${GEM_LIBDIR}/spec/unit/secret_fetcher_spec.rb
 ${GEM_LIBDIR}/spec/unit/server_api_spec.rb
 ${GEM_LIBDIR}/spec/unit/server_api_versions_spec.rb
