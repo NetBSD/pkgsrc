@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6127 2021/12/12 09:33:41 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6128 2021/12/12 09:37:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9235,3 +9235,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated cad/klayout to 0.27.5 [mef 2021-12-12]
 	Updated mail/mutt to 2.1.4 [tron 2021-12-12]
 	Updated devel/autoconf-archive to 2021.02.19 [wiz 2021-12-12]
+	Updated graphics/ImageMagick to 7.1.0.17 [wiz 2021-12-12]
