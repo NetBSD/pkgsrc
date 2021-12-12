@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6131 2021/12/12 09:57:56 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6132 2021/12/12 10:04:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9239,3 +9239,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/notmuch to 0.34.2 [wiz 2021-12-12]
 	Updated audio/musicpd to 0.23.5 [wiz 2021-12-12]
 	Updated textproc/hgrep to 0.2.2 [wiz 2021-12-12]
+	Updated security/py-pip-audit to 1.1.1 [wiz 2021-12-12]
