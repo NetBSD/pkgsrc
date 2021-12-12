@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6125 2021/12/12 03:14:54 mef Exp $
+$NetBSD: CHANGES-2021,v 1.6126 2021/12/12 08:42:31 tron Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9233,3 +9233,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-epr-reader to 2.4.11 [adam 2021-12-11]
 	Updated math/py-xarray to 0.20.2 [adam 2021-12-11]
 	Updated cad/klayout to 0.27.5 [mef 2021-12-12]
+	Updated mail/mutt to 2.1.4 [tron 2021-12-12]
