@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST.extras,v 1.6 2021/03/07 14:47:58 taca Exp $
-share/doc/${PKGBASE}/INSTALL
+@comment $NetBSD: PLIST.extras,v 1.7 2021/12/12 15:25:53 taca Exp $
 include/php/ext/apcu/apc.h
 include/php/ext/apcu/apc_api.h
 include/php/ext/apcu/apc_arginfo.h

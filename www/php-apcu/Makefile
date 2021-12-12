@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2021/09/28 13:22:27 manu Exp $
+# $NetBSD: Makefile,v 1.21 2021/12/12 15:25:53 taca Exp $
 
 MODNAME=	apcu
-PECL_VERSION=	5.1.20
-PKGREVISION=	1
+PECL_VERSION=	5.1.21
 CATEGORIES+=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -30,7 +29,6 @@ DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 INSTALLATION_DIRS=	${DOCDIR}
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${DOCDIR}
 	cd ${WRKSRC} && ${MAKE} INSTALL_ROOT="${DESTDIR}" install-headers
 
 .include "../../lang/php/ext.mk"
