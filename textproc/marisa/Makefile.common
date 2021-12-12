@@ -1,11 +1,13 @@
-# $NetBSD: Makefile.common,v 1.4 2021/05/01 08:19:52 taca Exp $
+# $NetBSD: Makefile.common,v 1.5 2021/12/12 13:55:13 taca Exp $
 # used by textproc/p5-marisa/Makefile
 # used by textproc/py-marisa/Makefile
 # used by textproc/ruby-marisa/Makefile
 
-DISTNAME=	marisa-0.2.4
+DISTNAME=	marisa-0.2.6
 CATEGORIES=	textproc
-MASTER_SITES=	http://marisa-trie.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=s-yata/}
+GITHUB_PROJECT=	marisa-trie
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 DISTINFO_FILE=	${.CURDIR}/../../textproc/marisa/distinfo
 PATCHDIR=	${.CURDIR}/../../textproc/marisa/patches
