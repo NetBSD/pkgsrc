@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/05/10 10:32:33 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2021/12/13 13:14:32 nia Exp $
 
 NAME=		quickjs
 QJS_DATE=	2020-04-12
@@ -28,7 +28,7 @@ HAS_ATOMIC_64!=	${CC} -E files/netbsd-has-atomic64.c | tail -1
 .if (${HAS_ATOMIC_64} == "YES")
 MAKE_ENV+=	CONFIG_BIGNUM=yes
 .endif
-.elif ${OPSYS} == "Linux"
+.elif ${OPSYS} == "Darwin" || ${OPSYS} == "Linux"
 PLIST.lto=yes
 .else # Not NetBSD && not Linux
 # Presumed to be supported
