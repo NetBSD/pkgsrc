@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6165 2021/12/12 23:26:38 fox Exp $
+$NetBSD: CHANGES-2021,v 1.6166 2021/12/13 08:56:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9279,3 +9279,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/citron to 0.5.0 [pin 2021-12-12]
 	Updated sysutils/xplr to 0.17.0 [pin 2021-12-12]
 	Updated audio/din to 52 [fox 2021-12-12]
+	Updated editors/vile to 9.8v [wiz 2021-12-13]
