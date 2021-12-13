@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2021/10/18 11:17:24 nia Exp $
+# $NetBSD: Makefile,v 1.38 2021/12/13 13:15:41 nia Exp $
 #
 
 DISTNAME=	vifm-0.12
@@ -34,8 +34,10 @@ CONFIGURE_ARGS+=	--without-gtk
 CONFIGURE_ARGS+=	--without-X11
 CONFIGURE_ARGS+=	--without-dyn-X11
 
+PLIST_VARS+=		notdarwin
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin"
+PLIST.notdarwin=	yes
 PYTHON_FOR_BUILD_ONLY=	tool
 .endif
 
