@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.75 2021/05/24 19:52:08 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2021/12/13 08:56:32 wiz Exp $
 
-DISTNAME=		vile-9.8u
-PKGREVISION=		2
+DISTNAME=		vile-9.8v
 CATEGORIES=		editors
-MASTER_SITES=		ftp://ftp.invisible-island.net/vile/current/
+MASTER_SITES=		ftp://ftp.invisible-island.net/pub/vile/current/ \
+			https://invisible-mirror.net/archives/vile/current/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -15,7 +15,7 @@ LICENSE=		gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-perl
-CONFIGURE_ARGS+=	--datadir=${DATADIR:Q}
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
 CONFIGURE_ARGS+=	--with-libdir-path=${FILTERDIR:Q}
 USE_TOOLS+=		perl:run
 
