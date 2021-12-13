@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/12/13 15:13:17 taca Exp $
+# $NetBSD: Makefile,v 1.2 2021/12/13 21:35:01 nia Exp $
 
 MODNAME=		http
 PECL_VERSION=		4.2.1
@@ -14,6 +14,7 @@ LICENSE=		2-clause-bsd AND isc
 CONFLICTS=		php-http-[0-9]*
 
 #PHP_VERSIONS_ACCEPTED=	80 81
+PHP_VERSIONS_INCOMPATIBLE=	56 # php-raphf2
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bash
