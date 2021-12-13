@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6168 2021/12/13 13:49:21 micha Exp $
+$NetBSD: CHANGES-2021,v 1.6169 2021/12/13 14:10:34 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9282,3 +9282,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/vile to 9.8v [wiz 2021-12-13]
 	Updated editors/xvile to 9.8v [wiz 2021-12-13]
 	Updated devel/doxygen to 1.9.2 [micha 2021-12-13]
+	Updated www/cratuity to 0.1.5 [pin 2021-12-13]
