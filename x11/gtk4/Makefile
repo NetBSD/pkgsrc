@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2021/12/08 16:02:50 adam Exp $
+# $NetBSD: Makefile,v 1.12 2021/12/13 12:56:04 nia Exp $
 
 DISTNAME=	gtk-4.2.0
 PKGNAME=	${DISTNAME:S/gtk/gtk4/}
@@ -18,7 +18,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "options.mk"
 
 USE_TOOLS+=		pkg-config gdbus-codegen
-USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 
 MESON_ARGS+=		-Dsassc=disabled
