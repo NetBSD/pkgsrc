@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2020/10/14 12:10:44 micha Exp $
+# $NetBSD: options.mk,v 1.16 2021/12/13 13:47:06 micha Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.doxygen
 PKG_SUPPORTED_OPTIONS=	latex qt
@@ -30,6 +30,7 @@ DEPENDS+=	tex-rsfs-[0-9]*:../../fonts/tex-rsfs
 # Styles used by Doxygen output.
 #
 DEPENDS+=	tex-adjustbox-[0-9]*:../../print/tex-adjustbox
+DEPENDS+=	tex-alphalph-[0-9]*:../../print/tex-alphalph
 DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
 DEPENDS+=	tex-appendix-[0-9]*:../../print/tex-appendix
 DEPENDS+=	tex-colortbl-[0-9]*:../../print/tex-colortbl
@@ -60,6 +61,7 @@ DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 DEPENDS+=	tex-ulem-[0-9]*:../../print/tex-ulem
 DEPENDS+=	tex-wasysym-[0-9]*:../../fonts/tex-wasysym
 DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
+DEPENDS+=	tex-xpatch-[0-9]*:../../print/tex-xpatch
 DEPENDS+=	tex-xtab-[0-9]*:../../print/tex-xtab
 .endif
 
