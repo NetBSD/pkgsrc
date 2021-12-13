@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/10/18 11:17:24 nia Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/12/13 13:15:41 nia Exp $
 bin/vifm
 bin/vifm-convert-dircolors
 bin/vifm-pause
@@ -28,8 +28,8 @@ share/vifm/colors/istib-solarized-dark.vifm
 share/vifm/colors/juef-zenburn.vifm
 share/vifm/colors/reicheltd-light.vifm
 share/vifm/vifm-help.txt
-share/vifm/vifm-media
-share/vifm/vifmrc
+${PLIST.notdarwin}share/vifm/vifm-media
+${PLIST.notdarwin}share/vifm/vifmrc
 share/vifm/vim-doc/doc/tags
 share/vifm/vim-doc/doc/vifm-app.txt
 share/vifm/vim-doc/doc/vifm-lua.txt
