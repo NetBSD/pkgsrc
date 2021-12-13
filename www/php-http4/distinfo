@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/12/13 15:13:17 taca Exp $
+
+BLAKE2s (php-http/pecl_http-4.2.1.tgz) = 83147b5a97591048df0e70c332e2409926f24225ea89891fb740e07cf773a99f
+SHA512 (php-http/pecl_http-4.2.1.tgz) = 2ad7e57fae313a7b46ba88e528e124ac9d83804827131a6ef478ccf3cf5883dec2d928b8ceb377ee7f5947c76f24d640d77533a9946612419e526786a79877e6
+Size (php-http/pecl_http-4.2.1.tgz) = 224452 bytes
+SHA1 (patch-autoconf_pecl_libcurl.m4) = 48263c311aeccc4fd2a5b366b56e85041d659b91
