@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/09/19 17:33:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/12/13 15:03:47 taca Exp $
 bin/de-gfm${RUBY_SUFFIX}
 bin/doilit${RUBY_SUFFIX}
 bin/kdrfc${RUBY_SUFFIX}
@@ -25,5 +25,6 @@ ${GEM_LIBDIR}/lib/kramdown-rfc/gzip-clone.rb
 ${GEM_LIBDIR}/lib/kramdown-rfc/kdrfc-processor.rb
 ${GEM_LIBDIR}/lib/kramdown-rfc/parameterset.rb
 ${GEM_LIBDIR}/lib/kramdown-rfc/refxml.rb
+${GEM_LIBDIR}/lib/kramdown-rfc/rfc8792.rb
 ${GEM_LIBDIR}/lib/kramdown-rfc2629.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
