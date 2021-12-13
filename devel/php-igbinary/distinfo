@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:18:01 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/12/13 14:44:32 taca Exp $
 
-BLAKE2s (php-igbinary/igbinary-1.2.1.tgz) = e8d7ad6f245919907a35ca5c5010f927106b6539f0f1fd86866bba53bc9e2b53
-SHA512 (php-igbinary/igbinary-1.2.1.tgz) = adea1a18cb6ffa8100eea49bc88ac0be758fc4fa75395585cdfb28f80706230a45abef323b66f2db29ca263643912740e2c26b81aabbcdaf15271331655f6bb3
-Size (php-igbinary/igbinary-1.2.1.tgz) = 36869 bytes
+BLAKE2s (php-igbinary/igbinary-3.2.6.tgz) = 403a021de9622f2d454095fd9433654b430416d8389f99f2f2230e20b19a0282
+SHA512 (php-igbinary/igbinary-3.2.6.tgz) = bb1a87f46b0ba2396a3d21b8cc2165498243a86182dc5814d85053bcac14fb099041ec9a67be975eb636e9fae411d2f2695848f0739ddb385c060d56c2f73f4a
+Size (php-igbinary/igbinary-3.2.6.tgz) = 95839 bytes
