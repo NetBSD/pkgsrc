@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2021/01/03 06:52:47 taca Exp $
+# $NetBSD: Makefile,v 1.7 2021/12/13 15:07:00 taca Exp $
 
 MODNAME=	raphf
-PECL_VERSION=	2.0.0
+PECL_VERSION=	2.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
