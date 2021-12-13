@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6175 2021/12/13 15:04:06 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6176 2021/12/13 15:07:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9289,3 +9289,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/ruby-pdf-reader to 2.7.0 [taca 2021-12-13]
 	Updated misc/ruby-sprockets-rails to 3.4.2 [taca 2021-12-13]
 	Updated textproc/ruby-kramdown-rfc2629 to 1.5.22 [taca 2021-12-13]
+	Updated devel/php-raphf2 to 2.0.1 [taca 2021-12-13]
