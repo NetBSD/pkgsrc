@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6180 2021/12/13 18:05:00 js Exp $
+$NetBSD: CHANGES-2021,v 1.6181 2021/12/13 19:04:20 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9295,3 +9295,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-setuptools to 59.6.0 [adam 2021-12-13]
 	Updated misc/libreoffice to 7.2.4.1 [ryoon 2021-12-13]
 	Updated chat/element-web to 1.9.7 [js 2021-12-13]
+	Updated wm/leftwm to 0.2.11 [pin 2021-12-13]
