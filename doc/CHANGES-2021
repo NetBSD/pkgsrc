@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6172 2021/12/13 14:46:38 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6173 2021/12/13 14:59:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9286,3 +9286,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/hackernews-tui to 0.8.0 [pin 2021-12-13]
 	Updated devel/php-igbinary to 3.2.6 [taca 2021-12-13]
 	Updated www/php-uploadprogress to 2.0.2 [taca 2021-12-13]
+	Updated print/ruby-pdf-reader to 2.7.0 [taca 2021-12-13]
