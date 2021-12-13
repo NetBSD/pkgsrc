@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2021/12/08 16:06:39 adam Exp $
+# $NetBSD: Makefile,v 1.13 2021/12/13 13:23:50 nia Exp $
 
 DISTNAME=	virt-viewer-8.0
 PKGREVISION=	11
@@ -11,6 +11,7 @@ COMMENT=	Graphical VNC/SPice viewer for the guest OS
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake intltool pkg-config
+USE_TOOLS+=	msgfmt msgmerge xgettext
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
