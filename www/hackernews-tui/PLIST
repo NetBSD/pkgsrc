@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2021/06/12 17:14:24 pin Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/12/13 14:12:03 pin Exp $
 bin/hackernews_tui
-share/examples/hackernews-tui/hn-tui-default.toml
+share/examples/hackernews-tui/hn-tui.toml
