@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2021/12/06 22:08:27 pin Exp $
+$NetBSD: distinfo,v 1.2 2021/12/13 19:04:02 pin Exp $
 
 BLAKE2s (aho-corasick-0.7.18.crate) = 8925e88e2df4b5ca3b31783f527e1bb31dbe27846f409f631148fa239f3b2935
 SHA512 (aho-corasick-0.7.18.crate) = 7a23b16231a90d23ee60ad4c81bc225410599a4560d33d3a203138fc540c39cf1000100fed3aed40dcc371c3635656a3792545dca5dd1aefbde00d8774eebd00
@@ -135,9 +135,9 @@ Size (kstring-1.0.6.crate) = 20728 bytes
 BLAKE2s (lazy_static-1.4.0.crate) = 0d5f7c2bcfe70610bc27bd6b339ea3e4ca3b7014149714db3a0c199ac6f07cd1
 SHA512 (lazy_static-1.4.0.crate) = e124c0521ec7c950f3c4a066821918da7a9c6e711115d98009ae7c351928fdddead852e7596fea5937a9c30e4e4ce8eee7099b20248b5d6e3b2494b6a6d88cb8
 Size (lazy_static-1.4.0.crate) = 10443 bytes
-BLAKE2s (leftwm-0.2.10.tar.gz) = a162d0481dd2b714495d1f0f92433d73e6549c342d3e211f49c4e053b2407755
-SHA512 (leftwm-0.2.10.tar.gz) = 020785d20b9f25adad49325e465b656b5acbaba451cadaeb6f475cc4a59b9ab77496a7a03dfc400a52205d174a8354cae280fa7e1f383d7149600292f118ea57
-Size (leftwm-0.2.10.tar.gz) = 8547797 bytes
+BLAKE2s (leftwm-0.2.11.tar.gz) = d5abfce76049cd316a6dfb27f2c0d8df7857c0f5535d62d19631fe67afdad140
+SHA512 (leftwm-0.2.11.tar.gz) = 718835ea02e562c0376ef8d84e5c48b4bd00357af6899de27ff2e13c2ee30dfd4877c102d72bc4c0311b6a54dd91a2cacc7fe6e6492a80070647ff1c4561ac88
+Size (leftwm-0.2.11.tar.gz) = 8548395 bytes
 BLAKE2s (libc-0.2.108.crate) = d91b2efef87721a8f42ad3f3b345c694b11a53c71fd9c262f2e49a183cbc1b31
 SHA512 (libc-0.2.108.crate) = a29f0c5cc7e4b653c2bc33c92dc90b5d3a7132d4409d6b92b94fa9fe1391d8cf57a63d339ca0602f2efac28d3dc3beb854cf9a6d03bf027fef5e5276fc5b1487
 Size (libc-0.2.108.crate) = 559475 bytes
