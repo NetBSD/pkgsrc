@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2021/05/02 20:02:56 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2021/12/13 14:10:14 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ansi_term-0.11.0
 CARGO_CRATE_DEPENDS+=	atty-0.2.14
@@ -17,10 +17,13 @@ CARGO_CRATE_DEPENDS+=	chrono-0.4.19
 CARGO_CRATE_DEPENDS+=	clap-2.33.3
 CARGO_CRATE_DEPENDS+=	clipboard-0.5.0
 CARGO_CRATE_DEPENDS+=	clipboard-win-2.2.0
+CARGO_CRATE_DEPENDS+=	comfy-table-2.1.0
 CARGO_CRATE_DEPENDS+=	core-foundation-0.9.1
 CARGO_CRATE_DEPENDS+=	core-foundation-sys-0.8.2
 CARGO_CRATE_DEPENDS+=	crossterm-0.18.2
+CARGO_CRATE_DEPENDS+=	crossterm-0.19.0
 CARGO_CRATE_DEPENDS+=	crossterm_winapi-0.6.2
+CARGO_CRATE_DEPENDS+=	crossterm_winapi-0.7.0
 CARGO_CRATE_DEPENDS+=	encoding_rs-0.8.26
 CARGO_CRATE_DEPENDS+=	fnv-1.0.7
 CARGO_CRATE_DEPENDS+=	foreign-types-0.3.2
@@ -76,11 +79,13 @@ CARGO_CRATE_DEPENDS+=	objc-0.2.7
 CARGO_CRATE_DEPENDS+=	objc-foundation-0.1.1
 CARGO_CRATE_DEPENDS+=	objc_id-0.1.1
 CARGO_CRATE_DEPENDS+=	once_cell-1.5.2
+CARGO_CRATE_DEPENDS+=	open-2.0.2
 CARGO_CRATE_DEPENDS+=	openssl-0.10.32
 CARGO_CRATE_DEPENDS+=	openssl-probe-0.1.2
 CARGO_CRATE_DEPENDS+=	openssl-sys-0.9.60
 CARGO_CRATE_DEPENDS+=	parking_lot-0.11.1
 CARGO_CRATE_DEPENDS+=	parking_lot_core-0.8.2
+CARGO_CRATE_DEPENDS+=	pathdiff-0.2.1
 CARGO_CRATE_DEPENDS+=	percent-encoding-2.1.0
 CARGO_CRATE_DEPENDS+=	pin-project-0.4.27
 CARGO_CRATE_DEPENDS+=	pin-project-1.0.4
@@ -119,6 +124,8 @@ CARGO_CRATE_DEPENDS+=	socket2-0.3.19
 CARGO_CRATE_DEPENDS+=	strsim-0.8.0
 CARGO_CRATE_DEPENDS+=	structopt-0.3.21
 CARGO_CRATE_DEPENDS+=	structopt-derive-0.4.14
+CARGO_CRATE_DEPENDS+=	strum-0.20.0
+CARGO_CRATE_DEPENDS+=	strum_macros-0.20.1
 CARGO_CRATE_DEPENDS+=	syn-1.0.58
 CARGO_CRATE_DEPENDS+=	tempfile-3.1.0
 CARGO_CRATE_DEPENDS+=	textwrap-0.11.0
