@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21351 2021/12/12 13:59:44 taca Exp $
+$NetBSD: TODO,v 1.21352 2021/12/13 14:27:43 micha Exp $
 
 Suggested new packages
 ======================
@@ -46,10 +46,6 @@ Suggested new packages
 	Sphinx-4
 	http://cmusphinx.sourceforge.net/sphinx4/
 	Speaker-independent, continuous speech recognition system.
-
-	doxywizard
-	QT-based wizard for doxygen documentation generator.
-	See devel/doxygen
 
 	xftlsfonts
 	FreeType font list displayer.
