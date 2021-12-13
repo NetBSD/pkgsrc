@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.78 2021/05/24 19:52:09 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2021/12/13 08:56:32 wiz Exp $
 
-DISTNAME=		vile-9.8u
+DISTNAME=		vile-9.8v
 PKGNAME=		x${DISTNAME}
-PKGREVISION=		2
 CATEGORIES=		editors
-MASTER_SITES=		ftp://ftp.invisible-island.net/vile/current/
+MASTER_SITES=		ftp://ftp.invisible-island.net/vile/current/ \
+			https://invisible-mirror.net/archives/vile/current/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -18,8 +18,9 @@ PATCHDIR=		${.CURDIR}/../../editors/vile/patches
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-imake
 CONFIGURE_ARGS+=	--with-perl
-CONFIGURE_ARGS+=	--datadir=${DATADIR:Q}
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
 CONFIGURE_ARGS+=	--with-libdir-path=${FILTERDIR:Q}
+CONFIGURE_ARGS+=	--with-startup-path=${DATADIR:Q}
 
 MAKE_FILE=		makefile
 INSTALL_TARGET=		install install-doc install-perl
@@ -42,6 +43,14 @@ CONFIGURE_ARGS+=	--with-Xaw3d
 CONFIGURE_ARGS+=	--with-screen=Xaw
 .endif
 CONFIGURE_ARGS+=	--with-xpm
+
+pre-configure:
+	for f in							\
+		${WRKDIR}/${DISTNAME}/makefile.in			\
+		${WRKDIR}/${DISTNAME}/filters/makefile.in; do		\
+		${MV} $$f $$f.bak;					\
+		sed -e '/^datadir[ 	]*=[ 	]*@datadir@/s%/vile%/xvile%' $$f.bak >$$f; \
+	done
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/perl/vileget 			\
