@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.7 2021/01/03 07:42:39 taca Exp $
+# $NetBSD: Makefile,v 1.8 2021/12/13 14:46:09 taca Exp $
 #
 
-MODNAME=		uploadprogress
-PECL_VERSION=		1.1.3
-CATEGORIES=		www
+MODNAME=	uploadprogress
+PECL_VERSION=	2.0.2
+CATEGORIES=	www
 
-MAINTAINER=		mbowie@buzmo.com
-COMMENT=		PHP extension to track progress of a file upload
-LICENSE=		php
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	PHP extension to track progress of a file upload
+LICENSE=	php
+
+PHP_VERSIONS_INCOMPATIBLE=	56
 
 CONFIGURE_ARGS+=	--enable-${MODNAME}
 
