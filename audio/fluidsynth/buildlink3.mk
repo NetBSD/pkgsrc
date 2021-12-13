@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2021/12/08 16:01:43 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2021/12/13 12:40:56 nia Exp $
 
 BUILDLINK_TREE+=	fluidsynth
 
@@ -9,6 +9,7 @@ BUILDLINK_API_DEPENDS.fluidsynth+=	fluidsynth>=1.0.5
 BUILDLINK_ABI_DEPENDS.fluidsynth+=	fluidsynth>=2.2.4nb1
 BUILDLINK_PKGSRCDIR.fluidsynth?=	../../audio/fluidsynth
 
+.include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .endif # FLUIDSYNTH_BUILDLINK3_MK
