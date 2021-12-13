@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2021/10/29 16:13:22 adam Exp $
+# $NetBSD: Makefile,v 1.56 2021/12/13 09:28:34 wiz Exp $
 
 DISTNAME=	docutils-0.17.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,8 +11,9 @@ COMMENT=	Python tool to generate documents
 LICENSE=	public-domain AND 2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
-DEPENDS+=	${PYPKGPREFIX}-pygments>=0:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-roman>=1.4:../../math/py-roman
+
+PYTHON_VERSIONED_DEPENDENCIES=	pygments
 
 USE_LANGUAGES=	# none
 
@@ -35,5 +36,6 @@ do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} test/alltests.py
 
 .include "../../lang/python/application.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
