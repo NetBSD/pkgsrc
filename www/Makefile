@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1597 2021/12/13 15:14:00 taca Exp $
+# $NetBSD: Makefile,v 1.1598 2021/12/14 00:13:20 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -599,7 +599,6 @@ SUBDIR+=	php-curl
 SUBDIR+=	php-dotclear
 SUBDIR+=	php-fpm
 SUBDIR+=	php-glpi
-SUBDIR+=	php-http
 SUBDIR+=	php-http3
 SUBDIR+=	php-http4
 SUBDIR+=	php-ja-wordpress
