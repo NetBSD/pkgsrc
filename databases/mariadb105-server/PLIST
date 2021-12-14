@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7.2.1 2021/12/14 08:07:21 tm Exp $
+@comment $NetBSD: PLIST,v 1.7.2.2 2021/12/14 09:17:37 tm Exp $
 bin/aria_chk
 bin/aria_dump_log
 bin/aria_ftdump
@@ -342,7 +342,7 @@ lib/mysql/plugin/test_versioning.so
 lib/mysql/plugin/type_mysql_json.so
 lib/mysql/plugin/type_test.so
 lib/mysql/plugin/wsrep_info.so
-lib/security/pam_user_map.so
+${PLIST.auth_pam}lib/security/pam_user_map.so
 sbin/mariadbd
 sbin/mysqld
 share/doc/mysql/COPYING
@@ -351,7 +351,7 @@ share/doc/mysql/INSTALL-BINARY
 share/doc/mysql/README-wsrep
 share/doc/mysql/README.md
 share/doc/mysql/THIRDPARTY
-share/examples/mariadb_auth_pam/user_map.conf
+${PLIST.auth_pam}share/examples/mariadb_auth_pam/user_map.conf
 share/mysql/charsets/Index.xml
 share/mysql/charsets/README
 share/mysql/charsets/armscii8.xml
