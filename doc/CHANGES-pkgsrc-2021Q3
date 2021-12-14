@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.42 2021/12/05 07:33:04 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.43 2021/12/14 08:08:30 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -148,4 +148,7 @@ lang/ruby30-base: security fix
 
 Pullup ticket #6548 - requested by mlelstv
 devel/nss: security-update
+
+Pullup ticket #6549 - requested by nia
+databases/mariadb105: security fix
 
