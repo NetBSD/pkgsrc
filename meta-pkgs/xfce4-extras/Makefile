@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.90 2021/12/08 16:05:36 adam Exp $
+# $NetBSD: Makefile,v 1.91 2021/12/14 17:21:53 gutteridge Exp $
 
 META_PACKAGE=	yes
 
-PKGREVISION= 1
+PKGREVISION=	2
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-extras-${XFCE4_VERSION}
@@ -48,9 +48,6 @@ DEPENDS+=	xfce4-xkb-plugin>=0.8.1:../../sysutils/xfce4-xkb-plugin
 DEPENDS+=	xfce4-thunar-archive-plugin>=0.4.0:../../archivers/xfce4-thunar-archive
 DEPENDS+=	xfce4-thunar-media-tags-plugin>=0.2.1:../../multimedia/xfce4-thunar-media-tags
 #DEPENDS+=	xfce4-thunar-vcs-plugin>=0.1.4:../../sysutils/xfce4-thunar-vcs
-
-# Extra Themes
-DEPENDS+=	gnome-themes-standard>=3.20.2:../../graphics/gnome-themes-standard
 
 # Broken
 # 0.2.0 fails because our thunar is too new. Fixed upstream already.
