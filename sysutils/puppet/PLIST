@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2021/12/12 13:38:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.33 2021/12/14 14:47:28 taca Exp $
 bin/puppet${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CODEOWNERS
@@ -1667,6 +1667,7 @@ ${GEM_LIBDIR}/spec/unit/application/ssl_spec.rb
 ${GEM_LIBDIR}/spec/unit/application_spec.rb
 ${GEM_LIBDIR}/spec/unit/certificate_factory_spec.rb
 ${GEM_LIBDIR}/spec/unit/concurrent/lock_spec.rb
+${GEM_LIBDIR}/spec/unit/concurrent/thread_local_singleton_spec.rb
 ${GEM_LIBDIR}/spec/unit/configurer/downloader_spec.rb
 ${GEM_LIBDIR}/spec/unit/configurer/fact_handler_spec.rb
 ${GEM_LIBDIR}/spec/unit/configurer/plugin_handler_spec.rb
@@ -2263,6 +2264,7 @@ ${GEM_LIBDIR}/spec/unit/util/feature_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/filetype_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/inifile_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/json_lockfile_spec.rb
+${GEM_LIBDIR}/spec/unit/util/json_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/ldap/connection_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/ldap/generator_spec.rb
 ${GEM_LIBDIR}/spec/unit/util/ldap/manager_spec.rb
