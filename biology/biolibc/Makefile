@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2021/09/18 00:42:39 bacon Exp $
+# $NetBSD: Makefile,v 1.7 2021/12/14 18:58:56 bacon Exp $
 
-DISTNAME=	biolibc-0.2.0.11
+DISTNAME=	biolibc-0.2.1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	65b3b132c813bb04b3a9886d08f51af8137a60e6
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/biolibc
@@ -17,11 +16,9 @@ BUILD_TARGET=	apple
 INSTALL_TARGET=	apple-install
 .else
 INSTALL_TARGET=	install-strip
-PLIST.cs=	yes
 .endif
 
 MAKE_ENV+=	DYLIB_PATH=${PREFIX}/lib MANDIR=${PREFIX}/${PKGMANDIR}
-PLIST_VARS=	cs
 
 pre-build:
 	cd ${WRKSRC} && ${MAKE} PREFIX=${PREFIX} depend
