@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6204 2021/12/14 19:08:19 bacon Exp $
+$NetBSD: CHANGES-2021,v 1.6205 2021/12/14 19:10:53 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9323,3 +9323,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated biology/ad2vcf to 0.1.4 [bacon 2021-12-14]
 	Updated biology/biolibc-tools to 0.1.1 [bacon 2021-12-14]
 	Updated biology/peak-classifier to 0.1.2 [bacon 2021-12-14]
+	Updated biology/vcf-split to 0.1.3.3 [bacon 2021-12-14]
