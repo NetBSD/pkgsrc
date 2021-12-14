@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:55:59 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/12/14 07:11:40 adam Exp $
 
-BLAKE2s (asdf-2.7.3.tar.gz) = e370da38557516ef3d7327e4aba71ffcc3fdaec14ed748b8f2e6c5a5d050a815
-SHA512 (asdf-2.7.3.tar.gz) = 3fb713f536213cae49a9f30273f411327be02d59d61ee39d2ab7a643655359eda8698c801d10f3922ef1a5fb8a7070ce08ef0fc36b556dfe9632a7e8baef9dfc
-Size (asdf-2.7.3.tar.gz) = 509984 bytes
+BLAKE2s (asdf-2.8.3.tar.gz) = 5a3b1279e7303ccbc62752beb8b9f536bd9058faeb6ea68c4dd86afa64abe815
+SHA512 (asdf-2.8.3.tar.gz) = c3b72ed7fefd33958413c962d81213d2d141072473e08c767059a3ff46ba03f0135c9435a7893eb0eb43b199e2c701d62f263a487872a120465979dfec8988df
+Size (asdf-2.8.3.tar.gz) = 513853 bytes
