@@ -1,0 +1,11 @@
+bin/arm-none-eabi-c++ @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-c++
+bin/arm-none-eabi-cpp @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-cpp
+bin/arm-none-eabi-g++ @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-g++
+bin/arm-none-eabi-gcc @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-gcc
+bin/arm-none-eabi-gcc-@PKGVERSION@ @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-gcc-@PKGVERSION@
+bin/arm-none-eabi-gcc-ar @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-gcc-ar
+bin/arm-none-eabi-gcc-nm @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-gcc-nm
+bin/arm-none-eabi-gcc-ranlib @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib
+bin/arm-none-eabi-gcov @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-gcov
+bin/arm-none-eabi-gcov-dump @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-gcov-dump
+bin/arm-none-eabi-gcov-tool @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-gcov-tool
