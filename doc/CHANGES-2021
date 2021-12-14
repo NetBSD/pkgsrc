@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6198 2021/12/14 14:52:28 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6199 2021/12/14 14:54:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9317,3 +9317,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/puppet to 7.13.1 [taca 2021-12-14]
 	Updated www/ruby-css-parser to 1.11.0 [taca 2021-12-14]
 	Updated www/ruby-aws-partitions to 1.541.0 [taca 2021-12-14]
+	Updated www/ruby-aws-sdk-secretsmanager to 1.54.0 [taca 2021-12-14]
