@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.37 2021/10/26 10:54:30 nia Exp $
+$NetBSD: distinfo,v 1.38 2021/12/14 12:49:35 schmonz Exp $
 
 BLAKE2s (spamdyke-5.0.1.tgz) = bbee05a4d7529e2aa4ddb58e1a5babe4b3ba35b8dba9c4007d09c67e0e28d07c
 SHA512 (spamdyke-5.0.1.tgz) = a022c8a8d4a8d74f5249f8e2d901d3de423ee853bbaffaf7e86cece1d19880d9039135892ef6ccb8a2a0fb11532c487402dc97a8dd6d89c9de431752c55f6eb9
 Size (spamdyke-5.0.1.tgz) = 383720 bytes
+SHA1 (patch-Makefile.in) = a68d1077ada42e034c9ea3c989aa5ece77887b6c
 SHA1 (patch-configuration.c) = 81548b8a7cc557446d3ecfca3546a129b04a2173
-SHA1 (patch-configure) = 308cde4c9f54c30ce11c7d7c415ebe7caf51732e
-SHA1 (patch-configure.ac) = 23ed678900fbb9b9d1a2613e9267607ac59eb5b8
+SHA1 (patch-configure) = 4800a832a8144a6e394220e5cd09cecaa9e9c2d8
+SHA1 (patch-configure.ac) = c7a17cc40a677db1d0d04a10395aabc214440fa0
 SHA1 (patch-md5.c) = d30f421e28fbc6b87c4dc78f4a2e7f5048c61a45
 SHA1 (patch-spamdyke.h) = 689d4774d78b60a4dd2fbb62a99b218aca9b500b
 SHA1 (patch-tls.c) = 1cc05d30dfd3736727c6203a81ebb24c44cd2c1f
