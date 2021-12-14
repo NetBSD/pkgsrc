@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:30:24 nia Exp $
-
-BLAKE2s (php-http/pecl_http-2.6.0.tgz) = 6ce29e0bf3da74a66d4bf9c6537ba96c965541250caff0c65599b07e4269cf6e
-SHA512 (php-http/pecl_http-2.6.0.tgz) = 12d18049411a4133008449a1e7458a3055322dc337f421e0e2be126ec965f15b0189af6fccd9ca4537c48819c763b9e020906ac6d09d87ead92f4436fac595ad
-Size (php-http/pecl_http-2.6.0.tgz) = 217673 bytes
