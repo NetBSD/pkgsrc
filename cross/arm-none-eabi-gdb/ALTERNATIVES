@@ -1,0 +1,2 @@
+bin/arm-none-eabi-gdb @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-gdb
+bin/arm-none-eabi-run @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-run

@@ -1,0 +1,16 @@
+bin/arm-none-eabi-addr2line @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-addr2line
+bin/arm-none-eabi-ar @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-ar
+bin/arm-none-eabi-as @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-as
+bin/arm-none-eabi-c++filt @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-c++filt
+bin/arm-none-eabi-elfedit @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-elfedit
+bin/arm-none-eabi-gprof @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-gprof
+bin/arm-none-eabi-ld @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-ld
+bin/arm-none-eabi-ld.bfd @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-ld.bfd
+bin/arm-none-eabi-nm @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-nm
+bin/arm-none-eabi-objcopy @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-objcopy
+bin/arm-none-eabi-objdump @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-objdump
+bin/arm-none-eabi-ranlib @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-ranlib
+bin/arm-none-eabi-readelf @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-readelf
+bin/arm-none-eabi-size @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-size
+bin/arm-none-eabi-strings @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-strings
+bin/arm-none-eabi-strip @PREFIX@/cross-arm-none-eabi/bin/arm-none-eabi-strip
