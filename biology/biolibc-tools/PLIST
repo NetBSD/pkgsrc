@@ -1,8 +1,22 @@
-@comment $NetBSD: PLIST,v 1.1 2021/08/31 15:55:16 bacon Exp $
-bin/fastq-derep.sh
-bin/fastx-derep
-bin/fastx2tsv
+@comment $NetBSD: PLIST,v 1.2 2021/12/14 19:05:39 bacon Exp $
+bin/blt
+libexec/biolibc-tools/chrom-lens
+libexec/biolibc-tools/extract-seq
+libexec/biolibc-tools/fasta2seq
+libexec/biolibc-tools/fastq-derep.sh
+libexec/biolibc-tools/fastx-derep
+libexec/biolibc-tools/fastx2tsv
+libexec/biolibc-tools/find-orfs
+libexec/biolibc-tools/gff2bed
 libexec/biolibc-tools/uniq-seqs.awk
-man/man1/fastq-derep.sh.1
-man/man1/fastx-derep.1
-man/man1/fastx2tsv.1
+libexec/biolibc-tools/vcf-search
+man/man1/blt-chrom-lens.1
+man/man1/blt-extract-seq.1
+man/man1/blt-fasta2seq.1
+man/man1/blt-fastq-derep.sh.1
+man/man1/blt-fastx-derep.1
+man/man1/blt-fastx2tsv.1
+man/man1/blt-find-orfs.1
+man/man1/blt-gff2bed.1
+man/man1/blt-vcf-search.1
+man/man1/blt.1
