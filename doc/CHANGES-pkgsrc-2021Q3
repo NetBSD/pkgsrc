@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.43 2021/12/14 08:08:30 tm Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.44 2021/12/14 08:59:49 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -151,4 +151,7 @@ devel/nss: security-update
 
 Pullup ticket #6549 - requested by nia
 databases/mariadb105: security fix
+
+Pullup ticket #6550 - requested by nia
+databases/mariadb106: security fix
 
