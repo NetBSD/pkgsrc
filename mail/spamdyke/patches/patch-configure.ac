@@ -1,10 +1,20 @@
-$NetBSD: patch-configure.ac,v 1.2 2020/07/02 08:50:09 schmonz Exp $
+$NetBSD: patch-configure.ac,v 1.3 2021/12/14 12:49:35 schmonz Exp $
 
 Remove anonymous inner functions to build with clang.
 Remove outdated OpenSSL check to build with 1.1.x.
+Respect CFLAGS.
 
 --- configure.ac.orig	2015-04-30 00:53:36.000000000 +0000
 +++ configure.ac
+@@ -22,7 +22,7 @@ AC_CONFIG_SRCDIR([spamdyke.h])
+ AC_CONFIG_HEADER([config.h])
+ 
+ AC_LANG_WERROR
+-CFLAGS=-Wall
++CFLAGS="${CFLAGS} -Wall"
+ 
+ # Checks for programs.
+ AC_PROG_CC([[gcc]])
 @@ -149,19 +149,6 @@ AS_IF([ test "x$enable_tls" != "xno" ],
                         [
                           AC_MSG_RESULT([yes])
