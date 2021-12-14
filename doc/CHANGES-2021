@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6202 2021/12/14 19:02:32 bacon Exp $
+$NetBSD: CHANGES-2021,v 1.6203 2021/12/14 19:05:51 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9321,3 +9321,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/libxtend to 0.1.4 [bacon 2021-12-14]
 	Updated biology/biolibc to 0.2.1 [bacon 2021-12-14]
 	Updated biology/ad2vcf to 0.1.4 [bacon 2021-12-14]
+	Updated biology/biolibc-tools to 0.1.1 [bacon 2021-12-14]
