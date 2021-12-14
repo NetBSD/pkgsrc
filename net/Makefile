@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1435 2021/11/25 08:19:48 schmonz Exp $
+# $NetBSD: Makefile,v 1.1436 2021/12/14 10:07:49 nia Exp $
 #
 
 COMMENT=	Networking tools
@@ -47,6 +47,7 @@ SUBDIR+=	bing
 SUBDIR+=	bird
 SUBDIR+=	bird6
 SUBDIR+=	bmon
+SUBDIR+=	bombadillo
 SUBDIR+=	bounce
 SUBDIR+=	bridged
 SUBDIR+=	bsddip
