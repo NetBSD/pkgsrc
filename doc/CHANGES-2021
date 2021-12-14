@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6182 2021/12/14 00:14:35 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6183 2021/12/14 01:01:54 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9297,3 +9297,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated chat/element-web to 1.9.7 [js 2021-12-13]
 	Updated wm/leftwm to 0.2.11 [pin 2021-12-13]
 	Removed www/php-http [taca 2021-12-14]
+	Updated security/olm to 3.2.8 [gdt 2021-12-14]
