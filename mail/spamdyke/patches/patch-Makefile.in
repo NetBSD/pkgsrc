@@ -1,0 +1,26 @@
+$NetBSD: patch-Makefile.in,v 1.1 2021/12/14 12:49:35 schmonz Exp $
+
+Remove unneeded workaround.
+
+--- Makefile.in.orig	2015-04-30 00:53:36.000000000 +0000
++++ Makefile.in
+@@ -17,7 +17,6 @@
+ # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ 
+ CC := @CC@
+-CPP := @CPP@
+ CFLAGS := @CFLAGS@ -funsigned-char @CPPFLAGS@
+ LDFLAGS := @LDFLAGS@
+ LIBS := @LIBS@
+@@ -59,10 +58,8 @@ filter.o: filter.c filter.h Makefile spa
+ 	$(CC) $(CFLAGS) $(DEFS) -c filter.c
+ cdb.o: cdb.c cdb.h Makefile spamdyke.h config.h
+ 	$(CC) $(CFLAGS) $(DEFS) -c cdb.c
+-
+-# This avoids a gcc segfault on FreeBSD 6.0.
+ configuration.o: configuration.c configuration.h Makefile spamdyke.h config.h
+-	$(CPP) $(CFLAGS) $(DEFS) configuration.c | $(CC) $(CFLAGS) $(DEFS) -x c -c -o configuration.o -
++	$(CC) $(CFLAGS) $(DEFS) -c configuration.c
+ 
+ clean:
+ 	rm -rf spamdyke *.o .gdb_history *.dSYM
