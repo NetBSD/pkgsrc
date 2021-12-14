@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.44 2021/12/14 08:59:49 tm Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q3,v 1.1.2.45 2021/12/14 09:17:58 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q3 branch:
 
@@ -154,4 +154,8 @@ databases/mariadb105: security fix
 
 Pullup ticket #6550 - requested by nia
 databases/mariadb106: security fix
+
+Pullup ticket #6551 - requested by nia
+databases/mariadb105: fix PLIST on SunOS
+databases/mariadb106: fix PLIST on SunOS
 
