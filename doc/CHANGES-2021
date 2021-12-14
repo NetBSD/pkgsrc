@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6192 2021/12/14 13:09:03 tpaul Exp $
+$NetBSD: CHANGES-2021,v 1.6193 2021/12/14 14:18:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9311,3 +9311,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added time/ddate version 0.2.2 [nia 2021-12-14]
 	Updated cross/arm-none-eabi-gdb to 7.10nb2 [jperkin 2021-12-14]
 	Updated devel/php-composer to 2.1.14 [tpaul 2021-12-14]
+	Updated www/ruby-loofah to 2.13.0 [taca 2021-12-14]
