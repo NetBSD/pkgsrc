@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6191 2021/12/14 10:35:29 nia Exp $
+$NetBSD: CHANGES-2021,v 1.6192 2021/12/14 13:09:03 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9310,3 +9310,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated cross/arm-none-eabi-gcc to 8.3.0nb4 [jperkin 2021-12-14]
 	Added time/ddate version 0.2.2 [nia 2021-12-14]
 	Updated cross/arm-none-eabi-gdb to 7.10nb2 [jperkin 2021-12-14]
+	Updated devel/php-composer to 2.1.14 [tpaul 2021-12-14]
