@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2017/07/10 17:34:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2021/12/14 08:47:06 schmonz Exp $
 
 PKGNAME=		${PHP_PKG_PREFIX}-${PKGNAME_MODULE}
 COMMENT=		PHP bindings for Xapian search engine
 HOMEPAGE=		https://xapian.org/docs/bindings/php/
 
 .include "../../lang/php/phpversion.mk"
+
+PHP_VERSIONS_INCOMPATIBLE=	80 81
 
 .if (${PKG_PHP_MAJOR_VERS} == 5)
 CONFIGURE_ARGS+=	--with-php
