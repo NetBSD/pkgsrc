@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.53 2021/09/29 19:00:07 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.54 2021/12/14 19:56:24 adam Exp $
 
 BUILDLINK_TREE+=	GraphicsMagick
 
@@ -12,10 +12,10 @@ BUILDLINK_PKGSRCDIR.GraphicsMagick?=	../../graphics/GraphicsMagick
 pkgbase := GraphicsMagick
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.GraphicsMagick:Mghostscript)
+.if ${PKG_BUILD_OPTIONS.GraphicsMagick:Mghostscript}
 .include "../../print/ghostscript/buildlink3.mk"
 .endif
-.if !empty(PKG_BUILD_OPTIONS.GraphicsMagick:Mx11)
+.if ${PKG_BUILD_OPTIONS.GraphicsMagick:Mx11}
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
