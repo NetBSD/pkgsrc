@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2021/10/05 18:35:14 adam Exp $
+# $NetBSD: Makefile,v 1.21 2021/12/14 09:01:48 adam Exp $
 
-DISTNAME=	django-cors-headers-3.10.0
+DISTNAME=	django-cors-headers-3.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-cors-headers/}
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-django>=2.0:../../www/py-django2
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # since 3.1.0
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
