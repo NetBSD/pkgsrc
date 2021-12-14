@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2021/06/29 08:42:00 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/12/14 07:11:40 adam Exp $
 
-DISTNAME=	asdf-2.7.3
+DISTNAME=	asdf-2.8.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asdf/}
@@ -11,19 +11,25 @@ COMMENT=	Advanced Scientific Data Format
 LICENSE=	modified-bsd
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+DEPENDS+=	${PYPKGPREFIX}-jmespath>=0.6.2:../../textproc/py-jmespath
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=3.0.2:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-lz4>=0.10:../../archivers/py-lz4
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.10.0:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-packaging>=16.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-semantic_version>=2.8:../../devel/py-semantic_version
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27 36	# py-numpy
+
+.include "../../lang/python/pyversion.mk"
+.if ${_PYTHON_VERSION} < 39
+DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=3:../../devel/py-importlib-resources
+.endif
+
 REPLACE_PYTHON+=	asdf-standard/reference_files/generate/generate
 REPLACE_PYTHON+=	asdf/extern/RangeHTTPServer.py
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-PYTHON_VERSIONS_INCOMPATIBLE+=	36	# py-numpy
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
