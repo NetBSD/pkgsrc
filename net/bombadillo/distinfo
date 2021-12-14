@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/12/14 10:07:49 nia Exp $
+
+BLAKE2s (bombadillo/2.3.3.tar.gz) = 45e3efec006fe9727ff70c5c245e0ade8d0156dabdd4fabc9db1c90e40bc1166
+SHA512 (bombadillo/2.3.3.tar.gz) = 62ca7dccca1bf1b31a679bfd28976c7dbd6701b25731c0cfdd5969c95edfb2f3deb1e15f5d61d07fe1e0cabab126fa103bcd874405aebcb489a775e56ae9dede
+Size (bombadillo/2.3.3.tar.gz) = 103435 bytes
