@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6200 2021/12/14 18:55:23 bacon Exp $
+$NetBSD: CHANGES-2021,v 1.6201 2021/12/14 18:59:08 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9319,3 +9319,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-aws-partitions to 1.541.0 [taca 2021-12-14]
 	Updated www/ruby-aws-sdk-secretsmanager to 1.54.0 [taca 2021-12-14]
 	Updated devel/libxtend to 0.1.4 [bacon 2021-12-14]
+	Updated biology/biolibc to 0.2.1 [bacon 2021-12-14]
