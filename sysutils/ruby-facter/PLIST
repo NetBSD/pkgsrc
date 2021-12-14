@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2021/12/11 14:19:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.39 2021/12/14 14:32:57 taca Exp $
 bin/facter${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
@@ -737,7 +737,7 @@ ${GEM_LIBDIR}/lib/facter/resolvers/bsd/ffi/ffi_helper.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/bsd/processors.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/containers.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/debian_version.rb
-${GEM_LIBDIR}/lib/facter/resolvers/disk.rb
+${GEM_LIBDIR}/lib/facter/resolvers/disks.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/dmi.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/dmi_decode.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/ec2.rb
@@ -825,6 +825,7 @@ ${GEM_LIBDIR}/lib/facter/resolvers/windows/ffi/os_version_info_ex.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/windows/ffi/performance_information.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/windows/ffi/system32_ffi.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/windows/ffi/system_info.rb
+${GEM_LIBDIR}/lib/facter/resolvers/windows/ffi/winnls_ffi.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/windows/fips.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/windows/hardware_architecture.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/windows/identity.rb
@@ -836,6 +837,7 @@ ${GEM_LIBDIR}/lib/facter/resolvers/windows/processors.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/windows/product_release.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/windows/ssh.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/windows/system32.rb
+${GEM_LIBDIR}/lib/facter/resolvers/windows/timezone.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/windows/uptime.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/windows/virtualization.rb
 ${GEM_LIBDIR}/lib/facter/resolvers/windows/win_os_description.rb
