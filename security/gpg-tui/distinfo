@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 11:17:07 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/12/15 08:20:55 pin Exp $
 
 BLAKE2s (ansi_term-0.11.0.crate) = 7cd193cc3f7acbd750b484dee76f184299e57c525ade653489f170d00854ad2c
 SHA512 (ansi_term-0.11.0.crate) = a637466a380748f939b3af090b8c0333f35581925bc03f4dda9b3f95d338836403cf5487ae3af9ff68f8245a837f8ab061aabe57a126a6a2c20f2e972c77d1fa
@@ -117,9 +117,9 @@ Size (getrandom-0.2.3.crate) = 26261 bytes
 BLAKE2s (gpg-error-0.5.2.crate) = cde4973b1fe4761a49ef885201cfdbc055a396c85e9af994eaa8b0ab98d0b8ca
 SHA512 (gpg-error-0.5.2.crate) = 69138c1c712aec6b2c5e8b919b146445137ff62ada0d4437393764dac18167197d06fd60cf77550f628762a9411c4b3a051cb4515fedad726a63810f80b8b1e6
 Size (gpg-error-0.5.2.crate) = 16410 bytes
-BLAKE2s (gpg-tui-0.8.1.tar.gz) = a17cf40aae534e7a70810a7d2b12f704b0a617d74325da4dcfa89527f2c98f37
-SHA512 (gpg-tui-0.8.1.tar.gz) = e5c2cb09bb02386591acdff2b9cb6710ca7b28b0e038f6edc9567ad86277a89764a0e0f0a87748c2786c7d9c7a6413a659e1467a8b2c68b400184a3f35a892b1
-Size (gpg-tui-0.8.1.tar.gz) = 11627599 bytes
+BLAKE2s (gpg-tui-0.8.2.tar.gz) = 910fdf7b48ff7bbb570cf7c2871ad1c78cbfc8a7bc2e65a1e87d5f0b58268987
+SHA512 (gpg-tui-0.8.2.tar.gz) = 2b3399abcd210be8e8a7a8e8908832ba385b53ebc3fdbf73a8a410fb2bb30e69178a47e5c57792546ace90f5d489f82e0a7744f82c22149f242a6aac9d8106d2
+Size (gpg-tui-0.8.2.tar.gz) = 11627833 bytes
 BLAKE2s (gpgme-0.10.0.crate) = b1f97e5b5173ac09a6fd4acd742f6f03d758cec38af904e5bba6b6d23eee038f
 SHA512 (gpgme-0.10.0.crate) = fb4271e327e16daa15878d7f6bf46f3c8d9c93aee4aabdf0b08b5e95b2e2aea558c92f3a7665793f870ec488ef286ba5c4b7e6224a8fe182df00c0d010d4c0ad
 Size (gpgme-0.10.0.crate) = 83900 bytes
