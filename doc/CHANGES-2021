@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6210 2021/12/15 08:19:47 pin Exp $
+$NetBSD: CHANGES-2021,v 1.6211 2021/12/15 08:21:14 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9330,3 +9330,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/macchina to 6.0.1 [pin 2021-12-14]
 	Updated x11/xfce4-indicator-plugin to 2.4.0 [gutteridge 2021-12-15]
 	Updated www/hackernews-tui to 0.8.1 [pin 2021-12-15]
+	Updated security/gpg-tui to 0.8.2 [pin 2021-12-15]
