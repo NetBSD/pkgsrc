@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6218 2021/12/15 14:24:42 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.6219 2021/12/15 14:51:43 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9340,3 +9340,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated archivers/unrar to 6.1.3 [adam 2021-12-15]
 	Updated net/bind916 to 9.16.24 [he 2021-12-15]
 	Updated mail/spamdyke to 5.0.1nb4 [schmonz 2021-12-15]
+	Updated net/nsd to 4.3.9 [pettai 2021-12-15]
