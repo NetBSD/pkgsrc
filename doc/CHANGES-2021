@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6219 2021/12/15 14:51:43 pettai Exp $
+$NetBSD: CHANGES-2021,v 1.6220 2021/12/15 17:21:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9341,3 +9341,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/bind916 to 9.16.24 [he 2021-12-15]
 	Updated mail/spamdyke to 5.0.1nb4 [schmonz 2021-12-15]
 	Updated net/nsd to 4.3.9 [pettai 2021-12-15]
+	Updated graphics/gnuplot to 5.4.2 [adam 2021-12-15]
+	Updated math/octave to 6.4.0 [adam 2021-12-15]
