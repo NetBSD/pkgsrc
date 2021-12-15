@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/12/15 09:03:52 schmonz Exp $
+
+BLAKE2s (EmptyFiles.Python-0.0.3.tar.gz) = f0a2eedf5baebb990daaedb83aa8f6a315158eb9c224b6ebb7b774476285abe7
+SHA512 (EmptyFiles.Python-0.0.3.tar.gz) = d143e4c23d858b0c09ef5a4ad90ed889aa894123457634f3adfbf284b4a065a48993174b086da45ae5dba0c5e24b0c9cad6d1c0d8f43be583f54933f66c0233e
+Size (EmptyFiles.Python-0.0.3.tar.gz) = 9817 bytes
