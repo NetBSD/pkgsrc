@@ -1,4 +1,4 @@
-$NetBSD: patch-fseeko-fpos_t.c,v 1.2 2016/02/16 04:21:40 dbj Exp $
+$NetBSD: patch-libgnu_fseeko.c,v 1.1 2021/12/15 17:20:57 adam Exp $
 
 --- libgnu/fseeko.c.orig	2015-05-23 14:36:16.000000000 +0000
 +++ libgnu/fseeko.c
