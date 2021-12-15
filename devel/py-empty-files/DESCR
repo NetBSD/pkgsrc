@@ -1,0 +1,3 @@
+This library will create an empty file of a type requested. If possible,
+that file will be the smallest valid file for that type. For example, an
+empty jpg will be a 1x1 pixel jpg.
