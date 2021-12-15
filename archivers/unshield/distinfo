@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/12/01 09:34:13 adam Exp $
+$NetBSD: distinfo,v 1.13 2021/12/15 09:52:05 adam Exp $
 
-BLAKE2s (unshield-1.5.0.tar.gz) = 866ac48e5a1cc93c5255860b3b07833516b7f49dd1a30f07941e821ac7904b52
-SHA512 (unshield-1.5.0.tar.gz) = 626d88293a6a71e7be4cd4ba85f5112edf7bf81a606439404d4da1b092fc1d30bcc3503921255438fba7bd541b806834fbc2446b7e586e46a89b182631a82353
-Size (unshield-1.5.0.tar.gz) = 66929 bytes
-SHA1 (patch-lib_CMakeLists.txt) = 1bbc989d765940e75cfa9c3ccde55dae502e17b3
+BLAKE2s (unshield-1.5.1.tar.gz) = 3110b85d05e047a1afecfe361928d87479067feb05f21efff461ad0536f62f5b
+SHA512 (unshield-1.5.1.tar.gz) = acb130c461bed66dc3804394be067a68aea96a7cd20b348e713f64a11bf642b74f68fc172f220a9790b44573abbe01ed4585191158f27c40e863918a7342c1ca
+Size (unshield-1.5.1.tar.gz) = 67454 bytes
