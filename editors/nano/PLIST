@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2021/10/18 13:56:26 nia Exp $
+@comment $NetBSD: PLIST,v 1.30 2021/12/15 18:00:19 wiedi Exp $
 bin/nano
 bin/rnano
 info/nano.info
@@ -55,9 +55,7 @@ share/nano/default.nanorc
 share/nano/elisp.nanorc
 share/nano/email.nanorc
 share/nano/extra/ada.nanorc
-share/nano/extra/debian.nanorc
 share/nano/extra/fortran.nanorc
-share/nano/extra/gentoo.nanorc
 share/nano/extra/haskell.nanorc
 share/nano/extra/povray.nanorc
 share/nano/extra/spec.nanorc
@@ -90,3 +88,4 @@ share/nano/tcl.nanorc
 share/nano/tex.nanorc
 share/nano/texinfo.nanorc
 share/nano/xml.nanorc
+share/nano/yaml.nanorc
