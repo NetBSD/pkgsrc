@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.36 2021/06/14 22:16:33 nros Exp $
+@comment $NetBSD: PLIST,v 1.37 2021/12/15 17:20:57 adam Exp $
+bin/${PKGNAME}
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
-bin/${PKGNAME}
 bin/octave-cli
 bin/octave-cli-${PKGVERSION}
 bin/octave-config
@@ -786,10 +786,16 @@ lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/audioread.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/convhulln.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/fftw.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/gzip.oct
+@pkgdir lib/octave/${PKGVERSION}/site/oct/${MACHINE_GNU_PLATFORM}
+@pkgdir lib/octave/site/oct/${MACHINE_GNU_PLATFORM}
+@pkgdir lib/octave/site/oct/api-v55/${MACHINE_GNU_PLATFORM}
 lib/pkgconfig/octave.pc
 lib/pkgconfig/octinterp.pc
 libexec/octave/${PKGVERSION}/exec/${MACHINE_GNU_PLATFORM}/octave-gui
 libexec/octave/${PKGVERSION}/exec/${MACHINE_GNU_PLATFORM}/octave-svgconvert
+@pkgdir libexec/octave/${PKGVERSION}/site/exec/${MACHINE_GNU_PLATFORM}
+@pkgdir libexec/octave/api-v55/site/exec/${MACHINE_GNU_PLATFORM}
+@pkgdir libexec/octave/site/exec/${MACHINE_GNU_PLATFORM}
 man/man1/mkoctfile.1
 man/man1/octave-cli.1
 man/man1/octave-config.1
@@ -962,6 +968,14 @@ share/octave/${PKGVERSION}/etc/tests/fixed/bug-59704/bug59704_1_test.m
 share/octave/${PKGVERSION}/etc/tests/fixed/bug-59704/bug59704_2.m
 share/octave/${PKGVERSION}/etc/tests/fixed/bug-59937/bug-59937.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/bug-59937/eval_global_script.m
+share/octave/${PKGVERSION}/etc/tests/fixed/bug-60237/bug-60237.tst
+share/octave/${PKGVERSION}/etc/tests/fixed/bug-60237/bug_60237.m
+share/octave/${PKGVERSION}/etc/tests/fixed/bug-61105/bug-61105.tst
+share/octave/${PKGVERSION}/etc/tests/fixed/bug-61105/nested_test_1.m
+share/octave/${PKGVERSION}/etc/tests/fixed/bug-61105/nested_test_2.m
+share/octave/${PKGVERSION}/etc/tests/fixed/bug-61105/nested_test_3.m
+share/octave/${PKGVERSION}/etc/tests/fixed/bug-61191/bug-61191.tst
+share/octave/${PKGVERSION}/etc/tests/fixed/bug-61191/subdir/bug_61191.m
 share/octave/${PKGVERSION}/etc/tests/fixed/class-concat/@foo/foo.m
 share/octave/${PKGVERSION}/etc/tests/fixed/class-concat/class-concat.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/classdef-multiple-inheritance/base_1.m
@@ -1116,8 +1130,10 @@ share/octave/${PKGVERSION}/etc/tests/fixed/fcn-handle/bug51709_c.m
 share/octave/${PKGVERSION}/etc/tests/fixed/fcn-handle/bug57941a.m
 share/octave/${PKGVERSION}/etc/tests/fixed/fcn-handle/bug57941b.m
 share/octave/${PKGVERSION}/etc/tests/fixed/fcn-handle/bug58519.tst
+share/octave/${PKGVERSION}/etc/tests/fixed/fcn-handle/bug60845.m
 share/octave/${PKGVERSION}/etc/tests/fixed/fcn-handle/derived-resolution.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/fcn-handle/f1.m
+share/octave/${PKGVERSION}/etc/tests/fixed/fcn-handle/handle-to-sibling.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/fcn-handle/keyword.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/fcn-handle/object-method.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/fcn-handle/package-function.tst
@@ -2377,12 +2393,6 @@ share/octave/${PKGVERSION}/m/web/web.m
 share/octave/${PKGVERSION}/m/web/weboptions.m
 share/octave/${PKGVERSION}/m/web/webread.m
 share/octave/${PKGVERSION}/m/web/webwrite.m
-share/octave/site/m/startup/octaverc
-@pkgdir share/octave/site/api-v55/m
 @pkgdir share/octave/${PKGVERSION}/site/m
-@pkgdir lib/octave/site/oct/${MACHINE_GNU_PLATFORM}
-@pkgdir lib/octave/site/oct/api-v55/${MACHINE_GNU_PLATFORM}
-@pkgdir lib/octave/${PKGVERSION}/site/oct/${MACHINE_GNU_PLATFORM}
-@pkgdir libexec/octave/site/exec/${MACHINE_GNU_PLATFORM}
-@pkgdir libexec/octave/api-v55/site/exec/${MACHINE_GNU_PLATFORM}
-@pkgdir libexec/octave/${PKGVERSION}/site/exec/${MACHINE_GNU_PLATFORM}
+@pkgdir share/octave/site/api-v55/m
+share/octave/site/m/startup/octaverc
