@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6213 2021/12/15 09:08:47 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.6214 2021/12/15 09:34:19 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9333,3 +9333,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/gpg-tui to 0.8.2 [pin 2021-12-15]
 	Added devel/py-empty-files version 0.0.3 [schmonz 2021-12-15]
 	Updated devel/py-approvaltests to 3.1.1 [schmonz 2021-12-15]
+	Updated devel/py-approvaltests to 3.3.0 [schmonz 2021-12-15]
