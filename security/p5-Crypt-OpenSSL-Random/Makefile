@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2021/05/24 19:53:59 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2021/12/15 20:40:42 adam Exp $
 
 DISTNAME=		Crypt-OpenSSL-Random-0.15
 PKGNAME=		p5-${DISTNAME}
@@ -14,6 +14,7 @@ LICENSE=		${PERL5_LICENSE}
 DEPENDS+=		p5-Crypt-OpenSSL-Guess>=0.11:../../security/p5-Crypt-OpenSSL-Guess
 
 USE_LANGUAGES=		c
+MAKE_ENV+=		DYLD_LIBRARY_PATH=${PREFIX}/lib # build on macOS
 
 PERL5_PACKLIST=		auto/Crypt/OpenSSL/Random/.packlist
 
