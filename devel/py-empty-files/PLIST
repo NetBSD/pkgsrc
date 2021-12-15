@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2021/12/15 09:03:52 schmonz Exp $
+${PYSITELIB}/empty_files-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/empty_files-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/empty_files-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/empty_files-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/requires.txt
+${PYSITELIB}/empty_files-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/empty_files/__init__.py
+${PYSITELIB}/empty_files/__init__.pyc
+${PYSITELIB}/empty_files/__init__.pyo
+${PYSITELIB}/empty_files/empty_files.py
+${PYSITELIB}/empty_files/empty_files.pyc
+${PYSITELIB}/empty_files/empty_files.pyo
+${PYSITELIB}/empty_files/version.py
+${PYSITELIB}/empty_files/version.pyc
+${PYSITELIB}/empty_files/version.pyo
