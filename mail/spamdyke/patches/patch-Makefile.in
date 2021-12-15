@@ -1,6 +1,6 @@
-$NetBSD: patch-Makefile.in,v 1.1 2021/12/14 12:49:35 schmonz Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2021/12/15 14:06:21 schmonz Exp $
 
-Remove unneeded workaround.
+Remove unneeded workaround and unconditional strip.
 
 --- Makefile.in.orig	2015-04-30 00:53:36.000000000 +0000
 +++ Makefile.in
@@ -12,7 +12,15 @@ Remove unneeded workaround.
  CFLAGS := @CFLAGS@ -funsigned-char @CPPFLAGS@
  LDFLAGS := @LDFLAGS@
  LIBS := @LIBS@
-@@ -59,10 +58,8 @@ filter.o: filter.c filter.h Makefile spa
+@@ -26,7 +25,6 @@ OFILES := spamdyke.o configuration.o dns
+ 
+ spamdyke: $(OFILES)
+ 	$(CC) $(CFLAGS) $(DEFS) -o spamdyke $(OFILES) $(LDFLAGS) $(LIBS)
+-	@STRIP_CMD@
+ 
+ install: spamdyke
+ 	cp spamdyke /usr/local/bin/spamdyke-@PACKAGE_VERSION@
+@@ -59,10 +57,8 @@ filter.o: filter.c filter.h Makefile spa
  	$(CC) $(CFLAGS) $(DEFS) -c filter.c
  cdb.o: cdb.c cdb.h Makefile spamdyke.h config.h
  	$(CC) $(CFLAGS) $(DEFS) -c cdb.c
