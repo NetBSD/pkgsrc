@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2020/01/26 17:31:36 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2021/12/15 14:06:21 schmonz Exp $
 #
 
 DISTNAME=		spamdyke-5.0.1
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}releases/
 EXTRACT_SUFX=		.tgz
