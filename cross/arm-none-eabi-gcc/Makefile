@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2021/12/14 10:33:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.33 2021/12/15 21:55:48 tnn Exp $
 
 DISTNAME=		gcc-8.3.0
 PKGNAME=		cross-arm-none-eabi-${DISTNAME}
@@ -14,6 +14,7 @@ SITES.newlib-${NEWLIBVER}.tar.gz=	https://www.sourceware.org/pub/newlib/
 MAINTAINER=		ryoon@NetBSD.org
 HOMEPAGE=		# none
 COMMENT=		GCC for bare metal ARM EABI
+LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 EXTRACT_USING=		bsdtar
 
