@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6221 2021/12/15 18:00:59 wiedi Exp $
+$NetBSD: CHANGES-2021,v 1.6222 2021/12/15 20:12:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9344,3 +9344,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/gnuplot to 5.4.2 [adam 2021-12-15]
 	Updated math/octave to 6.4.0 [adam 2021-12-15]
 	Updated editors/nano to 6.0 [wiedi 2021-12-15]
+	Updated devel/py-lazy-object-proxy to 1.7.1 [adam 2021-12-15]
+	Updated net/openvpn to 2.5.5 [adam 2021-12-15]
