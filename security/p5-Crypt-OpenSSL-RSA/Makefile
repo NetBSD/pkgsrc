@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2021/09/12 07:15:21 wen Exp $
+# $NetBSD: Makefile,v 1.46 2021/12/15 20:42:13 adam Exp $
 
 DISTNAME=		Crypt-OpenSSL-RSA-0.32
 PKGNAME=		p5-${DISTNAME}
@@ -14,6 +14,7 @@ DEPENDS+=		p5-Crypt-OpenSSL-Bignum-[0-9]*:../../security/p5-Crypt-OpenSSL-Bignum
 DEPENDS+=		p5-Crypt-OpenSSL-Random-[0-9]*:../../security/p5-Crypt-OpenSSL-Random
 
 USE_LANGUAGES=		c
+MAKE_ENV+=		DYLD_LIBRARY_PATH=${PREFIX}/lib # build on macOS
 
 PERL5_PACKLIST=		auto/Crypt/OpenSSL/RSA/.packlist
 
