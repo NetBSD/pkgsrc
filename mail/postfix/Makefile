@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.332 2021/12/08 16:05:29 adam Exp $
+# $NetBSD: Makefile,v 1.333 2021/12/15 20:54:00 adam Exp $
 
 PKGREVISION= 1
 .include "../../mail/postfix/Makefile.common"
@@ -68,7 +68,9 @@ do-install:
 .if !empty(PKG_OPTIONS:Msasl)
 	${INSTALL_DATA} ${WRKDIR}/smtpd.conf ${DESTDIR}${EXAMPLEDIR}
 .endif
-	cd ${WRKSRC} && ${SH} ./postfix-install -non-interactive \
+	cd ${WRKSRC} && ${SETENV} LD_LIBRARY_PATH=${WRKSRC}/lib \
+		DYLD_LIBRARY_PATH=${WRKSRC}/lib \
+		${SH} ./postfix-install -non-interactive \
 		${DESTDIR_INSTALLOPTIONS} config_directory="${EXAMPLEDIR}"
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf \
 		${DESTDIR}${EXAMPLEDIR}/mailer.conf

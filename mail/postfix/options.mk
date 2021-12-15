@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.42 2021/08/14 08:58:20 taca Exp $
+# $NetBSD: options.mk,v 1.43 2021/12/15 20:54:00 adam Exp $
 
 # Global and legacy options
 
@@ -64,6 +64,7 @@ AUXLIBS+=	-L${BUILDLINK_PREFIX.icu}/lib -licuuc			\
 CCARGS+=	-DNO_EAI
 
 post-install:
-	cd ${WRKSRC} && ${SETENV} LD_LIBRARY_PATH=${WRKSRC}/lib bin/postconf	\
+	cd ${WRKSRC} && ${SETENV} LD_LIBRARY_PATH=${WRKSRC}/lib \
+		DYLD_LIBRARY_PATH=${WRKSRC}/lib bin/postconf \
 		-c ${DESTDIR}${EXAMPLEDIR} smtputf8_enable=no
 .endif
