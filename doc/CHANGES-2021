@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6220 2021/12/15 17:21:18 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6221 2021/12/15 18:00:59 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9343,3 +9343,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/nsd to 4.3.9 [pettai 2021-12-15]
 	Updated graphics/gnuplot to 5.4.2 [adam 2021-12-15]
 	Updated math/octave to 6.4.0 [adam 2021-12-15]
+	Updated editors/nano to 6.0 [wiedi 2021-12-15]
