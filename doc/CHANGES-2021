@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6211 2021/12/15 08:21:14 pin Exp $
+$NetBSD: CHANGES-2021,v 1.6212 2021/12/15 09:04:46 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9331,3 +9331,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/xfce4-indicator-plugin to 2.4.0 [gutteridge 2021-12-15]
 	Updated www/hackernews-tui to 0.8.1 [pin 2021-12-15]
 	Updated security/gpg-tui to 0.8.2 [pin 2021-12-15]
+	Added devel/py-empty-files version 0.0.3 [schmonz 2021-12-15]
