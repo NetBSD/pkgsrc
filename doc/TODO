@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21352 2021/12/13 14:27:43 micha Exp $
+$NetBSD: TODO,v 1.21353 2021/12/15 00:59:01 gutteridge Exp $
 
 Suggested new packages
 ======================
@@ -1935,7 +1935,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o xfce4-dashboard-0.9.2
 	o xfce4-diskperf-plugin-2.6.3
 	o xfce4-fsguard-plugin-1.1.2
-	o xfce4-indicator-plugin-2.4.0
 	o xfce4-mount-plugin-1.1.5
 	o xfce4-smartbookmark-plugin-0.5.2
 	o xfce4-taskmanager-1.5.2
