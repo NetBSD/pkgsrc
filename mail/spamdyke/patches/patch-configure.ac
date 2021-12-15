@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.3 2021/12/14 12:49:35 schmonz Exp $
+$NetBSD: patch-configure.ac,v 1.4 2021/12/15 14:06:21 schmonz Exp $
 
 Remove anonymous inner functions to build with clang.
 Remove outdated OpenSSL check to build with 1.1.x.
@@ -15,10 +15,11 @@ Respect CFLAGS.
  
  # Checks for programs.
  AC_PROG_CC([[gcc]])
-@@ -149,19 +149,6 @@ AS_IF([ test "x$enable_tls" != "xno" ],
+@@ -148,25 +148,15 @@ AS_IF([ test "x$enable_tls" != "xno" ],
+                        [],
                         [
                           AC_MSG_RESULT([yes])
-                          AC_SEARCH_LIBS([RSA_sign], [ssl crypto], [], [ AC_MSG_FAILURE([--enable-tls was given but OpenSSL was not found]) ])
+-                         AC_SEARCH_LIBS([RSA_sign], [ssl crypto], [], [ AC_MSG_FAILURE([--enable-tls was given but OpenSSL was not found]) ])
 -                         AC_SEARCH_LIBS([SSL_library_init],
 -                                        [ssl crypto],
 -                                        [ LIBS="$LIBS -lssl"
@@ -32,10 +33,21 @@ Respect CFLAGS.
 -                                                [ AC_MSG_FAILURE([--enable-tls was given but OpenSSL was not found])
 -                                                ])
 -                                        ])
++                         AC_SEARCH_LIBS([RSA_sign], [ssl crypto],
++					[ LIBS="$LIBS -lssl"
++					  AC_DEFINE([HAVE_LIBSSL], [1])
++					],
++					[ AC_MSG_FAILURE([--enable-tls was given but OpenSSL was not found]) ])
                         ],
                         [
                           AC_MSG_RESULT([no])
-@@ -188,37 +175,6 @@ AC_SEARCH_LIBS([getopt_long],
+-                         AC_MSG_NOTICE([Unable to include openssl/ssl.h (required by OpenSSL), TLS support disabled])
+-                         enable_tls="no"
++                         AC_MSG_NOTICE([Unable to include openssl/ssl.h (required by OpenSSL)])
+                        ])
+       ],
+       [ AC_MSG_NOTICE([OpenSSL check skipped, TLS support disabled]) ]
+@@ -188,37 +178,6 @@ AC_SEARCH_LIBS([getopt_long],
                                  [ AC_MSG_FAILURE([unable to compile without getopt_long(), you may need to install the libgnugetopt package/port]) ])
                 ])
  

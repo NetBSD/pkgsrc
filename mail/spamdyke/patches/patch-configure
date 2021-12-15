@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.3 2021/12/14 12:49:35 schmonz Exp $
+$NetBSD: patch-configure,v 1.4 2021/12/15 14:06:21 schmonz Exp $
 
 Remove anonymous inner functions to build with clang.
 Remove outdated OpenSSL check to build with 1.1.x.
@@ -4321,7 +4321,7 @@ Respect CFLAGS.
    ac_func_search_save_LIBS=$LIBS
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
-@@ -3939,155 +3991,81 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+@@ -3939,155 +3991,83 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
  /* Override any GCC internal prototype to avoid an error.
     Use char because int might match the return type of a GCC
     builtin and then its argument prototype would still apply.  */
@@ -4378,10 +4378,8 @@ Respect CFLAGS.
 +printf "%s\n" "$ac_cv_search_RSA_sign" >&6; }
  ac_res=$ac_cv_search_RSA_sign
 -if test "$ac_res" != no; then :
-+if test "$ac_res" != no
-+then :
-   test "$ac_res" = "none required" || LIBS="$ac_res $LIBS"
- 
+-  test "$ac_res" = "none required" || LIBS="$ac_res $LIBS"
+-
 -else
 -   { { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
 -$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
@@ -4441,15 +4439,18 @@ Respect CFLAGS.
 -$as_echo "$ac_cv_search_SSL_library_init" >&6; }
 -ac_res=$ac_cv_search_SSL_library_init
 -if test "$ac_res" != no; then :
--  test "$ac_res" = "none required" || LIBS="$ac_res $LIBS"
--   LIBS="$LIBS -lssl"
++if test "$ac_res" != no
++then :
+   test "$ac_res" = "none required" || LIBS="$ac_res $LIBS"
+    LIBS="$LIBS -lssl"
 -                                          $as_echo "#define HAVE_LIBSSL 1" >>confdefs.h
--
++					  printf "%s\n" "#define HAVE_LIBSSL 1" >>confdefs.h
+ 
 -                                          { $as_echo "$as_me:${as_lineno-$LINENO}: checking for OpenSSL libraries (for TLS support)" >&5
 -$as_echo_n "checking for OpenSSL libraries (for TLS support)... " >&6; }
 -                                          { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 -$as_echo "yes" >&6; }
--
+ 
 -else
 -   if  test "x$enable_tls" = "xcheck" ; then :
 -   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for OpenSSL libraries (for TLS support)" >&5
@@ -4477,11 +4478,11 @@ Respect CFLAGS.
 -$as_echo "no" >&6; }
 -                         { $as_echo "$as_me:${as_lineno-$LINENO}: Unable to include openssl/ssl.h (required by OpenSSL), TLS support disabled" >&5
 -$as_echo "$as_me: Unable to include openssl/ssl.h (required by OpenSSL), TLS support disabled" >&6;}
+-                         enable_tls="no"
 +                         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: no" >&5
 +printf "%s\n" "no" >&6; }
-+                         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: Unable to include openssl/ssl.h (required by OpenSSL), TLS support disabled" >&5
-+printf "%s\n" "$as_me: Unable to include openssl/ssl.h (required by OpenSSL), TLS support disabled" >&6;}
-                          enable_tls="no"
++                         { printf "%s\n" "$as_me:${as_lineno-$LINENO}: Unable to include openssl/ssl.h (required by OpenSSL)" >&5
++printf "%s\n" "$as_me: Unable to include openssl/ssl.h (required by OpenSSL)" >&6;}
  
  fi
 -rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
@@ -4510,7 +4511,7 @@ Respect CFLAGS.
    ac_func_search_save_LIBS=$LIBS
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
-@@ -4095,60 +4073,63 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+@@ -4095,60 +4075,63 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
  /* Override any GCC internal prototype to avoid an error.
     Use char because int might match the return type of a GCC
     builtin and then its argument prototype would still apply.  */
@@ -4595,7 +4596,7 @@ Respect CFLAGS.
    ac_func_search_save_LIBS=$LIBS
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
-@@ -4156,60 +4137,63 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+@@ -4156,60 +4139,63 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
  /* Override any GCC internal prototype to avoid an error.
     Use char because int might match the return type of a GCC
     builtin and then its argument prototype would still apply.  */
@@ -4680,7 +4681,7 @@ Respect CFLAGS.
    ac_func_search_save_LIBS=$LIBS
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
-@@ -4217,60 +4201,63 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+@@ -4217,60 +4203,63 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
  /* Override any GCC internal prototype to avoid an error.
     Use char because int might match the return type of a GCC
     builtin and then its argument prototype would still apply.  */
@@ -4765,7 +4766,7 @@ Respect CFLAGS.
    ac_func_search_save_LIBS=$LIBS
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
-@@ -4278,58 +4265,61 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+@@ -4278,58 +4267,61 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
  /* Override any GCC internal prototype to avoid an error.
     Use char because int might match the return type of a GCC
     builtin and then its argument prototype would still apply.  */
@@ -4846,7 +4847,7 @@ Respect CFLAGS.
    ac_func_search_save_LIBS=$LIBS
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
-@@ -4337,51 +4327,53 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+@@ -4337,51 +4329,53 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
  /* Override any GCC internal prototype to avoid an error.
     Use char because int might match the return type of a GCC
     builtin and then its argument prototype would still apply.  */
@@ -4916,7 +4917,7 @@ Respect CFLAGS.
  as_fn_error $? "unable to compile without getopt_long(), you may need to install the libgnugetopt package/port
  See \`config.log' for more details" "$LINENO" 5; }
  fi
-@@ -4390,113 +4382,15 @@ fi
+@@ -4390,113 +4384,15 @@ fi
  fi
  
  
@@ -5033,7 +5034,7 @@ Respect CFLAGS.
  {
   struct option tmp_option;
                   if ((tmp_option.name = NULL)) return(0);
-@@ -4504,22 +4398,23 @@ main ()
+@@ -4504,22 +4400,23 @@ main ()
    return 0;
  }
  _ACEOF
@@ -5068,7 +5069,7 @@ Respect CFLAGS.
  {
   struct option tmp_option;
                                    if ((tmp_option.name = NULL)) return(0);
-@@ -4527,49 +4422,51 @@ main ()
+@@ -4527,49 +4424,51 @@ main ()
    return 0;
  }
  _ACEOF
@@ -5143,7 +5144,7 @@ Respect CFLAGS.
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
   #include <stdio.h>
-@@ -4578,28 +4475,29 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+@@ -4578,28 +4477,29 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
                   #pragma GCC diagnostic error "-Wformat"
                   #endif
  int
@@ -5186,7 +5187,7 @@ Respect CFLAGS.
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
   #include <stdio.h>
-@@ -4609,28 +4507,29 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+@@ -4609,28 +4509,29 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
                   #pragma GCC diagnostic error "-Wformat"
                   #endif
  int
@@ -5229,7 +5230,7 @@ Respect CFLAGS.
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
   #include <stdio.h>
-@@ -4640,28 +4539,29 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+@@ -4640,28 +4541,29 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
                   #pragma GCC diagnostic error "-Wformat"
                   #endif
  int
@@ -5272,7 +5273,7 @@ Respect CFLAGS.
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
   #include <stdio.h>
-@@ -4670,28 +4570,29 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+@@ -4670,28 +4572,29 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
                   #pragma GCC diagnostic error "-Wformat"
                   #endif
  int
@@ -5315,7 +5316,7 @@ Respect CFLAGS.
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
   #ifdef HAVE_INTTYPES_H
-@@ -4704,7 +4605,7 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+@@ -4704,7 +4607,7 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
                   #include <sys/types.h>
                   #endif
  int
@@ -5324,7 +5325,7 @@ Respect CFLAGS.
  {
   int64_t foo;
                   int64_t bar;
-@@ -4715,17 +4616,19 @@ main ()
+@@ -4715,17 +4618,19 @@ main ()
    return 0;
  }
  _ACEOF
@@ -5353,7 +5354,7 @@ Respect CFLAGS.
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
    #ifdef HAVE_INTTYPES_H
-@@ -4742,7 +4645,7 @@ else
+@@ -4742,7 +4647,7 @@ else
                                                     #pragma GCC diagnostic error "-Wformat"
                                                     #endif
  int
@@ -5362,7 +5363,7 @@ Respect CFLAGS.
  {
   int64_t tmp;
                                                     tmp = 0x7777777777777777ULL;
-@@ -4756,24 +4659,26 @@ main ()
+@@ -4756,24 +4661,26 @@ main ()
  }
  
  _ACEOF
@@ -5405,7 +5406,7 @@ Respect CFLAGS.
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
    #ifdef HAVE_INTTYPES_H
-@@ -4790,7 +4695,7 @@ else
+@@ -4790,7 +4697,7 @@ else
                                                                     #pragma GCC diagnostic error "-Wformat"
                                                                     #endif
  int
@@ -5414,7 +5415,7 @@ Respect CFLAGS.
  {
   int64_t tmp;
                                                                     tmp = 0x7777777777777777ULL;
-@@ -4804,24 +4709,26 @@ main ()
+@@ -4804,24 +4711,26 @@ main ()
  }
  
  _ACEOF
@@ -5457,7 +5458,7 @@ Respect CFLAGS.
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
    #ifdef HAVE_INTTYPES_H
-@@ -4838,7 +4745,7 @@ else
+@@ -4838,7 +4747,7 @@ else
                                                                                     #pragma GCC diagnostic error "-Wformat"
                                                                                     #endif
  int
@@ -5466,7 +5467,7 @@ Respect CFLAGS.
  {
   int64_t tmp;
                                                                                     tmp = 0x7777777777777777ULL;
-@@ -4852,18 +4759,19 @@ main ()
+@@ -4852,18 +4761,19 @@ main ()
  }
  
  _ACEOF
@@ -5498,7 +5499,7 @@ Respect CFLAGS.
  as_fn_error $? "Unable to compile without a printf()/scanf() pattern for 64-bit integers.
  See \`config.log' for more details" "$LINENO" 5; }
  
-@@ -4885,23 +4793,23 @@ rm -f core *.core core.conftest.* gmon.o
+@@ -4885,23 +4795,23 @@ rm -f core *.core core.conftest.* gmon.o
  fi
  
  
@@ -5531,7 +5532,7 @@ Respect CFLAGS.
  {
   char *foo;
                   if ((foo = (char *)__func__)) return(0);
-@@ -4909,19 +4817,20 @@ main ()
+@@ -4909,19 +4819,20 @@ main ()
    return 0;
  }
  _ACEOF
@@ -5561,7 +5562,7 @@ Respect CFLAGS.
  {
   char *foo;
                                    if ((foo = (char *)__FUNCTION__)) return(0);
-@@ -4929,29 +4838,30 @@ main ()
+@@ -4929,29 +4840,30 @@ main ()
    return 0;
  }
  _ACEOF
@@ -5605,7 +5606,7 @@ Respect CFLAGS.
  {
   socklen_t foo;
                   if ((foo = 0)) return(0);
-@@ -4959,26 +4869,27 @@ main ()
+@@ -4959,26 +4871,27 @@ main ()
    return 0;
  }
  _ACEOF
@@ -5644,7 +5645,7 @@ Respect CFLAGS.
  {
   struct rlimit tmp;
                   getrlimit(RLIMIT_AS, &tmp);
-@@ -4987,16 +4898,17 @@ main ()
+@@ -4987,16 +4900,17 @@ main ()
    return 0;
  }
  _ACEOF
@@ -5671,7 +5672,7 @@ Respect CFLAGS.
  
  ac_config_files="$ac_config_files Makefile"
  
-@@ -5027,8 +4939,8 @@ _ACEOF
+@@ -5027,8 +4941,8 @@ _ACEOF
      case $ac_val in #(
      *${as_nl}*)
        case $ac_var in #(
@@ -5682,7 +5683,7 @@ Respect CFLAGS.
        esac
        case $ac_var in #(
        _ | IFS | as_nl) ;; #(
-@@ -5058,15 +4970,15 @@ $as_echo "$as_me: WARNING: cache variabl
+@@ -5058,15 +4972,15 @@ $as_echo "$as_me: WARNING: cache variabl
       /^ac_cv_env_/b end
       t clear
       :clear
@@ -5701,7 +5702,7 @@ Respect CFLAGS.
        if test ! -f "$cache_file" || test -h "$cache_file"; then
  	cat confcache >"$cache_file"
        else
-@@ -5080,8 +4992,8 @@ $as_echo "$as_me: updating cache $cache_
+@@ -5080,8 +4994,8 @@ $as_echo "$as_me: updating cache $cache_
        fi
      fi
    else
@@ -5712,7 +5713,7 @@ Respect CFLAGS.
    fi
  fi
  rm -f confcache
-@@ -5098,7 +5010,7 @@ U=
+@@ -5098,7 +5012,7 @@ U=
  for ac_i in : $LIBOBJS; do test "x$ac_i" = x: && continue
    # 1. Remove the extension, and $U if already installed.
    ac_script='s/\$U\././;s/\.o$//;s/\.obj$//'
@@ -5721,7 +5722,7 @@ Respect CFLAGS.
    # 2. Prepend LIBOBJDIR.  When used with automake>=1.10 LIBOBJDIR
    #    will be set to the directory where LIBOBJS objects are built.
    as_fn_append ac_libobjs " \${LIBOBJDIR}$ac_i\$U.$ac_objext"
-@@ -5114,8 +5026,8 @@ LTLIBOBJS=$ac_ltlibobjs
+@@ -5114,8 +5028,8 @@ LTLIBOBJS=$ac_ltlibobjs
  ac_write_fail=0
  ac_clean_files_save=$ac_clean_files
  ac_clean_files="$ac_clean_files $CONFIG_STATUS"
@@ -5732,7 +5733,7 @@ Respect CFLAGS.
  as_write_fail=0
  cat >$CONFIG_STATUS <<_ASEOF || as_write_fail=1
  #! $SHELL
-@@ -5138,14 +5050,16 @@ cat >>$CONFIG_STATUS <<\_ASEOF || as_wri
+@@ -5138,14 +5052,16 @@ cat >>$CONFIG_STATUS <<\_ASEOF || as_wri
  
  # Be more Bourne compatible
  DUALCASE=1; export DUALCASE # for MKS sh
@@ -5751,7 +5752,7 @@ Respect CFLAGS.
    case `(set -o) 2>/dev/null` in #(
    *posix*) :
      set -o posix ;; #(
-@@ -5155,46 +5069,46 @@ esac
+@@ -5155,46 +5071,46 @@ esac
  fi
  
  
@@ -5833,7 +5834,7 @@ Respect CFLAGS.
    PATH_SEPARATOR=:
    (PATH='/bin;/bin'; FPATH=$PATH; sh -c :) >/dev/null 2>&1 && {
      (PATH='/bin:/bin'; FPATH=$PATH; sh -c :) >/dev/null 2>&1 ||
-@@ -5203,13 +5117,6 @@ if test "${PATH_SEPARATOR+set}" != set;
+@@ -5203,13 +5119,6 @@ if test "${PATH_SEPARATOR+set}" != set;
  fi
  
  
@@ -5847,7 +5848,7 @@ Respect CFLAGS.
  # Find who we are.  Look in the path if we contain no directory separator.
  as_myself=
  case $0 in #((
-@@ -5218,8 +5125,12 @@ case $0 in #((
+@@ -5218,8 +5127,12 @@ case $0 in #((
  for as_dir in $PATH
  do
    IFS=$as_save_IFS
@@ -5862,7 +5863,7 @@ Respect CFLAGS.
    done
  IFS=$as_save_IFS
  
-@@ -5231,30 +5142,10 @@ if test "x$as_myself" = x; then
+@@ -5231,30 +5144,10 @@ if test "x$as_myself" = x; then
    as_myself=$0
  fi
  if test ! -f "$as_myself"; then
@@ -5894,7 +5895,7 @@ Respect CFLAGS.
  
  
  # as_fn_error STATUS ERROR [LINENO LOG_FD]
-@@ -5267,13 +5158,14 @@ as_fn_error ()
+@@ -5267,13 +5160,14 @@ as_fn_error ()
    as_status=$1; test $as_status -eq 0 && as_status=1
    if test "$4"; then
      as_lineno=${as_lineno-"$3"} as_lineno_stack=as_lineno_stack=$as_lineno_stack
@@ -5911,7 +5912,7 @@ Respect CFLAGS.
  # as_fn_set_status STATUS
  # -----------------------
  # Set $? to STATUS, without forking.
-@@ -5300,18 +5192,20 @@ as_fn_unset ()
+@@ -5300,18 +5194,20 @@ as_fn_unset ()
    { eval $1=; unset $1;}
  }
  as_unset=as_fn_unset
@@ -5934,7 +5935,7 @@ Respect CFLAGS.
    as_fn_append ()
    {
      eval $1=\$$1\$2
-@@ -5323,12 +5217,13 @@ fi # as_fn_append
+@@ -5323,12 +5219,13 @@ fi # as_fn_append
  # Perform arithmetic evaluation on the ARGs, and store the result in the
  # global $as_val. Take advantage of shells that can avoid forks. The arguments
  # must be portable across $(()) and expr.
@@ -5950,7 +5951,7 @@ Respect CFLAGS.
    as_fn_arith ()
    {
      as_val=`expr "$@" || test $? -eq 1`
-@@ -5359,7 +5254,7 @@ as_me=`$as_basename -- "$0" ||
+@@ -5359,7 +5256,7 @@ as_me=`$as_basename -- "$0" ||
  $as_expr X/"$0" : '.*/\([^/][^/]*\)/*$' \| \
  	 X"$0" : 'X\(//\)$' \| \
  	 X"$0" : 'X\(/\)' \| . 2>/dev/null ||
@@ -5959,7 +5960,7 @@ Respect CFLAGS.
      sed '/^.*\/\([^/][^/]*\)\/*$/{
  	    s//\1/
  	    q
-@@ -5381,6 +5276,10 @@ as_cr_Letters=$as_cr_letters$as_cr_LETTE
+@@ -5381,6 +5278,10 @@ as_cr_Letters=$as_cr_letters$as_cr_LETTE
  as_cr_digits='0123456789'
  as_cr_alnum=$as_cr_Letters$as_cr_digits
  
@@ -5970,7 +5971,7 @@ Respect CFLAGS.
  ECHO_C= ECHO_N= ECHO_T=
  case `echo -n x` in #(((((
  -n*)
-@@ -5394,6 +5293,12 @@ case `echo -n x` in #(((((
+@@ -5394,6 +5295,12 @@ case `echo -n x` in #(((((
    ECHO_N='-n';;
  esac
  
@@ -5983,7 +5984,7 @@ Respect CFLAGS.
  rm -f conf$$ conf$$.exe conf$$.file
  if test -d conf$$.dir; then
    rm -f conf$$.dir/conf$$.file
-@@ -5407,16 +5312,16 @@ if (echo >conf$$.file) 2>/dev/null; then
+@@ -5407,16 +5314,16 @@ if (echo >conf$$.file) 2>/dev/null; then
      # ... but there are two gotchas:
      # 1) On MSYS, both `ln -s file dir' and `ln file dir' fail.
      # 2) DJGPP < 2.04 has no symlinks; `ln -s' creates a wrapper executable.
@@ -6004,7 +6005,7 @@ Respect CFLAGS.
  fi
  rm -f conf$$ conf$$.exe conf$$.dir/conf$$.file conf$$.file
  rmdir conf$$.dir 2>/dev/null
-@@ -5435,7 +5340,7 @@ as_fn_mkdir_p ()
+@@ -5435,7 +5342,7 @@ as_fn_mkdir_p ()
      as_dirs=
      while :; do
        case $as_dir in #(
@@ -6013,7 +6014,7 @@ Respect CFLAGS.
        *) as_qdir=$as_dir;;
        esac
        as_dirs="'$as_qdir' $as_dirs"
-@@ -5444,7 +5349,7 @@ $as_expr X"$as_dir" : 'X\(.*[^/]\)//*[^/
+@@ -5444,7 +5351,7 @@ $as_expr X"$as_dir" : 'X\(.*[^/]\)//*[^/
  	 X"$as_dir" : 'X\(//\)[^/]' \| \
  	 X"$as_dir" : 'X\(//\)$' \| \
  	 X"$as_dir" : 'X\(/\)' \| . 2>/dev/null ||
@@ -6022,7 +6023,7 @@ Respect CFLAGS.
      sed '/^X\(.*[^/]\)\/\/*[^/][^/]*\/*$/{
  	    s//\1/
  	    q
-@@ -5476,28 +5381,16 @@ else
+@@ -5476,28 +5383,16 @@ else
    as_mkdir_p=false
  fi
  
@@ -6061,7 +6062,7 @@ Respect CFLAGS.
  
  # Sed expression to map a string onto a valid CPP name.
  as_tr_cpp="eval sed 'y%*$as_cr_letters%P$as_cr_LETTERS%;s%[^_$as_cr_alnum]%_%g'"
-@@ -5519,7 +5412,7 @@ cat >>$CONFIG_STATUS <<\_ACEOF || ac_wri
+@@ -5519,7 +5414,7 @@ cat >>$CONFIG_STATUS <<\_ACEOF || ac_wri
  # values after options handling.
  ac_log="
  This file was extended by spamdyke $as_me 5.0.1, which was
@@ -6070,7 +6071,7 @@ Respect CFLAGS.
  
    CONFIG_FILES    = $CONFIG_FILES
    CONFIG_HEADERS  = $CONFIG_HEADERS
-@@ -5577,14 +5470,16 @@ $config_headers
+@@ -5577,14 +5472,16 @@ $config_headers
  Report bugs to <samc (at) silence (dot) org>."
  
  _ACEOF
@@ -6090,7 +6091,7 @@ Respect CFLAGS.
  This config.status script is free software; the Free Software Foundation
  gives unlimited permission to copy, distribute and modify it."
  
-@@ -5621,15 +5516,15 @@ do
+@@ -5621,15 +5518,15 @@ do
    -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
      ac_cs_recheck=: ;;
    --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
@@ -6109,7 +6110,7 @@ Respect CFLAGS.
      '') as_fn_error $? "missing file argument" ;;
      esac
      as_fn_append CONFIG_FILES " '$ac_optarg'"
-@@ -5637,7 +5532,7 @@ do
+@@ -5637,7 +5534,7 @@ do
    --header | --heade | --head | --hea )
      $ac_shift
      case $ac_optarg in
@@ -6118,7 +6119,7 @@ Respect CFLAGS.
      esac
      as_fn_append CONFIG_HEADERS " '$ac_optarg'"
      ac_need_defaults=false;;
-@@ -5646,7 +5541,7 @@ do
+@@ -5646,7 +5543,7 @@ do
      as_fn_error $? "ambiguous option: \`$1'
  Try \`$0 --help' for more information.";;
    --help | --hel | -h )
@@ -6127,7 +6128,7 @@ Respect CFLAGS.
    -q | -quiet | --quiet | --quie | --qui | --qu | --q \
    | -silent | --silent | --silen | --sile | --sil | --si | --s)
      ac_cs_silent=: ;;
-@@ -5672,9 +5567,9 @@ fi
+@@ -5672,9 +5569,9 @@ fi
  _ACEOF
  cat >>$CONFIG_STATUS <<_ACEOF || ac_write_fail=1
  if \$ac_cs_recheck; then
@@ -6139,7 +6140,7 @@ Respect CFLAGS.
    CONFIG_SHELL='$SHELL'
    export CONFIG_SHELL
    exec "\$@"
-@@ -5688,7 +5583,7 @@ exec 5>>config.log
+@@ -5688,7 +5585,7 @@ exec 5>>config.log
    sed 'h;s/./-/g;s/^.../## /;s/...$/ ##/;p;x;p;x' <<_ASBOX
  ## Running $as_me. ##
  _ASBOX
@@ -6148,7 +6149,7 @@ Respect CFLAGS.
  } >&5
  
  _ACEOF
-@@ -5714,8 +5609,8 @@ done
+@@ -5714,8 +5611,8 @@ done
  # We use the long form for the default assignment because of an extremely
  # bizarre bug on SunOS 4.1.3.
  if $ac_need_defaults; then
@@ -6159,7 +6160,7 @@ Respect CFLAGS.
  fi
  
  # Have a temporary directory for convenience.  Make it in the build tree
-@@ -6051,7 +5946,7 @@ do
+@@ -6051,7 +5948,7 @@ do
  	   esac ||
  	   as_fn_error 1 "cannot find input file: \`$ac_f'" "$LINENO" 5;;
        esac
@@ -6168,7 +6169,7 @@ Respect CFLAGS.
        as_fn_append ac_file_inputs " '$ac_f'"
      done
  
-@@ -6059,17 +5954,17 @@ do
+@@ -6059,17 +5956,17 @@ do
      # use $as_me), people would be surprised to read:
      #    /* config.h.  Generated by config.status.  */
      configure_input='Generated from '`
@@ -6190,7 +6191,7 @@ Respect CFLAGS.
         sed 's/[\\\\&|]/\\\\&/g'`;; #(
      *) ac_sed_conf_input=$configure_input;;
      esac
-@@ -6086,7 +5981,7 @@ $as_expr X"$ac_file" : 'X\(.*[^/]\)//*[^
+@@ -6086,7 +5983,7 @@ $as_expr X"$ac_file" : 'X\(.*[^/]\)//*[^
  	 X"$ac_file" : 'X\(//\)[^/]' \| \
  	 X"$ac_file" : 'X\(//\)$' \| \
  	 X"$ac_file" : 'X\(/\)' \| . 2>/dev/null ||
@@ -6199,7 +6200,7 @@ Respect CFLAGS.
      sed '/^X\(.*[^/]\)\/\/*[^/][^/]*\/*$/{
  	    s//\1/
  	    q
-@@ -6110,9 +6005,9 @@ $as_echo X"$ac_file" |
+@@ -6110,9 +6007,9 @@ $as_echo X"$ac_file" |
  case "$ac_dir" in
  .) ac_dir_suffix= ac_top_builddir_sub=. ac_top_build_prefix= ;;
  *)
@@ -6211,7 +6212,7 @@ Respect CFLAGS.
    case $ac_top_builddir_sub in
    "") ac_top_builddir_sub=. ac_top_build_prefix= ;;
    *)  ac_top_build_prefix=$ac_top_builddir_sub/ ;;
-@@ -6165,8 +6060,8 @@ ac_sed_dataroot='
+@@ -6165,8 +6062,8 @@ ac_sed_dataroot='
  case `eval "sed -n \"\$ac_sed_dataroot\" $ac_file_inputs"` in
  *datarootdir*) ac_datarootdir_seen=yes;;
  *@datadir@*|*@docdir@*|*@infodir@*|*@localedir@*|*@mandir@*)
@@ -6222,7 +6223,7 @@ Respect CFLAGS.
  _ACEOF
  cat >>$CONFIG_STATUS <<_ACEOF || ac_write_fail=1
    ac_datarootdir_hack='
-@@ -6208,9 +6103,9 @@ test -z "$ac_datarootdir_hack$ac_dataroo
+@@ -6208,9 +6105,9 @@ test -z "$ac_datarootdir_hack$ac_dataroo
    { ac_out=`sed -n '/\${datarootdir}/p' "$ac_tmp/out"`; test -n "$ac_out"; } &&
    { ac_out=`sed -n '/^[	 ]*datarootdir[	 ]*:*=/p' \
        "$ac_tmp/out"`; test -z "$ac_out"; } &&
@@ -6234,7 +6235,7 @@ Respect CFLAGS.
  which seems to be undefined.  Please make sure it is defined" >&2;}
  
    rm -f "$ac_tmp/stdin"
-@@ -6226,20 +6121,20 @@ which seems to be undefined.  Please mak
+@@ -6226,20 +6123,20 @@ which seems to be undefined.  Please mak
    #
    if test x"$ac_file" != x-; then
      {
@@ -6259,7 +6260,7 @@ Respect CFLAGS.
        && eval '$AWK -f "$ac_tmp/defines.awk"' "$ac_file_inputs" \
        || as_fn_error $? "could not create -" "$LINENO" 5
    fi
-@@ -6280,7 +6175,8 @@ if test "$no_create" != yes; then
+@@ -6280,7 +6177,8 @@ if test "$no_create" != yes; then
    $ac_cs_success || as_fn_exit 1
  fi
  if test -n "$ac_unrecognized_opts" && test "$enable_option_checking" != no; then
