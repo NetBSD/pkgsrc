@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/11/18 19:56:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/12/16 20:30:32 adam Exp $
 bin/sl-${PYVERSSUFFIX}
 bin/slcli-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -161,6 +161,9 @@ ${PYSITELIB}/SoftLayer/CLI/block/snapshot/disable.pyo
 ${PYSITELIB}/SoftLayer/CLI/block/snapshot/enable.py
 ${PYSITELIB}/SoftLayer/CLI/block/snapshot/enable.pyc
 ${PYSITELIB}/SoftLayer/CLI/block/snapshot/enable.pyo
+${PYSITELIB}/SoftLayer/CLI/block/snapshot/get_notify_status.py
+${PYSITELIB}/SoftLayer/CLI/block/snapshot/get_notify_status.pyc
+${PYSITELIB}/SoftLayer/CLI/block/snapshot/get_notify_status.pyo
 ${PYSITELIB}/SoftLayer/CLI/block/snapshot/list.py
 ${PYSITELIB}/SoftLayer/CLI/block/snapshot/list.pyc
 ${PYSITELIB}/SoftLayer/CLI/block/snapshot/list.pyo
@@ -173,6 +176,9 @@ ${PYSITELIB}/SoftLayer/CLI/block/snapshot/restore.pyo
 ${PYSITELIB}/SoftLayer/CLI/block/snapshot/schedule_list.py
 ${PYSITELIB}/SoftLayer/CLI/block/snapshot/schedule_list.pyc
 ${PYSITELIB}/SoftLayer/CLI/block/snapshot/schedule_list.pyo
+${PYSITELIB}/SoftLayer/CLI/block/snapshot/set_notify_status.py
+${PYSITELIB}/SoftLayer/CLI/block/snapshot/set_notify_status.pyc
+${PYSITELIB}/SoftLayer/CLI/block/snapshot/set_notify_status.pyo
 ${PYSITELIB}/SoftLayer/CLI/block/subnets/__init__.py
 ${PYSITELIB}/SoftLayer/CLI/block/subnets/__init__.pyc
 ${PYSITELIB}/SoftLayer/CLI/block/subnets/__init__.pyo
@@ -398,6 +404,9 @@ ${PYSITELIB}/SoftLayer/CLI/file/snapshot/disable.pyo
 ${PYSITELIB}/SoftLayer/CLI/file/snapshot/enable.py
 ${PYSITELIB}/SoftLayer/CLI/file/snapshot/enable.pyc
 ${PYSITELIB}/SoftLayer/CLI/file/snapshot/enable.pyo
+${PYSITELIB}/SoftLayer/CLI/file/snapshot/get_notify_status.py
+${PYSITELIB}/SoftLayer/CLI/file/snapshot/get_notify_status.pyc
+${PYSITELIB}/SoftLayer/CLI/file/snapshot/get_notify_status.pyo
 ${PYSITELIB}/SoftLayer/CLI/file/snapshot/list.py
 ${PYSITELIB}/SoftLayer/CLI/file/snapshot/list.pyc
 ${PYSITELIB}/SoftLayer/CLI/file/snapshot/list.pyo
@@ -410,6 +419,9 @@ ${PYSITELIB}/SoftLayer/CLI/file/snapshot/restore.pyo
 ${PYSITELIB}/SoftLayer/CLI/file/snapshot/schedule_list.py
 ${PYSITELIB}/SoftLayer/CLI/file/snapshot/schedule_list.pyc
 ${PYSITELIB}/SoftLayer/CLI/file/snapshot/schedule_list.pyo
+${PYSITELIB}/SoftLayer/CLI/file/snapshot/set_notify_status.py
+${PYSITELIB}/SoftLayer/CLI/file/snapshot/set_notify_status.pyc
+${PYSITELIB}/SoftLayer/CLI/file/snapshot/set_notify_status.pyo
 ${PYSITELIB}/SoftLayer/CLI/firewall/__init__.py
 ${PYSITELIB}/SoftLayer/CLI/firewall/__init__.pyc
 ${PYSITELIB}/SoftLayer/CLI/firewall/__init__.pyo
@@ -503,6 +515,9 @@ ${PYSITELIB}/SoftLayer/CLI/hardware/reflash_firmware.pyo
 ${PYSITELIB}/SoftLayer/CLI/hardware/reload.py
 ${PYSITELIB}/SoftLayer/CLI/hardware/reload.pyc
 ${PYSITELIB}/SoftLayer/CLI/hardware/reload.pyo
+${PYSITELIB}/SoftLayer/CLI/hardware/sensor.py
+${PYSITELIB}/SoftLayer/CLI/hardware/sensor.pyc
+${PYSITELIB}/SoftLayer/CLI/hardware/sensor.pyo
 ${PYSITELIB}/SoftLayer/CLI/hardware/storage.py
 ${PYSITELIB}/SoftLayer/CLI/hardware/storage.pyc
 ${PYSITELIB}/SoftLayer/CLI/hardware/storage.pyo
@@ -563,6 +578,9 @@ ${PYSITELIB}/SoftLayer/CLI/loadbal/detail.pyo
 ${PYSITELIB}/SoftLayer/CLI/loadbal/health.py
 ${PYSITELIB}/SoftLayer/CLI/loadbal/health.pyc
 ${PYSITELIB}/SoftLayer/CLI/loadbal/health.pyo
+${PYSITELIB}/SoftLayer/CLI/loadbal/layer7_policy_list.py
+${PYSITELIB}/SoftLayer/CLI/loadbal/layer7_policy_list.pyc
+${PYSITELIB}/SoftLayer/CLI/loadbal/layer7_policy_list.pyo
 ${PYSITELIB}/SoftLayer/CLI/loadbal/list.py
 ${PYSITELIB}/SoftLayer/CLI/loadbal/list.pyc
 ${PYSITELIB}/SoftLayer/CLI/loadbal/list.pyo
