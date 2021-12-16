@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6232 2021/12/16 09:53:58 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6233 2021/12/16 11:32:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9359,3 +9359,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/mold to 1.0.0 [fcambus 2021-12-16]
 	Updated math/py-netCDF4 to 1.5.8 [adam 2021-12-16]
 	Updated fonts/py-fonttools to 4.28.4 [adam 2021-12-16]
+	Removed audio/py-karaoke [wiz 2021-12-16]
