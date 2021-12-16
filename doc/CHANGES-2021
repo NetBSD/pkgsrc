@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6239 2021/12/16 19:12:25 maya Exp $
+$NetBSD: CHANGES-2021,v 1.6240 2021/12/16 20:17:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9367,3 +9367,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated fonts/ibm-plex-otf to 6.0.0 [nikita 2021-12-16]
 	Updated fonts/ibm-plex-ttf to 6.0.0 [nikita 2021-12-16]
 	Updated net/youtube-dl to 20211217 [maya 2021-12-16]
+	Updated comms/py-esptool to 3.2 [adam 2021-12-16]
+	Updated textproc/py-lxml to 4.7.1 [adam 2021-12-16]
