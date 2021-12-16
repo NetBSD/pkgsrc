@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.57 2021/12/08 16:06:40 adam Exp $
+# $NetBSD: Makefile,v 1.58 2021/12/16 00:58:01 gutteridge Exp $
 
-PKGREVISION= 7
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-cpugraph-plugin-1.1.0
+DISTNAME=	xfce4-cpugraph-plugin-1.2.5
 CATEGORIES=	sysutils
-MASTER_SITES=	http://archive.xfce.org/src/panel-plugins/xfce4-cpugraph-plugin/1.1/
+MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-cpugraph-plugin/1.2/
 
 HOMEPAGE=	https://goodies.xfce.org/projects/panel-plugins/xfce4-cpugraph-plugin
 COMMENT=	Xfce CPU load plugin
 
-USE_LANGUAGES=	c99
+USE_LANGUAGES=	c99 c++
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/xfce4-panel/buildlink3.mk"
