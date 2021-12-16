@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2021/09/27 20:53:14 fcambus Exp $
+# $NetBSD: Makefile,v 1.4 2021/12/16 08:37:30 fcambus Exp $
 
-DISTNAME=	mold-0.9.6
+DISTNAME=	mold-1.0.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rui314/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,7 +15,7 @@ ONLY_FOR_PLATFORM=	Linux-*-x86_64
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 
-MAKE_FLAGS+=	MAN_DIR="${PREFIX}/${PKGMANDIR}"
+MAKE_FLAGS+=	MANDIR="${PREFIX}/${PKGMANDIR}"
 MAKE_FLAGS+=	SYSTEM_MIMALLOC=1 SYSTEM_TBB=1
 
 .include "../../devel/mimalloc/buildlink3.mk"
