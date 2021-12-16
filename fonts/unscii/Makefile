@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2021/05/24 19:52:15 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2021/12/16 16:07:16 nikita Exp $
 
 DISTNAME=	unscii-2.1-src
 PKGNAME=	${DISTNAME:S/-src//}
 PKGREVISION=	1
 CATEGORIES=	fonts
-MASTER_SITES=	http://pelulamu.net/unscii/
+MASTER_SITES=	http://viznut.fi/unscii/
 
 MAINTAINER=	nikita@NetBSD.org
-HOMEPAGE=	http://pelulamu.net/unscii/
+HOMEPAGE=	http://viznut.fi/unscii/
 COMMENT=	Bitmapped character-art friendly Unicode fonts
 LICENSE=	gnu-gpl-v2
 
