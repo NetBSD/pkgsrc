@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:18:32 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/12/16 13:42:20 wiz Exp $
 
 BLAKE2s (pyfasthash-0.6.2.tar.gz) = ef4f30e7d76b94f35bf2c81e2b731da18825d40053bf776b104be411ba3eb35d
 SHA512 (pyfasthash-0.6.2.tar.gz) = 1820a56f27dd58d1aff4657230b1e5c9b276d64fc1573ad5c14612efd92d584070f12414a9e4fd9929eb61e054a6d65dc6ce1f25457431eaf736c38ecb6fc9be
 Size (pyfasthash-0.6.2.tar.gz) = 197576 bytes
 SHA1 (patch-pyhash.py) = 6e9428959693b72c8efe50ed272b8c1610a682c5
-SHA1 (patch-setup.py) = ec7181e8027470634e9b6aa4d6d141ee77ffb74e
+SHA1 (patch-setup.py) = 6bb30611ea9324dcde44661b15ac3243b3a630ff
 SHA1 (patch-src_fnv_fnv.h) = c942d2bb434ffdc99a6110781bf66e5cb878a889
 SHA1 (patch-src_lookup3_lookup3.c) = 85e5be79ddf7050af7e98858610323accdaba453
