@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/09/04 18:55:08 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2021/12/16 11:16:14 wiz Exp $
 
 DISTNAME=	funcparserlib-0.3.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,4 +13,10 @@ LICENSE=	mit
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+
+.if ${PYPKGPREFIX} != "py27"
+pre-build:
+	cd ${WRKSRC} && 2to3-${PYVERSSUFFIX} -w --no-diffs funcparserlib
+.endif
+
 .include "../../mk/bsd.pkg.mk"
