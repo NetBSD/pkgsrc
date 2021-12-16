@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2020/12/04 20:44:58 nia Exp $
+# $NetBSD: Makefile,v 1.46 2021/12/16 12:44:53 wiz Exp $
 
 DISTNAME=	picard-2.3.2
 PKGREVISION=	1
@@ -12,6 +12,8 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-mutagen>=1.20:../../audio/py-mutagen
 DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-mutagen
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	msgfmt pkg-config

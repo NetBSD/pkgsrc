@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2021/11/20 20:07:10 bsiegert Exp $
+# $NetBSD: Makefile,v 1.27 2021/12/16 12:44:54 wiz Exp $
 
 DISTNAME=	mutagen-1.45.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,10 @@ HOMEPAGE=	https://github.com/quodlibet/mutagen
 COMMENT=	Audio metadata handling for Python
 LICENSE=	gnu-gpl-v2
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test hypothesis:test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
@@ -23,5 +26,4 @@ SUBST_FILES.manpath=	setup.py
 SUBST_SED.manpath=	-e 's,share/man,${PKGMANDIR},'
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
