@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6227 2021/12/16 00:58:31 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.6228 2021/12/16 01:05:05 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9352,3 +9352,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/modular-xorg-xwayland to 1.20.14 [wiz 2021-12-15]
 	Updated x11/modular-xorg-xephyr to 1.20.14 [wiz 2021-12-15]
 	Updated sysutils/xfce4-cpugraph-plugin to 1.2.5 [gutteridge 2021-12-16]
+	Updated x11/xfce4-whiskermenu-plugin to 2.7.1 [gutteridge 2021-12-16]
