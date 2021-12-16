@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2021/09/06 11:25:22 adam Exp $
+# $NetBSD: Makefile,v 1.24 2021/12/16 20:21:53 adam Exp $
 
-DISTNAME=	zeroconf-0.36.2
+DISTNAME=	zeroconf-0.37.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zeroconf/}
@@ -11,7 +11,6 @@ COMMENT=	Pure Python Multicast DNS Service Discovery Library
 LICENSE=	gnu-lgpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-ifaddr>=0.1.7:../../net/py-ifaddr
-TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# none
 
