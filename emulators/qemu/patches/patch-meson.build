@@ -1,24 +1,12 @@
-$NetBSD: patch-meson.build,v 1.9 2021/09/05 20:58:16 nia Exp $
+$NetBSD: patch-meson.build,v 1.10 2021/12/16 12:59:43 tnn Exp $
 
-* Add NetBSD support.
 * Detect iconv in libc properly for pkgsrc (pkgsrc removes -liconv)
   to fix qemu-system-aarch64 link.
 * Detect curses (non-ncurses{,w} too)
 
---- meson.build.orig	2021-08-24 17:35:41.000000000 +0000
+--- meson.build.orig	2021-12-14 20:42:02.000000000 +0000
 +++ meson.build
-@@ -237,9 +237,7 @@ if not get_option('hax').disabled()
-   endif
- endif
- if targetos == 'netbsd'
--  if cc.has_header_symbol('nvmm.h', 'nvmm_cpu_stop', required: get_option('nvmm'))
--    nvmm = cc.find_library('nvmm', required: get_option('nvmm'))
--  endif
-+  nvmm = cc.find_library('nvmm', required: get_option('nvmm'))
-   if nvmm.found()
-     accelerators += 'CONFIG_NVMM'
-   endif
-@@ -613,7 +611,7 @@ if have_system and not get_option('curse
+@@ -722,7 +722,7 @@ if have_system and not get_option('curse
        has_curses_h = cc.has_header('curses.h', args: curses_compile_args)
      endif
      if has_curses_h
@@ -27,7 +15,7 @@ $NetBSD: patch-meson.build,v 1.9 2021/09/05 20:58:16 nia Exp $
        foreach curses_libname : curses_libname_list
          libcurses = cc.find_library(curses_libname,
                                      required: false,
-@@ -631,7 +629,7 @@ if have_system and not get_option('curse
+@@ -740,7 +740,7 @@ if have_system and not get_option('curse
      endif
    endif
    if not get_option('iconv').disabled()

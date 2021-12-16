@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.78 2021/08/29 01:53:06 mcf Exp $
+@comment $NetBSD: PLIST,v 1.79 2021/12/16 12:59:43 tnn Exp $
 bin/elf2dmp
 ${PLIST.aarch64}bin/qemu-aarch64
 ${PLIST.aarch64_be}bin/qemu-aarch64_be
@@ -124,14 +124,17 @@ share/doc/qemu/devel/s390-dasd-ipl.html
 share/doc/qemu/devel/secure-coding-practices.html
 share/doc/qemu/devel/stable-process.html
 share/doc/qemu/devel/style.html
+share/doc/qemu/devel/submitting-a-patch.html
+share/doc/qemu/devel/submitting-a-pull-request.html
 share/doc/qemu/devel/tcg-icount.html
 share/doc/qemu/devel/tcg-plugins.html
 share/doc/qemu/devel/tcg.html
 share/doc/qemu/devel/testing.html
 share/doc/qemu/devel/tracing.html
+share/doc/qemu/devel/trivial-patches.html
 share/doc/qemu/devel/ui.html
 share/doc/qemu/devel/vfio-migration.html
-share/doc/qemu/devel/writing-qmp-commands.html
+share/doc/qemu/devel/writing-monitor-commands.html
 share/doc/qemu/genindex.html
 share/doc/qemu/index.html
 share/doc/qemu/interop/barrier.html
@@ -151,8 +154,12 @@ share/doc/qemu/interop/vhost-vdpa.html
 share/doc/qemu/objects.inv
 share/doc/qemu/search.html
 share/doc/qemu/searchindex.js
+share/doc/qemu/specs/acpi_cpu_hotplug.html
 share/doc/qemu/specs/acpi_hest_ghes.html
 share/doc/qemu/specs/acpi_hw_reduced_hotplug.html
+share/doc/qemu/specs/acpi_mem_hotplug.html
+share/doc/qemu/specs/acpi_nvdimm.html
+share/doc/qemu/specs/acpi_pci_hotplug.html
 share/doc/qemu/specs/index.html
 share/doc/qemu/specs/ppc-spapr-numa.html
 share/doc/qemu/specs/ppc-spapr-xive.html
@@ -200,13 +207,17 @@ share/doc/qemu/system/devices/ivshmem.html
 share/doc/qemu/system/devices/net.html
 share/doc/qemu/system/devices/nvme.html
 share/doc/qemu/system/devices/usb.html
+share/doc/qemu/system/devices/vhost-user-rng.html
 share/doc/qemu/system/devices/vhost-user.html
 share/doc/qemu/system/devices/virtio-pmem.html
 share/doc/qemu/system/gdb.html
 share/doc/qemu/system/generic-loader.html
 share/doc/qemu/system/guest-loader.html
+share/doc/qemu/system/i386/cpu.html
+share/doc/qemu/system/i386/kvm-pv.html
 share/doc/qemu/system/i386/microvm.html
 share/doc/qemu/system/i386/pc.html
+share/doc/qemu/system/i386/sgx.html
 share/doc/qemu/system/images.html
 share/doc/qemu/system/index.html
 share/doc/qemu/system/invocation.html
@@ -352,6 +363,7 @@ share/qemu/kvmvapic.bin
 share/qemu/linuxboot.bin
 share/qemu/linuxboot_dma.bin
 share/qemu/multiboot.bin
+share/qemu/multiboot_dma.bin
 share/qemu/npcm7xx_bootrom.bin
 share/qemu/openbios-ppc
 share/qemu/openbios-sparc32
