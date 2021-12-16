@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:27:12 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/12/16 15:46:08 nikita Exp $
 
-BLAKE2s (ibm-plex-otf-5.2.1/OpenType.zip) = 5fcc55a58792578f8c0c9be8be0583575141646126c645df69ac4a6b3b510b2b
-SHA512 (ibm-plex-otf-5.2.1/OpenType.zip) = 2238a0fafd3dfe6d93f90976cbfd00d0ee8b8db9be49e3b58d3e56603d2854017902b9c44a5f81f929767a527ca02eda2424d5f49c5ce875ccb8716e8985a072
-Size (ibm-plex-otf-5.2.1/OpenType.zip) = 36015690 bytes
+BLAKE2s (ibm-plex-otf-6.0.0/OpenType.zip) = 81584f865625da59eafff7aa1762de8d2fd3b0ab68af05a8760e4dc1298d6ae6
+SHA512 (ibm-plex-otf-6.0.0/OpenType.zip) = 1d1910c988e21035cded812259cd594b8e289620aa141781a746cf49fed9fdfd36dab93773ad7427598d4376748def4ba479830ebaf03be2610db0fdf4f4399e
+Size (ibm-plex-otf-6.0.0/OpenType.zip) = 36192677 bytes
