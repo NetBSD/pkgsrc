@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/11/24 09:39:08 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2021/12/16 13:02:40 wiz Exp $
 
 DISTNAME=	aenum-3.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Advanced Enumerations, NamedTuples, and NamedConstants
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
