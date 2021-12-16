@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: fetch,v 1.20 2020/08/27 11:45:45 jperkin Exp $
+# $NetBSD: fetch,v 1.21 2021/12/16 14:10:46 schmonz Exp $
 #
 # Copyright (c) 2006, 2015 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -228,10 +228,8 @@ if verify_file $path; then
 fi
 
 ${TEST} -d $fetchdir || ${MKDIR} -p $fetchdir 2>/dev/null
-if ${TEST} ! -w $fetchdir; then
-	${ECHO} 1>&2 "$self: Cannot write to `cd $fetchdir && pwd`"
-	exit 1
-fi
+
+${TEST} -w $fetchdir || ${ECHO} 1>&2 "$self: WARNING: DISTDIR `cd $fetchdir && pwd` looks non-writable."
 
 # Set the name of the output file.  In the "resume" case, we initialize
 # the fetch loop by ensuring that the temporary output file already
