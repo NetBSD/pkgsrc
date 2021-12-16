@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.290 2021/12/08 16:04:18 adam Exp $
+# $NetBSD: Makefile,v 1.291 2021/12/16 12:59:43 tnn Exp $
 
-DISTNAME=	qemu-6.1.0
-PKGNAME=	${DISTNAME:S/-rc/rc/}
-PKGREVISION=	5
+DISTNAME=	qemu-6.2.0
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
@@ -123,9 +121,11 @@ UE_ARCHS+=		x86_64 xtensa xtensaeb
 
 .if ${OPSYS} == "NetBSD"
 PLIST.nbd=			yes
-.  if !exists(/usr/include/machine/trap.h)
+.  if !exists(/usr/include/machine/trap.h)	\
+	|| "1"=="1"	# XXX usermode emulation is broken
 CONFIGURE_ARGS+=		--disable-bsd-user
 .  else
+CONFIGURE_ARGS+=		--enable-bsd-user
 USER_EMUL=			i386 x86_64
 .  endif
 .elif !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
