@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6238 2021/12/16 15:48:06 nikita Exp $
+$NetBSD: CHANGES-2021,v 1.6239 2021/12/16 19:12:25 maya Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9366,3 +9366,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-boost to 1.77.0nb1 [wiz 2021-12-16]
 	Updated fonts/ibm-plex-otf to 6.0.0 [nikita 2021-12-16]
 	Updated fonts/ibm-plex-ttf to 6.0.0 [nikita 2021-12-16]
+	Updated net/youtube-dl to 20211217 [maya 2021-12-16]
