@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2021/12/08 16:03:08 adam Exp $
+# $NetBSD: Makefile,v 1.75 2021/12/16 12:44:53 wiz Exp $
 
 DISTNAME=	exaile-4.1.1
 PKGREVISION=	2
@@ -33,6 +33,8 @@ DEPENDS+=	gst-plugins1-mpg123-[0-9]*:../../audio/gst-plugins1-mpg123
 DEPENDS+=	gst-plugins1-ogg-[0-9]*:../../multimedia/gst-plugins1-ogg
 DEPENDS+=	gst-plugins1-opus-[0-9]*:../../audio/gst-plugins1-opus
 DEPENDS+=	gst-plugins1-vorbis-[0-9]*:../../audio/gst-plugins1-vorbis
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-mutagen
 
 .include "../../mk/oss.buildlink3.mk"
 
