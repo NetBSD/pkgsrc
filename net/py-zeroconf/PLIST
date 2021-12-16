@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/07/02 09:54:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/12/16 20:21:53 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -29,9 +29,15 @@ ${PYSITELIB}/zeroconf/_history.pyo
 ${PYSITELIB}/zeroconf/_logger.py
 ${PYSITELIB}/zeroconf/_logger.pyc
 ${PYSITELIB}/zeroconf/_logger.pyo
-${PYSITELIB}/zeroconf/_protocol.py
-${PYSITELIB}/zeroconf/_protocol.pyc
-${PYSITELIB}/zeroconf/_protocol.pyo
+${PYSITELIB}/zeroconf/_protocol/__init__.py
+${PYSITELIB}/zeroconf/_protocol/__init__.pyc
+${PYSITELIB}/zeroconf/_protocol/__init__.pyo
+${PYSITELIB}/zeroconf/_protocol/incoming.py
+${PYSITELIB}/zeroconf/_protocol/incoming.pyc
+${PYSITELIB}/zeroconf/_protocol/incoming.pyo
+${PYSITELIB}/zeroconf/_protocol/outgoing.py
+${PYSITELIB}/zeroconf/_protocol/outgoing.pyc
+${PYSITELIB}/zeroconf/_protocol/outgoing.pyo
 ${PYSITELIB}/zeroconf/_services/__init__.py
 ${PYSITELIB}/zeroconf/_services/__init__.pyc
 ${PYSITELIB}/zeroconf/_services/__init__.pyo
@@ -62,9 +68,6 @@ ${PYSITELIB}/zeroconf/_utils/name.pyo
 ${PYSITELIB}/zeroconf/_utils/net.py
 ${PYSITELIB}/zeroconf/_utils/net.pyc
 ${PYSITELIB}/zeroconf/_utils/net.pyo
-${PYSITELIB}/zeroconf/_utils/struct.py
-${PYSITELIB}/zeroconf/_utils/struct.pyc
-${PYSITELIB}/zeroconf/_utils/struct.pyo
 ${PYSITELIB}/zeroconf/_utils/time.py
 ${PYSITELIB}/zeroconf/_utils/time.pyc
 ${PYSITELIB}/zeroconf/_utils/time.pyo
