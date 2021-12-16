@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.224 2021/10/26 11:07:13 nia Exp $
+$NetBSD: distinfo,v 1.225 2021/12/16 19:12:09 maya Exp $
 
-BLAKE2s (youtube-dl-2021.06.06.tar.gz) = 8de0cb952abd578487a15c613b1bc069c8d90843ed0b0e6f4937b85e0a2663bd
-SHA512 (youtube-dl-2021.06.06.tar.gz) = 7b4d453723d03c3fde46451277d5c44be01469ed1b414ce94e782d6228c132c982835805207222862d0d7b8ba162157196f976400fd15cea7ea513e3595aeea3
-Size (youtube-dl-2021.06.06.tar.gz) = 3336227 bytes
+BLAKE2s (youtube-dl-2021.12.17.tar.gz) = f1ac93dbf5939d0956d195ca490b9ca7247fe15115329f83e5be283b11216170
+SHA512 (youtube-dl-2021.12.17.tar.gz) = bfc8280703b08f66e1108e9ebd9ab4689f064ac7cef03bd3d1fd2bc64928570e4376e389c9bc188eafdbcd74444cfc8aeccc83ee362ad4f478910efef3573ddb
+Size (youtube-dl-2021.12.17.tar.gz) = 3332299 bytes
 SHA1 (patch-setup.py) = 56115118d5a263f3b46ff0da0b8315a1459ad7d9
 SHA1 (patch-youtube__dl_extractor_la7.py) = 6c579f96e7ace1b64ef25fe8788b40bc4e7e67dd
 SHA1 (patch-youtube__dl_postprocessor_ffmpeg.py) = f96676170a448d9205d542a7def4beca615a1490
