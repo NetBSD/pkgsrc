@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2020/01/18 23:30:39 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2021/12/16 14:48:11 wiz Exp $
 TRYTON_MODULE_NAME=	trytond
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	devel python
@@ -54,6 +54,13 @@ CONF_FILES+=		${EGDIR}/trytond.conf.example \
 CONF_FILES+=		${EGDIR}/logging.conf.example \
 				${CONFDIR}/logging.conf
 
+.include "../../lang/python/egg.mk"
+
+.if ${PYPKGPREFIX} != "py27"
+pre-build:
+	cd ${WRKSRC} && 2to3-${PYVERSSUFFIX} -w --no-diffs trytond
+.endif
+
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/trytond-admin \
 		${DESTDIR}${PREFIX}/bin/trytond-admin${PYVERSSUFFIX} || ${TRUE}
@@ -67,5 +74,4 @@ post-install:
 		${DESTDIR}${PREFIX}/${EGDIR}/logging.conf.example
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
