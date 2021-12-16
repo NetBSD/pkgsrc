@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2021/12/08 16:04:05 adam Exp $
+# $NetBSD: Makefile,v 1.50 2021/12/16 14:35:40 wiz Exp $
 #
 
 VERS=		1.9.15
@@ -12,6 +12,8 @@ MAINTAINER=		helgoman@users.sourceforge.net
 HOMEPAGE=		https://pysvn.sourceforge.io/
 COMMENT=		Python interface to Subversion
 LICENSE=		apache-1.1
+
+DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 USE_LANGUAGES=		c c++
 
