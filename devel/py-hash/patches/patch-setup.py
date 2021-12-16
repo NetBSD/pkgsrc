@@ -1,6 +1,8 @@
-$NetBSD: patch-setup.py,v 1.3 2018/06/30 19:01:52 fhajny Exp $
+$NetBSD: patch-setup.py,v 1.4 2021/12/16 13:42:20 wiz Exp $
 
 print is a function in Python 3.
+
+Fix compatibility with latest setuptools.
 
 --- setup.py.orig	2014-07-29 06:26:59.000000000 +0000
 +++ setup.py
@@ -34,3 +36,10 @@ print is a function in Python 3.
  
      os.remove('/usr/lib/libboost_python.so')
      os.symlink('/usr/lib/libboost_python-py%d%d.so' % (sys.version_info.major, sys.version_info.minor),
+@@ -108,5 +111,4 @@ setup(name='pyhash',
+         'Topic :: Software Development :: Libraries :: Python Modules',
+         'Topic :: Utilities'
+     ],
+-    test_suite='pyhash',
+-    use_2to3=True)
++    test_suite='pyhash')
