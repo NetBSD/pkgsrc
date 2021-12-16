@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/01/21 18:10:05 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/12/16 12:44:54 wiz Exp $
 
 DISTNAME=	bandcamp-downloader-0.0.10
 PKGNAME=	${DISTNAME:S/-downloader/-dl/1}
@@ -18,6 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-unicode-slugify-[0-9]*:../../converters/py-unicode-slugify
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-mutagen
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
