@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2021/11/24 10:22:32 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2021/12/16 13:02:40 wiz Exp $
 
 DISTNAME=	csvkit-0.9.0
 PKGREVISION=	4
@@ -21,6 +21,8 @@ DEPENDS+=	${PYPKGPREFIX}-xlrd>=0.9.2:../../textproc/py-xlrd
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=3.5.1:../../devel/py-coverage
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-aenum via py-dbf
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
