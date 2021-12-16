@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6229 2021/12/16 07:45:22 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6230 2021/12/16 08:31:17 fox Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9355,3 +9355,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/xfce4-whiskermenu-plugin to 2.7.1 [gutteridge 2021-12-16]
 	Updated lang/py-mypy to 0.920 [adam 2021-12-16]
 	Updated devel/waf to 2.0.23 [adam 2021-12-16]
+	Updated audio/fasttracker2 to 1.49 [fox 2021-12-16]
