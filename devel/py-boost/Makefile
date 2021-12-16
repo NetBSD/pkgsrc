@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2021/07/01 14:48:31 nia Exp $
+# $NetBSD: Makefile,v 1.17 2021/12/16 13:17:37 wiz Exp $
 
 BOOST_PACKAGE=		python
 BOOST_COMMENT=		(Boost.Python binary library)
@@ -9,6 +9,7 @@ INSTALLATION_DIRS+=	lib
 .include "../../meta-pkgs/boost/Makefile.common"
 
 PKGNAME=		${PYPKGPREFIX}-boost-${BOOST_VERSION}
+PKGREVISION=		1
 
 BJAM_ARGS+=		--user-config=${WRKSRC}/user-config.jam
 BJAM_ARGS+=		--with-python
@@ -32,5 +33,5 @@ PLIST_SUBST+=	PYVER=${_PYTHON_VERSION}
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-lutil
 
-.include "../../math/py-numpy/buildlink3.mk"
+#.include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
