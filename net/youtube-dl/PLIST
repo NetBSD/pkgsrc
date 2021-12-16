@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.115 2021/06/06 09:03:31 leot Exp $
+@comment $NetBSD: PLIST,v 1.116 2021/12/16 19:12:09 maya Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -1046,9 +1046,6 @@ ${PYSITELIB}/youtube_dl/extractor/litv.pyo
 ${PYSITELIB}/youtube_dl/extractor/livejournal.py
 ${PYSITELIB}/youtube_dl/extractor/livejournal.pyc
 ${PYSITELIB}/youtube_dl/extractor/livejournal.pyo
-${PYSITELIB}/youtube_dl/extractor/liveleak.py
-${PYSITELIB}/youtube_dl/extractor/liveleak.pyc
-${PYSITELIB}/youtube_dl/extractor/liveleak.pyo
 ${PYSITELIB}/youtube_dl/extractor/livestream.py
 ${PYSITELIB}/youtube_dl/extractor/livestream.pyc
 ${PYSITELIB}/youtube_dl/extractor/livestream.pyo
