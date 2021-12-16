@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2021/09/21 23:26:02 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2021/12/16 20:08:52 adam Exp $
 
-DISTNAME=	esptool-3.1
+DISTNAME=	esptool-3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	comms python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/esptool/}
@@ -11,7 +11,6 @@ COMMENT=	Firmware tool for ESP8266/ESP32
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-
 DEPENDS+=	${PYPKGPREFIX}-bitstring>=3.1.6:../../devel/py-bitstring
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=2.1.4:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-ecdsa>=0.16.0:../../security/py-ecdsa
