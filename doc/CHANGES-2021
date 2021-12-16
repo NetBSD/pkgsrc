@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6234 2021/12/16 13:00:35 tnn Exp $
+$NetBSD: CHANGES-2021,v 1.6235 2021/12/16 13:07:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9361,3 +9361,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated fonts/py-fonttools to 4.28.4 [adam 2021-12-16]
 	Removed audio/py-karaoke [wiz 2021-12-16]
 	Updated emulators/qemu to 6.2.0 [tnn 2021-12-16]
+	Removed devel/py-bcolz [wiz 2021-12-16]
