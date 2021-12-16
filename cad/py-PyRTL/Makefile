@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/11/21 15:10:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2021/12/16 12:49:12 wiz Exp $
 
 DISTNAME=	pyrtl-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-PyRTL-0.10.1
@@ -19,6 +19,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 USE_LANGUAGES=	c # for test
 
 EGG_NAME=	${DISTNAME:tl}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
