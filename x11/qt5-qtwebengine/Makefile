@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2021/12/08 16:07:12 adam Exp $
+# $NetBSD: Makefile,v 1.11 2021/12/17 20:10:24 maya Exp $
 
 DISTNAME=	qtwebengine-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtwebengine-${QTVERSION}
@@ -92,8 +92,9 @@ PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../print/libcups/buildlink3.mk"
 .include "../../print/poppler-cpp/buildlink3.mk"
 .include "../../sysutils/pciutils/buildlink3.mk"
+.include "../../sysutils/pciutils/libname.mk"
 # Use -lpciutils instead of -lpci for pkgsrc.
-BUILDLINK_TRANSFORM+=   l:pci:pciutils
+BUILDLINK_TRANSFORM+=   l:pci:${PCIUTILS_LIBNAME}
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/jsoncpp/buildlink3.mk"
 # needs libxml2 built with icu option, which is not default in pkgsrc
