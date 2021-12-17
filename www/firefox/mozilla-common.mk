@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.212 2021/12/11 14:10:01 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.213 2021/12/17 20:08:42 maya Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -112,6 +112,13 @@ SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths+=		${MOZILLA_DIR}xpcom/io/nsAppFileLocationProvider.cpp
 SUBST_SED.fix-paths+=		-e 's,/usr/lib/mozilla/plugins,${PREFIX}/lib/netscape/plugins,g'
 
+.include "../../sysutils/pciutils/libname.mk"
+SUBST_CLASSES+=				fix-libpci-soname
+SUBST_STAGE.fix-libpci-soname=		pre-configure
+SUBST_MESSAGE.fix-libpci-soname=	Fixing libpci soname
+SUBST_FILES.fix-libpci-soname+=		${MOZILLA_DIR}toolkit/xre/glxtest.cpp
+SUBST_SED.fix-libpci-soname+=		-e 's,libpci.so,lib${PCIUTILS_LIBNAME}.so,'
+
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}build/autoconf/config.guess
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}js/src/build/autoconf/config.guess
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}nsprpub/build/autoconf/config.guess
@@ -174,6 +181,7 @@ CONFIGURE_ENV.NetBSD+=	ac_cv_thread_keyword=no
 # In unspecified case, clock_gettime(CLOCK_MONOTONIC, ...) fails.
 CONFIGURE_ENV.NetBSD+=	ac_cv_clock_monotonic=
 
+.include "../../sysutils/pciutils/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../devel/libevent/buildlink3.mk"
