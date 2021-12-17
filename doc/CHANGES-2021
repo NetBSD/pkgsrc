@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6259 2021/12/17 15:25:28 bacon Exp $
+$NetBSD: CHANGES-2021,v 1.6260 2021/12/17 17:11:59 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9390,3 +9390,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated biology/bcftools to 1.14 [bacon 2021-12-17]
 	Updated net/knot to 3.1.4 [ryoon 2021-12-17]
 	Updated biology/bowtie2 to 2.4.4 [bacon 2021-12-17]
+	Updated audio/mpg123 to 1.29.3 [thor 2021-12-17]
