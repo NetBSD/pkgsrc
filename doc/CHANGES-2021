@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6256 2021/12/17 15:10:18 bacon Exp $
+$NetBSD: CHANGES-2021,v 1.6257 2021/12/17 15:14:44 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9387,3 +9387,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/guile-haunt to 0.2.5 [nikita 2021-12-17]
 	Updated biology/htslib to 1.14 [bacon 2021-12-17]
 	Updated biology/samtools to 1.14 [bacon 2021-12-17]
+	Updated biology/bcftools to 1.14 [bacon 2021-12-17]
