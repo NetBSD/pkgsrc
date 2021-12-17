@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2021/10/06 18:00:12 tron Exp $
+# $NetBSD: Makefile,v 1.53 2021/12/17 07:46:35 wiz Exp $
 
 DISTNAME=	mysqlclient-1.3.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/mysqlclient/mysqldb/}
+PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mysqlclient/}
 
@@ -13,11 +14,6 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=		c
 
 PYPKGVER=	${PYPKGPREFIX:S/py//}
-
-post-install:
-	cd ${DESTDIR}${PREFIX}/${PYSITELIB}/MySQLdb/__pycache__ && \
-	${RM} -f compat.cpython-${PYPKGVER}.opt-1.pyc \
-	    compat.cpython-${PYPKGVER}.pyc
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/mysql.buildlink3.mk"
