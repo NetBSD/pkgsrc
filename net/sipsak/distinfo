@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:06:56 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/12/17 21:40:06 schwarz Exp $
 
-BLAKE2s (sipsak-0.9.6-1.tar.gz) = 0dfc1e8d59b9e83125bbeaa3ed06b1186d4099293f6f909b9d35e0fc7bf8d0ea
-SHA512 (sipsak-0.9.6-1.tar.gz) = c2d62ddaf2ecc9616941cf002a0494d2f9c43747e6b527f8b1542e9b5ae143fc69b18fc140bd3f255896b0e8eb02f7d198cc1799a4041e2d0c95d90b653591fe
-Size (sipsak-0.9.6-1.tar.gz) = 158776 bytes
-SHA1 (patch-aa) = 3436b5d669c016a8d6d43a68b3d09cbe04d581a4
+BLAKE2s (sipsak-0.9.8.1.tar.gz) = a0bd7f2c86bcc6b7e8a16c474ea110d307fabd12bc04fd2325b4fbad2b26c8a6
+SHA512 (sipsak-0.9.8.1.tar.gz) = 8313d1176e6f3cab78dada33fbf8d3c7c6e6434671dd6a7402d1433bbec50f53e2bf98496d8ac1b8021586f19940c32dbdd15e93ff7ed88ee1b690a037b46ab8
+Size (sipsak-0.9.8.1.tar.gz) = 202545 bytes
