@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6246 2021/12/17 08:12:51 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6247 2021/12/17 08:57:52 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9377,3 +9377,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated comms/asterisk18 to 18.9.0 [jnemeth 2021-12-17]
 	Updated devel/py-cython to 0.29.26 [adam 2021-12-17]
 	Updated devel/py-utils to 2.6.0 [adam 2021-12-17]
+	Updated games/warzone2100 to 4.2.3 [triaxx 2021-12-17]
