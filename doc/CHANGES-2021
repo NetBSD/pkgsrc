@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6268 2021/12/17 19:20:55 bacon Exp $
+$NetBSD: CHANGES-2021,v 1.6269 2021/12/17 20:07:38 maya Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9400,3 +9400,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/tor to 0.4.6.9 [wiz 2021-12-17]
 	Updated devel/nspr to 4.33 [wiz 2021-12-17]
 	Updated biology/vsearch to 2.18.0 [bacon 2021-12-17]
+	Updated sysutils/pciutils to 3.7.0nb2 [maya 2021-12-17]
