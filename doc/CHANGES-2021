@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6247 2021/12/17 08:57:52 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.6248 2021/12/17 10:08:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9378,3 +9378,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-cython to 0.29.26 [adam 2021-12-17]
 	Updated devel/py-utils to 2.6.0 [adam 2021-12-17]
 	Updated games/warzone2100 to 4.2.3 [triaxx 2021-12-17]
+	Added databases/R-dbplyr version 2.1.1 [wiz 2021-12-17]
