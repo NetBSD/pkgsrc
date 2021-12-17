@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2021/12/17 10:20:24 micha Exp $
+# $NetBSD: Makefile,v 1.15 2021/12/17 10:29:09 micha Exp $
 
 DISTNAME=	utf8proc-2.7.0
 CATEGORIES=	converters
@@ -25,7 +25,7 @@ do-configure:
 		-e 's#PREFIX#${PREFIX}#'				\
 		-e 's#LIBDIR#lib#'					\
 		-e 's#INCLUDEDIR#include#'				\
-		-e 's#VERSION#${PKGVERSION_NOREV}#'		\
+		-e 's#VERSION#${PKGVERSION_NOREV}#'			\
 		-e 's#Description:.*$$#Description: ${COMMENT}#'	\
 		libutf8proc.pc.in >libutf8proc.pc
 
