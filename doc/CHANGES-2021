@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6264 2021/12/17 17:58:07 bacon Exp $
+$NetBSD: CHANGES-2021,v 1.6265 2021/12/17 18:48:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9395,3 +9395,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/mpg123-nas to 1.29.3 [thor 2021-12-17]
 	Updated audio/mpg123-pulse to 1.29.3nb1 [thor 2021-12-17]
 	Updated biology/cdhit to 4.8.1 [bacon 2021-12-17]
+	Updated net/unbound to 1.14.0 [adam 2021-12-17]
+	Updated games/py-trueskill to 0.4.5 [adam 2021-12-17]
