@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2019/11/13 10:36:19 ng0 Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/17 14:07:09 nikita Exp $
 guile/2.2/lib/guile/2.2/site-ccache/json.go
 guile/2.2/lib/guile/2.2/site-ccache/json/builder.go
 guile/2.2/lib/guile/2.2/site-ccache/json/parser.go
+guile/2.2/lib/guile/2.2/site-ccache/json/record.go
 guile/2.2/share/guile/site/2.2/json.scm
 guile/2.2/share/guile/site/2.2/json/builder.scm
 guile/2.2/share/guile/site/2.2/json/parser.scm
+guile/2.2/share/guile/site/2.2/json/record.scm
