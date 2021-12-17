@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2021/04/23 22:24:04 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2021/12/17 20:07:24 maya Exp $
 
 DISTNAME=	pciutils-3.7.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES+=	https://www.kernel.org/pub/software/utils/pciutils/
 
@@ -17,6 +17,7 @@ ONLY_FOR_PLATFORM+=	DragonFly-*-* OpenBSD-*-* SunOS-5.11-* Haiku-*-*
 CFLAGS+=		-fPIC
 MAKE_FLAGS+=		CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=		LDFLAGS=${LDFLAGS:Q}
+MAKE_FLAGS+=		SHARED=yes
 
 INSTALL_TARGET=		install install-lib
 USE_TOOLS+=		gmake pkg-config
@@ -24,9 +25,7 @@ REPLACE_SH=		*.sh
 
 PKGCONFIG_OVERRIDE=	lib/libpci.pc.in
 
-OPSYSVARS+=			PCIUTILS_LIBNAME
-PCIUTILS_LIBNAME.NetBSD=	pciutils
-PCIUTILS_LIBNAME.*=		pci
+.include "../../sysutils/pciutils/libname.mk"
 
 PLIST_SUBST+=		PCIUTILS_LIBNAME=${PCIUTILS_LIBNAME}
 
