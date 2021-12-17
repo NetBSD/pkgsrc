@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:03:44 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/12/17 19:20:44 bacon Exp $
 
-BLAKE2s (vsearch-2.13.4.tar.gz) = 16fd625aa53e9b9d5b062c9db71dc201c7d458dc97fe82915e37ba6ca794b706
-SHA512 (vsearch-2.13.4.tar.gz) = 31cc321f96309385414f3847a4cb29a5b3e43e42870b3f41e34fa0e6b3a928b2dd306edeff896ffa6bca85ecea776b33655611fa62749e9b29e86bf1adbe7de3
-Size (vsearch-2.13.4.tar.gz) = 234364 bytes
-SHA1 (patch-configure.ac) = 536a8565514cf9b43f4f8892d1cba0444f752c5e
-SHA1 (patch-man_Makefile.am) = e2e536f46b32eb191c2b930dcdd927a9bf11e833
-SHA1 (patch-src_Makefile.am) = bcdd1bbe9f04197084825e2c3560ba27a750f124
+BLAKE2s (vsearch-2.18.0.tar.gz) = 48ca99858b157da943eca273d4a4f25e94aa7c64ecf4c7373821c30cdfbc38c5
+SHA512 (vsearch-2.18.0.tar.gz) = 9da21685fe64743ccf43f209bdd5b586c8f7faaae9f1a204634b713d7ba8a86478f31b24bdda7820fba97318d4408c803a6b3eed1e37189907fbd5882183d781
+Size (vsearch-2.18.0.tar.gz) = 252014 bytes
+SHA1 (patch-configure.ac) = 23aa28454d5f58222b10302cbd01ceaf0e7dca3f
+SHA1 (patch-src_Makefile.am) = fb76ec48d5292aaa276a0b6105e19ccc0abb03df
