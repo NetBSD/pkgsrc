@@ -1,15 +1,15 @@
-$NetBSD: patch-configure.ac,v 1.2 2019/05/11 14:27:18 bacon Exp $
+$NetBSD: patch-configure.ac,v 1.3 2021/12/17 19:20:44 bacon Exp $
 
-# Respect build env
+# Respect pkgsrc env
 
---- configure.ac.orig	2019-05-09 20:58:52 UTC
+--- configure.ac.orig	2021-08-27 10:35:25.000000000 +0000
 +++ configure.ac
 @@ -14,9 +14,6 @@ MACOSX_DEPLOYMENT_TARGET="10.9"
  
  # Set default gcc and g++ options
  
 -CFLAGS='-g'
--CXXFLAGS='-g'
+-CXXFLAGS='-g -std=c++11'
 -
  # Checks for programs.
  AC_PROG_CXX
