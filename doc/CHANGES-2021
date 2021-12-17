@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6258 2021/12/17 15:17:26 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.6259 2021/12/17 15:25:28 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9389,3 +9389,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated biology/samtools to 1.14 [bacon 2021-12-17]
 	Updated biology/bcftools to 1.14 [bacon 2021-12-17]
 	Updated net/knot to 3.1.4 [ryoon 2021-12-17]
+	Updated biology/bowtie2 to 2.4.4 [bacon 2021-12-17]
