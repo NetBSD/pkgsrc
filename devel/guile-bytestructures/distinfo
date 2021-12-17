@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:49 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/12/17 13:42:56 nikita Exp $
 
-BLAKE2s (scheme-bytestructures-1.0.7.tar.gz) = d2e3a578b993b03aaca8a2fd005cad64bb5484388ec6358773973d7e97955d2a
-SHA512 (scheme-bytestructures-1.0.7.tar.gz) = 5b757d4e78746dd5e07c7b1b3f90054965dcd98a4cef59d3dd635273625667e24a77995ad570e4b9d2c674869f92c59b14f3f86d05af1d0f790af16ef68cd712
-Size (scheme-bytestructures-1.0.7.tar.gz) = 49112 bytes
+BLAKE2s (scheme-bytestructures-1.0.10.tar.gz) = 3ff2b25d6c51e2133485d1fa89bfa3445bdde22f8a27691c654bec09f0796cdc
+SHA512 (scheme-bytestructures-1.0.10.tar.gz) = c3d548cacf504686dc28d55dd21156032a8257c837436efe1e73699ec7848b80fe36bd16c6f279e575a2cf713006ab05f93e6a46ed3c7565abb9b2f866a2e291
+Size (scheme-bytestructures-1.0.10.tar.gz) = 49337 bytes
