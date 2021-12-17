@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 10:56:04 nia Exp $
+$NetBSD: distinfo,v 1.18 2021/12/17 10:15:20 wiz Exp $
 
-BLAKE2s (rpy2-2.9.1.tar.gz) = 91335680a6c1175f390d58b1bbe0c62a383c7d29d6d1bf7f2a3c1b6c251f2f8c
-SHA512 (rpy2-2.9.1.tar.gz) = 47a9a5a8b3ed9b891fb1d906d774896584e8bc911917e790d926530555d3f431cc517df6ac7b00ecd0b9197b7e4d0c34295969d37ef1b009d25ca07fcfd31e9d
-Size (rpy2-2.9.1.tar.gz) = 192897 bytes
+BLAKE2s (rpy2-3.4.5.tar.gz) = 5d3e5b7df562a0ea7bbc9a771de4daaee41d4073e55355df59d2c3ccb866741d
+SHA512 (rpy2-3.4.5.tar.gz) = 296056e1c64a4555a1ccef74cfb580674034155a42b8e7c83feb8bb7d7a6d80b8e2f2966df53a6ed8612718ad169755a7994c5635dda1d1c8af1b549a5863935
+Size (rpy2-3.4.5.tar.gz) = 194433 bytes
