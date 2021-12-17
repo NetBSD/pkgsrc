@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6263 2021/12/17 17:12:40 thor Exp $
+$NetBSD: CHANGES-2021,v 1.6264 2021/12/17 17:58:07 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9394,3 +9394,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/mpg123-jack to 1.29.3nb1 [thor 2021-12-17]
 	Updated audio/mpg123-nas to 1.29.3 [thor 2021-12-17]
 	Updated audio/mpg123-pulse to 1.29.3nb1 [thor 2021-12-17]
+	Updated biology/cdhit to 4.8.1 [bacon 2021-12-17]
