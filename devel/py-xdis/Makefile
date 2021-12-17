@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2021/11/10 16:09:53 adam Exp $
+# $NetBSD: Makefile,v 1.38 2021/12/17 00:15:47 wiz Exp $
 
 DISTNAME=	xdis-6.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
