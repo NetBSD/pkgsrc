@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6244 2021/12/17 06:47:15 pin Exp $
+$NetBSD: CHANGES-2021,v 1.6245 2021/12/17 08:07:17 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9374,3 +9374,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/gjs to 1.68.4 [gutteridge 2021-12-17]
 	Updated sysutils/xfce4-diskperf-plugin to 2.6.3 [gutteridge 2021-12-17]
 	Updated sysutils/broot to 1.7.5 [pin 2021-12-17]
+	Updated comms/asterisk18 to 18.9.0 [jnemeth 2021-12-17]
