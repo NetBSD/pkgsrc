@@ -1,0 +1,16 @@
+--- Makefile.am.old	2021-12-17 13:58:49.671952528 +0100
++++ Makefile.am	2021-12-17 13:59:46.045075274 +0100
+@@ -108,10 +108,9 @@
+ 	$(AM_V_GEN)set -e \
+ 	LC_ALL=C; export LC_ALL; \
+ 	TZ=UTC0; export TZ; \
+-	timestamp=$$(git log --pretty=format:%ct -- doc/gash.texi \
+-	                 | sort -n -r | head -n 1); \
+-	dmy=$$(date --date="@$$timestamp" "+%-d %B %Y"); \
+-	my=$$(date --date="@$$timestamp" "+%B %Y"); \
++	timestamp="1559401747"; \
++	dmy=$$(date -d "@$$timestamp" "+%-d %B %Y"); \
++	my=$$(date -d "@$$timestamp" "+%B %Y"); \
+ 	{ echo "@set UPDATED $$dmy"; \
+ 	  echo "@set UPDATED-MONTH $$my"; \
+ 	  echo "@set EDITION $(VERSION)"; \
