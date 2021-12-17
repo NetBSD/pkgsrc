@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/06/22 08:01:49 nikita Exp $
+# $NetBSD: Makefile,v 1.5 2021/12/17 14:07:09 nikita Exp $
 
-DISTNAME=	guile-json-4.1.0
+DISTNAME=	guile-json-4.5.2
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.savannah.gnu.org/releases/guile-json/
 
