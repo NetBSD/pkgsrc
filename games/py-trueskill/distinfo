@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/12/17 00:29:35 wiz Exp $
+$NetBSD: distinfo,v 1.11 2021/12/17 18:47:48 adam Exp $
 
-BLAKE2s (trueskill-0.4.3.tar.gz) = 2594a687647c439e7aeef55949a214ac1e6a04e010f9f3ce55b7ad130058cdbc
-SHA512 (trueskill-0.4.3.tar.gz) = a05796db8f959143b17533d867e225917805e7aa26d41f58a9e91755a9257612d322c74eeff1ee0a3bd8c843f2cbb40fad809f4e3b923ba44e004f7d58792073
-Size (trueskill-0.4.3.tar.gz) = 21060 bytes
-SHA1 (patch-setup.py) = 2a1ca0ef81fe0d68e07636c8617f2b398dcb27b6
+BLAKE2s (trueskill-0.4.5.tar.gz) = dec842dfac9a79939bfb0b0f4720cc626ace971dc4605cc3c9ef34a9f94f60be
+SHA512 (trueskill-0.4.5.tar.gz) = 10840659b12043b91289c0ea8cfff6c6fd5456cc4885119ac0eefb71376c781ec2cecb1749a7940a39a4d91168ee5a097f237e450820043ec83c8264e4c64533
+Size (trueskill-0.4.5.tar.gz) = 21315 bytes
