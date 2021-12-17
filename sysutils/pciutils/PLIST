@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2020/01/23 04:26:40 msaitoh Exp $
+@comment $NetBSD: PLIST,v 1.7 2021/12/17 20:07:24 maya Exp $
 include/pciutils/config.h
 include/pciutils/header.h
 include/pciutils/pci.h
 include/pciutils/types.h
-lib/lib${PCIUTILS_LIBNAME}.a
+lib/lib${PCIUTILS_LIBNAME}.so
+lib/lib${PCIUTILS_LIBNAME}.so.3
+lib/lib${PCIUTILS_LIBNAME}.so.${PKGVERSION}
 lib/pkgconfig/libpci.pc
 man/man5/pci.ids.5
 man/man7/pcilib.7

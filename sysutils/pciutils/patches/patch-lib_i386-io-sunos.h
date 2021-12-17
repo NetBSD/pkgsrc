@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_i386-io-sunos.h,v 1.1 2018/01/31 13:21:55 jperkin Exp $
+$NetBSD: patch-lib_i386-io-sunos.h,v 1.2 2021/12/17 20:07:24 maya Exp $
 
 Fix assembly syntax to work with clang.
 
---- lib/i386-io-sunos.h.orig	2011-01-07 21:04:28.000000000 +0000
+--- lib/i386-io-sunos.h.orig	2019-02-13 10:05:03.000000000 +0000
 +++ lib/i386-io-sunos.h
 @@ -27,7 +27,7 @@ static inline u8
  inb (u16 port)
@@ -22,7 +22,7 @@ Fix assembly syntax to work with clang.
    return v;
  }
  
-@@ -43,24 +43,24 @@ static inline u32
+@@ -43,26 +43,26 @@ static inline u32
  inl (u16 port)
  {
    u32 v;
@@ -51,3 +51,5 @@ Fix assembly syntax to work with clang.
 -  __asm__ __volatile__ ("outl (%w1)": :"a" (value), "Nd" (port));
 +  __asm__ __volatile__ ("outl %w1": :"a" (value), "Nd" (port));
  }
+ 
+ static inline void intel_io_lock(void)

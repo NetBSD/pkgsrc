@@ -1,0 +1,5 @@
+# $NetBSD: libname.mk,v 1.1 2021/12/17 20:07:24 maya Exp $
+
+OPSYSVARS+=			PCIUTILS_LIBNAME
+PCIUTILS_LIBNAME.NetBSD=	pciutils
+PCIUTILS_LIBNAME.*=		pci
