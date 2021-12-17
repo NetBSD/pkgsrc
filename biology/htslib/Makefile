@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2021/12/08 16:03:23 adam Exp $
+# $NetBSD: Makefile,v 1.24 2021/12/17 15:01:27 bacon Exp $
 
-DISTNAME=	htslib-1.12
-PKGREVISION=	4
+DISTNAME=	htslib-1.14
 CATEGORIES=	biology
 # Github-generated distfiles are incomplete, use custom tarballs instead
 MASTER_SITES=	https://github.com/samtools/htslib/releases/download/${PKGVERSION_NOREV}/
