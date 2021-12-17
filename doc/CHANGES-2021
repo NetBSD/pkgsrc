@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6261 2021/12/17 17:12:15 thor Exp $
+$NetBSD: CHANGES-2021,v 1.6262 2021/12/17 17:12:27 thor Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9392,3 +9392,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated biology/bowtie2 to 2.4.4 [bacon 2021-12-17]
 	Updated audio/mpg123 to 1.29.3 [thor 2021-12-17]
 	Updated audio/mpg123-jack to 1.29.3nb1 [thor 2021-12-17]
+	Updated audio/mpg123-nas to 1.29.3 [thor 2021-12-17]
