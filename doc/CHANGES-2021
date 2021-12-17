@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6269 2021/12/17 20:07:38 maya Exp $
+$NetBSD: CHANGES-2021,v 1.6270 2021/12/17 20:08:58 maya Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9401,3 +9401,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/nspr to 4.33 [wiz 2021-12-17]
 	Updated biology/vsearch to 2.18.0 [bacon 2021-12-17]
 	Updated sysutils/pciutils to 3.7.0nb2 [maya 2021-12-17]
+	Updated www/firefox to 95.0nb1 [maya 2021-12-17]
