@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6266 2021/12/17 19:09:37 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6267 2021/12/17 19:13:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9398,3 +9398,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/unbound to 1.14.0 [adam 2021-12-17]
 	Updated games/py-trueskill to 0.4.5 [adam 2021-12-17]
 	Updated net/tor to 0.4.6.9 [wiz 2021-12-17]
+	Updated devel/nspr to 4.33 [wiz 2021-12-17]
