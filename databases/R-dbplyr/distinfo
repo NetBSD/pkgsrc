@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/12/17 10:07:56 wiz Exp $
+
+BLAKE2s (R/dbplyr_2.1.1.tar.gz) = 4f5f30d38d4da245a74d68cade9a9df55cedebe4bbffa0b95f145459c0f770aa
+SHA512 (R/dbplyr_2.1.1.tar.gz) = 857af5eaa2fce0cefcbfe772a6a259df4aa2eb1f14c231503d32f62cc25dd63713d60fd206da0700e3c27f0508a11c0f3efece1b15d0f3d471ea34a1b3771b7d
+Size (R/dbplyr_2.1.1.tar.gz) = 581845 bytes
