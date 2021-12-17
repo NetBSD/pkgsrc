@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.169 2021/12/12 09:38:04 wiz Exp $
+# $NetBSD: Makefile,v 1.170 2021/12/17 11:57:58 schmonz Exp $
 
+PKGREVISION=	1
 .include "../../graphics/ImageMagick/Makefile.common"
 
 PKGNAME=	p5-PerlMagick-${DISTVERSION}
@@ -16,6 +17,7 @@ CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 
 PERL5_CONFIGURE=	no
 PERL5_CONFIGURE_DIRS=	${WRKSRC}/PerlMagick
+PERL5_LDFLAGS=		-lMagickCore-7.Q16HDRI
 PERL5_PACKLIST=		auto/Image/Magick/.packlist
 BUILD_DIRS=		${PERL5_CONFIGURE_DIRS}
 
