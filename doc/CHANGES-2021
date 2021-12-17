@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6242 2021/12/17 00:04:27 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.6243 2021/12/17 00:42:13 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9372,3 +9372,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-zeroconf to 0.37.0 [adam 2021-12-16]
 	Updated net/py-softlayer to 5.9.8 [adam 2021-12-16]
 	Updated lang/gjs to 1.68.4 [gutteridge 2021-12-17]
+	Updated sysutils/xfce4-diskperf-plugin to 2.6.3 [gutteridge 2021-12-17]
