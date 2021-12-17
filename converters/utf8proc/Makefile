@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2021/01/04 15:46:58 micha Exp $
+# $NetBSD: Makefile,v 1.14 2021/12/17 10:20:24 micha Exp $
 
-DISTNAME=	utf8proc-2.6.1
-PKGREVISION=	1
+DISTNAME=	utf8proc-2.7.0
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=JuliaLang/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -18,15 +17,15 @@ INSTALLATION_DIRS=	include lib lib/pkgconfig
 
 # Use ABI version from CMakeLists.txt to stay compatible with cmake builds
 MAJOR=	2
-MINOR=	4
-PATCH=	1
+MINOR=	5
+PATCH=	0
 
 do-configure:
 	cd ${WRKSRC} && ${SED}						\
 		-e 's#PREFIX#${PREFIX}#'				\
 		-e 's#LIBDIR#lib#'					\
 		-e 's#INCLUDEDIR#include#'				\
-		-e 's#VERSION#${MAJOR}.${MINOR}.${PATCH}#'		\
+		-e 's#VERSION#${PKGVERSION_NOREV}#'		\
 		-e 's#Description:.*$$#Description: ${COMMENT}#'	\
 		libutf8proc.pc.in >libutf8proc.pc
 
