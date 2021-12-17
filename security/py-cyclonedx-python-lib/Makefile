@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/12/07 18:05:29 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2021/12/17 10:18:23 wiz Exp $
 
 DISTNAME=	cyclonedx-python-lib-0.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-toml-[0-9]*:../../textproc/py-toml
 DEPENDS+=	${PYPKGPREFIX}-types-setuptools-[0-9]*:../../devel/py-types-setuptools
 DEPENDS+=	${PYPKGPREFIX}-types-toml-[0-9]*:../../devel/py-types-toml
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
