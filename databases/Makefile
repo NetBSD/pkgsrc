@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.645 2021/11/24 09:51:44 wiz Exp $
+# $NetBSD: Makefile,v 1.646 2021/12/17 10:08:34 wiz Exp $
 
 COMMENT=	Databases
 
 SUBDIR+=	R-RSQLite
+SUBDIR+=	R-dbplyr
 SUBDIR+=	R-sqldf
 SUBDIR+=	SQLiteCpp
 SUBDIR+=	abook
