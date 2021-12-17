@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6249 2021/12/17 10:15:29 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6250 2021/12/17 10:21:54 micha Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9380,3 +9380,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated games/warzone2100 to 4.2.3 [triaxx 2021-12-17]
 	Added databases/R-dbplyr version 2.1.1 [wiz 2021-12-17]
 	Updated math/py-rpy to 3.4.5 [wiz 2021-12-17]
+	Updated converters/utf8proc to 2.7.0 [micha 2021-12-17]
