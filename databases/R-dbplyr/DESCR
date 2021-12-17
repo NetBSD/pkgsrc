@@ -1,0 +1,3 @@
+dbplyr is the database backend for dplyr. It allows you to use
+remote database tables as if they are in-memory data frames by
+automatically converting dplyr code into SQL.
