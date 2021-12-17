@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2019/11/26 18:10:55 ng0 Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/17 14:52:12 nikita Exp $
 guile/2.2/bin/haunt
 guile/2.2/info/haunt.info
+guile/2.2/lib/guile/2.2/site-ccache/haunt/artifact.go
 guile/2.2/lib/guile/2.2/site-ccache/haunt/asset.go
 guile/2.2/lib/guile/2.2/site-ccache/haunt/builder/assets.go
 guile/2.2/lib/guile/2.2/site-ccache/haunt/builder/atom.go
@@ -20,6 +21,7 @@ guile/2.2/lib/guile/2.2/site-ccache/haunt/ui.go
 guile/2.2/lib/guile/2.2/site-ccache/haunt/ui/build.go
 guile/2.2/lib/guile/2.2/site-ccache/haunt/ui/serve.go
 guile/2.2/lib/guile/2.2/site-ccache/haunt/utils.go
+guile/2.2/share/guile/site/2.2/haunt/artifact.scm
 guile/2.2/share/guile/site/2.2/haunt/asset.scm
 guile/2.2/share/guile/site/2.2/haunt/builder/assets.scm
 guile/2.2/share/guile/site/2.2/haunt/builder/atom.scm
