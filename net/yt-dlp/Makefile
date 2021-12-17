@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/12/01 14:32:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2021/12/17 12:43:40 jperkin Exp $
 
 DISTNAME=	yt-dlp-2021.12.1
 CATEGORIES=	net
@@ -15,8 +15,10 @@ USE_LANGUAGES=	# none
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
-post-install:
-	${MV} ${DESTDIR}${PREFIX}/share/man/man1/yt-dlp.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	setup.py
+SUBST_VARS.paths=	PKGMANDIR
 
 # Only for >= 3.6
 PYTHON_VERSIONS_INCOMPATIBLE=	27
