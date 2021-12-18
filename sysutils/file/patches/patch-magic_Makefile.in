@@ -1,0 +1,15 @@
+$NetBSD: patch-magic_Makefile.in,v 1.1 2021/12/18 12:07:50 schmonz Exp $
+
+Use the just-built libmagic, not whatever might be already installed.
+
+--- magic/Makefile.in.orig	2021-03-31 00:22:07.000000000 +0000
++++ magic/Makefile.in
+@@ -850,7 +850,7 @@ ${MAGIC}: $(EXTRA_DIST) $(FILE_COMPILE_D
+ 		exit 1; \
+ 	    fi; \
+ 	  fi)
+-	$(FILE_COMPILE) -C -m magic
++	LD_PRELOAD=../src/.libs/libmagic.so ../src/.libs/file -C -m magic
+ 	@rm -fr magic
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
