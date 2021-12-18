@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/12/18 14:56:50 prlw1 Exp $
+
+BLAKE2s (Encode-IMAPUTF7-1.05.tar.gz) = 7920f38a54b504132fcb6ea6a9d51a7fa66bf0a7e51ec76885b31e44b1c384f0
+SHA512 (Encode-IMAPUTF7-1.05.tar.gz) = e286e059db72c498173a312223152ca492700282345cccbd21ea49e0334fedcd922ae40b018aa8a6b474a10fbff9ac49f46d4c6f9920f3e508adab42bdca976f
+Size (Encode-IMAPUTF7-1.05.tar.gz) = 25646 bytes
