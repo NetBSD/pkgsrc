@@ -1,13 +1,12 @@
-@comment $NetBSD: PLIST,v 1.7 2020/04/05 23:11:18 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/12/18 20:12:01 gutteridge Exp $
 bin/xfce4-clipman
 bin/xfce4-clipman-history
 bin/xfce4-clipman-settings
 bin/xfce4-popup-clipman
 bin/xfce4-popup-clipman-actions
 lib/xfce4/panel/plugins/libclipman.la
-share/appdata/xfce4-clipman.appdata.xml
-share/applications/xfce4-clipman.desktop
 share/applications/xfce4-clipman-settings.desktop
+share/applications/xfce4-clipman.desktop
 share/examples/xfce4/autostart/xfce4-clipman-plugin-autostart.desktop
 share/examples/xfce4/panel/xfce4-clipman-actions.xml
 share/icons/hicolor/16x16/apps/clipman-symbolic.svg
@@ -29,6 +28,7 @@ share/locale/el/LC_MESSAGES/xfce4-clipman-plugin.mo
 share/locale/en_AU/LC_MESSAGES/xfce4-clipman-plugin.mo
 share/locale/en_GB/LC_MESSAGES/xfce4-clipman-plugin.mo
 share/locale/es/LC_MESSAGES/xfce4-clipman-plugin.mo
+share/locale/et/LC_MESSAGES/xfce4-clipman-plugin.mo
 share/locale/eu/LC_MESSAGES/xfce4-clipman-plugin.mo
 share/locale/fi/LC_MESSAGES/xfce4-clipman-plugin.mo
 share/locale/fr/LC_MESSAGES/xfce4-clipman-plugin.mo
@@ -37,6 +37,7 @@ share/locale/he/LC_MESSAGES/xfce4-clipman-plugin.mo
 share/locale/hr/LC_MESSAGES/xfce4-clipman-plugin.mo
 share/locale/hu/LC_MESSAGES/xfce4-clipman-plugin.mo
 share/locale/hy_AM/LC_MESSAGES/xfce4-clipman-plugin.mo
+share/locale/hye/LC_MESSAGES/xfce4-clipman-plugin.mo
 share/locale/id/LC_MESSAGES/xfce4-clipman-plugin.mo
 share/locale/ie/LC_MESSAGES/xfce4-clipman-plugin.mo
 share/locale/is/LC_MESSAGES/xfce4-clipman-plugin.mo
@@ -68,4 +69,5 @@ share/locale/ur_PK/LC_MESSAGES/xfce4-clipman-plugin.mo
 share/locale/vi/LC_MESSAGES/xfce4-clipman-plugin.mo
 share/locale/zh_CN/LC_MESSAGES/xfce4-clipman-plugin.mo
 share/locale/zh_TW/LC_MESSAGES/xfce4-clipman-plugin.mo
+share/metainfo/xfce4-clipman.appdata.xml
 share/xfce4/panel/plugins/xfce4-clipman-plugin.desktop

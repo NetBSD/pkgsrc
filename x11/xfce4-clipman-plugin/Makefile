@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2021/12/08 16:07:15 adam Exp $
+# $NetBSD: Makefile,v 1.63 2021/12/18 20:12:01 gutteridge Exp $
 
-PKGREVISION= 4
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	1.6.1
+VERSION=	1.6.2
 DISTNAME=	xfce4-clipman-plugin-${VERSION}
 CATEGORIES=	sysutils
 MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-clipman-plugin/${VERSION:R}/
@@ -23,7 +22,5 @@ MAKE_DIRS+=	${XFCE4_EGBASE}/autostart \
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/xfce4-panel/buildlink3.mk"
-.include "../../x11/xfce4-exo/buildlink3.mk"
-.include "../../x11/libunique/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
