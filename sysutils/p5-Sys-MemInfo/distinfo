@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2021/12/18 15:07:01 prlw1 Exp $
+
+BLAKE2s (Sys-MemInfo-0.99.tar.gz) = def2083bdad74cbcd8fd5d326f3341569c92e456c3b9c7bdaad3f63a78fc0a79
+SHA512 (Sys-MemInfo-0.99.tar.gz) = ad0f8a12db7f7c643d0eb2d68fb1dcbff43928b786d390243e89d88537bd99360f88af177678ce5141e3870224da80ea5a432c465e8c7ec384abd21014c0e1c0
+Size (Sys-MemInfo-0.99.tar.gz) = 13276 bytes
+SHA1 (patch-arch_bsd.xs) = d838b3bd8c011d7c3cd9a6532ebeb26ab2cadeae
