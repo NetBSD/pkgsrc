@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6287 2021/12/18 15:38:32 jym Exp $
+$NetBSD: CHANGES-2021,v 1.6288 2021/12/18 15:58:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9419,3 +9419,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/postgresql-postgis2 to 3.2.0 [gdt 2021-12-18]
 	Updated net/unison-snapshot to 2.51.4.70.4 [gdt 2021-12-18]
 	Updated databases/apache-solr to 8.11.1 [jym 2021-12-18]
+	Updated devel/ruby-redmine41 to 4.1.5nb1 [taca 2021-12-18]
