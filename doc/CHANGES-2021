@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6273 2021/12/18 01:02:44 he Exp $
+$NetBSD: CHANGES-2021,v 1.6274 2021/12/18 02:12:14 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9405,3 +9405,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/sipsak to 0.9.8.1 [schwarz 2021-12-17]
 	Removed games/accelerator3d [wiz 2021-12-18]
 	Added emulators/compat90 version 9.0 [he 2021-12-18]
+	Updated sysutils/xfce4-fsguard-plugin to 1.1.2 [gutteridge 2021-12-18]
