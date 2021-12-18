@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6279 2021/12/18 13:49:31 leot Exp $
+$NetBSD: CHANGES-2021,v 1.6280 2021/12/18 13:55:27 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9411,3 +9411,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated fonts/cascadia-ttf to 2111.01 [fcambus 2021-12-18]
 	Updated ham/chirp to 20211216 [gdt 2021-12-18]
 	Updated net/sacc to 1.05 [leot 2021-12-18]
+	Updated security/libretls to 3.4.2 [schmonz 2021-12-18]
