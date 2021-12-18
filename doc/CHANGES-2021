@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6283 2021/12/18 14:57:46 prlw1 Exp $
+$NetBSD: CHANGES-2021,v 1.6284 2021/12/18 15:07:34 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9415,3 +9415,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated news/sfeed to 1.1 [leot 2021-12-18]
 	Removed news/sfeed_curses [leot 2021-12-18]
 	Added textproc/p5-Encode-IMAPUTF7 version 1.05 [prlw1 2021-12-18]
+	Added sysutils/p5-Sys-MemInfo version 0.99 [prlw1 2021-12-18]
