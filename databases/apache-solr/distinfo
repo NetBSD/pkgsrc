@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:09:14 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/12/18 15:34:19 jym Exp $
 
-BLAKE2s (solr-8.5.2.tgz) = b5343920817024a0855a3aa7071b24d1453b1f05ed162df4e10d859f58b910ac
-SHA512 (solr-8.5.2.tgz) = 02b9b90468f399701dba26695c9af6cd205f47916a06e26838613fe238594e9902de6ef3b42ec8257d195e37589adf8427d9b7962557731e91949fbef06bb544
-Size (solr-8.5.2.tgz) = 190485345 bytes
-SHA1 (patch-solr-bin) = 2f6a915ebf57b33ae8bc4e4f1c7109ed0f058b29
+SHA1 (solr-8.11.1.tgz) = 4ebc3ff1f5dc6cbe70f3f41989f27873aeffca74
+RMD160 (solr-8.11.1.tgz) = f0aee47281ccb147d8a6874bbfecb7604b3c8977
+SHA512 (solr-8.11.1.tgz) = 4893f836aec84b03d7bfe574e59e305c03b5ede4a48020034fbe81440b8feee79e55fd9ead230e5b89b3f25124e9b56c1ddc4bb5c7f631cf4e846b9cab5f9a45
+Size (solr-8.11.1.tgz) = 218076598 bytes
+SHA1 (patch-solr-bin) = 69990d68ada63b6c70d3df83fbaea22b9559cb04

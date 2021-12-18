@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/07/03 11:50:57 yyamano Exp $
+# $NetBSD: Makefile,v 1.4 2021/12/18 15:34:19 jym Exp $
 
 DISTNAME=	solr-${SOLR_VER}
 PKGNAME=	apache-solr-${SOLR_VER}
-SOLR_VER=	8.5.2
+SOLR_VER=	8.11.1
 CATEGORIES=	databases textproc
 MASTER_SITES=	${MASTER_SITE_APACHE:=lucene/solr/${SOLR_VER}/}
 EXTRACT_SUFX=	.tgz
