@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 11:34:45 nia Exp $
+$NetBSD: distinfo,v 1.16 2021/12/18 20:12:01 gutteridge Exp $
 
-BLAKE2s (xfce4-clipman-plugin-1.6.1.tar.bz2) = 95015fd30ee0a47dfcf4716672c73cc46869ed3a82f3d114628427cb07893136
-SHA512 (xfce4-clipman-plugin-1.6.1.tar.bz2) = 2a2aa5d7b5d841b11c6d54d4872fc8cbfb83981b2d4678075ff5aa2a4df9ea88de95b837bf3896d7ce5f434827ebb64238e68cca2e17a7104433ed5847d949dd
-Size (xfce4-clipman-plugin-1.6.1.tar.bz2) = 471364 bytes
+BLAKE2s (xfce4-clipman-plugin-1.6.2.tar.bz2) = a99be4fb4c1b1183f12ccc39475ffcd0ef25b9ea859777fe773089ba4e6578c0
+SHA512 (xfce4-clipman-plugin-1.6.2.tar.bz2) = 4bd49b3b6311d232d422d92007638b05409bc0c90fdc20a394590000ac8c706c0502b99a3c89a0276ca1c0e2cfb0a151c78a0a8b18a16bbf65cc5778bcb51db2
+Size (xfce4-clipman-plugin-1.6.2.tar.bz2) = 465656 bytes
 SHA1 (patch-panel-plugin_Makefile.in) = f4e58a9a075623a82bbbea29c6510e9ff838b777
