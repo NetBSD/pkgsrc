@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.38 2021/11/08 13:58:09 taca Exp $
+# $NetBSD: Makefile.common,v 1.39 2021/12/18 10:50:33 adam Exp $
 # used by mail/postfix/Makefile
 # used by mail/postfix/Makefile.module
 
@@ -121,6 +121,7 @@ CCARGS+=		-DNO_NISPLUS
 .endif
 
 CFLAGS.SunOS+=		-D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
+LDFLAGS.Darwin+=	-headerpad_max_install_names
 
 DESTDIR_INSTALLOPTIONS=	-package install_root="${DESTDIR}"
 
