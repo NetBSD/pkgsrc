@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2021/09/04 21:14:15 leot Exp $
+# $NetBSD: Makefile,v 1.3 2021/12/18 18:11:48 leot Exp $
 
-DISTNAME=	podman-3.3.1
+DISTNAME=	podman-3.4.4
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=containers/}
@@ -20,7 +20,7 @@ DEPENDS+=	qemu-[0-9]*:../../emulators/qemu
 DEPENDS+=	gvproxy-[0-9]*:../../net/gvproxy
 
 SUBST_CLASSES+=		gvproxy
-SUBST_FILES.gvproxy=	pkg/machine/qemu/machine.go
+SUBST_FILES.gvproxy=	vendor/github.com/containers/common/pkg/config/config_netbsd.go
 SUBST_STAGE.gvproxy=	pre-configure
 SUBST_MESSAGE.gvproxy=	fix PREFIX inside patch
 SUBST_VARS.gvproxy=	PREFIX
