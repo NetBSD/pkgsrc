@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6275 2021/12/18 04:38:53 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.6276 2021/12/18 10:53:11 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9407,3 +9407,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added emulators/compat90 version 9.0 [he 2021-12-18]
 	Updated sysutils/xfce4-fsguard-plugin to 1.1.2 [gutteridge 2021-12-18]
 	Updated misc/xfce4-smartbookmark-plugin to 0.5.2 [gutteridge 2021-12-18]
+	Updated devel/binaryen to 104 [fcambus 2021-12-18]
