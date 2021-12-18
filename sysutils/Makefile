@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.976 2021/12/12 16:30:55 gutteridge Exp $
+# $NetBSD: Makefile,v 1.977 2021/12/18 15:07:01 prlw1 Exp $
 #
 
 COMMENT=	System utilities
@@ -499,6 +499,7 @@ SUBDIR+=	p5-Sys-CPU
 SUBDIR+=	p5-Sys-CpuLoad
 SUBDIR+=	p5-Sys-Filesystem
 SUBDIR+=	p5-Sys-Hostname-Long
+SUBDIR+=	p5-Sys-MemInfo
 SUBDIR+=	p5-Sys-SigAction
 SUBDIR+=	p5-Sys-Utmp
 SUBDIR+=	p5-UPS-Nut
