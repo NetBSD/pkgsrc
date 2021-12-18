@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: gencompat.sh,v 1.3 2019/10/15 12:10:19 he Exp $
+# $NetBSD: gencompat.sh,v 1.4 2021/12/18 10:17:48 he Exp $
 #
 # This script generates the distfiles and PLISTs for the NetBSD compat*
 # packages.
@@ -9,11 +9,11 @@
 # XXX options.
 #
 
-compat_version=8.0
-compat_version_name=80
+compat_version=9.0
+compat_version_name=90
 
 compat_base=/x/NetBSD/$compat_version
-cur_base=/x/NetBSD/9.0_BETA
+cur_base=/x/NetBSD/10.0_preALPHA
 setdir=binary/sets
 
 BASESET="base.tgz"
@@ -21,8 +21,9 @@ XBASESET="xbase.tgz"
 BASESET_X="base.tar.xz"
 XBASESET_X="xbase.tar.xz"
 
-archlist="alpha arm armeb armv6hf armv7hf earmv7hfeb earm earmv7hfeb hppa i386 m68010 m68k mips64el mips64eb mipseb mipsel powerpc sh3eb sh3el sparc sparc64 vax x86_64"
+archlist="aarch64 alpha arm armeb armv6hf armv7hf earmv7hfeb earm earmv7hfeb hppa i386 m68010 m68k mips64el mips64eb mipseb mipsel powerpc sh3eb sh3el sparc sparc64 vax x86_64"
 
+machlist_aarch64="evbarm-aarch64"
 machlist_alpha="alpha"
 machlist_arm="acorn32 cats evbarm hpcarm iyonix netwinder shark zaurus"
 machlist_earm="evbarm-earm"
@@ -64,31 +65,51 @@ for arch in $archlist; do
 		compat_dir=$compat_pkgdir-$arch-$compat_version
 		compat_extras_dir=$compat_pkgdir-extras-$arch-$compat_version
 
-		# probe for .tar.xz entries in $cur_setdir
-		BASE=$BASESET
-		XBASE=$XBASESET
-		if [ -f $cur_setdir/$BASESET_X ]; then
-			BASE=$BASESET_X
-		fi
-		if [ -f $cur_setdir/$XBASESET_X ]; then
-			XBASE=$XBASESET_X
-		fi
+		# probe for .tar.gz, .tgz, .tar.xz entries in old and new dir
+		for d in $cur_setdir $compat_setdir; do
+			p=""
+			if [ $d = $compat_setdir ]; then
+				p=O
+			fi
+			for suf in tar.gz tgz tar.xz; do
+				found=false
+				for s in base xbase; do
+					f=$d/$s.$suf
+					v=${p}$(echo $s | tr a-z A-Z)
+					if [ -f $f ]; then
+						eval $v=$f
+						found=true
+					fi
+				done
+				if $found; then
+					break
+				fi
+			done
+			if ! $found; then
+				echo Could not find sets in $cur_setdir
+				continue 2
+			fi
+		done
+		echo BASE = $BASE
+		echo XBASE = $XBASE
+		echo OBASE = $OBASE
+		echo OXBASE = $OXBASE
 
-		[ -f $cur_setdir/$BASE ] || continue
-		[ -f $cur_setdir/$XBASE ] || continue
-		[ -f $compat_setdir/$BASESET ] || continue
-		[ -f $compat_setdir/$XBASESET ] || continue
+		[ -f $BASE ] || continue
+		[ -f $XBASE ] || continue
+		[ -f $OBASE ] || continue
+		[ -f $OXBASE ] || continue
 
 		[ -d $cur_dir ] || mkdir -p $cur_dir
 		[ -d $compat_dir ] || mkdir -p $compat_dir
 		[ -d $compat_extras_dir ] || mkdir -p $compat_extras_dir
 
 		# Extract the shared libraries from the base and xbase sets.
-		( cd $cur_dir && tar zxf $cur_setdir/$BASE "*/ld.*" "*.so*" )
-		( cd $cur_dir && tar zxf $cur_setdir/$XBASE "*.so*" )
+		( cd $cur_dir && tar zxf $BASE "*/ld.*" "*.so*" )
+		( cd $cur_dir && tar zxf $XBASE "*.so*" )
 
-		( cd $compat_dir && tar zxf $compat_setdir/$BASESET "*/ld.*" "*.so*" )
-		( cd $compat_dir && tar zxf $compat_setdir/$XBASESET "*.so*" )
+		( cd $compat_dir && tar zxf $OBASE "*/ld.*" "*.so*" )
+		( cd $compat_dir && tar zxf $OXBASE "*.so*" )
 
 		# For all non-dirs (files, symlinks) in $cur_dir
 		( cd $cur_dir && find . \! -type d -print ) | sort |
@@ -118,22 +139,23 @@ for arch in $archlist; do
 		[ -d $compat_extras_pkgdir ] || mkdir -p $compat_extras_pkgdir
 
 		# Generate PLISTs and distfiles.
-		( echo '@comment $NetBSD: gencompat.sh,v 1.3 2019/10/15 12:10:19 he Exp $'
+		( echo '@comment $NetBSD: gencompat.sh,v 1.4 2021/12/18 10:17:48 he Exp $'
 		  find $compat_dir \! -type d | sort |
 		  sed 's,'$compat_dir'/,${EMULSUBDIRSLASH},'
 		) > $compat_pkgdir/PLIST.$arch
 		tar cf $compat_pkgdir/$compat_dir.tar $compat_dir
-		bzip2 -9 $compat_pkgdir/$compat_dir.tar
+		bzip2 -f -9 $compat_pkgdir/$compat_dir.tar
 
-		( echo '@comment $NetBSD: gencompat.sh,v 1.3 2019/10/15 12:10:19 he Exp $'
+		( echo '@comment $NetBSD: gencompat.sh,v 1.4 2021/12/18 10:17:48 he Exp $'
 		  find $compat_extras_dir \! -type d | sort |
 		  sed 's,'$compat_extras_dir'/,${EMULSUBDIRSLASH},'
 		) > $compat_extras_pkgdir/PLIST.$arch
 		tar cf $compat_extras_pkgdir/$compat_extras_dir.tar $compat_extras_dir
-		bzip2 -9 $compat_extras_pkgdir/$compat_extras_dir.tar
+		bzip2 -f -9 $compat_extras_pkgdir/$compat_extras_dir.tar
 
 		# Cleanup.
 		rm -rf $cur_dir $compat_dir $compat_extras_dir
+		# This arch done, skip to the next
 		break
 	done
 done
