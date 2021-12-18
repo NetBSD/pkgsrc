@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2019/10/15 12:03:42 he Exp $
+# $NetBSD: Makefile.common,v 1.16 2021/12/18 10:16:04 he Exp $
 #
 # Common infrastructure for NetBSD compat* packages.
 #
@@ -36,6 +36,7 @@
 # used by emulators/compat61/Makefile
 # used by emulators/compat61-x11/Makefile
 # used by emulators/compat80/Makefile
+# used by emulators/compat90/Makefile
 
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_LOCAL:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
