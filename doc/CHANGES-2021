@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6284 2021/12/18 15:07:34 prlw1 Exp $
+$NetBSD: CHANGES-2021,v 1.6285 2021/12/18 15:13:09 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9416,3 +9416,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed news/sfeed_curses [leot 2021-12-18]
 	Added textproc/p5-Encode-IMAPUTF7 version 1.05 [prlw1 2021-12-18]
 	Added sysutils/p5-Sys-MemInfo version 0.99 [prlw1 2021-12-18]
+	Updated databases/postgresql-postgis2 to 3.2.0 [gdt 2021-12-18]
