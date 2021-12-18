@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/12/04 12:37:06 fcambus Exp $
+$NetBSD: distinfo,v 1.8 2021/12/18 10:53:00 fcambus Exp $
 
-BLAKE2s (binaryen-103.tar.gz) = 1438d141f86fede81452c05b24eaab2bca0e45a41440a1da2ef3e0b50c2c27a8
-SHA512 (binaryen-103.tar.gz) = 57be126b33cd346e65ac41ac46c25b55853eb67890479fd4a006c62c2ba6e5e21f4939520719f2c16214c1675b9b19c7330014405c9aaf5c1953d83774184420
-Size (binaryen-103.tar.gz) = 4019610 bytes
+BLAKE2s (binaryen-104.tar.gz) = 69ee94e02c9b7bdd8231fc74a7baea39bb669f4c65fa992fabdd67cfb19bb797
+SHA512 (binaryen-104.tar.gz) = 441175c4a2bf9d7e32bf76cc32683265a11730ab225524e54b6ae1a0cf19e9fbc9ff22bd3b9fb9fba9dda8fd91b58f755ddc4d6afe2f91502c37d88074eaee26
+Size (binaryen-104.tar.gz) = 4029004 bytes
