@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2021/11/08 15:06:37 taca Exp $
+# $NetBSD: Makefile,v 1.8 2021/12/18 15:58:30 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://www.redmine.org/releases/
 
@@ -18,7 +19,8 @@ RUBY_VERSIONS_ACCEPTED=	26
 
 RUBY_RAILS_ACCEPTED=	52
 
-OVERRIDE_GEMSPEC+=	net-ldap>=0.16.0 nokogiri>=1.11.0 roadie-rails>=2.1.0
+OVERRIDE_GEMSPEC+=	net-ldap>=0.16.0 mini_mime>=1.0.1 nokogiri>=1.11.0 \
+			roadie-rails>=2.1.0
 
 .include "../../lang/ruby/modules.mk"
 
@@ -26,7 +28,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-bundler>=1.5.0:../../misc/ruby-bundler
 DEPENDS+=	${RUBY_RAILS_DEPENDS}
 DEPENDS+=	${RUBY_PKGPREFIX}-rouge>=3.12:../../www/ruby-rouge
 DEPENDS+=	${RUBY_PKGPREFIX}-request_store>=1.4.1:../../www/ruby-request_store
-DEPENDS+=	${RUBY_PKGPREFIX}-mini_mime>=1.0.1<1.1:../../mail/ruby-mini_mime
+# ruby-mail depends it.
+#DEPENDS+=	${RUBY_PKGPREFIX}-mini_mime>=1.0.1<1.1:../../mail/ruby-mini_mime
 DEPENDS+=	${RUBY_PKGPREFIX}-actionpack${RUBY_RAILS}-xml_parser>=2.0:../../textproc/ruby-actionpack-xml_parser
 DEPENDS+=	${RUBY_PKGPREFIX}-roadie-rails${RUBY_RAILS}>=2.1.0:../../mail/ruby-roadie-rails
 DEPENDS+=	${RUBY_PKGPREFIX}-mail>=2.7.1<2.8:../../mail/ruby-mail
