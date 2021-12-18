@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2021/12/04 12:37:06 fcambus Exp $
+# $NetBSD: Makefile,v 1.6 2021/12/18 10:53:00 fcambus Exp $
 
-VERSION=	103
+VERSION=	104
 DISTNAME=	binaryen-${VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=WebAssembly/}
