@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6271 2021/12/17 21:40:06 schwarz Exp $
+$NetBSD: CHANGES-2021,v 1.6272 2021/12/18 00:13:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9403,3 +9403,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/pciutils to 3.7.0nb2 [maya 2021-12-17]
 	Updated www/firefox to 95.0nb1 [maya 2021-12-17]
 	Updated net/sipsak to 0.9.8.1 [schwarz 2021-12-17]
+	Removed games/accelerator3d [wiz 2021-12-18]
