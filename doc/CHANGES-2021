@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6289 2021/12/18 15:59:46 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6290 2021/12/18 16:41:43 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9421,3 +9421,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/apache-solr to 8.11.1 [jym 2021-12-18]
 	Updated devel/ruby-redmine41 to 4.1.5nb1 [taca 2021-12-18]
 	Updated devel/ruby-redmine42 to 4.2.3nb1 [taca 2021-12-18]
+	Updated net/unison2.51 to 2.51.5 [gdt 2021-12-18]
