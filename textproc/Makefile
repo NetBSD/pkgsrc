@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1261 2021/12/10 18:42:53 hubertf Exp $
+# $NetBSD: Makefile,v 1.1262 2021/12/18 14:56:49 prlw1 Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -657,6 +657,7 @@ SUBDIR+=	p5-Dist-Zilla-Plugin-PodWeaver
 SUBDIR+=	p5-Encode-Detect
 SUBDIR+=	p5-Encode-EUCJPASCII
 SUBDIR+=	p5-Encode-HanExtra
+SUBDIR+=	p5-Encode-IMAPUTF7
 SUBDIR+=	p5-Encode-JIS2K
 SUBDIR+=	p5-Encode-Locale
 SUBDIR+=	p5-Feed-Find
