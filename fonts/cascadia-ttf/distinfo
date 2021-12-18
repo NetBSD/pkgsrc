@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/11/05 21:18:00 rhialto Exp $
+$NetBSD: distinfo,v 1.13 2021/12/18 11:17:39 fcambus Exp $
 
-BLAKE2s (CascadiaCode-2110.31.zip) = 9df6bec493c6932508f65ec5a989f764087e5e35fcf9225b2846242d8c604990
-SHA512 (CascadiaCode-2110.31.zip) = 53477617249fd8cbd88e2beb1ecf4854d0c1a7b646b908c9fecf1a7c975eb6bf918c14617ade8615776df57ce3a86b4ca0f3001fd5c795c1e9b0fad7d6597c4f
-Size (CascadiaCode-2110.31.zip) = 24899672 bytes
+BLAKE2s (CascadiaCode-2111.01.zip) = 8771c26633b45fe4d00eb5a4017d8cd9262399618448eb7d765da4d51f9cc330
+SHA512 (CascadiaCode-2111.01.zip) = 14ab2dea663b4c2d5aa4c4fa1b149a30c85f534db6a3a41716dc005febb4e9753a098fb713dfbb72902e57304434f91c40460b44d453f74d5b8fd06674797ac6
+Size (CascadiaCode-2111.01.zip) = 24899516 bytes
