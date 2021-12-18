@@ -1,4 +1,4 @@
-# $NetBSD: netbsd-compat.mk,v 1.8 2021/12/18 00:51:04 he Exp $
+# $NetBSD: netbsd-compat.mk,v 1.9 2021/12/18 00:53:33 he Exp $
 #
 # COMPAT_* for NetBSD -- see options(4).
 #
@@ -93,7 +93,7 @@ _EMUL_PKG.compat=	# defined, but empty
 .    include "${PKGSRCDIR}/emulators/${_EMUL_PKG.compat-8.0}/emulator.mk"
 
 .  elif !empty(NETBSD_VERSION_REQD:M9.*)
-.    include ${PKGSRCDIR}/emulators/${_EMUL_PKG.compat-9.0}/emulator.mk
+.    include "${PKGSRCDIR}/emulators/${_EMUL_PKG.compat-9.0}/emulator.mk"
 
 .  endif
 
