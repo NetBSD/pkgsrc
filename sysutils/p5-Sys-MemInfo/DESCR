@@ -1,0 +1,8 @@
+This module return the total amount of free and used physical memory
+in bytes in totalmem and freemem variables.
+
+This module has been tested on Linux 3.13.0, UnixWare 7.1.2, AIX5,
+OpenBSD 3.8, NetBSD 2.0.2, FreBSD 5.4, HPUX11, Solaris 9, Tru64
+5.1, Irix 6.5, MacOS X 10.2 and Windows XP.
+
+It should work on FreeBSD 4 and Windows 9X/ME/NT/200X/Vista.
