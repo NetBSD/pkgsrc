@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6277 2021/12/18 11:17:51 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.6278 2021/12/18 13:47:07 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9409,3 +9409,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/xfce4-smartbookmark-plugin to 0.5.2 [gutteridge 2021-12-18]
 	Updated devel/binaryen to 104 [fcambus 2021-12-18]
 	Updated fonts/cascadia-ttf to 2111.01 [fcambus 2021-12-18]
+	Updated ham/chirp to 20211216 [gdt 2021-12-18]
