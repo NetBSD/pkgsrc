@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6335 2021/12/19 14:12:36 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.6336 2021/12/19 14:13:37 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9492,3 +9492,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/ruby-mini_mime to 1.1.2 [taca 2021-12-19]
 	Added lang/wasi-compiler-rt version 13.0.0 [ryoon 2021-12-19]
 	Updated devel/guile-www to 2.42 [gdt 2021-12-19]
+	Added lang/wasi-libcxx version 13.0.0 [ryoon 2021-12-19]
