@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6317 2021/12/19 06:38:52 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6318 2021/12/19 06:40:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9473,3 +9473,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-minitest to 5.15.0 [taca 2021-12-19]
 	Updated misc/ruby-ohai to 17.9.0 [taca 2021-12-19]
 	Updated net/ruby-recog to 2.3.22 [taca 2021-12-19]
+	Updated net/ruby-train-core to 3.8.6 [taca 2021-12-19]
