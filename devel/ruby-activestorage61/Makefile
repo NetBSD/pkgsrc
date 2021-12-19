@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/04/11 13:28:02 taca Exp $
+# $NetBSD: Makefile,v 1.3 2021/12/19 05:27:53 taca Exp $
 
 DISTNAME=	activestorage-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-activestorage${RUBY_RAILS}-${RAILS_VERSION}
@@ -13,7 +13,7 @@ DEPENDS+=	${RUBY_ACTIONPACK_DEPENDS}
 DEPENDS+=	${RUBY_ACTIVEJOB_DEPENDS}
 DEPENDS+=	${RUBY_ACTIVERECORD_DEPENDS}
 DEPENDS+=	${RUBY_PKGPREFIX}-marcel>=1.0.0<1.1:../../devel/ruby-marcel
-#DEPDENS+=	${RUBY_PKGPREFIX}-mini_mime>=1.0.2<1.1:../../mail/ruby-mini_mime
+#DEPDENS+=	${RUBY_PKGPREFIX}-mini_mime>=1.0.2:../../mail/ruby-mini_mime
 
 USE_LANGUAGES=	# none
 
