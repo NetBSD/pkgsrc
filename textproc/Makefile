@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1262 2021/12/18 14:56:49 prlw1 Exp $
+# $NetBSD: Makefile,v 1.1263 2021/12/19 06:22:58 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1150,6 +1150,7 @@ SUBDIR+=	rubber
 SUBDIR+=	ruby-actionpack-xml_parser
 SUBDIR+=	ruby-actiontext60
 SUBDIR+=	ruby-actiontext61
+SUBDIR+=	ruby-actiontext70
 SUBDIR+=	ruby-albino
 SUBDIR+=	ruby-amrita
 SUBDIR+=	ruby-asciidoctor
