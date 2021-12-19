@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.31 2021/11/07 11:25:33 nia Exp $
+# $NetBSD: clang.mk,v 1.32 2021/12/19 11:55:29 nia Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -74,6 +74,8 @@ _SSP_CFLAGS=		-fstack-protector
 
 .if ${_PKGSRC_USE_RELRO} == "yes"
 _CLANG_LDFLAGS+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 .endif
 
 LDFLAGS+=	${_CLANG_LDFLAGS}
