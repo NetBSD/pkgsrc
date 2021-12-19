@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6325 2021/12/19 10:59:07 nia Exp $
+$NetBSD: CHANGES-2021,v 1.6326 2021/12/19 11:37:40 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9481,3 +9481,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/gh to 2.3.0 [bsiegert 2021-12-19]
 	Updated graphics/imv to 4.3.1 [nia 2021-12-19]
 	Updated devel/lua-luv to 1.42.0.1 [nia 2021-12-19]
+	Updated emulators/libretro-mgba to 0.9.3 [nia 2021-12-19]
+	Updated emulators/mgba to 0.9.3 [nia 2021-12-19]
