@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.2 2021/09/22 12:52:17 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.3 2021/12/19 11:09:27 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -111,6 +111,14 @@ SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths+=		${MOZILLA_DIR}xpcom/io/nsAppFileLocationProvider.cpp
 SUBST_SED.fix-paths+=		-e 's,/usr/lib/mozilla/plugins,${PREFIX}/lib/netscape/plugins,g'
 
+.include "../../sysutils/pciutils/libname.mk"
+
+SUBST_CLASSES+=				fix-libpci-soname
+SUBST_STAGE.fix-libpci-soname=		pre-configure
+SUBST_MESSAGE.fix-libpci-soname=	Fixing libpci soname
+SUBST_FILES.fix-libpci-soname+=		${MOZILLA_DIR}toolkit/xre/glxtest.cpp
+SUBST_SED.fix-libpci-soname+=		-e 's,libpci.so,lib${PCIUTILS_LIBNAME}.so,'
+
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}build/autoconf/config.guess
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}js/src/build/autoconf/config.guess
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}nsprpub/build/autoconf/config.guess
@@ -197,6 +205,7 @@ RUST_REQ=	1.51.0
 #BUILDLINK_API_DEPENDS.libvpx+=	libvpx>=1.3.0
 #.include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
+.include "../../sysutils/pciutils/buildlink3.mk"
 # textproc/hunspell 1.3 is too old
 #.include "../../textproc/hunspell/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
