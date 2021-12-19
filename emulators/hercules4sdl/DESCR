@@ -13,3 +13,6 @@ Relevant mailing lists include https://groups.io/g/h390-vm and
 https://hercules-390.groups.io/g/group.
 
 This version is developed by SoftDevLabs.
+
+The hercifc program, which is only used when configuring network devices,
+is installed suid root, only accessible by group "hercules".
