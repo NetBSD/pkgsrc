@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:35 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/12/19 10:56:37 nia Exp $
 
-BLAKE2s (luv-1.41.0-0.tar.gz) = ff40569f9dbbe4dc79517b749c61e1bf6efe90a7fcf5391a4da25a564a0a7b7b
-SHA512 (luv-1.41.0-0.tar.gz) = ae6a74619988c972df3bf8f00330da981d70e64713d7ad68528e93e5ac118a28523b4de2a559cb537893f7df93bba0b0bb67559a538cf0e55eaced76f11ba26e
-Size (luv-1.41.0-0.tar.gz) = 1430613 bytes
+BLAKE2s (luv-1.42.0-1.tar.gz) = 03be8f3bd7850694851d0be37cdd6d16c82bc98bd9f050d24e3febde70363533
+SHA512 (luv-1.42.0-1.tar.gz) = 61ee67bb4577112c818c05861c53b111663bf1e07d5b911e443ce0791262471d3bec3685ae02e32f9e2fd61c0f605cb09f0c65ed979e2c267edee62de697590a
+Size (luv-1.42.0-1.tar.gz) = 121439 bytes
 SHA1 (patch-src_luv.c) = 52ec94671dfdc86e421119ddca13646ee7c6e2e2
 SHA1 (patch-src_private.h) = f086e40c912851a319626986840fe75eeb0e52f5
