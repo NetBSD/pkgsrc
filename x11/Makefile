@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.946 2021/12/12 16:22:34 gutteridge Exp $
+# $NetBSD: Makefile,v 1.947 2021/12/19 21:38:12 pin Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -450,6 +450,7 @@ SUBDIR+=	vte
 SUBDIR+=	vte029
 SUBDIR+=	vte3
 SUBDIR+=	wdm
+SUBDIR+=	wired-notify
 SUBDIR+=	wmavgload
 SUBDIR+=	wmfire
 SUBDIR+=	wmfstatus
