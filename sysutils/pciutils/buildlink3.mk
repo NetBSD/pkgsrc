@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2018/01/07 13:04:32 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2021/12/19 09:47:59 maya Exp $
 
 BUILDLINK_TREE+=	pciutils
 
@@ -7,7 +7,6 @@ PCIUTILS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pciutils+=	pciutils>=3.0.2
 BUILDLINK_PKGSRCDIR.pciutils?=		../../sysutils/pciutils
-BUILDLINK_DEPMETHOD.pciutils?=		build
 .endif # PCIUTILS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-pciutils
