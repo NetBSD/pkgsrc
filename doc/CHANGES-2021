@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6339 2021/12/19 15:16:13 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6340 2021/12/19 15:43:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9496,3 +9496,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/firefox to 95.0.1 [ryoon 2021-12-19]
 	Updated www/firefox-l10n to 95.0.1 [ryoon 2021-12-19]
 	Updated databases/php-redis to 5.3.5 [taca 2021-12-19]
+	Updated devel/ruby-redmine-gitmike-theme to 1.2.1 [taca 2021-12-19]
