@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2021/12/08 16:04:52 adam Exp $
+# $NetBSD: Makefile,v 1.119 2021/12/19 11:02:22 nia Exp $
 
 DISTNAME=	feh-3.7.2
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	https://feh.finalrewind.org/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://feh.finalrewind.org/
 COMMENT=	Imlib2 based image viewer
 LICENSE=	mit
