@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.14 2021/11/28 11:34:15 nia Exp $
+$NetBSD: distinfo,v 1.15 2021/12/19 11:37:10 nia Exp $
 
-BLAKE2s (mgba-0.9.2.tar.gz) = 56f46f5d999ccc68138325fbe720b0eaadf4879dc56bf52ae60450a7b20a12ff
-SHA512 (mgba-0.9.2.tar.gz) = ea9868c104996c44a2fcfdf9d3f4d6177b853dec478ab7a2dd19a0f127b597a887150200bfbf14de593328217ff5493ca675bfcb4f0b2ee6a5097e0cdf0e2997
-Size (mgba-0.9.2.tar.gz) = 12761919 bytes
+BLAKE2s (mgba-0.9.3.tar.gz) = 30350fe928c3f3608895639b55739b92b7ffc879fb82f4bd29b95736871e6c50
+SHA512 (mgba-0.9.3.tar.gz) = da65b3c7ec32d732163f129c4fd38949ae2da2980beb3257bf6def5e35534a27b6d30309bb3c9a8d651642f99e1a45db7a8577c8dbf5472153d4551167471b3a
+Size (mgba-0.9.3.tar.gz) = 12763090 bytes
 SHA1 (patch-CMakeLists.txt) = 61bb343f28a5031732b1a34157e1dca73bbddcd9
 SHA1 (patch-include_mgba-util_math.h) = 83ef3284dd5674f30dc4dec8aefe721ce5939f56
