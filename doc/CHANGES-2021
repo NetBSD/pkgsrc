@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6312 2021/12/19 06:23:36 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6313 2021/12/19 06:27:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9468,3 +9468,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added www/ruby-actioncable70 version 7.0.0 [taca 2021-12-19]
 	Added devel/ruby-railties70 version 7.0.0 [taca 2021-12-19]
 	Added textproc/ruby-actiontext70 version 7.0.0 [taca 2021-12-19]
+	Added www/ruby-rails70 version 7.0.0 [taca 2021-12-19]
