@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2021/12/08 16:02:27 adam Exp $
+# $NetBSD: Makefile,v 1.18 2021/12/19 14:05:29 wiz Exp $
 
 DISTNAME=	gssdp-1.2.2
 PKGNAME=	${DISTNAME:S/gssdp/gssdp12/}
@@ -16,8 +16,6 @@ USE_TOOLS+=	pkg-config
 
 # needs GTK3+
 MESON_ARGS+=	-Dsniffer=false
-# needs gtk-doc
-MESON_ARGS+=	-Dgtk-doc=false
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
