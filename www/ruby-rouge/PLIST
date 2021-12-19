@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2020/12/10 10:25:50 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.16 2021/12/19 06:51:14 taca Exp $
 bin/rougify${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -45,6 +45,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/cuda
 ${GEM_LIBDIR}/lib/rouge/demos/cypher
 ${GEM_LIBDIR}/lib/rouge/demos/cython
 ${GEM_LIBDIR}/lib/rouge/demos/d
+${GEM_LIBDIR}/lib/rouge/demos/dafny
 ${GEM_LIBDIR}/lib/rouge/demos/dart
 ${GEM_LIBDIR}/lib/rouge/demos/datastudio
 ${GEM_LIBDIR}/lib/rouge/demos/diff
@@ -273,6 +274,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/cuda.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/cypher.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/cython.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/d.rb
+${GEM_LIBDIR}/lib/rouge/lexers/dafny.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/dart.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/datastudio.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/diff.rb
