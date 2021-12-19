@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6297 2021/12/19 05:03:46 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6298 2021/12/19 05:05:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9429,3 +9429,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated comms/asterisk19 to 19.1.0 [jnemeth 2021-12-19]
 	Updated lang/php74 to 7.4.27 [taca 2021-12-19]
 	Updated lang/php80 to 8.0.14 [taca 2021-12-19]
+	Updated lang/php81 to 8.1.1 [taca 2021-12-19]
