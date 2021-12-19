@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.505 2021/12/19 09:47:59 maya Exp $
+# $NetBSD: Makefile,v 1.506 2021/12/19 15:09:49 ryoon Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=		95.0
+MOZ_BRANCH=		95.0.1
 MOZ_BRANCH_MINOR=	
-PKGREVISION=		2
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	${DISTNAME:S/.source//:S/b/beta/:S/esr//}
@@ -51,7 +50,8 @@ WRKSRC=		${WRKDIR}/firefox-${FIREFOX_VER:C/b.*//}
 
 MOZILLA_DIR=	# empty
 
-# Note: when updating remember to conditionalise about-background.png in PLIST
+# Note: In --enable-chrome-format=flat case,
+#       when updating remember to conditionalise about-background.png in PLIST
 CONFIGURE_ARGS+=	--enable-application=browser
 
 #CFLAGS+=	-I${PREFIX}/include/nspr
@@ -68,6 +68,11 @@ LDFLAGS.SunOS+=		-lm
 
 # XXX not sure how to test this! likely unnecessary
 NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/plugin-container
+# For RLBox WASM sandbox. Sync condition with mozilla-common.mk
+.if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "i386"
+NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/firefox
+NOT_PAX_MPROTECT_SAFE+=	lib/${PKGBASE}/firefox-bin
+.endif
 
 # Avoid ld "invalid section index" errors.
 BUILDLINK_TRANSFORM.SunOS+=	rm:-fdata-sections
