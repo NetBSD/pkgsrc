@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2021/12/08 08:09:21 adam Exp $
+# $NetBSD: Makefile,v 1.7 2021/12/19 16:57:00 adam Exp $
 
-DISTNAME=	memory_profiler-0.59.0
+DISTNAME=	memory_profiler-0.60.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/memory_profiler/}
