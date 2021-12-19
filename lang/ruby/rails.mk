@@ -1,4 +1,4 @@
-# $NetBSD: rails.mk,v 1.108 2021/12/19 05:22:30 taca Exp $
+# $NetBSD: rails.mk,v 1.109 2021/12/19 05:42:50 taca Exp $
 
 .if !defined(_RUBY_RAILS_MK)
 _RUBY_RAILS_MK=	# defined
@@ -9,7 +9,7 @@ _RUBY_RAILS_MK=	# defined
 # RUBY_RAILS_DEFAULT
 #	Select default Ruby on Rails version.
 #
-#	Possible values: 52 60 61
+#	Possible values: 52 60 61 70
 #	Default: 52
 #
 #
@@ -27,7 +27,7 @@ _RUBY_RAILS_MK=	# defined
 # RUBY_RAILS_ACCEPTED
 #	The Ruby on Rails versions that are acceptable for the package.
 #
-#	Possible values: 52 60 61
+#	Possible values: 52 60 61 70
 #	Default: (empty)
 #
 # RUBY_RAILS_STRICT_DEP
@@ -41,7 +41,7 @@ _RUBY_RAILS_MK=	# defined
 # RUBY_RAILS
 #	Selected Ruby on Rails version.
 #
-#	Possible values: 52 60 61
+#	Possible values: 52 60 61 70
 #
 
 #
@@ -50,13 +50,14 @@ _RUBY_RAILS_MK=	# defined
 RUBY_RAILS52_VERSION?=	5.2.6
 RUBY_RAILS60_VERSION?=	6.0.4.4
 RUBY_RAILS61_VERSION?=	6.1.4.4
+RUBY_RAILS70_VERSION?=	7.0.0
 
 RUBY_RAILS_ACCEPTED?=	# defined
 RUBY_RAILS_DEFAULT?=	52
 
 RUBY_RAILS_STRICT_DEP?=	no
 
-RUBY_RAILS_SUPPORTED=	52 60 61
+RUBY_RAILS_SUPPORTED=	52 60 61 70
 
 .if empty(RUBY_RAILS_SUPPORTED:M${RUBY_RAILS_DEFAULT})
 .  error Unsupported RUBY_RAILS_DEFAULT: ${RUBY_RAILS_DEFAULT}
@@ -89,7 +90,9 @@ RUBY_RAILS?=	${rr}
 
 RUBY_RAILS?=	${RUBY_RAILS_SUPPORTED}
 
-.if ${RUBY_RAILS} == "61"
+.if ${RUBY_RAILS} == "70"
+RAILS_VERSION:=	${RUBY_RAILS70_VERSION}
+.elif ${RUBY_RAILS} == "61"
 RAILS_VERSION:=	${RUBY_RAILS61_VERSION}
 .elif ${RUBY_RAILS} == "60"
 RAILS_VERSION:=	${RUBY_RAILS60_VERSION}
