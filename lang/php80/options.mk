@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2021/09/23 15:48:37 taca Exp $
+# $NetBSD: options.mk,v 1.3 2021/12/19 05:03:19 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PHP_PKG_PREFIX}
 PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline argon2 php-embed
@@ -57,7 +57,7 @@ CONFIGURE_ARGS+=	--with-password-argon2=${BUILDLINK_PREFIX.argon2}
 CFLAGS+=		-DDISABLE_FILTER_URL
 .endif
 
-PLIST_VARS+=    embed
+PLIST_VARS+=	embed
 
 .if !empty(PKGNAME:Mphp-[7-9]*)
 .if !empty(PKG_OPTIONS:Mphp-embed)
