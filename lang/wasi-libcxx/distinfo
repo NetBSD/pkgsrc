@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2021/12/19 14:12:20 ryoon Exp $
+
+BLAKE2s (libcxx-13.0.0.src.tar.xz) = ade0de63ce72d50ae1276cf71da17aa5fa375e9ad767e2c1abecaa7f57953768
+SHA512 (libcxx-13.0.0.src.tar.xz) = deaf166ea9b5ffe4d7d1ace86fb4ed33317c610ff41947d2b0b18934b2a54601521f1021c5fd43bdba3a08779f3be98e13d2565c0d4374d849c5eff487eda2dd
+Size (libcxx-13.0.0.src.tar.xz) = 2086032 bytes
+BLAKE2s (libcxxabi-13.0.0.src.tar.xz) = d0d7712e3affd61a122fa4a305a1c05a6f3362cbe10c80bc93ed8b3065ecf6bb
+SHA512 (libcxxabi-13.0.0.src.tar.xz) = e7c8177898f344d4a16bf199ddbae4c8ae0d31e2961c5946934abb30631c386d2d28bf4804e65faa9f6298aca01e6e925fd88a13c918d8e5d1b175720e600823
+Size (libcxxabi-13.0.0.src.tar.xz) = 554780 bytes
+BLAKE2s (llvm-13.0.0.src.tar.xz) = ffdfed33e870715f2e8c0efdc2c29566a2bffe5a6efce90ea7ca4990c9067f0f
+SHA512 (llvm-13.0.0.src.tar.xz) = c307500a5fdc2bf6d768a808cf879d33914e24437f4f794361eccedb28ac6a98ebc41ca6140d09364c9bdec565fabd049e364d3f5b39f1751ecff51b687c4eff
+Size (llvm-13.0.0.src.tar.xz) = 45471992 bytes
