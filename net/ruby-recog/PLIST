@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/05/30 11:14:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2021/12/19 06:38:33 taca Exp $
 bin/recog_cleanup${RUBY_SUFFIX}
 bin/recog_export${RUBY_SUFFIX}
 bin/recog_match${RUBY_SUFFIX}
@@ -10,7 +10,9 @@ ${GEM_LIBDIR}/.github/ISSUE_TEMPLATE/feature_request.md
 ${GEM_LIBDIR}/.github/ISSUE_TEMPLATE/fingerprint_request.md
 ${GEM_LIBDIR}/.github/PULL_REQUEST_TEMPLATE
 ${GEM_LIBDIR}/.github/SECURITY.md
+${GEM_LIBDIR}/.github/dependabot.yml
 ${GEM_LIBDIR}/.github/workflows/ci.yml
+${GEM_LIBDIR}/.github/workflows/verify.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.ruby-gemset
@@ -89,10 +91,12 @@ ${GEM_LIBDIR}/spec/lib/recog/match_reporter_spec.rb
 ${GEM_LIBDIR}/spec/lib/recog/nizer_spec.rb
 ${GEM_LIBDIR}/spec/lib/recog/verify_reporter_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/tools/dev/hooks/pre-commit
 ${GEM_LIBDIR}/update_cpes.py
 ${GEM_LIBDIR}/xml/apache_modules.xml
 ${GEM_LIBDIR}/xml/apache_os.xml
 ${GEM_LIBDIR}/xml/architecture.xml
+${GEM_LIBDIR}/xml/dhcp_vendor_class.xml
 ${GEM_LIBDIR}/xml/dns_versionbind.xml
 ${GEM_LIBDIR}/xml/favicons.xml
 ${GEM_LIBDIR}/xml/fingerprints.xsd
