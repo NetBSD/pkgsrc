@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6338 2021/12/19 15:11:01 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.6339 2021/12/19 15:16:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9495,3 +9495,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added lang/wasi-libcxx version 13.0.0 [ryoon 2021-12-19]
 	Updated www/firefox to 95.0.1 [ryoon 2021-12-19]
 	Updated www/firefox-l10n to 95.0.1 [ryoon 2021-12-19]
+	Updated databases/php-redis to 5.3.5 [taca 2021-12-19]
