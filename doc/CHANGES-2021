@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6323 2021/12/19 10:46:46 bsiegert Exp $
+$NetBSD: CHANGES-2021,v 1.6324 2021/12/19 10:51:16 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9479,3 +9479,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-html-proofer to 3.19.3 [taca 2021-12-19]
 	Updated www/ruby-rouge to 3.27.0 [taca 2021-12-19]
 	Updated net/gh to 2.3.0 [bsiegert 2021-12-19]
+	Updated graphics/imv to 4.3.1 [nia 2021-12-19]
