@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2021/12/19 19:08:19 rhialto Exp $
+# $NetBSD: Makefile,v 1.6 2021/12/19 21:26:27 rhialto Exp $
 
 PKGNAME=	hercules4sdl-4.4
+PKGREVISION=	1
 DISTNAME=	hyperion-Release_${PKGVERSION_NOREV}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SDL-Hercules-390/}
@@ -33,8 +34,10 @@ SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},g'
 
 CONFIGURE_ARGS+=	--enable-extpkgs=${PREFIX}/lib/hercules4sdl
 
+GROUP=			hercules
+PKG_GROUPS+=		${GROUP}
+SPECIAL_PERMS+=		${PREFIX}/bin/hercifc ${REAL_ROOT_USER} ${GROUP} 4510
 INSTALLATION_DIRS+=	share/examples/hercules
-SPECIAL_PERMS+=		${PREFIX}/bin/hercifc ${SETUID_ROOT_PERMS}
 
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
