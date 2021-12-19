@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/11/06 16:43:23 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/19 19:08:19 rhialto Exp $
 bin/cckd2ckd
 bin/cckd642ckd
 bin/cckdcdsk
@@ -45,7 +45,6 @@ bin/tapecopy
 bin/tapemap
 bin/tapesplt
 bin/vmfplc2
-bin/voldsext.cmd
 lib/hercules/dyncrypt.la
 lib/hercules/dyngui.la
 lib/hercules/hdt1052c.la
@@ -79,9 +78,7 @@ share/hercules/TMOUNT.txt
 share/hercules/awssl-v19g
 share/hercules/awswrite.jcl
 share/hercules/cckddasd.html
-share/hercules/cckddu64.hla
-share/hercules/cckddump.hla
-share/hercules/cckdload.hla
+share/hercules/cckddump-cckdload.zip
 share/hercules/fishgui.html
 share/hercules/hercconf.html
 share/hercules/hercfaq.html
