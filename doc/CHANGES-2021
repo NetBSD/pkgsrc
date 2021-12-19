@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6345 2021/12/19 16:57:20 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6346 2021/12/19 18:34:11 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9504,3 +9504,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-sphinx to 4.3.2 [adam 2021-12-19]
 	Updated net/py-amqp to 5.0.8 [adam 2021-12-19]
 	Updated devel/py-memory-profiler to 0.60.0 [adam 2021-12-19]
+	Updated www/lariza to 21.12 [pin 2021-12-19]
