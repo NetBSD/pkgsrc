@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6327 2021/12/19 13:22:04 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.6328 2021/12/19 13:22:34 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9484,3 +9484,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/libretro-mgba to 0.9.3 [nia 2021-12-19]
 	Updated emulators/mgba to 0.9.3 [nia 2021-12-19]
 	Updated devel/wabt to 1.0.25 [fcambus 2021-12-19]
+	Updated chat/weechat to 3.4 [nia 2021-12-19]
