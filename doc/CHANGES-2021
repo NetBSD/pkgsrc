@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6331 2021/12/19 14:03:48 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6332 2021/12/19 14:04:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9488,3 +9488,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-pbr to 5.8.0 [wiz 2021-12-19]
 	Added lang/wasi-libc version 0.0.0pre20210923 [ryoon 2021-12-19]
 	Updated multimedia/libtheora-docs to 1.1.1nb5 [wiz 2021-12-19]
+	Updated devel/ruby-redmine42 to 4.2.3nb2 [taca 2021-12-19]
