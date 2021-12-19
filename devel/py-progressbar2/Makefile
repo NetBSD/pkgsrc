@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/11/16 19:42:31 adam Exp $
+# $NetBSD: Makefile,v 1.3 2021/12/19 13:42:58 wiz Exp $
 
 DISTNAME=	progressbar2-3.55.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test>=4.6.9:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.6.1:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-utils
 
 do-test:
 	${LN} -f ${WRKSRC}/examples.py ${WRKSRC}/tests/examples.py
