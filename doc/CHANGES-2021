@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6342 2021/12/19 15:56:42 pin Exp $
+$NetBSD: CHANGES-2021,v 1.6343 2021/12/19 16:40:38 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9499,3 +9499,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-redmine-gitmike-theme to 1.2.1 [taca 2021-12-19]
 	Updated audio/termusic to 0.6.3 [pin 2021-12-19]
 	Updated graphics/viu to 1.4.0 [pin 2021-12-19]
+	Updated sysutils/refi to 3.1.1 [pin 2021-12-19]
