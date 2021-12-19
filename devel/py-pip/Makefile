@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2021/11/09 23:19:49 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2021/12/19 13:34:26 wiz Exp $
 
 DISTNAME=	pip-21.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ USE_LANGUAGES=	# none
 REPLACE_PYTHON+=	src/pip/_vendor/appdirs.py
 REPLACE_PYTHON+=	src/pip/_vendor/chardet/cli/chardetect.py
 REPLACE_PYTHON+=	src/pip/_vendor/requests/certs.py
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 FILES_SUBST+=  PYMAJORVERSION=${_PYTHON_VERSION:C/^([0-9]).*/\1/}
