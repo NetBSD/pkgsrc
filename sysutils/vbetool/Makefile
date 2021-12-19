@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2020/01/26 17:32:12 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2021/12/19 09:47:59 maya Exp $
 #
 
 DISTNAME=	vbetool_0.7-1
 PKGNAME=	vbetool-0.7.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.codon.org.uk/~mjg59/vbetool/download/
 
