@@ -1,4 +1,4 @@
-# $NetBSD: atomic64.mk,v 1.5 2021/08/02 18:37:08 jklos Exp $
+# $NetBSD: atomic64.mk,v 1.6 2021/12/19 15:12:28 ryoon Exp $
 #
 # This Makefile fragment is included by packages that require 64-bit atomic
 # operations, and will attempt to set the appropriate architecture-specific
@@ -13,7 +13,6 @@ ATOMIC64_MK:=
 .if ${MACHINE_ARCH} == "i386"
 .  if empty(CFLAGS:M*march=*)
 CFLAGS+=	-march=i586
-CXXFLAGS+=	-march=i586
 .  endif
 .endif
 
