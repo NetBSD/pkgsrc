@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2021/12/17 20:10:24 maya Exp $
+# $NetBSD: Makefile,v 1.12 2021/12/19 09:48:00 maya Exp $
 
 DISTNAME=	qtwebengine-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtwebengine-${QTVERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 COMMENT=	Chromium-based web engine for Qt5
 
 MAKE_ENV+=		QTDIR=${QTDIR}

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2020/02/20 14:50:07 nia Exp $
+# $NetBSD: Makefile,v 1.14 2021/12/19 09:47:58 maya Exp $
 
 DISTNAME=	flashrom-v1.2
 PKGNAME=	${DISTNAME:S/-v/-/}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://download.flashrom.org/releases/
 EXTRACT_SUFX=	.tar.bz2
