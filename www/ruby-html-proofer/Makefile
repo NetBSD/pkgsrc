@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2021/08/30 16:04:17 taca Exp $
+# $NetBSD: Makefile,v 1.4 2021/12/19 06:48:46 taca Exp $
 
-DISTNAME=	html-proofer-3.19.2
+DISTNAME=	html-proofer-3.19.3
 CATEGORIES=	www
 MASTER_SITES=	http://rubygems.org/downloads/
 
@@ -15,7 +15,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-nokogumbo>=2.0.2:../../textproc/ruby-nokogumbo
 DEPENDS+=	${RUBY_PKGPREFIX}-parallel>=1.3:../../misc/ruby-parallel
 DEPENDS+=	${RUBY_PKGPREFIX}-rainbow>=3.0:../../misc/ruby-rainbow
 DEPENDS+=	${RUBY_PKGPREFIX}-typhoeus>=1.3.1:../../www/ruby-typhoeus
-DEPENDS+=	${RUBY_PKGPREFIX}-yell>=1.3.1:../../devel/ruby-yell
+DEPENDS+=	${RUBY_PKGPREFIX}-yell>=2.0<3:../../devel/ruby-yell
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
