@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6343 2021/12/19 16:40:38 pin Exp $
+$NetBSD: CHANGES-2021,v 1.6344 2021/12/19 16:52:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9500,3 +9500,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated audio/termusic to 0.6.3 [pin 2021-12-19]
 	Updated graphics/viu to 1.4.0 [pin 2021-12-19]
 	Updated sysutils/refi to 3.1.1 [pin 2021-12-19]
+	Updated fonts/py-fonttools to 4.28.5 [adam 2021-12-19]
+	Updated textproc/py-sphinx to 4.3.2 [adam 2021-12-19]
