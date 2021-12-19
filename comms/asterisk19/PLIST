@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/11/14 02:30:21 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/19 00:39:11 jnemeth Exp $
 lib/asterisk/libasteriskpj.so
 lib/asterisk/libasteriskpj.so.2
 lib/asterisk/modules/app_adsiprog.so
@@ -2321,7 +2321,7 @@ share/doc/asterisk/README.md
 share/doc/asterisk/README.txt
 share/doc/asterisk/UPGRADE.txt
 share/doc/asterisk/Zaptel-to-DAHDI.txt
-share/doc/asterisk/asterisk-19.0.0-summary.txt
+share/doc/asterisk/asterisk-19.1.0-summary.txt
 share/examples/asterisk/acl.conf
 share/examples/asterisk/adsi.conf
 share/examples/asterisk/aeap.conf
