@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6307 2021/12/19 06:08:42 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6308 2021/12/19 06:11:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9463,3 +9463,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added www/ruby-actionpack70 version 7.0.0 [taca 2021-12-19]
 	Added databases/ruby-activerecord70 version 7.0.0 [taca 2021-12-19]
 	Added devel/ruby-activestorage70 version 7.0.0 [taca 2021-12-19]
+	Added mail/ruby-actionmailer70 version 7.0.0 [taca 2021-12-19]
