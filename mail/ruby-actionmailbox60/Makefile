@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/05/21 16:04:22 taca Exp $
+# $NetBSD: Makefile,v 1.4 2021/12/19 05:15:52 taca Exp $
 
 DISTNAME=	actionmailbox-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-actionmailbox${RUBY_RAILS}-${RAILS_VERSION}
@@ -9,9 +9,8 @@ HOMEPAGE=	http://www.rubyonrails.org/
 COMMENT=	Inbound email handling framework (for Rails 6.0)
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_ACTIONPACK_DEPENDS}
-DEPENDS+=	${RUBY_ACTIONVIEW_DEPENDS}
-DEPENDS+=	${RUBY_ACTIVEJOB_DEPENDS}
+DEPENDS+=	${RUBY_ACTIVESTORAGE_DEPENDS}
+DEPENDS+=	${RUBY_PKGPREFIX}-mail>=2.7.1:../../mail/ruby-mail
 
 USE_LANGUAGES=	# none
 
