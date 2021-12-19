@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2021/12/08 16:06:57 adam Exp $
+# $NetBSD: Makefile,v 1.6 2021/12/19 18:33:46 pin Exp $
 
-DISTNAME=	lariza-v21.06
+DISTNAME=	lariza-v21.12
 PKGNAME=	${DISTNAME:S,-v,-,}
-PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	https://www.uninformativ.de/git/lariza/archives/
 
