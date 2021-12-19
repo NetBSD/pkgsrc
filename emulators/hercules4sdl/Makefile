@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2021/12/01 03:51:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2021/12/19 19:08:19 rhialto Exp $
 
-PKGNAME=	hercules4sdl-4.3
+PKGNAME=	hercules4sdl-4.4
 DISTNAME=	hyperion-Release_${PKGVERSION_NOREV}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SDL-Hercules-390/}
@@ -32,15 +32,11 @@ SUBST_FILES.prefix=	hercules.cnf
 SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},g'
 
 CONFIGURE_ARGS+=	--enable-extpkgs=${PREFIX}/lib/hercules4sdl
-# There is a configure check that uses C++ to check if the compiler is
-# GNU, and on Darwin it thinks GNU C++ is needed to create shared
-# libraries, even though no actual C++ is used. Or something.
-CONFIGURE_ENV.Darwin+=	ac_cv_cxx_compiler_gnu=yes
 
 INSTALLATION_DIRS+=	share/examples/hercules
+SPECIAL_PERMS+=		${PREFIX}/bin/hercifc ${SETUID_ROOT_PERMS}
 
 pre-configure:
-	${RM} -f ${WRKSRC}/ltdl.h ${WRKSRC}/ltdl.c
 	cd ${WRKSRC} && ./autogen.sh
 
 post-install:
