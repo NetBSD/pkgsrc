@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.613 2021/11/28 14:08:37 wiz Exp $
+# $NetBSD: Makefile,v 1.614 2021/12/19 13:42:05 ryoon Exp $
 #
 
 COMMENT=	Programming languages
@@ -302,6 +302,7 @@ SUBDIR+=	utilisp
 SUBDIR+=	vala
 SUBDIR+=	vscm
 SUBDIR+=	vslisp
+SUBDIR+=	wasi-libc
 SUBDIR+=	wsbasic
 SUBDIR+=	yabasic
 SUBDIR+=	yap
