@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.213 2021/12/17 20:08:42 maya Exp $
+# $NetBSD: mozilla-common.mk,v 1.214 2021/12/19 15:09:49 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -104,7 +104,15 @@ CONFIGURE_ARGS+=	--disable-updater
 
 #CONFIGURE_ARGS+=	--with-libclang-path=${PREFIX}/lib
 
+# RLBox WASM sandbox
+.if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "i386"
+.include "../../lang/wasi-libc/buildlink3.mk"
+.include "../../lang/wasi-libcxx/buildlink3.mk"
+.include "../../lang/wasi-compiler-rt/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-wasi-sysroot=${PREFIX}/wasi
+.else
 CONFIGURE_ARGS+=	--without-wasm-sandboxed-libraries
+.endif
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
