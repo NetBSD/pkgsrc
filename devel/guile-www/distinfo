@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 10:14:50 nia Exp $
+$NetBSD: distinfo,v 1.21 2021/12/19 14:12:29 gdt Exp $
 
-BLAKE2s (guile-www-2.39.tar.xz) = 40d9cdb98d49f90d409c9dc29dab7b739db3a5e5d00db24066f824e5d9f329c7
-SHA512 (guile-www-2.39.tar.xz) = dc5b4401728b5079bf4a5fc25afe54cb981c241ae32a8124754c6ed4cf3e65bbe44d191770ecdc2e8cdc2f1dacea3a8e5c2b255bd30815133833813756dbc0b4
-Size (guile-www-2.39.tar.xz) = 614244 bytes
+BLAKE2s (guile-www-2.42.tar.lz) = b3f69a553ef97a3d8d03719f27f5064c96d7fc894e2965366edb2d4366dfac86
+SHA512 (guile-www-2.42.tar.lz) = 08a09188597ccc40bc69ea49ecde07f75b0cf8d6ad294fbb2377e6b040253b616b77a8f320ebbad62e46e505dc6e27634563428e0e4bac6d0f5105a221a7b506
+Size (guile-www-2.42.tar.lz) = 628525 bytes
