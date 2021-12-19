@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/02/28 16:13:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/12/19 15:43:07 taca Exp $
 ${RM_THEMEDIR}/gitmike/gulpfile.js
 ${RM_THEMEDIR}/gitmike/images/dark-overlay.png
 ${RM_THEMEDIR}/gitmike/images/logo.png
@@ -6,7 +6,6 @@ ${RM_THEMEDIR}/gitmike/images/logo@2x.png
 ${RM_THEMEDIR}/gitmike/package.json
 ${RM_THEMEDIR}/gitmike/sass/_forms.scss
 ${RM_THEMEDIR}/gitmike/sass/_invoice.scss
-${RM_THEMEDIR}/gitmike/sass/_ja.scss
 ${RM_THEMEDIR}/gitmike/sass/_login.scss
 ${RM_THEMEDIR}/gitmike/sass/_mainmenu.scss
 ${RM_THEMEDIR}/gitmike/sass/_mixins.scss
