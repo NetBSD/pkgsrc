@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6296 2021/12/19 05:01:50 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6297 2021/12/19 05:03:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9428,3 +9428,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/xfce4-dashboard to 0.9.2 [gutteridge 2021-12-18]
 	Updated comms/asterisk19 to 19.1.0 [jnemeth 2021-12-19]
 	Updated lang/php74 to 7.4.27 [taca 2021-12-19]
+	Updated lang/php80 to 8.0.14 [taca 2021-12-19]
