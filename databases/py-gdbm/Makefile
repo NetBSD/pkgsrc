@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2020/01/08 13:44:41 joerg Exp $
+# $NetBSD: Makefile,v 1.42 2021/12/19 13:21:26 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-gdbm-${PY_DISTVERSION}
 PKGREVISION=	1
@@ -9,10 +9,10 @@ HOMEPAGE=	https://docs.python.org/3/library/dbm.html#module-dbm.gnu
 COMMENT=	Python interface to gdbm - GNU database manager
 
 .include "../../lang/python/pyversion.mk"
-.if !empty(PYPKGPREFIX:Mpy3?)
-GDBM_MODNAME=	_gdbm
-.else
+.if !empty(PYPKGPREFIX:Mpy2?)
 GDBM_MODNAME=	gdbm
+.else
+GDBM_MODNAME=	_gdbm
 .endif
 
 PYDISTUTILSPKG=		yes
