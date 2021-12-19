@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6347 2021/12/19 19:10:00 rhialto Exp $
+$NetBSD: CHANGES-2021,v 1.6348 2021/12/19 21:38:42 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9506,3 +9506,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-memory-profiler to 0.60.0 [adam 2021-12-19]
 	Updated www/lariza to 21.12 [pin 2021-12-19]
 	Updated emulators/hercules4sdl to 4.4 [rhialto 2021-12-19]
+	Added x11/wired-notify version 0.9.4 [pin 2021-12-19]
