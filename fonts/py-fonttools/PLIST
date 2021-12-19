@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2021/12/16 09:50:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.39 2021/12/19 16:47:16 adam Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
@@ -119,9 +119,33 @@ ${PYSITELIB}/fontTools/fontBuilder.pyo
 ${PYSITELIB}/fontTools/help.py
 ${PYSITELIB}/fontTools/help.pyc
 ${PYSITELIB}/fontTools/help.pyo
-${PYSITELIB}/fontTools/merge.py
-${PYSITELIB}/fontTools/merge.pyc
-${PYSITELIB}/fontTools/merge.pyo
+${PYSITELIB}/fontTools/merge/__init__.py
+${PYSITELIB}/fontTools/merge/__init__.pyc
+${PYSITELIB}/fontTools/merge/__init__.pyo
+${PYSITELIB}/fontTools/merge/__main__.py
+${PYSITELIB}/fontTools/merge/__main__.pyc
+${PYSITELIB}/fontTools/merge/__main__.pyo
+${PYSITELIB}/fontTools/merge/base.py
+${PYSITELIB}/fontTools/merge/base.pyc
+${PYSITELIB}/fontTools/merge/base.pyo
+${PYSITELIB}/fontTools/merge/cmap.py
+${PYSITELIB}/fontTools/merge/cmap.pyc
+${PYSITELIB}/fontTools/merge/cmap.pyo
+${PYSITELIB}/fontTools/merge/layout.py
+${PYSITELIB}/fontTools/merge/layout.pyc
+${PYSITELIB}/fontTools/merge/layout.pyo
+${PYSITELIB}/fontTools/merge/options.py
+${PYSITELIB}/fontTools/merge/options.pyc
+${PYSITELIB}/fontTools/merge/options.pyo
+${PYSITELIB}/fontTools/merge/tables.py
+${PYSITELIB}/fontTools/merge/tables.pyc
+${PYSITELIB}/fontTools/merge/tables.pyo
+${PYSITELIB}/fontTools/merge/unicode.py
+${PYSITELIB}/fontTools/merge/unicode.pyc
+${PYSITELIB}/fontTools/merge/unicode.pyo
+${PYSITELIB}/fontTools/merge/util.py
+${PYSITELIB}/fontTools/merge/util.pyc
+${PYSITELIB}/fontTools/merge/util.pyo
 ${PYSITELIB}/fontTools/misc/__init__.py
 ${PYSITELIB}/fontTools/misc/__init__.pyc
 ${PYSITELIB}/fontTools/misc/__init__.pyo
