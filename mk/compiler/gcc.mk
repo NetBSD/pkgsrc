@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.232 2021/11/07 11:25:33 nia Exp $
+# $NetBSD: gcc.mk,v 1.233 2021/12/19 11:55:29 nia Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -650,6 +650,8 @@ _GCC_LDFLAGS+=	-L${_dir_} ${COMPILER_RPATH_FLAG}${_dir_}
 
 .if ${_PKGSRC_USE_RELRO} == "yes"
 _GCC_LDFLAGS+=		${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
+CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
 .endif
 
 LDFLAGS+=	${_GCC_LDFLAGS}
