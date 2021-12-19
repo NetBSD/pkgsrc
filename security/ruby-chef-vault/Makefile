@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2021/09/19 16:47:19 taca Exp $
+# $NetBSD: Makefile,v 1.5 2021/12/19 06:41:31 taca Exp $
 
-DISTNAME=	chef-vault-4.1.4
+DISTNAME=	chef-vault-4.1.5
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
