@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6295 2021/12/19 00:39:26 jnemeth Exp $
+$NetBSD: CHANGES-2021,v 1.6296 2021/12/19 05:01:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9427,3 +9427,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated x11/xfce4-clipman-plugin to 1.6.2 [gutteridge 2021-12-18]
 	Updated x11/xfce4-dashboard to 0.9.2 [gutteridge 2021-12-18]
 	Updated comms/asterisk19 to 19.1.0 [jnemeth 2021-12-19]
+	Updated lang/php74 to 7.4.27 [taca 2021-12-19]
