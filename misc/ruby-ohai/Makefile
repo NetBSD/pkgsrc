@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2021/12/12 13:11:51 taca Exp $
+# $NetBSD: Makefile,v 1.37 2021/12/19 06:35:51 taca Exp $
 
-DISTNAME=	ohai-17.7.12
+DISTNAME=	ohai-17.9.0
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
