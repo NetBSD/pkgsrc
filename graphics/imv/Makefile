@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.12 2021/12/08 16:04:57 adam Exp $
+# $NetBSD: Makefile,v 1.13 2021/12/19 10:51:04 nia Exp $
 
-DISTNAME=	imv-4.3.0
-PKGREVISION=	1
+DISTNAME=	v4.3.1
+DIST_SUBDIR=	imv
+PKGNAME=	imv-${DISTNAME:S/^v//g}
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GITHUB:=eXeC64/}
-GITHUB_PROJECT=	imv
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	https://git.sr.ht/~exec64/imv/archive/
 
 MAINTAINER=	nia@NetBSD.org
-HOMEPAGE=	https://github.com/eXeC64/imv
+HOMEPAGE=	https://sr.ht/~exec64/imv/
 COMMENT=	Image viewer for X11/Wayland
 LICENSE=	mit
 
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+
+WRKSRC=		${WRKDIR}/imv-${DISTNAME}
 
 USE_TOOLS+=	pkg-config bash:run
 USE_LANGUAGES=	c99
