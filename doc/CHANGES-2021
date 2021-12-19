@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6316 2021/12/19 06:36:11 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6317 2021/12/19 06:38:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9472,3 +9472,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated databases/ruby-arel-helpers to 2.14.0 [taca 2021-12-19]
 	Updated devel/ruby-minitest to 5.15.0 [taca 2021-12-19]
 	Updated misc/ruby-ohai to 17.9.0 [taca 2021-12-19]
+	Updated net/ruby-recog to 2.3.22 [taca 2021-12-19]
