@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/12/19 10:56:37 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/12/20 20:53:12 nia Exp $
 
 DISTNAME=	luv-1.42.0-1
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/-1$/.1/1}
@@ -11,6 +11,12 @@ MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://github.com/luvit/luv
 COMMENT=	Bare libuv bindings for Lua
 LICENSE=	apache-2.0
+
+.include "../../lang/lua/luaversion.mk"
+
+.if ${_LUA_VERSION} == "51" || ${_LUA_VERSION} == "52"
+DEPENDS+=	${LUA_PKGPREFIX}-compat53-[0-9]*:../../devel/lua-compat53
+.endif
 
 USE_CMAKE=	yes
 
