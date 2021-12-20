@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/12/08 16:04:21 adam Exp $
+# $NetBSD: Makefile,v 1.6 2021/12/20 07:09:07 nia Exp $
 #
 
 DISTNAME=	sshfs-3.7.2
@@ -17,6 +17,17 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c
 USE_TOOLS=	pkg-config
+
+PYTHON_FOR_BUILD_ONLY=	tool
+
+.include "../../lang/python/pyversion.mk"
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
+
+SUBST_CLASSES+=		rst2man
+SUBST_STAGE.rst2man=	pre-configure
+SUBST_FILES.rst2man+=	meson.build
+SUBST_SED.rst2man+=	-e "s,rst2man.py,rst2man-${PYVERSSUFFIX},g"
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/meson/build.mk"
