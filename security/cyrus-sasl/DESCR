@@ -12,3 +12,6 @@ to majordomo@lists.andrew.cmu.edu with the body "subscribe cyrus-sasl".
 The mailing list is available via anonymous IMAP at
 imap://cyrus.andrew.cmu.edu/archive.cyrus-sasl or via the web at
 http://asg.web.cmu.edu/archive/mailbox.php3?mailbox=archive.cyrus-sasl.
+
+This package does not include any mechanisms.  Users will almost
+certainly want to install one or more of the packages security/cy2-*.
