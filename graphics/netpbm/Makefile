@@ -1,25 +1,26 @@
-# $NetBSD: Makefile,v 1.232 2021/12/08 16:05:02 adam Exp $
+# $NetBSD: Makefile,v 1.233 2021/12/20 20:41:38 nia Exp $
 
-DISTNAME=	netpbm-10.79.04
-PKGREVISION=	9
+DISTNAME=	netpbm-10.86.25
 CATEGORIES=	graphics
 MASTER_SITES=	#
 # manually created from svn checkout of
-# svn checkout http://svn.code.sf.net/p/netpbm/code/advanced netpbm
+# svn checkout http://svn.code.sf.net/p/netpbm/code/stable netpbm
 # tar --exclude netpbm/.svn -cvzf /archive/distfiles/netpbm-$VERSION.tar.gz netpbm
-# where VERSION comes from reading netpbm/doc/HISTORY
+# where VERSION comes from reading netpbm/version.mk
 # for the documentation:
-# svn checkout http://svn.code.sf.net/p/netpbm/code/userguide netpbm-userguide
-# cd netpbm-userguide && for i in *.html; do python2.7 ../netpbm/buildtools/makeman $i; done && cd ..
-# tar -cvzf /archive/distfiles/netpbm-docs-r${SVN_REVISION}.tar.gz netpbm-userguide/*.[0-9]
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} netpbm-docs-r3052${EXTRACT_SUFX}
+# svn checkout http://svn.code.sf.net/p/netpbm/code/userguide userguide
+# cd userguide && for i in *.html; do python2.7 ../netpbm/buildtools/makeman $i; done && cd ..
+# # pamhomography not part of 10.86.25
+# rm userguide/pamhomography.1
+# tar -cvzf /archive/distfiles/netpbm-docs-r${SVN_REVISION}.tar.gz userguide/*.[0-9]
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} netpbm-docs-r4156${EXTRACT_SUFX}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://netpbm.sourceforge.net/
 COMMENT=	Toolkit for conversion of images between different formats
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	gmake flex pax perl
+USE_TOOLS+=	gmake gdate flex pax perl
 USE_FEATURES=	snprintf
 
 INSTALL_TARGET=	install-dev install-run
@@ -119,9 +120,9 @@ post-install:
 	${CHOWN} -R ${BINOWN}:${BINGRP} . &&			\
 	pax -rwppm . ${DESTDIR}${PREFIX}
 	${RM} -fr ${STAGEDIR}
-	${INSTALL_DATA} ${WRKDIR}/netpbm-userguide/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKDIR}/netpbm-userguide/*.3 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
-	${INSTALL_DATA} ${WRKDIR}/netpbm-userguide/*.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_DATA} ${WRKDIR}/userguide/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKDIR}/userguide/*.3 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
+	${INSTALL_DATA} ${WRKDIR}/userguide/*.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
