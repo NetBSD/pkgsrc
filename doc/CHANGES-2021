@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6354 2021/12/20 13:50:02 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6355 2021/12/20 20:42:31 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9514,3 +9514,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated math/py-numpy to 1.21.5 [adam 2021-12-20]
 	Updated www/webkit-gtk to 2.34.3 [leot 2021-12-20]
 	Updated devel/ruby-test-unit to 3.5.3 [taca 2021-12-20]
+	Updated graphics/netpbm to 10.86.25 [nia 2021-12-20]
