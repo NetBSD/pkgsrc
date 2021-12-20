@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6350 2021/12/20 00:43:41 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6351 2021/12/20 02:39:46 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9509,3 +9509,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added x11/wired-notify version 0.9.4 [pin 2021-12-19]
 	Updated finance/gnucash to 4.9 [wiz 2021-12-20]
 	Updated finance/gnucash-docs to 4.9 [wiz 2021-12-20]
+	Updated sysutils/xfce4-mount-plugin to 1.1.5 [gutteridge 2021-12-20]
