@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6355 2021/12/20 20:42:31 nia Exp $
+$NetBSD: CHANGES-2021,v 1.6356 2021/12/20 20:47:57 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9515,3 +9515,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/webkit-gtk to 2.34.3 [leot 2021-12-20]
 	Updated devel/ruby-test-unit to 3.5.3 [taca 2021-12-20]
 	Updated graphics/netpbm to 10.86.25 [nia 2021-12-20]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2021Q4 branch [gdt 2021-12-20]
