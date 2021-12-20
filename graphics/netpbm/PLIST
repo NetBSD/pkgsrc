@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2019/07/17 01:05:12 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.17 2021/12/20 20:41:38 nia Exp $
 bin/411toppm
 bin/anytopnm
 bin/asciitopgm
@@ -43,9 +43,11 @@ bin/mtvtoppm
 bin/neotoppm
 bin/palmtopnm
 bin/pamaddnoise
+bin/pamaltsat
 bin/pamarith
 bin/pambackground
 bin/pambayer
+bin/pambrighten
 bin/pamchannel
 bin/pamcomp
 bin/pamcrater
@@ -59,15 +61,20 @@ bin/pamendian
 bin/pamenlarge
 bin/pamexec
 bin/pamfile
+bin/pamfind
 bin/pamfix
 bin/pamfixtrunc
 bin/pamflip
 bin/pamfunc
 bin/pamgauss
+bin/pamgetcolor
 bin/pamgradient
+bin/pamhue
+bin/pamlevels
 bin/pamlookup
 bin/pammasksharpen
 bin/pammixinterlace
+bin/pammixmulti
 bin/pammosaicknit
 bin/pamoil
 bin/pampaintspill
@@ -115,6 +122,7 @@ bin/pamtotiff
 bin/pamtouil
 bin/pamtowinicon
 bin/pamtoxvmini
+bin/pamtris
 bin/pamundice
 bin/pamunlookup
 bin/pamvalidate
@@ -169,6 +177,7 @@ bin/pbmtoybm
 bin/pbmtozinc
 bin/pbmupc
 bin/pc1toppm
+bin/pcdindex
 bin/pcdovtoppm
 bin/pcxtoppm
 bin/pdbimgtopam
@@ -372,6 +381,7 @@ include/netpbm/pamdraw.h
 include/netpbm/pammap.h
 include/netpbm/pbm.h
 include/netpbm/pbmfont.h
+include/netpbm/pbmfontdata.h
 include/netpbm/pgm.h
 include/netpbm/pm.h
 include/netpbm/pm_config.h
@@ -388,7 +398,7 @@ include/netpbm/shhopt.h
 lib/libnetpbm.a
 lib/libnetpbm.so
 lib/libnetpbm.so.11
-lib/libnetpbm.so.11.79
+lib/libnetpbm.so.11.86
 man/man1/411toppm.1
 man/man1/anytopnm.1
 man/man1/asciitopgm.1
@@ -439,9 +449,11 @@ man/man1/mtvtoppm.1
 man/man1/neotoppm.1
 man/man1/palmtopnm.1
 man/man1/pamaddnoise.1
+man/man1/pamaltsat.1
 man/man1/pamarith.1
 man/man1/pambackground.1
 man/man1/pambayer.1
+man/man1/pambrighten.1
 man/man1/pamchannel.1
 man/man1/pamcomp.1
 man/man1/pamcrater.1
@@ -455,15 +467,20 @@ man/man1/pamendian.1
 man/man1/pamenlarge.1
 man/man1/pamexec.1
 man/man1/pamfile.1
+man/man1/pamfind.1
 man/man1/pamfix.1
 man/man1/pamfixtrunc.1
 man/man1/pamflip.1
 man/man1/pamfunc.1
 man/man1/pamgauss.1
+man/man1/pamgetcolor.1
 man/man1/pamgradient.1
+man/man1/pamhue.1
+man/man1/pamlevels.1
 man/man1/pamlookup.1
 man/man1/pammasksharpen.1
 man/man1/pammixinterlace.1
+man/man1/pammixmulti.1
 man/man1/pammosaicknit.1
 man/man1/pamoil.1
 man/man1/pampaintspill.1
@@ -511,6 +528,7 @@ man/man1/pamtotiff.1
 man/man1/pamtouil.1
 man/man1/pamtowinicon.1
 man/man1/pamtoxvmini.1
+man/man1/pamtris.1
 man/man1/pamundice.1
 man/man1/pamunlookup.1
 man/man1/pamvalidate.1
@@ -770,6 +788,7 @@ man/man3/libmaketmpfile.3
 man/man3/libmaketmpfilefd.3
 man/man3/libnetpbm.3
 man/man3/libnetpbm_draw.3
+man/man3/libnetpbm_font.3
 man/man3/libnetpbm_image.3
 man/man3/libnetpbm_ug.3
 man/man3/libpbm.3
