@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6348 2021/12/19 21:38:42 pin Exp $
+$NetBSD: CHANGES-2021,v 1.6349 2021/12/20 00:35:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9507,3 +9507,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/lariza to 21.12 [pin 2021-12-19]
 	Updated emulators/hercules4sdl to 4.4 [rhialto 2021-12-19]
 	Added x11/wired-notify version 0.9.4 [pin 2021-12-19]
+	Updated finance/gnucash to 4.9 [wiz 2021-12-20]
