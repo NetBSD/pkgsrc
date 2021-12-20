@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.80 2021/10/01 08:54:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.81 2021/12/20 00:35:44 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -58,6 +58,7 @@ include/gnucash/gnc-accounting-period.h
 include/gnucash/gnc-addr-quickfill.h
 include/gnucash/gnc-amount-edit.h
 include/gnucash/gnc-aqbanking-templates.h
+include/gnucash/gnc-autoclear.h
 include/gnucash/gnc-basic-gobject.h
 include/gnucash/gnc-budget.h
 include/gnucash/gnc-cell-renderer-date.h
@@ -1055,10 +1056,10 @@ share/gnucash/icons/hicolor/24x24/actions/gnc-jumpto.png
 share/gnucash/icons/hicolor/24x24/actions/gnc-split-trans.png
 share/gnucash/icons/hicolor/24x24/actions/gnc-sx-new.png
 share/gnucash/icons/hicolor/24x24/actions/gnc-transfer.png
-share/gnucash/migratable-prefs.xml
 share/gnucash/pixmaps/gnucash-icon-48x48.bmp
 share/gnucash/pixmaps/gnucash-icon.ico
 share/gnucash/pixmaps/gnucash_splash.png
+share/gnucash/pref_transformations.xml
 share/gnucash/tip_of_the_day.list
 share/gnucash/ui/gnc-main-window-ui.xml
 share/gnucash/ui/gnc-plugin-account-tree-ui.xml
