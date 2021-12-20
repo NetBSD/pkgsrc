@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:18:47 nia Exp $
+$NetBSD: distinfo,v 1.8 2021/12/20 22:06:16 wiz Exp $
 
 BLAKE2s (tryton-4.2/proteus-4.2.0.tar.gz) = bbd7bd1222bfc6dc2fd3946c90a0b37ba290ced0320d20c8aa1bcbb70b55bec4
 SHA512 (tryton-4.2/proteus-4.2.0.tar.gz) = 9bafbcb7cab43a6624dc70933efe2267e72cdd788c6dd87a1d4673ffde3c96b39ab99f430133ed10c69d563ce023bca3dbe74694c56d867d13774b44ffea47cf
 Size (tryton-4.2/proteus-4.2.0.tar.gz) = 37393 bytes
+SHA1 (patch-setup.py) = 971848b4fe5301a69779c2f666ce150399fb9ea2
