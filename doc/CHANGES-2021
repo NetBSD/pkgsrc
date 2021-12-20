@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6352 2021/12/20 11:28:20 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6353 2021/12/20 12:26:22 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9512,3 +9512,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/xfce4-mount-plugin to 1.1.5 [gutteridge 2021-12-20]
 	Updated net/py-amqp to 5.0.9 [adam 2021-12-20]
 	Updated math/py-numpy to 1.21.5 [adam 2021-12-20]
+	Updated www/webkit-gtk to 2.34.3 [leot 2021-12-20]
