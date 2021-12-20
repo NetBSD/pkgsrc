@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.272 2021/08/20 22:06:23 kim Exp $
+# $NetBSD: Makefile,v 1.273 2021/12/20 09:01:05 jperkin Exp $
 
 PKGREVISION= 3
 .include "license.mk"
@@ -51,11 +51,6 @@ CONFIGURE_ARGS+=	-sde
 CONFIGURE_ARGS+=	-Dldflags=${LDFLAGS:Q}
 MAKE_ENV+=		LC_ALL="C"
 LDFLAGS.QNX+=		-lm
-
-.if ${OPSYS} == "SunOS"
-USE_TOOLS+=	bash
-CONFIG_SHELL=	${TOOLS_PATH.bash}
-.endif
 
 TEST_TARGET=		test
 
