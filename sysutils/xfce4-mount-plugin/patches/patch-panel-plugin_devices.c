@@ -1,9 +1,9 @@
-$NetBSD: patch-panel-plugin_devices.c,v 1.3 2017/06/24 14:20:40 youri Exp $
+$NetBSD: patch-panel-plugin_devices.c,v 1.4 2021/12/20 02:39:34 gutteridge Exp $
 
 Fix NetBSD build.
 Add SunOS support.
 
---- panel-plugin/devices.c.orig	2017-01-28 15:03:36.000000000 +0000
+--- panel-plugin/devices.c.orig	2020-12-22 21:21:32.000000000 +0000
 +++ panel-plugin/devices.c
 @@ -25,7 +25,12 @@ Foundation, Inc., 675 Mass Ave, Cambridg
  #include <config.h>
@@ -17,10 +17,10 @@ Add SunOS support.
 +#endif
  #include <glib.h>
  #include <stdio.h>
- #include <string.h>
+ #include <stdlib.h>
 @@ -33,7 +38,12 @@ Foundation, Inc., 675 Mass Ave, Cambridg
+ /* WEXITSTATUS */
  #include <sys/types.h>
- #include <sys/wait.h>
  #ifdef HAVE_GETMNTENT
 +#ifdef __sun
 +#include <sys/mntent.h>
