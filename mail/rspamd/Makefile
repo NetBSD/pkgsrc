@@ -1,27 +1,25 @@
-# $NetBSD: Makefile,v 1.77 2021/12/08 16:05:30 adam Exp $
+# $NetBSD: Makefile,v 1.78 2021/12/21 15:00:41 triaxx Exp $
 
-DISTNAME=	rspamd-2.7
-PKGREVISION=	3
+DISTNAME=	rspamd-3.1
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_GITHUB:=vstakhov/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=rspamd/}
 
 MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	https://www.rspamd.com/
 COMMENT=	Fast, free and open-source spam filtering system
 LICENSE=	2-clause-bsd
 
-.include "options.mk"
-
 DEPENDS+=	${LUA_PKGPREFIX}-lpeg-[0-9]*:../../devel/lua-lpeg
 DEPENDS+=	ragel-[0-9]*:../../devel/ragel
+
+GCC_REQD+=	8
 
 USE_CMAKE=	yes
 USE_TOOLS+=	perl pkg-config
 USE_LANGUAGES=	c99 c++
 BUILD_DEFS+=	VARBASE
 
-# Not really true, but difficult to avoid picking up 5.3
-LUA_VERSIONS_ACCEPTED=	53
+LUA_VERSIONS_ACCEPTED=	54 53 52 51
 
 CPPFLAGS.SunOS+=			-D__EXTENSIONS__
 
@@ -60,10 +58,8 @@ CMAKE_ARGS+=	-DCONFDIR:PATH=${PKG_SYSCONFDIR}
 CMAKE_ARGS+=	-DEXAMPLESDIR:PATH=${EGDIR}
 CMAKE_ARGS+=	-DRSPAMD_USER=${RSPAMD_USER}
 CMAKE_ARGS+=	-DRSPAMD_GROUP=${RSPAMD_GROUP}
-CMAKE_ARGS+=	-DENABLE_SQLITE=ON
 # Torch requires LuaJIT2, but LuaJIT2 only supports Lua 5.1
 CMAKE_ARGS+=	-DENABLE_LUAJIT=OFF
-CMAKE_ARGS+=	-DENABLE_TORCH=OFF
 
 # Assumes inotify == Linux
 CMAKE_ARGS.SunOS+=	-DHAVE_INOTIFY_INIT=NO
