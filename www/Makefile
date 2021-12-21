@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1602 2021/12/19 06:27:35 taca Exp $
+# $NetBSD: Makefile,v 1.1603 2021/12/21 08:10:11 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -836,6 +836,7 @@ SUBDIR+=	py-wagtailnews
 SUBDIR+=	py-waitress
 SUBDIR+=	py-webassets
 SUBDIR+=	py-webcolors
+SUBDIR+=	py-webdav
 SUBDIR+=	py-webpy
 SUBDIR+=	py-websocket-client
 SUBDIR+=	py-websockets
