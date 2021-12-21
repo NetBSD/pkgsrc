@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6357 2021/12/21 08:10:21 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6358 2021/12/21 09:18:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9517,3 +9517,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/netpbm to 10.86.25 [nia 2021-12-20]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2021Q4 branch [gdt 2021-12-20]
 	Added www/py-webdav version 1.1.7 [wiz 2021-12-21]
+	Updated lang/zig to 0.9.0 [adam 2021-12-21]
+	Updated www/apache24 to 2.4.52 [adam 2021-12-21]
