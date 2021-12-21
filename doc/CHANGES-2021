@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6360 2021/12/21 15:01:19 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.6361 2021/12/21 15:11:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9521,3 +9521,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/apache24 to 2.4.52 [adam 2021-12-21]
 	Updated textproc/json2tsv to 0.8 [leot 2021-12-21]
 	Updated mail/rspamd to 3.1 [triaxx 2021-12-21]
+	Added devel/taplo-lsp version 0.2.6 [wiz 2021-12-21]
