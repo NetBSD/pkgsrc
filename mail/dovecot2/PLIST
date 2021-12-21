@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.74 2021/11/02 12:03:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.75 2021/12/21 17:28:51 adam Exp $
 bin/doveadm
 bin/doveconf
 bin/dovecot-sysreport
@@ -627,7 +627,7 @@ lib/dovecot/lib30_imap_zlib_plugin.la
 lib/dovecot/lib90_old_stats_plugin.la
 lib/dovecot/lib95_imap_old_stats_plugin.la
 lib/dovecot/lib99_welcome_plugin.la
-lib/dovecot/libdcrypt_openssl.la
+${PLIST.ssl}lib/dovecot/libdcrypt_openssl.la
 lib/dovecot/libdovecot-compression.la
 lib/dovecot/libdovecot-dsync.la
 lib/dovecot/libdovecot-fts.la
@@ -639,7 +639,7 @@ lib/dovecot/libdovecot.la
 lib/dovecot/libfs_compress.la
 lib/dovecot/libfs_crypt.la
 lib/dovecot/libfs_mail_crypt.la
-lib/dovecot/libssl_iostream_openssl.la
+${PLIST.ssl}lib/dovecot/libssl_iostream_openssl.la
 lib/dovecot/old-stats/libold_stats_mail.la
 lib/dovecot/old-stats/libstats_auth.la
 libexec/dovecot/aggregator
@@ -679,7 +679,7 @@ libexec/dovecot/script-login
 libexec/dovecot/stats
 libexec/dovecot/submission
 libexec/dovecot/submission-login
-libexec/dovecot/tcpwrap
+${PLIST.tcpwrappers}libexec/dovecot/tcpwrap
 libexec/dovecot/xml2text
 man/man1/deliver.1
 man/man1/doveadm-acl.1
