@@ -1,11 +1,11 @@
-$NetBSD: patch-cmake_Toolset.cmake,v 1.1 2020/05/18 11:10:56 nia Exp $
+$NetBSD: patch-cmake_Toolset.cmake,v 1.2 2021/12/21 15:00:41 triaxx Exp $
 
 Avoid specifying a custom linker:
 gcc: error: unrecognized command line option '-fuse-ld=lld'; did you mean '-fuse-ld=bfd'?
 
---- cmake/Toolset.cmake.orig	2020-04-01 13:57:55.000000000 +0000
+--- cmake/Toolset.cmake.orig	2021-11-01 14:33:30.000000000 +0000
 +++ cmake/Toolset.cmake
-@@ -41,8 +41,8 @@ endif ()
+@@ -52,8 +52,8 @@ endif ()
  
  option(LINKER_NAME "Linker name or full path")
  
