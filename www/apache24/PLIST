@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2021/06/04 09:47:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.35 2021/12/21 09:18:37 adam Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -1256,6 +1256,8 @@ share/httpd/manual/mod/mod_suexec.html.tr.utf8
 share/httpd/manual/mod/mod_systemd.html
 share/httpd/manual/mod/mod_systemd.html.en
 share/httpd/manual/mod/mod_systemd.html.fr.utf8
+share/httpd/manual/mod/mod_tls.html
+share/httpd/manual/mod/mod_tls.html.en
 share/httpd/manual/mod/mod_unique_id.html
 share/httpd/manual/mod/mod_unique_id.html.en
 share/httpd/manual/mod/mod_unique_id.html.fr.utf8
