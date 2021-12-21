@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6356 2021/12/20 20:47:57 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.6357 2021/12/21 08:10:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9516,3 +9516,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/ruby-test-unit to 3.5.3 [taca 2021-12-20]
 	Updated graphics/netpbm to 10.86.25 [nia 2021-12-20]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2021Q4 branch [gdt 2021-12-20]
+	Added www/py-webdav version 1.1.7 [wiz 2021-12-21]
