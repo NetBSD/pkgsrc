@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2021/12/08 16:05:24 adam Exp $
+# $NetBSD: Makefile,v 1.14 2021/12/21 09:16:26 adam Exp $
 
-DISTNAME=	zig-0.8.0
-PKGREVISION=	1
+DISTNAME=	zig-0.9.0
 CATEGORIES=	lang
 MASTER_SITES=	https://ziglang.org/download/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -10,9 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ziglang.org/
 COMMENT=	Programming language designed for robustness and clarity
 LICENSE=	mit
-
-BROKEN=		"Needs a new upstream release that works with llvm-13"
-# https://github.com/ziglang/zig/issues/10187
 
 USE_CMAKE=	yes
 USE_TOOLS+=	bash:run
