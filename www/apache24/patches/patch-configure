@@ -1,0 +1,12 @@
+$NetBSD: patch-configure,v 1.1 2021/12/21 09:18:38 adam Exp $
+
+--- configure.orig	2021-12-16 13:49:07.000000000 +0000
++++ configure
+@@ -41857,7 +41857,6 @@ printf "%s\n" "#define SERVER_CONFIG_FIL
+ printf "%s\n" "#define AP_TYPES_CONFIG_FILE \"${rel_sysconfdir}/mime.types\"" >>confdefs.h
+ 
+ 
+-perlbin=`$ac_aux_dir/PrintPath perl`
+ if test "x$perlbin" = "x"; then
+     perlbin="/replace/with/path/to/perl/interpreter"
+ fi
