@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:26:11 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/12/22 22:54:50 mef Exp $
 
-BLAKE2s (tryton-4.2/trytond_sale_shipment_grouping-4.2.0.tar.gz) = d3b006c5a225038308d8f1fedd9c7ec5d3d18cede9b131bcf900ce014e8479a0
-SHA512 (tryton-4.2/trytond_sale_shipment_grouping-4.2.0.tar.gz) = 7ad963b4f7b384f8ccc92e0d9076900fea2054d227a77a431b2c910d0c95ae14796d5af91841e66c04fc8ad020a48089ea72bd6e0613d1d9afd5cd927f15be51
-Size (tryton-4.2/trytond_sale_shipment_grouping-4.2.0.tar.gz) = 21060 bytes
+BLAKE2s (tryton-6.2/trytond_sale_shipment_grouping-6.2.0.tar.gz) = 6ea9013f364572acf79424eca31ac9b0b6b1a500243c74e74e8f06a3fa632807
+SHA512 (tryton-6.2/trytond_sale_shipment_grouping-6.2.0.tar.gz) = aab56f877c14bf027e9fa738406a09e537bb6df3da26cd1618d9ceb1f2f598423d926b96736e47ee853b453905fbbbf8b0a23c258d0ff6991ddb749e0422f1aa
+Size (tryton-6.2/trytond_sale_shipment_grouping-6.2.0.tar.gz) = 26663 bytes

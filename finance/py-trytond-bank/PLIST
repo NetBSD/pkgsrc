@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/12/04 21:13:02 rodent Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/12/22 22:54:47 mef Exp $
 ${PYSITELIB}/trytond/modules/bank/__init__.py
 ${PYSITELIB}/trytond/modules/bank/__init__.pyc
 ${PYSITELIB}/trytond/modules/bank/__init__.pyo
@@ -6,24 +6,34 @@ ${PYSITELIB}/trytond/modules/bank/bank.py
 ${PYSITELIB}/trytond/modules/bank/bank.pyc
 ${PYSITELIB}/trytond/modules/bank/bank.pyo
 ${PYSITELIB}/trytond/modules/bank/bank.xml
+${PYSITELIB}/trytond/modules/bank/exceptions.py
+${PYSITELIB}/trytond/modules/bank/exceptions.pyc
+${PYSITELIB}/trytond/modules/bank/exceptions.pyo
+${PYSITELIB}/trytond/modules/bank/icons/tryton-bank.svg
 ${PYSITELIB}/trytond/modules/bank/locale/bg.po
 ${PYSITELIB}/trytond/modules/bank/locale/ca.po
 ${PYSITELIB}/trytond/modules/bank/locale/cs.po
 ${PYSITELIB}/trytond/modules/bank/locale/de.po
 ${PYSITELIB}/trytond/modules/bank/locale/es.po
 ${PYSITELIB}/trytond/modules/bank/locale/es_419.po
+${PYSITELIB}/trytond/modules/bank/locale/et.po
+${PYSITELIB}/trytond/modules/bank/locale/fa.po
+${PYSITELIB}/trytond/modules/bank/locale/fi.po
 ${PYSITELIB}/trytond/modules/bank/locale/fr.po
-${PYSITELIB}/trytond/modules/bank/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/bank/locale/it_IT.po
-${PYSITELIB}/trytond/modules/bank/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/bank/locale/hu.po
+${PYSITELIB}/trytond/modules/bank/locale/id.po
+${PYSITELIB}/trytond/modules/bank/locale/it.po
 ${PYSITELIB}/trytond/modules/bank/locale/lo.po
 ${PYSITELIB}/trytond/modules/bank/locale/lt.po
 ${PYSITELIB}/trytond/modules/bank/locale/nl.po
 ${PYSITELIB}/trytond/modules/bank/locale/pl.po
-${PYSITELIB}/trytond/modules/bank/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/bank/locale/pt.po
+${PYSITELIB}/trytond/modules/bank/locale/ro.po
 ${PYSITELIB}/trytond/modules/bank/locale/ru.po
 ${PYSITELIB}/trytond/modules/bank/locale/sl.po
+${PYSITELIB}/trytond/modules/bank/locale/tr.po
 ${PYSITELIB}/trytond/modules/bank/locale/zh_CN.po
+${PYSITELIB}/trytond/modules/bank/message.xml
 ${PYSITELIB}/trytond/modules/bank/party.py
 ${PYSITELIB}/trytond/modules/bank/party.pyc
 ${PYSITELIB}/trytond/modules/bank/party.pyo

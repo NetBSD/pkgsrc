@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:26:06 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/12/22 22:54:45 mef Exp $
 
-BLAKE2s (tryton-4.2/trytond_account_dunning_letter-4.2.0.tar.gz) = 1cc8b45f1f887a6000bfb3f157dbe15343aee20f8d99901be9dfab91becf1800
-SHA512 (tryton-4.2/trytond_account_dunning_letter-4.2.0.tar.gz) = 2061c2a6f1e47e693ee512b085cb385a048558d3503ae933714ac3600e7817c28bbd1a2f6b596ea69150665b5b42b03f4c16af5b6818dd083bb773c1cd97363a
-Size (tryton-4.2/trytond_account_dunning_letter-4.2.0.tar.gz) = 34924 bytes
+BLAKE2s (tryton-6.2/trytond_account_dunning_letter-6.2.0.tar.gz) = f450bcf8eb2aef9eba6bfddf92e24020128e357f3aa056b1861433309c16a682
+SHA512 (tryton-6.2/trytond_account_dunning_letter-6.2.0.tar.gz) = 3fb7ff248540c82b15062e0a3fb0f8456981d49ed91656d5670b209ec7c9fa726ae84216be4f2c9a04d287a98fde7c9c1d3210c8b98c7a8785e7f74a1264d0bb
+Size (tryton-6.2/trytond_account_dunning_letter-6.2.0.tar.gz) = 33080 bytes

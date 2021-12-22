@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:26:10 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/12/22 22:54:48 mef Exp $
 
-BLAKE2s (tryton-4.2/trytond_purchase_invoice_line_standalone-4.2.0.tar.gz) = 0889bafc44797c53cc7e9d501a0126f4895d4b210f4883d152f6c5eab6a79a8b
-SHA512 (tryton-4.2/trytond_purchase_invoice_line_standalone-4.2.0.tar.gz) = 457aab083b30acb42e1be8acdb7fd3bfcf379f986e4db96e1f199f3ebcbea444fae694e63b2eff278cbf7bb4dfc91f9159d0c8886710d38cba8c150336fbe0ed
-Size (tryton-4.2/trytond_purchase_invoice_line_standalone-4.2.0.tar.gz) = 24709 bytes
+BLAKE2s (tryton-6.2/trytond_purchase_invoice_line_standalone-6.2.0.tar.gz) = c46a19d49d8c7875238895e60af1fe44453d9ea8e842d91541e0c95bcc196f8d
+SHA512 (tryton-6.2/trytond_purchase_invoice_line_standalone-6.2.0.tar.gz) = 37af2beba5812dfabd94aace22ec0f645523b2b1c4a3fdacb0852022fb463f7c3deaa396d012a2c7d7321eabc354bcbfffdbc5767ffe2ad11d8557ef869e5d34
+Size (tryton-6.2/trytond_purchase_invoice_line_standalone-6.2.0.tar.gz) = 25071 bytes
