@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6374 2021/12/22 18:19:47 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.6375 2021/12/22 22:25:26 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9535,3 +9535,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added net/prettyping version 1.0.1 [buildbox 2021-12-22]
 	Updated www/firefox to 95.0.1nb1 [ryoon 2021-12-22]
 	Updated devel/py-approvaltests to 3.3.2 [schmonz 2021-12-22]
+	Updated devel/py-tryton to 6.2.0 [mef 2021-12-22]
