@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2021/12/01 13:01:17 nia Exp $
+# $NetBSD: Makefile,v 1.20 2021/12/22 00:39:19 nia Exp $
 
 DISTNAME=		xorgproto-2021.5
 PKGREVISION=		1
@@ -51,6 +51,4 @@ PKGCONFIG_OVERRIDE+=	xineramaproto.pc.in
 PKGCONFIG_OVERRIDE+=	xproto.pc.in
 PKGCONFIG_OVERRIDE+=	xproxymngproto.pc.in
 
-X11_BUILTIN_NAME=	xorgproto
-.include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../mk/bsd.pkg.mk"
