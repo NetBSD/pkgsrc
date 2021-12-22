@@ -1,0 +1,24 @@
+$NetBSD: patch-prettyping,v 1.1 2021/12/22 16:16:29 schmonz Exp $
+
+Borrow IPv6 fixes for BSD and macOS from Homebrew.
+
+--- prettyping.orig	2017-04-03 07:49:23.000000000 +0000
++++ prettyping
+@@ -742,7 +742,7 @@ BEGIN {
+ ############################################################
+ # Main loop
+ {
+-	if ( $0 ~ /^[0-9]+ bytes from .*: icmp_[rs]eq=[0-9]+ ttl=[0-9]+ time=[0-9.]+ *ms/ ) {
++	if ( $0 ~ /^[0-9]+ bytes from .*[:,] icmp_[rs]eq=[0-9]+ (ttl|hlim)=[0-9]+ time=[0-9.]+ *ms/ ) {
+ 		# Sample line from ping:
+ 		# 64 bytes from 8.8.8.8: icmp_seq=1 ttl=49 time=184 ms
+ 		if ( other_line_times >= 2 ) {
+@@ -751,7 +751,7 @@ BEGIN {
+ 
+ 		# $1 = useless prefix string
+ 		# $2 = icmp_seq
+-		# $3 = ttl
++		# $3 = ttl/hlim
+ 		# $4 = time
+ 
+ 		# This must be called before incrementing the last_seq variable!
