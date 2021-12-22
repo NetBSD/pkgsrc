@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/12/04 21:13:01 rodent Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/12/22 22:54:46 mef Exp $
 ${PYSITELIB}/trytond/modules/account_stock_continental/__init__.py
 ${PYSITELIB}/trytond/modules/account_stock_continental/__init__.pyc
 ${PYSITELIB}/trytond/modules/account_stock_continental/__init__.pyo
@@ -12,17 +12,22 @@ ${PYSITELIB}/trytond/modules/account_stock_continental/locale/cs.po
 ${PYSITELIB}/trytond/modules/account_stock_continental/locale/de.po
 ${PYSITELIB}/trytond/modules/account_stock_continental/locale/es.po
 ${PYSITELIB}/trytond/modules/account_stock_continental/locale/es_419.po
+${PYSITELIB}/trytond/modules/account_stock_continental/locale/et.po
+${PYSITELIB}/trytond/modules/account_stock_continental/locale/fa.po
+${PYSITELIB}/trytond/modules/account_stock_continental/locale/fi.po
 ${PYSITELIB}/trytond/modules/account_stock_continental/locale/fr.po
-${PYSITELIB}/trytond/modules/account_stock_continental/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/account_stock_continental/locale/it_IT.po
-${PYSITELIB}/trytond/modules/account_stock_continental/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/account_stock_continental/locale/hu.po
+${PYSITELIB}/trytond/modules/account_stock_continental/locale/id.po
+${PYSITELIB}/trytond/modules/account_stock_continental/locale/it.po
 ${PYSITELIB}/trytond/modules/account_stock_continental/locale/lo.po
 ${PYSITELIB}/trytond/modules/account_stock_continental/locale/lt.po
 ${PYSITELIB}/trytond/modules/account_stock_continental/locale/nl.po
 ${PYSITELIB}/trytond/modules/account_stock_continental/locale/pl.po
-${PYSITELIB}/trytond/modules/account_stock_continental/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/account_stock_continental/locale/pt.po
+${PYSITELIB}/trytond/modules/account_stock_continental/locale/ro.po
 ${PYSITELIB}/trytond/modules/account_stock_continental/locale/ru.po
 ${PYSITELIB}/trytond/modules/account_stock_continental/locale/sl.po
+${PYSITELIB}/trytond/modules/account_stock_continental/locale/tr.po
 ${PYSITELIB}/trytond/modules/account_stock_continental/locale/zh_CN.po
 ${PYSITELIB}/trytond/modules/account_stock_continental/minimal_chart_bg.xml
 ${PYSITELIB}/trytond/modules/account_stock_continental/minimal_chart_ca.xml
@@ -55,9 +60,6 @@ ${PYSITELIB}/trytond/modules/account_stock_continental/tryton.cfg
 ${PYSITELIB}/trytond/modules/account_stock_continental/view/category_form.xml
 ${PYSITELIB}/trytond/modules/account_stock_continental/view/configuration_form.xml
 ${PYSITELIB}/trytond/modules/account_stock_continental/view/fiscalyear_form.xml
-${PYSITELIB}/trytond/modules/account_stock_continental/view/template_form.xml
-${PYSITELIB}/trytond/modules/account_stock_continental/view/update_cost_price_ask_form.xml
-${PYSITELIB}/trytond/modules/account_stock_continental/view/update_cost_price_show_move_form.xml
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt

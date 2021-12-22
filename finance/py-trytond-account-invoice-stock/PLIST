@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/12/04 21:13:01 rodent Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/12/22 22:54:46 mef Exp $
 ${PYSITELIB}/trytond/modules/account_invoice_stock/__init__.py
 ${PYSITELIB}/trytond/modules/account_invoice_stock/__init__.pyc
 ${PYSITELIB}/trytond/modules/account_invoice_stock/__init__.pyo
@@ -12,17 +12,22 @@ ${PYSITELIB}/trytond/modules/account_invoice_stock/locale/cs.po
 ${PYSITELIB}/trytond/modules/account_invoice_stock/locale/de.po
 ${PYSITELIB}/trytond/modules/account_invoice_stock/locale/es.po
 ${PYSITELIB}/trytond/modules/account_invoice_stock/locale/es_419.po
+${PYSITELIB}/trytond/modules/account_invoice_stock/locale/et.po
+${PYSITELIB}/trytond/modules/account_invoice_stock/locale/fa.po
+${PYSITELIB}/trytond/modules/account_invoice_stock/locale/fi.po
 ${PYSITELIB}/trytond/modules/account_invoice_stock/locale/fr.po
-${PYSITELIB}/trytond/modules/account_invoice_stock/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/account_invoice_stock/locale/it_IT.po
-${PYSITELIB}/trytond/modules/account_invoice_stock/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/account_invoice_stock/locale/hu.po
+${PYSITELIB}/trytond/modules/account_invoice_stock/locale/id.po
+${PYSITELIB}/trytond/modules/account_invoice_stock/locale/it.po
 ${PYSITELIB}/trytond/modules/account_invoice_stock/locale/lo.po
 ${PYSITELIB}/trytond/modules/account_invoice_stock/locale/lt.po
 ${PYSITELIB}/trytond/modules/account_invoice_stock/locale/nl.po
 ${PYSITELIB}/trytond/modules/account_invoice_stock/locale/pl.po
-${PYSITELIB}/trytond/modules/account_invoice_stock/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/account_invoice_stock/locale/pt.po
+${PYSITELIB}/trytond/modules/account_invoice_stock/locale/ro.po
 ${PYSITELIB}/trytond/modules/account_invoice_stock/locale/ru.po
 ${PYSITELIB}/trytond/modules/account_invoice_stock/locale/sl.po
+${PYSITELIB}/trytond/modules/account_invoice_stock/locale/tr.po
 ${PYSITELIB}/trytond/modules/account_invoice_stock/locale/zh_CN.po
 ${PYSITELIB}/trytond/modules/account_invoice_stock/stock.py
 ${PYSITELIB}/trytond/modules/account_invoice_stock/stock.pyc
@@ -31,6 +36,8 @@ ${PYSITELIB}/trytond/modules/account_invoice_stock/stock.xml
 ${PYSITELIB}/trytond/modules/account_invoice_stock/tests/__init__.py
 ${PYSITELIB}/trytond/modules/account_invoice_stock/tests/__init__.pyc
 ${PYSITELIB}/trytond/modules/account_invoice_stock/tests/__init__.pyo
+${PYSITELIB}/trytond/modules/account_invoice_stock/tests/scenario_account_invoice_stock.rst
+${PYSITELIB}/trytond/modules/account_invoice_stock/tests/scenario_account_invoice_stock_correction.rst
 ${PYSITELIB}/trytond/modules/account_invoice_stock/tests/test_account_invoice_stock.py
 ${PYSITELIB}/trytond/modules/account_invoice_stock/tests/test_account_invoice_stock.pyc
 ${PYSITELIB}/trytond/modules/account_invoice_stock/tests/test_account_invoice_stock.pyo

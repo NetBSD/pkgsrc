@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/12/04 21:13:00 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/22 22:54:44 mef Exp $
 ${PYSITELIB}/trytond/modules/account_credit_limit/__init__.py
 ${PYSITELIB}/trytond/modules/account_credit_limit/__init__.pyc
 ${PYSITELIB}/trytond/modules/account_credit_limit/__init__.pyo
@@ -6,24 +6,33 @@ ${PYSITELIB}/trytond/modules/account_credit_limit/account.py
 ${PYSITELIB}/trytond/modules/account_credit_limit/account.pyc
 ${PYSITELIB}/trytond/modules/account_credit_limit/account.pyo
 ${PYSITELIB}/trytond/modules/account_credit_limit/account.xml
+${PYSITELIB}/trytond/modules/account_credit_limit/exceptions.py
+${PYSITELIB}/trytond/modules/account_credit_limit/exceptions.pyc
+${PYSITELIB}/trytond/modules/account_credit_limit/exceptions.pyo
 ${PYSITELIB}/trytond/modules/account_credit_limit/locale/bg.po
 ${PYSITELIB}/trytond/modules/account_credit_limit/locale/ca.po
 ${PYSITELIB}/trytond/modules/account_credit_limit/locale/cs.po
 ${PYSITELIB}/trytond/modules/account_credit_limit/locale/de.po
 ${PYSITELIB}/trytond/modules/account_credit_limit/locale/es.po
 ${PYSITELIB}/trytond/modules/account_credit_limit/locale/es_419.po
+${PYSITELIB}/trytond/modules/account_credit_limit/locale/et.po
+${PYSITELIB}/trytond/modules/account_credit_limit/locale/fa.po
+${PYSITELIB}/trytond/modules/account_credit_limit/locale/fi.po
 ${PYSITELIB}/trytond/modules/account_credit_limit/locale/fr.po
-${PYSITELIB}/trytond/modules/account_credit_limit/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/account_credit_limit/locale/it_IT.po
-${PYSITELIB}/trytond/modules/account_credit_limit/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/account_credit_limit/locale/hu.po
+${PYSITELIB}/trytond/modules/account_credit_limit/locale/id.po
+${PYSITELIB}/trytond/modules/account_credit_limit/locale/it.po
 ${PYSITELIB}/trytond/modules/account_credit_limit/locale/lo.po
 ${PYSITELIB}/trytond/modules/account_credit_limit/locale/lt.po
 ${PYSITELIB}/trytond/modules/account_credit_limit/locale/nl.po
 ${PYSITELIB}/trytond/modules/account_credit_limit/locale/pl.po
-${PYSITELIB}/trytond/modules/account_credit_limit/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/account_credit_limit/locale/pt.po
+${PYSITELIB}/trytond/modules/account_credit_limit/locale/ro.po
 ${PYSITELIB}/trytond/modules/account_credit_limit/locale/ru.po
 ${PYSITELIB}/trytond/modules/account_credit_limit/locale/sl.po
+${PYSITELIB}/trytond/modules/account_credit_limit/locale/tr.po
 ${PYSITELIB}/trytond/modules/account_credit_limit/locale/zh_CN.po
+${PYSITELIB}/trytond/modules/account_credit_limit/message.xml
 ${PYSITELIB}/trytond/modules/account_credit_limit/party.py
 ${PYSITELIB}/trytond/modules/account_credit_limit/party.pyc
 ${PYSITELIB}/trytond/modules/account_credit_limit/party.pyo
@@ -37,6 +46,7 @@ ${PYSITELIB}/trytond/modules/account_credit_limit/tests/test_account_credit_limi
 ${PYSITELIB}/trytond/modules/account_credit_limit/tryton.cfg
 ${PYSITELIB}/trytond/modules/account_credit_limit/view/configuration_form.xml
 ${PYSITELIB}/trytond/modules/account_credit_limit/view/dunning_level_form.xml
+${PYSITELIB}/trytond/modules/account_credit_limit/view/dunning_level_list.xml
 ${PYSITELIB}/trytond/modules/account_credit_limit/view/party_form.xml
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt

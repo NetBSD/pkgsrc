@@ -1,27 +1,29 @@
-@comment $NetBSD: PLIST,v 1.3 2016/12/04 21:13:02 rodent Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/12/22 22:54:48 mef Exp $
 ${PYSITELIB}/trytond/modules/product_cost_history/__init__.py
 ${PYSITELIB}/trytond/modules/product_cost_history/__init__.pyc
 ${PYSITELIB}/trytond/modules/product_cost_history/__init__.pyo
-${PYSITELIB}/trytond/modules/product_cost_history/ir.py
-${PYSITELIB}/trytond/modules/product_cost_history/ir.pyc
-${PYSITELIB}/trytond/modules/product_cost_history/ir.pyo
 ${PYSITELIB}/trytond/modules/product_cost_history/locale/bg.po
 ${PYSITELIB}/trytond/modules/product_cost_history/locale/ca.po
 ${PYSITELIB}/trytond/modules/product_cost_history/locale/cs.po
 ${PYSITELIB}/trytond/modules/product_cost_history/locale/de.po
 ${PYSITELIB}/trytond/modules/product_cost_history/locale/es.po
 ${PYSITELIB}/trytond/modules/product_cost_history/locale/es_419.po
+${PYSITELIB}/trytond/modules/product_cost_history/locale/et.po
+${PYSITELIB}/trytond/modules/product_cost_history/locale/fa.po
+${PYSITELIB}/trytond/modules/product_cost_history/locale/fi.po
 ${PYSITELIB}/trytond/modules/product_cost_history/locale/fr.po
-${PYSITELIB}/trytond/modules/product_cost_history/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/product_cost_history/locale/it_IT.po
-${PYSITELIB}/trytond/modules/product_cost_history/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/product_cost_history/locale/hu.po
+${PYSITELIB}/trytond/modules/product_cost_history/locale/id.po
+${PYSITELIB}/trytond/modules/product_cost_history/locale/it.po
 ${PYSITELIB}/trytond/modules/product_cost_history/locale/lo.po
 ${PYSITELIB}/trytond/modules/product_cost_history/locale/lt.po
 ${PYSITELIB}/trytond/modules/product_cost_history/locale/nl.po
 ${PYSITELIB}/trytond/modules/product_cost_history/locale/pl.po
-${PYSITELIB}/trytond/modules/product_cost_history/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/product_cost_history/locale/pt.po
+${PYSITELIB}/trytond/modules/product_cost_history/locale/ro.po
 ${PYSITELIB}/trytond/modules/product_cost_history/locale/ru.po
 ${PYSITELIB}/trytond/modules/product_cost_history/locale/sl.po
+${PYSITELIB}/trytond/modules/product_cost_history/locale/tr.po
 ${PYSITELIB}/trytond/modules/product_cost_history/locale/zh_CN.po
 ${PYSITELIB}/trytond/modules/product_cost_history/product.py
 ${PYSITELIB}/trytond/modules/product_cost_history/product.pyc
@@ -30,6 +32,7 @@ ${PYSITELIB}/trytond/modules/product_cost_history/product.xml
 ${PYSITELIB}/trytond/modules/product_cost_history/tests/__init__.py
 ${PYSITELIB}/trytond/modules/product_cost_history/tests/__init__.pyc
 ${PYSITELIB}/trytond/modules/product_cost_history/tests/__init__.pyo
+${PYSITELIB}/trytond/modules/product_cost_history/tests/scenario_product_cost_history.rst
 ${PYSITELIB}/trytond/modules/product_cost_history/tests/test_product_cost_history.py
 ${PYSITELIB}/trytond/modules/product_cost_history/tests/test_product_cost_history.pyc
 ${PYSITELIB}/trytond/modules/product_cost_history/tests/test_product_cost_history.pyo

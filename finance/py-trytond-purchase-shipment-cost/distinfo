@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:26:10 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/12/22 22:54:49 mef Exp $
 
-BLAKE2s (tryton-4.2/trytond_purchase_shipment_cost-4.2.0.tar.gz) = 1e77299c1de23eaa76dbc9867e135d37931d1e701da260ab0756de66e9fd4c00
-SHA512 (tryton-4.2/trytond_purchase_shipment_cost-4.2.0.tar.gz) = b82847781dfa75238f7ff668686d1adb4a87c86dcdecc8e383a48de46c512506c5ae3ff8ffdd8128011c72bd1603ad8e5e23b07b62fa2f3c208dbee9c42e3d91
-Size (tryton-4.2/trytond_purchase_shipment_cost-4.2.0.tar.gz) = 24578 bytes
+BLAKE2s (tryton-6.2/trytond_purchase_shipment_cost-6.2.0.tar.gz) = e861576081969602f0f700824157285336a396086c7a13b69a25c0f08357d3fb
+SHA512 (tryton-6.2/trytond_purchase_shipment_cost-6.2.0.tar.gz) = 6b7b1cd16e7580b0546d0e7206dee69c10ce80a9cfab2d8cac088dbd7652285ec40e1fdd2db7ba5f03a330b3446568fa0890d55c65c82aa443e9795d51d6df12
+Size (tryton-6.2/trytond_purchase_shipment_cost-6.2.0.tar.gz) = 29445 bytes
