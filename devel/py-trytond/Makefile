@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2021/12/22 22:50:22 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2021/12/22 22:55:48 wiz Exp $
 TRYTON_MODULE_NAME=	trytond
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=     devel python
@@ -23,6 +23,12 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
+
+post-install:
+.for f in trytond trytond-admin trytond-console trytond-cron trytond-stat trytond-worker
+	${MV} ${DESTDIR}${PREFIX}/bin/${f} \
+		${DESTDIR}${PREFIX}/bin/${f}${PYVERSSUFFIX} || ${TRUE}
+.endfor
 
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"

@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.8 2021/12/22 22:33:30 mef Exp $
-bin/trytond
-bin/trytond-admin
-bin/trytond-console
-bin/trytond-cron
-bin/trytond-stat
-bin/trytond-worker
+@comment $NetBSD: PLIST,v 1.9 2021/12/22 22:55:48 wiz Exp $
+bin/trytond${PYVERSSUFFIX}
+bin/trytond-admin${PYVERSSUFFIX}
+bin/trytond-console${PYVERSSUFFIX}
+bin/trytond-cron${PYVERSSUFFIX}
+bin/trytond-stat${PYVERSSUFFIX}
+bin/trytond-worker${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
