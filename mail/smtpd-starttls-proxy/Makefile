@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2021/09/29 09:58:31 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2021/12/22 16:07:30 schmonz Exp $
 
-DISTNAME=	smtpd-starttls-proxy-0.0.1.0
+DISTNAME=	smtpd-starttls-proxy-0.0.1.1
 CATEGORIES=	mail
 MASTER_SITES=	${HOMEPAGE}
 
