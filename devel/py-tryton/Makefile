@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2021/12/22 22:25:12 mef Exp $
+# $NetBSD: Makefile,v 1.49 2021/12/22 22:41:18 wiz Exp $
 TRYTON_MODULE_NAME=	tryton
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	devel python
@@ -16,6 +16,7 @@ USE_LANGUAGES=		# none
 
 DEPENDS+=		${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 DEPENDS+=		${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
+DEPENDS+=		${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS.Darwin+=	${PYPKGPREFIX}-py2app-[0-9]*:../../devel/py-py2app
 
 post-install:
@@ -23,6 +24,6 @@ post-install:
 		${DESTDIR}${PREFIX}/bin/tryton${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../graphics/librsvg/buildlink3.mk"
-#include "../../x11/py-gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
