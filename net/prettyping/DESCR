@@ -1,0 +1,10 @@
+`prettyping` is a wrapper around the standard `ping` tool with the
+objective of making the output prettier, more colorful, more compact,
+and easier to read.
+
+`prettyping` runs the standard `ping` in the background and parses its
+output, showing the ping responses in a *graphical* way at the terminal
+(by using colors and Unicode characters).
+
+`prettyping` is written in `bash` and `awk`, and is reported to work on
+many different systems and different versions of `awk`.
