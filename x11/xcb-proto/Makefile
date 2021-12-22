@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2021/12/08 16:07:15 adam Exp $
+# $NetBSD: Makefile,v 1.26 2021/12/22 00:39:19 nia Exp $
 
 DISTNAME=	xcb-proto-1.14.1
 PKGREVISION=	3
@@ -22,8 +22,6 @@ CONFIGURE_ENV+=		XMLLLINT=${BUILDLINK_PREFIX.libxml2}/bin/xmllint
 # XXX just for the "configure" check
 PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../lang/python/application.mk"
-X11_BUILTIN_NAME=	xcb-proto
-.include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 BUILDLINK_DEPMETHOD.libxml2?=	build
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
