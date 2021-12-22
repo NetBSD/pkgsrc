@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2019/09/02 13:24:32 adam Exp $
+# $NetBSD: options.mk,v 1.13 2021/12/22 22:25:12 mef Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-tryton
 PKG_SUPPORTED_OPTIONS=	cdecimal goocalendar pytz simplejson
@@ -7,7 +7,7 @@ PKG_SUGGESTED_OPTIONS+=	cdecimal pytz simplejson
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mcdecimal)
-DEPENDS+=		${PYPKGPREFIX}-cdecimal-[0-9]*:../../math/py-cdecimal
+#DEPENDS+=		${PYPKGPREFIX}-cdecimal-[0-9]*:../../math/py-cdecimal
 .endif
 
 .if !empty(PKG_OPTIONS:Mgoocalendar)
