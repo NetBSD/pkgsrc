@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.47 2021/12/08 16:04:06 adam Exp $
+# $NetBSD: Makefile,v 1.48 2021/12/22 22:25:12 mef Exp $
 TRYTON_MODULE_NAME=	tryton
-PKGREVISION= 14
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	devel python
 
@@ -11,7 +10,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=		# none
 
-PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2
+#WRKSRC=		${WRKDIR}/tryton-${PKGVERSION_NOREV}
 
 .include "options.mk"
 
@@ -24,6 +23,6 @@ post-install:
 		${DESTDIR}${PREFIX}/bin/tryton${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../graphics/librsvg/buildlink3.mk"
-.include "../../x11/py-gtk2/buildlink3.mk"
+#include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
