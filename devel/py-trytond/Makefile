@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2021/12/22 22:55:48 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2021/12/22 23:00:59 wiz Exp $
 TRYTON_MODULE_NAME=	trytond
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=     devel python
@@ -29,6 +29,8 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/${f} \
 		${DESTDIR}${PREFIX}/bin/${f}${PYVERSSUFFIX} || ${TRUE}
 .endfor
+
+.include "options.mk"
 
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"
