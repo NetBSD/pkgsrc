@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.233 2021/12/19 11:55:29 nia Exp $
+# $NetBSD: gcc.mk,v 1.234 2021/12/22 10:14:27 nia Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -391,6 +391,10 @@ CWRAPPERS_APPEND.cc+=	${_FORTIFY_CFLAGS}
 _RELRO_LDFLAGS=		-Wl,-zrelro -Wl,-znow
 .else
 _RELRO_LDFLAGS=		-Wl,-zrelro
+.endif
+
+.if !empty(_RELRO_LDFLAGS) && !empty(MACHINE_PLATFORM:MNetBSD-*-*mips*)
+_RELRO_LDFLAGS+=	-Wl,-z,common-page-size=0x10000
 .endif
 
 _STACK_CHECK_CFLAGS=	-fstack-check
