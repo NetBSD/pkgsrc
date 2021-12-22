@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/12/19 13:38:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2021/12/22 12:47:20 tnn Exp $
 
 GITHUB_PROJECT=	wasi-libc
 GITHUB_TAG=	ad5133410f66b93a2381db5b542aad5e0964db96
@@ -36,10 +36,12 @@ MAKE_FLAGS+=	INSTALL_DIR=${DESTDIR}${PREFIX}/wasi
 BUILD_TARGET=	finish
 
 PKGSRC_COMPILER=	clang
-PKG_CC=		${PREFIX}/bin/clang
-PKG_CXX=	${PREFIX}/bin/clang++
+CLANGBASE=		${PREFIX}
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
 BUILDLINK_DEPMETHOD.llvm=	build
 .include "../../lang/llvm/buildlink3.mk"
+.if empty(PKG_BUILD_OPTIONS.llvm:Mllvm-target-webassembly)
+PKG_FAIL_REASON+=	"llvm-target-webassembly PKG_OPTION must be enabled in lang/llvm"
+.endif
 .include "../../mk/bsd.pkg.mk"
