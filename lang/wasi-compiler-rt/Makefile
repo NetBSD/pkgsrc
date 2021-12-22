@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/12/22 12:52:49 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2021/12/22 16:10:08 ryoon Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -19,7 +19,9 @@ NOT_FOR_PLATFORM=	NetBSD-[0-7].*-*
 USE_CMAKE=	yes
 USE_LANGUAGES=	c99 c++11
 USE_TOOLS+=	ggrep
-SSP_SUPPORTED=	no
+
+SSP_SUPPORTED=		no
+PKGSRC_USE_STACK_CHECK=	no
 
 CONFIGURE_DIRS=	../build
 CMAKE_ARG_PATH=	${WRKSRC}/lib/builtins
