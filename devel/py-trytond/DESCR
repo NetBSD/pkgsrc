@@ -1,4 +1,3 @@
-The server of the Tryton application platform, a three-tiers high-level general
-purpose application platform written in Python and uses PostgreSQL as main
-database engine. It is the core base of an Open Source ERP. It provides
+The server of Tryton. Tryton is business software, ideal for companies of
+any size, easy to use, complete and 100% Open Source. It provides
 modularity, scalability and security.
