@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/12/22 13:00:26 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2021/12/22 16:10:43 ryoon Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -36,7 +36,9 @@ INSTALL_DIRS+=		${BUILD_DIRS}
 
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
-SSP_SUPPORTED=	no
+
+SSP_SUPPORTED=		no
+PKGSRC_USE_STACK_CHECK=	no
 
 CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE=1
 
