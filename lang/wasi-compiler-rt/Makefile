@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/12/19 14:05:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2021/12/22 12:52:49 tnn Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -59,8 +59,7 @@ post-extract:
 	${MKDIR} ${WRKDIR}/build
 
 PKGSRC_COMPILER=	clang
-PKG_CC=		${PREFIX}/bin/clang
-PKG_CXX=	${PREFIX}/bin/clang++
+CLANGBASE=		${PREFIX}
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
