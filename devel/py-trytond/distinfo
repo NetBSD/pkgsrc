@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/12/16 14:48:11 wiz Exp $
+$NetBSD: distinfo,v 1.15 2021/12/22 22:33:30 mef Exp $
 
-BLAKE2s (tryton-4.2/trytond-4.2.1.tar.gz) = 633773d9a79c7974ba605350706231ce6a66a8dd306e690b4271efd494b987ad
-SHA512 (tryton-4.2/trytond-4.2.1.tar.gz) = 3716a56d87e95dabaa77f2210c9499a6d1ae0278b7bae2034d6a19db8a40f1e22efd48118de9af1a72022b556a991d4293886804b2b531be0f4dd038fbe9e882
-Size (tryton-4.2/trytond-4.2.1.tar.gz) = 581536 bytes
-SHA1 (patch-setup.py) = 4b802daf2801407b5c0d89eb130742a63555bc10
+BLAKE2s (tryton-6.2/trytond-6.2.2.tar.gz) = 0aa2a635967e18d577171476007104721934dc299e0eac49027464d933968f5d
+SHA512 (tryton-6.2/trytond-6.2.2.tar.gz) = c1ec1e2e3de5f38e0ea205bd3bb9e9f635ed487ab6ba5a3761184c731c00814de4c39a6d178deed4756cd95d8ceff9204babf62fa284c3123ccfac03ccd71d10
+Size (tryton-6.2/trytond-6.2.2.tar.gz) = 873356 bytes
