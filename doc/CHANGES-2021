@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6375 2021/12/22 22:25:26 mef Exp $
+$NetBSD: CHANGES-2021,v 1.6376 2021/12/22 22:33:43 mef Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9536,3 +9536,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/firefox to 95.0.1nb1 [ryoon 2021-12-22]
 	Updated devel/py-approvaltests to 3.3.2 [schmonz 2021-12-22]
 	Updated devel/py-tryton to 6.2.0 [mef 2021-12-22]
+	Updated devel/py-trytond to 6.2.2 [mef 2021-12-22]
