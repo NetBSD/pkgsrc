@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1436 2021/12/14 10:07:49 nia Exp $
+# $NetBSD: Makefile,v 1.1437 2021/12/22 16:16:52 schmonz Exp $
 #
 
 COMMENT=	Networking tools
@@ -654,6 +654,7 @@ SUBDIR+=	powerdns-pgsql
 SUBDIR+=	powerdns-recursor
 SUBDIR+=	pppd
 SUBDIR+=	pptp
+SUBDIR+=	prettyping
 SUBDIR+=	proftpd
 SUBDIR+=	proftpd-geoip
 SUBDIR+=	proftpd-ldap
