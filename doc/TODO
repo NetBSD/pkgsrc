@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21370 2021/12/21 15:11:22 wiz Exp $
+$NetBSD: TODO,v 1.21371 2021/12/22 09:40:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -744,6 +744,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gens-2.15.5
 	o gfract-0.33
 	o ghdl-0.33
+	o gimp-2.10.30
 	o gimp-docs-de-2.10.0
 	o gimp-docs-en-2.10.0
 	o gimp-docs-es-2.10.0
@@ -1995,6 +1996,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o zoneminder-1.34.21
 	o zookeeper-3.7.0
 	o zopeedit-0.8
+	o zstd-1.5.1
 
 Licenses of packages
 ====================
