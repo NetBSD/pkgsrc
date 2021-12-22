@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2021/09/29 09:54:48 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2021/12/22 16:03:27 schmonz Exp $
 
-DISTNAME=	s6-2.11.0.0
+DISTNAME=	s6-2.11.0.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${HOMEPAGE}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${MANPAGES}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://skarnet.org/software/s6/
 COMMENT=	The s6 supervision suite
 LICENSE=	isc
 
-MANPAGES=		v2.11.0.0.1.tar.gz
+MANPAGES=		v2.11.0.0.5.tar.gz
 SITES.${MANPAGES}=	${MASTER_SITE_GITHUB:=flexibeast/s6-man-pages/archive/}
 
 USE_TOOLS+=		gmake
@@ -21,13 +21,13 @@ CONFIGURE_ARGS+=	--with-lib=${PREFIX}/lib/execline
 CONFIGURE_ARGS+=	--with-lib=${PREFIX}/lib/skalibs
 CONFIGURE_ARGS+=	--with-include=${PREFIX}/include
 
-INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man7
+INSTALLATION_DIRS+=	${PKGMANDIR}/man7 ${PKGMANDIR}/man8
 
 .PHONY: do-install-manpages
 post-install: do-install-manpages
 do-install-manpages:
-	cd ${WRKDIR}/${PKGBASE}-man-pages-*; for i in 1 7; do \
-		for j in *.$$i; do \
+	cd ${WRKDIR}/${PKGBASE}-man-pages-*; for i in 7 8; do \
+		for j in man$$i/*.$$i; do \
 			${INSTALL_MAN} $$j \
 			${DESTDIR}${PREFIX}/${PKGMANDIR}/man$$i; \
 		done \
