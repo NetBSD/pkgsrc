@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:59:23 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/12/22 22:54:51 mef Exp $
 
-BLAKE2s (tryton-4.2/trytond_carrier_weight-4.2.0.tar.gz) = 7a91a8f1359fc025707bd5d81cee04589a697a2234f7daea64a03dc451ffbeb4
-SHA512 (tryton-4.2/trytond_carrier_weight-4.2.0.tar.gz) = 90b44ca55f7c6eb81d16e76440e22cfed51ec144f7b075b28bbaa0dc32f563d9fc56290304973dc2c851bea4321fcf5027edbfcb4d2daf235a0c4c6300c38fe8
-Size (tryton-4.2/trytond_carrier_weight-4.2.0.tar.gz) = 24890 bytes
+BLAKE2s (tryton-6.2/trytond_carrier_weight-6.2.0.tar.gz) = 233569f7d9f52fef3052e461f8c2f4e6086885f893d3f6a86a78ab06e155db23
+SHA512 (tryton-6.2/trytond_carrier_weight-6.2.0.tar.gz) = aa400a725df79e93832854c0d3545d62c6bf713aabe2cfae8422ab51fc1bc7dac7b34681d4ed7e13cf31f086046f09597feffa2c6ffba73882837dabf42f9f82
+Size (tryton-6.2/trytond_carrier_weight-6.2.0.tar.gz) = 28939 bytes
