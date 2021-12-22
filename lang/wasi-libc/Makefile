@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/12/22 12:47:20 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2021/12/22 16:09:45 ryoon Exp $
 
 GITHUB_PROJECT=	wasi-libc
 GITHUB_TAG=	ad5133410f66b93a2381db5b542aad5e0964db96
@@ -13,8 +13,9 @@ HOMEPAGE=	https://github.com/WebAssembly/wasi-libc/
 COMMENT=	libc for WebAssembly programs built on top of WASI
 LICENSE=	mit AND apache-2.0 # apache-2.0-with-LLVM-exception
 
-# Do not fail tests
-PKGSRC_USE_SSP=		no
+# Do not fail tests and compile time error (undefined symbols) in www/firefox.
+SSP_SUPPORTED=		no
+PKGSRC_USE_STACK_CHECK=	no
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD"
