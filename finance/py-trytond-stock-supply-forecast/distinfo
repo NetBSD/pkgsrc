@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:26:12 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/12/22 22:54:51 mef Exp $
 
-BLAKE2s (tryton-4.2/trytond_stock_supply_forecast-4.2.1.tar.gz) = fd1e8d07ce41a578df3ed048d5801a69cd976f3c5a881d57facef08774c0dec0
-SHA512 (tryton-4.2/trytond_stock_supply_forecast-4.2.1.tar.gz) = d83ecb37c13df2331412c0747f5353e2e2c79d34ecb6ec845e87c0e88fcaab2371354e78da988d469bc6913186ecfa41ca1a73f962b8f7f83e127ff43e02b906
-Size (tryton-4.2/trytond_stock_supply_forecast-4.2.1.tar.gz) = 17132 bytes
+BLAKE2s (tryton-6.2/trytond_stock_supply_forecast-6.2.0.tar.gz) = 6d251cd20223e0109f1b231ce13a55a48efb85689f887aa9867bb1c0d00e4e4c
+SHA512 (tryton-6.2/trytond_stock_supply_forecast-6.2.0.tar.gz) = 1b5755e5f127994e1a2f19cb0726fb4a6327c6b8e4b1afb97a5494ffb6511e0d0086b03d5ba8d4a12dbbca96e9c1667a0d9355a6b47667af8aea818c321e7a88
+Size (tryton-6.2/trytond_stock_supply_forecast-6.2.0.tar.gz) = 20277 bytes

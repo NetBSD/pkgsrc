@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:26:09 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/12/22 22:54:48 mef Exp $
 
-BLAKE2s (tryton-4.2/trytond_product_cost_fifo-4.2.0.tar.gz) = 51255c77043419102139ea13ba5b54d1b7c96bb7ff56fc61f0d11ce91691923b
-SHA512 (tryton-4.2/trytond_product_cost_fifo-4.2.0.tar.gz) = ddf6be64a3648877bb7713d3d924eb7ca5366b4dd709cfce113ceb8bae2c60222c01bf176c40b55048398304bb54fc8668a799c596b49df992f57d42bbc6388c
-Size (tryton-4.2/trytond_product_cost_fifo-4.2.0.tar.gz) = 20901 bytes
+BLAKE2s (tryton-6.2/trytond_product_cost_fifo-6.2.0.tar.gz) = 6f237e8988a7a4742e041f0479490ecc26494c585b306677b95bd9278cedd74c
+SHA512 (tryton-6.2/trytond_product_cost_fifo-6.2.0.tar.gz) = e52167bb4f73e7ad7d5abcae0df6e2b2ed4311939676a98d4d75621b970ffafd882f3fab462744aa34ea0eeda6f52ca3956063f27d77916aec08369afdc12d8a
+Size (tryton-6.2/trytond_product_cost_fifo-6.2.0.tar.gz) = 28637 bytes

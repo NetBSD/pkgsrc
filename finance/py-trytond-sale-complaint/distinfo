@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:26:10 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/12/22 22:54:49 mef Exp $
 
-BLAKE2s (tryton-4.2/trytond_sale_complaint-4.2.0.tar.gz) = 4d6906ee1e601d619038698104e6958eb287476a9d9f609524d3e3e2bd8aa94f
-SHA512 (tryton-4.2/trytond_sale_complaint-4.2.0.tar.gz) = 44c6901f627ab173f4ceb6b9e3de863ee50e6430321cabc0edf987cd447b74796698a86d308eb1c5b59491436857620303cd527d1ae6300106199bb132af7772
-Size (tryton-4.2/trytond_sale_complaint-4.2.0.tar.gz) = 38005 bytes
+BLAKE2s (tryton-6.2/trytond_sale_complaint-6.2.0.tar.gz) = d95f1066e95e43473302c1df32ed46c2757dc33cc1c8ae82d586931d939af6a0
+SHA512 (tryton-6.2/trytond_sale_complaint-6.2.0.tar.gz) = a76369a95fcee611e17890528ecec56df1c4edbaf93fb2d246e69448f7a9780cc8ace6a3bad8a0a260dfc01a9dc310531e2b4dc5e1f8c44bf2dc5b081f97f776
+Size (tryton-6.2/trytond_sale_complaint-6.2.0.tar.gz) = 50301 bytes

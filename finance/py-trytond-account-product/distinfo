@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:26:07 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/12/22 22:54:46 mef Exp $
 
-BLAKE2s (tryton-4.2/trytond_account_product-4.2.0.tar.gz) = af6d6e91c25c6dc25ad866b81bb9732379e3d43615d246c47212b1c1c0910efe
-SHA512 (tryton-4.2/trytond_account_product-4.2.0.tar.gz) = d4cf41babcec41edc3761a9abec1122184bbdce1b94e861e9290144aa6d7ce23c95ceeb937c2a06a2e864404c2145cba4c9e174dcdc78c71157ed2ece81f5741
-Size (tryton-4.2/trytond_account_product-4.2.0.tar.gz) = 34251 bytes
+BLAKE2s (tryton-6.2/trytond_account_product-6.2.0.tar.gz) = 74390b39e23b463aaf7baeed93ba48f0a090829bbc57bc773bb3d06237c80bde
+SHA512 (tryton-6.2/trytond_account_product-6.2.0.tar.gz) = f0e378055074d4d131a3cc5f5ad6d7342c850d1c9c4ccdd6d7e0ed7b403d6a33fb629520478060618d903b0fafab3385087984268345e1f20d16f28b43d57ae7
+Size (tryton-6.2/trytond_account_product-6.2.0.tar.gz) = 39606 bytes
