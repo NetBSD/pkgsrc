@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6366 2021/12/22 16:00:13 schmonz Exp $
+$NetBSD: CHANGES-2021,v 1.6367 2021/12/22 16:03:35 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9527,3 +9527,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated shells/starship to 1.1.1 [pin 2021-12-22]
 	Updated devel/skalibs to 2.11.1.0 [schmonz 2021-12-22]
 	Updated lang/execline to 2.8.2.0 [schmonz 2021-12-22]
+	Updated sysutils/s6 to 2.11.0.1 [schmonz 2021-12-22]
