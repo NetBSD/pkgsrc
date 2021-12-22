@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6363 2021/12/21 22:45:55 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.6364 2021/12/22 08:30:07 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9524,3 +9524,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/taplo-lsp version 0.2.6 [wiz 2021-12-21]
 	Updated devel/py-tortoisehg to 6.0 [nros 2021-12-21]
 	Updated devel/kdiff3 to 1.9.4 [gutteridge 2021-12-21]
+	Updated shells/starship to 1.1.1 [pin 2021-12-22]
