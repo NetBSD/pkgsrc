@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.28 2021/12/15 09:34:12 schmonz Exp $
+$NetBSD: distinfo,v 1.29 2021/12/22 18:19:39 schmonz Exp $
 
-BLAKE2s (approvaltests-3.3.0.tar.gz) = ccb691f7ab01cae0641f5cf931bd106da4fbe6ddd187495f1e4f9705c26a7dc1
-SHA512 (approvaltests-3.3.0.tar.gz) = aa8be46192f8c1acfb6aad2532ff9bd84dbc1995ca2de565c5a32aa72a58952df81c855c5d2079589d2386c46ee7a817792f1a8149f47f724c0256b06b134037
-Size (approvaltests-3.3.0.tar.gz) = 26591 bytes
-SHA1 (patch-approvaltests_version.py) = 985308ca98d289a05f1738bfb93455928242c1c4
+BLAKE2s (approvaltests-3.3.2.tar.gz) = 069097679b987bab5db8a2fe5d6c89ce60e42e31875c1309a66f865946b0b2cd
+SHA512 (approvaltests-3.3.2.tar.gz) = 7b5e80c342aa59d59a20e47bb9b8a6f9f18db35e0701cd198d1bf3a238e486965565458e4fb35b83a8fe1bb1bbd964352821fe47bf37c6a9ae06a3a924611266
+Size (approvaltests-3.3.2.tar.gz) = 26569 bytes
