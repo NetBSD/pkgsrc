@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2020/03/13 20:20:48 wiz Exp $
+# $NetBSD: Makefile.common,v 1.19 2021/12/22 22:33:30 mef Exp $
 
 # used by databases/py-trytond-ldap-authentication
 # used by devel/py-proteus/Makefile
@@ -112,7 +112,7 @@
 # used by www/py-trytond-web-user/Makefile
 # used by www/py-trytond-webdav/Makefile
 
-TRYTON_BASEVER=		4.2
+TRYTON_BASEVER=		6.2
 
 # NB: the following commands can help getting a list of module revisions:
 #
@@ -133,9 +133,9 @@ TRYTON_BASEVER=		4.2
 #
 # specific module revisions:
 MODULE_REVISION.proteus=					0
-MODULE_REVISION.tryton=						1
-MODULE_REVISION.trytond=					1
-MODULE_REVISION.trytond_account=				0
+MODULE_REVISION.tryton=						0
+MODULE_REVISION.trytond=					2
+MODULE_REVISION.trytond_account=				1
 MODULE_REVISION.trytond_account_asset=				0
 MODULE_REVISION.trytond_account_be=				0
 MODULE_REVISION.trytond_account_credit_limit=			0
@@ -145,19 +145,19 @@ MODULE_REVISION.trytond_account_dunning=			0
 MODULE_REVISION.trytond_account_dunning_fee=			0
 MODULE_REVISION.trytond_account_dunning_letter=			0
 MODULE_REVISION.trytond_account_fr=				0
-MODULE_REVISION.trytond_account_invoice=			0
+MODULE_REVISION.trytond_account_invoice=			1
 MODULE_REVISION.trytond_account_invoice_history=		0
 MODULE_REVISION.trytond_account_invoice_line_standalone=	0
 MODULE_REVISION.trytond_account_invoice_stock=			0
 MODULE_REVISION.trytond_account_payment=			0
 MODULE_REVISION.trytond_account_payment_clearing=		0
-MODULE_REVISION.trytond_account_payment_sepa=			0
+MODULE_REVISION.trytond_account_payment_sepa=			1
 MODULE_REVISION.trytond_account_payment_sepa_cfonb=		0
 MODULE_REVISION.trytond_account_product=			0
 MODULE_REVISION.trytond_account_statement=			0
 MODULE_REVISION.trytond_account_stock_anglo_saxon=		0
 MODULE_REVISION.trytond_account_stock_continental=		0
-MODULE_REVISION.trytond_account_stock_landed_cost=		0
+MODULE_REVISION.trytond_account_stock_landed_cost=		1
 MODULE_REVISION.trytond_account_stock_landed_cost_weight=	0
 MODULE_REVISION.trytond_account_tax_rule_country=		0
 MODULE_REVISION.trytond_analytic_account=			0
@@ -166,14 +166,14 @@ MODULE_REVISION.trytond_analytic_purchase=			0
 MODULE_REVISION.trytond_analytic_sale=				0
 MODULE_REVISION.trytond_authentication_sms=			0
 MODULE_REVISION.trytond_bank=					0
-MODULE_REVISION.trytond_calendar=				0
+MODULE_REVISION.trytond_calendar=				1
 MODULE_REVISION.trytond_calendar_classification=		0
 MODULE_REVISION.trytond_calendar_scheduling=			0
 MODULE_REVISION.trytond_calendar_todo=				0
 MODULE_REVISION.trytond_carrier=				0
 MODULE_REVISION.trytond_carrier_percentage=			0
 MODULE_REVISION.trytond_carrier_weight=				0
-MODULE_REVISION.trytond_commission=				1
+MODULE_REVISION.trytond_commission=				0
 MODULE_REVISION.trytond_commission_waiting=			0
 MODULE_REVISION.trytond_company=				0
 MODULE_REVISION.trytond_company_work_time=			0
@@ -181,13 +181,13 @@ MODULE_REVISION.trytond_country=				0
 MODULE_REVISION.trytond_currency=				0
 MODULE_REVISION.trytond_customs=				0
 MODULE_REVISION.trytond_dashboard=				0
-MODULE_REVISION.trytond_google_maps=				1
+MODULE_REVISION.trytond_google_maps=				0
 MODULE_REVISION.trytond_ldap_authentication=			0
-MODULE_REVISION.trytond_party=					1
+MODULE_REVISION.trytond_party=					0
 MODULE_REVISION.trytond_party_relationship=			0
 MODULE_REVISION.trytond_party_siret=				0
 MODULE_REVISION.trytond_party_vcarddav=				0
-MODULE_REVISION.trytond_product=				1
+MODULE_REVISION.trytond_product=				0
 MODULE_REVISION.trytond_product_attribute=			0
 MODULE_REVISION.trytond_product_classification=			0
 MODULE_REVISION.trytond_product_classification_taxonomic=	0
@@ -236,7 +236,7 @@ MODULE_REVISION.trytond_stock_product_location=			0
 MODULE_REVISION.trytond_stock_split=				0
 MODULE_REVISION.trytond_stock_supply=				0
 MODULE_REVISION.trytond_stock_supply_day=			0
-MODULE_REVISION.trytond_stock_supply_forecast=			1
+MODULE_REVISION.trytond_stock_supply_forecast=			0
 MODULE_REVISION.trytond_stock_supply_production=		0
 MODULE_REVISION.trytond_timesheet=				0
 MODULE_REVISION.trytond_timesheet_cost=				0
@@ -247,13 +247,17 @@ MODULE_REVISION.trytond_webdav=					0
 
 TRYTON_VERSION=	${TRYTON_BASEVER}.${MODULE_REVISION.${TRYTON_MODULE_NAME}}
 
+GITHUB_PROJECT=	trytond
+CATEGORIES?=	devel python
+
 DISTNAME?=	${TRYTON_MODULE_NAME}-${TRYTON_VERSION}
 PKGNAME?=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
+#RKSRC?=	${WRKDIR}/trytond-${TRYTON_VERSION}
 
-TRYTON_SITES=	http://downloads.tryton.org/${TRYTON_BASEVER}/
-MASTER_SITES=	${TRYTON_SITES}
+MASTER_SITES=	https://downloads-cdn.tryton.org/6.2/
 
 DIST_SUBDIR=	tryton-${TRYTON_BASEVER}
+PYTHON_VERSIONS_INCOMPATIBLE= 27
 
 # predefine these so modules don't have to.
 PY_PATCHPLIST=	yes
