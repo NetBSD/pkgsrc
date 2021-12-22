@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:26:06 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/12/22 22:54:44 mef Exp $
 
-BLAKE2s (tryton-4.2/trytond_account_credit_limit-4.2.0.tar.gz) = 4973c7ddf8794b4376a57655305cc8d05229bb91c7ab517a442b503543033d4d
-SHA512 (tryton-4.2/trytond_account_credit_limit-4.2.0.tar.gz) = 42b957d77cf197c0b139dcd93f30939a38a430c0665b32cde3bf63d5a4235c56ee74765b8bf32543afd8e0b98411d84107ec09cfa0b1f803ef8eaf3dfc595b46
-Size (tryton-4.2/trytond_account_credit_limit-4.2.0.tar.gz) = 22610 bytes
+BLAKE2s (tryton-6.2/trytond_account_credit_limit-6.2.0.tar.gz) = 4568a24fc8b1f1b8f1c96b82e6844b2fa9b011c21543feba3502c70753d37c01
+SHA512 (tryton-6.2/trytond_account_credit_limit-6.2.0.tar.gz) = 0a8f42acacc1a0cb2dfe1560ee7c873d7f7c3d8a3f235665a3093b146c66f08006084e62378643ab0f47ef089bcf724cdd5015e363f46a3946ce6661b38fb904
+Size (tryton-6.2/trytond_account_credit_limit-6.2.0.tar.gz) = 29140 bytes

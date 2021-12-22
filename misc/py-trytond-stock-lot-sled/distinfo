@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:59:26 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/12/22 22:54:54 mef Exp $
 
-BLAKE2s (tryton-4.2/trytond_stock_lot_sled-4.2.0.tar.gz) = 3c567aa1d2b0ae39e9aeccc68c0df68fddcb5c562ea6ee56b89c29575d7b3175
-SHA512 (tryton-4.2/trytond_stock_lot_sled-4.2.0.tar.gz) = 8107576f5ff4bee3e3bc94c513cf17b211a3fb0dc1de0dc6660ee7f658a1ace641f45cf90157457d5c5d7da527e3a63f16f703652c858f1beb2ad3aedad570f4
-Size (tryton-4.2/trytond_stock_lot_sled-4.2.0.tar.gz) = 27489 bytes
+BLAKE2s (tryton-6.2/trytond_stock_lot_sled-6.2.0.tar.gz) = 652db025ae2388dea7442a32235bbaf0d1038ad4b1b11e9440bbcc49334af01c
+SHA512 (tryton-6.2/trytond_stock_lot_sled-6.2.0.tar.gz) = a3c1efaea7a33448b0dfa7ef2b467348af7b19f778aa1e6803a9d480b30f4fe93c53296d0dfb0718b178e3cd645d2615e141ad2f5fe80f9d0916ba879e91c8c4
+Size (tryton-6.2/trytond_stock_lot_sled-6.2.0.tar.gz) = 34279 bytes

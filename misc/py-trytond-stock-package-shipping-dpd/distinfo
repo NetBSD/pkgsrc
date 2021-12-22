@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:59:26 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/12/22 22:54:55 mef Exp $
 
-BLAKE2s (tryton-4.2/trytond_stock_package_shipping_dpd-4.2.0.tar.gz) = 175a30fe92b87d5b9e8280c5e6ae9353668700de36d5988b4c5b7db0801f0a46
-SHA512 (tryton-4.2/trytond_stock_package_shipping_dpd-4.2.0.tar.gz) = 8a479d32d3a259b84714c9a012c4d954adff034f225e97f102cbcf9120448a35d197b8c0c15bfde595398f6779d70e3eaafa021718f210f9aef5471d38b0e470
-Size (tryton-4.2/trytond_stock_package_shipping_dpd-4.2.0.tar.gz) = 27573 bytes
+BLAKE2s (tryton-6.2/trytond_stock_package_shipping_dpd-6.2.0.tar.gz) = 7da6a0764c1832c667a0d10bf925c9f73fe8a5e6821c29200fb88ca2f3a4e320
+SHA512 (tryton-6.2/trytond_stock_package_shipping_dpd-6.2.0.tar.gz) = cd33a0aa21e20289d3aeb3f19cdcb49320213021b9e34d7b31df191a9d92179114b12dc8a66c2284f759d537cff0f70393b9ae9e868a31d53618fbcc18844fe6
+Size (tryton-6.2/trytond_stock_package_shipping_dpd-6.2.0.tar.gz) = 32913 bytes

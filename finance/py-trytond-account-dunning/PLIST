@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/12/04 21:13:00 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/22 22:54:45 mef Exp $
 ${PYSITELIB}/trytond/modules/account_dunning/__init__.py
 ${PYSITELIB}/trytond/modules/account_dunning/__init__.pyc
 ${PYSITELIB}/trytond/modules/account_dunning/__init__.pyo
@@ -16,18 +16,24 @@ ${PYSITELIB}/trytond/modules/account_dunning/locale/cs.po
 ${PYSITELIB}/trytond/modules/account_dunning/locale/de.po
 ${PYSITELIB}/trytond/modules/account_dunning/locale/es.po
 ${PYSITELIB}/trytond/modules/account_dunning/locale/es_419.po
+${PYSITELIB}/trytond/modules/account_dunning/locale/et.po
+${PYSITELIB}/trytond/modules/account_dunning/locale/fa.po
+${PYSITELIB}/trytond/modules/account_dunning/locale/fi.po
 ${PYSITELIB}/trytond/modules/account_dunning/locale/fr.po
-${PYSITELIB}/trytond/modules/account_dunning/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/account_dunning/locale/it_IT.po
-${PYSITELIB}/trytond/modules/account_dunning/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/account_dunning/locale/hu.po
+${PYSITELIB}/trytond/modules/account_dunning/locale/id.po
+${PYSITELIB}/trytond/modules/account_dunning/locale/it.po
 ${PYSITELIB}/trytond/modules/account_dunning/locale/lo.po
 ${PYSITELIB}/trytond/modules/account_dunning/locale/lt.po
 ${PYSITELIB}/trytond/modules/account_dunning/locale/nl.po
 ${PYSITELIB}/trytond/modules/account_dunning/locale/pl.po
-${PYSITELIB}/trytond/modules/account_dunning/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/account_dunning/locale/pt.po
+${PYSITELIB}/trytond/modules/account_dunning/locale/ro.po
 ${PYSITELIB}/trytond/modules/account_dunning/locale/ru.po
 ${PYSITELIB}/trytond/modules/account_dunning/locale/sl.po
+${PYSITELIB}/trytond/modules/account_dunning/locale/tr.po
 ${PYSITELIB}/trytond/modules/account_dunning/locale/zh_CN.po
+${PYSITELIB}/trytond/modules/account_dunning/message.xml
 ${PYSITELIB}/trytond/modules/account_dunning/party.py
 ${PYSITELIB}/trytond/modules/account_dunning/party.pyc
 ${PYSITELIB}/trytond/modules/account_dunning/party.pyo
@@ -36,6 +42,7 @@ ${PYSITELIB}/trytond/modules/account_dunning/tests/__init__.py
 ${PYSITELIB}/trytond/modules/account_dunning/tests/__init__.pyc
 ${PYSITELIB}/trytond/modules/account_dunning/tests/__init__.pyo
 ${PYSITELIB}/trytond/modules/account_dunning/tests/scenario_account_dunning.rst
+${PYSITELIB}/trytond/modules/account_dunning/tests/scenario_account_dunning_final.rst
 ${PYSITELIB}/trytond/modules/account_dunning/tests/test_account_dunning.py
 ${PYSITELIB}/trytond/modules/account_dunning/tests/test_account_dunning.pyc
 ${PYSITELIB}/trytond/modules/account_dunning/tests/test_account_dunning.pyo

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/12/04 21:13:05 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/22 22:54:51 mef Exp $
 ${PYSITELIB}/trytond/modules/carrier/__init__.py
 ${PYSITELIB}/trytond/modules/carrier/__init__.pyc
 ${PYSITELIB}/trytond/modules/carrier/__init__.pyo
@@ -6,23 +6,29 @@ ${PYSITELIB}/trytond/modules/carrier/carrier.py
 ${PYSITELIB}/trytond/modules/carrier/carrier.pyc
 ${PYSITELIB}/trytond/modules/carrier/carrier.pyo
 ${PYSITELIB}/trytond/modules/carrier/carrier.xml
+${PYSITELIB}/trytond/modules/carrier/icons/tryton-carrier.svg
 ${PYSITELIB}/trytond/modules/carrier/locale/bg.po
 ${PYSITELIB}/trytond/modules/carrier/locale/ca.po
 ${PYSITELIB}/trytond/modules/carrier/locale/cs.po
 ${PYSITELIB}/trytond/modules/carrier/locale/de.po
 ${PYSITELIB}/trytond/modules/carrier/locale/es.po
 ${PYSITELIB}/trytond/modules/carrier/locale/es_419.po
+${PYSITELIB}/trytond/modules/carrier/locale/et.po
+${PYSITELIB}/trytond/modules/carrier/locale/fa.po
+${PYSITELIB}/trytond/modules/carrier/locale/fi.po
 ${PYSITELIB}/trytond/modules/carrier/locale/fr.po
-${PYSITELIB}/trytond/modules/carrier/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/carrier/locale/it_IT.po
-${PYSITELIB}/trytond/modules/carrier/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/carrier/locale/hu.po
+${PYSITELIB}/trytond/modules/carrier/locale/id.po
+${PYSITELIB}/trytond/modules/carrier/locale/it.po
 ${PYSITELIB}/trytond/modules/carrier/locale/lo.po
 ${PYSITELIB}/trytond/modules/carrier/locale/lt.po
 ${PYSITELIB}/trytond/modules/carrier/locale/nl.po
 ${PYSITELIB}/trytond/modules/carrier/locale/pl.po
-${PYSITELIB}/trytond/modules/carrier/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/carrier/locale/pt.po
+${PYSITELIB}/trytond/modules/carrier/locale/ro.po
 ${PYSITELIB}/trytond/modules/carrier/locale/ru.po
 ${PYSITELIB}/trytond/modules/carrier/locale/sl.po
+${PYSITELIB}/trytond/modules/carrier/locale/tr.po
 ${PYSITELIB}/trytond/modules/carrier/locale/zh_CN.po
 ${PYSITELIB}/trytond/modules/carrier/party.py
 ${PYSITELIB}/trytond/modules/carrier/party.pyc
@@ -37,7 +43,8 @@ ${PYSITELIB}/trytond/modules/carrier/tryton.cfg
 ${PYSITELIB}/trytond/modules/carrier/view/carrier_form.xml
 ${PYSITELIB}/trytond/modules/carrier/view/carrier_tree.xml
 ${PYSITELIB}/trytond/modules/carrier/view/selection_form.xml
-${PYSITELIB}/trytond/modules/carrier/view/selection_tree.xml
+${PYSITELIB}/trytond/modules/carrier/view/selection_list.xml
+${PYSITELIB}/trytond/modules/carrier/view/selection_list_sequence.xml
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt

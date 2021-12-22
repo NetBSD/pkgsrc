@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:59:24 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/12/22 22:54:52 mef Exp $
 
-BLAKE2s (tryton-4.2/trytond_product_classification-4.2.0.tar.gz) = 7d45c4864ee13ba73169bbf14982f94ebaebf5e9dcc399c8280898324ef4c29f
-SHA512 (tryton-4.2/trytond_product_classification-4.2.0.tar.gz) = c6f9c21a960044eec94566bd16a762cdd4ebc336b47477ce3b6792e2d8b04e15c53063eb4e352a04c2d528e3cd26adf4aea2bd4e0ef67c92e98e9736a48e8f54
-Size (tryton-4.2/trytond_product_classification-4.2.0.tar.gz) = 22740 bytes
+BLAKE2s (tryton-6.2/trytond_product_classification-6.2.0.tar.gz) = d54dc2a732d5d976d9c40fb6e3c5fd3e80fe9e04087b2d447205a0b3cf03f1d9
+SHA512 (tryton-6.2/trytond_product_classification-6.2.0.tar.gz) = b3a8f8d572d99100ebde19f768dbee16a4354c7f7a12acf357b55538dd666132979263cc2f87c872cf730adfdf7e5e6c31da4ca6d066e66331b4aeb20faac90f
+Size (tryton-6.2/trytond_product_classification-6.2.0.tar.gz) = 23659 bytes

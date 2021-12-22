@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/12/04 21:13:01 rodent Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/12/22 22:54:46 mef Exp $
 ${PYSITELIB}/trytond/modules/account_payment_sepa/__init__.py
 ${PYSITELIB}/trytond/modules/account_payment_sepa/__init__.pyc
 ${PYSITELIB}/trytond/modules/account_payment_sepa/__init__.pyo
@@ -6,25 +6,34 @@ ${PYSITELIB}/trytond/modules/account_payment_sepa/account.py
 ${PYSITELIB}/trytond/modules/account_payment_sepa/account.pyc
 ${PYSITELIB}/trytond/modules/account_payment_sepa/account.pyo
 ${PYSITELIB}/trytond/modules/account_payment_sepa/account.xml
+${PYSITELIB}/trytond/modules/account_payment_sepa/exceptions.py
+${PYSITELIB}/trytond/modules/account_payment_sepa/exceptions.pyc
+${PYSITELIB}/trytond/modules/account_payment_sepa/exceptions.pyo
 ${PYSITELIB}/trytond/modules/account_payment_sepa/locale/bg.po
 ${PYSITELIB}/trytond/modules/account_payment_sepa/locale/ca.po
 ${PYSITELIB}/trytond/modules/account_payment_sepa/locale/cs.po
 ${PYSITELIB}/trytond/modules/account_payment_sepa/locale/de.po
 ${PYSITELIB}/trytond/modules/account_payment_sepa/locale/es.po
 ${PYSITELIB}/trytond/modules/account_payment_sepa/locale/es_419.po
+${PYSITELIB}/trytond/modules/account_payment_sepa/locale/et.po
+${PYSITELIB}/trytond/modules/account_payment_sepa/locale/fa.po
+${PYSITELIB}/trytond/modules/account_payment_sepa/locale/fi.po
 ${PYSITELIB}/trytond/modules/account_payment_sepa/locale/fr.po
-${PYSITELIB}/trytond/modules/account_payment_sepa/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/account_payment_sepa/locale/it_IT.po
-${PYSITELIB}/trytond/modules/account_payment_sepa/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/account_payment_sepa/locale/hu.po
+${PYSITELIB}/trytond/modules/account_payment_sepa/locale/id.po
+${PYSITELIB}/trytond/modules/account_payment_sepa/locale/it.po
 ${PYSITELIB}/trytond/modules/account_payment_sepa/locale/lo.po
 ${PYSITELIB}/trytond/modules/account_payment_sepa/locale/lt.po
 ${PYSITELIB}/trytond/modules/account_payment_sepa/locale/nl.po
 ${PYSITELIB}/trytond/modules/account_payment_sepa/locale/pl.po
-${PYSITELIB}/trytond/modules/account_payment_sepa/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/account_payment_sepa/locale/pt.po
+${PYSITELIB}/trytond/modules/account_payment_sepa/locale/ro.po
 ${PYSITELIB}/trytond/modules/account_payment_sepa/locale/ru.po
 ${PYSITELIB}/trytond/modules/account_payment_sepa/locale/sl.po
+${PYSITELIB}/trytond/modules/account_payment_sepa/locale/tr.po
 ${PYSITELIB}/trytond/modules/account_payment_sepa/locale/zh_CN.po
-${PYSITELIB}/trytond/modules/account_payment_sepa/mandate.odt
+${PYSITELIB}/trytond/modules/account_payment_sepa/mandate.fodt
+${PYSITELIB}/trytond/modules/account_payment_sepa/message.xml
 ${PYSITELIB}/trytond/modules/account_payment_sepa/party.py
 ${PYSITELIB}/trytond/modules/account_payment_sepa/party.pyc
 ${PYSITELIB}/trytond/modules/account_payment_sepa/party.pyo
@@ -70,6 +79,8 @@ ${PYSITELIB}/trytond/modules/account_payment_sepa/view/mandate_form.xml
 ${PYSITELIB}/trytond/modules/account_payment_sepa/view/mandate_list.xml
 ${PYSITELIB}/trytond/modules/account_payment_sepa/view/message_form.xml
 ${PYSITELIB}/trytond/modules/account_payment_sepa/view/message_list.xml
+${PYSITELIB}/trytond/modules/account_payment_sepa/view/party_identifier_form.xml
+${PYSITELIB}/trytond/modules/account_payment_sepa/view/party_reception_direct_debit_form.xml
 ${PYSITELIB}/trytond/modules/account_payment_sepa/view/payment_form.xml
 ${PYSITELIB}/trytond/modules/account_payment_sepa/view/payment_group_form.xml
 ${PYSITELIB}/trytond/modules/account_payment_sepa/view/payment_journal_form.xml

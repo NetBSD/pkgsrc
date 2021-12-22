@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/12/04 21:13:02 rodent Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/12/22 22:54:47 mef Exp $
 ${PYSITELIB}/trytond/modules/analytic_account/__init__.py
 ${PYSITELIB}/trytond/modules/analytic_account/__init__.pyc
 ${PYSITELIB}/trytond/modules/analytic_account/__init__.pyo
@@ -7,6 +7,9 @@ ${PYSITELIB}/trytond/modules/analytic_account/account.pyc
 ${PYSITELIB}/trytond/modules/analytic_account/account.pyo
 ${PYSITELIB}/trytond/modules/analytic_account/account.xml
 ${PYSITELIB}/trytond/modules/analytic_account/analytic_account.xml
+${PYSITELIB}/trytond/modules/analytic_account/exceptions.py
+${PYSITELIB}/trytond/modules/analytic_account/exceptions.pyc
+${PYSITELIB}/trytond/modules/analytic_account/exceptions.pyo
 ${PYSITELIB}/trytond/modules/analytic_account/line.py
 ${PYSITELIB}/trytond/modules/analytic_account/line.pyc
 ${PYSITELIB}/trytond/modules/analytic_account/line.pyo
@@ -17,18 +20,28 @@ ${PYSITELIB}/trytond/modules/analytic_account/locale/cs.po
 ${PYSITELIB}/trytond/modules/analytic_account/locale/de.po
 ${PYSITELIB}/trytond/modules/analytic_account/locale/es.po
 ${PYSITELIB}/trytond/modules/analytic_account/locale/es_419.po
+${PYSITELIB}/trytond/modules/analytic_account/locale/et.po
+${PYSITELIB}/trytond/modules/analytic_account/locale/fa.po
+${PYSITELIB}/trytond/modules/analytic_account/locale/fi.po
 ${PYSITELIB}/trytond/modules/analytic_account/locale/fr.po
-${PYSITELIB}/trytond/modules/analytic_account/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/analytic_account/locale/it_IT.po
-${PYSITELIB}/trytond/modules/analytic_account/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/analytic_account/locale/hu.po
+${PYSITELIB}/trytond/modules/analytic_account/locale/id.po
+${PYSITELIB}/trytond/modules/analytic_account/locale/it.po
 ${PYSITELIB}/trytond/modules/analytic_account/locale/lo.po
 ${PYSITELIB}/trytond/modules/analytic_account/locale/lt.po
 ${PYSITELIB}/trytond/modules/analytic_account/locale/nl.po
 ${PYSITELIB}/trytond/modules/analytic_account/locale/pl.po
-${PYSITELIB}/trytond/modules/analytic_account/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/analytic_account/locale/pt.po
+${PYSITELIB}/trytond/modules/analytic_account/locale/ro.po
 ${PYSITELIB}/trytond/modules/analytic_account/locale/ru.po
 ${PYSITELIB}/trytond/modules/analytic_account/locale/sl.po
+${PYSITELIB}/trytond/modules/analytic_account/locale/tr.po
 ${PYSITELIB}/trytond/modules/analytic_account/locale/zh_CN.po
+${PYSITELIB}/trytond/modules/analytic_account/message.xml
+${PYSITELIB}/trytond/modules/analytic_account/rule.py
+${PYSITELIB}/trytond/modules/analytic_account/rule.pyc
+${PYSITELIB}/trytond/modules/analytic_account/rule.pyo
+${PYSITELIB}/trytond/modules/analytic_account/rule.xml
 ${PYSITELIB}/trytond/modules/analytic_account/tests/__init__.py
 ${PYSITELIB}/trytond/modules/analytic_account/tests/__init__.pyc
 ${PYSITELIB}/trytond/modules/analytic_account/tests/__init__.pyo
@@ -51,6 +64,8 @@ ${PYSITELIB}/trytond/modules/analytic_account/view/line_tree.xml
 ${PYSITELIB}/trytond/modules/analytic_account/view/move_line_form.xml
 ${PYSITELIB}/trytond/modules/analytic_account/view/move_line_list.xml
 ${PYSITELIB}/trytond/modules/analytic_account/view/open_chart_start_form.xml
+${PYSITELIB}/trytond/modules/analytic_account/view/rule_form.xml
+${PYSITELIB}/trytond/modules/analytic_account/view/rule_list.xml
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt

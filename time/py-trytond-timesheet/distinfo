@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:24:36 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/12/22 22:54:56 mef Exp $
 
-BLAKE2s (tryton-4.2/trytond_timesheet-4.2.0.tar.gz) = b6c26c101c6d0200311d0b60e4e19ca25395dabff94c1cc3a8e5d8c2240726f7
-SHA512 (tryton-4.2/trytond_timesheet-4.2.0.tar.gz) = 8af4b16648d50218fb3badae745d670b927a6b881ed2f4e9943902d70f89a9c7210a39279d70ba7437618c007fc36dddc3de3dba51fcabd75d43cdae546e6164
-Size (tryton-4.2/trytond_timesheet-4.2.0.tar.gz) = 39324 bytes
+BLAKE2s (tryton-6.2/trytond_timesheet-6.2.0.tar.gz) = 9aeef8a00a777566695468ac053e2c3d5d9a372b11e7c90be9bd04058785be97
+SHA512 (tryton-6.2/trytond_timesheet-6.2.0.tar.gz) = b690322a7819e9bf1d2f8d6552922aae7c0c81ce0a4edc16a320863558b37fc8b98d2f105c0fcc7bd19a3a011f2e75d203987eef0d35d84acec7e270cebba812
+Size (tryton-6.2/trytond_timesheet-6.2.0.tar.gz) = 51495 bytes

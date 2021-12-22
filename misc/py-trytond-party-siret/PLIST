@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/12/04 21:13:06 rodent Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/12/22 22:54:52 mef Exp $
 ${PYSITELIB}/trytond/modules/party_siret/__init__.py
 ${PYSITELIB}/trytond/modules/party_siret/__init__.pyc
 ${PYSITELIB}/trytond/modules/party_siret/__init__.pyo
@@ -6,27 +6,36 @@ ${PYSITELIB}/trytond/modules/party_siret/address.py
 ${PYSITELIB}/trytond/modules/party_siret/address.pyc
 ${PYSITELIB}/trytond/modules/party_siret/address.pyo
 ${PYSITELIB}/trytond/modules/party_siret/address.xml
+${PYSITELIB}/trytond/modules/party_siret/exceptions.py
+${PYSITELIB}/trytond/modules/party_siret/exceptions.pyc
+${PYSITELIB}/trytond/modules/party_siret/exceptions.pyo
 ${PYSITELIB}/trytond/modules/party_siret/locale/bg.po
 ${PYSITELIB}/trytond/modules/party_siret/locale/ca.po
 ${PYSITELIB}/trytond/modules/party_siret/locale/cs.po
 ${PYSITELIB}/trytond/modules/party_siret/locale/de.po
 ${PYSITELIB}/trytond/modules/party_siret/locale/es.po
 ${PYSITELIB}/trytond/modules/party_siret/locale/es_419.po
+${PYSITELIB}/trytond/modules/party_siret/locale/et.po
+${PYSITELIB}/trytond/modules/party_siret/locale/fa.po
+${PYSITELIB}/trytond/modules/party_siret/locale/fi.po
 ${PYSITELIB}/trytond/modules/party_siret/locale/fr.po
-${PYSITELIB}/trytond/modules/party_siret/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/party_siret/locale/it_IT.po
-${PYSITELIB}/trytond/modules/party_siret/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/party_siret/locale/hu.po
+${PYSITELIB}/trytond/modules/party_siret/locale/id.po
+${PYSITELIB}/trytond/modules/party_siret/locale/it.po
 ${PYSITELIB}/trytond/modules/party_siret/locale/lo.po
 ${PYSITELIB}/trytond/modules/party_siret/locale/lt.po
 ${PYSITELIB}/trytond/modules/party_siret/locale/nl.po
 ${PYSITELIB}/trytond/modules/party_siret/locale/pl.po
-${PYSITELIB}/trytond/modules/party_siret/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/party_siret/locale/pt.po
+${PYSITELIB}/trytond/modules/party_siret/locale/ro.po
 ${PYSITELIB}/trytond/modules/party_siret/locale/ru.po
 ${PYSITELIB}/trytond/modules/party_siret/locale/sl.po
+${PYSITELIB}/trytond/modules/party_siret/locale/tr.po
 ${PYSITELIB}/trytond/modules/party_siret/locale/zh_CN.po
 ${PYSITELIB}/trytond/modules/party_siret/luhn.py
 ${PYSITELIB}/trytond/modules/party_siret/luhn.pyc
 ${PYSITELIB}/trytond/modules/party_siret/luhn.pyo
+${PYSITELIB}/trytond/modules/party_siret/message.xml
 ${PYSITELIB}/trytond/modules/party_siret/party.py
 ${PYSITELIB}/trytond/modules/party_siret/party.pyc
 ${PYSITELIB}/trytond/modules/party_siret/party.pyo

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/12/04 21:13:05 rodent Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/12/22 22:54:52 mef Exp $
 ${PYSITELIB}/trytond/modules/party/__init__.py
 ${PYSITELIB}/trytond/modules/party/__init__.pyc
 ${PYSITELIB}/trytond/modules/party/__init__.pyo
@@ -18,26 +18,39 @@ ${PYSITELIB}/trytond/modules/party/contact_mechanism.py
 ${PYSITELIB}/trytond/modules/party/contact_mechanism.pyc
 ${PYSITELIB}/trytond/modules/party/contact_mechanism.pyo
 ${PYSITELIB}/trytond/modules/party/contact_mechanism.xml
+${PYSITELIB}/trytond/modules/party/exceptions.py
+${PYSITELIB}/trytond/modules/party/exceptions.pyc
+${PYSITELIB}/trytond/modules/party/exceptions.pyo
 ${PYSITELIB}/trytond/modules/party/icons/tryton-party.svg
-${PYSITELIB}/trytond/modules/party/label.odt
+${PYSITELIB}/trytond/modules/party/ir.py
+${PYSITELIB}/trytond/modules/party/ir.pyc
+${PYSITELIB}/trytond/modules/party/ir.pyo
+${PYSITELIB}/trytond/modules/party/ir.xml
+${PYSITELIB}/trytond/modules/party/label.fodt
 ${PYSITELIB}/trytond/modules/party/locale/bg.po
 ${PYSITELIB}/trytond/modules/party/locale/ca.po
 ${PYSITELIB}/trytond/modules/party/locale/cs.po
 ${PYSITELIB}/trytond/modules/party/locale/de.po
 ${PYSITELIB}/trytond/modules/party/locale/es.po
 ${PYSITELIB}/trytond/modules/party/locale/es_419.po
+${PYSITELIB}/trytond/modules/party/locale/et.po
+${PYSITELIB}/trytond/modules/party/locale/fa.po
+${PYSITELIB}/trytond/modules/party/locale/fi.po
 ${PYSITELIB}/trytond/modules/party/locale/fr.po
-${PYSITELIB}/trytond/modules/party/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/party/locale/it_IT.po
-${PYSITELIB}/trytond/modules/party/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/party/locale/hu.po
+${PYSITELIB}/trytond/modules/party/locale/id.po
+${PYSITELIB}/trytond/modules/party/locale/it.po
 ${PYSITELIB}/trytond/modules/party/locale/lo.po
 ${PYSITELIB}/trytond/modules/party/locale/lt.po
 ${PYSITELIB}/trytond/modules/party/locale/nl.po
 ${PYSITELIB}/trytond/modules/party/locale/pl.po
-${PYSITELIB}/trytond/modules/party/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/party/locale/pt.po
+${PYSITELIB}/trytond/modules/party/locale/ro.po
 ${PYSITELIB}/trytond/modules/party/locale/ru.po
 ${PYSITELIB}/trytond/modules/party/locale/sl.po
+${PYSITELIB}/trytond/modules/party/locale/tr.po
 ${PYSITELIB}/trytond/modules/party/locale/zh_CN.po
+${PYSITELIB}/trytond/modules/party/message.xml
 ${PYSITELIB}/trytond/modules/party/party.py
 ${PYSITELIB}/trytond/modules/party/party.pyc
 ${PYSITELIB}/trytond/modules/party/party.pyo
@@ -45,6 +58,8 @@ ${PYSITELIB}/trytond/modules/party/party.xml
 ${PYSITELIB}/trytond/modules/party/tests/__init__.py
 ${PYSITELIB}/trytond/modules/party/tests/__init__.pyc
 ${PYSITELIB}/trytond/modules/party/tests/__init__.pyo
+${PYSITELIB}/trytond/modules/party/tests/scenario_party_erase.rst
+${PYSITELIB}/trytond/modules/party/tests/scenario_party_phone_number.rst
 ${PYSITELIB}/trytond/modules/party/tests/scenario_party_replace.rst
 ${PYSITELIB}/trytond/modules/party/tests/test_party.py
 ${PYSITELIB}/trytond/modules/party/tests/test_party.pyc
@@ -53,6 +68,8 @@ ${PYSITELIB}/trytond/modules/party/tryton.cfg
 ${PYSITELIB}/trytond/modules/party/view/address_form.xml
 ${PYSITELIB}/trytond/modules/party/view/address_format_form.xml
 ${PYSITELIB}/trytond/modules/party/view/address_format_list.xml
+${PYSITELIB}/trytond/modules/party/view/address_subdivision_type_form.xml
+${PYSITELIB}/trytond/modules/party/view/address_subdivision_type_list.xml
 ${PYSITELIB}/trytond/modules/party/view/address_tree.xml
 ${PYSITELIB}/trytond/modules/party/view/address_tree_sequence.xml
 ${PYSITELIB}/trytond/modules/party/view/category_form.xml
@@ -63,6 +80,8 @@ ${PYSITELIB}/trytond/modules/party/view/configuration_form.xml
 ${PYSITELIB}/trytond/modules/party/view/contact_mechanism_form.xml
 ${PYSITELIB}/trytond/modules/party/view/contact_mechanism_tree.xml
 ${PYSITELIB}/trytond/modules/party/view/contact_mechanism_tree_sequence.xml
+${PYSITELIB}/trytond/modules/party/view/email_template_form.xml
+${PYSITELIB}/trytond/modules/party/view/erase_ask_form.xml
 ${PYSITELIB}/trytond/modules/party/view/identifier_form.xml
 ${PYSITELIB}/trytond/modules/party/view/identifier_list.xml
 ${PYSITELIB}/trytond/modules/party/view/identifier_list_sequence.xml

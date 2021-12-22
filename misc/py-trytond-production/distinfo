@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:59:24 nia Exp $
+$NetBSD: distinfo,v 1.7 2021/12/22 22:54:53 mef Exp $
 
-BLAKE2s (tryton-4.2/trytond_production-4.2.0.tar.gz) = b09135a1ece0847c889b870fc613066e74a432d138f27122eaeb11ab9023a972
-SHA512 (tryton-4.2/trytond_production-4.2.0.tar.gz) = d673520bb47cf0d8f86ba9a2a5cc330eb26f8f7e173b14e16395b16625890c6c292db48fb2b78850556aa15e4e7cff4ae3608842866a02ee96805272c7369f54
-Size (tryton-4.2/trytond_production-4.2.0.tar.gz) = 52075 bytes
+BLAKE2s (tryton-6.2/trytond_production-6.2.0.tar.gz) = 61beaffd0691fbac1377411fef9d9571133ae1ff078986d7083b46900797d251
+SHA512 (tryton-6.2/trytond_production-6.2.0.tar.gz) = 98aa90acede772aa18f4556484b82f7488ca4812693d26070932d16de574cc053368322bea00fc9ce7ffcd1832c9fb975fa29cd618cbfd832dae7cb3e9a62f10
+Size (tryton-6.2/trytond_production-6.2.0.tar.gz) = 67429 bytes

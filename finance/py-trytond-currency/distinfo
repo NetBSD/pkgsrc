@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:26:09 nia Exp $
+$NetBSD: distinfo,v 1.10 2021/12/22 22:54:48 mef Exp $
 
-BLAKE2s (tryton-4.2/trytond_currency-4.2.0.tar.gz) = ef6d7c250b3acb5e73d5cff53d4b7af6e350da79b7e0301a1b18dfb77096dae9
-SHA512 (tryton-4.2/trytond_currency-4.2.0.tar.gz) = bf2a63da688b432b3d00258af28aea9851f69417b83a90ce33c7241c3eb89b26bb0881c31ca0a985264f78b72ba6988715494bd3a276db989ce07002f2cb4306
-Size (tryton-4.2/trytond_currency-4.2.0.tar.gz) = 72329 bytes
+BLAKE2s (tryton-6.2/trytond_currency-6.2.0.tar.gz) = d5df1afb0a7c78d0ff54750b41dffe8425faef0329844e9b017bd5dc27e528e8
+SHA512 (tryton-6.2/trytond_currency-6.2.0.tar.gz) = 1338d84859bfea32b294a4108fac28bdeb198e0996554ca3e892df8677e415ecabdd63397d6a58a33ad5e745b5f3aa962c7b205faff8a4dbf60a0534e76456cd
+Size (tryton-6.2/trytond_currency-6.2.0.tar.gz) = 51009 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/12/04 21:13:06 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/22 22:54:53 mef Exp $
 ${PYSITELIB}/trytond/modules/production_routing/__init__.py
 ${PYSITELIB}/trytond/modules/production_routing/__init__.pyc
 ${PYSITELIB}/trytond/modules/production_routing/__init__.pyo
@@ -8,17 +8,22 @@ ${PYSITELIB}/trytond/modules/production_routing/locale/cs.po
 ${PYSITELIB}/trytond/modules/production_routing/locale/de.po
 ${PYSITELIB}/trytond/modules/production_routing/locale/es.po
 ${PYSITELIB}/trytond/modules/production_routing/locale/es_419.po
+${PYSITELIB}/trytond/modules/production_routing/locale/et.po
+${PYSITELIB}/trytond/modules/production_routing/locale/fa.po
+${PYSITELIB}/trytond/modules/production_routing/locale/fi.po
 ${PYSITELIB}/trytond/modules/production_routing/locale/fr.po
-${PYSITELIB}/trytond/modules/production_routing/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/production_routing/locale/it_IT.po
-${PYSITELIB}/trytond/modules/production_routing/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/production_routing/locale/hu.po
+${PYSITELIB}/trytond/modules/production_routing/locale/id.po
+${PYSITELIB}/trytond/modules/production_routing/locale/it.po
 ${PYSITELIB}/trytond/modules/production_routing/locale/lo.po
 ${PYSITELIB}/trytond/modules/production_routing/locale/lt.po
 ${PYSITELIB}/trytond/modules/production_routing/locale/nl.po
 ${PYSITELIB}/trytond/modules/production_routing/locale/pl.po
-${PYSITELIB}/trytond/modules/production_routing/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/production_routing/locale/pt.po
+${PYSITELIB}/trytond/modules/production_routing/locale/ro.po
 ${PYSITELIB}/trytond/modules/production_routing/locale/ru.po
 ${PYSITELIB}/trytond/modules/production_routing/locale/sl.po
+${PYSITELIB}/trytond/modules/production_routing/locale/tr.po
 ${PYSITELIB}/trytond/modules/production_routing/locale/zh_CN.po
 ${PYSITELIB}/trytond/modules/production_routing/product.py
 ${PYSITELIB}/trytond/modules/production_routing/product.pyc
@@ -35,6 +40,7 @@ ${PYSITELIB}/trytond/modules/production_routing/routing.xml
 ${PYSITELIB}/trytond/modules/production_routing/tests/__init__.py
 ${PYSITELIB}/trytond/modules/production_routing/tests/__init__.pyc
 ${PYSITELIB}/trytond/modules/production_routing/tests/__init__.pyo
+${PYSITELIB}/trytond/modules/production_routing/tests/scenario_stock_supply_production.rst
 ${PYSITELIB}/trytond/modules/production_routing/tests/test_production_routing.py
 ${PYSITELIB}/trytond/modules/production_routing/tests/test_production_routing.pyc
 ${PYSITELIB}/trytond/modules/production_routing/tests/test_production_routing.pyo
