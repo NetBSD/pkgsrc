@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2016/12/04 21:13:00 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/23 16:12:39 mef Exp $
 ${PYSITELIB}/trytond/modules/account_deposit/__init__.py
 ${PYSITELIB}/trytond/modules/account_deposit/__init__.pyc
 ${PYSITELIB}/trytond/modules/account_deposit/__init__.pyo
 ${PYSITELIB}/trytond/modules/account_deposit/account.py
 ${PYSITELIB}/trytond/modules/account_deposit/account.pyc
 ${PYSITELIB}/trytond/modules/account_deposit/account.pyo
+${PYSITELIB}/trytond/modules/account_deposit/account.xml
+${PYSITELIB}/trytond/modules/account_deposit/exceptions.py
+${PYSITELIB}/trytond/modules/account_deposit/exceptions.pyc
+${PYSITELIB}/trytond/modules/account_deposit/exceptions.pyo
 ${PYSITELIB}/trytond/modules/account_deposit/invoice.py
 ${PYSITELIB}/trytond/modules/account_deposit/invoice.pyc
 ${PYSITELIB}/trytond/modules/account_deposit/invoice.pyo
@@ -15,18 +19,24 @@ ${PYSITELIB}/trytond/modules/account_deposit/locale/cs.po
 ${PYSITELIB}/trytond/modules/account_deposit/locale/de.po
 ${PYSITELIB}/trytond/modules/account_deposit/locale/es.po
 ${PYSITELIB}/trytond/modules/account_deposit/locale/es_419.po
+${PYSITELIB}/trytond/modules/account_deposit/locale/et.po
+${PYSITELIB}/trytond/modules/account_deposit/locale/fa.po
+${PYSITELIB}/trytond/modules/account_deposit/locale/fi.po
 ${PYSITELIB}/trytond/modules/account_deposit/locale/fr.po
-${PYSITELIB}/trytond/modules/account_deposit/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/account_deposit/locale/it_IT.po
-${PYSITELIB}/trytond/modules/account_deposit/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/account_deposit/locale/hu.po
+${PYSITELIB}/trytond/modules/account_deposit/locale/id.po
+${PYSITELIB}/trytond/modules/account_deposit/locale/it.po
 ${PYSITELIB}/trytond/modules/account_deposit/locale/lo.po
 ${PYSITELIB}/trytond/modules/account_deposit/locale/lt.po
 ${PYSITELIB}/trytond/modules/account_deposit/locale/nl.po
 ${PYSITELIB}/trytond/modules/account_deposit/locale/pl.po
-${PYSITELIB}/trytond/modules/account_deposit/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/account_deposit/locale/pt.po
+${PYSITELIB}/trytond/modules/account_deposit/locale/ro.po
 ${PYSITELIB}/trytond/modules/account_deposit/locale/ru.po
 ${PYSITELIB}/trytond/modules/account_deposit/locale/sl.po
+${PYSITELIB}/trytond/modules/account_deposit/locale/tr.po
 ${PYSITELIB}/trytond/modules/account_deposit/locale/zh_CN.po
+${PYSITELIB}/trytond/modules/account_deposit/message.xml
 ${PYSITELIB}/trytond/modules/account_deposit/minimal_chart_bg.xml
 ${PYSITELIB}/trytond/modules/account_deposit/minimal_chart_ca.xml
 ${PYSITELIB}/trytond/modules/account_deposit/minimal_chart_de.xml
@@ -52,7 +62,9 @@ ${PYSITELIB}/trytond/modules/account_deposit/tests/tools.py
 ${PYSITELIB}/trytond/modules/account_deposit/tests/tools.pyc
 ${PYSITELIB}/trytond/modules/account_deposit/tests/tools.pyo
 ${PYSITELIB}/trytond/modules/account_deposit/tryton.cfg
+${PYSITELIB}/trytond/modules/account_deposit/view/account_type_form.xml
 ${PYSITELIB}/trytond/modules/account_deposit/view/invoice_form.xml
+${PYSITELIB}/trytond/modules/account_deposit/view/move_line_list_deposit.xml
 ${PYSITELIB}/trytond/modules/account_deposit/view/party_form.xml
 ${PYSITELIB}/trytond/modules/account_deposit/view/party_tree.xml
 ${PYSITELIB}/trytond/modules/account_deposit/view/recall_deposit_form.xml

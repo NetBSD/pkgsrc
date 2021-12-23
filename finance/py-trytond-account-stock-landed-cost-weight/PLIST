@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/12/04 21:13:01 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/23 16:12:41 mef Exp $
 ${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/__init__.py
 ${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/__init__.pyc
 ${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/__init__.pyo
@@ -11,17 +11,22 @@ ${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/locale/cs.po
 ${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/locale/de.po
 ${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/locale/es.po
 ${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/locale/es_419.po
+${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/locale/et.po
+${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/locale/fa.po
+${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/locale/fi.po
 ${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/locale/fr.po
-${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/locale/it_IT.po
-${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/locale/hu.po
+${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/locale/id.po
+${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/locale/it.po
 ${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/locale/lo.po
 ${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/locale/lt.po
 ${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/locale/nl.po
 ${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/locale/pl.po
-${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/locale/pt.po
+${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/locale/ro.po
 ${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/locale/ru.po
 ${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/locale/sl.po
+${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/locale/tr.po
 ${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/locale/zh_CN.po
 ${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/tests/__init__.py
 ${PYSITELIB}/trytond/modules/account_stock_landed_cost_weight/tests/__init__.pyc
