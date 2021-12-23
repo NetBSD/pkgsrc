@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/12/04 21:13:04 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/23 16:12:42 mef Exp $
 ${PYSITELIB}/trytond/modules/sale_price_list/__init__.py
 ${PYSITELIB}/trytond/modules/sale_price_list/__init__.pyc
 ${PYSITELIB}/trytond/modules/sale_price_list/__init__.pyo
@@ -12,17 +12,22 @@ ${PYSITELIB}/trytond/modules/sale_price_list/locale/cs.po
 ${PYSITELIB}/trytond/modules/sale_price_list/locale/de.po
 ${PYSITELIB}/trytond/modules/sale_price_list/locale/es.po
 ${PYSITELIB}/trytond/modules/sale_price_list/locale/es_419.po
+${PYSITELIB}/trytond/modules/sale_price_list/locale/et.po
+${PYSITELIB}/trytond/modules/sale_price_list/locale/fa.po
+${PYSITELIB}/trytond/modules/sale_price_list/locale/fi.po
 ${PYSITELIB}/trytond/modules/sale_price_list/locale/fr.po
-${PYSITELIB}/trytond/modules/sale_price_list/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/sale_price_list/locale/it_IT.po
-${PYSITELIB}/trytond/modules/sale_price_list/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/sale_price_list/locale/hu.po
+${PYSITELIB}/trytond/modules/sale_price_list/locale/id.po
+${PYSITELIB}/trytond/modules/sale_price_list/locale/it.po
 ${PYSITELIB}/trytond/modules/sale_price_list/locale/lo.po
 ${PYSITELIB}/trytond/modules/sale_price_list/locale/lt.po
 ${PYSITELIB}/trytond/modules/sale_price_list/locale/nl.po
 ${PYSITELIB}/trytond/modules/sale_price_list/locale/pl.po
-${PYSITELIB}/trytond/modules/sale_price_list/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/sale_price_list/locale/pt.po
+${PYSITELIB}/trytond/modules/sale_price_list/locale/ro.po
 ${PYSITELIB}/trytond/modules/sale_price_list/locale/ru.po
 ${PYSITELIB}/trytond/modules/sale_price_list/locale/sl.po
+${PYSITELIB}/trytond/modules/sale_price_list/locale/tr.po
 ${PYSITELIB}/trytond/modules/sale_price_list/locale/zh_CN.po
 ${PYSITELIB}/trytond/modules/sale_price_list/party.py
 ${PYSITELIB}/trytond/modules/sale_price_list/party.pyc
@@ -31,6 +36,7 @@ ${PYSITELIB}/trytond/modules/sale_price_list/party.xml
 ${PYSITELIB}/trytond/modules/sale_price_list/product.py
 ${PYSITELIB}/trytond/modules/sale_price_list/product.pyc
 ${PYSITELIB}/trytond/modules/sale_price_list/product.pyo
+${PYSITELIB}/trytond/modules/sale_price_list/product.xml
 ${PYSITELIB}/trytond/modules/sale_price_list/sale.py
 ${PYSITELIB}/trytond/modules/sale_price_list/sale.pyc
 ${PYSITELIB}/trytond/modules/sale_price_list/sale.pyo
@@ -45,6 +51,7 @@ ${PYSITELIB}/trytond/modules/sale_price_list/tests/test_sale_price_list.pyo
 ${PYSITELIB}/trytond/modules/sale_price_list/tryton.cfg
 ${PYSITELIB}/trytond/modules/sale_price_list/view/configuration_form.xml
 ${PYSITELIB}/trytond/modules/sale_price_list/view/party_form.xml
+${PYSITELIB}/trytond/modules/sale_price_list/view/product_sale_context_form.xml
 ${PYSITELIB}/trytond/modules/sale_price_list/view/sale_form.xml
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt

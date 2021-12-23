@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/12/04 21:13:00 rodent Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/12/23 16:12:39 mef Exp $
 ${PYSITELIB}/trytond/modules/account_asset/__init__.py
 ${PYSITELIB}/trytond/modules/account_asset/__init__.pyc
 ${PYSITELIB}/trytond/modules/account_asset/__init__.pyo
@@ -10,7 +10,10 @@ ${PYSITELIB}/trytond/modules/account_asset/asset.py
 ${PYSITELIB}/trytond/modules/account_asset/asset.pyc
 ${PYSITELIB}/trytond/modules/account_asset/asset.pyo
 ${PYSITELIB}/trytond/modules/account_asset/asset.xml
-${PYSITELIB}/trytond/modules/account_asset/asset_table.odt
+${PYSITELIB}/trytond/modules/account_asset/asset_table.fodt
+${PYSITELIB}/trytond/modules/account_asset/exceptions.py
+${PYSITELIB}/trytond/modules/account_asset/exceptions.pyc
+${PYSITELIB}/trytond/modules/account_asset/exceptions.pyo
 ${PYSITELIB}/trytond/modules/account_asset/invoice.py
 ${PYSITELIB}/trytond/modules/account_asset/invoice.pyc
 ${PYSITELIB}/trytond/modules/account_asset/invoice.pyo
@@ -21,18 +24,24 @@ ${PYSITELIB}/trytond/modules/account_asset/locale/cs.po
 ${PYSITELIB}/trytond/modules/account_asset/locale/de.po
 ${PYSITELIB}/trytond/modules/account_asset/locale/es.po
 ${PYSITELIB}/trytond/modules/account_asset/locale/es_419.po
+${PYSITELIB}/trytond/modules/account_asset/locale/et.po
+${PYSITELIB}/trytond/modules/account_asset/locale/fa.po
+${PYSITELIB}/trytond/modules/account_asset/locale/fi.po
 ${PYSITELIB}/trytond/modules/account_asset/locale/fr.po
-${PYSITELIB}/trytond/modules/account_asset/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/account_asset/locale/it_IT.po
-${PYSITELIB}/trytond/modules/account_asset/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/account_asset/locale/hu.po
+${PYSITELIB}/trytond/modules/account_asset/locale/id.po
+${PYSITELIB}/trytond/modules/account_asset/locale/it.po
 ${PYSITELIB}/trytond/modules/account_asset/locale/lo.po
 ${PYSITELIB}/trytond/modules/account_asset/locale/lt.po
 ${PYSITELIB}/trytond/modules/account_asset/locale/nl.po
 ${PYSITELIB}/trytond/modules/account_asset/locale/pl.po
-${PYSITELIB}/trytond/modules/account_asset/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/account_asset/locale/pt.po
+${PYSITELIB}/trytond/modules/account_asset/locale/ro.po
 ${PYSITELIB}/trytond/modules/account_asset/locale/ru.po
 ${PYSITELIB}/trytond/modules/account_asset/locale/sl.po
+${PYSITELIB}/trytond/modules/account_asset/locale/tr.po
 ${PYSITELIB}/trytond/modules/account_asset/locale/zh_CN.po
+${PYSITELIB}/trytond/modules/account_asset/message.xml
 ${PYSITELIB}/trytond/modules/account_asset/minimal_chart_bg.xml
 ${PYSITELIB}/trytond/modules/account_asset/minimal_chart_ca.xml
 ${PYSITELIB}/trytond/modules/account_asset/minimal_chart_de.xml
@@ -54,6 +63,8 @@ ${PYSITELIB}/trytond/modules/account_asset/tests/__init__.py
 ${PYSITELIB}/trytond/modules/account_asset/tests/__init__.pyc
 ${PYSITELIB}/trytond/modules/account_asset/tests/__init__.pyo
 ${PYSITELIB}/trytond/modules/account_asset/tests/scenario_account_asset.rst
+${PYSITELIB}/trytond/modules/account_asset/tests/scenario_account_asset_depreciated.rst
+${PYSITELIB}/trytond/modules/account_asset/tests/scenario_purchase_asset.rst
 ${PYSITELIB}/trytond/modules/account_asset/tests/test_account_asset.py
 ${PYSITELIB}/trytond/modules/account_asset/tests/test_account_asset.pyc
 ${PYSITELIB}/trytond/modules/account_asset/tests/test_account_asset.pyo
@@ -61,6 +72,7 @@ ${PYSITELIB}/trytond/modules/account_asset/tests/tools.py
 ${PYSITELIB}/trytond/modules/account_asset/tests/tools.pyc
 ${PYSITELIB}/trytond/modules/account_asset/tests/tools.pyo
 ${PYSITELIB}/trytond/modules/account_asset/tryton.cfg
+${PYSITELIB}/trytond/modules/account_asset/view/account_type_form.xml
 ${PYSITELIB}/trytond/modules/account_asset/view/asset_create_moves_start_form.xml
 ${PYSITELIB}/trytond/modules/account_asset/view/asset_form.xml
 ${PYSITELIB}/trytond/modules/account_asset/view/asset_line_form.xml
@@ -72,6 +84,8 @@ ${PYSITELIB}/trytond/modules/account_asset/view/category_form.xml
 ${PYSITELIB}/trytond/modules/account_asset/view/configuration_form.xml
 ${PYSITELIB}/trytond/modules/account_asset/view/invoice_line_form.xml
 ${PYSITELIB}/trytond/modules/account_asset/view/print_depreciation_table_start.xml
+${PYSITELIB}/trytond/modules/account_asset/view/revision_form.xml
+${PYSITELIB}/trytond/modules/account_asset/view/revision_tree.xml
 ${PYSITELIB}/trytond/modules/account_asset/view/template_form.xml
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
