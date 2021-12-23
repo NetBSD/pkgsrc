@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/12/04 21:13:03 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/23 16:12:42 mef Exp $
 ${PYSITELIB}/trytond/modules/sale_opportunity/__init__.py
 ${PYSITELIB}/trytond/modules/sale_opportunity/__init__.pyc
 ${PYSITELIB}/trytond/modules/sale_opportunity/__init__.pyo
@@ -12,24 +12,31 @@ ${PYSITELIB}/trytond/modules/sale_opportunity/configuration.py
 ${PYSITELIB}/trytond/modules/sale_opportunity/configuration.pyc
 ${PYSITELIB}/trytond/modules/sale_opportunity/configuration.pyo
 ${PYSITELIB}/trytond/modules/sale_opportunity/configuration.xml
+${PYSITELIB}/trytond/modules/sale_opportunity/icons/tryton-sale-opportunity.svg
 ${PYSITELIB}/trytond/modules/sale_opportunity/locale/bg.po
 ${PYSITELIB}/trytond/modules/sale_opportunity/locale/ca.po
 ${PYSITELIB}/trytond/modules/sale_opportunity/locale/cs.po
 ${PYSITELIB}/trytond/modules/sale_opportunity/locale/de.po
 ${PYSITELIB}/trytond/modules/sale_opportunity/locale/es.po
 ${PYSITELIB}/trytond/modules/sale_opportunity/locale/es_419.po
+${PYSITELIB}/trytond/modules/sale_opportunity/locale/et.po
+${PYSITELIB}/trytond/modules/sale_opportunity/locale/fa.po
+${PYSITELIB}/trytond/modules/sale_opportunity/locale/fi.po
 ${PYSITELIB}/trytond/modules/sale_opportunity/locale/fr.po
-${PYSITELIB}/trytond/modules/sale_opportunity/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/sale_opportunity/locale/it_IT.po
-${PYSITELIB}/trytond/modules/sale_opportunity/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/sale_opportunity/locale/hu.po
+${PYSITELIB}/trytond/modules/sale_opportunity/locale/id.po
+${PYSITELIB}/trytond/modules/sale_opportunity/locale/it.po
 ${PYSITELIB}/trytond/modules/sale_opportunity/locale/lo.po
 ${PYSITELIB}/trytond/modules/sale_opportunity/locale/lt.po
 ${PYSITELIB}/trytond/modules/sale_opportunity/locale/nl.po
 ${PYSITELIB}/trytond/modules/sale_opportunity/locale/pl.po
-${PYSITELIB}/trytond/modules/sale_opportunity/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/sale_opportunity/locale/pt.po
+${PYSITELIB}/trytond/modules/sale_opportunity/locale/ro.po
 ${PYSITELIB}/trytond/modules/sale_opportunity/locale/ru.po
 ${PYSITELIB}/trytond/modules/sale_opportunity/locale/sl.po
+${PYSITELIB}/trytond/modules/sale_opportunity/locale/tr.po
 ${PYSITELIB}/trytond/modules/sale_opportunity/locale/zh_CN.po
+${PYSITELIB}/trytond/modules/sale_opportunity/message.xml
 ${PYSITELIB}/trytond/modules/sale_opportunity/opportunity.py
 ${PYSITELIB}/trytond/modules/sale_opportunity/opportunity.pyc
 ${PYSITELIB}/trytond/modules/sale_opportunity/opportunity.pyo
@@ -65,6 +72,7 @@ ${PYSITELIB}/trytond/modules/sale_opportunity/view/opportunity_monthly_graph1.xm
 ${PYSITELIB}/trytond/modules/sale_opportunity/view/opportunity_monthly_graph2.xml
 ${PYSITELIB}/trytond/modules/sale_opportunity/view/opportunity_monthly_tree.xml
 ${PYSITELIB}/trytond/modules/sale_opportunity/view/opportunity_tree.xml
+${PYSITELIB}/trytond/modules/sale_opportunity/view/party_form.xml
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt

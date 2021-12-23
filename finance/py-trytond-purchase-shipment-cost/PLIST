@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/12/04 21:13:03 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/23 16:12:42 mef Exp $
 ${PYSITELIB}/trytond/modules/purchase_shipment_cost/__init__.py
 ${PYSITELIB}/trytond/modules/purchase_shipment_cost/__init__.pyc
 ${PYSITELIB}/trytond/modules/purchase_shipment_cost/__init__.pyo
@@ -12,17 +12,22 @@ ${PYSITELIB}/trytond/modules/purchase_shipment_cost/locale/cs.po
 ${PYSITELIB}/trytond/modules/purchase_shipment_cost/locale/de.po
 ${PYSITELIB}/trytond/modules/purchase_shipment_cost/locale/es.po
 ${PYSITELIB}/trytond/modules/purchase_shipment_cost/locale/es_419.po
+${PYSITELIB}/trytond/modules/purchase_shipment_cost/locale/et.po
+${PYSITELIB}/trytond/modules/purchase_shipment_cost/locale/fa.po
+${PYSITELIB}/trytond/modules/purchase_shipment_cost/locale/fi.po
 ${PYSITELIB}/trytond/modules/purchase_shipment_cost/locale/fr.po
-${PYSITELIB}/trytond/modules/purchase_shipment_cost/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/purchase_shipment_cost/locale/it_IT.po
-${PYSITELIB}/trytond/modules/purchase_shipment_cost/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/purchase_shipment_cost/locale/hu.po
+${PYSITELIB}/trytond/modules/purchase_shipment_cost/locale/id.po
+${PYSITELIB}/trytond/modules/purchase_shipment_cost/locale/it.po
 ${PYSITELIB}/trytond/modules/purchase_shipment_cost/locale/lo.po
 ${PYSITELIB}/trytond/modules/purchase_shipment_cost/locale/lt.po
 ${PYSITELIB}/trytond/modules/purchase_shipment_cost/locale/nl.po
 ${PYSITELIB}/trytond/modules/purchase_shipment_cost/locale/pl.po
-${PYSITELIB}/trytond/modules/purchase_shipment_cost/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/purchase_shipment_cost/locale/pt.po
+${PYSITELIB}/trytond/modules/purchase_shipment_cost/locale/ro.po
 ${PYSITELIB}/trytond/modules/purchase_shipment_cost/locale/ru.po
 ${PYSITELIB}/trytond/modules/purchase_shipment_cost/locale/sl.po
+${PYSITELIB}/trytond/modules/purchase_shipment_cost/locale/tr.po
 ${PYSITELIB}/trytond/modules/purchase_shipment_cost/locale/zh_CN.po
 ${PYSITELIB}/trytond/modules/purchase_shipment_cost/stock.py
 ${PYSITELIB}/trytond/modules/purchase_shipment_cost/stock.pyc
@@ -32,6 +37,7 @@ ${PYSITELIB}/trytond/modules/purchase_shipment_cost/tests/__init__.py
 ${PYSITELIB}/trytond/modules/purchase_shipment_cost/tests/__init__.pyc
 ${PYSITELIB}/trytond/modules/purchase_shipment_cost/tests/__init__.pyo
 ${PYSITELIB}/trytond/modules/purchase_shipment_cost/tests/scenario_purchase_shipment_cost.rst
+${PYSITELIB}/trytond/modules/purchase_shipment_cost/tests/scenario_purchase_shipment_cost_invoice_stock.rst
 ${PYSITELIB}/trytond/modules/purchase_shipment_cost/tests/scenario_purchase_shipment_cost_with_account_stock.rst
 ${PYSITELIB}/trytond/modules/purchase_shipment_cost/tests/scenario_purchase_shipment_cost_with_account_stock_anglo_saxon.rst
 ${PYSITELIB}/trytond/modules/purchase_shipment_cost/tests/test_purchase_shipment_cost.py
