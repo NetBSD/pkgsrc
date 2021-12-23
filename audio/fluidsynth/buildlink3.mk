@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2021/12/13 12:40:56 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2021/12/23 20:33:18 nia Exp $
 
 BUILDLINK_TREE+=	fluidsynth
 
@@ -9,6 +9,30 @@ BUILDLINK_API_DEPENDS.fluidsynth+=	fluidsynth>=1.0.5
 BUILDLINK_ABI_DEPENDS.fluidsynth+=	fluidsynth>=2.2.4nb1
 BUILDLINK_PKGSRCDIR.fluidsynth?=	../../audio/fluidsynth
 
+pkgbase := fluidsynth
+.include "../../mk/pkg-build-options.mk"
+
+.if ${PKG_BUILD_OPTIONS.fluidsynth:Malsa}
+.  include "../../audio/alsa-lib/buildlink3.mk"
+.endif
+.if ${PKG_BUILD_OPTIONS.fluidsynth:Mdbus}
+.  include "../../sysutils/dbus/buildlink3.mk"
+.endif
+.if ${PKG_BUILD_OPTIONS.fluidsynth:Mjack}
+.  include "../../audio/jack/buildlink3.mk"
+.endif
+.if ${PKG_BUILD_OPTIONS.fluidsynth:Mladspa}
+.  include "../../audio/ladspa/buildlink3.mk"
+.endif
+.if ${PKG_BUILD_OPTIONS.fluidsynth:Mportaudio}
+.  include "../../audio/portaudio/buildlink3.mk"
+.endif
+.if ${PKG_BUILD_OPTIONS.fluidsynth:Mpulseaudio}
+.  include "../../audio/pulseaudio/buildlink3.mk"
+.endif
+.if ${PKG_BUILD_OPTIONS.fluidsynth:Msdl2}
+.  include "../../devel/SDL2/buildlink3.mk"
+.endif
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
