@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2021/10/16 19:37:01 tm Exp $
+# $NetBSD: Makefile,v 1.17 2021/12/23 22:27:35 wiz Exp $
 #
 
 DISTNAME=	fail2ban-0.11.2
@@ -57,14 +57,14 @@ RCD_SCRIPTS=		fail2ban
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Substituting paths variables.
-SUBST_FILES.paths=	${WRKSRC}/fail2ban/client/*.py
-SUBST_FILES.paths+=	${WRKSRC}/fail2ban/tests/utils.py
-SUBST_FILES.paths+=	${WRKSRC}/man/fail2ban-client.1
-SUBST_FILES.paths+=	${WRKSRC}/man/fail2ban-client.h2m
-SUBST_FILES.paths+=	${WRKSRC}/setup.py
-SUBST_FILES.paths+=	${WRKSRC}/config/fail2ban.conf
-SUBST_FILES.paths+=	${WRKSRC}/config/jail.conf
-SUBST_FILES.paths+=	${WRKSRC}/config/paths-pkgsrc.conf
+SUBST_FILES.paths=	fail2ban/client/*.py
+SUBST_FILES.paths+=	fail2ban/tests/utils.py
+SUBST_FILES.paths+=	man/fail2ban-client.1
+SUBST_FILES.paths+=	man/fail2ban-client.h2m
+SUBST_FILES.paths+=	setup.py
+SUBST_FILES.paths+=	config/fail2ban.conf
+SUBST_FILES.paths+=	config/jail.conf
+SUBST_FILES.paths+=	config/paths-pkgsrc.conf
 SUBST_SED.paths=	-e 's,/etc,${PREFIX}/etc,g'
 SUBST_SED.paths+=	-e 's,/var/lib,${VARBASE}/db,g'
 SUBST_SED.paths+=	-e 's,/var,${VARBASE},g'
@@ -75,7 +75,7 @@ SUBST_VARS.paths=	VARBASE
 SUBST_CLASSES+=		install
 SUBST_STAGE.install=	pre-install
 SUBST_MESSAGE.install=	correcting installation path
-SUBST_FILES.install=	${WRKSRC}/setup.py
+SUBST_FILES.install=	setup.py
 SUBST_SED.install=	-e 's,${PREFIX}/etc/fail2ban,${EGDIR},g'
 
 .include "../../mk/bsd.prefs.mk"
@@ -83,7 +83,7 @@ SUBST_SED.install=	-e 's,${PREFIX}/etc/fail2ban,${EGDIR},g'
 SUBST_CLASSES+=		ostype
 SUBST_STAGE.ostype=	post-configure
 SUBST_MESSAGE.ostype=	Adjusting OS type
-SUBST_FILES.ostype=	${WRKSRC}/config/paths-pkgsrc.conf
+SUBST_FILES.ostype=	config/paths-pkgsrc.conf
 .if ${OPSYS} == "NetBSD"
 SUBST_SED.ostype=	-e "s,\#before = paths-distro.conf,before = paths-netbsd.conf,g"
 .elif ${OPSYS} == "Darwin"
