@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/12/04 21:13:04 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/23 16:12:43 mef Exp $
 ${PYSITELIB}/trytond/modules/stock_supply_day/__init__.py
 ${PYSITELIB}/trytond/modules/stock_supply_day/__init__.pyc
 ${PYSITELIB}/trytond/modules/stock_supply_day/__init__.pyo
@@ -8,17 +8,22 @@ ${PYSITELIB}/trytond/modules/stock_supply_day/locale/cs.po
 ${PYSITELIB}/trytond/modules/stock_supply_day/locale/de.po
 ${PYSITELIB}/trytond/modules/stock_supply_day/locale/es.po
 ${PYSITELIB}/trytond/modules/stock_supply_day/locale/es_419.po
+${PYSITELIB}/trytond/modules/stock_supply_day/locale/et.po
+${PYSITELIB}/trytond/modules/stock_supply_day/locale/fa.po
+${PYSITELIB}/trytond/modules/stock_supply_day/locale/fi.po
 ${PYSITELIB}/trytond/modules/stock_supply_day/locale/fr.po
-${PYSITELIB}/trytond/modules/stock_supply_day/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/stock_supply_day/locale/it_IT.po
-${PYSITELIB}/trytond/modules/stock_supply_day/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/stock_supply_day/locale/hu.po
+${PYSITELIB}/trytond/modules/stock_supply_day/locale/id.po
+${PYSITELIB}/trytond/modules/stock_supply_day/locale/it.po
 ${PYSITELIB}/trytond/modules/stock_supply_day/locale/lo.po
 ${PYSITELIB}/trytond/modules/stock_supply_day/locale/lt.po
 ${PYSITELIB}/trytond/modules/stock_supply_day/locale/nl.po
 ${PYSITELIB}/trytond/modules/stock_supply_day/locale/pl.po
-${PYSITELIB}/trytond/modules/stock_supply_day/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/stock_supply_day/locale/pt.po
+${PYSITELIB}/trytond/modules/stock_supply_day/locale/ro.po
 ${PYSITELIB}/trytond/modules/stock_supply_day/locale/ru.po
 ${PYSITELIB}/trytond/modules/stock_supply_day/locale/sl.po
+${PYSITELIB}/trytond/modules/stock_supply_day/locale/tr.po
 ${PYSITELIB}/trytond/modules/stock_supply_day/locale/zh_CN.po
 ${PYSITELIB}/trytond/modules/stock_supply_day/purchase.py
 ${PYSITELIB}/trytond/modules/stock_supply_day/purchase.pyc
@@ -32,9 +37,6 @@ ${PYSITELIB}/trytond/modules/stock_supply_day/tests/test_stock_supply_day.pyc
 ${PYSITELIB}/trytond/modules/stock_supply_day/tests/test_stock_supply_day.pyo
 ${PYSITELIB}/trytond/modules/stock_supply_day/tryton.cfg
 ${PYSITELIB}/trytond/modules/stock_supply_day/view/product_supplier_form.xml
-${PYSITELIB}/trytond/modules/stock_supply_day/view/product_supplier_weekday_form.xml
-${PYSITELIB}/trytond/modules/stock_supply_day/view/product_supplier_weekday_tree.xml
-${PYSITELIB}/trytond/modules/stock_supply_day/view/product_supplier_weekday_tree_editable.xml
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt

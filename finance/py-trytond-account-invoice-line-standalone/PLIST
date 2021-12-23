@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/12/04 21:13:00 rodent Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/12/23 16:12:40 mef Exp $
 ${PYSITELIB}/trytond/modules/account_invoice_line_standalone/__init__.py
 ${PYSITELIB}/trytond/modules/account_invoice_line_standalone/__init__.pyc
 ${PYSITELIB}/trytond/modules/account_invoice_line_standalone/__init__.pyo
@@ -12,17 +12,22 @@ ${PYSITELIB}/trytond/modules/account_invoice_line_standalone/locale/cs.po
 ${PYSITELIB}/trytond/modules/account_invoice_line_standalone/locale/de.po
 ${PYSITELIB}/trytond/modules/account_invoice_line_standalone/locale/es.po
 ${PYSITELIB}/trytond/modules/account_invoice_line_standalone/locale/es_419.po
+${PYSITELIB}/trytond/modules/account_invoice_line_standalone/locale/et.po
+${PYSITELIB}/trytond/modules/account_invoice_line_standalone/locale/fa.po
+${PYSITELIB}/trytond/modules/account_invoice_line_standalone/locale/fi.po
 ${PYSITELIB}/trytond/modules/account_invoice_line_standalone/locale/fr.po
-${PYSITELIB}/trytond/modules/account_invoice_line_standalone/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/account_invoice_line_standalone/locale/it_IT.po
-${PYSITELIB}/trytond/modules/account_invoice_line_standalone/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/account_invoice_line_standalone/locale/hu.po
+${PYSITELIB}/trytond/modules/account_invoice_line_standalone/locale/id.po
+${PYSITELIB}/trytond/modules/account_invoice_line_standalone/locale/it.po
 ${PYSITELIB}/trytond/modules/account_invoice_line_standalone/locale/lo.po
 ${PYSITELIB}/trytond/modules/account_invoice_line_standalone/locale/lt.po
 ${PYSITELIB}/trytond/modules/account_invoice_line_standalone/locale/nl.po
 ${PYSITELIB}/trytond/modules/account_invoice_line_standalone/locale/pl.po
-${PYSITELIB}/trytond/modules/account_invoice_line_standalone/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/account_invoice_line_standalone/locale/pt.po
+${PYSITELIB}/trytond/modules/account_invoice_line_standalone/locale/ro.po
 ${PYSITELIB}/trytond/modules/account_invoice_line_standalone/locale/ru.po
 ${PYSITELIB}/trytond/modules/account_invoice_line_standalone/locale/sl.po
+${PYSITELIB}/trytond/modules/account_invoice_line_standalone/locale/tr.po
 ${PYSITELIB}/trytond/modules/account_invoice_line_standalone/locale/zh_CN.po
 ${PYSITELIB}/trytond/modules/account_invoice_line_standalone/tests/__init__.py
 ${PYSITELIB}/trytond/modules/account_invoice_line_standalone/tests/__init__.pyc
@@ -33,6 +38,7 @@ ${PYSITELIB}/trytond/modules/account_invoice_line_standalone/tests/test_account_
 ${PYSITELIB}/trytond/modules/account_invoice_line_standalone/tryton.cfg
 ${PYSITELIB}/trytond/modules/account_invoice_line_standalone/view/invoice_line_form.xml
 ${PYSITELIB}/trytond/modules/account_invoice_line_standalone/view/invoice_line_tree.xml
+${PYSITELIB}/trytond/modules/account_invoice_line_standalone/view/invoice_line_tree_sequence.xml
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/12/04 21:13:05 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/23 16:12:44 mef Exp $
 ${PYSITELIB}/trytond/modules/carrier_percentage/__init__.py
 ${PYSITELIB}/trytond/modules/carrier_percentage/__init__.pyc
 ${PYSITELIB}/trytond/modules/carrier_percentage/__init__.pyo
@@ -12,17 +12,22 @@ ${PYSITELIB}/trytond/modules/carrier_percentage/locale/cs.po
 ${PYSITELIB}/trytond/modules/carrier_percentage/locale/de.po
 ${PYSITELIB}/trytond/modules/carrier_percentage/locale/es.po
 ${PYSITELIB}/trytond/modules/carrier_percentage/locale/es_419.po
+${PYSITELIB}/trytond/modules/carrier_percentage/locale/et.po
+${PYSITELIB}/trytond/modules/carrier_percentage/locale/fa.po
+${PYSITELIB}/trytond/modules/carrier_percentage/locale/fi.po
 ${PYSITELIB}/trytond/modules/carrier_percentage/locale/fr.po
-${PYSITELIB}/trytond/modules/carrier_percentage/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/carrier_percentage/locale/it_IT.po
-${PYSITELIB}/trytond/modules/carrier_percentage/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/carrier_percentage/locale/hu.po
+${PYSITELIB}/trytond/modules/carrier_percentage/locale/id.po
+${PYSITELIB}/trytond/modules/carrier_percentage/locale/it.po
 ${PYSITELIB}/trytond/modules/carrier_percentage/locale/lo.po
 ${PYSITELIB}/trytond/modules/carrier_percentage/locale/lt.po
 ${PYSITELIB}/trytond/modules/carrier_percentage/locale/nl.po
 ${PYSITELIB}/trytond/modules/carrier_percentage/locale/pl.po
-${PYSITELIB}/trytond/modules/carrier_percentage/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/carrier_percentage/locale/pt.po
+${PYSITELIB}/trytond/modules/carrier_percentage/locale/ro.po
 ${PYSITELIB}/trytond/modules/carrier_percentage/locale/ru.po
 ${PYSITELIB}/trytond/modules/carrier_percentage/locale/sl.po
+${PYSITELIB}/trytond/modules/carrier_percentage/locale/tr.po
 ${PYSITELIB}/trytond/modules/carrier_percentage/locale/zh_CN.po
 ${PYSITELIB}/trytond/modules/carrier_percentage/sale.py
 ${PYSITELIB}/trytond/modules/carrier_percentage/sale.pyc

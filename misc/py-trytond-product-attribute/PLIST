@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/12/04 21:13:06 rodent Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/12/23 16:12:44 mef Exp $
 ${PYSITELIB}/trytond/modules/product_attribute/__init__.py
 ${PYSITELIB}/trytond/modules/product_attribute/__init__.pyc
 ${PYSITELIB}/trytond/modules/product_attribute/__init__.pyo
@@ -8,18 +8,24 @@ ${PYSITELIB}/trytond/modules/product_attribute/locale/cs.po
 ${PYSITELIB}/trytond/modules/product_attribute/locale/de.po
 ${PYSITELIB}/trytond/modules/product_attribute/locale/es.po
 ${PYSITELIB}/trytond/modules/product_attribute/locale/es_419.po
+${PYSITELIB}/trytond/modules/product_attribute/locale/et.po
+${PYSITELIB}/trytond/modules/product_attribute/locale/fa.po
+${PYSITELIB}/trytond/modules/product_attribute/locale/fi.po
 ${PYSITELIB}/trytond/modules/product_attribute/locale/fr.po
-${PYSITELIB}/trytond/modules/product_attribute/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/product_attribute/locale/it_IT.po
-${PYSITELIB}/trytond/modules/product_attribute/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/product_attribute/locale/hu.po
+${PYSITELIB}/trytond/modules/product_attribute/locale/id.po
+${PYSITELIB}/trytond/modules/product_attribute/locale/it.po
 ${PYSITELIB}/trytond/modules/product_attribute/locale/lo.po
 ${PYSITELIB}/trytond/modules/product_attribute/locale/lt.po
 ${PYSITELIB}/trytond/modules/product_attribute/locale/nl.po
 ${PYSITELIB}/trytond/modules/product_attribute/locale/pl.po
-${PYSITELIB}/trytond/modules/product_attribute/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/product_attribute/locale/pt.po
+${PYSITELIB}/trytond/modules/product_attribute/locale/ro.po
 ${PYSITELIB}/trytond/modules/product_attribute/locale/ru.po
 ${PYSITELIB}/trytond/modules/product_attribute/locale/sl.po
+${PYSITELIB}/trytond/modules/product_attribute/locale/tr.po
 ${PYSITELIB}/trytond/modules/product_attribute/locale/zh_CN.po
+${PYSITELIB}/trytond/modules/product_attribute/message.xml
 ${PYSITELIB}/trytond/modules/product_attribute/product.py
 ${PYSITELIB}/trytond/modules/product_attribute/product.pyc
 ${PYSITELIB}/trytond/modules/product_attribute/product.pyo
@@ -33,10 +39,13 @@ ${PYSITELIB}/trytond/modules/product_attribute/tests/test_product_attribute.pyo
 ${PYSITELIB}/trytond/modules/product_attribute/tryton.cfg
 ${PYSITELIB}/trytond/modules/product_attribute/view/attribute_form.xml
 ${PYSITELIB}/trytond/modules/product_attribute/view/attribute_list.xml
+${PYSITELIB}/trytond/modules/product_attribute/view/attribute_list_simple.xml
 ${PYSITELIB}/trytond/modules/product_attribute/view/attribute_set_form.xml
 ${PYSITELIB}/trytond/modules/product_attribute/view/attribute_set_list.xml
 ${PYSITELIB}/trytond/modules/product_attribute/view/product_form.xml
+${PYSITELIB}/trytond/modules/product_attribute/view/product_tree.xml
 ${PYSITELIB}/trytond/modules/product_attribute/view/template_form.xml
+${PYSITELIB}/trytond/modules/product_attribute/view/template_tree.xml
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/12/22 22:54:47 mef Exp $
+$NetBSD: distinfo,v 1.5 2021/12/23 16:12:41 mef Exp $
 
-BLAKE2s (tryton-6.2/trytond_account_stock_landed_cost-6.2.0.tar.gz) = de47334503406385748e0f0625b933bd549929c6dcb8c7baf0740ef826a23bb9
-SHA512 (tryton-6.2/trytond_account_stock_landed_cost-6.2.0.tar.gz) = f88150d3e94720c5e8806a77e2c7e628052999b7db5476fd4869d21017ad5572c1b700adfe0867b1c45bcaeedac0e19efdf95ba99f8cd6c29c6e87449f2fdde6
-Size (tryton-6.2/trytond_account_stock_landed_cost-6.2.0.tar.gz) = 36420 bytes
+BLAKE2s (tryton-6.2/trytond_account_stock_landed_cost-6.2.1.tar.gz) = 84d0f4e6aa1ec5e1dddbe5eb9041afc2967cecf6592c0731360193e666b68369
+SHA512 (tryton-6.2/trytond_account_stock_landed_cost-6.2.1.tar.gz) = baa11adef1e13e17bf8891cf6ebd32c8ff2585a4d25fb15649419095949bc9f68464818e078366d86c9da3a6b7251589d5a5fdb6cd283a1da76039ed1bc953f4
+Size (tryton-6.2/trytond_account_stock_landed_cost-6.2.1.tar.gz) = 36291 bytes

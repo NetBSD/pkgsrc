@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2016/12/04 21:13:01 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/23 16:12:40 mef Exp $
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/__init__.py
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/__init__.pyc
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/__init__.pyo
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/account.py
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/account.pyc
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/account.pyo
-${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/account.xml
+${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/exceptions.py
+${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/exceptions.pyc
+${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/exceptions.pyo
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/invoice.py
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/invoice.pyc
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/invoice.pyo
@@ -15,18 +17,24 @@ ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/locale/cs.po
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/locale/de.po
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/locale/es.po
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/locale/es_419.po
+${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/locale/et.po
+${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/locale/fa.po
+${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/locale/fi.po
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/locale/fr.po
-${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/locale/it_IT.po
-${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/locale/hu.po
+${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/locale/id.po
+${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/locale/it.po
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/locale/lo.po
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/locale/lt.po
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/locale/nl.po
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/locale/pl.po
-${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/locale/pt.po
+${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/locale/ro.po
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/locale/ru.po
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/locale/sl.po
+${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/locale/tr.po
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/locale/zh_CN.po
+${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/message.xml
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/minimal_chart_bg.xml
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/minimal_chart_ca.xml
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/minimal_chart_de.xml
@@ -57,7 +65,6 @@ ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/tests/tools.pyc
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/tests/tools.pyo
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/tryton.cfg
 ${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/view/category_form.xml
-${PYSITELIB}/trytond/modules/account_stock_anglo_saxon/view/template_form.xml
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt

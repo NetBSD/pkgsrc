@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/12/04 21:13:00 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/23 16:12:40 mef Exp $
 ${PYSITELIB}/trytond/modules/account_dunning_fee/__init__.py
 ${PYSITELIB}/trytond/modules/account_dunning_fee/__init__.pyc
 ${PYSITELIB}/trytond/modules/account_dunning_fee/__init__.pyo
@@ -15,18 +15,24 @@ ${PYSITELIB}/trytond/modules/account_dunning_fee/locale/cs.po
 ${PYSITELIB}/trytond/modules/account_dunning_fee/locale/de.po
 ${PYSITELIB}/trytond/modules/account_dunning_fee/locale/es.po
 ${PYSITELIB}/trytond/modules/account_dunning_fee/locale/es_419.po
+${PYSITELIB}/trytond/modules/account_dunning_fee/locale/et.po
+${PYSITELIB}/trytond/modules/account_dunning_fee/locale/fa.po
+${PYSITELIB}/trytond/modules/account_dunning_fee/locale/fi.po
 ${PYSITELIB}/trytond/modules/account_dunning_fee/locale/fr.po
-${PYSITELIB}/trytond/modules/account_dunning_fee/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/account_dunning_fee/locale/it_IT.po
-${PYSITELIB}/trytond/modules/account_dunning_fee/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/account_dunning_fee/locale/hu.po
+${PYSITELIB}/trytond/modules/account_dunning_fee/locale/id.po
+${PYSITELIB}/trytond/modules/account_dunning_fee/locale/it.po
 ${PYSITELIB}/trytond/modules/account_dunning_fee/locale/lo.po
 ${PYSITELIB}/trytond/modules/account_dunning_fee/locale/lt.po
 ${PYSITELIB}/trytond/modules/account_dunning_fee/locale/nl.po
 ${PYSITELIB}/trytond/modules/account_dunning_fee/locale/pl.po
-${PYSITELIB}/trytond/modules/account_dunning_fee/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/account_dunning_fee/locale/pt.po
+${PYSITELIB}/trytond/modules/account_dunning_fee/locale/ro.po
 ${PYSITELIB}/trytond/modules/account_dunning_fee/locale/ru.po
 ${PYSITELIB}/trytond/modules/account_dunning_fee/locale/sl.po
+${PYSITELIB}/trytond/modules/account_dunning_fee/locale/tr.po
 ${PYSITELIB}/trytond/modules/account_dunning_fee/locale/zh_CN.po
+${PYSITELIB}/trytond/modules/account_dunning_fee/message.xml
 ${PYSITELIB}/trytond/modules/account_dunning_fee/tests/__init__.py
 ${PYSITELIB}/trytond/modules/account_dunning_fee/tests/__init__.pyc
 ${PYSITELIB}/trytond/modules/account_dunning_fee/tests/__init__.pyo
