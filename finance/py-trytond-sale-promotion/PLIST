@@ -1,25 +1,34 @@
-@comment $NetBSD: PLIST,v 1.1 2016/12/04 21:13:04 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/23 22:07:26 mef Exp $
 ${PYSITELIB}/trytond/modules/sale_promotion/__init__.py
 ${PYSITELIB}/trytond/modules/sale_promotion/__init__.pyc
 ${PYSITELIB}/trytond/modules/sale_promotion/__init__.pyo
+${PYSITELIB}/trytond/modules/sale_promotion/exceptions.py
+${PYSITELIB}/trytond/modules/sale_promotion/exceptions.pyc
+${PYSITELIB}/trytond/modules/sale_promotion/exceptions.pyo
 ${PYSITELIB}/trytond/modules/sale_promotion/locale/bg.po
 ${PYSITELIB}/trytond/modules/sale_promotion/locale/ca.po
 ${PYSITELIB}/trytond/modules/sale_promotion/locale/cs.po
 ${PYSITELIB}/trytond/modules/sale_promotion/locale/de.po
 ${PYSITELIB}/trytond/modules/sale_promotion/locale/es.po
 ${PYSITELIB}/trytond/modules/sale_promotion/locale/es_419.po
+${PYSITELIB}/trytond/modules/sale_promotion/locale/et.po
+${PYSITELIB}/trytond/modules/sale_promotion/locale/fa.po
+${PYSITELIB}/trytond/modules/sale_promotion/locale/fi.po
 ${PYSITELIB}/trytond/modules/sale_promotion/locale/fr.po
-${PYSITELIB}/trytond/modules/sale_promotion/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/sale_promotion/locale/it_IT.po
-${PYSITELIB}/trytond/modules/sale_promotion/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/sale_promotion/locale/hu.po
+${PYSITELIB}/trytond/modules/sale_promotion/locale/id.po
+${PYSITELIB}/trytond/modules/sale_promotion/locale/it.po
 ${PYSITELIB}/trytond/modules/sale_promotion/locale/lo.po
 ${PYSITELIB}/trytond/modules/sale_promotion/locale/lt.po
 ${PYSITELIB}/trytond/modules/sale_promotion/locale/nl.po
 ${PYSITELIB}/trytond/modules/sale_promotion/locale/pl.po
-${PYSITELIB}/trytond/modules/sale_promotion/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/sale_promotion/locale/pt.po
+${PYSITELIB}/trytond/modules/sale_promotion/locale/ro.po
 ${PYSITELIB}/trytond/modules/sale_promotion/locale/ru.po
 ${PYSITELIB}/trytond/modules/sale_promotion/locale/sl.po
+${PYSITELIB}/trytond/modules/sale_promotion/locale/tr.po
 ${PYSITELIB}/trytond/modules/sale_promotion/locale/zh_CN.po
+${PYSITELIB}/trytond/modules/sale_promotion/message.xml
 ${PYSITELIB}/trytond/modules/sale_promotion/sale.py
 ${PYSITELIB}/trytond/modules/sale_promotion/sale.pyc
 ${PYSITELIB}/trytond/modules/sale_promotion/sale.pyo
@@ -28,6 +37,7 @@ ${PYSITELIB}/trytond/modules/sale_promotion/tests/__init__.py
 ${PYSITELIB}/trytond/modules/sale_promotion/tests/__init__.pyc
 ${PYSITELIB}/trytond/modules/sale_promotion/tests/__init__.pyo
 ${PYSITELIB}/trytond/modules/sale_promotion/tests/scenario_sale_promotion.rst
+${PYSITELIB}/trytond/modules/sale_promotion/tests/scenario_sale_promotion_amount.rst
 ${PYSITELIB}/trytond/modules/sale_promotion/tests/test_sale_promotion.py
 ${PYSITELIB}/trytond/modules/sale_promotion/tests/test_sale_promotion.pyc
 ${PYSITELIB}/trytond/modules/sale_promotion/tests/test_sale_promotion.pyo
