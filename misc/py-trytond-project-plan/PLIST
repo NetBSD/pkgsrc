@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/12/04 21:13:07 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/23 22:07:26 mef Exp $
 ${PYSITELIB}/trytond/modules/project_plan/__init__.py
 ${PYSITELIB}/trytond/modules/project_plan/__init__.pyc
 ${PYSITELIB}/trytond/modules/project_plan/__init__.pyo
@@ -12,17 +12,22 @@ ${PYSITELIB}/trytond/modules/project_plan/locale/cs.po
 ${PYSITELIB}/trytond/modules/project_plan/locale/de.po
 ${PYSITELIB}/trytond/modules/project_plan/locale/es.po
 ${PYSITELIB}/trytond/modules/project_plan/locale/es_419.po
+${PYSITELIB}/trytond/modules/project_plan/locale/et.po
+${PYSITELIB}/trytond/modules/project_plan/locale/fa.po
+${PYSITELIB}/trytond/modules/project_plan/locale/fi.po
 ${PYSITELIB}/trytond/modules/project_plan/locale/fr.po
-${PYSITELIB}/trytond/modules/project_plan/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/project_plan/locale/it_IT.po
-${PYSITELIB}/trytond/modules/project_plan/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/project_plan/locale/hu.po
+${PYSITELIB}/trytond/modules/project_plan/locale/id.po
+${PYSITELIB}/trytond/modules/project_plan/locale/it.po
 ${PYSITELIB}/trytond/modules/project_plan/locale/lo.po
 ${PYSITELIB}/trytond/modules/project_plan/locale/lt.po
 ${PYSITELIB}/trytond/modules/project_plan/locale/nl.po
 ${PYSITELIB}/trytond/modules/project_plan/locale/pl.po
-${PYSITELIB}/trytond/modules/project_plan/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/project_plan/locale/pt.po
+${PYSITELIB}/trytond/modules/project_plan/locale/ro.po
 ${PYSITELIB}/trytond/modules/project_plan/locale/ru.po
 ${PYSITELIB}/trytond/modules/project_plan/locale/sl.po
+${PYSITELIB}/trytond/modules/project_plan/locale/tr.po
 ${PYSITELIB}/trytond/modules/project_plan/locale/zh_CN.po
 ${PYSITELIB}/trytond/modules/project_plan/tests/__init__.py
 ${PYSITELIB}/trytond/modules/project_plan/tests/__init__.pyc
