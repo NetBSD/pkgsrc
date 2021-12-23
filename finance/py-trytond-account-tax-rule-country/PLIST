@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/12/04 21:13:02 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/23 16:12:41 mef Exp $
 ${PYSITELIB}/trytond/modules/account_tax_rule_country/__init__.py
 ${PYSITELIB}/trytond/modules/account_tax_rule_country/__init__.pyc
 ${PYSITELIB}/trytond/modules/account_tax_rule_country/__init__.pyo
@@ -12,17 +12,22 @@ ${PYSITELIB}/trytond/modules/account_tax_rule_country/locale/cs.po
 ${PYSITELIB}/trytond/modules/account_tax_rule_country/locale/de.po
 ${PYSITELIB}/trytond/modules/account_tax_rule_country/locale/es.po
 ${PYSITELIB}/trytond/modules/account_tax_rule_country/locale/es_419.po
+${PYSITELIB}/trytond/modules/account_tax_rule_country/locale/et.po
+${PYSITELIB}/trytond/modules/account_tax_rule_country/locale/fa.po
+${PYSITELIB}/trytond/modules/account_tax_rule_country/locale/fi.po
 ${PYSITELIB}/trytond/modules/account_tax_rule_country/locale/fr.po
-${PYSITELIB}/trytond/modules/account_tax_rule_country/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/account_tax_rule_country/locale/it_IT.po
-${PYSITELIB}/trytond/modules/account_tax_rule_country/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/account_tax_rule_country/locale/hu.po
+${PYSITELIB}/trytond/modules/account_tax_rule_country/locale/id.po
+${PYSITELIB}/trytond/modules/account_tax_rule_country/locale/it.po
 ${PYSITELIB}/trytond/modules/account_tax_rule_country/locale/lo.po
 ${PYSITELIB}/trytond/modules/account_tax_rule_country/locale/lt.po
 ${PYSITELIB}/trytond/modules/account_tax_rule_country/locale/nl.po
 ${PYSITELIB}/trytond/modules/account_tax_rule_country/locale/pl.po
-${PYSITELIB}/trytond/modules/account_tax_rule_country/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/account_tax_rule_country/locale/pt.po
+${PYSITELIB}/trytond/modules/account_tax_rule_country/locale/ro.po
 ${PYSITELIB}/trytond/modules/account_tax_rule_country/locale/ru.po
 ${PYSITELIB}/trytond/modules/account_tax_rule_country/locale/sl.po
+${PYSITELIB}/trytond/modules/account_tax_rule_country/locale/tr.po
 ${PYSITELIB}/trytond/modules/account_tax_rule_country/locale/zh_CN.po
 ${PYSITELIB}/trytond/modules/account_tax_rule_country/purchase.py
 ${PYSITELIB}/trytond/modules/account_tax_rule_country/purchase.pyc
@@ -30,6 +35,9 @@ ${PYSITELIB}/trytond/modules/account_tax_rule_country/purchase.pyo
 ${PYSITELIB}/trytond/modules/account_tax_rule_country/sale.py
 ${PYSITELIB}/trytond/modules/account_tax_rule_country/sale.pyc
 ${PYSITELIB}/trytond/modules/account_tax_rule_country/sale.pyo
+${PYSITELIB}/trytond/modules/account_tax_rule_country/stock.py
+${PYSITELIB}/trytond/modules/account_tax_rule_country/stock.pyc
+${PYSITELIB}/trytond/modules/account_tax_rule_country/stock.pyo
 ${PYSITELIB}/trytond/modules/account_tax_rule_country/tests/__init__.py
 ${PYSITELIB}/trytond/modules/account_tax_rule_country/tests/__init__.pyc
 ${PYSITELIB}/trytond/modules/account_tax_rule_country/tests/__init__.pyo

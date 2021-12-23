@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/12/04 21:13:07 rodent Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/12/23 16:12:45 mef Exp $
 ${PYSITELIB}/trytond/modules/stock_inventory_location/__init__.py
 ${PYSITELIB}/trytond/modules/stock_inventory_location/__init__.pyc
 ${PYSITELIB}/trytond/modules/stock_inventory_location/__init__.pyo
@@ -12,26 +12,33 @@ ${PYSITELIB}/trytond/modules/stock_inventory_location/locale/cs.po
 ${PYSITELIB}/trytond/modules/stock_inventory_location/locale/de.po
 ${PYSITELIB}/trytond/modules/stock_inventory_location/locale/es.po
 ${PYSITELIB}/trytond/modules/stock_inventory_location/locale/es_419.po
+${PYSITELIB}/trytond/modules/stock_inventory_location/locale/et.po
+${PYSITELIB}/trytond/modules/stock_inventory_location/locale/fa.po
+${PYSITELIB}/trytond/modules/stock_inventory_location/locale/fi.po
 ${PYSITELIB}/trytond/modules/stock_inventory_location/locale/fr.po
-${PYSITELIB}/trytond/modules/stock_inventory_location/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/stock_inventory_location/locale/it_IT.po
-${PYSITELIB}/trytond/modules/stock_inventory_location/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/stock_inventory_location/locale/hu.po
+${PYSITELIB}/trytond/modules/stock_inventory_location/locale/id.po
+${PYSITELIB}/trytond/modules/stock_inventory_location/locale/it.po
 ${PYSITELIB}/trytond/modules/stock_inventory_location/locale/lo.po
 ${PYSITELIB}/trytond/modules/stock_inventory_location/locale/lt.po
 ${PYSITELIB}/trytond/modules/stock_inventory_location/locale/nl.po
 ${PYSITELIB}/trytond/modules/stock_inventory_location/locale/pl.po
-${PYSITELIB}/trytond/modules/stock_inventory_location/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/stock_inventory_location/locale/pt.po
+${PYSITELIB}/trytond/modules/stock_inventory_location/locale/ro.po
 ${PYSITELIB}/trytond/modules/stock_inventory_location/locale/ru.po
 ${PYSITELIB}/trytond/modules/stock_inventory_location/locale/sl.po
+${PYSITELIB}/trytond/modules/stock_inventory_location/locale/tr.po
 ${PYSITELIB}/trytond/modules/stock_inventory_location/locale/zh_CN.po
 ${PYSITELIB}/trytond/modules/stock_inventory_location/tests/__init__.py
 ${PYSITELIB}/trytond/modules/stock_inventory_location/tests/__init__.pyc
 ${PYSITELIB}/trytond/modules/stock_inventory_location/tests/__init__.pyo
+${PYSITELIB}/trytond/modules/stock_inventory_location/tests/scenario_stock_inventories.rst
 ${PYSITELIB}/trytond/modules/stock_inventory_location/tests/test_stock_inventory_location.py
 ${PYSITELIB}/trytond/modules/stock_inventory_location/tests/test_stock_inventory_location.pyc
 ${PYSITELIB}/trytond/modules/stock_inventory_location/tests/test_stock_inventory_location.pyo
 ${PYSITELIB}/trytond/modules/stock_inventory_location/tryton.cfg
 ${PYSITELIB}/trytond/modules/stock_inventory_location/view/inventory_create_start_form.xml
+${PYSITELIB}/trytond/modules/stock_inventory_location/view/inventory_list.xml
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
