@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2021/11/15 22:01:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2021/12/23 20:50:31 nia Exp $
 bin/gst-transcoder-1.0
 include/gstreamer-1.0/gst/audio/audio-bad-prelude.h
 include/gstreamer-1.0/gst/audio/gstnonstreamaudiodecoder.h
@@ -128,6 +128,7 @@ lib/gstreamer-1.0/libgstspeed.so
 lib/gstreamer-1.0/libgstsubenc.so
 lib/gstreamer-1.0/libgstswitchbin.so
 lib/gstreamer-1.0/libgsttimecode.so
+lib/gstreamer-1.0/libgsttranscode.so
 lib/gstreamer-1.0/libgstvideofiltersbad.so
 lib/gstreamer-1.0/libgstvideoframe_audiolevel.so
 lib/gstreamer-1.0/libgstvideoparsersbad.so
