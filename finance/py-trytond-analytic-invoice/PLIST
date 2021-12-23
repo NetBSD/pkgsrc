@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2016/12/04 21:13:02 rodent Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/12/23 16:12:41 mef Exp $
 ${PYSITELIB}/trytond/modules/analytic_invoice/__init__.py
 ${PYSITELIB}/trytond/modules/analytic_invoice/__init__.pyc
 ${PYSITELIB}/trytond/modules/analytic_invoice/__init__.pyo
 ${PYSITELIB}/trytond/modules/analytic_invoice/asset.py
 ${PYSITELIB}/trytond/modules/analytic_invoice/asset.pyc
 ${PYSITELIB}/trytond/modules/analytic_invoice/asset.pyo
+${PYSITELIB}/trytond/modules/analytic_invoice/asset.xml
 ${PYSITELIB}/trytond/modules/analytic_invoice/invoice.py
 ${PYSITELIB}/trytond/modules/analytic_invoice/invoice.pyc
 ${PYSITELIB}/trytond/modules/analytic_invoice/invoice.pyo
@@ -15,17 +16,22 @@ ${PYSITELIB}/trytond/modules/analytic_invoice/locale/cs.po
 ${PYSITELIB}/trytond/modules/analytic_invoice/locale/de.po
 ${PYSITELIB}/trytond/modules/analytic_invoice/locale/es.po
 ${PYSITELIB}/trytond/modules/analytic_invoice/locale/es_419.po
+${PYSITELIB}/trytond/modules/analytic_invoice/locale/et.po
+${PYSITELIB}/trytond/modules/analytic_invoice/locale/fa.po
+${PYSITELIB}/trytond/modules/analytic_invoice/locale/fi.po
 ${PYSITELIB}/trytond/modules/analytic_invoice/locale/fr.po
-${PYSITELIB}/trytond/modules/analytic_invoice/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/analytic_invoice/locale/it_IT.po
-${PYSITELIB}/trytond/modules/analytic_invoice/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/analytic_invoice/locale/hu.po
+${PYSITELIB}/trytond/modules/analytic_invoice/locale/id.po
+${PYSITELIB}/trytond/modules/analytic_invoice/locale/it.po
 ${PYSITELIB}/trytond/modules/analytic_invoice/locale/lo.po
 ${PYSITELIB}/trytond/modules/analytic_invoice/locale/lt.po
 ${PYSITELIB}/trytond/modules/analytic_invoice/locale/nl.po
 ${PYSITELIB}/trytond/modules/analytic_invoice/locale/pl.po
-${PYSITELIB}/trytond/modules/analytic_invoice/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/analytic_invoice/locale/pt.po
+${PYSITELIB}/trytond/modules/analytic_invoice/locale/ro.po
 ${PYSITELIB}/trytond/modules/analytic_invoice/locale/ru.po
 ${PYSITELIB}/trytond/modules/analytic_invoice/locale/sl.po
+${PYSITELIB}/trytond/modules/analytic_invoice/locale/tr.po
 ${PYSITELIB}/trytond/modules/analytic_invoice/locale/zh_CN.po
 ${PYSITELIB}/trytond/modules/analytic_invoice/tests/__init__.py
 ${PYSITELIB}/trytond/modules/analytic_invoice/tests/__init__.pyc

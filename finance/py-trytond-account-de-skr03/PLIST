@@ -1,8 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2016/12/04 21:13:00 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/23 16:12:39 mef Exp $
 ${PYSITELIB}/trytond/modules/account_de_skr03/__init__.py
 ${PYSITELIB}/trytond/modules/account_de_skr03/__init__.pyc
 ${PYSITELIB}/trytond/modules/account_de_skr03/__init__.pyo
+${PYSITELIB}/trytond/modules/account_de_skr03/account.py
+${PYSITELIB}/trytond/modules/account_de_skr03/account.pyc
+${PYSITELIB}/trytond/modules/account_de_skr03/account.pyo
 ${PYSITELIB}/trytond/modules/account_de_skr03/account_de.xml
+${PYSITELIB}/trytond/modules/account_de_skr03/tax_de.xml
 ${PYSITELIB}/trytond/modules/account_de_skr03/tests/__init__.py
 ${PYSITELIB}/trytond/modules/account_de_skr03/tests/__init__.pyc
 ${PYSITELIB}/trytond/modules/account_de_skr03/tests/__init__.pyo
