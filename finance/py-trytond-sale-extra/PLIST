@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/12/04 21:13:03 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/23 21:52:28 mef Exp $
 ${PYSITELIB}/trytond/modules/sale_extra/__init__.py
 ${PYSITELIB}/trytond/modules/sale_extra/__init__.pyc
 ${PYSITELIB}/trytond/modules/sale_extra/__init__.pyo
@@ -8,17 +8,22 @@ ${PYSITELIB}/trytond/modules/sale_extra/locale/cs.po
 ${PYSITELIB}/trytond/modules/sale_extra/locale/de.po
 ${PYSITELIB}/trytond/modules/sale_extra/locale/es.po
 ${PYSITELIB}/trytond/modules/sale_extra/locale/es_419.po
+${PYSITELIB}/trytond/modules/sale_extra/locale/et.po
+${PYSITELIB}/trytond/modules/sale_extra/locale/fa.po
+${PYSITELIB}/trytond/modules/sale_extra/locale/fi.po
 ${PYSITELIB}/trytond/modules/sale_extra/locale/fr.po
-${PYSITELIB}/trytond/modules/sale_extra/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/sale_extra/locale/it_IT.po
-${PYSITELIB}/trytond/modules/sale_extra/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/sale_extra/locale/hu.po
+${PYSITELIB}/trytond/modules/sale_extra/locale/id.po
+${PYSITELIB}/trytond/modules/sale_extra/locale/it.po
 ${PYSITELIB}/trytond/modules/sale_extra/locale/lo.po
 ${PYSITELIB}/trytond/modules/sale_extra/locale/lt.po
 ${PYSITELIB}/trytond/modules/sale_extra/locale/nl.po
 ${PYSITELIB}/trytond/modules/sale_extra/locale/pl.po
-${PYSITELIB}/trytond/modules/sale_extra/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/sale_extra/locale/pt.po
+${PYSITELIB}/trytond/modules/sale_extra/locale/ro.po
 ${PYSITELIB}/trytond/modules/sale_extra/locale/ru.po
 ${PYSITELIB}/trytond/modules/sale_extra/locale/sl.po
+${PYSITELIB}/trytond/modules/sale_extra/locale/tr.po
 ${PYSITELIB}/trytond/modules/sale_extra/locale/zh_CN.po
 ${PYSITELIB}/trytond/modules/sale_extra/sale.py
 ${PYSITELIB}/trytond/modules/sale_extra/sale.pyc
