@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2021/12/08 16:05:52 adam Exp $
+# $NetBSD: Makefile,v 1.64 2021/12/23 20:22:42 nia Exp $
 
 DISTNAME=	pitivi-0.999
 PKGREVISION=	6
@@ -44,9 +44,11 @@ LDFLAGS+=			-lpython${PYVERSSUFFIX}
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
 .include "../../multimedia/frei0r/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-bad/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-editing-services/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-good/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-gtk/buildlink3.mk"
-.include "../../multimedia/gst-plugins1-transcoder/buildlink3.mk"
+# HACK: avoid conflict with gst-plugins1-bad...
+#.include "../../multimedia/gst-plugins1-transcoder/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
