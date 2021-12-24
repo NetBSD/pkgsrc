@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.215 2021/12/22 16:17:00 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.216 2021/12/24 12:09:47 tnn Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -102,7 +102,13 @@ CONFIGURE_ARGS+=	--with-system-webp
 CONFIGURE_ARGS+=	--disable-icf
 CONFIGURE_ARGS+=	--disable-updater
 
-#CONFIGURE_ARGS+=	--with-libclang-path=${PREFIX}/lib
+.include "../../mk/compiler.mk"
+
+.if empty(PKGSRC_COMPILER:Mclang)
+# Set path to "clang for cbindgen" when target compiler is not clang.
+CONFIGURE_ARGS+=	--with-clang-path=${PREFIX}/bin/clang
+.endif
+CONFIGURE_ARGS+=	--with-libclang-path=${PREFIX}/lib
 
 # RLBox WASM sandbox
 .if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "i386"
@@ -112,6 +118,8 @@ BUILD_DEPENDS+=		lld-[0-9]*:../../devel/lld
 .include "../../lang/wasi-libcxx/buildlink3.mk"
 .include "../../lang/wasi-compiler-rt/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-wasi-sysroot=${PREFIX}/wasi
+CONFIGURE_ENV+=		WASM_CC=${PREFIX}/bin/clang
+CONFIGURE_ENV+=		WASM_CXX=${PREFIX}/bin/clang++
 .else
 CONFIGURE_ARGS+=	--without-wasm-sandboxed-libraries
 .endif
@@ -171,19 +179,6 @@ create-rm-wrapper:
 	printf '#!/bin/sh\n[ "$$*" = "-f" ] && exit 0\nexec /bin/rm $$@\n' > \
 	  ${WRAPPER_DIR}/bin/rm
 	chmod +x ${WRAPPER_DIR}/bin/rm
-
-.PHONY: fix-clang-wrapper
-pre-configure: fix-clang-wrapper
-fix-clang-wrapper:
-.if empty(PKGSRC_COMPILER:M*clang*)
-# Firefox requires Clang during the build, even when building with GCC.
-# XXX: When using GCC, pkgsrc provides 'clang' wrappers that are actually gcc.
-# This breaks the build.
-# PR pkg/55647 https://gnats.netbsd.org/55647
-	${LN} -sf ${PREFIX}/bin/clang ${WRKDIR}/.cwrapper/bin/clang
-	${LN} -sf ${PREFIX}/bin/clang++ ${WRKDIR}/.cwrapper/bin/clang++
-	${LN} -sf ${PREFIX}/bin/clang-cpp ${WRKDIR}/.cwrapper/bin/clang-cpp
-.endif
 
 # The configure test for __thread succeeds, but later we end up with:
 # dist/bin/libxul.so: undefined reference to `__tls_get_addr'
