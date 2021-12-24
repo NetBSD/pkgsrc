@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/12/04 21:13:08 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/24 04:33:18 mef Exp $
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/__init__.py
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/__init__.pyc
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/__init__.pyo
@@ -9,24 +9,33 @@ ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/carrier.xml
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/configuration.py
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/configuration.pyc
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/configuration.pyo
+${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/exceptions.py
+${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/exceptions.pyc
+${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/exceptions.pyo
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/bg.po
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/ca.po
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/cs.po
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/de.po
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/es.po
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/es_419.po
+${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/et.po
+${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/fa.po
+${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/fi.po
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/fr.po
-${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/hu_HU.po
-${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/it_IT.po
-${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/hu.po
+${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/id.po
+${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/it.po
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/lo.po
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/lt.po
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/nl.po
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/pl.po
-${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/pt.po
+${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/ro.po
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/ru.po
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/sl.po
+${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/tr.po
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/locale/zh_CN.po
+${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/message.xml
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/stock.py
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/stock.pyc
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/stock.pyo
@@ -39,6 +48,7 @@ ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/tests/test_stock_package
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/tests/test_stock_package_shipping_dpd.pyc
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/tests/test_stock_package_shipping_dpd.pyo
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/tryton.cfg
+${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/view/carrier_form.xml
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/view/dpd_credential_form.xml
 ${PYSITELIB}/trytond/modules/stock_package_shipping_dpd/view/dpd_credential_list.xml
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
