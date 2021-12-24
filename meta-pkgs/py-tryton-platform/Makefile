@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/12/08 10:56:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2021/12/24 15:03:12 wiz Exp $
 #
 DISTNAME=	# empty
 PKGNAME=	${PYPKGPREFIX}-tryton-platform-${TRYTON_BASEVER}
@@ -14,7 +14,7 @@ COMMENT=	Install complete tryton client/server platform
 
 META_PACKAGE=	yes
 
-PYTHON_VERSIONS_ACCEPTED=	27 # some dependencies only for python-2.7 as of 20200313
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 
@@ -127,7 +127,5 @@ DEPENDS+=	${PYPKGPREFIX}-trytond-timesheet-cost>=${TRYTON_BASEVER}:../../time/py
 DEPENDS+=	${PYPKGPREFIX}-trytond-timesheet>=${TRYTON_BASEVER}:../../time/py-trytond-timesheet
 DEPENDS+=	${PYPKGPREFIX}-trytond-web-user>=${TRYTON_BASEVER}:../../www/py-trytond-web-user
 DEPENDS+=	${PYPKGPREFIX}-trytond-webdav>=${TRYTON_BASEVER}:../../www/py-trytond-webdav
-
-PYTHON_VERSIONS_ACCEPTED=	27 # py-simplesoap via py-stdnum and py-trytond-bank
 
 .include "../../mk/bsd.pkg.mk"
