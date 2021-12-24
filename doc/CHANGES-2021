@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6377 2021/12/23 18:39:44 maya Exp $
+$NetBSD: CHANGES-2021,v 1.6378 2021/12/24 15:50:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9538,3 +9538,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-tryton to 6.2.0 [mef 2021-12-22]
 	Updated devel/py-trytond to 6.2.2 [mef 2021-12-22]
 	Updated devel/gmp to 6.2.1nb2 [maya 2021-12-23]
+	Removed misc/py-trytond-party-vcarddav [wiz 2021-12-24]

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.556 2021/11/27 12:34:07 pho Exp $
+# $NetBSD: Makefile,v 1.557 2021/12/24 15:50:45 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -264,7 +264,6 @@ SUBDIR+=	py-trytond-dashboard
 SUBDIR+=	py-trytond-party
 SUBDIR+=	py-trytond-party-relationship
 SUBDIR+=	py-trytond-party-siret
-SUBDIR+=	py-trytond-party-vcarddav
 SUBDIR+=	py-trytond-product
 SUBDIR+=	py-trytond-product-attribute
 SUBDIR+=	py-trytond-product-classification
