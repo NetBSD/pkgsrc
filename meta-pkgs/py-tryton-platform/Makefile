@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2021/12/24 15:55:04 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2021/12/24 15:57:23 wiz Exp $
 #
 DISTNAME=	# empty
 PKGNAME=	${PYPKGPREFIX}-tryton-platform-${TRYTON_BASEVER}
@@ -118,7 +118,6 @@ DEPENDS+=	${PYPKGPREFIX}-trytond-stock-product-location>=${TRYTON_BASEVER}:../..
 DEPENDS+=	${PYPKGPREFIX}-trytond-stock-split>=${TRYTON_BASEVER}:../../misc/py-trytond-stock-split
 DEPENDS+=	${PYPKGPREFIX}-trytond-authentication-sms>=${TRYTON_BASEVER}:../../security/py-trytond-authentication-sms
 DEPENDS+=	${PYPKGPREFIX}-trytond-calendar-classification>=${TRYTON_BASEVER}:../../time/py-trytond-calendar-classification
-DEPENDS+=	${PYPKGPREFIX}-trytond-calendar-scheduling>=${TRYTON_BASEVER}:../../time/py-trytond-calendar-scheduling
 DEPENDS+=	${PYPKGPREFIX}-trytond-calendar>=${TRYTON_BASEVER}:../../time/py-trytond-calendar
 DEPENDS+=	${PYPKGPREFIX}-trytond-company-work-time>=${TRYTON_BASEVER}:../../time/py-trytond-company-work-time
 DEPENDS+=	${PYPKGPREFIX}-trytond-timesheet-cost>=${TRYTON_BASEVER}:../../time/py-trytond-timesheet-cost
