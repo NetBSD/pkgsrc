@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2021/12/24 16:08:52 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2021/12/24 16:10:39 wiz Exp $
 #
 DISTNAME=	# empty
 PKGNAME=	${PYPKGPREFIX}-tryton-platform-${TRYTON_BASEVER}
@@ -121,6 +121,5 @@ DEPENDS+=	${PYPKGPREFIX}-trytond-company-work-time>=${TRYTON_BASEVER}:../../time
 DEPENDS+=	${PYPKGPREFIX}-trytond-timesheet-cost>=${TRYTON_BASEVER}:../../time/py-trytond-timesheet-cost
 DEPENDS+=	${PYPKGPREFIX}-trytond-timesheet>=${TRYTON_BASEVER}:../../time/py-trytond-timesheet
 DEPENDS+=	${PYPKGPREFIX}-trytond-web-user>=${TRYTON_BASEVER}:../../www/py-trytond-web-user
-DEPENDS+=	${PYPKGPREFIX}-trytond-webdav>=${TRYTON_BASEVER}:../../www/py-trytond-webdav
 
 .include "../../mk/bsd.pkg.mk"
