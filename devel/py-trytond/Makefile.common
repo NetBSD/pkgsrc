@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2021/12/24 16:08:52 wiz Exp $
+# $NetBSD: Makefile.common,v 1.26 2021/12/24 16:10:39 wiz Exp $
 
 # used by databases/py-trytond-ldap-authentication
 # used by devel/py-proteus/Makefile
@@ -105,7 +105,6 @@
 # used by time/py-trytond-timesheet-cost/Makefile
 # used by time/py-trytond-timesheet/Makefile
 # used by www/py-trytond-web-user/Makefile
-# used by www/py-trytond-webdav/Makefile
 
 TRYTON_BASEVER=		6.2
 
@@ -231,7 +230,6 @@ MODULE_REVISION.trytond_stock_supply_production=		0
 MODULE_REVISION.trytond_timesheet=				0
 MODULE_REVISION.trytond_timesheet_cost=				0
 MODULE_REVISION.trytond_web_user=				0
-MODULE_REVISION.trytond_webdav=					0
 #
 # DO NOT default to 0 if not defined above (which are also for dependencies)
 
