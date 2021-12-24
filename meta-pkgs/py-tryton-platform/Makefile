@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2021/12/24 15:03:12 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2021/12/24 15:50:45 wiz Exp $
 #
 DISTNAME=	# empty
 PKGNAME=	${PYPKGPREFIX}-tryton-platform-${TRYTON_BASEVER}
@@ -91,7 +91,6 @@ DEPENDS+=	${PYPKGPREFIX}-trytond-dashboard>=${TRYTON_BASEVER}:../../misc/py-tryt
 DEPENDS+=	${PYPKGPREFIX}-trytond-party>=${TRYTON_BASEVER}:../../misc/py-trytond-party
 DEPENDS+=	${PYPKGPREFIX}-trytond-party-relationship>=${TRYTON_BASEVER}:../../misc/py-trytond-party-relationship
 DEPENDS+=	${PYPKGPREFIX}-trytond-party-siret>=${TRYTON_BASEVER}:../../misc/py-trytond-party-siret
-DEPENDS+=	${PYPKGPREFIX}-trytond-party-vcarddav>=${TRYTON_BASEVER}:../../misc/py-trytond-party-vcarddav
 DEPENDS+=	${PYPKGPREFIX}-trytond-product>=${TRYTON_BASEVER}:../../misc/py-trytond-product
 DEPENDS+=	${PYPKGPREFIX}-trytond-production-routing>=${TRYTON_BASEVER}:../../misc/py-trytond-production-routing
 DEPENDS+=	${PYPKGPREFIX}-trytond-production-split>=${TRYTON_BASEVER}:../../misc/py-trytond-production-split

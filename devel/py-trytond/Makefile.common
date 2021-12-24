@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2021/12/22 22:50:22 wiz Exp $
+# $NetBSD: Makefile.common,v 1.21 2021/12/24 15:50:45 wiz Exp $
 
 # used by databases/py-trytond-ldap-authentication
 # used by devel/py-proteus/Makefile
@@ -73,7 +73,6 @@
 # used by misc/py-trytond-dashboard/Makefile
 # used by misc/py-trytond-party-relationship/Makefile
 # used by misc/py-trytond-party-siret/Makefile
-# used by misc/py-trytond-party-vcarddav/Makefile
 # used by misc/py-trytond-party/Makefile
 # used by misc/py-trytond-product-attribute/Makefile
 # used by misc/py-trytond-product-classification-taxonomic/Makefile
@@ -186,7 +185,6 @@ MODULE_REVISION.trytond_ldap_authentication=			0
 MODULE_REVISION.trytond_party=					0
 MODULE_REVISION.trytond_party_relationship=			0
 MODULE_REVISION.trytond_party_siret=				0
-MODULE_REVISION.trytond_party_vcarddav=				0
 MODULE_REVISION.trytond_product=				0
 MODULE_REVISION.trytond_product_attribute=			0
 MODULE_REVISION.trytond_product_classification=			0
