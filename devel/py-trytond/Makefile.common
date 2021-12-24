@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2021/12/24 15:55:03 wiz Exp $
+# $NetBSD: Makefile.common,v 1.23 2021/12/24 15:57:23 wiz Exp $
 
 # used by databases/py-trytond-ldap-authentication
 # used by devel/py-proteus/Makefile
@@ -102,7 +102,6 @@
 # used by misc/py-trytond-stock/Makefile
 # used by security/py-trytond-authentication-sms/Makefile
 # used by time/py-trytond-calendar-classification/Makefile
-# used by time/py-trytond-calendar-scheduling/Makefile
 # used by time/py-trytond-calendar/Makefile
 # used by time/py-trytond-company-work-time/Makefile
 # used by time/py-trytond-timesheet-cost/Makefile
@@ -166,7 +165,6 @@ MODULE_REVISION.trytond_authentication_sms=			0
 MODULE_REVISION.trytond_bank=					0
 MODULE_REVISION.trytond_calendar=				1
 MODULE_REVISION.trytond_calendar_classification=		0
-MODULE_REVISION.trytond_calendar_scheduling=			0
 MODULE_REVISION.trytond_carrier=				0
 MODULE_REVISION.trytond_carrier_percentage=			0
 MODULE_REVISION.trytond_carrier_weight=				0
