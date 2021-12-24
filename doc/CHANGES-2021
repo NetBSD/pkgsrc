@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6384 2021/12/24 16:12:34 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6385 2021/12/24 22:28:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9545,3 +9545,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed time/py-trytond-calendar [wiz 2021-12-24]
 	Removed www/py-trytond-webdav [wiz 2021-12-24]
 	Removed www/py-pywebdav [wiz 2021-12-24]
+	Updated devel/py-boost to 1.77.0nb2 [wiz 2021-12-24]
