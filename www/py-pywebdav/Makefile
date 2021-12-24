@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/09/02 13:20:01 adam Exp $
+# $NetBSD: Makefile,v 1.12 2021/12/24 05:45:45 mef Exp $
 
 VERSION=	0.9.8
 DISTNAME=	PyWebDAV-${VERSION}
@@ -17,7 +17,7 @@ PLIST_SUBST+=	DOCDIR=${DOCDIR:Q}
 
 INSTALLATION_DIRS+=	${DOCDIR}
 
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.9.8
+#YTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.9.8
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/${DOCDIR}
