@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2021/12/08 16:02:30 adam Exp $
+# $NetBSD: Makefile,v 1.134 2021/12/25 03:36:01 taca Exp $
 
 # WARNING: DO NOT UPDATE WITHOUT RESOLVING THIS ISSUE:
 #
@@ -7,8 +7,7 @@
 #
 # Please do not update without testing on NetBSD 9.2!
 #
-DISTNAME=	samba-4.13.14
-PKGREVISION=	1
+DISTNAME=	samba-4.13.15
 CATEGORIES=	net
 MASTER_SITES=	https://download.samba.org/pub/samba/stable/
 
@@ -205,6 +204,7 @@ REPLACE_PERL+=		script/*.pl
 REPLACE_PERL+=		source3/script/*.pl
 REPLACE_PERL+=		source4/build/pasn1/pasn1.pl
 REPLACE_PERL+=		source4/script/*.pl
+REPLACE_PERL+=		source4/scripting/bin/nsupdate-gss
 REPLACE_PERL+=		third_party/nss_wrapper/nss_wrapper.pl
 REPLACE_PYTHON+=	buildtools/bin/waf
 REPLACE_PYTHON+=	source4/setup/wscript_build
