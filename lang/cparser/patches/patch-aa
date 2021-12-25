@@ -1,7 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2015/12/29 23:34:45 dholland Exp $
+$NetBSD: patch-aa,v 1.6 2021/12/25 21:45:43 dholland Exp $
 
 Configure for pkgsrc.
 Use libtool.
+Fix escaping creating revision.h.
 
 --- Makefile.orig	2012-11-21 17:50:43.000000000 +0000
 +++ Makefile
@@ -33,7 +34,18 @@ Use libtool.
  
  Q = @
  
-@@ -113,7 +113,7 @@ UNUSED := $(shell mkdir -p $(DIRS) $(DIR
+@@ -103,8 +103,9 @@ config.h:
+ REVISION ?= $(shell git describe --abbrev=40 --always --dirty --match '')
+ 
+ # Update revision.h if necessary
++HASH=\#
+ UNUSED := $(shell \
+-	REV="\#define cparser_REVISION \"$(REVISION)\""; \
++	REV="${HASH}define cparser_REVISION \"$(REVISION)\""; \
+ 	echo "$$REV" | cmp -s - revision.h 2> /dev/null || echo "$$REV" > revision.h \
+ )
+ 
+@@ -113,7 +114,7 @@ UNUSED := $(shell mkdir -p $(DIRS) $(DIR
  
  $(GOAL): $(LIBFIRM_FILE) $(cparser_OBJECTS)
  	@echo "===> LD $@"
@@ -42,7 +54,7 @@ Use libtool.
  
  ifneq ("$(LIBFIRM_FILE)", "")
  ifneq ("$(MAKECMDGOALS)", "clean")
-@@ -144,33 +144,33 @@ bootstrap2: cparser.bootstrap2
+@@ -144,33 +145,33 @@ bootstrap2: cparser.bootstrap2
  	@echo '===> CPARSER $<'
  	$(Q)./cparser $(CPPFLAGS) -fsyntax-only $<
  
