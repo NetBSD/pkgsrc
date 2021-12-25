@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21373 2021/12/24 22:28:38 wiz Exp $
+$NetBSD: TODO,v 1.21374 2021/12/25 03:36:57 taca Exp $
 
 Suggested new packages
 ======================
@@ -409,9 +409,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-tseries-0.10.48
 	o R-uuid-4
 	o SOGo-2.4.1
-	o SOGo-5.2.0
+	o SOGo-5.4.0
 	o SOPE-2.4.1
-	o SOPE-5.2.0
+	o SOPE-5.4.0
 	o SQLiteCpp-2.5.0
 	o TeXmacs-1.99.19
 	o TiffIO-140a
