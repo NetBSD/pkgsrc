@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2015/12/29 23:34:49 dholland Exp $
+$NetBSD: patch-aa,v 1.7 2021/12/25 21:29:18 dholland Exp $
 
-Recognize x86_64 and powerpc.
+Recognize x86_64 and powerpc and arm.
 Recognize Dragonfly and NetBSD.
 Honor pkgsrc PTHREAD_LDFLAGS and PTHREAD_LIBS.
 Use pkgsrc readline.
@@ -12,7 +12,7 @@ Use pkgsrc readline.
  if test x"${JNITYPES_HOST+set}"x != x"set"x; then
      case "${host}" in
 -    i?86-* | alpha-* | sparc-* | mips-* | hppa1*)
-+    i?86-* | x86_64-* | alpha-* | sparc-* | mips-* | hppa1* | powerpc-*)
++    i?86-* | x86_64-* | alpha-* | sparc-* | mips-* | hppa1* | powerpc-* | arm-* | armv[0-9]-* | aarch64-*)
  	JNITYPES_HOST="${srcdir}/lib/libjni/include/jnitypes.frag";;
      *)
        { echo "configure: error: Unsupported platform.\n  Check ${srcdir}/lib/libjni/include/jnitypes.frag to see if types are correct, and\n  update configure.in." 1>&2; exit 1; }
