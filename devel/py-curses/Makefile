@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2021/12/26 19:57:05 nros Exp $
+# $NetBSD: Makefile,v 1.54 2021/12/26 20:03:29 nros Exp $
 
 PKGNAME=	${PYPKGPREFIX}-curses-${PY_DISTVERSION}
 PKGREVISION=	6
@@ -16,7 +16,7 @@ USE_CURSES=	getsyx
 # But we build as ncurses still to get the full feature set easily
 FAKE_NCURSES=	yes
 
-PY_SETUP_SUBST=		NCURSESPREFIX=${BUILDLINK_PREFIX.ncurses}
+PY_SETUP_SUBST=		NCURSESPREFIX=${BUILDLINK_PREFIX.curses}
 PYSETUPINSTALLARGS+=	--install-lib ${PREFIX}/${PYLIB}/lib-dynload
 
 .include "../../lang/python/extension.mk"
