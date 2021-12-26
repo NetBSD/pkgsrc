@@ -1,0 +1,17 @@
+$NetBSD: patch-configure.ac,v 1.1 2021/12/26 05:27:37 mef Exp $
+
+=> Checking for portability problems in extracted files
+ERROR: [check-portability.awk] => Found test ... == ...:
+ERROR: [check-portability.awk] configure:38625: if test x$enable_fuzz == xno; then
+
+--- configure.ac.orig	2021-09-09 03:16:07.000000000 +0900
++++ configure.ac	2021-12-26 12:24:07.689196819 +0900
+@@ -1922,7 +1922,7 @@ if test x$bitcoin_enable_qt != xno; then
+     echo "    with qr       = $use_qr"
+ fi
+ echo "  with zmq        = $use_zmq"
+-if test x$enable_fuzz == xno; then
++if test x$enable_fuzz = xno; then
+     echo "  with test       = $use_tests"
+ else
+     echo "  with test       = not building test_bitcoin because fuzzing is enabled"
