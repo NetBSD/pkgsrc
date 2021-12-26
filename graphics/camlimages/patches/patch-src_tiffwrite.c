@@ -1,36 +1,38 @@
-$NetBSD: patch-src_tiffwrite.c,v 1.2 2016/09/18 05:46:31 dholland Exp $
+$NetBSD: patch-src_tiffwrite.c,v 1.3 2021/12/26 05:28:23 dholland Exp $
 
- - Both ocaml/caml/config.h and tiff.h define int32, uint32, etc.
-The workaround of this name polution is to intentionally overwrite the
-first caml definition with a garbage macro before tiff.h is included and
-then unset it after the include.  After tiff version 4.0.1, the same hack
-has to be applied to 64-bit types.
+- ocaml/caml/compatibility.h defines int16 and uint16, which break tiff.
+They're not needed, so clear them out. (There are no more int32/uint32
+defines, so that logic can be removed.)
 
- - As of some newer ocaml there's no "uint32", only "uint32_t". The
-first two hunks of this patch are probably no longer necessary.
+- tiff uses uint32_t instead of its own uint32 these days.
 
+- Cast away const where ocaml provides const and tiff doesn't accept it.
 
 --- src/tiffwrite.c.orig	2011-06-22 18:04:32.000000000 +0000
 +++ src/tiffwrite.c
-@@ -25,6 +25,8 @@
- #define uint16 uint16tiff
- #define int32 int32tiff
- #define uint32 uint32tiff
-+#define int64 int64tiff
-+#define uint64 uint64tiff
+@@ -20,18 +20,11 @@
+ #include <caml/memory.h>
+ #include <caml/fail.h>
  
- #include <tiffio.h>
- 
-@@ -32,6 +34,8 @@
+-/* These are defined in caml/config.h */
+-#define int16 int16tiff
+-#define uint16 uint16tiff
+-#define int32 int32tiff
+-#define uint32 uint32tiff
+-
+-#include <tiffio.h>
+-
++/* These are defined in caml/compatibility.h and break tiff */
+ #undef int16
  #undef uint16
- #undef int32
- #undef uint32
-+#undef int64
-+#undef uint64
+-#undef int32
+-#undef uint32
++
++#include <tiffio.h>
  
  extern value *imglib_error;
  
-@@ -56,8 +60,8 @@ value open_tiff_file_for_write( value fi
+@@ -56,8 +49,8 @@ value open_tiff_file_for_write( value fi
      /* Resolution */
      /* FillOrder */
      
@@ -41,3 +43,11 @@ first two hunks of this patch are probably no longer necessary.
      TIFFSetField(tif, TIFFTAG_ORIENTATION, ORIENTATION_TOPLEFT);
      TIFFSetField(tif, TIFFTAG_SAMPLESPERPIXEL, 3);
      TIFFSetField(tif, TIFFTAG_BITSPERSAMPLE, 8);
+@@ -83,6 +76,6 @@ value write_tiff_scanline( tiffh, buf, r
+      value row;
+ {
+   CAMLparam3(tiffh,buf,row);
+-  TIFFWriteScanline((TIFF*)tiffh, String_val(buf), Int_val(row), 0);
++  TIFFWriteScanline((TIFF*)tiffh, (char *)String_val(buf), Int_val(row), 0);
+   CAMLreturn(Val_unit);
+ }
