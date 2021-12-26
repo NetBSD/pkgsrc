@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2021/12/06 16:03:50 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2021/12/26 19:57:05 nros Exp $
 
 PKGNAME=	${PYPKGPREFIX}-curses-${PY_DISTVERSION}
 PKGREVISION=	6
@@ -10,8 +10,6 @@ COMMENT=	Curses module for Python
 
 PYDISTUTILSPKG=		yes
 PY_PATCHPLIST=		yes
-
-#CPPFLAGS+=	-I${PREFIX}/include/python3.10/internal
 
 # NetBSD-8 curses has enough support for py-curses
 USE_CURSES=	getsyx
