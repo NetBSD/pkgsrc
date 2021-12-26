@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.49 2021/10/21 13:49:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.50 2021/12/26 10:28:24 plunky Exp $
 
 DISTNAME=	alpine-2.25
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://alpine.x10host.com/alpine/release/src/
-DIST_SUBDIR=	${DISTNAME}
+DIST_SUBDIR=	${DISTNAME}p1	# XXX maildir.patch changed upstream
 EXTRACT_SUFX=	.tar.xz
 
 PATCH_SITES=		https://alpine.x10host.com/alpine/patches/alpine-${PKGVERSION_NOREV}/

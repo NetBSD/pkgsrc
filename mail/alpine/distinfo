@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.28 2021/10/26 10:53:54 nia Exp $
+$NetBSD: distinfo,v 1.29 2021/12/26 10:28:24 plunky Exp $
 
-BLAKE2s (alpine-2.25/alpine-2.25.tar.xz) = 6c1e0b8522b479477573d8af491045d5222758238fd83ba9fcb837d5c55afc6c
-SHA512 (alpine-2.25/alpine-2.25.tar.xz) = 76c214cf66f4ac7af3de40357ad3a592ff2a119e327e5f6c256125b7865d46b09197435fe6ac8077ab7a498e4821925939f3f902431ca77baa786e149466a193
-Size (alpine-2.25/alpine-2.25.tar.xz) = 7495372 bytes
-BLAKE2s (alpine-2.25/maildir.patch.gz) = 58e809cd9f5a28cc55d3a7ee3c8b9af379092f242ba3d5466b8614846466b03a
-SHA512 (alpine-2.25/maildir.patch.gz) = eea454796cab4e96b83869e880fe17d20799bf3a606712367f42deb0f3870b30f620fc77c307e40303ffc8492e828bb7772965b21614b2c27d4fc972f18ff346
-Size (alpine-2.25/maildir.patch.gz) = 34758 bytes
+BLAKE2s (alpine-2.25p1/alpine-2.25.tar.xz) = 6c1e0b8522b479477573d8af491045d5222758238fd83ba9fcb837d5c55afc6c
+SHA512 (alpine-2.25p1/alpine-2.25.tar.xz) = 76c214cf66f4ac7af3de40357ad3a592ff2a119e327e5f6c256125b7865d46b09197435fe6ac8077ab7a498e4821925939f3f902431ca77baa786e149466a193
+Size (alpine-2.25p1/alpine-2.25.tar.xz) = 7495372 bytes
+BLAKE2s (alpine-2.25p1/maildir.patch.gz) = 9d4c5e884815ec1c24286f264a0d5430e39f44971935e72c309e27e71062d7e7
+SHA512 (alpine-2.25p1/maildir.patch.gz) = 2973302432d8b7611cc5998c19ce8d9965b2c18a0dd06693a3f409becb3173df5a63d5b87859994bf13d216200823148d00255e242e0bc33b3952cdc7025ee26
+Size (alpine-2.25p1/maildir.patch.gz) = 34788 bytes
 SHA1 (patch-imap_src_c-client_auth_gss.c) = e6da9ee9dbe0751872d1400237a030112eaa56c6
 SHA1 (patch-imap_src_osdep_unix_Makefile.gss) = ca09bc26a139c68afe8ac1f99be54bd1fc0e77f0
 SHA1 (patch-imap_src_osdep_unix_kerb_mit.c) = c77d5ee1e8aee30811c2df0562caa375ed270c0e
