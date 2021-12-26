@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2021/12/08 16:05:28 adam Exp $
+# $NetBSD: Makefile,v 1.86 2021/12/26 14:28:00 rhialto Exp $
 
 DISTNAME=	milter-greylist-4.4.3
 PKGREVISION=	22
@@ -13,6 +13,7 @@ LICENSE=	original-bsd
 
 # yacc rule moving to y.tab.c and renaming
 MAKE_JOBS_SAFE=		no
+MKPIE_SUPPORTED=	no # libmilter.a is not PIC
 
 GNU_CONFIGURE=		YES
 BUILD_TARGET=		milter-greylist
