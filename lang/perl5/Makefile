@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.273 2021/12/20 09:01:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.274 2021/12/26 15:50:16 nia Exp $
 
 PKGREVISION= 3
 .include "license.mk"
@@ -144,6 +144,7 @@ LIBSWANTED.OpenBSD=	m crypt
 LIBSWANTED.SunOS=	m crypt dl socket nsl
 LIBSWANTED.AIX=		m crypt dl socket nsl bind c
 LIBSWANTED.SCO_SV=	m crypt socket
+LIBSWANTED.UnixWare=	m crypt socket
 LIBSWANTED=		${LIBSWANTED.${OPSYS}}
 SUBST_VARS.policysh+=	LIBSWANTED
 
