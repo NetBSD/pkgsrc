@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6387 2021/12/26 05:09:38 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6388 2021/12/26 15:29:00 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9548,3 +9548,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-boost to 1.77.0nb2 [wiz 2021-12-24]
 	Updated net/samba4 to 4.13.15 [taca 2021-12-25]
 	Updated devel/transifex-client to 0.14.4 [taca 2021-12-26]
+	Updated mail/fetchmail to 6.4.25 [triaxx 2021-12-26]
