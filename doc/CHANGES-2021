@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6391 2021/12/26 17:06:24 rillig Exp $
+$NetBSD: CHANGES-2021,v 1.6392 2021/12/26 18:24:32 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9551,3 +9551,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/fetchmail to 6.4.25 [triaxx 2021-12-26]
 	Updated mail/fetchmailconf to 6.4.25 [triaxx 2021-12-26]
 	Updated pkgtools/pkglint to 21.4.0 [rillig 2021-12-26]
+	Removed x11/libxfce4gui [gutteridge 2021-12-26]
