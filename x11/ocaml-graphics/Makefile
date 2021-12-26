@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2021/03/08 08:13:10 jaapb Exp $
+# $NetBSD: Makefile,v 1.41 2021/12/26 05:09:45 dholland Exp $
 
 GITHUB_PROJECT=	graphics
 DISTNAME=	ocaml-${GITHUB_PROJECT}-2.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 
