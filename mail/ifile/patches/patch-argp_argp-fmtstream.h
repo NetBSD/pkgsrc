@@ -1,6 +1,9 @@
-$NetBSD: patch-argp_argp-fmtstream.h,v 1.1 2012/10/20 22:13:28 joerg Exp $
+$NetBSD: patch-argp_argp-fmtstream.h,v 1.2 2021/12/26 23:54:01 nros Exp $
 
---- argp/argp-fmtstream.h.orig	2004-11-19 22:51:26.000000000 +0000
+* defining __OPTIMIZE__ to nothing causes ssp.h on NetBSD
+  to crash use __ARGP_OPTIMIZE__ instead to avoid conflict
+
+--- argp/argp-fmtstream.h.orig	2006-05-22 16:49:23.000000000 +0000
 +++ argp/argp-fmtstream.h
 @@ -139,6 +139,7 @@ extern ssize_t argp_fmtstream_printf (ar
     ;
@@ -34,6 +37,15 @@ $NetBSD: patch-argp_argp-fmtstream.h,v 1.1 2012/10/20 22:13:28 joerg Exp $
  
  /* Internal routines.  */
  extern void _argp_fmtstream_update (argp_fmtstream_t __fs);
+@@ -186,7 +190,7 @@ extern void __argp_fmtstream_update (arg
+ extern int _argp_fmtstream_ensure (argp_fmtstream_t __fs, size_t __amount);
+ extern int __argp_fmtstream_ensure (argp_fmtstream_t __fs, size_t __amount);
+ 
+-#ifdef __OPTIMIZE__
++#ifdef __ARGP_OPTIMIZE__
+ /* Inline versions of above routines.  */
+ 
+ #if !_LIBC
 @@ -202,7 +206,11 @@ extern int __argp_fmtstream_ensure (argp
  #endif
  
@@ -46,3 +58,12 @@ $NetBSD: patch-argp_argp-fmtstream.h,v 1.1 2012/10/20 22:13:28 joerg Exp $
  #endif
  
  ARGP_FS_EI size_t
+@@ -298,7 +306,7 @@ __argp_fmtstream_point (argp_fmtstream_t
+ #undef __argp_fmtstream_ensure
+ #endif
+ 
+-#endif /* __OPTIMIZE__ */
++#endif /* __ARGP_OPTIMIZE__ */
+ 
+ #endif /* ARGP_FMTSTREAM_USE_LINEWRAP */
+ 
