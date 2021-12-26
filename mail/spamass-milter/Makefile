@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2021/12/26 14:28:00 rhialto Exp $
+# $NetBSD: Makefile,v 1.38 2021/12/26 16:13:45 rhialto Exp $
 #
 
 DISTNAME=	spamass-milter-0.4.0
@@ -16,7 +16,6 @@ DEPENDS+=	spamassassin>=2.44:../../mail/spamassassin
 
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
-MKPIE_SUPPORTED= no	# libmilter.a is not PIC
 
 CPPFLAGS.SunOS+=	-Du_int8_t=uint8_t
 
