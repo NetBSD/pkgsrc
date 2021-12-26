@@ -1,4 +1,4 @@
-Provide keyboard shortcuts for X11R6, specifically intended for use with the
+Provide keyboard shortcuts for X11, specifically intended for use with the
 Blackbox window manager but usable with any.
 
 Can bind actions such as executing commands, altering the states of windows,
