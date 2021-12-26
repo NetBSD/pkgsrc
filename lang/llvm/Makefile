@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2021/12/08 16:05:21 adam Exp $
+# $NetBSD: Makefile,v 1.68 2021/12/26 21:52:11 he Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -21,7 +21,7 @@
 # Always update all */buildlink3.mk to require the latest stable release
 # version in BUILDLINK_API_DEPENDS, as there is no backwards compatibility
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "version.mk"
 
 DISTNAME=	llvm-${LLVM_VERSION}.src
@@ -107,6 +107,10 @@ CXXFLAGS+=	-march=i586
 # Needed to avoid "relocation truncated to fit: R_PPC_REL24"
 CFLAGS+=	-mlongcall
 CXXFLAGS+=	-mlongcall
+.endif
+
+.if ${OPSYS} == "NetBSD"
+CMAKE_ARGS+=	-DPKGSRC_LLVM_PTHREADLIB=-lpthread
 .endif
 
 .include "options.mk"
