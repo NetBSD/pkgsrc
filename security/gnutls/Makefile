@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.224 2021/12/08 16:02:33 adam Exp $
+# $NetBSD: Makefile,v 1.225 2021/12/26 23:03:54 gutteridge Exp $
 
 DISTNAME=	gnutls-3.7.2
 PKGREVISION=	2
@@ -89,6 +89,11 @@ GNUTLS_GAS_NEW_ENOUGH=	yes
 CONFIGURE_ARGS+=	--disable-hardware-acceleration
 .    endif
 .  endif
+.endif
+
+# Tests fail due to missing strndup for Solaris < 5.11, disable for now
+.if ${OPSYS} == "SunOS" && ${OPSYS_VERSION} < 051100
+CONFIGURE_ARGS.SunOS+=	--disable-tests
 .endif
 
 post-install:
