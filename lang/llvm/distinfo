@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.32 2021/11/23 20:55:44 wiz Exp $
+$NetBSD: distinfo,v 1.33 2021/12/26 21:52:11 he Exp $
 
 BLAKE2s (llvm-13.0.0.src.tar.xz) = ffdfed33e870715f2e8c0efdc2c29566a2bffe5a6efce90ea7ca4990c9067f0f
 SHA512 (llvm-13.0.0.src.tar.xz) = c307500a5fdc2bf6d768a808cf879d33914e24437f4f794361eccedb28ac6a98ebc41ca6140d09364c9bdec565fabd049e364d3f5b39f1751ecff51b687c4eff
 Size (llvm-13.0.0.src.tar.xz) = 45471992 bytes
 SHA1 (patch-CMakeLists.txt) = 78e2dab2bf73f7e466ca2788fe6444e39b4ebd80
-SHA1 (patch-cmake_config-ix.cmake) = 0c89e208e9e101a6d80aaa5007126eefb0d3647c
+SHA1 (patch-cmake_config-ix.cmake) = 72d15d43d6d8eb3bd8b2c1ff7d416bd6b2421908
 SHA1 (patch-cmake_modules_AddLLVM.cmake) = 148897aeba8c29b9cf55eade62554710ae0f63f3
 SHA1 (patch-include_llvm-c_DataTypes.h) = 790c9458d6590a0d6985fdcbd8785da340b9779b
 SHA1 (patch-include_llvm_Analysis_ConstantFolding.h) = 56b9374da236c346565897977040255b9766cab8
