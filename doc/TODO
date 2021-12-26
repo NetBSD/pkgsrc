@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21374 2021/12/25 03:36:57 taca Exp $
+$NetBSD: TODO,v 1.21375 2021/12/26 09:03:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -361,7 +361,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o GNUMail-1.2.2
 	o Gorm-1.2.26
 	o HElib-2.1.0
-	o ImageMagick-7.1.0.18
+	o ImageMagick-7.1.0.19
 	o ImageMagick6-6.9.12.8
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
@@ -472,7 +472,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o arm-trusted-firmware-rk3399-2.4
 	o arm-trusted-firmware-sun50i_a64-2.4
 	o asapm-3.1
-	o asciidoc-10.1.0
+	o asciidoc-10.1.1
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
@@ -560,6 +560,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cherokee-1.2.103 [pkg/48268]
 	o chimera-1.30a
 	o chkrootkit-0.54
+	o chromaprint-1.5.1
 	o chrpath-0.16
 	o cim-5.1
 	o cjk-lyx-1.4.4
@@ -633,6 +634,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o doclifter-2.19
 	o dolphin-5.0
 	o dosbox-x-0.83.12
+	o double-conversion-3.1.7
 	o drivel-3.0.5
 	o drupal-9.2.2
 	o dtc-1.6.0
@@ -1100,6 +1102,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libkscreen-5.21.4
 	o liblzo-2.10
 	o libmcs-0.7.2
+	o libmicrohttpd-0.9.74
 	o libmilter-8.16.1
 	o libmtag-0.3.6
 	o libobjc2-2.1
@@ -1597,6 +1600,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-Scientific-doc-2.5.5
 	o py-astroplan-0.8
 	o py-astroquery-0.4
+	o py-async-timeout-4.0.2
 	o py-cares-3.1.1
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
@@ -1711,7 +1715,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ruby-delayer-1.2.1
 	o ruby-redmine-gitmike-theme-1.2.1
 	o rump-20131213
-	o rust-analyzer-0.0.2021.12.13
+	o rust-analyzer-0.0.2021.12.20
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
@@ -1883,6 +1887,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o userppp-030706
 	o userspace-rcu-0.12.2
 	o utilisp-1.14
+	o vala-0.54.5
 	o vault-1.7.4
 	o vbetool-1.1
 	o vera-1.24
