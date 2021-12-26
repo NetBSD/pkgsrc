@@ -1,0 +1,41 @@
+$NetBSD: patch-60b5f91ebd7dd86f4c801f801e2e28bde1fd0cc3,v 1.1 2021/12/26 05:09:45 dholland Exp $
+
+https://github.com/xavierleroy/graphics/commit/60b5f91ebd7dd86f4c801f801e2e28bde1fd0cc3.diff
+
+  Replace call to caml_process_pending_signals by explicit processing of events
+
+  caml_process_pending_signals is a function from OCaml's runtime system
+  that disappeared in version 4.10.
+
+  The reason this function was called in caml_gr_wait_event_poll
+  was to process pending X events and merge them in our event queue
+  before the results of the poll are determined.
+
+  It should be just as good to explicitly purge pending X events instead.
+
+See https://github.com/ocaml/graphics/issues/14.
+
+diff --git a/src/unix/events.c b/src/unix/events.c
+index b858b03..93f3fef 100644
+--- src/unix/events.c
++++ src/unix/events.c
+@@ -157,13 +157,18 @@ static value caml_gr_wait_allocate_result(int mouse_x, int mouse_y, int button,
+ 
+ static value caml_gr_wait_event_poll(void)
+ {
++  XEvent grevent;
+   int mouse_x, mouse_y, button, key, keypressed;
+   Window rootwin, childwin;
+   int root_x, root_y, win_x, win_y;
+   unsigned int modifiers;
+   unsigned int i;
+ 
+-  caml_process_pending_signals ();
++  /* Process pending X events before polling */
++  while (XCheckMaskEvent(caml_gr_display, -1 /*all events*/, &grevent)) {
++    caml_gr_handle_event(&grevent);
++  }
++  /* Poll the mouse state */
+   if (XQueryPointer(caml_gr_display, caml_gr_window.win,
+                     &rootwin, &childwin,
+                     &root_x, &root_y, &win_x, &win_y,
