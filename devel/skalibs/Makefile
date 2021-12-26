@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2021/12/22 15:59:17 schmonz Exp $
+# $NetBSD: Makefile,v 1.15 2021/12/26 16:42:42 nros Exp $
 
 DISTNAME=		skalibs-2.11.1.0
 CATEGORIES=		devel
@@ -15,6 +15,8 @@ USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+
+CPPFLAGS.NetBSD=	-D_NETBSD_SOURCE
 
 INSTALLATION_DIRS=	include/skalibs lib/skalibs/sysdeps
 
