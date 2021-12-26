@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6389 2021/12/26 15:30:54 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.6390 2021/12/26 16:57:03 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9550,3 +9550,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/transifex-client to 0.14.4 [taca 2021-12-26]
 	Updated mail/fetchmail to 6.4.25 [triaxx 2021-12-26]
 	Updated mail/fetchmailconf to 6.4.25 [triaxx 2021-12-26]
+	Updated pkgtools/pkglint to 21.4.0 [rillig 2021-12-26]
