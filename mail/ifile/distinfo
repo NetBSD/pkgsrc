@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:54:02 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/12/26 23:54:01 nros Exp $
 
 BLAKE2s (ifile-1.3.8/ifile-1.3.8.tar.gz) = 1f484a0689d3d7afae497dea28626fac48b4815ba288249fde4c09ccd4b329f2
 SHA512 (ifile-1.3.8/ifile-1.3.8.tar.gz) = d69315da0eae777fb764d9db5157d1e7232f7c17fa3b42dcdf21dd81205999f1740d1d59727a951cbd48327cdd05ce47f9c1a30d6c67cca4b744f879d82a8b32
 Size (ifile-1.3.8/ifile-1.3.8.tar.gz) = 190558 bytes
-SHA1 (patch-aa) = f60b5642496e83707f722c2ea1d63460599226ba
+SHA1 (patch-aa) = 259413b004057433d49202e1ab1ba57d33f22f99
 SHA1 (patch-ad) = 6b92eec1416a40cc692ff58915f8ebf133160f6a
-SHA1 (patch-argp_argp-fmtstream.h) = 505591cb210f783422a9e600e1f97a2ca3ae09ad
+SHA1 (patch-argp_argp-fmtstream.h) = 384edba4ffa1449e0b7f7ccf117e2de11514e496
+SHA1 (patch-argp_argp-fs-xinl.c) = 208a1f3d2711ddae6fc175a5b8dd03744053662e
+SHA1 (patch-argp_argp-xinl.c) = 508c2afe0b452443f745722e28ce2cb8f336d49a

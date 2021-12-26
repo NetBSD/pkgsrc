@@ -1,6 +1,9 @@
-$NetBSD: patch-aa,v 1.3 2012/10/15 09:35:17 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2021/12/26 23:54:01 nros Exp $
 
---- argp/argp.h.orig	2004-11-19 22:51:25.000000000 +0000
+* defining __OPTIMIZE__ to nothing causes ssp.h on NetBSD
+  to crash use __ARGP_OPTIMIZE__ instead to avoid conflict
+
+--- argp/argp.h.orig	2006-05-22 16:49:22.000000000 +0000
 +++ argp/argp.h
 @@ -352,7 +352,7 @@ struct argp_state
  #define ARGP_NO_EXIT	0x20
@@ -38,6 +41,15 @@ $NetBSD: patch-aa,v 1.3 2012/10/15 09:35:17 joerg Exp $
  
  /* Return the input field for ARGP in the parser corresponding to STATE; used
     by the help routines.  */
+@@ -508,7 +512,7 @@ extern void *_argp_input __P ((__const s
+ extern void *__argp_input __P ((__const struct argp *argp,
+ 				__const struct argp_state *state));
+ 
+-#ifdef __OPTIMIZE__
++#ifdef __ARGP_OPTIMIZE__
+ 
+ #if !_LIBC
+ # define __argp_usage argp_usage
 @@ -518,7 +522,11 @@ extern void *__argp_input __P ((__const 
  #endif
  
@@ -50,3 +62,12 @@ $NetBSD: patch-aa,v 1.3 2012/10/15 09:35:17 joerg Exp $
  #endif
  
  ARGP_EI void
+@@ -552,7 +560,7 @@ __option_is_end (__const struct argp_opt
+ # undef __option_is_end
+ #endif
+ 
+-#endif /* __OPTIMIZE__ */
++#endif /* __ARGP_OPTIMIZE__ */
+ 
+ #ifdef  __cplusplus
+ }
