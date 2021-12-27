@@ -1,10 +1,27 @@
-$NetBSD: patch-src_Makefile.in,v 1.3 2015/01/24 03:55:34 mef Exp $
+$NetBSD: patch-src_Makefile.in,v 1.4 2021/12/27 00:49:02 dholland Exp $
 
-Fix build with modular Xorg.1.2
+Fix build with modular Xorg.1.2 (link with X_LIBS and honor LDFLAGS)
 
---- src/Makefile.in.orig	2011-08-07 14:43:38.000000000 +0000
-+++ src/Makefile.in	2011-08-07 14:44:05.000000000 +0000
-@@ -624,7 +624,7 @@
+Hack ocaml-graphics paths into the build. The makefiles date from when
+it was part of the ocaml stdlib.
+
+--- src/Makefile.in.orig	2011-09-27 07:45:41.000000000 +0000
++++ src/Makefile.in
+@@ -292,10 +292,10 @@ OCAMLBYTOBJS = $(OCAMLBUILTSOURCES:.ml=.
+ OCAMLOPTOBJS = $(OCAMLBUILTSOURCES:.ml=.cmx) $(OCAMLSOURCES:.ml=.cmx)
+ COBJS = $(CSOURCES:.c=.o)
+ AM_CFLAGS = $(XINERAMA_CFLAGS) $(X_CFLAGS)
+-AM_OCAMLCFLAGS = $(CAMLIMAGES_INCLUDES)
++AM_OCAMLCFLAGS = $(CAMLIMAGES_INCLUDES) $(OCAMLGRAPHICS_INCLUDES)
+ OTHER_LIBS = unix str 
+-OCAMLLIBS_OPT = $(CAMLIMAGES_LIBS_NATIVE) $(OTHER_LIBS:=.cmxa)
+-OCAMLLIBS_BYT = $(CAMLIMAGES_LIBS_BYTE) $(OTHER_LIBS:=.cma)
++OCAMLLIBS_OPT = $(CAMLIMAGES_LIBS_NATIVE) $(OCAMLGRAHPICS_LIBS_NATIVE) $(OTHER_LIBS:=.cmxa)
++OCAMLLIBS_BYT = $(CAMLIMAGES_LIBS_BYTE) $(OCAMLGRAPHICS_LIBS_BYTE) $(OTHER_LIBS:=.cma)
+ 
+ # In bytecode mode create stubcode in dlladvi
+ DLLADVI = dlladvi.so
+@@ -624,7 +624,7 @@ dlladvi.so: $(COBJS) Makefile
  	$(OCAMLMKLIB) -o advi \
  		$(OCAMLCFLAGS) $(AM_OCAMLCFLAGS) $(AM_LINKFLAGS) \
  		$(COBJS) \
