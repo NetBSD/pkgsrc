@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/05/20 06:28:12 nia Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/12/27 10:18:25 nia Exp $
 bin/dupeguru
 share/applications/dupeguru.desktop
 share/dupeguru/core/__init__.py
@@ -187,7 +187,7 @@ share/dupeguru/help/_static/minus.png
 share/dupeguru/help/_static/plus.png
 share/dupeguru/help/_static/pygments.css
 share/dupeguru/help/_static/searchtools.js
-share/dupeguru/help/_static/underscore-1.12.0.js
+share/dupeguru/help/_static/underscore-1.13.1.js
 share/dupeguru/help/_static/underscore.js
 share/dupeguru/help/changelog.html
 share/dupeguru/help/contribute.html
