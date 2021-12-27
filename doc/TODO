@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21377 2021/12/27 03:12:39 dholland Exp $
+$NetBSD: TODO,v 1.21378 2021/12/27 04:35:48 dholland Exp $
 
 Suggested new packages
 ======================
@@ -839,6 +839,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o got-0.52
 	o gourmet-0.13.3
 	o gperiodic-3.0.2
+	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
 	o gradle-7.0
 	o grafx2-2.8.3097
