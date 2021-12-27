@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21378 2021/12/27 04:35:48 dholland Exp $
+$NetBSD: TODO,v 1.21379 2021/12/27 10:03:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1152,7 +1152,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lua-sql-sqlite3-2.4.0
 	o lua-std-normalize-2.0.3
 	o lua-web-sanitize-1.1.0
-	o lumina-1.6.1
+	o lumina-1.6.2
 	o lzma-9.18
 	o mDNSResponder-1310.80.1
 	o mDNSResponder-nss-1310.80.1
@@ -1506,7 +1506,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pgbuildfarm-12
 	o pgpdump-0.33
 	o phoronix-9.2.1
-	o phoronix-test-suite-10.2.2
+	o phoronix-test-suite-10.8
 	o php-basercms-4.5.4
 	o php-concrete5-8.5.7 [php-concretecms-9.0.1 is successor]
 	o php-excel-1.8.2 [PHPSpreadsheet is sucessor]
