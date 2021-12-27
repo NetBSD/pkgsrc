@@ -1,7 +1,15 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:12:02 nia Exp $
+$NetBSD: distinfo,v 1.14 2021/12/27 00:49:02 dholland Exp $
 
 BLAKE2s (advi-1.10.2.tar.gz) = 93641026540c5820f9ecc94b7874dd8353a1ecbf9cae162d35fae561a483622f
 SHA512 (advi-1.10.2.tar.gz) = 93479e22261019b571bc331604a659e4e58200284bcdd63929b2c7ab07f8e9fabbd120f8876081a36e7e09e08286eeba9a45f3b077b545a9e404060622ec45c8
 Size (advi-1.10.2.tar.gz) = 9772060 bytes
 SHA1 (patch-doc_pngs_Makefile.in) = 3141938a6433d4dab8d7247ae89ad3381d902372
-SHA1 (patch-src_Makefile.in) = 3f9be7ac0c4a98b3e36c383ed2489b0d71e73f8a
+SHA1 (patch-src_Makefile.in) = 57c725715075697b12d61df2aaf598c8964f2e37
+SHA1 (patch-src_drawimage.ml) = edbb86f69f034d6b5f1d4dba936c74a51a1c7e0a
+SHA1 (patch-src_dvi.ml) = 2adfe109dcdbc5d8449d318e500015bb8a87cdf6
+SHA1 (patch-src_glyph.ml) = 186993579b52da03944be40f86ce87990d5eefc4
+SHA1 (patch-src_grdev.ml) = 96eb2c162a9aa8e4bb36a2c93cdc20d385dbf98f
+SHA1 (patch-src_gterm.ml) = 514f5bf9fc3ea1579a6e990f998e8536af85b1b7
+SHA1 (patch-src_input.ml) = 2b896cfb700cb63fcf1688116a43492e81fd09e8
+SHA1 (patch-src_pkfont.ml) = dcdb0aaaee33acbc1ab40a4f92d8a8e7c376058c
+SHA1 (patch-src_ttfont.ml) = e15a108630f690dac092751b7850686510e5cf6b
