@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:18:03 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/12/27 04:54:04 dholland Exp $
 
 BLAKE2s (picasm114.tar.bz2) = 24f4e977aae5360fcb5a45a2fff58d22008e05103143aece1c1e713820855dfd
 SHA512 (picasm114.tar.bz2) = a6a8490156afe8af1fc85700890570c745c076396890491f4efe004d7dd701a324f9c7e764fcc710c8954c761f3abb4ed8e97c72ce098100192ead334b335fb7
 Size (picasm114.tar.bz2) = 35429 bytes
-SHA1 (patch-picasm.c) = 1d14ab94f988b35b14cbf05476eab9e14337ef18
+SHA1 (patch-picasm.c) = 4d7b1e68422f70735dd45b55422df2ef077a0f61
