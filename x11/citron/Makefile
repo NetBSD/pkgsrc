@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2021/12/12 22:17:44 pin Exp $
+# $NetBSD: Makefile,v 1.4 2021/12/27 09:13:06 pin Exp $
 
-DISTNAME=	citron-0.5.0
+DISTNAME=	citron-0.6.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grtcdr/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
