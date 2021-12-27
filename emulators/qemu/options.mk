@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.16 2021/02/23 09:28:33 wiz Exp $
+# $NetBSD: options.mk,v 1.17 2021/12/27 10:12:57 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qemu
-PKG_SUPPORTED_OPTIONS=	debug-info gtk3 iscsi sdl spice
+PKG_SUPPORTED_OPTIONS=	debug-info gtk3 iscsi jack sdl spice
 PKG_SUGGESTED_OPTIONS+=	iscsi spice
 
 .include "../../mk/bsd.fast.prefs.mk"
@@ -25,6 +25,13 @@ PKG_SUGGESTED_OPTIONS+=	sdl
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=		gtk keymap virtfs-proxy-helper
+
+.if !empty(PKG_OPTIONS:Mjack)
+CONFIGURE_ARGS+=	--enable-jack
+.include "../../audio/jack/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-jack
+.endif
 
 .if !empty(PKG_OPTIONS:Mdebug-info)
 CONFIGURE_ARGS+=	--enable-debug-info
