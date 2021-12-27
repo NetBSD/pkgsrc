@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2020/01/26 17:31:48 rillig Exp $
+# $NetBSD: Makefile.common,v 1.11 2021/12/27 09:53:49 nia Exp $
 # used by net/bird/Makefile
 # used by net/bird6/Makefile
 
@@ -14,6 +14,9 @@ LICENSE=	gnu-gpl-v2
 
 # Has hardcoded BSD/Linux support.
 NOT_FOR_PLATFORM=	SunOS-*-*
+
+# ld: -r and -pie may not be used together
+MKPIE_SUPPORTED=	no
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
