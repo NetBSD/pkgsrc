@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2019/11/03 19:04:08 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2021/12/27 03:08:43 dholland Exp $
 #
 # Convert the version number as follows 2d2 -> 2.4.2, where the d is
 # changed to a 4, representing the 4th letter.
@@ -10,11 +10,11 @@ DISTNAME=	scm5e3
 PKGNAME=	scm-5.5.3
 PKGREVISION=	2
 CATEGORIES=	lang
-MASTER_SITES=	http://swissnet.ai.mit.edu/ftpdir/scm/
+MASTER_SITES=	https://groups.csail.mit.edu/mac/ftpdir/scm/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.swiss.ai.mit.edu/~jaffer/SCM
+HOMEPAGE=	https://people.csail.mit.edu/jaffer/SCM.html
 COMMENT=	Portable scheme interpreter
 
 # scmfig.h:95:70: fatal error: scmflags.h: No such file or directory
