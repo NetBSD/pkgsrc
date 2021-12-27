@@ -1,10 +1,20 @@
-$NetBSD: patch-picasm.c,v 1.2 2020/03/18 17:52:39 joerg Exp $
+$NetBSD: patch-picasm.c,v 1.3 2021/12/27 04:54:04 dholland Exp $
 
 Fix tautological check.
 Remove unused variable.
+Use memcpy instead of strncpy for copying an already-computed length.
 
 --- picasm.c.orig	2005-06-29 07:05:34.000000000 +0000
 +++ picasm.c
+@@ -109,7 +109,7 @@ err_line_ref(void)
+ 	len = strlen(line_buffer);
+ 	if(len > 100)
+ 	    len = 100;
+-	strncpy(outbuf, line_buffer, len);
++	memcpy(outbuf, line_buffer, len);
+ 	outbuf[len] = '\0';
+ 	err_out(outbuf);
+     }
 @@ -895,7 +895,7 @@ gen_byte_c(int instr_code)
  	sym = lookup_symbol(token_string, symtype);
  	if(sym != NULL && sym->type != SYM_FORWARD)
