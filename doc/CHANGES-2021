@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6395 2021/12/27 04:27:29 dholland Exp $
+$NetBSD: CHANGES-2021,v 1.6396 2021/12/27 09:13:25 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9555,3 +9555,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed x11/libxfce4gui [gutteridge 2021-12-26]
 	Updated lang/llvm to 13.0.0nb2 [he 2021-12-26]
 	Updated lang/intercal to 0.30nb1 [dholland 2021-12-27]
+	Updated x11/citron to 0.6.4 [pin 2021-12-27]
