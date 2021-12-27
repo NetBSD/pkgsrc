@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2021/04/08 10:40:43 nia Exp $
+# $NetBSD: Makefile,v 1.50 2021/12/27 23:25:08 schmonz Exp $
 
 DISTNAME=		file-5.40
 CATEGORIES=		sysutils
@@ -13,6 +13,11 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-fsect-man5
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	magic/myfile
+SUBST_VARS.paths=	SH
 
 MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
