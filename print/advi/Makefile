@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2021/12/08 16:06:11 adam Exp $
+# $NetBSD: Makefile,v 1.138 2021/12/27 00:49:02 dholland Exp $
 
 DISTNAME=		advi-1.10.2
 PKGREVISION=		53
@@ -29,6 +29,14 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake gs:run
 GNU_CONFIGURE_LIBDIR=	${PREFIX}/share/texmf-dist
 CONFIGURE_ARGS+=	--with-gs=${PREFIX}/bin/gs
+
+GRAPHICS_PREFIX=	${BUILDLINK_PREFIX.ocaml-graphics}
+GRAPHICS_DIR=		${GRAPHICS_PREFIX}/lib/ocaml/site-lib/graphics
+MAKE_ENV+=		OCAMLGRAPHICS_INCLUDES=-I\ ${GRAPHICS_DIR}
+# For reasons best known to itself the preexisting makefiles already include
+# the library but not the includes.
+#MAKE_ENV+=		OCAMLGRAPHICS_LIBS_BYTE=${GRAPHICS_DIR}/graphics.cma
+#MAKE_ENV+=		OCAMLGRAPHICS_LIBS_NATIVE=${GRAPHICS_DIR}/graphics.cmxa
 
 INSTALL_UNSTRIPPED=	yes
 
