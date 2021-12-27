@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2021/12/08 16:05:22 adam Exp $
+# $NetBSD: Makefile,v 1.12 2021/12/27 01:11:10 dholland Exp $
 
 DISTNAME=	neko-2.3.0
 PKGREVISION=	9
@@ -15,6 +15,13 @@ TOOL_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
+
+# Tries to build "bin/nekoc.n, bin/nekoml.n" multiple times at once
+# and then chokes because nekoc.n won't load. Examination shows that
+# the makefiles spewed from cmake try to build this element from four
+# different subdirs at once, which is obviously unsafe, and arguing
+# with cmake about this sort of thing is a waste of breath.
+MAKE_JOBS_SAFE=	no
 
 .include "options.mk"
 .include "../../devel/boehm-gc/buildlink3.mk"
