@@ -1,17 +1,26 @@
-$NetBSD: patch-src_Makefile,v 1.1 2021/08/24 11:25:42 nia Exp $
+$NetBSD: patch-src_Makefile,v 1.2 2021/12/27 04:18:59 dholland Exp $
 
-echoing escapes considered harmful. Use printf instead.
-
-Fixes build on NetBSD 9.99.x.
+We don't need an extra set of config tests in the makefile, especially
+ones that don't use the right flags and therefore don't work.
 
 --- src/Makefile.orig	2018-11-30 22:30:41.000000000 +0000
 +++ src/Makefile
-@@ -16,7 +16,7 @@ ifeq ($(shell PKG_CONFIG_PATH=$(PKG_CONF
-   $(error "libpng is required - install libpng-dev")
- endif
+@@ -8,18 +8,6 @@ include ../common.mak
  
+ CONFIGTEMP=conf.out
+ 
+-ifeq ($(shell PKG_CONFIG_PATH=$(PKG_CONFIG_PATH) pkg-config --exists libavcodec libavformat libavutil libswscale || echo no), no)
+-  $(error "http://ffmpeg.org is required - install libavcodec-dev, libswscale-dev, etc")
+-endif
+-
+-ifeq ($(shell PKG_CONFIG_PATH=$(PKG_CONFIG_PATH) pkg-config --exists libpng || echo no), no)
+-  $(error "libpng is required - install libpng-dev")
+-endif
+-
 -ifeq ($(shell $(ECHO) "\#include <stdio.h>\n\#include <jpeglib.h>\nint main() { struct jpeg_error_mgr jerr; jpeg_std_error(&jerr); return 0; }" | $(CC) -pipe -x c -o $(CONFIGTEMP) $(ARCHINCLUDES) $(LDFLAGS) - -ljpeg 2>/dev/null || echo no; $(RM) -f $(CONFIGTEMP)), no)
-+ifeq ($(shell printf "#include <stdio.h>\n#include <jpeglib.h>\nint main() { struct jpeg_error_mgr jerr; jpeg_std_error(&jerr); return 0; }\n" | $(CC) -x c -o $(CONFIGTEMP) $(ARCHINCLUDES) $(LDFLAGS) - -ljpeg 2>/dev/null || echo no; $(RM) -f $(CONFIGTEMP)), no)
-   $(error "libjpeg is required - install libjpeg-dev, libjpeg8-dev or libjpeg62-dev")
- endif
- 
+-  $(error "libjpeg is required - install libjpeg-dev, libjpeg8-dev or libjpeg62-dev")
+-endif
+-
+ FLAGS=-I../libharvid/
+ FLAGS+=$(ARCHINCLUDES) $(ARCHFLAGS)
+ FLAGS+=`pkg-config --cflags libavcodec libavformat libavutil libpng libswscale`
