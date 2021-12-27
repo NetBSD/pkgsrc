@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2019/11/03 19:04:02 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2021/12/27 04:27:10 dholland Exp $
 #
 
 DISTNAME=	intercal-0.30
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://www.catb.org/~esr/intercal/
 
