@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2021/12/27 10:06:31 nia Exp $
+# $NetBSD: Makefile,v 1.40 2021/12/27 10:07:32 nia Exp $
 #
 
 DISTNAME=	sendfile-2.1b
@@ -22,7 +22,6 @@ CONF_FILES=	${EGDIR}/sendfile.cf ${PKG_SYSCONFDIR}/sendfile.cf
 CONF_FILES+=	${EGDIR}/sendfile.deny ${PKG_SYSCONFDIR}/sendfile.deny
 
 # nasty macro snprintf usage
-SSP_SUPPORTED=		no
 FORTIFY_SUPPORTED=	no
 
 OVERRIDE_GNU_CONFIG_SCRIPTS=	yes
