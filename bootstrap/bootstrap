@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.304 2021/11/29 18:32:51 jperkin Exp $
+# $NetBSD: bootstrap,v 1.305 2021/12/27 14:16:30 schmonz Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -1304,7 +1304,7 @@ LIBS='$LIBS -lnbcompat' $shprog ./configure $configure_quiet_flags -C \
 --with-pkgdbdir=$pkgdbdir --infodir=$infodir \
 --mandir=$mandir $pkg_install_args && \
 STATIC_LIBARCHIVE=$wrkdir/libarchive/.libs/libarchive.a \
-STATIC_LIBARCHIVE_LDADD=`extra_libarchive_depends` \
+STATIC_LIBARCHIVE_LDADD="`extra_libarchive_depends`" \
 PKGSRC_MACHINE_ARCH="$machine_arch" $bmake $make_quiet_flags -j$make_jobs)"
 run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/pkg_install/add/pkg_add $wrkdir/sbin/pkg_add"
 run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/pkg_install/admin/pkg_admin $wrkdir/sbin/pkg_admin"
