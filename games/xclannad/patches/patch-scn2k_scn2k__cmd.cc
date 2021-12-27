@@ -1,7 +1,10 @@
-$NetBSD: patch-scn2k_scn2k__cmd.cc,v 1.2 2020/03/26 02:33:34 joerg Exp $
+$NetBSD: patch-scn2k_scn2k__cmd.cc,v 1.3 2021/12/27 05:11:34 dholland Exp $
 
 - don't assume signed char for arm and powerpc
 - fix wrong casts
+- silence const warning
+- remove chunk of text in #if 0 that doesn't necessarily tokenize
+  (depending apparently on character set settings)
 
 --- scn2k/scn2k_cmd.cc.orig	2008-08-31 09:52:12.000000000 +0000
 +++ scn2k/scn2k_cmd.cc
@@ -67,7 +70,67 @@ $NetBSD: patch-scn2k_scn2k__cmd.cc,v 1.2 2020/03/26 02:33:34 joerg Exp $
  				else s++;
  			}
  			SetSys(i);
-@@ -682,8 +682,8 @@ int Cmd::GetLeftToken(const char*& d, Va
+@@ -533,59 +533,6 @@ bool Flags::Exec(Cmd& cmd) {
+ 				cmd.cmd4 = 0;
+ 			}
+ 
+-#if 0
+-@@@
+-save 27
+-ともよメガネのところ
+-- オブジェクト関連：seen9061:0 呼び出しで黒い背景画をかさねるところ、変になる
+-@@@
+-％Ｘで置換する名前の設定。0x51e で読みだし。セーブファイルごとに保存されるはずなので実装を考えること
+-％は0-3 (4 以降は使ってない）で、渚、秋生、渚、伊吹先生、など
+-StrVar を拡張して代入すること
+-初期値はこの辺
+-Text側に納め、セーブファイルでも同じようにすべきだろうなあ
+-        args:0,"渚"
+-        args:1,"秋生"
+-        args:2,"渚"
+-        args:3,"伊吹先生"
+-        args:4,"朋也くん"
+-        args:5,"岡崎さん"
+-
+-
+-106737 :  0x23 - cmd 01-04:051f:00[ 2] 
+-        args:0,"古河"
+-106758 : line 1712
+-106761 :  0x23 - cmd 01-04:051f:00[ 2] 
+-        args:2,"古河"
+-106782 : line 1713
+-106785 :  0x23 - cmd 01-04:051f:00[ 2] 
+-        args:4,"岡崎さん"
+-
+-47382 :  0x23 - cmd 01-04:051e:00[ 2] 
+-        args:4,V<18>[0](=0)
+-
+-47408 :  0x23 - cmd 01-0a:0004:00[ 2] 
+-        args:V<18>[0](=0),"岡崎さん"
+-47437 : expr: V<0>[1000](=0)=V<sys>
+-47451 :  0x23 - cmd 01-0a:0004:00[ 2] 
+-        args:V<18>[0](=0),"朋也くん"
+-47480 : expr: V<0>[1001](=0)=V<sys>
+-47494 :         V<0>[1000](=0)==0(=true)-> 47589
+-47526 :  0x23 - cmd 01-04:0514:00[ 2] 
+-        args:0,V<18>[0](=0)		/* NAME.A を帰す */
+-47552 :  0x23 - cmd 01-0a:0002:00[ 2] 
+-        args:V<18>[0](=0),"さん"
+-47577 :         jmp -> 47672
+-47589 :         V<0>[1001](=0)==0(=true)-> 47672
+-47621 :  0x23 - cmd 01-04:0514:00[ 2] 
+-        args:1,V<18>[0](=0)		/* NAME.B を帰す */
+-47647 :  0x23 - cmd 01-0a:0002:00[ 2] 
+-        args:V<18>[0](=0),"くん"
+-47672 : pos. 279
+-47675 :  0x23 - cmd 01-0a:0064:00[ 1] 
+-        args:V<18>[0](=0)
+-
+-#endif
+ 			cmd.cmd_type = CMD_TEXT;
+ 			break;
+ 		}
+@@ -682,8 +629,8 @@ int Cmd::GetLeftToken(const char*& d, Va
  		d += 2;
  		var_flag = false;
  	}
@@ -78,7 +141,7 @@ $NetBSD: patch-scn2k_scn2k__cmd.cc,v 1.2 2020/03/26 02:33:34 joerg Exp $
  		// numerical atom
  		d += 6;
  		value = read_little_endian_int(d-4);
-@@ -1001,7 +1001,7 @@ dprintf("enum.<");
+@@ -1001,7 +948,7 @@ dprintf("enum.<");
  			int count = GetArgs(d);
  			args[pt] = VarInfo(count);
  dprintf(">");
@@ -87,7 +150,16 @@ $NetBSD: patch-scn2k_scn2k__cmd.cc,v 1.2 2020/03/26 02:33:34 joerg Exp $
  			/* 使われるコマンドは 01-21:004b, 01-28:0064 のいずれか（R,C,PB,LO)
  			** それらのコマンドは
  			** arg1: 画像ファイル名
-@@ -1714,10 +1714,10 @@ int main(int argc, char** argv) {
+@@ -1220,7 +1167,7 @@ void Cmd::GetSelection(const char*& d) {
+ 	return;
+ }
+ 
+-static char* op_str3[11] = { "+=", "-=", "*=", "/=", "%=", "&=", "|=", "^=", "<<=", ">>=", "="};
++static const char* op_str3[11] = { "+=", "-=", "*=", "/=", "%=", "&=", "|=", "^=", "<<=", ">>=", "="};
+ void Cmd::GetCmd(Flags& flags_orig, const char*& d ) {
+ 	if (d == 0) { SetError(); return;}
+ 	if (cmd_type != CMD_NOP) return;
+@@ -1714,10 +1661,10 @@ int main(int argc, char** argv) {
  			Cmd cmd(flags, system_version); cmd.ClearError();
  
  			/* end? */
