@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/12/22 16:10:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2021/12/27 10:00:13 wiz Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -168,6 +168,7 @@ do-configure:
 		cmake ${CMAKE_ARGS} ../libcxxabi
 
 .include "../../lang/llvm/buildlink3.mk"
+.include "../../lang/wasi-libc/buildlink3.mk"
 .include "../../lang/wasi-compiler-rt/buildlink3.mk"
 PKGSRC_COMPILER=	clang
 CLANGBASE=		${PREFIX}
