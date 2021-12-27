@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:44:32 nia Exp $
+$NetBSD: distinfo,v 1.5 2021/12/27 05:11:34 dholland Exp $
 
 BLAKE2s (xclannad-7hc.tar.gz) = 313c00a10aaeba1fc7bcc69578f2976f5df00414636a27ee19d498cee52ae5ad
 SHA512 (xclannad-7hc.tar.gz) = 5d14c1ca6932d0a013e36c2af51d0d4de2cb73e4c438ccf2bebf03f223a62649203726cc552f975e3177ea614f79c1d2d0d36220116289f0bb8f65a74997ac27
@@ -7,7 +7,7 @@ SHA1 (patch-Makefile.in) = 3586afaf131737ded3ac1b64bfa56b3c357f3269
 SHA1 (patch-font_font__peer__ft2.cc) = cb40078c701d1bf6c5113d21890ed8d9fbb18b62
 SHA1 (patch-font_text__stream.cc) = 27b2812c199f69f4d58cc9324c9aa56b713b5abe
 SHA1 (patch-music2_music.cc) = fe8c90d9901a86dc6c799a1482ffe8ca7ca53c98
-SHA1 (patch-scn2k_scn2k__cmd.cc) = b0710214e612a45fed159169ee36c0ab0126ab81
+SHA1 (patch-scn2k_scn2k__cmd.cc) = 6a516de79f5ded1f3fd6ceb716dfffda3ec20309
 SHA1 (patch-scn2k_scn2k__grp.cc) = cf0c7efa5fcac698873665b9b51f98b62344fb1d
 SHA1 (patch-scn2k_scn2k__impl.cc) = 197b876d15608ba65cf4ea527bf7e108d3007ad5
 SHA1 (patch-scn2k_scn2k__text.cc) = aef8170b267a5a2b3f9ddbe9246fbdab8d0856cb
