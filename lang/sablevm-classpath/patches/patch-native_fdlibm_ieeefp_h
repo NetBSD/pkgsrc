@@ -1,10 +1,24 @@
-$NetBSD: patch-native_fdlibm_ieeefp_h,v 1.1 2012/04/08 05:47:30 dholland Exp $
+$NetBSD: patch-native_fdlibm_ieeefp_h,v 1.2 2021/12/27 01:23:29 dholland Exp $
+
+Fix AArch64 (64-bit ARM) build.
 
 Fix NetBSD PPC build, from Magnus Henoch in PR 34787.
 
---- native/fdlibm/ieeefp.h~	2005-12-07 17:54:35.000000000 +0000
+--- native/fdlibm/ieeefp.h.orig	2005-12-07 17:54:35.000000000 +0000
 +++ native/fdlibm/ieeefp.h
-@@ -123,9 +123,9 @@
+@@ -27,6 +27,11 @@
+ #endif
+ #endif
+ 
++#if defined(__aarch64__) || defined(__AARCH64__)
++/* 64-bit ARM */
++#define __IEEE_LITTLE_ENDIAN
++#endif
++
+ #ifdef __hppa__
+ #define __IEEE_BIG_ENDIAN
+ #endif
+@@ -123,9 +128,9 @@
  #define __IEEE_LITTLE_ENDIAN
  #endif
  
