@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6400 2021/12/28 14:40:26 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6401 2021/12/28 21:11:45 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9560,3 +9560,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/ruby-nokogiri to 1.12.5nb2 [taca 2021-12-28]
 	Updated net/nanomsg to 1.1.5 [adam 2021-12-28]
 	Updated www/ruby-padrino-contrib to 0.2.0nb1 [taca 2021-12-28]
+	Updated databases/postgresql-postgis2 to 3.2.0nb1 [triaxx 2021-12-28]
