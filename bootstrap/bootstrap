@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.305 2021/12/27 14:16:30 schmonz Exp $
+# $NetBSD: bootstrap,v 1.306 2021/12/28 10:13:01 nia Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -799,6 +799,12 @@ SCO_SV)
 	need_awk=yes
 	need_bsd_install=yes
 	need_sed=yes
+	if [ -x "/usr/bin/bash" ]; then
+		bootstrap_sh=${SH:-/usr/bin/bash}
+		bootstrap_sh_set=set
+	else
+		need_mksh=yes
+	fi
 	whoamiprog='id -u'
 	groupsprog='id -g'
 	# /bin/sh under OpenServer 5.0.7/3.2 breaks bmake tests.
@@ -833,6 +839,12 @@ UnixWare)
 	need_mkdir=yes
 	need_awk=yes
 	need_sed=yes
+	if [ -x "/usr/bin/bash" ]; then
+		bootstrap_sh=${SH:-/usr/bin/bash}
+		bootstrap_sh_set=set
+	else
+		need_mksh=yes
+	fi
 	whoamiprog=/usr/ucb/whoami
 	machine_arch=`uname -m`
 	CC="gcc -DUNIXWARE"; export CC
