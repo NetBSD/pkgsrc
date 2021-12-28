@@ -1,10 +1,10 @@
-$NetBSD: patch-aom__ports_ppc__cpudetect.c,v 1.1 2021/12/27 10:45:59 he Exp $
+$NetBSD: patch-aom__ports_ppc__cpudetect.c,v 1.2 2021/12/28 17:35:52 gutteridge Exp $
 
 Make this at least build on NetBSD.
 So far no dynamic CPU feature detection on NetBSD.
 
---- work/aom_ports/ppc_cpudetect.c.orig	2021-10-14 18:05:43.000000000 +0000
-+++ work/aom_ports/ppc_cpudetect.c
+--- aom_ports/ppc_cpudetect.c.orig	2021-10-14 18:05:43.000000000 +0000
++++ aom_ports/ppc_cpudetect.c
 @@ -12,14 +12,16 @@
  #include <fcntl.h>
  #include <unistd.h>
