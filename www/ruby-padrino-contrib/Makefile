@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2017/09/19 16:36:07 taca Exp $
+# $NetBSD: Makefile,v 1.6 2021/12/28 14:39:55 taca Exp $
 
 DISTNAME=	padrino-contrib-0.2.0
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
