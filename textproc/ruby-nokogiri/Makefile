@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2021/12/08 16:06:46 adam Exp $
+# $NetBSD: Makefile,v 1.66 2021/12/28 00:01:31 taca Exp $
 
 DISTNAME=	nokogiri-1.12.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 
 MAINTAINER=	tsutsui@NetBSD.org
@@ -9,7 +9,6 @@ HOMEPAGE=	https://nokogiri.org/
 COMMENT=	HTML, XML, SAX, and Reader parser with XPath and CSS selector support
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-racc>=1.4.0:../../devel/ruby-racc
 DEPENDS+=	${RUBY_PKGPREFIX}-mini_portile2>=2.6.1:../../misc/ruby-mini_portile2
 
 USE_GCC_RUNTIME=	yes
@@ -22,6 +21,12 @@ OVERRIDE_GEMSPEC+=	mini_portile2>=2.6.1 \
 
 # XXX: work around bug in bootstrap-mk-files, remove when fixed
 MAKE_ENV.SunOS+=	ARFLAGS=rcv
+
+.include "../../lang/ruby/rubyversion.mk"
+# Ruby 2.7 and later bundles racc
+.if ${RUBY_VER} == "26"
+DEPENDS+=	${RUBY_PKGPREFIX}-racc>=1.4.0:../../devel/ruby-racc
+.endif
 
 .include "../../devel/ruby-pkg-config/tool.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
