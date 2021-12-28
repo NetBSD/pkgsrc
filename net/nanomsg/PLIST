@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/06/18 08:16:27 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/28 12:04:09 adam Exp $
 bin/nanocat
 include/nanomsg/bus.h
 include/nanomsg/inproc.h
@@ -11,7 +11,11 @@ include/nanomsg/reqrep.h
 include/nanomsg/survey.h
 include/nanomsg/tcp.h
 include/nanomsg/ws.h
+lib/cmake/${PKGNAME}/nanomsg-config-version.cmake
+lib/cmake/${PKGNAME}/nanomsg-config.cmake
+lib/cmake/${PKGNAME}/nanomsg-target-noconfig.cmake
+lib/cmake/${PKGNAME}/nanomsg-target.cmake
 lib/libnanomsg.so
-lib/libnanomsg.so.${PKGVERSION}
-lib/libnanomsg.so.5.0.0
+lib/libnanomsg.so.5
+lib/libnanomsg.so.5.1.0
 lib/pkgconfig/nanomsg.pc
