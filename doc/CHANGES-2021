@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6397 2021/12/27 10:53:36 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6398 2021/12/28 00:02:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9557,3 +9557,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/intercal to 0.30nb1 [dholland 2021-12-27]
 	Updated x11/citron to 0.6.4 [pin 2021-12-27]
 	Updated databases/py-lmdb to 1.2.1 [adam 2021-12-27]
+	Updated textproc/ruby-nokogiri to 1.12.5nb2 [taca 2021-12-28]
