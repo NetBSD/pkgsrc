@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2021/03/07 14:19:41 wiz Exp $
+# $NetBSD: Makefile.common,v 1.27 2021/12/28 01:02:42 nros Exp $
 #
 # used by sysutils/collectd/Makefile
 # used by sysutils/collectd-amqp/Makefile
@@ -60,10 +60,23 @@ DEPENDS+=		collectd>=${PKGVERSION_NOREV}:../../sysutils/collectd
 COLLECTD_PLUGINS?=	${COLLECTD_PACKAGE:S/-/_/}
 
 BUILD_TARGET=		${COLLECTD_PLUGINS:S/$/.la/}
-INSTALL_TARGET=		install-pkglibLTLIBRARIES
+
 .  for plugin in ${COLLECTD_PLUGINS}
 CONFIGURE_ARGS+=	--enable-${plugin}
 GENERATE_PLIST+=	${ECHO} "lib/collectd/${plugin}.la";
+.  endfor
+
+INSTALLATION_DIRS+=	lib/collectd
+
+.  if ${COLLECTD_PLUGINS} == "perl"
+post-install:
+.  else
+do-install:
+.  endif
+.  for plugin in ${COLLECTD_PLUGINS}
+	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} \
+		${LIBTOOL} --mode=install ${INSTALL_LIB} ${plugin}.la \
+		${DESTDIR}${PREFIX}/lib/collectd/${plugin}.la
 .  endfor
 .endif
 

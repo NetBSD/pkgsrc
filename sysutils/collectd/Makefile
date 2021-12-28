@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2021/05/24 19:54:09 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2021/12/28 01:02:42 nros Exp $
 
 PKGREVISION= 1
 .include "../../sysutils/collectd/Makefile.common"
@@ -26,6 +26,8 @@ CONFIGURE_ARGS+=	--enable-${option}
 .endfor
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/collectd
+
+PKGCONFIG_OVERRIDE=	src/libcollectdclient/libcollectdclient.pc.in
 
 .include "options.mk"
 
