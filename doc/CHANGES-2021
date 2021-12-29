@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6431 2021/12/29 23:18:39 dsainty Exp $
+$NetBSD: CHANGES-2021,v 1.6432 2021/12/29 23:19:29 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9597,3 +9597,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated misc/tmux to 3.2a [rhialto 2021-12-29]
 	Added devel/p5-Test-Mock-Guard version 0.10 [prlw1 2021-12-29]
 	Updated cross/avrdude to 6.4 [dsainty 2021-12-29]
+	Updated x11/xfce4-exo to 4.16.3 [gutteridge 2021-12-29]
