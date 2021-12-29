@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.508 2021/12/18 00:13:01 wiz Exp $
+# $NetBSD: Makefile,v 1.509 2021/12/29 23:56:01 nia Exp $
 #
 
 COMMENT=	Games
@@ -432,6 +432,7 @@ SUBDIR+=	xboing
 SUBDIR+=	xbomb
 SUBDIR+=	xbomber
 SUBDIR+=	xbreaky
+SUBDIR+=	xchomp
 SUBDIR+=	xclannad
 SUBDIR+=	xconq
 SUBDIR+=	xcowsay
