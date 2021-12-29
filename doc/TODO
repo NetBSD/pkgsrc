@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21380 2021/12/29 08:35:12 nikita Exp $
+$NetBSD: TODO,v 1.21381 2021/12/29 14:40:39 prlw1 Exp $
 
 Suggested new packages
 ======================
@@ -1445,7 +1445,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Net-OpenSSH-0.80
 	o p5-Object-Declare-0.25
 	o p5-PAR-1.017
-	o p5-PAR-Dist-0.51
 	o p5-PDF-API2-2.040
 	o p5-Parse-PMFile-0.43
 	o p5-Parse-Win32Registry-1.1
