@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6428 2021/12/29 17:01:40 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6429 2021/12/29 19:18:52 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9594,3 +9594,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/nginx-devel to 1.21.5 [adam 2021-12-29]
 	Updated textproc/utf8-cpp to 3.2.1 [adam 2021-12-29]
 	Updated multimedia/mkvtoolnix to 64.0.0 [adam 2021-12-29]
+	Updated misc/tmux to 3.2a [rhialto 2021-12-29]
