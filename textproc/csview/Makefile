@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2021/11/23 11:45:16 pin Exp $
+# $NetBSD: Makefile,v 1.4 2021/12/29 05:44:40 pin Exp $
 
-DISTNAME=	csview-0.3.9
+DISTNAME=	csview-0.3.10
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wfxr/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
