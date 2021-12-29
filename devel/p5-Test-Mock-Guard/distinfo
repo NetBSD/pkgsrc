@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/12/29 19:38:42 prlw1 Exp $
+
+BLAKE2s (Test-Mock-Guard-0.10.tar.gz) = aadcd5c4887d2447f5778e1fb9ad26f718e616e252da9408b1e7acefe5f79553
+SHA512 (Test-Mock-Guard-0.10.tar.gz) = 17a8cbfea9e33a625ad5a33b40b5a799715d59b57eb4030a9d694fdd1e7361667f326888577291f0807852b86c04b97384ab8a48d95eb92158d35e14131068cc
+Size (Test-Mock-Guard-0.10.tar.gz) = 14468 bytes

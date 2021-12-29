@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3532 2021/12/29 14:33:12 prlw1 Exp $
+# $NetBSD: Makefile,v 1.3533 2021/12/29 19:38:42 prlw1 Exp $
 #
 
 COMMENT=	Development utilities
@@ -1935,6 +1935,7 @@ SUBDIR+=	p5-Test-Manifest
 SUBDIR+=	p5-Test-Memory-Cycle
 SUBDIR+=	p5-Test-Metrics-Any
 SUBDIR+=	p5-Test-MinimumVersion
+SUBDIR+=	p5-Test-Mock-Guard
 SUBDIR+=	p5-Test-Mock-LWP
 SUBDIR+=	p5-Test-MockModule
 SUBDIR+=	p5-Test-MockObject
