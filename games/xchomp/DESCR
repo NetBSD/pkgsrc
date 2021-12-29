@@ -1,0 +1,6 @@
+Xchomp is a game closely patterned after Pac-Man(tm) that runs under the X
+Window System, with several different mazes added.
+
+This is strictly a keyboard-controlled game. The arcade game had very simple
+controls -- one four-directional joystick. In xchomp, all control is through
+the arrow keys.

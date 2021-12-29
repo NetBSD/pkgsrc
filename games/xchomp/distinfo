@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1 2021/12/29 23:56:01 nia Exp $
+
+BLAKE2s (xchomp-pl1.tar.gz) = 16fe81471aa1aa8bdd5fe2a51d9746ba980b4bab3adaaceeac04d13af2580744
+SHA512 (xchomp-pl1.tar.gz) = c5d40e97c8b14d96fe11e82d537128c0aa6ed12e9befb36a5432a84bf744cbce3e4bc6dbb068489974caa3235b5a1618a3fff9ddeede02a5c05083d1780b3d8f
+Size (xchomp-pl1.tar.gz) = 33987 bytes
+SHA1 (patch-Imakefile) = c5178798d35c9ebb8fff49d52cf6cea7d9e8e768
+SHA1 (patch-contact.c) = dbca9684d645d8b8bd4548c1011f764cd797f865
+SHA1 (patch-demo.c) = 9c7dadbd26a8788882617e93bc0ca1eb68e59467
+SHA1 (patch-drivers.c) = 38e484eca54a7dcf0ebe9735242c7971c6d0daed
+SHA1 (patch-main.c) = 711c36ebb772f261ce9d9bac633393eb94ca62e4
+SHA1 (patch-maze.c) = da13497888aa34b8793f7620df7cc1c73b3f2178
+SHA1 (patch-props.c) = cce3ddb8abb68f13f0e6970a482eb7b5586defdd
+SHA1 (patch-resources.c) = f2f11c68af575ed17e79e804409bc59e17684ae6
+SHA1 (patch-status.c) = e335db1e2fbce9c69be69890ba257c0532dafb4a
+SHA1 (patch-xchomp.h) = 872c740b80e219a88891999fa2318f101da46d9d
