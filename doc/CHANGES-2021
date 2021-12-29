@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6422 2021/12/29 14:32:00 rhialto Exp $
+$NetBSD: CHANGES-2021,v 1.6423 2021/12/29 14:33:42 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9584,3 +9584,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated print/tex-vhistory to 1.8.0 [kleink 2021-12-29]
 	Updated print/tex-vhistory-doc to 1.8.0 [kleink 2021-12-29]
 	Updated emulators/vice to 3.6 [rhialto 2021-12-29]
+	Added devel/p5-PAR-Packer version 1.052 [prlw1 2021-12-29]
