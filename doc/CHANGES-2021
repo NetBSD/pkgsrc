@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6425 2021/12/29 14:45:12 prlw1 Exp $
+$NetBSD: CHANGES-2021,v 1.6426 2021/12/29 15:53:47 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9587,3 +9587,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added devel/p5-PAR-Packer version 1.052 [prlw1 2021-12-29]
 	Updated devel/p5-PAR-Dist to 0.51 [prlw1 2021-12-29]
 	Updated devel/p5-PAR to 1.017 [prlw1 2021-12-29]
+	Updated emulators/simh to 4.0.0.20211212 [rhialto 2021-12-29]
