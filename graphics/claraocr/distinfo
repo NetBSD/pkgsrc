@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:46:02 nia Exp $
+$NetBSD: distinfo,v 1.9 2021/12/29 09:18:42 dholland Exp $
 
 BLAKE2s (clara-0.9.9.tar.gz) = 3357bd4ee883aa2b06c44b9889cec6ef16e4d528bac99ee922aa68823f85a27f
 SHA512 (clara-0.9.9.tar.gz) = 55baed83b08be4fd8bd145b2934c2e1d5e485444751f773f338d608e7a0dc81a74d3c3b0c2c887774cb57439c4f15706671e80358a0e6b9a93a2fc1d54f7ce3a
 Size (clara-0.9.9.tar.gz) = 419529 bytes
 SHA1 (patch-aa) = bfabc610299887e9b8331357d457657aa8c0eb26
+SHA1 (patch-pgmblock.c) = 39bab4e3a0ae68d76ecfb62090bd02f30e268d07
