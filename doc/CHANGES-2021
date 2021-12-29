@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6419 2021/12/29 13:26:00 rhialto Exp $
+$NetBSD: CHANGES-2021,v 1.6420 2021/12/29 13:35:41 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9580,3 +9580,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/patchelf to 0.14.3 [rhialto 2021-12-29]
 	Updated graphics/graphviz to 2.49.3nb2 [he 2021-12-29]
 	Updated x11/x3270 to 4.1ga11 [rhialto 2021-12-29]
+	Updated news/pan to 0.149 [rhialto 2021-12-29]
