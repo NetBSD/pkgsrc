@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 10:07:51 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/12/29 23:03:21 dsainty Exp $
 
-BLAKE2s (avrdude-6.3.tar.gz) = d9733f1e17fc0c8bcbea4852a391dc850d87d3d7b966d85f51abc2d48b4be1cb
-SHA512 (avrdude-6.3.tar.gz) = b671008388d6a552e71066fec46429bc7f6639e8eac41113bcbba5a56212b78be31fcf04956b31e11c6b14888b0f6e825f7458395b9ff4fc28406074c7ded2b2
-Size (avrdude-6.3.tar.gz) = 909744 bytes
+BLAKE2s (avrdude-6.4.tar.gz) = 78159892e27c160f5f4993b191a2f29fb0b023dae07c6599df2b8ee5ae5cd5f7
+SHA512 (avrdude-6.4.tar.gz) = ce6127c212a83c5079d3bd80a7a0127220f9652201595a24b991916556eb8fc69d2910f7e112d7025a5aeec8d341e72293467ac1dc1a62be1f391dd9408f9a06
+Size (avrdude-6.4.tar.gz) = 986871 bytes
 SHA1 (patch-aa) = 619f682af2e8eff36684993b331ba37cd1b446b6
 SHA1 (patch-ab) = a9105ae562c078eec5c87df6e7f27a80184bb6d4
 SHA1 (patch-ac) = df871808200e5732f77d50ef2d7fb51234173445
 SHA1 (patch-ad) = f9e7465b355f5b3feda8868287d6aaa5cd1dcd28
-SHA1 (patch-ae) = 8268734c36c02dfded64addba99e542747e746c7
+SHA1 (patch-ae) = 204f628bf5a67a9f48f01330fb7f43d4f6037a22
 SHA1 (patch-af) = 4ae54ce739ff41964fe56bc1b3e85611288a6e0c
 SHA1 (patch-ag) = fa8828a50faa835fa957de036af925dafd5584cb
