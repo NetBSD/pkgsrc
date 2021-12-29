@@ -1,0 +1,4 @@
+PAR-Packer is the PAR component that can generate stand-alone
+executables and ".par" archives.
+
+The main front-end for PAR-Packer is the "pp" utility.
