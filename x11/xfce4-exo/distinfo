@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2021/11/30 14:15:26 gutteridge Exp $
+$NetBSD: distinfo,v 1.28 2021/12/29 23:18:41 gutteridge Exp $
 
-BLAKE2s (exo-4.16.2.tar.bz2) = 284bf0a49a81f12f4b7b1e5bee94b256a3f85d259ce95a1c1c3987b2bbac89c4
-SHA512 (exo-4.16.2.tar.bz2) = 9c1252d78f5bb900254841a79f1c1b952cb60d9d0197e184266c35a86c340140cdff2460fa83f6fabb66380e2b3d7ab8a08719b4f4784d2215dde51410ce33e8
-Size (exo-4.16.2.tar.bz2) = 881098 bytes
+BLAKE2s (exo-4.16.3.tar.bz2) = 376814e1bfba7738d50f90fe3eb744dcf78aa757278a67150d39e5e7105b366a
+SHA512 (exo-4.16.3.tar.bz2) = 0dc4d2da6dd80a4c1b05a5316bb6e7ad02858d3fb49b666d6065bd7b11d7b8aed2732135eee8393185a0c321a242807d97b51f794186ce7a769ec2c9106ba8fd
+Size (exo-4.16.3.tar.bz2) = 885516 bytes
