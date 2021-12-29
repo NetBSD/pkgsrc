@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6427 2021/12/29 16:32:46 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6428 2021/12/29 17:01:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9592,3 +9592,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/meson to 0.60.3 [adam 2021-12-29]
 	Updated lang/vala to 0.54.5 [adam 2021-12-29]
 	Updated www/nginx-devel to 1.21.5 [adam 2021-12-29]
+	Updated textproc/utf8-cpp to 3.2.1 [adam 2021-12-29]
+	Updated multimedia/mkvtoolnix to 64.0.0 [adam 2021-12-29]
