@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2021/11/27 07:27:04 taca Exp $
+# $NetBSD: Makefile,v 1.9 2021/12/29 06:11:50 taca Exp $
 
 MODNAME=		mbstring
 CATEGORIES+=		converters
@@ -22,9 +22,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/libmbfl/nls/*.h ${DESTDIR}${PREFIX}/include/php/ext/mbstring/libmbfl/nls
 
 .include "../../lang/php/ext.mk"
-.if ${PKG_PHP_VERSION} >= 74
 .include "../../textproc/oniguruma/buildlink3.mk"
-.endif
+
 .if ${PKG_PHP_VERSION} <=80
 PLIST.sbf=	yes
 .else
