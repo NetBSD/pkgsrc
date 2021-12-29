@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6405 2021/12/29 05:46:34 pin Exp $
+$NetBSD: CHANGES-2021,v 1.6406 2021/12/29 05:48:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9565,3 +9565,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/broot to 1.8.0 [pin 2021-12-29]
 	Updated textproc/csview to 0.3.10 [pin 2021-12-29]
 	Updated sysutils/dua-cli to 2.15.0 [pin 2021-12-29]
+	Updated editors/featherpad to 1.1.0 [pin 2021-12-29]
