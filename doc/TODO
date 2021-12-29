@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21379 2021/12/27 10:03:04 wiz Exp $
+$NetBSD: TODO,v 1.21380 2021/12/29 08:35:12 nikita Exp $
 
 Suggested new packages
 ======================
@@ -1103,7 +1103,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libkscreen-5.21.4
 	o liblzo-2.10
 	o libmcs-0.7.2
-	o libmicrohttpd-0.9.74
 	o libmilter-8.16.1
 	o libmtag-0.3.6
 	o libobjc2-2.1
