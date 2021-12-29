@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2021/12/11 07:24:00 wen Exp $
+# $NetBSD: Makefile,v 1.92 2021/12/29 06:05:19 taca Exp $
 
 DISTNAME=	moodle-3.11.4
 CATEGORIES=	www
@@ -32,7 +32,7 @@ INSTALLATION_DIRS=	${EGDIR} share/moodle
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-PHP_VERSIONS_ACCEPTED=		73 74
+PHP_VERSIONS_ACCEPTED=		74
 
 PKG_GROUPS_VARS=	APACHE_GROUP
 PKG_USERS_VARS=		APACHE_USER
