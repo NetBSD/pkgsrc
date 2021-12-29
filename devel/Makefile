@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3531 2021/12/21 15:11:11 wiz Exp $
+# $NetBSD: Makefile,v 1.3532 2021/12/29 14:33:12 prlw1 Exp $
 #
 
 COMMENT=	Development utilities
@@ -1695,6 +1695,7 @@ SUBDIR+=	p5-Object-Signature
 SUBDIR+=	p5-Ouch
 SUBDIR+=	p5-PAR
 SUBDIR+=	p5-PAR-Dist
+SUBDIR+=	p5-PAR-Packer
 SUBDIR+=	p5-PHP-Serialization
 SUBDIR+=	p5-POE
 SUBDIR+=	p5-POE-Component-Cron
