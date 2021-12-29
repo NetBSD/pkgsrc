@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2020/01/26 17:31:17 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2021/12/29 09:36:37 dholland Exp $
 #
 
 DISTNAME=	tads23-unix
 PKGNAME=	tads-3.0.8
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	http://www.tads.org/t3dl/
 DIST_SUBDIR=	${PKGNAME_NOREV}-1
