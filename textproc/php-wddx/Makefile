@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2021/12/08 16:06:45 adam Exp $
+# $NetBSD: Makefile,v 1.26 2021/12/29 06:05:18 taca Exp $
 
 MODNAME=		wddx
 CATEGORIES+=		textproc
@@ -10,7 +10,7 @@ CONFLICTS=	php-wddx-[0-9]*
 CONFIGURE_ARGS+=	--enable-${MODNAME}=shared,${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-libxml-dir=${BUILDLINK_DIR}
 
-PHP_VERSIONS_ACCEPTED=	56 73
+PHP_VERSIONS_ACCEPTED=	56
 USE_PHP_EXT_PATCHES=	# defined
 
 # appease some PHP build assumpsions

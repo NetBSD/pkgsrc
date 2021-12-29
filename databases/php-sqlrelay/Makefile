@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2021/12/08 16:03:42 adam Exp $
+# $NetBSD: Makefile,v 1.34 2021/12/29 06:05:18 taca Exp $
 
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 PKGREVISION=	4
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.gz
 
 LICENSE=	gnu-gpl-v2 AND php
 
-PHP_VERSIONS_ACCEPTED=	56 73 74
+PHP_VERSIONS_ACCEPTED=	56 74
 
 TOOLS_BROKEN+=		perl
 CONFIGURE_ARGS+=	--with-php-prefix=${BUILDLINK_PREFIX.php}

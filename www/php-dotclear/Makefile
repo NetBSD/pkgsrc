@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/06/24 19:35:17 triaxx Exp $
+# $NetBSD: Makefile,v 1.3 2021/12/29 06:05:19 taca Exp $
 
 DISTNAME=	dotclear-2.18.1
 PKGREVISION=	1
@@ -27,7 +27,7 @@ BUILD_DEFS+=	PKG_SYSCONFBASE VARBASE
 
 .include "options.mk"
 
-PHP_VERSIONS_ACCEPTED=	74 73 56
+PHP_VERSIONS_ACCEPTED=	74 56
 
 PKG_SYSCONFSUBDIR=	dotclear
 
