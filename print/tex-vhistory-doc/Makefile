@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/11/19 14:50:37 kleink Exp $
+# $NetBSD: Makefile,v 1.3 2021/12/29 13:59:03 kleink Exp $
 
 DISTNAME=	vhistory.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.6.1
-TEXLIVE_REV=	30080
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.8.0
+TEXLIVE_REV=	60124
 
 MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/vhistory
