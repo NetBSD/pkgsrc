@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.161 2021/12/08 16:04:19 adam Exp $
+# $NetBSD: Makefile,v 1.162 2021/12/29 14:31:24 rhialto Exp $
 
-DISTNAME=	vice-3.5
-PKGREVISION=	7
+DISTNAME=	vice-3.6
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vice-emu/}
 
@@ -18,7 +17,7 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++11
-USE_TOOLS+=		bash gmake pkg-config perl flex yacc tar
+USE_TOOLS+=		bash gmake pkg-config perl flex yacc
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-ethernet
 CONFIGURE_ARGS+=	--enable-lame
@@ -38,7 +37,6 @@ CONFIGURE_ENV+=		ac_cv_prog_SVNVERSION=no
 CONFIGURE_ARGS+=	--disable-pdf-docs
 CONFIGURE_ARGS+=	--enable-html-docs
 
-INFO_FILES=		yes
 REQD_DIRS+=		${PREFIX}/share/vice
 
 DEPENDS+=		dos2unix-[0-9]*:../../converters/dos2unix
@@ -51,10 +49,17 @@ SUBST_STAGE.prefix=	post-configure
 SUBST_FILES.prefix+=	doc/vice.texi
 SUBST_SED.prefix=	-e 's|/usr/local|${PREFIX}|g'
 
+WRKSRC=			${WRKDIR}/vice-3.6.0
+INSTALLATION_DIRS+=	share/doc/vice/html
+INSTALLATION_DIRS+=	share/doc/vice/html/fonts
+
 # Mess created by xdg-utils; clean it up.
+# Install html equivalent of vice.pdf.
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/share/applications/mimeinfo.cache
 	cd ${DESTDIR}${PREFIX} && ${MV} etc/xdg/menus/applications-merged/vice-org-vice-org.menu share/vice/ || :
+	cd ${WRKSRC}/doc/html && ${CP} -r fonts vice_*.html *.css COPYING \
+		${DESTDIR}${PREFIX}/share/doc/vice/html/
 
 .include "options.mk"
 .include "../../audio/flac/buildlink3.mk"
