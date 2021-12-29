@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6402 2021/12/29 01:33:04 gdt Exp $
+$NetBSD: CHANGES-2021,v 1.6403 2021/12/29 05:43:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9562,3 +9562,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/ruby-padrino-contrib to 0.2.0nb1 [taca 2021-12-28]
 	Updated databases/postgresql-postgis2 to 3.2.0nb1 [triaxx 2021-12-28]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2021Q4 branch [gdt 2021-12-28]
+	Updated sysutils/broot to 1.8.0 [pin 2021-12-29]
