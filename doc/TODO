@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21383 2021/12/29 16:32:46 adam Exp $
+$NetBSD: TODO,v 1.21384 2021/12/29 17:54:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -487,7 +487,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o autocutsel-0.10.1
 	o autosetup-0.7.0
 	o avant-window-navigator-0.4.2
-	o avidemux-2.6.16
+	o avidemux-2.8
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
 	o avr-gdb-10.1
 	o baci-20040415
@@ -538,7 +538,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o calc-2.11.10.1
 	o calcoo-2.1.0
 	o calibre-4.11.0 [started in wip; needs QtWebEngineCore]
-	o calibre-5.33.2
+	o calibre-5.34.0
 	o calligra-3.0.1 [in wip; koffice successor]
 	o camlp4-4.12
 	o camlp5-714
@@ -657,7 +657,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o elm-me-2.4.127
 	o elscreen-1.5.3
 	o emerillon-0.1.90
-	o enlightenment-0.23.1
+	o enlightenment-0.25
 	o eog-plugins-3.6.1
 	o epic4-2.10.6
 	o epiphany-extensions-3.2.0
@@ -1164,6 +1164,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mailutis-2.2 [wip]
 	o maketool-0.8.4
 	o makeztxt-1.60
+	o mame-0.239
 	o man-pages-5.11
 	o manedit-1.2.1
 	o mantis-2.22.1
