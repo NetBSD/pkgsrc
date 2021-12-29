@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.241 2021/12/08 16:04:56 adam Exp $
+# $NetBSD: Makefile,v 1.242 2021/12/29 12:10:32 he Exp $
 
 DISTNAME=	graphviz-2.49.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	https://gitlab.com/graphviz/graphviz/-/archive/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
@@ -100,6 +100,13 @@ REPLACE_PERL+=		tclpkg/gv/demo/modgraph.pl contrib/dotmcl.pl \
 .include "../../mk/compiler.mk"
 .if !empty(CC_VERSION:Mgcc-2*)
 BUILDLINK_TRANSFORM+=	rm:-Wno-unused-parameter
+.endif
+
+.if (${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "powerpc")
+# Forces link with -lgomp directly instead of via dlopen()
+# so we don't overflow thread-local storage in ld.elf_so
+CFLAGS+=		-fopenmp
+CONFIGURE_ARGS+=	CFLAGS="${CFLAGS}"
 .endif
 
 .if ${OPSYS} == "FreeBSD"
