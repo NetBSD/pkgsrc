@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2021/08/10 11:31:34 rhialto Exp $
+# $NetBSD: Makefile,v 1.7 2021/12/29 11:52:24 rhialto Exp $
 
-DISTNAME=	patchelf-0.13
+DISTNAME=	patchelf-0.14.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NixOS/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -11,9 +11,7 @@ HOMEPAGE=	https://github.com/NixOS/patchelf
 COMMENT=	Modify the dynamic linker and RPATH of ELF binaries
 LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}.20210805.a949ff2
-
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++17
 
 .include "../../mk/bsd.pkg.mk"
