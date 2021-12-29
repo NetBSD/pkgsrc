@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2021/10/30 13:46:42 rhialto Exp $
+# $NetBSD: Makefile,v 1.7 2021/12/29 11:49:49 rhialto Exp $
 
 GITHUB_PROJECT=	recursive
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 DISTNAME=	ArrowType-Recursive-${PKGVERSION_NOREV}
-PKGNAME=	recursive-ttf-1.082
+PKGNAME=	recursive-ttf-1.084
 PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arrowtype/}
@@ -21,6 +21,9 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}/Recursive_Desktop/separate_statics/OTF
 WRKSRC2=	${WRKDIR}/${DISTNAME}/Recursive_Code
+
+FONTS_DIRS.ttf+=	${PREFIX}/share/fonts/X11/TTF
+FONTS_DIRS.ttf+=	${PREFIX}/share/fonts/X11/OTF
 
 .PHONY: install-fonts2
 
