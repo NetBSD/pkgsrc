@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2021/05/04 14:24:33 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.2 2021/12/29 17:00:23 adam Exp $
 include/utf8.h
 include/utf8/checked.h
 include/utf8/core.h
+include/utf8/cpp11.h
+include/utf8/cpp17.h
 include/utf8/unchecked.h
+lib/cmake/utf8cpp/utf8cppConfig.cmake

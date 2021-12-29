@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:23:38 nia Exp $
+$NetBSD: distinfo,v 1.4 2021/12/29 17:00:23 adam Exp $
 
-BLAKE2s (utf8-cpp-2.3.4.tar.gz) = a0210a847b72b6e5cf9c03ebbca463a3290626c69612d6a31e66176ed350a562
-SHA512 (utf8-cpp-2.3.4.tar.gz) = c454513321b22658afe7c2c8fbba3f5d113f230b1f110c6c402f61f7bffa5c51d6442c4783e5d26a5f358c0ee4ee9d7f7fb9573db1c2cd1271ec2ae06666f8c6
-Size (utf8-cpp-2.3.4.tar.gz) = 18083 bytes
+BLAKE2s (utf8-cpp-3.2.1.tar.gz) = e77f7ac01eb99bb89b176314af7dcda8cc281dde19cace10393632fb878fc4a4
+SHA512 (utf8-cpp-3.2.1.tar.gz) = 5798487f12b1bc55d3e06aed38f7604271ca3402963efcf85d181fd590d8a088d21e961e77698e60dc2cdae8cf4506645903442c45fd328201752d9589180e0d
+Size (utf8-cpp-3.2.1.tar.gz) = 27377 bytes
+SHA1 (patch-CMakeLists.txt) = c343d5e42d119c2a247a4103714890ba119f5441
