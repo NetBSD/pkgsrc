@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.80 2021/12/09 22:39:17 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2021/12/29 16:31:40 adam Exp $
 
-DISTNAME=	vala-0.54.4
+DISTNAME=	vala-0.54.5
 CATEGORIES=	lang gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vala/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -10,22 +10,18 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/Vala
 COMMENT=	Compiler for the GObject type system
 LICENSE=	gnu-lgpl-v2.1
 
-BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=		docbook-xml-[0-9]*:../../textproc/docbook-xml
+BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+BUILD_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
 
-GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bison flex gmake pkg-config
-
+GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	libvala.pc.in
 PKGCONFIG_OVERRIDE+=	vapigen/vapigen.pc.in
 
-# as of 0.50.1
-# 44 of 992 tests failed
-# as of 0.54.2
-# error: Package `GObject-2.0' not found in specified Vala API directories or GObject-Introspection GIR directories
-# error: Package `GLib-2.0' not found in specified Vala API directories or GObject-Introspection GIR directories
-# error: Package `Gio-2.0' not found in specified Vala API directories or GObject-Introspection GIR directories
+# as of 0.54.5
+# 1 of 1291 tests failed
+# FAIL: dbus/filedescriptor-errors
 TEST_TARGET=		check
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.48.0
