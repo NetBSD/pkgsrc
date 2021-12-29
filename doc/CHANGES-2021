@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6411 2021/12/29 06:04:48 taca Exp $
+$NetBSD: CHANGES-2021,v 1.6412 2021/12/29 08:35:12 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9571,3 +9571,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/wiki-tui to 0.4.3 [pin 2021-12-29]
 	Updated sysutils/zoxide to 0.8.0 [pin 2021-12-29]
 	Removed meta-pkgs/php73-extensions [taca 2021-12-29]
+	Updated www/libmicrohttpd to 0.9.75 [nikita 2021-12-29]
