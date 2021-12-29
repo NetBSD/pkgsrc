@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.7 2021/09/01 06:58:39 pin Exp $
+@comment $NetBSD: PLIST,v 1.8 2021/12/29 05:47:44 pin Exp $
 bin/featherpad
 bin/fpad
 share/applications/featherpad.desktop
 share/featherpad/help
+share/featherpad/help_ca
 share/featherpad/help_ja
 share/featherpad/help_pt_BR
 share/featherpad/translations/featherpad_ar_DZ.qm
 share/featherpad/translations/featherpad_bg.qm
+share/featherpad/translations/featherpad_ca.qm
 share/featherpad/translations/featherpad_cs.qm
 share/featherpad/translations/featherpad_cy.qm
 share/featherpad/translations/featherpad_da.qm
@@ -19,6 +21,7 @@ share/featherpad/translations/featherpad_fa.qm
 share/featherpad/translations/featherpad_fi.qm
 share/featherpad/translations/featherpad_fr.qm
 share/featherpad/translations/featherpad_he.qm
+share/featherpad/translations/featherpad_hr.qm
 share/featherpad/translations/featherpad_hu.qm
 share/featherpad/translations/featherpad_id.qm
 share/featherpad/translations/featherpad_it.qm
