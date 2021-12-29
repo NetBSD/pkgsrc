@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6421 2021/12/29 14:01:02 kleink Exp $
+$NetBSD: CHANGES-2021,v 1.6422 2021/12/29 14:32:00 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9583,3 +9583,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated news/pan to 0.149 [rhialto 2021-12-29]
 	Updated print/tex-vhistory to 1.8.0 [kleink 2021-12-29]
 	Updated print/tex-vhistory-doc to 1.8.0 [kleink 2021-12-29]
+	Updated emulators/vice to 3.6 [rhialto 2021-12-29]
