@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6414 2021/12/29 09:19:30 dholland Exp $
+$NetBSD: CHANGES-2021,v 1.6415 2021/12/29 09:36:58 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9575,3 +9575,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated www/libmicrohttpd to 0.9.75 [nikita 2021-12-29]
 	Updated www/webkit-gtk to 2.34.3nb1 [leot 2021-12-29]
 	Updated graphics/claraocr to 0.9.9nb11 [dholland 2021-12-29]
+	Updated games/tads to 3.0.8nb5 [dholland 2021-12-29]
