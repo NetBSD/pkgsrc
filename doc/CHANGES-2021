@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6420 2021/12/29 13:35:41 rhialto Exp $
+$NetBSD: CHANGES-2021,v 1.6421 2021/12/29 14:01:02 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9581,3 +9581,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated graphics/graphviz to 2.49.3nb2 [he 2021-12-29]
 	Updated x11/x3270 to 4.1ga11 [rhialto 2021-12-29]
 	Updated news/pan to 0.149 [rhialto 2021-12-29]
+	Updated print/tex-vhistory to 1.8.0 [kleink 2021-12-29]
+	Updated print/tex-vhistory-doc to 1.8.0 [kleink 2021-12-29]
