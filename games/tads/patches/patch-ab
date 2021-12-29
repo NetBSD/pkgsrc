@@ -1,8 +1,19 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/10/05 22:09:58 dillo Exp $
+$NetBSD: patch-ab,v 1.2 2021/12/29 09:36:37 dholland Exp $
 
---- tads2/osunixt.h.orig	Wed Sep 25 18:43:09 2002
+Don't use sgtty, or tparm.
+
+Don't redefine memcpy/memmove; it's completely unnecessary and breaks
+SSP.
+
+--- tads2/osunixt.h.orig	2004-02-17 02:20:41.000000000 +0000
 +++ tads2/osunixt.h
-@@ -89,7 +89,7 @@ Tue Nov 22 15:16:10 EST 1994    Dave Bag
+@@ -84,12 +84,12 @@ Tue Nov 22 15:16:10 EST 1994    Dave Bag
+  * Define the following to use sgtty.h instead of termios or direct
+  * ioctl hacking.
+  */
+-#if defined(NEXT) || defined(IBM_RT) || defined(FREEBSD_386) || defined(IBM_AIX) || defined(NETBSD) || defined(OPENBSD) || defined(DARWIN)
++#if 0
+ #define USE_IOCTL_INSTEAD_OF_TERMIOS
  #define USE_SGTTY
  #endif
  
@@ -11,3 +22,15 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/10/05 22:09:58 dillo Exp $
  #define HAVE_TPARM      /* define if this system has the tparm routine */
  #endif
  
+@@ -160,9 +160,11 @@ FILE* our_fopen(char *filename, char *fl
+  * Some machines are missing memmove, so we use our own memcpy/memmove 
+  * routine instead.
+  */
++#if !defined(__STDC__)
+ void *our_memcpy(void *dst, const void *src, size_t size); 
+ #define memcpy our_memcpy
+ #define memmove our_memcpy
++#endif
+ 
+ /* display lines on which errors occur */
+ /* #  define OS_ERRLINE 1 */
