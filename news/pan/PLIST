@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.15 2021/09/19 17:40:27 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.16 2021/12/29 13:34:39 rhialto Exp $
 bin/pan
 man/man1/pan.1
-share/appdata/pan.appdata.xml
-share/applications/pan.desktop
-share/icons/hicolor/16x16/apps/pan.png
-share/icons/hicolor/24x24/apps/pan.png
-share/icons/hicolor/256x256/apps/pan.png
-share/icons/hicolor/32x32/apps/pan.png
-share/icons/hicolor/48x48/apps/pan.png
+share/applications/org.gnome.pan.desktop
+share/metainfo/org.gnome.pan.metainfo.xml
+share/icons/hicolor/16x16/apps/org.gnome.pan.png
+share/icons/hicolor/24x24/apps/org.gnome.pan.png
+share/icons/hicolor/256x256/apps/org.gnome.pan.png
+share/icons/hicolor/32x32/apps/org.gnome.pan.png
+share/icons/hicolor/48x48/apps/org.gnome.pan.png
 share/locale/am/LC_MESSAGES/pan.mo
 share/locale/ar/LC_MESSAGES/pan.mo
 share/locale/az/LC_MESSAGES/pan.mo
