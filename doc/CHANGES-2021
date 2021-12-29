@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6426 2021/12/29 15:53:47 rhialto Exp $
+$NetBSD: CHANGES-2021,v 1.6427 2021/12/29 16:32:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9588,3 +9588,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/p5-PAR-Dist to 0.51 [prlw1 2021-12-29]
 	Updated devel/p5-PAR to 1.017 [prlw1 2021-12-29]
 	Updated emulators/simh to 4.0.0.20211212 [rhialto 2021-12-29]
+	Updated graphics/graphviz to 2.50.0 [adam 2021-12-29]
+	Updated devel/meson to 0.60.3 [adam 2021-12-29]
+	Updated lang/vala to 0.54.5 [adam 2021-12-29]
+	Updated www/nginx-devel to 1.21.5 [adam 2021-12-29]
