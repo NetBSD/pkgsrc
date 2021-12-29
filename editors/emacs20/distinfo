@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.40 2021/12/25 22:11:50 dholland Exp $
+$NetBSD: distinfo,v 1.41 2021/12/29 03:26:32 dholland Exp $
 
 BLAKE2s (emacs-20.7-mule-4.1b-elc.tar.gz) = 8d3116a8037014bdeece76148aeb0ae72adcb003fd67922650793302197d62bf
 SHA512 (emacs-20.7-mule-4.1b-elc.tar.gz) = db4020ef7e428c99dffd3873485ce5d0ee4ad2c2bf87ec3b5f84dbf36fa2c398f3c0e02651cae3565acd2e7cbf504f66507c08b578f91247e9a27280226fb8d4
@@ -44,7 +44,7 @@ SHA1 (patch-bj) = 6dba88723ee632b67fcf6a2dd2918e69034837e2
 SHA1 (patch-bl) = f2cd03713d7cdb6cb41119569031249d7d708b13
 SHA1 (patch-bm) = 2f00f63120a90477c6f5c63ac6ca23fc508b9e54
 SHA1 (patch-bp) = 7b9ad94ac9d09fbb2173fdd3efd04faa0a668a91
-SHA1 (patch-br) = c14d33970609c65a22944514bc5b133d024b062e
+SHA1 (patch-br) = f8b100fda2e3eb1ea8da4af3ba45e6dba1f8807c
 SHA1 (patch-bs) = d588828d66a4aa1f18a7df74bb1527e45b9c9d2a
 SHA1 (patch-bt) = 29c8049c6dcd780190774173a1c64c7009685c92
 SHA1 (patch-bx) = 27713e1812240f9ed137aa793cbb5a4fa2cad33b
