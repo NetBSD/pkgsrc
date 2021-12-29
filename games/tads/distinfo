@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 10:44:27 nia Exp $
+$NetBSD: distinfo,v 1.19 2021/12/29 09:36:37 dholland Exp $
 
 BLAKE2s (tads-3.0.8-1/tads23-unix.tar.gz) = f2094b43926693e5889218c4fdf7c16b6d87f03166b58de3f6c212d320e480bc
 SHA512 (tads-3.0.8-1/tads23-unix.tar.gz) = 6bfaa3d86b45c4dcfc501cb41ba81a66cc64d968fb5cb5b0764f637efaf45f09091a5fcd9dc82ca7db82efc9101aa71077a5c633cf31ae2b5d13940a72605e46
 Size (tads-3.0.8-1/tads23-unix.tar.gz) = 4122345 bytes
 SHA1 (patch-aa) = 5e8a26d5766eb2db889109c05993c3b04d527cab
-SHA1 (patch-ab) = b8e48ff15ef5fa1834c98a5bcc6df3d732dfe062
+SHA1 (patch-ab) = 63cd160bf7a4946badd59953a81f84dc8fd7417c
 SHA1 (patch-ac) = f0c73b0fe9dcf9ec442e37faefeb78ba0fbd67d0
-SHA1 (patch-tads2_osunixt.c) = 7bf4ca85ae9986eea4caff61c27845b6a309ef9f
+SHA1 (patch-tads2_osunixt.c) = 9361782101dff4fb20a4210c8d831cd7fe3b4d1a
 SHA1 (patch-tads3_tcprs.cpp) = 7f377ea541009490910259c734d577b612f264ef
