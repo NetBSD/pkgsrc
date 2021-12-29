@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6408 2021/12/29 05:51:19 pin Exp $
+$NetBSD: CHANGES-2021,v 1.6409 2021/12/29 05:52:55 pin Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9568,3 +9568,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated editors/featherpad to 1.1.0 [pin 2021-12-29]
 	Updated graphics/kvantum to 1.0.0 [pin 2021-12-29]
 	Updated audio/termusic to 0.6.4 [pin 2021-12-29]
+	Updated www/wiki-tui to 0.4.3 [pin 2021-12-29]
