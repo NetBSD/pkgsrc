@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2021/01/01 13:05:22 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.11 2021/12/29 13:25:47 rhialto Exp $
 bin/b3270
 ${PLIST.curses}bin/c3270
 bin/pr3287
@@ -12,10 +12,10 @@ ${PLIST.curses}man/man1/c3270.1
 man/man1/pr3287.1
 man/man1/s3270.1
 ${PLIST.tcl}man/man1/tcl3270.1
-${PLIST.x11}man/man1/x3270-script.1
 ${PLIST.x11}man/man1/x3270.1
 ${PLIST.x11}man/man1/x3270if.1
 man/man5/ibm_hosts.5
+${PLIST.gtk}share/applications/x3270.desktop
 ${PLIST.tcl}share/examples/x3270/cms_cmd.tcl3270
 share/examples/x3270/ibm_hosts
 ${PLIST.x11}share/fonts/X11/misc/3270-12.pcf.gz
@@ -35,3 +35,8 @@ ${PLIST.x11}share/fonts/X11/misc/3270gt32.pcf.gz
 ${PLIST.x11}share/fonts/X11/misc/3270gt32b.pcf.gz
 ${PLIST.x11}share/fonts/X11/misc/3270gt8.pcf.gz
 ${PLIST.x11}share/fonts/X11/misc/3270h.pcf.gz
+${PLIST.gtk}share/icons/hicolor/192x192/apps/x3270.png
+${PLIST.gtk}share/icons/hicolor/256x256/apps/x3270.png
+${PLIST.gtk}share/icons/hicolor/48x48/apps/x3270.png
+${PLIST.gtk}share/icons/hicolor/512x512/apps/x3270.png
+${PLIST.gtk}share/icons/hicolor/96x96/apps/x3270.png
