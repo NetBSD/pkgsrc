@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.217 2021/12/20 12:26:16 leot Exp $
+# $NetBSD: Makefile,v 1.218 2021/12/29 08:59:16 leot Exp $
 
 DISTNAME=	webkitgtk-2.34.3
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://www.webkitgtk.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -147,6 +148,7 @@ BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.0.3
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gst-plugins1-base+=	gst-plugins1-base>=1.0.3
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-good/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libsoup+= libsoup>=2.42.2nb3
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
