@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.25 2021/10/26 10:51:58 nia Exp $
+$NetBSD: distinfo,v 1.26 2021/12/29 03:14:35 dholland Exp $
 
 BLAKE2s (yap-6.3.3.tar.gz) = f0c62ab419df786dab9000edffaaffb628a78c56042f2e5d5b8aca06ae81a6fb
 SHA512 (yap-6.3.3.tar.gz) = 4ef45277ec84b6e072fa54afc7d6c18f11c3a0cdf477e35e35a0ce2181c9ff2e693f8735f63a1899373f6baf79ce0a972b37e1ae6ed8271bec60663f477bbe80
 Size (yap-6.3.3.tar.gz) = 7879301 bytes
+SHA1 (patch-H_absmi.h) = f930063ca281d7ab8df80e66b89cc38d810374c0
 SHA1 (patch-aa) = 41b755767d18031ea5a6dc1c225dd8cf29e1d758
 SHA1 (patch-ad) = e3765c0d6729b4d531cdea59dc8e442055091d10
 SHA1 (patch-ae) = 7464217cd29c7a99d8f5262f0d8f268a39358791
