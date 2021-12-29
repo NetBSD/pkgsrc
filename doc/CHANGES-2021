@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6429 2021/12/29 19:18:52 rhialto Exp $
+$NetBSD: CHANGES-2021,v 1.6430 2021/12/29 19:39:16 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9595,3 +9595,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/utf8-cpp to 3.2.1 [adam 2021-12-29]
 	Updated multimedia/mkvtoolnix to 64.0.0 [adam 2021-12-29]
 	Updated misc/tmux to 3.2a [rhialto 2021-12-29]
+	Added devel/p5-Test-Mock-Guard version 0.10 [prlw1 2021-12-29]
