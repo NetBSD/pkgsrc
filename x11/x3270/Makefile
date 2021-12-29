@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2021/06/26 13:51:20 rhialto Exp $
+# $NetBSD: Makefile,v 1.47 2021/12/29 13:25:47 rhialto Exp $
 
-DISTNAME=	suite3270-4.0ga14-src
-PKGNAME=	x3270-4.0ga14
+DISTNAME=	suite3270-4.1ga11-src
+PKGNAME=	x3270-4.1ga11
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=x3270/}
 EXTRACT_SUFX=	.tgz
@@ -13,13 +13,12 @@ LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
 
-WRKSRC=		${WRKDIR}/suite3270-4.0
+WRKSRC=		${WRKDIR}/suite3270-4.1
 USE_TOOLS+=	bdftopcf gmake
 
 FONTS_DIRS.x11+=	${PREFIX}/share/fonts/X11/misc
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
-CONFIGURE_ARGS+=	--with-fontdir=${PREFIX}/share/fonts/X11/misc
 CONFIGURE_ARGS+=	--enable-b3270
 CONFIGURE_ARGS+=	--enable-pr3287
 CONFIGURE_ARGS+=	--enable-s3270
@@ -31,6 +30,12 @@ PKG_SYSCONFSUBDIR=	x3270
 EGDIR=			${PREFIX}/share/examples/x3270
 CONF_FILES=		${EGDIR}/ibm_hosts ${PKG_SYSCONFDIR}/ibm_hosts
 INSTALLATION_DIRS+=	${EGDIR}
+
+SUBST_CLASSES+=		share
+SUBST_STAGE.share=	pre-configure
+SUBST_MESSAGE.share=	Fixing /usr/share
+SUBST_FILES.share=	x3270/Makefile.obj.in
+SUBST_SED.share+=	-e 's;/usr/share;${PREFIX}/share;'
 
 post-install:
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/ibm_hosts ${DESTDIR}/${EGDIR}
