@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6413 2021/12/29 08:59:26 leot Exp $
+$NetBSD: CHANGES-2021,v 1.6414 2021/12/29 09:19:30 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9555,6 +9555,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed x11/libxfce4gui [gutteridge 2021-12-26]
 	Updated lang/llvm to 13.0.0nb2 [he 2021-12-26]
 	Updated lang/intercal to 0.30nb1 [dholland 2021-12-27]
+	Updated lang/stalin to 0.9nb9 [dholland 2021-12-27]
 	Updated x11/citron to 0.6.4 [pin 2021-12-27]
 	Updated databases/py-lmdb to 1.2.1 [adam 2021-12-27]
 	Updated textproc/ruby-nokogiri to 1.12.5nb2 [taca 2021-12-28]
@@ -9573,3 +9574,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed meta-pkgs/php73-extensions [taca 2021-12-29]
 	Updated www/libmicrohttpd to 0.9.75 [nikita 2021-12-29]
 	Updated www/webkit-gtk to 2.34.3nb1 [leot 2021-12-29]
+	Updated graphics/claraocr to 0.9.9nb11 [dholland 2021-12-29]
