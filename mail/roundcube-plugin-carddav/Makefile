@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2021/05/18 07:13:26 triaxx Exp $
+# $NetBSD: Makefile,v 1.6 2021/12/29 06:05:18 taca Exp $
 
-DISTNAME=	carddav-v4.1.1
+DISTNAME=	carddav-v4.2.0
 PKGNAME=	${PHP_PKG_PREFIX}-roundcube-plugin-${DISTNAME:S/-v/-/}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mstilkerich/}
@@ -25,7 +25,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-roundcube>=1.0.0:../../mail/roundcube
 
 WRKSRC=		${WRKDIR}/carddav
 
-PHP_VERSIONS_ACCEPTED=	74 73
+PHP_VERSIONS_ACCEPTED=	74
 
 PKG_SYSCONFSUBDIR=	roundcube
 
