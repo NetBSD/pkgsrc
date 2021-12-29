@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.186 2021/12/08 16:05:50 adam Exp $
+# $NetBSD: Makefile,v 1.187 2021/12/29 17:01:18 adam Exp $
 
-DISTNAME=	mkvtoolnix-63.0.0
-PKGREVISION=	2
+DISTNAME=	mkvtoolnix-64.0.0
 CATEGORIES=	multimedia
 MASTER_SITES=	https://mkvtoolnix.download/sources/
 EXTRACT_SUFX=	.tar.xz
@@ -69,5 +68,6 @@ BUILDLINK_API_DEPENDS.libmatroska+= libmatroska>=1.6.3
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../textproc/pugixml/buildlink3.mk"
+.include "../../textproc/utf8-cpp/buildlink3.mk"
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
