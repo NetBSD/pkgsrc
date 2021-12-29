@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/12/04 20:45:48 nia Exp $
+# $NetBSD: Makefile,v 1.24 2021/12/29 06:19:20 taca Exp $
 #
 
 DISTNAME=	concrete5.7.5.13
@@ -35,7 +35,7 @@ PHP_VERSIONS_ACCEPTED=	56
 
 .include "../../lang/php/phpversion.mk"
 
-.if ${PKG_PHP_VERSION} == "56" || ${PKG_PHP_VERSION} == "70"
+.if ${PKG_PHP_VERSION} < 71
 DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=5.3.3:../../security/php-mcrypt
 .else
 DEPENDS+=	${PHP_PKG_PREFIX}-pecl-mcrypt>=1.0.0:../../security/php-pecl-mcrypt
