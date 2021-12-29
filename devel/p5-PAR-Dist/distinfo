@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 10:17:12 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/12/29 14:40:21 prlw1 Exp $
 
-BLAKE2s (PAR-Dist-0.49.tar.gz) = 7b37694ebc12d46447a439134c1edb7a4f091099b4f11dffde9683e14338f03e
-SHA512 (PAR-Dist-0.49.tar.gz) = 5b0b69e9436d49ab47c4bca8d48790bbc04fec526eeec96a75c768b13f318cf3a0fb2b1a3ab9f835fb4326af2d1339f85257ec5e96f4dfe0efd77c9a36a89acc
-Size (PAR-Dist-0.49.tar.gz) = 36682 bytes
+BLAKE2s (PAR-Dist-0.51.tar.gz) = 98e2291004561e4271701287e3bc1f1e251c6a85434c96887ed7dc180e71b5dd
+SHA512 (PAR-Dist-0.51.tar.gz) = 4c06ff54dfa8f3dc4766b60c45337b3cf80b32ec6bcc49d7e5a4786e0533e495f6215b257100fa5aae50f12e01a8b3d7144254d8706019c50ff115915f0fcb41
+Size (PAR-Dist-0.51.tar.gz) = 42492 bytes
