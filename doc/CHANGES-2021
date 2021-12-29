@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6433 2021/12/29 23:26:50 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.6434 2021/12/29 23:56:15 nia Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9599,3 +9599,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated cross/avrdude to 6.4 [dsainty 2021-12-29]
 	Updated x11/xfce4-exo to 4.16.3 [gutteridge 2021-12-29]
 	Updated meta-pkgs/bulk-medium to 20211229 [gutteridge 2021-12-29]
+	Added games/xchomp version pl1 [nia 2021-12-29]
