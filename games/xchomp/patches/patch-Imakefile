@@ -1,0 +1,22 @@
+$NetBSD: patch-Imakefile,v 1.1 2021/12/29 23:56:01 nia Exp $
+
+Fix installation without a man page.
+From FreeBSD Ports.
+
+--- Imakefile.orig	1994-03-18 05:16:10.000000000 +0000
++++ Imakefile
+@@ -2,7 +2,7 @@
+ #include BandAidCompiler
+ #endif
+ 
+-DEFINES = -DX11
++DEFINES = -DX11 -DFRAME_DELAY=40000
+ INCLUDES = -I$(TOP) -I$(TOP)/X11
+ DEPLIBS = $(DEPXLIB)
+ LOCAL_LIBRARIES = $(XLIB)
+@@ -11,4 +11,4 @@ SYS_LIBRARIES = -lm
+ SRCS = contact.c demo.c drivers.c main.c maze.c props.c resources.c status.c
+ OBJS = contact.o demo.o drivers.o main.o maze.o props.o resources.o status.o
+ 
+-ComplexProgramTarget(xchomp)
++ComplexProgramTargetNoMan(xchomp)
