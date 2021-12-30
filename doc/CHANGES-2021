@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6441 2021/12/30 11:54:08 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6442 2021/12/30 13:33:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9608,3 +9608,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/yt-dlp to 2021.12.27 [ryoon 2021-12-30]
 	Removed lang/python36 [adam 2021-12-30]
 	Removed lang/py36-html-docs [adam 2021-12-30]
+	Removed devel/py-aiocontextvars [adam 2021-12-30]
+	Removed devel/py-contextvars [adam 2021-12-30]
+	Removed devel/py-dataclasses [adam 2021-12-30]
+	Removed www/py-idna_ssl [adam 2021-12-30]
