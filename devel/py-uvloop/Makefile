@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2021/08/11 07:03:57 adam Exp $
+# $NetBSD: Makefile,v 1.27 2021/12/30 13:05:31 adam Exp $
 
 DISTNAME=	uvloop-0.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ DEPENDS+=	libuv>=1.42.0:../../devel/libuv
 TEST_DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
 TEST_DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/libuv/buildlink3.mk"
 .include "../../lang/python/egg.mk"

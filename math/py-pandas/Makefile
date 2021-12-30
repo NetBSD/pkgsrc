@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2021/12/12 20:30:49 adam Exp $
+# $NetBSD: Makefile,v 1.36 2021/12/30 13:05:37 adam Exp $
 
 DISTNAME=	pandas-1.3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -27,7 +27,7 @@ USE_LANGUAGES=	c c++
 
 PYSETUPTESTTARGET=	pytest
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 BUILDLINK_API_DEPENDS.pynumpy+= ${PYPKGPREFIX}-numpy>=1.16.5

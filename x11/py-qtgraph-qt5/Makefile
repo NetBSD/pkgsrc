@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/04/06 08:31:49 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2021/12/30 13:05:42 adam Exp $
 
 DISTNAME=	pyqtgraph-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyqtgraph/qtgraph-qt5/}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-OpenGL-[0-9]*:../../graphics/py-OpenGL
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../x11/py-qt5/buildlink3.mk"

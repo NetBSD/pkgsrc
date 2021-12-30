@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2021/12/11 14:57:52 tnn Exp $
+# $NetBSD: Makefile,v 1.37 2021/12/30 13:05:35 adam Exp $
 
 DISTNAME=		gr-osmosdr-0.2.3.20210128
 PKGREVISION=		4
@@ -28,7 +28,7 @@ CMAKE_ARGS+=	-Dpybind11_DIR=${PREFIX}/${PYSITELIB}/pybind11/share/cmake/pybind11
 
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 REPLACE_PYTHON+=		apps/osmocom_siggen_base.py
 
 .include "../../audio/libsndfile/buildlink3.mk"

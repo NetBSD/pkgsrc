@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2021/09/15 11:49:50 nia Exp $
+# $NetBSD: Makefile,v 1.14 2021/12/30 13:05:28 adam Exp $
 
 DISTNAME=	mautrix-hangouts-0.1.4
 PKGREVISION=	1
@@ -25,7 +25,7 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 EGG_NAME=	mautrix_hangouts-${PKGVERSION_NOREV}+dev.unknown
 

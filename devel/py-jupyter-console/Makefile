@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/06/10 18:53:58 adam Exp $
+# $NetBSD: Makefile,v 1.4 2021/12/30 13:05:30 adam Exp $
 
 DISTNAME=	jupyter_console-6.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-pygments>=2.3.1:../../textproc/py-pygments
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36	# py-ipykernel
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-ipykernel
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

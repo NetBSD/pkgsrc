@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2021/11/23 21:02:13 adam Exp $
+# $NetBSD: Makefile,v 1.14 2021/12/30 13:05:42 adam Exp $
 
 DISTNAME=	websockets-10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/aaugustin/websockets
 COMMENT=	Implementation of the WebSocket Protocol (RFC 6455)
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

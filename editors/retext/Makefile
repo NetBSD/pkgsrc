@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2021/11/25 00:38:35 gutteridge Exp $
+# $NetBSD: Makefile,v 1.9 2021/12/30 13:05:31 adam Exp $
 
 DISTNAME=	ReText-7.2.2
 PKGNAME=	${DISTNAME:tl}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-markups-[0-9]*:../../textproc/py-markups
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36 # py-markups
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-markups
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/egg.mk"

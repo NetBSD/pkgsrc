@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/11/17 17:27:15 adam Exp $
+# $NetBSD: Makefile,v 1.8 2021/12/30 13:05:33 adam Exp $
 
 DISTNAME=	imageio-2.10.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-tifffile-[0-9]*:../../graphics/py-tifffile
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36 # py-numpy
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-numpy
 
 USE_LANGUAGES=	# none
 

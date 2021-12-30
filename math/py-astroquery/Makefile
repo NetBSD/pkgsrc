@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/12/22 22:03:56 mef Exp $
+# $NetBSD: Makefile,v 1.3 2021/12/30 13:05:36 adam Exp $
 
 DISTNAME=	astroquery-0.3.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,8 +12,7 @@ HOMEPAGE=	https://astroquery.readthedocs.io/en/latest/
 COMMENT=	Astropy coordinated Python module for querying astronomical databases
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE+=	27
-PYTHON_VERSIONS_INCOMPATIBLE+=	36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.25.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-keyring>=21.2.1:../../security/py-keyring

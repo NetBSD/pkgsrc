@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2021/11/20 23:29:37 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2021/12/30 13:05:40 adam Exp $
 
 DISTNAME=	weasyprint-53.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -27,7 +27,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36 # py-fonttools
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-fonttools
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

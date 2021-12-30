@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/04/09 14:41:34 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2021/12/30 13:05:35 adam Exp $
 
 DISTNAME=	Theano-1.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,7 +26,7 @@ REPLACE.bash.old=	.*/bin/bash
 REPLACE.bash.new=	${SH}
 REPLACE_FILES.bash=	theano/misc/check_blas_many.sh
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 27	# py-scipy
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-scipy
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

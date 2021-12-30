@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/12/14 07:11:40 adam Exp $
+# $NetBSD: Makefile,v 1.5 2021/12/30 13:05:35 adam Exp $
 
 DISTNAME=	asdf-2.8.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36	# py-numpy
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-numpy
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} < 39

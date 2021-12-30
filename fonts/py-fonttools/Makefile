@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2021/12/19 16:47:16 adam Exp $
+# $NetBSD: Makefile,v 1.75 2021/12/30 13:05:32 adam Exp $
 
 DISTNAME=	fonttools-4.28.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,7 +25,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 # 3 failed, 3456 passed, 143 skipped, 2 xfailed, 23 warnings, 6 errors
 PYSETUPTESTTARGET=	pytest
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure

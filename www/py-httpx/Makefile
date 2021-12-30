@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2021/11/17 08:35:57 adam Exp $
+# $NetBSD: Makefile,v 1.18 2021/12/30 13:05:41 adam Exp $
 
 DISTNAME=	httpx-0.21.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-sniffio-[0-9]*:../../misc/py-sniffio
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36 # py-httpcore, py-anyio, py-uvloop
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-httpcore, py-anyio, py-uvloop
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

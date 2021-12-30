@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/12/04 20:45:04 nia Exp $
+# $NetBSD: Makefile,v 1.6 2021/12/30 13:05:29 adam Exp $
 
 DISTNAME=		gramps-5.1.2
 PKGREVISION=		3
@@ -12,7 +12,7 @@ LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		msgfmt pkg-config intltool msgconv
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=	gramps/gen/utils/place.py
 REPLACE_PYTHON+=	gramps/gen/datehandler/_date_fr.py

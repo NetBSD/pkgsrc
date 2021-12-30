@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2021/12/08 16:04:49 adam Exp $
+# $NetBSD: Makefile,v 1.14 2021/12/30 13:05:33 adam Exp $
 
 DISTNAME=	blender-2.83.5
 PKGREVISION=	12
@@ -52,7 +52,7 @@ INSTALLATION_DIRS=	bin share/blender
 
 CHECK_PORTABILITY_SKIP+=	doc/python_api/sphinx_doc_gen.sh
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/build

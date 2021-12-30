@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/06/29 08:41:59 nia Exp $
+# $NetBSD: Makefile,v 1.6 2021/12/30 13:05:27 adam Exp $
 
 DISTNAME=	biopython-1.74
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,8 +14,6 @@ LICENSE=	biopython
 USE_TOOLS+=	pax
 
 INSTALLATION_DIRS+=	share/doc/biopython share/examples/biopython
-
-PYTHON_VERSIONS_INCOMPATIBLE=	36 # py-numpy
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.rst ${DESTDIR}${PREFIX}/share/doc/biopython

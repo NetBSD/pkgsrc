@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2021/12/08 16:03:27 adam Exp $
+# $NetBSD: Makefile,v 1.59 2021/12/30 13:05:28 adam Exp $
 
 DISTNAME=	gajim-1.3.2
 PKGREVISION=	1
@@ -22,7 +22,7 @@ TOOLS_PLATFORM.msgfmt=
 MANCOMPRESSED=	yes
 MAKE_ENV+=	PKGMANDIR=${PKGMANDIR}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	${PYPKGPREFIX}-cairo>=1.16.0:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-css-parser-[0-9]*:../../textproc/py-css-parser

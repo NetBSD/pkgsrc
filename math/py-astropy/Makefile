@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/12/19 14:17:39 mef Exp $
+# $NetBSD: Makefile,v 1.2 2021/12/30 13:05:36 adam Exp $
 
 DISTNAME=	astropy-4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,8 +10,7 @@ HOMEPAGE=	https://www.astropy.org/
 COMMENT=	Python module for astronomical calculations and data analysis
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE+=	27
-PYTHON_VERSIONS_INCOMPATIBLE+=	36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	libxml2>=2.9.10:../../textproc/libxml2
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.17.0:../../math/py-numpy
