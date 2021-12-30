@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/12/07 09:31:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2021/12/30 15:18:11 wiz Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -2555,6 +2555,7 @@ lib/python${PY_VER_SUFFIX}/signal.py
 lib/python${PY_VER_SUFFIX}/signal.pyc
 lib/python${PY_VER_SUFFIX}/signal.pyo
 lib/python${PY_VER_SUFFIX}/site-packages/README.txt
+lib/python${PY_VER_SUFFIX}/site-packages/_distutils_system_mod.py
 lib/python${PY_VER_SUFFIX}/site.py
 lib/python${PY_VER_SUFFIX}/site.pyc
 lib/python${PY_VER_SUFFIX}/site.pyo
