@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6454 2021/12/30 20:22:33 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6455 2021/12/30 20:32:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9626,3 +9626,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-prettytable to 2.5.0 [fcambus 2021-12-30]
 	Updated net/wireshark to 3.6.1 [adam 2021-12-30]
 	Updated misc/stellarium to 0.21.3 [adam 2021-12-30]
+	Updated databases/sqlite3 to 3.37.1 [adam 2021-12-30]
+	Updated databases/sqlite3-docs to 3.37.1 [adam 2021-12-30]
+	Updated databases/sqlite3-tcl to 3.37.1 [adam 2021-12-30]
+	Updated devel/lemon to 1.0.3.37.1 [adam 2021-12-30]
