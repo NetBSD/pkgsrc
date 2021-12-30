@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2021/12/30 00:26:20 nia Exp $
+
+BLAKE2s (3dpong-0.5.tar.gz) = 007beba9c00c479de25e77bcbe5cb3c21fc95f6b04e0a2f4cacaf1d1959d442e
+SHA512 (3dpong-0.5.tar.gz) = 83d771e149e94f0fadbb8c19ed2ba1d4ce518d97ad910185a5eee1c1c3501200403329db8aff1408953e712355785ea77eb63bcf2a7e01fd38868853cdaadcbc
+Size (3dpong-0.5.tar.gz) = 37004 bytes
+SHA1 (patch-src_3dpong.c) = 9222af77d2f465f9f26b2bf546abc1790b6b3336
+SHA1 (patch-src_randnum.c) = f52b08c16d7990715cd050939e9679bfef0c120c
+SHA1 (patch-src_text.c) = f2d4d8d8eaa50eb0dd1febc1f210a190254da78d
