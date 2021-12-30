@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/12/30 12:32:41 nia Exp $
+# $NetBSD: Makefile,v 1.3 2021/12/30 13:05:40 adam Exp $
 
 DISTNAME=	xmm7360-0.20200727
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-configargparse>=1.2.3:../../devel/py-configargparse
 NO_BUILD=       yes
 XMM_DIR=	${PYSITELIB}/xmm7360
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 REPLACE_PYTHON=                 rpc/open_xdatachannel.py rpc/rpc.py
 INSTALLATION_DIRS+=             bin ${XMM_DIR}
 PY_PATCHPLIST=                  yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2021/11/04 13:56:13 adam Exp $
+# $NetBSD: Makefile,v 1.11 2021/12/30 13:05:35 adam Exp $
 
 DISTNAME=	asteval-0.9.25
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-numpy>=1.6:../../math/py-numpy
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36 # py-numpy
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-numpy
 
 do-test:
 	cd ${WRKSRC}/tests && ${PYTHONBIN} test_asteval.py

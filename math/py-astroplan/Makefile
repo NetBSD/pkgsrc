@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/12/19 14:38:01 mef Exp $
+# $NetBSD: Makefile,v 1.2 2021/12/30 13:05:36 adam Exp $
 
 DISTNAME=	astroplan-0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,8 +12,7 @@ HOMEPAGE=	https://astroplan.readthedocs.io/en/latest/
 COMMENT=	Astropy affiliated module for planning astronomical observations
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE+=	27
-PYTHON_VERSIONS_INCOMPATIBLE+=	36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.0:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-pytz>=2020.4:../../time/py-pytz

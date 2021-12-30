@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/12/19 16:57:00 adam Exp $
+# $NetBSD: Makefile,v 1.8 2021/12/30 13:05:31 adam Exp $
 
 DISTNAME=	memory_profiler-0.60.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36	# py-matplotlib
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-matplotlib
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

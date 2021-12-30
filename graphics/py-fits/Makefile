@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2021/06/29 08:42:00 nia Exp $
+# $NetBSD: Makefile,v 1.11 2021/12/30 13:05:33 adam Exp $
 
 DISTNAME=	pyfits-3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -13,8 +13,6 @@ LICENSE=	modified-bsd
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-d2to1>=0.2.12:../../devel/py-d2to1
 BUILD_DEPENDS+=	${PYPKGPREFIX}-stsci.distutils>=0.3:../../devel/py-stsci.distutils
-
-PYTHON_VERSIONS_INCOMPATIBLE+=	36	# py-numpy
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/12/25 22:07:24 nia Exp $
+# $NetBSD: Makefile,v 1.14 2021/12/30 13:05:42 adam Exp $
 
 DISTNAME=		pelican-4.5.0
 GITHUB_PROJECT=		pelican
@@ -23,8 +23,7 @@ DEPENDS+=		${PYPKGPREFIX}-six>=1.4:../../lang/py-six
 DEPENDS+=		${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 
 # Starting version 4.5.0, Pelican removed support for Python 2.7
-# Character encoding PLIST problems with Python 3.6
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_VERSIONED_DEPENDENCIES=	sphinx:build
 
 USE_TOOLS+=		make:build sed:build

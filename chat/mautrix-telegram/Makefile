@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/09/14 20:01:48 js Exp $
+# $NetBSD: Makefile,v 1.7 2021/12/30 13:05:28 adam Exp $
 
 DISTNAME=	mautrix-telegram-0.10.1
 CATEGORIES=	chat python
@@ -32,7 +32,7 @@ DEPENDS+=	${PYPKGPREFIX}-qrcode>=6<7:../../graphics/py-qrcode
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 EGG_NAME=	mautrix_telegram-${PKGVERSION_NOREV}+dev.unknown
 

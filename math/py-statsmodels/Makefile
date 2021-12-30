@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/04/06 12:16:47 prlw1 Exp $
+# $NetBSD: Makefile,v 1.10 2021/12/30 13:05:39 adam Exp $
 
 DISTNAME=	statsmodels-0.12.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.statsmodels.org/
 COMMENT=	Statistical computations and models for Python
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 27	# py-scipy
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-scipy
 USE_LANGUAGES=			c
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29:../../devel/py-cython

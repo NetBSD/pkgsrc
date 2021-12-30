@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/06/29 08:42:00 nia Exp $
+# $NetBSD: Makefile,v 1.6 2021/12/30 13:05:36 adam Exp $
 
 DISTNAME=	autograd-1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,8 +14,6 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-future>=0.15.2:../../devel/py-future
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE+=	36	# py-numpy
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
