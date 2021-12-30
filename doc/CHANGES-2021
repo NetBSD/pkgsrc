@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6448 2021/12/30 15:55:10 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.6449 2021/12/30 16:20:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9618,3 +9618,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/python310 to 3.10.1nb3 [wiz 2021-12-30]
 	Updated devel/nss to 3.73.1 [ryoon 2021-12-30]
 	Updated www/php-nextcloud to 23.0.0 [ryoon 2021-12-30]
+	Updated devel/py-setuptools to 60.2.0 [wiz 2021-12-30]
