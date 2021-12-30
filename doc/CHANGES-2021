@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6453 2021/12/30 19:52:23 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.6454 2021/12/30 20:22:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9624,3 +9624,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/byacc to 20211224 [fcambus 2021-12-30]
 	Updated audio/libopenmpt to 0.6.0 [fcambus 2021-12-30]
 	Updated textproc/py-prettytable to 2.5.0 [fcambus 2021-12-30]
+	Updated net/wireshark to 3.6.1 [adam 2021-12-30]
+	Updated misc/stellarium to 0.21.3 [adam 2021-12-30]
