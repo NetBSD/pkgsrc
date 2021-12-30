@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2021/12/08 16:03:49 adam Exp $
+# $NetBSD: Makefile,v 1.33 2021/12/30 13:24:01 adam Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	4
@@ -9,7 +9,7 @@ COMMENT=	Python extension for SQL Relay
 LICENSE=	modified-bsd
 
 # TODO: switch to PYTHON_VERSIONS_INCOMPATIBLE
-#PYTHON_VERSIONS_ACCEPTED=	37 36 27 # 37 fails as of 1.0.0
+#PYTHON_VERSIONS_ACCEPTED=	37 27 # 37 fails as of 1.0.0
 
 .include "../../lang/python/pyversion.mk"
 
