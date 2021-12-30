@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 10:51:51 nia Exp $
-
-BLAKE2s (python-3.6.15-docs-html.tar.bz2) = 1025496bd92e6650d9c7e50440e3a42a1c0c8326270c45db4a68cde343bb551d
-SHA512 (python-3.6.15-docs-html.tar.bz2) = 212cc2d8e3ff659db6bdf5198361baea767e3583e79f5c44960a63033d85328a8ccd35c0e247e7d175dc6062462a792766074727275792d4047cc8111ec5d348
-Size (python-3.6.15-docs-html.tar.bz2) = 6028519 bytes
