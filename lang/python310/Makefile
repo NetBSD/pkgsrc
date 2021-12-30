@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2021/12/11 10:13:18 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2021/12/30 15:18:11 wiz Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "dist.mk"
 
 PKGNAME=	python310-${PY_DISTVERSION}
@@ -173,10 +173,18 @@ post-configure:
 	touch ${WRKSRC}/Include/opcode.h
 
 .if ${OPSYS} == "HPUX"
-post-install:
+post-install: hpux-postinstall
+.PHONY: hpux-postinstall
+hpux-postinstall:
 	${LN} -fs ${DESTDIR}${PREFIX}/lib/libpython3.10.sl \
 		${DESTDIR}${PREFIX}/lib/libpython3.10.sl.1.0
 .endif
+
+post-install: setuptools-postinstall
+.PHONY: setuptools-postinstall
+setuptools-postinstall:
+	${INSTALL_DATA} ${.CURDIR}/../../devel/py-setuptools/files/_distutils_system_mod \
+		${DESTDIR}${PREFIX}/lib/python${PY_VER_SUFFIX}/site-packages/_distutils_system_mod.py
 
 # needed to make devel/py-readline pick up the correct readline implementation
 BUILDLINK_DEPMETHOD.readline=		build
