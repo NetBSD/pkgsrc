@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:18:22 nia Exp $
-
-BLAKE2s (dataclasses-0.8.tar.gz) = 31115aac40639b7cd62f95c5db5a2d27b91718e876ec2410343b68fa995effac
-SHA512 (dataclasses-0.8.tar.gz) = 81b27dd10077084ca82b0a3cbbcee428a5c5cb2e6ade5de46a39731507c2d6f93f9038b704e6555c850044683516a0d130b95a14c91881d04b0bd2c496ca8d6a
-Size (dataclasses-0.8.tar.gz) = 36581 bytes
