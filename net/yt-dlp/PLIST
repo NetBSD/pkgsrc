@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/12/01 14:32:32 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.4 2021/12/30 11:41:38 ryoon Exp $
 bin/yt-dlp
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -624,6 +624,9 @@ ${PYSITELIB}/yt_dlp/extractor/dreisat.pyo
 ${PYSITELIB}/yt_dlp/extractor/dropbox.py
 ${PYSITELIB}/yt_dlp/extractor/dropbox.pyc
 ${PYSITELIB}/yt_dlp/extractor/dropbox.pyo
+${PYSITELIB}/yt_dlp/extractor/dropout.py
+${PYSITELIB}/yt_dlp/extractor/dropout.pyc
+${PYSITELIB}/yt_dlp/extractor/dropout.pyo
 ${PYSITELIB}/yt_dlp/extractor/drtuber.py
 ${PYSITELIB}/yt_dlp/extractor/drtuber.pyc
 ${PYSITELIB}/yt_dlp/extractor/drtuber.pyo
@@ -834,6 +837,9 @@ ${PYSITELIB}/yt_dlp/extractor/gaia.pyo
 ${PYSITELIB}/yt_dlp/extractor/gameinformer.py
 ${PYSITELIB}/yt_dlp/extractor/gameinformer.pyc
 ${PYSITELIB}/yt_dlp/extractor/gameinformer.pyo
+${PYSITELIB}/yt_dlp/extractor/gamejolt.py
+${PYSITELIB}/yt_dlp/extractor/gamejolt.pyc
+${PYSITELIB}/yt_dlp/extractor/gamejolt.pyo
 ${PYSITELIB}/yt_dlp/extractor/gamespot.py
 ${PYSITELIB}/yt_dlp/extractor/gamespot.pyc
 ${PYSITELIB}/yt_dlp/extractor/gamespot.pyo
@@ -882,6 +888,9 @@ ${PYSITELIB}/yt_dlp/extractor/go.pyo
 ${PYSITELIB}/yt_dlp/extractor/godtube.py
 ${PYSITELIB}/yt_dlp/extractor/godtube.pyc
 ${PYSITELIB}/yt_dlp/extractor/godtube.pyo
+${PYSITELIB}/yt_dlp/extractor/gofile.py
+${PYSITELIB}/yt_dlp/extractor/gofile.pyc
+${PYSITELIB}/yt_dlp/extractor/gofile.pyo
 ${PYSITELIB}/yt_dlp/extractor/golem.py
 ${PYSITELIB}/yt_dlp/extractor/golem.pyc
 ${PYSITELIB}/yt_dlp/extractor/golem.pyo
@@ -969,6 +978,9 @@ ${PYSITELIB}/yt_dlp/extractor/hrfensehen.pyo
 ${PYSITELIB}/yt_dlp/extractor/hrti.py
 ${PYSITELIB}/yt_dlp/extractor/hrti.pyc
 ${PYSITELIB}/yt_dlp/extractor/hrti.pyo
+${PYSITELIB}/yt_dlp/extractor/hse.py
+${PYSITELIB}/yt_dlp/extractor/hse.pyc
+${PYSITELIB}/yt_dlp/extractor/hse.pyo
 ${PYSITELIB}/yt_dlp/extractor/huajiao.py
 ${PYSITELIB}/yt_dlp/extractor/huajiao.pyc
 ${PYSITELIB}/yt_dlp/extractor/huajiao.pyo
@@ -1389,6 +1401,9 @@ ${PYSITELIB}/yt_dlp/extractor/myvidster.pyo
 ${PYSITELIB}/yt_dlp/extractor/n1.py
 ${PYSITELIB}/yt_dlp/extractor/n1.pyc
 ${PYSITELIB}/yt_dlp/extractor/n1.pyo
+${PYSITELIB}/yt_dlp/extractor/nate.py
+${PYSITELIB}/yt_dlp/extractor/nate.pyc
+${PYSITELIB}/yt_dlp/extractor/nate.pyo
 ${PYSITELIB}/yt_dlp/extractor/nationalgeographic.py
 ${PYSITELIB}/yt_dlp/extractor/nationalgeographic.pyc
 ${PYSITELIB}/yt_dlp/extractor/nationalgeographic.pyo
@@ -1566,6 +1581,9 @@ ${PYSITELIB}/yt_dlp/extractor/onionstudios.pyo
 ${PYSITELIB}/yt_dlp/extractor/ooyala.py
 ${PYSITELIB}/yt_dlp/extractor/ooyala.pyc
 ${PYSITELIB}/yt_dlp/extractor/ooyala.pyo
+${PYSITELIB}/yt_dlp/extractor/opencast.py
+${PYSITELIB}/yt_dlp/extractor/opencast.pyc
+${PYSITELIB}/yt_dlp/extractor/opencast.pyo
 ${PYSITELIB}/yt_dlp/extractor/openload.py
 ${PYSITELIB}/yt_dlp/extractor/openload.pyc
 ${PYSITELIB}/yt_dlp/extractor/openload.pyo
@@ -1647,6 +1665,9 @@ ${PYSITELIB}/yt_dlp/extractor/pinkbike.pyo
 ${PYSITELIB}/yt_dlp/extractor/pinterest.py
 ${PYSITELIB}/yt_dlp/extractor/pinterest.pyc
 ${PYSITELIB}/yt_dlp/extractor/pinterest.pyo
+${PYSITELIB}/yt_dlp/extractor/pixivsketch.py
+${PYSITELIB}/yt_dlp/extractor/pixivsketch.pyc
+${PYSITELIB}/yt_dlp/extractor/pixivsketch.pyo
 ${PYSITELIB}/yt_dlp/extractor/pladform.py
 ${PYSITELIB}/yt_dlp/extractor/pladform.pyc
 ${PYSITELIB}/yt_dlp/extractor/pladform.pyo
@@ -1965,6 +1986,9 @@ ${PYSITELIB}/yt_dlp/extractor/sina.pyo
 ${PYSITELIB}/yt_dlp/extractor/sixplay.py
 ${PYSITELIB}/yt_dlp/extractor/sixplay.pyc
 ${PYSITELIB}/yt_dlp/extractor/sixplay.pyo
+${PYSITELIB}/yt_dlp/extractor/skeb.py
+${PYSITELIB}/yt_dlp/extractor/skeb.pyc
+${PYSITELIB}/yt_dlp/extractor/skeb.pyo
 ${PYSITELIB}/yt_dlp/extractor/sky.py
 ${PYSITELIB}/yt_dlp/extractor/sky.pyc
 ${PYSITELIB}/yt_dlp/extractor/sky.pyo
@@ -2244,6 +2268,9 @@ ${PYSITELIB}/yt_dlp/extractor/tnaflix.pyo
 ${PYSITELIB}/yt_dlp/extractor/toggle.py
 ${PYSITELIB}/yt_dlp/extractor/toggle.pyc
 ${PYSITELIB}/yt_dlp/extractor/toggle.pyo
+${PYSITELIB}/yt_dlp/extractor/toggo.py
+${PYSITELIB}/yt_dlp/extractor/toggo.pyc
+${PYSITELIB}/yt_dlp/extractor/toggo.pyo
 ${PYSITELIB}/yt_dlp/extractor/tokentube.py
 ${PYSITELIB}/yt_dlp/extractor/tokentube.pyc
 ${PYSITELIB}/yt_dlp/extractor/tokentube.pyo
@@ -2268,6 +2295,9 @@ ${PYSITELIB}/yt_dlp/extractor/trilulilu.pyo
 ${PYSITELIB}/yt_dlp/extractor/trovo.py
 ${PYSITELIB}/yt_dlp/extractor/trovo.pyc
 ${PYSITELIB}/yt_dlp/extractor/trovo.pyo
+${PYSITELIB}/yt_dlp/extractor/trueid.py
+${PYSITELIB}/yt_dlp/extractor/trueid.pyc
+${PYSITELIB}/yt_dlp/extractor/trueid.pyo
 ${PYSITELIB}/yt_dlp/extractor/trunews.py
 ${PYSITELIB}/yt_dlp/extractor/trunews.pyc
 ${PYSITELIB}/yt_dlp/extractor/trunews.pyo
@@ -2804,4 +2834,3 @@ share/bash-completion/completions/yt-dlp
 share/doc/yt_dlp/README.txt
 share/fish/vendor_completions.d/yt-dlp.fish
 share/zsh/site-functions/_yt-dlp
-@pkgdir share/man/man1

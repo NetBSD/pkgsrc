@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2021/12/17 12:43:40 jperkin Exp $
+$NetBSD: distinfo,v 1.6 2021/12/30 11:41:38 ryoon Exp $
 
-BLAKE2s (yt-dlp-2021.12.1.tar.gz) = fc6e956d8a2f1578d9f0f7af736b8a53119d3dd4bc23ef075a7c6516dec5fce7
-SHA512 (yt-dlp-2021.12.1.tar.gz) = d04e9e5ae36e73923ac79bb98af6e402ba0b4403430cbcc0517e7f446d42b6c637846b11489c0159faf667ab798b937abb9597fb5fba76b6f7b6e2b379bae328
-Size (yt-dlp-2021.12.1.tar.gz) = 2064958 bytes
+BLAKE2s (yt-dlp-2021.12.27.tar.gz) = 79c1dc302ea992a57176d12755c90cd0698e2c61d51febdba76fc98c46c249a5
+SHA512 (yt-dlp-2021.12.27.tar.gz) = 2c687493736fabe131481d6bf8df13afc1959ac1458675bfe3c4273df7bb64218f84e07ea324b664b0a52c3e39b3e10999e81bc907bfc98a71a28c92dca90737
+Size (yt-dlp-2021.12.27.tar.gz) = 2102852 bytes
 SHA1 (patch-setup.py) = 7f3394a2b9737424e4c47c0f31488a8b2fef0bcb
 SHA1 (patch-yt__dlp_postprocessor_ffmpeg.py) = 11ebc3adf3bfbc76853f74d1abb865b7749c3b34
