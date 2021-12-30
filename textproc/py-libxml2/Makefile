@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.70 2021/12/08 16:06:45 adam Exp $
+# $NetBSD: Makefile,v 1.71 2021/12/30 21:32:38 wiz Exp $
 
 .include "../../textproc/libxml2/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 
 COMMENT=	Python wrapper for libxml2
 LICENSE=	modified-bsd
@@ -36,7 +36,7 @@ EGG_NAME=	${DISTNAME:S/-/_python-/}
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=${PKGVERSION_NOREV}
 .include "../../textproc/libxml2/buildlink3.mk"
