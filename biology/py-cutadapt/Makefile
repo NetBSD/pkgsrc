@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/04/22 08:36:59 nia Exp $
+# $NetBSD: Makefile,v 1.6 2021/12/30 13:05:27 adam Exp $
 
 DISTNAME=	cutadapt-3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_sc
 DEPENDS+=	${PYPKGPREFIX}-dnaio>=0.5.0:../../biology/py-dnaio
 DEPENDS+=	${PYPKGPREFIX}-xopen>=1.0.0:../../devel/py-xopen
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36 # py-xopen, dataclasses
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-xopen, dataclasses
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

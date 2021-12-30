@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/11/23 09:04:01 adam Exp $
+# $NetBSD: Makefile,v 1.8 2021/12/30 13:05:29 adam Exp $
 
 DISTNAME=	anyio-3.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,7 +22,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-trustme-[0-9]*:../../security/py-trustme
 #TEST_DEPEDS+=	${PYPKGPREFIX}-trio
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36 # py-uvloop
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-uvloop
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} < 38

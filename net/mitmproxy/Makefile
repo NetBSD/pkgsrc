@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2021/09/16 11:52:19 leot Exp $
+# $NetBSD: Makefile,v 1.37 2021/12/30 13:05:40 adam Exp $
 
 DISTNAME=	mitmproxy-7.0.3
 CATEGORIES=	net
@@ -48,7 +48,7 @@ REPLACE_SH+=	mitmproxy/contrib/kaitaistruct/make.sh
 USE_LANGUAGES=			# none
 
 # Only for Python >=3.8
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36 37
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"

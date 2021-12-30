@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2021/12/24 22:28:28 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2021/12/30 13:05:29 adam Exp $
 
 BOOST_PACKAGE=		python
 BOOST_COMMENT=		(Boost.Python binary library)
@@ -14,8 +14,6 @@ PKGREVISION=		2
 BJAM_ARGS+=		--user-config=${WRKSRC}/user-config.jam
 BJAM_ARGS+=		--with-python
 MAKE_ENV+=		BOOST_BUILD_PATH=${WRKSRC}
-
-PYTHON_VERSIONS_INCOMPATIBLE=	36 # py-numpy
 
 .include "../../devel/boost-jam/bjam.mk"
 .include "../../lang/python/pyversion.mk"
