@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.105 2021/11/28 20:48:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.106 2021/12/30 20:31:51 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -473,6 +473,7 @@ share/doc/sqlite3/imposter.html
 share/doc/sqlite3/index.html
 share/doc/sqlite3/inmemorydb.html
 share/doc/sqlite3/intern-v-extern-blob.html
+share/doc/sqlite3/invalidutf.html
 share/doc/sqlite3/isolation.html
 share/doc/sqlite3/json1.html
 share/doc/sqlite3/keyword_index.html
@@ -634,6 +635,7 @@ share/doc/sqlite3/releaselog/3_35_4.html
 share/doc/sqlite3/releaselog/3_35_5.html
 share/doc/sqlite3/releaselog/3_36_0.html
 share/doc/sqlite3/releaselog/3_37_0.html
+share/doc/sqlite3/releaselog/3_37_1.html
 share/doc/sqlite3/releaselog/3_3_0.html
 share/doc/sqlite3/releaselog/3_3_1.html
 share/doc/sqlite3/releaselog/3_3_10.html
