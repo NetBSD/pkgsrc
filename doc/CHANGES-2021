@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6451 2021/12/30 19:35:08 fcambus Exp $
+$NetBSD: CHANGES-2021,v 1.6452 2021/12/30 19:43:22 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9622,3 +9622,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated textproc/py-pygments to 2.11.0 [adam 2021-12-30]
 	Updated net/py-lexicon to 3.8.5 [adam 2021-12-30]
 	Updated devel/byacc to 20211224 [fcambus 2021-12-30]
+	Updated audio/libopenmpt to 0.6.0 [fcambus 2021-12-30]
