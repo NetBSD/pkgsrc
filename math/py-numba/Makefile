@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2021/06/29 08:42:01 nia Exp $
+# $NetBSD: Makefile,v 1.25 2021/12/30 13:05:37 adam Exp $
 
 DISTNAME=	numba-0.51.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 USE_LANGUAGES=	c c++
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-PYTHON_VERSIONS_INCOMPATIBLE+=	36	# py-numpy
 
 post-install:
 .for cmd in numba pycc

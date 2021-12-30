@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2021/11/30 17:00:44 adam Exp $
+# $NetBSD: Makefile,v 1.53 2021/12/30 13:05:39 adam Exp $
 
 DISTNAME=	scipy-1.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -32,7 +32,7 @@ FFLAGS+=	-fPIC
 
 LDFLAGS.Darwin+=	-headerpad_max_install_names
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=	scipy/sparse/linalg/isolve/tests/test_gcrotmk.py
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2021/02/05 07:51:22 adam Exp $
+# $NetBSD: Makefile,v 1.15 2021/12/30 13:05:29 adam Exp $
 
 DISTNAME=	tortoise-orm-0.16.21
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.14.0:../../devel/py-uvloop
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
