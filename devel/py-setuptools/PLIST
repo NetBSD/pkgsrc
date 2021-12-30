@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.58 2021/11/23 10:32:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.59 2021/12/30 16:20:11 wiz Exp $
 ${PYSITELIB}/_distutils_hack/__init__.py
 ${PYSITELIB}/_distutils_hack/__init__.pyc
 ${PYSITELIB}/_distutils_hack/__init__.pyo
@@ -402,6 +402,9 @@ ${PYSITELIB}/setuptools/installer.pyo
 ${PYSITELIB}/setuptools/launch.py
 ${PYSITELIB}/setuptools/launch.pyc
 ${PYSITELIB}/setuptools/launch.pyo
+${PYSITELIB}/setuptools/logging.py
+${PYSITELIB}/setuptools/logging.pyc
+${PYSITELIB}/setuptools/logging.pyo
 ${PYSITELIB}/setuptools/monkey.py
 ${PYSITELIB}/setuptools/monkey.pyc
 ${PYSITELIB}/setuptools/monkey.pyo
