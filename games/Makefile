@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.509 2021/12/29 23:56:01 nia Exp $
+# $NetBSD: Makefile,v 1.510 2021/12/30 00:26:20 nia Exp $
 #
 
 COMMENT=	Games
 
 SUBDIR+=	0verkill
 SUBDIR+=	2048-cli
+SUBDIR+=	3dpong
 SUBDIR+=	4stAttack
 SUBDIR+=	7kaa
 SUBDIR+=	7kaa-music
