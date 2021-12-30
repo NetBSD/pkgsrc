@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21385 2021/12/30 10:06:40 prlw1 Exp $
+$NetBSD: TODO,v 1.21386 2021/12/30 11:18:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1163,7 +1163,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mailutis-2.2 [wip]
 	o maketool-0.8.4
 	o makeztxt-1.60
-	o mame-0.239
 	o man-pages-5.11
 	o manedit-1.2.1
 	o mantis-2.22.1

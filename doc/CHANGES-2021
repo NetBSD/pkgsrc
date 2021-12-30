@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6438 2021/12/30 10:06:40 prlw1 Exp $
+$NetBSD: CHANGES-2021,v 1.6439 2021/12/30 11:18:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9604,3 +9604,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added games/xtacy version 1.14 [nia 2021-12-30]
 	Updated security/wolfssl to 5.1.0 [fox 2021-12-30]
 	Updated mail/imapsync to 2.140 [prlw1 2021-12-30]
+	Updated emulators/mame to 0.239 [wiz 2021-12-30]
