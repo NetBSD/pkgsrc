@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6456 2021/12/30 20:42:12 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6457 2021/12/30 21:32:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9632,3 +9632,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/lemon to 1.0.3.37.1 [adam 2021-12-30]
 	Updated textproc/py-xmlschema to 1.9.2 [adam 2021-12-30]
 	Updated finance/py-stripe to 2.64.0 [adam 2021-12-30]
+	Updated textproc/py-libxml2 to 2.9.12nb3 [wiz 2021-12-30]
