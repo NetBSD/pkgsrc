@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2021/12/13 16:19:09 adam Exp $
+# $NetBSD: Makefile,v 1.196 2021/12/30 15:19:02 wiz Exp $
 
 DISTNAME=	setuptools-59.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,14 +24,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 PYSETUPTESTTARGET=	pytest
-
-# This setting, which will soon be default-on again, breaks on NetBSD
-# https://github.com/pypa/setuptools/issues/2364
-# files/_distutils_system_mod needs to be installed into
-# ${PREFIX}/lib/python3.9/site-packages/_distutils_system_mod.py
-# (NOT ${DESTDIR}${PREFIX}) before building this package
-# https://github.com/pypa/distutils/issues/16
-#MAKE_ENV+=	SETUPTOOLS_USE_DISTUTILS=local
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
