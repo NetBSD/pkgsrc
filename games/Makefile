@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.510 2021/12/30 00:26:20 nia Exp $
+# $NetBSD: Makefile,v 1.511 2021/12/30 00:43:35 nia Exp $
 #
 
 COMMENT=	Games
@@ -470,6 +470,7 @@ SUBDIR+=	xscrabble
 SUBDIR+=	xskat
 SUBDIR+=	xsokoban
 SUBDIR+=	xsoldier
+SUBDIR+=	xtacy
 SUBDIR+=	xtris
 SUBDIR+=	xtux
 SUBDIR+=	xu4
