@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6449 2021/12/30 16:20:20 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6450 2021/12/30 17:24:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9619,3 +9619,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/nss to 3.73.1 [ryoon 2021-12-30]
 	Updated www/php-nextcloud to 23.0.0 [ryoon 2021-12-30]
 	Updated devel/py-setuptools to 60.2.0 [wiz 2021-12-30]
+	Updated textproc/py-pygments to 2.11.0 [adam 2021-12-30]
+	Updated net/py-lexicon to 3.8.5 [adam 2021-12-30]
