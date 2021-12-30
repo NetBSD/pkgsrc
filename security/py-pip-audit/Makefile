@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/12/12 10:04:44 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2021/12/30 12:12:53 adam Exp $
 
 DISTNAME=	pip-audit-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,12 +26,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${_PYTHON_VERSION} == 36
-DEPENDS+=	${PYPKGPREFIX}-dataclasses>=0.6:../../devel/py-dataclasses
-.endif
 
 USE_LANGUAGES=	# none
 
