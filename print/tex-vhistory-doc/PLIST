@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2020/11/18 12:24:30 kleink Exp $
-share/texmf-dist/doc/latex/vhistory/CHANGES
-share/texmf-dist/doc/latex/vhistory/README
+@comment $NetBSD: PLIST,v 1.2 2021/12/30 15:09:20 kleink Exp $
+share/texmf-dist/doc/latex/vhistory/CHANGES.md
 share/texmf-dist/doc/latex/vhistory/README.doc
+share/texmf-dist/doc/latex/vhistory/README.md
 share/texmf-dist/doc/latex/vhistory/de_beispiel.tex
 share/texmf-dist/doc/latex/vhistory/de_einleitung.tex
 share/texmf-dist/doc/latex/vhistory/de_sets.tex
