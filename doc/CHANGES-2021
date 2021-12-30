@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6439 2021/12/30 11:18:43 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6440 2021/12/30 11:42:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9605,3 +9605,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated security/wolfssl to 5.1.0 [fox 2021-12-30]
 	Updated mail/imapsync to 2.140 [prlw1 2021-12-30]
 	Updated emulators/mame to 0.239 [wiz 2021-12-30]
+	Updated net/yt-dlp to 2021.12.27 [ryoon 2021-12-30]
