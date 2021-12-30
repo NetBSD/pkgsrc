@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6446 2021/12/30 15:18:21 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6447 2021/12/30 15:50:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9616,3 +9616,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated lang/python38 to 3.8.12nb2 [wiz 2021-12-30]
 	Updated lang/python37 to 3.7.12nb2 [wiz 2021-12-30]
 	Updated lang/python310 to 3.10.1nb3 [wiz 2021-12-30]
+	Updated devel/nss to 3.73.1 [ryoon 2021-12-30]
