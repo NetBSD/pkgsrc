@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/10/01 14:25:32 nia Exp $
+# $NetBSD: Makefile,v 1.4 2021/12/30 13:05:39 adam Exp $
 
 DISTNAME=	tensorboard-${GITHUB_TAG:S/-//}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,9 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-werkzeug>=0.11.10:../../www/py-werkzeug
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE+=	27 36	# py-protobuf, py-numpy
-
-.include "../../lang/python/egg.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-protobuf, py-numpy
 
 post-extract:
 .for f in MANIFEST.in setup.cfg setup.py
@@ -34,4 +32,5 @@ post-extract:
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} tensorboard tensorboard${PYVERSSUFFIX}
 
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

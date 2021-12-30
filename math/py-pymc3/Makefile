@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/04/09 14:41:35 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2021/12/30 13:05:38 adam Exp $
 
 DISTNAME=	pymc3-3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-patsy>=0.4.0:../../math/py-patsy
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.18.1:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-tqdm>=4.8.4:../../misc/py-tqdm
 
-PYTHON_VERSIONS_INCOMPATIBLE=	36 27	# py-matplotlib, py-scipy
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-matplotlib, py-scipy
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

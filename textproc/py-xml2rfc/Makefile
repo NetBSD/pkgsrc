@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/11/20 23:29:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2021/12/30 13:05:40 adam Exp $
 
 DISTNAME=	xml2rfc-3.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://tools.ietf.org/tools/xml2rfc/trac/
 COMMENT=	IETF RFC 7749 XML-to-RFC conversion too
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36 # py-fonttools via py-weasyprint
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-fonttools via py-weasyprint
 
 DEPENDS+=	${PYPKGPREFIX}-appdirs>=1.4.4:../../devel/py-appdirs
 DEPENDS+=	${PYPKGPREFIX}-configargparse>=1.2.3:../../devel/py-configargparse

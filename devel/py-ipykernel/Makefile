@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2021/09/18 12:16:03 mef Exp $
+# $NetBSD: Makefile,v 1.28 2021/12/30 13:05:30 adam Exp $
 
 DISTNAME=	ipykernel-5.5.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,10 +28,10 @@ DEPENDS+=	${PYPKGPREFIX}-appnope-[0-9]*:../../sysutils/py-appnope
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

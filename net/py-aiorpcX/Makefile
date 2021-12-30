@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/11/23 21:07:18 adam Exp $
+# $NetBSD: Makefile,v 1.5 2021/12/30 13:05:40 adam Exp $
 
 DISTNAME=	aiorpcX-0.22.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-websockets-[0-9]*:../../www/py-websockets
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
