@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2021/12/16 07:43:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2021/12/30 21:19:26 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/mypyc-${PYVERSSUFFIX}
@@ -341,9 +341,6 @@ ${PYSITELIB}/mypy/suggestions.pyo
 ${PYSITELIB}/mypy/test/__init__.py
 ${PYSITELIB}/mypy/test/__init__.pyc
 ${PYSITELIB}/mypy/test/__init__.pyo
-${PYSITELIB}/mypy/test/collect.py
-${PYSITELIB}/mypy/test/collect.pyc
-${PYSITELIB}/mypy/test/collect.pyo
 ${PYSITELIB}/mypy/test/config.py
 ${PYSITELIB}/mypy/test/config.pyc
 ${PYSITELIB}/mypy/test/config.pyo
@@ -1399,12 +1396,21 @@ ${PYSITELIB}/mypyc/README.md
 ${PYSITELIB}/mypyc/__init__.py
 ${PYSITELIB}/mypyc/__init__.pyc
 ${PYSITELIB}/mypyc/__init__.pyo
+${PYSITELIB}/mypyc/__main__.py
+${PYSITELIB}/mypyc/__main__.pyc
+${PYSITELIB}/mypyc/__main__.pyo
 ${PYSITELIB}/mypyc/analysis/__init__.py
 ${PYSITELIB}/mypyc/analysis/__init__.pyc
 ${PYSITELIB}/mypyc/analysis/__init__.pyo
+${PYSITELIB}/mypyc/analysis/blockfreq.py
+${PYSITELIB}/mypyc/analysis/blockfreq.pyc
+${PYSITELIB}/mypyc/analysis/blockfreq.pyo
 ${PYSITELIB}/mypyc/analysis/dataflow.py
 ${PYSITELIB}/mypyc/analysis/dataflow.pyc
 ${PYSITELIB}/mypyc/analysis/dataflow.pyo
+${PYSITELIB}/mypyc/analysis/ircheck.py
+${PYSITELIB}/mypyc/analysis/ircheck.pyc
+${PYSITELIB}/mypyc/analysis/ircheck.pyo
 ${PYSITELIB}/mypyc/build.py
 ${PYSITELIB}/mypyc/build.pyc
 ${PYSITELIB}/mypyc/build.pyo
@@ -1540,6 +1546,9 @@ ${PYSITELIB}/mypyc/irbuild/callable_class.pyo
 ${PYSITELIB}/mypyc/irbuild/classdef.py
 ${PYSITELIB}/mypyc/irbuild/classdef.pyc
 ${PYSITELIB}/mypyc/irbuild/classdef.pyo
+${PYSITELIB}/mypyc/irbuild/constant_fold.py
+${PYSITELIB}/mypyc/irbuild/constant_fold.pyc
+${PYSITELIB}/mypyc/irbuild/constant_fold.pyo
 ${PYSITELIB}/mypyc/irbuild/context.py
 ${PYSITELIB}/mypyc/irbuild/context.pyc
 ${PYSITELIB}/mypyc/irbuild/context.pyo
@@ -1610,6 +1619,7 @@ ${PYSITELIB}/mypyc/lib-rt/list_ops.c
 ${PYSITELIB}/mypyc/lib-rt/misc_ops.c
 ${PYSITELIB}/mypyc/lib-rt/module_shim.tmpl
 ${PYSITELIB}/mypyc/lib-rt/mypyc_util.h
+${PYSITELIB}/mypyc/lib-rt/pythoncapi_compat.h
 ${PYSITELIB}/mypyc/lib-rt/pythonsupport.h
 ${PYSITELIB}/mypyc/lib-rt/set_ops.c
 ${PYSITELIB}/mypyc/lib-rt/setup.py
@@ -1677,6 +1687,7 @@ ${PYSITELIB}/mypyc/test-data/commandline.test
 ${PYSITELIB}/mypyc/test-data/driver/driver.py
 ${PYSITELIB}/mypyc/test-data/driver/driver.pyc
 ${PYSITELIB}/mypyc/test-data/driver/driver.pyo
+${PYSITELIB}/mypyc/test-data/exceptions-freq.test
 ${PYSITELIB}/mypyc/test-data/exceptions.test
 ${PYSITELIB}/mypyc/test-data/fixtures/ir.py
 ${PYSITELIB}/mypyc/test-data/fixtures/ir.pyc
@@ -1689,6 +1700,7 @@ ${PYSITELIB}/mypyc/test-data/irbuild-any.test
 ${PYSITELIB}/mypyc/test-data/irbuild-basic.test
 ${PYSITELIB}/mypyc/test-data/irbuild-bytes.test
 ${PYSITELIB}/mypyc/test-data/irbuild-classes.test
+${PYSITELIB}/mypyc/test-data/irbuild-constant-fold.test
 ${PYSITELIB}/mypyc/test-data/irbuild-dict.test
 ${PYSITELIB}/mypyc/test-data/irbuild-dunders.test
 ${PYSITELIB}/mypyc/test-data/irbuild-generics.test
@@ -1707,6 +1719,7 @@ ${PYSITELIB}/mypyc/test-data/irbuild-tuple.test
 ${PYSITELIB}/mypyc/test-data/irbuild-unreachable.test
 ${PYSITELIB}/mypyc/test-data/irbuild-vectorcall.test
 ${PYSITELIB}/mypyc/test-data/refcount.test
+${PYSITELIB}/mypyc/test-data/run-attrs.test
 ${PYSITELIB}/mypyc/test-data/run-bench.test
 ${PYSITELIB}/mypyc/test-data/run-bools.test
 ${PYSITELIB}/mypyc/test-data/run-bytes.test
@@ -1768,6 +1781,9 @@ ${PYSITELIB}/mypyc/test/test_external.pyo
 ${PYSITELIB}/mypyc/test/test_irbuild.py
 ${PYSITELIB}/mypyc/test/test_irbuild.pyc
 ${PYSITELIB}/mypyc/test/test_irbuild.pyo
+${PYSITELIB}/mypyc/test/test_ircheck.py
+${PYSITELIB}/mypyc/test/test_ircheck.pyc
+${PYSITELIB}/mypyc/test/test_ircheck.pyo
 ${PYSITELIB}/mypyc/test/test_literals.py
 ${PYSITELIB}/mypyc/test/test_literals.pyc
 ${PYSITELIB}/mypyc/test/test_literals.pyo
