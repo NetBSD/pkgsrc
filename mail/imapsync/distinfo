@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:54:03 nia Exp $
+$NetBSD: distinfo,v 1.11 2021/12/30 10:06:21 prlw1 Exp $
 
-BLAKE2s (imapsync-1.607.tgz) = ea3200dfd44c9b93f07f5b31d7724dd991d0744054c2fa568c0fabdd76fc2833
-SHA512 (imapsync-1.607.tgz) = 2630d32683f74ec260d322d2d9f13fb30938c077275cd43cece392b43bbdf8989f8ff6df648d520b785a568bf5d6f45d43761bf4fb94649e210611224ad43841
-Size (imapsync-1.607.tgz) = 973467 bytes
+BLAKE2s (imapsync-2.140.tar.gz) = a9c8a5ef98aa2f9fb7ef4c49ae40166098212ae6eae8e58c0f575e0871eb618e
+SHA512 (imapsync-2.140.tar.gz) = 1bb92ac678847f81c510fbf726f4de28ce8d9b201fc29d1d50a545d17d9f5c182f2952274a75c9bbabef58772bf16d1f18f7dc8a1cc1f6cd4cef983bcdf9cfaa
+Size (imapsync-2.140.tar.gz) = 1805030 bytes
