@@ -1,27 +1,49 @@
-# $NetBSD: Makefile,v 1.24 2021/05/24 19:52:41 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2021/12/30 10:06:21 prlw1 Exp $
 
-DISTNAME=	imapsync-1.607
-PKGREVISION=	7
+DISTNAME=	imapsync-2.140
 CATEGORIES=	mail
-MASTER_SITES=	https://releases.pagure.org/imapsync/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=imapsync/}
+GITHUB_TAG=	refs/tags/${DISTNAME}
 
 MAINTAINER=	abs@NetBSD.org
-HOMEPAGE=	https://pagure.io/imapsync
+HOMEPAGE=	https://github.com/imapsync/imapsync/
 COMMENT=	Incremental recursive IMAP transfer tool
 LICENSE=	public-domain
 
-DEPENDS+=	p5-Data-Uniqid>=0:../../devel/p5-Data-Uniqid
-DEPENDS+=	p5-Date-Manip>=0:../../devel/p5-Date-Manip
-DEPENDS+=	p5-Digest-HMAC>=0:../../security/p5-Digest-HMAC
-DEPENDS+=	p5-IO-Socket-SSL>=0:../../security/p5-IO-Socket-SSL
-DEPENDS+=	p5-IO-Tee-[0-9]*:../../devel/p5-IO-Tee
-DEPENDS+=	p5-Mail-IMAPClient>=3.1.9:../../mail/p5-Mail-IMAPClient
-DEPENDS+=	p5-Term-ReadKey>=0:../../devel/p5-Term-ReadKey
-DEPENDS+=	p5-Unicode-String-[0-9]*:../../converters/p5-Unicode-String
-DEPENDS+=	p5-File-Copy-Recursive>=0:../../sysutils/p5-File-Copy-Recursive
+WRKSRC=		${WRKDIR}/imapsync-${DISTNAME}
+USE_LANGUAGES=	# none
 
-NO_BUILD=	YES
+DEPENDS+=	p5-Crypt-OpenSSL-RSA-[0-9]*:../../security/p5-Crypt-OpenSSL-RSA
+DEPENDS+=	p5-Dist-CheckConflicts-[0-9]*:../../devel/p5-Dist-CheckConflicts
+DEPENDS+=	p5-Encode-IMAPUTF7-[0-9]*:../../textproc/p5-Encode-IMAPUTF7
+DEPENDS+=	p5-File-Copy-Recursive-[0-9]*:../../sysutils/p5-File-Copy-Recursive
+DEPENDS+=	p5-File-Tail-[0-9]*:../../misc/p5-File-Tail
+DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
+DEPENDS+=	p5-IO-Socket-INET6-[0-9]*:../../net/p5-IO-Socket-INET6
+DEPENDS+=	p5-IO-Socket-SSL-[0-9]*:../../security/p5-IO-Socket-SSL
+DEPENDS+=	p5-IO-Tee-[0-9]*:../../devel/p5-IO-Tee
+DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
+DEPENDS+=	p5-Mail-IMAPClient-[0-9]*:../../mail/p5-Mail-IMAPClient
+DEPENDS+=	p5-Module-Implementation-[0-9]*:../../devel/p5-Module-Implementation
+DEPENDS+=	p5-Module-ScanDeps-[0-9]*:../../devel/p5-Module-ScanDeps
+DEPENDS+=	p5-Package-Stash-[0-9]*:../../devel/p5-Package-Stash
+DEPENDS+=	p5-Package-Stash-XS-[0-9]*:../../devel/p5-Package-Stash-XS
+DEPENDS+=	p5-PAR-Packer-[0-9]*:../../devel/p5-PAR-Packer
+DEPENDS+=	p5-Regexp-Common-[0-9]*:../../textproc/p5-Regexp-Common
+DEPENDS+=	p5-Sys-MemInfo-[0-9]*:../../sysutils/p5-Sys-MemInfo
+DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
+DEPENDS+=	p5-Test-Mock-Guard-[0-9]*:../../devel/p5-Test-Mock-Guard
+DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+DEPENDS+=	p5-File-Tail-[0-9]*:../../misc/p5-File-Tail
+DEPENDS+=	p5-Unicode-String-[0-9]*:../../converters/p5-Unicode-String
+DEPENDS+=	p5-Readonly-[0-9]*:../../devel/p5-Readonly
+DEPENDS+=	p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
+DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
+DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
+DEPENDS+=	p5-Sub-Uplevel-[0-9]*:../../devel/p5-Sub-Uplevel
+
+NO_BUILD=	yes
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	imapsync
 
