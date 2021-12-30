@@ -1,0 +1,15 @@
+$NetBSD: patch-Imakefile,v 1.1 2021/12/30 00:43:35 nia Exp $
+
+Honor CFLAGS.
+
+--- Imakefile.orig	1998-12-15 17:54:32.000000000 +0000
++++ Imakefile
+@@ -13,8 +13,5 @@ OBJS=bezier.o blob.o color.o cursor.o fi
+ 	starback.o swarm.o tag.o trippy.o waves.o xguts.o mirrors.o \
+ 	fractals.o modes.o
+ 
+-CDEBUGFLAGS = -O3 -Wall -g
+-CFLAGS = -O3 
+-
+ ComplexProgramTarget(xtacy)
+ 
