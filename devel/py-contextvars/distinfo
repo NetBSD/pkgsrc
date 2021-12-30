@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:18:20 nia Exp $
-
-BLAKE2s (contextvars-2.4.tar.gz) = 0e9e4fbec572fff1ceb890bc968e152b146ab1708b5b64343eafceea74ec4eac
-SHA512 (contextvars-2.4.tar.gz) = 529e3f3bdb2e02aa9205321c212fd82a1fcf3d5ec4325666c8b02c97d0e18f91706e01e0d7c8319db91324406e06731f226cf0fc09666c9ccdbe2db682187c78
-Size (contextvars-2.4.tar.gz) = 9570 bytes

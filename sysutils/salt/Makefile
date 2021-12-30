@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2021/11/14 20:01:17 adam Exp $
+# $NetBSD: Makefile,v 1.75 2021/12/30 12:08:50 adam Exp $
 
 DISTNAME=	salt-3004
 CATEGORIES=	sysutils
@@ -20,11 +20,6 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-zmq>=19.0.2:../../net/py-zmq
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 36
-DEPENDS+=	${PYPKGPREFIX}-contextvars-[0-9]*:../../devel/py-contextvars
-.endif
 
 BUILD_DEFS+=	VARBASE
 
