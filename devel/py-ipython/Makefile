@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2021/12/10 09:06:13 adam Exp $
+# $NetBSD: Makefile,v 1.68 2021/12/30 13:05:30 adam Exp $
 
 DISTNAME=	ipython-7.30.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,7 +28,7 @@ DEPENDS+=	${PYPKGPREFIX}-appnope-[0-9]*:../../sysutils/py-appnope
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX} && \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/11/17 17:25:03 adam Exp $
+# $NetBSD: Makefile,v 1.10 2021/12/30 13:05:34 adam Exp $
 
 DISTNAME=	tifffile-2021.11.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 .for bin in lsm2bin tiff2fsspec tiffcomment tifffile

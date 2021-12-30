@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/06/10 19:02:25 adam Exp $
+# $NetBSD: Makefile,v 1.5 2021/12/30 13:05:41 adam Exp $
 
 DISTNAME=	ipywidgets-7.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36	# py-ipykernel
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-ipykernel
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}

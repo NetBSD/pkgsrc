@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2021/09/14 19:19:35 js Exp $
+# $NetBSD: Makefile,v 1.13 2021/12/30 13:05:28 adam Exp $
 
 DISTNAME=	mautrix-python-0.10.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
@@ -13,7 +13,7 @@ HOMEPAGE=	https://github.com/tulir/mautrix-python
 COMMENT=	Python 3 asyncio Matrix framework
 LICENSE=	mpl-2.0
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 36
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3<4:../../www/py-aiohttp

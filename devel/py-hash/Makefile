@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/06/29 08:41:59 nia Exp $
+# $NetBSD: Makefile,v 1.10 2021/12/30 13:05:30 adam Exp $
 
 DISTNAME=	pyfasthash-0.6.2
 PKGNAME=	${DISTNAME:S/pyfast/${PYPKGPREFIX}-/}
@@ -24,8 +24,6 @@ CPPFLAGS+=	-DHASH_LITTLE_ENDIAN=1 -DHASH_BIG_ENDIAN=0
 .else
 CPPFLAGS+=	-DHASH_LITTLE_ENDIAN=0 -DHASH_BIG_ENDIAN=1
 .endif
-
-PYTHON_VERSIONS_INCOMPATIBLE=	36 # py-numpy
 
 .include "../../devel/py-boost/buildlink3.mk"
 .include "../../lang/python/egg.mk"
