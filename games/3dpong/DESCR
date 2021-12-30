@@ -1,0 +1,6 @@
+3D Pong is a one- or two-player, three dimensional sports game, based on
+the first arcade game ever made, "Pong" from Atari. Each player controls
+their "paddle" with the mouse, and tries to score by bouncing a ball into
+the other player's goal (just behind the paddle).
+
+3D Pong is a vector-based graphics X-Window game for Unix.
