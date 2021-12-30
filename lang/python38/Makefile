@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2021/12/08 16:05:23 adam Exp $
+# $NetBSD: Makefile,v 1.22 2021/12/30 15:12:57 wiz Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "dist.mk"
 
 PKGNAME=	python38-${PY_DISTVERSION}
@@ -181,10 +181,19 @@ post-configure:
 	touch ${WRKSRC}/Include/opcode.h
 
 .if ${OPSYS} == "HPUX"
-post-install:
+post-install: hpux-postinstall
+.PHONY: hpux-postinstall
+hpux-postinstall:
 	${LN} -fs ${DESTDIR}${PREFIX}/lib/libpython3.8.sl \
 		${DESTDIR}${PREFIX}/lib/libpython3.8.sl.1.0
 .endif
+
+post-install: setuptools-postinstall
+.PHONY: setuptools-postinstall
+setuptools-postinstall:
+	${INSTALL_DATA} ${.CURDIR}/../../devel/py-setuptools/files/_distutils_system_mod \
+		${DESTDIR}${PREFIX}/lib/python${PY_VER_SUFFIX}/site-packages/_distutils_system_mod.py
+
 
 # needed to make devel/py-readline pick up the correct readline implementation
 BUILDLINK_DEPMETHOD.readline=		build
