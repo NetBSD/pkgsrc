@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6436 2021/12/30 00:43:49 nia Exp $
+$NetBSD: CHANGES-2021,v 1.6437 2021/12/30 01:19:49 fox Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9602,3 +9602,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Added games/xchomp version pl1 [nia 2021-12-29]
 	Added games/3dpong version 0.5 [nia 2021-12-30]
 	Added games/xtacy version 1.14 [nia 2021-12-30]
+	Updated security/wolfssl to 5.1.0 [fox 2021-12-30]
