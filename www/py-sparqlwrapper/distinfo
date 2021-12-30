@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/12/06 14:14:35 wiz Exp $
+$NetBSD: distinfo,v 1.9 2021/12/30 13:36:26 adam Exp $
 
 BLAKE2s (SPARQLWrapper-1.8.5.tar.gz) = 0da51c5a997da20da0b3b0ba7ec02667eca4135dfd8ab4cfd9c00d079bd98e91
 SHA512 (SPARQLWrapper-1.8.5.tar.gz) = b0cbe9f7f13a8a0a1c88a17b5966b46e7811acada2712ee03be97808dcb17ba4a71990c07df5d213d21815d7deaf3526381a2cc864d839e561e242be797b6bb2
 Size (SPARQLWrapper-1.8.5.tar.gz) = 89117 bytes
-SHA1 (patch-setup.py) = 72fbace7f2d276b274557d74aaef71e2e34ea487
+SHA1 (patch-setup.py) = cdd796f6e8d619fb7199ee25cef80d99b3315daf
