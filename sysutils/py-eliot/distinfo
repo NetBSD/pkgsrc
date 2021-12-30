@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:20:03 nia Exp $
+$NetBSD: distinfo,v 1.6 2021/12/30 13:38:24 adam Exp $
 
 BLAKE2s (eliot-1.13.0.tar.gz) = d9a8d41e71dd5e51a020d2c3f35f09749bc9579b5d506ccbf164e4148925eb37
 SHA512 (eliot-1.13.0.tar.gz) = 95bf72c8cf64cb3dceb1665c244d866759bc0266aed478ba8a28a08f9001a91f7aa6497789c3a58e1416ac6e9c0b0dfc98f4e85f730769473a38a38baba0c473
 Size (eliot-1.13.0.tar.gz) = 153154 bytes
-SHA1 (patch-setup.py) = add6f58e048879446cdae5518f5bc03ee4c82af1
