@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2021/11/09 10:12:36 adam Exp $
+# $NetBSD: Makefile,v 1.31 2021/12/30 13:43:39 adam Exp $
 
 DISTNAME=	bpython-0.22.1
 CATEGORIES=	devel python
@@ -27,9 +27,6 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} < 37
-DEPENDS+=	${PYPKGPREFIX}-dataclasses-[0-9]*:../../devel/py-dataclasses
-.endif
 .if ${_PYTHON_VERSION} < 38
 DEPENDS+=	${PYPKGPREFIX}-backports.cached-property-[0-9]*:../../devel/py-backports.cached-property
 .endif
