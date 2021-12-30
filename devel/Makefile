@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3534 2021/12/30 12:05:59 adam Exp $
+# $NetBSD: Makefile,v 1.3535 2021/12/30 12:08:50 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2246,7 +2246,6 @@ SUBDIR+=	py-constantly
 SUBDIR+=	py-constants
 SUBDIR+=	py-construct
 SUBDIR+=	py-contextlib2
-SUBDIR+=	py-contextvars
 SUBDIR+=	py-cookiecutter
 SUBDIR+=	py-cooldict
 SUBDIR+=	py-coverage
