@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.SunOS,v 1.3 2018/06/17 19:31:50 adam Exp $
-lib/python${PY_VER_SUFFIX}/lib-dynload/spwd.so
