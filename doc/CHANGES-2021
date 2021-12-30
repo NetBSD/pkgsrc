@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6443 2021/12/30 15:13:08 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6444 2021/12/30 15:13:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9613,3 +9613,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Removed devel/py-dataclasses [adam 2021-12-30]
 	Removed www/py-idna_ssl [adam 2021-12-30]
 	Updated lang/python39 to 3.9.9nb2 [wiz 2021-12-30]
+	Updated lang/python38 to 3.8.12nb2 [wiz 2021-12-30]
