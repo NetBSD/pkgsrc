@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2021/12/29 23:26:02 gutteridge Exp $
+# $NetBSD: Makefile,v 1.73 2021/12/30 09:05:45 wiz Exp $
 
 DISTNAME=	bulk-medium-20211229
 CATEGORIES=	meta-pkgs
@@ -76,6 +76,7 @@ BUILD_DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 BUILD_DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 BUILD_DEPENDS+=	gawk-[0-9]*:../../lang/gawk
 BUILD_DEPENDS+=	php>=7.4<7.5:../../lang/php74
+BUILD_DEPENDS+=	php>=8.0<8.1:../../lang/php80
 BUILD_DEPENDS+=	ruby26-base-[0-9]*:../../lang/ruby26-base
 BUILD_DEPENDS+=	ruby27-base-[0-9]*:../../lang/ruby27-base
 BUILD_DEPENDS+=	ruby30-base-[0-9]*:../../lang/ruby30-base
