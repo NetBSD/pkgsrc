@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2021/09/15 08:20:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.37 2021/12/30 17:24:12 adam Exp $
 bin/lexicon-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -237,6 +237,9 @@ ${PYSITELIB}/lexicon/providers/transip.pyo
 ${PYSITELIB}/lexicon/providers/ultradns.py
 ${PYSITELIB}/lexicon/providers/ultradns.pyc
 ${PYSITELIB}/lexicon/providers/ultradns.pyo
+${PYSITELIB}/lexicon/providers/valuedomain.py
+${PYSITELIB}/lexicon/providers/valuedomain.pyc
+${PYSITELIB}/lexicon/providers/valuedomain.pyo
 ${PYSITELIB}/lexicon/providers/vercel.py
 ${PYSITELIB}/lexicon/providers/vercel.pyc
 ${PYSITELIB}/lexicon/providers/vercel.pyo
@@ -465,6 +468,9 @@ ${PYSITELIB}/lexicon/tests/providers/test_transip.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_ultradns.py
 ${PYSITELIB}/lexicon/tests/providers/test_ultradns.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_ultradns.pyo
+${PYSITELIB}/lexicon/tests/providers/test_valuedomain.py
+${PYSITELIB}/lexicon/tests/providers/test_valuedomain.pyc
+${PYSITELIB}/lexicon/tests/providers/test_valuedomain.pyo
 ${PYSITELIB}/lexicon/tests/providers/test_vercel.py
 ${PYSITELIB}/lexicon/tests/providers/test_vercel.pyc
 ${PYSITELIB}/lexicon/tests/providers/test_vercel.pyo
