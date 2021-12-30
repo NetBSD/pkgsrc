@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2021/12/08 16:06:27 adam Exp $
+# $NetBSD: Makefile,v 1.27 2021/12/30 13:24:01 adam Exp $
 
 DISTNAME=	dbus-python-1.2.18
 PKGNAME=	${DISTNAME:S/python/python-common/}
@@ -16,7 +16,6 @@ CONFLICTS+=	py[0-9]*-dbus<1.1.1
 PYTHON_FOR_BUILD_ONLY=		yes
 #BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0:../../textproc/py-docutils
 #DEPENDS+=			${PYPKGPREFIX}-pyrex>=0.9.3:../../lang/py-pyrex
-#PYTHON_VERSIONS_INCOMPATIBLE=	36 # py-pyrex
 
 USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE=		yes

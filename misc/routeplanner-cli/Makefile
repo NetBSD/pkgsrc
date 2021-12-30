@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2020/12/04 20:45:31 nia Exp $
-#
+# $NetBSD: Makefile,v 1.28 2021/12/30 13:24:01 adam Exp $
 
 DISTNAME=		routeplanner_0.11
 PKGNAME=		routeplanner-cli-0.11
@@ -41,7 +40,6 @@ do-install:
 	done
 
 # optional speedup
-#PYTHON_VERSIONS_INCOMPATIBLE=	36 # py-kjbuckets
 #.include "../../devel/py-kjbuckets/buildlink3.mk"
 #.include "../../devel/py-pqueue/buildlink3.mk"
 
