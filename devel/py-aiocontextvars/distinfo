@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:18:08 nia Exp $
-
-BLAKE2s (aiocontextvars-0.2.2.tar.gz) = 0cd2ac6e4fee181cc77393156930b98b2c003f3e174809eeeb12d875fb795dba
-SHA512 (aiocontextvars-0.2.2.tar.gz) = 54a9cb7a6327d56c7a784a0a09648c8209715595be9eaa6fb81ad35df7db02a5bfd16f8c674063cbd123b87131a4e80006eae71db8e7127c1b725e25b16e3efd
-Size (aiocontextvars-0.2.2.tar.gz) = 13565 bytes
