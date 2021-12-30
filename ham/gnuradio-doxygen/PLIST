@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2021/12/11 14:57:50 tnn Exp $
+@comment $NetBSD: PLIST,v 1.26 2021/12/30 07:22:38 mef Exp $
 share/doc/gnuradio-${PKGVERSION}/html/ConstellationDisplayPlot_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/ConstellationDisplayPlot_8h__dep__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/ConstellationDisplayPlot_8h__dep__incl.md5
@@ -4231,9 +4231,6 @@ share/doc/gnuradio-${PKGVERSION}/html/dir_000203.html
 share/doc/gnuradio-${PKGVERSION}/html/dir_000204.html
 share/doc/gnuradio-${PKGVERSION}/html/dir_000205.html
 share/doc/gnuradio-${PKGVERSION}/html/dir_000206.html
-share/doc/gnuradio-${PKGVERSION}/html/dir_000207.html
-share/doc/gnuradio-${PKGVERSION}/html/dir_000208.html
-share/doc/gnuradio-${PKGVERSION}/html/dir_000209.html
 share/doc/gnuradio-${PKGVERSION}/html/display__qt_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/display__qt_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/display__qt_8h__incl.md5
@@ -7864,6 +7861,7 @@ share/doc/gnuradio-${PKGVERSION}/html/namespacerpcpmtconverter.html
 share/doc/gnuradio-${PKGVERSION}/html/namespacerpcpmtconverter.js
 share/doc/gnuradio-${PKGVERSION}/html/namespaces.html
 share/doc/gnuradio-${PKGVERSION}/html/namespaces_dup.js
+share/doc/gnuradio-${PKGVERSION}/html/namespacestd.html
 share/doc/gnuradio-${PKGVERSION}/html/nav_f.png
 share/doc/gnuradio-${PKGVERSION}/html/nav_g.png
 share/doc/gnuradio-${PKGVERSION}/html/nav_h.png
@@ -7939,7 +7937,18 @@ share/doc/gnuradio-${PKGVERSION}/html/navtreeindex68.js
 share/doc/gnuradio-${PKGVERSION}/html/navtreeindex69.js
 share/doc/gnuradio-${PKGVERSION}/html/navtreeindex7.js
 share/doc/gnuradio-${PKGVERSION}/html/navtreeindex70.js
+share/doc/gnuradio-${PKGVERSION}/html/navtreeindex71.js
+share/doc/gnuradio-${PKGVERSION}/html/navtreeindex72.js
+share/doc/gnuradio-${PKGVERSION}/html/navtreeindex73.js
+share/doc/gnuradio-${PKGVERSION}/html/navtreeindex74.js
+share/doc/gnuradio-${PKGVERSION}/html/navtreeindex75.js
+share/doc/gnuradio-${PKGVERSION}/html/navtreeindex76.js
+share/doc/gnuradio-${PKGVERSION}/html/navtreeindex77.js
+share/doc/gnuradio-${PKGVERSION}/html/navtreeindex78.js
+share/doc/gnuradio-${PKGVERSION}/html/navtreeindex79.js
 share/doc/gnuradio-${PKGVERSION}/html/navtreeindex8.js
+share/doc/gnuradio-${PKGVERSION}/html/navtreeindex80.js
+share/doc/gnuradio-${PKGVERSION}/html/navtreeindex81.js
 share/doc/gnuradio-${PKGVERSION}/html/navtreeindex9.js
 share/doc/gnuradio-${PKGVERSION}/html/nco_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/nco_8h__incl.map
@@ -9945,6 +9954,8 @@ share/doc/gnuradio-${PKGVERSION}/html/search/namespaces_2.html
 share/doc/gnuradio-${PKGVERSION}/html/search/namespaces_2.js
 share/doc/gnuradio-${PKGVERSION}/html/search/namespaces_3.html
 share/doc/gnuradio-${PKGVERSION}/html/search/namespaces_3.js
+share/doc/gnuradio-${PKGVERSION}/html/search/namespaces_4.html
+share/doc/gnuradio-${PKGVERSION}/html/search/namespaces_4.js
 share/doc/gnuradio-${PKGVERSION}/html/search/nomatches.html
 share/doc/gnuradio-${PKGVERSION}/html/search/pages_0.html
 share/doc/gnuradio-${PKGVERSION}/html/search/pages_0.js
@@ -9970,6 +9981,10 @@ share/doc/gnuradio-${PKGVERSION}/html/search/pages_a.html
 share/doc/gnuradio-${PKGVERSION}/html/search/pages_a.js
 share/doc/gnuradio-${PKGVERSION}/html/search/pages_b.html
 share/doc/gnuradio-${PKGVERSION}/html/search/pages_b.js
+share/doc/gnuradio-${PKGVERSION}/html/search/pages_c.html
+share/doc/gnuradio-${PKGVERSION}/html/search/pages_c.js
+share/doc/gnuradio-${PKGVERSION}/html/search/pages_d.html
+share/doc/gnuradio-${PKGVERSION}/html/search/pages_d.js
 share/doc/gnuradio-${PKGVERSION}/html/search/properties_0.html
 share/doc/gnuradio-${PKGVERSION}/html/search/properties_0.js
 share/doc/gnuradio-${PKGVERSION}/html/search/properties_1.html
@@ -10253,8 +10268,6 @@ share/doc/gnuradio-${PKGVERSION}/html/sincos__pydoc__template_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/sincos__pydoc__template_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/sincos__pydoc__template_8h__incl.svg
 share/doc/gnuradio-${PKGVERSION}/html/sincos__pydoc__template_8h_source.html
-share/doc/gnuradio-${PKGVERSION}/html/sine__table_8h.html
-share/doc/gnuradio-${PKGVERSION}/html/sine__table_8h_source.html
 share/doc/gnuradio-${PKGVERSION}/html/single__pole__iir_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/single__pole__iir_8h__dep__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/single__pole__iir_8h__dep__incl.md5
@@ -11709,6 +11722,7 @@ share/doc/gnuradio-${PKGVERSION}/html/xoroshiro128p_8h_source.html
 share/doc/gnuradio-${PKGVERSION}/html/zeromq_8dox.html
 share/doc/gnuradio-${PKGVERSION}/xml/ConstellationDisplayPlot_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/DisplayPlot_8h.xml
+share/doc/gnuradio-${PKGVERSION}/xml/Doxyfile.xml
 share/doc/gnuradio-${PKGVERSION}/xml/EyeDisplayPlot_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/FrequencyDisplayPlot_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/HistogramDisplayPlot_8h.xml
@@ -12973,15 +12987,13 @@ share/doc/gnuradio-${PKGVERSION}/xml/dir_000203.xml
 share/doc/gnuradio-${PKGVERSION}/xml/dir_000204.xml
 share/doc/gnuradio-${PKGVERSION}/xml/dir_000205.xml
 share/doc/gnuradio-${PKGVERSION}/xml/dir_000206.xml
-share/doc/gnuradio-${PKGVERSION}/xml/dir_000207.xml
-share/doc/gnuradio-${PKGVERSION}/xml/dir_000208.xml
-share/doc/gnuradio-${PKGVERSION}/xml/dir_000209.xml
 share/doc/gnuradio-${PKGVERSION}/xml/display__qt_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/displayform_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/displayform__pydoc__template_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/divide_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/divide__pydoc__template_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/docs_2doxygen_2pydoc__macros_8h.xml
+share/doc/gnuradio-${PKGVERSION}/xml/doxyfile.xsd
 share/doc/gnuradio-${PKGVERSION}/xml/dpll__bb_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/dpll__bb__pydoc__template_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/dummy__decoder_8h.xml
@@ -13485,10 +13497,13 @@ share/doc/gnuradio-${PKGVERSION}/xml/multiply__matrix__pydoc__template_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/multiply__pydoc__template_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/mute_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/mute__pydoc__template_8h.xml
-share/doc/gnuradio-${PKGVERSION}/xml/namespace_0d0.xml
+share/doc/gnuradio-${PKGVERSION}/xml/namespaceGNURadio.xml
+share/doc/gnuradio-${PKGVERSION}/xml/namespaceUi.xml
+share/doc/gnuradio-${PKGVERSION}/xml/namespace_0d81.xml
 share/doc/gnuradio-${PKGVERSION}/xml/namespaceapache.xml
 share/doc/gnuradio-${PKGVERSION}/xml/namespaceapache_1_1thrift.xml
 share/doc/gnuradio-${PKGVERSION}/xml/namespaceapache_1_1thrift_1_1server.xml
+share/doc/gnuradio-${PKGVERSION}/xml/namespaceboost.xml
 share/doc/gnuradio-${PKGVERSION}/xml/namespacegnuradio.xml
 share/doc/gnuradio-${PKGVERSION}/xml/namespacegnuradio_1_1detail.xml
 share/doc/gnuradio-${PKGVERSION}/xml/namespacegr.xml
@@ -13522,6 +13537,9 @@ share/doc/gnuradio-${PKGVERSION}/xml/namespacegr_1_1zeromq.xml
 share/doc/gnuradio-${PKGVERSION}/xml/namespacepmt.xml
 share/doc/gnuradio-${PKGVERSION}/xml/namespacerpcpmtconverter.xml
 share/doc/gnuradio-${PKGVERSION}/xml/namespacestd.xml
+share/doc/gnuradio-${PKGVERSION}/xml/namespacethrift.xml
+share/doc/gnuradio-${PKGVERSION}/xml/namespacethrift_1_1transport.xml
+share/doc/gnuradio-${PKGVERSION}/xml/namespaceuhd.xml
 share/doc/gnuradio-${PKGVERSION}/xml/nco_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/nco__pydoc__template_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/nlog10__ff_8h.xml
@@ -13844,7 +13862,6 @@ share/doc/gnuradio-${PKGVERSION}/xml/simple__squelch__cc_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/simple__squelch__cc__pydoc__template_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/sincos_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/sincos__pydoc__template_8h.xml
-share/doc/gnuradio-${PKGVERSION}/xml/sine__table_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/single__pole__iir_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/single__pole__iir__filter__cc_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/single__pole__iir__filter__cc__pydoc__template_8h.xml
