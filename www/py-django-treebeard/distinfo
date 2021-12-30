@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 11:30:34 nia Exp $
+$NetBSD: distinfo,v 1.17 2021/12/30 13:37:12 adam Exp $
 
 BLAKE2s (django-treebeard-4.5.1.tar.gz) = e8d511524dbf9ddac25a050d0a5e34ce42758204a7fd7acd65cccaefa7237e6f
 SHA512 (django-treebeard-4.5.1.tar.gz) = 27fa6ad50b25d0f9dd7dacddb36ec7165fa49abb26f17b744df3ba90c681107488f812e617d233dd54f86381f55986bd487687411a15dd90f911bc0cb3d8369e
 Size (django-treebeard-4.5.1.tar.gz) = 784384 bytes
-SHA1 (patch-setup.py) = a1b322c2cce8f180906f6f35d24ea57a31870214
