@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2021/12/30 00:26:20 nia Exp $
+bin/3dpong
+bin/3dpong-handball.sh
+bin/3dpong-vs-computer.sh
+man/man6/3dpong.6
