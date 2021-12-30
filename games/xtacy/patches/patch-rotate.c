@@ -1,4 +1,4 @@
-$NetBSD: patch-rotate.c,v 1.1 2021/12/30 00:43:35 nia Exp $
+$NetBSD: patch-rotate.c,v 1.2 2021/12/30 13:12:24 nia Exp $
 
 Don't cast pointer to int, it no longer even works under Linux/GCC
 because this isn't 1995 and 64-bit platforms exist.
@@ -12,8 +12,8 @@ because this isn't 1995 and 64-bit platforms exist.
 -      int base=(int)&(source->vertices[0]);
 -      int facenum =(int) (source->faces[i]);
 -      int sidenum= (facenum-base)/(sizeof(vertex_type));
-+      intptr_t base=(int)&(source->vertices[0]);
-+      intptr_t facenum =(int) (source->faces[i]);
++      intptr_t base=(intptr_t)&(source->vertices[0]);
++      intptr_t facenum =(intptr_t) (source->faces[i]);
 +      intptr_t sidenum= (facenum-base)/(sizeof(vertex_type));
        temp.faces[i]= &temp.vertices[sidenum];
      }

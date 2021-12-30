@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2021/12/30 00:43:35 nia Exp $
+$NetBSD: distinfo,v 1.2 2021/12/30 13:12:23 nia Exp $
 
 BLAKE2s (xtacy114.tar.gz) = 1cd914aa0e9076938ca5f465bfa12ccfb33040f219f9eebf649b14020efe7c3d
 SHA512 (xtacy114.tar.gz) = 72bcdc51ded08ed876bdb005300e92621893410ea1d8bc30eec40e18a0d0b4c2e3dacb4dffd0f6620181d50016f52b00007250b2dfa93b4c1c7ea216acda356a
@@ -8,4 +8,4 @@ SHA1 (patch-color.c) = 5884916d32486abb8a91b5145bfa80e64051215f
 SHA1 (patch-lunch.c) = f1250a8c240b026c206ac73e26c2a5710f0fd905
 SHA1 (patch-modes.c) = d5fb941456472898074a54c2928f0ae5e867c889
 SHA1 (patch-password.c) = cdbdfc2621a7968c551f6835d8f1ea686da7c8d2
-SHA1 (patch-rotate.c) = 7cd2fa3d4530981c4cec89737a98ab55d2db435c
+SHA1 (patch-rotate.c) = 326c171375bc9afa003340fa5a0e88a54ebbb944
