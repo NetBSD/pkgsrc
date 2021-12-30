@@ -1,4 +1,4 @@
-# $NetBSD: srcdist.mk,v 1.40 2020/01/08 13:44:41 joerg Exp $
+# $NetBSD: srcdist.mk,v 1.41 2021/12/30 21:33:09 tnn Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -20,4 +20,10 @@ python-std-patchsetup:
 		<${FILESDIR}/setup.py >${WRKSRC}/setup.py
 
 post-patch: python-std-patchsetup
+
+python-std-setuptools-cleanup:
+	${RM} -rf ${DESTDIR}/${PREFIX}/${PYLIB}/lib-dynload/UNKNOWN*
+
+post-install: python-std-setuptools-cleanup
+
 .endif
