@@ -1,4 +1,8 @@
-$NetBSD: patch-lib_net__mosq.c,v 1.2 2021/12/31 09:57:36 triaxx Exp $
+$NetBSD: patch-lib_net__mosq.c,v 1.3 2021/12/31 16:02:09 triaxx Exp $
+
+Work around lack of strnlen on older NetBSD.
+
+Not sent upstream becaus POSIX requires strnlen.
 
 --- lib/net_mosq.c.orig	2021-11-17 00:28:35.000000000 +0000
 +++ lib/net_mosq.c
