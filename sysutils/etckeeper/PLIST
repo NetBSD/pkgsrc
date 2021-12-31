@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2020/09/17 08:50:01 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.6 2021/12/31 10:05:45 schmonz Exp $
 bin/etckeeper
 libexec/etckeeper.daily
 man/man8/etckeeper.8
 share/bash-completion.d/etckeeper
 share/doc/etckeeper/README.md
-share/zsh/site-functions/_etckeeper
 share/examples/etckeeper/commit.d/10vcs-test
 share/examples/etckeeper/commit.d/20store-metadata
 share/examples/etckeeper/commit.d/30bzr-add
@@ -43,3 +42,4 @@ share/examples/etckeeper/uninit.d/README
 share/examples/etckeeper/update-ignore.d/01update-ignore
 share/examples/etckeeper/update-ignore.d/README
 share/examples/etckeeper/vcs.d/50vcs-cmd
+share/zsh/site-functions/_etckeeper
