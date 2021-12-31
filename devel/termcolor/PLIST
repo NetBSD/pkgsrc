@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2021/12/31 17:25:25 plunky Exp $
+include/termcolor/termcolor.hpp
+lib/cmake/termcolor/termcolor-config.cmake
+lib/cmake/termcolor/termcolor-targets.cmake
