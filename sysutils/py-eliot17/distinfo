@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:20:03 nia Exp $
-
-BLAKE2s (eliot-1.7.0.tar.gz) = 596b1ad8e381b44ec7d685049979079ee6e10132cb0b4ece7baf92a8826dd601
-SHA512 (eliot-1.7.0.tar.gz) = da86e0c26e0bec13951d037902cdb761c96fdb043528b51e2801f07b9cc304265b20d841cecf82a206e15abacbe4d75e315003333a461a8bebb6c32a55bde07d
-Size (eliot-1.7.0.tar.gz) = 152507 bytes
-SHA1 (patch-setup.py) = ea0fbacf10edf09aeb6a518a37dfb807a541486f
