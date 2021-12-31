@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/12/31 17:23:19 plunky Exp $
+
+BLAKE2s (cxxopts-3.0.0.tar.gz) = ba40d90e78624b8e781c5cbd0a35dc3cdc0530b87113a6fb009aa1e5687b6d7d
+SHA512 (cxxopts-3.0.0.tar.gz) = 239479a3b35ddef6fc380ac9371e1cf7e3aea066f03e1ea538151fa2fff4296838daa976d55e988d8f87f40c0ae027767bcb214754177499413af1081315565c
+Size (cxxopts-3.0.0.tar.gz) = 97020 bytes
