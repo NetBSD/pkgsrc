@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6462 2021/12/31 07:11:36 ryoon Exp $
+$NetBSD: CHANGES-2021,v 1.6463 2021/12/31 07:33:32 tron Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9638,3 +9638,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated meta-pkgs/xfce4 to 4.16.0nb3 [gutteridge 2021-12-31]
 	Updated emulators/nono to 0.2.5 [jun 2021-12-31]
 	Updated devel/py-mercurial to 6.0nb1 [ryoon 2021-12-31]
+	Updated mail/mutt to 2.1.5 [tron 2021-12-31]
