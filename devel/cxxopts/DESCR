@@ -1,0 +1,16 @@
+This is a lightweight C++ option parser library, supporting the
+standard GNU style syntax for options.
+
+Options can be given as:
+
+  --long
+  --long=argument
+  --long argument
+  -a
+  -ab
+  -abc argument
+
+where c takes an argument, but a and b do not.
+
+Additionally, anything after -- will be parsed as a positional
+argument.
