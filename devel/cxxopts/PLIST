@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2021/12/31 17:23:19 plunky Exp $
+include/cxxopts.hpp
+lib/cmake/cxxopts/cxxopts-config-version.cmake
+lib/cmake/cxxopts/cxxopts-config.cmake
+lib/cmake/cxxopts/cxxopts-targets.cmake
+lib/pkgconfig/cxxopts.pc
