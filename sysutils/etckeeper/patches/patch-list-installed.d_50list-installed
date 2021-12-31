@@ -1,10 +1,10 @@
-$NetBSD: patch-list-installed.d_50list-installed,v 1.3 2020/09/17 08:50:01 schmonz Exp $
+$NetBSD: patch-list-installed.d_50list-installed,v 1.4 2021/12/31 10:04:24 schmonz Exp $
 
 Add pkg_install support.
 
 --- list-installed.d/50list-installed.orig	2020-01-22 13:59:54.000000000 +0000
 +++ list-installed.d/50list-installed
-@@ -10,7 +10,9 @@ else
+@@ -10,9 +10,11 @@ else
  	# Output to stdout a *sorted* list of all currently installed 
  	# (or removed but still with config-files) packages, in the
  	# format "package version\n" (or something similar).
@@ -13,5 +13,8 @@ Add pkg_install support.
 +		pkg_info -a -I | awk '{print $1}' | sed -e 's|\(.*\)-|\1 |' | sort
 +	elif [ "$LOWLEVEL_PACKAGE_MANAGER" = dpkg ]; then
  		dpkg-query -W -f '${Status}\t${Package} ${Version} ${Architecture}\n' | \
- 			egrep '(ok installed|ok config-files)' | cut -f2,3
+-			egrep '(ok installed|ok config-files)' | cut -f2,3
++			@EGREP@ '(ok installed|ok config-files)' | cut -f2,3
  	elif [ "$LOWLEVEL_PACKAGE_MANAGER" = rpm ]; then
+ 		rpm -qa --qf "%|epoch?{%{epoch}}:{0}|:%{name}-%{version}-%{release}.%{arch}\n" | sort
+ 	elif [ "$LOWLEVEL_PACKAGE_MANAGER" = pacman ]; then
