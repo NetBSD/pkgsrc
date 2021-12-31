@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.57 2021/09/19 00:11:15 dsainty Exp $
+# $NetBSD: Makefile,v 1.58 2021/12/31 12:07:55 dsainty Exp $
 
 VERSION=	1.29.0
 # Sometimes the distfile unpacks to ZoneMinder and sometimes zoneminder.
 NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
-PKGREVISION=	6
+PKGREVISION=	7
 
 PKGNAME=	${DISTNAME:S/${NAME_DIST}-/${NAME_LOWER}-/}
 DISTNAME=	${NAME_DIST}-${VERSION}
@@ -139,11 +139,12 @@ MAKE_DIRS_PERMS+=	${VARBASE}/run/zm ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 CONFIGURE_ARGS+=	--with-webuser=${APACHE_USER}
 CONFIGURE_ARGS+=	--with-webgroup=${APACHE_GROUP}
 
-# If we're using Apache we're going to need PHP, and PHP MySQL support.
+# If we're using Apache we're going to need PHP, and PHP extensions.
 .include "../../lang/php/phpversion.mk"
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-[0-9]*:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql-[0-9]*:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql-[0-9]*:../../databases/php-pdo_mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-sockets-[0-9]*:../../net/php-sockets
 .endif
 
 # \todo Somehow, this permission setup still fails.
