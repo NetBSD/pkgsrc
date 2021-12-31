@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.66 2021/12/08 16:07:16 adam Exp $
+# $NetBSD: Makefile,v 1.67 2021/12/31 01:25:10 gutteridge Exp $
 
-PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 VERSION=	4.16.2
+PKGREVISION=	2
 DISTNAME=	xfce4-settings-${VERSION}
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/xfce/xfce4-settings/${VERSION:R}/
@@ -53,6 +53,7 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/menus \
 BUILDLINK_API_DEPENDS.xfce4-exo+=	xfce4-exo>=4.16.2
 .include "../../x11/xfce4-exo/buildlink3.mk"
 .include "../../x11/xfce4-garcon/buildlink3.mk"
+.include "../../graphics/adwaita-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
