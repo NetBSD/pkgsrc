@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2021/10/05 12:24:27 dsainty Exp $
+$NetBSD: MESSAGE,v 1.5 2021/12/31 12:07:55 dsainty Exp $
 
 All documentation for ZoneMinder is now online at:
 
@@ -42,10 +42,6 @@ Upgrade a database from an older version of ZoneMinder via:
 To enable the web interface via Apache, add the following line to httpd.conf:
 
   Include ${PREFIX}/share/examples/zoneminder/apache/zoneminder.conf
-
-Also follow the configuration instructions for www/ap-php,
-databases/php-mysql, databases/php-pdo and databases/php-pdo_mysql packages.
-Use pkg_info to read their MESSAGE files.
 
 PHP may log warnings if the PHP date.timezone configuration is not set.
 Consider assigning a default system time zone to date.timezone in
