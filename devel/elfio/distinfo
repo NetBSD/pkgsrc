@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/12/31 17:24:31 plunky Exp $
+
+BLAKE2s (elfio-3.9.tar.gz) = 958e014d1d47ce0514e783bef930cf1f5a4ab37f615782b9c0f9f9fb029a36c1
+SHA512 (elfio-3.9.tar.gz) = e2074266caa328c1984ef8ad81797d8c661e36ab96df56b4cdb66a96b5109b68372cd15e1a216aa275c2dbfa37900c33b23ce90023532da6576ccab67d9440b2
+Size (elfio-3.9.tar.gz) = 557452 bytes
