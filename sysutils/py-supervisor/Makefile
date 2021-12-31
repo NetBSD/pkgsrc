@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2021/02/27 09:59:54 adam Exp $
+# $NetBSD: Makefile,v 1.10 2021/12/31 13:28:23 adam Exp $
 
-DISTNAME=	supervisor-4.2.2
+DISTNAME=	supervisor-4.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/supervisor/}
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://supervisord.org/
 COMMENT=	System for controlling process state under UNIX
 LICENSE=	original-bsd
+
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} == 27
