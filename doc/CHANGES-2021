@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6470 2021/12/31 13:28:44 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6471 2021/12/31 14:18:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9649,3 +9649,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-yapf to 0.32.0 [adam 2021-12-31]
 	Removed sysutils/py-eliot17 [adam 2021-12-31]
 	Updated sysutils/py-supervisor to 4.2.4 [adam 2021-12-31]
+	Updated net/grpc to 1.43.0 [adam 2021-12-31]
+	Updated net/py-grpcio to 1.43.0 [adam 2021-12-31]
+	Updated net/py-grpcio-testing to 1.43.0 [adam 2021-12-31]
+	Updated net/py-grpcio-tools to 1.42.0 [adam 2021-12-31]
