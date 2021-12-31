@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.4 2021/10/08 18:49:34 leot Exp $
+# $NetBSD: go-modules.mk,v 1.5 2021/12/31 16:10:11 leot Exp $
 
 GO_MODULE_FILES+=	bitbucket.org/bertimus9/systemstat/@v/v0.0.0-20180207000608-0eeff89b0690.mod
 GO_MODULE_FILES+=	bitbucket.org/bertimus9/systemstat/@v/v0.0.0-20180207000608-0eeff89b0690.zip
@@ -628,8 +628,8 @@ GO_MODULE_FILES+=	golang.org/x/mobile/@v/v0.0.0-20201217150744-e6ae53a27f4f.mod
 GO_MODULE_FILES+=	golang.org/x/mobile/@v/v0.0.0-20201217150744-e6ae53a27f4f.zip
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.4.2.mod
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.4.2.zip
-GO_MODULE_FILES+=	golang.org/x/net/@v/v0.0.0-20210520170846-37e1c6afe023.mod
-GO_MODULE_FILES+=	golang.org/x/net/@v/v0.0.0-20210520170846-37e1c6afe023.zip
+GO_MODULE_FILES+=	golang.org/x/net/@v/v0.0.0-20211209124913-491a49abca63.mod
+GO_MODULE_FILES+=	golang.org/x/net/@v/v0.0.0-20211209124913-491a49abca63.zip
 GO_MODULE_FILES+=	golang.org/x/oauth2/@v/v0.0.0-20200107190931-bf48bf16ab8d.mod
 GO_MODULE_FILES+=	golang.org/x/oauth2/@v/v0.0.0-20200107190931-bf48bf16ab8d.zip
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.0.0-20210220032951-036812b2e83c.mod
@@ -696,8 +696,8 @@ GO_MODULE_FILES+=	k8s.io/gengo/@v/v0.0.0-20201214224949-b6c5ce23f027.mod
 GO_MODULE_FILES+=	k8s.io/gengo/@v/v0.0.0-20201214224949-b6c5ce23f027.zip
 GO_MODULE_FILES+=	k8s.io/klog/v2/@v/v2.9.0.mod
 GO_MODULE_FILES+=	k8s.io/klog/v2/@v/v2.9.0.zip
-GO_MODULE_FILES+=	k8s.io/kube-openapi/@v/v0.0.0-20210421082810-95288971da7e.mod
-GO_MODULE_FILES+=	k8s.io/kube-openapi/@v/v0.0.0-20210421082810-95288971da7e.zip
+GO_MODULE_FILES+=	k8s.io/kube-openapi/@v/v0.0.0-20211109043538-20434351676c.mod
+GO_MODULE_FILES+=	k8s.io/kube-openapi/@v/v0.0.0-20211109043538-20434351676c.zip
 GO_MODULE_FILES+=	k8s.io/system-validators/@v/v1.5.0.mod
 GO_MODULE_FILES+=	k8s.io/system-validators/@v/v1.5.0.zip
 GO_MODULE_FILES+=	k8s.io/utils/@v/v0.0.0-20210819203725-bdf08cb9a70a.mod
