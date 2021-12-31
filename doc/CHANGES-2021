@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6466 2021/12/31 09:15:32 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6467 2021/12/31 09:58:05 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9643,3 +9643,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated mail/mutt to 2.1.5 [tron 2021-12-31]
 	Updated devel/py-configobj to 5.0.6nb3 [wiz 2021-12-31]
 	Updated devel/meld to 3.21.0nb10 [wiz 2021-12-31]
+	Updated net/mosquitto to 2.0.14 [triaxx 2021-12-31]
