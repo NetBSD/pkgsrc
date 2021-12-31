@@ -1,4 +1,4 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.5 2020/08/19 23:33:39 gdt Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.6 2021/12/31 09:57:36 triaxx Exp $
 
 \todo Explain this change
 
@@ -6,7 +6,7 @@ $NetBSD: patch-src_CMakeLists.txt,v 1.5 2020/08/19 23:33:39 gdt Exp $
 
 --- src/CMakeLists.txt.orig	2020-08-19 13:55:03.000000000 +0000
 +++ src/CMakeLists.txt
-@@ -187,9 +187,9 @@ target_link_libraries(mosquitto ${MOSQ_L
+@@ -213,9 +213,9 @@ target_link_libraries(mosquitto ${MOSQ_L
  if (UNIX)
  	if (APPLE)
  		set_target_properties(mosquitto PROPERTIES LINK_FLAGS "-Wl,-exported_symbols_list -Wl,${mosquitto_SOURCE_DIR}/src/linker-macosx.syms")
