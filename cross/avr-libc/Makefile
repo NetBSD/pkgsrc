@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2021/09/08 12:20:35 micha Exp $
+# $NetBSD: Makefile,v 1.59 2021/12/31 06:18:03 mef Exp $
 
 DISTNAME=		avr-libc-2.0.0
 PKGREVISION=		6
@@ -10,6 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://savannah.nongnu.org/projects/avr-libc
 COMMENT=		C and math library for Atmel AVR 8-bit microcontrollers
 LICENSE=		modified-bsd
+
+BUILD_DEPENDS+=		tex-alphalph-[0-9]*:../../print/tex-alphalph
 
 USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes
