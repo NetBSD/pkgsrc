@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2021/05/24 19:54:11 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2021/12/31 10:04:24 schmonz Exp $
 #
 
 DISTNAME=	etckeeper_1.18.14.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig$//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/e/etckeeper/}
 
@@ -42,11 +42,12 @@ CONF_FILES_PERMS+=	${EGDIR}/${file} ${PKG_SYSCONFDIR}/${file} \
 SUBST_CLASSES+=		config
 SUBST_STAGE.config=	do-configure
 SUBST_FILES.config+=	etckeeper etckeeper.8
+SUBST_FILES.config+=	pre-commit.d/20warn-problem-files
 SUBST_FILES.config+=	pre-install.d/10packagelist
 SUBST_FILES.config+=	post-install.d/50vcs-commit
 SUBST_FILES.config+=	bash_completion zsh_completion
 SUBST_FILES.config+=	daily debian/cron.daily
-SUBST_VARS.config+=	PREFIX VARBASE PKG_SYSCONFBASEDIR PKG_SYSCONFDIR
+SUBST_VARS.config+=	PREFIX VARBASE PKG_SYSCONFBASEDIR PKG_SYSCONFDIR EGREP
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/etckeeper ${DESTDIR}${PREFIX}/bin

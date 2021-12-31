@@ -1,0 +1,15 @@
+$NetBSD: patch-pre-commit.d_20warn-problem-files,v 1.1 2021/12/31 10:04:24 schmonz Exp $
+
+Add SUBST_VARS tokens.
+
+--- pre-commit.d/20warn-problem-files.orig	2020-01-22 13:59:54.000000000 +0000
++++ pre-commit.d/20warn-problem-files
+@@ -2,7 +2,7 @@
+ set -e
+ 
+ exclude_internal () {
+-	egrep -v '(^|/)(\.git|\.hg|\.bzr|_darcs)/'
++	@EGREP@ -v '(^|/)(\.git|\.hg|\.bzr|_darcs)/'
+ }
+ 
+ if [ "$VCS" = bzr ] || [ "$VCS" = darcs ]; then
