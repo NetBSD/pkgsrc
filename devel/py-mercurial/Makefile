@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.62 2021/11/28 10:36:14 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2021/12/31 07:09:22 ryoon Exp $
 #
 # Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
 
 DISTNAME=	mercurial-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	https://www.mercurial-scm.org/release/
 
@@ -44,5 +45,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.rst  \
 		${DESTDIR}${PREFIX}/share/doc/mercurial
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
