@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6467 2021/12/31 09:58:05 triaxx Exp $
+$NetBSD: CHANGES-2021,v 1.6468 2021/12/31 10:04:30 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9644,3 +9644,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-configobj to 5.0.6nb3 [wiz 2021-12-31]
 	Updated devel/meld to 3.21.0nb10 [wiz 2021-12-31]
 	Updated net/mosquitto to 2.0.14 [triaxx 2021-12-31]
+	Updated sysutils/etckeeper to 1.18.14nb2 [buildbox 2021-12-31]
