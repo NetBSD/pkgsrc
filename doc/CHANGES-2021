@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6471 2021/12/31 14:18:15 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6472 2021/12/31 16:10:18 leot Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9653,3 +9653,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/py-grpcio to 1.43.0 [adam 2021-12-31]
 	Updated net/py-grpcio-testing to 1.43.0 [adam 2021-12-31]
 	Updated net/py-grpcio-tools to 1.42.0 [adam 2021-12-31]
+	Updated net/kubectl to 1.22.5 [leot 2021-12-31]
