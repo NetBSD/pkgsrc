@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/03/14 08:23:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2021/12/31 12:21:55 adam Exp $
 bin/yapf-${PYVERSSUFFIX}
 bin/yapf-diff-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -12,6 +12,15 @@ ${PYSITELIB}/yapf/__init__.pyo
 ${PYSITELIB}/yapf/__main__.py
 ${PYSITELIB}/yapf/__main__.pyc
 ${PYSITELIB}/yapf/__main__.pyo
+${PYSITELIB}/yapf/third_party/__init__.py
+${PYSITELIB}/yapf/third_party/__init__.pyc
+${PYSITELIB}/yapf/third_party/__init__.pyo
+${PYSITELIB}/yapf/third_party/yapf_diff/__init__.py
+${PYSITELIB}/yapf/third_party/yapf_diff/__init__.pyc
+${PYSITELIB}/yapf/third_party/yapf_diff/__init__.pyo
+${PYSITELIB}/yapf/third_party/yapf_diff/yapf_diff.py
+${PYSITELIB}/yapf/third_party/yapf_diff/yapf_diff.pyc
+${PYSITELIB}/yapf/third_party/yapf_diff/yapf_diff.pyo
 ${PYSITELIB}/yapf/yapflib/__init__.py
 ${PYSITELIB}/yapf/yapflib/__init__.pyc
 ${PYSITELIB}/yapf/yapflib/__init__.pyo
@@ -42,6 +51,9 @@ ${PYSITELIB}/yapf/yapflib/identify_container.pyo
 ${PYSITELIB}/yapf/yapflib/line_joiner.py
 ${PYSITELIB}/yapf/yapflib/line_joiner.pyc
 ${PYSITELIB}/yapf/yapflib/line_joiner.pyo
+${PYSITELIB}/yapf/yapflib/logical_line.py
+${PYSITELIB}/yapf/yapflib/logical_line.pyc
+${PYSITELIB}/yapf/yapflib/logical_line.pyo
 ${PYSITELIB}/yapf/yapflib/object_state.py
 ${PYSITELIB}/yapf/yapflib/object_state.pyc
 ${PYSITELIB}/yapf/yapflib/object_state.pyo
@@ -69,9 +81,9 @@ ${PYSITELIB}/yapf/yapflib/style.pyo
 ${PYSITELIB}/yapf/yapflib/subtype_assigner.py
 ${PYSITELIB}/yapf/yapflib/subtype_assigner.pyc
 ${PYSITELIB}/yapf/yapflib/subtype_assigner.pyo
-${PYSITELIB}/yapf/yapflib/unwrapped_line.py
-${PYSITELIB}/yapf/yapflib/unwrapped_line.pyc
-${PYSITELIB}/yapf/yapflib/unwrapped_line.pyo
+${PYSITELIB}/yapf/yapflib/subtypes.py
+${PYSITELIB}/yapf/yapflib/subtypes.pyc
+${PYSITELIB}/yapf/yapflib/subtypes.pyo
 ${PYSITELIB}/yapf/yapflib/verifier.py
 ${PYSITELIB}/yapf/yapflib/verifier.pyc
 ${PYSITELIB}/yapf/yapflib/verifier.pyo
@@ -99,6 +111,9 @@ ${PYSITELIB}/yapftests/format_token_test.pyo
 ${PYSITELIB}/yapftests/line_joiner_test.py
 ${PYSITELIB}/yapftests/line_joiner_test.pyc
 ${PYSITELIB}/yapftests/line_joiner_test.pyo
+${PYSITELIB}/yapftests/logical_line_test.py
+${PYSITELIB}/yapftests/logical_line_test.pyc
+${PYSITELIB}/yapftests/logical_line_test.pyo
 ${PYSITELIB}/yapftests/main_test.py
 ${PYSITELIB}/yapftests/main_test.pyc
 ${PYSITELIB}/yapftests/main_test.pyo
@@ -141,9 +156,6 @@ ${PYSITELIB}/yapftests/style_test.pyo
 ${PYSITELIB}/yapftests/subtype_assigner_test.py
 ${PYSITELIB}/yapftests/subtype_assigner_test.pyc
 ${PYSITELIB}/yapftests/subtype_assigner_test.pyo
-${PYSITELIB}/yapftests/unwrapped_line_test.py
-${PYSITELIB}/yapftests/unwrapped_line_test.pyc
-${PYSITELIB}/yapftests/unwrapped_line_test.pyo
 ${PYSITELIB}/yapftests/utils.py
 ${PYSITELIB}/yapftests/utils.pyc
 ${PYSITELIB}/yapftests/utils.pyo
