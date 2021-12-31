@@ -1,0 +1,5 @@
+A command line tool that:
+ - turns ldd into a tree
+ - explains why shared libraries are found and why not
+ - package optionally deploys executables and dependencies
+   into a single directory

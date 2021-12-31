@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2021/12/31 17:28:11 plunky Exp $
+
+BLAKE2s (libtree-2.0.0.tar.gz) = 7fbbb975e701060ec8c13d836d09912e58ef96fa2dac3165c1346712e42c17ca
+SHA512 (libtree-2.0.0.tar.gz) = 9272afd8540110f43ade864a2df58d8b8a7690c79cd29a9804b43e7e550bc05a4da530a763a27bd85a474673055e7a5ba63c0aa0bcaf8b246fbfc73a4f36c870
+Size (libtree-2.0.0.tar.gz) = 161133 bytes
