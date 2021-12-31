@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6464 2021/12/31 07:50:18 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6465 2021/12/31 08:03:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9640,3 +9640,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated devel/py-mercurial to 6.0nb1 [ryoon 2021-12-31]
 	Updated mail/mutt to 2.1.5 [tron 2021-12-31]
 	Updated devel/py-configobj to 5.0.6nb3 [wiz 2021-12-31]
+	Updated devel/meld to 3.21.0nb10 [wiz 2021-12-31]
