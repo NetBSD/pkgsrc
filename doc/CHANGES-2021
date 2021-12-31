@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6458 2021/12/31 01:22:10 gutteridge Exp $
+$NetBSD: CHANGES-2021,v 1.6459 2021/12/31 01:26:02 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9634,3 +9634,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated finance/py-stripe to 2.64.0 [adam 2021-12-30]
 	Updated textproc/py-libxml2 to 2.9.12nb3 [wiz 2021-12-30]
 	Updated editors/xfce4-mousepad to 0.5.8nb2 [gutteridge 2021-12-31]
+	Updated x11/xfce4-settings to 4.16.2nb2 [gutteridge 2021-12-31]
