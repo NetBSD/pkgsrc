@@ -1,8 +1,8 @@
-$NetBSD: patch-etckeeper,v 1.1 2013/05/27 08:36:00 sbd Exp $
+$NetBSD: patch-etckeeper,v 1.2 2021/12/31 10:04:24 schmonz Exp $
 
 Add SUBST_VARS tokens.
 
---- etckeeper.orig	2012-12-28 16:09:51.000000000 +0000
+--- etckeeper.orig	2020-01-22 13:59:54.000000000 +0000
 +++ etckeeper
 @@ -2,7 +2,7 @@
  set -e
@@ -13,7 +13,16 @@ Add SUBST_VARS tokens.
  fi
  
  conf="$ETCKEEPER_CONF_DIR/etckeeper.conf"
-@@ -86,7 +86,7 @@ if [ "x$1" = "x-d" ]; then
+@@ -84,7 +84,7 @@ elif [ "$command" = "pre-apt" ]; then
+ 	command=pre-install
+ fi
+ 
+-if echo "$command" | LANG=C egrep -q '[^-a-z_]'; then
++if echo "$command" | LANG=C @EGREP@ -q '[^-a-z_]'; then
+ 	echo "etckeeper: invalid command $command" >&2
+ 	exit 1
+ fi
+@@ -104,7 +104,7 @@ if [ "x$1" = "x-d" ]; then
  fi
  
  if [ -z "$ETCKEEPER_DIR" ]; then
@@ -22,3 +31,12 @@ Add SUBST_VARS tokens.
  fi
  cd "$ETCKEEPER_DIR"
  export ETCKEEPER_DIR
+@@ -142,7 +142,7 @@ else
+ 	# fallback if perl isn't present
+ 	for script in $ETCKEEPER_CONF_DIR/$command.d/*; do
+ 		if [ ! -d "$script" -a -x "$script" ]; then
+-			echo "$script" | egrep -q "/[-a-zA-Z0-9]+$"
++			echo "$script" | @EGREP@ -q "/[-a-zA-Z0-9]+$"
+ 			[ $? -eq 0 ] && "$script" "$@"
+ 		fi
+ 	done
