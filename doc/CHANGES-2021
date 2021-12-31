@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6463 2021/12/31 07:33:32 tron Exp $
+$NetBSD: CHANGES-2021,v 1.6464 2021/12/31 07:50:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9639,3 +9639,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated emulators/nono to 0.2.5 [jun 2021-12-31]
 	Updated devel/py-mercurial to 6.0nb1 [ryoon 2021-12-31]
 	Updated mail/mutt to 2.1.5 [tron 2021-12-31]
+	Updated devel/py-configobj to 5.0.6nb3 [wiz 2021-12-31]
