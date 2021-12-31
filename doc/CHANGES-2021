@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6474 2021/12/31 17:24:47 plunky Exp $
+$NetBSD: CHANGES-2021,v 1.6475 2021/12/31 17:25:42 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9656,3 +9656,4 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/kubectl to 1.22.5 [leot 2021-12-31]
 	Added devel/cxxopts version 3.0.0 [plunky 2021-12-31]
 	Added devel/elfio version 3.9 [plunky 2021-12-31]
+	Added devel/termcolor version 2.0.0 [plunky 2021-12-31]
