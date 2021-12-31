@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6469 2021/12/31 12:22:18 adam Exp $
+$NetBSD: CHANGES-2021,v 1.6470 2021/12/31 13:28:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9647,3 +9647,5 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/etckeeper to 1.18.14nb2 [buildbox 2021-12-31]
 	Updated sysutils/py-filetype to 1.0.9 [adam 2021-12-31]
 	Updated devel/py-yapf to 0.32.0 [adam 2021-12-31]
+	Removed sysutils/py-eliot17 [adam 2021-12-31]
+	Updated sysutils/py-supervisor to 4.2.4 [adam 2021-12-31]
