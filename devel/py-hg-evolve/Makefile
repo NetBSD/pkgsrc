@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.23 2021/11/28 10:37:19 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2022/01/01 11:26:34 wiz Exp $
 #
 # Release notes:
 # https://www.mercurial-scm.org/pipermail/evolve-testers/
 
 DISTNAME=	hg-evolve-10.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/post//}
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hg-evolve/}
 
@@ -36,5 +37,5 @@ do-test:
 	HGROOT=${HG_WRKSRC:sh}; cd ${WRKSRC}/tests && ${PYTHONBIN} $${HGROOT}/tests/run-tests.py ${_MAKE_JOBS:Q}
 .endif
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
