@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.2 2002/03/19 12:21:07 wiz Exp $
+$NetBSD: patch-ad,v 1.3 2022/01/01 09:20:41 dholland Exp $
+
+Don't hardcode the install prefix.
 
 --- sequencer/src/Filter.c.orig	Mon Jul  2 08:59:48 2001
 +++ sequencer/src/Filter.c

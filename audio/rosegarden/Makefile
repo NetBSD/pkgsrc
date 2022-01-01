@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2022/01/01 07:50:22 dholland Exp $
+# $NetBSD: Makefile,v 1.35 2022/01/01 09:20:40 dholland Exp $
 
 DISTNAME=	rosegarden-2.1pl4
 PKGNAME=	rosegarden-2.1.4
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	audio
 #MASTER_SITES=	http://www.cannam.demon.co.uk/rosegarden/distribution/
-LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 # This package is the (now really old) X11 version of Rosegarden, which
@@ -15,6 +14,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 # to keep a copy of this package as rosegarden-x11.
 HOMEPAGE=	https://www.rosegardenmusic.com/
 COMMENT=	Notation editor & MIDI sequencer
+LICENSE=	gnu-gpl-v2
 
 MAKE_JOBS_SAFE=		no
 

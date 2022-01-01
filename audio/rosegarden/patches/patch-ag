@@ -1,4 +1,7 @@
-$NetBSD: patch-ag,v 1.2 2009/07/07 16:38:39 joerg Exp $
+$NetBSD: patch-ag,v 1.3 2022/01/01 09:20:41 dholland Exp $
+
+DESTDIR support.
+Install the X11 application-defaults usefully.
 
 --- do-install.orig	1997-10-21 23:20:43.000000000 +0200
 +++ do-install

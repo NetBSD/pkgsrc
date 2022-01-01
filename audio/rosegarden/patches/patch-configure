@@ -1,4 +1,6 @@
-$NetBSD: patch-configure,v 1.1 2014/06/26 20:26:39 asau Exp $
+$NetBSD: patch-configure,v 1.2 2022/01/01 09:20:41 dholland Exp $
+
+Don't use -lmalloc.
 
 --- configure.orig	2014-06-26 17:34:11.000000000 +0000
 +++ configure

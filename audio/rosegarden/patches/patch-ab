@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2002/03/19 12:21:07 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2022/01/01 09:20:41 dholland Exp $
+
+Don't hardcode the install prefix.
 
 --- editor/src/Filter.c.orig	Mon Jul  2 09:10:49 2001
 +++ editor/src/Filter.c

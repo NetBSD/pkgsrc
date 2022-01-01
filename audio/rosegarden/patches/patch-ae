@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.2 2002/03/19 12:21:07 wiz Exp $
+$NetBSD: patch-ae,v 1.3 2022/01/01 09:20:41 dholland Exp $
+
+Don't hardcode the install prefix.
 
 --- sequencer/src/Resources.h.orig	Fri Oct 10 06:21:47 1997
 +++ sequencer/src/Resources.h

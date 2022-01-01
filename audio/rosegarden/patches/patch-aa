@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2002/03/19 12:21:07 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2022/01/01 09:20:41 dholland Exp $
+
+Configure for pkgsrc.
+Make the install rule do something useful.
 
 --- Makefile.in.orig	Fri Dec 21 15:12:43 2001
 +++ Makefile.in
