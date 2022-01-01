@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.48 2021/01/20 23:54:24 gdt Exp $
+# $NetBSD: Makefile,v 1.49 2022/01/01 21:46:42 wiz Exp $
 
 # 4.1.0 is broken, per reports on gpsd list.  Apparently 4.0.1 is ok.
 DISTNAME=	scons-3.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scons/}
 
@@ -26,5 +27,8 @@ SUBST_FILES.rflag=	engine/SCons/Tool/gnulink.py
 SUBST_SED.rflag=	-e 's|-Wl,-rpath=|${COMPILER_RPATH_FLAG}|g'
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
+
+_PYSETUPTOOLSINSTALLARGS:=	${PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
+
 .include "../../mk/bsd.pkg.mk"
