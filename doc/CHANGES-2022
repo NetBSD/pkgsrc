@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.22 2022/01/01 20:18:10 rhialto Exp $
+$NetBSD: CHANGES-2022,v 1.23 2022/01/01 22:29:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -24,3 +24,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated archivers/lha to 114.9.20211125 [rhialto 2022-01-01]
 	Updated sysutils/tealdeer to 1.5.0 [bsiegert 2022-01-01]
 	Updated sysutils/mtools to 4.0.36 [rhialto 2022-01-01]
+	Updated sysutils/broot to 1.8.1 [pin 2022-01-01]
