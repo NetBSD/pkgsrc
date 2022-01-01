@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2021/12/29 05:44:40 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2022/01/01 22:30:27 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	anyhow-1.0.52
 CARGO_CRATE_DEPENDS+=	atty-0.2.14
@@ -7,9 +7,9 @@ CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
 CARGO_CRATE_DEPENDS+=	bstr-0.2.17
 CARGO_CRATE_DEPENDS+=	cfg-if-0.1.10
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
-CARGO_CRATE_DEPENDS+=	clap-3.0.0-rc.8
-CARGO_CRATE_DEPENDS+=	clap_derive-3.0.0-rc.8
-CARGO_CRATE_DEPENDS+=	clap_generate-3.0.0-rc.8
+CARGO_CRATE_DEPENDS+=	clap-3.0.0
+CARGO_CRATE_DEPENDS+=	clap_complete-3.0.0
+CARGO_CRATE_DEPENDS+=	clap_derive-3.0.0
 CARGO_CRATE_DEPENDS+=	csv-1.1.6
 CARGO_CRATE_DEPENDS+=	csv-core-0.1.10
 CARGO_CRATE_DEPENDS+=	dirs-2.0.2
@@ -30,8 +30,8 @@ CARGO_CRATE_DEPENDS+=	os_str_bytes-6.0.0
 #CARGO_CRATE_DEPENDS+=	prettytable-rs-0.8.0
 CARGO_CRATE_DEPENDS+=	proc-macro-error-1.0.4
 CARGO_CRATE_DEPENDS+=	proc-macro-error-attr-1.0.4
-CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.34
-CARGO_CRATE_DEPENDS+=	quote-1.0.10
+CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.36
+CARGO_CRATE_DEPENDS+=	quote-1.0.14
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.2.10
 CARGO_CRATE_DEPENDS+=	redox_users-0.4.0
 CARGO_CRATE_DEPENDS+=	regex-automata-0.1.10
@@ -49,7 +49,7 @@ CARGO_CRATE_DEPENDS+=	textwrap-0.14.2
 CARGO_CRATE_DEPENDS+=	unicode-segmentation-1.8.0
 CARGO_CRATE_DEPENDS+=	unicode-width-0.1.9
 CARGO_CRATE_DEPENDS+=	unicode-xid-0.2.2
-CARGO_CRATE_DEPENDS+=	version_check-0.9.3
+CARGO_CRATE_DEPENDS+=	version_check-0.9.4
 CARGO_CRATE_DEPENDS+=	wasi-0.10.2+wasi-snapshot-preview1
 CARGO_CRATE_DEPENDS+=	winapi-0.3.9
 CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
