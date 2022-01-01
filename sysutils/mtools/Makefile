@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2021/08/09 14:39:23 rhialto Exp $
+# $NetBSD: Makefile,v 1.62 2022/01/01 17:25:09 rhialto Exp $
 
-DISTNAME=	mtools-4.0.35
+DISTNAME=	mtools-4.0.36
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNU:=mtools/}
 EXTRACT_SUFX=	.tar.bz2
