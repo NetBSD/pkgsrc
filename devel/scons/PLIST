@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2019/09/17 08:23:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2022/01/01 21:46:42 wiz Exp $
 bin/scons
 bin/scons-${PKGVERSION}
 bin/scons-${PKGVERSION}.bat
@@ -9,7 +9,6 @@ bin/scons-time-${PKGVERSION}
 bin/scons.bat
 bin/sconsign
 bin/sconsign-${PKGVERSION}
-lib/scons/${EGG_FILE}
 lib/scons/SCons/Action.py
 lib/scons/SCons/Action.pyc
 lib/scons/SCons/Action.pyo
@@ -592,6 +591,10 @@ lib/scons/SCons/dblite.pyo
 lib/scons/SCons/exitfuncs.py
 lib/scons/SCons/exitfuncs.pyc
 lib/scons/SCons/exitfuncs.pyo
+${PLIST.py3x}lib/scons/${EGG_INFODIR}/PKG-INFO
+${PLIST.py3x}lib/scons/${EGG_INFODIR}/SOURCES.txt
+${PLIST.py3x}lib/scons/${EGG_INFODIR}/dependency_links.txt
+${PLIST.py3x}lib/scons/${EGG_INFODIR}/top_level.txt
 man/man1/scons-time.1
 man/man1/scons.1
 man/man1/sconsign.1
