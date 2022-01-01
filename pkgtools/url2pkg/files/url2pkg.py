@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.33 2021/11/14 09:20:15 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.34 2022/01/01 14:04:11 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -75,7 +75,6 @@ class Globals:
     perl5: str
     pkgsrcdir: Union[Path, Any]
     pythonbin: str
-    editor: str
     pkgdir: Union[Path, Any]
     out: Any
     err: Any
@@ -87,7 +86,6 @@ class Globals:
         self.perl5 = '@PERL5@'
         self.pkgsrcdir = Path(os.getenv('PKGSRCDIR') or '@PKGSRCDIR@')
         self.pythonbin = '@PYTHONBIN@'
-        self.editor = os.getenv('PKGEDITOR') or os.getenv('EDITOR') or 'vi'
 
         # the following are overridden in tests
         self.pkgdir = Path('.')
@@ -571,8 +569,6 @@ class Generator:
             f'@comment TODO: 2. run "{g.make} print-PLIST"'
         ]
         plist.is_file() or Lines(*plist_lines).write_to(plist)
-
-        subprocess.check_call([g.editor, makefile])
 
         g.bmake('clean', 'distinfo', 'extract')
 
@@ -1184,6 +1180,10 @@ class Adjuster:
             self.g.bmake('distinfo')
 
 
+def usage():
+    sys.exit(f'usage: {sys.argv[0]} [-v|--verbose] [URL]')
+
+
 def main(argv: List[str], g: Globals):
     if not os.path.isfile('../../mk/bsd.pkg.mk'):
         sys.exit(f'{argv[0]}: must be run from a package directory '
@@ -1195,9 +1195,9 @@ def main(argv: List[str], g: Globals):
             if opt in ('-v', '--verbose'):
                 g.verbose = True
     except getopt.GetoptError:
-        sys.exit(f'usage: {argv[0]} [-v|--verbose] [URL]')
+        usage()
 
-    url = args[0] if args else input('URL: ')
+    url = args[0] if args else usage()
     if not re.fullmatch(r'\w+://[!-~]+?/[!-~]+', url):
         sys.exit(f'url2pkg: invalid URL: {url}')
 
