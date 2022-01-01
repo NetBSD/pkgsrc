@@ -679,7 +679,7 @@ func (s *Suite) Test_ShTokenizer_ShToken(c *check.C) {
 	testNil := func(str string) {
 		line := t.NewLine("testNil.mk", 1, "")
 		p := NewShTokenizer(line, str)
-		c.Check(p.ShToken(), check.IsNil)
+		t.CheckNil(p.ShToken())
 		t.CheckEquals(p.Rest(), "")
 		t.CheckOutputEmpty()
 	}

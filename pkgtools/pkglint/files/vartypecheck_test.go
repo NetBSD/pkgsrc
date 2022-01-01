@@ -1162,6 +1162,18 @@ func (s *Suite) Test_VartypeCheck_GitTag(c *check.C) {
 		"WARN: filename.mk:11: Invalid characters \": ;\" in Git tag.")
 }
 
+func (s *Suite) Test_VartypeCheck_GoModuleFile(c *check.C) {
+	vt := NewVartypeCheckTester(s.Init(c), BtGoModuleFile)
+
+	vt.Varname("GO_MODULE_FILES")
+	vt.Values(
+		"github.com/!azure/azure-pipeline-go/@v/v0.1.8.mod",
+		"github.com/<org>/<proj>",
+	)
+	vt.Output(
+		"WARN: filename.mk:2: Invalid characters \"< > < >\" in Go modules filename.")
+}
+
 func (s *Suite) Test_VartypeCheck_Homepage(c *check.C) {
 	t := s.Init(c)
 	vt := NewVartypeCheckTester(t, BtHomepage)

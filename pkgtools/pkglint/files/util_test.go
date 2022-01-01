@@ -191,7 +191,7 @@ func (s *Suite) Test_getSubdirs(c *check.C) {
 
 	t.CreateFileLines("subdir/file")
 	t.CreateFileLines("empty/file")
-	c.Check(os.Remove(t.File("empty/file").String()), check.IsNil)
+	t.CheckNil(os.Remove(t.File("empty/file").String()))
 
 	t.CheckDeepEquals(getSubdirs(t.File(".")), []RelPath{"subdir"})
 }
@@ -229,10 +229,10 @@ func (s *Suite) Test_isLocallyModified(c *check.C) {
 	modTime := time.Unix(1136239445, 0).UTC()
 
 	err := os.Chtimes(unmodified.String(), modTime, modTime)
-	c.Check(err, check.IsNil)
+	t.CheckNil(err)
 
 	st, err := os.Lstat(unmodified.String())
-	c.Check(err, check.IsNil)
+	t.CheckNil(err)
 
 	// Make sure that the file system has second precision and accuracy.
 	t.CheckDeepEquals(st.ModTime().UTC(), modTime)
@@ -400,7 +400,7 @@ func (s *Suite) Test__regex_ReplaceFirst(c *check.C) {
 
 	m, rest := G.res.ReplaceFirst("a+b+c+d", `(\w)(.)(\w)`, "X")
 
-	c.Assert(m, check.NotNil)
+	t.AssertNotNil(m)
 	t.CheckDeepEquals(m, []string{"a+b", "a", "+", "b"})
 	t.CheckEquals(rest, "X+c+d")
 }
@@ -566,47 +566,47 @@ func (s *Suite) Test_FileCache(c *check.C) {
 		MkCvsID,
 		"# line 2")
 
-	c.Check(cache.Get("Makefile", 0), check.IsNil)
+	t.CheckNil(cache.Get("Makefile", 0))
 	t.CheckEquals(cache.hits, 0)
 	t.CheckEquals(cache.misses, 1)
 
 	cache.Put("Makefile", 0, lines)
-	c.Check(cache.Get("Makefile", MustSucceed|LogErrors), check.IsNil) // Wrong LoadOptions.
+	t.CheckNil(cache.Get("Makefile", MustSucceed|LogErrors)) // Wrong LoadOptions.
 
 	linesFromCache := cache.Get("Makefile", 0)
 	t.CheckEquals(linesFromCache.Filename, NewCurrPath("Makefile"))
-	c.Check(linesFromCache.Lines, check.HasLen, 2)
+	t.CheckLen(linesFromCache.Lines, 2)
 	t.CheckEquals(linesFromCache.Lines[0].Filename(), NewCurrPath("Makefile"))
 
 	// Cache keys are normalized using path.Clean.
 	linesFromCache2 := cache.Get("./Makefile", 0)
 	t.CheckEquals(linesFromCache2.Filename, NewCurrPath("./Makefile"))
-	c.Check(linesFromCache2.Lines, check.HasLen, 2)
+	t.CheckLen(linesFromCache2.Lines, 2)
 	t.CheckEquals(linesFromCache2.Lines[0].Filename(), NewCurrPath("./Makefile"))
 
 	cache.Put("file1.mk", 0, lines)
 	cache.Put("file2.mk", 0, lines)
 
 	// Now the cache is full. All three entries can be retrieved.
-	c.Check(cache.Get("Makefile", 0), check.NotNil)
-	c.Check(cache.Get("file1.mk", 0), check.NotNil)
-	c.Check(cache.Get("file2.mk", 0), check.NotNil)
+	t.CheckNotNil(cache.Get("Makefile", 0))
+	t.CheckNotNil(cache.Get("file1.mk", 0))
+	t.CheckNotNil(cache.Get("file2.mk", 0))
 
 	// Adding another entry removes all entries with minimum count,
 	// which currently are file1.mk and file2.mk.
 	// Makefile is still in the cache because it was accessed once.
 	cache.Put("file3.mk", 0, lines)
 
-	c.Check(cache.Get("Makefile", 0), check.NotNil)
-	c.Check(cache.Get("file1.mk", 0), check.IsNil)
-	c.Check(cache.Get("file2.mk", 0), check.IsNil)
-	c.Check(cache.Get("file3.mk", 0), check.NotNil)
+	t.CheckNotNil(cache.Get("Makefile", 0))
+	t.CheckNil(cache.Get("file1.mk", 0))
+	t.CheckNil(cache.Get("file2.mk", 0))
+	t.CheckNotNil(cache.Get("file3.mk", 0))
 
 	cache.Evict("Makefile")
 
-	c.Check(cache.Get("Makefile", 0), check.IsNil)
-	c.Check(cache.table, check.HasLen, 1)
-	c.Check(cache.mapping, check.HasLen, 1)
+	t.CheckNil(cache.Get("Makefile", 0))
+	t.CheckLen(cache.table, 1)
+	t.CheckLen(cache.mapping, 1)
 	t.CheckEquals(cache.hits, 7)
 	t.CheckEquals(cache.misses, 5)
 
@@ -692,9 +692,9 @@ func (s *Suite) Test_FileCache_Evict__sort(c *check.C) {
 
 	cache.Evict("filename5.mk")
 
-	t.Check(cache.table, check.HasLen, 9)
-	t.Check(cache.Get("filename5.mk", 0), check.IsNil)
-	t.Check(cache.Get("filename6.mk", 0), check.NotNil)
+	t.CheckLen(cache.table, 9)
+	t.CheckNil(cache.Get("filename5.mk", 0))
+	t.CheckNotNil(cache.Get("filename6.mk", 0))
 }
 
 func (s *Suite) Test_bmakeHelp(c *check.C) {
@@ -918,7 +918,7 @@ func (s *Suite) Test_LazyStringBuilder_WriteByte__exact_match(c *check.C) {
 	sb.WriteByte('d')
 
 	t.CheckEquals(sb.String(), "word")
-	c.Check(sb.buf, check.IsNil)
+	t.CheckNil(sb.buf)
 }
 
 func (s *Suite) Test_LazyStringBuilder_WriteByte__longer_than_expected(c *check.C) {
@@ -943,13 +943,13 @@ func (s *Suite) Test_LazyStringBuilder_WriteByte__shorter_than_expected(c *check
 	sb.WriteByte('o')
 
 	t.CheckEquals(sb.String(), "wo")
-	c.Check(sb.buf, check.IsNil)
+	t.CheckNil(sb.buf)
 
 	sb.WriteByte('r')
 	sb.WriteByte('d')
 
 	t.CheckEquals(sb.String(), "word")
-	c.Check(sb.buf, check.IsNil)
+	t.CheckNil(sb.buf)
 }
 
 func (s *Suite) Test_LazyStringBuilder_WriteByte__other_than_expected(c *check.C) {

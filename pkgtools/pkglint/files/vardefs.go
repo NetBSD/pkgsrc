@@ -1249,6 +1249,7 @@ func (reg *VarTypeRegistry) Init(src *Pkgsrc) {
 	reg.pkg("GNU_CONFIGURE_MANDIR", BtPathname)
 	reg.pkg("GNU_CONFIGURE_PREFIX", BtPathname)
 	reg.pkg("GOPATH", BtPathname)
+	reg.pkglist("GO_MODULE_FILES", BtGoModuleFile)
 	reg.pkgload("HAS_CONFIGURE", BtYes)
 	reg.pkglist("HEADER_TEMPLATES", BtPathname)
 	reg.pkg("HOMEPAGE", BtHomepage)
