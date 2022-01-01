@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2012/04/08 20:21:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/01 12:42:38 martin Exp $
 bin/anita
-${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/anita.py
 ${PYSITELIB}/anita.pyc
 ${PYSITELIB}/anita.pyo
