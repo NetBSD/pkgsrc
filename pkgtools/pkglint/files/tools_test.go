@@ -530,9 +530,9 @@ func (s *Suite) Test_Tools_Define__invalid_tool_name(c *check.C) {
 	mkline := t.NewMkLine("dummy.mk", 123, "DUMMY=\tvalue")
 	reg := NewTools()
 
-	t.Check(reg.Define("tool_name", "", mkline), check.IsNil)
-	t.Check(reg.Define("tool:dependency", "", mkline), check.IsNil)
-	t.Check(reg.Define("tool:build", "", mkline), check.IsNil)
+	t.CheckNil(reg.Define("tool_name", "", mkline))
+	t.CheckNil(reg.Define("tool:dependency", "", mkline))
+	t.CheckNil(reg.Define("tool:build", "", mkline))
 
 	// As of October 2018, the underscore is not used in any tool name.
 	// If there should ever be such a case, just use a different character for testing.
@@ -541,7 +541,7 @@ func (s *Suite) Test_Tools_Define__invalid_tool_name(c *check.C) {
 		"ERROR: dummy.mk:123: Invalid tool name \"tool:dependency\".",
 		"ERROR: dummy.mk:123: Invalid tool name \"tool:build\".")
 
-	t.Check(reg.byName, check.HasLen, 0)
+	t.CheckLen(reg.byName, 0)
 }
 
 func (s *Suite) Test_Tools_Trace__coverage(c *check.C) {
@@ -593,7 +593,7 @@ func (s *Suite) Test_Tools_ParseToolLine__invalid_tool_name(c *check.C) {
 		".endfor")
 
 	mklines.collectVariables(false, true)
-	t.Check(mklines.Tools.byName, check.HasLen, 1)
+	t.CheckLen(mklines.Tools.byName, 1)
 	t.CheckEquals(mklines.Tools.ByName("tool").String(), "tool:::Nowhere:abc")
 
 	t.CheckOutputEmpty()
@@ -641,7 +641,7 @@ func (s *Suite) Test_Tools_parseUseTools(c *check.C) {
 		"USE_TOOLS+=\tunknown unknown unknown")
 	t.FinishSetUp()
 
-	t.Check(G.Pkgsrc.Tools.ByName("unknown"), check.IsNil)
+	t.CheckNil(G.Pkgsrc.Tools.ByName("unknown"))
 
 	t.CheckOutputEmpty()
 }

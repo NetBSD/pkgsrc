@@ -166,7 +166,7 @@ func (src *Pkgsrc) loadDocChanges() {
 
 	src.LastChange = make(map[PkgsrcPath]*Change)
 	for _, filename := range filenames {
-		changes := src.loadDocChangesFromFile(docDir.JoinNoClean(filename))
+		changes := src.loadDocChangesFromFile(docDir.JoinNoClean(filename), false)
 		for _, change := range changes {
 			src.LastChange[change.Pkgpath] = change
 			if change.Action == Renamed || change.Action == Moved {
@@ -178,9 +178,9 @@ func (src *Pkgsrc) loadDocChanges() {
 	src.checkRemovedAfterLastFreeze()
 }
 
-func (src *Pkgsrc) loadDocChangesFromFile(filename CurrPath) []*Change {
+func (src *Pkgsrc) loadDocChangesFromFile(filename CurrPath, direct bool) []*Change {
 
-	warn := G.CheckGlobal && !G.Wip
+	warn := direct || G.CheckGlobal && !G.Wip
 
 	// Each date in the file should be from the same year as the filename says.
 	// This check has been added in 2018.
@@ -189,7 +189,7 @@ func (src *Pkgsrc) loadDocChangesFromFile(filename CurrPath) []*Change {
 	if _, yyyy := match1(filename.Base().String(), `-(\d\d\d\d)$`); yyyy >= "2018" {
 		year = yyyy
 	}
-	thorough := G.CheckGlobal || year >= "2020" // For performance reasons
+	thorough := direct || G.CheckGlobal || year >= "2020" // For performance reasons
 
 	latest := make(map[PkgsrcPath]*Change)
 

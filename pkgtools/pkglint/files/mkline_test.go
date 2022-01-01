@@ -154,7 +154,7 @@ func (s *Suite) Test_MkLine_ConditionalVars(c *check.C) {
 
 	mkline := t.NewMkLine("Makefile", 45, ".include \"../../category/package/buildlink3.mk\"")
 
-	c.Check(mkline.ConditionalVars(), check.HasLen, 0)
+	t.CheckLen(mkline.ConditionalVars(), 0)
 
 	mkline.SetConditionalVars([]string{"OPSYS"})
 
@@ -166,7 +166,7 @@ func (s *Suite) Test_MkLine_Tokenize__commented_varassign(c *check.C) {
 
 	mkline := t.NewMkLine("filename.mk", 123, "#VAR=\tvalue ${VAR} suffix text")
 
-	t.Check(mkline.Tokenize(mkline.Value(), false), check.HasLen, 3)
+	t.CheckLen(mkline.Tokenize(mkline.Value(), false), 3)
 }
 
 func (s *Suite) Test_MkLine_ValueSplit(c *check.C) {
@@ -380,13 +380,13 @@ func (s *Suite) Test_MkLine_ValueTokens__parse_error(c *check.C) {
 
 	tokens, rest := mkline.ValueTokens()
 
-	t.Check(tokens, check.IsNil)
+	t.CheckNil(tokens)
 	t.CheckEquals(rest, "$")
 
 	// Returns the same values, this time from the cache.
 	tokens, rest = mkline.ValueTokens()
 
-	t.Check(tokens, check.IsNil)
+	t.CheckNil(tokens)
 	t.CheckEquals(rest, "$")
 }
 
@@ -1410,7 +1410,7 @@ func (s *Suite) Test_Indentation(c *check.C) {
 
 	ind.Pop()
 
-	c.Check(ind.Varnames(), check.HasLen, 0)
+	t.CheckLen(ind.Varnames(), 0)
 	t.CheckEquals(ind.IsConditional(), false)
 	t.CheckEquals(ind.String(), "[]")
 }
@@ -1455,7 +1455,7 @@ func (s *Suite) Test_Indentation_String(c *check.C) {
 	mklines.ForEach(func(mkline *MkLine) {
 		if mkline.IsComment() {
 			t.CheckEquals(mklines.indentation.IsConditional(), true)
-			t.Check(mklines.indentation.Varnames(), check.IsNil)
+			t.CheckNil(mklines.indentation.Varnames())
 			str = mklines.indentation.String()
 		}
 	})

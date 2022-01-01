@@ -15,9 +15,9 @@ func (s *Suite) Test_Pkglint_Main(c *check.C) {
 	t := s.Init(c)
 
 	out, err := os.Create(t.CreateFileLines("out").String())
-	c.Check(err, check.IsNil)
+	t.CheckNil(err)
 	outProfiling, err := os.Create(t.CreateFileLines("out.profiling").String())
-	c.Check(err, check.IsNil)
+	t.CheckNil(err)
 
 	t.SetUpPackage("category/package")
 	t.Chdir("category/package")
@@ -31,8 +31,8 @@ func (s *Suite) Test_Pkglint_Main(c *check.C) {
 	runMain(out, "pkglint", ".")
 	runMain(outProfiling, "pkglint", "--profiling", ".")
 
-	c.Check(out.Close(), check.IsNil)
-	c.Check(outProfiling.Close(), check.IsNil)
+	t.CheckNil(out.Close())
+	t.CheckNil(outProfiling.Close())
 
 	t.CheckOutputEmpty()          // Because all output is redirected.
 	t.CheckFileLines("../../out", // See the t.Chdir above.
@@ -293,9 +293,11 @@ func (s *Suite) Test_Pkglint_Main__autofix_exitcode(c *check.C) {
 //
 // See https://github.com/rillig/gobco for the tool to measure the branch coverage.
 func (s *Suite) Test_Pkglint_Main__realistic(c *check.C) {
+	t := s.Init(c)
+
 	if cwd := os.Getenv("PKGLINT_TESTDIR"); cwd != "" {
 		err := os.Chdir(cwd)
-		c.Assert(err, check.IsNil)
+		t.AssertNil(err)
 	}
 
 	cmdline := os.Getenv("PKGLINT_TESTCMDLINE")
@@ -317,7 +319,7 @@ func (s *Suite) Test_Pkglint_Main__profiling(c *check.C) {
 	t.CheckEquals(NewCurrPath("pkglint.pprof").IsFile(), true)
 
 	err := os.Remove("pkglint.pprof")
-	c.Check(err, check.IsNil)
+	t.CheckNil(err)
 
 	// Everything but the first few lines of output is not easily testable
 	// or not interesting enough, since that info includes the exact timing
@@ -1077,14 +1079,14 @@ func (s *Suite) Test_Pkglint_checkReg__readme_and_todo(c *check.C) {
 				src := filepath.ToSlash(pathname)
 				dst := strings.Replace(src, "category/package", "wip/package", 1)
 				data, e := ioutil.ReadFile(src)
-				c.Check(e, check.IsNil)
+				t.CheckNil(e)
 				_ = os.MkdirAll(path.Dir(dst), 0700)
 				e = ioutil.WriteFile(dst, data, 0600)
-				c.Check(e, check.IsNil)
+				t.CheckNil(e)
 			}
 			return err
 		})
-	c.Check(err, check.IsNil)
+	t.CheckNil(err)
 
 	t.SetUpPkgsrc()
 	t.Chdir(".")
@@ -1286,7 +1288,7 @@ func (s *Suite) Test_Pkglint_checkExecutable(c *check.C) {
 	// execute-bit. The only relevant permissions bit is whether a
 	// file is readonly or not.
 	st, err := filename.Lstat()
-	if t.Check(err, check.IsNil) {
+	if t.CheckNil(err) {
 		t.CheckEquals(st.Mode()&0111, os.FileMode(0))
 	}
 }

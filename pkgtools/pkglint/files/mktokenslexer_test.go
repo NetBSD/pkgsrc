@@ -186,7 +186,7 @@ func (s *Suite) Test_MkTokensLexer_NextVarUse__varuse_varuse_varuse(c *check.C) 
 	t.CheckDeepEquals(lexer.NextVarUse(), tokens[0])
 	t.CheckDeepEquals(lexer.NextVarUse(), tokens[1])
 	t.CheckDeepEquals(lexer.NextVarUse(), tokens[2])
-	t.Check(lexer.NextVarUse(), check.IsNil)
+	t.CheckNil(lexer.NextVarUse())
 }
 
 func (s *Suite) Test_MkTokensLexer_NextVarUse__varuse_when_plain_text(c *check.C) {
@@ -195,11 +195,11 @@ func (s *Suite) Test_MkTokensLexer_NextVarUse__varuse_when_plain_text(c *check.C
 
 	lexer := NewMkTokensLexer(b.Tokens(b.TextToken("text")))
 
-	t.Check(lexer.NextVarUse(), check.IsNil)
+	t.CheckNil(lexer.NextVarUse())
 	t.CheckEquals(lexer.NextString("te"), "te")
-	t.Check(lexer.NextVarUse(), check.IsNil)
+	t.CheckNil(lexer.NextVarUse())
 	t.CheckEquals(lexer.NextString("xt"), "xt")
-	t.Check(lexer.NextVarUse(), check.IsNil)
+	t.CheckNil(lexer.NextVarUse())
 }
 
 func (s *Suite) Test_MkTokensLexer_NextVarUse__peek_after_varuse(c *check.C) {
@@ -246,7 +246,7 @@ func (s *Suite) Test_MkTokensLexer_NextVarUse__adjacent_plain_text(c *check.C) {
 	t.CheckEquals(lexer.SkipString("text2"), false)
 
 	// Just for covering the "Varuse != nil" branch in MkTokensLexer.NextVarUse.
-	t.Check(lexer.NextVarUse(), check.IsNil)
+	t.CheckNil(lexer.NextVarUse())
 
 	// The string is still not found since the next token is only consumed
 	// by the NextVarUse above if it is indeed a VarUse.

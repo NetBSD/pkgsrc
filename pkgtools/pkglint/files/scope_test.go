@@ -22,8 +22,8 @@ func (s *Suite) Test_Scope__commented_varassign(c *check.C) {
 	scope.Define("VAR", mkline)
 
 	t.CheckEquals(scope.IsDefined("VAR"), false)
-	t.Check(scope.FirstDefinition("VAR"), check.IsNil)
-	t.Check(scope.LastDefinition("VAR"), check.IsNil)
+	t.CheckNil(scope.FirstDefinition("VAR"))
+	t.CheckNil(scope.LastDefinition("VAR"))
 
 	t.CheckEquals(scope.Mentioned("VAR"), mkline)
 	t.CheckEquals(scope.Commented("VAR"), mkline)
@@ -39,9 +39,9 @@ func (s *Suite) Test_NewScope(c *check.C) {
 
 	scope := NewScope()
 
-	t.Check(scope.names, check.IsNil)
-	t.Check(scope.vs, check.NotNil)
-	t.Check(scope.vs, check.HasLen, 0)
+	t.CheckNil(scope.names)
+	t.CheckNotNil(scope.vs)
+	t.CheckLen(scope.vs, 0)
 }
 
 func (s *Suite) Test_Scope_varnames(c *check.C) {
@@ -50,7 +50,7 @@ func (s *Suite) Test_Scope_varnames(c *check.C) {
 	scope := NewScope()
 	mkline := t.NewMkLine("filename.mk", 3, "DEFINED=\t${USED}")
 
-	t.Check(scope.varnames(), check.IsNil)
+	t.CheckNil(scope.varnames())
 
 	scope.Define("DEFINED", mkline)
 	scope.Use("USED", mkline, VucRunTime)
@@ -120,9 +120,9 @@ func (s *Suite) Test_Scope_def(c *check.C) {
 
 	scope.def("VAR.param", mkline)
 
-	t.Check(scope.FirstDefinition("VAR"), check.IsNil)
+	t.CheckNil(scope.FirstDefinition("VAR"))
 	t.CheckEquals(scope.FirstDefinition("VAR.param"), mkline)
-	t.Check(scope.FirstDefinition("VAR.*"), check.IsNil)
+	t.CheckNil(scope.FirstDefinition("VAR.*"))
 }
 
 func (s *Suite) Test_Scope_Fallback(c *check.C) {
@@ -166,7 +166,7 @@ func (s *Suite) Test_Scope_Mentioned(c *check.C) {
 	t.CheckEquals(scope.Mentioned("VAR"), assigned)
 	t.CheckEquals(scope.Mentioned("COMMENTED"), commented)
 	t.CheckEquals(scope.Mentioned("DOCUMENTED"), documented)
-	t.Check(scope.Mentioned("UNKNOWN"), check.IsNil)
+	t.CheckNil(scope.Mentioned("UNKNOWN"))
 }
 
 func (s *Suite) Test_Scope_IsDefined(c *check.C) {
@@ -247,9 +247,9 @@ func (s *Suite) Test_Scope_FirstDefinition(c *check.C) {
 	// and the calling code typically assumes a variable definition.
 	// These sneaky variables with implicit definition are an edge
 	// case that only few people actually know. It's better that way.
-	t.Check(scope.FirstDefinition("SNEAKY"), check.IsNil)
+	t.CheckNil(scope.FirstDefinition("SNEAKY"))
 
-	t.Check(scope.FirstDefinition("USED"), check.IsNil)
+	t.CheckNil(scope.FirstDefinition("USED"))
 
 	t.CheckOutputLines(
 		"ERROR: fname.mk:4: Assignment modifiers like \":=\" " +
@@ -268,8 +268,8 @@ func (s *Suite) Test_Scope_LastDefinition(c *check.C) {
 	scope.Use("USED", mkline4, VucRunTime)
 
 	t.CheckEquals(scope.LastDefinition("VAR"), mkline4)
-	t.Check(scope.LastDefinition("UNDEFINED"), check.IsNil)
-	t.Check(scope.LastDefinition("USED"), check.IsNil)
+	t.CheckNil(scope.LastDefinition("UNDEFINED"))
+	t.CheckNil(scope.LastDefinition("USED"))
 }
 
 func (s *Suite) Test_Scope_Commented(c *check.C) {
@@ -286,11 +286,11 @@ func (s *Suite) Test_Scope_Commented(c *check.C) {
 	scope.Define("DOCUMENTED", documented)
 	scope.Use("USED", used, VucRunTime)
 
-	t.Check(scope.Commented("VAR"), check.IsNil)
+	t.CheckNil(scope.Commented("VAR"))
 	t.CheckEquals(scope.Commented("COMMENTED"), commented)
-	t.Check(scope.Commented("DOCUMENTED"), check.IsNil)
-	t.Check(scope.Commented("UNKNOWN"), check.IsNil)
-	t.Check(scope.Commented("USED"), check.IsNil)
+	t.CheckNil(scope.Commented("DOCUMENTED"))
+	t.CheckNil(scope.Commented("UNKNOWN"))
+	t.CheckNil(scope.Commented("USED"))
 }
 
 func (s *Suite) Test_Scope_FirstUse(c *check.C) {
@@ -305,7 +305,7 @@ func (s *Suite) Test_Scope_FirstUse(c *check.C) {
 
 	scope := mklines.allVars
 	t.CheckEquals(scope.FirstUse("USED"), mklines.mklines[1])
-	t.Check(scope.FirstUse("UNUSED"), check.IsNil)
+	t.CheckNil(scope.FirstUse("UNUSED"))
 
 	t.CheckOutputLines(
 		"WARN: file.mk:2: VAR1 is defined but not used.",
@@ -393,7 +393,7 @@ func (s *Suite) Test_Scope_DefineAll(c *check.C) {
 	dst := NewScope()
 	dst.DefineAll(&src)
 
-	c.Check(dst.vs, check.HasLen, 0)
+	t.CheckLen(dst.vs, 0)
 
 	src.Define("VAR", t.NewMkLine("file.mk", 1, "VAR=value"))
 	dst.DefineAll(&src)

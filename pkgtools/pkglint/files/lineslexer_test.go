@@ -95,12 +95,12 @@ func (s *Suite) Test_LinesLexer_NextRegexp(c *check.C) {
 
 	llex := NewLinesLexer(lines)
 
-	t.Check(llex.NextRegexp(`not found`), check.IsNil)
+	t.CheckNil(llex.NextRegexp(`not found`))
 	t.CheckDeepEquals(llex.NextRegexp(`ne..`), []string{"ne 1"})
 
 	t.CheckEquals(llex.EOF(), true)
 
-	t.Check(llex.NextRegexp(`^`), check.IsNil)
+	t.CheckNil(llex.NextRegexp(`^`))
 }
 
 func (s *Suite) Test_LinesLexer_SkipRegexp(c *check.C) {
@@ -235,7 +235,7 @@ func (s *Suite) Test_LinesLexer_next(c *check.C) {
 
 	llex.next()
 
-	t.Check(llex.line, check.IsNil)
+	t.CheckNil(llex.line)
 }
 
 func (s *Suite) Test_NewMkLinesLexer(c *check.C) {

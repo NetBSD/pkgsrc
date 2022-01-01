@@ -425,8 +425,8 @@ func (s *Suite) Test_NewPlistChecker(c *check.C) {
 	ck := NewPlistChecker(pkg)
 
 	t.CheckEquals(ck.pkg, pkg)
-	t.Check(ck.allDirs, check.NotNil)
-	t.Check(ck.allFiles, check.NotNil)
+	t.CheckNotNil(ck.allDirs)
+	t.CheckNotNil(ck.allFiles)
 }
 
 func (s *Suite) Test_PlistChecker_Load__common_end(c *check.C) {
@@ -450,12 +450,12 @@ func (s *Suite) Test_PlistChecker_Load__common_end(c *check.C) {
 	// The corresponding PLIST.common is loaded if possible.
 	// Its lines are not appended to plistLines since they
 	// are checked separately.
-	t.Check(plistLines, check.HasLen, 2)
+	t.CheckLen(plistLines, 2)
 
 	// But the files and directories from PLIST.common are registered,
 	// to check for duplicates and to make these lists available to
 	// the package being checked, for cross-validation.
-	t.Check(ck.allFiles["bin/plist"], check.IsNil)
+	t.CheckNil(ck.allFiles["bin/plist"])
 	t.CheckEquals(
 		ck.allFiles["bin/plist_common"].Line.String(),
 		"PLIST.common:2: bin/plist_common")
@@ -491,16 +491,16 @@ func (s *Suite) Test_PlistChecker_newLines(c *check.C) {
 	// The invalid condition in line 4 is silently skipped when the
 	// lines are parsed. The actual check happens later.
 
-	t.Check(plistLines, check.HasLen, 4)
+	t.CheckLen(plistLines, 4)
 	t.CheckEquals(plistLines[0].text, "bin/program")
 	t.CheckEquals(plistLines[1].text, "bin/conditional")
 	t.CheckEquals(plistLines[2].text, "/bin/conditional-absolute")
 	t.CheckEquals(plistLines[3].text, "${PLIST.mod:Q}invalid")
 
-	t.Check(plistLines[0].conditions, check.HasLen, 0)
+	t.CheckLen(plistLines[0].conditions, 0)
 	t.CheckDeepEquals(plistLines[1].conditions, []string{"PLIST.cond"})
 	t.CheckDeepEquals(plistLines[2].conditions, []string{"PLIST.abs", "PLIST.abs2"})
-	t.Check(plistLines[3].conditions, check.HasLen, 0)
+	t.CheckLen(plistLines[3].conditions, 0)
 }
 
 func (s *Suite) Test_PlistChecker_collectFilesAndDirs(c *check.C) {
@@ -548,7 +548,7 @@ func (s *Suite) Test_PlistChecker_collectDirective(c *check.C) {
 		ck.collectDirective(&PlistLine{line, nil, line.Text})
 
 		t.CheckDeepEquals(keys(ck.allDirs), dirs)
-		t.Check(keys(ck.allFiles), check.HasLen, 0)
+		t.CheckLen(keys(ck.allFiles), 0)
 	}
 
 	test("@exec ${MKDIR} %D/a/b/c",
@@ -1522,7 +1522,7 @@ func (s *Suite) Test_plistLineSorter_Sort(c *check.C) {
 	sorter2 := NewPlistLineSorter((&PlistChecker{nil, nil, nil, "", Once{}, false}).
 		newLines(NewLines(lines.Filename, cleanedLines)))
 
-	c.Check(sorter2.unsortable, check.IsNil)
+	t.CheckNil(sorter2.unsortable)
 
 	sorter2.Sort()
 
@@ -1602,9 +1602,11 @@ func (s *Suite) Test_PlistRank_MoreGeneric(c *check.C) {
 }
 
 func (s *Suite) Test_NewPlistLines(c *check.C) {
+	t := s.Init(c)
+
 	lines := NewPlistLines()
 
-	c.Check(lines.all, check.NotNil)
+	t.CheckNotNil(lines.all)
 }
 
 func (s *Suite) Test_PlistLines_Add(c *check.C) {

@@ -49,7 +49,7 @@ func (s *Suite) Test_MkShWalker_Walk(c *check.C) {
 		line := t.NewLine("filename.mk", 1, "")
 		list, err := parseShellProgram(line, program)
 
-		if !c.Check(err, check.IsNil) || !c.Check(list, check.NotNil) {
+		if !t.CheckNil(err) || !t.CheckNotNil(list) {
 			return
 		}
 

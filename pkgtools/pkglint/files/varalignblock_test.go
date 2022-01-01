@@ -3468,7 +3468,7 @@ func (s *Suite) Test_varalignMkLine_rightMargin(c *check.C) {
 			block.Process(mkline)
 		})
 
-		t.Check(block.mkinfos, check.HasLen, 1)
+		t.CheckLen(block.mkinfos, 1)
 		for _, mkinfo := range block.mkinfos {
 			actualCommon, actualMargin := mkinfo.rightMargin()
 			t.CheckDeepEquals(

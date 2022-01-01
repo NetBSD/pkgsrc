@@ -140,7 +140,6 @@ func (s *Suite) Test_Pkgsrc_loadDocChanges__not_found(c *check.C) {
 func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Cglobal", "-Wall")
 	t.CreateFileLines("doc/CHANGES-2018",
 		"\tAdded category/package version 1.0 [author1 2015-01-01]", // Wrong year
 		"\tUpdated category/package to 1.5 [author2 2018-01-02]",
@@ -161,7 +160,7 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile(c *check.C) {
 		"",
 		"Normal paragraph.")
 
-	changes := G.Pkgsrc.loadDocChangesFromFile(t.File("doc/CHANGES-2018"))
+	changes := G.Pkgsrc.loadDocChangesFromFile(t.File("doc/CHANGES-2018"), true)
 
 	t.CheckDeepEquals(
 		changes, []*Change{
@@ -201,7 +200,7 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__not_found(c *check.C) {
 	t := s.Init(c)
 
 	t.ExpectFatal(
-		func() { G.Pkgsrc.loadDocChangesFromFile(t.File("doc/CHANGES-2018")) },
+		func() { G.Pkgsrc.loadDocChangesFromFile(t.File("doc/CHANGES-2018"), false) },
 		"FATAL: ~/doc/CHANGES-2018: Cannot be read.")
 }
 
@@ -354,7 +353,6 @@ func (s *Suite) Test_Pkgsrc_loadDocChangesFromFile__old(c *check.C) {
 func (s *Suite) Test_Pkgsrc_checkChangeVersion(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Cglobal", "-Wall")
 	t.CreateFileLines("doc/CHANGES-2020",
 		"\tAdded category/package version 1.0 [author1 2020-01-01]",
 		"\tAdded category/package version 1.0 [author1 2020-01-01]",
@@ -366,7 +364,7 @@ func (s *Suite) Test_Pkgsrc_checkChangeVersion(c *check.C) {
 		"\tMoved category/package to other/renamed [author1 2020-01-01]")
 	t.Chdir("doc")
 
-	G.Pkgsrc.loadDocChangesFromFile("CHANGES-2020")
+	G.Pkgsrc.loadDocChangesFromFile("CHANGES-2020", true)
 
 	// In line 3 there is no warning about the repeated addition since
 	// the multi-packages (Lua, PHP, Python) may add a package in
@@ -380,7 +378,6 @@ func (s *Suite) Test_Pkgsrc_checkChangeVersion(c *check.C) {
 func (s *Suite) Test_Pkgsrc_checkChangeVersionNumber(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCommandLine("-Cglobal", "-Wall")
 	t.CreateFileLines("doc/CHANGES-2020",
 		"\tAdded category/package version v1 [author1 2020-01-01]",
 		"\tUpdated category/package to v2 [author1 2020-01-01]",
@@ -388,7 +385,7 @@ func (s *Suite) Test_Pkgsrc_checkChangeVersionNumber(c *check.C) {
 		"\tUpdated category/package to 2020/03 [author1 2020-01-01]")
 	t.Chdir("doc")
 
-	G.Pkgsrc.loadDocChangesFromFile("CHANGES-2020")
+	G.Pkgsrc.loadDocChangesFromFile("CHANGES-2020", true)
 
 	t.CheckOutputLines(
 		"WARN: CHANGES-2020:1: Version number \"v1\" should start with a digit.",
@@ -950,7 +947,7 @@ func (s *Suite) Test_Pkgsrc_loadUntypedVars__local_varnames(c *check.C) {
 	}
 	added := func(varname string, basicType *BasicType) {
 		vartype := G.Pkgsrc.VariableType(nil, "CHECK_FILES_SKIP")
-		if t.Check(vartype, check.NotNil) {
+		if t.CheckNotNil(vartype) {
 			t.CheckEquals(vartype.basicType, BtPathPattern)
 		}
 	}
@@ -1145,7 +1142,7 @@ func (s *Suite) Test_Pkgsrc_ListVersions__invalid_argument(c *check.C) {
 	G.Testing = false
 	versions := G.Pkgsrc.ListVersions("databases", `^postgresql[0-9]+`, "$0", false)
 
-	t.Check(versions, check.HasLen, 0)
+	t.CheckLen(versions, 0)
 }
 
 func (s *Suite) Test_Pkgsrc_ListVersions__no_basedir(c *check.C) {
@@ -1153,7 +1150,7 @@ func (s *Suite) Test_Pkgsrc_ListVersions__no_basedir(c *check.C) {
 
 	versions := G.Pkgsrc.ListVersions("lang", `^python[0-9]+$`, "../../lang/$0", true)
 
-	c.Check(versions, check.HasLen, 0)
+	t.CheckLen(versions, 0)
 	t.CheckOutputLines(
 		"ERROR: ~/lang: Cannot find package versions of \"^python[0-9]+$\".")
 }
@@ -1165,7 +1162,7 @@ func (s *Suite) Test_Pkgsrc_ListVersions__no_subdirs(c *check.C) {
 
 	versions := G.Pkgsrc.ListVersions("lang", `^python[0-9]+$`, "../../lang/$0", true)
 
-	c.Check(versions, check.HasLen, 0)
+	t.CheckLen(versions, 0)
 	t.CheckOutputLines(
 		"ERROR: ~/lang: Cannot find package versions of \"^python[0-9]+$\".")
 }
@@ -1177,13 +1174,13 @@ func (s *Suite) Test_Pkgsrc_ListVersions__error_is_cached(c *check.C) {
 
 	versions := G.Pkgsrc.ListVersions("lang", `^python[0-9]+$`, "../../lang/$0", true)
 
-	c.Check(versions, check.HasLen, 0)
+	t.CheckLen(versions, 0)
 	t.CheckOutputLines(
 		"ERROR: ~/lang: Cannot find package versions of \"^python[0-9]+$\".")
 
 	versions2 := G.Pkgsrc.ListVersions("lang", `^python[0-9]+$`, "../../lang/$0", true)
 
-	c.Check(versions2, check.HasLen, 0)
+	t.CheckLen(versions2, 0)
 	t.CheckOutputEmpty() // No repeated error message
 }
 
@@ -1209,9 +1206,9 @@ func (s *Suite) Test_Pkgsrc_VariableType(c *check.C) {
 	test := func(varname string, vartype string) {
 		actualType := G.Pkgsrc.VariableType(nil, varname)
 		if vartype == "" {
-			c.Check(actualType, check.IsNil)
+			t.CheckNil(actualType)
 		} else {
-			if c.Check(actualType, check.NotNil) {
+			if t.CheckNotNil(actualType) {
 				t.CheckEquals(actualType.String(), vartype)
 			}
 		}
@@ -1240,12 +1237,12 @@ func (s *Suite) Test_Pkgsrc_VariableType__varparam(c *check.C) {
 
 	t1 := G.Pkgsrc.VariableType(nil, "FONT_DIRS")
 
-	c.Assert(t1, check.NotNil)
+	t.AssertNotNil(t1)
 	t.CheckEquals(t1.String(), "PathPattern (list, guessed)")
 
 	t2 := G.Pkgsrc.VariableType(nil, "FONT_DIRS.ttf")
 
-	c.Assert(t2, check.NotNil)
+	t.AssertNotNil(t2)
 	t.CheckEquals(t2.String(), "PathPattern (list, guessed)")
 }
 
@@ -1273,15 +1270,15 @@ func (s *Suite) Test_Pkgsrc_VariableType__from_mk(c *check.C) {
 
 	t.Main("-Wall", "category/package")
 
-	if typ := G.Pkgsrc.VariableType(nil, "PKGSRC_MAKE_ENV"); c.Check(typ, check.NotNil) {
+	if typ := G.Pkgsrc.VariableType(nil, "PKGSRC_MAKE_ENV"); t.CheckNotNil(typ) {
 		t.CheckEquals(typ.String(), "ShellWord (list, guessed)")
 	}
 
-	if typ := G.Pkgsrc.VariableType(nil, "CPPPATH"); c.Check(typ, check.NotNil) {
+	if typ := G.Pkgsrc.VariableType(nil, "CPPPATH"); t.CheckNotNil(typ) {
 		t.CheckEquals(typ.String(), "Pathlist (guessed)")
 	}
 
-	if typ := G.Pkgsrc.VariableType(nil, "OSNAME.Other"); c.Check(typ, check.NotNil) {
+	if typ := G.Pkgsrc.VariableType(nil, "OSNAME.Other"); t.CheckNotNil(typ) {
 		t.CheckEquals(typ.String(), "Unknown")
 	}
 

@@ -8,7 +8,7 @@ func (s *Suite) Test_Var_ConditionalVars(c *check.C) {
 	v := NewVar("VARNAME")
 
 	t.CheckEquals(v.IsConditional(), false)
-	t.Check(v.ConditionalVars(), check.IsNil)
+	t.CheckNil(v.ConditionalVars())
 
 	v.Write(t.NewMkLine("write.mk", 123, "VARNAME=\tconditional"), true, "OPSYS")
 
@@ -27,7 +27,7 @@ func (s *Suite) Test_Var_Refs(c *check.C) {
 
 	v := NewVar("VAR")
 
-	t.Check(v.Refs(), check.IsNil)
+	t.CheckNil(v.Refs())
 
 	// The referenced variables are taken from the mkline.
 	// They don't need to be passed separately.
@@ -95,7 +95,7 @@ func (s *Suite) Test_Var_ConstantValue__assign_conditional(c *check.C) {
 
 	v := NewVar("VARNAME")
 
-	t.Check(v.ConditionalVars(), check.IsNil)
+	t.CheckNil(v.ConditionalVars())
 
 	v.Write(t.NewMkLine("write.mk", 123, "VARNAME=\tconditional"), true, "OPSYS")
 
@@ -298,7 +298,7 @@ func (s *Suite) Test_Var_ReadLocations(c *check.C) {
 
 	v := NewVar("VAR")
 
-	t.Check(v.ReadLocations(), check.IsNil)
+	t.CheckNil(v.ReadLocations())
 
 	mkline123 := t.NewMkLine("read.mk", 123, "OTHER=\t${VAR}")
 	v.Read(mkline123)
@@ -319,7 +319,7 @@ func (s *Suite) Test_Var_WriteLocations(c *check.C) {
 
 	v := NewVar("VAR")
 
-	t.Check(v.WriteLocations(), check.IsNil)
+	t.CheckNil(v.WriteLocations())
 
 	mkline123 := t.NewMkLine("write.mk", 123, "VAR=\tvalue")
 	v.Write(mkline123, false)
