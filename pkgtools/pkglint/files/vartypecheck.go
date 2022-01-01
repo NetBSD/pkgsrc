@@ -219,7 +219,7 @@ func (cv *VartypeCheck) CFlag() {
 func (cv *VartypeCheck) Comment() {
 	value := cv.Value
 
-	// See pkgtools/url2pkg/files/url2pkg.pl, keyword "COMMENT".
+	// See pkgtools/url2pkg/files/url2pkg.py, keyword 'COMMENT'.
 	if value == "TODO: Short description of the package" {
 		cv.Errorf("COMMENT must be set.")
 	}
@@ -700,6 +700,17 @@ func (cv *VartypeCheck) GitTag() {
 
 	if len(tag) < 7 && matches(tag, `^[A-Fa-f0-9]+$`) {
 		cv.Warnf("The git commit name %q is too short to be reliable.", tag)
+	}
+}
+
+func (cv *VartypeCheck) GoModuleFile() {
+	tag := cv.ValueNoVar
+
+	valid := textproc.NewByteSet("!0-9@A-Za-z-+._/")
+	invalid := invalidCharacters(tag, valid)
+	if invalid != "" {
+		cv.Warnf("Invalid characters %q in Go modules filename.", invalid)
+		return
 	}
 }
 

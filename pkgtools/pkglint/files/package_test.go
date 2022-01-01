@@ -548,7 +548,7 @@ func (s *Suite) Test_Package_loadBuildlink3Pkgbase(c *check.C) {
 
 	t.CheckOutputEmpty()
 	seenPkgbase := pkg.seenPkgbase
-	t.Check(seenPkgbase.seen, check.HasLen, 2)
+	t.CheckLen(seenPkgbase.seen, 2)
 	t.CheckEquals(seenPkgbase.Seen("lib"), true)
 	t.CheckEquals(seenPkgbase.Seen("package"), true)
 }

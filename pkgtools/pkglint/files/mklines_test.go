@@ -516,7 +516,7 @@ func (s *Suite) Test_MkLines_collectUsedVariables__simple(c *check.C) {
 
 	mklines.collectUsedVariables()
 
-	t.Check(mklines.allVars.vs, check.HasLen, 1)
+	t.CheckLen(mklines.allVars.vs, 1)
 	t.CheckEquals(mklines.allVars.create("VAR").used, mkline)
 	t.CheckEquals(mklines.allVars.FirstUse("VAR"), mkline)
 }
@@ -1481,7 +1481,7 @@ func (s *Suite) Test_MkLines_ExpandLoopVar(c *check.C) {
 
 	t.CheckDeepEquals(files, strings.Split("abcdefgh", ""))
 	t.CheckDeepEquals(ranks, strings.Split("12345678", ""))
-	t.Check(diagonals, check.HasLen, 0)
+	t.CheckLen(diagonals, 0)
 }
 
 func (s *Suite) Test_MkLines_ExpandLoopVar__multi(c *check.C) {
@@ -1506,8 +1506,8 @@ func (s *Suite) Test_MkLines_ExpandLoopVar__multi(c *check.C) {
 	})
 
 	// As of June 2019, multi-variable .for loops are not yet implemented.
-	t.Check(keys, check.HasLen, 0)
-	t.Check(values, check.HasLen, 0)
+	t.CheckLen(keys, 0)
+	t.CheckLen(values, 0)
 }
 
 func (s *Suite) Test_MkLines_ExpandLoopVar__malformed_for(c *check.C) {
@@ -1527,5 +1527,5 @@ func (s *Suite) Test_MkLines_ExpandLoopVar__malformed_for(c *check.C) {
 		}
 	})
 
-	t.Check(values, check.HasLen, 0)
+	t.CheckLen(values, 0)
 }
