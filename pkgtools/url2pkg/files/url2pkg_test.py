@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.35 2022/01/01 15:04:58 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.36 2022/01/01 15:29:14 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -613,14 +613,10 @@ def test_Generator_adjust_site_from_sites_mk__PyPI():
         '',
         'DISTNAME=       apprise-0.9.6',
         'CATEGORIES=     pkgtools',
-        # TODO: ${MASTER_SITE_PYPI:=a/apprise/}
-        'MASTER_SITES=   https://files.pythonhosted.org/packages/da/8b/'
-        + '218264f5ce91df1ad27ce8021d51b747ef287627338fe05d170565358546/',
+        'MASTER_SITES=   ${MASTER_SITE_PYPI:=a/apprise/}',
         '',
         'MAINTAINER=     INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
-        # TODO: https://pypi.org/project/apprise/
-        'HOMEPAGE=       https://files.pythonhosted.org/packages/da/8b/'
-        + '218264f5ce91df1ad27ce8021d51b747ef287627338fe05d170565358546/',
+        'HOMEPAGE=       https://pypi.org/project/apprise/',
         'COMMENT=        TODO: Short description of the package',
         '#LICENSE=       # TODO: (see mk/license.mk)',
         '',
