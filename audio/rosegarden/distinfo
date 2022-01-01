@@ -1,14 +1,29 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 09:59:27 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/01/01 09:20:40 dholland Exp $
 
 BLAKE2s (rosegarden-2.1pl4.tar.gz) = afa53d18180ca96ab21cf7f7f5d777264d685fdc7f4d6be868d249ad88da0849
 SHA512 (rosegarden-2.1pl4.tar.gz) = 75caf2132ac1e89bd13c650750776793c86ded8fdd0e2237831ffe64d1d4bc53f1345c2e545005f6194320b832b134145e278e816d2e251a436f011a1221f640
 Size (rosegarden-2.1pl4.tar.gz) = 587134 bytes
-SHA1 (patch-aa) = 4c45840c9a7d0b3ee43ddb300de55a442df0f7da
-SHA1 (patch-ab) = 3319061b197bd135c4267c39ddd9fd92709347e1
-SHA1 (patch-ac) = 3f4f3ed849d037d3371b9ab786cb547d6e1c8daa
-SHA1 (patch-ad) = 22b2a1a060e8b2b3f7dda5d7c7189fc96b99c1a0
-SHA1 (patch-ae) = b6fb9815ee6918dbc5b28fd1fec6bca1d42cf028
-SHA1 (patch-af) = f3c99ccf142420255ae10f19bed37933ee24c744
-SHA1 (patch-ag) = 9f1185353c2663d7b250cfff45b2fdef8639e124
-SHA1 (patch-configure) = a593f4ece3dc1db8ff70583582744be8381b8525
+SHA1 (patch-aa) = bb348c1e6ce7fc4cbac2f286b04874602c92a412
+SHA1 (patch-ab) = 7a3149396f2df86f97f655a8ec1dc2cded6354ed
+SHA1 (patch-ac) = b5516381662bf3bda155756be79aa6a2b9e11d3b
+SHA1 (patch-ad) = 2cb0b47e4195d2615d6ea289e3da703ea62bb48b
+SHA1 (patch-ae) = ea37b06b28e5959c744a970226231e2969642e67
+SHA1 (patch-af) = 856597e0234b3bad262af8eda270960d1c693239
+SHA1 (patch-ag) = 2f10a9e24e77327ffa3349418ccf6fc7da003051
+SHA1 (patch-configure) = c05ac73375eb3a3ecc0fee1d6b36122a4cffb032
+SHA1 (patch-editor_src_Dechord.c) = 9a96c3eeaa42e2c17d58f2a17f88d6e70f6442a0
+SHA1 (patch-editor_src_Main.c) = abf0b610d3069d5f5a1363b03f1404f230527390
+SHA1 (patch-editor_src_MenuGroup.c) = e36fb84f4ffe57223deb34572b2143c47b642f90
+SHA1 (patch-editor_src_MenuTools.c) = 14f6ffab96693ca196108bb3704ec7603efd1c3c
+SHA1 (patch-editor_src_Rechord.c) = 43ba7f764256a0cd4a543eac3e9255a288724519
 SHA1 (patch-editor_src_midiout_c) = 7f4eca850df83af49b3f5c69ea1283e3dfa05ee8
+SHA1 (patch-lists_include_Lists.h) = 8a715eb1114ece5dec27c0e35dcd9d8856570a2b
+SHA1 (patch-lists_src_Lists.c) = 1c145bcac5f64ced07194aeba00615690ef884bb
+SHA1 (patch-sequencer_src_EventListWindow.c) = fee447dacb8150fb7fcff47a933e0d692f339fc9
+SHA1 (patch-sequencer_src_Main.c) = 76db0abf3f51298e5801291625e808d4b70263c0
+SHA1 (patch-sequencer_src_Menu.c) = a268df92bb30080c3ece3090fba1bb1e82eac97c
+SHA1 (patch-sequencer_src_MidiSetupDlgs.c) = 90e48d51a0ca5474c79bbe82392f35c2797b8d88
+SHA1 (patch-sequencer_src_PianoRoll.c) = bb8cc302c34719e9ec8b180477bf72b76f381ce7
+SHA1 (patch-topbox_src_Main.c) = 313dac1e780bca663de7e9b6e66f3bee456d6752
+SHA1 (patch-yawn_src_YFile.c) = 1c72785d2b3cdf1ff24a95e6148a080e9cf89764
+SHA1 (patch-yawn_src_YOptionMenu.c) = 7822669bb6913793a1eb6789f2e3707e41edfb8e
