@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.4 2022/01/01 13:27:46 rillig Exp $
+$NetBSD: CHANGES-2022,v 1.5 2022/01/01 14:04:20 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -6,3 +6,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/py-ptyprocess to 0.7.0nb1 [martin 2022-01-01]
 	Updated pkgtools/pkglint to 21.4.1 [rillig 2022-01-01]
 	Updated pkgtools/lintpkgsrc to 4.97 [rillig 2022-01-01]
+	Updated pkgtools/url2pkg to 21.4.0 [rillig 2022-01-01]
