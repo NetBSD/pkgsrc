@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2021/12/09 16:56:29 pin Exp $
+# $NetBSD: Makefile,v 1.16 2022/01/01 22:34:45 pin Exp $
 
-DISTNAME=	nushell-0.41.0
+DISTNAME=	nushell-0.42.0
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nushell/}
 
