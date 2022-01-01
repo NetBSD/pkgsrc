@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2021/07/06 20:01:17 rhialto Exp $
+# $NetBSD: Makefile,v 1.19 2022/01/01 12:59:15 rhialto Exp $
 
 DISTNAME=	pam_af-1.0.2
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=	http://mbsd.msk.ru/dist/
 EXTRACT_SUFX=	.tar.bz2
