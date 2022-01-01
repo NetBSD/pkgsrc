@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/11/04 16:45:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/01/01 14:55:48 wiz Exp $
 bin/audiotools-config
 bin/cdda2track
 bin/cddainfo
@@ -18,7 +18,10 @@ bin/trackrename
 bin/tracksplit
 bin/tracktag
 bin/trackverify
-${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/audiotools/__init__.py
 ${PYSITELIB}/audiotools/__init__.pyc
 ${PYSITELIB}/audiotools/__init__.pyo
@@ -38,9 +41,9 @@ ${PYSITELIB}/audiotools/au.pyc
 ${PYSITELIB}/audiotools/au.pyo
 ${PYSITELIB}/audiotools/bitstream.so
 ${PYSITELIB}/audiotools/cdio.so
+${PYSITELIB}/audiotools/cdtoc.py
 ${PYSITELIB}/audiotools/cdtoc.pyc
 ${PYSITELIB}/audiotools/cdtoc.pyo
-${PYSITELIB}/audiotools/cdtoc.py
 ${PYSITELIB}/audiotools/cue/__init__.py
 ${PYSITELIB}/audiotools/cue/__init__.pyc
 ${PYSITELIB}/audiotools/cue/__init__.pyo
