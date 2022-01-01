@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/01/30 23:32:23 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/01 21:21:41 wiz Exp $
 
 DISTNAME=	stem-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/stem/}
 
@@ -28,9 +29,11 @@ REPLACE_PYTHON+=	run_tests.py
 REPLACE_PYTHON+=	setup.py
 REPLACE_PYTHON+=	tor-prompt
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 do-test:
 	cd ${WRKSRC} && ./run_tests.py --unit
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
