@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.78 2021/12/21 17:17:20 nros Exp $
+# $NetBSD: Makefile,v 1.79 2022/01/01 21:21:41 wiz Exp $
 
 DISTNAME=		tortoisehg-6.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		devel python
 MASTER_SITES=		https://www.mercurial-scm.org/release/tortoisehg/targz/
 
@@ -45,7 +46,12 @@ post-install:
 	cd ${WRKSRC}/doc/build && ${PAX} -pp -rw html ${DESTDIR}${PREFIX}/share/doc/tortoisehg
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
+
+.if ${PYPKGPREFIX} == "py27"
+_PYSETUPTOOLSINSTALLARGS:=	${PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
+.endif
+ 
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/py-qt5-qscintilla/buildlink3.mk"

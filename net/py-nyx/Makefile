@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2019/11/03 11:45:51 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/01 21:21:41 wiz Exp $
 
 .include "../../net/py-nyx/Makefile.common"
 
@@ -15,6 +15,8 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-stem>=1.7.0:../../devel/py-stem
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=	run_nyx
 REPLACE_PYTHON+=	run_tests.py
