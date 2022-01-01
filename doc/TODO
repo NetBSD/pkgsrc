@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21388 2021/12/31 14:18:15 adam Exp $
+$NetBSD: TODO,v 1.21389 2022/01/01 07:53:53 dholland Exp $
 
 Suggested new packages
 ======================
@@ -1698,8 +1698,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o root-6.24
 	o root-tail-1.2
 	o ropper-1.13.6
-	o rosegarden-14.12
-	o rosegarden4-1.7.0 [replacing audio/rosegarden|pkgsrc-wip]
+	o rosegarden-21.12 [updating wip; audio/rosegarden -> rosegarden-x11]
 	o rox-session-0.29
 	o roxirc-2.0
 	o rp-l2tp-0.4
