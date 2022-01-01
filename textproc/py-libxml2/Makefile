@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2021/12/31 15:18:37 tnn Exp $
+# $NetBSD: Makefile,v 1.73 2022/01/01 21:21:14 wiz Exp $
 
 .include "../../textproc/libxml2/Makefile.common"
 
@@ -27,6 +27,7 @@ BUILDLINK_TRANSFORM.Darwin+=	opt:-bundle:-dynamiclib
 
 .if ${OPSYS} == "Darwin"
 post-install: fix-darwin-install-name
+.PHONY: fix-darwin-install-name
 fix-darwin-install-name:
 	install_name_tool -id ${PREFIX}/${PYSITELIB}/libxml2mod.so \
 	    ${DESTDIR}${PREFIX}/${PYSITELIB}/libxml2mod.so
@@ -37,10 +38,7 @@ EGG_NAME=	${DISTNAME:S/-/_python-/}
 BUILD_DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
 .include "../../lang/python/egg.mk"
-PLIST_VARS+=			py3x
-.if ${_PYTHON_VERSION} > 27
-PLIST.py3x=			yes
-.else
+.if ${PYPKGPREFIX} == "py27"
 _PYSETUPTOOLSINSTALLARGS:=	${PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
 .endif
 .include "../../converters/libiconv/buildlink3.mk"
