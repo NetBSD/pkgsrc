@@ -731,13 +731,11 @@ func (s *ShSuite) test(program string, expected *MkShList) {
 
 	zeroMeansSuccess := parser.Parse(lexer)
 
-	c := s.c
-
 	if t.CheckEquals(zeroMeansSuccess, 0) && t.CheckEquals(lexer.error, "") {
 		if !t.CheckDeepEquals(lexer.result, expected) {
 			actualJSON, actualErr := json.MarshalIndent(lexer.result, "", "  ")
 			expectedJSON, expectedErr := json.MarshalIndent(expected, "", "  ")
-			if c.Check(actualErr, check.IsNil) && c.Check(expectedErr, check.IsNil) {
+			if t.CheckNil(actualErr) && t.CheckNil(expectedErr) {
 				t.CheckDeepEquals(string(actualJSON), string(expectedJSON))
 			}
 		}

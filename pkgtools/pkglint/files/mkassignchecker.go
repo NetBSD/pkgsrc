@@ -645,8 +645,11 @@ func (ck *MkAssignChecker) checkRightVaruse() {
 	}
 }
 
-// checkVaruseShell is very similar to checkRightVaruse, they just differ
-// in the way they determine isWordPart.
+// checkVaruseShell checks that in a variable assignment, each variable
+// expression on the right-hand side of the assignment operator has the
+// correct data type and quoting.
+//
+// See checkRightVaruse for non-shell variables.
 func (ck *MkAssignChecker) checkVaruseShell(vartype *Vartype, time VucTime) {
 	if trace.Tracing {
 		defer trace.Call(vartype, time)()
