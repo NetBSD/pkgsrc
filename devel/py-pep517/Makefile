@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/10/26 17:13:01 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/01 21:21:41 wiz Exp $
 
 DISTNAME=	pep517-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pep517/}
 
@@ -19,5 +20,10 @@ USE_LANGUAGES=	# none
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
+
+.if ${PYPKGPREFIX} == "py27"
+_PYSETUPTOOLSINSTALLARGS:=	${PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
+.endif
+ 
 .include "../../mk/bsd.pkg.mk"
