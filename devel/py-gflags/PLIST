@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/05/31 20:07:00 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/01 17:31:36 wiz Exp $
 bin/gflags2man${PYVERSSUFFIX}.py
 ${PYSITELIB}/gflags/__init__.py
 ${PYSITELIB}/gflags/__init__.pyc
@@ -36,4 +36,7 @@ ${PYSITELIB}/gflags/third_party/pep257/__init__.pyo
 ${PYSITELIB}/gflags/validators.py
 ${PYSITELIB}/gflags/validators.pyc
 ${PYSITELIB}/gflags/validators.pyo
-${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
