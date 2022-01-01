@@ -1,12 +1,9 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:06:58 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/01/01 16:47:20 rhialto Exp $
 
-BLAKE2s (sslh-1.21c.tar.gz) = f8a6a048eaf9fa88d79a39237bc6aaed761740c93fe03b935586389eee81d3e8
-SHA512 (sslh-1.21c.tar.gz) = 9446c6afe965684c5d6406ac8917338f57d95f8fbfacd7a51193dd5dbac77e1ed5e39eb8e2575e7025a8612b25e9fba7e64832a48c999f366875217b9328da22
-Size (sslh-1.21c.tar.gz) = 111895 bytes
-SHA1 (patch-argtable3.c) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+BLAKE2s (sslh-1.22c.tar.gz) = 81e3a9d77b7c0030e4cf8edf3344f3e4fd06736952939aa66c55b0d6aa0176e2
+SHA512 (sslh-1.22c.tar.gz) = f13560fbe74b5b08e9b360985d6afd27f2c7e157d220919162e354f3711b90f43bb81f9bda341fb21fef2651acd488f52e9a04dc2da28861540f579e7ca798c4
+Size (sslh-1.22c.tar.gz) = 146954 bytes
 SHA1 (patch-common.c) = e5aa0cc38e9c62a765400b08ed700e9d2f08f2db
-SHA1 (patch-common.h) = 3e4cc77aeedf9fa4e94329dcf1c1c65099d3ae68
-SHA1 (patch-echosrv.c) = 611044fd7ed1fd52c44e2d8ff393091c35478e17
-SHA1 (patch-sslh-conf.c) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-sslh-main.c) = 059fd93a7412fc2ca38b29ae0c65783f4213e77c
-SHA1 (patch-sslh-select.c) = d470e6dc803164fbdfa77ddc189cdb4dd7672bd4
+SHA1 (patch-common.h) = d89c6ce3f9a4f2b4b4c734adcafd0eed6abca84e
+SHA1 (patch-echosrv.c) = 96832c2391ff63cd96efa8e65270be6845f4a306
+SHA1 (patch-sslh-select.c) = ea07bf85d6ccdcd3815d49bb0131439573152502
