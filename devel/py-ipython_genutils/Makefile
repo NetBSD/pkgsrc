@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:03 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/01 16:26:34 ryoon Exp $
 
 DISTNAME=	ipython_genutils-0.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipython_genutils/}
@@ -13,5 +13,5 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
