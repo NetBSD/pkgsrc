@@ -25,31 +25,35 @@ func (s *Suite) Test_Load(c *check.C) {
 	t := s.Init(c)
 
 	nonexistent := t.File("nonexistent")
-	empty := t.CreateFileLines("empty")
+	empty := t.CreateFileLines("empty",
+		nil...)
 	oneLiner := t.CreateFileLines("one-liner",
 		"hello, world")
 
-	t.Check(Load(nonexistent, 0), check.IsNil)
-	t.Check(Load(empty, 0).Lines, check.HasLen, 0)
+	t.CheckNil(Load(nonexistent, 0))
+	t.CheckLen(Load(empty, 0).Lines, 0)
 	t.CheckEquals(Load(oneLiner, 0).Lines[0].Text, "hello, world")
 
 	t.CheckOutputEmpty()
 
-	t.Check(Load(nonexistent, LogErrors), check.IsNil)
-	t.Check(Load(empty, LogErrors).Lines, check.HasLen, 0)
+	t.CheckNil(Load(nonexistent, LogErrors))
+	t.CheckLen(Load(empty, LogErrors).Lines, 0)
 	t.CheckEquals(Load(oneLiner, LogErrors).Lines[0].Text, "hello, world")
 
 	t.CheckOutputLines(
 		"ERROR: ~/nonexistent: Cannot be read.")
 
-	t.Check(Load(nonexistent, NotEmpty), check.IsNil)
-	t.Check(Load(empty, NotEmpty), check.IsNil)
+	t.CheckNil(Load(nonexistent, NotEmpty))
+	t.CheckNil(Load(empty, NotEmpty))
 	t.CheckEquals(Load(oneLiner, NotEmpty).Lines[0].Text, "hello, world")
 
+	// Specifying NotEmpty only makes sense when combined with LogErrors
+	// or with MustSucceed.  On its own, NotEmpty returns nil in error
+	// cases, which is indistinguishable from an empty slice.
 	t.CheckOutputEmpty()
 
-	t.Check(Load(nonexistent, NotEmpty|LogErrors), check.IsNil)
-	t.Check(Load(empty, NotEmpty|LogErrors), check.IsNil)
+	t.CheckNil(Load(nonexistent, NotEmpty|LogErrors))
+	t.CheckNil(Load(empty, NotEmpty|LogErrors))
 	t.CheckEquals(Load(oneLiner, NotEmpty|LogErrors).Lines[0].Text, "hello, world")
 
 	t.CheckOutputLines(

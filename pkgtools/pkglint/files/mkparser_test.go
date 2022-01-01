@@ -378,7 +378,7 @@ func (s *Suite) Test_MkParser_DependencyPattern(c *check.C) {
 	testRest := func(pattern string, expected DependencyPattern, rest string) {
 		parser := NewMkParser(nil, pattern)
 		dp := parser.DependencyPattern()
-		if c.Check(dp, check.NotNil) {
+		if t.CheckNotNil(dp) {
 			t.CheckEquals(*dp, expected)
 			t.CheckEquals(parser.Rest(), rest)
 		}
@@ -387,7 +387,7 @@ func (s *Suite) Test_MkParser_DependencyPattern(c *check.C) {
 	testNil := func(pattern string) {
 		parser := NewMkParser(nil, pattern)
 		dp := parser.DependencyPattern()
-		if c.Check(dp, check.IsNil) {
+		if t.CheckNil(dp) {
 			t.CheckEquals(parser.Rest(), pattern)
 		}
 	}

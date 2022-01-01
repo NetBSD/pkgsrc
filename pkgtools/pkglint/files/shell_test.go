@@ -2019,7 +2019,7 @@ func (s *Suite) Test_splitIntoShellTokens__unfinished_dquot(c *check.C) {
 	line := t.NewLine("filename.mk", 1, "")
 	words, rest := splitIntoShellTokens(line, text)
 
-	c.Check(words, check.IsNil)
+	t.CheckNil(words)
 	t.CheckEquals(rest, "\"")
 }
 
