@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2022/01/01 12:40:32 martin Exp $
+# $NetBSD: Makefile,v 1.28 2022/01/01 17:43:42 wiz Exp $
 
 DISTNAME=	pexpect-4.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,4 +16,9 @@ DEPENDS+=	${PYPKGPREFIX}-ptyprocess>=0.5:../../sysutils/py-ptyprocess
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+
+.if ${PYPKGPREFIX} == "py27"
+_PYSETUPTOOLSINSTALLARGS:=	${PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
+.endif
+
 .include "../../mk/bsd.pkg.mk"
