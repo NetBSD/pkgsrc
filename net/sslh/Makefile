@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2021/06/13 12:04:21 rhialto Exp $
+# $NetBSD: Makefile,v 1.16 2022/01/01 16:47:20 rhialto Exp $
 
-DISTNAME=	sslh-1.21c
+DISTNAME=	sslh-1.22c
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yrutschle/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -40,6 +40,6 @@ do-install:
 
 .include "../../devel/libconfig/buildlink3.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

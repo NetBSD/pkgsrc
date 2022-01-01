@@ -1,15 +1,17 @@
-$NetBSD: patch-echosrv.c,v 1.2 2014/11/28 10:45:28 bsiegert Exp $
+$NetBSD: patch-echosrv.c,v 1.2 2014/11/28 10:45:28 bsiegert Exp 
 
-* getopt_long_only does not exist on NetBSD getopt.
+Provide allow_severity and deny_severity for libwrap.
 
---- echosrv.c.orig	2014-02-11 21:06:01.000000000 +0000
+--- echosrv.c.orig	2022-01-01 16:38:28.450058726 +0000
 +++ echosrv.c
-@@ -64,7 +64,7 @@ void parse_cmdline(int argc, char* argv[
-     };
-     struct addrinfo **a;
+@@ -41,6 +41,10 @@
+ #define SA_NOCLDWAIT 0
+ #endif
  
--    while ((c = getopt_long_only(argc, argv, "l:p:", options, NULL)) != -1) {
-+    while ((c = getopt_long(argc, argv, "l:p:", options, NULL)) != -1) {
-         if (c == 0) continue;
++#ifdef LIBWRAP
++int allow_severity =0, deny_severity = 0;
++#endif
++
+ struct echocfg_item cfg;
  
-         switch (c) {
+ void check_res_dump(int res, struct addrinfo *addr, char* syscall)
