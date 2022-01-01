@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.20 2020/12/17 16:17:45 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.21 2022/01/01 13:27:37 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -961,12 +961,13 @@ sub parse_makefile_pkgsrc($) {
         debug("$file: DISTNAME=$vars->{DISTNAME}\n");
     }
 
-    if ( !defined $pkgname || $pkgname !~ /(.*)-(\d.*)/ ) {
+    if ( !defined $pkgname || $pkgname =~ /\$/ || $pkgname !~ /(.*)-(\d.*)/ ) {
 
         # invoke make here as a last resort
         my ($pkgsrcdir) = ( $file =~ m:(/.*)/: );
+        debug("Running '$conf_make' in '$pkgsrcdir'\n");
         my $pid = open3( \*WTR, \*RDR, \*ERR,
-            "cd $pkgsrcdir ; ${conf_make} show-vars VARNAMES=PKGNAME" );
+            "cd $pkgsrcdir || exit 1; ${conf_make} show-vars VARNAMES=PKGNAME" );
         if ( !$pid ) {
             warn "$file: Unable to run make: $!";
         }
