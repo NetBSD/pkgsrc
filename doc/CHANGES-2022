@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.11 2022/01/01 15:48:38 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.12 2022/01/01 16:15:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -13,3 +13,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/dbip-city-lite to 2022.01 [fcambus 2022-01-01]
 	Updated devel/py-backcall to 0.2.0nb1 [ryoon 2022-01-01]
 	Updated net/dbip-country-lite to 2022.01 [fcambus 2022-01-01]
+	Updated devel/py-testpath to 0.3.1nb1 [ryoon 2022-01-01]
