@@ -272,7 +272,7 @@ func (t *Tester) SetUpType(varname string, basicType *BasicType,
 	// Make sure that registering the type succeeds.
 	// This is necessary for BtUnknown and guessed types.
 	vartype := G.Pkgsrc.VariableType(nil, varname)
-	t.c.Assert(vartype.basicType, check.Equals, basicType)
+	t.AssertEquals(vartype.basicType, basicType)
 }
 
 // SetUpFileLines creates a temporary file and writes the given lines to it.
@@ -544,11 +544,8 @@ func (t *Tester) CreateFileLines(filename RelPath, lines ...string) CurrPath {
 	}
 
 	abs := t.File(filename)
-	err := os.MkdirAll(abs.Dir().String(), 0777)
-	t.c.Assert(err, check.IsNil)
-
-	err = abs.WriteString(content.String())
-	t.c.Assert(err, check.IsNil)
+	t.AssertNil(os.MkdirAll(abs.Dir().String(), 0777))
+	t.AssertNil(abs.WriteString(content.String()))
 
 	G.fileCache.Evict(abs)
 
@@ -681,8 +678,7 @@ func (t *Tester) Chdir(dirname RelPath) {
 // The file or directory must exist.
 func (t *Tester) Remove(filename RelPath) {
 	abs := t.File(filename)
-	err := os.Remove(abs.String())
-	t.c.Assert(err, check.IsNil)
+	t.AssertNil(os.Remove(abs.String()))
 	G.fileCache.Evict(abs)
 }
 
@@ -859,11 +855,31 @@ func (t *Tester) Main(args ...string) int {
 	return G.Main(&t.stdout, &t.stderr, argv)
 }
 
+func (t *Tester) AssertNil(obj interface{}) {
+	t.c.Assert(obj, check.IsNil)
+}
+
+func (t *Tester) AssertNotNil(obj interface{}) {
+	t.c.Assert(obj, check.NotNil)
+}
+
+func (t *Tester) AssertEquals(actual, expected interface{}) {
+	t.c.Assert(actual, check.Equals, expected)
+}
+
 // Check delegates a check to the check.Check function.
 // Thereby, there is no need to distinguish between c.Check and t.Check
 // in the test code.
 func (t *Tester) Check(obj interface{}, checker check.Checker, args ...interface{}) bool {
 	return t.c.Check(obj, checker, args...)
+}
+
+func (t *Tester) CheckNil(obj interface{}) bool {
+	return t.c.Check(obj, check.IsNil)
+}
+
+func (t *Tester) CheckNotNil(obj interface{}) bool {
+	return t.c.Check(obj, check.NotNil)
 }
 
 func (t *Tester) CheckEquals(actual interface{}, expected interface{}) bool {
@@ -882,6 +898,10 @@ func (t *Tester) CheckDeepEquals(actual interface{}, expected interface{}) bool 
 func (t *Tester) CheckDeepEqualsf(actual interface{}, expected interface{}, format string, args ...interface{}) bool {
 	return t.c.Check(actual, check.DeepEquals, expected,
 		check.Commentf(format, args...))
+}
+
+func (t *Tester) CheckLen(obj interface{}, expected int) bool {
+	return t.c.Check(obj, check.HasLen, expected)
 }
 
 // InternalErrorf reports a consistency error in the tests.
@@ -1284,7 +1304,7 @@ func (t *Tester) DisableTracing() {
 // they equal the given lines.
 func (t *Tester) CheckFileLines(filename RelPath, lines ...string) {
 	content, err := t.File(filename).ReadString()
-	t.c.Assert(err, check.IsNil)
+	t.AssertNil(err)
 	actualLines := strings.Split(content, "\n")
 	actualLines = actualLines[:len(actualLines)-1]
 	t.CheckDeepEquals(emptyToNil(actualLines), emptyToNil(lines))

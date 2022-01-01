@@ -536,7 +536,7 @@ func (s *Suite) Test_MkLineParser_parseDirective(c *check.C) {
 		parser := NewMkLineParser()
 		splitResult := parser.split(line, input, true)
 		mkline := parser.parseDirective(line, splitResult)
-		if !c.Check(mkline, check.NotNil) {
+		if !t.CheckNotNil(mkline) {
 			return
 		}
 
