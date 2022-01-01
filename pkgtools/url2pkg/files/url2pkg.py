@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.34 2022/01/01 14:04:11 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.35 2022/01/01 15:29:14 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -412,6 +412,28 @@ class Generator:
         self.homepage = f'https://{project}.sourceforge.net/'
         self.distfile = filename
 
+    def adjust_site_PyPI(self):
+        pattern = r'''(?x)
+            ^
+            https://files\.pythonhosted\.org/packages/
+            ../../.{60}/  # hash
+            (             # distfile
+            (.*)          #     project
+            -[0-9].*      #     version
+            \.tar\.gz
+            )
+            $
+            '''
+        m = re.search(pattern, self.url)
+        if not m:
+            return
+
+        filename, project = m.groups()
+        self.master_sites = f'${{MASTER_SITE_PYPI:={project[0]}/{project}/}}'
+        self.homepage = f'https://pypi.org/project/{project}/'
+        self.distfile = filename
+
+
     def adjust_site_GitHub_archive(self):
         pattern = r'''(?x)
             ^
@@ -545,6 +567,7 @@ class Generator:
         self.adjust_site_GitHub_archive()
         self.adjust_site_GitHub_release()
         self.foreach_site_from_sites_mk(self.adjust_site_from_sites_mk)
+        self.adjust_site_PyPI()
         self.adjust_site_other()
         self.adjust_everything_else()
         return self.generate_lines()
@@ -1181,7 +1204,7 @@ class Adjuster:
 
 
 def usage():
-    sys.exit(f'usage: {sys.argv[0]} [-v|--verbose] [URL]')
+    sys.exit(f'usage: {sys.argv[0]} [-v|--verbose] URL')
 
 
 def main(argv: List[str], g: Globals):
