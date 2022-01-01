@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.15 2022/01/01 16:25:04 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.16 2022/01/01 16:27:01 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -17,3 +17,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-entrypoints to 0.3nb1 [ryoon 2022-01-01]
 	Updated devel/py-traitlets to 5.1.1nb1 [ryoon 2022-01-01]
 	Updated devel/py-ipython to 7.30.1nb1 [ryoon 2022-01-01]
+	Updated devel/py-ipython_genutils to 0.2.0nb2 [ryoon 2022-01-01]
