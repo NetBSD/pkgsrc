@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2021/03/20 19:04:06 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/01 12:29:27 martin Exp $
 
 DISTNAME=	ptyprocess-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/ptyprocess/}
 
@@ -15,5 +16,5 @@ USE_LANGUAGES=	# none
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} -m unittest tests/test_*
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
