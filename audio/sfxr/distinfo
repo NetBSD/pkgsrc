@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 09:59:28 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/01/01 09:25:49 dholland Exp $
 
 BLAKE2s (sfxr-sdl-1.2.1.tar.gz) = a6d245c0be32c91398b6418e53245def1c3d93342389978f86c841ba6a6a5f6a
 SHA512 (sfxr-sdl-1.2.1.tar.gz) = a918f5212d77e10769d44808e0fa34c3df1da6880663c6a7d966860d145c0c2979b6a6772d12a35ca44b4d7337a38698c722569446eca95c2041ae86ec691adc
 Size (sfxr-sdl-1.2.1.tar.gz) = 19444 bytes
 SHA1 (patch-Makefile) = 95463748fccf863936c8bfc4f45a411d8b4b98b3
+SHA1 (patch-sdlkit.h) = 81d7383650447f3aeff34b4de834fd2f7a9e1b02
