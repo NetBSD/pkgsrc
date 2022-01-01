@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2020/01/22 21:24:57 adam Exp $
+# $NetBSD: Makefile,v 1.27 2022/01/01 12:40:32 martin Exp $
 
 DISTNAME=	pexpect-4.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pexpect/}
 
@@ -14,5 +15,5 @@ DEPENDS+=	${PYPKGPREFIX}-ptyprocess>=0.5:../../sysutils/py-ptyprocess
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
