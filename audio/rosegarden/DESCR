@@ -1,4 +1,8 @@
-Decent Notation and MIDI `piano roll' editor
+Music notation and MIDI `piano roll' editor
+
+This is the (now very old) X11 version of Rosegarden.
+
+(The following note is from 2002.)
 
 Caveats: I use only the notation editor. I've never gotten MIDI of any sort
 up on my machines, so I have no idea if the MIDI player works.
