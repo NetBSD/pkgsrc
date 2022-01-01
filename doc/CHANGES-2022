@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.19 2022/01/01 18:53:13 rhialto Exp $
+$NetBSD: CHANGES-2022,v 1.20 2022/01/01 19:02:43 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -21,3 +21,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/py-gmpy to 1.17nb1 [ryoon 2022-01-01]
 	Updated net/sslh to 1.22c [rhialto 2022-01-01]
 	Updated comms/gkermit to 2.01 [rhialto 2022-01-01]
+	Updated archivers/lha to 114.9.20211125 [rhialto 2022-01-01]
