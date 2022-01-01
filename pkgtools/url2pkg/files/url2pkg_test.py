@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.34 2022/01/01 14:04:11 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.35 2022/01/01 15:04:58 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -592,6 +592,35 @@ def test_Generator_adjust_site_from_sites_mk__GNU():
         '',
         'MAINTAINER=     INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
         'HOMEPAGE=       https://www.gnu.org/software/cflow/',
+        'COMMENT=        TODO: Short description of the package',
+        '#LICENSE=       # TODO: (see mk/license.mk)',
+        '',
+        '# url2pkg-marker (please do not remove this line.)',
+        '.include "../../mk/bsd.pkg.mk"',
+    ]
+
+
+def test_Generator_adjust_site_from_sites_mk__PyPI():
+    url = ('https://files.pythonhosted.org/'
+           + 'packages/da/8b/218264f5ce91df1ad27ce8021d51b747ef287627338fe05d170565358546/'
+           + 'apprise-0.9.6.tar.gz')
+    generator = Generator(url)
+
+    lines = generator.generate_Makefile()
+
+    assert detab(lines) == [
+        mkcvsid,
+        '',
+        'DISTNAME=       apprise-0.9.6',
+        'CATEGORIES=     pkgtools',
+        # TODO: ${MASTER_SITE_PYPI:=a/apprise/}
+        'MASTER_SITES=   https://files.pythonhosted.org/packages/da/8b/'
+        + '218264f5ce91df1ad27ce8021d51b747ef287627338fe05d170565358546/',
+        '',
+        'MAINTAINER=     INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
+        # TODO: https://pypi.org/project/apprise/
+        'HOMEPAGE=       https://files.pythonhosted.org/packages/da/8b/'
+        + '218264f5ce91df1ad27ce8021d51b747ef287627338fe05d170565358546/',
         'COMMENT=        TODO: Short description of the package',
         '#LICENSE=       # TODO: (see mk/license.mk)',
         '',
