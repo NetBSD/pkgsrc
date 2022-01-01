@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.29 2021/04/21 09:03:45 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2022/01/01 18:53:02 rhialto Exp $
 
-DISTNAME=	gku100
-PKGNAME=	gkermit-1.00
-PKGREVISION=	1
+DISTNAME=	gku201
+PKGNAME=	gkermit-2.01
 CATEGORIES=	comms
-MASTER_SITES=	# ftp://kermit.columbia.edu/kermit/archives/
+MASTER_SITES=	https://www.kermitproject.org/ftp/kermit/archives/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.columbia.edu/kermit/gkermit.html
+HOMEPAGE=	https://www.kermitproject.org/gkermit.html
 COMMENT=	Minimal implementation of the ``kermit'' protocol (GPL'd)
+LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}
 BUILD_TARGET=	posix
