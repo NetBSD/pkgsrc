@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.33 2021/11/14 09:20:15 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.34 2022/01/01 14:04:11 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -692,7 +692,6 @@ def test_Generator_adjust_everything_else__v8():
 
 def test_Generator_generate_package(tmp_path: Path):
     url = 'https://ftp.gnu.org/pub/gnu/cflow/cflow-1.6.tar.gz'
-    g.editor = 'true'  # the shell command
     g.make = 'true'  # the shell command
     g.pkgdir = tmp_path
 
@@ -1561,7 +1560,6 @@ def test_main__verbose():
 def test_main__valid_URL():
     import shutil
 
-    g.editor = 'true'
     g.make = os.getenv('MAKE') or sys.exit('MAKE must be set')
     g.pkgdir = g.pkgsrcdir / 'pkgtools' / 'url2pkg-test-main'
     g.pkgdir.is_dir() and shutil.rmtree(g.pkgdir)
