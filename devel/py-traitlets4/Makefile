@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/06/10 05:43:23 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/01 21:21:41 wiz Exp $
 
 DISTNAME=	traitlets-4.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/traitlets/}
 
@@ -21,5 +22,10 @@ DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
+
+.if ${_PYTHON_VERSION} == 27
+_PYSETUPTOOLSINSTALLARGS:=	${PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
+.endif
+
 .include "../../mk/bsd.pkg.mk"
