@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.7 2017/12/18 15:06:26 jperkin Exp $
+$NetBSD: patch-ae,v 1.8 2022/01/01 15:21:14 wiz Exp $
 
 --- configure.orig	2002-10-04 05:33:59.000000000 +0000
 +++ configure
@@ -13,7 +13,7 @@ $NetBSD: patch-ae,v 1.7 2017/12/18 15:06:26 jperkin Exp $
      ;;
  esac
  
-@@ -4072,7 +4072,8 @@ fi
+@@ -4072,7 +4071,8 @@ fi
      EXTRA_LIB_SPECS="-ldl"
      ;;
  
@@ -23,19 +23,19 @@ $NetBSD: patch-ae,v 1.7 2017/12/18 15:06:26 jperkin Exp $
      # Not available on all versions:  check for include file.
      ac_safe=`echo "dlfcn.h" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for dlfcn.h""... $ac_c" 1>&6
-@@ -4109,9 +4110,10 @@ test_ok=no
+@@ -4109,9 +4109,10 @@ test_ok=no
  fi
  
      if test "$test_ok" = yes; then
-+      LDFLAGS="-L${prefix}/lib -L${X11BASE}/lib -Wl,-R${prefix}/lib -Wl,-R${X11BASE}/lib"
++      LDFLAGS="-L${prefix}/lib -L${X11BASE}/lib -Wl,-R${prefix}/lib -Wl,-R${X11BASE}/lib ${LDF}"
        SHLIB_CFLAGS="-fpic"
        SHLIB_LD="ld"
 -      SHLIB_LD_FLAGS="-Bshareable -x"
-+      SHLIB_LD_FLAGS="-Bshareable -x -R${prefix}/lib -R${X11BASE}/lib"
++      SHLIB_LD_FLAGS="-Bshareable -x -R${prefix}/lib -R${X11BASE}/lib ${LDF}"
      fi
      ;;
  
-@@ -4181,9 +4183,9 @@ fi
+@@ -4181,9 +4182,9 @@ fi
    *-solaris2*)
  
      SHLIB_CFLAGS="-KPIC"
