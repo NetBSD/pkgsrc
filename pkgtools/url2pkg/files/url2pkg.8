@@ -1,4 +1,4 @@
-.\"	$NetBSD: url2pkg.8,v 1.14 2019/10/06 12:50:41 rillig Exp $
+.\"	$NetBSD: url2pkg.8,v 1.15 2022/01/01 14:04:11 rillig Exp $
 .\"
 .\" Copyright (c) 2001, 2019 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -27,7 +27,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd Oct 3, 2019
+.Dd January 1, 2022
 .Dt URL2PKG 8
 .Os
 .Sh NAME
@@ -49,17 +49,9 @@ fills in some variables in the package
 .Nm
 helps creating a package;
 it is not intended to fly on autopilot, though.
-Hence, after creating the package, the user's usual editor is invoked
-to edit the
-.Pa Makefile ,
-since in almost all cases the package needs manual work.
 .Pp
 .Sh ENVIRONMENT
 .Bl -tag -width indent
-.It PKGEDITOR, EDITOR
-Editor used for
-.Pa Makefile
-edition.
 .It PKGMAINTAINER, REPLYTO
 Name used for the MAINTAINER field in the package
 .Pa Makefile .
