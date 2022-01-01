@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.21 2022/01/01 19:32:22 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.22 2022/01/01 20:18:10 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -23,3 +23,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated comms/gkermit to 2.01 [rhialto 2022-01-01]
 	Updated archivers/lha to 114.9.20211125 [rhialto 2022-01-01]
 	Updated sysutils/tealdeer to 1.5.0 [bsiegert 2022-01-01]
+	Updated sysutils/mtools to 4.0.36 [rhialto 2022-01-01]
