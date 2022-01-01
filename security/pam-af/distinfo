@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 11:17:34 nia Exp $
+$NetBSD: distinfo,v 1.16 2022/01/01 12:59:15 rhialto Exp $
 
 BLAKE2s (pam_af-1.0.2.tar.bz2) = 2b0dbc65b2bc0122ec68751502769064294839c0215e79b1317141a87f826e1b
 SHA512 (pam_af-1.0.2.tar.bz2) = 89dc8a78e5d888e6cbf84820420201ef19d012d7fbc39f40ede7e7b4cef12a5896bec7a2a6bfc17cf8d111800e54eb2559e55cd3218b04e84cd0a2a24d7dcc01
 Size (pam_af-1.0.2.tar.bz2) = 17991 bytes
-SHA1 (patch-aa) = 9c8e44c7b25e268777967c742a6946abe0c80316
+SHA1 (patch-aa) = 8c707e869aa56f8b0ac8bb624c5fae09bd6b2ef7
 SHA1 (patch-ab) = aec6c301a5e699cd0e39c552748c48bbf77af52d
 SHA1 (patch-ad) = 0f46fecfec3b920a08e2c22c14ada368214d6a69
 SHA1 (patch-common_pam__af.h) = 026b303116b80cb48987c24b5f48677e7581a346

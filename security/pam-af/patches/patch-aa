@@ -1,10 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2012/03/21 18:24:00 hans Exp $
+$NetBSD: patch-aa,v 1.5 2022/01/01 12:59:15 rhialto Exp $
 
 * use gcc flags on SunOS
 * for PKGSRC layout
 * treat *BSDs same as FreeBSD.
+* Use "ld -shared" rather than "ld --shared". The former allows cwrappers to
+  detect shared lib link mode. This makes it omit "-pie" which would remove
+  required symbols.
 
---- Makefile.orig	2006-11-07 00:26:58.000000000 +0000
+--- Makefile.orig	2011-08-24 07:53:32.000000000 +0000
 +++ Makefile
 @@ -69,7 +69,7 @@ CFLAGS = -I./common/ -DPIC
  CFLAGS_GCC =	-O2 -Wall -Werror -Wno-format-y2k			\
@@ -15,6 +18,15 @@ $NetBSD: patch-aa,v 1.4 2012/03/21 18:24:00 hans Exp $
  CFLAGS_HP = -Ae +w1 +W 474,486,542 +z +O2
  CFLAGS_BSD = -D_HAVE_PATHS_H_ -D_HAVE_ERR_H_ -D_HAVE_GETPROGNAME_ -D_USE_MODULE_ENTRY_ -D_HAVE_SALEN_
  CFLAGS_GNU =	-D_GNU_SOURCE -D_HAVE_PATHS_H_ -D_HAVE_ERR_H_ -D_HAVE_FLOCK_ \
+@@ -79,7 +79,7 @@ LDFLAGS_BSD =
+ LDFLAGS_LINUX = -lgdbm -lgdbm_compat
+ LDFLAGS_SUN = -lnsl -lsocket
+ LDFLAGS_HP =
+-SHLDFLAGS_GCC = -s --shared -lpam -lcrypt
++SHLDFLAGS_GCC = -s -shared -lpam -lcrypt
+ SHLDFLAGS_SUN = -s -G -lpam -lcrypt
+ SHLDFLAGS_HP = -s -b -lpam -lsec
+ 
 @@ -102,16 +102,16 @@ DISTTOOLMAN = pam_af_tool.8
  LIBMAN = $(LIBDIR)/$(DISTLIBMAN)
  TOOLMAN = $(TOOLDIR)/$(DISTTOOLMAN)
