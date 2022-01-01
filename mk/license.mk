@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.109 2021/04/03 15:30:39 gdt Exp $
+# $NetBSD: license.mk,v 1.110 2022/01/01 13:55:48 rillig Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -281,7 +281,10 @@ guess-license: .PHONY
 
 	${RUN} \
 	\
-	type ninka > /dev/null 2>&1 || ${FAIL_MSG} "To guess the license, devel/ninka must be installed."; \
+	type ninka > /dev/null 2>&1 || { \
+		${ERROR_MSG} "To guess the license, devel/ninka must be installed."; \
+		${FAIL_MSG} "Run '(cd ../../devel/ninka && ${MAKE} install)' to install it."; \
+	}; \
 	\
 	${PHASE_MSG} "Guessing licenses for ${PKGNAME}"; \
 	\
