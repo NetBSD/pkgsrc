@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/01/01 16:26:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/01 17:45:21 wiz Exp $
 
 DISTNAME=	ipython_genutils-0.2.0
 PKGREVISION=	2
@@ -14,4 +14,9 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+
+.if ${PYPKGPREFIX} == "py27"
+_PYSETUPTOOLSINSTALLARGS:=	${PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
+.endif
+
 .include "../../mk/bsd.pkg.mk"
