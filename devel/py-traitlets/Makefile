@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2021/12/30 13:05:31 adam Exp $
+# $NetBSD: Makefile,v 1.12 2022/01/01 16:22:51 ryoon Exp $
 
 DISTNAME=	traitlets-5.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/traitlets/}
 
@@ -16,5 +17,5 @@ USE_LANGUAGES=	# none
 # For any earlier version of Python use traitlets 4.x
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
