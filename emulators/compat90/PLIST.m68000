@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.m68010,v 1.1 2021/12/18 01:01:33 he Exp $
+@comment $NetBSD: PLIST.m68000,v 1.1 2022/01/02 16:49:28 he Exp $
 ${EMULSUBDIRSLASH}usr/X11R7/lib/X11/locale/lib/common/ximcp.so
 ${EMULSUBDIRSLASH}usr/X11R7/lib/X11/locale/lib/common/ximcp.so.2
 ${EMULSUBDIRSLASH}usr/X11R7/lib/X11/locale/lib/common/ximcp.so.2.0
