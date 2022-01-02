@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/12/18 01:01:33 he Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/02 16:22:32 he Exp $
 
 COMPAT_PKG=		compat90	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		9.0
+PKGREVISION=		1
 
 HOMEPAGE=		https://www.NetBSD.org/releases/formal-9/index.html
 COMMENT=		Shared libraries for NetBSD 9.0 compatibility
@@ -27,8 +28,7 @@ EMUL_PLATFORMS=		netbsd-aarch64 \
 
 
 # select ONLY_FOR_PLATFORM start by the osversion we diffed against
-# add NetBSD-9.[1-9]*-* once 9.1 is out and we have compat91
-ONLY_FOR_PLATFORM=	NetBSD-9.*-* NetBSD-[1-9][0-9].*-*
+ONLY_FOR_PLATFORM=	NetBSD-9.99.*-* NetBSD-[1-9][0-9].*-*
 
 CHECK_RELRO_SKIP=	*
 
