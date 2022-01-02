@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.37 2022/01/02 16:37:38 he Exp $
+$NetBSD: CHANGES-2022,v 1.38 2022/01/02 19:10:59 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -39,3 +39,11 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/ncspot to 0.9.4 [pin 2022-01-02]
 	Updated wm/shod to 2.2.0 [pin 2022-01-02]
 	Updated emulators/compat90 to 9.0nb1 [he 2022-01-02]
+	Updated graphics/glm to 0.9.9.8 [tnn 2022-01-02]
+	Removed cad/kicad-i18n successor cad/kicad [tnn 2022-01-02]
+	Updated cad/kicad-symbols to 6.0.0 [tnn 2022-01-02]
+	Updated cad/kicad-templates to 6.0.0 [tnn 2022-01-02]
+	Updated cad/kicad-packages3d to 6.0.0 [tnn 2022-01-02]
+	Updated cad/kicad-footprints to 6.0.0 [tnn 2022-01-02]
+	Updated cad/kicad-doc to 6.0.0 [tnn 2022-01-02]
+	Updated cad/kicad to 6.0.0 [tnn 2022-01-02]
