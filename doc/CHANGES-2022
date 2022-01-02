@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.38 2022/01/02 19:10:59 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.39 2022/01/02 20:03:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -47,3 +47,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated cad/kicad-footprints to 6.0.0 [tnn 2022-01-02]
 	Updated cad/kicad-doc to 6.0.0 [tnn 2022-01-02]
 	Updated cad/kicad to 6.0.0 [tnn 2022-01-02]
+	Updated sysutils/macchina to 6.0.3 [pin 2022-01-02]
