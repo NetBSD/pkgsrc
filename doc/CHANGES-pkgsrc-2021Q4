@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q4,v 1.1.2.2 2022/01/01 16:52:23 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q4,v 1.1.2.3 2022/01/02 17:51:24 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q4 branch:
 
@@ -7,4 +7,7 @@ www/webkit-gtk: add missing dependency
 
 Pullup ticket #6557 - requested by he
 graphics/graphviz: PowerPC build fix
+
+Pullup ticket #6558 - requested by he
+emulators/compat90: fix for PR pkg/56597
 
