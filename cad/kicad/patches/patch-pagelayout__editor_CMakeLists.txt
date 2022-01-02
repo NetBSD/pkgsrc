@@ -1,0 +1,23 @@
+$NetBSD: patch-pagelayout__editor_CMakeLists.txt,v 1.1 2022/01/02 19:10:03 tnn Exp $
+
+Force proper LDFLAGS for MODULE, as cmake doesn't set rpath for these
+
+--- pagelayout_editor/CMakeLists.txt.orig	2021-12-22 13:32:19.000000000 +0000
++++ pagelayout_editor/CMakeLists.txt
+@@ -124,6 +124,9 @@ if( MAKE_LINK_MAPS )
+         LINK_FLAGS "-Wl,-cref,-Map=_pl_editor.kiface.map" )
+ endif()
+ 
++set_property(TARGET pl_editor_kiface APPEND_STRING
++      PROPERTY LINK_FLAGS " $ENV{LDFLAGS}")
++
+ # if building pl_editor, then also build pl_editor_kiface if out of date.
+ add_dependencies( pl_editor pl_editor_kiface )
+ 
+@@ -171,4 +174,4 @@ if( KICAD_WIN32_INSTALL_PDBS )
+     # Get the PDBs to copy over for MSVC
+     install(FILES $<TARGET_PDB_FILE:pl_editor> DESTINATION ${KICAD_BIN})
+     install(FILES $<TARGET_PDB_FILE:pl_editor_kiface> DESTINATION ${KICAD_BIN})
+-endif()
+\ No newline at end of file
++endif()

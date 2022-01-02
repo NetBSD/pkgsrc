@@ -1,0 +1,19 @@
+$NetBSD: patch-bitmaps__png_CMakeLists.txt,v 1.1 2022/01/02 19:10:03 tnn Exp $
+
+Don't use ${CMAKE_MODULE_PATH} directly as it will be changed
+and contains multiple directories
+
+--- bitmaps_png/CMakeLists.txt.orig	2021-12-22 13:32:19.000000000 +0000
++++ bitmaps_png/CMakeLists.txt
+@@ -685,9 +685,9 @@ function( png2cpp inputFile outFile )
+         OUTPUT  ${outFile}
+ 
+         COMMAND ${CMAKE_COMMAND} -DinputFile=${inputFile} -DoutCppFile=${outFile}
+-            -P ${CMAKE_MODULE_PATH}/BuildSteps/PNG2cpp.cmake
++            -P ${PROJECT_SOURCE_DIR}/CMakeModules/BuildSteps/PNG2cpp.cmake
+ 
+-        DEPENDS ${inputFile} ${CMAKE_MODULE_PATH}/BuildSteps/PNG2cpp.cmake
++        DEPENDS ${inputFile} ${PROJECT_SOURCE_DIR}/CMakeModules/BuildSteps/PNG2cpp.cmake
+         COMMENT "Creating ${outFile}"
+         )
+ endfunction()

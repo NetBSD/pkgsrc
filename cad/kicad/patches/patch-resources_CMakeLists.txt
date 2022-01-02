@@ -1,0 +1,27 @@
+$NetBSD: patch-resources_CMakeLists.txt,v 1.1 2022/01/02 19:10:03 tnn Exp $
+
+Don't use ${CMAKE_MODULE_PATH} directly as it will be changed
+and contains multiple directories
+
+--- resources/CMakeLists.txt.orig	2021-12-22 13:32:19.000000000 +0000
++++ resources/CMakeLists.txt
+@@ -3,7 +3,7 @@
+ #################################################
+ if( APPLE )
+     #TODO Generate this at runtime as well
+-    include( ${CMAKE_MODULE_PATH}/WritePlatformMetadata_macos.cmake )
++    include( ${PROJECT_SOURCE_DIR}/CMakeModules/WritePlatformMetadata_macos.cmake )
+ elseif( UNIX )
+     # Add the command to configure the linux metainfo file with the version information
+     add_custom_command(
+@@ -12,8 +12,8 @@ elseif( UNIX )
+             -DSRC_PATH=${PROJECT_SOURCE_DIR}
+             -DBUILD_PATH=${PROJECT_BINARY_DIR}
+             -DCMAKE_MODULE_PATH=${PROJECT_SOURCE_DIR}/CMakeModules
+-            -P ${CMAKE_MODULE_PATH}/BuildSteps/WritePlatformMetadata_linux.cmake
+-        DEPENDS ${CMAKE_MODULE_PATH}/BuildSteps/WritePlatformMetadata_linux.cmake
++            -P ${PROJECT_SOURCE_DIR}/CMakeModules/BuildSteps/WritePlatformMetadata_linux.cmake
++        DEPENDS ${PROJECT_SOURCE_DIR}/CMakeModules/BuildSteps/WritePlatformMetadata_linux.cmake
+         COMMENT "Configuring Linux metainfo"
+         )
+ 

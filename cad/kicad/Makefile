@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2021/12/08 16:03:25 adam Exp $
+# $NetBSD: Makefile,v 1.57 2022/01/02 19:10:03 tnn Exp $
 #
 
-V=		5.1.10
+V=		6.0.0
 DISTNAME=	kicad-${V}
-PKGREVISION=	2
 CATEGORIES=	cad
 MASTER_SITES=	https://gitlab.com/kicad/code/kicad/-/archive/${V}/
 EXTRACT_SUFX=	.tar.bz2
@@ -13,6 +12,7 @@ HOMEPAGE=	https://www.kicad.org/
 COMMENT=	Schematic and PCB CAD software (stable branch)
 LICENSE=	gnu-gpl-v3
 
+BUILD_DEPENDS+=	swig3-[0-9]*:../../devel/swig3
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 USE_PKGLOCALEDIR=	yes
@@ -20,47 +20,23 @@ USE_LANGUAGES=		c c++11
 USE_CMAKE=		yes
 USE_TOOLS+=		pkg-config
 
-CMAKE_ARGS+=		-DKICAD_REPO_NAME=stable -DKICAD_BUILD_VERSION=${V}
-CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release -DKICAD_SKIP_BOOST=ON
-CMAKE_ARGS+=		-DKICAD_SPICE=OFF -DKICAD_USE_OCE=OFF
-CMAKE_ARGS+=		-DKICAD_SCRIPTING=OFF -DKICAD_SCRIPTING_MODULES=OFF
-CMAKE_ARGS+=		-DKICAD_SCRIPTING_ACTION_MENU=OFF
+CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
+CMAKE_ARGS+=		-DKICAD_SPICE=OFF
 CMAKE_ARGS+=		-DKICAD_SCRIPTING_WXPYTHON=OFF
+CMAKE_ARGS+=		-DKICAD_USE_OCC=OFF # pkgsrc/cad/oce, but it is too old
+CMAKE_ARGS+=		-DKICAD_BUILD_I18N=ON
 
 CMAKE_MODULE_PATH_OVERRIDE= \
 			new/CMakeLists.txt
 
 PY_PATCHPLIST=		yes
 
-SUBST_CLASSES+=		macosx
-SUBST_STAGE.macosx=	pre-configure
-SUBST_MESSAGE.macosx=	Eliminating Mac OS X build specific for ${PKGNAME}
-SUBST_FILES.macosx=	bitmap2component/CMakeLists.txt \
-			kicad/CMakeLists.txt
-SUBST_SED.macosx=	-e 's/[[:<:]]MACOSX_BUNDLE[[:>:]]//'
-
-.include "../../mk/bsd.prefs.mk"
-
-# PR 48980: no fabsl on netbsd-5
-.if !empty(MACHINE_PLATFORM:MNetBSD-5.*)
-SUBST_CLASSES+=		netbsd5
-SUBST_STAGE.netbsd5=	post-extract
-SUBST_MESSAGE.netbsd5=	Substituting fabs() for fabsl() for NetBSD-5
-SUBST_FILES.netbsd5=	pcbnew/legacy_plugin.cpp \
-			tools/test-nm-biu-to-ascii-mm-round-tripping.cpp
-SUBST_SED.netbsd5=	-e 's/fabsl/fabs/g'
-.endif
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-CXXFLAGS+=	-Wno-error=non-pod-varargs
-.endif
-
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cmake/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glm+=	glm>=0.9.9.8
 .include "../../graphics/glm/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
