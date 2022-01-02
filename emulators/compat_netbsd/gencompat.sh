@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: gencompat.sh,v 1.4 2021/12/18 10:17:48 he Exp $
+# $NetBSD: gencompat.sh,v 1.5 2022/01/02 16:33:13 he Exp $
 #
 # This script generates the distfiles and PLISTs for the NetBSD compat*
 # packages.
@@ -21,19 +21,19 @@ XBASESET="xbase.tgz"
 BASESET_X="base.tar.xz"
 XBASESET_X="xbase.tar.xz"
 
-archlist="aarch64 alpha arm armeb armv6hf armv7hf earmv7hfeb earm earmv7hfeb hppa i386 m68010 m68k mips64el mips64eb mipseb mipsel powerpc sh3eb sh3el sparc sparc64 vax x86_64"
+archlist="aarch64 alpha arm earmeb earmv6hf earmv7hf earmv7hfeb earm earmv7hfeb hppa i386 m68000 m68k mips64el mips64eb mipseb mipsel powerpc sh3eb sh3el sparc sparc64 vax x86_64"
 
 machlist_aarch64="evbarm-aarch64"
 machlist_alpha="alpha"
 machlist_arm="acorn32 cats evbarm hpcarm iyonix netwinder shark zaurus"
 machlist_earm="evbarm-earm"
-machlist_armeb="evbarm-earmeb"
-machlist_armv6hf="evbarm-earmv6hf"
-machlist_armv7hf="evbarm-earmv7hf"
+machlist_earmeb="evbarm-earmeb"
+machlist_earmv6hf="evbarm-earmv6hf"
+machlist_earmv7hf="evbarm-earmv7hf"
 machlist_earmv7hfeb="evbarm-earmv7hfeb"
 machlist_hppa="hp700"
 machlist_i386="i386"
-machlist_m68010="sun2"
+machlist_m68000="sun2"
 machlist_m68k="amiga atari cesfic hp300 luna68k mac68k mvme68k news68k next68k sun3 x68k"
 machlist_mipseb="ews4800mips mipsco newsmips sgimips evbmips-mipseb"
 machlist_mipsel="algor arc cobalt hpcmips pmax evbmips-mipsel"
@@ -139,14 +139,14 @@ for arch in $archlist; do
 		[ -d $compat_extras_pkgdir ] || mkdir -p $compat_extras_pkgdir
 
 		# Generate PLISTs and distfiles.
-		( echo '@comment $NetBSD: gencompat.sh,v 1.4 2021/12/18 10:17:48 he Exp $'
+		( echo '@comment $NetBSD: gencompat.sh,v 1.5 2022/01/02 16:33:13 he Exp $'
 		  find $compat_dir \! -type d | sort |
 		  sed 's,'$compat_dir'/,${EMULSUBDIRSLASH},'
 		) > $compat_pkgdir/PLIST.$arch
 		tar cf $compat_pkgdir/$compat_dir.tar $compat_dir
 		bzip2 -f -9 $compat_pkgdir/$compat_dir.tar
 
-		( echo '@comment $NetBSD: gencompat.sh,v 1.4 2021/12/18 10:17:48 he Exp $'
+		( echo '@comment $NetBSD: gencompat.sh,v 1.5 2022/01/02 16:33:13 he Exp $'
 		  find $compat_extras_dir \! -type d | sort |
 		  sed 's,'$compat_extras_dir'/,${EMULSUBDIRSLASH},'
 		) > $compat_extras_pkgdir/PLIST.$arch
