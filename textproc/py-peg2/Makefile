@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/06/16 09:53:52 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/02 00:01:09 wiz Exp $
 
 DISTNAME=	pyPEG2-2.15.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:tl}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyPEG2/}
 
@@ -14,5 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
