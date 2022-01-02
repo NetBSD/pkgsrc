@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/01/01 16:31:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2022/01/02 22:57:36 wiz Exp $
 
 DISTNAME=	gmpy-1.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,4 +23,9 @@ do-test:
 BUILDLINK_API_DEPENDS.gmp+=	gmp>=4.2.1
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../lang/python/egg.mk"
+
+.if ${PYPKGPREFIX} == "py27"
+_PYSETUPTOOLSINSTALLARGS:=	${PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
+.endif
+
 .include "../../mk/bsd.pkg.mk"
