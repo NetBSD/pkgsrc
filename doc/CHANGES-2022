@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.31 2022/01/02 14:32:16 kleink Exp $
+$NetBSD: CHANGES-2022,v 1.32 2022/01/02 15:45:18 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -33,3 +33,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-curl to 7.44.1nb3 [ryoon 2022-01-02]
 	Updated textproc/py-pandocfilters to 1.4.3nb1 [ryoon 2022-01-02]
 	Updated geography/py-googlemaps to 4.5.3 [kleink 2022-01-02]
+	Updated devel/byacc to 20220101 [fcambus 2022-01-02]
