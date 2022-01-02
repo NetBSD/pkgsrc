@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.armeb,v 1.1 2021/12/18 01:01:33 he Exp $
+@comment $NetBSD: PLIST.earmv7hf,v 1.1 2022/01/02 16:49:28 he Exp $
 ${EMULSUBDIRSLASH}lib/libblacklist.so
 ${EMULSUBDIRSLASH}lib/libblacklist.so.0
 ${EMULSUBDIRSLASH}lib/libblacklist.so.0.0
@@ -31,24 +31,15 @@ ${EMULSUBDIRSLASH}usr/X11R7/lib/X11/locale/lib/common/xlibi18n.so.2.0
 ${EMULSUBDIRSLASH}usr/X11R7/lib/X11/locale/lib/common/xomGeneric.so
 ${EMULSUBDIRSLASH}usr/X11R7/lib/X11/locale/lib/common/xomGeneric.so.2
 ${EMULSUBDIRSLASH}usr/X11R7/lib/X11/locale/lib/common/xomGeneric.so.2.0
-${EMULSUBDIRSLASH}usr/X11R7/lib/libEGL.so
-${EMULSUBDIRSLASH}usr/X11R7/lib/libEGL.so.0
-${EMULSUBDIRSLASH}usr/X11R7/lib/libEGL.so.0.0
 ${EMULSUBDIRSLASH}usr/X11R7/lib/libXTrap.so
 ${EMULSUBDIRSLASH}usr/X11R7/lib/libXTrap.so.7
 ${EMULSUBDIRSLASH}usr/X11R7/lib/libXTrap.so.7.0
 ${EMULSUBDIRSLASH}usr/X11R7/lib/libXevie.so
 ${EMULSUBDIRSLASH}usr/X11R7/lib/libXevie.so.2
 ${EMULSUBDIRSLASH}usr/X11R7/lib/libXevie.so.2.0
-${EMULSUBDIRSLASH}usr/X11R7/lib/libdrm_nouveau.so
-${EMULSUBDIRSLASH}usr/X11R7/lib/libdrm_nouveau.so.3
-${EMULSUBDIRSLASH}usr/X11R7/lib/libdrm_nouveau.so.3.0
 ${EMULSUBDIRSLASH}usr/X11R7/lib/libglut.so
 ${EMULSUBDIRSLASH}usr/X11R7/lib/libglut.so.4
 ${EMULSUBDIRSLASH}usr/X11R7/lib/libglut.so.4.0
-${EMULSUBDIRSLASH}usr/X11R7/lib/libvdpau.so
-${EMULSUBDIRSLASH}usr/X11R7/lib/libvdpau.so.1
-${EMULSUBDIRSLASH}usr/X11R7/lib/libvdpau.so.1.0
 ${EMULSUBDIRSLASH}usr/lib/libasan.so.4
 ${EMULSUBDIRSLASH}usr/lib/libasan.so.4.0
 ${EMULSUBDIRSLASH}usr/lib/libbfd.so.16
