@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2021/12/02 16:40:18 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/02 16:13:43 tnn Exp $
 #
 
-V=		5.1.10
+V=		6.0.0
 DISTNAME=	kicad-packages3D-${V}
 PKGNAME=	kicad-packages3d-${V}
 CATEGORIES=	cad
