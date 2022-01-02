@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/12/30 13:05:41 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/02 00:21:18 wiz Exp $
 
 DISTNAME=	ipywidgets-7.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipywidgets/}
 
@@ -23,5 +24,5 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-ipykernel
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
