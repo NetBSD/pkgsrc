@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2021/12/30 13:05:41 adam Exp $
+# $NetBSD: Makefile,v 1.10 2022/01/02 00:14:29 wiz Exp $
 
 DISTNAME=	nbformat-5.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nbformat/}
 
@@ -22,8 +23,11 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && mv jupyter-trust jupyter-trust-${PYVERSSUFFIX} || ${TRUE}
+
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
