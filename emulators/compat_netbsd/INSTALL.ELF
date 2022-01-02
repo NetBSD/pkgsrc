@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL.ELF,v 1.2 2013/02/17 10:34:31 spz Exp $
+# $NetBSD: INSTALL.ELF,v 1.3 2022/01/02 16:15:55 he Exp $
 
 # Generate a +ROOT_ACTIONS script that runs certain actions that require
 # superuser privileges.
@@ -83,8 +83,15 @@ REMOVE,0)
 		esac
 
 		if ${TEST} -h "$dst"; then
-			${ECHO} "${PKGNAME}: removing $dst"
-			${RM} -f "$dst"
+			lsrc=$(readlink $dst)
+			if [ "$lsrc" = ${PKG_PREFIX}/$src -o \
+			     "$lsrc" = $src ]
+			then
+				${ECHO} "${PKGNAME}: removing $dst"
+				${RM} -f "$dst"
+			else
+				${ECHO} "${PKGNAME}: mismatched symlink, skipping removal of $dst"
+			fi
 		fi
 	done
 	${RM} -f ${ROOT_ACTIONS_COOKIE}
