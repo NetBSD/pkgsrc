@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2021/07/30 22:47:19 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/02 15:54:12 tnn Exp $
 #
 
-V=		5.1.10
+V=		6.0.0
 DISTNAME=	kicad-symbols-${V}
 CATEGORIES=	cad
 MASTER_SITES=	https://gitlab.com/kicad/libraries/kicad-symbols/-/archive/${V}/
