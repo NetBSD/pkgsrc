@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/01/02 16:22:32 he Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/02 16:35:12 he Exp $
 
 COMPAT_PKG=		compat90	# for compat_netbsd/Makefile.common
 NETBSD_VERSION=		9.0
@@ -15,9 +15,10 @@ DIST_SUBDIR=		20211116
 
 EMUL_PLATFORMS=		netbsd-aarch64 \
 			netbsd-alpha \
-			netbsd-arm netbsd-armeb netbsd-armv6hf netbsd-armv7hf \
+			netbsd-arm netbsd-earmeb \
+			netbsd-earmv6hf netbsd-earmv7hf \
 			netbsd-earmv7hfeb \
-			netbsd-i386 netbsd-m68010 netbsd-m68k \
+			netbsd-i386 netbsd-m68000 netbsd-m68k \
 			netbsd-mips64eb netbsd-mips64el \
 			netbsd-mipseb netbsd-mipsel \
 			netbsd-powerpc \
