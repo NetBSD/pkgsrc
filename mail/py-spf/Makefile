@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2020/04/17 12:02:36 adam Exp $
+# $NetBSD: Makefile,v 1.13 2022/01/02 09:23:28 wiz Exp $
 
 DISTNAME=	pyspf-2.0.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
+PKGREVISION=	1
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyspf/}
 
@@ -29,5 +30,10 @@ post-install:
 do-test:
 	cd ${WRKSRC}/test && ${PYTHONBIN} testspf.py
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
+
+.if ${PYPKGPREFIX} == "py27"
+_PYSETUPTOOLSINSTALLARGS:=	${PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
+.endif
+
 .include "../../mk/bsd.pkg.mk"
