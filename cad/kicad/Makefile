@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2022/01/02 19:10:03 tnn Exp $
+# $NetBSD: Makefile,v 1.58 2022/01/02 21:44:00 tnn Exp $
 #
 
 V=		6.0.0
@@ -30,6 +30,14 @@ CMAKE_MODULE_PATH_OVERRIDE= \
 			new/CMakeLists.txt
 
 PY_PATCHPLIST=		yes
+
+# The package tries to build a native .app bundle. This doesn't work
+# in pkgsrc context because they don't support DESTDIR installation,
+# which is a requirement in pkgsrc. It also tries to use native Python
+# frameworks, but has to use pkgsrc's. Getting this to build requires 15
+# additional patches. Ping if you you want the patches.
+# I didn't commit them yet because it segfaults. -tnn 20220102
+NOT_FOR_PLATFORM+=	Darwin-*-*
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cmake/buildlink3.mk"
