@@ -1,6 +1,6 @@
-$NetBSD: patch-plugins_3d_idf_CMakeLists.txt,v 1.1 2019/06/14 15:59:32 bouyer Exp $
+$NetBSD: patch-plugins_3d_idf_CMakeLists.txt,v 1.2 2022/01/02 19:10:03 tnn Exp $
 
-Force proper LDFLAGS for MODULE, as cmake doens't set rpath for theses
+Force proper LDFLAGS for MODULE, as cmake doesn't set rpath for these
 
 --- plugins/3d/idf/CMakeLists.txt.orig	2019-05-29 17:01:08.898401494 +0200
 +++ plugins/3d/idf/CMakeLists.txt	2019-05-29 17:02:00.543946926 +0200
