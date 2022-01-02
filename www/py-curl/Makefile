@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2022/01/02 11:29:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.79 2022/01/02 22:56:31 wiz Exp $
 
 DISTNAME=	pycurl-7.44.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -23,6 +23,11 @@ do-test:
 
 BUILDLINK_API_DEPENDS.curl+=	curl>=7.19.0
 .include "../../www/curl/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
+
+.if ${PYPKGPREFIX} == "py27"
+_PYSETUPTOOLSINSTALLARGS:=	${PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
+.endif
+
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
