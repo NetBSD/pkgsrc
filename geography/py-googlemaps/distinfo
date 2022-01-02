@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:45:14 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/01/02 14:32:02 kleink Exp $
 
-BLAKE2s (googlemaps-4.4.5.tar.gz) = b9c83bed0e5b422482180515576c104b13ca7a9cfa4afd66b2d79248555e6978
-SHA512 (googlemaps-4.4.5.tar.gz) = 6bfa571e6ca96a242e4f93ef6ca9ff8d6917ea059620ed45a7790f0eca78c45d104307454b1e1f59e1cf3bd8b43db9e63efb9e495c51d04898c8a036fd21c6db
-Size (googlemaps-4.4.5.tar.gz) = 31782 bytes
+BLAKE2s (googlemaps-4.5.3.tar.gz) = deab1798093d6ca411bb7bcecc492c153eb882e0ad5cc6b4a8bd606c552dddd7
+SHA512 (googlemaps-4.5.3.tar.gz) = b2f3376d0beaa25c8ef817c5106016287e3cf4f64333290d93bbd32aa1c36ddc3d4c55b2a68efb5f7e6022f1771f8a97c728a73e5ee33c9e0fa3e43e1a849f48
+Size (googlemaps-4.5.3.tar.gz) = 32062 bytes
