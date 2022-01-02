@@ -1,5 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2021/06/10 18:57:58 adam Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.6 2022/01/02 00:14:29 wiz Exp $
+bin/jupyter-trust-${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/nbformat/__init__.py
 ${PYSITELIB}/nbformat/__init__.pyc
 ${PYSITELIB}/nbformat/__init__.pyo
