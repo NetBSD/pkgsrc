@@ -1,34 +1,31 @@
-# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:21 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/02 14:53:26 tnn Exp $
 
-DISTNAME=	glm-0.9.7.0
-CATEGORIES=	graphics
+DISTNAME=	glm-0.9.9.8
+CATEGORIES=	graphics math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=g-truc/}
-EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://glm.g-truc.net/
-COMMENT=	C++ mathematics library for graphics programming
+COMMENT=	C++ mathematics library for software based on the OpenGL GLSL
 LICENSE=	mit
-# in "Happy Bunny" variation, adding:
-# Restrictions: By making use of the Software for military purposes,
-# you choose to make a Bunny unhappy.
 
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
 
-USE_TOOLS+=	pax
+USE_TOOLS+=	pax pkg-config
 
 GLM_DIR=		include/glm
 INSTALLATION_DIRS=	${GLM_DIR}
 
 do-install:
 	${RUN}cd ${WRKSRC}/glm && \
-		${CHMOD} 644 *hpp detail/* gtc/* gtx/*
+		${CHMOD} 644 *hpp detail/* ext/* gtc/* gtx/* simd/*
 	${RUN}cd ${WRKSRC}/glm && \
-		pax -rw *hpp detail gtc gtx \
+		pax -rw *hpp detail ext gtc gtx simd \
 			${DESTDIR}${PREFIX}/${GLM_DIR}
 
 # for test target
+USE_CMAKE=     yes
 USE_LANGUAGES=	c c++
 do-test:
 	${RUN}cd ${WRKSRC} && \
