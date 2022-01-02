@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2018/02/22 10:27:00 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/02 22:14:28 wiz Exp $
 
 DISTNAME=	pypolicyd-spf-2.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
+PKGREVISION=	1
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypolicyd-spf/}
 
@@ -38,5 +39,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.per_user_whitelisting ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/policyd-spf.conf.commented ${DESTDIR}${EGDIR}/policyd-spf.conf
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
