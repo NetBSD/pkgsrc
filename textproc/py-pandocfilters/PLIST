@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2017/04/23 05:09:46 markd Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.2 2022/01/02 11:45:53 ryoon Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pandocfilters.py
 ${PYSITELIB}/pandocfilters.pyc
 ${PYSITELIB}/pandocfilters.pyo
