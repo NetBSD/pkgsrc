@@ -1,16 +1,22 @@
-$NetBSD: patch-common_CMakeLists.txt,v 1.4 2021/02/21 18:56:36 bouyer Exp $
+$NetBSD: patch-common_CMakeLists.txt,v 1.5 2022/01/02 19:10:03 tnn Exp $
 
 Don't use ${CMAKE_MODULE_PATH} directly as it will be changed
-and containt multiple directories
+and contains multiple directories
 
---- common/CMakeLists.txt.orig	2020-12-22 21:05:01.000000000 +0100
-+++ common/CMakeLists.txt	2021-02-20 11:28:33.611686383 +0100
-@@ -168,7 +168,7 @@
+--- common/CMakeLists.txt.orig	2021-12-22 13:32:19.000000000 +0000
++++ common/CMakeLists.txt
+@@ -139,11 +139,11 @@ add_custom_target(
          -DOUTPUT_FILE=${CMAKE_BINARY_DIR}/kicad_build_version.h
+         -DTEXT_OUTPUT_FILE=${CMAKE_BINARY_DIR}/kicad_build_version.txt
          -DSRC_PATH=${PROJECT_SOURCE_DIR}
-         -DCMAKE_MODULE_PATH=${CMAKE_MODULE_PATH}
--        -P ${CMAKE_MODULE_PATH}/WriteVersionHeader.cmake
-+        -P ${PROJECT_SOURCE_DIR}/CMakeModules/WriteVersionHeader.cmake
+-        -DCMAKE_MODULE_PATH=${CMAKE_MODULE_PATH}
+-        -P ${CMAKE_MODULE_PATH}/BuildSteps/WriteVersionHeader.cmake
++        -DCMAKE_MODULE_PATH="${CMAKE_MODULE_PATH}"
++        -P ${PROJECT_SOURCE_DIR}/CMakeModules/BuildSteps/WriteVersionHeader.cmake
      WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
      BYPRODUCTS ${CMAKE_BINARY_DIR}/kicad_build_version.h
+-    DEPENDS ${CMAKE_MODULE_PATH}/BuildSteps/WriteVersionHeader.cmake
++    DEPENDS ${PROJECT_SOURCE_DIR}/CMakeModules/BuildSteps/WriteVersionHeader.cmake
      COMMENT "Generating version string header"
+     )
+ 

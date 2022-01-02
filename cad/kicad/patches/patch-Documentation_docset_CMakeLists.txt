@@ -1,0 +1,23 @@
+$NetBSD: patch-Documentation_docset_CMakeLists.txt,v 1.1 2022/01/02 19:10:03 tnn Exp $
+
+Don't use ${CMAKE_MODULE_PATH} directly as it will be changed
+and contains multiple directories
+
+--- Documentation/docset/CMakeLists.txt.orig	2021-12-22 13:32:19.000000000 +0000
++++ Documentation/docset/CMakeLists.txt
+@@ -62,12 +62,12 @@ if(DOXYGEN_FOUND AND DOXYTAG2ZEALDB AND 
+             -DDOCSET_BUNDLE_ID=${DOCSET_BUNDLE_ID}
+             -DDOCSET_DOXYFILE=${DOCSET_DOXYFILE}
+             -DOUTPUT_DIRECTORY="${CMAKE_CURRENT_BINARY_DIR}/doxygen"
+-            -DCMAKE_MODULE_PATH=${CMAKE_MODULE_PATH}
+-            -P ${CMAKE_MODULE_PATH}/BuildSteps/CreateDocsetDoxyfile.cmake
++            -DCMAKE_MODULE_PATH="${CMAKE_MODULE_PATH}"
++            -P ${PROJECT_SOURCE_DIR}/CMakeModules/BuildSteps/CreateDocsetDoxyfile.cmake
+         WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/
+         OUTPUT ${DOCSET_DOXYFILE}
+         DEPENDS ${CMAKE_BINARY_DIR}/kicad_build_version.h
+-                ${CMAKE_MODULE_PATH}/BuildSteps/CreateDocsetDoxyfile.cmake
++                ${PROJECT_SOURCE_DIR}/CMakeModules/BuildSteps/CreateDocsetDoxyfile.cmake
+         COMMENT "Modifying doxyfile for docset creation"
+         )
+ 
