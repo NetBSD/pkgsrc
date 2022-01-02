@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21389 2022/01/01 07:53:53 dholland Exp $
+$NetBSD: TODO,v 1.21390 2022/01/02 08:52:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1103,6 +1103,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libmcs-0.7.2
 	o libmilter-8.16.1
 	o libmtag-0.3.6
+	o libnumbertext-1.0.8
 	o libobjc2-2.1
 	o liboobs-2.32.0
 	o liboop-1.0.1
@@ -1711,7 +1712,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ruby-delayer-1.2.1
 	o ruby-redmine-gitmike-theme-1.2.1
 	o rump-20131213
-	o rust-analyzer-0.0.2021.12.20
+	o rust-analyzer-0.2021.12.27
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
