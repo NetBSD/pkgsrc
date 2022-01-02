@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2020/04/17 11:27:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/02 09:23:28 wiz Exp $
 bin/spfquery.py-${PYVERSSUFFIX}
 bin/type99.py-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_FILE}
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/spf.py
 ${PYSITELIB}/spf.pyc
 ${PYSITELIB}/spf.pyo
