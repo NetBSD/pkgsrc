@@ -1,0 +1,38 @@
+$NetBSD: patch-pcb__calculator_CMakeLists.txt,v 1.1 2022/01/02 19:10:03 tnn Exp $
+
+Force proper LDFLAGS for MODULE, as cmake doesn't set rpath for these
+
+--- pcb_calculator/CMakeLists.txt.orig	2021-12-22 13:32:19.000000000 +0000
++++ pcb_calculator/CMakeLists.txt
+@@ -112,6 +112,9 @@ if( MAKE_LINK_MAPS )
+         LINK_FLAGS "-Wl,-cref,-Map=_pcb_calculator.kiface.map" )
+ endif()
+ 
++set_property(TARGET pcb_calculator_kiface APPEND_STRING
++      PROPERTY LINK_FLAGS " $ENV{LDFLAGS}")
++
+ # if building pcb_calculator, then also build pcb_calculator_kiface if out of date.
+ add_dependencies( pcb_calculator pcb_calculator_kiface )
+ 
+@@ -179,8 +182,8 @@ function( html_doc2h inputFile )
+     add_custom_command(
+         OUTPUT ${inputFile}.h
+         COMMAND ${CMAKE_COMMAND} -DinputFile=${inputFile}.html -DoutputFile=${inputFile}.h
+-            -P ${CMAKE_MODULE_PATH}/BuildSteps/Html2C.cmake
+-        DEPENDS ${inputFile}.html ${CMAKE_MODULE_PATH}/BuildSteps/Html2C.cmake
++            -P ${PROJECT_SOURCE_DIR}/CMakeModules/BuildSteps/Html2C.cmake
++        DEPENDS ${inputFile}.html ${PROJECT_SOURCE_DIR}/CMakeModules/BuildSteps/Html2C.cmake
+         COMMENT "creating ${inputFile}.h from ${inputFile}.html"
+         )
+ endfunction()
+@@ -193,8 +196,8 @@ function( md_doc2h inputFile )
+         OUTPUT ${inputFile}.h
+ 
+         COMMAND ${CMAKE_COMMAND} -DinputFile=${inputFile}.md -DoutputFile=${inputFile}.h
+-            -P ${CMAKE_MODULE_PATH}/BuildSteps/markdown2C.cmake
+-        DEPENDS ${inputFile}.md ${CMAKE_MODULE_PATH}/BuildSteps/markdown2C.cmake
++            -P ${PROJECT_SOURCE_DIR}/CMakeModules/BuildSteps/markdown2C.cmake
++        DEPENDS ${inputFile}.md ${PROJECT_SOURCE_DIR}/CMakeModules/BuildSteps/markdown2C.cmake
+         COMMENT "creating ${inputFile}.h from ${inputFile}.md"
+         )
+ endfunction()
