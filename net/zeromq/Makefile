@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2021/11/14 20:15:45 adam Exp $
+# $NetBSD: Makefile,v 1.33 2022/01/02 00:17:33 wiz Exp $
 
 DISTNAME=	zeromq-4.3.4
 CATEGORIES=	net devel
@@ -18,6 +18,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libsodium=${BUILDLINK_PREFIX.libsodium}
 PKGCONFIG_OVERRIDE+=	src/libzmq.pc.in
 TEST_TARGET=		check
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../mk/bsd.prefs.mk"
 
