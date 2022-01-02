@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:04:13 nia Exp $
-
-BLAKE2s (kicad-i18n-5.1.10.tar.bz2) = 22a4edf233a55e79083f18123c839e800fe351d4922f104800600b6bf73decd9
-SHA512 (kicad-i18n-5.1.10.tar.bz2) = c40d170ae247f376da03159eeddafbbb1828612ce274714f6111f1be16d122808e7ecdbd3d79dcf90f13f43ed55d603055eafcaf69cab7323367db711631f789
-Size (kicad-i18n-5.1.10.tar.bz2) = 2934783 bytes
