@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.armv7hf,v 1.1 2021/12/18 01:01:33 he Exp $
+@comment $NetBSD: PLIST.earmv6hf,v 1.1 2022/01/02 16:49:28 he Exp $
 ${EMULSUBDIRSLASH}lib/libblacklist.so
 ${EMULSUBDIRSLASH}lib/libblacklist.so.0
 ${EMULSUBDIRSLASH}lib/libblacklist.so.0.0
