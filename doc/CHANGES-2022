@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.28 2022/01/02 09:32:14 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.29 2022/01/02 11:30:25 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -30,3 +30,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated shells/nushell to 0.42.0 [pin 2022-01-01]
 	Updated textproc/xapian to 1.4.19 [schmonz 2022-01-02]
 	Updated textproc/xapian-omega to 1.4.19 [schmonz 2022-01-02]
+	Updated www/py-curl to 7.44.1nb3 [ryoon 2022-01-02]
