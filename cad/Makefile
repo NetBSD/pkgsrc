@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2021/04/12 14:17:06 nia Exp $
+# $NetBSD: Makefile,v 1.102 2022/01/02 15:51:03 tnn Exp $
 #
 
 COMMENT=	Computer Aided Design tools
@@ -35,7 +35,6 @@ SUBDIR+=	iverilog
 SUBDIR+=	kicad
 SUBDIR+=	kicad-doc
 SUBDIR+=	kicad-footprints
-SUBDIR+=	kicad-i18n
 SUBDIR+=	kicad-packages3d
 SUBDIR+=	kicad-symbols
 SUBDIR+=	kicad-templates
