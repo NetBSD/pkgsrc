@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2021/07/30 22:47:18 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2022/01/02 16:16:37 tnn Exp $
 #
 
-V=		5.1.10
+V=		6.0.0
 DISTNAME=	kicad-doc-${V}
 CATEGORIES=	cad
 MASTER_SITES=	https://kicad-downloads.s3.cern.ch/docs/
@@ -11,6 +11,7 @@ HOMEPAGE=	https://www.kicad.org/
 COMMENT=	Documentation for the PCB CAD software
 LICENSE=	gnu-gpl-v3
 
+USE_TOOLS+=	pax
 DOCDIR=		${DESTDIR}${PREFIX}/share/doc/kicad
 
 do-build:
@@ -18,7 +19,7 @@ do-build:
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	${CP} -R ${WRKSRC}/share/doc/kicad/help ${DOCDIR}/
+	cd ${WRKSRC}/share/doc/kicad && ${PAX} -rw . ${DOCDIR}/
 	${FIND} ${DOCDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
 	${FIND} ${DOCDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
 
