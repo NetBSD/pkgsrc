@@ -1,21 +1,12 @@
-$NetBSD: patch-gerbview_CMakeLists.txt,v 1.3 2019/06/14 15:59:32 bouyer Exp $
+$NetBSD: patch-gerbview_CMakeLists.txt,v 1.4 2022/01/02 19:10:03 tnn Exp $
 
-Force proper LDFLAGS for MODULE, as cmake doens't set rpath for theses
+Force proper LDFLAGS for MODULE, as cmake doesn't set rpath for these
 
---- gerbview/CMakeLists.txt.orig	2018-07-13 19:53:52.000000000 +0000
+--- gerbview/CMakeLists.txt.orig	2021-12-22 13:32:19.000000000 +0000
 +++ gerbview/CMakeLists.txt
-@@ -106,7 +106,7 @@ if( APPLE )
-     set( MACOSX_BUNDLE_NAME gerbview )
- endif()
- 
--add_executable( gerbview WIN32 MACOSX_BUNDLE
-+add_executable( gerbview WIN32 
-     ../common/single_top.cpp
-     ../common/pgm_base.cpp
-     ${GERBVIEW_RESOURCES}
-@@ -158,6 +158,9 @@ if( MAKE_LINK_MAPS )
-         LINK_FLAGS "${TO_LINKER},-cref ${TO_LINKER},-Map=_gerbview.kiface.map" )
- endif()
+@@ -173,6 +173,9 @@ target_include_directories( gerbview_kif
+     $<TARGET_PROPERTY:nlohmann_json,INTERFACE_INCLUDE_DIRECTORIES>
+     )
  
 +set_property(TARGET gerbview_kiface APPEND_STRING
 +	PROPERTY LINK_FLAGS " $ENV{LDFLAGS}")

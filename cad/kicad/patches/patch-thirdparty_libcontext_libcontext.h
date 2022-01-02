@@ -1,15 +1,17 @@
-$NetBSD: patch-include_system_libcontext.h,v 1.1 2019/06/14 15:59:32 bouyer Exp $
+$NetBSD: patch-thirdparty_libcontext_libcontext.h,v 1.1 2022/01/02 19:10:03 tnn Exp $
 
 Add NetBSD support.
 
---- include/system/libcontext.h.orig	2018-07-13 19:53:52.000000000 +0000
-+++ include/system/libcontext.h
-@@ -22,11 +22,11 @@
- #include <stddef.h>
+--- thirdparty/libcontext/libcontext.h.orig	2021-12-22 13:32:19.000000000 +0000
++++ thirdparty/libcontext/libcontext.h
+@@ -22,13 +22,13 @@
+ #include <cstdio>
  
  
 -#if defined(__GNUC__) || defined(__APPLE__) || defined(__FreeBSD__)
 +#if defined(__GNUC__) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__)
+ 
+     #undef LIBCONTEXT_HAS_OWN_STACK
  
      #define LIBCONTEXT_COMPILER_gcc
  

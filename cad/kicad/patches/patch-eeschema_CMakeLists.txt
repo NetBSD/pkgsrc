@@ -1,31 +1,35 @@
-$NetBSD: patch-eeschema_CMakeLists.txt,v 1.5 2021/02/21 18:56:36 bouyer Exp $
+$NetBSD: patch-eeschema_CMakeLists.txt,v 1.6 2022/01/02 19:10:03 tnn Exp $
 
 Don't use ${CMAKE_MODULE_PATH} directly as it will be changed
-and containt multiple directories
+and contains multiple directories
 
-Force proper LDFLAGS for MODULE, as cmake doens't set rpath for theses
+Force proper LDFLAGS for MODULE, as cmake doesn't set rpath for these
 
---- eeschema/CMakeLists.txt.orig	2020-12-22 21:05:01.000000000 +0100
-+++ eeschema/CMakeLists.txt	2021-02-20 10:28:21.902013845 +0100
-@@ -283,7 +283,7 @@
+--- eeschema/CMakeLists.txt.orig	2021-12-22 13:32:19.000000000 +0000
++++ eeschema/CMakeLists.txt
+@@ -313,8 +313,8 @@ add_custom_command(
      COMMAND ${CMAKE_COMMAND}
-         -DinputFile=${CMAKE_CURRENT_SOURCE_DIR}/dialogs/dialog_bom_help.html
-         -DoutputFile=${CMAKE_CURRENT_SOURCE_DIR}/dialogs/dialog_bom_help_html.h
--        -P ${CMAKE_MODULE_PATH}/Html2C.cmake
-+        -P ${PROJECT_SOURCE_DIR}/CMakeModules/Html2C.cmake
-     DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/dialogs/dialog_bom_help.html
-     COMMENT "creating ${CMAKE_CURRENT_SOURCE_DIR}/dialogs/dialog_bom_help_html.h
-        from ${CMAKE_CURRENT_SOURCE_DIR}/dialogs/dialog_bom_help.html"
-@@ -309,7 +309,7 @@
- endif()
- 
- 
--add_executable( eeschema WIN32 MACOSX_BUNDLE
-+add_executable( eeschema WIN32 
-     ../common/single_top.cpp
-     ../common/pgm_base.cpp
-     ${EESCHEMA_RESOURCES}
-@@ -392,6 +392,9 @@
+         -DinputFile=${CMAKE_CURRENT_SOURCE_DIR}/dialogs/dialog_bom_help.md
+         -DoutputFile=${CMAKE_CURRENT_SOURCE_DIR}/dialogs/dialog_bom_help_md.h
+-        -P ${CMAKE_MODULE_PATH}/BuildSteps/markdown2C.cmake
+-    DEPENDS ${CMAKE_MODULE_PATH}/BuildSteps/markdown2C.cmake ${CMAKE_CURRENT_SOURCE_DIR}/dialogs/dialog_bom_help.md
++        -P ${PROJECT_SOURCE_DIR}/CMakeModules/BuildSteps/markdown2C.cmake
++    DEPENDS ${PROJECT_SOURCE_DIR}/CMakeModules/BuildSteps/markdown2C.cmake ${CMAKE_CURRENT_SOURCE_DIR}/dialogs/dialog_bom_help.md
+     COMMENT "creating ${CMAKE_CURRENT_SOURCE_DIR}/dialogs/dialog_bom_help_md.h
+        from ${CMAKE_CURRENT_SOURCE_DIR}/dialogs/dialog_bom_help.md"
+     )
+@@ -330,8 +330,8 @@ add_custom_command(
+     COMMAND ${CMAKE_COMMAND}
+         -DinputFile=${CMAKE_CURRENT_SOURCE_DIR}/sch_text_help.md
+         -DoutputFile=${CMAKE_CURRENT_SOURCE_DIR}/sch_text_help_md.h
+-        -P ${CMAKE_MODULE_PATH}/BuildSteps/markdown2C.cmake
+-    DEPENDS ${CMAKE_MODULE_PATH}/BuildSteps/markdown2C.cmake ${CMAKE_CURRENT_SOURCE_DIR}/sch_text_help.md
++        -P ${PROJECT_SOURCE_DIR}/CMakeModules/BuildSteps/markdown2C.cmake
++    DEPENDS ${PROJECT_SOURCE_DIR}/CMakeModules/BuildSteps/markdown2C.cmake ${CMAKE_CURRENT_SOURCE_DIR}/sch_text_help.md
+     COMMENT "creating ${CMAKE_CURRENT_SOURCE_DIR}/sch_text_help_md.h
+        from ${CMAKE_CURRENT_SOURCE_DIR}/sch_text_help.md"
+     )
+@@ -439,6 +439,9 @@ if( MAKE_LINK_MAPS )
          )
  endif()
  

@@ -1,0 +1,25 @@
+$NetBSD: patch-kicad_CMakeLists.txt,v 1.1 2022/01/02 19:10:03 tnn Exp $
+
+Don't use ${CMAKE_MODULE_PATH} directly as it will be changed
+and contains multiple directories
+
+--- kicad/CMakeLists.txt.orig	2021-12-22 13:32:19.000000000 +0000
++++ kicad/CMakeLists.txt
+@@ -164,7 +164,7 @@ if( APPLE )
+         ${OSX_BUNDLE_OVERRIDE_PATHS}
+ 
+         # do all the work
+-        include( ${CMAKE_MODULE_PATH}/BundleUtilities.cmake )
++        include( ${PROJECT_SOURCE_DIR}/CMakeModules/BundleUtilities.cmake )
+ 
+         if ( ${PYTHON_FRAMEWORK_HELPER} )
+             # This idea here is to repair anything that fixup_bundle doesn't handle
+@@ -235,7 +235,7 @@ if( APPLE )
+         move_to_main_bundle( \"pl_editor.app\" \"Page Layout Editor.app\" )
+ 
+         if ( ${PYTHON_FRAMEWORK_HELPER} )
+-            include( ${CMAKE_MODULE_PATH}/RefixupMacOS.cmake )
++            include( ${PROJECT_SOURCE_DIR}/CMakeModules/RefixupMacOS.cmake )
+             refix_kicad_bundle(${OSX_BUNDLE_INSTALL_DIR})
+         endif( )
+ 
