@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.30 2022/01/02 11:46:27 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.31 2022/01/02 14:32:16 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -32,3 +32,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/xapian-omega to 1.4.19 [schmonz 2022-01-02]
 	Updated www/py-curl to 7.44.1nb3 [ryoon 2022-01-02]
 	Updated textproc/py-pandocfilters to 1.4.3nb1 [ryoon 2022-01-02]
+	Updated geography/py-googlemaps to 4.5.3 [kleink 2022-01-02]
