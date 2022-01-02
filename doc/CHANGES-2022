@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.35 2022/01/02 16:30:23 pin Exp $
+$NetBSD: CHANGES-2022,v 1.36 2022/01/02 16:31:28 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -37,3 +37,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/py-xmpppy to 0.7.0 [gdt 2022-01-02]
 	Updated x11/citron to 0.7.0 [pin 2022-01-02]
 	Updated audio/ncspot to 0.9.4 [pin 2022-01-02]
+	Updated wm/shod to 2.2.0 [pin 2022-01-02]
