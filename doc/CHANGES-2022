@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.41 2022/01/02 21:58:54 pin Exp $
+$NetBSD: CHANGES-2022,v 1.42 2022/01/02 23:23:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -50,3 +50,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/macchina to 6.0.3 [pin 2022-01-02]
 	Updated graphics/qrrs to 0.1.8 [pin 2022-01-02]
 	Updated x11/citron to 0.8.0 [pin 2022-01-02]
+	Updated games/py-pysol_cards to 0.14.2 [wiz 2022-01-02]
