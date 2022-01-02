@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/12/19 19:16:22 gdt Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/01/02 16:22:26 gdt Exp $
 bin/xmpp-message
 ${PYSITELIB}/xmpp/__init__.py
 ${PYSITELIB}/xmpp/__init__.pyc
@@ -58,11 +58,9 @@ share/doc/py-xmpppy/basic.html
 share/doc/py-xmpppy/index.html
 share/doc/py-xmpppy/xmpppy.css
 share/doc/py-xmpppy/xmpppy_title.png
-share/examples/py-xmpppy/basic.py
 share/examples/py-xmpppy/bosh.py
 share/examples/py-xmpppy/bot.py
 share/examples/py-xmpppy/commandsbot.py
 share/examples/py-xmpppy/demo.py
 share/examples/py-xmpppy/logger.py
-share/examples/py-xmpppy/xsend.py
 share/examples/py-xmpppy/xtalk.py
