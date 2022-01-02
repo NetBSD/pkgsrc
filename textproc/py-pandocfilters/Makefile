@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2021/02/08 12:17:46 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/02 11:45:53 ryoon Exp $
 
 DISTNAME=	pandocfilters-1.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pandocfilters/}
 
@@ -12,5 +13,5 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
