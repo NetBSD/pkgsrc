@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.208 2022/01/03 08:13:23 cirnatdan Exp $
+# $NetBSD: Makefile,v 1.209 2022/01/03 08:18:47 cirnatdan Exp $
 
-DISTNAME=	evolution-data-server-3.42.1
+DISTNAME=	evolution-data-server-3.42.2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-data-server/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
