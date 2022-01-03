@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.47 2022/01/03 09:30:42 adam Exp $
+$NetBSD: CHANGES-2022,v 1.48 2022/01/03 10:49:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -59,3 +59,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/evolution-data-server to 3.42.2 [dan 2022-01-03]
 	Updated devel/py-smmap to 5.0.0 [adam 2022-01-03]
 	Updated devel/py-wheel to 0.37.1 [adam 2022-01-03]
+	Added devel/py-kivy-garden version 0.1.4 [wiz 2022-01-03]
