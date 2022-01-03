@@ -1,11 +1,13 @@
-# $NetBSD: options.mk,v 1.22 2020/09/01 08:04:23 wiz Exp $
+# $NetBSD: options.mk,v 1.23 2022/01/03 16:58:40 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ikiwiki
 PKG_SUPPORTED_OPTIONS=		cgi imagemagick l10n python w3m
 PKG_SUPPORTED_OPTIONS+=		cvs git svn	# not mutually exclusive
 PKG_SUPPORTED_OPTIONS+=		ikiwiki-amazon-s3 ikiwiki-highlight ikiwiki-search
 PKG_SUPPORTED_OPTIONS+=		ikiwiki-sudo
-PKG_SUGGESTED_OPTIONS=		cgi ikiwiki-sudo
+PKG_OPTIONS_REQUIRED_GROUPS=	markdown
+PKG_OPTIONS_GROUP.markdown=	ikiwiki-discount ikiwiki-markdown ikiwiki-multimarkdown
+PKG_SUGGESTED_OPTIONS=		cgi ikiwiki-sudo ikiwiki-discount
 
 .include "../../mk/bsd.options.mk"
 
@@ -93,4 +95,16 @@ SUBST_CLASSES+=		w3m
 SUBST_STAGE.w3m=	pre-configure
 SUBST_FILES.w3m=	Makefile.PL
 SUBST_SED.w3m+=		-e 's,^\(.*install .*W3M_CGI_BIN\),\#\1,'
+.endif
+
+.if !empty(PKG_OPTIONS:Mikiwiki-discount)
+DEPENDS+=		p5-Text-Markdown-Discount-[0-9]*:../../textproc/p5-Text-Markdown-Discount
+.endif
+
+.if !empty(PKG_OPTIONS:Mikiwiki-markdown)
+DEPENDS+=		p5-Text-Markdown-[0-9]*:../../textproc/p5-Text-Markdown
+.endif
+
+.if !empty(PKG_OPTIONS:Mikiwiki-multimarkdown)
+DEPENDS+=		p5-Text-MultiMarkdown-[0-9]*:../../textproc/p5-Text-MultiMarkdown
 .endif
