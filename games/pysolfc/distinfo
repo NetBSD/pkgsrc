@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:44:21 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/01/03 10:55:26 wiz Exp $
 
-BLAKE2s (PySolFC-2.6.4.tar.xz) = 0705b0163bc06fd8d5ea0437d277ae7867f39243aa9b4a3420220fe1a3067deb
-SHA512 (PySolFC-2.6.4.tar.xz) = e88719216054f36ff468c16f5ffe701b0995da88edf4da2266dee528d541c0ae8bbaf503a356e926c626bef2651ca8b6aae539b5cb6b5f0dcb4a04ca6111d6b7
-Size (PySolFC-2.6.4.tar.xz) = 3761108 bytes
+BLAKE2s (PySolFC-2.14.1.tar.xz) = 8d7081754847036c3d5b75220c07a9988f66a15ebff67604dc3e9247022b3f78
+SHA512 (PySolFC-2.14.1.tar.xz) = e1ef4024d61aa9d86fd5e54ccacf12466e05038ad46e814e066ac3e81839c7ff03a59ace6e50aed8c44887a3620c3b36d25b9916ea564fec8a579e473c3684c0
+Size (PySolFC-2.14.1.tar.xz) = 4359204 bytes
 BLAKE2s (PySolFC-Cardsets-2.0.tar.bz2) = 0c396ef4a3239caa6b3295d5702027e4313a24e30a891dcf14ceb675308dfce4
 SHA512 (PySolFC-Cardsets-2.0.tar.bz2) = 24275cd3656024e268a49487ac75e1e67e61ec20e0a9f88e2d1c287f91314a1a9343856d1202ce468f8863f4e9a9bf27526fbb1979a7d765718b38e64ca0cfc8
 Size (PySolFC-Cardsets-2.0.tar.bz2) = 30687905 bytes
-SHA1 (patch-pysollib_pysolrandom.py) = 18a5c403a1fe791a08f878f1f44601040ec9c5c2
-SHA1 (patch-pysollib_settings.py) = a63a8b739a924ecc3b83cc2ca3ee79abd1f018e4
+SHA1 (patch-pysollib_settings.py) = fc2c0a5c7d1cfcec86c7052a6d1b05e29bbf84a0
