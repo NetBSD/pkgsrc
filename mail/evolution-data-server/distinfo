@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.93 2022/01/03 08:13:23 cirnatdan Exp $
+$NetBSD: distinfo,v 1.94 2022/01/03 08:18:47 cirnatdan Exp $
 
-BLAKE2s (evolution-data-server-3.42.1.tar.xz) = 2cdaf275675cf6eefd0a16df092a4a370b0e854a58072b2029c85b3ade6e8459
-SHA512 (evolution-data-server-3.42.1.tar.xz) = 8e0673af07b00e1d658b98b811312a57368e634d7a1e11ece6af02794d8e4743cd496dbd4ea9e6a1f1c8b0b55a242296f36342f5827521e903794814bcaacff8
-Size (evolution-data-server-3.42.1.tar.xz) = 4621996 bytes
-SHA1 (patch-src_camel_camel-hostname-utils.c) = 370ebb3093a96f471b03d7c6e13cd92066d04118
+BLAKE2s (evolution-data-server-3.42.2.tar.xz) = 286c70b5ddaf0450d6a61e3acffbdef51bbaa6b7668164febc463fc54d64838d
+SHA512 (evolution-data-server-3.42.2.tar.xz) = a0329180bac12d9723efd42938335ae46492cdd774358c411e89de3ef34b4d2cdbdb77fb13d8e1ad27a89f9bf64d2f78f3e25e54fbbaa9076dab2d866705de05
+Size (evolution-data-server-3.42.2.tar.xz) = 4622324 bytes
 SHA1 (patch-src_tools_addressbook-export_CMakeLists.txt) = 1e0d65ac17062bfa72ebdc0d1a3fa50f4fd1cdb2
