@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.207 2021/12/08 16:02:18 adam Exp $
+# $NetBSD: Makefile,v 1.208 2022/01/03 08:13:23 cirnatdan Exp $
 
-DISTNAME=	evolution-data-server-3.35.1
-PKGREVISION=	19
+DISTNAME=	evolution-data-server-3.42.1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-data-server/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -50,6 +49,7 @@ _TOOLS_USE_PKGSRC.msgfmt=	yes
 _TOOLS_USE_PKGSRC.msgmerge=	yes
 _TOOLS_USE_PKGSRC.xgettext=	yes
 
+.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
