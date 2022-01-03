@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2020/05/14 14:30:02 nikita Exp $
+# $NetBSD: options.mk,v 1.4 2022/01/03 12:36:53 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnutls
-PKG_SUPPORTED_OPTIONS=	dane guile
+PKG_SUPPORTED_OPTIONS=	dane guile lzo
+PKG_SUGGESTED_OPTIONS=	lzo
 
 .include "../../mk/bsd.options.mk"
 
@@ -19,4 +20,11 @@ CONFIGURE_ARGS+=	--enable-guile
 PLIST_SRC+=		PLIST.guile
 .else
 CONFIGURE_ARGS+=	--disable-guile
+.endif
+
+.if !empty(PKG_OPTIONS:Mlzo)
+.include "../../archivers/lzo/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-lzo
+.else
+CONFIGURE_ARGS+=	--disable-lzo
 .endif
