@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2020/06/13 20:54:32 leot Exp $
+@comment $NetBSD: PLIST,v 1.36 2022/01/03 14:48:49 triaxx Exp $
 bin/gamma4scanimage
 bin/sane-config
 bin/sane-find-scanner
@@ -370,6 +370,8 @@ share/examples/sane/umax1220u.conf
 share/examples/sane/umax_pp.conf
 share/examples/sane/xerox_mfp.conf
 ${PLIST.nls}share/locale/bg/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/ca/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/ca@valencia/LC_MESSAGES/sane-backends.mo
 ${PLIST.nls}share/locale/cs/LC_MESSAGES/sane-backends.mo
 ${PLIST.nls}share/locale/da/LC_MESSAGES/sane-backends.mo
 ${PLIST.nls}share/locale/de/LC_MESSAGES/sane-backends.mo
@@ -381,6 +383,7 @@ ${PLIST.nls}share/locale/es/LC_MESSAGES/sane-backends.mo
 ${PLIST.nls}share/locale/fi/LC_MESSAGES/sane-backends.mo
 ${PLIST.nls}share/locale/fr/LC_MESSAGES/sane-backends.mo
 ${PLIST.nls}share/locale/gl/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/he/LC_MESSAGES/sane-backends.mo
 ${PLIST.nls}share/locale/hu/LC_MESSAGES/sane-backends.mo
 ${PLIST.nls}share/locale/it/LC_MESSAGES/sane-backends.mo
 ${PLIST.nls}share/locale/ja/LC_MESSAGES/sane-backends.mo
