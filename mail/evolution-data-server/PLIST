@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2020/11/04 14:36:01 nia Exp $
+@comment $NetBSD: PLIST,v 1.35 2022/01/03 08:13:23 cirnatdan Exp $
 etc/xdg/autostart/org.gnome.Evolution-alarm-notify.desktop
 include/evolution-data-server/camel/camel-address.h
 include/evolution-data-server/camel/camel-async-closure.h
@@ -23,6 +23,7 @@ include/evolution-data-server/camel/camel-folder-summary.h
 include/evolution-data-server/camel/camel-folder-thread.h
 include/evolution-data-server/camel/camel-folder.h
 include/evolution-data-server/camel/camel-gpg-context.h
+include/evolution-data-server/camel/camel-hostname-utils.h
 include/evolution-data-server/camel/camel-html-parser.h
 include/evolution-data-server/camel/camel-iconv.h
 include/evolution-data-server/camel/camel-index.h
@@ -89,6 +90,7 @@ include/evolution-data-server/camel/camel-sasl-plain.h
 include/evolution-data-server/camel/camel-sasl-popb4smtp.h
 include/evolution-data-server/camel/camel-sasl-xoauth2-google.h
 include/evolution-data-server/camel/camel-sasl-xoauth2-outlook.h
+include/evolution-data-server/camel/camel-sasl-xoauth2-yahoo.h
 include/evolution-data-server/camel/camel-sasl-xoauth2.h
 include/evolution-data-server/camel/camel-sasl.h
 include/evolution-data-server/camel/camel-search-private.h
@@ -253,6 +255,7 @@ include/evolution-data-server/libedataserver/e-network-monitor.h
 include/evolution-data-server/libedataserver/e-oauth2-service-base.h
 include/evolution-data-server/libedataserver/e-oauth2-service-google.h
 include/evolution-data-server/libedataserver/e-oauth2-service-outlook.h
+include/evolution-data-server/libedataserver/e-oauth2-service-yahoo.h
 include/evolution-data-server/libedataserver/e-oauth2-service.h
 include/evolution-data-server/libedataserver/e-oauth2-services.h
 include/evolution-data-server/libedataserver/e-operation-pool.h
@@ -260,6 +263,7 @@ include/evolution-data-server/libedataserver/e-proxy.h
 include/evolution-data-server/libedataserver/e-secret-store.h
 include/evolution-data-server/libedataserver/e-sexp.h
 include/evolution-data-server/libedataserver/e-soup-auth-bearer.h
+include/evolution-data-server/libedataserver/e-soup-logger.h
 include/evolution-data-server/libedataserver/e-soup-session.h
 include/evolution-data-server/libedataserver/e-soup-ssl-trust.h
 include/evolution-data-server/libedataserver/e-source-address-book.h
@@ -316,6 +320,7 @@ include/evolution-data-server/libedataserver/e-xml-hash-utils.h
 include/evolution-data-server/libedataserver/e-xml-utils.h
 include/evolution-data-server/libedataserver/eds-version.h
 include/evolution-data-server/libedataserver/libedataserver.h
+include/evolution-data-server/libedataserverui/e-buffer-tagger.h
 include/evolution-data-server/libedataserverui/e-cell-renderer-color.h
 include/evolution-data-server/libedataserverui/e-credentials-prompter-impl-oauth2.h
 include/evolution-data-server/libedataserverui/e-credentials-prompter-impl-password.h
@@ -327,13 +332,13 @@ include/evolution-data-server/libedataserverui/e-webdav-discover-widget.h
 include/evolution-data-server/libedataserverui/libedataserverui.h
 lib/evolution-data-server/addressbook-backends/libebookbackendcarddav.so
 lib/evolution-data-server/addressbook-backends/libebookbackendfile.so
-lib/evolution-data-server/addressbook-backends/libebookbackendgoogle.so
 lib/evolution-data-server/addressbook-backends/libebookbackendldap.so
 lib/evolution-data-server/calendar-backends/libecalbackendcaldav.so
 lib/evolution-data-server/calendar-backends/libecalbackendcontacts.so
 lib/evolution-data-server/calendar-backends/libecalbackendfile.so
 lib/evolution-data-server/calendar-backends/libecalbackendgtasks.so
 lib/evolution-data-server/calendar-backends/libecalbackendhttp.so
+lib/evolution-data-server/calendar-backends/libecalbackendwebdavnotes.so
 lib/evolution-data-server/camel-providers/libcamelimapx.so
 lib/evolution-data-server/camel-providers/libcamelimapx.urls
 lib/evolution-data-server/camel-providers/libcamellocal.so
@@ -355,8 +360,8 @@ lib/evolution-data-server/registry-modules/module-trust-prompt.so
 lib/evolution-data-server/registry-modules/module-webdav-backend.so
 lib/evolution-data-server/registry-modules/module-yahoo-backend.so
 lib/libcamel-1.2.so
-lib/libcamel-1.2.so.62
-lib/libcamel-1.2.so.62.0.0
+lib/libcamel-1.2.so.63
+lib/libcamel-1.2.so.63.0.0
 lib/libebackend-1.2.so
 lib/libebackend-1.2.so.10
 lib/libebackend-1.2.so.10.0.0
@@ -376,11 +381,11 @@ lib/libedata-cal-2.0.so
 lib/libedata-cal-2.0.so.1
 lib/libedata-cal-2.0.so.1.0.0
 lib/libedataserver-1.2.so
-lib/libedataserver-1.2.so.24
-lib/libedataserver-1.2.so.24.0.0
+lib/libedataserver-1.2.so.26
+lib/libedataserver-1.2.so.26.0.0
 lib/libedataserverui-1.2.so
-lib/libedataserverui-1.2.so.2
-lib/libedataserverui-1.2.so.2.0.0
+lib/libedataserverui-1.2.so.3
+lib/libedataserverui-1.2.so.3.0.0
 lib/pkgconfig/camel-1.2.pc
 lib/pkgconfig/evolution-data-server-1.2.pc
 lib/pkgconfig/libebackend-1.2.pc
@@ -411,10 +416,10 @@ libexec/evolution-source-registry
 libexec/evolution-user-prompter
 share/GConf/gsettings/evolution-data-server.convert
 share/applications/org.gnome.Evolution-alarm-notify.desktop
-share/dbus-1/services/org.gnome.evolution.dataserver.AddressBook.service
-share/dbus-1/services/org.gnome.evolution.dataserver.Calendar.service
-share/dbus-1/services/org.gnome.evolution.dataserver.Sources.service
-share/dbus-1/services/org.gnome.evolution.dataserver.UserPrompter.service
+share/dbus-1/services/org.gnome.evolution.dataserver.AddressBook10.service
+share/dbus-1/services/org.gnome.evolution.dataserver.Calendar8.service
+share/dbus-1/services/org.gnome.evolution.dataserver.Sources5.service
+share/dbus-1/services/org.gnome.evolution.dataserver.UserPrompter0.service
 share/evolution-data-server/evolutionperson.schema
 share/glib-2.0/schemas/org.gnome.Evolution.DefaultSources.gschema.xml
 share/glib-2.0/schemas/org.gnome.evolution-data-server.addressbook.gschema.xml
