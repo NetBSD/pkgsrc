@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.61 2021/10/26 10:59:32 nia Exp $
+$NetBSD: distinfo,v 1.62 2022/01/03 21:21:12 christos Exp $
 
 BLAKE2s (screen-4.8.0.tar.gz) = 51169142215c9f8b64da633a6d77db24894d7f2f95636532344efc79985898d3
 SHA512 (screen-4.8.0.tar.gz) = 770ebaf6ee9be711bcb8a6104b3294f2bf4523dae6683fdc5eac4b3aff7e511be2d922b6b2ad28ec241113c2e4fe0d80f9a482ae1658adc19c8c3a3680caa25c
@@ -19,5 +19,5 @@ SHA1 (patch-display.h) = 922ebe152d8c09fc016b983d8fe9c1c64ef74578
 SHA1 (patch-encoding.c) = f426f0118a76106f8063c8d0c0f36b4e4ad7ae0b
 SHA1 (patch-screen.c) = de5d8468100ab88cbdb842e21b04b00221e798b8
 SHA1 (patch-socket.c) = ef7d3cb14f0199383c0e750af48f19537eb0b36d
-SHA1 (patch-tty.sh) = 711e10879250de4b0e04bc2ec00472edeaf6aada
+SHA1 (patch-tty.sh) = 6a818b7a4d70e55878ee69605e53300eabcb525f
 SHA1 (patch-window.h) = 84dc5a2c24ff77147b416c05f897536c0cfddf31
