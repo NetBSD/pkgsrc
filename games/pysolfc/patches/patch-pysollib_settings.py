@@ -1,17 +1,17 @@
-$NetBSD: patch-pysollib_settings.py,v 1.1 2019/06/06 21:53:44 adam Exp $
+$NetBSD: patch-pysollib_settings.py,v 1.2 2022/01/03 10:55:26 wiz Exp $
 
 Use custom data dir.
 
---- pysollib/settings.py.orig	2008-11-15 13:04:30.000000000 -0800
-+++ pysollib/settings.py	2008-11-15 13:05:05.000000000 -0800
+--- pysollib/settings.py.orig	2021-12-11 00:44:30.000000000 +0000
++++ pysollib/settings.py
 @@ -61,10 +61,7 @@ DATA_DIRS = []
  # you can add your extra directories here
  if os.name == 'posix':
      DATA_DIRS = [
 -        '/usr/share/PySolFC',
 -        '/usr/local/share/PySolFC',
--        '/usr/games/PySolFC',
--        '/usr/local/games/PySolFC',
+-        '/usr/share/games/PySolFC',
+-        '/usr/local/share/games/PySolFC',
 +        '@DATADIR@'
          ]
  if os.name == 'nt':
