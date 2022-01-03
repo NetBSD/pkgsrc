@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/01/03 10:49:09 wiz Exp $
+
+BLAKE2s (pycotap-1.2.2.tar.gz) = 3ab64272b73cfc1e371878e9b61fdf69b4e159f5d0429645292b4e1adaa51e49
+SHA512 (pycotap-1.2.2.tar.gz) = ac65b857d48f6b808e951b1f23839d03ae9043ccc688585f1634752d1eed26869b510c66b4f2a1d93872fe66b87ea97d60e3f5443bba6c678f6b65570126d259
+Size (pycotap-1.2.2.tar.gz) = 6414 bytes
