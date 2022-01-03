@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.49 2022/01/03 10:49:41 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.50 2022/01/03 10:49:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -61,3 +61,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-wheel to 0.37.1 [adam 2022-01-03]
 	Added devel/py-kivy-garden version 0.1.4 [wiz 2022-01-03]
 	Added devel/py-kivy version 2.0.0 [wiz 2022-01-03]
+	Added devel/py-pycotap version 1.2.2 [wiz 2022-01-03]
