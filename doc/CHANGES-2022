@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.45 2022/01/03 08:13:33 cirnatdan Exp $
+$NetBSD: CHANGES-2022,v 1.46 2022/01/03 08:22:54 cirnatdan Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -56,3 +56,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-ujson to 5.1.0 [adam 2022-01-03]
 	Updated devel/py-types-setuptools to 57.4.5 [adam 2022-01-03]
 	Updated mail/evolution-data-server to 3.42.1 [dan 2022-01-03]
+	Updated mail/evolution-data-server to 3.42.2 [dan 2022-01-03]
