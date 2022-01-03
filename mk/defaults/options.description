@@ -347,7 +347,10 @@ id3			Enable id3 tagging support.
 idea			Enable support for the IDEA cryptographic algorithm (possible license+patent problems).
 idn			Internationalized Domain Names (IDN) support.
 ikiwiki-amazon-s3	Enable publishing rendered pages to Amazon S3 servers.
+ikiwiki-discount	Use Text::Markdown::Discount to rendering HTML-pages.
 ikiwiki-highlight	Enable syntax highlighting in code blocks.
+ikiwiki-markdown	Use Text::Markdown to rendering HTML-pages.
+ikiwiki-multimarkdown	Use Text::MultMarkdown to rendering HTML-pages.
 ikiwiki-search		Enable full-text search using xapian.
 ikiwiki-sudo		Enable portable ikiwiki-mass-rebuild using sudo.
 ilbc			Enable the use of iLBC (Internet Low Bit Rate Codec).
