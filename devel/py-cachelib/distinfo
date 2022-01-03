@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:18:16 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/01/03 07:43:22 adam Exp $
 
-BLAKE2s (cachelib-0.3.0.tar.gz) = 85d6d0e87f6e0bad3aea89f185a56308dbff20443a7c01ccb16cf5839dac3f4a
-SHA512 (cachelib-0.3.0.tar.gz) = f9184cf9702c2df77e09d28d6feb8e6f0bc22f17c110a2371e76c4b78163950803e4f013c3746e21b9ac5771f72238ecd8bb041c5a7f44eab6bcb4de6e2ea377
-Size (cachelib-0.3.0.tar.gz) = 18340 bytes
+BLAKE2s (cachelib-0.5.0.tar.gz) = 5c184eeabc40d3e5912af0120d183343652fe57866d496f153e60dca9dfaa2c5
+SHA512 (cachelib-0.5.0.tar.gz) = 1b942e654cf334755fe130a913504d6b46dbb1e6aef3df33cb295ded7e47b1ed461b68653d8bc8ffe85cff6fc82a382df82b97302ff191e184e953d837a02cdd
+Size (cachelib-0.5.0.tar.gz) = 21173 bytes
