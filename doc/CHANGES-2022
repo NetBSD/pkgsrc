@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.53 2022/01/03 12:19:55 pin Exp $
+$NetBSD: CHANGES-2022,v 1.54 2022/01/03 14:49:09 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -65,3 +65,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated games/pysolfc to 2.14.1 [wiz 2022-01-03]
 	Updated x11/lxqt-session to 1.0.1 [pin 2022-01-03]
 	Updated math/kalker to 1.1.0 [pin 2022-01-03]
+	Updated graphics/sane-backends to 1.0.30nb1 [triaxx 2022-01-03]
