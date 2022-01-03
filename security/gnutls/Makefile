@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.225 2021/12/26 23:03:54 gutteridge Exp $
+# $NetBSD: Makefile,v 1.226 2022/01/03 12:36:53 wiz Exp $
 
 DISTNAME=	gnutls-3.7.2
 PKGREVISION=	2
@@ -99,7 +99,6 @@ CONFIGURE_ARGS.SunOS+=	--disable-tests
 post-install:
 	cd ${WRKSRC}/doc/examples && ${INSTALL_DATA} *.c ${DESTDIR}${EGDIR}
 
-.include "../../archivers/lzo/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gmp+=		gmp>=5.0
