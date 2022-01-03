@@ -1,10 +1,6 @@
-@comment $NetBSD: PLIST.Linux,v 1.4 2016/01/29 20:51:20 leot Exp $
-lib/sane/libsane-kvs40xx.la
-lib/sane/libsane-mustek_usb2.la
+@comment $NetBSD: PLIST.Linux,v 1.5 2022/01/03 14:48:49 triaxx Exp $
 lib/sane/libsane-qcam.la
 lib/sane/libsane-v4l.la
-man/man5/sane-kvs40xx.5
-man/man5/sane-mustek_usb2.5
 man/man5/sane-qcam.5
 man/man5/sane-v4l.5
 share/examples/sane/qcam.conf

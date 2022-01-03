@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.74 2020/06/25 12:44:10 nia Exp $
+# $NetBSD: Makefile,v 1.75 2022/01/03 14:48:49 triaxx Exp $
 
+PKGREVISION=	1
 .include "Makefile.common"
 MASTER_SITES=	https://gitlab.com/sane-project/backends/uploads/c3dd60c9e054b5dee1e7b01a7edc98b0/
 COMMENT=	API for access to scanners, digital cameras, frame grabbers, etc
