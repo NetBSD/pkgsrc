@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/01/03 10:48:05 wiz Exp $
+
+BLAKE2s (Kivy-2.0.0.tar.gz) = 977121940776b21767410732b1ebd05d5a857144c5ff3f78e835b488758ed3ef
+SHA512 (Kivy-2.0.0.tar.gz) = dd91feddaf8477093a0e12bd94a265e1b6eaeccc08f6a1908cba8b89fd388dbd803ef98975d9c4c3d4d0f335da5df247f2773f1bcb14e54ee0506c8a7e9a369d
+Size (Kivy-2.0.0.tar.gz) = 23709407 bytes
