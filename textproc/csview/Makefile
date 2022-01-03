@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/01/01 22:30:27 pin Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/03 17:30:30 pin Exp $
 
 DISTNAME=	csview-0.3.12
+# Do not update this pkg, v1.0.0 requires the Nightly Rust compiler
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wfxr/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
