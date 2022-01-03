@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.54 2022/01/03 14:49:09 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.55 2022/01/03 19:54:25 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -66,3 +66,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/lxqt-session to 1.0.1 [pin 2022-01-03]
 	Updated math/kalker to 1.1.0 [pin 2022-01-03]
 	Updated graphics/sane-backends to 1.0.30nb1 [triaxx 2022-01-03]
+	Updated audio/termusic to 0.6.5 [pin 2022-01-03]
