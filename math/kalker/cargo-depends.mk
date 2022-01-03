@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2021/06/03 10:44:39 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2022/01/03 12:19:38 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.15
 CARGO_CRATE_DEPENDS+=	ansi_term-0.12.1
@@ -10,11 +10,14 @@ CARGO_CRATE_DEPENDS+=	cc-1.0.66
 CARGO_CRATE_DEPENDS+=	cfg-if-0.1.10
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	console_error_panic_hook-0.1.6
+CARGO_CRATE_DEPENDS+=	dirs-3.0.2
 CARGO_CRATE_DEPENDS+=	dirs-next-2.0.0
+CARGO_CRATE_DEPENDS+=	dirs-sys-0.3.6
 CARGO_CRATE_DEPENDS+=	dirs-sys-next-0.1.1
 CARGO_CRATE_DEPENDS+=	fs2-0.4.3
 CARGO_CRATE_DEPENDS+=	getrandom-0.1.15
-CARGO_CRATE_DEPENDS+=	gmp-mpfr-sys-1.4.2
+CARGO_CRATE_DEPENDS+=	getrandom-0.2.3
+CARGO_CRATE_DEPENDS+=	gmp-mpfr-sys-1.4.7
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.1.18
 CARGO_CRATE_DEPENDS+=	js-sys-0.3.46
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
@@ -25,7 +28,9 @@ CARGO_CRATE_DEPENDS+=	nix-0.19.1
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.24
 CARGO_CRATE_DEPENDS+=	quote-1.0.7
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.1.57
+CARGO_CRATE_DEPENDS+=	redox_syscall-0.2.10
 CARGO_CRATE_DEPENDS+=	redox_users-0.3.5
+CARGO_CRATE_DEPENDS+=	redox_users-0.4.0
 CARGO_CRATE_DEPENDS+=	regex-1.4.2
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.21
 CARGO_CRATE_DEPENDS+=	rug-1.11.0
@@ -44,6 +49,7 @@ CARGO_CRATE_DEPENDS+=	unicode-xid-0.2.1
 CARGO_CRATE_DEPENDS+=	utf8parse-0.2.0
 CARGO_CRATE_DEPENDS+=	version_check-0.9.2
 CARGO_CRATE_DEPENDS+=	wasi-0.9.0+wasi-snapshot-preview1
+CARGO_CRATE_DEPENDS+=	wasi-0.10.2+wasi-snapshot-preview1
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-0.2.69
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-backend-0.2.69
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-futures-0.4.19
