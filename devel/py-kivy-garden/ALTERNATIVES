@@ -1,0 +1,2 @@
+bin/garden @PREFIX@/bin/garden-@PYVERSSUFFIX@
+bin/garden.bat @PREFIX@/bin/garden.bat-@PYVERSSUFFIX@
