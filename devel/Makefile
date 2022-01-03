@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3537 2021/12/31 17:26:37 plunky Exp $
+# $NetBSD: Makefile,v 1.3538 2022/01/03 10:49:20 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2392,6 +2392,8 @@ SUBDIR+=	py-jupyter_core
 SUBDIR+=	py-kafka-python
 SUBDIR+=	py-kaitaistruct
 SUBDIR+=	py-kitchen
+SUBDIR+=	py-kivy
+SUBDIR+=	py-kivy-garden
 SUBDIR+=	py-kjbuckets
 SUBDIR+=	py-lama
 SUBDIR+=	py-lazr.config
@@ -2477,6 +2479,7 @@ SUBDIR+=	py-protobuf
 SUBDIR+=	py-py
 SUBDIR+=	py-py2app
 SUBDIR+=	py-pybind11
+SUBDIR+=	py-pycotap
 SUBDIR+=	py-pydispatcher
 SUBDIR+=	py-pyelftools
 SUBDIR+=	py-pygit2
