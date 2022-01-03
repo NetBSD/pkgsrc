@@ -1,5 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2019/10/07 15:00:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/01/03 03:30:44 mef Exp $
+bin/gst-transcoder-1.0
 bin/pitivi
+include/gstreamer-1.0/gst/transcoder/gsttranscoder.h
+lib/girepository-1.0/GstTranscoder-1.0.typelib
+lib/gstreamer-1.0/libgsttranscode.so
+lib/libgsttranscoder-1.0.so
+lib/libgsttranscoder-1.0.so.0
 lib/pitivi/python/pitivi/__init__.py
 lib/pitivi/python/pitivi/__init__.pyc
 lib/pitivi/python/pitivi/application.py
@@ -108,8 +114,20 @@ lib/pitivi/python/pitivi/viewer/title_overlay.py
 lib/pitivi/python/pitivi/viewer/title_overlay.pyc
 lib/pitivi/python/pitivi/viewer/viewer.py
 lib/pitivi/python/pitivi/viewer/viewer.pyc
+lib/pkgconfig/gst-transcoder-1.0.pc
 share/appdata/org.pitivi.Pitivi.appdata.xml
 share/applications/org.pitivi.Pitivi.desktop
+share/gir-1.0/GstTranscoder-1.0.gir
+share/gstreamer-1.0/encoding-profiles/device/dvd.gep
+share/gstreamer-1.0/encoding-profiles/file-extension/avi.gep
+share/gstreamer-1.0/encoding-profiles/file-extension/flv.gep
+share/gstreamer-1.0/encoding-profiles/file-extension/mkv.gep
+share/gstreamer-1.0/encoding-profiles/file-extension/mp3.gep
+share/gstreamer-1.0/encoding-profiles/file-extension/mp4.gep
+share/gstreamer-1.0/encoding-profiles/file-extension/oga.gep
+share/gstreamer-1.0/encoding-profiles/file-extension/ogv.gep
+share/gstreamer-1.0/encoding-profiles/file-extension/webm.gep
+share/gstreamer-1.0/encoding-profiles/online-services/youtube.gep
 share/help/C/pitivi/about.page
 share/help/C/pitivi/cheatsheet.page
 share/help/C/pitivi/codecscontainers.page
