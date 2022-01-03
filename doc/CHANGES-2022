@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.43 2022/01/03 07:43:43 adam Exp $
+$NetBSD: CHANGES-2022,v 1.44 2022/01/03 07:53:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -53,3 +53,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated games/py-pysol_cards to 0.14.2 [wiz 2022-01-02]
 	Updated games/scummvm to 2.5.1 [adam 2022-01-03]
 	Updated devel/py-cachelib to 0.5.0 [adam 2022-01-03]
+	Updated textproc/py-ujson to 5.1.0 [adam 2022-01-03]
+	Updated devel/py-types-setuptools to 57.4.5 [adam 2022-01-03]
