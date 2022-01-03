@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.3 2021/12/09 19:55:39 kim Exp $
+# $NetBSD: Makefile.common,v 1.4 2022/01/03 08:16:48 kim Exp $
 #
 # used by shells/standalone-tcsh/Makefile
 # used by shells/static-tcsh/Makefile
 # used by shells/tcsh/Makefile
 
-DISTNAME=	tcsh-6.23.01
+DISTNAME=	tcsh-6.23.02
 CATEGORIES=	shells
 MASTER_SITES=	ftp://ftp.astron.com/pub/tcsh/
 MASTER_SITES+=	http://ftp.funet.fi/pub/mirrors/ftp.astron.com/pub/tcsh/
