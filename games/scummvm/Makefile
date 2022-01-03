@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.97 2021/12/08 16:04:40 adam Exp $
+# $NetBSD: Makefile,v 1.98 2022/01/03 07:40:26 adam Exp $
 
-DISTNAME=	scummvm-2.5.0
-PKGREVISION=	1
+DISTNAME=	scummvm-2.5.1
 CATEGORIES=	games
 MASTER_SITES=	https://www.scummvm.org/frs/scummvm/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -22,6 +21,8 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 UNLIMIT_RESOURCES=	datasize
 EXTRACT_USING=		bsdtar
+
+CHECK_PORTABILITY_SKIP+=	dists/opendingux/scummvm.sh
 
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.1
 .include "../../devel/SDL2/buildlink3.mk"
