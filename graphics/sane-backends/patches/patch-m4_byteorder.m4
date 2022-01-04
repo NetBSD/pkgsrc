@@ -1,6 +1,6 @@
-$NetBSD: patch-m4_byteorder.m4,v 1.1 2016/04/09 14:19:25 richard Exp $
+$NetBSD: patch-m4_byteorder.m4,v 1.2 2022/01/04 16:04:40 triaxx Exp $
 
-add SunOS byteorder needs
+Add SunOS byteorder needs.
 
 --- m4/byteorder.m4.orig	2013-02-23 02:00:56.000000000 +0000
 +++ m4/byteorder.m4

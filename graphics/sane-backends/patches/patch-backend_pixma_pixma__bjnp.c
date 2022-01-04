@@ -1,4 +1,4 @@
-$NetBSD: patch-backend_pixma_pixma__bjnp.c,v 1.1 2020/06/13 20:54:32 leot Exp $
+$NetBSD: patch-backend_pixma_pixma__bjnp.c,v 1.2 2022/01/04 16:04:40 triaxx Exp $
 
 Reuse BJNP_HOST_MAX instead of possible undefined HOST_NAME_MAX.
 
@@ -7,7 +7,7 @@ limited by BJNP_HOST_MAX.
 
 --- backend/pixma/pixma_bjnp.c.orig	2020-05-17 11:54:18.000000000 +0000
 +++ backend/pixma/pixma_bjnp.c
-@@ -1990,8 +1990,8 @@ sanei_bjnp_find_devices (const char **co
+@@ -2027,8 +2027,8 @@ sanei_bjnp_find_devices (const char **co
    fd_set fdset;
    fd_set active_fdset;
    struct timeval timeout;

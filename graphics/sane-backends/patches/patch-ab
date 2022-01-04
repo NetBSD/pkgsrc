@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.16 2016/04/09 14:19:25 richard Exp $
+$NetBSD: patch-ab,v 1.17 2022/01/04 16:04:40 triaxx Exp $
 
-add SunOS byteorder needs
+Add SunOS byteorder needs.
 
 --- configure.orig	2015-10-04 13:18:39.000000000 +0000
 +++ configure
-@@ -5979,6 +5979,36 @@ else
+@@ -20903,6 +20903,36 @@ else
  $as_echo "no" >&6; }
  
  
@@ -41,7 +41,7 @@ add SunOS byteorder needs
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for bswap32 in machine/endian.h" >&5
  $as_echo_n "checking for bswap32 in machine/endian.h... " >&6; }
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-@@ -6139,6 +6169,11 @@ rm -f conftest*
+@@ -21093,6 +21123,11 @@ rm -f conftest*
  
  
  
@@ -53,7 +53,7 @@ add SunOS byteorder needs
  
  if test "$HAVE_LE32TOH" != "1"; then
   cat >> "$ac_byteorder" << EOF
-@@ -9148,6 +9183,8 @@ else
+@@ -8977,6 +9012,8 @@ else
  # ifdef _MSC_VER
  #  include <malloc.h>
  #  define alloca _alloca
