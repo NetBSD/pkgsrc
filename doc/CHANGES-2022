@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.60 2022/01/04 12:59:15 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.61 2022/01/04 13:08:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -72,3 +72,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/mblaze to 1.2 [schmonz 2022-01-04]
 	Updated lang/nim to 1.6.2 [ryoon 2022-01-04]
 	Updated graphics/gegl to 0.4.34 [ryoon 2022-01-04]
+	Updated graphics/gimp to 2.10.30 [ryoon 2022-01-04]
