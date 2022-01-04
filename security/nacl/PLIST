@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2014/08/12 05:00:34 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/04 20:53:20 schmonz Exp $
+bin/curvecpclient
+bin/curvecpmakekey
+bin/curvecpmessage
+bin/curvecpprintkey
+bin/curvecpserver
 bin/nacl-sha256
 bin/nacl-sha512
 include/cpucycles.h

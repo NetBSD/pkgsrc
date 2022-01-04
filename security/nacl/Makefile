@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/01/05 06:16:14 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:53:20 schmonz Exp $
 
 DISTNAME=	nacl-20110221
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	https://hyperelliptic.org/nacl/
 EXTRACT_SUFX=	.tar.bz2
@@ -21,10 +21,17 @@ do-build:
 	${AR} -r build/*/lib/*/libnacl.a build/*/lib/*/randombytes.o
 
 do-install:
-	cd ${WRKSRC}/build/* && \
-	${INSTALL_PROGRAM} bin/nacl-sha256 ${DESTDIR}${PREFIX}/bin &&	\
-	${INSTALL_PROGRAM} bin/nacl-sha512 ${DESTDIR}${PREFIX}/bin &&	\
-	${INSTALL_LIB} lib/*/* ${DESTDIR}${PREFIX}/lib &&		\
-	${INSTALL_DATA} include/*/* ${DESTDIR}${PREFIX}/include
+	cd ${WRKSRC}/build/* &&						\
+	for i in nacl-sha256 nacl-sha512				\
+		curvecpclient curvecpserver				\
+		curvecpmakekey curvecpprintkey curvecpmessage; do	\
+		${INSTALL_PROGRAM} bin/$${i} ${DESTDIR}${PREFIX}/bin;	\
+	done &&								\
+	for i in lib/*/*; do						\
+		${INSTALL_LIB} $${i} ${DESTDIR}${PREFIX}/lib;		\
+	done &&								\
+	for i in include/*/*; do					\
+		${INSTALL_DATA} $${i} ${DESTDIR}${PREFIX}/include;	\
+	done
 
 .include "../../mk/bsd.pkg.mk"
