@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.2 2020/08/18 13:37:50 riastradh Exp $
+#	$NetBSD: Makefile,v 1.3 2022/01/04 19:31:41 wiz Exp $
 
 .include "../../security/ykman/version.mk"
 
@@ -22,6 +22,8 @@ DEPENDS+=	${PYPKGPREFIX}-fido2>=0:../../security/py-fido2
 DEPENDS+=	${PYPKGPREFIX}-scard>=0:../../devel/py-scard
 DEPENDS+=	${PYPKGPREFIX}-six>=0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-usb>=0:../../devel/py-usb
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-usb
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
