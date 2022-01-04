@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/01 16:14:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 07:13:06 wiz Exp $
 
 DISTNAME=	testpath-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,4 +17,9 @@ post-extract:
 	${RM} ${WRKSRC}/testpath/cli-*.exe
 
 .include "../../lang/python/egg.mk"
+
+.if ${PYPKGPREFIX} == "py27"
+_PYSETUPTOOLSINSTALLARGS:=	${PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
+.endif
+
 .include "../../mk/bsd.pkg.mk"

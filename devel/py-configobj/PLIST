@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.6 2021/12/31 07:50:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/01/04 07:13:05 wiz Exp $
 ${PYSITELIB}/_version.py
 ${PYSITELIB}/_version.pyc
 ${PYSITELIB}/_version.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/configobj.py
 ${PYSITELIB}/configobj.pyc
 ${PYSITELIB}/configobj.pyo
