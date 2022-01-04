@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: netatalk,v 1.1 2016/11/07 00:42:32 christos Exp $
+# $NetBSD: netatalk,v 1.2 2022/01/04 20:45:29 hauke Exp $
 #
 
 # PROVIDE: netatalk
@@ -11,7 +11,7 @@ $_rc_subr_loaded . /etc/rc.subr
 name="netatalk"
 rcvar=$name
 command="/usr/pkg/libexec/netatalk/${name}"
-pidfile="/var/run/${name}.pid"
+pidfile="/var/spool/lock/${name}"
 required_files="/etc/${name}/afp.conf /etc/${name}/extmap.conf"
 
 load_rc_config $name
