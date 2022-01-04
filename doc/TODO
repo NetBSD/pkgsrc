@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21395 2022/01/04 15:23:00 schmonz Exp $
+$NetBSD: TODO,v 1.21396 2022/01/04 19:49:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1638,7 +1638,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-treq-21.1.0
 	o py-uliweb-0.6
 	o py-unpaddedbase64-2.1.0
-	o py-usb-1.1.1
 	o py-webpy-0.38
 	o py-wxWidgets-4.0.0
 	o py-yubiauth-0.3.10
