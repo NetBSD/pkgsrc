@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.69 2022/01/04 17:34:49 adam Exp $
+$NetBSD: CHANGES-2022,v 1.70 2022/01/04 18:03:55 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -83,3 +83,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/jo to 1.5 [fcambus 2022-01-04]
 	Updated ham/uhd to 4.1.0.5 [adam 2022-01-04]
 	Updated comms/py-rich to 10.16.2 [adam 2022-01-04]
+	Updated x11/citron to 0.10.1 [pin 2022-01-04]
