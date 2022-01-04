@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.38 2022/01/02 20:02:45 pin Exp $
+$NetBSD: distinfo,v 1.39 2022/01/04 18:14:19 pin Exp $
 
 BLAKE2s (aho-corasick-0.7.18.crate) = 8925e88e2df4b5ca3b31783f527e1bb31dbe27846f409f631148fa239f3b2935
 SHA512 (aho-corasick-0.7.18.crate) = 7a23b16231a90d23ee60ad4c81bc225410599a4560d33d3a203138fc540c39cf1000100fed3aed40dcc371c3635656a3792545dca5dd1aefbde00d8774eebd00
@@ -165,9 +165,9 @@ Size (lock_api-0.4.5.crate) = 25199 bytes
 BLAKE2s (log-0.4.14.crate) = 6a53d58f64a8f33394bab4d3ebee1ef02f08138aecee9b8ab336e1834f7d06fd
 SHA512 (log-0.4.14.crate) = 796100167663d85a7bc4244cd305e9b3f0a1b1520764b63464698eb136318d0928c40c16f5d19d9f602a5bf769851275bbd48d66b088b0c37be7a6fb62def7cc
 Size (log-0.4.14.crate) = 34582 bytes
-BLAKE2s (macchina-6.0.3.tar.gz) = 539f1de1eea81a26c151cc0a309ec98d62e092045b487db2f939f3d8e627ab0c
-SHA512 (macchina-6.0.3.tar.gz) = 9650a70682281b3cc15aadc39177a04bc13d4222ac9bfea1e18bdeb77e07669c0ba834e42a97bfe2e6b3bd9dd6eda8f629f02eae4034ed7eaa50362adeef9465
-Size (macchina-6.0.3.tar.gz) = 60650 bytes
+BLAKE2s (macchina-6.0.4.tar.gz) = b95622737cb229063d43b4b91afe2e3ce980d3ab5c5d3530ff8f5a34ff10bab4
+SHA512 (macchina-6.0.4.tar.gz) = 3531afa42bc70166c94486266f73625e10c71ca14a33fcffc1c798ecd4fd2b80b56762a9ff3371ec48a8c4b1a6ed2d086785369604a5c68f1913db4a92637daf
+Size (macchina-6.0.4.tar.gz) = 60655 bytes
 BLAKE2s (mach-0.3.2.crate) = bf1a5764cf0612d0597472239373d06a2d47249c3337b2a91703f57010ab73de
 SHA512 (mach-0.3.2.crate) = 73622b37915f3445a57cbac5eb378bfee61f5a2383c0dd8bd7c29b5e46447405ebaeb706f3a3274e5afe37b0506afaf1511836cb8897d9d480a3abd41f18fa26
 Size (mach-0.3.2.crate) = 19611 bytes
