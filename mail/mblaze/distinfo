@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:54:07 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/01/04 12:21:47 schmonz Exp $
 
-BLAKE2s (mblaze-1.0.tar.gz) = 4266d5733b2b4ec401e50a0017fef5b50d822aca4909eff350000adf7b625f8d
-SHA512 (mblaze-1.0.tar.gz) = b7c76404018ac7954d2650c8486d743d53e189cd9be1a15e349d7618b90b4879bc7383fcd2623357aed9315343ec8fa36edd1fafa457cc5b69cff410a91c3a9a
-Size (mblaze-1.0.tar.gz) = 95676 bytes
-SHA1 (patch-t_7000-mseq.t) = 4c37f5dd2ff2589051a3ce09898d89e37f84072a
+BLAKE2s (mblaze-1.2.tar.gz) = 990da5322268c444b78c6fdb6c577755814624f8322a4f4143456dc39b4aced2
+SHA512 (mblaze-1.2.tar.gz) = 32f1ed6332d3b481d501e6f4f64fbd9b74ac26aabf55862da8b2444144e9a39f908143c3ec77b0adce90f08455e7544af9f19458d4e628c36c06ee407d81548a
+Size (mblaze-1.2.tar.gz) = 99578 bytes
