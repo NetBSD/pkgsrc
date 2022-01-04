@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.58 2022/01/04 12:21:56 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.59 2022/01/04 12:49:47 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -70,3 +70,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed devel/py-logilab-astng [wiz 2022-01-04]
 	Updated print/qpdf to 10.5.0 [ryoon 2022-01-04]
 	Updated mail/mblaze to 1.2 [schmonz 2022-01-04]
+	Updated lang/nim to 1.6.2 [ryoon 2022-01-04]
