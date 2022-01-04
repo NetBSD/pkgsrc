@@ -1,8 +1,8 @@
-$NetBSD: patch-post-install.d_50vcs-commit,v 1.5 2021/12/31 10:04:24 schmonz Exp $
+$NetBSD: patch-post-install.d_50vcs-commit,v 1.6 2022/01/04 15:22:53 schmonz Exp $
 
 Add SUBST_VARS token.
 
---- post-install.d/50vcs-commit.orig	2020-01-22 13:59:54.000000000 +0000
+--- post-install.d/50vcs-commit.orig	2021-01-02 15:33:42.000000000 +0000
 +++ post-install.d/50vcs-commit
 @@ -1,7 +1,7 @@
  #!/bin/sh
@@ -13,7 +13,7 @@ Add SUBST_VARS token.
  
  # Parent process is etckeeper
  # (Only procps ps is currently supported, others will fail,
-@@ -16,7 +16,7 @@ fi
+@@ -53,7 +53,7 @@ get_changed_packages () {
  
  if etckeeper unclean; then
  	if [ -z "${ETCKEEPER_PARENT_COMMAND_LINE}" ]; then
@@ -22,16 +22,25 @@ Add SUBST_VARS token.
  	else
  		message="committing changes in /etc made by \"$ETCKEEPER_PARENT_COMMAND_LINE\""
  	fi
-@@ -27,7 +27,7 @@ if etckeeper unclean; then
- 			echo "$message"
- 			echo
+@@ -66,7 +66,7 @@ if etckeeper unclean; then
+ 			get_changed_packages | sort | uniq > $pl.found-pkgs
+ 			if [ -s $pl.found-pkgs ]; then
+ 				sed -i 's/^/^[-+]/;s/$/ /' $pl.found-pkgs
+-				etckeeper list-installed | diff -U0 $pl.pre-install - | tail -n+4 | egrep '^[-+]' | grep -f $pl.found-pkgs > $pl.found-packages
++				etckeeper list-installed | diff -U0 $pl.pre-install - | tail -n+4 | @EGREP@ '^[-+]' | grep -f $pl.found-pkgs > $pl.found-packages
+ 				if [ -s $pl.found-packages ]; then
+ 					echo "Packages with configuration changes:"
+ 					cat $pl.found-packages || true
+@@ -74,7 +74,7 @@ if etckeeper unclean; then
+ 				fi
+ 			fi
  			echo "Package changes:"
 -			etckeeper list-installed | diff -U0 $pl.pre-install - | tail -n+4 | egrep '^[-+]' || true
 +			etckeeper list-installed | diff -U0 $pl.pre-install - | tail -n+4 | @EGREP@ '^[-+]' || true
  		) | etckeeper commit --stdin
  	else
  		etckeeper commit "$(printf "$message")"
-@@ -36,7 +36,8 @@ if etckeeper unclean; then
+@@ -83,7 +83,8 @@ if etckeeper unclean; then
  	set -e
  
  	if [ "$status" != 0 ]; then
