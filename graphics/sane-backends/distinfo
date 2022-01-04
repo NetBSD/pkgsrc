@@ -1,15 +1,14 @@
-$NetBSD: distinfo,v 1.50 2021/10/26 10:46:53 nia Exp $
+$NetBSD: distinfo,v 1.51 2022/01/04 16:04:39 triaxx Exp $
 
-BLAKE2s (sane-backends-1.0.30.tar.gz) = 8c1a63e0d9228ef8975059300667b2c155e340327532ba94958280d90e16f3ba
-SHA512 (sane-backends-1.0.30.tar.gz) = e9f4ab1f21d5ab0e09b101389c325947824945af968f08b307485f79d4dc4c134b8a1979fb0cf0cfa72435abffe70d0060748a2c2ec46514eb15a0442ee181a5
-Size (sane-backends-1.0.30.tar.gz) = 7204519 bytes
-SHA1 (patch-aa) = 91f5838b7c455dc160ba22d15659c1b19a222668
-SHA1 (patch-ab) = f6ec74b90f5499d07117559c7079ba2efccccf17
+BLAKE2s (sane-backends-1.0.32.tar.gz) = 2df20c4efa3f83b6e228c4ab0629e6fd64cae3b348af7fa3d818cc4393e0a03a
+SHA512 (sane-backends-1.0.32.tar.gz) = 416757d9a69bbc18678d1f16a024ba5a949c571204a68f36009d416be28723886ccea71daaa7da90d20eac9696cd44e567802d6c21c3fc5914b97213bbedb6d5
+Size (sane-backends-1.0.32.tar.gz) = 7349442 bytes
+SHA1 (patch-aa) = 612cd8b6d6d1cb00aae9efc0c13f48151a9503e8
+SHA1 (patch-ab) = 8d099b9b944585d7c7f77738bffbd44e184a13e6
 SHA1 (patch-ah) = 6e747c3b541c9ebb57db6477ac6b6e48b1df0248
 SHA1 (patch-ai) = 14f5467eb865406cbec00b8d47b5c23c4c89f113
-SHA1 (patch-aj) = c2e0733796872f1b074d0491dea4cffa1891bccc
-SHA1 (patch-ak) = f00d3773c14f9955565debc0d16231906a2bba76
-SHA1 (patch-backend_genesys_low.cpp) = 6df874fc4e4909e401db923510f802367f2377f5
-SHA1 (patch-backend_pixma_pixma__bjnp.c) = c48e929910cbe33b91c919de3f47badd2bf063f0
-SHA1 (patch-m4_byteorder.m4) = 23f4b0256fc9980d3472e77ab558b0e24a9495b4
+SHA1 (patch-aj) = 0a9e585b74087db3f8f56529f1e27dc325d8f89a
+SHA1 (patch-ak) = 0552ea77c243eb209d0af0e07a0c5a79dd1897d2
+SHA1 (patch-backend_pixma_pixma__bjnp.c) = c2e99ba6a4e6b177b0f8d151b65ece23cc44e3ef
+SHA1 (patch-m4_byteorder.m4) = 9e44d6a14b4c9de681dedcfb64344d21f6b549fc
 SHA1 (patch-tools_umax__pp.c) = debe660184a1380a894e8a5414983f5fdb19cded

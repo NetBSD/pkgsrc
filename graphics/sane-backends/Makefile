@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2022/01/03 14:48:49 triaxx Exp $
+# $NetBSD: Makefile,v 1.76 2022/01/04 16:04:39 triaxx Exp $
 
-PKGREVISION=	1
 .include "Makefile.common"
-MASTER_SITES=	https://gitlab.com/sane-project/backends/uploads/c3dd60c9e054b5dee1e7b01a7edc98b0/
+MASTER_SITES=	https://gitlab.com/sane-project/backends/uploads/104f09c07d35519cc8e72e604f11643f/
 COMMENT=	API for access to scanners, digital cameras, frame grabbers, etc
 
 DISTNAME=	sane-backends-${SANE_VERSION}
@@ -75,6 +74,9 @@ CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/sane.d/${f}
 .include "../../graphics/libv4l/buildlink3.mk"
 .endif
 .include "../../graphics/tiff/buildlink3.mk"
+JPEG_ACCEPTED=	foo
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
