@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3538 2022/01/03 10:49:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3539 2022/01/04 07:01:16 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2409,7 +2409,6 @@ SUBDIR+=	py-llvmlite
 SUBDIR+=	py-lockfile
 SUBDIR+=	py-logan
 SUBDIR+=	py-logbook
-SUBDIR+=	py-logilab-astng
 SUBDIR+=	py-logilab-common
 SUBDIR+=	py-lru-dict
 SUBDIR+=	py-lupa
