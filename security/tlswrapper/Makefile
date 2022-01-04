@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/01/04 21:39:03 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 22:10:37 schmonz Exp $
 
 GITHUB_PROJECT=		tlswrapper
 GITHUB_TAG=		20220101
@@ -18,10 +18,9 @@ BUILD_DEFS+=		VARBASE TLSWRAPPER_CHROOT
 OWN_DIRS+=		${TLSWRAPPER_CHROOT}
 MAKE_ENV+=		EMPTYDIR=${TLSWRAPPER_CHROOT:Q}
 
-INSTALLATION_DIRS=	bin man/man1
+LDFLAGS.SunOS+=		-lsocket
 
-post-extract:
-	${RM} -f ${WRKSRC}/bearssl.sh
+INSTALLATION_DIRS=	bin man/man1
 
 do-install:
 	cd ${WRKSRC};							\
