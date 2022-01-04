@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2021/11/17 13:50:30 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/04 20:53:51 wiz Exp $
 
 DISTNAME=	fs-2.4.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	filesystems python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fs/}
 

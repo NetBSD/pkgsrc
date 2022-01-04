@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2020/03/11 20:17:12 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2022/01/04 20:54:06 wiz Exp $
 
 DISTNAME=	pycha-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycha/}
 

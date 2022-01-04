@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2021/12/16 13:02:40 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/01/04 20:54:50 wiz Exp $
 
 DISTNAME=	csvkit-0.9.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wireservice/}
 GITHUB_TAG=	${PKGVERSION_NOREV}

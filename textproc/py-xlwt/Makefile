@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2017/08/31 09:31:08 adam Exp $
+# $NetBSD: Makefile,v 1.9 2022/01/04 20:55:09 wiz Exp $
 
 DISTNAME=	xlwt-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xlwt/}
 

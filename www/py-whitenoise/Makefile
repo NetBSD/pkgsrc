@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2019/11/13 21:01:37 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:55:38 wiz Exp $
 
 DISTNAME=	whitenoise-4.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/whitenoise/}
 

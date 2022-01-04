@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/08/03 13:51:29 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:55:24 wiz Exp $
 
 DISTNAME=	feedgenerator-1.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/feedgenerator/}
 

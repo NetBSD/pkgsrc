@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2021/11/24 11:28:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:54:29 wiz Exp $
 
 DISTNAME=	moto-1.1.19
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/moto/}
 

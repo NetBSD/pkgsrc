@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2021/12/30 13:05:41 adam Exp $
+# $NetBSD: Makefile,v 1.13 2022/01/04 20:55:30 wiz Exp $
 
 DISTNAME=	httpcore-0.14.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httpcore/}
 

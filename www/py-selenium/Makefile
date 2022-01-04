@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2020/01/29 13:10:39 adam Exp $
+# $NetBSD: Makefile,v 1.14 2022/01/04 20:55:35 wiz Exp $
 
 DISTNAME=	selenium-3.141.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/selenium/}
 

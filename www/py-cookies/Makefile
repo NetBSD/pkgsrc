@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/09/29 14:33:38 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:55:17 wiz Exp $
 
 DISTNAME=	cookies-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cookies/}
 

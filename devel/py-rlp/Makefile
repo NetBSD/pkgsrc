@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2021/04/11 16:59:36 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/01/04 20:53:37 wiz Exp $
 
 DISTNAME=	rlp-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rlp/}
 

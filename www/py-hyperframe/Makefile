@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2021/04/29 08:22:42 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/04 20:55:30 wiz Exp $
 
 DISTNAME=	hyperframe-6.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hyperframe/}
 

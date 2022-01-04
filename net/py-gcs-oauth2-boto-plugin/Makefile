@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/10/16 07:00:57 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:54:27 wiz Exp $
 
 DISTNAME=	gcs-oauth2-boto-plugin-2.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gcs-oauth2-boto-plugin/}
 

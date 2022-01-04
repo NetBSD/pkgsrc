@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2019/07/20 22:56:54 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/01/04 20:54:54 wiz Exp $
 
 DISTNAME=	pyenchant-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyenchant/}
 

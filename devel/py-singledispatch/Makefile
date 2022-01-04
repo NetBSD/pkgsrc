@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/07/21 07:12:35 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:53:39 wiz Exp $
 
 DISTNAME=	singledispatch-3.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/singledispatch/}
 

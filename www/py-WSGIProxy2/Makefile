@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/02/26 11:27:17 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:55:15 wiz Exp $
 
 DISTNAME=	WSGIProxy2-0.4.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/WSGIProxy2/}
 

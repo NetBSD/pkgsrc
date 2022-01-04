@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2019/01/15 22:15:37 adam Exp $
+# $NetBSD: Makefile,v 1.12 2022/01/04 20:55:37 wiz Exp $
 
 DISTNAME=	uwsgitop-0.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	python www
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uwsgitop/}
 

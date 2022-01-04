@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2021/12/06 14:14:35 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/04 20:55:35 wiz Exp $
 
 DISTNAME=	SPARQLWrapper-1.8.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SPARQLWrapper/}
 

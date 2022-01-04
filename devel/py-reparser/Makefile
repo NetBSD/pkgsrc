@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/09/04 13:39:56 leot Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:35 wiz Exp $
 
 DISTNAME=	ReParser-1.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/reparser/}
 

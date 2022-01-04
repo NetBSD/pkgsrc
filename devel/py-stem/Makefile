@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2022/01/01 21:21:41 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:53:39 wiz Exp $
 
 DISTNAME=	stem-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/stem/}
 

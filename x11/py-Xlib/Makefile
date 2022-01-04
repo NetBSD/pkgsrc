@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2020/12/19 16:56:34 prlw1 Exp $
+# $NetBSD: Makefile,v 1.17 2022/01/04 20:55:40 wiz Exp $
 
 DISTNAME=	python-xlib-0.29
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-x/X/}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=python-xlib/}
 GITHUB_PROJECT=	python-xlib

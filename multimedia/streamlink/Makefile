@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2021/12/30 13:05:40 adam Exp $
+# $NetBSD: Makefile,v 1.29 2022/01/04 20:54:23 wiz Exp $
 
 DISTNAME=	streamlink-2.3.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=streamlink/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
-PKGREVISION=	1
+PKGREVISION=	2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://streamlink.github.io/

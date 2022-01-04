@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/04/28 09:56:15 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:54:36 wiz Exp $
 
 DISTNAME=	xhtml2pdf-0.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xhtml2pdf/}
 

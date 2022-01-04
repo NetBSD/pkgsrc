@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2017/02/14 07:35:06 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:55:35 wiz Exp $
 
 DISTNAME=	static-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/static/}
 
