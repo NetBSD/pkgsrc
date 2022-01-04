@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/01/03 10:49:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/04 06:53:58 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -9,4 +9,4 @@ ${PYSITELIB}/pycotap/__init__.pyo
 ${PYSITELIB}/pycotap/__main__.py
 ${PYSITELIB}/pycotap/__main__.pyc
 ${PYSITELIB}/pycotap/__main__.pyo
-share/doc/py39-pycotap/COPYING
+share/doc/${PYPKGPREFIX}-pycotap/COPYING
