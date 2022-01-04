@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2021/12/11 17:39:56 tnn Exp $
+@comment $NetBSD: PLIST,v 1.21 2022/01/04 17:29:06 adam Exp $
 bin/rfnoc_image_builder
 bin/uhd_adc_self_cal
 bin/uhd_cal_rx_iq_balance
@@ -238,6 +238,8 @@ lib/uhd/tests/devtest/gpio_test.py
 lib/uhd/tests/devtest/list_sensors_test.py
 lib/uhd/tests/devtest/multi_usrp_test.py
 lib/uhd/tests/devtest/python_api_test.py
+lib/uhd/tests/devtest/python_rx_stability_test.py
+lib/uhd/tests/devtest/recv_stability_test.py
 lib/uhd/tests/devtest/run_testsuite.py
 lib/uhd/tests/devtest/rx_samples_to_file_test.py
 lib/uhd/tests/devtest/test_messages_test.py
@@ -354,6 +356,9 @@ share/uhd/cal/cal_metadata.fbs
 share/uhd/cal/dsa_cal.fbs
 share/uhd/cal/iq_cal.fbs
 share/uhd/cal/pwr_cal.fbs
+@pkgdir share/uhd/firmware
+@pkgdir share/uhd/fpga
+@pkgdir share/uhd/images
 share/uhd/rfnoc/blocks/addsub.yml
 share/uhd/rfnoc/blocks/axi_ram_fifo.yml
 share/uhd/rfnoc/blocks/axi_ram_fifo_2x64.yml
@@ -386,6 +391,3 @@ share/uhd/rfnoc/core/rfnoc_imagebuilder_args.json
 share/uhd/rfnoc/core/x300_bsp.yml
 share/uhd/rfnoc/core/x310_bsp.yml
 share/uhd/rfnoc/core/x410_bsp.yml
-@pkgdir share/uhd/images
-@pkgdir share/uhd/fpga
-@pkgdir share/uhd/firmware
