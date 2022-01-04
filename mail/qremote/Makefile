@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/11/19 09:35:42 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 21:03:22 schmonz Exp $
 
 DISTNAME=		qremote-20131231
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 EXTRACT_SUFX=		.tar.bz2
@@ -24,7 +25,7 @@ post-build:
 	cd ${WRKSRC} && ${MV} qmail-remote qmail-qremote
 
 do-install:
-	for i in qremote curvecpclient curvecpmessage rsmtp; do \
+	for i in qremote rsmtp; do \
 	  ${INSTALL_PROGRAM} ${WRKSRC}/qmail-$${i} ${DESTDIR}${PREFIX}/bin; \
 	done
 	${INSTALL_PROGRAM} ${WRKSRC}/showdnsmx ${DESTDIR}${PREFIX}/bin
