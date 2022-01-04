@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21392 2022/01/04 12:21:56 schmonz Exp $
+$NetBSD: TODO,v 1.21393 2022/01/04 13:08:11 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -747,7 +747,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gens-2.15.5
 	o gfract-0.33
 	o ghdl-0.33
-	o gimp-2.10.30
 	o gimp-docs-de-2.10.0
 	o gimp-docs-en-2.10.0
 	o gimp-docs-es-2.10.0
