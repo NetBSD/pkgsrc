@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.73 2021/12/17 08:51:53 prlw1 Exp $
+# $NetBSD: Makefile,v 1.74 2022/01/04 10:44:19 ryoon Exp $
 
 DISTNAME=	marble-${KAPPSVER}
 PKGREVISION=	8
 CATEGORIES=	misc
 
-HOMEPAGE=	https://kde.org/applications/system/marble/
+HOMEPAGE=	https://marble.kde.org/
 COMMENT=	KDE desktop globe
 LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v3 AND gnu-fdl-v1.2
 
