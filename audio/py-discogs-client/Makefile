@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/03/07 17:31:28 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:52:33 wiz Exp $
 
 DISTNAME=	discogs-client-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/discogs-client/}
 

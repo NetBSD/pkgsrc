@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2021/10/11 17:42:25 adam Exp $
+# $NetBSD: Makefile,v 1.16 2022/01/04 20:53:17 wiz Exp $
 
 DISTNAME=	modulegraph-0.19.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/modulegraph/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2022/01/01 17:31:36 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/01/04 20:53:07 wiz Exp $
 
 DISTNAME=	python-gflags-3.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-gflags/}
 

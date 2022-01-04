@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/11/03 10:18:27 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:05 wiz Exp $
 
 DISTNAME=	fixtures-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fixtures/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2019/12/13 09:40:06 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:52:52 wiz Exp $
 
 DISTNAME=	backports.os-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/backports.os/}
 

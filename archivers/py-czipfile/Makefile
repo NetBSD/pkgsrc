@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2019/11/02 22:54:27 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/04 20:52:30 wiz Exp $
 
 DISTNAME=	czipfile-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/czipfile/}
 

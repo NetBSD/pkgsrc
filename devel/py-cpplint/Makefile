@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2021/11/09 23:18:57 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/04 20:52:58 wiz Exp $
 
 DISTNAME=	cpplint-1.5.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cpplint/}
 

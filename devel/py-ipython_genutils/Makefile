@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/01/01 17:45:21 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/04 20:53:11 wiz Exp $
 
 DISTNAME=	ipython_genutils-0.2.0
-PKGREVISION=	2
+PKGREVISION=	3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipython_genutils/}
