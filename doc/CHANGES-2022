@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.57 2022/01/04 10:53:41 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.58 2022/01/04 12:21:56 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -69,3 +69,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/termusic to 0.6.5 [pin 2022-01-03]
 	Removed devel/py-logilab-astng [wiz 2022-01-04]
 	Updated print/qpdf to 10.5.0 [ryoon 2022-01-04]
+	Updated mail/mblaze to 1.2 [schmonz 2022-01-04]
