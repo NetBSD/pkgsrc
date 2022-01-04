@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/05/23 07:03:43 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:25 wiz Exp $
 
+PKGREVISION= 1
 .include "../../devel/py-pyobjc/Makefile.common"
 
 DISTNAME=	pyobjc-framework-CoreAudio-${PYOBJC_VERS}
