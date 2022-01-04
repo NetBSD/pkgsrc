@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.21 2021/12/09 10:14:53 fcambus Exp $
+$NetBSD: distinfo,v 1.22 2022/01/04 20:30:02 fcambus Exp $
 
-BLAKE2s (htmldoc/v1.9.13.tar.gz) = 9216f51f128b50c0e43d679071392972d87cb73255e23abf7698d71e0a87d539
-SHA512 (htmldoc/v1.9.13.tar.gz) = 435e1ad583b93c2e08cad86c99030f630ef94fd228018b17fe78249b1fc60acc90588c3869c4f258023419a2c65e3ef8d2b80cf839dfe085edf9ad8eebdb12de
-Size (htmldoc/v1.9.13.tar.gz) = 3421943 bytes
+BLAKE2s (htmldoc/v1.9.14.tar.gz) = 4c70a877038e88544c73754be60d29a4001d4a0ae10038ed814c8e2d8f6c0dfe
+SHA512 (htmldoc/v1.9.14.tar.gz) = 5d4e94869a2765819262a909a28dfbe71534b5458306b0c87928f0631a68cdb9da6d2a2f692906a1f39252fc7817984041b25a07e59429850d2aed0a356fb5d6
+Size (htmldoc/v1.9.14.tar.gz) = 3421758 bytes
 SHA1 (patch-desktop_Makefile) = 687b416d6b4189aa4b0242b23858daabd54a76ed
 SHA1 (patch-htmldoc_http-addrlist.c) = 5c36f78655838e633f805b6529a2a3183e10288a
