@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2021/04/16 17:18:57 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/01/04 10:53:05 ryoon Exp $
 bin/fix-qdf
 bin/qpdf
 bin/zlib-flate
@@ -60,6 +60,4 @@ lib/pkgconfig/libqpdf.pc
 man/man1/fix-qdf.1
 man/man1/qpdf.1
 man/man1/zlib-flate.1
-share/doc/qpdf/qpdf-manual.html
-share/doc/qpdf/qpdf-manual.pdf
-share/doc/qpdf/stylesheet.css
+share/doc/qpdf/README-doc.txt
