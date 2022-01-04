@@ -1,2 +1,0 @@
-The aim of this module is to provide a common base representation of
-Python source code for projects such as pyreverse or pylint.
