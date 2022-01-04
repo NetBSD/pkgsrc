@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/04/04 13:41:23 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:52:47 wiz Exp $
 
 DISTNAME=	ParamUnittest-0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/ParamUnittest/}
 

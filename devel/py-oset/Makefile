@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/07/26 11:46:16 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:19 wiz Exp $
 
 DISTNAME=	oset-0.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/oset/}
 

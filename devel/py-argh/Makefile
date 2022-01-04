@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2017/07/30 22:32:15 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/04 20:52:49 wiz Exp $
 
 DISTNAME=	argh-0.26.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/argh/}
 

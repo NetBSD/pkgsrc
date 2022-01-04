@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2018/12/04 12:54:01 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:53:14 wiz Exp $
 
 DISTNAME=	kafka-python-1.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/kafka-python/}
 

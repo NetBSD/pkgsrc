@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2019/07/03 07:19:03 nia Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/04 20:53:01 wiz Exp $
 
 DISTNAME=	pydoctor-16.3.0
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydoctor/}
 

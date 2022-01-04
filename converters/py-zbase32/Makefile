@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2020/07/27 16:20:45 gdt Exp $
+# $NetBSD: Makefile,v 1.18 2022/01/04 20:52:40 wiz Exp $
 
 DISTNAME=	zbase32-1.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zbase32/}
 

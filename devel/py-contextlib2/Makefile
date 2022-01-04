@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/12/15 11:18:32 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:52:58 wiz Exp $
 
 DISTNAME=	contextlib2-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/contextlib2/}
 

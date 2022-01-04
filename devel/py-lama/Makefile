@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2020/05/16 17:27:42 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/04 20:53:14 wiz Exp $
 
 DISTNAME=	pylama-7.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylama/}
 

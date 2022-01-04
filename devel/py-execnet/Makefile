@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2021/06/13 17:28:40 adam Exp $
+# $NetBSD: Makefile,v 1.10 2022/01/04 20:53:02 wiz Exp $
 
 DISTNAME=	execnet-1.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/execnet/}
 

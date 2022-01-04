@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2021/07/19 19:50:10 adam Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/04 20:53:20 wiz Exp $
 
 DISTNAME=	pathspec-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pathspec/}
 

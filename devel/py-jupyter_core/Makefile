@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2021/12/30 13:05:31 adam Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/04 20:53:13 wiz Exp $
 
 DISTNAME=	jupyter_core-4.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_core/}
 

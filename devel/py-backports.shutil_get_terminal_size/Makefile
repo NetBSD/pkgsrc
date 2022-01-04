@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2017/11/22 10:57:15 markd Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:52:52 wiz Exp $
 
 DISTNAME=	backports.shutil_get_terminal_size-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/backports.shutil_get_terminal_size/}
 

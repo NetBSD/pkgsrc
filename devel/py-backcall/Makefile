@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 07:13:05 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/04 20:52:51 wiz Exp $
 
 DISTNAME=	backcall-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/backcall/}
 

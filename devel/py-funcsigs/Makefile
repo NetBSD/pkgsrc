@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2017/07/30 22:32:16 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:53:06 wiz Exp $
 
 DISTNAME=	funcsigs-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/funcsigs/}
 

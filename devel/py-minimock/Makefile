@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2017/09/16 19:26:48 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:53:17 wiz Exp $
 
 DISTNAME=	MiniMock-1.2.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/MiniMock/}
 

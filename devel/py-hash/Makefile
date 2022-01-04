@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2021/12/30 13:05:30 adam Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/04 20:53:09 wiz Exp $
 
 DISTNAME=	pyfasthash-0.6.2
 PKGNAME=	${DISTNAME:S/pyfast/${PYPKGPREFIX}-/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=flier/}
 

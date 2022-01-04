@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2018/03/16 13:26:47 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:52:47 wiz Exp $
 
 DISTNAME=	Spans-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Spans/}
 

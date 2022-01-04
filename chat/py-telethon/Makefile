@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/09/14 19:42:19 js Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:52:37 wiz Exp $
 
 DISTNAME=	Telethon-1.23.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_PYPI:=T/Telethon/}
 

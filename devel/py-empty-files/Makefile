@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/12/15 10:04:59 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:53:02 wiz Exp $
 
 DISTNAME=	empty-files-0.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/empty-files/}
 
