@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.67 2022/01/04 16:04:54 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.68 2022/01/04 17:26:36 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -80,3 +80,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/texttest to 4.0.8nb2 [schmonz 2022-01-04]
 	Updated sysutils/etckeeper to 1.18.16 [schmonz 2022-01-04]
 	Updated graphics/sane-backends to 1.0.32 [triaxx 2022-01-04]
+	Updated textproc/jo to 1.5 [fcambus 2022-01-04]
