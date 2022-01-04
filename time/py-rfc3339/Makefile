@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/02/12 08:34:48 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:55:13 wiz Exp $
 
 DISTNAME=	pyRFC3339-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl:S/py//}
+PKGREVISION=	1
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyRFC3339/}
 

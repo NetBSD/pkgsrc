@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2021/11/01 19:41:46 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/04 20:55:08 wiz Exp $
 
 DISTNAME=	uritemplate-4.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uritemplate/}
 

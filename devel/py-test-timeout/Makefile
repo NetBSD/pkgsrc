@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2020/10/08 08:28:38 adam Exp $
+# $NetBSD: Makefile,v 1.12 2022/01/04 20:53:43 wiz Exp $
 
 DISTNAME=	pytest-timeout-1.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-timeout/}
 

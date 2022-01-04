@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2021/05/12 08:32:16 adam Exp $
+# $NetBSD: Makefile,v 1.17 2022/01/04 20:54:14 wiz Exp $
 
 DISTNAME=	mpmath-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mpmath/}
 MASTER_SITES+=	http://mpmath.org/files/

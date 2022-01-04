@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2021/12/20 21:54:59 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/04 20:55:26 wiz Exp $
 
 DISTNAME=	Flask-FlatPages-0.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-FlatPages/}
 

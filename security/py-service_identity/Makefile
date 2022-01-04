@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2018/12/22 09:41:05 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/04 20:54:44 wiz Exp $
 
 DISTNAME=	service_identity-18.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/service_identity/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/05/17 21:38:46 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:54:57 wiz Exp $
 
 DISTNAME=	jsonref-0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonref/}
 

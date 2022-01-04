@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2021/12/06 14:41:21 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/04 20:55:14 wiz Exp $
 
 DISTNAME=	FormEncode-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/FormEncode/}
 

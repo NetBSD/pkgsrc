@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2020/06/18 21:45:06 adam Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/04 20:54:56 wiz Exp $
 
 DISTNAME=	iniparse-0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/iniparse/}
 

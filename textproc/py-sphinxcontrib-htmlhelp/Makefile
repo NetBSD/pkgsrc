@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/10/29 16:15:08 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:55:06 wiz Exp $
 
 DISTNAME=	sphinxcontrib-htmlhelp-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinxcontrib-htmlhelp/}
 

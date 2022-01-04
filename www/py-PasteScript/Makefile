@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2017/09/04 18:01:03 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:55:15 wiz Exp $
 
 DISTNAME=	PasteScript-2.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PasteScript/}
 

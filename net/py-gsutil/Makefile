@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2021/09/19 12:49:42 bsiegert Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/04 20:54:28 wiz Exp $
 
 DISTNAME=	gsutil-4.68
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gsutil/}
 

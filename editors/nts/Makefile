@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2020/12/04 20:45:15 nia Exp $
+# $NetBSD: Makefile,v 1.18 2022/01/04 20:53:50 wiz Exp $
 
 DISTNAME=	nts-78
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	editors
 MASTER_SITES=	http://www.duke.edu/~dgraham/NTS/
 

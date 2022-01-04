@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/08/20 11:19:18 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:55:37 wiz Exp $
 
 DISTNAME=	wagtailnews-2.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=neon-jungle/}
 

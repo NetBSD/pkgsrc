@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/12/19 22:25:45 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:55:33 wiz Exp $
 
 DISTNAME=	publicsuffix2-2.20190812
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/publicsuffix2/}
 

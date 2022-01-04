@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/01/02 23:23:42 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:01 wiz Exp $
 
 DISTNAME=	pysol_cards-0.14.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	games python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysol-cards/}
 

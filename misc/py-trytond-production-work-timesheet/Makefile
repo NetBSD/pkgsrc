@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 23:33:06 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:54:21 wiz Exp $
 TRYTON_MODULE_NAME=	trytond_production_work_timesheet
+PKGREVISION= 1
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	misc python
 

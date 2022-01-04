@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2020/05/17 21:38:47 adam Exp $
+# $NetBSD: Makefile,v 1.21 2022/01/04 20:55:08 wiz Exp $
 
 DISTNAME=	textile-3.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/textile/}
 

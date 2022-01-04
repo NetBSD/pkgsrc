@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2021/02/22 10:34:52 adam Exp $
+# $NetBSD: Makefile,v 1.9 2022/01/04 20:55:07 wiz Exp $
 
 DISTNAME=	tabulate-0.8.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tabulate/}
 

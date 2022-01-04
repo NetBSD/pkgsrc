@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/05/19 11:03:46 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:24 wiz Exp $
 
 DISTNAME=	aioresponses-0.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aioresponses/}
 

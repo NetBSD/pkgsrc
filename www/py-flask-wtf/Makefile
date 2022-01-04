@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2021/11/24 10:33:28 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2022/01/04 20:55:28 wiz Exp $
 
 DISTNAME=	Flask-WTF-0.14.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-WTF/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2021/07/30 17:45:00 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:41 wiz Exp $
 
 DISTNAME=	pytest-isort-0.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-isort/}
 

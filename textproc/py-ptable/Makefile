@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/10/16 13:47:01 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:55:02 wiz Exp $
 
 DISTNAME=	PTable-0.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PTable/}
 

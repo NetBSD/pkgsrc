@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2022/01/02 00:21:18 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/04 20:55:31 wiz Exp $
 
 DISTNAME=	ipywidgets-7.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipywidgets/}
 

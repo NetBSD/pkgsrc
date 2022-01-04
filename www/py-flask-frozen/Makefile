@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2019/07/09 23:02:29 nia Exp $
+# $NetBSD: Makefile,v 1.14 2022/01/04 20:55:26 wiz Exp $
 
 DISTNAME=	Frozen-Flask-0.15
 PKGNAME=	${PYPKGPREFIX}-flask-frozen-0.15
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Frozen-Flask/}
 

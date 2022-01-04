@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2019/11/03 11:45:50 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2022/01/04 20:54:30 wiz Exp $
 
+PKGREVISION= 1
 .include "../../net/net-snmp/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/net-snmp/netsnmp/}

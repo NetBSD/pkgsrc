@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2019/09/02 13:20:02 adam Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/04 20:55:18 wiz Exp $
 
 DISTNAME=	django-appmedia-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-appmedia/}
 

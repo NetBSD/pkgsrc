@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/07/30 22:32:16 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:39 wiz Exp $
 
 DISTNAME=	speaklater-1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/speaklater/}
 

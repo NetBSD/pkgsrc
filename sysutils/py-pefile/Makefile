@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2021/06/02 22:21:12 khorben Exp $
+# $NetBSD: Makefile,v 1.14 2022/01/04 20:54:49 wiz Exp $
 
 PEFILE_VERSION=	2021.5.24
 DISTNAME=	pefile-${PEFILE_VERSION}
 PKGNAME=	${PYPKGPREFIX}-pefile-${PEFILE_VERSION:S/-/./}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pefile/}
 

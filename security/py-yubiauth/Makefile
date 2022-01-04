@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2019/09/02 13:19:55 adam Exp $
+# $NetBSD: Makefile,v 1.10 2022/01/04 20:54:45 wiz Exp $
 
 DISTNAME=	yubiauth-0.3.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://developers.yubico.com/yubiauth/Releases/
 

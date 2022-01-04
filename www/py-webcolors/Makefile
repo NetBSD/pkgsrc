@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2020/02/19 17:49:24 adam Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/04 20:55:37 wiz Exp $
 
 DISTNAME=	webcolors-1.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/webcolors/}
 

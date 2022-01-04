@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2019/07/09 11:29:30 nia Exp $
+# $NetBSD: Makefile,v 1.10 2022/01/04 20:54:41 wiz Exp $
 
 DISTNAME=	itsdangerous-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/itsdangerous/}
 

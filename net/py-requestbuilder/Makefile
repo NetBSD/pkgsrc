@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/04/14 13:54:46 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:54:31 wiz Exp $
 
 DISTNAME=	requestbuilder-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requestbuilder/}
 

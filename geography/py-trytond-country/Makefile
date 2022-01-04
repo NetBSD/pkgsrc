@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2020/01/18 23:32:08 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2022/01/04 20:54:02 wiz Exp $
 TRYTON_MODULE_NAME=	trytond_country
+PKGREVISION= 1
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	geography python
 

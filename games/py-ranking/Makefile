@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/02/06 11:22:03 kleink Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:54:01 wiz Exp $
 
 DISTNAME=	ranking-0.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	games python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sublee/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2020/05/17 21:38:46 adam Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/04 20:54:51 wiz Exp $
 
 DISTNAME=	Whoosh-2.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/Whoosh/}
 

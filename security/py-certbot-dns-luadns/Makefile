@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2021/08/05 10:52:01 adam Exp $
+# $NetBSD: Makefile,v 1.14 2022/01/04 20:54:39 wiz Exp $
 
+PKGREVISION= 1
 .include "../../security/py-certbot/Makefile.common"
 
 DISTNAME=	certbot-dns-luadns-${CERTBOT_VERSION}

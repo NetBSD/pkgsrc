@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2021/12/01 16:37:37 pho Exp $
+# $NetBSD: Makefile,v 1.22 2022/01/04 20:53:51 wiz Exp $
 
 VERSION=		1.0.4
 DISTNAME=		fuse-python-${VERSION}
 PKGNAME=		${PYPKGPREFIX}-fuse-bindings-${VERSION}
+PKGREVISION=		1
 CATEGORIES=		filesystems python
 MASTER_SITES=		${MASTER_SITE_PYPI:=f/fuse-python/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/03/21 12:56:46 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:55:12 wiz Exp $
 
 DISTNAME=	maya-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/maya/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/04/18 12:50:44 js Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:54:44 wiz Exp $
 
 DISTNAME=	signedjson-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/signedjson/}
 

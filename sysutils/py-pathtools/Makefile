@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/07/30 22:32:22 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:54:48 wiz Exp $
 
 DISTNAME=	pathtools-0.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pathtools/}
 

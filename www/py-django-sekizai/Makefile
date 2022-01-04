@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2021/01/16 09:02:05 adam Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/04 20:55:21 wiz Exp $
 
 DISTNAME=	django-sekizai-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-sekizai/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2021/12/30 13:05:42 adam Exp $
+# $NetBSD: Makefile,v 1.24 2022/01/04 20:55:36 wiz Exp $
 
 DISTNAME=	uvicorn-0.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uvicorn/}
 
