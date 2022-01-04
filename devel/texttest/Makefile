@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2021/12/08 16:04:07 adam Exp $
+# $NetBSD: Makefile,v 1.9 2022/01/04 14:57:00 schmonz Exp $
 
 DISTNAME=		TextTest-4.0.8
 PKGNAME=		${DISTNAME:tl}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=texttest/}
 
@@ -24,7 +24,12 @@ SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	texttestlib/default/__init__.py
 SUBST_VARS.prefix=	PREFIX
 
+.include "../../lang/python/egg.mk"
+
+.if ${PYPKGPREFIX} == "py27"
+_PYSETUPTOOLSINSTALLARGS:=	${PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
+.endif
+
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
