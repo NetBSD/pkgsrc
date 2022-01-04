@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.842 2021/12/11 14:08:10 taca Exp $
+# $NetBSD: Makefile,v 1.843 2022/01/04 21:39:48 schmonz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -641,6 +641,7 @@ SUBDIR+=	tcl-tls
 SUBDIR+=	tcp_wrappers
 SUBDIR+=	tct
 SUBDIR+=	tkpasman
+SUBDIR+=	tlswrapper
 SUBDIR+=	tor-browser
 SUBDIR+=	tor-browser-https-everywhere
 SUBDIR+=	tor-browser-noscript
