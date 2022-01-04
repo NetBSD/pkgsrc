@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:18:39 nia Exp $
-
-BLAKE2s (logilab-astng-0.24.3.tar.gz) = 9006a7b41be9b2dbf1732ffd9e62cf01fb1447934494405c2190cd706081eea7
-SHA512 (logilab-astng-0.24.3.tar.gz) = fb1e46ebf7111d727cd9d187968cb349dc23dfba0d4d8c6c793a8c081d4506f11e488074cc51b632c525aa264cfa50279dda90f0cf35dc2120ebbf4714902525
-Size (logilab-astng-0.24.3.tar.gz) = 106660 bytes
-SHA1 (patch-aa) = dd61d88f06b06aa16a11fff4bd2cb14da62b26f6
