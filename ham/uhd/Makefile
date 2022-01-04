@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2021/12/11 17:39:56 tnn Exp $
+# $NetBSD: Makefile,v 1.64 2022/01/04 17:29:06 adam Exp $
 
-DISTNAME=	uhd-4.1.0.4
+DISTNAME=	uhd-4.1.0.5
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=EttusResearch/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -55,7 +55,9 @@ REPLACE_PYTHON+=	utils/usrp2_recovery.py
 REPLACE_PYTHON+=	tests/devtest/benchmark_rate_test.py
 REPLACE_PYTHON+=	tests/devtest/multi_usrp_test.py
 REPLACE_PYTHON+=	tests/devtest/python_api_test.py
+REPLACE_PYTHON+=	tests/devtest/python_rx_stability_test.py
 REPLACE_PYTHON+=	tests/devtest/run_testsuite.py
+REPLACE_PYTHON+=	tests/devtest/recv_stability_test.py
 REPLACE_PYTHON+=	tests/devtest/rx_samples_to_file_test.py
 REPLACE_PYTHON+=	tests/devtest/test_messages_test.py
 REPLACE_PYTHON+=	tests/devtest/test_pps_test.py
@@ -68,7 +70,6 @@ REPLACE_PYTHON+=	tests/streaming_performance/batch_run_benchmark_rate.py
 REPLACE_PYTHON+=	tests/streaming_performance/run_E3xx_max_rate_tests.py
 REPLACE_PYTHON+=	tests/streaming_performance/run_N3xx_max_rate_tests.py
 REPLACE_PYTHON+=	tests/streaming_performance/run_X3xx_max_rate_tests.py
-
 
 INSTALLATION_DIRS+=	share/uhd
 INSTALLATION_DIRS+=	share/uhd/firmware
