@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST.doxygen,v 1.16 2022/01/04 17:29:06 adam Exp $
 share/doc/uhd/doxygen/html/Ettus_Logo.png
 share/doc/uhd/doxygen/html/N2xx-JTAG.jpg
 share/doc/uhd/doxygen/html/N310fp.png
@@ -806,6 +807,11 @@ share/doc/uhd/doxygen/html/graph__edge_8hpp_source.html
 share/doc/uhd/doxygen/html/graph__utils_8hpp.html
 share/doc/uhd/doxygen/html/graph__utils_8hpp.js
 share/doc/uhd/doxygen/html/graph__utils_8hpp_source.html
+share/doc/uhd/doxygen/html/group__defs_8dox.html
+share/doc/uhd/doxygen/html/group__rfnoc.html
+share/doc/uhd/doxygen/html/group__rfnoc.js
+share/doc/uhd/doxygen/html/group__rfnoc__blocks.html
+share/doc/uhd/doxygen/html/group__rfnoc__blocks.js
 share/doc/uhd/doxygen/html/hierarchy.html
 share/doc/uhd/doxygen/html/hierarchy.js
 share/doc/uhd/doxygen/html/identification_8dox.html
@@ -884,6 +890,8 @@ share/doc/uhd/doxygen/html/metadata_8hpp_source.html
 share/doc/uhd/doxygen/html/mock__block_8hpp.html
 share/doc/uhd/doxygen/html/mock__block_8hpp.js
 share/doc/uhd/doxygen/html/mock__block_8hpp_source.html
+share/doc/uhd/doxygen/html/modules.html
+share/doc/uhd/doxygen/html/modules.js
 share/doc/uhd/doxygen/html/moving__average__block__control_8hpp.html
 share/doc/uhd/doxygen/html/moving__average__block__control_8hpp_source.html
 share/doc/uhd/doxygen/html/mpm_8dox.html
@@ -930,6 +938,8 @@ share/doc/uhd/doxygen/html/namespacepybind11_1_1detail.html
 share/doc/uhd/doxygen/html/namespacepybind11_1_1detail.js
 share/doc/uhd/doxygen/html/namespaces.html
 share/doc/uhd/doxygen/html/namespaces_dup.js
+share/doc/uhd/doxygen/html/namespacestd.html
+share/doc/uhd/doxygen/html/namespacestd.js
 share/doc/uhd/doxygen/html/namespaceuhd.html
 share/doc/uhd/doxygen/html/namespaceuhd.js
 share/doc/uhd/doxygen/html/namespaceuhd_1_1build__info.html
@@ -985,7 +995,15 @@ share/doc/uhd/doxygen/html/navtreeindex13.js
 share/doc/uhd/doxygen/html/navtreeindex14.js
 share/doc/uhd/doxygen/html/navtreeindex15.js
 share/doc/uhd/doxygen/html/navtreeindex16.js
+share/doc/uhd/doxygen/html/navtreeindex17.js
+share/doc/uhd/doxygen/html/navtreeindex18.js
+share/doc/uhd/doxygen/html/navtreeindex19.js
 share/doc/uhd/doxygen/html/navtreeindex2.js
+share/doc/uhd/doxygen/html/navtreeindex20.js
+share/doc/uhd/doxygen/html/navtreeindex21.js
+share/doc/uhd/doxygen/html/navtreeindex22.js
+share/doc/uhd/doxygen/html/navtreeindex23.js
+share/doc/uhd/doxygen/html/navtreeindex24.js
 share/doc/uhd/doxygen/html/navtreeindex3.js
 share/doc/uhd/doxygen/html/navtreeindex4.js
 share/doc/uhd/doxygen/html/navtreeindex5.js
@@ -1085,7 +1103,6 @@ share/doc/uhd/doxygen/html/property__tree_8hpp.html
 share/doc/uhd/doxygen/html/property__tree_8hpp.js
 share/doc/uhd/doxygen/html/property__tree_8hpp_source.html
 share/doc/uhd/doxygen/html/property__tree_8ipp.html
-share/doc/uhd/doxygen/html/property__tree_8ipp.js
 share/doc/uhd/doxygen/html/pwr__cal_8hpp.html
 share/doc/uhd/doxygen/html/pwr__cal_8hpp_source.html
 share/doc/uhd/doxygen/html/pybind__adaptors_8hpp.html
@@ -1406,11 +1423,15 @@ share/doc/uhd/doxygen/html/search/functions_e.html
 share/doc/uhd/doxygen/html/search/functions_e.js
 share/doc/uhd/doxygen/html/search/functions_f.html
 share/doc/uhd/doxygen/html/search/functions_f.js
+share/doc/uhd/doxygen/html/search/groups_0.html
+share/doc/uhd/doxygen/html/search/groups_0.js
 share/doc/uhd/doxygen/html/search/mag_sel.svg
 share/doc/uhd/doxygen/html/search/namespaces_0.html
 share/doc/uhd/doxygen/html/search/namespaces_0.js
 share/doc/uhd/doxygen/html/search/namespaces_1.html
 share/doc/uhd/doxygen/html/search/namespaces_1.js
+share/doc/uhd/doxygen/html/search/namespaces_2.html
+share/doc/uhd/doxygen/html/search/namespaces_2.js
 share/doc/uhd/doxygen/html/search/nomatches.html
 share/doc/uhd/doxygen/html/search/pages_0.html
 share/doc/uhd/doxygen/html/search/pages_0.js
