@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.59 2022/01/04 12:49:47 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.60 2022/01/04 12:59:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -71,3 +71,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/qpdf to 10.5.0 [ryoon 2022-01-04]
 	Updated mail/mblaze to 1.2 [schmonz 2022-01-04]
 	Updated lang/nim to 1.6.2 [ryoon 2022-01-04]
+	Updated graphics/gegl to 0.4.34 [ryoon 2022-01-04]
