@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/12/21 08:09:57 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:55:38 wiz Exp $
 
 DISTNAME=	webdav-1.1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 #MASTER_SITES=	${MASTER_SITE_PYPI:=w/webdav/}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kamikaze/}

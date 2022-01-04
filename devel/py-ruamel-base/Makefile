@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2016/05/16 13:41:59 nils Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:37 wiz Exp $
 
 DISTNAME=	ruamel.base-1.0.0
 PKGNAME=	${PYPKGPREFIX}-ruamel-base-1.0.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/ruamel.base/}
 

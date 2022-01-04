@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2021/05/25 05:01:22 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/04 20:55:19 wiz Exp $
 
 DISTNAME=	django-contrib-comments-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-contrib-comments/}
 

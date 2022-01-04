@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2021/12/06 13:54:58 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/01/04 20:54:20 wiz Exp $
 TRYTON_MODULE_NAME=	trytond_party
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	misc python
 
-PKGREVISION=	1
+PKGREVISION=	2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tryton.org/

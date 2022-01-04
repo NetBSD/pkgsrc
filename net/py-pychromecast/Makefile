@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/02/02 00:17:23 gutteridge Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:31 wiz Exp $
 
 DISTNAME=	PyChromecast-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyChromecast/}
 

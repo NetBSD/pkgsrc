@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2019/05/27 15:20:45 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/04 20:54:48 wiz Exp $
 
 DISTNAME=	kazoo-2.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/kazoo/}
 

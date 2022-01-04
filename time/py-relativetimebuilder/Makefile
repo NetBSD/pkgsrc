@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2019/04/03 14:50:44 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:55:13 wiz Exp $
 
 DISTNAME=	relativetimebuilder-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/relativetimebuilder/}
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2021/03/30 10:58:28 markd Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/04 20:54:51 wiz Exp $
 
 DISTNAME=	kapidox-${KF5VER}
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 HOMEPAGE=	https://community.kde.org/Frameworks

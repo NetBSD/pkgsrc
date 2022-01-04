@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2016/07/15 07:31:16 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:54:04 wiz Exp $
 
 DISTNAME=	brewer2mpl-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/brewer2mpl/}
 EXTRACT_SUFX=	.zip

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2018/04/06 06:58:24 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:53:34 wiz Exp $
 
 DISTNAME=	pysha3-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysha3/}
 

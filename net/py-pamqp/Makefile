@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/09/14 19:36:16 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:30 wiz Exp $
 
 DISTNAME=	pamqp-3.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pamqp/}
 

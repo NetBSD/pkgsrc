@@ -1,7 +1,8 @@
-#	$NetBSD: Makefile,v 1.1 2020/08/17 07:00:58 riastradh Exp $
+#	$NetBSD: Makefile,v 1.2 2022/01/04 20:53:38 wiz Exp $
 
 DISTNAME=	pyscard-1.9.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/^py//}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyscard/}
 

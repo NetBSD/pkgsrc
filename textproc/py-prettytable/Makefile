@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2021/12/30 19:52:11 fcambus Exp $
+# $NetBSD: Makefile,v 1.19 2022/01/04 20:55:02 wiz Exp $
 
 DISTNAME=	prettytable-2.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/prettytable/}
 

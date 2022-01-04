@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2021/05/12 04:56:54 adam Exp $
+# $NetBSD: Makefile,v 1.19 2022/01/04 20:54:24 wiz Exp $
 
 DISTNAME=	CoilMQ-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/CoilMQ/}
 

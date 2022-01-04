@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/12/07 10:49:49 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:54:43 wiz Exp $
 
 DISTNAME=	pbkdf2-1.3
 PKGNAME=	${PYPKGPREFIX}-pbkdf2-1.3
+PKGREVISION=	1
 EGG_NAME=	pbkdf2-${PKGVERSION}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pbkdf2/}

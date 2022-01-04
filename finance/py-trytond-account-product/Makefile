@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2020/01/18 23:30:55 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/04 20:53:56 wiz Exp $
 TRYTON_MODULE_NAME=	trytond_account_product
+PKGREVISION= 1
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	finance python
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2019/09/20 17:13:26 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:54:41 wiz Exp $
 
 DISTNAME=	pyhsm-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	https://developers.yubico.com/python-pyhsm/Releases/
 

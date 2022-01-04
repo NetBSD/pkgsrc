@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2019/11/14 17:34:28 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:55:21 wiz Exp $
 
 DISTNAME=	django-rest-framework-proxy-1.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-rest-framework-proxy/}
 

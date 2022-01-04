@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/06/23 21:05:17 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:54:41 wiz Exp $
 
 DISTNAME=	hkdf-0.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hkdf/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2019/09/02 13:19:49 adam Exp $
+# $NetBSD: Makefile,v 1.14 2022/01/04 20:54:32 wiz Exp $
 
 DISTNAME=	socketpool-0.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/socketpool/}
 

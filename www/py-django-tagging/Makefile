@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2016/05/13 15:58:34 adam Exp $
+# $NetBSD: Makefile,v 1.10 2022/01/04 20:55:21 wiz Exp $
 
 DISTNAME=	django-tagging-0.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Fantomas42/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/03/08 08:13:03 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:54:42 wiz Exp $
 
 DISTNAME=	libnacl-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/libnacl/}
 

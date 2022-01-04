@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2021/11/01 18:58:33 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:53:50 wiz Exp $
 
 DISTNAME=	undebt-0.2.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/undebt/}
 

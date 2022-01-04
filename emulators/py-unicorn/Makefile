@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2018/03/24 17:09:33 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:53:51 wiz Exp $
 
+PKGREVISION= 1
 .include "../../emulators/unicorn/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}

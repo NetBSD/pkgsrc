@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2019/11/04 22:10:13 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2022/01/04 20:55:36 wiz Exp $
 
 DISTNAME=	twill-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	python www
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/twill/}
 
