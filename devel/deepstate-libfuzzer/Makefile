@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/12/29 14:07:34 nia Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 21:31:58 wiz Exp $
 
 PKGNAME=	deepstate-libfuzzer-${VERSION}
 
@@ -8,7 +8,7 @@ AUTO_MKDIRS=	yes
 
 DEPENDS+=	deepstate>=${VERSION}:../../devel/deepstate
 BUILD_DEPENDS+=	clang-[0-9]*:../../lang/clang
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	${WRKSRC}
