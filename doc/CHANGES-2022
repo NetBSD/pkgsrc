@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.70 2022/01/04 18:03:55 pin Exp $
+$NetBSD: CHANGES-2022,v 1.71 2022/01/04 18:14:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -84,3 +84,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated ham/uhd to 4.1.0.5 [adam 2022-01-04]
 	Updated comms/py-rich to 10.16.2 [adam 2022-01-04]
 	Updated x11/citron to 0.10.1 [pin 2022-01-04]
+	Updated sysutils/macchina to 6.0.4 [pin 2022-01-04]
