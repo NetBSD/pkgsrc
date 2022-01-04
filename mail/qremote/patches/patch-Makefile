@@ -1,20 +1,16 @@
-$NetBSD: patch-Makefile,v 1.1 2020/11/02 10:24:58 schmonz Exp $
+$NetBSD: patch-Makefile,v 1.2 2022/01/04 21:03:22 schmonz Exp $
 
-Find binaries where we built them.
+The bundled tcpclient, curvecpclient, and curvecpmessage aren't special.
+Use whatever's installed.
 
 --- Makefile.orig	2013-04-16 06:11:06.000000000 +0000
 +++ Makefile
-@@ -1199,9 +1199,9 @@ load qmail-tcpclient.o library.a socket.
- 	./load qmail-tcpclient library.a `cat socket.lib`
+@@ -1084,7 +1084,7 @@ wait_pid.o 
+ 	uint16_pack.o uint16_unpack.o uint32_unpack.o \
+ 	wait_pid.o 
  
- qmail-curvecpclient:
--	test -f "nacl-20110221/build/`hostname | sed 's/\..*//' | tr -cd '[a-z][A-Z][0-9]'`/bin/curvecpclient" || ( cd nacl-20110221; ./do )
--	cp "nacl-20110221/build/`hostname | sed 's/\..*//' | tr -cd '[a-z][A-Z][0-9]'`/bin/curvecpclient" qmail-curvecpclient
-+	test -f "nacl-20110221/build/pkgsrchostname/bin/curvecpclient" || ( cd nacl-20110221; ./do )
-+	cp "nacl-20110221/build/pkgsrchostname/bin/curvecpclient" qmail-curvecpclient
+-it:  showdnsmx qmail-remote qmail-rsmtp ipmeprint qmail-tcpclient qmail-curvecpclient qmail-curvecpmessage
++it:  showdnsmx qmail-remote qmail-rsmtp ipmeprint
  
- qmail-curvecpmessage:
--	test -f "nacl-20110221/build/`hostname | sed 's/\..*//' | tr -cd '[a-z][A-Z][0-9]'`/bin/curvecpmessage" || ( cd nacl-20110221; ./do )
--	cp "nacl-20110221/build/`hostname | sed 's/\..*//' | tr -cd '[a-z][A-Z][0-9]'`/bin/curvecpmessage" qmail-curvecpmessage
-+	test -f "nacl-20110221/build/pkgsrchostname/bin/curvecpmessage" || ( cd nacl-20110221; ./do )
-+	cp "nacl-20110221/build/pkgsrchostname/bin/curvecpmessage" qmail-curvecpmessage
+ load: \
+ warn-auto.sh conf-ld
