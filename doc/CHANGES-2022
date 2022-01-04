@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.63 2022/01/04 13:29:46 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.64 2022/01/04 13:59:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -75,3 +75,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/gimp to 2.10.30 [ryoon 2022-01-04]
 	Updated graphics/freetype2 to 2.11.1 [ryoon 2022-01-04]
 	Updated net/remmina to 1.4.23 [ryoon 2022-01-04]
+	Updated devel/py-ruamel-yaml to 0.17.20 [adam 2022-01-04]
+	Updated devel/py-plumbum to 1.7.2 [adam 2022-01-04]
