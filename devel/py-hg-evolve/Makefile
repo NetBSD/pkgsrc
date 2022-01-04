@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/01/01 11:26:34 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2022/01/04 07:13:05 wiz Exp $
 #
 # Release notes:
 # https://www.mercurial-scm.org/pipermail/evolve-testers/
@@ -38,4 +38,9 @@ do-test:
 .endif
 
 .include "../../lang/python/egg.mk"
+
+.if ${PYPKGPREFIX} == "py27"
+_PYSETUPTOOLSINSTALLARGS:=	${PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
+.endif
+
 .include "../../mk/bsd.pkg.mk"
