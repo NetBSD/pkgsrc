@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.71 2022/01/04 18:14:41 pin Exp $
+$NetBSD: CHANGES-2022,v 1.72 2022/01/04 19:49:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -85,3 +85,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated comms/py-rich to 10.16.2 [adam 2022-01-04]
 	Updated x11/citron to 0.10.1 [pin 2022-01-04]
 	Updated sysutils/macchina to 6.0.4 [pin 2022-01-04]
+	Updated devel/py-usb to 1.2.1 [wiz 2022-01-04]
