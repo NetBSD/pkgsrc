@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2021/12/19 13:42:58 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:22 wiz Exp $
 
 DISTNAME=	progressbar2-3.55.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/progressbar2/}
 
