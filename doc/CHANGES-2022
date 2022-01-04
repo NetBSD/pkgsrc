@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.76 2022/01/04 21:03:29 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.77 2022/01/04 21:40:07 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -90,3 +90,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/htmldoc-x11 to 1.9.14 [fcambus 2022-01-04]
 	Updated security/nacl to 20110221nb2 [buildbox 2022-01-04]
 	Updated mail/qremote to 20131231nb1 [schmonz 2022-01-04]
+	Added security/tlswrapper version 20220101 [schmonz 2022-01-04]
