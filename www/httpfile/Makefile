@@ -1,16 +1,24 @@
-# $NetBSD: Makefile,v 1.1 2021/10/21 20:38:35 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 22:35:24 schmonz Exp $
 
-DISTNAME=		httpfile-20151206
+GITHUB_PROJECT=		httpfile
+GITHUB_TAG=		20220101
+DISTNAME=		${GITHUB_PROJECT}
+PKGNAME=		${GITHUB_PROJECT}-${GITHUB_TAG}
 CATEGORIES=		www
-MASTER_SITES=		${HOMEPAGE}
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		${MASTER_SITE_GITHUB:=janmojzis/}
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://mojzis.com/software/httpfile/
 COMMENT=		Secure HTTP server derived from publicfile
 LICENSE=		djb-nonlicense
 
-DJB_BUILD_TARGETS=	install instcheck
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-.include "../../mk/djbware.mk"
+TEST_TARGET=		rts
+
+do-install:
+	cd ${WRKSRC}; \
+	${INSTALL_PROGRAM} httpfile ${DESTDIR}${PREFIX}/bin; \
+	${INSTALL_MAN} man/httpfile.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+
 .include "../../mk/bsd.pkg.mk"
