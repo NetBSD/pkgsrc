@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2020/05/16 18:00:31 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/04 20:54:30 wiz Exp $
 
 DISTNAME=	portend-2.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/portend/}
 

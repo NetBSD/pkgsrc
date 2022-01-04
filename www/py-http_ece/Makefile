@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/07/31 16:44:21 nia Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:55:29 wiz Exp $
 
 DISTNAME=	http_ece-1.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/http-ece/}
 

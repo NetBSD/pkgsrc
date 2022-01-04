@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2021/12/06 03:57:49 mef Exp $
+# $NetBSD: Makefile,v 1.24 2022/01/04 20:55:05 wiz Exp $
 
 DISTNAME=	relatorio-0.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/relatorio/}
 

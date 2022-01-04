@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/05/16 17:38:40 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:53:44 wiz Exp $
 
 DISTNAME=	testresources-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/testresources/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2021/03/10 18:49:07 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:54:04 wiz Exp $
 
 DISTNAME=	blurhash-1.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/blurhash/}
 

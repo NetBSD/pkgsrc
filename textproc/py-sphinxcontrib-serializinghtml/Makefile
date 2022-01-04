@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2021/08/05 18:39:39 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/04 20:55:07 wiz Exp $
 
 DISTNAME=	sphinxcontrib-serializinghtml-1.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinxcontrib-serializinghtml/}
 

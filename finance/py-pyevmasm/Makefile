@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/11/24 10:54:52 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:53:54 wiz Exp $
 
 DISTNAME=	pyevmasm-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=crytic/}
 GITHUB_PROJECT=	pyevmasm

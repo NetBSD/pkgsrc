@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/05/27 14:53:46 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:55:31 wiz Exp $
 
 DISTNAME=	meinheld-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/meinheld/}
 

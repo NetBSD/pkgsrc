@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/06/18 17:02:45 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:54:28 wiz Exp $
 
 DISTNAME=	ldapdomaindump-0.9.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/ldapdomaindump/}
 

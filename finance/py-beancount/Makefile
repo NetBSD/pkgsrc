@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/03/23 09:41:00 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:53:52 wiz Exp $
 
 DISTNAME=	beancount-2.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/beancount/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/07/13 20:05:11 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:53:54 wiz Exp $
 
 DISTNAME=	python-quickbooks-0.6.0
 PKGNAME=	${PYPKGPREFIX}-quickbooks-0.6.0
+PKGREVISION=	1
 CATEGORIES=	python finance
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-quickbooks/}
 

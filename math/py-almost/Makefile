@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:35 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:54:12 wiz Exp $
 
 DISTNAME=	almost-0.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/almost/}
 

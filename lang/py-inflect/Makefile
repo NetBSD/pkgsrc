@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/03/12 07:12:05 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:54:08 wiz Exp $
 
 DISTNAME=	inflect-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/inflect/}
 

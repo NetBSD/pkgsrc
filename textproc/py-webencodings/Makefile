@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2017/07/26 10:58:02 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:55:09 wiz Exp $
 
 DISTNAME=	webencodings-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/webencodings/}
 

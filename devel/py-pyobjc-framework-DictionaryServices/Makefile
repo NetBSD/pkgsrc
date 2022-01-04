@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2019/01/08 12:08:41 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:53:27 wiz Exp $
 
+PKGREVISION= 1
 .include "../../devel/py-pyobjc/Makefile.common"
 
 DISTNAME=	pyobjc-framework-DictionaryServices-${PYOBJC_VERS}

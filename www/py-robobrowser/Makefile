@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/09/26 10:33:07 leot Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:55:35 wiz Exp $
 
 DISTNAME=	robobrowser-0.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/robobrowser/}
 

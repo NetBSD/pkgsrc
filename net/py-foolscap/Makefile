@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2021/08/31 17:16:22 gdt Exp $
+# $NetBSD: Makefile,v 1.37 2022/01/04 20:54:27 wiz Exp $
 
 DISTNAME=	foolscap-21.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/foolscap/}
 

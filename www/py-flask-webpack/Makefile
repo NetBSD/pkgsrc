@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2017/07/30 22:32:27 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:55:28 wiz Exp $
 
 DISTNAME=	flask-webpack-0.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl:S/py//}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nickjj/}
 

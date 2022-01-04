@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2019/09/02 13:20:05 adam Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/04 20:54:10 wiz Exp $
 
 DISTNAME=	pythonz-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	https://github.com/saghul/pythonz/archive/
 

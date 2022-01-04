@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2020/05/14 06:06:41 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/04 20:55:37 wiz Exp $
 
 DISTNAME=	w3lib-1.22.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/w3lib/}
 

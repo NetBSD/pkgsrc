@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2021/11/01 18:58:33 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/01/04 20:54:05 wiz Exp $
 
 DISTNAME=	pydot-1.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydot/}
 

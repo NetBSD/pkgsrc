@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2018/04/03 20:27:21 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:53:46 wiz Exp $
 
 DISTNAME=	txgithub-15.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/txgithub/}
 

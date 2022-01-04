@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/07/18 18:06:39 gutteridge Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:54:07 wiz Exp $
 
 DISTNAME=	scour-0.38.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scour/}
 

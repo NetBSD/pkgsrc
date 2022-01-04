@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/05/28 04:22:58 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:54:52 wiz Exp $
 
 DISTNAME=	bracex-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bracex/}
 

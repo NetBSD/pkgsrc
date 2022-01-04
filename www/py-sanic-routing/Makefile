@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/08/11 07:16:13 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:55:35 wiz Exp $
 
 DISTNAME=	sanic-routing-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sanic-routing/}
 

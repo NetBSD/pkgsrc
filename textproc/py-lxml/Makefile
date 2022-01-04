@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.78 2021/12/16 20:17:10 adam Exp $
+# $NetBSD: Makefile,v 1.79 2022/01/04 20:54:58 wiz Exp $
 
 DISTNAME=	lxml-4.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lxml/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/11/01 21:05:56 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:55:04 wiz Exp $
 
 DISTNAME=	ramlfications-0.1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/ramlfications/}
 

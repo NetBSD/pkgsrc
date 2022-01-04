@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/03/06 21:05:33 leot Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:54:46 wiz Exp $
 
 DISTNAME=	wfuzz-3.1.0
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wfuzz/}
 

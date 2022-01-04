@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2019/08/26 13:25:58 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:55:27 wiz Exp $
 
 DISTNAME=	flask-restplus-0.13.0
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flask-restplus/}
 

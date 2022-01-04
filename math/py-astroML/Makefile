@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/12/30 13:05:35 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:12 wiz Exp $
 
 DISTNAME=	astroML-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=astroML/}
 GITHUB_PROJECT=	astroML

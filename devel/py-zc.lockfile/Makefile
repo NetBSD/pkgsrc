@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/08/20 12:58:06 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:49 wiz Exp $
 
 DISTNAME=	zc.lockfile-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zc.lockfile/}
 

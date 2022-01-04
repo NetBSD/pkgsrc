@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2018/09/05 08:18:23 adam Exp $
+# $NetBSD: Makefile,v 1.20 2022/01/04 20:55:28 wiz Exp $
 
 DISTNAME=	flup-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flup/}
 

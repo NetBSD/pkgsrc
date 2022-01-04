@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2019/11/04 21:43:46 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2022/01/04 20:54:57 wiz Exp $
 
 DISTNAME=	jsonlib-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonlib/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/12/14 07:12:49 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:55:11 wiz Exp $
 
 DISTNAME=	isodate-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	python time
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/isodate/}
 

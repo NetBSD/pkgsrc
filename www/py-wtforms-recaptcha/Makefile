@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2017/09/16 19:27:25 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/04 20:55:39 wiz Exp $
 
 DISTNAME=	wtforms-recaptcha-0.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	python www
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wtforms-recaptcha/}
 

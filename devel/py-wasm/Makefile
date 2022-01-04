@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/10/08 22:06:38 khorben Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:53:48 wiz Exp $
 
 DISTNAME=	wasm-1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=athre0z/}
 GITHUB_PROJECT=	wasm

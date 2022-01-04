@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2022/01/02 22:14:28 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:54:11 wiz Exp $
 
 DISTNAME=	pypolicyd-spf-2.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypolicyd-spf/}
 

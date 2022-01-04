@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2022/01/02 00:01:09 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:55:02 wiz Exp $
 
 DISTNAME=	pyPEG2-2.15.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyPEG2/}
 

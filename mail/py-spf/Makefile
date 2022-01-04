@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2022/01/02 09:23:28 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/01/04 20:54:11 wiz Exp $
 
 DISTNAME=	pyspf-2.0.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyspf/}
 

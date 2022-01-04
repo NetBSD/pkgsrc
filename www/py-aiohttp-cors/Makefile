@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2019/11/03 00:59:34 markd Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:55:15 wiz Exp $
 
 DISTNAME=	aiohttp-cors-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiohttp_cors/}
 
