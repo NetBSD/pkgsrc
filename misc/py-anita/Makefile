@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2022/01/01 12:42:38 martin Exp $
+# $NetBSD: Makefile,v 1.70 2022/01/04 07:13:06 wiz Exp $
 
 DISTNAME=	anita-2.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -30,4 +30,9 @@ do-test:
 
 .include "options.mk"
 .include "../../lang/python/egg.mk"
+
+.if ${PYPKGPREFIX} == "py27"
+_PYSETUPTOOLSINSTALLARGS:=	${PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
+.endif
+
 .include "../../mk/bsd.pkg.mk"
