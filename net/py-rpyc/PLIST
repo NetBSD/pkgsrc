@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2020/09/29 23:11:52 khorben Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/04 19:54:28 wiz Exp $
 bin/rpyc_classic.py
 bin/rpyc_registry.py
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/not-zip-safe
-${PYSITELIB}/${EGG_FILE}/requires.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/rpyc/__init__.py
 ${PYSITELIB}/rpyc/__init__.pyc
 ${PYSITELIB}/rpyc/__init__.pyo
