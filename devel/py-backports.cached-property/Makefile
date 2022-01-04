@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/12/30 13:05:29 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:52:51 wiz Exp $
 
 DISTNAME=	backports.cached-property-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/backports.cached-property/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2019/09/02 13:33:23 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:53:06 wiz Exp $
 
 DISTNAME=	flufl.i18n-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flufl.i18n/}
 

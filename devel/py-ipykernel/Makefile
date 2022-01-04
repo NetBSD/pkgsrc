@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2021/12/30 13:05:30 adam Exp $
+# $NetBSD: Makefile,v 1.29 2022/01/04 20:53:11 wiz Exp $
 
 DISTNAME=	ipykernel-5.5.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipykernel/}
 

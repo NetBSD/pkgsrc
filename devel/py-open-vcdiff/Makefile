@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2019/09/02 13:19:40 adam Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/04 20:53:19 wiz Exp $
 
 DISTNAME=	06d46e3de6f7
 PKGNAME=	${PYPKGPREFIX}-open-vcdiff-0.1pre${DISTNAME}
+PKGREVISION=	1
 EGG_NAME=	openvcdiff-0.1
 CATEGORIES=	devel python
 MASTER_SITES=	https://bitbucket.org/bluehorn/openvcdiff-python/get/

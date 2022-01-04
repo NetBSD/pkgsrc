@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2021/03/24 09:25:09 hauke Exp $
+# $NetBSD: Makefile,v 1.19 2022/01/04 20:53:10 wiz Exp $
 
 VERS=		0.10.0
 #PKGREVISION=	1
 DISTNAME=	hg-git-${VERS}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	https://foss.heptapod.net/mercurial/hg-git/-/archive/${VERS}/
 EXTRACT_SUFX=	.tar.bz2

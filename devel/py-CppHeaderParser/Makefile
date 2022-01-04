@@ -1,7 +1,8 @@
-#	$NetBSD: Makefile,v 1.1 2020/08/18 20:20:33 riastradh Exp $
+#	$NetBSD: Makefile,v 1.2 2022/01/04 20:52:46 wiz Exp $
 
 DISTNAME=	CppHeaderParser-2.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/CppHeaderParser/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/05/22 23:24:17 nia Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:52:35 wiz Exp $
 
 DISTNAME=	dnaio-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dnaio/}
 

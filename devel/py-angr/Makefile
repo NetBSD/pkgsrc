@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2021/08/24 22:04:32 khorben Exp $
+# $NetBSD: Makefile,v 1.13 2022/01/04 20:52:49 wiz Exp $
 
 .include "version.mk"
 
 DISTNAME=	angr-${ANGR_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=angr/}
 GITHUB_PROJECT=	angr

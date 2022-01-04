@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/10/09 03:33:09 gutteridge Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:52:54 wiz Exp $
 
 DISTNAME=	bump2version-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bump2version/}
 

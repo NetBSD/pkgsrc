@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2018/12/04 13:29:13 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:52:39 wiz Exp $
 
 DISTNAME=	confusable_homoglyphs-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/confusable_homoglyphs/}
 

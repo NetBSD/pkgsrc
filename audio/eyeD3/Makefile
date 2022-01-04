@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2020/12/04 20:44:58 nia Exp $
+# $NetBSD: Makefile,v 1.18 2022/01/04 20:52:32 wiz Exp $
 
 DISTNAME=	eyeD3-0.9.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/eyeD3/}
 

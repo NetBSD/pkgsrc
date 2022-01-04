@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2021/12/30 13:05:28 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/04 20:52:37 wiz Exp $
 
 DISTNAME=	nbxmpp-2.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nbxmpp/}
 

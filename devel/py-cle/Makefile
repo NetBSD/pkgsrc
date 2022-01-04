@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/09/28 22:56:38 khorben Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:52:56 wiz Exp $
 
+PKGREVISION= 1
 .include "../../devel/py-angr/version.mk"
 
 DISTNAME=	cle-${ANGR_VERSION}

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/06/01 12:05:09 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:02 wiz Exp $
 
 DISTNAME=	expressions-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/expressions/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2017/12/17 16:50:51 adam Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/04 20:53:16 wiz Exp $
 
 DISTNAME=	python-memcached-1.59
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/1}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-memcached/}
 

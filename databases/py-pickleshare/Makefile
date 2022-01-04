@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2018/10/03 11:10:13 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:52:43 wiz Exp $
 
 DISTNAME=	pickleshare-0.7.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	databases devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pickleshare/}
 

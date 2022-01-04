@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/05/30 21:48:19 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:52:31 wiz Exp $
 
 DISTNAME=	zipstream-new-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-zipstream-1.1.8
+PKGREVISION=	1
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zipstream-new/}
 

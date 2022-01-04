@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/01/05 11:59:06 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:52:55 wiz Exp $
 
 DISTNAME=	chai-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/chai/}
 

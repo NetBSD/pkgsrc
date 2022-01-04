@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2021/12/30 13:05:31 adam Exp $
+# $NetBSD: Makefile,v 1.16 2022/01/04 20:53:16 wiz Exp $
 
 .include "../../devel/py-angr/version.mk"
 
 DISTNAME=	manticore-${GITHUB_TAG}
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=trailofbits/}
 GITHUB_PROJECT=	manticore

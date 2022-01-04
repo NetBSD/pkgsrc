@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/04/18 10:52:10 js Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:53:16 wiz Exp $
 
 DISTNAME=	pymacaroons-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-macaroons-0.13.0
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pymacaroons/}
 

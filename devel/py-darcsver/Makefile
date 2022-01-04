@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2020/07/27 16:20:45 gdt Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/04 20:52:59 wiz Exp $
 
 DISTNAME=	darcsver-1.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/darcsver/}
 

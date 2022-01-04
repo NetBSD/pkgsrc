@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2021/05/12 06:55:06 adam Exp $
+# $NetBSD: Makefile,v 1.22 2022/01/04 20:53:16 wiz Exp $
 
 DISTNAME=	logilab-common-1.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/logilab-common/}
 

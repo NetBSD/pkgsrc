@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/01/15 09:03:39 adam Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/04 20:52:49 wiz Exp $
 
 DISTNAME=	anytree-2.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/anytree/}
 

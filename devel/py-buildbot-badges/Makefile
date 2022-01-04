@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/01/28 21:23:30 maya Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:52:53 wiz Exp $
 
 DISTNAME=	buildbot-badges-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/buildbot-badges/}
 

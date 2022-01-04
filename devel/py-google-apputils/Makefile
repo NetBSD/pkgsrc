@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2019/11/03 10:18:27 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/04 20:53:08 wiz Exp $
 
 DISTNAME=	google-apputils-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-apputils/}
 

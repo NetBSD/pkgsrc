@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2019/06/11 11:34:39 markd Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:07 wiz Exp $
 
 DISTNAME=	gcovr-4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gcovr/}
 

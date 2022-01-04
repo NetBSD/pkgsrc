@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2021/06/10 07:21:42 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:52:56 wiz Exp $
 
 DISTNAME=	click-repl-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/click-repl/}
 

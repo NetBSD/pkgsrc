@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2021/12/16 12:49:34 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2022/01/04 20:52:34 wiz Exp $
 
 DISTNAME=	mutagen-1.45.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mutagen/}
 

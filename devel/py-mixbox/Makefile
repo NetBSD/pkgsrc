@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2021/07/09 18:57:44 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:53:17 wiz Exp $
 
 DISTNAME=	mixbox-1.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mixbox/}
 

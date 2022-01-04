@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2018/12/27 16:04:08 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:53:10 wiz Exp $
 
 DISTNAME=	hyperscan-0.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hyperscan/}
 

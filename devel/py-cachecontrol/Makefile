@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2021/11/06 08:52:29 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:52:54 wiz Exp $
 
 DISTNAME=	CacheControl-0.12.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/CacheControl/}
 

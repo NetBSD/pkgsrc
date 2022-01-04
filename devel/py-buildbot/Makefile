@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2021/01/29 18:06:42 maya Exp $
+# $NetBSD: Makefile,v 1.26 2022/01/04 20:52:53 wiz Exp $
 
 DISTNAME=	buildbot-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/buildbot/}
 
