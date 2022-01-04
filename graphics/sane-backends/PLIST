@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2022/01/03 14:48:49 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.37 2022/01/04 16:04:39 triaxx Exp $
 bin/gamma4scanimage
 bin/sane-config
 bin/sane-find-scanner
@@ -19,6 +19,7 @@ lib/sane/libsane-bh.la
 lib/sane/libsane-canon.la
 lib/sane/libsane-canon630u.la
 lib/sane/libsane-canon_dr.la
+lib/sane/libsane-canon_lide70.la
 lib/sane/libsane-cardscan.la
 lib/sane/libsane-coolscan.la
 lib/sane/libsane-coolscan2.la
@@ -107,6 +108,7 @@ man/man5/sane-bh.5
 man/man5/sane-canon.5
 man/man5/sane-canon630u.5
 man/man5/sane-canon_dr.5
+man/man5/sane-canon_lide70.5
 man/man5/sane-cardscan.5
 man/man5/sane-coolscan.5
 man/man5/sane-coolscan2.5
@@ -305,6 +307,7 @@ share/examples/sane/bh.conf
 share/examples/sane/canon.conf
 share/examples/sane/canon630u.conf
 share/examples/sane/canon_dr.conf
+share/examples/sane/canon_lide70.conf
 share/examples/sane/cardscan.conf
 share/examples/sane/coolscan.conf
 share/examples/sane/coolscan2.conf
