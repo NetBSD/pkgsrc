@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.66 2022/01/04 15:23:00 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.67 2022/01/04 16:04:54 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -79,3 +79,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-plumbum to 1.7.2 [adam 2022-01-04]
 	Updated devel/texttest to 4.0.8nb2 [schmonz 2022-01-04]
 	Updated sysutils/etckeeper to 1.18.16 [schmonz 2022-01-04]
+	Updated graphics/sane-backends to 1.0.32 [triaxx 2022-01-04]
