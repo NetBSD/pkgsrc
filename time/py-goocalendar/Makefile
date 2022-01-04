@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2021/12/08 16:06:49 adam Exp $
+# $NetBSD: Makefile,v 1.18 2022/01/04 20:55:11 wiz Exp $
 
 DISTNAME=	GooCalendar-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=G/GooCalendar/}
 

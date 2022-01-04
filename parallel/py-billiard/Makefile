@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2021/05/06 10:36:08 adam Exp $
+# $NetBSD: Makefile,v 1.21 2022/01/04 20:54:35 wiz Exp $
 
 DISTNAME=	billiard-3.6.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	parallel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/billiard/}
 

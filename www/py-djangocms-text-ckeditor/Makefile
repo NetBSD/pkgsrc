@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2021/01/16 10:13:54 adam Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/04 20:55:24 wiz Exp $
 
 DISTNAME=	djangocms-text-ckeditor-4.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/djangocms-text-ckeditor/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2021/04/07 13:08:46 kleink Exp $
+# $NetBSD: Makefile,v 1.16 2022/01/04 20:55:27 wiz Exp $
 
 DISTNAME=	Flask-SQLAlchemy-2.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-SQLAlchemy/}
 

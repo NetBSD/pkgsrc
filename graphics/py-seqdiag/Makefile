@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2020/07/20 23:43:43 gutteridge Exp $
+# $NetBSD: Makefile,v 1.20 2022/01/04 20:54:07 wiz Exp $
 
 DISTNAME=	seqdiag-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/seqdiag/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/12/09 09:32:33 nia Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:53:52 wiz Exp $
 
 DISTNAME=	crytic-compile-0.1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=crytic/}
 GITHUB_PROJECT=	crytic-compile

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2021/12/12 20:06:23 adam Exp $
+# $NetBSD: Makefile,v 1.18 2022/01/04 20:54:27 wiz Exp $
 
 DISTNAME=	gevent-21.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gevent/}
 

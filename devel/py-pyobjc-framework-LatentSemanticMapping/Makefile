@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2018/02/08 19:54:23 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:29 wiz Exp $
 
+PKGREVISION= 1
 .include "../../devel/py-pyobjc/Makefile.common"
 
 DISTNAME=	pyobjc-framework-LatentSemanticMapping-${PYOBJC_VERS}

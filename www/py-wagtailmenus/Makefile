@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/08/05 04:16:56 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:55:37 wiz Exp $
 
 DISTNAME=	wagtailmenus-3.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rkhleics/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2020/07/27 16:37:52 gdt Exp $
+# $NetBSD: Makefile,v 1.32 2022/01/04 20:55:32 wiz Exp $
 
 DISTNAME=	Nevow-0.14.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=N/Nevow/}
 

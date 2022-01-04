@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2021/12/17 18:47:48 adam Exp $
+# $NetBSD: Makefile,v 1.17 2022/01/04 20:54:01 wiz Exp $
 
 DISTNAME=	trueskill-0.4.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	games devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trueskill/}
 

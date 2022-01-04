@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/06/02 17:20:14 pin Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:55:14 wiz Exp $
 
 DISTNAME=	ddgr-1.9
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jarun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

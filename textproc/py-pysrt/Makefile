@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/04/23 18:33:49 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:55:04 wiz Exp $
 
 DISTNAME=	pysrt-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysrt/}
 

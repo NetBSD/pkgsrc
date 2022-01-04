@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2021/02/09 07:24:38 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:54:26 wiz Exp $
 
 DISTNAME=	python-digitalocean-1.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-digitalocean/}
 

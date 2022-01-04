@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/01/18 09:55:00 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:54:11 wiz Exp $
 
 DISTNAME=	UkPostcodeParser-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=U/UkPostcodeParser/}
 

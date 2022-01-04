@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2016/10/11 12:24:33 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:47 wiz Exp $
 
 DISTNAME=	vcversioner-2.16.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vcversioner/}
 

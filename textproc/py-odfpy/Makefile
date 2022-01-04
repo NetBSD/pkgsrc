@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/08/18 01:01:56 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:55:00 wiz Exp $
 
 DISTNAME=	odfpy-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/odfpy/}
 

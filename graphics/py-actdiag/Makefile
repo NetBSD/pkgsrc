@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2020/02/19 17:51:24 adam Exp $
+# $NetBSD: Makefile,v 1.17 2022/01/04 20:54:04 wiz Exp $
 
 DISTNAME=	actdiag-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/actdiag/}
 

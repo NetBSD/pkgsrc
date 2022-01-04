@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/10/06 07:48:51 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:36 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-octoprint-pisupport-2021.3.26.post2
+PKGREVISION=	1
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OctoPrint/}
 GITHUB_PROJECT=	OctoPrint-PiSupport

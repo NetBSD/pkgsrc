@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2022/01/04 07:02:02 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2022/01/04 20:54:01 wiz Exp $
 
 DISTNAME=	PySolFC-2.14.1
 PKGNAME=	${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	games python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pysolfc/}
 EXTRACT_SUFX=	.tar.xz

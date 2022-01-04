@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2021/05/08 06:56:35 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:55:34 wiz Exp $
 
 DISTNAME=	rfc3986-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rfc3986/}
 

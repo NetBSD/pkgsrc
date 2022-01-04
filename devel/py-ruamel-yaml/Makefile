@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2022/01/04 12:35:59 adam Exp $
+# $NetBSD: Makefile,v 1.23 2022/01/04 20:53:37 wiz Exp $
 
 DISTNAME=	ruamel.yaml-0.17.20
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/./-/1}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/ruamel.yaml/}
 

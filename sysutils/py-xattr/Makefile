@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2021/12/11 19:42:40 adam Exp $
+# $NetBSD: Makefile,v 1.20 2022/01/04 20:54:50 wiz Exp $
 
 DISTNAME=	xattr-0.9.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xattr/}
 

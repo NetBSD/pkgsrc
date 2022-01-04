@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2017/09/16 19:26:48 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:53:35 wiz Exp $
 
 DISTNAME=	rednose-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rednose/}
 

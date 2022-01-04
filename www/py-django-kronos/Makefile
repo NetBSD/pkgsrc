@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2017/07/30 22:32:26 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:55:20 wiz Exp $
 
 DISTNAME=	django-kronos-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-kronos/}
 

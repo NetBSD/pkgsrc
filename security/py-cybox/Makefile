@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2021/07/09 18:58:29 adam Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/04 20:54:40 wiz Exp $
 
 DISTNAME=	cybox-2.1.0.21
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cybox/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2019/11/27 21:12:39 markd Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:35 wiz Exp $
 
 DISTNAME=	random2-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/random2/}
 EXTRACT_SUFX=	.zip

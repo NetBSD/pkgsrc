@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2021/04/06 15:50:44 adam Exp $
+# $NetBSD: Makefile,v 1.21 2022/01/04 20:55:29 wiz Exp $
 
 DISTNAME=	gunicorn-20.1.0
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gunicorn/}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}

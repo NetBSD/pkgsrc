@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/07/27 20:23:01 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:54:49 wiz Exp $
 
 DISTNAME=	setconf-0.7.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setconf/}
 

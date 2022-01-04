@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/05/30 16:26:31 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:54:41 wiz Exp $
 
 DISTNAME=	google-reauth-0.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-reauth/}
 

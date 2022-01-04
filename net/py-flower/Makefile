@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/05/08 06:00:00 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:27 wiz Exp $
 
 DISTNAME=	flower-0.9.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flower/}
 

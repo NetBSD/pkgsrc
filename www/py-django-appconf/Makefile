@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2014/12/31 13:57:30 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/04 20:55:18 wiz Exp $
 
 DISTNAME=	django-appconf-0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	-http://nodeload.github.com/jezdez/django-appconf/tar.gz/v0.6
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/05/17 21:07:03 adam Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/04 20:54:55 wiz Exp $
 
 DISTNAME=	guessit-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/guessit/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/12/07 15:44:34 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:55:12 wiz Exp $
 
 DISTNAME=	l18n-2020.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/l18n/}
 

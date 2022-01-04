@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2021/11/05 13:42:46 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:54:10 wiz Exp $
 
 DISTNAME=	python-language-server-0.36.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-language-server/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2021/04/28 08:24:01 adam Exp $
+# $NetBSD: Makefile,v 1.18 2022/01/04 20:54:04 wiz Exp $
 
 DISTNAME=	aafigure-0.6
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aafigure/}

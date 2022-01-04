@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2021/05/18 16:10:50 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:55:28 wiz Exp $
 
 DISTNAME=	Flask-Static-Digest-0.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Static-Digest/}
 

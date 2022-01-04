@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2018/02/08 19:54:25 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:31 wiz Exp $
 
+PKGREVISION= 1
 .include "../../devel/py-pyobjc/Makefile.common"
 
 DISTNAME=	pyobjc-framework-SceneKit-${PYOBJC_VERS}

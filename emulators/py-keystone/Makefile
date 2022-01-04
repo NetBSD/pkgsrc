@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2021/03/12 14:48:12 nia Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:53:51 wiz Exp $
 
+PKGREVISION= 1
 .include "../../emulators/keystone/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2020/03/20 11:58:35 nia Exp $
+# $NetBSD: Makefile,v 1.17 2022/01/04 20:55:14 wiz Exp $
 
 DISTNAME=	ClientForm-0.2.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www textproc
 MASTER_SITES=	http://wwwsearch.sourceforge.net/ClientForm/src/
 

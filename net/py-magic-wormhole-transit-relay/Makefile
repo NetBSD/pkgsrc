@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/06/27 16:25:23 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:54:29 wiz Exp $
 
 DISTNAME=	magic-wormhole-transit-relay-0.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/magic-wormhole-transit-relay/}
 

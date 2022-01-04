@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/11/13 15:06:44 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:54:42 wiz Exp $
 
 DISTNAME=	mohawk-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mohawk/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/04/12 10:24:34 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:55:38 wiz Exp $
 
 DISTNAME=	wstools-0.4.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wstools/}
 

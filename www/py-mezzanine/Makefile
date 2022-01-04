@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2021/01/17 08:11:20 adam Exp $
+# $NetBSD: Makefile,v 1.13 2022/01/04 20:55:31 wiz Exp $
 
 DISTNAME=	Mezzanine-4.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/Mezzanine/}
 

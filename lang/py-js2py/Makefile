@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2019/02/18 12:57:21 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/04 20:54:09 wiz Exp $
 
 DISTNAME=	Js2Py-0.60
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=J/Js2Py/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/09/16 19:27:06 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:54:33 wiz Exp $
 
 DISTNAME=	softlayer_messaging-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/softlayer_messaging/}
 

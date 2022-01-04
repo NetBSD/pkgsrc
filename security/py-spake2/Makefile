@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/07/03 21:02:54 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:44 wiz Exp $
 
 DISTNAME=	spake2-0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/spake2/}
 

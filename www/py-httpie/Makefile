@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2021/11/23 14:09:25 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/04 20:55:30 wiz Exp $
 
 DISTNAME=	httpie-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httpie/}
 

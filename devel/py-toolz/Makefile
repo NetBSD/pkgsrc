@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2021/11/14 18:48:50 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:53:44 wiz Exp $
 
 DISTNAME=	toolz-0.11.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/toolz/}
 

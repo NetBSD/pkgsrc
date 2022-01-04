@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2021/10/29 08:37:03 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:54:05 wiz Exp $
 
 DISTNAME=	cycler-0.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cycler/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2021/11/07 14:43:37 adam Exp $
+# $NetBSD: Makefile,v 1.21 2022/01/04 20:54:19 wiz Exp $
 
 DISTNAME=	python-stdnum-1.17
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
+PKGREVISION=	1
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-stdnum/}
 

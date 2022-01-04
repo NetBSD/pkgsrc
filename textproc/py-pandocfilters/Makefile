@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2022/01/02 22:57:18 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/04 20:55:01 wiz Exp $
 
 DISTNAME=	pandocfilters-1.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pandocfilters/}
 

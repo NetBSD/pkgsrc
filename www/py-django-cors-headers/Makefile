@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2021/12/14 09:01:48 adam Exp $
+# $NetBSD: Makefile,v 1.22 2022/01/04 20:55:19 wiz Exp $
 
 DISTNAME=	django-cors-headers-3.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-cors-headers/}
 

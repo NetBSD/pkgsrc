@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2021/02/03 01:09:31 gutteridge Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:54:51 wiz Exp $
 
 DISTNAME=	python-Levenshtein-0.12.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-Levenshtein/}
 

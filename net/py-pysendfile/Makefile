@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/08/18 05:32:56 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:31 wiz Exp $
 
 DISTNAME=	pysendfile-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysendfile/}
 

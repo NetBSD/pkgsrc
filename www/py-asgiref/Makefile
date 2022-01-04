@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2021/07/06 05:56:34 adam Exp $
+# $NetBSD: Makefile,v 1.28 2022/01/04 20:55:16 wiz Exp $
 
 DISTNAME=	asgiref-3.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asgiref/}
 

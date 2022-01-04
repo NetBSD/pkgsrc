@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/02/03 08:26:18 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/04 20:55:23 wiz Exp $
 
 DISTNAME=	djangocms-inherit-0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/djangocms-inherit/}
 

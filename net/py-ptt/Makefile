@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2020/01/26 17:31:54 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:54:30 wiz Exp $
 #
 
 PTTVERS=	1.9.0
 DISTNAME=	twitter-${PTTVERS}
 PKGNAME=	${PYPKGPREFIX}-ptt-${PTTVERS}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/twitter/}
 

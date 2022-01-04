@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2021/12/06 14:56:43 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/04 20:54:51 wiz Exp $
 
 DISTNAME=		Tempita-0.5.2
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		textproc python
 MASTER_SITES=		${MASTER_SITE_PYPI:=T/Tempita/}
 

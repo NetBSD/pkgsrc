@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2020/11/30 20:38:12 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/04 20:54:58 wiz Exp $
 
 DISTNAME=	jsonrpclib-pelix-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonrpclib-pelix/}
 

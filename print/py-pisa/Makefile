@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2021/04/29 13:10:41 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2022/01/04 20:54:36 wiz Exp $
 
 DISTNAME=	pisa-3.0.33
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	print textproc www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pisa/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2019/11/04 22:10:13 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2022/01/04 20:55:34 wiz Exp $
 
 DISTNAME=	recaptcha-client-1.0.6
 PKGNAME=	${PYPKGPREFIX}-recaptcha-1.0.6
+PKGREVISION=	1
 CATEGORIES=	www devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/recaptcha-client/}
 

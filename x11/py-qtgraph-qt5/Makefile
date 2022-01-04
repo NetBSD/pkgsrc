@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/12/30 13:05:42 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:55:40 wiz Exp $
 
 DISTNAME=	pyqtgraph-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyqtgraph/qtgraph-qt5/}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pyqtgraph/}
 GITHUB_TAG=	pyqtgraph-${PKGVERSION_NOREV}

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2021/05/25 05:38:30 adam Exp $
+# $NetBSD: Makefile,v 1.23 2022/01/04 20:53:49 wiz Exp $
 
 DISTNAME=	ZConfig-3.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=Z/ZConfig/}
 

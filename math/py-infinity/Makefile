@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2021/07/19 11:44:35 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/04 20:54:13 wiz Exp $
 
 DISTNAME=	infinity-1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/infinity/}
 

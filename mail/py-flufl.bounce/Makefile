@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2019/09/02 13:33:23 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:54:11 wiz Exp $
 
 DISTNAME=	flufl.bounce-3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flufl.bounce/}
 

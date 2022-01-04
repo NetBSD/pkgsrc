@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2018/06/01 07:58:08 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:35 wiz Exp $
 
 DISTNAME=	readlike-0.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/readlike/}
 

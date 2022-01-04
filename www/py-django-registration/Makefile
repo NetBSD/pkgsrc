@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2018/02/27 07:40:08 adam Exp $
+# $NetBSD: Makefile,v 1.12 2022/01/04 20:55:21 wiz Exp $
 
 DISTNAME=	django-registration-2.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-registration/}
 

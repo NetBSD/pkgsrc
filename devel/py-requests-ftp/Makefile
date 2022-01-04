@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/01/02 12:29:09 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:36 wiz Exp $
 
 DISTNAME=	requests-ftp-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requests-ftp/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/11/26 11:17:11 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:54:45 wiz Exp $
 
 DISTNAME=	pyu2f-0.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyu2f/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/09/07 15:20:10 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:35 wiz Exp $
 
 DISTNAME=	repoze.lru-0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/repoze.lru/}
 

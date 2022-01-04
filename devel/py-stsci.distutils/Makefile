@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2021/12/12 10:51:59 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:53:40 wiz Exp $
 
 DISTNAME=	stsci.distutils-0.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/stsci.distutils/}
 

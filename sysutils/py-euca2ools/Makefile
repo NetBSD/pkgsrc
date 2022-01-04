@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2018/07/04 13:40:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:48 wiz Exp $
 
 DISTNAME=	euca2ools-3.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=eucalyptus/}
 GITHUB_PROJECT=	euca2ools

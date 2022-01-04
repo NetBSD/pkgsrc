@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2020/02/19 11:09:52 adam Exp $
+# $NetBSD: Makefile,v 1.13 2022/01/04 20:55:18 wiz Exp $
 
 DISTNAME=	cmsplugin_gallery-1.1.7
 PKGNAME=	${PYPKGPREFIX}-django-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cmsplugin_gallery/}
 

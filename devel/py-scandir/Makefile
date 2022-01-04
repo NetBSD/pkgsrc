@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2019/04/26 10:30:33 roy Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/04 20:53:37 wiz Exp $
 
 DISTNAME=	scandir-1.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scandir/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/04/01 17:39:14 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:55:07 wiz Exp $
 
 DISTNAME=	sphinxcontrib-log-cabinet-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinxcontrib-log-cabinet/}
 
