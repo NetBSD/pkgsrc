@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/09/30 00:38:48 khorben Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 19:54:28 wiz Exp $
 
 DISTNAME=	rpyc-4.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rpyc/}
 
@@ -12,5 +13,5 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-plumbum>=1.6.1:../../devel/py-plumbum
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
