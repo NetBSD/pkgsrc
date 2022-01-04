@@ -1,8 +1,9 @@
-#	$NetBSD: Makefile,v 1.1 2020/08/18 20:19:44 riastradh Exp $
+#	$NetBSD: Makefile,v 1.2 2022/01/04 20:53:12 wiz Exp $
 
 DISTNAME=	python-itanium_demangler-1.0
 EGG_NAME=	${DISTNAME:C/^python-//g}
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=whitequark/}
 GITHUB_PROJECT=	python-itanium_demangler

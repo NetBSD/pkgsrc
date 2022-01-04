@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2020/03/22 22:36:02 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/04 20:53:13 wiz Exp $
 
 DISTNAME=	jaraco.util-11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/./_/}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jaraco.util/}
 EXTRACT_SUFX=	.zip

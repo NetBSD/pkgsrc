@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/07/30 22:32:16 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:18 wiz Exp $
 
 DISTNAME=	nosexcover-1.0.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nosexcover/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/11/09 20:28:46 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:19 wiz Exp $
 
 DISTNAME=	packaging-20.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/packaging/}
 

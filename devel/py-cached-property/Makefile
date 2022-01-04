@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2020/10/02 19:16:47 adam Exp $
+# $NetBSD: Makefile,v 1.12 2022/01/04 20:52:54 wiz Exp $
 
 DISTNAME=	cached-property-1.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cached-property/}
 

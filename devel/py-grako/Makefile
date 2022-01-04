@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/06/17 19:37:39 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:08 wiz Exp $
 
 DISTNAME=	grako-3.99.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/grako/}
 EXTRACT_SUFX=	.zip

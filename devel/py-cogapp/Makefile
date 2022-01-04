@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/08/07 09:21:18 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:52:57 wiz Exp $
 
 DISTNAME=	cogapp-2.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cogapp/}
 

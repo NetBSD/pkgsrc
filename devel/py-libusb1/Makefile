@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/04/03 23:04:54 nia Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:15 wiz Exp $
 
 DISTNAME=	libusb1-1.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/libusb1/}
 

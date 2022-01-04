@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/10/01 19:51:00 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:52:50 wiz Exp $
 
 DISTNAME=	astunparse-1.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/astunparse/}
 

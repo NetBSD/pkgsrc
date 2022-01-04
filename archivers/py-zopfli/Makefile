@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/11/19 09:48:38 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:52:31 wiz Exp $
 
 DISTNAME=	zopfli-0.1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zopfli/}
 EXTRACT_SUFX=	.zip
