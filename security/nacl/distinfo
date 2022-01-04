@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:17:20 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/01/04 20:53:20 schmonz Exp $
 
 BLAKE2s (nacl-20110221.tar.bz2) = d8fccb5036297da7fe4f4d357cd326f10094ba709b9422ccd1571b13e3981f4d
 SHA512 (nacl-20110221.tar.bz2) = 4c031ceffe6a28dc74b46ac003d485531f78de467c802df73c8b22ca53644dabb7d2e3080b7bdd6583f0d07ad76b6d95bc0ffdce319ca2f80ee041e6fe618656
 Size (nacl-20110221.tar.bz2) = 163415 bytes
+SHA1 (patch-curvecp_socket__udp.c) = 77e98768d015cb16af1ffa8b57464a12620d8110
 SHA1 (patch-do) = 590961a4b2daf5693a477b06d35c8ea92f8e3173
 SHA1 (patch-okcompilers_c) = bdbc229671428738e0115551ef1c123f3224d3cf
 SHA1 (patch-okcompilers_cpp) = bf5468ce0d0881cbf124cc5590746f685a2c74f5
