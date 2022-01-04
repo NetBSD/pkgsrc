@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/10/06 10:51:21 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:07 wiz Exp $
 
 DISTNAME=	fuzzywuzzy-0.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fuzzywuzzy/}
 

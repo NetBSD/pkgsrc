@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/08/21 15:44:40 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:52:45 wiz Exp $
 
 DISTNAME=	unicodecsv-0.14.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/unicodecsv/}
 

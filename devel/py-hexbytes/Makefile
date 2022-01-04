@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/08/26 07:31:35 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:53:09 wiz Exp $
 
 DISTNAME=	hexbytes-0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hexbytes/}
 

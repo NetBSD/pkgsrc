@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2020/12/04 20:45:06 nia Exp $
+# $NetBSD: Makefile,v 1.21 2022/01/04 20:52:46 wiz Exp $
 
 DISTNAME=	RBTools-0.7.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://downloads.reviewboard.org/releases/RBTools/0.7/
 

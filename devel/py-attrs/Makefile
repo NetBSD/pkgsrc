@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2020/10/06 10:51:21 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/01/04 20:52:51 wiz Exp $
 
 DISTNAME=	attrs-19.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/attrs/}
 

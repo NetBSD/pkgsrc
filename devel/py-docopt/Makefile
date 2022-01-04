@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2018/02/26 08:53:54 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:53:01 wiz Exp $
 
 DISTNAME=	docopt-0.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/docopt/}
 

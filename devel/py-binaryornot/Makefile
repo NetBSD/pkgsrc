@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2019/10/21 21:50:03 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:52:52 wiz Exp $
 
 DISTNAME=	binaryornot-0.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/binaryornot/}
 

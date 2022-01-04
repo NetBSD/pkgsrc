@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/05/16 17:13:41 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:53:06 wiz Exp $
 
 DISTNAME=	func_timeout-4.3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/func_timeout/}
 
