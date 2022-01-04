@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2021/12/26 05:04:42 taca Exp $
+# $NetBSD: Makefile,v 1.23 2022/01/04 20:53:50 wiz Exp $
 
 DISTNAME=	transifex-client-0.14.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=transifex/}
 GITHUB_PROJECT=	transifex-client

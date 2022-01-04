@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2021/12/31 12:21:55 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:53:49 wiz Exp $
 
 DISTNAME=	yapf-0.32.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yapf/}
 

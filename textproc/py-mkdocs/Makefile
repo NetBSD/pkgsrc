@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/11/01 21:05:56 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:55:00 wiz Exp $
 
 DISTNAME=	mkdocs-1.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mkdocs/}
 

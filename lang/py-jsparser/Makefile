@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2019/06/07 07:26:58 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:54:09 wiz Exp $
 
 DISTNAME=	pyjsparser-2.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
+PKGREVISION=	1
 CATEGORIES=	python lang
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyjsparser/}
 

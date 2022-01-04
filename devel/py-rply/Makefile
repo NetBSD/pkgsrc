@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2021/02/24 19:41:40 adam Exp $
+# $NetBSD: Makefile,v 1.10 2022/01/04 20:53:37 wiz Exp $
 
 DISTNAME=	rply-0.7.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rply/}
 

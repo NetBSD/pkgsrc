@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2020/08/31 23:07:03 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/04 20:54:30 wiz Exp $
 
 DISTNAME=	OnionBalance-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=O/OnionBalance/}
 

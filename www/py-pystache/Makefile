@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2021/12/06 14:17:03 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:55:33 wiz Exp $
 
 DISTNAME=	pystache-0.5.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pystache/}
 

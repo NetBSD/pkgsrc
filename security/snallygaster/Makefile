@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/12/04 20:45:40 nia Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:54:46 wiz Exp $
 
 DISTNAME=	snallygaster-0.0.9
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/snallygaster/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2019/09/20 16:51:25 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:42 wiz Exp $
 
 DISTNAME=	keyrings.alt-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/keyrings.alt/}
 

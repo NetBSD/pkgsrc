@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/05/16 17:38:39 adam Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/04 20:53:42 wiz Exp $
 
 DISTNAME=	pytest-relaxed-1.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-relaxed/}
 

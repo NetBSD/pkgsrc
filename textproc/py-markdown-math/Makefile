@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2021/02/11 03:22:35 gutteridge Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:54:59 wiz Exp $
 
 VERSION=	0.8
 DISTNAME=	python-markdown-math-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-markdown-math/}
 

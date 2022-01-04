@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/04/23 03:43:15 markd Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:39 wiz Exp $
 
 DISTNAME=	simplegeneric-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/simplegeneric/}
 EXTRACT_SUFX=	.zip

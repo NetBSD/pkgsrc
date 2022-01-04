@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2018/08/07 09:44:13 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:09 wiz Exp $
 
 DISTNAME=	Paver-1.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Paver/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/10/31 08:27:55 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:54:44 wiz Exp $
 
 DISTNAME=	requests_ntlm-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	security www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requests_ntlm/}
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2021/10/27 10:16:44 hauke Exp $
+# $NetBSD: Makefile,v 1.29 2022/01/04 20:55:16 wiz Exp $
 
 PYBLOXSOMVERS=	1.5.3
 DISTNAME=	pyblosxom-${PYBLOXSOMVERS}
 PKGNAME=	${PYPKGPREFIX}-blosxom-${PYBLOXSOMVERS}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	http://pyblosxom.github.com/download/
 

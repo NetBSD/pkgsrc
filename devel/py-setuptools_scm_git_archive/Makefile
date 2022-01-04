@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2019/04/08 16:21:45 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:53:38 wiz Exp $
 
 DISTNAME=	setuptools_scm_git_archive-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools_scm_git_archive/}
 

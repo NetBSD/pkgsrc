@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/10/13 10:36:11 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:55:05 wiz Exp $
 
 DISTNAME=		sgmllib3k-1.0.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		textproc python
 MASTER_SITES=		${MASTER_SITE_PYPI:=s/sgmllib3k/}
 

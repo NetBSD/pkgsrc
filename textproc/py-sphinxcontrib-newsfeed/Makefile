@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2019/10/21 22:11:33 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:55:07 wiz Exp $
 
 DISTNAME=	sphinxcontrib-newsfeed-0.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinxcontrib-newsfeed/}
 

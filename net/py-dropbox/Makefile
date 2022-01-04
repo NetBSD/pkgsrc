@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2021/04/22 09:46:37 nia Exp $
+# $NetBSD: Makefile,v 1.14 2022/01/04 20:54:26 wiz Exp $
 
 DISTNAME=	dropbox-11.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dropbox/}
 

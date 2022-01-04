@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/06/27 16:37:18 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:54:29 wiz Exp $
 
 DISTNAME=	magic-wormhole-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/magic-wormhole/}
 
