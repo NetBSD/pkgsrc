@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.78 2022/01/04 22:35:31 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.79 2022/01/04 23:35:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -92,3 +92,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/qremote to 20131231nb1 [schmonz 2022-01-04]
 	Added security/tlswrapper version 20220101 [schmonz 2022-01-04]
 	Updated www/httpfile to 20220101 [schmonz 2022-01-04]
+	Updated math/py-numexpr to 2.8.1 [wiz 2022-01-04]
