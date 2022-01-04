@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2021/12/20 21:56:05 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:21 wiz Exp $
 
 DISTNAME=	pip-api-0.0.26
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip-api/}
 
