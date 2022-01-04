@@ -1,4 +1,4 @@
-# $NetBSD: egg.mk,v 1.31 2021/01/20 23:56:51 gdt Exp $
+# $NetBSD: egg.mk,v 1.32 2022/01/04 20:50:41 wiz Exp $
 #
 # Common logic to handle Python Eggs
 #
@@ -43,7 +43,7 @@ _PYSETUPTOOLSINSTALLARGS=	--single-version-externally-managed
 # them.
 BOOTSTRAP_SETUPTOOLS?=	no
 .if ${BOOTSTRAP_SETUPTOOLS} == "yes"
-BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+TOOL_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 do-build: ensurepip
 .PHONY: ensurepip
 
@@ -51,9 +51,9 @@ ensurepip:
 	${SETENV} ${MAKE_ENV} ${PYTHONBIN} -m ensurepip --user
 .else
 .  if "${PYVERSSUFFIX}" == "2.7"
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools44
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools44
 .  else
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 .  endif
 .endif
 
