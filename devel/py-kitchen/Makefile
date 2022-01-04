@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/12/11 14:42:01 nia Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:14 wiz Exp $
 
 DISTNAME=	kitchen-1.2.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/kitchen/}
 

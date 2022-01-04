@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2018/12/04 13:12:14 adam Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/04 20:53:15 wiz Exp $
 
 DISTNAME=	logan-0.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/logan/}
 

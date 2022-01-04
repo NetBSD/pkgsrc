@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/02/03 18:38:02 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/04 20:53:16 wiz Exp $
 
 DISTNAME=	lru-dict-1.1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lru-dict/}
 

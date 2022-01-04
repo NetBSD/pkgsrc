@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/09/26 11:20:36 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/04 20:52:33 wiz Exp $
 
 DISTNAME=	hsaudiotag3k-1.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	python audio
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hsaudiotag3k/}
 

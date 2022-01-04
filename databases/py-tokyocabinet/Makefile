@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2019/09/02 13:19:47 adam Exp $
+# $NetBSD: Makefile,v 1.17 2022/01/04 20:52:45 wiz Exp $
 
 VERSION=	0.5
 DISTNAME=	tokyocabinet-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-tokyocabinet-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://python-tokyocabinet.googlecode.com/files/
 

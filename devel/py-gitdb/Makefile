@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/10/25 12:04:11 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:53:07 wiz Exp $
 
 DISTNAME=	gitdb-4.0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gitdb/}
 

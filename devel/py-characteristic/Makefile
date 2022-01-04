@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2018/07/15 10:38:45 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:52:55 wiz Exp $
 
 DISTNAME=	characteristic-14.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/characteristic/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/03/09 06:00:47 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:52:52 wiz Exp $
 
 DISTNAME=	bintrees-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bintrees/}
 EXTRACT_SUFX=	.zip

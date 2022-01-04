@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/08/05 10:09:48 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/04 20:53:01 wiz Exp $
 
 DISTNAME=	distro-1.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/distro/}
 

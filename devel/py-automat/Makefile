@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/01/23 10:20:22 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/04 20:52:51 wiz Exp $
 
 DISTNAME=	Automat-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=A/Automat/}
 
