@@ -1,11 +1,7 @@
 httpfile is a secure HTTP server derived from publicfile-0.52:
 
-- removed ftpd
-- added "Content-Encoding: gzip"
-- added more 'default' filetypes
-- case insensitive filetype checking
-- upgraded alloc library, added memory limit
-- added request timeout
-- added basic authentication as a simple protection against robots
-- added 301 redirect for directories
-- added range support
+* reworked from scratch
+* removed ftpd
+* added range support
+* added 301 redirect for directories
+* added basic authentication as a simple protection against robots

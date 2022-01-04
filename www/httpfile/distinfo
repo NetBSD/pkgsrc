@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2021/11/15 18:18:56 wiz Exp $
+$NetBSD: distinfo,v 1.3 2022/01/04 22:35:24 schmonz Exp $
 
-BLAKE2s (httpfile-20151206.tar.bz2) = 9789610dc851a7d5e1c5012cf6e942399b1c927f06ea8dac9ba1dae2d56af4e9
-SHA512 (httpfile-20151206.tar.bz2) = 1768a647f16026e8a928432bd21a6a8673d5993b8a913375a91fa0f62aac382bd32efc13cebc31bf275b298883d083f2485d4fe1a74f87907b29ceb721677d00
-Size (httpfile-20151206.tar.bz2) = 29502 bytes
-SHA1 (patch-Makefile) = 3739cf9cec613dbd9b823b9bca15b3e656497bb8
+BLAKE2s (httpfile-20220101.tar.gz) = aaa9fa6930587cb5fbd9c15415c2f539fe76654aa103ccae3db6ce0e0e3048f9
+SHA512 (httpfile-20220101.tar.gz) = d2ef40c8b154ef5285706b8ac710d084d3d6784655350766d5fd08d5f0c08a954a52ea4bf880e619cadfbf4e63fd5bffffd26d984259fccf3e5c3c449f9c8d22
+Size (httpfile-20220101.tar.gz) = 27232 bytes
+SHA1 (patch-limits.c) = f53c322b18fe5d6702e2251c8f4903b2197481aa
