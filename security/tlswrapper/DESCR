@@ -1,0 +1,16 @@
+tlswrapper is an TLS encryption wrapper between remote client and local
+program prog. Systemd.socket/inetd/tcpserver/... creates the server
+connection, tlswrapper encrypts/decrypts data stream and reads/writes
+data from/to the program prog as follows:
+
+Internet <--> systemd.socket/inetd/tcpserver/... <--> tlswrapper <--> prog
+
+By running separate instance of tlswrapper for each TLS connection, a
+vulnerability in the code (e.g. bug in the TLS library) can't be used to
+compromise the memory of another connection.
+
+To protect against secret-information leaks to the network connection
+(such Heartbleed) tlswrapper runs two independent processes for every
+TLS connection. One process holds secret-keys and runs secret-keys
+operations and second talks to the network. Processes communicate with
+each other through UNIX pipes.
