@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2021/02/24 01:17:24 gutteridge Exp $
+# $NetBSD: Makefile,v 1.18 2022/01/04 19:23:01 wiz Exp $
 
-PYIRCVERS=		11.1.1
-DISTNAME=		irc-${PYIRCVERS}
-PKGNAME=		${PYPKGPREFIX}-irclib-${PYIRCVERS}
+DISTNAME=		irc-11.1.1
+PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/irc/irclib/}
+PKGREVISION=		1
 CATEGORIES=		net python
 MASTER_SITES=		${MASTER_SITE_PYPI:=i/irc/}
 EXTRACT_SUFX=		.zip
@@ -17,11 +17,10 @@ USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-six>=1.5.2:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-jaraco_util>=10.0.2:../../devel/py-jaraco_util
-
 BUILD_DEPENDS+=	${PYPKGPREFIX}-hgtools>=5:../../devel/py-hgtools
 
 post-extract:
 	cd ${WRKSRC} && ${CHMOD} ${SHAREMODE} irc.egg-info/*
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
