@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2022/01/03 10:55:26 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2022/01/04 07:02:02 wiz Exp $
 
 DISTNAME=	PySolFC-2.14.1
 PKGNAME=	${DISTNAME:tl}
@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-pysol_cards-[0-9]*:../../games/py-pysol_cards
 DEPENDS+=	${PYPKGPREFIX}-random2-[0-9]*:../../devel/py-random2
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-kivy-[0-9]*:../../wip/py-kivy
+DEPENDS+=	${PYPKGPREFIX}-kivy-[0-9]*:../../devel/py-kivy
 TEST_DEPENDS+=	${PYPKGPREFIX}-pycotap-[0-9]*:../../devel/py-pycotap
 # not listed in setup.py, but needed
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
