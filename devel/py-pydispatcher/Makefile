@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/03/20 11:57:31 nia Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:23 wiz Exp $
 
 DISTNAME=	PyDispatcher-2.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyDispatcher/}
 
