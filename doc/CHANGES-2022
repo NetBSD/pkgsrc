@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.61 2022/01/04 13:08:11 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.62 2022/01/04 13:16:52 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -73,3 +73,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/nim to 1.6.2 [ryoon 2022-01-04]
 	Updated graphics/gegl to 0.4.34 [ryoon 2022-01-04]
 	Updated graphics/gimp to 2.10.30 [ryoon 2022-01-04]
+	Updated graphics/freetype2 to 2.11.1 [ryoon 2022-01-04]
