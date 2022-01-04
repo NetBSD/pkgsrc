@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.74 2022/01/04 20:30:31 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.75 2022/01/04 20:53:25 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -88,3 +88,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-usb to 1.2.1 [wiz 2022-01-04]
 	Updated www/htmldoc to 1.9.14 [fcambus 2022-01-04]
 	Updated www/htmldoc-x11 to 1.9.14 [fcambus 2022-01-04]
+	Updated security/nacl to 20110221nb2 [buildbox 2022-01-04]
