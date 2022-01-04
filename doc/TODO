@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21394 2022/01/04 13:16:52 ryoon Exp $
+$NetBSD: TODO,v 1.21395 2022/01/04 15:23:00 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -669,7 +669,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o esh-0.8.5
 	o ess-18.10.2
 	o etach-1.4.1
-	o etckeeper-1.18.16
 	o etm-3.0.43 [wip/py-etmtk]
 	o etm-891
 	o evas-buffer-1.7.10
