@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.89 2022/01/05 21:26:09 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.90 2022/01/05 21:37:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -103,3 +103,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/apenwarr-redo to 0.42d [schmonz 2022-01-05]
 	Updated shells/bash to 5.1.16 [wiz 2022-01-05]
 	Updated textproc/py-cssutils to 2.3.0 [wiz 2022-01-05]
+	Updated graphics/ImageMagick to 7.1.0.19 [wiz 2022-01-05]
