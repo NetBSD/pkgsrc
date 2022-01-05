@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2022/01/04 20:54:14 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2022/01/05 20:47:36 wiz Exp $
 
 DISTNAME=	numba-0.51.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numba/}
 
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 USE_LANGUAGES=	c c++
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 .for cmd in numba pycc

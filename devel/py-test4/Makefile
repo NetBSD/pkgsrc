@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:43 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/05 20:47:36 wiz Exp $
 
 DISTNAME=	pytest-4.6.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest/}
 
@@ -36,6 +36,8 @@ DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=0.12:../../devel/py-importlib-metad
 PYTHON_VERSIONED_DEPENDENCIES+=	more-itertools
 PYTHON_VERSIONED_DEPENDENCIES+=	hypothesis:test
 PYTHON_VERSIONED_DEPENDENCIES+=	packaging
+
+USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	bash:build
