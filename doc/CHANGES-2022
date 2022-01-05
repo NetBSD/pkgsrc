@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.84 2022/01/05 10:56:44 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.85 2022/01/05 13:51:26 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -98,3 +98,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated games/warzone2100 to 4.2.4 [triaxx 2022-01-05]
 	Added chat/swirc version 3.3.3 [fcambus 2022-01-05]
 	Added sysutils/sleepwatcher version 2.2.1 [schmonz 2022-01-05]
+	Updated security/nacl to 20110221nb3 [schmonz 2022-01-05]
