@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.53 2022/01/04 20:53:51 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2022/01/05 15:41:10 wiz Exp $
 
 VERSION_BASE=	1.16.0
 VERSION_RC=
 DISTNAME=	tahoe-lafs-${VERSION_BASE}${VERSION_RC}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	filesystems
 MASTER_SITES=	https://tahoe-lafs.org/downloads/
 
@@ -17,6 +17,8 @@ USE_TOOLS=	gmake
 # tahoe works with 27, but we depend on things which are
 # not available for 27 in pkgsrc.
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 # The world sees this as part of base python.
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3

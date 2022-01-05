@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2022/01/04 20:52:51 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2022/01/05 15:41:01 wiz Exp $
 
 DISTNAME=	Babel-2.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=B/Babel/}
 
@@ -17,6 +17,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 PYSETUPTESTTARGET=	pytest
 

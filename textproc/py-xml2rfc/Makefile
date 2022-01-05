@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:55:09 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/05 15:41:27 wiz Exp $
 
 DISTNAME=	xml2rfc-3.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xml2rfc/}
 
@@ -36,6 +36,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-tox>=0:../../devel/py-tox
 TEST_DEPENDS+=	${PYPKGPREFIX}-weasyprint>=0:../../print/py-weasyprint
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 do-test:
 	${RUN} cd ${WRKSRC} && \

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2022/01/04 20:54:47 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2022/01/05 15:41:21 wiz Exp $
 
 DISTNAME=	borgbackup-1.1.17
-PKGREVISION=	2
+PKGREVISION=	3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/borgbackup/}
@@ -16,6 +16,8 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_s
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 MAKE_ENV+=	BORG_OPENSSL_PREFIX=${SSLBASE:Q}
 MAKE_ENV+=	BORG_LZ4_PREFIX=${BUILDLINK_PREFIX.lz4}

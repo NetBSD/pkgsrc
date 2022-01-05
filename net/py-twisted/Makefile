@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2022/01/04 20:54:34 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2022/01/05 15:41:18 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	Framework for writing networked applications
 .include "../../net/py-twisted/Makefile.common"
 
@@ -21,6 +21,8 @@ REPLACE_PYTHON+=	src/twisted/mail/test/pop3testserver.py
 REPLACE_PYTHON+=	src/twisted/trial/test/scripttest.py
 
 USE_LANGUAGES=	c99
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 .for bin in cftp ckeygen conch mailmail pyhtmlizer tkconch trial twist twistd

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:55:10 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/05 15:41:27 wiz Exp $
 
 DISTNAME=	translate-toolkit-3.0.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/translate-toolkit/}
 
@@ -25,6 +25,8 @@ REPLACE_BASH+=	tools/poreencode
 REPLACE_BASH+=	tools/popuretext
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

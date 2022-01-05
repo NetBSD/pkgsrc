@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 20:54:26 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/05 15:41:16 wiz Exp $
 
 DISTNAME=	cymruwhois-1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cymruwhois/}
 
@@ -14,6 +14,8 @@ LICENSE=	mit
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} cymruwhois cymruwhois${PYVERSSUFFIX} || ${TRUE}

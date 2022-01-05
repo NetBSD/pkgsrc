@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2022/01/04 20:54:46 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2022/01/05 15:41:21 wiz Exp $
 
 DISTNAME=	sqlmap-1.5.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sqlmap/}
 
@@ -32,6 +32,8 @@ REPLACE_BASH+=	sqlmap/extra/shutils/strip.sh
 REPLACE_PERL+=	sqlmap/extra/icmpsh/icmpsh-m.pl
 
 REPLACE_PYTHON+=	sqlmap/extra/shutils/duplicates.py
+
+USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
 

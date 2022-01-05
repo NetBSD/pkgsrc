@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2022/01/04 20:54:50 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2022/01/05 15:41:23 wiz Exp $
 
 DISTNAME=	xattr-0.9.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xattr/}
 
@@ -13,6 +13,8 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.0.0:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-cparser-[0-9]*:../../devel/py-cparser
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

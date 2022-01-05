@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2022/01/04 20:54:57 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2022/01/05 15:41:24 wiz Exp $
 
 DISTNAME=	jsbeautifier-1.13.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsbeautifier/}
 
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-editorconfig-core>=0.12.2:../../devel/py-editorconfig-c
 DEPENDS+=	${PYPKGPREFIX}-six>=1.13.0:../../lang/py-six
 
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
+
+USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2022/01/04 20:55:17 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2022/01/05 15:41:29 wiz Exp $
 
 DISTNAME=	CherryPy-18.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/CherryPy/}
 
@@ -29,6 +29,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar-[0-9]*:../../devel/py-test-sugar
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

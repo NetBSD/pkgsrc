@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2022/01/04 20:54:50 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/01/05 15:41:22 wiz Exp $
 
 DISTNAME=	supervisor-4.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/supervisor/}
 
@@ -19,6 +19,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 .endif
 
 REPLACE_PYTHON+=	supervisor/scripts/*.py
+
+USE_PKG_RESOURCES=	yes
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-build
