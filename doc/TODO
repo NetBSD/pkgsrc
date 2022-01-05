@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21403 2022/01/05 21:55:58 wiz Exp $
+$NetBSD: TODO,v 1.21404 2022/01/05 22:05:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1605,7 +1605,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-hyperscan-0.2.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.2
-	o py-munkres-1.1.4
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
 	o py-newt-0.52.21
@@ -1701,7 +1700,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ruby-delayer-1.2.1
 	o ruby-redmine-gitmike-theme-1.2.1
 	o rump-20131213
-	o rust-analyzer-0.2021.12.27
+	o rust-analyzer-0.2021.12.27 [needs rust 1.57 via flycheck]
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
