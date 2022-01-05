@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/01/05 10:04:10 fcambus Exp $
+
+BLAKE2s (swirc-3.3.3.tgz) = accb229837727b1f85aa0ebac8dc343ed71e0767022ee028135535f8ae8b37ff
+SHA512 (swirc-3.3.3.tgz) = 5956dcc82aa300d3dfa539341bf625179668f11c6e789b697bf25e07fe7bdb0b898f89d5b426283b634e87b95b8b00f1f4de9e9a16e4ca467382e81a1bddbd88
+Size (swirc-3.3.3.tgz) = 258705 bytes
