@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2022/01/05 10:09:53 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2022/01/05 15:51:59 wiz Exp $
 
 DISTNAME=	Django-2.2.25
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -13,11 +13,12 @@ COMMENT=	Django, a high-level Python Web framework
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 REPLACE_PYTHON+=	django/bin/django-admin.py
 REPLACE_PYTHON+=	django/conf/project_template/manage.py-tpl
