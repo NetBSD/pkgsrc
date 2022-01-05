@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21396 2022/01/04 19:49:29 wiz Exp $
+$NetBSD: TODO,v 1.21397 2022/01/05 01:14:39 gutteridge Exp $
 
 Suggested new packages
 ======================
@@ -1929,7 +1929,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xf86-video-nouveau-1.0.17
-	o xfce4-taskmanager-1.5.2
 	o xfe-1.42 [pkg/52968]
 	o xforms-1.2.4
 	o xfpt-0.11
