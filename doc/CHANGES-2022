@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.93 2022/01/05 21:45:02 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.94 2022/01/05 21:48:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -107,3 +107,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/chromaprint to 1.5.1 [wiz 2022-01-05]
 	Updated math/double-conversion to 3.1.7 [wiz 2022-01-05]
 	Updated math/libnumbertext to 1.0.8 [wiz 2022-01-05]
+	Updated devel/gopls to 0.7.4 [wiz 2022-01-05]
