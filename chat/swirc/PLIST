@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2022/01/05 10:04:10 fcambus Exp $
+bin/swirc
+man/man1/swirc.1
+man/man5/swirc.conf.5
+share/locale/de/LC_MESSAGES/swirc.mo
+share/locale/fi/LC_MESSAGES/swirc.mo
+share/locale/fr/LC_MESSAGES/swirc.mo
+share/locale/sv/LC_MESSAGES/swirc.mo
+share/swirc/swirc-royal.png
