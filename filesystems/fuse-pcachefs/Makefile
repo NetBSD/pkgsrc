@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2022/01/04 20:53:51 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/01/05 15:41:10 wiz Exp $
 
 DISTNAME=	fuse-pcachefs-0.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ibizaman/}
 GITHUB_PROJECT=	pcachefs
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/ibizaman/pcachefs
 COMMENT=	FUSE-based persistent caching filesystem
 LICENSE=	apache-2.0
 
-PYTHON_VERSIONED_DEPENDENCIES+=	setuptools:build
+USE_PKG_RESOURCES=	yes
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 EGG_NAME=	pCacheFS-${PKGVERSION_NOREV}

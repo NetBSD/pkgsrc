@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2022/01/04 20:53:34 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2022/01/05 15:41:07 wiz Exp $
 
 DISTNAME=	pyutil-3.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyutil/}
 
@@ -16,6 +16,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=1.3.0:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-twisted>=15.5.0:../../net/py-twisted
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 CONFLICTS+=	passphrase-[0-9]*
 

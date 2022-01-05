@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/05 15:41:23 wiz Exp $
 
 DISTNAME=	commonmark-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/commonmark/}
 
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-future>=0.14.0:../../devel/py-future
 .endif
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

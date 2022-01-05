@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:54:34 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/05 15:41:18 wiz Exp $
 
 DISTNAME=	twine-1.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/twine/}
 
@@ -18,8 +18,9 @@ DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.9.1:../../devel/py-requests-toolbe
 DEPENDS+=	${PYPKGPREFIX}-tqdm>=4.14:../../misc/py-tqdm
 
 PYTHON_VERSIONED_DEPENDENCIES+=	test:test
-PYTHON_VERSIONED_DEPENDENCIES+= setuptools
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-tqdm
+
+USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
 

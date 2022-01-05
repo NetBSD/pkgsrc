@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2022/01/04 20:53:45 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2022/01/05 15:41:08 wiz Exp $
 TRYTON_MODULE_NAME=	tryton
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	devel python
 
@@ -10,6 +10,8 @@ COMMENT=	Three-tiers high-level general purpose application platform
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=		# none
+
+USE_PKG_RESOURCES=	yes
 
 #WRKSRC=		${WRKDIR}/tryton-${PKGVERSION_NOREV}
 

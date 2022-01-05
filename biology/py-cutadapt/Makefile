@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2022/01/04 20:52:35 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/05 15:40:57 wiz Exp $
 
 DISTNAME=	cutadapt-3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cutadapt/}
 
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-dnaio>=0.5.0:../../biology/py-dnaio
 DEPENDS+=	${PYPKGPREFIX}-xopen>=1.0.0:../../devel/py-xopen
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-xopen, dataclasses
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

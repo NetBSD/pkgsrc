@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2022/01/04 20:55:35 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2022/01/05 15:41:31 wiz Exp $
 
 DISTNAME=	sanic-21.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sanic/}
 
@@ -22,6 +22,8 @@ DEPENDS+=	${PYPKGPREFIX}-websockets>=9.0:../../www/py-websockets
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

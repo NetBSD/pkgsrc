@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:54:09 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/05 15:41:12 wiz Exp $
 
 DISTNAME=	python-lsp-server-1.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-lsp-server/}
 
@@ -34,6 +34,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-pylint, py-parso via py-jedi
+
+USE_PKG_RESOURCES=	yes
 
 SUBST_CLASSES+=		pylint
 SUBST_FILES.pylint+=	test/plugins/test_pylint_lint.py

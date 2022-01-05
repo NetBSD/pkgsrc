@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:55:04 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/05 15:41:26 wiz Exp $
 
 DISTNAME=	ramlfications-0.1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/ramlfications/}
 
@@ -18,6 +18,8 @@ TEST_DEPENDS+=		${PYPKGPREFIX}-jsonref-[0-9]*:../../textproc/py-jsonref
 TEST_DEPENDS+=		${PYPKGPREFIX}-xmltodict-[0-9]*:../../textproc/py-xmltodict
 
 PYTHON_VERSIONED_DEPENDENCIES+=	markdown:test
+
+USE_PKG_RESOURCES=	yes
 
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:54:27 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/05 15:41:16 wiz Exp $
 
 GITHUB_TAG=	1.5
 DISTNAME=	${GITHUB_TAG}
 PKGNAME=	${PYPKGPREFIX}-gandi.cli-${GITHUB_TAG}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Gandi/}
 GITHUB_PROJECT=	gandi.cli
@@ -24,6 +24,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-tox>=0:../../devel/py-tox
 
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
+
+USE_PKG_RESOURCES=	yes
 
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"

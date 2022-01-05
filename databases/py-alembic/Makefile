@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2022/01/04 20:52:40 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2022/01/05 15:40:59 wiz Exp $
 
 DISTNAME=	alembic-1.7.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/alembic/}
 
@@ -20,6 +20,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} < 39

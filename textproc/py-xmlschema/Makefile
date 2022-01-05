@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2022/01/04 20:55:09 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2022/01/05 15:41:27 wiz Exp $
 
 DISTNAME=	xmlschema-1.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xmlschema/}
 
@@ -17,6 +17,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-elementpath
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 .for bin in xmlschema-json2xml xmlschema-validate xmlschema-xml2json

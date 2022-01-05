@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:53:43 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/05 15:41:08 wiz Exp $
 
 DISTNAME=	pytest-watch-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-watch/}
 
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-docopt>=0.4.0:../../devel/py-docopt
 DEPENDS+=	${PYPKGPREFIX}-watchdog>=0.6.0:../../sysutils/py-watchdog
 
 PYTHON_VERSIONED_DEPENDENCIES=	test
+
+USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
 
