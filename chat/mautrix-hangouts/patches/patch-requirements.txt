@@ -1,0 +1,12 @@
+$NetBSD: patch-requirements.txt,v 1.1 2022/01/05 09:15:43 wiz Exp $
+
+setuptools not used after installation.
+https://github.com/mautrix/googlechat/issues/57
+
+--- requirements.txt.orig	2020-11-09 23:02:01.000000000 +0000
++++ requirements.txt
+@@ -7,4 +7,3 @@ commonmark>=0.8,<0.10
+ python-magic>=0.4,<0.5
+ hangups>=0.4.12,<0.5
+ mautrix>=0.8.2,<0.9
+-setuptools
