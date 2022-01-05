@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q4,v 1.1.2.3 2022/01/02 17:51:24 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q4,v 1.1.2.4 2022/01/05 16:57:29 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q4 branch:
 
@@ -10,4 +10,7 @@ graphics/graphviz: PowerPC build fix
 
 Pullup ticket #6558 - requested by he
 emulators/compat90: fix for PR pkg/56597
+
+Pullup ticket #6559 - requested by sborrill
+www/e2guardian: build fix
 
