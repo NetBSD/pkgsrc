@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/11/16 19:35:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/01/05 22:22:59 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -10,6 +10,9 @@ ${PYSITELIB}/python_utils/__about__.pyo
 ${PYSITELIB}/python_utils/__init__.py
 ${PYSITELIB}/python_utils/__init__.pyc
 ${PYSITELIB}/python_utils/__init__.pyo
+${PYSITELIB}/python_utils/aio.py
+${PYSITELIB}/python_utils/aio.pyc
+${PYSITELIB}/python_utils/aio.pyo
 ${PYSITELIB}/python_utils/compat.py
 ${PYSITELIB}/python_utils/compat.pyc
 ${PYSITELIB}/python_utils/compat.pyo
@@ -34,3 +37,6 @@ ${PYSITELIB}/python_utils/terminal.pyo
 ${PYSITELIB}/python_utils/time.py
 ${PYSITELIB}/python_utils/time.pyc
 ${PYSITELIB}/python_utils/time.pyo
+${PYSITELIB}/python_utils/types.py
+${PYSITELIB}/python_utils/types.pyc
+${PYSITELIB}/python_utils/types.pyo
