@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2022/01/04 20:55:35 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2022/01/05 15:41:31 wiz Exp $
 
 DISTNAME=	python-swiftclient-3.11.0
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-swiftclient/}
 
@@ -22,6 +22,8 @@ SUBST_FILES.manpath=	setup.cfg
 SUBST_SED.manpath=	-e 's,share/man,${PKGMANDIR},'
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX} && \

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2022/01/04 20:53:13 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/01/05 15:41:05 wiz Exp $
 
 DISTNAME=	jupyter_core-4.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_core/}
 
@@ -18,6 +18,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 SUBST_CLASSES+=			fix-prefix
 SUBST_STAGE.fix-prefix=		pre-configure

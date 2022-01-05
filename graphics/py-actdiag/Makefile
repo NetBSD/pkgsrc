@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2022/01/04 20:54:04 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/01/05 15:41:11 wiz Exp $
 
 DISTNAME=	actdiag-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/actdiag/}
 
@@ -18,6 +18,8 @@ USE_LANGUAGES=	# none
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

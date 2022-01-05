@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2022/01/04 20:53:16 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2022/01/05 15:41:05 wiz Exp $
 
 DISTNAME=	macholib-1.15.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/macholib/}
 
@@ -18,6 +18,8 @@ USE_LANGUAGES=	# none
 REPLACE_PYTHON+=	macholib/macho_dump.py
 REPLACE_PYTHON+=	macholib/macho_find.py
 REPLACE_PYTHON+=	macholib/macho_standalone.py
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

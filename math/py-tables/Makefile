@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2022/01/05 07:05:39 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/01/05 15:41:14 wiz Exp $
 
 DISTNAME=	tables-3.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tables/}
 
@@ -21,6 +22,8 @@ DEPENDS+=	${PYPKGPREFIX}-numexpr>=2.6.2:../../math/py-numexpr
 USE_LANGUAGES=	c c++
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

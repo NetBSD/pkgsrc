@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2022/01/04 20:53:02 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/05 15:41:03 wiz Exp $
 
 DISTNAME=	python-dotenv-0.19.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-dotenv/}
 
@@ -21,6 +21,8 @@ USE_LANGUAGES=	# none
 PYSETUPTESTTARGET=	pytest
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} dotenv dotenv-${PYVERSSUFFIX} || ${TRUE}

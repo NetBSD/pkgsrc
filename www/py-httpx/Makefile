@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2022/01/04 20:55:30 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2022/01/05 15:41:30 wiz Exp $
 
 DISTNAME=	httpx-0.21.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httpx/}
 
@@ -20,6 +20,8 @@ DEPENDS+=	${PYPKGPREFIX}-sniffio-[0-9]*:../../misc/py-sniffio
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-httpcore, py-anyio, py-uvloop
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

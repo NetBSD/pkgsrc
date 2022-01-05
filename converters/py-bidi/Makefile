@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:52:39 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/05 15:40:58 wiz Exp $
 
 DISTNAME=	python-bidi-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-bidi/}
 
@@ -14,6 +14,8 @@ LICENSE=	gnu-lgpl-v2.1
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2022/01/04 20:55:35 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/01/05 15:41:31 wiz Exp $
 
 DISTNAME=	Scrapy-2.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Scrapy/}
 
@@ -29,6 +29,8 @@ DEPENDS+=	${PYPKGPREFIX}-w3lib>=1.17.0:../../www/py-w3lib
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

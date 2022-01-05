@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2022/01/04 20:54:06 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/01/05 15:41:11 wiz Exp $
 
 DISTNAME=	nwdiag-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nwdiag/}
 
@@ -14,6 +14,8 @@ LICENSE=	apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-blockdiag>=1.5.0:../../graphics/py-blockdiag
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2022/01/04 20:54:47 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2022/01/05 15:41:21 wiz Exp $
 
 DISTNAME=	duplicity-0.8.20
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/duplicity/}
 
@@ -33,6 +33,8 @@ REPLACE_PYTHON+=	bin/duplicity
 REPLACE_PYTHON+=	bin/rdiffdir
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure

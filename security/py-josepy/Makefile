@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2022/01/04 20:54:42 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/05 15:41:20 wiz Exp $
 
 DISTNAME=	josepy-1.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/josepy/}
 
@@ -23,6 +23,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8>=0.5:../../devel/py-test-flake8
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

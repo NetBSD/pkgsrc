@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2022/01/04 20:54:12 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2022/01/05 15:41:13 wiz Exp $
 
 DISTNAME=	Theano-1.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=T/Theano/}
 
@@ -27,6 +27,8 @@ REPLACE.bash.new=	${SH}
 REPLACE_FILES.bash=	theano/misc/check_blas_many.sh
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-scipy
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

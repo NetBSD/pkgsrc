@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2022/01/04 20:55:17 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2022/01/05 15:41:29 wiz Exp $
 
 DISTNAME=	daphne-3.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/daphne/}
 
@@ -19,6 +19,8 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

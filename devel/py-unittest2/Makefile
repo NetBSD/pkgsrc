@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2022/01/04 20:53:46 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/05 15:41:08 wiz Exp $
 
 DISTNAME=		unittest2-1.1.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel python
 MASTER_SITES=		${MASTER_SITE_PYPI:=u/unittest2/}
 
@@ -24,6 +24,8 @@ SUBST_CLASSES+=		multi
 SUBST_STAGE.multi=	pre-configure
 SUBST_FILES.multi=	setup.py
 SUBST_SED.multi=	-e 's,unit2,unit2-${PYVERSSUFFIX},'
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.txt ${DESTDIR}${PREFIX}/${DOCDIR}

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2022/01/04 20:53:02 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2022/01/05 15:41:03 wiz Exp $
 
 DISTNAME=	dulwich-0.20.26
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dulwich/}
 
@@ -19,6 +19,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-geventhttpclient-[0-9]*:../../net/py-geventhttpcli
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

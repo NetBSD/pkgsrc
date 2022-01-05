@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:53:52 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/05 15:41:10 wiz Exp $
 
 DISTNAME=	backtrader-1.9.74.123
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	finance python
 #MASTER_SITES=	${MASTER_SITE_PYPI:=b/backtrader/}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mementum/}
@@ -20,6 +20,8 @@ DEPENDS+=	${PYPKGPREFIX}-pandas-[0-9]*:../../math/py-pandas
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-matplotlib, py-pandas
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

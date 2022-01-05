@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:54:33 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/05 15:41:18 wiz Exp $
 
 DISTNAME=	stone-3.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/stone/}
 
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.3.0:../../lang/py-six
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

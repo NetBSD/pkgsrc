@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2022/01/04 20:52:31 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/05 15:40:56 wiz Exp $
 
 DISTNAME=	yuicompressor-2.4.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yuicompressor/}
 
@@ -13,8 +13,8 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
-PY_PATCHPLIST=	yes
-USE_JAVA=	run
+USE_PKG_RESOURCES=	yes
+USE_JAVA=		run
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/yuicompressor \

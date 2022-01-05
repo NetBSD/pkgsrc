@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2022/01/04 20:53:47 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2022/01/05 15:41:09 wiz Exp $
 
 DISTNAME=	virtualenv-16.7.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/virtualenv/}
 
@@ -23,6 +23,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 .endif
 
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
+
+USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
 

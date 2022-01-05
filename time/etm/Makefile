@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2022/01/04 20:55:10 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2022/01/05 15:41:27 wiz Exp $
 
 DISTNAME=	etm-877
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	time
 MASTER_SITES=	http://www.duke.edu/~dgraham/ETM/
 
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-wxWidgets>=2.8.7:../../x11/py-wxWidgets
 DEPENDS+=	${PYPKGPREFIX}-icalendar>=2.0.1:../../time/py-icalendar
 
 PYTHON_VERSIONS_ACCEPTED=	27 # py-wxWidgets
+
+USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
 

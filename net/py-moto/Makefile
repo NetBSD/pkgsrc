@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:54:29 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/05 15:41:17 wiz Exp $
 
 DISTNAME=	moto-1.1.19
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/moto/}
 
@@ -34,6 +34,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-sure>=1.2.24:../../devel/py-sure
 TEST_DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
+
+USE_PKG_RESOURCES=	yes
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 
