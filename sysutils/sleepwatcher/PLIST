@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2022/01/05 10:56:00 schmonz Exp $
+man/man8/sleepwatcher.8
+sbin/sleepwatcher
+sbin/sleepwatcher-sleep
+sbin/sleepwatcher-wakeup
