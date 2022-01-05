@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/01/05 09:15:43 wiz Exp $
+$NetBSD: distinfo,v 1.9 2022/01/05 09:34:53 wiz Exp $
 
 BLAKE2s (mautrix-hangouts-0.1.4.tar.gz) = 891793eaefe588fd02e0f2e3655b3e62e27633a0913207fea1d0a6811a4eb010
 SHA512 (mautrix-hangouts-0.1.4.tar.gz) = 258a3ff04273629fe2654ce4e8a806cd02b73223e7e781ba0b56ab03cd8cc0e9c36fda33f195ac4afd5a482373b0a022a54d3ef5933c8e5e888a4f495fb317f6
 Size (mautrix-hangouts-0.1.4.tar.gz) = 83593 bytes
-SHA1 (patch-requirements.txt) = b0ad8c00c711e783806c9bc828d1bd898aa1e09c
