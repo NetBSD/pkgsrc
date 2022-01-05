@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21398 2022/01/05 21:37:33 wiz Exp $
+$NetBSD: TODO,v 1.21399 2022/01/05 21:41:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -559,7 +559,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cherokee-1.2.103 [pkg/48268]
 	o chimera-1.30a
 	o chkrootkit-0.54
-	o chromaprint-1.5.1
 	o chrpath-0.16
 	o cim-5.1
 	o cjk-lyx-1.4.4
