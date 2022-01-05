@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:14:14 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/01/05 15:45:10 schmonz Exp $
 
-BLAKE2s (redo-0.42c.tar.gz) = 47ea8c05d2f080c457dc77cf06f97e12e9977de209935b6ba52faa46cedbc6ef
-SHA512 (redo-0.42c.tar.gz) = 764ef84cfb56d5dd883cf80f706a567491e1a679d136219c4db3c122386aad3cfbd28131dc231a91639f596d7b8819c4254e4e7fa38f917996ca8bf3e1a5dc19
-Size (redo-0.42c.tar.gz) = 195222 bytes
+BLAKE2s (redo-0.42d.tar.gz) = 1399014268f83afd3de3013e90332376a050a2c5b18fbe97efcd3a135afd309e
+SHA512 (redo-0.42d.tar.gz) = 2749a1a1046f8edd63c4b4e2b0f4d95988dfcf8c776b264007914e583fc21ff51447be34ffc2c136c343ace8c38147d6a43c0c0dd01a681b6283a38d5d8f3fb7
+Size (redo-0.42d.tar.gz) = 195186 bytes
 SHA1 (patch-bin_all.do) = 761d24a832fa8067b6123fc02918460f579ffb5a
 SHA1 (patch-do) = 75b461b94d83f6145d161355aec59633bcad2c20
 SHA1 (patch-docs_md2man.py) = 7b2c08665a9777f713c584025b91e2b95c349eb9
