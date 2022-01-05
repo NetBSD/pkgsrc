@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2022/01/04 20:53:50 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2022/01/05 20:47:36 wiz Exp $
 
 DISTNAME=	transifex-client-0.14.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=transifex/}
 GITHUB_PROJECT=	transifex-client
@@ -21,6 +21,8 @@ DEPENDS+=	${PYPKGPREFIX}-gitpython>=3.0.0:../../devel/py-gitpython
 EXTRACT_USING=	bsdtar
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} tx tx-${PYVERSSUFFIX} || ${TRUE}

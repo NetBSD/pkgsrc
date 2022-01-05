@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2022/01/04 20:52:33 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2022/01/05 20:47:34 wiz Exp $
 
 DISTNAME=	beets-1.5.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/beets/}
 
@@ -26,6 +26,8 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-jellyfish, py-mutagen
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} beet beet-${PYVERSSUFFIX} || ${TRUE}

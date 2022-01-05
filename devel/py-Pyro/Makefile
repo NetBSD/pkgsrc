@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2022/01/04 20:52:47 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2022/01/05 20:47:35 wiz Exp $
 
 DISTNAME=	Pyro4-4.80
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pyro4/}
 
@@ -14,6 +14,8 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-serpent>=1.27:../../devel/py-serpent
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

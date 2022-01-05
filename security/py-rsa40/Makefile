@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:54:44 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/05 20:47:37 wiz Exp $
 
 DISTNAME=	rsa-4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rsa/}
 
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-asn1>=0.1.3:../../security/py-asn1
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 
 PYTHON_VERSIONS_ACCEPTED=	27
+
+USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
 
