@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.98 2022/01/05 22:23:08 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.99 2022/01/05 22:26:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -112,3 +112,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/py-munkres to 1.1.4 [wiz 2022-01-05]
 	Added devel/py-test-mypy version 0.8.1 [wiz 2022-01-05]
 	Updated devel/py-utils to 3.0.0 [wiz 2022-01-05]
+	Updated devel/py-progressbar2 to 4.0.0 [wiz 2022-01-05]
