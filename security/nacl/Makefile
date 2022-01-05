@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:53:20 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/05 13:51:19 schmonz Exp $
 
 DISTNAME=	nacl-20110221
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	https://hyperelliptic.org/nacl/
 EXTRACT_SUFX=	.tar.bz2
