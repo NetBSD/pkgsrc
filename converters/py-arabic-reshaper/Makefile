@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2022/01/05 08:58:37 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/05 09:37:15 wiz Exp $
 
 DISTNAME=	arabic_reshaper-2.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/arabic-reshaper/}
 
@@ -12,6 +12,7 @@ COMMENT=	Reconstruct Arabic sentences
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} == 27
