@@ -1,0 +1,15 @@
+$NetBSD: patch-cpucycles_do,v 1.1 2022/01/05 13:51:19 schmonz Exp $
+
+Part of Debian 0008-add-cpucycles-fakenanoseconds.patch:
+Provide a fakenanoseconds implementation for portability.
+
+--- cpucycles/do.orig	2011-02-21 01:49:34.000000000 +0000
++++ cpucycles/do
+@@ -70,6 +70,7 @@ okabi | (
+       echo monotoniccpuinfo
+       echo monotonic
+       echo gettimeofday
++      echo fakenanoseconds
+     ) | (
+       while read n
+       do
