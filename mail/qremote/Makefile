@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 21:03:22 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/05 14:03:27 schmonz Exp $
 
 DISTNAME=		qremote-20131231
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 EXTRACT_SUFX=		.tar.bz2
@@ -11,6 +11,7 @@ HOMEPAGE=		https://mojzis.com/software/qremote/
 COMMENT=		Experimental qmail-remote replacement with CurveCP support
 LICENSE=		public-domain
 
+DEPENDS+=		nacl>=20110221nb3:../../security/nacl
 DEPENDS+=		{ucspi-tcp6-[0-9]*,ucspi-tcp-[0-9]*}:../../net/ucspi-tcp
 
 USE_LANGUAGES=		c c++
