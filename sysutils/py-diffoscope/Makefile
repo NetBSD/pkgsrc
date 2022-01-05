@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2022/01/04 20:54:48 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/01/05 15:41:22 wiz Exp $
 
 DISTNAME=	diffoscope-134
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/diffoscope/}
 
@@ -24,6 +24,8 @@ USE_TOOLS+=	bzip2:run gtar:run xz:run
 
 # Only Python 3 is supported.
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

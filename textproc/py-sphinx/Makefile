@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.81 2022/01/04 20:55:05 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2022/01/05 15:41:26 wiz Exp $
 
 DISTNAME=	Sphinx-4.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Sphinx/}
 
@@ -39,6 +39,8 @@ USE_TOOLS+=	makeinfo
 PYSETUPTESTTARGET=	pytest
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

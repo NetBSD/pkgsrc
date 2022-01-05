@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2022/01/04 20:52:46 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2022/01/05 15:41:00 wiz Exp $
 
 DISTNAME=	meson-0.60.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/meson/}
 
@@ -16,6 +16,8 @@ SUPERSEDES=	${PYPKGPREFIX}-meson-[0-9]*
 DEPENDS+=	ninja-build>=1.7:../../devel/ninja-build
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	c c++ # c++ for tests
 

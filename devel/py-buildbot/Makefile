@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2022/01/04 20:52:53 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2022/01/05 15:41:01 wiz Exp $
 
 DISTNAME=	buildbot-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/buildbot/}
 
@@ -31,6 +31,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-treq-[0-9]*:../../devel/py-treq
 TEST_DEPENDS+=	${PYPKGPREFIX}-txrequests-[0-9]*:../../devel/py-txrequests
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
 

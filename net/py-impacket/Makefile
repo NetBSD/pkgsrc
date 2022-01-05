@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2022/01/04 20:54:28 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2022/01/05 15:41:16 wiz Exp $
 
 DISTNAME=	impacket-0.9.24
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/impacket/}
 
@@ -21,6 +21,8 @@ DEPENDS+=	${PYPKGPREFIX}-ldap3>=2.6.1:../../databases/py-ldap3
 DEPENDS+=	${PYPKGPREFIX}-ldapdomaindump>=0.9.0:../../net/py-ldapdomaindump
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
+
+USE_PKG_RESOURCES=	yes
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} == 27

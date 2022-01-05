@@ -1,4 +1,4 @@
-# $NetBSD: egg.mk,v 1.32 2022/01/04 20:50:41 wiz Exp $
+# $NetBSD: egg.mk,v 1.33 2022/01/05 15:41:32 wiz Exp $
 #
 # Common logic to handle Python Eggs
 #
@@ -37,6 +37,8 @@ PRINT_PLIST_AWK+=	{ gsub(/${PYVERSSUFFIX:S,.,\.,g}/, \
 
 _PYSETUPTOOLSINSTALLARGS=	--single-version-externally-managed
 
+USE_PKG_RESOURCES?=	no
+
 # py-setuptools depends on a couple py-* packages that need to be installed
 # beforehand. Of course, those can not be built and installed using py-setuptools
 # itself; so use the setuptools version included with python itself for installing
@@ -51,9 +53,14 @@ ensurepip:
 	${SETENV} ${MAKE_ENV} ${PYTHONBIN} -m ensurepip --user
 .else
 .  if "${PYVERSSUFFIX}" == "2.7"
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools44
+SETUPTOOLS_PATH=../../devel/py-setuptools44
 .  else
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+SETUPTOOLS_PATH=../../devel/py-setuptools
+.  endif
+.  if "${USE_PKG_RESOURCES}" == "yes"
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:${SETUPTOOLS_PATH}
+.  else
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:${SETUPTOOLS_PATH}
 .  endif
 .endif
 

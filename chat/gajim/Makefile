@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2022/01/04 20:52:36 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2022/01/05 15:40:57 wiz Exp $
 
 DISTNAME=	gajim-1.3.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat
 MASTER_SITES=	https://www.gajim.org/downloads/${PKGVERSION_NOREV:R}/
 
@@ -11,6 +11,8 @@ COMMENT=	XMPP/Jabber chat client written in Python/GTK3
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	gettext
+
+USE_PKG_RESOURCES=	yes
 
 .include "../../mk/bsd.prefs.mk"
 

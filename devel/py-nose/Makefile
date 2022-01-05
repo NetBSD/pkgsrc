@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2022/01/04 20:53:18 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2022/01/05 15:41:06 wiz Exp $
 
 DISTNAME=	nose-1.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nose/}
 
@@ -15,6 +15,8 @@ LICENSE=	gnu-lgpl-v2.1
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=3.0:../../devel/py-coverage
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 

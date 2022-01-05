@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2022/01/04 20:54:32 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/05 15:41:18 wiz Exp $
 
 DISTNAME=	SoftLayer-5.9.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/SoftLayer/softlayer/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SoftLayer/}
 
@@ -24,6 +24,8 @@ USE_LANGUAGES=	# none
 PYSETUPTESTTARGET=	pytest
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

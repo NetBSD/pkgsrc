@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2022/01/04 20:54:50 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/01/05 15:41:23 wiz Exp $
 
 DISTNAME=	watchdog-0.10.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/watchdog/}
 
@@ -20,6 +20,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=0.3:../../devel/py-test-timeout
 
 PYSETUPTESTTARGET=	pytest
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

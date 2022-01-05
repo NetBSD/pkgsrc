@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 20:54:43 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/05 15:41:20 wiz Exp $
 
 DISTNAME=	pip-audit-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security python
 # pypi file does not include tests
 #MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip-audit/}
@@ -27,6 +27,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
 

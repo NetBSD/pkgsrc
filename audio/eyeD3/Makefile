@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2022/01/04 20:52:32 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2022/01/05 15:40:57 wiz Exp $
 
 DISTNAME=	eyeD3-0.9.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/eyeD3/}
 
@@ -19,6 +19,8 @@ DEPENDS+=	${PYPKGPREFIX}-filetype-[0-9]*:../../sysutils/py-filetype
 PYTHON_VERSIONED_DEPENDENCIES+=	test:test
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-faker via py-factory_boy
+
+USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	gmake

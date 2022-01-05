@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:55:10 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/05 15:41:27 wiz Exp $
 
 DISTNAME=	yq-2.9.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kislyuk/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -20,6 +20,8 @@ DEPENDS+=	${PYPKGPREFIX}-toml-[0-9]*:../../textproc/py-toml
 TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
+
+USE_PKG_RESOURCES=	yes
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

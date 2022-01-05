@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2022/01/04 20:52:46 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2022/01/05 15:41:00 wiz Exp $
 
 DISTNAME=	breezy-3.2.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel scm
 MASTER_SITES=	https://launchpad.net/brz/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/+download/
 
@@ -24,6 +24,8 @@ TEST_DEPENDS+=		${PYPKGPREFIX}-testtools>=0:../../devel/py-testtools
 USE_TOOLS+=		gmake msgfmt
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 REPLACE_PYTHON+=	breezy/git/bzr-receive-pack
 REPLACE_PYTHON+=	breezy/git/bzr-upload-pack

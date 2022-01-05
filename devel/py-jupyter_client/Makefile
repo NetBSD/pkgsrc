@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2022/01/04 20:53:13 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2022/01/05 15:41:05 wiz Exp $
 
 DISTNAME=	jupyter_client-6.1.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_client/}
 
@@ -27,6 +27,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

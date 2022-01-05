@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2022/01/04 20:52:49 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2022/01/05 15:41:01 wiz Exp $
 
 DISTNAME=	argcomplete-1.12.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/argcomplete/}
 
@@ -21,6 +21,8 @@ DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=0.23:../../devel/py-importlib-metad
 .endif
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:55:13 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/05 15:41:28 wiz Exp $
 
 DISTNAME=	trading_calendars-1.11.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trading-calendars/}
 
@@ -20,6 +20,8 @@ DEPENDS+=	${PYPKGPREFIX}-toolz-[0-9]*:../../devel/py-toolz
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-pandas
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/tcal \

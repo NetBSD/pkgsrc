@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2022/01/04 20:55:16 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2022/01/05 15:41:29 wiz Exp $
 
 DISTNAME=	autobahn-20.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/autobahn/}
 
@@ -22,6 +22,8 @@ TEST_ENV+=	USE_ASYNCIO=1
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} wamp wamp-${PYVERSSUFFIX}

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2022/01/04 20:54:04 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2022/01/05 15:41:11 wiz Exp $
 
 DISTNAME=	blockdiag-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/blockdiag/}
 
@@ -24,7 +24,8 @@ USE_LANGUAGES=	# none
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
@@ -33,5 +34,4 @@ post-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/blockdiag-${PYVERSSUFFIX}.1
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
