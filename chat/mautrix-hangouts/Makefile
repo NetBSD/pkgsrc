@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2022/01/04 20:52:36 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/01/05 08:50:07 wiz Exp $
 
 DISTNAME=	mautrix-hangouts-0.1.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tulir/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -20,7 +20,6 @@ DEPENDS+=	${PYPKGPREFIX}-commonmark>=0.8<0.10:../../textproc/py-commonmark
 DEPENDS+=	${PYPKGPREFIX}-magic>=0.4<0.5:../../sysutils/py-magic
 DEPENDS+=	${PYPKGPREFIX}-hangups>=0.4.12<0.5:../../chat/py-hangups
 DEPENDS+=	${PYPKGPREFIX}-mautrix>=0.8.2:../../chat/py-mautrix
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
