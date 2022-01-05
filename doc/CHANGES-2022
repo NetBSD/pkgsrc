@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.91 2022/01/05 21:41:37 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.92 2022/01/05 21:42:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -105,3 +105,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-cssutils to 2.3.0 [wiz 2022-01-05]
 	Updated graphics/ImageMagick to 7.1.0.19 [wiz 2022-01-05]
 	Updated audio/chromaprint to 1.5.1 [wiz 2022-01-05]
+	Updated math/double-conversion to 3.1.7 [wiz 2022-01-05]
