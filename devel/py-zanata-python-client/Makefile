@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2022/01/04 20:53:49 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/01/05 20:03:35 wiz Exp $
 
 DISTNAME=	zanata-python-client-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zanata/}
 GITHUB_PROJECT=	zanata-python-client
@@ -16,8 +16,9 @@ LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
 DEPENDS+=	${PYPKGPREFIX}-httplib2-[0-9]*:../../www/py-httplib2
 DEPENDS+=	${PYPKGPREFIX}-polib-[0-9]*:../../devel/py-polib
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
-# Marked for 2.6 and 2.7 only
+# Marked for 2.7 only
 PYTHON_VERSIONS_ACCEPTED= 27
 USE_LANGUAGES=	# none
 
