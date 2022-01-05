@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2022/01/04 20:54:14 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2022/01/05 22:05:50 wiz Exp $
 
-DISTNAME=	munkres-1.0.12
+DISTNAME=	munkres-1.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
 #MASTER_SITES=	${MASTER_SITE_PYPI:=m/munkres/}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bmc/}
@@ -14,13 +13,15 @@ HOMEPAGE=	https://software.clapper.org/munkres/
 COMMENT=	Munkres algorithm for the Assignment Problem
 LICENSE=	apache-2.0
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 REPLACE_PYTHON=	munkres.py
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 do-test:
-	cd ${WRKSRC} && nosetests-${PYVERSSUFFIX}
+	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
