@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2020/05/22 20:27:13 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2022/01/05 10:09:53 wiz Exp $
 
 DISTNAME=	Django-1.4.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	https://www.djangoproject.com/m/releases/${PKGVERSION_NOREV:R}/
 
@@ -11,6 +12,7 @@ COMMENT=	Django, a high-level Python Web framework (LTS version)
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-flup-[0-9]*:../../www/py-flup
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 USE_LANGUAGES=		# none
 REPLACE_PYTHON=		django/bin/*.py
