@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:55:06 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/05 20:47:37 wiz Exp $
 
 DISTNAME=	Sphinx-1.8.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Sphinx/}
 
@@ -35,6 +35,8 @@ PYTHON_VERSIONED_DEPENDENCIES=	packaging pygments test:test
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	makeinfo
+
+USE_PKG_RESOURCES=	yes
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2022/01/04 20:54:35 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2022/01/05 20:47:36 wiz Exp $
 
 DISTNAME=	UPnP-Inspector-0.2.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	net
 #MASTER_SITES=	http://coherence.beebits.net/download/
 
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2
+
+USE_PKG_RESOURCES=	yes
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
