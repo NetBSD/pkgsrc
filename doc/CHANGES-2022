@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.79 2022/01/04 23:35:46 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.80 2022/01/05 01:14:38 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -93,3 +93,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added security/tlswrapper version 20220101 [schmonz 2022-01-04]
 	Updated www/httpfile to 20220101 [schmonz 2022-01-04]
 	Updated math/py-numexpr to 2.8.1 [wiz 2022-01-04]
+	Updated sysutils/xfce4-taskmanager to 1.5.2 [gutteridge 2022-01-05]
