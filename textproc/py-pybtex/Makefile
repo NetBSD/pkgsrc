@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2022/01/04 20:55:03 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2022/01/05 15:41:26 wiz Exp $
 
 DISTNAME=	pybtex-0.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pybtex/}
 
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.01:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

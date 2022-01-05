@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:55:02 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/05 15:41:25 wiz Exp $
 
 DISTNAME=	PTable-0.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PTable/}
 
@@ -12,6 +12,8 @@ COMMENT=	Simple Python library for easily displaying tabular data
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

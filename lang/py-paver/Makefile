@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:09 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/05 15:41:13 wiz Exp $
 
 DISTNAME=	Paver-1.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Paver/}
 
@@ -18,6 +18,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} paver paver-${PYVERSSUFFIX} || ${TRUE}

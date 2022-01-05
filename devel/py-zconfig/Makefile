@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2022/01/04 20:53:49 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2022/01/05 15:41:09 wiz Exp $
 
 DISTNAME=	ZConfig-3.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=Z/ZConfig/}
 
@@ -17,6 +17,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-zope.exceptions-[0-9]*:../../devel/py-zope.excepti
 TEST_DEPENDS+=	${PYPKGPREFIX}-ZopeTestrunner-[0-9]*:../../devel/py-ZopeTestrunner
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

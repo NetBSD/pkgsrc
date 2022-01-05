@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2022/01/04 20:52:39 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2022/01/05 15:40:58 wiz Exp $
 
 DISTNAME=	CairoSVG-2.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	converters graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/CairoSVG/}
 
@@ -25,6 +25,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:55:39 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/05 15:41:32 wiz Exp $
 
 DISTNAME=	tuir-1.29.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tuir/}
 
@@ -25,6 +25,7 @@ SUBST_FILES.man+=	setup.py
 SUBST_SED.man+=		-e "s,share/man/man1,${PKGMANDIR}/man1,g"
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+USE_PKG_RESOURCES=		yes
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

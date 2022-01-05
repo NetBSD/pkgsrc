@@ -1,9 +1,9 @@
-#	$NetBSD: Makefile,v 1.2 2022/01/04 20:54:17 wiz Exp $
+#	$NetBSD: Makefile,v 1.3 2022/01/05 15:41:14 wiz Exp $
 
 VERSION=	0.9.0
 DISTNAME=	PySMT-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-smt-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pysmt/}
 GITHUB_PROJECT=	pysmt
@@ -14,12 +14,14 @@ HOMEPAGE=	http://www.pysmt.org/
 COMMENT=	Library for SMT formula manipulation and solving
 LICENSE=	apache-2.0
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 DEPENDS+=	${PYPKGPREFIX}-six>=0:../../lang/py-six
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose>=0:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-z3>=0:../../math/py-z3
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 SUBST_CLASSES+=		python3
 SUBST_STAGE.python3=	pre-test

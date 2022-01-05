@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2022/01/04 20:54:14 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2022/01/05 15:41:14 wiz Exp $
 
 DISTNAME=	netCDF4-1.5.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/netCDF4/}
 
@@ -22,6 +22,8 @@ SUBST_FILES.paths+=	setup.py
 SUBST_MESSAGE.paths=	Fixing header search paths.
 
 PYTHON_VERSIONS_INCOMPATIBLE+=	27 # py-numpy
+
+USE_PKG_RESOURCES=	yes
 
 do-test:
 	cd ${WRKSRC}/test && ${SETENV} ${TEST_ENV} ${PYTHONBIN} run_all.py

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2022/01/04 20:54:05 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/01/05 15:41:11 wiz Exp $
 
 DISTNAME=	pyfits-3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyfits/}
 
@@ -13,6 +13,8 @@ LICENSE=	modified-bsd
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-d2to1>=0.2.12:../../devel/py-d2to1
 BUILD_DEPENDS+=	${PYPKGPREFIX}-stsci.distutils>=0.3:../../devel/py-stsci.distutils
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

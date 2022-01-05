@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 20:54:29 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/05 15:41:17 wiz Exp $
 
 DISTNAME=	magic-wormhole-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/magic-wormhole/}
 
@@ -10,8 +10,6 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/warner/magic-wormhole
 COMMENT=	Securely transfer data between computers
 LICENSE=	mit
-
-PYTHON_VERSIONS_INCOMPATIBLE=		27
 
 DEPENDS+=	${PYPKGPREFIX}-attrs>=16.3.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-autobahn>=0.14.1:../../www/py-autobahn
@@ -31,6 +29,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-magic-wormhole-transit-relay-[0-9]*:../../net/py-m
 TEST_DEPENDS+=	${PYPKGPREFIX}-magic-wormhole-mailbox-server-[0-9]*:../../net/py-magic-wormhole-mailbox-server
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=		27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

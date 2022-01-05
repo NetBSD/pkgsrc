@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.70 2022/01/04 20:53:11 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2022/01/05 15:41:04 wiz Exp $
 
 DISTNAME=	ipython-7.30.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipython/}
 
@@ -30,6 +30,8 @@ DEPENDS+=	${PYPKGPREFIX}-appnope-[0-9]*:../../sysutils/py-appnope
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX} && \

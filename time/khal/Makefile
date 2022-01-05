@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2022/01/04 20:55:10 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2022/01/05 15:41:28 wiz Exp $
 
 DISTNAME=	khal-0.10.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	time net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/khal/}
 
@@ -33,6 +33,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-vdirsyncer-[0-9]*:../../time/py-vdirsyncer
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # not supported as of 0.8.0
+
+USE_PKG_RESOURCES=	yes
 
 INSTALLATION_DIRS=	share/doc/khal ${PKGMANDIR}/man1
 REPLACE_PYTHON+=	khal/*/*.py

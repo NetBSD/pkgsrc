@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 20:55:00 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/05 15:41:25 wiz Exp $
 
 DISTNAME=	mkdocs-1.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mkdocs/}
 
@@ -18,6 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-tornado>=5.0:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
 
 PYTHON_VERSIONED_DEPENDENCIES+=	markdown
+
+USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
 

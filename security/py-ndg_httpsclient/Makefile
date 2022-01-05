@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 20:54:42 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/05 15:41:20 wiz Exp $
 
 DISTNAME=	ndg_httpsclient-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cedadev/}
 
@@ -16,6 +16,8 @@ GITHUB_TAG=	${PKGVERSION_NOREV}
 
 DEPENDS+=	${PYPKGPREFIX}-asn1>=0.1.4:../../security/py-asn1
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.13:../../security/py-OpenSSL
+
+USE_PKG_RESOURCES=	yes
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

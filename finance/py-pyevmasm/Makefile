@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:53:54 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/05 15:41:10 wiz Exp $
 
 DISTNAME=	pyevmasm-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=crytic/}
 GITHUB_PROJECT=	pyevmasm
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 

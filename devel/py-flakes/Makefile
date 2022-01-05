@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2022/01/04 20:53:05 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2022/01/05 15:41:04 wiz Exp $
 
 DISTNAME=	pyflakes-2.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyflakes/}
 
@@ -12,6 +12,8 @@ COMMENT=	Passive checker of Python programs
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

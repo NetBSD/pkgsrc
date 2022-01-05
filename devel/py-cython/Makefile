@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.75 2022/01/04 20:52:59 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2022/01/05 15:41:02 wiz Exp $
 
 DISTNAME=	Cython-0.29.26
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/Cython/}
 
@@ -15,6 +15,8 @@ REPLACE_PYTHON+=	Cython/Build/Cythonize.py
 REPLACE_PYTHON+=	Cython/Debugger/Cygdb.py
 REPLACE_PYTHON+=	Cython/Debugger/libpython.py
 REPLACE_PYTHON+=	cython.py
+
+USE_PKG_RESOURCES=	yes
 
 # for test only
 #USE_LANGUAGES=	c c++

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:40 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/05 15:41:08 wiz Exp $
 
 DISTNAME=	pytest-benchmark-3.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-benchmark/}
 
@@ -20,6 +20,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.8:../../devel/py-test
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-pygal
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 .for bin in py.test-benchmark pytest-benchmark

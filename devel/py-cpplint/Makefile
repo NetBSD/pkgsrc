@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2022/01/04 20:52:58 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/05 15:41:02 wiz Exp $
 
 DISTNAME=	cpplint-1.5.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cpplint/}
 
@@ -16,6 +16,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 #TEST_DEPENDS+=	${PYPKGPREFIX}-testfixtures-[0-9]*:../../devel/py-testfixtures
 
 PYTHON_VERSIONED_DEPENDENCIES=	pip:tool test:test zipp:test pyparsing:test
+
+USE_PKG_RESOURCES=	yes
 
 .include "../../lang/python/pyversion.mk"
 

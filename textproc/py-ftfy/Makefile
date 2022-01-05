@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2022/01/04 20:54:55 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2022/01/05 15:41:24 wiz Exp $
 
 DISTNAME=	ftfy-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	python textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/ftfy/}
 
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 DEPENDS+=	${PYPKGPREFIX}-wcwidth-[0-9]*:../../devel/py-wcwidth
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/ftfy \

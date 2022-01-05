@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2022/01/04 20:53:18 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/05 15:41:06 wiz Exp $
 
 DISTNAME=	nose2-0.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nose2/}
 
@@ -19,6 +19,8 @@ DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 .endif
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/bin/nose2

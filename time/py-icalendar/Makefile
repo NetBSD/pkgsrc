@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2022/01/04 20:55:11 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2022/01/05 15:41:28 wiz Exp $
 
 DISTNAME=	icalendar-4.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/icalendar/}
 
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2022/01/04 20:52:36 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2022/01/05 15:40:57 wiz Exp $
 
 DISTNAME=	matrix-synapse-1.48.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
 EGG_NAME=	matrix_synapse-${PKGVERSION_NOREV}
@@ -44,6 +44,8 @@ DEPENDS+=	${PYPKGPREFIX}-psycopg2>=2.7:../../databases/py-psycopg2
 DEPENDS+=	${PYPKGPREFIX}-lxml>=3.5.0:../../textproc/py-lxml
 
 PYTHON_VERSIONED_DEPENDENCIES=	Pillow
+
+USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	perl:run

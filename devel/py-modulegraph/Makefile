@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2022/01/04 20:53:17 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2022/01/05 15:41:06 wiz Exp $
 
 DISTNAME=	modulegraph-0.19.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/modulegraph/}
 
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-altgraph>=0.15:../../graphics/py-altgraph
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:54:07 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/05 15:41:12 wiz Exp $
 
 DISTNAME=	scour-0.38.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scour/}
 
@@ -12,6 +12,8 @@ COMMENT=	Scour SVG Optimizer
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-six>=1.15.0:../../lang/py-six
+
+USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
 

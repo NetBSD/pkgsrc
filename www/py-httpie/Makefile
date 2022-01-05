@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2022/01/04 20:55:30 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/01/05 15:41:30 wiz Exp $
 
 DISTNAME=	httpie-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httpie/}
 
@@ -24,6 +24,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-httpbin-[0-9]*:../../www/py-test-httpbin
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 .for bin in http https

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:53:51 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/05 15:41:09 wiz Exp $
 
 DISTNAME=	gns3-gui-2.2.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gns3-gui/}
 
@@ -10,13 +10,15 @@ HOMEPAGE=	https://github.com/GNS3/gns3-gui
 COMMENT=	GNS3 network simulator - Graphical user interface package
 LICENSE=	gnu-gpl-v3
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 DEPENDS+=	${PYPKGPREFIX}-distro>=1.3.0:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-psutil>=2.2.1:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=2.6.0:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-raven>=5.23.0:../../www/py-raven
 DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 # we have newer jsonschema and it seems fine
 SUBST_CLASSES+=		inst

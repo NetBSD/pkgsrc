@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:55:00 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/05 15:41:25 wiz Exp $
 
 DISTNAME=	nltk-3.6.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nltk/}
 EXTRACT_SUFX=	.zip
@@ -55,6 +55,8 @@ TEST_DEPENDS+=	nltk_data-words-[0-9]*:../../textproc/nltk_data-words
 REPLACE_PYTHON=		nltk/corpus/reader/knbc.py
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

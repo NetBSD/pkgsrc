@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:55:04 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/05 15:41:26 wiz Exp $
 
 DISTNAME=	pysrt-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysrt/}
 
@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

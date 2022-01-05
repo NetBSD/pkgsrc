@@ -1,10 +1,10 @@
-#	$NetBSD: Makefile,v 1.4 2022/01/04 20:54:45 wiz Exp $
+#	$NetBSD: Makefile,v 1.5 2022/01/05 15:41:20 wiz Exp $
 
 .include "../../security/ykman/version.mk"
 
 DISTNAME=	yubikey-manager-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Yubico/}
 GITHUB_PROJECT=	yubikey-manager
@@ -24,6 +24,8 @@ DEPENDS+=	${PYPKGPREFIX}-six>=0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-usb>=0:../../devel/py-usb
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-usb
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

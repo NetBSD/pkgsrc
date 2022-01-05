@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2022/01/04 20:53:44 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2022/01/05 15:41:08 wiz Exp $
 
 DISTNAME=	tox-3.20.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tox/}
 
@@ -34,6 +34,8 @@ DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=0.12:../../devel/py-importlib-metad
 
 PYTHON_VERSIONED_DEPENDENCIES+=	packaging
 PYTHON_VERSIONED_DEPENDENCIES+=	test:test
+
+USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
 

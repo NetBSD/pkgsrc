@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2022/01/04 20:55:34 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/01/05 15:41:30 wiz Exp $
 
 DISTNAME=	raven-6.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/raven/}
 
@@ -43,6 +43,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-zconfig-[0-9]*:../../devel/py-zconfig
 
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
+
+USE_PKG_RESOURCES=	yes
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYPKGPREFIX} == py27

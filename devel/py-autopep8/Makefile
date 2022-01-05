@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2022/01/04 20:52:51 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2022/01/05 15:41:01 wiz Exp $
 
 DISTNAME=	autopep8-1.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/autopep8/}
 
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-codestyle>=2.8.0:../../devel/py-codestyle
 DEPENDS+=	${PYPKGPREFIX}-toml-[0-9]*:../../textproc/py-toml
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

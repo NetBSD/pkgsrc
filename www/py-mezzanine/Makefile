@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2022/01/04 20:55:31 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/01/05 15:41:30 wiz Exp $
 
 DISTNAME=	Mezzanine-4.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/Mezzanine/}
 
@@ -29,6 +29,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pep8>=1.4.1:../../devel/py-pep8
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-django-contrib-comments
+
+USE_PKG_RESOURCES=	yes
 
 REPLACE_PYTHON=	mezzanine/project_template/manage.py
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/01/04 20:55:10 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/05 15:41:27 wiz Exp $
 
 DISTNAME=	subliminal-2.1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/subliminal/}
 
@@ -28,6 +28,8 @@ DEPENDS+=	${PYPKGPREFIX}-stevedore>=1.20.0:../../devel/py-stevedore
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-dogpile-cache, py-stevedore
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

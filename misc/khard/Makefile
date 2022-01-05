@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2022/01/04 20:54:18 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2022/01/05 15:41:15 wiz Exp $
 
 DISTNAME=	khard-0.17.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/khard/}
 
@@ -21,6 +21,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-autoapi-[0-9]*:../../textproc/py-sphinx-aut
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-autodoc-typehints>=1.10:../../textproc/py-sphinx-autodoc-typehints
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # does not support python-2.x any longer
+
+USE_PKG_RESOURCES=	yes
 
 INSTALLATION_DIRS=	share/examples/khard ${PKGMANDIR}/man1
 REPLACE_PYTHON+=	*/*.py

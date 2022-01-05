@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.116 2022/01/05 10:09:53 wiz Exp $
+# $NetBSD: Makefile,v 1.117 2022/01/05 15:41:29 wiz Exp $
 
 DISTNAME=	Django-1.11.29
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www python
 MASTER_SITES=	https://www.djangoproject.com/m/releases/${PKGVERSION_NOREV:R}/
 
@@ -18,6 +18,8 @@ USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	django/bin/django-admin.py
 REPLACE_PYTHON+=	django/conf/project_template/manage.py-tpl
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

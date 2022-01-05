@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2022/01/04 20:52:37 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/01/05 15:40:58 wiz Exp $
 
 DISTNAME=	hangups-0.4.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hangups/}
 
@@ -23,6 +23,8 @@ DEPENDS+=	${PYPKGPREFIX}-requests>=2.6.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-urwid>=1.3.1:../../devel/py-urwid
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

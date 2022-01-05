@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2022/01/04 20:55:32 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/01/05 15:41:30 wiz Exp $
 
 DISTNAME=		pelican-4.5.0
 GITHUB_PROJECT=		pelican
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		www textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=getpelican/}
 
@@ -26,6 +26,8 @@ DEPENDS+=		${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 # Starting version 4.5.0, Pelican removed support for Python 2.7
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_VERSIONED_DEPENDENCIES=	sphinx:build
+
+USE_PKG_RESOURCES=	yes
 
 USE_TOOLS+=		make:build sed:build
 

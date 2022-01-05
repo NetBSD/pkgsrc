@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2022/01/04 20:54:17 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2022/01/05 15:41:14 wiz Exp $
 
 DISTNAME=	sympy-1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sympy/}
 
@@ -18,6 +18,8 @@ USE_LANGUAGES=	# none
 REPLACE_PYTHON+=	sympy/utilities/tests/diagnose_imports.py
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 SUBST_CLASSES+=		manpath
 SUBST_SED.manpath=	-e 's,share/man,${PKGMANDIR},'

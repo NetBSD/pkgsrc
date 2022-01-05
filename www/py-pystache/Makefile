@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:55:33 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/05 15:41:30 wiz Exp $
 
 DISTNAME=	pystache-0.5.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pystache/}
 
@@ -12,6 +12,8 @@ COMMENT=	Mustache for Python
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 post-extract:
 	cd ${WRKSRC} && 2to3-${PYVERSSUFFIX} -w --no-diffs pystache

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2022/01/04 20:54:50 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2022/01/05 15:41:23 wiz Exp $
 
 DISTNAME=	salt-3004
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/salt/}
 
@@ -21,6 +21,8 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-zmq>=19.0.2:../../net/py-zmq
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 BUILD_DEFS+=	VARBASE
 

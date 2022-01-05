@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 20:54:11 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/05 15:41:13 wiz Exp $
 
 DISTNAME=	email_validator-1.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/email-validator/}
 
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-dns>=1.15.0:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.0.0:../../www/py-idna
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

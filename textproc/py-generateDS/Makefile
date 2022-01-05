@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2022/01/04 20:54:55 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/05 15:41:24 wiz Exp $
 
 DISTNAME=	generateDS-2.28b0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/0$//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/generateDS/}
 
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
+
+USE_PKG_RESOURCES=	yes
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

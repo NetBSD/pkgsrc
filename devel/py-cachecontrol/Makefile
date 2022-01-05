@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:52:54 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/05 15:41:02 wiz Exp $
 
 DISTNAME=	CacheControl-0.12.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/CacheControl/}
 
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-requests>=0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.5.2:../../devel/py-msgpack
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

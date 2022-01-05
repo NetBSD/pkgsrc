@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2022/01/04 20:55:08 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2022/01/05 15:41:27 wiz Exp $
 
 DISTNAME=	textile-3.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/textile/}
 
@@ -17,6 +17,8 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2022/01/04 20:53:35 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/01/05 15:41:07 wiz Exp $
 
 DISTNAME=	radon-4.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/radon/}
 
@@ -19,6 +19,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
+
+USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
 

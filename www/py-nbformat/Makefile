@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2022/01/04 20:55:32 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/01/05 15:41:30 wiz Exp $
 
 DISTNAME=	nbformat-5.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nbformat/}
 
@@ -22,6 +22,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-testpath-[0-9]*:../../devel/py-testpath
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && mv jupyter-trust jupyter-trust-${PYVERSSUFFIX} || ${TRUE}

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2022/01/04 20:54:10 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2022/01/05 15:41:13 wiz Exp $
 
 DISTNAME=	uncompyle6-3.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uncompyle6/}
 
@@ -18,6 +18,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-xdis
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

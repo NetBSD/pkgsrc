@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.83 2022/01/04 20:54:24 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2022/01/05 15:41:16 wiz Exp $
 
 DISTNAME=	gallery_dl-1.18.4
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gallery-dl/}
 
@@ -25,6 +25,8 @@ USE_LANGUAGES=			# none
 
 # Only for Python 3
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2022/01/04 20:55:29 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2022/01/05 15:41:29 wiz Exp $
 
 DISTNAME=	gunicorn-20.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gunicorn/}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,6 +21,8 @@ USE_LANGUAGES=	# none
 PYSETUPTESTTARGET=	pytest
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2022/01/04 20:54:44 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/01/05 15:41:20 wiz Exp $
 
 DISTNAME=	rsa-4.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rsa/}
 
@@ -14,6 +14,8 @@ LICENSE=	apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-asn1>=0.1.3:../../security/py-asn1
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2022/01/04 20:54:07 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2022/01/05 15:41:12 wiz Exp $
 
 DISTNAME=	qrcode-6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=q/qrcode/}
 
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 PYTHON_VERSIONED_DEPENDENCIES=	Pillow
+
+USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
 

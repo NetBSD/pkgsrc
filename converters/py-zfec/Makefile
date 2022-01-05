@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2022/01/04 20:52:40 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2022/01/05 15:40:59 wiz Exp $
 
 DISTNAME=	zfec-1.5.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zfec/}
 
@@ -24,6 +24,8 @@ DEPENDS+=	${PYPKGPREFIX}-argparse>=0.8:../../devel/py-argparse
 REPLACE_PYTHON+=	zfec/cmdline_zfec.py
 REPLACE_PYTHON+=	zfec/cmdline_zunfec.py
 REPLACE_PYTHON+=	zfec/test/test_zfec.py
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 .for bin in zfec zunfec
