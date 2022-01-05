@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:06:49 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/01/05 09:12:55 wiz Exp $
 
 BLAKE2s (arabic_reshaper-2.1.3.tar.gz) = 2e678f8db19a4523f304bf0a4de04f530924d55daeb173843fa6709a33fa1841
 SHA512 (arabic_reshaper-2.1.3.tar.gz) = c0236fd481aeef56d2f56f2ddb642a71c011d7c34cd66002346d47dc9f73595934f26f375d67bfc62b48cabda911aafb2b86abc05f417ddb0d33874af2eca2da
 Size (arabic_reshaper-2.1.3.tar.gz) = 24460 bytes
-SHA1 (patch-setup.py) = 5f02d203fec48318bc6527c3747b62515c886032
+SHA1 (patch-setup.py) = b08faed80de6a75748c8139873a95fcfea3e5434
