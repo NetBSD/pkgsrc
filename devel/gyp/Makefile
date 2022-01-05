@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2022/01/04 20:52:46 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2022/01/05 20:47:35 wiz Exp $
 
 GIT_VERSION=	20200512.caa60026e223fc501e8b337fd5086ece4028b1c6
 DIST_VERSION=	0.1
 DISTNAME=	gyp-${DIST_VERSION}pre${GIT_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.xz
@@ -15,6 +15,8 @@ COMMENT=	GYP can Generate Your Projects
 LICENSE=	modified-bsd
 
 EGG_NAME=	gyp-${DIST_VERSION}
+
+USE_PKG_RESOURCES=	yes
 
 # REPLACE_PYTHON settings farmed out due to size...
 .include "Makefile.replace-python"

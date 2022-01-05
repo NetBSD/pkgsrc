@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:53:00 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/05 20:47:35 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 
 USE_LANGUAGES=	c99 c++
 USE_CMAKE=	yes
@@ -14,6 +14,8 @@ DEPENDS+=	deepstate-afl>=${VERSION}:../../devel/deepstate-afl
 DEPENDS+=	deepstate-libfuzzer>=${VERSION}:../../devel/deepstate-libfuzzer
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	${WRKSRC}

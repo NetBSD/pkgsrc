@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:27 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/05 20:47:36 wiz Exp $
 
 DISTNAME=	flower-0.9.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flower/}
 
@@ -25,6 +25,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
