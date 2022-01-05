@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2022/01/04 20:52:41 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/01/05 20:07:10 wiz Exp $
 
 DISTNAME=	CouchDB-0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/CouchDB/}
 
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.0.9:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.5.0:../../www/py-httplib2
 
 PYTHON_VERSIONS_ACCEPTED=	27
+
+USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
 

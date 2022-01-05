@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2022/01/04 20:55:36 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/01/05 20:07:11 wiz Exp $
 
 DISTNAME=	twill-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	python www
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/twill/}
 
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-cssselect-[0-9]*:../../textproc/py-cssselect
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_ACCEPTED=	27 # setup fails for 1.8.0
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/twill-fork \
