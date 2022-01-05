@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2022/01/05 15:41:29 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2022/01/05 15:51:59 wiz Exp $
 
 DISTNAME=	Django-1.11.29
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,7 +11,6 @@ HOMEPAGE=	https://www.djangoproject.com/
 COMMENT=	Django, a high-level Python Web framework
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 
 USE_LANGUAGES=	# none
