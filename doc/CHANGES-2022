@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.97 2022/01/05 22:20:45 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.98 2022/01/05 22:23:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -111,3 +111,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/restish to 0.9.2 [wiz 2022-01-05]
 	Updated math/py-munkres to 1.1.4 [wiz 2022-01-05]
 	Added devel/py-test-mypy version 0.8.1 [wiz 2022-01-05]
+	Updated devel/py-utils to 3.0.0 [wiz 2022-01-05]
