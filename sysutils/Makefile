@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.979 2021/12/31 17:29:03 plunky Exp $
+# $NetBSD: Makefile,v 1.980 2022/01/05 10:56:29 schmonz Exp $
 #
 
 COMMENT=	System utilities
@@ -641,6 +641,7 @@ SUBDIR+=	shelldap
 SUBDIR+=	shmux
 SUBDIR+=	skill
 SUBDIR+=	slay
+SUBDIR+=	sleepwatcher
 SUBDIR+=	slocate
 SUBDIR+=	smartmontools
 SUBDIR+=	smbldap-tools
