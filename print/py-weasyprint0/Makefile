@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2022/01/04 20:54:36 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2022/01/05 20:47:36 wiz Exp $
 
 DISTNAME=	WeasyPrint-0.42.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/WeasyPrint/}
 
@@ -26,6 +26,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-isort-[0-9]*:../../devel/py-test-isort
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 PYTHON_VERSIONS_ACCEPTED=	27
+
+USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
 

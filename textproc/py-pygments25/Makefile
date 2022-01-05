@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:55:03 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/05 20:47:37 wiz Exp $
 
 DISTNAME=	Pygments-2.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pygments/}
 
@@ -16,6 +16,8 @@ LICENSE=	2-clause-bsd
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test4
 
 PYTHON_VERSIONS_ACCEPTED=	27
+
+USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
 
