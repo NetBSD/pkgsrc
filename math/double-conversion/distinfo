@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/12/07 18:11:02 wiz Exp $
+$NetBSD: distinfo,v 1.5 2022/01/05 21:42:41 wiz Exp $
 
-BLAKE2s (double-conversion-3.1.6.tar.gz) = e730faed4d110c76c8574c2bfb02100a77937931c2007dc9e3f2f789a40dc66a
-SHA512 (double-conversion-3.1.6.tar.gz) = 2282e9838f916a0e59011e1b7530c32fb392e9bf07f370df419f1a8c59c88d66f7e16fa6ecdc3785af86591639d1201144feb0c60a5de54482da936f6c0c5534
-Size (double-conversion-3.1.6.tar.gz) = 7030812 bytes
+BLAKE2s (double-conversion-3.1.7.tar.gz) = 633c7e2c4f7a0a02d5c2ea69c2e24cc33d883ac78fbe3ce9a0e6bd44308f66df
+SHA512 (double-conversion-3.1.7.tar.gz) = 70baa0f8d5bbab433f6a3f3b6e172730f10cde5524639c7da8cb205bf95e6743a4b129b69ef09d8f121524e3d5a45d501a393e4f69f6848494e7ce87db765f37
+Size (double-conversion-3.1.7.tar.gz) = 7031619 bytes
