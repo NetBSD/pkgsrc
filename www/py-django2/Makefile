@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2022/01/04 20:55:22 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2022/01/05 10:09:53 wiz Exp $
 
 DISTNAME=	Django-2.2.25
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	https://www.djangoproject.com/m/releases/${PKGVERSION_NOREV:R}/
 MASTER_SITES+=	${MASTER_SITE_PYPI:=D/Django/}
@@ -13,6 +13,7 @@ COMMENT=	Django, a high-level Python Web framework
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
