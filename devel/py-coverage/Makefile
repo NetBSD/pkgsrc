@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2022/01/04 20:52:58 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2022/01/05 15:41:02 wiz Exp $
 
 DISTNAME=	coverage-5.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/coverage/}
 
@@ -20,6 +20,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.34.0:../../devel/py-test-xdist
 TEST_DEPENDS+=	${PYPKGPREFIX}-unittest-mixins>=1.6:../../devel/py-unittest-mixins
 
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
+
+USE_PKG_RESOURCES=	yes
 
 PYSETUPTESTTARGET=	pytest
 

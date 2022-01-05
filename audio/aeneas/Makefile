@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2022/01/04 20:52:32 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/01/05 15:40:57 wiz Exp $
 
 DISTNAME=	aeneas-1.7.3
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=readbeyond/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -18,6 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
 MAKE_ENV+=	AENEAS_FORCE_CEW=True
 EGG_NAME=	${DISTNAME}.0
+
+USE_PKG_RESOURCES=	yes
 
 .include "../../lang/python/egg.mk"
 .include "../../audio/espeak/buildlink3.mk"

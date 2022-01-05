@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2022/01/04 20:54:50 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/01/05 15:41:23 wiz Exp $
 
 DISTNAME=	csvkit-0.9.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wireservice/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -23,6 +23,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=3.5.1:../../devel/py-coverage
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-aenum via py-dbf
+
+USE_PKG_RESOURCES=	yes
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

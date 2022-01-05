@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2022/01/04 20:54:38 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2022/01/05 15:41:19 wiz Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../security/py-certbot/Makefile.common"
 
 DISTNAME=	certbot-${CERTBOT_VERSION}
@@ -43,6 +43,8 @@ SUBST_SED.path+=	-e 's,/var/log/letsencrypt,${VARBASE}/letsencrypt/log,g'
 MAKE_DIRS+=		${VARBASE}/letsencrypt/log
 
 INSTALLATION_DIRS+=	share/examples/certbot-${PYVERSSUFFIX}
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

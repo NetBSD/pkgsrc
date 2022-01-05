@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2022/01/04 20:53:16 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2022/01/05 15:41:06 wiz Exp $
 
 .include "../../devel/py-angr/version.mk"
 
 DISTNAME=	manticore-${GITHUB_TAG}
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=trailofbits/}
 GITHUB_PROJECT=	manticore
@@ -30,6 +30,8 @@ DEPENDS+=	${PYPKGPREFIX}-wasm-[0-9]*:../../devel/py-wasm
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 .for alternative in bin/manticore bin/manticore-verifier

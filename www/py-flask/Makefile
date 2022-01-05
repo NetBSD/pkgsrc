@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2022/01/04 20:55:25 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2022/01/05 15:41:29 wiz Exp $
 
 DISTNAME=	Flask-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask/}
 
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.10.1:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-werkzeug>=0.15:../../www/py-werkzeug
 
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
+
+USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
 

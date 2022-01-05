@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2022/01/04 20:54:16 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/01/05 15:41:14 wiz Exp $
 
 DISTNAME=	scikit-image-0.18.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-image/}
 
@@ -25,6 +25,8 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 USE_LANGUAGES=	c c++
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-tifffile
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

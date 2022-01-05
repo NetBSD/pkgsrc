@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:53:13 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/05 15:41:05 wiz Exp $
 
 DISTNAME=	jupyter_console-6.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_console/}
 
@@ -20,6 +20,8 @@ DEPENDS+=	${PYPKGPREFIX}-pygments>=2.3.1:../../textproc/py-pygments
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-ipykernel
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

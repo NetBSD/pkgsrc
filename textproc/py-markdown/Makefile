@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2022/01/04 20:54:59 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2022/01/05 15:41:25 wiz Exp $
 
 DISTNAME=	Markdown-3.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/Markdown/}
 
@@ -13,8 +13,9 @@ LICENSE=	modified-bsd
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
-PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
 
@@ -23,5 +24,4 @@ post-install:
 	${MV} markdown_py markdown_py${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

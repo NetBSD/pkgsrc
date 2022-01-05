@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2022/01/04 20:55:13 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/01/05 15:41:28 wiz Exp $
 
 DISTNAME=	tempora-1.14.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tempora/}
 
@@ -22,6 +22,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar>=0.9.1:../../devel/py-test-sugar
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} calc-prorate calc-prorate${PYVERSSUFFIX} || ${TRUE}

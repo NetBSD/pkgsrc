@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:55:01 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/05 15:41:25 wiz Exp $
 
 DISTNAME=	openapi-spec-validator-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/openapi-spec-validator/}
 
@@ -20,6 +20,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 

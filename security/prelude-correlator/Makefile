@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2022/01/04 20:54:36 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2022/01/05 15:41:19 wiz Exp $
 
 DISTNAME=	prelude-correlator-0.9.0-beta8
 PKGNAME=	prelude-correlator-${DISTNAME:S/-beta/beta/:C/.*-//}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	security
 MASTER_SITES=	http://www.prelude-ids.com/download/releases/prelude-correlator/
 
@@ -52,6 +52,8 @@ REQD_DIRS_PERMS+=	${PRELUDE_HOME} ${PRELUDE_USER} ${PRELUDE_GROUP} 0700
 REPLACE_PYTHON=		PreludeCorrelator/main.py
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.9.0beta8
 EGG_NAME=		prelude_correlator-0.9.0b8
+
+USE_PKG_RESOURCES=	yes
 
 pre-patch:
 	${CP} ${FILESDIR}/run-prelude-correlator.c ${WRKSRC}

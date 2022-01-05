@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2022/01/04 20:54:46 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/01/05 15:41:21 wiz Exp $
 
 DISTNAME=	ansible-base-2.10.16
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-base/}
 
@@ -18,6 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 PYTHON_VERSIONED_DEPENDENCIES+=	packaging
+
+USE_PKG_RESOURCES=	yes
 
 USE_TOOLS+=	gmake
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:46 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/05 15:41:21 wiz Exp $
 
 DISTNAME=	ansible-lint-5.0.12
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-lint/}
 
@@ -22,6 +22,8 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-rich
+
+USE_PKG_RESOURCES=	yes
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} < 38

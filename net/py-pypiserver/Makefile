@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2022/01/04 20:54:31 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/05 15:41:17 wiz Exp $
 
 DISTNAME=	pypiserver-1.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypiserver/}
 EXTRACT_SUFX=	.zip
@@ -26,6 +26,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 .endif
 
 PYTHON_VERSIONED_DEPENDENCIES=	pip:test test:test
+
+USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:54:56 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/05 15:41:24 wiz Exp $
 
 DISTNAME=	pyjade-4.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyjade/}
 
@@ -14,6 +14,8 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} pyjade pyjade${PYVERSSUFFIX} || ${TRUE}

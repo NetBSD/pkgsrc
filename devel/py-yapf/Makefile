@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:53:49 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/05 15:41:09 wiz Exp $
 
 DISTNAME=	yapf-0.32.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yapf/}
 
@@ -12,6 +12,8 @@ COMMENT=	Python files formatter
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	# none
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 .for bin in yapf yapf-diff
