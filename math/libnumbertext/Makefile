@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2021/02/18 10:20:30 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/05 21:44:53 wiz Exp $
 
-DISTNAME=	libnumbertext-1.0.7
+DISTNAME=	libnumbertext-1.0.8
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Numbertext/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
