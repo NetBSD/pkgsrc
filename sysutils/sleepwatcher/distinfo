@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2022/01/05 10:56:00 schmonz Exp $
+
+BLAKE2s (sleepwatcher_2.2.1.tgz) = e795e940b4cd190c12470213a0120aefc5bd57fe197596f8f70567fdb030e86c
+SHA512 (sleepwatcher_2.2.1.tgz) = 3f041f9259c31d11222166069ef53d6a6c13261635c1a47ea4dc2f105564f27d6c471379149f93097b52b0e051a4927ee19a957ba47d5501057e08c1a32c5375
+Size (sleepwatcher_2.2.1.tgz) = 42659 bytes
+SHA1 (patch-sources_Makefile) = 42ba11cbaeeb12d6a004c693c577ddba8a16e96f

@@ -1,0 +1,39 @@
+$NetBSD: patch-sources_Makefile,v 1.1 2022/01/05 10:56:00 schmonz Exp $
+
+Build for the host architecture only. Support DESTDIR and PREFIX.
+
+--- sources/Makefile.orig	2018-12-26 09:31:52.000000000 +0000
++++ sources/Makefile
+@@ -18,14 +18,11 @@ CFLAGS_I386= -O3 -prebind -mmacosx-versi
+ CFLAGS_X86_64= -O3 -prebind -mmacosx-version-min=10.4 -arch x86_64 
+ LIBS= -framework IOKit -framework CoreFoundation
+ 
+-BINDIR=/usr/local/sbin
+-MANDIR=/usr/local/man
++BINDIR=$(PREFIX)/sbin
++MANDIR=$(PREFIX)/$(PKGMANDIR)
+ 
+ sleepwatcher: sleepwatcher.c
+-	$(CC) $(CFLAGS_I386) -o sleepwatcher.i386 sleepwatcher.c $(LIBS)
+-	$(CC) $(CFLAGS_X86_64) -o sleepwatcher.x86_64 sleepwatcher.c $(LIBS)
+-	lipo -create sleepwatcher.i386 sleepwatcher.x86_64 -output sleepwatcher
+-	rm sleepwatcher.i386 sleepwatcher.x86_64
++	$(CC) $(CFLAGS) -o sleepwatcher sleepwatcher.c $(LIBS)
+ 
+ fat: sleepwatcher sleepwatcher.ppc
+ 	lipo -create sleepwatcher sleepwatcher.ppc -output sleepwatcher.fat
+@@ -36,10 +33,10 @@ sleepwatcher.ppc: sleepwatcher.c
+ 	$(CC) $(CFLAGS_PPC) -o sleepwatcher.ppc sleepwatcher.c $(LIBS)
+ 
+ install: sleepwatcher sleepwatcher.8
+-	mkdir -p $(BINDIR)
+-	install -o root -g wheel -m 755 sleepwatcher $(BINDIR)
+-	mkdir -p $(MANDIR)/man8
+-	install -o root -g wheel -m 644 sleepwatcher.8 $(MANDIR)/man8
++	mkdir -p $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_PROGRAM) sleepwatcher $(DESTDIR)$(BINDIR)
++	mkdir -p $(DESTDIR)$(MANDIR)/man8
++	$(BSD_INSTALL_MAN) sleepwatcher.8 $(DESTDIR)$(MANDIR)/man8
+ 
+ clean:
+ 	rm -f sleepwatcher
