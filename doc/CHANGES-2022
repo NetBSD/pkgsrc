@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.87 2022/01/05 15:45:18 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.88 2022/01/05 20:50:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -101,3 +101,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/nacl to 20110221nb3 [schmonz 2022-01-05]
 	Updated mail/qremote to 20131231nb2 [buildbox 2022-01-05]
 	Updated devel/apenwarr-redo to 0.42d [schmonz 2022-01-05]
+	Updated shells/bash to 5.1.16 [wiz 2022-01-05]
