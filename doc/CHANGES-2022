@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.83 2022/01/05 10:05:14 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.84 2022/01/05 10:56:44 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -97,3 +97,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/py-tables to 3.7.0 [wiz 2022-01-05]
 	Updated games/warzone2100 to 4.2.4 [triaxx 2022-01-05]
 	Added chat/swirc version 3.3.3 [fcambus 2022-01-05]
+	Added sysutils/sleepwatcher version 2.2.1 [schmonz 2022-01-05]
