@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:22:59 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/01/05 10:01:08 wiz Exp $
 
 BLAKE2s (python-Levenshtein-0.12.2.tar.gz) = 2b751dc3868485f7da0381fec35034cd90f6539e62b791f8e5f34db5d82467c2
 SHA512 (python-Levenshtein-0.12.2.tar.gz) = 97eac9d19121758af7620ad3963846e48434ceabb5376a83f28452015adf1a620620bfb53edb1c4f60b0fc8ec2b0faf35a105d7e2a0fc5df7a45fce81ba0dcdb
 Size (python-Levenshtein-0.12.2.tar.gz) = 50502 bytes
+SHA1 (patch-setup.py) = fff48e1126818a7ceb94826ec79c298ec1be61f6

@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2021/01/20 09:09:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/01/05 10:01:08 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/Levenshtein/StringMatcher.py
 ${PYSITELIB}/Levenshtein/StringMatcher.pyc
