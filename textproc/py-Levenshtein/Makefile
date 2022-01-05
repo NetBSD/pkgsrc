@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:54:51 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/05 10:01:08 wiz Exp $
 
 DISTNAME=	python-Levenshtein-0.12.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ztane/python-Levenshtein
 COMMENT=	Python extension for computing string edit distances
 LICENSE=	gnu-gpl-v2
-
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
