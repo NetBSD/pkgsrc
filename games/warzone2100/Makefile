@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2021/12/17 08:57:22 triaxx Exp $
+# $NetBSD: Makefile,v 1.57 2022/01/05 08:50:28 triaxx Exp $
 
 DISTNAME=	warzone2100_src
-PKGNAME=	warzone2100-4.2.3
+PKGNAME=	warzone2100-4.2.4
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Warzone2100/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
