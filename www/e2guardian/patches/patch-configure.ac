@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2022/01/05 15:53:41 sborrill Exp $
+
+Don't expand AM_INIT_AUTOMAKE multiple times.
+
+https://github.com/e2guardian/e2guardian/pull/705
+-- configure.ac.orig	2022-01-05 15:31:32.533021485 +0000
++++ configure.ac	2022-01-05 15:31:52.340711618 +0000
+@@ -6,7 +6,6 @@
+ 
+ AC_PREREQ(2.57)
+ AC_INIT(e2guardian, 5.1.1)
+-AM_INIT_AUTOMAKE
+ AC_CONFIG_HEADERS([dgconfig.h])
+ AC_CONFIG_MACRO_DIR([m4])
+ AM_INIT_AUTOMAKE([subdir-objects])

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:29:25 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/01/05 15:53:41 sborrill Exp $
 
 BLAKE2s (e2guardian-5.1.1.tar.gz) = 59b0d34047e6d604a9e1633e4f067137763a8351c3fc31547456f7bc3575b8cf
 SHA512 (e2guardian-5.1.1.tar.gz) = a678c6d5b5672e40985cfbb9c718b61a7aee0f67092db6e20706cc525ad58c5b87d296575987a0c3e8ec4fd61b802cfa9d9f8b8d0b3a46cdee0f1f637c9bac37
 Size (e2guardian-5.1.1.tar.gz) = 850980 bytes
+SHA1 (patch-configure.ac) = 56c44fa90fbe79f9d531f4aebcbd3709cab1e01e
