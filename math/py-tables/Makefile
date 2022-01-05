@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2022/01/04 20:54:17 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/05 07:05:39 wiz Exp $
 
-DISTNAME=	tables-3.6.1
+DISTNAME=	tables-3.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tables/}
 
@@ -16,10 +15,8 @@ PYSETUPBUILDARGS+=	--bzip2=${BUILDLINK_PREFIX.bzip2}
 PYSETUPBUILDARGS+=	--hdf5=${BUILDLINK_PREFIX.hdf5}
 PYSETUPBUILDARGS+=	--lzo=${BUILDLINK_PREFIX.lzo}
 
-DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-numexpr>=2.6.2:../../math/py-numexpr
-DEPENDS+=	${PYPKGPREFIX}-mock>=2.0:../../devel/py-mock
-DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 
 USE_LANGUAGES=	c c++
 
@@ -32,8 +29,11 @@ post-install:
 	${MV} ptrepack ptrepack-${PYVERSSUFFIX} && \
 	${MV} pttree pttree-${PYVERSSUFFIX} || ${TRUE}
 
+# needs to be installed first
+# as of 3.7.0:
+# FAILED (errors=2, skipped=55)
 do-test:
-	cd ${WRKSRC}/tables/tests && ${PYTHONBIN} test_all.py
+	${PYTHONBIN} -m tables.tests.test_all
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/lzo/buildlink3.mk"
