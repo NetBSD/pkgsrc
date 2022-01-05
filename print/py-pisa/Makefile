@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2022/01/04 20:54:36 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2022/01/05 20:07:10 wiz Exp $
 
 DISTNAME=	pisa-3.0.33
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	print textproc www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pisa/}
 
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-reportlab>=2.2:../../print/py27-reportlab
 DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not ported as of 3.0.33
+
+USE_PKG_RESOURCES=	yes
 
 # remove CRs: fixes patching on Darwin and stops pkglint from complaining
 pre-patch:
