@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:56:02 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/01/05 22:05:50 wiz Exp $
 
-BLAKE2s (munkres-1.0.12.tar.gz) = e19f0bc1f9f4fe5d7a89e58a67a0ffdf1ab1e9b9265bc27e9fcdd70189b08414
-SHA512 (munkres-1.0.12.tar.gz) = 9049fd350b739c9095b6e1da8fe0041210d4723ab8c0c6a7fc9943392bebf9eb224c6f420c8158a47607277e13fba2f3c7803ee222d58e8e3720d5647f44e596
-Size (munkres-1.0.12.tar.gz) = 12126 bytes
+BLAKE2s (munkres-1.1.4.tar.gz) = e2d8712bab6a3cb42240f2ee4ea454de7b7338dae7b5b29e8df0d374f1564c04
+SHA512 (munkres-1.1.4.tar.gz) = 24ae7d04f4a6fe52f7bb9dc79bbee3e33425b85813382e2634e106a5d26d2d728ba8d34fab9390b7c3d651bc0e95214dcf9c94ac436636cd5b487a054b5a2c54
+Size (munkres-1.1.4.tar.gz) = 13777 bytes
