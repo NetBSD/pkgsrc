@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/04/14 13:06:49 leot Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/05 21:26:01 wiz Exp $
 bin/csscapture-${PYVERSSUFFIX}
 bin/csscombine-${PYVERSSUFFIX}
 bin/cssparse-${PYVERSSUFFIX}
@@ -6,16 +6,11 @@ ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/cssutils/__init__.py
 ${PYSITELIB}/cssutils/__init__.pyc
 ${PYSITELIB}/cssutils/__init__.pyo
-${PYSITELIB}/cssutils/_codec2.py
-${PYSITELIB}/cssutils/_codec2.pyc
-${PYSITELIB}/cssutils/_codec2.pyo
-${PYSITELIB}/cssutils/_codec3.py
-${PYSITELIB}/cssutils/_codec3.pyc
-${PYSITELIB}/cssutils/_codec3.pyo
 ${PYSITELIB}/cssutils/_fetch.py
 ${PYSITELIB}/cssutils/_fetch.pyc
 ${PYSITELIB}/cssutils/_fetch.pyo
