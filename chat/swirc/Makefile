@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/01/06 12:28:41 fcambus Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/06 12:55:21 fcambus Exp $
 
 DISTNAME=	swirc-3.3.3
 CATEGORIES=	chat
@@ -20,5 +20,6 @@ MAKE_FLAGS+=	DEST_CONFMAN=${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/ncursesw/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
