@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.105 2022/01/06 08:52:02 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.106 2022/01/06 09:04:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -119,3 +119,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/feathernotes to 0.10.0 [pin 2022-01-06]
 	Updated sysutils/macchina to 6.0.5 [pin 2022-01-06]
 	Updated devel/leahneukirchen-redo to 0.3nb1 [schmonz 2022-01-06]
+	Updated www/py-httpcore to 0.14.4 [adam 2022-01-06]
+	Updated www/py-httpx to 0.21.2 [adam 2022-01-06]
