@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.107 2022/01/06 11:26:17 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.108 2022/01/06 12:47:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -122,3 +122,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-httpcore to 0.14.4 [adam 2022-01-06]
 	Updated www/py-httpx to 0.21.2 [adam 2022-01-06]
 	Added devel/goredo version 1.21.0 [schmonz 2022-01-06]
+	Updated devel/nss to 3.74 [wiz 2022-01-06]
