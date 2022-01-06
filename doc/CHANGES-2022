@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.102 2022/01/06 07:52:51 pin Exp $
+$NetBSD: CHANGES-2022,v 1.103 2022/01/06 07:54:07 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -116,3 +116,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated geography/qgis to 3.16.15 [gdt 2022-01-06]
 	Updated geography/geoclue to 2.5.7 [gdt 2022-01-06]
 	Updated x11/citron to 0.11.0 [pin 2022-01-06]
+	Updated editors/feathernotes to 0.10.0 [pin 2022-01-06]
