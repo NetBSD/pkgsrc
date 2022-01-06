@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.72 2021/11/01 17:39:26 leot Exp $
+$NetBSD: distinfo,v 1.73 2022/01/06 20:02:16 leot Exp $
 
-BLAKE2s (mpv-0.34.0.tar.gz) = ae9f9087b404a2b781f35f6d72d6fb0dfc31847454fef30693ab89da3f1e70e4
-SHA512 (mpv-0.34.0.tar.gz) = 9935a20730dbb8fbf4cd11fe2fc38b1981882fc85c93046837a9b99cae089b3f710e6af7d7ea977c177de5479aa24e413f76cab9b995e8b7e66d6b77c524fdf0
-Size (mpv-0.34.0.tar.gz) = 3287976 bytes
+BLAKE2s (mpv-0.34.1.tar.gz) = 8c12b91067c852b26e1b044afb0ff1e80f1950f2c5cc193cc10ffbef227eb4da
+SHA512 (mpv-0.34.1.tar.gz) = 77ea349d6999f8cce9b5cce4cebd3506a224fc18ab08d22dd16bd34c34d012bb170879b268ddd62db40d116b4cc0b2d9d651b8097f387ed9115c426834cac77e
+Size (mpv-0.34.1.tar.gz) = 3288356 bytes
 SHA1 (patch-audio_out_ao__alsa.c) = c4661d0d22550d6e4eb2b7a42dd04dbcc58123b0
 SHA1 (patch-video_out_drm__common.c) = 70eb8884f63e9456c0ffe592289cfd81e208955b
 SHA1 (patch-video_out_wayland__common.c) = abed416d258ebf0b595ea897daf3013dd81189e8
