@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2021/12/12 13:07:02 taca Exp $
+# $NetBSD: Makefile,v 1.28 2022/01/06 10:30:09 jperkin Exp $
 
 DISTNAME=	chef-17.8.25
 CATEGORIES=	sysutils
@@ -35,7 +35,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-syslog-logger>=1.6<2:../../sysutils/ruby-syslog-logg
 DEPENDS+=	${RUBY_PKGPREFIX}-uuidtools>=2.1.5:../../devel/ruby-uuidtools
 DEPENDS+=	${RUBY_PKGPREFIX}-proxifier>=1.0<2:../../net/ruby-proxifier
 DEPENDS+=	${RUBY_PKGPREFIX}-bundler>=1.10:../../misc/ruby-bundler
-DEPENDS+=	${RUBY_PKGPREFIX}-aws-sdk-s3>=1.91<2:../../www/ruby-aws-sdk-secretsmanager
+DEPENDS+=	${RUBY_PKGPREFIX}-aws-sdk-s3>=1.91<2:../../www/ruby-aws-sdk-s3
 DEPENDS+=	${RUBY_PKGPREFIX}-aws-sdk-secretsmanager>=1.46<2:../../www/ruby-aws-sdk-secretsmanager
 DEPENDS+=	${RUBY_PKGPREFIX}-vault>=0.16<1:../../security/ruby-vault
 
