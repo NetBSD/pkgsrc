@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2021/03/14 14:26:12 spz Exp $
+# $NetBSD: Makefile,v 1.27 2022/01/06 11:53:26 hauke Exp $
 #
 
 DISTNAME=		xymon-${PKGVERSION}
 PKGNAME=		xymonclient-${PKGVERSION}
 PKGVERSION=		4.3.30
-#PKGREVISION=		0
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xymon/}
 

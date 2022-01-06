@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 11:07:13 nia Exp $
+$NetBSD: distinfo,v 1.21 2022/01/06 11:53:26 hauke Exp $
 
 BLAKE2s (xymon-4.3.30.tar.gz) = 03a385a0e32188d4ca6fdbaa55bbb92d053ec706ee70ca0bcf483c3f5611a85f
 SHA512 (xymon-4.3.30.tar.gz) = f3f16ff55293d7d76cb0355151a82545a2b1ad708b59c031640c240379807228dca4ffa9c48a4e20ab75e270bda18b7306ea165b65eb18c9c6471b395fda7b62
@@ -21,6 +21,7 @@ SHA1 (patch-build_Makefile.OpenBSD) = cf40c7839ba6290d349328e2e01a20bdaf274fc6
 SHA1 (patch-build_Makefile.SunOS) = 71d134a30825a2d36fbb17731e722c89c79da807
 SHA1 (patch-build_Makefile.generic) = e96d5ee29630c9133caebfa752880be90726607c
 SHA1 (patch-client_logfetch.c) = f99fa015fe597bfb37f1d288c4e5e3b99b65397d
+SHA1 (patch-client_xymonclient-freebsd.sh) = 6993a6251b1d3dec2817f30ce2b05ffd8cc3485b
 SHA1 (patch-client_xymonclient-netbsd.sh) = 739a201806144ef0e34c1f668ad3a4d9e2b9f9fb
 SHA1 (patch-common_Makefile) = 32b7da06cd9d22f98ee0f83bb36ed6441c066707
 SHA1 (patch-configure) = 305a74a2383dcd37ea93456272d4254483023aa5
