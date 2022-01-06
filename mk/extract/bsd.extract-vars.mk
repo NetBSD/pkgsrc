@@ -1,4 +1,4 @@
-# $NetBSD: bsd.extract-vars.mk,v 1.20 2020/03/20 17:16:34 rillig Exp $
+# $NetBSD: bsd.extract-vars.mk,v 1.21 2022/01/06 10:19:11 schmonz Exp $
 #
 # This file configures how a package extracts its distfiles after
 # downloading them.
@@ -106,5 +106,8 @@ USE_TOOLS+=	gem
 .endif
 .if !empty(EXTRACT_ONLY:M*.7z)
 USE_TOOLS+=	7za
+.endif
+.if !empty(EXTRACT_ONLY:M*.zst)
+USE_TOOLS+=	zstd
 .endif
 
