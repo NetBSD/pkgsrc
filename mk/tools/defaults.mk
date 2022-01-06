@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.62 2018/08/22 20:48:37 maya Exp $
+# $NetBSD: defaults.mk,v 1.63 2022/01/06 10:19:11 schmonz Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -143,6 +143,7 @@ _TOOLS_VARNAME.xmkmf=		XMKMF_CMD
 _TOOLS_VARNAME.xz=		XZ
 _TOOLS_VARNAME.xzcat=		XZCAT
 _TOOLS_VARNAME.yacc=		YACC
+_TOOLS_VARNAME.zstd=		ZSTD
 
 ######################################################################
 
