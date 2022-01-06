@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.109 2022/01/06 20:02:22 leot Exp $
+$NetBSD: CHANGES-2022,v 1.110 2022/01/06 21:52:19 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -124,3 +124,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/goredo version 1.21.0 [schmonz 2022-01-06]
 	Updated devel/nss to 3.74 [wiz 2022-01-06]
 	Updated multimedia/mpv to 0.34.1 [leot 2022-01-06]
+	Updated net/syncthing to 1.18.5 [triaxx 2022-01-06]
