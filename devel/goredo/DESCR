@@ -1,0 +1,9 @@
+Go implementation of djb's redo, Makefile replacement that sucks less.
+
+Originally it was just a rewrite of redo-c, but later most features of
+apenwarr/redo were also implemented. Why yet another implementation? It
+is featureful and has better performance comparing to shell and Python
+implementation.
+
+It passes tests from redo-sh.tests and implementation-neutral ones from
+apenwarr/redo.
