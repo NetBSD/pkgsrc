@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/11/01 13:30:13 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/06 08:51:55 schmonz Exp $
 
-DISTNAME=		leahneukirchen-redo-0.3
+DISTNAME=		leahneukirchen-redo-d2f9517377f5652b4217a6e119205450d44b1e30
+PKGNAME=		leahneukirchen-redo-0.3
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=leahneukirchen/}
 GITHUB_PROJECT=		redo-c
