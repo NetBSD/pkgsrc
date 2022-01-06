@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/01/04 18:03:35 pin Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/06 07:52:32 pin Exp $
 
-DISTNAME=	v0.10.1
+DISTNAME=	v0.11.0
 PKGNAME=	citron-${DISTNAME:S,^v,,}
 CATEGORIES=	x11
 MASTER_SITES=	https://git.sr.ht/~grtcdr/citron/archive/

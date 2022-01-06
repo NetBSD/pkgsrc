@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.5 2022/01/04 18:03:35 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.6 2022/01/06 07:52:32 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
 CARGO_CRATE_DEPENDS+=	arrayref-0.3.6
@@ -42,14 +42,15 @@ CARGO_CRATE_DEPENDS+=	hashbrown-0.11.2
 CARGO_CRATE_DEPENDS+=	heck-0.3.3
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.1.19
 CARGO_CRATE_DEPENDS+=	home-0.5.3
-CARGO_CRATE_DEPENDS+=	if-addrs-0.7.0
+CARGO_CRATE_DEPENDS+=	if-addrs-0.6.7
+CARGO_CRATE_DEPENDS+=	if-addrs-sys-0.3.2
 CARGO_CRATE_DEPENDS+=	indexmap-1.7.0
 CARGO_CRATE_DEPENDS+=	itertools-0.10.3
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	lexical-core-0.7.6
 CARGO_CRATE_DEPENDS+=	libc-0.2.112
 CARGO_CRATE_DEPENDS+=	libdbus-sys-0.2.2
-CARGO_CRATE_DEPENDS+=	libmacchina-5.0.3
+CARGO_CRATE_DEPENDS+=	libmacchina-6.0.1
 CARGO_CRATE_DEPENDS+=	linicon-2.2.0
 CARGO_CRATE_DEPENDS+=	linked-hash-map-0.5.4
 CARGO_CRATE_DEPENDS+=	local-ip-address-0.4.4
@@ -128,7 +129,6 @@ CARGO_CRATE_DEPENDS+=	void-1.0.2
 CARGO_CRATE_DEPENDS+=	walkdir-2.3.2
 CARGO_CRATE_DEPENDS+=	wasi-0.9.0+wasi-snapshot-preview1
 CARGO_CRATE_DEPENDS+=	wasi-0.10.0+wasi-snapshot-preview1
-CARGO_CRATE_DEPENDS+=	which-4.2.2
 CARGO_CRATE_DEPENDS+=	widestring-0.5.1
 CARGO_CRATE_DEPENDS+=	winapi-0.3.9
 CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
