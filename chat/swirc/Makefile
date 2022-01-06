@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/01/05 10:04:10 fcambus Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/06 12:28:41 fcambus Exp $
 
 DISTNAME=	swirc-3.3.3
 CATEGORIES=	chat
@@ -14,6 +14,7 @@ HAS_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 
+MAKE_FLAGS+=	Q= CC="${CC}" CXX="${CXX}"
 MAKE_FLAGS+=	DEST_MANUAL=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 MAKE_FLAGS+=	DEST_CONFMAN=${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
