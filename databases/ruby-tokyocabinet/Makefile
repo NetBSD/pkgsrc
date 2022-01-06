@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2019/07/11 09:25:25 nia Exp $
+# $NetBSD: Makefile,v 1.30 2022/01/06 13:53:40 taca Exp $
 #
 
 DISTNAME=	tokyocabinet-ruby-1.31
@@ -7,7 +7,7 @@ CATEGORIES=	databases ruby
 MASTER_SITES=	${HOMEPAGE:S/rubydoc/rubypkg/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://fallabs.com/tokyocabinet/rubydoc/
+HOMEPAGE=	https://dbmx.net/tokyocabinet/index.html
 COMMENT=	Ruby binding of Tokyo Cabinet
 LICENSE=	gnu-lgpl-v2.1
 
