@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.104 2022/01/06 07:55:13 pin Exp $
+$NetBSD: CHANGES-2022,v 1.105 2022/01/06 08:52:02 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -118,3 +118,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/citron to 0.11.0 [pin 2022-01-06]
 	Updated editors/feathernotes to 0.10.0 [pin 2022-01-06]
 	Updated sysutils/macchina to 6.0.5 [pin 2022-01-06]
+	Updated devel/leahneukirchen-redo to 0.3nb1 [schmonz 2022-01-06]
