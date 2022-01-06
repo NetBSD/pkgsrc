@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.19 2019/08/02 11:48:17 nia Exp $
+# $NetBSD: extract,v 1.20 2022/01/06 10:19:11 schmonz Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -84,6 +84,7 @@
 #	EXTRACT_OPTS_RPM
 #	EXTRACT_OPTS_TAR
 #	EXTRACT_OPTS_ZIP
+#	EXTRACT_OPTS_ZSTD
 #	EXTRACT_OPTS_ZOO
 #		These variables set additional arguments passed to the
 #		underlying extraction tool to unpack their respective
@@ -114,6 +115,7 @@ set -u		# treat undefined variables as errors
 : ${UNZOO:=unzoo}
 : ${P7ZA:="7za x"}
 : ${P7ZA_SO:="7za x -so"}
+: ${ZSTD:="zstd"}
 
 : ${TMPDIR:=/tmp}
 
@@ -202,7 +204,7 @@ esac
 
 # Derive the format of the archive based on the file extension.
 case "$distfile" in
-*.tar.gz|*.tgz|*-tar.gz|*_tar.gz|*.tar.bz2|*.txz|*.tbz|*.tbz2|*.tar.lz|*.tar.lzma|*.tar.xz|*.tar.Z|*.tar.z|*.tar|*.tar.bz|*.tar.7z|*.crate)
+*.tar.gz|*.tgz|*-tar.gz|*_tar.gz|*.tar.bz2|*.txz|*.tbz|*.tbz2|*.tar.lz|*.tar.lzma|*.tar.xz|*.tar.Z|*.tar.z|*.tar|*.tar.bz|*.tar.7z|*.tar.zst|*.crate)
 		_format=tar ;;
 *.cpio|*.cpio.gz|*.cpio.bz2)
 		_format=cpio ;;
@@ -218,6 +220,7 @@ case "$distfile" in
 *.bin|*.sh)	_format=jre-bin ;;
 *.gem)		_format=gem ;;
 *.7z)		_format=7z ;;
+*.zst)		_format=zstd ;;
 *)		_format=none ;;
 esac
 ${TEST} -n "$format" || format="$_format"
@@ -343,6 +346,12 @@ gem)
 
 7z)
 	${P7ZA} "$distfile"
+	;;
+
+zst)
+	${ECHO} 1>&2 "$self: SCHMONZ: looks like $format is .zst"
+	: ${EXTRACT_OPTS_ZSTD=}
+	${ZSTD} -d ${EXTRACT_OPTS_ZSTD} "$distfile" ${1+"$@"}
 	;;
 
 none)
