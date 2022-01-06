@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2020/11/04 20:27:24 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/06 08:56:15 schmonz Exp $
 
 DISTNAME=	redo-1.4
 PKGNAME=	jdebp-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	https://jdebp.eu/Repository/freebsd/
+MASTER_SITES=	http://jdebp.info/Repository/freebsd/
 
 MAINTAINER=	schmonz@NetBSD.org
-HOMEPAGE=	https://jdebp.eu/Softwares/redo/
+HOMEPAGE=	http://jdebp.info/Softwares/redo/
 COMMENT=	C++ implementation of DJB's redo build tool
 LICENSE=	isc OR 2-clause-bsd
 
