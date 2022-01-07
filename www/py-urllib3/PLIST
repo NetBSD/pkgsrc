@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2020/11/12 09:00:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/01/07 16:18:59 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -70,12 +70,6 @@ ${PYSITELIB}/urllib3/packages/backports/makefile.pyo
 ${PYSITELIB}/urllib3/packages/six.py
 ${PYSITELIB}/urllib3/packages/six.pyc
 ${PYSITELIB}/urllib3/packages/six.pyo
-${PYSITELIB}/urllib3/packages/ssl_match_hostname/__init__.py
-${PYSITELIB}/urllib3/packages/ssl_match_hostname/__init__.pyc
-${PYSITELIB}/urllib3/packages/ssl_match_hostname/__init__.pyo
-${PYSITELIB}/urllib3/packages/ssl_match_hostname/_implementation.py
-${PYSITELIB}/urllib3/packages/ssl_match_hostname/_implementation.pyc
-${PYSITELIB}/urllib3/packages/ssl_match_hostname/_implementation.pyo
 ${PYSITELIB}/urllib3/poolmanager.py
 ${PYSITELIB}/urllib3/poolmanager.pyc
 ${PYSITELIB}/urllib3/poolmanager.pyo
@@ -109,6 +103,9 @@ ${PYSITELIB}/urllib3/util/retry.pyo
 ${PYSITELIB}/urllib3/util/ssl_.py
 ${PYSITELIB}/urllib3/util/ssl_.pyc
 ${PYSITELIB}/urllib3/util/ssl_.pyo
+${PYSITELIB}/urllib3/util/ssl_match_hostname.py
+${PYSITELIB}/urllib3/util/ssl_match_hostname.pyc
+${PYSITELIB}/urllib3/util/ssl_match_hostname.pyo
 ${PYSITELIB}/urllib3/util/ssltransport.py
 ${PYSITELIB}/urllib3/util/ssltransport.pyc
 ${PYSITELIB}/urllib3/util/ssltransport.pyo
