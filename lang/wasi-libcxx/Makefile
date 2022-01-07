@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/01/07 14:33:43 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/07 15:49:53 tnn Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -170,7 +170,9 @@ do-configure:
 .include "../../lang/llvm/buildlink3.mk"
 .include "../../lang/wasi-libc/buildlink3.mk"
 .include "../../lang/wasi-compiler-rt/buildlink3.mk"
-ABI=			32
+ABI=			# 32
+CFLAGS=			-O2
+CXXFLAGS=		-O2
 PKGSRC_COMPILER=	clang
 CLANGBASE=		${PREFIX}
 BUILDLINK_DEPMETHOD.clang=	build
