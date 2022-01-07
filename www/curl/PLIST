@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.87 2021/11/10 10:55:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.88 2022/01/07 21:05:37 adam Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -227,6 +227,7 @@ man/man3/CURLOPT_MAXREDIRS.3
 man/man3/CURLOPT_MAX_RECV_SPEED_LARGE.3
 man/man3/CURLOPT_MAX_SEND_SPEED_LARGE.3
 man/man3/CURLOPT_MIMEPOST.3
+man/man3/CURLOPT_MIME_OPTIONS.3
 man/man3/CURLOPT_NETRC.3
 man/man3/CURLOPT_NETRC_FILE.3
 man/man3/CURLOPT_NEW_DIRECTORY_PERMS.3
@@ -393,6 +394,11 @@ man/man3/CURLOPT_WRITEFUNCTION.3
 man/man3/CURLOPT_XFERINFODATA.3
 man/man3/CURLOPT_XFERINFOFUNCTION.3
 man/man3/CURLOPT_XOAUTH2_BEARER.3
+man/man3/CURLSHOPT_LOCKFUNC.3
+man/man3/CURLSHOPT_SHARE.3
+man/man3/CURLSHOPT_UNLOCKFUNC.3
+man/man3/CURLSHOPT_UNSHARE.3
+man/man3/CURLSHOPT_USERDATA.3
 man/man3/curl_easy_cleanup.3
 man/man3/curl_easy_duphandle.3
 man/man3/curl_easy_escape.3
