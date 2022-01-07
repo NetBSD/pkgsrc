@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2021/07/14 07:31:10 adam Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/07 21:16:09 adam Exp $
 
-DISTNAME=	fmt-8.0.1
+DISTNAME=	fmt-8.1.1
 PKGNAME=	${DISTNAME:S/fmt/fmtlib/}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fmtlib/}
@@ -15,6 +15,8 @@ USE_CMAKE=		yes
 USE_LANGUAGES=		c c++11
 PKGCONFIG_OVERRIDE=	support/cmake/fmt.pc.in
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKSRC}
+# For Darwin
+TEST_ENV+=		DYLD_LIBRARY_PATH=${WRKSRC}
 TEST_TARGET=		test
 
 CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
