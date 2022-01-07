@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.119 2022/01/07 17:33:01 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.120 2022/01/07 19:50:57 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -146,3 +146,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-types-toml to 0.10.2 [adam 2022-01-07]
 	Updated devel/py-cwcwidth to 0.1.6 [adam 2022-01-07]
 	Updated wm/fluxbox to 1.3.7nb6 [gutteridge 2022-01-07]
+	Updated sysutils/binwalk to 2.3.3 [nikita 2022-01-07]
