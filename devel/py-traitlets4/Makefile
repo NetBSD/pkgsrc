@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:53:45 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/07 11:46:57 tnn Exp $
 
 DISTNAME=	traitlets-4.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,7 +25,7 @@ USE_LANGUAGES=	# none
 .include "../../lang/python/egg.mk"
 
 .if ${_PYTHON_VERSION} == 27
-_PYSETUPTOOLSINSTALLARGS:=	${PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
+_PYSETUPTOOLSINSTALLARGS:=	${_PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
 .endif
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:53:43 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/07 11:46:57 tnn Exp $
 
 DISTNAME=	testpath-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ post-extract:
 .include "../../lang/python/egg.mk"
 
 .if ${PYPKGPREFIX} == "py27"
-_PYSETUPTOOLSINSTALLARGS:=	${PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
+_PYSETUPTOOLSINSTALLARGS:=	${_PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
 .endif
 
 .include "../../mk/bsd.pkg.mk"

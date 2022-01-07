@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2022/01/05 20:47:36 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2022/01/07 11:46:57 tnn Exp $
 
 # 4.1.0 is broken, per reports on gpsd list.  Apparently 4.0.1 is ok.
 DISTNAME=	scons-3.1.2
@@ -31,6 +31,6 @@ SUBST_SED.rflag=	-e 's|-Wl,-rpath=|${COMPILER_RPATH_FLAG}|g'
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 
-_PYSETUPTOOLSINSTALLARGS:=	${PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
+_PYSETUPTOOLSINSTALLARGS:=	${_PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/07 11:25:59 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/07 11:46:57 tnn Exp $
 
 DISTNAME=	termcolor-1.1.0
 PKGREVISION=	1
@@ -19,6 +19,6 @@ do-test:
 
 .include "../../lang/python/egg.mk"
 .if ${_PYTHON_VERSION} == 27
-_PYSETUPTOOLSINSTALLARGS:=	${PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
+_PYSETUPTOOLSINSTALLARGS:=	${_PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
 .endif
 .include "../../mk/bsd.pkg.mk"
