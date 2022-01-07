@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/12/22 16:10:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/07 13:32:47 tnn Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -60,6 +60,9 @@ CMAKE_INSTALL_PREFIX=	${PREFIX}/lib/clang/13.0.0
 post-extract:
 	${MKDIR} ${WRKDIR}/build
 
+.include "../../mk/bsd.prefs.mk"
+
+ABI=			32
 PKGSRC_COMPILER=	clang
 CLANGBASE=		${PREFIX}
 BUILDLINK_DEPMETHOD.clang=	build
