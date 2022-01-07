@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 20:53:41 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/07 16:44:54 adam Exp $
 
-DISTNAME=	pytest-localserver-0.5.0
+DISTNAME=	pytest-localserver-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-localserver/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://bitbucket.org/pytest-dev/pytest-localserver/
+HOMEPAGE=	https://github.com/pytest-dev/pytest-localserver
 COMMENT=	Py.test plugin to test server connections locally
 LICENSE=	mit
 
@@ -19,7 +18,7 @@ PYTHON_VERSIONED_DEPENDENCIES=	test:test
 USE_LANGUAGES=	# none
 
 do-test:
-	cd ${WRKSRC}/tests && pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC}/tests && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"
