@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.948 2021/12/26 18:21:44 gutteridge Exp $
+# $NetBSD: Makefile,v 1.949 2022/01/07 12:43:14 nia Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -679,6 +679,7 @@ SUBDIR+=	xsm
 SUBDIR+=	xsnow
 SUBDIR+=	xst
 SUBDIR+=	xstdcmap
+SUBDIR+=	xtar
 SUBDIR+=	xteddy
 SUBDIR+=	xteddy2
 SUBDIR+=	xterm
