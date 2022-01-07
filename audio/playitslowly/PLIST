@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2021/12/31 08:10:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/01/07 15:05:31 wiz Exp $
 bin/playitslowly
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/playitslowly-py${PYVERSSUFFIX}.install-info
 ${PYSITELIB}/playitslowly/__init__.py
 ${PYSITELIB}/playitslowly/__init__.pyc
