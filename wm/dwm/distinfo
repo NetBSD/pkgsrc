@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2021/10/26 11:25:12 nia Exp $
+$NetBSD: distinfo,v 1.20 2022/01/07 13:18:49 leot Exp $
 
-BLAKE2s (dwm-6.2.tar.gz) = ad86d9f4d8a0850070ee80d599cd4ff6c2cca4510de1307e9d4c47082ab86ae0
-SHA512 (dwm-6.2.tar.gz) = 01abcab954e5b7c20d011e6fd9c28025271fea2e85610c928812f7c6a09f99d7f9e93d11ffc2d6a7aca894b3fa7e507c6c2fe5f26ff5ddcfc650a9bbaaa41e06
-Size (dwm-6.2.tar.gz) = 25273 bytes
+BLAKE2s (dwm-6.3.tar.gz) = 0438e1a1248a6400217f30a4c6ca14086d86a12c5ebc1ea12d571ba111f4174a
+SHA512 (dwm-6.3.tar.gz) = 285bf5e7f419b7bd6d7cd23548a5cb3dce84879b7e841ed3eb08c226f28c8782e37bce2bc481b2e90c4f2160f79d239476d56f01985af0d38a39fb9dce43dede
+Size (dwm-6.3.tar.gz) = 25351 bytes
 SHA1 (patch-drw.c) = c391b7ac6f60cce02d63c09c8cfb23ec5d3d46ef
