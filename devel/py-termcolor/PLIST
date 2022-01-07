@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/29 14:07:49 joerg Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.2 2022/01/07 11:25:59 adam Exp $
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/termcolor.py
 ${PYSITELIB}/termcolor.pyc
 ${PYSITELIB}/termcolor.pyo
