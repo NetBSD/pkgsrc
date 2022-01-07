@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2021/10/26 12:20:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2022/01/07 17:13:30 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -187,6 +187,9 @@ ${PYSITELIB}/astroid/decorators.pyo
 ${PYSITELIB}/astroid/exceptions.py
 ${PYSITELIB}/astroid/exceptions.pyc
 ${PYSITELIB}/astroid/exceptions.pyo
+${PYSITELIB}/astroid/filter_statements.py
+${PYSITELIB}/astroid/filter_statements.pyc
+${PYSITELIB}/astroid/filter_statements.pyo
 ${PYSITELIB}/astroid/helpers.py
 ${PYSITELIB}/astroid/helpers.pyc
 ${PYSITELIB}/astroid/helpers.pyo
@@ -241,9 +244,12 @@ ${PYSITELIB}/astroid/nodes/node_classes.pyo
 ${PYSITELIB}/astroid/nodes/node_ng.py
 ${PYSITELIB}/astroid/nodes/node_ng.pyc
 ${PYSITELIB}/astroid/nodes/node_ng.pyo
-${PYSITELIB}/astroid/nodes/scoped_nodes.py
-${PYSITELIB}/astroid/nodes/scoped_nodes.pyc
-${PYSITELIB}/astroid/nodes/scoped_nodes.pyo
+${PYSITELIB}/astroid/nodes/scoped_nodes/__init__.py
+${PYSITELIB}/astroid/nodes/scoped_nodes/__init__.pyc
+${PYSITELIB}/astroid/nodes/scoped_nodes/__init__.pyo
+${PYSITELIB}/astroid/nodes/scoped_nodes/scoped_nodes.py
+${PYSITELIB}/astroid/nodes/scoped_nodes/scoped_nodes.pyc
+${PYSITELIB}/astroid/nodes/scoped_nodes/scoped_nodes.pyo
 ${PYSITELIB}/astroid/objects.py
 ${PYSITELIB}/astroid/objects.pyc
 ${PYSITELIB}/astroid/objects.pyo
