@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.217 2021/12/26 19:15:13 gutteridge Exp $
+# $NetBSD: mozilla-common.mk,v 1.218 2022/01/07 15:06:21 tnn Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -135,7 +135,7 @@ SUBST_CLASSES+=				fix-libpci-soname
 SUBST_STAGE.fix-libpci-soname=		pre-configure
 SUBST_MESSAGE.fix-libpci-soname=	Fixing libpci soname
 SUBST_FILES.fix-libpci-soname+=		${MOZILLA_DIR}toolkit/xre/glxtest.cpp
-SUBST_SED.fix-libpci-soname+=		-e 's,libpci.so,lib${PCIUTILS_LIBNAME}.so,'
+SUBST_SED.fix-libpci-soname+=		-e 's,"libpci.so, "lib${PCIUTILS_LIBNAME}.so,'
 
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}build/autoconf/config.guess
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}js/src/build/autoconf/config.guess

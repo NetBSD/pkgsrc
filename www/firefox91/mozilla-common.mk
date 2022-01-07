@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.3 2021/12/19 11:09:27 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.4 2022/01/07 15:06:21 tnn Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -103,7 +103,13 @@ CONFIGURE_ARGS+=	--with-system-webp
 CONFIGURE_ARGS+=	--disable-icf
 CONFIGURE_ARGS+=	--disable-updater
 
-#CONFIGURE_ARGS+=	--with-libclang-path=${PREFIX}/lib
+.include "../../mk/compiler.mk"
+
+.if empty(PKGSRC_COMPILER:Mclang)
+# Set path to "clang for cbindgen" when target compiler is not clang.
+CONFIGURE_ARGS+=	--with-clang-path=${PREFIX}/bin/clang
+.endif
+CONFIGURE_ARGS+=	--with-libclang-path=${PREFIX}/lib
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
@@ -117,7 +123,7 @@ SUBST_CLASSES+=				fix-libpci-soname
 SUBST_STAGE.fix-libpci-soname=		pre-configure
 SUBST_MESSAGE.fix-libpci-soname=	Fixing libpci soname
 SUBST_FILES.fix-libpci-soname+=		${MOZILLA_DIR}toolkit/xre/glxtest.cpp
-SUBST_SED.fix-libpci-soname+=		-e 's,libpci.so,lib${PCIUTILS_LIBNAME}.so,'
+SUBST_SED.fix-libpci-soname+=		-e 's,"libpci.so, "lib${PCIUTILS_LIBNAME}.so,'
 
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}build/autoconf/config.guess
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}js/src/build/autoconf/config.guess
@@ -161,19 +167,6 @@ create-rm-wrapper:
 	printf '#!/bin/sh\n[ "$$*" = "-f" ] && exit 0\nexec /bin/rm $$@\n' > \
 	  ${WRAPPER_DIR}/bin/rm
 	chmod +x ${WRAPPER_DIR}/bin/rm
-
-.PHONY: fix-clang-wrapper
-pre-configure: fix-clang-wrapper
-fix-clang-wrapper:
-.if empty(PKGSRC_COMPILER:M*clang*)
-# Firefox requires Clang during the build, even when building with GCC.
-# XXX: When using GCC, pkgsrc provides 'clang' wrappers that are actually gcc.
-# This breaks the build.
-# PR pkg/55647 https://gnats.netbsd.org/55647
-	${LN} -sf ${PREFIX}/bin/clang ${WRKDIR}/.cwrapper/bin/clang
-	${LN} -sf ${PREFIX}/bin/clang++ ${WRKDIR}/.cwrapper/bin/clang++
-	${LN} -sf ${PREFIX}/bin/clang-cpp ${WRKDIR}/.cwrapper/bin/clang-cpp
-.endif
 
 # The configure test for __thread succeeds, but later we end up with:
 # dist/bin/libxul.so: undefined reference to `__tls_get_addr'
