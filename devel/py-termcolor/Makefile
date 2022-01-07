@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2017/10/09 08:46:25 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/07 11:25:59 adam Exp $
 
 DISTNAME=	termcolor-1.1.0
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/termcolor/}
@@ -16,5 +17,8 @@ USE_LANGUAGES=	# none
 do-test:
 	${NADA}
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
+.if ${_PYTHON_VERSION} == 27
+_PYSETUPTOOLSINSTALLARGS:=	${PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
+.endif
 .include "../../mk/bsd.pkg.mk"
