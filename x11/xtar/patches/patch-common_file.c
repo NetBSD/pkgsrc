@@ -1,10 +1,10 @@
-$NetBSD: patch-common_file.c,v 1.1 2022/01/07 12:43:14 nia Exp $
+$NetBSD: patch-common_file.c,v 1.2 2022/01/07 13:02:31 nia Exp $
 
 - Fix implicit declaration warnings.
 
 --- common/file.c.orig	1995-05-09 08:06:46.000000000 +0000
 +++ common/file.c
-@@ -22,7 +22,9 @@
+@@ -22,10 +22,13 @@
  #include <sys/stat.h>
  #include <sys/time.h>
  #include <stdio.h>
@@ -14,3 +14,7 @@ $NetBSD: patch-common_file.c,v 1.1 2022/01/07 12:43:14 nia Exp $
  #include <utime.h>
  #include <time.h>
  
++#include "env.h"
+ #include "stat.h"		/* We use stat_size()           */
+ #include "fname.h"
+ #include "magic.h"

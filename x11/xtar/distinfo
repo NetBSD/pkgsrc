@@ -1,20 +1,23 @@
-$NetBSD: distinfo,v 1.1 2022/01/07 12:43:14 nia Exp $
+$NetBSD: distinfo,v 1.2 2022/01/07 13:02:31 nia Exp $
 
 BLAKE2s (xtar-1.4.tar.gz) = 3a2d17f4c1fd2d6d46c5f91b919d54367c1268b027984016aa6c992e0e0b070f
 SHA512 (xtar-1.4.tar.gz) = aac20f1eefcdc2401dc0fa39ba4291a56cb505ee4a6a5202ac6401e8bbc27dcf40368495e5b22669c21a30d90cf116d2dbdc67ce86273f4fd8df21f070d2f121
 Size (xtar-1.4.tar.gz) = 87506 bytes
 SHA1 (patch-Imakefile) = 6bbc68103dd399c0a744f837dbe3016d5a367424
-SHA1 (patch-Xbr_XbrCB.c) = db5544ed0ede603a53f091a47335505c2207b7d5
+SHA1 (patch-Xbr_XbrCB.c) = a9d3a9eaa18e69b1192225bab8df73e21786f472
 SHA1 (patch-Xbr_XbrGfx.c) = 2ff219fe99837c2b0109667866b7b822312ec0c0
+SHA1 (patch-Xbr_XbrList.c) = 49264cdf8734efef039fc50c3778d91124346735
 SHA1 (patch-Xbr_XbrList.h) = b038bfa8b9bc1300de868994ad6e6ff2fa7e20ee
-SHA1 (patch-Xbr_XbrMenu.c) = 193673bed0d88510331bb466c1cef24840aded36
+SHA1 (patch-Xbr_XbrMenu.c) = b6af1fe9a94999ff1a28133a6c3378d6efff3746
 SHA1 (patch-common_ascii.c) = 45c8d20e0e7557ff16e7984c1b18fd909c573858
-SHA1 (patch-common_file.c) = 959078bb12666c2f9970644e5f23f054abb3ae81
+SHA1 (patch-common_env.c) = 1fe7f8fd523faba3e45193d9dacea2d59874c252
+SHA1 (patch-common_file.c) = 8af8bf6cd79482cc5ac1d0c9df862e593ac7b054
 SHA1 (patch-common_magic.c) = 50b27640f9e913a32db499121c2dd1f990c60902
 SHA1 (patch-common_magic.h) = 23dacfc0d3dbbca9bdadeb1f6678cefec4c640fc
+SHA1 (patch-common_mkdirhier.c) = 91f116849c14dc5fd7eaef686bd6e58adef8340f
 SHA1 (patch-common_nums.c) = b71fbbb3f1a956155ad06fb394f18a53c6460093
-SHA1 (patch-common_pipe.c) = 827efb75e5c49808ffbcad6fa9bbea60c8666ec0
+SHA1 (patch-common_pipe.c) = 696e007302f0f8cfbc9d1395bd79f6575cceb250
 SHA1 (patch-common_regexpr.c) = 14ef6d96bb0f81fae929595204b4d3ac134e6d1c
 SHA1 (patch-common_str.c) = 9290827ba81b9255957a17c5df975036c1024365
-SHA1 (patch-common_tmpfile.c) = a8a5c1870fd200c437d97869fdb17e6fb65f058e
+SHA1 (patch-common_tmpfile.c) = a7dcac23b0adef061f65879978bdd9903c8f5d43
 SHA1 (patch-xtar.c) = 5b3eb5d2ee883efbd329f871f5f29189e9969072
