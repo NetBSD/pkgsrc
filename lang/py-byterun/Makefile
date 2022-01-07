@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:54:08 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/07 11:46:58 tnn Exp $
 
 DISTNAME=	byterun
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}-20160218
@@ -22,7 +22,7 @@ EGG_NAME=	Byterun-1.0
 .include "../../lang/python/egg.mk"
 
 .if ${PYPKGPREFIX} == "py27"
-_PYSETUPTOOLSINSTALLARGS:=	${PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
+_PYSETUPTOOLSINSTALLARGS:=	${_PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
 .endif
 
 .include "../../mk/bsd.pkg.mk"

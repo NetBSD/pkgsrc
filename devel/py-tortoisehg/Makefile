@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2022/01/04 20:53:44 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2022/01/07 11:46:57 tnn Exp $
 
 DISTNAME=		tortoisehg-6.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -49,7 +49,7 @@ post-install:
 .include "../../lang/python/egg.mk"
 
 .if ${PYPKGPREFIX} == "py27"
-_PYSETUPTOOLSINSTALLARGS:=	${PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
+_PYSETUPTOOLSINSTALLARGS:=	${_PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
 .endif
  
 .include "../../lang/python/versioned_dependencies.mk"
