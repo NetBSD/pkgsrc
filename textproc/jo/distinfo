@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2022/01/04 17:26:24 fcambus Exp $
+$NetBSD: distinfo,v 1.10 2022/01/07 21:29:43 fcambus Exp $
 
-BLAKE2s (jo-1.5.tar.gz) = 2cbeaf2ef1f1383645ff74be8273934a99b32f6e9e9bcb2d08e76dc30b624447
-SHA512 (jo-1.5.tar.gz) = f436659023f9680118c4075dc678c247957b34c8f150daa5475df1c5ede7572f530fbc8df3bd12b3c95fc4ca4ae52feb56e9c6e5b473621963d36073e5b9df2b
-Size (jo-1.5.tar.gz) = 151742 bytes
+BLAKE2s (jo-1.6.tar.gz) = e7f62734b64a0c5e4fe744f04fd5d0b8f7a2672b68e71c52012735e9968dac16
+SHA512 (jo-1.6.tar.gz) = a2cb1327c8255e0f8d1b6e6056bbce081d7703192bdb974e908549b863d7db645531dbeff87629a6ed53626295ab7ca8a72816d104f9188846ef175c8a9acb07
+Size (jo-1.6.tar.gz) = 151941 bytes
