@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/29 14:13:32 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/07 16:44:54 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -9,7 +9,6 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pytest_localserver/__init__.py
 ${PYSITELIB}/pytest_localserver/__init__.pyc
 ${PYSITELIB}/pytest_localserver/__init__.pyo
-${PYSITELIB}/pytest_localserver/ca.crt
 ${PYSITELIB}/pytest_localserver/http.py
 ${PYSITELIB}/pytest_localserver/http.pyc
 ${PYSITELIB}/pytest_localserver/http.pyo
