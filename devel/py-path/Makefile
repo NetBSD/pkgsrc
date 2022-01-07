@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:19 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/07 16:56:33 adam Exp $
 
-DISTNAME=	path-16.2.0
+DISTNAME=	path-16.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/path/}
 
@@ -21,7 +20,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} py.test-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
