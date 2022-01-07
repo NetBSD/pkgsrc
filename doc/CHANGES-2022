@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.121 2022/01/07 21:16:40 adam Exp $
+$NetBSD: CHANGES-2022,v 1.122 2022/01/07 21:29:53 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -153,3 +153,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/sqlite3-tcl to 3.37.2 [adam 2022-01-07]
 	Updated devel/lemon to 1.0.3.37.2 [adam 2022-01-07]
 	Updated textproc/fmtlib to 8.1.1 [adam 2022-01-07]
+	Updated textproc/jo to 1.6 [fcambus 2022-01-07]
