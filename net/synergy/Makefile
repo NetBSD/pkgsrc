@@ -1,15 +1,18 @@
-# $NetBSD: Makefile,v 1.69 2021/12/08 16:06:07 adam Exp $
+# $NetBSD: Makefile,v 1.70 2022/01/07 23:02:48 tnn Exp $
 
-DISTNAME=		synergy-core-1.14.0.4
+DISTNAME=		synergy-core-1.14.2.36
 PKGNAME=		${DISTNAME:S/-core//}
-PKGREVISION=		2
 CATEGORIES=		net x11
 MASTER_SITES=		${MASTER_SITE_GITHUB:=symless/}
 GITHUB_PROJECT=		synergy-core
 GITHUB_TAG=		${PKGVERSION_NOREV}-stable
-DISTFILES=		${DEFAULT_DISTFILES} googletest-1.10.0.tar.gz
+DISTFILES=		${DEFAULT_DISTFILES}		\
+			  googletest-1.10.0.tar.gz	\
+			  pugixml-1.11.tar.gz
 SITES.googletest-1.10.0.tar.gz=	\
 	-${MASTER_SITE_GITHUB:=google/}googletest/archive/release-1.10.0.tar.gz
+SITES.pugixml-1.11.tar.gz=	\
+	-${MASTER_SITE_GITHUB:=zeux/}pugixml/releases/download/v1.11/pugixml-1.11.tar.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://synergy-project.org/
@@ -19,8 +22,9 @@ LICENSE=		gnu-gpl-v2
 USE_LANGUAGES=		c c++11
 USE_CMAKE=		yes
 CMAKE_ARGS+=		-DSYNERGY_BUILD_LEGACY_GUI=OFF
+CMAKE_ARGS+=		-DSYNERGYC_BUILD_LEGACY_INSTALLER=OFF
 
-CONFIGURE_ENV+=		GIT_COMMIT=67d824b8
+CONFIGURE_ENV+=		GIT_COMMIT=c6918b74
 
 EXAMPLES=	MacReadme.txt org.synergy-foss.org.synergyc.plist \
 		org.synergy-foss.org.synergys.plist synergy.conf.example \
@@ -36,6 +40,8 @@ SUBST_SED.fix-paths=		-e 's,"/etc,"${PKG_SYSCONFDIR},g'
 post-extract:
 	${RM} -rf ${WRKSRC}/ext/googletest
 	${LN} -s ${WRKDIR}/googletest-* ${WRKSRC}/ext/googletest
+	${RM} -rf ${WRKSRC}/ext/pugixml
+	${LN} -s ${WRKDIR}/pugixml-* ${WRKSRC}/ext/pugixml
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/${PKGBASE}
 
@@ -76,8 +82,12 @@ LDFLAGS.SunOS+=	-lsocket -lnsl
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .if !exists(/System/Library/Frameworks/Carbon.framework)
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
+.include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
