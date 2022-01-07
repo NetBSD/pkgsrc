@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2022/01/05 15:41:26 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2022/01/07 12:20:37 adam Exp $
 
-DISTNAME=	Pygments-2.11.0
+DISTNAME=	Pygments-2.11.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pygments/}
 
