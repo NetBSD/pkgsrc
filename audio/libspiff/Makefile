@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2020/01/26 05:26:11 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/07 12:43:52 nros Exp $
 #
 
 DISTNAME=	libspiff-1.0.0
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libspiff/}
 EXTRACT_SUFX=	.tar.bz2
