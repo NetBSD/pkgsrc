@@ -1,0 +1,4 @@
+XTar is a package for graphically viewing and manipulating files which have
+been archived using tar (Tape ARchive), and possibly compressed with gzip
+or the standard UNIX compress utility. XTar requires an ANSI C compiler and
+the Motif toolkit to build.

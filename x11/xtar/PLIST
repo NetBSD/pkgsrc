@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2022/01/07 12:43:14 nia Exp $
+bin/xtar
+lib/X11/app-defaults/XTar
+lib/X11/xtar/xtar.doc
+man/man1/xtar.1
