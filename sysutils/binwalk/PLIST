@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2022/01/07 19:50:46 nikita Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/01/07 23:18:19 wiz Exp $
 bin/binwalk
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/binwalk/__init__.py
 ${PYSITELIB}/binwalk/__init__.pyc
 ${PYSITELIB}/binwalk/__init__.pyo
