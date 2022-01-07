@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.116 2022/01/07 16:33:53 adam Exp $
+$NetBSD: CHANGES-2022,v 1.117 2022/01/07 16:58:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -135,3 +135,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-requests to 2.27.1 [adam 2022-01-07]
 	Updated www/py-httpx to 0.21.3 [adam 2022-01-07]
 	Updated textproc/py-tomli to 2.0.0 [adam 2022-01-07]
+	Updated converters/py-charset-normalizer to 2.0.10 [adam 2022-01-07]
+	Updated misc/py-platformdirs to 2.4.1 [adam 2022-01-07]
+	Updated devel/py-test-localserver to 0.5.1 [adam 2022-01-07]
+	Updated devel/py-path to 16.3.0 [adam 2022-01-07]
