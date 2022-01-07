@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/01/04 20:55:01 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/07 11:46:58 tnn Exp $
 
 DISTNAME=	pandocfilters-1.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ USE_LANGUAGES=	# none
 .include "../../lang/python/egg.mk"
 
 .if ${PYPKGPREFIX} == "py27"
-_PYSETUPTOOLSINSTALLARGS:=	${PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
+_PYSETUPTOOLSINSTALLARGS:=	${_PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
 .endif
 
 .include "../../mk/bsd.pkg.mk"

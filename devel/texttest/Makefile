@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/01/04 14:57:00 schmonz Exp $
+# $NetBSD: Makefile,v 1.10 2022/01/07 11:46:58 tnn Exp $
 
 DISTNAME=		TextTest-4.0.8
 PKGNAME=		${DISTNAME:tl}
@@ -27,7 +27,7 @@ SUBST_VARS.prefix=	PREFIX
 .include "../../lang/python/egg.mk"
 
 .if ${PYPKGPREFIX} == "py27"
-_PYSETUPTOOLSINSTALLARGS:=	${PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
+_PYSETUPTOOLSINSTALLARGS:=	${_PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
 .endif
 
 .include "../../lang/python/application.mk"
