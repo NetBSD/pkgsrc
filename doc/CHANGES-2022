@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.111 2022/01/07 12:20:53 adam Exp $
+$NetBSD: CHANGES-2022,v 1.112 2022/01/07 12:41:08 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -127,3 +127,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/syncthing to 1.18.5 [triaxx 2022-01-06]
 	Updated devel/py-setuptools to 60.3.1 [adam 2022-01-07]
 	Updated textproc/py-pygments to 2.11.2 [adam 2022-01-07]
+	Updated textproc/uriparser to 0.9.6 [nros 2022-01-07]
