@@ -1,15 +1,16 @@
-$NetBSD: patch-CMakeLists.txt,v 1.7 2021/06/27 08:51:34 tnn Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.8 2022/01/07 23:02:48 tnn Exp $
 
 Don't generate the "version" file. It can get picked up as a
 C++ header in the current directory.
 
---- CMakeLists.txt.orig	2021-06-08 13:44:14.000000000 +0000
+--- CMakeLists.txt.orig	2021-11-22 13:50:34.000000000 +0000
 +++ CMakeLists.txt
-@@ -420,7 +420,6 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Linux|
-     else()
-         install(FILES res/synergy.desktop DESTINATION share/applications)
+@@ -412,8 +412,6 @@ macro(generate_versionfile)
      endif()
--    generate_versionfile()
- endif()
+ endmacro(generate_versionfile)
  
- else()
+-generate_versionfile()
+-
+ if (${SYNERGY_BUILD_LEGACY_INSTALLER})
+ #
+ # macOS app Bundle

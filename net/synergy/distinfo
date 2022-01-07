@@ -1,11 +1,19 @@
-$NetBSD: distinfo,v 1.37 2021/10/26 11:06:59 nia Exp $
+$NetBSD: distinfo,v 1.38 2022/01/07 23:02:48 tnn Exp $
 
 BLAKE2s (googletest-1.10.0.tar.gz) = 53d218b6e7821bf20289e24c4efec5b7a3cc2be8f06373c07a5af078dc4ee892
 SHA512 (googletest-1.10.0.tar.gz) = bd52abe938c3722adc2347afad52ea3a17ecc76730d8d16b065e165bc7477d762bce0997a427131866a89f1001e3f3315198204ffa5d643a9355f1f4d0d7b1a9
 Size (googletest-1.10.0.tar.gz) = 904349 bytes
-BLAKE2s (synergy-core-1.14.0.4.tar.gz) = 2f4f87c69cb47fdc3cfee8a6debf79fc126d9d1135974589abbe1d5037f9ae86
-SHA512 (synergy-core-1.14.0.4.tar.gz) = 278ff319c5d308052e9f89a8ae53a99aacaa2b394d28e353b3779a4ee672cb09d91f37a4b0564788456d8e0bed90936d924739e74f7aa2a85482926164dc2fc8
-Size (synergy-core-1.14.0.4.tar.gz) = 8835907 bytes
-SHA1 (patch-CMakeLists.txt) = 81d4c3bfd26c9912898e30c7be2930e4bfed65b3
+BLAKE2s (pugixml-1.11.tar.gz) = d434d219624c4a25361879b39ec6f5c1db7ab5e03ccf0cdd996b7c66f4b5e796
+SHA512 (pugixml-1.11.tar.gz) = a559be72910dc6d9d74c32f1b5389b173bc92858f627e61007a5f2284da251d8511e08571b870e7c6ce6e18cf42ef42fdb10f8b30b608067b452ccb9105d5ade
+Size (pugixml-1.11.tar.gz) = 385889 bytes
+BLAKE2s (synergy-core-1.14.2.36.tar.gz) = 769488716d0920260bde02419ac9282f5ee80e087b161af75832f6808df0109c
+SHA512 (synergy-core-1.14.2.36.tar.gz) = bf9701c8747c569ca9ed024f821676fca5d4fed7dfbf53089eaf49203c3a46513e412580c380783754d2d25a6a42006360ccef9851e73555348bde16a8377432
+Size (synergy-core-1.14.2.36.tar.gz) = 4635427 bytes
+SHA1 (patch-CMakeLists.txt) = 3f0e3a894f2233be5dee7efb20fc3931aab0532c
+SHA1 (patch-src_lib_arch_CMakeLists.txt) = 79464a7c2bc2f4012163fd4a84742bdd2e31dd4a
 SHA1 (patch-src_lib_arch_unix_ArchNetworkBSD.cpp) = 17e0e3253ddc47c662a836aa4d01836c31ab588b
+SHA1 (patch-src_lib_arch_unix_ArchSystemUnix.cpp) = 60c79248f23ee9e758621fe56da73abe89f23102
+SHA1 (patch-src_lib_platform_CMakeLists.txt) = 0ed41294261e7dc07313a2d93a6874878f3c27bd
+SHA1 (patch-src_lib_platform_XWindowsKeyState.cpp) = 8c7715c4c569a180f825946e11b2b3967b9c84c1
+SHA1 (patch-src_lib_platform_XWindowsPowerManager.cpp) = 630c648cf31aea19d4b8ccd4f200c96401157459
 SHA1 (patch-src_lib_server_Config.cpp) = dc6a00fd33e71480a5f002cf15b8f876143f82a3
