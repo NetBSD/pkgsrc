@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.112 2022/01/07 12:41:08 nros Exp $
+$NetBSD: CHANGES-2022,v 1.113 2022/01/07 12:50:20 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -128,3 +128,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-setuptools to 60.3.1 [adam 2022-01-07]
 	Updated textproc/py-pygments to 2.11.2 [adam 2022-01-07]
 	Updated textproc/uriparser to 0.9.6 [nros 2022-01-07]
+	Added x11/xtar version 1.4 [nia 2022-01-07]
