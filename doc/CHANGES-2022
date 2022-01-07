@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.117 2022/01/07 16:58:05 adam Exp $
+$NetBSD: CHANGES-2022,v 1.118 2022/01/07 17:22:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -139,3 +139,9 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/py-platformdirs to 2.4.1 [adam 2022-01-07]
 	Updated devel/py-test-localserver to 0.5.1 [adam 2022-01-07]
 	Updated devel/py-path to 16.3.0 [adam 2022-01-07]
+	Updated sysutils/py-structlog to 21.5.0 [adam 2022-01-07]
+	Updated devel/py-astroid to 2.9.2 [adam 2022-01-07]
+	Updated devel/py-ipython to 7.31.0 [adam 2022-01-07]
+	Updated devel/py-types-setuptools to 57.4.6 [adam 2022-01-07]
+	Updated devel/py-types-toml to 0.10.2 [adam 2022-01-07]
+	Updated devel/py-cwcwidth to 0.1.6 [adam 2022-01-07]
