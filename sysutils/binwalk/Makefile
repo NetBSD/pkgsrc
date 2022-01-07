@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/01/07 19:50:46 nikita Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/07 23:18:19 wiz Exp $
 
 DISTNAME=	binwalk-2.3.3
 CATEGORIES=	sysutils
@@ -14,5 +14,5 @@ LICENSE=	mit
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
