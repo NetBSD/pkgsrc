@@ -1,13 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2018/06/17 11:46:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/01/07 19:50:46 nikita Exp $
 bin/binwalk
-${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt
 ${PYSITELIB}/binwalk/__init__.py
 ${PYSITELIB}/binwalk/__init__.pyc
 ${PYSITELIB}/binwalk/__init__.pyo
+${PYSITELIB}/binwalk/__main__.py
+${PYSITELIB}/binwalk/__main__.pyc
+${PYSITELIB}/binwalk/__main__.pyo
 ${PYSITELIB}/binwalk/config/extract.conf
-${PYSITELIB}/binwalk/core/C.py
-${PYSITELIB}/binwalk/core/C.pyc
-${PYSITELIB}/binwalk/core/C.pyo
 ${PYSITELIB}/binwalk/core/__init__.py
 ${PYSITELIB}/binwalk/core/__init__.pyc
 ${PYSITELIB}/binwalk/core/__init__.pyo
@@ -20,6 +23,9 @@ ${PYSITELIB}/binwalk/core/compat.pyo
 ${PYSITELIB}/binwalk/core/display.py
 ${PYSITELIB}/binwalk/core/display.pyc
 ${PYSITELIB}/binwalk/core/display.pyo
+${PYSITELIB}/binwalk/core/exceptions.py
+${PYSITELIB}/binwalk/core/exceptions.pyc
+${PYSITELIB}/binwalk/core/exceptions.pyo
 ${PYSITELIB}/binwalk/core/idb.py
 ${PYSITELIB}/binwalk/core/idb.pyc
 ${PYSITELIB}/binwalk/core/idb.pyo
@@ -38,6 +44,10 @@ ${PYSITELIB}/binwalk/core/settings.pyo
 ${PYSITELIB}/binwalk/core/statuserver.py
 ${PYSITELIB}/binwalk/core/statuserver.pyc
 ${PYSITELIB}/binwalk/core/statuserver.pyo
+${PYSITELIB}/binwalk/core/version.py
+${PYSITELIB}/binwalk/core/version.pyc
+${PYSITELIB}/binwalk/core/version.pyo
+${PYSITELIB}/binwalk/magic/animation
 ${PYSITELIB}/binwalk/magic/archives
 ${PYSITELIB}/binwalk/magic/binarch
 ${PYSITELIB}/binwalk/magic/bincast
@@ -47,7 +57,9 @@ ${PYSITELIB}/binwalk/magic/code
 ${PYSITELIB}/binwalk/magic/compressed
 ${PYSITELIB}/binwalk/magic/console
 ${PYSITELIB}/binwalk/magic/crypto
+${PYSITELIB}/binwalk/magic/ebml
 ${PYSITELIB}/binwalk/magic/ecos
+${PYSITELIB}/binwalk/magic/efi
 ${PYSITELIB}/binwalk/magic/encoding
 ${PYSITELIB}/binwalk/magic/executables
 ${PYSITELIB}/binwalk/magic/filesystems
@@ -58,14 +70,12 @@ ${PYSITELIB}/binwalk/magic/linux
 ${PYSITELIB}/binwalk/magic/lzma
 ${PYSITELIB}/binwalk/magic/misc
 ${PYSITELIB}/binwalk/magic/network
+${PYSITELIB}/binwalk/magic/phones
 ${PYSITELIB}/binwalk/magic/sql
 ${PYSITELIB}/binwalk/magic/vxworks
 ${PYSITELIB}/binwalk/modules/__init__.py
 ${PYSITELIB}/binwalk/modules/__init__.pyc
 ${PYSITELIB}/binwalk/modules/__init__.pyo
-${PYSITELIB}/binwalk/modules/binvis.py
-${PYSITELIB}/binwalk/modules/binvis.pyc
-${PYSITELIB}/binwalk/modules/binvis.pyo
 ${PYSITELIB}/binwalk/modules/compression.py
 ${PYSITELIB}/binwalk/modules/compression.pyc
 ${PYSITELIB}/binwalk/modules/compression.pyo
@@ -81,12 +91,6 @@ ${PYSITELIB}/binwalk/modules/extractor.pyo
 ${PYSITELIB}/binwalk/modules/general.py
 ${PYSITELIB}/binwalk/modules/general.pyc
 ${PYSITELIB}/binwalk/modules/general.pyo
-${PYSITELIB}/binwalk/modules/hashmatch.py
-${PYSITELIB}/binwalk/modules/hashmatch.pyc
-${PYSITELIB}/binwalk/modules/hashmatch.pyo
-${PYSITELIB}/binwalk/modules/heuristics.py
-${PYSITELIB}/binwalk/modules/heuristics.pyc
-${PYSITELIB}/binwalk/modules/heuristics.pyo
 ${PYSITELIB}/binwalk/modules/hexdiff.py
 ${PYSITELIB}/binwalk/modules/hexdiff.pyc
 ${PYSITELIB}/binwalk/modules/hexdiff.pyo
@@ -96,12 +100,12 @@ ${PYSITELIB}/binwalk/modules/signature.pyo
 ${PYSITELIB}/binwalk/plugins/arcadyan.py
 ${PYSITELIB}/binwalk/plugins/arcadyan.pyc
 ${PYSITELIB}/binwalk/plugins/arcadyan.pyo
-${PYSITELIB}/binwalk/plugins/compressd.py
-${PYSITELIB}/binwalk/plugins/compressd.pyc
-${PYSITELIB}/binwalk/plugins/compressd.pyo
 ${PYSITELIB}/binwalk/plugins/cpio.py
 ${PYSITELIB}/binwalk/plugins/cpio.pyc
 ${PYSITELIB}/binwalk/plugins/cpio.pyo
+${PYSITELIB}/binwalk/plugins/dlromfsextract.py
+${PYSITELIB}/binwalk/plugins/dlromfsextract.pyc
+${PYSITELIB}/binwalk/plugins/dlromfsextract.pyo
 ${PYSITELIB}/binwalk/plugins/gzipextract.py
 ${PYSITELIB}/binwalk/plugins/gzipextract.pyc
 ${PYSITELIB}/binwalk/plugins/gzipextract.pyo
@@ -114,9 +118,6 @@ ${PYSITELIB}/binwalk/plugins/jffs2valid.pyo
 ${PYSITELIB}/binwalk/plugins/lzmaextract.py
 ${PYSITELIB}/binwalk/plugins/lzmaextract.pyc
 ${PYSITELIB}/binwalk/plugins/lzmaextract.pyo
-${PYSITELIB}/binwalk/plugins/lzmamod.py
-${PYSITELIB}/binwalk/plugins/lzmamod.pyc
-${PYSITELIB}/binwalk/plugins/lzmamod.pyo
 ${PYSITELIB}/binwalk/plugins/lzmavalid.py
 ${PYSITELIB}/binwalk/plugins/lzmavalid.pyc
 ${PYSITELIB}/binwalk/plugins/lzmavalid.pyo
@@ -129,6 +130,9 @@ ${PYSITELIB}/binwalk/plugins/ubivalid.pyo
 ${PYSITELIB}/binwalk/plugins/unjffs2.py
 ${PYSITELIB}/binwalk/plugins/unjffs2.pyc
 ${PYSITELIB}/binwalk/plugins/unjffs2.pyo
+${PYSITELIB}/binwalk/plugins/unpfs.py
+${PYSITELIB}/binwalk/plugins/unpfs.pyc
+${PYSITELIB}/binwalk/plugins/unpfs.pyo
 ${PYSITELIB}/binwalk/plugins/ziphelper.py
 ${PYSITELIB}/binwalk/plugins/ziphelper.pyc
 ${PYSITELIB}/binwalk/plugins/ziphelper.pyo
