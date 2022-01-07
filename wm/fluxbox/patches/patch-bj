@@ -1,8 +1,13 @@
-$NetBSD: patch-bj,v 1.2 2012/04/17 20:08:06 bsiegert Exp $
+$NetBSD: patch-bj,v 1.3 2022/01/07 17:32:12 gutteridge Exp $
 
---- src/Window.cc.orig	Sat Oct 29 13:45:51 2011
+Fix builds with the SunPro compiler.
+
+Handle oversized windows: prevent both opposing edges from being offscreen.
+https://github.com/fluxbox/fluxbox/commit/299e098f5f6fc6d33684b3d4e80185c8a7899664
+
+--- src/Window.cc.orig	2015-02-08 10:44:45.373187009 +0000
 +++ src/Window.cc
-@@ -185,9 +185,10 @@ void lowerFluxboxWindow(FluxboxWindow &w
+@@ -166,9 +166,10 @@ void lowerFluxboxWindow(FluxboxWindow &w
          win.screen().layerManager().lock();
  
      // lower the windows from the top down, so they don't change stacking order
@@ -16,3 +21,29 @@ $NetBSD: patch-bj,v 1.2 2012/04/17 20:08:06 bsiegert Exp $
      for (; it != it_end; ++it) {
          if ((*it)->fbwindow() && !(*it)->fbwindow()->isIconic())
              // TODO: should we also check if it is the active client?
+@@ -478,6 +479,25 @@ void FluxboxWindow::init() {
+ 
+     fluxbox.attachSignals(*this);
+ 
++    if (!m_state.fullscreen) {
++        unsigned int new_width = 0, new_height = 0;
++        if (m_client->width() >= screen().width()) {
++            m_state.maximized |= WindowState::MAX_HORZ;
++            new_width = 2 * screen().width() / 3;
++        }
++        if (m_client->height() >= screen().height()) {
++            m_state.maximized |= WindowState::MAX_VERT;
++            new_height = 2 * screen().height() / 3;
++        }
++        if (new_width || new_height) {
++            const int maximized = m_state.maximized;
++            m_state.maximized = WindowState::MAX_NONE;
++            resize(new_width ? new_width : width(), new_height ? new_height : height());
++            m_placed = false;
++            m_state.maximized = maximized;
++        }
++    }
++
+     // this window is managed, we are now allowed to modify actual state
+     m_initialized = true;
+ 
