@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2022/01/07 15:49:53 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/07 20:24:39 tnn Exp $
 
 .include "../../lang/llvm/version.mk"
 
 DISTNAME=	compiler-rt-${LLVM_VERSION}.src
 PKGNAME=	${DISTNAME:S/.src//:S/compiler-rt-/wasi-compiler-rt-/}
+PKGREVISION=	1
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -59,6 +60,13 @@ CMAKE_INSTALL_PREFIX=	${PREFIX}/lib/clang/13.0.0
 
 post-extract:
 	${MKDIR} ${WRKDIR}/build
+
+# Run llvm-ranlib again on the archive. Fixes mystery build failure
+# in Firefox due to missing index. Might be a MAKE_JOBS problem in
+# this package?
+post-install:
+	${PREFIX}/bin/llvm-ranlib \
+	  ${DESTDIR}${PREFIX}/lib/clang/${LLVM_VERSION}/lib/wasi/libclang_rt.builtins-wasm32.a
 
 .include "../../mk/bsd.prefs.mk"
 
