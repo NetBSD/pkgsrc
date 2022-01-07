@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.123 2022/01/07 23:04:02 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.124 2022/01/07 23:15:15 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -155,3 +155,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/fmtlib to 8.1.1 [adam 2022-01-07]
 	Updated textproc/jo to 1.6 [fcambus 2022-01-07]
 	Updated net/synergy to 1.14.2.36 [tnn 2022-01-07]
+	Updated textproc/py-prettytable to 3.0.0 [fcambus 2022-01-07]
