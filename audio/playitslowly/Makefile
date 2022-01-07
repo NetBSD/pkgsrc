@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2021/12/31 08:10:03 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/01/07 15:05:31 wiz Exp $
 
 DISTNAME=	playitslowly-1.5.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	https://29a.ch/playitslowly/
 
@@ -28,6 +28,7 @@ USE_LANGUAGES=	# none
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
+_PYSETUPTOOLSINSTALLARGS:=	${_PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
