@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2022/01/04 20:54:50 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/07 17:04:31 adam Exp $
 
-DISTNAME=	structlog-21.2.0
+DISTNAME=	structlog-21.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/structlog/}
 
@@ -17,6 +16,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-randomly-[0-9]*:../../devel/py-test-randomly
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+
+PYSETUP=	-c 'from setuptools import setup; setup(name="structlog", version="${PKGVERSION_NOREV}", packages=["structlog"], package_data={"": ["*"]}, package_dir={"": "src"})'
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
