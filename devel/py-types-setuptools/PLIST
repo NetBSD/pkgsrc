@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2021/12/07 18:01:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/07 17:19:22 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pkg_resources-stubs/METADATA.toml
 ${PYSITELIB}/pkg_resources-stubs/__init__.pyi
 ${PYSITELIB}/pkg_resources-stubs/py31compat.pyi
@@ -51,7 +55,3 @@ ${PYSITELIB}/setuptools-stubs/unicode_utils.pyi
 ${PYSITELIB}/setuptools-stubs/version.pyi
 ${PYSITELIB}/setuptools-stubs/wheel.pyi
 ${PYSITELIB}/setuptools-stubs/windows_support.pyi
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
