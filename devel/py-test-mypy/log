@@ -1,6 +1,0 @@
-## [0.8.1](https://github.com/dbader/pytest-mypy/milestone/16)
-* Add a partial workaround for https://github.com/pytest-dev/pytest/issues/8016.
-
-## [0.8.0](https://github.com/dbader/pytest-mypy/milestone/15)
-* Add support for Python 3.9.
-* Stop injecting `MypyStatusItem` in `pytest_collection_modifyitems` to fix `--looponfail`.
