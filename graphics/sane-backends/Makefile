@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2022/01/04 16:06:54 triaxx Exp $
+# $NetBSD: Makefile,v 1.78 2022/01/08 11:47:49 wiz Exp $
 
 .include "Makefile.common"
 MASTER_SITES=	https://gitlab.com/sane-project/backends/uploads/104f09c07d35519cc8e72e604f11643f/
@@ -9,6 +9,8 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 USE_TOOLS+=		msgfmt msgmerge pkg-config
 USE_PKGLOCALEDIR=	YES
+
+PYTHON_VERSIONS_ACCEPTED=	27
 
 # c++11 is needed for genesys backend
 USE_LANGUAGES=		c c++11
@@ -77,5 +79,6 @@ CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/sane.d/${f}
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../lang/python/tool.mk"
 
 .include "../../mk/bsd.pkg.mk"
