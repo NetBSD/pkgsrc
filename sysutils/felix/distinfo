@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2021/12/10 17:19:49 pin Exp $
+$NetBSD: distinfo,v 1.6 2022/01/08 15:30:51 pin Exp $
 
 BLAKE2s (autocfg-1.0.1.crate) = 5ed71afef2e7ff6595833cf457df844e3f461a1b7a8f0d541b1b2c5c5e6394a0
 SHA512 (autocfg-1.0.1.crate) = 630b348acb98b012e97804e6325d03c89abc22f2157762c59144c04e6c733daf550bdc7f0fe0b9f3b50e15dae8c1c3c4bdfce3d805b02f0fc987311f5332419b
@@ -18,9 +18,9 @@ Size (dirs-4.0.0.crate) = 12503 bytes
 BLAKE2s (dirs-sys-0.3.6.crate) = e6d58252580f5708c68b7019115f1d06a38f443cfb22f0379f549dc0128a542d
 SHA512 (dirs-sys-0.3.6.crate) = 79b6bfda14aafa3839365496e1b1926f763d3569e4e138a59f4acae15c38ec9a3bdcaa64293b03b536141c897c2bf68a67d7ae5670d86215080aa313e53d39e5
 Size (dirs-sys-0.3.6.crate) = 10626 bytes
-BLAKE2s (felix-0.2.12.tar.gz) = 24bef05a3c1a341a55489af9b1f0f2d21becdfc1e325b25717694c8e2dd18810
-SHA512 (felix-0.2.12.tar.gz) = 5071857d6def6e7c5ac63d86f7814ba54fb6cd3ff1554269fd86767703eb47b3d7b5b2856a5d1c6b0ed40755d3724580e8c4902bd325416bd14e4eeb89167bfa
-Size (felix-0.2.12.tar.gz) = 426148 bytes
+BLAKE2s (felix-0.3.0.tar.gz) = b7ebfea8e837dce19edeeb782406399bb0d6f3daabf7bddfedf282c984b9b646
+SHA512 (felix-0.3.0.tar.gz) = 9c44e5d761385aa532e7538676b3259a838b71ae5aa6dfa9fd14ae18928bbec6320e2df6c798afce9f24c281976d87058a32ea4a2b0440f63f58399cb64144fc
+Size (felix-0.3.0.tar.gz) = 379342 bytes
 BLAKE2s (getrandom-0.2.3.crate) = c451e4c9701d09c79572625708c12711e2a0a14a925b614b8be72f231a601f18
 SHA512 (getrandom-0.2.3.crate) = e6da64ed529cb0fc000b613f75187ed6b20f716e721d8a02ac2ae39c507fb9f6189ebb66b522d28584eff1e7e9efc274cad6bfe43f464f58053701e1d51c603d
 Size (getrandom-0.2.3.crate) = 26261 bytes
