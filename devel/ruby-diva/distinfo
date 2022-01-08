@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:19:30 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/01/08 15:13:46 tsutsui Exp $
 
-BLAKE2s (diva-1.1.1.gem) = 026a4213c1d3b8cf9e9a3243df2e85c1acbe636881d1a0894f53a8c90ffa716b
-SHA512 (diva-1.1.1.gem) = f99343fcb5fe2907e6d641e6a78b25b2f6be328e794a7e60a966b3e46ae6dd2c0376cc8bef02871e63d04568da016de553beddeabf695715d572cd8d6933f114
-Size (diva-1.1.1.gem) = 15872 bytes
+BLAKE2s (diva-2.0.1.gem) = 53e4abadd295068b0d61a7631f67abcbb498d57198e63d0526f05a8f0ed09729
+SHA512 (diva-2.0.1.gem) = d70e88a60f016bf4193325e930221e26e87c871ae374fbd090f95109fe503d96e47e3da4288c293bb91aa5467cc17035aa0a6efb5b915aff44af2d9cea76d23d
+Size (diva-2.0.1.gem) = 16384 bytes
