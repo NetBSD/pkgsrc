@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2021/11/02 12:03:53 adam Exp $
+# $NetBSD: Makefile,v 1.109 2022/01/08 11:28:16 schmonz Exp $
 
 .include "../../mail/dovecot2/Makefile.common"
 
@@ -35,11 +35,15 @@ OWN_DIRS+=		${PKG_SYSCONFDIR}/dovecot/conf.d
 REPLACE_BASH+=		src/util/dovecot-sysreport
 REPLACE_BASH+=		src/util/health-check.sh
 
-post-install:
+enable-manz-by-replacing-roff-includes-with-symlinks:
+	cd ${DESTDIR}${PREFIX}/${PKGMANDIR} && \
+	for i in $$(${GREP} -lr ^\\.so .); do \
+		j=$$(${SED} -e 's|^\.so |../|' < $${i}); \
+		${RM} -f $${i} && ${LN} -s $${j} $${i}; \
+	done
+
+post-install: enable-manz-by-replacing-roff-includes-with-symlinks
 	${INSTALL_DATA} ${WRKSRC}/doc/dovecot-openssl.cnf ${DESTDIR}${EGDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/doc/mkcert.sh ${DESTDIR}${EGDIR}
-
-# Don't compress manual pages as they include each other.
-.undef MANZ
 
 .include "../../mk/bsd.pkg.mk"
