@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2021/10/23 00:42:38 tsutsui Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/08 15:13:46 tsutsui Exp $
 
-DISTNAME=	diva-1.1.1
+DISTNAME=	diva-2.0.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 
