@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.138 2022/01/08 15:36:03 pin Exp $
+$NetBSD: CHANGES-2022,v 1.139 2022/01/08 15:41:36 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -170,3 +170,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/featherpad to 1.1.1 [pin 2022-01-08]
 	Updated x11/citron to 0.13.0 [pin 2022-01-08]
 	Updated sysutils/broot to 1.9.1 [pin 2022-01-08]
+	Updated sysutils/entr to 5.1 [leot 2022-01-08]
