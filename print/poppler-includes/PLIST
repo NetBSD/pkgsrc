@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2021/11/07 13:01:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2022/01/08 11:16:05 wiz Exp $
 include/poppler/Annot.h
 include/poppler/AnnotStampImageHelper.h
 include/poppler/Array.h
@@ -19,6 +19,8 @@ include/poppler/Decrypt.h
 include/poppler/Dict.h
 include/poppler/Error.h
 include/poppler/ErrorCodes.h
+include/poppler/FDPDFDocBuilder.h
+include/poppler/FILECacheLoader.h
 include/poppler/FileSpec.h
 include/poppler/FontEncodingTables.h
 include/poppler/FontInfo.h
@@ -64,8 +66,6 @@ include/poppler/SecurityHandler.h
 include/poppler/SignatureInfo.h
 include/poppler/Sound.h
 include/poppler/SplashOutputDev.h
-include/poppler/StdinCachedFile.h
-include/poppler/StdinPDFDocBuilder.h
 include/poppler/Stream-CCITT.h
 include/poppler/Stream.h
 include/poppler/StructElement.h
