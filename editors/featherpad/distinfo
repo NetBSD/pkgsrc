@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/12/29 05:47:44 pin Exp $
+$NetBSD: distinfo,v 1.17 2022/01/08 15:32:14 pin Exp $
 
-BLAKE2s (FeatherPad-V1.1.0.tar.gz) = 5fbedbc9533f427340247b9907a2978a106317df703a3a54fe74acdef1427a7b
-SHA512 (FeatherPad-V1.1.0.tar.gz) = c734619ea8eda2709ccfa4d1b3c2ac541f32d52f31f0896ddf3c1c5733f175da9d955458a62a34221400a73003970cf796f59cf574b499831267b6f4d1a28d21
-Size (FeatherPad-V1.1.0.tar.gz) = 1061070 bytes
+BLAKE2s (FeatherPad-V1.1.1.tar.gz) = e639a9e3598c5bf4ab380a15b3ea4d771a36f80ac2d2879d352ec4b567067355
+SHA512 (FeatherPad-V1.1.1.tar.gz) = 1c2a1cfb13b89ff72495088bbb46eb50a757b4820cf9396043e2fc89de76d45bc465acb0784330ee7dc778c1720b41c10156bd9cf2fe42d2b71e78d57afe51a3
+Size (FeatherPad-V1.1.1.tar.gz) = 1061498 bytes
