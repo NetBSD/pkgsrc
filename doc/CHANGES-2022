@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.127 2022/01/08 10:37:36 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.128 2022/01/08 11:16:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -159,3 +159,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/mob to 2.2.0 [schmonz 2022-01-08]
 	Updated security/wolfssl to 5.1.1 [fox 2022-01-08]
 	Updated devel/py-async-timeout to 4.0.2 [wiz 2022-01-08]
+	Updated print/poppler to 22.01.0 [wiz 2022-01-08]
