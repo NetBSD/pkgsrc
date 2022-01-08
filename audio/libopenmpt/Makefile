@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2021/12/30 19:43:09 fcambus Exp $
+# $NetBSD: Makefile,v 1.56 2022/01/08 11:57:37 wiz Exp $
 
 DISTNAME=	libopenmpt-0.6.0+release.autotools
 PKGNAME=	${DISTNAME:C/\+.*//}
@@ -14,6 +14,8 @@ BUILD_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 
 USE_LANGUAGES=	c c++
 USE_TOOLS=	gmake pkg-config
+
+GCC_REQD+=	8 # std::charconv
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
