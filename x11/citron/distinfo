@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2022/01/06 07:52:32 pin Exp $
+$NetBSD: distinfo,v 1.9 2022/01/08 15:34:32 pin Exp $
 
 BLAKE2s (aho-corasick-0.7.18.crate) = 8925e88e2df4b5ca3b31783f527e1bb31dbe27846f409f631148fa239f3b2935
 SHA512 (aho-corasick-0.7.18.crate) = 7a23b16231a90d23ee60ad4c81bc225410599a4560d33d3a203138fc540c39cf1000100fed3aed40dcc371c3635656a3792545dca5dd1aefbde00d8774eebd00
@@ -150,9 +150,9 @@ Size (libc-0.2.112.crate) = 571445 bytes
 BLAKE2s (libdbus-sys-0.2.2.crate) = 7a2b4e3db49dad16a89c2b3d1790dfcee132f93c83949946d6365a63c151932d
 SHA512 (libdbus-sys-0.2.2.crate) = 70bd8d4705172af1e3eaa76472c78cf90fb6aa45d1cc4b5e93869d21f27eea519582498eac51c4f06d3a17a9a4ecd8607c3b1b3415a1de8aa3f662c7d2012a97
 Size (libdbus-sys-0.2.2.crate) = 10990 bytes
-BLAKE2s (libmacchina-6.0.1.crate) = 9783fa66a00bb34f302f440a31a958cc651ec551e2764173f94922247499ea92
-SHA512 (libmacchina-6.0.1.crate) = a40af5c83340dd127053966ed99ab4aee7caa500e0f7eb33ee7779935d342854c91b5360ca07395fbc3c57c6b8a0f109972375756b474a84927388757f0a1fa4
-Size (libmacchina-6.0.1.crate) = 33193 bytes
+BLAKE2s (libmacchina-6.0.2.crate) = 4dcdcf3813cda651d2c2dbd516e6fc887a9bef09a1503864dbcfbd485a474b1b
+SHA512 (libmacchina-6.0.2.crate) = f36ecdf787fe53b36459ba96f1da2c871c4054c63a94bf8c3fad7730602c519a05a6c930d30d274f44cc737412b2ec72c68a236a5e895381a8ffae41f1279fb2
+Size (libmacchina-6.0.2.crate) = 33239 bytes
 BLAKE2s (linicon-2.2.0.crate) = e87e99a18649cc9b2d512a8dc41b1ce4d1d08bc819d327e85697a8f696418031
 SHA512 (linicon-2.2.0.crate) = d7328517d47dc6cc2ed4acb0f6cb0b1b1b858b1420946d93d2af9126028f895bd67d9323f1b0f7d364a128d7a46cf711b0d03ef8fd2d84f254aa8a3a22688763
 Size (linicon-2.2.0.crate) = 22448 bytes
@@ -225,9 +225,6 @@ Size (objc_id-0.1.1.crate) = 3258 bytes
 BLAKE2s (os-release-0.1.0.crate) = 581465c56f02976eda2180ac22babc928202a86ed98d60d55b3eb073dfaa6d35
 SHA512 (os-release-0.1.0.crate) = b0f403f0f2d3faeeadef8c11470cfed59435d7dcf5e0238cb6e00f2a8fce9f2f6d60f73d2c79e1850e4e3494f7aaf95e469b27d209ea74815607b391e2262844
 Size (os-release-0.1.0.crate) = 3760 bytes
-BLAKE2s (owo-colors-3.2.0.crate) = f5a11c5d9319e459da3a86a4f0f921bcc96a487ce382b7590eec64c20a250178
-SHA512 (owo-colors-3.2.0.crate) = bac9c5f653447d98a9c324c217b47d40e9df4990593f17a973ae8cf998290cf1ec078221b9608ae548a1ed9c8d2e88feba765a60e118ced946dc48ef6c9edcb1
-Size (owo-colors-3.2.0.crate) = 26928 bytes
 BLAKE2s (parse-zoneinfo-0.3.0.crate) = 7be9897e0a7b1d3691b3b8f978b58e8164e97c243384a33ff86463bcaf31efdc
 SHA512 (parse-zoneinfo-0.3.0.crate) = e87eb0feca1feda438bb44d92268779053feec9b0823a336ffc593f508fb6e918add1023d4abcb23fa334efe8a07ab41143f5fe841b4f62ac000feb23c6d840e
 Size (parse-zoneinfo-0.3.0.crate) = 76590 bytes
@@ -372,9 +369,9 @@ Size (unicode-width-0.1.9.crate) = 16745 bytes
 BLAKE2s (unicode-xid-0.2.2.crate) = f490e112605a2f8c1245fe3eac08a20787a04af701715892031431425bba0ae3
 SHA512 (unicode-xid-0.2.2.crate) = 92ffd0dd34e3ca235ecf110b38c447d3ec1faa23d76c112457f28d432f92fa6b5f428bc5e1bfd278f361f55426dd96e19ecb0d3eff6cf250892f069c52bd89a8
 Size (unicode-xid-0.2.2.crate) = 14955 bytes
-BLAKE2s (v0.11.0.tar.gz) = 9a886cd4ebb60d31817a09087a5e14b9202d937f6509140ce56148969bec58c2
-SHA512 (v0.11.0.tar.gz) = e7f8d870a21febfad3f6ef8db549f54fcc3ca73fd2648a25f3a9353b26f9d5f493cc98a0c48df43158ceae578a6f6d4d1ad344eea275a69b5dd07b7efa4f7576
-Size (v0.11.0.tar.gz) = 58104 bytes
+BLAKE2s (v0.13.0.tar.gz) = d83ab95bbd10d9089ab93a7bc1917c76a051168185fdc0a1f483f4aa6f4d457c
+SHA512 (v0.13.0.tar.gz) = 8daeaf3e9339ae266fc58f6573d49319b2d478d7181a285470dca24c8d37e44c2aaa6863389c1d786934da0a0859020bb8cc33cea3b35e9bed9401d6f0350d8a
+Size (v0.13.0.tar.gz) = 57667 bytes
 BLAKE2s (version_check-0.9.3.crate) = 4f560ca94e86f6c27f91488f46e33630816faa21057a43c5cc1e04390d768d2e
 SHA512 (version_check-0.9.3.crate) = 4b3b428214a0322af536a18e6f050438398766af6589389f20a804121a6721962ba411e2dcfded60aaa74313128fb0e831bea31378e2695c29b29bdc24d7cbfd
 Size (version_check-0.9.3.crate) = 12547 bytes
