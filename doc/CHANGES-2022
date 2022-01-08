@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.129 2022/01/08 12:02:22 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.130 2022/01/08 12:10:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -161,3 +161,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-async-timeout to 4.0.2 [wiz 2022-01-08]
 	Updated print/poppler to 22.01.0 [wiz 2022-01-08]
 	Removed textproc/p5-yamcha [wiz 2022-01-08]
+	Updated audio/py-mpd2 to 3.0.4 [wiz 2022-01-08]
