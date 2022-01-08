@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.8 2015/11/06 17:07:23 adam Exp $
-bin/smicache
+@comment $NetBSD: PLIST,v 1.9 2022/01/08 14:50:59 wiz Exp $
+${PLIST.smicache}bin/smicache
 bin/smidiff
 bin/smidump
 bin/smilint
