@@ -1,13 +1,17 @@
-$NetBSD: distinfo,v 1.25 2021/10/26 09:57:04 nia Exp $
+$NetBSD: distinfo,v 1.26 2022/01/08 14:43:09 tnn Exp $
 
 BLAKE2s (arj-3.10.22.tar.gz) = 3693d1767527e7f1cdc813d838728389c4ec6fb7910ed272eb1aa1d9645f77eb
 SHA512 (arj-3.10.22.tar.gz) = 4730dfdbab4f8095396c337578ed69bdaae52955ad468db50b52af8ad2846ecd6cfc05eb3ac0d03838c1c32ea60126f14a22b93e8181c06b9546456f3937ff76
 Size (arj-3.10.22.tar.gz) = 431467 bytes
+SHA1 (patch-arj__arcv.c) = 4d6c0df2a7845f71896dcd989ac3fc935b972ec7
+SHA1 (patch-arj__proc.c) = 267a9837b0655b2534f2f25a76b1055bb802d9d6
+SHA1 (patch-arj__proc.h) = 517d695638ac7c0ae319f5249dc955b3c3c77590
 SHA1 (patch-arj__user.c) = 011e5deaa24c696b212beadad7d386ccb3c7112d
 SHA1 (patch-arjdata.c) = 4e4c142b97feee0673b14ea6f454f3d9de45f584
 SHA1 (patch-arjdisp.c) = d843d4dd1006ea30e8bb3a2acddbc2f0ac221abd
 SHA1 (patch-arjsfx.c) = c9e2314d0933cdc12f8e01ca16bc9222ac4e10b9
-SHA1 (patch-decode.c) = 15c31c3bf1303370691b701a98bad88ae1b0967b
+SHA1 (patch-arjtypes.c) = 3f4f83472fa70c55908fe6d89fa0a3d009e68e8a
+SHA1 (patch-decode.c) = d6a2a4f60cb326aabb6bd25973d0aa7901c8595f
 SHA1 (patch-environ.c) = e306005a88825b2bfd5b3bb35b18710d26a4c885
 SHA1 (patch-exe__sear.c) = 6d8db5a2cdb8f2452b96cf4d09687ae9d45d3e17
 SHA1 (patch-fardata.c) = b76ac5a168b9a8e288a610dce093280d31520af6
@@ -16,6 +20,7 @@ SHA1 (patch-gnu_configure.in) = 062f3dc1eee6f009dfdfa432bb3c138a9c28a829
 SHA1 (patch-gnu_makefile.in) = db8a0afa61f49242e9fd601d5fc3167cf75f748b
 SHA1 (patch-integr.c) = fade32219b21ac3382028bf23ee4171d8d095b5f
 SHA1 (patch-msgbind.c) = fa395b0b8b74f4b430a870254a1aa1554f2bb8e7
+SHA1 (patch-postproc.c) = c107de57a691a4937007eca5d0e4afdbc9fa0ba3
 SHA1 (patch-register.c) = 8d81e663b499a45f7faa52b16a6cee47394cd09c
 SHA1 (patch-resource_resource.txt) = ea7044dc8a6e4fed213f00f8db9f6c1ab5df6f72
 SHA1 (patch-uxspec.c) = 24a22fa2822704e620b38df12b76ef88fe908863
