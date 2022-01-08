@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.6 2022/01/06 07:52:32 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.7 2022/01/08 15:34:32 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
 CARGO_CRATE_DEPENDS+=	arrayref-0.3.6
@@ -50,7 +50,7 @@ CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	lexical-core-0.7.6
 CARGO_CRATE_DEPENDS+=	libc-0.2.112
 CARGO_CRATE_DEPENDS+=	libdbus-sys-0.2.2
-CARGO_CRATE_DEPENDS+=	libmacchina-6.0.1
+CARGO_CRATE_DEPENDS+=	libmacchina-6.0.2
 CARGO_CRATE_DEPENDS+=	linicon-2.2.0
 CARGO_CRATE_DEPENDS+=	linked-hash-map-0.5.4
 CARGO_CRATE_DEPENDS+=	local-ip-address-0.4.4
@@ -75,7 +75,6 @@ CARGO_CRATE_DEPENDS+=	objc-0.2.7
 CARGO_CRATE_DEPENDS+=	objc-foundation-0.1.1
 CARGO_CRATE_DEPENDS+=	objc_id-0.1.1
 CARGO_CRATE_DEPENDS+=	os-release-0.1.0
-CARGO_CRATE_DEPENDS+=	owo-colors-3.2.0
 CARGO_CRATE_DEPENDS+=	parse-zoneinfo-0.3.0
 CARGO_CRATE_DEPENDS+=	phf-0.10.1
 CARGO_CRATE_DEPENDS+=	phf_codegen-0.10.0
