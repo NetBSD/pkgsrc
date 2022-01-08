@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.2 2018/01/02 15:52:44 fhajny Exp $
+$NetBSD: patch-ae,v 1.3 2022/01/08 11:41:21 schmonz Exp $
+
+Default to passwd, not pam, for passdb.
 
 --- doc/example-config/conf.d/auth-system.conf.ext.orig	2017-12-22 13:53:36.000000000 +0000
 +++ doc/example-config/conf.d/auth-system.conf.ext
