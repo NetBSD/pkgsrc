@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.130 2022/01/08 12:10:46 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.131 2022/01/08 15:14:02 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -162,3 +162,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/poppler to 22.01.0 [wiz 2022-01-08]
 	Removed textproc/p5-yamcha [wiz 2022-01-08]
 	Updated audio/py-mpd2 to 3.0.4 [wiz 2022-01-08]
+	Updated devel/ruby-diva to 2.0.1 [tsutsui 2022-01-08]
