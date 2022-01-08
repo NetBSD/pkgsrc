@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.139 2022/01/08 15:41:36 leot Exp $
+$NetBSD: CHANGES-2022,v 1.140 2022/01/08 16:14:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -171,3 +171,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/citron to 0.13.0 [pin 2022-01-08]
 	Updated sysutils/broot to 1.9.1 [pin 2022-01-08]
 	Updated sysutils/entr to 5.1 [leot 2022-01-08]
+	Updated devel/py-canonicaljson to 1.5.0 [adam 2022-01-08]
+	Updated security/py-signedjson to 1.1.1 [adam 2022-01-08]
