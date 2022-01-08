@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:52:55 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/08 16:08:11 adam Exp $
 
-DISTNAME=	canonicaljson-1.4.0
+DISTNAME=	canonicaljson-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/canonicaljson/}
 
@@ -11,13 +10,10 @@ HOMEPAGE=	https://github.com/matrix-org/
 COMMENT=	Encodes objects and arrays as RFC 7159 JSON
 LICENSE=	apache-2.0
 
-USE_LANGUAGES=	# none
-
-DEPENDS+=	${PYPKGPREFIX}-simplejson>=3.14.0:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-frozendict>=1.0:../../devel/py-frozendict
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-simplejson>=3.14.0:../../converters/py-simplejson
 
-INSTALLATION_DIRS=	${PYSITELIB}
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
