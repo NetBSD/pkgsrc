@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.132 2022/01/08 15:15:40 tsutsui Exp $
+$NetBSD: CHANGES-2022,v 1.133 2022/01/08 15:18:09 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -164,3 +164,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/py-mpd2 to 3.0.4 [wiz 2022-01-08]
 	Updated devel/ruby-diva to 2.0.1 [tsutsui 2022-01-08]
 	Updated net/ruby-pluggaloid to 1.7.0 [tsutsui 2022-01-08]
+	Updated net/mikutter to 5.0.2 [tsutsui 2022-01-08]
