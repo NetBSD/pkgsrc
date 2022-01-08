@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/07/04 06:46:26 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/01/08 15:15:22 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.circleci/config.yml
 ${GEM_LIBDIR}/.gitignore
@@ -15,6 +15,7 @@ ${GEM_LIBDIR}/lib/pluggaloid/handler.rb
 ${GEM_LIBDIR}/lib/pluggaloid/handler_tag.rb
 ${GEM_LIBDIR}/lib/pluggaloid/identity.rb
 ${GEM_LIBDIR}/lib/pluggaloid/listener.rb
+${GEM_LIBDIR}/lib/pluggaloid/mirage.rb
 ${GEM_LIBDIR}/lib/pluggaloid/plugin.rb
 ${GEM_LIBDIR}/lib/pluggaloid/stream.rb
 ${GEM_LIBDIR}/lib/pluggaloid/stream_generator.rb
@@ -26,6 +27,7 @@ ${GEM_LIBDIR}/test/generate_test.rb
 ${GEM_LIBDIR}/test/handle_in_generate_test.rb
 ${GEM_LIBDIR}/test/handler_tag_test.rb
 ${GEM_LIBDIR}/test/helper.rb
+${GEM_LIBDIR}/test/mirage_test.rb
 ${GEM_LIBDIR}/test/multi_vm_test.rb
 ${GEM_LIBDIR}/test/plugin_test.rb
 ${GEM_LIBDIR}/test/reactive_test.rb
