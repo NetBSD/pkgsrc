@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:17:50 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/01/08 16:14:31 adam Exp $
 
-BLAKE2s (signedjson-1.1.tar.gz) = 0912a1c8772293521b2d7c11b49ad444c8676ef425a4d81e4881c6d55a6ec88d
-SHA512 (signedjson-1.1.tar.gz) = 1e03a20c7074825a1357dc4dd683a5debb32dc8dbda3d58ca68cd4b3d35482d92b7fb068cfa06076038e0df04ff5503d2c42806b62d4dd3ef38934ba7d6dc200
-Size (signedjson-1.1.tar.gz) = 10053 bytes
+BLAKE2s (signedjson-1.1.1.tar.gz) = 4f539d4b2c81e36807b7fbdb7770a9b00a2fc3e0c2cf1d6dc9deb3aa3f474582
+SHA512 (signedjson-1.1.1.tar.gz) = 9ae67d191f115b80182a6578dadcedeb5898bc2a5f25cb3270c03e132b99f058b482e39828bbf05f9288dce712697a034aaa9fc46812d748121fbbf48a57e741
+Size (signedjson-1.1.1.tar.gz) = 10906 bytes
