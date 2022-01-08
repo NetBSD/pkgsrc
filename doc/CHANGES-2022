@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.134 2022/01/08 15:19:39 tsutsui Exp $
+$NetBSD: CHANGES-2022,v 1.135 2022/01/08 15:31:11 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -166,3 +166,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/ruby-pluggaloid to 1.7.0 [tsutsui 2022-01-08]
 	Updated net/mikutter to 5.0.2 [tsutsui 2022-01-08]
 	Updated net/mikutter-plugins-twitter to 5.0 [tsutsui 2022-01-08]
+	Updated sysutils/felix to 0.3.0 [pin 2022-01-08]
