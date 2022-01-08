@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.29 2021/12/29 05:42:38 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.30 2022/01/08 15:35:46 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	adler32-1.2.0
@@ -101,6 +101,7 @@ CARGO_CRATE_DEPENDS+=	miniz_oxide-0.3.7
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.4.4
 CARGO_CRATE_DEPENDS+=	mio-0.7.14
 CARGO_CRATE_DEPENDS+=	miow-0.3.7
+CARGO_CRATE_DEPENDS+=	nix-0.22.0
 CARGO_CRATE_DEPENDS+=	ntapi-0.3.6
 CARGO_CRATE_DEPENDS+=	num-integer-0.1.44
 CARGO_CRATE_DEPENDS+=	num-iter-0.1.42
@@ -199,4 +200,5 @@ CARGO_CRATE_DEPENDS+=	winapi-x86_64-pc-windows-gnu-0.4.0
 CARGO_CRATE_DEPENDS+=	x11-clipboard-0.5.3
 CARGO_CRATE_DEPENDS+=	xcb-0.10.1
 CARGO_CRATE_DEPENDS+=	xml-rs-0.8.4
+CARGO_CRATE_DEPENDS+=	xterm-query-0.1.0
 CARGO_CRATE_DEPENDS+=	yaml-rust-0.4.5
