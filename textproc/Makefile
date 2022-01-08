@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1263 2021/12/19 06:22:58 taca Exp $
+# $NetBSD: Makefile,v 1.1264 2022/01/08 12:02:21 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -916,7 +916,6 @@ SUBDIR+=	p5-mobiperl
 SUBDIR+=	p5-native-hyperestraier
 SUBDIR+=	p5-podlators
 SUBDIR+=	p5-sdf
-SUBDIR+=	p5-yamcha
 SUBDIR+=	paperoni
 SUBDIR+=	par
 SUBDIR+=	pdfgrep
