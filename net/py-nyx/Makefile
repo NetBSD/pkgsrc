@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2022/01/01 21:21:41 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/08 12:11:51 wiz Exp $
 
 .include "../../net/py-nyx/Makefile.common"
 
 DISTNAME=	nyx-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nyx/}
 
@@ -26,5 +27,5 @@ do-test:
 	cd ${WRKSRC} && ./run_tests.py
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
