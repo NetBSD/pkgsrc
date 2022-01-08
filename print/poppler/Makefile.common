@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.127 2022/01/08 11:16:05 wiz Exp $
+# $NetBSD: Makefile.common,v 1.128 2022/01/08 11:31:49 wiz Exp $
 #
 # used by print/poppler/Makefile
 # used by print/poppler-cpp/Makefile
@@ -21,7 +21,7 @@ DISTINFO_FILE=	${.CURDIR}/../../print/poppler/distinfo
 PATCHDIR=	${.CURDIR}/../../print/poppler/patches
 
 USE_CMAKE=		yes
-USE_LANGUAGES=		c c++14
+USE_LANGUAGES=		c c++17
 USE_TOOLS+=		pkg-config
 GCC_REQD+=		5
 
