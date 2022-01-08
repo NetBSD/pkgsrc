@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2018/01/02 15:52:44 fhajny Exp $
+$NetBSD: patch-ab,v 1.6 2022/01/08 11:41:21 schmonz Exp $
+
+Enable all protocols by default.
 
 --- doc/example-config/dovecot.conf.orig	2017-12-22 13:53:36.000000000 +0000
 +++ doc/example-config/dovecot.conf
