@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2020/01/26 17:30:59 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2022/01/08 14:50:59 wiz Exp $
 
 DISTNAME=	libsmi-0.5.0
+PKGREVISION=	1
 CATEGORIES=	devel net
 MASTER_SITES=	http://www.ibr.cs.tu-bs.de/projects/libsmi/download/
 
@@ -11,8 +12,6 @@ LICENSE=	esdl-license
 
 MIBDIR=		${PREFIX}/share/libsmi/mibs
 PIBDIR=		${PREFIX}/share/libsmi/pibs
-
-DEPENDS+=	wget-[0-9]*:../../net/wget
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
@@ -26,6 +25,8 @@ REPLACE_SH+=	tools/smistrip.in
 REPLACE_SH+=	test/*.test.in
 
 TEST_TARGET=	check
+
+.include "options.mk"
 
 post-extract:
 	rm -f ${WRKSRC}/test/smilint-smiv2.test
