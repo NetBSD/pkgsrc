@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.204 2021/12/08 16:06:03 adam Exp $
+# $NetBSD: Makefile,v 1.205 2022/01/08 15:17:54 tsutsui Exp $
 #
 
-DISTNAME=	mikutter-4.1.7
+DISTNAME=	mikutter-5.0.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://mikutter.hachune.net/bin/
 
@@ -14,17 +13,17 @@ LICENSE=	mit AND cc-by-sa-v3.0
 
 .include "../../lang/ruby/rubyversion.mk"
 
-DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.7.0:../../net/ruby-addressable
-DEPENDS+=	${RUBY_PKGPREFIX}-delayer>=1.1.2:../../devel/ruby-delayer
+DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.8.0:../../net/ruby-addressable
+DEPENDS+=	${RUBY_PKGPREFIX}-delayer>=1.2.1:../../devel/ruby-delayer
 DEPENDS+=	${RUBY_PKGPREFIX}-delayer-deferred>=2.2.0:../../devel/ruby-delayer-deferred
-DEPENDS+=	${RUBY_PKGPREFIX}-diva>=1.0.2:../../devel/ruby-diva
-DEPENDS+=	${RUBY_PKGPREFIX}-gettext>=3.3.5:../../devel/ruby-gettext
+DEPENDS+=	${RUBY_PKGPREFIX}-diva>=2.0.1:../../devel/ruby-diva
+DEPENDS+=	${RUBY_PKGPREFIX}-gettext>=3.4.1:../../devel/ruby-gettext
 DEPENDS+=	${RUBY_PKGPREFIX}-httpclient>=2.8.3nb1:../../www/ruby-httpclient
 DEPENDS+=	${RUBY_PKGPREFIX}-memoist>=0.16.2:../../devel/ruby-memoist
 DEPENDS+=	${RUBY_PKGPREFIX}-moneta-[0-9]*:../../databases/ruby-moneta
 DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri-[0-9]*:../../textproc/ruby-nokogiri
-DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.5.4:../../security/ruby-oauth
-DEPENDS+=	${RUBY_PKGPREFIX}-pluggaloid>=1.5.0:../../net/ruby-pluggaloid
+DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.5.8:../../security/ruby-oauth
+DEPENDS+=	${RUBY_PKGPREFIX}-pluggaloid>=1.7.0:../../net/ruby-pluggaloid
 DEPENDS+=	${RUBY_PKGPREFIX}-typed-array>=0.1.2:../../misc/ruby-typed-array
 
 USE_LANGUAGES=	# none
@@ -48,6 +47,6 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/mikutter.sh ${DESTDIR}${PREFIX}/bin/mikutter
 	${INSTALL_DATA} ${WRKDIR}/desktop ${DESTDIR}${PREFIX}/share/applications/mikutter.desktop
 
-.include "../../x11/ruby-gtk2/buildlink3.mk"
+.include "../../x11/ruby-gtk3/buildlink3.mk"
 .include "../../lang/ruby/replace.mk"
 .include "../../mk/bsd.pkg.mk"
