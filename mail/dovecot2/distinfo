@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.115 2021/12/07 16:57:26 adam Exp $
+$NetBSD: distinfo,v 1.116 2022/01/08 11:41:21 schmonz Exp $
 
 BLAKE2s (dovecot-2.3.17.1.tar.gz) = 102a6b1b9bdfc5c2e642313c194ed2779fdff03711ab9d60f854af82d9cb0330
 SHA512 (dovecot-2.3.17.1.tar.gz) = 976aa4f68e86f401e5766017e1702740d5b03892aff98f31f9ef0c6d242311d0f4b50d7faa426306bf1c902d7fc6d021438977bc887fa66ee360b069ec32ad79
 Size (dovecot-2.3.17.1.tar.gz) = 7700848 bytes
 SHA1 (patch-aa) = 3af01aa4a8cea1a3fb840b6243a744de77069611
-SHA1 (patch-ab) = 9db15fd853ba47ef4bf04f2adc9ab24f71ee4d1e
-SHA1 (patch-ae) = c795585df9f415ceabb28eec1ff691ee26168d3b
-SHA1 (patch-af) = c066e94dd6593d16eec3e66f5f4d26f021918498
+SHA1 (patch-ab) = 685ab3d0e21515bf157e9897ebdebf484f0ece96
+SHA1 (patch-ae) = c1e76d75fab4b13d3b9b33af800bac18c90989da
+SHA1 (patch-af) = 15aa10e75845ef258cd6934b8209a7744eb5aa4c
 SHA1 (patch-src_imap_imap-client.h) = 1a2bf95ab6af57d88862a1512624bf263f4c2ce7
 SHA1 (patch-src_lib-ldap_ldap-private.h) = 2d5ce32330ad4164cc75f8d209ba499d37ed01fc
 SHA1 (patch-src_lib_connection.h) = c147511f4ff50e4b5a048c3a363f0af90ee4c6ad
