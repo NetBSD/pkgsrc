@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2022/01/08 11:28:16 schmonz Exp $
+# $NetBSD: Makefile,v 1.110 2022/01/08 11:41:21 schmonz Exp $
 
 .include "../../mail/dovecot2/Makefile.common"
 
@@ -35,6 +35,7 @@ OWN_DIRS+=		${PKG_SYSCONFDIR}/dovecot/conf.d
 REPLACE_BASH+=		src/util/dovecot-sysreport
 REPLACE_BASH+=		src/util/health-check.sh
 
+.PHONY: enable-manz-by-replacing-roff-includes-with-symlinks
 enable-manz-by-replacing-roff-includes-with-symlinks:
 	cd ${DESTDIR}${PREFIX}/${PKGMANDIR} && \
 	for i in $$(${GREP} -lr ^\\.so .); do \
