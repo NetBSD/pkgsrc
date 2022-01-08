@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/01/07 20:24:39 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2022/01/08 17:52:09 gutteridge Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -62,8 +62,8 @@ post-extract:
 	${MKDIR} ${WRKDIR}/build
 
 # Run llvm-ranlib again on the archive. Fixes mystery build failure
-# in Firefox due to missing index. Might be a MAKE_JOBS problem in
-# this package?
+# in Firefox due to missing index (see PR pkg/56590). Might be a MAKE_JOBS
+# problem in this package?
 post-install:
 	${PREFIX}/bin/llvm-ranlib \
 	  ${DESTDIR}${PREFIX}/lib/clang/${LLVM_VERSION}/lib/wasi/libclang_rt.builtins-wasm32.a
