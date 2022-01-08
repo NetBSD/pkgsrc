@@ -1,16 +1,19 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:52:34 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/08 12:10:38 wiz Exp $
 
-DISTNAME=	python-mpd2-1.0.0
-PKGNAME=	${PYPKGPREFIX}-mpd2-1.0.0
-PKGREVISION=	1
+DISTNAME=	python-mpd2-3.0.4
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-mpd2/}
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://musicpd.org/libs/python-mpd2/
 COMMENT=	Python mpd client library
 LICENSE=	gnu-lgpl-v3
+
+# tox.ini not in pypi distfile
+#TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+#TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
+#TEST_DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
 USE_LANGUAGES=	# none
 
