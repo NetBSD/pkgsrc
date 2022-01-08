@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2018/10/23 01:42:35 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/08 12:11:51 wiz Exp $
 bin/nyx
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/entry_points.txt
-${PYSITELIB}/${EGG_FILE}/requires.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/nyx/__init__.py
 ${PYSITELIB}/nyx/__init__.pyc
 ${PYSITELIB}/nyx/__init__.pyo
