@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/01/09 13:10:07 rhialto Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/09 16:16:32 wiz Exp $
 
 DISTNAME=	PyQtWebEngine-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-qt5-webengine-5.15.5
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.riverbankcomputing.com/software/pyqtwebengine/
 COMMENT=	Python module for QtWebEngine (Chromium-based)
 LICENSE=	gnu-gpl-v3
+
+DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 
 .include "../../lang/python/pyversion.mk"
 
@@ -31,8 +33,6 @@ do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
                 ${PYTHONBIN} configure.py ${CONFIGURE_ARGS}
 
-.include "../../mk/bsd.prefs.mk"
-
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-sip/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
@@ -40,5 +40,4 @@ do-configure:
 .include "../../x11/qt5-qtlocation/buildlink3.mk"
 .include "../../x11/qt5-qtwebchannel/buildlink3.mk"
 .include "../../x11/qt5-qtwebengine/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
