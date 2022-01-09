@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2021/12/28 00:01:31 taca Exp $
+# $NetBSD: Makefile,v 1.67 2022/01/09 19:19:23 tsutsui Exp $
 
-DISTNAME=	nokogiri-1.12.5
-PKGREVISION=	2
+DISTNAME=	nokogiri-1.13.0
 CATEGORIES=	textproc
 
 MAINTAINER=	tsutsui@NetBSD.org
@@ -9,14 +8,13 @@ HOMEPAGE=	https://nokogiri.org/
 COMMENT=	HTML, XML, SAX, and Reader parser with XPath and CSS selector support
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-mini_portile2>=2.6.1:../../misc/ruby-mini_portile2
+DEPENDS+=	${RUBY_PKGPREFIX}-mini_portile2>=2.7.0:../../misc/ruby-mini_portile2
 
 USE_GCC_RUNTIME=	yes
 USE_TOOLS+=		pkg-config
 MAKE_ENV+=		NOKOGIRI_USE_SYSTEM_LIBRARIES=yes
 RUBYGEM_OPTIONS+=	--format-executable
-OVERRIDE_GEMSPEC+=	mini_portile2>=2.6.1 \
-			:files ports/archives/libxml2-2.9.12.tar.gz= \
+OVERRIDE_GEMSPEC+=	:files ports/archives/libxml2-2.9.12.tar.gz= \
 			ports/archives/libxslt-1.1.34.tar.gz=
 
 # XXX: work around bug in bootstrap-mk-files, remove when fixed
