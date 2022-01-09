@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.58 2021/12/31 12:07:55 dsainty Exp $
+# $NetBSD: Makefile,v 1.59 2022/01/09 23:59:35 dsainty Exp $
 
 VERSION=	1.29.0
 # Sometimes the distfile unpacks to ZoneMinder and sometimes zoneminder.
 NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
-PKGREVISION=	7
+PKGREVISION=	8
 
 PKGNAME=	${DISTNAME:S/${NAME_DIST}-/${NAME_LOWER}-/}
 DISTNAME=	${NAME_DIST}-${VERSION}
@@ -25,8 +25,10 @@ EXTRACT_USING=	gtar
 
 DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 
-# This PHP 5.6 limitation is only to match the limitation in php-mysql
-PHP_VERSIONS_ACCEPTED=	56
+# ZoneMinder 1.29.0 seems to work fine on at least PHP 5.6 and 7.4.
+# Under PHP 8.0 it is logging at Error level type errors out of skin.js.
+# Under PHP 8.1 it is logging at Panic level that strftime is deprecated.
+PHP_VERSIONS_ACCEPTED=	56 74
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.zoneminder
 PKG_SUPPORTED_OPTIONS=	apache
@@ -142,7 +144,6 @@ CONFIGURE_ARGS+=	--with-webgroup=${APACHE_GROUP}
 # If we're using Apache we're going to need PHP, and PHP extensions.
 .include "../../lang/php/phpversion.mk"
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-[0-9]*:../../www/ap-php
-DEPENDS+=	${PHP_PKG_PREFIX}-mysql-[0-9]*:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql-[0-9]*:../../databases/php-pdo_mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-sockets-[0-9]*:../../net/php-sockets
 .endif
