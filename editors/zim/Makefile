@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2021/12/08 16:04:13 adam Exp $
+# $NetBSD: Makefile,v 1.48 2022/01/09 16:21:43 wiz Exp $
 
-DISTNAME=	zim-0.73.5
+DISTNAME=	zim-0.74.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://zim-wiki.org/downloads/
 
@@ -37,7 +36,7 @@ SUBST_FILES.man-path+=		setup.py
 SUBST_SED.man-path=		-e s,share/man/man1,${PKGMANDIR}/man1,
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

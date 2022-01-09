@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:21:44 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/01/09 16:21:43 wiz Exp $
 
-BLAKE2s (zim-0.73.5.tar.gz) = 0436a561d8ad2c4ef0c2f1a5f0fa9e09324fe30a5ab4e30ecbb9f52763f5b789
-SHA512 (zim-0.73.5.tar.gz) = 78a8996a74c04363c6dfe89a8709b87b6d023add2fbd12a494cddfd0fa29cc319f97a6e7b4d41409fc81d3b1baa9d433d338feedacb97172a9adcba7e8fcdcb5
-Size (zim-0.73.5.tar.gz) = 2159901 bytes
+BLAKE2s (zim-0.74.3.tar.gz) = 6d8bfba5432070019a7da13d996da23278326adcbadc2ada38bff8343943a522
+SHA512 (zim-0.74.3.tar.gz) = 92a530a827b9eb83289e7ffbf3f0e8ca3d9a7a770c0e6a6114541b290f76c6fd00248543170a5444d65bbd7ac7578101658db9639cf569c76324ec7b03344f9a
+Size (zim-0.74.3.tar.gz) = 2998280 bytes
