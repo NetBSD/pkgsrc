@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/01/09 15:42:37 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2022/01/09 15:59:31 wiz Exp $
 
 DISTNAME=	fs-uae-launcher-3.0.5
 PKGREVISION=	2
@@ -25,7 +25,8 @@ INSTALL_TARGET=		install-data
 USE_TOOLS+=		gmake msgfmt
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
+
+USE_PKG_RESOURCES=	yes
 
 PYSETUPINSTALLARGS=	--install-lib=${PREFIX:Q}/share/fs-uae-launcher
 PYSETUPINSTALLARGS+=	--install-scripts=${PREFIX:Q}/share/fs-uae-launcher
@@ -51,5 +52,4 @@ post-install:
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
