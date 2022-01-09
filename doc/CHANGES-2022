@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.148 2022/01/09 16:21:53 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.149 2022/01/09 16:27:59 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -182,3 +182,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/diff-so-fancy version 1.4.2 [wiz 2022-01-09]
 	Updated misc/calibre to 4.11.0 [rhialto 2022-01-09]
 	Updated editors/zim to 0.74.3 [wiz 2022-01-09]
+	Updated misc/calibre to 4.23.0 [rhialto 2022-01-09]

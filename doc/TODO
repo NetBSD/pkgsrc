@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21410 2022/01/09 15:47:26 rhialto Exp $
+$NetBSD: TODO,v 1.21411 2022/01/09 16:27:59 rhialto Exp $
 
 Suggested new packages
 ======================
@@ -536,7 +536,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cacti-spine-1.2.16
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-4.23.0
 	o calibre-5.34.0 [started in wip as calibre5]
 	o calligra-3.0.1 [in wip; koffice successor]
 	o camlp4-4.12
