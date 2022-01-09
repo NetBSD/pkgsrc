@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.142 2022/01/09 00:29:48 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.143 2022/01/09 02:56:23 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -176,3 +176,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated emulators/hercules4sdl to 4.4.1nb1 [rhialto 2022-01-08]
 	Updated multimedia/libva to 2.13.0 [tnn 2022-01-09]
 	Updated multimedia/libva-utils to 2.13.0 [tnn 2022-01-09]
+	Updated www/varnish to 7.0.1 [tnn 2022-01-09]
