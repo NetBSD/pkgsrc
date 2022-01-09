@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q4,v 1.1.2.4 2022/01/05 16:57:29 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q4,v 1.1.2.5 2022/01/09 20:11:13 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q4 branch:
 
@@ -13,4 +13,9 @@ emulators/compat90: fix for PR pkg/56597
 
 Pullup ticket #6559 - requested by sborrill
 www/e2guardian: build fix
+
+Pullup ticket #6560 - requested by tnn
+lang/wasi-compiler-rt: build fix
+lang/wasi-libc: build fix
+lang/wasi-libcxx: build fix
 
