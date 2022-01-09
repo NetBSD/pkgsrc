@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/12/01 16:59:49 pho Exp $
+$NetBSD: distinfo,v 1.5 2022/01/09 20:06:05 pho Exp $
 
 BLAKE2s (fuse-pcachefs-0.3.tar.gz) = 46fba54dc6f2c2cc451c667cadc8686c178b4b09552730b2e9edc2f3417f4027
 SHA512 (fuse-pcachefs-0.3.tar.gz) = 2c0059e716a8e0b4334018bf366796ea95c6a663b12d0f3c76e38b93a90b0ee698f5c0456523a350cb9eeedd03df02a4471fe66d9a425df41305de8bf5105d5c
 Size (fuse-pcachefs-0.3.tar.gz) = 16571 bytes
+SHA1 (patch-pcachefs_pcachefs.py) = bfcde02016c9315fd9a26ab997a253974e14f3c1
