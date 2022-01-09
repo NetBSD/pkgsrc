@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21408 2022/01/08 19:43:26 wiz Exp $
+$NetBSD: TODO,v 1.21409 2022/01/09 07:43:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -493,6 +493,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o baloo-21.04.0
 	o baloo5-5.81.0
 	o basket-2.11b
+	o bat-0.19.0
 	o bbcim-1.0
 	o bbsload-0.2.8
 	o bbweather-0.6.3
@@ -1108,12 +1109,15 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o librelp-1.10.0
 	o libressl-3.3.2
 	o libretro-core-info-1.9.1
+	o libsigsegv-2.14
 	o libslang-2.2.4
 	o libslang2-2.3.2
 	o libspatialite-5.0.1
 	o libtecla-1.6.3
 	o libthai-0.2.2
 	o libtrace-4.0.16
+	o libunistring-1.0
+	o libuv-1.43.0
 	o libvirt-2.3
 	o libwebsockets-4.2.0
 	o libxdg-basedir-1.2.3
@@ -1172,6 +1176,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o md-whois-5.5.9
 	o mdd-20201207
 	o mecab-ipadic-2.7.0.20070801
+	o meld-3.21.1
 	o memached-1.5.6
 	o memtestplus-5.31b
 	o merkaator-0.18.3
@@ -1572,6 +1577,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o profit-2.5.3
 	o proj-8.0.0
 	o prosody-0.11.8
+	o protobuf-3.19.2
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
@@ -1603,6 +1609,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-hyperscan-0.2.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.2
+	o py-mercurial-6.0.1
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
 	o py-newt-0.52.21
@@ -1671,6 +1678,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o razor-qt-0.5.2
 	o rcs-5.10.0
 	o rdp-1.6
+	o readline-8.1.2
 	o rebar-3.13.2
 	o regionset-0.2
 	o remind-3.03.06
@@ -1870,6 +1878,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o userppp-030706
 	o userspace-rcu-0.12.2
 	o utilisp-1.14
+	o vala-0.54.6
 	o vault-1.7.4
 	o vbetool-1.1
 	o vera-1.24
