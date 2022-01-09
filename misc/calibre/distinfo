@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.109 2022/01/09 15:43:51 rhialto Exp $
+$NetBSD: distinfo,v 1.110 2022/01/09 16:26:31 rhialto Exp $
 
-BLAKE2s (calibre-4.11.0.tar.xz) = 5fdcbbb4e9bb5c9a9f8f8f44433c6dec79b4be9e4ec7633b6059815bbe02ca81
-SHA512 (calibre-4.11.0.tar.xz) = 866e86c926ec6508573c5ad9f382fbc8815103d7248c93ce24a87795b2fb144523cb237bb75dffe024a075e2d4f1bbd7f608ca624d66c898f6840a4b4f3081e3
-Size (calibre-4.11.0.tar.xz) = 37038104 bytes
+BLAKE2s (calibre-4.23.0.tar.xz) = c08912bcca9886e5608b5a99144645047c53e2583079db139a7eedddcc54be6c
+SHA512 (calibre-4.23.0.tar.xz) = 2a512f29ddc2fed7f6a229314a9f7fceac198c9422b3be19078685032f1d1cb3b9258ac2609c33d15da20683c1277ed09419ea1e9bbc70430cdc676f60395719
+Size (calibre-4.23.0.tar.xz) = 36908740 bytes
 SHA1 (patch-setup_build.py) = 6eeedbce76a627900c55f59d31ba76dc79fc7d27
 SHA1 (patch-setup_extensions.json) = 90f61a7c776220bfa16439eeb599eb2132e410b1
 SHA1 (patch-setup_install.py) = 758dc31959a6a850602abfcd5d58b19f6b9c6939
