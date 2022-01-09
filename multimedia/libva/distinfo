@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 11:01:10 nia Exp $
+$NetBSD: distinfo,v 1.17 2022/01/09 00:27:57 tnn Exp $
 
-BLAKE2s (libva-2.6.1.tar.gz) = 6daed383fc422b5f6c8e1c588609fbd14731ce809e337bdd57c31663fc2fdd91
-SHA512 (libva-2.6.1.tar.gz) = 29dd4df9da5f9a02149dadfc30cb5edfde63f2d912a99ef8dc4eecb983a09d2cd0451d61bad2b9bec0a25a6c2d2c60d644a2251e2141623fdf0a08eb3e70569a
-Size (libva-2.6.1.tar.gz) = 228850 bytes
-SHA1 (patch-va_Makefile.am) = af963e8279aacf706b6442372ce7cb1436395c74
-SHA1 (patch-va_glx_va__glx__private.h) = daf6552189295a86f1f073ef107b7449e4098251
-SHA1 (patch-va_va__trace.c) = 478f23fb0c5e7cf6a8adc421921af715a62231ef
+BLAKE2s (libva-2.13.0.tar.bz2) = d014c9118ddd34eebb90af8caa6354cb0994b1e27f2c84207f5f9e9d1fd10236
+SHA512 (libva-2.13.0.tar.bz2) = 25c384f4dc577328af67892c055ca1c832b98e2e36c495678c0fb8d5375dfd5b28257d575dca13c0f46d04e66643f729331ddaaa55d48bcc3df28eb3b6f343eb
+Size (libva-2.13.0.tar.bz2) = 495736 bytes
