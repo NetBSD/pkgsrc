@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.146 2022/01/09 14:30:35 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.147 2022/01/09 15:49:16 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -180,3 +180,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/dua-cli to 2.16.0 [pin 2022-01-09]
 	Added x11/py-qt5-webengine version 5.15.5 [rhialto 2022-01-09]
 	Added devel/diff-so-fancy version 1.4.2 [wiz 2022-01-09]
+	Updated misc/calibre to 4.11.0 [rhialto 2022-01-09]
