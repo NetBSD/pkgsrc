@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/01/07 11:46:57 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/09 11:58:14 wiz Exp $
 
 DISTNAME=	traitlets-4.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,9 +23,4 @@ DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
-
-.if ${_PYTHON_VERSION} == 27
-_PYSETUPTOOLSINSTALLARGS:=	${_PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
-.endif
-
 .include "../../mk/bsd.pkg.mk"

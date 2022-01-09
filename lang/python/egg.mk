@@ -1,4 +1,4 @@
-# $NetBSD: egg.mk,v 1.33 2022/01/05 15:41:32 wiz Exp $
+# $NetBSD: egg.mk,v 1.34 2022/01/09 11:58:15 wiz Exp $
 #
 # Common logic to handle Python Eggs
 #
@@ -34,8 +34,6 @@ PRINT_PLIST_AWK+=	{ gsub(/${EGG_NAME}-py${PYVERSSUFFIX:S,.,\.,g}-nspkg.pth/, \
 			       "$${EGG_NAME}-nspkg.pth") }
 PRINT_PLIST_AWK+=	{ gsub(/${PYVERSSUFFIX:S,.,\.,g}/, \
 			       "$${PYVERSSUFFIX}") }
-
-_PYSETUPTOOLSINSTALLARGS=	--single-version-externally-managed
 
 USE_PKG_RESOURCES?=	no
 

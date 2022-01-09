@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/01/07 15:05:31 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/09 11:58:13 wiz Exp $
 
 DISTNAME=	playitslowly-1.5.1
 PKGREVISION=	5
@@ -29,6 +29,5 @@ USE_LANGUAGES=	# none
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
-_PYSETUPTOOLSINSTALLARGS:=	${_PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
