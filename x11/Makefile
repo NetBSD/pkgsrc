@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.949 2022/01/07 12:43:14 nia Exp $
+# $NetBSD: Makefile,v 1.950 2022/01/09 13:10:56 rhialto Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -337,6 +337,7 @@ SUBDIR+=	py-pyperclip
 SUBDIR+=	py-qt4
 SUBDIR+=	py-qt5
 SUBDIR+=	py-qt5-qscintilla
+SUBDIR+=	py-qt5-webengine
 SUBDIR+=	py-qtgraph-qt5
 SUBDIR+=	py-qwt-qt5
 SUBDIR+=	py-sip
