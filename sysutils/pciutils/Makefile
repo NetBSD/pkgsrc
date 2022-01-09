@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2021/12/17 20:07:24 maya Exp $
+# $NetBSD: Makefile,v 1.49 2022/01/09 22:31:57 tnn Exp $
 
 DISTNAME=	pciutils-3.7.0
 PKGREVISION=	2
@@ -40,5 +40,7 @@ SUBST_MESSAGE.dns=	Disabling DNS support on Solaris
 SUBST_STAGE.dns=	pre-configure
 SUBST_FILES.dns=	Makefile
 SUBST_SED.dns=		-e 's/^DNS=/DNS=no/'
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=libpci.ver
 
 .include "../../mk/bsd.pkg.mk"
