@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/12/08 16:07:03 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/09 23:42:03 tnn Exp $
 
 DISTNAME=	cool-retro-term-1.1.1
 PKGREVISION=	2
@@ -25,6 +25,7 @@ SUBST_SED.paths=	-e 's,/usr,${PREFIX},g'
 
 GITHUB_SUBMODULES=	Swordfish90 qmltermwidget \
 			5c47d1f49455394226e0e595f79c148f0c098006 qmltermwidget
+EXTRACT_USING=		bsdtar
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QTDIR}/bin/qmake \

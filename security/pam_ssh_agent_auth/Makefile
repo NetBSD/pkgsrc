@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2021/05/14 11:52:15 nia Exp $
+# $NetBSD: Makefile,v 1.12 2022/01/09 23:42:03 tnn Exp $
 
 DISTNAME=	pam_ssh_agent_auth-0.10.4
 CATEGORIES=	security
@@ -14,6 +14,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	pod2man
 
 GITHUB_SUBMODULES+=	floodyberry ed25519-donna 8757bd4cd209cb032853ece0ce413f122eef212c ed25519-donna
+EXTRACT_USING=		bsdtar
 
 CONFIGURE_ARGS+=	--without-openssl-header-check
 
