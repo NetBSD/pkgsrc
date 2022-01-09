@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2022/01/07 11:46:58 tnn Exp $
+# $NetBSD: Makefile,v 1.76 2022/01/09 11:58:16 wiz Exp $
 
 .include "../../textproc/libxml2/Makefile.common"
 
@@ -38,9 +38,6 @@ EGG_NAME=	${DISTNAME:S/-/_python-/}
 BUILD_DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
 .include "../../lang/python/egg.mk"
-.if ${PYPKGPREFIX} == "py27"
-_PYSETUPTOOLSINSTALLARGS:=	${_PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
-.endif
 .include "../../converters/libiconv/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=${PKGVERSION_NOREV}
 .include "../../textproc/libxml2/buildlink3.mk"
