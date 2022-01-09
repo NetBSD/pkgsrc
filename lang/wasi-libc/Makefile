@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/01/07 15:49:53 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/09 23:42:03 tnn Exp $
 
 GITHUB_PROJECT=	wasi-libc
 GITHUB_TAG=	ad5133410f66b93a2381db5b542aad5e0964db96
@@ -7,6 +7,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=WebAssembly/}
 
 GITHUB_SUBMODULES+=	WebAssembly WASI 3423c9c83c7219095d6e67faaf62598ad370064c wasi/tools/wasi-headers/WASI
+EXTRACT_USING=		bsdtar
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/WebAssembly/wasi-libc/
