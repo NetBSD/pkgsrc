@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2021/05/14 14:17:41 nia Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/09 15:14:39 pho Exp $
 #
 
 DISTNAME=	LZOlayer_fs-20060306
+PKGREVISION=	1
 PKGNAME=	fuse-${DISTNAME:S/LZOlayer_fs/lzofs/}
 CATEGORIES=	filesystems
 #MASTER_SITES=	http://north.one.pl/~kazik/pub/LZOlayer/
