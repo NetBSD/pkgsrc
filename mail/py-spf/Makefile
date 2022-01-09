@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/01/07 11:46:58 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2022/01/09 11:58:15 wiz Exp $
 
 DISTNAME=	pyspf-2.0.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -31,9 +31,4 @@ do-test:
 	cd ${WRKSRC}/test && ${PYTHONBIN} testspf.py
 
 .include "../../lang/python/egg.mk"
-
-.if ${PYPKGPREFIX} == "py27"
-_PYSETUPTOOLSINSTALLARGS:=	${_PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
-.endif
-
 .include "../../mk/bsd.pkg.mk"

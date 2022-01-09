@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/01/07 11:46:58 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/09 11:58:15 wiz Exp $
 
 DISTNAME=		TextTest-4.0.8
 PKGNAME=		${DISTNAME:tl}
@@ -25,11 +25,6 @@ SUBST_FILES.prefix=	texttestlib/default/__init__.py
 SUBST_VARS.prefix=	PREFIX
 
 .include "../../lang/python/egg.mk"
-
-.if ${PYPKGPREFIX} == "py27"
-_PYSETUPTOOLSINSTALLARGS:=	${_PYSETUPTOOLSINSTALLARGS:N--single-version-externally-managed}
-.endif
-
 .include "../../lang/python/application.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
