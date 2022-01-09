@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2019/08/22 18:35:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/01/09 15:42:37 wiz Exp $
 bin/fs-uae-launcher
 share/applications/fs-uae-launcher.desktop
 share/doc/fs-uae-launcher/COPYING
 share/doc/fs-uae-launcher/README
-share/fs-uae-launcher/${EGG_FILE}
 share/fs-uae-launcher/OpenGL/AGL/__init__.py
 share/fs-uae-launcher/OpenGL/AGL/__init__.pyc
 share/fs-uae-launcher/OpenGL/AGL/__init__.pyo
@@ -6869,6 +6868,10 @@ share/fs-uae-launcher/arcade/ui/gl_widget.py
 share/fs-uae-launcher/arcade/ui/gl_widget.pyc
 share/fs-uae-launcher/arcade/ui/gl_widget.pyo
 share/fs-uae-launcher/fs-uae-launcher
+share/fs-uae-launcher/${EGG_INFODIR}/PKG-INFO
+share/fs-uae-launcher/${EGG_INFODIR}/SOURCES.txt
+share/fs-uae-launcher/${EGG_INFODIR}/dependency_links.txt
+share/fs-uae-launcher/${EGG_INFODIR}/top_level.txt
 share/fs-uae-launcher/fsbc/__init__.py
 share/fs-uae-launcher/fsbc/__init__.pyc
 share/fs-uae-launcher/fsbc/__init__.pyo
