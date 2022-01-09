@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.149 2022/01/09 16:27:59 rhialto Exp $
+$NetBSD: CHANGES-2022,v 1.150 2022/01/09 19:19:11 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -183,3 +183,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/calibre to 4.11.0 [rhialto 2022-01-09]
 	Updated editors/zim to 0.74.3 [wiz 2022-01-09]
 	Updated misc/calibre to 4.23.0 [rhialto 2022-01-09]
+	Updated lang/go116 to 1.16.13 [bsiegert 2022-01-09]
