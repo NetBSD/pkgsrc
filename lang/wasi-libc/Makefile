@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/12/22 16:09:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.3.2.1 2022/01/09 20:10:55 bsiegert Exp $
 
 GITHUB_PROJECT=	wasi-libc
 GITHUB_TAG=	ad5133410f66b93a2381db5b542aad5e0964db96
@@ -36,6 +36,9 @@ MAKE_FLAGS+=	WASM_NM=${PREFIX}/bin/llvm-nm
 MAKE_FLAGS+=	INSTALL_DIR=${DESTDIR}${PREFIX}/wasi
 BUILD_TARGET=	finish
 
+ABI=			# 32
+CFLAGS=			-O2
+CXXFLAGS=		-O2
 PKGSRC_COMPILER=	clang
 CLANGBASE=		${PREFIX}
 BUILDLINK_DEPMETHOD.clang=	build
