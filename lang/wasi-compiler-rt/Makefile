@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2021/12/22 16:10:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.3.2.1 2022/01/09 20:10:55 bsiegert Exp $
 
 .include "../../lang/llvm/version.mk"
 
 DISTNAME=	compiler-rt-${LLVM_VERSION}.src
 PKGNAME=	${DISTNAME:S/.src//:S/compiler-rt-/wasi-compiler-rt-/}
+PKGREVISION=	1
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -32,14 +33,14 @@ BUILDLINK_TRANSFORM+=	rm:-I${PREFIX}/include
 CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE=1
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${PREFIX}/bin/clang
-CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${PREFIX}/bin/clang++
-CMAKE_ARGS+=	-DCOMPILER_RT_TEST_COMPILER=${PREFIX}/bin/clang
+CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
+CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
+CMAKE_ARGS+=	-DCOMPILER_RT_TEST_COMPILER=${CC:Q}
 CMAKE_ARGS+=	-DCOMPILER_RT_OS_DIR:STRING=wasi
 CMAKE_ARGS+=	-DLLVM_CONFIG_PATH=${LLVM_CONFIG_PATH:Q}
 CMAKE_ARGS+=	-DCOMPILER_RT_DEFAULT_TARGET_TRIPLE=wasm32-wasi
 CMAKE_ARGS+=	-DCOMPILER_RT_BAREMETAL_BUILD=TRUE
-CMAKE_ARGS+=	-DCMAKE_SYSROOT=${PREFIX}/wasi
+CMAKE_ARGS+=	-DCMAKE_SYSROOT=${BUILDLINK_DIR}/wasi
 CMAKE_ARGS+=	-DCOMPILER_RT_BAREMETAL_BUILD=TRUE
 CMAKE_ARGS+=	-DCOMPILER_RT_EXCLUDE_ATOMIC_BUILTIN=TRUE
 CMAKE_ARGS+=	-DCOMPILER_RT_HAS_FPIC_FLAG:BOOL=ON
@@ -60,6 +61,18 @@ CMAKE_INSTALL_PREFIX=	${PREFIX}/lib/clang/13.0.0
 post-extract:
 	${MKDIR} ${WRKDIR}/build
 
+# Run llvm-ranlib again on the archive. Fixes mystery build failure
+# in Firefox due to missing index. Might be a MAKE_JOBS problem in
+# this package?
+post-install:
+	${PREFIX}/bin/llvm-ranlib \
+	  ${DESTDIR}${PREFIX}/lib/clang/${LLVM_VERSION}/lib/wasi/libclang_rt.builtins-wasm32.a
+
+.include "../../mk/bsd.prefs.mk"
+
+ABI=			# 32
+CFLAGS=			-O2
+CXXFLAGS=		-O2
 PKGSRC_COMPILER=	clang
 CLANGBASE=		${PREFIX}
 BUILDLINK_DEPMETHOD.clang=	build
