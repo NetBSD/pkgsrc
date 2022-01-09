@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2021/12/08 16:03:19 adam Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/09 16:18:55 wiz Exp $
 
 DISTNAME=	quodlibet-4.4.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=quodlibet/}
 GITHUB_PROJECT=	quodlibet
@@ -47,7 +47,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/* ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 || ${TRUE}
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-good/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
