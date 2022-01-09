@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.143 2022/01/09 02:56:23 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.144 2022/01/09 09:24:51 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -177,3 +177,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/libva to 2.13.0 [tnn 2022-01-09]
 	Updated multimedia/libva-utils to 2.13.0 [tnn 2022-01-09]
 	Updated www/varnish to 7.0.1 [tnn 2022-01-09]
+	Updated sysutils/dua-cli to 2.16.0 [pin 2022-01-09]
