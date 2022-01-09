@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2021/11/23 20:55:43 wiz Exp $
+$NetBSD: distinfo,v 1.16 2022/01/09 23:20:59 tnn Exp $
 
 BLAKE2s (libcxx-13.0.0.src.tar.xz) = ade0de63ce72d50ae1276cf71da17aa5fa375e9ad767e2c1abecaa7f57953768
 SHA512 (libcxx-13.0.0.src.tar.xz) = deaf166ea9b5ffe4d7d1ace86fb4ed33317c610ff41947d2b0b18934b2a54601521f1021c5fd43bdba3a08779f3be98e13d2565c0d4374d849c5eff487eda2dd
@@ -11,3 +11,4 @@ SHA512 (llvm-13.0.0.src.tar.xz) = c307500a5fdc2bf6d768a808cf879d33914e24437f4f79
 Size (llvm-13.0.0.src.tar.xz) = 45471992 bytes
 SHA1 (patch-include_____config) = ff0d5a0fcc1431f21ce25667cbc01c2307542212
 SHA1 (patch-src_filesystem_directory__iterator.cpp) = 90ebbb80e4ec161405397d6d7c5d1d19a7284325
+SHA1 (patch-src_support_solaris_xlocale.cpp) = 8085adb5b2647151a162c620506b479f7c71c753
