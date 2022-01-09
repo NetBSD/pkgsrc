@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2022/01/09 14:29:19 wiz Exp $
+bin/diff-so-fancy
+libexec/diff-so-fancy/diff-so-fancy
+libexec/diff-so-fancy/lib/DiffHighlight.pm
