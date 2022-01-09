@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/04/08 20:21:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/01/09 15:44:27 wiz Exp $
 bin/serve-branches
 bin/start-loggerhead
 bin/stop-loggerhead
@@ -8,7 +8,6 @@ ${PYSITELIB}/bzrlib/plugins/loggerhead/__init__.pyo
 ${PYSITELIB}/bzrlib/plugins/loggerhead/info.py
 ${PYSITELIB}/bzrlib/plugins/loggerhead/info.pyc
 ${PYSITELIB}/bzrlib/plugins/loggerhead/info.pyo
-${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/loggerhead/__init__.py
 ${PYSITELIB}/loggerhead/__init__.pyc
 ${PYSITELIB}/loggerhead/__init__.pyo

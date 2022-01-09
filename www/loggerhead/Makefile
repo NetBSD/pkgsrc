@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2020/12/04 20:45:48 nia Exp $
+# $NetBSD: Makefile,v 1.24 2022/01/09 15:44:27 wiz Exp $
 
 DISTNAME=	loggerhead-${VER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www scm
 MASTER_SITES=	http://launchpad.net/loggerhead/1.18/${VER}/+download/
 VER=		1.18.1
@@ -21,5 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-SimpleTAL>=4.1:../../www/py-simpletal
 
 PYTHON_VERSIONS_ACCEPTED=	27 # py-simpletal
 
-.include "../../lang/python/distutils.mk"
+USE_PKG_RESOURCES=	yes
+
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
