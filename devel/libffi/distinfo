@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.60 2021/12/08 22:28:36 tnn Exp $
+$NetBSD: distinfo,v 1.61 2022/01/09 20:07:00 tm Exp $
 
 BLAKE2s (libffi-3.4.2.tar.gz) = a5773b741a815ea113d4b8e2ec62a0ea59a6cfb61367c39bc99276670efd5dfb
 SHA512 (libffi-3.4.2.tar.gz) = 31bad35251bf5c0adb998c88ff065085ca6105cf22071b9bd4b5d5d69db4fadf16cadeec9baca944c4bb97b619b035bb8279de8794b922531fddeb0779eb7fb1
 Size (libffi-3.4.2.tar.gz) = 1351355 bytes
-SHA1 (patch-configure) = 604b205963e01c2dce7d5636543920abdd9c8638
+SHA1 (patch-configure) = 3976a6d3bf1c4b0fab9d62c2bde5c3675593a1eb
 SHA1 (patch-configure_host) = a4c99cd0fbbbe0f2c806d662b85a6e2c56b31168
 SHA1 (patch-src_aarch64_ffi.c) = 016c504c55780a89ad2ecf17fea2355c9d1ac06d
 SHA1 (patch-src_arm_sysv.S) = 9aaa8e12e627d68126fbc4ff02e06ed45c94da1a
