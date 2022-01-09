@@ -1,6 +1,8 @@
-$NetBSD: patch-configure,v 1.2 2020/04/24 10:19:32 dsainty Exp $
+$NetBSD: patch-configure,v 1.3 2022/01/09 20:07:00 tm Exp $
 
-Add NetBSD support.
+Cannot use malloc on this target (NetBSD, Solaris), so, we revert to
+alternative means. Important is *-*-netbsd* and the change from *-pc-solaris*
+to *-*-solaris*.
 
 --- configure.orig	2019-11-23 13:59:04.000000000 +0000
 +++ configure
@@ -9,7 +11,7 @@ Add NetBSD support.
  
       ;;
 -     *-apple-* | *-*-freebsd* | *-*-kfreebsd* | *-*-openbsd* | *-pc-solaris* | *-linux-android*)
-+     *-apple-* | *-*-freebsd* | *-*-kfreebsd* | *-*-netbsd* |  *-*-openbsd* | *-pc-solaris* | *-linux-android*)
++     *-apple-* | *-*-freebsd* | *-*-kfreebsd* | *-*-netbsd* |  *-*-openbsd* | *-*-solaris* | *-linux-android*)
  
  $as_echo "#define FFI_MMAP_EXEC_WRIT 1" >>confdefs.h
  
