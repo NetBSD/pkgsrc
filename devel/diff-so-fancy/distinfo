@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/01/09 14:29:19 wiz Exp $
+
+BLAKE2s (diff-so-fancy-1.4.2.tar.gz) = c206a89dfad84984342d3b02716a13e636bbce25ee59770c75075eb1e460f0b2
+SHA512 (diff-so-fancy-1.4.2.tar.gz) = cedef279417708d4cbbc6d37fe8b4ba4e71b2bc759a86abab068242db3ff71336c7672251fd6d558bd38e2e5a3084caf19fb5a3c2e76d22dbbd07cf56ec29110
+Size (diff-so-fancy-1.4.2.tar.gz) = 51750 bytes
