@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/12/18 18:11:48 leot Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/09 02:58:52 tnn Exp $
 
 DISTNAME=	podman-3.4.4
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -24,6 +24,8 @@ SUBST_FILES.gvproxy=	vendor/github.com/containers/common/pkg/config/config_netbs
 SUBST_STAGE.gvproxy=	pre-configure
 SUBST_MESSAGE.gvproxy=	fix PREFIX inside patch
 SUBST_VARS.gvproxy=	PREFIX
+
+CHECK_PORTABILITY_SKIP+=	vendor/github.com/containers/buildah/release.sh
 
 .if ${OPSYS} != "Linux"
 BUILD_TARGET=	podman-remote-${OPSYS:tl}
