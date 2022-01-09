@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.106 2021/12/08 16:04:21 adam Exp $
+# $NetBSD: Makefile,v 1.107 2022/01/09 14:03:41 gdt Exp $
 
 DISTNAME=	glusterfs-8.2
-#PKGREVISION=	1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	filesystems
 MASTER_SITES=	http://bits.gluster.org/pub/gluster/glusterfs/src/
 
@@ -22,8 +21,6 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 # Make sure we do not attept to link with -lfl
 # Only libfl.a is available, and libtool wants libfl.so
 MAKE_FLAGS+=		LEXLIB=""
-
-PYTHON_VERSIONS_ACCEPTED=	27 # only 2.x supported as of 3.8.x
 
 REPLACE_PYTHON+=	contrib/ipaddr-py/ipaddr.py
 REPLACE_PYTHON+=	events/src/glustereventsd.py
