@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 11:31:12 nia Exp $
+$NetBSD: distinfo,v 1.19 2022/01/09 02:55:08 tnn Exp $
 
-BLAKE2s (varnish-6.6.1.tgz) = 3e1e87379c7509ac43143d2699b63339b43066c9c7f125ad917abe2cd078b983
-SHA512 (varnish-6.6.1.tgz) = af3ee1743af2ede2d3efbb73e5aa9b42c7bbd5f86163ec338c8afd1989c3e51ff3e1b40bed6b72224b5d339a74f22d6e5f3c3faf2fedee8ab4715307ed5d871b
-Size (varnish-6.6.1.tgz) = 3518308 bytes
+BLAKE2s (varnish-7.0.1.tgz) = f09454c68b5c33c98b3718ec183ef18f55072a2255f74dd0709a48812425198b
+SHA512 (varnish-7.0.1.tgz) = 7541d50b03a113f0a13660d459cc4c2eb45d57fb19380ab56a5413a4e5d702f9c0856585f09aeea6084a239ad8c69017af3805a864540b4697e0eac29f00b408
+Size (varnish-7.0.1.tgz) = 3712763 bytes
 SHA1 (patch-bin_varnishd_cache_cache__panic.c) = cf2b9c1f2c3ba15c7e20baca3c9af607a3e1fa82
 SHA1 (patch-etc_Makefile.in) = f4407cad5f9f6c6402ab3b7fce0e1577d70b36be
 SHA1 (patch-include_tbl_params.h) = 7a52ef6a98ec29409c7284876adffdb5c53facff

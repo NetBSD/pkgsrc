@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2021/07/19 12:47:31 tnn Exp $
+# $NetBSD: Makefile,v 1.33 2022/01/09 02:55:08 tnn Exp $
 
-DISTNAME=	varnish-6.6.1
+DISTNAME=	varnish-7.0.1
 CATEGORIES=	www
 MASTER_SITES=	https://varnish-cache.org/_downloads/
 EXTRACT_SUFX=	.tgz
@@ -76,7 +76,7 @@ RCD_SCRIPTS=		varnishd varnishlog varnishncsa
 
 TEST_TARGET=		check
 
-.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/versioned_dependencies.mk"
