@@ -1,4 +1,4 @@
-# $NetBSD: tools.SunOS.mk,v 1.51 2020/12/09 01:24:24 gutteridge Exp $
+# $NetBSD: tools.SunOS.mk,v 1.52 2022/01/09 17:36:52 tnn Exp $
 #
 # System-supplied tools for the Solaris operating system.
 #
@@ -215,6 +215,12 @@ TOOLS_PLATFORM.unzip?=		/usr/bin/unzip
 .endif
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
+.if exists(/usr/bin/xz)
+TOOLS_PLATFORM.xz?=		/usr/bin/xz
+.endif
+.if exists(/usr/bin/xzcat)
+TOOLS_PLATFORM.xzcat?=		/usr/bin/xzcat
+.endif
 .if exists(/usr/bin/yacc)
 TOOLS_PLATFORM.yacc?=		/usr/bin/yacc
 .endif
