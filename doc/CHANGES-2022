@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.141 2022/01/08 19:28:08 rhialto Exp $
+$NetBSD: CHANGES-2022,v 1.142 2022/01/09 00:29:48 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -174,3 +174,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-canonicaljson to 1.5.0 [adam 2022-01-08]
 	Updated security/py-signedjson to 1.1.1 [adam 2022-01-08]
 	Updated emulators/hercules4sdl to 4.4.1nb1 [rhialto 2022-01-08]
+	Updated multimedia/libva to 2.13.0 [tnn 2022-01-09]
+	Updated multimedia/libva-utils to 2.13.0 [tnn 2022-01-09]
