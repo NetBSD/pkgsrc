@@ -1,11 +1,11 @@
-$NetBSD: patch-src_calibre_headless_fontconfig_database.cpp,v 1.1 2020/07/05 12:09:08 rhialto Exp $
+$NetBSD: patch-src_calibre_headless_fontconfig_database.cpp,v 1.2 2022/01/09 15:43:51 rhialto Exp $
 
 Qt 5.15.0 has more languages in an array that Calibre tries to match,
 and it checks with a STATIC_ASSERT.
 
---- src/calibre/headless/fontconfig_database.cpp.orig	2020-07-02 17:32:43.809996191 +0000
+--- src/calibre/headless/fontconfig_database.cpp.orig	2020-02-21 03:27:12.000000000 +0000
 +++ src/calibre/headless/fontconfig_database.cpp
-@@ -295,7 +295,27 @@ static const char specialLanguages[][6] 
+@@ -295,7 +295,28 @@ static const char specialLanguages[][6] 
      "", // MasaramGondi
      "", // Nushu
      "", // Soyombo
@@ -31,6 +31,7 @@ and it checks with a STATIC_ASSERT.
 +    "", //    Script_KhitanSmallScript,
 +    "", //    Script_Yezidi,
 +#endif // Qt >= 5.15
++
  #else
      ""  // SignWriting
  #endif // Qt >= 5.11
