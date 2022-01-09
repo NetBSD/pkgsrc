@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.145 2022/01/09 13:11:19 rhialto Exp $
+$NetBSD: CHANGES-2022,v 1.146 2022/01/09 14:30:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -179,3 +179,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/varnish to 7.0.1 [tnn 2022-01-09]
 	Updated sysutils/dua-cli to 2.16.0 [pin 2022-01-09]
 	Added x11/py-qt5-webengine version 5.15.5 [rhialto 2022-01-09]
+	Added devel/diff-so-fancy version 1.4.2 [wiz 2022-01-09]
