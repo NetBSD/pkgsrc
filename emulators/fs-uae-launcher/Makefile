@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2020/12/04 20:45:16 nia Exp $
+# $NetBSD: Makefile,v 1.19 2022/01/09 15:42:37 wiz Exp $
 
 DISTNAME=	fs-uae-launcher-3.0.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	https://fs-uae.net/stable/${PKGVERSION_NOREV}/
 
@@ -49,7 +49,7 @@ post-install:
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
