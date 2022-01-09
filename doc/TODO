@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21411 2022/01/09 16:27:59 rhialto Exp $
+$NetBSD: TODO,v 1.21412 2022/01/09 23:17:21 fox Exp $
 
 Suggested new packages
 ======================
@@ -493,7 +493,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o baloo-21.04.0
 	o baloo5-5.81.0
 	o basket-2.11b
-	o bat-0.19.0
 	o bbcim-1.0
 	o bbsload-0.2.8
 	o bbweather-0.6.3
