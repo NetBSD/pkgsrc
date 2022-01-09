@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:01:10 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/01/09 00:28:58 tnn Exp $
 
-BLAKE2s (libva-utils-2.6.0.tar.gz) = 8e4a0ace3d223090bc4998e3c1d0229b7de47b0b22eed69a6a8c16bce3fa69ab
-SHA512 (libva-utils-2.6.0.tar.gz) = 2722504861d09e049495ffaa07cfb5fb23720770e19d6d5e03b10592e20d99c87d9e401e8db26edd00cb7edb7e85438ca721c8c323b23664bd5a1e094bbed8d4
-Size (libva-utils-2.6.0.tar.gz) = 1196875 bytes
-SHA1 (patch-vendor_intel_sfcsample_VDecAccelVA.cpp) = df6193829cce4db37ce585812dea22eea7139c24
+BLAKE2s (libva-utils-2.13.0.tar.bz2) = 3bc1288890c4ab6413d4e6eb5dc95bfabe86bfadafba2b4a8154f5da23a38491
+SHA512 (libva-utils-2.13.0.tar.bz2) = 1ee42e4c335978bc5d28efbe9fa899bb84b787455a300a24655bf020c03905eb6af096af0896f73b1d10c1bb58e7464806fc5029be7dacd38f35570db60c37c7
+Size (libva-utils-2.13.0.tar.bz2) = 1045460 bytes
