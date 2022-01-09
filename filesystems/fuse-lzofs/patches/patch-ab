@@ -1,33 +1,42 @@
-$NetBSD: patch-ab,v 1.4 2012/08/17 15:11:57 marino Exp $
+$NetBSD: patch-ab,v 1.5 2022/01/09 15:14:39 pho Exp $
 
---- LZOlayer_fs.c.orig	2006-05-18 22:23:35.000000000 +0300
-+++ LZOlayer_fs.c	2007-03-16 09:00:48.000000000 +0200
-@@ -21,6 +21,15 @@
+* Use the correct API version. fuse_operations::readdir() was
+  introduced in FUSE 2.3, not 2.2.
+
+* O_LARGEFILE is a Linux-only thing. Don't use it unconditionally.
+
+* Respect the original file attributes in readdir.
+
+* Never cast a pointer to int. That only works on 32-bits platforms
+  and crashes on others.
+
+* Respect the mode_t in mknod.
+
+--- LZOlayer_fs.c.orig	2006-05-18 19:23:35.000000000 +0000
++++ LZOlayer_fs.c
+@@ -7,9 +7,10 @@
+     Use it at your OWN RISK
+     Absolutely NO WARANTY
+ */
+-#define FUSE_USE_VERSION 22
++#define FUSE_USE_VERSION 23
+ #include <fuse.h>
+ #include <stdio.h>
++#include <stdint.h>
+ #include <stdlib.h>
+ #include <string.h>
+ #include <errno.h>
+@@ -21,6 +22,9 @@
  #define __USE_UNIX98
  #include <unistd.h>
  #include <zlib.h>
-+#if !defined (__NetBSD__) && !defined (__DragonFly__)
-+#define ordwr		O_RDWR|O_LARGEFILE
-+#define ordonly	O_RDONLY|O_LARGEFILE
-+#define owronly	O_WRONLY|O_LARGEFILE
-+#else
-+#define ordwr		O_RDWR
-+#define ordonly	O_RDONLY
-+#define owronly	O_WRONLY
++#if !defined(O_LARGEFILE)
++#  define O_LARGEFILE 0
 +#endif
  
  #include "minilzo.h"
  #define HEAP_ALLOC(var, size) \
-@@ -124,7 +133,7 @@
-   
-   if (S_ISREG(stbuf->st_mode))
-   {
--    int fd = open(xPath, O_RDONLY|O_LARGEFILE);
-+    int fd = open(xPath, ordonly);
-     read(fd, &stbuf->st_size, sizeof(off_t));
-     close(fd);
-   }
-@@ -143,15 +152,26 @@
+@@ -143,15 +147,26 @@ static int LZOlayer_getattr(const char *
  
  static int LZOlayer_readdir(const char *path, void *buf, fuse_fill_dir_t filler, off_t offset, struct fuse_file_info *fi)
  {
@@ -56,47 +65,16 @@ $NetBSD: patch-ab,v 1.4 2012/08/17 15:11:57 marino Exp $
      else break;
    }
    
-@@ -166,7 +186,7 @@
- {
-   char *xPath = LZOlayer_makePath(path);
+@@ -181,7 +196,7 @@ static int LZOlayer_open(const char *pat
+   filePtr->cache.size    = 0;
+   filePtr->cache.offset  = 0;
    
--  int fd = open(xPath, O_RDONLY|O_LARGEFILE);
-+  int fd = open(xPath, ordonly);
-   off_t outLen = 0;
-   read(fd, &outLen, sizeof(off_t));
-   close(fd);
-@@ -193,7 +213,7 @@
-   char *xPath            = filePtr->path;
+-  fi->fh = (int)filePtr;
++  fi->fh = (uintptr_t)filePtr;
    
-   int done = 0;
--  int fd = open(xPath, O_RDONLY|O_LARGEFILE);
-+  int fd = open(xPath, ordonly);
-   
-   while(1)
-   {
-@@ -249,7 +269,7 @@
-   off_t block_start   = (float)filePtr->packets[min_offset].offset / (float)block_size;
-   
-   char *xPath = filePtr->path;
--  int fd      = open(xPath, O_RDWR|O_LARGEFILE);
-+  int fd      = open(xPath, ordwr);
-   LZOlayer_block_seek(fd, block_start);
-   
-   off_t alloc_size = (filePtr->size-(block_start*block_size)
-@@ -315,10 +335,10 @@
-   {
-     LZOlayer_packet_sync(path, fi);
-     
--    int fd = open(filePtr->path, O_WRONLY|O_LARGEFILE);
-+    int fd = open(filePtr->path, owronly);
-     if(fd == -1)
-     {
--      open(filePtr->path, O_CREAT|O_WRONLY|O_LARGEFILE);
-+      open(filePtr->path, O_CREAT|owronly);
-       chown(filePtr->path, fuse_get_context()->uid, fuse_get_context()->gid);
-     }
- // old open/create for write
-@@ -357,15 +377,25 @@
+   return 0;
+ }
+@@ -357,8 +372,18 @@ static int LZOlayer_write(const char *pa
  static int LZOlayer_mknod(const char *path, mode_t mode, dev_t rdev)
  {
    char *xPath = LZOlayer_makePath(path);
@@ -105,7 +83,7 @@ $NetBSD: patch-ab,v 1.4 2012/08/17 15:11:57 marino Exp $
 +  int   res;
 +
 +  if (S_ISREG(mode)) {
-+    res = open(xPath, owronly | O_CREAT | O_TRUNC, 0700);
++    res = open(xPath, O_WRONLY | O_LARGEFILE | O_CREAT | O_TRUNC, 0700);
 +    if (res != -1) {
 +      close(res);
 +      res = 0;
@@ -117,28 +95,11 @@ $NetBSD: patch-ab,v 1.4 2012/08/17 15:11:57 marino Exp $
    if (res == -1)
    {
      res = -errno;
-   }
-   else
-   {
--    int fd = open(xPath, O_WRONLY|O_LARGEFILE);
-+    int fd = open(xPath, owronly);
-     off_t null = 0;
-     write(fd, &null, sizeof(off_t));
-     write(fd, &null, sizeof(off_t));
-@@ -373,6 +403,7 @@
+@@ -373,6 +398,7 @@ static int LZOlayer_mknod(const char *pa
      close(fd);
  	 
      chown(xPath, fuse_get_context()->uid, fuse_get_context()->gid);
 +    chmod(xPath, mode);
    }
    free(xPath);
-   
-@@ -383,7 +414,7 @@
- {
-   char *xPath = LZOlayer_makePath(path);
-   
--  int fd = open(xPath, O_RDWR|O_LARGEFILE);
-+  int fd = open(xPath, ordwr);
-   off_t file_size = 0;
-   read(fd, &file_size, sizeof(off_t));
    
