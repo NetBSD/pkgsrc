@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2020/12/04 20:45:16 nia Exp $
+# $NetBSD: Makefile,v 1.12 2022/01/09 16:33:19 wiz Exp $
 
 DISTNAME=	fs-uae-arcade-3.0.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	http://fs-uae.net/stable/${PKGVERSION_NOREV}/
 
@@ -24,7 +24,8 @@ INSTALL_TARGET=		install-data
 USE_TOOLS+=		gmake msgfmt
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
+
+USE_PKG_RESOURCES=	yes
 
 PYSETUPINSTALLARGS=	--install-lib=${PREFIX:Q}/share/fs-uae-arcade
 PYSETUPINSTALLARGS+=	--install-scripts=${PREFIX:Q}/share/fs-uae-arcade
@@ -48,7 +49,6 @@ post-install:
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
