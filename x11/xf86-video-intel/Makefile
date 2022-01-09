@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2021/12/02 18:15:27 nia Exp $
+# $NetBSD: Makefile,v 1.50 2022/01/09 13:46:40 tnn Exp $
 
 PKGNAME=	xf86-video-intel-2.99.917.20200515
 COMMIT_ID=	5ca3ac1a90af177eb111a965e9b4dd8a27cc58fc
+PKGREVISION=	1
 DISTNAME=	xf86-video-intel-${COMMIT_ID}
 CATEGORIES=	x11
 #MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
@@ -27,17 +28,21 @@ RELRO_SUPPORTED=	partial
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=	virtual
+PLIST_VARS+=		virtual
 .if defined(OPSYS_HAS_TIMERFD)
-PLIST.virtual=	yes
+CONFIGURE_ARGS+=	--enable-tools
+PLIST.virtual=		yes
+.include "../../x11/libXScrnSaver/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-tools
 .endif
 
 # Assumes platform compiler has SSE2, etc
 ONLY_FOR_PLATFORM+=	*-*-i386 *-*-x86_64
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
-
-BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.7
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -vif
