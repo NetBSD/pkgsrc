@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.258 2022/01/04 20:54:18 wiz Exp $
+# $NetBSD: Makefile,v 1.259 2022/01/09 15:43:51 rhialto Exp $
 
-DISTNAME=	calibre-3.40.1
-PKGREVISION=	32
+DISTNAME=	calibre-4.11.0
 CATEGORIES=	misc
-#MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=calibre/}
 MASTER_SITES=	http://download.calibre-ebook.com/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -14,7 +12,7 @@ COMMENT=	E-book library management application
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-apsw>=3.7.17:../../databases/py-apsw
-DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
+DEPENDS+=	${PYPKGPREFIX}-beautifulsoup-[0-9]*:../../www/py-beautifulsoup
 DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-cryptodome-[0-9]*:../../security/py-cryptodome
 DEPENDS+=	${PYPKGPREFIX}-css-parser-[0-9]*:../../textproc/py-css-parser
@@ -30,6 +28,7 @@ DEPENDS+=	${PYPKGPREFIX}-netifaces>=0.8:../../net/py-netifaces
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=2.7.0:../../graphics/py-Pillow6
 DEPENDS+=	${PYPKGPREFIX}-psutil>=0.6.1:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments25
+DEPENDS+=	${PYPKGPREFIX}-qt5-webengine-[0-9]*:../../x11/py-qt5-webengine
 DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-soupsieve-[0-9]*:../../www/py-soupsieve
@@ -37,11 +36,10 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 # for installation
 BUILD_DEPENDS+=	xdg-utils>=1.0.2:../../misc/xdg-utils
 
-PYTHON_VERSIONED_DEPENDENCIES+=	markdown
-
 EXTRACT_USING=	bsdtar
 
 PYTHON_VERSIONS_ACCEPTED=	27 # as of 3.16.0
+PYTHON_VERSIONED_DEPENDENCIES+=	markdown
 
 USE_LANGUAGES=			c99 c++
 USE_LIBTOOL=			yes
@@ -70,7 +68,8 @@ SUBST_FILES.prefix=	setup/build_environment.py
 
 # This one is for /usr/bin/env python (or even /usr/bin/env Python or /usr/bin/python2)
 SUBST_CLASSES+=		path
-SUBST_SED.path=		-e "s,\#! */usr/bin/env *[Pp]ython[0-9.]*,\#!${PYTHONBIN},"
+SUBST_SED.path+=	-e "s,\#! */usr/bin/env *python2,\#!${PYTHONBIN},"
+SUBST_SED.path+=	-e "s,\#! */usr/bin/env *python[0-9.]*,\#!${PYTHONBIN},"
 SUBST_MESSAGE.path=	Fixing path to python.
 SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	${FIX_PYTHON_FILES}
@@ -86,8 +85,6 @@ REPLACE_PYTHON+=	src/calibre/ebooks/metadata/odt.py
 REPLACE_PYTHON+=	src/calibre/utils/*.py
 REPLACE_PYTHON+=	src/odf/*.py
 
-MAKE_ENV+=		FC_INC_DIR=${BUILDLINK_PREFIX.fontconfig}/include/fontconfig
-MAKE_ENV+=		FC_LIB_DIR=${BUILDLINK_PREFIX.fontconfig}/lib
 MAKE_ENV+=		PODOFO_INC_DIR=${BUILDLINK_PREFIX.podofo}/include/podofo
 MAKE_ENV+=		PODOFO_LIB_DIR=${BUILDLINK_PREFIX.podofo}/lib
 MAKE_ENV+=		SIP_BIN=${BUILDLINK_PREFIX.py-sip}/bin/sip${PYVERSSUFFIX}
@@ -107,7 +104,9 @@ post-install:
 	cd ${WRKSRC} && pax -wr -pma Changelog* README.md \
 	    COPYRIGHT INSTALL.rst LICENSE.* \
 	    ${DESTDIR}${PREFIX}/share/doc/calibre
-	${RM} ${DESTDIR}${PREFIX}/bin/calibre-uninstall
+
+do-test:
+	cd ${WRKSRC} && ${PYTHONBIN} ./setup.py test
 
 .include "../../lang/python/application.mk"
 .include "../../archivers//bzip2/buildlink3.mk"
@@ -119,7 +118,6 @@ BUILDLINK_API_DEPENDS.libmtp+=	libmtp>=1.1.5
 .include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libusb+=	libusb>=0.1.12
 .include "../../mk/libusb.buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/libwmf/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
@@ -129,6 +127,7 @@ _PYSETUPTOOLSINSTALLARGS=	# empty
 # Get rid of --root=${DESTDIR}, use our own version from above instead.
 # because the setup.py is not the standard one and behaves differently.
 _PYSETUPINSTALLARGS=	${PYSETUPINSTALLARGS} ${PYSETUPOPTARGS} ${_PYSETUPTOOLSINSTALLARGS}
+BUILDLINK_API_DEPENDS.podofo+=	podofo>=0.8.2
 .include "../../print/podofo/buildlink3.mk"
 BUILDLINK_API_DEPENDS.poppler+=	poppler>=0.20.2
 .include "../../print/poppler-includes/buildlink3.mk"
@@ -138,6 +137,8 @@ BUILDLINK_API_DEPENDS.poppler+=	poppler>=0.20.2
 .include "../../sysutils/hal/buildlink3.mk"
 BUILDLINK_API_DEPENDS.py-dbus+=	${PYPKGPREFIX}-dbus>=0.82.2
 .include "../../sysutils/py-dbus/buildlink3.mk"
+.include "../../textproc/hunspell/buildlink3.mk"
+.include "../../textproc/hyphen/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../x11/py-sip/buildlink3.mk"
