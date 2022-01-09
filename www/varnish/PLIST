@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2021/06/25 12:21:08 tnn Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/01/09 02:55:08 tnn Exp $
 bin/varnishadm
 bin/varnishhist
 bin/varnishlog
@@ -74,6 +74,7 @@ include/varnish/vdef.h
 include/varnish/vmod_abi.h
 include/varnish/vqueue.h
 include/varnish/vre.h
+include/varnish/vre_pcre2.h
 include/varnish/vrnd.h
 include/varnish/vrt.h
 include/varnish/vrt_obj.h
