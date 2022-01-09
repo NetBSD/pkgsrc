@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2022/01/09 15:14:39 pho Exp $
+$NetBSD: patch-ab,v 1.6 2022/01/09 17:30:30 pho Exp $
 
 * Use the correct API version. fuse_operations::readdir() was
   introduced in FUSE 2.3, not 2.2.
@@ -11,6 +11,9 @@ $NetBSD: patch-ab,v 1.5 2022/01/09 15:14:39 pho Exp $
   and crashes on others.
 
 * Respect the mode_t in mknod.
+
+* Fix an upstream bug: truncate() writes a wrong file size in the
+  header.
 
 --- LZOlayer_fs.c.orig	2006-05-18 19:23:35.000000000 +0000
 +++ LZOlayer_fs.c
@@ -103,3 +106,21 @@ $NetBSD: patch-ab,v 1.5 2022/01/09 15:14:39 pho Exp $
    }
    free(xPath);
    
+@@ -425,7 +451,7 @@ static int LZOlayer_truncate(const char 
+     ftruncate(fd, curr_pos);
+     
+     lseek(fd, 0, SEEK_SET);
+-    write(fd, &curr_pos, sizeof(off_t));
++    write(fd, &size, sizeof(off_t));
+     
+     close(fd);
+     free(mem);
+@@ -469,7 +495,7 @@ static int LZOlayer_truncate(const char 
+     ftruncate(fd, curr_pos);
+     
+     lseek(fd, 0, SEEK_SET);
+-    write(fd, &curr_pos, sizeof(off_t));
++    write(fd, &size, sizeof(off_t));
+     
+     close(fd);
+     free(mem);

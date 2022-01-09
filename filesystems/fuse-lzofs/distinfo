@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2022/01/09 15:14:39 pho Exp $
+$NetBSD: distinfo,v 1.9 2022/01/09 17:30:30 pho Exp $
 
 BLAKE2s (LZOlayer_fs-20060306.tar.gz) = d2883e04a832f675c6eac3c87301626d59ad873d42fb5ab3a24639134ca12816
 SHA512 (LZOlayer_fs-20060306.tar.gz) = 7696ab1c16e9f9ea8183f408fa7fbadfdf3d29c8927e68aa58d7b533b1c365cbc906a161bb6973ea4724ca9e0c679ea5b772848cc047053028f33218246d5097
 Size (LZOlayer_fs-20060306.tar.gz) = 17669 bytes
 SHA1 (patch-aa) = 70df68443cb7b4d9eec5effea0dbb0e3fc666551
-SHA1 (patch-ab) = d94590c7bce2920c0e41861225e18595be15d832
+SHA1 (patch-ab) = 80a20a77909ab60f31049346ff18fedce9148619
