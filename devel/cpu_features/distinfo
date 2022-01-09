@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:27 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/01/09 22:03:17 tnn Exp $
 
 BLAKE2s (cpu_features-0.6.0.tar.gz) = 4c59c3a8b3f9b5beefa5a39fb9cd760eec0f8e95b599954efe11c955042d6296
 SHA512 (cpu_features-0.6.0.tar.gz) = 006a2e05253712cf605ecabccdda63dd9325445f8d145d5e2432c4342332e652f318810997321849be131082db435d88143020fdc85268fba204586cf37eef0d
 Size (cpu_features-0.6.0.tar.gz) = 63255 bytes
 SHA1 (patch-CMakeLists.txt) = a2eace73c45b85fac81b14d3e14b26b89cba74f2
 SHA1 (patch-include_cpu__features__macros.h) = 4d93afe4ac314895f0823b992af463bf39d67379
-SHA1 (patch-src_cpuinfo__x86.c) = 948cba79e96fdabfe5ec48780d5f6d5077018b4e
+SHA1 (patch-src_cpuinfo__x86.c) = 91d43472c195f1db377231136725be676419bd0c
