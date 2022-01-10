@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2021/09/13 08:39:07 adam Exp $
+# $NetBSD: Makefile,v 1.13 2022/01/10 18:23:53 wiz Exp $
 
 DISTNAME=	bitarray-2.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bitarray/}
 
@@ -13,5 +14,5 @@ LICENSE=	python-software-foundation
 do-test:
 	${PYTHONBIN} -c 'import bitarray; bitarray.test()'
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
