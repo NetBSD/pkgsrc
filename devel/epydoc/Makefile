@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2020/12/04 20:45:08 nia Exp $
+# $NetBSD: Makefile,v 1.31 2022/01/10 08:12:39 wiz Exp $
 
 DISTNAME=	epydoc-3.0.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=epydoc/}
 
@@ -25,5 +25,5 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/epydocgui.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	cd ${WRKSRC}/doc && pax -rw -pp -pm . ${DESTDIR}${PREFIX}/share/doc/epydoc
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
