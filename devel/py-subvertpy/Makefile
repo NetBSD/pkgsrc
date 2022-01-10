@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2021/12/08 16:04:06 adam Exp $
+# $NetBSD: Makefile,v 1.57 2022/01/10 22:17:11 wiz Exp $
 
 DISTNAME=	subvertpy-0.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	devel scm
 MASTER_SITES=	http://samba.org/~jelmer/subvertpy/
 
@@ -16,5 +16,5 @@ MAKE_ENV+=	SVN_PREFIX=${BUILDLINK_PREFIX.subversion-base}
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.9.1
 
 .include "../../devel/subversion-base/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
