@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/09/01 04:05:27 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/10 23:49:02 wiz Exp $
 
 DISTNAME=	setuptools-44.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,6 +25,8 @@ PYTHON_VERSIONS_ACCEPTED=	27
 
 PYSETUPTESTTARGET=	pytest
 
+BOOTSTRAP_SETUPTOOLS=	yes
+
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
