@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2012/04/08 20:21:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/01/10 08:52:16 wiz Exp $
 ${PYSITELIB}/CaboCha.py
 ${PYSITELIB}/CaboCha.pyc
 ${PYSITELIB}/CaboCha.pyo
 ${PYSITELIB}/_CaboCha.so
-${PYSITELIB}/${EGG_FILE}
