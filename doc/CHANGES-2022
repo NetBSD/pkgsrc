@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.167 2022/01/10 17:05:45 adam Exp $
+$NetBSD: CHANGES-2022,v 1.168 2022/01/10 17:28:44 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -211,3 +211,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-scard to 2.0.2 [adam 2022-01-10]
 	Updated devel/py-sure to 2.0.0 [adam 2022-01-10]
 	Updated sysutils/py-psutil to 5.9.0 [adam 2022-01-10]
+	Updated devel/byacc to 20220109 [fcambus 2022-01-10]
