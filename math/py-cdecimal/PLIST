@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2013/08/15 14:23:01 richard Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.2 2022/01/10 08:55:47 wiz Exp $
 ${PYSITELIB}/cdecimal.so
