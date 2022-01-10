@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2021/10/10 12:54:45 tkusumi Exp $
+# $NetBSD: Makefile,v 1.13 2022/01/10 08:15:33 wiz Exp $
 
 DISTNAME=	fileobj-0.7.106
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kusumi/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -19,5 +19,5 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 		${MV} fileobj fileobj-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
