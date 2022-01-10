@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2021/12/30 13:05:29 adam Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/10 07:47:23 wiz Exp $
 
 DISTNAME=		gramps-5.1.2
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gramps/}
 
@@ -22,8 +22,8 @@ REPLACE_PYTHON+=	setup.py
 
 SUBST_CLASSES+=		man
 SUBST_FILES.man+=	setup.py
-SUBST_STAGE.man+=	pre-configure
-SUBST_MESSAGE.man+=	Fixing man page installation path
+SUBST_STAGE.man=	pre-configure
+SUBST_MESSAGE.man=	Fixing man page installation path
 SUBST_SED.man+=		-e "s,share/man,${PKGMANDIR},"
 
 # pkgsrc registers mime files using mimedb.mk (see below)
@@ -42,6 +42,6 @@ post-install:
 .include "../../databases/py-bsddb3/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../mk/bsd.pkg.mk"
