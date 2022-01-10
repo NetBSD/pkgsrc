@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2020/06/05 12:49:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.35 2022/01/10 07:56:49 wiz Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../multimedia/ming/Makefile.common"
 
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/_/./g}
@@ -11,7 +11,6 @@ HOMEPAGE=		http://www.libming.org/
 COMMENT=		Python bindings for Ming library
 LICENSE=		gnu-lgpl-v2.1
 
-PY_PATCHPLIST=		yes
 PYSETUPSUBDIR=		py_ext
 EGG_NAME=		${DISTNAME:S/ming/mingc/:S/_/./g}
 
@@ -26,5 +25,5 @@ pre-configure:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../multimedia/ming/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
