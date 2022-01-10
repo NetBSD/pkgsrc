@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2021/11/01 21:05:56 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/10 07:59:56 wiz Exp $
 
 DISTNAME=	landslide-1.1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/landslide/}
 
@@ -25,6 +26,6 @@ post-install:
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} tests.py
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
