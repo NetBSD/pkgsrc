@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2020/03/20 11:57:30 nia Exp $
+# $NetBSD: Makefile,v 1.28 2022/01/10 18:20:57 wiz Exp $
 
 DISTNAME=	optik-1.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/optik/Optik/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=optik/}
 
@@ -18,5 +18,5 @@ PYTHON_VERSIONS_ACCEPTED=	27
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} test/test_optik.py
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
