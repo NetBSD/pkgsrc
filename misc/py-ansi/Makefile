@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2021/01/26 14:44:49 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/10 20:26:31 wiz Exp $
 
 DISTNAME=	ansi-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansi/}
 
@@ -12,5 +13,5 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
