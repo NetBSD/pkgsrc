@@ -1,6 +1,7 @@
-$NetBSD: patch-bin_build-index.sh,v 1.1 2015/12/11 21:45:07 riz Exp $
+$NetBSD: patch-bin_build-index.sh,v 1.2 2022/01/10 22:46:03 wiz Exp $
 
 Fix default paths.
+
 --- bin/build-index.sh.orig	2013-08-21 17:11:04.000000000 +0000
 +++ bin/build-index.sh
 @@ -2,12 +2,12 @@
