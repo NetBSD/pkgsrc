@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/19 17:14:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/10 09:09:07 wiz Exp $
 ${PYSITELIB}/_gd.so
 ${PYSITELIB}/gd.py
 ${PYSITELIB}/gd.pyc
 ${PYSITELIB}/gd.pyo
-${PYSITELIB}/${EGG_FILE}
