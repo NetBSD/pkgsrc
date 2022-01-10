@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2020/01/26 05:26:13 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2022/01/10 18:32:50 wiz Exp $
 
 DISTNAME=	pyid3lib-0.5.1
 PKGNAME=	${PYPKGPREFIX}-id3lib-0.5.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyid3lib/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,6 +16,6 @@ USE_LANGUAGES=	c c++
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.5.1
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../audio/id3lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
