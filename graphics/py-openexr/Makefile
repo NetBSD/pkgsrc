@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2021/08/15 14:24:02 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/10 21:49:42 wiz Exp $
 
 DISTNAME=	OpenEXR-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=O/OpenEXR/}
 
@@ -25,5 +25,5 @@ SUBST_SED.fix-path+=	-e 's,IlmImf,IlmThread,'
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

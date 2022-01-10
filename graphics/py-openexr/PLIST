@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2016/02/07 20:59:19 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/10 21:49:42 wiz Exp $
 ${PYSITELIB}/Imath.py
 ${PYSITELIB}/Imath.pyc
 ${PYSITELIB}/Imath.pyo
-${PYSITELIB}/${EGG_FILE}
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/OpenEXR.so
