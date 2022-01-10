@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.166 2022/01/10 16:15:53 adam Exp $
+$NetBSD: CHANGES-2022,v 1.167 2022/01/10 17:05:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -209,3 +209,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/notmuch to 0.34.3 [ryoon 2022-01-10]
 	Updated security/pcsc-lite to 1.9.5 [adam 2022-01-10]
 	Updated devel/py-scard to 2.0.2 [adam 2022-01-10]
+	Updated devel/py-sure to 2.0.0 [adam 2022-01-10]
+	Updated sysutils/py-psutil to 5.9.0 [adam 2022-01-10]
