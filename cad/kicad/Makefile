@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.58 2022/01/02 21:44:00 tnn Exp $
+# $NetBSD: Makefile,v 1.59 2022/01/10 01:46:22 ryoon Exp $
 #
 
 V=		6.0.0
 DISTNAME=	kicad-${V}
+PKGREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	https://gitlab.com/kicad/code/kicad/-/archive/${V}/
 EXTRACT_SUFX=	.tar.bz2
