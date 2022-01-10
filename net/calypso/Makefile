@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2020/12/04 20:45:32 nia Exp $
+# $NetBSD: Makefile,v 1.23 2022/01/10 20:21:37 wiz Exp $
 
 DISTNAME=	calypso-1.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net time
 MASTER_SITES=	http://keithp.com/calypso/
 
@@ -25,5 +25,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/config ${DESTDIR}${PREFIX}/share/examples/calypso/
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
