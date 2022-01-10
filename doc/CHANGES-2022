@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.159 2022/01/10 10:08:36 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.160 2022/01/10 11:31:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -200,3 +200,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/meld to 3.21.1 [wiz 2022-01-10]
 	Removed textproc/py-4Suite [wiz 2022-01-10]
 	Updated devel/guile-gcrypt to 0.3.0 [nikita 2022-01-10]
+	Updated devel/py-filelock to 3.2.1 [adam 2022-01-10]
+	Updated devel/py-astroid to 2.9.3 [adam 2022-01-10]
