@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.168 2022/01/10 17:28:44 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.169 2022/01/10 17:42:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -212,3 +212,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-sure to 2.0.0 [adam 2022-01-10]
 	Updated sysutils/py-psutil to 5.9.0 [adam 2022-01-10]
 	Updated devel/byacc to 20220109 [fcambus 2022-01-10]
+	Added devel/py-deprecated version 1.2.13 [adam 2022-01-10]
+	Updated databases/py-redis to 4.1.0 [adam 2022-01-10]
