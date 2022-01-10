@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.71 2021/12/08 16:05:07 adam Exp $
+# $NetBSD: Makefile,v 1.72 2022/01/10 07:37:36 wiz Exp $
 
 DISTNAME=		veusz-3.1
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_GITHUB:=veusz/}
 GITHUB_RELEASE=		${DISTNAME}
@@ -45,7 +45,7 @@ post-install:
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/py-qt5/buildlink3.mk"
 .include "../../x11/py-sip/buildlink3.mk"
