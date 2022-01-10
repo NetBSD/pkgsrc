@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2020/07/13 20:05:13 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2022/01/10 20:54:11 wiz Exp $
 
 DISTNAME=	web.py-0.37
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	http://webpy.org/static/
 
@@ -16,5 +17,5 @@ REPLACE_PYTHON+=		web/__init__.py web/utils.py
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.37
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
