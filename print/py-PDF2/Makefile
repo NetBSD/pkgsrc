@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2020/01/18 23:33:30 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/10 08:44:17 wiz Exp $
 
 VERSION=	1.26.0
 DISTNAME=	PyPDF2-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mstamy2/}
 GITHUB_PROJECT=	PyPDF2
@@ -14,5 +14,5 @@ HOMEPAGE=	https://mstamy2.github.io/PyPDF2/
 COMMENT=	PDF library for python
 LICENSE=	modified-bsd
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
