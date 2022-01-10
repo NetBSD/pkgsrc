@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.176 2021/11/28 19:51:20 schmonz Exp $
+# $NetBSD: Makefile,v 1.177 2022/01/10 20:22:12 wiz Exp $
 
 DISTNAME=		getmail-5.16
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}old-versions/
 
@@ -15,5 +16,5 @@ REPLACE_PYTHON=		*.py getmailcore/*.py
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 4.53.0
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
