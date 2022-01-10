@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21412 2022/01/09 23:17:21 fox Exp $
+$NetBSD: TODO,v 1.21413 2022/01/10 08:21:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1174,7 +1174,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o md-whois-5.5.9
 	o mdd-20201207
 	o mecab-ipadic-2.7.0.20070801
-	o meld-3.21.1
 	o memached-1.5.6
 	o memtestplus-5.31b
 	o merkaator-0.18.3
