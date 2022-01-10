@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2019/09/02 13:20:00 adam Exp $
+# $NetBSD: Makefile,v 1.61 2022/01/10 08:43:23 wiz Exp $
 
 DISTNAME=	Numeric-24.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=numpy/}
 
@@ -19,5 +19,5 @@ BUILDLINK_PASSTHRU_DIRS+=	/System/Library/Frameworks/vecLib.framework/Headers
 PLIST.blas=	yes
 .endif
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
