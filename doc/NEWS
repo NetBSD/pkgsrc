@@ -1,4 +1,4 @@
-# $NetBSD: NEWS,v 1.22 2021/11/07 11:30:19 nia Exp $
+# $NetBSD: NEWS,v 1.23 2022/01/10 18:06:00 gdt Exp $
 
 PKGSRC NEWS
 ===========
@@ -9,9 +9,10 @@ PKGSRC NEWS
 
 SHA1 distfile hashes deprecated [nia 2021-10-07]
 
-	SHA1 hashes have been removed from the pkgsrc tree for
-	distfiles and will now no longer be generated for new
-	packages - only SHA512 and RMD160 will be generated.
+        Distfile hash algorithms have been changed, keeping SHA512,
+        adding BLAKE2s, and removing SHA1 and RMD160.  New packages
+        and updates will only generate SHA512 and BLAKE2s, and the
+        stored hashes have been adjusted.
 
 Default Python version changed to 3.9 [nia 2021-10-01]
 
