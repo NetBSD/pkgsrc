@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2020/05/22 20:07:33 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2022/01/10 08:41:55 wiz Exp $
 
 DISTNAME=		InlineEgg-1.08
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		devel
 MASTER_SITES=		http://oss.corest.com/repo/
 
@@ -24,5 +24,5 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/InlineEgg
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
