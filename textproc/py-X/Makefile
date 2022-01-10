@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2020/03/01 02:56:41 gutteridge Exp $
+# $NetBSD: Makefile,v 1.20 2022/01/10 21:51:09 wiz Exp $
 
 DISTNAME=	PyX-0.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyx/}
 
@@ -23,5 +24,5 @@ CONF_FILES=	${PYSITELIB}/pyx/data/pyxrc \
 PYTHON_SELF_CONFLICT=		yes
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
