@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2020/12/04 20:45:19 nia Exp $
+# $NetBSD: Makefile,v 1.22 2022/01/10 07:48:08 wiz Exp $
 
 DISTNAME=		jools-0.20
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		games
 #MASTER_SITES=		http://pessimization.com/software/jools/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} jools-musicpack-1.0.tar.gz
@@ -22,5 +22,5 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/untimed/* ${DESTDIR}${PREFIX}/share/jools/music/untimed
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
