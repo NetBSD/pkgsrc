@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.160 2022/01/10 11:31:15 adam Exp $
+$NetBSD: CHANGES-2022,v 1.161 2022/01/10 11:56:12 micha Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -202,3 +202,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/guile-gcrypt to 0.3.0 [nikita 2022-01-10]
 	Updated devel/py-filelock to 3.2.1 [adam 2022-01-10]
 	Updated devel/py-astroid to 2.9.3 [adam 2022-01-10]
+	Updated news/flnews to 1.0.1 [micha 2022-01-10]
