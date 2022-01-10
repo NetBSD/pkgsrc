@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2014/01/22 07:19:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/10 07:45:22 wiz Exp $
 bin/mount.wikipediafs
-${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/wikipediafs/__init__.py
 ${PYSITELIB}/wikipediafs/__init__.pyc
 ${PYSITELIB}/wikipediafs/__init__.pyo
