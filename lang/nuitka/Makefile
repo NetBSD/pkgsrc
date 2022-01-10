@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/01/26 17:31:30 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/10 20:22:58 wiz Exp $
 
 DISTNAME=	Nuitka-0.5.0.1
 PKGNAME=	${DISTNAME:C/N/n/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	lang
 MASTER_SITES=	http://nuitka.net/releases/
 
@@ -35,5 +35,5 @@ REPLACE_PYTHON+=	tests/programs/run_all.py
 REPLACE_PYTHON+=	nuitka/build/inline_copy/bin/scons.py
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
