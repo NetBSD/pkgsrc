@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.9 2021/10/19 21:23:31 tm Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/01/10 08:30:00 wiz Exp $
 bin/offlineimap
-${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/offlineimap/CustomConfig.py
 ${PYSITELIB}/offlineimap/CustomConfig.pyc
 ${PYSITELIB}/offlineimap/CustomConfig.pyo

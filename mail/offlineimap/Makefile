@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2021/10/19 21:23:31 tm Exp $
-
+# $NetBSD: Makefile,v 1.38 2022/01/10 08:30:00 wiz Exp $
 
 DISTNAME=	offlineimap-7.3.4
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OfflineIMAP/}
 
@@ -29,5 +29,5 @@ post-install:
 .endfor
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
