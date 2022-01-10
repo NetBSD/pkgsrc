@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2021/04/08 16:53:01 gdt Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/10 22:20:26 wiz Exp $
 
 DISTNAME=	speedtest-cli-2.1.3
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sivel/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -22,7 +23,7 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/speedtest-cli.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/speedtest-cli.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/speedtest.1
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
