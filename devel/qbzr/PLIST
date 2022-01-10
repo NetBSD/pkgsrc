@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2014/01/23 18:53:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/01/10 22:04:42 wiz Exp $
 ${PYSITELIB}/bzrlib/plugins/qbzr/AUTHORS.txt
 ${PYSITELIB}/bzrlib/plugins/qbzr/COPYING.txt
 ${PYSITELIB}/bzrlib/plugins/qbzr/NEWS.txt
@@ -383,4 +383,3 @@ ${PYSITELIB}/bzrlib/plugins/qbzr/locale/sv/LC_MESSAGES/qbzr.mo
 ${PYSITELIB}/bzrlib/plugins/qbzr/locale/th/LC_MESSAGES/qbzr.mo
 ${PYSITELIB}/bzrlib/plugins/qbzr/locale/tr/LC_MESSAGES/qbzr.mo
 ${PYSITELIB}/bzrlib/plugins/qbzr/locale/uk/LC_MESSAGES/qbzr.mo
-${PYSITELIB}/${EGG_FILE}
