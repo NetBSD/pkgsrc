@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/03/24 08:20:06 adam Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.7 2022/01/10 21:31:29 wiz Exp $
 ${PYSITELIB}/quixote/__init__.py
 ${PYSITELIB}/quixote/__init__.pyc
 ${PYSITELIB}/quixote/__init__.pyo
