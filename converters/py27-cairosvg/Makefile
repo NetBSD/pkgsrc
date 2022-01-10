@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2018/03/26 00:33:40 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/10 08:53:14 wiz Exp $
 
 DISTNAME=	CairoSVG-1.0.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	converters graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/CairoSVG/}
 
@@ -21,5 +22,5 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/cairosvg \
 		${DESTDIR}${PREFIX}/bin/cairosvg${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
