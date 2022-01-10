@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2021/12/08 16:06:15 adam Exp $
+# $NetBSD: Makefile,v 1.51 2022/01/10 20:32:17 wiz Exp $
 
 DISTNAME=	pycups-1.9.73
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	print python
 MASTER_SITES=	http://cyberelk.net/tim/data/pycups/
 MASTER_SITES+=	${MASTER_SITE_PYPI:=p/pycups/}
@@ -21,6 +21,6 @@ SUBST_FILES.paths=	cupsconnection.c
 SUBST_SED.paths=	-e 's:"/usr/share/cups":"${BUILDLINK_PREFIX.cups-base}/share/cups/", "/usr/share/cups":'
 SUBST_STAGE.paths=	pre-configure
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../print/cups-base/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
