@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2017/03/13 05:22:05 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/10 20:39:43 wiz Exp $
 
 DISTNAME=	python-musicbrainzngs-0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//:S/ngs/-ngs/}
+PKGREVISION=	1
 CATEGORIES=	audio net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alastair/}
 
@@ -20,5 +21,5 @@ EGG_NAME=	${DISTNAME:S/python-//}
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} setup.py test
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
