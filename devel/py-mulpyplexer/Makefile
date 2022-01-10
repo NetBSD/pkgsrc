@@ -1,7 +1,8 @@
-#	$NetBSD: Makefile,v 1.1 2020/08/18 20:20:08 riastradh Exp $
+#	$NetBSD: Makefile,v 1.2 2022/01/10 18:48:23 wiz Exp $
 
 DISTNAME=	mulpyplexer-0.08
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mulpyplexer/}
 
@@ -10,5 +11,7 @@ HOMEPAGE=	https://github.com/zardus/mulpyplexer/
 COMMENT=	Python module to multiplex interactions with lists of objects
 LICENSE=	2-clause-bsd
 
-.include "../../lang/python/distutils.mk"
+EGG_NAME=	mulpyplexer-0.8
+
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
