@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2021/12/30 13:05:36 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/10 23:46:49 wiz Exp $
 
 DISTNAME=	astroquery-0.3.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=astropy/}
 GITHUB_PROJECT=	astroquery
@@ -20,5 +21,5 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.15.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-astropy>=4.2:../../math/py-astropy
 DEPENDS+=	${PYPKGPREFIX}-pyvo>=1.0:../../math/py-pyvo
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

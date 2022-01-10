@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2021/12/08 16:05:19 adam Exp $
+# $NetBSD: Makefile,v 1.29 2022/01/10 23:46:49 wiz Exp $
 
 DISTNAME=	tegaki-wagomu-0.3.1
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://www.tegaki.org/releases/${PKGVERSION_NOREV}/
 MASTER_SITES+=	http://www.tegaki.org/releases/0.3/
@@ -32,5 +32,5 @@ SUBST_SED.fixver=	-e 's|0\.3|${PKGVERSION_NOREV}|'
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.3.1
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
