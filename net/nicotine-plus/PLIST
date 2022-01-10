@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2021/01/01 16:35:23 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/10 07:49:44 wiz Exp $
 bin/nicotine
-${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pynicotine/__init__.py
 ${PYSITELIB}/pynicotine/__init__.pyc
 ${PYSITELIB}/pynicotine/__init__.pyo
