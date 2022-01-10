@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2012/04/08 20:21:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/10 08:10:07 wiz Exp $
 bin/archivemail
-${PYSITELIB}/${EGG_FILE}
 man/man1/archivemail.1
 share/archivemail/CHANGELOG
 share/archivemail/FAQ

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2020/12/04 20:45:27 nia Exp $
+# $NetBSD: Makefile,v 1.29 2022/01/10 08:10:07 wiz Exp $
 
 DISTNAME=		archivemail-0.9.0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=archivemail/}
 
@@ -24,5 +24,5 @@ post-install:
 do-test:
 	${RUN}cd ${WRKSRC};${SETENV} ${TEST_ENV} ${PYTHONBIN} test_archivemail
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
