@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.8 2012/06/04 06:39:02 dholland Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/01/10 08:56:27 wiz Exp $
 bin/pychecker${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pychecker/COPYRIGHT
 ${PYSITELIB}/pychecker/ChangeLog
 ${PYSITELIB}/pychecker/CodeChecks.py
