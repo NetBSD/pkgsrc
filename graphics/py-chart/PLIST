@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/07/02 03:27:22 darcy Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.2 2022/01/10 20:29:09 wiz Exp $
 ${PYSITELIB}/pychart/__init__.py
 ${PYSITELIB}/pychart/__init__.pyc
 ${PYSITELIB}/pychart/__init__.pyo
