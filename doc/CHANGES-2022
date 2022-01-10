@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.155 2022/01/10 02:31:05 khorben Exp $
+$NetBSD: CHANGES-2022,v 1.156 2022/01/10 07:42:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -196,3 +196,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-boost to 1.78.0 [ryoon 2022-01-10]
 	Updated meta-pkgs/boost to 1.78.0 [ryoon 2022-01-10]
 	Added security/hashcat version 6.2.5 [khorben 2022-01-10]
+	Removed devel/codeville [wiz 2022-01-10]
