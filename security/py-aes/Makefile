@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/07/21 21:19:01 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/10 08:48:30 wiz Exp $
 
 DISTNAME=	pyaes-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyaes/}
 
@@ -17,5 +18,5 @@ USE_LANGUAGES=	# none
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} tests/test-aes.py
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
