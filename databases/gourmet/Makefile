@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2021/12/08 16:03:38 adam Exp $
+# $NetBSD: Makefile,v 1.70 2022/01/10 22:35:54 wiz Exp $
 
 DISTNAME=		gourmet-0.8.5.14
-PKGREVISION=		48
+PKGREVISION=		49
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=grecipe-manager/}
 
@@ -44,7 +44,7 @@ REPLACE_PYTHON+=	src/lib/version.py
 REPLACE_PYTHON+=	windows/Gourmet.pyw
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../databases/py-metakit/buildlink3.mk"
 .include "../../graphics/py-imaging/buildlink3.mk"
