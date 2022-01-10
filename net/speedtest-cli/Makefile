@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/01/10 22:20:26 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/01/10 22:21:17 wiz Exp $
 
 DISTNAME=	speedtest-cli-2.1.3
 PKGREVISION=	1
@@ -18,6 +18,8 @@ REPLACE_PYTHON=	*.py
 PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+
+USE_PKG_RESOURCES=	yes
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/speedtest-cli.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
