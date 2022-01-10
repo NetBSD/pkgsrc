@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/01/09 23:42:03 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/10 00:00:05 tnn Exp $
 
 GITHUB_PROJECT=	wasi-libc
 GITHUB_TAG=	ad5133410f66b93a2381db5b542aad5e0964db96
@@ -36,6 +36,11 @@ MAKE_FLAGS+=	WASM_AR=${PREFIX}/bin/llvm-ar
 MAKE_FLAGS+=	WASM_NM=${PREFIX}/bin/llvm-nm
 MAKE_FLAGS+=	INSTALL_DIR=${DESTDIR}${PREFIX}/wasi
 BUILD_TARGET=	finish
+
+# iconv.h from libiconv get pulled in on SunOS (via clang)
+# It conflicts with musl libc so must be removed.
+pre-configure:
+	rm -f ${BUILDLINK_DIR}/include/iconv.h
 
 ABI=			# 32
 CFLAGS=			-O2
