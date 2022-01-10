@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2020/09/03 15:46:06 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2022/01/10 22:46:03 wiz Exp $
 
 DISTNAME=	graphite-web-0.9.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www
 GITHUB_PROJECT=	graphite-web
 MASTER_SITES=	${MASTER_SITE_GITHUB:=graphite-project/}
@@ -60,7 +61,7 @@ CONF_FILES+=		${GRAPHITE_EGDIR}/${file}.example	\
 .endfor
 
 PYSETUPINSTALLARGS=		--prefix=${PREFIX}			\
-			--install-lib=${PREFIX}/${PYSITELIB}
+				--install-lib=${PREFIX}/${PYSITELIB}
 PYTHON_VERSIONS_ACCEPTED=	27 # py-django-tagging
 
 INSTALLATION_DIRS+=	share/examples/graphite
@@ -74,5 +75,5 @@ post-install:
 	${LN} -s ${PKG_SYSCONFDIR}/local_settings.py ${DESTDIR}${PREFIX}/${PYSITELIB}/graphite/
 
 .include "../../databases/py-carbon/Makefile.common"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
