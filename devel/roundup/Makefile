@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2020/12/04 20:45:13 nia Exp $
+# $NetBSD: Makefile,v 1.62 2022/01/10 22:19:31 wiz Exp $
 
 DISTNAME=	roundup-1.4.19
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/roundup/}
 
@@ -42,6 +42,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.txt ${DESTDIR}${ROUNDUPDOCDIR}
 	cd ${WRKSRC}/doc && pax -s '/.*\.1//g' -rw -pp -pm . ${DESTDIR}${ROUNDUPDOCDIR}
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
