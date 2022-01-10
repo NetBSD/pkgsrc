@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/04/08 20:21:58 wiz Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.6 2022/01/10 09:10:43 wiz Exp $
 ${PYSITELIB}/gnosis/README
 ${PYSITELIB}/gnosis/__init__.py
 ${PYSITELIB}/gnosis/__init__.pyc
