@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/08/29 06:55:55 wiz Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.2 2022/01/10 20:41:00 wiz Exp $
 ${PYSITELIB}/pathlib.py
 ${PYSITELIB}/pathlib.pyc
 ${PYSITELIB}/pathlib.pyo
