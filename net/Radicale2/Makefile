@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2020/12/04 20:45:32 nia Exp $
+# $NetBSD: Makefile,v 1.12 2022/01/10 20:20:41 wiz Exp $
 
 DISTNAME=	Radicale-2.1.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net time www
 MASTER_SITES=	${MASTER_SITE_PYPI:=R/Radicale/}
 
@@ -52,5 +52,5 @@ DEPENDS+=		${PYPKGPREFIX}-passlib-[0-9]*:../../security/py-passlib
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/config ${DESTDIR}${PREFIX}/${EGDIR}/config
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
