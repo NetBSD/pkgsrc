@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2019/12/03 17:19:01 adam Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/10 20:52:10 wiz Exp $
 
 DISTNAME=	txAMQP-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/txAMQP/}
 
@@ -15,5 +16,5 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
