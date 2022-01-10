@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2021/05/24 19:54:06 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/10 08:31:01 wiz Exp $
 
 DISTNAME=		pius-3.0.0
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		security python
 MASTER_SITES=		${MASTER_SITE_GITHUB:=jaymzh/}
 GITHUB_RELEASE=		v${PKGVERSION_NOREV}
@@ -26,6 +26,6 @@ SUBST_VARS.paths=	PREFIX PKGMANDIR
 
 REPLACE_PERL+=		pius-party-worksheet
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
