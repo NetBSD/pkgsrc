@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2019/09/02 13:19:36 adam Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/10 18:52:28 wiz Exp $
 
 DISTNAME=	pytemplate-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	http://www.bulot.org/downloads/
 
@@ -12,7 +12,7 @@ COMMENT=	Pytemplate gives python developpers a starting framework
 
 USE_LANGUAGES=			# none
 
-REPLACE_PYTHON=			${WRKSRC}/*.py
+REPLACE_PYTHON=			*.py
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.5.1
 
 EGDIR=				${PREFIX}/share/examples/${PYPKGPREFIX}-pytemplate
@@ -28,5 +28,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/threadexample.py ${DESTDIR}${EGDIR}
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
