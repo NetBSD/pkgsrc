@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/01/09 10:28:19 adam Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.2 2022/01/10 08:51:00 wiz Exp $
 ${PYSITELIB}/bz2file.py
 ${PYSITELIB}/bz2file.pyc
 ${PYSITELIB}/bz2file.pyo
