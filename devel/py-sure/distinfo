@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:19:06 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/01/10 16:30:33 adam Exp $
 
-BLAKE2s (sure-1.4.11.tar.gz) = 6c1300ef4fd628732274de075e9d207cce13b4bcecf25b648d8b9efe9aed4dc7
-SHA512 (sure-1.4.11.tar.gz) = ed067385bf9cf317a5d55f6c5fc6ee54ee3d592825be398e47c37d31fc9c010cb9316d4e2bcf1d72d53d7e53fd470792d64348aa2bfa5dc43510daaff97742da
-Size (sure-1.4.11.tar.gz) = 45933 bytes
+BLAKE2s (sure-2.0.0.tar.gz) = cf9db511dbbcd4aa1b9c5b8c35f53604c27bdd82fddbf6fb45cef644cae9def2
+SHA512 (sure-2.0.0.tar.gz) = 8286846374c2bfc773444e90bf4f9c0b0d66d0229afa53af63025bfec690bf8bcc959f86c238ca5244c6a29099e955691771b0eb954af479bde2f17e51f6f1de
+Size (sure-2.0.0.tar.gz) = 46747 bytes
