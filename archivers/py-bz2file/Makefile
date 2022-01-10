@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2019/01/09 10:28:19 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/10 08:51:00 wiz Exp $
 
 DISTNAME=	bz2file-0.98
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bz2file/}
 
@@ -17,5 +18,5 @@ PYTHON_VERSIONS_ACCEPTED=	27
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} test_bz2file.py
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
