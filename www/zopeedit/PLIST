@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2012/04/08 20:22:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/01/10 22:25:46 wiz Exp $
 bin/zopeedit.py
-${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 man/man1/zopeedit.1
 share/doc/zopeedit/README.txt
