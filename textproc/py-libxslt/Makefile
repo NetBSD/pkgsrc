@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2021/12/08 16:06:46 adam Exp $
+# $NetBSD: Makefile,v 1.61 2022/01/10 23:46:49 wiz Exp $
 
-PKGREVISION= 4
+PKGREVISION= 5
 .include "../../textproc/libxslt/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -44,6 +44,6 @@ setuppy:
 BUILDLINK_API_DEPENDS.libxslt+=	libxslt>=${PKGVERSION_NOREV}
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../lang/python/extension.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
