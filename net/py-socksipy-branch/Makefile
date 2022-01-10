@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2018/08/22 06:20:30 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/10 08:47:45 wiz Exp $
 
 DISTNAME=	SocksiPy-branch-1.01
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SocksiPy-branch/}
 
@@ -12,5 +13,7 @@ LICENSE=	modified-bsd
 
 CONFLICTS=	${PYPKGPREFIX}-Socks-[0-9]*
 
-.include "../../lang/python/distutils.mk"
+EGG_NAME=	SocksiPy_branch-1.1
+
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
