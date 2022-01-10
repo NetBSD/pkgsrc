@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:19:03 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/01/10 16:15:07 adam Exp $
 
-BLAKE2s (pyscard-1.9.9.tar.gz) = 762a249c6dc16e758c7d0439009fee9045bd4668fc248d75190e83d177418db5
-SHA512 (pyscard-1.9.9.tar.gz) = 88c7314c10153f509eb9bf6318e62210c7182e51b531af752a402bf8d05cfa2658cc1a4e7b9385a474038ddfa5a1bfbf1f208fcd9abe02a60161ce7c757c67b2
-Size (pyscard-1.9.9.tar.gz) = 145428 bytes
+BLAKE2s (pyscard-2.0.2.tar.gz) = f20bad63565da15d384bbed168d2bb6da0b3b31115bdb5133bcdd3a621cccfa1
+SHA512 (pyscard-2.0.2.tar.gz) = f6ab42a0aa037189f2fefe4001dde7f49125fdf63358352af956e58da9a51744a884ff1f7173b71e035a1a4a20825a906ee5d94f314b760333d1110c898a6644
+Size (pyscard-2.0.2.tar.gz) = 149302 bytes
+SHA1 (patch-smartcard_scard_winscarddll.h) = 37af3bc8fc9fd44c3eeaaf3b9a9c1d0ae981a856
