@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2020/12/04 20:45:35 nia Exp $
+# $NetBSD: Makefile,v 1.39 2022/01/10 22:18:58 wiz Exp $
 
 DISTNAME=	pygopherd_2.0.16
-PKGREVISION=	6
+PKGREVISION=	7
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	net
 MASTER_SITES=	http://gopher.quux.org:70/devel/gopher/Downloads/pygopherd/
@@ -64,6 +64,6 @@ post-install:
 	done
 	${INSTALL_MAN} ${WRKSRC}/doc/pygopherd.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
