@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2021/12/23 22:27:35 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/01/10 08:14:30 wiz Exp $
 #
 
 DISTNAME=	fail2ban-0.11.2
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fail2ban/}
 
@@ -124,6 +125,6 @@ post-install:
 
 .include "options.mk"
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
