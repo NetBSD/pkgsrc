@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/24 10:21:13 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/10 22:15:36 wiz Exp $
 ${PYSITELIB}/_marisa.so
 ${PYSITELIB}/marisa.py
 ${PYSITELIB}/marisa.pyc
 ${PYSITELIB}/marisa.pyo
-${PYSITELIB}/${EGG_FILE}
