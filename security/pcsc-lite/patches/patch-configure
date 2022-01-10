@@ -1,34 +1,16 @@
-$NetBSD: patch-configure,v 1.5 2020/06/20 19:03:37 adam Exp $
+$NetBSD: patch-configure,v 1.6 2022/01/10 16:11:52 adam Exp $
 
 Make sure libpcsclite.so is not linked against -lphtread on NetBSD, as
 loading libpthread.so through dlopen() is now forbidden
 
---- configure.orig	2014-09-24 13:04:46.000000000 +0000
+--- configure.orig	2021-12-04 12:29:53.000000000 +0000
 +++ configure
-@@ -680,6 +680,8 @@ LIBTOOL
- PTHREAD_CFLAGS
+@@ -711,6 +711,8 @@ PTHREAD_CFLAGS
  PTHREAD_LIBS
+ PTHREAD_CXX
  PTHREAD_CC
 +LIBPCSC_PTHREAD_CFLAGS
 +LIBPCSC_PTHREAD_LIBS
  ax_pthread_config
- ac_ct_AR
- AR
-@@ -13732,7 +13734,7 @@ fi
- 
- 
- # disable libudev check is USB is not used
--if test "$use_usb" == "no"; then
-+if test "$use_usb" = "no"; then
- 	use_libudev="no"
- fi
- 
-@@ -13889,7 +13891,7 @@ fi
- 
- 
- # disable libusb check is USB is not used
--if test "$use_usb" == "no"; then
-+if test "$use_usb" = "no"; then
- 	use_libusb="no"
- fi
- 
+ EGREP
+ GREP

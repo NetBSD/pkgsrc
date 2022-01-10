@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.25 2021/10/26 11:17:36 nia Exp $
+$NetBSD: distinfo,v 1.26 2022/01/10 16:11:52 adam Exp $
 
-BLAKE2s (pcsc-lite-1.9.1.tar.bz2) = ca329fed008462def39bb1838f38bd41d8fef3e0ac379e42a51db03286fe9796
-SHA512 (pcsc-lite-1.9.1.tar.bz2) = 4f59ea6acb5b258092018f10609987e12b8e601049e6ffed4b4b82abd3c4b35c38a60e1cda28fdc884202e694d1bc3a3b5d930c5b1e9c1b9c309bd17ef463e63
-Size (pcsc-lite-1.9.1.tar.bz2) = 763525 bytes
-SHA1 (patch-configure) = d421ffddf787a01c8655c34dda0e4708978c1c6c
-SHA1 (patch-src_Makefile.in) = 077837434e4cf503b9556e45102603c408ccb0cb
-SHA1 (patch-src_PCSC_reader.h) = 8ea2b7be9b3bae56cdae64b950373c8eeda2813a
+BLAKE2s (pcsc-lite-1.9.5.tar.bz2) = 039e209dc9162b633e9dc00a1f2eb6a32b765002d3aafd082391a6b37985d30e
+SHA512 (pcsc-lite-1.9.5.tar.bz2) = 0315c2cf97cc9da0f5faf115f24e523b5a1746cea250a4fe6c4d5d7b2fbfc7c3ea0f068611072ca84866c672eb679e8067101437573148ccd1ac5ad26b18cd78
+Size (pcsc-lite-1.9.5.tar.bz2) = 775736 bytes
+SHA1 (patch-configure) = ff31450a3d94bd0d85ca8d94630583e5095124db
+SHA1 (patch-src_Makefile.in) = 796f51958a5a1d68f90cae045340a107220cfd18
 SHA1 (patch-src_libpcsclite.pc.in) = ba1c8ed98ce81f1fc40ecc8af1b44d0cff8537df
-SHA1 (patch-src_utils.c) = 7bfca2b5a097c6a3d4b7736933b670d1d0d63f76
