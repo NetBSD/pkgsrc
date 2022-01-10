@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2020/03/20 11:58:35 nia Exp $
+# $NetBSD: Makefile,v 1.18 2022/01/10 09:13:53 wiz Exp $
 
 DISTNAME=	jonpy-0.06
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jonpy/}
 
@@ -13,5 +13,5 @@ LICENSE=	mit
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.06
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
