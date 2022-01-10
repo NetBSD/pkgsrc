@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/06/16 21:21:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/10 08:24:11 wiz Exp $
 bin/mimms
 ${PYSITELIB}/libmimms/__init__.py
 ${PYSITELIB}/libmimms/__init__.pyc
@@ -9,5 +9,4 @@ ${PYSITELIB}/libmimms/core.pyo
 ${PYSITELIB}/libmimms/libmms.py
 ${PYSITELIB}/libmimms/libmms.pyc
 ${PYSITELIB}/libmimms/libmms.pyo
-${PYSITELIB}/${EGG_FILE}
 man/man1/mimms.1
