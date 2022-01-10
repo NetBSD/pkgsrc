@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2021/09/29 19:00:04 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2022/01/10 01:46:25 ryoon Exp $
 
 BUILDLINK_TREE+=	libfreehand
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libfreehand
 LIBFREEHAND_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libfreehand+=	libfreehand>=0.0.0
-BUILDLINK_ABI_DEPENDS.libfreehand?=	libfreehand>=0.1.2nb10
+BUILDLINK_ABI_DEPENDS.libfreehand?=	libfreehand>=0.1.2nb12
 BUILDLINK_PKGSRCDIR.libfreehand?=	../../converters/libfreehand
 
 .include "../../converters/libwpd/buildlink3.mk"

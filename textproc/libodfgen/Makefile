@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2021/09/29 19:00:14 adam Exp $
+# $NetBSD: Makefile,v 1.33 2022/01/10 01:46:45 ryoon Exp $
 
 DISTNAME=	libodfgen-0.1.7
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libwpd/libodfgen/libodfgen-${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.xz
