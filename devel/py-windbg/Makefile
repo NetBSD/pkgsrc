@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2019/11/03 10:18:30 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2022/01/10 22:41:04 wiz Exp $
 
 DISTNAME=	winpdb-1.4.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel python
 MASTER_SITES=	http://winpdb.googlecode.com/files/
 
@@ -17,5 +17,5 @@ PYTHON_VERSIONS_ACCEPTED=	27 # py-wxWidgets
 
 USE_LANGUAGES=	#none
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
