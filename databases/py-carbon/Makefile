@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2019/11/02 15:38:09 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/10 21:56:04 wiz Exp $
 
 DISTNAME=	carbon-0.9.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	databases
 GITHUB_PROJECT=	carbon
 MASTER_SITES=	${MASTER_SITE_GITHUB:=graphite-project/}
@@ -66,11 +67,11 @@ CONF_FILES+=		${GRAPHITE_EGDIR}/${file}.example \
 			${PKG_SYSCONFDIR}/${file}
 .endfor
 
-PYSETUPINSTALLARGS=	--prefix=${PREFIX}			\
+PYSETUPINSTALLARGS=	--prefix=${PREFIX} \
 			--install-lib=${PREFIX}/${PYSITELIB}
 
 INSTALLATION_DIRS+=	share/examples/graphite
 
 .include "../../databases/py-carbon/Makefile.common"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
