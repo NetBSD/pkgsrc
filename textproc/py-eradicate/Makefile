@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2019/01/22 10:44:10 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/10 18:28:51 wiz Exp $
 
 DISTNAME=	eradicate-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/eradicate/}
 
@@ -16,5 +17,5 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 		${MV} eradicate eradicate-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2018/11/20 14:09:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/10 18:28:51 wiz Exp $
 bin/eradicate-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_FILE}
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/eradicate.py
 ${PYSITELIB}/eradicate.pyc
 ${PYSITELIB}/eradicate.pyo
