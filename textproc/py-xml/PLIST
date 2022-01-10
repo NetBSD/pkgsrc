@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2012/04/08 20:21:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/01/10 20:55:50 wiz Exp $
 bin/xmlproc_parse${PYVERSSUFFIX}
 bin/xmlproc_val${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/_xmlplus/FtCore.py
 ${PYSITELIB}/_xmlplus/FtCore.pyc
 ${PYSITELIB}/_xmlplus/FtCore.pyo
