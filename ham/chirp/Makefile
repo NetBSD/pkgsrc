@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2021/12/18 13:47:01 gdt Exp $
+# $NetBSD: Makefile,v 1.40 2022/01/10 08:11:43 wiz Exp $
 
 PKGVERSION=	20211216
 PKGNAME=	chirp-${PKGVERSION}
 DISTNAME=	chirp-daily-${PKGVERSION_NOREV}
+PKGREVISION=	1
 CATEGORIES=	ham
 MASTER_SITES=	https://trac.chirp.danplanet.com/chirp_daily/daily-${PKGVERSION_NOREV}/
 # Chirp does not have what would normally called releasees.  They have
@@ -47,7 +48,7 @@ SUBST_SED.fix-sharepaths=	-e 's,/usr/share,${PREFIX}/share,g'
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"
 .include "../../textproc/py-libxml2/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
