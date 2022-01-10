@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/02/17 14:32:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/01/10 18:46:54 wiz Exp $
 bin/pymol${PYVERSSUFFIX}
 ${PYSITELIB}/chempy/__init__.py
 ${PYSITELIB}/chempy/__init__.pyc
@@ -223,7 +223,6 @@ ${PYSITELIB}/pmg_tk/startup/remote_pdb_load.pyo
 ${PYSITELIB}/pmg_wx/__init__.py
 ${PYSITELIB}/pmg_wx/__init__.pyc
 ${PYSITELIB}/pmg_wx/__init__.pyo
-${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pymol/__init__.py
 ${PYSITELIB}/pymol/__init__.pyc
 ${PYSITELIB}/pymol/__init__.pyo
