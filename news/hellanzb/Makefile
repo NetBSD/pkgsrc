@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2020/12/04 20:45:36 nia Exp $
+# $NetBSD: Makefile,v 1.23 2022/01/10 18:18:22 wiz Exp $
 #
 .include "../../news/hellanzb/Makefile.version"
 
 DISTNAME=		hellanzb-${HELLANZB_VERSION}.${HELLANZB_SVN_REV}
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		news
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
@@ -42,5 +42,5 @@ post-install:
 
 EGG_NAME=	hellanzb-${HELLANZB_VERSION}_trunk
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

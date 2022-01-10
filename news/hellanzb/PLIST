@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/04/08 20:21:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/10 18:18:22 wiz Exp $
 bin/hellanzb.py
 ${PYSITELIB}/Hellanzb/Core.py
 ${PYSITELIB}/Hellanzb/Core.pyc
@@ -90,6 +90,5 @@ ${PYSITELIB}/Hellanzb/external/elementtree/SimpleXMLWriter.pyo
 ${PYSITELIB}/Hellanzb/external/elementtree/__init__.py
 ${PYSITELIB}/Hellanzb/external/elementtree/__init__.pyc
 ${PYSITELIB}/Hellanzb/external/elementtree/__init__.pyo
-${PYSITELIB}/${EGG_FILE}
 share/doc/hellanzb/README
 share/examples/hellanzb/hellanzb.conf
