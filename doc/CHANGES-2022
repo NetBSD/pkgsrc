@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.172 2022/01/10 19:46:52 adam Exp $
+$NetBSD: CHANGES-2022,v 1.173 2022/01/10 20:49:28 morr Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -220,3 +220,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-flit to 3.6.0 [adam 2022-01-10]
 	Added devel/py-distlib version 0.3.4 [adam 2022-01-10]
 	Updated net/py-lexicon to 3.9.0 [adam 2022-01-10]
+	Updated www/wordpress to 5.8.3 [morr 2022-01-10]
