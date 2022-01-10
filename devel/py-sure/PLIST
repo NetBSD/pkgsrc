@@ -1,12 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/29 21:17:18 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/10 16:30:33 adam Exp $
+bin/sure-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/sure/__init__.py
 ${PYSITELIB}/sure/__init__.pyc
 ${PYSITELIB}/sure/__init__.pyo
+${PYSITELIB}/sure/cli.py
+${PYSITELIB}/sure/cli.pyc
+${PYSITELIB}/sure/cli.pyo
 ${PYSITELIB}/sure/compat.py
 ${PYSITELIB}/sure/compat.pyc
 ${PYSITELIB}/sure/compat.pyo
@@ -25,6 +30,12 @@ ${PYSITELIB}/sure/old.pyo
 ${PYSITELIB}/sure/registry.py
 ${PYSITELIB}/sure/registry.pyc
 ${PYSITELIB}/sure/registry.pyo
+${PYSITELIB}/sure/stubs.py
+${PYSITELIB}/sure/stubs.pyc
+${PYSITELIB}/sure/stubs.pyo
 ${PYSITELIB}/sure/terminal.py
 ${PYSITELIB}/sure/terminal.pyc
 ${PYSITELIB}/sure/terminal.pyo
+${PYSITELIB}/sure/version.py
+${PYSITELIB}/sure/version.pyc
+${PYSITELIB}/sure/version.pyo
