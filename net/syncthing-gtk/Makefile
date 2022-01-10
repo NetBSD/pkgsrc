@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2021/12/08 16:06:07 adam Exp $
+# $NetBSD: Makefile,v 1.26 2022/01/10 08:08:10 wiz Exp $
 
 DISTNAME=	syncthing-gtk-0.9.4.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kozec/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -53,7 +53,7 @@ BUILDLINK_API_DEPENDS.libnotify+=	libnotify>=0.7.8
 BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.42.2		# for introspection
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
