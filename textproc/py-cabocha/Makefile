@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2019/09/02 13:20:12 adam Exp $
+# $NetBSD: Makefile,v 1.14 2022/01/10 08:52:16 wiz Exp $
 
+PKGREVISION= 1
 .include "../../textproc/cabocha/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,5 +17,5 @@ EGG_NAME=	${DISTNAME:S/-/_python-/}
 
 BUILDLINK_API_DEPENDS.cabocha+=	cabocha>=${PKGVERSION_NOREV}
 .include "../../textproc/cabocha/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
