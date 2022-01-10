@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1264 2022/01/08 12:02:21 wiz Exp $
+# $NetBSD: Makefile,v 1.1265 2022/01/10 08:38:44 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -940,7 +940,6 @@ SUBDIR+=	prose
 SUBDIR+=	psgml-mode
 SUBDIR+=	pugixml
 SUBDIR+=	pxp
-SUBDIR+=	py-4Suite
 SUBDIR+=	py-Excelerator
 SUBDIR+=	py-HappyDoc
 SUBDIR+=	py-ICU
