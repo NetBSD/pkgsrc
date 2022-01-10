@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2012/04/26 12:57:51 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/01/10 07:57:59 wiz Exp $
 ${PYSITELIB}/_mssql.so
-${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/pymssql.py
 ${PYSITELIB}/pymssql.pyc
 ${PYSITELIB}/pymssql.pyo
