@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2020/01/26 17:32:07 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2022/01/10 21:58:20 wiz Exp $
 
 DISTNAME=	python-mcrypt-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	http://labix.org/download/python-mcrypt/
 
@@ -13,6 +13,6 @@ LICENSE=	gnu-lgpl-v2.1
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.1
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../security/libmcrypt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
