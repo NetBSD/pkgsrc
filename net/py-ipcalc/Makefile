@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/05/26 21:42:42 leot Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/10 20:35:50 wiz Exp $
 
 DISTNAME=	ipcalc-1.99.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipcalc/}
 
@@ -12,5 +13,5 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
