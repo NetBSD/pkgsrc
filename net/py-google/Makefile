@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2020/03/20 11:58:10 nia Exp $
+# $NetBSD: Makefile,v 1.44 2022/01/10 20:19:04 wiz Exp $
 
 DISTNAME=	pygoogle-0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pygoogle/}
 
@@ -16,5 +16,5 @@ EGG_NAME=	pygoogle-0.5
 
 PYTHON_VERSIONS_ACCEPTED=	27 # py-xml via py-soappy
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
