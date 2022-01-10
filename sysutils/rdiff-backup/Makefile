@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2020/12/04 20:45:43 nia Exp $
+# $NetBSD: Makefile,v 1.61 2022/01/10 08:06:26 wiz Exp $
 
 DISTNAME=	rdiff-backup-1.2.8
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	sysutils net
 MASTER_SITES=	http://savannah.nongnu.org/download/rdiff-backup/
 
@@ -23,6 +23,6 @@ post-install:
 
 .include "../../net/librsync/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 
 .include "../../mk/bsd.pkg.mk"
