@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2021/09/05 16:39:35 tkusumi Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/10 08:15:33 wiz Exp $
 bin/fileobj-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/fileobj/__init__.py
 ${PYSITELIB}/fileobj/__init__.pyc
 ${PYSITELIB}/fileobj/__init__.pyo
