@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2021/09/29 19:00:05 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2022/01/10 01:46:26 ryoon Exp $
 
 BUILDLINK_TREE+=	libwps
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libwps
 LIBWPS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libwps+=	libwps>=0.4.0
-BUILDLINK_ABI_DEPENDS.libwps?=	libwps>=0.4.12nb3
+BUILDLINK_ABI_DEPENDS.libwps?=	libwps>=0.4.12nb4
 BUILDLINK_PKGSRCDIR.libwps?=	../../converters/libwps
 
 .include "../../converters/librevenge/buildlink3.mk"
