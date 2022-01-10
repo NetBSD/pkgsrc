@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2021/12/11 14:57:51 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/10 01:46:36 ryoon Exp $
 
 PKGNAME=	gnuradio-soapy-sdr-${VERSION}
+PKGREVISION=	1
 COMMENT=	GNU Radio bindings for SoapySDR
 
 .include	"../../ham/gnuradio-core/Makefile.common"

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2021/12/11 13:59:07 tnn Exp $
+# $NetBSD: Makefile,v 1.23 2022/01/10 01:46:37 ryoon Exp $
 
 DISTNAME=		gr-fcdproplus-3.8.0.20200811
+PKGREVISION=		1
 CATEGORIES=		ham
 MASTER_SITES=		${MASTER_SITE_GITHUB:=dl1ksv/}
 GITHUB_TAG=		575fcafbb8f36dc11d95a305f331660612a44596

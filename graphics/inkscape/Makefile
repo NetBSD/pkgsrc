@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.242 2021/12/08 16:04:58 adam Exp $
+# $NetBSD: Makefile,v 1.243 2022/01/10 01:46:33 ryoon Exp $
 
 DISTNAME=	inkscape-1.1.1_2021-09-20_3bf5ae0d25
 PKGNAME=	inkscape-1.1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 # master site is using a weird redirect that ftp(1) does not support
 #MASTER_SITES=	https://inkscape.org/gallery/item/29255/
