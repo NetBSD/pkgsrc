@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2012/04/08 20:21:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/01/10 22:10:10 wiz Exp $
 bin/mainloop
 bin/opt-parser
 bin/rlimit
-${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/gnatpython/__init__.py
 ${PYSITELIB}/gnatpython/__init__.pyc
 ${PYSITELIB}/gnatpython/__init__.pyo
