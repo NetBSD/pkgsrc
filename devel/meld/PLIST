@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.39 2021/12/31 08:03:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.40 2022/01/10 08:21:09 wiz Exp $
 bin/meld
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/meld/__init__.py
 ${PYSITELIB}/meld/__init__.pyc
 ${PYSITELIB}/meld/__init__.pyo
@@ -121,9 +121,9 @@ ${PYSITELIB}/meld/ui/cellrenderers.pyo
 ${PYSITELIB}/meld/ui/emblemcellrenderer.py
 ${PYSITELIB}/meld/ui/emblemcellrenderer.pyc
 ${PYSITELIB}/meld/ui/emblemcellrenderer.pyo
-${PYSITELIB}/meld/ui/filechooser.py
-${PYSITELIB}/meld/ui/filechooser.pyc
-${PYSITELIB}/meld/ui/filechooser.pyo
+${PYSITELIB}/meld/ui/filebutton.py
+${PYSITELIB}/meld/ui/filebutton.pyc
+${PYSITELIB}/meld/ui/filebutton.pyo
 ${PYSITELIB}/meld/ui/findbar.py
 ${PYSITELIB}/meld/ui/findbar.pyc
 ${PYSITELIB}/meld/ui/findbar.pyo
@@ -148,6 +148,9 @@ ${PYSITELIB}/meld/ui/notebook.pyo
 ${PYSITELIB}/meld/ui/notebooklabel.py
 ${PYSITELIB}/meld/ui/notebooklabel.pyc
 ${PYSITELIB}/meld/ui/notebooklabel.pyo
+${PYSITELIB}/meld/ui/pathlabel.py
+${PYSITELIB}/meld/ui/pathlabel.pyc
+${PYSITELIB}/meld/ui/pathlabel.pyo
 ${PYSITELIB}/meld/ui/recentselector.py
 ${PYSITELIB}/meld/ui/recentselector.pyc
 ${PYSITELIB}/meld/ui/recentselector.pyo
@@ -219,8 +222,9 @@ share/help/C/meld/resolving-conflicts.page
 share/help/C/meld/text-filters.page
 share/help/C/meld/vc-mode.page
 share/help/C/meld/vc-supported.page
-share/icons/hicolor/scalable/apps/org.gnome.meld.svg
-share/icons/hicolor/symbolic/apps/org.gnome.meld-symbolic.svg
+share/icons/hicolor/scalable/apps/org.gnome.Meld.svg
+share/icons/hicolor/scalable/apps/org.gnome.MeldDevel.svg
+share/icons/hicolor/symbolic/apps/org.gnome.Meld-symbolic.svg
 share/locale/ar/LC_MESSAGES/meld.mo
 share/locale/bg/LC_MESSAGES/meld.mo
 share/locale/bs/LC_MESSAGES/meld.mo
