@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2021/11/30 16:57:25 adam Exp $
-
-PKGREVISION=	1
+# $NetBSD: Makefile,v 1.64 2022/01/10 01:23:31 ryoon Exp $
 
 BOOST_PACKAGE=		headers
 BOOST_COMMENT=		(build-time headers)
