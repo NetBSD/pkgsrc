@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2021/04/06 18:57:10 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2022/01/10 18:22:05 wiz Exp $
 
 DISTNAME=	pyPdf-1.13
 PKGNAME=	${PYPKGPREFIX}-Pdf-1.13
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	print python
 MASTER_SITES=	http://pybrary.net/pyPdf/
 
@@ -11,5 +11,5 @@ HOMEPAGE=	http://pybrary.net/pyPdf/
 COMMENT=	PDF library
 LICENSE=	modified-bsd
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
