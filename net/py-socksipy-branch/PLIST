@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2018/01/24 20:46:42 bsiegert Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.2 2022/01/10 08:47:45 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/socks.py
 ${PYSITELIB}/socks.pyc
 ${PYSITELIB}/socks.pyo
-${PYSITELIB}/socks.py
