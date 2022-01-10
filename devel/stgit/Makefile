@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2021/05/24 19:52:03 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2022/01/10 22:06:47 wiz Exp $
 
 DISTNAME=	stgit-0.17.1
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	devel
 MASTER_SITES=	http://download.gna.org/stgit/
 
@@ -44,5 +44,5 @@ post-install:
 	${INSTALL_DATA} *.html ${DESTDIR}/${PREFIX}/share/doc/${PKGBASE}/html
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
