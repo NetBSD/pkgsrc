@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.87 2021/12/08 16:02:57 adam Exp $
+# $NetBSD: Makefile,v 1.88 2022/01/10 21:43:30 wiz Exp $
 
 VERSION=	2.8.12.0
 DISTNAME=	wxPython-src-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-wxWidgets-${VERSION}
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wxpython/}
 EXTRACT_SUFX=	.tar.bz2
@@ -50,7 +50,7 @@ EGG_NAME2=	${DISTNAME:S/-src-/-/}
 PLIST_SUBST+=	EGG_FILE2=${EGG_NAME2}-py${PYVERSSUFFIX}.egg-info
 
 .include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/wxGTK28/buildlink3.mk"
 .include "../../x11/wxGTK28-contrib/buildlink3.mk"
