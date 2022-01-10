@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2021/09/29 19:00:03 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2022/01/10 01:46:22 ryoon Exp $
 
 BUILDLINK_TREE+=	coordgenlibs
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	coordgenlibs
 COORDGENLIBS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.coordgenlibs+=	coordgenlibs>=1.4.2
-BUILDLINK_ABI_DEPENDS.coordgenlibs?=	coordgenlibs>=1.4.2nb3
+BUILDLINK_ABI_DEPENDS.coordgenlibs?=	coordgenlibs>=1.4.2nb4
 BUILDLINK_PKGSRCDIR.coordgenlibs?=	../../biology/coordgenlibs
 
 .include "../../biology/maeparser/buildlink3.mk"

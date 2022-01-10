@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2021/12/08 16:03:36 adam Exp $
+# $NetBSD: Makefile,v 1.49 2022/01/10 01:46:25 ryoon Exp $
 
 DISTNAME=	libe-book-0.1.3
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libebook/}
 EXTRACT_SUFX=	.tar.bz2

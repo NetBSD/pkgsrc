@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2021/09/29 19:00:04 adam Exp $
+# $NetBSD: Makefile,v 1.13 2022/01/10 01:46:25 ryoon Exp $
 
 DISTNAME=	libepubgen-0.1.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libepubgen/}
 EXTRACT_SUFX=	.tar.bz2

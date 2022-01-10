@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2021/12/08 16:05:38 adam Exp $
+# $NetBSD: Makefile,v 1.57 2022/01/10 01:46:38 ryoon Exp $
 
 DISTNAME=	kaccessible-16.12.0
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	misc
 COMMENT=	Provides accessibility services like focus tracking for KDE
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.12.0/src/}
