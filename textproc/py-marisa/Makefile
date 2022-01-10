@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2019/04/28 07:12:34 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2022/01/10 22:15:36 wiz Exp $
 
+PKGREVISION= 1
 .include "../../textproc/marisa/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,5 +20,5 @@ SUBST_SED.version=	-e s,@VERSION@,${PKGVERSION_NOREV},
 
 BUILDLINK_API_DEPENDS.marisa+=	marisa>=${PKGVERSION_NOREV}
 .include "../../textproc/marisa/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
