@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/12/21 08:15:03 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/01/10 22:37:51 wiz Exp $
 ${PYSITELIB}/bzrlib/plugins/explorer/COPYING.txt
 ${PYSITELIB}/bzrlib/plugins/explorer/NEWS
 ${PYSITELIB}/bzrlib/plugins/explorer/README.txt
@@ -290,4 +290,3 @@ ${PYSITELIB}/bzrlib/plugins/explorer/widgets/filter_bar.pyo
 ${PYSITELIB}/bzrlib/plugins/explorer/widgets/tab_widget.py
 ${PYSITELIB}/bzrlib/plugins/explorer/widgets/tab_widget.pyc
 ${PYSITELIB}/bzrlib/plugins/explorer/widgets/tab_widget.pyo
-${PYSITELIB}/${EGG_FILE}
