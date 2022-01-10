@@ -165,7 +165,7 @@ CFG_MAINTAINER="mailto:@MAINT@"
 
 # Installation path for man page
 # (must be an absolute path without trailing slash)
-# The FHS defines "/usr[/local]/share/man". The location "/usr/local/man" is
+# The FHS 3.0 defines "/usr[/local]/share/man". The location "/usr/local/man" is
 # explicitly marked deprecated.
 CFG_MAN_PATH="@MAN_PATH@/man1"
 
@@ -175,7 +175,7 @@ CFG_LICENSE_PATH="$CFG_PREFIX/share/$CFG_NAME"
 
 # Installation path for National Language Support (NLS) catalogs
 # (must be an absolute path without trailing slash)
-# The FHS defines "/usr[/local]/share/nls" for NLS catalogs but the whole
+# The FHS 3.0 defines "/usr[/local]/share/nls" for NLS catalogs but the whole
 # hierarchy below "share" is dedicated to files that are portable between
 # architectures - what our NLS catalogs are not!
 CFG_NLS_PATH="$CFG_PREFIX/lib/$CFG_NAME/nls"
