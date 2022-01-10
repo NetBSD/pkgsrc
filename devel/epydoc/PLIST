@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2017/07/23 20:10:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/01/10 08:12:39 wiz Exp $
 bin/apirst2html.py
 bin/epydoc
 bin/epydocgui
-${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/epydoc/__init__.py
 ${PYSITELIB}/epydoc/__init__.pyc
 ${PYSITELIB}/epydoc/__init__.pyo
