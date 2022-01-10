@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2019/11/03 11:45:50 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/10 18:24:47 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-bonjour-${PKGVER}
 DISTNAME=	bonjour-py-${PKGVER}
 PKGVER=		0.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://www.mcs.anl.gov/fl/research/accessgrid/bonjour-py/
 
@@ -49,5 +49,5 @@ post-install:
 
 .include "../../net/mDNSResponder/buildlink3.mk"
 .include "../../devel/swig/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
