@@ -1,11 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2021/06/10 05:48:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/01/10 07:53:41 wiz Exp $
 bin/iptest-${PYVERSSUFFIX}
-${PLIST.py2x}bin/iptest2
-${PLIST.py3x}bin/iptest3
+bin/iptest2
 bin/ipython-${PYVERSSUFFIX}
-${PLIST.py2x}bin/ipython2
-${PLIST.py3x}bin/ipython3
-${PYSITELIB}/${EGG_FILE}
+bin/ipython2
 ${PYSITELIB}/IPython/__init__.py
 ${PYSITELIB}/IPython/__init__.pyc
 ${PYSITELIB}/IPython/__init__.pyo

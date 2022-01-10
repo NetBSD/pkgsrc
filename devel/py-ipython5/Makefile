@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2021/07/01 14:54:01 nia Exp $
+# $NetBSD: Makefile,v 1.13 2022/01/10 07:53:41 wiz Exp $
 
 DISTNAME=	ipython-5.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipython/}
 
@@ -39,5 +40,5 @@ post-install:
 	${MV} bin/ipython bin/ipython-${PYVERSSUFFIX} && \
 	${MV} ${PKGMANDIR}/man1/ipython.1 ${PKGMANDIR}/man1/ipython-${PYVERSSUFFIX}.1 || ${TRUE}
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
