@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2020/03/20 11:57:30 nia Exp $
+# $NetBSD: Makefile,v 1.31 2022/01/10 08:56:27 wiz Exp $
 
 DISTNAME=	pychecker-0.8.19
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pychecker/}
 
@@ -17,5 +18,5 @@ PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.8.19
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/pychecker ${DESTDIR}${PREFIX}/bin/pychecker${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
