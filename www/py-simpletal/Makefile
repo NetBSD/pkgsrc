@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2020/01/26 17:32:23 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/10 18:22:46 wiz Exp $
 
 DISTNAME=	SimpleTAL-4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.owlfish.com/software/simpleTAL/downloads/
 
@@ -18,5 +18,5 @@ PYTHON_VERSIONS_ACCEPTED=	27
 do-test:
 	${PYTHONBIN} ${WRKSRC}/runtests.py
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
