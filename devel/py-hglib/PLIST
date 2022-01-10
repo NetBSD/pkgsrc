@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/06/14 21:47:49 wiz Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.2 2022/01/10 20:34:50 wiz Exp $
 ${PYSITELIB}/hglib/__init__.py
 ${PYSITELIB}/hglib/__init__.pyc
 ${PYSITELIB}/hglib/__init__.pyo
@@ -21,3 +20,7 @@ ${PYSITELIB}/hglib/templates.pyo
 ${PYSITELIB}/hglib/util.py
 ${PYSITELIB}/hglib/util.pyc
 ${PYSITELIB}/hglib/util.pyo
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/top_level.txt

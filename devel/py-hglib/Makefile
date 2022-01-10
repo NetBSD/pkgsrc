@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2020/11/30 20:23:38 adam Exp $
+# $NetBSD: Makefile,v 1.10 2022/01/10 20:34:50 wiz Exp $
 
 DISTNAME=	python-hglib-2.6.2
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-hglib/}
 
@@ -12,5 +13,5 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
