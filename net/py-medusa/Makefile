@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2019/11/03 11:45:50 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/10 18:39:39 wiz Exp $
 
 DISTNAME=	medusa-0.5.4
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	http://www.amk.ca/files/python/
@@ -14,5 +14,5 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
