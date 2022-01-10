@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.171 2022/01/10 19:30:57 adam Exp $
+$NetBSD: CHANGES-2022,v 1.172 2022/01/10 19:46:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -218,3 +218,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added textproc/py-tomli_w version 1.0.0 [adam 2022-01-10]
 	Updated devel/py-flit_core to 3.6.0 [adam 2022-01-10]
 	Updated devel/py-flit to 3.6.0 [adam 2022-01-10]
+	Added devel/py-distlib version 0.3.4 [adam 2022-01-10]
+	Updated net/py-lexicon to 3.9.0 [adam 2022-01-10]
