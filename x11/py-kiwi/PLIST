@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2012/04/08 20:22:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/01/10 18:36:18 wiz Exp $
 bin/kiwi-i18n
 bin/kiwi-ui-test
 lib/glade3/modules/kiwiwidgets.py
-${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/kiwi/__init__.py
 ${PYSITELIB}/kiwi/__init__.pyc
 ${PYSITELIB}/kiwi/__init__.pyo
