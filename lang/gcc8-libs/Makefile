@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2021/10/12 13:46:15 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2022/01/10 00:50:46 gutteridge Exp $
 
 GCC_PKGNAME=	gcc8
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -9,7 +9,7 @@ PKGNAME=	${GCC_PKGNAME}-libs-${GCC8_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc8 package so that with the dependence pattern
 ## '{gcc8,gcc8-libs}>=8.2.*' pkg_add will choose gcc8-libs over gcc8.
-PKGREVISION=	5
+PKGREVISION=	6
 
 CATEGORIES=	lang
 MASTER_SITES=	# empty
