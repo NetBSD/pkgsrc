@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2021/07/20 21:38:59 fcambus Exp $
+# $NetBSD: Makefile,v 1.33 2022/01/10 22:11:02 wiz Exp $
 
 DISTNAME=	lottanzb-0.4.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	news
 #MASTER_SITES=	http://www.lottanzb.org/releases/
 
@@ -26,7 +26,7 @@ SUBST_FILES.localedir=	setup.py
 SUBST_SED.localedir=	-e 's|share/locale|${PKGLOCALEDIR}/locale|'
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
