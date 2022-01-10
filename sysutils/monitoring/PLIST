@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/22 09:39:21 imil Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/10 08:27:12 wiz Exp $
 bin/monitoring
-${PYSITELIB}/${PKGNAME}-py2.7.egg-info
 ${PYSITELIB}/monitoring.py
 ${PYSITELIB}/monitoring.pyc
 ${PYSITELIB}/monitoring.pyo
