@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2020/01/26 05:26:13 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/10 18:30:42 wiz Exp $
 
 DISTNAME=	id3-py_1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py_//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=id3-py/}
 
@@ -18,5 +18,5 @@ EGG_NAME=	${DISTNAME:S/py_//:tu}
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
