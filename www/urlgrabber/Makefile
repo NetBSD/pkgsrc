@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2020/12/04 20:45:49 nia Exp $
+# $NetBSD: Makefile,v 1.22 2022/01/10 22:22:00 wiz Exp $
 
 DISTNAME=	urlgrabber-3.1.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www devel
 MASTER_SITES=	http://urlgrabber.baseurl.org/download/
 
@@ -13,5 +13,5 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 3.1.0
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
