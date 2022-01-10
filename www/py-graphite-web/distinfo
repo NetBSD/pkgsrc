@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:30:41 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/01/10 22:46:03 wiz Exp $
 
 BLAKE2s (graphite-web-0.9.15.tar.gz) = 736a8e1b5bcd2cc4f2fea245fe53a7e9f9b4c3a6939b76e4ac47dfc073d6fe44
 SHA512 (graphite-web-0.9.15.tar.gz) = 055c0cf3e98db56ecd37c8926f83f82b38f88edbe795d183967dfe5e09391a8a838265afef6e426686a8dfbddd8e2164e445ca007b3454ec674142bbf8f693e2
 Size (graphite-web-0.9.15.tar.gz) = 2434438 bytes
-SHA1 (patch-bin_build-index.sh) = 13ad11086c620bd65a7cf084a88ae0187fdae2d7
+SHA1 (patch-bin_build-index.sh) = 0373f48f64e254af25ab4b15747c18efafb3136c
 SHA1 (patch-setup.py) = 1f215025652d5d45302af8d13ee7ff7a91003cfc
