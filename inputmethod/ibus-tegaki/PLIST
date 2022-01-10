@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2012/04/08 20:21:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/01/10 22:42:03 wiz Exp $
 lib/ibus-tegaki/ibus-engine-tegaki
-${PYSITELIB}/${EGG_FILE}
 share/ibus-tegaki/engine/__init__.py
 share/ibus-tegaki/engine/engine.py
 share/ibus-tegaki/engine/factory.py
