@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2020/12/04 20:45:42 nia Exp $
+# $NetBSD: Makefile,v 1.17 2022/01/10 08:18:25 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/^M/m/}
-PKGREVISION=	2
+PKGREVISION=	3
 DISTNAME=	Manifold-0.2.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/Manifold/}
@@ -20,5 +20,5 @@ PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.2.0
 post-extract:
 	${CHMOD} -R g-w ${WRKSRC}/*
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
