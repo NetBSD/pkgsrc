@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2019/11/04 21:43:45 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2022/01/10 18:19:20 wiz Exp $
 
 DISTNAME=	pyexcelerator-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-Excelerator-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 VERSION=	0.6.4.1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyexcelerator/}
@@ -48,5 +48,5 @@ post-install:
 	done
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
