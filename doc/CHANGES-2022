@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.164 2022/01/10 15:49:20 taca Exp $
+$NetBSD: CHANGES-2022,v 1.165 2022/01/10 16:13:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -206,3 +206,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/samba4 to 4.13.16 [taca 2022-01-10]
 	Updated security/php-gnupg to 1.5.1 [taca 2022-01-10]
 	Updated www/pear-HTTP_Request2 to 2.5.1 [taca 2022-01-10]
+	Updated mail/notmuch to 0.34.3 [ryoon 2022-01-10]
