@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2019/11/03 11:45:51 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/10 08:01:01 wiz Exp $
 
 DISTNAME=	sbws-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=torproject/}
 GITHUB_PROJECT=	sbws
@@ -46,5 +47,5 @@ do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} -s tests/unit -vv
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
