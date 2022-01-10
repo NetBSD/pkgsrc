@@ -1,0 +1,1 @@
+bin/flit @PREFIX@/bin/flit-@PYVERSSUFFIX@
