@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2020/12/04 20:45:09 nia Exp $
+# $NetBSD: Makefile,v 1.23 2022/01/10 22:10:10 wiz Exp $
 
 DISTNAME=	gnatpython-${SNAPSHOT}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	http://downloads.dragonlace.net/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,5 +17,5 @@ EGG_NAME=	gnatpython-1.2
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 20110912
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
