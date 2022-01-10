@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2012/04/08 20:21:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/01/10 22:11:02 wiz Exp $
 bin/lottanzb
-${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/lottanzb/__init__.py
 ${PYSITELIB}/lottanzb/__init__.pyc
 ${PYSITELIB}/lottanzb/__init__.pyo
