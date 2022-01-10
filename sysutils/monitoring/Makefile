@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2020/12/04 20:45:42 nia Exp $
+# $NetBSD: Makefile,v 1.14 2022/01/10 08:27:12 wiz Exp $
 
 VERSION=		e518a90eade4ca538468b6640dccb651e6034b9e
 DISTNAME=		${VERSION}
 PKGNAME=		monitoring-0.9.5
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		sysutils
 MASTER_SITES=		https://github.com/sebastien/monitoring/archive/
 
@@ -28,5 +28,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.rst ${DESTDIR}${DOCDIR}
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
