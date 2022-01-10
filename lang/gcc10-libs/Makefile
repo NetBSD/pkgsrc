@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/10/12 13:46:14 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/10 00:50:46 gutteridge Exp $
 
 GCC_PKGNAME=	gcc10
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -8,8 +8,8 @@ PKGNAME=	${GCC_PKGNAME}-libs-${GCC10_DIST_VERSION}
 
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc10 package so that with the dependence pattern
-## '{gcc10,gcc10-libs}>=8.2.*' pkg_add will choose gcc10-libs over gcc10.
-PKGREVISION=	1
+## '{gcc10,gcc10-libs}>=10.2.*' pkg_add will choose gcc10-libs over gcc10.
+PKGREVISION=	2
 
 CATEGORIES=	lang
 MASTER_SITES=	# empty
