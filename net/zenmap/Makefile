@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2021/11/30 07:21:29 pho Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/10 08:09:06 wiz Exp $
 
+PKGREVISION= 1
 .include "../../net/nmap/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/nmap/zenmap/}
@@ -28,5 +29,5 @@ SUBST_MESSAGE.setup=	Fixing setup.
 SUBST_FILES.setup=	setup.py
 SUBST_SED.setup=	-e 's,\(self.create_uninstaller\),\#\1,g'
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
