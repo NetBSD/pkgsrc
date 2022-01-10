@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2019/09/02 13:19:37 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/10 20:53:31 wiz Exp $
 
 DISTNAME=	uuid-1.30
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uuid/}
 
@@ -15,5 +15,5 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.30
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
