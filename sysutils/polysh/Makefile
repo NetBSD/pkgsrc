@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2020/12/04 20:45:42 nia Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/10 20:23:36 wiz Exp $
 
 DISTNAME=	polysh-0.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	http://guichaz.free.fr/polysh/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -22,5 +22,5 @@ SUBST_FILES.setup=	setup.py
 SUBST_SED.setup+=	-e 's,share/man,${PKGMANDIR},'
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
