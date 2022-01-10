@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2021/04/16 11:39:24 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/01/10 08:08:10 wiz Exp $
 bin/syncthing-gtk
-${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/syncthing_gtk/__init__.py
 ${PYSITELIB}/syncthing_gtk/__init__.pyc
 ${PYSITELIB}/syncthing_gtk/__init__.pyo
