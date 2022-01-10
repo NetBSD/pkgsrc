@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2021/03/06 09:22:44 nia Exp $
+# $NetBSD: Makefile,v 1.31 2022/01/10 08:02:13 wiz Exp $
 
 GITHUB_PROJECT=	terminator
 DISTNAME=	terminator-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gnome-terminator/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -39,6 +40,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
