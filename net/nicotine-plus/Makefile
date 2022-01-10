@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/12/08 16:06:04 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/10 07:49:44 wiz Exp $
 
 DISTNAME=	nicotine-plus-2.2.2
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nicotine-plus/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,7 +20,7 @@ SUBST_SED.paths+=	-e "s,share/man/man1,${PKGMANDIR}/man1,g"
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/libappindicator/buildlink3.mk"
 .include "../../textproc/gspell/buildlink3.mk"
