@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2020/03/20 11:58:10 nia Exp $
+# $NetBSD: Makefile,v 1.26 2022/01/10 18:34:53 wiz Exp $
 
 DISTNAME=		kenosis-0.96
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kenosis/}
 
@@ -18,5 +18,5 @@ USE_LANGUAGES=		# empty
 PYSETUP=		kenosis_setup.py
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.96
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
