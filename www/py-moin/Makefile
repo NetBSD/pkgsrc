@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2021/07/11 10:36:59 bsiegert Exp $
+# $NetBSD: Makefile,v 1.45 2022/01/10 18:40:33 wiz Exp $
 
 VER=		1.9.11
 DISTNAME=	moin-${VER}
 PKGNAME=	${PYPKGPREFIX}-moin-${VER}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	http://static.moinmo.in/files/
 
@@ -40,6 +41,6 @@ REPLACE_PERL+=	MoinMoin/web/static/htdocs/applets/FCKeditor/editor/filemanager/c
 
 PYTHON_SELF_CONFLICT=	yes
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
