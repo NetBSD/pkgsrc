@@ -1,65 +1,29 @@
-# $NetBSD: Makefile,v 1.36 2021/05/24 19:53:17 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2022/01/10 18:17:36 wiz Exp $
 
-VERSION=	3.4.23
-DISTNAME=	${VERSION}
-PKGNAME=	exabgp-${VERSION}
-PKGREVISION=	6
-EGG_NAME=	exabgp-${VERSION}
+DISTNAME=	exabgp-4.2.17
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GITHUB:=Exa-Networks/exabgp/archive/}
-DIST_SUBDIR=	exabgp
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Exa-Networks/}
 
 MAINTAINER=	he@NetBSD.org
 HOMEPAGE=	https://github.com/Exa-Networks/exabgp/
-COMMENT=	ExaBGP is a userspace BGP daemon written in python
+COMMENT=	BGP swiss army knife
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/exabgp-${VERSION}
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+USE_PKG_RESOURCES=	yes
 
 USE_TOOLS+=	perl:run
 
-DEPENDS+=	${PYPKGPREFIX}-ipaddr>=0:../../devel/py-ipaddr
+REPLACE_PERL+=		etc/exabgp/run/dynamic-1.pl
+REPLACE_PERL+=		etc/exabgp/run/watchdog-1.pl
 
-PYTHON_VERSIONED_DEPENDENCIES+=	setuptools
-
-REPLACE_PERL+=		etc/exabgp/processes/dynamic-1.pl
-REPLACE_PERL+=		etc/exabgp/processes/watchdog-1.pl
-
-REPLACE_PYTHON+=	etc/exabgp/processes/read-write.py
-REPLACE_PYTHON+=	etc/exabgp/processes/stderr-1.py
-REPLACE_PYTHON+=	etc/exabgp/processes/syslog-1.py
-REPLACE_PYTHON+=	etc/exabgp/processes/tcp-server
-REPLACE_PYTHON+=	lib/exabgp/application/bmp.py
-REPLACE_PYTHON+=	lib/exabgp/application/cli.py
-REPLACE_PYTHON+=	lib/exabgp/application/healthcheck.py
-REPLACE_PYTHON+=	lib/exabgp/application/netlink.py
-REPLACE_PYTHON+=	lib/exabgp/netlink/old.py
-REPLACE_PYTHON+=	lib/exabgp/reactor/api/encoding.py
-REPLACE_PYTHON+=	qa/conf/api-add-remove.run
-REPLACE_PYTHON+=	qa/conf/api-announcement.run
-REPLACE_PYTHON+=	qa/conf/api-api.nothing.run
-REPLACE_PYTHON+=	qa/conf/api-api.receive.run
-REPLACE_PYTHON+=	qa/conf/api-broken-flow.run
-REPLACE_PYTHON+=	qa/conf/api-check.run
-REPLACE_PYTHON+=	qa/conf/api-eor.run
-REPLACE_PYTHON+=	qa/conf/api-fast.run
-REPLACE_PYTHON+=	qa/conf/api-flow.run
-REPLACE_PYTHON+=	qa/conf/api-multi-neighbor.run
-REPLACE_PYTHON+=	qa/conf/api-multisession.run
-REPLACE_PYTHON+=	qa/conf/api-nexthop-self.run
-REPLACE_PYTHON+=	qa/conf/api-nexthop.run
-REPLACE_PYTHON+=	qa/conf/api-notification.run
-REPLACE_PYTHON+=	qa/conf/api-open.run
-REPLACE_PYTHON+=	qa/conf/api-reload.run
-REPLACE_PYTHON+=	qa/conf/api-teardown.run
-REPLACE_PYTHON+=	qa/conf/api-vpls.run
-REPLACE_PYTHON+=	qa/conf/api-vpnv4.run
-REPLACE_PYTHON+=	qa/conf/manual-eor.run
-REPLACE_PYTHON+=	qa/conf/watchdog.run
+REPLACE_PYTHON+=	etc/exabgp/run/*.run
+REPLACE_PYTHON+=	etc/exabgp/run/*.py
 
 CHECK_PORTABILITY_SKIP+=	dev/release/google
 
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 3.2.19
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
@@ -75,8 +39,11 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/man/exabgp.conf.5 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
-.include "../../lang/python/distutils.mk"
+TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+
+.include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/pyversion.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
