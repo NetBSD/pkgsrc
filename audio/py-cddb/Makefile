@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2020/01/26 05:26:13 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2022/01/10 22:11:41 wiz Exp $
 
 DISTNAME=	CDDB-1.4
 PKGNAME=	${PYPKGPREFIX}-cddb-1.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cddb-py/}
 
@@ -13,5 +13,5 @@ LICENSE=	gnu-gpl-v2
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 1.4
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
