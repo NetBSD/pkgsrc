@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2020/03/20 11:57:31 nia Exp $
+# $NetBSD: Makefile,v 1.10 2022/01/10 07:59:03 wiz Exp $
 
 DISTNAME=	PyODE-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyODE/}
 
@@ -14,5 +14,5 @@ LICENSE=	modified-bsd OR gnu-lgpl-v2.1
 PYTHON_VERSIONS_ACCEPTED=	27 # as of 1.2.1
 
 .include "../../devel/ode/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
