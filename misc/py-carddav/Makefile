@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2019/11/03 17:04:26 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2022/01/10 08:54:47 wiz Exp $
 
 DISTNAME=	pyCardDAV-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyCardDAV/carddav/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://lostpackets.de/pycarddav/downloads/
 
@@ -38,5 +38,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/man/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.6 2014/02/05 12:21:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/01/10 08:54:47 wiz Exp $
 bin/pc_query
 bin/pycard-import
 bin/pycardsyncer
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/requires.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pycarddav/__init__.py
 ${PYSITELIB}/pycarddav/__init__.pyc
 ${PYSITELIB}/pycarddav/__init__.pyo
