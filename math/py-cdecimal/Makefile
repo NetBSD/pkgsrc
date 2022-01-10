@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2020/01/26 17:31:39 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2022/01/10 08:55:47 wiz Exp $
 
 DISTNAME=	cdecimal-2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	http://www.bytereef.org/software/mpdecimal/releases/
 
@@ -20,5 +21,5 @@ GNU_CONFIGURE=	yes
 PYTHON_VERSIONS_ACCEPTED=	27
 
 #.include "../../devel/gmp/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
