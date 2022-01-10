@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.78 2021/12/01 21:36:59 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2022/01/10 20:55:32 morr Exp $
 
 PKGNAME=		vim-${VIM_VERSION}.${VIM_PATCHLEVEL}
-PKGREVISION=		1
 
 COMMENT=		Vim editor (vi clone) without GUI
 
