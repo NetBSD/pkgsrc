@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:22:58 nia Exp $
-
-BLAKE2s (4Suite-XML-1.0.2.tar.gz) = a1e63d93b9fcd1cb89e0a7de53b06a604ea9288bd60bccbe68f1e6bba0219e88
-SHA512 (4Suite-XML-1.0.2.tar.gz) = 1ec86a0652e255c800d1ec478ac80a749830c72e1b93fe84a01e49967928503043af61b212f17f32aeff981d9a6f5db2cccbbb5057bc4f6092121e91ca7f0c86
-Size (4Suite-XML-1.0.2.tar.gz) = 1705833 bytes

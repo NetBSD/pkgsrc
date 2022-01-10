@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.157 2022/01/10 08:21:20 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.158 2022/01/10 08:38:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -198,3 +198,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added security/hashcat version 6.2.5 [khorben 2022-01-10]
 	Removed devel/codeville [wiz 2022-01-10]
 	Updated devel/meld to 3.21.1 [wiz 2022-01-10]
+	Removed textproc/py-4Suite [wiz 2022-01-10]
