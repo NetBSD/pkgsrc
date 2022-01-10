@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2020/12/04 20:45:34 nia Exp $
+# $NetBSD: Makefile,v 1.16 2022/01/10 08:24:11 wiz Exp $
 
 DISTNAME=	mimms-3.2.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net multimedia
 MASTER_SITES=	http://download.savannah.gnu.org/releases/mimms/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,7 +11,7 @@ HOMEPAGE=	https://savannah.nongnu.org/projects/mimms/
 COMMENT=	MMS (e.g. mms://) stream downloader
 LICENSE=	gnu-gpl-v3
 
-# default is at lang/python/distutils.mk, but
+# default is at lang/python/egg.mk, but
 # drop the third digit from DISTNAME. Is it too tricky ?
 EGG_NAME?=	${DISTNAME:C/-([^0-9])/_\1/gC/([0-9])\.([0-9])\.([0-9])/\1.\2/}
 
@@ -24,6 +24,6 @@ SUBST_SED.man+=		-e 's,share/man,${PKGMANDIR},'
 SUBST_STAGE.man=	post-build
 SUBST_MESSAGE.man=	Fixing installation path for man pages.
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../net/libmms/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
