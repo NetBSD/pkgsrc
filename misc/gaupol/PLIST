@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2021/12/31 08:08:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2022/01/10 08:17:28 wiz Exp $
 bin/gaupol
 ${PYSITELIB}/aeidon/__init__.py
 ${PYSITELIB}/aeidon/__init__.pyc
@@ -216,10 +216,10 @@ ${PYSITELIB}/aeidon/unittest.pyo
 ${PYSITELIB}/aeidon/util.py
 ${PYSITELIB}/aeidon/util.pyc
 ${PYSITELIB}/aeidon/util.pyo
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/gaupol/__init__.py
 ${PYSITELIB}/gaupol/__init__.pyc
 ${PYSITELIB}/gaupol/__init__.pyo
