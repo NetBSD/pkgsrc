@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/01/10 17:39:52 adam Exp $
+
+BLAKE2s (Deprecated-1.2.13.tar.gz) = 530fc01551672975da8c121b5ef3382a82d4fe860043d9e6731a971f95cd0772
+SHA512 (Deprecated-1.2.13.tar.gz) = 2b713f942465e46e9f7d70b18bb4f1ce15d8e388f06c6fd7e009921b4fa68c9d71e296f6cb1ac195ef7e73707c1bb6a01d923c12f11d7b73356eb022982abf4d
+Size (Deprecated-1.2.13.tar.gz) = 2974598 bytes
