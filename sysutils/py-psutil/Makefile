@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2022/01/04 20:54:49 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2022/01/10 17:05:27 adam Exp $
 
-DISTNAME=	psutil-5.8.0
+DISTNAME=	psutil-5.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/psutil/}
 
@@ -13,9 +12,10 @@ LICENSE=	modified-bsd
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} == 27
-DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
+TEST_DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipaddress-[0-9]*:../../net/py-ipaddress
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-unittest2-[0-9]*:../../devel/py-unittest2
 .endif
 
 .include "../../mk/bsd.prefs.mk"
@@ -28,6 +28,9 @@ PLIST_SUBST+=	SYSTEM=bsd
 .else
 PLIST_SUBST+=	SYSTEM=${OPSYS:tl}
 .endif
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} psutil/tests/runner.py
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
