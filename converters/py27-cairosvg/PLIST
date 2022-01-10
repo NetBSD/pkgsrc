@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2018/03/26 00:33:40 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/10 08:53:14 wiz Exp $
 bin/cairosvg${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/cairosvg/__init__.py
 ${PYSITELIB}/cairosvg/__init__.pyc
 ${PYSITELIB}/cairosvg/__init__.pyo
