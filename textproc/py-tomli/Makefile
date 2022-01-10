@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/01/07 16:33:21 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/10 19:16:03 adam Exp $
 
+# Important: Re-generate files/setup.py on update.
 DISTNAME=	tomli-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
@@ -10,13 +11,12 @@ HOMEPAGE=	https://github.com/hukkin/tomli
 COMMENT=	Lil' TOML parser
 LICENSE=	mit
 
-# It is possible to install this using flit_core, see
-# https://github.com/takluyver/flit/pull/441/files
-# for details. For now we keep using setuptools.
+USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-PYSETUP=	-c 'from setuptools import setup; setup(name="tomli", version="${PKGVERSION_NOREV}", packages=["tomli"], package_data={"": ["*"]})'
+pre-configure:
+	${CP} ${FILESDIR}/setup.py ${WRKSRC}/
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
