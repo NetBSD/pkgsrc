@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/04/08 20:21:41 wiz Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.6 2022/01/10 22:11:41 wiz Exp $
 ${PYSITELIB}/CDDB.py
 ${PYSITELIB}/CDDB.pyc
 ${PYSITELIB}/CDDB.pyo
