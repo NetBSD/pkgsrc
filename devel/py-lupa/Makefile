@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2021/08/24 10:05:50 nia Exp $
+# $NetBSD: Makefile,v 1.13 2022/01/10 18:39:00 wiz Exp $
 
 DISTNAME=	lupa-1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lupa/}
 
@@ -14,5 +15,5 @@ USE_TOOLS+=	pkg-config
 
 .include "options.mk"
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
