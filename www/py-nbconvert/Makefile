@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2021/12/30 13:05:41 adam Exp $
+# $NetBSD: Makefile,v 1.12 2022/01/10 08:05:24 wiz Exp $
 
 DISTNAME=	nbconvert-5.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nbconvert/}
 
@@ -41,5 +42,5 @@ post-install:
 do-test:
 	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
