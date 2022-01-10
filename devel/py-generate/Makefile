@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2020/08/24 06:00:47 tnn Exp $
+# $NetBSD: Makefile,v 1.24 2022/01/10 09:10:00 wiz Exp $
 
 DISTNAME=	generate-2.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	http://darcy.druid.net/
 EXTRACT_SUFX=	.tgz
@@ -21,5 +22,5 @@ EGG_NAME=	${DISTNAME:S/${PKGVERSION_NOREV}/2.2/}
 
 DIST_SUBDIR=	generate-20151222
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
