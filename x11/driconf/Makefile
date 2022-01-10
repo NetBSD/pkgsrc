@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2020/12/04 20:45:50 nia Exp $
+# $NetBSD: Makefile,v 1.33 2022/01/10 07:44:24 wiz Exp $
 
 DISTNAME=	driconf-0.9.1
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -41,6 +41,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/driconf.desktop \
 		${DESTDIR}${PREFIX}/share/applications/
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
