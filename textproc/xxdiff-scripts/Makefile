@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2020/12/04 20:45:46 nia Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/10 22:24:39 wiz Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "../../textproc/xxdiff/Makefile.common"
 
 PKGNAME=	xxdiff-scripts-${XXDIFFVERSION}
@@ -24,6 +24,6 @@ INSTALLATION_DIRS+=	${XXDIFFDOCDIR}
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/xxdiff-scripts.html ${DESTDIR}${PREFIX}/${XXDIFFDOCDIR}
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
