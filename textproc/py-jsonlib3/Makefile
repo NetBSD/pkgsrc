@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2015/04/13 23:12:43 rodent Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/10 19:46:26 wiz Exp $
 
 DISTNAME=	jsonlib-python3-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python3//}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	https://launchpad.net/jsonlib/python3/1.6.1/+download/
 
@@ -14,5 +15,5 @@ USE_LANGUAGES=	c
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
