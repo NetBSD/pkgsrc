@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2020/03/20 11:58:10 nia Exp $
+# $NetBSD: Makefile,v 1.25 2022/01/10 20:37:22 wiz Exp $
 
 DISTNAME=	pylibpcap-0.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pylibpcap/}
 
@@ -17,7 +18,7 @@ PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.6.4
 pre-build:
 	(cd ${WRKSRC} && ${PYTHONBIN} mk-constants.py)
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 #.include "../../devel/swig/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
