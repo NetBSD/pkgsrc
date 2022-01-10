@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.6 2021/10/16 19:37:01 tm Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/01/10 08:14:30 wiz Exp $
 bin/fail2ban-client
 bin/fail2ban-python
 bin/fail2ban-regex
 bin/fail2ban-server
 bin/fail2ban-testcases
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/fail2ban/__init__.py
 ${PYSITELIB}/fail2ban/__init__.pyc
 ${PYSITELIB}/fail2ban/__init__.pyo
