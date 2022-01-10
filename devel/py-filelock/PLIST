@@ -1,8 +1,31 @@
-@comment $NetBSD: PLIST,v 1.1 2018/10/10 09:55:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/10 11:29:24 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/filelock.py
-${PYSITELIB}/filelock.pyc
-${PYSITELIB}/filelock.pyo
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/filelock/__init__.py
+${PYSITELIB}/filelock/__init__.pyc
+${PYSITELIB}/filelock/__init__.pyo
+${PYSITELIB}/filelock/_api.py
+${PYSITELIB}/filelock/_api.pyc
+${PYSITELIB}/filelock/_api.pyo
+${PYSITELIB}/filelock/_error.py
+${PYSITELIB}/filelock/_error.pyc
+${PYSITELIB}/filelock/_error.pyo
+${PYSITELIB}/filelock/_soft.py
+${PYSITELIB}/filelock/_soft.pyc
+${PYSITELIB}/filelock/_soft.pyo
+${PYSITELIB}/filelock/_unix.py
+${PYSITELIB}/filelock/_unix.pyc
+${PYSITELIB}/filelock/_unix.pyo
+${PYSITELIB}/filelock/_util.py
+${PYSITELIB}/filelock/_util.pyc
+${PYSITELIB}/filelock/_util.pyo
+${PYSITELIB}/filelock/_windows.py
+${PYSITELIB}/filelock/_windows.pyc
+${PYSITELIB}/filelock/_windows.pyo
+${PYSITELIB}/filelock/version.py
+${PYSITELIB}/filelock/version.pyc
+${PYSITELIB}/filelock/version.pyo
