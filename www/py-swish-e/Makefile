@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2019/09/02 13:20:01 adam Exp $
+# $NetBSD: Makefile,v 1.17 2022/01/10 20:50:12 wiz Exp $
 
 DISTNAME=		swish-e-0.5
 PKGNAME=		${PYPKGPREFIX}-swish-e-0.5
-PKGREVISION=		2
-CATEGORIES=		textproc python
+PKGREVISION=		3
+CATEGORIES=		www python
 MASTER_SITES=		http://download.berlios.de/py-swish-e/
 
 WRKSRC=			${WRKDIR}/SwishE-0.5
@@ -17,6 +17,6 @@ EGG_NAME=		SwishE-${PKGVERSION_NOREV}
 
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.5
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../www/swish-e/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
