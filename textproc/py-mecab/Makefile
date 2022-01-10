@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2019/09/02 13:20:11 adam Exp $
+# $NetBSD: Makefile,v 1.18 2022/01/10 07:55:48 wiz Exp $
 
+PKGREVISION= 1
 .include "../../textproc/mecab/Makefile.common"
 
 DISTNAME=	mecab-python-${MECAB_VERSION}
@@ -23,5 +24,5 @@ BUILDLINK_API_DEPENDS.mecab+=	mecab>=${MECAB_VERSION}
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.996
 
 .include "../../textproc/mecab/buildlink3.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
