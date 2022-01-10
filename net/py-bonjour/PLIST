@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/11/28 13:48:07 hauke Exp $
-${PYSITELIB}/PACKAGENAME-1.0-py${PYVERSSUFFIX}.egg-info
+@comment $NetBSD: PLIST,v 1.2 2022/01/10 18:24:47 wiz Exp $
 ${PYSITELIB}/bonjour/__init__.py
 ${PYSITELIB}/bonjour/__init__.pyc
 ${PYSITELIB}/bonjour/__init__.pyo
