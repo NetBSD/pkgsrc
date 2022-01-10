@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2020/12/04 20:45:07 nia Exp $
+# $NetBSD: Makefile,v 1.25 2022/01/10 22:37:51 wiz Exp $
 
 DISTNAME=	bzr-explorer-${VER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	https://launchpad.net/bzr-explorer/${VER:R}/${VER}/+download/
 VER=		1.2.2
@@ -21,5 +21,5 @@ PYTHON_VERSIONS_ACCEPTED=	27 # qbzr
 EGG_NAME=	${DISTNAME:S/bzr-//}
 
 .include "../../devel/bzr/plugin.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
