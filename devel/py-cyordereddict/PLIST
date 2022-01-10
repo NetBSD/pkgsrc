@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/08/10 15:36:16 minskim Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.5 2022/01/10 21:57:35 wiz Exp $
 ${PYSITELIB}/cyordereddict/__init__.py
 ${PYSITELIB}/cyordereddict/__init__.pyc
 ${PYSITELIB}/cyordereddict/__init__.pyo
