@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3542 2022/01/09 14:29:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3543 2022/01/10 07:42:00 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -238,7 +238,6 @@ SUBDIR+=	cmph
 SUBDIR+=	cobol-mode
 SUBDIR+=	coccinelle
 SUBDIR+=	coconut
-SUBDIR+=	codeville
 SUBDIR+=	cogito
 SUBDIR+=	colordiff
 SUBDIR+=	commit-patch

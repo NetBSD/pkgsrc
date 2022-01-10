@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:14:26 nia Exp $
-
-BLAKE2s (Codeville-0.8.0.tar.gz) = a66c8ed9f9f272d5abe9dffd5523e4f7a43f215394138cf3b93e8f22116b33e8
-SHA512 (Codeville-0.8.0.tar.gz) = 292f702bfbb12dc11129107950275c01cb1e2803f515b98b718b60d21c9b2167ce47414d1805191fe2007b258fcf04469a5735b03fc6d5e44e3af84503df94fa
-Size (Codeville-0.8.0.tar.gz) = 93779 bytes
-SHA1 (patch-aa) = 48812e477622a984190b3c2b2e79f647b073df24
-SHA1 (patch-ab) = 7c9d5526741589dde60aa39bfbccdd71daa215a8
-SHA1 (patch-ac) = 19811e55ae4b631dc2dc61357f6dc184ed3ec011
-SHA1 (patch-ad) = 6613f1888b8f1fa6485f807dcd2b568b5c182483
