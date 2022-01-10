@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2020/08/17 20:18:51 leot Exp $
+# $NetBSD: Makefile,v 1.27 2022/01/10 21:34:30 wiz Exp $
 
 DISTNAME=	renpy-6.18.3-source
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-source//}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	https://www.renpy.org/dl/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
@@ -50,6 +50,6 @@ post-install:
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../multimedia/ffmpeg2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
