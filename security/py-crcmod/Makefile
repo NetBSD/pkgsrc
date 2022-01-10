@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/03/20 11:58:18 nia Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/10 09:00:02 wiz Exp $
 
 DISTNAME=	crcmod-1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/crcmod/}
 
@@ -13,5 +14,5 @@ LICENSE=	mit
 do-test:
 	${SETENV} PYTHONPATH=${WRKSRC} ${PYTHONBIN} -m test
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
