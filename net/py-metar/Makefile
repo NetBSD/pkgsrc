@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2019/09/02 13:19:50 adam Exp $
+# $NetBSD: Makefile,v 1.12 2022/01/10 20:38:45 wiz Exp $
 
 DISTNAME=	pymetar-0.21
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	http://www.schwarzvogel.de/pkgs/
 
@@ -21,6 +22,6 @@ SUBST_MESSAGE.manpath=	Fix man page installation path.
 post-extract:
 	${MV} ${WRKSRC}/bin/pymetar ${WRKSRC}/bin/pymetar${PYVERSSUFFIX}
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
