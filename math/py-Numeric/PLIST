@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/04/08 20:21:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/01/10 08:43:23 wiz Exp $
 ${PYINC}/Numeric/arrayobject.h
 ${PYINC}/Numeric/f2c.h
 ${PYINC}/Numeric/ranlib.h
@@ -32,7 +32,6 @@ ${PYSITELIB}/Numeric/MLab.pyo
 ${PYSITELIB}/Numeric/Matrix.py
 ${PYSITELIB}/Numeric/Matrix.pyc
 ${PYSITELIB}/Numeric/Matrix.pyo
-${PYSITELIB}/Numeric/${EGG_FILE}
 ${PYSITELIB}/Numeric/Numeric_headers/__init__.py
 ${PYSITELIB}/Numeric/Numeric_headers/__init__.pyc
 ${PYSITELIB}/Numeric/Numeric_headers/__init__.pyo
