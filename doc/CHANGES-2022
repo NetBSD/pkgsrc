@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.165 2022/01/10 16:13:55 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.166 2022/01/10 16:15:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -207,3 +207,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/php-gnupg to 1.5.1 [taca 2022-01-10]
 	Updated www/pear-HTTP_Request2 to 2.5.1 [taca 2022-01-10]
 	Updated mail/notmuch to 0.34.3 [ryoon 2022-01-10]
+	Updated security/pcsc-lite to 1.9.5 [adam 2022-01-10]
+	Updated devel/py-scard to 2.0.2 [adam 2022-01-10]
