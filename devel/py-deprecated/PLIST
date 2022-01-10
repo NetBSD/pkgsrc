@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2022/01/10 17:39:52 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/deprecated/__init__.py
+${PYSITELIB}/deprecated/__init__.pyc
+${PYSITELIB}/deprecated/__init__.pyo
+${PYSITELIB}/deprecated/classic.py
+${PYSITELIB}/deprecated/classic.pyc
+${PYSITELIB}/deprecated/classic.pyo
+${PYSITELIB}/deprecated/sphinx.py
+${PYSITELIB}/deprecated/sphinx.pyc
+${PYSITELIB}/deprecated/sphinx.pyo
