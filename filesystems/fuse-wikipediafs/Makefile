@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2020/12/04 20:45:17 nia Exp $
+# $NetBSD: Makefile,v 1.28 2022/01/10 07:45:22 wiz Exp $
 
 DISTNAME=	wikipediafs-0.4
 PKGNAME=	fuse-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wikipediafs/}
 
@@ -22,6 +22,6 @@ SUBST_MESSAGE.config=	Fixing paths.
 
 .include "../../filesystems/py-fuse-bindings/buildlink3.mk"
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/fuse.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
