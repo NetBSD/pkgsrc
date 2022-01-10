@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/12/11 20:03:05 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/10 20:45:46 wiz Exp $
 
 DISTNAME=	sarge-0.1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sarge/}
 
@@ -12,5 +13,5 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
