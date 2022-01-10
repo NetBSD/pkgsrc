@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/13 12:32:29 imil Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/10 09:12:31 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/iowait.py
 ${PYSITELIB}/iowait.pyc
 ${PYSITELIB}/iowait.pyo
-${PYSITELIB}/${EGG_FILE}
-${PYSITELIB}/iowait.py
