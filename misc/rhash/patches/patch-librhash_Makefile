@@ -1,0 +1,15 @@
+$NetBSD: patch-librhash_Makefile,v 1.1 2022/01/10 00:40:47 tnn Exp $
+
+Make ar(1) flags compatible with SunOS 
+
+--- librhash/Makefile.orig	2021-07-14 20:55:34.000000000 +0000
++++ librhash/Makefile
+@@ -180,7 +180,7 @@ $(LIBRHASH_SHARED): $(SOURCES) $(EXPORTS
+ 
+ # build static library
+ $(LIBRHASH_STATIC): $(OBJECTS)
+-	$(AR) cqs $@ $(OBJECTS)
++	$(AR) crs $@ $(OBJECTS)
+ 
+ # test targets
+ $(TEST_SHARED): $(LIBRHASH_SHARED) test_hashes.o
