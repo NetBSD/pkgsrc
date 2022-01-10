@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2019/12/03 16:32:16 adam Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.2 2022/01/10 08:50:02 wiz Exp $
 ${PYSITELIB}/bitcoinrpc/__init__.py
 ${PYSITELIB}/bitcoinrpc/__init__.pyc
 ${PYSITELIB}/bitcoinrpc/__init__.pyo
 ${PYSITELIB}/bitcoinrpc/authproxy.py
 ${PYSITELIB}/bitcoinrpc/authproxy.pyc
 ${PYSITELIB}/bitcoinrpc/authproxy.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
