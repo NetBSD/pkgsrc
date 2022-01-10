@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.158 2022/01/10 08:38:44 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.159 2022/01/10 10:08:36 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -199,3 +199,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed devel/codeville [wiz 2022-01-10]
 	Updated devel/meld to 3.21.1 [wiz 2022-01-10]
 	Removed textproc/py-4Suite [wiz 2022-01-10]
+	Updated devel/guile-gcrypt to 0.3.0 [nikita 2022-01-10]
