@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 20:53:40 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/10 16:30:33 adam Exp $
 
-DISTNAME=	sure-1.4.11
+DISTNAME=	sure-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sure/}
 
@@ -13,9 +12,20 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# none
 
+USE_PKG_RESOURCES=	yes
+
+PYTHON_VERSIONED_DEPENDENCIES=	test:test
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} sure sure-${PYVERSSUFFIX} || ${TRUE}
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
+
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
