@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2021/12/08 16:07:11 adam Exp $
+# $NetBSD: Makefile,v 1.61 2022/01/10 18:36:18 wiz Exp $
 
 DISTNAME=	kiwi-1.9.29
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/kiwi/1.9/}
 EXTRACT_SUFX=	.tar.bz2
@@ -30,7 +30,7 @@ post-install:
 	rmdir ${DESTDIR}${PREFIX}/share/doc/kiwi/howto || ${TRUE}
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 BUILDLINK_API_DEPENDS.pygtk2+=	${PYPKGPREFIX}-gtk2>=2.18
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
