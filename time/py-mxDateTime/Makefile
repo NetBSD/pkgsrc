@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2019/09/02 13:20:05 adam Exp $
+# $NetBSD: Makefile,v 1.45 2022/01/10 22:16:23 wiz Exp $
 
 VERSION=	3.2.9
 DISTNAME=	egenix-mx-base-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-mxDateTime-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	time python
 MASTER_SITES=	http://downloads.egenix.com/python/
 
@@ -41,5 +42,5 @@ REPLACE_PYTHON+=	mx/TextTools/mxTextTools/testkj.py
 REPLACE_PYTHON+=	setup.py
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
