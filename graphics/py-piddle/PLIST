@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/04/08 20:21:49 wiz Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.7 2022/01/10 20:41:39 wiz Exp $
 ${PYSITELIB}/piddle/PixMapWrapper.py
 ${PYSITELIB}/piddle/PixMapWrapper.pyc
 ${PYSITELIB}/piddle/PixMapWrapper.pyo
