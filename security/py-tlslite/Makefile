@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2020/10/26 10:34:16 schmonz Exp $
+# $NetBSD: Makefile,v 1.18 2022/01/10 19:42:15 wiz Exp $
 
 DISTNAME=		tlslite-0.4.9
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		security python
 MASTER_SITES=		${MASTER_SITE_GITHUB:=trevp/}
 
@@ -27,6 +28,6 @@ SUBST_FILES.pyclash=	setup.py tests/tlstest.py tests/httpsserver.sh
 SUBST_VARS.pyclash=	PYTHONBIN
 SUBST_VARS.pyclash+=	PYVERSSUFFIX
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
