@@ -1,18 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2021/11/25 21:24:09 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2022/01/11 21:53:33 nros Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
 ${PYSITELIB}/tomli/__init__.py
 ${PYSITELIB}/tomli/__init__.pyc
-${PYSITELIB}/tomli/__init__.pyo
 ${PYSITELIB}/tomli/_parser.py
 ${PYSITELIB}/tomli/_parser.pyc
-${PYSITELIB}/tomli/_parser.pyo
 ${PYSITELIB}/tomli/_re.py
 ${PYSITELIB}/tomli/_re.pyc
-${PYSITELIB}/tomli/_re.pyo
 ${PYSITELIB}/tomli/_types.py
 ${PYSITELIB}/tomli/_types.pyc
-${PYSITELIB}/tomli/_types.pyo
 ${PYSITELIB}/tomli/py.typed
