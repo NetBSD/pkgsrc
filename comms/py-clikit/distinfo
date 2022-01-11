@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/01/11 19:11:04 adam Exp $
+
+BLAKE2s (clikit-0.6.2.tar.gz) = 544a8307017d5e86699f0a22e5f472225516fea1cc8d867b7a6915de16062b25
+SHA512 (clikit-0.6.2.tar.gz) = 669bc8f3f82cc7c876042cef7baf850ec9116fced38293b7624bfd89b9a183a6f147d739d5a9a6c4465b963a5d3d6e439e5c3d8681dc531b51ce2ea4fd5d3f09
+Size (clikit-0.6.2.tar.gz) = 56214 bytes
