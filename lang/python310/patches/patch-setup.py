@@ -1,13 +1,23 @@
-$NetBSD: patch-setup.py,v 1.2 2021/12/07 09:31:09 adam Exp $
+$NetBSD: patch-setup.py,v 1.3 2022/01/11 15:13:20 tnn Exp $
 
 Disable certain modules, so they can be built as separate packages.
 Do not look for ncursesw.
 Assume panel_library is correct; this is a fix for ncurses' gnupanel
 which will get transformed to panel in buildlink.
+Don't search for modules in PREFIX. Fixes build failure when py-setuptools
+  are installed.  
 
 --- setup.py.orig	2021-12-06 18:23:39.000000000 +0000
 +++ setup.py
-@@ -45,6 +45,7 @@ with warnings.catch_warnings():
+@@ -13,6 +13,7 @@ import warnings
+ from glob import glob, escape
+ import _osx_support
+ 
++sys.path = [p for p in sys.path if not re.compile('^' + sys.base_prefix).match(p)]
+ 
+ try:
+     import subprocess
+@@ -45,6 +46,7 @@ with warnings.catch_warnings():
          DeprecationWarning
      )
  
@@ -15,7 +25,7 @@ which will get transformed to panel in buildlink.
      from distutils.command.build_ext import build_ext
      from distutils.command.build_scripts import build_scripts
      from distutils.command.install import install
-@@ -58,7 +59,7 @@ with warnings.catch_warnings():
+@@ -58,7 +60,7 @@ with warnings.catch_warnings():
  TEST_EXTENSIONS = (sysconfig.get_config_var('TEST_MODULES') == 'yes')
  
  # This global variable is used to hold the list of modules to be disabled.
@@ -24,7 +34,7 @@ which will get transformed to panel in buildlink.
  
  # --list-module-names option used by Tools/scripts/generate_module_names.py
  LIST_MODULE_NAMES = False
-@@ -249,6 +250,16 @@ def grep_headers_for(function, headers):
+@@ -249,6 +251,16 @@ def grep_headers_for(function, headers):
      return False
  
  
@@ -41,7 +51,7 @@ which will get transformed to panel in buildlink.
  def find_file(filename, std_dirs, paths):
      """Searches for the directory where a given file is located,
      and returns a possibly-empty list of additional directories, or None
-@@ -821,15 +832,15 @@ class PyBuildExt(build_ext):
+@@ -821,15 +833,15 @@ class PyBuildExt(build_ext):
                          add_dir_to_list(dir_list, directory)
  
      def configure_compiler(self):
@@ -66,7 +76,7 @@ which will get transformed to panel in buildlink.
          self.add_multiarch_paths()
          self.add_ldflags_cppflags()
  
-@@ -877,6 +888,9 @@ class PyBuildExt(build_ext):
+@@ -877,6 +889,9 @@ class PyBuildExt(build_ext):
              self.lib_dirs += ['/usr/lib/hpux64', '/usr/lib/hpux32']
  
          if MACOS:
@@ -76,7 +86,7 @@ which will get transformed to panel in buildlink.
              # This should work on any unixy platform ;-)
              # If the user has bothered specifying additional -I and -L flags
              # in OPT and LDFLAGS we might as well use them here.
-@@ -1104,8 +1118,6 @@ class PyBuildExt(build_ext):
+@@ -1104,8 +1119,6 @@ class PyBuildExt(build_ext):
          # use the same library for the readline and curses modules.
          if 'curses' in readline_termcap_library:
              curses_library = readline_termcap_library
@@ -85,7 +95,7 @@ which will get transformed to panel in buildlink.
          # Issue 36210: OSS provided ncurses does not link on AIX
          # Use IBM supplied 'curses' for successful build of _curses
          elif AIX and self.compiler.find_library_file(self.lib_dirs, 'curses'):
-@@ -1209,8 +1221,7 @@ class PyBuildExt(build_ext):
+@@ -1209,8 +1222,7 @@ class PyBuildExt(build_ext):
          # If the curses module is enabled, check for the panel module
          # _curses_panel needs some form of ncurses
          skip_curses_panel = True if AIX else False
@@ -95,7 +105,7 @@ which will get transformed to panel in buildlink.
              self.add(Extension('_curses_panel', ['_curses_panel.c'],
                             include_dirs=curses_includes,
                             define_macros=curses_defines,
-@@ -1455,6 +1466,31 @@ class PyBuildExt(build_ext):
+@@ -1455,6 +1467,31 @@ class PyBuildExt(build_ext):
          dbm_order = ['gdbm']
          # The standard Unix dbm module:
          if not CYGWIN:
@@ -127,7 +137,7 @@ which will get transformed to panel in buildlink.
              config_args = [arg.strip("'")
                             for arg in sysconfig.get_config_var("CONFIG_ARGS").split()]
              dbm_args = [arg for arg in config_args
-@@ -1466,7 +1502,7 @@ class PyBuildExt(build_ext):
+@@ -1466,7 +1503,7 @@ class PyBuildExt(build_ext):
              dbmext = None
              for cand in dbm_order:
                  if cand == "ndbm":
@@ -136,7 +146,7 @@ which will get transformed to panel in buildlink.
                          # Some systems have -lndbm, others have -lgdbm_compat,
                          # others don't have either
                          if self.compiler.find_library_file(self.lib_dirs,
-@@ -2326,10 +2362,7 @@ class PyBuildExt(build_ext):
+@@ -2326,10 +2363,7 @@ class PyBuildExt(build_ext):
              sources = ['_decimal/_decimal.c']
              depends = ['_decimal/docstrings.h']
          else:
@@ -148,7 +158,7 @@ which will get transformed to panel in buildlink.
              libraries = ['m']
              sources = [
                '_decimal/_decimal.c',
-@@ -2745,7 +2778,7 @@ def main():
+@@ -2745,7 +2779,7 @@ def main():
            # If you change the scripts installed here, you also need to
            # check the PyBuildScripts command above, and change the links
            # created by the bininstall target in Makefile.pre.in
