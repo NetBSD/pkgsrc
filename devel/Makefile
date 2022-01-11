@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3545 2022/01/10 19:33:39 adam Exp $
+# $NetBSD: Makefile,v 1.3546 2022/01/11 15:21:58 fcambus Exp $
 #
 
 COMMENT=	Development utilities
@@ -2077,6 +2077,7 @@ SUBDIR+=	pardiff
 SUBDIR+=	patch
 SUBDIR+=	patchelf
 SUBDIR+=	patchutils
+SUBDIR+=	pax-utils
 SUBDIR+=	pcc-libs
 SUBDIR+=	pccts
 SUBDIR+=	pcl-cvs
