@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/05 15:41:23 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/11 09:13:29 adam Exp $
 
-DISTNAME=	black-20.8b1
+DISTNAME=	black-21.12b0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	textproc devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/black/}
 
@@ -14,25 +13,28 @@ LICENSE=	mit
 USE_LANGUAGES=	# none
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-click>=6.5:../../devel/py-click
-DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.6<1:../../devel/py-pathspec
-DEPENDS+=	${PYPKGPREFIX}-attrs>=18.1.0:../../devel/py-attrs
-DEPENDS+=	${PYPKGPREFIX}-appdirs-[0-9]*:../../devel/py-appdirs
-DEPENDS+=	${PYPKGPREFIX}-toml>=0.9.4:../../textproc/py-toml
-DEPENDS+=	${PYPKGPREFIX}-typed-ast>=1.4.0:../../devel/py-typed-ast
-DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
+DEPENDS+=	${PYPKGPREFIX}-click>=7.1.2:../../devel/py-click
+DEPENDS+=	${PYPKGPREFIX}-mypy_extensions>=0.4.3:../../lang/py-mypy_extensions
+DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.9.0:../../devel/py-pathspec
+DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2:../../misc/py-platformdirs
+DEPENDS+=	${PYPKGPREFIX}-tomli>=0.2.6:../../textproc/py-tomli
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10.0.2:../../devel/py-typing-extensions
 # only for blackd:
-DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.3.2:../../www/py-aiohttp
-DEPENDS+=	${PYPKGPREFIX}-aiohttp-cors-[0-9]*:../../www/py-aiohttp-cors
+DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.7.4:../../www/py-aiohttp
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-aiohttp
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+.include "../../lang/python/pyversion.mk"
+.if ${_PYTHON_VERSION} < 38
+DEPENDS+=	${PYPKGPREFIX}-typed-ast>=1.4.0:../../devel/py-typed-ast
+.endif
 
 USE_PKG_RESOURCES=	yes
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && for b in black black-primer blackd; \
-          do ${MV} $$b $$b-${PYVERSSUFFIX}; \
-        done
+.for bin in black black-primer blackd
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
+.endfor
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
