@@ -1,0 +1,5 @@
+Cachy provides a simple yet effective caching library.
+* A simple but powerful API
+* Thread-safety
+* Decorator syntax
+* Support for memcached, redis, database, file, dict stores
