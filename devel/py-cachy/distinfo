@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/01/11 19:03:59 adam Exp $
+
+BLAKE2s (cachy-0.3.0.tar.gz) = 23806dc3487fe7e802995604c93d193e49fd55d546ab75e6a91472e8290df418
+SHA512 (cachy-0.3.0.tar.gz) = 0b69bd45ce81fc57710b44011965b8c4a313808f7c464a409b839d9206158f91b1e39a760d08d62bb5eb15e455ba9b89683f0eb42d2bfcc2e99b0b8f267e3ead
+Size (cachy-0.3.0.tar.gz) = 15654 bytes
