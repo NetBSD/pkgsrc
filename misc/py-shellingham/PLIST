@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2022/01/11 19:15:37 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/shellingham/__init__.py
+${PYSITELIB}/shellingham/__init__.pyc
+${PYSITELIB}/shellingham/__init__.pyo
+${PYSITELIB}/shellingham/_core.py
+${PYSITELIB}/shellingham/_core.pyc
+${PYSITELIB}/shellingham/_core.pyo
+${PYSITELIB}/shellingham/nt.py
+${PYSITELIB}/shellingham/nt.pyc
+${PYSITELIB}/shellingham/nt.pyo
+${PYSITELIB}/shellingham/posix/__init__.py
+${PYSITELIB}/shellingham/posix/__init__.pyc
+${PYSITELIB}/shellingham/posix/__init__.pyo
+${PYSITELIB}/shellingham/posix/_core.py
+${PYSITELIB}/shellingham/posix/_core.pyc
+${PYSITELIB}/shellingham/posix/_core.pyo
+${PYSITELIB}/shellingham/posix/proc.py
+${PYSITELIB}/shellingham/posix/proc.pyc
+${PYSITELIB}/shellingham/posix/proc.pyo
+${PYSITELIB}/shellingham/posix/ps.py
+${PYSITELIB}/shellingham/posix/ps.pyc
+${PYSITELIB}/shellingham/posix/ps.pyo
