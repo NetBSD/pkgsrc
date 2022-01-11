@@ -1,0 +1,14 @@
+$NetBSD: patch-tools_libclang_CMakeLists.txt,v 1.1 2022/01/11 17:27:39 tm Exp $
+
+-B flag symbolic-functions is not supported on Solaris before 11.4
+
+--- tools/clang-shlib/CMakeLists.txt.orig	2021-09-24 16:18:10.000000000 +0000
++++ tools/clang-shlib/CMakeLists.txt
+@@ -50,6 +50,6 @@ add_clang_library(clang-cpp
+                   ${_DEPS})
+ # Optimize function calls for default visibility definitions to avoid PLT and
+ # reduce dynamic relocations.
+-if (NOT APPLE AND NOT MINGW)
++if (NOT APPLE AND NOT MINGW AND NOT "SunOS" MATCHES ${CMAKE_SYSTEM_NAME})
+   target_link_options(clang-cpp PRIVATE LINKER:-Bsymbolic-functions)
+ endif()
