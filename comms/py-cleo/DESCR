@@ -1,0 +1,4 @@
+Create beautiful and testable command-line interfaces.
+
+Cleo is mostly a higher level wrapper for CliKit, so a lot of the components
+and utilities comes from it. Refer to its documentation for more information.
