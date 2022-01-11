@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.41 2021/10/26 10:15:19 nia Exp $
+$NetBSD: distinfo,v 1.42 2022/01/11 09:14:00 schmonz Exp $
 
 BLAKE2s (libevent-2.1.12-stable.tar.gz) = 4a65abf53bda3c21fd30f52dfe2c83c9ea778cfe9198166c824cf25aed5dc6d2
 SHA512 (libevent-2.1.12-stable.tar.gz) = 88d8944cd75cbe78bc4e56a6741ca67c017a3686d5349100f1c74f8a68ac0b6410ce64dff160be4a4ba0696ee29540dfed59aaf3c9a02f0c164b00307fcfe84f
 Size (libevent-2.1.12-stable.tar.gz) = 1100847 bytes
 SHA1 (patch-Makefile.in) = 09c7524eb8657e1f76232db97273806a8c900219
 SHA1 (patch-signal.c) = 868f5f217afd030407a6c8be2d3fbecd58dc7999
+SHA1 (patch-util-internal.h) = cbc8e0e1e682402e72521ca7e1a3a626b763f82b
