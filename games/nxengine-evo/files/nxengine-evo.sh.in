@@ -4,5 +4,5 @@ if [ -n "${XDG_DATA_HOME}" ]; then
 else
 	DIR="${HOME}/.local/share/nxengine/nxengine-evo"
 fi
-mkdir -p "${DIR}" && cd "@PREFIX@/share/nxengine-evo" && \
-    exec "@PREFIX@/share/nxengine-evo/${0##*/}" "$@"
+mkdir -p "${DIR}" && cd "@PREFIX@/share/nxengine" && \
+    exec "@PREFIX@/share/nxengine/${0##*/}" "$@"

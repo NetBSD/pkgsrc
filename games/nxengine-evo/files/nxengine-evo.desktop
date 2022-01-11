@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Encoding=UTF-8
-Name=NXEngine-evo
-Comment=Complete rewrite of the platform-adventure game Cave Story
-Icon=nxengine-evo
-Exec=nxengine-evo
-Terminal=false
-Categories=Game;AdventureGame;
