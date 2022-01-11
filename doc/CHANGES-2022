@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.179 2022/01/11 10:31:08 nia Exp $
+$NetBSD: CHANGES-2022,v 1.180 2022/01/11 11:46:53 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -234,3 +234,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/py-apsw to 3.37.0 [adam 2022-01-11]
 	Updated textproc/py-black to 21.12b0 [adam 2022-01-11]
 	Updated graphics/feh to 3.8 [nia 2022-01-11]
+	Updated games/nxengine-evo to 2.6.5.1 [nia 2022-01-11]
