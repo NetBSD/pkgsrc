@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:44:17 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/01/11 11:46:41 nia Exp $
 
-BLAKE2s (nxengine-evo-2.6.4/cavestoryen.zip) = 4610352140a3ed558596d27f9670a0225541d8e404a67b91050d242b6b50e50b
-SHA512 (nxengine-evo-2.6.4/cavestoryen.zip) = 9c7c2c6c8114974df14b1dce379b86da48caf299716e1de3d743e47c3ac6a8c13c4a0ada85778e69f11c2428f991dcbfcb0020212279f9c1787260102988cbc3
-Size (nxengine-evo-2.6.4/cavestoryen.zip) = 1136575 bytes
-BLAKE2s (nxengine-evo-2.6.4/nxengine-evo.tar.gz) = b5ce1213d44506f9030811aade2149f92a621686ade38be80ca80268a8859441
-SHA512 (nxengine-evo-2.6.4/nxengine-evo.tar.gz) = e931d6ea6a726edecc75223139dd0a4b1eef840eca599b74146a98b7aa34f38dc5c627d3c65dd25ac23ce86531ce0a3a06a30814256743c035955c69641cae65
-Size (nxengine-evo-2.6.4/nxengine-evo.tar.gz) = 3329255 bytes
-SHA1 (patch-src_pause_dialog.cpp) = 2228fa863249d70a0cc15ec610bc18d6dca516f9
-SHA1 (patch-src_sound_Pixtone.cpp) = a6936619d8e1ac147b2dc8ec64b55a348cdf2c84
+BLAKE2s (nxengine-evo-2.6.5.1/cavestoryen.zip) = 4610352140a3ed558596d27f9670a0225541d8e404a67b91050d242b6b50e50b
+SHA512 (nxengine-evo-2.6.5.1/cavestoryen.zip) = 9c7c2c6c8114974df14b1dce379b86da48caf299716e1de3d743e47c3ac6a8c13c4a0ada85778e69f11c2428f991dcbfcb0020212279f9c1787260102988cbc3
+Size (nxengine-evo-2.6.5.1/cavestoryen.zip) = 1136575 bytes
+BLAKE2s (nxengine-evo-2.6.5.1/nxengine-evo.tar.gz) = eb6bcded9ef6ec9a0b613e1e0c49124cfc17094be5f221bc0eca7baf3d9b6e49
+SHA512 (nxengine-evo-2.6.5.1/nxengine-evo.tar.gz) = a2ff5995b114301f5576e44a3d70f614967aceaa5a50de668313899bbf23458bdb9039fd0f63fbe0446edd94edc0b7a990394ed94557d253b5c8fb0e1104e4b2
+Size (nxengine-evo-2.6.5.1/nxengine-evo.tar.gz) = 3891070 bytes

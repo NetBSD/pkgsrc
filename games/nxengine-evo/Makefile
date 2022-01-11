@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2021/12/08 16:04:38 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/11 11:46:41 nia Exp $
 
-PKGNAME=	nxengine-evo-2.6.4
-PKGREVISION=	2
+PKGNAME=	nxengine-evo-2.6.5.1
 CATEGORIES=	games
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES+=	nxengine-evo.tar.gz
 DISTFILES+=	cavestoryen.zip
 SITES.nxengine-evo.tar.gz= \
-	-https://github.com/nxengine/nxengine-evo/archive/v${PKGVERSION_NOREV}.tar.gz
+	-https://github.com/nxengine/nxengine-evo/archive/v2.6.5-1.tar.gz
 SITES.cavestoryen.zip= \
 	-https://www.cavestory.org/downloads/cavestoryen.zip
 
@@ -20,38 +19,46 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pax
 USE_LANGUAGES=	c c++
 
+WRKSRC=		${WRKDIR}/nxengine-evo-2.6.5-1
+
+ALL_ENV+=	SDL2DIR=${PREFIX}
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
+CMAKE_ARGS+=	-DCMAKE_SYSTEM_PREFIX_PATH=${PREFIX}
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/applications
-INSTALLATION_DIRS+=	share/icons/hicolor/128x128/apps
-INSTALLATION_DIRS+=	share/nxengine-evo/data
+INSTALLATION_DIRS+=	share/icons/hicolor/256x256/apps
+INSTALLATION_DIRS+=	share/nxengine/data
 
 pre-configure:
+	${RM} -rf ${WRKSRC}/deps/spdlog
 	${SED}  -e 's,@PREFIX@,${PREFIX},g' \
 	    < ${FILESDIR}/nxengine-evo.sh.in > \
 	    ${WRKDIR}/nxengine-evo.sh
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/nx \
-	    ${DESTDIR}${PREFIX}/share/nxengine-evo/nxengine-evo
+	${INSTALL_PROGRAM} ${WRKSRC}/nxengine-evo \
+	    ${DESTDIR}${PREFIX}/share/nxengine/nxengine-evo
 	${INSTALL_SCRIPT} ${WRKDIR}/nxengine-evo.sh \
 	    ${DESTDIR}${PREFIX}/bin/nxengine-evo
-	${INSTALL_DATA} ${WRKSRC}/vita/sce_sys/icon0.png \
-	    ${DESTDIR}${PREFIX}/share/icons/hicolor/128x128/apps/nxengine-evo.png
-	${INSTALL_DATA} ${FILESDIR}/nxengine-evo.desktop \
+	${INSTALL_DATA} ${WRKSRC}/platform/xdg/org.nxengine.nxengine_evo.png \
+	    ${DESTDIR}${PREFIX}/share/icons/hicolor/256x256/apps
+	${INSTALL_DATA} ${WRKSRC}/platform/xdg/org.nxengine.nxengine_evo.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications
 	cd ${WRKDIR}/CaveStory && ${PAX} -rw -pp . \
-	    ${DESTDIR}${PREFIX}/share/nxengine-evo
+	    ${DESTDIR}${PREFIX}/share/nxengine
 	cd ${WRKSRC}/data && ${PAX} -rw -pp . \
-	    ${DESTDIR}${PREFIX}/share/nxengine-evo/data
-	cd ${DESTDIR}${PREFIX}/share/nxengine-evo && ${WRKSRC}/bin/extract
+	    ${DESTDIR}${PREFIX}/share/nxengine/data
+	cd ${DESTDIR}${PREFIX}/share/nxengine && ${WRKSRC}/nxextract
 
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/spdlog/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
