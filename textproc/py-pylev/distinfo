@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/01/11 19:09:24 adam Exp $
+
+BLAKE2s (pylev-1.4.0.tar.gz) = 5bd2004d2641ef33dfc8172ba524d871a309f7151aae7b19d3a564872ade2d18
+SHA512 (pylev-1.4.0.tar.gz) = 9e11c7b27bce4a12889173658be03549f39bc0a02e4d1b8e82d12a8f07376438a3d735befbd2d4da4a291eeacfd757fcb62ceb0d8557f34d0bf7041b228e404a
+Size (pylev-1.4.0.tar.gz) = 4710 bytes
