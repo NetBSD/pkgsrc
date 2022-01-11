@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/01/11 19:15:37 adam Exp $
+
+BLAKE2s (shellingham-1.4.0.tar.gz) = d360dc5c34e73500cd1c6150ce547efcfd5dd68739dc03b93bee6244f2b57302
+SHA512 (shellingham-1.4.0.tar.gz) = fb071566be34e5f20b380b23166a8d6d7e9d412404387c8b6e5f83c0cd88622adfc1459a55774dfaf2bf7aba5fb1d7e1e5de7c3d2e340d69a864568abe398878
+Size (shellingham-1.4.0.tar.gz) = 9599 bytes
