@@ -3,5 +3,5 @@ Flit is a simple way to put Python packages and modules on PyPI.
 It tries to require less thought about packaging and help you avoid
 common mistakes.
 
-flit_core is the core library inside flit, used to bootstrap the build
-of the flit tool.
+flit_core is the flit pep517 build backend, used as a build backend
+for a lot of python packages including the build of the flit tool.
