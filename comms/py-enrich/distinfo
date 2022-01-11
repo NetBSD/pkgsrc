@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:06:04 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/01/11 07:02:16 adam Exp $
 
-BLAKE2s (enrich-1.2.6.tar.gz) = 0135f23a06cedbb34b7e71375858ded588f0ce1980096a970924d6832c14d021
-SHA512 (enrich-1.2.6.tar.gz) = 07c280d3526538af9d718c6d423be50d67e8285007a6702b7f3d842725a63cb282192c29481cbea6cbe7da886b630e5694776092dc0ffcaac522ccf1e895b5a9
-Size (enrich-1.2.6.tar.gz) = 15581 bytes
+BLAKE2s (enrich-1.2.7.tar.gz) = 7b5b30ab63ad2107d6b3d8ac87670083e475b6c3efc0cb3d16511ab9b1b0d946
+SHA512 (enrich-1.2.7.tar.gz) = 4e3d8598e82d7d013ff74dd325be02245086159fef819431a1ba7505e2e1557992ccbefc0b5a37d0e81487b4e378bef02179c6b74fd50528d6710ff297f0832a
+Size (enrich-1.2.7.tar.gz) = 16918 bytes

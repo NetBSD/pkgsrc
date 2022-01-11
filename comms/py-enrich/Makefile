@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:52:38 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/11 07:02:16 adam Exp $
 
-DISTNAME=	enrich-1.2.6
+DISTNAME=	enrich-1.2.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	comms python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/enrich/}
 
