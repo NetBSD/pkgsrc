@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.70 2021/11/23 20:55:43 wiz Exp $
+$NetBSD: distinfo,v 1.71 2022/01/11 17:27:39 tm Exp $
 
 BLAKE2s (clang-13.0.0.src.tar.xz) = 3a07b8456c7bb3e6a5446d01dbe7606cd0caeacc38606dd59632d14f89480850
 SHA512 (clang-13.0.0.src.tar.xz) = b9ae85a7f0a66ae42a6d76a4e1ea0940bf622f7fbd21d078c9fef146087c70abb0a597a1cfda4e8706b1fbc74d170986451f5f2d642f685a5c355da8a572fb26
@@ -8,3 +8,5 @@ SHA1 (patch-lib_Driver_ToolChain.cpp) = 33a8e346a72893140fde42245e4b108f3a9b9e3e
 SHA1 (patch-lib_Driver_ToolChains_Solaris.cpp) = 1a139612ce181dfce1ea3a627dcd76bc81f05455
 SHA1 (patch-lib_Driver_ToolChains_Solaris.h) = 22d1ddef34b8df3cc29c4632108d45904797aff3
 SHA1 (patch-lib_Frontend_InitHeaderSearch.cpp) = 497ddbe1eac8726d736bed58557a795dce207d1a
+SHA1 (patch-tools_clang-shlib_CMakeLists.txt) = 13a34679d741217975333fd4ae313c3938e6f0fd
+SHA1 (patch-tools_libclang_CMakeLists.txt) = 2dce9cfc1e114a79fab457211eea1ee93c2198f4
