@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/01/11 19:14:09 adam Exp $
+
+BLAKE2s (crashtest-0.3.1.tar.gz) = e8c4aa70062a31dbb612765fbab677c49c1648b4e9a2f9fd5db0c00951aa8142
+SHA512 (crashtest-0.3.1.tar.gz) = e608e59d6bd772fd292b34ccc3a77d26f23f152aa0b72dbf2e60fbcaa0196f47bdfb8dfe28c30f2196132d32a86903f835bea6f6eb29b3cf179ea11bae237ea9
+Size (crashtest-0.3.1.tar.gz) = 4333 bytes
