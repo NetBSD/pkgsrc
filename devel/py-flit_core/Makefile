@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.2 2022/01/10 19:17:09 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/11 21:49:03 nros Exp $
 
-# Important: Re-generate files/setup.py on update.
 DISTNAME=	flit_core-3.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
@@ -18,11 +17,6 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-pre-configure:
-	${CP} ${FILESDIR}/setup.py ${WRKSRC}/
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} flit_core/tests
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
