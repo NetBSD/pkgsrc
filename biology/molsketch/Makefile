@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/12/08 16:03:23 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/11 16:45:09 pin Exp $
 
 DISTNAME=	Molsketch-0.7.2-src
 PKGNAME=	${DISTNAME:S/-src//:tl}
@@ -16,7 +16,7 @@ USE_TOOLS=	pkg-config
 USE_CMAKE=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 
 CMAKE_ARGS+=	-DMSK_PREFIX=${PREFIX:Q}
 CMAKE_ARGS+=	-DMSK_INSTALL_PREFIX=${PREFIX:Q}
