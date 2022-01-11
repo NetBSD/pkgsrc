@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2022/01/11 15:21:04 fcambus Exp $
+bin/dumpelf
+bin/lddtree
+bin/pspax
+bin/scanelf
+bin/scanmacho
+bin/symtree
+man/man1/dumpelf.1
+man/man1/pspax.1
+man/man1/scanelf.1
+man/man1/scanmacho.1
+share/doc/pax-utils/BUGS
+share/doc/pax-utils/README.md
+share/doc/pax-utils/TODO
