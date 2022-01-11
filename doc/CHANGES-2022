@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.176 2022/01/11 08:03:20 adam Exp $
+$NetBSD: CHANGES-2022,v 1.177 2022/01/11 08:50:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -228,3 +228,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-respx to 0.19.1 [adam 2022-01-11]
 	Updated lang/nodejs to 14.18.3 [adam 2022-01-11]
 	Updated lang/nodejs12 to 12.22.9 [adam 2022-01-11]
+	Updated security/py-gnupg to 0.4.8 [adam 2022-01-11]
+	Updated devel/py-bitarray to 2.3.5 [adam 2022-01-11]
