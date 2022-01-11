@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2022/01/10 18:23:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/11 08:49:53 adam Exp $
 ${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/bitarray/__init__.py
 ${PYSITELIB}/bitarray/__init__.pyc
