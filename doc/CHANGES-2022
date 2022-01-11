@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.178 2022/01/11 09:14:52 adam Exp $
+$NetBSD: CHANGES-2022,v 1.179 2022/01/11 10:31:08 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -233,3 +233,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-aiounittest to 1.4.1 [adam 2022-01-11]
 	Updated databases/py-apsw to 3.37.0 [adam 2022-01-11]
 	Updated textproc/py-black to 21.12b0 [adam 2022-01-11]
+	Updated graphics/feh to 3.8 [nia 2022-01-11]
