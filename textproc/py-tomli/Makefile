@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.5 2022/01/10 19:16:03 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/11 21:53:33 nros Exp $
 
-# Important: Re-generate files/setup.py on update.
 DISTNAME=	tomli-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
@@ -15,8 +14,8 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-pre-configure:
-	${CP} ${FILESDIR}/setup.py ${WRKSRC}/
+BUILD_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
