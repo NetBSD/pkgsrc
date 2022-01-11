@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.34 2020/06/20 05:31:10 rillig Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.35 2022/01/11 09:09:49 wiz Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -186,21 +186,13 @@ PYTHON_VERSIONS_INCOMPATIBLE=       27
 
 <para>
 If the packaged software is a Python module, include one of
-<filename>../../lang/python/egg.mk</filename>,
-<filename>../../lang/python/distutils.mk</filename>, or
+<filename>../../lang/python/egg.mk</filename> or
 <filename>../../lang/python/extension.mk</filename>.</para>
 
-<para>Most Python packages use either <quote>distutils</quote> or
-easy-setup/setuptools (<quote>eggs</quote>).
+<para>Most Python packages use setuptools (<quote>eggs</quote>).
 If the packaged software is using setuptools, you only need
 to include <quote><filename>../../lang/python/egg.mk</filename></quote>.
-Otherwise, if the software uses <quote>distutils</quote>, include 
-<quote><filename>../../lang/python/distutils.mk</filename></quote>,
-so pkgsrc will use this framework.
-<quote>distutils</quote> uses a script called <filename>setup.py</filename>;
-if the <quote>distutils</quote> driver is not called
-<filename>setup.py</filename>, set the <varname>PYSETUP</varname> variable
-to the name of the script.</para>
+</para>
 
 <para>Either way, the package directory should be called
 <quote>py-software</quote> and <varname>PKGNAME</varname> should be set to
