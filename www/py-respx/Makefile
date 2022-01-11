@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2022/01/04 20:55:34 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2022/01/11 07:10:39 adam Exp $
 
-DISTNAME=	respx-0.19.0
+DISTNAME=	respx-0.19.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/respx/}
 
@@ -15,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-httpx>=0.21.0:../../www/py-httpx
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-httpx
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
