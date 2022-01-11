@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:52:48 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/11 08:56:21 adam Exp $
 
-DISTNAME=	aiounittest-1.4.0
+DISTNAME=	aiounittest-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiounittest/}
 
@@ -12,9 +11,6 @@ COMMENT=	Test asyncio code more easily
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-wrapt-[0-9]*:../../devel/py-wrapt
-# tests not included
-#TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
-#TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# none
 

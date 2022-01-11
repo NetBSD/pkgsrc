@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:18:09 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/01/11 08:56:21 adam Exp $
 
-BLAKE2s (aiounittest-1.4.0.tar.gz) = ddfa3f475c71d451ca7c4e4a3fa92736096793af8240b1b8443b03a622d19559
-SHA512 (aiounittest-1.4.0.tar.gz) = 9f0d7e8abe0852ed5ba554e08286078b00188e231829998a0ba62bdaea25050340c966cf036ea8462b51233005cf3b592780b1007f182bf6c3ffef7e8f041097
-Size (aiounittest-1.4.0.tar.gz) = 5910 bytes
+BLAKE2s (aiounittest-1.4.1.tar.gz) = 274e685523714cfe8f5aecf433b2e890f070ae00e30e1018ce910cda389ed436
+SHA512 (aiounittest-1.4.1.tar.gz) = 9ea3ddbdb8938a49267513026ffb71720cd0e52e788015cfe6878a354a731db888648273b90bfda64e797c4f4d31cfee9398d66c79bb1b5cdcf7dcb0b95cbbf8
+Size (aiounittest-1.4.1.tar.gz) = 5791 bytes
