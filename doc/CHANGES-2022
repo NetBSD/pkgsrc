@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.177 2022/01/11 08:50:18 adam Exp $
+$NetBSD: CHANGES-2022,v 1.178 2022/01/11 09:14:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -230,3 +230,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/nodejs12 to 12.22.9 [adam 2022-01-11]
 	Updated security/py-gnupg to 0.4.8 [adam 2022-01-11]
 	Updated devel/py-bitarray to 2.3.5 [adam 2022-01-11]
+	Updated devel/py-aiounittest to 1.4.1 [adam 2022-01-11]
+	Updated databases/py-apsw to 3.37.0 [adam 2022-01-11]
+	Updated textproc/py-black to 21.12b0 [adam 2022-01-11]
