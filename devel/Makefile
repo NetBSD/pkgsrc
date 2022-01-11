@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3546 2022/01/11 15:21:58 fcambus Exp $
+# $NetBSD: Makefile,v 1.3547 2022/01/11 19:03:59 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2221,6 +2221,7 @@ SUBDIR+=	py-cachecontrol
 SUBDIR+=	py-cached-property
 SUBDIR+=	py-cachelib
 SUBDIR+=	py-cachetools
+SUBDIR+=	py-cachy
 SUBDIR+=	py-canonicaljson
 SUBDIR+=	py-capstone
 SUBDIR+=	py-case
