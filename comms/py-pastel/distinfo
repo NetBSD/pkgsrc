@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2022/01/11 19:07:46 adam Exp $
+
+BLAKE2s (pastel-0.2.1.tar.gz) = ae9dafb7bd0d26d05f59d8f2b8f6b6508bc0fabf151c39bc15645d75727f5fa1
+SHA512 (pastel-0.2.1.tar.gz) = 7e310d632212c3d940823dc45fffc192094701ac3f8a06b030f0738522637be5dd770af74c009e7c96c120f6a0935e696baa8ee65b75cded1d064b885c2a2eea
+Size (pastel-0.2.1.tar.gz) = 7555 bytes
+SHA1 (patch-setup.py) = bd20399a3f71b62643eed82f0652abeb35d692ae
