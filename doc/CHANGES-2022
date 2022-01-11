@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.181 2022/01/11 13:02:56 nia Exp $
+$NetBSD: CHANGES-2022,v 1.182 2022/01/11 15:22:18 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -236,3 +236,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/feh to 3.8 [nia 2022-01-11]
 	Updated games/nxengine-evo to 2.6.5.1 [nia 2022-01-11]
 	Updated devel/SDL2 to 2.0.20 [nia 2022-01-11]
+	Added devel/pax-utils version 1.3.3 [fcambus 2022-01-11]
