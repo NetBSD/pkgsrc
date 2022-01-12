@@ -1,8 +1,11 @@
-$NetBSD: patch-src_zm_comms_h,v 1.4 2020/08/25 16:42:21 gdt Exp $
+$NetBSD: patch-src_zm_comms_h,v 1.5 2022/01/12 11:53:26 dsainty Exp $
 
 extern "C" system headers.
 
 Include missing system headers for NetBSD.
+
+To fix Linux readv/writev, back-port:
+https://github.com/ZoneMinder/zoneminder/commit/417421b1d869d1b71c8ec1a1e3b082fcede6ce58#diff-484f666f58ec13f38fa402143f2f6ad8e63a013909d3941ffbb3d66745b20c8d
 
 --- src/zm_comms.h.orig	2016-02-03 18:40:30.000000000 +0000
 +++ src/zm_comms.h
@@ -21,9 +24,10 @@ Include missing system headers for NetBSD.
 -#include <vector>
 +#include <stdlib.h>
 +#include <time.h>
++#include <sys/uio.h>
  
  #if defined(BSD)
- #include <sys/uio.h>
+-#include <sys/uio.h>
  #include <sys/socket.h>
  #include <netinet/in.h>
  #endif

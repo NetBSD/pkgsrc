@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.59 2022/01/09 23:59:35 dsainty Exp $
+# $NetBSD: Makefile,v 1.60 2022/01/12 11:53:26 dsainty Exp $
 
 VERSION=	1.29.0
 # Sometimes the distfile unpacks to ZoneMinder and sometimes zoneminder.
 NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
-PKGREVISION=	8
+PKGREVISION=	9
 
 PKGNAME=	${DISTNAME:S/${NAME_DIST}-/${NAME_LOWER}-/}
 DISTNAME=	${NAME_DIST}-${VERSION}
