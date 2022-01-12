@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.87 2021/10/27 23:58:55 gutteridge Exp $
+$NetBSD: distinfo,v 1.88 2022/01/12 08:49:01 wiz Exp $
 
 BLAKE2s (Python-2.7.18.tar.xz) = 1b673ec8c9362a178e044691392bc4f67ad13457d7fddd84a88de346f23f9812
 SHA512 (Python-2.7.18.tar.xz) = a7bb62b51f48ff0b6df0b18f5b0312a523e3110f49c3237936bfe56ed0e26838c0274ff5401bda6fc21bf24337477ccac49e8026c5d651e4b4cafb5eb5086f6c
@@ -15,7 +15,6 @@ SHA1 (patch-Lib_ctypes_test_test__macholib.py) = 4479d315cd037f4c9138e8f5baa8eb1
 SHA1 (patch-Lib_ctypes_test_test__parameters.py) = 8f8bb50515bc7e89ab59363b10af4d5391957eb7
 SHA1 (patch-Lib_ctypes_util.py) = 6fa516c7b43f08992427a0afcbe80c17bcc070f1
 SHA1 (patch-Lib_distutils_command_build__ext.py) = ea4feba4e93dbcff07050c82a00d591bb650e934
-SHA1 (patch-Lib_distutils_command_install.py) = e6aef090b444b455fe351308d251e670329b7dc3
 SHA1 (patch-Lib_distutils_command_install__egg__info.py) = ec7f9e0cd04489b1f6497c44d75bff6864ad1047
 SHA1 (patch-Lib_distutils_tests_test__build__ext.py) = 6b3c8c8d1d351836b239c049d34d132953bd4786
 SHA1 (patch-Lib_distutils_unixccompiler.py) = db16c9aca2f29730945f28247b88b18828739bbb
