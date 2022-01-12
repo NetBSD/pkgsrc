@@ -1,15 +1,12 @@
-# $NetBSD: extension.mk,v 1.58 2020/08/28 00:47:57 gutteridge Exp $
+# $NetBSD: extension.mk,v 1.59 2022/01/12 08:34:34 wiz Exp $
 
 .include "../../lang/python/pyversion.mk"
-
-# Packages that are a non-egg distutils extension should set
-# PYDISTUTILSPKG=YES and include this mk file.
 
 # This mk fragment is included to handle packages that create
 # extensions to python, which by definition are those that place files
 # in ${PYSITELIB}.  Extensions can be implemented via setuptools as
-# eggs (see egg.mk), via distutils (confusing, with an egg-info file,
-# even though they are not eggs), or via more ad hoc methods.
+# eggs (see egg.mk), via wheels (see wheel.mk), or via more ad hoc
+# methods.
 
 .if defined(PYDISTUTILSPKG)
 .include "../../mk/bsd.prefs.mk"
@@ -49,18 +46,6 @@ do-test:
 
 .endif
 
-# PY_NO_EGG suppress the installation of the egg info file (and
-# therefore its inclusion in the package).  Python practice is be to
-# use these files to let 'require' verify that python distributions
-# are present, and therefore the default value of PY_NO_EGG=yes causes
-# pkgsrc not to conform to python norms.  The reason for this behavior
-# appears to be that creating egg info files was new in Python 2.5.
-PY_NO_EGG?=		yes
-.if !empty(PY_NO_EGG:M[yY][eE][sS])
-# see python*/patches/patch-Lib_distutils_command_install.py
-INSTALL_ENV+=		PKGSRC_PYTHON_NO_EGG=defined
-.endif
-
 .if defined(PY_PATCHPLIST)
 PLIST_SUBST+=	PYINC=${PYINC} PYLIB=${PYLIB} PYSITELIB=${PYSITELIB}
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
@@ -69,7 +54,7 @@ PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 # mostly for ALTERNATIVES files
 FILES_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
-# prepare Python>=3.2 bytecode file location change
+# Python>=3.2 bytecode file location change
 # http://www.python.org/dev/peps/pep-3147/
 .if empty(_PYTHON_VERSION:M2?)
 PLIST_AWK+=		-f ${PKGSRCDIR}/lang/python/plist-python.awk
@@ -79,6 +64,10 @@ EARLY_PRINT_PLIST_AWK+=	gsub(/__pycache__\//, "")
 EARLY_PRINT_PLIST_AWK+=	gsub(/opt-1\.pyc$$/, "pyo")
 EARLY_PRINT_PLIST_AWK+=	gsub(/\.cpython-${_PYTHON_VERSION}/, "")}
 .endif
+
+# For running tests before installation of the package,
+# this is sometimes needed; or setting
+# TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 
 DISTUTILS_BUILDDIR_IN_TEST_ENV?=	no
 
