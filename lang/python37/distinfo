@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2021/10/26 10:51:52 nia Exp $
+$NetBSD: distinfo,v 1.30 2022/01/12 08:49:01 wiz Exp $
 
 BLAKE2s (Python-3.7.12.tar.xz) = 74fece84e0ce91742bfcc2686d964158fe4d1f5c537e7be61e63d28d21efc495
 SHA512 (Python-3.7.12.tar.xz) = e1a5942908c1d1469c0ab129fb4287d4ba6eb2a030e88fd71c043fe187a1bc86c00878dab29147199617a361a0c60d9e720fe3bc58bc7bc4cc8ec4bb50c7ea2a
@@ -8,7 +8,6 @@ SHA1 (patch-Lib_ctypes_____init____.py) = ded12eb372028288d85ba88b43e45549c6f481
 SHA1 (patch-Lib_ctypes_macholib_dyld.py) = 267f0b39f116bc9df0b24c277b48ce59cfecd397
 SHA1 (patch-Lib_ctypes_test_test__macholib.py) = 76bb73619e5a27aa1009d4c65e3be1f69b9b6e91
 SHA1 (patch-Lib_ctypes_util.py) = 032cc99ebad93ddddfd89073c60424a952e3faa3
-SHA1 (patch-Lib_distutils_command_install.py) = 6fc6f5d918b7581fc62cd0fe55857ee932c3a341
 SHA1 (patch-Lib_distutils_sysconfig.py) = 6822eafb4dfded86d7f7353831816aeb8119e6cf
 SHA1 (patch-Lib_distutils_unixccompiler.py) = 2e65a8dd5dd3fe25957206c062106fa7a6fc4e69
 SHA1 (patch-Lib_lib2to3_pgen2_driver.py) = 5d6dab14197f27363394ff1aeee22a8ced8026d2
