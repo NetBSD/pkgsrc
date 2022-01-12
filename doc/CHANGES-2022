@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.192 2022/01/12 21:38:04 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.193 2022/01/12 21:39:44 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -259,3 +259,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-llvmlite to 0.37.0 [wiz 2022-01-12]
 	Added audio/py-soundfile version 0.10.3.1 [wiz 2022-01-12]
 	Added devel/py-pooch version 1.5.2 [wiz 2022-01-12]
+	Updated devel/tig to 2.5.5 [fcambus 2022-01-12]
