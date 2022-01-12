@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3549 2022/01/12 16:23:54 adam Exp $
+# $NetBSD: Makefile,v 1.3550 2022/01/12 21:37:51 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2472,6 +2472,7 @@ SUBDIR+=	py-ply
 SUBDIR+=	py-poetry
 SUBDIR+=	py-poetry-core
 SUBDIR+=	py-polib
+SUBDIR+=	py-pooch
 SUBDIR+=	py-pqueue
 SUBDIR+=	py-prefixspan
 SUBDIR+=	py-pretend
