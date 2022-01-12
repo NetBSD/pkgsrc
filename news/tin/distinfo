@@ -1,11 +1,7 @@
-$NetBSD: distinfo,v 1.32 2021/10/26 11:09:37 nia Exp $
+$NetBSD: distinfo,v 1.33 2022/01/12 11:41:41 micha Exp $
 
-BLAKE2s (tin-2.6.0.tar.xz) = 01d560c51c68666962783b2979ba251cea5d84876fd5f1dbda3117fa351891a9
-SHA512 (tin-2.6.0.tar.xz) = d843bd313fd144fbb5f4c40e3f0f776cab3a974494adc7004ee265235ab538dde520bc72c956d5a8517225fdb50e754b444f25bd3b661ddf51ff9e4135904862
-Size (tin-2.6.0.tar.xz) = 1575564 bytes
+BLAKE2s (tin-2.6.1.tar.xz) = 489c1802956e8fa0e3728c1fbcf4976164e9d04745f147b3975f956a84c62df2
+SHA512 (tin-2.6.1.tar.xz) = dc9ace5e24cac1efcaac25df1747dd435573130cff4e9c846c89e8faaed8e8120d66a2021332c01f350744155bcb7be608657285560a1a2457b4635cc8fa22b3
+Size (tin-2.6.1.tar.xz) = 1570500 bytes
 SHA1 (patch-Makefile) = 7f9048d31e70d9630ba6511d834db5d0c60a7de1
-SHA1 (patch-configure) = 124a69bda73e55fbde04076f6f1b4ec9293a1b31
-SHA1 (patch-configure.in) = 9a43c69dc722b3613324afca34ae79b9f369f7ae
-SHA1 (patch-include_autoconf.hin) = e35e4cbf9ed74b8bd50542f4b9bb03be6343187d
-SHA1 (patch-include_tcurses.h) = 71c2d0ca8432c427e6015a7ddda98991674186ff
-SHA1 (patch-src_Makefile.in) = f6fbe7aee324cd844ed6e1870d3c871c247e06ce
+SHA1 (patch-src_Makefile.in) = aecb7ce01c60d232214c9499d761a7da33cb7fb8
