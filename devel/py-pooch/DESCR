@@ -1,0 +1,22 @@
+Does your Python package include sample datasets? Are you shipping
+them with the code? Are they getting too big?
+
+Pooch is here to help! It will manage a data registry by downloading
+your data files from a server only when needed and storing them
+locally in a data cache (a folder on your computer).
+
+Here are Pooch's main features:
+
+* Pure Python and minimal dependencies.
+* Download a file only if necessary (it's not in the data cache
+  or needs to be updated).
+* Verify download integrity through SHA256 hashes (also used to
+  check if a file needs to be updated).
+* Designed to be extended: plug in custom download (FTP, scp,
+  etc) and post-processing (unzip, decompress, rename) functions.
+* Includes utilities to unzip/decompress the data upon download
+  to save loading time.
+* Can handle basic HTTP authentication (for servers that require
+  a login) and printing download progress bars.
+* Easily set up an environment variable to overwrite the data
+  cache location.
