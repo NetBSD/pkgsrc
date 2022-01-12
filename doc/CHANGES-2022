@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.186 2022/01/12 09:47:33 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.187 2022/01/12 11:09:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -252,3 +252,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/rabbitmq to 3.9.12 [adam 2022-01-12]
 	Updated devel/py-pybind11 to 2.9.0 [adam 2022-01-12]
 	Updated devel/texttest to 4.0.9 [schmonz 2022-01-12]
+	Updated lang/vala to 0.54.6 [adam 2022-01-12]
+	Updated x11/gtk3 to 3.24.31 [adam 2022-01-12]
