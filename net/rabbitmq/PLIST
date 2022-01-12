@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2021/12/03 13:31:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.47 2022/01/12 06:44:45 adam Exp $
 lib/erlang/autocomplete/bash_autocomplete.sh
 lib/erlang/autocomplete/zsh_autocomplete.sh
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/INSTALL
@@ -770,6 +770,7 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_auth_backend_oauth
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_auth_backend_oauth2-${PKGVERSION}/ebin/rabbit_auth_backend_oauth2_app.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_auth_backend_oauth2-${PKGVERSION}/ebin/rabbit_oauth2_scope.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_auth_backend_oauth2-${PKGVERSION}/ebin/rabbitmq_auth_backend_oauth2.app
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_auth_backend_oauth2-${PKGVERSION}/ebin/uaa_jwks.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_auth_backend_oauth2-${PKGVERSION}/ebin/uaa_jwt.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_auth_backend_oauth2-${PKGVERSION}/ebin/uaa_jwt_jwk.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_auth_backend_oauth2-${PKGVERSION}/ebin/uaa_jwt_jwt.beam
