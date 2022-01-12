@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 11:18:06 nia Exp $
+$NetBSD: distinfo,v 1.19 2022/01/12 11:53:26 dsainty Exp $
 
 BLAKE2s (ZoneMinder-1.29.0.tar.gz) = 2a3ce6b328d5fb143d27ff4b68e986d2397df9d7e5fcf19426618ffb06987789
 SHA512 (ZoneMinder-1.29.0.tar.gz) = 4716e0788db29880eeafc817fe63662d07c3b805214b4d2eb29b346dd3493b0215c9e79370e3414220c812065eefbe253548a70d8128c253aa4535f66f9544df
@@ -19,7 +19,7 @@ SHA1 (patch-src_zm__timer.h) = 218dfae75b8c9a7b0c5542a2437b350743d11e5f
 SHA1 (patch-src_zm__utils.cpp) = f0e15990b7f801303259af8c9b86731b74327fe6
 SHA1 (patch-src_zm__utils.h) = 4ffb7eafa8602076766fd4ae00be797866a229d9
 SHA1 (patch-src_zm_comms_cpp) = bd3c3e6dd4d11ea0845d2da662e99169cd6e6680
-SHA1 (patch-src_zm_comms_h) = 75ceba7e2c725c02a09cb2203a94142b1a987bce
+SHA1 (patch-src_zm_comms_h) = 64c0a8e98f9ac551113f3428dafff12a61ea9afe
 SHA1 (patch-src_zm_logger_cpp) = f8f11cd1a969435d727186b816aec612d74e55db
 SHA1 (patch-src_zm_remote_camera_h) = 0d4bd7dae0188df7e463586250ac2ed530230f3d
 SHA1 (patch-src_zm_signal_cpp) = 0e53c30d408cf926d9a1f05a683e10cd8b9f2d8e
