@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2021/07/29 10:24:49 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/12 15:21:54 schmonz Exp $
 
 DISTNAME=	libidn2-2.3.2
 CATEGORIES=	devel
@@ -21,6 +21,14 @@ CONFIGURE_ENV+=		ac_cv_prog_GTKDOC_CHECK= \
 			ac_cv_path_GTKDOC_CHECK_PATH= \
 			ac_cv_path_GTKDOC_REBASE= \
 			ac_cv_path_GTKDOC_MKPDF=
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${PKGSRC_COMPILER:Msunpro}
+# configure check passes, but linker will fail during build
+post-configure:
+	${ECHO} '#undef HAVE_SYMVER_ALIAS_SUPPORT' >> ${WRKSRC}/config.h
+.endif
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
