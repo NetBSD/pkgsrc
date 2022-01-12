@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/01/12 21:26:38 wiz Exp $
+
+BLAKE2s (SoundFile-0.10.3.post1.tar.gz) = 605f63a07736a6e08526f939ddd723e8826ad9ad5ba7d3f9922ce057c748c28c
+SHA512 (SoundFile-0.10.3.post1.tar.gz) = 6e95fe68ccdc285481749b442be26f4016a417e1d860b46a1ff99ba6b5cb6d72f694812c22f112b0e7f5e763b72c768a2f425fb7c7aceaa660828996de909828
+Size (SoundFile-0.10.3.post1.tar.gz) = 36460 bytes
