@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/12/04 20:45:05 nia Exp $
+# $NetBSD: Makefile,v 1.16 2022/01/12 08:42:26 wiz Exp $
 
 DISTNAME=	skytools-3.2
 PKGREVISION=	4
@@ -19,7 +19,6 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	awk gmake grep sed
 
 PY_PATCHPLIST=	yes
-PY_NO_EGG=	no
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 3.2
 
 REPLACE_PYTHON+=	scripts/*.py
