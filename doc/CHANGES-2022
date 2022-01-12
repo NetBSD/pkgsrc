@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.190 2022/01/12 21:13:58 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.191 2022/01/12 21:27:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -257,3 +257,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated news/tin to 2.6.1 [micha 2022-01-12]
 	Moved devel/py-Deprecated to devel/py-deprecated [adam 2022-01-12]
 	Updated devel/py-llvmlite to 0.37.0 [wiz 2022-01-12]
+	Added audio/py-soundfile version 0.10.3.1 [wiz 2022-01-12]
