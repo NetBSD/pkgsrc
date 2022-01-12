@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.187 2022/01/12 11:09:34 adam Exp $
+$NetBSD: CHANGES-2022,v 1.188 2022/01/12 11:42:55 micha Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -254,3 +254,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/texttest to 4.0.9 [schmonz 2022-01-12]
 	Updated lang/vala to 0.54.6 [adam 2022-01-12]
 	Updated x11/gtk3 to 3.24.31 [adam 2022-01-12]
+	Updated news/tin to 2.6.1 [micha 2022-01-12]
