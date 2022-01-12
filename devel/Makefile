@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3548 2022/01/11 19:21:49 adam Exp $
+# $NetBSD: Makefile,v 1.3549 2022/01/12 16:23:54 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2145,7 +2145,6 @@ SUBDIR+=	purpose
 SUBDIR+=	pvs
 SUBDIR+=	pwlib
 SUBDIR+=	py-CppHeaderParser
-SUBDIR+=	py-Deprecated
 SUBDIR+=	py-InlineEgg
 SUBDIR+=	py-Optik
 SUBDIR+=	py-ParamUnittest
