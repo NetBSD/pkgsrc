@@ -1,10 +1,10 @@
-$NetBSD: patch-include_tig_tig.h,v 1.1 2021/01/26 14:11:03 fcambus Exp $
+$NetBSD: patch-include_tig_tig.h,v 1.2 2022/01/12 21:39:33 fcambus Exp $
 
 Macro safety fix.
 
---- include/tig/tig.h.orig	2020-04-08 16:17:38.000000000 +0000
+--- include/tig/tig.h.orig	2022-01-11 18:50:37.000000000 +0000
 +++ include/tig/tig.h
-@@ -119,7 +119,7 @@
+@@ -125,7 +125,7 @@
  #define MIN(x, y)	((x) < (y) ? (x) :  (y))
  #define MAX(x, y)	((x) > (y) ? (x) :  (y))
  
