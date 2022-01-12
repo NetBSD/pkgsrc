@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.185 2022/01/12 06:46:37 adam Exp $
+$NetBSD: CHANGES-2022,v 1.186 2022/01/12 09:47:33 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -251,3 +251,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/py-poetry version 1.1.12 [adam 2022-01-11]
 	Updated net/rabbitmq to 3.9.12 [adam 2022-01-12]
 	Updated devel/py-pybind11 to 2.9.0 [adam 2022-01-12]
+	Updated devel/texttest to 4.0.9 [schmonz 2022-01-12]
