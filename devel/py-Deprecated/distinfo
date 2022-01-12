@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:18:06 nia Exp $
-
-BLAKE2s (Deprecated-1.2.7.tar.gz) = dbad257feaff6e0dc76f6bcd34ee7794ac6c11dc2f3bc623b31f407ca73d268f
-SHA512 (Deprecated-1.2.7.tar.gz) = c76d4197f96537bb456edc4d47b6ad795317c6535058586e659688a7cb8226c3926b9de3b64545cdf805cd90d6fa620885845629c0d83182b49de08c97f68bc3
-Size (Deprecated-1.2.7.tar.gz) = 5046835 bytes
