@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/05/12 08:08:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/01/12 21:13:50 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -103,6 +103,9 @@ ${PYSITELIB}/llvmlite/tests/__main__.pyo
 ${PYSITELIB}/llvmlite/tests/customize.py
 ${PYSITELIB}/llvmlite/tests/customize.pyc
 ${PYSITELIB}/llvmlite/tests/customize.pyo
+${PYSITELIB}/llvmlite/tests/refprune_proto.py
+${PYSITELIB}/llvmlite/tests/refprune_proto.pyc
+${PYSITELIB}/llvmlite/tests/refprune_proto.pyo
 ${PYSITELIB}/llvmlite/tests/test_binding.py
 ${PYSITELIB}/llvmlite/tests/test_binding.pyc
 ${PYSITELIB}/llvmlite/tests/test_binding.pyo
@@ -112,6 +115,9 @@ ${PYSITELIB}/llvmlite/tests/test_ir.pyo
 ${PYSITELIB}/llvmlite/tests/test_llvmpy.py
 ${PYSITELIB}/llvmlite/tests/test_llvmpy.pyc
 ${PYSITELIB}/llvmlite/tests/test_llvmpy.pyo
+${PYSITELIB}/llvmlite/tests/test_refprune.py
+${PYSITELIB}/llvmlite/tests/test_refprune.pyc
+${PYSITELIB}/llvmlite/tests/test_refprune.pyo
 ${PYSITELIB}/llvmlite/tests/test_valuerepr.py
 ${PYSITELIB}/llvmlite/tests/test_valuerepr.pyc
 ${PYSITELIB}/llvmlite/tests/test_valuerepr.pyo
