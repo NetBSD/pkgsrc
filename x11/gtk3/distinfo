@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.92 2021/10/26 11:33:52 nia Exp $
+$NetBSD: distinfo,v 1.93 2022/01/12 11:09:07 adam Exp $
 
-BLAKE2s (gtk+-3.24.30.tar.xz) = 8328518bef280db10e775fa636c4208c708194500206118b6a1cd51a24391c76
-SHA512 (gtk+-3.24.30.tar.xz) = 4164559f3e14501b9f9330a76535ebf5e26961d436f65e65ea609998cb120fcbcc5d9591453a64e1d414248499857288e5758274d03a7f75e9ae76cbf8c68ff9
-Size (gtk+-3.24.30.tar.xz) = 22407016 bytes
+BLAKE2s (gtk+-3.24.31.tar.xz) = 8951a4c3fed2aebfd2b5cb4f1911f692552578885f8da0e8f35ba7e4d99723bf
+SHA512 (gtk+-3.24.31.tar.xz) = e7f8e5003a919e297bd3e616acccbc5cc9bf9c9d41377c108c24db51817fcccec919abc12d05c0ed585d49526d52f0395a1c0f3ed9d9ef816bb0c4b2aa615f9b
+Size (gtk+-3.24.31.tar.xz) = 22449112 bytes
 SHA1 (patch-Makefile.in) = 8edcfe2ff492d90138a24b680fe39814c3848d80
 SHA1 (patch-config.h.in) = dc5f8741eed554f88c0b6834cadad95083e4dc8f
 SHA1 (patch-configure) = d531b33e52facf960058f1223b70db680da35300
@@ -12,5 +12,5 @@ SHA1 (patch-gdk_x11_gdkscreen-x11.h) = 455d6c3de8421984ba3c99baf51cd31982a3df78
 SHA1 (patch-gdk_x11_gdkwindow-x11.h) = c80f7c9d5a570817e54fd74fa903a53400dc6f64
 SHA1 (patch-gtk_a11y_gtkaccessibility.c) = 13232c85bd570f21ea03153dacde4ca98c7c76a8
 SHA1 (patch-gtk_fallback-c89.c) = eaf5ac8aace9eab673eed0e265d4cb2617bf1fcd
-SHA1 (patch-gtk_gtkfontchooserwidget.c) = 5ca98e5417865d8c60333c8c2b2ba757755ef547
+SHA1 (patch-gtk_gtkfontchooserwidget.c) = 0f4a47b7260e9227ed7e20613bbe435163afd149
 SHA1 (patch-gtk_gtklabel.c) = 8ec7e9df8d2169f15698ff6a29cf8254ca44ea61
