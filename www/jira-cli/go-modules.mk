@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.2 2021/11/20 10:38:05 fox Exp $
+# $NetBSD: go-modules.mk,v 1.3 2022/01/13 03:43:15 fox Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.34.0.mod
@@ -240,6 +240,8 @@ GO_MODULE_FILES+=	github.com/google/pprof/@v/v0.0.0-20210720184732-4bb14d4b1be1.
 GO_MODULE_FILES+=	github.com/google/pprof/@v/v0.0.0-20210720184732-4bb14d4b1be1.zip
 GO_MODULE_FILES+=	github.com/google/renameio/@v/v0.1.0.mod
 GO_MODULE_FILES+=	github.com/google/renameio/@v/v0.1.0.zip
+GO_MODULE_FILES+=	github.com/google/shlex/@v/v0.0.0-20191202100458-e7afc7fbc510.mod
+GO_MODULE_FILES+=	github.com/google/shlex/@v/v0.0.0-20191202100458-e7afc7fbc510.zip
 GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.1.2.mod
 GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.1.2.zip
 GO_MODULE_FILES+=	github.com/googleapis/gax-go/v2/@v/v2.0.4.mod
