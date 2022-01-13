@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.196 2022/01/13 08:10:26 adam Exp $
+$NetBSD: CHANGES-2022,v 1.197 2022/01/13 09:04:48 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -265,3 +265,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/gcr to 3.38.1 [adam 2022-01-13]
 	Updated security/pinentry to 1.2.0 [adam 2022-01-13]
 	Updated security/libksba to 1.6.0 [adam 2022-01-13]
+	Updated devel/mob to 2.2.1 [schmonz 2022-01-13]
