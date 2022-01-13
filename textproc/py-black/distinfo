@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2022/01/11 09:13:29 adam Exp $
+$NetBSD: distinfo,v 1.5 2022/01/13 19:40:07 wiz Exp $
 
 BLAKE2s (black-21.12b0.tar.gz) = d2b2d65a85f1104ef0ecfb259cbfe8e85f6552b1915a2b1f10476f3c5d194c70
 SHA512 (black-21.12b0.tar.gz) = 1063644b17e56650b03fa515b3f6bd05762d66a43359dbe587279bf9818e73c1ce48421984389fcd1764432dbb36f90fc1cb6bcd528f81289afd0ddf330b7aac
 Size (black-21.12b0.tar.gz) = 594232 bytes
+SHA1 (patch-setup.py) = 0d3166bd1d02b2a0af4c7f7465b2c086a47eb490
