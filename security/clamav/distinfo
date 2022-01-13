@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.40 2021/11/08 14:49:23 taca Exp $
+$NetBSD: distinfo,v 1.41 2022/01/13 15:28:22 taca Exp $
 
-BLAKE2s (clamav-0.103.4.tar.gz) = 0a64b0534d4b8919c787fbd7152ff87eb875b702215bccf0b586b8d9e854d69f
-SHA512 (clamav-0.103.4.tar.gz) = 422a8cb98d355be098b0a0c575e4f08cf964e992d10ee02e7600eb9db6dfa943efbd988489f268e81e4d2ef29cfe582b236688ea209d6d2e46467f3c08eb475e
-Size (clamav-0.103.4.tar.gz) = 16425023 bytes
+BLAKE2s (clamav-0.103.5.tar.gz) = 045c523bcbd02439cc05095cc19d102eee7af6db5cda340e19ed47fb885a3ae9
+SHA512 (clamav-0.103.5.tar.gz) = 242423b507eacbbd31dbae6dd0325dff87da25bb8072f2cee7a5e7cab4b8eb5ee6196c759570c1d75986a2777f0f79f92cfbd6250a30ae5b53390c75b238c29a
+Size (clamav-0.103.5.tar.gz) = 16434316 bytes
 SHA1 (patch-Makefile.in) = 51e0f42323f07b7ae0cb35a640469dce4e1a2041
 SHA1 (patch-aa) = c07a7b6e883f384ce278964645f0658c0d986ab5
 SHA1 (patch-ab) = 78793f0267ce8c820b51937186dc17dabb4a1ccf
