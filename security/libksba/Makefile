@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2020/08/03 15:30:06 adam Exp $
+# $NetBSD: Makefile,v 1.36 2022/01/13 08:07:20 adam Exp $
 
-DISTNAME=	libksba-1.4.0
+DISTNAME=	libksba-1.6.0
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libksba/
 EXTRACT_SUFX=	.tar.bz2
@@ -14,7 +14,6 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	src/ksba.pc.in
 INFO_FILES=		yes
-
 TEST_TARGET=		check
 TEXINFO_REQD=		4.0
 
