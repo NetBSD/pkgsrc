@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:53:38 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/13 19:31:24 wiz Exp $
 
 DISTNAME=	setuptools_scm_git_archive-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,9 +11,10 @@ HOMEPAGE=	https://github.com/Changaco/setuptools_scm_git_archive
 COMMENT=	Setuptools_scm plugin for git archives
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+PYTHON_VERSIONED_DEPENDENCIES=	setuptools_scm:build
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

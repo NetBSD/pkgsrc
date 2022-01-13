@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:53:47 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/13 19:31:22 wiz Exp $
 
 DISTNAME=	visitor-0.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Tiny pythonic visitor implementation
 LICENSE=	mit
 
 #DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-#BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 
 USE_LANGUAGES=	# none
 

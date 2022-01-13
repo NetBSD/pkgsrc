@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/01/11 09:13:29 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/13 19:31:25 wiz Exp $
 
 DISTNAME=	black-21.12b0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,6 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-tomli>=0.2.6:../../textproc/py-tomli
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10.0.2:../../devel/py-typing-extensions
 # only for blackd:
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.7.4:../../www/py-aiohttp
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "../../lang/python/pyversion.mk"
@@ -35,6 +36,10 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
 .endfor
+
+TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

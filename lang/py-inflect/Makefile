@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:54:08 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/13 19:31:24 wiz Exp $
 
 DISTNAME=	inflect-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/jazzband/inflect
 COMMENT=	Correctly generate plurals, ordinals, indefinite articles for English
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
+PYTHON_VERSIONED_DEPENDENCIES=	setuptools_scm:build
 
 .include "../../lang/python/pyversion.mk"
 
@@ -22,4 +22,5 @@ DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-meta
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

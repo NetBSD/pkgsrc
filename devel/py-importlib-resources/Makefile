@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/01/04 20:53:10 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2022/01/13 19:31:23 wiz Exp $
 
 DISTNAME=	importlib_resources-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,7 +11,6 @@ HOMEPAGE=	https://importlib-resources.readthedocs.io/
 COMMENT=	Read resources from Python packages
 LICENSE=	apache-2.0
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} == 27
 DEPENDS+=	${PYPKGPREFIX}-contextlib2-[0-9]*:../../devel/py-contextlib2
@@ -21,10 +20,11 @@ DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
 .endif
 .if ${_PYTHON_VERSION} < 38
 PYTHON_VERSIONED_DEPENDENCIES+=	zipp
-.include "../../lang/python/versioned_dependencies.mk"
 .endif
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools_scm
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

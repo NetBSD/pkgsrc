@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:53:12 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/13 19:31:23 wiz Exp $
 
 DISTNAME=	jaraco.functools-2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,8 +11,6 @@ HOMEPAGE=	https://github.com/jaraco/jaraco.functools
 COMMENT=	Additional functools in the spirit of stdlib's functools
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_scm
-
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} == 27
 DEPENDS+=	${PYPKGPREFIX}-backports.functools_lru_cache>=1.0.3:../../devel/py-backports.functools_lru_cache
@@ -20,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-backports.functools_lru_cache>=1.0.3:../../devel/py-bac
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONED_DEPENDENCIES+=	more-itertools
+PYTHON_VERSIONED_DEPENDENCIES+=	more-itertools setuptools_scm:build
 
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
