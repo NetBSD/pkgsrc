@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2022/01/07 16:33:21 adam Exp $
+$NetBSD: distinfo,v 1.3 2022/01/13 09:47:04 wiz Exp $
 
-BLAKE2s (tomli-2.0.0.tar.gz) = b8105f0a62cc43314e07a07e04e64dea5ef1f6e6066a3ec902415b1e922ee8ae
-SHA512 (tomli-2.0.0.tar.gz) = f10596ac3daa6dbffe1592eec7d6f85cf2e21b9eb4c570cb398b2729a767fc54eb42a8ed0f5dd75b0bf4d35b91da6df7080f90930b1bba44506240d39a5e5c1d
-Size (tomli-2.0.0.tar.gz) = 15037 bytes
+BLAKE2s (tomli-2.0.0-py3-none-any.whl) = a20dc518d81a24d9f378abb39d170de29a9ad604d4a15bca85c5bf2c3becb656
+SHA512 (tomli-2.0.0-py3-none-any.whl) = 6191981e9771dedc5dc225734295774c75a272d03edfbea7415d2b4c09531d5022dba53affc47baf817ff9cc5945d8d62ea3eb67bd69e146a07eaa35dec5acc0
+Size (tomli-2.0.0-py3-none-any.whl) = 12127 bytes
