@@ -1,5 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2021/02/06 10:26:53 wiz Exp $
-# -*- Makefile -*-
+# $NetBSD: Makefile.common,v 1.16 2022/01/13 08:05:48 adam Exp $
 #
 # used by security/pinentry/Makefile
 # used by security/pinentry-fltk/Makefile
@@ -7,23 +6,21 @@
 # used by security/pinentry-gtk2/Makefile
 # used by security/pinentry-qt5/Makefile
 
-PINENTRY_VERSION=	1.1.1
-DISTNAME=		pinentry-${PINENTRY_VERSION}
+DISTNAME=	pinentry-1.2.0
 
-CATEGORIES=		security
-MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/pinentry/
-EXTRACT_SUFX=		.tar.bz2
+CATEGORIES=	security
+MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/pinentry/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://gnupg.org/related_software/pinentry/index.html
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://gnupg.org/related_software/pinentry/index.html
+LICENSE=	gnu-gpl-v2
 
-#PATCHDIR=		${.CURDIR}/../../security/pinentry/patches
-DISTINFO_FILE=		${.CURDIR}/../../security/pinentry/distinfo
+DISTINFO_FILE=	${.CURDIR}/../../security/pinentry/distinfo
+PATCHDIR=	${.CURDIR}/../../security/pinentry/patches
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
-
 INFO_FILES=		yes
 
 .include "../../security/libassuan2/buildlink3.mk"

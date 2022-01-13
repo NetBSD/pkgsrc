@@ -1,20 +1,18 @@
-# $NetBSD: Makefile,v 1.54 2021/12/08 16:06:22 adam Exp $
+# $NetBSD: Makefile,v 1.55 2022/01/13 08:05:48 adam Exp $
 
-PKGNAME=		${DISTNAME:S/pinentry-/pinentry-gtk2-/}
-PKGREVISION=		1
-COMMENT=		Applications for entering PINs or Passphrases, GTK+ enabled
+PKGNAME=	${DISTNAME:S/pinentry-/pinentry-gtk2-/}
+COMMENT=	Applications for entering PINs or Passphrases, GTK+ enabled
 
-.include		"../../security/pinentry/Makefile.common"
+.include "../../security/pinentry/Makefile.common"
 
 USE_TOOLS+=		pkg-config
 CONFIGURE_ARGS+=	--enable-pinentry-gtk2
-CONFIGURE_ARGS+=	--disable-pinentry-qt
 CONFIGURE_ARGS+=	--disable-pinentry-curses
 CONFIGURE_ARGS+=	--disable-pinentry-emacs
-#CONFIGURE_ARGS+=	--disable-fallback-curses
-CONFIGURE_ARGS+=	--disable-pinentry-gnome3
-CONFIGURE_ARGS+=	--disable-pinentry-fltk
 CONFIGURE_ARGS+=	--disable-pinentry-efl
+CONFIGURE_ARGS+=	--disable-pinentry-fltk
+CONFIGURE_ARGS+=	--disable-pinentry-gnome3
+CONFIGURE_ARGS+=	--disable-pinentry-qt
 CONFIGURE_ARGS+=	--disable-libsecret
 
 INSTALL_DIRS=		gtk+-2
