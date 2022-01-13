@@ -1,0 +1,4 @@
+setuptools_scm handles managing your python package versions in
+scm metadata. It also handles file finders for the supperted scms.
+
+This is the old version for python 2.7.
