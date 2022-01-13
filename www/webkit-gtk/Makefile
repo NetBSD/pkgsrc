@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.219 2022/01/13 03:57:27 gutteridge Exp $
+# $NetBSD: Makefile,v 1.220 2022/01/13 04:00:01 gutteridge Exp $
 
 DISTNAME=	webkitgtk-2.34.3
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
@@ -155,12 +155,10 @@ BUILDLINK_API_DEPENDS.glib2+= glib2>=2.32.1
 .include "../../graphics/lcms2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.png+= png>=1.5.1beta08
 .include "../../graphics/png/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.0.3
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gst-plugins1-base+=	gst-plugins1-base>=1.0.3
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-good/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libsoup+= libsoup>=2.42.2nb3
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../security/libtasn1/buildlink3.mk"
