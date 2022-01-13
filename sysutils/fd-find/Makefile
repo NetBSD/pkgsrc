@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2020/12/08 07:14:47 pin Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/13 21:59:08 pin Exp $
 
-DISTNAME=	fd-find-8.2.1
+DISTNAME=	fd-find-8.3.1
 CATEGORIES=	sysutils
-GITHUB_PROJECT=	fd
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sharkdp/}
+GITHUB_PROJECT=	fd
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DIST_SUBDIR=	${PKGBASE}
-EXTRACT_USING=	bsdtar
 
 MAINTAINER=	milan@petabyte.dev
 HOMEPAGE=	https://github.com/sharkdp/fd/
