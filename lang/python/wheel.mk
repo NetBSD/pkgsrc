@@ -1,4 +1,4 @@
-# $NetBSD: wheel.mk,v 1.2 2022/01/13 09:49:35 wiz Exp $
+# $NetBSD: wheel.mk,v 1.3 2022/01/13 21:23:25 wiz Exp $
 #
 # Initial mk for building and installing python wheels
 #
@@ -44,7 +44,7 @@ TOOL_DEPENDS+= ${PYPKGPREFIX}-build>=0:../../devel/py-build
 
 .if !target(do-build)
 do-build:
-	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} -m build --wheel -x -n
+	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} -m build --wheel --skip-dependency-check --no-isolation
 .endif
 
 .endif
