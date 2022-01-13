@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:59:15 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/01/13 11:49:41 leot Exp $
 
-BLAKE2s (moreutils-0.65.tar.gz) = 8746b94bf55e30beccb451abbae344925900822e8264a320a9e984e9d3612fd3
-SHA512 (moreutils-0.65.tar.gz) = dcad2a3b6d9621da6d2f860f39acb04c80d42cc2123e12a6ec84524f6a1fc7f5ae4bd5d00e698fe14d4c5e7d491d790970ce4370c9abd1f63318d1c512f596b9
-Size (moreutils-0.65.tar.gz) = 93180 bytes
-SHA1 (patch-Makefile) = 80fb38e584db12f344ed66da76c8bee0127d17cc
+BLAKE2s (moreutils-0.67.tar.gz) = 9315bfaef4efbabf0fc9cd6eecf6e28fab89b2cd8c22021d6ad6950575f3985b
+SHA512 (moreutils-0.67.tar.gz) = 3a395fa80c1c1d769ec078cbf9455952201a364d8264796c6443a397ed7fa4f08250ecd140f047cf2e9533d6fc5310b3a579a7c083a5bc4cb4672d39c35dab75
+Size (moreutils-0.67.tar.gz) = 93627 bytes
+SHA1 (patch-Makefile) = ff3ecd6260600063628e142c5ba59829b0bfc4bb
 SHA1 (patch-ifdata.c) = 5c0d9737657354ad1877f2efc6ff08e76ca7bc62
 SHA1 (patch-pee.c) = 0c2cf167e7038fadd818ea3262686a1b4ed5aa7e
 SHA1 (patch-sponge.c) = 3ba941bcc1d6595c8fb6aa59b1636e86dadfdf32
