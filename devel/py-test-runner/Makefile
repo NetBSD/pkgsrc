@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/01/04 20:53:42 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2022/01/13 19:31:22 wiz Exp $
 
 DISTNAME=	pytest-runner-5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -11,13 +11,12 @@ HOMEPAGE=	https://github.com/pytest-dev/pytest-runner
 COMMENT=	Invoke py.test as distutils command with dependency resolution
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 # introduces dependency cycle
 #TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONED_DEPENDENCIES=	test
+PYTHON_VERSIONED_DEPENDENCIES=	test setuptools_scm
 
 do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}

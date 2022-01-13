@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/01/05 15:41:01 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/13 19:31:21 wiz Exp $
 
 DISTNAME=	Automat-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -12,7 +12,6 @@ COMMENT=	Self-service finite-state machines for the programmer on the go
 LICENSE=	mit
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-m2r-[0-9]*:../../textproc/py-m2r
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-attrs>=16.1.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
@@ -20,9 +19,12 @@ USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
 
+PYTHON_VERSIONED_DEPENDENCIES=	setuptools_scm:build
+
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} automat-visualize automat-visualize${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
