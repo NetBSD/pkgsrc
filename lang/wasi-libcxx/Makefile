@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4.2.1 2022/01/09 20:10:55 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4.2.2 2022/01/13 19:53:12 bsiegert Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -166,6 +166,15 @@ do-configure:
 	cd ${WRKSRC} && cd ../build_libcxxabi && \
 	${PKGSRC_SETENV} ${_CONFIGURE_CMAKE_ENV} \
 		cmake ${CMAKE_ARGS} ../libcxxabi
+
+# Run llvm-ranlib again on the archives. Fixes mystery build failure
+# in Firefox due to missing index (see PR pkg/56590). Might be a MAKE_JOBS
+# problem in this package?
+post-install:
+	${PREFIX}/bin/llvm-ranlib \
+	  ${DESTDIR}${PREFIX}/wasi/lib/wasm32-wasi/libc++.a
+	${PREFIX}/bin/llvm-ranlib \
+	  ${DESTDIR}${PREFIX}/wasi/lib/wasm32-wasi/libc++abi.a
 
 .include "../../lang/llvm/buildlink3.mk"
 .include "../../lang/wasi-libc/buildlink3.mk"
