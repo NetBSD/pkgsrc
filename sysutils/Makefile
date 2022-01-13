@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.980 2022/01/05 10:56:29 schmonz Exp $
+# $NetBSD: Makefile,v 1.981 2022/01/13 14:14:40 schmonz Exp $
 #
 
 COMMENT=	System utilities
@@ -331,6 +331,7 @@ SUBDIR+=	heirloom-whoami
 SUBDIR+=	heirloom-whodo
 SUBDIR+=	heirloom-xargs
 SUBDIR+=	heirloom-yes
+SUBDIR+=	hexyl
 SUBDIR+=	hfsutils
 SUBDIR+=	hivex
 SUBDIR+=	hs-byteorder
