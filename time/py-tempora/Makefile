@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/01/05 15:41:28 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/13 19:31:25 wiz Exp $
 
 DISTNAME=	tempora-1.14.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,12 +14,12 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-jaraco.functools-[0-9]*:../../devel/py-jaraco.functools
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar>=0.9.1:../../devel/py-test-sugar
 
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
+PYTHON_VERSIONED_DEPENDENCIES=	setuptools_scm:build
 
 USE_LANGUAGES=	# none
 

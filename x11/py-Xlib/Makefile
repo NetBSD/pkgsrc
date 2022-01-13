@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/01/04 20:55:40 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/01/13 19:31:25 wiz Exp $
 
 DISTNAME=	python-xlib-0.29
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-x/X/}
@@ -16,8 +16,10 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=	# none
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
+PYTHON_VERSIONED_DEPENDENCIES=	setuptools_scm
+
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

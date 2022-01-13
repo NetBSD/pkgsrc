@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/01/05 20:47:36 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/13 19:31:23 wiz Exp $
 
 DISTNAME=	pytest-4.6.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -18,7 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-pluggy>=0.12:../../devel/py-pluggy
 DEPENDS+=	${PYPKGPREFIX}-py>=1.5.0:../../devel/py-py
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-wcwidth-[0-9]*:../../devel/py-wcwidth
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-argcomplete-[0-9]*:../../devel/py-argcomplete
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
@@ -36,6 +35,7 @@ DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=0.12:../../devel/py-importlib-metad
 PYTHON_VERSIONED_DEPENDENCIES+=	more-itertools
 PYTHON_VERSIONED_DEPENDENCIES+=	hypothesis:test
 PYTHON_VERSIONED_DEPENDENCIES+=	packaging
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools_scm:build
 
 USE_PKG_RESOURCES=	yes
 

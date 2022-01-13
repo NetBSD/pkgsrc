@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/01/04 20:52:51 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/13 19:31:21 wiz Exp $
 
 DISTNAME=	backports.functools_lru_cache-1.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Backport of functools.lru_cache from Python 3.3
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-backports-[0-9]*:../../devel/py-backports
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm5
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/01/05 15:41:22 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/13 19:31:24 wiz Exp $
 
 DISTNAME=	salt-pepper-0.7.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,15 +11,16 @@ HOMEPAGE=	https://github.com/saltstack/pepper
 COMMENT=	CLI front-end to a running salt-api system
 LICENSE=	apache-2.0
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-
 USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
+
+PYTHON_VERSIONED_DEPENDENCIES=	setuptools_scm:build
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} pepper pepper-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

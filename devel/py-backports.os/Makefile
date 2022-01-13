@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:52:52 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/13 19:31:23 wiz Exp $
 
 DISTNAME=	backports.os-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	python-software-foundation
 
 DEPENDS+=	${PYPKGPREFIX}-backports-[0-9]*:../../devel/py-backports
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm5
 
 PYTHON_VERSIONS_ACCEPTED=	27 # py-backports
 
