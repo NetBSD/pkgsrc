@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.198 2022/01/13 09:10:40 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.199 2022/01/13 11:49:46 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -267,3 +267,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/libksba to 1.6.0 [adam 2022-01-13]
 	Updated devel/mob to 2.2.1 [schmonz 2022-01-13]
 	Updated devel/binaryen to 105 [fcambus 2022-01-13]
+	Updated misc/moreutils to 0.67 [leot 2022-01-13]
