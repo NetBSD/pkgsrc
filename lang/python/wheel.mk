@@ -1,4 +1,4 @@
-# $NetBSD: wheel.mk,v 1.1 2022/01/11 21:37:06 nros Exp $
+# $NetBSD: wheel.mk,v 1.2 2022/01/13 09:49:35 wiz Exp $
 #
 # Initial mk for building and installing python wheels
 #
@@ -61,4 +61,4 @@ INSTALL_ENV+= PIP_NO_CACHEDIR=1
 do-install:
 	${RUN} cd ${WRKDIR} && \
 	${SETENV} ${INSTALL_ENV} \
-	${PYTHONBIN} -m pip install --no-deps --root ${DESTDIR:Q} --prefix ${PREFIX:Q} --compile --force-reinstall -I ${WHEELFILE}
+	${PYTHONBIN} -m pip install --no-cache-dir --no-deps --root ${DESTDIR:Q} --prefix ${PREFIX:Q} --compile --force-reinstall -I ${WHEELFILE}
