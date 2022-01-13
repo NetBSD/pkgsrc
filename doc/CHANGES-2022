@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.199 2022/01/13 11:49:46 leot Exp $
+$NetBSD: CHANGES-2022,v 1.200 2022/01/13 13:19:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -268,3 +268,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/mob to 2.2.1 [schmonz 2022-01-13]
 	Updated devel/binaryen to 105 [fcambus 2022-01-13]
 	Updated misc/moreutils to 0.67 [leot 2022-01-13]
+	Updated www/wiki-tui to 0.4.4 [pin 2022-01-13]
