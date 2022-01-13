@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3550 2022/01/12 21:37:51 wiz Exp $
+# $NetBSD: Makefile,v 1.3551 2022/01/13 19:12:51 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2624,7 +2624,7 @@ SUBDIR+=	py-serpent
 SUBDIR+=	py-setuptools
 SUBDIR+=	py-setuptools-rust
 SUBDIR+=	py-setuptools44
-SUBDIR+=	py-setuptools_scm
+SUBDIR+=	py-setuptools_scm5
 SUBDIR+=	py-setuptools_scm_git_archive
 SUBDIR+=	py-setuptools_trial
 SUBDIR+=	py-simplegeneric
