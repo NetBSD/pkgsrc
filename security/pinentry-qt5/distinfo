@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:17:38 nia Exp $
-
-BLAKE2s (pinentry-1.1.1.tar.bz2) = c3a245e52cb3244e2a76f914baee022adc3164708a93d1eec98b6fc55091bf05
-SHA512 (pinentry-1.1.1.tar.bz2) = d6ab5af8ac2f3c9c05e09703e95d8e2676f9b2b7ceb97f6a31d101d0e9da7a1e106a6d3eabe86cab1bb35a4b119a7cba1380ac64bf13c61af0b3c48803116c12
-Size (pinentry-1.1.1.tar.bz2) = 515723 bytes
-SHA1 (patch-m4_qt.m4) = 70e9386c86e96e97ad2fd12312bd167005eeda65
