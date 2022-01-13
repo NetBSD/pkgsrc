@@ -1,10 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.5 2021/05/26 02:34:02 fox Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.6 2022/01/13 04:24:00 fox Exp $
 
 Only define __LINUX_ALSA__ on Linux.
 
---- CMakeLists.txt.orig	2021-05-23 18:35:57.000000000 +0000
+--- CMakeLists.txt.orig	2022-01-12 13:11:14.000000000 +0000
 +++ CMakeLists.txt
-@@ -29,10 +29,16 @@ endif()
+@@ -30,10 +30,16 @@ endif()
  target_link_libraries(ft2-clone
      PRIVATE m asound pthread ${SDL2_LIBRARIES})
  
@@ -23,5 +23,5 @@ Only define __LINUX_ALSA__ on Linux.
 +        PRIVATE HAS_LIBFLAC)
 +endif()
  
- install(TARGETS ft2-clone
-     RUNTIME DESTINATION bin)
+ if(EXTERNAL_LIBFLAC)
+     find_package(PkgConfig REQUIRED)
