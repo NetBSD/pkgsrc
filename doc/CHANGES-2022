@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.209 2022/01/13 20:17:15 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.210 2022/01/13 21:59:26 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -279,3 +279,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-sanic to 21.12.1 [adam 2022-01-13]
 	Updated devel/py-setuptools_scm to 6.3.2 [wiz 2022-01-13]
 	Updated net/syncthing to 1.18.6 [triaxx 2022-01-13]
+	Updated sysutils/fd-find to 8.3.1 [pin 2022-01-13]
