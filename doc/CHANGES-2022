@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.207 2022/01/13 18:24:18 adam Exp $
+$NetBSD: CHANGES-2022,v 1.208 2022/01/13 19:37:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -277,3 +277,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/neomutt to 20211029nb2 [wiz 2022-01-13]
 	Updated www/py-sanic-routing to 21.12.0 [adam 2022-01-13]
 	Updated www/py-sanic to 21.12.1 [adam 2022-01-13]
+	Updated devel/py-setuptools_scm to 6.3.2 [wiz 2022-01-13]
