@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.194 2022/01/13 03:43:41 fox Exp $
+$NetBSD: CHANGES-2022,v 1.195 2022/01/13 04:24:29 fox Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -261,3 +261,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/py-pooch version 1.5.2 [wiz 2022-01-12]
 	Updated devel/tig to 2.5.5 [fcambus 2022-01-12]
 	Updated www/jira-cli to 0.3.0 [fox 2022-01-13]
+	Updated audio/fasttracker2 to 1.50 [fox 2022-01-13]
