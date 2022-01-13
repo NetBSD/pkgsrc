@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21414 2022/01/12 11:09:34 adam Exp $
+$NetBSD: TODO,v 1.21415 2022/01/13 14:25:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1573,7 +1573,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o profanity-0.10.0
 	o profit-2.5.3
 	o proj-8.0.0
-	o prosody-0.11.8
 	o protobuf-3.19.2
 	o ps2eps-1.70
 	o psmisc-22.20
@@ -1605,6 +1604,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-hgview-1.9.0
 	o py-hyperscan-0.2.0
 	o py-input-pad-1.4.2
+	o py-ipython-8.0
 	o py-keybinder-0.3.2
 	o py-mercurial-6.0.1
 	o py-musicbrainz-0.7.4
