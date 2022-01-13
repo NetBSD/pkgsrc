@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2022/01/04 20:53:43 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2022/01/13 19:31:22 wiz Exp $
 
 DISTNAME=	pytest-xdist-1.34.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -14,10 +14,9 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-execnet>=1.1:../../devel/py-execnet
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-test-forked-[0-9]*:../../devel/py-test-forked
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-filelock-[0-9]*:../../devel/py-filelock
 
-PYTHON_VERSIONED_DEPENDENCIES=	test
+PYTHON_VERSIONED_DEPENDENCIES=	test setuptools_scm:build
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/01/05 15:41:25 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2022/01/13 19:31:25 wiz Exp $
 
 DISTNAME=	jsonschema-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/Julian/jsonschema
 COMMENT=	Implementation of JSON Schema for Python
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.4.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-pyrsistent>=0.14.0:../../devel/py-pyrsistent
 DEPENDS+=	${PYPKGPREFIX}-six>=1.11.0:../../lang/py-six
@@ -26,6 +25,8 @@ DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-meta
 
 USE_PKG_RESOURCES=	yes
 
+PYTHON_VERSIONED_DEPENDENCIES=	setuptools_scm:build
+
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} jsonschema jsonschema-${PYVERSSUFFIX} || ${TRUE}
@@ -34,4 +35,5 @@ do-test:
 	cd ${WRKSRC}/jsonschema && ${PYTHONBIN} -m unittest discover -v
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

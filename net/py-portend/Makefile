@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/01/04 20:54:30 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2022/01/13 19:31:21 wiz Exp $
 
 DISTNAME=	portend-2.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,11 +12,10 @@ COMMENT=	TCP port monitoring utilities
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-tempora>=1.8:../../time/py-tempora
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar-[0-9]*:../../devel/py-test-sugar
 # missing: pytest-black-multipy
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+PYTHON_VERSIONED_DEPENDENCIES=	test:test setuptools_scm:build
 
 USE_LANGUAGES=	# none
 

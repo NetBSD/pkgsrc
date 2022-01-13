@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/01/05 15:41:19 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/13 19:31:24 wiz Exp $
 
 DISTNAME=	acme-tiny-5.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,16 +11,18 @@ HOMEPAGE=	https://github.com/diafygi/acme-tiny
 COMMENT=	Tiny script to issue and renew TLS certs from Let's Encrypt
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	openssl-[0-9]*:../../security/openssl
 
 USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
 
+PYTHON_VERSIONED_DEPENDENCIES=	setuptools_scm:build
+
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} acme-tiny acme-tiny-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
