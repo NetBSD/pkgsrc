@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.195 2022/01/13 04:24:29 fox Exp $
+$NetBSD: CHANGES-2022,v 1.196 2022/01/13 08:10:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -262,3 +262,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/tig to 2.5.5 [fcambus 2022-01-12]
 	Updated www/jira-cli to 0.3.0 [fox 2022-01-13]
 	Updated audio/fasttracker2 to 1.50 [fox 2022-01-13]
+	Updated security/gcr to 3.38.1 [adam 2022-01-13]
+	Updated security/pinentry to 1.2.0 [adam 2022-01-13]
+	Updated security/libksba to 1.6.0 [adam 2022-01-13]
