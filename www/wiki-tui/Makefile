@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2021/12/29 05:52:31 pin Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/13 13:18:42 pin Exp $
 
-DISTNAME=	wiki-tui-0.4.3
+DISTNAME=	wiki-tui-0.4.4
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Builditluc/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
