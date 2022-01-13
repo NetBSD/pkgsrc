@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.28 2022/01/13 21:03:51 wiz Exp $
+$NetBSD: distinfo,v 1.29 2022/01/13 21:50:27 wiz Exp $
 
 BLAKE2s (setuptools_scm-6.3.2.tar.gz) = cf03d6b556f099ce05fea58e433c9b245efa33e17673af18ab2607623da77cce
 SHA512 (setuptools_scm-6.3.2.tar.gz) = 9a16552803ef92367ad71007cf322737b5baa58b924083f04c860875bf6cb2e2bb4f43a7f89778b040c2eb55c5d32de479a918056519339820c6d0f1a6a386f0
 Size (setuptools_scm-6.3.2.tar.gz) = 57207 bytes
-SHA1 (patch-setup.cfg) = fdedda5274adb912a731e8e56508621dbfa1aa0e
-SHA1 (patch-setup.py) = 4a24bde6a0338aa95dd25b54362b01c9370770b8
