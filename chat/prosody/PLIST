@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2020/03/09 19:37:20 khorben Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/01/13 14:25:12 wiz Exp $
 bin/prosody
 bin/prosodyctl
 lib/prosody/core/certmanager.lua
@@ -139,6 +139,7 @@ lib/prosody/util/compat.so
 lib/prosody/util/dataforms.lua
 lib/prosody/util/datamanager.lua
 lib/prosody/util/datetime.lua
+lib/prosody/util/dbuffer.lua
 lib/prosody/util/debug.lua
 lib/prosody/util/dependencies.lua
 lib/prosody/util/encodings.so
@@ -146,6 +147,7 @@ lib/prosody/util/envload.lua
 lib/prosody/util/events.lua
 lib/prosody/util/filters.lua
 lib/prosody/util/format.lua
+lib/prosody/util/gc.lua
 lib/prosody/util/hashes.so
 lib/prosody/util/helpers.lua
 lib/prosody/util/hex.lua
@@ -194,6 +196,7 @@ lib/prosody/util/stanza.lua
 lib/prosody/util/startup.lua
 lib/prosody/util/statistics.lua
 lib/prosody/util/statsd.lua
+lib/prosody/util/strbitop.so
 lib/prosody/util/table.so
 lib/prosody/util/template.lua
 lib/prosody/util/termcolours.lua
@@ -213,4 +216,3 @@ share/examples/prosody/certs/localhost.cnf
 share/examples/prosody/certs/makefile
 share/examples/prosody/certs/openssl.cnf
 share/examples/prosody/prosody.cfg.lua
-@pkgdir lib/prosody/modules/storage
