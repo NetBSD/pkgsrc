@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.4 2022/01/07 15:06:21 tnn Exp $
+# $NetBSD: mozilla-common.mk,v 1.5 2022/01/13 01:25:23 gutteridge Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -59,13 +59,13 @@ test:
 .if ${OPSYS} == "OpenBSD"
 TOOLS_PLATFORM.tar=	${TOOLS_PATH.bsdtar}
 USE_TOOLS+=		bsdtar
+.else
+USE_TOOLS+=		tar
 .endif
 
-PLIST_VARS+=	i386
 .if ${MACHINE_ARCH} == "i386"
 # This is required for SSE2 code under i386.
-CXXFLAGS+=		-mstackrealign
-PLIST.i386=		yes
+CXXFLAGS+=	-mstackrealign
 .endif
 
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
@@ -139,7 +139,7 @@ ALL_ENV+=		SHELL=${CONFIG_SHELL:Q}
 
 # Build outside ${WRKSRC}
 # Try to avoid conflict with config/makefiles/xpidl/Makefile.in
-.if ${MAINTAINER_INTERNAL:Uno} == "yes
+.if ${MAINTAINER_INTERNAL:Uno} == "yes"
 OBJDIR=			../no-node-build
 .else
 OBJDIR=			../build
