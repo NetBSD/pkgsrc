@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.201 2022/01/13 13:20:23 pin Exp $
+$NetBSD: CHANGES-2022,v 1.202 2022/01/13 13:21:34 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -270,3 +270,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/moreutils to 0.67 [leot 2022-01-13]
 	Updated www/wiki-tui to 0.4.4 [pin 2022-01-13]
 	Updated audio/spotify-player to 0.5.2 [pin 2022-01-13]
+	Updated sysutils/felix to 0.3.1 [pin 2022-01-13]
