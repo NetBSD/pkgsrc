@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2022/01/13 21:03:51 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2022/01/13 21:50:27 wiz Exp $
 
 DISTNAME=	setuptools_scm-6.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools_scm/}
 
@@ -12,7 +12,7 @@ COMMENT=	Manage your versions by scm tags
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
-DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../textproc/py-tomli
+DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
 TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
