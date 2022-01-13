@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/01/04 20:54:14 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/01/13 19:31:24 wiz Exp $
 
 DISTNAME=	mpmath-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,14 +12,16 @@ HOMEPAGE=	http://mpmath.org/
 COMMENT=	Python library for arbitrary-precision FP arithmetic
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 # py-gmpy provides faster backend
 DEPENDS+=	${PYPKGPREFIX}-gmpy-[0-9]*:../../math/py-gmpy
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONED_DEPENDENCIES=	setuptools_scm:build
+
 PYSETUPTESTTARGET=	pytest
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
