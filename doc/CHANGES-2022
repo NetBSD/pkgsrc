@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.204 2022/01/13 14:25:22 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.205 2022/01/13 15:28:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -273,3 +273,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/felix to 0.3.1 [pin 2022-01-13]
 	Added sysutils/hexyl version 0.9.0 [schmonz 2022-01-13]
 	Updated chat/prosody to 0.11.12 [wiz 2022-01-13]
+	Updated security/clamav to 0.103.5 [taca 2022-01-13]
