@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2022/01/04 20:53:38 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2022/01/13 19:37:29 wiz Exp $
 
-DISTNAME=	setuptools_scm-5.0.2
+DISTNAME=	setuptools_scm-6.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools_scm/}
 
@@ -11,16 +10,21 @@ HOMEPAGE=	https://github.com/pypa/setuptools_scm
 COMMENT=	Manage your versions by scm tags
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-toml-[0-9]*:../../textproc/py-toml
+DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
+DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../textproc/py-tomli
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
+TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
+TEST_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-PYTHON_VERSIONED_DEPENDENCIES=	pip:test test:test
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
+# needs to be installed for testing
 do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} testing
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

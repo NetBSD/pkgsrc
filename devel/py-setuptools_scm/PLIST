@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/01/20 11:49:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/01/13 19:37:29 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -12,6 +12,9 @@ ${PYSITELIB}/setuptools_scm/__init__.pyo
 ${PYSITELIB}/setuptools_scm/__main__.py
 ${PYSITELIB}/setuptools_scm/__main__.pyc
 ${PYSITELIB}/setuptools_scm/__main__.pyo
+${PYSITELIB}/setuptools_scm/_version_cls.py
+${PYSITELIB}/setuptools_scm/_version_cls.pyc
+${PYSITELIB}/setuptools_scm/_version_cls.pyo
 ${PYSITELIB}/setuptools_scm/config.py
 ${PYSITELIB}/setuptools_scm/config.pyc
 ${PYSITELIB}/setuptools_scm/config.pyo
@@ -36,15 +39,18 @@ ${PYSITELIB}/setuptools_scm/hacks.pyo
 ${PYSITELIB}/setuptools_scm/hg.py
 ${PYSITELIB}/setuptools_scm/hg.pyc
 ${PYSITELIB}/setuptools_scm/hg.pyo
+${PYSITELIB}/setuptools_scm/hg_git.py
+${PYSITELIB}/setuptools_scm/hg_git.pyc
+${PYSITELIB}/setuptools_scm/hg_git.pyo
 ${PYSITELIB}/setuptools_scm/integration.py
 ${PYSITELIB}/setuptools_scm/integration.pyc
 ${PYSITELIB}/setuptools_scm/integration.pyo
+${PYSITELIB}/setuptools_scm/scm_workdir.py
+${PYSITELIB}/setuptools_scm/scm_workdir.pyc
+${PYSITELIB}/setuptools_scm/scm_workdir.pyo
 ${PYSITELIB}/setuptools_scm/utils.py
 ${PYSITELIB}/setuptools_scm/utils.pyc
 ${PYSITELIB}/setuptools_scm/utils.pyo
 ${PYSITELIB}/setuptools_scm/version.py
 ${PYSITELIB}/setuptools_scm/version.pyc
 ${PYSITELIB}/setuptools_scm/version.pyo
-${PYSITELIB}/setuptools_scm/win_py31_compat.py
-${PYSITELIB}/setuptools_scm/win_py31_compat.pyc
-${PYSITELIB}/setuptools_scm/win_py31_compat.pyo
