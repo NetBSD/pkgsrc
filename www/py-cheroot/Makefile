@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/01/05 15:41:29 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2022/01/13 19:31:25 wiz Exp $
 
 DISTNAME=	cheroot-6.5.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	High-performance, pure-Python HTTP server used by CherryPy
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-six>=1.11.0:../../lang/py-six
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_scm
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm_git_archive>=1.0:../../devel/py-setuptools_scm_git_archive
 TEST_DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=4.5.3:../../devel/py-coverage
@@ -45,6 +44,7 @@ do-test:
 	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
 
 PYTHON_VERSIONED_DEPENDENCIES+=	more-itertools
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools_scm:build
 
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"

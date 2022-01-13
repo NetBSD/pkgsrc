@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/01/04 20:52:57 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/01/13 19:31:21 wiz Exp $
 
 DISTNAME=	configparser-4.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/jaraco/configparser
 COMMENT=	Updated configparser from Python 3.5
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_scm
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_scm5
 DEPENDS+=	${PYPKGPREFIX}-backports-[0-9]*:../../devel/py-backports
 TEST_DEPENDS+=	${PYPKGPREFIX}-pathlib2-[0-9]*:../../devel/py-pathlib2
 

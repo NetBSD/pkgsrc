@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/01/05 15:41:08 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2022/01/13 19:31:22 wiz Exp $
 
 DISTNAME=	tox-3.20.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ HOMEPAGE=	https://tox.readthedocs.io/
 COMMENT=	Virtualenv-based automation of test activities
 LICENSE=	mit
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-filelock>=3.0.0:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-pluggy>=0.12.0:../../devel/py-pluggy
 DEPENDS+=	${PYPKGPREFIX}-py>=1.4.17:../../devel/py-py
@@ -34,6 +33,7 @@ DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=0.12:../../devel/py-importlib-metad
 
 PYTHON_VERSIONED_DEPENDENCIES+=	packaging
 PYTHON_VERSIONED_DEPENDENCIES+=	test:test
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools_scm:build
 
 USE_PKG_RESOURCES=	yes
 
