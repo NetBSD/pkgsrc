@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/05 15:41:01 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/13 21:30:00 wiz Exp $
 
 DISTNAME=	build-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,7 +22,7 @@ USE_PKG_RESOURCES=	yes
 
 .include "../../lang/python/pyversion.mk"
 
-.if ${PYPKGPREFIX} == "py36" || ${PYPKGPREFIX} == "py37"
+.if ${PYPKGPREFIX} == "py37"
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
 .endif
 
