@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/04/11 12:36:28 taca Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/14 15:42:09 taca Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
@@ -94,17 +94,17 @@ OPENSSL_EXAMPLES=	c_rehash.rb cert2text.rb certstore.rb cipher.rb \
 REPLACE_RUBY=		\
 	libexec/bundle libexec/bundler libexec/erb libexec/irb \
 	libexec/racc libexec/rdoc libexec/ri \
-	.bundle/gems/power_assert-${RUBY_POWER_ASSERT_VERSION}/bin/console \
-	.bundle/gems/rake-${RUBY_RAKE_VERSION}/bin/bundle \
-	.bundle/gems/rake-${RUBY_RAKE_VERSION}/bin/console \
-	.bundle/gems/rake-${RUBY_RAKE_VERSION}/bin/rake \
-	.bundle/gems/rake-${RUBY_RAKE_VERSION}/bin/rdoc \
-	.bundle/gems/rake-${RUBY_RAKE_VERSION}/bin/rubocop \
-	.bundle/gems/rake-${RUBY_RAKE_VERSION}/exe/rake \
-	.bundle/gems/rbs-${RUBY_RBS_VERSION}/exe/rbs \
-	.bundle/gems/typeprof-${RUBY_TYPEPROF_VERSION}/exe/typeprof
+	.bundle/gems/power_assert-${RUBY_POWER_ASSERT_VER}/bin/console \
+	.bundle/gems/rake-${RUBY_RAKE_VER}/bin/bundle \
+	.bundle/gems/rake-${RUBY_RAKE_VER}/bin/console \
+	.bundle/gems/rake-${RUBY_RAKE_VER}/bin/rake \
+	.bundle/gems/rake-${RUBY_RAKE_VER}/bin/rdoc \
+	.bundle/gems/rake-${RUBY_RAKE_VER}/bin/rubocop \
+	.bundle/gems/rake-${RUBY_RAKE_VER}/exe/rake \
+	.bundle/gems/rbs-${RUBY_RBS_VER}/exe/rbs \
+	.bundle/gems/typeprof-${RUBY_TYPEPROF_VER}/exe/typeprof
 REPLACE_SH=		\
-	.bundle/gems/rake-${RUBY_RAKE_VERSION}/bin/setup
+	.bundle/gems/rake-${RUBY_RAKE_VER}/bin/setup
 REPLACE_RUBY_DIRS=	ext lib sample
 INSTALLATION_DIRS+=	bin libexec ${PKGMANDIR}/man1 \
 			${RUBY_DOC}/csv/arguments \
