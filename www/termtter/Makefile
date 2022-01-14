@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2020/01/18 23:35:46 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2022/01/14 16:22:17 taca Exp $
 
 DISTNAME=	termtter-2.2.8
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,7 +9,6 @@ HOMEPAGE=	https://termtter.github.com/
 COMMENT=	Terminal based Twitter client
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-fiddle-[0-9]*:../../devel/ruby-fiddle
 DEPENDS+=	${RUBY_PKGPREFIX}-highline>=1.5.0:../../devel/ruby-highline
 DEPENDS+=	${RUBY_PKGPREFIX}-readline-[0-9]*:../../devel/ruby-readline
 DEPENDS+=	${RUBY_PKGPREFIX}-termcolor>=1.0.0:../../devel/ruby-termcolor
