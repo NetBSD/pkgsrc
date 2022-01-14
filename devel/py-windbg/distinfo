@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:19:16 nia Exp $
-
-BLAKE2s (winpdb-1.4.6.tar.gz) = 63ff1569857cb0a60610573d3bfa229e6e8519979c56f3fd6d08897732613c6f
-SHA512 (winpdb-1.4.6.tar.gz) = 2abb01428b81befbc8029908e1130dde47746d546c6a001fc585a34006e618f548af422a6fc97f38adca067ebff17361574548fef422d956d3afcd1369b101db
-Size (winpdb-1.4.6.tar.gz) = 143869 bytes
