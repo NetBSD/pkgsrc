@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2022/01/10 22:14:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2022/01/14 17:51:57 wiz Exp $
 ${PYINC}/PIL/ImPlatform.h
 ${PYINC}/PIL/Imaging.h
 ${PYSITELIB}/PIL.pth
@@ -170,6 +170,7 @@ ${PYSITELIB}/PIL/MspImagePlugin.pyo
 ${PYSITELIB}/PIL/OleFileIO.py
 ${PYSITELIB}/PIL/OleFileIO.pyc
 ${PYSITELIB}/PIL/OleFileIO.pyo
+${PYSITELIB}/PIL/${EGG_INFODIR}
 ${PYSITELIB}/PIL/PSDraw.py
 ${PYSITELIB}/PIL/PSDraw.pyc
 ${PYSITELIB}/PIL/PSDraw.pyo
