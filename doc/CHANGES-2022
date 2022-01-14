@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.211 2022/01/14 01:12:30 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.212 2022/01/14 08:37:17 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -281,3 +281,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/syncthing to 1.18.6 [triaxx 2022-01-13]
 	Updated sysutils/fd-find to 8.3.1 [pin 2022-01-13]
 	Updated textproc/libunistring to 1.0 [gdt 2022-01-14]
+	Updated devel/binutils to 2.37nb1 [fcambus 2022-01-14]
