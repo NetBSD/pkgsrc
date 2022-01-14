@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2021/12/08 16:06:08 adam Exp $
+# $NetBSD: Makefile,v 1.48 2022/01/14 13:44:37 wiz Exp $
 
 DISTNAME=		tigervnc-1.12.0
 PKGNAME=		${DISTNAME}.1.20.13
@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=TigerVNC/}
 GITHUB_TAG=		v1.12.0
 XORG_SERVER_FILE=	xorg-server-1.20.13
-SITES.${XORG_SERVER_FILE}.tar.bz2=	${MASTER_SITE_XORG:=xserver/}
+SITES.${XORG_SERVER_FILE}.tar.xz=	${MASTER_SITE_XORG:=xserver/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${XORG_SERVER_FILE}.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -56,7 +56,7 @@ REPLACE_PERL+=	unix/vncserver
 REPLACE_PERL+=	vncserver.pl
 
 post-extract:
-	cd ${WRKDIR} && ${EXTRACTOR} ${_DISTDIR}/${XORG_SERVER_FILE}.tar.bz2
+	cd ${WRKDIR} && ${EXTRACTOR} ${_DISTDIR}/${XORG_SERVER_FILE}.tar.xz
 	cp -r ${WRKDIR}/${XORG_SERVER_FILE}/* ${WRKSRC}/unix/xserver
 	cp ${FILESDIR}/vncserver.pl ${WRKSRC}
 
