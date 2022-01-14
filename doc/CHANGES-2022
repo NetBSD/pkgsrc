@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.223 2022/01/14 16:20:36 taca Exp $
+$NetBSD: CHANGES-2022,v 1.224 2022/01/14 16:22:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -295,3 +295,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/ruby30 to 3.0.3nb1 [taca 2022-01-14]
 	Updated archivers/ruby-xz to 1.0.2nb1 [taca 2022-01-14]
 	Updated devel/ruby-iruby to 0.7.0nb1 [taca 2022-01-14]
+	Updated www/termtter to 2.2.8nb1 [taca 2022-01-14]
