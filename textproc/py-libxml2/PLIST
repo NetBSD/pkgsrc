@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2021/12/31 15:18:37 tnn Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/01/14 14:12:03 tnn Exp $
 ${PYSITELIB}/drv_libxml2.py
 ${PYSITELIB}/drv_libxml2.pyc
 ${PYSITELIB}/drv_libxml2.pyo
 ${PYSITELIB}/libxml2.py
 ${PYSITELIB}/libxml2.pyc
 ${PYSITELIB}/libxml2.pyo
+${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}
 ${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
