@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:06:37 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/01/14 11:49:43 wiz Exp $
 
 BLAKE2s (ifaddr-0.1.7.tar.gz) = 43926a3a349fc3960daaf3570a62836863c8e76f42d06d58d5dac25047ecaaf9
 SHA512 (ifaddr-0.1.7.tar.gz) = 9a428dd6bb022c8f483b77df9e9301f96e9ba64207eda8b3956a7ca5993bfe97f222c451149851135d379db1a819c75d0834566f3b6501456b2f237b0645e300
 Size (ifaddr-0.1.7.tar.gz) = 9281 bytes
-SHA1 (patch-setup.py) = c96e7d5b7c4d31107d163f2868f2712d206eceb1
