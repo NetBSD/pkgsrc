@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2019/12/25 14:29:24 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2022/01/14 16:00:16 taca Exp $
 
 PKGNAME=		${RUBY_PKGPREFIX}-${PKGNAME_MODULE}
 COMMENT=		Ruby bindings for Xapian search engine
@@ -15,13 +15,8 @@ PLIST_SUBST+=		XAPIAN_RDOC_PATH=${XAPIAN_RDOC_PATH:Q}
 
 .include "../../lang/ruby/rubyversion.mk"
 
-.if ${RUBY_VER} < 25
-PLIST.oldruby=		yes
-XAPIAN_RDOC_PATH=	Xapian/Xapian
-.else
 PLIST.newruby=		yes
 XAPIAN_RDOC_PATH=	Xapian
-.endif
 
 post-install:
 	${CHMOD} +x ${DESTDIR}${PREFIX}/share/doc/xapian-bindings/${RUBY_PKGPREFIX}/examples/*.rb
