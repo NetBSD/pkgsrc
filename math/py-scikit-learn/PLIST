@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2020/02/11 16:06:45 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/01/14 09:42:12 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/sklearn/__check_build/__init__.py
