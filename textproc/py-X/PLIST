@@ -1,9 +1,5 @@
-@comment $NetBSD: PLIST,v 1.9 2022/01/10 21:51:09 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.10 2022/01/14 17:52:04 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/pyx/__init__.py
 ${PYSITELIB}/pyx/__init__.pyc
 ${PYSITELIB}/pyx/__init__.pyo

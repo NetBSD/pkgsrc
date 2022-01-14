@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2020/12/04 20:45:06 nia Exp $
+# $NetBSD: Makefile,v 1.78 2022/01/14 17:51:52 wiz Exp $
 
 DISTNAME=	bzr-2.7.0
 PKGREVISION=	1
@@ -19,6 +19,9 @@ USE_TOOLS+=		gmake msgfmt
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 PYTHON_VERSIONS_ACCEPTED= 27 # py-pyrex
+EGG_NAME=	${DISTNAME:C/-([^0-9])/_\1/g}
+EGG_INFODIR=	${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
+PLIST_SUBST+=	EGG_INFODIR=${EGG_INFODIR}
 
 REPLACE_PYTHON=		bzr bzrlib/weave.py
 REPLACE_PYTHON+=	bzrlib/patiencediff.py bzrlib/_patiencediff_py.py

@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2022/01/10 07:56:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/14 17:52:00 wiz Exp $
 ${PYSITELIB}/_mingc.so
 ${PYSITELIB}/ming.py
 ${PYSITELIB}/ming.pyc
 ${PYSITELIB}/ming.pyo
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/mingc.py
 ${PYSITELIB}/mingc.pyc
 ${PYSITELIB}/mingc.pyo

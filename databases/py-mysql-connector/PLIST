@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/01/10 21:48:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/01/14 17:51:52 wiz Exp $
 ${PYSITELIB}/mysql/__init__.py
 ${PYSITELIB}/mysql/__init__.pyc
 ${PYSITELIB}/mysql/__init__.pyo
@@ -116,6 +116,7 @@ ${PYSITELIB}/mysql/connector/utils.pyo
 ${PYSITELIB}/mysql/connector/version.py
 ${PYSITELIB}/mysql/connector/version.pyc
 ${PYSITELIB}/mysql/connector/version.pyo
+${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}
 ${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt

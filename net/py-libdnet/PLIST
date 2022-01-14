@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.4 2022/01/10 18:37:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/14 17:52:01 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/dnet.so
