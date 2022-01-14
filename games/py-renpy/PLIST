@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2022/01/10 21:34:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/14 17:51:57 wiz Exp $
 bin/renpy.py
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/_renpy.so
 ${PYSITELIB}/_renpybidi.so
 ${PYSITELIB}/pysdlsound/__init__.py

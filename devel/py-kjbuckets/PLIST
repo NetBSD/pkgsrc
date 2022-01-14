@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/01/10 20:36:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/01/14 17:51:54 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/kjbuckets.so
 share/doc/${PYPKGPREFIX}-kjbuckets/kjbuckets.txt

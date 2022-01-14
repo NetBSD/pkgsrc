@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2022/01/10 22:41:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/14 17:51:56 wiz Exp $
 bin/rpdb2
 bin/winpdb
 ${PYSITELIB}/rpdb2.py
 ${PYSITELIB}/rpdb2.pyc
 ${PYSITELIB}/rpdb2.pyo
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/winpdb.py
 ${PYSITELIB}/winpdb.pyc
 ${PYSITELIB}/winpdb.pyo

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2022/01/10 18:51:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/01/14 17:52:00 wiz Exp $
 ${PYINC}/numarray/arraybase.h
 ${PYINC}/numarray/arrayif.h
 ${PYINC}/numarray/arrayobject.h
@@ -12,6 +12,7 @@ ${PYINC}/numarray/numcomplex.h
 ${PYINC}/numarray/numconfig.h
 ${PYINC}/numarray/nummacro.h
 ${PYINC}/numarray/tc.h
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/numarray/LICENSE.txt
 ${PYSITELIB}/numarray/__init__.py
 ${PYSITELIB}/numarray/__init__.pyc
