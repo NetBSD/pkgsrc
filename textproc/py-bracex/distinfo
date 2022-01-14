@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:23:00 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/01/14 11:49:44 wiz Exp $
 
 BLAKE2s (bracex-2.1.1.tar.gz) = 0a05bc4493026be6c753a226f62ca3aeafb1db18ff2930fc6c31c0bf75f9a618
 SHA512 (bracex-2.1.1.tar.gz) = d34a50e6565e1ecdb1c645d047351d907f57ab73614743be18495eb873449a2604f7dfd528e1221f71f7e709e0651cdb5d19605d24cad578bee85543c4a79c9e
 Size (bracex-2.1.1.tar.gz) = 26628 bytes
-SHA1 (patch-setup.py) = b10cfc0f074d9c61e96cb46c5b78ec05ddc21756
