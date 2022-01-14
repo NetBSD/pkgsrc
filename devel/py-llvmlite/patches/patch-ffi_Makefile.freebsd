@@ -1,8 +1,18 @@
-$NetBSD: patch-ffi_Makefile.freebsd,v 1.1 2019/12/19 22:12:43 joerg Exp $
+$NetBSD: patch-ffi_Makefile.freebsd,v 1.2 2022/01/14 19:49:10 adam Exp $
 
---- ffi/Makefile.freebsd.orig	2019-12-19 19:40:25.412017304 +0000
+Add missing source code.
+Add -fPIC for linking.
+
+--- ffi/Makefile.freebsd.orig	2021-03-25 14:26:22.000477300 +0000
 +++ ffi/Makefile.freebsd
-@@ -12,7 +12,7 @@ OUTPUT = libllvmlite.so
+@@ -11,13 +11,13 @@ LIBS = $(LLVM_LIBS)
+ INCLUDE = core.h
+ SRC = assembly.cpp bitcode.cpp core.cpp initfini.cpp module.cpp value.cpp \
+ 	executionengine.cpp transforms.cpp passmanagers.cpp targets.cpp dylib.cpp \
+-	linker.cpp object_file.cpp
++	linker.cpp object_file.cpp custom_passes.cpp
+ OUTPUT = libllvmlite.so
+ 
  all: $(OUTPUT)
  
  $(OUTPUT): $(SRC) $(INCLUDE)
