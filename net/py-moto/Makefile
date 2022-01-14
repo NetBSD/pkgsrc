@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/01/05 15:41:17 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/14 09:37:36 wiz Exp $
 
 DISTNAME=	moto-1.1.19
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -38,6 +38,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 USE_PKG_RESOURCES=	yes
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-sure
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} moto_server moto_server${PYVERSSUFFIX} || ${TRUE}
