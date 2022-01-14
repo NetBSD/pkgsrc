@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2022/01/12 21:13:50 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2022/01/14 19:49:10 adam Exp $
 
-DISTNAME=	llvmlite-0.37.0
+DISTNAME=	llvmlite-0.38.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/llvmlite/}
@@ -11,8 +11,12 @@ COMMENT=	Lightweight LLVM Python binding for writing JIT compilers
 LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	c++14
+
 # officially supports llvm 11 as of 0.37.0
-MAKE_ENV+=	LLVMLITE_SKIP_LLVM_VERSION_CHECK=1
+MAKE_ENV+=		LLVMLITE_SKIP_LLVM_VERSION_CHECK=1
+# unable to pass LLVM bit-code files to linker
+MAKE_ENV.NetBSD+=	CXX_FLTO_FLAGS=
+MAKE_ENV.NetBSD+=	LD_FLTO_FLAGS=
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
