@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2022/01/05 15:41:03 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2022/01/14 19:54:53 adam Exp $
 
-DISTNAME=	Faker-8.13.2
+DISTNAME=	Faker-11.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Faker/}
 
@@ -21,6 +20,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-ukpostcodeparser>=1.1.1:../../mail/py-ukpostcodepa
 TEST_DEPENDS+=	${PYPKGPREFIX}-validators>=0.13.0:../../textproc/py-validators
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # since 4.0.0
+
+.include "../../lang/python/pyversion.mk"
+.if ${_PYTHON_VERSION} < 38
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10.0.2:../../devel/py-typing-extensions
+.endif
 
 USE_PKG_RESOURCES=	yes
 
