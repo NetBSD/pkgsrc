@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/02/14 14:10:02 taca Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/14 16:02:59 taca Exp $
 
 DISTNAME=	rails-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-rails${RUBY_RAILS}-${RAILS_VERSION}
@@ -29,7 +29,4 @@ RUBY_RAILS_ACCEPTED=	61
 RUBY_RAILS_STRICT_DEP=	yes
 
 .include "../../lang/ruby/gem.mk"
-.if ${RUBY_VER} < 26
-DEPENDS+=	${RUBY_PKGPREFIX}-bundler>=1.15.0:../../misc/ruby-bundler
-.endif
 .include "../../mk/bsd.pkg.mk"
