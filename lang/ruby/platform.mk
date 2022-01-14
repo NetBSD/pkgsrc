@@ -1,4 +1,4 @@
-# $NetBSD: platform.mk,v 1.8 2020/05/04 04:53:53 rillig Exp $
+# $NetBSD: platform.mk,v 1.9 2022/01/14 15:42:08 taca Exp $
 #
 
 #
@@ -10,6 +10,25 @@ _RUBY_PLATFORM_MK=	# defined
 
 .include "../../lang/ruby/rubyversion.mk"
 .include "../../mk/compiler.mk"
+
+#
+# sort by length of module's name for PLIST_AWK
+#
+_RUBY_BUNDLE_MODULES!=	\
+	echo ${RUBY_BUNDLE_MODULES} | tr ' ' '\012' | \
+	awk '{print length(), $$0}' | sort -nr | awk '{print $$2}'
+
+.for s in ${_RUBY_BUNDLE_MODULES}
+t:=RUBY_${s:tu:S/-/_/g}_VER
+v:=${${t}}
+.  if !empty(v)
+_RUBY_PLIST_SUBST:=	${_RUBY_PLIST_SUBST}  ${t}=${v}
+_RUBY_PLIST_AWK:=	${_RUBY_PLIST_AWK} { sub(/${s}-${v}/, "${s}-$${${t}}"); }
+.  endif
+.endfor
+
+PLIST_SUBST+=		${_RUBY_PLIST_SUBST}
+PRINT_PLIST_AWK+=	${_RUBY_PLIST_AWK}
 
 MAKE_DIRS+=	${RUBY_SITEARCHLIB} ${RUBY_VENDORARCHLIB} ${RUBY_SITERIDIR}
 FILES_SUBST+=	DATE=${DATE:Q}
