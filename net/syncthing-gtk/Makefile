@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2022/01/10 08:08:10 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2022/01/14 15:01:36 wiz Exp $
 
 DISTNAME=	syncthing-gtk-0.9.4.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kozec/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
