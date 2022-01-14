@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1437 2021/12/22 16:16:52 schmonz Exp $
+# $NetBSD: Makefile,v 1.1438 2022/01/14 11:19:37 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -700,7 +700,6 @@ SUBDIR+=	py-dropbox
 SUBDIR+=	py-ec2instanceconnectcli
 SUBDIR+=	py-flower
 SUBDIR+=	py-foolscap
-SUBDIR+=	py-gandi.cli
 SUBDIR+=	py-gcs-oauth2-boto-plugin
 SUBDIR+=	py-gevent
 SUBDIR+=	py-geventhttpclient

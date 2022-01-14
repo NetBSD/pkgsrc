@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.214 2022/01/14 10:36:27 pin Exp $
+$NetBSD: CHANGES-2022,v 1.215 2022/01/14 11:19:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -285,3 +285,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed devel/py-expressions [wiz 2022-01-14]
 	Removed devel/py-grako [wiz 2022-01-14]
 	Updated textproc/git-delta to 0.11.3 [pin 2022-01-14]
+	Removed net/py-gandi.cli [wiz 2022-01-14]
