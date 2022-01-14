@@ -1,34 +1,14 @@
-$NetBSD: patch-tools_clang-shlib_CMakeLists.txt,v 1.1 2022/01/11 17:27:39 tm Exp $
+$NetBSD: patch-tools_clang-shlib_CMakeLists.txt,v 1.2 2022/01/14 08:58:48 tm Exp $
 
-Only the linker on Solaris 11.4 supports GNU ld version script and only if
-the special option gnu-version-script-compat is used. Older Solaris linker
-doesn't support version script.
+-B flag symbolic-functions is not supported on Solaris before 11.4
 
---- tools/libclang/CMakeLists.txt.orig	2021-09-24 16:18:10.000000000 +0000
-+++ tools/libclang/CMakeLists.txt
-@@ -167,11 +167,21 @@ if(ENABLE_SHARED)
-     endif()
-   endif()
-   if (USE_VERSION_SCRIPT)
--    target_link_options(libclang PRIVATE "-Wl,--version-script,${CMAKE_CURRENT_SOURCE_DIR}/libclang.map")
--    # The Solaris 11.4 linker supports a subset of GNU ld version scripts,
--    # but requires a special option to enable it.
-     if (${CMAKE_SYSTEM_NAME} MATCHES "SunOS")
--      target_link_options(libclang PRIVATE "-Wl,-z,gnu-version-script-compat")
-+      include(CheckLinkerFlag)
-+      # The Solaris 11.4 linker supports a subset of GNU ld version scripts,
-+      # but requires a special option to enable it.
-+      llvm_check_linker_flag(CXX "-Wl,-z,gnu-version-script-compat" LINKER_SUPPORTS_Z_GNU_VERSION_SCRIPT_COMPAT)
-+      # Older Solaris (and illumos) linker doesn't support GNU ld version 
-+      # and doesn't support GNU version script compat.
-+      if (LINKER_SUPPORTS_Z_GNU_VERSION_SCRIPT_COMPAT)
-+	target_link_options(libclang PRIVATE "-Wl,--version-script,${CMAKE_CURRENT_SOURCE_DIR}/libclang.map")
-+	target_link_options(libclang PRIVATE "-Wl,-z,gnu-version-script-compat")
-+      else()
-+        target_link_options(libclang PRIVATE "-Wl,-M,${CMAKE_CURRENT_SOURCE_DIR}/libclang.map")
-+      endif()
-+    else() 
-+      target_link_options(libclang PRIVATE "-Wl,--version-script,${CMAKE_CURRENT_SOURCE_DIR}/libclang.map")
-     endif()
-     # Ensure that libclang.so gets rebuilt when the linker script changes.
-     set_property(SOURCE ARCMigrate.cpp APPEND PROPERTY
+--- tools/clang-shlib/CMakeLists.txt.orig	2021-09-24 16:18:10.000000000 +0000
++++ tools/clang-shlib/CMakeLists.txt
+@@ -50,6 +50,6 @@ add_clang_library(clang-cpp
+                   ${_DEPS})
+ # Optimize function calls for default visibility definitions to avoid PLT and
+ # reduce dynamic relocations.
+-if (NOT APPLE AND NOT MINGW)
++if (NOT APPLE AND NOT MINGW AND NOT "SunOS" MATCHES ${CMAKE_SYSTEM_NAME})
+   target_link_options(clang-cpp PRIVATE LINKER:-Bsymbolic-functions)
+ endif()
