@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:18:32 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/01/14 11:49:42 wiz Exp $
 
 BLAKE2s (hexbytes-0.2.2.tar.gz) = d01fc56d102d5ed3cb521fc79682b2d8477f3b1113c5e25584d17b6b2a0ffda4
 SHA512 (hexbytes-0.2.2.tar.gz) = 80bed389756dee9eac9bd752733bbe5244dbf8ea1b2c41fa8ef2ca4b19579ec3e18ba41f98b1412a3e37e793941261a3ef1cbf29a2bda35535e44609effc69b2
 Size (hexbytes-0.2.2.tar.gz) = 4709763 bytes
-SHA1 (patch-setup.py) = 64c71cd1e7dd94f5d4e23ec5f45b938b35ea9a66

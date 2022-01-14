@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:06:50 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/01/14 11:49:41 wiz Exp $
 
 BLAKE2s (unicode-slugify-0.1.3.tar.gz) = db73f98ecfb833e81420458405fb750580ec6a2cd25ea370bf40245ba7c8cb5e
 SHA512 (unicode-slugify-0.1.3.tar.gz) = 509414c8b3603f3b092390ee29f52b6a22de45d904fcfa5554f2c1188a35ac090781050642b0b7bf068d1b30ce424342878e646db98b592712f47595528911a1
 Size (unicode-slugify-0.1.3.tar.gz) = 4430 bytes
-SHA1 (patch-setup.py) = 3a7d378b2d2881e533b5e04688d60ab2d2853b52

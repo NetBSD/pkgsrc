@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:30:36 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/01/14 11:49:44 wiz Exp $
 
 BLAKE2s (feedgenerator-1.9.1.tar.gz) = 96b664dd7824d9b574d825f870c35baadafa02967a21e3e3be933d7c259dca16
 SHA512 (feedgenerator-1.9.1.tar.gz) = db3642acb8f0c9fd692f37a79cf5862e60687a1745afbc6593d37a0372adb994de603238a17a8eae95ffcc993195f63037f16122a3cf8771e6922dea492fb5d5
 Size (feedgenerator-1.9.1.tar.gz) = 25677 bytes
-SHA1 (patch-setup.py) = 9e95c78d37aa8500eeb635a7e47dc3b2c18fdffc
