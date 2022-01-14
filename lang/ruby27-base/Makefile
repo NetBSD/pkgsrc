@@ -1,13 +1,16 @@
-# $NetBSD: Makefile,v 1.7 2022/01/14 15:42:08 taca Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/14 16:12:19 taca Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	${RUBY_HOMEPAGE}
 COMMENT=	Ruby ${RUBY_VERSION} release minimum base package
+
+CONFLICTS+=	${RUBY_PKGPREFIX}-fiddle-[0-9]*
 
 RUBY_VERSIONS_ACCEPTED=	27
 
@@ -84,7 +87,6 @@ NOT_PAX_MPROTECT_SAFE+=	bin/${RUBY_NAME}
 
 pre-configure:
 	${RM} -f ${WRKSRC}/ext/gdbm/extconf.rb
-	${RM} -f ${WRKSRC}/ext/fiddle/extconf.rb
 	${RM} -f ${WRKSRC}/ext/readline/extconf.rb
 	${TOUCH} ${WRKSRC}/prelude.c
 	${CHMOD} -x ${WRKSRC}/sample/test.rb
@@ -120,6 +122,7 @@ post-install:
 
 .include "../../mk/bdb.buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libyaml/buildlink3.mk"
