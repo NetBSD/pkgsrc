@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/01/14 15:42:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/01/14 16:16:07 taca Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 bin/erb${RUBY_SUFFIX}
@@ -560,6 +560,16 @@ ${RUBY_LIB}/drb/version.rb
 ${RUBY_LIB}/drb/weakidconv.rb
 ${RUBY_LIB}/erb.rb
 ${RUBY_LIB}/expect.rb
+${RUBY_LIB}/fiddle.rb
+${RUBY_LIB}/fiddle/closure.rb
+${RUBY_LIB}/fiddle/cparser.rb
+${RUBY_LIB}/fiddle/function.rb
+${RUBY_LIB}/fiddle/import.rb
+${RUBY_LIB}/fiddle/pack.rb
+${RUBY_LIB}/fiddle/struct.rb
+${RUBY_LIB}/fiddle/types.rb
+${RUBY_LIB}/fiddle/value.rb
+${RUBY_LIB}/fiddle/version.rb
 ${RUBY_LIB}/fileutils.rb
 ${RUBY_LIB}/find.rb
 ${RUBY_LIB}/forwardable.rb
@@ -1265,6 +1275,7 @@ ${RUBY_ARCHLIB}/enc/windows_31j.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/etc.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/fcntl.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/fiber.${RUBY_DLEXT}
+${RUBY_ARCHLIB}/fiddle.${RUBY_DLEXT}
 ${PLIST.io}${RUBY_ARCHLIB}/io/console.${RUBY_DLEXT}
 ${PLIST.io}${RUBY_ARCHLIB}/io/nonblock.${RUBY_DLEXT}
 ${PLIST.io}${RUBY_ARCHLIB}/io/wait.${RUBY_DLEXT}
@@ -2304,6 +2315,7 @@ ${GEM_HOME}/specifications/default/english-${RUBY_ENGLISH_VER}.gemspec
 ${GEM_HOME}/specifications/default/erb-${RUBY_ERB_VER}.gemspec
 ${GEM_HOME}/specifications/default/etc-${RUBY_ETC_VER}.gemspec
 ${GEM_HOME}/specifications/default/fcntl-${RUBY_FCNTL_VER}.gemspec
+${GEM_HOME}/specifications/default/fiddle-${RUBY_FIDDLE_VER}.gemspec
 ${GEM_HOME}/specifications/default/fileutils-${RUBY_FILEUTILS_VER}.gemspec
 ${GEM_HOME}/specifications/default/find-${RUBY_FIND_VER}.gemspec
 ${GEM_HOME}/specifications/default/forwardable-${RUBY_FORWARDABLE_VER}.gemspec
