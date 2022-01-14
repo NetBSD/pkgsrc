@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2021/12/24 16:10:39 wiz Exp $
+# $NetBSD: Makefile.common,v 1.27 2022/01/14 04:43:36 gutteridge Exp $
 
 # used by databases/py-trytond-ldap-authentication
 # used by devel/py-proteus/Makefile
@@ -240,7 +240,6 @@ CATEGORIES?=	devel python
 
 DISTNAME?=	${TRYTON_MODULE_NAME}-${TRYTON_VERSION}
 PKGNAME?=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
-#RKSRC?=	${WRKDIR}/trytond-${TRYTON_VERSION}
 
 # TODO: use MASTER_SITES_PYPI
 MASTER_SITES=	https://downloads-cdn.tryton.org/6.2/
