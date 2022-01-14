@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2021/02/14 14:35:54 taca Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/14 16:16:44 taca Exp $
 #
 
 DISTNAME=	# empty
 PKGNAME=	${RUBY_PKGPREFIX}-${RUBY_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang ruby
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -15,7 +16,6 @@ META_PACKAGE=		yes
 
 DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 DEPENDS+=	${RUBY_NAME}-gdbm>=${RUBY_VERSION}:../../databases/ruby-gdbm
-DEPENDS+=	${RUBY_NAME}-fiddle>=${RUBY_VERSION}:../../devel/ruby-fiddle
 DEPENDS+=	${RUBY_NAME}-readline>=${RUBY_VERSION}:../../devel/ruby-readline
 
 RUBY_VERSIONS_ACCEPTED=	30
