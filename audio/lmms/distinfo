@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 09:59:11 nia Exp $
+$NetBSD: distinfo,v 1.16 2022/01/14 10:59:32 nia Exp $
 
 BLAKE2s (lmms_1.2.2.tar.xz) = 332b1a6f78341a5766ccb4cddc9968ab97ba04150741421c89169a367f190acb
 SHA512 (lmms_1.2.2.tar.xz) = df74d9e938f1c3807e9941b11db4ccfe9450e23b723c82774de15b7666ac39f1bfdd8519231e28849f994628190ecc92fa05d55bbc0b50a4421f2d183e729028
@@ -6,4 +6,4 @@ Size (lmms_1.2.2.tar.xz) = 22733960 bytes
 SHA1 (patch-CMakeLists.txt) = e30599b486c83b734fd8f9afa4cf2bd488eab338
 SHA1 (patch-src_CMakeLists.txt) = 92acfc9bc236c1b211bbe9686de818641c01b257
 SHA1 (patch-src_core_audio_AudioOss.cpp) = 6bc591b929f26cbfb5f160c3d9b49316bf165e58
-SHA1 (patch-src_core_midi_MidiOss.cpp) = d1bf1a7bf9aaec549f3ac97d300c7bee4d81ff29
+SHA1 (patch-src_core_midi_MidiOss.cpp) = 5baf2619765f8a7372cd47ac0f3fb6a2fb3af618
