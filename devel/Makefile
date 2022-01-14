@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3553 2022/01/14 09:32:42 wiz Exp $
+# $NetBSD: Makefile,v 1.3554 2022/01/14 16:24:20 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2840,7 +2840,6 @@ SUBDIR+=	ruby-fast_gettext
 SUBDIR+=	ruby-ffi
 SUBDIR+=	ruby-ffi-compiler
 SUBDIR+=	ruby-ffi-yajl
-SUBDIR+=	ruby-fiddle
 SUBDIR+=	ruby-filesize
 SUBDIR+=	ruby-flexmock
 SUBDIR+=	ruby-forwardable-extended
