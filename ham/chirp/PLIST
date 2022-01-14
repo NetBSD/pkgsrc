@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.10 2022/01/10 08:11:43 wiz Exp $
-@pkgdir share/chirp/images
+@comment $NetBSD: PLIST,v 1.11 2022/01/14 14:59:43 wiz Exp $
 bin/chirpw
 bin/rpttool
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/chirp/__init__.py
 ${PYSITELIB}/chirp/__init__.pyc
 ${PYSITELIB}/chirp/__init__.pyo
