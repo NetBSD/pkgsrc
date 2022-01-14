@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/02/14 15:31:23 taca Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/14 15:42:08 taca Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
@@ -62,15 +62,15 @@ OPENSSL_EXAMPLES=	c_rehash.rb cert2text.rb certstore.rb cipher.rb \
 REPLACE_RUBY=		libexec/bundle libexec/bundler libexec/irb \
 			libexec/racc libexec/racc2y libexec/rdoc libexec/ri \
 			libexec/y2racc \
-			gems/net-telnet-${RUBY_NET_TELNET_VERSION}/bin/console \
-			gems/power_assert-${RUBY_POWER_ASSERT_VERSION}/bin/console \
-			gems/rake-${RUBY_RAKE_VERSION}/bin/bundle \
-			gems/rake-${RUBY_RAKE_VERSION}/bin/console \
-			gems/rake-${RUBY_RAKE_VERSION}/bin/rake \
-			gems/rake-${RUBY_RAKE_VERSION}/bin/rdoc \
-			gems/rake-${RUBY_RAKE_VERSION}/bin/rubocop \
-			gems/rake-${RUBY_RAKE_VERSION}/bin/setup \
-			gems/rake-${RUBY_RAKE_VERSION}/exe/rake \
+			gems/net-telnet-${RUBY_NET_TELNET_VER}/bin/console \
+			gems/power_assert-${RUBY_POWER_ASSERT_VER}/bin/console \
+			gems/rake-${RUBY_RAKE_VER}/bin/bundle \
+			gems/rake-${RUBY_RAKE_VER}/bin/console \
+			gems/rake-${RUBY_RAKE_VER}/bin/rake \
+			gems/rake-${RUBY_RAKE_VER}/bin/rdoc \
+			gems/rake-${RUBY_RAKE_VER}/bin/rubocop \
+			gems/rake-${RUBY_RAKE_VER}/bin/setup \
+			gems/rake-${RUBY_RAKE_VER}/exe/rake \
 			gems/xmlrpc-0.3.0/bin/console
 REPLACE_RUBY_DIRS=	ext lib sample
 INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man1 ${RUBY_DOC}/images \

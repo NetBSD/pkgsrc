@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2021/04/16 06:45:50 nia Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/14 15:42:08 taca Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
@@ -60,9 +60,9 @@ OPENSSL_EXAMPLES=	c_rehash.rb cert2text.rb certstore.rb cipher.rb \
 			smime_read.rb smime_write.rb wget.rb
 REPLACE_RUBY=		libexec/bundle libexec/bundle_ruby \
 			libexec/bundler libexec/irb libexec/rdoc libexec/ri \
-			gems/rake-${RUBY_RAKE_VERSION}/exe/rake \
-			gems/net-telnet-${RUBY_NET_TELNET_VERSION}/bin/console \
-			gems/net-telnet-${RUBY_NET_TELNET_VERSION}/bin/setup
+			gems/rake-${RUBY_RAKE_VER}/exe/rake \
+			gems/net-telnet-${RUBY_NET_TELNET_VER}/bin/console \
+			gems/net-telnet-${RUBY_NET_TELNET_VER}/bin/setup
 REPLACE_RUBY_DIRS=	ext lib sample
 INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man1 ${RUBY_DOC}/images \
 			${RUBY_DOC}/irb ${RUBY_DOC}/pty ${RUBY_DOC}/ripper \
