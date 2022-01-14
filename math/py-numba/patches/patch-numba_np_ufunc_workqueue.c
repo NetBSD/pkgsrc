@@ -1,23 +1,15 @@
-$NetBSD: patch-numba_np_ufunc_workqueue.c,v 1.1 2020/05/31 20:48:22 joerg Exp $
+$NetBSD: patch-numba_np_ufunc_workqueue.c,v 1.2 2022/01/14 19:52:24 adam Exp $
 
 There is no such portable thing as alloca.h.
 
---- numba/np/ufunc/workqueue.c.orig	2020-05-31 18:11:59.445121410 +0000
+--- numba/np/ufunc/workqueue.c.orig	2022-01-14 01:24:55.000000000 +0000
 +++ numba/np/ufunc/workqueue.c
-@@ -27,7 +27,6 @@ race conditions.
- /* PThread */
+@@ -28,7 +28,7 @@ race conditions.
  #include <pthread.h>
  #include <unistd.h>
--#include <alloca.h>
- #include <sys/types.h>
- #include <unistd.h>
- #include <signal.h>
-@@ -40,6 +39,8 @@ race conditions.
- #include "workqueue.h"
- #include "gufunc_scheduler.h"
  
-+#define alloca(x) __builtin_alloca(x)
-+
- #define _DEBUG 0
- 
- /* workqueue is not threadsafe, so we use DSO globals to flag and update various
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
+ #include <stdlib.h>
+ #else
+ #include <alloca.h>
