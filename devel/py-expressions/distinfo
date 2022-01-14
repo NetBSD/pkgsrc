@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:18:25 nia Exp $
-
-BLAKE2s (expressions-0.2.3.tar.gz) = d858ecca39aa8c8eab2c7e0b9fdebd0d00ffface28857f2db2aa6097f9506605
-SHA512 (expressions-0.2.3.tar.gz) = 987b4bb6606b9e9014d0bc16bf4634aa4e056c5982bd23d9600e296a6042461a510355c913c731f3249a6654299df9e8afadc285272764f7453846dbc5e8a26a
-Size (expressions-0.2.3.tar.gz) = 5476 bytes

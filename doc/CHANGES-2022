@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.212 2022/01/14 08:37:17 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.213 2022/01/14 09:32:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -282,3 +282,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/fd-find to 8.3.1 [pin 2022-01-13]
 	Updated textproc/libunistring to 1.0 [gdt 2022-01-14]
 	Updated devel/binutils to 2.37nb1 [fcambus 2022-01-14]
+	Removed devel/py-expressions [wiz 2022-01-14]
+	Removed devel/py-grako [wiz 2022-01-14]
