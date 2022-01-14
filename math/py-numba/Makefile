@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2022/01/05 20:47:36 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2022/01/14 19:52:24 adam Exp $
 
-DISTNAME=	numba-0.51.2
+DISTNAME=	numba-0.55.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numba/}
 
@@ -11,8 +10,11 @@ HOMEPAGE=	https://numba.pydata.org/
 COMMENT=	NumPy aware dynamic Python compiler using LLVM
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-llvmlite>=0.33.0:../../devel/py-llvmlite
+DEPENDS+=	${PYPKGPREFIX}-llvmlite>=0.38.0:../../devel/py-llvmlite
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+
+# OpenMP is not portable
+MAKE_ENV+=	NUMBA_DISABLE_OPENMP=1
 
 USE_LANGUAGES=	c c++
 
