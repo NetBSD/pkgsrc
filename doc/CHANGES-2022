@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.213 2022/01/14 09:32:43 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.214 2022/01/14 10:36:27 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -284,3 +284,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/binutils to 2.37nb1 [fcambus 2022-01-14]
 	Removed devel/py-expressions [wiz 2022-01-14]
 	Removed devel/py-grako [wiz 2022-01-14]
+	Updated textproc/git-delta to 0.11.3 [pin 2022-01-14]
