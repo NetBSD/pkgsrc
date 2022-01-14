@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/04 11:48:30 recht Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/14 19:36:29 tnn Exp $
 ${PYSITELIB}/libxslt.py
 ${PYSITELIB}/libxslt.pyc
 ${PYSITELIB}/libxslt.pyo
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/libxsltmod.so
