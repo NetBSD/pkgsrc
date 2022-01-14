@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:06:36 nia Exp $
-
-BLAKE2s (gandi.cli/1.5.tar.gz) = f85c96af94f5b7323ac2706612dafdb3809df7fb4c0117efe9012c7d34fdb45f
-SHA512 (gandi.cli/1.5.tar.gz) = cdcaf4441c253a465e73e6b108ea2e348d5943308263f3d190ef82279aa340378e9c576d71c5d03cf60e4d7586b0282a5a804078129ec96af34e80d5919d6a89
-Size (gandi.cli/1.5.tar.gz) = 167825 bytes
-SHA1 (patch-setup.py) = fe5bbd736b48b2620f33f8dba083015ad0f17a32
