@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:23:07 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/01/14 11:49:44 wiz Exp $
 
 BLAKE2s (markovify-0.8.3.tar.gz) = 57dee705ce4293b0152dd5e49b863cb90f9859136ed723d448781c22c957686b
 SHA512 (markovify-0.8.3.tar.gz) = 38dc286fe05a08fee94c19c632833736bc3b99c8ef8588c88d8616b0ecceee6c1a965d192d63ec3f4ebf15f6dd381418d0f0df1f582d011e003c8b24399cab5a
 Size (markovify-0.8.3.tar.gz) = 27722 bytes
-SHA1 (patch-setup.py) = 47a72e6ed6f86274862341dc342f4beab93cf50c

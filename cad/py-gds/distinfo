@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:04:15 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/01/14 11:49:41 wiz Exp $
 
 BLAKE2s (gdspy-1.6.zip) = 3b764c09f6f0b0813e6e1e916f740dbe36e60fab979c64f54b363744ee59f02c
 SHA512 (gdspy-1.6.zip) = 7e7a40efdd6ca9eb9685c0d3d07bc169d8c92d990b386b2c733032d0c6dc0c1bef06daf53b5aa864f752bc132671eab5f0557a4103fe1ec57f1db264030173fa
 Size (gdspy-1.6.zip) = 12568268 bytes
-SHA1 (patch-setup.py) = 39d70b0d49aa82a9a98f905883d21f11fe0674a0

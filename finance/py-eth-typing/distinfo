@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:26:04 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/01/14 11:49:43 wiz Exp $
 
 BLAKE2s (eth-typing-2.2.2.tar.gz) = 38d82fcc788b649c279792fe0610a5cc340a8ba57a9abf0b7bcdcfeea9c49a8b
 SHA512 (eth-typing-2.2.2.tar.gz) = 79185a1a940b776cc350c6b5e3506d6fa27a3cc6d8ea233f59e9b1696589c62f8af777f0b9d90be6ba4045cc456cd0ab972a12c67120ddb2d302cb111e82dffe
 Size (eth-typing-2.2.2.tar.gz) = 5378 bytes
-SHA1 (patch-setup.py) = 674c387c0f6d42829499cfe1ee60bbb1642e46bc

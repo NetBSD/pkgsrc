@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.30 2021/10/26 10:19:10 nia Exp $
+$NetBSD: distinfo,v 1.31 2022/01/14 11:49:42 wiz Exp $
 
 BLAKE2s (pytest-xdist-1.34.0.tar.gz) = 22f700e9f149b9811ffbb737a7c2c3b620ee665a84a6eeca2d65e286df17859c
 SHA512 (pytest-xdist-1.34.0.tar.gz) = 69e9877ee0268d71d7c0ca202ccc46b3ba1a9271f0e6e4ac4b76602833f9b7012364eb6924ae994e76c1d48d63adf1702d4c5e6ed5b75c52ac7ebae958210e24
 Size (pytest-xdist-1.34.0.tar.gz) = 66151 bytes
-SHA1 (patch-setup.py) = b04fc9f42ec7ec659b993d70760c981a5884e584
