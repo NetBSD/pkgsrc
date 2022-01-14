@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2022/01/14 13:44:37 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2022/01/14 18:17:23 tnn Exp $
 
 DISTNAME=		tigervnc-1.12.0
 PKGNAME=		${DISTNAME}.1.20.13
@@ -39,6 +39,7 @@ CMAKE_ARGS+=		CMAKE_INSTALL_SYSCONFDIR=${PKG_SYSCONFDIR}
 CPPFLAGS.NetBSD+=	-D_OPENBSD_SOURCE
 
 LDFLAGS+=	${BUILDLINK_LDADD.gettext}
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 CONFIGURE_ENV+=			ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 OVERRIDE_GNU_CONFIG_SCRIPTS=	yes
