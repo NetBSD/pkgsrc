@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/01/04 20:53:10 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2022/01/14 11:37:24 wiz Exp $
 
 VERS=		0.10.0
 #PKGREVISION=	1
@@ -21,7 +21,7 @@ USE_LANGUAGES=	# none
 # py-dulwich
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-EGG_NAME=	hg_git-${DISTNAME}
+EGG_NAME=	${DISTNAME:S/-/_/1}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
