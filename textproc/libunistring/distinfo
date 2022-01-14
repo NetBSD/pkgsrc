@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.12 2021/11/12 12:40:17 nia Exp $
+$NetBSD: distinfo,v 1.13 2022/01/14 01:10:22 gdt Exp $
 
-BLAKE2s (libunistring-0.9.10.tar.gz) = 6af4f8f362e74baf433757d540c157b1fead6e087f65969be54d0716bde97037
-SHA512 (libunistring-0.9.10.tar.gz) = 690082732fbbd47ab4ffbd6f21d85afece0f8e2ded24982f949f4ae52bf0a981b75ea9bc14ab289e0954cde07f31a7a4c2bb65615a8eb5b2bfa65720310b6fc9
-Size (libunistring-0.9.10.tar.gz) = 3744814 bytes
+BLAKE2s (libunistring-1.0.tar.gz) = 0d37c903e7e4e6db1a2378e757796fba9c6841cda91a3dcc66f7e8051dfe4fa2
+SHA512 (libunistring-1.0.tar.gz) = 6125e3911d15bea8fea5c0b97864f928eab8c8476f1a24c7349b0552e2d11d9b73c1fa0fcb354917e42407d4e5adea55d0c8012121fa0a53c60faa7b0911aef3
+Size (libunistring-1.0.tar.gz) = 4214306 bytes
 SHA1 (patch-lib_Makefile.in) = f2335fa6a8b088e701a4d8bd433b45359be5c243
 SHA1 (patch-lib_stdbool.mini.h) = 0b4a3b3e461b517f28e9a58da0f50045467d2d2a
