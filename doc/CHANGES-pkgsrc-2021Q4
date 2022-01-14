@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q4,v 1.1.2.5 2022/01/09 20:11:13 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q4,v 1.1.2.6 2022/01/14 08:01:03 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q4 branch:
 
@@ -18,4 +18,13 @@ Pullup ticket #6560 - requested by tnn
 lang/wasi-compiler-rt: build fix
 lang/wasi-libc: build fix
 lang/wasi-libcxx: build fix
+
+Pullup ticket #6566 - requested by gdt
+NEWS: documentation fix
+
+Pullup ticket #6565 - requested by gutteridge
+lang/wasi-libcxx: build fix
+
+Pullup ticket #6567 - requested by morr
+www/wordpress: security fix
 
