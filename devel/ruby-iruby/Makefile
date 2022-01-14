@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2021/05/29 15:04:31 taca Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/14 16:20:14 taca Exp $
 
 DISTNAME=	iruby-0.7.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -14,7 +15,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-mime-types>=3.3.1:../../mail/ruby-mime-types
 DEPENDS+=	${RUBY_PKGPREFIX}-multi_json>=1.11:../../textproc/ruby-multi_json
 
 DEPENDS+=	${RUBY_PKGPREFIX}-pycall>=1.3.1:../../devel/ruby-pycall
-DEPENDS+=	${RUBY_PKGPREFIX}-fiddle-[0-9]*:../../devel/ruby-fiddle
 DEPENDS+=	${RUBY_PKGPREFIX}-ffi-rzmq-[0-9]*:../../net/ruby-ffi-rzmq
 
 DEPENDS+=	${PYPKGPREFIX}-ipython>=6.0.0:../../devel/py-ipython
