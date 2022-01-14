@@ -1,4 +1,4 @@
-# $NetBSD: features.mk,v 1.9 2019/07/08 22:09:22 sevan Exp $
+# $NetBSD: features.mk,v 1.10 2022/01/14 14:46:50 schmonz Exp $
 #
 # This file is included by bsd.pkg.mk.
 #
@@ -36,7 +36,7 @@ LIBS+=			${FEATURE_LIBS}
 # libnbcompat provides many of the current features.
 #
 _FEATURE_USE_NBCOMPAT?=	no
-.  for f in asprintf cdefs err fts_close fts_open fts_read fts_set getopt_long glob nbcompat regcomp setenv snprintf strnlen utimes vsnprintf warn
+.  for f in asprintf cdefs err fts_close fts_open fts_read fts_set getline getopt_long glob nbcompat regcomp setenv snprintf strnlen utimes vsnprintf warn
 .    if !empty(MISSING_FEATURES:M${f})
 _FEATURE_USE_NBCOMPAT=	yes
 .    endif
