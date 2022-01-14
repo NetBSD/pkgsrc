@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.225 2022/01/14 16:24:59 taca Exp $
+$NetBSD: CHANGES-2022,v 1.226 2022/01/14 18:42:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -297,3 +297,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-iruby to 0.7.0nb1 [taca 2022-01-14]
 	Updated www/termtter to 2.2.8nb1 [taca 2022-01-14]
 	Removed devel/ruby-fiddle [taca 2022-01-14]
+	Removed devel/py-windbg [wiz 2022-01-14]
