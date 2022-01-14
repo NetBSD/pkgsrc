@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2022/01/10 08:11:43 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2022/01/14 14:59:43 wiz Exp $
 
-PKGVERSION=	20211216
-PKGNAME=	chirp-${PKGVERSION}
-DISTNAME=	chirp-daily-${PKGVERSION_NOREV}
+DISTNAME=	chirp-daily-20211216
+PKGNAME=	${DISTNAME:S/-daily//}
 PKGREVISION=	1
 CATEGORIES=	ham
 MASTER_SITES=	https://trac.chirp.danplanet.com/chirp_daily/daily-${PKGVERSION_NOREV}/
@@ -31,6 +30,7 @@ DEPENDS+=	${PYPKGPREFIX}-serial>=2.7:../../comms/py-serial
 DEPENDS+=	${PYPKGPREFIX}-future>=0.18.0:../../devel/py-future
 
 PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2
+EGG_NAME=	chirp-daily_${PKGVERSION_NOREV}
 
 .include "../../mk/bsd.prefs.mk"
 
