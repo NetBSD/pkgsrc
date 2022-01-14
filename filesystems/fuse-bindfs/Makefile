@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/11/30 12:34:24 pho Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/14 14:47:26 schmonz Exp $
 
 DISTNAME=	bindfs-1.15.1
 PKGNAME=	fuse-${DISTNAME}
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://bindfs.org/
 COMMENT=	Remounts file system subtrees in arbitrary locations
 LICENSE=	gnu-gpl-v2
+
+USE_FEATURES=	getline
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
