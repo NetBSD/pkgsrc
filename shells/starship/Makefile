@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2021/12/22 08:29:46 pin Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/14 15:38:07 pin Exp $
 
-DISTNAME=	starship-1.1.1
+DISTNAME=	starship-1.2.0
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=starship/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -21,13 +21,14 @@ USE_TOOLS+=	pkg-config
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 
-# Disable rust-battery crate on NetBSD
+# Disable all battery features on NetBSD
 # See https://github.com/svartalf/rust-battery/issues/20
-CARGO_NO_DEFAULT_FEATURES=	YES
-CARGO_FEATURES+=		http
+# and https://github.com/svartalf/rust-battery/issues/33
+# The new fork at starship/rust-battery does not address issues
+# with NetBSD support, hence disable both.
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "Darwin" || ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
-CARGO_FEATURES+=	battery
+.if ${OPSYS} == "NetBSD"
+CARGO_NO_DEFAULT_FEATURES=	YES
 .endif
 
 INSTALLATION_DIRS=	bin
