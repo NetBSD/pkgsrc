@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/01/10 16:30:33 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/14 09:38:06 wiz Exp $
 
 DISTNAME=	sure-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 PYTHON_VERSIONED_DEPENDENCIES=	test:test
 
