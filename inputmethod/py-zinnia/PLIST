@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2022/01/10 19:44:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/14 17:51:58 wiz Exp $
 ${PYSITELIB}/_zinnia.so
 ${PYSITELIB}/zinnia.py
 ${PYSITELIB}/zinnia.pyc
 ${PYSITELIB}/zinnia.pyo
+${PYSITELIB}/${EGG_INFODIR}

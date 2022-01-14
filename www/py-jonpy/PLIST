@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/01/10 09:13:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/01/14 17:52:06 wiz Exp $
 ${PYSITELIB}/jon/__init__.py
 ${PYSITELIB}/jon/__init__.pyc
 ${PYSITELIB}/jon/__init__.pyo
@@ -35,3 +35,4 @@ ${PYSITELIB}/jon/wt/rowaccess.pyo
 ${PYSITELIB}/jon/wt/textblock.py
 ${PYSITELIB}/jon/wt/textblock.pyc
 ${PYSITELIB}/jon/wt/textblock.pyo
+${PYSITELIB}/${EGG_INFODIR}

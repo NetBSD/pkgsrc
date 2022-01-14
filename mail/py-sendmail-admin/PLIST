@@ -1,7 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/01/10 20:46:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/14 17:52:00 wiz Exp $
 bin/mailqs
 bin/rmmq
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}

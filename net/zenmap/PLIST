@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/01/10 08:09:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/14 17:52:02 wiz Exp $
 bin/zenmap
 ${PYSITELIB}/radialnet/__init__.py
 ${PYSITELIB}/radialnet/__init__.pyc
@@ -102,6 +102,7 @@ ${PYSITELIB}/radialnet/util/integration.pyo
 ${PYSITELIB}/radialnet/util/misc.py
 ${PYSITELIB}/radialnet/util/misc.pyc
 ${PYSITELIB}/radialnet/util/misc.pyo
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/zenmapCore/BasePaths.py
 ${PYSITELIB}/zenmapCore/BasePaths.pyc
 ${PYSITELIB}/zenmapCore/BasePaths.pyo

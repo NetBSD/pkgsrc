@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2022/01/10 21:43:30 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2022/01/14 17:52:07 wiz Exp $
 
 VERSION=	2.8.12.0
 DISTNAME=	wxPython-src-${VERSION}
@@ -47,7 +47,7 @@ CHECK_INTERPRETER_SKIP+=	wx/tools/Editra/tests/syntax/perl.pl
 
 EGG_NAME=	${DISTNAME:S/-src-/_common-/}
 EGG_NAME2=	${DISTNAME:S/-src-/-/}
-PLIST_SUBST+=	EGG_FILE2=${EGG_NAME2}-py${PYVERSSUFFIX}.egg-info
+PLIST_SUBST+=	EGG_INFODIR2=${EGG_NAME2}-py${PYVERSSUFFIX}.egg-info
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../lang/python/egg.mk"

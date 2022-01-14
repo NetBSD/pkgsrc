@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2022/01/10 07:44:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/14 17:52:07 wiz Exp $
 bin/driconf
 ${PYSITELIB}/driconf/dri.py
 ${PYSITELIB}/driconf/dri.pyc
 ${PYSITELIB}/driconf/dri.pyo
+${PYSITELIB}/driconf/${EGG_INFODIR}
 ${PYSITELIB}/driconf/driconf.py
 ${PYSITELIB}/driconf/driconf.pyc
 ${PYSITELIB}/driconf/driconf.pyo

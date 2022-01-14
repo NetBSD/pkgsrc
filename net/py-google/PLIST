@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/01/10 20:19:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/01/14 17:52:01 wiz Exp $
 ${PYSITELIB}/pygoogle.pth
 ${PYSITELIB}/pygoogle/GoogleSOAPFacade.py
 ${PYSITELIB}/pygoogle/GoogleSOAPFacade.pyc
@@ -12,3 +12,4 @@ ${PYSITELIB}/pygoogle/google.pyo
 ${PYSITELIB}/pygoogle/googletest.py
 ${PYSITELIB}/pygoogle/googletest.pyc
 ${PYSITELIB}/pygoogle/googletest.pyo
+${PYSITELIB}/pygoogle/${EGG_INFODIR}
