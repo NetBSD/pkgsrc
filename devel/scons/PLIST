@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2022/01/01 21:46:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2022/01/14 14:58:39 tnn Exp $
 bin/scons
 bin/scons-${PKGVERSION}
 bin/scons-${PKGVERSION}.bat
@@ -591,6 +591,7 @@ lib/scons/SCons/dblite.pyo
 lib/scons/SCons/exitfuncs.py
 lib/scons/SCons/exitfuncs.pyc
 lib/scons/SCons/exitfuncs.pyo
+${PLIST.py2x}lib/scons/${EGG_INFODIR}
 ${PLIST.py3x}lib/scons/${EGG_INFODIR}/PKG-INFO
 ${PLIST.py3x}lib/scons/${EGG_INFODIR}/SOURCES.txt
 ${PLIST.py3x}lib/scons/${EGG_INFODIR}/dependency_links.txt
