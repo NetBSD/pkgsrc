@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2021/08/02 14:56:50 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/14 10:36:08 pin Exp $
 
-DISTNAME=	git-delta-0.8.3
+DISTNAME=	delta-0.11.3
+PKGNAME=	git-delta-0.11.3
 CATEGORIES=	textproc
-EXTRACT_SUFX=	.crate
+MASTER_SITES=	${MASTER_SITE_GITHUB:=dandavison/}
+GITHUB_PROJECT=	delta
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/dandavison/delta/
@@ -10,8 +12,6 @@ COMMENT=	Viewer for git and diff output
 LICENSE=	mit
 
 .include "cargo-depends.mk"
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-USE_LANGUAGES=	c
 
 INSTALLATION_DIRS=	bin
 
