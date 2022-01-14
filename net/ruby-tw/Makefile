@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2020/01/18 23:33:21 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2022/01/14 15:51:50 taca Exp $
 
 DISTNAME=	tw-1.3.1
 CATEGORIES=	net
@@ -15,7 +15,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rainbow>=3.0.0:../../misc/ruby-rainbow
 DEPENDS+=	${RUBY_PKGPREFIX}-twitter>=6.2.0:../../net/ruby-twitter
 DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.5.4:../../security/ruby-oauth
 
-OVERRIDE_GEMSPEC+=	json>=${RUBY_JSON_VERSION}
+OVERRIDE_GEMSPEC+=	json>=${RUBY_JSON_VER}
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
