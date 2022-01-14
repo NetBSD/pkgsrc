@@ -1,9 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2022/01/10 23:46:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/01/14 17:51:54 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/_pylibmc.so
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pylibmc/__init__.py
 ${PYSITELIB}/pylibmc/__init__.pyc
 ${PYSITELIB}/pylibmc/__init__.pyo

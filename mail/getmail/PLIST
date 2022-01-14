@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2022/01/10 20:22:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2022/01/14 17:51:59 wiz Exp $
 bin/getmail
 bin/getmail-gmail-xoauth-tokens
 bin/getmail_fetch
@@ -24,6 +24,7 @@ share/doc/getmail/getmaildocs.css
 share/doc/getmail/getmailrc-examples
 share/doc/getmail/troubleshooting.html
 share/doc/getmail/troubleshooting.txt
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/getmailcore/__init__.py
 ${PYSITELIB}/getmailcore/__init__.pyc
 ${PYSITELIB}/getmailcore/__init__.pyo
