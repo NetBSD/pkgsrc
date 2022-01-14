@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2022/01/10 20:37:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/14 17:52:01 wiz Exp $
 ${PYSITELIB}/_pcapmodule.so
 ${PYSITELIB}/pcap.py
 ${PYSITELIB}/pcap.pyc
 ${PYSITELIB}/pcap.pyo
+${PYSITELIB}/${EGG_INFODIR}

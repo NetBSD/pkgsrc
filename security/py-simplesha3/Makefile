@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/10 22:02:43 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/14 17:52:03 wiz Exp $
 
 DISTNAME=	simplesha3-2015.09.22.post1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,11 @@ HOMEPAGE=	https://www.dlitz.net/software/pycrypto/
 COMMENT=	Simple SHA-3 implementation for Python
 LICENSE=	public-domain
 
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYPKGPREFIX} != "py27"
 EGG_NAME=	simplesha3-2015.9.22.post1
+.endif
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

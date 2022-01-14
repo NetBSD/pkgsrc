@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.8 2022/01/10 20:54:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/01/14 17:52:06 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/web/__init__.py
 ${PYSITELIB}/web/__init__.pyc
 ${PYSITELIB}/web/__init__.pyo

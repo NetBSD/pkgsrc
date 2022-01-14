@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.10 2022/01/10 08:06:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/01/14 17:52:03 wiz Exp $
 bin/rdiff-backup
 bin/rdiff-backup-statistics
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/rdiff_backup/C.so
 ${PYSITELIB}/rdiff_backup/FilenameMapping.py
 ${PYSITELIB}/rdiff_backup/FilenameMapping.pyc

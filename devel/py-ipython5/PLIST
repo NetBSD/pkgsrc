@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2022/01/10 07:53:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/01/14 17:51:54 wiz Exp $
 bin/iptest-${PYVERSSUFFIX}
 bin/iptest2
 bin/ipython-${PYVERSSUFFIX}
 bin/ipython2
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/IPython/__init__.py
 ${PYSITELIB}/IPython/__init__.pyc
 ${PYSITELIB}/IPython/__init__.pyo

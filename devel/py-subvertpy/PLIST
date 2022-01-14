@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2022/01/10 22:17:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/01/14 17:51:55 wiz Exp $
 bin/subvertpy-fast-export
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/subvertpy/__init__.py
 ${PYSITELIB}/subvertpy/__init__.pyc
 ${PYSITELIB}/subvertpy/__init__.pyo

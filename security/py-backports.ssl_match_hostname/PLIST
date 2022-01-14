@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2022/01/10 20:27:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/14 17:52:02 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/backports/ssl_match_hostname/__init__.py
 ${PYSITELIB}/backports/ssl_match_hostname/__init__.pyc
 ${PYSITELIB}/backports/ssl_match_hostname/__init__.pyo

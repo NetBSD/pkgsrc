@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/01/10 18:34:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/01/14 17:52:01 wiz Exp $
 ${PYSITELIB}/bt/BitTorrent/Choker.py
 ${PYSITELIB}/bt/BitTorrent/Choker.pyc
 ${PYSITELIB}/bt/BitTorrent/Choker.pyo
@@ -221,6 +221,7 @@ ${PYSITELIB}/ds/testall.pyo
 ${PYSITELIB}/ds/ui.py
 ${PYSITELIB}/ds/ui.pyc
 ${PYSITELIB}/ds/ui.pyo
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/kenosis/BeautifulSoup.py
 ${PYSITELIB}/kenosis/BeautifulSoup.pyc
 ${PYSITELIB}/kenosis/BeautifulSoup.pyo

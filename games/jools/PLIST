@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2022/01/10 07:48:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/14 17:51:57 wiz Exp $
 bin/jools
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/jools/__init__.py
 ${PYSITELIB}/jools/__init__.pyc
 ${PYSITELIB}/jools/__init__.pyo

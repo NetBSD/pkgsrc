@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/01/10 08:09:06 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/14 17:52:02 wiz Exp $
 
 PKGREVISION= 1
 .include "../../net/nmap/Makefile.common"
@@ -11,7 +11,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/zenmap
 
 EXTRACT_ELEMENTS=	${DISTNAME}/zenmap
 
-EGG_NAME=	${PKGNAME:C/-([^0-9])/_\1/g}
+EGG_NAME=	zenmap-${PKGVERSION_NOREV}
 
 # There is an ongoing effort of porting Zenmap to Python 3. See
 # https://github.com/nmap/nmap/issues/1176

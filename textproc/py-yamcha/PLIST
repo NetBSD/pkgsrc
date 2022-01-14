@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2022/01/10 22:18:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/14 17:52:05 wiz Exp $
 ${PYSITELIB}/YamCha.py
 ${PYSITELIB}/YamCha.pyc
 ${PYSITELIB}/YamCha.pyo
 ${PYSITELIB}/_YamCha.so
+${PYSITELIB}/${EGG_INFODIR}

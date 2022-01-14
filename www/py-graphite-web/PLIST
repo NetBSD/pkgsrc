@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/01/10 22:46:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/01/14 17:52:06 wiz Exp $
 bin/build-index.sh
 bin/run-graphite-devel-server.py
 graphite/webapp/content/css/cli.css
@@ -756,6 +756,7 @@ ${PYSITELIB}/graphite/whitelist/urls.pyo
 ${PYSITELIB}/graphite/whitelist/views.py
 ${PYSITELIB}/graphite/whitelist/views.pyc
 ${PYSITELIB}/graphite/whitelist/views.pyo
+${PYSITELIB}/${EGG_INFODIR}
 share/examples/graphite/dashboard.conf.example
 share/examples/graphite/example-client.py
 share/examples/graphite/example-graphite-vhost.conf

@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2022/01/10 21:56:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/01/14 17:51:51 wiz Exp $
 bin/carbon-aggregator.py
 bin/carbon-cache.py
 bin/carbon-client.py
 bin/carbon-relay.py
 bin/validate-storage-schemas.py
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/carbon/__init__.py
 ${PYSITELIB}/carbon/__init__.pyc
 ${PYSITELIB}/carbon/__init__.pyo

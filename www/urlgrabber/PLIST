@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2022/01/10 22:22:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/01/14 17:52:07 wiz Exp $
 bin/urlgrabber
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/urlgrabber/__init__.py
 ${PYSITELIB}/urlgrabber/__init__.pyc
 ${PYSITELIB}/urlgrabber/__init__.pyo

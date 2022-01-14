@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2022/01/10 08:39:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/01/14 17:52:04 wiz Exp $
 bin/happydoc${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/happydoclib/CommandLineApp.py
 ${PYSITELIB}/happydoclib/CommandLineApp.pyc
 ${PYSITELIB}/happydoclib/CommandLineApp.pyo

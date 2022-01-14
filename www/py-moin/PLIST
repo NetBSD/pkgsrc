@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.15 2022/01/10 18:40:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2022/01/14 17:52:06 wiz Exp $
 bin/moin
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/MoinMoin/Page.py
 ${PYSITELIB}/MoinMoin/Page.pyc
 ${PYSITELIB}/MoinMoin/Page.pyo

@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2022/01/10 20:38:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/01/14 17:52:04 wiz Exp $
 bin/markdown2social
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/markdown2social/__init__.py
 ${PYSITELIB}/markdown2social/__init__.pyc
 ${PYSITELIB}/markdown2social/__init__.pyo
