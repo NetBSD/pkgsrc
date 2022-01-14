@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.3 2022/01/11 15:13:20 tnn Exp $
+$NetBSD: patch-setup.py,v 1.4 2022/01/14 10:32:28 tnn Exp $
 
 Disable certain modules, so they can be built as separate packages.
 Do not look for ncursesw.
@@ -13,7 +13,7 @@ Don't search for modules in PREFIX. Fixes build failure when py-setuptools
  from glob import glob, escape
  import _osx_support
  
-+sys.path = [p for p in sys.path if not re.compile('^' + sys.base_prefix).match(p)]
++sys.path = [p for p in sys.path if not re.compile('^' + sys.base_prefix + '/').match(p)]
  
  try:
      import subprocess
