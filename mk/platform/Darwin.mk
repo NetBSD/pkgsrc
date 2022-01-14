@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.111 2021/12/02 09:44:03 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.112 2022/01/14 14:46:51 schmonz Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -253,7 +253,7 @@ MAKE_ENV+=	MACOSX_DEPLOYMENT_TARGET="10.4"
 CONFIGURE_ENV+=		gl_cv_func_getcwd_abort_bug=no
 .endif
 
-# strnlen(3) is available from Lion onwards
+# strnlen(3) and getline(3) are available from Lion onwards
 .if ${OPSYS_VERSION} < 100700
-_OPSYS_MISSING_FEATURES+= 	strnlen
+_OPSYS_MISSING_FEATURES+= 	strnlen getline
 .endif
