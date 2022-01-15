@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 22:10:37 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/15 19:04:24 schmonz Exp $
 
 GITHUB_PROJECT=		tlswrapper
-GITHUB_TAG=		20220101
+GITHUB_TAG=		20220114
 DISTNAME=		${GITHUB_PROJECT}
 PKGNAME=		${GITHUB_PROJECT}-${GITHUB_TAG}
 CATEGORIES=		security net
@@ -20,11 +20,13 @@ MAKE_ENV+=		EMPTYDIR=${TLSWRAPPER_CHROOT:Q}
 
 LDFLAGS.SunOS+=		-lsocket
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin man/man1 share/examples/${PKGBASE}
 
 do-install:
 	cd ${WRKSRC};							\
-	for i in tlswrapper tlswrapper-tcp; do				\
+	${INSTALL_DATA} examples.md \
+		${DESTDIR}${PREFIX}/share/examples/${PKGBASE};		\
+	for i in tlswrapper tlswrapper-smtp tlswrapper-tcp; do		\
 		${INSTALL_PROGRAM} $${i} \
 			${DESTDIR}${PREFIX}/bin;			\
 		${INSTALL_MAN} man/$${i}.1 \
