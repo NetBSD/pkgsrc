@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:17:55 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/01/15 11:54:57 wen Exp $
 
-BLAKE2s (curry-1.001000.tar.gz) = 0660e359915e84828e4fa8ae43b8821f09347db550e955d44e93deeae6f90531
-SHA512 (curry-1.001000.tar.gz) = 1d934ceb64a73784484ac73a529f9f6cdd3cbcaff7175515ddce75bbc7933f2f3105f3a4ef12e33eb82db5792c435e32aae12f64b3e334064db4305910e86d14
-Size (curry-1.001000.tar.gz) = 3754 bytes
+BLAKE2s (curry-2.000001.tar.gz) = 90e4ec37e39311aea91d4e1230bb34d5c6fa56102bba0a0045930382ae5ee8e0
+SHA512 (curry-2.000001.tar.gz) = ed86de9dd5af7a3413d0b601975b3efbbcb72fe8c02ca351afcc3af872a59cd78f5a392dea6e545211a97f9994d0655d3f1787973e9f0bf44aa01db97c9afd76
+Size (curry-2.000001.tar.gz) = 10252 bytes
