@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.240 2022/01/15 21:11:37 js Exp $
+$NetBSD: CHANGES-2022,v 1.241 2022/01/15 22:41:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -317,3 +317,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/py-telethon to 1.24.0 [js 2022-01-15]
 	Updated chat/mautrix-telegram to 0.11.1 [js 2022-01-15]
 	Added chat/py-tulir-telethon version 1.25.0a3 [js 2022-01-15]
+	Updated shells/starship to 1.2.1 [pin 2022-01-15]
