@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2022/01/15 20:22:06 js Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/15 21:29:50 js Exp $
 
 DISTNAME=	mautrix-telegram-0.11.1
+PKGREVISION=	1
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tulir/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -20,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-commonmark>=0.8<0.10:../../textproc/py-commonmark
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3<4:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-yarl>=1<2:../../www/py-yarl
 DEPENDS+=	${PYPKGPREFIX}-mautrix>=0.14.3<0.15:../../chat/py-mautrix
-DEPENDS+=	${PYPKGPREFIX}-telethon>=1.24<1.25:../../chat/py-telethon
+DEPENDS+=	${PYPKGPREFIX}-tulir-telethon>=1.25.0a3:../../chat/py-tulir-telethon
 DEPENDS+=	${PYPKGPREFIX}-asyncpg>=0.20<0.26:../../databases/py-asyncpg
 DEPENDS+=	${PYPKGPREFIX}-mako>=1<2:../../devel/py-mako
 # webp_convert and qr_login
