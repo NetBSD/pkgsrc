@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.237 2022/01/15 19:04:29 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.238 2022/01/15 20:01:47 js Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -314,3 +314,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ugdb to 0.1.11 [pin 2022-01-15]
 	Updated sysutils/felix to 0.3.2 [pin 2022-01-15]
 	Updated security/tlswrapper to 20220114 [buildbox 2022-01-15]
+	Updated chat/py-telethon to 1.24.0 [js 2022-01-15]
