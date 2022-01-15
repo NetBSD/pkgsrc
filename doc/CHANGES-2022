@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.233 2022/01/15 16:00:59 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.234 2022/01/15 16:25:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -307,3 +307,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/unison-snapshot to 2.51.5.70.1 [gdt 2022-01-15]
 	Updated www/firefox to 96.0.1 [ryoon 2022-01-15]
 	Updated www/firefox-l10n to 96.0.1 [ryoon 2022-01-15]
+	Updated lang/python39 to 3.9.10 [adam 2022-01-15]
+	Updated lang/py39-html-docs to 3.9.10 [adam 2022-01-15]
+	Updated lang/python310 to 3.10.2 [adam 2022-01-15]
+	Updated lang/py310-html-docs to 3.10.2 [adam 2022-01-15]
