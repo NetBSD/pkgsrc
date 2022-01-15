@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2022/01/04 21:39:03 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/15 19:04:24 schmonz Exp $
 bin/tlswrapper
+bin/tlswrapper-smtp
 bin/tlswrapper-tcp
+man/man1/tlswrapper-smtp.1
 man/man1/tlswrapper-tcp.1
 man/man1/tlswrapper.1
+share/examples/tlswrapper/examples.md
