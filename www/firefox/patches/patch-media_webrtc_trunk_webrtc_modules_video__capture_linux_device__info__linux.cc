@@ -1,11 +1,11 @@
-$NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc,v 1.19 2021/06/30 15:09:56 ryoon Exp $
+$NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc,v 1.20 2022/01/15 15:57:38 ryoon Exp $
 
 * Fix buiuld under NetBSD.
   NetBSD's sys/videoio.h does not have v4l2_capability.device_caps
   and video capture does not work for me anyway.
 
---- third_party/libwebrtc/webrtc/modules/video_capture/linux/device_info_linux.cc.orig	2021-05-20 21:30:20.000000000 +0000
-+++ third_party/libwebrtc/webrtc/modules/video_capture/linux/device_info_linux.cc
+--- third_party/libwebrtc/modules/video_capture/linux/device_info_linux.cc.orig	2021-05-20 21:30:20.000000000 +0000
++++ third_party/libwebrtc/modules/video_capture/linux/device_info_linux.cc
 @@ -207,10 +207,12 @@ uint32_t DeviceInfoLinux::NumberOfDevice
      sprintf(device, "/dev/video%d", n);
      if ((fd = open(device, O_RDONLY)) != -1) {
