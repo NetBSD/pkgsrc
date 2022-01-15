@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:05:24 nia Exp $
-
-BLAKE2s (telethon-session-sqlalchemy-0.2.16.tar.gz) = c2b00e472b263698319418703c98518fa481c7379570cc3cf7e5566f295ceee0
-SHA512 (telethon-session-sqlalchemy-0.2.16.tar.gz) = 2d78aa821af9199cc5ce8c1ad31088f2a43287ec4fced3e1a8b5a667b4dd93df091d07ef661081fcebf81d9dc33d821773aa3d680608b6351cc642774f808712
-Size (telethon-session-sqlalchemy-0.2.16.tar.gz) = 8930 bytes
