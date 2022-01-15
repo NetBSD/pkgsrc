@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.236 2022/01/15 17:04:39 pin Exp $
+$NetBSD: CHANGES-2022,v 1.237 2022/01/15 19:04:29 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -313,3 +313,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/py310-html-docs to 3.10.2 [adam 2022-01-15]
 	Updated devel/ugdb to 0.1.11 [pin 2022-01-15]
 	Updated sysutils/felix to 0.3.2 [pin 2022-01-15]
+	Updated security/tlswrapper to 20220114 [buildbox 2022-01-15]
