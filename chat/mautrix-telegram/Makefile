@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/01/04 20:52:36 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2022/01/15 19:10:12 nia Exp $
 
 DISTNAME=	mautrix-telegram-0.10.1
 PKGREVISION=	1
@@ -22,7 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-magic>=0.4<0.5:../../sysutils/py-magic
 DEPENDS+=	${PYPKGPREFIX}-commonmark>=0.8<0.10:../../textproc/py-commonmark
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3<4:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-yarl>=1<2:../../www/py-yarl
-DEPENDS+=	${PYPKGPREFIX}-mautrix>=0.10.4<0.11:../../chat/py-mautrix
+DEPENDS+=	${PYPKGPREFIX}-mautrix>=0.10.4:../../chat/py-mautrix
 DEPENDS+=	${PYPKGPREFIX}-telethon>=1.22<24:../../chat/py-telethon
 DEPENDS+=	${PYPKGPREFIX}-telethon-session-sqlalchemy>=0.2.14<0.3:../../chat/py-telethon-session-sqlalchemy
 # webp_convert and qr_login
