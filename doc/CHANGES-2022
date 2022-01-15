@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.227 2022/01/14 19:55:17 adam Exp $
+$NetBSD: CHANGES-2022,v 1.228 2022/01/15 11:56:21 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -301,3 +301,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-llvmlite to 0.38.0 [adam 2022-01-14]
 	Updated math/py-numba to 0.55.0 [adam 2022-01-14]
 	Updated devel/py-faker to 11.3.0 [adam 2022-01-14]
+	Updated devel/p5-curry to 2.000001 [wen 2022-01-15]
