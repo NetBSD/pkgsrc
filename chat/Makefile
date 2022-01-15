@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.263 2022/01/05 10:04:53 fcambus Exp $
+# $NetBSD: Makefile,v 1.264 2022/01/15 20:36:42 js Exp $
 #
 
 COMMENT=	Communication programs
@@ -112,7 +112,6 @@ SUBDIR+=	py-mastodon
 SUBDIR+=	py-mautrix
 SUBDIR+=	py-nbxmpp
 SUBDIR+=	py-telethon
-SUBDIR+=	py-telethon-session-sqlalchemy
 SUBDIR+=	py-xmpppy
 SUBDIR+=	quassel
 SUBDIR+=	quirc
