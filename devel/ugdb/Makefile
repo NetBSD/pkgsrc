@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2021/06/24 10:33:26 pin Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/15 16:43:10 pin Exp $
 
-DISTNAME=	ugdb-0.1.10
+DISTNAME=	ugdb-0.1.11
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ftilde/}
 
