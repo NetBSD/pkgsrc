@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/09/14 19:19:35 js Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/15 13:36:41 js Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -67,6 +67,9 @@ ${PYSITELIB}/mautrix/bridge/commands/clean_rooms.pyo
 ${PYSITELIB}/mautrix/bridge/commands/crypto.py
 ${PYSITELIB}/mautrix/bridge/commands/crypto.pyc
 ${PYSITELIB}/mautrix/bridge/commands/crypto.pyo
+${PYSITELIB}/mautrix/bridge/commands/delete_portal.py
+${PYSITELIB}/mautrix/bridge/commands/delete_portal.pyc
+${PYSITELIB}/mautrix/bridge/commands/delete_portal.pyo
 ${PYSITELIB}/mautrix/bridge/commands/handler.py
 ${PYSITELIB}/mautrix/bridge/commands/handler.pyc
 ${PYSITELIB}/mautrix/bridge/commands/handler.pyo
@@ -79,6 +82,9 @@ ${PYSITELIB}/mautrix/bridge/commands/manhole.pyo
 ${PYSITELIB}/mautrix/bridge/commands/meta.py
 ${PYSITELIB}/mautrix/bridge/commands/meta.pyc
 ${PYSITELIB}/mautrix/bridge/commands/meta.pyo
+${PYSITELIB}/mautrix/bridge/commands/relay.py
+${PYSITELIB}/mautrix/bridge/commands/relay.pyc
+${PYSITELIB}/mautrix/bridge/commands/relay.pyo
 ${PYSITELIB}/mautrix/bridge/config.py
 ${PYSITELIB}/mautrix/bridge/config.pyc
 ${PYSITELIB}/mautrix/bridge/config.pyo
@@ -208,6 +214,12 @@ ${PYSITELIB}/mautrix/client/state_store/sqlalchemy/sqlstatestore.pyo
 ${PYSITELIB}/mautrix/client/state_store/sync.py
 ${PYSITELIB}/mautrix/client/state_store/sync.pyc
 ${PYSITELIB}/mautrix/client/state_store/sync.pyo
+${PYSITELIB}/mautrix/client/state_store/tests/__init__.py
+${PYSITELIB}/mautrix/client/state_store/tests/__init__.pyc
+${PYSITELIB}/mautrix/client/state_store/tests/__init__.pyo
+${PYSITELIB}/mautrix/client/state_store/tests/store_test.py
+${PYSITELIB}/mautrix/client/state_store/tests/store_test.pyc
+${PYSITELIB}/mautrix/client/state_store/tests/store_test.pyo
 ${PYSITELIB}/mautrix/client/store_updater.py
 ${PYSITELIB}/mautrix/client/store_updater.pyc
 ${PYSITELIB}/mautrix/client/store_updater.pyo
@@ -277,12 +289,12 @@ ${PYSITELIB}/mautrix/crypto/store/asyncpg/upgrade.pyo
 ${PYSITELIB}/mautrix/crypto/store/memory.py
 ${PYSITELIB}/mautrix/crypto/store/memory.pyc
 ${PYSITELIB}/mautrix/crypto/store/memory.pyo
-${PYSITELIB}/mautrix/crypto/store/pickle.py
-${PYSITELIB}/mautrix/crypto/store/pickle.pyc
-${PYSITELIB}/mautrix/crypto/store/pickle.pyo
 ${PYSITELIB}/mautrix/crypto/types.py
 ${PYSITELIB}/mautrix/crypto/types.pyc
 ${PYSITELIB}/mautrix/crypto/types.pyo
+${PYSITELIB}/mautrix/crypto/unwedge.py
+${PYSITELIB}/mautrix/crypto/unwedge.pyc
+${PYSITELIB}/mautrix/crypto/unwedge.pyo
 ${PYSITELIB}/mautrix/errors/__init__.py
 ${PYSITELIB}/mautrix/errors/__init__.pyc
 ${PYSITELIB}/mautrix/errors/__init__.pyo
@@ -298,6 +310,9 @@ ${PYSITELIB}/mautrix/errors/request.pyo
 ${PYSITELIB}/mautrix/errors/well_known.py
 ${PYSITELIB}/mautrix/errors/well_known.pyc
 ${PYSITELIB}/mautrix/errors/well_known.pyo
+${PYSITELIB}/mautrix/fixmodule.py
+${PYSITELIB}/mautrix/fixmodule.pyc
+${PYSITELIB}/mautrix/fixmodule.pyo
 ${PYSITELIB}/mautrix/py.typed
 ${PYSITELIB}/mautrix/types/__init__.py
 ${PYSITELIB}/mautrix/types/__init__.pyc
@@ -351,6 +366,12 @@ ${PYSITELIB}/mautrix/types/event/voip.pyo
 ${PYSITELIB}/mautrix/types/filter.py
 ${PYSITELIB}/mautrix/types/filter.pyc
 ${PYSITELIB}/mautrix/types/filter.pyo
+${PYSITELIB}/mautrix/types/matrixuri.py
+${PYSITELIB}/mautrix/types/matrixuri.pyc
+${PYSITELIB}/mautrix/types/matrixuri.pyo
+${PYSITELIB}/mautrix/types/matrixuri_test.py
+${PYSITELIB}/mautrix/types/matrixuri_test.pyc
+${PYSITELIB}/mautrix/types/matrixuri_test.pyo
 ${PYSITELIB}/mautrix/types/media.py
 ${PYSITELIB}/mautrix/types/media.pyc
 ${PYSITELIB}/mautrix/types/media.pyo
@@ -393,6 +414,12 @@ ${PYSITELIB}/mautrix/util/__init__.pyo
 ${PYSITELIB}/mautrix/util/async_db/__init__.py
 ${PYSITELIB}/mautrix/util/async_db/__init__.pyc
 ${PYSITELIB}/mautrix/util/async_db/__init__.pyo
+${PYSITELIB}/mautrix/util/async_db/aiosqlite.py
+${PYSITELIB}/mautrix/util/async_db/aiosqlite.pyc
+${PYSITELIB}/mautrix/util/async_db/aiosqlite.pyo
+${PYSITELIB}/mautrix/util/async_db/asyncpg.py
+${PYSITELIB}/mautrix/util/async_db/asyncpg.pyc
+${PYSITELIB}/mautrix/util/async_db/asyncpg.pyo
 ${PYSITELIB}/mautrix/util/async_db/database.py
 ${PYSITELIB}/mautrix/util/async_db/database.pyc
 ${PYSITELIB}/mautrix/util/async_db/database.pyo
@@ -432,9 +459,18 @@ ${PYSITELIB}/mautrix/util/db/__init__.pyo
 ${PYSITELIB}/mautrix/util/db/base.py
 ${PYSITELIB}/mautrix/util/db/base.pyc
 ${PYSITELIB}/mautrix/util/db/base.pyo
+${PYSITELIB}/mautrix/util/ffmpeg.py
+${PYSITELIB}/mautrix/util/ffmpeg.pyc
+${PYSITELIB}/mautrix/util/ffmpeg.pyo
 ${PYSITELIB}/mautrix/util/file_store.py
 ${PYSITELIB}/mautrix/util/file_store.pyc
 ${PYSITELIB}/mautrix/util/file_store.pyo
+${PYSITELIB}/mautrix/util/format_duration.py
+${PYSITELIB}/mautrix/util/format_duration.pyc
+${PYSITELIB}/mautrix/util/format_duration.pyo
+${PYSITELIB}/mautrix/util/format_duration_test.py
+${PYSITELIB}/mautrix/util/format_duration_test.pyc
+${PYSITELIB}/mautrix/util/format_duration_test.pyo
 ${PYSITELIB}/mautrix/util/formatter/__init__.py
 ${PYSITELIB}/mautrix/util/formatter/__init__.pyc
 ${PYSITELIB}/mautrix/util/formatter/__init__.pyo
@@ -460,6 +496,9 @@ ${PYSITELIB}/mautrix/util/formatter/markdown_string.pyo
 ${PYSITELIB}/mautrix/util/formatter/parser.py
 ${PYSITELIB}/mautrix/util/formatter/parser.pyc
 ${PYSITELIB}/mautrix/util/formatter/parser.pyo
+${PYSITELIB}/mautrix/util/formatter/parser_test.py
+${PYSITELIB}/mautrix/util/formatter/parser_test.pyc
+${PYSITELIB}/mautrix/util/formatter/parser_test.pyo
 ${PYSITELIB}/mautrix/util/logging/__init__.py
 ${PYSITELIB}/mautrix/util/logging/__init__.pyc
 ${PYSITELIB}/mautrix/util/logging/__init__.pyo
@@ -478,6 +517,9 @@ ${PYSITELIB}/mautrix/util/manhole.pyo
 ${PYSITELIB}/mautrix/util/markdown.py
 ${PYSITELIB}/mautrix/util/markdown.pyc
 ${PYSITELIB}/mautrix/util/markdown.pyo
+${PYSITELIB}/mautrix/util/message_send_checkpoint.py
+${PYSITELIB}/mautrix/util/message_send_checkpoint.pyc
+${PYSITELIB}/mautrix/util/message_send_checkpoint.pyo
 ${PYSITELIB}/mautrix/util/opt_prometheus.py
 ${PYSITELIB}/mautrix/util/opt_prometheus.pyc
 ${PYSITELIB}/mautrix/util/opt_prometheus.pyi
@@ -494,3 +536,7 @@ ${PYSITELIB}/mautrix/util/simple_lock.pyo
 ${PYSITELIB}/mautrix/util/simple_template.py
 ${PYSITELIB}/mautrix/util/simple_template.pyc
 ${PYSITELIB}/mautrix/util/simple_template.pyo
+${PYSITELIB}/mautrix/util/variation_selector.json
+${PYSITELIB}/mautrix/util/variation_selector.py
+${PYSITELIB}/mautrix/util/variation_selector.pyc
+${PYSITELIB}/mautrix/util/variation_selector.pyo
