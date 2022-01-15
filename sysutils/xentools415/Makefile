@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2021/12/19 09:47:59 maya Exp $
+# $NetBSD: Makefile,v 1.9 2022/01/15 17:44:35 wiz Exp $
 #
 VERSION=	4.15.1
 
 DIST_SUBDIR=		xen415
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools415-${VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		sysutils
 MASTER_SITES=		https://downloads.xenproject.org/release/xen/${VERSION}/
 
@@ -236,7 +236,7 @@ BUILDLINK_TRANSFORM+=	rm:-falign-jumps=1 rm:-falign-loops=1 \
 MAKE_ENV+=	EXTRA_HOSTCFLAGS=${EXTRA_HOSTCFLAGS:Q} EXTRA_CFLAGS=${EXTRA_CFLAGS:M*:Q} TARGET_CC=${TARGET_CC}
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 #.include "../../devel/SDL/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../devel/ocaml-findlib/buildlink3.mk"
