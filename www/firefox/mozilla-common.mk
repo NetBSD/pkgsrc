@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.220 2022/01/13 01:20:39 gutteridge Exp $
+# $NetBSD: mozilla-common.mk,v 1.221 2022/01/15 15:57:37 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -136,6 +136,10 @@ SUBST_STAGE.fix-libpci-soname=		pre-configure
 SUBST_MESSAGE.fix-libpci-soname=	Fixing libpci soname
 SUBST_FILES.fix-libpci-soname+=		${MOZILLA_DIR}toolkit/xre/glxtest.cpp
 SUBST_SED.fix-libpci-soname+=		-e 's,"libpci.so, "lib${PCIUTILS_LIBNAME}.so,'
+
+# Workaround for link of libxul.so as of 96.0.
+# There are too many -ldl under third_paty/libwebrtc.
+BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}build/autoconf/config.guess
 CONFIG_GUESS_OVERRIDE+=		${MOZILLA_DIR}js/src/build/autoconf/config.guess
