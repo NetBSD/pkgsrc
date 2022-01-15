@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2022/01/14 15:38:07 pin Exp $
+$NetBSD: distinfo,v 1.9 2022/01/15 22:41:29 pin Exp $
 
 BLAKE2s (ahash-0.4.7.crate) = ac7fff9648f983c4df3b99b34e517535743ca13f0c22fddcb95c0417dfb9778f
 SHA512 (ahash-0.4.7.crate) = 2f42cdbacb2b2f9bd7d94a4cc61294d7813428157ce242ba82f7c3fccb6e4b83c767f4dedd35ff26ae61a89506b388d7cf96af4e727c29a14b25b9f82b1f2126
@@ -519,9 +519,9 @@ Size (slab-0.4.4.crate) = 15725 bytes
 BLAKE2s (socket2-0.4.2.crate) = 94c128e4fadbafbb5f4ad5addb0bfce171236bf17e6dc090cc684e0932f8d3b0
 SHA512 (socket2-0.4.2.crate) = af4641d98737bbc4d14e82d91791af4705f9dbbec4d8b3a25e7e990a5c7ac25b48eea6c4a743b09db52a037c67a7b676147087688f4e29d6541dd1ad7ff9688b
 Size (socket2-0.4.2.crate) = 41721 bytes
-BLAKE2s (starship-1.2.0.tar.gz) = 35014bfb63a74eef956bfa3613e7856dbd53d7f2cd189d979d427d7d3a76e041
-SHA512 (starship-1.2.0.tar.gz) = 11d001eb04532ee9720e6db8a9aef93408357798e596150dfd718228dc09572ad02901c06abb99ee9562cc6ecaf20dc7221dda6b20965d01b6d95cd451732009
-Size (starship-1.2.0.tar.gz) = 6523580 bytes
+BLAKE2s (starship-1.2.1.tar.gz) = 5f1eb02ff9259daa6882df1f12d5caf366fdde2eda9d09e03645f8a94916fa6c
+SHA512 (starship-1.2.1.tar.gz) = 6c16ab5769ba5f76cf3db02d59993e0945e82b642ce749df28943432bdc0b9f5f84196480931fab1c6b9eaed4fb440d838e8e073c0c2f33ac103cceebd366d07
+Size (starship-1.2.1.tar.gz) = 6523548 bytes
 BLAKE2s (starship-battery-0.7.9.crate) = 48069a1fa7ae0bec70d73d0e99dea0bd3c2704bf7a18af4a778ea6a75a68be81
 SHA512 (starship-battery-0.7.9.crate) = da68cb1e638d0e9fd3b68de031f16c5389ca5d303481cbacbb378d82ce4404a380726c758f41109916eb798a690bf2bf6d485ad758d2cac638567e3f3d4a9d7f
 Size (starship-battery-0.7.9.crate) = 37685 bytes
@@ -708,4 +708,3 @@ Size (zvariant-2.8.0.crate) = 60913 bytes
 BLAKE2s (zvariant_derive-2.8.0.crate) = 83e3b4349cfb315ad8aef6662ef7a5bf201c387b45bdd65c29d19b224bbb83b3
 SHA512 (zvariant_derive-2.8.0.crate) = 00d0e128f3497be874a54db4d76233ee23e38728e1fde348dc62094b279aeb611ced196ccd3e820afcc27929daea6a148d06132eba4ab7732b8ffc1d9d0c6599
 Size (zvariant_derive-2.8.0.crate) = 8771 bytes
-SHA1 (patch-src_context.rs) = 1edcb51aad8ea391a16ef1b515d83717bb81f67e
