@@ -1,20 +1,18 @@
-@comment $NetBSD: PLIST,v 1.9 2020/11/19 10:19:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/01/15 23:35:13 js Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/aiohttp/.hash/_cparser.pxd.hash
 ${PYSITELIB}/aiohttp/.hash/_find_header.pxd.hash
-${PYSITELIB}/aiohttp/.hash/_frozenlist.pyx.hash
 ${PYSITELIB}/aiohttp/.hash/_helpers.pyi.hash
 ${PYSITELIB}/aiohttp/.hash/_helpers.pyx.hash
 ${PYSITELIB}/aiohttp/.hash/_http_parser.pyx.hash
 ${PYSITELIB}/aiohttp/.hash/_http_writer.pyx.hash
 ${PYSITELIB}/aiohttp/.hash/_websocket.pyx.hash
-${PYSITELIB}/aiohttp/.hash/frozenlist.pyi.hash
 ${PYSITELIB}/aiohttp/.hash/hdrs.py.hash
-${PYSITELIB}/aiohttp/.hash/signals.pyi.hash
 ${PYSITELIB}/aiohttp/__init__.py
 ${PYSITELIB}/aiohttp/__init__.pyc
 ${PYSITELIB}/aiohttp/__init__.pyo
@@ -22,9 +20,6 @@ ${PYSITELIB}/aiohttp/_cparser.pxd
 ${PYSITELIB}/aiohttp/_find_header.c
 ${PYSITELIB}/aiohttp/_find_header.h
 ${PYSITELIB}/aiohttp/_find_header.pxd
-${PYSITELIB}/aiohttp/_frozenlist.c
-${PYSITELIB}/aiohttp/_frozenlist.pyx
-${PYSITELIB}/aiohttp/_frozenlist.so
 ${PYSITELIB}/aiohttp/_headers.pxi
 ${PYSITELIB}/aiohttp/_helpers.c
 ${PYSITELIB}/aiohttp/_helpers.pyi
@@ -69,10 +64,6 @@ ${PYSITELIB}/aiohttp/cookiejar.pyo
 ${PYSITELIB}/aiohttp/formdata.py
 ${PYSITELIB}/aiohttp/formdata.pyc
 ${PYSITELIB}/aiohttp/formdata.pyo
-${PYSITELIB}/aiohttp/frozenlist.py
-${PYSITELIB}/aiohttp/frozenlist.pyc
-${PYSITELIB}/aiohttp/frozenlist.pyi
-${PYSITELIB}/aiohttp/frozenlist.pyo
 ${PYSITELIB}/aiohttp/hdrs.py
 ${PYSITELIB}/aiohttp/hdrs.pyc
 ${PYSITELIB}/aiohttp/hdrs.pyo
@@ -116,10 +107,6 @@ ${PYSITELIB}/aiohttp/pytest_plugin.pyo
 ${PYSITELIB}/aiohttp/resolver.py
 ${PYSITELIB}/aiohttp/resolver.pyc
 ${PYSITELIB}/aiohttp/resolver.pyo
-${PYSITELIB}/aiohttp/signals.py
-${PYSITELIB}/aiohttp/signals.pyc
-${PYSITELIB}/aiohttp/signals.pyi
-${PYSITELIB}/aiohttp/signals.pyo
 ${PYSITELIB}/aiohttp/streams.py
 ${PYSITELIB}/aiohttp/streams.pyc
 ${PYSITELIB}/aiohttp/streams.pyo
