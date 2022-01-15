@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.228 2022/01/15 11:56:21 wen Exp $
+$NetBSD: CHANGES-2022,v 1.229 2022/01/15 13:36:52 js Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -302,3 +302,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/py-numba to 0.55.0 [adam 2022-01-14]
 	Updated devel/py-faker to 11.3.0 [adam 2022-01-14]
 	Updated devel/p5-curry to 2.000001 [wen 2022-01-15]
+	Updated chat/py-mautrix to 0.14.5 [js 2022-01-15]
