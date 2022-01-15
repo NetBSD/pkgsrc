@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.230 2022/01/15 15:05:56 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.231 2022/01/15 15:41:03 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -304,3 +304,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/p5-curry to 2.000001 [wen 2022-01-15]
 	Updated chat/py-mautrix to 0.14.5 [js 2022-01-15]
 	Updated net/unison-snapshot to 2.51.5.70.0 [gdt 2022-01-15]
+	Updated net/unison-snapshot to 2.51.5.70.1 [gdt 2022-01-15]
