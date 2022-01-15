@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/01/14 15:38:07 pin Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/15 22:41:29 pin Exp $
 
-DISTNAME=	starship-1.2.0
+DISTNAME=	starship-1.2.1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=starship/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
