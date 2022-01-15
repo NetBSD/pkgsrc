@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/09/21 12:23:49 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/01/15 17:44:35 wiz Exp $
 ${PYSITELIB}/grub/ExtLinuxConf.py
 ${PYSITELIB}/grub/ExtLinuxConf.pyc
 ${PYSITELIB}/grub/GrubConf.py
@@ -7,8 +7,14 @@ ${PYSITELIB}/grub/LiloConf.py
 ${PYSITELIB}/grub/LiloConf.pyc
 ${PYSITELIB}/grub/__init__.py
 ${PYSITELIB}/grub/__init__.pyc
-${PYSITELIB}/pygrub-0.6-py${PYVERSSUFFIX}.egg-info
-${PYSITELIB}/xen-3.0-py${PYVERSSUFFIX}.egg-info
+${PYSITELIB}/pygrub-0.6-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/pygrub-0.6-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/pygrub-0.6-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/pygrub-0.6-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/xen-3.0-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/xen-3.0-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/xen-3.0-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/xen-3.0-py${PYVERSSUFFIX}.egg-info/top_level.txt
 ${PYSITELIB}/xen/__init__.py
 ${PYSITELIB}/xen/__init__.pyc
 ${PYSITELIB}/xen/lowlevel/__init__.py
