@@ -1,0 +1,15 @@
+$NetBSD: patch-gnuradio-runtime_CMakeLists.txt,v 1.1 2022/01/16 18:06:25 tnn Exp $
+
+Disable use of precompiled headers; it doesn't play nice with pkgsrc nor ccache.
+
+--- gnuradio-runtime/CMakeLists.txt.orig	2022-01-14 15:27:04.000000000 +0000
++++ gnuradio-runtime/CMakeLists.txt
+@@ -51,7 +51,7 @@ get_filename_component(GNURADIO_RUNTIME_
+ ########################################################################
+ # Setup precompiled header pseudo-component
+ ########################################################################
+-if(${CMAKE_VERSION} VERSION_GREATER_EQUAL "3.16.0")
++if(false AND ${CMAKE_VERSION} VERSION_GREATER_EQUAL "3.16.0")
+   set(GR_CMAKE_HAS_PCH ${CMAKE_VERSION})
+ endif()
+ 

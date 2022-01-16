@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2021/12/11 14:57:50 tnn Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/01/16 18:06:26 tnn Exp $
 include/gnuradio/digital/adaptive_algorithm.h
 include/gnuradio/digital/adaptive_algorithm_cma.h
 include/gnuradio/digital/adaptive_algorithm_lms.h
@@ -10,7 +10,6 @@ include/gnuradio/digital/burst_shaper.h
 include/gnuradio/digital/chunks_to_symbols.h
 include/gnuradio/digital/clock_recovery_mm_cc.h
 include/gnuradio/digital/clock_recovery_mm_ff.h
-include/gnuradio/digital/cma_equalizer_cc.h
 include/gnuradio/digital/constellation.h
 include/gnuradio/digital/constellation_decoder_cb.h
 include/gnuradio/digital/constellation_encoder_bc.h
@@ -25,7 +24,6 @@ include/gnuradio/digital/correlate_access_code_tag_ff.h
 include/gnuradio/digital/costas_loop_cc.h
 include/gnuradio/digital/cpmmod_bc.h
 include/gnuradio/digital/crc16_async_bb.h
-include/gnuradio/digital/crc32.h
 include/gnuradio/digital/crc32_async_bb.h
 include/gnuradio/digital/crc32_bb.h
 include/gnuradio/digital/decision_feedback_equalizer.h
@@ -49,10 +47,8 @@ include/gnuradio/digital/header_format_default.h
 include/gnuradio/digital/header_format_ofdm.h
 include/gnuradio/digital/header_payload_demux.h
 include/gnuradio/digital/interpolating_resampler_type.h
-include/gnuradio/digital/kurtotic_equalizer_cc.h
 include/gnuradio/digital/lfsr.h
 include/gnuradio/digital/linear_equalizer.h
-include/gnuradio/digital/lms_dd_equalizer_cc.h
 include/gnuradio/digital/map_bb.h
 include/gnuradio/digital/metric_type.h
 include/gnuradio/digital/modulate_vector.h
@@ -82,9 +78,6 @@ include/gnuradio/digital/protocol_formatter_async.h
 include/gnuradio/digital/protocol_formatter_bb.h
 include/gnuradio/digital/protocol_parser_b.h
 include/gnuradio/digital/scrambler_bb.h
-include/gnuradio/digital/simple_correlator.h
-include/gnuradio/digital/simple_framer.h
-include/gnuradio/digital/simple_framer_sync.h
 include/gnuradio/digital/symbol_sync_cc.h
 include/gnuradio/digital/symbol_sync_ff.h
 include/gnuradio/digital/timing_error_detector_type.h
@@ -92,7 +85,7 @@ lib/cmake/gnuradio/gnuradio-digitalConfig.cmake
 lib/cmake/gnuradio/gnuradio-digitalTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-digitalTargets.cmake
 lib/libgnuradio-digital.so
-lib/libgnuradio-digital.so.3.9.4
+lib/libgnuradio-digital.so.3.10.0
 lib/libgnuradio-digital.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-digital.pc
 ${PYSITELIB}/gnuradio/digital/__init__.py
@@ -107,9 +100,6 @@ ${PYSITELIB}/gnuradio/digital/constellation_map_generator.pyo
 ${PYSITELIB}/gnuradio/digital/cpm.py
 ${PYSITELIB}/gnuradio/digital/cpm.pyc
 ${PYSITELIB}/gnuradio/digital/cpm.pyo
-${PYSITELIB}/gnuradio/digital/crc.py
-${PYSITELIB}/gnuradio/digital/crc.pyc
-${PYSITELIB}/gnuradio/digital/crc.pyo
 ${PYSITELIB}/gnuradio/digital/digital_python.so
 ${PYSITELIB}/gnuradio/digital/generic_mod_demod.py
 ${PYSITELIB}/gnuradio/digital/generic_mod_demod.pyc
@@ -159,6 +149,9 @@ ${PYSITELIB}/gnuradio/digital/utils/alignment.pyo
 ${PYSITELIB}/gnuradio/digital/utils/gray_code.py
 ${PYSITELIB}/gnuradio/digital/utils/gray_code.pyc
 ${PYSITELIB}/gnuradio/digital/utils/gray_code.pyo
+${PYSITELIB}/gnuradio/digital/utils/lfsr.py
+${PYSITELIB}/gnuradio/digital/utils/lfsr.pyc
+${PYSITELIB}/gnuradio/digital/utils/lfsr.pyo
 ${PYSITELIB}/gnuradio/digital/utils/mod_codes.py
 ${PYSITELIB}/gnuradio/digital/utils/mod_codes.pyc
 ${PYSITELIB}/gnuradio/digital/utils/mod_codes.pyo
@@ -229,7 +222,6 @@ share/gnuradio/grc/blocks/digital_binary_slicer_fb.block.yml
 share/gnuradio/grc/blocks/digital_burst_shaper.block.yml
 share/gnuradio/grc/blocks/digital_chunks_to_symbols.block.yml
 share/gnuradio/grc/blocks/digital_clock_recovery_mm_xx.block.yml
-share/gnuradio/grc/blocks/digital_cma_equalizer_cc.block.yml
 share/gnuradio/grc/blocks/digital_constellation.block.yml
 share/gnuradio/grc/blocks/digital_constellation_decoder_cb.block.yml
 share/gnuradio/grc/blocks/digital_constellation_encoder_bc.block.yml
@@ -238,7 +230,6 @@ share/gnuradio/grc/blocks/digital_constellation_receiver_cb.block.yml
 share/gnuradio/grc/blocks/digital_constellation_rect.block.yml
 share/gnuradio/grc/blocks/digital_constellation_soft_decoder_cf.block.yml
 share/gnuradio/grc/blocks/digital_corr_est_cc.block.yml
-share/gnuradio/grc/blocks/digital_correlate_access_code_bb.block.yml
 share/gnuradio/grc/blocks/digital_correlate_access_code_tag_xx.block.yml
 share/gnuradio/grc/blocks/digital_correlate_access_code_xx_ts.block.yml
 share/gnuradio/grc/blocks/digital_costas_loop_cc.block.yml
@@ -262,9 +253,7 @@ share/gnuradio/grc/blocks/digital_gmskmod_bc.block.yml
 share/gnuradio/grc/blocks/digital_hdlc_deframer_bp.block.yml
 share/gnuradio/grc/blocks/digital_hdlc_framer_pb.block.yml
 share/gnuradio/grc/blocks/digital_header_payload_demux.block.yml
-share/gnuradio/grc/blocks/digital_kurtotic_equalizer_cc.block.yml
 share/gnuradio/grc/blocks/digital_linear_equalizer.block.yml
-share/gnuradio/grc/blocks/digital_lms_dd_equalizer_cc.block.yml
 share/gnuradio/grc/blocks/digital_map_bb.block.yml
 share/gnuradio/grc/blocks/digital_meas_evm_cc.block.yml
 share/gnuradio/grc/blocks/digital_modulate_vector.block.yml
@@ -295,7 +284,5 @@ share/gnuradio/grc/blocks/digital_psk_mod.block.yml
 share/gnuradio/grc/blocks/digital_qam_demod.block.yml
 share/gnuradio/grc/blocks/digital_qam_mod.block.yml
 share/gnuradio/grc/blocks/digital_scrambler_bb.block.yml
-share/gnuradio/grc/blocks/digital_simple_correlator.block.yml
-share/gnuradio/grc/blocks/digital_simple_framer.block.yml
 share/gnuradio/grc/blocks/digital_symbol_sync_xx.block.yml
 share/gnuradio/grc/blocks/variable_header_format_default.block.yml
