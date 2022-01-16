@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2022/01/10 01:46:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.37 2022/01/16 18:06:27 tnn Exp $
 
 PKGNAME=	gnuradio-zeromq-${VERSION}
-PKGREVISION=	1
 COMMENT=	All of the zeromq blocks, utilities, and examples
 
 #  zmq.hpp: No such file or directory
