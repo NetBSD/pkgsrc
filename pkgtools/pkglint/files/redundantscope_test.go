@@ -1716,7 +1716,7 @@ func (s *Suite) Test_RedundantScope_checkAppendUnique__eval_assignment(c *check.
 func (s *Suite) Test_RedundantScope_checkAppendUnique__not_redundant(c *check.C) {
 	t := s.Init(c)
 
-	t.SetUpCategory("perl")
+	t.SetUpCategory("perl", "")
 	t.SetUpPackage("category/package",
 		"CATEGORIES:=\tcategory",
 		".include \"included1.mk\"",

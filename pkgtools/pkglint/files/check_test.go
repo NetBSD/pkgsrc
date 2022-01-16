@@ -9,6 +9,7 @@ import (
 	"netbsd.org/pkglint/regex"
 	"os"
 	"regexp"
+	"sort"
 	"strconv"
 	"strings"
 	"testing"
@@ -413,16 +414,42 @@ func (t *Tester) SetUpPkgsrc() {
 	t.seenSetupPkgsrc++
 }
 
-// SetUpCategory makes the given category valid by creating a dummy Makefile.
+// SetUpCategory makes the given category valid by creating a realistic
+// Makefile.
 // After that, it can be mentioned in the CATEGORIES variable of a package.
-func (t *Tester) SetUpCategory(name RelPath) {
-	assert(G.Pkgsrc.Rel(t.File(name)).Count() == 1)
+func (t *Tester) SetUpCategory(name RelPath, pkgdir RelPath) {
+	categoryDir := G.Pkgsrc.Rel(t.File(name))
+	assert(categoryDir.Count() == 1)
 
-	makefile := name.JoinNoClean("Makefile")
-	if !t.File(makefile).IsFile() {
-		t.CreateFileLines(makefile,
-			MkCvsID)
+	categoryMakefile := name.JoinNoClean("Makefile")
+	text, err := t.File(categoryMakefile).ReadString()
+	oldLines := strings.Split(text, "\n")
+	if err != nil {
+		oldLines = []string{
+			MkCvsID,
+			"",
+			"COMMENT=\tComment for the category",
+			"",
+			// The SUBDIRs will be added here later.
+			"",
+			".include \"../mk/misc/category.mk\""}
+	} else {
+		oldLines = oldLines[:len(oldLines)-1]
 	}
+
+	subdirs := NewStringSet()
+	if pkgdir != "" {
+		subdirs.Add("SUBDIR+=\t" + pkgdir.String())
+	}
+	subdirs.AddAll(oldLines[4 : len(oldLines)-2])
+	sort.Strings(subdirs.Elements)
+
+	var newLines []string
+	newLines = append(newLines, oldLines[:4]...)
+	newLines = append(newLines, subdirs.Elements...)
+	newLines = append(newLines, oldLines[len(oldLines)-2:]...)
+
+	t.CreateFileLines(categoryMakefile, newLines...)
 }
 
 // SetUpPackage sets up all files for a package (including the pkgsrc
@@ -457,7 +484,7 @@ func (t *Tester) SetUpPackage(pkgpath RelPath, makefileLines ...string) CurrPath
 	}
 
 	t.SetUpPkgsrc()
-	t.SetUpCategory(category)
+	t.SetUpCategory(category, distname)
 
 	t.CreateFileLines(pkgpath.JoinNoClean("DESCR"),
 		"Package description")
