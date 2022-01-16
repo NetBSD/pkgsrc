@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.258 2022/01/16 16:51:50 pin Exp $
+$NetBSD: CHANGES-2022,v 1.259 2022/01/16 18:06:58 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -349,3 +349,23 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated games/easyrpg-player to 0.7.0 [nia 2022-01-16]
 	Updated textproc/ruby-csv to 3.2.2 [taca 2022-01-16]
 	Updated sysutils/lsd to 0.21.0 [pin 2022-01-16]
+	Updated ham/gnuradio-channels to 3.10.0.0 [tnn 2022-01-16]
+	Updated ham/gnuradio-companion to 3.10.0.0 [tnn 2022-01-16]
+	Updated ham/gnuradio-core to 3.10.0.0 [tnn 2022-01-16]
+	Updated ham/gnuradio-ctrlport to 3.10.0.0 [tnn 2022-01-16]
+	Updated ham/gnuradio-digital to 3.10.0.0 [tnn 2022-01-16]
+	Updated ham/gnuradio-doxygen to 3.10.0.0 [tnn 2022-01-16]
+	Updated ham/gnuradio-dtv to 3.10.0.0 [tnn 2022-01-16]
+	Updated ham/gnuradio-fec to 3.10.0.0 [tnn 2022-01-16]
+	Updated ham/gnuradio-iio to 3.10.0.0 [tnn 2022-01-16]
+	Updated ham/gnuradio-network to 3.10.0.0 [tnn 2022-01-16]
+	Added ham/gnuradio-pdu version 3.10.0.0 [tnn 2022-01-16]
+	Updated ham/gnuradio-qtgui to 3.10.0.0 [tnn 2022-01-16]
+	Updated ham/gnuradio-soapy-sdr to 3.10.0.0 [tnn 2022-01-16]
+	Updated ham/gnuradio-trellis to 3.10.0.0 [tnn 2022-01-16]
+	Updated ham/gnuradio-uhd to 3.10.0.0 [tnn 2022-01-16]
+	Updated ham/gnuradio-utils to 3.10.0.0 [tnn 2022-01-16]
+	Updated ham/gnuradio-video-sdl to 3.10.0.0 [tnn 2022-01-16]
+	Updated ham/gnuradio-vocoder to 3.10.0.0 [tnn 2022-01-16]
+	Updated ham/gnuradio-wavelet to 3.10.0.0 [tnn 2022-01-16]
+	Updated ham/gnuradio-zeromq to 3.10.0.0 [tnn 2022-01-16]
