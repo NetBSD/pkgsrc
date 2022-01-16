@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.247 2022/01/16 12:59:04 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.248 2022/01/16 13:11:27 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -326,3 +326,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/py-aiosignal version 1.2.0 [adam 2022-01-16]
 	Updated textproc/ruby-nokogiri to 1.13.1 [tsutsui 2022-01-16]
 	Updated devel/byacc to 20220114 [fcambus 2022-01-16]
+	Added comms/syncterm version 1.1 [nia 2022-01-16]
