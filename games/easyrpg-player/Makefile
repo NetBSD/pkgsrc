@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2021/12/08 16:04:27 adam Exp $
+# $NetBSD: Makefile,v 1.20 2022/01/16 14:32:01 nia Exp $
 
-DISTNAME=	easyrpg-player-0.6.2.3
-PKGREVISION=	3
+DISTNAME=	easyrpg-player-0.7.0
 CATEGORIES=	games
 MASTER_SITES=	https://easyrpg.org/downloads/player/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -19,11 +18,19 @@ USE_LANGUAGES+=	c c++
 # The lowest GCC compiler supporting this fully is GCC5"
 GCC_REQD+=	5
 
+TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+
+# Alternative MIDI implementations
+CONFIGURE_ARGS+=	--without-fluidlite
+CONFIGURE_ARGS+=	--without-libwildmidi
+
 .include "options.mk"
+.include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../audio/libxmp/buildlink3.mk"
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../games/liblcf/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

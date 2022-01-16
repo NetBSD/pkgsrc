@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:44:11 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/01/16 14:32:01 nia Exp $
 
-BLAKE2s (liblcf-0.6.2.tar.gz) = 84638e1db123fc605769a4a24bfe5866f691af14bfe75313ffff3ec8d17ce000
-SHA512 (liblcf-0.6.2.tar.gz) = 034ba5ce8c18d56908a6b728dd935d7b82a3d667a61ddfedf1386d384384a60c4530707c67da64caa77767629344dca0ed1160e3692e3ea5113eaf0c8bfd4615
-Size (liblcf-0.6.2.tar.gz) = 600612 bytes
+BLAKE2s (liblcf-0.7.0.tar.gz) = 53479d72b79cc093e444af46f73ba2164251bb16e83f3318a4e6044f036810c2
+SHA512 (liblcf-0.7.0.tar.gz) = 83dcc72adf256f1188f1784e57fdb698c0bc7999da1e05c4a2dc9d300d7b6d75822e59039332a0e0e3e126120a92d354a3353a63d480fb18db02f2bd12a99805
+Size (liblcf-0.7.0.tar.gz) = 666421 bytes
+SHA1 (patch-configure) = 7d5392bed34710af31fef123404ff85446f26aae
