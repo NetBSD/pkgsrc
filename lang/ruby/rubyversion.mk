@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.241 2022/01/14 15:42:08 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.242 2022/01/16 13:56:43 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -10,7 +10,7 @@
 # RUBY_VERSION_DEFAULT
 #	The preferered Ruby version to use.
 #
-#		Possible values: 26 27 30
+#		Possible values: 26 27 30 31
 #		Default: 27
 #
 # RUBY_BUILD_DOCUMENT
@@ -34,13 +34,13 @@
 # RUBY_VERSIONS_ACCEPTED
 #	The Ruby versions that are acceptable for the package.
 #
-#		Possible values: 26 27 30
-#		Default: 27 30 26
+#		Possible values: 26 27 30 31
+#		Default: 27 30 31 26
 #
 # RUBY_VERSIONS_INCOMPATIBLE
 #	The Ruby versions that are incompatible for the package.
 #
-#		Possible values: 26 27 30
+#		Possible values: 26 27 30 31
 #		Default: empty
 #
 # RUBY_NOVERSION
@@ -68,7 +68,7 @@
 # RUBY_VER
 #	Really selected version of ruby.
 #
-#		Possible values: 26 27 30
+#		Possible values: 26 27 30 31
 #
 #	Use this variable in pkgsrc's Makefile
 #
@@ -77,7 +77,7 @@
 #	use RUBY_PKGPREFIX with ruby related packages since you can supply
 #	different binary packages as each version of Ruby.
 #
-#		Possible values: ruby26 ruby27 ruby30
+#		Possible values: ruby26 ruby27 ruby30 ruby31
 #
 # RUBY_ABI_VERSION
 #	Ruby's ABI version.
@@ -106,7 +106,7 @@
 # RUBY_SUFFIX
 #	Extra string for each ruby commands; ruby, irb and so on.
 #
-#		Possible values: 26 27 30
+#		Possible values: 26 27 30 31
 #
 # RUBY_VERSION
 #	Version of Ruby's version.
@@ -216,19 +216,21 @@ RUBY_VERSION_REQD?=	${PKGNAME_REQD:C/ruby([0-9][0-9])-.*/\1/}
 RUBY26_VERSION=		2.6.9
 RUBY27_VERSION=		2.7.5
 RUBY30_VERSION=		3.0.3
+RUBY31_VERSION=		3.1.0
 
 # current API compatible version; used for version of shared library
 RUBY26_API_VERSION=	2.6.0
 RUBY27_API_VERSION=	2.7.0
 RUBY30_API_VERSION=	3.0.0
+RUBY31_API_VERSION=	3.1.0
 
 #
 RUBY_VERSION_DEFAULT?=	27
 
 # supported Ruby's version
-RUBY_VERSIONS_SUPPORTED=	26 27 30
+RUBY_VERSIONS_SUPPORTED=	26 27 30 31
 
-RUBY_VERSIONS_ACCEPTED?=	27 30 26
+RUBY_VERSIONS_ACCEPTED?=	27 30 31 26
 RUBY_VERSIONS_INCOMPATIBLE?=
 
 .if empty(RUBY_VERSIONS_SUPPORTED:M${RUBY_VERSION_DEFAULT})
@@ -472,6 +474,99 @@ RUBY_URI_VER=			0.10.1
 RUBY_WEAKREF_VER=		0.1.1
 RUBY_YAML_VER=			0.1.1
 RUBY_ZLIB_VER=			2.0.0
+
+.elif ${RUBY_VER} == "31"
+RUBY_VERSION=		${RUBY31_VERSION}
+RUBY_ABI_VERSION=	${RUBY_VERSION}
+RUBY_SUFFIX=		${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}
+
+# bundled gems
+RUBY_RUBYGEMS_VER=		3.3.3
+RUBY_ABBREV_VER=		0.1.0
+RUBY_BASE64_VER=		0.1.1
+RUBY_BENCHMARK_VER=		0.2.0
+RUBY_BIGDECIMAL_VER=		3.1.1
+RUBY_BUNDLER_VER=		2.3.3
+RUBY_CGI_VER=			0.3.1
+RUBY_CSV_VER=			3.2.2
+RUBY_DATE_VER=			3.2.2
+RUBY_DEBUG_VER=			1.4.0
+RUBY_DELEGATE_VER=		0.2.0
+RUBY_DID_YOU_MEAN_VER=		1.6.1
+RUBY_DIGEST_VER=		3.1.0
+RUBY_DRB_VER=			2.1.0
+RUBY_ENGLISH_VER=		0.7.1
+RUBY_ERB_VER=			2.2.3
+RUBY_ERROR_HIGHLIGHT_VER=	0.3.0
+RUBY_ETC_VER=			1.3.0
+RUBY_FCNTL_VER=			1.0.1
+RUBY_FIDDLE_VER=		1.1.0
+RUBY_FILEUTILS_VER=		1.6.0
+RUBY_FIND_VER=			0.1.1
+RUBY_FORWARDABLE_VER=		1.3.2
+RUBY_GETOPTLONG_VER=		0.1.1
+RUBY_IO_CONSOLE_VER=		0.5.10
+RUBY_IO_NONBLOCK_VER=		0.1.0
+RUBY_IO_WAIT_VER=		0.2.1
+RUBY_IPADDR_VER=		1.2.3
+RUBY_IRB_VER=			1.4.1
+RUBY_JSON_VER=			2.6.1
+RUBY_LOGGER_VER=		1.5.0
+RUBY_MATRIX_VER=		0.4.2
+RUBY_MINITEST_VER=		5.15.0
+RUBY_MUTEX_M_VER=		0.1.1
+RUBY_NET_FTP_VER=		0.1.3
+RUBY_NET_HTTP_VER=		0.2.0
+RUBY_NET_IMAP_VER=		0.2.2
+RUBY_NET_POP_VER=		0.1.1
+RUBY_NET_PROTOCOL_VER=		0.1.2
+RUBY_NET_SMTP_VER=		0.3.1
+RUBY_NKF_VER=			0.1.1
+RUBY_OBSERVER_VER=		0.1.1
+RUBY_OPEN_URI_VER=		0.2.0
+RUBY_OPEN3_VER=			0.1.1
+RUBY_OPENSSL_VER=		3.0.0
+RUBY_OPTPARSE_VER=		0.2.0
+RUBY_OSTRUCT_VER=		0.5.2
+RUBY_PATHNAME_VER=		0.2.0
+RUBY_POWER_ASSERT_VER=		2.0.1
+RUBY_PP_VER=			0.3.0
+RUBY_PRETTYPRINT_VER=		0.1.1
+RUBY_PRIME_VER=			0.1.2
+RUBY_PSTORE_VER=		0.1.1
+RUBY_PSYCH_VER=			4.0.3
+RUBY_RACC_VER=			1.6.0
+RUBY_RAKE_VER=			13.0.6
+RUBY_RBS_VER=			2.0.0
+RUBY_RDOC_VER=			6.4.0
+RUBY_READLINE_VER=		0.0.3
+RUBY_RELINE_VER=		0.3.0
+RUBY_RESOLV_VER=		0.2.1
+RUBY_RESOLV_REPLACE_VER=	0.1.0
+RUBY_REXML_VER=			3.2.5
+RUBY_RINDA_VER=			0.1.1
+RUBY_RSS_VER=			0.2.9
+RUBY_RUBY2_KEYWORDS_VER=	0.0.5
+RUBY_SECURERANDOM_VER=		0.1.1
+RUBY_SET_VER=			1.0.2
+RUBY_SHELLWORDS_VER=		0.1.0
+RUBY_SINGLETON_VER=		0.1.1
+RUBY_STRINGIO_VER=		3.0.1
+RUBY_STRSCAN_VER=		3.0.1
+RUBY_SYSLOG_VER=		0.1.0
+RUBY_TEMPFILE_VER=		0.1.2
+RUBY_TEST_UNIT_VER=		3.5.3
+RUBY_TIME_VER=			0.2.0
+RUBY_TIMEOUT_VER=		0.2.0
+RUBY_TMPDIR_VER=		0.1.2
+RUBY_TRACER_VER=		0.1.1
+RUBY_TSORT_VER=			0.1.0
+RUBY_TYPEPROF_VER=		0.21.1
+RUBY_UN_VER=			0.2.0
+RUBY_URI_VER=			0.11.0
+RUBY_WEAKREF_VER=		0.1.1
+RUBY_YAML_VER=			0.2.0
+RUBY_ZLIB_VER=			2.1.1
 
 .else
 PKG_FAIL_REASON+=	"Unknown Ruby version specified: ${RUBY_VER}."
