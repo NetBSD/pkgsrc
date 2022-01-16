@@ -1,0 +1,5 @@
+This a meta package including Ruby 3.1 full release.
+
+It includes ruby31-base and ruby31-readline package.
+
+No package should depend on this package directly.
