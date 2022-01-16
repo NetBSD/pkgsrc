@@ -1,20 +1,18 @@
-# $NetBSD: Makefile.common,v 1.45 2021/02/14 14:44:14 taca Exp $
+# $NetBSD: Makefile.common,v 1.46 2022/01/16 14:01:32 taca Exp $
 #
 # Ruby base distribution common definition
 #
 # used by databases/ruby-gdbm/Makefile
 # used by devel/ruby-readline/Makefile
 # used by devel/ruby-mode/Makefile
-# used by devel/ruby-fiddle/Makefile
-# used by lang/ruby25/Makefile
-# used by lang/ruby25-base/Makefile
 # used by lang/ruby26/Makefile
 # used by lang/ruby26-base/Makefile
 # used by lang/ruby27/Makefile
 # used by lang/ruby27-base/Makefile
 # used by lang/ruby30/Makefile
 # used by lang/ruby30-base/Makefile
-# used by x11/ruby-tk/Makefile
+# used by lang/ruby31/Makefile
+# used by lang/ruby31-base/Makefile
 #
 # RUBY_EXTNAME
 #	RUBY_EXTNAME defines name of extension which included in
