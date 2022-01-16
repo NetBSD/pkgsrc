@@ -1,0 +1,15 @@
+bin/bundle @PREFIX@/bin/bundle@RUBY_SUFFIX@
+bin/bundler @PREFIX@/bin/bundler@RUBY_SUFFIX@
+bin/erb @PREFIX@/bin/erb@RUBY_SUFFIX@
+bin/gem @PREFIX@/bin/gem@RUBY_SUFFIX@
+bin/irb @PREFIX@/bin/irb@RUBY_SUFFIX@
+bin/racc @PREFIX@/bin/racc@RUBY_SUFFIX@
+bin/rake @PREFIX@/bin/rake@RUBY_SUFFIX@
+bin/rbs @PREFIX@/bin/rbs@RUBY_SUFFIX@
+bin/rdoc @PREFIX@/bin/rdoc@RUBY_SUFFIX@
+bin/ri @PREFIX@/bin/ri@RUBY_SUFFIX@
+bin/ruby @PREFIX@/bin/@RUBY_NAME@
+bin/typeprof @PREFIX@/bin/typeprof@RUBY_SUFFIX@
+@PKGMANDIR@/man1/erb.1 @PREFIX@/@PKGMANDIR@/man1/erb@RUBY_SUFFIX@.1
+@PKGMANDIR@/man1/irb.1 @PREFIX@/@PKGMANDIR@/man1/irb@RUBY_SUFFIX@.1
+@PKGMANDIR@/man1/ruby.1 @PREFIX@/@PKGMANDIR@/man1/ruby@RUBY_SUFFIX@.1
