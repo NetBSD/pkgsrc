@@ -858,7 +858,7 @@ func (s *Suite) Test_MkAssignChecker_checkRightCategory__regress(c *check.C) {
 		"CATEGORIES=\tregress")
 	t.SetUpPackage("regress/misc-package",
 		"CATEGORIES=\tmisc")
-	t.SetUpCategory("misc")
+	t.SetUpCategory("misc", "")
 	t.FinishSetUp()
 	t.Chdir(".")
 
