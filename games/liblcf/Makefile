@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2021/12/08 16:02:06 adam Exp $
+# $NetBSD: Makefile,v 1.13 2022/01/16 14:32:01 nia Exp $
 
-DISTNAME=	liblcf-0.6.2
-PKGREVISION=	4
+DISTNAME=	liblcf-0.7.0
 CATEGORIES=	games
 MASTER_SITES=	https://easyrpg.org/downloads/player/${PKGVERSION_NOREV}/
 
@@ -26,6 +25,8 @@ SUBST_STAGE.expat=	pre-configure
 SUBST_MESSAGE.expat=	Removing expat version requirement
 SUBST_FILES.expat+=	configure
 SUBST_SED.expat+=	-e 's|expat >= 2.1|expat|g'
+
+PKGCONFIG_OVERRIDE+=	builds/liblcf.pc.in
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
