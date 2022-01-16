@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2021/12/11 14:57:50 tnn Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/01/16 18:06:26 tnn Exp $
 include/gnuradio/dtv/api.h
 include/gnuradio/dtv/atsc_consts.h
 include/gnuradio/dtv/atsc_deinterleaver.h
@@ -10,6 +10,7 @@ include/gnuradio/dtv/atsc_fpll.h
 include/gnuradio/dtv/atsc_fs_checker.h
 include/gnuradio/dtv/atsc_interleaver.h
 include/gnuradio/dtv/atsc_pad.h
+include/gnuradio/dtv/atsc_plinfo.h
 include/gnuradio/dtv/atsc_randomizer.h
 include/gnuradio/dtv/atsc_rs_decoder.h
 include/gnuradio/dtv/atsc_rs_encoder.h
@@ -62,7 +63,7 @@ lib/cmake/gnuradio/gnuradio-dtvConfig.cmake
 lib/cmake/gnuradio/gnuradio-dtvTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-dtvTargets.cmake
 lib/libgnuradio-dtv.so
-lib/libgnuradio-dtv.so.3.9.4
+lib/libgnuradio-dtv.so.3.10.0
 lib/libgnuradio-dtv.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-dtv.pc
 ${PYSITELIB}/gnuradio/dtv/__init__.py

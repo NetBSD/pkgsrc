@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2021/06/27 08:14:45 tnn Exp $
+# $NetBSD: Makefile,v 1.25 2022/01/16 18:06:28 tnn Exp $
 
 META_PACKAGE=	yes
 
@@ -23,6 +23,7 @@ DEPENDS+=	gnuradio-digital-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-digital
 DEPENDS+=	gnuradio-doxygen-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-doxygen
 DEPENDS+=	gnuradio-dtv-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-dtv
 DEPENDS+=	gnuradio-fec-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-fec
+DEPENDS+=	gnuradio-pdu-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-pdu
 DEPENDS+=	gnuradio-qtgui-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-qtgui
 DEPENDS+=	gnuradio-soapy-sdr-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-soapy-sdr
 DEPENDS+=	gnuradio-trellis-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-trellis

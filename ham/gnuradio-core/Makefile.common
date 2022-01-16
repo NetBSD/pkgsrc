@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2021/06/27 08:08:59 tnn Exp $
+# $NetBSD: Makefile.common,v 1.36 2022/01/16 18:06:25 tnn Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -81,8 +81,6 @@ CMAKE_ARGS+=	-DENABLE_GR_BLOCKS=ON
 CMAKE_ARGS+=	-DENABLE_GR_FFT=ON
 CMAKE_ARGS+=	-DENABLE_GR_FILTER=ON
 CMAKE_ARGS+=	-DENABLE_PYTHON=ON
-CMAKE_ARGS+=	-DENABLE_VOLK=ON -DENABLE_INTERNAL_VOLK=OFF
-CMAKE_ARGS+=	-DCMAKE_HAVE_PTHREADS_CREATE=OFF
 
 CMAKE_ARGS+=	-DLIB_SUFFIX=""
 
@@ -93,7 +91,6 @@ CMAKE_ARGS+=	-DCMAKE_INCLUDE_PATH=${PREFIX}/include/portaudio2
 CMAKE_ARGS+=	-DCMAKE_LIBRARY_PATH=${PREFIX}/lib/portaudio2
 CMAKE_ARGS+=	-DCMAKE_INSTALL_RPATH=${PREFIX}/lib:${PREFIX}/lib/portaudio2
 CMAKE_ARGS+=	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=TRUE
-CMAKE_ARGS+=	-DLIBUSB_INCLUDE_DIR=${PREFIX}/include/libusb-1.0
 CMAKE_ARGS+=	-Dpybind11_DIR=${PREFIX}/${PYSITELIB}/pybind11/share/cmake/pybind11
 
 CMAKE_ARGS+=	-DGR_LIBRARY_DIR=${PREFIX}/lib
@@ -140,15 +137,17 @@ do-install:
 .include	"../../devel/boost-libs/buildlink3.mk"
 .include	"../../devel/cppunit/buildlink3.mk"
 .include	"../../devel/gmp/buildlink3.mk"
+.include	"../../devel/spdlog/buildlink3.mk"
 BUILDLINK_API_DEPENDS.py-pybind11+=	${PYPKGPREFIX}-pybind11>=2.6.0
 .include	"../../devel/py-pybind11/buildlink3.mk"
 .include	"../../graphics/cairo/buildlink3.mk"
 .include	"../../graphics/cairo-gobject/buildlink3.mk"
+# FIXME should be optional
+.include	"../../lang/libunwind/buildlink3.mk"
 .include	"../../lang/python/application.mk"
 .include	"../../math/py-numpy/buildlink3.mk"
 .include	"../../math/fftw/buildlink3.mk"
 .include	"../../math/gsl/buildlink3.mk"
 .include	"../../math/volk/buildlink3.mk"
-.include	"../../textproc/log4cpp/buildlink3.mk"
 .include	"../../textproc/icu/buildlink3.mk"
 .include	"../../x11/gtk3/buildlink3.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2021/12/11 14:57:51 tnn Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/01/16 18:06:27 tnn Exp $
 include/gnuradio/trellis/api.h
 include/gnuradio/trellis/base.h
 include/gnuradio/trellis/calc_metric.h
@@ -25,7 +25,7 @@ lib/cmake/gnuradio/gnuradio-trellisConfig.cmake
 lib/cmake/gnuradio/gnuradio-trellisTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-trellisTargets.cmake
 lib/libgnuradio-trellis.so
-lib/libgnuradio-trellis.so.3.9.4
+lib/libgnuradio-trellis.so.3.10.0
 lib/libgnuradio-trellis.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-trellis.pc
 ${PYSITELIB}/gnuradio/trellis/__init__.py

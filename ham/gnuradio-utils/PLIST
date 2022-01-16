@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/04/07 16:14:09 tnn Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/01/16 18:06:27 tnn Exp $
 bin/gr_modtool
 bin/gr_plot
 bin/gr_plot_const
@@ -172,12 +172,11 @@ ${PYSITELIB}/gnuradio/pyqt_plot.py
 ${PYSITELIB}/gnuradio/pyqt_plot.pyc
 ${PYSITELIB}/gnuradio/pyqt_plot.pyo
 share/gnuradio/examples/modtool.conf
-share/gnuradio/modtool/templates/gr-newmod/.gitignore
 share/gnuradio/modtool/templates/gr-newmod/CMakeLists.txt
 share/gnuradio/modtool/templates/gr-newmod/MANIFEST.md
 share/gnuradio/modtool/templates/gr-newmod/apps/CMakeLists.txt
 share/gnuradio/modtool/templates/gr-newmod/cmake/Modules/CMakeParseArgumentsCopy.cmake
-share/gnuradio/modtool/templates/gr-newmod/cmake/Modules/howtoConfig.cmake
+share/gnuradio/modtool/templates/gr-newmod/cmake/Modules/gnuradio-howtoConfig.cmake
 share/gnuradio/modtool/templates/gr-newmod/cmake/Modules/targetConfig.cmake.in
 share/gnuradio/modtool/templates/gr-newmod/cmake/cmake_uninstall.cmake.in
 share/gnuradio/modtool/templates/gr-newmod/docs/CMakeLists.txt
@@ -193,20 +192,22 @@ share/gnuradio/modtool/templates/gr-newmod/docs/doxygen/doxyxml/generated/compou
 share/gnuradio/modtool/templates/gr-newmod/docs/doxygen/doxyxml/generated/index.py
 share/gnuradio/modtool/templates/gr-newmod/docs/doxygen/doxyxml/generated/indexsuper.py
 share/gnuradio/modtool/templates/gr-newmod/docs/doxygen/doxyxml/text.py
+share/gnuradio/modtool/templates/gr-newmod/docs/doxygen/other/doxypy.py
 share/gnuradio/modtool/templates/gr-newmod/docs/doxygen/other/group_defs.dox
 share/gnuradio/modtool/templates/gr-newmod/docs/doxygen/other/main_page.dox
 share/gnuradio/modtool/templates/gr-newmod/docs/doxygen/pydoc_macros.h
 share/gnuradio/modtool/templates/gr-newmod/docs/doxygen/update_pydoc.py
 share/gnuradio/modtool/templates/gr-newmod/examples/README
 share/gnuradio/modtool/templates/gr-newmod/grc/CMakeLists.txt
-share/gnuradio/modtool/templates/gr-newmod/include/howto/CMakeLists.txt
-share/gnuradio/modtool/templates/gr-newmod/include/howto/api.h
+share/gnuradio/modtool/templates/gr-newmod/include/gnuradio/howto/CMakeLists.txt
+share/gnuradio/modtool/templates/gr-newmod/include/gnuradio/howto/api.h
 share/gnuradio/modtool/templates/gr-newmod/lib/CMakeLists.txt
-share/gnuradio/modtool/templates/gr-newmod/python/CMakeLists.txt
-share/gnuradio/modtool/templates/gr-newmod/python/__init__.py
-share/gnuradio/modtool/templates/gr-newmod/python/bindings/CMakeLists.txt
-share/gnuradio/modtool/templates/gr-newmod/python/bindings/README.md
-share/gnuradio/modtool/templates/gr-newmod/python/bindings/bind_oot_file.py
-share/gnuradio/modtool/templates/gr-newmod/python/bindings/docstrings/README.md
-share/gnuradio/modtool/templates/gr-newmod/python/bindings/header_utils.py
-share/gnuradio/modtool/templates/gr-newmod/python/bindings/python_bindings.cc
+share/gnuradio/modtool/templates/gr-newmod/python/howto/.gitignore
+share/gnuradio/modtool/templates/gr-newmod/python/howto/CMakeLists.txt
+share/gnuradio/modtool/templates/gr-newmod/python/howto/__init__.py
+share/gnuradio/modtool/templates/gr-newmod/python/howto/bindings/CMakeLists.txt
+share/gnuradio/modtool/templates/gr-newmod/python/howto/bindings/README.md
+share/gnuradio/modtool/templates/gr-newmod/python/howto/bindings/bind_oot_file.py
+share/gnuradio/modtool/templates/gr-newmod/python/howto/bindings/docstrings/README.md
+share/gnuradio/modtool/templates/gr-newmod/python/howto/bindings/header_utils.py
+share/gnuradio/modtool/templates/gr-newmod/python/howto/bindings/python_bindings.cc

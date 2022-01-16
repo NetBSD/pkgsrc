@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2021/12/11 14:57:50 tnn Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/01/16 18:06:26 tnn Exp $
 include/gnuradio/network/api.h
 include/gnuradio/network/packet_headers.h
+include/gnuradio/network/socket_pdu.h
 include/gnuradio/network/tcp_sink.h
+include/gnuradio/network/tuntap_pdu.h
 include/gnuradio/network/udp_header_types.h
 include/gnuradio/network/udp_sink.h
 include/gnuradio/network/udp_source.h
@@ -9,7 +11,7 @@ lib/cmake/gnuradio/gnuradio-networkConfig.cmake
 lib/cmake/gnuradio/gnuradio-networkTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-networkTargets.cmake
 lib/libgnuradio-network.so
-lib/libgnuradio-network.so.3.9.4
+lib/libgnuradio-network.so.3.10.0
 lib/libgnuradio-network.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-network.pc
 ${PYSITELIB}/gnuradio/network/__init__.py
@@ -31,7 +33,9 @@ share/gnuradio/examples/network/test_udp_sink_seq.grc
 share/gnuradio/examples/network/test_udp_source.grc
 share/gnuradio/examples/network/test_udp_source_ipv6.grc
 share/gnuradio/examples/network/test_udp_source_seq.grc
+share/gnuradio/grc/blocks/network_socket_pdu.block.yml
 share/gnuradio/grc/blocks/network_tcp_sink.block.yml
 share/gnuradio/grc/blocks/network_tcp_source.block.yml
+share/gnuradio/grc/blocks/network_tuntap_pdu.block.yml
 share/gnuradio/grc/blocks/network_udp_sink.block.yml
 share/gnuradio/grc/blocks/network_udp_source.block.yml
