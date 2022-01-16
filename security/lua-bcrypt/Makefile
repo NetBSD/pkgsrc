@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2020/07/14 11:45:23 nia Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/16 13:41:13 nia Exp $
 
-DISTNAME=	lua-bcrypt-2.1.6
-PKGNAME=	${DISTNAME:S/lua-/${LUA_PKGPREFIX}-/1}
+DISTNAME=	lua-bcrypt-2.2-1
+PKGNAME=	${DISTNAME:S/lua-/${LUA_PKGPREFIX}-/1:S/-1/.1/g}
 CATEGORIES=	security lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mikejsavage/}
 GITHUB_PROJECT=	lua-bcrypt
-GITHUB_TAG=	v2.1-6
+GITHUB_TAG=	v2.2-1
 
 MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://github.com/mikejsavage/lua-bcrypt
@@ -14,14 +14,19 @@ LICENSE=	isc
 
 USE_TOOLS+=	gmake
 
-CFLAGS.SunOS+=	-Du_int8_t=uint8_t
-CFLAGS.SunOS+=	-Du_int16_t=uint16_t
-CFLAGS.SunOS+=	-Du_int32_t=uint32_t
+BUILD_DIRS+=	src
 
 INSTALLATION_DIRS+=	${LUA_CDIR}
 
+pre-build:
+	${CP} -f ${FILESDIR}/Makefile ${WRKSRC}/src/Makefile
+
 do-install:
-	${INSTALL_LIB} ${WRKSRC}/bcrypt.so ${DESTDIR}${PREFIX}/${LUA_CDIR}
+	${INSTALL_LIB} ${WRKSRC}/src/bcrypt.so ${DESTDIR}${PREFIX}/${LUA_CDIR}
+
+do-test:
+	cd ${WRKSRC}/src && \
+	    ${LUA_INTERPRETER} ${WRKSRC}/test-digest.lua
 
 .include "../../lang/lua/module.mk"
 .include "../../mk/bsd.prefs.mk"

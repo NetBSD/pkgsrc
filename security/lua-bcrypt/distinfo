@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:17:18 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/01/16 13:41:13 nia Exp $
 
-BLAKE2s (lua-bcrypt-2.1.6.tar.gz) = ae26f73b1681ec469ef3b0e9c95a3359dd5aab31427ebbc1819871854e334d44
-SHA512 (lua-bcrypt-2.1.6.tar.gz) = d2b4077e5c0e9fbdbd2c7d9f1bed6c99537198ead52079b56c1e4f1d9af151551458f0515e51729d187ff9de9190ff75aaac8fce08a67558215be6fb0c3619fc
-Size (lua-bcrypt-2.1.6.tar.gz) = 35882 bytes
+BLAKE2s (lua-bcrypt-2.2-1.tar.gz) = a69df3c11f0fcc3ae098664b2ea0d3509b5edbd84e670af3d33340a18ab8af93
+SHA512 (lua-bcrypt-2.2-1.tar.gz) = 58e8c9624770b0b4f6a7a3dc872920c0fb04ecc4e3eca5ca9062266b2908b6d85d40498f5026c2624ad106c19ecbf51c7313d81d47fd2b08803503e98f6ce598
+Size (lua-bcrypt-2.2-1.tar.gz) = 17265 bytes
+SHA1 (patch-src_ggentropy.c) = e79117f2e9644b1136f70e3c545b1e41f6cbcca2
