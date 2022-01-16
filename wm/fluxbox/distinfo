@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.39 2022/01/07 17:32:12 gutteridge Exp $
+$NetBSD: distinfo,v 1.40 2022/01/16 20:10:50 gutteridge Exp $
 
 BLAKE2s (fluxbox-1.3.7.tar.bz2) = c3dfa1e8b204c4874ba372af05402b7a277bb1ebac2e7cc15c92c608ea26bdf7
 SHA512 (fluxbox-1.3.7.tar.bz2) = c40cc765f5d542210e18dca21b98b97a048c6685b605a68e2c64f4e886329f4e6d3a3a7e76b3ca0ce488242f38d0ee2a4d6dfebc9ce97d37c68f84c3948aac8c
@@ -12,5 +12,6 @@ SHA1 (patch-bg) = 8f4decdb2ff611dcc1af64145801fac35f83e25a
 SHA1 (patch-bj) = baf714907cce1f71e69f85c80d8f98efeeeaf86f
 SHA1 (patch-bk) = ae0c9857dd0cd203c8ae3f4bf5a0c7126cf48c92
 SHA1 (patch-data_keys) = 79820ca4fd89227e24ae71bb1278f49b3930af85
+SHA1 (patch-src_FbTk_Font.cc) = ae68bbcee78bc58c1021012e5dd4f138394f2956
 SHA1 (patch-src_fluxbox.cc) = a652d685cd80896b45bfa7b2dfd5e98b2561e326
 SHA1 (patch-util_fluxbox-remote.cc) = fa2389ad36f41a6080a43ad1755cd5ad904a27cf
