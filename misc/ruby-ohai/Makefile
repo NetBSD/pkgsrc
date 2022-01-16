@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2021/12/19 06:35:51 taca Exp $
+# $NetBSD: Makefile,v 1.38 2022/01/16 14:29:47 taca Exp $
 
 DISTNAME=	ohai-17.9.0
 CATEGORIES=	misc
@@ -23,7 +23,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-wmi-lite>=1.0<2:../../devel/ruby-wmi-lite
 
 USE_LANGUAGES=	# none
 
-RUBY_VERSIONS_ACCEPTED=	27 30
+RUBY_VERSIONS_ACCEPTED=	27 30 31
 RUBYGEM_OPTIONS+=	--format-executable
 
 .include "../../lang/ruby/gem.mk"
