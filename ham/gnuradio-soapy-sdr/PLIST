@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/12/11 14:57:51 tnn Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/01/16 18:06:26 tnn Exp $
 include/gnuradio/soapy/api.h
 include/gnuradio/soapy/block.h
 include/gnuradio/soapy/sink.h
@@ -8,7 +8,7 @@ lib/cmake/gnuradio/gnuradio-soapyConfig.cmake
 lib/cmake/gnuradio/gnuradio-soapyTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-soapyTargets.cmake
 lib/libgnuradio-soapy.so
-lib/libgnuradio-soapy.so.3.9.4
+lib/libgnuradio-soapy.so.3.10.0
 lib/libgnuradio-soapy.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-soapy.pc
 ${PYSITELIB}/gnuradio/soapy/__init__.py

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/12/11 14:57:51 tnn Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/01/16 18:06:27 tnn Exp $
 include/gnuradio/zeromq/api.h
 include/gnuradio/zeromq/pub_msg_sink.h
 include/gnuradio/zeromq/pub_sink.h
@@ -16,7 +16,7 @@ lib/cmake/gnuradio/gnuradio-zeromqConfig.cmake
 lib/cmake/gnuradio/gnuradio-zeromqTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-zeromqTargets.cmake
 lib/libgnuradio-zeromq.so
-lib/libgnuradio-zeromq.so.3.9.4
+lib/libgnuradio-zeromq.so.3.10.0
 lib/libgnuradio-zeromq.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-zeromq.pc
 ${PYSITELIB}/gnuradio/zeromq/__init__.py

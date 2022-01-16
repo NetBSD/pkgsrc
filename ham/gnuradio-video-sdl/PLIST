@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2021/12/11 14:57:51 tnn Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/01/16 18:06:27 tnn Exp $
 include/gnuradio/video_sdl/api.h
 include/gnuradio/video_sdl/sink_s.h
 include/gnuradio/video_sdl/sink_uc.h
@@ -6,7 +6,7 @@ lib/cmake/gnuradio/gnuradio-video-sdlConfig.cmake
 lib/cmake/gnuradio/gnuradio-video-sdlTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-video-sdlTargets.cmake
 lib/libgnuradio-video-sdl.so
-lib/libgnuradio-video-sdl.so.3.9.4
+lib/libgnuradio-video-sdl.so.3.10.0
 lib/libgnuradio-video-sdl.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-video-sdl.pc
 ${PYSITELIB}/gnuradio/video_sdl/__init__.py

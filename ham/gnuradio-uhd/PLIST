@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/12/11 14:57:51 tnn Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/01/16 18:06:27 tnn Exp $
 bin/uhd_fft
 bin/uhd_rx_cfile
 bin/uhd_rx_nogui
@@ -13,7 +13,7 @@ lib/cmake/gnuradio/gnuradio-uhdConfig.cmake
 lib/cmake/gnuradio/gnuradio-uhdTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-uhdTargets.cmake
 lib/libgnuradio-uhd.so
-lib/libgnuradio-uhd.so.3.9.4
+lib/libgnuradio-uhd.so.3.10.0
 lib/libgnuradio-uhd.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-uhd.pc
 ${PYSITELIB}/gnuradio/uhd/__init__.py
