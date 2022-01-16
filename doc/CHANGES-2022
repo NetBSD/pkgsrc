@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.269 2022/01/16 23:07:56 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.270 2022/01/16 23:09:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -377,3 +377,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/readline to 8.1.2 [wiz 2022-01-16]
 	Updated security/py-pip-audit to 1.1.2 [wiz 2022-01-16]
 	Updated math/double-conversion to 3.2.0 [wiz 2022-01-16]
+	Updated benchmarks/google-benchmark to 1.6.1 [wiz 2022-01-16]
