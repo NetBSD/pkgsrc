@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.271 2022/01/16 23:11:12 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.272 2022/01/16 23:51:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -379,3 +379,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/double-conversion to 3.2.0 [wiz 2022-01-16]
 	Updated benchmarks/google-benchmark to 1.6.1 [wiz 2022-01-16]
 	Updated www/neon to 0.32.2 [wiz 2022-01-16]
+	Updated devel/py-mercurial to 6.0.1 [wiz 2022-01-16]
