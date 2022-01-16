@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.261 2022/01/16 19:15:09 rillig Exp $
+$NetBSD: CHANGES-2022,v 1.262 2022/01/16 20:11:14 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -369,3 +369,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated ham/gnuradio-wavelet to 3.10.0.0 [tnn 2022-01-16]
 	Updated ham/gnuradio-zeromq to 3.10.0.0 [tnn 2022-01-16]
 	Updated pkgtools/pkglint to 21.4.2 [rillig 2022-01-16]
+	Updated wm/fluxbox to 1.3.7nb7 [gutteridge 2022-01-16]
