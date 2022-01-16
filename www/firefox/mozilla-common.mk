@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.221 2022/01/15 15:57:37 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.222 2022/01/16 13:54:51 tnn Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -219,6 +219,7 @@ RUST_REQ=	1.53.0
 #.include "../../textproc/hunspell/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pixman+= pixman>=0.25.2
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
