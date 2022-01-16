@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 11:12:06 nia Exp $
+$NetBSD: distinfo,v 1.15 2022/01/16 04:52:09 fox Exp $
 
-BLAKE2s (foliate-2.6.3.tar.gz) = ce1f7163015478a5faf7bbb5991ee2b0125554fd6f82bf3198b972589b815296
-SHA512 (foliate-2.6.3.tar.gz) = b3dd5bc5a02d3f2210b0c7376426a7ea1668a81fa64fea179da2ab1d852778414cce45171143814d2010d6c03b0287dbbc512884107774ec211e24c6ed8127cb
-Size (foliate-2.6.3.tar.gz) = 4822251 bytes
+BLAKE2s (foliate-2.6.4.tar.gz) = fe46223a9ffe020021adc32148c43f61a5d033bfc00325f6932df9cd40542c44
+SHA512 (foliate-2.6.4.tar.gz) = af58efa2c33451617dbf7327b56551557d762ac80f1b489d5da1c5a46ebbfe329052149deb8b2f4c7729a7fd46deccd5500fd96c0a662b731c871c1ad8061cd3
+Size (foliate-2.6.4.tar.gz) = 4824560 bytes
 SHA1 (patch-src_assets_KindleUnpack_kindleunpack.py) = 2b558fe842669982aec6087e9ce1c72f1fc52315
 SHA1 (patch-src_epubView.js) = de7ab2f79d0d7b6eb379686b6091f6f7bfda95e2
