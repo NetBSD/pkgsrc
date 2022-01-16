@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.67 2021/10/26 10:15:30 nia Exp $
+$NetBSD: distinfo,v 1.68 2022/01/16 22:50:38 wiz Exp $
 
-BLAKE2s (libuv-1.42.0.tar.gz) = dd0738adee58974ab67853e15c0c3d543c63844aefef1a1f3b9b94b5c8a41d69
-SHA512 (libuv-1.42.0.tar.gz) = 29982c975fccb99dcf28c8cc0f9fe9f15a0c546778b0723596a790021441b8be1ccece17f63319b5a1f0ccda8a846c0b544f9259d3482e84e14138461a0d882b
-Size (libuv-1.42.0.tar.gz) = 1293478 bytes
+BLAKE2s (libuv-1.43.0.tar.gz) = d058d220ac448170de1c2dd554e0ef0e6c362fddf181509ba8d3d416398ae715
+SHA512 (libuv-1.43.0.tar.gz) = 66ee11f8f6fc1313c432858572789cf67acd6364b29a06c73323ab20626e2d6e3d3dcea748cf5d9d4368b40ad7fe0d5fd35e9369c22e531db523703f005248d3
+Size (libuv-1.43.0.tar.gz) = 1295972 bytes
 SHA1 (patch-autogen.sh) = a5f48189bfb17624c545a80626ea311b7755d232
 SHA1 (patch-src_unix_fs.c) = d5afe699254210d9724bf2d02ea4563a92666d4f
 SHA1 (patch-src_unix_netbsd.c) = 071a2a853f9a73dc72e24d63316aa21b28669469
