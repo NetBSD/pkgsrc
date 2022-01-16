@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.64 2022/01/04 20:53:17 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2022/01/16 23:51:14 wiz Exp $
 #
 # Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
 
 DISTNAME=	mercurial-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel scm
 MASTER_SITES=	https://www.mercurial-scm.org/release/
 
@@ -28,13 +27,11 @@ INSTALLATION_DIRS+=	share/doc/mercurial
 .include "options.mk"
 
 USE_TOOLS+=		bash:test
-# Known test failures as of 6.0
+# Known test failures as of 6.0.1
 # test-removeemptydirs.t
 # https://bz.mercurial-scm.org/show_bug.cgi?id=6587
-# test-fix.t
-# https://phab.mercurial-scm.org/D11816
 #
-# Ran 898 tests, 81 skipped, 2 failed.
+# Ran 899 tests, 81 skipped, 1 failed.
 
 TEST_TARGET=		tests
 TEST_MAKE_FLAGS+=	PYTHON=${PYTHONBIN} TESTFLAGS=${_MAKE_JOBS:Q}

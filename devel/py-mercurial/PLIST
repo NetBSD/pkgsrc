@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2022/01/01 17:33:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.39 2022/01/16 23:51:14 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgdemandimport/__init__.py
 ${PYSITELIB}/hgdemandimport/__init__.pyc
@@ -711,6 +711,7 @@ ${PYSITELIB}/mercurial/helptext/merge-tools.txt
 ${PYSITELIB}/mercurial/helptext/pager.txt
 ${PYSITELIB}/mercurial/helptext/patterns.txt
 ${PYSITELIB}/mercurial/helptext/phases.txt
+${PYSITELIB}/mercurial/helptext/rust.txt
 ${PYSITELIB}/mercurial/helptext/revisions.txt
 ${PYSITELIB}/mercurial/helptext/scripting.txt
 ${PYSITELIB}/mercurial/helptext/subrepos.txt
