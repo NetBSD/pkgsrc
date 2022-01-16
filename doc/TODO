@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21425 2022/01/16 23:06:39 wiz Exp $
+$NetBSD: TODO,v 1.21426 2022/01/16 23:07:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -630,7 +630,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o doclifter-2.19
 	o dolphin-5.0
 	o dosbox-x-0.83.12
-	o double-conversion-3.2.0
 	o drawpile-2.1.20
 	o drivel-3.0.5
 	o drupal-9.2.2
