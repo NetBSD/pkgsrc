@@ -105,25 +105,25 @@ func invalidCharacters(s string, valid *textproc.ByteSet) string {
 	var unis strings.Builder
 
 	for _, r := range s {
-		switch {
-		case r == rune(byte(r)) && valid.Contains(byte(r)):
+		if r == rune(byte(r)) && valid.Contains(byte(r)) {
 			continue
-		case '!' <= r && r <= '~':
+		}
+		if unis.Len() > 0 {
 			unis.WriteByte(' ')
+		}
+		switch {
+		case '!' <= r && r <= '~':
 			unis.WriteByte(byte(r))
 		case r == ' ':
-			unis.WriteString(" space")
+			unis.WriteString("space")
 		case r == '\t':
-			unis.WriteString(" tab")
+			unis.WriteString("tab")
 		default:
-			_, _ = fmt.Fprintf(&unis, " %U", r)
+			_, _ = fmt.Fprintf(&unis, "%U", r)
 		}
 	}
 
-	if unis.Len() == 0 {
-		return ""
-	}
-	return unis.String()[1:]
+	return unis.String()
 }
 
 // intern returns an independent copy of the given string.

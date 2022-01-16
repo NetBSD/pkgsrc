@@ -334,7 +334,7 @@ func (p *Pkglint) checkMode(dirent CurrPath, mode os.FileMode) {
 	case "../..":
 		p.checkdirPackage(dir)
 	case "..":
-		CheckdirCategory(dir)
+		CheckdirCategory(dir, G.Recursive)
 	case ".":
 		CheckdirToplevel(dir)
 	default:
@@ -351,6 +351,36 @@ func (p *Pkglint) checkdirPackage(dir CurrPath) {
 
 	pkg := NewPackage(dir)
 	pkg.Check()
+
+	pkgBasedir := p.Abs(dir).Base()
+	CheckPackageDirCollision(pkg.File(".."), pkgBasedir)
+	p.checkWipPackageDirCollision(pkg, pkgBasedir)
+}
+
+// checkWipPackageDirCollision checks that the package directory of a
+// pkgsrc-wip package doesn't create a collision on a case-insensitive
+// file system when it will be imported into main pkgsrc.
+func (p *Pkglint) checkWipPackageDirCollision(pkg *Package, pkgBasedir RelPath) {
+	if !p.Wip {
+		return
+	}
+	categories := pkg.vars.FirstDefinition("CATEGORIES")
+	if categories == nil {
+		return
+	}
+	fields := categories.Fields()
+	if len(fields) == 0 {
+		return
+	}
+	path := NewPath(fields[0])
+	if path.IsAbs() {
+		return
+	}
+	categoryDir := pkg.File("../..").JoinClean(NewRelPath(path))
+	if !categoryDir.IsDir() {
+		return
+	}
+	CheckPackageDirCollision(categoryDir, pkgBasedir)
 }
 
 // Returns the pkgsrc top-level directory, relative to the given directory.
