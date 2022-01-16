@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/12/11 14:57:51 tnn Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/01/16 18:06:27 tnn Exp $
 include/gnuradio/wavelet/api.h
 include/gnuradio/wavelet/squash_ff.h
 include/gnuradio/wavelet/wavelet_ff.h
@@ -7,7 +7,7 @@ lib/cmake/gnuradio/gnuradio-waveletConfig.cmake
 lib/cmake/gnuradio/gnuradio-waveletTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-waveletTargets.cmake
 lib/libgnuradio-wavelet.so
-lib/libgnuradio-wavelet.so.3.9.4
+lib/libgnuradio-wavelet.so.3.10.0
 lib/libgnuradio-wavelet.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-wavelet.pc
 ${PYSITELIB}/gnuradio/wavelet/__init__.py

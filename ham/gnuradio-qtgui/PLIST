@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2021/12/11 14:57:51 tnn Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/01/16 18:06:26 tnn Exp $
 include/gnuradio/qtgui/ConstellationDisplayPlot.h
 include/gnuradio/qtgui/DisplayPlot.h
 include/gnuradio/qtgui/EyeDisplayPlot.h
@@ -54,7 +54,7 @@ lib/cmake/gnuradio/gnuradio-qtguiConfig.cmake
 lib/cmake/gnuradio/gnuradio-qtguiTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-qtguiTargets.cmake
 lib/libgnuradio-qtgui.so
-lib/libgnuradio-qtgui.so.3.9.4
+lib/libgnuradio-qtgui.so.3.10.0
 lib/libgnuradio-qtgui.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-qtgui.pc
 ${PYSITELIB}/gnuradio/qtgui/__init__.py

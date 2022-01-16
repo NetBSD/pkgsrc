@@ -1,14 +1,14 @@
-$NetBSD: patch-gnuradio-runtime_lib_constants.cc.in,v 1.2 2021/12/11 14:57:50 tnn Exp $
+$NetBSD: patch-gnuradio-runtime_lib_constants.cc.in,v 1.3 2022/01/16 18:06:25 tnn Exp $
 
 Override broken PREFIX detection.
 
---- gnuradio-runtime/lib/constants.cc.in.orig	2021-10-31 14:28:27.000000000 +0000
+--- gnuradio-runtime/lib/constants.cc.in.orig	2022-01-14 15:27:04.000000000 +0000
 +++ gnuradio-runtime/lib/constants.cc.in
-@@ -28,6 +28,7 @@ const std::string prefix()
+@@ -27,6 +27,7 @@ const std::string prefix()
      if (prefix != NULL)
          return prefix;
  
 +    return "@PREFIX@";
      path prefix_rel_lib = "@prefix_relative_to_lib@";
-     path gr_runtime_lib_path = boost::dll::this_line_location();
-     // Ensure that the lib path is absolute (see next comment)
+     path gr_runtime_lib_path = boost::dll::this_line_location().string();
+     // Canonize before decomposing path so result is reliable and without symlinks

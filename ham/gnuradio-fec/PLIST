@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2021/12/11 14:57:50 tnn Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/01/16 18:06:26 tnn Exp $
 bin/polar_channel_construction
 include/gnuradio/fec/alist.h
 include/gnuradio/fec/api.h
@@ -54,7 +54,7 @@ lib/cmake/gnuradio/gnuradio-fecConfig.cmake
 lib/cmake/gnuradio/gnuradio-fecTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-fecTargets.cmake
 lib/libgnuradio-fec.so
-lib/libgnuradio-fec.so.3.9.4
+lib/libgnuradio-fec.so.3.10.0
 lib/libgnuradio-fec.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-fec.pc
 ${PYSITELIB}/gnuradio/fec/LDPC/Generate_LDPC_matrix.py

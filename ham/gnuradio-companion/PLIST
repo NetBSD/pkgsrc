@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2021/12/11 14:57:49 tnn Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/01/16 18:06:25 tnn Exp $
 bin/gnuradio-companion
 bin/grcc
 ${PYSITELIB}/gnuradio/grc/__init__.py
@@ -418,10 +418,6 @@ share/gnuradio/grc/blocks/blocks_or_xx.block.yml
 share/gnuradio/grc/blocks/blocks_pack_k_bits_bb.block.yml
 share/gnuradio/grc/blocks/blocks_packed_to_unpacked_xx.block.yml
 share/gnuradio/grc/blocks/blocks_patterned_interleaver.block.yml
-share/gnuradio/grc/blocks/blocks_pdu_filter.block.yml
-share/gnuradio/grc/blocks/blocks_pdu_remove.block.yml
-share/gnuradio/grc/blocks/blocks_pdu_set.block.yml
-share/gnuradio/grc/blocks/blocks_pdu_to_tagged_stream.block.yml
 share/gnuradio/grc/blocks/blocks_peak_detector2_fb.block.yml
 share/gnuradio/grc/blocks/blocks_peak_detector_xb.block.yml
 share/gnuradio/grc/blocks/blocks_phase_shift.block.yml
@@ -429,7 +425,6 @@ share/gnuradio/grc/blocks/blocks_plateau_detector_fb.block.yml
 share/gnuradio/grc/blocks/blocks_probe_rate.block.yml
 share/gnuradio/grc/blocks/blocks_probe_signal_vx.block.yml
 share/gnuradio/grc/blocks/blocks_probe_signal_x.block.yml
-share/gnuradio/grc/blocks/blocks_random_pdu.block.yml
 share/gnuradio/grc/blocks/blocks_regenerate_bb.block.yml
 share/gnuradio/grc/blocks/blocks_repack_bits_bb.block.yml
 share/gnuradio/grc/blocks/blocks_repeat.block.yml
@@ -440,7 +435,6 @@ share/gnuradio/grc/blocks/blocks_selector.block.yml
 share/gnuradio/grc/blocks/blocks_short_to_char.block.yml
 share/gnuradio/grc/blocks/blocks_short_to_float.block.yml
 share/gnuradio/grc/blocks/blocks_skiphead.block.yml
-share/gnuradio/grc/blocks/blocks_socket_pdu.block.yml
 share/gnuradio/grc/blocks/blocks_stream_demux.block.yml
 share/gnuradio/grc/blocks/blocks_stream_mux.block.yml
 share/gnuradio/grc/blocks/blocks_stream_to_streams.block.yml
@@ -459,17 +453,12 @@ share/gnuradio/grc/blocks/blocks_tagged_file_sink.block.yml
 share/gnuradio/grc/blocks/blocks_tagged_stream_align.block.yml
 share/gnuradio/grc/blocks/blocks_tagged_stream_multiply_length.block.yml
 share/gnuradio/grc/blocks/blocks_tagged_stream_mux.block.yml
-share/gnuradio/grc/blocks/blocks_tagged_stream_to_pdu.block.yml
 share/gnuradio/grc/blocks/blocks_tags_strobe.block.yml
-share/gnuradio/grc/blocks/blocks_tcp_server_sink.block.yml
 share/gnuradio/grc/blocks/blocks_test_tag_variable_rate_ff.block.yml
 share/gnuradio/grc/blocks/blocks_threshold_ff.block.yml
 share/gnuradio/grc/blocks/blocks_throttle.block.yml
 share/gnuradio/grc/blocks/blocks_transcendental.block.yml
-share/gnuradio/grc/blocks/blocks_tuntap_pdu.block.yml
 share/gnuradio/grc/blocks/blocks_uchar_to_float.block.yml
-share/gnuradio/grc/blocks/blocks_udp_sink.block.yml
-share/gnuradio/grc/blocks/blocks_udp_source.block.yml
 share/gnuradio/grc/blocks/blocks_unpack_k_bits_bb.block.yml
 share/gnuradio/grc/blocks/blocks_unpacked_to_packed_xx.block.yml
 share/gnuradio/grc/blocks/blocks_var_to_msg.block.yml
@@ -506,7 +495,6 @@ share/gnuradio/grc/blocks/filter_iir_filter_xxx.block.yml
 share/gnuradio/grc/blocks/filter_interp_fir_filter_xxx.block.yml
 share/gnuradio/grc/blocks/filter_ival_decimator.block.yml
 share/gnuradio/grc/blocks/filter_low_pass_filter.block.yml
-share/gnuradio/grc/blocks/filter_mmse_interpolator_xx.block.yml
 share/gnuradio/grc/blocks/filter_mmse_resampler_xx.block.yml
 share/gnuradio/grc/blocks/filter_pfb_arb_resampler.block.yml
 share/gnuradio/grc/blocks/filter_pfb_channelizer.block.yml

@@ -1,0 +1,15 @@
+$NetBSD: patch-gnuradio-runtime_lib_CMakeLists.txt,v 1.1 2022/01/16 18:06:25 tnn Exp $
+
+Disable use of precompiled headers; it doesn't play nice with pkgsrc nor ccache.
+
+--- gnuradio-runtime/lib/CMakeLists.txt.orig	2022-01-14 15:27:04.000000000 +0000
++++ gnuradio-runtime/lib/CMakeLists.txt
+@@ -171,7 +171,7 @@ target_compile_definitions(gnuradio-runt
+ # constants.cc includes boost::dll headers, force them to use std::filesystem
+ target_compile_definitions(gnuradio-runtime PRIVATE BOOST_DLL_USE_STD_FS)
+ 
+-if(${CMAKE_VERSION} VERSION_GREATER_EQUAL "3.16.0")
++if(false AND ${CMAKE_VERSION} VERSION_GREATER_EQUAL "3.16.0")
+   target_precompile_headers(
+     gnuradio-runtime
+     PRIVATE
