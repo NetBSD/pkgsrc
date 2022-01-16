@@ -1,0 +1,13 @@
+# $NetBSD: INSTALL,v 1.1 2022/01/16 13:57:10 taca Exp $
+
+DATE="@DATE@"
+RUBY_SITERIDIR="${PREFIX}/@RUBY_SITERIDIR@"
+rid="${RUBY_SITERIDIR}/created.rid"
+
+case ${STAGE} in
+POST-INSTALL)
+	if [ -d ${RUBY_SITERIDIR} ]; then
+		${DATE} > ${rid}
+	fi
+	;;
+esac
