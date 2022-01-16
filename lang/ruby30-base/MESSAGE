@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2021/02/14 14:32:41 taca Exp $
+$NetBSD: MESSAGE,v 1.2 2022/01/16 14:22:47 taca Exp $
 
 Note that this is a minimal package.
 
@@ -7,7 +7,6 @@ The original ${RUBY_DISTNAME} distribution includes more extension
 libraries, some of which are provided as separate packages:
 
 	databases/ruby-gdbm:		GDBM module
-	devel/ruby-fiddle:		Fiddle module
 	devel/ruby-readline:		readline module
 
 ===========================================================================
