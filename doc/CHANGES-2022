@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.257 2022/01/16 15:02:08 taca Exp $
+$NetBSD: CHANGES-2022,v 1.258 2022/01/16 16:51:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -348,3 +348,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated games/liblcf to 0.7.0 [nia 2022-01-16]
 	Updated games/easyrpg-player to 0.7.0 [nia 2022-01-16]
 	Updated textproc/ruby-csv to 3.2.2 [taca 2022-01-16]
+	Updated sysutils/lsd to 0.21.0 [pin 2022-01-16]
