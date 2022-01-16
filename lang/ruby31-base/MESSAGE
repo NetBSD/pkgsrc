@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2022/01/16 13:57:10 taca Exp $
+
+Note that this is a minimal package.
+
+The original ${RUBY_DISTNAME} distribution includes more extension
+libraries, some of which are provided as separate packages:
+
+	devel/ruby-fiddle:		Fiddle module
+	devel/ruby-readline:		readline module
+
+===========================================================================

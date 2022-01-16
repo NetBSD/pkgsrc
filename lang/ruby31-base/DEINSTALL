@@ -1,0 +1,14 @@
+# $NetBSD: DEINSTALL,v 1.1 2022/01/16 13:57:10 taca Exp $
+
+RUBY_GEM_BASE="${PREFIX}/@RUBY_GEM_BASE@"
+RUBY_SITERIDIR="${PREFIX}/@RUBY_SITERIDIR@"
+
+case ${STAGE} in
+DEINSTALL)
+	${RM} -f ${RUBY_SITERIDIR}/created.rid
+	;;
+POST-DEINSTALL)
+	${RM} -rf ${GEM_HOME}
+	${RMDIR} ${RUBY_GEM_BASE} 2>/dev/null || true
+	;;
+esac
