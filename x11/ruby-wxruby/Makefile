@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2021/12/08 16:07:14 adam Exp $
+# $NetBSD: Makefile,v 1.39 2022/01/16 14:29:29 taca Exp $
 #
 
 DISTNAME=	wxruby-2.0.1
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-redcloth>=4.2.0:../../textproc/ruby-redcloth
 
-RUBY_VERSIONS_INCOMPATIBLE=	30
+RUBY_VERSIONS_INCOMPATIBLE=	30 31
 
 BUILD_TARGET=		default html_docs
 RAKE=			${RAKE_NAME} -I "./lib"
