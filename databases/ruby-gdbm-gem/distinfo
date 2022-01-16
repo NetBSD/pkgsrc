@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/01/16 13:23:06 taca Exp $
+
+BLAKE2s (gdbm-2.1.0.gem) = b286c87493b52a73900d8cd9dbcd7a29cea3ef71a15812326377520e1879b85a
+SHA512 (gdbm-2.1.0.gem) = 155dabd9ed795e481dd7df0dad0ad7ac8b2cc5b14b37f5c5b17a8e601a8d366cab0f79f919a6a6df615d879b230306bd4b416f5b8be1c966256e1d8be38bcba9
+Size (gdbm-2.1.0.gem) = 11264 bytes
