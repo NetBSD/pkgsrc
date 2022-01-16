@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2022/01/16 13:23:06 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gdbm.${RUBY_DLEXT}
+${GEM_EXTSDIR}/gem.build_complete
+${GEM_LIBDIR}/ext/gdbm/extconf.rb
+${GEM_LIBDIR}/ext/gdbm/gdbm.c
+${GEM_LIBDIR}/lib/gdbm.${RUBY_DLEXT}
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
