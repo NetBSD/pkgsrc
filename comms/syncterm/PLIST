@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2022/01/16 13:11:07 nia Exp $
+bin/syncterm
+man/man1/syncterm.1
+share/applications/syncterm.desktop
+share/icons/hicolor/64x64/apps/syncterm.png
