@@ -1,0 +1,4 @@
+frozenlist.FrozenList is a list-like structure which implements
+collections.abc.MutableSequence. The list is mutable until FrozenList.freeze is
+called, after which list modifications raise RuntimeError. FrozenList is also
+hashable, but only when frozen. Otherwise it also throws a RuntimeError.
