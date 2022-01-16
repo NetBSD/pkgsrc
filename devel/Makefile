@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3555 2022/01/14 18:42:05 wiz Exp $
+# $NetBSD: Makefile,v 1.3556 2022/01/16 08:51:10 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2321,6 +2321,7 @@ SUBDIR+=	py-flufl.lock
 SUBDIR+=	py-flufl.testing
 SUBDIR+=	py-freezegun
 SUBDIR+=	py-frozendict
+SUBDIR+=	py-frozenlist
 SUBDIR+=	py-func_timeout
 SUBDIR+=	py-funcparserlib
 SUBDIR+=	py-funcsigs
