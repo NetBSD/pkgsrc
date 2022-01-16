@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:43:55 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/01/16 14:32:01 nia Exp $
 
-BLAKE2s (easyrpg-player-0.6.2.3.tar.xz) = 2c074564d4bc98041a52fbcd56130bce19d2ee9f80b0a1c7c1119ea8737e8d6a
-SHA512 (easyrpg-player-0.6.2.3.tar.xz) = df0d001709a3f64179a1b37cc6c59fc54a7daab2014ee78ef7795b1b82341583a6d735dbe0a05fd80efdaed881a09476f3119b76a387f23bf3abf6491e6635ea
-Size (easyrpg-player-0.6.2.3.tar.xz) = 4640348 bytes
+BLAKE2s (easyrpg-player-0.7.0.tar.xz) = c1e9805c977cde92314d10ed419c2ff26d63f48e946fe8152bc855e15cb6fa9e
+SHA512 (easyrpg-player-0.7.0.tar.xz) = 112543adf2e95d68842f21fabeddf9dc5abbf2b2a1b64a5d9da29bf4e2d31c7b85cfb596c453ff1773922260a8e6d7c1cad40ff7bf1d1054a876ec2f5ef24444
+Size (easyrpg-player-0.7.0.tar.xz) = 4845184 bytes

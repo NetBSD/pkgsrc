@@ -1,10 +1,21 @@
-# $NetBSD: options.mk,v 1.2 2019/03/05 10:45:38 nia Exp $
+# $NetBSD: options.mk,v 1.3 2022/01/16 14:32:01 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.easyrpg-player
-PKG_SUPPORTED_OPTIONS=	freetype mpg123 libwildmidi vorbis opus sndfile speex
+PKG_SUPPORTED_OPTIONS=	alsa freetype mpg123 vorbis opus sndfile speex
 PKG_SUGGESTED_OPTIONS=	freetype mpg123 vorbis opus sndfile speex
 
+PKG_SUGGESTED_OPTIONS.Linux=	alsa
+
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Malsa)
+CONFIGURE_ARGS+=	--with-alsa
+.include "../../audio/alsa-lib/buildlink3.mk"
+.else
+CONFIGURE_ENV+=		HAVE_ALSA_TRUE="\#"
+CONFIGURE_ENV+=		HAVE_ALSA_FALSE=""
+CONFIGURE_ARGS+=	--without-alsa
+.endif
 
 .if !empty(PKG_OPTIONS:Mfreetype)
 CONFIGURE_ARGS+=	--with-freetype
@@ -23,13 +34,6 @@ CONFIGURE_ARGS+=	--with-libmpg123
 CONFIGURE_ARGS+=	--without-libmpg123
 .endif
 
-.if !empty(PKG_OPTIONS:Mlibwildmidi)
-CONFIGURE_ARGS+=	--with-libwildmidi
-.include "../../audio/libwildmidi/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-libwildmidi
-.endif
-
 .if !empty(PKG_OPTIONS:Mvorbis)
 CONFIGURE_ARGS+=	--with-oggvorbis
 .include "../../audio/libvorbis/buildlink3.mk"
@@ -46,7 +50,7 @@ CONFIGURE_ARGS+=	--without-oggvorbis
 
 .if !empty(PKG_OPTIONS:Mopus)
 CONFIGURE_ARGS+=	--with-opus
-.include "../../audio/libopus/buildlink3.mk"
+.include "../../audio/opusfile/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-opus
 .endif
