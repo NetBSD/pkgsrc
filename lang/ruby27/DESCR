@@ -1,6 +1,6 @@
 This a meta package including Ruby 2.7 full release.
 
-It includes ruby27-base, ruby27-gdbm, ruby27-fiddle and ruby27-readline
+It includes ruby27-base, ruby27-gdbm and ruby27-readline
 package.
 
 No package should depend on this package directly.
