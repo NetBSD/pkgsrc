@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.32 2021/10/26 10:19:21 nia Exp $
+$NetBSD: distinfo,v 1.33 2022/01/16 22:52:06 wiz Exp $
 
-BLAKE2s (readline-8.1.tar.gz) = f24c13d1ca5a21949574e10b770d3ab936eb8738a507af7cb41803fccbbdfc02
-SHA512 (readline-8.1.tar.gz) = 27790d0461da3093a7fee6e89a51dcab5dc61928ec42e9228ab36493b17220641d5e481ea3d8fee5ee0044c70bf960f55c7d3f1a704cf6b9c42e5c269b797e00
-Size (readline-8.1.tar.gz) = 2993288 bytes
+BLAKE2s (readline-8.1.2.tar.gz) = d38b2a3fad298bcdbf309f322dae4cea26a3389084b4cad39b347e7ec0598d83
+SHA512 (readline-8.1.2.tar.gz) = b512275c8aa8b3b3178366c6d681f867676fc1c881e375134a88e9c860a448535e04ca43df727817fd0048261e48203e88bd1c086e86572022d1d65fb0350e4d
+Size (readline-8.1.2.tar.gz) = 2993073 bytes
 SHA1 (patch-ae) = bdd702b6cbc63cb1e4e6a4889717d7928acd9a01
 SHA1 (patch-ag) = 3114e6959dfff3e2aae74c3df3ba4b0f692b79bb
 SHA1 (patch-ah) = d812ea068415939beb42c72dd9bed8d210db57d1
