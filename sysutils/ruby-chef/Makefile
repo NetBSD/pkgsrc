@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/01/06 10:30:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.29 2022/01/16 14:29:47 taca Exp $
 
 DISTNAME=	chef-17.8.25
 CATEGORIES=	sysutils
@@ -41,7 +41,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-vault>=0.16<1:../../security/ruby-vault
 
 USE_LANGUAGES=	# none
 
-RUBY_VERSIONS_ACCEPTED=	27 30
+RUBY_VERSIONS_ACCEPTED=	27 30 31
 RUBYGEM_OPTIONS+=	--format-executable
 
 .include "../../lang/ruby/gem.mk"
