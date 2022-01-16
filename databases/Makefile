@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.648 2022/01/16 13:16:31 taca Exp $
+# $NetBSD: Makefile,v 1.649 2022/01/16 13:23:52 taca Exp $
 
 COMMENT=	Databases
 
@@ -476,6 +476,7 @@ SUBDIR+=	ruby-do_mysql
 SUBDIR+=	ruby-do_postgres
 SUBDIR+=	ruby-do_sqlite3
 SUBDIR+=	ruby-gdbm
+SUBDIR+=	ruby-gdbm-gem
 SUBDIR+=	ruby-hiera
 SUBDIR+=	ruby-ldap
 SUBDIR+=	ruby-moneta
