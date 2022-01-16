@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2021/06/01 09:12:26 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2022/01/16 14:29:29 taca Exp $
 
 DISTNAME=	gsl-2.1.0.3
 PKGREVISION=	1
@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v2 # OR later
 
 USE_GCC_RUNTIME=	yes
 
-RUBY_VERSIONS_INCOMPATIBLE=	30
+RUBY_VERSIONS_INCOMPATIBLE=	30 31
 
 .include "../../lang/ruby/gem.mk"
 .include "../../math/gsl/buildlink3.mk"
