@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.245 2022/01/16 08:57:42 adam Exp $
+$NetBSD: CHANGES-2022,v 1.246 2022/01/16 10:12:21 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -324,3 +324,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-utils to 3.1.0 [adam 2022-01-16]
 	Added devel/py-frozenlist version 1.2.0 [adam 2022-01-16]
 	Added devel/py-aiosignal version 1.2.0 [adam 2022-01-16]
+	Updated textproc/ruby-nokogiri to 1.13.1 [tsutsui 2022-01-16]
