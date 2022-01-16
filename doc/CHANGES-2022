@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.249 2022/01/16 13:16:48 taca Exp $
+$NetBSD: CHANGES-2022,v 1.250 2022/01/16 13:24:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -328,3 +328,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/byacc to 20220114 [fcambus 2022-01-16]
 	Added comms/syncterm version 1.1 [nia 2022-01-16]
 	Added databases/ruby-dbm version 1.1.0 [taca 2022-01-16]
+	Added databases/ruby-gdbm-gem version 2.1.0 [taca 2022-01-16]
