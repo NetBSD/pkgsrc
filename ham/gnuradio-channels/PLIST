@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/12/11 14:57:49 tnn Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/01/16 18:06:25 tnn Exp $
 include/gnuradio/channels/api.h
 include/gnuradio/channels/channel_model.h
 include/gnuradio/channels/channel_model2.h
@@ -9,7 +9,7 @@ lib/cmake/gnuradio/gnuradio-channelsConfig.cmake
 lib/cmake/gnuradio/gnuradio-channelsTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-channelsTargets.cmake
 lib/libgnuradio-channels.so
-lib/libgnuradio-channels.so.3.9.4
+lib/libgnuradio-channels.so.3.10.0
 lib/libgnuradio-channels.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-channels.pc
 ${PYSITELIB}/gnuradio/channels/__init__.py
