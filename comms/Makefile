@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2022/01/13 02:45:36 gutteridge Exp $
+# $NetBSD: Makefile,v 1.130 2022/01/16 13:11:07 nia Exp $
 #
 
 COMMENT=	Telephony and serial communication utilities
@@ -87,6 +87,7 @@ SUBDIR+=	synce-librapi2
 SUBDIR+=	synce-libsynce
 SUBDIR+=	synce-rra
 SUBDIR+=	synce-serial
+SUBDIR+=	syncterm
 SUBDIR+=	tilp2
 SUBDIR+=	tio
 SUBDIR+=	tkhylafax
