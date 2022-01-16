@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21421 2022/01/16 22:46:20 wiz Exp $
+$NetBSD: TODO,v 1.21422 2022/01/16 22:48:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1110,7 +1110,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o librelp-1.10.0
 	o libressl-3.3.2
 	o libretro-core-info-1.9.1
-	o libsigsegv-2.14
 	o libslang-2.2.4
 	o libslang2-2.3.2
 	o libspatialite-5.0.1

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.264 2022/01/16 22:46:20 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.265 2022/01/16 22:48:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -372,3 +372,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated wm/fluxbox to 1.3.7nb7 [gutteridge 2022-01-16]
 	Updated fonts/SDL2_ttf to 2.0.18 [wiz 2022-01-16]
 	Updated net/mtr to 0.95 [wiz 2022-01-16]
+	Updated devel/libsigsegv to 2.14 [wiz 2022-01-16]
