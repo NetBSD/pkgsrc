@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.242 2022/01/15 23:35:24 js Exp $
+$NetBSD: CHANGES-2022,v 1.243 2022/01/16 04:55:35 fox Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -319,3 +319,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added chat/py-tulir-telethon version 1.25.0a3 [js 2022-01-15]
 	Updated shells/starship to 1.2.1 [pin 2022-01-15]
 	Updated www/py-aiohttp to 3.8.1 [js 2022-01-15]
+	Updated print/foliate to 2.6.4 [fox 2022-01-16]
