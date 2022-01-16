@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.255 2022/01/16 14:32:13 nia Exp $
+$NetBSD: CHANGES-2022,v 1.256 2022/01/16 14:32:58 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -346,3 +346,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ruby-actiontext70 to 7.0.1 [taca 2022-01-16]
 	Updated www/ruby-rails70 to 7.0.1 [taca 2022-01-16]
 	Updated games/liblcf to 0.7.0 [nia 2022-01-16]
+	Updated games/easyrpg-player to 0.7.0 [nia 2022-01-16]
