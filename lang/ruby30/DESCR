@@ -1,6 +1,6 @@
 This a meta package including Ruby 3.0 full release.
 
-It includes ruby30-base, ruby30-gdbm, ruby30-fiddle and ruby30-readline
+It includes ruby30-base, ruby30-gdbm and ruby30-readline
 package.
 
 No package should depend on this package directly.

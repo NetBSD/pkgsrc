@@ -1,6 +1,6 @@
 This a meta package including Ruby 2.6 full release.
 
-It includes ruby26-base, ruby26-gdbm, ruby26-fiddle and ruby26-readline
+It includes ruby26-base, ruby26-gdbm and ruby26-readline
 package.
 
 No package should depend on this package directly.
