@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/01/05 15:41:20 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/16 23:06:31 wiz Exp $
 
-DISTNAME=	pip-audit-1.1.1
+DISTNAME=	pip-audit-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	security python
 # pypi file does not include tests
 #MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip-audit/}
