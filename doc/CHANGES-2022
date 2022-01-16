@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.244 2022/01/16 08:44:38 adam Exp $
+$NetBSD: CHANGES-2022,v 1.245 2022/01/16 08:57:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -322,3 +322,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/foliate to 2.6.4 [fox 2022-01-16]
 	Updated devel/py-anyio to 3.5.0 [adam 2022-01-16]
 	Updated devel/py-utils to 3.1.0 [adam 2022-01-16]
+	Added devel/py-frozenlist version 1.2.0 [adam 2022-01-16]
+	Added devel/py-aiosignal version 1.2.0 [adam 2022-01-16]
