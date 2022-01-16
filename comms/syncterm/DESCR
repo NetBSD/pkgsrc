@@ -1,0 +1,2 @@
+A cross-platform ANSI-BBS terminal designed to connect to remote BBSs via
+telnet, rlogin, or SSH. Supports ANSI music and the IBM charset when possible.
