@@ -1,0 +1,16 @@
+$NetBSD: patch-src_syncterm_syncterm.man.in,v 1.1 2022/01/16 13:11:07 nia Exp $
+
+Do not embed DESTDIR in installed man paths, instead honoring
+PKG_SYSCONFDIR.
+
+--- src/syncterm/syncterm.man.in.orig	2020-06-26 23:40:21.000000000 +0000
++++ src/syncterm/syncterm.man.in
+@@ -130,7 +130,7 @@ The curses and ANSI modes are not necess
+ a traditional screen mode. As such, filler will be added around the terminal
+ screen. For some display sizes, unpredictable results may occur.
+ .SH FILES
+-.IP \fC%%DESTDIR%%%%PREFIX%%/etc/syncterm.lst\fR
++.IP \fC%%SYSTEM_LIST_DIR%%/syncterm.lst\fR
+ The system wide dialing directory.
+ .IP \fC~/.syncterm/syncterm.lst\fR
+ The users dialing directory
