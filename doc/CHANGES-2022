@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.284 2022/01/17 12:31:39 pin Exp $
+$NetBSD: CHANGES-2022,v 1.285 2022/01/17 13:23:32 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -395,3 +395,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/hackernews-tui to 0.9.1 [pin 2022-01-17]
 	Updated audio/spotify-qt to 3.8 [pin 2022-01-17]
 	Updated audio/termusic to 0.6.6 [pin 2022-01-17]
+	Added games/xsol version 0.31 [nia 2022-01-17]
