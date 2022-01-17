@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/01/17 13:23:17 nia Exp $
+
+BLAKE2s (xsol_0.31.orig.tar.gz) = d29a3df1df2cf27cbc07b6ad2033c85891a036e5b4f64749f9cd1ccca4b74463
+SHA512 (xsol_0.31.orig.tar.gz) = cc031362254fd9de178bec6b1915dabd3232e4be4fd677896f1b181858d393965768af8a927fb1457aafc90725b9dca2aa29b0c4f3a22d62b574bd6b3f34575c
+Size (xsol_0.31.orig.tar.gz) = 18047 bytes
