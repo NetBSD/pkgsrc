@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2022/01/17 09:35:59 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pytest_doctestplus/__init__.py
+${PYSITELIB}/pytest_doctestplus/__init__.pyc
+${PYSITELIB}/pytest_doctestplus/__init__.pyo
+${PYSITELIB}/pytest_doctestplus/output_checker.py
+${PYSITELIB}/pytest_doctestplus/output_checker.pyc
+${PYSITELIB}/pytest_doctestplus/output_checker.pyo
+${PYSITELIB}/pytest_doctestplus/plugin.py
+${PYSITELIB}/pytest_doctestplus/plugin.pyc
+${PYSITELIB}/pytest_doctestplus/plugin.pyo
+${PYSITELIB}/pytest_doctestplus/utils.py
+${PYSITELIB}/pytest_doctestplus/utils.pyc
+${PYSITELIB}/pytest_doctestplus/utils.pyo
