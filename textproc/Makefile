@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1270 2022/01/17 09:29:35 wiz Exp $
+# $NetBSD: Makefile,v 1.1271 2022/01/17 09:42:26 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1083,6 +1083,7 @@ SUBDIR+=	py-sgmllib3k
 SUBDIR+=	py-smartypants
 SUBDIR+=	py-snowballstemmer
 SUBDIR+=	py-sphinx
+SUBDIR+=	py-sphinx-astropy
 SUBDIR+=	py-sphinx-autoapi
 SUBDIR+=	py-sphinx-autodoc-typehints
 SUBDIR+=	py-sphinx-automodapi
