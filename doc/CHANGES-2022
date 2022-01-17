@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.273 2022/01/17 08:49:42 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.274 2022/01/17 09:03:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -381,3 +381,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/neon to 0.32.2 [wiz 2022-01-16]
 	Updated devel/py-mercurial to 6.0.1 [wiz 2022-01-16]
 	Updated textproc/expat to 2.4.3 [wiz 2022-01-17]
+	Updated math/py-asteval to 0.9.26 [adam 2022-01-17]
+	Updated biology/py-cutadapt to 3.5 [adam 2022-01-17]
