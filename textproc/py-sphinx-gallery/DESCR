@@ -1,0 +1,2 @@
+A Sphinx extension that builds an HTML version of any Python script
+and puts it into an examples gallery.
