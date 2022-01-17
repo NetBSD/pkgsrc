@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.166 2021/12/08 16:07:10 adam Exp $
+# $NetBSD: Makefile,v 1.167 2022/01/17 14:44:46 tsutsui Exp $
 
-DISTNAME=	mlterm-3.9.1
-#PKGREVISION=	0
-PKGREVISION=	2
+DISTNAME=	mlterm-3.9.2
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mlterm/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=arakiken/}
+GITHUB_PROJECT= ${DISTNAME:S/-${PKGVERSION_NOREV}//}
+GITHUB_TAG=	rel-${PKGVERSION_NOREV:S/./_/g}
 
 MAINTAINER=	tsutsui@NetBSD.org
 HOMEPAGE=	http://mlterm.sourceforge.net/
@@ -82,7 +82,7 @@ post-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
