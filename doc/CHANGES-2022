@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.281 2022/01/17 10:01:35 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.282 2022/01/17 12:29:16 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -392,3 +392,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed math/py-astroquery [wiz 2022-01-17]
 	Removed math/py-astroplan [wiz 2022-01-17]
 	Removed math/py-pyvo [wiz 2022-01-17]
+	Updated www/hackernews-tui to 0.9.1 [pin 2022-01-17]
