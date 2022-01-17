@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/01/17 09:35:59 wiz Exp $
+
+BLAKE2s (pytest-doctestplus-0.11.2.tar.gz) = 894a404c1d8ce7cd296f5494c907c3fc933308019d8ba48cfe112fb164602746
+SHA512 (pytest-doctestplus-0.11.2.tar.gz) = fed49a551be78f51db60161ccfa592e461719cca76e2a48e3267e8a22dbec60d02d8fbb757a88cb5cf4dc22143e27d3d20f25b51855be835254c72fd8260abbd
+Size (pytest-doctestplus-0.11.2.tar.gz) = 34943 bytes
