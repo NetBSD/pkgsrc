@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/01/17 09:35:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/17 09:39:19 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -15,6 +15,15 @@ ${PYSITELIB}/pytest_doctestplus/output_checker.pyo
 ${PYSITELIB}/pytest_doctestplus/plugin.py
 ${PYSITELIB}/pytest_doctestplus/plugin.pyc
 ${PYSITELIB}/pytest_doctestplus/plugin.pyo
+${PYSITELIB}/pytest_doctestplus/sphinx/__init__.py
+${PYSITELIB}/pytest_doctestplus/sphinx/__init__.pyc
+${PYSITELIB}/pytest_doctestplus/sphinx/__init__.pyo
+${PYSITELIB}/pytest_doctestplus/sphinx/doctestplus.py
+${PYSITELIB}/pytest_doctestplus/sphinx/doctestplus.pyc
+${PYSITELIB}/pytest_doctestplus/sphinx/doctestplus.pyo
 ${PYSITELIB}/pytest_doctestplus/utils.py
 ${PYSITELIB}/pytest_doctestplus/utils.pyc
 ${PYSITELIB}/pytest_doctestplus/utils.pyo
+${PYSITELIB}/pytest_doctestplus/version.py
+${PYSITELIB}/pytest_doctestplus/version.pyc
+${PYSITELIB}/pytest_doctestplus/version.pyo
