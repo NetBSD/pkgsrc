@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2022/01/17 17:47:52 rhialto Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/17 18:38:23 rhialto Exp $
 
 DISTNAME=	unrardll-0.1.5
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/unrardll/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.org/project/unrardll
+HOMEPAGE=	https://github.com/kovidgoyal/unrardll
 COMMENT=	Python bindings for libunrar
 LICENSE=	modified-bsd
 
