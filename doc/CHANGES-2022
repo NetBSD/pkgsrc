@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.290 2022/01/17 15:19:55 tsutsui Exp $
+$NetBSD: CHANGES-2022,v 1.291 2022/01/17 17:49:22 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -418,3 +418,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-webkit-gtk to 3.5.1 [tsutsui 2022-01-17]
 	Updated x11/ruby-gtk3 to 3.5.1 [tsutsui 2022-01-17]
 	Updated x11/ruby-gtksourceview3 to 3.5.1 [tsutsui 2022-01-17]
+	Added archivers/py-unrardll version 0.1.5 [rhialto 2022-01-17]
