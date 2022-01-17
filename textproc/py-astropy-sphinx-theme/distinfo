@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/01/17 09:19:45 wiz Exp $
+
+BLAKE2s (astropy-sphinx-theme-1.1.tar.gz) = 2ce7c3ac68736418c9688aef6ffb91cffa9f4db8aee1aaa09528958eb756b7aa
+SHA512 (astropy-sphinx-theme-1.1.tar.gz) = 534ce3141b0047e5ff86f63ff27416a7b0f081995e72255a6305ff23cb80c40c0c0c736643433c0a3ebdad60e6e6fb655b668d08d556967eb6482e94495c6d01
+Size (astropy-sphinx-theme-1.1.tar.gz) = 29222 bytes
