@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/08 22:00:31 snj Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/17 13:48:26 nia Exp $
 bin/quakespasm
+man/man1/quakespasm.1
