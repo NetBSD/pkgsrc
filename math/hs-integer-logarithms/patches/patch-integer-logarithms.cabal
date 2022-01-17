@@ -1,0 +1,15 @@
+$NetBSD: patch-integer-logarithms.cabal,v 1.3 2022/01/17 03:10:11 pho Exp $
+
+Compatibility with GHC 9.0.2
+
+--- integer-logarithms.cabal.orig	2022-01-17 03:06:30.101400283 +0000
++++ integer-logarithms.cabal
+@@ -65,7 +65,7 @@ library
+   if impl(ghc >=9.0)
+     build-depends:
+         base        >=4.15
+-      , ghc-bignum  >=1.0  && <1.1
++      , ghc-bignum  >=1.0  && <1.2
+ 
+     if !flag(integer-gmp)
+       build-depends: invalid-cabal-flag-settings <0
