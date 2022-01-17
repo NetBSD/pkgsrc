@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2021/01/18 09:41:07 micha Exp $
+# $NetBSD: Makefile,v 1.13 2022/01/17 15:10:15 micha Exp $
 
-VERS=			1.48.8
+VERS=			1.48.10
 PKGNAME=		doomlegacy-${VERS}
-PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=doomlegacy/}
-DISTNAME=		${PKGNAME_NOREV:S/-/_/}_source
+DISTNAME=		${PKGNAME_NOREV:S/-/_/}_source_1617
 DISTFILES=		${DEFAULT_DISTFILES} doomlegacy_${VERS}_common.zip
 EXTRACT_SUFX=		.tar.bz2
 
@@ -49,10 +48,12 @@ CFLAGS+=		-D__BIG_ENDIAN__
 CFLAGS+=		-DHAVE_ZLIB
 LDFLAGS+=		-lz
 
+# No longer matches automatically since SVN revision was appended to distfile
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV:S/-/_/}_source
+
 # DOOMWADDIR is intentionally shared with other Doom packages
 DOOMWADDIR=		share/doom
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6 share/doc/doomlegacy ${DOOMWADDIR}
-
 # Honor environment
 SUBST_CLASSES+=		makeopt
 SUBST_STAGE.makeopt=	do-configure
@@ -82,10 +83,6 @@ pre-configure:
 	${CP} ${FILESDIR}/INSTALL.pkgsrc ${WRKDIR}
 	${CP} ${FILESDIR}/doomlegacy.sh ${WRKDIR}
 	${CP} ${FILESDIR}/doomlegacy.6.in ${WRKDIR}
-	${CP} ${FILESDIR}/p_blockmap.c ${WRKSRC}/src
-	${CP} ${FILESDIR}/p_blockmap.h ${WRKSRC}/src
-	${CP} ${FILESDIR}/p_extnodes.c ${WRKSRC}/src
-	${CP} ${FILESDIR}/p_extnodes.h ${WRKSRC}/src
 	cd ${WRKSRC} && ${CP} make_options_nix make_options
 
 # Process start script and manpage templates
@@ -104,6 +101,8 @@ do-install:
 		${DESTDIR}${PREFIX}/bin/doomlegacy.bin
 	${INSTALL_SCRIPT} ${WRKDIR}/doomlegacy				\
 		${DESTDIR}${PREFIX}/bin/doomlegacy
+	${INSTALL_DATA} ${WRKDIR}/doomlegacy_${VERS}/dogs.wad		\
+		${DESTDIR}${PREFIX}/${DOOMWADDIR}/dogs.wad
 	${INSTALL_DATA} ${WRKDIR}/doomlegacy_${VERS}/legacy.wad		\
 		${DESTDIR}${PREFIX}/${DOOMWADDIR}/legacy.wad
 	cd ${WRKSRC} &&							\
