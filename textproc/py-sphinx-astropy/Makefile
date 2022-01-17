@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/01/17 09:42:09 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/17 09:46:44 wiz Exp $
 
 DISTNAME=	sphinx-astropy-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-sphinx-automodapi-[0-9]*:../../textproc/py-sphinx-autom
 DEPENDS+=	${PYPKGPREFIX}-sphinx-gallery-[0-9]*:../../textproc/py-sphinx-gallery
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-test-doctestplus>=0.11:../../devel/py-test-doctestplus
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 
 USE_LANGUAGES=	# none
 
