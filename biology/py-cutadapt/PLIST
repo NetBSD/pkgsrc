@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/02/11 10:30:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/01/17 09:03:10 adam Exp $
 bin/cutadapt-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -25,6 +25,9 @@ ${PYSITELIB}/cutadapt/align.pyo
 ${PYSITELIB}/cutadapt/filters.py
 ${PYSITELIB}/cutadapt/filters.pyc
 ${PYSITELIB}/cutadapt/filters.pyo
+${PYSITELIB}/cutadapt/json.py
+${PYSITELIB}/cutadapt/json.pyc
+${PYSITELIB}/cutadapt/json.pyo
 ${PYSITELIB}/cutadapt/log.py
 ${PYSITELIB}/cutadapt/log.pyc
 ${PYSITELIB}/cutadapt/log.pyo
@@ -41,6 +44,12 @@ ${PYSITELIB}/cutadapt/qualtrim.so
 ${PYSITELIB}/cutadapt/report.py
 ${PYSITELIB}/cutadapt/report.pyc
 ${PYSITELIB}/cutadapt/report.pyo
+${PYSITELIB}/cutadapt/statistics.py
+${PYSITELIB}/cutadapt/statistics.pyc
+${PYSITELIB}/cutadapt/statistics.pyo
+${PYSITELIB}/cutadapt/steps.py
+${PYSITELIB}/cutadapt/steps.pyc
+${PYSITELIB}/cutadapt/steps.pyo
 ${PYSITELIB}/cutadapt/tokenizer.py
 ${PYSITELIB}/cutadapt/tokenizer.pyc
 ${PYSITELIB}/cutadapt/tokenizer.pyo
