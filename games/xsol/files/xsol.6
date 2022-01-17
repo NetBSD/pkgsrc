@@ -1,0 +1,65 @@
+.TH XSOL 6 "March 1999" "Debian Project"
+.SH NAME
+xsol \- X Solitaire
+.SH SYNOPSIS
+.B xsol
+.br
+.SH "DESCRIPTION"
+This manual page briefly documents
+.BR xsol
+, a simple Motif/ Lesstif version of the classic solitaire game.
+It was written for the Debian GNU/Linux distribution because the
+original program does not have a manual page.
+.br
+.SH "HOW TO PLAY"
+Solitaire is a card game. At the start you are presented with seven
+columns of cards. First has only one card, second one has two, third
+three and so on (28 in total), but only the first card in every
+column is shown ('opened'). Also there is the deck (24 cards at the
+start), and four empty places for suit stacks.
+.sp
+Cards in the deck and in the columns are unsorted, and the object of
+Solitaire is to use all the cards in the deck to build up the four
+suit stacks in ascending order, beginning with the aces. You can
+accomplish that by dragging and dropping the red onto the black (and
+black onto the red) cards between the columns, and between the deck
+and the columns (but not the other way around). When you see a whole
+turned card, click on it to see it ('open' it) and to be able to move
+it somewhere. Deck is opened by clicking on it; once you reach the
+end of the deck, just click once more and you'll reopen it.
+.sp
+If you reach a point when you can't move any more cards to the stacks,
+and rearranging cards in columns and the deck gets you nowhere, the
+game is over. Start it again.
+.SH OPTIONS
+You can access all options within the program, through the 'Game'
+menu. There you have four options:
+.br
+.B New game
+- start a new game,
+.br
+.B Undo
+- undo last move,
+.br
+.B Options
+- configure these options:
+.br
+   Timed game - should we count the seconds?
+.br
+   Keep score - should we count the score?
+.br
+   Show number of cards in deck - should we show it?
+.br
+   Draw one - card from the deck,
+.br
+   Draw three - cards from the deck.
+.br
+.B About
+- shows information about the author.
+.br
+.B Exit
+- quits the game.
+.SH AUTHOR
+.B xsol
+was written by Brian Masney <masneyb@newwave.net>, and this manual
+page was written by Josip Rodin <jrodin@jagor.srce.hr>.
