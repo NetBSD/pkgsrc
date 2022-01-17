@@ -1,15 +1,8 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:43:54 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/01/17 15:10:15 micha Exp $
 
-BLAKE2s (doomlegacy_1.48.8_common.zip) = b9ed06a96b64735666335d1c9b16c8053f8f7498298f5b30d46a005474e16a3a
-SHA512 (doomlegacy_1.48.8_common.zip) = 4b93aed03bcfd9eb0dd22f0b9231e93e63ee2cc0eee6a3a9854def384c4c290dbdb586eb8d888392c53d8a5d549718eb7b4f55cecb1c4924c03b18125876b292
-Size (doomlegacy_1.48.8_common.zip) = 1011350 bytes
-BLAKE2s (doomlegacy_1.48.8_source.tar.bz2) = fed19ed08990f4b6acc384504ce23216723a5c525bc8a051cfb172e3e09c3232
-SHA512 (doomlegacy_1.48.8_source.tar.bz2) = 10dfe5ac20715b3c8ca2305f28d28bd5eada42a13a3aadad23bbf9b691e988561f26b61267816867b69e2854f86cc5c4ec876a4cb10fda157f971a4014db55ec
-Size (doomlegacy_1.48.8_source.tar.bz2) = 2451682 bytes
-SHA1 (patch-src_Makefile) = 34c323bdd96787cb6afe0be5dc99b129ab8f1552
-SHA1 (patch-src_am__map.c) = 14b3c8b70c63778ad043827ab2f0b6f4fe07bcde
-SHA1 (patch-src_doomdata.h) = 8c3186dafbf11a8a75262a06755dd9807cb58612
-SHA1 (patch-src_dstrings.c) = 16e50ac649f76d415b820a0e5093d15af3180e6d
-SHA1 (patch-src_p__local.h) = ad6c770b95e87fb06e34ec7643e98f59d41e71f4
-SHA1 (patch-src_p__setup.c) = f478975acbc64627d4b2727fa77d1b1252ffc719
-SHA1 (patch-src_r__defs.h) = 91e6543674e3474c9afdb0ba19d6869b658d0543
+BLAKE2s (doomlegacy_1.48.10_common.zip) = e61a5d26d9e160cbe35b6fbf75433155567f914a1d6d636ea98f1c72ed2bc7d3
+SHA512 (doomlegacy_1.48.10_common.zip) = f319420660fe3b25458356d6818162b1ccabb1fbe549745ea1841d8f5b328904bbf1e298f969e8bedd9e071f274a77aedbe83a610c34367bdc2e162a7ad77701
+Size (doomlegacy_1.48.10_common.zip) = 1050867 bytes
+BLAKE2s (doomlegacy_1.48.10_source_1617.tar.bz2) = 603834f0062b71ad3cb05a10604a8448a4e5d22e4cc9d3c3b46e61f9b1ce9160
+SHA512 (doomlegacy_1.48.10_source_1617.tar.bz2) = 3dd13443218623ec0d512f8f59e1f308216b53a832c50438d0f6cdbe06ca06f2c213a3b2b7b2ca49d4dc71d73330374d35b00d77647023d99a8940a35e72efde
+Size (doomlegacy_1.48.10_source_1617.tar.bz2) = 2572260 bytes
