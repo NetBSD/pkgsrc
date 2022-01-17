@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/08/29 16:49:13 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/01/17 15:17:16 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gstreamer.${RUBY_DLEXT}
@@ -20,6 +20,7 @@ ${GEM_LIBDIR}/lib/gst/caps.rb
 ${GEM_LIBDIR}/lib/gst/controller-loader.rb
 ${GEM_LIBDIR}/lib/gst/element-factory.rb
 ${GEM_LIBDIR}/lib/gst/element.rb
+${GEM_LIBDIR}/lib/gst/loader.rb
 ${GEM_LIBDIR}/lib/gst/plugin-feature.rb
 ${GEM_LIBDIR}/lib/gst/registry.rb
 ${GEM_LIBDIR}/lib/gst/structure.rb
