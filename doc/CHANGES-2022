@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.285 2022/01/17 13:23:32 nia Exp $
+$NetBSD: CHANGES-2022,v 1.286 2022/01/17 13:35:13 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -396,3 +396,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/spotify-qt to 3.8 [pin 2022-01-17]
 	Updated audio/termusic to 0.6.6 [pin 2022-01-17]
 	Added games/xsol version 0.31 [nia 2022-01-17]
+	Updated games/lgogdownloader to 3.8 [nia 2022-01-17]
