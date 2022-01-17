@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.287 2022/01/17 13:48:39 nia Exp $
+$NetBSD: CHANGES-2022,v 1.288 2022/01/17 14:45:00 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -398,3 +398,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added games/xsol version 0.31 [nia 2022-01-17]
 	Updated games/lgogdownloader to 3.8 [nia 2022-01-17]
 	Updated games/quakespasm to 0.94.3 [nia 2022-01-17]
+	Updated x11/mlterm to 3.9.2 [tsutsui 2022-01-17]
