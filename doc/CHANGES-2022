@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.288 2022/01/17 14:45:00 tsutsui Exp $
+$NetBSD: CHANGES-2022,v 1.289 2022/01/17 15:11:58 micha Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -399,3 +399,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated games/lgogdownloader to 3.8 [nia 2022-01-17]
 	Updated games/quakespasm to 0.94.3 [nia 2022-01-17]
 	Updated x11/mlterm to 3.9.2 [tsutsui 2022-01-17]
+	Updated games/doomlegacy to 1.48.10 [micha 2022-01-17]
