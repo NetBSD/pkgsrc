@@ -1,0 +1,15 @@
+$NetBSD: patch-hashable.cabal,v 1.1 2022/01/17 05:06:55 pho Exp $
+
+Compatibility with GHC 9.0.2
+
+--- hashable.cabal.orig	2022-01-17 05:04:19.964223017 +0000
++++ hashable.cabal
+@@ -44,7 +44,7 @@ Library
+                    , ghc-prim
+ 
+   if impl(ghc >= 9)
+-    Build-depends:    ghc-bignum >= 1.0 && <1.1
++    Build-depends:    ghc-bignum >= 1.0 && <1.2
+   else
+     if flag(integer-gmp)
+       Build-depends:   integer-gmp >= 0.4 && < 1.1
