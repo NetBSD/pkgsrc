@@ -1,0 +1,166 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" First parameter, NAME, should be all caps
+.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
+.\" other parameters are allowed: see man(7), man(1)
+.TH QUAKESPASM 1 "2012-03-27"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+quakespasm \- an engine for iD software's Quake
+.SH SYNOPSIS
+.B quakespasm
+.RI [ options ]
+.SH DESCRIPTION
+This manual page documents briefly the
+.B quakespasm
+command.
+.PP
+.\" TeX users may be more comfortable with the \fB<whatever>\fP and
+.\" \fI<whatever>\fP escape sequences to invode bold face and italics,
+.\" respectively.
+\fBQuakespasm\fP is a *Nix friendly Quake Engine based on the SDL port of the
+popular FitzQuake. It includes some new features, important fixes, and aims
+for portability and 64 bit correctness.
+.SH OPTIONS
+This program follows the Quake convention, with long options starting with a
+single dash (`-').  A summary of options is included below.
+.TP
+.B \-basedir \fIdirectory\fR
+Specify the location of the game data files.
+.TP
+.B \-bgsound
+Continue to play sound when the game window is backgrounded.
+.TP
+.B \-bpp \fIinteger\fR
+Specify the colour depth used for the video mode.
+.TP
+.B \-cd
+Use CD audio.
+.TP
+.B \-cddev \fIdevice\fR
+Specify the CD device to be used for CD audio.
+.TP
+.B \-condebug
+Write a log file containing debugging information.
+.TP
+.B \-consize \fIinteger\fR
+Specify the size of the console buffer in kilobytes.
+.TP
+.B \-current
+Start the game in the current video mode for OpenGL.
+.TP
+.B \-dedicated
+Start the game in a dedicated server mode.
+.TP
+.B \-dinput
+Enable DirectInput mode for input devices in the game.  [Not used.]
+.TP
+.B \-f, \-fullscreen
+Use a full screen video mode.
+.TP
+.B \-fitz
+Fitz mode: disable Quakespasm customizations, act like vanilla Fitzquake.
+.TP
+.B \-force
+Force the switch to the video mode specified by other command line arguments.
+.TP
+.B \-fullsbar
+Enable the refreshing of the full status bar.
+.TP
+.B \-game \fIname\fR
+Start the game using the files from a mission pack or a mod.
+.TP
+.B \-heapsize \fIinteger\fR
+Start the game and allocate the specified number of kilobytes of memory for the
+game.
+.TP
+.B \-height \fIpixels\fR
+Specify the vertical resolution to use for the game screen.
+.TP
+.B \-hipnotic
+Start the game with the Hipnotic mission pack.
+.TP
+.B \-ip \fIip-address\fR
+Start the game and specify an alternative IP address to be used by the game.
+.TP
+.B \-ipxport \fIport\fR
+The port number to be used by the server for the IPX network protocol.
+.TP
+.B \-listen \fIinteger\fR
+Specify the maximum number of players that can connect to the listen server.
+.TP
+.B \-minmemory
+Allocate as little memory as possible while remaining functional.
+.TP
+.B \-noadd
+Disable the use of the OpenGL additive texture environment extension.
+.TP
+.B \-noadjustaspect
+Disable automatic adjustment of the video mode aspect ratio.
+.TP
+.B \-nocdaudio
+Disable CD music audio.
+.TP
+.B \-nocombine
+Disable the use of the OpenGL texture combining extension.
+.TP
+.B \-noipx
+Disable game support for the IPX/SPX network protocol.
+.TP
+.B \-nolan
+Disable support for all network protocols.
+.TP
+.B \-nomouse
+Disable support for the mouse.
+.TP
+.B \-nomtex
+Disable the use of the OpenGL multitexture extension.
+.TP
+.B \-nosound
+Disable support for sound hardware.
+.TP
+.B \-noudp
+Disable support for the UDP network protocol.
+.TP
+.B \-particles \fIinteger\fR
+Specify the maximum number of particles to be rendered on the screen at once.
+.TP
+.B \-port \fIport\fR
+Specify port for both IPX and UDP network protocols.
+.TP
+.B \-quoth
+Use extensions from the Quoth mod.
+.TP
+.B \-rogue
+Start the game with the Rogue mission pack.
+.TP
+.B \-sndspeed \fIsample-rate\fR
+Specify the sampling rate used for sound, default is 11025.
+.TP
+.B \-udpport \fIport\fR
+Specify the UDP port number that the game should use for network play.
+.TP
+.B \-w, \-window
+Start the game in a windowed OpenGL video mode.
+.TP
+.B \-width \fIpixels\fR
+The horizontal resolution to use for the game screen.
+.TP
+.B \-zone \fIkb\fR
+Specify the amount of memory in kilobytes to allocate to holding dynamic
+information such as aliases.
+.SH AUTHOR
+Quakespasm was written by Kristian Duske and John Fitzgibbons.
+.PP
+This manual page was written by David Banks <amoebae@gmail.com>,
+for the Debian project (and may be used by others).
