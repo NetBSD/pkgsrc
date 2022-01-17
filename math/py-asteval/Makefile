@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2022/01/04 20:54:12 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/01/17 08:56:48 adam Exp $
 
-DISTNAME=	asteval-0.9.25
+DISTNAME=	asteval-0.9.26
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asteval/}
 
@@ -16,7 +15,12 @@ DEPENDS+=	${PYPKGPREFIX}-numpy>=1.6:../../math/py-numpy
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-numpy
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/pyversion.mk"
+.if ${_PYTHON_VERSION} < 38
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
+.endif
 
 do-test:
 	cd ${WRKSRC}/tests && ${PYTHONBIN} test_asteval.py
