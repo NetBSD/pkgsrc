@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2022/01/17 17:47:52 rhialto Exp $
+
+BLAKE2s (unrardll-0.1.5.tar.gz) = b84f8b31e63f41cf19979cc55c8ce5a02656971cfce69d630599735a6bfa447c
+SHA512 (unrardll-0.1.5.tar.gz) = 6a3bce6dba9475969135306c0c3f3df36bbbbdd0fd7a30c963ae848d81f205a6918e47a6c83a87a9a0f8ce762c27d93006e4e283e7a0645b4a93b40c4a1a6315
+Size (unrardll-0.1.5.tar.gz) = 10777613 bytes
+SHA1 (patch-src_unrardll_wrapper.cpp) = 433fdae1f60c8340e97efa91b57c93529693838c
