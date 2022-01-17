@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2021/12/08 16:04:06 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/17 15:17:14 tsutsui Exp $
 #
 
 DISTNAME=		atk-${VERSION}
 COMMENT=		Ruby binding of ATK-1.0.x or later
-PKGREVISION=		1
 CATEGORIES=		devel
 
 MAINTAINER=		tsutsui@NetBSD.org
