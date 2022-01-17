@@ -1,0 +1,10 @@
+[Desktop Entry]
+Exec=xsol
+GenericName=Klondike Solitare
+Icon=xsol
+Name=X Solitaire
+Comment=Klondike Solitaire game for the X Window System
+Terminal=false
+Type=Application
+Categories=Game;CardGame;
+Keywords=game;card;cardgame;solitaire
