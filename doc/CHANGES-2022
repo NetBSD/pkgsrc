@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.280 2022/01/17 09:51:49 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.281 2022/01/17 10:01:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -389,3 +389,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/py-test-doctestplus version 0.11.2 [wiz 2022-01-17]
 	Added textproc/py-sphinx-astropy version 1.7.0 [wiz 2022-01-17]
 	Added math/py-astropy-helpers version 4.0.1 [wiz 2022-01-17]
+	Removed math/py-astroquery [wiz 2022-01-17]
+	Removed math/py-astroplan [wiz 2022-01-17]
+	Removed math/py-pyvo [wiz 2022-01-17]

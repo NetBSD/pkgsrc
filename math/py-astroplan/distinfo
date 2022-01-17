@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:56:00 nia Exp $
-
-BLAKE2s (astroplan-0.7.tar.gz) = 60a20d922001004fb8597b3a47f14f220ebb065a781143185f77816c1e173e12
-SHA512 (astroplan-0.7.tar.gz) = 7182ab01303f631096eb12600f5cb1542601202303529489b5f4412e8ce24fec10c71e4cfb7c7d557d02a1c456ae29822d4a961327155decff2837ed15bcffff
-Size (astroplan-0.7.tar.gz) = 145302 bytes
