@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2022/01/17 17:47:52 rhialto Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/unrardll/__init__.py
+${PYSITELIB}/unrardll/__init__.pyc
+${PYSITELIB}/unrardll/__init__.pyo
+${PYSITELIB}/unrardll/unrar.so
