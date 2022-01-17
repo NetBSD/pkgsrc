@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/01/17 09:42:09 wiz Exp $
+
+BLAKE2s (sphinx-astropy-1.7.0.tar.gz) = 1085072b934a15d37c2ec741951afa747ee1045c9e6d2ed7e2e1cbab58933f3c
+SHA512 (sphinx-astropy-1.7.0.tar.gz) = 4b9af1528805c5017695be6ad9d0b789437da4ea01080190d5c0e44a76d927098864002cfd2a59529924a8d2844e26d2e7635fb3f0417ed90502e7e47d0239d3
+Size (sphinx-astropy-1.7.0.tar.gz) = 18266 bytes
