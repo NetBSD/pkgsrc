@@ -1,0 +1,4 @@
+This package serves two purposes: it provides a default Sphinx
+configuration and set of extensions specific to the Astropy project,
+and it acts as a meta-package by installing all required Sphinx
+extensions for the core Astropy package and other packages.
