@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2021/12/08 16:02:16 adam Exp $
+# $NetBSD: Makefile,v 1.17 2022/01/18 02:22:49 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
-DISTNAME=	ghc-9.0.1-src
-PKGREVISION=	6
+DISTNAME=	ghc-9.0.2-src
 PKGNAME=	${DISTNAME:S/-src$//}
 CATEGORIES=	lang
 MASTER_SITES=	https://downloads.haskell.org/~ghc/${PKGVERSION_NOREV}/
@@ -14,12 +13,10 @@ HOMEPAGE=	https://www.haskell.org/ghc/
 COMMENT=	Compiler for the functional language Haskell - 9.0 Release Series
 LICENSE=	modified-bsd
 
-MKPIE_SUPPORTED=	no
-
 UNLIMIT_RESOURCES=	datasize virtualsize
 
 # GHC requires GHC to build itself. We have to prepare stripped-down
-# binaries sufficient to bootstrap compilers for each platforms. If
+# binaries sufficient to bootstrap compilers for each platform. If
 # you want to build them yourself, follow instructions in
 # BOOTSTRAP.txt and ./bootstrap.mk
 BROKEN_EXCEPT_ON_PLATFORM+=	Darwin-*-x86_64
@@ -63,6 +60,18 @@ CONFIGURE_ARGS.common= \
 	--with-system-libffi \
 	--with-ffi-includes=${BUILDLINK_PREFIX.libffi}/${BUILDLINK_INCDIRS.libffi:Q} \
 	--with-ffi-libraries=${BUILDLINK_PREFIX.libffi}/${BUILDLINK_LIBDIRS.libffi:Q}
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD"
+# The GHC rts, by default, creates executable objects on the heap by first
+# mmap(2)'ing an anonymous memory with PROT_READ|PROT_WRITE and then calling
+# mprotect(2) with PROT_READ|PROT_EXEC after filling its content. However,
+# NetBSD PaX mprotect doesn't allow this practice. That is, turning pages that
+# have been initially mapped as non-executable into something executable is a
+# no-no. We must therefore take a different path although it might be a bit slower.
+CONFIGURE_ARGS.common+=	--enable-libffi-adjustors
+# See rts/adjustor/NativeAmd64.c and rts/adjustor/LibffiAdjustor.c
+.endif
 
 CONFIGURE_ARGS+=	${CONFIGURE_ARGS.common}
 
@@ -135,7 +144,6 @@ post-patch:
 # The version restriction on Sphinx in ${WRKSRC}/configure.ac is too
 # loose, and building docs/users_guide rarely succeeds. We don't know
 # which version is actually required for it.
-.include "../../mk/bsd.prefs.mk"
 BUILD_SPHINX_HTML?=	no
 
 # Here we generate mk/build.mk dynamically.
@@ -154,10 +162,24 @@ post-configure:
 # Don't even think of PDF.
 	${RUN} ${ECHO} "BUILD_SPHINX_PDF  = NO" >> ${WRKSRC}/mk/build.mk
 
-# https://gitlab.haskell.org/ghc/ghc/issues/13542
+# SplitSections is only enabled by default on platforms with GNU ld. On SunOS,
+# whose ld is not the GNU one, it can however be used as well.
 .if ${OPSYS} == "SunOS"
 	${RUN} ${ECHO} "SplitSections  = YES" >> ${WRKSRC}/mk/build.mk
 .endif
+
+# The use of internal variable in mk/bsd.prefs.mk is not very satisfying, but
+# the current infrastructure does not export a public variable indicating
+# whether a PIE build is requested or not. Note that we can't build stage-1
+# compiler as PIE, because our bootkit libraries aren't built as PIC.
+.if ${_PKGSRC_MKPIE} == "yes"
+	${RUN} ${ECHO} "SRC_HC_OPTS_STAGE1 += -fPIC -pie" >> ${WRKSRC}/mk/build.mk
+	${RUN} ${ECHO} "SRC_HC_OPTS_STAGE2 += -fPIC -pie" >> ${WRKSRC}/mk/build.mk
+.endif
+
+# We are going to do a PIE build on our responsibility. Do not put -pie in
+# wrappers, as that would prevent us from building stage-1 compiler.
+PKGSRC_OVERRIDE_MKPIE=	yes
 
 # -----------------------------------------------------------------------------
 # Installation/removal hooks
