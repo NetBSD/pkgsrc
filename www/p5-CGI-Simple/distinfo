@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 11:29:48 nia Exp $
+$NetBSD: distinfo,v 1.15 2022/01/18 06:48:19 wen Exp $
 
-BLAKE2s (CGI-Simple-1.25.tar.gz) = 3ac5cd0c4e20c2a01cfe3c5d46db417b370f9b7507f12d32b15e73b727a13d26
-SHA512 (CGI-Simple-1.25.tar.gz) = ace262b4ccafe2ee01582aacf52b31aa1202dc5408bb33071330bc7c53f2cfbb39f9e8844c4511c86125dc05f7161b7592a4038c353dddd1bfd52c03dbcfa9dd
-Size (CGI-Simple-1.25.tar.gz) = 87489 bytes
+BLAKE2s (CGI-Simple-1.280.tar.gz) = 1c3bcaa2e3dd3501941c9f5ff803702178972c03cef685d9ea5ab80c2d788d2e
+SHA512 (CGI-Simple-1.280.tar.gz) = 437421f94ba75fc665c03139e297ad3a0616d4864e7eedfa2d877f77f4f4eb574009beeaa918c0202f796e84e1ad2036a662261960a7bd77cb8e1582c316b620
+Size (CGI-Simple-1.280.tar.gz) = 86718 bytes
