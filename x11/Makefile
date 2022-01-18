@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.950 2022/01/09 13:10:56 rhialto Exp $
+# $NetBSD: Makefile,v 1.951 2022/01/18 19:08:07 rhialto Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -343,6 +343,7 @@ SUBDIR+=	py-qwt-qt5
 SUBDIR+=	py-sip
 SUBDIR+=	py-sip-qt4
 SUBDIR+=	py-sip-qt5
+SUBDIR+=	py-sip5
 SUBDIR+=	py-terminator
 SUBDIR+=	py-terminator-plugins
 SUBDIR+=	py-vte
