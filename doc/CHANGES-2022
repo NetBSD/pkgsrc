@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.300 2022/01/18 13:36:16 taca Exp $
+$NetBSD: CHANGES-2022,v 1.301 2022/01/18 16:25:32 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -430,3 +430,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/p5-Perl-PrereqScanner-NotQuiteLite to 0.9914 [wen 2022-01-18]
 	Updated textproc/p5-PDF-API2 to 2.043 [wen 2022-01-18]
 	Updated devel/ruby-redmine42 to 4.2.3nb3 [taca 2022-01-18]
+	Updated geography/gdal-lib to 3.4.1 [gdt 2022-01-18]
