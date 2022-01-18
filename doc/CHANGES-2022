@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.296 2022/01/18 06:49:11 wen Exp $
+$NetBSD: CHANGES-2022,v 1.297 2022/01/18 09:47:15 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -426,3 +426,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-precis-i18n to 1.0.4 [adam 2022-01-18]
 	Updated www/p5-libwww to 6.60 [wen 2022-01-18]
 	Updated www/p5-CGI-Simple to 1.280 [wen 2022-01-18]
+	Updated devel/p5-Moose to 2.2201 [wen 2022-01-18]
