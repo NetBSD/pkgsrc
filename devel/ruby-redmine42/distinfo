@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2021/12/19 15:22:15 taca Exp $
+$NetBSD: distinfo,v 1.7 2022/01/18 13:35:42 taca Exp $
 
 BLAKE2s (redmine-4.2.3.tar.gz) = f9a7aa9bdedda2c5432f874e59cf24c2ca9b014379d158a88a7501f918510cd0
 SHA512 (redmine-4.2.3.tar.gz) = 456117b0d5d72ee58c87def84327e29f79937fa71098b48a80103e3e6653648c0df46afcc4f533803384ba7413e690538deeee33e263d86dd9e4e5dec65144e3
 Size (redmine-4.2.3.tar.gz) = 3039136 bytes
-SHA1 (patch-Gemfile) = 55b067e5b172156cac90c0f38dcf7626d58b7150
+SHA1 (patch-Gemfile) = 51c230536189c2c4d25e53b2608c663a52bccac8
 SHA1 (patch-lib_tasks_initializers.rake) = 73c4594c94abd28e628bbd172565b161f0e54fff
