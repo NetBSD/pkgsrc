@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2021/07/14 09:15:35 jperkin Exp $
+# $NetBSD: options.mk,v 1.4 2022/01/18 02:22:49 pho Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ghc
 
@@ -27,12 +27,13 @@ CONFIGURE_ENV+=	LLC=${PREFIX:Q}/bin/llc
 CONFIGURE_ENV+=	OPT=${PREFIX:Q}/bin/opt
 
 # Maybe GHC doesn't like this but it's the only option available to us.
-.  include "../../lang/llvm/version.mk"
+LLVM_VERSION_CMD=	${PKG_INFO} -E llvm | ${SED} -E 's/^llvm-([0-9]*)\..*/\1/'
+LLVM_MAX_VERSION_CMD=	${EXPR} ${LLVM_VERSION_CMD:sh} + 1
 SUBST_CLASSES+=		llvm
 SUBST_STAGE.llvm=	post-extract
 SUBST_MESSAGE.llvm=	Accept whichever version of LLVM installed via pkgsrc
 SUBST_FILES.llvm=	configure.ac
-SUBST_SED.llvm=		-e 's/LlvmVersion=[0-9]*/LlvmVersion=${LLVM_VERSION:C/^([0-9]*)\..*/\1/}/'
+SUBST_SED.llvm=		-e 's/LlvmMaxVersion=[0-9]*/LlvmMaxVersion=${LLVM_MAX_VERSION_CMD:sh}/'
 
 # Clang is also required on Darwin.
 # See compiler/GHC/SysTools/Tasks.hs (runClang).
