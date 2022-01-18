@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.234 2021/12/22 10:14:27 nia Exp $
+# $NetBSD: gcc.mk,v 1.235 2022/01/18 01:41:09 pho Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -352,6 +352,7 @@ _MKPIE_FCFLAGS.gcc=	-fPIC
 # XXX for libraries a sink wrapper around gcc is required and used instead
 _MKPIE_LDFLAGS.gcc=	-pie
 
+.  if ${PKGSRC_OVERRIDE_MKPIE:tl} == "no"
 _GCC_CFLAGS+=		${_MKPIE_CFLAGS.gcc}
 _GCC_FCFLAGS+=		${_MKPIE_FCFLAGS.gcc}
 #_GCC_LDFLAGS+=		${_MKPIE_LDFLAGS.gcc}
@@ -360,6 +361,7 @@ CWRAPPERS_APPEND.cxx+=	${_MKPIE_CFLAGS.gcc}
 CWRAPPERS_APPEND.f77+=	${_MKPIE_FCFLAGS.gcc}
 # this differs for libraries and executables (handled in mk/cwrappers.mk)
 # CWRAPPERS_APPEND.ld+=	${_MKPIE_LDFLAGS.gcc}
+.  endif
 .endif
 
 .if ${_PKGSRC_MKREPRO} == "yes"

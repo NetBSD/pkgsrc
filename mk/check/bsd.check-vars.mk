@@ -1,4 +1,4 @@
-# $NetBSD: bsd.check-vars.mk,v 1.10 2017/10/03 09:43:06 jperkin Exp $
+# $NetBSD: bsd.check-vars.mk,v 1.11 2022/01/18 01:41:09 pho Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -6,6 +6,7 @@
 #
 
 CHECK_FILES_SUPPORTED?=		yes
+CHECK_PIE_SUPPORTED?=		yes
 CHECK_RELRO_SUPPORTED?=		yes
 CHECK_SHLIBS_SUPPORTED?=	yes
 CHECK_SSP_SUPPORTED?=		yes
