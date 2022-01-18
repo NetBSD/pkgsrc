@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.294 2022/01/18 06:09:36 adam Exp $
+$NetBSD: CHANGES-2022,v 1.295 2022/01/18 06:37:14 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -424,3 +424,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/ghc90 to 9.0.2 [pho 2022-01-18]
 	Updated net/py-grpcio-tools to 1.43.0 [adam 2022-01-18]
 	Updated textproc/py-precis-i18n to 1.0.4 [adam 2022-01-18]
+	Updated www/p5-libwww to 6.60 [wen 2022-01-18]
