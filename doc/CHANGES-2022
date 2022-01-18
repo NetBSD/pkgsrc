@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.297 2022/01/18 09:47:15 wen Exp $
+$NetBSD: CHANGES-2022,v 1.298 2022/01/18 10:04:27 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -427,3 +427,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/p5-libwww to 6.60 [wen 2022-01-18]
 	Updated www/p5-CGI-Simple to 1.280 [wen 2022-01-18]
 	Updated devel/p5-Moose to 2.2201 [wen 2022-01-18]
+	Updated devel/p5-Perl-PrereqScanner-NotQuiteLite to 0.9914 [wen 2022-01-18]
