@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.34 2022/01/06 00:02:04 gdt Exp $
+$NetBSD: distinfo,v 1.35 2022/01/18 23:33:59 gdt Exp $
 
-BLAKE2s (qgis-3.16.15.tar.bz2) = c2337e60c8703ed80e91ef642f32e41950e89a06b9984a0daade79adee92a8db
-SHA512 (qgis-3.16.15.tar.bz2) = 3de807da1b957452d134f8c5bb41a5321ac4273e16c23ad329b269371d3630f543d5ee65b29f26f236aa4a51f9e101d1ffe63f04e43875041733b2f2b434fe9e
-Size (qgis-3.16.15.tar.bz2) = 117849766 bytes
+BLAKE2s (qgis-3.16.16.tar.bz2) = d8a298ed1a3259e5d5dec3df8e6f38073c673d3ac86588e3731fe3d3dbda6dad
+SHA512 (qgis-3.16.16.tar.bz2) = ba5e6f8165129054fb23f00def67c443b486fb8b9fc59d063fb6d65011b5bf53297e81d518f632b1b87f0ed1c3dfe59a68707f0cb16eb16304908a9a2dad29f6
+Size (qgis-3.16.16.tar.bz2) = 119123296 bytes
 SHA1 (patch-cmake_FindQwt.cmake) = c07cb250727d0d9f4abe76e1118d896552a1bd68
 SHA1 (patch-mac_CMakeLists.txt) = 8e52ca943d44392939d0fcf083ba2681a7d77c53
 SHA1 (patch-mac_cmake_1qt.cmake.in) = d74f7201849ef6dd83f39251e466eb04c791c0e6
 SHA1 (patch-src_core_CMakeLists.txt) = 818d36e9dbbd31a46471de185d489ebbdbafe71d
 SHA1 (patch-src_core_qgsapplication.cpp) = 54bba734969cd9fd90a2317d8c1531da2827d145
 SHA1 (patch-src_crssync_CMakeLists.txt) = 785d820fec76d046c87297bd71ea547a83c4ac2a
+SHA1 (patch-tests_src_gui_testqgsexternalresourcewidgetwrapper.cpp) = 1105f53864ca3f73debca74f94c52aba3ef2fd00
