@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/01/16 13:57:10 taca Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/18 08:26:38 wiz Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -20,6 +21,7 @@ TEST_TARGET=		test
 CONFIGURE_ARGS+=	--enable-shared --enable-install-static-library
 MAKE_ENV+=		XDG_DATA_HOME=${WRKDIR}
 WRKSRC=			${RUBY_WRKSRC}
+FILES_SUBST+=		PKGMANDIR=${PKGMANDIR:Q}
 
 .include "options.mk"
 .include "../../lang/ruby/platform.mk"
