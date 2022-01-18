@@ -1,0 +1,9 @@
+SIP is a tool that makes it very easy to create Python bindings for
+C++ libraries. It was originally developed to create PyQt, the Python
+bindings for the Qt toolkit, but can be used to create bindings for any
+C++ library.
+
+Sip 5.* is in build-time usage totally incompatible with sip 4.*. It is
+the last version that supports API/ABI version 12.7, which is the
+version used by sip 4.* in pkgsrc, and by PyQt5.  So bindings generated
+by sip 4.* and sip 5.* can cooperate, but not 4.* with 6.*.
