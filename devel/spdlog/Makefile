@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2021/04/02 08:32:57 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/18 14:17:22 tnn Exp $
 
 DISTNAME=		spdlog-1.8.5
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=gabime/}
 GITHUB_PROJECT=		spdlog
@@ -14,8 +15,25 @@ LICENSE=		mit
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 USE_CMAKE=		yes
+CMAKE_ARGS+=		-DSPDLOG_BUILD_SHARED=ON
 
-PKGCONFIG_OVERRIDE+=		cmake/spdlog.pc.in
+PKGCONFIG_OVERRIDE+=	cmake/spdlog.pc.in
+
+# This doesn't work due to mk/plist bug. See tech-pkg@
+#PLIST_VARS+=		dylib notdylib
+#PLIST.dylib.Darwin=	yes
+#PLIST.dylib.Darwin=
+#PLIST.nodylib.Darwin=
+#PLIST.notdylib.*=	yes
+
+OPSYSVARS+=		SOEXT DYLIB NOTDYLIB
+PLIST_SUBST+=		SOEXT=${SOEXT} PLIST.dylib=${DYLIB} PLIST.notdylib=${NOTDYLIB}
+SOEXT.Darwin=		dylib
+SOEXT.*=		so
+DYLIB.Darwin=
+DYLIB.*=		@comment
+NOTDYLIB.Darwin=	@comment
+NOTDYLIB.*=
 
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"

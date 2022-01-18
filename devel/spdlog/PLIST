@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/02 08:32:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/18 14:17:22 tnn Exp $
 include/spdlog/async.h
 include/spdlog/async_logger-inl.h
 include/spdlog/async_logger.h
@@ -94,5 +94,9 @@ lib/cmake/spdlog/spdlogConfig.cmake
 lib/cmake/spdlog/spdlogConfigTargets-release.cmake
 lib/cmake/spdlog/spdlogConfigTargets.cmake
 lib/cmake/spdlog/spdlogConfigVersion.cmake
-lib/libspdlog.a
+lib/libspdlog.${SOEXT}
+${PLIST.dylib}lib/libspdlog.1.${SOEXT}
+${PLIST.dylib}lib/libspdlog.${PKGVERSION}.${SOEXT}
+${PLIST.notdylib}lib/libspdlog.${SOEXT}.1
+${PLIST.notdylib}lib/libspdlog.${SOEXT}.${PKGVERSION}
 lib/pkgconfig/spdlog.pc
