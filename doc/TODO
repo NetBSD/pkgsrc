@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21431 2022/01/18 13:36:45 taca Exp $
+$NetBSD: TODO,v 1.21432 2022/01/18 13:37:57 taca Exp $
 
 Suggested new packages
 ======================
@@ -1696,7 +1696,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
 	o ruby-delayer-1.2.1
-	o ruby-redmine-gitmike-theme-1.2.1
 	o rump-20131213
 	o rust-analyzer-0.2021.12.27 [needs rust 1.57 via flycheck]
 	o rvault-0.4
