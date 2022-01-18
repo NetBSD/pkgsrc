@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.298 2022/01/18 10:04:27 wen Exp $
+$NetBSD: CHANGES-2022,v 1.299 2022/01/18 10:16:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -428,3 +428,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/p5-CGI-Simple to 1.280 [wen 2022-01-18]
 	Updated devel/p5-Moose to 2.2201 [wen 2022-01-18]
 	Updated devel/p5-Perl-PrereqScanner-NotQuiteLite to 0.9914 [wen 2022-01-18]
+	Updated textproc/p5-PDF-API2 to 2.043 [wen 2022-01-18]
