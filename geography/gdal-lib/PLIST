@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2021/03/01 19:07:51 gdt Exp $
+@comment $NetBSD: PLIST,v 1.20 2022/01/18 16:25:20 gdt Exp $
 @pkgdir lib/gdalplugins
 bin/gdal-config
 bin/gdal_contour
@@ -27,9 +27,9 @@ bin/ogr2ogr
 bin/ogrinfo
 bin/ogrlineref
 bin/ogrtindex
-bin/testepsg
 include/cpl_atomic_ops.h
 include/cpl_auto_close.h
+include/cpl_compressor.h
 include/cpl_config.h
 include/cpl_config_extras.h
 include/cpl_conv.h
