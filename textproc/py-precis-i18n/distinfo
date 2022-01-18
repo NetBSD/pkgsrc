@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:23:10 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/01/18 06:09:14 adam Exp $
 
-BLAKE2s (precis_i18n-1.0.3.tar.gz) = d0d8dea545f4f4b95e5572f151db7fec651063f3bea2642d6b2f13cbba350067
-SHA512 (precis_i18n-1.0.3.tar.gz) = afb987fe4d0fb2732c62585e70361ad5ffc14d1eb9b8e767fe314fa9a3dee8dcd14f2531f5638d3a72fa7ac4fbeed94ed8907976816570257b405468cdb6702a
-Size (precis_i18n-1.0.3.tar.gz) = 64037 bytes
+BLAKE2s (precis_i18n-1.0.4.tar.gz) = b4dec24f06532c444ca193a79b91fa15883bbe7a662fbc24c11ee8025364181f
+SHA512 (precis_i18n-1.0.4.tar.gz) = f57840cffe1224d282e707f6a36ebd53b539f9acee58de7053f28ceed5356bd35627d7c205cc91dc81983925cca55138715051c0ca535ca1dcc9d26aad9a9353
+Size (precis_i18n-1.0.4.tar.gz) = 67599 bytes
