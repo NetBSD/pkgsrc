@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2022/01/17 05:06:55 pho Exp $
+# $NetBSD: Makefile,v 1.17 2022/01/18 02:48:08 pho Exp $
 
 DISTNAME=	hashable-1.3.1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

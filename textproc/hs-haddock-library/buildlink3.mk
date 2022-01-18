@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2021/05/03 19:01:14 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2022/01/18 02:48:25 pho Exp $
 
 BUILDLINK_TREE+=	hs-haddock-library
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-haddock-library
 HS_HADDOCK_LIBRARY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-haddock-library+=	hs-haddock-library>=1.10.0
-BUILDLINK_ABI_DEPENDS.hs-haddock-library+=	hs-haddock-library>=1.10.0nb1
+BUILDLINK_ABI_DEPENDS.hs-haddock-library+=	hs-haddock-library>=1.10.0nb2
 BUILDLINK_PKGSRCDIR.hs-haddock-library?=	../../textproc/hs-haddock-library
 .endif	# HS_HADDOCK_LIBRARY_BUILDLINK3_MK
 
