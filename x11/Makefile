@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.951 2022/01/18 19:08:07 rhialto Exp $
+# $NetBSD: Makefile,v 1.952 2022/01/18 19:25:56 rhialto Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -334,6 +334,7 @@ SUBDIR+=	py-gtksourceview
 SUBDIR+=	py-keybinder
 SUBDIR+=	py-kiwi
 SUBDIR+=	py-pyperclip
+SUBDIR+=	py-qt-builder
 SUBDIR+=	py-qt4
 SUBDIR+=	py-qt5
 SUBDIR+=	py-qt5-qscintilla
