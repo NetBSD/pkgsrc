@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2021/05/03 19:01:16 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2022/01/18 02:48:26 pho Exp $
 
 BUILDLINK_TREE+=	hs-hxt-unicode
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hxt-unicode
 HS_HXT_UNICODE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hxt-unicode+=	hs-hxt-unicode>=9.0.2
-BUILDLINK_ABI_DEPENDS.hs-hxt-unicode+=	hs-hxt-unicode>=9.0.2.4nb1
+BUILDLINK_ABI_DEPENDS.hs-hxt-unicode+=	hs-hxt-unicode>=9.0.2.4nb2
 BUILDLINK_PKGSRCDIR.hs-hxt-unicode?=	../../textproc/hs-hxt-unicode
 
 .include "../../textproc/hs-hxt-charproperties/buildlink3.mk"

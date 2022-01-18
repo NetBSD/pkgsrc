@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/05/03 19:01:08 pho Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/18 02:48:18 pho Exp $
 
 DISTNAME=	math-functions-0.3.4.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math
 
 MAINTAINER=	pho@cielonegro.org

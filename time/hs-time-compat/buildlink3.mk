@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2021/05/03 19:01:19 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2022/01/18 02:48:30 pho Exp $
 
 BUILDLINK_TREE+=	hs-time-compat
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-time-compat
 HS_TIME_COMPAT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-time-compat+=	hs-time-compat>=1.9.5
-BUILDLINK_ABI_DEPENDS.hs-time-compat?=	hs-time-compat>=1.9.5nb1
+BUILDLINK_ABI_DEPENDS.hs-time-compat?=	hs-time-compat>=1.9.5nb2
 BUILDLINK_PKGSRCDIR.hs-time-compat?=	../../time/hs-time-compat
 
 .include "../../devel/hs-base-orphans/buildlink3.mk"

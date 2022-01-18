@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2021/05/03 19:01:13 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2022/01/18 02:48:24 pho Exp $
 
 BUILDLINK_TREE+=	hs-cheapskate
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-cheapskate
 HS_CHEAPSKATE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-cheapskate+=	hs-cheapskate>=0.1.1
-BUILDLINK_ABI_DEPENDS.hs-cheapskate+=	hs-cheapskate>=0.1.1.2nb1
+BUILDLINK_ABI_DEPENDS.hs-cheapskate+=	hs-cheapskate>=0.1.1.2nb2
 BUILDLINK_PKGSRCDIR.hs-cheapskate?=	../../textproc/hs-cheapskate
 
 .include "../../textproc/hs-blaze-html/buildlink3.mk"
