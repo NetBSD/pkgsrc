@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2021/05/24 19:51:24 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/18 10:03:41 wen Exp $
 
-DISTNAME=	Perl-PrereqScanner-NotQuiteLite-0.9913
+DISTNAME=	Perl-PrereqScanner-NotQuiteLite-0.9914
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Perl/}
 
