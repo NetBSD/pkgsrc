@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2021/05/03 19:00:59 pho Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/18 02:48:08 pho Exp $
 
 DISTNAME=	ghc-mtl-1.2.1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
