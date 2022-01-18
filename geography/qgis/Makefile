@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.135 2022/01/18 17:42:26 gdt Exp $
+# $NetBSD: Makefile,v 1.136 2022/01/18 23:33:59 gdt Exp $
 
 # This is intentionally 3.16 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
 # versions.
-DISTNAME=	qgis-3.16.15
-PKGREVISION=	1
+DISTNAME=	qgis-3.16.16
 CATEGORIES=	geography
 MASTER_SITES=	https://qgis.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -53,9 +52,10 @@ SUBST_NOOP_OK.xapple=		yes # since SUBST_FILES is generated
 SUBST_CLASSES+=			pyqt
 SUBST_STAGE.pyqt=		pre-configure
 SUBST_MESSAGE.pyqt=		Use correct python version for PyQt5 programs
-SUBST_FILES.pyqt=		cmake/PyQtMacros.cmake
+SUBST_FILES.pyqt=		cmake/PyQtMacros.cmake cmake/FindPyQt5.py
 SUBST_SED.pyqt+=		-e '/^SET/s,pyuic5,&-${PYVERSSUFFIX},'
 SUBST_SED.pyqt+=		-e '/^SET/s,pyrcc5,&-${PYVERSSUFFIX},'
+SUBST_SED.pyqt+=		-e '/os.path.dirname.*pyuic5/s,pyuic5,&-${PYVERSSUFFIX},'
 
 CMAKE_ARGS+=		-DWITH_BINDINGS:BOOL=TRUE
 CMAKE_ARGS+=		-DSIP_BINARY_PATH:PATH=${BUILDLINK_PREFIX.py-sip}/bin
