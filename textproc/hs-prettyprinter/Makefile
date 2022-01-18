@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2021/05/03 19:01:17 pho Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/18 02:48:27 pho Exp $
 
 DISTNAME=	prettyprinter-1.7.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org

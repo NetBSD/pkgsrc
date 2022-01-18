@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2021/05/03 19:01:16 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2022/01/18 02:48:27 pho Exp $
 
 BUILDLINK_TREE+=	hs-megaparsec
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-megaparsec
 HS_MEGAPARSEC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-megaparsec+=	hs-megaparsec>=9.0.1
-BUILDLINK_ABI_DEPENDS.hs-megaparsec+=	hs-megaparsec>=9.0.1nb1
+BUILDLINK_ABI_DEPENDS.hs-megaparsec+=	hs-megaparsec>=9.0.1nb2
 BUILDLINK_PKGSRCDIR.hs-megaparsec?=	../../textproc/hs-megaparsec
 
 .include "../../textproc/hs-case-insensitive/buildlink3.mk"

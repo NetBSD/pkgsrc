@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2021/05/03 19:01:06 pho Exp $
+# $NetBSD: Makefile,v 1.9 2022/01/18 02:48:15 pho Exp $
 
 DISTNAME=	vector-algorithms-0.8.0.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@NetBSD.org

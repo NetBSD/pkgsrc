@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2021/05/03 19:01:01 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2022/01/18 02:48:10 pho Exp $
 
 BUILDLINK_TREE+=	hs-mono-traversable
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-mono-traversable
 HS_MONO_TRAVERSABLE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-mono-traversable+=	hs-mono-traversable>=1.0.15
-BUILDLINK_ABI_DEPENDS.hs-mono-traversable+=	hs-mono-traversable>=1.0.15.1nb1
+BUILDLINK_ABI_DEPENDS.hs-mono-traversable+=	hs-mono-traversable>=1.0.15.1nb2
 BUILDLINK_PKGSRCDIR.hs-mono-traversable?=	../../devel/hs-mono-traversable
 
 .include "../../devel/hs-hashable/buildlink3.mk"

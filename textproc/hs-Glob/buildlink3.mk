@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2021/05/03 19:01:12 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2022/01/18 02:48:23 pho Exp $
 
 BUILDLINK_TREE+=	hs-Glob
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-Glob
 HS_GLOB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-Glob+=	hs-Glob>=0.10.1
-BUILDLINK_ABI_DEPENDS.hs-Glob+=	hs-Glob>=0.10.1nb1
+BUILDLINK_ABI_DEPENDS.hs-Glob+=	hs-Glob>=0.10.1nb2
 BUILDLINK_PKGSRCDIR.hs-Glob?=	../../textproc/hs-Glob
 
 .include "../../devel/hs-dlist/buildlink3.mk"
