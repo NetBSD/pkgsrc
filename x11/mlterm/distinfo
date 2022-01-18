@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.89 2022/01/17 14:44:46 tsutsui Exp $
+$NetBSD: distinfo,v 1.90 2022/01/18 14:38:34 tsutsui Exp $
 
-BLAKE2s (mlterm-3.9.2.tar.gz) = 81a6206b6458b6348fdec1b82d44a9d751a7849a525728c8b51ab8c975a5874b
-SHA512 (mlterm-3.9.2.tar.gz) = baa4d3b3bdd3ee61f1355b007a37402b52613de6e656a2aefecd07bf3824ffe420d5bcc744ad5ca9d16be1acf409f132ad74eb0c646708e1eb9427ecbd341b29
-Size (mlterm-3.9.2.tar.gz) = 4259709 bytes
+BLAKE2s (mlterm-3.9.2/mlterm-3.9.2.tar.gz) = 3bd490eb661bc802cb05ebbb17a73956f5a62ca3838dcf5cb7baad0c01c3ebdb
+SHA512 (mlterm-3.9.2/mlterm-3.9.2.tar.gz) = 3076dafbc98a01738d88acf0e0f52e15d33862b3e9b7a851a4496f1be07ee9e51103daf7842954bcae1f1ba62bd6645b0bd60af7f66ee98721bdf3786b9fcbaf
+Size (mlterm-3.9.2/mlterm-3.9.2.tar.gz) = 4259208 bytes
 SHA1 (patch-configure) = 266b3e8383c425c7ef8cd180f07e1199890521ba
 SHA1 (patch-etc_font-fb) = 52c18f512c67ff530c0c326394fdf43956d71cb0
 SHA1 (patch-vtemu_Makefile.in) = 172f12f73408489f782d63c8b0b7915af441d368
