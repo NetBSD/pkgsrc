@@ -1,4 +1,4 @@
-# $NetBSD: bsd.check.mk,v 1.10 2017/10/03 09:43:06 jperkin Exp $
+# $NetBSD: bsd.check.mk,v 1.11 2022/01/18 01:41:09 pho Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to build and install checks.
@@ -29,6 +29,7 @@
 .include "check-headers.mk"
 .include "check-interpreter.mk"
 .include "check-perms.mk"
+.include "check-pie.mk"
 .include "check-portability.mk"
 .include "check-relro.mk"
 .include "check-shlibs.mk"
