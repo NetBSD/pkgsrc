@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2021/05/03 19:00:56 pho Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/18 02:48:06 pho Exp $
 
 DISTNAME=	control-monad-free-0.6.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
