@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2021/12/08 16:03:53 adam Exp $
+# $NetBSD: Makefile,v 1.64 2022/01/18 09:43:18 jperkin Exp $
 
 DISTNAME=	apr-util-1.6.1
 PKGREVISION=	12
@@ -20,6 +20,9 @@ CONFIGURE_ARGS+=	--without-gdbm
 CONFIGURE_ARGS+=	--without-odbc
 CONFIGURE_ARGS+=	--without-sqlite2
 PKGCONFIG_OVERRIDE+=	apr-util.pc.in
+
+# Too many differences between configure test and actual usage.
+CONFIGURE_ENV.SunOS+=	apu_cv_memset_s=no
 
 # just a list of exported symbols for a library that also starts with shebang
 CHECK_INTERPRETER_SKIP=	lib/aprutil.exp
