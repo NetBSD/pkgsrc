@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.303 2022/01/18 19:08:21 rhialto Exp $
+$NetBSD: CHANGES-2022,v 1.304 2022/01/18 19:26:10 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -433,3 +433,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated geography/gdal-lib to 3.4.1 [gdt 2022-01-18]
 	Updated geography/py-gdal to 3.4.1 [gdt 2022-01-18]
 	Added x11/py-sip5 version 5.5.0 [rhialto 2022-01-18]
+	Added x11/py-qt-builder version 1.12.2 [rhialto 2022-01-18]
