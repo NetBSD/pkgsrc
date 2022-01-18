@@ -1,10 +1,10 @@
-$NetBSD: patch-Gemfile,v 1.3 2021/12/19 14:03:57 taca Exp $
+$NetBSD: patch-Gemfile,v 1.4 2022/01/18 13:35:42 taca Exp $
 
 Relax dependency.
 
 --- Gemfile.orig	2021-10-10 03:00:39.000000000 +0000
 +++ Gemfile
-@@ -3,10 +3,10 @@ source 'https://rubygems.org'
+@@ -3,17 +3,17 @@ source 'https://rubygems.org'
  ruby '>= 2.4.0', '< 2.8.0'
  gem 'bundler', '>= 1.12.0'
  
@@ -17,6 +17,14 @@ Relax dependency.
  gem 'request_store', '~> 1.5.0'
  gem "mini_mime", "~> 1.0.1"
  gem "actionpack-xml_parser"
+ gem 'roadie-rails', (RUBY_VERSION < '2.5' ? '~> 1.3.0' : '~> 2.2.0')
+ gem 'marcel'
+ gem "mail", "~> 2.7.1"
+-gem 'csv', (RUBY_VERSION < '2.5' ? ['>= 3.1.1', '<= 3.1.5'] : '~> 3.1.1')
++gem 'csv', (RUBY_VERSION < '2.5' ? ['>= 3.1.1', '<= 3.1.5'] : '>= 3.1.1')
+ gem 'nokogiri', (RUBY_VERSION < '2.5' ? '~> 1.10.0' : '~> 1.11.1')
+ gem 'i18n', '~> 1.8.2'
+ gem "rbpdf", "~> 1.20.0"
 @@ -79,26 +79,6 @@ else
    warn("Please configure your config/database.yml first")
  end
