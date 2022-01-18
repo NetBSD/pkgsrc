@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.302 2022/01/18 16:25:42 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.303 2022/01/18 19:08:21 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -432,3 +432,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-redmine42 to 4.2.3nb3 [taca 2022-01-18]
 	Updated geography/gdal-lib to 3.4.1 [gdt 2022-01-18]
 	Updated geography/py-gdal to 3.4.1 [gdt 2022-01-18]
+	Added x11/py-sip5 version 5.5.0 [rhialto 2022-01-18]
