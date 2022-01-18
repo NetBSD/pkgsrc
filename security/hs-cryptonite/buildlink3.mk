@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2021/05/03 19:01:10 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2022/01/18 02:48:20 pho Exp $
 
 BUILDLINK_TREE+=	hs-cryptonite
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-cryptonite
 HS_CRYPTONITE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-cryptonite+=	hs-cryptonite>=0.28
-BUILDLINK_ABI_DEPENDS.hs-cryptonite+=	hs-cryptonite>=0.28nb1
+BUILDLINK_ABI_DEPENDS.hs-cryptonite+=	hs-cryptonite>=0.28nb2
 BUILDLINK_PKGSRCDIR.hs-cryptonite?=	../../security/hs-cryptonite
 
 .include "../../devel/hs-basement/buildlink3.mk"

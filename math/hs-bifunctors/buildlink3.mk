@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2021/05/03 19:01:07 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2022/01/18 02:48:17 pho Exp $
 
 BUILDLINK_TREE+=	hs-bifunctors
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-bifunctors
 HS_BIFUNCTORS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-bifunctors+=	hs-bifunctors>=5.5.10
-BUILDLINK_ABI_DEPENDS.hs-bifunctors+=	hs-bifunctors>=5.5.10nb1
+BUILDLINK_ABI_DEPENDS.hs-bifunctors+=	hs-bifunctors>=5.5.10nb2
 BUILDLINK_PKGSRCDIR.hs-bifunctors?=	../../math/hs-bifunctors
 
 .include "../../devel/hs-base-orphans/buildlink3.mk"

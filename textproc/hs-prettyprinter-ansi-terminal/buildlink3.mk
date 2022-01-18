@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2021/05/03 19:01:17 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2022/01/18 02:48:27 pho Exp $
 
 BUILDLINK_TREE+=	hs-prettyprinter-ansi-terminal
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-prettyprinter-ansi-terminal
 HS_PRETTYPRINTER_ANSI_TERMINAL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-prettyprinter-ansi-terminal+=	hs-prettyprinter-ansi-terminal>=1.1.2
-BUILDLINK_ABI_DEPENDS.hs-prettyprinter-ansi-terminal+=	hs-prettyprinter-ansi-terminal>=1.1.2nb1
+BUILDLINK_ABI_DEPENDS.hs-prettyprinter-ansi-terminal+=	hs-prettyprinter-ansi-terminal>=1.1.2nb2
 BUILDLINK_PKGSRCDIR.hs-prettyprinter-ansi-terminal?=	../../textproc/hs-prettyprinter-ansi-terminal
 
 .include "../../devel/hs-ansi-terminal/buildlink3.mk"

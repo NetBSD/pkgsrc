@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2021/05/03 19:01:03 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2022/01/18 02:48:13 pho Exp $
 
 BUILDLINK_TREE+=	hs-tasty
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-tasty
 HS_TASTY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-tasty+=	hs-tasty>=1.4.1
-BUILDLINK_ABI_DEPENDS.hs-tasty+=	hs-tasty>=1.4.1nb1
+BUILDLINK_ABI_DEPENDS.hs-tasty+=	hs-tasty>=1.4.1nb2
 BUILDLINK_PKGSRCDIR.hs-tasty?=		../../devel/hs-tasty
 
 .include "../../devel/hs-ansi-terminal/buildlink3.mk"
