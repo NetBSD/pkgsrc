@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.122 2021/05/24 19:51:08 wiz Exp $
+# $NetBSD: Makefile,v 1.123 2022/01/18 09:46:02 wen Exp $
 
-DISTNAME=	Moose-2.2015
+DISTNAME=	Moose-2.2201
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
@@ -28,7 +27,6 @@ DEPENDS+=	p5-Package-Stash-XS>=0.24:../../devel/p5-Package-Stash-XS
 DEPENDS+=	p5-Params-Util>=1.00:../../devel/p5-Params-Util
 DEPENDS+=	p5-Sub-Exporter>=0.980:../../devel/p5-Sub-Exporter
 DEPENDS+=	p5-Sub-Identify>=0:../../devel/p5-Sub-Identify
-DEPENDS+=	p5-Sub-Name>=0.20:../../devel/p5-Sub-Name
 DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
 DEPENDS+=	p5-Try-Tiny>=0.17:../../devel/p5-Try-Tiny
 DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
