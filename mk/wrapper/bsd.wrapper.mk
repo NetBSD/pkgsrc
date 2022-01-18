@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.102 2020/04/27 05:23:11 rillig Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.103 2022/01/18 01:41:09 pho Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -304,7 +304,7 @@ _WRAP_TRANSFORM.CXX=	${_WRAP_TRANSFORM.CC}
 .if !empty(PKGSRC_COMPILER:Mgcc)
 _WRAP_TRANSFORM.CC=	${WRAPPER_TMPDIR}/transform-gcc
 _WRAP_TRANSFORM.CXX=	${_WRAP_TRANSFORM.CC}
-. if ${_PKGSRC_MKPIE} != "no"
+. if ${_PKGSRC_MKPIE} != "no" && ${PKGSRC_OVERRIDE_MKPIE:tl} == "no"
 _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-mkpie-gcc
 _WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
 _WRAP_CMD_SINK.LD=	${WRAPPER_TMPDIR}/cmd-sink-mkpie-ld

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.415 2021/11/30 09:39:11 jperkin Exp $
+# $NetBSD: bsd.prefs.mk,v 1.416 2022/01/18 01:41:09 pho Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -26,6 +26,17 @@
 #	The path of the package, relative to the pkgsrc top-level
 #	directory. Typical values look like editors/emacs or
 #	misc/openoffice-bin.
+#
+# Package-settable variables:
+#
+# PKGSRC_OVERRIDE_MKPIE
+#	When this variable is set to no, MKPIE is enforced by putting toolchain
+#	flags into tool wrapper scripts. Setting it to yes prevents that and
+#	shifts the responsibility of building PIE from the pkgsrc infrastructure
+#	to an individual package.
+#
+#	Possible values: yes, no
+#	Default value: no
 #
 # Keywords: mk.conf user platform
 #
@@ -736,11 +747,12 @@ _BUILD_DEFS+=		INIT_SYSTEM
 # Allows the security mitigation of ASLR to be used.
 # Impact: very small performance drop.
 #
-_PKGSRC_MKPIE=	no
+PKGSRC_OVERRIDE_MKPIE?=	no
+_PKGSRC_MKPIE=		no
 .if ${PKGSRC_MKPIE:tl} == "yes" && \
     ${MKPIE_SUPPORTED:Uyes:tl} == "yes" && \
     ${_OPSYS_SUPPORTS_MKPIE:Uno} == "yes"
-_PKGSRC_MKPIE=	yes
+_PKGSRC_MKPIE=		yes
 .endif
 
 # Enable reproducible build flags
