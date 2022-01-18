@@ -1,0 +1,15 @@
+PyQt-builder is a tool for generating Python bindings for C++ libraries that
+use the Qt application framework. The bindings are built on top of the PyQt
+bindings for Qt. PyQt-builder is used to build PyQt itself.
+
+PyQt-builder is actually an extension of the PEP 384-compliant SIP bindings
+generator and build system. In the simplest cases all that is needed is a
+pyproject.toml file that specifies how the bindings are to be generated. More
+complicated cases require additional code, typically implemented in a
+project.py file.
+
+PyQt-builder doesn't provide any additional command line build tools but does
+extend the SIP tools by providing additional command line options and options
+that can be specified in the pyproject.toml file. These are implemented by the
+pyqtbuild module which also provides an API that can be used by a project's
+project.py file.
