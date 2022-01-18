@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.36 2021/09/27 14:30:47 nia Exp $
+# $NetBSD: haskell.mk,v 1.37 2022/01/18 02:24:36 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # Package configuration, building, installation, registration and
@@ -42,8 +42,6 @@
 
 .if !defined(HASKELL_MK)
 HASKELL_MK=	# defined
-
-MKPIE_SUPPORTED=	no
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -141,6 +139,11 @@ CONFIGURE_ARGS+=	--ghc
 CONFIGURE_ARGS+=	--with-compiler=${_HASKELL_BIN:Q}
 CONFIGURE_ARGS+=	--with-hc-pkg=${_HASKELL_PKG_BIN:Q}
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+
+PKGSRC_OVERRIDE_MKPIE=	yes
+.if ${_PKGSRC_MKPIE} == "yes"
+CONFIGURE_ARGS+=	--ghc-option=-fPIC --ghc-option=-pie
+.endif
 
 .if ${HASKELL_ENABLE_SHARED_LIBRARY} == "yes"
 CONFIGURE_ARGS+=	--enable-shared --enable-executable-dynamic
