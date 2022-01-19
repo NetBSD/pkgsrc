@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2021/05/24 19:54:06 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2022/01/19 22:10:16 nia Exp $
 #
 
 DISTNAME=		skey-1.1.5
@@ -25,6 +25,7 @@ INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 
 # PR#40434
 CONFIGURE_ENV.SunOS+=		ac_cv_header_md4_h=no
+CONFIGURE_ENV.SunOS+=		ac_cv_header_md5_h=no
 CONFIGURE_ENV.SunOS+=		ac_cv_header_sha1_h=no
 BUILDLINK_TRANSFORM.SunOS+=	l:crypt:md5:crypt
 
