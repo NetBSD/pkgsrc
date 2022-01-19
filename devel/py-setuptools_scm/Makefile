@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2022/01/13 21:50:27 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2022/01/19 12:58:43 adam Exp $
 
-DISTNAME=	setuptools_scm-6.3.2
+DISTNAME=	setuptools_scm-6.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools_scm/}
 
@@ -11,13 +10,13 @@ HOMEPAGE=	https://github.com/pypa/setuptools_scm
 COMMENT=	Manage your versions by scm tags
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
-DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-tomli>=1.0.0:../../textproc/py-tomli
 TEST_DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
-TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
 TEST_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6.2:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
