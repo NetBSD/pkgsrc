@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.844 2022/01/10 02:30:41 khorben Exp $
+# $NetBSD: Makefile,v 1.845 2022/01/19 18:00:28 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -425,7 +425,6 @@ SUBDIR+=	prngd
 SUBDIR+=	pscan
 SUBDIR+=	putty
 SUBDIR+=	pwsafe
-SUBDIR+=	py-Des
 SUBDIR+=	py-OTXv2
 SUBDIR+=	py-OpenSSL
 SUBDIR+=	py-acme
