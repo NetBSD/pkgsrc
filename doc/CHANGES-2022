@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.312 2022/01/19 10:59:17 pin Exp $
+$NetBSD: CHANGES-2022,v 1.313 2022/01/19 12:59:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -445,3 +445,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/navi to 2.19.0 [pin 2022-01-19]
 	Updated x11/citron to 0.14.0 [pin 2022-01-19]
 	Added sysutils/hcal version 0.3.1 [pin 2022-01-19]
+	Updated devel/py-setuptools_scm to 6.4.2 [adam 2022-01-19]
+	Updated net/rabbitmq to 3.9.13 [adam 2022-01-19]
