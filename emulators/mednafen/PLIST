@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/02/24 12:01:42 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/19 21:56:43 nia Exp $
 bin/mednafen
 share/doc/mednafen/apple2.html
 share/doc/mednafen/cdplay.html
@@ -17,6 +17,7 @@ share/doc/mednafen/pce.html
 share/doc/mednafen/pce_fast.html
 share/doc/mednafen/pcfx.html
 share/doc/mednafen/psx.html
+share/doc/mednafen/sasplay.html
 share/doc/mednafen/sms.html
 share/doc/mednafen/snes.html
 share/doc/mednafen/snes_faust.html
