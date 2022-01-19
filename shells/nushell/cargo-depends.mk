@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.9 2022/01/01 22:34:45 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.10 2022/01/19 10:52:30 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.17.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -196,7 +196,7 @@ CARGO_CRATE_DEPENDS+=	lexical-parse-integer-0.8.0
 CARGO_CRATE_DEPENDS+=	lexical-util-0.8.1
 CARGO_CRATE_DEPENDS+=	lexical-write-float-0.8.2
 CARGO_CRATE_DEPENDS+=	lexical-write-integer-0.8.0
-CARGO_CRATE_DEPENDS+=	libc-0.2.108
+CARGO_CRATE_DEPENDS+=	libc-0.2.112
 CARGO_CRATE_DEPENDS+=	libgit2-sys-0.12.26+1.3.0
 CARGO_CRATE_DEPENDS+=	libm-0.2.1
 CARGO_CRATE_DEPENDS+=	libsqlite3-sys-0.23.1
@@ -397,7 +397,7 @@ CARGO_CRATE_DEPENDS+=	synstructure-0.12.6
 CARGO_CRATE_DEPENDS+=	syntect-4.6.0
 CARGO_CRATE_DEPENDS+=	sys-info-0.9.1
 CARGO_CRATE_DEPENDS+=	sys-locale-0.1.0
-CARGO_CRATE_DEPENDS+=	sysinfo-0.21.2
+CARGO_CRATE_DEPENDS+=	sysinfo-0.23.0
 CARGO_CRATE_DEPENDS+=	tempfile-3.2.0
 CARGO_CRATE_DEPENDS+=	tendril-0.4.2
 CARGO_CRATE_DEPENDS+=	term-0.7.0

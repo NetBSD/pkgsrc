@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2022/01/01 22:34:45 pin Exp $
+$NetBSD: distinfo,v 1.12 2022/01/19 10:52:30 pin Exp $
 
 BLAKE2s (addr2line-0.17.0.crate) = f7fa3b016f0e80c4ea9967f8947de15edc9fa39d0c0cdea692dccd0c41c28039
 SHA512 (addr2line-0.17.0.crate) = ef3bbd7c6d1dfdd0b47e3be1fb4c8b15ed61a769bed7e80dce80461a1ee13ef21c75e62e9a66328504f862341f1e808abec5790ac79784e18655afcc16206b95
@@ -588,9 +588,9 @@ Size (lexical-write-float-0.8.2.crate) = 100230 bytes
 BLAKE2s (lexical-write-integer-0.8.0.crate) = 9733dcbdb74e1b81620535275fd286b8559fb0c6763ad338b3cbeab645513547
 SHA512 (lexical-write-integer-0.8.0.crate) = c7e2ea5e70b7274ee61d921dadd09cfedd21fdb312fa65eef4f87cc3ac79ad912c1e12fd2ff2a53c686f1d7d861a1abc427ba1b2a99663eb34171c60b68e6ea7
 Size (lexical-write-integer-0.8.0.crate) = 52070 bytes
-BLAKE2s (libc-0.2.108.crate) = d91b2efef87721a8f42ad3f3b345c694b11a53c71fd9c262f2e49a183cbc1b31
-SHA512 (libc-0.2.108.crate) = a29f0c5cc7e4b653c2bc33c92dc90b5d3a7132d4409d6b92b94fa9fe1391d8cf57a63d339ca0602f2efac28d3dc3beb854cf9a6d03bf027fef5e5276fc5b1487
-Size (libc-0.2.108.crate) = 559475 bytes
+BLAKE2s (libc-0.2.112.crate) = 09606c79a810802b6d71f0d5dfb6fb903c9dd4af7ebe7ef837c2d6705657a11c
+SHA512 (libc-0.2.112.crate) = 6c1a027eff21d3ef8078ad19b90b06d90790919a848e95a4c878e8c8b850d2e9be3fca36d8db39b24e472f15e5352ead1182d5491a0b382e06f8c3ead379c45f
+Size (libc-0.2.112.crate) = 571445 bytes
 BLAKE2s (libgit2-sys-0.12.26+1.3.0.crate) = e06d2fd75375aeccc6cd953b15370574733e713bad99f653669f8c68cc59ed3a
 SHA512 (libgit2-sys-0.12.26+1.3.0.crate) = de30865b3d4ab0288e090381e5646e3e8028c341fac93014168fcfa5f166f7fbad9fc4ebd285919247cc6bac178658eb936ea1fdf168068248be07ad34ecc54d
 Size (libgit2-sys-0.12.26+1.3.0.crate) = 1476836 bytes
@@ -747,9 +747,9 @@ Size (num-traits-0.2.14.crate) = 45476 bytes
 BLAKE2s (num_cpus-1.13.0.crate) = 9feb84c345e288846365e1ff29d95ee255a7792c11182ef39fd9b8c054359b14
 SHA512 (num_cpus-1.13.0.crate) = e75ec298fa682be84bf4efb6cf40126da9233ef25f07e887c2fa7421ee78790204564e6406c8219466651f47421e27f69eca690bb9cdfc982b644d78cc10de3f
 Size (num_cpus-1.13.0.crate) = 14704 bytes
-BLAKE2s (nushell-0.42.0.tar.gz) = b8bb43a752ee58cc32561c70641b7ee22c28fae227f28cdea8445b8dbf889090
-SHA512 (nushell-0.42.0.tar.gz) = d68bc66241fc08e98f528e5f244650d9d7f74d38692f49f1cb9a4c0e5de80ba5fae5dd7be50dea92a0912657776fee84266bd8a1943c4ee8ff13432be21073cb
-Size (nushell-0.42.0.tar.gz) = 6296872 bytes
+BLAKE2s (nushell-0.43.0.tar.gz) = 02404a59316d2e833f44da3b7959622fe64b76eb294db218ff03b04ba2cd8984
+SHA512 (nushell-0.43.0.tar.gz) = 6b929c35f02e80b8c1a9b64bd250663d41702629c3857b5cbef8e60a2b9682d9f9728b3afa6a65a632995e8835cbad86899219d28b170a04206b4ea29f51e0c2
+Size (nushell-0.43.0.tar.gz) = 6296775 bytes
 BLAKE2s (objc-0.2.7.crate) = e34a570a877d402bef4a22098157a24171ada921812037222da0b82a1424f391
 SHA512 (objc-0.2.7.crate) = 7178870c8e4e9154b4c7b4953b3164946b7ce72c956a02b9ba18889353c72be735824bd73e44a485e42ad5f97994820d9153ac684629342755a6a63711ab5988
 Size (objc-0.2.7.crate) = 22036 bytes
@@ -1194,9 +1194,9 @@ Size (sys-info-0.9.1.crate) = 20589 bytes
 BLAKE2s (sys-locale-0.1.0.crate) = 014fa180b7bcbdae7e6112f01c75210366ba1859a49c015120f678df2446d267
 SHA512 (sys-locale-0.1.0.crate) = cd80b09d632e456af1d8346031dc4da85bf0a7960d10f07d73342f8f6f1963e13159a7544a93fa8621f90621f47c81ab8427fbf7b9fb1e539e7625ce54091cb9
 Size (sys-locale-0.1.0.crate) = 12311 bytes
-BLAKE2s (sysinfo-0.21.2.crate) = ef998f33349c299756cf973b71080c748bc47038a8f76da90ec6c51b9ac4332a
-SHA512 (sysinfo-0.21.2.crate) = 1e8bf702b1022508b7d8718e31482a8bbcc1f59c62108bbc2a0cd284a0924e92841e3ab1a79e627ffbc2abd1045e9fa842190fec1d2f730f52ff39fa930e1724
-Size (sysinfo-0.21.2.crate) = 99122 bytes
+BLAKE2s (sysinfo-0.23.0.crate) = 9c1b46af46ba0e9833e052222e3193466d9dcd0ff06478dfec6da470e0df7b91
+SHA512 (sysinfo-0.23.0.crate) = e5dc81ab1d0cf37797a3c50da99ccd21b2e1f28ca8cd76fb1f4983ec16bd231fead8ba99a00b6ccf25e5b2f871a07116b6ba37c3c98ad8e3bcd3ab88ead7a002
+Size (sysinfo-0.23.0.crate) = 118866 bytes
 BLAKE2s (tempfile-3.2.0.crate) = 3faf07562ac5aa5d5f7b400d27cabe0cf9342c30b5ad28b30b6a97d1d1f80c24
 SHA512 (tempfile-3.2.0.crate) = 56d1c5af7cb6863f9eac990354126979534aae7bf298bc8b1c918c7317ce2ba31f53089aaa1ecf8baa4a39d4111d74f4450be82b509b3c2aa0428880029e663a
 Size (tempfile-3.2.0.crate) = 25892 bytes
