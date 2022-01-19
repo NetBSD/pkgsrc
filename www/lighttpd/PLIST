@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2021/05/14 11:11:00 nia Exp $
+@comment $NetBSD: PLIST,v 1.25 2022/01/19 21:41:48 schmonz Exp $
 lib/lighttpd/mod_access.la
 lib/lighttpd/mod_accesslog.la
 lib/lighttpd/mod_ajp13.la
@@ -8,9 +8,7 @@ ${PLIST.libdbi}lib/lighttpd/mod_authn_dbi.la
 lib/lighttpd/mod_authn_file.la
 ${PLIST.gssapi}lib/lighttpd/mod_authn_gssapi.la
 ${PLIST.ldap}lib/lighttpd/mod_authn_ldap.la
-${PLIST.mysql}lib/lighttpd/mod_authn_mysql.la
 lib/lighttpd/mod_cgi.la
-${PLIST.lua}lib/lighttpd/mod_cml.la
 lib/lighttpd/mod_deflate.la
 lib/lighttpd/mod_dirlisting.la
 lib/lighttpd/mod_evasive.la
@@ -18,13 +16,11 @@ lib/lighttpd/mod_evhost.la
 lib/lighttpd/mod_expire.la
 lib/lighttpd/mod_extforward.la
 lib/lighttpd/mod_fastcgi.la
-lib/lighttpd/mod_flv_streaming.la
 ${PLIST.gnutls}lib/lighttpd/mod_gnutls.la
 lib/lighttpd/mod_indexfile.la
 ${PLIST.lua}lib/lighttpd/mod_magnet.la
 ${PLIST.geoip}lib/lighttpd/mod_maxminddb.la
 ${PLIST.mbedtls}lib/lighttpd/mod_mbedtls.la
-${PLIST.mysql}lib/lighttpd/mod_mysql_vhost.la
 ${PLIST.nss}lib/lighttpd/mod_nss.la
 ${PLIST.openssl}lib/lighttpd/mod_openssl.la
 lib/lighttpd/mod_proxy.la
@@ -39,8 +35,6 @@ lib/lighttpd/mod_sockproxy.la
 lib/lighttpd/mod_ssi.la
 lib/lighttpd/mod_staticfile.la
 lib/lighttpd/mod_status.la
-${PLIST.gdbm}lib/lighttpd/mod_trigger_b4_dl.la
-${PLIST.memcached}lib/lighttpd/mod_trigger_b4_dl.la
 lib/lighttpd/mod_uploadprogress.la
 lib/lighttpd/mod_userdir.la
 lib/lighttpd/mod_usertrack.la
@@ -60,7 +54,6 @@ share/doc/lighttpd/accesslog.txt
 share/doc/lighttpd/alias.txt
 share/doc/lighttpd/authentication.txt
 share/doc/lighttpd/cgi.txt
-share/doc/lighttpd/cml.txt
 share/doc/lighttpd/compress.txt
 share/doc/lighttpd/configuration.txt
 share/doc/lighttpd/dirlisting.txt
@@ -72,7 +65,6 @@ share/doc/lighttpd/fastcgi-state.txt
 share/doc/lighttpd/fastcgi.txt
 share/doc/lighttpd/features.txt
 share/doc/lighttpd/magnet.txt
-share/doc/lighttpd/mysqlvhost.txt
 share/doc/lighttpd/newstyle.css
 share/doc/lighttpd/oldstyle.css
 share/doc/lighttpd/performance.txt
@@ -93,25 +85,21 @@ share/doc/lighttpd/state.dot
 share/doc/lighttpd/state.txt
 share/doc/lighttpd/status.txt
 share/doc/lighttpd/traffic-shaping.txt
-share/doc/lighttpd/trigger_b4_dl.txt
 share/doc/lighttpd/userdir.txt
 share/doc/lighttpd/webdav.txt
 share/examples/lighttpd/cert-staple.sh
 share/examples/lighttpd/conf.d/access_log.conf
 share/examples/lighttpd/conf.d/auth.conf
 share/examples/lighttpd/conf.d/cgi.conf
-share/examples/lighttpd/conf.d/cml.conf
 share/examples/lighttpd/conf.d/debug.conf
 share/examples/lighttpd/conf.d/deflate.conf
 share/examples/lighttpd/conf.d/dirlisting.conf
 share/examples/lighttpd/conf.d/evhost.conf
 share/examples/lighttpd/conf.d/expire.conf
 share/examples/lighttpd/conf.d/fastcgi.conf
-share/examples/lighttpd/conf.d/geoip.conf
 share/examples/lighttpd/conf.d/magnet.conf
 share/examples/lighttpd/conf.d/mime.conf
 share/examples/lighttpd/conf.d/mod.template
-share/examples/lighttpd/conf.d/mysql_vhost.conf
 share/examples/lighttpd/conf.d/proxy.conf
 share/examples/lighttpd/conf.d/rrdtool.conf
 share/examples/lighttpd/conf.d/scgi.conf
@@ -119,7 +107,6 @@ share/examples/lighttpd/conf.d/secdownload.conf
 share/examples/lighttpd/conf.d/simple_vhost.conf
 share/examples/lighttpd/conf.d/ssi.conf
 share/examples/lighttpd/conf.d/status.conf
-share/examples/lighttpd/conf.d/trigger_b4_dl.conf
 share/examples/lighttpd/conf.d/userdir.conf
 share/examples/lighttpd/conf.d/webdav.conf
 share/examples/lighttpd/lighttpd.conf
