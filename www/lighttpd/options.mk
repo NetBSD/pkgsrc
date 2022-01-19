@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.26 2021/05/14 11:11:00 nia Exp $
+# $NetBSD: options.mk,v 1.27 2022/01/19 21:41:48 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.lighttpd
 PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
 PKG_OPTIONS_GROUP.ssl=		gnutls mbedtls nss openssl wolfssl
-PKG_SUPPORTED_OPTIONS+=		brotli bzip2 fam gdbm inet6 ldap libdbi lua
-PKG_SUPPORTED_OPTIONS+=		mysql memcached geoip gssapi webdav
+PKG_SUPPORTED_OPTIONS+=		brotli bzip2 fam inet6 ldap libdbi lua
+PKG_SUPPORTED_OPTIONS+=		mysql geoip gssapi webdav
 PKG_SUGGESTED_OPTIONS=		inet6 openssl
 
 .include "../../mk/bsd.options.mk"
@@ -37,18 +37,6 @@ CONFIGURE_ARGS+=	--without-bzip2
 CONFIGURE_ARGS+=	--with-fam
 .else
 CONFIGURE_ARGS+=	--without-fam
-.endif
-
-###
-### Support using GDBM for storage in the "trigger before download" module.
-###
-PLIST_VARS+=		gdbm
-.if !empty(PKG_OPTIONS:Mgdbm)
-.  include "../../databases/gdbm/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-gdbm
-PLIST.gdbm=		yes
-.else
-CONFIGURE_ARGS+=	--without-gdbm
 .endif
 
 ###
@@ -95,19 +83,6 @@ CONFIGURE_ARGS+=	--with-lua
 PLIST.lua=		yes
 .else
 CONFIGURE_ARGS+=	--without-lua
-.endif
-
-###
-### Support using memcached as an in-memory caching system for the
-### "trigger before download" and CML modules.
-###
-PLIST_VARS+=		memcached
-.if !empty(PKG_OPTIONS:Mmemcached)
-.  include "../../devel/libmemcached/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-memcached
-PLIST.memcached=	yes
-.else
-CONFIGURE_ARGS+=	--without-memcached
 .endif
 
 ###
