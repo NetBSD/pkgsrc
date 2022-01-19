@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2021/12/08 16:04:17 adam Exp $
+# $NetBSD: Makefile,v 1.38 2022/01/19 21:56:43 nia Exp $
 
-DISTNAME=	mednafen-1.27.1
-PKGREVISION=	2
+DISTNAME=	mednafen-1.29.0
 CATEGORIES=	emulators
 MASTER_SITES=	https://mednafen.github.io/releases/files/
 EXTRACT_SUFX=	.tar.xz
@@ -14,6 +13,7 @@ LICENSE=	gnu-gpl-v2
 CONFIGURE_ARGS+=	--with-external-mpcdec
 CONFIGURE_ARGS+=	--with-external-tremor
 CONFIGURE_ARGS+=	--with-external-trio
+CONFIGURE_ARGS+=	--with-external-libzstd
 CONFIGURE_ARGS+=	--with-external-lzo
 CONFIGURE_ARGS+=	--disable-alsatest
 CONFIGURE_ARGS+=	--disable-sdltest
@@ -29,6 +29,9 @@ USE_PKGLOCALEDIR=	yes
 INSTALLATION_DIRS=	share/doc/mednafen
 
 GCC_REQD+=		4.7 # gnu++11
+
+# Complains, loudly.
+MKPIE_SUPPORTED=	no
 
 .include "../../mk/oss.buildlink3.mk"
 
@@ -48,6 +51,7 @@ post-install:
 
 .include "options.mk"
 .include "../../archivers/lzo/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/musepack/buildlink3.mk"
 .include "../../audio/tremor/buildlink3.mk"
