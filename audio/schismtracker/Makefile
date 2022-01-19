@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2021/05/28 07:34:36 fcambus Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/19 21:05:28 nia Exp $
 
-DISTNAME=	schismtracker-20210525
+DISTNAME=	schismtracker-20211116
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=schismtracker/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
