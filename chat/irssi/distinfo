@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.56 2021/10/26 10:05:16 nia Exp $
+$NetBSD: distinfo,v 1.57 2022/01/19 22:15:43 nia Exp $
 
 BLAKE2s (irssi-1.2.3.tar.gz) = 7ac7c6a1e29a75c19faf86dc80ccbf54a2cbc5f93beef251874a39fd51135766
 SHA512 (irssi-1.2.3.tar.gz) = 7e4c8dc2d8e3532f26775702254339ba92e276c82b5a7041756574096928e25f2614d04a1cfa091ba90bc3e5a0d552578b80bc89c3c87c6d48722139c2ae47ff
 Size (irssi-1.2.3.tar.gz) = 1824077 bytes
 SHA1 (patch-ad) = 8cb41612afcd6088b869235166da9a6eb37e6ec7
 SHA1 (patch-src_fe-text_terminfo-core.c) = 4f0af35b0288db4615e147211ca6e47b2383669d
+SHA1 (patch-src_otr_otr.c) = f9edabefd97e92f7a4c3db69741b35afdb825f8d
