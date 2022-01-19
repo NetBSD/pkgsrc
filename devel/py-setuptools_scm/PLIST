@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/01/13 19:37:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/01/19 12:58:43 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -12,6 +12,15 @@ ${PYSITELIB}/setuptools_scm/__init__.pyo
 ${PYSITELIB}/setuptools_scm/__main__.py
 ${PYSITELIB}/setuptools_scm/__main__.pyc
 ${PYSITELIB}/setuptools_scm/__main__.pyo
+${PYSITELIB}/setuptools_scm/_entrypoints.py
+${PYSITELIB}/setuptools_scm/_entrypoints.pyc
+${PYSITELIB}/setuptools_scm/_entrypoints.pyo
+${PYSITELIB}/setuptools_scm/_overrides.py
+${PYSITELIB}/setuptools_scm/_overrides.pyc
+${PYSITELIB}/setuptools_scm/_overrides.pyo
+${PYSITELIB}/setuptools_scm/_types.py
+${PYSITELIB}/setuptools_scm/_types.pyc
+${PYSITELIB}/setuptools_scm/_types.pyo
 ${PYSITELIB}/setuptools_scm/_version_cls.py
 ${PYSITELIB}/setuptools_scm/_version_cls.pyc
 ${PYSITELIB}/setuptools_scm/_version_cls.pyo
