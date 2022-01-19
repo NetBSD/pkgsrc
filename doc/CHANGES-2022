@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.309 2022/01/19 10:52:50 pin Exp $
+$NetBSD: CHANGES-2022,v 1.310 2022/01/19 10:53:55 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -442,3 +442,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-django2 to 2.2.26 [adam 2022-01-19]
 	Updated www/py-django3 to 3.2.11 [adam 2022-01-19]
 	Updated shells/nushell to 0.43.0 [pin 2022-01-19]
+	Updated sysutils/navi to 2.19.0 [pin 2022-01-19]
