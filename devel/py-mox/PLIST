@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2018/02/03 14:59:20 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/19 17:54:37 wiz Exp $
+${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/mox.py
 ${PYSITELIB}/mox.pyc
 ${PYSITELIB}/mox.pyo
