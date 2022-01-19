@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.311 2022/01/19 10:55:09 pin Exp $
+$NetBSD: CHANGES-2022,v 1.312 2022/01/19 10:59:17 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -444,3 +444,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated shells/nushell to 0.43.0 [pin 2022-01-19]
 	Updated sysutils/navi to 2.19.0 [pin 2022-01-19]
 	Updated x11/citron to 0.14.0 [pin 2022-01-19]
+	Added sysutils/hcal version 0.3.1 [pin 2022-01-19]
