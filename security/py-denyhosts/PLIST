@@ -1,6 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2021/11/27 14:28:10 he Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/19 18:09:08 wiz Exp $
 bin/daemon-control-dist
 bin/denyhosts.py
+${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/DenyHosts/__init__.py
 ${PYSITELIB}/DenyHosts/__init__.pyc
 ${PYSITELIB}/DenyHosts/__init__.pyo
