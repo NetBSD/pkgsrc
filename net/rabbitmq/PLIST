@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2022/01/12 06:44:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.48 2022/01/19 12:59:38 adam Exp $
 lib/erlang/autocomplete/bash_autocomplete.sh
 lib/erlang/autocomplete/zsh_autocomplete.sh
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/INSTALL
@@ -1318,6 +1318,13 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/recon-2.5.1/ebin/recon_lib.
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/recon-2.5.1/ebin/recon_map.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/recon-2.5.1/ebin/recon_rec.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/recon-2.5.1/ebin/recon_trace.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/redbug-2.0.7/ebin/redbug.app
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/redbug-2.0.7/ebin/redbug.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/redbug-2.0.7/ebin/redbug_compiler.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/redbug-2.0.7/ebin/redbug_dtop.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/redbug-2.0.7/ebin/redbug_lexer.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/redbug-2.0.7/ebin/redbug_parser.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/redbug-2.0.7/ebin/redbug_targ.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/seshat-0.1.0/ebin/seshat.app
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/seshat-0.1.0/ebin/seshat_app.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/seshat-0.1.0/ebin/seshat_counters.beam
