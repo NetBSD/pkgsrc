@@ -1,12 +1,7 @@
-$NetBSD: distinfo,v 1.150 2021/10/26 11:17:06 nia Exp $
+$NetBSD: distinfo,v 1.151 2022/01/19 21:11:11 adam Exp $
 
-BLAKE2s (gnutls-3.7.2.tar.xz) = 16c4ae925fa13ec1ef7f0009cda4227cfe6a8945d10486da9ab6208099e949b9
-SHA512 (gnutls-3.7.2.tar.xz) = 5d01d561a05379da71e4847e30ba13c2abe09f7a5c4359fd539d8bd19abad0ce87120f82ee7b6264e787bd3edbc5ae16beffa892983cbc3d59f11a1811c10329
-Size (gnutls-3.7.2.tar.xz) = 6091508 bytes
+BLAKE2s (gnutls-3.7.3.tar.xz) = b3c209d629dc0d9d8927532511d3337b336328f6fb8a7b855bc110f9796d65bb
+SHA512 (gnutls-3.7.3.tar.xz) = 3ace744affe23e284342658d6d2d2de49dd50065489cbc8be18fc7d38187253e5268ca54027ce5cd517056c249ac039a7481e4548cec04325de37ae85617d077
+Size (gnutls-3.7.3.tar.xz) = 6119292 bytes
 SHA1 (patch-configure) = 3653f74914f874aa369f62c8b267a46fd6b78eaa
 SHA1 (patch-lib_system_certs.c) = fba74b2834a36d66bddcd7d3405d0c91c1b14efc
-SHA1 (patch-src_libopts_autoopts_options.h) = ebeeafc834bce3b6b3f938e360b089e165ee4f9e
-SHA1 (patch-src_libopts_compat_compat.h) = 6e88b5e73a56c296f356aa5ce7e6048e1bcff450
-SHA1 (patch-src_libopts_libopts.c) = 6e2453a886aa4be0a17dfbdb8a23ef9d7a0f62f8
-SHA1 (patch-src_libopts_makeshell.c) = 1b08ab63e6e382bd471699530e5d8bff075b3f24
-SHA1 (patch-src_libopts_proto.h) = 7601830e5ff45632ae337a387548f9ed5e591c4f

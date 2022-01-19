@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.226 2022/01/03 12:36:53 wiz Exp $
+# $NetBSD: Makefile,v 1.227 2022/01/19 21:11:11 adam Exp $
 
-DISTNAME=	gnutls-3.7.2
-PKGREVISION=	2
+DISTNAME=	gnutls-3.7.3
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/gnutls/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -53,14 +52,6 @@ PKGCONFIG_OVERRIDE+=	libdane/gnutls-dane.pc.in
 MAKE_ENV+=		RM=${RM:Q}
 MAKE_ENV+=		TZ=UTC
 
-SUBST_CLASSES+=		shell
-SUBST_SED.shell+=	-e 's,define POSIX_SHELL .*,define POSIX_SHELL "'${TOOLS_PATH.bash}'",'
-SUBST_STAGE.shell=	post-configure
-SUBST_FILES.shell+=	config.h
-SUBST_MESSAGE.shell=	Fixing path to bash.
-
-EGDIR=		${PREFIX}/share/examples/gnutls
-
 INSTALLATION_DIRS=	${EGDIR} include/gnutls
 
 .include "../../mk/bsd.prefs.mk"
@@ -96,9 +87,6 @@ CONFIGURE_ARGS+=	--disable-hardware-acceleration
 CONFIGURE_ARGS.SunOS+=	--disable-tests
 .endif
 
-post-install:
-	cd ${WRKSRC}/doc/examples && ${INSTALL_DATA} *.c ${DESTDIR}${EGDIR}
-
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gmp+=		gmp>=5.0
@@ -108,8 +96,6 @@ BUILDLINK_API_DEPENDS.gmp+=		gmp>=5.0
 # gnutls will add a Requires.private for it in its .pc file
 CHECK_BUILTIN.zlib:=yes
 .include "../../devel/zlib/buildlink3.mk"
-# guile is useful for selftests, but bindings should be separate pkgs
-#.include "../../lang/guile20/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libtasn1+=	libtasn1>=4.9
 .include "../../security/libtasn1/buildlink3.mk"
 BUILDLINK_API_DEPENDS.nettle+=		nettle>=3.6
