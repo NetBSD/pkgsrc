@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.117 2021/11/30 22:57:02 nia Exp $
+# $NetBSD: Makefile,v 1.118 2022/01/19 20:01:18 kim Exp $
 
 DISTNAME=	rsync-3.2.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://rsync.samba.org/ftp/rsync/
 MASTER_SITES+=	http://rsync.samba.org/ftp/rsync/old-versions/
@@ -31,6 +31,8 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	rsync.1 rsyncd.conf.5
 SUBST_SED.paths=	-e 's|/etc/rsyncd|${PKG_SYSCONFDIR}/rsyncd|g'
 SUBST_SED.paths+=	-e 's|/usr/bin/rsync|${PREFIX}/bin/rsync|g'
+
+.include "options.mk"
 
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
