@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.317 2022/01/19 21:05:41 nia Exp $
+$NetBSD: CHANGES-2022,v 1.318 2022/01/19 21:11:09 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -451,3 +451,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed security/py-Des [wiz 2022-01-19]
 	Added sysutils/py-jeepney version 0.6.0 [rhialto 2022-01-19]
 	Updated audio/schismtracker to 20211116 [nia 2022-01-19]
+	Updated net/get_iplayer to 3.28 [nia 2022-01-19]
