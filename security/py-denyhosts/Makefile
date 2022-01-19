@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2021/11/27 14:28:10 he Exp $
+# $NetBSD: Makefile,v 1.24 2022/01/19 18:09:08 wiz Exp $
 
-VER=		3.0
-DISTNAME=	denyhosts-${VER}
-PKGNAME=	${PYPKGPREFIX}-denyhosts-${VER}
+DISTNAME=	denyhosts-3.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=denyhosts/}
 LICENSE=	gnu-gpl-v2
@@ -10,8 +10,6 @@ LICENSE=	gnu-gpl-v2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://denyhosts.sourceforge.net/
 COMMENT=	Watch auth log for invalid ssh login attempts and block hosts
-
-PYDISTUTILSPKG=	yes
 
 EGDIR=		share/examples/denyhosts
 INSTALLATION_DIRS+=	${EGDIR}
@@ -41,6 +39,8 @@ post-install:
 	mv ${DESTDIR}/${PKG_SYSCONFDIR}/denyhosts.conf \
 		${DESTDIR}/${PREFIX}/${EGDIR}/denyhosts.conf
 
-.include "../../lang/python/extension.mk"
+EGG_NAME=	DenyHosts-${PKGVERSION_NOREV}
+
+.include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
