@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.307 2022/01/19 06:10:19 adam Exp $
+$NetBSD: CHANGES-2022,v 1.308 2022/01/19 09:51:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -439,3 +439,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated archivers/py-zstandard to 0.17.0 [adam 2022-01-19]
 	Updated www/py-httpcore to 0.14.5 [adam 2022-01-19]
 	Updated devel/py-frozenlist to 1.3.0 [adam 2022-01-19]
+	Updated www/py-django2 to 2.2.26 [adam 2022-01-19]
+	Updated www/py-django3 to 3.2.11 [adam 2022-01-19]
