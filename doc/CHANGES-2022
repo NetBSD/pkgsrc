@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.321 2022/01/19 21:41:57 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.322 2022/01/19 21:56:56 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -455,3 +455,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/gnutls to 3.7.3 [adam 2022-01-19]
 	Added devel/py-trio version 0.19.0 [rhialto 2022-01-19]
 	Updated www/lighttpd to 1.4.64 [schmonz 2022-01-19]
+	Updated emulators/mednafen to 1.29.0 [nia 2022-01-19]
