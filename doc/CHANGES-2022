@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.305 2022/01/18 23:34:05 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.306 2022/01/19 06:05:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -435,3 +435,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added x11/py-sip5 version 5.5.0 [rhialto 2022-01-18]
 	Added x11/py-qt-builder version 1.12.2 [rhialto 2022-01-18]
 	Updated geography/qgis to 3.16.16 [gdt 2022-01-18]
+	Updated archivers/zstd to 1.5.1 [adam 2022-01-19]
+	Updated archivers/py-zstandard to 0.17.0 [adam 2022-01-19]
