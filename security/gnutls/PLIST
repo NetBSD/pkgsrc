@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.73 2021/05/31 11:08:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.74 2022/01/19 21:11:11 adam Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -238,6 +238,7 @@ man/man3/gnutls_digest_get_id.3
 man/man3/gnutls_digest_get_name.3
 man/man3/gnutls_digest_get_oid.3
 man/man3/gnutls_digest_list.3
+man/man3/gnutls_digest_set_secure.3
 man/man3/gnutls_dtls_cookie_send.3
 man/man3/gnutls_dtls_cookie_verify.3
 man/man3/gnutls_dtls_get_data_mtu.3
@@ -256,6 +257,7 @@ man/man3/gnutls_ecc_curve_get_oid.3
 man/man3/gnutls_ecc_curve_get_pk.3
 man/man3/gnutls_ecc_curve_get_size.3
 man/man3/gnutls_ecc_curve_list.3
+man/man3/gnutls_ecc_curve_set_enabled.3
 man/man3/gnutls_encode_ber_digest_info.3
 man/man3/gnutls_encode_gost_rs_value.3
 man/man3/gnutls_encode_rs_value.3
@@ -270,8 +272,14 @@ man/man3/gnutls_ext_raw_parse.3
 man/man3/gnutls_ext_register.3
 man/man3/gnutls_ext_set_data.3
 man/man3/gnutls_fingerprint.3
+man/man3/gnutls_fips140_context_deinit.3
+man/man3/gnutls_fips140_context_init.3
+man/man3/gnutls_fips140_get_operation_state.3
 man/man3/gnutls_fips140_mode_enabled.3
+man/man3/gnutls_fips140_pop_context.3
+man/man3/gnutls_fips140_push_context.3
 man/man3/gnutls_fips140_set_mode.3
+man/man3/gnutls_get_library_config.3
 man/man3/gnutls_get_system_config_file.3
 man/man3/gnutls_global_deinit.3
 man/man3/gnutls_global_init.3
@@ -616,6 +624,7 @@ man/man3/gnutls_protocol_get_id.3
 man/man3/gnutls_protocol_get_name.3
 man/man3/gnutls_protocol_get_version.3
 man/man3/gnutls_protocol_list.3
+man/man3/gnutls_protocol_set_enabled.3
 man/man3/gnutls_psk_allocate_client_credentials.3
 man/man3/gnutls_psk_allocate_server_credentials.3
 man/man3/gnutls_psk_client_get_hint.3
@@ -763,6 +772,8 @@ man/man3/gnutls_sign_get_pk_algorithm.3
 man/man3/gnutls_sign_is_secure.3
 man/man3/gnutls_sign_is_secure2.3
 man/man3/gnutls_sign_list.3
+man/man3/gnutls_sign_set_secure.3
+man/man3/gnutls_sign_set_secure_for_certs.3
 man/man3/gnutls_sign_supports_pk_algorithm.3
 man/man3/gnutls_srp_allocate_client_credentials.3
 man/man3/gnutls_srp_allocate_server_credentials.3
@@ -819,6 +830,7 @@ man/man3/gnutls_transport_get_int.3
 man/man3/gnutls_transport_get_int2.3
 man/man3/gnutls_transport_get_ptr.3
 man/man3/gnutls_transport_get_ptr2.3
+man/man3/gnutls_transport_is_ktls_enabled.3
 man/man3/gnutls_transport_set_errno.3
 man/man3/gnutls_transport_set_errno_function.3
 man/man3/gnutls_transport_set_fastopen.3
@@ -1075,6 +1087,8 @@ man/man3/gnutls_x509_crt_sign.3
 man/man3/gnutls_x509_crt_sign2.3
 man/man3/gnutls_x509_crt_verify.3
 man/man3/gnutls_x509_crt_verify_data2.3
+man/man3/gnutls_x509_ct_sct_get.3
+man/man3/gnutls_x509_ct_sct_get_version.3
 man/man3/gnutls_x509_dn_deinit.3
 man/man3/gnutls_x509_dn_export.3
 man/man3/gnutls_x509_dn_export2.3
@@ -1086,6 +1100,10 @@ man/man3/gnutls_x509_dn_init.3
 man/man3/gnutls_x509_dn_oid_known.3
 man/man3/gnutls_x509_dn_oid_name.3
 man/man3/gnutls_x509_dn_set_str.3
+man/man3/gnutls_x509_ext_ct_export_scts.3
+man/man3/gnutls_x509_ext_ct_import_scts.3
+man/man3/gnutls_x509_ext_ct_scts_deinit.3
+man/man3/gnutls_x509_ext_ct_scts_init.3
 man/man3/gnutls_x509_ext_deinit.3
 man/man3/gnutls_x509_ext_export_aia.3
 man/man3/gnutls_x509_ext_export_authority_key_id.3
@@ -1217,33 +1235,6 @@ share/doc/gnutls/gnutls-logo.png
 share/doc/gnutls/gnutls-modauth.png
 share/doc/gnutls/gnutls-x509.png
 share/doc/gnutls/pkcs11-vision.png
-share/examples/gnutls/ex-alert.c
-share/examples/gnutls/ex-cert-select-pkcs11.c
-share/examples/gnutls/ex-cert-select.c
-share/examples/gnutls/ex-client-anon.c
-share/examples/gnutls/ex-client-dtls.c
-share/examples/gnutls/ex-client-psk.c
-share/examples/gnutls/ex-client-resume.c
-share/examples/gnutls/ex-client-srp.c
-share/examples/gnutls/ex-client-x509-3.1.c
-share/examples/gnutls/ex-client-x509.c
-share/examples/gnutls/ex-crq.c
-share/examples/gnutls/ex-ocsp-client.c
-share/examples/gnutls/ex-pkcs11-list.c
-share/examples/gnutls/ex-pkcs12.c
-share/examples/gnutls/ex-serv-anon.c
-share/examples/gnutls/ex-serv-dtls.c
-share/examples/gnutls/ex-serv-psk.c
-share/examples/gnutls/ex-serv-srp.c
-share/examples/gnutls/ex-serv-x509.c
-share/examples/gnutls/ex-session-info.c
-share/examples/gnutls/ex-verify-ssh.c
-share/examples/gnutls/ex-verify.c
-share/examples/gnutls/ex-x509-info.c
-share/examples/gnutls/print-ciphersuites.c
-share/examples/gnutls/tcp.c
-share/examples/gnutls/udp.c
-share/examples/gnutls/verify.c
 share/locale/cs/LC_MESSAGES/gnutls.mo
 share/locale/de/LC_MESSAGES/gnutls.mo
 share/locale/eo/LC_MESSAGES/gnutls.mo
