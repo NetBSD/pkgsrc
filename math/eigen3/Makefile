@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2021/03/17 17:20:00 prlw1 Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/19 09:52:09 nros Exp $
 
 DISTNAME=	eigen-3.3.9
 PKGNAME=	${DISTNAME:S/eigen/eigen3/}
@@ -18,6 +18,7 @@ CONFIGURE_DIRS=	_build
 
 CMAKE_ARGS+=	-DCMAKEPACKAGE_INSTALL_DIR=lib/cmake/eigen3
 CMAKE_ARGS+=	-DPKGCONFIG_INSTALL_DIR=lib/pkgconfig
+CMAKE_ARGS+=	-DCMAKE_EXPORT_NO_PACKAGE_REGISTRY=ON
 
 PKGCONFIG_OVERRIDE+=	eigen3.pc.in
 
