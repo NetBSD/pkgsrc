@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.315 2022/01/19 18:00:28 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.316 2022/01/19 20:44:04 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -449,3 +449,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/rabbitmq to 3.9.13 [adam 2022-01-19]
 	Updated audio/ncspot to 0.9.5 [pin 2022-01-19]
 	Removed security/py-Des [wiz 2022-01-19]
+	Added sysutils/py-jeepney version 0.6.0 [rhialto 2022-01-19]
