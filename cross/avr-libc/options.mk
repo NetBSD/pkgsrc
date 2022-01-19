@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2021/09/08 12:20:35 micha Exp $
+# $NetBSD: options.mk,v 1.8 2022/01/19 03:47:41 dsainty Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.avr-libc
 PKG_SUPPORTED_OPTIONS+=		doc
@@ -15,6 +15,7 @@ BUILD_DEPENDS+=		tex-wasysym-[0-9]*:../../fonts/tex-wasysym
 BUILD_DEPENDS+=		netpbm-[0-9]*:../../graphics/netpbm
 BUILD_DEPENDS+=		tex-epstopdf-[0-9]*:../../graphics/tex-epstopdf
 BUILD_DEPENDS+=		tex-adjustbox-[0-9]*:../../print/tex-adjustbox
+BUILD_DEPENDS+=		tex-alphalph-[0-9]*:../../print/tex-alphalph
 BUILD_DEPENDS+=		tex-caption-[0-9]*:../../print/tex-caption
 BUILD_DEPENDS+=		tex-collectbox-[0-9]*:../../print/tex-collectbox
 BUILD_DEPENDS+=		tex-colortbl-[0-9]*:../../print/tex-colortbl
