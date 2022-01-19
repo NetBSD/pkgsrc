@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2022/01/14 17:52:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/01/19 17:50:48 wiz Exp $
 bin/smartypants-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}
+${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/smartypants.py
 ${PYSITELIB}/smartypants.pyc
 ${PYSITELIB}/smartypants.pyo
