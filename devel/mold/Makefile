@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/01/01 15:36:48 fcambus Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/19 02:52:24 pho Exp $
 
 DISTNAME=	mold-1.0.1
 CATEGORIES=	devel
@@ -10,17 +10,25 @@ HOMEPAGE=	https://github.com/rui314/mold/
 COMMENT=	High performance drop-in replacement for existing Unix linkers
 LICENSE=	gnu-agpl-v3
 
-ONLY_FOR_PLATFORM=	Linux-*-x86_64
-
 USE_TOOLS+=	gmake
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++20
 
 MAKE_FLAGS+=	MANDIR="${PREFIX}/${PKGMANDIR}"
 MAKE_FLAGS+=	SYSTEM_MIMALLOC=1 SYSTEM_TBB=1 SYSTEM_XXHASH=1
+
+# This package uses a lot of C++20 features. GCC 10 is the oldest GCC that can
+# build it.
+GCC_REQD+=	10
+
+# Handle linker flags for dlopen and pthread automatically.
+DL_AUTO_VARS=		yes
+PTHREAD_AUTO_VARS=	yes
 
 .include "../../devel/mimalloc/buildlink3.mk"
 .include "../../devel/xxhash/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../parallel/threadingbuildingblocks/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
