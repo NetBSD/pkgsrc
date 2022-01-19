@@ -1,7 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2018/04/03 14:33:50 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/19 18:02:32 wiz Exp $
 ${PYSITELIB}/IndicatorTypes.py
 ${PYSITELIB}/IndicatorTypes.pyc
 ${PYSITELIB}/IndicatorTypes.pyo
+${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/OTXv2.py
 ${PYSITELIB}/OTXv2.pyc
 ${PYSITELIB}/OTXv2.pyo
