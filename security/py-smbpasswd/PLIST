@@ -1,2 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/28 22:03:53 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/19 18:11:02 wiz Exp $
+${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/smbpasswd.so
