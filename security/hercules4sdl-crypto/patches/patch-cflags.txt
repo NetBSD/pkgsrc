@@ -1,0 +1,33 @@
+$NetBSD: patch-cflags.txt,v 1.1 2022/01/19 20:18:17 rhialto Exp $
+
+We just want do do a native-wordsize build.
+Do not depend on the object directory name to set the wordsize.
+
+--- cflags.txt.orig	2020-11-13 09:38:36.000000000 +0000
++++ cflags.txt
+@@ -38,25 +38,8 @@ set( CMAKE_C_FLAGS_RELWITHDEBINFO "${CMA
+ 
+ if( NOT WIN32 )
+ 
+-  set( TEMP_CMAKE_REQUIRED_FLAGS  "${CMAKE_REQUIRED_FLAGS}" )
+-  set( CMAKE_REQUIRED_FLAGS  "-m32" )
+-  Check_C_Compiler_Flag( -m32  OK )
+-
+-  if( OK )
+-    set( m32 "-m32" )
+-  else()
+     set( m32   ""   )
+-  endif()
+-
+-  set( CMAKE_REQUIRED_FLAGS  "-m64" )
+-  Check_C_Compiler_Flag( -m64  OK )
+-  set( CMAKE_REQUIRED_FLAGS  "${TEMP_CMAKE_REQUIRED_FLAGS}" )
+-
+-  if( OK )
+-    set( m64 "-m64" )
+-  else()
+     set( m64   ""   )
+-  endif()
+ 
+ endif()
+ 
