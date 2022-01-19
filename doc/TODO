@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21433 2022/01/19 06:05:05 adam Exp $
+$NetBSD: TODO,v 1.21434 2022/01/19 18:00:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1900,7 +1900,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o whowatch-1.8.5
 	o widelands-1.0
 	o windowlab-1.40
-	o wine-6.0.1
+	o wine-7.0
 	o wine-devel-3.7
 	o wiredtiger-10.0.0
 	o wkhtmltopdf-0.12.5
