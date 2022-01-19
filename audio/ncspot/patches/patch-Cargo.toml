@@ -1,14 +1,24 @@
-$NetBSD: patch-Cargo.toml,v 1.8 2022/01/02 16:30:06 pin Exp $
+$NetBSD: patch-Cargo.toml,v 1.9 2022/01/19 14:04:45 pin Exp $
 
 Don't force ncurses backend
+Disable Windows only features to again avoid forcing ncurses
 
---- Cargo.toml.orig	2022-01-01 20:46:53.000000000 +0000
+--- Cargo.toml.orig	2022-01-18 21:10:09.000000000 +0000
 +++ Cargo.toml
 @@ -45,7 +45,6 @@ strum_macros = "0.23.1"
  regex = "1"
  ioctl-rs = { version = "0.2", optional = true }
  serde_cbor = "0.11.2"
--pancurses = { version = "0.17.0", features = ["win32"], optional = true }
+-pancurses = { version = "0.17.0", optional = true }
  libc = "0.2.111"
  parse_duration = "2.1.1"
  
+@@ -67,7 +66,7 @@ pulseaudio_backend = ["librespot-playbac
+ rodio_backend = ["librespot-playback/rodio-backend"]
+ portaudio_backend = ["librespot-playback/portaudio-backend"]
+ termion_backend = ["cursive/termion-backend"]
+-pancurses_backend = ["cursive/pancurses-backend", "pancurses/win32"]
++pancurses_backend = ["cursive/pancurses-backend"]
+ mpris = ["dbus", "dbus-tree"]
+ notify = ["notify-rust"]
+ cover = ["ioctl-rs"]
