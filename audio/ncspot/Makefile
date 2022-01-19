@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2022/01/19 11:00:28 pin Exp $
+# $NetBSD: Makefile,v 1.36 2022/01/19 14:04:45 pin Exp $
 
-DISTNAME=	ncspot-0.9.4
-# Do not update, newer version require Rust >= 1.58.0
+DISTNAME=	ncspot-0.9.5
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hrkfdn/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
