@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/01/20 23:22:34 leot Exp $
+bin/conftest
