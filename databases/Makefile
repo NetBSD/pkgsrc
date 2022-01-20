@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.649 2022/01/16 13:23:52 taca Exp $
+# $NetBSD: Makefile,v 1.650 2022/01/20 02:51:47 gutteridge Exp $
 
 COMMENT=	Databases
 
@@ -436,13 +436,13 @@ SUBDIR+=	ruby-arel-helpers
 SUBDIR+=	ruby-awesome_nested_set
 SUBDIR+=	ruby-data_objects
 SUBDIR+=	ruby-datamapper
-SUBDIR+=	ruby-dbm
 SUBDIR+=	ruby-dbd-mysql
 SUBDIR+=	ruby-dbd-odbc
 SUBDIR+=	ruby-dbd-pg
 SUBDIR+=	ruby-dbd-sqlite
 SUBDIR+=	ruby-dbd-sqlite3
 SUBDIR+=	ruby-dbi
+SUBDIR+=	ruby-dbm
 SUBDIR+=	ruby-dm-adjust
 SUBDIR+=	ruby-dm-aggregates
 SUBDIR+=	ruby-dm-ar-finders
