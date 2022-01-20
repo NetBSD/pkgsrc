@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2022/01/12 08:49:01 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2022/01/20 12:57:13 jperkin Exp $
 
 .include "dist.mk"
 
@@ -48,6 +48,13 @@ CFLAGS+=	-fwrapv
 
 # fdatasync()
 LIBS.SunOS+=		-lrt
+.if ${OPSYS} == "SunOS" && ${OPSYS_VERSION} < 051100
+SUBST_CLASSES+=		setup
+SUBST_MESSAGE.setup=	Replacing crypt with crypt_i
+SUBST_STAGE.setup=	pre-configure
+SUBST_FILES.setup=	setup.py
+SUBST_SED.setup=	-e "s,\([ \[]\)'crypt',\\1'crypt_i',"
+.endif
 
 PY_VER_SUFFIX=		2.7
 
