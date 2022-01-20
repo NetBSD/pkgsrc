@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.260 2022/01/09 16:26:31 rhialto Exp $
+# $NetBSD: Makefile,v 1.261 2022/01/20 19:03:07 rhialto Exp $
 
-DISTNAME=	calibre-4.23.0
+DISTNAME=	calibre-5.34.0
 CATEGORIES=	misc
 MASTER_SITES=	http://download.calibre-ebook.com/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -11,34 +11,37 @@ HOMEPAGE=	https://www.calibre-ebook.com/
 COMMENT=	E-book library management application
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-apsw>=3.7.17:../../databases/py-apsw
-DEPENDS+=	${PYPKGPREFIX}-beautifulsoup-[0-9]*:../../www/py-beautifulsoup
+DEPENDS+=	${PYPKGPREFIX}-apsw>=3.37.0nb1:../../databases/py-apsw
+DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-cryptodome-[0-9]*:../../security/py-cryptodome
 DEPENDS+=	${PYPKGPREFIX}-css-parser-[0-9]*:../../textproc/py-css-parser
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.4.1:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-dns>=1.6.0:../../net/py-dns
-DEPENDS+=	${PYPKGPREFIX}-elementtree-[0-9]*:../../textproc/py-elementtree
-DEPENDS+=	${PYPKGPREFIX}-feedparser<6.0.0:../../textproc/py-feedparser5
-DEPENDS+=	${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text-2019.8.11
+DEPENDS+=	${PYPKGPREFIX}-feedparser>=6.0.0:../../textproc/py-feedparser
+DEPENDS+=	${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text
 DEPENDS+=	${PYPKGPREFIX}-html5-parser-[0-9]*:../../textproc/py-html5-parser
+DEPENDS+=	${PYPKGPREFIX}-jeepney>=0.6.0:../../sysutils/py-jeepney
 DEPENDS+=	${PYPKGPREFIX}-mechanize>=0.1.11nb1:../../www/py-mechanize
 DEPENDS+=	${PYPKGPREFIX}-msgpack-[0-9]*:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-netifaces>=0.8:../../net/py-netifaces
-DEPENDS+=	${PYPKGPREFIX}-Pillow>=2.7.0:../../graphics/py-Pillow6
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=2.7.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-psutil>=0.6.1:../../sysutils/py-psutil
-DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments25
+DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-qt5-webengine-[0-9]*:../../x11/py-qt5-webengine
 DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
+DEPENDS+=	${PYPKGPREFIX}-sip5>=5.5<6:../../x11/py-sip5
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-soupsieve-[0-9]*:../../www/py-soupsieve
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+
 # for installation
+BUILD_DEPENDS+=	${PYPKGPREFIX}-qt-builder>=1:../../x11/py-qt-builder
 BUILD_DEPENDS+=	xdg-utils>=1.0.2:../../misc/xdg-utils
 
 EXTRACT_USING=	bsdtar
 
-PYTHON_VERSIONS_ACCEPTED=	27 # as of 3.16.0
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # as of 5.x
 PYTHON_VERSIONED_DEPENDENCIES+=	markdown
 
 USE_LANGUAGES=			c99 c++
@@ -46,6 +49,7 @@ USE_LIBTOOL=			yes
 USE_TOOLS+=			pkg-config pax
 PYSETUPOPTARGS=			# empty
 PYSETUPINSTALLARGS=		--prefix=${PREFIX} --root=${DESTDIR:Q}${PREFIX}
+MAKE_JOBS_SAFE=			no	# setup.py does not like -j
 
 INSTALLATION_DIRS=	share/applications
 INSTALLATION_DIRS+=	share/icons
@@ -87,16 +91,13 @@ REPLACE_PYTHON+=	src/odf/*.py
 
 MAKE_ENV+=		PODOFO_INC_DIR=${BUILDLINK_PREFIX.podofo}/include/podofo
 MAKE_ENV+=		PODOFO_LIB_DIR=${BUILDLINK_PREFIX.podofo}/lib
-MAKE_ENV+=		SIP_BIN=${BUILDLINK_PREFIX.py-sip}/bin/sip${PYVERSSUFFIX}
-MAKE_ENV+=		SIP_DIR=${BUILDLINK_PREFIX.py-sip}/share/sip${PYVERSSUFFIX}
+MAKE_ENV+=		SIP_DIR=${PREFIX}/share/sip${PYVERSSUFFIX}/PyQt5
 MAKE_ENV+=		LFLAGS=${LDFLAGS:Q}
 
 # Turn off x bits on non-executable files.
 post-extract:
 	find  ${WRKSRC}/src/calibre/devices ${WRKSRC}/src/calibre/ebooks ${WRKSRC}/src/calibre/web -name '*.py' -exec chmod a-x \{} \;
 	find  ${WRKSRC}/resources/images/mimetypes  -name '*.png' -exec chmod a-x \{} \;
-	chmod a-x ${WRKSRC}/src/calibre/utils/Zeroconf.py
-	chmod a-x ${WRKSRC}/src/calibre/utils/smtplib.py
 
 post-install:
 	cd ${WRKSRC}/recipes && pax -wr -pma *.recipe \
@@ -107,6 +108,8 @@ post-install:
 
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} ./setup.py test
+
+.include "options.mk"
 
 .include "../../lang/python/application.mk"
 .include "../../archivers//bzip2/buildlink3.mk"
@@ -127,7 +130,6 @@ _PYSETUPTOOLSINSTALLARGS=	# empty
 # Get rid of --root=${DESTDIR}, use our own version from above instead.
 # because the setup.py is not the standard one and behaves differently.
 _PYSETUPINSTALLARGS=	${PYSETUPINSTALLARGS} ${PYSETUPOPTARGS} ${_PYSETUPTOOLSINSTALLARGS}
-BUILDLINK_API_DEPENDS.podofo+=	podofo>=0.8.2
 .include "../../print/podofo/buildlink3.mk"
 BUILDLINK_API_DEPENDS.poppler+=	poppler>=0.20.2
 .include "../../print/poppler-includes/buildlink3.mk"
@@ -135,14 +137,13 @@ BUILDLINK_API_DEPENDS.poppler+=	poppler>=0.20.2
 .include "../../print/poppler-qt5/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/hal/buildlink3.mk"
-BUILDLINK_API_DEPENDS.py-dbus+=	${PYPKGPREFIX}-dbus>=0.82.2
-.include "../../sysutils/py-dbus/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
 .include "../../textproc/hyphen/buildlink3.mk"
+.include "../../textproc/libstemmer/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
-.include "../../x11/py-sip/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qtwebengine/buildlink3.mk"
 .include "../../x11/py-qt5/buildlink3.mk"
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

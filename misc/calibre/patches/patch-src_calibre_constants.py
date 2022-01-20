@@ -1,15 +1,15 @@
-$NetBSD: patch-src_calibre_constants.py,v 1.5 2022/01/09 15:43:51 rhialto Exp $
+$NetBSD: patch-src_calibre_constants.py,v 1.6 2022/01/20 19:03:07 rhialto Exp $
 
 Include netbsd conditional.
 
---- src/calibre/constants.py.orig	2022-01-08 12:14:13.953868037 +0000
+--- src/calibre/constants.py.orig	2021-12-17 00:40:19.000000000 +0000
 +++ src/calibre/constants.py
-@@ -197,7 +197,7 @@ class Plugins(collections.Mapping):
-         if isosx:
-             plugins.append('usbobserver')
-             plugins.append('cocoa')
--        if isfreebsd or ishaiku or islinux or isosx:
-+        if isfreebsd or ishaiku or islinux or isosx or isnetbsd:
-             plugins.append('libusb')
-             plugins.append('libmtp')
-         self.plugins = frozenset(plugins)
+@@ -256,7 +256,7 @@ class ExtensionsImporter:
+             extra = ('winutil', 'wpd', 'winfonts', 'winsapi')
+         elif ismacos:
+             extra = ('usbobserver', 'cocoa', 'libusb', 'libmtp')
+-        elif isfreebsd or ishaiku or islinux:
++        elif isfreebsd or ishaiku or islinux or isnetbsd:
+             extra = ('libusb', 'libmtp')
+         else:
+             extra = ()
