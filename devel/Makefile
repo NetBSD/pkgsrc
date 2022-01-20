@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3561 2022/01/20 17:33:09 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3562 2022/01/20 23:23:02 leot Exp $
 #
 
 COMMENT=	Development utilities
@@ -244,6 +244,7 @@ SUBDIR+=	commit-patch
 SUBDIR+=	compiz-bcop
 SUBDIR+=	compizconfig-backend-gconf
 SUBDIR+=	concurrencykit
+SUBDIR+=	conftest
 SUBDIR+=	confuse
 SUBDIR+=	cook
 SUBDIR+=	cppcheck
