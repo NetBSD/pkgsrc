@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2021/12/11 13:40:03 gutteridge Exp $
+# $NetBSD: Makefile,v 1.59 2022/01/20 01:03:55 gutteridge Exp $
 
-VERSION=	0.12.1
+VERSION=	0.12.2
 DISTNAME=	ristretto-${VERSION}
 EXTRACT_SUFX=	.tar.bz2
 CATEGORIES=	graphics
@@ -16,7 +16,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config msgfmt perl intltool
+USE_TOOLS+=		gmake pkg-config msgfmt perl intltool gdbus-codegen
 
 LDFLAGS.DragonFly=	-lX11
 LDFLAGS.FreeBSD=	-lX11
