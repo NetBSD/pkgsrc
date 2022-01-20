@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/01/12 08:49:01 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2022/01/20 13:03:23 jperkin Exp $
 
 PKGREVISION= 3
 .include "dist.mk"
@@ -43,8 +43,17 @@ PKG_CC=			clang
 PKG_CXX=		clang++
 .endif
 
+# Used in socketmodule.c to determine if a sethostname declaration is required
+CPPFLAGS.SunOS+=	-DPKGSRC_OPSYS_VERSION=${OPSYS_VERSION}
 # fdatasync()
 LIBS.SunOS+=		-lrt
+.if ${OPSYS} == "SunOS" && ${OPSYS_VERSION} < 051100
+SUBST_CLASSES+=		setup
+SUBST_MESSAGE.setup=	Replacing crypt with crypt_i
+SUBST_STAGE.setup=	pre-configure
+SUBST_FILES.setup=	setup.py
+SUBST_SED.setup=	-e "s,'crypt','crypt_i',"
+.endif
 
 PY_VER_SUFFIX=		3.7
 
