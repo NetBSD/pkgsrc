@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.323 2022/01/19 22:39:31 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.324 2022/01/20 01:04:10 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -457,3 +457,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/lighttpd to 1.4.64 [schmonz 2022-01-19]
 	Updated emulators/mednafen to 1.29.0 [nia 2022-01-19]
 	Added devel/py-outcome version 1.1.0 [wiz 2022-01-19]
+	Updated graphics/ristretto to 0.12.2 [gutteridge 2022-01-20]
