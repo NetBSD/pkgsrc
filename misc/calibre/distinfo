@@ -1,13 +1,11 @@
-$NetBSD: distinfo,v 1.111 2022/01/09 16:31:09 rhialto Exp $
+$NetBSD: distinfo,v 1.112 2022/01/20 19:03:07 rhialto Exp $
 
-BLAKE2s (calibre-4.23.0.tar.xz) = c08912bcca9886e5608b5a99144645047c53e2583079db139a7eedddcc54be6c
-SHA512 (calibre-4.23.0.tar.xz) = 2a512f29ddc2fed7f6a229314a9f7fceac198c9422b3be19078685032f1d1cb3b9258ac2609c33d15da20683c1277ed09419ea1e9bbc70430cdc676f60395719
-Size (calibre-4.23.0.tar.xz) = 36908740 bytes
-SHA1 (patch-setup_build.py) = 6eeedbce76a627900c55f59d31ba76dc79fc7d27
-SHA1 (patch-setup_extensions.json) = 90f61a7c776220bfa16439eeb599eb2132e410b1
+BLAKE2s (calibre-5.34.0.tar.xz) = 62505402dee81ebd41063e80dc9611e9517c27b3a69e8cb88d99755ccbd3bca5
+SHA512 (calibre-5.34.0.tar.xz) = fe60f43493e8830a02a08db017efa8d8bdf873618c75efd73ed9a5a6e13a5afc41daa79489645f15fbeeadc6f99b16a70ebc8e6979b0c113f73a170e20f4c95f
+Size (calibre-5.34.0.tar.xz) = 37077184 bytes
+SHA1 (patch-setup_build.py) = 32cd46adf8a1c516639b4920191fa1527e86c2cc
+SHA1 (patch-setup_extensions.json) = a15bf58d20bd9a7566f14ebae20116f646c834e7
 SHA1 (patch-setup_install.py) = 758dc31959a6a850602abfcd5d58b19f6b9c6939
-SHA1 (patch-src_calibre_constants.py) = a72594b5a68fa42e7133d8be42dd30e73c8db205
-SHA1 (patch-src_calibre_ebooks_BeautifulSoup.py) = 5be182dde2085bbd2893a966aeb0f4fd4fc0c707
+SHA1 (patch-src_calibre_constants.py) = e35f904d075ddb2cf2256895b564a55490fb5897
 SHA1 (patch-src_calibre_linux.py) = 382191b8c8c6c893c4f2385613c599fcfc3bff09
 SHA1 (patch-src_calibre_utils_icu.c) = 219257d68925b5c4a0df897d89324457f2ff7289
-SHA1 (patch-src_calibre_utils_matcher.c) = a774e353c224ef5dfba115a89ee5831edaef02ae
