@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2022/01/20 17:33:09 bsiegert Exp $
+bin/keyify
+bin/staticcheck
+bin/structlayout
+bin/structlayout-optimize
+bin/structlayout-pretty
