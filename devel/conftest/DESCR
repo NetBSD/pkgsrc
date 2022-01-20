@@ -1,0 +1,7 @@
+Conftest helps you write tests against structured configuration data.
+Using Conftest you can write tests for your Kubernetes configuration,
+Tekton pipeline definitions, Terraform code, Serverless configs or any
+other config files.
+
+Conftest uses the Rego language from Open Policy Agent for writing the
+assertions.
