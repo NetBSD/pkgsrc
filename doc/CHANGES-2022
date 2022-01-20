@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.326 2022/01/20 13:53:21 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.327 2022/01/20 17:34:04 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -460,3 +460,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/ristretto to 0.12.2 [gutteridge 2022-01-20]
 	Updated x11/xfce4-indicator-plugin to 2.4.1 [gutteridge 2022-01-20]
 	Updated sysutils/etckeeper to 1.18.16nb1 [schmonz 2022-01-20]
+	Updated devel/go-staticcheck to 2021.1.2 [bsiegert 2022-01-20]
