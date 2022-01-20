@@ -1,10 +1,10 @@
-$NetBSD: patch-Modules_socketmodule.c,v 1.2 2021/05/22 11:36:01 bouyer Exp $
+$NetBSD: patch-Modules_socketmodule.c,v 1.3 2022/01/20 13:06:33 jperkin Exp $
 
 Support NetBSD's socketcan implementation
 
---- Modules/socketmodule.c.orig	2021-05-03 16:54:42.000000000 +0200
-+++ Modules/socketmodule.c	2021-05-22 12:11:03.509965978 +0200
-@@ -2157,7 +2157,7 @@
+--- Modules/socketmodule.c.orig	2022-01-13 21:21:23.000000000 +0000
++++ Modules/socketmodule.c
+@@ -2154,7 +2154,7 @@ getsockaddrarg(PySocketSockObject *s, Py
              PyObject *interfaceName;
              struct ifreq ifr;
              Py_ssize_t len;
@@ -13,7 +13,16 @@ Support NetBSD's socketcan implementation
  
              if (!PyTuple_Check(args)) {
                  PyErr_Format(PyExc_TypeError,
-@@ -7827,6 +7827,20 @@
+@@ -5489,7 +5489,7 @@ socket_sethostname(PyObject *self, PyObj
+     Py_buffer buf;
+     int res, flag = 0;
+ 
+-#ifdef _AIX
++#if defined(_AIX) || (defined(__sun) && PKGSRC_OPSYS_VERSION < 051100)
+ /* issue #18259, not declared in any useful header file */
+ extern int sethostname(const char *, size_t);
+ #endif
+@@ -7824,6 +7824,20 @@ PyInit__socket(void)
  
      PyModule_AddIntMacro(m, J1939_FILTER_MAX);
  #endif
