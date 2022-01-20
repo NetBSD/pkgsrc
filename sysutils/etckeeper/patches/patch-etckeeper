@@ -1,8 +1,8 @@
-$NetBSD: patch-etckeeper,v 1.2 2021/12/31 10:04:24 schmonz Exp $
+$NetBSD: patch-etckeeper,v 1.3 2022/01/20 13:53:13 schmonz Exp $
 
 Add SUBST_VARS tokens.
 
---- etckeeper.orig	2020-01-22 13:59:54.000000000 +0000
+--- etckeeper.orig	2021-01-02 15:33:42.000000000 +0000
 +++ etckeeper
 @@ -2,7 +2,7 @@
  set -e
@@ -31,6 +31,15 @@ Add SUBST_VARS tokens.
  fi
  cd "$ETCKEEPER_DIR"
  export ETCKEEPER_DIR
+@@ -127,7 +127,7 @@ export VCS
+ 
+ if command -v perl >/dev/null; then
+ 	lsscripts() {
+-		LANG=C perl -e '
++		LANG=C @PERL5@ -e '
+ 			$dir=shift;
+ 			print join "\n", grep { ! -d $_ && -x $_ }
+ 				grep /^\Q$dir\/\E[-a-zA-Z0-9]+$/,
 @@ -142,7 +142,7 @@ else
  	# fallback if perl isn't present
  	for script in $ETCKEEPER_CONF_DIR/$command.d/*; do
