@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2021/10/19 07:37:36 nia Exp $
+# $NetBSD: Makefile,v 1.24 2022/01/20 22:48:41 fox Exp $
 
-DISTNAME=	htop-3.1.1
+DISTNAME=	htop-3.1.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=htop-dev/}
 
