@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.328 2022/01/20 19:03:24 rhialto Exp $
+$NetBSD: CHANGES-2022,v 1.329 2022/01/20 20:16:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -462,3 +462,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/etckeeper to 1.18.16nb1 [schmonz 2022-01-20]
 	Updated devel/go-staticcheck to 2021.1.2 [bsiegert 2022-01-20]
 	Updated misc/calibre to 5.34.0 [rhialto 2022-01-20]
+	Updated databases/openldap to 2.6.1 [adam 2022-01-20]
+	Updated textproc/ugrep to 3.6.0 [adam 2022-01-20]
