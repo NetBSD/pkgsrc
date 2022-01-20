@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2021/12/08 16:01:53 adam Exp $
+# $NetBSD: Makefile,v 1.78 2022/01/20 17:08:33 nros Exp $
 
 DISTNAME=	gobject-introspection-1.68.0
 PKGREVISION=	1
@@ -45,6 +45,9 @@ SUBST_VARS.libdirs=	_OPSYS_LIB_DIRS
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/girepository
 # For Darwin
 MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/girepository
+
+# Disable cache to keep fake homedir clean
+MAKE_ENV+=	GI_SCANNER_DISABLE_CACHE=yes
 
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.58.0
 .include "../../devel/glib2/buildlink3.mk"
