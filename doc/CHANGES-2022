@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.329 2022/01/20 20:16:28 adam Exp $
+$NetBSD: CHANGES-2022,v 1.330 2022/01/20 20:30:42 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -464,3 +464,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/calibre to 5.34.0 [rhialto 2022-01-20]
 	Updated databases/openldap to 2.6.1 [adam 2022-01-20]
 	Updated textproc/ugrep to 3.6.0 [adam 2022-01-20]
+	Updated net/djbdnscurve6 to 41 [schmonz 2022-01-20]
