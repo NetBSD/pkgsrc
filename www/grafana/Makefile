@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2022/01/09 20:10:40 bsiegert Exp $
+# $NetBSD: Makefile,v 1.63 2022/01/20 22:22:31 tnn Exp $
 
-DISTNAME=	grafana-8.3.3
-PKGREVISION=	1
+DISTNAME=	grafana-8.3.4
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -74,6 +73,9 @@ INSTALLATION_DIRS+=	share/grafana/public
 
 CONF_FILES+=	${PREFIX}/share/grafana/conf/sample.ini \
 		${PKG_SYSCONFDIR}/grafana.conf
+
+post-extract:
+	${FIND} ${WRKDIR}/linux -type f -a -exec ${CHMOD} -x "{}" \;
 
 # These comands come from Makefile, build-go target.
 do-build:
