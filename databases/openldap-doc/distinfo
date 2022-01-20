@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.36 2021/12/01 12:13:54 adam Exp $
+$NetBSD: distinfo,v 1.37 2022/01/20 20:10:03 adam Exp $
 
-BLAKE2s (openldap-2.6.0.tgz) = c0c0dafc102d23d38ec094ca5c03ea85f4f990cc9d203d16f05d22be99f64d9c
-SHA512 (openldap-2.6.0.tgz) = c0bb15468cac326acab438939ef902e9fd07a17b1eb81f21ebe5ad121096ddd640040ec696bb8dac4eaa4a73a6916acba57c3558de08cc678157a3ccdead5a67
-Size (openldap-2.6.0.tgz) = 6433764 bytes
+BLAKE2s (openldap-2.6.1.tgz) = 2bf46b29bc49594d4c73e95c21690d92b0cc0b1ffe6d5498a4244ac695ba7cc5
+SHA512 (openldap-2.6.1.tgz) = bdb961225313bc2717aabac7ba1dfcaabba7c933ab1c28959315b5e88074af0575f082c329fdfc0adde61b6b0e56315305156cee7eb879bc8e48b47cb9f5cd58
+Size (openldap-2.6.1.tgz) = 6440418 bytes
