@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2022/01/12 08:49:01 wiz Exp $
+$NetBSD: distinfo,v 1.26 2022/01/20 11:52:28 jperkin Exp $
 
 BLAKE2s (Python-3.8.12.tar.xz) = f8a4544d78160cb58e9da8b3624bda7e7e0c0c90df702ac309fe3f6f768bcf89
 SHA512 (Python-3.8.12.tar.xz) = 2f93fe5ff83f470c7b6a1b7f29f499a2a010fabd649e9fe65ad3fbfa21b6e1966e77c9b7ac012d978159bc3fe63fec2d64bc6982fc2ee1714d3fa0e47631f279
@@ -12,7 +12,7 @@ SHA1 (patch-Makefile.pre.in) = d42f9f5bca1dd663f64122dc95b49111452fe6e8
 SHA1 (patch-Modules_makesetup) = a06786eebffadecedba5e3a50a9785fb47613567
 SHA1 (patch-Modules_nismodule.c) = 1bafe9b06359586d027a77011b103877590d947d
 SHA1 (patch-Modules_posixmodule.c) = ea24a1aa19b596b5d4457a4eff761e516406145f
-SHA1 (patch-Modules_socketmodule.c) = e99fd9e30e3feafef1747a2f52446d8fec543362
+SHA1 (patch-Modules_socketmodule.c) = 7adfdd0b6feaadb079c600093352fc023a8c4357
 SHA1 (patch-Modules_socketmodule.h) = 9ba713069aeb4e262d0bf621e3873002a11f97bb
 SHA1 (patch-Modules_timemodule.c) = 10dc2769432bbfd4360f90fedfa6504d8b6f6347
 SHA1 (patch-Python_bootstrap__hash.c) = 2e7d24ded1369624b2983b15784988517a9697a5

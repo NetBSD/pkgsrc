@@ -1,10 +1,19 @@
-$NetBSD: patch-Modules_socketmodule.c,v 1.1 2019/10/15 16:50:11 adam Exp $
+$NetBSD: patch-Modules_socketmodule.c,v 1.2 2022/01/20 11:52:28 jperkin Exp $
 
 Support NetBSD's socketcan implementation
 
---- Modules/socketmodule.c.orig	2019-09-06 08:21:57.000000000 +0000
+--- Modules/socketmodule.c.orig	2021-08-30 14:26:41.000000000 +0000
 +++ Modules/socketmodule.c
-@@ -7709,6 +7709,20 @@ PyInit__socket(void)
+@@ -5409,7 +5409,7 @@ socket_sethostname(PyObject *self, PyObj
+     Py_buffer buf;
+     int res, flag = 0;
+ 
+-#ifdef _AIX
++#if defined(_AIX) || (defined(__sun) && PKGSRC_OPSYS_VERSION < 051100)
+ /* issue #18259, not declared in any useful header file */
+ extern int sethostname(const char *, size_t);
+ #endif
+@@ -7701,6 +7701,20 @@ PyInit__socket(void)
      PyModule_AddIntConstant(m, "CAN_BCM_CAN_FD_FRAME", CAN_FD_FRAME);
  #endif
  #endif
