@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:05:31 nia Exp $
+$NetBSD: distinfo,v 1.13 2022/01/20 20:30:34 schmonz Exp $
 
-BLAKE2s (djbdnscurve6-40.tgz) = ecc09345b0f0ccdd652b76351a95dae35e0582bb85d27055b5b32996470bff7b
-SHA512 (djbdnscurve6-40.tgz) = 67b8eab9750c2269aab2a24255e1523e026f5baff2ac77a08a22107121d37ccae03528aaa8f80150bb01ab15868184e1f77cf934e111fac03b945a51a7880004
-Size (djbdnscurve6-40.tgz) = 122880 bytes
+BLAKE2s (djbdnscurve6-41.tgz) = 14ef4ecf0350c030bc17aa70a0bc979a7fca6974d234960d196c5a761b96349d
+SHA512 (djbdnscurve6-41.tgz) = 9eadc96925d0af59fc633e1fae43f6a0a2fab7139f6bf858bf11ec2b2ef43302aa1e80727ec04121bfe0861ede96bae4498fa121507271525d0808722984b49a
+Size (djbdnscurve6-41.tgz) = 122880 bytes
 SHA1 (patch-src_Makefile) = ecc0360808f7fb2c73705eb9f3b98dd7ffdbc1f0
 SHA1 (patch-src_dnscache-conf.c) = 890bbdf7f803bd0bb0a9371d0a82298b091117eb
 SHA1 (patch-src_hier.c) = 3aa4172b384b4b3e5ad5621ec790d64892fe71b6
