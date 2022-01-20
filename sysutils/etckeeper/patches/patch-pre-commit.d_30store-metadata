@@ -1,0 +1,15 @@
+$NetBSD: patch-pre-commit.d_30store-metadata,v 1.1 2022/01/20 13:53:13 schmonz Exp $
+
+Add SUBST_VARS token.
+
+--- pre-commit.d/30store-metadata.orig	2021-01-02 15:33:42.000000000 +0000
++++ pre-commit.d/30store-metadata
+@@ -83,7 +83,7 @@ generate_metadata() {
+ 
+ maybe_chmod_chown() {
+ 	if command -v perl >/dev/null; then
+-		perl -ne '
++		@PERL5@ -ne '
+ 			BEGIN { $q=chr(39) }
+ 			sub uidname {
+ 				my $want=shift;
