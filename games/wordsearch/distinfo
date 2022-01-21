@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:44:30 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/01/21 18:01:31 gutteridge Exp $
 
-BLAKE2s (wordsearch-2.0.tar.gz) = 2587ddc70baa4753fa0d9d8e35ca94780c8fdc01f10e47bebb9dc3b8d9019d77
-SHA512 (wordsearch-2.0.tar.gz) = 160a186c693d96ebe13ee45def9b4a64b9f9b5b65fc41860e30c23b299188ad307e8a28124d5acebf431cb0fcda43900ecb8e93d39ea5b135dc68e77cc76b88c
-Size (wordsearch-2.0.tar.gz) = 12109 bytes
+BLAKE2s (wordsearch-2.1.tar.gz) = 0b8a0a0275004fcc8df402ac232531ca94b9bd9533bfd41a04a76f62512c24c2
+SHA512 (wordsearch-2.1.tar.gz) = d02f57af0f06fd58672b708140fae5339dfd00393b82e5bfa6a928844666d2b4de7778839259d3988095310b6c6846e68ea0369269d13f957bdf9b1a8d650158
+Size (wordsearch-2.1.tar.gz) = 14175 bytes
