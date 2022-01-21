@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/12/17 14:07:09 nikita Exp $
+$NetBSD: distinfo,v 1.7 2022/01/21 16:34:59 nikita Exp $
 
-BLAKE2s (guile-json-4.5.2.tar.gz) = 60d7699370bd3c25a7ad28a5f1b96b6d7a844a140e4f061026c3a6c2ee9018c8
-SHA512 (guile-json-4.5.2.tar.gz) = ed189d49b0529f36f76bf16ea371ca6b9651cd40dd86f755062cea9fd93f5a4d8ceb571cc62bf0f88c404a2ab86ea6f7ccb682e81cd5bcdb78f0bdf52a39502b
-Size (guile-json-4.5.2.tar.gz) = 159925 bytes
+BLAKE2s (guile-json-4.7.0.tar.gz) = 12acb1d5cf3299a4d8108e0d0db4867c28f539f3abda550da401f42cda6595b0
+SHA512 (guile-json-4.7.0.tar.gz) = 5400fbd8a2c3bcdebec306808dad7c9e2e3401baea501dc9b50186f6f9dfcaf4f3fb8ee0c3662f08aff7dda7ba355a8cdb90cfd3457e0a575fff9884a8345b09
+Size (guile-json-4.7.0.tar.gz) = 164524 bytes
