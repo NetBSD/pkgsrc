@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.338 2022/01/21 01:39:16 wen Exp $
+$NetBSD: CHANGES-2022,v 1.339 2022/01/21 01:48:16 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -473,3 +473,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/php80 to 8.0.15 [taca 2022-01-21]
 	Updated devel/p5-Graph to 0.9725 [wen 2022-01-21]
 	Updated devel/p5-JSONSchema-Validator to 0.010 [wen 2022-01-21]
+	Updated devel/p5-File-MimeInfo to 0.31 [wen 2022-01-21]
