@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.352 2022/01/21 17:09:38 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.353 2022/01/21 18:02:18 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -489,3 +489,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/guile-json to 4.7.0 [nikita 2022-01-21]
 	Added comms/c3270 version 4.1ga11 [bsiegert 2022-01-21]
 	Updated devel/guile-git to 0.5.2 [nikita 2022-01-21]
+	Updated games/wordsearch to 2.1 [gutteridge 2022-01-21]
