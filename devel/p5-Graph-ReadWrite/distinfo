@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:16:42 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/01/21 01:57:36 wen Exp $
 
-BLAKE2s (Graph-ReadWrite-2.09.tar.gz) = ad4dad01b468c3990e13ef6f78e3f8f17e4b02f6990f0819ac80958c2a157443
-SHA512 (Graph-ReadWrite-2.09.tar.gz) = 9f044cdf9c549f232261771b5c3b804070ebb86e7c2a05748d1d91515601740f54e6add9e77f80a342298eee87680285fb8b8d45d6f41bf36b7ee0f6eb5ba240
-Size (Graph-ReadWrite-2.09.tar.gz) = 30355 bytes
+BLAKE2s (Graph-ReadWrite-2.10.tar.gz) = c46555d701d6fe8da4bfe010623bc834221d2be893cece8156cdf78303606cf6
+SHA512 (Graph-ReadWrite-2.10.tar.gz) = f32e0fd002068ed53389d8903588cafb8ff819f01f7ef28c4d3fa9ffcb56e7eba1316583b7e91f2089b6a654cf896ffa96e3c29d89ab11b082856526044297e3
+Size (Graph-ReadWrite-2.10.tar.gz) = 29993 bytes
