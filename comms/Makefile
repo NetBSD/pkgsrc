@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2022/01/16 13:11:07 nia Exp $
+# $NetBSD: Makefile,v 1.131 2022/01/21 16:49:00 bsiegert Exp $
 #
 
 COMMENT=	Telephony and serial communication utilities
@@ -11,6 +11,7 @@ SUBDIR+=	asterisk19
 SUBDIR+=	binkd
 SUBDIR+=	birda
 SUBDIR+=	bthfp
+SUBDIR+=	c3270
 SUBDIR+=	conserver
 SUBDIR+=	conserver8
 SUBDIR+=	deforaos-phone
