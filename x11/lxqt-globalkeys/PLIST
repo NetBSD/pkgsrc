@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/11/19 11:32:55 pin Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/01/21 07:26:31 pin Exp $
 bin/lxqt-config-globalkeyshortcuts
 bin/lxqt-globalkeysd
 include/lxqt-globalkeys-ui/LXQtGlobalKeysUi/ShortcutSelector
@@ -13,10 +13,10 @@ include/lxqt-globalkeys/lxqt-globalkeys.h
 include/lxqt-globalkeys/lxqtglobalkeys.h
 lib/liblxqt-globalkeys-ui.so
 lib/liblxqt-globalkeys-ui.so.1
-lib/liblxqt-globalkeys-ui.so.${PKGVERSION}
+lib/liblxqt-globalkeys-ui.so.1.0.0
 lib/liblxqt-globalkeys.so
 lib/liblxqt-globalkeys.so.1
-lib/liblxqt-globalkeys.so.${PKGVERSION}
+lib/liblxqt-globalkeys.so.1.0.0
 lib/pkgconfig/lxqt-globalkeys-ui.pc
 lib/pkgconfig/lxqt-globalkeys.pc
 share/applications/lxqt-config-globalkeyshortcuts.desktop
