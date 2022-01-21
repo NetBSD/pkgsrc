@@ -1,10 +1,10 @@
-$NetBSD: patch-library_unwind_build.rs,v 1.6 2021/11/20 16:09:46 he Exp $
+$NetBSD: patch-library_unwind_build.rs,v 1.7 2022/01/21 23:20:36 he Exp $
 
 Fix build on NetBSD HEAD-llvm. XXX there is probably a better way to do this.
 
 --- library/unwind/build.rs.orig	2020-10-07 07:53:22.000000000 +0000
 +++ library/unwind/build.rs
-@@ -23,7 +23,9 @@ fn main() {
+@@ -20,7 +20,9 @@ fn main() {
      } else if target.contains("freebsd") {
          println!("cargo:rustc-link-lib=gcc_s");
      } else if target.contains("netbsd") {
