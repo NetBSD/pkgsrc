@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.21 2021/11/08 14:49:23 taca Exp $
+# $NetBSD: Makefile.common,v 1.21.2.1 2022/01/21 15:49:19 bsiegert Exp $
 #
 # used by security/clamav/Makefile
 # used by security/clamav-doc/Makefile
 
-DISTNAME=	clamav-0.103.4
+DISTNAME=	clamav-0.103.5
 CATEGORIES=	security
 MASTER_SITES=	http://www.clamav.net/downloads/production/
 
