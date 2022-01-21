@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.354 2022/01/21 20:37:25 adam Exp $
+$NetBSD: CHANGES-2022,v 1.355 2022/01/21 23:21:18 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -491,3 +491,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/guile-git to 0.5.2 [nikita 2022-01-21]
 	Updated games/wordsearch to 2.1 [gutteridge 2022-01-21]
 	Updated games/wesnoth to 1.16.2 [adam 2022-01-21]
+	Updated lang/rust to 1.57.0 [he 2022-01-21]
