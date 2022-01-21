@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.344 2022/01/21 11:24:22 adam Exp $
+$NetBSD: CHANGES-2022,v 1.345 2022/01/21 11:26:02 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -480,3 +480,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/lxqt-globalkeys to 1.0.1 [pin 2022-01-21]
 	Updated databases/mysql57-client to 5.7.37 [adam 2022-01-21]
 	Updated databases/mysql57-server to 5.7.37 [adam 2022-01-21]
+	Updated www/webkit-gtk to 2.34.4 [leot 2022-01-21]
