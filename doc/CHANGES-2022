@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.353 2022/01/21 18:02:18 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.354 2022/01/21 20:37:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -490,3 +490,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added comms/c3270 version 4.1ga11 [bsiegert 2022-01-21]
 	Updated devel/guile-git to 0.5.2 [nikita 2022-01-21]
 	Updated games/wordsearch to 2.1 [gutteridge 2022-01-21]
+	Updated games/wesnoth to 1.16.2 [adam 2022-01-21]
