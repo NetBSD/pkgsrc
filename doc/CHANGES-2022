@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.341 2022/01/21 02:13:18 wen Exp $
+$NetBSD: CHANGES-2022,v 1.342 2022/01/21 02:28:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -476,3 +476,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/p5-File-MimeInfo to 0.31 [wen 2022-01-21]
 	Updated devel/p5-Graph-ReadWrite to 2.10 [wen 2022-01-21]
 	Updated devel/p5-Test-File to 1.991 [wen 2022-01-21]
+	Updated editors/ed to 1.17 [wen 2022-01-21]
