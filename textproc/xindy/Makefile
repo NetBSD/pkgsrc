@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2021/06/06 01:17:20 markd Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/21 17:34:34 wiz Exp $
 
 .include "../../print/texlive/Makefile.common"
 
@@ -22,6 +22,9 @@ CONFIGURE_ARGS+=	--disable-xindy-rules
 CONFIGURE_ARGS+=	--with-clisp-runtime=default
 
 INSTALLATION_DIRS+=	bin
+
+# due to using clisp
+MKPIE_SUPPORTED=	no
 
 post-install:
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
