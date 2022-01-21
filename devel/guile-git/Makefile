@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2020/05/14 14:54:33 nikita Exp $
+# $NetBSD: Makefile,v 1.9 2022/01/21 17:09:29 nikita Exp $
 
-DISTNAME=	guile-git-0.3.0
+DISTNAME=	guile-git-0.5.2
 CATEGORIES=	devel
-MASTER_SITES=	https://gitlab.com/guile-git/guile-git/uploads/4c563d8e7e1ff84396abe8ca7011bcaf/
+MASTER_SITES=	https://gitlab.com/guile-git/guile-git/-/archive/v${PKGVERSION_NOREV}/
 
 MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://gitlab.com/guile-git/guile-git/
@@ -11,11 +11,13 @@ LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
 GUILE_NEED_BOOTSTRAP=	yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config makeinfo
 
 DEPENDS+=		guile-bytestructures>=1.0.5:../../devel/guile-bytestructures
 
 CONFIGURE_ENV+=		LIBGIT2_LIBDIR=${BUILDLINK_PREFIX.libgit2}/lib
+
+WRKSRC=		${WRKDIR}/guile-git-v0.5.2-c5494ee3f7cdf891eb386f7103c86a962ab0ae62
 
 INFO_FILES=	YES
 

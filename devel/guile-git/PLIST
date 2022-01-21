@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/05/14 14:54:33 nikita Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/01/21 17:09:29 nikita Exp $
 guile/2.2/info/guile-git.info
 guile/2.2/lib/guile/2.2/site-ccache/git.go
 guile/2.2/lib/guile/2.2/site-ccache/git/annotated.go
@@ -13,8 +13,10 @@ guile/2.2/lib/guile/2.2/site-ccache/git/cherrypick.go
 guile/2.2/lib/guile/2.2/site-ccache/git/clone.go
 guile/2.2/lib/guile/2.2/site-ccache/git/commit.go
 guile/2.2/lib/guile/2.2/site-ccache/git/config.go
+guile/2.2/lib/guile/2.2/site-ccache/git/configuration.go
 guile/2.2/lib/guile/2.2/site-ccache/git/cred.go
 guile/2.2/lib/guile/2.2/site-ccache/git/describe.go
+guile/2.2/lib/guile/2.2/site-ccache/git/diff.go
 guile/2.2/lib/guile/2.2/site-ccache/git/errors.go
 guile/2.2/lib/guile/2.2/site-ccache/git/fetch.go
 guile/2.2/lib/guile/2.2/site-ccache/git/object.go
@@ -53,8 +55,10 @@ guile/2.2/share/guile/site/2.2/git/cherrypick.scm
 guile/2.2/share/guile/site/2.2/git/clone.scm
 guile/2.2/share/guile/site/2.2/git/commit.scm
 guile/2.2/share/guile/site/2.2/git/config.scm
+guile/2.2/share/guile/site/2.2/git/configuration.scm
 guile/2.2/share/guile/site/2.2/git/cred.scm
 guile/2.2/share/guile/site/2.2/git/describe.scm
+guile/2.2/share/guile/site/2.2/git/diff.scm
 guile/2.2/share/guile/site/2.2/git/errors.scm
 guile/2.2/share/guile/site/2.2/git/fetch.scm
 guile/2.2/share/guile/site/2.2/git/object.scm
