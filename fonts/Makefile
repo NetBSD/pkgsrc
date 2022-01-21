@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.365 2021/11/10 11:19:24 wiz Exp $
+# $NetBSD: Makefile,v 1.366 2022/01/21 13:47:46 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -12,6 +12,7 @@ SUBDIR+=	FiraCode
 SUBDIR+=	Hack-ttf
 SUBDIR+=	Hasklig
 SUBDIR+=	Inter-UI
+SUBDIR+=	JetBrainsMono-ttf
 SUBDIR+=	Merriweather-ttf
 SUBDIR+=	Office-Code-Pro
 SUBDIR+=	SDL2_ttf
