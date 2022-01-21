@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.346 2022/01/21 11:37:06 adam Exp $
+$NetBSD: CHANGES-2022,v 1.347 2022/01/21 13:47:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -483,3 +483,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/webkit-gtk to 2.34.4 [leot 2022-01-21]
 	Updated devel/py-pyparsing to 3.0.7 [adam 2022-01-21]
 	Updated net/py-aioresponses to 0.7.3 [adam 2022-01-21]
+	Added fonts/JetBrainsMono-ttf version 2.242 [wiz 2022-01-21]
