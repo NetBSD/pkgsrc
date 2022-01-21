@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21441 2022/01/21 02:02:34 wen Exp $
+$NetBSD: TODO,v 1.21442 2022/01/21 02:28:34 wen Exp $
 
 Suggested new packages
 ======================
@@ -640,7 +640,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o easymenu-0.7.2p1
 	o ec2-ami-tools-1.5.7
 	o eclipse-3.2.0
-	o ed-1.17
 	o ede-2.0
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o ekiga-4.0.1
