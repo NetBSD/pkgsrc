@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2021/12/15 21:55:48 tnn Exp $
+# $NetBSD: Makefile,v 1.18.2.1 2022/01/21 15:23:32 bsiegert Exp $
 
 DISTNAME=		gcc-8.2.0
 PKGNAME=		cross-aarch64-none-elf-${DISTNAME}
@@ -37,6 +37,7 @@ USE_TOOLS+=		bash gmake makeinfo perl
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # has sub-configures
 CHECK_PORTABILITY_SKIP+=contrib/*
+MKPIE_SUPPORTED=	no # relocation errors on netbsd-9 aarch64
 
 GNU_CONFIGURE_PREFIX=	${AARCH64ELF_PREFIX}
 
