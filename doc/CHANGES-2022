@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.336 2022/01/21 00:32:45 taca Exp $
+$NetBSD: CHANGES-2022,v 1.337 2022/01/21 01:35:09 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -471,3 +471,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/p5-Config-Tiny to 2.28 [wen 2022-01-21]
 	Updated devel/ruby-redmine41 to 4.1.5nb2 [taca 2022-01-21]
 	Updated lang/php80 to 8.0.15 [taca 2022-01-21]
+	Updated devel/p5-Graph to 0.9725 [wen 2022-01-21]
