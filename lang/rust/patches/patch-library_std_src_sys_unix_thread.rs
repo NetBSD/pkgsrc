@@ -1,10 +1,10 @@
-$NetBSD: patch-library_std_src_sys_unix_thread.rs,v 1.5 2021/11/20 16:09:46 he Exp $
+$NetBSD: patch-library_std_src_sys_unix_thread.rs,v 1.6 2022/01/21 23:20:36 he Exp $
 
 Fix stack-clash on SunOS.
 
 --- library/std/src/sys/unix/thread.rs.orig	2020-10-07 07:53:22.000000000 +0000
 +++ library/std/src/sys/unix/thread.rs
-@@ -333,7 +333,7 @@ pub mod guard {
+@@ -483,7 +483,7 @@ pub mod guard {
          let page_size = os::page_size();
          PAGE_SIZE.store(page_size, Ordering::Relaxed);
  
