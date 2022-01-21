@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2022/01/21 16:49:00 bsiegert Exp $
+bin/c3270
+bin/x3270if
+share/examples/c3270/ibm_hosts
