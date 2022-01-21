@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.47 2021/11/10 11:03:52 jperkin Exp $
+$NetBSD: distinfo,v 1.48 2022/01/21 11:23:50 adam Exp $
 
-BLAKE2s (mysql-5.7.36.tar.gz) = 74c80608c6e00d5f24cfc1d864520a4e01d476d94a90b9c44d1e8a4aeb5d3c54
-SHA512 (mysql-5.7.36.tar.gz) = 34badfff21c774a5a05cca5b505725eda440ad3d7aca4de593ec58c13a552fe4c5465e1f17b0493a21971321185ffcfa031267df13188e33503f003bfa8a14b6
-Size (mysql-5.7.36.tar.gz) = 56238341 bytes
+BLAKE2s (mysql-5.7.37.tar.gz) = f4871be0ffd6432fa7a6b6833d30eb38e49ecc95bc0df154b0f5b13a4b4d26b9
+SHA512 (mysql-5.7.37.tar.gz) = 6268227d61d4ff7d29c767c409245a1ba26f6760fac724d53af18931b27295c8e7ef70819b7991746b57f36fe863561afff1577b01b73b517444a4aea3d867d3
+Size (mysql-5.7.37.tar.gz) = 56248775 bytes
 SHA1 (patch-CMakeLists.txt) = 1409a98380c999c6973fa3106dc35684b7c3b3cc
 SHA1 (patch-client_CMakeLists.txt) = 4af2fb3f3d05a66a9ee89f3653e2fcccadfa5f79
 SHA1 (patch-client_completion_hash.cc) = b86ec80beac624b2aa21c7587e351ff126400ecb
