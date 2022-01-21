@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2022/01/20 13:03:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.31 2022/01/21 10:43:51 jperkin Exp $
 
 PKGREVISION= 3
 .include "dist.mk"
@@ -154,6 +154,8 @@ REPLACE_FILES.python+=	Lib/turtledemo/tree.py
 REPLACE_FILES.python+=	Lib/turtledemo/yinyang.py
 REPLACE_FILES.python+=	Lib/uu.py
 REPLACE_FILES.python+=	Lib/webbrowser.py
+
+REPLACE_SH+=		Misc/python-config.sh.in
 
 # XXX: It might be needed to add manually more paths like ${PREFIX}/qt5/lib
 # Test: python -c 'from ctypes.util import find_library; print(find_library("ffi"));'
