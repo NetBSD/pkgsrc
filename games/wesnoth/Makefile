@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.176 2022/01/10 01:46:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.177 2022/01/21 20:37:07 adam Exp $
 
-DISTNAME=	wesnoth-1.16.0
-PKGREVISION=	2
+DISTNAME=	wesnoth-1.16.2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wesnoth/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,6 +20,8 @@ USE_TOOLS+=		bash msgfmt perl:run pkg-config
 CMAKE_ARGS+=		-DENABLE_HISTORY=OFF
 # if OPT is set, -O3 will not be added
 CMAKE_ARGS+=		-DOPT="${DBG}"
+
+CFLAGS.Darwin=		-framework Cocoa
 
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
@@ -70,6 +71,7 @@ LDFLAGS.SunOS+=		-lintl -lsocket
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.14.8
 .include "../../devel/pango/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
