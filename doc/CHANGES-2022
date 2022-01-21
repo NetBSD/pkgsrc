@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.340 2022/01/21 01:58:48 wen Exp $
+$NetBSD: CHANGES-2022,v 1.341 2022/01/21 02:13:18 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -475,3 +475,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/p5-JSONSchema-Validator to 0.010 [wen 2022-01-21]
 	Updated devel/p5-File-MimeInfo to 0.31 [wen 2022-01-21]
 	Updated devel/p5-Graph-ReadWrite to 2.10 [wen 2022-01-21]
+	Updated devel/p5-Test-File to 1.991 [wen 2022-01-21]
