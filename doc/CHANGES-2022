@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.348 2022/01/21 16:25:09 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.349 2022/01/21 16:29:51 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -485,3 +485,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-aioresponses to 0.7.3 [adam 2022-01-21]
 	Added fonts/JetBrainsMono-ttf version 2.242 [wiz 2022-01-21]
 	Updated textproc/py-markovify to 0.9.3 [nikita 2022-01-21]
+	Updated databases/guile-sqlite3 to 0.1.3 [nikita 2022-01-21]
