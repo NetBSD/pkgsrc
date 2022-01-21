@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2020/12/04 16:31:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/21 11:36:24 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/aioresponses/__init__.py
@@ -15,3 +14,4 @@ ${PYSITELIB}/aioresponses/compat.pyo
 ${PYSITELIB}/aioresponses/core.py
 ${PYSITELIB}/aioresponses/core.pyc
 ${PYSITELIB}/aioresponses/core.pyo
+${PYSITELIB}/aioresponses/py.typed
