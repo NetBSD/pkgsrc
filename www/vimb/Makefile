@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2021/12/08 16:07:01 adam Exp $
+# $NetBSD: Makefile,v 1.46 2022/01/21 11:32:59 leot Exp $
 
 DISTNAME=	vimb-3.6.0
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fanglingsu/}
 
@@ -29,6 +29,8 @@ EGDIR=		${PREFIX}/share/examples/vimb
 MAKE_FLAGS+=	EXAMPLEPREFIX="${DESTDIR}${EGDIR}"
 MAKE_FLAGS+=	MANPREFIX="${DESTDIR}${PREFIX}/${PKGMANDIR}"
 MAKE_FLAGS+=	RUNPREFIX="${PREFIX}"
+
+REPLACE_SH+=	src/scripts/js2h.sh
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
