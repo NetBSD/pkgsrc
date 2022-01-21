@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.345 2022/01/21 11:26:02 leot Exp $
+$NetBSD: CHANGES-2022,v 1.346 2022/01/21 11:37:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -481,3 +481,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/mysql57-client to 5.7.37 [adam 2022-01-21]
 	Updated databases/mysql57-server to 5.7.37 [adam 2022-01-21]
 	Updated www/webkit-gtk to 2.34.4 [leot 2022-01-21]
+	Updated devel/py-pyparsing to 3.0.7 [adam 2022-01-21]
+	Updated net/py-aioresponses to 0.7.3 [adam 2022-01-21]
