@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21440 2022/01/21 01:58:48 wen Exp $
+$NetBSD: TODO,v 1.21441 2022/01/21 02:02:34 wen Exp $
 
 Suggested new packages
 ======================
@@ -1387,14 +1387,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-File-RsyncP-0.76
 	o p5-Fsdb-2.71
 	o p5-GD-2.73
-	o p5-GIS-Distance-0.19
 	o p5-GStreamer-0.21
-	o p5-Geo-Ellipsoid-1.15
-	o p5-Geo-ShapeFile-3.01
 	o p5-GitLab-API-v3-1.06
 	o p5-GitLab-API-v4-0.26
 	o p5-Glib-Object-Introspection-0.049
-	o p5-IO-Interactive-1.023
 	o p5-JSON-MaybeXS-1.004003
 	o p5-LEOCHARRE-Dir-1.09
 	o p5-Lingua-EN-Inflect-1.905
@@ -1405,7 +1401,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Log-Agent-1.005
 	o p5-Mac-AppleScript-Glue-0.06
 	o p5-Mac-SystemDirectory-0.13
-	o p5-Mail-AuthenticationResults-2.20210112
 	o p5-Mail-Ezmlm-0.16
 	o p5-Mail-IMAPClient-3.43
 	o p5-Mail-Message-3.010
