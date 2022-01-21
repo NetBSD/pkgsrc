@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.333 2022/01/20 23:23:15 leot Exp $
+$NetBSD: CHANGES-2022,v 1.334 2022/01/21 00:22:50 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -468,3 +468,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/grafana to 8.3.4 [tnn 2022-01-20]
 	Updated sysutils/htop to 3.1.2 [fox 2022-01-20]
 	Added devel/conftest version 0.30.0 [leot 2022-01-20]
+	Updated devel/p5-Config-Tiny to 2.28 [wen 2022-01-21]
