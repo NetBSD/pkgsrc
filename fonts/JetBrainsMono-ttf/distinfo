@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/01/21 13:47:32 wiz Exp $
+
+BLAKE2s (JetBrainsMono-2.242.zip) = cb6aa8731e5362c8106a815e73af97ee793617cdb48574ba5de4371673b0e612
+SHA512 (JetBrainsMono-2.242.zip) = 03c08a2cf5603103baaeed4fcef8aa7bdfced92fdc71b207caa7f913eea49dbe178d020f15a3396b11417f9b906778cc8bc8483f4eff2b04f25163fa373186a2
+Size (JetBrainsMono-2.242.zip) = 4099695 bytes
