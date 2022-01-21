@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q4,v 1.1.2.6 2022/01/14 08:01:03 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q4,v 1.1.2.7 2022/01/21 15:51:51 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q4 branch:
 
@@ -27,4 +27,24 @@ lang/wasi-libcxx: build fix
 
 Pullup ticket #6567 - requested by morr
 www/wordpress: security fix
+
+Pullup ticket #6568 - requested by nia
+audio/lmms: NetBSD bugfix
+
+Pullup ticket #6569 - requested by tnn
+cross/aarch64-none-elf-gcc: NetBSD 9 build fix
+cross/arm-none-eabi-gcc: NetBSD 9 build fix
+
+Pullup ticket #6569 - requested by tnn
+cross/aarch64-none-elf-gcc: NetBSD 9 build fix
+cross/arm-none-eabi-gcc: NetBSD 9 build fix
+
+Pullup ticket #6570 - requested by gutteridge
+www/webkit-gtk: NetBSD 9 build fix, PR pkg/56604
+
+Pullup ticket #6571 - requested by taca
+security/clamav: security fix
+
+Pullup ticket #6572 - requested by taca
+net/samba4: security fix
 
