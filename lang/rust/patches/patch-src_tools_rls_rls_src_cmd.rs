@@ -1,11 +1,11 @@
-$NetBSD: patch-src_tools_rls_rls_src_cmd.rs,v 1.5 2021/11/20 16:09:46 he Exp $
+$NetBSD: patch-src_tools_rls_rls_src_cmd.rs,v 1.6 2022/01/21 23:20:36 he Exp $
 
 Use 32-bit atomic instead of 64-bit; latter may not be available on
 32-bit platforms (powerpc, earmv7).
 
 --- src/tools/rls/rls/src/cmd.rs.orig	2019-04-10 18:46:16.000000000 +0000
 +++ src/tools/rls/rls/src/cmd.rs
-@@ -17,7 +17,7 @@ use crate::config::Config;
+@@ -7,7 +7,7 @@ use crate::config::Config;
  use crate::server::{self, LsService, Notification, Request, RequestId};
  use rls_analysis::{AnalysisHost, Target};
  use rls_vfs::Vfs;
@@ -14,7 +14,7 @@ Use 32-bit atomic instead of 64-bit; latter may not be available on
  
  use lsp_types::{
      ClientCapabilities, CodeActionContext, CodeActionParams, CompletionItem,
-@@ -323,8 +323,8 @@ fn url(file_name: &str) -> Url {
+@@ -316,8 +316,8 @@ fn url(file_name: &str) -> Url {
  }
  
  fn next_id() -> RequestId {

@@ -1,10 +1,10 @@
-$NetBSD: patch-src_llvm-project_llvm_utils_FileCheck_FileCheck.cpp,v 1.6 2021/11/20 16:09:46 he Exp $
+$NetBSD: patch-src_llvm-project_llvm_utils_FileCheck_FileCheck.cpp,v 1.7 2022/01/21 23:20:36 he Exp $
 
 Avoid ambiguous function call.
 
 --- src/llvm-project/llvm/utils/FileCheck/FileCheck.cpp.orig	2019-02-12 15:22:48.000000000 +0000
 +++ src/llvm-project/llvm/utils/FileCheck/FileCheck.cpp
-@@ -406,7 +406,7 @@ static void DumpAnnotatedInput(raw_ostre
+@@ -592,7 +592,7 @@ static void DumpAnnotatedInput(raw_ostre
    unsigned LineCount = InputFileText.count('\n');
    if (InputFileEnd[-1] != '\n')
      ++LineCount;

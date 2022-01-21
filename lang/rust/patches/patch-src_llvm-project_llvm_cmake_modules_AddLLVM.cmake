@@ -1,10 +1,10 @@
-$NetBSD: patch-src_llvm-project_llvm_cmake_modules_AddLLVM.cmake,v 1.7 2021/11/20 16:09:46 he Exp $
+$NetBSD: patch-src_llvm-project_llvm_cmake_modules_AddLLVM.cmake,v 1.8 2022/01/21 23:20:36 he Exp $
 
 On Darwin, use correct install-name for shared libraries.
 
 --- src/llvm-project/llvm/cmake/modules/AddLLVM.cmake.orig	2020-09-22 17:14:20.000000000 +0000
 +++ src/llvm-project/llvm/cmake/modules/AddLLVM.cmake
-@@ -2117,7 +2117,7 @@ function(llvm_setup_rpath name)
+@@ -2118,7 +2118,7 @@ function(llvm_setup_rpath name)
    endif()
  
    if (APPLE)
