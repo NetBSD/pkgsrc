@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.79 2021/11/02 18:35:04 adam Exp $
+$NetBSD: distinfo,v 1.80 2022/01/21 20:37:07 adam Exp $
 
-BLAKE2s (wesnoth-1.16.0.tar.bz2) = 3f60a121ac5fef1ba39adf1ecf68537732aecb6612337125553f8e1229bc69e8
-SHA512 (wesnoth-1.16.0.tar.bz2) = 5827e37cc3cbf7fd4253e650f5fb64b7c4dbb6227eadb4850d990719f6c49dba93d421cc5314cd62f2d487754d90ea33d62fe6ac47b2cf56a254ff56f466fa1d
-Size (wesnoth-1.16.0.tar.bz2) = 473896834 bytes
-SHA1 (patch-CMakeLists.txt) = 5707f782cf577fcd336c769df3aff2213c1c39f8
+BLAKE2s (wesnoth-1.16.2.tar.bz2) = edebe9a7c5d12b77e727e3b5573dd3af7931db1b5bc49d7111fbb51198d0a87a
+SHA512 (wesnoth-1.16.2.tar.bz2) = bb1c307981de4990fc341310b358c5e1c54673d7434bc0a0fa0a7b5caf11e6db3255ad0eb57b6b188ff6ab8f287321fc8821813d0ef3661cfa637985070bb540
+Size (wesnoth-1.16.2.tar.bz2) = 474763733 bytes
+SHA1 (patch-CMakeLists.txt) = c16a7c3bd32a799c7fc742d130e2700709233ea0
 SHA1 (patch-src_CMakeLists.txt) = 776c522ccfc544d8898d786fe164c2be1812db1a
 SHA1 (patch-src_color__range.cpp) = bdce94054a0fb2972e63a968fdb78e34db1213a6
 SHA1 (patch-src_wesnoth.cpp) = 73fa69b47de231c5ce16f66a52b449d5242ffe67
