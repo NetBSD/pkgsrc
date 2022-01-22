@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/01/18 19:25:26 rhialto Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/22 14:16:30 wiz Exp $
 
 DISTNAME=	PyQt-builder-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-qt-builder-1.12.2
@@ -14,6 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-sip5>=5<7:../../x11/py-sip5
 
 DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	c c++
 
