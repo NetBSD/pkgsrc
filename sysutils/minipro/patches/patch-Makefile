@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2022/01/22 17:52:53 thorpej Exp $
+
+Install the man page into the correct location for pkgsrc.
+
+--- Makefile.orig	2022-01-22 15:42:13.000000000 +0000
++++ Makefile
+@@ -70,7 +70,7 @@ BIN_INSTDIR=$(DESTDIR)$(PREFIX)/bin
+ LIB_INSTDIR=$(DESTDIR)$(PREFIX)/lib
+ SHARE_INSTDIR=$(DESTDIR)$(PREFIX)/share/minipro
+ INCLUDE_INSTDIR=$(DESTDIR)$(PREFIX)/include/libminipro
+-MAN_INSTDIR=$(DESTDIR)$(PREFIX)/share/man/man1
++MAN_INSTDIR=$(DESTDIR)$(PREFIX)/man/man1
+ 
+ UDEV_DIR=$(shell $(PKG_CONFIG) --define-variable=prefix=$(PREFIX) --silence-errors --variable=udevdir udev)
+ UDEV_RULES_INSTDIR=$(DESTDIR)$(UDEV_DIR)/rules.d

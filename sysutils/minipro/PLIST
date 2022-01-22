@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2022/01/22 17:52:53 thorpej Exp $
+bin/minipro
+bin/miniprohex
+man/man1/minipro.1
+share/minipro/infoic.xml
