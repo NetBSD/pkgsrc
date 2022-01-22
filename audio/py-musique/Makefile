@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.71 2021/12/08 16:03:19 adam Exp $
+# $NetBSD: Makefile,v 1.72 2022/01/22 15:49:05 wiz Exp $
 
 DISTNAME=	pymusique-0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	43
+PKGREVISION=	44
 CATEGORIES=	audio
 #MASTER_SITES=	http://www.pyronecrophilia.com/content/pymusique/
 
@@ -22,11 +22,10 @@ DEPENDS+=	${PYPKGPREFIX}-mcrypt-[0-9]*:../../security/py-mcrypt
 DEPENDS+=	${PYPKGPREFIX}-libxml2-[0-9]*:../../textproc/py-libxml2
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
-PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_ACCEPTED= 27 # py-mcrypt, py-gtk2
+PYTHON_VERSIONS_ACCEPTED=	27 # py-mcrypt, py-gtk2
+EGG_NAME=			PyMusique-${PKGVERSION_NOREV}
 
-.include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
