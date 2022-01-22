@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.983 2022/01/19 20:43:50 rhialto Exp $
+# $NetBSD: Makefile,v 1.984 2022/01/22 17:52:53 thorpej Exp $
 #
 
 COMMENT=	System utilities
@@ -432,6 +432,7 @@ SUBDIR+=	menu-cache
 SUBDIR+=	meson-tools
 SUBDIR+=	mesure
 SUBDIR+=	mgm
+SUBDIR+=	minipro
 SUBDIR+=	mklivecd
 SUBDIR+=	mkmemstick
 SUBDIR+=	mksunbootcd
