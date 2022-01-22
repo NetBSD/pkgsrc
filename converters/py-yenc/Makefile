@@ -1,14 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2020/01/26 17:30:52 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2022/01/22 15:44:47 wiz Exp $
 
-DISTNAME=	yenc-${DISTVERSION}
-DISTVERSION=	0.4.0
-
+DISTNAME=	yenc-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-REPLACE_PYTHON=	*.py
-CATEGORIES=	devel
+PKGREVISION=	1
+CATEGORIES=	converters
 MASTER_SITES=	http://www.golug.it/pub/yenc/
-
-PYDISTUTILSPKG=	yes
 
 MAINTAINER=	pkgsrc128@fastmail.us
 HOMEPAGE=	https://www.golug.it/yenc.html
@@ -17,5 +13,5 @@ LICENSE=	gnu-lgpl-v2.1
 
 PYTHON_VERSIONS_ACCEPTED=	27 # as of 0.4.0
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
