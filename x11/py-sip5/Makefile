@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/01/18 19:07:45 rhialto Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/22 14:16:31 wiz Exp $
 
 DISTNAME=	sip-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-sip5-5.5.0
@@ -10,10 +10,11 @@ HOMEPAGE=	https://www.riverbankcomputing.com/software/sip/
 COMMENT=	Tool to create Python bindings for C++ libraries (v5)
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
-
 DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-toml>=0:../../textproc/py-toml
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	c c++
 
