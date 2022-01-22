@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/21 14:08:04 roy Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/22 14:25:43 wiz Exp $
 ${PYSITELIB}/openid/__init__.py
 ${PYSITELIB}/openid/__init__.pyc
 ${PYSITELIB}/openid/__init__.pyo
@@ -122,3 +122,4 @@ ${PYSITELIB}/openid/yadis/xri.pyo
 ${PYSITELIB}/openid/yadis/xrires.py
 ${PYSITELIB}/openid/yadis/xrires.pyc
 ${PYSITELIB}/openid/yadis/xrires.pyo
+${PYSITELIB}/${EGG_INFODIR}
