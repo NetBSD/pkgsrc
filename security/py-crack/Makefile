@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/01/10 08:59:05 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/01/22 14:28:27 wiz Exp $
 
 DISTNAME=	pycrack-0.01
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/py//}
@@ -13,7 +13,11 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=			crack>=5.0:../../security/crack
 
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYPKGPREFIX} != "py27"
 EGG_NAME=	pycrack-0.1
+.endif
 
 .include "../../lang/python/egg.mk"
 .include "../../security/libcrack/buildlink3.mk"
