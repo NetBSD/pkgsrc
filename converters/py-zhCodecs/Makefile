@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2021/04/21 08:51:16 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2022/01/22 15:43:03 wiz Exp $
 
 DISTNAME=	ChineseCodecs1.2.0
 PKGNAME=	${PYPKGPREFIX}-zhCodecs-1.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	converters devel python
 MASTER_SITES=	# ftp://ftp.shellhung.org/pub/OpenBSD/packages/chinese/
 
@@ -11,12 +11,12 @@ HOMEPAGE=	https://sourceforge.net/projects/python-codecs/
 COMMENT=	Python Unicode codecs for Chinese charsets
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/Python
-PYDISTUTILSPKG=	# defined
 
 PYTHON_VERSIONS_ACCEPTED=	27
+EGG_NAME=			ChineseCodecs-1.1.0
 
 post-extract:
-	@${CHMOD} 711 ${WRKSRC}/chinesetw
+	${CHMOD} 711 ${WRKSRC}/chinesetw
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
