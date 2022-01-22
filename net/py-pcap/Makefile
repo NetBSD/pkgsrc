@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2019/11/03 11:45:51 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2022/01/22 14:35:52 wiz Exp $
 
 DISTNAME=	pypcap-1.1
 PKGNAME=	${PYPKGPREFIX}-pcap-1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net python
 MASTER_SITES=	http://pypcap.googlecode.com/files/
 
@@ -23,8 +23,8 @@ SUBST_FILES.prefix=	Makefile
 SUBST_VARS.prefix=	PREFIX
 SUBST_STAGE.prefix=	pre-configure
 
-PYDISTUTILSPKG=			yes
 PYTHON_VERSIONS_ACCEPTED=	27 # py-pyrex
+EGG_NAME=			pcap-${PKGVERSION_NOREV}
 
 FILES_SUBST+=	PYTHONBIN=${PYTHONBIN:Q}
 
@@ -38,6 +38,6 @@ do-configure:
 	# --with-pcap=${PREFIX}
 
 .include "../../net/libpcap/buildlink3.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
