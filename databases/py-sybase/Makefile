@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2021/12/08 16:03:49 adam Exp $
+# $NetBSD: Makefile,v 1.48 2022/01/22 15:39:56 wiz Exp $
 
 DISTNAME=	sybase-0.36
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	databases python
 MASTER_SITES=	http://object-craft.com.au/projects/sybase/download/
 
@@ -11,7 +11,6 @@ HOMEPAGE=	https://www.object-craft.com.au/projects/sybase/
 COMMENT=	Sybase interface for Python using FreeTDS
 
 PYSETUPBUILDARGS=	build_ext -D HAVE_FREETDS=61 -U WANT_BULKCOPY
-PYDISTUTILSPKG=		yes
 
 SYBASE=		${BUILDLINK_PREFIX.freetds}
 MAKE_ENV+=	SYBASE=${SYBASE:Q}
@@ -25,5 +24,5 @@ SUBST_SED.sybase=	-e "s|\\(runtime_library_dirs = \\)None|\\1['${SYBASE}/lib']|"
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.36
 
 .include "../../databases/freetds/buildlink3.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
