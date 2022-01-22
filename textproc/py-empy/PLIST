@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2012/07/14 21:59:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/22 14:21:25 wiz Exp $
 bin/empy
 bin/empy-${PYVERSSUFFIX}
 ${PYSITELIB}/em.py
 ${PYSITELIB}/em.pyc
 ${PYSITELIB}/em.pyo
+${PYSITELIB}/${EGG_INFODIR}
 share/doc/empy/em.html
 share/doc/empy/em/AbstractFile.html
 share/doc/empy/em/BreakFlow.html
