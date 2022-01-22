@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2019/11/04 21:43:45 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2022/01/22 14:21:25 wiz Exp $
 
 DISTNAME=	empy-3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,10 +15,10 @@ INSTALLATION_DIRS=	bin share/doc/empy
 REPLACE_PYTHON+=	em.py
 
 USE_TOOLS+=		pax
-PYDISTUTILSPKG=		# yes
 
 PYTHON_SELF_CONFLICT=		yes
 PYTHON_VERSIONS_ACCEPTED=	27
+EGG_NAME=			empy-3.1
 
 # Fix html path in documentation
 SUBST_CLASSES+=		doc
@@ -44,5 +44,5 @@ install-doc:
 	${CP} ${WRKSRC}/doc/index.html ${DESTDIR}${PREFIX}/share/doc/empy/
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
