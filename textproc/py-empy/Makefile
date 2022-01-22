@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2022/01/22 14:21:25 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2022/01/22 14:21:46 wiz Exp $
 
 DISTNAME=	empy-3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	http://www.alcyone.com/software/empy/
 
