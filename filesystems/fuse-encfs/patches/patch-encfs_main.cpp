@@ -1,10 +1,6 @@
-$NetBSD: patch-encfs_main.cpp,v 1.5 2021/12/01 04:45:52 pho Exp $
+$NetBSD: patch-encfs_main.cpp,v 1.6 2022/01/22 18:32:47 pho Exp $
 
-Work around older FUSE API on NetBSD.
-  
-\todo Determine how to qualify this by version.
-\todo Enhance API in NetBSD.
-\todo File with encfs upstream.
+Work around older FUSE API on NetBSD. Already fixed in HEAD.
 
 --- encfs/main.cpp.orig	2018-04-27 08:52:22.000000000 +0000
 +++ encfs/main.cpp
@@ -12,7 +8,7 @@ Work around older FUSE API on NetBSD.
    auto *ctx = (EncFS_Context *)fuse_get_context()->private_data;
  
    // set fuse connection options
-+#ifndef __NetBSD__ /* XXX FUSE API too old */
++#if !defined(__NetBSD__) || FUSE_H_ >= 20211204 /* XXX FUSE API too old */
    conn->async_read = 1u;
 +#endif
  
