@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.360 2022/01/22 17:31:49 he Exp $
+$NetBSD: CHANGES-2022,v 1.361 2022/01/22 17:54:17 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -497,3 +497,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/dua-cli to 2.17.0 [pin 2022-01-22]
 	Updated geography/echomap to 0.6.2 [pin 2022-01-22]
 	Updated lang/rust-src to 1.57.0 [he 2022-01-22]
+	Added sysutils/minipro version 0.5 [thorpej 2022-01-22]
