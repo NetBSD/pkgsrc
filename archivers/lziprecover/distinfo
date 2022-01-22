@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 09:57:10 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/01/22 18:26:52 fcambus Exp $
 
-BLAKE2s (lziprecover-1.22.tar.gz) = 73a63eefba1aba6f35760d2615a6976000ecc0495533ff751fca3b00e2e9ff2f
-SHA512 (lziprecover-1.22.tar.gz) = 5fa209f6a80314ba7db45effc2546be660b6a31133570abf2e37a4d570910757fc4241e2496e63a95fadb66cffbca59976a8568659f4e8562baeb16517599e96
-Size (lziprecover-1.22.tar.gz) = 152840 bytes
+BLAKE2s (lziprecover-1.23.tar.gz) = cfe0f3002744a39656f7fdb2e1c8f423f9357954aab39da57d0039ec65451e1c
+SHA512 (lziprecover-1.23.tar.gz) = 9f2d40311f901c2c00fa6b106a2363dfcd7b6c73ae86282733d7c3451237ee30f6d5cce035ab5ba63300eea637eeb3ac5db7e7571bdef1bef259b801b10f1c7a
+Size (lziprecover-1.23.tar.gz) = 156147 bytes
