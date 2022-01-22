@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2021/12/08 16:06:23 adam Exp $
+# $NetBSD: Makefile,v 1.24 2022/01/22 14:24:21 wiz Exp $
 
 DISTNAME=	pyxmlsec-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	security python
 MASTER_SITES=	http://labs.libre-entreprise.org/frs/download.php/897/
 
@@ -15,11 +15,10 @@ DEPENDS+=	${PYPKGPREFIX}-libxml2-[0-9]*:../../textproc/py-libxml2
 
 USE_TOOLS+=	pkg-config
 
-PYDISTUTILSPKG=	yes
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.3.1
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../security/xmlsec1/buildlink3.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
