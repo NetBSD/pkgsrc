@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/11/30 05:25:57 pho Exp $
+$NetBSD: distinfo,v 1.7 2022/01/22 18:52:11 pho Exp $
 
 BLAKE2s (fuse-python-1.0.4.tar.gz) = 32f3c1aeaf619880a0a366866b3e7650924b66eaafa187d6081dc3c94e1ac568
 SHA512 (fuse-python-1.0.4.tar.gz) = 12696c78f75591e56e00ca1e2a93b214993b939cac2e7aae5dc6d8e69dc1aa034f0244a876c9ff2fb7e49b928b7ff84b281fd98d8f3fe67140be33d7ea5fea20
 Size (fuse-python-1.0.4.tar.gz) = 49009 bytes
-SHA1 (patch-fuseparts___fusemodule.c) = b41472254c8db0f996e2a6691dbc6cc317285544
+SHA1 (patch-fuseparts___fusemodule.c) = a928bc35a6bf70460c37fc3f9db1ff5edc1a1d01
