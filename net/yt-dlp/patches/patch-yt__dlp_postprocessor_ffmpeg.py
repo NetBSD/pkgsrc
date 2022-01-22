@@ -1,13 +1,13 @@
-$NetBSD: patch-yt__dlp_postprocessor_ffmpeg.py,v 1.2 2021/11/14 14:41:11 ryoon Exp $
+$NetBSD: patch-yt__dlp_postprocessor_ffmpeg.py,v 1.3 2022/01/22 13:48:34 ryoon Exp $
 
 Also look and use ffmpeg[234]/ffprobe[234] if possible, preferring
 the unversioned one (i.e. selected via alternatives framework)
 or the newest one.
 From: pkgsrc/net/youtube-dl
 
---- yt_dlp/postprocessor/ffmpeg.py.orig	2021-11-10 01:47:00.000000000 +0000
+--- yt_dlp/postprocessor/ffmpeg.py.orig	2021-12-27 02:29:52.000000000 +0000
 +++ yt_dlp/postprocessor/ffmpeg.py
-@@ -85,7 +85,7 @@ class FFmpegPostProcessor(PostProcessor)
+@@ -87,7 +87,7 @@ class FFmpegPostProcessor(PostProcessor)
          return FFmpegPostProcessor.get_version_and_features(downloader)[0]
  
      def _determine_executables(self):
@@ -16,7 +16,7 @@ From: pkgsrc/net/youtube-dl
  
          def get_ffmpeg_version(path, prog):
              out = _get_exe_version_output(path, ['-bsfs'])
-@@ -135,7 +135,7 @@ class FFmpegPostProcessor(PostProcessor)
+@@ -137,7 +137,7 @@ class FFmpegPostProcessor(PostProcessor)
                  basename = os.path.splitext(os.path.basename(location))[0]
                  basename = next((p for p in programs if basename.startswith(p)), 'ffmpeg')
                  dirname = os.path.dirname(os.path.abspath(location))
@@ -25,7 +25,7 @@ From: pkgsrc/net/youtube-dl
                      prefer_ffmpeg = True
  
              self._paths = dict(
-@@ -148,18 +148,18 @@ class FFmpegPostProcessor(PostProcessor)
+@@ -150,18 +150,18 @@ class FFmpegPostProcessor(PostProcessor)
              get_ffmpeg_version(self._paths[p], p)
  
          if prefer_ffmpeg is False:
@@ -48,3 +48,12 @@ From: pkgsrc/net/youtube-dl
          for p in prefs:
              if self._versions[p]:
                  self.probe_basename = p
+@@ -229,7 +229,7 @@ class FFmpegPostProcessor(PostProcessor)
+         return None
+ 
+     def get_metadata_object(self, path, opts=[]):
+-        if self.probe_basename != 'ffprobe':
++        if not self.probe_basename.startswith('ffprobe'):
+             if self.probe_available:
+                 self.report_warning('Only ffprobe is supported for metadata extraction')
+             raise PostProcessingError('ffprobe not found. Please install or provide the path using --ffmpeg-location')
