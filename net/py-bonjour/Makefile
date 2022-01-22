@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/01/10 18:24:47 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/22 14:38:01 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-bonjour-${PKGVER}
 DISTNAME=	bonjour-py-${PKGVER}
@@ -19,6 +19,7 @@ DOCDIR=		share/py-bonjour
 DOCFILES=	COPYING.txt README
 
 PYTHON_VERSIONS_ACCEPTED=	27 # Uses old exception syntax in 0.3
+EGG_NAME=			PACKAGENAME-1.0
 
 .for ee in ${EGFILES}
 REPLACE_PYTHON+=	examples/${ee}
@@ -29,9 +30,6 @@ SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=		setup.py
 SUBST_SED.fix-paths=		-e 's,%PREFIX%,${PREFIX},g'
-
-PLIST_SUBST+=	EGDIR=${EGDIR}
-PLIST_SUBST+=	DOCDIR=${DOCDIR}
 
 USE_LANGUAGES=	c
 
