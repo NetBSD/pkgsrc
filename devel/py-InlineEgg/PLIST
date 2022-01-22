@@ -1,12 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2022/01/10 08:41:55 wiz Exp $
-share/doc/InlineEgg/README
-share/examples/InlineEgg/example1.py
-share/examples/InlineEgg/example2.py
-share/examples/InlineEgg/example3.py
-share/examples/InlineEgg/example4.py
-share/examples/InlineEgg/example5.py
-share/examples/InlineEgg/example6.py
-share/examples/InlineEgg/xored_shell_client.py
+@comment $NetBSD: PLIST,v 1.6 2022/01/22 15:35:55 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/inlineegg/WindowsSyscall.py
 ${PYSITELIB}/inlineegg/WindowsSyscall.pyc
 ${PYSITELIB}/inlineegg/WindowsSyscall.pyo
@@ -25,3 +18,11 @@ ${PYSITELIB}/inlineegg/inlineegg_test.pyo
 ${PYSITELIB}/inlineegg/inlineegg_win_test.py
 ${PYSITELIB}/inlineegg/inlineegg_win_test.pyc
 ${PYSITELIB}/inlineegg/inlineegg_win_test.pyo
+share/doc/InlineEgg/README
+share/examples/InlineEgg/example1.py
+share/examples/InlineEgg/example2.py
+share/examples/InlineEgg/example3.py
+share/examples/InlineEgg/example4.py
+share/examples/InlineEgg/example5.py
+share/examples/InlineEgg/example6.py
+share/examples/InlineEgg/xored_shell_client.py
