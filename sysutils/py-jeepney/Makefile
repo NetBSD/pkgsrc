@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/01/19 20:43:20 rhialto Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/22 14:10:10 wiz Exp $
 
 DISTNAME=	jeepney-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jeepney/}
 
@@ -11,8 +12,8 @@ COMMENT=	Low-level pure Python DBus protocol wrapper
 LICENSE=	mit
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-# not packaged: trio
-# not packaged: testpath
+TEST_DEPENDS+=	${PYPKGPREFIX}-testpath-[0-9]*:../../devel/py-testpath
+DEPENDS+=	${PYPKGPREFIX}-trio-[0-9]*:../../devel/py-trio
 
 USE_LANGUAGES=	# none
 
