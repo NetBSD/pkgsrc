@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.362 2022/01/22 18:27:04 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.363 2022/01/22 19:15:58 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -499,3 +499,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/rust-src to 1.57.0 [he 2022-01-22]
 	Added sysutils/minipro version 0.5 [thorpej 2022-01-22]
 	Updated archivers/lziprecover to 1.23 [fcambus 2022-01-22]
+	Added meta-pkgs/aspell-languages version 20220122 [bsiegert 2022-01-22]
