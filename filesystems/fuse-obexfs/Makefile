@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2017/08/01 16:47:38 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2022/01/22 18:43:19 pho Exp $
 #
 
 DISTNAME=	obexfs-0.8
 PKGNAME=	fuse-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openobex/}
 
@@ -14,10 +14,6 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf gmake pkg-config
-
-CPPFLAGS.NetBSD+=	-D_KERNTYPES
-
-BUILDLINK_API_DEPENDS.openobex+=	openobex>=1.3nb2
 
 pre-configure:
 	cd ${WRKSRC} && autoconf

@@ -1,10 +1,8 @@
-$NetBSD: patch-cache.c,v 1.1 2021/12/02 07:28:40 pho Exp $
+$NetBSD: patch-cache.c,v 1.2 2022/01/22 18:48:04 pho Exp $
 
-Impedance adjustment with librefuse. Never send this to the
-upstream. It's our code that needs to be fixed, not theirs!
-
-TODO: This patch should *really* be gone, except for one thing (see
-comments). Update librefuse.
+Impedance adjustment with librefuse which used to provide an old API
+incompatible with FUSE 3.1. This patch can go away when NetBSD 9
+reaches its EOL, except for one thing (see comments).
 
 --- cache.c.orig	2021-06-08 08:52:08.000000000 +0000
 +++ cache.c
@@ -12,7 +10,7 @@ comments). Update librefuse.
  	return res;
  }
  
-+#if defined(__NetBSD__) && FUSE_MAJOR_VERSION < 3
++#if defined(__NetBSD__) && FUSE_H_ < 20211204
 +static void *cache_init(struct fuse_conn_info *conn __attribute__((__unused__)))
 +{
 +	return cache.next_oper->init(NULL);
@@ -27,7 +25,7 @@ comments). Update librefuse.
  }
 +#endif
  
-+#if FUSE_MAJOR_VERSION < 3
++#if defined(__NetBSD__) && FUSE_H_ < 20211204
 +static int cache_getattr(const char *path, struct stat *stbuf)
 +#else
  static int cache_getattr(const char *path, struct stat *stbuf,
@@ -37,7 +35,7 @@ comments). Update librefuse.
  	int err = cache_get_attr(path, stbuf);
  	if (err) {
  		uint64_t wrctr = cache_get_write_ctr();
-+#if FUSE_MAJOR_VERSION < 3
++#if defined(__NetBSD__) && FUSE_H_ < 20211204
 +		err = cache.next_oper->getattr(path, stbuf);
 +#else
  		err = cache.next_oper->getattr(path, stbuf, fi);
@@ -49,7 +47,7 @@ comments). Update librefuse.
  	return err;
  }
  
-+#if FUSE_MAJOR_VERSION < 3
++#if defined(__NetBSD__) && FUSE_H_ < 20211204
 +static int cache_dirfill (void *buf, const char *name,
 +			  const struct stat *stbuf, off_t off)
 +#else
@@ -62,7 +60,7 @@ comments). Update librefuse.
  	struct readdir_handle *ch;
  
  	ch = (struct readdir_handle*) buf;
-+#if FUSE_MAJOR_VERSION < 3
++#if defined(__NetBSD__) && FUSE_H_ < 20211204
 +	err = ch->filler(ch->buf, name, stbuf, off);
 +#else
  	err = ch->filler(ch->buf, name, stbuf, off, flags);
@@ -74,7 +72,7 @@ comments). Update librefuse.
  	return err;
  }
  
-+#if FUSE_MAJOR_VERSION < 3
++#if defined(__NetBSD__) && FUSE_H_ < 20211204
 +static int cache_readdir(const char *path, void *buf, fuse_fill_dir_t filler,
 +			 off_t offset, struct fuse_file_info *fi)
 +#else
@@ -89,7 +87,7 @@ comments). Update librefuse.
  		if (node->dir_valid - now >= 0) {
  			for(dir = node->dir; *dir != NULL; dir++)
  				// FIXME: What about st_mode?
-+#if FUSE_MAJOR_VERSION < 3
++#if defined(__NetBSD__) && FUSE_H_ < 20211204
 +				filler(buf, *dir, NULL, 0);
 +#else
  				filler(buf, *dir, NULL, 0, 0);
@@ -101,7 +99,7 @@ comments). Update librefuse.
  	ch.filler = filler;
  	ch.dir = g_ptr_array_new();
  	ch.wrctr = cache_get_write_ctr();
-+#if FUSE_MAJOR_VERSION < 3
++#if defined(__NetBSD__) && FUSE_H_ < 20211204
 +	err = cache.next_oper->readdir(path, &ch, cache_dirfill, offset, fi);
 +#else
  	err = cache.next_oper->readdir(path, &ch, cache_dirfill, offset, fi, flags);
@@ -121,7 +119,7 @@ comments). Update librefuse.
  	return err;
  }
  
-+#if FUSE_MAJOR_VERSION < 3
++#if defined(__NetBSD__) && FUSE_H_ < 20211204
 +static int cache_rename(const char *from, const char *to)
 +{
 +	int err = cache.next_oper->rename(from, to);
@@ -145,7 +143,7 @@ comments). Update librefuse.
  	return err;
  }
  
-+#if FUSE_MAJOR_VERSION < 3
++#if defined(__NetBSD__) && FUSE_H_ < 20211204
 +static int cache_chmod(const char *path, mode_t mode)
 +{
 +	int err = cache.next_oper->chmod(path, mode);
@@ -163,7 +161,7 @@ comments). Update librefuse.
  }
 +#endif
  
-+#if FUSE_MAJOR_VERSION < 3
++#if defined(__NetBSD__) && FUSE_H_ < 20211204
 +static int cache_chown(const char *path, uid_t uid, gid_t gid)
 +{
 +	int err = cache.next_oper->chown(path, uid, gid);
@@ -181,7 +179,7 @@ comments). Update librefuse.
  }
 +#endif
  
-+#if FUSE_MAJOR_VERSION < 3
++#if defined(__NetBSD__) && FUSE_H_ < 20211204
 +static int cache_utimens(const char *path, const struct timespec tv[2])
 +{
 +	int err = cache.next_oper->utimens(path, tv);
@@ -205,7 +203,7 @@ comments). Update librefuse.
  	return err;
  }
  
-+#if FUSE_MAJOR_VERSION < 3
++#if defined(__NetBSD__) && FUSE_H_ < 20211204
 +static int cache_truncate(const char *path, off_t size)
 +{
 +	int err = cache.next_oper->truncate(path, size);
