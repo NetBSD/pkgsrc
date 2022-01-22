@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2021/12/08 16:06:13 adam Exp $
+# $NetBSD: Makefile,v 1.65 2022/01/22 13:51:55 triaxx Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-agpl/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ArtifexSoftware/}
 GITHUB_PROJECT=	ghostpdl-downloads
@@ -51,8 +51,7 @@ MESSAGE_SUBST+=		GS_RESOURCEDIR=${GS_RESOURCEDIR}
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
 
-# \todo Remove "a4" as that is not valid according to pkglint.
-.if defined(PAPERSIZE) && (${PAPERSIZE} == "A4" || ${PAPERSIZE} == "a4")
+.if defined(PAPERSIZE) && ${PAPERSIZE} == "A4"
 BUILD_DEFS+=		PAPERSIZE
 CFLAGS+=		-DA4
 .endif
