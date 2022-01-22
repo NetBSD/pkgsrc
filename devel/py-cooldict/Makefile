@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/01/10 08:57:42 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/22 15:31:14 wiz Exp $
 
 DISTNAME=	cooldict-1.04
 PKGNAME=	${PYPKGPREFIX}-cooldict-1.4
@@ -11,7 +11,11 @@ HOMEPAGE=	https://github.com/zardus/cooldict
 COMMENT=	Some useful dict-like structures
 LICENSE=	2-clause-bsd
 
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYPKGPREFIX} != "py27"
 EGG_NAME=	cooldict-1.4
+.endif
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
