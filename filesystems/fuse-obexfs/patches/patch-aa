@@ -1,16 +1,27 @@
-$NetBSD: patch-aa,v 1.2 2007/05/16 11:02:12 xtraeme Exp $
+$NetBSD: patch-aa,v 1.3 2022/01/22 18:43:20 pho Exp $
 
---- fuse/obexfs.c.orig	2006-01-19 15:46:43.000000000 +0100
-+++ fuse/obexfs.c	2007-05-16 12:52:58.000000000 +0200
-@@ -26,6 +26,8 @@
+* Use the correct API version: opendir() appeared on FUSE 2.3, not
+  2.2.
+
+* Work around an API incompatibility in the past versions of NetBSD
+  librefuse: it had a wrong prototype for the callback
+  statfs(). Already fixed in HEAD.
+
+--- fuse/obexfs.c.orig	2006-01-19 14:46:43.000000000 +0000
++++ fuse/obexfs.c
+@@ -26,8 +26,10 @@
  /* strndup */
  #define _GNU_SOURCE
  
+-/* at least fuse v 2.2 is needed */
+-#define FUSE_USE_VERSION 22
 +#include "config.h"
 +
- /* at least fuse v 2.2 is needed */
- #define FUSE_USE_VERSION 22
++/* at least fuse v 2.3 is needed */
++#define FUSE_USE_VERSION 23
  #include <fuse.h>
+ #include <stdio.h>
+ #include <stdlib.h>
 @@ -37,7 +39,11 @@
  #include <fcntl.h>
  #include <dirent.h>
@@ -31,11 +42,11 @@ $NetBSD: patch-aa,v 1.2 2007/05/16 11:02:12 xtraeme Exp $
  #ifdef DEBUGOUPUT
  #define DEBUG(...) fprintf(stderr, __VA_ARGS__)
  #else
-@@ -412,12 +417,20 @@
+@@ -412,12 +417,20 @@ static int ofs_release(const char *path,
  	return 0;
  }
  
-+#if HAVE_SYS_STATVFS_H
++#if HAVE_SYS_STATVFS_H && defined(__NetBSD__) && FUSE_H_ < 20211204
 +static int ofs_statfs(const char *UNUSED(label), struct statvfs *st)
 +#else
  static int ofs_statfs(const char *UNUSED(label), struct statfs *st)
@@ -44,7 +55,7 @@ $NetBSD: patch-aa,v 1.2 2007/05/16 11:02:12 xtraeme Exp $
  	int res;
  	int size, free;
  
-+#if HAVE_SYS_STATVFS_H
++#if HAVE_SYS_STATVFS_H && defined(__NetBSD__) && FUSE_H_ < 20211204
 +	memset(st, 0, sizeof(struct statvfs));
 +#else
  	memset(st, 0, sizeof(struct statfs));
