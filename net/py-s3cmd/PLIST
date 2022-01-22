@@ -1,15 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2012/02/06 00:25:42 jakllsch Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/01/22 14:34:18 wiz Exp $
 bin/s3cmd
-man/man1/s3cmd.1
-share/doc/packages/s3cmd/INSTALL
-share/doc/packages/s3cmd/NEWS
-share/doc/packages/s3cmd/README
-${PYSITELIB}/S3/AccessLog.py
-${PYSITELIB}/S3/AccessLog.pyc
-${PYSITELIB}/S3/AccessLog.pyo
 ${PYSITELIB}/S3/ACL.py
 ${PYSITELIB}/S3/ACL.pyc
 ${PYSITELIB}/S3/ACL.pyo
+${PYSITELIB}/S3/AccessLog.py
+${PYSITELIB}/S3/AccessLog.pyc
+${PYSITELIB}/S3/AccessLog.pyo
 ${PYSITELIB}/S3/BidirMap.py
 ${PYSITELIB}/S3/BidirMap.pyc
 ${PYSITELIB}/S3/BidirMap.pyo
@@ -46,3 +42,8 @@ ${PYSITELIB}/S3/Utils.pyo
 ${PYSITELIB}/S3/__init__.py
 ${PYSITELIB}/S3/__init__.pyc
 ${PYSITELIB}/S3/__init__.pyo
+${PYSITELIB}/${EGG_INFODIR}
+man/man1/s3cmd.1
+share/doc/packages/s3cmd/INSTALL
+share/doc/packages/s3cmd/NEWS
+share/doc/packages/s3cmd/README
