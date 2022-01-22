@@ -1,13 +1,17 @@
-$NetBSD: patch-fuseparts___fusemodule.c,v 1.2 2021/11/30 05:25:58 pho Exp $
+$NetBSD: patch-fuseparts___fusemodule.c,v 1.3 2022/01/22 18:52:11 pho Exp $
 
-/*
- * This patch is not known to be filed upstream.
- *
- * It adapts for NetBSD's (re)fuse implementation, specifically
- *   the lack of an attribute (rdev)
- *   the lack of fuse_loop_mt(), fuse_invalidate(), fuse_setup(), and fuse_teardown()
- *   the lack of polling support
- */
+Hunk #0:
+    Workaround for NetBSD librefuse that had an API incompatible with
+    FUSE. Already fixed in HEAD.
+
+Hunk #1:
+    "os.stat()" doesn't always return st_rdev on all platforms. Do not
+    assume it exists.
+
+Hunk #2, #3:
+    The polling support has appeared on FUSE 2.8 but this module
+    defines FUSE_USE_VERSION to 26. ReFUSE doesn't expose the polling
+    API in this case. Eligible for upstreaming but haven't been done.
 
 --- fuseparts/_fusemodule.c.orig	2021-05-02 06:20:20.000000000 +0000
 +++ fuseparts/_fusemodule.c
@@ -15,19 +19,19 @@ $NetBSD: patch-fuseparts___fusemodule.c,v 1.2 2021/11/30 05:25:58 pho Exp $
     to fix compilation errors on FreeBSD
     Mikhail Zakharov <zmey20000@thoo.com> 2018.10.22 */
  
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) && FUSE_H_ < 20211204
 +
-+/* NetBSD librefuse doesn't support fuse_loop_mt() yet. Use the
++/* NetBSD librefuse didn't support fuse_loop_mt(). Use the
 + * single-threaded loop instead. This is harmless, only a missed
 + * opportunity for performance gain. */
 +#  define fuse_loop_mt(fuse) fuse_loop(fuse)
 +
-+/* NetBSD librefuse doesn't support fuse_invalidate() yet. Make it
++/* NetBSD librefuse didn't support fuse_invalidate(). Make it
 + * no-op. This too is harmless because librefuse caches nothing
 + * atm. */
 +#  define fuse_invalidate(fuse, path) 0
 +
-+/* fuse_setup() has been superseded by fuse_new(). */
++/* fuse_setup() had once been removed.. */
 +#include <fuse_lowlevel.h>
 +#include <signal.h>
 +
@@ -131,7 +135,7 @@ $NetBSD: patch-fuseparts___fusemodule.c,v 1.2 2021/11/30 05:25:58 pho Exp $
 +	return fuse;
 +}
 +
-+/* fuse_teardown() has been removed. */
++/* fuse_teardown() had once been removed. */
 +static void fuse_teardown(
 +	struct fuse *fuse,
 +	char *mountpoint __attribute__((__unused__)))
@@ -140,7 +144,7 @@ $NetBSD: patch-fuseparts___fusemodule.c,v 1.2 2021/11/30 05:25:58 pho Exp $
 +	fuse_unmount(fuse);
 +	fuse_destroy(fuse);
 +}
-+#endif /* defined(__NetBSD__) */
++#endif /* defined(__NetBSD__) && FUSE_H_ < 20211204 */
 +
  #define _IOC_NRBITS     8
  #define _IOC_TYPEBITS   8
