@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/01/22 19:15:41 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/22 21:34:27 wiz Exp $
 
 DISTNAME=	aspell-languages-20220122
 CATEGORIES=	meta-pkgs
@@ -6,7 +6,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	bsiegert@NetBSD.org
-COMMENT=	Meta package for apell language packs
+COMMENT=	Meta package for aspell language packs
 
 META_PACKAGE=	yes
 
