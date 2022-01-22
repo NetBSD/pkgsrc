@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2021/12/08 16:05:04 adam Exp $
+# $NetBSD: Makefile,v 1.63 2022/01/22 14:45:45 wiz Exp $
 
 DISTNAME=	pygtkglext-1.1.0
 PKGNAME=	${PYPKGPREFIX}-pygtkglext-1.1.0
@@ -15,12 +15,11 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-PYDISTUTILSPKG=	yes
 PYTHON_VERSIONS_ACCEPTED= 27 # py-gtk2
 
 PKGCONFIG_OVERRIDE+=	pygtkglext.pc.in
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../graphics/gtkglext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
