@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.363 2022/01/22 19:15:58 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.364 2022/01/22 21:12:16 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -500,3 +500,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added sysutils/minipro version 0.5 [thorpej 2022-01-22]
 	Updated archivers/lziprecover to 1.23 [fcambus 2022-01-22]
 	Added meta-pkgs/aspell-languages version 20220122 [bsiegert 2022-01-22]
+	Updated misc/dialog to 1.3.20220117 [fcambus 2022-01-22]
