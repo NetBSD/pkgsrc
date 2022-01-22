@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.358 2022/01/22 16:12:09 pin Exp $
+$NetBSD: CHANGES-2022,v 1.359 2022/01/22 16:13:05 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -495,3 +495,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/yt-dlp to 2022.1.21 [ryoon 2022-01-22]
 	Updated print/ghostscript-agpl to 9.55.0nb2 [triaxx 2022-01-22]
 	Updated sysutils/dua-cli to 2.17.0 [pin 2022-01-22]
+	Updated geography/echomap to 0.6.2 [pin 2022-01-22]
