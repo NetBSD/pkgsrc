@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:26 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/01/22 14:45:45 wiz Exp $
 lib/pkgconfig/pygtkglext-1.0.pc
 ${PYSITELIB}/gtk-2.0/gtk/gdkgl/__init__.py
 ${PYSITELIB}/gtk-2.0/gtk/gdkgl/__init__.pyc
@@ -17,6 +17,7 @@ ${PYSITELIB}/gtk-2.0/gtk/gtkgl/apputils.pyo
 ${PYSITELIB}/gtk-2.0/gtk/gtkgl/widget.py
 ${PYSITELIB}/gtk-2.0/gtk/gtkgl/widget.pyc
 ${PYSITELIB}/gtk-2.0/gtk/gtkgl/widget.pyo
+${PYSITELIB}/gtk-2.0/${EGG_INFODIR}
 share/pygtk/2.0/defs/gdkglext-types.defs
 share/pygtk/2.0/defs/gdkglext.defs
 share/pygtk/2.0/defs/gtkglext.defs
