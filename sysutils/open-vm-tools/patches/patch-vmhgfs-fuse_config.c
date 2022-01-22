@@ -1,9 +1,9 @@
-$NetBSD: patch-vmhgfs-fuse_config.c,v 1.2 2016/11/21 00:16:29 wiz Exp $
+$NetBSD: patch-vmhgfs-fuse_config.c,v 1.3 2022/01/22 18:52:44 pho Exp $
 
 * The original SysCompatCheck() only works on Linux.
-* librefuse doesn't support the old style -ho option.
+* librefuse didn't support the old style -ho option. Fixed in HEAD.
 
---- vmhgfs-fuse/config.c.orig	2016-02-16 20:06:49.000000000 +0000
+--- vmhgfs-fuse/config.c.orig	2018-06-23 10:03:28.000000000 +0000
 +++ vmhgfs-fuse/config.c
 @@ -23,6 +23,7 @@
  
@@ -78,14 +78,17 @@ $NetBSD: patch-vmhgfs-fuse_config.c,v 1.2 2016/11/21 00:16:29 wiz Exp $
  
  
  /*
-@@ -444,7 +460,9 @@ vmhgfsOptProc(void *data,               
+@@ -444,7 +460,13 @@ vmhgfsOptProc(void *data,               
  
     case KEY_HELP:
        Usage(outargs->argv[0]);
--      fuse_opt_add_arg(outargs, "-ho");
++#if defined(__NetBSD__) && FUSE_H_ < 20211204
 +      fuse_opt_add_arg(outargs, "--help");
 +      free(outargs->argv[0]);
 +      outargs->argv[0] = strdup("");
++#else
+       fuse_opt_add_arg(outargs, "-ho");
++#endif
        fuse_main(outargs->argc, outargs->argv, NULL, NULL);
        exit(1);
  
