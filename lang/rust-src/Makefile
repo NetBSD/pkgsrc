@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2021/11/28 13:49:01 he Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/22 17:31:01 he Exp $
 
-DISTNAME=	rust-src-1.56.1
+DISTNAME=	rust-src-1.57.0
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=rust/}
 
@@ -47,7 +47,7 @@ do-install:
 	cd ${WRKSRC}; \
 	set -e; \
 	for f in ${ORIG_FILES}; do \
-		rm rust-src/$$f; \
+		rm -f rust-src/$$f; \
 		grep -v $$f <${MANIFEST_SRC} > ${MANIFEST_SRC}.new; \
 		mv ${MANIFEST_SRC}.new ${MANIFEST_SRC}; \
 	done; \
