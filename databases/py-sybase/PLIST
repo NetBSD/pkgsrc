@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/14 16:43:48 recht Exp $
-${PYSITELIB}/sybasect.so
+@comment $NetBSD: PLIST,v 1.3 2022/01/22 15:39:56 wiz Exp $
 ${PYSITELIB}/Sybase.py
 ${PYSITELIB}/Sybase.pyc
 ${PYSITELIB}/Sybase.pyo
+${PYSITELIB}/${EGG_INFODIR}
+${PYSITELIB}/sybasect.so
