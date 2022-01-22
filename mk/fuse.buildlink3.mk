@@ -1,4 +1,4 @@
-# $NetBSD: fuse.buildlink3.mk,v 1.23 2021/06/23 19:08:10 schmonz Exp $
+# $NetBSD: fuse.buildlink3.mk,v 1.24 2022/01/22 18:23:43 pho Exp $
 #
 # Makefile fragment for packages using the FUSE framework.
 #
@@ -55,10 +55,12 @@ PKG_FAIL_REASON+=	"Couldn't find fuse headers, please install libfuse."
 
 .  elif ${OPSYS} == "NetBSD" || ${OPSYS} == "Minix" || \
         !empty(MACHINE_PLATFORM:MDragonFly-[3-9]*-*)
-.     if !exists(/usr/include/fuse.h)
+H_FUSE=			/usr/include/fuse.h
+.      if !exists(${H_FUSE})
 PKG_FAIL_REASON+=	"Couldn't find fuse headers, please install librefuse."
-.     endif
+.      endif
 
+# XXX: -D_KERNTYPES can be removed when NetBSD 9 reaches its EOL.
 CFLAGS.NetBSD+=		-D_KERNTYPES -D_NETBSD_SOURCE
 LDFLAGS.DragonFly+=	-lpuffs
 
@@ -66,11 +68,23 @@ LDFLAGS.DragonFly+=	-lpuffs
 do-configure-pre-hook: override-fuse-pkgconfig
 
 BLKDIR_PKGCFG=	${BUILDLINK_DIR}/lib/pkgconfig
-FUSE_PKGCFGF=	fuse.pc
 
 override-fuse-pkgconfig: override-message-fuse-pkgconfig
 override-message-fuse-pkgconfig:
 	@${STEP_MSG} "Generating pkg-config file for builtin fuse package."
+
+BUILTIN_VERSION.fuse!=					\
+	${AWK} '/\#[ \t]+define/ { sub("\#[ \t]+define", "\#define", $$0); } \
+		/\#define[ \t]+_REFUSE_MAJOR_VERSION_[ \t]/ { major = $$3; } \
+		/\#define[ \t]+_REFUSE_MINOR_VERSION_[ \t]/ { minor = $$3; } \
+		/\#define[ \t]+FUSE_MAJOR_VERSION[ \t]/ { if (major == "") major = $$3; } \
+		/\#define[ \t]+FUSE_MINOR_VERSION[ \t]/ { if (minor == "") minor = $$3; } \
+		END { \
+			if (major != "" && minor != "") \
+				print major "." minor; \
+			else \
+				print ""; \
+		}' ${H_FUSE}
 
 override-fuse-pkgconfig:
 	${RUN}						\
@@ -83,10 +97,13 @@ override-fuse-pkgconfig:
 	${ECHO}	"";					\
 	${ECHO} "Name: FuSE";				\
 	${ECHO} "Description: Filesystem USEr Space";	\
-	${ECHO} "Version: 2.6.0";			\
+	${ECHO} "Version: ${BUILTIN_VERSION.fuse}";			\
 	${ECHO} "Libs: -Wl,-R\$${libdir} -L\$${libdir} -lrefuse";	\
 	${ECHO} "Cflags: -I\$${includedir}";		\
-	} >> ${BLKDIR_PKGCFG}/${FUSE_PKGCFGF};
+	} >> ${BLKDIR_PKGCFG}/fuse.pc;			\
+	if ${PKG_ADMIN} pmatch 'fuse>=3' 'fuse-${BUILTIN_VERSION.fuse}'; then	\
+		${LN} ${BLKDIR_PKGCFG}/fuse.pc ${BLKDIR_PKGCFG}/fuse3.pc;	\
+	fi
 
 .    endif # pkg-config
 
