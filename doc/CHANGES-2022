@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.366 2022/01/22 22:48:55 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.367 2022/01/22 22:53:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -503,3 +503,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/dialog to 1.3.20220117 [fcambus 2022-01-22]
 	Updated lang/rust-analyzer to 0.0.2021.12.27 [wiz 2022-01-22]
 	Updated lang/rust-analyzer to 0.0.2022.01.03 [wiz 2022-01-22]
+	Updated lang/rust-analyzer to 0.0.2022.01.10 [wiz 2022-01-22]
