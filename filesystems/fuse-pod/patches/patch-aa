@@ -1,13 +1,19 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/05/04 23:48:33 agc Exp $
+$NetBSD: patch-aa,v 1.2 2022/01/22 18:45:13 pho Exp $
 
---- src/fusepod.cpp	2007/05/04 23:21:09	1.1
-+++ src/fusepod.cpp	2007/05/04 23:23:52
-@@ -672,7 +672,7 @@
+NetBSD librefuse used to have a wrong prototype for init() in FUSE 2.5
+API. Already fixed in HEAD.
+
+--- src/fusepod.cpp.orig	2006-08-07 14:39:18.000000000 +0000
++++ src/fusepod.cpp
+@@ -672,7 +672,11 @@ static vector<string> get_string_desc ()
      return paths;
  }
  
--void * fusepod_init () {
++#if defined(__NetBSD__) && FUSE_H_ < 20211204
 +void * fusepod_init (fuse_conn_info *connection) {
++#else
+ void * fusepod_init () {
++#endif
      syncing = false;
      syncing_file = "";
  

@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:25:28 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/01/22 18:45:13 pho Exp $
 
 BLAKE2s (fusepod-0.5.1.tar.bz2) = 761fcac8d17829efc153b43e1b38337a346c3f48e0219a0a00f6870bf65ffcf6
 SHA512 (fusepod-0.5.1.tar.bz2) = 3a4d526bdd2cd7f2cc28458898399fc2c50aca989a19d2bc2d9921eaf841195eaa0f9f6a86ac5ebccc8ab56117464a64081e510afef1456817297eebcd7465f8
 Size (fusepod-0.5.1.tar.bz2) = 78547 bytes
-SHA1 (patch-aa) = cb2aceb2aefaa8b99dc95fce70835edb85ab1a92
+SHA1 (patch-aa) = a2897d44503c6018c7aec02773a0aeee307197ea
 SHA1 (patch-ab) = 923f7f7449c85d2ea537845b779aebec6aede1e8
 SHA1 (patch-src_fusepod__util.h) = 71485be8dfdecc1f2be61d1c5c08ac9d3447c0c5
