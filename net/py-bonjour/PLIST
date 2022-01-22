@@ -1,13 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2022/01/10 18:24:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/01/22 14:38:01 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/bonjour/__init__.py
 ${PYSITELIB}/bonjour/__init__.pyc
 ${PYSITELIB}/bonjour/__init__.pyo
 ${PYSITELIB}/bonjour/_bonjour.so
-${DOCDIR}/COPYING.txt
-${DOCDIR}/README
-${EGDIR}/browse.py
-${EGDIR}/query.py
-${EGDIR}/register.py
-${EGDIR}/serviceTypes.py
-${EGDIR}/test.py
-${EGDIR}/wxBrowse.py
+share/examples/py-bonjour/browse.py
+share/examples/py-bonjour/query.py
+share/examples/py-bonjour/register.py
+share/examples/py-bonjour/serviceTypes.py
+share/examples/py-bonjour/test.py
+share/examples/py-bonjour/wxBrowse.py
+share/py-bonjour/COPYING.txt
+share/py-bonjour/README
