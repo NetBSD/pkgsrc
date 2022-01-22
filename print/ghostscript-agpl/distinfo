@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.39 2021/10/26 11:12:06 nia Exp $
+$NetBSD: distinfo,v 1.40 2022/01/22 13:51:55 triaxx Exp $
 
 BLAKE2s (ghostscript-9.55.0.tar.xz) = eabebbf89b7151c8ef41fae5aca3f3d67229f61f4bc8a06b0f574c05e63c6e84
 SHA512 (ghostscript-9.55.0.tar.xz) = 42c7e05ba72e9fdd626c5412187b13fc3c9459cae57dfe49ddd3011bf4e2cbd10bc88f09068a9f777c2ec6ae881cd737fd700ab62ec5108f2aca69152588f38e
@@ -8,6 +8,6 @@ SHA1 (patch-base_gsicc__lcms2.c) = 23f5f905b537c0d82d37e140ed45e352ab951d54
 SHA1 (patch-base_lib.mak) = 723926f167b49568376ef0c0da6aa4ec01fe1516
 SHA1 (patch-base_mkromfs.c) = 9d9afbd0fbb8c70c8f4f7de3cadc5b54541f0db0
 SHA1 (patch-base_ttobjs.h) = 378ad7d316a4a9dc53b9c8e612582a7c8e9b3688
-SHA1 (patch-base_unix-dll.mak) = 73b5ee7fcbc7940ce72f44b35417d624f7ae5bca
+SHA1 (patch-base_unix-dll.mak) = 14627bbef4426f9fe73babefd1f860df3472ed22
 SHA1 (patch-configure) = f3f2583ef56a01f4107fec75057b7fc1be519c39
 SHA1 (patch-devices_devs.mak) = e9937d401a278cc6d0a6d4cff78c526375bc18ca
