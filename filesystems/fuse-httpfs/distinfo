@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:25:27 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/01/22 18:41:21 pho Exp $
 
 BLAKE2s (httpfs_with_static_binaries_2.06.08.26.tar.gz) = 92ffd4710d5d14a13eb94799df2ec2b8ead531dacc80c2af6e81a007388c3e87
 SHA512 (httpfs_with_static_binaries_2.06.08.26.tar.gz) = 49620221d7dac0e831670666772d35f63e3a153d1fb75156f1825d72b158a1492eed7f4db3441807aec4a7fa86408d05f1adef03b8075d0889a7d8f685676fd2
 Size (httpfs_with_static_binaries_2.06.08.26.tar.gz) = 115384 bytes
-SHA1 (patch-aa) = 6dc82d997847f2bb5e6618f59736d5bee5d97eb1
+SHA1 (patch-aa) = 2e3932c89211268cfe6ec696c8b3f9013813e3e6

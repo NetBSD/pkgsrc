@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 16:08:32 asau Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/22 18:41:21 pho Exp $
 #
 
 DISTNAME=	httpfs_with_static_binaries_${DIST_VER}
 PKGNAME=	fuse-httpfs-${DIST_VER}
+PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=httpfs/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://httpfs.sourceforge.net/
 COMMENT=	FUSE HTTP filesystem
+LICENSE=	gnu-gpl-v2
 
 DIST_VER=	2.06.08.26
 
