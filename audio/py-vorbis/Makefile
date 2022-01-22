@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2019/09/02 13:20:07 adam Exp $
+# $NetBSD: Makefile,v 1.23 2022/01/22 15:45:56 wiz Exp $
 
 DISTNAME=		pyvorbis-1.3
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		audio python
 MASTER_SITES=		http://vorbis.com/files/1.0.1/unix/py/
 
@@ -11,8 +11,6 @@ HOMEPAGE=		http://vorbis.com/
 COMMENT=		Python bindings for Vorbis library
 LICENSE=		gnu-lgpl-v2
 
-PY_PATCHPLIST=		yes
-PYDISTUTILSPKG=		yes
 PYTHON_VERSIONS_ACCEPTED=	27 # py-ogg, and itself not ported as of 1.3
 
 HAS_CONFIGURE=		yes
@@ -22,7 +20,6 @@ CONFIGURE_ARGS+=	--prefix ${PREFIX}
 
 .include "../../audio/py-ogg/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
