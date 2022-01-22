@@ -1,0 +1,4 @@
+minipro is an open source program for controlling the MiniPRO TL866xx series
+of chip programmers with native support for Linux, BSD, and other flavors of
+Unix using the libusb-1.0.16 or greater.  It is compatible with the following
+Minipro programmers from Autoelectric: TL866CS, TL866A, and TL866II+.
