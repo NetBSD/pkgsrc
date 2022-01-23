@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.367 2022/01/22 22:53:20 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.368 2022/01/23 05:22:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -504,3 +504,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/rust-analyzer to 0.0.2021.12.27 [wiz 2022-01-22]
 	Updated lang/rust-analyzer to 0.0.2022.01.03 [wiz 2022-01-22]
 	Updated lang/rust-analyzer to 0.0.2022.01.10 [wiz 2022-01-22]
+	Updated print/indexinfo to 0.3.1 [mef 2022-01-23]
