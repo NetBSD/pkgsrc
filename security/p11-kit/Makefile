@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2021/12/08 16:02:34 adam Exp $
+# $NetBSD: Makefile,v 1.25 2022/01/23 22:17:51 wiz Exp $
 
-DISTNAME=	p11-kit-0.24.0
-PKGREVISION=	4
+DISTNAME=	p11-kit-0.24.1
 CATEGORIES=	security
 #MASTER_SITES=	http://p11-glue.freedesktop.org/releases/
 MASTER_SITES+=	${MASTER_SITE_GITHUB:=p11-glue/}
@@ -42,6 +41,12 @@ PKGCONFIG_OVERRIDE+=	p11-kit/p11-kit-1.pc.in
 PKG_SYSCONFSUBDIR=	pkcs11
 CONF_FILES+=		share/examples/p11-kit/pkcs11.conf.example \
 			${PKG_SYSCONFDIR}/pkcs11.conf
+
+INSTALLATION_DIRS+=	share/examples/p11-kit
+
+post-install:
+	mv ${DESTDIR}${PREFIX}/etc/pkcs11/pkcs11.conf.example \
+		${DESTDIR}${PREFIX}/share/examples/p11-kit
 
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
