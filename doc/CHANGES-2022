@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.392 2022/01/23 22:39:34 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.393 2022/01/23 23:54:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -536,3 +536,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ocaml-findlib to 1.9.2 [wiz 2022-01-23]
 	Updated www/restish to 0.9.3 [wiz 2022-01-23]
 	Updated textproc/libuninameslist to 20211114 [fcambus 2022-01-23]
+	Updated lang/rakudo to 2021.12 [mef 2022-01-23]
