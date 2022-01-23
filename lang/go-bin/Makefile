@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2021/07/14 18:38:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2022/01/23 11:02:02 pho Exp $
 
 PKGNAME=	go-bin-1.14.2
 PKGREVISION=	4
@@ -15,6 +15,9 @@ PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pax perl:run bash:run
 WRKSRC=		${WRKDIR}/go
+
+# Binary distributions are not built as PIE.
+MKPIE_SUPPORTED=	no
 
 REPLACE_PERL+=			src/*/*.pl src/*/*/*.pl
 REPLACE_PERL+=			src/net/http/cgi/testdata/test.cgi
