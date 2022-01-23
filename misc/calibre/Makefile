@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.263 2022/01/23 15:16:44 wiz Exp $
+# $NetBSD: Makefile,v 1.264 2022/01/23 16:17:13 rhialto Exp $
 
-DISTNAME=	calibre-5.34.0
+DISTNAME=	calibre-5.35.0
 CATEGORIES=	misc
 MASTER_SITES=	http://download.calibre-ebook.com/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -34,6 +34,7 @@ DEPENDS+=	${PYPKGPREFIX}-sip5>=5.5<6:../../x11/py-sip5
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-soupsieve-[0-9]*:../../www/py-soupsieve
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+DEPENDS+=	${PYPKGPREFIX}-zeroconf-[0-9]*:../../net/py-zeroconf
 
 # for installation
 BUILD_DEPENDS+=	${PYPKGPREFIX}-qt-builder>=1:../../x11/py-qt-builder
@@ -78,6 +79,18 @@ SUBST_MESSAGE.path=	Fixing path to python.
 SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	${FIX_PYTHON_FILES}
 
+SUBST_CLASSES+=		plat
+SUBST_SED.plat+=	-e "/supported_platforms =/s/'linux'/'linux', 'netbsd'/"
+SUBST_MESSAGE.plat=	Fixing supported platforms
+SUBST_STAGE.plat=	pre-configure
+SUBST_FILES.plat=	src/calibre/devices/misc.py
+SUBST_FILES.plat+=	src/calibre/devices/*/*driver.py
+SUBST_FILES.plat+=	src/calibre/library/catalogs/*.py
+SUBST_FILES.plat+=	src/calibre/ebooks/metadata/sources/base.py
+SUBST_FILES.plat+=	src/calibre/ebooks/metadata/archive.py
+SUBST_FILES.plat+=	src/calibre/ebooks/html/to_zip.py
+SUBST_FILES.plat+=	src/calibre/customize/*.py
+
 REPLACE_BASH+=		resources/calibre-portable.sh
 
 # These ones are for replacing python[0-9*] with PYTHONBIN
@@ -119,8 +132,7 @@ BUILDLINK_API_DEPENDS.chmlib+=	chmlib>=0.40
 BUILDLINK_API_DEPENDS.libmtp+=	libmtp>=1.1.5
 .include "../../devel/libmtp/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libusb+=	libusb>=0.1.12
-.include "../../mk/libusb.buildlink3.mk"
+.include "../../devel/libusb1/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/libwmf/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
