@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.386 2022/01/23 22:08:17 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.387 2022/01/23 22:10:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -530,3 +530,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/links to 2.25 [fcambus 2022-01-23]
 	Updated www/links-gui to 2.25 [fcambus 2022-01-23]
 	Updated graphics/ImageMagick to 7.1.0.20 [wiz 2022-01-23]
+	Updated devel/gopls to 0.7.5 [wiz 2022-01-23]
