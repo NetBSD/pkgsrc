@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/23 00:46:27 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/23 09:09:51 adam Exp $
 
-DISTNAME=	jeepney-0.6.0
+DISTNAME=	jeepney-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jeepney/}
 
@@ -11,16 +10,16 @@ HOMEPAGE=	https://gitlab.com/takluyver/jeepney
 COMMENT=	Low-level pure Python DBus protocol wrapper
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-trio-[0-9]*:../../devel/py-trio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-testpath-[0-9]*:../../devel/py-testpath
-DEPENDS+=	${PYPKGPREFIX}-trio-[0-9]*:../../devel/py-trio
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-trio
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} py.test-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
