@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21442 2022/01/21 02:28:34 wen Exp $
+$NetBSD: TODO,v 1.21443 2022/01/23 00:45:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1684,7 +1684,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rubber-1.5.1
 	o ruby-delayer-1.2.1
 	o rump-20131213
-	o rust-analyzer-0.2021.12.27 [needs rust 1.57 via flycheck]
+	o rust-analyzer-0.2022.01.17 [needs rust 1.58]
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
