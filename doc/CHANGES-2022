@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.375 2022/01/23 16:14:44 pin Exp $
+$NetBSD: CHANGES-2022,v 1.376 2022/01/23 16:17:24 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -513,3 +513,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/nqp to 2021.12 [mef 2022-01-23]
 	Updated sysutils/broot to 1.9.2 [pin 2022-01-23]
 	Updated x11/alacritty to 0.10.0 [pin 2022-01-23]
+	Updated misc/calibre to 5.35.0 [rhialto 2022-01-23]
