@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 09:57:09 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/01/23 21:50:33 fcambus Exp $
 
-BLAKE2s (lunzip-1.12.tar.gz) = 1424bcdd225e7e18086bef23de8ded7399dd563c45734c4558e27715243354cb
-SHA512 (lunzip-1.12.tar.gz) = 9261f87e7403217018e87cf52c0cc7f71ce9e29b7d262efffae5dfff797ea4913803f0a94999dfd6b0ad89abb22cf37e21baa390b5c920cb8668a6ba240358c6
-Size (lunzip-1.12.tar.gz) = 66001 bytes
+BLAKE2s (lunzip-1.13.tar.gz) = d218a61703b49ef51a3129b699ce8db4976c9d01f7ada9d2d343c8297ca5c0a3
+SHA512 (lunzip-1.13.tar.gz) = 67f950883b7062d37601bc16d7d64c07f6c580afbf3c0f61394dd6fb5d41c27214484b1dea7aabd41db06d18162b95b5734674646c4fcc833268cabe8cba91bb
+Size (lunzip-1.13.tar.gz) = 66541 bytes
