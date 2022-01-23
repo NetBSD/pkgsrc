@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.985 2022/01/23 19:34:47 adam Exp $
+# $NetBSD: Makefile,v 1.986 2022/01/23 19:43:46 schmonz Exp $
 #
 
 COMMENT=	System utilities
@@ -856,6 +856,7 @@ SUBDIR+=	xc3028l-firmware
 SUBDIR+=	xc5k-firmware
 SUBDIR+=	xcdroast
 SUBDIR+=	xdu
+SUBDIR+=	xe
 SUBDIR+=	xe-guest-utilities
 SUBDIR+=	xenkernel411
 SUBDIR+=	xenkernel413
