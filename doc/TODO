@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21443 2022/01/23 00:45:05 wiz Exp $
+$NetBSD: TODO,v 1.21444 2022/01/23 09:28:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -361,6 +361,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o GNUMail-1.2.2
 	o Gorm-1.2.26
 	o HElib-2.1.0
+	o ImageMagick-7.1.0.20
 	o ImageMagick6-6.9.12.8
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
@@ -825,6 +826,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o golem-0.0.6
 	o goocanvas-2.0.2
 	o google-glog-2.2.2
+	o gopls-0.7.5
 	o goreman-0.3.7
 	o gossip-0.31
 	o got-0.52
@@ -914,6 +916,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o icinga-base-2.12.3
 	o idzebra-2.2.2
 	o ike-2.0.1 [pkg/37032]
+	o imath-3.1.4
 	o imp-6.2.12
 	o inadyn-2.8.1
 	o inetutils-2.0
@@ -1272,6 +1275,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-eqaf-0.7
 	o ocaml-expat-1.1.0
 	o ocaml-fieldslib-0.14.0
+	o ocaml-findlib-1.9.2
 	o ocaml-fmt-0.8.9
 	o ocaml-fpath-0.7.3
 	o ocaml-hex-1.4.0
@@ -1359,6 +1363,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o oto-0.5
 	o owl-lisp-0.1.16
 	o p0f-3.09b
+	o p11-kit-0.24.1
 	o p5-Alien-Hunspell-0.17
 	o p5-Archive-Peek-0.38
 	o p5-Authen-Simple-0.6
@@ -1591,6 +1596,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-input-pad-1.4.2
 	o py-ipython-8.0
 	o py-keybinder-0.3.2
+	o py-multidict-6.0.0
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
 	o py-newt-0.52.21
@@ -1665,6 +1671,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rep-gtk-0.90.8.1
 	o reposurgeon-4.26
 	o resize_image-0.7
+	o restish-0.9.3
 	o rexx-regina-3.9.0
 	o riemann-client-1.10.4.1
 	o rio500-0.8.1
@@ -1972,6 +1979,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o zoneminder-1.34.21
 	o zookeeper-3.7.0
 	o zopeedit-0.8
+	o zstd-1.5.2
 
 Licenses of packages
 ====================
