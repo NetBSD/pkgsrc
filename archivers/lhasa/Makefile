@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/11/16 15:48:43 tsutsui Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/23 21:50:02 fcambus Exp $
 
 DISTNAME=	lhasa-0.3.1
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	https://soulsphere.org/projects/lhasa/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://fragglet.github.com/lhasa/
+HOMEPAGE=	https://fragglet.github.io/lhasa/
 COMMENT=	Freely licensed lha archiving tool (for .lzh and .lha files)
 LICENSE=	isc
 
