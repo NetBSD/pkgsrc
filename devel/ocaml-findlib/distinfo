@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.23 2021/10/26 10:15:49 nia Exp $
+$NetBSD: distinfo,v 1.24 2022/01/23 22:21:45 wiz Exp $
 
-BLAKE2s (findlib-1.9.1.tar.gz) = 1a4a282e3437764054de32ae8a4e5ea825f31e169c1c296f5620e383c83a3be0
-SHA512 (findlib-1.9.1.tar.gz) = 83a05f3e310fa7cabb0475c5525f7a87c1b6bc2dc5e39f094cabfb5d944a826a5581844ba00ec1a48dd96184eb9de3c4d1055cdddee2b83c700a2de5a6dc6f84
-Size (findlib-1.9.1.tar.gz) = 273012 bytes
+BLAKE2s (findlib-1.9.2.tar.gz) = 8c2480d8a2b30c0550d42510ed3ed622f9d523728247318a3066b3208ccb2625
+SHA512 (findlib-1.9.2.tar.gz) = c43d43e502869d52e7eb0e5fcf900039fd4ce0c997a4c823f8d5d9ead0c62120447a787723b884bda0db210e9e60fb513d767c4ea6c18bb38effdc8e35a4b75e
+Size (findlib-1.9.2.tar.gz) = 266692 bytes
 SHA1 (patch-Makefile) = 449237f90ee19862109f52d2f2be1d10fafc0e2c
 SHA1 (patch-configure) = b5730cab9598dda0a1f12ea77474612fe580e4ab
-SHA1 (patch-src_bytes_Makefile) = cd44d56a6cb48b3a14e14b237fd0b744921c092a
+SHA1 (patch-src_bytes_Makefile) = f2aa1e2ae60c63bfd2b8a00981202a7453bdd8a3
 SHA1 (patch-src_findlib-toolbox_Makefile) = 621e478386516c751968f517f8824c9f4d6d62a1
 SHA1 (patch-src_findlib_Makefile) = f8cb5b6d67df50017efb89eec94883144011202d
