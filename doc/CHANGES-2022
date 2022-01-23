@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.379 2022/01/23 19:46:30 adam Exp $
+$NetBSD: CHANGES-2022,v 1.380 2022/01/23 20:36:52 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -523,3 +523,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added lang/py-pure-eval version 0.2.2 [adam 2022-01-23]
 	Added sysutils/py-stack-data version 0.1.4 [adam 2022-01-23]
 	Added devel/py-typeguard version 2.13.3 [adam 2022-01-23]
+	Updated devel/c++gsl to 3.1.0 [nros 2022-01-23]
