@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.369 2022/01/23 09:12:07 adam Exp $
+$NetBSD: CHANGES-2022,v 1.370 2022/01/23 10:05:04 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -507,3 +507,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/indexinfo to 0.3.1 [mef 2022-01-23]
 	Updated sysutils/py-jeepney to 0.7.1 [adam 2022-01-23]
 	Updated devel/py-setuptools to 60.5.0 [adam 2022-01-23]
+	Updated textproc/po4a to 0.66 [schmonz 2022-01-23]
