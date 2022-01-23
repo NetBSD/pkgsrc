@@ -1,0 +1,16 @@
+`xe` is a new tool for constructing command lines from file listings or
+arguments, which includes the best features of `xargs(1)` and
+`apply(1)`. `xe` means "execute for every ...".
+
+Benefits over xargs:
+* Sane defaults (behaves like `xargs -d'\n' -I{} -n1 -r`).
+* No weird parsing, arguments are separated linewise or by NUL byte.
+* Can also take arguments from command-line.
+* No shell involved unless `-s` is used.
+* `{}` replacing possible with multiple arguments.
+* Support for patterns to run different commands depending on the argument.
+
+Benefits over apply:
+* Parallel mode.
+* Sane argument splitting.
+* Can use shell-syntax instead of escape characters.
