@@ -1,0 +1,5 @@
+Ratman is a decentralised, peer-to-peer packet router (following the gossip
+protocol approach), written in Rust.  With Ratman you can create private
+overlay networks (similar to VPNs), connect to a wider community mesh of
+existing overlay networks, plug into specific wireless drivers for fully
+off-the-grid routing, or do all of them at the same time.
