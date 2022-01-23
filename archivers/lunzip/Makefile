@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2021/02/22 19:45:08 fcambus Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/23 21:50:33 fcambus Exp $
 
-DISTNAME=	lunzip-1.12
+DISTNAME=	lunzip-1.13
 CATEGORIES=	archivers
 MASTER_SITES=	https://download.savannah.gnu.org/releases/lzip/lunzip/
 
