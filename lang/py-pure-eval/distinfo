@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/01/23 19:32:15 adam Exp $
+
+BLAKE2s (pure_eval-0.2.2.tar.gz) = 557549512c69cf715c1d5d0d2ab3d303ab63b16c69e7aa4324fa074713afab67
+SHA512 (pure_eval-0.2.2.tar.gz) = 35d20cbbfd513b7ac341759e619401a5f57b7b9df8abd09ce6414d4ee6bfa45dcadbad7529d067e81ad7ea2107c14fd03783a3a77f8074dad30d2e5161656804
+Size (pure_eval-0.2.2.tar.gz) = 19395 bytes
