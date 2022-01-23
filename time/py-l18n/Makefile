@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:55:12 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/23 19:19:10 adam Exp $
 
-DISTNAME=	l18n-2020.6.1
+DISTNAME=	l18n-2021.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/l18n/}
 
@@ -16,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-polib-[0-9]*:../../devel/py-polib
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
