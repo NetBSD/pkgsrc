@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.262 2022/01/23 00:46:27 wiz Exp $
+# $NetBSD: Makefile,v 1.263 2022/01/23 15:16:44 wiz Exp $
 
 DISTNAME=	calibre-5.34.0
 CATEGORIES=	misc
@@ -41,7 +41,7 @@ BUILD_DEPENDS+=	xdg-utils>=1.0.2:../../misc/xdg-utils
 
 EXTRACT_USING=	bsdtar
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # as of 5.x; and for py-trio via py-jeepney
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # as of 5.x
 PYTHON_VERSIONED_DEPENDENCIES+=	markdown
 
 USE_LANGUAGES=			c99 c++
