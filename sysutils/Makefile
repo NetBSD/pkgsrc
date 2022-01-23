@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.984 2022/01/22 17:52:53 thorpej Exp $
+# $NetBSD: Makefile,v 1.985 2022/01/23 19:34:47 adam Exp $
 #
 
 COMMENT=	System utilities
@@ -564,6 +564,7 @@ SUBDIR+=	py-salt-pepper
 SUBDIR+=	py-setconf
 SUBDIR+=	py-setproctitle
 SUBDIR+=	py-sh
+SUBDIR+=	py-stack-data
 SUBDIR+=	py-structlog
 SUBDIR+=	py-supervisor
 SUBDIR+=	py-syslog-ng
