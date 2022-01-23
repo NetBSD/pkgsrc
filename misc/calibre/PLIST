@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.95 2022/01/20 19:03:07 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.96 2022/01/23 16:17:13 rhialto Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -19,7 +19,6 @@ bin/lrfviewer
 bin/lrs2lrf
 bin/markdown-calibre
 bin/web2disk
-lib/${PYVERSSUFFIX}/site-packages/init_calibre.py
 lib/calibre/calibre/__init__.py
 lib/calibre/calibre/build_forms.py
 lib/calibre/calibre/constants.py
@@ -1455,6 +1454,7 @@ lib/calibre/tinycss/tests/tokenizing.py
 lib/calibre/tinycss/token_data.py
 lib/calibre/tinycss/tokenizer.py
 lib/calibre/tinycss/version.py
+${PYSITELIB}/init_calibre.py
 share/bash-completion/completions/calibre
 share/bash-completion/completions/calibre-debug
 share/bash-completion/completions/calibre-server
@@ -1527,6 +1527,7 @@ share/calibre/fonts/liberation/version.txt
 share/calibre/hyphenation/dictionaries.tar.xz
 share/calibre/hyphenation/locales.json
 share/calibre/hyphenation/sha1sum
+share/calibre/icons.rcc
 share/calibre/images.qrc
 share/calibre/images/add_book.png
 share/calibre/images/apple-touch-icon.png
@@ -2163,6 +2164,7 @@ share/calibre/recipes/dunya_bulteni.recipe
 share/calibre/recipes/dunyahalleri.recipe
 share/calibre/recipes/dunyahalleri_haftaninozeti.recipe
 share/calibre/recipes/dvhn.recipe
+share/calibre/recipes/dw_de.recipe
 share/calibre/recipes/dwutygodnik.recipe
 share/calibre/recipes/dzieje_pl.recipe
 share/calibre/recipes/dziennik_baltycki.recipe
@@ -2241,6 +2243,7 @@ share/calibre/recipes/eos_wetenschap.recipe
 share/calibre/recipes/epl_talk.recipe
 share/calibre/recipes/epoch_times.recipe
 share/calibre/recipes/epw.recipe
+share/calibre/recipes/equestria_daily.recipe
 share/calibre/recipes/erdinger_anzeiger.recipe
 share/calibre/recipes/erhvervs_avisen_dk.recipe
 share/calibre/recipes/esbjerglokalavisen_dk.recipe
@@ -3392,4 +3395,3 @@ share/doc/calibre/LICENSE.rtf
 share/doc/calibre/README.md
 @pkgdir share/icons
 @pkgdir share/applications
-@pkgdir lib/python${PYVERSSUFFIX}/site-packages
