@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2020/10/22 14:48:16 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/23 16:14:24 pin Exp $
 bin/alacritty
+man/man1/alacritty-msg.1
+man/man1/alacritty.1
 share/examples/alacritty/alacritty.yml
