@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2022/01/23 19:32:15 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pure_eval/__init__.py
+${PYSITELIB}/pure_eval/__init__.pyc
+${PYSITELIB}/pure_eval/__init__.pyo
+${PYSITELIB}/pure_eval/core.py
+${PYSITELIB}/pure_eval/core.pyc
+${PYSITELIB}/pure_eval/core.pyo
+${PYSITELIB}/pure_eval/my_getattr_static.py
+${PYSITELIB}/pure_eval/my_getattr_static.pyc
+${PYSITELIB}/pure_eval/my_getattr_static.pyo
+${PYSITELIB}/pure_eval/py.typed
+${PYSITELIB}/pure_eval/utils.py
+${PYSITELIB}/pure_eval/utils.pyc
+${PYSITELIB}/pure_eval/utils.pyo
+${PYSITELIB}/pure_eval/version.py
+${PYSITELIB}/pure_eval/version.pyc
+${PYSITELIB}/pure_eval/version.pyo
