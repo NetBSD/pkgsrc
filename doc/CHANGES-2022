@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.390 2022/01/23 22:21:53 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.391 2022/01/23 22:25:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -534,3 +534,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/imath to 3.1.4 [wiz 2022-01-23]
 	Updated security/p11-kit to 0.24.1 [wiz 2022-01-23]
 	Updated devel/ocaml-findlib to 1.9.2 [wiz 2022-01-23]
+	Updated www/restish to 0.9.3 [wiz 2022-01-23]
