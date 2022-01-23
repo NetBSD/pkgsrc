@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.30 2022/01/08 15:35:46 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.31 2022/01/23 16:13:11 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	adler32-1.2.0
@@ -81,7 +81,6 @@ CARGO_CRATE_DEPENDS+=	jpeg-decoder-0.1.22
 CARGO_CRATE_DEPENDS+=	lazy-regex-2.2.2
 CARGO_CRATE_DEPENDS+=	lazy-regex-proc_macros-2.2.2
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
-CARGO_CRATE_DEPENDS+=	lazycell-1.3.0
 CARGO_CRATE_DEPENDS+=	lfs-core-0.4.2
 CARGO_CRATE_DEPENDS+=	libc-0.2.107
 CARGO_CRATE_DEPENDS+=	libgit2-sys-0.12.25+1.3.0
@@ -164,7 +163,7 @@ CARGO_CRATE_DEPENDS+=	strict-0.1.4
 CARGO_CRATE_DEPENDS+=	strsim-0.8.0
 CARGO_CRATE_DEPENDS+=	svg-0.8.2
 CARGO_CRATE_DEPENDS+=	syn-1.0.81
-CARGO_CRATE_DEPENDS+=	syntect-4.6.0
+CARGO_CRATE_DEPENDS+=	syntect-no-panic-4.6.1
 CARGO_CRATE_DEPENDS+=	tempfile-3.2.0
 CARGO_CRATE_DEPENDS+=	termimad-0.10.3
 CARGO_CRATE_DEPENDS+=	termimad-0.20.0
