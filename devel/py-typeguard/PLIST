@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2022/01/23 19:45:31 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/typeguard/__init__.py
+${PYSITELIB}/typeguard/__init__.pyc
+${PYSITELIB}/typeguard/__init__.pyo
+${PYSITELIB}/typeguard/importhook.py
+${PYSITELIB}/typeguard/importhook.pyc
+${PYSITELIB}/typeguard/importhook.pyo
+${PYSITELIB}/typeguard/py.typed
+${PYSITELIB}/typeguard/pytest_plugin.py
+${PYSITELIB}/typeguard/pytest_plugin.pyc
+${PYSITELIB}/typeguard/pytest_plugin.pyo
