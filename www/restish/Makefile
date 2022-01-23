@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/01/09 20:10:41 bsiegert Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/23 22:25:15 wiz Exp $
 
-DISTNAME=	restish-0.9.2
-PKGREVISION=	1
+DISTNAME=	restish-0.9.3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=danielgtaylor/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
