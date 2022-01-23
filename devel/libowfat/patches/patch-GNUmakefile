@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2018/10/07 12:13:46 schmonz Exp $
+$NetBSD: patch-GNUmakefile,v 1.1 2022/01/23 13:30:33 schmonz Exp $
 
 Follow hier(7) and support PKGMANDIR.
 
