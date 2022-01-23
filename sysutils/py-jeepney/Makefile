@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/01/22 14:10:10 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/23 00:46:27 wiz Exp $
 
 DISTNAME=	jeepney-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-trio-[0-9]*:../../devel/py-trio
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-trio
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} py.test-${PYVERSSUFFIX}
