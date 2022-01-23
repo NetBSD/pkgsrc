@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.368 2022/01/23 05:22:11 mef Exp $
+$NetBSD: CHANGES-2022,v 1.369 2022/01/23 09:12:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -505,3 +505,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/rust-analyzer to 0.0.2022.01.03 [wiz 2022-01-22]
 	Updated lang/rust-analyzer to 0.0.2022.01.10 [wiz 2022-01-22]
 	Updated print/indexinfo to 0.3.1 [mef 2022-01-23]
+	Updated sysutils/py-jeepney to 0.7.1 [adam 2022-01-23]
+	Updated devel/py-setuptools to 60.5.0 [adam 2022-01-23]
