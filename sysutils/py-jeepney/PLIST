@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/01/22 14:10:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/01/23 09:09:51 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -19,6 +19,9 @@ ${PYSITELIB}/jeepney/bus.pyo
 ${PYSITELIB}/jeepney/bus_messages.py
 ${PYSITELIB}/jeepney/bus_messages.pyc
 ${PYSITELIB}/jeepney/bus_messages.pyo
+${PYSITELIB}/jeepney/fds.py
+${PYSITELIB}/jeepney/fds.pyc
+${PYSITELIB}/jeepney/fds.pyo
 ${PYSITELIB}/jeepney/integrate/__init__.py
 ${PYSITELIB}/jeepney/integrate/__init__.pyc
 ${PYSITELIB}/jeepney/integrate/__init__.pyo
@@ -52,6 +55,9 @@ ${PYSITELIB}/jeepney/io/common.pyo
 ${PYSITELIB}/jeepney/io/tests/__init__.py
 ${PYSITELIB}/jeepney/io/tests/__init__.pyc
 ${PYSITELIB}/jeepney/io/tests/__init__.pyo
+${PYSITELIB}/jeepney/io/tests/conftest.py
+${PYSITELIB}/jeepney/io/tests/conftest.pyc
+${PYSITELIB}/jeepney/io/tests/conftest.pyo
 ${PYSITELIB}/jeepney/io/tests/test_asyncio.py
 ${PYSITELIB}/jeepney/io/tests/test_asyncio.pyc
 ${PYSITELIB}/jeepney/io/tests/test_asyncio.pyo
@@ -98,6 +104,9 @@ ${PYSITELIB}/jeepney/tests/test_bus.pyo
 ${PYSITELIB}/jeepney/tests/test_bus_messages.py
 ${PYSITELIB}/jeepney/tests/test_bus_messages.pyc
 ${PYSITELIB}/jeepney/tests/test_bus_messages.pyo
+${PYSITELIB}/jeepney/tests/test_fds.py
+${PYSITELIB}/jeepney/tests/test_fds.pyc
+${PYSITELIB}/jeepney/tests/test_fds.pyo
 ${PYSITELIB}/jeepney/tests/test_low_level.py
 ${PYSITELIB}/jeepney/tests/test_low_level.pyc
 ${PYSITELIB}/jeepney/tests/test_low_level.pyo
