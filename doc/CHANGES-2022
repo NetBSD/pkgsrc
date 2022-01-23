@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.377 2022/01/23 19:19:36 adam Exp $
+$NetBSD: CHANGES-2022,v 1.378 2022/01/23 19:44:03 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -518,3 +518,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/py-simpleeval to 0.9.12 [adam 2022-01-23]
 	Updated finance/py-stripe to 2.65.0 [adam 2022-01-23]
 	Updated time/py-l18n to 2021.3 [adam 2022-01-23]
+	Added sysutils/xe version 0.11 [schmonz 2022-01-23]
