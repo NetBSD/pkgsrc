@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.373 2022/01/23 14:07:14 mef Exp $
+$NetBSD: CHANGES-2022,v 1.374 2022/01/23 16:13:30 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -511,3 +511,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added net/ratman version 0.3.1 [nia 2022-01-23]
 	Updated devel/MoarVM to 2021.12 [mef 2022-01-23]
 	Updated lang/nqp to 2021.12 [mef 2022-01-23]
+	Updated sysutils/broot to 1.9.2 [pin 2022-01-23]
