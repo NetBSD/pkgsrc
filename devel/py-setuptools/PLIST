@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.61 2022/01/10 23:49:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.62 2022/01/23 09:11:07 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -428,6 +428,15 @@ ${PYSITELIB}/setuptools/sandbox.pyc
 ${PYSITELIB}/setuptools/sandbox.pyo
 ${PYSITELIB}/setuptools/script (dev).tmpl
 ${PYSITELIB}/setuptools/script.tmpl
+${PYSITELIB}/setuptools/tests/integration/__init__.py
+${PYSITELIB}/setuptools/tests/integration/__init__.pyc
+${PYSITELIB}/setuptools/tests/integration/__init__.pyo
+${PYSITELIB}/setuptools/tests/integration/helpers.py
+${PYSITELIB}/setuptools/tests/integration/helpers.pyc
+${PYSITELIB}/setuptools/tests/integration/helpers.pyo
+${PYSITELIB}/setuptools/tests/integration/test_pip_install_sdist.py
+${PYSITELIB}/setuptools/tests/integration/test_pip_install_sdist.pyc
+${PYSITELIB}/setuptools/tests/integration/test_pip_install_sdist.pyo
 ${PYSITELIB}/setuptools/unicode_utils.py
 ${PYSITELIB}/setuptools/unicode_utils.pyc
 ${PYSITELIB}/setuptools/unicode_utils.pyo
