@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2021/11/24 09:39:08 wiz Exp $
+$NetBSD: distinfo,v 1.2 2022/01/23 19:11:07 adam Exp $
 
-BLAKE2s (aenum-3.1.5.tar.gz) = 88a2aa5a6afe808148b584161626522739be188cd09d772205caab3f25d6433d
-SHA512 (aenum-3.1.5.tar.gz) = 1122b8199c230e2b78ba1a69013ea54e713cb99425befce5e907ddfa16dbb4dade854bb8479de43f07e9c60b96d3bfb1d0a0af5dafb6db313d732101d65079d7
-Size (aenum-3.1.5.tar.gz) = 126566 bytes
+BLAKE2s (aenum-3.1.7.tar.gz) = 0de4395ff2cd263c395cd9542627b306e01dc6a3d8075dd0a41c7fd405d3f265
+SHA512 (aenum-3.1.7.tar.gz) = ec7362093f1f82a1dd1bf6353e72ac7668c7c355b51adbc60f18d3eafd402eee03e3d5b11a5b27d949961a67edbc095f54141bcdf0eaea47fc6402c814c23524
+Size (aenum-3.1.7.tar.gz) = 129957 bytes
