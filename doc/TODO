@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21450 2022/01/23 22:11:44 wiz Exp $
+$NetBSD: TODO,v 1.21451 2022/01/23 22:17:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1359,7 +1359,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o oto-0.5
 	o owl-lisp-0.1.16
 	o p0f-3.09b
-	o p11-kit-0.24.1
 	o p5-Alien-Hunspell-0.17
 	o p5-Archive-Peek-0.38
 	o p5-Authen-Simple-0.6
