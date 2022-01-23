@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.382 2022/01/23 21:51:30 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.383 2022/01/23 22:04:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -526,3 +526,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/c++gsl to 3.1.0 [nros 2022-01-23]
 	Updated archivers/lunzip to 1.13 [fcambus 2022-01-23]
 	Updated lang/yabasic to 2.90.2 [fcambus 2022-01-23]
+	Updated archivers/zstd to 1.5.2 [wiz 2022-01-23]
