@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.371 2022/01/23 11:45:35 nia Exp $
+$NetBSD: CHANGES-2022,v 1.372 2022/01/23 13:18:50 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -509,3 +509,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-setuptools to 60.5.0 [adam 2022-01-23]
 	Updated textproc/po4a to 0.66 [schmonz 2022-01-23]
 	Added net/ratman version 0.3.1 [nia 2022-01-23]
+	Updated devel/MoarVM to 2021.12 [mef 2022-01-23]
