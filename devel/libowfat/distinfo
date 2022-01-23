@@ -1,14 +1,15 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:15:26 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/01/23 13:30:32 schmonz Exp $
 
 BLAKE2s (libowfat-0.32.tar.xz) = ea6f4e18d21d62e21293e1cd50a08482474e02e310f43c3e2bc758b544226eca
 SHA512 (libowfat-0.32.tar.xz) = c762a1aa27dfb30e2f6da67d1ad16da03d301b2e3cce33c83b69103183a6689a494c8cf8d7d4e26ad5b22130e4e0560d5f3ef6f44b14d706f10e2300ce11ff3b
 Size (libowfat-0.32.tar.xz) = 195820 bytes
-SHA1 (patch-aa) = 5f7cbfd30e151957b18439bb3bacabe17c292d47
+SHA1 (patch-GNUmakefile) = 5f7cbfd30e151957b18439bb3bacabe17c292d47
 SHA1 (patch-io_io__sendfile.c) = 22ece69cb1c55d4710d7c6e562d32fcbeca7a18c
-SHA1 (patch-io_iom__init.c) = 0fbb7984e526ee78259339cac8d1cb43d2ac3cd7
+SHA1 (patch-io_iom__init.c) = 0a8a3ea1809c0661b5692b819b0f616eeb38a1d0
 SHA1 (patch-io_iom__wait.c) = c9d00bc6a42f901c9552f779de7fadeb75e713bc
 SHA1 (patch-mmap_mmap__readat.c) = 1c7ef7996491496fe943aa5f47213e3fcd46269e
 SHA1 (patch-scan_scan__iso8601.c) = 761d9941e8310d2c56020cee51261d0378530b56
+SHA1 (patch-socket_socket__quickack.c) = 85271060a9c0026c264a1aea3006b3d444ddcb8b
 SHA1 (patch-tai_tai__now__libowfat.3) = cd51600b7c0da29ccca3c649039f8fe07f7276c9
 SHA1 (patch-tai_tai__pack__libowfat.3) = 8dd463a76d289773827793538373a7a029617a0a
 SHA1 (patch-taia_taia__now__libowfat.3) = 0d9aa54facfc7b26d952a952a431c65b62db95ed

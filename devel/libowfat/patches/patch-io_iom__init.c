@@ -1,4 +1,6 @@
-$NetBSD: patch-io_iom__init.c,v 1.1 2019/12/22 22:23:00 joerg Exp $
+$NetBSD: patch-io_iom__init.c,v 1.2 2022/01/23 13:30:33 schmonz Exp $
+
+Fix build on systems with kqueue(2).
 
 --- io/iom_init.c.orig	2019-12-22 18:12:04.396371533 +0000
 +++ io/iom_init.c
