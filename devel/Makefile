@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3562 2022/01/20 23:23:02 leot Exp $
+# $NetBSD: Makefile,v 1.3563 2022/01/23 19:45:30 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2701,6 +2701,7 @@ SUBDIR+=	py-txaio
 SUBDIR+=	py-txgithub
 SUBDIR+=	py-txrequests
 SUBDIR+=	py-typed-ast
+SUBDIR+=	py-typeguard
 SUBDIR+=	py-types-setuptools
 SUBDIR+=	py-types-toml
 SUBDIR+=	py-typing
