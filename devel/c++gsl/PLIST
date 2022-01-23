@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2018/07/20 11:32:25 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/23 20:34:46 nros Exp $
 include/gsl/gsl
 include/gsl/gsl_algorithm
 include/gsl/gsl_assert
@@ -7,4 +7,7 @@ include/gsl/gsl_util
 include/gsl/multi_span
 include/gsl/pointers
 include/gsl/span
+include/gsl/span_ext
 include/gsl/string_span
+share/cmake/Microsoft.GSL/Microsoft.GSLConfig.cmake
+share/cmake/Microsoft.GSL/Microsoft.GSLConfigVersion.cmake
