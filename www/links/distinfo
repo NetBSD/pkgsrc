@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.80 2021/10/26 11:29:37 nia Exp $
+$NetBSD: distinfo,v 1.81 2022/01/23 22:06:29 fcambus Exp $
 
-BLAKE2s (links-2.23.tar.bz2) = 7f5dad45d1bed86f397d1f20a178f9f547c718172e11e4a6a420f2c42d6478d6
-SHA512 (links-2.23.tar.bz2) = 3c233dab2e7e5ca72f582c5af9c5799b3d6c1a5a64d4e9e0209f78f347a245dc760c2340f71839fd42e1c9f358599b8baa12aa024938f2ab1b6424c8fb0b9a7d
-Size (links-2.23.tar.bz2) = 6521143 bytes
+BLAKE2s (links-2.25.tar.bz2) = 47ed9a4702afb26edbe1cd0b407f7eb405e8af02c27a451c0bb38afc9f9ce739
+SHA512 (links-2.25.tar.bz2) = b094e3b2096b07da8385d6021e5a5794f5b602c90ec824c48b897e6b69def6d69cb879af3008a4af43effaa7d9359bf09e4feb8ed5371bb7ff22ffcb0794f690
+Size (links-2.25.tar.bz2) = 6505187 bytes
 SHA1 (patch-configure) = 047d48d898f674f5f0b18c700e6296fe180380e2
 SHA1 (patch-x.c) = 3aff5484e803495febf417bb5c2b9e3d79a265d4
