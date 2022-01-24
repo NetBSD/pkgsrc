@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.416 2022/01/24 18:11:16 micha Exp $
+$NetBSD: CHANGES-2022,v 1.417 2022/01/24 18:38:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -560,3 +560,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/binutils to 2.37nb2 [fcambus 2022-01-24]
 	Updated x11/xlockmore to 5.68 [micha 2022-01-24]
 	Updated x11/xlockmore-lite to 5.68 [micha 2022-01-24]
+	Updated textproc/py-sphinx to 4.4.0 [adam 2022-01-24]
+	Updated net/py-responses to 0.17.0 [adam 2022-01-24]
+	Added graphics/py-matplotlib-inline version 0.1.3 [adam 2022-01-24]
+	Updated devel/py-ipython to 8.0.1 [adam 2022-01-24]
