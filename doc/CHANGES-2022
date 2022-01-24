@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.405 2022/01/24 11:11:23 adam Exp $
+$NetBSD: CHANGES-2022,v 1.406 2022/01/24 11:57:19 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -547,3 +547,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/alsa-plugins-pulse to 1.2.6 [wiz 2022-01-24]
 	Updated devel/py-aenum to 3.1.8 [adam 2022-01-24]
 	Updated devel/py-typed-ast to 1.5.2 [adam 2022-01-24]
+	Updated mail/fetchmail to 6.4.26 [triaxx 2022-01-24]
