@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.395 2022/01/24 07:27:51 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.396 2022/01/24 09:01:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -511,7 +511,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Added net/ratman version 0.3.1 [nia 2022-01-23]
 	Updated devel/MoarVM to 2021.12 [mef 2022-01-23]
 	Updated lang/nqp to 2021.12 [mef 2022-01-23]
-	Updated sysutils/broot to 1.9.2 [pin 2022-01-23]
 	Updated x11/alacritty to 0.10.0 [pin 2022-01-23]
 	Updated misc/calibre to 5.35.0 [rhialto 2022-01-23]
 	Updated devel/py-aenum to 3.1.7 [adam 2022-01-23]
