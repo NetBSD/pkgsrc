@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21460 2022/01/24 18:07:40 micha Exp $
+$NetBSD: TODO,v 1.21461 2022/01/24 18:15:50 micha Exp $
 
 Suggested new packages
 ======================
@@ -1916,7 +1916,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o xjman-0.7
 	o xkbset-0.6
 	o xli-2006.11.10
-	o xlockmore-lite-5.66
 	o xmake-2.0.5
 	o xmbdfed-4.6
 	o xmcd-3.3.2
