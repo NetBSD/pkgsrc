@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2022/01/24 18:35:27 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/matplotlib_inline/__init__.py
+${PYSITELIB}/matplotlib_inline/__init__.pyc
+${PYSITELIB}/matplotlib_inline/__init__.pyo
+${PYSITELIB}/matplotlib_inline/backend_inline.py
+${PYSITELIB}/matplotlib_inline/backend_inline.pyc
+${PYSITELIB}/matplotlib_inline/backend_inline.pyo
+${PYSITELIB}/matplotlib_inline/config.py
+${PYSITELIB}/matplotlib_inline/config.pyc
+${PYSITELIB}/matplotlib_inline/config.pyo
