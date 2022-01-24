@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.25 2010/01/25 23:04:49 tron Exp $
+$NetBSD: patch-ab,v 1.26 2022/01/24 22:21:58 buhrow Exp $
 
---- src/osdep/unix/Makefile.orig	2008-06-04 19:18:34.000000000 +0100
-+++ src/osdep/unix/Makefile	2010-01-25 22:56:57.000000000 +0000
+--- src/osdep/unix/Makefile.orig	2011-07-22 17:20:10.000000000 -0700
++++ src/osdep/unix/Makefile	2022-01-15 07:49:18.399845264 -0800
 @@ -48,7 +48,7 @@
  # Try to have some consistency in GCC builds.  We want optimization, but we
  # also want to be able to debug.
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.25 2010/01/25 23:04:49 tron Exp $
  GCC4CFLAGS= $(GCCCFLAGS) -Wno-pointer-sign
  
  
-@@ -149,7 +149,7 @@
+@@ -149,11 +149,11 @@
  
  # Normally no need to change any of these
  
@@ -20,7 +20,12 @@ $NetBSD: patch-ab,v 1.25 2010/01/25 23:04:49 tron Exp $
  BINARIES=osdep.o mail.o misc.o newsrc.o smanager.o utf8.o utf8aux.o siglocal.o \
   dummy.o pseudo.o netmsg.o flstring.o fdstring.o \
   rfc822.o nntp.o smtp.o imap4r1.o pop3.o \
-@@ -529,7 +529,7 @@
+- unix.o mbx.o mmdf.o tenex.o mtx.o news.o phile.o mh.o mx.o mix.o
++ unix.o utime.o mbx.o mmdf.o tenex.o mtx.o news.o phile.o mh.o mx.o mix.o
+ CFLAGS=-g
+ 
+ CAT=cat
+@@ -537,7 +537,7 @@
  	$(BUILD) `$(CAT) SPECIALS` OS=bsi \
  	 CRXTYPE=nfs \
  	 SPOOLDIR=/var \
@@ -29,7 +34,7 @@ $NetBSD: patch-ab,v 1.25 2010/01/25 23:04:49 tron Exp $
  	 RSHPATH=/usr/bin/rsh \
  	 BASECFLAGS="$(GCCCFLAGS)" \
  	 BASELDFLAGS="-lcrypt"
-@@ -718,7 +718,7 @@
+@@ -726,7 +726,7 @@
  	 RSHPATH=/usr/bin/rsh \
  	 BASECFLAGS="-g -O -w" \
  	 BASELDFLAGS="-lsocket -lnsl -lgen" \
@@ -38,7 +43,7 @@ $NetBSD: patch-ab,v 1.25 2010/01/25 23:04:49 tron Exp $
  
  
  # Note: It is a long and disgusting story about why cc is set to ucbcc.  You
-@@ -855,7 +855,7 @@
+@@ -863,7 +863,7 @@
  	@$(SH) ARCHIVE
  
  .c.o:
@@ -47,7 +52,7 @@ $NetBSD: patch-ab,v 1.25 2010/01/25 23:04:49 tron Exp $
  
  
  # Cleanup
-@@ -915,7 +915,7 @@
+@@ -923,7 +923,7 @@
  	@echo pem.h, buffer.h, bio.h, and crypto.h, that means that OpenSSL
  	@echo is not installed on your system.  Either install OpenSSL first
  	@echo or build with command: make `$(CAT) OSTYPE` SSLTYPE=none
@@ -56,7 +61,7 @@ $NetBSD: patch-ab,v 1.25 2010/01/25 23:04:49 tron Exp $
  
  osdep.c: osdepbas.c osdepckp.c osdeplog.c osdepssl.c
  	$(CAT) osdepbas.c osdepckp.c osdeplog.c osdepssl.c > osdep.c
-@@ -968,7 +968,7 @@
+@@ -976,7 +976,7 @@
  	 -DLOCKPGM1=\"$(LOCKPGM1)\" -DLOCKPGM2=\"$(LOCKPGM2)\" \
  	 -DLOCKPGM3=\"$(LOCKPGM3)\" > OSCFLAGS
  	echo $(BASELDFLAGS) $(EXTRALDFLAGS) > LDFLAGS
