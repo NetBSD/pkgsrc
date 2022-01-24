@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2021/12/27 20:24:03 schmonz Exp $
+# $NetBSD: Makefile,v 1.82 2022/01/24 11:08:41 jperkin Exp $
 
 DISTNAME=	x264-snapshot-20191217-2245
 PKGNAME=	${DISTNAME:S/-snapshot-/-devel-/:S/-2245$//}
@@ -22,7 +22,8 @@ LICENSE=	gnu-gpl-v2
     !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || \
     !empty(MACHINE_PLATFORM:MNetBSD-*-mips*)
 CONFIGURE_ARGS+=	--disable-asm
-.elif ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+.elif ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" || \
+    (${OPSYS} == "Darwin" && ${MACHINE_ARCH} == "aarch64")
 TOOL_DEPENDS+=		nasm>=2.13.0:../../devel/nasm
 .endif
 
