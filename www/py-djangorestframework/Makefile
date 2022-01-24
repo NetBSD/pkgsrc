@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.33 2022/01/04 20:55:24 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2022/01/24 14:32:59 adam Exp $
 
-DISTNAME=	djangorestframework-3.12.4
+DISTNAME=	djangorestframework-3.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/djangorestframework/}
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	https://django-rest-framework.org/
+HOMEPAGE=	https://www.django-rest-framework.org/
 COMMENT=	Lightweight REST framework for Django
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-django>=2.2:../../www/py-django2
+DEPENDS+=	${PYPKGPREFIX}-pytz>0:../../time/py-pytz
 
 USE_LANGUAGES=	# none
 
