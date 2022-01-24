@@ -1,0 +1,33 @@
+$NetBSD: patch-ld_Makefile.am,v 1.3 2022/01/24 15:10:46 fcambus Exp $
+
+NetBSD/aarch64 support patches for ld from src.
+
+--- ld/Makefile.am.orig	2022-01-24 11:00:34.214241856 +0000
++++ ld/Makefile.am
+@@ -172,6 +172,8 @@ ALL_EMULATION_SOURCES = \
+ 	earmelf_linux_fdpiceabi.c \
+ 	earmelf_nacl.c \
+ 	earmelf_nbsd.c \
++	earmelf_nbsd_eabi.c \
++	earmelf_nbsd_eabihf.c \
+ 	earmelf_phoenix.c \
+ 	earmelf_vxworks.c \
+ 	earmelfb.c \
+@@ -182,6 +184,8 @@ ALL_EMULATION_SOURCES = \
+ 	earmelfb_linux_fdpiceabi.c \
+ 	earmelfb_nacl.c \
+ 	earmelfb_nbsd.c \
++	earmelfb_nbsd_eabi.c \
++	earmelfb_nbsd_eabihf.c \
+ 	earmnto.c \
+ 	earmpe.c \
+ 	eavr1.c \
+@@ -385,6 +389,8 @@ ALL_64_EMULATION_SOURCES = \
+ 	eaarch64fbsdb.c \
+ 	eaarch64linux.c \
+ 	eaarch64linuxb.c \
++	eaarch64nbsd.c \
++	eaarch64nbsdb.c \
+ 	eaarch64linux32.c \
+ 	eaarch64linux32b.c \
+ 	eelf32_x86_64.c \
