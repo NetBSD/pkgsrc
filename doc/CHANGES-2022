@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.407 2022/01/24 11:58:08 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.408 2022/01/24 12:50:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -549,3 +549,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-typed-ast to 1.5.2 [adam 2022-01-24]
 	Updated mail/fetchmail to 6.4.26 [triaxx 2022-01-24]
 	Updated mail/fetchmailconf to 6.4.26 [triaxx 2022-01-24]
+	Updated security/py-cryptodome to 3.13.0 [adam 2022-01-24]
+	Updated security/py-asyncssh to 2.9.0 [adam 2022-01-24]
