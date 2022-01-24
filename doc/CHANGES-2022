@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.402 2022/01/24 10:11:00 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.403 2022/01/24 10:11:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -545,3 +545,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/alsa-lib to 1.2.6.1 [wiz 2022-01-24]
 	Updated audio/alsa-utils to 1.2.6 [wiz 2022-01-24]
 	Updated audio/alsa-plugins-oss to 1.2.6 [wiz 2022-01-24]
+	Updated audio/alsa-plugins-pulse to 1.2.6 [wiz 2022-01-24]
