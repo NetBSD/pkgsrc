@@ -1,0 +1,13 @@
+$NetBSD: patch-bj,v 1.1 2022/01/24 22:25:13 buhrow Exp $
+
+--- src/osdep/unix/utime.c.orig	2011-07-22 17:20:10.000000000 -0700
++++ src/osdep/unix/utime.c	2022-01-15 08:29:29.662938659 -0800
+@@ -26,6 +26,8 @@
+  * Last Edited:	30 August 2006
+  */
+ 
++#include <utime.h>
++#include <string.h>
+ #undef utime
+ 
+ /* Portable utime() that takes it args like real Unix systems

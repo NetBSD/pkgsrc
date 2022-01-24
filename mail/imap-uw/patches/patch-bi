@@ -1,0 +1,11 @@
+$NetBSD: patch-bi,v 1.1 2022/01/24 22:25:06 buhrow Exp $
+
+--- src/osdep/unix/os_bsi.h.orig	2011-07-22 17:20:11.000000000 -0700
++++ src/osdep/unix/os_bsi.h	2022-01-15 07:49:59.934504576 -0800
+@@ -41,3 +41,6 @@
+ #include "ftl.h"
+ #include "nl.h"
+ #include "tcp.h"
++
++#undef utime
++#define utime portable_utime
