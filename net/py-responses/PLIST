@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/11/22 09:17:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/01/24 18:24:47 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -13,6 +13,10 @@ ${PYSITELIB}/responses/matchers.py
 ${PYSITELIB}/responses/matchers.pyc
 ${PYSITELIB}/responses/matchers.pyi
 ${PYSITELIB}/responses/matchers.pyo
+${PYSITELIB}/responses/registries.py
+${PYSITELIB}/responses/registries.pyc
+${PYSITELIB}/responses/registries.pyi
+${PYSITELIB}/responses/registries.pyo
 ${PYSITELIB}/responses/test_matchers.py
 ${PYSITELIB}/responses/test_matchers.pyc
 ${PYSITELIB}/responses/test_matchers.pyo
