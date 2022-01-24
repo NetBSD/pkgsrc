@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2022/01/04 20:54:37 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2022/01/24 12:50:27 adam Exp $
 
-DISTNAME=	asyncssh-2.7.2
+DISTNAME=	asyncssh-2.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asyncssh/}
 
@@ -15,6 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=17.0.0:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-bcrypt>=3.1.3:../../security/py-bcrypt
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=2.8:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-gssapi>=1.2.0:../../security/py-gssapi
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.6:../../devel/py-typing-extensions
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
