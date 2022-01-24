@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.410 2022/01/24 14:14:13 taca Exp $
+$NetBSD: CHANGES-2022,v 1.411 2022/01/24 14:32:59 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -553,3 +553,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-asyncssh to 2.9.0 [adam 2022-01-24]
 	Updated audio/pt2-clone to 1.39 [nia 2022-01-24]
 	Updated lang/php81 to 8.1.2 [taca 2022-01-24]
+	Updated games/etlegacy to 2.79.0 [nia 2022-01-24]
