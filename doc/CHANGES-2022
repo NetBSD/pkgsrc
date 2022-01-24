@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.411 2022/01/24 14:32:59 nia Exp $
+$NetBSD: CHANGES-2022,v 1.412 2022/01/24 14:33:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -554,3 +554,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/pt2-clone to 1.39 [nia 2022-01-24]
 	Updated lang/php81 to 8.1.2 [taca 2022-01-24]
 	Updated games/etlegacy to 2.79.0 [nia 2022-01-24]
+	Updated www/py-h11 to 0.13.0 [adam 2022-01-24]
+	Updated www/py-djangorestframework to 3.13.1 [adam 2022-01-24]
