@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.393 2022/01/23 23:54:31 mef Exp $
+$NetBSD: CHANGES-2022,v 1.394 2022/01/24 07:17:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -523,6 +523,8 @@ Changes to the packages collection and infrastructure in 2022:
 	Added lang/py-pure-eval version 0.2.2 [adam 2022-01-23]
 	Added sysutils/py-stack-data version 0.1.4 [adam 2022-01-23]
 	Added devel/py-typeguard version 2.13.3 [adam 2022-01-23]
+	Updated multimedia/py-m3u8 to 1.0.0 [adam 2022-01-24]
+	Updated net/py-scp to 0.14.2 [adam 2022-01-24]
 	Updated devel/c++gsl to 3.1.0 [nros 2022-01-23]
 	Updated archivers/lunzip to 1.13 [fcambus 2022-01-23]
 	Updated lang/yabasic to 2.90.2 [fcambus 2022-01-23]
