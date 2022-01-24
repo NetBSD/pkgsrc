@@ -1,0 +1,22 @@
+$NetBSD: patch-xlock_XLock.ad,v 1.1 2022/01/24 18:05:58 micha Exp $
+
+Modify path for fortune.
+Not suitable for upstream.
+
+--- xlock/XLock.ad.orig	2019-05-30 01:30:03.000000000 +0000
++++ xlock/XLock.ad
+@@ -67,12 +67,12 @@ XLock.left3d: Red
+ XLock.both3d: Magenta
+ 
+ ! For marquee & nose modes
+-XLock.program: fortune -s
++!XLock.program: fortune -s
+ !XLock.program: fortune -o
+ !XLock.program: fortune -s
+ !XLock.program: fortune
+ !XLock.program: /usr/games/fortune -o
+-!XLock.program: /usr/games/fortune -s
++XLock.program: /usr/games/fortune -s
+ !XLock.program: /usr/games/fortune
+ !XLock.program: finger
+ !XLock.messagesfile: fortune.dat
