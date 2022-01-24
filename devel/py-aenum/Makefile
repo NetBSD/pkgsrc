@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/01/23 19:11:07 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/24 11:08:57 adam Exp $
 
-DISTNAME=	aenum-3.1.7
+DISTNAME=	aenum-3.1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aenum/}
