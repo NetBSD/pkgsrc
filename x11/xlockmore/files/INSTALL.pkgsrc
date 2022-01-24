@@ -1,18 +1,18 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2012/03/28 20:21:46 drochner Exp $
-
 If xlockmore is built with the "pam" option:
 In order to make unlocking work, you need to add an
 xlock file to your pam configuration directory (usually
 /etc/pam.d).  You can find a sample file in:
-	${EGDIR}/pam.d/xlock-NetBSD
+
+    @EGDIR@/pam.d/xlock-NetBSD
+
 On  NetBSD, the "pam_pwauth_suid.so" module can be used to authenticate
 against a shadow password database. Note that use of this module might
 allow programs with your privileges to get a copy of your plaintext
 password as typed in for unlocking. The advantage is that with that
 module, the suid bit of the
-	${PREFIX}/bin/xlock
+
+    @PREFIX@/bin/xlock
+
 executable can be removed.
 Per default, xlockmore is installed setuid root. Since this is a
 relatively complex program, there is the risk of other exploits.
-===========================================================================
