@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.414 2022/01/24 15:11:32 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.415 2022/01/24 18:07:40 micha Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -558,3 +558,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-djangorestframework to 3.13.1 [adam 2022-01-24]
 	Updated games/etlegacy-server to 2.79.0 [nia 2022-01-24]
 	Updated devel/binutils to 2.37nb2 [fcambus 2022-01-24]
+	Updated x11/xlockmore to 5.68 [micha 2022-01-24]
