@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.412 2022/01/24 14:33:41 adam Exp $
+$NetBSD: CHANGES-2022,v 1.413 2022/01/24 14:34:05 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -556,3 +556,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated games/etlegacy to 2.79.0 [nia 2022-01-24]
 	Updated www/py-h11 to 0.13.0 [adam 2022-01-24]
 	Updated www/py-djangorestframework to 3.13.1 [adam 2022-01-24]
+	Updated games/etlegacy-server to 2.79.0 [nia 2022-01-24]
