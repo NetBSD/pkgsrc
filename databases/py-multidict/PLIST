@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/01/03 08:32:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/01/24 10:02:23 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -13,7 +13,6 @@ ${PYSITELIB}/multidict/_abc.pyo
 ${PYSITELIB}/multidict/_compat.py
 ${PYSITELIB}/multidict/_compat.pyc
 ${PYSITELIB}/multidict/_compat.pyo
-${PYSITELIB}/multidict/_multidict.c
 ${PYSITELIB}/multidict/_multidict.so
 ${PYSITELIB}/multidict/_multidict_base.py
 ${PYSITELIB}/multidict/_multidict_base.pyc
@@ -21,10 +20,4 @@ ${PYSITELIB}/multidict/_multidict_base.pyo
 ${PYSITELIB}/multidict/_multidict_py.py
 ${PYSITELIB}/multidict/_multidict_py.pyc
 ${PYSITELIB}/multidict/_multidict_py.pyo
-${PYSITELIB}/multidict/_multilib/defs.h
-${PYSITELIB}/multidict/_multilib/dict.h
-${PYSITELIB}/multidict/_multilib/istr.h
-${PYSITELIB}/multidict/_multilib/iter.h
-${PYSITELIB}/multidict/_multilib/pair_list.h
-${PYSITELIB}/multidict/_multilib/views.h
 ${PYSITELIB}/multidict/py.typed
