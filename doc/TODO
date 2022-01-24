@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21453 2022/01/23 22:25:24 wiz Exp $
+$NetBSD: TODO,v 1.21454 2022/01/24 09:01:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -521,6 +521,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o botan-devel-2.18.0
 	o bottlerocket-0.05b3
 	o breeze-icons-5.81.0
+	o broot-1.9.2 [needs rust 1.58]
 	o bugzilla3-3.6.13
 	o bwm-ng-0.6.3
 	o byobu-5.133
