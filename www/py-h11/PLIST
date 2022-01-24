@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2018/04/09 10:50:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/01/24 14:27:04 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/h11/__init__.py
 ${PYSITELIB}/h11/__init__.pyc
@@ -36,6 +37,7 @@ ${PYSITELIB}/h11/_version.pyo
 ${PYSITELIB}/h11/_writers.py
 ${PYSITELIB}/h11/_writers.pyc
 ${PYSITELIB}/h11/_writers.pyo
+${PYSITELIB}/h11/py.typed
 ${PYSITELIB}/h11/tests/__init__.py
 ${PYSITELIB}/h11/tests/__init__.pyc
 ${PYSITELIB}/h11/tests/__init__.pyo
