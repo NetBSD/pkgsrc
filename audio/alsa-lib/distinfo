@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.34 2021/11/20 23:38:12 hauke Exp $
+$NetBSD: distinfo,v 1.35 2022/01/24 10:05:37 wiz Exp $
 
-BLAKE2s (alsa-lib-1.2.5.1.tar.bz2) = e5212f8be6654397b93d9163942c75f9ec8eba53fb5502c8d4cb32829589afac
-SHA512 (alsa-lib-1.2.5.1.tar.bz2) = 01998ffa449e925ff552c13aea47f9540903afdc533086067c78dcaba4d239c347180d3d28bb0000e6d19b7779c7249fcc77a30057930ca22d18ba55e163fa1c
-Size (alsa-lib-1.2.5.1.tar.bz2) = 1069073 bytes
+BLAKE2s (alsa-lib-1.2.6.1.tar.bz2) = efef5241c5060a795b451199dd0724b233fed3cdbdee84192c0f65ca1b8b26d2
+SHA512 (alsa-lib-1.2.6.1.tar.bz2) = 70e539cf092b5d43e00e4134d8a3e184f0dc34312823e4b58a574320cbf06cb7369bc3251ecb1858033756a7a8c35d36faa8da48d49f6efe0cec905784adbd45
+Size (alsa-lib-1.2.6.1.tar.bz2) = 1079670 bytes
 SHA1 (patch-ad) = 79a0f048751899247ec12990cd02332b977af248
 SHA1 (patch-ae) = 7ad3a3c3ee4be2c80fa6b0a2ea28563efd399a60
 SHA1 (patch-af) = 257b06f10616c04c2724e30777b027e5e7e443f9
@@ -15,7 +15,6 @@ SHA1 (patch-bk) = 55754e4d0ac947c2e7e59b604a21fb5798ae5b39
 SHA1 (patch-configure.ac) = cc034d07eab13caa5ff8748e8eea37ae9dd367f5
 SHA1 (patch-include_error.h) = 9e92d4a51badda1d46305d1e5e36b8197788aa89
 SHA1 (patch-include_output.h) = 0a073b53c40293aa7cfa250586c087084002eefe
-SHA1 (patch-include_sound_asound.h) = 5d85d804fec62250d2a3e5d269397641e13bc957
 SHA1 (patch-include_sound_type__compat.h) = a5dea86a0fd998d35147820269786d2cf8eff5e0
 SHA1 (patch-include_sound_uapi_asoc.h) = 5f1da418a2ad4ae066b34c75c9106108711b5d3d
 SHA1 (patch-include_sound_uapi_asound.h) = 051616bbbab3339d20818ddb40cde8502295a026
