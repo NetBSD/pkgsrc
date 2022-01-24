@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/01/24 20:38:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/01/24 20:50:01 adam Exp $
 bin/pythran-${PYVERSSUFFIX}
 bin/pythran-config-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -4222,9 +4222,7 @@ ${PYSITELIB}/pythran/xsimd/arch/xsimd_sse4_1.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_sse4_2.hpp
 ${PYSITELIB}/pythran/xsimd/arch/xsimd_ssse3.hpp
 ${PYSITELIB}/pythran/xsimd/config/xsimd_arch.hpp
-${PYSITELIB}/pythran/xsimd/config/xsimd_arch.hpp.rej
 ${PYSITELIB}/pythran/xsimd/config/xsimd_config.hpp
-${PYSITELIB}/pythran/xsimd/config/xsimd_config.hpp.rej
 ${PYSITELIB}/pythran/xsimd/config/xsimd_cpuid.hpp
 ${PYSITELIB}/pythran/xsimd/math/.xsimd_gamma.hpp.swp
 ${PYSITELIB}/pythran/xsimd/math/xsimd_rem_pio2.hpp
@@ -4255,4 +4253,3 @@ ${PYSITELIB}/pythran/xsimd/types/xsimd_ssse3_register.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_traits.hpp
 ${PYSITELIB}/pythran/xsimd/types/xsimd_utils.hpp
 ${PYSITELIB}/pythran/xsimd/xsimd.hpp
-${PYSITELIB}/pythran/xsimd/xsimd.hpp.rej

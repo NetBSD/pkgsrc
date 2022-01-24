@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/01/24 20:38:59 adam Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/24 20:50:01 adam Exp $
 
 DISTNAME=	pythran-0.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,6 +20,11 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_PKG_RESOURCES=	yes
+
+post-extract:
+	${RM} ${WRKSRC}/third_party/xsimd/config/xsimd_config.hpp.rej
+	${RM} ${WRKSRC}/third_party/xsimd/config/xsimd_arch.hpp.rej
+	${RM} ${WRKSRC}/third_party/xsimd/xsimd.hpp.rej
 
 post-install:
 .for bin in pythran pythran-config
