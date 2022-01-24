@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.396 2022/01/24 09:01:26 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.397 2022/01/24 09:37:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -539,3 +539,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/libuninameslist to 20211114 [fcambus 2022-01-23]
 	Updated lang/rakudo to 2021.12 [mef 2022-01-23]
 	Updated devel/py-approvaltests to 3.4.0 [schmonz 2022-01-24]
+	Updated lang/rust-analyzer to 0.0.2022.01.24 [wiz 2022-01-24]
