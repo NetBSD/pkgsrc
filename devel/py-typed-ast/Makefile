@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2022/01/04 20:53:46 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2022/01/24 11:11:01 adam Exp $
 
-DISTNAME=	typed_ast-1.5.1
+DISTNAME=	typed_ast-1.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/typed-ast/}
 

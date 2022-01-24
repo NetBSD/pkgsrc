@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/12/11 19:48:02 adam Exp $
+$NetBSD: distinfo,v 1.17 2022/01/24 11:11:01 adam Exp $
 
-BLAKE2s (typed_ast-1.5.1.tar.gz) = 355ecfb128502bf1425ed1261b6061ce1e1ab0c23b63476dbdd702ed0f7c02ff
-SHA512 (typed_ast-1.5.1.tar.gz) = 9e1b1e5da242f29c52857a5a683be47d95b592c788a7c603fc38f637ee64f687253aa58994061681c703addd2405532dfdc0765dd1cadf16b339623901f61355
-Size (typed_ast-1.5.1.tar.gz) = 252316 bytes
+BLAKE2s (typed_ast-1.5.2.tar.gz) = a1c4e31f653a5bef0a58d531c696823d22f96c095d618b5244c006ef2c5a5bec
+SHA512 (typed_ast-1.5.2.tar.gz) = 7da72fc0c4fcb74cb41914765baea5c7f52b1e8a5c58883877e702765be59d3dd8c7f73bd5759a65781d04fdecbcf46160ff4402578a92685f25163e12b93558
+Size (typed_ast-1.5.2.tar.gz) = 252310 bytes
 SHA1 (patch-setup.py) = 997fc582f7b9e9e068fa8d6d5760acfe792554f2
