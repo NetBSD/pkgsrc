@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.167 2021/12/03 07:52:33 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.168 2022/01/24 23:18:33 gutteridge Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1529,7 +1529,8 @@ pre-configure:
     <varname>REPLACE_PYTHON</varname> is actioned in
     <filename>lang/python/application.mk</filename>. For other languages,
     consult the mk files found within their specific directories (the
-    naming convention varies).</para>
+    naming convention varies), or check the list found in
+    <xref linkend="help-topics" />.</para>
 
     <para>Currently, special handling for other languages varies
     in pkgsrc.  If a compiler package provides a
