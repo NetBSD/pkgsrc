@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.399 2022/01/24 10:02:34 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.400 2022/01/24 10:05:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -542,3 +542,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/rust-analyzer to 0.0.2022.01.24 [wiz 2022-01-24]
 	Updated textproc/asciidoc to 10.1.1 [wiz 2022-01-24]
 	Updated databases/py-multidict to 6.0.0 [wiz 2022-01-24]
+	Updated audio/alsa-lib to 1.2.6.1 [wiz 2022-01-24]
