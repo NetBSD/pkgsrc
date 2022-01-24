@@ -1,21 +1,22 @@
-# $NetBSD: Makefile.common,v 1.82 2021/03/22 17:46:06 wiz Exp $
+# $NetBSD: Makefile.common,v 1.83 2022/01/24 18:05:58 micha Exp $
 #
-# used by ../../x11/xlockmore/Makefile
-# used by ../../x11/xlockmore-lite/Makefile
+# used by x11/xlockmore/Makefile
+# used by x11/xlockmore-lite/Makefile
 
-DISTNAME=	xlockmore-5.46
+DISTNAME=	xlockmore-5.68
 CATEGORIES=	x11
 MASTER_SITES=	http://sillycycle.com/xlock/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sillycycle.com/xlockmore.html
+# Similar to BSD license, but uses different words (see xlockmore.spec)
+LICENSE=	2-clause-bsd
 
 DISTINFO_FILE?=		${.CURDIR}/../../x11/xlockmore/distinfo
 PATCHDIR?=		${.CURDIR}/../../x11/xlockmore/patches
 PLIST_SRC?=		${.CURDIR}/../../x11/xlockmore/PLIST
 FILESDIR?=		${.CURDIR}/../../x11/xlockmore/files
-MESSAGE_SRC?=		${.CURDIR}/../../x11/xlockmore/MESSAGE
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -33,9 +34,7 @@ PKG_OPTIONS_LEGACY_VARS+=	XLOCK_NO_DPMS:-xlockmore-dpms
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		xmkmf
 
-XLOCK_SOUNDDIR=		${PREFIX}/lib/X11/xlock/sounds
 XLOCK_MODULEDIR=	${PREFIX}/lib/X11/xlock/modules
-
 DEFINES+=		-DDEF_MODULEPATH="\"${XLOCK_MODULEDIR}\""
 CPPFLAGS+=		${DEFINES}
 CXXFLAGS+=		${DEFINES}
@@ -98,6 +97,7 @@ SPECIAL_PERMS+=	bin/xlock ${REAL_ROOT_USER} shadow 2511
 EGDIR=			${PREFIX}/share/examples/xlock
 MESSAGE_SUBST+=		EGDIR=${EGDIR:Q}
 INSTALLATION_DIRS+=	${EGDIR}/pam.d
+INSTALLATION_DIRS+=	share/doc/xlockmore
 
 # XXX framework bug: while we don't need it, this would kill
 # the inherited full dependency
@@ -114,28 +114,35 @@ INSTALLATION_DIRS+=	${EGDIR}/pam.d
 XINERAMA_ENV=	no_xenerama= ac_xinerama_includes=${BUILDLINK_PREFIX.libXinerama}/include ac_xinerama_libraries=${BUILDLINK_PREFIX.libXinerama}/lib
 CONFIGURE_ENV+=	ac_cv_path_xinerama=${XINERAMA_ENV:Q}
 
-# Set the complete paths to the sound files and set the default xlock
-# mode/screensaver.
-#
+# Modify paths in application defaults
+SUBST_CLASSES+=		adef
+SUBST_STAGE.adef=	pre-configure
+SUBST_MESSAGE.adef=	Preparing paths in xlock/XLock.ad file ...
+SUBST_FILES.adef=	xlock/XLock.ad
+SUBST_SED.adef=		-e 's|/usr/lib/|${PREFIX}/lib/|g'
+SUBST_SED.adef+=	-e 's|/usr/local/share/|${PREFIX}/share/|g'
+
+# Set the default xlock mode/screensaver.
+# XLOCK_DEFAULT_MODE can be defined by the user in mk.conf
+SUBST_CLASSES+=		mode
+SUBST_STAGE.mode=	pre-configure
+SUBST_MESSAGE.mode=	Preparing default mode in xlock/XLock.ad file ...
+SUBST_FILES.mode=	xlock/XLock.ad
+SUBST_SED.mode=		-e 's|^\(XLock.mode:[ 	]*\).*|\1${XLOCK_DEFAULT_MODE}|'
+
+# Configure INSTALL.pkgsrc (formerly displayed as MESSAGE)
+SUBST_CLASSES+=		install
+SUBST_STAGE.install=	post-configure
+SUBST_MESSAGE.install=	Preparing INSTALL.pkgsrc file ...
+SUBST_FILES.install=	${WRKDIR}/INSTALL.pkgsrc
+SUBST_VARS.install=	PREFIX
+SUBST_VARS.install+=	EGDIR
+
 post-patch:
-	cd ${WRKSRC}/xlock;						\
-	${MV} -f XLock.ad XLock.ad.presed;				\
-	${SED}	-e "s|/usr/lib/|${PREFIX}/lib/|g"			\
-		XLock.ad.presed > XLock.ad;				\
-	${RM} -f XLock.ad.presed
-.if defined(XLOCK_DEFAULT_MODE) && !empty(XLOCK_DEFAULT_MODE)
-	cd ${WRKSRC}/xlock;						\
-	${MV} -f XLock.ad XLock.ad.presed;				\
-	${SED} -e "s|^\(XLock.mode:[ 	]*\).*|\1${XLOCK_DEFAULT_MODE}|" \
-		XLock.ad.presed > XLock.ad;				\
-	${RM} -f XLock.ad.presed
-.endif
+	${CP} ${FILESDIR}/INSTALL.pkgsrc ${WRKDIR}
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${XLOCK_SOUNDDIR}
-	cd ${WRKSRC}/sounds;						\
-	for file in *.au; do						\
-		${INSTALL_DATA} $$file ${DESTDIR}${XLOCK_SOUNDDIR};	\
-	done
 	${INSTALL_DATA} ${FILESDIR}/pam-xlock-NetBSD \
 	    ${DESTDIR}${EGDIR}/pam.d/xlock-NetBSD
+	${INSTALL_DATA} ${WRKDIR}/INSTALL.pkgsrc \
+	    ${DESTDIR}${PREFIX}/share/doc/xlockmore/INSTALL.pkgsrc
