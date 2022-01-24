@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2021/12/07 12:24:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.93 2022/01/24 11:07:56 jperkin Exp $
 
 DISTNAME=	libvpx-1.11.0
 CATEGORIES=	multimedia
@@ -26,7 +26,8 @@ GCC_REQD+=		4.8
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" || \
+    (${OPSYS} == "Darwin" && ${MACHINE_ARCH} == "aarch64")
 TOOL_DEPENDS+=		yasm-[0-9]*:../../devel/yasm
 .endif
 
@@ -56,6 +57,7 @@ CONFIGURE_ARGS+=	--target=x86_64-darwin20-gcc
 CONFIGURE_ARGS+=	--target=x86_64-darwin9-gcc
 .    endif
 .  elif ${MACHINE_ARCH} == "aarch64"
+CONFIGURE_ARGS+=	--target=arm64-darwin20-gcc
 CONFIGURE_ARGS+=	--disable-runtime-cpu-detect
 .  endif
 .elif ${OPSYS} == "SunOS" && !empty(PKGSRC_COMPILER:Mgcc*)
