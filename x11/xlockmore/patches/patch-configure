@@ -1,8 +1,11 @@
-$NetBSD: patch-ab,v 1.25 2015/04/15 07:31:15 spz Exp $
+$NetBSD: patch-configure,v 1.1 2022/01/24 18:05:58 micha Exp $
 
---- configure.orig	2015-03-03 01:05:29.000000000 +0000
+Modify handling of LDFLAGS.
+Rejected by upstream.
+
+--- configure.orig	2020-06-04 14:43:47.000000000 +0000
 +++ configure
-@@ -9508,10 +9508,10 @@ $as_echo "#define LESS_THAN_AIX3_2 1" >>
+@@ -10833,10 +10833,10 @@ $as_echo "#define LESS_THAN_AIX3_2 1" >>
          dirname=`which gcc`
          dirname=`dirname $dirname`
          dirname=`dirname $dirname`/lib
@@ -15,9 +18,9 @@ $NetBSD: patch-ab,v 1.25 2015/04/15 07:31:15 spz Exp $
 +#	    XMLOCK_LDFLAGS="${XMLOCK_LDFLAGS}:$dirname"
 +#	fi
      fi
-     XLOCKLDFLAGS="-Wl,-R${XLOCK_LDFLAGS}"
-     XMLOCKLDFLAGS="-Wl,-R${XMLOCK_LDFLAGS}"
-@@ -9566,6 +9566,8 @@ _ACEOF
+     case "${canonical}" in
+       *-*-freebsd* )
+@@ -10896,6 +10896,8 @@ _ACEOF
  if test "x$ac_cv_header_elf_h" = xyes; then :
  
  $as_echo "#define HAVE_SHADOW 1" >>confdefs.h
@@ -26,7 +29,7 @@ $NetBSD: patch-ab,v 1.25 2015/04/15 07:31:15 spz Exp $
  
  fi
  
-@@ -9673,10 +9675,10 @@ $as_echo "#define SVR4 1" >>confdefs.h
+@@ -11006,10 +11008,10 @@ $as_echo "#define SVR4 1" >>confdefs.h
          dirname=`which gcc`
          dirname=`dirname $dirname`
          dirname=`dirname $dirname`/lib
