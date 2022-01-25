@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/11 21:49:03 nros Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/25 21:51:58 wiz Exp $
 
 DISTNAME=	flit_core-3.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,5 +18,4 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
-.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
