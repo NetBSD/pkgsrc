@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/01/25 12:59:39 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2022/01/25 13:12:49 wiz Exp $
 
 BLAKE2s (olm-3.2.10.tar.gz) = 888b76d7543eca0316cc447232836e3a2ce7e0acebf63a1ad7944c4893805e26
 SHA512 (olm-3.2.10.tar.gz) = e4b4e1a4b5afbf537780db21a7639609581f9be7f52d8bec572db38e9e2bae43138c1214aa23a87fb5c66f3ce47f566950c9689b27426ea894afa444fc3829c7
 Size (olm-3.2.10.tar.gz) = 2894343 bytes
-SHA1 (patch-setup.py) = 3ee82830e1bf0a69b455d68efc49e67b6215aada

@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2022/01/25 12:59:39 ryoon Exp $
-${PYSITELIB}/_libolm.abi3.so
+@comment $NetBSD: PLIST,v 1.2 2022/01/25 13:12:49 wiz Exp $
+${PLIST.py2x}${PYSITELIB}/_libolm.so
+${PLIST.py3x}${PYSITELIB}/_libolm.abi3.so
 ${PYSITELIB}/olm/__init__.py
 ${PYSITELIB}/olm/__init__.pyc
 ${PYSITELIB}/olm/__init__.pyo
