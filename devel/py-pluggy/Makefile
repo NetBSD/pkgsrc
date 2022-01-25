@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/01/13 19:31:22 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2022/01/25 09:05:11 wiz Exp $
 
 DISTNAME=	pluggy-0.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,10 +13,10 @@ LICENSE=	mit
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} < 38
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=0.12:../../devel/py-importlib-metadata
+PYTHON_VERSIONED_DEPENDENCIES+=	importlib-metadata
 .endif
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test setuptools_scm:build
+PYTHON_VERSIONED_DEPENDENCIES+=	test:test setuptools_scm:build
 
 USE_LANGUAGES=	# none
 
