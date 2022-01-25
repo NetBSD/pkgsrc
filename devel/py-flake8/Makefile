@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2022/01/05 15:41:04 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2022/01/25 09:05:10 wiz Exp $
 
 DISTNAME=	flake8-3.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,7 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-functools32-[0-9]*:../../devel/py-functools32
 DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
 .endif
 .if ${_PYTHON_VERSION} < 38
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
+PYTHON_VERSIONED_DEPENDENCIES+=	importlib-metadata
 .endif
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=2.0.0:../../devel/py-mock
@@ -36,8 +36,12 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} flake8 flake8-${PYVERSSUFFIX} || ${TRUE}
 
+# as of 3.9.2
+# 21 failed, 460 passed, 1 error
+TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
