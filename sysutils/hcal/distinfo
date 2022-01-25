@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2022/01/19 10:57:57 pin Exp $
+$NetBSD: distinfo,v 1.2 2022/01/25 19:39:44 pin Exp $
 
 BLAKE2s (aho-corasick-0.7.15.crate) = 8bdfa96511478b1fd955bf41bfd8d2c2e9c3108c762eac7584f2184d282245e6
 SHA512 (aho-corasick-0.7.15.crate) = e67816efa7305937a7cbbb0079b91b8afa3fdab52cfb8eeddeee156f18bbeed26f941cd4cb18ab2bdc1da5a9ff1dcbe9d2090deec68c00287bd99ace18ee8b24
@@ -27,9 +27,9 @@ Size (clap-3.0.8.crate) = 190548 bytes
 BLAKE2s (hashbrown-0.9.1.crate) = f491ebb5fd3d5d5b19e4042718d28fd3e79cd9ee85a5f1e2cc5be8520e4717ad
 SHA512 (hashbrown-0.9.1.crate) = dfa4742111f6fe757b7fa97f04c7b4a78ce9708c87e8e09ecf3c28f2566e48af9885fda380ed918cec37b5c696110fbdd30273aba6e7d2221c9e65f72af064fd
 Size (hashbrown-0.9.1.crate) = 77734 bytes
-BLAKE2s (hcal-0.3.1-150e887011ce6f6f978d2d8d042ef6ba045908a1.tar.gz) = 5f421cbe1435e09ccc312ec9ed8f4d699dc4edcd4a992adc1113c109e460ec18
-SHA512 (hcal-0.3.1-150e887011ce6f6f978d2d8d042ef6ba045908a1.tar.gz) = 0b5dcaf6b5de17f321fe5693e809fbdd8052183de6f3be9f080f71d0af1f4a5da903e7224bdd760fcee60b6758c9160c5209b1928d5c6ff161de451220bf5456
-Size (hcal-0.3.1-150e887011ce6f6f978d2d8d042ef6ba045908a1.tar.gz) = 419920 bytes
+BLAKE2s (hcal-0.3.3.tar.gz) = 08de5740c7b8b2d58fa81e4033164d0911ed8860ca6bfe03836328598a0ef0a4
+SHA512 (hcal-0.3.3.tar.gz) = a727f6a033987526b843184494dbd0dfa9bee8a1d1f84ff7db812f88264564ee52ae6962739ca26943b4373fadc0e67961c8653d25938e0f3c053d4a039817ea
+Size (hcal-0.3.3.tar.gz) = 419835 bytes
 BLAKE2s (hermit-abi-0.1.17.crate) = 9ce68461517f7c51792eb65ee8dbc19bb65319b443e84f51d5dab8388960563e
 SHA512 (hermit-abi-0.1.17.crate) = 1ed4688f2cc1f1d5ba2f7637e2a9dc230712ce8907e1fa3d95ae374cd4b67a325138a98f2a524cb03f99625775057aa0370f480a73ab20485f0456e2f108baf2
 Size (hermit-abi-0.1.17.crate) = 10065 bytes
