@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.429 2022/01/25 12:44:23 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.430 2022/01/25 12:45:01 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -577,3 +577,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-importlib-metadata to 4.10.1 [wiz 2022-01-25]
 	Updated www/py-uwsgi to 2.0.20 [wiz 2022-01-25]
 	Updated www/firefox to 96.0.2 [ryoon 2022-01-25]
+	Updated www/firefox-l10n to 96.0.2 [ryoon 2022-01-25]
