@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:46:46 nia Exp $
-
-BLAKE2s (gnuplot-py-1.8.tar.gz) = 65c256f26db57024dda317afa18187ec16151e9cd416c637853184777e6aec7a
-SHA512 (gnuplot-py-1.8.tar.gz) = 748dc95ea53acd362f67c821a3cc7cf23b6329c2dd13c130c91e1c9f89afe1ffd84619ed321923c65455adf86ee58976dd6dd187881ee3ede5e0f5f551fb027d
-Size (gnuplot-py-1.8.tar.gz) = 118828 bytes

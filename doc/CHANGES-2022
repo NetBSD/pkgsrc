@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.422 2022/01/25 01:39:59 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.423 2022/01/25 01:47:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -570,3 +570,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed math/py-Scientific-doc [wiz 2022-01-25]
 	Removed math/py-Scientific [wiz 2022-01-25]
 	Removed graphics/py-fits [wiz 2022-01-25]
+	Removed graphics/py-gnuplot [wiz 2022-01-25]
