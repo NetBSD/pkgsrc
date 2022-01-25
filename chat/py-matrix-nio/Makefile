@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/01/25 13:07:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/25 18:30:25 wiz Exp $
 
 DISTNAME=	matrix-nio-0.18.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-h11>=0.12.0:../../www/py-h11
 DEPENDS+=	${PYPKGPREFIX}-h2>=4.0.0:../../www/py-h2
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=3.2.0:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-logbook>=1.5.3:../../devel/py-logbook
-DEPENDS+=	${PYPKGPREFIX}-unpaddedbase64>=1.1.0:../../devel/py-unpaddedbase64
+DEPENDS+=	${PYPKGPREFIX}-unpaddedbase64>=2.1.0:../../devel/py-unpaddedbase64
 DEPENDS+=	${PYPKGPREFIX}-olm>=3.2.2:../../security/py-olm
 DEPENDS+=	${PYPKGPREFIX}-peewee>=3.14.4:../../databases/py-peewee
 DEPENDS+=	${PYPKGPREFIX}-cachetools>=4.2.1:../../devel/py-cachetools
