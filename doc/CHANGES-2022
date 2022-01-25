@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.438 2022/01/25 19:16:57 jperkin Exp $
+$NetBSD: CHANGES-2022,v 1.439 2022/01/25 19:39:00 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -586,3 +586,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/libreoffice to 7.2.5.2 [ryoon 2022-01-25]
 	Updated devel/automake to 1.16.5nb1 [wiz 2022-01-25]
 	Updated devel/memcached to 1.6.13 [jperkin 2022-01-25]
+	Updated audio/termusic to 0.6.7 [pin 2022-01-25]
