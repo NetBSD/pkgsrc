@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/01/18 14:17:22 tnn Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/01/25 04:12:41 mef Exp $
 include/spdlog/async.h
 include/spdlog/async_logger-inl.h
 include/spdlog/async_logger.h
@@ -34,7 +34,7 @@ include/spdlog/details/thread_pool-inl.h
 include/spdlog/details/thread_pool.h
 include/spdlog/details/windows_include.h
 include/spdlog/fmt/bin_to_hex.h
-include/spdlog/fmt/bundled/LICENSE.rst
+include/spdlog/fmt/bundled/args.h
 include/spdlog/fmt/bundled/chrono.h
 include/spdlog/fmt/bundled/color.h
 include/spdlog/fmt/bundled/compile.h
@@ -44,12 +44,14 @@ include/spdlog/fmt/bundled/format.h
 include/spdlog/fmt/bundled/locale.h
 include/spdlog/fmt/bundled/os.h
 include/spdlog/fmt/bundled/ostream.h
-include/spdlog/fmt/bundled/posix.h
 include/spdlog/fmt/bundled/printf.h
 include/spdlog/fmt/bundled/ranges.h
+include/spdlog/fmt/bundled/xchar.h
 include/spdlog/fmt/chrono.h
+include/spdlog/fmt/compile.h
 include/spdlog/fmt/fmt.h
 include/spdlog/fmt/ostr.h
+include/spdlog/fmt/xchar.h
 include/spdlog/formatter.h
 include/spdlog/fwd.h
 include/spdlog/logger-inl.h
@@ -67,9 +69,11 @@ include/spdlog/sinks/daily_file_sink.h
 include/spdlog/sinks/dist_sink.h
 include/spdlog/sinks/dup_filter_sink.h
 include/spdlog/sinks/hourly_file_sink.h
+include/spdlog/sinks/mongo_sink.h
 include/spdlog/sinks/msvc_sink.h
 include/spdlog/sinks/null_sink.h
 include/spdlog/sinks/ostream_sink.h
+include/spdlog/sinks/qt_sinks.h
 include/spdlog/sinks/ringbuffer_sink.h
 include/spdlog/sinks/rotating_file_sink-inl.h
 include/spdlog/sinks/rotating_file_sink.h
