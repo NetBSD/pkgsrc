@@ -1,4 +1,4 @@
-# $NetBSD: wheel.mk,v 1.4 2022/01/25 13:21:21 wiz Exp $
+# $NetBSD: wheel.mk,v 1.5 2022/01/25 21:51:41 wiz Exp $
 #
 # Initial mk for building and installing python wheels
 #
@@ -61,9 +61,8 @@ PLIST_SUBST+=	WHEEL_INFODIR=${_WHEEL_INFODIR}
 .if empty(_PYTHON_VERSION:M2?)
 PLIST_AWK+=		-f ${PKGSRCDIR}/lang/python/plist-python.awk
 PLIST_AWK_ENV+=		PYVERS="${PYVERSSUFFIX:S/.//}"
-EARLY_PRINT_PLIST_AWK+=	/^[^@]/ && /[^\/]+\.py[co]$$/ {
+EARLY_PRINT_PLIST_AWK+=	/^[^@]/ && /[^\/]+\.pyc$$/ {
 EARLY_PRINT_PLIST_AWK+=	gsub(/__pycache__\//, "")
-EARLY_PRINT_PLIST_AWK+=	gsub(/opt-1\.pyc$$/, "pyo")
 EARLY_PRINT_PLIST_AWK+=	gsub(/\.cpython-${_PYTHON_VERSION}/, "")}
 .endif
 
