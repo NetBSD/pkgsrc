@@ -1,4 +1,4 @@
-# $NetBSD: wheel.mk,v 1.3 2022/01/13 21:23:25 wiz Exp $
+# $NetBSD: wheel.mk,v 1.4 2022/01/25 13:21:21 wiz Exp $
 #
 # Initial mk for building and installing python wheels
 #
@@ -53,6 +53,19 @@ WHEEL_NAME?=	${DISTNAME:C/-([^0-9])/_\1/g}
 _WHEEL_INFODIR=	${WHEEL_NAME}.dist-info
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 PLIST_SUBST+=	WHEEL_INFODIR=${_WHEEL_INFODIR}
+
+# from extension.mk
+
+# Python>=3.2 bytecode file location change
+# http://www.python.org/dev/peps/pep-3147/
+.if empty(_PYTHON_VERSION:M2?)
+PLIST_AWK+=		-f ${PKGSRCDIR}/lang/python/plist-python.awk
+PLIST_AWK_ENV+=		PYVERS="${PYVERSSUFFIX:S/.//}"
+EARLY_PRINT_PLIST_AWK+=	/^[^@]/ && /[^\/]+\.py[co]$$/ {
+EARLY_PRINT_PLIST_AWK+=	gsub(/__pycache__\//, "")
+EARLY_PRINT_PLIST_AWK+=	gsub(/opt-1\.pyc$$/, "pyo")
+EARLY_PRINT_PLIST_AWK+=	gsub(/\.cpython-${_PYTHON_VERSION}/, "")}
+.endif
 
 PRINT_PLIST_AWK+=	{ gsub(/${_WHEEL_INFODIR:S,.,\.,g}/, "$${WHEEL_INFODIR}") }
 
