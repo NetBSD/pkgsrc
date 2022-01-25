@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:19:14 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/01/25 13:21:43 wiz Exp $
 
-BLAKE2s (unpaddedbase64-1.1.0.zip) = af4ad79714d8796ca646ea8bb952a9806cea1063f9fb2805a28caf274a57e316
-SHA512 (unpaddedbase64-1.1.0.zip) = 2b3d16c11882dee3b835fd6aba8601a0f0c3bc45e086eb296a6a1f02f8fbe2ba676c10473c8b3522c7ae81b10f086f031fe22aa7de16447aaaf34132e0d2d44f
-Size (unpaddedbase64-1.1.0.zip) = 8271 bytes
+BLAKE2s (unpaddedbase64-2.1.0.zip) = 4863f4388d75cd4ab8c589fc06e3cdd00ccec137e5391dd0fa861060644fe54f
+SHA512 (unpaddedbase64-2.1.0.zip) = a25f4c4a22c53d9b9e5e002fe8bfe383c281fc7889b9f6c80ccb3e43b6eeab1b97a69518d2e7c43993c1e2151bdffbf9501240f1658b7399432ec7286f205839
+Size (unpaddedbase64-2.1.0.zip) = 8804 bytes
