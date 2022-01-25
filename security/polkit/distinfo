@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2021/11/01 10:20:48 wiz Exp $
+$NetBSD: distinfo,v 1.18 2022/01/25 19:40:46 wiz Exp $
 
 BLAKE2s (polkit-0.120.tar.gz) = d13513e4e4d643bb1f3581fe3c58d467c8f26cd33711034accee42a1546c9781
 SHA512 (polkit-0.120.tar.gz) = db072769439d5e17d0eed681e7b94251b77828c1474b40fe40b94293903a64333e7fa17515a3270648691f04a1374d8b404405ead6abf292a8eb8483164adc46
@@ -13,7 +13,8 @@ SHA1 (patch-src_polkitbackend_polkitbackendduktapeauthority.c) = a80ba55ecd4726f
 SHA1 (patch-src_polkitbackend_polkitbackendinteractiveauthority.c) = dd91b4e74e6c39f24e0f5a9b3150fdac12899cb5
 SHA1 (patch-src_polkitbackend_polkitbackendjsauthority.cpp) = 432a3d7d082ba6e596ba164d91408fc521b84422
 SHA1 (patch-src_polkitbackend_polkitd.c) = b8e11b40e2b171d4f030eb4c4cbc6fdc7a96b2c2
-SHA1 (patch-src_programs_pkexec.c) = bfc0414c7a943c8e8b8412566a2519198eab8abd
+SHA1 (patch-src_programs_pkcheck.c) = 3dd53a15f6741b883447be4d5ccd6e86fd6b6be0
+SHA1 (patch-src_programs_pkexec.c) = c373d8e7eac1107fe056a82510fee85c4c97ea57
 SHA1 (patch-src_programs_pkttyagent.c) = 2c249b61501a1ad2c077bc83fd497e45f2db69a8
 SHA1 (patch-test_mocklibc_src_grp.c) = 435ff94fd4c7f5511d74d03839fad453dd841633
 SHA1 (patch-test_mocklibc_src_netdb.c) = 0fe71068a6261d5e2c8874f2b4507e7e3c002526
