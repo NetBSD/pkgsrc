@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.957 2022/01/24 18:35:27 adam Exp $
+# $NetBSD: Makefile,v 1.958 2022/01/25 01:34:30 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -484,7 +484,6 @@ SUBDIR+=	py-Willow
 SUBDIR+=	py-aafigure
 SUBDIR+=	py-actdiag
 SUBDIR+=	py-altgraph
-SUBDIR+=	py-biggles
 SUBDIR+=	py-blockdiag
 SUBDIR+=	py-blurhash
 SUBDIR+=	py-brewer2mpl

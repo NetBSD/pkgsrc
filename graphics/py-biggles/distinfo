@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:46:44 nia Exp $
-
-BLAKE2s (python2-biggles-1.6.6.tar.gz) = fdf5177f1d5d74f748345ba9240fefb2245d4b3a6ad21aa330bc374471075dfc
-SHA512 (python2-biggles-1.6.6.tar.gz) = cb2f3d2bebc30b04423b8e56dab9edf1db7bae7901791365f21d9aac1b1adf767baea0f550f4791d3c9fa48b39d02471447b5821437dfaaae2b82575e8e29597
-Size (python2-biggles-1.6.6.tar.gz) = 104256 bytes
-SHA1 (patch-setup.py) = fca5fd24f027acee2ae0d853dcda5da9a175b82b
