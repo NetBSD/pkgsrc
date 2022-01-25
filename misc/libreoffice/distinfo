@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.125 2021/12/13 16:47:16 ryoon Exp $
+$NetBSD: distinfo,v 1.126 2022/01/25 15:21:06 ryoon Exp $
 
 BLAKE2s (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 0e0a0ae1eb07e5058749dc1726bc59971c723b4b16c57d83f24b6ac6ddd96d71
 SHA512 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = b9c02d63e9b47a838dbe67c05b9e9e4983d13b9d74794e1c30c73d341c3bc905c9edec3a72fa339ae8c0e06d97e69ac2ea23bf51336b77af14cab7ae67721a46
@@ -129,18 +129,18 @@ Size (libreoffice/libjpeg-turbo-1.5.3.tar.gz) = 1658672 bytes
 BLAKE2s (libreoffice/libre-hebrew-1.0.tar.gz) = 0cf1aade1aa45f923b05b4c0c2378ad8fe954b6b56913ef8b263403696853679
 SHA512 (libreoffice/libre-hebrew-1.0.tar.gz) = 609c8ef29a1eab9b027ea04abf14949e9a204cf826fb0a792dadd8a83fc49ac9610a0b3a2bd4b8988e615688c63d0ec08a89436134980b2a9667e8966a75a795
 Size (libreoffice/libre-hebrew-1.0.tar.gz) = 531276 bytes
-BLAKE2s (libreoffice/libreoffice-7.2.4.1.tar.xz) = f2525e91a739700a716ab39fd3eb314aec0aee85f6606796cb0b74991a5b5eac
-SHA512 (libreoffice/libreoffice-7.2.4.1.tar.xz) = 3193edbd9d162fc0b2f69e072719e4c9fb8242f6851caf101fe973e33db8440e80722bc11da410eb155de4550ed42552645f7c1a3361584a0c1cc816e4a04aaa
-Size (libreoffice/libreoffice-7.2.4.1.tar.xz) = 252734952 bytes
-BLAKE2s (libreoffice/libreoffice-dictionaries-7.2.4.1.tar.xz) = 46e822a8140564d863d309bbbe4ea24e743aec80f51e4eb7a76cfba738f07eda
-SHA512 (libreoffice/libreoffice-dictionaries-7.2.4.1.tar.xz) = cadf8c28dc6ac4c90ab024240af6a5f5a4f6a865ab8af47d90faf933770492bd7760ce99af9ee1829204d4b032704dbb852b7368819ffdc8dd75b245c7ac420a
-Size (libreoffice/libreoffice-dictionaries-7.2.4.1.tar.xz) = 49519976 bytes
-BLAKE2s (libreoffice/libreoffice-help-7.2.4.1.tar.xz) = 6d01abd723a9e4a01c8678588cdc293a39df2ac47282e201ac9a52d7fe162a91
-SHA512 (libreoffice/libreoffice-help-7.2.4.1.tar.xz) = 132554fc3ec6c5699ed47355e993630006c48b093fe5affe505ae8292edca8764a28e5d9806658d3227d6f13226a27d8dfb38b6aa5041f92f078ba6de04b199d
-Size (libreoffice/libreoffice-help-7.2.4.1.tar.xz) = 111989824 bytes
-BLAKE2s (libreoffice/libreoffice-translations-7.2.4.1.tar.xz) = 87f87d8759029286fdd6efe606d073d4dc4c5368c83fa99055cc63ade527bd95
-SHA512 (libreoffice/libreoffice-translations-7.2.4.1.tar.xz) = fe978e95a295a9a0d129128cfc54de655de07e6a8152a6c04016b03132c3b33dac194f423a3ddb1cb5800f90ceb431c2ce31f37be373497969aae5bd63e3c270
-Size (libreoffice/libreoffice-translations-7.2.4.1.tar.xz) = 192631680 bytes
+BLAKE2s (libreoffice/libreoffice-7.2.5.2.tar.xz) = 469ad28f450ee4a3947bba19a8f167a4d4901c272e1b1c9132f15c3a7aec3493
+SHA512 (libreoffice/libreoffice-7.2.5.2.tar.xz) = a84682597e10fabb8c1605b785510fa5fe861f3056f61bd01513e1de6ebdb8a343d254af063cd977e4379348ad28d8a457989b3d42014f1c18d5d85626f6dfe8
+Size (libreoffice/libreoffice-7.2.5.2.tar.xz) = 252977224 bytes
+BLAKE2s (libreoffice/libreoffice-dictionaries-7.2.5.2.tar.xz) = 9cd4ce23b0d61c896c8ec429e11f6bc180d2d27562cf2204b9b6b15aef61f30e
+SHA512 (libreoffice/libreoffice-dictionaries-7.2.5.2.tar.xz) = fa5637d9a248ec4ecdec6dbb5192f92092f2c445a3efcb9a66834174ca693a325bc8e8680288055a3ff6e053346b4f6ca8e4fc17521173de9f99325b0ba9b5b2
+Size (libreoffice/libreoffice-dictionaries-7.2.5.2.tar.xz) = 49519840 bytes
+BLAKE2s (libreoffice/libreoffice-help-7.2.5.2.tar.xz) = f177ac9894c8beff4eec3a7fced6f0eca66294027ff746ea56a1f8f37890fb30
+SHA512 (libreoffice/libreoffice-help-7.2.5.2.tar.xz) = 70ffcb1a96637dabd9a658151d2b88a92dd8a89cd396609339ec5470b93fbc2ae589a434b4f09d22fc8ad515369a646dd8040c33e6a91977dd7158f57cd48e00
+Size (libreoffice/libreoffice-help-7.2.5.2.tar.xz) = 112080572 bytes
+BLAKE2s (libreoffice/libreoffice-translations-7.2.5.2.tar.xz) = f4ec64cdbbea754f2a7744d3c08c5f002dfb9afed129f2957e9b8eb304e05078
+SHA512 (libreoffice/libreoffice-translations-7.2.5.2.tar.xz) = d0d2eddef7873b41c86e4c219416f5ceabf4d171b1bc8383b01025623710df86fcb6d30904b06d94c4c2d64306b79a96b4ca3a949c8e59d6c2c24cddc1ae1301
+Size (libreoffice/libreoffice-translations-7.2.5.2.tar.xz) = 192778876 bytes
 BLAKE2s (libreoffice/lxml-4.1.1.tgz) = 8ab1ddfc30f21c433da04723d9092cd4e938cd5a5380310e8089e959a690d294
 SHA512 (libreoffice/lxml-4.1.1.tgz) = 9542e5206f9b2f9e072c52ef8e6cf44d1aaae8ae3e7ca7e820c1fac12e716503308ccb3cebc52155b4c93799f3ebca247781fc491524d004378bd26f5cddb9d1
 Size (libreoffice/lxml-4.1.1.tgz) = 2380804 bytes
