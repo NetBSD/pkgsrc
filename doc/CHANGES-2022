@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.434 2022/01/25 13:21:51 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.435 2022/01/25 13:54:09 morr Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -582,3 +582,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added security/py-olm version 3.2.10 [ryoon 2022-01-25]
 	Added chat/py-matrix-nio version 0.18.7 [ryoon 2022-01-25]
 	Updated devel/py-unpaddedbase64 to 2.1.0 [wiz 2022-01-25]
+	Updated editors/vim-share to 8.2.4214 [morr 2022-01-25]
