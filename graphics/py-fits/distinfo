@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:46:45 nia Exp $
-
-BLAKE2s (pyfits-3.5.tar.gz) = 4bbe7d345af1d67dd9c88f18ca713ae04f824082ee98228b995bdd413eb13b43
-SHA512 (pyfits-3.5.tar.gz) = 9a9bfae87286b9f9f2568b20adbbaef8e701b377685960fa7069ae29be6f6bbde1cc0c2475b7fc34a1e9cb87f3ec2263d4df22ec88595003a4d378c61edee802
-Size (pyfits-3.5.tar.gz) = 1690441 bytes
