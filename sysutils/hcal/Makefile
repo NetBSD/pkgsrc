@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2022/01/19 10:57:57 pin Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/25 19:39:44 pin Exp $
 
-DISTNAME=	hcal-0.3.1
+DISTNAME=	hcal-0.3.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=0xflotus/}
-GITHUB_PROJECT=	hcal
-GITHUB_TAG=	150e887011ce6f6f978d2d8d042ef6ba045908a1
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/0xflotus/hcal/
