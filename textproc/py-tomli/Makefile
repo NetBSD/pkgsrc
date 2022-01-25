@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/01/13 09:47:04 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/25 21:48:11 wiz Exp $
 
 DISTNAME=	tomli-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,5 +20,4 @@ NO_BUILD=		yes
 #BUILD_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
 
 .include "../../lang/python/wheel.mk"
-.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
