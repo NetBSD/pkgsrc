@@ -1,11 +1,11 @@
-$NetBSD: patch-inc_config.php.in,v 1.1 2021/06/24 02:32:28 triaxx Exp $
+$NetBSD: patch-inc_config.php.in,v 1.2 2022/01/25 08:31:38 triaxx Exp $
 
 Set pkgsrc compliant directories for plugins, cache, var and logs.
 Disable update checking.
 
 --- inc/config.php.in.orig	2021-02-13 10:31:06.000000000 +0000
 +++ inc/config.php.in
-@@ -45,13 +45,13 @@ define('DC_SESSION_NAME', 'dcxd');
+@@ -47,13 +47,13 @@ define('DC_SESSION_NAME', 'dcxd');
  //define('DC_SESSION_TTL','120 seconds');
  
  // Plugins root
@@ -22,7 +22,7 @@ Disable update checking.
  
  // Cryptographic algorithm
  define('DC_CRYPT_ALGO', 'sha512');
-@@ -60,7 +60,7 @@ define('DC_CRYPT_ALGO', 'sha512');
+@@ -62,7 +62,7 @@ define('DC_CRYPT_ALGO', 'sha512');
  //define('DC_VENDOR_NAME', 'Dotclear');
  
  // Do not check for update
@@ -31,7 +31,7 @@ Disable update checking.
  
  // Update URL
  //define('DC_UPDATE_URL','https://download.dotclear.org/versions.xml');
-@@ -91,3 +91,6 @@ define('DC_CRYPT_ALGO', 'sha512');
+@@ -96,3 +96,6 @@ define('DC_CRYPT_ALGO', 'sha512');
  //    socketMail::$smtp_relay = 'my.smtp.relay.org';
  //    socketMail::mail($to, $subject, $message, $headers);
  //}

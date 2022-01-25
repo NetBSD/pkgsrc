@@ -1,11 +1,11 @@
-$NetBSD: patch-admin_install_wizard.php,v 1.1 2021/06/24 02:32:28 triaxx Exp $
+$NetBSD: patch-admin_install_wizard.php,v 1.2 2022/01/25 08:31:38 triaxx Exp $
 
 Honor PKG_SYSCONFDIR.
 Set pkgsrc compliant directories for SQLite database.
 
---- admin/install/wizard.php.orig	2021-02-13 10:31:06.000000000 +0000
+--- admin/install/wizard.php.orig	2021-11-19 12:51:15.000000000 +0000
 +++ admin/install/wizard.php
-@@ -12,7 +12,7 @@ if (isset($_SERVER['DC_RC_PATH'])) {
+@@ -11,7 +11,7 @@ if (isset($_SERVER['DC_RC_PATH'])) {
  } elseif (isset($_SERVER['REDIRECT_DC_RC_PATH'])) {
      define('DC_RC_PATH', $_SERVER['REDIRECT_DC_RC_PATH']);
  } else {
@@ -14,8 +14,8 @@ Set pkgsrc compliant directories for SQLite database.
  }
  
  #  ClearBricks and DotClear classes auto-loader
-@@ -63,7 +63,7 @@ if (!empty($_POST)) {
-     {
+@@ -61,7 +61,7 @@ if (!empty($_POST)) {
+     try {
          if ($DBDRIVER == 'sqlite') {
              if (strpos($DBNAME, '/') === false) {
 -                $sqlite_db_directory = dirname(DC_RC_PATH) . '/../db/';
@@ -23,7 +23,7 @@ Set pkgsrc compliant directories for SQLite database.
                  files::makeDir($sqlite_db_directory, true);
  
                  # Can we write sqlite_db_directory ?
-@@ -99,7 +99,7 @@ if (!empty($_POST)) {
+@@ -98,7 +98,7 @@ if (!empty($_POST)) {
          }
  
          # Does config.php.in exist?
