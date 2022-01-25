@@ -1,17 +1,14 @@
-# $NetBSD: Makefile,v 1.51 2022/01/04 20:55:37 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2022/01/25 10:30:50 wiz Exp $
 
-DISTNAME=	uWSGI-2.0.19.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	2
+DISTNAME=	uwsgi-2.0.20
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	${MASTER_SITE_PYPI:=u/uWSGI/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=u/uwsgi/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://uwsgi-docs.readthedocs.io/
 COMMENT=	Feature-rich WSGI server
 LICENSE=	gnu-gpl-v2 # with linking exception
-
-EXTRACT_DIR=	${WRKSRC}
 
 USE_TOOLS+=	pkg-config
 

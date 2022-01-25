@@ -1,15 +1,13 @@
-$NetBSD: patch-core_logging.c,v 1.3 2017/06/23 15:56:45 joerg Exp $
+$NetBSD: patch-core_logging.c,v 1.4 2022/01/25 10:30:51 wiz Exp $
 
-Fix build for Bitrig.
+Fix build for NetBSD.
 
---- core/logging.c.orig	2017-03-30 22:11:36.000000000 +0000
+--- core/logging.c.orig	2021-10-06 05:22:45.000000000 +0000
 +++ core/logging.c
-@@ -1,8 +1,10 @@
- #ifndef __DragonFly__
- #include <uwsgi.h>
+@@ -2,7 +2,9 @@
+ #include "uwsgi.h"
  #endif
--#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__)
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__) || defined(__Bitrig__)
+ #if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__)
 +#  if !defined(__NetBSD__)
  #include <sys/user.h>
 +#  endif
