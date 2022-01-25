@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.58 2022/01/10 20:53:32 morr Exp $
+@comment $NetBSD: PLIST,v 1.59 2022/01/25 13:46:33 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -179,6 +179,7 @@ share/vim/${VIM_SUBDIR}/defaults.vim
 share/vim/${VIM_SUBDIR}/delmenu.vim
 share/vim/${VIM_SUBDIR}/doc/arabic.txt
 share/vim/${VIM_SUBDIR}/doc/autocmd.txt
+share/vim/${VIM_SUBDIR}/doc/builtin.txt
 share/vim/${VIM_SUBDIR}/doc/change.txt
 share/vim/${VIM_SUBDIR}/doc/channel.txt
 share/vim/${VIM_SUBDIR}/doc/cmdline.txt
@@ -398,7 +399,6 @@ share/vim/${VIM_SUBDIR}/ftplugin/freebasic.vim
 share/vim/${VIM_SUBDIR}/ftplugin/fstab.vim
 share/vim/${VIM_SUBDIR}/ftplugin/fvwm.vim
 share/vim/${VIM_SUBDIR}/ftplugin/gdb.vim
-share/vim/${VIM_SUBDIR}/ftplugin/git.vim
 share/vim/${VIM_SUBDIR}/ftplugin/gitcommit.vim
 share/vim/${VIM_SUBDIR}/ftplugin/gitconfig.vim
 share/vim/${VIM_SUBDIR}/ftplugin/gitrebase.vim
