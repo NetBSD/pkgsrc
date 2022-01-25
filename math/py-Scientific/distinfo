@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:55:59 nia Exp $
-
-BLAKE2s (ScientificPython-2.8.1.tar.gz) = 06a6da0d467e12ab921fb9362a9fa5fce43259373e27d7e1dc01a866230f1921
-SHA512 (ScientificPython-2.8.1.tar.gz) = ebd083ca3c0f013d8308a717411614b934e7069d81f92a4eb96d4115066fd13a183d71c228343659358e6f21e95e908384ad4dc79349c5c64ebe2816efb6bd19
-Size (ScientificPython-2.8.1.tar.gz) = 559819 bytes
-SHA1 (patch-aa) = c7f353e9264749e3afff633fb28623f053b39f1c
-SHA1 (patch-ab) = 159a6bb2da1f881e755a4c5c2c8c44cef2fb228a
