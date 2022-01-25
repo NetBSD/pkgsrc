@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/01/25 08:55:50 wiz Exp $
+
+BLAKE2s (importlib_metadata-2.0.0.tar.gz) = bbde33ce188b218f37227e733c60b21231ee23395d780c1c9d676e615bcf000b
+SHA512 (importlib_metadata-2.0.0.tar.gz) = 3f789d717f04f7649dd4a75895669b4f9b875671937035c1c76bd089504afff8c2ba5bfb6a91096ba29eccadc88dca98ea1da5107772fd2053541db15c52b16a
+Size (importlib_metadata-2.0.0.tar.gz) = 29289 bytes
