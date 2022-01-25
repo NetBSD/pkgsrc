@@ -1,6 +1,6 @@
-$NetBSD: Makefile,v 1.28 2022/01/17 12:31:20 pin Exp $
+# $NetBSD: Makefile,v 1.29 2022/01/25 19:38:38 pin Exp $
 
-DISTNAME=	termusic-0.6.6
+DISTNAME=	termusic-0.6.7
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tramhao/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,6 +17,9 @@ USE_TOOLS+=	pkg-config
 INSTALLATION_DIRS=	bin
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gstreamer1}/lib
+
+CARGO_NO_DEFAULT_FEATURES=	YES
+CARGO_FEATURES+=		gst
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/termusic ${DESTDIR}${PREFIX}/bin
