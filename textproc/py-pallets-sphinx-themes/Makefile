@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 20:55:01 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/25 09:05:11 wiz Exp $
 
 DISTNAME=	Pallets-Sphinx-Themes-1.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,13 +11,13 @@ HOMEPAGE=	https://github.com/pallets/pallets-sphinx-themes
 COMMENT=	Sphinx themes for Pallets and related projects
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONED_DEPENDENCIES=	sphinx
+PYTHON_VERSIONED_DEPENDENCIES+=	sphinx
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} < 38
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
+PYTHON_VERSIONED_DEPENDENCIES+= importlib-metadata
 .endif
 
 .include "../../lang/python/egg.mk"
