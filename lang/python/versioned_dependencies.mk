@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.58 2022/01/13 19:31:25 wiz Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.59 2022/01/25 09:04:29 wiz Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -9,7 +9,7 @@
 # PYTHON_VERSIONED_DEPENDENCIES
 #       The Python package which should be added as a dependency.
 #
-#       Possible values: Pmw Pillow X cairo html2text hypothesis ipython jsonlib markdown more-itertools pip packaging pygments pyparsing python-digest rsa setuptools setuptools_scm sphinx test zipp
+#       Possible values: Pmw Pillow X cairo html2text hypothesis importlib-metadata ipython jsonlib markdown more-itertools pip packaging pygments pyparsing python-digest rsa setuptools setuptools_scm sphinx test zipp
 #       Default: (nothing)
 #
 
@@ -25,6 +25,7 @@ _SUPPORTED_PACKAGES+=	cairo graphics/py-cairo118 graphics/py-cairo
 #_SUPPORTED_PACKAGES+=	feedparser textproc/py-feedparser5 textproc/py-feedparser
 _SUPPORTED_PACKAGES+=	html2text textproc/py-html2text-2019.8.11 textproc/py-html2text
 _SUPPORTED_PACKAGES+=	hypothesis devel/py-hypothesis4 devel/py-hypothesis
+_SUPPORTED_PACKAGES+=	importlib-metadata devel/py-importlib-metadata2 devel/py-importlib-metadata
 _SUPPORTED_PACKAGES+=	ipython devel/py-ipython5 devel/py-ipython
 _SUPPORTED_PACKAGES+=	isort devel/py-isort4 devel/py-isort
 _SUPPORTED_PACKAGES+=	jsonlib textproc/py-jsonlib textproc/py-jsonlib3
