@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.986 2022/01/23 19:43:46 schmonz Exp $
+# $NetBSD: Makefile,v 1.987 2022/01/25 19:43:12 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -190,6 +190,7 @@ SUBDIR+=	dua-cli
 SUBDIR+=	dupeguru
 SUBDIR+=	duplicity
 SUBDIR+=	durt
+SUBDIR+=	dusage
 SUBDIR+=	dust
 SUBDIR+=	dvd+rw-tools
 SUBDIR+=	dvdisaster
