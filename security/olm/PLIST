@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2021/12/14 01:01:48 gdt Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/01/25 12:55:43 ryoon Exp $
+include/olm/error.h
 include/olm/inbound_group_session.h
 include/olm/olm.h
+include/olm/olm_export.h
 include/olm/outbound_group_session.h
 include/olm/pk.h
 include/olm/sas.h
@@ -10,5 +12,5 @@ lib/cmake/Olm/OlmTargets-release.cmake
 lib/cmake/Olm/OlmTargets.cmake
 lib/libolm.so
 lib/libolm.so.3
-lib/libolm.so.3.2.2
+lib/libolm.so.${PKGVERSION}
 lib/pkgconfig/olm.pc
