@@ -1,5 +1,0 @@
-FITS (Flexible Image Transport System) is a data format most used in astronomy.
-PyFITS is a Python module for reading, writing, and manipulating FITS files.
-The module uses Python's object-oriented features to provide quick, easy, and
-efficient access to FITS files. The use of Python's array syntax enables
-immediate access to any FITS extension, header cards, or data items.
