@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 09:59:23 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/01/25 19:00:56 wiz Exp $
 
 BLAKE2s (playitslowly-1.5.1.tar.gz) = 57744721afc5be0acf27d17d60ff784d4bd51304fc838a1d3b5ced3736556273
 SHA512 (playitslowly-1.5.1.tar.gz) = eaa512c05ca9cc85463542cca7251eda0058baaf9073cfd891b99e0bdc0f0ab4242bd7c5adf9a1fcdacb6e7958501f7d6dc1db834f224bb656acb80b119ba436
 Size (playitslowly-1.5.1.tar.gz) = 40255 bytes
+SHA1 (patch-setup.py) = 7bfc369e71bddb1d2831bd16e5458ff6b851a8db
