@@ -1,0 +1,4 @@
+nio is a multilayered Matrix client library. The underlying base layer
+doesn't do any network IO on its own, but on top of that is a full
+fledged batteries-included asyncio layer using aiohttp. File IO is only
+done if you enable end-to-end encryption (E2EE).
