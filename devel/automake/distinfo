@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.60 2021/11/01 07:08:48 wiz Exp $
+$NetBSD: distinfo,v 1.61 2022/01/25 18:56:22 wiz Exp $
 
 BLAKE2s (automake-1.16.5.tar.xz) = f19ed2c588acf948da71b738acff7200fcb3d25ed2249af78b79f72c2b92936c
 SHA512 (automake-1.16.5.tar.xz) = 3084ae543aa3fb5a05104ffb2e66cfa9a53080f2343c44809707fd648516869511500dba50dae67ff10f92a1bf3b5a92b2a0fa01cda30adb69b9da03994d9d88
 Size (automake-1.16.5.tar.xz) = 1601740 bytes
+SHA1 (patch-m4_python.m4) = ba2f9cf5e34c68fb5395a2563179e9e61903f023
