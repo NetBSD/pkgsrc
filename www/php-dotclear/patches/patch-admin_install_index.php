@@ -1,10 +1,10 @@
-$NetBSD: patch-admin_install_index.php,v 1.1 2021/06/24 02:32:28 triaxx Exp $
+$NetBSD: patch-admin_install_index.php,v 1.2 2022/01/25 08:31:38 triaxx Exp $
 
 Honor PKG_SYSCONFDIR.
 
 --- admin/install/index.php.orig	2021-02-13 10:31:06.000000000 +0000
 +++ admin/install/index.php
-@@ -12,7 +12,7 @@ if (isset($_SERVER['DC_RC_PATH'])) {
+@@ -11,7 +11,7 @@ if (isset($_SERVER['DC_RC_PATH'])) {
  } elseif (isset($_SERVER['REDIRECT_DC_RC_PATH'])) {
      $rc_path = $_SERVER['REDIRECT_DC_RC_PATH'];
  } else {
