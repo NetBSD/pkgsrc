@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.426 2022/01/25 08:56:56 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.427 2022/01/25 09:19:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -574,3 +574,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/spdlog to 1.9.2 [mef 2022-01-25]
 	Updated www/php-dotclear to 2.20.1 [triaxx 2022-01-25]
 	Added devel/py-importlib-metadata2 version 2.0.0nb1 [wiz 2022-01-25]
+	Updated devel/py-importlib-metadata to 4.10.1 [wiz 2022-01-25]
