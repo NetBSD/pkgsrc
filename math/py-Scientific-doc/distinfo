@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:55:59 nia Exp $
-
-BLAKE2s (ScientificPython-2.4.5.tar.gz) = 74997627cb1f5e84794a3e2eaefdc4f35fb831e1513e8bd90c9a8f231bea83e5
-SHA512 (ScientificPython-2.4.5.tar.gz) = 5fd0bbff90ac63aa2f9c4a494a6950327c925e03b0f82e9e2647008aa21a8a35d5ddc349aeb3f2f7290c01005c11449983a3f950c45713c6bb0337c03aa7b512
-Size (ScientificPython-2.4.5.tar.gz) = 487379 bytes
