@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/01/21 10:43:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.26 2022/01/25 12:16:54 jperkin Exp $
 
 PKGREVISION= 3
 .include "dist.mk"
@@ -45,7 +45,7 @@ PKG_CXX=		clang++
 .endif
 
 # Used in socketmodule.c to determine if a sethostname declaration is required
-CPPFLAGS.SunOS+=	-DPKGSRC_OPSYS_VERSION=${OPSYS_VERSION}
+CFLAGS.SunOS+=		-DPKGSRC_OPSYS_VERSION=${OPSYS_VERSION}
 
 .if ${OPSYS} == "SunOS" && ${OPSYS_VERSION} < 051100
 SUBST_CLASSES+=		setup
