@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.440 2022/01/25 19:40:02 pin Exp $
+$NetBSD: CHANGES-2022,v 1.441 2022/01/25 19:40:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -588,3 +588,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/memcached to 1.6.13 [jperkin 2022-01-25]
 	Updated audio/termusic to 0.6.7 [pin 2022-01-25]
 	Updated sysutils/hcal to 0.3.3 [pin 2022-01-25]
+	Updated security/polkit to 0.120nb2 [wiz 2022-01-25]
