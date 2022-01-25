@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.12 2019/11/04 05:48:26 gutteridge Exp $
+# $NetBSD: options.mk,v 1.13 2022/01/25 01:44:22 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.scapy
 
-PKG_SUPPORTED_OPTIONS=	libpcap scapy-crypto gnuplot scapy-pyx
+PKG_SUPPORTED_OPTIONS=	libpcap scapy-crypto scapy-pyx
 PKG_SUGGESTED_OPTIONS=	libpcap
 
 .include "../../mk/bsd.options.mk"
@@ -21,14 +21,6 @@ PKG_SUGGESTED_OPTIONS=	libpcap
 ###
 .if !empty(PKG_OPTIONS:Mscapy-crypto)
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
-.endif
-
-###
-### Add in gnuplot support for plotting
-###
-.if !empty(PKG_OPTIONS:Mgnuplot)
-DEPENDS+=	${PYPKGPREFIX}-gnuplot-[0-9]*:../../graphics/py-gnuplot
-PYTHON_VERSIONS_ACCEPTED= 27 # py-gnuplot
 .endif
 
 ###
