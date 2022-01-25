@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.442 2022/01/25 19:43:45 pin Exp $
+$NetBSD: CHANGES-2022,v 1.443 2022/01/25 21:18:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -590,3 +590,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/hcal to 0.3.3 [pin 2022-01-25]
 	Updated security/polkit to 0.120nb2 [wiz 2022-01-25]
 	Added sysutils/dusage version 0.2.0 [pin 2022-01-25]
+	Updated devel/cmake to 3.22.2 [adam 2022-01-25]
+	Updated devel/cmake-gui to 3.22.2 [adam 2022-01-25]
