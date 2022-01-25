@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2021/12/29 06:05:19 taca Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/25 08:31:38 triaxx Exp $
 
-DISTNAME=	dotclear-2.18.1
-PKGREVISION=	1
+DISTNAME=	dotclear-2.20.1
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	https://download.dotclear.org/latest/ \
@@ -15,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 .include "../../lang/php/phpversion.mk"
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=${PHP_BASE_VERS}:../../converters/php-iconv
-.if ${PKG_PHP_MAJOR_VERS} < 8	
+.if ${PKG_PHP_MAJOR_VERS} < 8
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=${PHP_BASE_VERS}:../../textproc/php-json
 .endif
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}:../../archivers/php-zlib
@@ -27,7 +26,7 @@ BUILD_DEFS+=	PKG_SYSCONFBASE VARBASE
 
 .include "options.mk"
 
-PHP_VERSIONS_ACCEPTED=	74 56
+PHP_VERSIONS_ACCEPTED=	81 80 74
 
 PKG_SYSCONFSUBDIR=	dotclear
 
