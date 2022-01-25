@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/01/13 19:31:25 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2022/01/25 09:05:11 wiz Exp $
 
 DISTNAME=	jsonschema-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,12 +20,12 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 .if ${_PYTHON_VERSION} == 27
 DEPENDS+=	${PYPKGPREFIX}-functools32-[0-9]*:../../devel/py-functools32
 .elif ${_PYTHON_VERSION} < 38
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
+PYTHON_VERSIONED_DEPENDENCIES+=	importlib-metadata
 .endif
 
 USE_PKG_RESOURCES=	yes
 
-PYTHON_VERSIONED_DEPENDENCIES=	setuptools_scm:build
+PYTHON_VERSIONED_DEPENDENCIES+=	setuptools_scm:build
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
