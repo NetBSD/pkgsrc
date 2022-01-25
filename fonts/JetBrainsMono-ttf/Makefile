@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2022/01/21 13:47:32 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/25 02:04:43 wiz Exp $
 
 DISTNAME=	JetBrainsMono-2.242
 PKGNAME=	${DISTNAME:S/Mono/Mono-ttf/}
 CATEGORIES=	fonts
-MASTER_SITES=	${MASTER_SITE_GITHUB:=JetBrains/}
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+#MASTER_SITES=	${MASTER_SITE_GITHUB:=JetBrains/}
+#GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+MASTER_SITES+=	https://download.jetbrains.com/fonts/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
