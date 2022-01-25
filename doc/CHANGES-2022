@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.441 2022/01/25 19:40:54 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.442 2022/01/25 19:43:45 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -589,3 +589,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/termusic to 0.6.7 [pin 2022-01-25]
 	Updated sysutils/hcal to 0.3.3 [pin 2022-01-25]
 	Updated security/polkit to 0.120nb2 [wiz 2022-01-25]
+	Added sysutils/dusage version 0.2.0 [pin 2022-01-25]
