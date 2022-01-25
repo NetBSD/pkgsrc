@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2021/12/01 13:01:16 nia Exp $
+# $NetBSD: Makefile,v 1.48 2022/01/25 11:16:56 nia Exp $
 
 DISTNAME=		xkeyboard-config-2.34
 CATEGORIES=		x11
@@ -55,8 +55,6 @@ OWN_DIRS+=		${XKBCOMPDIR}
 
 BUILDLINK_DEPMETHOD.gettext=	build	# for the configure only
 .include "../../devel/gettext-lib/buildlink3.mk"
-X11_BUILTIN_NAME=	xkeyboard-config
-.include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 BUILDLINK_API_DEPENDS.libX11+=	libX11>=1.4.3
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
