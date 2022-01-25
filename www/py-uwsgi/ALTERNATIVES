@@ -1,2 +1,1 @@
 bin/uwsgi @PREFIX@/bin/uwsgi-@PYVERSSUFFIX@
-share/examples/py-uwsgi share/examples/@PYPKGPREFIX@-uwsgi/
