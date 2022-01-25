@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.424 2022/01/25 04:12:52 mef Exp $
+$NetBSD: CHANGES-2022,v 1.425 2022/01/25 08:35:19 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -572,3 +572,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed graphics/py-fits [wiz 2022-01-25]
 	Removed graphics/py-gnuplot [wiz 2022-01-25]
 	Updated devel/spdlog to 1.9.2 [mef 2022-01-25]
+	Updated www/php-dotclear to 2.20.1 [triaxx 2022-01-25]
