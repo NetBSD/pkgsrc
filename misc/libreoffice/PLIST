@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2021/08/22 02:41:50 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.45 2022/01/25 15:21:06 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -4246,7 +4246,6 @@ ${PKGNAME}/lib/libreoffice/program/swriter
 ${PKGNAME}/lib/libreoffice/program/types.rdb
 ${PKGNAME}/lib/libreoffice/program/types/offapi.rdb
 ${PKGNAME}/lib/libreoffice/program/types/oovbaapi.rdb
-${PKGNAME}/lib/libreoffice/program/ui-previewer
 ${PKGNAME}/lib/libreoffice/program/uno
 ${PKGNAME}/lib/libreoffice/program/uno.bin
 ${PKGNAME}/lib/libreoffice/program/uno.py
