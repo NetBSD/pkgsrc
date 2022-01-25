@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.12 2009/08/25 04:17:35 epg Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/01/25 01:55:13 wiz Exp $
 bin/cvs2bzr
 bin/cvs2git
 bin/cvs2svn
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/cvs2svn_lib/__init__.py
 ${PYSITELIB}/cvs2svn_lib/__init__.pyc
 ${PYSITELIB}/cvs2svn_lib/__init__.pyo

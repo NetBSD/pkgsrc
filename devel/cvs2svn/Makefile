@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2020/12/04 20:45:08 nia Exp $
+# $NetBSD: Makefile,v 1.42 2022/01/25 01:55:13 wiz Exp $
 
 DISTNAME=	cvs2svn-2.3.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel scm
 MASTER_SITES=	http://cvs2svn.tigris.org/files/documents/1462/46528/
 
@@ -13,7 +13,6 @@ DEPENDS+=	subversion-base-[0-9]*:../../devel/subversion-base
 
 CONFLICTS+=	py*-subversion<1.0.1
 
-PYDISTUTILSPKG=	yes
 REPLACE_PYTHON=	run-tests.py cvs2svn_rcsparse/run-tests.py \
 			cvs2svn_rcsparse/parse_rcs_file.py
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 2.3.0
@@ -37,5 +36,5 @@ do-test:
 
 .include "../../databases/py-bsddb3/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
