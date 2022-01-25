@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2022/01/16 18:06:25 tnn Exp $
+# $NetBSD: Makefile.common,v 1.37 2022/01/25 04:39:53 mef Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -41,6 +41,7 @@ USE_TOOLS=		perl gmake cmake pkg-config
 USE_CMAKE=		yes
 
 DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 # for companion
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
