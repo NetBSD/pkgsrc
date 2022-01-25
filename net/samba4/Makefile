@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2022/01/10 14:11:16 taca Exp $
+# $NetBSD: Makefile,v 1.136 2022/01/25 19:25:01 gdt Exp $
 
 # WARNING: DO NOT UPDATE WITHOUT RESOLVING THIS ISSUE:
 #
@@ -6,6 +6,8 @@
 # BSDs!
 #
 # Please do not update without testing on NetBSD 9.2!
+#
+# https://bugzilla.samba.org/show_bug.cgi?id=14727
 #
 DISTNAME=	samba-4.13.16
 CATEGORIES=	net
