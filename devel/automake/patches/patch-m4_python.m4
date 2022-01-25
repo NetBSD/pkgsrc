@@ -1,7 +1,7 @@
-$NetBSD: patch-m4_python.m4,v 1.6 2022/01/25 18:56:22 wiz Exp $
+$NetBSD: patch-m4_python.m4,v 1.7 2022/01/25 18:57:29 wiz Exp $
 
 Support python 3.10.
-Filed upstream.
+http://debbugs.gnu.org/cgi/bugreport.cgi?bug=53530
 
 --- m4/python.m4.orig	2021-10-04 02:51:12.000000000 +0000
 +++ m4/python.m4
