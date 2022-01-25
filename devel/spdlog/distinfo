@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:19:56 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/01/25 04:12:41 mef Exp $
 
-BLAKE2s (spdlog-1.8.5.tar.gz) = 1c55f5c35dac97b8aa13f99e408cca68c063696b46dea8d043493d112e869aca
-SHA512 (spdlog-1.8.5.tar.gz) = 77cc9df0c40bbdbfe1f3e5818dccf121918bfceac28f2608f39e5bf944968b7e8e24a6fc29f01bc58a9bae41b8892d49cfb59c196935ec9868884320b50f130c
-Size (spdlog-1.8.5.tar.gz) = 321229 bytes
+BLAKE2s (spdlog-1.9.2.tar.gz) = e5159d9133b1593bf0f192648778d1d5471b8310968091a3473c1de01927d30e
+SHA512 (spdlog-1.9.2.tar.gz) = 87b12a792cf2d740ef29db4b6055788a487b6d474662b878711b8a5534efea5f0d97b6ac357834500b66cc65e1ba8934446a695e9691fd5d4b95397b6871555c
+Size (spdlog-1.9.2.tar.gz) = 327799 bytes
