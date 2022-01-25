@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.524 2022/01/17 10:01:35 wiz Exp $
+# $NetBSD: Makefile,v 1.525 2022/01/25 01:37:49 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -353,8 +353,6 @@ SUBDIR+=	pspp
 SUBDIR+=	py-Keras-Applications
 SUBDIR+=	py-Keras-Preprocessing
 SUBDIR+=	py-Numeric
-SUBDIR+=	py-Scientific
-SUBDIR+=	py-Scientific-doc
 SUBDIR+=	py-Theano
 SUBDIR+=	py-abcpmc
 SUBDIR+=	py-almost

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.420 2022/01/25 01:34:30 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.421 2022/01/25 01:37:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -567,3 +567,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/py-pythran to 0.11.0 [adam 2022-01-24]
 	Updated cad/klayout to 0.27.7 [mef 2022-01-24]
 	Removed graphics/py-biggles [wiz 2022-01-25]
+	Removed math/py-Scientific-doc [wiz 2022-01-25]
+	Removed math/py-Scientific [wiz 2022-01-25]
