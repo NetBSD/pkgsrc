@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2022/01/25 19:42:23 pin Exp $
+$NetBSD: distinfo,v 1.2 2022/01/25 21:29:35 pin Exp $
 
 BLAKE2s (ansi_term-0.12.1.crate) = 9d7961fca7b2680f17660048cf2d6171faa0def807ea66b5b5b9110f0623a12f
 SHA512 (ansi_term-0.12.1.crate) = b840e28b3e7700689a69a39659b1e066560078dd4a58326b91a028915819e7af883399ee53e920db68fd974c58d35bb1ddf8d427af5937d5f696f57c4376b671
@@ -27,9 +27,9 @@ Size (clap-2.34.0.crate) = 202210 bytes
 BLAKE2s (colored-2.0.0.crate) = d662d4cff2fde6538fe02524b0e763f1928411c0dfb593c90c8dd6a6616389ec
 SHA512 (colored-2.0.0.crate) = c9ee830c1e8a32372ab8c7ce569701deaa6533fa369fc1b4c04bed57b1e686ed775fc76c3d9815ad21ee69cfc7c30d645abcbacad39081c7e37ff83ebb6d9e8a
 Size (colored-2.0.0.crate) = 21619 bytes
-BLAKE2s (dusage-0.2.0.tar.gz) = cc7e41a93ff15d3d1068a53582987e42001968a832338bb4c095439496d398e6
-SHA512 (dusage-0.2.0.tar.gz) = e7c911c2b3d59b8b17b0ac865169d1ae04d330456cad463573d9fd1fe2d0ab047a9e6206400204fe6dfaf46cab3b6935b5c300469f32133e438b732291d7bb47
-Size (dusage-0.2.0.tar.gz) = 10404 bytes
+BLAKE2s (dusage-0.2.1.tar.gz) = 3b7c37ad6c437bc10eb88224008bd9e34bd3798eea2358740a49ce8e28fe6b3b
+SHA512 (dusage-0.2.1.tar.gz) = f1bf585632265893dcf1d2fc5de3ce6a70e02ededb2d10bfb494ef0944c099b828f948e909bd0708e401de4917e30faa3be779c7e65d1e37d133b492d3dda0e2
+Size (dusage-0.2.1.tar.gz) = 12051 bytes
 BLAKE2s (hermit-abi-0.1.19.crate) = c731a42a9056a75a3ba26b5ab02c7c60c1fa2f21635d4152de66dc2eb407e097
 SHA512 (hermit-abi-0.1.19.crate) = 1c877fcd562b15d2de9c151fd6c5f3ea4bf48abcb799e6139a180ffad5d64b632f0000d5707bbd92ff23a0e5f349157b9e0f5be8b50f03680b0fa47315dbb78a
 Size (hermit-abi-0.1.19.crate) = 9979 bytes
