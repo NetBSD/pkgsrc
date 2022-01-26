@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2022/01/23 16:14:24 pin Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/26 00:24:22 tpaul Exp $
 
 DISTNAME=	alacritty-0.10.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alacritty/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -35,7 +36,7 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.freetype2}/lib
 SUBST_CLASSES+=		rtld
 SUBST_MESSAGE.rtld=	amend RTLD_GLOBAL
 SUBST_STAGE.rtld=	pre-configure
-SUBST_FILES.rtld=	../vendor/x11-dl-2.18.5/src/link.rs
+SUBST_FILES.rtld=	../vendor/x11-dl-2.19.1/src/link.rs
 SUBST_SED.rtld=		-e 's,libc::RTLD_LAZY,& | libc::RTLD_GLOBAL,g'
 .endif
 
