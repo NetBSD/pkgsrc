@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2021/12/19 09:48:00 maya Exp $
+# $NetBSD: Makefile,v 1.13 2022/01/26 18:24:08 mrg Exp $
 
 DISTNAME=	qtwebengine-everywhere-src-${QTVERSION}
 PKGNAME=	qt5-qtwebengine-${QTVERSION}
@@ -65,10 +65,11 @@ post-install:
 	/usr/sbin/paxctl +m ${DESTDIR}${PREFIX}/qt5/libexec/QtWebEngineProcess
 .endif
 
+.include "options.mk"
+
 .include "../../mk/bsd.prefs.mk"
 
 .include "../../audio/alsa-lib/buildlink3.mk"
-.include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
