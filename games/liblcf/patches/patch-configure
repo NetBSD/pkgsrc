@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2022/01/26 15:52:51 mef Exp $
+
+ERROR: [check-portability.awk] => Found test ... == ...:
+ERROR: [check-portability.awk] configure:17552:  if test $LCF_SUPPORT_XML == 1; then
+
+--- configure.orig	2022-01-27 00:42:03.338356476 +0900
++++ configure	2022-01-27 00:43:34.775513479 +0900
+@@ -17549,7 +17549,7 @@ fi
+ 
+ 
+ fi
+- if test $LCF_SUPPORT_XML == 1; then
++ if test $LCF_SUPPORT_XML = 1; then
+   SUPPORT_XML_TRUE=
+   SUPPORT_XML_FALSE='#'
+ else
