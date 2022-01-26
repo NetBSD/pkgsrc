@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2021/12/08 16:06:24 adam Exp $
+# $NetBSD: Makefile,v 1.102 2022/01/26 12:00:18 wiz Exp $
 #
 # How to update this package:
 #
@@ -33,6 +33,9 @@ LICENSE=	mpl-1.1
 UNLIMIT_RESOURCES+=	datasize virtualsize
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/src-//}
+
+# as of 10.5.10, 11.x is fine with python 3.10
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 MOZILLA_DIR=	# empty
 
