@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2022/01/04 16:04:39 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.38 2022/01/26 17:17:39 triaxx Exp $
 bin/gamma4scanimage
 bin/sane-config
 bin/sane-find-scanner
@@ -50,7 +50,7 @@ lib/sane/libsane-kodak.la
 lib/sane/libsane-kodakaio.la
 lib/sane/libsane-kvs1025.la
 lib/sane/libsane-kvs20xx.la
-${PLIST.kvs40xx}lib/sane/libsane-kvs40xx.la
+lib/sane/libsane-kvs40xx.la
 lib/sane/libsane-leo.la
 lib/sane/libsane-lexmark.la
 lib/sane/libsane-ma1509.la
@@ -60,7 +60,7 @@ lib/sane/libsane-microtek.la
 lib/sane/libsane-microtek2.la
 lib/sane/libsane-mustek.la
 lib/sane/libsane-mustek_usb.la
-${PLIST.mustek}lib/sane/libsane-mustek_usb2.la
+lib/sane/libsane-mustek_usb2.la
 lib/sane/libsane-nec.la
 lib/sane/libsane-net.la
 lib/sane/libsane-niash.la
@@ -77,7 +77,7 @@ lib/sane/libsane-rts8891.la
 lib/sane/libsane-s9036.la
 lib/sane/libsane-sceptre.la
 lib/sane/libsane-sharp.la
-${PLIST.sm3600}lib/sane/libsane-sm3600.la
+lib/sane/libsane-sm3600.la
 lib/sane/libsane-sm3840.la
 lib/sane/libsane-snapscan.la
 lib/sane/libsane-sp15c.la
@@ -138,7 +138,7 @@ man/man5/sane-kodak.5
 man/man5/sane-kodakaio.5
 man/man5/sane-kvs1025.5
 man/man5/sane-kvs20xx.5
-${PLIST.kvs40xx}man/man5/sane-kvs40xx.5
+man/man5/sane-kvs40xx.5
 man/man5/sane-leo.5
 man/man5/sane-lexmark.5
 man/man5/sane-ma1509.5
@@ -148,7 +148,7 @@ man/man5/sane-microtek.5
 man/man5/sane-microtek2.5
 man/man5/sane-mustek.5
 man/man5/sane-mustek_usb.5
-${PLIST.mustek}man/man5/sane-mustek_usb2.5
+man/man5/sane-mustek_usb2.5
 man/man5/sane-nec.5
 man/man5/sane-net.5
 man/man5/sane-niash.5
@@ -166,7 +166,7 @@ man/man5/sane-s9036.5
 man/man5/sane-sceptre.5
 man/man5/sane-scsi.5
 man/man5/sane-sharp.5
-${PLIST.sm3600}man/man5/sane-sm3600.5
+man/man5/sane-sm3600.5
 man/man5/sane-sm3840.5
 man/man5/sane-snapscan.5
 man/man5/sane-sp15c.5

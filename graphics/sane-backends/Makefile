@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.78 2022/01/08 11:47:49 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2022/01/26 17:17:39 triaxx Exp $
 
+PKGREVISION=	1
 .include "Makefile.common"
 MASTER_SITES=	https://gitlab.com/sane-project/backends/uploads/104f09c07d35519cc8e72e604f11643f/
 COMMENT=	API for access to scanners, digital cameras, frame grabbers, etc
@@ -18,6 +19,7 @@ USE_LANGUAGES=		c c++11
 # C++11
 GCC_REQD+=		4.8
 
+CONFIGURE_ARGS+=	--enable-pthread
 CONFIGURE_ARGS+=	--with-gphoto2=no
 CONFIGURE_ARGS+=	--without-snmp
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -27,17 +29,10 @@ CONFIGURE_ENV.SunOS+=	ac_cv_func_inet_pton=yes
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=		mustek pint sm3600 kvs40xx
+PLIST_VARS+=		pint
 
-.if (${OPSYS} == "SunOS") || (${OPSYS} == "Linux") || (${OPSYS} == "DragonFly") || (${OPSYS} == "FreeBSD")
-PLIST.sm3600=		yes
-.elif (${OPSYS} == "Darwin")
-PLIST.mustek=		yes
-PLIST.sm3600=		yes
-PLIST.kvs40xx=		yes
-.else
+.if (${OPSYS} == "NetBSD")
 PLIST.pint=		yes
-PLIST.sm3600=		yes
 .endif
 
 LIBS.SunOS+=	-lresolv -lnsl -lsocket
