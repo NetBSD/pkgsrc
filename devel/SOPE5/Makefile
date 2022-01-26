@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2021/12/08 16:03:52 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/26 16:41:45 tm Exp $
 #
 
-DISTNAME=	SOPE-5.1.1
-PKGREVISION=	1
+DISTNAME=	SOPE-5.5.0
 CATEGORIES=	devel
-MASTER_SITES=	http://www.sogo.nu/files/downloads/SOGo/Sources/
+MASTER_SITES=	https://packages.inverse.ca/SOGo/sources/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/inverse-inc/sope
@@ -19,6 +18,7 @@ HAS_CONFIGURE=	yes
 
 CONFIGURE_ARGS=	--with-gnustep --enable-debug --disable-strip
 
+.include "../../devel/gnustep-make/gnustep.mk"
 .include "options.mk"
 
 .include "../../devel/gnustep-make/buildlink3.mk"
