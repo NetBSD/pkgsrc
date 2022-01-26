@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2022/01/05 15:40:57 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2022/01/26 07:19:03 wiz Exp $
 
 DISTNAME=	matrix-synapse-1.48.0
 PKGREVISION=	2
@@ -42,8 +42,9 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4:../../devel/py-typing-extensio
 DEPENDS+=	${PYPKGPREFIX}-ijson>=3.0:../../devel/py-ijson
 DEPENDS+=	${PYPKGPREFIX}-psycopg2>=2.7:../../databases/py-psycopg2
 DEPENDS+=	${PYPKGPREFIX}-lxml>=3.5.0:../../textproc/py-lxml
+DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 
-PYTHON_VERSIONED_DEPENDENCIES=	Pillow
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-unpaddedbase64
 
 USE_PKG_RESOURCES=	yes
 
@@ -85,5 +86,4 @@ SUBST_VARS.pl=			SYNAPSE_DEFAULT_CREATOR_PL
 BUILD_DEFS+=			SYNAPSE_DEFAULT_CREATOR_PL
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
