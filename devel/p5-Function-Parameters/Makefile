@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2021/05/24 19:50:46 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/01/26 21:15:35 mef Exp $
 
 DISTNAME=	Function-Parameters-2.001003
 PKGNAME=	p5-${DISTNAME}
@@ -13,6 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
 DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+DEPENDS+=	p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
 # TEST_DEPENDS
 BUILD_DEPENDS+=	p5-Dir-Self-[0-9]*:../../devel/p5-Dir-Self
 
