@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/26 16:41:45 tm Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/26 22:37:05 tm Exp $
 #
 
 DISTNAME=	SOPE-5.5.0
@@ -18,8 +18,16 @@ HAS_CONFIGURE=	yes
 
 CONFIGURE_ARGS=	--with-gnustep --enable-debug --disable-strip
 
-.include "../../devel/gnustep-make/gnustep.mk"
-.include "options.mk"
+# options.mk are not supported because gnustep-make/-base set
+# PKG_OPTIONS_VAR to support the fragile option.
+.include "../../mk/mysql.buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
+.include "../../databases/openldap-client/buildlink3.mk"
+
+pre-configure:
+	${TEST} -e ${BUILDLINK_DIR}/lib/libmysqlclient.so || \
+	${LN} -s ${BUILDLINK_DIR}/lib/mysql/libmysqlclient.so \
+	${BUILDLINK_DIR}/lib/libmysqlclient.so
 
 .include "../../devel/gnustep-make/buildlink3.mk"
 .include "../../devel/gnustep-base/buildlink3.mk"
