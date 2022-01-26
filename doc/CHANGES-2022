@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.445 2022/01/26 00:24:47 tpaul Exp $
+$NetBSD: CHANGES-2022,v 1.446 2022/01/26 13:38:42 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -594,3 +594,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/cmake-gui to 3.22.2 [adam 2022-01-25]
 	Updated sysutils/dusage to 0.2.1 [pin 2022-01-25]
 	Updated x11/alacritty to 0.10.0nb1 [tpaul 2022-01-26]
+	Updated www/firefox91 to 91.5.0 [ryoon 2022-01-26]
