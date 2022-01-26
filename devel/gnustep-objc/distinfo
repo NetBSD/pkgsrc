@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 10:14:44 nia Exp $
+$NetBSD: distinfo,v 1.17 2022/01/26 15:57:54 tm Exp $
 
 BLAKE2s (libobjc2-1.8.1.tar.gz) = 2a19ab2491baa156f7cef635053080dc4bf3eae356f1156a79edb98ebd3c0434
 SHA512 (libobjc2-1.8.1.tar.gz) = 518f36e96a82a076fc67fe384226bd97310cd10a53c7b0951db9f3658aa534582b245d5cb97956fe91c38338c3fc8f1e569dd8af36f6d12e32bf1460251d02eb
 Size (libobjc2-1.8.1.tar.gz) = 173635 bytes
 SHA1 (patch-GNUmakefile) = 7e6b8f09599c2b568346b392cd5d7654b1c747a4
+SHA1 (patch-objc_runtime.h) = cc8aaeb1352a403abb918aaf5a12d86fdcea383f
 SHA1 (patch-objcxx_eh.cc) = 8804d075cb46380165e40af5f4abd5d8d413b92a
 SHA1 (patch-objcxx_eh.h) = 68a3709ed9d029e6ae4c7a6cc375678ee7c21b1e
