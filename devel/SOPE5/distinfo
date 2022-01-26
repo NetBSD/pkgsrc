@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:14:12 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/01/26 16:41:45 tm Exp $
 
-BLAKE2s (SOPE-5.1.1.tar.gz) = 8ad956046822d57f2a1a832bb9e531559b285a07ba2915dba250f3df71a953b8
-SHA512 (SOPE-5.1.1.tar.gz) = c2f0d053dc452c2eb5c75befbff3265ec66cb317e2954edabb7049464660a7f605da39279b41bbac5ffd2ab5b7598d5c486e471b20a31ad151ba230a27b35719
-Size (SOPE-5.1.1.tar.gz) = 2295352 bytes
-SHA1 (patch-general.make) = 506e6c1cab6706190ab0c0817bd5c4bc338fbae9
+BLAKE2s (SOPE-5.5.0.tar.gz) = 057be37943f543f2c7673c2acb7029f791a9f68fb381d07391403a8a16d0ea46
+SHA512 (SOPE-5.5.0.tar.gz) = 2417c6761babebd4e57d7e608d3e47f451b989883dc5cb27e53016bce9801ec46a4d7b73581935e65a5028580eced56113546e70a60b0bd3aa0b69cb36f624fe
+Size (SOPE-5.5.0.tar.gz) = 2296909 bytes
+SHA1 (patch-general.make) = 56738aa2775cbc08db4acfe8576d6d13fbd41323
 SHA1 (patch-sope-core_NGStreams_NGActiveSocket.m) = 00475985f026b4b3838afee06bf477a2b3131e9c
 SHA1 (patch-sope-core_NGStreams_NGDescriptorFunctions.m) = 6560f602033ddeba52d96175e244921423bb6671
 SHA1 (patch-sope-core_NGStreams_NGInternetSocketAddress.m) = 7c945bf174e3de5f6f6daaaaa095956421a43bc3
