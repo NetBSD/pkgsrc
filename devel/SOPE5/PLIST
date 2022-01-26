@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/06/14 16:51:39 gdt Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/26 16:41:45 tm Exp $
 bin/connect-EOAdaptor
 bin/load-EOAdaptor
 bin/wod
@@ -188,18 +188,18 @@ include/NGImap4/NGImap4ServerRoot.h
 include/NGImap4/NGImap4Support.h
 include/NGImap4/NGSieveClient.h
 include/NGImap4/NSString+Imap4.h
-include/NGLdap/EOQualifier+LDAP.h
-include/NGLdap/NGLdap.h
-include/NGLdap/NGLdapAttribute.h
-include/NGLdap/NGLdapConnection.h
-include/NGLdap/NGLdapDataSource.h
-include/NGLdap/NGLdapEntry.h
-include/NGLdap/NGLdapFileManager.h
-include/NGLdap/NGLdapGlobalID.h
-include/NGLdap/NGLdapModification.h
-include/NGLdap/NGLdapSearchResultEnumerator.h
-include/NGLdap/NGLdapURL.h
-include/NGLdap/NSString+DN.h
+${PLIST.ldap}include/NGLdap/EOQualifier+LDAP.h
+${PLIST.ldap}include/NGLdap/NGLdap.h
+${PLIST.ldap}include/NGLdap/NGLdapAttribute.h
+${PLIST.ldap}include/NGLdap/NGLdapConnection.h
+${PLIST.ldap}include/NGLdap/NGLdapDataSource.h
+${PLIST.ldap}include/NGLdap/NGLdapEntry.h
+${PLIST.ldap}include/NGLdap/NGLdapFileManager.h
+${PLIST.ldap}include/NGLdap/NGLdapGlobalID.h
+${PLIST.ldap}include/NGLdap/NGLdapModification.h
+${PLIST.ldap}include/NGLdap/NGLdapSearchResultEnumerator.h
+${PLIST.ldap}include/NGLdap/NGLdapURL.h
+${PLIST.ldap}include/NGLdap/NSString+DN.h
 include/NGMail/NGMBoxReader.h
 include/NGMail/NGMail.h
 include/NGMail/NGMailAddress.h
@@ -437,8 +437,8 @@ lib/libGDLAccess.so
 lib/libGDLAccess.so.4.9.63
 lib/libNGExtensions.so
 lib/libNGExtensions.so.4.9.203
-lib/libNGLdap.so
-lib/libNGLdap.so.4.9.35
+${PLIST.ldap}lib/libNGLdap.so
+${PLIST.ldap}lib/libNGLdap.so.4.9.35
 lib/libNGMime.so
 lib/libNGMime.so.4.9.3
 lib/libNGObjWeb.so
