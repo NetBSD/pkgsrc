@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.449 2022/01/26 17:42:22 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.450 2022/01/26 17:48:50 tm Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -598,3 +598,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/firefox91-l10n to 91.5.0 [ryoon 2022-01-26]
 	Updated graphics/sane-backends to 1.0.32nb1 [triaxx 2022-01-26]
 	Updated mail/postfix to 3.6.4 [triaxx 2022-01-26]
+        Updated devel/SOPE5 to 5.5.0 [tm 2022-01-26]
