@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST.SunOS,v 1.1 2021/06/14 16:51:39 gdt Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.2 2022/01/26 16:41:45 tm Exp $
 lib/libDOM.so.4.9
 lib/libEOControl.so.4.9
 lib/libGDLAccess.so.4.9
 lib/libNGExtensions.so.4.9
-lib/libNGLdap.so.4.9
+${PLIST.ldap}lib/libNGLdap.so.4.9
 lib/libNGMime.so.4.9
 lib/libNGObjWeb.so.4.9
 lib/libNGStreams.so.4.9
