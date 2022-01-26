@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.447 2022/01/26 13:39:34 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.448 2022/01/26 17:18:06 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -596,3 +596,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/alacritty to 0.10.0nb1 [tpaul 2022-01-26]
 	Updated www/firefox91 to 91.5.0 [ryoon 2022-01-26]
 	Updated www/firefox91-l10n to 91.5.0 [ryoon 2022-01-26]
+	Updated graphics/sane-backends to 1.0.32nb1 [triaxx 2022-01-26]
