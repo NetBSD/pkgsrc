@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2021/06/14 16:51:39 gdt Exp $
+# $NetBSD: options.mk,v 1.2 2022/01/26 16:41:45 tm Exp $
 
 PKG_OPTIONS_VAR=			PKG_OPTIONS.SOPE
 
@@ -10,7 +10,7 @@ PKG_SUGGESTED_OPTIONS=			ldap pgsql
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=				pgsql mysql
+PLIST_VARS+=				pgsql mysql ldap
 
 .if !empty(PKG_OPTIONS:Mmysql)
 pre-configure:
@@ -32,6 +32,7 @@ CONFIGURE_ARGS+=			--disable-postgresql
 
 .if !empty(PKG_OPTIONS:Mldap)
 .include "../../databases/openldap-client/buildlink3.mk"
+PLIST.ldap=				yes
 .else
-CONFIGURE_ARGS+=			--disable-ldap
+CONFIGURE_ARGS+=			--disable-openldap
 .endif
