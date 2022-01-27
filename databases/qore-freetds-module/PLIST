@@ -1,13 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2016/07/20 12:20:02 nros Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/01/27 17:44:18 nros Exp $
 ${QORE_MODULE_DIR}/freetds-api-${QORE_MODULE_API}.qmod
-share/doc/qore-freetds-module/html/arrowdown.png
-share/doc/qore-freetds-module/html/arrowright.png
 share/doc/qore-freetds-module/html/bc_s.png
 share/doc/qore-freetds-module/html/bdwn.png
 share/doc/qore-freetds-module/html/closed.png
 share/doc/qore-freetds-module/html/doc.png
 share/doc/qore-freetds-module/html/doxygen.css
-share/doc/qore-freetds-module/html/doxygen.png
+share/doc/qore-freetds-module/html/doxygen.svg
 share/doc/qore-freetds-module/html/dynsections.js
 share/doc/qore-freetds-module/html/folderclosed.png
 share/doc/qore-freetds-module/html/folderopen.png
@@ -16,6 +14,8 @@ share/doc/qore-freetds-module/html/graph_legend.md5
 share/doc/qore-freetds-module/html/graph_legend.png
 share/doc/qore-freetds-module/html/index.html
 share/doc/qore-freetds-module/html/jquery.js
+share/doc/qore-freetds-module/html/menu.js
+share/doc/qore-freetds-module/html/menudata.js
 share/doc/qore-freetds-module/html/nav_f.png
 share/doc/qore-freetds-module/html/nav_g.png
 share/doc/qore-freetds-module/html/nav_h.png
@@ -24,11 +24,12 @@ share/doc/qore-freetds-module/html/navtree.js
 share/doc/qore-freetds-module/html/navtreedata.js
 share/doc/qore-freetds-module/html/navtreeindex0.js
 share/doc/qore-freetds-module/html/open.png
+share/doc/qore-freetds-module/html/qore-logo-55x200.png
 share/doc/qore-freetds-module/html/resize.js
 share/doc/qore-freetds-module/html/search/all_0.html
 share/doc/qore-freetds-module/html/search/all_0.js
-share/doc/qore-freetds-module/html/search/close.png
-share/doc/qore-freetds-module/html/search/mag_sel.png
+share/doc/qore-freetds-module/html/search/close.svg
+share/doc/qore-freetds-module/html/search/mag_sel.svg
 share/doc/qore-freetds-module/html/search/nomatches.html
 share/doc/qore-freetds-module/html/search/pages_0.html
 share/doc/qore-freetds-module/html/search/pages_0.js
