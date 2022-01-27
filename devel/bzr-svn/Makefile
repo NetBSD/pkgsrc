@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2022/01/10 22:09:31 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2022/01/27 10:57:31 wiz Exp $
 
 DISTNAME=	bzr-svn-${VER}
 PKGREVISION=	3
@@ -22,7 +22,7 @@ USE_TOOLS+=	gmake
 USE_LANGUAGES=	#none
 
 # NOTE: This must run in a UTF-8 locale, e.g. LC_TYPE=en_US.utf8 make test
-#TEST_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
+#TEST_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools24
 #TEST_DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
 #TEST_TARGET=	check-verbose
 
