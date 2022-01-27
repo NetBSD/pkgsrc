@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/01/14 14:47:26 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/27 04:24:05 pho Exp $
 
 DISTNAME=	bindfs-1.15.1
 PKGNAME=	fuse-${DISTNAME}
@@ -15,6 +15,7 @@ USE_FEATURES=	getline
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	automake autoreconf gmake pkg-config
+USE_LIBTOOL=	yes
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf
