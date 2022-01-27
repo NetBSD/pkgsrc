@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2022/01/05 15:41:06 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2022/01/27 10:57:31 wiz Exp $
 
 DISTNAME=	pbr-5.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,10 +18,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-testrepository>=0.0.18:../../devel/py-testrepository
 TEST_DEPENDS+=	${PYPKGPREFIX}-testresources>=2.0.0:../../devel/py-testresources
 TEST_DEPENDS+=	${PYPKGPREFIX}-testscenarios>=0.4:../../devel/py-testscenarios
-TEST_DEPENDS+=	${PYPKGPREFIX}-testtools>=2.2.0:../../devel/py-testtools
 TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv>=14.0.6:../../devel/py-virtualenv
 TEST_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.32.0:../../devel/py-wheel
 # not packaged: hacking, stestr
+
+PYTHON_VERSIONED_DEPENDENCIES+=	testtools:test
 
 REPLACE_PYTHON+=	pbr/tests/testpackage/setup.py
 
@@ -33,4 +34,5 @@ post-install:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

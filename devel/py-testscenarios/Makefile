@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:44 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/27 10:57:32 wiz Exp $
 
 DISTNAME=	testscenarios-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,9 +12,11 @@ COMMENT=	Pyunit extension for dependency injection
 LICENSE=	apache-2.0 OR modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
-DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
+
+PYTHON_VERSIONED_DEPENDENCIES+=	testtools
 
 TEST_TARGET=	check
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
