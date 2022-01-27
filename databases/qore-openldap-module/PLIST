@@ -1,11 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2016/07/20 13:27:43 nros Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/01/27 17:52:03 nros Exp $
 ${QORE_MODULE_DIR}/openldap-api-${QORE_LATEST_MODULE_API}.qmod
 share/doc/qore-openldap-module/html/QC__LdapClient_8dox_8h_source.html
 share/doc/qore-openldap-module/html/annotated.html
-share/doc/qore-openldap-module/html/annotated.js
 share/doc/qore-openldap-module/html/annotated_dup.js
-share/doc/qore-openldap-module/html/arrowdown.png
-share/doc/qore-openldap-module/html/arrowright.png
 share/doc/qore-openldap-module/html/bc_s.png
 share/doc/qore-openldap-module/html/bdwn.png
 share/doc/qore-openldap-module/html/classOpenLdap_1_1LdapClient-members.html
@@ -17,10 +14,10 @@ share/doc/qore-openldap-module/html/dir_68267d1309a1af8e8297ef4c3efbcdba.html
 share/doc/qore-openldap-module/html/dir_68267d1309a1af8e8297ef4c3efbcdba.js
 share/doc/qore-openldap-module/html/doc.png
 share/doc/qore-openldap-module/html/doxygen.css
-share/doc/qore-openldap-module/html/doxygen.png
+share/doc/qore-openldap-module/html/doxygen.svg
 share/doc/qore-openldap-module/html/dynsections.js
 share/doc/qore-openldap-module/html/files.html
-share/doc/qore-openldap-module/html/files.js
+share/doc/qore-openldap-module/html/files_dup.js
 share/doc/qore-openldap-module/html/folderclosed.png
 share/doc/qore-openldap-module/html/folderopen.png
 share/doc/qore-openldap-module/html/functions.html
@@ -33,6 +30,8 @@ share/doc/qore-openldap-module/html/group__ldap__scope__constants.html
 share/doc/qore-openldap-module/html/group__ldap__scope__constants.js
 share/doc/qore-openldap-module/html/index.html
 share/doc/qore-openldap-module/html/jquery.js
+share/doc/qore-openldap-module/html/menu.js
+share/doc/qore-openldap-module/html/menudata.js
 share/doc/qore-openldap-module/html/modules.html
 share/doc/qore-openldap-module/html/modules.js
 share/doc/qore-openldap-module/html/namespaceOpenLdap.html
@@ -40,7 +39,7 @@ share/doc/qore-openldap-module/html/namespaceOpenLdap.js
 share/doc/qore-openldap-module/html/namespacemembers.html
 share/doc/qore-openldap-module/html/namespacemembers_vars.html
 share/doc/qore-openldap-module/html/namespaces.html
-share/doc/qore-openldap-module/html/namespaces.js
+share/doc/qore-openldap-module/html/namespaces_dup.js
 share/doc/qore-openldap-module/html/nav_f.png
 share/doc/qore-openldap-module/html/nav_g.png
 share/doc/qore-openldap-module/html/nav_h.png
@@ -49,6 +48,7 @@ share/doc/qore-openldap-module/html/navtree.js
 share/doc/qore-openldap-module/html/navtreedata.js
 share/doc/qore-openldap-module/html/navtreeindex0.js
 share/doc/qore-openldap-module/html/open.png
+share/doc/qore-openldap-module/html/qore-logo-55x200.png
 share/doc/qore-openldap-module/html/resize.js
 share/doc/qore-openldap-module/html/search/all_0.html
 share/doc/qore-openldap-module/html/search/all_0.js
@@ -74,9 +74,11 @@ share/doc/qore-openldap-module/html/search/all_a.html
 share/doc/qore-openldap-module/html/search/all_a.js
 share/doc/qore-openldap-module/html/search/all_b.html
 share/doc/qore-openldap-module/html/search/all_b.js
+share/doc/qore-openldap-module/html/search/all_c.html
+share/doc/qore-openldap-module/html/search/all_c.js
 share/doc/qore-openldap-module/html/search/classes_0.html
 share/doc/qore-openldap-module/html/search/classes_0.js
-share/doc/qore-openldap-module/html/search/close.png
+share/doc/qore-openldap-module/html/search/close.svg
 share/doc/qore-openldap-module/html/search/functions_0.html
 share/doc/qore-openldap-module/html/search/functions_0.js
 share/doc/qore-openldap-module/html/search/functions_1.html
@@ -99,10 +101,12 @@ share/doc/qore-openldap-module/html/search/functions_9.html
 share/doc/qore-openldap-module/html/search/functions_9.js
 share/doc/qore-openldap-module/html/search/groups_0.html
 share/doc/qore-openldap-module/html/search/groups_0.js
-share/doc/qore-openldap-module/html/search/mag_sel.png
+share/doc/qore-openldap-module/html/search/mag_sel.svg
 share/doc/qore-openldap-module/html/search/namespaces_0.html
 share/doc/qore-openldap-module/html/search/namespaces_0.js
 share/doc/qore-openldap-module/html/search/nomatches.html
+share/doc/qore-openldap-module/html/search/pages_0.html
+share/doc/qore-openldap-module/html/search/pages_0.js
 share/doc/qore-openldap-module/html/search/search.css
 share/doc/qore-openldap-module/html/search/search.js
 share/doc/qore-openldap-module/html/search/search_l.png
