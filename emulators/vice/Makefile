@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.162 2021/12/29 14:31:24 rhialto Exp $
+# $NetBSD: Makefile,v 1.163 2022/01/27 18:23:39 rhialto Exp $
 
-DISTNAME=	vice-3.6
+DISTNAME=	vice-3.6.1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vice-emu/}
 
@@ -49,7 +49,6 @@ SUBST_STAGE.prefix=	post-configure
 SUBST_FILES.prefix+=	doc/vice.texi
 SUBST_SED.prefix=	-e 's|/usr/local|${PREFIX}|g'
 
-WRKSRC=			${WRKDIR}/vice-3.6.0
 INSTALLATION_DIRS+=	share/doc/vice/html
 INSTALLATION_DIRS+=	share/doc/vice/html/fonts
 
@@ -58,6 +57,7 @@ INSTALLATION_DIRS+=	share/doc/vice/html/fonts
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/share/applications/mimeinfo.cache
 	cd ${DESTDIR}${PREFIX} && ${MV} etc/xdg/menus/applications-merged/vice-org-vice-org.menu share/vice/ || :
+	cd ${DESTDIR}${PREFIX} && ${RMDIR} -r etc || :
 	cd ${WRKSRC}/doc/html && ${CP} -r fonts vice_*.html *.css COPYING \
 		${DESTDIR}${PREFIX}/share/doc/vice/html/
 
