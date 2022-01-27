@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:09:55 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/01/27 17:52:03 nros Exp $
 
-BLAKE2s (qore-openldap-module-1.1.tar.bz2) = 4a3737909d53ede4c474eea756bd0498bf2708bd950e44052c21f34db29b7cc4
-SHA512 (qore-openldap-module-1.1.tar.bz2) = 8d2b4feaead1dad1464020477e5e72d84d0b6276b0f9833f0b116520d5b36ed6baa6e3849648687a68405b1a4957b27356323b9ac1e671176b316ab8999175b0
-Size (qore-openldap-module-1.1.tar.bz2) = 403641 bytes
+BLAKE2s (qore-openldap-module-1.2.tar.bz2) = eadbd8acf4d7e5a4ae2dc970dca8953170a873c29189dc77f3203eb2025ac36f
+SHA512 (qore-openldap-module-1.2.tar.bz2) = c80fd4e0555aed0c6f2d8092159f5dca471afad71db4ea524b0ec72c593d65f9c60f2329b476480f5ae00d6c5ee39c307902d6460b69fa0adf611f2dbf1e5c61
+Size (qore-openldap-module-1.2.tar.bz2) = 460762 bytes
