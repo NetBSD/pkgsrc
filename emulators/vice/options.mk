@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2021/01/01 12:46:03 rhialto Exp $
+# $NetBSD: options.mk,v 1.15 2022/01/27 18:23:39 rhialto Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vice
 PKG_SUPPORTED_OPTIONS=		ffmpeg vice-x64 vice-cpuhistory pulseaudio alsa
@@ -45,7 +45,6 @@ BUILD_DEFS+=	PKG_SYSCONFBASE
 
 .if !empty(PKG_OPTIONS:Msdl)
 CONFIGURE_ARGS+=	--enable-sdlui
-CONFIGURE_ARGS+=	--with-sdlsound
 PLIST.sdl=		yes
 .  include "../../devel/SDL/buildlink3.mk"
 .  include "../../graphics/SDL_image/buildlink3.mk"
@@ -53,7 +52,6 @@ PLIST.sdl=		yes
 
 .if !empty(PKG_OPTIONS:Msdl2)
 CONFIGURE_ARGS+=	--enable-sdlui2
-CONFIGURE_ARGS+=	--with-sdlsound
 PLIST.sdl=		yes
 .  include "../../devel/SDL2/buildlink3.mk"
 .  include "../../graphics/SDL2_image/buildlink3.mk"
