@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.32 2021/10/26 10:18:27 nia Exp $
+$NetBSD: distinfo,v 1.33 2022/01/27 10:03:27 wiz Exp $
 
 BLAKE2s (flake8-3.9.2.tar.gz) = 637dac4f55a50bb5ceef86752577c438067d8ada6e42b09f21bc31cb0147b681
 SHA512 (flake8-3.9.2.tar.gz) = 618fe1b35070b24395e5d4da9fa1b1f6308abf6f85d8de71b8b553f84d70d9cd7d2a6f616fa1418db9a8b5ad3efab038f4e2d7c6020c0c1bdeb8157e666911fd
 Size (flake8-3.9.2.tar.gz) = 164777 bytes
+SHA1 (patch-setup.cfg) = 0574ebd80ba0c9f92ab9d928635bca91535c8ccc
