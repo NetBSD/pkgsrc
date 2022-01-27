@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:18:22 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/01/27 11:35:02 wiz Exp $
 
 BLAKE2s (deprecation-2.1.0.tar.gz) = 0b20926142823763d3f36a9c2a42ad46eee8c719178b0a958920764c4932d34d
 SHA512 (deprecation-2.1.0.tar.gz) = c184665d210c6eeb3f055b23e75c3714f3b18050e03bfe1384baf6c2504f1370116ae0e8c53ff818ccc54c0d633bbb3ba5791fe20b8029f3be0207b019a00275
 Size (deprecation-2.1.0.tar.gz) = 173788 bytes
+SHA1 (patch-tests_test__deprecation.py) = e2e4fa2c14ea0b6ccf003cd1ecc0f6fd694c0fe7
