@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1439 2022/01/23 11:45:11 nia Exp $
+# $NetBSD: Makefile,v 1.1440 2022/01/27 13:27:54 pin Exp $
 #
 
 COMMENT=	Networking tools
@@ -58,6 +58,7 @@ SUBDIR+=	bwping
 SUBDIR+=	cacti
 SUBDIR+=	cacti-spine
 SUBDIR+=	calypso
+SUBDIR+=	castor
 SUBDIR+=	cclive
 SUBDIR+=	ccrtp
 SUBDIR+=	cdpd
