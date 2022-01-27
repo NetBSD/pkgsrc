@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/01/04 20:53:03 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/27 10:57:31 wiz Exp $
 
 DISTNAME=	extras-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,9 +12,9 @@ COMMENT=	Useful extra bits for Python
 LICENSE=	mit
 
 # testtools depends on extras
-#BUILD_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
+#PYTHON_VERSIONED_DEPENDENCIES+=	testtools:test
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+PYTHON_VERSIONED_DEPENDENCIES+=	test:test
 
 USE_LANGUAGES=	# none
 
