@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/12/08 16:02:40 adam Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/27 19:04:12 wiz Exp $
 
 DISTNAME=	spice-0.14.3
 PKGNAME=	${DISTNAME:S/spice/spice-server/}
@@ -20,7 +20,10 @@ PKGCONFIG_OVERRIDE+=	spice-server.pc.in
 
 LDFLAGS.SunOS+=	-lnsl -lsocket
 
+PYTHON_FOR_BUILD_ONLY=	tool
+
 .include "../../audio/libopus/buildlink3.mk"
+.include "../../lang/python/tool.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/spice-protocol/buildlink3.mk"
