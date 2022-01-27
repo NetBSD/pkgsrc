@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/01/23 19:32:15 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/27 08:05:17 wiz Exp $
 
 DISTNAME=	pure_eval-0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/alexmojaki/pure_eval
 COMMENT=	Safely evaluate AST nodes without side effects
 LICENSE=	mit
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>0:../../devel/py-test
 
 USE_LANGUAGES=	# none
