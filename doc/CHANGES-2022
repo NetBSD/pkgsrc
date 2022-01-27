@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.452 2022/01/27 08:38:17 adam Exp $
+$NetBSD: CHANGES-2022,v 1.453 2022/01/27 09:19:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -601,3 +601,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/SOPE5 to 5.5.0 [tm 2022-01-26]
 	Updated devel/py-ordered-set to 4.1.0 [adam 2022-01-27]
 	Updated www/py-httpx to 0.22.0 [adam 2022-01-27]
+	Updated textproc/py-pandocfilters to 1.5.0 [adam 2022-01-27]
+	Updated devel/py-jupyter_core to 4.9.1 [adam 2022-01-27]
