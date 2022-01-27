@@ -1,4 +1,7 @@
-$NetBSD: patch-setup.py,v 1.1 2022/01/27 10:39:35 wiz Exp $
+$NetBSD: patch-setup.py,v 1.2 2022/01/27 10:39:53 wiz Exp $
+
+Seems unused.
+https://github.com/google/pyu2f/issues/33
 
 --- setup.py.orig	2020-10-30 20:02:44.000000000 +0000
 +++ setup.py
