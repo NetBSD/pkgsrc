@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/01/25 12:16:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.27 2022/01/27 21:33:42 schmonz Exp $
 
 PKGREVISION= 3
 .include "dist.mk"
@@ -38,7 +38,7 @@ PTHREAD_OPTS+=	require
 .include "../../mk/bsd.prefs.mk"
 
 # http://bugs.python.org/issue13241
-.if !empty(MACHINE_PLATFORM:MDarwin-10.*)
+.if !empty(MACHINE_PLATFORM:MDarwin-1[12].*)
 PKGSRC_COMPILER=	clang
 PKG_CC=			clang
 PKG_CXX=		clang++
