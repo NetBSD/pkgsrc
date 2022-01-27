@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:05 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/27 10:57:31 wiz Exp $
 
 DISTNAME=	fixtures-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,9 +17,10 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.0.0:../../lang/py-six
 # https://github.com/testing-cabal/fixtures/issues/35
 # TEST_DEPENDS
 # needs py-testtools for testing, but that depends on this
-#BUILD_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
+#PYTHON_VERSIONED_DEPENDENCIES+=	testtools:build
 BUILD_DEPENDS+=		${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 BUILD_DEPENDS+=		${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
 
 .include "../../lang/python/egg.mk"
+#.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
