@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.465 2022/01/27 17:02:03 adam Exp $
+$NetBSD: CHANGES-2022,v 1.466 2022/01/27 17:49:21 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -618,3 +618,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-prompt_toolkit to 3.0.25 [adam 2022-01-27]
 	Updated databases/py-redis to 4.1.2 [adam 2022-01-27]
 	Updated textproc/ugrep to 3.7.0 [adam 2022-01-27]
+	Updated lang/qore to 1.2 [nros 2022-01-27]
