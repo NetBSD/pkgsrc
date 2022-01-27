@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:23:18 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/01/27 19:14:31 nros Exp $
 
-BLAKE2s (qore-json-module-1.7.tar.bz2) = f98ed5893d306d9259be26a17a35eced6ed20071a35b71fb5482b2c790d40c60
-SHA512 (qore-json-module-1.7.tar.bz2) = 1fa4342964f21ac57ac666063390b033e4e6e9d0315191b11389e27d72c51b48a97bbeb56c4094b4d12bd103282b5dfe9eb3dbe08449e422c809f3ba0e13f824
-Size (qore-json-module-1.7.tar.bz2) = 628318 bytes
+BLAKE2s (qore-json-module-1.8.tar.bz2) = 2dc6d3ab6e66589959ccf4fbb6e305dc81c9c4c99cfb4ee9fccf0d42cd61c4a7
+SHA512 (qore-json-module-1.8.tar.bz2) = fb1c56314826156caac9db7aebf4ef0e0b4960f8ebbd935aa9547dea10507f461afa22210e80c2a52693d585b4ef08f0fdaa3e8c2dfed00b6c3f47e23758391d
+Size (qore-json-module-1.8.tar.bz2) = 668065 bytes
