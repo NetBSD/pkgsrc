@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2022/01/23 19:19:10 adam Exp $
+$NetBSD: distinfo,v 1.7 2022/01/27 08:20:26 wiz Exp $
 
 BLAKE2s (l18n-2021.3.tar.gz) = af279d318cfd2eac219d436bcce351ae331ff1143122b52a54ea16514fb4fccc
 SHA512 (l18n-2021.3.tar.gz) = 9e473cf9b80ea8e9932bf5a8497cd128526ec9c3a91630529fa7e3e78981f6baeac59262e73803af4487b1d1094d5f027c13bfdc46c47180ea19e37b73d404a5
 Size (l18n-2021.3.tar.gz) = 50712 bytes
+SHA1 (patch-setup.py) = efb23014fa18dcf6f3ddfc1cde1e1136c92cfc66
