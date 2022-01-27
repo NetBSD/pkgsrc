@@ -1,4 +1,4 @@
-# $NetBSD: fuse.buildlink3.mk,v 1.24 2022/01/22 18:23:43 pho Exp $
+# $NetBSD: fuse.buildlink3.mk,v 1.25 2022/01/27 04:27:05 pho Exp $
 #
 # Makefile fragment for packages using the FUSE framework.
 #
@@ -81,7 +81,7 @@ BUILTIN_VERSION.fuse!=					\
 		/\#define[ \t]+FUSE_MINOR_VERSION[ \t]/ { if (minor == "") minor = $$3; } \
 		END { \
 			if (major != "" && minor != "") \
-				print major "." minor; \
+				print major "." minor ".0"; \
 			else \
 				print ""; \
 		}' ${H_FUSE}
