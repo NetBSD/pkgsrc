@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/01/04 20:53:00 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/27 11:35:02 wiz Exp $
 
 DISTNAME=	deprecation-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,12 +11,11 @@ HOMEPAGE=	https://deprecation.readthedocs.io/
 COMMENT=	Library to handle automated deprecations
 LICENSE=	apache-2.0
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-unittest2-[0-9]*:../../devel/py-unittest2
+DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 
-PYTHON_VERSIONED_DEPENDENCIES+=	packaging
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
