@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2022/01/27 09:44:02 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/ujson-stubs/METADATA.toml
+${PYSITELIB}/ujson-stubs/__init__.pyi
