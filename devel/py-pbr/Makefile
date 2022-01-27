@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2022/01/27 11:17:37 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2022/01/27 11:23:16 wiz Exp $
 
 DISTNAME=	pbr-5.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,7 +24,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 TEST_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.32.0:../../devel/py-wheel
 # not packaged: hacking, stestr
 
-PYTHON_VERSIONED_DEPENDENCIES+=	testtools:test
+# circular dependency - testtools depends on pbr
+#PYTHON_VERSIONED_DEPENDENCIES+=	testtools:test
 
 REPLACE_PYTHON+=	pbr/tests/testpackage/setup.py
 
