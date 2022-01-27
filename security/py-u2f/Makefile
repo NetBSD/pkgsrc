@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:54:45 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/27 10:39:35 wiz Exp $
 
 DISTNAME=	pyu2f-0.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -14,7 +14,8 @@ LICENSE=	apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-fakefs>=2.4:../../devel/py-fakefs
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=1.0.1:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-unittest2>=0.5.1:../../devel/py-unittest2
+# seems unused: https://github.com/google/pyu2f/issues/33
+#TEST_DEPENDS+=	${PYPKGPREFIX}-unittest2>=0.5.1:../../devel/py-unittest2
 
 USE_LANGUAGES=	# none
 
