@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2021/12/08 16:06:46 adam Exp $
+# $NetBSD: Makefile,v 1.14 2022/01/27 19:18:12 nros Exp $
 
-DISTNAME=	qore-xml-module-1.4.1
-PKGREVISION=	5
+DISTNAME=	qore-xml-module-1.5.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qorelanguage/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,7 +21,7 @@ PTHREAD_OPTS+=	native
 
 CONFIGURE_ARGS+=	--with-libsuffix=""
 
-REPLACE_QORE=	bin/soaputil
+REPLACE_QORE=	bin/soaputil bin/webdav-server
 
 #This is needed in order to comply the with MIT license and binary distribution
 #Install docs
