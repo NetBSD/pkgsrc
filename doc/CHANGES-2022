@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.466 2022/01/27 17:49:21 nros Exp $
+$NetBSD: CHANGES-2022,v 1.467 2022/01/27 17:50:01 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -619,3 +619,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/py-redis to 4.1.2 [adam 2022-01-27]
 	Updated textproc/ugrep to 3.7.0 [adam 2022-01-27]
 	Updated lang/qore to 1.2 [nros 2022-01-27]
+	Updated databases/qore-freetds-module to 1.1 [nros 2022-01-27]
