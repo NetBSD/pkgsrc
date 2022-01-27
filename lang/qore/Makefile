@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2020/01/18 21:48:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2022/01/27 17:39:45 nros Exp $
 
-DISTNAME=	qore-0.8.13.5
-PKGREVISION=	1
+DISTNAME=	qore-1.2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qorelanguage/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,6 +11,7 @@ MAINTAINER=	nros@NetBSD.org
 COMMENT=	Embeddable multithreaded scripting language
 HOMEPAGE=	http://www.qore.org/
 LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2.1 OR mit
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}.0
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -22,8 +22,9 @@ FLEX_REQD=	2.5.31
 
 PKGCONFIG_OVERRIDE+=	qore.pc.in
 REPLACE_QORE=		bin/qdbg bin/qdbg-remote bin/qdbg-server
-REPLACE_QORE+=		bin/qget bin/rest bin/schema-reverse
-REPLACE_QORE+=		bin/sfrest bin/sqlutil doxygen/qdx
+REPLACE_QORE+=		bin/qdbg-vsc-adapter bin/qdp bin/qget
+REPLACE_QORE+=		bin/rest bin/saprest bin/schema-reverse
+REPLACE_QORE+=		bin/sfrest bin/sqlutil doxygen/qdx doxygen/qjar
 
 CONFIGURE_ARGS+=	--with-libsuffix="" --disable-single-compilation-unit
 
