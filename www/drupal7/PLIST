@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2021/08/29 14:48:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.29 2022/01/27 13:38:03 taca Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -219,13 +219,16 @@ share/drupal/misc/ui/jquery.ui.button.css
 share/drupal/misc/ui/jquery.ui.button.min.js
 share/drupal/misc/ui/jquery.ui.core.css
 share/drupal/misc/ui/jquery.ui.core.min.js
+share/drupal/misc/ui/jquery.ui.datepicker-1.13.0-backport.js
 share/drupal/misc/ui/jquery.ui.datepicker.css
 share/drupal/misc/ui/jquery.ui.datepicker.min.js
+share/drupal/misc/ui/jquery.ui.dialog-1.13.0-backport.js
 share/drupal/misc/ui/jquery.ui.dialog.css
 share/drupal/misc/ui/jquery.ui.dialog.min.js
 share/drupal/misc/ui/jquery.ui.draggable.min.js
 share/drupal/misc/ui/jquery.ui.droppable.min.js
 share/drupal/misc/ui/jquery.ui.mouse.min.js
+share/drupal/misc/ui/jquery.ui.position-1.13.0-backport.js
 share/drupal/misc/ui/jquery.ui.position.min.js
 share/drupal/misc/ui/jquery.ui.progressbar.css
 share/drupal/misc/ui/jquery.ui.progressbar.min.js
@@ -912,6 +915,9 @@ share/drupal/modules/system/tests/cron_queue_test.info
 share/drupal/modules/system/tests/cron_queue_test.module
 share/drupal/modules/system/tests/system_cron_test.info
 share/drupal/modules/system/tests/system_cron_test.module
+share/drupal/modules/system/tests/system_test_archive.tar.gz
+share/drupal/modules/system/tests/system_test_archive_abs.tgz
+share/drupal/modules/system/tests/system_test_archive_rel.tar
 share/drupal/modules/system/theme.api.php
 share/drupal/modules/taxonomy/taxonomy-term.tpl.php
 share/drupal/modules/taxonomy/taxonomy.admin.inc
