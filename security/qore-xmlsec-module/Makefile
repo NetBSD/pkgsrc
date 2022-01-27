@@ -1,30 +1,22 @@
-# $NetBSD: Makefile,v 1.11 2021/12/08 16:06:23 adam Exp $
+# $NetBSD: Makefile,v 1.12 2022/01/27 18:27:16 nros Exp $
 
-DISTNAME=	qore-xmlsec-module-0.0.2
-PKGREVISION=	13
+DISTNAME=	qore-xmlsec-module-1.0.0
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qore/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=qorelanguage/}
+GITHUB_PROJECT=	module-xmlsec
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	nros@users.sourceforge.net
+MAINTAINER=	nros@NetBSD.org
 HOMEPAGE=	http://www.qore.org/
 COMMENT=	XMLSec module for Qore
 LICENSE=	gnu-lgpl-v2.1
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
+USE_CMAKE=	yes
 USE_LANGUAGES=	c c++11
 PTHREAD_OPTS+=	native
 
-CONFIGURE_ARGS+=	--with-xmlsec-dir=${BUILDLINK_PREFIX.xmlsec1}
-CONFIGURE_ARGS+=	--with-libxml2-dir=${BUILDLINK_PREFIX.libxml2}
-CONFIGURE_ARGS+=	--with-qore-dir=${BUILDLINK_PREFIX.qore}
-
-INSTALLATION_DIRS+=     share/doc/${PKGBASE}
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/docs/xmlsec-module-doc.html \
-		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-
-.include "options.mk"
+CMAKE_USE_GNU_INSTALL_DIRS=	no
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../security/xmlsec1/buildlink3.mk"
