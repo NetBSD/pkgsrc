@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:23:09 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/01/27 09:15:25 adam Exp $
 
-BLAKE2s (pandocfilters-1.4.3.tar.gz) = 466c869bfdcc03986875c0f89c0dde3f7fb3ef282d01d019001770085a467dd1
-SHA512 (pandocfilters-1.4.3.tar.gz) = 9c7ae1329c103ff2baae3488edfcbfaba183bc94146b29e413e7e83ba2ff2dee69823138bf213f5c81a8b0097c2d9329bd05620b10c646662a9617aae7a528a9
-Size (pandocfilters-1.4.3.tar.gz) = 16586 bytes
+BLAKE2s (pandocfilters-1.5.0.tar.gz) = f77c109c61df7ea64d7d68cbb024d1c4d1c752a4031e8138572b08561d7754e6
+SHA512 (pandocfilters-1.5.0.tar.gz) = 32586d4718fd4b7047d850ca767ffacf8fba60844edf8469458e8549286e571774e7178678c7121be62b9a3c819a25de2d30b8fe58a539553336f322b87e836e
+Size (pandocfilters-1.5.0.tar.gz) = 8405 bytes
