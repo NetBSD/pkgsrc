@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/01/18 21:48:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/27 18:15:27 nros Exp $
 
 DISTNAME=	qore-opengl-module-0.0.3
 PKGREVISION=	11
@@ -21,6 +21,8 @@ pre-configure:
 	aclocal; autoheader; automake -a --foreign -i; autoconf
 
 CONFIGURE_ARGS+=	--with-opengl=${BUILDLINK_PREFIX.MesaLib}
+
+BROKEN=		"This package has not been updated to use the new Qore apis and breaks because of that."
 
 INSTALLATION_DIRS+=     share/doc/${PKGBASE}
 post-install:
