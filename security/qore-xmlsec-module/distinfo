@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:17:52 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/01/27 18:27:16 nros Exp $
 
-BLAKE2s (qore-xmlsec-module-0.0.2.tar.gz) = b52aa2798fa8ec2829bbd8e87ff9c73c58c9a54b6e29c32d2dc24a109c69f2a2
-SHA512 (qore-xmlsec-module-0.0.2.tar.gz) = e4a60e795c40717b6d397bcdc5a4d45cf75f08dbaec98e3357ff669875ad41718bf35b49e987c07fbc14e4367e6507a11c7b16a615e7168958841dd8f023a2c2
-Size (qore-xmlsec-module-0.0.2.tar.gz) = 421326 bytes
+BLAKE2s (qore-xmlsec-module-1.0.0.tar.bz2) = 032ea59c72bf8b579119f3ea94382237ed6e4b21cbe10b137730b67ecf03c5f7
+SHA512 (qore-xmlsec-module-1.0.0.tar.bz2) = 10a9e48e97109f1a056813902a9b039d6333c02a3ffe07f93919632874334d5e66a5c0c807278981ed5cbba0d715ceab0d97e3946c1386fed19b65b81fdb5ff3
+Size (qore-xmlsec-module-1.0.0.tar.bz2) = 31258 bytes
 SHA1 (patch-configure) = df7a2896c6f887d3456108690885cde1e6f73b89
 SHA1 (patch-src_Makefile.in) = b018b3be8dfb7c2ba2c3c108aed111ae969b782d
