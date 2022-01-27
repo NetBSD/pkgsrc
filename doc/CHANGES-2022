@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.455 2022/01/27 10:30:03 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.456 2022/01/27 10:51:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -605,3 +605,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-jupyter_core to 4.9.1 [adam 2022-01-27]
 	Added devel/py-types-ujson version 4.2.1 [wiz 2022-01-27]
 	Updated net/py-gcs-oauth2-boto-plugin to 3.0 [wiz 2022-01-27]
+	Added devel/py-testtools24 version 2.4.0nb1 [wiz 2022-01-27]
