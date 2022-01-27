@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:18:42 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/01/27 08:10:07 wiz Exp $
 
 BLAKE2s (newt-0.52.16.tar.gz) = ef3dd1dab5ec4695901d21493661e5ff338a1267fdcdfb9b1eb479b324823e23
 SHA512 (newt-0.52.16.tar.gz) = 38cf5aa6660a3ee0409ed0767c02d777a4a2c28a000a359bb735da5abf8ee38f375ef333d10865a1eb3828497b6c58d2f3f6011c7b7e7c2360612b985dcf3d25
 Size (newt-0.52.16.tar.gz) = 183487 bytes
-SHA1 (patch-Makefile.in) = cae82773fcb94dc9b9aa4349b52308e3136843f2
+SHA1 (patch-Makefile.in) = 6c029323ba411aff1f137149ee21cffb7decdb4a
 SHA1 (patch-configure.ac) = 8c685e25e89503cb5e62362c8b8132931d4c6184
 SHA1 (patch-po_Makefile) = dfa6352d1f10246bd7d2f9cd4f256394dc1a674a
