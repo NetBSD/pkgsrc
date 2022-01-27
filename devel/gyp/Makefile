@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/01/27 18:42:15 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2022/01/27 18:47:07 wiz Exp $
 
 GIT_VERSION=	20210830.d6c5dd51dc3a60bf4ff32a5256713690a1a10376
 DIST_VERSION=	0.1
@@ -17,6 +17,8 @@ WRKSRC=		${WRKDIR}
 EGG_NAME=	gyp-${DIST_VERSION}
 
 USE_PKG_RESOURCES=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # REPLACE_PYTHON settings farmed out due to size...
 .include "Makefile.replace-python"
