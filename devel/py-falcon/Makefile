@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/01/05 15:41:03 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2022/01/27 10:57:31 wiz Exp $
 
 DISTNAME=	falcon-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,9 +14,9 @@ LICENSE=	apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
-TEST_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
+PYTHON_VERSIONED_DEPENDENCIES+=	testtools:test
 USE_PKG_RESOURCES=	yes
 
 post-install:
@@ -25,4 +25,5 @@ post-install:
 	${MV} falcon-print-routes falcon-print-routes-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

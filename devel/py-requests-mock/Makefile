@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/01/04 20:53:36 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/01/27 10:57:32 wiz Exp $
 
 DISTNAME=	requests-mock-1.9.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,11 +18,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-fixtures-[0-9]*:../../devel/py-fixtures
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-purl-[0-9]*:../../www/py-purl
 TEST_DEPENDS+=	${PYPKGPREFIX}-testrepository>=0.0.18:../../devel/py-testrepository
-TEST_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONED_DEPENDENCIES=	sphinx:test test:test
+PYTHON_VERSIONED_DEPENDENCIES=	sphinx:test test:test testtools:test
 
 do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests

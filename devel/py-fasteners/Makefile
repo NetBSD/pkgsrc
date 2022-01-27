@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/01/04 20:53:04 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/27 10:57:31 wiz Exp $
 
 DISTNAME=	fasteners-0.16.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,8 @@ COMMENT=	Python package providing useful locks
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-TEST_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
+
+PYTHON_VERSIONED_DEPENDENCIES+=	testtools:test
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} == 27
@@ -22,4 +23,5 @@ DEPENDS+=	${PYPKGPREFIX}-monotonic>=0.1:../../time/py-monotonic
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
