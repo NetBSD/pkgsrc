@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2021/12/29 14:31:24 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.33 2022/01/27 18:23:39 rhialto Exp $
 bin/c1541
 bin/cartconv
 bin/petcat
@@ -36,6 +36,7 @@ share/doc/vice/GTK3-debian-frankenvice.md
 share/doc/vice/Linux-GTK3-Howto.txt
 share/doc/vice/NetBSD-GTK3-Howto.txt
 share/doc/vice/NetBSD-howto.txt
+share/doc/vice/OpenBSD-GTK3-Howto.txt
 share/doc/vice/Readme-SDL.txt
 share/doc/vice/Readme-SDL2.txt
 share/doc/vice/Release-Howto.txt
@@ -111,11 +112,12 @@ share/vice/C128/deekay.vpl
 share/vice/C128/default.vrs
 share/vice/C128/frodo.vpl
 share/vice/C128/godot.vpl
+${PLIST.gh}share/vice/C128/gtk3-hotkeys-mac.vhk
 ${PLIST.gh}share/vice/C128/gtk3-hotkeys.vhk
 ${PLIST.gh}share/vice/C128/gtk3_pos.vkm
-share/vice/C128/gtk3_sym.vkm
-share/vice/C128/gtk3_sym_de.vkm
-share/vice/C128/gtk3_sym_fr.vkm
+${PLIST.gh}share/vice/C128/gtk3_sym.vkm
+${PLIST.gh}share/vice/C128/gtk3_sym_de.vkm
+${PLIST.gh}share/vice/C128/gtk3_sym_fr.vkm
 share/vice/C128/kernal
 share/vice/C128/kernal64
 share/vice/C128/kernalch
@@ -134,8 +136,12 @@ share/vice/C128/pepto-palold.vpl
 share/vice/C128/pixcen.vpl
 share/vice/C128/ptoing.vpl
 share/vice/C128/rgb.vpl
-${PLIST.sdl}share/vice/C128/sdl_hotkeys.vkm
+${PLIST.sdl}share/vice/C128/sdl-hotkeys.vhk
 ${PLIST.sdl}share/vice/C128/sdl_pos.vkm
+${PLIST.sdl}share/vice/C128/sdl_sym.vkm
+${PLIST.sdl}share/vice/C128/sdl_sym_de.vkm
+${PLIST.sdl}share/vice/C128/sdl_sym_fr.vkm
+${PLIST.sdl}share/vice/C128/sdl_v128.vkm
 share/vice/C128/vdc_comp.vpl
 share/vice/C128/vdc_deft.vpl
 share/vice/C128/vice.vpl
@@ -154,6 +160,7 @@ share/vice/C64/edkernal
 share/vice/C64/frodo.vpl
 share/vice/C64/godot.vpl
 share/vice/C64/gskernal
+${PLIST.gh}share/vice/C64/gtk3-hotkeys-mac.vhk
 ${PLIST.gh}share/vice/C64/gtk3-hotkeys.vhk
 ${PLIST.gh}share/vice/C64/gtk3-winvice-legacy.vhk
 ${PLIST.gh}share/vice/C64/gtk3_keyrah.vkm
@@ -165,6 +172,7 @@ ${PLIST.gh}share/vice/C64/gtk3_pos_es.vkm
 ${PLIST.gh}share/vice/C64/gtk3_pos_it.vkm
 ${PLIST.gh}share/vice/C64/gtk3_pos_se.vkm
 ${PLIST.gh}share/vice/C64/gtk3_sym.vkm
+${PLIST.gh}share/vice/C64/gtk3_sym_be.vkm
 ${PLIST.gh}share/vice/C64/gtk3_sym_da.vkm
 ${PLIST.gh}share/vice/C64/gtk3_sym_de.vkm
 ${PLIST.gh}share/vice/C64/gtk3_sym_fr.vkm
@@ -184,8 +192,8 @@ share/vice/C64/pepto-palold.vpl
 share/vice/C64/pixcen.vpl
 share/vice/C64/ptoing.vpl
 share/vice/C64/rgb.vpl
-${PLIST.sdl}share/vice/C64/sdl_hotkeys.vkm
-${PLIST.sdl}share/vice/C64/sdl_hotkeys_vsid.vkm
+${PLIST.sdl}share/vice/C64/sdl-hotkeys-vsid.vhk
+${PLIST.sdl}share/vice/C64/sdl-hotkeys.vhk
 ${PLIST.sdl}share/vice/C64/sdl_joymap_ps3.vjm
 ${PLIST.sdl}share/vice/C64/sdl_joymap_thec64.vjm
 ${PLIST.sdl}share/vice/C64/sdl_keyrah.vkm
@@ -194,7 +202,6 @@ ${PLIST.sdl}share/vice/C64/sdl_keyrah_de.vkm
 ${PLIST.sdl}share/vice/C64/sdl_keyrah_retropie.vkm
 ${PLIST.sdl}share/vice/C64/sdl_keyrah_retropie_de.vkm
 ${PLIST.sdl}share/vice/C64/sdl_pos.vkm
-${PLIST.sdl}share/vice/C64/sdl_pos_bmc64.vkm
 ${PLIST.sdl}share/vice/C64/sdl_pos_ch.vkm
 ${PLIST.sdl}share/vice/C64/sdl_pos_da.vkm
 ${PLIST.sdl}share/vice/C64/sdl_pos_de.vkm
@@ -203,6 +210,7 @@ ${PLIST.sdl}share/vice/C64/sdl_pos_no.vkm
 ${PLIST.sdl}share/vice/C64/sdl_sym.vkm
 ${PLIST.sdl}share/vice/C64/sdl_sym_da.vkm
 ${PLIST.sdl}share/vice/C64/sdl_sym_de.vkm
+${PLIST.sdl}share/vice/C64/sdl_sym_fr.vkm
 ${PLIST.sdl}share/vice/C64/sdl_sym_it.vkm
 ${PLIST.sdl}share/vice/C64/sdl_sym_nl.vkm
 share/vice/C64/sxkernal
@@ -212,6 +220,7 @@ share/vice/C64DTV/c64mem.sym
 share/vice/C64DTV/chargen
 share/vice/C64DTV/default.vrs
 share/vice/C64DTV/dtvrom.bin
+${PLIST.gh}share/vice/C64DTV/gtk3-hotkeys-mac.vhk
 ${PLIST.gh}share/vice/C64DTV/gtk3-hotkeys.vhk
 ${PLIST.gh}share/vice/C64DTV/gtk3_keyrah.vkm
 ${PLIST.gh}share/vice/C64DTV/gtk3_keyrah_de.vkm
@@ -222,6 +231,7 @@ ${PLIST.gh}share/vice/C64DTV/gtk3_pos_es.vkm
 ${PLIST.gh}share/vice/C64DTV/gtk3_pos_it.vkm
 ${PLIST.gh}share/vice/C64DTV/gtk3_pos_se.vkm
 ${PLIST.gh}share/vice/C64DTV/gtk3_sym.vkm
+${PLIST.gh}share/vice/C64DTV/gtk3_sym_be.vkm
 ${PLIST.gh}share/vice/C64DTV/gtk3_sym_da.vkm
 ${PLIST.gh}share/vice/C64DTV/gtk3_sym_de.vkm
 ${PLIST.gh}share/vice/C64DTV/gtk3_sym_fr.vkm
@@ -230,7 +240,7 @@ ${PLIST.gh}share/vice/C64DTV/gtk3_sym_nl.vkm
 ${PLIST.gh}share/vice/C64DTV/gtk3_sym_se.vkm
 ${PLIST.gh}share/vice/C64DTV/gtk3_the64_de.vkm
 share/vice/C64DTV/kernal
-${PLIST.sdl}share/vice/C64DTV/sdl_hotkeys.vkm
+${PLIST.sdl}share/vice/C64DTV/sdl-hotkeys.vhk
 ${PLIST.sdl}share/vice/C64DTV/sdl_keyrah.vkm
 ${PLIST.sdl}share/vice/C64DTV/sdl_keyrah_combian.vkm
 ${PLIST.sdl}share/vice/C64DTV/sdl_keyrah_de.vkm
@@ -245,6 +255,7 @@ ${PLIST.sdl}share/vice/C64DTV/sdl_pos_no.vkm
 ${PLIST.sdl}share/vice/C64DTV/sdl_sym.vkm
 ${PLIST.sdl}share/vice/C64DTV/sdl_sym_da.vkm
 ${PLIST.sdl}share/vice/C64DTV/sdl_sym_de.vkm
+${PLIST.sdl}share/vice/C64DTV/sdl_sym_fr.vkm
 ${PLIST.sdl}share/vice/C64DTV/sdl_sym_nl.vkm
 share/vice/C64DTV/spiff.vpl
 share/vice/CBM-II/amber.vpl
@@ -264,6 +275,7 @@ share/vice/CBM-II/deekay.vpl
 share/vice/CBM-II/frodo.vpl
 share/vice/CBM-II/godot.vpl
 share/vice/CBM-II/green.vpl
+${PLIST.gh}share/vice/CBM-II/gtk3-hotkeys-mac.vhk
 ${PLIST.gh}share/vice/CBM-II/gtk3-hotkeys.vhk
 ${PLIST.gh}share/vice/CBM-II/gtk3_pos.vkm
 ${PLIST.gh}share/vice/CBM-II/gtk3_sym.vkm
@@ -284,7 +296,8 @@ share/vice/CBM-II/rom128l.vrs
 share/vice/CBM-II/rom256h.vrs
 share/vice/CBM-II/rom256l.vrs
 share/vice/CBM-II/rom500.vrs
-${PLIST.sdl}share/vice/CBM-II/sdl_hotkeys.vkm
+${PLIST.sdl}share/vice/CBM-II/sdl-hotkeys.vhk
+${PLIST.sdl}share/vice/CBM-II/sdl_pos.vkm
 ${PLIST.sdl}share/vice/CBM-II/sdl_sym.vkm
 share/vice/CBM-II/vice.vpl
 share/vice/CBM-II/white.vpl
@@ -326,6 +339,7 @@ share/vice/PET/edit-4-80-b-50Hz.901474-04_.bin
 share/vice/PET/edit-4-80-b-60Hz.901474-03.bin
 share/vice/PET/edit-4-b-noCRTC.901474-02.bin
 share/vice/PET/green.vpl
+${PLIST.gh}share/vice/PET/gtk3-hotkeys-mac.vhk
 ${PLIST.gh}share/vice/PET/gtk3-hotkeys.vhk
 ${PLIST.gh}share/vice/PET/gtk3_bude_pos.vkm
 ${PLIST.gh}share/vice/PET/gtk3_bude_pos_de.vkm
@@ -354,6 +368,7 @@ share/vice/PET/rom4b40.vrs
 share/vice/PET/rom4b80.vrs
 share/vice/PET/rom4g40.vrs
 share/vice/PET/romsuperpet.vrs
+${PLIST.sdl}share/vice/PET/sdl-hotkeys.vhk
 ${PLIST.sdl}share/vice/PET/sdl_buuk_pos.vkm
 ${PLIST.sdl}share/vice/PET/sdl_buuk_pos_de.vkm
 ${PLIST.sdl}share/vice/PET/sdl_buuk_sym.vkm
@@ -362,7 +377,7 @@ ${PLIST.sdl}share/vice/PET/sdl_grus_pos.vkm
 ${PLIST.sdl}share/vice/PET/sdl_grus_pos_de.vkm
 ${PLIST.sdl}share/vice/PET/sdl_grus_sym.vkm
 ${PLIST.sdl}share/vice/PET/sdl_grus_sym_de.vkm
-${PLIST.sdl}share/vice/PET/sdl_hotkeys.vkm
+${PLIST.sdl}share/vice/PET/sdl_pos.vkm
 ${PLIST.sdl}share/vice/PET/sdl_sym.vkm
 share/vice/PET/waterloo-a000.901898-01.bin
 share/vice/PET/waterloo-b000.901898-02.bin
@@ -377,6 +392,7 @@ share/vice/PLUS4/basic
 share/vice/PLUS4/c2lo.364
 share/vice/PLUS4/colodore_ted.vpl
 share/vice/PLUS4/default.vrs
+${PLIST.gh}share/vice/PLUS4/gtk3-hotkeys-mac.vhk
 ${PLIST.gh}share/vice/PLUS4/gtk3-hotkeys.vhk
 ${PLIST.gh}share/vice/PLUS4/gtk3_c116_pos_it.vkm
 ${PLIST.gh}share/vice/PLUS4/gtk3_c16_pos_it.vkm
@@ -390,6 +406,11 @@ share/vice/PLUS4/kernal
 share/vice/PLUS4/kernal.005
 share/vice/PLUS4/kernal.232
 share/vice/PLUS4/kernal.364
+${PLIST.sdl}share/vice/PLUS4/sdl-hotkeys.vhk
+${PLIST.sdl}share/vice/PLUS4/sdl_pos.vkm
+${PLIST.sdl}share/vice/PLUS4/sdl_pos_fr.vkm
+${PLIST.sdl}share/vice/PLUS4/sdl_sym.vkm
+${PLIST.sdl}share/vice/PLUS4/sdl_sym_de.vkm
 share/vice/PLUS4/yape-ntsc.vpl
 share/vice/PLUS4/yape-pal.vpl
 share/vice/PRINTER/1520.vpl
@@ -410,6 +431,7 @@ share/vice/SCPU64/deekay.vpl
 share/vice/SCPU64/default.vrs
 share/vice/SCPU64/frodo.vpl
 share/vice/SCPU64/godot.vpl
+${PLIST.gh}share/vice/SCPU64/gtk3-hotkeys-mac.vhk
 ${PLIST.gh}share/vice/SCPU64/gtk3-hotkeys.vhk
 ${PLIST.gh}share/vice/SCPU64/gtk3_keyrah.vkm
 ${PLIST.gh}share/vice/SCPU64/gtk3_keyrah_de.vkm
@@ -420,6 +442,7 @@ ${PLIST.gh}share/vice/SCPU64/gtk3_pos_es.vkm
 ${PLIST.gh}share/vice/SCPU64/gtk3_pos_it.vkm
 ${PLIST.gh}share/vice/SCPU64/gtk3_pos_se.vkm
 ${PLIST.gh}share/vice/SCPU64/gtk3_sym.vkm
+${PLIST.gh}share/vice/SCPU64/gtk3_sym_be.vkm
 ${PLIST.gh}share/vice/SCPU64/gtk3_sym_da.vkm
 ${PLIST.gh}share/vice/SCPU64/gtk3_sym_de.vkm
 ${PLIST.gh}share/vice/SCPU64/gtk3_sym_fr.vkm
@@ -439,7 +462,7 @@ share/vice/SCPU64/ptoing.vpl
 share/vice/SCPU64/rgb.vpl
 share/vice/SCPU64/scpu64
 share/vice/SCPU64/scpu64mem.sym
-${PLIST.sdl}share/vice/SCPU64/sdl_hotkeys.vkm
+${PLIST.sdl}share/vice/SCPU64/sdl-hotkeys.vhk
 ${PLIST.sdl}share/vice/SCPU64/sdl_keyrah.vkm
 ${PLIST.sdl}share/vice/SCPU64/sdl_keyrah_combian.vkm
 ${PLIST.sdl}share/vice/SCPU64/sdl_keyrah_de.vkm
@@ -454,6 +477,7 @@ ${PLIST.sdl}share/vice/SCPU64/sdl_pos_no.vkm
 ${PLIST.sdl}share/vice/SCPU64/sdl_sym.vkm
 ${PLIST.sdl}share/vice/SCPU64/sdl_sym_da.vkm
 ${PLIST.sdl}share/vice/SCPU64/sdl_sym_de.vkm
+${PLIST.sdl}share/vice/SCPU64/sdl_sym_fr.vkm
 ${PLIST.sdl}share/vice/SCPU64/sdl_sym_nl.vkm
 share/vice/SCPU64/vice.vpl
 share/vice/VIC20/PALette.vpl
@@ -473,6 +497,12 @@ ${PLIST.gh}share/vice/VIC20/gtk3_sym_it.vkm
 share/vice/VIC20/kernal
 share/vice/VIC20/mike-ntsc.vpl
 share/vice/VIC20/mike-pal.vpl
+${PLIST.sdl}share/vice/VIC20/sdl-hotkeys.vhk
+${PLIST.sdl}share/vice/VIC20/sdl_pos.vkm
+${PLIST.sdl}share/vice/VIC20/sdl_pos_fi.vkm
+${PLIST.sdl}share/vice/VIC20/sdl_pos_fr.vkm
+${PLIST.sdl}share/vice/VIC20/sdl_sym.vkm
+${PLIST.sdl}share/vice/VIC20/sdl_sym_de.vkm
 share/vice/VIC20/vice.vpl
 share/vice/common/C128_1024.svg
 share/vice/common/C128_16.png
@@ -540,17 +570,25 @@ share/vice/common/VIC20_256.png
 share/vice/common/VIC20_32.png
 share/vice/common/VIC20_48.png
 share/vice/common/VIC20_64.png
-${PLIST.gh}share/vice/common/gtk3-hotkeys-cartridge.vhk
-${PLIST.gh}share/vice/common/gtk3-hotkeys-datasette1.vhk
-${PLIST.gh}share/vice/common/gtk3-hotkeys-datasette2.vhk
-${PLIST.gh}share/vice/common/gtk3-hotkeys-debug.vhk
-${PLIST.gh}share/vice/common/gtk3-hotkeys-drive.vhk
-${PLIST.gh}share/vice/common/gtk3-hotkeys-fliplist.vhk
-${PLIST.gh}share/vice/common/gtk3-hotkeys-help.vhk
-${PLIST.gh}share/vice/common/gtk3-hotkeys-settings.vhk
-${PLIST.gh}share/vice/common/gtk3-hotkeys-snapshot.vhk
+share/vice/common/gtk3-hotkeys-cartridge-mac.vhk
+share/vice/common/gtk3-hotkeys-cartridge.vhk
+share/vice/common/gtk3-hotkeys-datasette1-mac.vhk
+share/vice/common/gtk3-hotkeys-datasette1.vhk
+share/vice/common/gtk3-hotkeys-datasette2-mac.vhk
+share/vice/common/gtk3-hotkeys-datasette2.vhk
+share/vice/common/gtk3-hotkeys-debug-mac.vhk
+share/vice/common/gtk3-hotkeys-debug.vhk
+share/vice/common/gtk3-hotkeys-drive-mac.vhk
+share/vice/common/gtk3-hotkeys-drive.vhk
+share/vice/common/gtk3-hotkeys-fliplist-mac.vhk
+share/vice/common/gtk3-hotkeys-fliplist.vhk
+share/vice/common/gtk3-hotkeys-help-mac.vhk
+share/vice/common/gtk3-hotkeys-help.vhk
+share/vice/common/gtk3-hotkeys-settings-mac.vhk
+share/vice/common/gtk3-hotkeys-settings.vhk
+share/vice/common/gtk3-hotkeys-snapshot-mac.vhk
+share/vice/common/gtk3-hotkeys-snapshot.vhk
 share/vice/common/icon1024x1024.png
 share/vice/common/vice-logo-black.svg
 ${PLIST.gtk}share/vice/common/vice.gresource
 ${PLIST.desktop}share/vice/vice-org-vice-org.menu
-@pkgdir etc/xdg/menus/applications-merged
