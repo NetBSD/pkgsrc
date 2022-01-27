@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2022/01/20 20:16:08 adam Exp $
+$NetBSD: distinfo,v 1.23 2022/01/27 17:01:30 adam Exp $
 
-BLAKE2s (ugrep-3.6.0.tar.gz) = 0926f7b4a32e937ff5e9c9d6dd2df6cb8a789f3d62a9388cb7cabfc392138295
-SHA512 (ugrep-3.6.0.tar.gz) = cd79bed9549c3ccfda606c203fc55b2eb5a4c695d63dcdadb3b2f1b42a8ff1b95ea560f90b57c3344c64be9d4762cd7305be951dcce24e963aafd44daee84ac8
-Size (ugrep-3.6.0.tar.gz) = 4409603 bytes
+BLAKE2s (ugrep-3.7.0.tar.gz) = 1d76ca4c913864da3b9494febbe6167b5fe37b5eb7326e0eea7a9caf75c7d9c7
+SHA512 (ugrep-3.7.0.tar.gz) = 31b9ec6da2da92ff874d85289afd0fb14660aaaa8096079e4fcb11222f2f4a7507cdcdb3cea7b70930b16d1c776bd379c2216bb1b24618733982f3c8e1454e4c
+Size (ugrep-3.7.0.tar.gz) = 4400689 bytes
