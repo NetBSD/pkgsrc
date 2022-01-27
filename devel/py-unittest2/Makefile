@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/01/05 15:41:08 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/01/27 11:59:42 wiz Exp $
 
 DISTNAME=		unittest2-1.1.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ DEPENDS+=		${PYPKGPREFIX}-six>=1.4:../../lang/py-six
 DEPENDS+=		${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
 DEPENDS+=		${PYPKGPREFIX}-traceback2-[0-9]*:../../devel/py-traceback2
 DEPENDS+=		${PYPKGPREFIX}-linecache2-[0-9]*:../../devel/py-linecache2
+
+PYTHON_VERSIONS_ACCEPTED=	27
 
 DOCDIR=			share/doc/${PKGBASE}
 INSTALLATION_DIRS+=	${DOCDIR}
