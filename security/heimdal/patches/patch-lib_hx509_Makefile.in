@@ -1,15 +1,16 @@
-$NetBSD: patch-lib_hx509_Makefile.in,v 1.2 2021/11/05 09:14:28 wiz Exp $
+$NetBSD: patch-lib_hx509_Makefile.in,v 1.3 2022/01/27 03:31:21 gutteridge Exp $
 
 Wait for generated includes.
 https://github.com/heimdal/heimdal/issues/851
 
---- lib/hx509/Makefile.in.orig	2021-11-04 17:38:39.000000000 +0000
+--- lib/hx509/Makefile.in.orig	2019-06-07 06:23:17.000000000 +0000
 +++ lib/hx509/Makefile.in
-@@ -218,6 +218,7 @@ nodist_hxtool_OBJECTS = hxtool-commands.
- hxtool_OBJECTS = $(dist_hxtool_OBJECTS) $(nodist_hxtool_OBJECTS)
- hxtool_DEPENDENCIES = libhx509.la $(top_builddir)/lib/asn1/libasn1.la \
- 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-+	$(nodist_include_HEADERS) \
- 	$(top_builddir)/lib/sl/libsl.la
- test_expr_SOURCES = test_expr.c
- test_expr_OBJECTS = test_expr.$(OBJEXT)
+@@ -2082,7 +2082,7 @@ $(srcdir)/hx509-private.h: $(dist_libhx5
+ hxtool-commands.c hxtool-commands.h: hxtool-commands.in $(SLC)
+ 	$(heim_verbose)$(SLC) $(srcdir)/hxtool-commands.in
+ 
+-$(hxtool_OBJECTS): hxtool-commands.h hx509_err.h
++$(hxtool_OBJECTS): hxtool-commands.h $(nodist_include_HEADERS)
+ 
+ clean-local:
+ 	@echo "cleaning PKITS" ; rm -rf PKITS_data
