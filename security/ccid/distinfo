@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2021/10/26 11:17:01 nia Exp $
+$NetBSD: distinfo,v 1.23 2022/01/27 13:21:20 gdt Exp $
 
-BLAKE2s (ccid-1.4.36.tar.bz2) = 6d47bfed719fde1a3755b1aef440cf1e94d83885e3fa6596bf17961177fd94c0
-SHA512 (ccid-1.4.36.tar.bz2) = e9ca3f5364c6cec988edad325c1ef1b35886e3ecb15d6e1409c989b9f669fbda3f0688e246e3976b58eacc0ed035cde36e65675abf12562e81c3630d4ce67773
-Size (ccid-1.4.36.tar.bz2) = 677047 bytes
+BLAKE2s (ccid-1.5.0.tar.bz2) = 3a05d509640be466b27ce39afb3a4d82d418fc0a9c3a707d9526f48ae9ede498
+SHA512 (ccid-1.5.0.tar.bz2) = fa2eac306066255fd89e8220e2b8d82811ce9e284baa155ea968b7afe0f113a94b1ee1898578d02fb8cde0634b6fe60ae8af956089ce5401c11bb90c3b334d5a
+Size (ccid-1.5.0.tar.bz2) = 689961 bytes
