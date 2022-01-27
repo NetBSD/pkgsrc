@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.53 2021/11/17 08:46:02 wiz Exp $
+$NetBSD: distinfo,v 1.54 2022/01/27 03:31:21 gutteridge Exp $
 
 BLAKE2s (heimdal-7.7.0.tar.gz) = c56e08d20b8c4f7ce749e5dfbf643b2b8c0f1ca057719e95cc9eb69c48e49df6
 SHA512 (heimdal-7.7.0.tar.gz) = 6660939b5a36ce36310721a08a089fb671d1e3d2e8ac74ea4775bfa5f8f772d32de805551456200fe96cc486c092c44beb84f5dd877008bc305490ee971bbf99
 Size (heimdal-7.7.0.tar.gz) = 10189293 bytes
 SHA1 (patch-kdc_krb5tgs.c) = 76a5cd9031a44a51e5e11c1e1226ff1ae52b9628
 SHA1 (patch-lib_hdb_hdb-mitdb.c) = 37fd0cc328986e68212c4eaea106c422dea87192
-SHA1 (patch-lib_hx509_Makefile.in) = 1b691f89c71ace03898cbb6f167dcd1339ae46d3
+SHA1 (patch-lib_hx509_Makefile.in) = 1f8efecaf79ef2726d047bf21b9cb0b8be230dce
