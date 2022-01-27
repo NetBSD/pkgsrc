@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2022/01/06 11:25:24 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/27 21:41:54 schmonz Exp $
 bin/goredo
 bin/goredo-affects
 bin/goredo-always
 bin/goredo-cleanup
+bin/goredo-depfix
 bin/goredo-dot
 bin/goredo-ifchange
 bin/goredo-ifcreate
