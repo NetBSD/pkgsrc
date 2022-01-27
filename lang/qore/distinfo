@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:51:52 nia Exp $
+$NetBSD: distinfo,v 1.15 2022/01/27 17:39:45 nros Exp $
 
-BLAKE2s (qore-0.8.13.5.tar.bz2) = a15c626abcf2ee28d9b5d67ebde61afa2c70d1114e6c5470cb42f538a919a7dd
-SHA512 (qore-0.8.13.5.tar.bz2) = c33c6ef28956139100a2c69f16a618a3db951acba57f0f473feaa4154c4e944a2feba8679c5e2984ebf6f53f3cf7516deb09f1a8bc3288747402440b6bb5a110
-Size (qore-0.8.13.5.tar.bz2) = 31459671 bytes
-SHA1 (patch-include_qore_ReferenceNode.h) = df2dbac13ed9bc5dff4949bc654817e4c5335dd2
-SHA1 (patch-include_qore_intern_QoreLValue.h) = e2db77d56e8c76f3aad073d8f94074970be44a80
+BLAKE2s (qore-1.2.tar.bz2) = 5346943b0712cbbb478b3a713499b50a65d1481914f8a1976a2d964db11ac60f
+SHA512 (qore-1.2.tar.bz2) = 2e4b9ca981d186777db231a6edb72393a57e03de54417025a734988eb0386f63fdfd2277eb9f65117832f2a56a66721665b7d934f11428219afbb36948df4dc3
+Size (qore-1.2.tar.bz2) = 45399125 bytes
+SHA1 (patch-lib_StatementBlock.cpp) = 90630317a5cee4e089cec51c05e5d895aa8b75f7
