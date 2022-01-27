@@ -1,0 +1,17 @@
+$NetBSD: patch-meson.build,v 1.3 2022/01/27 04:06:20 pho Exp $
+
+Workaround for old librefuse. This patch can go away when NetBSD 9 reaches its
+EOL.
+
+--- meson.build.orig	2022-01-27 04:02:43.383365139 +0000
++++ meson.build
+@@ -44,7 +44,8 @@ endif
+ configure_file(output: 'config.h',
+                configuration : cfg)
+ 
+-sshfs_deps = [ dependency('fuse3', version: '>= 3.1.0'),
++sshfs_deps = [ dependency('fuse3', version: '>= 3.1.0', required: false),
++               dependency('fuse' , version: '>= 2.6'  , required: false),
+                dependency('glib-2.0'),
+                dependency('gthread-2.0') ]
+ 
