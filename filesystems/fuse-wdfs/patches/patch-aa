@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2022/01/22 18:50:23 pho Exp $
+$NetBSD: patch-aa,v 1.5 2022/01/27 04:15:44 pho Exp $
 
 refuse(3) used to not support -ho in option_list. Already fixed in
 HEAD.
@@ -20,3 +20,12 @@ HEAD.
  			exit(1);
  
  		case KEY_VERSION:
+@@ -1308,7 +1314,7 @@ static void print_help()
+ /* just a simple wrapper for fuse_main(), because the interface changed...  */
+ static int call_fuse_main(struct fuse_args *args)
+ {
+-#if FUSE_VERSION >= 26
++#if (!defined(__NetBSD__) || FUSE_H_ >= 20211204) && FUSE_VERSION >= 26
+ 	return fuse_main(args->argc, args->argv, &wdfs_operations, NULL);
+ #else
+ 	return fuse_main(args->argc, args->argv, &wdfs_operations);

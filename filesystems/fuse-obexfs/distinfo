@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2022/01/22 18:43:19 pho Exp $
+$NetBSD: distinfo,v 1.7 2022/01/27 03:58:34 pho Exp $
 
 BLAKE2s (obexfs-0.8.tar.gz) = f8e0463c0199df63e4c5111e3b947e56a594f159b2eea75e9f79ff82efb1472a
 SHA512 (obexfs-0.8.tar.gz) = 3fdca66b52315c8d119dd7ee3f48e974cc3b0834531dd99f8cdd61b8d7558a9899e4f25fef29461d5a9fc8c9dd1fdaccbf8af43521d75ddd413a45f48a26a73d
 Size (obexfs-0.8.tar.gz) = 76393 bytes
 SHA1 (patch-aa) = 2e607af6ee2cd4a57091e4cce9ca799ca0fd5dcf
-SHA1 (patch-ab) = 63936898afa0cbf1c2e972d9aef9a6681de65f20
+SHA1 (patch-ab) = f92c0bad4e19b20da8fe350bf924cb6f1dbf34d0
 SHA1 (patch-ac) = 42a1f77900e49f7e3afc9b3e935d66443b92ad69
