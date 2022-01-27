@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.458 2022/01/27 11:48:30 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.459 2022/01/27 11:57:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -608,3 +608,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/py-testtools24 version 2.4.0nb1 [wiz 2022-01-27]
 	Updated devel/py-testtools to 2.5.0 [wiz 2022-01-27]
 	Updated devel/py-google-api-core to 1.31.1nb2 [wiz 2022-01-27]
+	Updated www/py-google-api-python-client to 2.15.0nb2 [wiz 2022-01-27]
