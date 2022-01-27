@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2020/01/18 21:48:27 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2022/01/27 19:32:07 nros Exp $
 
-DISTNAME=	qore-yaml-module-0.6
-PKGREVISION=	1
+DISTNAME=	qore-yaml-module-0.7
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qorelanguage/}
 EXTRACT_SUFX=	.tar.bz2
@@ -38,7 +37,7 @@ post-install:
 .include "../../lang/qore/module.mk"
 .include "options.mk"
 
-.include "../../mk/pthread.buildlink3.mk"
-.include "../../textproc/libyaml/buildlink3.mk"
 .include "../../lang/qore/buildlink3.mk"
+.include "../../textproc/libyaml/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
