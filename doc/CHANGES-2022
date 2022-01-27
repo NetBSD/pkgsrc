@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.451 2022/01/26 18:46:23 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.452 2022/01/27 08:38:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -599,3 +599,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/sane-backends to 1.0.32nb1 [triaxx 2022-01-26]
 	Updated mail/postfix to 3.6.4 [triaxx 2022-01-26]
 	Updated devel/SOPE5 to 5.5.0 [tm 2022-01-26]
+	Updated devel/py-ordered-set to 4.1.0 [adam 2022-01-27]
+	Updated www/py-httpx to 0.22.0 [adam 2022-01-27]
