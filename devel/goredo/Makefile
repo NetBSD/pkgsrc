@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/01/09 20:10:33 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/27 21:41:54 schmonz Exp $
 
-DISTNAME=		goredo-1.21.0
-PKGREVISION=		1
+DISTNAME=		goredo-1.22.0
 CATEGORIES=		devel
 MASTER_SITES=		http://www.goredo.cypherpunks.ru/download/
 EXTRACT_SUFX=		.tar.zst
