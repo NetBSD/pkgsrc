@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:45:15 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/01/27 08:24:51 wiz Exp $
 
 BLAKE2s (pyproj-2.6.1.tar.gz) = 94000486db4227c8b26fa88e594363801a61c75bb34f9363df67dd4550854600
 SHA512 (pyproj-2.6.1.tar.gz) = d6bf6b77eb95bb630c41ac7737538c015e2724277f37975b106a4386887c6193c3172dfc9309d1fc8af0b95c86486f359a18a0ca443bcdac9573df6da39935e0
 Size (pyproj-2.6.1.tar.gz) = 528171 bytes
+SHA1 (patch-setup.py) = 7aa563bcd6120b7ca7d0743da9657262b783474d
