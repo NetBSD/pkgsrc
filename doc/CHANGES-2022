@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.464 2022/01/27 15:32:02 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.465 2022/01/27 17:02:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -614,3 +614,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/bind916 to 9.16.25 [taca 2022-01-27]
 	Updated www/drupal7 to 7.86 [taca 2022-01-27]
 	Added net/dq version 20220101 [schmonz 2022-01-27]
+	Updated security/libgpg-error to 1.44 [adam 2022-01-27]
+	Updated devel/py-prompt_toolkit to 3.0.25 [adam 2022-01-27]
+	Updated databases/py-redis to 4.1.2 [adam 2022-01-27]
+	Updated textproc/ugrep to 3.7.0 [adam 2022-01-27]
