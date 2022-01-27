@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:48:38 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/01/27 04:19:18 mef Exp $
 
 BLAKE2s (gmfsk-0.6.tar.gz) = d4b9fdb79d9f4e822d792d1de9da681db19accc29ab0ebd6ba0354ed7689bb26
 SHA512 (gmfsk-0.6.tar.gz) = e4312832ffd463673210fb05bd3c686e72621ac3e3318c6dac27ff23d810bbfb17d50f76cf5c7313fc40d02a89eb502b9290f4dd69f140306eaff6c1fe6fe6ea
@@ -9,6 +9,7 @@ SHA1 (patch-ac) = a936811e68d84ddb286f568519006521c4c5be89
 SHA1 (patch-ad) = dbdb75d3c1d617ead1903d6645dd83c930a37a7b
 SHA1 (patch-ae) = 57048286392c811170f8519078e95fa89c06f3ee
 SHA1 (patch-af) = 5edcf28f17b4255d67d9df103eb70980e7f3e397
+SHA1 (patch-src_hamlib.c) = 91d98d20c8482f13d7aafc278545de890fda3235
 SHA1 (patch-src_misc_cmplx.h) = b429594c6eb4d2821030fbea2ab1546aa9a01173
 SHA1 (patch-src_misc_filter-i386.h) = 71c7e1092fc9b4680d2c89c0ecdf4d8933abaf14
 SHA1 (patch-src_misc_filter.h) = 54acabd541e68e8363a5169f631a1966f8c850ba
