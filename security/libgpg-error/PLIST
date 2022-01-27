@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2018/12/09 17:11:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2022/01/27 16:51:08 adam Exp $
 bin/gpg-error
 bin/gpg-error-config
 bin/gpgrt-config
@@ -32,6 +32,7 @@ share/locale/ro/LC_MESSAGES/libgpg-error.mo
 share/locale/ru/LC_MESSAGES/libgpg-error.mo
 share/locale/sr/LC_MESSAGES/libgpg-error.mo
 share/locale/sv/LC_MESSAGES/libgpg-error.mo
+share/locale/tr/LC_MESSAGES/libgpg-error.mo
 share/locale/uk/LC_MESSAGES/libgpg-error.mo
 share/locale/vi/LC_MESSAGES/libgpg-error.mo
 share/locale/zh_CN/LC_MESSAGES/libgpg-error.mo
