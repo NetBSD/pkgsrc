@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.461 2022/01/27 13:28:31 pin Exp $
+$NetBSD: CHANGES-2022,v 1.462 2022/01/27 13:36:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -611,3 +611,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-google-api-python-client to 2.15.0nb2 [wiz 2022-01-27]
 	Updated security/ccid to 1.5.0 [gdt 2022-01-27]
 	Added net/castor version 0.8.18 [pin 2022-01-27]
+	Updated net/bind916 to 9.16.25 [taca 2022-01-27]
