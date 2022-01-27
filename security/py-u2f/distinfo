@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:17:51 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/01/27 10:39:35 wiz Exp $
 
 BLAKE2s (pyu2f-0.1.5.tar.gz) = 8bb90f21445b04e8b995fc38b17c993395723a0ef3b6b2f169211bbc5971598b
 SHA512 (pyu2f-0.1.5.tar.gz) = c297ade8113ff328923f113ddcaf3868225a9a9336519ab3e9fd2e5670299aa4779c91bedd5ebdc1118571610e383e7fab5f63d463143a0910e8c3d876717454
 Size (pyu2f-0.1.5.tar.gz) = 27133 bytes
 SHA1 (patch-pyu2f_hid_____init____.py) = 2f648792c78432776c4074e3bb2df0a195f65154
 SHA1 (patch-pyu2f_hid_netbsd.py) = d8df1b3805ad5e830548df5b6a601abf09a5dfa3
+SHA1 (patch-setup.py) = 0cce0e764839239d3f2e530c11d4d51740311067
