@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:14:50 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/01/27 18:42:15 wiz Exp $
 
-BLAKE2s (gyp-0.1pre20200512.caa60026e223fc501e8b337fd5086ece4028b1c6.tar.xz) = e30cecb5f4c5c363b7f866cc759c5de573b28dc95cddc1106355191e84bbf572
-SHA512 (gyp-0.1pre20200512.caa60026e223fc501e8b337fd5086ece4028b1c6.tar.xz) = 0ddb20e699ab6a544353e759411c349a40078834ccc6e040dbd080f94b6e6319d0223ff2c7fc776e9fc61c2a7e9ab7f1c35a24e3a3e00535306544a33cbc4974
-Size (gyp-0.1pre20200512.caa60026e223fc501e8b337fd5086ece4028b1c6.tar.xz) = 447608 bytes
-SHA1 (patch-gyptest.py) = e33b65b31390fc5d4989e75f72f35b13055e3b41
-SHA1 (patch-pylib_gyp_common.py) = 8cad1bb72f23a7536cddf9fc2452c5623f4165cc
+BLAKE2s (gyp-0.1pre20210830.d6c5dd51dc3a60bf4ff32a5256713690a1a10376.tar.gz) = d5356f8c4d185dc267d39085794be4f8cc3737e1dca2d2ca125ee8532b6b90b4
+SHA512 (gyp-0.1pre20210830.d6c5dd51dc3a60bf4ff32a5256713690a1a10376.tar.gz) = 3eae598943b463ddc7d7ed0a3d6a5fe91a12205f0ada1787fd24e2d0162556398f7241d374ee8efca76318b158cd165af0d42ed6058689e92486fa2b18bf2ce6
+Size (gyp-0.1pre20210830.d6c5dd51dc3a60bf4ff32a5256713690a1a10376.tar.gz) = 627436 bytes
+SHA1 (patch-gyptest.py) = b5580c82be8f93b50bfc66e094ae092bf8571202
+SHA1 (patch-pylib_gyp_common.py) = 218efae2b4761b17f40c8465ae3a3b91bb0f93eb
 SHA1 (patch-pylib_gyp_generator_make.py) = 1feb43b650a4dd8514e74e0c2bda41bde2243e03
 SHA1 (patch-test_library__dirs_subdir_test.gyp) = 9eb3b39f0bdbf54df6b45a3c613d83e9dfb68d8f
 SHA1 (patch-test_module_src_module.gyp) = 8016db83cce1244f17295d3dfd725f75ff78cb28
