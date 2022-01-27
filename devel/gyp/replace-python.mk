@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.replace-python,v 1.3 2019/11/03 10:39:13 rillig Exp $
+# $NetBSD: replace-python.mk,v 1.1 2022/01/27 18:48:47 wiz Exp $
 
 REPLACE_PYTHON+=	*.py
 REPLACE_PYTHON+=	buildbot/buildbot_run.py
