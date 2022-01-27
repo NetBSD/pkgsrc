@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2022/01/22 18:50:23 pho Exp $
+$NetBSD: distinfo,v 1.9 2022/01/27 04:15:44 pho Exp $
 
 BLAKE2s (wdfs-1.4.2.tar.gz) = 8048713564688dc8e4529a93d31612638065d346fdcec98e2329600cf6d2bb75
 SHA512 (wdfs-1.4.2.tar.gz) = da7e16ed86cbe4746fabe5fce44c83b1d0cd0fbc19994eefe0ce2a75f3d8c77c3c341a76409150a3509be08f8c0d28b8a9650037edcbbf2aa60f4c8ea5407004
 Size (wdfs-1.4.2.tar.gz) = 109315 bytes
-SHA1 (patch-aa) = 1acb91eea14670c048eba39f48deb88a6c52d8cf
+SHA1 (patch-aa) = af1963fab0b0334286d6ec497af41930d065e08a
 SHA1 (patch-ab) = 1237cdd4baf150899b4d9ea1073d399ffe925a64
