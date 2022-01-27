@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:30:46 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/01/27 10:16:09 wiz Exp $
 
 BLAKE2s (raven-6.10.0.tar.gz) = 6176d427fd2a54438c40e861526cd702f790f9aaa563df0883bac7315069c3ef
 SHA512 (raven-6.10.0.tar.gz) = 37ca6d5953dc92b57b3bf4e2edb3947d41f33711d9babfc9eafb8712dc5923829f8810e5123e63749710aeecceb66e56bf8b5b60868f61d750704e20add3c747
 Size (raven-6.10.0.tar.gz) = 288902 bytes
+SHA1 (patch-conftest.py) = 258b45cb148b7297111dc61fe714709b9174660e
 SHA1 (patch-setup.py) = 50da85fcaa001d2d050ec8caf4f9b9792d9da89d

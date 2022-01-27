@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/01/05 15:41:30 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/01/27 10:16:09 wiz Exp $
 
 DISTNAME=	raven-6.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -38,7 +38,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=1.2.1:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.18.2:../../devel/py-test-xdist
 TEST_DEPENDS+=	${PYPKGPREFIX}-tornado>=4.1:../../www/py-tornado
 TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
-TEST_DEPENDS+=	${PYPKGPREFIX}-unittest2-[0-9]*:../../devel/py-unittest2
 TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-zconfig-[0-9]*:../../devel/py-zconfig
 
@@ -50,6 +49,7 @@ USE_PKG_RESOURCES=	yes
 .if ${PYPKGPREFIX} == py27
 DEPENDS+=	${PYPKGPREFIX}-contextlib2-[0-9]*:../../devel/py-contextlib2
 TEST_DEPENDS=	# none; py-aiohttp and py-sanic are incompatible with py27
+TEST_DEPENDS+=	${PYPKGPREFIX}-unittest2-[0-9]*:../../devel/py-unittest2
 do-test:
 .endif
 
