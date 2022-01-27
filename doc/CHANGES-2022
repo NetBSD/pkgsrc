@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.471 2022/01/27 18:04:24 nros Exp $
+$NetBSD: CHANGES-2022,v 1.472 2022/01/27 18:13:00 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -624,3 +624,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/qore-openldap-module to 1.2 [nros 2022-01-27]
 	Updated databases/qore-pgsql-module to 3.1.1 [nros 2022-01-27]
 	Updated databases/qore-sqlite3-module to 1.0.2 [nros 2022-01-27]
+	Updated devel/qore-uuid-module to 1.4 [nros 2022-01-27]
