@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.476 2022/01/27 19:11:21 nros Exp $
+$NetBSD: CHANGES-2022,v 1.477 2022/01/27 19:17:25 nros Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -629,3 +629,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/qore-xmlsec-module to 1.0.0 [nros 2022-01-27]
 	Updated devel/gyp to 0.1pre20210830.d6c5dd51dc3a60bf4ff32a5256713690a1a10376 [wiz 2022-01-27]
 	Updated security/qore-ssh2-module to 1.4.1 [nros 2022-01-27]
+	Updated textproc/qore-json-module to 1.8 [nros 2022-01-27]
