@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2022/01/27 13:27:07 pin Exp $
+bin/castor
+share/applications/Castor.desktop
+share/examples/castor/castor_settings.toml.example
