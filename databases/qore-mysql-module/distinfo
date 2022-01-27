@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:09:55 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/01/27 17:46:59 nros Exp $
 
-BLAKE2s (qore-mysql-module-2.0.2.1.tar.bz2) = 8ed2e714654fbd05a64aeadcc23536463bb924c25541390ecde538a4da556457
-SHA512 (qore-mysql-module-2.0.2.1.tar.bz2) = d0a9828bb309f6604a22bd23c08ca92b332c1a10f95c58b8997203801dc90b5c16e2daa8a60bad709541ae2282067516f2873570a1c1048c9e7b3ac593b6c503
-Size (qore-mysql-module-2.0.2.1.tar.bz2) = 442879 bytes
+BLAKE2s (qore-mysql-module-2.1.tar.bz2) = 6b68706edfdeefd1f64779f348e25fc6ce3f518b07ab14dd73067942dd303999
+SHA512 (qore-mysql-module-2.1.tar.bz2) = 460a75bca82451f765908f2c7dcb1cda05cebb1f254de2146883d7c7d97cf00e3bb8d63ef93dd652e613c27c0e573f25faf9644bae4ea029266888c2843ce265
+Size (qore-mysql-module-2.1.tar.bz2) = 457496 bytes
