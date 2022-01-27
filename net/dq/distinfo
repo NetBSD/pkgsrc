@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2022/01/27 15:31:09 schmonz Exp $
+
+BLAKE2s (dq-20220101.tar.gz) = 3b340e5217e58061e38fdafc407f40e64877a61f680c7f43409b8b6a4fe290ba
+SHA512 (dq-20220101.tar.gz) = 5c4fd8a8f37b2f8707abde80af7efe943dd00f0e725b406bff9ee8aae889f820fb76fe137be8223943c76ec14d41579de9a66f5d4c440d493e6d527bb24b175a
+Size (dq-20220101.tar.gz) = 140727 bytes
+SHA1 (patch-make-install.sh) = f8d8460015ab6a849e5bc25d341bb993c3bdcb3c
