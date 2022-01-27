@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2022/01/20 16:38:21 nros Exp $
+# $NetBSD: Makefile,v 1.128 2022/01/27 09:02:58 nros Exp $
 
 DISTNAME=	dbus-1.12.20
 PKGREVISION=	2
@@ -92,7 +92,7 @@ FILES_SUBST+=		DBUS_USER=${DBUS_USER}
 FILES_SUBST+=		DBUS_GROUP=${DBUS_GROUP}
 
 BUILDLINK_TRANSFORM+=	rm:-Wl,--gc-sections
-.if !empty(PKGSRC_MKPIE:M[Nn][Oo])
+.if !empty(_PKGSRC_MKPIE:M[Nn][Oo])
 # Package tries to use these if gcc accepts them, but that doesn't
 # mean that we universally can *run* the executables
 BUILDLINK_TRANSFORM+=	rm:-fPIE
