@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2022/01/04 20:53:44 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2022/01/27 11:24:18 wiz Exp $
 
-DISTNAME=	testtools-2.4.0
+DISTNAME=	testtools-2.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/testtools/}
 
@@ -13,14 +12,12 @@ LICENSE=	mit AND python-software-foundation
 
 DEPENDS+=	${PYPKGPREFIX}-extras>=1.0.0:../../devel/py-extras
 DEPENDS+=	${PYPKGPREFIX}-fixtures>=1.3.0:../../devel/py-fixtures
-DEPENDS+=	${PYPKGPREFIX}-python-mimeparse-[0-9]*:../../www/py-python-mimeparse
-DEPENDS+=	${PYPKGPREFIX}-unittest2>=0.8.0:../../devel/py-unittest2
+DEPENDS+=	${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
 
-# 2 failures as of 2.3.0
-# https://github.com/testing-cabal/testtools/issues/253
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 # circular test dependency
 # https://github.com/testing-cabal/testscenarios/issues/4
-#TEST_DEPENDS+=	${PYPKGPREFIX}-testresources-[0-9]*:../../devel/py-testresources
 #TEST_DEPENDS+=	${PYPKGPREFIX}-testscenarios-[0-9]*:../../devel/py-testscenarios
 
 USE_LANGUAGES=	# none
