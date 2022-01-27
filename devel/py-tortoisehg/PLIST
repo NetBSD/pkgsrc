@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.21 2022/01/01 21:21:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2022/01/27 08:15:02 wiz Exp $
 bin/thg
 ${PYSITELIB}/hgext3rd/thg.py
 ${PYSITELIB}/hgext3rd/thg.pyc
 ${PYSITELIB}/hgext3rd/thg.pyo
+${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}
 ${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
