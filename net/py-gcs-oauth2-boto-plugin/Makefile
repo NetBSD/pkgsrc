@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/01/27 10:29:54 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/27 23:49:41 wiz Exp $
 
 DISTNAME=	gcs-oauth2-boto-plugin-3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,6 +22,8 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.12.0:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-rsa
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
