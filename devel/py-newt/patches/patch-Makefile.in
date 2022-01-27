@@ -1,11 +1,19 @@
-$NetBSD: patch-Makefile.in,v 1.1 2014/01/01 06:55:23 ryoon Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2022/01/27 08:10:07 wiz Exp $
 
 * Libtoolized
 * Use configure.ac's Python version
 
 --- Makefile.in.orig	2013-08-06 15:46:42.000000000 +0000
 +++ Makefile.in
-@@ -16,7 +16,7 @@ SOEXT = so
+@@ -2,7 +2,6 @@ LIBS = -lslang @LIBS@
+ LIBTCL = @TCL_LIB_FLAG@
+ 
+ CC = @CC@
+-CPP = @CPP@
+ CFLAGS = @CFLAGS@
+ LDFLAGS = @LDFLAGS@
+ CPPFLAGS = -D_GNU_SOURCE -I/usr/include/slang @CPPFLAGS@ 
+@@ -16,7 +15,7 @@ SOEXT = so
  PYTHONVERS = @PYTHONVERS@
  WHIPTCLLIB = @WHIPTCLLIB@
  ifneq ($(WHIPTCLLIB),)
@@ -14,7 +22,7 @@ $NetBSD: patch-Makefile.in,v 1.1 2014/01/01 06:55:23 ryoon Exp $
  else
  WHIPTCLSO =
  endif
-@@ -25,18 +25,12 @@ PROGS = test whiptail $(WHIPTCLSO) testg
+@@ -25,18 +24,12 @@ PROGS = test whiptail $(WHIPTCLSO) testg
  TESTOBJS = test.o testgrid.o testtree.o showchars.o showkey.o
  NDIALOGOBJS = whiptail.o dialogboxes.o
  WHIPTCLOBJS = shared/whiptcl.o shared/dialogboxes.o
@@ -35,7 +43,7 @@ $NetBSD: patch-Makefile.in,v 1.1 2014/01/01 06:55:23 ryoon Exp $
  
  SHCFLAGS = -fPIC
  
-@@ -56,6 +50,10 @@ instroot ?= $(DESTDIR)
+@@ -56,6 +49,10 @@ instroot ?= $(DESTDIR)
  
  SOURCES = $(subst .o,.c,$(TESTOBJS) $(NDIALOGOBJS) $(LIBOBJS))
  
@@ -46,7 +54,7 @@ $NetBSD: patch-Makefile.in,v 1.1 2014/01/01 06:55:23 ryoon Exp $
  SHAREDDIR = shared
  SHAREDOBJS = $(patsubst %,$(SHAREDDIR)/%, $(LIBOBJS))
  
-@@ -65,59 +63,61 @@ else
+@@ -65,76 +62,76 @@ else
  TARGET=depend $(PROGS)
  endif
  
@@ -129,7 +137,9 @@ $NetBSD: patch-Makefile.in,v 1.1 2014/01/01 06:55:23 ryoon Exp $
  		$(SHAREDDIR)/*.o *.$(SOEXT)*
  
  depend:
-@@ -126,15 +126,13 @@ depend:
+-	$(CPP) $(CFLAGS) $(CPPFLAGS) -M $(SOURCES) > .depend
++	$(CC) $(CFLAGS) $(CPPFLAGS) -M $(SOURCES) > .depend
+ 
  $(SHAREDDIR):
  	mkdir -p $(SHAREDDIR)
  
@@ -150,7 +160,7 @@ $NetBSD: patch-Makefile.in,v 1.1 2014/01/01 06:55:23 ryoon Exp $
  
  install: $(LIBNEWT) install-sh whiptail
  	[ -d $(instroot)/$(bindir) ] || install -m 755 -d $(instroot)/$(bindir)
-@@ -143,22 +141,19 @@ install: $(LIBNEWT) install-sh whiptail
+@@ -143,22 +140,19 @@ install: $(LIBNEWT) install-sh whiptail
  	[ -d $(instroot)/$(man1dir) ] || install -m 755 -d $(instroot)/$(man1dir)
  	[ -d $(instroot)/$(pkgconfigdir) ] || install -m 755 -d $(instroot)/$(pkgconfigdir)
  	install -m 644 newt.h $(instroot)/$(includedir)
