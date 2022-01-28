@@ -1,4 +1,4 @@
-$NetBSD: patch-config_afpd.conf.tmpl,v 1.1 2021/09/12 15:52:37 nat Exp $
+$NetBSD: patch-config_afpd.conf.tmpl,v 1.2 2022/01/28 21:18:19 nat Exp $
 
 Allow -1 as a vaild tickleval to disable session tickles.
 As needed on appletalk 58.
@@ -9,7 +9,7 @@ As needed on appletalk 58.
  #                         Note, this defaults to 30 seconds, and really 
  #                         shouldn't be changed.  If you want to control
  #                         the server idle timeout, use the -timeout option.
-+#			   A value of -1 disables session timer tickles.
++#			   A value of 0 disables session timer tickles.
  #     -timeout <number>   Specify the number of tickles to send before
  #                         timing out a connection.
  #                         The default is 4, therefore a connection will
