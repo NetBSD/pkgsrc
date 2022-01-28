@@ -1,0 +1,24 @@
+$NetBSD: patch-source_Makefile.common,v 1.1 2022/01/28 11:50:12 micha Exp $
+
+Honor LDFLAGS.
+
+Upstream ticket: <https://sourceforge.net/p/xnedit/bugs/19/>
+Fixed with commit 8e9bf66e77b7108f5803c9945f6d799d11fa6091, remove this patch
+for next release.
+
+--- source/Makefile.common.orig	2022-01-09 12:28:40.000000000 +0000
++++ source/Makefile.common
+@@ -21,11 +21,11 @@ all: xnedit xnc
+ xnedit: $(OBJS) ../util/libNUtil.a $(XMLLIB) $(XLTLIB)
+ 	$(CC) $(CFLAGS) -c linkdate.c -o linkdate.o
+ 	$(CC) $(CFLAGS) $(OBJS) linkdate.o \
+-	 ../util/libNUtil.a $(XMLLIB) $(XLTLIB) $(LIBS) -o $@
++	 ../util/libNUtil.a $(LDFLAGS) $(XMLLIB) $(XLTLIB) $(LIBS) -o $@
+ 
+ # Note LIBS isn't quite right here; it links unnecessarily against Motif
+ xnc: nc.o server_common.o ../util/libNUtil.a
+-	$(CC) $(CFLAGS) nc.o server_common.o ../util/libNUtil.a $(LIBS) -o $@
++	$(CC) $(CFLAGS) nc.o server_common.o ../util/libNUtil.a $(LDFLAGS) $(LIBS) -o $@
+ 
+ help.o: help.c
+ 	$(CC) $(CFLAGS) $(BIGGER_STRINGS) -c help.c -o $@
