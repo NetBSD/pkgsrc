@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2021/12/29 19:18:39 rhialto Exp $
+# $NetBSD: Makefile,v 1.58 2022/01/28 19:16:01 schmonz Exp $
 
 DISTNAME=	tmux-3.2a
 CATEGORIES=	misc
@@ -14,6 +14,7 @@ GNU_CONFIGURE=	yes
 USE_TERMINFO=	yes
 
 USE_TOOLS+=	pkg-config
+USE_FEATURES+=	strnlen
 
 SUBST_CLASSES+=			sysconfdir
 SUBST_STAGE.sysconfdir=		pre-configure
