@@ -1,4 +1,4 @@
-$NetBSD: patch-etc_afpd_afp__options.c,v 1.1 2021/09/12 15:52:37 nat Exp $
+$NetBSD: patch-etc_afpd_afp__options.c,v 1.2 2022/01/28 21:18:19 nat Exp $
 
 Allow -1 as a vaild tickleval to disable session tickles.
 As needed on appletalk 58.
@@ -10,7 +10,7 @@ As needed on appletalk 58.
      if ((c = getoption(buf, "-tickleval"))) {
          options->tickleval = atoi(c);
 -        if (options->tickleval <= 0) {
-+        if (options->tickleval != -1 && options->tickleval <= 0) {
++        if (options->tickleval < 0) {
              options->tickleval = 30;
          }
      }

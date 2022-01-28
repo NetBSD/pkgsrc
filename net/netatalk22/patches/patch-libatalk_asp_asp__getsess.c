@@ -1,4 +1,4 @@
-$NetBSD: patch-libatalk_asp_asp__getsess.c,v 1.1 2021/09/12 15:52:37 nat Exp $
+$NetBSD: patch-libatalk_asp_asp__getsess.c,v 1.2 2022/01/28 21:18:19 nat Exp $
 
 Allow -1 as a vaild tickleval to disable session tickles.
 As needed on appletalk 58.
@@ -11,7 +11,7 @@ As needed on appletalk 58.
        timer.it_interval.tv_usec = timer.it_value.tv_usec = 0;
 -      if ((sigaction(SIGALRM, &action, NULL) < 0) ||
 -	  (setitimer(ITIMER_REAL, &timer, NULL) < 0)) {
-+      if (tickleval != -1 && ((sigaction(SIGALRM, &action, NULL) < 0) ||
++      if (tickleval && ((sigaction(SIGALRM, &action, NULL) < 0) ||
 +	  (setitimer(ITIMER_REAL, &timer, NULL) < 0))) {
  	free(asp_ac);
  	server_asp = NULL;
