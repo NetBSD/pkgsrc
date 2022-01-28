@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2021/12/08 16:07:02 adam Exp $
+# $NetBSD: Makefile,v 1.15 2022/01/28 12:20:54 wiz Exp $
 
 DISTNAME=	caribou-0.4.21
 PKGREVISION=	12
@@ -18,6 +18,8 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config intltool gmake xgettext
 
 PY_PATCHPLIST=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 CONF_FILES=	${PREFIX}/share/examples/caribou/autostart/caribou-autostart.desktop \
 		${PKG_SYSCONFDIR}/xdg/autostart/caribou-autostart.desktop
