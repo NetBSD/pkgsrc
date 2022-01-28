@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2022/01/27 16:53:08 adam Exp $
+$NetBSD: distinfo,v 1.13 2022/01/28 09:16:53 adam Exp $
 
-BLAKE2s (prompt_toolkit-3.0.25.tar.gz) = 62290e455996c9256924025380c44bd8d6eceb266735d8dd686c51a6ddcdcc36
-SHA512 (prompt_toolkit-3.0.25.tar.gz) = 22bb97ff008015f1bf0908b0d5bcc25d4bdb13187e3444c723f463605f08d9ebcf400d59f4b2b6f4ff95cef8ee8a4acd0c7a316aa04c58f98cb8ab8f81de485d
-Size (prompt_toolkit-3.0.25.tar.gz) = 3043357 bytes
+BLAKE2s (prompt_toolkit-3.0.26.tar.gz) = 9005fb20a7c403552b8130574ed3dda33cf2bf482775cb7b11619e4366337cf5
+SHA512 (prompt_toolkit-3.0.26.tar.gz) = 7151d6678409bf3b04bee76cbcf4e0ffb5ca1963c359d30c8edf9e81bde424ea69b7009cd44e6d72088936290e2fd9dd8cac59efc8b5e59bfb87dacf53967b05
+Size (prompt_toolkit-3.0.26.tar.gz) = 402667 bytes
