@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2022/01/14 19:52:24 adam Exp $
+# $NetBSD: Makefile,v 1.29 2022/01/28 09:24:33 adam Exp $
 
-DISTNAME=	numba-0.55.0
+DISTNAME=	numba-0.55.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numba/}
