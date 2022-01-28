@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.482 2022/01/28 09:10:26 adam Exp $
+$NetBSD: CHANGES-2022,v 1.483 2022/01/28 09:24:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -636,3 +636,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/extra-cmake-modules to 5.83.0 [wiz 2022-01-28]
 	Updated devel/git to 2.35.0 [adam 2022-01-28]
 	Updated archivers/unrar to 6.1.4 [adam 2022-01-28]
+	Updated devel/py-prompt_toolkit to 3.0.26 [adam 2022-01-28]
+	Updated math/py-numba to 0.55.1 [adam 2022-01-28]
