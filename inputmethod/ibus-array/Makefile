@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2021/12/08 16:05:13 adam Exp $
+# $NetBSD: Makefile,v 1.41 2022/01/28 14:02:33 wiz Exp $
 
 DISTNAME=	ibus-array-0.1.0
 PKGREVISION=	20
@@ -11,7 +11,9 @@ HOMEPAGE=	https://code.google.com/archive/p/ibus-array/
 COMMENT=	Array 30 Input Method for iBus
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject32
+
+PYTHON_VERSIONS_ACCEPTED=	27
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
