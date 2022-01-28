@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.484 2022/01/28 11:00:59 pin Exp $
+$NetBSD: CHANGES-2022,v 1.485 2022/01/28 11:04:38 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -639,3 +639,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-prompt_toolkit to 3.0.26 [adam 2022-01-28]
 	Updated math/py-numba to 0.55.1 [adam 2022-01-28]
 	Updated audio/termusic to 0.6.9 [pin 2022-01-28]
+	Updated www/wiki-tui to 0.4.5 [pin 2022-01-28]
