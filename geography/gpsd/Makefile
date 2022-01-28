@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2021/12/08 16:04:45 adam Exp $
+# $NetBSD: Makefile,v 1.62 2022/01/28 12:06:04 wiz Exp $
 
 DISTNAME=	gpsd-3.23.1
 PKGREVISION=	1
@@ -28,6 +28,8 @@ USE_CURSES=	syncok
 
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 CFLAGS.SunOS=	-DLOG_PERROR=0
 
