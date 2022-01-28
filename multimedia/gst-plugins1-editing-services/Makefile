@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2021/12/08 16:02:23 adam Exp $
+# $NetBSD: Makefile,v 1.16 2022/01/28 12:19:30 wiz Exp $
 
 DISTNAME=	gst-editing-services-1.18.5
 PKGNAME=	${DISTNAME:S/gst-/gst-plugins1-/1}
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 USE_TOOLS+=	flex pkg-config
 
 PY_PATCHPLIST=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # workaround for build failure
 # https://gitlab.gnome.org/GNOME/json-glib/issues/35
