@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.69 2022/01/05 20:50:16 wiz Exp $
+$NetBSD: distinfo,v 1.70 2022/01/28 20:39:20 schmonz Exp $
 
 BLAKE2s (bash-5.1.tar.gz) = 9053924a9a02eb9e6d9aed99e945c23ddd98481234a50c5897f124dc3f02dd33
 SHA512 (bash-5.1.tar.gz) = c44a0ce381469219548a3a27589af3fea4f22eda1ca4e9434b59fc16da81b471c29ce18e31590e0860a6a251a664b68c2b45e3a17d22cfc02799ffd9a208390c
@@ -58,4 +58,4 @@ SHA1 (patch-builtins_ulimit.def) = 1390069344607204eb3abbd6ddeb148ff590c55e
 SHA1 (patch-configure) = c4e1ab53a1ee85f3e6121047f0aca8ceb85e6e5d
 SHA1 (patch-examples_loadables_fdflags.c) = dce409c76b7d6c838eb25c3ccc7a89ee57ca69b8
 SHA1 (patch-lib_malloc_malloc.c) = fc22c2bb45490c57782d34d62336d168875c3609
-SHA1 (patch-support_shobj-conf) = 8750c104549ea8a4a722bd21a684a9fe13e05fe5
+SHA1 (patch-support_shobj-conf) = f5d484920243588bfa4f869add2534e99aae9595
