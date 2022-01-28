@@ -1,13 +1,13 @@
-$NetBSD: patch-Makefile,v 1.4 2019/06/09 16:15:32 ryoon Exp $
+$NetBSD: patch-Makefile,v 1.5 2022/01/28 09:07:59 adam Exp $
 
 Do not override compiler/linker flags.
 Provide proper path for Perl module.
 Do not install git-p4 (requires Python).
 Fix tar operations.
 
---- Makefile.orig	2019-06-07 18:37:32.000000000 +0000
+--- Makefile.orig	2022-01-24 18:15:49.000000000 +0000
 +++ Makefile
-@@ -539,7 +539,7 @@ gitexecdir = libexec/git-core
+@@ -522,7 +522,7 @@ gitexecdir = libexec/git-core
  mergetoolsdir = $(gitexecdir)/mergetools
  sharedir = $(prefix)/share
  gitwebdir = $(sharedir)/gitweb
@@ -16,7 +16,7 @@ Fix tar operations.
  localedir = $(sharedir)/locale
  template_dir = share/git-core/templates
  htmldir = $(prefix)/share/doc/git-doc
-@@ -560,13 +560,9 @@ perllibdir_relative = $(patsubst $(prefi
+@@ -543,13 +543,9 @@ perllibdir_relative = $(patsubst $(prefi
  export prefix bindir sharedir sysconfdir gitwebdir perllibdir localedir
  
  # Set our default programs
@@ -30,7 +30,7 @@ Fix tar operations.
  TCL_PATH = tclsh
  TCLTK_PATH = wish
  XGETTEXT = xgettext
-@@ -671,7 +667,6 @@ clean-python-script:
+@@ -652,7 +648,6 @@ clean-python-script:
  
  SCRIPTS = $(SCRIPT_SH_GEN) \
  	  $(SCRIPT_PERL_GEN) \
@@ -38,9 +38,9 @@ Fix tar operations.
  	  git-instaweb
  
  ETAGS_TARGET = TAGS
-@@ -2024,8 +2019,8 @@ PAGER_ENV_CQ = "$(subst ",\",$(subst \,\
- PAGER_ENV_CQ_SQ = $(subst ','\'',$(PAGER_ENV_CQ))
- BASIC_CFLAGS += -DPAGER_ENV='$(PAGER_ENV_CQ_SQ)'
+@@ -2112,8 +2107,8 @@ ifdef DEFAULT_HELP_FORMAT
+ BASIC_CFLAGS += -DDEFAULT_HELP_FORMAT='"$(DEFAULT_HELP_FORMAT)"'
+ endif
  
 -ALL_CFLAGS += $(BASIC_CFLAGS)
 -ALL_LDFLAGS += $(BASIC_LDFLAGS)
@@ -49,7 +49,7 @@ Fix tar operations.
  
  export DIFF TAR INSTALL DESTDIR SHELL_PATH
  
-@@ -2879,13 +2874,12 @@ install: all
+@@ -3090,13 +3085,12 @@ endif
  ifndef NO_GETTEXT
  	$(INSTALL) -d -m 755 '$(DESTDIR_SQ)$(localedir_SQ)'
  	(cd po/build/locale && $(TAR) cf - .) | \
@@ -65,7 +65,7 @@ Fix tar operations.
  endif
  ifndef NO_TCLTK
  	$(MAKE) -C gitk-git install
-@@ -2952,7 +2946,7 @@ install-man: install-man-perl
+@@ -3165,7 +3159,7 @@ install-man: install-man-perl
  install-man-perl: man-perl
  	$(INSTALL) -d -m 755 '$(DESTDIR_SQ)$(mandir_SQ)/man3'
  	(cd perl/build/man/man3 && $(TAR) cf - .) | \
