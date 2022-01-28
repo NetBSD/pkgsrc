@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/01/12 09:50:59 schmonz Exp $
+# $NetBSD: Makefile,v 1.14 2022/01/28 12:04:17 wiz Exp $
 
 DISTNAME=		TextTest-4.0.9
 PKGNAME=		${DISTNAME:tl}
@@ -15,8 +15,10 @@ DEPENDS+=		${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 
 USE_LANGUAGES=		# none
 
-REPLACE_PYTHON=		texttestlib/default/batch/__init__.py \
-			texttestlib/default/virtualdisplay.py
+REPLACE_PYTHON+=	texttestlib/default/batch/__init__.py
+REPLACE_PYTHON+=	texttestlib/default/virtualdisplay.py
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
