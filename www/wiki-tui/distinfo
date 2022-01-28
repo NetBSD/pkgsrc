@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2022/01/13 13:18:42 pin Exp $
+$NetBSD: distinfo,v 1.7 2022/01/28 11:04:19 pin Exp $
 
 BLAKE2s (addr2line-0.16.0.crate) = 24e229c429a7ffc5c9010ec4c102ab2fc3f9982cfa9897b42709fd96b8f83dc7
 SHA512 (addr2line-0.16.0.crate) = 7ea8fffcdff7f8f25c0a588fe2ee652053988ab2e1d39ac740f5199d6e7d30beed0272403d04b86ec5de6ad5459698cdf28f8efd5caab7b6693102df7ec4889c
@@ -630,9 +630,9 @@ Size (wasmer_enumset_derive-0.5.0.crate) = 5657 bytes
 BLAKE2s (web-sys-0.3.49.crate) = f4a0299a0dee099893de50d089dff882af61df259964713a7979e122d0582470
 SHA512 (web-sys-0.3.49.crate) = b77c4b473b849bef87325c14bb48f08a52145812fef35e81e854ac0631264253a4b8c50bafab8578f79832414a081a929ca71426cd9c90529e5f319e52e58451
 Size (web-sys-0.3.49.crate) = 649549 bytes
-BLAKE2s (wiki-tui-0.4.4.tar.gz) = 077e2f79424165a9a7df9416822213465ff55d254ae738f95f8188fa3a854255
-SHA512 (wiki-tui-0.4.4.tar.gz) = 4bbe844ae9503aafc6cfabfac8440de371932891ea69aed29fc7328dd9d40672dd03e98b8144a0d0b27841c1ac57e63e60d805823c53c6e737608dacc4a43685
-Size (wiki-tui-0.4.4.tar.gz) = 59416 bytes
+BLAKE2s (wiki-tui-0.4.5.tar.gz) = 344c3c0fc4fdf11f6cda99d6a7c5f3a73ded0a93fa64c5813bc3c490aefceb53
+SHA512 (wiki-tui-0.4.5.tar.gz) = 8dbd781ea4052d342ff0cdf310529df5dc005234639f7722f646d5a018fe675036ae6276da7e133cd5f47e64711cc3809a897c7a12becbccd2b2861b00bc2e1f
+Size (wiki-tui-0.4.5.tar.gz) = 64766 bytes
 BLAKE2s (winapi-0.3.9.crate) = 295083bd8c53c7decc4187da324a1284ad05cbccc9198d31facb6a42e34867ce
 SHA512 (winapi-0.3.9.crate) = ff8b7b78065f3d8999ec03c725a0460ebc059771bf071c7a3df3f0ecd733edf3b0a2450024d4e24e1aedddaecd9038ce1376c0d8bbf45132068cf45cf4a53a97
 Size (winapi-0.3.9.crate) = 1200382 bytes
