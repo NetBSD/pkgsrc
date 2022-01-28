@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2022/01/04 14:57:00 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/28 12:04:17 wiz Exp $
 bin/filter_fpdiff.py
 bin/filter_rundependent.py
 bin/interpretcore
 bin/texttest
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PLIST.py3x}${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/texttestlib/__init__.py
 ${PYSITELIB}/texttestlib/__init__.pyc
 ${PYSITELIB}/texttestlib/__init__.pyo
