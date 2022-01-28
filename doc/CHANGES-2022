@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.486 2022/01/28 11:53:04 micha Exp $
+$NetBSD: CHANGES-2022,v 1.487 2022/01/28 12:04:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -641,3 +641,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/termusic to 0.6.9 [pin 2022-01-28]
 	Updated www/wiki-tui to 0.4.5 [pin 2022-01-28]
 	Added editors/xnedit version 1.4.0 [micha 2022-01-28]
+	Updated www/nginx-devel to 1.21.6 [adam 2022-01-28]
+	Updated textproc/ugrep to 3.7.1 [adam 2022-01-28]
