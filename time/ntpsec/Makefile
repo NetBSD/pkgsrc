@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2021/12/08 16:06:48 adam Exp $
+# $NetBSD: Makefile,v 1.14 2022/01/28 12:10:18 wiz Exp $
 
 DISTNAME=	ntpsec-1.1.9
 PKGREVISION=	5
@@ -29,6 +29,8 @@ WAF_ENV+=		BIN_XSLTPROC=${PREFIX}/bin/xsltproc
 RCD_SCRIPTS=		ntpd
 REPLACE_PYTHON+=	ntpclients/*.py
 PY_PATCHPLIST=		yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/waf/waf.mk"
 .include "../../geography/gpsd/buildlink3.mk"
