@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST.Linux,v 1.7 2011/11/18 04:19:56 sbd Exp $
+@comment $NetBSD: PLIST.Linux,v 1.8 2022/01/28 08:31:26 triaxx Exp $
 @comment lib/udev/check-mtp-device
+lib/libgphoto2_port/0.12.0/usbdiskdirect.la
+lib/libgphoto2_port/0.12.0/usbscsi.la
 lib/udev/check-ptp-camera
 share/doc/libgphoto2/linux-hotplug/usbcam.console
 share/doc/libgphoto2/linux-hotplug/usbcam.group
