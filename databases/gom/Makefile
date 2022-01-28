@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/12/08 16:03:37 adam Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/28 11:47:54 wiz Exp $
 
 DISTNAME=	gom-0.4
 PKGREVISION=	5
@@ -17,6 +17,8 @@ USE_LANGUAGES+=	c
 USE_TOOLS+=	pkg-config
 
 PY_PATCHPLIST=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
