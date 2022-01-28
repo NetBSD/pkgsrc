@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2021/12/08 16:05:34 adam Exp $
+# $NetBSD: Makefile,v 1.77 2022/01/28 12:17:24 wiz Exp $
 
 DISTNAME=	gnumeric-1.12.48
 PKGREVISION=	3
@@ -22,6 +22,8 @@ PKGCONFIG_OVERRIDE=	libspreadsheet.pc.in
 
 REPLACE_PERL+=		plugins/perl-func/perl_func.pl
 REPLACE_PERL+=		test/*.pl
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # needs a DISPLAY
 TEST_TARGET=		check
