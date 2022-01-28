@@ -1,23 +1,23 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:06:06 nia Exp $
+$NetBSD: distinfo,v 1.13 2022/01/28 21:18:18 nat Exp $
 
 BLAKE2s (netatalk-2.2.6.tar.bz2) = 22951265586889d7ac4f01ade0707f1e63389a14623beec787f587e4ef74b891
 SHA512 (netatalk-2.2.6.tar.bz2) = 74aa3415a43293a8804b00b0eda564d6536310e59c3f0d067d634db89f4d612a1dfd932df18607c32b948922ae032bc25471e21635ab149a78629ff95c341f47
 Size (netatalk-2.2.6.tar.bz2) = 1301887 bytes
 SHA1 (patch-config_Makefile.in) = e6b020cf4cf11572a648bee7de0937add1948ea8
-SHA1 (patch-config_afpd.conf.tmpl) = 0640c91319d06745664dfe048f7b13d5eeb89d6f
+SHA1 (patch-config_afpd.conf.tmpl) = 4ff3dc9ea7af77319dc5be499e04648220022404
 SHA1 (patch-configure) = 9919625c3cd54e34ab45c6606094e12215630d33
 SHA1 (patch-distrib_initscripts_Makefile.in) = 706890f9e0aacab4d523cc1900048b7fab96f5d4
-SHA1 (patch-etc_afpd_afp__options.c) = 4e21b9701e64aa47cbb707047988be609acfb1cf
+SHA1 (patch-etc_afpd_afp__options.c) = ab65d03c61f8be65e8afc3bd102e5e13e642f1b9
 SHA1 (patch-etc_atalkd_main.c) = bdd452b9ca62e506d056e3818fb7f5b54a9d38c5
 SHA1 (patch-etc_cnid_dbd_cmd_dbd_scanvol.c) = df844b4047e614a3fd44cbcea252627f6fe43b65
 SHA1 (patch-etc_papd_file.c) = 8d050430e8013501230462375c874c8188f12e73
 SHA1 (patch-etc_papd_file.h) = 2464cc27385a8300f8cc3503643db4512d5f368f
-SHA1 (patch-etc_papd_magics.c) = e1d0a871de6cb567e9d98fa428aa560f6203c89c
+SHA1 (patch-etc_papd_magics.c) = 3f25cb45e7a860505895c628490905fe42a1ed62
 SHA1 (patch-etc_papd_print_cups.c) = 8dada275f9525b9229a85492050de982b1e54295
 SHA1 (patch-etc_uams_uams__dhx__pam.c) = 8ed99ff32ca932367c5df7af6889db1abbde7a2e
 SHA1 (patch-etc_uams_uams__dhx__passwd.c) = 52e2862aa55268349dfc64a7d71ebc17e1b8830b
 SHA1 (patch-etc_uams_uams__randnum.c) = 0608eb6a7b43b0cc360879849c9ca0b38ffdc684
 SHA1 (patch-include_atalk_ldapconfig.h) = e69d212f45ace23773d15c122ca2e550b025f845
-SHA1 (patch-libatalk_asp_asp__getsess.c) = 398cf1b4cadecb96a0a25a50255a5516ba62a0d7
+SHA1 (patch-libatalk_asp_asp__getsess.c) = 0ae089ef4f882a1580298707fbeee5d519c83482
 SHA1 (patch-libatalk_bstring_bstrlib.c) = f43818328237b908166f956de464f532d578d2c4
-SHA1 (patch-man_man5_afpd.conf.5.tmpl) = 33597b5f1bb98c17f9a94d2d33549541690aedfd
+SHA1 (patch-man_man5_afpd.conf.5.tmpl) = 43dfb930851329e5fe77d2fae4b8b7237a3fe42c
