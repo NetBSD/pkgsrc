@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/01/28 12:49:56 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2022/01/28 14:02:33 wiz Exp $
 
 DISTNAME=	ibus-anthy-1.5.6
 PKGREVISION=	4
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	kasumi>=2.1:../../inputmethod/kasumi
 DEPENDS+=	ibus>=1.5.4:../../inputmethod/ibus
-DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject32
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
