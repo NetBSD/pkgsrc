@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2022/01/14 15:01:36 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2022/01/28 14:02:33 wiz Exp $
 
 DISTNAME=	syncthing-gtk-0.9.4.4
 PKGREVISION=	4
@@ -15,9 +15,10 @@ DEPENDS+=	syncthing>=0.13.0:../../net/syncthing
 DEPENDS+=	glib-networking-[0-9]*:../../net/glib-networking # GIO GnuTLS support
 DEPENDS+=	psmisc-[0-9]*:../../sysutils/psmisc # for killall
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject32
 
 PYTHON_VERSIONS_ACCEPTED=	27
+
 EGG_NAME=	${DISTNAME:S/0/v0/:S/-/_/}
 
 REPLACE_PYTHON+=		*.py scripts/*.py syncthing_gtk/*.py

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2021/12/08 16:05:15 adam Exp $
+# $NetBSD: Makefile,v 1.23 2022/01/28 14:02:33 wiz Exp $
 
 PKGREVISION= 1
 .include "../../inputmethod/ibus/Makefile.common"
@@ -15,7 +15,7 @@ USE_TOOLS+=		pkg-config intltool msgfmt gmake
 GNU_CONFIGURE=		yes
 
 DEPENDS+=	ibus>=${PKGVERSION_NOREV}:../../inputmethod/ibus
-DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject32
 DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 
 PKGCONFIG_OVERRIDE+=	ibus-1.0.pc.in
