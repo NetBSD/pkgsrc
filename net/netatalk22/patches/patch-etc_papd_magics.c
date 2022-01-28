@@ -1,4 +1,4 @@
-$NetBSD: patch-etc_papd_magics.c,v 1.1 2021/09/12 15:52:37 nat Exp $
+$NetBSD: patch-etc_papd_magics.c,v 1.2 2022/01/28 21:18:19 nat Exp $
 
 Send a reply when more data required by papd server.
 As required by appletalk 58.
@@ -26,14 +26,6 @@ AFAICT this should have no consequence on later appletalk versions.
  
  int cm_psquery( struct papfile *in, struct papfile *out, struct sockaddr_at *sat _U_)
 @@ -115,6 +117,7 @@ int cm_psquery( struct papfile *in, stru
- 	    return( CH_DONE );
- 
- 	case -1 :
-+	    spoolreply( out, "Processing..." );
- 	    return( CH_MORE );
- 
-         case -2 :
-@@ -149,6 +152,7 @@ int cm_psadobe( struct papfile *in, stru
  	    return( CH_DONE );
  
  	case -1 :
