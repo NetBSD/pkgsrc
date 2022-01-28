@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2021/12/08 16:05:13 adam Exp $
+# $NetBSD: Makefile,v 1.26 2022/01/28 12:49:56 wiz Exp $
 
 DISTNAME=	ibus-anthy-1.5.6
 PKGREVISION=	4
@@ -25,6 +25,8 @@ CONFIGURE_ARGS+=	--with-kasumi-exec=${LOCALBASE}/bin/kasumi
 CONFIGURE_ARGS+=	--with-kasumi-icon=${LOCALBASE}/share/pixmaps/kasumi.png
 CONFIGURE_ARGS+=	--with-layout=default
 #CONFIGURE_ARGS+=	--enable-pygtk2-anthy
+
+PYTHON_VERSIONS_ACCEPTED=	27
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.26.0
