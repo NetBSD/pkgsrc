@@ -1,8 +1,11 @@
-$NetBSD: patch-support_shobj-conf,v 1.1 2018/01/25 10:40:06 jperkin Exp $
+$NetBSD: patch-support_shobj-conf,v 1.2 2022/01/28 20:39:20 schmonz Exp $
 
 Spell -fPIC correctly.
+Omit the special -arch_only treatment for old Darwin; it's not supported
+by external compilers (e.g., lang/gcc10) and it's not needed by the
+native compiler (at least, not on Snow Leopard gcc 4.2.1).
 
---- support/shobj-conf.orig	2014-02-24 02:06:29.000000000 +0000
+--- support/shobj-conf.orig	2019-12-13 14:51:17.000000000 +0000
 +++ support/shobj-conf
 @@ -114,7 +114,7 @@ sunos5*-*gcc*|solaris2*-*gcc*)
  	;;
@@ -13,3 +16,12 @@ Spell -fPIC correctly.
  	SHOBJ_LD=/usr/ccs/bin/ld
  	SHOBJ_LDFLAGS='-G -dy -z text -i -h $@'
  
+@@ -157,7 +157,7 @@ darwin*)
+ 	*)
+ 		case "${host_os}" in
+ 		darwin[89]*|darwin1[012]*)
+-			SHOBJ_ARCHFLAGS='-arch_only `/usr/bin/arch`'
++			SHOBJ_ARCHFLAGS=
+ 			;;
+ 		 *) 	# Mac OS X 10.9 (Mavericks) and later
+ 			SHOBJ_ARCHFLAGS=
