@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2019/09/22 17:52:41 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/01/28 14:22:15 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -9,9 +9,6 @@ ${PYSITELIB}/PyGObject-${PKGVERSION}.egg-info
 ${PYSITELIB}/gi/__init__.py
 ${PYSITELIB}/gi/__init__.pyc
 ${PYSITELIB}/gi/__init__.pyo
-${PYSITELIB}/gi/_compat.py
-${PYSITELIB}/gi/_compat.pyc
-${PYSITELIB}/gi/_compat.pyo
 ${PYSITELIB}/gi/_constants.py
 ${PYSITELIB}/gi/_constants.pyc
 ${PYSITELIB}/gi/_constants.pyo
