@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2021/12/08 16:04:05 adam Exp $
+# $NetBSD: Makefile,v 1.31 2022/01/28 11:54:20 wiz Exp $
 
 DISTNAME=	pyatspi-2.38.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyatspi/at-spi2/}
@@ -25,6 +25,8 @@ CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 PY_PATCHPLIST=	yes
 
 CONFLICTS=	${PYPKGPREFIX}-at-spi-[0-9]*
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/py-gobject3-common/buildlink3.mk"
