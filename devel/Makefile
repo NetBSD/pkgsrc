@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3566 2022/01/27 10:51:01 wiz Exp $
+# $NetBSD: Makefile,v 1.3567 2022/01/28 14:00:47 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2345,6 +2345,7 @@ SUBDIR+=	py-gobject
 SUBDIR+=	py-gobject-shared
 SUBDIR+=	py-gobject3
 SUBDIR+=	py-gobject3-common
+SUBDIR+=	py-gobject32
 SUBDIR+=	py-google-api-core
 SUBDIR+=	py-google-apputils
 SUBDIR+=	py-google-i18n-address
