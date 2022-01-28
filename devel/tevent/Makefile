@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2020/12/04 20:45:14 nia Exp $
+# $NetBSD: Makefile,v 1.10 2022/01/28 17:59:17 thor Exp $
 
-DISTNAME=	tevent-0.10.2
+DISTNAME=	tevent-0.11.0
 PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.samba.org/ftp/tevent/
@@ -45,6 +45,7 @@ SUBST_STAGE.docbook=	pre-configure
 SUBST_SED.docbook+=	-e 's,http://docbook.sourceforge.net/release/xsl/current,${PREFIX}/share/xsl/docbook,g'
 
 .include "../../devel/talloc/buildlink3.mk"
+.include "../../devel/cmocka/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
