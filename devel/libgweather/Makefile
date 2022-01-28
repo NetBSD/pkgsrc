@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2021/12/08 16:01:58 adam Exp $
+# $NetBSD: Makefile,v 1.90 2022/01/28 11:50:44 wiz Exp $
 
 DISTNAME=	libgweather-40.0
 PKGREVISION=	4
@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	pkg-config xgettext
 
 PYTHON_FOR_BUILD_ONLY=	tool
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/meson-private/gweather-3.0.pc
