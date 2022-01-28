@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2022/01/04 20:53:08 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2022/01/28 14:03:00 wiz Exp $
 
 PKGREVISION= 3
 .include "Makefile.common"
@@ -11,6 +11,8 @@ COMMENT=	Python bindings for glib2 gobject
 MESON_ARGS+=	-Dpython=${PYTHONBIN:Q}
 MESON_ARGS+=	-Dtests=false
 TEST_TARGET=	check
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # Leave for py-gobject3-common:
 post-install:
