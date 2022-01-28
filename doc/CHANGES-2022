@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.480 2022/01/27 21:42:02 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.481 2022/01/28 09:00:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -633,3 +633,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/qore-xml-module to 1.5.1 [nros 2022-01-27]
 	Updated textproc/qore-yaml-module to 0.7 [nros 2022-01-27]
 	Updated devel/goredo to 1.22.0 [schmonz 2022-01-27]
+	Updated devel/extra-cmake-modules to 5.83.0 [wiz 2022-01-28]
