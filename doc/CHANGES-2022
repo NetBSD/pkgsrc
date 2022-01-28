@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.489 2022/01/28 14:22:27 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.490 2022/01/28 14:22:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -645,3 +645,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ugrep to 3.7.1 [adam 2022-01-28]
 	Added devel/py-gobject32 version 3.36.1nb3 [wiz 2022-01-28]
 	Updated devel/py-gobject3-common to 3.42.0 [wiz 2022-01-28]
+	Updated devel/py-gobject3 to 3.42.0 [wiz 2022-01-28]
