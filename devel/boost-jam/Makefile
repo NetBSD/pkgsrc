@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2021/09/29 16:11:04 adam Exp $
+# $NetBSD: Makefile,v 1.17 2022/01/29 11:02:50 schmonz Exp $
 
 BOOST_PACKAGE=		jam
 BOOST_COMMENT=		(Boost.Jam utility)
@@ -19,7 +19,9 @@ SUBST_SED.opt=		-e 's,-O3,,g'
 INSTALLATION_DIRS=	bin
 
 # Fix RELRO build
-CXXFLAGS+=	${LDFLAGS}
+CXXFLAGS+=		${LDFLAGS}
+
+USE_LANGUAGES+=		c++11
 
 do-build:
 	cd ${WRKSRC}/tools/build/src/engine && \
