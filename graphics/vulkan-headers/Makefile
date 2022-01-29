@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/08/03 16:00:26 triaxx Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/29 22:07:27 triaxx Exp $
 
 GITHUB_PROJECT=	Vulkan-Headers
-DISTNAME=	sdk-1.2.182.0
-PKGNAME=	${GITHUB_PROJECT:tl}-${DISTNAME:S/sdk-//}
+DISTNAME=	v1.3.204
+PKGNAME=	${GITHUB_PROJECT:tl}-${DISTNAME:S/^v//}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
@@ -19,4 +19,7 @@ USE_CMAKE=	yes
 REPLACE_PYTHON=	registry/*.py
 
 .include "../../lang/python/application.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libxcb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
