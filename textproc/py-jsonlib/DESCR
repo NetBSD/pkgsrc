@@ -1,6 +1,0 @@
-JSON is a lightweight data-interchange format. It's often used for
-exchanging data between a web server and user agent. This module
-aims to produce a library for serializing and deserializing JSON
-that conforms strictly to RFC 4627.
-
-This package contains the python-2.x version of the module.

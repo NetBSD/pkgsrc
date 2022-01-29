@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:23:06 nia Exp $
-
-BLAKE2s (jsonlib-1.6.1.tar.gz) = c406a1e9f9d9a8872ad821264f0fc776326e43e0aa7f143fc7f041462a2166e4
-SHA512 (jsonlib-1.6.1.tar.gz) = 62de57e55bc5322ffdb1872dd4bffcceb16d2ab168642b5ddb1ff828fe6e8f2b25137c5efcf5cb55e2c89d803a31297474498cd19d40e5f8b54a90062148fd88
-Size (jsonlib-1.6.1.tar.gz) = 43828 bytes
