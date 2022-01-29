@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:05 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/29 08:48:40 wiz Exp $
 
 DISTNAME=	flake8-docstrings-1.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,9 +12,11 @@ COMMENT=	Extension for flake8 using pydocstyle to check docstrings
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-docstyle>=2.1.0:../../devel/py-docstyle
-DEPENDS+=	${PYPKGPREFIX}-flake8>=3.0.0:../../devel/py-flake8
+
+PYTHON_VERSIONED_DEPENDENCIES+=	flake8
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
