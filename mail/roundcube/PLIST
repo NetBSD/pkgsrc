@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2021/11/20 15:13:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.50 2022/01/29 13:34:44 taca Exp $
 share/doc/roundcube/CHANGELOG.md
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
@@ -493,6 +493,7 @@ share/roundcube/plugins/emoticons/localization/is_IS.inc
 share/roundcube/plugins/emoticons/localization/it_IT.inc
 share/roundcube/plugins/emoticons/localization/ja_JP.inc
 share/roundcube/plugins/emoticons/localization/ko_KR.inc
+share/roundcube/plugins/emoticons/localization/ku_IQ.inc
 share/roundcube/plugins/emoticons/localization/lt_LT.inc
 share/roundcube/plugins/emoticons/localization/lv_LV.inc
 share/roundcube/plugins/emoticons/localization/mk_MK.inc
@@ -793,14 +794,17 @@ share/roundcube/plugins/jqueryui/themes/classic/images/ui-icons_cc0000_256x240.p
 share/roundcube/plugins/jqueryui/themes/classic/images/ui-icons_ffffff_256x240.png
 share/roundcube/plugins/jqueryui/themes/classic/jquery-ui.css
 share/roundcube/plugins/jqueryui/themes/classic/jquery-ui.css.diff
+share/roundcube/plugins/jqueryui/themes/classic/jquery-ui.min.css
 share/roundcube/plugins/jqueryui/themes/elastic/images/jquery.minicolors.png
 share/roundcube/plugins/jqueryui/themes/elastic/images/ui-icons-datepicker.png
 share/roundcube/plugins/jqueryui/themes/elastic/images/ui-icons_444444_256x240.png
 share/roundcube/plugins/jqueryui/themes/elastic/images/ui-icons_777777_256x240.png
 share/roundcube/plugins/jqueryui/themes/elastic/jquery-ui.css
 share/roundcube/plugins/jqueryui/themes/elastic/jquery-ui.css.diff
+share/roundcube/plugins/jqueryui/themes/elastic/jquery-ui.min.css
 share/roundcube/plugins/jqueryui/themes/elastic/jquery.minicolors.css
 share/roundcube/plugins/jqueryui/themes/elastic/jquery.minicolors.css.diff
+share/roundcube/plugins/jqueryui/themes/elastic/jquery.minicolors.min.css
 share/roundcube/plugins/jqueryui/themes/larry/images/animated-overlay.gif
 share/roundcube/plugins/jqueryui/themes/larry/images/jquery.minicolors.png
 share/roundcube/plugins/jqueryui/themes/larry/images/ui-dialog-close.png
@@ -813,8 +817,11 @@ share/roundcube/plugins/jqueryui/themes/larry/images/ui-icons_cc0000_256x240.png
 share/roundcube/plugins/jqueryui/themes/larry/images/ui-icons_ffffff_256x240.png
 share/roundcube/plugins/jqueryui/themes/larry/jquery-ui.css
 share/roundcube/plugins/jqueryui/themes/larry/jquery-ui.css.diff
+share/roundcube/plugins/jqueryui/themes/larry/jquery-ui.min.css
 share/roundcube/plugins/jqueryui/themes/larry/jquery.minicolors.css
+share/roundcube/plugins/jqueryui/themes/larry/jquery.minicolors.min.css
 share/roundcube/plugins/jqueryui/themes/larry/tagedit.css
+share/roundcube/plugins/jqueryui/themes/larry/tagedit.min.css
 share/roundcube/plugins/krb_authentication/composer.json
 share/roundcube/plugins/krb_authentication/krb_authentication.php
 share/roundcube/plugins/managesieve/Changelog
@@ -985,6 +992,7 @@ share/roundcube/plugins/markasjunk/localization/de_DE.inc
 share/roundcube/plugins/markasjunk/localization/el_GR.inc
 share/roundcube/plugins/markasjunk/localization/en_GB.inc
 share/roundcube/plugins/markasjunk/localization/en_US.inc
+share/roundcube/plugins/markasjunk/localization/es_AR.inc
 share/roundcube/plugins/markasjunk/localization/es_ES.inc
 share/roundcube/plugins/markasjunk/localization/et_EE.inc
 share/roundcube/plugins/markasjunk/localization/eu_ES.inc
@@ -992,9 +1000,11 @@ share/roundcube/plugins/markasjunk/localization/fi_FI.inc
 share/roundcube/plugins/markasjunk/localization/fr_FR.inc
 share/roundcube/plugins/markasjunk/localization/ga_IE.inc
 share/roundcube/plugins/markasjunk/localization/he_IL.inc
+share/roundcube/plugins/markasjunk/localization/hr_HR.inc
 share/roundcube/plugins/markasjunk/localization/hu_HU.inc
 share/roundcube/plugins/markasjunk/localization/id_ID.inc
 share/roundcube/plugins/markasjunk/localization/is_IS.inc
+share/roundcube/plugins/markasjunk/localization/it_IT.inc
 share/roundcube/plugins/markasjunk/localization/ja_JP.inc
 share/roundcube/plugins/markasjunk/localization/ko_KR.inc
 share/roundcube/plugins/markasjunk/localization/lt_LT.inc
@@ -1799,6 +1809,7 @@ share/roundcube/program/localization/da_DK/timezones.inc
 share/roundcube/program/localization/de_CH/csv2vcard.inc
 share/roundcube/program/localization/de_CH/labels.inc
 share/roundcube/program/localization/de_CH/messages.inc
+share/roundcube/program/localization/de_CH/timezones.inc
 share/roundcube/program/localization/de_DE/csv2vcard.inc
 share/roundcube/program/localization/de_DE/labels.inc
 share/roundcube/program/localization/de_DE/messages.inc
@@ -1822,6 +1833,7 @@ share/roundcube/program/localization/es_419/messages.inc
 share/roundcube/program/localization/es_419/timezones.inc
 share/roundcube/program/localization/es_AR/labels.inc
 share/roundcube/program/localization/es_AR/messages.inc
+share/roundcube/program/localization/es_AR/timezones.inc
 share/roundcube/program/localization/es_ES/csv2vcard.inc
 share/roundcube/program/localization/es_ES/labels.inc
 share/roundcube/program/localization/es_ES/messages.inc
@@ -1894,6 +1906,7 @@ share/roundcube/program/localization/ku/labels.inc
 share/roundcube/program/localization/ku/messages.inc
 share/roundcube/program/localization/ku_IQ/labels.inc
 share/roundcube/program/localization/ku_IQ/messages.inc
+share/roundcube/program/localization/ku_IQ/timezones.inc
 share/roundcube/program/localization/lb_LU/labels.inc
 share/roundcube/program/localization/lb_LU/messages.inc
 share/roundcube/program/localization/lb_LU/timezones.inc
