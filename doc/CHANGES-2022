@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.493 2022/01/29 08:41:50 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.494 2022/01/29 08:57:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -649,3 +649,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/py-scour to 0.38.2nb3 [wiz 2022-01-29]
 	Updated math/py-numpy to 1.21.5nb4 [wiz 2022-01-29]
 	Added devel/py-flake8-3 version 3.9.2nb3 [wiz 2022-01-29]
+	Updated devel/py-flake8 to 4.0.1 [wiz 2022-01-29]
