@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.60 2022/01/27 10:50:51 wiz Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.61 2022/01/29 08:42:50 wiz Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -9,7 +9,7 @@
 # PYTHON_VERSIONED_DEPENDENCIES
 #       The Python package which should be added as a dependency.
 #
-#       Possible values: Pmw Pillow X cairo html2text hypothesis importlib-metadata ipython jsonlib markdown more-itertools pip packaging pygments pyparsing python-digest rsa setuptools setuptools_scm sphinx test testtools zipp
+#       Possible values: Pmw Pillow X cairo flake8 html2text hypothesis importlib-metadata ipython jsonlib markdown more-itertools pip packaging pygments pyparsing python-digest rsa setuptools setuptools_scm sphinx test testtools zipp
 #       Default: (nothing)
 #
 
@@ -23,6 +23,7 @@ _SUPPORTED_PACKAGES+=	X textproc/py-X2 textproc/py-X
 _SUPPORTED_PACKAGES+=	cairo graphics/py-cairo118 graphics/py-cairo
 # XXX feedparser 6.x is not only py27-incompatible, but also 5.x-API-incompatible
 #_SUPPORTED_PACKAGES+=	feedparser textproc/py-feedparser5 textproc/py-feedparser
+_SUPPORTED_PACKAGES+=	flake8 devel/py-flake8-3 devel/py-flake8
 _SUPPORTED_PACKAGES+=	html2text textproc/py-html2text-2019.8.11 textproc/py-html2text
 _SUPPORTED_PACKAGES+=	hypothesis devel/py-hypothesis4 devel/py-hypothesis
 _SUPPORTED_PACKAGES+=	importlib-metadata devel/py-importlib-metadata2 devel/py-importlib-metadata
