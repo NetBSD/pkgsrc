@@ -1,7 +1,7 @@
-# $NetBSD: toolset.mk,v 1.7 2013/12/10 16:12:49 jperkin Exp $
+# $NetBSD: toolset.mk,v 1.8 2022/01/29 11:03:58 schmonz Exp $
 
 .if !empty(PKGSRC_COMPILER:Mgcc)
-.  if ${OPSYS} == "Darwin"
+.  if ${OPSYS} == "Darwin" && !defined(GCCBASE)
 BOOST_TOOLSET=		darwin
 .  else
 BOOST_TOOLSET=		gcc
