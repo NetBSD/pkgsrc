@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6476 2021/12/31 17:28:28 plunky Exp $
+$NetBSD: CHANGES-2021,v 1.6477 2022/01/29 07:32:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -7248,7 +7248,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated sysutils/zoxide to 0.7.5 [pin 2021-09-11]
 	Updated audio/termusic to 0.3.10 [pin 2021-09-11]
 	Updated devel/git-cliff to 0.3.0 [pin 2021-09-11]
-	Removed textproc/p5-YAML-XS [wen 2021-09-11]
+	Removed textproc/p5-YAML-XS successor textproc/p5-YAML-LibYAML [wen 2021-09-11]
 	Added audio/aften version 0.0.8 [nia 2021-09-11]
 	Updated math/p5-Statistics-Descriptive to 3.0800 [wen 2021-09-11]
 	Updated misc/p5-Business-ISBN-Data to 20210112.006 [wen 2021-09-11]
