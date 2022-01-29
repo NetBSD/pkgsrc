@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:47:23 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/01/29 22:07:27 triaxx Exp $
 
-BLAKE2s (Vulkan-Headers/sdk-1.2.182.0.tar.gz) = bd17c712a22722815c45c8d6549903acd0cc388a33fad1f762caf4e4439b1cd2
-SHA512 (Vulkan-Headers/sdk-1.2.182.0.tar.gz) = 7dbcece6d6da4d716a9607a41e1e2f004d956f03e49015dfdc3d50ed7c37eac74355d7883e7f96117ca1400472c3de8e2b0d1e6b3a7b279ae87a99de2c01fbed
-Size (Vulkan-Headers/sdk-1.2.182.0.tar.gz) = 1162578 bytes
+BLAKE2s (Vulkan-Headers/v1.3.204.tar.gz) = 497d4bf6a8bf97eda7bb016bfa7757405f9bec2b43fe6deb017a07adecc5ff70
+SHA512 (Vulkan-Headers/v1.3.204.tar.gz) = 46572c96baa3c5fddad900af554300ea29bcb3ffd3d789620c413147aead616882947000f52447d399aeaec94846184e00396e58f1b6a952df1cee79575c7476
+Size (Vulkan-Headers/v1.3.204.tar.gz) = 1422859 bytes
