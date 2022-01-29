@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2022/01/16 23:51:14 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2022/01/29 07:23:59 wiz Exp $
 #
 # Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
 
@@ -22,6 +22,8 @@ USE_TOOLS+=	gmake msgfmt
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 INSTALLATION_DIRS+=	share/doc/mercurial
+
+PYTHON_SELF_CONFLICT=	yes
 
 .include "version.mk"
 .include "options.mk"
