@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.497 2022/01/29 10:36:25 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.498 2022/01/29 13:28:13 thor Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -653,3 +653,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/libssh to 0.96nb3 [wiz 2022-01-29]
 	Updated sysutils/dusage to 0.2.2 [pin 2022-01-29]
 	Updated devel/py-importlib-metadata to 4.10.1nb1 [wiz 2022-01-29]
+	Updated devel/tevent to 0.11.0nb1 [thor 2022-01-29]
