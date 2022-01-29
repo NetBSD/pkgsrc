@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2022/01/24 18:24:47 adam Exp $
+# $NetBSD: Makefile,v 1.28 2022/01/29 08:48:41 wiz Exp $
 
 DISTNAME=	responses-0.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,11 +21,11 @@ DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 .endif
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=3.7.1:../../devel/py-coverage
-TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-localserver-[0-9]*:../../devel/py-test-localserver
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+PYTHON_VERSIONED_DEPENDENCIES+=	flake8:test
+PYTHON_VERSIONED_DEPENDENCIES+=	test:test
 
 USE_LANGUAGES=	# none
 
