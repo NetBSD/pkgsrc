@@ -1,8 +1,8 @@
-$NetBSD: patch-magic_myfile,v 1.1 2021/12/27 23:25:08 schmonz Exp $
+$NetBSD: patch-magic_myfile,v 1.2 2022/01/29 13:06:26 schmonz Exp $
 
 Use the just-built libmagic, not whatever might be already installed.
 
---- magic/myfile.orig	2021-12-27 21:10:43.590323858 +0000
+--- magic/myfile.orig	2022-01-29 13:08:32.000000000 +0000
 +++ magic/myfile
 @@ -0,0 +1,8 @@
 +#!@SH@
@@ -11,5 +11,5 @@ Use the just-built libmagic, not whatever might be already installed.
 +
 +magicdir=$(pwd)
 +cd ../src/.libs
-+LD_PRELOAD=./libmagic.so.1 ./file -C -m "${magicdir}/$1"
++DYLD_LIBRARY_PATH=. LD_PRELOAD=./libmagic.so.1 ./file -C -m "${magicdir}/$1"
 +cp magic.mgc ${magicdir}
