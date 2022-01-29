@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/01/27 10:16:09 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/01/29 08:48:41 wiz Exp $
 
 DISTNAME=	raven-6.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-bottle-[0-9]*:../../www/py-bottle
 TEST_DEPENDS+=	${PYPKGPREFIX}-celery>=2.5:../../net/py-celery
 TEST_DEPENDS+=	${PYPKGPREFIX}-codestyle-[0-9]*:../../devel/py-codestyle
 TEST_DEPENDS+=	${PYPKGPREFIX}-exam>=0.5.2:../../devel/py-exam
-TEST_DEPENDS+=	${PYPKGPREFIX}-flake8>=3.5.0:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-flask-login>=0.2.0:../../www/py-flask-login
 TEST_DEPENDS+=	${PYPKGPREFIX}-logbook-[0-9]*:../../devel/py-logbook
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
@@ -41,7 +40,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-zconfig-[0-9]*:../../devel/py-zconfig
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+PYTHON_VERSIONED_DEPENDENCIES+=	test:test
+PYTHON_VERSIONED_DEPENDENCIES+=	flake8:test
 
 USE_PKG_RESOURCES=	yes
 
