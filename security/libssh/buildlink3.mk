@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2021/10/21 07:46:32 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2022/01/29 18:05:30 wiz Exp $
 
 BUILDLINK_TREE+=	libssh
 
@@ -16,7 +16,6 @@ pkgbase := libssh
 .include "../../security/openssl/buildlink3.mk"
 .endif
 
-.include "../../devel/argp/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/krb5.buildlink3.mk"
 .endif # LIBSSH_BUILDLINK3_MK
