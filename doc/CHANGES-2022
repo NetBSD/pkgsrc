@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.498 2022/01/29 13:28:13 thor Exp $
+$NetBSD: CHANGES-2022,v 1.499 2022/01/29 13:35:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -654,3 +654,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/dusage to 0.2.2 [pin 2022-01-29]
 	Updated devel/py-importlib-metadata to 4.10.1nb1 [wiz 2022-01-29]
 	Updated devel/tevent to 0.11.0nb1 [thor 2022-01-29]
+	Updated mail/roundcube to 1.5.2 [taca 2022-01-29]
+	Updated mail/roundcube-plugin-enigma to 1.5.2 [taca 2022-01-29]
+	Updated mail/roundcube-plugin-password to 1.5.2 [taca 2022-01-29]
+	Updated mail/roundcube-plugin-zipdownload to 1.5.2 [taca 2022-01-29]
