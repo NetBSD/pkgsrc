@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2021/12/08 16:05:52 adam Exp $
+# $NetBSD: Makefile,v 1.21 2022/01/29 07:22:54 wiz Exp $
 
 DISTNAME=	gst-python-1.18.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gst-python/gstreamer1/}
@@ -17,6 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 PY_PATCHPLIST=		yes
+PYTHON_SELF_CONFLICT=	yes
 TEST_TARGET=		check
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
