@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.89 2022/01/05 15:41:14 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2022/01/29 07:46:10 wiz Exp $
 
 DISTNAME=	numpy-1.21.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	4
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
 EXTRACT_SUFX=	.zip
@@ -55,6 +55,7 @@ MAKE_ENV.DragonFly+=	LDVER=ld.bfd
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${RM} f2py || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && ${RM} f2py3 || ${TRUE}
 
 do-test:
 	cd ${WRKDIR} && \
