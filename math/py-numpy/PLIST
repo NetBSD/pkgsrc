@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.33 2021/11/02 18:48:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.34 2022/01/29 07:46:10 wiz Exp $
 bin/f2py${PYVERSSUFFIX}
-${PLIST.py2x}bin/f2py2
-${PLIST.py3x}bin/f2py3
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
