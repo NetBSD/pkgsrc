@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2021/11/18 16:05:28 nia Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/29 18:33:17 js Exp $
 
 DISTNAME=		gcc-4.6.4
 PKGNAME=		cross-freemint-${DISTNAME}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-4.6.4/}
 
@@ -38,7 +38,7 @@ CFLAGS+=		-fomit-frame-pointer
 HOSTDIR=		build-${MACHINE_ARCH}--${LOWER_OPSYS}
 
 CONFIGURE_ARGS+=	--target=m68k-atari-mint
-CONFIGURE_ARGS+=	--enable-languages=c,c++
+CONFIGURE_ARGS+=	--enable-languages=c,c++,objc,obj-c++
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--disable-multilib
