@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/11/19 22:19:39 sjmulder Exp $
+$NetBSD: distinfo,v 1.6 2022/01/29 14:55:08 sjmulder Exp $
 
-BLAKE2s (bcal-2.3.tar.gz) = bf482fb8b29ac1d4833f081536d815c05aa4f04325ad357475d4f66c8be5f2ec
-SHA512 (bcal-2.3.tar.gz) = d1ec969f5b083299376606e5c60b6bc2c77dccee861d8ebb1f75f957a21eb9e703954da6b00e48f8710d21256c994ed860631f84b9a084e04617d277c3325f2b
-Size (bcal-2.3.tar.gz) = 36111 bytes
+BLAKE2s (bcal-2.4.tar.gz) = 6a25235e819bf12969b8d61598a984ce1c5c97a1d40efa2dc5f7953aed4bad5e
+SHA512 (bcal-2.4.tar.gz) = cdce53bb63f878ff6d2e15ea93f489a1ad8d59b2ff640f558704e5333dabaeeed34657a9fd01ae7aa73f3f110e6692598643f62bb93dcddd48d3b977f8748055
+Size (bcal-2.4.tar.gz) = 36105 bytes
