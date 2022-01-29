@@ -1,0 +1,10 @@
+Flake8 is a wrapper around these tools:
+
+* PyFlakes
+* pep8
+* Ned Batchelder's McCabe script
+
+Flake8 runs all the tools by launching the single flake8 script.
+It displays the warnings in a per-file, merged output.
+
+This package contains the last version supporting Python 2.x.
