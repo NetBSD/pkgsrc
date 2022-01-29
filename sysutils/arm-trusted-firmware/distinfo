@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:19:20 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/01/29 14:04:46 rhialto Exp $
 
 BLAKE2s (arm-trusted-firmware-2.3.zip) = e71fdc0caab2b5b576c6b7278636c32adf8416ca5bcb22d0903376b4fb543c98
 SHA512 (arm-trusted-firmware-2.3.zip) = 1ee358fef1a4cda68d01857d3c822034b3ab1cc68918c7a4087e95f3f2b9b41a12431a8091847f5897ae9a403826d8fcfde0a8a689c69808ff06e737a845db28
 Size (arm-trusted-firmware-2.3.zip) = 5797101 bytes
+SHA1 (patch-Makefile) = 63a6bf493518b321ac6d6c747025811db6a95b1d
 SHA1 (patch-plat_allwinner_sun50i_h6_include_sunxi_mmap.h) = 214c137847cf93661be0f6179882b63aa4aed4fe

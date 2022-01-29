@@ -1,0 +1,31 @@
+$NetBSD: patch-Makefile,v 1.1 2022/01/29 14:03:13 rhialto Exp $
+
+Avoid that we fail on these warnings:
+
+  LD      build/sun50i_a64/release/bl31/bl31.elf
+/usr/pkg/cross-aarch64-none-elf/bin/aarch64-none-elf-ld: skipping incompatible /usr/pkg/lib/libfdt.so when searching for -lfdt
+/usr/pkg/cross-aarch64-none-elf/bin/aarch64-none-elf-ld: skipping incompatible /usr/pkg/lib/libfdt.a when searching for -lfdt
+/usr/pkg/cross-aarch64-none-elf/bin/aarch64-none-elf-ld: skipping incompatible /usr/lib/libc.so when searching for -lc
+/usr/pkg/cross-aarch64-none-elf/bin/aarch64-none-elf-ld: skipping incompatible /usr/lib/libc.a when searching for -lc
+gmake: *** [Makefile:1071: build/sun50i_a64/release/bl31/bl31.elf] Error 1
+
+--- Makefile.orig	2020-04-20 15:56:43.000000000 +0000
++++ Makefile
+@@ -375,7 +375,7 @@ TF_LDFLAGS		+=	$(TF_LDFLAGS_$(ARCH))
+ # LD = gcc (used when GCC LTO is enabled)
+ else ifneq ($(findstring gcc,$(notdir $(LD))),)
+ # Pass ld options with Wl or Xlinker switches
+-TF_LDFLAGS		+=	-Wl,--fatal-warnings -O1
++TF_LDFLAGS		+=	-O1
+ TF_LDFLAGS		+=	-Wl,--gc-sections
+ ifeq ($(ENABLE_LTO),1)
+ 	ifeq (${ARCH},aarch64)
+@@ -392,7 +392,7 @@ TF_LDFLAGS		+=	$(subst --,-Xlinker --,$(
+ 
+ # LD = gcc-ld (ld) or llvm-ld (ld.lld) or other
+ else
+-TF_LDFLAGS		+=	--fatal-warnings -O1
++TF_LDFLAGS		+=	-O1
+ TF_LDFLAGS		+=	--gc-sections
+ # ld.lld doesn't recognize the errata flags,
+ # therefore don't add those in that case
