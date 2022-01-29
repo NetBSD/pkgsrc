@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2021/12/31 17:23:19 plunky Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2022/01/29 08:12:46 nros Exp $
 
 BUILDLINK_TREE+=	cxxopts
 
@@ -7,6 +7,7 @@ CXXOPTS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cxxopts+=	cxxopts>=3.0.0
 BUILDLINK_PKGSRCDIR.cxxopts?=	../../devel/cxxopts
+BUILDLINK_DEPMETHOD.cxxopts?=	build
 .endif
 
 BUILDLINK_TREE+=	-cxxopts
