@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.495 2022/01/29 09:04:23 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.496 2022/01/29 10:10:26 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -651,3 +651,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/py-flake8-3 version 3.9.2nb3 [wiz 2022-01-29]
 	Updated devel/py-flake8 to 4.0.1 [wiz 2022-01-29]
 	Updated security/libssh to 0.96nb3 [wiz 2022-01-29]
+	Updated sysutils/dusage to 0.2.2 [pin 2022-01-29]
