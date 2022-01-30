@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.506 2022/01/30 08:44:46 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.507 2022/01/30 09:39:36 js Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -665,3 +665,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added textproc/py-breathe version 4.31.0 [gdt 2022-01-30]
 	Updated textproc/py-breathe to 4.31.0nb1 [wiz 2022-01-30]
 	Updated net/djbdnscurve6 to 42 [schmonz 2022-01-30]
+	Added chat/py-matrix-common version 1.0.0 [js 2022-01-30]
