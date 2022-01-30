@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.511 2022/01/30 10:56:51 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.512 2022/01/30 13:58:01 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -670,3 +670,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/byacc to 20220128 [fcambus 2022-01-30]
 	Updated lang/quickjs to 20210327 [he 2022-01-30]
 	Updated devel/py-frozendict to 2.2.1 [wiz 2022-01-30]
+	Updated audio/strawberry to 1.0.1 [nia 2022-01-30]
