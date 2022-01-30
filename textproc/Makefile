@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1272 2022/01/29 21:46:17 wiz Exp $
+# $NetBSD: Makefile,v 1.1273 2022/01/30 01:26:48 gdt Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -959,6 +959,7 @@ SUBDIR+=	py-babelfish
 SUBDIR+=	py-biplist
 SUBDIR+=	py-black
 SUBDIR+=	py-bracex
+SUBDIR+=	py-breathe
 SUBDIR+=	py-cElementTree
 SUBDIR+=	py-cabocha
 SUBDIR+=	py-cmTemplate
