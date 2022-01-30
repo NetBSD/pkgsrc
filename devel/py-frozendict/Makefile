@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:06 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/01/30 10:56:42 wiz Exp $
 
-DISTNAME=	frozendict-1.2
+DISTNAME=	frozendict-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/frozendict/}
 
@@ -11,7 +10,13 @@ HOMEPAGE=	https://github.com/slezica/python-frozendict
 COMMENT=	Immutable wrapper around dictionaries
 LICENSE=	mit
 
-USE_LANGUAGES=	# none
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+USE_LANGUAGES=	c
+
+DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

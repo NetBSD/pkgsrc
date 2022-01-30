@@ -1,8 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2020/04/18 12:45:26 js Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/01/30 10:56:42 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/frozendict/VERSION
 ${PYSITELIB}/frozendict/__init__.py
 ${PYSITELIB}/frozendict/__init__.pyc
 ${PYSITELIB}/frozendict/__init__.pyo
+${PYSITELIB}/frozendict/_frozendict.so
+${PYSITELIB}/frozendict/core.py
+${PYSITELIB}/frozendict/core.pyc
+${PYSITELIB}/frozendict/core.pyo
+${PYSITELIB}/frozendict/py.typed
