@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/01/30 10:10:00 js Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/30 10:20:34 wiz Exp $
 
 DISTNAME=	matrix-python-common-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-matrix-common-1.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
 GITHUB_PROJECT=	matrix-python-common
@@ -12,6 +12,8 @@ MAINTAINER=	js@pkgsrc.org
 HOMEPAGE=	https://github.com/matrix-org/matrix-python-common
 COMMENT=	Common utilities for Synapse, Sydent and Sygnal
 LICENSE=	apache-2.0
+
+DEPENDS+=	${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
 
 USE_LANGUAGES=	# none
 EGG_NAME=	matrix_common-${PKGVERSION_NOREV}
