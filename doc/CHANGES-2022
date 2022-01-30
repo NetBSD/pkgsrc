@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.514 2022/01/30 16:34:07 adam Exp $
+$NetBSD: CHANGES-2022,v 1.515 2022/01/30 20:27:07 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -674,3 +674,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated geography/gama to 2.17 [gdt 2022-01-30]
 	Updated devel/protobuf to 3.19.4 [adam 2022-01-30]
 	Updated devel/py-protobuf to 3.19.4 [adam 2022-01-30]
+	Updated wm/pekwm to 0.2.1 [nia 2022-01-30]
