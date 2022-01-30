@@ -1,11 +1,21 @@
-$NetBSD: patch-bi,v 1.1 2022/01/24 22:25:06 buhrow Exp $
+$NetBSD: patch-bi,v 1.2 2022/01/30 04:00:42 gutteridge Exp $
 
---- src/osdep/unix/os_bsi.h.orig	2011-07-22 17:20:11.000000000 -0700
-+++ src/osdep/unix/os_bsi.h	2022-01-15 07:49:59.934504576 -0800
-@@ -41,3 +41,6 @@
+Enable use of portable_utime() on BSDs.
+
+--- src/osdep/unix/os_bsi.h.orig	2011-07-23 00:20:11.000000000 +0000
++++ src/osdep/unix/os_bsi.h
+@@ -34,6 +34,7 @@
+ #include <fcntl.h>
+ #include <syslog.h>
+ #include <sys/file.h>
++#include <utime.h>
+ 
+ 
+ #include "env_unix.h"
+@@ -41,3 +42,6 @@
  #include "ftl.h"
  #include "nl.h"
  #include "tcp.h"
 +
-+#undef utime
 +#define utime portable_utime
++int portable_utime (char *file,time_t timep[2]);
