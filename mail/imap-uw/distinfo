@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.51 2022/01/24 21:05:57 buhrow Exp $
+$NetBSD: distinfo,v 1.52 2022/01/30 04:00:42 gutteridge Exp $
 
 BLAKE2s (imap-2007f.tar.Z) = 6e67d03b84ec0fed4db99c81aea92160304c1f0c7c9ece7d5e9c4375f1490621
 SHA512 (imap-2007f.tar.Z) = 2c728deaf66d23158c61ae55ff94f05d2a1cf0168002760321ca30c6ee1c58c0a4c7bc14ece0097ea662df6c7c49be3b91c8e5e943724c9e2736800fa9298dae
 Size (imap-2007f.tar.Z) = 2793529 bytes
 SHA1 (patch-aa) = ac880c250dfee3d0d316063ace5b92cd2f190510
-SHA1 (patch-ab) = d42bb314b2bdf4058d6f44e2740f1876d69aa6cb
+SHA1 (patch-ab) = c7985a2db4d4b5c8d2644492b2e48f8ebe2d64b1
 SHA1 (patch-ac) = eab1435fdf7ab59ea8afbde949a92dd756e6aea3
 SHA1 (patch-ad) = d817dca51413bb8d228c2fabadffa3b924dff11d
 SHA1 (patch-ae) = 85e0917ce1934f6789bbce45ad5321e28cf294d9
 SHA1 (patch-af) = f3a7d2dad7b95940bdb7ee812ee19622cc594c75
-SHA1 (patch-ag) = 4152c1c618bf78f63668070e26e8feb0f7df91ed
+SHA1 (patch-ag) = 9c580a6a89f89f798a42e5ee45de87fe8159700a
 SHA1 (patch-ah) = ca68ec33fbf8ac4138669588b32098eb4f156f75
 SHA1 (patch-ai) = 312d2bd29be2f8fc03c24a635afcb0ca4ae33832
 SHA1 (patch-aj) = 961d90bf0eab651678f5bf04f19742cc4c0ecde3
@@ -35,8 +35,7 @@ SHA1 (patch-be) = 73afbc9f3c65d3adce37a3f1ee7f55e0ec665a54
 SHA1 (patch-bf) = 63c582e88bd6286295d5d9639bafec355278d537
 SHA1 (patch-bg) = c95483ed73d7c6015df99967c0509cf0ea67d28f
 SHA1 (patch-bh) = c43dc5df9fb61ea44b5195fc15c697e5f540dfae
-SHA1 (patch-bi) = 19867a536878049b31d677f06124c8ca0efde801
-SHA1 (patch-bj) = 09dfd05373d05a339dbaf725f8607522853aa848
+SHA1 (patch-bi) = 5a33faed66a06edc7f68a6007a531cf8cca7591d
 SHA1 (patch-src_c-client_mail.c) = fca90d3a5a8770b8728bdef6aec2623d16c12b6d
 SHA1 (patch-src_c-client_misc.c) = d22ca95fb333b5234c66440faf5d6e30a148bad1
 SHA1 (patch-src_c-client_misc.h) = 5cf51d186b04ebb45c79b8042bbdcb01716dd2ce
