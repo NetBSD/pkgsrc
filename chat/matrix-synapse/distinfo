@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.30 2022/01/30 10:14:16 js Exp $
+$NetBSD: distinfo,v 1.31 2022/01/30 11:17:10 wiz Exp $
 
 BLAKE2s (matrix-synapse-1.51.0.tar.gz) = d29dfd91e95584096ceff17fea2095b1f1aaa7cb9bc88e0a71c5d4ff5cca3689
 SHA512 (matrix-synapse-1.51.0.tar.gz) = 52b96c4ee74894934fdaf683c8a3f0e9f4d6eb227ad916d94aaefd878c70cdc4fc0edbf44082dcbd5de5930fe279501207614a2bd6c28e2b2c64425ce74f137a
 Size (matrix-synapse-1.51.0.tar.gz) = 7665238 bytes
 SHA1 (patch-synapse_handlers_room.py) = f9a62add7171898ec0ea76360f0a4c9969609537
-SHA1 (patch-synapse_python_dependencies.py) = c2e8b13b42ad2904fe985231643a2cd2c0f759aa
+SHA1 (patch-synapse_python_dependencies.py) = ed198e743148c50c2066f2e20310ca6f5e29b19a
