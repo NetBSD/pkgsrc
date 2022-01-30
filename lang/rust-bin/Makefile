@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2021/12/10 19:00:35 gutteridge Exp $
+# $NetBSD: Makefile,v 1.32 2022/01/30 04:31:22 pho Exp $
 
 DISTNAME=	rust-1.56.1
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
@@ -38,6 +38,9 @@ BROKEN_ON_PLATFORM+=	NetBSD-[1-7].*-*
 
 # Bootstraps built for 9.0.
 BROKEN_ON_PLATFORM+=	NetBSD-8.*-earmv7hf
+
+# Binary distributions aren't built as PIE.
+MKPIE_SUPPORTED=	no
 
 NO_BUILD=	yes
 USE_TOOLS+=	bash pax
