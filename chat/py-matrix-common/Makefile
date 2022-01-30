@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/30 10:20:34 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/01/30 10:24:44 wiz Exp $
 
 DISTNAME=	matrix-python-common-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-matrix-common-1.0.0
@@ -14,12 +14,12 @@ COMMENT=	Common utilities for Synapse, Sydent and Sygnal
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
+BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
-EGG_NAME=	matrix_common-${PKGVERSION_NOREV}
+WHEEL_NAME=	matrix_common-${PKGVERSION_NOREV}
 
-post-extract:
-	${CP} ${FILESDIR}/setup.py ${WRKSRC}
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
