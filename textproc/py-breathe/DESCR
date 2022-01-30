@@ -1,0 +1,4 @@
+Breathe is a Sphinx plugin providing beautifully integrated Doxygen
+output in your user-facing documentation. It allows you to combine
+Doxygen's excellent technical understanding of your code base with the
+superb long form documentation output of the Sphinx system.
