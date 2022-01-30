@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2022/01/08 15:19:21 tsutsui Exp $
+$NetBSD: distinfo,v 1.8 2022/01/30 01:16:38 tsutsui Exp $
 
 BLAKE2s (mikutter-plugins/api_request_file_cache-1.0.tar.gz) = 7f63e59d5ad659fc774d1a811bbb7432ea0e75e603653218f9057c5d373aadf8
 SHA512 (mikutter-plugins/api_request_file_cache-1.0.tar.gz) = 7816f012aa2316b4ee0ba9d5721b237834787750a3455c35d046e6651946da9fd2644c7a4e98b7de9408e4ac7d6bad8a79fe5186a1bc4e827341fa2ecfd90c81
@@ -21,9 +21,9 @@ Size (mikutter-plugins/list_settings-2.1.tar.gz) = 4364 bytes
 BLAKE2s (mikutter-plugins/mentions-1.0.tar.gz) = 77198d55146a558a0b334557ad0d64923b8ae0ae677edb2d06b0efcb04d04f69
 SHA512 (mikutter-plugins/mentions-1.0.tar.gz) = 01646619bf722219ff6730d562f5d940fdbf7c457d0b793586d0e235f8da87e40dfecad19db84706d010de69a14568c29e58eca14af6463fd65c4739874e08e0
 Size (mikutter-plugins/mentions-1.0.tar.gz) = 3737 bytes
-BLAKE2s (mikutter-plugins/message_detail_view-2.0.tar.gz) = 5b9143a98cf30874a3160c5967f90e8c380046cd4218f09867625acce7983799
-SHA512 (mikutter-plugins/message_detail_view-2.0.tar.gz) = c03376b969a6fdcd81ed2463827a1df708c0daf686256ce4c5c6886dbd848182deacf35d5330243fa5111a3cd3057895cd59fbe6fb5d56d35059cc00ce5e8997
-Size (mikutter-plugins/message_detail_view-2.0.tar.gz) = 3279 bytes
+BLAKE2s (mikutter-plugins/message_detail_view-2.1.tar.gz) = 0a879b9003bc5abe4329a00234e106fbc3dd3a0a0817f14fe6ea5e652e97b737
+SHA512 (mikutter-plugins/message_detail_view-2.1.tar.gz) = 2c44db8e65c7143e8ad998e8c6e56c698fc7f69c3981231f3456ca5e50b0dc3fee587eb67d039a4c7807931a135ae50a99c408322e87be183e31ef71f9ee04f5
+Size (mikutter-plugins/message_detail_view-2.1.tar.gz) = 3321 bytes
 BLAKE2s (mikutter-plugins/message_favorite-1.0.tar.gz) = 98ba8e3295db9d0a5d8a97bdc8d0b5dce6ed7bb883618a6cd5c6219737f0ee9b
 SHA512 (mikutter-plugins/message_favorite-1.0.tar.gz) = 2a9081e068d673e9b02a1caba973796ca5bac7ad7afaabb83ce87f55ad7e54cd0626ea424802b2945b82513aa14e50a2951949313730fc861933eae58a38d4cf
 Size (mikutter-plugins/message_favorite-1.0.tar.gz) = 1368 bytes
