@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21473 2022/01/30 16:34:08 adam Exp $
+$NetBSD: TODO,v 1.21474 2022/01/30 22:14:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1156,6 +1156,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mailutis-2.2 [wip]
 	o maketool-0.8.4
 	o makeztxt-1.60
+	o mame-0.240
 	o man-pages-5.11
 	o manedit-1.2.1
 	o mantis-2.22.1
@@ -1577,6 +1578,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
 	o py-Routes-2.5.1
+	o py-black-22.1.0
 	o py-cares-3.1.1
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
