@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.33 2022/01/19 16:06:43 pho Exp $
+# $NetBSD: clang.mk,v 1.34 2022/01/30 13:07:34 wiz Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -113,10 +113,5 @@ CWRAPPERS_PREPEND.cc+=	${_NOERROR_IMPLICIT_cmd:sh}
 .for _version_ in ${_CXX_STD_VERSIONS}
 _CXX_STD_FLAG.${_version_}?=	-std=${_version_}
 .endfor
-
-.if ${_PKGSRC_MKPIE} == "yes"
-WARNINGS+=		"[clang.mk] PKGSRC_MKPIE is currently not supported for clang"
-CHECK_PIE_SUPPORTED=	no
-.endif
 
 .endif	# COMPILER_CLANG_MK
