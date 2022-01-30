@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2022/01/30 01:24:44 gdt Exp $
-bin/breathe-apidoc
+@comment $NetBSD: PLIST,v 1.2 2022/01/30 07:29:04 wiz Exp $
+bin/breathe-apidoc-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
