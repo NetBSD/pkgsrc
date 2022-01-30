@@ -1,13 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2022/01/30 09:38:39 js Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2022/01/30 10:24:44 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/matrix_common/__init__.py
 ${PYSITELIB}/matrix_common/__init__.pyc
-${PYSITELIB}/matrix_common/__init__.pyo
 ${PYSITELIB}/matrix_common/py.typed
 ${PYSITELIB}/matrix_common/regex.py
 ${PYSITELIB}/matrix_common/regex.pyc
-${PYSITELIB}/matrix_common/regex.pyo
