@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.158 2022/01/08 11:16:05 wiz Exp $
+$NetBSD: distinfo,v 1.159 2022/01/30 12:07:02 rhialto Exp $
 
 BLAKE2s (poppler-22.01.0.tar.xz) = cced69fa9241f7aa0c6cc5af2ccbdf8457724f97a7e54f9c755b7b51416ce1d1
 SHA512 (poppler-22.01.0.tar.xz) = c6ea908a9188483ca588ac81d3e92dd15a405f90d36cc7059e618c8a7e3e9faeda82717aba5df34adb4a0a94e2fbecd472acec44972272349cc8d5a57b7405d1
 Size (poppler-22.01.0.tar.xz) = 1801984 bytes
 SHA1 (patch-poppler_poppler-config.h.cmake) = d2a67beb1275f10f19468421f203806ead6fa8ff
+SHA1 (patch-splash_SplashFontFile.cc) = f57e5bd727fdba6e769802eb2bb5a0ca0f960f0c
