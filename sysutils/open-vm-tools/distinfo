@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2022/01/22 18:52:44 pho Exp $
+$NetBSD: distinfo,v 1.34 2022/01/30 16:22:19 pho Exp $
 
 BLAKE2s (open-vm-tools-11.3.5-18557794.tar.gz) = 6093fe8c71a826684fdc8eed50c3367450097b0fd94e39a0a23e45f44a97a635
 SHA512 (open-vm-tools-11.3.5-18557794.tar.gz) = fa31f5615c9c90865ba9122f7fcd0831068d48defee30a5f5c620e744b76ccd5b7cc2de20cea4e37b596f99619ffb7bb47774de04e7c4bea666c7c0b6fa1560e
@@ -55,3 +55,4 @@ SHA1 (patch-vgauth_lib_impersonateLinux.c) = 1c925eab81525df06e4ebf906f835170b43
 SHA1 (patch-vmblockmounter_vmblockmounter.c) = 4287303b188f4df7a2785fe72bbab820e33d6a07
 SHA1 (patch-vmhgfs-fuse_config.c) = 0518ca08d9b5d268960e1a820899eaefd1d18361
 SHA1 (patch-vmhgfs-fuse_fsutil.h) = 9233e5612a1f22ab4b43b04cfca5f0f7d120bc21
+SHA1 (patch-vmhgfs-fuse_main.c) = 471d892312cc5680f5265599048f1b8bde251b1b
