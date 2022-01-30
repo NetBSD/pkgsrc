@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/05/10 10:32:33 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/01/30 10:55:03 he Exp $
 bin/qjs
 bin/qjsc
 bin/qjscalc
@@ -26,8 +26,10 @@ share/doc/quickjs/tests/test_bignum.js
 share/doc/quickjs/tests/test_bjson.js
 share/doc/quickjs/tests/test_builtin.js
 share/doc/quickjs/tests/test_closure.js
+share/doc/quickjs/tests/test_language.js
 share/doc/quickjs/tests/test_loop.js
-share/doc/quickjs/tests/test_op.js
 share/doc/quickjs/tests/test_op_overloading.js
 share/doc/quickjs/tests/test_qjscalc.js
 share/doc/quickjs/tests/test_std.js
+share/doc/quickjs/tests/test_worker.js
+share/doc/quickjs/tests/test_worker_module.js
