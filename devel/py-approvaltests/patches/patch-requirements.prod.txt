@@ -1,0 +1,14 @@
+$NetBSD: patch-requirements.prod.txt,v 1.1 2022/01/30 22:38:02 wiz Exp $
+
+Use official name of the module.
+
+--- requirements.prod.txt.orig	2022-01-30 18:40:10.000000000 +0000
++++ requirements.prod.txt
+@@ -1,4 +1,4 @@
+ pyperclip
+ empty-files
+-bs4
+-pytest
+\ No newline at end of file
++beautifulsoup4
++pytest
