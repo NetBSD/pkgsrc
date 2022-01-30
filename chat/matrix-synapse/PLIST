@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2021/12/09 01:26:10 gdt Exp $
+@comment $NetBSD: PLIST,v 1.21 2022/01/30 10:14:16 js Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -6,14 +6,17 @@ bin/generate_signing_key.py
 bin/hash_password
 bin/move_remote_media_to_new_store.py
 bin/register_new_matrix_user
+bin/synapse_homeserver
 bin/synapse_port_db
 bin/synapse_review_recent_signups
+bin/synapse_worker
 bin/sync_room_to_group.pl
 bin/synctl
 bin/update_synapse_database
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
@@ -567,15 +570,18 @@ ${PYSITELIB}/synapse/logging/opentracing.pyo
 ${PYSITELIB}/synapse/logging/scopecontextmanager.py
 ${PYSITELIB}/synapse/logging/scopecontextmanager.pyc
 ${PYSITELIB}/synapse/logging/scopecontextmanager.pyo
-${PYSITELIB}/synapse/logging/utils.py
-${PYSITELIB}/synapse/logging/utils.pyc
-${PYSITELIB}/synapse/logging/utils.pyo
 ${PYSITELIB}/synapse/metrics/__init__.py
 ${PYSITELIB}/synapse/metrics/__init__.pyc
 ${PYSITELIB}/synapse/metrics/__init__.pyo
 ${PYSITELIB}/synapse/metrics/_exposition.py
 ${PYSITELIB}/synapse/metrics/_exposition.pyc
 ${PYSITELIB}/synapse/metrics/_exposition.pyo
+${PYSITELIB}/synapse/metrics/_gc.py
+${PYSITELIB}/synapse/metrics/_gc.pyc
+${PYSITELIB}/synapse/metrics/_gc.pyo
+${PYSITELIB}/synapse/metrics/_reactor_metrics.py
+${PYSITELIB}/synapse/metrics/_reactor_metrics.pyc
+${PYSITELIB}/synapse/metrics/_reactor_metrics.pyo
 ${PYSITELIB}/synapse/metrics/background_process_metrics.py
 ${PYSITELIB}/synapse/metrics/background_process_metrics.pyc
 ${PYSITELIB}/synapse/metrics/background_process_metrics.pyo
@@ -624,6 +630,9 @@ ${PYSITELIB}/synapse/push/push_rule_evaluator.pyo
 ${PYSITELIB}/synapse/push/push_tools.py
 ${PYSITELIB}/synapse/push/push_tools.pyc
 ${PYSITELIB}/synapse/push/push_tools.pyo
+${PYSITELIB}/synapse/push/push_types.py
+${PYSITELIB}/synapse/push/push_types.pyc
+${PYSITELIB}/synapse/push/push_types.pyo
 ${PYSITELIB}/synapse/push/pusher.py
 ${PYSITELIB}/synapse/push/pusher.pyc
 ${PYSITELIB}/synapse/push/pusher.pyo
@@ -833,6 +842,9 @@ ${PYSITELIB}/synapse/rest/admin/devices.pyo
 ${PYSITELIB}/synapse/rest/admin/event_reports.py
 ${PYSITELIB}/synapse/rest/admin/event_reports.pyc
 ${PYSITELIB}/synapse/rest/admin/event_reports.pyo
+${PYSITELIB}/synapse/rest/admin/federation.py
+${PYSITELIB}/synapse/rest/admin/federation.pyc
+${PYSITELIB}/synapse/rest/admin/federation.pyo
 ${PYSITELIB}/synapse/rest/admin/groups.py
 ${PYSITELIB}/synapse/rest/admin/groups.pyc
 ${PYSITELIB}/synapse/rest/admin/groups.pyo
@@ -1034,6 +1046,9 @@ ${PYSITELIB}/synapse/rest/media/v1/media_storage.pyo
 ${PYSITELIB}/synapse/rest/media/v1/oembed.py
 ${PYSITELIB}/synapse/rest/media/v1/oembed.pyc
 ${PYSITELIB}/synapse/rest/media/v1/oembed.pyo
+${PYSITELIB}/synapse/rest/media/v1/preview_html.py
+${PYSITELIB}/synapse/rest/media/v1/preview_html.pyc
+${PYSITELIB}/synapse/rest/media/v1/preview_html.pyo
 ${PYSITELIB}/synapse/rest/media/v1/preview_url_resource.py
 ${PYSITELIB}/synapse/rest/media/v1/preview_url_resource.pyc
 ${PYSITELIB}/synapse/rest/media/v1/preview_url_resource.pyo
@@ -1657,6 +1672,8 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/65/05_remove_room_stats_historica
 ${PYSITELIB}/synapse/storage/schema/main/delta/65/06remove_deleted_devices_from_device_inbox.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/65/07_arbitrary_relations.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/65/08_device_inbox_background_updates.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/65/10_expirable_refresh_tokens.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/65/11_devices_auth_provider_session.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_signatures.sql
