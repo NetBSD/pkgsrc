@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.509 2022/01/30 10:37:52 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.510 2022/01/30 10:56:05 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -668,3 +668,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added chat/py-matrix-common version 1.0.0 [js 2022-01-30]
 	Updated chat/matrix-synapse to 1.51.0 [js 2022-01-30]
 	Updated devel/byacc to 20220128 [fcambus 2022-01-30]
+	Updated lang/quickjs to 20210327 [he 2022-01-30]
