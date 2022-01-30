@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.516 2022/01/30 20:27:59 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.517 2022/01/30 22:24:06 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -676,3 +676,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-protobuf to 3.19.4 [adam 2022-01-30]
 	Updated wm/pekwm to 0.2.1 [nia 2022-01-30]
 	Updated devel/mob to 2.3.0 [schmonz 2022-01-30]
+	Updated devel/py-approvaltests to 3.5.0 [schmonz 2022-01-30]
