@@ -1,26 +1,26 @@
-$NetBSD: patch-quickjs.c,v 1.2 2020/01/26 18:37:49 he Exp $
+$NetBSD: patch-quickjs.c,v 1.3 2022/01/30 10:55:03 he Exp $
 
 Portability patch for NetBSD.
 
---- quickjs.c.orig	2020-01-19 10:12:01.000000000 +0000
+--- quickjs.c.orig	2021-03-27 10:00:32.000000000 +0000
 +++ quickjs.c
-@@ -68,7 +68,15 @@
+@@ -70,7 +70,15 @@
  /* define to include Atomics.* operations which depend on the OS
     threads */
  #if !defined(EMSCRIPTEN)
 +#ifdef __NetBSD__
-+#ifdef __HAVE_ATOMICS64_OPS
++#ifdef __HAVE_ATOMICOPS64_OPS
  #define CONFIG_ATOMICS
 +#else
 +#undef CONFIG_ATOMICS
-+#endif /* __HAVE_ATOMICS64_OPS */
-+#else /* ! __NetBSD__ */
++#endif /* __HAVE_ATOMICOPS64_OPS */
++#else /* !__NetBSD__ */
 +#define CONFIG_ATOMICS
 +#endif /* __NetBSD__ */
  #endif
  
- /* dump object free */
-@@ -1544,7 +1552,7 @@ static inline size_t js_def_malloc_usabl
+ #if !defined(EMSCRIPTEN)
+@@ -1680,7 +1688,7 @@ static inline size_t js_def_malloc_usabl
      return malloc_size(ptr);
  #elif defined(_WIN32)
      return _msize(ptr);
@@ -29,7 +29,7 @@ Portability patch for NetBSD.
      return 0;
  #elif defined(__linux__)
      return malloc_usable_size(ptr);
-@@ -1618,7 +1626,7 @@ static const JSMallocFunctions def_mallo
+@@ -1754,7 +1762,7 @@ static const JSMallocFunctions def_mallo
      malloc_size,
  #elif defined(_WIN32)
      (size_t (*)(const void *))_msize,
