@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2022/01/08 15:19:21 tsutsui Exp $
+# $NetBSD: Makefile,v 1.9 2022/01/30 01:16:38 tsutsui Exp $
 
 PKGNAME=	${RUBY_PKGPREFIX}-mikutter-plugins-twitter-5.0
+PKGREVISION=	1
 DIST_SUBDIR=	mikutter-plugins
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mikutter/}
@@ -20,7 +21,7 @@ PLUGIN_DISTNAME+=	list-2.1
 PLUGIN_DISTNAME+=	list_for_profile-2.0
 PLUGIN_DISTNAME+=	list_settings-2.1
 PLUGIN_DISTNAME+=	mentions-1.0
-PLUGIN_DISTNAME+=	message_detail_view-2.0
+PLUGIN_DISTNAME+=	message_detail_view-2.1
 PLUGIN_DISTNAME+=	message_favorite-1.0
 PLUGIN_DISTNAME+=	message_retweet-2.0
 PLUGIN_DISTNAME+=	ratelimit-1.0
