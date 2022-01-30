@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.503 2022/01/30 01:24:16 tsutsui Exp $
+$NetBSD: CHANGES-2022,v 1.504 2022/01/30 01:25:50 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -662,3 +662,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed textproc/py-jsonlib [wiz 2022-01-29]
 	Updated graphics/vulkan-headers to 1.3.204 [triaxx 2022-01-29]
 	Updated net/mikutter to 5.0.4 [tsutsui 2022-01-30]
+	Added textproc/py-breathe version 4.31.0 [gdt 2022-01-30]
