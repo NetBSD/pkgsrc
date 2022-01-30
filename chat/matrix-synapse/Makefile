@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2022/01/26 07:19:03 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2022/01/30 10:14:16 js Exp $
 
-DISTNAME=	matrix-synapse-1.48.0
-PKGREVISION=	2
+DISTNAME=	matrix-synapse-1.51.0
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
 EGG_NAME=	matrix_synapse-${PKGVERSION_NOREV}
@@ -43,6 +42,7 @@ DEPENDS+=	${PYPKGPREFIX}-ijson>=3.0:../../devel/py-ijson
 DEPENDS+=	${PYPKGPREFIX}-psycopg2>=2.7:../../databases/py-psycopg2
 DEPENDS+=	${PYPKGPREFIX}-lxml>=3.5.0:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-matrix-common>=1.0.0:../../chat/py-matrix-common
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-unpaddedbase64
 
