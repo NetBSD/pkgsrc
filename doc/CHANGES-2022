@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.513 2022/01/30 15:44:20 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.514 2022/01/30 16:34:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -672,3 +672,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-frozendict to 2.2.1 [wiz 2022-01-30]
 	Updated audio/strawberry to 1.0.1 [nia 2022-01-30]
 	Updated geography/gama to 2.17 [gdt 2022-01-30]
+	Updated devel/protobuf to 3.19.4 [adam 2022-01-30]
+	Updated devel/py-protobuf to 3.19.4 [adam 2022-01-30]
