@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/01/30 10:56:42 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/01/30 10:57:31 wiz Exp $
 
 DISTNAME=	frozendict-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=	mit
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	c
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
 do-test:
