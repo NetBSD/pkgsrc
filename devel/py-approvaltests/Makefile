@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2022/01/30 22:23:59 schmonz Exp $
+# $NetBSD: Makefile,v 1.33 2022/01/30 22:38:02 wiz Exp $
 
 DISTNAME=	approvaltests-3.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,10 +15,12 @@ DEPENDS+=	${PYPKGPREFIX}-empty-files-[0-9]*:../../devel/py-empty-files
 DEPENDS+=	${PYPKGPREFIX}-pyperclip>=1.5.27:../../x11/py-pyperclip
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-#TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 
+# This is the officially documented method, but not all necessary files
+# are in the pypi distfile (as of 3.5.0)
+#TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 #do-test:
-#	(cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m tox)
+#	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m tox
 
 USE_LANGUAGES=	# none
 
