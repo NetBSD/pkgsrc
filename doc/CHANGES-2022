@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.533 2022/01/31 12:04:27 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.534 2022/01/31 12:56:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -697,3 +697,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/restish to 0.9.4 [wiz 2022-01-31]
 	Updated audio/fluidsynth to 2.2.5 [wiz 2022-01-31]
 	Updated misc/ocaml-topkg to 1.0.5 [wiz 2022-01-31]
+	Updated www/py-uvicorn to 0.17.1 [adam 2022-01-31]
+	Updated devel/py-fasteners to 0.17.3 [adam 2022-01-31]
