@@ -50,8 +50,8 @@ Community / Troubleshooting
 
 - Join the community IRC channel [#pkgsrc @ libera.chat](https://web.libera.chat/#pkgsrc).
 - Join the community Matrix room [#pkgsrc:nil.im](https://matrix.to/#/!YcdqKPizLfuTGHacZp:matrix.org)
-- Subscribe to the [pkgsrc-users](https://netbsd.org/mailinglists/#pkgsrc-users) mailing list
-- Send bugs and patches [via web form](https://www.netbsd.org/cgi-bin/sendpr.cgi?gndb=netbsd) (use the `pkg` category).
+- Subscribe to the [pkgsrc-users](https://www.NetBSD.org/mailinglists/#pkgsrc-users) mailing list
+- Send bugs and patches [via web form](https://www.NetBSD.org/cgi-bin/sendpr.cgi?gndb=netbsd) (use the `pkg` category).
 
 Latest sources
 --------------
@@ -67,8 +67,8 @@ To work in the Git mirror, which is updated every few hours from CVS:
 Additional links
 ----------------
 
-- [pkgsrc guide](https://www.netbsd.org/docs/pkgsrc/) - the authoritative document on pkgsrc, also available as `doc/pkgsrc.txt`
-- [pkgsrc in the NetBSD Wiki](https://wiki.netbsd.org/pkgsrc/) - miscellaneous articles and tutorials
+- [pkgsrc guide](https://www.NetBSD.org/docs/pkgsrc/) - the authoritative document on pkgsrc, also available as `doc/pkgsrc.txt`
+- [pkgsrc in the NetBSD Wiki](https://wiki.NetBSD.org/pkgsrc/) - miscellaneous articles and tutorials
 - [pkgsrc.se](https://pkgsrc.se/) - a searchable web index of pkgsrc
 - [pkgsrc-wip](https://pkgsrc.org/wip/) - a project to get more people actively involved with creating packages for pkgsrc
 - [pkgsrc on Twitter](https://twitter.com/pkgsrc) - announcements to the world
