@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.61 2021/12/30 11:18:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.62 2022/01/31 11:27:50 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -555,6 +555,7 @@ share/mame/hash/ql_cass.xml
 share/mame/hash/ql_flop.xml
 share/mame/hash/quizwiz.xml
 share/mame/hash/qx10_flop.xml
+share/mame/hash/r8_card.xml
 share/mame/hash/r9751.xml
 share/mame/hash/radio86_cart.xml
 share/mame/hash/radio86_cass.xml
