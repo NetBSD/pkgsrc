@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.528 2022/01/31 11:54:41 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.529 2022/01/31 11:56:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -692,3 +692,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-breathe to 4.32.0 [adam 2022-01-31]
 	Updated net/py-lexicon to 3.9.2 [adam 2022-01-31]
 	Added devel/py-mccabe06 version 0.6.1nb1 [wiz 2022-01-31]
+	Updated devel/py-mccabe to 0.7.0 [wiz 2022-01-31]
