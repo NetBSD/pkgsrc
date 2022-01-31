@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.518 2022/01/31 00:18:56 mef Exp $
+$NetBSD: CHANGES-2022,v 1.519 2022/01/31 09:44:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -678,3 +678,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/mob to 2.3.0 [schmonz 2022-01-30]
 	Updated devel/py-approvaltests to 3.5.0 [schmonz 2022-01-30]
 	Updated devel/apel to 10.8.0.20201107 [mef 2022-01-31]
+	Added devel/py-click7 version 7.1.2nb1 [wiz 2022-01-31]
