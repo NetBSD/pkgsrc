@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/01/29 08:40:00 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/31 11:55:26 wiz Exp $
 
 DISTNAME=	flake8-3.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-codestyle>=2.7.0:../../devel/py-codestyle
 DEPENDS+=	${PYPKGPREFIX}-flakes>=2.3.0:../../devel/py-flakes
-DEPENDS+=	${PYPKGPREFIX}-mccabe>=0.6.0:../../devel/py-mccabe
+DEPENDS+=	${PYPKGPREFIX}-mccabe>=0.6.0:../../devel/py-mccabe06
 DEPENDS+=	${PYPKGPREFIX}-configparser-[0-9]*:../../devel/py-configparser
 DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
 DEPENDS+=	${PYPKGPREFIX}-functools32-[0-9]*:../../devel/py-functools32
