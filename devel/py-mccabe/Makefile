@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2022/01/04 20:53:16 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/01/31 11:56:36 wiz Exp $
 
-DISTNAME=	mccabe-0.6.1
+DISTNAME=	mccabe-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mccabe/}
 
@@ -11,8 +10,12 @@ HOMEPAGE=	https://pypi.python.org/pypi/mccabe/
 COMMENT=	Mccabe plugin for the Python program checker flake8
 LICENSE=	mit
 
-.include "../../lang/python/pyversion.mk"
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+# https://github.com/PyCQA/mccabe/issues/93
+# as of 0.7.0, tests do not run:
+# NameError: name 'settings' is not defined
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
