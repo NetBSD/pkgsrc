@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.544 2022/01/31 22:45:05 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.545 2022/01/31 22:46:02 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -715,3 +715,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-ipywidgets to 7.6.5 [adam 2022-01-31]
 	Added devel/py-debugpy version 1.5.1 [adam 2022-01-31]
 	Updated www/firefox to 96.0.3 [ryoon 2022-01-31]
+	Updated www/firefox-l10n to 96.0.3 [ryoon 2022-01-31]
