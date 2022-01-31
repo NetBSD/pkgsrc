@@ -1,4 +1,4 @@
-$NetBSD: patch-yt__dlp_postprocessor_ffmpeg.py,v 1.3 2022/01/22 13:48:34 ryoon Exp $
+$NetBSD: patch-yt__dlp_postprocessor_ffmpeg.py,v 1.4 2022/01/31 23:27:20 ryoon Exp $
 
 Also look and use ffmpeg[234]/ffprobe[234] if possible, preferring
 the unversioned one (i.e. selected via alternatives framework)
@@ -12,7 +12,7 @@ From: pkgsrc/net/youtube-dl
  
      def _determine_executables(self):
 -        programs = ['avprobe', 'avconv', 'ffmpeg', 'ffprobe']
-+        programs = ['avprobe', 'avconv', 'ffmpeg', 'ffmpeg4', 'ffmpeg3', 'ffmpeg2', 'ffprobe', 'ffprobe4', 'ffprobe3', 'ffprobe2']
++        programs = ['avprobe', 'avconv', 'ffmpeg', 'ffmpeg5', 'ffmpeg4', 'ffmpeg3', 'ffmpeg2', 'ffprobe', 'ffprobe5', 'ffprobe4', 'ffprobe3', 'ffprobe2']
  
          def get_ffmpeg_version(path, prog):
              out = _get_exe_version_output(path, ['-bsfs'])
@@ -21,7 +21,7 @@ From: pkgsrc/net/youtube-dl
                  basename = next((p for p in programs if basename.startswith(p)), 'ffmpeg')
                  dirname = os.path.dirname(os.path.abspath(location))
 -                if basename in ('ffmpeg', 'ffprobe'):
-+                if basename in ('ffmpeg', 'ffmpeg4', 'ffmpeg3', 'ffmpeg2', 'ffprobe', 'ffprobe4', 'ffprobe3', 'ffprobe2'):
++                if basename in ('ffmpeg', 'ffmpeg5', 'ffmpeg4', 'ffmpeg3', 'ffmpeg2', 'ffprobe', 'ffprobe5', 'ffprobe4', 'ffprobe3', 'ffprobe2'):
                      prefer_ffmpeg = True
  
              self._paths = dict(
@@ -30,10 +30,10 @@ From: pkgsrc/net/youtube-dl
  
          if prefer_ffmpeg is False:
 -            prefs = ('avconv', 'ffmpeg')
-+            prefs = ('avconv', 'ffmpeg', 'ffmpeg4', 'ffmpeg3', 'ffmpeg2')
++            prefs = ('avconv', 'ffmpeg', 'ffmpeg5', 'ffmpeg4', 'ffmpeg3', 'ffmpeg2')
          else:
 -            prefs = ('ffmpeg', 'avconv')
-+            prefs = ('ffmpeg', 'ffmpeg4', 'ffmpeg3', 'ffmpeg2', 'avconv')
++            prefs = ('ffmpeg', 'ffmpeg5', 'ffmpeg4', 'ffmpeg3', 'ffmpeg2', 'avconv')
          for p in prefs:
              if self._versions[p]:
                  self.basename = p
@@ -41,10 +41,10 @@ From: pkgsrc/net/youtube-dl
  
          if prefer_ffmpeg is False:
 -            prefs = ('avprobe', 'ffprobe')
-+            prefs = ('avprobe', 'ffprobe', 'ffprobe4', 'ffprobe3', 'ffprobe2')
++            prefs = ('avprobe', 'ffprobe', 'ffprobe5', 'ffprobe4', 'ffprobe3', 'ffprobe2')
          else:
 -            prefs = ('ffprobe', 'avprobe')
-+            prefs = ('ffprobe', 'ffprobe4', 'ffprobe3', 'ffprobe2', 'avprobe')
++            prefs = ('ffprobe', 'ffprobe5', 'ffprobe4', 'ffprobe3', 'ffprobe2', 'avprobe')
          for p in prefs:
              if self._versions[p]:
                  self.probe_basename = p
