@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.543 2022/01/31 18:39:28 adam Exp $
+$NetBSD: CHANGES-2022,v 1.544 2022/01/31 22:45:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -714,3 +714,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-jupyter_client to 7.1.2 [adam 2022-01-31]
 	Updated www/py-ipywidgets to 7.6.5 [adam 2022-01-31]
 	Added devel/py-debugpy version 1.5.1 [adam 2022-01-31]
+	Updated www/firefox to 96.0.3 [ryoon 2022-01-31]
