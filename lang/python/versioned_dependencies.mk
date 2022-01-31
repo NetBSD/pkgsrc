@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.62 2022/01/29 21:46:17 wiz Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.63 2022/01/31 09:44:47 wiz Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -9,7 +9,7 @@
 # PYTHON_VERSIONED_DEPENDENCIES
 #       The Python package which should be added as a dependency.
 #
-#       Possible values: Pmw Pillow X cairo flake8 html2text hypothesis importlib-metadata ipython markdown more-itertools pip packaging pygments pyparsing python-digest rsa setuptools setuptools_scm sphinx test testtools zipp
+#       Possible values: Pmw Pillow X cairo click flake8 html2text hypothesis importlib-metadata ipython markdown more-itertools pip packaging pygments pyparsing python-digest rsa setuptools setuptools_scm sphinx test testtools zipp
 #       Default: (nothing)
 #
 
@@ -21,6 +21,7 @@ _SUPPORTED_PACKAGES+=	Pmw x11/py-Pmw x11/py-Pmw2
 _SUPPORTED_PACKAGES+=	Pillow graphics/py-Pillow6 graphics/py-Pillow
 _SUPPORTED_PACKAGES+=	X textproc/py-X2 textproc/py-X
 _SUPPORTED_PACKAGES+=	cairo graphics/py-cairo118 graphics/py-cairo
+_SUPPORTED_PACKAGES+=	click devel/py-click7 devel/py-click
 # XXX feedparser 6.x is not only py27-incompatible, but also 5.x-API-incompatible
 #_SUPPORTED_PACKAGES+=	feedparser textproc/py-feedparser5 textproc/py-feedparser
 _SUPPORTED_PACKAGES+=	flake8 devel/py-flake8-3 devel/py-flake8
