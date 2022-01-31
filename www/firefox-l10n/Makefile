@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.219 2022/01/25 12:44:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.220 2022/01/31 22:45:38 ryoon Exp $
 
-FIREFOX_VER=	96.0.2
+FIREFOX_VER=	96.0.3
 PKGNAME=	firefox-l10n-${FIREFOX_VER:S/b/beta/:S/esr//}
 DISTNAME=	# empty
 CATEGORIES=	www
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/linux-i686/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mozilla.com/en-US/firefox/
 COMMENT=	Language packs for www/firefox
-LICENSE=	mpl-2.0 AND mpl-1.1 AND gnu-lgpl-v3 # as of 81.0
+LICENSE=	mpl-2.0 AND mpl-1.1 AND gnu-lgpl-v3 AND gnu-gpl-v2 # as of 96.0.3
 
 DEPENDS+=	firefox>=${PKGVERSION_NOREV}:../../www/firefox
 
