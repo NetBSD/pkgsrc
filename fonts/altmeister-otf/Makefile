@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/12/16 13:44:49 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/31 14:44:35 wiz Exp $
 
 DISTNAME=	altmeister
 PKGNAME=	altmeister-otf-0.0.2021.11.07
@@ -11,11 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://fdi-type.de/fonts/fdi-altmeister/
 COMMENT=	FDI Altmeister, a modern fraktur font
 LICENSE=	ofl-v1.1
-
-INTERACTIVE_STAGE=	fetch
-FETCH_MESSAGE=		"Please visit the homepage ${HOMEPAGE}"
-FETCH_MESSAGE+=		"and download the file ${DISTNAME}${EXTRACT_SUFX} from the typeguru download link"
-FETCH_MESSAGE+=		"and save it in the ${_DISTDIR} directory"
 
 USE_LANGUAGES=	# none
 NO_CONFIGURE=	yes
