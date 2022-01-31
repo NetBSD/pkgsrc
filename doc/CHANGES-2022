@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.523 2022/01/31 11:26:53 adam Exp $
+$NetBSD: CHANGES-2022,v 1.524 2022/01/31 11:27:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -686,3 +686,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-setuptools to 60.6.0 [adam 2022-01-31]
 	Updated devel/py-cython to 0.29.27 [adam 2022-01-31]
 	Updated security/py-cryptodome to 3.14.0 [adam 2022-01-31]
+	Updated emulators/mame to 0.240 [wiz 2022-01-31]
