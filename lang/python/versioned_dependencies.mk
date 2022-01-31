@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.63 2022/01/31 09:44:47 wiz Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.64 2022/01/31 11:54:44 wiz Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -9,7 +9,7 @@
 # PYTHON_VERSIONED_DEPENDENCIES
 #       The Python package which should be added as a dependency.
 #
-#       Possible values: Pmw Pillow X cairo click flake8 html2text hypothesis importlib-metadata ipython markdown more-itertools pip packaging pygments pyparsing python-digest rsa setuptools setuptools_scm sphinx test testtools zipp
+#       Possible values: Pmw Pillow X cairo click flake8 html2text hypothesis importlib-metadata ipython markdown mccabe more-itertools pip packaging pygments pyparsing python-digest rsa setuptools setuptools_scm sphinx test testtools zipp
 #       Default: (nothing)
 #
 
@@ -31,6 +31,7 @@ _SUPPORTED_PACKAGES+=	importlib-metadata devel/py-importlib-metadata2 devel/py-i
 _SUPPORTED_PACKAGES+=	ipython devel/py-ipython5 devel/py-ipython
 _SUPPORTED_PACKAGES+=	isort devel/py-isort4 devel/py-isort
 _SUPPORTED_PACKAGES+=	markdown textproc/py-markdown3 textproc/py-markdown
+_SUPPORTED_PACKAGES+=	mccabe devel/py-mccabe06 devel/py-mccabe
 _SUPPORTED_PACKAGES+=	more-itertools devel/py-more-itertools2 devel/py-more-itertools
 _SUPPORTED_PACKAGES+=	packaging devel/py-packaging2 devel/py-packaging
 _SUPPORTED_PACKAGES+=	pip devel/py-pip20 devel/py-pip
