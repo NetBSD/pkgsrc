@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2022/01/23 22:25:15 wiz Exp $
+$NetBSD: distinfo,v 1.4 2022/01/31 12:01:32 wiz Exp $
 
 BLAKE2s (cloud.google.com_go_@v_v0.26.0.mod) = 53d181aacbf96ec4f9cdd051466576dbb6959ca71a825bc6672046c7c53a2b43
 SHA512 (cloud.google.com_go_@v_v0.26.0.mod) = 5132f3438533427c0ab0fbb7a12112a7830ea9122662ed46019ff89c71d9cf80c02edc32dd5c892da572031b5a2cce100f2602fa6a19bea6be7c02781f701273
@@ -3324,9 +3324,9 @@ Size (launchpad.net_gocheck_@v_v0.0.0-20140225173054-000000000087.mod) = 29 byte
 BLAKE2s (launchpad.net_gocheck_@v_v0.0.0-20140225173054-000000000087.zip) = 09f8650812efaf36294341a0115e2ec019c98cde7c87c36ab7b56d70649e5c75
 SHA512 (launchpad.net_gocheck_@v_v0.0.0-20140225173054-000000000087.zip) = 9b268bc3d9c6fc8979f6eeed3294176f3e75f435f47ecc90dc95393597b706b1e3fd20ee64b5ee0841095b263f5328fdcb455662ac6b0d568d26d270108ca07b
 Size (launchpad.net_gocheck_@v_v0.0.0-20140225173054-000000000087.zip) = 36535 bytes
-BLAKE2s (restish-0.9.3.tar.gz) = 3a3145aa264bc28dca56122c00baa7679eba6932e6130dbea157e7aa8293d7da
-SHA512 (restish-0.9.3.tar.gz) = 3daaee770e5243db7f392497f622d44ccf8aacf749ca1a1349ce51eef0b51e57e0831c0465ce5dbdbd768ffaa904e1505f98b7d6388c9beb995a72c444129a19
-Size (restish-0.9.3.tar.gz) = 101344 bytes
+BLAKE2s (restish-0.9.4.tar.gz) = 97d55d0c8159b1f31a0fe2e01d5e540665b0f2c9ab8e4cbb1cb252fd1405d178
+SHA512 (restish-0.9.4.tar.gz) = 9d47dd7af2c035ba013440f210c4946f17f42696e7b8a4af005715bbd62c2ff7442fec126c2bbbe85a46ce58fc8710c8e5f9ff14ca94082642588659caef2155
+Size (restish-0.9.4.tar.gz) = 101351 bytes
 BLAKE2s (rsc.io_binaryregexp_@v_v0.2.0.mod) = 351240374eb48b99bb43b8b52aa8467662e22b18ebf216f4c123858fe706c2f8
 SHA512 (rsc.io_binaryregexp_@v_v0.2.0.mod) = db50ff677b0bdccbc1a1ad3df7c5cc76f2fcccf3ab99d08d1c2868440eb9b893fe89452f4286f7d42f2f16abf0f4acda67fe86e174dcfa730a743aafcc166774
 Size (rsc.io_binaryregexp_@v_v0.2.0.mod) = 36 bytes
