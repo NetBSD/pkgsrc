@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.541 2022/01/31 17:35:38 adam Exp $
+$NetBSD: CHANGES-2022,v 1.542 2022/01/31 17:59:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -710,3 +710,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated comms/py-rich to 11.1.0 [adam 2022-01-31]
 	Updated devel/py-pooch to 1.6.0 [adam 2022-01-31]
 	Updated net/py-zeroconf to 0.38.1 [adam 2022-01-31]
+	Added devel/py-nest-asyncio version 1.5.4 [adam 2022-01-31]
+	Updated devel/py-jupyter_client to 7.1.2 [adam 2022-01-31]
