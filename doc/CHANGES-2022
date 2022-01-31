@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.546 2022/01/31 22:47:40 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.547 2022/01/31 23:17:44 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -717,3 +717,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/firefox to 96.0.3 [ryoon 2022-01-31]
 	Updated www/firefox-l10n to 96.0.3 [ryoon 2022-01-31]
 	Updated devel/mold to 1.0.2 [fcambus 2022-01-31]
+	Added multimedia/ffmpeg5 version 5.0 [ryoon 2022-01-31]
