@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2021/02/13 21:42:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/01/31 12:56:13 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/fasteners/__init__.py
 ${PYSITELIB}/fasteners/__init__.pyc
@@ -28,27 +27,6 @@ ${PYSITELIB}/fasteners/pywin32/win32con.pyo
 ${PYSITELIB}/fasteners/pywin32/win32file.py
 ${PYSITELIB}/fasteners/pywin32/win32file.pyc
 ${PYSITELIB}/fasteners/pywin32/win32file.pyo
-${PYSITELIB}/fasteners/test.py
-${PYSITELIB}/fasteners/test.pyc
-${PYSITELIB}/fasteners/test.pyo
-${PYSITELIB}/fasteners/tests/__init__.py
-${PYSITELIB}/fasteners/tests/__init__.pyc
-${PYSITELIB}/fasteners/tests/__init__.pyo
-${PYSITELIB}/fasteners/tests/test_decorators.py
-${PYSITELIB}/fasteners/tests/test_decorators.pyc
-${PYSITELIB}/fasteners/tests/test_decorators.pyo
-${PYSITELIB}/fasteners/tests/test_helpers.py
-${PYSITELIB}/fasteners/tests/test_helpers.pyc
-${PYSITELIB}/fasteners/tests/test_helpers.pyo
-${PYSITELIB}/fasteners/tests/test_lock.py
-${PYSITELIB}/fasteners/tests/test_lock.pyc
-${PYSITELIB}/fasteners/tests/test_lock.pyo
-${PYSITELIB}/fasteners/tests/test_process_lock.py
-${PYSITELIB}/fasteners/tests/test_process_lock.pyc
-${PYSITELIB}/fasteners/tests/test_process_lock.pyo
-${PYSITELIB}/fasteners/tests/test_reader_writer_lock.py
-${PYSITELIB}/fasteners/tests/test_reader_writer_lock.pyc
-${PYSITELIB}/fasteners/tests/test_reader_writer_lock.pyo
 ${PYSITELIB}/fasteners/version.py
 ${PYSITELIB}/fasteners/version.pyc
 ${PYSITELIB}/fasteners/version.pyo
