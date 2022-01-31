@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.540 2022/01/31 14:30:16 adam Exp $
+$NetBSD: CHANGES-2022,v 1.541 2022/01/31 17:35:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -708,3 +708,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/fetchmailconf to 6.4.27 [triaxx 2022-01-31]
 	Updated databases/tdb to 1.4.6 [adam 2022-01-31]
 	Updated comms/py-rich to 11.1.0 [adam 2022-01-31]
+	Updated devel/py-pooch to 1.6.0 [adam 2022-01-31]
+	Updated net/py-zeroconf to 0.38.1 [adam 2022-01-31]
