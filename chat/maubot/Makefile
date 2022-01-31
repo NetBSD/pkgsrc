@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/01/05 15:40:58 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2022/01/31 23:41:41 wiz Exp $
 
 DISTNAME=	maubot-0.1.0
 PKGREVISION=	4
@@ -11,18 +11,18 @@ COMMENT=	Plugin-based Matrix bot system
 LICENSE=	gnu-agpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-mautrix>=0.7.9:../../chat/py-mautrix
-DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3<4:../../www/py-aiohttp
-DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1<2:../../databases/py-sqlalchemy
-DEPENDS+=	${PYPKGPREFIX}-alembic>=1<2:../../databases/py-alembic
-DEPENDS+=	${PYPKGPREFIX}-commonmark>=0.9<1:../../textproc/py-commonmark
+DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3:../../www/py-aiohttp
+DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1:../../databases/py-sqlalchemy
+DEPENDS+=	${PYPKGPREFIX}-alembic>=1:../../databases/py-alembic
+DEPENDS+=	${PYPKGPREFIX}-commonmark>=0.9:../../textproc/py-commonmark
 DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.15.35:../../devel/py-ruamel-yaml
 DEPENDS+=	${PYPKGPREFIX}-attrs>=18.1.0:../../devel/py-attrs
-DEPENDS+=	${PYPKGPREFIX}-bcrypt>=3<4:../../security/py-bcrypt
+DEPENDS+=	${PYPKGPREFIX}-bcrypt>=3:../../security/py-bcrypt
 DEPENDS+=	${PYPKGPREFIX}-packaging>=10:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-click>=7<8:../../devel/py-click
-DEPENDS+=	${PYPKGPREFIX}-colorama>=0.4<0.5:../../comms/py-colorama
-DEPENDS+=	${PYPKGPREFIX}-inquirer>=1<2:../../devel/py-inquirer
-DEPENDS+=	${PYPKGPREFIX}-jinja2>=2<3:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-click>=7:../../devel/py-click
+DEPENDS+=	${PYPKGPREFIX}-colorama>=0.4:../../comms/py-colorama
+DEPENDS+=	${PYPKGPREFIX}-inquirer>=1:../../devel/py-inquirer
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=2:../../textproc/py-jinja2
 
 USE_LANGUAGES=	# none
  
