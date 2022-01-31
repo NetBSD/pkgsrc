@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21478 2022/01/31 12:01:55 wiz Exp $
+$NetBSD: TODO,v 1.21479 2022/01/31 12:03:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -692,7 +692,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o flatbuffers-1.12.0
 	o flow-tools-0.411
 	o fluent-bit-1.7.4
-	o fluidsynth-2.2.5
 	o foomatic-filters-4.0.12
 	o foomatic4-db-20210421
 	o fop-2.6
