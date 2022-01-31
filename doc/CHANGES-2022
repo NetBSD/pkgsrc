@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.538 2022/01/31 14:13:17 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.539 2022/01/31 14:14:14 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -705,3 +705,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/py-py3c to 1.4 [adam 2022-01-31]
 	Updated devel/py-dogpile-cache to 1.1.5 [adam 2022-01-31]
 	Updated mail/fetchmail to 6.4.27 [triaxx 2022-01-31]
+	Updated mail/fetchmailconf to 6.4.27 [triaxx 2022-01-31]
