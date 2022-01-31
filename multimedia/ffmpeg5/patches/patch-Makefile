@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2022/01/31 23:16:41 ryoon Exp $
+
+Do "install -c".
+
+--- Makefile.orig	2018-04-20 10:02:55.000000000 +0000
++++ Makefile
+@@ -125,7 +125,7 @@ install-libs: install-libs-yes
+ 
+ install-data: $(DATA_FILES)
+ 	$(Q)mkdir -p "$(DATADIR)"
+-	$(INSTALL) -m 644 $(DATA_FILES) "$(DATADIR)"
++	$(INSTALL) -c -m 644 $(DATA_FILES) "$(DATADIR)"
+ 
+ uninstall: uninstall-data uninstall-headers uninstall-libs uninstall-pkgconfig
+ 
