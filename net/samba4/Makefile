@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2022/01/25 19:25:01 gdt Exp $
+# $NetBSD: Makefile,v 1.137 2022/01/31 13:45:12 taca Exp $
 
 # WARNING: DO NOT UPDATE WITHOUT RESOLVING THIS ISSUE:
 #
@@ -9,7 +9,7 @@
 #
 # https://bugzilla.samba.org/show_bug.cgi?id=14727
 #
-DISTNAME=	samba-4.13.16
+DISTNAME=	samba-4.13.17
 CATEGORIES=	net
 MASTER_SITES=	https://download.samba.org/pub/samba/stable/
 
