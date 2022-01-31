@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:51:50 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/01/31 13:44:39 adam Exp $
 
-BLAKE2s (py3c-1.3.tar.gz) = 083eb6e82c693c53fe1a2374eb4e9183128b11ceda69ab55eb87b67eca2445ec
-SHA512 (py3c-1.3.tar.gz) = cf43808f415a2a8832c669b8bfdb74754c99941694afaa6ecc7d11d0c9fa542136cf0066bffab05b2e0cacc532d3301ca4275da358f7947723c64c5f1a2633ed
-Size (py3c-1.3.tar.gz) = 46423 bytes
+BLAKE2s (py3c-1.4.tar.gz) = b652222a65e23b6062385b29aa24cefc9915a54be1ea1f78a7021afc5568502f
+SHA512 (py3c-1.4.tar.gz) = db71db2c19a16ba5a430b676beb357faee5b67b161478932af13dd06be23b5505da85dbaf5b2447f95590fea55b833ee33fa19d3350ba3117f3364a9ab012ee6
+Size (py3c-1.4.tar.gz) = 48112 bytes
