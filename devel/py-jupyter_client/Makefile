@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2022/01/05 15:41:05 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2022/01/31 17:59:00 adam Exp $
 
-DISTNAME=	jupyter_client-6.1.12
+DISTNAME=	jupyter_client-7.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_client/}
 
@@ -11,12 +10,13 @@ HOMEPAGE=	https://jupyter-client.readthedocs.io/
 COMMENT=	Jupyter protocol implementation and client libraries
 LICENSE=	modified-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-entrypoints-[0-9]*:../../devel/py-entrypoints
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.1:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=4.6.0:../../devel/py-jupyter_core
+DEPENDS+=	${PYPKGPREFIX}-nest-asyncio>=1.5:../../devel/py-nest-asyncio
 DEPENDS+=	${PYPKGPREFIX}-tornado>=4.1:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.1.0:../../devel/py-traitlets
 DEPENDS+=	${PYPKGPREFIX}-zmq>=13.0.0:../../net/py-zmq
-TEST_DEPENDS+=	${PYPKGPREFIX}-async_generator-[0-9]*:../../devel/py-async_generator
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipykernel-[0-9]*:../../devel/py-ipykernel
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipython-[0-9]*:../../devel/py-ipython
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
