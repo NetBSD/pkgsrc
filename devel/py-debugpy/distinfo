@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/01/31 18:38:33 adam Exp $
+
+BLAKE2s (debugpy-1.5.1.zip) = 871ab6d17a8ec03761de502660f8a41d4367d7e15526a02cb0c8b296efc7f1ce
+SHA512 (debugpy-1.5.1.zip) = ec0b5ffd3ee0c5cf079e3169c03b407835cf936c940a0392007da54a93255560c9344b537723eb10c140e44fc450f3ae2c65c106762ff3f2636f195baaaef6fe
+Size (debugpy-1.5.1.zip) = 4151069 bytes
