@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.534 2022/01/31 12:56:31 adam Exp $
+$NetBSD: CHANGES-2022,v 1.535 2022/01/31 13:06:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -699,3 +699,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/ocaml-topkg to 1.0.5 [wiz 2022-01-31]
 	Updated www/py-uvicorn to 0.17.1 [adam 2022-01-31]
 	Updated devel/py-fasteners to 0.17.3 [adam 2022-01-31]
+	Updated devel/git to 2.35.1 [adam 2022-01-31]
+	Updated net/haproxy to 2.5.1 [adam 2022-01-31]
