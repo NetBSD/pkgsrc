@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/01/05 15:40:59 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/31 09:48:35 wiz Exp $
 
 DISTNAME=	confusable_homoglyphs-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/vhf/confusable_homoglyphs
 COMMENT=	Detect confusable usage of unicode homoglyphs
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
+PYTHON_VERSIONED_DEPENDENCIES+=	click
 
 USE_LANGUAGES=	# none
 
@@ -22,4 +22,5 @@ post-install:
 		&& ${MV} confusable_homoglyphs confusable_homoglyphs-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

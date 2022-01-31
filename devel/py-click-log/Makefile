@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 20:52:56 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/01/31 09:48:35 wiz Exp $
 
 DISTNAME=	click-log-0.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,9 +11,10 @@ HOMEPAGE=	https://github.com/click-contrib/click-log
 COMMENT=	Logging integration for Click
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-click>=5.0:../../devel/py-click
+PYTHON_VERSIONED_DEPENDENCIES+=	click
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
