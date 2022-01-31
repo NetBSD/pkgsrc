@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.532 2022/01/31 12:03:42 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.533 2022/01/31 12:04:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -696,3 +696,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/py-multidict to 6.0.2 [wiz 2022-01-31]
 	Updated www/restish to 0.9.4 [wiz 2022-01-31]
 	Updated audio/fluidsynth to 2.2.5 [wiz 2022-01-31]
+	Updated misc/ocaml-topkg to 1.0.5 [wiz 2022-01-31]
