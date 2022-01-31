@@ -1,0 +1,78 @@
+$NetBSD: patch-configure,v 1.1 2022/01/31 23:16:41 ryoon Exp $
+
+Sun audio support.
+
+Enable PIC and section_data_rel_ro on NetBSD, even on i386,
+to avoid text relocations.
+
+Do not use 'rsync'.
+
+--- configure.orig	2022-01-14 18:45:39.000000000 +0000
++++ configure
+@@ -2196,6 +2196,7 @@ HEADERS_LIST="
+     sys_resource_h
+     sys_select_h
+     sys_soundcard_h
++    sys_audioio_h
+     sys_time_h
+     sys_un_h
+     sys_videoio_h
+@@ -2337,7 +2338,6 @@ TOOLCHAIN_FEATURES="
+     inline_asm_labels
+     inline_asm_nonlocal_labels
+     pragma_deprecated
+-    rsync_contimeout
+     symver_asm_label
+     symver_gnu_asm
+     vfp_args
+@@ -3521,6 +3521,8 @@ opengl_outdev_deps="opengl"
+ opengl_outdev_suggest="sdl2"
+ oss_indev_deps_any="sys_soundcard_h"
+ oss_outdev_deps_any="sys_soundcard_h"
++sunau_indev_deps_any="sys_audioio_h"
++sunau_outdev_deps_any="sys_audioio_h"
+ pulse_indev_deps="libpulse"
+ pulse_outdev_deps="libpulse"
+ sdl2_outdev_deps="sdl2"
+@@ -5491,6 +5493,8 @@ case $target_os in
+         ;;
+     netbsd)
+         disable symver
++        enable section_data_rel_ro
++        enable pic
+         oss_indev_extralibs="-lossaudio"
+         oss_outdev_extralibs="-lossaudio"
+         enabled gcc || check_ldflags -Wl,-zmuldefs
+@@ -5889,10 +5893,13 @@ done
+ check_cc pragma_deprecated "" '_Pragma("GCC diagnostic ignored \"-Wdeprecated-declarations\"")'
+ 
+ # The global variable ensures the bits appear unchanged in the object file.
+-test_cc <<EOF || die "endian test failed"
+-unsigned int endian = 'B' << 24 | 'I' << 16 | 'G' << 8 | 'E';
++test_exec <<EOF || enable bigendian
++int main()
++{
++ long one = 1;
++ return !(*((char *)(&one)));
++}
+ EOF
+-od -t x1 $TMPO | grep -q '42 *49 *47 *45' && enable bigendian
+ 
+ check_cc const_nan math.h "struct { double d; } static const bar[] = { { NAN } }"
+ 
+@@ -6305,6 +6312,7 @@ check_headers malloc.h
+ check_headers mftransform.h
+ check_headers net/udplite.h
+ check_headers poll.h
++check_headers sys/audioio.h
+ check_headers sys/param.h
+ check_headers sys/resource.h
+ check_headers sys/select.h
+@@ -6776,7 +6784,6 @@ enabled makeinfo \
+ disabled makeinfo_html && texi2html --help 2> /dev/null | grep -q 'init-file' && enable texi2html || disable texi2html
+ perl -v            > /dev/null 2>&1 && enable perl      || disable perl
+ pod2man --help     > /dev/null 2>&1 && enable pod2man   || disable pod2man
+-rsync --help 2> /dev/null | grep -q 'contimeout' && enable rsync_contimeout || disable rsync_contimeout
+ xmllint --version  > /dev/null 2>&1 && enable xmllint   || disable xmllint
+ 
+ # check V4L2 codecs available in the API
