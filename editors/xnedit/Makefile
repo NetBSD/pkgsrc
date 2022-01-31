@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/01/28 11:50:12 micha Exp $
+# $NetBSD: Makefile,v 1.2 2022/01/31 10:39:24 micha Exp $
 
 VERS=		1.4.0
 DISTNAME=	xnedit-${VERS}
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xnedit/}
 
@@ -16,6 +17,20 @@ USE_TOOLS=	pkg-config yacc
 WRKSRC=			${WRKDIR}/xnedit
 BUILD_TARGET=		generic
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PREFIX}/share/doc/xnedit
+
+# Use POSIX struct dirent (instead of BSD struct direct)
+CFLAGS+=	-DUSE_DIRENT
+# Workaround for bugs in IRIX Motif library
+CFLAGS.IRIX+=	-DNO_XMIM
+# Workaround for bugs in Solaris Motif library
+CFLAGS.SunOS+=	-DROWCOLPATCH
+
+# Honor external CFLAGS
+SUBST_CLASSES+=			fix-cflags
+SUBST_STAGE.fix-cflags=		pre-configure
+SUBST_MESSAGE.fix-cflags=	Fixing Makefile.generic.
+SUBST_FILES.fix-cflags=		makefiles/Makefile.generic
+SUBST_SED.fix-cflags=		-e 's,CFLAGS=,CFLAGS+=,'
 
 # Search for Xft headers in X11 subdirectory
 # Upstream ticket: <https://sourceforge.net/p/xnedit/bugs/20/>
