@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/01/05 15:41:25 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/01/31 09:48:35 wiz Exp $
 
 DISTNAME=	mkdocs-1.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,12 +11,12 @@ HOMEPAGE=	https://github.com/mkdocs/mkdocs
 COMMENT=	Fast and simple static site generator for documentation
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-click>=3.3:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.7.1:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-livereload>=2.5.1:../../www/py-livereload
 DEPENDS+=	${PYPKGPREFIX}-tornado>=5.0:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
 
+PYTHON_VERSIONED_DEPENDENCIES+=	click
 PYTHON_VERSIONED_DEPENDENCIES+=	markdown
 
 USE_PKG_RESOURCES=	yes
