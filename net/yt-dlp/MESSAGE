@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2022/01/31 23:27:20 ryoon Exp $
+$NetBSD: MESSAGE,v 1.3 2022/01/31 23:42:47 wiz Exp $
 
-yt-dlp works fine for most supported sites. At least multimedia/ffmpeg[2345
+yt-dlp works fine for most supported sites. At least multimedia/ffmpeg[2345]
 is highly recommended for some extractors, as well as net/rtmpdump and
 multimedia/mplayer or multimedia/mpv.
 You also want to install audio/py-mutagen, security/py-cryptodome,
