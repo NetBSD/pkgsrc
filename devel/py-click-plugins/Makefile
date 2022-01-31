@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:52:56 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/01/31 09:48:35 wiz Exp $
 
 DISTNAME=	click-plugins-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,9 +11,10 @@ HOMEPAGE=	https://pypi.org/project/click-plugins/
 COMMENT=	CLI command extension for click
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-click>=5.0:../../devel/py-click
+PYTHON_VERSIONED_DEPENDENCIES+=	click
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
