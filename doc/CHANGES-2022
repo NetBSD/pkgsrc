@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.536 2022/01/31 13:45:37 taca Exp $
+$NetBSD: CHANGES-2022,v 1.537 2022/01/31 13:57:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -702,3 +702,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/git to 2.35.1 [adam 2022-01-31]
 	Updated net/haproxy to 2.5.1 [adam 2022-01-31]
 	Updated net/samba4 to 4.13.17 [taca 2022-01-31]
+	Updated lang/py-py3c to 1.4 [adam 2022-01-31]
+	Updated devel/py-dogpile-cache to 1.1.5 [adam 2022-01-31]
