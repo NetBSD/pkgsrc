@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.548 2022/01/31 23:20:15 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.549 2022/01/31 23:27:58 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -719,3 +719,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/mold to 1.0.2 [fcambus 2022-01-31]
 	Added multimedia/ffmpeg5 version 5.0 [ryoon 2022-01-31]
 	Added multimedia/ffplay5 version 5.0 [ryoon 2022-01-31]
+	Updated net/yt-dlp to 2022.1.21nb1 [ryoon 2022-01-31]
