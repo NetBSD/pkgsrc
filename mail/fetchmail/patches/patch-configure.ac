@@ -1,10 +1,10 @@
-$NetBSD: patch-configure.ac,v 1.1 2020/12/14 00:41:03 dbj Exp $
+$NetBSD: patch-configure.ac,v 1.2 2022/01/31 14:12:59 triaxx Exp $
 
 krb5-config errors out unless you give it a library to look for
 
 --- configure.ac.orig	2020-09-04 08:03:28.000000000 +0000
 +++ configure.ac
-@@ -551,7 +551,7 @@ then
+@@ -557,7 +557,7 @@ then
    AC_DEFINE(KERBEROS_V5,1,Define if you have Kerberos V5)
    CFLAGS="$CFLAGS -I/usr/include/kerberosV"
    LIBS="$LIBS -lasn1 -lkrb5 -lcom_err -lkafs"
@@ -13,7 +13,7 @@ krb5-config errors out unless you give it a library to look for
    krb5_prefix=`krb5-config --prefix krb5`
    AC_MSG_RESULT([krb5-config points to kerberosV under $krb5_prefix])
    if test -f ${krb5_prefix}/include/et/com_err.h && \
-@@ -649,7 +649,7 @@ elif krb4-config 2> /dev/null >/dev/null
+@@ -655,7 +655,7 @@ elif krb4-config 2> /dev/null >/dev/null
    CFLAGS="$CFLAGS `krb4-config --cflags`"
    LIBS="$LIBS `krb4-config --libs`"
    KERBEROS_V4=1
