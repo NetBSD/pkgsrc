@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2018/01/07 13:04:00 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2022/01/31 00:17:58 mef Exp $
 #
 
 .include "../../editors/emacs/modules.mk"
@@ -19,7 +19,7 @@ BUILDLINK_CONTENTS_FILTER.apel=	${EGREP} '.*\.el$$|.*\.elc$$'
 # XEmacs has apel in xemacs-packages
 EMACS_MODULES+=		base
 
-.  endif
-.endif # APEL_BUILDLINK3_MK
+.  endif # APEL_BUILDLINK3_MK
+.endif
 
 BUILDLINK_TREE+=	-apel
