@@ -1,12 +1,13 @@
-$NetBSD: patch-configure,v 1.13 2021/11/10 10:55:08 adam Exp $
+$NetBSD: patch-configure,v 1.14 2022/01/31 09:31:59 schmonz Exp $
 
 - Builtin krb5-config in platforms such as solaris do not support
   the gssapi option, and need an explicit -lgss
 - On Darwin, do not append custom CFLAGS.
+  Also do not use DYLD_LIBRARY_PATH for ordinary configure checks.
 - Do not strip debug flags.
 - Support Minix.
 
---- configure.orig	2021-11-09 08:16:06.000000000 +0000
+--- configure.orig	2022-01-03 21:33:05.000000000 +0000
 +++ configure
 @@ -4243,6 +4243,7 @@ printf "%s\n" "$as_me: $xc_bad_var_msg l
          ;;
@@ -16,7 +17,7 @@ $NetBSD: patch-configure,v 1.13 2021/11/10 10:55:08 adam Exp $
    if test $xc_bad_var_cflags = yes; then
      { printf "%s\n" "$as_me:${as_lineno-$LINENO}: using CFLAGS: $CFLAGS" >&5
  printf "%s\n" "$as_me: using CFLAGS: $CFLAGS" >&6;}
-@@ -8623,7 +8624,7 @@ else $as_nop
+@@ -8641,7 +8642,7 @@ else $as_nop
      lt_cv_sys_max_cmd_len=8192;
      ;;
  
@@ -25,7 +26,7 @@ $NetBSD: patch-configure,v 1.13 2021/11/10 10:55:08 adam Exp $
      # This has been around since 386BSD, at least.  Likely further.
      if test -x /sbin/sysctl; then
        lt_cv_sys_max_cmd_len=`/sbin/sysctl -n kern.argmax`
-@@ -9103,12 +9104,8 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu 
+@@ -9121,12 +9122,8 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu 
    lt_cv_deplibs_check_method=pass_all
    ;;
  
@@ -40,7 +41,7 @@ $NetBSD: patch-configure,v 1.13 2021/11/10 10:55:08 adam Exp $
    ;;
  
  newos6*)
-@@ -13374,14 +13371,13 @@ _LT_EOF
+@@ -13392,14 +13389,13 @@ _LT_EOF
        fi
        ;;
  
@@ -62,7 +63,7 @@ $NetBSD: patch-configure,v 1.13 2021/11/10 10:55:08 adam Exp $
        ;;
  
      solaris*)
-@@ -14071,15 +14067,13 @@ printf "%s\n" "$lt_cv_irix_exported_symb
+@@ -14089,15 +14085,13 @@ printf "%s\n" "$lt_cv_irix_exported_symb
        esac
        ;;
  
@@ -83,7 +84,7 @@ $NetBSD: patch-configure,v 1.13 2021/11/10 10:55:08 adam Exp $
        ;;
  
      newsos6)
-@@ -15189,6 +15183,18 @@ fi
+@@ -15207,6 +15201,18 @@ fi
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -102,7 +103,7 @@ $NetBSD: patch-configure,v 1.13 2021/11/10 10:55:08 adam Exp $
  netbsdelf*-gnu)
    version_type=linux
    need_lib_prefix=no
-@@ -17749,7 +17755,7 @@ squeeze() {
+@@ -17767,7 +17773,7 @@ squeeze() {
  
  
        #
@@ -111,7 +112,16 @@ $NetBSD: patch-configure,v 1.13 2021/11/10 10:55:08 adam Exp $
      #
      tmp_save_CPPFLAGS="$CPPFLAGS"
      tmp_save_CFLAGS="$CFLAGS"
-@@ -18004,13 +18010,6 @@ printf %s "checking if compiler accepts 
+@@ -17938,7 +17944,7 @@ rm -f core conftest.err conftest.$ac_obj
+     test "$tmp_compiler_works" = "yes"; then
+ 
+    case $host_os in
+-     darwin*) library_path_var=DYLD_LIBRARY_PATH ;;
++     darwin*) library_path_var=LD_LIBRARY_PATH ;;
+      *)       library_path_var=LD_LIBRARY_PATH ;;
+    esac
+ 
+@@ -18029,13 +18035,6 @@ printf %s "checking if compiler accepts 
        tmp_options="$flags_dbg_yes"
      fi
      #
@@ -125,7 +135,25 @@ $NetBSD: patch-configure,v 1.13 2021/11/10 10:55:08 adam Exp $
      squeeze CPPFLAGS
      squeeze CFLAGS
    fi
-@@ -20667,7 +20666,7 @@ printf "%s\n" "no" >&6; }
+@@ -18226,7 +18225,7 @@ rm -f core conftest.err conftest.$ac_obj
+     test "$tmp_compiler_works" = "yes"; then
+ 
+    case $host_os in
+-     darwin*) library_path_var=DYLD_LIBRARY_PATH ;;
++     darwin*) library_path_var=LD_LIBRARY_PATH ;;
+      *)       library_path_var=LD_LIBRARY_PATH ;;
+    esac
+ 
+@@ -19672,7 +19671,7 @@ rm -f core conftest.err conftest.$ac_obj
+     test "$tmp_compiler_works" = "yes"; then
+ 
+    case $host_os in
+-     darwin*) library_path_var=DYLD_LIBRARY_PATH ;;
++     darwin*) library_path_var=LD_LIBRARY_PATH ;;
+      *)       library_path_var=LD_LIBRARY_PATH ;;
+    esac
+ 
+@@ -20704,7 +20703,7 @@ printf "%s\n" "no" >&6; }
    tst_cflags="no"
    case $host_os in
      darwin*)
@@ -134,7 +162,25 @@ $NetBSD: patch-configure,v 1.13 2021/11/10 10:55:08 adam Exp $
        ;;
    esac
  
-@@ -24729,7 +24728,7 @@ printf "%s\n" "found" >&6; }
+@@ -22521,7 +22520,7 @@ printf "%s\n" "$curl_cv_gclk_LIBS" >&6; 
+ printf %s "checking if monotonic clock_gettime works... " >&6; }
+ 
+    case $host_os in
+-     darwin*) library_path_var=DYLD_LIBRARY_PATH ;;
++     darwin*) library_path_var=LD_LIBRARY_PATH ;;
+      *)       library_path_var=LD_LIBRARY_PATH ;;
+    esac
+ 
+@@ -24231,7 +24230,7 @@ fi
+ printf %s "checking if argv can be written to... " >&6; }
+ 
+    case $host_os in
+-     darwin*) library_path_var=DYLD_LIBRARY_PATH ;;
++     darwin*) library_path_var=LD_LIBRARY_PATH ;;
+      *)       library_path_var=LD_LIBRARY_PATH ;;
+    esac
+ 
+@@ -24783,7 +24782,7 @@ printf "%s\n" "found" >&6; }
          LIBS="-lgss $LIBS"
          ;;
       *)
@@ -143,3 +189,102 @@ $NetBSD: patch-configure,v 1.13 2021/11/10 10:55:08 adam Exp $
          ;;
       esac
    fi
+@@ -33995,7 +33994,7 @@ printf "%s\n" "#define HAVE_STRUCT_TIMEV
+ printf %s "checking run-time libs availability... " >&6; }
+ 
+    case $host_os in
+-     darwin*) library_path_var=DYLD_LIBRARY_PATH ;;
++     darwin*) library_path_var=LD_LIBRARY_PATH ;;
+      *)       library_path_var=LD_LIBRARY_PATH ;;
+    esac
+ 
+@@ -34459,7 +34458,7 @@ fi
+ printf %s "checking if time_t is unsigned... " >&6; }
+ 
+    case $host_os in
+-     darwin*) library_path_var=DYLD_LIBRARY_PATH ;;
++     darwin*) library_path_var=LD_LIBRARY_PATH ;;
+      *)       library_path_var=LD_LIBRARY_PATH ;;
+    esac
+ 
+@@ -37487,7 +37486,7 @@ rm -f core conftest.err conftest.$ac_obj
+ printf %s "checking if getaddrinfo seems to work... " >&6; }
+ 
+    case $host_os in
+-     darwin*) library_path_var=DYLD_LIBRARY_PATH ;;
++     darwin*) library_path_var=LD_LIBRARY_PATH ;;
+      *)       library_path_var=LD_LIBRARY_PATH ;;
+    esac
+ 
+@@ -38994,7 +38993,7 @@ rm -f core conftest.err conftest.$ac_obj
+ printf %s "checking if getifaddrs seems to work... " >&6; }
+ 
+    case $host_os in
+-     darwin*) library_path_var=DYLD_LIBRARY_PATH ;;
++     darwin*) library_path_var=LD_LIBRARY_PATH ;;
+      *)       library_path_var=LD_LIBRARY_PATH ;;
+    esac
+ 
+@@ -39239,7 +39238,7 @@ rm -f core conftest.err conftest.$ac_obj
+ printf %s "checking if gmtime_r seems to work... " >&6; }
+ 
+    case $host_os in
+-     darwin*) library_path_var=DYLD_LIBRARY_PATH ;;
++     darwin*) library_path_var=LD_LIBRARY_PATH ;;
+      *)       library_path_var=LD_LIBRARY_PATH ;;
+    esac
+ 
+@@ -39507,7 +39506,7 @@ rm -f core conftest.err conftest.$ac_obj
+ printf %s "checking if inet_ntop seems to work... " >&6; }
+ 
+    case $host_os in
+-     darwin*) library_path_var=DYLD_LIBRARY_PATH ;;
++     darwin*) library_path_var=LD_LIBRARY_PATH ;;
+      *)       library_path_var=LD_LIBRARY_PATH ;;
+    esac
+ 
+@@ -39767,7 +39766,7 @@ rm -f core conftest.err conftest.$ac_obj
+ printf %s "checking if inet_pton seems to work... " >&6; }
+ 
+    case $host_os in
+-     darwin*) library_path_var=DYLD_LIBRARY_PATH ;;
++     darwin*) library_path_var=LD_LIBRARY_PATH ;;
+      *)       library_path_var=LD_LIBRARY_PATH ;;
+    esac
+ 
+@@ -40813,7 +40812,7 @@ rm -f core conftest.err conftest.$ac_obj
+ printf %s "checking if localtime_r seems to work... " >&6; }
+ 
+    case $host_os in
+-     darwin*) library_path_var=DYLD_LIBRARY_PATH ;;
++     darwin*) library_path_var=LD_LIBRARY_PATH ;;
+      *)       library_path_var=LD_LIBRARY_PATH ;;
+    esac
+ 
+@@ -41218,7 +41217,7 @@ rm -f core conftest.err conftest.$ac_obj
+ printf %s "checking if poll seems to work... " >&6; }
+ 
+    case $host_os in
+-     darwin*) library_path_var=DYLD_LIBRARY_PATH ;;
++     darwin*) library_path_var=LD_LIBRARY_PATH ;;
+      *)       library_path_var=LD_LIBRARY_PATH ;;
+    esac
+ 
+@@ -43169,7 +43168,7 @@ printf "%s\n" "yes" >&6; }
+ printf %s "checking if strerror_r seems to work... " >&6; }
+ 
+    case $host_os in
+-     darwin*) library_path_var=DYLD_LIBRARY_PATH ;;
++     darwin*) library_path_var=LD_LIBRARY_PATH ;;
+      *)       library_path_var=LD_LIBRARY_PATH ;;
+    esac
+ 
+@@ -43285,7 +43284,7 @@ printf "%s\n" "yes" >&6; }
+ printf %s "checking if strerror_r seems to work... " >&6; }
+ 
+    case $host_os in
+-     darwin*) library_path_var=DYLD_LIBRARY_PATH ;;
++     darwin*) library_path_var=LD_LIBRARY_PATH ;;
+      *)       library_path_var=LD_LIBRARY_PATH ;;
+    esac
+ 
