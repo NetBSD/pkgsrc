@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2022/01/11 09:13:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/01/31 09:55:42 wiz Exp $
 bin/black-${PYVERSSUFFIX}
 bin/black-primer-${PYVERSSUFFIX}
 bin/blackd-${PYVERSSUFFIX}
+${PYSITELIB}/_black_version.py
+${PYSITELIB}/_black_version.pyc
+${PYSITELIB}/_black_version.pyo
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -9,9 +12,6 @@ ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/_black_version.py
-${PYSITELIB}/_black_version.pyc
-${PYSITELIB}/_black_version.pyo
 ${PYSITELIB}/black/__init__.py
 ${PYSITELIB}/black/__init__.pyc
 ${PYSITELIB}/black/__init__.pyo
@@ -89,6 +89,9 @@ ${PYSITELIB}/black_primer/primer.json
 ${PYSITELIB}/blackd/__init__.py
 ${PYSITELIB}/blackd/__init__.pyc
 ${PYSITELIB}/blackd/__init__.pyo
+${PYSITELIB}/blackd/__main__.py
+${PYSITELIB}/blackd/__main__.pyc
+${PYSITELIB}/blackd/__main__.pyo
 ${PYSITELIB}/blackd/middlewares.py
 ${PYSITELIB}/blackd/middlewares.pyc
 ${PYSITELIB}/blackd/middlewares.pyo
