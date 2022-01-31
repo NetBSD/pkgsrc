@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21476 2022/01/31 11:34:41 wiz Exp $
+$NetBSD: TODO,v 1.21477 2022/01/31 11:56:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1576,7 +1576,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
 	o py-Routes-2.5.1
-	o py-black-22.1.0
 	o py-cares-3.1.1
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
@@ -1595,7 +1594,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-input-pad-1.4.2
 	o py-ipython-8.0
 	o py-keybinder-0.3.2
-	o py-mccabe-0.7.0
 	o py-multidict-6.0.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
