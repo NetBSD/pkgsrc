@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.97 2021/11/26 08:37:29 pin Exp $
+$NetBSD: distinfo,v 1.98 2022/01/31 10:00:24 wiz Exp $
 
 BLAKE2s (xterm-370.tgz) = b0de2145c7c23212c323705804eac28a4398fcd0f77b386358a60b6445db3ffc
 SHA512 (xterm-370.tgz) = 24f1836c4f5aec175c45db77e9bc829b45ee2c93cf12c20252b22bee470392ef0637cfbbb6e90074b1c038ac023f74a4fb713bbd4abf2b5b86d064667caf38dd
 Size (xterm-370.tgz) = 1500208 bytes
+SHA1 (patch-graphics__sixel.c) = 690436769c6472555565e50a61923244ef89e851
