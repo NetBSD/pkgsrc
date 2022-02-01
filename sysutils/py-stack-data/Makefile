@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/01/23 19:34:47 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/02/01 10:08:09 wiz Exp $
 
 DISTNAME=	stack_data-0.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -13,10 +13,12 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-asttokens>0:../../lang/py-asttokens
 DEPENDS+=	${PYPKGPREFIX}-executing>0:../../lang/py-executing
 DEPENDS+=	${PYPKGPREFIX}-pure-eval>0:../../lang/py-pure-eval
+# unpackaged
 #TEST_DEPENDS+=	${PYPKGPREFIX}-littleutils>0:../../devel/py-littleutils
 TEST_DEPENDS+=	${PYPKGPREFIX}-pygments>0:../../textproc/py-pygments
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>0:../../devel/py-test
-#TEST_DEPENDS+=	${PYPKGPREFIX}-typeguard>0:../../devel/py-typeguard
+TEST_DEPENDS+=	${PYPKGPREFIX}-typeguard>0:../../devel/py-typeguard
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 
 USE_LANGUAGES=	# none
 
