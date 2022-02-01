@@ -1,8 +1,8 @@
-$NetBSD: patch-feed2exec_____init____.py,v 1.1 2020/01/29 16:48:48 schmonz Exp $
+$NetBSD: patch-feed2exec_____init____.py,v 1.2 2022/02/01 18:43:17 schmonz Exp $
 
 Avoid setuptools_scm since tarball has no .git.
 
---- feed2exec/__init__.py.orig	2019-02-26 22:03:32.000000000 +0000
+--- feed2exec/__init__.py.orig	2022-02-01 02:24:32.000000000 +0000
 +++ feed2exec/__init__.py
 @@ -2,17 +2,8 @@
  
