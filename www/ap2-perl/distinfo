@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.27 2021/10/26 11:29:18 nia Exp $
+$NetBSD: distinfo,v 1.28 2022/02/01 11:46:28 wiz Exp $
 
-BLAKE2s (mod_perl-2.0.11.tar.gz) = 1246d05d209129e74ec9e9d2edb14120670112aa8d4a5ea957fc3375e790b748
-SHA512 (mod_perl-2.0.11.tar.gz) = f232b215ccb9217f69ccced8a037470e5975900b9a6fcc5a2e4674e6559d21f026547c1b97c48109352043946dc22539dd38004759be16ad5cfcb3a96973dfdf
-Size (mod_perl-2.0.11.tar.gz) = 3848147 bytes
-SHA1 (patch-src_modules_perl_modperl__perl.c) = 53a262f858df6a1d0e8b08d7e4e1cdbaba4db467
+BLAKE2s (mod_perl-2.0.12.tar.gz) = c01c8843070beea87339783b08f3444520b0f12fc7648dc831427cb0102f580c
+SHA512 (mod_perl-2.0.12.tar.gz) = 890dca0950847e32180485cabbeffbf236af2c92c7df957a233c210022b5172957eddb1db3e9281b87cd438d2fa404a05ae99c7eda098267c68d5e9262b400b0
+Size (mod_perl-2.0.12.tar.gz) = 3848030 bytes
 SHA1 (patch-src_modules_perl_modperl_common_util.h) = a5fd094351fef2994b67c6c70abc18c772aec532
 SHA1 (patch-xs_APR_aprext_Makefile.PL) = 9ada16e6be30236c6dbd4de4955e0077a83d3d85
