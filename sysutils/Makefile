@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.987 2022/01/25 19:43:12 pin Exp $
+# $NetBSD: Makefile,v 1.988 2022/02/01 19:18:11 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -64,6 +64,7 @@ SUBDIR+=	beats
 SUBDIR+=	bfs
 SUBDIR+=	binwalk
 SUBDIR+=	bkpupsd
+SUBDIR+=	bkt
 SUBDIR+=	boxbackup-client
 SUBDIR+=	boxbackup-server
 SUBDIR+=	brasero
