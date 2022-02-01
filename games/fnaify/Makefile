@@ -1,20 +1,17 @@
-# $NetBSD: Makefile,v 1.4 2021/12/08 16:04:28 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/02/01 15:10:57 ryoon Exp $
 
 GITHUB_PROJECT=	fnaify
-GITHUB_TAG=	3.0
-DISTNAME=	3.0
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
+DISTNAME=	fnaify-3.0
 PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rfht/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/rfht/fnaify/
 COMMENT=	Launcher for games using the FNA engine
 LICENSE=	isc
 
-WRKSRC=		${WRKDIR}/fnaify-3.0
 USE_LANGUAGES=	# none
 USE_TOOLS+=	bash:run
 
