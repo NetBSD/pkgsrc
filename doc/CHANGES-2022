@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.552 2022/02/01 11:46:37 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.553 2022/02/01 12:10:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -724,3 +724,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/iperf3 to 3.11 [adam 2022-02-01]
 	Updated devel/py-clickclick to 20.10.2 [wiz 2022-02-01]
 	Updated www/ap2-perl to 2.0.12 [wiz 2022-02-01]
+	Updated textproc/expat to 2.4.4 [wiz 2022-02-01]
