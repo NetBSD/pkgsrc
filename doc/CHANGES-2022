@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.562 2022/02/01 19:18:39 pin Exp $
+$NetBSD: CHANGES-2022,v 1.563 2022/02/01 20:01:07 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -734,3 +734,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/raleigh-reloaded to 1.4 [tsutsui 2022-02-01]
 	Updated sysutils/felix to 0.4.0 [pin 2022-02-01]
 	Added sysutils/bkt version 0.5.1 [pin 2022-02-01]
+	Updated security/passphrase to 1.2 [nikita 2022-02-01]
