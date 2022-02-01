@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.559 2022/02/01 18:43:24 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.560 2022/02/01 19:03:39 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -731,3 +731,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/mold to 1.0.3 [fcambus 2022-02-01]
 	Updated audio/libopenmpt to 0.6.1 [fcambus 2022-02-01]
 	Updated mail/feed2exec to 0.18.0 [schmonz 2022-02-01]
+	Updated graphics/raleigh-reloaded to 1.4 [tsutsui 2022-02-01]
