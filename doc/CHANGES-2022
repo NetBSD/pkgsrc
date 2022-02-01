@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.551 2022/02/01 10:21:25 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.552 2022/02/01 11:46:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -723,3 +723,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-ICU to 2.8.1 [adam 2022-02-01]
 	Updated net/iperf3 to 3.11 [adam 2022-02-01]
 	Updated devel/py-clickclick to 20.10.2 [wiz 2022-02-01]
+	Updated www/ap2-perl to 2.0.12 [wiz 2022-02-01]
