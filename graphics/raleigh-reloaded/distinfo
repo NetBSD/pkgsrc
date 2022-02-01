@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2021/12/11 09:57:51 tsutsui Exp $
+$NetBSD: distinfo,v 1.2 2022/02/01 19:03:23 tsutsui Exp $
 
-BLAKE2s (raleigh-reloaded-1.3.tar.gz) = 5aeaff073f552a0251cbeffc27b8f7820d47ffb204076b8118a1b0d2b347fd61
-SHA512 (raleigh-reloaded-1.3.tar.gz) = ef8a23a6e5989e09ada8a23f9baaee76d93027d77c99bbbb6b31f1094ad6b7d27fedbfd66e80f02927376112fbfe17ca269febd49e980983f7fc4daa34b9f2af
-Size (raleigh-reloaded-1.3.tar.gz) = 25137 bytes
+BLAKE2s (raleigh-reloaded-1.4.tar.gz) = ac4d2a3a359730828df5b659097c906eee747d743cde130465f572a9437de0a8
+SHA512 (raleigh-reloaded-1.4.tar.gz) = 396f3306c3333d99e87418f34e2e1f3a3eebae66d63c1c5a2fbb64f6aff95ab0eeee38cb13fc2f5fbfd4e9e4995b28cf988813fb443d7620e1110e9357499893
+Size (raleigh-reloaded-1.4.tar.gz) = 398511 bytes
