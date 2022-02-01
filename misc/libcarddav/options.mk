@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2020/06/06 01:51:20 mef Exp $
+# $NetBSD: options.mk,v 1.10 2022/02/01 11:58:35 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libcarddav
 PKG_SUPPORTED_OPTIONS=		doc
@@ -11,6 +11,7 @@ PLIST_VARS+=	doc
 
 .if !empty(PKG_OPTIONS:Mdoc)
 BUILD_DEPENDS+=		doxygen>=1.8.1.1:../../devel/doxygen
+BUILD_DEPENDS+=		tex-alphalph-[0-9]*:../../print/tex-alphalph
 BUILD_DEPENDS+=		tex-ec-[0-9]*:../../fonts/tex-ec
 BUILD_DEPENDS+=		tex-psnfss-[0-9]*:../../fonts/tex-psnfss
 BUILD_DEPENDS+=		tex-wasysym-[0-9]*:../../fonts/tex-wasysym
