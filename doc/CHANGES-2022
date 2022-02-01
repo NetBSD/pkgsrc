@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.563 2022/02/01 20:01:07 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.564 2022/02/01 21:32:18 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -735,3 +735,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/felix to 0.4.0 [pin 2022-02-01]
 	Added sysutils/bkt version 0.5.1 [pin 2022-02-01]
 	Updated security/passphrase to 1.2 [nikita 2022-02-01]
+	Updated net/syncthing to 1.19.0 [triaxx 2022-02-01]
