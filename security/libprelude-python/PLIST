@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/23 19:05:56 hasso Exp $
-${PYSITELIB}/_prelude.so
-${PYSITELIB}/prelude.py
-${PYSITELIB}/prelude.pyc
+@comment $NetBSD: PLIST,v 1.2 2022/02/01 11:38:39 wiz Exp $
+${PYSITELIB}/PreludeEasy-${PKGVERSION}-py2.7.egg-info
 ${PYSITELIB}/PreludeEasy.py
 ${PYSITELIB}/PreludeEasy.pyc
 ${PYSITELIB}/_PreludeEasy.so
+${PYSITELIB}/_prelude.so
+${PYSITELIB}/prelude-${PKGVERSION}-py2.7.egg-info
+${PYSITELIB}/prelude.py
+${PYSITELIB}/prelude.pyc
