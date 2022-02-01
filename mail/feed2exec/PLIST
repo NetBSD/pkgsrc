@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/10/07 19:46:53 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/02/01 18:43:17 schmonz Exp $
 bin/feed2exec
 ${PYSITELIB}/feed2exec-0.0.0-py${PYVERSSUFFIX}.egg-info/PKG-INFO
 ${PYSITELIB}/feed2exec-0.0.0-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
@@ -75,36 +75,15 @@ ${PYSITELIB}/feed2exec/tests/__init__.pyo
 ${PYSITELIB}/feed2exec/tests/conftest.py
 ${PYSITELIB}/feed2exec/tests/conftest.pyc
 ${PYSITELIB}/feed2exec/tests/conftest.pyo
-${PYSITELIB}/feed2exec/tests/files/README.mdwn
-${PYSITELIB}/feed2exec/tests/files/breaking_news.mbx
-${PYSITELIB}/feed2exec/tests/files/breaking_news.xml
-${PYSITELIB}/feed2exec/tests/files/duplicates.ini
-${PYSITELIB}/feed2exec/tests/files/duplicates.opml
-${PYSITELIB}/feed2exec/tests/files/liferea.ini
-${PYSITELIB}/feed2exec/tests/files/liferea.opml
-${PYSITELIB}/feed2exec/tests/files/planet-debian.mbx
-${PYSITELIB}/feed2exec/tests/files/planet-debian.xml
-${PYSITELIB}/feed2exec/tests/files/restic.mbx
-${PYSITELIB}/feed2exec/tests/files/restic.xml
-${PYSITELIB}/feed2exec/tests/files/rsswithpermalink.xml
-${PYSITELIB}/feed2exec/tests/files/sample.mbx
-${PYSITELIB}/feed2exec/tests/files/sample.xml
-${PYSITELIB}/feed2exec/tests/files/security.opml
-${PYSITELIB}/feed2exec/tests/files/simple.ini
-${PYSITELIB}/feed2exec/tests/files/simple.opml
-${PYSITELIB}/feed2exec/tests/files/udd.mbx
-${PYSITELIB}/feed2exec/tests/files/udd.xml
-${PYSITELIB}/feed2exec/tests/files/weird-dates.mbx
-${PYSITELIB}/feed2exec/tests/files/weird-dates.xml
-${PYSITELIB}/feed2exec/tests/fixtures.py
-${PYSITELIB}/feed2exec/tests/fixtures.pyc
-${PYSITELIB}/feed2exec/tests/fixtures.pyo
 ${PYSITELIB}/feed2exec/tests/test_feeds.py
 ${PYSITELIB}/feed2exec/tests/test_feeds.pyc
 ${PYSITELIB}/feed2exec/tests/test_feeds.pyo
 ${PYSITELIB}/feed2exec/tests/test_main.py
 ${PYSITELIB}/feed2exec/tests/test_main.pyc
 ${PYSITELIB}/feed2exec/tests/test_main.pyo
+${PYSITELIB}/feed2exec/tests/test_network.py
+${PYSITELIB}/feed2exec/tests/test_network.pyc
+${PYSITELIB}/feed2exec/tests/test_network.pyo
 ${PYSITELIB}/feed2exec/tests/test_opml.py
 ${PYSITELIB}/feed2exec/tests/test_opml.pyc
 ${PYSITELIB}/feed2exec/tests/test_opml.pyo
