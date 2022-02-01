@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.557 2022/02/01 14:22:01 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.558 2022/02/01 15:29:41 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -729,3 +729,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/dbip-city-lite to 2022.02 [fcambus 2022-02-01]
 	Updated net/dbip-country-lite to 2022.02 [fcambus 2022-02-01]
 	Updated devel/mold to 1.0.3 [fcambus 2022-02-01]
+	Updated audio/libopenmpt to 0.6.1 [fcambus 2022-02-01]
