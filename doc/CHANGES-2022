@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.555 2022/02/01 13:37:44 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.556 2022/02/01 13:41:58 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -727,3 +727,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/expat to 2.4.4 [wiz 2022-02-01]
 	Updated net/dbip-asn-lite to 2022.02 [fcambus 2022-02-01]
 	Updated net/dbip-city-lite to 2022.02 [fcambus 2022-02-01]
+	Updated net/dbip-country-lite to 2022.02 [fcambus 2022-02-01]
