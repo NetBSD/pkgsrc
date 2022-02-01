@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:43:58 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/02/01 15:10:57 ryoon Exp $
 
-BLAKE2s (fnaify/3.0.tar.gz) = 99ed07275a49902086add61430b19d3881ad4134d2168f1a2ab008fe44d0bfb3
-SHA512 (fnaify/3.0.tar.gz) = 7e6ad8db68140d177b91b83882ff44abfa259b3462a9c6c9a9e8b8c27b3a0eb5cb6b1626457ba8dc118c825f6840c70b77d766055f074df95146820d108e1f15
-Size (fnaify/3.0.tar.gz) = 34088 bytes
+BLAKE2s (fnaify-3.0.tar.gz) = b4fd8cfaa60ad78eaacb3414071a2ecbf53280e9ee2418443574d5f8d2522261
+SHA512 (fnaify-3.0.tar.gz) = 27ad9d78c34025c67352b64c3d499f5a7be61b94de6878afc51a6930a86747c0a87d133f42b43557d9385f08f7b6112e5f8f0a1dcff5cc5deb3ab919e5ece6fe
+Size (fnaify-3.0.tar.gz) = 24349 bytes
 SHA1 (patch-Makefile) = 9272e508af7f696daedaa14230b8b1cdf4926122
