@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2021/09/29 19:35:55 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2022/02/01 20:00:56 nikita Exp $
 
-DISTNAME=	1.1
-PKGNAME=	passphrase-1.1
+DISTNAME=	1.2
+PKGNAME=	passphrase-1.2
 DIST_SUBDIR=	passphrase
 CATEGORIES=	security
 MASTER_SITES=	https://git.sr.ht/~alva/passphrase/archive/
@@ -13,8 +13,13 @@ LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
+# \todo: There is currently an issue building this as a PIE, despite the
+# buildsystem targeting it as a PIE.
+MKPIE_SUPPORTED=	no
+
 .include "../../lang/python/pyversion.mk"
 CONFLICTS+=	${PYPKGPREFIX}-pyutil-[0-9]*
+
 
 SUBST_CLASSES+=		mandir
 SUBST_STAGE.mandir=	pre-build
