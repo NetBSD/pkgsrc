@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2021/11/01 11:25:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2022/02/02 14:48:18 wiz Exp $
 bin/exr2aces
 bin/exrenvmap
 bin/exrheader
@@ -153,23 +153,23 @@ lib/cmake/OpenEXR/OpenEXRTargets-release.cmake
 lib/cmake/OpenEXR/OpenEXRTargets.cmake
 lib/libIex-3_1.so
 lib/libIex-3_1.so.30
-lib/libIex-3_1.so.30.3.0
+lib/libIex-3_1.so.30.4.1
 lib/libIex.so
 lib/libIlmThread-3_1.so
 lib/libIlmThread-3_1.so.30
-lib/libIlmThread-3_1.so.30.3.0
+lib/libIlmThread-3_1.so.30.4.1
 lib/libIlmThread.so
 lib/libOpenEXR-3_1.so
 lib/libOpenEXR-3_1.so.30
-lib/libOpenEXR-3_1.so.30.3.0
+lib/libOpenEXR-3_1.so.30.4.1
 lib/libOpenEXR.so
 lib/libOpenEXRCore-3_1.so
 lib/libOpenEXRCore-3_1.so.30
-lib/libOpenEXRCore-3_1.so.30.3.0
+lib/libOpenEXRCore-3_1.so.30.4.1
 lib/libOpenEXRCore.so
 lib/libOpenEXRUtil-3_1.so
 lib/libOpenEXRUtil-3_1.so.30
-lib/libOpenEXRUtil-3_1.so.30.3.0
+lib/libOpenEXRUtil-3_1.so.30.4.1
 lib/libOpenEXRUtil.so
 lib/pkgconfig/OpenEXR.pc
 share/doc/OpenEXR/examples/drawImage.cpp
