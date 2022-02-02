@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2020/11/11 11:56:14 tm Exp $
+@comment $NetBSD: PLIST,v 1.53 2022/02/02 13:41:12 tm Exp $
 share/doc/phpmyadmin/CONTRIBUTING.md
 share/doc/phpmyadmin/ChangeLog
 share/doc/phpmyadmin/LICENSE
@@ -68,17 +68,11 @@ share/phpmyadmin/doc/html/_sources/transformations.rst.txt
 share/phpmyadmin/doc/html/_sources/two_factor.rst.txt
 share/phpmyadmin/doc/html/_sources/user.rst.txt
 share/phpmyadmin/doc/html/_sources/vendors.rst.txt
-share/phpmyadmin/doc/html/_static/ajax-loader.gif
 share/phpmyadmin/doc/html/_static/basic.css
 share/phpmyadmin/doc/html/_static/classic.css
-share/phpmyadmin/doc/html/_static/comment-bright.png
-share/phpmyadmin/doc/html/_static/comment-close.png
-share/phpmyadmin/doc/html/_static/comment.png
 share/phpmyadmin/doc/html/_static/default.css
 share/phpmyadmin/doc/html/_static/doctools.js
 share/phpmyadmin/doc/html/_static/documentation_options.js
-share/phpmyadmin/doc/html/_static/down-pressed.png
-share/phpmyadmin/doc/html/_static/down.png
 share/phpmyadmin/doc/html/_static/file.png
 share/phpmyadmin/doc/html/_static/jquery.js
 share/phpmyadmin/doc/html/_static/language_data.js
@@ -88,9 +82,6 @@ share/phpmyadmin/doc/html/_static/pygments.css
 share/phpmyadmin/doc/html/_static/searchtools.js
 share/phpmyadmin/doc/html/_static/sidebar.js
 share/phpmyadmin/doc/html/_static/underscore.js
-share/phpmyadmin/doc/html/_static/up-pressed.png
-share/phpmyadmin/doc/html/_static/up.png
-share/phpmyadmin/doc/html/_static/websupport.js
 share/phpmyadmin/doc/html/bookmarks.html
 share/phpmyadmin/doc/html/charts.html
 share/phpmyadmin/doc/html/config.html
@@ -378,6 +369,7 @@ share/phpmyadmin/libraries/classes/Controllers/Table/TableStructureController.ph
 share/phpmyadmin/libraries/classes/Controllers/TableController.php
 share/phpmyadmin/libraries/classes/Core.php
 share/phpmyadmin/libraries/classes/CreateAddField.php
+share/phpmyadmin/libraries/classes/Crypto/Crypto.php
 share/phpmyadmin/libraries/classes/Database/DatabaseList.php
 share/phpmyadmin/libraries/classes/Database/Designer.php
 share/phpmyadmin/libraries/classes/Database/Designer/Common.php
@@ -1600,7 +1592,11 @@ share/phpmyadmin/vendor/bacon/bacon-qr-code/tests/BaconQrCode/Renderer/Text/Html
 share/phpmyadmin/vendor/bacon/bacon-qr-code/tests/BaconQrCode/Renderer/Text/TextTest.php
 share/phpmyadmin/vendor/bacon/bacon-qr-code/tests/bootstrap.php
 share/phpmyadmin/vendor/bacon/bacon-qr-code/tests/phpunit.xml
+share/phpmyadmin/vendor/bin/highlight-query
+share/phpmyadmin/vendor/bin/lint-query
+share/phpmyadmin/vendor/bin/tokenize-query
 share/phpmyadmin/vendor/composer/ClassLoader.php
+share/phpmyadmin/vendor/composer/InstalledVersions.php
 share/phpmyadmin/vendor/composer/LICENSE
 share/phpmyadmin/vendor/composer/autoload_classmap.php
 share/phpmyadmin/vendor/composer/autoload_files.php
@@ -1609,6 +1605,8 @@ share/phpmyadmin/vendor/composer/autoload_psr4.php
 share/phpmyadmin/vendor/composer/autoload_real.php
 share/phpmyadmin/vendor/composer/autoload_static.php
 share/phpmyadmin/vendor/composer/installed.json
+share/phpmyadmin/vendor/composer/installed.php
+share/phpmyadmin/vendor/composer/platform_check.php
 share/phpmyadmin/vendor/google/recaptcha/.github/ISSUE_TEMPLATE/bug_report.md
 share/phpmyadmin/vendor/google/recaptcha/.travis.yml
 share/phpmyadmin/vendor/google/recaptcha/ARCHITECTURE.md
@@ -1628,7 +1626,7 @@ share/phpmyadmin/vendor/google/recaptcha/src/ReCaptcha/RequestMethod/SocketPost.
 share/phpmyadmin/vendor/google/recaptcha/src/ReCaptcha/RequestParameters.php
 share/phpmyadmin/vendor/google/recaptcha/src/ReCaptcha/Response.php
 share/phpmyadmin/vendor/google/recaptcha/src/autoload.php
-share/phpmyadmin/vendor/paragonie/constant_time_encoding/.travis.yml
+share/phpmyadmin/vendor/paragonie/constant_time_encoding/.github/workflows/ci.yml
 share/phpmyadmin/vendor/paragonie/constant_time_encoding/LICENSE.txt
 share/phpmyadmin/vendor/paragonie/constant_time_encoding/README.md
 share/phpmyadmin/vendor/paragonie/constant_time_encoding/composer.json
@@ -1655,6 +1653,7 @@ share/phpmyadmin/vendor/paragonie/constant_time_encoding/tests/EncodingTest.php
 share/phpmyadmin/vendor/paragonie/constant_time_encoding/tests/HexTest.php
 share/phpmyadmin/vendor/paragonie/constant_time_encoding/tests/RFC4648Test.php
 share/phpmyadmin/vendor/paragonie/constant_time_encoding/tests/autoload.php
+share/phpmyadmin/vendor/paragonie/random_compat/.github/workflows/ci.yml
 share/phpmyadmin/vendor/paragonie/random_compat/LICENSE
 share/phpmyadmin/vendor/paragonie/random_compat/composer.json
 share/phpmyadmin/vendor/paragonie/random_compat/dist/random_compat.phar.pubkey
@@ -1669,7 +1668,6 @@ share/phpmyadmin/vendor/paragonie/random_compat/lib/random_bytes_libsodium.php
 share/phpmyadmin/vendor/paragonie/random_compat/lib/random_bytes_libsodium_legacy.php
 share/phpmyadmin/vendor/paragonie/random_compat/lib/random_bytes_mcrypt.php
 share/phpmyadmin/vendor/paragonie/random_compat/lib/random_int.php
-share/phpmyadmin/vendor/paragonie/random_compat/phpunit-autoload.php
 share/phpmyadmin/vendor/phpmyadmin/motranslator/.github/stale.yml
 share/phpmyadmin/vendor/phpmyadmin/motranslator/CHANGES.md
 share/phpmyadmin/vendor/phpmyadmin/motranslator/CONTRIBUTING.md
@@ -1886,16 +1884,22 @@ share/phpmyadmin/vendor/phpseclib/phpseclib/phpseclib/bootstrap.php
 share/phpmyadmin/vendor/phpseclib/phpseclib/phpseclib/openssl.cnf
 share/phpmyadmin/vendor/pragmarx/google2fa/.scrutinizer.yml
 share/phpmyadmin/vendor/pragmarx/google2fa/.travis.yml
+share/phpmyadmin/vendor/pragmarx/google2fa/CHANGELOG.md
 share/phpmyadmin/vendor/pragmarx/google2fa/LICENSE.md
 share/phpmyadmin/vendor/pragmarx/google2fa/README.md
 share/phpmyadmin/vendor/pragmarx/google2fa/RELICENSED.md
-share/phpmyadmin/vendor/pragmarx/google2fa/changelog.md
 share/phpmyadmin/vendor/pragmarx/google2fa/composer.json
 share/phpmyadmin/vendor/pragmarx/google2fa/composer.lock
 share/phpmyadmin/vendor/pragmarx/google2fa/docs/playground.jpg
 share/phpmyadmin/vendor/pragmarx/google2fa/phpunit.xml
+share/phpmyadmin/vendor/pragmarx/google2fa/src/Exceptions/Contracts/Google2FA.php
+share/phpmyadmin/vendor/pragmarx/google2fa/src/Exceptions/Contracts/IncompatibleWithGoogleAuthenticator.php
+share/phpmyadmin/vendor/pragmarx/google2fa/src/Exceptions/Contracts/InvalidAlgorithm.php
+share/phpmyadmin/vendor/pragmarx/google2fa/src/Exceptions/Contracts/InvalidCharacters.php
+share/phpmyadmin/vendor/pragmarx/google2fa/src/Exceptions/Contracts/SecretKeyTooShort.php
+share/phpmyadmin/vendor/pragmarx/google2fa/src/Exceptions/Google2FAException.php
 share/phpmyadmin/vendor/pragmarx/google2fa/src/Exceptions/IncompatibleWithGoogleAuthenticatorException.php
-share/phpmyadmin/vendor/pragmarx/google2fa/src/Exceptions/InsecureCallException.php
+share/phpmyadmin/vendor/pragmarx/google2fa/src/Exceptions/InvalidAlgorithmException.php
 share/phpmyadmin/vendor/pragmarx/google2fa/src/Exceptions/InvalidCharactersException.php
 share/phpmyadmin/vendor/pragmarx/google2fa/src/Exceptions/SecretKeyTooShortException.php
 share/phpmyadmin/vendor/pragmarx/google2fa/src/Google2FA.php
@@ -1907,6 +1911,9 @@ share/phpmyadmin/vendor/pragmarx/google2fa/tests/.gitkeep
 share/phpmyadmin/vendor/pragmarx/google2fa/tests/Constants.php
 share/phpmyadmin/vendor/pragmarx/google2fa/tests/Google2FATest.php
 share/phpmyadmin/vendor/pragmarx/google2fa/tests/bootstrap.php
+share/phpmyadmin/vendor/pragmarx/google2fa/tests/tools/analyse.sh
+share/phpmyadmin/vendor/pragmarx/google2fa/tests/tools/helpers.sh
+share/phpmyadmin/vendor/pragmarx/google2fa/tests/tools/test.sh
 share/phpmyadmin/vendor/pragmarx/google2fa/upgrading.md
 share/phpmyadmin/vendor/psr/container/LICENSE
 share/phpmyadmin/vendor/psr/container/README.md
@@ -1959,6 +1966,7 @@ share/phpmyadmin/vendor/symfony/polyfill-ctype/composer.json
 share/phpmyadmin/vendor/symfony/polyfill-mbstring/LICENSE
 share/phpmyadmin/vendor/symfony/polyfill-mbstring/Mbstring.php
 share/phpmyadmin/vendor/symfony/polyfill-mbstring/README.md
+share/phpmyadmin/vendor/symfony/polyfill-mbstring/Resources/mb_convert_variables.php8
 share/phpmyadmin/vendor/symfony/polyfill-mbstring/Resources/unidata/lowerCase.php
 share/phpmyadmin/vendor/symfony/polyfill-mbstring/Resources/unidata/titleCaseRegexp.php
 share/phpmyadmin/vendor/symfony/polyfill-mbstring/Resources/unidata/upperCase.php
@@ -1980,7 +1988,6 @@ share/phpmyadmin/vendor/symfony/polyfill-util/TestListenerForV6.php
 share/phpmyadmin/vendor/symfony/polyfill-util/TestListenerForV7.php
 share/phpmyadmin/vendor/symfony/polyfill-util/TestListenerTrait.php
 share/phpmyadmin/vendor/symfony/polyfill-util/composer.json
-share/phpmyadmin/vendor/tecnickcom/tcpdf/.github/FUNDING.yml
 share/phpmyadmin/vendor/tecnickcom/tcpdf/CHANGELOG.TXT
 share/phpmyadmin/vendor/tecnickcom/tcpdf/LICENSE.TXT
 share/phpmyadmin/vendor/tecnickcom/tcpdf/README.md
@@ -1993,7 +2000,6 @@ share/phpmyadmin/vendor/tecnickcom/tcpdf/fonts/dejavu-fonts-ttf-2.34/LICENSE
 share/phpmyadmin/vendor/tecnickcom/tcpdf/fonts/dejavu-fonts-ttf-2.34/NEWS
 share/phpmyadmin/vendor/tecnickcom/tcpdf/fonts/dejavu-fonts-ttf-2.34/README
 share/phpmyadmin/vendor/tecnickcom/tcpdf/fonts/dejavu-fonts-ttf-2.34/langcover.txt
-share/phpmyadmin/vendor/tecnickcom/tcpdf/fonts/dejavu-fonts-ttf-2.34/status.txt
 share/phpmyadmin/vendor/tecnickcom/tcpdf/fonts/dejavu-fonts-ttf-2.34/unicover.txt
 share/phpmyadmin/vendor/tecnickcom/tcpdf/fonts/dejavusans.ctg.z
 share/phpmyadmin/vendor/tecnickcom/tcpdf/fonts/dejavusans.php
