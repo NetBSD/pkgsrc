@@ -1,0 +1,5 @@
+The package allows the to user select any font size (via e.g.
+\fontsize{...}{...}\selectfont), even those sizes that are not
+listed in the .fd file. If such a size is requested, LaTeX will
+search for and select the nearest listed size; anyfontsize will
+then scale the font to the size actually requested.
