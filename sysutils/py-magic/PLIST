@@ -1,6 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2021/06/02 22:13:50 khorben Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/02/02 12:29:14 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/magic/__init__.py
 ${PYSITELIB}/magic/__init__.pyc
+${PYSITELIB}/magic/__init__.pyi
 ${PYSITELIB}/magic/__init__.pyo
 ${PYSITELIB}/magic/compat.py
 ${PYSITELIB}/magic/compat.pyc
@@ -9,7 +14,3 @@ ${PYSITELIB}/magic/loader.py
 ${PYSITELIB}/magic/loader.pyc
 ${PYSITELIB}/magic/loader.pyo
 ${PYSITELIB}/magic/py.typed
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
