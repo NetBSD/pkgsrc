@@ -1,23 +1,15 @@
-$NetBSD: patch-Makefile,v 1.7 2021/03/18 08:30:43 jaapb Exp $
+$NetBSD: patch-Makefile,v 1.8 2022/02/02 14:35:34 wiz Exp $
 
-make package support DESTDIR; use BSD_INSTALL_* instead of mkdir and cp
+use BSD_INSTALL_* instead of mkdir and cp
 
---- Makefile.orig	2021-03-16 11:43:00.000000000 +0000
+--- Makefile.orig	2022-01-19 22:39:27.000000000 +0000
 +++ Makefile
-@@ -18,13 +18,13 @@ opt:
- 	for p in $(PARTS); do ( cd src/$$p; $(MAKE) opt ) || exit; done
- 
- install: check-installation
--	mkdir -p "$(prefix)$(OCAMLFIND_BIN)"
--	mkdir -p "$(prefix)$(OCAMLFIND_MAN)"
-+	mkdir -p "$(DESTDIR)$(prefix)$(OCAMLFIND_BIN)"
-+	mkdir -p "$(DESTDIR)$(prefix)$(OCAMLFIND_MAN)"
- 	$(MAKE) install-config
+@@ -24,7 +24,7 @@ install: check-installation
  	for p in $(PARTS); do ( cd src/$$p; $(MAKE) install ); done
  	$(MAKE) install-meta
  	test ! -f 'site-lib-src/num-top/META' || { cd src/findlib; $(MAKE) install-num-top; }
 -	test ! -f 'site-lib-src/camlp4/META' ||	cp tools/safe_camlp4 "$(prefix)$(OCAMLFIND_BIN)"
-+	test ! -f 'site-lib-src/camlp4/META' ||	$(BSD_INSTALL_SCRIPT) tools/safe_camlp4 "$(DESTDIR)$(prefix)$(OCAMLFIND_BIN)"
++	test ! -f 'site-lib-src/camlp4/META' ||	$(BSD_INSTALL_SCRIPT) tools/safe_camlp4 "$(prefix)$(OCAMLFIND_BIN)"
  	$(MAKE) install-doc
  
  uninstall: check-installation
@@ -28,9 +20,9 @@ make package support DESTDIR; use BSD_INSTALL_* instead of mkdir and cp
 -	mkdir -p "$(prefix)$(OCAMLFIND_MAN)/man1" "$(prefix)$(OCAMLFIND_MAN)/man3" "$(prefix)$(OCAMLFIND_MAN)/man5"
 -	-cp doc/ref-man/ocamlfind.1 "$(prefix)$(OCAMLFIND_MAN)/man1"
 -	-cp doc/ref-man/META.5 doc/ref-man/site-lib.5 doc/ref-man/findlib.conf.5 "$(prefix)$(OCAMLFIND_MAN)/man5"
-+	$(BSD_INSTALL_MAN_DIR) "$(DESTDIR)$(prefix)$(OCAMLFIND_MAN)/man1" "$(DESTDIR)$(prefix)$(OCAMLFIND_MAN)/man3" "$(DESTDIR)$(prefix)$(OCAMLFIND_MAN)/man5"
-+	-$(BSD_INSTALL_MAN) doc/ref-man/ocamlfind.1 "$(DESTDIR)$(prefix)$(OCAMLFIND_MAN)/man1"
-+	-$(BSD_INSTALL_MAN) doc/ref-man/META.5 doc/ref-man/site-lib.5 doc/ref-man/findlib.conf.5 "$(DESTDIR)$(prefix)$(OCAMLFIND_MAN)/man5"
++	$(BSD_INSTALL_MAN_DIR) "$(prefix)$(OCAMLFIND_MAN)/man1" "$(prefix)$(OCAMLFIND_MAN)/man3" "$(prefix)$(OCAMLFIND_MAN)/man5"
++	-$(BSD_INSTALL_MAN) doc/ref-man/ocamlfind.1 "$(prefix)$(OCAMLFIND_MAN)/man1"
++	-$(BSD_INSTALL_MAN) doc/ref-man/META.5 doc/ref-man/site-lib.5 doc/ref-man/findlib.conf.5 "$(prefix)$(OCAMLFIND_MAN)/man5"
  
  .PHONY: uninstall-doc
  uninstall-doc:
@@ -40,8 +32,8 @@ make package support DESTDIR; use BSD_INSTALL_* instead of mkdir and cp
  install-meta:
 -	for x in $(SITELIB_META); do mkdir -p "$(prefix)$(OCAML_SITELIB)/$$x"; cp site-lib-src/$$x/META "$(prefix)$(OCAML_SITELIB)/$$x"; done
 -	mkdir -p "$(prefix)$(OCAML_SITELIB)/findlib"; cp Makefile.packages "$(prefix)$(OCAML_SITELIB)/findlib/Makefile.packages"
-+	for x in $(SITELIB_META); do $(BSD_INSTALL_LIB_DIR) -p "$(DESTDIR)$(prefix)$(OCAML_SITELIB)/$$x"; $(BSD_INSTALL_DATA) site-lib-src/$$x/META "$(DESTDIR)$(prefix)$(OCAML_SITELIB)/$$x"; done
-+	$(BSD_INSTALL_LIB_DIR) -p "$(DESTDIR)$(prefix)$(OCAML_SITELIB)/findlib"; $(BSD_INSTALL_DATA) Makefile.packages "$(DESTDIR)$(prefix)$(OCAML_SITELIB)/findlib/Makefile.packages"
++	for x in $(SITELIB_META); do $(BSD_INSTALL_LIB_DIR) -p "$(prefix)$(OCAML_SITELIB)/$$x"; $(BSD_INSTALL_DATA) site-lib-src/$$x/META "$(prefix)$(OCAML_SITELIB)/$$x"; done
++	$(BSD_INSTALL_LIB_DIR) -p "$(prefix)$(OCAML_SITELIB)/findlib"; $(BSD_INSTALL_DATA) Makefile.packages "$(prefix)$(OCAML_SITELIB)/findlib/Makefile.packages"
  
  .PHONY: uninstall-meta
  uninstall-meta:
@@ -50,11 +42,10 @@ make package support DESTDIR; use BSD_INSTALL_* instead of mkdir and cp
  .PHONY: install-config
  install-config:
 -	mkdir -p "`dirname \"$(prefix)$(OCAMLFIND_CONF)\"`"
--	@if [ -f "$(prefix)$(OCAMLFIND_CONF)" ]; then echo "!!! Keeping old $(prefix)$(OCAMLFIND_CONF) !!!"; fi
++	$(BSD_INSTALL_DATA_DIR) "`dirname \"$(prefix)$(OCAMLFIND_CONF)\"`"
+ 	@if [ -f "$(prefix)$(OCAMLFIND_CONF)" ]; then echo "!!! Keeping old $(prefix)$(OCAMLFIND_CONF) !!!"; fi
 -	test -f "$(prefix)$(OCAMLFIND_CONF)" || cp findlib.conf "$(prefix)$(OCAMLFIND_CONF)"
-+	$(BSD_INSTALL_DATA_DIR) "`dirname \"$(DESTDIR)$(prefix)$(OCAMLFIND_CONF)\"`"
-+	@if [ -f "$(DESTDIR)$(prefix)$(OCAMLFIND_CONF)" ]; then echo "!!! Keeping old $(prefix)$(OCAMLFIND_CONF) !!!"; fi
-+	test -f "$(DESTDIR)$(prefix)$(OCAMLFIND_CONF)" || $(BSD_INSTALL_DATA) findlib.conf "$(DESTDIR)$(prefix)$(OCAMLFIND_CONF)"
++	test -f "$(prefix)$(OCAMLFIND_CONF)" || $(BSD_INSTALL_DATA) findlib.conf "$(prefix)$(OCAMLFIND_CONF)"
  
  .PHONY: uninstall-config
  uninstall-config:
