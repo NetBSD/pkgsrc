@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21484 2022/02/01 13:49:13 taca Exp $
+$NetBSD: TODO,v 1.21485 2022/02/02 14:45:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1254,7 +1254,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-eqaf-0.7
 	o ocaml-expat-1.1.0
 	o ocaml-fieldslib-0.14.0
-	o ocaml-findlib-1.9.3
 	o ocaml-fmt-0.8.9
 	o ocaml-fpath-0.7.3
 	o ocaml-hex-1.4.0
