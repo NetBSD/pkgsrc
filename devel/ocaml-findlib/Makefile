@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2022/01/23 22:21:45 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2022/02/02 14:35:34 wiz Exp $
 
 DISTNAME=		findlib-1.9.2
 PKGNAME=		ocaml-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://download.camlcity.org/download/
 
@@ -41,6 +42,7 @@ BUILD_TARGET+=	opt
 
 EGDIR=			${PREFIX}/share/examples/ocaml-findlib
 INSTALL_MAKE_FLAGS+=	OCAMLFIND_CONF=${EGDIR}/ocamlfind.conf
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}
 INSTALLATION_DIRS=	lib/ocaml libexec bin ${OCAML_SITELIBDIR}
 
 CONF_FILES=		${EGDIR}/ocamlfind.conf ${PKG_SYSCONFDIR}/ocamlfind.conf
