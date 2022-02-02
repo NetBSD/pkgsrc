@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.564 2022/02/01 21:32:18 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.565 2022/02/02 10:24:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -736,3 +736,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added sysutils/bkt version 0.5.1 [pin 2022-02-01]
 	Updated security/passphrase to 1.2 [nikita 2022-02-01]
 	Updated net/syncthing to 1.19.0 [triaxx 2022-02-01]
+	Updated www/py-django2 to 2.2.27 [adam 2022-02-02]
+	Updated www/py-django3 to 3.2.12 [adam 2022-02-02]
