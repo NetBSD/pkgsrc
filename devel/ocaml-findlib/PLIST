@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2021/03/18 08:30:43 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.22 2022/02/02 14:45:18 wiz Exp $
 bin/ocamlfind
 ${OCAML_SITELIB}/bigarray/META
 ${OCAML_SITELIB}/bytes/META
@@ -21,13 +21,21 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/findlib/findlib_top.a
 ${OCAML_SITELIB}/findlib/findlib_top.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/findlib/findlib_top.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/findlib/findlib_top.cmxs
+${OCAML_SITELIB}/findlib/findlib_config.cmi
+${OCAML_SITELIB}/findlib/findlib_config.ml
+${OCAML_SITELIB}/findlib/fl_args.cmi
 ${OCAML_SITELIB}/findlib/fl_dynload.cmi
 ${OCAML_SITELIB}/findlib/fl_dynload.mli
+${OCAML_SITELIB}/findlib/fl_lint.cmi
+${OCAML_SITELIB}/findlib/fl_meta.cmi
 ${OCAML_SITELIB}/findlib/fl_metascanner.cmi
 ${OCAML_SITELIB}/findlib/fl_metascanner.mli
 ${OCAML_SITELIB}/findlib/fl_metatoken.cmi
 ${OCAML_SITELIB}/findlib/fl_package_base.cmi
 ${OCAML_SITELIB}/findlib/fl_package_base.mli
+${OCAML_SITELIB}/findlib/fl_split.cmi
+${OCAML_SITELIB}/findlib/fl_topo.cmi
+${OCAML_SITELIB}/findlib/ocaml_args.cmi
 ${OCAML_SITELIB}/findlib/topfind.cmi
 ${OCAML_SITELIB}/findlib/topfind.mli
 ${OCAML_SITELIB}/ocamldoc/META

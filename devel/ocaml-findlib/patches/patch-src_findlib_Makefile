@@ -1,10 +1,10 @@
-$NetBSD: patch-src_findlib_Makefile,v 1.11 2022/02/02 14:35:34 wiz Exp $
+$NetBSD: patch-src_findlib_Makefile,v 1.12 2022/02/02 14:45:18 wiz Exp $
 
 use BSD install commands
 
---- src/findlib/Makefile.orig	2022-01-19 22:39:27.000000000 +0000
+--- src/findlib/Makefile.orig	2022-01-24 14:15:03.000000000 +0000
 +++ src/findlib/Makefile
-@@ -121,22 +121,22 @@ clean:
+@@ -121,9 +121,9 @@ clean:
  	  ocamlfind$(EXEC_SUFFIX) ocamlfind_opt$(EXEC_SUFFIX)
  
  install: all
@@ -14,7 +14,13 @@ use BSD install commands
 +	$(BSD_INSTALL_DATA_DIR) "$(prefix)$(OCAML_SITELIB)/$(NAME)"
 +	$(BSD_INSTALL_PROGRAM_DIR) "$(prefix)$(OCAMLFIND_BIN)"
 +	test $(INSTALL_TOPFIND) -eq 0 || $(BSD_INSTALL_SCRIPT) topfind "$(prefix)$(OCAML_CORE_STDLIB)"
- 	files=`$(SH) $(TOP)/tools/collect_files $(TOP)/Makefile.config findlib.cmi findlib.mli findlib.cma findlib.cmxa findlib$(LIB_SUFFIX) findlib.cmxs topfind.cmi topfind.mli fl_package_base.mli fl_package_base.cmi fl_metascanner.mli fl_metascanner.cmi fl_metatoken.cmi findlib_top.cma findlib_top.cmxa findlib_top$(LIB_SUFFIX) findlib_top.cmxs findlib_dynload.cma findlib_dynload.cmxa findlib_dynload$(LIB_SUFFIX) findlib_dynload.cmxs fl_dynload.mli fl_dynload.cmi META` && \
+ 	files=`$(SH) $(TOP)/tools/collect_files $(TOP)/Makefile.config \
+ 	findlib.cmi findlib.mli findlib.cma findlib.cmxa findlib$(LIB_SUFFIX) findlib.cmxs \
+ 	findlib_config.cmi findlib_config.ml topfind.cmi topfind.mli \
+@@ -132,18 +132,18 @@ install: all
+ 	fl_metatoken.cmi findlib_top.cma findlib_top.cmxa findlib_top$(LIB_SUFFIX) findlib_top.cmxs \
+ 	findlib_dynload.cma findlib_dynload.cmxa findlib_dynload$(LIB_SUFFIX) findlib_dynload.cmxs fl_dynload.mli fl_dynload.cmi \
+ 	META` && \
 -	cp $$files "$(prefix)$(OCAML_SITELIB)/$(NAME)"
 +	$(BSD_INSTALL_DATA) $$files "$(prefix)$(OCAML_SITELIB)/$(NAME)"
  	f="ocamlfind$(EXEC_SUFFIX)"; { test -f ocamlfind_opt$(EXEC_SUFFIX) && f="ocamlfind_opt$(EXEC_SUFFIX)"; }; \
