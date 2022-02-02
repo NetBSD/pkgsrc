@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:20:04 nia Exp $
+$NetBSD: distinfo,v 1.13 2022/02/02 12:29:14 adam Exp $
 
-BLAKE2s (python-magic-0.4.24.tar.gz) = c7a5985304fa70e4c3ebb4a3b6805e0810032b9850b3c8da3d07ed54263047e5
-SHA512 (python-magic-0.4.24.tar.gz) = 1d1dfea5b7b4b8246ddff7c25bec6df500423f0d26bbc08d490aa7120e6a66c50650ed6a52e958592056a59fcbd02af53c614a77aa7d43898de3ff90d2ca16de
-Size (python-magic-0.4.24.tar.gz) = 17295 bytes
+BLAKE2s (python-magic-0.4.25.tar.gz) = 9d5b95a832106f31d8016222675731e8866933ce8112106c5fc3304650c2cea7
+SHA512 (python-magic-0.4.25.tar.gz) = 0c1790798cabd34331fc326df69ca55e5cffb1712e6ce2ca7494ce7ac3095db2f00b1a8e1a4cea0c173051ca91553e3f86bd50c8a3bd83af2d340101577192ae
+Size (python-magic-0.4.25.tar.gz) = 17220 bytes
 SHA1 (patch-magic_loader.py) = aca35be959e9ca249b0c4c59dab22c7d859cb45d
