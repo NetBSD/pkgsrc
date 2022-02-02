@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/02 18:50:49 adam Exp $
+
+BLAKE2s (autocommand-2.2.1.tar.gz) = 9d065abf50a77c9cbabcfb3fc71ed38172439377a0e638ce560b8537393a90f8
+SHA512 (autocommand-2.2.1.tar.gz) = 42687c2ec6e82283570c9adba6cec048088336092c77a07db64851a9fcaf43f1715a8ebfeaba3136a50f7e0dbf4bb03373debe8ecf3cdf8adf73079a241ef6c1
+Size (autocommand-2.2.1.tar.gz) = 23151 bytes
