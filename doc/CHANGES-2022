@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.568 2022/02/02 11:27:51 kim Exp $
+$NetBSD: CHANGES-2022,v 1.569 2022/02/02 12:29:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -741,3 +741,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated shells/tcsh to 6.24.00 [kim 2022-02-02]
 	Updated shells/static-tcsh to 6.24.00 [kim 2022-02-02]
 	Updated shells/standalone-tcsh to 6.24.00 [kim 2022-02-02]
+	Updated net/py-minio to 7.1.3 [adam 2022-02-02]
+	Updated sysutils/py-magic to 0.4.25 [adam 2022-02-02]
