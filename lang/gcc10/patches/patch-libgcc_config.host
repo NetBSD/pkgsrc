@@ -1,11 +1,11 @@
-$NetBSD: patch-libgcc_config.host,v 1.1 2020/10/20 18:37:37 tnn Exp $
+$NetBSD: patch-libgcc_config.host,v 1.2 2022/02/02 22:07:28 mrg Exp $
 
-This is needed to get Out-of-line LSE atomics linked into libgcc.
-libsupc++ fails to link without this.
+This is needed for arm64 to get Out-of-line LSE atomics linked into libgcc.
+libsupc++ fails to link without this, and for arm to build.
 
---- libgcc/config.host.orig	2020-07-23 06:35:18.752400064 +0000
-+++ libgcc/config.host
-@@ -377,6 +377,7 @@ aarch64*-*-freebsd*)
+--- libgcc/config.host.orig	2021-04-08 04:56:29.805761640 -0700
++++ libgcc/config.host	2022-02-02 04:08:51.653635705 -0800
+@@ -377,6 +377,7 @@
  aarch64*-*-netbsd*)
  	extra_parts="$extra_parts crtfastmath.o"
  	tmake_file="${tmake_file} ${cpu_type}/t-aarch64"
@@ -13,3 +13,13 @@ libsupc++ fails to link without this.
  	tmake_file="${tmake_file} ${cpu_type}/t-softfp t-softfp t-crtfm"
  	md_unwind_header=aarch64/aarch64-unwind.h
  	;;
+@@ -463,7 +464,8 @@
+ 	case ${host} in
+ 	  arm*-*-netbsdelf-*eabi*)
+ 	    tmake_file="${tmake_file} arm/t-netbsd-eabi"
+-	    unwind_header=config/arm/unwind-arm.h
++	    # GCC 7 vs NetBSD/eabi -> avoid arm unwinder
++	    #unwind_header=config/arm/unwind-arm.h
+ 	    ;;
+ 	  *)
+ 	    tmake_file="${tmake_file} arm/t-netbsd t-slibgcc-gld-nover"
