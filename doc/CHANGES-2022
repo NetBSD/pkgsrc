@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.576 2022/02/02 15:19:02 manu Exp $
+$NetBSD: CHANGES-2022,v 1.577 2022/02/02 15:23:39 manu Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -750,3 +750,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/hgrep to 0.2.3 [pin 2022-02-02]
 	Updated net/nagios-plugin-dotpid to 0.7 [manu 2022-02-02]
 	Added print/tex-tikzpagenodes version 1.1 [manu 2022-02-02]
+	Added print/tex-anyfontsize version 1.6 [manu 2022-02-02]
