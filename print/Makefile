@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.817 2022/02/02 15:19:02 manu Exp $
+# $NetBSD: Makefile,v 1.818 2022/02/02 15:23:40 manu Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -227,6 +227,7 @@ SUBDIR+=	tex-answers
 SUBDIR+=	tex-answers-doc
 SUBDIR+=	tex-antomega
 SUBDIR+=	tex-antomega-doc
+SUBDIR+=	tex-anyfontsize
 SUBDIR+=	tex-anysize
 SUBDIR+=	tex-anysize-doc
 SUBDIR+=	tex-apa6
