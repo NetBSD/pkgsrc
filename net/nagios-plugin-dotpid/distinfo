@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/11/15 18:09:47 wiz Exp $
+$NetBSD: distinfo,v 1.11 2022/02/02 15:06:44 manu Exp $
 
-BLAKE2s (check_dotpid-0.6.tgz) = 3e07efb107f4aa689655b395561ed1da21653efd0d8419fe52e3a135365e7f38
-SHA512 (check_dotpid-0.6.tgz) = 9e4990399c5cb9885e6671589671710fdd45e369ee876dbd4d9a401a60cc1ff4cfeab79e9020aeae3fcc73d116ada50057ab62f7d530469328c13a3d19d18e4c
-Size (check_dotpid-0.6.tgz) = 2394 bytes
+SHA1 (check_dotpid-0.7.tgz) = ad72ea83896f0804b2022b4d6be56096ee76a72b
+RMD160 (check_dotpid-0.7.tgz) = f47b279475f63c7d586225110dde25632ad2a2ce
+SHA512 (check_dotpid-0.7.tgz) = deaf78644bc700cd78fd925a53200f51f93f925553c5fdd7d0cd782a148c21cb128d092f07d8b90088c2ecf8be969f9ab20ab46a6ba354711319b4ebba6c5426
+Size (check_dotpid-0.7.tgz) = 2567 bytes
