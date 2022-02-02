@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/02 18:50:49 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/autocommand/__init__.py
+${PYSITELIB}/autocommand/__init__.pyc
+${PYSITELIB}/autocommand/__init__.pyo
+${PYSITELIB}/autocommand/autoasync.py
+${PYSITELIB}/autocommand/autoasync.pyc
+${PYSITELIB}/autocommand/autoasync.pyo
+${PYSITELIB}/autocommand/autocommand.py
+${PYSITELIB}/autocommand/autocommand.pyc
+${PYSITELIB}/autocommand/autocommand.pyo
+${PYSITELIB}/autocommand/automain.py
+${PYSITELIB}/autocommand/automain.pyc
+${PYSITELIB}/autocommand/automain.pyo
+${PYSITELIB}/autocommand/autoparse.py
+${PYSITELIB}/autocommand/autoparse.pyc
+${PYSITELIB}/autocommand/autoparse.pyo
+${PYSITELIB}/autocommand/errors.py
+${PYSITELIB}/autocommand/errors.pyc
+${PYSITELIB}/autocommand/errors.pyo
