@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.573 2022/02/02 14:48:30 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.574 2022/02/02 14:49:26 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -747,3 +747,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/phpmyadmin to 4.9.9 [tm 2022-02-02]
 	Updated devel/ocaml-findlib to 1.9.3 [wiz 2022-02-02]
 	Updated graphics/openexr to 3.1.4 [wiz 2022-02-02]
+	Updated textproc/hgrep to 0.2.3 [pin 2022-02-02]
