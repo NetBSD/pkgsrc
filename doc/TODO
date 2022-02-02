@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21485 2022/02/02 14:45:27 wiz Exp $
+$NetBSD: TODO,v 1.21486 2022/02/02 14:48:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1322,7 +1322,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencpn-plugin-draw-1.8.5.2
 	o opencsg-1.4.2
 	o opendnssec-2.1.8
-	o openexr-3.1.4
 	o opengrok-1.7.1
 	o openh323-1.19.1
 	o openmortal-0.7.1
