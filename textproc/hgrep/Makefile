@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2021/12/12 09:57:46 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/02/02 14:49:06 pin Exp $
 
-DISTNAME=	hgrep-0.2.2
+DISTNAME=	hgrep-0.2.3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rhysd/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
