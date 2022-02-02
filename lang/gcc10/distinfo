@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:51:35 nia Exp $
+$NetBSD: distinfo,v 1.13 2022/02/02 22:07:28 mrg Exp $
 
 BLAKE2s (gcc-10.3.0.tar.xz) = 6d7c42f9386e5e32a3148122471cb207e5f65d7b5f53b3c9adba2d45a4f28715
 SHA512 (gcc-10.3.0.tar.xz) = 2b2dd7453d48a398c29eaebd1422b70341001b8c90a62aee51e83344e7fdd8a8e45f82a4a9165bd7edc76dada912c932f4b6632c5636760fec4c5d7e402b3f86
@@ -9,11 +9,16 @@ Size (isl-0.16.1.tar.bz2) = 1626446 bytes
 SHA1 (patch-contrib_download__prerequisites) = 9cdcde21ab174052911447d20762ddfd40aa8791
 SHA1 (patch-fixincludes_inclhack.def) = 7b00974d3f52a8364190a607f52a5d7e8a6db41a
 SHA1 (patch-gcc_Makefile.in) = c0f97c75ba1d37eae894141edd58bb36b734f651
-SHA1 (patch-gcc_config.gcc) = 4bf07441b6893e9b510f9ad775b4b95aa23e9791
+SHA1 (patch-gcc_config.gcc) = 310b306e58a1a3ec11b5081c6b8de5f75024e281
 SHA1 (patch-gcc_config.host) = 8920ce841f6088b365c9b590e3ea9535bd880b40
 SHA1 (patch-gcc_config_aarch64_aarch64-builtins.c) = 87185f5c2e2dbe4195cb19fe6213d2d616d5519b
 SHA1 (patch-gcc_config_aarch64_aarch64-netbsd.h) = abf19e2445bce1773162bddef16cd7f41eb36827
 SHA1 (patch-gcc_config_aarch64_driver-aarch64.c) = 7e17b49924ddd9ff33d049d6539e4df77d14d3e5
+SHA1 (patch-gcc_config_arm_arm.h) = 9d554349869d67d6393552c33a7824f0dd53cb11
+SHA1 (patch-gcc_config_arm_bpabi.h) = 0b0de5ad95442e34397cb46739ef6e36048d6f45
+SHA1 (patch-gcc_config_arm_elf.h) = 57748157084319cb92d892f2ea5b2f3355567551
+SHA1 (patch-gcc_config_arm_netbsd-eabi.h) = 85eb89de6f2e64fac50251f06d7e4eab35903dae
+SHA1 (patch-gcc_config_arm_netbsd-elf.h) = 367d83c808fd7b5b1989d0490b532ad06b425b31
 SHA1 (patch-gcc_config_darwin-driver.c) = fd57dcca96ce5ddc330e7c7b3b811f64856d7611
 SHA1 (patch-gcc_config_sparc_sparc.c) = e9cb956f3769642bcd0ba4a477d16c73dea46014
 SHA1 (patch-gcc_configure) = 6a2d8eeeed2bf08c3c81291178e669dc91c913ce
@@ -23,7 +28,7 @@ SHA1 (patch-gcc_targhooks.c) = b28d8a9696d07bbfb00b7d8c55193ba99447ff1d
 SHA1 (patch-isl_configure) = 5523c76d95b229b3cd25461b4c2b7af24bf2534e
 SHA1 (patch-libffi_configure) = 22006b20d7f655e2455a7ad613d676703b6c1ccc
 SHA1 (patch-libffi_testsuite_libffi.call_float2.c) = 27b84a11378fb648dfaad0c70abedd77a0a1c1a8
-SHA1 (patch-libgcc_config.host) = ca62e9ecba9e6efe8b18dfb0d73a2ea47a818bec
+SHA1 (patch-libgcc_config.host) = d40d4d08c807eeff98cc246d1ea756b5b2c749b0
 SHA1 (patch-libgcc_crtstuff.c) = a16d465039de00c195cf0694560140a9c38f3a25
 SHA1 (patch-libgfortran_io_format.c) = 9bbc5e4f6277bdec785b3690fd08259939a2aa1a
 SHA1 (patch-libgfortran_io_io.h) = d44676239a7f45e42054d24bd5224f43c20055c0
