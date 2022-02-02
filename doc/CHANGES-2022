@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.566 2022/02/02 11:27:25 kim Exp $
+$NetBSD: CHANGES-2022,v 1.567 2022/02/02 11:27:39 kim Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -739,3 +739,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-django2 to 2.2.27 [adam 2022-02-02]
 	Updated www/py-django3 to 3.2.12 [adam 2022-02-02]
 	Updated shells/tcsh to 6.24.00 [kim 2022-02-02]
+	Updated shells/static-tcsh to 6.24.00 [kim 2022-02-02]
