@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.579 2022/02/03 08:06:09 adam Exp $
+$NetBSD: CHANGES-2022,v 1.580 2022/02/03 08:16:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -757,3 +757,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-test-asyncio to 0.17.2 [adam 2022-02-02]
 	Updated devel/py-setuptools to 60.7.1 [adam 2022-02-03]
 	Updated www/py-httpcore to 0.14.6 [adam 2022-02-03]
+	Updated devel/py-types-setuptools to 57.4.8 [adam 2022-02-03]
+	Updated devel/py-types-toml to 0.10.3 [adam 2022-02-03]
