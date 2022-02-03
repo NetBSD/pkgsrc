@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/02/03 09:10:12 adam Exp $
 
-DISTNAME=	css-parser-1.0.6
+DISTNAME=	css-parser-1.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/css-parser/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cthedot.de/cssutils/
+HOMEPAGE=	https://github.com/ebook-utils/css-parser
 COMMENT=	Cascading Style Sheets parser and library for Python
 LICENSE=	gnu-lgpl-v3
 
