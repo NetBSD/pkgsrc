@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2021/06/15 15:06:23 thor Exp $
+# $NetBSD: Makefile.common,v 1.7 2022/02/03 19:28:19 bacon Exp $
 #
 # used by math/openblas_pthread/Makefile
 # used by math/openblas_openmp/Makefile
@@ -32,7 +32,7 @@ LICENSE=	modified-bsd
 
 # Darwin has a .so/.dylib PLIST issue
 # Untested on other platforms
-ONLY_FOR_PLATFORM=	Linux-*-* NetBSD-*-*
+ONLY_FOR_PLATFORM=	Darwin-*-* Linux-*-* NetBSD-*-*
 
 USE_LANGUAGES=	c fortran
 USE_TOOLS+=	gmake perl:build
