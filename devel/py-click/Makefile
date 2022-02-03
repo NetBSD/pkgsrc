@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/01/31 09:52:04 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2022/02/03 23:43:24 wiz Exp $
 
 DISTNAME=	click-8.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,8 @@ HOMEPAGE=	https://palletsprojects.com/p/click/
 COMMENT=	Simple wrapper around optparse for powerful command line utilities
 LICENSE=	modified-bsd
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 .include "../../lang/python/pyversion.mk"
 
 .if ${_PYTHON_VERSION} < 38
@@ -17,8 +19,6 @@ DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-meta
 .endif
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
