@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.582 2022/02/03 09:16:32 adam Exp $
+$NetBSD: CHANGES-2022,v 1.583 2022/02/03 20:41:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -762,3 +762,14 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/grpc to 1.43.2 [wiz 2022-02-03]
 	Updated textproc/py-css-parser to 1.0.7 [adam 2022-02-03]
 	Updated textproc/py-tomlkit to 0.9.0 [adam 2022-02-03]
+	Updated lang/llvm to 13.0.1 [adam 2022-02-03]
+	Updated lang/clang to 13.0.1 [adam 2022-02-03]
+	Updated lang/clang-tools-extra to 13.0.1 [adam 2022-02-03]
+	Updated lang/compiler-rt to 13.0.1 [adam 2022-02-03]
+	Updated lang/libcxx to 13.0.1 [adam 2022-02-03]
+	Updated lang/libcxxabi to 13.0.1 [adam 2022-02-03]
+	Updated lang/libunwind to 13.0.1 [adam 2022-02-03]
+	Updated devel/lld to 13.0.1 [adam 2022-02-03]
+	Updated devel/lldb to 13.0.1 [adam 2022-02-03]
+	Updated devel/polly to 13.0.1 [adam 2022-02-03]
+	Updated parallel/openmp to 13.0.1 [adam 2022-02-03]
