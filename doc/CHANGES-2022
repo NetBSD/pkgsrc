@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.583 2022/02/03 20:41:55 adam Exp $
+$NetBSD: CHANGES-2022,v 1.584 2022/02/03 21:03:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -773,3 +773,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/lldb to 13.0.1 [adam 2022-02-03]
 	Updated devel/polly to 13.0.1 [adam 2022-02-03]
 	Updated parallel/openmp to 13.0.1 [adam 2022-02-03]
+	Updated mail/dovecot2 to 2.3.18 [adam 2022-02-03]
+	Updated mail/dovecot2-pigeonhole to 0.5.18 [adam 2022-02-03]
