@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.584 2022/02/03 21:03:16 adam Exp $
+$NetBSD: CHANGES-2022,v 1.585 2022/02/03 21:47:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -775,3 +775,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated parallel/openmp to 13.0.1 [adam 2022-02-03]
 	Updated mail/dovecot2 to 2.3.18 [adam 2022-02-03]
 	Updated mail/dovecot2-pigeonhole to 0.5.18 [adam 2022-02-03]
+	Updated sysutils/xplr to 0.17.2 [pin 2022-02-03]
