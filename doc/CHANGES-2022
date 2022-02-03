@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.578 2022/02/02 19:05:23 adam Exp $
+$NetBSD: CHANGES-2022,v 1.579 2022/02/03 08:06:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -755,3 +755,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/py-pip-run version 8.8.0 [adam 2022-02-02]
 	Updated devel/py-setuptools to 60.7.0 [adam 2022-02-02]
 	Updated devel/py-test-asyncio to 0.17.2 [adam 2022-02-02]
+	Updated devel/py-setuptools to 60.7.1 [adam 2022-02-03]
+	Updated www/py-httpcore to 0.14.6 [adam 2022-02-03]
