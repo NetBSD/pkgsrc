@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2021/11/23 20:55:44 wiz Exp $
+$NetBSD: distinfo,v 1.12 2022/02/03 20:38:39 adam Exp $
 
-BLAKE2s (openmp-13.0.0.src.tar.xz) = 7404dc2ede6521997243e116b1048023c260ada7531e439d9b74ccc99f094506
-SHA512 (openmp-13.0.0.src.tar.xz) = 087793f469a18b1271f433ff7e4f26b444d5cdefeb1d65d0be0492d3f4096d4f4b2caf6621b0af8a5699552e769c51634ed2b7dc223bd74ff0dc9ae749bdaae7
-Size (openmp-13.0.0.src.tar.xz) = 1139488 bytes
+BLAKE2s (openmp-13.0.1.src.tar.xz) = 479a1b48e1e6667fd31a3566ac73a5bf3b4bd879b7545a9480c42b76c35cda9b
+SHA512 (openmp-13.0.1.src.tar.xz) = cd12030b80825b25b5330ee2937a4e2074c99ba3689fa368206faafc05253ac27e0607260f0f1e15d5bafa880f9bee989496b554443ad4c6e7dc3de8d9973279
+Size (openmp-13.0.1.src.tar.xz) = 1139440 bytes
 SHA1 (patch-runtime_src_kmp__runtime.cpp) = e8de0521b604205cb11a5cf6fdfc1968d7f09126
