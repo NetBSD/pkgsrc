@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2019/11/04 21:13:00 rillig Exp $
+# $NetBSD: Makefile,v 1.53 2022/02/03 23:54:36 wiz Exp $
 
 DISTNAME=		prewikka-${VERSION}
 PKGNAME=		${PYPKGPREFIX}-prewikka-${VERSION}
@@ -21,8 +21,6 @@ USE_TOOLS+=		msgfmt
 
 .include "../../mk/bsd.prefs.mk"
 
-PYDISTUTILSPKG=	yes
-PYSETUP=	setup.py
 REPLACE_PYTHON=	scripts/prewikka-httpd
 PYTHON_VERSIONS_ACCEPTED= 27 # py-cheetah
 
@@ -65,7 +63,7 @@ post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/runPrewikka ${DESTDIR}${PREFIX}/sbin/runPrewikka
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 BUILDLINK_API_DEPENDS.libpreludedb+=	libpreludedb>=0.9.9
 .include "../../security/libpreludedb-python/buildlink3.mk"
 .include "../../security/libprelude-python/buildlink3.mk"
