@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.72 2022/01/14 08:58:48 tm Exp $
+$NetBSD: distinfo,v 1.73 2022/02/03 20:38:39 adam Exp $
 
-BLAKE2s (clang-13.0.0.src.tar.xz) = 3a07b8456c7bb3e6a5446d01dbe7606cd0caeacc38606dd59632d14f89480850
-SHA512 (clang-13.0.0.src.tar.xz) = b9ae85a7f0a66ae42a6d76a4e1ea0940bf622f7fbd21d078c9fef146087c70abb0a597a1cfda4e8706b1fbc74d170986451f5f2d642f685a5c355da8a572fb26
-Size (clang-13.0.0.src.tar.xz) = 17846828 bytes
+BLAKE2s (clang-13.0.1.src.tar.xz) = b9ccaaf74a15dc150fc9e3d892b43e9402ef41fe3eaaae4879185b9c8c545e26
+SHA512 (clang-13.0.1.src.tar.xz) = 10abb601ce33ec0ec1e966221d958dd6206cfd5b178f8af0850408ed6adf2a9e193afb87a6449d65bb636e70a4debc3818035ab7bfcddf35a54a603851779d57
+Size (clang-13.0.1.src.tar.xz) = 17847584 bytes
 SHA1 (patch-lib_Basic_Targets_OSTargets.h) = 02533d1de2c92a431d9c5d4567f348deff056b99
 SHA1 (patch-lib_Driver_ToolChain.cpp) = 33a8e346a72893140fde42245e4b108f3a9b9e3e
 SHA1 (patch-lib_Driver_ToolChains_Solaris.cpp) = 1a139612ce181dfce1ea3a627dcd76bc81f05455

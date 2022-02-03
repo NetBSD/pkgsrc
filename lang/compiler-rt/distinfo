@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.15 2021/11/23 20:55:43 wiz Exp $
+$NetBSD: distinfo,v 1.16 2022/02/03 20:38:39 adam Exp $
 
-BLAKE2s (compiler-rt-13.0.0.src.tar.xz) = f21f2a1f9f696da75cd1d6a26bd9005e5314009fb2bd65ddf5d3ba752d15ba39
-SHA512 (compiler-rt-13.0.0.src.tar.xz) = b35643553d0d3d4deb2f31e2dad8bbac4b772ee3e0c86aa532ce7161da276620fe820193004ee08c62eb8dfd015e04d3853e6a7cc939ac3fb57345702386d583
-Size (compiler-rt-13.0.0.src.tar.xz) = 2287616 bytes
+BLAKE2s (compiler-rt-13.0.1.src.tar.xz) = f97d407951a05cdcffb43c4ec3c4dcfa3db117d1c79964c660697442e1e9bb9d
+SHA512 (compiler-rt-13.0.1.src.tar.xz) = 2cdc3d5cfe5fcf7eba497912ccaadcf33dbd2dd029840fbd54c861b24927e5f4dd494b1ecee1c6c8abbd21e1adf08c217448f408d75346147bac15000fe9ec29
+Size (compiler-rt-13.0.1.src.tar.xz) = 2290068 bytes
 SHA1 (patch-cmake_config-ix.cmake) = 50e38807363e9d4f18106bb2ff71f5247a24d764
 SHA1 (patch-lib_sanitizer__common_sanitizer__platform__limits__netbsd.cpp) = 8a09da1e6e4476f50cfd5e8034060c6a87bfa92c
