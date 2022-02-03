@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.64 2022/02/02 18:55:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.65 2022/02/03 08:04:50 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -54,7 +54,6 @@ ${PYSITELIB}/pkg_resources/_vendor/jaraco/context.pyo
 ${PYSITELIB}/pkg_resources/_vendor/jaraco/functools.py
 ${PYSITELIB}/pkg_resources/_vendor/jaraco/functools.pyc
 ${PYSITELIB}/pkg_resources/_vendor/jaraco/functools.pyo
-${PYSITELIB}/pkg_resources/_vendor/jaraco/text/Lorem ipsum.txt
 ${PYSITELIB}/pkg_resources/_vendor/jaraco/text/__init__.py
 ${PYSITELIB}/pkg_resources/_vendor/jaraco/text/__init__.pyc
 ${PYSITELIB}/pkg_resources/_vendor/jaraco/text/__init__.pyo
