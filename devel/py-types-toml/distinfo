@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2022/01/07 17:20:27 adam Exp $
+$NetBSD: distinfo,v 1.3 2022/02/03 08:15:51 adam Exp $
 
-BLAKE2s (types-toml-0.10.2.tar.gz) = 4fd83a376e8154bb3b592fc8628b7c05e81996f9e48ec19310688b3d2d35a1f5
-SHA512 (types-toml-0.10.2.tar.gz) = c67bcdc8a739efd1995a73599739a1730c8b6aaaa3ab410d83dc0779fedc68a07485a8b4f4f79f4667e2b1499632137db3b7c392a388bf5d547c6de817742c5b
-Size (types-toml-0.10.2.tar.gz) = 1857 bytes
+BLAKE2s (types-toml-0.10.3.tar.gz) = 330fad0169b5244558417902722007de65a37419467690dd14f3d438a4d66c7d
+SHA512 (types-toml-0.10.3.tar.gz) = e3613166ad1a1b9f403b36240469efc23521829b80775335f87929bb6c70feb409cbd6e66066ac9828215fb433b61c8e57448deadfdb08f72aa41daf1c14add9
+Size (types-toml-0.10.3.tar.gz) = 1896 bytes
