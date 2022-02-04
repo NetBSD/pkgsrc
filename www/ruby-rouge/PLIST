@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2021/12/19 06:51:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2022/02/04 07:56:11 fcambus Exp $
 bin/rougify${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -63,6 +63,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/erb
 ${GEM_LIBDIR}/lib/rouge/demos/erlang
 ${GEM_LIBDIR}/lib/rouge/demos/escape
 ${GEM_LIBDIR}/lib/rouge/demos/factor
+${GEM_LIBDIR}/lib/rouge/demos/fluent
 ${GEM_LIBDIR}/lib/rouge/demos/fortran
 ${GEM_LIBDIR}/lib/rouge/demos/freefem
 ${GEM_LIBDIR}/lib/rouge/demos/fsharp
@@ -182,6 +183,8 @@ ${GEM_LIBDIR}/lib/rouge/demos/sparql
 ${GEM_LIBDIR}/lib/rouge/demos/sqf
 ${GEM_LIBDIR}/lib/rouge/demos/sql
 ${GEM_LIBDIR}/lib/rouge/demos/ssh
+${GEM_LIBDIR}/lib/rouge/demos/stan
+${GEM_LIBDIR}/lib/rouge/demos/stata
 ${GEM_LIBDIR}/lib/rouge/demos/supercollider
 ${GEM_LIBDIR}/lib/rouge/demos/swift
 ${GEM_LIBDIR}/lib/rouge/demos/systemd
@@ -292,6 +295,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/erb.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/erlang.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/escape.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/factor.rb
+${GEM_LIBDIR}/lib/rouge/lexers/fluent.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/fortran.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/freefem.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/fsharp.rb
@@ -423,6 +427,8 @@ ${GEM_LIBDIR}/lib/rouge/lexers/sqf.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/sqf/keywords.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/sql.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/ssh.rb
+${GEM_LIBDIR}/lib/rouge/lexers/stan.rb
+${GEM_LIBDIR}/lib/rouge/lexers/stata.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/supercollider.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/swift.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/systemd.rb
@@ -479,3 +485,4 @@ ${GEM_LIBDIR}/lib/rouge/util.rb
 ${GEM_LIBDIR}/lib/rouge/version.rb
 ${GEM_LIBDIR}/rouge.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/2.7.0/extensions
