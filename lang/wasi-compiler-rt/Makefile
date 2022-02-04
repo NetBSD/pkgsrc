@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/01/08 17:52:09 gutteridge Exp $
+# $NetBSD: Makefile,v 1.10 2022/02/04 11:01:22 wiz Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -66,7 +66,7 @@ post-extract:
 # problem in this package?
 post-install:
 	${PREFIX}/bin/llvm-ranlib \
-	  ${DESTDIR}${PREFIX}/lib/clang/${LLVM_VERSION}/lib/wasi/libclang_rt.builtins-wasm32.a
+	  ${DESTDIR}${PREFIX}/lib/clang/13.0.0/lib/wasi/libclang_rt.builtins-wasm32.a
 
 .include "../../mk/bsd.prefs.mk"
 
