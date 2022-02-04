@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/01/10 02:10:04 gutteridge Exp $
+# $NetBSD: Makefile,v 1.9 2022/02/04 11:06:58 wiz Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -15,9 +15,9 @@ LICENSE=	apache-2.0
 # libcxx's includes to build, so we have this unholy extra distfiles thing
 # in both of them to get them to build against each other without causing
 # circular dependencies.  This must be kept in sync with libcxxabi/Makefile.
-LIBCXX=		libcxx-${LLVM_VERSION}.src
-LLVMDIST=	llvm-${LLVM_VERSION}.src
-_EXTRA_DIST=	${LIBCXX}${EXTRACT_SUFX} ${LLVMDIST}${EXTRACT_SUFX}
+LIBCXX=					libcxx-${LLVM_VERSION}.src
+LLVMDIST=				llvm-${LLVM_VERSION}.src
+_EXTRA_DIST=				${LIBCXX}${EXTRACT_SUFX} ${LLVMDIST}${EXTRACT_SUFX}
 SITES.${LIBCXX}${EXTRACT_SUFX}=		${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 SITES.${LLLVMDIST}${EXTRACT_SUFX}=	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 
