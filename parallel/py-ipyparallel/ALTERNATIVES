@@ -1,0 +1,3 @@
+bin/ipcluster @PREFIX@/bin/ipcluster-@PYVERSSUFFIX@
+bin/ipcontroller @PREFIX@/bin/ipcontroller-@PYVERSSUFFIX@
+bin/ipengine @PREFIX@/bin/ipengine-@PYVERSSUFFIX@
