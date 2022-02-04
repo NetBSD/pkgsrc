@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2019/01/04 21:50:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/02/04 11:28:49 hauke Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -99,7 +99,7 @@ ${PYSITELIB}/lxml/isoschematron/resources/xsl/XSD2Schtrn.xsl
 ${PYSITELIB}/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_abstract_expand.xsl
 ${PYSITELIB}/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_dsdl_include.xsl
 ${PYSITELIB}/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_message.xsl
-${PYSITELIB}/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_skeleton_for_xslt1.xsl
+${PLIST.nosunos}${PYSITELIB}/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_skeleton_for_xslt1.xsl
 ${PYSITELIB}/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_svrl_for_xslt1.xsl
 ${PYSITELIB}/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/readme.txt
 ${PYSITELIB}/lxml/lxml.etree.h
