@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/01/14 16:20:14 taca Exp $
+# $NetBSD: Makefile,v 1.6 2022/02/04 12:42:34 adam Exp $
 
 DISTNAME=	iruby-0.7.0
 PKGREVISION=	1
@@ -20,6 +20,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-ffi-rzmq-[0-9]*:../../net/ruby-ffi-rzmq
 DEPENDS+=	${PYPKGPREFIX}-ipython>=6.0.0:../../devel/py-ipython
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 RUBYGEM_OPTIONS+=	--format-executable
 
