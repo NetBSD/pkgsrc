@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2022/02/04 11:01:22 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/02/04 12:12:12 wiz Exp $
 
 .include "../../lang/llvm/version.mk"
 
 DISTNAME=	compiler-rt-${LLVM_VERSION}.src
 PKGNAME=	${DISTNAME:S/.src//:S/compiler-rt-/wasi-compiler-rt-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -56,7 +56,7 @@ CMAKE_ARGS+=	-DCOMPILER_RT_HAS_ASM_LSE:BOOL=OFF
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER_WORKS=1 # Do not test clang compile
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER_WORKS=1 # Do not test clang++ compile
 
-CMAKE_INSTALL_PREFIX=	${PREFIX}/lib/clang/13.0.0
+CMAKE_INSTALL_PREFIX=	${PREFIX}/lib/clang/${PKGVERSION_NOREV}
 
 post-extract:
 	${MKDIR} ${WRKDIR}/build
@@ -66,7 +66,7 @@ post-extract:
 # problem in this package?
 post-install:
 	${PREFIX}/bin/llvm-ranlib \
-	  ${DESTDIR}${PREFIX}/lib/clang/13.0.0/lib/wasi/libclang_rt.builtins-wasm32.a
+	  ${DESTDIR}${PREFIX}/lib/clang/${PKGVERSION_NOREV}/lib/wasi/libclang_rt.builtins-wasm32.a
 
 .include "../../mk/bsd.prefs.mk"
 
