@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2021/12/08 16:03:52 adam Exp $
+# $NetBSD: Makefile,v 1.44 2022/02/04 12:43:33 adam Exp $
 
 DISTNAME=	accerciser-3.38.0
 PKGREVISION=	3
@@ -36,7 +36,7 @@ DEPENDS+=	${PYPKGPREFIX}-ipython>=1.2.1:../../devel/py-ipython
 DEPENDS+=	${PYPKGPREFIX}-Xlib-[0-9]*:../../x11/py-Xlib
 
 # dependencies to keep package's configure script happy:
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/at-spi2-core/buildlink3.mk"
