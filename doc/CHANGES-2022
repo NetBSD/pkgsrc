@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.589 2022/02/04 08:46:21 js Exp $
+$NetBSD: CHANGES-2022,v 1.590 2022/02/04 13:14:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -780,3 +780,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/feed2exec to 0.18.0nb1 [wiz 2022-02-04]
 	Updated www/ruby-rouge to 3.28.0 [fcambus 2022-02-04]
 	Updated chat/element-web to 1.10.1 [js 2022-02-04]
+	Added parallel/py-ipyparallel version 8.1.0 [adam 2022-02-04]
+	Updated devel/py-ipykernel to 6.8.0 [adam 2022-02-04]
