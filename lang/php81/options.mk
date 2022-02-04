@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2021/11/27 07:24:43 taca Exp $
+# $NetBSD: options.mk,v 1.2 2022/02/04 01:41:01 gutteridge Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PHP_PKG_PREFIX}
 PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline argon2 php-embed
@@ -30,7 +30,7 @@ CONFIGURE_ARGS+=	--without-openssl
 .endif
 
 .if !empty(PKG_OPTIONS:Mmaintainer-zts)
-CONFIGURE_ARGS+=	--enable-maintainer-zts
+CONFIGURE_ARGS+=	--enable-zts
 .endif
 
 .if !empty(PKG_OPTIONS:Mreadline)
