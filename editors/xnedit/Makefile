@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/01/31 10:39:24 micha Exp $
+# $NetBSD: Makefile,v 1.3 2022/02/04 12:23:40 micha Exp $
 
 VERS=		1.4.0
 DISTNAME=	xnedit-${VERS}
@@ -63,6 +63,7 @@ do-install:
 .endfor
 
 .include "../../converters/libiconv/buildlink3.mk"
+LIBS+=	${BUILDLINK_LDADD.iconv}
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
