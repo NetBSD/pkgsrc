@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.592 2022/02/04 16:29:40 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.593 2022/02/04 16:40:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -784,3 +784,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-ipykernel to 6.8.0 [adam 2022-02-04]
 	Updated chat/gomuks to 0.2.4 [ryoon 2022-02-04]
 	Removed www/aipo [ryoon 2022-02-04]
+	Updated fonts/harfbuzz to 3.3.1 [ryoon 2022-02-04]
+	Updated fonts/harfbuzz-icu to 3.3.1 [ryoon 2022-02-04]
