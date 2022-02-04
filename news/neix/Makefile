@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2021/12/08 16:06:10 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/02/04 09:03:54 pin Exp $
 
 DISTNAME=	neix-0.1.5
 PKGREVISION=	2
 CATEGORIES=	news
-MASTER_SITES=	${MASTER_SITE_GITHUB:=tomschwarz/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=qw3rtty/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
