@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/12/08 16:05:34 adam Exp $
+# $NetBSD: Makefile,v 1.7 2022/02/04 09:05:11 pin Exp $
 
 DISTNAME=	lumina-calculator-1.6.0
 PKGREVISION=	4
@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lumina-desktop/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/lumina-desktop/lumina-calculator/
 COMMENT=	Scientific calculator from the Lumina desktop
 LICENSE=	modified-bsd
