@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q4,v 1.1.2.7 2022/01/21 15:51:51 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q4,v 1.1.2.8 2022/02/04 13:07:30 tm Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q4 branch:
 
@@ -47,4 +47,7 @@ security/clamav: security fix
 
 Pullup ticket #6572 - requested by taca
 net/samba4: security fix
+
+Pullup ticket #6576 - requested by david
+security/heimdal: build fix
 
