@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2022/02/04 13:09:41 adam Exp $
+
+BLAKE2s (ipyparallel-8.1.0.tar.gz) = 3b0b9b226664fc574d952fec080fad10dabc5d25a4fbefd5d20a56be8f3f9a0e
+SHA512 (ipyparallel-8.1.0.tar.gz) = 21e1d3d9e04c7567889e923ff0f1b140251518efd331dd2180a42142eedbb4c92eaeafce17bf2287e1d36ef4e5951f2f50021d9b9a96c266e4e94e1a3ac34347
+Size (ipyparallel-8.1.0.tar.gz) = 9365732 bytes
+SHA1 (patch-setup.py) = 31da7831d9681ead3d2996e769ec05cd56248ffb
