@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2020/12/14 05:58:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/02/04 13:13:52 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -16,9 +16,6 @@ ${PYSITELIB}/ipykernel/_eventloop_macos.pyo
 ${PYSITELIB}/ipykernel/_version.py
 ${PYSITELIB}/ipykernel/_version.pyc
 ${PYSITELIB}/ipykernel/_version.pyo
-${PYSITELIB}/ipykernel/codeutil.py
-${PYSITELIB}/ipykernel/codeutil.pyc
-${PYSITELIB}/ipykernel/codeutil.pyo
 ${PYSITELIB}/ipykernel/comm/__init__.py
 ${PYSITELIB}/ipykernel/comm/__init__.pyc
 ${PYSITELIB}/ipykernel/comm/__init__.pyo
@@ -28,12 +25,21 @@ ${PYSITELIB}/ipykernel/comm/comm.pyo
 ${PYSITELIB}/ipykernel/comm/manager.py
 ${PYSITELIB}/ipykernel/comm/manager.pyc
 ${PYSITELIB}/ipykernel/comm/manager.pyo
+${PYSITELIB}/ipykernel/compiler.py
+${PYSITELIB}/ipykernel/compiler.pyc
+${PYSITELIB}/ipykernel/compiler.pyo
 ${PYSITELIB}/ipykernel/connect.py
 ${PYSITELIB}/ipykernel/connect.pyc
 ${PYSITELIB}/ipykernel/connect.pyo
+${PYSITELIB}/ipykernel/control.py
+${PYSITELIB}/ipykernel/control.pyc
+${PYSITELIB}/ipykernel/control.pyo
 ${PYSITELIB}/ipykernel/datapub.py
 ${PYSITELIB}/ipykernel/datapub.pyc
 ${PYSITELIB}/ipykernel/datapub.pyo
+${PYSITELIB}/ipykernel/debugger.py
+${PYSITELIB}/ipykernel/debugger.pyc
+${PYSITELIB}/ipykernel/debugger.pyo
 ${PYSITELIB}/ipykernel/displayhook.py
 ${PYSITELIB}/ipykernel/displayhook.pyc
 ${PYSITELIB}/ipykernel/displayhook.pyo
@@ -141,6 +147,9 @@ ${PYSITELIB}/ipykernel/tests/test_async.pyo
 ${PYSITELIB}/ipykernel/tests/test_connect.py
 ${PYSITELIB}/ipykernel/tests/test_connect.pyc
 ${PYSITELIB}/ipykernel/tests/test_connect.pyo
+${PYSITELIB}/ipykernel/tests/test_debugger.py
+${PYSITELIB}/ipykernel/tests/test_debugger.pyc
+${PYSITELIB}/ipykernel/tests/test_debugger.pyo
 ${PYSITELIB}/ipykernel/tests/test_embed_kernel.py
 ${PYSITELIB}/ipykernel/tests/test_embed_kernel.pyc
 ${PYSITELIB}/ipykernel/tests/test_embed_kernel.pyo
@@ -168,9 +177,6 @@ ${PYSITELIB}/ipykernel/tests/test_message_spec.pyo
 ${PYSITELIB}/ipykernel/tests/test_pickleutil.py
 ${PYSITELIB}/ipykernel/tests/test_pickleutil.pyc
 ${PYSITELIB}/ipykernel/tests/test_pickleutil.pyo
-${PYSITELIB}/ipykernel/tests/test_serialize.py
-${PYSITELIB}/ipykernel/tests/test_serialize.pyc
-${PYSITELIB}/ipykernel/tests/test_serialize.pyo
 ${PYSITELIB}/ipykernel/tests/test_start_kernel.py
 ${PYSITELIB}/ipykernel/tests/test_start_kernel.pyc
 ${PYSITELIB}/ipykernel/tests/test_start_kernel.pyo

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2022/01/04 20:53:11 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2022/02/04 13:13:52 adam Exp $
 
-DISTNAME=	ipykernel-5.5.5
+DISTNAME=	ipykernel-6.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipykernel/}
 
@@ -11,15 +10,16 @@ HOMEPAGE=	https://ipython.org/
 COMMENT=	IPython Kernel for Jupyter
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-ipython>=6.0.0:../../devel/py-ipython
+DEPENDS+=	${PYPKGPREFIX}-debugpy>=1.0.0:../../devel/py-debugpy
+DEPENDS+=	${PYPKGPREFIX}-ipython>=7.23.1:../../devel/py-ipython
 DEPENDS+=	${PYPKGPREFIX}-jupyter_client-[0-9]*:../../devel/py-jupyter_client
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-inline>=0.1.0:../../graphics/py-matplotlib-inline
+DEPENDS+=	${PYPKGPREFIX}-nest-asyncio-[0-9]*:../../devel/py-nest-asyncio
 DEPENDS+=	${PYPKGPREFIX}-tornado>=4.2:../../www/py-tornado
-DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.1.0:../../devel/py-traitlets
-DEPENDS+=	${PYPKGPREFIX}-ipython_genutils-[0-9]*:../../devel/py-ipython_genutils
-
+DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.1.0:../../devel/py-traitlets
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
-TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-ipyparallel-[0-9]*:../../parallel/py-ipyparallel
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>=5.3.5:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 .include "../../mk/bsd.prefs.mk"
@@ -29,7 +29,7 @@ DEPENDS+=	${PYPKGPREFIX}-appnope-[0-9]*:../../sysutils/py-appnope
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
