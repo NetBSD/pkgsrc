@@ -1,0 +1,7 @@
+The qtraceaddr Perl script illustrates how qmail decides how to deliver
+messages for any addresses given on the command line. If your qmail
+installation used non-default values for conf-qmail, conf-break, or the
+alias user, you can specify them in the $QMAIL, $QMAILBREAK, and
+$QMAILALIAS environment variables. For example:
+
+    # env QMAILBREAK=+ qtraceaddr address@example.org

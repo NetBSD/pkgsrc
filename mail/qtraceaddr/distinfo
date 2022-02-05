@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2022/02/05 13:50:22 schmonz Exp $
+
+BLAKE2s (qtraceaddr-20061202/qtraceaddr) = 83616796e23087424f4fe3131803aeb4884915dd75f0dde33b21465c15fa3c7e
+SHA512 (qtraceaddr-20061202/qtraceaddr) = cc752f89df2bc0d37f012925fd1abbdd2f830df2764292f266110f74611f1077e6f82f898e471051c4595065d14cc5e2d24c93c9ae3e9fb38685463e4db94896
+Size (qtraceaddr-20061202/qtraceaddr) = 9102 bytes
+SHA1 (patch-qtraceaddr) = eb6f6306e8afedb28e650bd94d97923751ab6e64
