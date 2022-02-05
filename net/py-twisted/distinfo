@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.40 2021/10/26 11:06:45 nia Exp $
+$NetBSD: distinfo,v 1.41 2022/02/05 13:16:13 js Exp $
 
-BLAKE2s (Twisted-19.10.0.tar.bz2) = f95c24cdc967cc543a3de66e2df20d8b4cf920bf281cc9817bd02213c067de0b
-SHA512 (Twisted-19.10.0.tar.bz2) = de8d7fd0b2081cebeff68b060c8469377011648bc563a94a993d3530fb007ed42c3a54925c9a10c465ee7a3065cc9108ace12d10d358223fab13494becb9ac4b
-Size (Twisted-19.10.0.tar.bz2) = 3118485 bytes
-SHA1 (patch-src_twisted_python___setup.py) = 3094320805707f13c64e0f9b4e2e67b5b26dac37
+BLAKE2s (Twisted-22.1.0rc1.tar.gz) = d773054ca8ba8b2e0a04d931b721e40935284a01274026f25d919ed7f4ae0931
+SHA512 (Twisted-22.1.0rc1.tar.gz) = 08e0fc9f973f79a3592cbd9a741b5a7f44df76dd98129818da3200d19290bfb2ee288506ed901ccd96ed5dcb8a1789654c20da8c022c7bbd52329374b7d0c996
+Size (Twisted-22.1.0rc1.tar.gz) = 3730403 bytes
