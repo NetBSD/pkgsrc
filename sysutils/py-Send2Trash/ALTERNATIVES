@@ -1,0 +1,1 @@
+bin/send2trash @PREFIX@/bin/send2trash-@PYVERSSUFFIX@
