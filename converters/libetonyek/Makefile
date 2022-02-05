@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2022/01/10 01:46:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.38 2022/02/05 04:07:44 ryoon Exp $
 
 DISTNAME=	libetonyek-0.1.10
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	converters
 MASTER_SITES=	http://dev-www.libreoffice.org/src/
 EXTRACT_SUFX=	.tar.xz
@@ -20,6 +20,7 @@ USE_LANGUAGES=	c c++17
 
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--without-docs
+CONFIGURE_ARGS+=	--with-mdds=2.0
 
 PKGCONFIG_OVERRIDE+=	libetonyek.pc.in
 
