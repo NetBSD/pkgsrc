@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.611 2022/02/05 14:27:29 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.612 2022/02/05 14:53:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -816,3 +816,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-twisted to 22.1.0rc1 [js 2022-02-05]
 	Updated devel/py-treq to 22.1.0 [js 2022-02-05]
 	Added mail/qtraceaddr version 20061202 [schmonz 2022-02-05]
+	Updated finance/py-alphalens to 0.4.0 [adam 2022-02-05]
+	Updated devel/py-pybind11 to 2.9.1 [adam 2022-02-05]
