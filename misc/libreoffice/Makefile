@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.280 2022/02/05 04:53:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.281 2022/02/05 04:54:41 ryoon Exp $
 
 VERREL=		7.3.0
 VERRC=		3
@@ -84,7 +84,7 @@ MORE_DISTFILES= \
 	907d6e99f241876695c19ff3db0b8923-source-code-pro-2.030R-ro-1.050R-it.tar.gz \
 	edc4d741888bc0d38e32dbaa17149596-source-sans-pro-2.010R-ro-1.065R-it.tar.gz \
 	source-serif-pro-3.000R.tar.gz \
-	xmlsec1-1.2.33.tar.gz
+	xmlsec1-1.2.33.tar.gz \
 	3404ab6b1792ae5f16bbd603bd1e1d03-libformula-1.1.7.zip \
 	35c94d2df8893241173de1d16b6034c0-swingExSrc.zip \
 	39bb3fcea1514f1369fcfc87542390fd-sacjava-1.3.zip \
