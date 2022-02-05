@@ -1,0 +1,1 @@
+bin/jupyter-execute @PREFIX@/bin/jupyter-execute-@PYVERSSUFFIX@
