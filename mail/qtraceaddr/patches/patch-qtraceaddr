@@ -1,0 +1,18 @@
+$NetBSD: patch-qtraceaddr,v 1.1 2022/02/05 13:50:22 schmonz Exp $
+
+Set pkgsrc-configured paths and users.
+
+--- qtraceaddr.orig	2022-02-05 13:46:06.000000000 +0000
++++ qtraceaddr
+@@ -11,9 +11,9 @@ use POSIX;
+ 
+ sub nvl($$) { return (defined($_[0])? $_[0]: $_[1]); }
+ 
+-my $qmaildir=$ENV{'QMAIL'}=nvl($ENV{'QMAIL'}, '/var/qmail');
++my $qmaildir=$ENV{'QMAIL'}=nvl($ENV{'QMAIL'}, '@QMAILDIR@');
+ my $auto_break=nvl($ENV{'QMAILBREAK'}, '-');
+-my $auto_usera=nvl($ENV{'QMAILALIAS'}, 'alias');
++my $auto_usera=nvl($ENV{'QMAILALIAS'}, '@QMAIL_ALIAS_USER@');
+ 
+ sub error_temp($ ) {
+   foreach my $err (qw(EINTR ENOMEM ETXTBSY EIO ETIMEOUT EWOULDBLOCK EAGAIN
