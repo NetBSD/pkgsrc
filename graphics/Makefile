@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.960 2022/01/25 01:47:12 wiz Exp $
+# $NetBSD: Makefile,v 1.961 2022/02/05 04:36:26 ryoon Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -846,5 +846,6 @@ SUBDIR+=	zathura-cb
 SUBDIR+=	zathura-djvu
 SUBDIR+=	zbar
 SUBDIR+=	zphoto
+SUBDIR+=	zxing-cpp
 
 .include "../mk/misc/category.mk"
