@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.602 2022/02/05 04:35:00 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.603 2022/02/05 04:55:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -796,3 +796,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/libixion to 0.17.0 [ryoon 2022-02-05]
 	Updated math/py-libixion to 0.17.0 [ryoon 2022-02-05]
 	Added graphics/zxing-cpp version 1.2.0 [ryoon 2022-02-05]
+	Updated misc/libreoffice to 7.3.0.3 [ryoon 2022-02-05]
