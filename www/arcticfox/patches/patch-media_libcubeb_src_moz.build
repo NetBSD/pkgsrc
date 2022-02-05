@@ -1,0 +1,19 @@
+$NetBSD: patch-media_libcubeb_src_moz.build,v 1.1 2022/02/05 20:51:07 nia Exp $
+
+- Add Sun Audio support.
+
+--- media/libcubeb/src/moz.build.orig	2021-12-03 05:22:04.000000000 +0000
++++ media/libcubeb/src/moz.build
+@@ -25,6 +25,12 @@ if CONFIG['MOZ_PULSEAUDIO']:
+     if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'gonk':
+         DEFINES['DISABLE_LIBPULSE_DLOPEN'] = True
+ 
++if CONFIG['MOZ_SUN']:
++    SOURCES += [
++        'cubeb_sun.c',
++    ]
++    DEFINES['USE_SUN'] = True
++
+ if CONFIG['OS_ARCH'] == 'OpenBSD':
+     SOURCES += [
+         'cubeb_sndio.c',
