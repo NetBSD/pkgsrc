@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.606 2022/02/05 12:00:41 leot Exp $
+$NetBSD: CHANGES-2022,v 1.607 2022/02/05 12:12:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -809,3 +809,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-line_profiler to 3.4.0 [adam 2022-02-05]
 	Updated sysutils/py-Send2Trash to 1.8.0 [adam 2022-02-05]
 	Updated net/gallery-dl to 1.20.3 [leot 2022-02-05]
+	Updated www/py-notebook to 6.4.8 [adam 2022-02-05]
+	Updated www/py-httpcore to 0.14.7 [adam 2022-02-05]
+	Updated net/py-zeroconf to 0.38.3 [adam 2022-02-05]
+	Updated www/py-uvicorn to 0.17.4 [adam 2022-02-05]
