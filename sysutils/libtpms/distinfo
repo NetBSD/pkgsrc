@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/05 03:09:26 ryoon Exp $
+
+BLAKE2s (libtpms-0.9.1.tar.gz) = c3177156ac0686747f8007655c953487aa608e06f8e92a2198ece59b14da661c
+SHA512 (libtpms-0.9.1.tar.gz) = 15ae14bca4ac24391ba06accae37d7e914e410ac9dc1aeae0743295371c9a0e0851f191c55bffb765cb731e8d397188be6441d2b6c1f5011b56a354428c4dad1
+Size (libtpms-0.9.1.tar.gz) = 1261528 bytes
