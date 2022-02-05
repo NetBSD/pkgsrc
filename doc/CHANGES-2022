@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.599 2022/02/05 04:08:15 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.600 2022/02/05 04:19:37 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -792,3 +792,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated emulators/haxm to 7.7.0 [ryoon 2022-02-05]
 	Updated devel/mdds to 2.0.1 [ryoon 2022-02-05]
 	Updated converters/libetonyek to 0.1.10nb4 [ryoon 2022-02-05]
+	Updated converters/orcus to 0.17.2 [ryoon 2022-02-05]
