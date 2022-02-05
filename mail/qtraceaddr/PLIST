@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/05 13:50:22 schmonz Exp $
+bin/qtraceaddr
