@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2021/11/30 05:31:56 pho Exp $
+# $NetBSD: Makefile,v 1.58 2022/02/05 09:05:42 adam Exp $
 
 DISTNAME=	bup-0.32
 PKGREVISION=	3
@@ -41,10 +41,10 @@ HAS_CONFIGURE=	yes
 DEPENDS+=	par2-[0-9]*:../../archivers/par2
 DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	rsync-[0-9]*:../../net/rsync
 
-# TEST_DEPENDS
-BUILD_DEPENDS+=	rsync-[0-9]*:../../net/rsync
-PYTHON_VERSIONED_DEPENDENCIES=		test
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-tornado
 
 DOCDIR=		${WRKDIR}/${MAN_UNPACK}
 
@@ -91,5 +91,4 @@ post-install:
 # \todo Investigate "bup ftp" crash with NetBSD editline and resolve.
 .include "../../devel/readline/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
