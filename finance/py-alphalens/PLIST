@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2019/06/17 05:31:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/02/05 14:50:00 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -10,6 +10,7 @@ ${PYSITELIB}/alphalens/__init__.pyo
 ${PYSITELIB}/alphalens/_version.py
 ${PYSITELIB}/alphalens/_version.pyc
 ${PYSITELIB}/alphalens/_version.pyo
+${PYSITELIB}/alphalens/examples/alphalens_tutorial_on_quantopian.ipynb
 ${PYSITELIB}/alphalens/examples/daily_factor_synthetic_data.ipynb
 ${PYSITELIB}/alphalens/examples/event_study.ipynb
 ${PYSITELIB}/alphalens/examples/event_study_synthetic_data.ipynb
@@ -22,7 +23,6 @@ ${PYSITELIB}/alphalens/examples/returns_tear.png
 ${PYSITELIB}/alphalens/examples/sector_tear.png
 ${PYSITELIB}/alphalens/examples/table_tear.png
 ${PYSITELIB}/alphalens/examples/tear_sheet_walk_through.ipynb
-${PYSITELIB}/alphalens/examples/thomas data.ipynb
 ${PYSITELIB}/alphalens/performance.py
 ${PYSITELIB}/alphalens/performance.pyc
 ${PYSITELIB}/alphalens/performance.pyo
