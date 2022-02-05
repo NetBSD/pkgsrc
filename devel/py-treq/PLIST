@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/29 14:16:20 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/02/05 13:16:57 js Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,9 +7,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/treq/__init__.py
 ${PYSITELIB}/treq/__init__.pyc
 ${PYSITELIB}/treq/__init__.pyo
-${PYSITELIB}/treq/_utils.py
-${PYSITELIB}/treq/_utils.pyc
-${PYSITELIB}/treq/_utils.pyo
+${PYSITELIB}/treq/_agentspy.py
+${PYSITELIB}/treq/_agentspy.pyc
+${PYSITELIB}/treq/_agentspy.pyo
 ${PYSITELIB}/treq/_version.py
 ${PYSITELIB}/treq/_version.pyc
 ${PYSITELIB}/treq/_version.pyo
@@ -58,6 +58,9 @@ ${PYSITELIB}/treq/test/local_httpbin/test/test_parent.pyo
 ${PYSITELIB}/treq/test/local_httpbin/test/test_shared.py
 ${PYSITELIB}/treq/test/local_httpbin/test/test_shared.pyc
 ${PYSITELIB}/treq/test/local_httpbin/test/test_shared.pyo
+${PYSITELIB}/treq/test/test_agentspy.py
+${PYSITELIB}/treq/test/test_agentspy.pyc
+${PYSITELIB}/treq/test/test_agentspy.pyo
 ${PYSITELIB}/treq/test/test_api.py
 ${PYSITELIB}/treq/test/test_api.pyc
 ${PYSITELIB}/treq/test/test_api.pyo
@@ -82,9 +85,6 @@ ${PYSITELIB}/treq/test/test_testing.pyo
 ${PYSITELIB}/treq/test/test_treq_integration.py
 ${PYSITELIB}/treq/test/test_treq_integration.pyc
 ${PYSITELIB}/treq/test/test_treq_integration.pyo
-${PYSITELIB}/treq/test/test_utils.py
-${PYSITELIB}/treq/test/test_utils.pyc
-${PYSITELIB}/treq/test/test_utils.pyo
 ${PYSITELIB}/treq/test/util.py
 ${PYSITELIB}/treq/test/util.pyc
 ${PYSITELIB}/treq/test/util.pyo
