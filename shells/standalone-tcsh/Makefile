@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2021/12/09 19:55:39 kim Exp $
+# $NetBSD: Makefile,v 1.39 2022/02/05 05:39:55 mrg Exp $
 #
 
 # FIXME: This is because of PREFIX=/ below.
@@ -15,6 +15,11 @@ DESCR_SRC=		../../shells/tcsh/DESCR DESCR
 # in /bin. Otherwise it clobbers the native copy, which really isn't what
 # anyone wants.
 ONLY_FOR_PLATFORM+=	NetBSD-*-* OpenBSD-*-* SunOS-*-*
+
+.if "${OPSYS}" == "NetBSD" && \
+    (${MACHINE_ARCH} == "aarch64" || ${MACHINE_ARCH} == "aarch64eb")
+MKPIE_SUPPORTED= no
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 
