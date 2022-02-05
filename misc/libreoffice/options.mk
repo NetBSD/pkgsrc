@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2021/04/05 10:17:21 ryoon Exp $
+# $NetBSD: options.mk,v 1.19 2022/02/05 04:53:43 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libreoffice
 
@@ -18,7 +18,7 @@ PKG_SUGGESTED_OPTIONS+=	java
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	java gtk3 ldap
+PLIST_VARS+=	ldap
 
 .if !empty(PKG_OPTIONS:Mjava)
 USE_JAVA=		yes
@@ -37,8 +37,8 @@ CONFIGURE_ARGS+=	--enable-ext-wiki-publisher \
 			--enable-scripting-beanshell \
 			--with-system-hsqldb \
 			--without-system-jfreereport
+CONFIGURE_ARGS+=	--with-export-validation
 PLIST_SRC=		${PLIST_SRC_DFLT:Q} ${PKGDIR}/PLIST.java
-PLIST.java=		yes
 .else
 CONFIGURE_ARGS+=	--without-java
 .endif
