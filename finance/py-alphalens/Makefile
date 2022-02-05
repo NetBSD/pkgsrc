@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/01/04 20:53:52 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/02/05 14:50:00 adam Exp $
 
-DISTNAME=	alphalens-0.3.6
+DISTNAME=	alphalens-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/alphalens/}
 
@@ -11,6 +10,7 @@ HOMEPAGE=	https://github.com/quantopian/alphalens
 COMMENT=	Performance analysis of predictive stock factors
 LICENSE=	apache-2.0
 
+DEPENDS+=	${PYPKGPREFIX}-empyrical>=0.5.0:../../finance/py-empyrical
 DEPENDS+=	${PYPKGPREFIX}-ipython>=3.2.3:../../devel/py-ipython
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>=1.4.0:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.9.1:../../math/py-numpy
@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-statsmodels>=0.6.1:../../math/py-statsmodels
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-matplotlib, py-scipy
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-ipython, py-matplotlib, py-scipy
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

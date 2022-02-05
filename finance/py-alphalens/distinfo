@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:26:03 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/02/05 14:50:00 adam Exp $
 
-BLAKE2s (alphalens-0.3.6.tar.gz) = 8db406b8df4fcfc523a257a06acca2b059643c674daf356d48f64f804a693222
-SHA512 (alphalens-0.3.6.tar.gz) = 5d9ef5190691f68956a802b00c4eb1585d754c9510b54aa72f79e31de52d6c62cecf1bdc56d328805b327656c99523146ab781f0d0000725dfebb5b1babd6729
-Size (alphalens-0.3.6.tar.gz) = 18910866 bytes
+BLAKE2s (alphalens-0.4.0.tar.gz) = f5a9843706a15824715d4311693c1ee0a275b4685a2c125bef55fc62330fbd6c
+SHA512 (alphalens-0.4.0.tar.gz) = ab749a200ee2c1585e1c6ac50598a9c7166af970d17edc714e750b79e03c75a40bca0ca8e812cefd35a07f09d88fdf0298a8f64e7ad2b21037f656361bd2a16c
+Size (alphalens-0.4.0.tar.gz) = 24037878 bytes
