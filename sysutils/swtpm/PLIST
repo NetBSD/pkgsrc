@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/05 03:13:12 ryoon Exp $
+bin/swtpm
+bin/swtpm_bios
+bin/swtpm_cert
+bin/swtpm_ioctl
+bin/swtpm_localca
+bin/swtpm_setup
+include/swtpm/tpm_ioctl.h
+lib/swtpm/libswtpm_libtpms.la
+man/man3/swtpm_ioctls.3
+man/man8/swtpm-create-tpmca.8
+man/man8/swtpm-localca.8
+man/man8/swtpm-localca.conf.8
+man/man8/swtpm-localca.options.8
+man/man8/swtpm.8
+man/man8/swtpm_bios.8
+man/man8/swtpm_cert.8
+man/man8/swtpm_ioctl.8
+man/man8/swtpm_localca.8
+man/man8/swtpm_setup.8
+man/man8/swtpm_setup.conf.8
+share/examples/swtpm/swtpm-localca.conf
+share/examples/swtpm/swtpm-localca.options
+share/examples/swtpm/swtpm_setup.conf
+share/swtpm/swtpm-create-tpmca
+share/swtpm/swtpm-create-user-config-files
+share/swtpm/swtpm-localca

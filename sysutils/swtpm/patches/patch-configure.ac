@@ -1,0 +1,17 @@
+$NetBSD: patch-configure.ac,v 1.1 2022/02/05 03:13:12 ryoon Exp $
+
+* Use VARBASE for pkgsrc.
+
+--- configure.ac.orig	2021-09-20 11:26:56.000000000 +0000
++++ configure.ac
+@@ -119,9 +119,7 @@ fi
+ if test "$prefix" = "" && test "$datarootdir" = '${prefix}/share'; then
+ 	datarootdir="/usr/share"
+ fi
+-if test "$prefix" = "/usr" && test "$localstatedir" = '${prefix}/var'; then
+-	localstatedir="/var"
+-fi
++localstatedir="@VARBASE@"
+ if test "x$prefix" = "xNONE"; then
+ 	prefix="/usr/local"
+ fi
