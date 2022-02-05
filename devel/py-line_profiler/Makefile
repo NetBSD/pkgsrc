@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2022/01/05 15:41:05 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/02/05 11:40:48 adam Exp $
 
-DISTNAME=	line_profiler-2.1.2
+DISTNAME=	line_profiler-3.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/line_profiler/}
 
@@ -11,26 +10,19 @@ HOMEPAGE=	https://github.com/rkern/line_profiler
 COMMENT=	Python line-by-line profiler
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	c
+DEPENDS+=	${PYPKGPREFIX}-ipython>=0.17:../../devel/py-ipython
 
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && \
-		${MV} kernprof kernprof${PYVERSSUFFIX} || ${TRUE}
+PYSETUPARGS=	--universal # avoid scikit-build
 
-PYTHON_VERSIONED_DEPENDENCIES=	ipython
+USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
 
-.include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} >= 37
-# Regenerate _line_profiler.c with recent cython
-BUILDLINK_DEPMETHOD.py-cython=	build
-.include "../../devel/py-cython/buildlink3.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
-pre-configure:
-	${RM} -f ${WRKSRC}/_line_profiler.c
-.endif
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} kernprof kernprof-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
