@@ -1,1 +1,2 @@
+bin/jupyter-dejavu @PREFIX@/bin/jupyter-dejavu-@PYVERSSUFFIX@
 bin/jupyter-nbconvert @PREFIX@/bin/jupyter-nbconvert-@PYVERSSUFFIX@
