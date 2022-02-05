@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/01/05 15:41:30 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/02/05 09:09:57 adam Exp $
 
 DISTNAME=	livereload-2.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-tornado
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
