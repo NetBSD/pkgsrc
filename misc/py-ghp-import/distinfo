@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/05 09:39:19 adam Exp $
+
+BLAKE2s (ghp-import-2.0.2.tar.gz) = fd1154bf6f1f1f2fc48ebf911d7d202bb5a90c1d5e0fbadea126d12f8bb00ff9
+SHA512 (ghp-import-2.0.2.tar.gz) = 554c466f1275d905d7698539fe74b662f43c26b9497e83bc3615849ba2815dcbce6ae01fa14eb1c2245987ccc1b497afe175e3e0ddef3de561fc14ea24792d4e
+Size (ghp-import-2.0.2.tar.gz) = 10928 bytes
