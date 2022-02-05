@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.609 2022/02/05 13:17:05 js Exp $
+$NetBSD: CHANGES-2022,v 1.610 2022/02/05 13:51:38 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -815,3 +815,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-uvicorn to 0.17.4 [adam 2022-02-05]
 	Updated net/py-twisted to 22.1.0rc1nb4 [js 2022-02-05]
 	Updated devel/py-treq to 22.1.0nb1 [js 2022-02-05]
+	Added mail/qtraceaddr version 20061202 [schmonz 2022-02-05]
