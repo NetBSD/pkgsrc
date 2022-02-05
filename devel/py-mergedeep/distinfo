@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/05 09:40:48 adam Exp $
+
+BLAKE2s (mergedeep-1.3.4.tar.gz) = 4db2006209bedbc5028a9c7aa8e5a905a08a63a71c5d8f75c1b4b03f1817c90c
+SHA512 (mergedeep-1.3.4.tar.gz) = 4b7d56a3338d23def1c3f101ce568e1b6ae0384ca67975489de296f01fd5f98c35d26a305c073b1de22b2a4dba4e8a3a374b1f191d6224c3493fac7d05ea37b5
+Size (mergedeep-1.3.4.tar.gz) = 4661 bytes
