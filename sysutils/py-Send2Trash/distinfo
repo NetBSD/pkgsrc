@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:20:02 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/02/05 11:51:59 adam Exp $
 
-BLAKE2s (Send2Trash-1.5.0.tar.gz) = 613b7a3debc310c678e13c9e10758b4b5aee646d634a117176afd68b6fa3cf3e
-SHA512 (Send2Trash-1.5.0.tar.gz) = 3c08ef513e5707cd4ac82290b326bb19161222c7a84b8ffd494789ba9858929241f55ea55482947af464c14e32fea27bd92cd762a32a1d55e2daf2e21fd63172
-Size (Send2Trash-1.5.0.tar.gz) = 10892 bytes
+BLAKE2s (Send2Trash-1.8.0.tar.gz) = 5f20a59b299fe1e79ab96149a08726f2f6cdbe7c4203adba5c3b12e9ab86214f
+SHA512 (Send2Trash-1.8.0.tar.gz) = f6be4cebc7e494f713e3352d9d9062d4c88b75746e207b453429f8d3d7d5e46d08a3bc523423c4c63b767850e10d88157570598c1dab7f38917920f87f58458c
+Size (Send2Trash-1.8.0.tar.gz) = 13455 bytes
