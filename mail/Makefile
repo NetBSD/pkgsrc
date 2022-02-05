@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.577 2021/12/19 06:14:15 taca Exp $
+# $NetBSD: Makefile,v 1.578 2022/02/05 13:51:20 schmonz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -324,6 +324,7 @@ SUBDIR+=	qpopper
 SUBDIR+=	qremote
 SUBDIR+=	qsmtp
 SUBDIR+=	qtools
+SUBDIR+=	qtraceaddr
 SUBDIR+=	queue-fix
 SUBDIR+=	queue-repair
 SUBDIR+=	quickml
