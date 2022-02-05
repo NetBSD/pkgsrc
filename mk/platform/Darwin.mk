@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.112 2022/01/14 14:46:51 schmonz Exp $
+# $NetBSD: Darwin.mk,v 1.113 2022/02/05 21:43:17 schmonz Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -115,6 +115,7 @@ OSX_SDK_MAP.11.2=	11.1
 OSX_SDK_MAP.11.4=	11.3
 OSX_SDK_MAP.11.5=	11.3
 OSX_SDK_MAP.11.6=	11.3
+OSX_SDK_MAP.12.2=	12.1
 #
 OSX_SDK_PATH!=	/usr/bin/xcrun \
 		    --sdk macosx${OSX_SDK_MAP.${OSX_VERSION}:U${OSX_VERSION}} \
