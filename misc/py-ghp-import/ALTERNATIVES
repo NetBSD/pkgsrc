@@ -1,0 +1,1 @@
+bin/ghp-import @PREFIX@/bin/ghp-import-@PYVERSSUFFIX@
