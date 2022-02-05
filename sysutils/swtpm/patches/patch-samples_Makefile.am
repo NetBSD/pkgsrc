@@ -1,0 +1,15 @@
+$NetBSD: patch-samples_Makefile.am,v 1.1 2022/02/05 03:13:12 ryoon Exp $
+
+* Install config files into under ${PREFIX}/share/examples/swtpm for pkgsrc.
+
+--- samples/Makefile.am.orig	2021-11-09 15:49:45.000000000 +0000
++++ samples/Makefile.am
+@@ -5,7 +5,7 @@
+ #
+ 
+ samplesconfdir = $(datadir)/@PACKAGE@
+-samplessysconfdir = $(sysconfdir)
++samplessysconfdir = $(DATAROOTDIR)/examples/swtpm
+ 
+ samplesconf_SCRIPTS = \
+ 	swtpm-create-tpmca \

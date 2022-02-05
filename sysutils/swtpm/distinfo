@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2022/02/05 03:13:12 ryoon Exp $
+
+BLAKE2s (swtpm-0.7.0.tar.gz) = 7de143702ab83692b0e9baf6046fdd47d9fe783102ae391c746616fd78ddc207
+SHA512 (swtpm-0.7.0.tar.gz) = 32096309bf710e51d7565f013db32627423682fb2bfa9358976126102a0bf07401146bae9346af389c932c038f3d03217739375cef01a2ff10b01c7bd004b55e
+Size (swtpm-0.7.0.tar.gz) = 353641 bytes
+SHA1 (patch-configure.ac) = 00a5e52528150a356926a07b816268304456047c
+SHA1 (patch-samples_Makefile.am) = 4c2559decb43286f431dfabcec703e65f1a3ace2
