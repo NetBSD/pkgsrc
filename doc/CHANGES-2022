@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.595 2022/02/05 03:10:01 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.596 2022/02/05 03:13:39 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -788,3 +788,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/harfbuzz-icu to 3.3.1 [ryoon 2022-02-04]
 	Updated graphics/blender to 2.93.5nb3 [ryoon 2022-02-04]
 	Added sysutils/libtpms version 0.9.1 [ryoon 2022-02-05]
+	Added sysutils/swtpm version 0.7.0 [ryoon 2022-02-05]
