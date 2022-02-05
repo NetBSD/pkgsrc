@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.603 2022/02/05 04:55:24 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.604 2022/02/05 09:51:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -797,3 +797,10 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/py-libixion to 0.17.0 [ryoon 2022-02-05]
 	Added graphics/zxing-cpp version 1.2.0 [ryoon 2022-02-05]
 	Updated misc/libreoffice to 7.3.0.3 [ryoon 2022-02-05]
+	Updated www/py-tornado to 6.1 [adam 2022-02-05]
+	Added misc/py-ghp-import version 2.0.2 [adam 2022-02-05]
+	Added devel/py-mergedeep version 1.3.4 [adam 2022-02-05]
+	Added textproc/py-pyyaml_env_tag version 0.1 [adam 2022-02-05]
+	Updated textproc/py-mkdocs to 1.2.3 [adam 2022-02-05]
+	Updated textproc/py-mkdocs-bootstrap to 1.1 [adam 2022-02-05]
+	Updated textproc/py-mkdocs-bootswatch to 1.1 [adam 2022-02-05]
