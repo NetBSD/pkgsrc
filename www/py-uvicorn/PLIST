@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/08/23 10:02:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/02/05 12:11:09 adam Exp $
 bin/uvicorn-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -12,12 +12,6 @@ ${PYSITELIB}/uvicorn/__init__.pyo
 ${PYSITELIB}/uvicorn/__main__.py
 ${PYSITELIB}/uvicorn/__main__.pyc
 ${PYSITELIB}/uvicorn/__main__.pyo
-${PYSITELIB}/uvicorn/_handlers/__init__.py
-${PYSITELIB}/uvicorn/_handlers/__init__.pyc
-${PYSITELIB}/uvicorn/_handlers/__init__.pyo
-${PYSITELIB}/uvicorn/_handlers/http.py
-${PYSITELIB}/uvicorn/_handlers/http.pyc
-${PYSITELIB}/uvicorn/_handlers/http.pyo
 ${PYSITELIB}/uvicorn/_types.py
 ${PYSITELIB}/uvicorn/_types.pyc
 ${PYSITELIB}/uvicorn/_types.pyo
