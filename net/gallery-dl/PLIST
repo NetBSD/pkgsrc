@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.59 2021/09/12 10:36:47 leot Exp $
+@comment $NetBSD: PLIST,v 1.60 2022/02/05 12:00:34 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -102,6 +102,9 @@ ${PYSITELIB}/gallery_dl/extractor/cyberdrop.pyo
 ${PYSITELIB}/gallery_dl/extractor/danbooru.py
 ${PYSITELIB}/gallery_dl/extractor/danbooru.pyc
 ${PYSITELIB}/gallery_dl/extractor/danbooru.pyo
+${PYSITELIB}/gallery_dl/extractor/desktopography.py
+${PYSITELIB}/gallery_dl/extractor/desktopography.pyc
+${PYSITELIB}/gallery_dl/extractor/desktopography.pyo
 ${PYSITELIB}/gallery_dl/extractor/deviantart.py
 ${PYSITELIB}/gallery_dl/extractor/deviantart.pyc
 ${PYSITELIB}/gallery_dl/extractor/deviantart.pyo
@@ -153,6 +156,9 @@ ${PYSITELIB}/gallery_dl/extractor/gelbooru_v01.pyo
 ${PYSITELIB}/gallery_dl/extractor/gelbooru_v02.py
 ${PYSITELIB}/gallery_dl/extractor/gelbooru_v02.pyc
 ${PYSITELIB}/gallery_dl/extractor/gelbooru_v02.pyo
+${PYSITELIB}/gallery_dl/extractor/generic.py
+${PYSITELIB}/gallery_dl/extractor/generic.pyc
+${PYSITELIB}/gallery_dl/extractor/generic.pyo
 ${PYSITELIB}/gallery_dl/extractor/gfycat.py
 ${PYSITELIB}/gallery_dl/extractor/gfycat.pyc
 ${PYSITELIB}/gallery_dl/extractor/gfycat.pyo
@@ -240,6 +246,9 @@ ${PYSITELIB}/gallery_dl/extractor/lineblog.pyo
 ${PYSITELIB}/gallery_dl/extractor/livedoor.py
 ${PYSITELIB}/gallery_dl/extractor/livedoor.pyc
 ${PYSITELIB}/gallery_dl/extractor/livedoor.pyo
+${PYSITELIB}/gallery_dl/extractor/lolisafe.py
+${PYSITELIB}/gallery_dl/extractor/lolisafe.pyc
+${PYSITELIB}/gallery_dl/extractor/lolisafe.pyo
 ${PYSITELIB}/gallery_dl/extractor/luscious.py
 ${PYSITELIB}/gallery_dl/extractor/luscious.pyc
 ${PYSITELIB}/gallery_dl/extractor/luscious.pyo
@@ -324,6 +333,9 @@ ${PYSITELIB}/gallery_dl/extractor/photobucket.pyo
 ${PYSITELIB}/gallery_dl/extractor/photovogue.py
 ${PYSITELIB}/gallery_dl/extractor/photovogue.pyc
 ${PYSITELIB}/gallery_dl/extractor/photovogue.pyo
+${PYSITELIB}/gallery_dl/extractor/picarto.py
+${PYSITELIB}/gallery_dl/extractor/picarto.pyc
+${PYSITELIB}/gallery_dl/extractor/picarto.pyo
 ${PYSITELIB}/gallery_dl/extractor/piczel.py
 ${PYSITELIB}/gallery_dl/extractor/piczel.pyc
 ${PYSITELIB}/gallery_dl/extractor/piczel.pyo
@@ -363,6 +375,9 @@ ${PYSITELIB}/gallery_dl/extractor/reddit.pyo
 ${PYSITELIB}/gallery_dl/extractor/redgifs.py
 ${PYSITELIB}/gallery_dl/extractor/redgifs.pyc
 ${PYSITELIB}/gallery_dl/extractor/redgifs.pyo
+${PYSITELIB}/gallery_dl/extractor/rule34us.py
+${PYSITELIB}/gallery_dl/extractor/rule34us.pyc
+${PYSITELIB}/gallery_dl/extractor/rule34us.pyo
 ${PYSITELIB}/gallery_dl/extractor/sankaku.py
 ${PYSITELIB}/gallery_dl/extractor/sankaku.pyc
 ${PYSITELIB}/gallery_dl/extractor/sankaku.pyo
@@ -372,9 +387,6 @@ ${PYSITELIB}/gallery_dl/extractor/sankakucomplex.pyo
 ${PYSITELIB}/gallery_dl/extractor/seiga.py
 ${PYSITELIB}/gallery_dl/extractor/seiga.pyc
 ${PYSITELIB}/gallery_dl/extractor/seiga.pyo
-${PYSITELIB}/gallery_dl/extractor/seisoparty.py
-${PYSITELIB}/gallery_dl/extractor/seisoparty.pyc
-${PYSITELIB}/gallery_dl/extractor/seisoparty.pyo
 ${PYSITELIB}/gallery_dl/extractor/senmanga.py
 ${PYSITELIB}/gallery_dl/extractor/senmanga.pyc
 ${PYSITELIB}/gallery_dl/extractor/senmanga.pyo
@@ -387,6 +399,9 @@ ${PYSITELIB}/gallery_dl/extractor/shopify.pyo
 ${PYSITELIB}/gallery_dl/extractor/simplyhentai.py
 ${PYSITELIB}/gallery_dl/extractor/simplyhentai.pyc
 ${PYSITELIB}/gallery_dl/extractor/simplyhentai.pyo
+${PYSITELIB}/gallery_dl/extractor/skeb.py
+${PYSITELIB}/gallery_dl/extractor/skeb.pyc
+${PYSITELIB}/gallery_dl/extractor/skeb.pyo
 ${PYSITELIB}/gallery_dl/extractor/slickpic.py
 ${PYSITELIB}/gallery_dl/extractor/slickpic.pyc
 ${PYSITELIB}/gallery_dl/extractor/slickpic.pyo
@@ -462,6 +477,9 @@ ${PYSITELIB}/gallery_dl/extractor/xvideos.pyo
 ${PYSITELIB}/gallery_dl/extractor/ytdl.py
 ${PYSITELIB}/gallery_dl/extractor/ytdl.pyc
 ${PYSITELIB}/gallery_dl/extractor/ytdl.pyo
+${PYSITELIB}/gallery_dl/formatter.py
+${PYSITELIB}/gallery_dl/formatter.pyc
+${PYSITELIB}/gallery_dl/formatter.pyo
 ${PYSITELIB}/gallery_dl/job.py
 ${PYSITELIB}/gallery_dl/job.pyc
 ${PYSITELIB}/gallery_dl/job.pyo
@@ -474,6 +492,9 @@ ${PYSITELIB}/gallery_dl/option.pyo
 ${PYSITELIB}/gallery_dl/output.py
 ${PYSITELIB}/gallery_dl/output.pyc
 ${PYSITELIB}/gallery_dl/output.pyo
+${PYSITELIB}/gallery_dl/path.py
+${PYSITELIB}/gallery_dl/path.pyc
+${PYSITELIB}/gallery_dl/path.pyo
 ${PYSITELIB}/gallery_dl/postprocessor/__init__.py
 ${PYSITELIB}/gallery_dl/postprocessor/__init__.pyc
 ${PYSITELIB}/gallery_dl/postprocessor/__init__.pyo
@@ -510,6 +531,9 @@ ${PYSITELIB}/gallery_dl/util.pyo
 ${PYSITELIB}/gallery_dl/version.py
 ${PYSITELIB}/gallery_dl/version.pyc
 ${PYSITELIB}/gallery_dl/version.pyo
+${PYSITELIB}/gallery_dl/ytdl.py
+${PYSITELIB}/gallery_dl/ytdl.pyc
+${PYSITELIB}/gallery_dl/ytdl.pyo
 man/man1/gallery-dl.1
 man/man5/gallery-dl.conf.5
 share/bash-completion/completions/gallery-dl
