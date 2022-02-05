@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.19 2021/08/22 02:41:50 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.20 2022/02/05 04:53:43 ryoon Exp $
 
 * Add NetBSD/aarch64 support.
 * Disable freetype2 and fontconfig from pkgsrc explicitly.
@@ -7,9 +7,9 @@ $NetBSD: patch-configure.ac,v 1.19 2021/08/22 02:41:50 ryoon Exp $
 * Include header files from security/gpgme correctly.
 * Find devel/apache-ant.
 
---- configure.ac.orig	2021-08-16 19:56:28.000000000 +0000
+--- configure.ac.orig	2022-01-26 14:35:29.000000000 +0000
 +++ configure.ac
-@@ -5107,6 +5107,11 @@ linux-android*)
+@@ -5174,6 +5174,11 @@ linux-android*)
          RTL_ARCH=X86_64
          PLATFORMID=netbsd_x86_64
          ;;
@@ -21,16 +21,7 @@ $NetBSD: patch-configure.ac,v 1.19 2021/08/22 02:41:50 ryoon Exp $
      *)
          AC_MSG_ERROR([Unsupported host_cpu $host_cpu for host_os $host_os])
          ;;
-@@ -9001,7 +9006,7 @@ else
-     if test "$COM" = "MSC"; then
-         LIBJPEG_LIBS="${WORKDIR}/UnpackedTarball/libjpeg-turbo/.libs/libjpeg.lib"
-     else
--        LIBJPEG_LIBS="-L${WORKDIR}/UnpackedTarball/libjpeg-turbo/.libs -ljpeg"
-+        LIBJPEG_LIBS="${WORKDIR}/UnpackedTarball/libjpeg-turbo/.libs/libjpeg.a"
-     fi
- 
-     case "$host_cpu" in
-@@ -9334,9 +9339,9 @@ elif test "$using_freetype_fontconfig" =
+@@ -9451,9 +9456,9 @@ elif test "$using_freetype_fontconfig" =
      AC_MSG_RESULT([internal])
      FREETYPE_CFLAGS="${ISYSTEM}${WORKDIR}/UnpackedTarball/freetype/include"
      if test "x$ac_config_site_64bit_host" = xYES; then
@@ -42,7 +33,7 @@ $NetBSD: patch-configure.ac,v 1.19 2021/08/22 02:41:50 ryoon Exp $
      fi
      BUILD_TYPE="$BUILD_TYPE FREETYPE"
  fi
-@@ -10634,11 +10639,11 @@ dnl HarfBuzz
+@@ -10730,11 +10735,11 @@ dnl HarfBuzz
  dnl ===================================================================
  libo_CHECK_SYSTEM_MODULE([graphite],[GRAPHITE],[graphite2 >= 0.9.3],
                           ["-I${WORKDIR}/UnpackedTarball/graphite/include -DGRAPHITE2_STATIC"],
@@ -56,16 +47,16 @@ $NetBSD: patch-configure.ac,v 1.19 2021/08/22 02:41:50 ryoon Exp $
  
  if test "$COM" = "MSC"; then # override the above
      GRAPHITE_LIBS="${WORKDIR}/LinkTarget/StaticLibrary/graphite.lib"
-@@ -12259,7 +12264,7 @@ elif test "$_os" = "Linux" -o "$_os" = "
+@@ -12442,7 +12447,7 @@ elif test "$_os" = "Linux" -o "$_os" = "
          SYSTEM_GPGMEPP=TRUE
  
          # C++ library doesn't come with fancy gpgmepp-config, check for headers the old-fashioned way
 -        AC_CHECK_HEADER(gpgme++/gpgmepp_version.h, [ GPGMEPP_CFLAGS=-I/usr/include/gpgme++ ],
 +        AC_CHECK_HEADER(gpgme++/gpgmepp_version.h, [ GPGMEPP_CFLAGS=-I@PREFIX@/include/gpgme++ ],
-             [AC_MSG_ERROR([gpgmepp headers not found, install gpgmepp development package])], [])
+             [AC_MSG_ERROR([gpgmepp headers not found, install gpgmepp >= 1.14 development package])], [])
          # progress_callback is the only func with plain C linkage
          # checking for it also filters out older, KDE-dependent libgpgmepp versions
-@@ -13330,8 +13335,8 @@ EOF
+@@ -13611,8 +13616,8 @@ EOF
                      if test -f /usr/share/ant-core/lib/ant.jar; then
                          ANT_LIB=/usr/share/ant-core/lib
                      else

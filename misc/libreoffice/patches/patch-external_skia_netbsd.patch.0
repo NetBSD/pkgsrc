@@ -1,16 +1,15 @@
-$NetBSD: patch-external_skia_netbsd.patch.0,v 1.2 2021/08/22 02:41:50 ryoon Exp $
+$NetBSD: patch-external_skia_netbsd.patch.0,v 1.3 2022/02/05 04:53:43 ryoon Exp $
 
-* Support NetBSD.
+* Support NetBSD. It has no uselocale(3).
 * Fix build failure (isnan etc. are not defined) under NetBSD/amd64 9.99.88
   (GCC 10.3.0) at least.
 
---- external/skia/netbsd.patch.0.orig	2021-08-19 23:46:10.790195547 +0000
+--- external/skia/netbsd.patch.0.orig	2022-02-03 04:24:23.011640283 +0000
 +++ external/skia/netbsd.patch.0
 @@ -0,0 +1,29 @@
-+NetBSD has no uselocale(3).
-+
-+--- src/gpu/GrAutoLocaleSetter.h.orig	2020-05-18 08:42:43.094191883 +0000
-++++ src/gpu/GrAutoLocaleSetter.h
++diff -ur skia.orig/src/gpu/GrAutoLocaleSetter.h skia/src/gpu/GrAutoLocaleSetter.h
++--- src/gpu/GrAutoLocaleSetter.h	2019-09-19 18:38:01.127185317 +0900
+++++ src/gpu/GrAutoLocaleSetter.h	2022-02-03 13:25:31.192362952 +0900
 +@@ -27,7 +27,7 @@
 + #define HAVE_XLOCALE 0
 + #endif
@@ -20,19 +19,20 @@ $NetBSD: patch-external_skia_netbsd.patch.0,v 1.2 2021/08/22 02:41:50 ryoon Exp 
 + #define HAVE_LOCALE_T 0
 + #else
 + #define HAVE_LOCALE_T 1
-+--- src/sksl/dsl/DSLExpression.cpp.orig	2021-03-01 14:53:20.790708027 +0000
-++++ src/sksl/dsl/DSLExpression.cpp
-+@@ -41,10 +41,10 @@ DSLExpression::DSLExpression(float value
-+     : fExpression(std::make_unique<SkSL::FloatLiteral>(DSLWriter::Context(),
-+                                                        /*offset=*/-1,
-+                                                        value)) {
++diff -ur skia.orig/src/sksl/dsl/DSLExpression.cpp skia/src/sksl/dsl/DSLExpression.cpp
++--- src/sksl/dsl/DSLExpression.cpp	2021-11-26 00:00:28.260475275 +0900
+++++ src/sksl/dsl/DSLExpression.cpp	2022-02-03 13:26:31.790025246 +0900
++@@ -45,10 +45,10 @@
++     : fExpression(SkSL::Literal::MakeFloat(ThreadContext::Context(),
++                                            pos.line(),
++                                            value)) {
 +-    if (!isfinite(value)) {
 +-        if (isinf(value)) {
 ++    if (!std::isfinite(value)) {
 ++        if (std::isinf(value)) {
-+             DSLWriter::ReportError("error: floating point value is infinite\n");
++             ThreadContext::ReportError("floating point value is infinite");
 +-        } else if (isnan(value)) {
 ++        } else if (std::isnan(value)) {
-+             DSLWriter::ReportError("error: floating point value is NaN\n");
++             ThreadContext::ReportError("floating point value is NaN");
 +         }
 +     }
