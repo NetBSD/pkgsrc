@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/05 04:34:17 ryoon Exp $
+
+BLAKE2s (zxing-cpp-1.2.0.tar.gz) = 5a87c4a61248f30dd9a7011f11921a5bf3e5f98d94a58242eca2c00b44b8062e
+SHA512 (zxing-cpp-1.2.0.tar.gz) = e61b4e44ccaf0871b5d8badf9ce0a81576f55e5d6a9458907b9b599a66227adceabb8d51a0c47b32319d8aeff93e758b4785d3bd0440375247471d95999de487
+Size (zxing-cpp-1.2.0.tar.gz) = 97942494 bytes
