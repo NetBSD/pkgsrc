@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.279 2022/01/25 15:21:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.280 2022/02/05 04:53:43 ryoon Exp $
 
-VERREL=		7.2.5
-VERRC=		2
+VERREL=		7.3.0
+VERRC=		3
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
 CATEGORIES=	misc
@@ -29,6 +29,12 @@ SUBST_MESSAGE.use-bash=		Using bash for configure script
 SUBST_FILES.use-bash+=		autogen.sh
 SUBST_VARS.use-bash+=		BASH
 
+SUBST_CLASSES+=			zxing
+SUBST_STAGE.zxing=		pre-configure
+SUBST_MESSAGE.zxing=		Include zxing header files
+SUBST_FILES.zxing+=		configure.ac
+SUBST_SED.zxing+=		-e 's,ZXING_CFLAGS=-I/usr/include/ZXing,ZXING_CFLAGS=-I${BUILDLINK_PREFIX.zxing-cpp}/include/ZXing,'
+
 SUBST_CLASSES+=			font-path
 SUBST_STAGE.font-path=		pre-configure
 SUBST_MESSAGE.font-path=	Use pkgsrc fonts for PDF import
@@ -40,9 +46,13 @@ GCC_REQD+=	7
 BUILD_TARGET=	build
 
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "NetBSD"
 pre-build:
-	cd ${WRKSRC} && ${BUILD_MAKE_CMD} Executable_gengal && ${TOOLS_PLATFORM.paxctl} +m instdir/program/gengal.bin
+	# Workaround for internal libjpeg-turbo
+	${MKDIR} ${WRKSRC}/workdir/ExternalProject
+.if ${OPSYS} == "NetBSD"
+	cd ${WRKSRC} && \
+	${BUILD_MAKE_CMD} Executable_gengal && \
+	${TOOLS_PLATFORM.paxctl} +m instdir/program/gengal.bin
 .endif
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
@@ -74,7 +84,7 @@ MORE_DISTFILES= \
 	907d6e99f241876695c19ff3db0b8923-source-code-pro-2.030R-ro-1.050R-it.tar.gz \
 	edc4d741888bc0d38e32dbaa17149596-source-sans-pro-2.010R-ro-1.065R-it.tar.gz \
 	source-serif-pro-3.000R.tar.gz \
-	xmlsec1-1.2.32.tar.gz \
+	xmlsec1-1.2.33.tar.gz
 	3404ab6b1792ae5f16bbd603bd1e1d03-libformula-1.1.7.zip \
 	35c94d2df8893241173de1d16b6034c0-swingExSrc.zip \
 	39bb3fcea1514f1369fcfc87542390fd-sacjava-1.3.zip \
@@ -96,13 +106,12 @@ MORE_DISTFILES= \
 	mariadb-connector-c-3.1.8-src.tar.gz \
 	798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip \
 	368f114c078f94214a308a74c7e991bc-crosextrafonts-20130214.tar.gz \
-	language-subtag-registry-2021-03-05.tar.bz2 \
-	libeot-0.01.tar.bz2 \
+	language-subtag-registry-2021-08-06.tar.bz2 \
 	postgresql-13.5.tar.bz2 \
 	graphite2-minimal-1.3.14.tgz \
 	1725634df4bb3dcb1b2c91a6175f8789-GentiumBasic_1102.zip \
 	EmojiOneColor-SVGinOT-1.3.tar.gz \
-	libjpeg-turbo-1.5.3.tar.gz \
+	libjpeg-turbo-2.1.1.tar.gz \
 	alef-1.001.tar.gz \
 	c74b7223abe75949b4af367942d96c7a-crosextrafonts-carlito-20130920.tar.gz \
 	culmus-0.133.tar.gz \
@@ -113,24 +122,28 @@ MORE_DISTFILES= \
 	lxml-4.1.1.tgz \
 	Amiri-0.111.zip \
 	ReemKufi-0.7.zip \
-	pdfium-4500.tar.bz2 \
+	pdfium-4699.tar.bz2 \
 	dtoa-20180411.tgz \
-	skia-m90-45c57e116ee0ce214bdf78405a4762722e4507d9.tar.xz \
-	zxing-cpp-1.1.1.tar.gz \
-	libcmis-0.5.2.tar.xz
+	skia-m97-a7230803d64ae9d44f4e1282444801119a3ae967.tar.xz \
+	libcmis-0.5.2.tar.xz \
+	libcuckoo-93217f8d391718380c508a722ab9acd5e9081233.tar.gz
 
 .for md in ${MORE_DISTFILES}
 DISTFILES+=		${md}
 SITES.${md}=		https://dev-www.libreoffice.org/src/
 .endfor
 
-MORE_DISTFILES2+=	f543e6e2d7275557a839a164941c0a86e5f2c3f2a0042bfc434c88c6dde9e140-opens___.ttf
-SITES.f543e6e2d7275557a839a164941c0a86e5f2c3f2a0042bfc434c88c6dde9e140-opens___.ttf=	https://dev-www.libreoffice.org/extern/
+MORE_DISTFILES2+=	f543e6e2d7275557a839a164941c0a86e5f2c3f2a0042bfc434c88c6dde9e140-opens___.ttf \
+			odfvalidator-0.9.0-RC2-SNAPSHOT-jar-with-dependencies-2726ab578664434a545f8379a01a9faffac0ae73.jar \
+			8249374c274932a21846fa7629c2aa9b-officeotron-0.7.4-master.jar
+.for md in ${MORE_DISTFILES2}
+SITES.${md}=		https://dev-www.libreoffice.org/extern/
+.endfor
 
 .include "../../graphics/librsvg/available.mk"
 .if ${LIBRSVG_TYPE} == "c" || make(distinfo) || make(mdi)
-MORE_DISTFILES2+=		harfbuzz-2.6.4.tar.xz
-SITES.harfbuzz-2.6.4.tar.xz=	https://www.freedesktop.org/software/harfbuzz/release/
+MORE_DISTFILES2+=		harfbuzz-3.3.1.tar.xz
+SITES.harfbuzz-3.3.1.tar.xz=	https://github.com/harfbuzz/harfbuzz/releases/download/3.3.1/
 .endif
 
 .for md2 in ${MORE_DISTFILES2}
@@ -201,8 +214,8 @@ CONFIGURE_ARGS+=	--with-system-gpgmepp
 CONFIGURE_ARGS+=	--without-system-jpeg
 CONFIGURE_ARGS+=	--without-system-postgresql
 CONFIGURE_ARGS+=	--without-system-mariadb
-CONFIGURE_ARGS+=	--without-system-xmlsec
-CONFIGURE_ARGS+=	--without-system-zxing
+CONFIGURE_ARGS+=	--without-system-xmlsec # Needs NSS support
+CONFIGURE_ARGS+=	--with-system-zxing
 # Internal libcmis-0.5.2 is patched. Do not libcmis-0.5.2nb13 from net/libcmis.
 CONFIGURE_ARGS+=	--without-system-libcmis
 CONFIGURE_ARGS+=	--with-compat-oowrappers
@@ -224,17 +237,20 @@ CONFIGURE_ARGS+=	--with-system-cppunit
 #CONFIGURE_ARGS+=	--without-galleries
 # internal sane should be used because only header files are used.
 CONFIGURE_ARGS+=	--without-system-sane
-# Use internal harfbuzz because fonts/harfbuzz has no graphite2 support.
 .if ${LIBRSVG_TYPE} == "rust"
 CONFIGURE_ARGS+=	--with-system-harfbuzz
 CONFIGURE_ARGS+=	--with-system-graphite
 .else
+# Use internal harfbuzz because fonts/harfbuzz has no graphite2 support.
 CONFIGURE_ARGS+=	--without-system-harfbuzz
 CONFIGURE_ARGS+=	--without-system-graphite
 .endif
 # sbin might not be in PATH
 CONFIGURE_ARGS+=	ac_cv_path_SYSTEM_GENCCODE=${BUILDLINK_PREFIX.icu}/sbin/genccode
 CONFIGURE_ARGS+=	ac_cv_path_SYSTEM_GENCMN=${BUILDLINK_PREFIX.icu}/sbin/gencmn
+CONFIGURE_ARGS+=	--without-system-cuckoo
+CONFIGURE_ARGS+=	--with-system-libtommath
+CONFIGURE_ARGS+=	--with-system-openjpeg
 
 # more REPLACE_PERL are needed.
 REPLACE_PERL=	sd/res/webview/editpic.pl
@@ -258,6 +274,7 @@ CONFIGURE_SCRIPT=	${WRKSRC}/autogen.sh
 MAKE_ENV+=		ROOT_USER=${ROOT_USER}
 MAKE_ENV+=		ROOT_GROUP=${ROOT_GROUP}
 MAKE_ENV+=		SHELL=${BASH}
+# configure script should use `pkg-config --cflags xzing`
 #MAKE_ENV+=		LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
 BUILD_MAKE_FLAGS+=	VERBOSE=true
 #BUILD_MAKE_FLAGS+=	GMAKE_OPTIONS+=-p
@@ -340,6 +357,7 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 #.include "../../mk/mysql.buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../databases/unixodbc/buildlink3.mk"
+.include "../../devel/abseil/buildlink3.mk"
 .include "../../devel/apr-util/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
@@ -370,7 +388,9 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libepoxy/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
+.include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/zxing-cpp/buildlink3.mk"
 #.include "../../graphics/sane-backends/buildlink3.mk"
 #.include "../../graphics/vigra/buildlink3.mk"
 .include "../../lang/python/application.mk"
@@ -382,9 +402,10 @@ BUILDLINK_INCDIRS.${PYPKGPREFIX:S/py/python/}=	# empty
 BUILDLINK_API_DEPENDS.libnumbertext+=	libnumbertext>=1.0.6
 .include "../../math/libnumbertext/buildlink3.mk"
 .include "../../math/lp_solve/buildlink3.mk"
+.include "../../math/ltm/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
-# Internal libcmis-0.5.2 is patched. Do not libcmis-0.5.2nb13 from net/libcmis.
+# Internal libcmis-0.5.2 is patched. Do not use libcmis-0.5.2nb13 from net/libcmis.
 #.include "../../net/libcmis/buildlink3.mk"
 .include "../../net/mDNSResponder/buildlink3.mk"
 # Use PDFium instead of poppler for PDF import since 6.3.2.2nb1
