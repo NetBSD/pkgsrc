@@ -1,11 +1,20 @@
-@comment $NetBSD: PLIST,v 1.2 2018/02/25 21:10:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/02/05 11:51:59 adam Exp $
+bin/send2trash-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/send2trash/IFileOperationProgressSink.py
+${PYSITELIB}/send2trash/IFileOperationProgressSink.pyc
+${PYSITELIB}/send2trash/IFileOperationProgressSink.pyo
 ${PYSITELIB}/send2trash/__init__.py
 ${PYSITELIB}/send2trash/__init__.pyc
 ${PYSITELIB}/send2trash/__init__.pyo
+${PYSITELIB}/send2trash/__main__.py
+${PYSITELIB}/send2trash/__main__.pyc
+${PYSITELIB}/send2trash/__main__.pyo
 ${PYSITELIB}/send2trash/compat.py
 ${PYSITELIB}/send2trash/compat.pyc
 ${PYSITELIB}/send2trash/compat.pyo
@@ -18,9 +27,24 @@ ${PYSITELIB}/send2trash/plat_gio.pyo
 ${PYSITELIB}/send2trash/plat_osx.py
 ${PYSITELIB}/send2trash/plat_osx.pyc
 ${PYSITELIB}/send2trash/plat_osx.pyo
+${PYSITELIB}/send2trash/plat_osx_ctypes.py
+${PYSITELIB}/send2trash/plat_osx_ctypes.pyc
+${PYSITELIB}/send2trash/plat_osx_ctypes.pyo
+${PYSITELIB}/send2trash/plat_osx_pyobjc.py
+${PYSITELIB}/send2trash/plat_osx_pyobjc.pyc
+${PYSITELIB}/send2trash/plat_osx_pyobjc.pyo
 ${PYSITELIB}/send2trash/plat_other.py
 ${PYSITELIB}/send2trash/plat_other.pyc
 ${PYSITELIB}/send2trash/plat_other.pyo
 ${PYSITELIB}/send2trash/plat_win.py
 ${PYSITELIB}/send2trash/plat_win.pyc
 ${PYSITELIB}/send2trash/plat_win.pyo
+${PYSITELIB}/send2trash/plat_win_legacy.py
+${PYSITELIB}/send2trash/plat_win_legacy.pyc
+${PYSITELIB}/send2trash/plat_win_legacy.pyo
+${PYSITELIB}/send2trash/plat_win_modern.py
+${PYSITELIB}/send2trash/plat_win_modern.pyc
+${PYSITELIB}/send2trash/plat_win_modern.pyo
+${PYSITELIB}/send2trash/util.py
+${PYSITELIB}/send2trash/util.pyc
+${PYSITELIB}/send2trash/util.pyo
