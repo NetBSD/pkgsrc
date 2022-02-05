@@ -1,0 +1,40 @@
+$NetBSD: patch-configure.in,v 1.1 2022/02/05 20:51:07 nia Exp $
+
+- Add Sun Audio support.
+- Replace a GNU regex with a portable one.
+
+--- configure.in.orig	2021-12-03 05:22:04.000000000 +0000
++++ configure.in
+@@ -5258,6 +5258,13 @@ if test -n "$MOZ_OMX_PLUGIN"; then
+     fi
+ fi
+ 
++dnl If SunOS or NetBSD, assume that Sun Audio is available
++case "$OS_TARGET" in
++SunOS|NetBSD)
++    MOZ_SUN=1
++    ;;
++esac
++
+ dnl system libvpx Support
+ dnl ========================================================
+ MOZ_ARG_WITH_BOOL(system-libvpx,
+@@ -5428,6 +5435,8 @@ if test -n "$MOZ_WEBM_ENCODER"; then
+ fi
+ AC_SUBST(MOZ_WEBM_ENCODER)
+ 
++AC_SUBST(MOZ_SUN)
++
+ dnl ==================================
+ dnl = Check alsa availability on Linux
+ dnl ==================================
+@@ -8812,7 +8821,8 @@ ac_configure_args="$_SUBDIR_CONFIG_ARGS"
+ 
+ # --with-system-nspr will have been converted into the relevant $NSPR_CFLAGS
+ # and $NSPR_LIBS.
+-ac_configure_args="`echo $ac_configure_args | sed -e 's/--with-system-nspr\S* *//'`"
++ac_configure_args="`echo $ac_configure_args | sed -e 's/--with-system-nspr[[^[:
++space:]]]* *//'`"
+ 
+ ac_configure_args="$ac_configure_args --enable-threadsafe"
+ 
