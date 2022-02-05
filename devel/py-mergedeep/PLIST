@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/05 09:40:48 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/mergedeep/__init__.py
+${PYSITELIB}/mergedeep/__init__.pyc
+${PYSITELIB}/mergedeep/__init__.pyo
+${PYSITELIB}/mergedeep/mergedeep.py
+${PYSITELIB}/mergedeep/mergedeep.pyc
+${PYSITELIB}/mergedeep/mergedeep.pyo
