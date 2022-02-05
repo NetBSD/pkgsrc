@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2021/10/26 10:06:44 nia Exp $
+$NetBSD: distinfo,v 1.20 2022/02/05 04:14:31 ryoon Exp $
 
-BLAKE2s (liborcus-0.16.1.tar.xz) = 5e949662f0e57353e581874177635129b701e4ab353bb14fcdcc433bb5e7c6e4
-SHA512 (liborcus-0.16.1.tar.xz) = 6d75591820af65181dd3a418f051a359695083f29c7d9c77edbcab3e89d9ea367824be0b19f27a31267525f446936145f5780a0ce3c6ee2d89823742837d4739
-Size (liborcus-0.16.1.tar.xz) = 1805436 bytes
+BLAKE2s (liborcus-0.17.2.tar.xz) = 1c83c1c7300f20c8fbc3d01df57cb93c7afd58a7a0a47bba679a99cf8b74f2bc
+SHA512 (liborcus-0.17.2.tar.xz) = 8ad8db46c23673260057aff555286d95ebfeff0a027bdeae24f11f8aa12456284f7f4446edddb91936b3011eb1227cfe1618ab3c4d909f8356c8c151f5739d79
+Size (liborcus-0.17.2.tar.xz) = 1839188 bytes
