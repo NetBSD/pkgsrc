@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.607 2022/02/05 12:12:51 adam Exp $
+$NetBSD: CHANGES-2022,v 1.608 2022/02/05 13:16:22 js Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -813,3 +813,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-httpcore to 0.14.7 [adam 2022-02-05]
 	Updated net/py-zeroconf to 0.38.3 [adam 2022-02-05]
 	Updated www/py-uvicorn to 0.17.4 [adam 2022-02-05]
+	Updated net/py-twisted to 22.1.0rc1nb4 [js 2022-02-05]
