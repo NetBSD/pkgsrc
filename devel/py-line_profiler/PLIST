@@ -1,18 +1,20 @@
-@comment $NetBSD: PLIST,v 1.3 2019/05/02 09:27:09 adam Exp $
-bin/kernprof${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.4 2022/02/05 11:40:48 adam Exp $
+bin/kernprof-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/_line_profiler.so
 ${PYSITELIB}/kernprof.py
 ${PYSITELIB}/kernprof.pyc
 ${PYSITELIB}/kernprof.pyo
-${PYSITELIB}/line_profiler.py
-${PYSITELIB}/line_profiler.pyc
-${PYSITELIB}/line_profiler.pyo
-${PLIST.py3x}${PYSITELIB}/line_profiler_py35.py
-${PLIST.py3x}${PYSITELIB}/line_profiler_py35.pyc
-${PLIST.py3x}${PYSITELIB}/line_profiler_py35.pyo
+${PYSITELIB}/line_profiler/__init__.py
+${PYSITELIB}/line_profiler/__init__.pyc
+${PYSITELIB}/line_profiler/__init__.pyo
+${PYSITELIB}/line_profiler/__main__.py
+${PYSITELIB}/line_profiler/__main__.pyc
+${PYSITELIB}/line_profiler/__main__.pyo
+${PYSITELIB}/line_profiler/line_profiler.py
+${PYSITELIB}/line_profiler/line_profiler.pyc
+${PYSITELIB}/line_profiler/line_profiler.pyo
