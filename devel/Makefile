@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3573 2022/02/02 18:54:08 adam Exp $
+# $NetBSD: Makefile,v 1.3574 2022/02/05 09:40:48 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2433,6 +2433,7 @@ SUBDIR+=	py-mccabe06
 SUBDIR+=	py-memcached
 SUBDIR+=	py-memory-profiler
 SUBDIR+=	py-mercurial
+SUBDIR+=	py-mergedeep
 SUBDIR+=	py-minidump
 SUBDIR+=	py-minimock
 SUBDIR+=	py-mixbox
