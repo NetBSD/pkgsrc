@@ -1,13 +1,26 @@
-$NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.7 2021/08/22 02:41:50 ryoon Exp $
+$NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.8 2022/02/05 04:53:43 ryoon Exp $
 
 * Support NetBSD
 * Add pkgsrc font path
 
---- external/pdfium/pkgsrc.patch.1.orig	2021-08-19 17:48:05.038930162 +0000
+--- external/pdfium/pkgsrc.patch.1.orig	2022-02-03 05:03:32.276772721 +0000
 +++ external/pdfium/pkgsrc.patch.1
-@@ -0,0 +1,30 @@
-+--- pdfium/core/fxcrt/cfx_datetime.cpp.orig	2021-05-03 04:55:56.000000000 +0000
-++++ pdfium/core/fxcrt/cfx_datetime.cpp
+@@ -0,0 +1,44 @@
++diff -ur pdfium.orig/core/fpdfapi/page/cpdf_psengine.cpp pdfium/core/fpdfapi/page/cpdf_psengine.cpp
++--- pdfium.orig/core/fpdfapi/page/cpdf_psengine.cpp	2021-11-10 05:48:16.000000000 +0900
+++++ pdfium/core/fpdfapi/page/cpdf_psengine.cpp	2022-02-03 14:01:56.227611267 +0900
++@@ -74,7 +74,7 @@
++ // Round half up is a nearest integer round with half-way numbers always rounded
++ // up. Example: -5.5 rounds to -5.
++ float RoundHalfUp(float f) {
++-  if (isnan(f))
+++  if (std::isnan(f))
++     return 0;
++   if (f > std::numeric_limits<float>::max() - 0.5f)
++     return std::numeric_limits<float>::max();
++diff -ur pdfium.orig/core/fxcrt/cfx_datetime.cpp pdfium/core/fxcrt/cfx_datetime.cpp
++--- pdfium.orig/core/fxcrt/cfx_datetime.cpp	2021-11-10 05:48:16.000000000 +0900
+++++ pdfium/core/fxcrt/cfx_datetime.cpp	2022-02-03 13:15:19.222355164 +0900
 +@@ -11,7 +11,7 @@
 + #include "third_party/base/check.h"
 + 
@@ -17,18 +30,19 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.7 2021/08/22 02:41:50 ryoon Ex
 + #include <sys/time.h>
 + #include <time.h>
 + #endif
-+--- pdfium/core/fxge/linux/fx_linux_impl.cpp.orig	2021-05-03 04:55:56.000000000 +0000
-++++ pdfium/core/fxge/linux/fx_linux_impl.cpp
++diff -ur pdfium.orig/core/fxge/linux/fx_linux_impl.cpp pdfium/core/fxge/linux/fx_linux_impl.cpp
++--- pdfium.orig/core/fxge/linux/fx_linux_impl.cpp	2021-11-10 05:48:16.000000000 +0900
+++++ pdfium/core/fxge/linux/fx_linux_impl.cpp	2022-02-03 13:16:30.636408478 +0900
 +@@ -17,7 +17,7 @@
 + #include "third_party/base/check.h"
-+ #include "third_party/base/stl_util.h"
++ #include "third_party/base/cxx17_backports.h"
 + 
 +-#if !defined(OS_LINUX) && !defined(OS_CHROMEOS) && !defined(OS_ASMJS)
 ++#if !defined(OS_LINUX) && !defined(OS_CHROMEOS) && !defined(OS_ASMJS) && !defined(OS_NETBSD)
 + #error "Included on the wrong platform"
 + #endif
 + 
-+@@ -170,6 +170,7 @@ class CLinuxPlatform : public CFX_GEModu
++@@ -169,6 +169,7 @@
 +       pInfo->AddPath("/usr/share/X11/fonts/Type1");
 +       pInfo->AddPath("/usr/share/X11/fonts/TTF");
 +       pInfo->AddPath("/usr/local/share/fonts");

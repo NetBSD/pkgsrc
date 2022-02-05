@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.java,v 1.13 2021/08/22 02:41:50 ryoon Exp $
+@comment $NetBSD: PLIST.java,v 1.14 2022/02/05 04:53:43 ryoon Exp $
 ${PKGNAME}/lib/libreoffice/program/JREProperties.class
 ${PKGNAME}/lib/libreoffice/program/classes/ScriptFramework.jar
 ${PKGNAME}/lib/libreoffice/program/classes/ScriptProviderForBeanShell.jar
@@ -55,6 +55,12 @@ ${PKGNAME}/lib/libreoffice/program/librptuilo.so
 ${PKGNAME}/lib/libreoffice/program/librptxmllo.so
 ${PKGNAME}/lib/libreoffice/program/services/scriptproviderforbeanshell.rdb
 ${PKGNAME}/lib/libreoffice/program/services/scriptproviderforjavascript.rdb
+${PKGNAME}/lib/libreoffice/share/Scripts/beanshell/Calc/CopyRange.bsh
+${PKGNAME}/lib/libreoffice/share/Scripts/beanshell/Calc/FixView.bsh
+${PKGNAME}/lib/libreoffice/share/Scripts/beanshell/Calc/InsertSheet.bsh
+${PKGNAME}/lib/libreoffice/share/Scripts/beanshell/Calc/ProtectSheet.bsh
+${PKGNAME}/lib/libreoffice/share/Scripts/beanshell/Calc/SelectCell.bsh
+${PKGNAME}/lib/libreoffice/share/Scripts/beanshell/Calc/parcel-descriptor.xml
 ${PKGNAME}/lib/libreoffice/share/Scripts/beanshell/Capitalise/capitalise.bsh
 ${PKGNAME}/lib/libreoffice/share/Scripts/beanshell/Capitalise/parcel-descriptor.xml
 ${PKGNAME}/lib/libreoffice/share/Scripts/beanshell/HelloWorld/helloworld.bsh
@@ -67,6 +73,12 @@ ${PKGNAME}/lib/libreoffice/share/Scripts/beanshell/MemoryUsage/memusage.bsh
 ${PKGNAME}/lib/libreoffice/share/Scripts/beanshell/MemoryUsage/parcel-descriptor.xml
 ${PKGNAME}/lib/libreoffice/share/Scripts/beanshell/WordCount/parcel-descriptor.xml
 ${PKGNAME}/lib/libreoffice/share/Scripts/beanshell/WordCount/wordcount.bsh
+${PKGNAME}/lib/libreoffice/share/Scripts/beanshell/Writer/ChangeFont.bsh
+${PKGNAME}/lib/libreoffice/share/Scripts/beanshell/Writer/ChangeParaAdjust.bsh
+${PKGNAME}/lib/libreoffice/share/Scripts/beanshell/Writer/InsertTable.bsh
+${PKGNAME}/lib/libreoffice/share/Scripts/beanshell/Writer/InsertText.bsh
+${PKGNAME}/lib/libreoffice/share/Scripts/beanshell/Writer/SetText.bsh
+${PKGNAME}/lib/libreoffice/share/Scripts/beanshell/Writer/parcel-descriptor.xml
 ${PKGNAME}/lib/libreoffice/share/Scripts/java/HelloWorld/HelloWorld.jar
 ${PKGNAME}/lib/libreoffice/share/Scripts/java/HelloWorld/HelloWorld.java
 ${PKGNAME}/lib/libreoffice/share/Scripts/java/HelloWorld/parcel-descriptor.xml
