@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.614 2022/02/06 01:07:17 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.615 2022/02/06 05:36:27 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -820,3 +820,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-pybind11 to 2.9.1 [adam 2022-02-05]
 	Added www/arcticfox version 39.0 [nia 2022-02-05]
 	Updated sysutils/xfce4-cpugraph-plugin to 1.2.6 [gutteridge 2022-02-06]
+	Added lang/ghc92 version 9.2.1 [pho 2022-02-06]
