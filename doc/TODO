@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21495 2022/02/06 13:58:40 wiz Exp $
+$NetBSD: TODO,v 1.21496 2022/02/06 15:23:33 nia Exp $
 
 Suggested new packages
 ======================
@@ -1338,7 +1338,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o openslp-2.0.0
 	o opensmtpd-6.8.0p2
 	o openssl-3.0.0
-	o openvas-libraries-8.0.8
 	o opera-26
 	o or1k-none-elf-binutils-2.36.1
 	o or1k-none-elf-gcc-9.3.0
