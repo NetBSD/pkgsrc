@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.619 2022/02/06 15:23:44 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.620 2022/02/06 16:50:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -830,3 +830,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed security/openvas-plugins [nia 2022-02-06]
 	Removed security/openvas-server [nia 2022-02-06]
 	Updated databases/gramps5 to 5.1.5 [gdt 2022-02-06]
+	Updated lang/rust-analyzer to 0.0.2022.01.31 [adam 2022-02-06]
+	Updated multimedia/mkvtoolnix to 65.0.0 [adam 2022-02-06]
