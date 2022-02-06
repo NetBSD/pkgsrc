@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/06/25 21:00:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/02/06 19:00:51 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -145,6 +145,15 @@ ${PYSITELIB}/oauthlib/oauth2/rfc6749/tokens.pyo
 ${PYSITELIB}/oauthlib/oauth2/rfc6749/utils.py
 ${PYSITELIB}/oauthlib/oauth2/rfc6749/utils.pyc
 ${PYSITELIB}/oauthlib/oauth2/rfc6749/utils.pyo
+${PYSITELIB}/oauthlib/oauth2/rfc8628/__init__.py
+${PYSITELIB}/oauthlib/oauth2/rfc8628/__init__.pyc
+${PYSITELIB}/oauthlib/oauth2/rfc8628/__init__.pyo
+${PYSITELIB}/oauthlib/oauth2/rfc8628/clients/__init__.py
+${PYSITELIB}/oauthlib/oauth2/rfc8628/clients/__init__.pyc
+${PYSITELIB}/oauthlib/oauth2/rfc8628/clients/__init__.pyo
+${PYSITELIB}/oauthlib/oauth2/rfc8628/clients/device.py
+${PYSITELIB}/oauthlib/oauth2/rfc8628/clients/device.pyc
+${PYSITELIB}/oauthlib/oauth2/rfc8628/clients/device.pyo
 ${PYSITELIB}/oauthlib/openid/__init__.py
 ${PYSITELIB}/oauthlib/openid/__init__.pyc
 ${PYSITELIB}/oauthlib/openid/__init__.pyo
@@ -184,6 +193,9 @@ ${PYSITELIB}/oauthlib/openid/connect/core/grant_types/hybrid.pyo
 ${PYSITELIB}/oauthlib/openid/connect/core/grant_types/implicit.py
 ${PYSITELIB}/oauthlib/openid/connect/core/grant_types/implicit.pyc
 ${PYSITELIB}/oauthlib/openid/connect/core/grant_types/implicit.pyo
+${PYSITELIB}/oauthlib/openid/connect/core/grant_types/refresh_token.py
+${PYSITELIB}/oauthlib/openid/connect/core/grant_types/refresh_token.pyc
+${PYSITELIB}/oauthlib/openid/connect/core/grant_types/refresh_token.pyo
 ${PYSITELIB}/oauthlib/openid/connect/core/request_validator.py
 ${PYSITELIB}/oauthlib/openid/connect/core/request_validator.pyc
 ${PYSITELIB}/oauthlib/openid/connect/core/request_validator.pyo
