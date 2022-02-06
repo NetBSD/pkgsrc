@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2020/06/20 13:29:37 reinoud Exp $
+# $NetBSD: Makefile,v 1.47 2022/02/06 14:45:05 reinoud Exp $
 # 
 
-DISTNAME=		UDFclient.0.8.11
-PKGNAME=		udfclient-0.8.11
+DISTNAME=		UDFclient.0.8.12
+PKGNAME=		udfclient-0.8.12
 CATEGORIES=		misc
 MASTER_SITES=		http://www.13thmonkey.org/udfclient/releases/
 EXTRACT_SUFX=		.tgz
