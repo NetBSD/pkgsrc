@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.35 2022/01/01 15:29:14 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.36 2022/02/06 17:11:37 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -47,8 +47,8 @@ import re
 import subprocess
 import sys
 from pathlib import Path
-from typing import Any, Callable, Dict, List, NamedTuple, Optional, Set, \
-    Tuple, Union
+from typing import Any, Callable, Dict, List, NamedTuple, NoReturn, \
+    Optional, Set, Tuple, Union
 
 
 class Var(NamedTuple):
@@ -1203,7 +1203,7 @@ class Adjuster:
             self.g.bmake('distinfo')
 
 
-def usage():
+def usage() -> NoReturn:
     sys.exit(f'usage: {sys.argv[0]} [-v|--verbose] URL')
 
 
