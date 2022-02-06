@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:17:23 nia Exp $
-
-BLAKE2s (openvas-client-2.0.1.tar.gz) = 1ae8dd12ebd6c3b6c5239c504cd5b97cc9d832a2296abf9f28556ecd2fc4ae5a
-SHA512 (openvas-client-2.0.1.tar.gz) = b20235fb9b6d6355a01b02156f6b10b78c98e74e1ebcfac586167989c8175f347a8eaf6eab543a76556745ef4c6aaa88a6e63f984a081d55a7f496d6063fe892
-Size (openvas-client-2.0.1.tar.gz) = 629551 bytes
-SHA1 (patch-aa) = ffca8ce1116a4014e1a65f53536e0fc4faeeb675
-SHA1 (patch-nessus_nessus.c) = 9c2e10a8abe410db8c9b8a7a575dd6cfdbec5804
