@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.615 2022/02/06 05:36:27 pho Exp $
+$NetBSD: CHANGES-2022,v 1.616 2022/02/06 08:30:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -821,3 +821,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added www/arcticfox version 39.0 [nia 2022-02-05]
 	Updated sysutils/xfce4-cpugraph-plugin to 1.2.6 [gutteridge 2022-02-06]
 	Added lang/ghc92 version 9.2.1 [pho 2022-02-06]
+	Added textproc/py-jupyterlab-pygments version 0.1.2 [adam 2022-02-06]
+	Updated www/py-respx to 0.19.2 [adam 2022-02-06]
