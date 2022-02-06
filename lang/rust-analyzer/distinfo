@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2022/01/24 09:37:19 wiz Exp $
+$NetBSD: distinfo,v 1.7 2022/02/06 16:49:03 adam Exp $
 
 BLAKE2s (addr2line-0.17.0.crate) = f7fa3b016f0e80c4ea9967f8947de15edc9fa39d0c0cdea692dccd0c41c28039
 SHA512 (addr2line-0.17.0.crate) = ef3bbd7c6d1dfdd0b47e3be1fb4c8b15ed61a769bed7e80dce80461a1ee13ef21c75e62e9a66328504f862341f1e808abec5790ac79784e18655afcc16206b95
@@ -312,9 +312,9 @@ Size (regex-syntax-0.6.25.crate) = 293293 bytes
 BLAKE2s (rowan-0.15.2.crate) = 58261b8d8e4a5a239ed6b56c7c61dbe8cf6e033f693f4641f06a3f1a49d9986b
 SHA512 (rowan-0.15.2.crate) = 4025a5071a1791a39403067d4a333e3a76e4e779d92e6605f9f25a388501231a2770fe8e755a6f9b89b446fb8a7c037b6257c71be94aef54e04da2816100fb46
 Size (rowan-0.15.2.crate) = 39158 bytes
-BLAKE2s (rust-analyzer-2022-01-24.tar.gz) = af994d0e9bb7b8348aff154cd7180182131804b674927340572bb47f6173dbbd
-SHA512 (rust-analyzer-2022-01-24.tar.gz) = 30b9c3d324e60a401375e9b273ec352c6c3e724614adab6cedcfeaf499187e304845fe9b1e4e7a09bf03b3b6e048f6e297d7d56127ee446fd91e7615f58f9445
-Size (rust-analyzer-2022-01-24.tar.gz) = 2254412 bytes
+BLAKE2s (rust-analyzer-2022-01-31.tar.gz) = 0e31cdae658c589cf1db519833d1409f7ccb6618b53b6c52a1a74227a886bb8e
+SHA512 (rust-analyzer-2022-01-31.tar.gz) = ab77709fbf6d25780b040fcee649b1c8a2aef3fd931469ec4e766b7313cd06162bc366eca5cbb4caf09341880e4c106b9d9931f43c8cf92fe1af5e8eb36fa9a2
+Size (rust-analyzer-2022-01-31.tar.gz) = 2257192 bytes
 BLAKE2s (rustc-ap-rustc_lexer-725.0.0.crate) = fb009ee9ee73e83fed1432958ea45d46a6c409955db6c764cd4b20667099c87f
 SHA512 (rustc-ap-rustc_lexer-725.0.0.crate) = 4239c4762d7ca351698be015ab251193f65487bda73a9dfaae5788e5b8395656c12d7f9cb5ee16cbd8c03dd5b9828dfb7d507498f40dc83d6a85ed3d59cc657a
 Size (rustc-ap-rustc_lexer-725.0.0.crate) = 14086 bytes
