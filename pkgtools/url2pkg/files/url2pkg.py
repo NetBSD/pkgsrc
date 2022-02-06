@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.36 2022/02/06 17:11:37 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.37 2022/02/06 18:00:08 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -315,8 +315,8 @@ class Lines:
         return False
 
 
-class Generator:
-    """ Generates the initial package Makefile. """
+class PackageVars:
+    """ Determines the package variables from a distfile URL. """
     url: str
     master_sites: str
     distfile: str
@@ -349,6 +349,14 @@ class Generator:
         self.maintainer = ''
         self.distname = ''
         self.pkgname = ''
+
+        self.adjust_site_SourceForge()
+        self.adjust_site_GitHub_archive()
+        self.adjust_site_GitHub_release()
+        self.foreach_site_from_sites_mk(self.adjust_site_from_sites_mk)
+        self.adjust_site_PyPI()
+        self.adjust_site_other()
+        self.adjust_everything_else()
 
     def foreach_site_from_sites_mk(self, action: Callable[[str, str], None]):
         if self.master_sites != '':
@@ -432,7 +440,6 @@ class Generator:
         self.master_sites = f'${{MASTER_SITE_PYPI:={project[0]}/{project}/}}'
         self.homepage = f'https://pypi.org/project/{project}/'
         self.distfile = filename
-
 
     def adjust_site_GitHub_archive(self):
         pattern = r'''(?x)
@@ -533,26 +540,35 @@ class Generator:
             os.getenv('PKGMAINTAINER') or os.getenv('REPLYTO') \
             or 'INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org'
 
-    def generate_lines(self) -> Lines:
+
+class Generator:
+    """ Generates the initial package Makefile. """
+    vars: PackageVars
+
+    def __init__(self, url: str) -> None:
+        self.vars = PackageVars(url)
+
+    def generate_Makefile(self) -> Lines:
+        vars = self.vars
         lines = Lines()
         lines.add('# $''NetBSD$')
         lines.add('')
 
         lines.add_vars(
-            Var('GITHUB_PROJECT', '=', self.github_project),
-            Var('GITHUB_TAG', '=', self.github_tag),
-            Var('DISTNAME', '=', self.distname),
-            Var('PKGNAME', '=', self.pkgname),
-            Var('CATEGORIES', '=', self.categories),
-            Var('MASTER_SITES', '=', self.master_sites),
-            Var('GITHUB_RELEASE', '=', self.github_release),
-            Var('EXTRACT_SUFX', '=', self.extract_sufx),
-            Var('DIST_SUBDIR', '=', self.dist_subdir),
+            Var('GITHUB_PROJECT', '=', vars.github_project),
+            Var('GITHUB_TAG', '=', vars.github_tag),
+            Var('DISTNAME', '=', vars.distname),
+            Var('PKGNAME', '=', vars.pkgname),
+            Var('CATEGORIES', '=', vars.categories),
+            Var('MASTER_SITES', '=', vars.master_sites),
+            Var('GITHUB_RELEASE', '=', vars.github_release),
+            Var('EXTRACT_SUFX', '=', vars.extract_sufx),
+            Var('DIST_SUBDIR', '=', vars.dist_subdir),
         )
 
         lines.add_vars(
-            Var('MAINTAINER', '=', self.maintainer),
-            Var('HOMEPAGE', '=', self.homepage),
+            Var('MAINTAINER', '=', vars.maintainer),
+            Var('HOMEPAGE', '=', vars.homepage),
             Var('COMMENT', '=', 'TODO: Short description of the package'),
             Var('#LICENSE', '=', '# TODO: (see mk/license.mk)'),
         )
@@ -561,16 +577,6 @@ class Generator:
         lines.add('.include "../../mk/bsd.pkg.mk"')
 
         return lines
-
-    def generate_Makefile(self) -> Lines:
-        self.adjust_site_SourceForge()
-        self.adjust_site_GitHub_archive()
-        self.adjust_site_GitHub_release()
-        self.foreach_site_from_sites_mk(self.adjust_site_from_sites_mk)
-        self.adjust_site_PyPI()
-        self.adjust_site_other()
-        self.adjust_everything_else()
-        return self.generate_lines()
 
     def generate_package(self, g: Globals) -> Lines:
         pkgdir = g.pkgdir
@@ -1082,7 +1088,7 @@ class Adjuster:
         if lines.get('GITHUB_PROJECT') == '':
             return
 
-        # don't risk to overwrite any changes made by the package developer.
+        # don't risk overwriting any changes made by the package developer.
         if edited_lines.lines != initial_lines.lines:
             lines.lines.insert(-2, '# TODO: Migrate MASTER_SITES '
                                    'to MASTER_SITE_PYPI')
