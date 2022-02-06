@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/01/10 07:47:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/02/06 15:23:34 gdt Exp $
 bin/gramps
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -3400,7 +3400,6 @@ share/gramps/images/hicolor/16x16/actions/gramps-zoom-best-fit.png
 share/gramps/images/hicolor/16x16/actions/gramps-zoom-fit-width.png
 share/gramps/images/hicolor/16x16/actions/gramps-zoom-in.png
 share/gramps/images/hicolor/16x16/actions/gramps-zoom-out.png
-share/gramps/images/hicolor/16x16/actions/gramps.png
 share/gramps/images/hicolor/22x22/actions/geo-fixed-zoom.png
 share/gramps/images/hicolor/22x22/actions/geo-free-zoom.png
 share/gramps/images/hicolor/22x22/actions/geo-place-add.png
@@ -3462,7 +3461,6 @@ share/gramps/images/hicolor/22x22/actions/gramps-zoom-best-fit.png
 share/gramps/images/hicolor/22x22/actions/gramps-zoom-fit-width.png
 share/gramps/images/hicolor/22x22/actions/gramps-zoom-in.png
 share/gramps/images/hicolor/22x22/actions/gramps-zoom-out.png
-share/gramps/images/hicolor/22x22/actions/gramps.png
 share/gramps/images/hicolor/24x24/actions/geo-fixed-zoom.png
 share/gramps/images/hicolor/24x24/actions/geo-free-zoom.png
 share/gramps/images/hicolor/24x24/actions/geo-place-add.png
@@ -3524,7 +3522,6 @@ share/gramps/images/hicolor/24x24/actions/gramps-zoom-best-fit.png
 share/gramps/images/hicolor/24x24/actions/gramps-zoom-fit-width.png
 share/gramps/images/hicolor/24x24/actions/gramps-zoom-in.png
 share/gramps/images/hicolor/24x24/actions/gramps-zoom-out.png
-share/gramps/images/hicolor/24x24/actions/gramps.png
 share/gramps/images/hicolor/48x48/actions/geo-fixed-zoom.png
 share/gramps/images/hicolor/48x48/actions/geo-free-zoom.png
 share/gramps/images/hicolor/48x48/actions/geo-place-add.png
@@ -3586,7 +3583,6 @@ share/gramps/images/hicolor/48x48/actions/gramps-zoom-best-fit.png
 share/gramps/images/hicolor/48x48/actions/gramps-zoom-fit-width.png
 share/gramps/images/hicolor/48x48/actions/gramps-zoom-in.png
 share/gramps/images/hicolor/48x48/actions/gramps-zoom-out.png
-share/gramps/images/hicolor/48x48/actions/gramps.png
 share/gramps/images/hicolor/scalable/actions/add-parent-existing-family.svg
 share/gramps/images/hicolor/scalable/actions/geo-fixed-zoom.svg
 share/gramps/images/hicolor/scalable/actions/geo-free-zoom.svg
@@ -3649,7 +3645,6 @@ share/gramps/images/hicolor/scalable/actions/gramps-zoom-best-fit.svg
 share/gramps/images/hicolor/scalable/actions/gramps-zoom-fit-width.svg
 share/gramps/images/hicolor/scalable/actions/gramps-zoom-in.svg
 share/gramps/images/hicolor/scalable/actions/gramps-zoom-out.svg
-share/gramps/images/hicolor/scalable/actions/gramps.svg
 share/gramps/images/image-missing.png
 share/gramps/images/logo.png
 share/gramps/images/next.png
@@ -3681,17 +3676,23 @@ share/gramps/images/webstuff/somerights20.gif
 share/gramps/lds.xml
 share/gramps/papersize.xml
 share/gramps/tips.xml
-share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-gedcom.png
-share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-geneweb.png
-share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-gramps-package.png
-share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-gramps-xml.png
-share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-gramps.png
-share/icons/gnome/scalable/mimetypes/gnome-mime-application-x-gedcom.svg
-share/icons/gnome/scalable/mimetypes/gnome-mime-application-x-geneweb.svg
-share/icons/gnome/scalable/mimetypes/gnome-mime-application-x-gramps-package.svg
-share/icons/gnome/scalable/mimetypes/gnome-mime-application-x-gramps-xml.svg
-share/icons/gnome/scalable/mimetypes/gnome-mime-application-x-gramps.svg
-share/icons/gramps.png
+share/icons/hicolor/128x128/apps/gramps.png
+share/icons/hicolor/16x16/apps/gramps.png
+share/icons/hicolor/22x22/apps/gramps.png
+share/icons/hicolor/24x24/apps/gramps.png
+share/icons/hicolor/256x256/apps/gramps.png
+share/icons/hicolor/48x48/apps/gramps.png
+share/icons/hicolor/48x48/mimetypes/application-x-gedcom.png
+share/icons/hicolor/48x48/mimetypes/application-x-geneweb.png
+share/icons/hicolor/48x48/mimetypes/application-x-gramps-package.png
+share/icons/hicolor/48x48/mimetypes/application-x-gramps-xml.png
+share/icons/hicolor/48x48/mimetypes/application-x-gramps.png
+share/icons/hicolor/scalable/apps/gramps.svg
+share/icons/hicolor/scalable/mimetypes/application-x-gedcom.svg
+share/icons/hicolor/scalable/mimetypes/application-x-geneweb.svg
+share/icons/hicolor/scalable/mimetypes/application-x-gramps-package.svg
+share/icons/hicolor/scalable/mimetypes/application-x-gramps-xml.svg
+share/icons/hicolor/scalable/mimetypes/application-x-gramps.svg
 share/locale/ar/LC_MESSAGES/gramps.mo
 share/locale/bg/LC_MESSAGES/gramps.mo
 share/locale/ca/LC_MESSAGES/gramps.mo
