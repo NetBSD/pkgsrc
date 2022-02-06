@@ -1,0 +1,82 @@
+$NetBSD: patch-configure.ac,v 1.1 2022/02/06 05:36:16 pho Exp $
+
+Disable DTrace support on solaris2.
+XXX: But why?
+
+--- configure.ac.orig	2022-01-25 09:29:55.257778230 +0000
++++ configure.ac
+@@ -178,13 +178,21 @@ if test "$WithGhc" != ""; then
+   dnl See Note [Linking ghc-bin against threaded stage0 RTS] in
+   dnl hadrian/src/Settings/Packages.hs for details.
+   dnl SMP support which implies a registerised stage0 is also required (see issue 18266)
+-  if echo ${RTS_WAYS_STAGE0} | grep '.*thr.*' 2>&1 >/dev/null && \
++  if echo ${RTS_WAYS_STAGE0} | tr ' ' '\n' | grep '^thr$' 2>&1 >/dev/null && \
+      test "$SUPPORT_SMP_STAGE0" = "YES"
+   then
+       AC_SUBST(GhcThreadedRts, YES)
+   else
+       AC_SUBST(GhcThreadedRts, NO)
+   fi
++
++  dnl Same for an event logging RTS.
++  if echo ${RTS_WAYS_STAGE0} | tr ' ' '\n' | grep '^l$' 2>&1 >/dev/null
++  then
++      AC_SUBST(GhcEventLoggingRts, YES)
++  else
++      AC_SUBST(GhcEventLoggingRts, NO)
++  fi
+ fi
+ 
+ dnl ** Must have GHC to build GHC
+@@ -727,23 +735,23 @@ dnl ------------------------------------
+ dnl ** Copy the files from the "fs" utility into the right folders.
+ dnl --------------------------------------------------------------
+ AC_MSG_NOTICE([Creating links for in-tree file handling routines])
+-ln -f utils/fs/fs.* utils/lndir/
+-ln -f utils/fs/fs.* utils/unlit/
+-ln -f utils/fs/fs.* rts/
+-ln -f utils/fs/fs.h libraries/base/include/
+-ln -f utils/fs/fs.c libraries/base/cbits/
++cp -p utils/fs/fs.* utils/lndir/
++cp -p utils/fs/fs.* utils/unlit/
++cp -p utils/fs/fs.* rts/
++cp -p utils/fs/fs.h libraries/base/include/
++cp -p utils/fs/fs.c libraries/base/cbits/
+ AC_MSG_NOTICE([Routines in place. Packages can now be build normally.])
+ 
+ dnl ** Copy files for ghci wrapper C utilities.
+ dnl --------------------------------------------------------------
+ dnl See Note [Hadrian's ghci-wrapper package] in hadrian/src/Packages.hs
+ AC_MSG_NOTICE([Creating links for ghci wrapper])
+-ln -f driver/utils/getLocation.c driver/ghci/
+-ln -f driver/utils/getLocation.h driver/ghci/
+-ln -f driver/utils/isMinTTY.c driver/ghci/
+-ln -f driver/utils/isMinTTY.h driver/ghci/
+-ln -f driver/utils/cwrapper.c driver/ghci/
+-ln -f driver/utils/cwrapper.h driver/ghci/
++cp -p driver/utils/getLocation.c driver/ghci/
++cp -p driver/utils/getLocation.h driver/ghci/
++cp -p driver/utils/isMinTTY.c driver/ghci/
++cp -p driver/utils/isMinTTY.h driver/ghci/
++cp -p driver/utils/cwrapper.c driver/ghci/
++cp -p driver/utils/cwrapper.h driver/ghci/
+ AC_MSG_NOTICE([done.])
+ 
+ dnl --------------------------------------------------------------
+@@ -870,7 +878,7 @@ if test "x$EnableDtrace" = "xyes"; then
+   if test -n "$DtraceCmd"; then
+     if test "x$TargetOS_CPP-$TargetVendor_CPP" = "xdarwin-apple" \
+       -o "x$TargetOS_CPP-$TargetVendor_CPP" = "xfreebsd-portbld" \
+-      -o "x$TargetOS_CPP-$TargetVendor_CPP" = "xsolaris2-unknown"; then
++      ; then
+       HaveDtrace=YES
+     fi
+   fi
+@@ -1438,6 +1446,7 @@ echo "\
+    Bootstrapping using   : $WithGhc
+       which is version   : $GhcVersion
+       with threaded RTS? : $GhcThreadedRts
++      with eventlog RTS? : $GhcEventLoggingRts
+ "
+ 
+ if test "x$CcLlvmBackend" = "xYES"; then
