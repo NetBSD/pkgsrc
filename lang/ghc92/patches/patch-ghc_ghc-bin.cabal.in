@@ -1,0 +1,30 @@
+$NetBSD: patch-ghc_ghc-bin.cabal.in,v 1.1 2022/02/06 05:36:16 pho Exp $
+
+The stage-0 compiler isn't guaranteed to have an event-logging RTS. Not
+upstreamed yet.
+
+--- ghc/ghc-bin.cabal.in.orig	2022-01-21 03:29:30.605919955 +0000
++++ ghc/ghc-bin.cabal.in
+@@ -29,6 +29,11 @@ Flag threaded
+     Default: True
+     Manual: True
+ 
++Flag eventlog
++    Description: Link the ghc executable against the event-logging RTS
++    Default: True
++    Manual: True
++
+ Executable ghc
+     Default-Language: Haskell2010
+ 
+@@ -91,7 +96,9 @@ Executable ghc
+     if flag(threaded)
+       ghc-options: -threaded
+ 
+-    ghc-options: -eventlog
++    -- Same for GhcEventLoggingRts
++    if flag(eventlog)
++      ghc-options: -eventlog
+ 
+     Other-Extensions:
+         CPP
