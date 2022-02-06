@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2022/01/18 02:22:49 pho Exp $
+# $NetBSD: Makefile,v 1.18 2022/02/06 05:31:57 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
 DISTNAME=	ghc-9.0.2-src
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/-src$//}
 CATEGORIES=	lang
 MASTER_SITES=	https://downloads.haskell.org/~ghc/${PKGVERSION_NOREV}/
@@ -25,6 +26,10 @@ BROKEN_EXCEPT_ON_PLATFORM+=	FreeBSD-*-x86_64
 BROKEN_EXCEPT_ON_PLATFORM+=	NetBSD-*-aarch64
 BROKEN_EXCEPT_ON_PLATFORM+=	NetBSD-*-x86_64
 BROKEN_EXCEPT_ON_PLATFORM+=	SunOS-*-x86_64
+
+# We are going to do a PIE build on our responsibility. Do not put -pie in
+# wrappers, as that would prevent us from building stage-1 compiler.
+PKGSRC_OVERRIDE_MKPIE=	yes
 
 .include "options.mk"
 
@@ -51,13 +56,12 @@ USE_LIBTOOL=			yes
 # -----------------------------------------------------------------------------
 # Configuration
 #
-CONFIGURE_ARGS.common= \
+CONFIGURE_ARGS.common+= \
 	--with-curses-libraries=${BUILDLINK_PREFIX.curses}/${BUILDLINK_LIBDIRS.curses:Q} \
 	--with-gmp-includes=${BUILDLINK_PREFIX.gmp}/${BUILDLINK_INCDIRS.gmp:Q} \
 	--with-gmp-libraries=${BUILDLINK_PREFIX.gmp}/${BUILDLINK_LIBDIRS.gmp:Q} \
 	--with-iconv-includes=${BUILDLINK_PREFIX.iconv}/${BUILDLINK_INCDIRS.iconv:Q} \
 	--with-iconv-libraries=${BUILDLINK_PREFIX.iconv}/${BUILDLINK_LIBDIRS.iconv:Q} \
-	--with-system-libffi \
 	--with-ffi-includes=${BUILDLINK_PREFIX.libffi}/${BUILDLINK_INCDIRS.libffi:Q} \
 	--with-ffi-libraries=${BUILDLINK_PREFIX.libffi}/${BUILDLINK_LIBDIRS.libffi:Q}
 
@@ -73,25 +77,23 @@ CONFIGURE_ARGS.common+=	--enable-libffi-adjustors
 # See rts/adjustor/NativeAmd64.c and rts/adjustor/LibffiAdjustor.c
 .endif
 
-CONFIGURE_ARGS+=	${CONFIGURE_ARGS.common}
-
 # We must pass non-wrapper tools to ./configure because they will be
 # embedded in the compiler (actually ${WRKSRC}/settings).
-CONFIGURE_ENV+= \
-	ac_cv_prog_fp_prog_ar=${AR:Q} \
-	ac_cv_prog_LIBTOOL=libtool \
-	CC=${CC:Q} \
-	LD=${LD:Q}
+CONFIGURE_ENV+=		ac_cv_prog_fp_prog_ar=${AR:Q}
+CONFIGURE_ENV+=		ac_cv_prog_LIBTOOL=libtool
+CONFIGURE_ARGS.common+=	LD=${LD:Q}
 
-# LDFLAGS is currently not honored by "./configure". Since LDFLAGS
-# contains rpath flags it's very important to force GHC to honor
-# it. Otherwise neither GHC itself nor executables it produces will
-# have any rpaths so users will have to put "${PREFIX}/lib" into their
+CONFIGURE_ARGS+=	${CONFIGURE_ARGS.common}
+CONFIGURE_ARGS+=	--with-system-libffi
+
+# CFLAGS and LDFLAGS are currently not honored by "./configure". Since
+# LDFLAGS contains rpath flags it's very important to force GHC to honor
+# it. Otherwise neither GHC itself nor executables it produces will have
+# any rpaths so users will have to put "${PREFIX}/lib" into their
 # "/etc/ld-elf.so.conf". See
 # http://hackage.haskell.org/trac/ghc/ticket/2933
 .for stage in 0 1 2
-CONFIGURE_ENV+= \
-	CONF_GCC_LINKER_OPTS_STAGE${stage}=${LDFLAGS:M*:Q}
+CONFIGURE_ENV+=	CONF_GCC_LINKER_OPTS_STAGE${stage}=${LDFLAGS:M*:Q}
 # Note that CONF_LD_LINKER_OPTS_STAGE{0,1,2} are only used for
 # creating static GHCi libraries (HS*.o). Setting them to ${LDFLAGS}
 # does more harm than good because our ${LDFLAGS} contains -Wl,*
@@ -101,25 +103,37 @@ CONFIGURE_ENV+= \
 # the buildlink.
 .endfor
 
+# The use of internal variable in mk/bsd.prefs.mk is not very satisfying,
+# but the current infrastructure does not export a public variable
+# indicating whether a PIE build is requested or not. Note that we can't
+# build stage-1 compiler as PIE, because our bootkit libraries aren't
+# necessarily built as PIC.
+.for stage in 0 1 2
+.  if ${stage} == 0
+CONFIGURE_ENV+=	CONF_CC_OPTS_STAGE${stage}=${CFLAGS:M*:Q}
+.  else
+CONFIGURE_ENV+=	CONF_HC_OPTS_STAGE${stage}=-fPIC\ -pie
+CONFIGURE_ENV+=	CONF_CC_OPTS_STAGE${stage}=${CFLAGS:M*:Q}\ -fPIC
+.  endif
+.endfor
+
 
 # -----------------------------------------------------------------------------
 # Security
 #
-# The runtime system of GHC (rts) has a functionality called "RTS
-# linker" whose job is to load and execute *static* objects (.a and .o
-# files) at run time. It cannot survive PaX MPROTECT because
-# preloadObjectFile() in rts/linker.c tries to mmap pages with w+x. It
-# doesn't play nice with ASLR either because mmapForLinker() in
-# rts/linker.c wants to mmap pages in the lower 32-bit area on 64-bit
-# platforms.
+# The runtime system of GHC (rts) has a functionality called "RTS linker"
+# whose job is to load and execute *static* objects (.a and .o files) at
+# run time. It cannot survive PaX MPROTECT because preloadObjectFile() in
+# rts/linker.c tries to mmap pages with w+x. It doesn't play nice with ASLR
+# either because mmapForLinker() in rts/linker.c wants to always mmap pages
+# in the lower 32-bit area on 64-bit platforms.
 #
-# Luckily for us, the RTS linker is only used when the GHC executable
-# (or any user programs which uses GHC API as an interpreter, not a
-# compiler) is statically linked, which is no longer the case except
-# for ghc-iserv and ghc-iesrv-prof. They are launched when ghci is
-# started with -fexternal-interpreter without -dynamic, and their
-# purpose is to run non-PIC code from a dynamically linked ghci using
-# the evil RTS linker.
+# Luckily for us, the RTS linker is only used when the GHC executable (or
+# any user programs which uses GHC API as an interpreter, not a compiler)
+# is statically linked, which is no longer the case except for ghc-iserv
+# and ghc-iesrv-prof. They are launched when ghci is started with
+# -fexternal-interpreter without -dynamic, and their purpose is to run
+# non-PIC code from a dynamically linked ghci using the evil RTS linker.
 .for f in ghc-iserv ghc-iserv-prof
 NOT_PAX_MPROTECT_SAFE+=	lib/${PKGNAME_NOREV}/bin/${f}
 NOT_PAX_ASLR_SAFE+=	lib/${PKGNAME_NOREV}/bin/${f}
@@ -168,18 +182,6 @@ post-configure:
 	${RUN} ${ECHO} "SplitSections  = YES" >> ${WRKSRC}/mk/build.mk
 .endif
 
-# The use of internal variable in mk/bsd.prefs.mk is not very satisfying, but
-# the current infrastructure does not export a public variable indicating
-# whether a PIE build is requested or not. Note that we can't build stage-1
-# compiler as PIE, because our bootkit libraries aren't built as PIC.
-.if ${_PKGSRC_MKPIE} == "yes"
-	${RUN} ${ECHO} "SRC_HC_OPTS_STAGE1 += -fPIC -pie" >> ${WRKSRC}/mk/build.mk
-	${RUN} ${ECHO} "SRC_HC_OPTS_STAGE2 += -fPIC -pie" >> ${WRKSRC}/mk/build.mk
-.endif
-
-# We are going to do a PIE build on our responsibility. Do not put -pie in
-# wrappers, as that would prevent us from building stage-1 compiler.
-PKGSRC_OVERRIDE_MKPIE=	yes
 
 # -----------------------------------------------------------------------------
 # Installation/removal hooks
