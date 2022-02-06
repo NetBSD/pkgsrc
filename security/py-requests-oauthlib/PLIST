@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/11/07 13:34:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/02/06 19:04:17 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -14,6 +14,9 @@ ${PYSITELIB}/requests_oauthlib/compliance_fixes/__init__.pyo
 ${PYSITELIB}/requests_oauthlib/compliance_fixes/douban.py
 ${PYSITELIB}/requests_oauthlib/compliance_fixes/douban.pyc
 ${PYSITELIB}/requests_oauthlib/compliance_fixes/douban.pyo
+${PYSITELIB}/requests_oauthlib/compliance_fixes/ebay.py
+${PYSITELIB}/requests_oauthlib/compliance_fixes/ebay.pyc
+${PYSITELIB}/requests_oauthlib/compliance_fixes/ebay.pyo
 ${PYSITELIB}/requests_oauthlib/compliance_fixes/facebook.py
 ${PYSITELIB}/requests_oauthlib/compliance_fixes/facebook.pyc
 ${PYSITELIB}/requests_oauthlib/compliance_fixes/facebook.pyo
@@ -23,9 +26,6 @@ ${PYSITELIB}/requests_oauthlib/compliance_fixes/fitbit.pyo
 ${PYSITELIB}/requests_oauthlib/compliance_fixes/instagram.py
 ${PYSITELIB}/requests_oauthlib/compliance_fixes/instagram.pyc
 ${PYSITELIB}/requests_oauthlib/compliance_fixes/instagram.pyo
-${PYSITELIB}/requests_oauthlib/compliance_fixes/linkedin.py
-${PYSITELIB}/requests_oauthlib/compliance_fixes/linkedin.pyc
-${PYSITELIB}/requests_oauthlib/compliance_fixes/linkedin.pyo
 ${PYSITELIB}/requests_oauthlib/compliance_fixes/mailchimp.py
 ${PYSITELIB}/requests_oauthlib/compliance_fixes/mailchimp.pyc
 ${PYSITELIB}/requests_oauthlib/compliance_fixes/mailchimp.pyo
