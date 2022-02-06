@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.613 2022/02/05 20:52:05 nia Exp $
+$NetBSD: CHANGES-2022,v 1.614 2022/02/06 01:07:17 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -819,3 +819,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated finance/py-alphalens to 0.4.0 [adam 2022-02-05]
 	Updated devel/py-pybind11 to 2.9.1 [adam 2022-02-05]
 	Added www/arcticfox version 39.0 [nia 2022-02-05]
+	Updated sysutils/xfce4-cpugraph-plugin to 1.2.6 [gutteridge 2022-02-06]
