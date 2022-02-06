@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.37 2022/02/06 18:00:08 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.38 2022/02/06 18:04:50 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1226,7 +1226,7 @@ def main(argv: List[str], g: Globals):
     except getopt.GetoptError:
         usage()
 
-    url = args[0] if args else usage()
+    url = args[0] if len(args) == 1 else usage()
     if not re.fullmatch(r'\w+://[!-~]+?/[!-~]+', url):
         sys.exit(f'url2pkg: invalid URL: {url}')
 
