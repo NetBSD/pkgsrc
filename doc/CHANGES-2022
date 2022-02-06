@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.617 2022/02/06 11:06:52 pin Exp $
+$NetBSD: CHANGES-2022,v 1.618 2022/02/06 15:23:33 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -824,3 +824,8 @@ Changes to the packages collection and infrastructure in 2022:
 	Added textproc/py-jupyterlab-pygments version 0.1.2 [adam 2022-02-06]
 	Updated www/py-respx to 0.19.2 [adam 2022-02-06]
 	Updated x11/wired-notify to 0.10.0 [pin 2022-02-06]
+	Removed security/openvas-client [nia 2022-02-06]
+	Removed security/openvas-libnasl [nia 2022-02-06]
+	Removed security/openvas-libraries [nia 2022-02-06]
+	Removed security/openvas-plugins [nia 2022-02-06]
+	Removed security/openvas-server [nia 2022-02-06]
