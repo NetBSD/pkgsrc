@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.109 2022/02/04 16:39:36 ryoon Exp $
+$NetBSD: distinfo,v 1.110 2022/02/06 17:13:17 adam Exp $
 
-BLAKE2s (harfbuzz-3.3.1.tar.xz) = 043cff7e8737d12fece0aedae1db85286f4cf9b8a4f96762acce6d63a0afb280
-SHA512 (harfbuzz-3.3.1.tar.xz) = 6911a2a9cba032d45837854bc4fd1313f7fb2dabae09539b673a46b58a0845b9a3b7b57c11d1209ff9847c1eaed2b48a33a2987c0eb8cfb2ba55fdded57155e1
-Size (harfbuzz-3.3.1.tar.xz) = 14922732 bytes
+BLAKE2s (harfbuzz-3.3.2.tar.xz) = bf3e1a59be74b3460e77bacaea6caf0b1972bba115cb86813ba7774aab055ef5
+SHA512 (harfbuzz-3.3.2.tar.xz) = 0c960fa60050d480bfb69ebc1ebffffd16030a4db7b41b8b595f491fc9d17359a4bae825f873888c3db4d48a10a10690b17f556d23acbc3ae3bae0a524ca1461
+Size (harfbuzz-3.3.2.tar.xz) = 14928456 bytes
