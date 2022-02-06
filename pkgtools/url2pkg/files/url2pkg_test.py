@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.39 2022/02/06 20:08:49 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.40 2022/02/06 21:07:44 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -587,14 +587,12 @@ def test_PackageVars_adjust_site_from_sites_mk__CPAN():
         mkcvsid,
         '',
         'DISTNAME=       Algorithm-CheckDigits-v1.3.6',
-        'PKGNAME=        ${DISTNAME:S,-v,-,}',
+        'PKGNAME=        p5-${DISTNAME:S,-v,-,}',
         'CATEGORIES=     pkgtools',
-        # TODO: Use MASTER_SITE_CPAN instead.
-        'MASTER_SITES=   https://cpan.metacpan.org/authors/id/M/MA/MAMAWE/',
+        'MASTER_SITES=   ${MASTER_SITE_PERL_CPAN:=Algorithm/}',
         '',
         'MAINTAINER=     INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
-        # TODO: Use https://metacpan.org/dist/Algorithm-CheckDigits instead.
-        'HOMEPAGE=       https://cpan.metacpan.org/authors/id/M/MA/MAMAWE/',
+        'HOMEPAGE=       https://metacpan.org/pod/Algorithm::CheckDigits',
         'COMMENT=        TODO: Short description of the package',
         '#LICENSE=       # TODO: (see mk/license.mk)',
         '',
