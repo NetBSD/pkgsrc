@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.39 2022/02/06 18:42:26 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.40 2022/02/06 20:08:49 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -539,6 +539,21 @@ class PackageVars:
         self.maintainer = \
             os.getenv('PKGMAINTAINER') or os.getenv('REPLYTO') \
             or 'INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org'
+
+    def package_dir(self) -> str:
+        """Generate the suggested directory name for the package."""
+
+        if self.github_project != '':
+            return self.github_project
+
+        m = re.fullmatch(r'(.*?)-v?[0-9].*', self.distname)
+        if not m:
+            return ''
+        if 'MASTER_SITE_PYPI' in self.master_sites:
+            return f'py-{m[1]}'
+        if 'MASTER_SITE_CPAN' in self.master_sites:
+            return f'p5-{m[1]}'
+        return m[1]
 
 
 class Generator:
@@ -1228,13 +1243,15 @@ def main(argv: List[str], g: Globals):
 
     if os.path.isfile('../mk/bsd.pkg.mk'):
         vars = PackageVars(url, Path('..'))
-        m = re.fullmatch(r'(.*?)-[0-9].*', vars.distname)
-        if not m:
-            sys.exit(f'url2pkg: cannot determine package directory from distname \'{vars.distname}\'')
-        if Path(m[1]).exists():
-            sys.exit(f'url2pkg: package directory \'{m[1]}\' already exists')
-        os.mkdir(m[1])
-        os.chdir(m[1])
+        dir = vars.package_dir()
+
+        if dir == '':
+            sys.exit(f'url2pkg: cannot determine package directory '
+                     f'from distname \'{vars.distname}\'')
+        if Path(dir).exists():
+            sys.exit(f'url2pkg: package directory \'{dir}\' already exists')
+        os.mkdir(dir)
+        os.chdir(dir)
 
     if not os.path.isfile('../../mk/bsd.pkg.mk'):
         sys.exit(f'{argv[0]}: must be run from a package or category directory '

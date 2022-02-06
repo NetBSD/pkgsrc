@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.38 2022/02/06 18:42:26 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.39 2022/02/06 20:08:49 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -569,6 +569,32 @@ def test_PackageVars_adjust_site_from_sites_mk__without_subdir():
         '',
         'MAINTAINER=     INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
         'HOMEPAGE=       # TODO',
+        'COMMENT=        TODO: Short description of the package',
+        '#LICENSE=       # TODO: (see mk/license.mk)',
+        '',
+        '# url2pkg-marker (please do not remove this line.)',
+        '.include "../../mk/bsd.pkg.mk"',
+    ]
+
+
+def test_PackageVars_adjust_site_from_sites_mk__CPAN():
+    url = 'https://cpan.metacpan.org/authors/id/M/MA/MAMAWE/Algorithm-CheckDigits-v1.3.6.tar.gz'
+    generator = Generator(url)
+
+    lines = generator.generate_Makefile()
+
+    assert detab(lines) == [
+        mkcvsid,
+        '',
+        'DISTNAME=       Algorithm-CheckDigits-v1.3.6',
+        'PKGNAME=        ${DISTNAME:S,-v,-,}',
+        'CATEGORIES=     pkgtools',
+        # TODO: Use MASTER_SITE_CPAN instead.
+        'MASTER_SITES=   https://cpan.metacpan.org/authors/id/M/MA/MAMAWE/',
+        '',
+        'MAINTAINER=     INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
+        # TODO: Use https://metacpan.org/dist/Algorithm-CheckDigits instead.
+        'HOMEPAGE=       https://cpan.metacpan.org/authors/id/M/MA/MAMAWE/',
         'COMMENT=        TODO: Short description of the package',
         '#LICENSE=       # TODO: (see mk/license.mk)',
         '',
