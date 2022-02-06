@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.35 2022/01/11 09:09:49 wiz Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.36 2022/02/06 21:21:08 rillig Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -26,22 +26,18 @@ install the utilities <command>url2pkg</command>,
 
 <step><para>Choose one of the top-level directories as the category in
 which you want to place your package. You can also create a directory of
-your own (maybe called <filename>local</filename>). In that category
-directory, create another directory for your package and change into
-it:</para>
+your own (maybe called <filename>local</filename>). Change into that
+category directory:</para>
 
-<screen>&uprompt; <userinput>mkdir <replaceable>category</replaceable>/<replaceable>package</replaceable></userinput>
-&uprompt; <userinput>cd <replaceable>category</replaceable>/<replaceable>package</replaceable></userinput></screen>
+<screen>&uprompt; <userinput>cd <replaceable>category</replaceable></userinput></screen>
 
 </step>
 
-<step><para>Run the program <command>url2pkg</command>, which will ask
-you for a URL. Enter the URL of the distribution file (in most cases a
-<filename>.tar.gz</filename> file) and watch how the basic ingredients
-of your package are created automatically. The distribution file is
-extracted automatically to fill in some details in the
-<filename>Makefile</filename> that would otherwise have to be done
-manually:</para>
+<step><para>Run the program <command>url2pkg</command>, passing as
+argument the URL of the distribution file (in most cases a
+<filename>.tar.gz</filename> file). This will download the distribution
+file and create the necessary files of the package, based on what's in
+the distribution file:</para>
 
 <screen>&uprompt; <userinput>url2pkg <replaceable>https://www.example.org/packages/package-1.0.tar.gz</replaceable></userinput></screen>
 
@@ -58,7 +54,7 @@ file just before the last line. If the
 created first. The <filename>buildlink3.mk</filename> file makes sure
 that the package's include files and libraries are provided.</para>
 
-<para>If you just need binaries from a package, add a
+<para>If you just need binaries from a dependent package, add a
 <varname>DEPENDS</varname> line to the Makefile, which specifies the
 version of the dependency and where it can be found in pkgsrc. This line
 should be placed in the third paragraph. If the dependency is only
@@ -68,13 +64,13 @@ instead of <varname>DEPENDS</varname>.
 The difference between <varname>TOOL_DEPENDS</varname> and
 <varname>BUILD_DEPENDS</varname> occurs when cross-compiling:
 <varname>TOOL_DEPENDS</varname> are <emphasis>native</emphasis>
-packages, i.e. packages for the architecture where the package
-is built;
+packages, i.e. packages for the platform where the package is built;
 <varname>BUILD_DEPENDS</varname> are <emphasis>target</emphasis>
-packages, i.e. packages for the architecture for which the package
-is built. There is also <varname>TEST_DEPENDS</varname>, which is used
-to specify a dependency used only for testing the resulting package
-built, using the upstream project's included test suite.
+packages, i.e. packages for the platform for which the package
+is built. There is also <varname>TEST_DEPENDS</varname>, which
+specifies a dependency used only for testing the resulting package
+built, using the upstream project's included test suite, on the native
+platform.
 Your package may then look like this:</para>
 
 <programlisting>
@@ -106,21 +102,22 @@ over there, you can hopefully continue here.</para></step>
 
 <step><para>Run <command>bmake clean</command> to clean the working
 directory from the extracted files. Besides these files, a lot of cache
-files and other system information has been saved in the working
-directory, which may become wrong after you edited the
+files and other system information have been saved in the working
+directory, which may have become outdated after you edited the
 <filename>Makefile</filename>.</para></step>
 
 <step><para>Now, run <command>bmake</command> to build the package. For
 the various things that can go wrong in this phase, consult <xref
 linkend="fixes"/>.</para>
 
-<para>If the extracted files from the package need to be fixed, run multiple rounds of these commands:</para>
+<para>If the extracted files from the package need to be fixed, run
+multiple rounds of these commands:</para>
 
-<screen>&uprompt; <userinput>make</userinput>
+<screen>&uprompt; <userinput>bmake</userinput>
 &uprompt; <userinput>pkgvi ${WRKSRC}/some/file/that/does/not/compile</userinput>
 &uprompt; <userinput>mkpatches</userinput>
-&uprompt; <userinput>make mps</userinput>
-&uprompt; <userinput>make clean</userinput></screen>
+&uprompt; <userinput>bmake mps</userinput>
+&uprompt; <userinput>bmake clean</userinput></screen>
 
 </step>
 
@@ -145,14 +142,12 @@ and <command>bmake install</command> again. Now the package is
 registered with the list of files from
 <filename>PLIST</filename>.</para></step>
 
-<step><para>Run <command>bmake package</command> to create a binary
-package from the set of installed files.</para></step>
-
 <step><para>Run <command>bmake clean update</command> to run everything
 from above again in a single step, making sure that the PLIST is correct
 and the whole package is created as intended.</para></step>
 
-<step><para>Run <command>pkglint</command> to see if there's anything left to do.</para></step>
+<step><para>Run <command>pkglint</command> to see if there's anything
+left to do.</para></step>
 
 <step><para>Commit the package to pkgsrc-wip or main pkgsrc; see <xref
 linkend="submit"/>.</para></step>
@@ -161,14 +156,6 @@ linkend="submit"/>.</para></step>
 
 <sect1 id="creating.common">
 <title>Common types of packages</title>
-
-<sect2 id="creating.perl-module">
-<title>Perl modules</title>
-
-<para>Simple Perl modules are handled automatically by
-<command>url2pkg</command>, including dependencies.</para>
-
-</sect2>
 
 <sect2 id="creating.python-module">
 <title>Python modules and programs</title>
