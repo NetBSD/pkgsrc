@@ -1,20 +1,21 @@
-$NetBSD: patch-xfce4-session_xfsm-shutdown-fallback.c,v 1.2 2020/03/03 05:06:20 gutteridge Exp $
+$NetBSD: patch-xfce4-session_xfsm-shutdown-fallback.c,v 1.3 2022/02/06 17:42:47 gutteridge Exp $
 
 Fix compilation on OSes other than Linux and the *BSDs.
 
---- xfce4-session/xfsm-shutdown-fallback.c.orig	2019-05-17 12:46:28.000000000 +0000
+--- xfce4-session/xfsm-shutdown-fallback.c.orig	2020-11-06 23:08:55.000000000 +0000
 +++ xfce4-session/xfsm-shutdown-fallback.c
-@@ -371,7 +371,9 @@ xfsm_shutdown_fallback_try_action (XfsmS
+@@ -373,7 +373,9 @@ xfsm_shutdown_fallback_try_action (XfsmS
                                     GError           **error)
  {
    const gchar *xfsm_helper_action;
+-  const gchar *cmd __attribute__((unused));
 +#ifdef __BACKEND_TYPE_BSD__
-   const gchar *cmd __attribute__((unused));
++  const gchar *cmd;
 +#endif
    gboolean ret = FALSE;
    gint exit_status = 0;
  #ifdef HAVE_POLKIT
-@@ -382,29 +384,39 @@ xfsm_shutdown_fallback_try_action (XfsmS
+@@ -384,29 +386,39 @@ xfsm_shutdown_fallback_try_action (XfsmS
    {
      case XFSM_SHUTDOWN_SHUTDOWN:
        xfsm_helper_action = "shutdown";
@@ -54,3 +55,12 @@ Fix compilation on OSes other than Linux and the *BSDs.
        /* On hybrid sleep we try to lock the screen */
        if (!lock_screen (error))
          return FALSE;
+@@ -434,7 +446,7 @@ xfsm_shutdown_fallback_try_action (XfsmS
+ #endif
+   if (!ret)
+     {
+-      g_set_error (error, 1, 0, "Failed to %s (%s)", xfsm_helper_action, cmd);
++      g_set_error (error, 1, 0, "Failed to %s", xfsm_helper_action);
+     }
+   return ret;
+ }

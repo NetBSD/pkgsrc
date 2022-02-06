@@ -1,4 +1,4 @@
-$NetBSD: patch-libxfsm_xfsm-shutdown-common.h,v 1.1 2019/05/23 02:56:07 gutteridge Exp $
+$NetBSD: patch-libxfsm_xfsm-shutdown-common.h,v 1.2 2022/02/06 17:42:47 gutteridge Exp $
 
 Add NetBSD commands.
 
@@ -9,7 +9,7 @@ Add NetBSD commands.
  #endif
  
 +#ifdef BACKEND_TYPE_NETBSD
-+#define UP_BACKEND_SUSPEND_COMMAND      "/sbin/sysctl -w hw.acpi.sleep.state=1"
++#define UP_BACKEND_SUSPEND_COMMAND      "/sbin/sysctl -w hw.acpi.sleep.state=3"
 +#define UP_BACKEND_HIBERNATE_COMMAND    "/sbin/sysctl -w hw.acpi.sleep.state=4"
 +#endif
 +
