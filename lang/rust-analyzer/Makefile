@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/01/24 09:37:19 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/02/06 16:49:03 adam Exp $
 
-DISTNAME=	rust-analyzer-2022-01-24
+DISTNAME=	rust-analyzer-2022-01-31
 PKGNAME=	${DISTNAME:C/-2([0-9]*)-([0-9]*)-([0-9]*)/-0.0.2\1.\2.\3/}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rust-analyzer/}
@@ -13,8 +13,6 @@ COMMENT=	Rust compiler front-end for IDEs
 LICENSE=	apache-2.0
 
 DEPENDS+=	rust-src-[0-9]*:../../lang/rust-src
-
-WRKSRC=			${WRKDIR}/${DISTNAME}
 
 INSTALLATION_DIRS=	bin
 USE_LANGUAGES=		c c++
