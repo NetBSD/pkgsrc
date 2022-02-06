@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.11 2021/09/30 15:32:53 jperkin Exp $
+# $NetBSD: bootstrap.mk,v 1.12 2022/02/06 05:31:57 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis.
 #
@@ -114,7 +114,7 @@ pre-configure:
 	@${PHASE_MSG} "Preparing bootstrapping compiler for ${PKGNAME}"
 	${RUN}cd ${WRKDIR}/bootkit-dist/ghc-${BOOT_VERSION}-boot && \
 		${PKGSRC_SETENV} ${CONFIGURE_ENV} ${SH} ./configure \
-			--prefix=${TOOLS_DIR:Q} && \
+			--prefix=${TOOLS_DIR:Q} ${CONFIGURE_ARGS.boot} && \
 		${PKGSRC_SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install
 
 
