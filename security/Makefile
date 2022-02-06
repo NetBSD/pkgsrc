@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.846 2022/01/25 13:01:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.847 2022/02/06 15:20:20 nia Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -262,11 +262,6 @@ SUBDIR+=	opensaml
 SUBDIR+=	opensc
 SUBDIR+=	openssh
 SUBDIR+=	openssl
-SUBDIR+=	openvas-client
-SUBDIR+=	openvas-libnasl
-SUBDIR+=	openvas-libraries
-SUBDIR+=	openvas-plugins
-SUBDIR+=	openvas-server
 SUBDIR+=	otpCalc
 SUBDIR+=	p0f
 SUBDIR+=	p11-kit

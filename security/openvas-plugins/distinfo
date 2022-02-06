@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:17:23 nia Exp $
-
-BLAKE2s (openvas-plugins-1.0.5.tar.gz) = 2f4ab7981b2fd575f2f5b445c74a338e581f03335f83c5fe1fd61a821b3a3d0b
-SHA512 (openvas-plugins-1.0.5.tar.gz) = 09c14bfaf6d6ecc1b47144fa4ab6b38c6b5d96e7f6b63dcd67fb5a0fe2e35fca305e373d7fc0b7fe51827b132f3d9db30e1070850038b6fd4aed925c1444cd81
-Size (openvas-plugins-1.0.5.tar.gz) = 2727952 bytes

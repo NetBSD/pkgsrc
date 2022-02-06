@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/04 01:12:18 adrianp Exp $
-bin/OpenVAS-Client
-bin/openvasclient-mkcert
-man/man1/OpenVAS-Client.1
-man/man1/openvasclient-mkcert.1
-man/man1/openvasclient-mkrand.1
