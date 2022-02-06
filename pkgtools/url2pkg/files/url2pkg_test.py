@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.37 2022/02/06 18:00:08 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.38 2022/02/06 18:42:26 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -1565,10 +1565,10 @@ def test_Adjuster_adjust_lines_python_module__edited():
 
 def test_main__wrong_dir(tmp_path):
     os.chdir(tmp_path)
-    error = r'url2pkg: must be run from a package directory'
+    error = r'url2pkg: must be run from a package or category directory'
 
     with pytest.raises(SystemExit, match=error):
-        main(['url2pkg'], g)
+        main(['url2pkg', 'https://example.org/distfile-1.0.tar.gz'], g)
 
 
 def test_main__unknown_option():

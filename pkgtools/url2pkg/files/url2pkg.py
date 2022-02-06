@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.38 2022/02/06 18:04:50 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.39 2022/02/06 18:42:26 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -333,7 +333,7 @@ class PackageVars:
     distname: str
     pkgname: str
 
-    def __init__(self, url: str) -> None:
+    def __init__(self, url: str, pkgsrcdir: Path) -> None:
         self.url = url
         self.master_sites = ''
         self.distfile = ''
@@ -353,17 +353,17 @@ class PackageVars:
         self.adjust_site_SourceForge()
         self.adjust_site_GitHub_archive()
         self.adjust_site_GitHub_release()
-        self.foreach_site_from_sites_mk(self.adjust_site_from_sites_mk)
+        self.adjust_site_from_sites_mk(pkgsrcdir)
         self.adjust_site_PyPI()
         self.adjust_site_other()
         self.adjust_everything_else()
 
-    def foreach_site_from_sites_mk(self, action: Callable[[str, str], None]):
+    def adjust_site_from_sites_mk(self, pkgsrcdir: Path):
         if self.master_sites != '':
             return
 
         varname = ''
-        with open('../../mk/fetch/sites.mk') as sites_mk:
+        with open(pkgsrcdir / 'mk/fetch/sites.mk') as sites_mk:
             for line in sites_mk:
                 m = re.search(r'^(MASTER_SITE_.*)\+=', line)
                 if m:
@@ -372,9 +372,9 @@ class PackageVars:
 
                 m = re.search(r'^\t(.*?)(?:\s+\\)?$', line)
                 if m:
-                    action(varname, m[1])
+                    self.adjust_site_from_site_var(varname, m[1])
 
-    def adjust_site_from_sites_mk(self, varname: str, site_url: str):
+    def adjust_site_from_site_var(self, varname: str, site_url: str):
 
         url_noproto = re.sub(r'^\w+://', '', self.url)
         site_url_noproto = re.sub(r'^\w+://', '', site_url)
@@ -545,8 +545,8 @@ class Generator:
     """ Generates the initial package Makefile. """
     vars: PackageVars
 
-    def __init__(self, url: str) -> None:
-        self.vars = PackageVars(url)
+    def __init__(self, url: str):
+        self.vars = PackageVars(url, Path('../..'))
 
     def generate_Makefile(self) -> Lines:
         vars = self.vars
@@ -1214,10 +1214,6 @@ def usage() -> NoReturn:
 
 
 def main(argv: List[str], g: Globals):
-    if not os.path.isfile('../../mk/bsd.pkg.mk'):
-        sys.exit(f'{argv[0]}: must be run from a package directory '
-                 f'(.../pkgsrc/category/package)')
-
     try:
         opts, args = getopt.getopt(argv[1:], 'v', ['verbose'])
         for (opt, _) in opts:
@@ -1229,6 +1225,20 @@ def main(argv: List[str], g: Globals):
     url = args[0] if len(args) == 1 else usage()
     if not re.fullmatch(r'\w+://[!-~]+?/[!-~]+', url):
         sys.exit(f'url2pkg: invalid URL: {url}')
+
+    if os.path.isfile('../mk/bsd.pkg.mk'):
+        vars = PackageVars(url, Path('..'))
+        m = re.fullmatch(r'(.*?)-[0-9].*', vars.distname)
+        if not m:
+            sys.exit(f'url2pkg: cannot determine package directory from distname \'{vars.distname}\'')
+        if Path(m[1]).exists():
+            sys.exit(f'url2pkg: package directory \'{m[1]}\' already exists')
+        os.mkdir(m[1])
+        os.chdir(m[1])
+
+    if not os.path.isfile('../../mk/bsd.pkg.mk'):
+        sys.exit(f'{argv[0]}: must be run from a package or category directory '
+                 f'(.../pkgsrc/category[/package])')
 
     initial_lines = Generator(url).generate_package(g)
     Adjuster(g, url, initial_lines).adjust()
