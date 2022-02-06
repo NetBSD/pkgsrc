@@ -1,0 +1,17 @@
+$NetBSD: patch-mk_config.mk.in,v 1.1 2022/02/06 05:36:16 pho Exp $
+
+The stage-0 compiler isn't guaranteed to have an event-logging RTS. Not
+upstreamed yet.
+
+--- mk/config.mk.in.orig	2022-01-21 03:39:58.330264483 +0000
++++ mk/config.mk.in
+@@ -169,6 +169,9 @@ GhcWithSMP := $(strip $(if $(filter YESN
+ # Whether or not the bootstrapping GHC supplies a threaded RTS.
+ GhcThreadedRts = @GhcThreadedRts@
+ 
++# Whether or not the bootstrapping GHC supplies an event-logging RTS.
++GhcEventLoggingRts = @GhcEventLoggingRts@
++
+ # Whether to include GHCi in the compiler.  Depends on whether the RTS linker
+ # has support for this OS/ARCH combination.
+ 
