@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/06 07:46:29 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/jupyterlab_pygments/__init__.py
+${PYSITELIB}/jupyterlab_pygments/__init__.pyc
+${PYSITELIB}/jupyterlab_pygments/__init__.pyo
+${PYSITELIB}/jupyterlab_pygments/_version.py
+${PYSITELIB}/jupyterlab_pygments/_version.pyc
+${PYSITELIB}/jupyterlab_pygments/_version.pyo
+${PYSITELIB}/jupyterlab_pygments/style.py
+${PYSITELIB}/jupyterlab_pygments/style.pyc
+${PYSITELIB}/jupyterlab_pygments/style.pyo
