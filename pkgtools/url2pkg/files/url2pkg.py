@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.40 2022/02/06 20:08:49 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.41 2022/02/06 21:07:44 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -353,6 +353,7 @@ class PackageVars:
         self.adjust_site_SourceForge()
         self.adjust_site_GitHub_archive()
         self.adjust_site_GitHub_release()
+        self.adjust_site_CPAN()
         self.adjust_site_from_sites_mk(pkgsrcdir)
         self.adjust_site_PyPI()
         self.adjust_site_other()
@@ -400,6 +401,30 @@ class PackageVars:
         if varname == 'MASTER_SITE_R_CRAN':
             sys.exit('url2pkg: to create R packages, '
                      'use pkgtools/R2pkg instead')
+
+    def adjust_site_CPAN(self):
+        pattern = r'''(?x)
+            ^
+            https://cpan.metacpan.org/authors
+            /id/(?:\w+/)+
+            (\w+-)+         # namespace prefixes
+            (               # distname
+                (\w+)       # project name
+                -v?[0-9].+
+            )
+            $
+            '''
+        m = re.search(pattern, self.url)
+        if not m:
+            return
+
+        prefixes, distfile, name = m.groups()
+        prefixes_slash = prefixes.replace('-', '/')
+        prefixes_colon = prefixes.replace('-', '::')
+        self.master_sites = f'${{MASTER_SITE_PERL_CPAN:={prefixes_slash}}}'
+        self.homepage = f'https://metacpan.org/pod/{prefixes_colon}{name}'
+        self.distfile = f'{prefixes}{distfile}'
+        self.pkgname_prefix = 'p5-'
 
     def adjust_site_SourceForge(self):
         pattern = r'''(?x)
@@ -551,7 +576,7 @@ class PackageVars:
             return ''
         if 'MASTER_SITE_PYPI' in self.master_sites:
             return f'py-{m[1]}'
-        if 'MASTER_SITE_CPAN' in self.master_sites:
+        if 'MASTER_SITE_PERL_CPAN' in self.master_sites:
             return f'p5-{m[1]}'
         return m[1]
 
