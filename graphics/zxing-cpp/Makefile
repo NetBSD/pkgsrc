@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/02/05 04:34:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2022/02/06 13:22:47 ryoon Exp $
 
 GITHUB_PROJECT=	zxing-cpp
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,6 +16,8 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c++11
 
 CMAKE_ARGS+=	-DBUILD_EXAMPLES=OFF
+# Blackbox tests target pulls fmtlib with git command.
+CMAKE_ARGS+=	-DBUILD_BLACKBOX_TESTS=OFF
 
 PKGCONFIG_OVERRIDE+=	zxing.pc.in
 
