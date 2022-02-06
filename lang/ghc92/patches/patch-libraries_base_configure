@@ -1,0 +1,18 @@
+$NetBSD: patch-libraries_base_configure,v 1.1 2022/02/06 05:36:16 pho Exp $
+
+Ensure libiconv can be found at runtime.
+
+XXX: I don't think this is needed because rpath flags are handled by
+Cabal. LDFLAGS is not used anyway. (pho@)
+
+--- libraries/base/configure.orig	2021-10-28 20:43:03.000000000 +0000
++++ libraries/base/configure
+@@ -4209,7 +4209,7 @@ fi
+ 
+ # Check whether --with-iconv-libraries was given.
+ if test "${with_iconv_libraries+set}" = set; then :
+-  withval=$with_iconv_libraries; ICONV_LIB_DIRS=$withval; LDFLAGS="-L$withval $LDFLAGS"
++  withval=$with_iconv_libraries; ICONV_LIB_DIRS=$withval; LDFLAGS="-L$withval ${COMPILER_RPATH_FLAG}$withval $LDFLAGS"
+ else
+   ICONV_LIB_DIRS=
+ fi
