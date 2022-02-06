@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/02/02 19:04:57 adam Exp $
+# $NetBSD: Makefile,v 1.12 2022/02/06 22:47:02 wiz Exp $
 
 DISTNAME=	pytest-asyncio-0.17.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -11,6 +11,7 @@ COMMENT=	Pytest support for asyncio
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-test>=6.1.0:../../devel/py-test
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>0:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=5.7.1:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky>=3.5.0:../../devel/py-flaky
