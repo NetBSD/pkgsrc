@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.622 2022/02/06 17:42:57 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.623 2022/02/06 18:42:40 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -835,3 +835,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/harfbuzz to 3.3.2 [adam 2022-02-06]
 	Updated fonts/harfbuzz-icu to 3.3.2 [adam 2022-02-06]
 	Updated x11/xfce4-session to 4.16.0nb2 [gutteridge 2022-02-06]
+	Updated pkgtools/url2pkg to 21.4.2 [rillig 2022-02-06]
