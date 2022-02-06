@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.36 2022/01/01 15:29:14 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.37 2022/02/06 18:00:08 rillig Exp $
 
 import pytest
 from url2pkg import *
@@ -384,7 +384,7 @@ def test_Lines_remove_if__multiple():
     assert lines.lines == []
 
 
-def test_Generator_adjust_site_SourceForge():
+def test_PackageVars_adjust_site_SourceForge():
     url = 'http://downloads.sourceforge.net/sourceforge/rfcascade/cascade-1.4.tar.gz'
 
     lines = Generator(url).generate_Makefile()
@@ -406,7 +406,7 @@ def test_Generator_adjust_site_SourceForge():
     ]
 
 
-def test_Generator_adjust_site_GitHub_archive():
+def test_PackageVars_adjust_site_GitHub_archive():
     url = 'https://github.com/org/proj/archive/v1.0.0.tar.gz'
 
     lines = Generator(url).generate_Makefile()
@@ -431,7 +431,7 @@ def test_Generator_adjust_site_GitHub_archive():
     ]
 
 
-def test_Generator_adjust_site_GitHub_archive__tag():
+def test_PackageVars_adjust_site_GitHub_archive__tag():
     url = 'https://github.com/org/proj/archive/refs/tags/1.0.0.tar.gz'
 
     lines = Generator(url).generate_Makefile()
@@ -456,7 +456,7 @@ def test_Generator_adjust_site_GitHub_archive__tag():
     ]
 
 
-def test_Generator_adjust_site_GitHub_archive__tag_v():
+def test_PackageVars_adjust_site_GitHub_archive__tag_v():
     url = 'https://github.com/org/proj/archive/refs/tags/v1.0.0.tar.gz'
 
     lines = Generator(url).generate_Makefile()
@@ -478,7 +478,7 @@ def test_Generator_adjust_site_GitHub_archive__tag_v():
     ]
 
 
-def test_Generator_adjust_site_GitHub_release__containing_project_name():
+def test_PackageVars_adjust_site_GitHub_release__containing_project_name():
     url = 'https://github.com/org/proj/releases/download/1.0.0/proj.zip'
 
     lines = Generator(url).generate_Makefile()
@@ -503,7 +503,7 @@ def test_Generator_adjust_site_GitHub_release__containing_project_name():
     ]
 
 
-def test_Generator_adjust_site_GitHub_release__not_containing_project_name():
+def test_PackageVars_adjust_site_GitHub_release__not_containing_project_name():
     url = 'https://github.com/org/proj/releases/download/1.0.0/data.zip'
 
     lines = Generator(url).generate_Makefile()
@@ -529,7 +529,7 @@ def test_Generator_adjust_site_GitHub_release__not_containing_project_name():
     ]
 
 
-def test_Generator_adjust_site_from_sites_mk__with_subdir():
+def test_PackageVars_adjust_site_from_sites_mk__with_subdir():
     url = 'https://files.pythonhosted.org/packages/source/i/irc/irc-11.1.1.zip'
     generator = Generator(url)
 
@@ -553,7 +553,7 @@ def test_Generator_adjust_site_from_sites_mk__with_subdir():
     ]
 
 
-def test_Generator_adjust_site_from_sites_mk__without_subdir():
+def test_PackageVars_adjust_site_from_sites_mk__without_subdir():
     url = 'https://files.pythonhosted.org/packages/source/irc-11.1.1.zip'
     generator = Generator(url)
 
@@ -577,7 +577,7 @@ def test_Generator_adjust_site_from_sites_mk__without_subdir():
     ]
 
 
-def test_Generator_adjust_site_from_sites_mk__GNU():
+def test_PackageVars_adjust_site_from_sites_mk__GNU():
     url = 'https://ftp.gnu.org/pub/gnu/cflow/cflow-1.6.tar.gz'
     generator = Generator(url)
 
@@ -600,7 +600,7 @@ def test_Generator_adjust_site_from_sites_mk__GNU():
     ]
 
 
-def test_Generator_adjust_site_from_sites_mk__PyPI():
+def test_PackageVars_adjust_site_from_sites_mk__PyPI():
     url = ('https://files.pythonhosted.org/'
            + 'packages/da/8b/218264f5ce91df1ad27ce8021d51b747ef287627338fe05d170565358546/'
            + 'apprise-0.9.6.tar.gz')
@@ -625,18 +625,17 @@ def test_Generator_adjust_site_from_sites_mk__PyPI():
     ]
 
 
-def test_Generator_adjust_site_from_sites_mk__R(tmp_path: Path):
+def test_PackageVars_adjust_site_from_sites_mk__R(tmp_path: Path):
     g.pkgdir = tmp_path
     url = 'http://cran.r-project.org/src/contrib/forecast_8.7.tar.gz'
-    generator = Generator(url)
 
     with pytest.raises(SystemExit, match='^url2pkg: to create R packages, use pkgtools/R2pkg instead$'):
-        generator.generate_Makefile()
+        _ = Generator(url)
 
     assert list(tmp_path.glob('*')) == []
 
 
-def test_Generator_adjust_site_other__malformed_URL():
+def test_PackageVars_adjust_site_other__malformed_URL():
     # This error is supposed to be handled by the URL check in main.
 
     error = "'NoneType' object has no attribute 'groups'"
@@ -644,7 +643,7 @@ def test_Generator_adjust_site_other__malformed_URL():
         Generator('localhost').generate_Makefile()
 
 
-def test_Generator_adjust_everything_else__distname_version_with_v():
+def test_PackageVars_adjust_everything_else__distname_version_with_v():
     # Some version numbers have a leading 'v', derived from the Git tag name.
 
     url = 'https://cpan.example.org/Algorithm-CheckDigits-v1.3.2.tar.gz'
@@ -669,7 +668,7 @@ def test_Generator_adjust_everything_else__distname_version_with_v():
     ]
 
 
-def test_Generator_adjust_everything_else__distfile_without_extension():
+def test_PackageVars_adjust_everything_else__distfile_without_extension():
     url = 'https://example.org/app-2019-10-05'
 
     lines = Generator(url).generate_Makefile()
@@ -692,7 +691,7 @@ def test_Generator_adjust_everything_else__distfile_without_extension():
     ]
 
 
-def test_Generator_adjust_everything_else__v8():
+def test_PackageVars_adjust_everything_else__v8():
     generator = Generator('https://example.org/v8-1.0.zip')
 
     lines = generator.generate_Makefile()
