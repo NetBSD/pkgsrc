@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/02/02 18:54:08 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/02/06 22:41:59 wiz Exp $
 
 DISTNAME=	pip-run-8.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-autocommand>0:../../misc/py-autocommand
 DEPENDS+=	${PYPKGPREFIX}-packaging>0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-path>=15.1:../../devel/py-path
 DEPENDS+=	${PYPKGPREFIX}-pip>=19.3:../../devel/py-pip
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 
 USE_LANGUAGES=	# none
 
