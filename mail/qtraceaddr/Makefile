@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/02/05 13:50:22 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2022/02/07 09:01:02 schmonz Exp $
 
 DISTNAME=		qtraceaddr
 PKGNAME=		${DISTNAME}-20061202
@@ -29,6 +29,6 @@ BUILD_DEFS+=		QMAILDIR QMAIL_ALIAS_USER
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PKGBASE} ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/${PKGBASE} ${DESTDIR}${PREFIX}/bin/
 
 .include "../../mk/bsd.pkg.mk"
