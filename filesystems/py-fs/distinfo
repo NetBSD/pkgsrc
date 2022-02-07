@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/11/17 13:50:30 adam Exp $
+$NetBSD: distinfo,v 1.8 2022/02/07 20:57:20 adam Exp $
 
-BLAKE2s (fs-2.4.14.tar.gz) = 2b37f6b00db2de5e466147ded2f9e82c4fb912f1dd4676cee1f6e781e17bb83d
-SHA512 (fs-2.4.14.tar.gz) = a9604c2837a04c0baefd4da6d3edaa81131282c9ea8d448ab2d8e60ee7fb3b3d9e9898f9dc80d6df8f5a6d4f26b34416866b738b4ca9218fdd5f6894d8c4e2f8
-Size (fs-2.4.14.tar.gz) = 184588 bytes
+BLAKE2s (fs-2.4.15.tar.gz) = cdb3ad23731369b1f60cb4fc56f114d6e91f5c4b01c270924f34835b6898d18c
+SHA512 (fs-2.4.15.tar.gz) = 1d3df2f2aa64ca8a01871b704e48bf10cf8d92259dde9b59ff7b3797235ef6eb86e5ef3fb704c645870b24954a990e6efeeca5211f044ff16e2c3f99bedbfb86
+Size (fs-2.4.15.tar.gz) = 184933 bytes
