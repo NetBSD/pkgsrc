@@ -1,9 +1,10 @@
-# $NetBSD: options.mk,v 1.2 2022/02/04 01:41:01 gutteridge Exp $
+# $NetBSD: options.mk,v 1.3 2022/02/07 02:26:09 gutteridge Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.${PHP_PKG_PREFIX}
-PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts readline argon2 php-embed
-PKG_SUPPORTED_OPTIONS+=	disable-filter-url
-PKG_SUGGESTED_OPTIONS+=	inet6 ssl readline
+PKG_OPTIONS_VAR=		PKG_OPTIONS.${PHP_PKG_PREFIX}
+PKG_SUPPORTED_OPTIONS+=		inet6 ssl zts readline argon2 php-embed
+PKG_SUPPORTED_OPTIONS+=		disable-filter-url
+PKG_SUGGESTED_OPTIONS+=		inet6 ssl readline
+PKG_OPTIONS_LEGACY_OPTS+=	maintainer-zts:zts
 
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || ${OPSYS} == "FreeBSD"
 PKG_SUPPORTED_OPTIONS+=	dtrace
@@ -29,7 +30,7 @@ CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--without-openssl
 .endif
 
-.if !empty(PKG_OPTIONS:Mmaintainer-zts)
+.if !empty(PKG_OPTIONS:Mzts)
 CONFIGURE_ARGS+=	--enable-zts
 .endif
 
