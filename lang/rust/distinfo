@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.140 2022/01/21 23:20:36 he Exp $
+$NetBSD: distinfo,v 1.141 2022/02/07 09:16:05 tnn Exp $
 
 BLAKE2s (rust-1.56.0-x86_64-unknown-illumos.tar.gz) = 2cfc266e0ac44f0e0ddca2e3f17a3137cfa6c33cce917eb7bd05f60afb8eef24
 SHA512 (rust-1.56.0-x86_64-unknown-illumos.tar.gz) = 5b74ecb03cec82ee524b83439fd3f029de7bcdcbc3696fd3897441a9c1bc719e0cd19cedb2e35613377cfc09435476ae53d9cdf71734f9437d185acc2dfaa5ad
@@ -114,7 +114,7 @@ SHA1 (patch-library_unwind_build.rs) = df092d5c07fa0be63a9510f1d6a77e5094ca3b15
 SHA1 (patch-src_bootstrap_bootstrap.py) = 353c3b079756bb4a250cdda5752c60b5a7289ce8
 SHA1 (patch-src_bootstrap_builder.rs) = b686a545c001936f6da22f7a5b38ac1300c9869b
 SHA1 (patch-src_bootstrap_compile.rs) = c57799aee9c12603f5e6a13cb6b5befc8f96b4b6
-SHA1 (patch-src_bootstrap_lib.rs) = f6918e0939b6fe63ae9b524d4c809375149efb15
+SHA1 (patch-src_bootstrap_lib.rs) = e4b96b0120451cc6a1708fc6d936a5c47c40ee4b
 SHA1 (patch-src_llvm-project_llvm_CMakeLists.txt) = 7666d5d3254506a0a69bc68e99b68a9c61cf357b
 SHA1 (patch-src_llvm-project_llvm_cmake_modules_AddLLVM.cmake) = a59dcdcd34ca24df8b381ae84ff58e2c61a44dd3
 SHA1 (patch-src_llvm-project_llvm_include_llvm-c_DataTypes.h) = cb011fc19957883c01725797f7c85ed1b20f96f1
