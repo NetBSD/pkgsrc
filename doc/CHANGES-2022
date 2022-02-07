@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.624 2022/02/06 19:04:41 adam Exp $
+$NetBSD: CHANGES-2022,v 1.625 2022/02/07 09:18:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -838,3 +838,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated pkgtools/url2pkg to 21.4.2 [rillig 2022-02-06]
 	Updated security/py-oauthlib to 3.2.0 [adam 2022-02-06]
 	Updated security/py-requests-oauthlib to 1.3.1 [adam 2022-02-06]
+	Updated sysutils/bkt to 0.5.2 [pin 2022-02-07]
