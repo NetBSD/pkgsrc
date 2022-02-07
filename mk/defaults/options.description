@@ -683,6 +683,7 @@ perl			Enable Perl support.
 pgadmin-db-designer	Enable pgAdmin database-designer functionality.
 pgsql			Enable PostgreSQL support.
 php-cgi			Use PHP via CGI.
+php-embed		Enable PHP building of embedded SAPI.
 php-fpm			Use PHP via FastCGI Process Manager.
 php-sockets		Enable php-sockets support.
 pic			Enable compiling with -fPIC
@@ -984,4 +985,5 @@ zlib			Enable support for zlib compression.
 zrtp			Enable ZRTP support.
 zsh-multibyte		Enable multibyte support in Zsh.
 zstd			Enable Zstandard (de)compression support.
+zts			Enable the Zend Thread Safety option for PHP.
 zziplib			Enable zip support using zziplib.
