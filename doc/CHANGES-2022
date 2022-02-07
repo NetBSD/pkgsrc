@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.627 2022/02/07 10:48:34 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.628 2022/02/07 11:00:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -841,3 +841,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/bkt to 0.5.2 [pin 2022-02-07]
 	Updated devel/wabt to 1.0.26 [fcambus 2022-02-07]
 	Updated net/libfilezilla to 0.36.0 [wiz 2022-02-07]
+	Updated net/filezilla to 3.57.0 [wiz 2022-02-07]
