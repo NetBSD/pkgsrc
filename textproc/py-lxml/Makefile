@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2022/02/04 15:18:18 hauke Exp $
+# $NetBSD: Makefile,v 1.82 2022/02/07 00:09:59 gutteridge Exp $
 
 DISTNAME=	lxml-4.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,8 @@ HOMEPAGE=	https://lxml.de/
 COMMENT=	Python binding for libxml2 and libxslt
 LICENSE=	modified-bsd
 
-# Path too long for libarchive tar?
+# Path too long for nbtar (pax-as-tar)?
+# See pkg/56688: nbtar (archivers/pax) silently drops files
 EXTRACT_USING=	gtar
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
