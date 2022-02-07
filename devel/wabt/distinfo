@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/12/19 13:21:37 fcambus Exp $
+$NetBSD: distinfo,v 1.9 2022/02/07 09:27:32 fcambus Exp $
 
-BLAKE2s (wabt-1.0.25.tar.gz) = ad8f31ce5b914dc45d14a40ef116e844b9d174d36f90132249baceb61771df9f
-SHA512 (wabt-1.0.25.tar.gz) = 462c52641da05d48b948931fdbd52d4aa27fe537d2556df1beec2313e3e2e789249b06018a4d2e777f1f0a4b1bf02cbc45ee3dbd77c26e489778c4e2a8dad827
-Size (wabt-1.0.25.tar.gz) = 1091205 bytes
+BLAKE2s (wabt-1.0.26.tar.gz) = c7121f46a06bd60f90ac8f77c29f56ef07cf5b5b13f8336c3ebc47feaafbb8d7
+SHA512 (wabt-1.0.26.tar.gz) = e7fc2f101484a5a99b9d14d74e7b6703e67a1295440e2cc939bba689209421f52602c97b77ea3a197ab695703981a21dcdad60567db946d8ce4264228731ac9e
+Size (wabt-1.0.26.tar.gz) = 1090382 bytes
