@@ -1,4 +1,4 @@
-# $NetBSD: wheel.mk,v 1.5 2022/01/25 21:51:41 wiz Exp $
+# $NetBSD: wheel.mk,v 1.6 2022/02/07 15:39:35 wiz Exp $
 #
 # Initial mk for building and installing python wheels
 #
@@ -52,6 +52,7 @@ do-build:
 WHEEL_NAME?=	${DISTNAME:C/-([^0-9])/_\1/g}
 _WHEEL_INFODIR=	${WHEEL_NAME}.dist-info
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PLIST_SUBST+=	WHEEL_INFODIR=${_WHEEL_INFODIR}
 
 # from extension.mk
