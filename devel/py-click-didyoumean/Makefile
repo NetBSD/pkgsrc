@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/31 09:48:35 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/02/07 21:07:36 adam Exp $
 
-DISTNAME=	click-didyoumean-0.0.3
+DISTNAME=	click-didyoumean-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/click-didyoumean/}
 
@@ -11,10 +10,11 @@ HOMEPAGE=	https://github.com/timofurrer/click-didyoumean
 COMMENT=	Enable git-like did-you-mean feature in click
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONED_DEPENDENCIES+=	click
+DEPENDS+=	${PYPKGPREFIX}-click>=7:../../devel/py-click
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
