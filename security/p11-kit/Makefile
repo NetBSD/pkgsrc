@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/01/23 22:17:51 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2022/02/07 08:05:05 wiz Exp $
 
 DISTNAME=	p11-kit-0.24.1
 CATEGORIES=	security
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--with-trust-paths=${PREFIX}/share/mozilla-rootcerts/cacert.pem
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c99
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config readlink
 
 TEST_TARGET=	check
 
