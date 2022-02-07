@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:21 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/02/07 13:14:40 adam Exp $
 
-DISTNAME=	pip-api-0.0.26
+DISTNAME=	pip-api-0.0.27
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip-api/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.org/project/pip-api/
+HOMEPAGE=	http://github.com/di/pip-api
 COMMENT=	Unofficial, importable pip API
 LICENSE=	apache-2.0
 
@@ -20,8 +19,8 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# As of 0.0.26:
-# 33 passed, 8 warnings, 17 errors
+# As of 0.0.27:
+# 40 passed, 2 warnings, 16 errors
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
