@@ -1,6 +1,7 @@
-$NetBSD: patch-lib_impersonation.cpp,v 1.1 2022/02/07 10:48:26 wiz Exp $
+$NetBSD: patch-lib_impersonation.cpp,v 1.2 2022/02/07 10:53:52 wiz Exp $
 
 Hide Linux-specific stuff in ifdef __Linux__
+https://trac.filezilla-project.org/ticket/12658
 
 --- lib/impersonation.cpp.orig	2021-12-08 15:10:58.000000000 +0000
 +++ lib/impersonation.cpp
