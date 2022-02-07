@@ -1,4 +1,4 @@
-# $NetBSD: build-type.awk,v 1.1 2021/05/01 15:06:26 pho Exp $
+# $NetBSD: build-type.awk,v 1.2 2022/02/07 02:39:41 pho Exp $
 #
 # Extract the field "Build-Type" out of a Cabal package description.
 #
@@ -20,4 +20,9 @@ tolower($1) ~ /^build-type:/ {
 buildTypeLine {
     print tolower($1);
     exit
+}
+
+END {
+    # The package description didn't have Build-Type. Default to "Simple".
+    print "simple"
 }
