@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/02/06 22:47:02 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/02/07 08:20:04 wiz Exp $
 
 DISTNAME=	pytest-asyncio-0.17.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -25,8 +25,9 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>0:../../devel/py-typing-extensions
 .endif
 
+# package needs to be installed before testing
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
