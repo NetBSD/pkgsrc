@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/06/10 07:08:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/02/07 17:02:27 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -109,6 +109,9 @@ ${PYSITELIB}/prompt_toolkit/contrib/telnet/protocol.pyo
 ${PYSITELIB}/prompt_toolkit/contrib/telnet/server.py
 ${PYSITELIB}/prompt_toolkit/contrib/telnet/server.pyc
 ${PYSITELIB}/prompt_toolkit/contrib/telnet/server.pyo
+${PYSITELIB}/prompt_toolkit/cursor_shapes.py
+${PYSITELIB}/prompt_toolkit/cursor_shapes.pyc
+${PYSITELIB}/prompt_toolkit/cursor_shapes.pyo
 ${PYSITELIB}/prompt_toolkit/data_structures.py
 ${PYSITELIB}/prompt_toolkit/data_structures.pyc
 ${PYSITELIB}/prompt_toolkit/data_structures.pyo
@@ -343,6 +346,12 @@ ${PYSITELIB}/prompt_toolkit/output/conemu.pyo
 ${PYSITELIB}/prompt_toolkit/output/defaults.py
 ${PYSITELIB}/prompt_toolkit/output/defaults.pyc
 ${PYSITELIB}/prompt_toolkit/output/defaults.pyo
+${PYSITELIB}/prompt_toolkit/output/flush_stdout.py
+${PYSITELIB}/prompt_toolkit/output/flush_stdout.pyc
+${PYSITELIB}/prompt_toolkit/output/flush_stdout.pyo
+${PYSITELIB}/prompt_toolkit/output/plain_text.py
+${PYSITELIB}/prompt_toolkit/output/plain_text.pyc
+${PYSITELIB}/prompt_toolkit/output/plain_text.pyo
 ${PYSITELIB}/prompt_toolkit/output/vt100.py
 ${PYSITELIB}/prompt_toolkit/output/vt100.pyc
 ${PYSITELIB}/prompt_toolkit/output/vt100.pyo
