@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/07 15:26:43 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
+${PYSITELIB}/sphinx_inline_tabs/__init__.py
+${PYSITELIB}/sphinx_inline_tabs/__init__.pyc
+${PYSITELIB}/sphinx_inline_tabs/_impl.py
+${PYSITELIB}/sphinx_inline_tabs/_impl.pyc
+${PYSITELIB}/sphinx_inline_tabs/static/tabs.css
+${PYSITELIB}/sphinx_inline_tabs/static/tabs.js
