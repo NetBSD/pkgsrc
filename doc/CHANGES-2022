@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.635 2022/02/07 21:15:13 adam Exp $
+$NetBSD: CHANGES-2022,v 1.636 2022/02/07 21:41:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -858,3 +858,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-click-didyoumean to 0.3.0 [adam 2022-02-07]
 	Updated fonts/py-fonttools to 4.29.1 [adam 2022-02-07]
 	Updated devel/py-frozendict to 2.3.0 [adam 2022-02-07]
+	Added devel/py-pep621 version 0.4.0 [wiz 2022-02-07]
