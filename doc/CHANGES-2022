@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.634 2022/02/07 21:00:36 adam Exp $
+$NetBSD: CHANGES-2022,v 1.635 2022/02/07 21:15:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -854,3 +854,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-drf-nested-routers to 0.93.4 [adam 2022-02-07]
 	Updated filesystems/py-fs to 2.4.15 [adam 2022-02-07]
 	Updated security/py-cryptodome to 3.14.1 [adam 2022-02-07]
+	Updated devel/py-pylint-plugin-utils to 0.7 [adam 2022-02-07]
+	Updated devel/py-click-didyoumean to 0.3.0 [adam 2022-02-07]
+	Updated fonts/py-fonttools to 4.29.1 [adam 2022-02-07]
+	Updated devel/py-frozendict to 2.3.0 [adam 2022-02-07]
