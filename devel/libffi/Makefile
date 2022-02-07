@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2022/01/09 20:07:00 tm Exp $
+# $NetBSD: Makefile,v 1.49 2022/02/07 08:06:18 wiz Exp $
 
 DISTNAME=	libffi-3.4.2
 PKGREVISION=	2
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config readelf
 USE_TOOLS.SunOS+=	perl
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-multi-os-directory
