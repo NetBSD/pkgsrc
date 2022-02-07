@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1275 2022/02/06 07:46:29 adam Exp $
+# $NetBSD: Makefile,v 1.1276 2022/02/07 15:19:47 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1089,6 +1089,7 @@ SUBDIR+=	py-sphinx-astropy
 SUBDIR+=	py-sphinx-autoapi
 SUBDIR+=	py-sphinx-autodoc-typehints
 SUBDIR+=	py-sphinx-automodapi
+SUBDIR+=	py-sphinx-copybutton
 SUBDIR+=	py-sphinx-gallery
 SUBDIR+=	py-sphinx-issues
 SUBDIR+=	py-sphinx-rtd-theme
