@@ -1,4 +1,4 @@
-# $NetBSD: gen-setup.sh,v 1.1 2021/05/01 15:06:26 pho Exp $
+# $NetBSD: gen-setup.sh,v 1.2 2022/02/07 02:39:41 pho Exp $
 #
 # Generate the standard Setup.hs script for a given Cabal package.
 #
@@ -19,6 +19,6 @@ case "$1" in
         echo 'main = defaultMain'
         ;;
     *)
-        echo >&2 "Unknown Build-Type: $1"
+        echo >&2 "[mk/haskell/gen-setup.sh] Unknown Build-Type: $1"
         exit 1
 esac
