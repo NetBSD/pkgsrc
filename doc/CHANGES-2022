@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.631 2022/02/07 15:19:55 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.632 2022/02/07 15:27:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -847,3 +847,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-httplib2 to 0.20.4 [adam 2022-02-07]
 	Updated devel/py-pip-api to 0.0.27 [adam 2022-02-07]
 	Added textproc/py-sphinx-copybutton version 0.5.0 [wiz 2022-02-07]
+	Added textproc/py-sphinx-inline-tabs version 2022.1.2beta11 [wiz 2022-02-07]
