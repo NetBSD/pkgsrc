@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.633 2022/02/07 17:07:40 adam Exp $
+$NetBSD: CHANGES-2022,v 1.634 2022/02/07 21:00:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -850,3 +850,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Added textproc/py-sphinx-inline-tabs version 2022.1.2beta11 [wiz 2022-02-07]
 	Updated devel/py-prompt_toolkit to 3.0.27 [adam 2022-02-07]
 	Updated parallel/py-ipyparallel to 8.2.0 [adam 2022-02-07]
+	Updated www/py-django-cors-headers to 3.11.0 [adam 2022-02-07]
+	Updated www/py-drf-nested-routers to 0.93.4 [adam 2022-02-07]
+	Updated filesystems/py-fs to 2.4.15 [adam 2022-02-07]
+	Updated security/py-cryptodome to 3.14.1 [adam 2022-02-07]
