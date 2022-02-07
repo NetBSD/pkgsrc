@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/07 15:19:31 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/sphinx_copybutton/__init__.py
+${PYSITELIB}/sphinx_copybutton/__init__.pyc
+${PYSITELIB}/sphinx_copybutton/__init__.pyo
+${PYSITELIB}/sphinx_copybutton/_static/check-solid.svg
+${PYSITELIB}/sphinx_copybutton/_static/clipboard.min.js
+${PYSITELIB}/sphinx_copybutton/_static/copy-button.svg
+${PYSITELIB}/sphinx_copybutton/_static/copybutton.css
+${PYSITELIB}/sphinx_copybutton/_static/copybutton.js_t
+${PYSITELIB}/sphinx_copybutton/_static/copybutton_funcs.js
