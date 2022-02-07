@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.37 2022/01/18 02:24:36 pho Exp $
+# $NetBSD: haskell.mk,v 1.38 2022/02/07 02:58:24 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # Package configuration, building, installation, registration and
@@ -223,7 +223,7 @@ _HS_PRINT_PLIST_AWK.lib={ gsub("${_HS_PLIST.lib.pkg-id}", "$${HS_PKGID}"   ) }
 PRINT_PLIST_AWK+=	${!empty(_HS_PLIST.lib.pkg-id):?${_HS_PRINT_PLIST_AWK.lib}:}
 
 .if ${_HS_PLIST_STATUS} == missing || ${_HS_PLIST_STATUS} == outdated
-.  if ${HS_UPDATE_PLIST} == yes
+.  if ${HS_UPDATE_PLIST:tl} == yes
 GENERATE_PLIST+=	${MAKE} print-PLIST > ${PKGDIR}/PLIST;
 .  endif
 GENERATE_PLIST+=	\
@@ -232,9 +232,14 @@ GENERATE_PLIST+=	\
 PLIST_SRC=		# none
 .endif
 
-.if ${_HS_PLIST_STATUS} == outdated && ${HS_UPDATE_PLIST} == no
+.if ${HS_UPDATE_PLIST:tl} == no
+.  if ${_HS_PLIST_STATUS} == missing
+WARNINGS+=	"[haskell.mk] A PLIST is missing."
+WARNINGS+=	"[haskell.mk] Set HS_UPDATE_PLIST=yes to generate it automatically."
+.  elif ${_HS_PLIST_STATUS} == outdated
 WARNINGS+=	"[haskell.mk] The PLIST format is outdated."
 WARNINGS+=	"[haskell.mk] Set HS_UPDATE_PLIST=yes to update it automatically."
+.  endif
 .endif
 
 # Define configure target. We might not have any working Haskell
