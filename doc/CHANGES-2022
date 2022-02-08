@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.636 2022/02/07 21:41:14 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.637 2022/02/08 06:27:36 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -859,3 +859,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/py-fonttools to 4.29.1 [adam 2022-02-07]
 	Updated devel/py-frozendict to 2.3.0 [adam 2022-02-07]
 	Added devel/py-pep621 version 0.4.0 [wiz 2022-02-07]
+	Added multimedia/gerbera version 1.9.2 [khorben 2022-02-08]
