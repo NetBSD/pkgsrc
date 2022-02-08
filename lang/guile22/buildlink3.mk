@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2021/12/08 16:02:16 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2022/02/08 10:26:16 mcf Exp $
 
 BUILDLINK_TREE+=	guile22
 
@@ -9,7 +9,7 @@ BUILDLINK_API_DEPENDS.guile22+=	guile22>=2.2
 BUILDLINK_ABI_DEPENDS.guile22?=	guile22>=2.2.7nb3
 BUILDLINK_PKGSRCDIR.guile22?=	../../lang/guile22
 
-BUILDLINK_PASSTHRU_DIRS=		${PREFIX}/guile/2.2
+BUILDLINK_PASSTHRU_DIRS+=		${PREFIX}/guile/2.2
 BUILDLINK_FILES.guile22+=		guile/2.2/bin/*
 BUILDLINK_FNAME_TRANSFORM.guile22+=	-e s,guile/2.2/bin,bin,
 BUILDLINK_FNAME_TRANSFORM.guile22+=	-e s,guile/2.2/lib/pkgconfig,lib/pkgconfig,
