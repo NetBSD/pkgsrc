@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.320 2022/01/31 23:20:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.321 2022/02/08 06:27:21 khorben Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -42,6 +42,7 @@ SUBDIR+=	flashplayer
 SUBDIR+=	flvstreamer
 SUBDIR+=	frei0r
 SUBDIR+=	fxtv
+SUBDIR+=	gerbera
 SUBDIR+=	ggrab
 SUBDIR+=	gmencoder
 SUBDIR+=	gmp-api
