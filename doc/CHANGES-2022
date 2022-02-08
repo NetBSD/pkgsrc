@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.644 2022/02/08 12:39:40 pin Exp $
+$NetBSD: CHANGES-2022,v 1.645 2022/02/08 12:40:53 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -872,3 +872,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/macchina to 6.0.6 [pin 2022-02-08]
 	Updated shells/nushell to 0.44.0 [pin 2022-02-08]
 	Updated shells/starship to 1.3.0 [pin 2022-02-08]
+	Updated x11/wired-notify to 0.10.1 [pin 2022-02-08]
