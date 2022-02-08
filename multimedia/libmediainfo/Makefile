@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2021/10/14 07:03:02 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2022/02/08 13:15:54 gavan Exp $
 
 PKGREVISION=		1
 .include "../../multimedia/mediainfo/Makefile.common"
@@ -18,6 +18,8 @@ CONFIGURE_DIRS+=	MediaInfoLib/Project/GNU/Library
 REPLACE_SH=		MediaInfoLib/Project/GNU/Library/libmediainfo-config.in
 
 PKGCONFIG_OVERRIDE+=	MediaInfoLib/Project/GNU/Library/libmediainfo.pc.in
+
+LIBTOOL_OVERRIDE+=	${CONFIGURE_DIRS}/libtool
 
 .include "../../mk/bsd.prefs.mk"
 # Enable shared library
