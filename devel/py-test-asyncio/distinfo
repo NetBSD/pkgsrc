@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2022/02/02 19:04:57 adam Exp $
+$NetBSD: distinfo,v 1.11 2022/02/08 09:10:58 adam Exp $
 
-BLAKE2s (pytest-asyncio-0.17.2.tar.gz) = 0fb723a8f5d2d83fc509451868f77a851643975e9599d5b59cda3754d12edaf8
-SHA512 (pytest-asyncio-0.17.2.tar.gz) = 5a18d1920cf7ef727d01070d0c4ace190ff80fd2a79eca3fe142e3f01d396fea2ca51e7823e91e9ab5c474510e5cd00aa7f058fb4d26290cca0a4cd51e4589f3
-Size (pytest-asyncio-0.17.2.tar.gz) = 31194 bytes
+BLAKE2s (pytest-asyncio-0.18.0.tar.gz) = a9173bbb63e2e73bb35262a91e96e5a2120c24ce86d02639a03181f223328757
+SHA512 (pytest-asyncio-0.18.0.tar.gz) = 58c6f03d2d7c09a7b5aee17b080d07d7a382444bbf381bd9312464336eb24b6d6d0652f19f8a4fc2f6e8a108aac99ab971d7b9d63ec742d5f8742903457b2400
+Size (pytest-asyncio-0.18.0.tar.gz) = 31725 bytes
