@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2021/03/06 09:37:52 nia Exp $
+@comment $NetBSD: PLIST,v 1.29 2022/02/08 13:39:17 gavan Exp $
 bin/al
 bin/al2
 bin/aprofutil
@@ -135,6 +135,7 @@ lib/libmono-2.0.so
 lib/libmono-2.0.so.1
 lib/libmono-2.0.so.1.0.0
 lib/libmono-native.la
+lib/libmono-btls-shared.so
 lib/libmono-profiler-aot-static.la
 lib/libmono-profiler-aot.la
 lib/libmono-profiler-coverage-static.la
@@ -1098,6 +1099,7 @@ lib/mono/4.5/Microsoft.Common.tasks
 lib/mono/4.5/Microsoft.VisualBasic.targets
 lib/mono/4.5/Microsoft.VisualC.dll
 lib/mono/4.5/Microsoft.Web.Infrastructure.dll
+lib/mono/4.5/Mono.Btls.Interface.dll
 lib/mono/4.5/Mono.CSharp.dll
 lib/mono/4.5/Mono.Cairo.dll
 lib/mono/4.5/Mono.CodeContracts.dll
@@ -2908,6 +2910,8 @@ lib/mono/gac/Microsoft.VisualC/10.0.0.0__b03f5f7f11d50a3a/Microsoft.VisualC.dll
 lib/mono/gac/Microsoft.VisualC/10.0.0.0__b03f5f7f11d50a3a/Microsoft.VisualC.pdb
 lib/mono/gac/Microsoft.Web.Infrastructure/1.0.0.0__31bf3856ad364e35/Microsoft.Web.Infrastructure.dll
 lib/mono/gac/Microsoft.Web.Infrastructure/1.0.0.0__31bf3856ad364e35/Microsoft.Web.Infrastructure.pdb
+lib/mono/gac/Mono.Btls.Interface/4.0.0.0__0738eb9f132ed756/Mono.Btls.Interface.dll
+lib/mono/gac/Mono.Btls.Interface/4.0.0.0__0738eb9f132ed756/Mono.Btls.Interface.pdb
 lib/mono/gac/Mono.CSharp/4.0.0.0__0738eb9f132ed756/Mono.CSharp.dll
 lib/mono/gac/Mono.CSharp/4.0.0.0__0738eb9f132ed756/Mono.CSharp.pdb
 lib/mono/gac/Mono.Cairo/4.0.0.0__0738eb9f132ed756/Mono.Cairo.dll
