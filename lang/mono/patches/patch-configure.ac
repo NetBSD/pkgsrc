@@ -1,0 +1,22 @@
+$NetBSD: patch-configure.ac,v 1.1 2022/02/08 13:39:17 gavan Exp $
+
+--- configure.ac.orig	2021-02-22 15:58:24.000000000 +0000
++++ configure.ac
+@@ -4405,7 +4405,7 @@ case "$host" in
+ 			BTLS_SUPPORTED=yes
+ 			BTLS_PLATFORM=i386
+ 			;;
+-		  openbsd*|freebsd*|kfreebsd-gnu*)
++		  openbsd*|freebsd*|kfreebsd-gnu*|netbsd*)
+ 			AOT_SUPPORTED="yes"
+ 			BTLS_SUPPORTED=yes
+ 			BTLS_PLATFORM=i386
+@@ -4432,7 +4432,7 @@ case "$host" in
+ 			BTLS_PLATFORM=x86_64
+ 			boehm_supported=false
+ 			;;
+-		  openbsd*|freebsd*|kfreebsd-gnu*)
++		  openbsd*|freebsd*|kfreebsd-gnu*|netbsd*)
+ 			AOT_SUPPORTED="yes"
+ 			BTLS_SUPPORTED=yes
+ 			BTLS_PLATFORM=x86_64
