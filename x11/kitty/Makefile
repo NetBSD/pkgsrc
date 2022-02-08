@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2021/12/08 16:07:07 adam Exp $
+# $NetBSD: Makefile,v 1.28 2022/02/08 12:35:44 pin Exp $
 
-DISTNAME=	kitty-0.21.1
-PKGREVISION=	1
+DISTNAME=	kitty-0.24.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kovidgoyal/}
 GITHUB_PROJECT=	kitty
@@ -19,36 +18,31 @@ USE_TOOLS+=	gmake pkg-config
 
 # don't force LTO
 BUILDLINK_TRANSFORM+=	rm:-flto
+# code is not perfect
+BUILDLINK_TRANSFORM+=	rm:-Werror
+BUILDLINK_TRANSFORM+=	rm:-pedantic-errors
 
 # kitty's homegrown packaging expects the functionality of tic(1) that
 # comes with ncurses.
 USE_NCURSES=	yes
 
-PYTHON_VERSIONED_DEPENDENCIES+=	setuptools:tool
-
-SUBST_CLASSES+=		python
-SUBST_STAGE.python=	pre-build
-SUBST_MESSAGE.python=	Replacing path to Sphinx.
-SUBST_FILES.python=	docs/Makefile
-SUBST_SED.python+=	-e "s,sphinx-build,sphinx-build-${PYVERSSUFFIX},g"
-
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-PYTHON_VERSIONED_DEPENDENCIES+=	sphinx:tool
+PY_PATCHPLIST=			yes
 
 do-build:
 	cd ${WRKSRC} && ${MAKE_ENV} ${PYTHONBIN} setup.py linux-package
-	cd ${WRKSRC} && ${MAKE_ENV} ${GMAKE} man
 
 do-install:
 	cd ${WRKSRC} && ${MAKE_ENV} ${PYTHONBIN} setup.py linux-package \
 	    --prefix ${DESTDIR}${PREFIX}
-	${FIND} ${DESTDIR} -type d -name __pycache__ -print0 | ${XARGS} -0 ${RM} -rf
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/kitty.1 \
-	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/kitty.1 || ${FALSE}
+	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/kitty.1 || ${TRUE}
 	${MV} ${DESTDIR}${PREFIX}/share/man/man5/kitty.conf.5 \
-	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/kitty.conf.5 || ${FALSE}
+	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/kitty.conf.5 || ${TRUE}
+# pkgsrc framwork only handles optimization level 1 files correctly
+	${FIND} ${DESTDIR} -type f -name *.opt-2.pyc -print0 | ${XARGS} -0 ${RM} -rf
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -65,6 +59,7 @@ do-install:
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../net/librsync/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
@@ -74,9 +69,7 @@ do-install:
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/tool.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
