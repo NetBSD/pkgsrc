@@ -1,0 +1,13 @@
+$NetBSD: patch-msvc_mono.props,v 1.1 2022/02/08 13:39:17 gavan Exp $
+
+--- msvc/mono.props.orig	2021-02-22 15:50:14.000000000 +0000
++++ msvc/mono.props
+@@ -26,7 +26,7 @@
+     <!-- When true, ported mono projects will build using C++ instead of C compiler. When false, all project will be build using the default compiler.  -->
+     <MONO_COMPILE_AS_CPP>false</MONO_COMPILE_AS_CPP>
+     <!-- When true, mono binaries will link and include BTLS. When false, mono binaries will not link and include BTLS.  -->
+-    <MONO_ENABLE_BTLS>false</MONO_ENABLE_BTLS>
++    <MONO_ENABLE_BTLS>true</MONO_ENABLE_BTLS>
+     <!-- When true, mono binaries will be compiled for use as a .NET Core runtime.  -->
+     <MONO_ENABLE_NETCORE>false</MONO_ENABLE_NETCORE>
+   </PropertyGroup>

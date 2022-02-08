@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.200 2021/12/08 16:02:16 adam Exp $
+# $NetBSD: Makefile,v 1.201 2022/02/08 13:39:17 gavan Exp $
 
 DISTNAME=	mono-6.12.0.122
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	lang
 MASTER_SITES=	https://download.mono-project.com/sources/mono/
 EXTRACT_SUFX=	.tar.xz
@@ -27,8 +27,6 @@ EXTRACT_USING=	bsdtar
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # has sub-configures
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--disable-btls
-CONFIGURE_ARGS+=	--disable-btls-lib
 
 # Requires a cwrappers change: http://mail-index.netbsd.org/tech-pkg/2019/08/16/msg021791.html
 USE_CWRAPPERS=		no
