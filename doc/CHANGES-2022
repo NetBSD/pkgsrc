@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.637 2022/02/08 06:27:36 khorben Exp $
+$NetBSD: CHANGES-2022,v 1.638 2022/02/08 08:56:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -860,3 +860,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-frozendict to 2.3.0 [adam 2022-02-07]
 	Added devel/py-pep621 version 0.4.0 [wiz 2022-02-07]
 	Added multimedia/gerbera version 1.9.2 [khorben 2022-02-08]
+	Updated devel/py-ipykernel to 6.9.0 [adam 2022-02-08]
+	Updated devel/py-packageurl to 0.9.7 [adam 2022-02-08]
+	Updated devel/py-bitarray to 2.3.6 [adam 2022-02-08]
+	Updated textproc/py-tomlkit to 0.9.1 [adam 2022-02-08]
