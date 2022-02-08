@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Gerbera
+Comment=Gerbera UPnP Media Server web interface
+Exec=@PREFIX@/bin/gnome-open @GERBERA_HOME@/gerbera.html
+Icon=@PREFIX@/share/gerbera/web/icons/mt-icon120.png
+Terminal=false
+Categories=Application;AudioVideo;
+Type=Application
+Encoding=UTF-8
