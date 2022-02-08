@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.41 2022/02/06 21:07:44 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.42 2022/02/08 20:48:09 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -407,8 +407,8 @@ class PackageVars:
             ^
             https://cpan.metacpan.org/authors
             /id/(?:\w+/)+
-            (\w+-)+         # namespace prefixes
-            (               # distname
+            (               # distfile
+                (\w+-)+     # namespace prefixes
                 (\w+)       # project name
                 -v?[0-9].+
             )
@@ -418,12 +418,12 @@ class PackageVars:
         if not m:
             return
 
-        prefixes, distfile, name = m.groups()
+        distfile, prefixes, name = m.groups()
         prefixes_slash = prefixes.replace('-', '/')
         prefixes_colon = prefixes.replace('-', '::')
         self.master_sites = f'${{MASTER_SITE_PERL_CPAN:={prefixes_slash}}}'
         self.homepage = f'https://metacpan.org/pod/{prefixes_colon}{name}'
-        self.distfile = f'{prefixes}{distfile}'
+        self.distfile = distfile
         self.pkgname_prefix = 'p5-'
 
     def adjust_site_SourceForge(self):
