@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/02/05 20:51:07 nia Exp $
+# $NetBSD: Makefile,v 1.2 2022/02/08 10:49:04 nia Exp $
 
 DISTNAME=	arcticfox-39.0
 CATEGORIES=	www
@@ -126,6 +126,7 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../textproc/hunspell/buildlink3.mk"
 #.include "../../textproc/icu/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
