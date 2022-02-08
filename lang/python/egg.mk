@@ -1,4 +1,4 @@
-# $NetBSD: egg.mk,v 1.35 2022/01/12 08:34:34 wiz Exp $
+# $NetBSD: egg.mk,v 1.36 2022/02/08 17:19:50 gutteridge Exp $
 #
 # Common logic to handle Python Eggs
 #
@@ -16,7 +16,7 @@ EGG_INFODIR?=	${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
 
-# True eggs always have an egg-info directory egg.mk can also
+# True eggs always have an egg-info directory. egg.mk can also
 # be used for distutils packages, in which case there will be no
 # egg-info directory.
 
