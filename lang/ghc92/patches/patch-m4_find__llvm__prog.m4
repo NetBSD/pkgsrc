@@ -1,6 +1,7 @@
-$NetBSD: patch-m4_find__llvm__prog.m4,v 1.1 2022/02/06 05:36:16 pho Exp $
+$NetBSD: patch-m4_find__llvm__prog.m4,v 1.2 2022/02/08 07:45:02 pho Exp $
 
-Abolish the bash-ism. Not upstreamed yet.
+Abolish the bash-ism.
+https://gitlab.haskell.org/ghc/ghc/-/merge_requests/7519
 
 --- m4/find_llvm_prog.m4.orig	2022-01-21 02:27:51.508001986 +0000
 +++ m4/find_llvm_prog.m4

@@ -1,7 +1,7 @@
-$NetBSD: patch-ghc_ghc.mk,v 1.1 2022/02/06 05:36:16 pho Exp $
+$NetBSD: patch-ghc_ghc.mk,v 1.2 2022/02/08 07:45:02 pho Exp $
 
-The stage-0 compiler isn't guaranteed to have an event-logging RTS. Not
-upstreamed yet.
+The stage-0 compiler isn't guaranteed to have an event-logging RTS.
+https://gitlab.haskell.org/ghc/ghc/-/merge_requests/7518
 
 --- ghc/ghc.mk.orig	2022-01-21 03:38:06.464699891 +0000
 +++ ghc/ghc.mk
