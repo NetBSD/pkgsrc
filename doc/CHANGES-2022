@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.641 2022/02/08 12:36:06 pin Exp $
+$NetBSD: CHANGES-2022,v 1.642 2022/02/08 12:37:22 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -869,3 +869,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-xbe to 0.0.3 [adam 2022-02-08]
 	Updated graphics/py-pygraphviz to 1.8 [adam 2022-02-08]
 	Updated x11/kitty to 0.24.2 [pin 2022-02-08]
+	Updated sysutils/macchina to 6.0.6 [pin 2022-02-08]
