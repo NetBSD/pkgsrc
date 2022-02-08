@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/02/05 22:06:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/02/08 11:00:19 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -54,6 +54,9 @@ ${PYSITELIB}/pygraphviz/tests/test_node_attributes.pyo
 ${PYSITELIB}/pygraphviz/tests/test_readwrite.py
 ${PYSITELIB}/pygraphviz/tests/test_readwrite.pyc
 ${PYSITELIB}/pygraphviz/tests/test_readwrite.pyo
+${PYSITELIB}/pygraphviz/tests/test_repr_mimebundle.py
+${PYSITELIB}/pygraphviz/tests/test_repr_mimebundle.pyc
+${PYSITELIB}/pygraphviz/tests/test_repr_mimebundle.pyo
 ${PYSITELIB}/pygraphviz/tests/test_scraper.py
 ${PYSITELIB}/pygraphviz/tests/test_scraper.pyc
 ${PYSITELIB}/pygraphviz/tests/test_scraper.pyo
