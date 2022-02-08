@@ -1,7 +1,17 @@
-$NetBSD: patch-configure.ac,v 1.1 2022/02/06 05:36:16 pho Exp $
+$NetBSD: patch-configure.ac,v 1.2 2022/02/08 07:45:02 pho Exp $
 
-Disable DTrace support on solaris2.
-XXX: But why?
+Hunk #0, #3:
+  The stage-0 compiler isn't guaranteed to have an event-logging RTS.
+  https://gitlab.haskell.org/ghc/ghc/-/merge_requests/7518
+
+Hunk #1:
+  Fix build on OmniOS and possibly other Solaris-based OSes too: when its
+  ln(1) is asked to create a hard link to a symbolic one, it doesn't follow
+  the symlink first.
+
+Hunk #2:
+  Disable DTrace support on solaris2.
+  XXX: But why?
 
 --- configure.ac.orig	2022-01-25 09:29:55.257778230 +0000
 +++ configure.ac
