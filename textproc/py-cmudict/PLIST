@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/09 01:11:07 gutteridge Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/cmudict/VERSION
+${PYSITELIB}/cmudict/__init__.py
+${PYSITELIB}/cmudict/__init__.pyc
+${PYSITELIB}/cmudict/__init__.pyo
+${PYSITELIB}/cmudict/data/LICENSE
+${PYSITELIB}/cmudict/data/README
+${PYSITELIB}/cmudict/data/README.developer
+${PYSITELIB}/cmudict/data/cmudict.dict
+${PYSITELIB}/cmudict/data/cmudict.phones
+${PYSITELIB}/cmudict/data/cmudict.symbols
+${PYSITELIB}/cmudict/data/cmudict.vp
