@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.651 2022/02/09 11:33:52 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.652 2022/02/09 17:04:26 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -881,3 +881,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/intel-microcode-netbsd to 20220207 [msaitoh 2022-02-09]
 	Updated www/webkit-gtk to 2.34.5 [leot 2022-02-09]
 	Updated archivers/lzip to 1.23 [fcambus 2022-02-09]
+	Added textproc/jless version 0.7.1 [pin 2022-02-09]
