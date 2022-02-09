@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.652 2022/02/09 17:04:26 pin Exp $
+$NetBSD: CHANGES-2022,v 1.653 2022/02/09 17:08:27 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -882,3 +882,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/webkit-gtk to 2.34.5 [leot 2022-02-09]
 	Updated archivers/lzip to 1.23 [fcambus 2022-02-09]
 	Added textproc/jless version 0.7.1 [pin 2022-02-09]
+	Added textproc/dbcat version 0.1.4 [pin 2022-02-09]
