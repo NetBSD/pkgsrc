@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2022/01/05 20:47:35 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2022/02/09 21:25:58 adam Exp $
 
-DISTNAME=	Pyro4-4.80
+DISTNAME=	Pyro4-4.82
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pyro4/}
 
@@ -12,8 +11,11 @@ COMMENT=	Distributed Object Technology system in Python
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-serpent>=1.27:../../devel/py-serpent
+TEST_DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.5.2:../../devel/py-msgpack
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-serpent
 
 USE_PKG_RESOURCES=	yes
 
