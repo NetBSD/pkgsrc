@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/09 17:02:46 pin Exp $
+bin/jless
