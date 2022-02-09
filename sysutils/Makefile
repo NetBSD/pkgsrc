@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.990 2022/02/05 03:14:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.991 2022/02/09 01:57:57 mrg Exp $
 #
 
 COMMENT=	System utilities
@@ -706,6 +706,9 @@ SUBDIR+=	tphdisk
 SUBDIR+=	trash
 SUBDIR+=	tre-command
 SUBDIR+=	tree
+SUBDIR+=	trusted-firmware-a-fiptool
+SUBDIR+=	trusted-firmware-a-rk3328
+SUBDIR+=	trusted-firmware-a-rk3399
 SUBDIR+=	ts
 SUBDIR+=	tsm8
 SUBDIR+=	ttyplot
