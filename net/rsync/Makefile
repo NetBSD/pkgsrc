@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.118 2022/01/19 20:01:18 kim Exp $
+# $NetBSD: Makefile,v 1.119 2022/02/09 11:52:24 nros Exp $
 
 DISTNAME=	rsync-3.2.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://rsync.samba.org/ftp/rsync/
 MASTER_SITES+=	http://rsync.samba.org/ftp/rsync/old-versions/
@@ -15,6 +15,7 @@ LICENSE=	gnu-gpl-v3
 USE_TOOLS+=		bash:run
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-rsyncd-conf=${PKG_SYSCONFDIR}/rsyncd.conf
+CONFIGURE_ARGS+=	--with-included-zlib=no
 PKG_SYSCONFSUBDIR=	rsync
 TEST_TARGET=		test
 
