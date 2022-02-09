@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21498 2022/02/09 11:33:52 fcambus Exp $
+$NetBSD: TODO,v 1.21499 2022/02/09 14:11:03 taca Exp $
 
 Suggested new packages
 ======================
@@ -1479,6 +1479,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o poppler-22.02.0
 	o posh-0.14.1
 	o postal-0.72
+	o postfix-3.7.0
 	o postgres_exporter-0.9.0
 	o postgresql-pgroonga-2.2.9
 	o postgresql-pljava-1.6.2
@@ -1687,6 +1688,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o spl-1.0pre6
 	o squeak-5.0
 	o squeak-vm-4.10.2.2765
+	o squid-5.4
 	o sqwebmail-5.8.2
 	o ssh-askpass-1.2.4.1
 	o sshguard-1.6.4
