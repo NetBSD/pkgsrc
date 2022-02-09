@@ -1,0 +1,8 @@
+A cat(1) equivalent for viewing sqlite database.
+
+-Read the database simply by running dbcat
+-Change the format of the output by choice or automatically if the output
+ is a tty or not.
+-Access individual tables
+-Pass a filter query to filter the tables
+-Use dbcat --help to see the help.
