@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/09 01:57:57 mrg Exp $
+
+BLAKE2s (arm-trusted-firmware-2.6.zip) = 00bfe714f77eb95a3fbbbe1a89667aa9ce70f55bcde4e8f0a8c36ac36d78ece1
+SHA512 (arm-trusted-firmware-2.6.zip) = 3d5ef0f39017aad6bc469ba367604941e0aa7f5ce69f1709492e282aaff8188ff18ee7a224271c3d6c0479cac98954feb6faf9355c83a7351d8693ae61beac03
+Size (arm-trusted-firmware-2.6.zip) = 8010252 bytes
