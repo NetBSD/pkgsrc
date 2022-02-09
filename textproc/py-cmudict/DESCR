@@ -1,0 +1,3 @@
+CMUdict is a versioned Python wrapper package for the CMU Pronouncing
+Dictionary data files. The main purpose is to expose the data with little
+or no assumption on how it is to be used.
