@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2022/01/04 20:53:38 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/02/09 21:24:58 adam Exp $
 
-DISTNAME=	serpent-1.28
+DISTNAME=	serpent-1.40
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/serpent/}
 
@@ -12,6 +11,8 @@ COMMENT=	Simple serialization library
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
