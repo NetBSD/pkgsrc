@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.160 2022/01/21 11:25:58 leot Exp $
+$NetBSD: distinfo,v 1.161 2022/02/09 10:16:41 leot Exp $
 
-BLAKE2s (webkitgtk-2.34.4.tar.xz) = b175a3f4347885bca52d08c26b57741712d69514e5df84d4a6a117f528bb6028
-SHA512 (webkitgtk-2.34.4.tar.xz) = 1a511ac6cb83cb602ecd8a56b3f6d00668de7fca74fcd5c6ce09e36af38b41742edc0bf572780867376aa27dd67d3aa451155f71d04bcdd3cba02c1f4f014df7
-Size (webkitgtk-2.34.4.tar.xz) = 24388604 bytes
+BLAKE2s (webkitgtk-2.34.5.tar.xz) = 4da7b6801b0a269f4625f8a1d2c1e418aba82febb1b5baba9993bb384df2c133
+SHA512 (webkitgtk-2.34.5.tar.xz) = a708e23bb6bcc6b281f1de35f4c56a5360b8212a3749d931f8a3c39402761f30d7524d0bddf4e6cfb1b2fc753df28853dceb476c432bac3c453e4b2123e7e9d5
+Size (webkitgtk-2.34.5.tar.xz) = 24393772 bytes
 SHA1 (patch-Source_JavaScriptCore_Scripts_check-xcfilelists.sh) = f4f117e6c1cd8eb8e4905f74946e0367156ed528
 SHA1 (patch-Source_JavaScriptCore_Scripts_generate-unified-sources.sh) = 308a7c8f687253b4fc75de0c66016dd18666e697
 SHA1 (patch-Source_JavaScriptCore_assembler_ARM64Assembler.h) = 79c282ca90d0ba2ef4769da40d4648f5f709951b
