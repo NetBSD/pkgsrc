@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1277 2022/02/07 15:27:03 wiz Exp $
+# $NetBSD: Makefile,v 1.1278 2022/02/09 01:13:33 gutteridge Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -963,6 +963,7 @@ SUBDIR+=	py-breathe
 SUBDIR+=	py-cElementTree
 SUBDIR+=	py-cabocha
 SUBDIR+=	py-cmTemplate
+SUBDIR+=	py-cmudict
 SUBDIR+=	py-color
 SUBDIR+=	py-colored
 SUBDIR+=	py-colour
