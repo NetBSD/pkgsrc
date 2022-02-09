@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.649 2022/02/09 05:57:53 msaitoh Exp $
+$NetBSD: CHANGES-2022,v 1.650 2022/02/09 10:16:58 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -879,3 +879,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ugrep to 3.7.2 [adam 2022-02-08]
 	Added textproc/py-cmudict version 1.0.2 [gutteridge 2022-02-09]
 	Updated sysutils/intel-microcode-netbsd to 20220207 [msaitoh 2022-02-09]
+	Updated www/webkit-gtk to 2.34.5 [leot 2022-02-09]
