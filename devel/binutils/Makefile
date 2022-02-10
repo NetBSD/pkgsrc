@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2022/01/24 15:10:46 fcambus Exp $
+# $NetBSD: Makefile,v 1.103 2022/02/10 12:47:12 fcambus Exp $
 
 DISTNAME=	binutils-2.37
 PKGREVISION=	2
@@ -53,7 +53,7 @@ PLIST_VARS+=	ctf gas gold gprof ld
 .include "../../mk/bsd.prefs.mk"
 
 #
-# libctf does not build on thes platforms at present.
+# libctf does not build on these platforms at present.
 #
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "Linux"
 CONFIGURE_ARGS+=	--disable-libctf
