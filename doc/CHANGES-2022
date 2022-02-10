@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.665 2022/02/10 14:46:53 he Exp $
+$NetBSD: CHANGES-2022,v 1.666 2022/02/10 15:48:21 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -898,3 +898,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/py-xarray to 0.21.1 [adam 2022-02-10]
 	Updated math/py-arviz to 0.11.4 [adam 2022-02-10]
 	Updated misc/py-ansi to 0.3.6 [adam 2022-02-10]
+	Updated net/yt-dlp to 2022.2.4 [schmonz 2022-02-10]
