@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.87 2021/11/14 14:47:11 schmonz Exp $
+# $NetBSD: Linux.mk,v 1.88 2022/02/10 21:22:44 schmonz Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -77,6 +77,9 @@ LIBABISUFFIX?=		/powerpc64le-linux-gnu
 _OPSYS_SYSTEM_RPATH=	/lib:/usr/lib:/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}
 _OPSYS_LIB_DIRS?=	/lib /usr/lib /lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX}
 .  endif
+.elif exists(/etc/arch-release)
+_OPSYS_SYSTEM_RPATH=	/lib:/usr/lib
+_OPSYS_LIB_DIRS?=	/lib /usr/lib
 .else
 _OPSYS_SYSTEM_RPATH=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}
 _OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX}
