@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/07/23 07:26:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/02/10 21:23:32 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -80,3 +80,4 @@ ${PYSITELIB}/certbot_apache/_internal/parsernode_util.pyc
 ${PYSITELIB}/certbot_apache/_internal/parsernode_util.pyo
 ${PYSITELIB}/certbot_apache/_internal/tls_configs/current-options-ssl-apache.conf
 ${PYSITELIB}/certbot_apache/_internal/tls_configs/old-options-ssl-apache.conf
+${PYSITELIB}/certbot_apache/py.typed
