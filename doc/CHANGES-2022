@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.653 2022/02/09 17:08:27 pin Exp $
+$NetBSD: CHANGES-2022,v 1.654 2022/02/10 05:18:27 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -883,3 +883,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated archivers/lzip to 1.23 [fcambus 2022-02-09]
 	Added textproc/jless version 0.7.1 [pin 2022-02-09]
 	Added textproc/dbcat version 0.1.4 [pin 2022-02-09]
+	Updated editors/retext to 7.2.3 [gutteridge 2022-02-10]
