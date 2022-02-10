@@ -1,4 +1,4 @@
-# $NetBSD: find-headers.mk,v 1.4 2021/01/02 12:08:03 mef Exp $
+# $NetBSD: find-headers.mk,v 1.5 2022/02/10 18:58:37 gutteridge Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -51,7 +51,7 @@
 #
 # After including this file, the following variables are defined:
 #
-#    <var> is the first of the header file listed in
+#    <var> is the first of the header files listed in
 #	${BUILTIN_FIND_HEADERS.<var>} that is "found" in
 #	${BUILTIN_INCLUDE_DIRS}, or else it is "__nonexistent__".
 #
