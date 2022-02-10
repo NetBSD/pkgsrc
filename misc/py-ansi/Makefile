@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/01/10 20:26:31 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/02/10 14:30:24 adam Exp $
 
-DISTNAME=	ansi-0.2.0
+DISTNAME=	ansi-0.3.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansi/}
 
@@ -13,5 +12,12 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/pyversion.mk"
+.if ${_PYTHON_VERSION} < 38
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.6.4:../../devel/py-typing-extensions
+.endif
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
