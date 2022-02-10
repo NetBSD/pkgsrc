@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/02/08 10:49:04 nia Exp $
+# $NetBSD: Makefile,v 1.3 2022/02/10 07:35:52 nia Exp $
 
 DISTNAME=	arcticfox-39.0
 CATEGORIES=	www
@@ -82,7 +82,6 @@ REPLACE_PYTHON+=		xpcom/typelib/xpt/tools/xpt.py
 PYTHON_VERSIONS_ACCEPTED=	27
 TOOL_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
-NOT_PAX_MPROTECT_SAFE+=		bin/arcticfox
 NOT_PAX_MPROTECT_SAFE+=		lib/${PKGNAME_NOREV}/arcticfox
 NOT_PAX_MPROTECT_SAFE+=		lib/${PKGNAME_NOREV}/arcticfox-bin
 
