@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.657 2022/02/10 11:35:21 leot Exp $
+$NetBSD: CHANGES-2022,v 1.658 2022/02/10 13:43:34 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -889,3 +889,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-nbconvert to 6.4.2 [adam 2022-02-10]
 	Updated graphics/py-pygraphviz to 1.9 [adam 2022-02-10]
 	Updated news/sfeed to 1.2 [leot 2022-02-10]
+	Updated www/htmldoc to 1.9.15 [fcambus 2022-02-10]
