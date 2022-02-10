@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/01/22 13:48:34 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/02/10 15:48:11 schmonz Exp $
 bin/yt-dlp
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -711,6 +711,9 @@ ${PYSITELIB}/yt_dlp/extractor/eporner.pyo
 ${PYSITELIB}/yt_dlp/extractor/eroprofile.py
 ${PYSITELIB}/yt_dlp/extractor/eroprofile.pyc
 ${PYSITELIB}/yt_dlp/extractor/eroprofile.pyo
+${PYSITELIB}/yt_dlp/extractor/ertgr.py
+${PYSITELIB}/yt_dlp/extractor/ertgr.pyc
+${PYSITELIB}/yt_dlp/extractor/ertgr.pyo
 ${PYSITELIB}/yt_dlp/extractor/escapist.py
 ${PYSITELIB}/yt_dlp/extractor/escapist.pyc
 ${PYSITELIB}/yt_dlp/extractor/escapist.pyo
@@ -1404,6 +1407,9 @@ ${PYSITELIB}/yt_dlp/extractor/muenchentv.pyo
 ${PYSITELIB}/yt_dlp/extractor/musescore.py
 ${PYSITELIB}/yt_dlp/extractor/musescore.pyc
 ${PYSITELIB}/yt_dlp/extractor/musescore.pyo
+${PYSITELIB}/yt_dlp/extractor/musicdex.py
+${PYSITELIB}/yt_dlp/extractor/musicdex.pyc
+${PYSITELIB}/yt_dlp/extractor/musicdex.pyo
 ${PYSITELIB}/yt_dlp/extractor/mwave.py
 ${PYSITELIB}/yt_dlp/extractor/mwave.pyc
 ${PYSITELIB}/yt_dlp/extractor/mwave.pyo
