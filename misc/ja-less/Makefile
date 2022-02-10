@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/05/16 15:56:54 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2022/02/10 07:45:23 wiz Exp $
 
 DISTNAME=	less-382
 PKGNAME=	ja-${DISTNAME}.262.03
@@ -18,6 +18,8 @@ MAINTAINER=	komine@cc.meisei-u.ac.jp
 # HOMEPAGE is gone.
 #HOMEPAGE=	http://www25.big.jp/~jam/less/
 COMMENT=	Less + zcat + ISO-2022 + UTF-8 - a pager similar to more and pg
+
+CONFLICTS+=	jless-[0-9]*
 
 GNU_CONFIGURE=	yes
 
