@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:18:44 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/02/10 20:54:23 adam Exp $
 
-BLAKE2s (pathlib2-2.3.6.tar.gz) = fdb23c037f7df5069b1c1acf6a0373d4142a8eae2b96428f096b900f2c3fd005
-SHA512 (pathlib2-2.3.6.tar.gz) = ed41792338d5808cdd068f6c04021b2918e5376fc6297f163712dec6b00a1f96f7905eeea0a601c333d253e0f1663a0472d842b0d920d680992045bbc36db970
-Size (pathlib2-2.3.6.tar.gz) = 38435 bytes
+BLAKE2s (pathlib2-2.3.7.tar.gz) = 16a9a6c40d926c6fe8983ec4947e275347294692b0c422f09ac5e73e97bfeff6
+SHA512 (pathlib2-2.3.7.tar.gz) = 7f87412f987fa3ddcfea9611a814a9bfe38967469caa4cd91348aa7757a7017716d5677a4afeedbf93647ca2dbc1cc9052dd1cba52444f505ba670aa260eeccc
+Size (pathlib2-2.3.7.tar.gz) = 38804 bytes
