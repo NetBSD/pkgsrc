@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.670 2022/02/10 21:26:12 adam Exp $
+$NetBSD: CHANGES-2022,v 1.671 2022/02/10 22:03:29 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -919,3 +919,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-certbot-dns-route53 to 1.23.0 [adam 2022-02-10]
 	Updated security/py-certbot-dns-sakuracloud to 1.23.0 [adam 2022-02-10]
 	Updated security/py-certbot-nginx to 1.23.0 [adam 2022-02-10]
+	Updated sysutils/dusage to 0.2.3 [pin 2022-02-10]
