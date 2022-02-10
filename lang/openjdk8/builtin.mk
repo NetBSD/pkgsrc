@@ -1,10 +1,11 @@
-# $NetBSD: builtin.mk,v 1.4 2019/11/03 19:04:04 rillig Exp $
+# $NetBSD: builtin.mk,v 1.5 2022/02/10 18:55:10 gutteridge Exp $
 
 BUILTIN_PKG:=	openjdk8
 
 BUILTIN_FIND_FILES_VAR:=	OJDK8
 BUILTIN_FIND_FILES.OJDK8=	\
-	/usr/lib64/jvm/java-1.8.0-openjdk-1.8.0/bin/javac
+	/usr/lib64/jvm/java-1.8.0-openjdk-1.8.0/bin/javac	\
+	/usr/lib/jvm/java-1.8.0-openjdk/bin/javac
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
