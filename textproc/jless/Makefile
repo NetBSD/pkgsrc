@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/02/09 17:02:46 pin Exp $
+# $NetBSD: Makefile,v 1.2 2022/02/10 07:45:23 wiz Exp $
 
 DISTNAME=	jless-0.7.1
 CATEGORIES=	textproc
@@ -9,6 +9,8 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/PaulJuliusMartinez/jless/
 COMMENT=	Command-line pager for JSON data
 LICENSE=	mit
+
+CONFLICTS+=	ja-less-[0-9]*
 
 .include "cargo-depends.mk"
 
