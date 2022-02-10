@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2021/12/08 16:02:41 adam Exp $
+# $NetBSD: Makefile,v 1.79 2022/02/10 02:12:46 gutteridge Exp $
 
 PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
@@ -11,6 +11,8 @@ MASTER_SITES=	https://archive.xfce.org/src/xfce/thunar/${VERSION:R}/
 
 HOMEPAGE=	https://docs.xfce.org/xfce/thunar/start
 COMMENT=	Xfce file manager
+
+USE_LANGUAGES=	c99
 
 PKGCONFIG_OVERRIDE+=	thunarx/thunarx-3.pc.in
 
