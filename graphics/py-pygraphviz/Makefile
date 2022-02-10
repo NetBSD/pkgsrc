@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2022/02/08 11:00:19 adam Exp $
+# $NetBSD: Makefile,v 1.14 2022/02/10 10:53:43 adam Exp $
 
-DISTNAME=	pygraphviz-1.8
+DISTNAME=	pygraphviz-1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygraphviz/}
