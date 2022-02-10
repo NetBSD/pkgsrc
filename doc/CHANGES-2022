@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.660 2022/02/10 13:56:50 pin Exp $
+$NetBSD: CHANGES-2022,v 1.661 2022/02/10 14:03:22 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -892,3 +892,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/htmldoc to 1.9.15 [fcambus 2022-02-10]
 	Updated www/htmldoc-x11 to 1.9.15 [fcambus 2022-02-10]
 	Added net/asuka version 0.8.3 [pin 2022-02-10]
+	Updated devel/binutils to 2.38 [fcambus 2022-02-10]
