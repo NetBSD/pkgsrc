@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2021/12/18 14:14:24 leot Exp $
+$NetBSD: distinfo,v 1.21 2022/02/10 11:35:16 leot Exp $
 
-BLAKE2s (sfeed-1.1.tar.gz) = 1d6de41cf8b6b57ffe2ca0d47c3f06a0082a746666f2e152134b431cd1b76865
-SHA512 (sfeed-1.1.tar.gz) = 8d05fb8578a7475779a14105376a3b5238a297193a0f98c9123c90d10c7ebe2fe9bc72eef694c6c9aa94f50fa3c96491cdd511d8d7b167ea8e25dfe772dada6e
-Size (sfeed-1.1.tar.gz) = 60644 bytes
+BLAKE2s (sfeed-1.2.tar.gz) = 0e579875e0e6044d16b9bdae23bad931aec3fe1004512ac0d6c561f2585f6a72
+SHA512 (sfeed-1.2.tar.gz) = 4307f11ab02310a881717d99892486152dad93ecb1d6526401e60d6275c1610d90599de9784d9878f9ebb5aa34881abd1daa348c977d9ef6758095be74216a29
+Size (sfeed-1.2.tar.gz) = 62575 bytes
