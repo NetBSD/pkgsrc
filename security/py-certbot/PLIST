@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2021/09/15 12:05:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2022/02/10 21:23:32 adam Exp $
 bin/certbot-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -195,6 +195,7 @@ ${PYSITELIB}/certbot/plugins/storage.pyo
 ${PYSITELIB}/certbot/plugins/util.py
 ${PYSITELIB}/certbot/plugins/util.pyc
 ${PYSITELIB}/certbot/plugins/util.pyo
+${PYSITELIB}/certbot/py.typed
 ${PYSITELIB}/certbot/reverter.py
 ${PYSITELIB}/certbot/reverter.pyc
 ${PYSITELIB}/certbot/reverter.pyo
