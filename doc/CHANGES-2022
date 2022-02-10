@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.664 2022/02/10 14:31:34 adam Exp $
+$NetBSD: CHANGES-2022,v 1.665 2022/02/10 14:46:53 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -889,6 +889,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-nbconvert to 6.4.2 [adam 2022-02-10]
 	Updated graphics/py-pygraphviz to 1.9 [adam 2022-02-10]
 	Updated news/sfeed to 1.2 [leot 2022-02-10]
+	Updated net/unbound to 1.15.0 [he 2022-02-10]
 	Updated www/htmldoc to 1.9.15 [fcambus 2022-02-10]
 	Updated www/htmldoc-x11 to 1.9.15 [fcambus 2022-02-10]
 	Added net/asuka version 0.8.3 [pin 2022-02-10]
