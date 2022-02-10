@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2022/02/06 05:36:15 pho Exp $
+# $NetBSD: Makefile,v 1.2 2022/02/10 12:21:11 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
 DISTNAME=	ghc-9.2.1-src
 PKGNAME=	${DISTNAME:S/-src$//}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://downloads.haskell.org/~ghc/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -190,8 +191,11 @@ post-configure:
 # Substitutions for INSTALL and DEINSTALL that handles package.cache.
 FILES_SUBST+=	GHC_VERSION=${PKGVERSION_NOREV}
 
-# We don't want package.cache to be in the PLIST.
+INSTALLATION_DIRS+=	share/bash-completion/completions
 post-install:
+	${INSTALL_DATA} ${WRKSRC}/utils/completion/ghc.bash \
+		${DESTDIR}${PREFIX}/share/bash-completion/completions/ghc
+# We don't want package.cache to be in the PLIST.
 	${RM} -f ${DESTDIR}${PREFIX}/lib/${PKGNAME_NOREV}/package.conf.d/package.cache
 
 
