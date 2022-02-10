@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.32 2022/01/05 15:41:19 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2022/02/10 21:23:32 adam Exp $
 
-PKGREVISION= 2
 .include "../../security/py-certbot/Makefile.common"
 
 DISTNAME=	certbot-${CERTBOT_VERSION}
@@ -11,9 +10,9 @@ COMMENT=	Client for the Let's Encrypt CA
 DEPENDS+=	${PYPKGPREFIX}-acme>=${CERTBOT_VERSION}:../../security/py-acme
 DEPENDS+=	${PYPKGPREFIX}-configargparse>=0.9.3:../../devel/py-configargparse
 DEPENDS+=	${PYPKGPREFIX}-configobj>=5.0.6:../../devel/py-configobj
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=2.1.4:../../security/py-cryptography
+DEPENDS+=	${PYPKGPREFIX}-cryptography>=2.5.0:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-distro>=1.0.1:../../devel/py-distro
-DEPENDS+=	${PYPKGPREFIX}-josepy>=1.1.0:../../security/py-josepy
+DEPENDS+=	${PYPKGPREFIX}-josepy>=1.9.0:../../security/py-josepy
 DEPENDS+=	${PYPKGPREFIX}-parsedatetime>=2.4:../../time/py-parsedatetime
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-rfc3339-[0-9]*:../../time/py-rfc3339
@@ -26,6 +25,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
+TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 
 BUILD_DEFS+=		VARBASE
 

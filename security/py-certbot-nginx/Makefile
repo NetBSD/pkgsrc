@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.18 2022/01/04 20:54:39 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2022/02/10 21:23:34 adam Exp $
 
-PKGREVISION= 1
 .include "../../security/py-certbot/Makefile.common"
 
 DISTNAME=	certbot-nginx-${CERTBOT_VERSION}
@@ -13,7 +12,6 @@ DEPENDS+=	${PYPKGPREFIX}-acme>=${CERTBOT_VERSION}:../../security/py-acme
 DEPENDS+=	${PYPKGPREFIX}-certbot>=${CERTBOT_VERSION}:../../security/py-certbot
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=39.0.1:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.2.0:../../devel/py-pyparsing
-DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
 
 PKG_SYSCONFVAR=		nginx
 
