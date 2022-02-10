@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.668 2022/02/10 20:37:49 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.669 2022/02/10 20:54:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -901,3 +901,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/yt-dlp to 2022.2.4 [schmonz 2022-02-10]
 	Updated graphics/libansilove to 1.2.9 [fcambus 2022-02-10]
 	Updated graphics/ansilove to 4.1.6 [fcambus 2022-02-10]
+	Updated net/py-digitalocean to 1.17.0 [adam 2022-02-10]
+	Updated devel/py-pathlib2 to 2.3.7 [adam 2022-02-10]
