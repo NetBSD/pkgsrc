@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.37 2021/09/11 15:54:39 fcambus Exp $
+@comment $NetBSD: PLIST.common,v 1.38 2022/02/10 14:03:07 fcambus Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${PLIST.gas}${MACHINE_GNU_PLATFORM}/bin/as
 ${PLIST.gld}${MACHINE_GNU_PLATFORM}/bin/ld
@@ -76,6 +76,7 @@ include/symcat.h
 ${PLIST.gas}info/as.info
 info/bfd.info
 info/binutils.info
+${PLIST.ctf}info/ctf-spec.info
 ${PLIST.gprof}info/gprof.info
 ${PLIST.gld}info/ld.info
 ${PLIST.gld}lib/bfd-plugins/libdep.so
