@@ -1,7 +1,8 @@
-# $NetBSD: u-boot-rockchip.mk,v 1.11 2021/06/25 08:28:57 mrg Exp $
+# $NetBSD: u-boot-rockchip.mk,v 1.12 2022/02/11 22:06:22 mrg Exp $
 #
 # should be used by sysutils/u-boot-rock64/Makefile
 # used by sysutils/u-boot-rockpro64/Makefile
+# used by sysutils/u-boot-rockpro64-ayufan/Makefile
 # used by sysutils/u-boot-pinebook-pro/Makefile
 
 # Common makefile fragment for rockchip based u-boot targets.
@@ -13,19 +14,42 @@
 
 UBOOT_VERSION?=		2020.01-rc5
 
-MAKE_ENV+=		BL31=${PREFIX}/share/arm-trusted-firmware/${UBOOT_IMAGE_TYPE}/bl31.elf
+.if ${UBOOT_IMAGE_TYPE} == "rk3399"
+TFA=			trusted-firmware-a
+.else
+TFA=			arm-trusted-firmware
+.endif
+
+# Earlier SPIs were at sector 1024, but newer u-boot has a DT that
+# loads them from 768.  Until all are converted, leave the default
+# at 1024.
+UBOOT_RK_SPI_OFF?=	1024
+
+MAKE_ENV+=		BL31=${PREFIX}/share/${TFA}/${UBOOT_IMAGE_TYPE}/bl31.elf
 
 post-build:
-# wrap everything up into a single file that can be written to an SD card
+# wrap everything up into a single file that can be written to an SD card.
+# note that the SD image starts at sector 64, and 64 + 448 = 512, so the
+# u-boot.itb is loaded at 256KiB on the card iteslf.
 	cp ${WRKSRC}/idbloader.img ${WRKSRC}/rksd_loader.img
 	dd if=${WRKSRC}/u-boot.itb seek=448 conv=notrunc of=${WRKSRC}/rksd_loader.img
+.if defined(UBOOT_MKIMAGE_RKSPI)
+	 ${WRKSRC}/tools/mkimage \
+		-n rk3399 \
+		-T rkspi \
+		-d ${WRKSRC}/tpl/u-boot-tpl.bin:${WRKSRC}/spl/u-boot-spl.bin \
+		${WRKSRC}/rkspi_loader.img
+.else
 # build SPI NOR flash image. See dev-ayufan/build.mk.
 	set -e; b=0; while [ "$$b" != 128 ]; do \
 		dd bs=2k count=1; \
 		dd if=/dev/zero bs=2k count=1; \
 		b=$$(expr $$b + 1); \
 	done < ${WRKSRC}/idbloader.img > ${WRKSRC}/rkspi_loader.img 2> /dev/null
-	dd if=${WRKSRC}/u-boot.itb seek=1024 conv=notrunc of=${WRKSRC}/rkspi_loader.img
+.endif
+	dd if=${WRKSRC}/u-boot.itb seek=${UBOOT_RK_SPI_OFF} conv=notrunc of=${WRKSRC}/rkspi_loader.img
 
-.include "../../sysutils/arm-trusted-firmware-${UBOOT_IMAGE_TYPE}/buildlink3.mk"
+BUILD_TARGET+= V=1
+
+.include "../../sysutils/${TFA}-${UBOOT_IMAGE_TYPE}/buildlink3.mk"
 .include "../../sysutils/u-boot/u-boot-arm64.mk"
