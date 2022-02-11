@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.699 2022/02/11 09:46:26 pho Exp $
+$NetBSD: CHANGES-2022,v 1.700 2022/02/11 09:47:53 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -951,3 +951,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/hs-extra to 1.7.10 [pho 2022-02-11]
 	Updated audio/termusic to 0.6.10 [pin 2022-02-11]
 	Updated devel/hs-ansi-terminal to 0.11.1 [pho 2022-02-11]
+	Updated devel/alex to 3.2.7.1 [pho 2022-02-11]
