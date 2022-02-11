@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.684 2022/02/11 09:22:15 pho Exp $
+$NetBSD: CHANGES-2022,v 1.685 2022/02/11 09:23:48 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -937,3 +937,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/hs-prettyprinter to 1.7.1 [pho 2022-02-11]
 	Updated devel/hs-indexed-traversable to 0.1.2 [pho 2022-02-11]
 	Updated devel/hs-unix-compat to 0.5.4nb2 [pho 2022-02-11]
+	Updated devel/hs-fingertree to 0.1.5.0nb2 [pho 2022-02-11]
