@@ -1,4 +1,4 @@
-# $NetBSD: u-boot-rockchip.mk,v 1.12 2022/02/11 22:06:22 mrg Exp $
+# $NetBSD: u-boot-rockchip.mk,v 1.13 2022/02/11 23:03:50 mrg Exp $
 #
 # should be used by sysutils/u-boot-rock64/Makefile
 # used by sysutils/u-boot-rockpro64/Makefile
@@ -12,13 +12,9 @@
 #	UBOOT_IMAGE_TYPE	("rk3399", "rk3328")
 #
 
-UBOOT_VERSION?=		2020.01-rc5
+UBOOT_VERSION?=		2022.01
 
-.if ${UBOOT_IMAGE_TYPE} == "rk3399"
 TFA=			trusted-firmware-a
-.else
-TFA=			arm-trusted-firmware
-.endif
 
 # Earlier SPIs were at sector 1024, but newer u-boot has a DT that
 # loads them from 768.  Until all are converted, leave the default
