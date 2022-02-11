@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/04/25 04:01:55 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/02/11 13:32:14 pho Exp $
 lib/commonmark-extensions-${PKGVERSION}/${HS_VERSION}/package-description
 lib/commonmark-extensions-${PKGVERSION}/${HS_VERSION}/package-id
 lib/${HS_PLATFORM}/${HS_PKGID}/Commonmark/Extensions.dyn_hi
@@ -37,6 +37,9 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Commonmark/Extensions/Math.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Commonmark/Extensions/PipeTable.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Commonmark/Extensions/PipeTable.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Commonmark/Extensions/PipeTable.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Commonmark/Extensions/RebaseRelativePaths.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Commonmark/Extensions/RebaseRelativePaths.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Commonmark/Extensions/RebaseRelativePaths.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Commonmark/Extensions/Smart.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Commonmark/Extensions/Smart.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Commonmark/Extensions/Smart.p_hi
@@ -52,6 +55,9 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Commonmark/Extensions/Superscript.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Commonmark/Extensions/TaskList.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Commonmark/Extensions/TaskList.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Commonmark/Extensions/TaskList.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Commonmark/Extensions/Wikilinks.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Commonmark/Extensions/Wikilinks.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Commonmark/Extensions/Wikilinks.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -67,11 +73,13 @@ share/doc/${HS_PLATFORM}/commonmark-extensions-${PKGVERSION}/html/Commonmark-Ext
 share/doc/${HS_PLATFORM}/commonmark-extensions-${PKGVERSION}/html/Commonmark-Extensions-ImplicitHeadingReferences.html
 share/doc/${HS_PLATFORM}/commonmark-extensions-${PKGVERSION}/html/Commonmark-Extensions-Math.html
 share/doc/${HS_PLATFORM}/commonmark-extensions-${PKGVERSION}/html/Commonmark-Extensions-PipeTable.html
+share/doc/${HS_PLATFORM}/commonmark-extensions-${PKGVERSION}/html/Commonmark-Extensions-RebaseRelativePaths.html
 share/doc/${HS_PLATFORM}/commonmark-extensions-${PKGVERSION}/html/Commonmark-Extensions-Smart.html
 share/doc/${HS_PLATFORM}/commonmark-extensions-${PKGVERSION}/html/Commonmark-Extensions-Strikethrough.html
 share/doc/${HS_PLATFORM}/commonmark-extensions-${PKGVERSION}/html/Commonmark-Extensions-Subscript.html
 share/doc/${HS_PLATFORM}/commonmark-extensions-${PKGVERSION}/html/Commonmark-Extensions-Superscript.html
 share/doc/${HS_PLATFORM}/commonmark-extensions-${PKGVERSION}/html/Commonmark-Extensions-TaskList.html
+share/doc/${HS_PLATFORM}/commonmark-extensions-${PKGVERSION}/html/Commonmark-Extensions-Wikilinks.html
 share/doc/${HS_PLATFORM}/commonmark-extensions-${PKGVERSION}/html/Commonmark-Extensions.html
 share/doc/${HS_PLATFORM}/commonmark-extensions-${PKGVERSION}/html/commonmark-extensions.haddock
 share/doc/${HS_PLATFORM}/commonmark-extensions-${PKGVERSION}/html/doc-index.html
