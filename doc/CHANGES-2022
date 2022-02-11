@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.765 2022/02/11 19:55:41 pho Exp $
+$NetBSD: CHANGES-2022,v 1.766 2022/02/11 19:59:02 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1021,3 +1021,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/hs-vector-th-unbox to 0.2.2 [pho 2022-02-11]
 	Updated math/hs-semigroups to 0.20 [pho 2022-02-11]
 	Updated devel/hs-storable-record to 0.0.6 [pho 2022-02-11]
+	Updated devel/hs-optparse-applicative to 0.17.0.0 [pho 2022-02-11]
