@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:04 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/02/11 18:02:34 pho Exp $
 
-BLAKE2s (vector-th-unbox-0.2.1.9.tar.gz) = 7162ad680ac501d0939f70feec53e02eae0a5c99a39a5a7af720c12eb4302e79
-SHA512 (vector-th-unbox-0.2.1.9.tar.gz) = 837d5cf4404c3754e737bf472866f48765f08bfa9f8b1022df2272d3a6ea2e33288a696f1aa284139752d9d0a2d7def3e7d5424cdacdf091dc8fc13f4e086487
-Size (vector-th-unbox-0.2.1.9.tar.gz) = 4998 bytes
+BLAKE2s (vector-th-unbox-0.2.2.tar.gz) = 2adb032117f76a2545ff1cc4528105d1fe4ff3c650f8e43243e960941cb4dbed
+SHA512 (vector-th-unbox-0.2.2.tar.gz) = 55af4bcced3a39464aca6dca95a8148498a698d9402a583b916aa178d58d3895cc609525416de53c0a39566b892c7b09296fc442db7851a19d071142cce72a46
+Size (vector-th-unbox-0.2.2.tar.gz) = 4864 bytes
