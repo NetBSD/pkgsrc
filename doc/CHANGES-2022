@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.703 2022/02/11 10:08:46 adam Exp $
+$NetBSD: CHANGES-2022,v 1.704 2022/02/11 10:18:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -951,8 +951,10 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/hs-extra to 1.7.10 [pho 2022-02-11]
 	Updated audio/termusic to 0.6.10 [pin 2022-02-11]
 	Updated devel/hs-ansi-terminal to 0.11.1 [pho 2022-02-11]
+	Updated wm/wmutils-core to 1.6 [pin 2022-02-11]
 	Updated devel/alex to 3.2.7.1 [pho 2022-02-11]
 	Added textproc/hs-unicode-data version 0.3.0 [pho 2022-02-11]
 	Updated textproc/hs-unicode-transforms to 0.4.0 [pho 2022-02-11]
 	Updated devel/py-prompt_toolkit to 3.0.28 [adam 2022-02-11]
 	Updated net/wireshark to 3.6.2 [adam 2022-02-11]
+	Updated wm/wmutils-opt to 1.0 [pin 2022-02-11]
