@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.695 2022/02/11 09:37:53 pho Exp $
+$NetBSD: CHANGES-2022,v 1.696 2022/02/11 09:41:07 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -947,3 +947,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/hs-memory to 0.16.0 [pho 2022-02-11]
 	Updated devel/hs-colour to 2.3.6 [pho 2022-02-11]
 	Updated devel/hs-StateVar to 1.2.2 [pho 2022-02-11]
+	Updated devel/hs-splitmix to 0.1.0.4 [pho 2022-02-11]
