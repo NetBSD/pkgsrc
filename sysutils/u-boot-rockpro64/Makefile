@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2022/02/11 22:06:23 mrg Exp $
+# $NetBSD: Makefile,v 1.17 2022/02/11 23:03:50 mrg Exp $
 
 UBOOT_TARGET=		rockpro64
 UBOOT_CONFIG=		rockpro64-rk3399_defconfig
 UBOOT_BIN=		idbloader.img rksd_loader.img rkspi_loader.img u-boot.itb
 UBOOT_IMAGE_TYPE=	rk3399
-UBOOT_VERSION?=		2022.01
 UBOOT_MKIMAGE_RKSPI=	1
 UBOOT_RK_SPI_OFF=	768
 
