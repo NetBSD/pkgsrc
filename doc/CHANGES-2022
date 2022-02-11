@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.706 2022/02/11 11:29:21 pho Exp $
+$NetBSD: CHANGES-2022,v 1.707 2022/02/11 11:31:55 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -963,3 +963,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-zope.proxy to 4.5.0 [adam 2022-02-11]
 	Updated devel/py-zope.deferredimport to 4.4 [adam 2022-02-11]
 	Updated textproc/hs-jira-wiki-markup to 1.4.0 [pho 2022-02-11]
+	Updated textproc/hs-commonmark to 0.2.1.1 [pho 2022-02-11]
