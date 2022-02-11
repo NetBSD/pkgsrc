@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.704 2022/02/11 10:18:59 pin Exp $
+$NetBSD: CHANGES-2022,v 1.705 2022/02/11 11:24:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -958,3 +958,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-prompt_toolkit to 3.0.28 [adam 2022-02-11]
 	Updated net/wireshark to 3.6.2 [adam 2022-02-11]
 	Updated wm/wmutils-opt to 1.0 [pin 2022-02-11]
+	Updated devel/py-zope.hookable to 5.1.0 [adam 2022-02-11]
+	Updated devel/py-zope.exceptions to 4.5 [adam 2022-02-11]
+	Updated www/py-zope.proxy to 4.5.0 [adam 2022-02-11]
+	Updated devel/py-zope.deferredimport to 4.4 [adam 2022-02-11]
