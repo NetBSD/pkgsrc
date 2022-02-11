@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:14:59 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/02/11 12:58:29 pho Exp $
 
-BLAKE2s (primitive-0.7.1.0.tar.gz) = 626d3cd0cf66a97e0414e6620ece9b41af179366db353e1cdf7f6331ae7b3cf4
-SHA512 (primitive-0.7.1.0.tar.gz) = 8ade11d0b2221cfdf042da0263b5b5367a7ca2a9b9e1141844e4a65bb0467df879c92cd3515440d715b59345860c1ec3cb3efd7a3d702269ea15e18692586367
-Size (primitive-0.7.1.0.tar.gz) = 52184 bytes
-SHA1 (patch-primitive.cabal) = 5f47485cfa72835fd9075dc6472aad85863b9462
+BLAKE2s (primitive-0.7.3.0.tar.gz) = 2c3956be68fe264c511309a0045ee1ab8a90e3ee65995d799cda1b37a234e5b5
+SHA512 (primitive-0.7.3.0.tar.gz) = 7fe593c24d990ce113c7dd155479b30a1c74aa9cfd10d2f0903dc185fc00d725b36d340e5eea6f1af7547d47bbde27339c56e2949e7f518674a7306ed8e56342
+Size (primitive-0.7.3.0.tar.gz) = 55161 bytes
