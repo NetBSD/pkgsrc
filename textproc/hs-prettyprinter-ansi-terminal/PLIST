@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/04/24 06:40:11 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/02/11 13:22:37 pho Exp $
 lib/prettyprinter-ansi-terminal-${PKGVERSION}/${HS_VERSION}/package-description
 lib/prettyprinter-ansi-terminal-${PKGVERSION}/${HS_VERSION}/package-id
 lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -17,4 +17,15 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Prettyprinter/Render/Terminal/Internal.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 share/doc/${HS_PLATFORM}/prettyprinter-ansi-terminal-${PKGVERSION}/LICENSE.md
-@pkgdir share/doc/${HS_PLATFORM}/prettyprinter-ansi-terminal-${PKGVERSION}/html
+share/doc/${HS_PLATFORM}/prettyprinter-ansi-terminal-${PKGVERSION}/html/Data-Text-Prettyprint-Doc-Render-Terminal-Internal.html
+share/doc/${HS_PLATFORM}/prettyprinter-ansi-terminal-${PKGVERSION}/html/Data-Text-Prettyprint-Doc-Render-Terminal.html
+share/doc/${HS_PLATFORM}/prettyprinter-ansi-terminal-${PKGVERSION}/html/Prettyprinter-Render-Terminal-Internal.html
+share/doc/${HS_PLATFORM}/prettyprinter-ansi-terminal-${PKGVERSION}/html/Prettyprinter-Render-Terminal.html
+share/doc/${HS_PLATFORM}/prettyprinter-ansi-terminal-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/prettyprinter-ansi-terminal-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/prettyprinter-ansi-terminal-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/prettyprinter-ansi-terminal-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/prettyprinter-ansi-terminal-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/prettyprinter-ansi-terminal-${PKGVERSION}/html/prettyprinter-ansi-terminal.haddock
+share/doc/${HS_PLATFORM}/prettyprinter-ansi-terminal-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/prettyprinter-ansi-terminal-${PKGVERSION}/html/synopsis.png
