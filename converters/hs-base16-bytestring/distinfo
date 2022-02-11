@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:06:40 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/02/11 12:53:20 pho Exp $
 
-BLAKE2s (base16-bytestring-1.0.1.0.tar.gz) = 4fd6f2d21cfa74112bf8d01ab74d78338729bcb2e151bced0aa5b8b46d8e63bd
-SHA512 (base16-bytestring-1.0.1.0.tar.gz) = e95f4422c7442c8a8f05b98e0cc8c7ffe67b59f0e1b89e7016bea1cbad351a3766a0193d3499c721614aa4607cacc9aba9ed275b92188980ae67108abd28d6e6
-Size (base16-bytestring-1.0.1.0.tar.gz) = 7256 bytes
+BLAKE2s (base16-bytestring-1.0.2.0.tar.gz) = 7080a4370d31d05e0f8d2039ebb32cb11a06a2b93890edf552d94c71f2c7c77c
+SHA512 (base16-bytestring-1.0.2.0.tar.gz) = 61e483c08f3cd81c0ffa891bd6f4aa5ff222d8184880deb5aeeae8184bd6efdbb373ca6bece2cd597490492107c91a2f4fd6ca9c71c712e298bce7418b9f7135
+Size (base16-bytestring-1.0.2.0.tar.gz) = 7219 bytes
