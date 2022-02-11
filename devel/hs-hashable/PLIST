@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/23 04:50:04 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/02/11 13:00:37 pho Exp $
 lib/hashable-${PKGVERSION}/${HS_VERSION}/package-description
 lib/hashable-${PKGVERSION}/${HS_VERSION}/package-id
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable.dyn_hi
@@ -13,9 +13,15 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/Generic.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/Generic/Instances.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/Generic/Instances.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/Generic/Instances.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/Imports.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/Imports.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/Imports.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/Lifted.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/Lifted.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/Lifted.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/LowLevel.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/LowLevel.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/LowLevel.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
