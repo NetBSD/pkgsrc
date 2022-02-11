@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2022/02/11 15:12:42 micha Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/02/11 15:43:35 micha Exp $
 bin/prboom-plus
 bin/prboom-plus-game-server
 man/man5/prboom-plus.cfg.5
 man/man6/prboom-plus-game-server.6
 man/man6/prboom-plus.6
+share/applications/prboom-plus.desktop
 share/doc/prboom-plus/DeePBSPV4specs.txt
 share/doc/prboom-plus/INSTALL.pkgsrc
 share/doc/prboom-plus/MBF.txt
@@ -16,3 +17,4 @@ share/doc/prboom-plus/boom.txt
 share/doc/prboom-plus/prboom-plus-usage.txt
 share/doc/prboom-plus/umapinfo.txt
 share/doom/prboom-plus.wad
+share/icons/hicolor/scalable/apps/prboom-plus.svg
