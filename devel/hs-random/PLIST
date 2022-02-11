@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/23 06:51:27 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/02/11 12:13:47 pho Exp $
 lib/random-${PKGVERSION}/${HS_VERSION}/package-description
 lib/random-${PKGVERSION}/${HS_VERSION}/package-id
 lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 lib/${HS_PLATFORM}/${HS_PKGID}/System/Random.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/Random.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/Random.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/System/Random/GFinite.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/System/Random/GFinite.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/System/Random/GFinite.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/Random/Internal.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/Random/Internal.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/Random/Internal.p_hi
