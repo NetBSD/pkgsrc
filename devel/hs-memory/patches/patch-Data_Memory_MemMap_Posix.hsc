@@ -1,9 +1,8 @@
-$NetBSD: patch-Data_Memory_MemMap_Posix.hsc,v 1.1 2021/04/23 09:35:57 pho Exp $
+$NetBSD: patch-Data_Memory_MemMap_Posix.hsc,v 1.2 2022/02/11 09:35:09 pho Exp $
 
-Suppress a linker warning about compatibility symbol by using "capi"
-instead of "ccall".
+Use the correct symbol for msync(2) on NetBSD.
 
---- Data/Memory/MemMap/Posix.hsc.orig	2019-09-02 02:59:04.000000000 +0000
+--- Data/Memory/MemMap/Posix.hsc.orig	2022-02-06 19:45:13.938394169 +0000
 +++ Data/Memory/MemMap/Posix.hsc
 @@ -20,6 +20,7 @@
  #include <sys/mman.h>
