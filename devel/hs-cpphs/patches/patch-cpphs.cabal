@@ -1,12 +1,24 @@
-$NetBSD: patch-cpphs.cabal,v 1.1 2021/04/25 15:28:44 pho Exp $
+$NetBSD: patch-cpphs.cabal,v 1.2 2022/02/11 09:43:46 pho Exp $
 
-This is probably a Cabal bug. When a package defines both a library
-and an executable, and they share the same set of modules, Cabal
-embeds an rpath to the build directory to the executable. We don't
-appreciate that.
+Hunk #1:
+  Fix build with GHC 9.2.
+
+Hunk #2, #3:
+  This is probably a Cabal bug. When a package defines both a library and
+  an executable, and they share the same set of modules, Cabal embeds an
+  rpath to the build directory to the executable. We don't appreciate that.
 
 --- cpphs.cabal.orig	2001-09-09 01:46:40.000000000 +0000
 +++ cpphs.cabal
+@@ -52,7 +52,7 @@ Library
+       Hs-Source-Dirs: . old
+ 
+     else
+-      Build-Depends: time >=1.5 && <1.11
++      Build-Depends: time >=1.5 && <1.12
+       Hs-Source-Dirs: . new
+ 
+     Exposed-Modules:
 @@ -71,7 +71,7 @@ Library
          TimeCompat
  
@@ -16,8 +28,12 @@ appreciate that.
      Main-Is: cpphs.hs
  
      if flag(old-locale)
-@@ -84,20 +84,6 @@ Executable cpphs
-       Build-Depends: time >=1.5 && <1.11
+@@ -81,23 +81,9 @@ Executable cpphs
+       Hs-Source-Dirs: . old
+ 
+     else
+-      Build-Depends: time >=1.5 && <1.11
++      Build-Depends: time >=1.5 && <1.12
        Hs-Source-Dirs: . new
  
 -    Other-Modules:
