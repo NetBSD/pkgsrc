@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:52 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/02/11 09:31:38 pho Exp $
 
-BLAKE2s (base-orphans-0.8.4.tar.gz) = 2752bb2d5434307e2c61bb56b52e9ed7f00c4c6bf0d96cd1d30e831e34450495
-SHA512 (base-orphans-0.8.4.tar.gz) = ce59bd56c5acc38f3c5c55d619b27684a8cc35c0b14c2dac6a4cfa56d503e25c7a764210a7cb9cef93b0acc02371af0e40d8024b7a48e88a8ebdf406fed206a6
-Size (base-orphans-0.8.4.tar.gz) = 22573 bytes
+BLAKE2s (base-orphans-0.8.6.tar.gz) = c051fab01582172ed2d5430f5031e82af6934456b0ebba4294a90c4a2282bce9
+SHA512 (base-orphans-0.8.6.tar.gz) = 53cda663ee88e2ea53cf6b6d07b625a8343a6a26474bff9fa09554ee094e50429239615a892460fd676e9c3f80cbda0ad824052d785694fdbf1f2a90fa1e29ff
+Size (base-orphans-0.8.6.tar.gz) = 24255 bytes
