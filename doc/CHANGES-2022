@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.713 2022/02/11 12:07:25 pho Exp $
+$NetBSD: CHANGES-2022,v 1.714 2022/02/11 12:08:25 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -970,3 +970,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added lang/hs-hslua-marshalling version 2.1.0 [pho 2022-02-11]
 	Added lang/hs-hslua-classes version 2.1.0 [pho 2022-02-11]
 	Added lang/hs-hslua-objectorientation version 2.1.0 [pho 2022-02-11]
+	Added lang/hs-hslua-packaging version 2.1.0 [pho 2022-02-11]
