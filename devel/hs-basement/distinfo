@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:53 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/02/11 09:28:47 pho Exp $
 
-BLAKE2s (basement-0.0.11.tar.gz) = 00260efec2bf97641e5b496c0f9c3cdb280f638430697bb05aaf8f545adf2a64
-SHA512 (basement-0.0.11.tar.gz) = 2396e692fcaa080418eb90c38148dbb2465490ffaa5e35d141573d32729794dffb444bdddd55082878520a22629cfead5fdc1ac98f1d369600cc3165b64730d5
-Size (basement-0.0.11.tar.gz) = 134032 bytes
-SHA1 (patch-Basement_Block_Base.hs) = 579b9cc456cbc60f82f30190ae23d5192ca4dce7
-SHA1 (patch-Basement_BoxedArray.hs) = 29f7348fa84c73b2ae564b011844b0d79a8bfdd7
-SHA1 (patch-Basement_FinalPtr.hs) = d34b03e05117fc64f6cf556023d52f9668b3de71
-SHA1 (patch-Basement_Monad.hs) = 4cf02d67402fdf8481ea2eac7e6a8f6715bb465c
+BLAKE2s (basement-0.0.12.patch) = 9898e131f3c86404715b65b5c275382bc89039e038b100655d92b995ac532a35
+SHA512 (basement-0.0.12.patch) = da561206dadfde5e02e9b19a901494b87a74ad50d11c968dae81163ae80c1d3e989677adcb386c79952e547db30c41ca2d367a3d546d3dd87f7d129baab7dc7b
+Size (basement-0.0.12.patch) = 73019 bytes
+BLAKE2s (basement-0.0.12.tar.gz) = 1867843627cf459dc95e829310d36acb68c4c0a6d815c66bd024dea171c6aebf
+SHA512 (basement-0.0.12.tar.gz) = 4515fbecfb8280cfd669313d236a5e3b4ef45ba3fd3da8626073fa3a44a889370c48c582ea633eac5df4a5e716c495cf827deb9239274fbdb63a14d19f9682fb
+Size (basement-0.0.12.tar.gz) = 134142 bytes
