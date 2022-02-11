@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2022/02/11 15:12:42 micha Exp $
+# $NetBSD: Makefile,v 1.10 2022/02/11 15:43:35 micha Exp $
 
 DISTNAME=	prboom-plus-2.6.2
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coelckers/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -35,11 +36,17 @@ SUBST_MESSAGE.install=	Preparing INSTALL.pkgsrc file ...
 SUBST_FILES.install=	${WRKDIR}/INSTALL.pkgsrc
 SUBST_SED.install=	-e 's,DOOMWADDIR,${PREFIX}/${DOOMWADDIR},'
 
+INSTALLATION_DIRS=	share/applications share/icons/hicolor/scalable/apps
+
 pre-configure:
 	cd ${WRKSRC}; mkdir build
 	${CP} ${FILESDIR}/INSTALL.pkgsrc ${WRKDIR}
 
 post-install:
+	${INSTALL_DATA} ${WRKSRC}/ICONS/prboom-plus.desktop \
+		${DESTDIR}${PREFIX}/share/applications/prboom-plus.desktop
+	${INSTALL_DATA} ${WRKSRC}/ICONS/prboom-plus.svg \
+		${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/prboom-plus.svg
 	${INSTALL_DATA} ${WRKDIR}/INSTALL.pkgsrc \
 		${DESTDIR}${PREFIX}/share/doc/prboom-plus/INSTALL.pkgsrc
 
