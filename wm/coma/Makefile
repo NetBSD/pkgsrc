@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/05/14 10:57:51 nia Exp $
+# $NetBSD: Makefile,v 1.8 2022/02/11 12:08:38 fcambus Exp $
 
 DISTNAME=	coma-1.1
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	wm
 MASTER_SITES=	https://coma.one/releases/
 
 MAINTAINER=	fcambus@NetBSD.org
-HOMEPAGE=	https://coma.one/releases/
+HOMEPAGE=	https://coma.one/wm/
 COMMENT=	Keyboard driven tiling window manager
 LICENSE=	isc
 
