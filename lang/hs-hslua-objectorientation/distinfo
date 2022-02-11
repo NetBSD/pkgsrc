@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/11 12:07:14 pho Exp $
+
+BLAKE2s (hslua-objectorientation-2.1.0.tar.gz) = 40ab38b8feed1449fb87d2d872ba55245bba2b9da505d2929b5e7a4adb039d45
+SHA512 (hslua-objectorientation-2.1.0.tar.gz) = f7eac02ac6d1e6c18874d6ca5bdd1466ae670b264005b24e3dfccc31b8844dce4f17a9a7c5523ce332a4477bb67d2b520f97ff414352d68f1e11f59dc0cecf45
+Size (hslua-objectorientation-2.1.0.tar.gz) = 15217 bytes
