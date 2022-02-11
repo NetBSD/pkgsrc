@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.671 2022/02/10 22:03:29 pin Exp $
+$NetBSD: CHANGES-2022,v 1.672 2022/02/11 01:16:39 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -920,3 +920,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-certbot-dns-sakuracloud to 1.23.0 [adam 2022-02-10]
 	Updated security/py-certbot-nginx to 1.23.0 [adam 2022-02-10]
 	Updated sysutils/dusage to 0.2.3 [pin 2022-02-10]
+	Updated time/hs-timezone-series to 0.1.13 [pho 2022-02-11]
