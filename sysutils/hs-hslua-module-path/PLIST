@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2021/04/25 04:14:51 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/02/11 13:34:54 pho Exp $
 lib/hslua-module-path-${PKGVERSION}/${HS_VERSION}/package-description
 lib/hslua-module-path-${PKGVERSION}/${HS_VERSION}/package-id
-lib/${HS_PLATFORM}/${HS_PKGID}/Foreign/Lua/Module/Path.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Foreign/Lua/Module/Path.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Foreign/Lua/Module/Path.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/Module/Path.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/Module/Path.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/HsLua/Module/Path.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 share/doc/${HS_PLATFORM}/hslua-module-path-${PKGVERSION}/LICENSE
 share/doc/${HS_PLATFORM}/hslua-module-path-${PKGVERSION}/html/CHANGELOG.md
-share/doc/${HS_PLATFORM}/hslua-module-path-${PKGVERSION}/html/Foreign-Lua-Module-Path.html
+share/doc/${HS_PLATFORM}/hslua-module-path-${PKGVERSION}/html/HsLua-Module-Path.html
 share/doc/${HS_PLATFORM}/hslua-module-path-${PKGVERSION}/html/README.md
 share/doc/${HS_PLATFORM}/hslua-module-path-${PKGVERSION}/html/doc-index.html
 share/doc/${HS_PLATFORM}/hslua-module-path-${PKGVERSION}/html/haddock-bundle.min.js
