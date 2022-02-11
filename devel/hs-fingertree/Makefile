@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/01/18 02:48:08 pho Exp $
+# $NetBSD: Makefile,v 1.4 2022/02/11 09:23:39 pho Exp $
 
-DISTNAME=	fingertree-0.1.4.2
+DISTNAME=	fingertree-0.1.5.0
 PKGREVISION=	2
 CATEGORIES=	devel
 
