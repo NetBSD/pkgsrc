@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.627 2022/02/11 12:06:48 pho Exp $
+# $NetBSD: Makefile,v 1.628 2022/02/11 12:07:46 pho Exp $
 #
 
 COMMENT=	Programming languages
@@ -108,6 +108,7 @@ SUBDIR+=	hs-hslua
 SUBDIR+=	hs-hslua-classes
 SUBDIR+=	hs-hslua-core
 SUBDIR+=	hs-hslua-marshalling
+SUBDIR+=	hs-hslua-objectorientation
 SUBDIR+=	hs-lua
 SUBDIR+=	hugs
 SUBDIR+=	icon
