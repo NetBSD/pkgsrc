@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:56 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/02/11 12:15:07 pho Exp $
 
-BLAKE2s (file-embed-0.0.13.0.tar.gz) = 42387baa8f81c2bd6d52100b12a58304e454ae2d8a51df34527459cb410a1e28
-SHA512 (file-embed-0.0.13.0.tar.gz) = 3bd7f6267b9099d62da06dec381cddfed2b6d047382f741c62b32ec7dcfe92cf69aee25915d448fb8e673bdad98dc42f55efb3ca0f6d84aa161951cedf990ee4
-Size (file-embed-0.0.13.0.tar.gz) = 6657 bytes
+BLAKE2s (file-embed-0.0.15.0.tar.gz) = 77d5b3f936a417ba3621e5e7a27c812dda0edf3df069af2ea0bf180bbea0cd08
+SHA512 (file-embed-0.0.15.0.tar.gz) = 49020f4f7d28ad57d72d0a91853cb85bf905baa86df4f48f3992114a30d97edecb889fb21eb95de3bc3edab206379aad783b79fabde2e06fbe9d0984f92a83ce
+Size (file-embed-0.0.15.0.tar.gz) = 7119 bytes
