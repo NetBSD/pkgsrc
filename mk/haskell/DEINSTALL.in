@@ -1,13 +1,26 @@
 # -*- sh -*-
-# $NetBSD: DEINSTALL.in,v 1.2 2020/01/09 12:29:32 pho Exp $
+# $NetBSD: DEINSTALL.in,v 1.3 2022/02/11 01:11:57 pho Exp $
 #
 HASKELL_PKG_BIN="@HASKELL_PKG_BIN@"
 HASKELL_PKG_ID_FILE="@HASKELL_PKG_ID_FILE@"
+AWK="@AWK@"
+WC="@WC@"
 
 case ${STAGE} in
     DEINSTALL)
-        if [ -f ${HASKELL_PKG_ID_FILE} ]; then
-            ${HASKELL_PKG_BIN} unregister --force --ipid `cat "$HASKELL_PKG_ID_FILE"`
+        if [ -f "${HASKELL_PKG_ID_FILE}" ]; then
+            # The package contains one or more libraries. The order of
+            # unregistration is important here; libraries with higher
+            # indices may depend on those with lower ones so we need to
+            # unregister them in the reverse order.
+            ${AWK} 'BEGIN { i = 0 }
+                          { lines[i++] = $0 }
+                    END   { for (j=i-1; j>=0; )
+                                print lines[j--] }' "${HASKELL_PKG_ID_FILE}" |
+                while read pkg_id; do
+                    ${ECHO} "Unregistering \`$pkg_id'..."
+                    ${HASKELL_PKG_BIN} unregister --force --ipid "$pkg_id"
+                done
         fi
         ;;
 esac
