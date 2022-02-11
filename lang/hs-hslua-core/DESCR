@@ -1,0 +1,4 @@
+Wrappers and helpers to bridge Haskell and Lua.
+
+It builds upon the lua package, which allows to bundle a Lua interpreter
+with a Haskell program.
