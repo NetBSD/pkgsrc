@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:15:00 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/02/11 13:25:31 pho Exp $
 
-BLAKE2s (resourcet-1.2.4.2.tar.gz) = 355244cd8e990893dca307d427d1d04ced5bf95c67536b5aed84b649dc2e4d55
-SHA512 (resourcet-1.2.4.2.tar.gz) = 9f415a902261e64916e8c937a3d464eb29ff3a59fde511a17304aa4aa58c01f882d29c304375a0f23d87fa770763f09c84e428ed9f75c9b187fe2aabbbf4adf2
-Size (resourcet-1.2.4.2.tar.gz) = 16862 bytes
+BLAKE2s (resourcet-1.2.4.3.tar.gz) = 471ccb80f3fc89eda5aaf50437b1a63e1716bede278253f6e635339471bb7658
+SHA512 (resourcet-1.2.4.3.tar.gz) = 75a3b4885d9fc8273c988f830c30fc4458efd938d89dba5ae34dbe9256c9a5c6ce42beb930cfa59666e87c97bf4c616a4053ef70e917259934e15bd0fee61bdd
+Size (resourcet-1.2.4.3.tar.gz) = 17062 bytes
