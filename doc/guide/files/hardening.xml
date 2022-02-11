@@ -1,4 +1,4 @@
-<!-- $NetBSD: hardening.xml,v 1.6 2021/11/08 22:16:21 gutteridge Exp $ -->
+<!-- $NetBSD: hardening.xml,v 1.7 2022/02/11 08:02:05 nia Exp $ -->
 
 <appendix id="hardening">
 <title>Security hardening</title>
@@ -195,8 +195,8 @@ precede the program's own data sections, and non-PLT GOT is read-only;
 <listitem>
 <para>
 full: in addition to partial RELRO, every relocation is performed immediately
-when starting the program (with a slight performance impact), allowing the
-entire GOT to be read-only.
+when starting the program, allowing the entire GOT to be read-only.  This
+can greatly slow down startup of large programs.
 </para>
 </listitem>
 </itemizedlist>
