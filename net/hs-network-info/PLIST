@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/11 09:07:31 pho Exp $
+lib/network-info-${PKGVERSION}/${HS_VERSION}/package-description
+lib/network-info-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Info.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Info.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Info.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/network-info-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/network-info-${PKGVERSION}/html/Network-Info.html
+share/doc/${HS_PLATFORM}/network-info-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/network-info-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/network-info-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/network-info-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/network-info-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/network-info-${PKGVERSION}/html/network-info.haddock
+share/doc/${HS_PLATFORM}/network-info-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/network-info-${PKGVERSION}/html/synopsis.png
