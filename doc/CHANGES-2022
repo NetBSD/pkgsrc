@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.676 2022/02/11 09:07:52 pho Exp $
+$NetBSD: CHANGES-2022,v 1.677 2022/02/11 09:09:13 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -929,3 +929,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/postgresql13 to 13.6 [adam 2022-02-11]
 	Updated databases/postgresql14 to 14.2 [adam 2022-02-11]
 	Updated net/hs-network-info to 0.2.1 [pho 2022-02-11]
+	Updated textproc/hs-regex-base to 0.94.0.2 [pho 2022-02-11]
