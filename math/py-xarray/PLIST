@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/12/11 21:57:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/02/10 14:11:31 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -68,6 +68,9 @@ ${PYSITELIB}/xarray/backends/zarr.pyo
 ${PYSITELIB}/xarray/coding/__init__.py
 ${PYSITELIB}/xarray/coding/__init__.pyc
 ${PYSITELIB}/xarray/coding/__init__.pyo
+${PYSITELIB}/xarray/coding/calendar_ops.py
+${PYSITELIB}/xarray/coding/calendar_ops.pyc
+${PYSITELIB}/xarray/coding/calendar_ops.pyo
 ${PYSITELIB}/xarray/coding/cftime_offsets.py
 ${PYSITELIB}/xarray/coding/cftime_offsets.pyc
 ${PYSITELIB}/xarray/coding/cftime_offsets.pyo
@@ -285,6 +288,9 @@ ${PYSITELIB}/xarray/tests/test_backends_locks.pyo
 ${PYSITELIB}/xarray/tests/test_backends_lru_cache.py
 ${PYSITELIB}/xarray/tests/test_backends_lru_cache.pyc
 ${PYSITELIB}/xarray/tests/test_backends_lru_cache.pyo
+${PYSITELIB}/xarray/tests/test_calendar_ops.py
+${PYSITELIB}/xarray/tests/test_calendar_ops.pyc
+${PYSITELIB}/xarray/tests/test_calendar_ops.pyo
 ${PYSITELIB}/xarray/tests/test_cftime_offsets.py
 ${PYSITELIB}/xarray/tests/test_cftime_offsets.pyc
 ${PYSITELIB}/xarray/tests/test_cftime_offsets.pyo

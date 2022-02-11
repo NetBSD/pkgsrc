@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/05/16 15:56:54 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2022/02/10 10:49:42 pin Exp $
 
 DISTNAME=	less-382
 PKGNAME=	ja-${DISTNAME}.262.03

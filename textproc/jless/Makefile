@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/02/09 17:02:46 pin Exp $
+# $NetBSD: Makefile,v 1.4 2022/02/10 10:50:22 pin Exp $
 
 DISTNAME=	jless-0.7.1
+PKGREVISION=    1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PaulJuliusMartinez/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,8 +15,12 @@ LICENSE=	mit
 
 INSTALLATION_DIRS=	bin
 
+# jless command conflicts with misc/ja-less
+# Rename it at install time
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/jless ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/jless \
+		${DESTDIR}${PREFIX}/bin/j_less
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"

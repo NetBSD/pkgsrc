@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/12/15 09:48:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/02/10 21:23:34 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -39,3 +39,4 @@ ${PYSITELIB}/certbot_nginx/_internal/tls_configs/options-ssl-nginx-old.conf
 ${PYSITELIB}/certbot_nginx/_internal/tls_configs/options-ssl-nginx-tls12-only.conf
 ${PYSITELIB}/certbot_nginx/_internal/tls_configs/options-ssl-nginx-tls13-session-tix-on.conf
 ${PYSITELIB}/certbot_nginx/_internal/tls_configs/options-ssl-nginx.conf
+${PYSITELIB}/certbot_nginx/py.typed
