@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/02/04 12:33:30 micha Exp $
+# $NetBSD: Makefile,v 1.5 2022/02/11 12:45:53 micha Exp $
 
 DISTNAME=	xnedit-1.4.0
 PKGREVISION=	1
@@ -23,6 +23,9 @@ CFLAGS+=	-DUSE_DIRENT
 CFLAGS.IRIX+=	-DNO_XMIM
 # Workaround for bugs in Solaris Motif library
 CFLAGS.SunOS+=	-DROWCOLPATCH
+
+LDFLAGS.Darwin+=	-liconv
+LDFLAGS.SunOS+=		-liconv
 
 # Honor external CFLAGS
 SUBST_CLASSES+=			fix-cflags
@@ -62,7 +65,6 @@ do-install:
 .endfor
 
 .include "../../converters/libiconv/buildlink3.mk"
-LIBS+=	${BUILDLINK_LDADD.iconv}
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
