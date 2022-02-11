@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.688 2022/02/11 09:27:45 pho Exp $
+$NetBSD: CHANGES-2022,v 1.689 2022/02/11 09:28:53 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -941,3 +941,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/hs-cereal to 0.5.8.2 [pho 2022-02-11]
 	Updated devel/hs-call-stack to 0.4.0 [pho 2022-02-11]
 	Updated devel/hs-blaze-builder to 0.4.2.2 [pho 2022-02-11]
+	Updated net/unbound to 1.15.0nb1 [he 2022-02-11]
