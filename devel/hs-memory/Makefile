@@ -1,8 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2022/01/18 02:48:10 pho Exp $
+# $NetBSD: Makefile,v 1.4 2022/02/11 09:35:09 pho Exp $
 
-DISTNAME=	memory-0.15.0
-PKGREVISION=	2
+DISTNAME=	memory-0.16.0
 CATEGORIES=	devel
+
+# Compatibility with GHC 9.2:
+# https://github.com/vincenthz/hs-memory/issues/86
+PATCH_SITES=		https://gitlab.haskell.org/ghc/head.hackage/-/raw/c50d7587a23ef1260721e84f8bcc1450d73177db/patches/
+PATCHFILES=		memory-0.16.0.patch
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Memory and related abstraction stuff
