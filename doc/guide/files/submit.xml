@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.37 2020/06/20 05:31:10 rillig Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.38 2022/02/11 08:02:05 nia Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -19,11 +19,17 @@
 <sect1 id="submitting-your-package">
 <title>Submitting source packages (for non-NetBSD-developers)</title>
 
-	<para>First, check that your package is complete, compiles and
+	<para>Firstly, you can import new packages into
+	pkgsrc-wip (<quote>pkgsrc work-in-progress</quote>); see the
+	homepage at <ulink url="https://pkgsrc.org/wip/"/>
+	for details.</para>
+
+	<para>Next, check that your package is complete, compiles and
 	runs well; see <xref linkend="creating"/> and the rest of this
-	document. Next, generate an uuencoded gzipped &man.tar.1;
-	archive that contains all files that make up the package.
-	Finally, send this package to the pkgsrc bug tracking system,
+	document. Run the <filename role="pkg">pkgtools/pkglint</filename>
+	tool and fix any errors that appear.</para>
+
+	<para>Finally, send a report to the pkgsrc bug tracking system,
 	either with the &man.send-pr.1; command, or if you don't have
 	that, go to the web page
 	<ulink url="https://www.NetBSD.org/support/send-pr.html"/>,
@@ -37,18 +43,7 @@
 	<quote>pkg</quote>, the synopsis should include the package name
 	and version number, and the description field should contain a
 	short description of your package (contents of the COMMENT
-	variable or DESCR file are OK). The uuencoded package data should
-	go into the <quote>fix</quote> field.</para>
-
-	<para>If you want to submit several packages, please send a
-	separate PR for each one, it's easier for us to track things
-	that way.</para>
-
-	<para>Alternatively, you can also import new packages into
-	pkgsrc-wip (<quote>pkgsrc work-in-progress</quote>); see the
-	homepage at <ulink url="https://pkgsrc.org/wip/"/>
-	for details.</para>
-
+	variable or DESCR file are OK).</para>
 </sect1>
 
 <sect1 id="general-notes-for-changes">
