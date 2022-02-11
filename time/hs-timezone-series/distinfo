@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:24:21 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/02/11 01:16:29 pho Exp $
 
-BLAKE2s (timezone-series-0.1.9.tar.gz) = 6d6852568572af9752ba091367ded3b8687cc310d8dc38604d091e4a0d41ccb4
-SHA512 (timezone-series-0.1.9.tar.gz) = 9a716223270dfcb0ed39e2dcfb460e3540c0f2444f703c466cbd48ad5664e689aa3f6595f32e59b96fef7891aafabc03c9925367a26c2c043cb6adca2dad7a88
-Size (timezone-series-0.1.9.tar.gz) = 5812 bytes
+BLAKE2s (timezone-series-0.1.13.tar.gz) = 7192d55a840f14394264fef14a5450b27e346159add2ee06cca893c6c60762c5
+SHA512 (timezone-series-0.1.13.tar.gz) = 7e98bf1030f9df88d031f8fe28e56f50bd8e5da7615165324b5132a77aecc70da5906e2068afa43a819d711725c4c6cae8f6d17e7803f50b31038eb1634d4992
+Size (timezone-series-0.1.13.tar.gz) = 5682 bytes
