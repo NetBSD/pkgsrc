@@ -1,10 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/24 17:35:47 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/02/11 01:16:29 pho Exp $
 lib/timezone-series-${PKGVERSION}/${HS_VERSION}/package-description
 lib/timezone-series-${PKGVERSION}/${HS_VERSION}/package-id
 lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/Time/LocalTime/TimeZone/Internal/TimeVersion.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/Time/LocalTime/TimeZone/Internal/TimeVersion.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/Time/LocalTime/TimeZone/Internal/TimeVersion.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Time/LocalTime/TimeZone/Series.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Time/LocalTime/TimeZone/Series.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Time/LocalTime/TimeZone/Series.p_hi
