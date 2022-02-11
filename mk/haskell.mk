@@ -1,9 +1,8 @@
-# $NetBSD: haskell.mk,v 1.39 2022/02/11 01:11:57 pho Exp $
+# $NetBSD: haskell.mk,v 1.40 2022/02/11 05:24:06 pho Exp $
 #
-# This Makefile fragment handles Haskell Cabal packages.
-# Package configuration, building, installation, registration and
-# unregistration are fully automated.
-# See https://www.haskell.org/cabal/.
+# This Makefile fragment handles Haskell Cabal packages. Package
+# configuration, building, installation, registration and unregistration
+# are fully automated. See also mk/haskell/README.md for a packaging guide.
 #
 # Package-settable variables:
 #
