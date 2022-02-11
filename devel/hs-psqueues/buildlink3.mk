@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2022/01/18 02:48:11 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2022/02/11 13:19:59 pho Exp $
 
 BUILDLINK_TREE+=	hs-psqueues
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-psqueues
 HS_PSQUEUES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-psqueues+=	hs-psqueues>=0.2.7
-BUILDLINK_ABI_DEPENDS.hs-psqueues+=	hs-psqueues>=0.2.7.2nb1
+BUILDLINK_ABI_DEPENDS.hs-psqueues+=	hs-psqueues>=0.2.7.3
 BUILDLINK_PKGSRCDIR.hs-psqueues?=	../../devel/hs-psqueues
 
 .include "../../devel/hs-hashable/buildlink3.mk"
