@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:58:58 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/02/11 17:49:05 pho Exp $
 
-BLAKE2s (cabal-install-3.4.0.0.tar.gz) = e2f35f1d5733d630de30c056bd196b199923a42986ad03918b9d85e6b95976b2
-SHA512 (cabal-install-3.4.0.0.tar.gz) = 0fd93c86c59e3c626341be3c67e69a1502f1ce1413b4a456cd930d5449cabdaeb033ac5f47673db0e708fc194aadf8ab0aa2904b6b0f195b57907c5b40588323
-Size (cabal-install-3.4.0.0.tar.gz) = 640775 bytes
-SHA1 (patch-Distribution_Client_HashValue.hs) = 95e627979748e5e697959c89ddee22127784a079
-SHA1 (patch-Distribution_Client_HttpUtils.hs) = d3979223eebba0ac20cce1f81ad083b3d490e66d
-SHA1 (patch-cabal-install.cabal) = 21d95449ded3b7f7576fa55578d9dbad511b10f9
+BLAKE2s (cabal-install-3.6.2.0.tar.gz) = 1aa26188bfd8afa31f589f1276546b2f304359667f36d268306591b510f7302b
+SHA512 (cabal-install-3.6.2.0.tar.gz) = a02d72fd7d0bf7778b1d4f2925e0b78f6c321cb29d59d559da758bfa6a0cd17fc776bd64911db8d28a208189b35db50aceae109782a1011e059446c4c2d77ad3
+Size (cabal-install-3.6.2.0.tar.gz) = 633319 bytes
+SHA1 (patch-cabal-install.cabal) = 0f993bc694658c409b585a640fe42b6d1b82d129
+SHA1 (patch-src_Distribution_Client_FileMonitor.hs) = e68ac117c20aa698033af2ab4fd0407b99b8542d
