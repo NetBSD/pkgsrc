@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:22:02 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/02/11 13:12:50 pho Exp $
 
-BLAKE2s (regex-posix-0.96.0.0.tar.gz) = 9f7efc05aeb5e3a2a5abef320817291b605d952078495080dfbcf8db3a812170
-SHA512 (regex-posix-0.96.0.0.tar.gz) = 91bdc672a535cd1a6a65b1ae2adef43605b792ec9f99150fa239ab4353cddad47988ac7baa65673c53be36e83c8fad1511ba85fb5f7b43c51b4ae526d9af248a
-Size (regex-posix-0.96.0.0.tar.gz) = 12529 bytes
-SHA1 (patch-regex-posix.cabal) = eadf81480fe5704f4153aa57f1438259d6c97ebd
+BLAKE2s (regex-posix-0.96.0.1.tar.gz) = 78790c0bad09f9ac90b1c706d4ab3c72798a28270bdd8708b8098536df45b747
+SHA512 (regex-posix-0.96.0.1.tar.gz) = 4d6383e34fd6144af3004caee70bc83c8894c8e78c147c2e829cdbd9c74af3d1807604db0927554aea20c69a8b5c1eb3dd01d3963b2e615ee39beaa48095125b
+Size (regex-posix-0.96.0.1.tar.gz) = 12853 bytes
