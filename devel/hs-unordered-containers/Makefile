@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2022/01/18 02:48:15 pho Exp $
+# $NetBSD: Makefile,v 1.16 2022/02/11 13:43:56 pho Exp $
 
-DISTNAME=	unordered-containers-0.2.13.0
-PKGREVISION=	2
+DISTNAME=	unordered-containers-0.2.16.0
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
