@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:55:44 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/02/11 19:49:22 pho Exp $
 
-BLAKE2s (semigroups-0.19.1.tar.gz) = 9ec2b37351ca247f82b439d930a156ec8b2013e5e3879dbe0b6fb5b209c5d5b6
-SHA512 (semigroups-0.19.1.tar.gz) = ea073a8aac0d6a4d82205a31bacc672b7f4e2471403b7a97f04b080535da71054abb987af6c7e459ea16908625b03991bc90055d0447d2b0cac55fef335362d4
-Size (semigroups-0.19.1.tar.gz) = 21124 bytes
+BLAKE2s (semigroups-0.20.tar.gz) = a21dee62f7cb04566bf9214621ba27b8a7cdf43e6539e556841d335cff958278
+SHA512 (semigroups-0.20.tar.gz) = 76e61ffb854276a7760619acd093df0c80c17a58a553ba9f9be3148998c4905784ca5840041a9afb800eab220c62b59567d1be95be478c21b4446021bab7b923
+Size (semigroups-0.20.tar.gz) = 18788 bytes
