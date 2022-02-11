@@ -1,14 +1,14 @@
-$NetBSD: patch-pointfree.cabal,v 1.1 2021/04/23 15:40:31 pho Exp $
+$NetBSD: patch-pointfree.cabal,v 1.2 2022/02/11 13:17:21 pho Exp $
 
-Fix build with GHC 9.
+Fix build with GHC 9.2
 
---- pointfree.cabal.orig	2021-04-23 15:37:47.335125491 +0000
+--- pointfree.cabal.orig	2001-09-09 01:46:40.000000000 +0000
 +++ pointfree.cabal
-@@ -27,7 +27,7 @@ Library+  buildable: False
+@@ -27,7 +27,7 @@ Library
    Exposed-modules: Pointfree
    Default-language: Haskell2010
  
--  Build-depends: base >= 4.5 && < 4.14,
+-  Build-depends: base >= 4.5 && < 4.15,
 +  Build-depends: base >= 4.5 && < 5,
                   array >= 0.3 && < 0.6,
                   containers >= 0.4 && < 0.7,
@@ -17,17 +17,8 @@ Fix build with GHC 9.
    Main-is:       Main.hs
    Default-language: Haskell2010
    GHC-options:   -W
--  Build-depends: base >= 4.5 && < 4.14,
+-  Build-depends: base >= 4.5 && < 4.15,
 +  Build-depends: base >= 4.5 && < 5,
                   array >= 0.3 && < 0.6,
                   containers >= 0.4 && < 0.7,
                   haskell-src-exts >= 1.20 && < 1.24,
-@@ -68,7 +68,7 @@ Test-suite tests
-                  Plugin.Pl.Transform
- 
-   Build-depends:
--    base >= 4.5 && < 4.14,
-+    base >= 4.5 && < 5,
-     array >= 0.3 && < 0.6,
-     containers >= 0.4 && < 0.7,
-     haskell-src-exts >= 1.20 && < 1.24,
