@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:00 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/02/11 09:40:59 pho Exp $
 
-BLAKE2s (splitmix-0.1.0.3.tar.gz) = adcc1e83a6babc535ae77d0ef2f9de8ab4cb728214e9a3b5649e294d060d0ce3
-SHA512 (splitmix-0.1.0.3.tar.gz) = 22a3f0759e1c1150aabde01a77b48087509dfc7ff9614e97e5e06af73f533170993ff2e18101d940e7ddba81b8d6e496795be3851fccfa07b75e9d922f325064
-Size (splitmix-0.1.0.3.tar.gz) = 20754 bytes
+BLAKE2s (splitmix-0.1.0.4.tar.gz) = aee98da9731aeb3ad0959a299dfbdc540d749b64febf90855e20f710d41a6fbd
+SHA512 (splitmix-0.1.0.4.tar.gz) = 9a5cbe8100d44fadeb8bf009b03b1770d6b86ef0f71d625e3fb909881d599f4122833647c13a78152369e2744327d5c3f8b552fdc6a47d2705891ca6331c268e
+Size (splitmix-0.1.0.4.tar.gz) = 22382 bytes
