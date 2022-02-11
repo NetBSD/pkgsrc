@@ -1,17 +1,18 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2020/02/22 11:55:36 mrg Exp $
+$NetBSD: MESSAGE,v 1.5 2022/02/11 22:06:22 mrg Exp $
 
 Examples command to install U-Boot to an empty SD card:
 
-# dd if=${LOCALBASE}/share/u-boot/pinebook-pro/rksd_loader.img seek=64 of=/dev/rld0d
+# dd if=${LOCALBASE}/share/u-boot/pinebook-pro/rksd_loader.img seek=64 of=/dev/rld0d conv=sync
 
 Alternatively, to install to SPI flash:
 
-dd if=${LOCALBASE}/share/u-boot/pinebook-pro/rkspi_loader.img bs=64k of=/dev/spiflash0
+dd if=${LOCALBASE}/share/u-boot/pinebook-pro/rkspi_loader.img bs=64k of=/dev/spiflash0 conv=sync
 
 You should make sure that the space is otherwise cleared of data, as old
 images may fool the boot loader paths.
 
-See also http://opensource.rock-chips.com/wiki_Boot_option
+See also NetBSD installboot(8) and
+http://opensource.rock-chips.com/wiki_Boot_option
 
 ===========================================================================
