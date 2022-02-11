@@ -1,0 +1,4 @@
+Provides functions to marshal values from Haskell to Lua, and vice versa.
+
+This package is part of HsLua, a Haskell framework built around the
+embeddable scripting language Lua.
