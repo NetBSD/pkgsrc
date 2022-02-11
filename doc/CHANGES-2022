@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.693 2022/02/11 09:35:33 pho Exp $
+$NetBSD: CHANGES-2022,v 1.694 2022/02/11 09:37:01 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -945,3 +945,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/unbound to 1.15.0nb1 [he 2022-02-11]
 	Updated devel/hs-base-orphans to 0.8.6 [pho 2022-02-11]
 	Updated devel/hs-memory to 0.16.0 [pho 2022-02-11]
+	Updated devel/hs-colour to 2.3.6 [pho 2022-02-11]
