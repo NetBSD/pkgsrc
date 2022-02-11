@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3575 2022/02/07 21:41:04 wiz Exp $
+# $NetBSD: Makefile,v 1.3576 2022/02/11 13:14:07 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -485,6 +485,7 @@ SUBDIR+=	hlint
 SUBDIR+=	hoe
 SUBDIR+=	honggfuzz
 SUBDIR+=	hptools
+SUBDIR+=	hs-Cabal-syntax
 SUBDIR+=	hs-ListLike
 SUBDIR+=	hs-MonadRandom
 SUBDIR+=	hs-Only
