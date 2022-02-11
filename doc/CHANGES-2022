@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.673 2022/02/11 01:18:09 pho Exp $
+$NetBSD: CHANGES-2022,v 1.674 2022/02/11 05:58:29 fox Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -922,3 +922,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/dusage to 0.2.3 [pin 2022-02-10]
 	Updated time/hs-timezone-series to 0.1.13 [pho 2022-02-11]
 	Updated textproc/hs-unicode-show to 0.1.1.0 [pho 2022-02-11]
+	Updated audio/fasttracker2 to 1.51 [fox 2022-02-11]
