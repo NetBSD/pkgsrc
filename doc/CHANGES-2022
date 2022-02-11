@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.750 2022/02/11 13:40:58 pho Exp $
+$NetBSD: CHANGES-2022,v 1.751 2022/02/11 13:42:41 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1007,3 +1007,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/hs-scientific to 0.3.7.0 [pho 2022-02-11]
 	Updated wm/wmutils-libwm to 1.2 [pin 2022-02-11]
 	Updated devel/hs-vector to 0.12.3.1 [pho 2022-02-11]
+	Updated devel/hs-uuid-types to 1.0.5 [pho 2022-02-11]
