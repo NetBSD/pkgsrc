@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.742 2022/02/11 13:29:30 pho Exp $
+$NetBSD: CHANGES-2022,v 1.743 2022/02/11 13:30:42 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -999,3 +999,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/hs-async to 2.2.4 [pho 2022-02-11]
 	Updated devel/hs-transformers-compat to 0.7.1 [pho 2022-02-11]
 	Updated textproc/hs-hslua-module-text to 1.0.1 [pho 2022-02-11]
+	Updated textproc/hs-doclayout to 0.3.1.1 [pho 2022-02-11]
