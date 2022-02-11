@@ -1,0 +1,4 @@
+Utilities to package up Haskell functions and values into a Lua module.
+
+This package is part of HsLua, a Haskell framework built around the
+embeddable scripting language Lua.
