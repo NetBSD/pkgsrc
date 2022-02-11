@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:21:57 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/02/11 13:34:01 pho Exp $
 
-BLAKE2s (Glob-0.10.1.tar.gz) = 2b4ca20514d9eb5fe5212d0b18dc1b5680b688686cb5d00fe9429cc03f475189
-SHA512 (Glob-0.10.1.tar.gz) = b2b2ee93f2cadf01f8a6828b9e742a241601f5fada1f73388dc0044f8e0985c601bd6a42738c60c54eecb619b6289ac1302751d8e2402f6494aaeb2b2a4abb42
-Size (Glob-0.10.1.tar.gz) = 29763 bytes
+BLAKE2s (Glob-0.10.2.tar.gz) = 110335731b58c4bfd5b451a6e0e3c2fe8ef3469313bb8c284ad1caaec8849199
+SHA512 (Glob-0.10.2.tar.gz) = cd3c3fb00fad3b3e8d9ae2856a76d0d1688885ecec0b083eed87a4c1cf46111df747e66ff3e8bab2ffaf2a5f776a791442c7e0eefcf58f9d1e15e341b4c35a12
+Size (Glob-0.10.2.tar.gz) = 30226 bytes
