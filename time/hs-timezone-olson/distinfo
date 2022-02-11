@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:24:21 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/02/11 13:04:31 pho Exp $
 
-BLAKE2s (timezone-olson-0.2.0.tar.gz) = 87d2ad80679cc8fc9bcaecf09890f047537b49a23485357cfca3909abba05558
-SHA512 (timezone-olson-0.2.0.tar.gz) = 06c73b24b23caa41f3dce472bca384e3ee7ba02a3dd8bc4458bc758bc6aabdeca9be299f16419702e860f38ea213fd62d90e63fc4746dc2015c0e06b15aba6dd
-Size (timezone-olson-0.2.0.tar.gz) = 11301 bytes
+BLAKE2s (timezone-olson-0.2.1.tar.gz) = fc3bd3cae5db46b4a68da983bc048e81c9ffd72dcabea9275e8fc499baaafc56
+SHA512 (timezone-olson-0.2.1.tar.gz) = 243ea612a4af206d629ba1f3b3b01b1470e849a5ce50c2c189da246eac6f043ac7fb4f039df94053c7a1da9d2aeb347e510560fd0fa590264a5e3897a8dd1300
+Size (timezone-olson-0.2.1.tar.gz) = 11290 bytes
