@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:05:45 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/02/11 11:55:33 pho Exp $
 
-BLAKE2s (network-3.1.2.1.tar.gz) = d156f5b50978bbb9ecabb579dbc5faebddec37918b913a3eb2298bb0c1914262
-SHA512 (network-3.1.2.1.tar.gz) = 7c9f1a2fd417b5c03d430226ff6641ada06ce5f2a6e0ea90e6d92880a59656d54f186819715f6a4a80bb2a5b1d6c7236b0aa5112d7901d5ef698cc28cc10ce44
-Size (network-3.1.2.1.tar.gz) = 136889 bytes
+BLAKE2s (network-3.1.2.7.tar.gz) = 6f7cebd9003f5c263b53b34d899e9a0fa72fc4b1031e1bbec2a6b3cef1762a17
+SHA512 (network-3.1.2.7.tar.gz) = 2e4fa22656c015ca9b8fe7e0dfa824ae943010b0716e4c4cc5495d5b98a6cfecbe33180851f8eeea9d4b2f34beff13b6b1888d5b18b68822febc73c05410bc57
+Size (network-3.1.2.7.tar.gz) = 139973 bytes
 SHA1 (patch-Network_Socket_Syscall.hs) = 4a934a45ccd7ef04e9cfad4ef72c644e0bdb4f66
