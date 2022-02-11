@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:54 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/02/11 09:36:53 pho Exp $
 
-BLAKE2s (colour-2.3.5.tar.gz) = c2e2812cdc3fb619be41f3b156274481378247f9f50042571bfe32d308cd3fa7
-SHA512 (colour-2.3.5.tar.gz) = 2232f51b3cfdda1a64436e8395c2441e49db083982a0370d3ec38c304b0a6234666887b3abc886107a9b21c425d3253284cce0186c1a210a302a0a14808364d8
-Size (colour-2.3.5.tar.gz) = 20485 bytes
+BLAKE2s (colour-2.3.6.tar.gz) = 77e3ccdb5101b5bfafe6b5ce26a2e83708ce6db34df26d83563a12e2f0f136a6
+SHA512 (colour-2.3.6.tar.gz) = 82f7d92e46f7235706832be9d3a981bc09f729ef4e7f891dae85bf808f342e498aa152bc106f9c011ab0e79e5cc2d57067de596d774ad5010e9845df521ed275
+Size (colour-2.3.6.tar.gz) = 20675 bytes
