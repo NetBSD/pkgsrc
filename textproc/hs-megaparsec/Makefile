@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/01/18 02:48:27 pho Exp $
+# $NetBSD: Makefile,v 1.5 2022/02/11 17:51:59 pho Exp $
 
-DISTNAME=	megaparsec-9.0.1
-PKGREVISION=	2
+DISTNAME=	megaparsec-9.2.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
