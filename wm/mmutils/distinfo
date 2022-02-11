@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/11 13:44:45 pin Exp $
+
+BLAKE2s (mmutils-1.4.1.tar.gz) = 7708a6c8197e87df81884153ab44a64f6266e5251aae4b1e76be9936029bee63
+SHA512 (mmutils-1.4.1.tar.gz) = c3aa3aee52459e72825dbcbf5d6131e0fb04d8db52f7e1432b0dc30de765e7e6f03ace276620399523f424e205d16dec16abb81ce044a57f687cd0af4a1f95b3
+Size (mmutils-1.4.1.tar.gz) = 8605 bytes

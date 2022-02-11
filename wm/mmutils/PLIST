@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/11 13:44:45 pin Exp $
+bin/lsm
+bin/mattr
+bin/pfm
+man/man1/lsm.1
+man/man1/mattr.1
+man/man1/pfm.1
