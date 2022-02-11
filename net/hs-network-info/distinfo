@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:05:46 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/02/11 09:07:31 pho Exp $
 
-BLAKE2s (network-info-0.2.0.10.tar.gz) = 7d0a2b4468a8abde748651c12b8b4450a7cd693ed11cb27c51de168996f85e95
-SHA512 (network-info-0.2.0.10.tar.gz) = d578f64860fb3c04d11a444d9636bde57402b6728529e73c7741b056ef0d8f68cb0958118212f2d47826dc28ba9b2bfcc9aef8b5b2e9fc3da8eaadc796160895
-Size (network-info-0.2.0.10.tar.gz) = 6278 bytes
-SHA1 (patch-cbits_network-unix.c) = 78769aa78e4e61b3dd9488e5c0d2337d1f69a946
+BLAKE2s (network-info-0.2.1.tar.gz) = 752fb3d2578d4137be29b794d9d7077932cda7fa62c0c77652995c6a9812464e
+SHA512 (network-info-0.2.1.tar.gz) = a252bd5c34cbbde9dcdd9606b31ed9b9fa802edfc694795f8779fd8f4ffa9092df0ab25426e0a1dca836d74a9357c1b31acb2aa01a9e46e8ffd5959be7a5d619
+Size (network-info-0.2.1.tar.gz) = 6387 bytes
