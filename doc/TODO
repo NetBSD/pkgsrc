@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21501 2022/02/11 09:35:33 pho Exp $
+$NetBSD: TODO,v 1.21502 2022/02/11 10:18:59 pin Exp $
 
 Suggested new packages
 ======================
@@ -1830,7 +1830,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wiredtiger-10.0.0
 	o wkhtmltopdf-0.12.5
 	o wmi-11
-	o wmutils-core-1.5
 	o wordwarvi-1.0.4
 	o worker-4.8.0
 	o wxRemind-101
