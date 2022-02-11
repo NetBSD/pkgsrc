@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/01/18 02:48:04 pho Exp $
+# $NetBSD: Makefile,v 1.5 2022/02/11 13:02:00 pho Exp $
 
-DISTNAME=	base-compat-batteries-0.11.2
-PKGREVISION=	2
+DISTNAME=	base-compat-batteries-0.12.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
