@@ -1,8 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2021/04/25 14:19:34 pho Exp $
+$NetBSD: MESSAGE,v 1.3 2022/02/11 15:57:01 pho Exp $
 
     1. create ~/.xmonad/xmonad.hs
-    2. $ ghc --make ~/.xmonad/xmonad.hs
-    3. add exec xmonad to .xinitrc
-    4. add ~/.xmonad to your $PATH
+    2. add exec xmonad to .xinitrc
+
+You no longer need to compile your xmonad.hs manually. It is now
+automatically compiled and loaded by the main executable of xmonad.
 ===========================================================================
