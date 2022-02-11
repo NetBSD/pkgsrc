@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:02 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/02/11 12:56:30 pho Exp $
 
-BLAKE2s (th-abstraction-0.4.2.0.tar.gz) = bce07dc760c941e6fc4e16b9f019f104c70d0d26a5273e119c0b138ab5b3d7e1
-SHA512 (th-abstraction-0.4.2.0.tar.gz) = f67f494c165d7080c45202e58d9e20aa154bf1a7ddaf44643adcfb36d4c62f0b660ab83464a3d06340298b5c7154042d3a956b0ffc5dd99bc5644b52c31e90e4
-Size (th-abstraction-0.4.2.0.tar.gz) = 37848 bytes
+BLAKE2s (th-abstraction-0.4.3.0.tar.gz) = 63bb7fb833cc4c7c759e0dbc4765abd681ba8b24c4c8abf1cdb712eff7cc4023
+SHA512 (th-abstraction-0.4.3.0.tar.gz) = a474bd042721efb83db5f707537589faa320f0e4ccf6bc839c450ff8d0970d3835003c134fc59f88e692d47264b1717bbd053543623dd40aa591155531a31003
+Size (th-abstraction-0.4.3.0.tar.gz) = 38595 bytes
