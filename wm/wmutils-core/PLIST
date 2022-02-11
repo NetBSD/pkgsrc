@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2016/06/11 23:07:14 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/02/11 09:47:34 pin Exp $
+bin/atomx
 bin/chwb
 bin/chwso
 bin/ignw
@@ -6,12 +7,14 @@ bin/killw
 bin/lsw
 bin/mapw
 bin/pfw
+bin/slw
 bin/wattr
 bin/wmp
 bin/wmv
 bin/wrs
 bin/wtf
 bin/wtp
+man/man1/atomx.1
 man/man1/chwb.1
 man/man1/chwso.1
 man/man1/ignw.1
@@ -19,6 +22,7 @@ man/man1/killw.1
 man/man1/lsw.1
 man/man1/mapw.1
 man/man1/pfw.1
+man/man1/slw.1
 man/man1/wattr.1
 man/man1/wmp.1
 man/man1/wmutils.1
