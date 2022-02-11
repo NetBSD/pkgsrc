@@ -1,0 +1,5 @@
+A small library for X window manipulation
+
+Features
+-Wrappers for all window management operations
+-Built-in checks for off-screen operations
