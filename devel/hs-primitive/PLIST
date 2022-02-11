@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/23 04:58:10 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/02/11 12:58:29 pho Exp $
 lib/primitive-${PKGVERSION}/${HS_VERSION}/package-description
 lib/primitive-${PKGVERSION}/${HS_VERSION}/package-id
 lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -14,9 +14,6 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Data/Primitive/Array.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Primitive/ByteArray.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Primitive/ByteArray.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Primitive/ByteArray.p_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/Primitive/Internal/Compat.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/Primitive/Internal/Compat.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/Primitive/Internal/Compat.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Primitive/Internal/Operations.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Primitive/Internal/Operations.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Primitive/Internal/Operations.p_hi
