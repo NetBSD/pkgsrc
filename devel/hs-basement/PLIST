@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/04/23 09:26:55 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/02/11 09:28:47 pho Exp $
 lib/basement-${PKGVERSION}/${HS_VERSION}/package-description
 lib/basement-${PKGVERSION}/${HS_VERSION}/package-id
 lib/${HS_PLATFORM}/${HS_PKGID}/Basement/Alg/Class.dyn_hi
@@ -118,6 +118,9 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Basement/Floating.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Basement/From.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Basement/From.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Basement/From.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Basement/HeadHackageUtils.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Basement/HeadHackageUtils.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Basement/HeadHackageUtils.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Basement/Imports.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Basement/Imports.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Basement/Imports.p_hi
