@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.38 2022/02/07 02:58:24 pho Exp $
+# $NetBSD: haskell.mk,v 1.39 2022/02/11 01:11:57 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # Package configuration, building, installation, registration and
@@ -62,6 +62,7 @@ _SYS_VARS.haskell= \
 	PKGNAME DISTNAME MASTER_SITES MASTER_SITE_HASKELL_HACKAGE \
 	HOMEPAGE UNLIMIT_RESOURCES PREFIX
 _DEF_VARS.haskell= \
+	BUILDLINK_PASSTHRU_DIRS \
 	HASKELL_OPTIMIZATION_LEVEL \
 	HASKELL_PKG_NAME \
 	USE_LANGUAGES \
@@ -77,7 +78,7 @@ _DEF_VARS.haskell= \
 	_HASKELL_VERSION_CMD \
 	_HASKELL_BIN \
 	_HASKELL_PKG_BIN \
-	_HASKELL_PKG_DESCR_FILE \
+	_HASKELL_PKG_DESCR_FILE_OR_DIR \
 	_HASKELL_PKG_ID_FILE \
 	_HASKELL_VERSION
 _USE_VARS.haskell= \
@@ -86,6 +87,7 @@ _USE_VARS.haskell= \
 	PKGDIR DESTDIR \
 	WRKSRC
 _LISTED_VARS.haskell= \
+	BUILDLINK_PASSTHRU_DIRS \
 	CONFIGURE_ARGS \
 	PLIST_SUBST \
 	PRINT_PLIST_AWK \
@@ -97,9 +99,13 @@ PKGNAME?=	hs-${DISTNAME}
 MASTER_SITES?=	${MASTER_SITE_HASKELL_HACKAGE:=${DISTNAME}/}
 HOMEPAGE?=	http://hackage.haskell.org/package/${DISTNAME:C/-[^-]*$//}
 
-# Cabal packages may use pkg-config, but url2pkg can't detect
-# that. (PHO: I think that should be handled by url2pkg (2009-05-20))
-USE_TOOLS+=	pkg-config
+# Cabal packages may use pkg-config to find external libraries, but
+# mk/tools/pkg-config.mk doesn't prevent it from being invoked when it's
+# missing from USE_TOOLS for some reason. In our case that's very
+# undesirable because we would be silently depending on it.
+.if empty(USE_TOOLS:Mpkg-config)
+TOOLS_FAIL+=	pkg-config
+.endif
 
 # GHC can be a memory hog, so don't apply regular limits.
 UNLIMIT_RESOURCES+=	datasize virtualsize
@@ -178,16 +184,31 @@ _HS_ORIG_LD_CMD=	${SETENV} PATH=${_PATH_ORIG} which ld
 CONFIGURE_ARGS+=	--ghc-options=-pgmlm\ ${_HS_ORIG_LD_CMD:sh}
 CONFIGURE_ARGS+=	--ghc-options=-optlm\ -r
 
-.if !exists(${PKGDIR}/PLIST)
+# When a Template Haskell splice is to be evaluated by a dynamically-linked
+# GHC, it first compiles the splice and creates a .so file like
+# /tmp/ghc_XXXX/libghc_XX.so, then it dlopen's it. When the source file
+# contains more than one splice, subsequent splices will refer to previous
+# ones via "-L/tmp/ghc_XXXX -Wl,-rpath,/tmp/ghc_XXXX -lghc_XX". This means
+# /tmp/ghc_* must be protected from getting removed by our wrappers. We
+# also want to be explicit about the path to be chosen for temporary files.
+CONFIGURE_ARGS+=		--ghc-options=-tmpdir\ ${TMPDIR:U/tmp:Q}
+BUILDLINK_PASSTHRU_DIRS+=	${TMPDIR:U/tmp}
+
+# Some packages lack PLIST but they may have things like PLIST.common.
+.if empty(PLIST_SRC)
+.  if !exists(${PKGDIR}/PLIST)
 _HS_PLIST_STATUS=	missing
-.elif !${${GREP} "." ${PKGDIR}/PLIST || ${TRUE}:L:sh}
+.  elif !${${GREP} "." ${PKGDIR}/PLIST || ${TRUE}:L:sh}
 _HS_PLIST_STATUS=	missing
-.elif ${${GREP} HS_VERSION ${PKGDIR}/PLIST || ${TRUE}:L:sh}
+.  elif ${${GREP} HS_VERSION ${PKGDIR}/PLIST || ${TRUE}:L:sh}
 _HS_PLIST_STATUS=	ok
-.elif !${${GREP} "/package-description" ${PKGDIR}/PLIST || ${TRUE}:L:sh}
+.  elif !${${GREP} "/package-description" ${PKGDIR}/PLIST || ${TRUE}:L:sh}
 _HS_PLIST_STATUS=	ok
-.else
+.  else
 _HS_PLIST_STATUS=	outdated
+.  endif
+.else
+_HS_PLIST_STATUS=	ok
 .endif
 
 # Starting from GHC 7.10 (or 7.8?), packages are installed in directories
@@ -203,24 +224,48 @@ _HS_PLIST_STATUS=	outdated
 # from it.
 _HS_PLIST.platform.cmd=		${_HASKELL_PKG_BIN} --simple-output field base data-dir
 _HS_PLIST.platform=		${_HS_PLIST.platform.cmd:sh:H:T}
-# Package ID formatted as "{name}-{version}-{hash}": this only exists
-# if the package contains a library.
-_HS_PLIST.lib.pkg-id.cmd=	${CAT} ${DESTDIR}${_HASKELL_PKG_ID_FILE}
-_HS_PLIST.lib.pkg-id=		${exists(${DESTDIR}${_HASKELL_PKG_ID_FILE}):?${_HS_PLIST.lib.pkg-id.cmd:sh}:}
 # Abbreviated compiler version. Used for shared libraries.
 _HS_PLIST.short-ver=		${_HASKELL_VERSION:S,-,,}
 
-PLIST_SUBST+=		HS_PLATFORM=${_HS_PLIST.platform}
-PLIST_SUBST+=		HS_VERSION=${_HASKELL_VERSION}
-PLIST_SUBST+=		HS_VER=${_HS_PLIST.short-ver}
-_HS_PLIST_SUBST.lib=	HS_PKGID=${_HS_PLIST.lib.pkg-id}
-PLIST_SUBST+=		${!empty(_HS_PLIST.lib.pkg-id):?${_HS_PLIST_SUBST.lib}:}
+PLIST_SUBST+=			HS_PLATFORM=${_HS_PLIST.platform}
+PLIST_SUBST+=			HS_VERSION=${_HASKELL_VERSION}
+PLIST_SUBST+=			HS_VER=${_HS_PLIST.short-ver}
+# Package IDs formatted as "{name}-{version}-{hash}": these only exist if
+# the package contains at least one library.
+_HS_PLIST.subst-libs.cmd=	\
+	if [ -f ${DESTDIR:Q}${_HASKELL_PKG_ID_FILE:Q} ]; then \
+		n=`${WC} -l ${DESTDIR:Q}${_HASKELL_PKG_ID_FILE:Q} | ${AWK} '{print $$1}'`; \
+		if [ "$$n" -eq 1 ]; then \
+			pkg_id=`${CAT} ${DESTDIR:Q}${_HASKELL_PKG_ID_FILE:Q}`; \
+			${ECHO} "HS_PKGID=$${pkg_id}"; \
+		else \
+			i=1; \
+			while read pkg_id; do \
+				${ECHO} "HS_PKGID.$${i}=$${pkg_id}"; \
+				i=`${EXPR} $${i} + 1`; \
+			done < ${DESTDIR:Q}${_HASKELL_PKG_ID_FILE:Q}; \
+		fi; \
+	fi
+PLIST_SUBST+=			${_HS_PLIST.subst-libs.cmd:sh}
 
-PRINT_PLIST_AWK+=	{ gsub("${_HS_PLIST.platform}",   "$${HS_PLATFORM}") }
-PRINT_PLIST_AWK+=	{ gsub("${_HASKELL_VERSION}",     "$${HS_VERSION}" ) }
-PRINT_PLIST_AWK+=	{ gsub("${_HS_PLIST.short-ver}",  "$${HS_VER}"     ) }
-_HS_PRINT_PLIST_AWK.lib={ gsub("${_HS_PLIST.lib.pkg-id}", "$${HS_PKGID}"   ) }
-PRINT_PLIST_AWK+=	${!empty(_HS_PLIST.lib.pkg-id):?${_HS_PRINT_PLIST_AWK.lib}:}
+PRINT_PLIST_AWK+=		{ gsub("${_HS_PLIST.platform}",   "$${HS_PLATFORM}") }
+PRINT_PLIST_AWK+=		{ gsub("${_HASKELL_VERSION}",     "$${HS_VERSION}" ) }
+PRINT_PLIST_AWK+=		{ gsub("${_HS_PLIST.short-ver}",  "$${HS_VER}"     ) }
+_HS_PRINT_PLIST_AWK.libs.cmd=	\
+	if [ -f ${DESTDIR:Q}${_HASKELL_PKG_ID_FILE:Q} ]; then \
+		n=`${WC} -l ${DESTDIR:Q}${_HASKELL_PKG_ID_FILE:Q} | ${AWK} '{print $$1}'`; \
+		if [ "$$n" -eq 1 ]; then \
+			pkg_id=`${CAT} ${DESTDIR:Q}${_HASKELL_PKG_ID_FILE:Q}`; \
+			${ECHO} "{ gsub(\"$${pkg_id}\", \"\$${HS_PKGID}\") }"; \
+		else \
+			i=1; \
+			while read pkg_id; do \
+				${ECHO} "{ gsub(\"$${pkg_id}\", \"\$${HS_PKGID.$${i}}\") }"; \
+				i=`${EXPR} $${i} + 1`; \
+			done < ${DESTDIR:Q}${_HASKELL_PKG_ID_FILE:Q}; \
+		fi; \
+	fi
+PRINT_PLIST_AWK+=		${_HS_PRINT_PLIST_AWK.libs.cmd:sh}
 
 .if ${_HS_PLIST_STATUS} == missing || ${_HS_PLIST_STATUS} == outdated
 .  if ${HS_UPDATE_PLIST:tl} == yes
@@ -285,9 +330,15 @@ do-build:
 # for package registration (if any).
 HASKELL_PKG_NAME?=		${DISTNAME}
 _HASKELL_PKG_DESCR_DIR=		${PREFIX}/lib/${HASKELL_PKG_NAME}/${_HASKELL_VERSION}
-_HASKELL_PKG_DESCR_FILE=	${_HASKELL_PKG_DESCR_DIR}/package-description
+_HASKELL_PKG_DESCR_FILE_OR_DIR=	${_HASKELL_PKG_DESCR_DIR}/package-description
 _HASKELL_PKG_ID_FILE=		${_HASKELL_PKG_DESCR_DIR}/package-id
 
+# Packages may contain internal libraries. If this is the case, "./Setup
+# register --gen-pkg-config" creates a directory containing files named
+# {index}-{pkg-id} for each library. Otherwise it creates a single regular
+# file. "./Setup register --print-ipid" becomes useless in this case, as it
+# only prints the ID of the main library. devel/hs-attoparsec is an example
+# of such packages.
 INSTALLATION_DIRS+=		${_HASKELL_PKG_DESCR_DIR}
 do-install:
 	${RUN} ${_ULIMIT_CMD} cd ${WRKSRC} && \
@@ -296,9 +347,35 @@ do-install:
 			--print-ipid \
 			> dist/package-id && \
 		./Setup copy ${PKG_VERBOSE:D-v} --destdir=${DESTDIR:Q} && \
-		if [ -f dist/package-description ]; then \
+		if [ -d dist/package-description ]; then \
+			${INSTALL_DATA_DIR} ${DESTDIR:Q}${_HASKELL_PKG_DESCR_FILE_OR_DIR:Q}; \
+			${CAT} /dev/null > dist/package-id; \
+			i=1; \
+			while ${TRUE}; do \
+				found=no; \
+				for f in dist/package-description/$${i}-*; do \
+					if [ ! -f "$$f" ]; then \
+						break; \
+					fi; \
+					${INSTALL_DATA} "$$f" \
+						"${DESTDIR}${_HASKELL_PKG_DESCR_FILE_OR_DIR}/$${i}"; \
+					${ECHO} "$$f" | \
+						${SED} -e "s|dist/package-description/$${i}-||" \
+						>> dist/package-id; \
+					found=yes; \
+					break; \
+				done; \
+				if [ "$$found" = "yes" ]; then \
+					i=`${EXPR} $$i + 1`; \
+				else \
+					break; \
+				fi; \
+			done; \
+			${INSTALL_DATA} dist/package-id \
+				${DESTDIR:Q}${_HASKELL_PKG_ID_FILE:Q}; \
+		elif [ -f dist/package-description ]; then \
 			${INSTALL_DATA} dist/package-description \
-				${DESTDIR:Q}${_HASKELL_PKG_DESCR_FILE:Q}; \
+				${DESTDIR:Q}${_HASKELL_PKG_DESCR_FILE_OR_DIR:Q}; \
 			${INSTALL_DATA} dist/package-id \
 				${DESTDIR:Q}${_HASKELL_PKG_ID_FILE:Q}; \
 		fi
@@ -315,8 +392,11 @@ do-test:
 
 # Substitutions for INSTALL and DEINSTALL.
 FILES_SUBST+=	HASKELL_PKG_BIN=${_HASKELL_PKG_BIN}
-FILES_SUBST+=	HASKELL_PKG_DESCR_FILE=${_HASKELL_PKG_DESCR_FILE}
+FILES_SUBST+=	HASKELL_PKG_DESCR_FILE_OR_DIR=${_HASKELL_PKG_DESCR_FILE_OR_DIR}
 FILES_SUBST+=	HASKELL_PKG_ID_FILE=${_HASKELL_PKG_ID_FILE}
+FILES_SUBST+=	AWK=${AWK:Q}
+FILES_SUBST+=	EXPR=${EXPR:Q}
+FILES_SUBST+=	TRUE=${TRUE:Q}
 
 INSTALL_TEMPLATES+=	../../mk/haskell/INSTALL.in
 DEINSTALL_TEMPLATES+=	../../mk/haskell/DEINSTALL.in
@@ -325,6 +405,5 @@ DEINSTALL_TEMPLATES+=	../../mk/haskell/DEINSTALL.in
 # from the files in DESTDIR.
 _DEF_VARS.haskell+=	_HS_PLIST.platform
 _DEF_VARS.haskell+=	_HS_PLIST.short-ver
-_DEF_VARS.haskell+=	${!empty(_HS_PLIST.lib.pkg-id):?_HS_PLIST.lib.pkg-id:}
 
 .endif # HASKELL_MK
