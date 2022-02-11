@@ -1,0 +1,5 @@
+mmutils (multi-monitor utilities) is a set of utilities for querying xrandr
+monitor information.
+
+Their main purpose is to be used alongside wmutils, but they will probably
+work with pretty much anything runs on top of Xorg.
