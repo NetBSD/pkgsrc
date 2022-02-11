@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.757 2022/02/11 15:53:43 pho Exp $
+$NetBSD: CHANGES-2022,v 1.758 2022/02/11 15:57:26 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1013,3 +1013,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/hs-data-fix to 0.3.2 [pho 2022-02-11]
 	Updated games/prboom-plus to 2.6.2 [micha 2022-02-11]
 	Updated x11/hs-X11 to 1.10.2 [pho 2022-02-11]
+	Updated wm/xmonad to 0.17.0 [pho 2022-02-11]
