@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/04/23 05:06:44 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/02/11 12:55:14 pho Exp $
 lib/base-compat-${PKGVERSION}/${HS_VERSION}/package-description
 lib/base-compat-${PKGVERSION}/${HS_VERSION}/package-id
 lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/Compat.dyn_hi
@@ -199,6 +199,12 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Data/String/Compat.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/String/Compat/Repl.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/String/Compat/Repl.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/String/Compat/Repl.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Tuple/Compat.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Tuple/Compat.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Tuple/Compat.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Tuple/Compat/Repl.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Tuple/Compat/Repl.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Tuple/Compat/Repl.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Type/Coercion/Compat.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Type/Coercion/Compat.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Type/Coercion/Compat.p_hi
@@ -349,6 +355,12 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Text/Read/Compat.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Read/Compat/Repl.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Read/Compat/Repl.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Read/Compat/Repl.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/Read/Lex/Compat.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/Read/Lex/Compat.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/Read/Lex/Compat.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/Read/Lex/Compat/Repl.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/Read/Lex/Compat/Repl.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/Read/Lex/Compat/Repl.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Type/Reflection/Compat.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Type/Reflection/Compat.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Type/Reflection/Compat.p_hi
@@ -425,6 +437,8 @@ share/doc/${HS_PLATFORM}/base-compat-${PKGVERSION}/html/Data-Semigroup-Compat-Re
 share/doc/${HS_PLATFORM}/base-compat-${PKGVERSION}/html/Data-Semigroup-Compat.html
 share/doc/${HS_PLATFORM}/base-compat-${PKGVERSION}/html/Data-String-Compat-Repl.html
 share/doc/${HS_PLATFORM}/base-compat-${PKGVERSION}/html/Data-String-Compat.html
+share/doc/${HS_PLATFORM}/base-compat-${PKGVERSION}/html/Data-Tuple-Compat-Repl.html
+share/doc/${HS_PLATFORM}/base-compat-${PKGVERSION}/html/Data-Tuple-Compat.html
 share/doc/${HS_PLATFORM}/base-compat-${PKGVERSION}/html/Data-Type-Coercion-Compat-Repl.html
 share/doc/${HS_PLATFORM}/base-compat-${PKGVERSION}/html/Data-Type-Coercion-Compat.html
 share/doc/${HS_PLATFORM}/base-compat-${PKGVERSION}/html/Data-Type-Equality-Compat-Repl.html
@@ -475,6 +489,8 @@ share/doc/${HS_PLATFORM}/base-compat-${PKGVERSION}/html/System-IO-Unsafe-Compat-
 share/doc/${HS_PLATFORM}/base-compat-${PKGVERSION}/html/System-IO-Unsafe-Compat.html
 share/doc/${HS_PLATFORM}/base-compat-${PKGVERSION}/html/Text-Read-Compat-Repl.html
 share/doc/${HS_PLATFORM}/base-compat-${PKGVERSION}/html/Text-Read-Compat.html
+share/doc/${HS_PLATFORM}/base-compat-${PKGVERSION}/html/Text-Read-Lex-Compat-Repl.html
+share/doc/${HS_PLATFORM}/base-compat-${PKGVERSION}/html/Text-Read-Lex-Compat.html
 share/doc/${HS_PLATFORM}/base-compat-${PKGVERSION}/html/Type-Reflection-Compat-Repl.html
 share/doc/${HS_PLATFORM}/base-compat-${PKGVERSION}/html/Type-Reflection-Compat.html
 share/doc/${HS_PLATFORM}/base-compat-${PKGVERSION}/html/base-compat.haddock
