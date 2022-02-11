@@ -1,3 +1,5 @@
 PrBoom+ is a modified version of id Software's classic game DOOM.  It
 runs on several platforms (including Win32 and Unixes) and features many
 additions to the original game.  It also supports multiplayer games.
+
+This package contains the SDL2 branch with UMAPINFO support.
