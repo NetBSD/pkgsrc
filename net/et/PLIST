@@ -1,0 +1,15 @@
+@comment $NetBSD$
+bin/crashpad_handler
+bin/et
+bin/etserver
+bin/etterminal
+bin/htm
+bin/htmd
+lib/cmake/sentry/sentry_crashpad-targets.cmake
+lib/libcrashpad_client.a
+lib/libcrashpad_handler_lib.a
+lib/libcrashpad_minidump.a
+lib/libcrashpad_snapshot.a
+lib/libcrashpad_tools.a
+lib/libcrashpad_util.a
+lib/libmini_chromium.a
