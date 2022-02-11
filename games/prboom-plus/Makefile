@@ -1,24 +1,58 @@
-# $NetBSD: Makefile,v 1.8 2020/03/20 11:57:43 nia Exp $
+# $NetBSD: Makefile,v 1.9 2022/02/11 15:12:42 micha Exp $
 
-DISTNAME=	prboom-plus-2.5.1.4
+DISTNAME=	prboom-plus-2.6.2
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=prboom-plus/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=coelckers/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://prboom-plus.sourceforge.net/
+HOMEPAGE=	https://github.com/coelckers/prboom-plus
 COMMENT=	Multiplayer-capable and modified version of DOOM
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-waddir=${PREFIX}/share/doom
+USE_LANGUAGES=	c99 c++
+USE_CMAKE=	yes
+USE_TOOLS+=	gmake pkg-config
 
-SUBST_CLASSES+=		gamesdir
-SUBST_STAGE.gamesdir=	pre-configure
-SUBST_MESSAGE.gamesdir=	Fixing hard-coded gamesdir
-SUBST_FILES.gamesdir=	src/Makefile.in
-SUBST_SED.gamesdir+=	-e '/^gamesdir =/ s;/games;/bin;g'
+WRKSRC=		${WRKDIR}/prboom-plus-${PKGVERSION_NOREV}/prboom2
 
-.include "../../audio/SDL_mixer/buildlink3.mk"
-.include "../../net/SDL_net/buildlink3.mk"
+# DOOMWADDIR is intentionally shared with other Doom packages
+DOOMWADDIR=	share/doom
+
+CONFIGURE_DIRS=	build
+CMAKE_ARG_PATH=	..
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_ARGS+=	-DPRBOOMDATADIR=${PREFIX}/${DOOMWADDIR}
+CMAKE_ARGS+=	-DDOOMWADDIR=${PREFIX}/${DOOMWADDIR}
+CMAKE_ARGS+=	-DWITH_DUMB=OFF
+CMAKE_ARGS+=	-DWITH_FLUIDSYNTH=OFF
+CMAKE_ARGS+=	-DWITH_PORTMIDI=OFF
+
+# Process INSTALL.pkgsrc
+SUBST_CLASSES+=		install
+SUBST_STAGE.install=	do-configure
+SUBST_MESSAGE.install=	Preparing INSTALL.pkgsrc file ...
+SUBST_FILES.install=	${WRKDIR}/INSTALL.pkgsrc
+SUBST_SED.install=	-e 's,DOOMWADDIR,${PREFIX}/${DOOMWADDIR},'
+
+pre-configure:
+	cd ${WRKSRC}; mkdir build
+	${CP} ${FILESDIR}/INSTALL.pkgsrc ${WRKDIR}
+
+post-install:
+	${INSTALL_DATA} ${WRKDIR}/INSTALL.pkgsrc \
+		${DESTDIR}${PREFIX}/share/doc/prboom-plus/INSTALL.pkgsrc
+
+.include "../../audio/SDL2_mixer/buildlink3.mk"
+.include "../../audio/libmad/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/SDL2_image/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
+.include "../../net/SDL2_net/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
 .include "../../mk/bsd.pkg.mk"
