@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.760 2022/02/11 17:46:20 pho Exp $
+$NetBSD: CHANGES-2022,v 1.761 2022/02/11 17:49:13 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1016,3 +1016,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated wm/xmonad to 0.17.0 [pho 2022-02-11]
 	Updated sysutils/hs-fast-logger to 3.1.1 [pho 2022-02-11]
 	Updated security/hs-x509 to 1.7.6 [pho 2022-02-11]
+	Updated misc/cabal-install to 3.6.2.0 [pho 2022-02-11]
