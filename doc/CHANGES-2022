@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.734 2022/02/11 13:17:33 pho Exp $
+$NetBSD: CHANGES-2022,v 1.735 2022/02/11 13:20:07 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -991,3 +991,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-Cabal-syntax version 3.6.0.0 [pho 2022-02-11]
 	Updated security/hs-hackage-security to 0.6.2.0 [pho 2022-02-11]
 	Updated devel/pointfree to 1.1.1.8 [pho 2022-02-11]
+	Updated devel/hs-psqueues to 0.2.7.3 [pho 2022-02-11]
