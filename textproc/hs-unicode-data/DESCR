@@ -1,0 +1,6 @@
+unicode-data provides Haskell APIs to efficiently access the Unicode
+character database. Performance is the primary goal in the design of this
+package.
+
+The Haskell data structures are generated programmatically from the Unicode
+character database (UCD) files.
