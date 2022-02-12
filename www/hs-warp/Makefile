@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/01/18 02:48:32 pho Exp $
+# $NetBSD: Makefile,v 1.3 2022/02/12 07:04:55 pho Exp $
 
-DISTNAME=	warp-3.3.15
-PKGREVISION=	1
+DISTNAME=	warp-3.3.19
 CATEGORIES=	www
 
 MAINTAINER=	pho@cielonegro.org
@@ -21,6 +20,7 @@ LICENSE=	mit
 .include "../../devel/hs-streaming-commons/buildlink3.mk"
 .include "../../time/hs-time-manager/buildlink3.mk"
 .include "../../devel/hs-unix-compat/buildlink3.mk"
+.include "../../devel/hs-unliftio/buildlink3.mk"
 .include "../../devel/hs-vault/buildlink3.mk"
 .include "../../www/hs-wai/buildlink3.mk"
 .include "../../devel/hs-word8/buildlink3.mk"
