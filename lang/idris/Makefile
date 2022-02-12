@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/01/18 02:48:17 pho Exp $
+# $NetBSD: Makefile,v 1.8 2022/02/12 07:13:35 pho Exp $
 
-DISTNAME=	idris-1.3.3
+DISTNAME=	idris-1.3.4
 PKGNAME=	${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	lang
 
 MAINTAINER=	pho@cielonegro.org
@@ -26,16 +25,11 @@ SUBST_STAGE.runtime=	pre-configure
 SUBST_FILES.runtime=	src/IRTS/System.hs
 SUBST_VARS.runtime=	CC PREFIX COMPILER_RPATH_FLAG
 
-# When -O2 is in effect, GHC 8.8.1 uses whopping 1 TiB of virtual
-# memory (what?) to compile src/Idris/IBC.hs for some unknown reason,
-# possibly related to https://gitlab.haskell.org/ghc/ghc/issues/5642
-# or https://gitlab.haskell.org/ghc/ghc/issues/13535
+# When -O2 is in effect, GHC uses whopping 4 GiB of memory (what?) to
+# compile src/Idris/IBC.hs for some unknown reason, possibly related to
+# https://gitlab.haskell.org/ghc/ghc/issues/5642 or
+# https://gitlab.haskell.org/ghc/ghc/issues/13535
 HASKELL_OPTIMIZATION_LEVEL=	1
-
-# Parallelization is unsafe because of the high memory consumption
-# even with -O1. Setting it to -O0 may seem desirable, but that makes
-# the resulting compiler way too slow.
-MAKE_JOBS_SAFE=	NO
 
 .include "options.mk"
 
