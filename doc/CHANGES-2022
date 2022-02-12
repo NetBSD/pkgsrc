@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.802 2022/02/12 06:59:14 pho Exp $
+$NetBSD: CHANGES-2022,v 1.803 2022/02/12 07:00:58 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1063,3 +1063,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/din to 53 [fox 2022-02-12]
 	Updated security/hs-x509-validation to 1.6.12 [pho 2022-02-12]
 	Updated security/hs-x509-system to 1.6.7 [pho 2022-02-12]
+	Updated security/hs-tls to 1.5.7 [pho 2022-02-12]
