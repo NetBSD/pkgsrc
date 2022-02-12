@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/24 17:18:03 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/02/12 08:01:36 pho Exp $
 bin/texmath
 lib/texmath-${PKGVERSION}/${HS_VERSION}/package-description
 lib/texmath-${PKGVERSION}/${HS_VERSION}/package-id
@@ -9,9 +9,6 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Paths_texmath.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath.p_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath/Compat.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath/Compat.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath/Compat.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath/Readers/MathML.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath/Readers/MathML.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath/Readers/MathML.p_hi
@@ -27,6 +24,9 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath/Readers/OMML.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath/Readers/TeX.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath/Readers/TeX.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath/Readers/TeX.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath/Readers/TeX/Commands.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath/Readers/TeX/Commands.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath/Readers/TeX/Commands.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath/Readers/TeX/Macros.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath/Readers/TeX/Macros.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/TeXMath/Readers/TeX/Macros.p_hi
