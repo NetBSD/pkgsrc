@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.862 2022/02/12 13:48:27 taca Exp $
+$NetBSD: CHANGES-2022,v 1.863 2022/02/12 15:21:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1123,3 +1123,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-rspec_junit_formatter to 0.5.1 [taca 2022-02-12]
 	Updated devel/ruby-shoulda-matchers to 5.1.0 [taca 2022-02-12]
 	Updated devel/ruby-thor to 1.2.1 [taca 2022-02-12]
+	Updated devel/ruby-tins to 1.31.0 [taca 2022-02-12]
