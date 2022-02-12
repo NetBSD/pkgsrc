@@ -1,14 +1,18 @@
-@comment $NetBSD: PLIST,v 1.2 2021/04/24 06:18:24 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/02/12 07:15:36 pho Exp $
 lib/cassava-megaparsec-${PKGVERSION}/${HS_VERSION}/package-description
 lib/cassava-megaparsec-${PKGVERSION}/${HS_VERSION}/package-id
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Csv/Parser/Megaparsec.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Csv/Parser/Megaparsec.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Csv/Parser/Megaparsec.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Csv/Parser/Megaparsec/Internals.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Csv/Parser/Megaparsec/Internals.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Csv/Parser/Megaparsec/Internals.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 share/doc/${HS_PLATFORM}/cassava-megaparsec-${PKGVERSION}/LICENSE.md
 share/doc/${HS_PLATFORM}/cassava-megaparsec-${PKGVERSION}/html/CHANGELOG.md
+share/doc/${HS_PLATFORM}/cassava-megaparsec-${PKGVERSION}/html/Data-Csv-Parser-Megaparsec-Internals.html
 share/doc/${HS_PLATFORM}/cassava-megaparsec-${PKGVERSION}/html/Data-Csv-Parser-Megaparsec.html
 share/doc/${HS_PLATFORM}/cassava-megaparsec-${PKGVERSION}/html/README.md
 share/doc/${HS_PLATFORM}/cassava-megaparsec-${PKGVERSION}/html/cassava-megaparsec.haddock
