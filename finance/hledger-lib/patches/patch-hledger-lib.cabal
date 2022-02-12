@@ -1,15 +1,33 @@
-$NetBSD: patch-hledger-lib.cabal,v 1.1 2021/04/24 10:06:11 pho Exp $
+$NetBSD: patch-hledger-lib.cabal,v 1.2 2022/02/12 07:50:32 pho Exp $
 
-Fix build with GHC 9.
+Fix build with GHC 9.2
 
---- hledger-lib.cabal.orig	2021-03-10 16:29:46.000000000 +0000
+--- hledger-lib.cabal.orig	2021-12-11 18:29:25.000000000 +0000
 +++ hledger-lib.cabal
-@@ -103,7 +103,7 @@ library
+@@ -99,7 +99,7 @@ library
      , aeson-pretty
      , ansi-terminal >=0.9
      , array
--    , base >=4.9 && <4.15
-+    , base >=4.9 && <5
-     , base-compat-batteries >=0.10.1 && <0.12
+-    , base >=4.11 && <4.16
++    , base >=4.11 && <5
      , blaze-markup >=0.5.1
      , bytestring
+     , call-stack
+@@ -149,7 +149,7 @@ test-suite doctest
+     , aeson-pretty
+     , ansi-terminal >=0.9
+     , array
+-    , base >=4.11 && <4.16
++    , base >=4.11 && <5
+     , blaze-markup >=0.5.1
+     , bytestring
+     , call-stack
+@@ -202,7 +202,7 @@ test-suite unittest
+     , aeson-pretty
+     , ansi-terminal >=0.9
+     , array
+-    , base >=4.11 && <4.16
++    , base >=4.11 && <5
+     , blaze-markup >=0.5.1
+     , bytestring
+     , call-stack

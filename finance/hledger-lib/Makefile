@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/01/18 02:48:17 pho Exp $
+# $NetBSD: Makefile,v 1.6 2022/02/12 07:50:32 pho Exp $
 
-DISTNAME=	hledger-lib-1.21
+DISTNAME=	hledger-lib-1.24.1
 PKGNAME=	${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	finance
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,11 +19,14 @@ LICENSE=	gnu-gpl-v3
 .include "../../devel/hs-cmdargs/buildlink3.mk"
 .include "../../devel/hs-data-default/buildlink3.mk"
 .include "../../finance/hs-Decimal/buildlink3.mk"
+.include "../../textproc/hs-doclayout/buildlink3.mk"
 .include "../../misc/hs-extra/buildlink3.mk"
 .include "../../devel/hs-file-embed/buildlink3.mk"
 .include "../../textproc/hs-Glob/buildlink3.mk"
 .include "../../devel/hs-hashtables/buildlink3.mk"
 .include "../../textproc/hs-megaparsec/buildlink3.mk"
+.include "../../devel/hs-microlens/buildlink3.mk"
+.include "../../devel/hs-microlens-th/buildlink3.mk"
 .include "../../time/hs-old-time/buildlink3.mk"
 .include "../../devel/hs-parser-combinators/buildlink3.mk"
 .include "../../devel/hs-pretty-simple/buildlink3.mk"
