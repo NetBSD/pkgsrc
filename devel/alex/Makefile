@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2022/02/11 09:47:44 pho Exp $
+# $NetBSD: Makefile,v 1.11 2022/02/12 08:50:26 pho Exp $
 
 DISTNAME=	alex-3.2.7.1
 PKGNAME=	${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	esg@sdf.lonestar.org

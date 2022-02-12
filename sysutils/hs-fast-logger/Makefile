@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/02/11 16:14:03 pho Exp $
+# $NetBSD: Makefile,v 1.4 2022/02/12 08:50:49 pho Exp $
 
 DISTNAME=	fast-logger-3.1.1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	pho@cielonegro.org
