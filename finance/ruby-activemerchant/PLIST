@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2021/11/09 14:51:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/02/12 15:27:22 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/CONTRIBUTORS
@@ -67,6 +67,7 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/cyber_source.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/d_local.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/data_cash.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/decidir.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/decidir_plus.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/dibs.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/digitzs.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/ebanx.rb
@@ -99,6 +100,7 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/iats_payments.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/in_context_paypal_express.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/inspire.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/instapay.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/ipg.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/ipp.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/iridium.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/itransact.rb
@@ -190,6 +192,7 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/payway.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/payway_dot_com.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/pin.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/plugnpay.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/priority.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/pro_pay.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/psigate.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/psl_card.rb
@@ -240,6 +243,7 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/vpos.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/webpay.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/wepay.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/wirecard.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/wompi.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/world_net.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/worldpay.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/worldpay_online_payments.rb
