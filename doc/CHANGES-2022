@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.796 2022/02/12 05:27:37 pho Exp $
+$NetBSD: CHANGES-2022,v 1.797 2022/02/12 05:28:46 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1057,3 +1057,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-indexed-traversable-instances version 0.1.1 [pho 2022-02-12]
 	Updated math/hs-semigroupoids to 5.3.7 [pho 2022-02-12]
 	Added devel/hs-semialign version 1.2.0.1 [pho 2022-02-12]
+	Added devel/hs-witherable version 0.4.2 [pho 2022-02-12]
