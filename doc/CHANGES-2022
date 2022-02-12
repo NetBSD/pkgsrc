@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.820 2022/02/12 07:37:44 pho Exp $
+$NetBSD: CHANGES-2022,v 1.821 2022/02/12 07:39:14 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1081,3 +1081,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/hs-pandoc-types to 1.22.1 [pho 2022-02-12]
 	Updated textproc/hs-doctemplates to 0.10.0.1 [pho 2022-02-12]
 	Updated textproc/hs-commonmark-pandoc to 0.2.1.2 [pho 2022-02-12]
+	Updated devel/hs-ipynb to 0.2 [pho 2022-02-12]
