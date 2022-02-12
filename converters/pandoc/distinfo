@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:06:48 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/02/12 08:16:02 pho Exp $
 
-BLAKE2s (pandoc-2.13.tar.gz) = 1834731096394a528fb69e0e38388b8d48905f386f1c0f6ba77662812020b861
-SHA512 (pandoc-2.13.tar.gz) = c894f59e7ff57603fd6a60d11880b9fd6d6e206247346f77070b176fed6f359b3d5a5ba984803717ac4a4e5c038ad0912513da091d4b8672df63af17d21627a8
-Size (pandoc-2.13.tar.gz) = 12959060 bytes
-SHA1 (patch-pandoc.cabal) = 8f3656f7e4edc50217c2842919a725cf704f16f6
-SHA1 (patch-src_Text_Pandoc_Options.hs) = a688be9b3f0cf2c7ed52748b2f06deb6576d890b
-SHA1 (patch-src_Text_Pandoc_Readers_Docx_Combine.hs) = 27b454db3958dc1c82e86c701af681b3caa0564c
-SHA1 (patch-src_Text_Pandoc_Readers_Haddock.hs) = 5389d70dea10c32d3acf96526925477c7bdfc52f
+BLAKE2s (pandoc-2.17.1.1.tar.gz) = e76b81abde9b9c97776d458d47024ee3cbca3dc732feb3e5e393bb0fdfe8df1b
+SHA512 (pandoc-2.17.1.1.tar.gz) = 1402240d094d62e071349d87d0a2ffe3e82269a80c82a39cefc7c2938ac86594011459068c1dd526127d72dd8c20816896d5c38761e9691370fa11190ec51b06
+Size (pandoc-2.17.1.1.tar.gz) = 7180959 bytes
