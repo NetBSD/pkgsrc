@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2022/02/12 07:13:35 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2022/02/12 08:50:44 pho Exp $
 
 BUILDLINK_TREE+=	idris
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	idris
 IDRIS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.idris+=	idris>=1.3.4
-BUILDLINK_ABI_DEPENDS.idris+=	idris>=1.3.4
+BUILDLINK_ABI_DEPENDS.idris+=	idris>=1.3.4nb1
 BUILDLINK_PKGSRCDIR.idris?=	../../lang/idris
 
 .include "../../converters/hs-aeson/buildlink3.mk"
