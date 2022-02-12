@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.840 2022/02/12 10:25:38 pin Exp $
+$NetBSD: CHANGES-2022,v 1.841 2022/02/12 10:26:42 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1101,3 +1101,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated converters/pandoc to 2.17.1.1 [pho 2022-02-12]
 	Updated net/hoogle to 5.0.18.3 [pho 2022-02-12]
 	Updated textproc/dbcat to 0.1.5 [pin 2022-02-12]
+	Updated wm/shod to 2.3.0 [pin 2022-02-12]
