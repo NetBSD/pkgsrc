@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.768 2022/02/11 23:07:44 mrg Exp $
+$NetBSD: CHANGES-2022,v 1.769 2022/02/12 04:42:36 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1029,3 +1029,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/u-boot-pinebook-pro to 2022.01 [mrg 2022-02-11]
 	Updated sysutils/u-boot-rockpro64 to 2022.01 [mrg 2022-02-11]
 	Updated sysutils/u-boot-rock64 to 2022.01 [mrg 2022-02-11]
+	Updated devel/hs-transformers-base to 0.4.6 [pho 2022-02-12]
