@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/12 07:02:21 pho Exp $
+
+BLAKE2s (unliftio-0.2.21.0.tar.gz) = 6dadc176608a0e34f1e3ac764cb500d22e7d0b213155643102cabc3bcbc9c816
+SHA512 (unliftio-0.2.21.0.tar.gz) = dc669666c55efe24e046d1912e52f9340456cb5a6aed6c4b892ac808d07b65a8b0089c23af177da382af9ccd1d2b26c97ca0ecf9785d04831810b49910b5da2a
+Size (unliftio-0.2.21.0.tar.gz) = 57485 bytes
