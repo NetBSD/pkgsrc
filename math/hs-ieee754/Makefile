@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/18 02:48:18 pho Exp $
+# $NetBSD: Makefile,v 1.4 2022/02/12 08:50:44 pho Exp $
 
 DISTNAME=	ieee754-0.8.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	math
 
 MAINTAINER=	pho@cielonegro.org

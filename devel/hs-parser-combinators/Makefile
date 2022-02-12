@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/01/18 02:48:10 pho Exp $
+# $NetBSD: Makefile,v 1.5 2022/02/12 08:50:36 pho Exp $
 
 DISTNAME=	parser-combinators-1.3.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
