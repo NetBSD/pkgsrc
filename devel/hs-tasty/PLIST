@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/04/24 05:25:25 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/02/12 05:18:31 pho Exp $
 lib/tasty-${PKGVERSION}/${HS_VERSION}/package-description
 lib/tasty-${PKGVERSION}/${HS_VERSION}/package-id
 lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -53,6 +53,9 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Test/Tasty/Patterns/Expr.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Test/Tasty/Patterns/Parser.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Test/Tasty/Patterns/Parser.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Test/Tasty/Patterns/Parser.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Test/Tasty/Patterns/Printer.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Test/Tasty/Patterns/Printer.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Test/Tasty/Patterns/Printer.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Test/Tasty/Patterns/Types.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Test/Tasty/Patterns/Types.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Test/Tasty/Patterns/Types.p_hi
@@ -83,6 +86,7 @@ share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/html/Test-Tasty-Ingredients.html
 share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/html/Test-Tasty-Options.html
 share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/html/Test-Tasty-Patterns-Eval.html
 share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/html/Test-Tasty-Patterns-Parser.html
+share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/html/Test-Tasty-Patterns-Printer.html
 share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/html/Test-Tasty-Patterns-Types.html
 share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/html/Test-Tasty-Providers-ConsoleFormat.html
 share/doc/${HS_PLATFORM}/tasty-${PKGVERSION}/html/Test-Tasty-Providers.html
