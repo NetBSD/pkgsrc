@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:14:26 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/02/12 18:05:08 adam Exp $
 
-BLAKE2s (colordiff-1.0.19.tar.gz) = e359f3799571ea717ff6ef58686f89f2bf8afa267c2388da5f625a2f9bd0ea9b
-SHA512 (colordiff-1.0.19.tar.gz) = 2845c4b8229df317984ea93aa9d2e08b3bb39ba67b870a14f09dc19fa1e94b4fc8e4da9a7554d53934591766b3aa1696fdc62765ce95e55f50da219e44dae523
-Size (colordiff-1.0.19.tar.gz) = 21329 bytes
+BLAKE2s (colordiff-1.0.20.tar.gz) = 705a102fa76c9a12c95ed8570f6c7a24d148a0073043305ed9809fba082a8af2
+SHA512 (colordiff-1.0.20.tar.gz) = 073be1b982515bbdb33e2200fcb808632a883aa185a385359290bfc4c0b643ba56f02def49b35efd0d726701c76eea14bedd0e41a048fa2e972a6001a9442491
+Size (colordiff-1.0.20.tar.gz) = 22209 bytes
