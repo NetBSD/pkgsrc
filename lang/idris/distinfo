@@ -1,17 +1,14 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:51:38 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/02/12 07:13:35 pho Exp $
 
-BLAKE2s (idris-1.3.3.tar.gz) = 73dfec9cd1086c0f1908c70744485028a8aef890798dd42f92a5803363da7d5e
-SHA512 (idris-1.3.3.tar.gz) = 4edcc67b173b5645102520a47b295742b894c2f738f94b8f2183c782aa39c349262a5c62cc01c947bcc366930f9f952632ebc419616cdb06c952ee0134b1ec4b
-Size (idris-1.3.3.tar.gz) = 1720984 bytes
+BLAKE2s (idris-1.3.4.tar.gz) = 5ecd1bf45becb897e273e9890a3aa3293bdf591d85b17d3c67e4a7f5ab98ae95
+SHA512 (idris-1.3.4.tar.gz) = 362c0442e5a38fc67d24e4b33728bc251ee49d14be9faacbbe924da171ce462e613cf975f8c0756fc6c8254807e98adfccfc2a6966dc32813cbadb3f25521f7c
+Size (idris-1.3.4.tar.gz) = 1720240 bytes
 SHA1 (patch-Setup.hs) = 26b0fe5486434aa5056703abd8041778ff73f385
-SHA1 (patch-idris.cabal) = 4299b8addf9a41615801e201cb9b13716bbd7b74
+SHA1 (patch-idris.cabal) = ca4ee9a7d02a5bef2ba36c3edf317bb49718ae70
 SHA1 (patch-rts_Makefile) = fe88269e184aa0d80e13723c9e4fe47aba68eb3e
 SHA1 (patch-rts_idris__net.c) = fcb226e8752c34661fc1a81fff11e41342c3e0f8
 SHA1 (patch-src_IRTS_System.hs) = 4451e03f4e9095fcac9e014eb7ad4b997d5e308d
-SHA1 (patch-src_Idris_Output.hs) = 75d0f8c8eb96c6110cf5a825cf402d3403da16a6
 SHA1 (patch-src_Idris_Package_Parser.hs) = 3394ec6fbf1323f4331d614426b48377815b7347
 SHA1 (patch-src_Idris_Parser_Data.hs) = 5b6d2d3944233fba22e93d631f92de49e64b35a8
 SHA1 (patch-src_Idris_Parser_Helpers.hs) = bfd9b16dafa0581147c6b22e5d4e43ae2b701f96
 SHA1 (patch-src_Idris_Parser_Ops.hs) = 2ebc3ffc1c909362c4945e556056d5428a8d0a25
-SHA1 (patch-src_Idris_Parser_Stack.hs) = 60f27654bc720df3830a42ec5d4debb7ca4b73cd
-SHA1 (patch-src_Idris_REPL.hs) = b5096550b15c9fbf01d993da24f1c8bf21817b09
