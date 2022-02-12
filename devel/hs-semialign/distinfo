@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/12 05:27:27 pho Exp $
+
+BLAKE2s (semialign-1.2.0.1.tar.gz) = c7bbbf799ad7525c91a9daf08948b1b1a1d65c91d3111dc96b19e8c6727a25dd
+SHA512 (semialign-1.2.0.1.tar.gz) = ba4c680ec2f301c6b76e2198a422bd9c540915fd89a12cbb1787e95c0ccd1bb05abdf59ab1678f46141939673418c650d9624af2ddb7370f2b6bccf704ade83d
+Size (semialign-1.2.0.1.tar.gz) = 10371 bytes
