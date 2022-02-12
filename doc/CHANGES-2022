@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.803 2022/02/12 07:00:58 pho Exp $
+$NetBSD: CHANGES-2022,v 1.804 2022/02/12 07:02:56 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1064,3 +1064,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/hs-x509-validation to 1.6.12 [pho 2022-02-12]
 	Updated security/hs-x509-system to 1.6.7 [pho 2022-02-12]
 	Updated security/hs-tls to 1.5.7 [pho 2022-02-12]
+	Added devel/hs-unliftio version 0.2.21.0 [pho 2022-02-12]
