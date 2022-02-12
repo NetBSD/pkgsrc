@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2020/04/27 14:11:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/02/12 12:35:37 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
@@ -7,6 +7,7 @@ ${GEM_LIBDIR}/doc/text/lgpl-3.txt
 ${GEM_LIBDIR}/doc/text/news.md
 ${GEM_LIBDIR}/lib/native-package-installer.rb
 ${GEM_LIBDIR}/lib/native-package-installer/executable-finder.rb
+${GEM_LIBDIR}/lib/native-package-installer/os-release.rb
 ${GEM_LIBDIR}/lib/native-package-installer/platform.rb
 ${GEM_LIBDIR}/lib/native-package-installer/platform/alt-linux.rb
 ${GEM_LIBDIR}/lib/native-package-installer/platform/arch-linux.rb
@@ -22,6 +23,4 @@ ${GEM_LIBDIR}/lib/native-package-installer/platform/suse.rb
 ${GEM_LIBDIR}/lib/native-package-installer/platform/ubuntu.rb
 ${GEM_LIBDIR}/lib/native-package-installer/platform/unknown.rb
 ${GEM_LIBDIR}/lib/native-package-installer/version.rb
-${GEM_LIBDIR}/test/run-test.rb
-${GEM_LIBDIR}/test/test-executable-finder.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
