@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/01/18 02:48:24 pho Exp $
+# $NetBSD: Makefile,v 1.6 2022/02/12 08:09:35 pho Exp $
 
-DISTNAME=	citeproc-0.3.0.9
-PKGREVISION=	2
+DISTNAME=	citeproc-0.6.0.1
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
@@ -19,6 +18,7 @@ CONFIGURE_ARGS+=	-fexecutable
 .include "../../textproc/hs-pandoc-types/buildlink3.mk"
 .include "../../devel/hs-safe/buildlink3.mk"
 .include "../../math/hs-scientific/buildlink3.mk"
+.include "../../textproc/hs-unicode-collation/buildlink3.mk"
 .include "../../devel/hs-uniplate/buildlink3.mk"
 .include "../../devel/hs-vector/buildlink3.mk"
 .include "../../textproc/hs-xml-conduit/buildlink3.mk"
