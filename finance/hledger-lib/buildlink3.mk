@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.4 2022/01/18 02:48:17 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2022/02/12 07:50:32 pho Exp $
 
 BUILDLINK_TREE+=	hledger-lib
 
 .if !defined(HLEDGER_LIB_BUILDLINK3_MK)
 HLEDGER_LIB_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hledger-lib+=	hledger-lib>=1.21
-BUILDLINK_ABI_DEPENDS.hledger-lib+=	hledger-lib>=1.21nb2
+BUILDLINK_API_DEPENDS.hledger-lib+=	hledger-lib>=1.24.1
+BUILDLINK_ABI_DEPENDS.hledger-lib+=	hledger-lib>=1.24.1
 BUILDLINK_PKGSRCDIR.hledger-lib?=	../../finance/hledger-lib
 
 .include "../../converters/hs-aeson/buildlink3.mk"
@@ -20,11 +20,14 @@ BUILDLINK_PKGSRCDIR.hledger-lib?=	../../finance/hledger-lib
 .include "../../devel/hs-cmdargs/buildlink3.mk"
 .include "../../devel/hs-data-default/buildlink3.mk"
 .include "../../finance/hs-Decimal/buildlink3.mk"
+.include "../../textproc/hs-doclayout/buildlink3.mk"
 .include "../../misc/hs-extra/buildlink3.mk"
 .include "../../devel/hs-file-embed/buildlink3.mk"
 .include "../../textproc/hs-Glob/buildlink3.mk"
 .include "../../devel/hs-hashtables/buildlink3.mk"
 .include "../../textproc/hs-megaparsec/buildlink3.mk"
+.include "../../devel/hs-microlens/buildlink3.mk"
+.include "../../devel/hs-microlens-th/buildlink3.mk"
 .include "../../time/hs-old-time/buildlink3.mk"
 .include "../../devel/hs-parser-combinators/buildlink3.mk"
 .include "../../devel/hs-pretty-simple/buildlink3.mk"
