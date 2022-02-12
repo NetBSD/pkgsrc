@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/01/09 19:54:47 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/02/12 20:14:01 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go117/AUTHORS
@@ -259,6 +259,7 @@ go117/misc/cgo/testplugin/overlaydir_test.go
 go117/misc/cgo/testplugin/plugin_test.go
 go117/misc/cgo/testplugin/testdata/checkdwarf/main.go
 go117/misc/cgo/testplugin/testdata/common/common.go
+go117/misc/cgo/testplugin/testdata/forkexec/main.go
 go117/misc/cgo/testplugin/testdata/host/host.go
 go117/misc/cgo/testplugin/testdata/iface/main.go
 go117/misc/cgo/testplugin/testdata/iface_a/a.go
@@ -10036,6 +10037,8 @@ go117/test/fixedbugs/issue4964.dir/b.go
 go117/test/fixedbugs/issue4964.go
 go117/test/fixedbugs/issue5002.go
 go117/test/fixedbugs/issue5056.go
+go117/test/fixedbugs/issue50671.go
+go117/test/fixedbugs/issue50854.go
 go117/test/fixedbugs/issue5089.go
 go117/test/fixedbugs/issue5105.dir/a.go
 go117/test/fixedbugs/issue5105.dir/b.go
