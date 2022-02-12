@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.854 2022/02/12 13:28:47 taca Exp $
+$NetBSD: CHANGES-2022,v 1.855 2022/02/12 13:30:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1115,3 +1115,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-rb-kqueue to 0.2.8 [taca 2022-02-12]
 	Updated devel/ruby-rbtree to 0.4.5 [taca 2022-02-12]
 	Updated devel/ruby-rspec-support to 3.11.0 [taca 2022-02-12]
+	Updated devel/ruby-rspec-core to 3.11.0 [taca 2022-02-12]
