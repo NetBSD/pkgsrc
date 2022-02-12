@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2021/05/04 07:45:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2022/02/12 12:12:32 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
@@ -373,6 +373,7 @@ ${GEM_LIBDIR}/lib/backports/2.1.0/fixnum.rb
 ${GEM_LIBDIR}/lib/backports/2.1.0/fixnum/bit_length.rb
 ${GEM_LIBDIR}/lib/backports/2.1.0/module.rb
 ${GEM_LIBDIR}/lib/backports/2.1.0/module/include.rb
+${GEM_LIBDIR}/lib/backports/2.1.0/module/singleton_class.rb
 ${GEM_LIBDIR}/lib/backports/2.1.rb
 ${GEM_LIBDIR}/lib/backports/2.2.0.rb
 ${GEM_LIBDIR}/lib/backports/2.2.0/enumerable.rb
@@ -506,12 +507,14 @@ ${GEM_LIBDIR}/lib/backports/2.7.0/array/intersection.rb
 ${GEM_LIBDIR}/lib/backports/2.7.0/comparable.rb
 ${GEM_LIBDIR}/lib/backports/2.7.0/comparable/clamp.rb
 ${GEM_LIBDIR}/lib/backports/2.7.0/complex.rb
-${GEM_LIBDIR}/lib/backports/2.7.0/complex/comparision.rb
+${GEM_LIBDIR}/lib/backports/2.7.0/complex/comparison.rb
 ${GEM_LIBDIR}/lib/backports/2.7.0/enumerable.rb
 ${GEM_LIBDIR}/lib/backports/2.7.0/enumerable/filter_map.rb
 ${GEM_LIBDIR}/lib/backports/2.7.0/enumerable/tally.rb
 ${GEM_LIBDIR}/lib/backports/2.7.0/enumerator.rb
 ${GEM_LIBDIR}/lib/backports/2.7.0/enumerator/produce.rb
+${GEM_LIBDIR}/lib/backports/2.7.0/symbol.rb
+${GEM_LIBDIR}/lib/backports/2.7.0/symbol/end_with.rb
 ${GEM_LIBDIR}/lib/backports/2.7.0/time/ceil.rb
 ${GEM_LIBDIR}/lib/backports/2.7.0/time/floor.rb
 ${GEM_LIBDIR}/lib/backports/2.7.rb
@@ -525,6 +528,25 @@ ${GEM_LIBDIR}/lib/backports/3.0.0/ractor.rb
 ${GEM_LIBDIR}/lib/backports/3.0.0/symbol.rb
 ${GEM_LIBDIR}/lib/backports/3.0.0/symbol/name.rb
 ${GEM_LIBDIR}/lib/backports/3.0.rb
+${GEM_LIBDIR}/lib/backports/3.1.0.rb
+${GEM_LIBDIR}/lib/backports/3.1.0/array.rb
+${GEM_LIBDIR}/lib/backports/3.1.0/array/intersect.rb
+${GEM_LIBDIR}/lib/backports/3.1.0/class.rb
+${GEM_LIBDIR}/lib/backports/3.1.0/class/descendants.rb
+${GEM_LIBDIR}/lib/backports/3.1.0/class/subclasses.rb
+${GEM_LIBDIR}/lib/backports/3.1.0/enumerable.rb
+${GEM_LIBDIR}/lib/backports/3.1.0/enumerable/compact.rb
+${GEM_LIBDIR}/lib/backports/3.1.0/enumerable/tally.rb
+${GEM_LIBDIR}/lib/backports/3.1.0/file.rb
+${GEM_LIBDIR}/lib/backports/3.1.0/file/dirname.rb
+${GEM_LIBDIR}/lib/backports/3.1.0/integer.rb
+${GEM_LIBDIR}/lib/backports/3.1.0/integer/try_convert.rb
+${GEM_LIBDIR}/lib/backports/3.1.0/match_data.rb
+${GEM_LIBDIR}/lib/backports/3.1.0/match_data/match.rb
+${GEM_LIBDIR}/lib/backports/3.1.0/match_data/match_length.rb
+${GEM_LIBDIR}/lib/backports/3.1.0/struct.rb
+${GEM_LIBDIR}/lib/backports/3.1.0/struct/keyword_init.rb
+${GEM_LIBDIR}/lib/backports/3.1.rb
 ${GEM_LIBDIR}/lib/backports/basic_object.rb
 ${GEM_LIBDIR}/lib/backports/force/array_map.rb
 ${GEM_LIBDIR}/lib/backports/force/enumerable_map.rb
