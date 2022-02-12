@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.866 2022/02/12 15:29:49 taca Exp $
+$NetBSD: CHANGES-2022,v 1.867 2022/02/12 17:55:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1127,3 +1127,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-zeitwerk to 2.5.4 [taca 2022-02-12]
 	Updated finance/ruby-activemerchant to 1.125.0 [taca 2022-02-12]
 	Updated graphics/ruby-RMagick to 4.2.4 [taca 2022-02-12]
+	Updated converters/py-charset-normalizer to 2.0.12 [adam 2022-02-12]
+	Updated devel/py-ruamel-yaml to 0.17.21 [adam 2022-02-12]
