@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3576 2022/02/11 13:14:07 pho Exp $
+# $NetBSD: Makefile,v 1.3577 2022/02/12 05:21:18 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -488,6 +488,7 @@ SUBDIR+=	hptools
 SUBDIR+=	hs-Cabal-syntax
 SUBDIR+=	hs-ListLike
 SUBDIR+=	hs-MonadRandom
+SUBDIR+=	hs-OneTuple
 SUBDIR+=	hs-Only
 SUBDIR+=	hs-QuickCheck
 SUBDIR+=	hs-StateVar
