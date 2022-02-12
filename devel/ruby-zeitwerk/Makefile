@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2021/11/09 14:46:28 taca Exp $
+# $NetBSD: Makefile,v 1.6 2022/02/12 15:22:38 taca Exp $
 
-DISTNAME=	zeitwerk-2.5.1
+DISTNAME=	zeitwerk-2.5.4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
