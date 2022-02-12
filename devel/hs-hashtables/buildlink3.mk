@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.4 2022/01/18 02:48:09 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2022/02/12 04:48:07 pho Exp $
 
 BUILDLINK_TREE+=	hs-hashtables
 
 .if !defined(HS_HASHTABLES_BUILDLINK3_MK)
 HS_HASHTABLES_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-hashtables+=	hs-hashtables>=1.2.4
-BUILDLINK_ABI_DEPENDS.hs-hashtables+=	hs-hashtables>=1.2.4.1nb2
+BUILDLINK_API_DEPENDS.hs-hashtables+=	hs-hashtables>=1.3
+BUILDLINK_ABI_DEPENDS.hs-hashtables+=	hs-hashtables>=1.3
 BUILDLINK_PKGSRCDIR.hs-hashtables?=	../../devel/hs-hashtables
 
 .include "../../devel/hs-hashable/buildlink3.mk"
