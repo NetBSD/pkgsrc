@@ -1,0 +1,4 @@
+Most data types in the haskell platform do not have Lift instances. This
+package provides orphan instances for containers, text, bytestring and
+vector. It also provides compat instances for older versions of
+template-haskell.
