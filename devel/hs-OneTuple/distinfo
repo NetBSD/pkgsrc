@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/12 05:20:39 pho Exp $
+
+BLAKE2s (OneTuple-0.3.1.tar.gz) = 12f62e02ddc90278beb8a924faae14f28f1843cb8675d2db9d91ddb12b8de4d5
+SHA512 (OneTuple-0.3.1.tar.gz) = 92678ca3e05c6da7d60e460efa88dbd8c19f8ec6b149dc5a9a493f93bd944b7d0c3ac650a3c1ad9d3742bc2a8bfaef1bab8a6e4ba71ebbb1fc0c9f7a07c0906c
+Size (OneTuple-0.3.1.tar.gz) = 5148 bytes
