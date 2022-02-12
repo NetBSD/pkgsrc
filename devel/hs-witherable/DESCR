@@ -1,0 +1,2 @@
+A stronger variant of traverse which can remove elements and generalised
+mapMaybe, catMaybes, filter.
