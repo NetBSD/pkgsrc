@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.769 2022/02/12 04:42:36 pho Exp $
+$NetBSD: CHANGES-2022,v 1.770 2022/02/12 04:45:20 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1030,3 +1030,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/u-boot-rockpro64 to 2022.01 [mrg 2022-02-11]
 	Updated sysutils/u-boot-rock64 to 2022.01 [mrg 2022-02-11]
 	Updated devel/hs-transformers-base to 0.4.6 [pho 2022-02-12]
+	Updated devel/hs-monad-control to 1.0.3.1 [pho 2022-02-12]
