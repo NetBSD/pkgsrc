@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3585 2022/02/12 08:03:13 pho Exp $
+# $NetBSD: Makefile,v 1.3586 2022/02/12 08:12:13 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -547,6 +547,7 @@ SUBDIR+=	hs-haskell-lexer
 SUBDIR+=	hs-haskell-src-exts
 SUBDIR+=	hs-hint
 SUBDIR+=	hs-hslua-module-system
+SUBDIR+=	hs-hslua-module-version
 SUBDIR+=	hs-indexed-traversable
 SUBDIR+=	hs-indexed-traversable-instances
 SUBDIR+=	hs-ipynb
