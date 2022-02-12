@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.810 2022/02/12 07:17:54 pho Exp $
+$NetBSD: CHANGES-2022,v 1.811 2022/02/12 07:19:38 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1071,3 +1071,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/hs-cassava-megaparsec to 2.0.4 [pho 2022-02-12]
 	Updated databases/ruby-awesome_nested_set to 3.5.0 [taca 2022-02-12]
 	Updated textproc/hs-shakespeare to 2.0.25.1 [pho 2022-02-12]
+	Updated textproc/hs-yaml to 0.11.7.0 [pho 2022-02-12]
