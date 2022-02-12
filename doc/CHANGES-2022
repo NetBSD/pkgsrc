@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.863 2022/02/12 15:21:22 taca Exp $
+$NetBSD: CHANGES-2022,v 1.864 2022/02/12 15:24:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1124,3 +1124,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-shoulda-matchers to 5.1.0 [taca 2022-02-12]
 	Updated devel/ruby-thor to 1.2.1 [taca 2022-02-12]
 	Updated devel/ruby-tins to 1.31.0 [taca 2022-02-12]
+	Updated devel/ruby-zeitwerk to 2.5.4 [taca 2022-02-12]
