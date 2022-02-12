@@ -1,12 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/23 08:44:05 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/02/12 05:31:25 pho Exp $
 lib/aeson-${PKGVERSION}/${HS_VERSION}/package-description
 lib/aeson-${PKGVERSION}/${HS_VERSION}/package-id
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson.p_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Encode.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Encode.hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Encode.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Encoding.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Encoding.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Encoding.p_hi
@@ -19,12 +16,27 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Encoding/Internal.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal/ByteString.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal/ByteString.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal/ByteString.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal/Functions.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal/Functions.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal/Functions.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal/TH.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal/TH.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal/TH.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal/Text.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal/Text.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal/Text.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal/Time.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal/Time.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal/Time.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Key.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Key.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Key.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/KeyMap.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/KeyMap.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/KeyMap.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Parser.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Parser.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Parser.p_hi
@@ -77,11 +89,12 @@ lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/LICENSE
-share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/html/Data-Aeson-Encode.html
 share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/html/Data-Aeson-Encoding-Internal.html
 share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/html/Data-Aeson-Encoding.html
 share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/html/Data-Aeson-Internal-Time.html
 share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/html/Data-Aeson-Internal.html
+share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/html/Data-Aeson-Key.html
+share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/html/Data-Aeson-KeyMap.html
 share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/html/Data-Aeson-Parser-Internal.html
 share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/html/Data-Aeson-Parser.html
 share/doc/${HS_PLATFORM}/aeson-${PKGVERSION}/html/Data-Aeson-QQ-Simple.html
