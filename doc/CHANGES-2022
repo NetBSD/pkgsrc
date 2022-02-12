@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.823 2022/02/12 07:43:01 pho Exp $
+$NetBSD: CHANGES-2022,v 1.824 2022/02/12 07:44:50 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1084,3 +1084,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/hs-ipynb to 0.2 [pho 2022-02-12]
 	Updated converters/hs-aeson-pretty to 0.8.9 [pho 2022-02-12]
 	Updated www/hs-warp-tls to 3.3.2 [pho 2022-02-12]
+	Added devel/hs-microlens version 0.4.12.0 [pho 2022-02-12]
