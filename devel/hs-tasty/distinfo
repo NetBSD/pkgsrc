@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:01 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/02/12 05:18:31 pho Exp $
 
-BLAKE2s (tasty-1.4.1.tar.gz) = 3fbf8c959d748ae319289f83954a5bb3a8f6d688afa1816279b25b996cdd35d0
-SHA512 (tasty-1.4.1.tar.gz) = 72f7dfc60d1582be25ff7e5015ba735156fcc2e8074f0655c68eb4f0c0d2063aa882c2407fe8858a47a316d90b84f8b40a511663642bdc43739c3f02beb021b2
-Size (tasty-1.4.1.tar.gz) = 56599 bytes
+BLAKE2s (tasty-1.4.2.1.tar.gz) = d83f6af7c859d26c079994ed7e9b0991a4079353ac95ddd9ea4bebd716d9035c
+SHA512 (tasty-1.4.2.1.tar.gz) = 71a0b995fa9b7f02d25a62cb161a6af8421731fd1484f129d893869f3439498b1bf71c74863e34f1f50073d3a503b4ca088e784234b8758a788e5df05baee90f
+Size (tasty-1.4.2.1.tar.gz) = 58524 bytes
