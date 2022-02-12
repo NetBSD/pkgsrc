@@ -1,0 +1,9 @@
+This package provides functions to marshal and unmarshal pandoc document
+types to and from Lua.
+
+The values of most types are pushed to pandoc as "userdata" objects that
+wrap a stable pointer to the Haskell value; these objects come with methods
+to access and modify their properties.
+
+Sequences are pushed as normal Lua tables, but are augmented with
+convenience functions.
