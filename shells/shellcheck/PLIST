@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/04/24 13:51:23 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/02/12 05:34:24 pho Exp $
 bin/shellcheck
 lib/ShellCheck-${PKGVERSION}/${HS_VERSION}/package-description
 lib/ShellCheck-${PKGVERSION}/${HS_VERSION}/package-id
@@ -75,6 +75,8 @@ lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 share/doc/${HS_PLATFORM}/ShellCheck-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/ShellCheck-${PKGVERSION}/html/CHANGELOG.md
+share/doc/${HS_PLATFORM}/ShellCheck-${PKGVERSION}/html/README.md
 share/doc/${HS_PLATFORM}/ShellCheck-${PKGVERSION}/html/ShellCheck-AST.html
 share/doc/${HS_PLATFORM}/ShellCheck-${PKGVERSION}/html/ShellCheck-ASTLib.html
 share/doc/${HS_PLATFORM}/ShellCheck-${PKGVERSION}/html/ShellCheck-Analytics.html
