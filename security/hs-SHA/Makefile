@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/18 02:48:20 pho Exp $
+# $NetBSD: Makefile,v 1.4 2022/02/12 08:50:47 pho Exp $
 
 DISTNAME=	SHA-1.6.4.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 
 MAINTAINER=	pho@cielonegro.org

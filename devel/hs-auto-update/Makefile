@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/01/18 02:48:04 pho Exp $
+# $NetBSD: Makefile,v 1.3 2022/02/12 08:50:28 pho Exp $
 
 DISTNAME=	auto-update-0.1.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

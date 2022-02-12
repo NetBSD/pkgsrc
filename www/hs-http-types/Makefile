@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/18 02:48:31 pho Exp $
+# $NetBSD: Makefile,v 1.4 2022/02/12 08:50:59 pho Exp $
 
 DISTNAME=	http-types-0.12.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 
 MAINTAINER=	szptvlfn@NetBSD.org
