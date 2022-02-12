@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:22:00 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/02/12 07:35:44 pho Exp $
 
-BLAKE2s (doctemplates-0.9.tar.gz) = c7f478ac2d39e7ee6719699b56b770843db8f67b655d2fdb9275dbe440571df7
-SHA512 (doctemplates-0.9.tar.gz) = 3216fc7ef4e2a45230a2854c22c2a8622774bc834bbf59d34134912b3942df2a541230bd91324995e13e19098a0fa0bf7057c7d55ca35ec75da7840fddd61a37
-Size (doctemplates-0.9.tar.gz) = 27366 bytes
+BLAKE2s (doctemplates-0.10.0.1.tar.gz) = 05bb66d9962adf028933486e3ad0edfdeaccb9b9fcd62716c97f4b159373a3aa
+SHA512 (doctemplates-0.10.0.1.tar.gz) = db4fec53d8f97f91e63e26d9634816796a5224456016910ef9c1c30c3757190a018f10f573d080b53dbb462760bff911f3fc2a104210d197e03cad2119435980
+Size (doctemplates-0.10.0.1.tar.gz) = 27494 bytes
