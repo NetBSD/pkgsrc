@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.15 2021/05/09 13:52:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2022/02/12 15:20:56 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.all_images.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.tool-versions
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/README.md
@@ -66,6 +66,7 @@ ${GEM_LIBDIR}/lib/tins/if_predicate.rb
 ${GEM_LIBDIR}/lib/tins/implement.rb
 ${GEM_LIBDIR}/lib/tins/limited.rb
 ${GEM_LIBDIR}/lib/tins/lines_file.rb
+${GEM_LIBDIR}/lib/tins/lru_cache.rb
 ${GEM_LIBDIR}/lib/tins/memoize.rb
 ${GEM_LIBDIR}/lib/tins/method_description.rb
 ${GEM_LIBDIR}/lib/tins/minimize.rb
@@ -176,6 +177,7 @@ ${GEM_LIBDIR}/tests/if_predicate_test.rb
 ${GEM_LIBDIR}/tests/implement_test.rb
 ${GEM_LIBDIR}/tests/limited_test.rb
 ${GEM_LIBDIR}/tests/lines_file_test.rb
+${GEM_LIBDIR}/tests/lru_cache_test.rb
 ${GEM_LIBDIR}/tests/memoize_test.rb
 ${GEM_LIBDIR}/tests/method_description_test.rb
 ${GEM_LIBDIR}/tests/minimize_test.rb
