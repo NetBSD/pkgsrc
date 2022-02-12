@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2021/05/04 14:20:10 taca Exp $
+# $NetBSD: Makefile,v 1.16 2022/02/12 12:37:42 taca Exp $
 
-DISTNAME=	octokit-4.21.0
+DISTNAME=	octokit-4.22.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
