@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3580 2022/02/12 05:29:18 pho Exp $
+# $NetBSD: Makefile,v 1.3581 2022/02/12 07:03:18 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -595,6 +595,7 @@ SUBDIR+=	hs-uglymemo
 SUBDIR+=	hs-unbounded-delays
 SUBDIR+=	hs-uniplate
 SUBDIR+=	hs-unix-compat
+SUBDIR+=	hs-unliftio
 SUBDIR+=	hs-unliftio-core
 SUBDIR+=	hs-unordered-containers
 SUBDIR+=	hs-utf8-string
