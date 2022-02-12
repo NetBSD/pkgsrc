@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:55:43 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/02/12 05:15:54 pho Exp $
 
-BLAKE2s (contravariant-1.5.3.tar.gz) = d4804435c64e8c3946e497e7d489a006b55a70774ebd6ab82d40269ad927d19f
-SHA512 (contravariant-1.5.3.tar.gz) = f84e534ea208ebb949e6e1114233e56f284b94ceb756bddeb5786d2c1ed7ed7ec93defcabfa285887316cf880e7b6d2575a76c72bdd9ad73530b4397f5466c87
-Size (contravariant-1.5.3.tar.gz) = 13726 bytes
+BLAKE2s (contravariant-1.5.5.tar.gz) = f6e9c9197411fad38b29c385759057293f7eae512cbd31fc278e70deb874d09e
+SHA512 (contravariant-1.5.5.tar.gz) = c5e14525cb44fe24ddaa8b1b2b5eb983e602513887119a9fb9eaed3ec1d5af28b9e858a6e461caa8d3793d52ded135459bf95a15b43b2e07e15aea33d3634bc3
+Size (contravariant-1.5.5.tar.gz) = 13815 bytes
