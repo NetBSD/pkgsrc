@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.790 2022/02/12 05:17:30 pho Exp $
+$NetBSD: CHANGES-2022,v 1.791 2022/02/12 05:18:39 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1051,3 +1051,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/hs-mwc-random to 0.15.0.2 [pho 2022-02-12]
 	Updated math/hs-contravariant to 1.5.5 [pho 2022-02-12]
 	Updated textproc/hs-lucid to 2.11.0 [pho 2022-02-12]
+	Updated devel/hs-tasty to 1.4.2.1 [pho 2022-02-12]
