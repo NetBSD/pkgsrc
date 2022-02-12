@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.799 2022/02/12 05:34:33 pho Exp $
+$NetBSD: CHANGES-2022,v 1.800 2022/02/12 06:29:16 fox Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1060,3 +1060,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-witherable version 0.4.2 [pho 2022-02-12]
 	Updated converters/hs-aeson to 2.0.3.0 [pho 2022-02-12]
 	Updated shells/shellcheck to 0.8.0 [pho 2022-02-12]
+	Updated audio/din to 53 [fox 2022-02-12]
