@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.2 2022/01/18 02:48:02 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2022/02/12 04:56:10 pho Exp $
 
 BUILDLINK_TREE+=	hs-ListLike
 
 .if !defined(HS_LISTLIKE_BUILDLINK3_MK)
 HS_LISTLIKE_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-ListLike+=	hs-ListLike>=4.7.4
-BUILDLINK_ABI_DEPENDS.hs-ListLike+=	hs-ListLike>=4.7.4nb1
+BUILDLINK_API_DEPENDS.hs-ListLike+=	hs-ListLike>=4.7.6
+BUILDLINK_ABI_DEPENDS.hs-ListLike+=	hs-ListLike>=4.7.6
 BUILDLINK_PKGSRCDIR.hs-ListLike?=	../../devel/hs-ListLike
 
 .include "../../devel/hs-dlist/buildlink3.mk"
