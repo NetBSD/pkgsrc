@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2020/04/06 20:40:28 schmonz Exp $
+# $NetBSD: Makefile,v 1.18 2022/02/12 22:58:08 wiz Exp $
 
-DISTNAME=	tarsnap-autoconf-1.0.39
+DISTNAME=	tarsnap-autoconf-1.0.40
 PKGNAME=	${DISTNAME:S/-autoconf//}
-PKGREVISION=	2
 CATEGORIES=	sysutils archivers security
 MASTER_SITES=	https://www.tarsnap.com/download/
 EXTRACT_SUFX=	.tgz
@@ -15,6 +14,7 @@ LICENSE=	tarsnap-license
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 INSTALL_MAKE_FLAGS=	sysconfdir=${PREFIX}/share/examples/tarsnap
+TEST_TARGET=		test
 
 CONF_FILES=	${PREFIX}/share/examples/tarsnap/tarsnap.conf.sample ${PKG_SYSCONFDIR}/tarsnap.conf
 
