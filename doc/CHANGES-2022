@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.812 2022/02/12 07:21:24 pho Exp $
+$NetBSD: CHANGES-2022,v 1.813 2022/02/12 07:22:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1073,3 +1073,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/hs-shakespeare to 2.0.25.1 [pho 2022-02-12]
 	Updated textproc/hs-yaml to 0.11.7.0 [pho 2022-02-12]
 	Updated devel/hlint to 3.3.6 [pho 2022-02-12]
+	Updated databases/ruby-sequel to 5.53.0 [taca 2022-02-12]
