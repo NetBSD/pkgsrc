@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.8 2020/03/24 18:30:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/02/12 13:48:00 taca Exp $
 bin/thor${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
-${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/LICENSE.md
 ${GEM_LIBDIR}/README.md
