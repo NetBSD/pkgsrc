@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21516 2022/02/12 08:09:52 pho Exp $
+$NetBSD: TODO,v 1.21517 2022/02/12 08:16:17 pho Exp $
 
 Suggested new packages
 ======================
@@ -1392,7 +1392,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pam-krb5-4.10
 	o pam-passwdqc-2.0.2
 	o pam-yubico-2.21
-	o pandoc-2.14.0.2
 	o paperkey-1.6
 	o papirus-folders-1.8.0
 	o paprefs-1.1
