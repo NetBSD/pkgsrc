@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/24 19:04:20 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/02/12 05:07:04 pho Exp $
 lib/X11-xft-${PKGVERSION}/${HS_VERSION}/package-description
 lib/X11-xft-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/${HS_PKGID}/Graphics/X11/Xft.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Graphics/X11/Xft.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Graphics/X11/Xft.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Graphics/X11/Xrender.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Graphics/X11/Xrender.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Graphics/X11/Xrender.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 share/doc/${HS_PLATFORM}/X11-xft-${PKGVERSION}/LICENSE
 share/doc/${HS_PLATFORM}/X11-xft-${PKGVERSION}/html/Graphics-X11-Xft.html
 share/doc/${HS_PLATFORM}/X11-xft-${PKGVERSION}/html/Graphics-X11-Xrender.html

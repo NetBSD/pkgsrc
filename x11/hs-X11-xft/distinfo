@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:33:54 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/02/12 05:07:05 pho Exp $
 
-BLAKE2s (X11-xft-0.3.1.tar.gz) = 454f904afa40fca2d1074d633dae43b627dd3d120e1b3df178e833c5ae7db0d0
-SHA512 (X11-xft-0.3.1.tar.gz) = 8f40db25453227ef9ce53b05a0c6af869e3a2efdb1d9b9ad683baf52601f320c85b09f0e514bb6ffeb17516d9b75c6772aa49613bb96272d56f06788118b7cfe
-Size (X11-xft-0.3.1.tar.gz) = 13621 bytes
+BLAKE2s (X11-xft-0.3.4.tar.gz) = d3bebd626dbae633655954ef97bd1482952ddfcc7574a7114f65cf948c53e0d6
+SHA512 (X11-xft-0.3.4.tar.gz) = cd7c10bbe21f096814ebbf1015f4492ee60e73032bbb114f8fa5684e46f96239814f6986d44955642509c06b790112a38194661754e23c874dfe9446b0c13eef
+Size (X11-xft-0.3.4.tar.gz) = 6648 bytes
