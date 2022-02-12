@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:05:44 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/02/12 08:17:17 pho Exp $
 
-BLAKE2s (hoogle-5.0.18.1.tar.gz) = 35d2d92f38dae0bff6115b4ebcc2e75ded8745a54b1ba5145d07bcaa4c153a96
-SHA512 (hoogle-5.0.18.1.tar.gz) = 00abbcf557824c604abbd5e9d27a5ca3d4a89e943888b6eef70dea46b8f786dfc851cb1c8f1531c808f4b71b34d3899258f3b009b0a38a385fc5c393a914da17
-Size (hoogle-5.0.18.1.tar.gz) = 97630 bytes
+BLAKE2s (hoogle-5.0.18.3.tar.gz) = 332800ef521f3789c6e6612a0f3c33738a7dea359711fc6f0d9dbeadf5472560
+SHA512 (hoogle-5.0.18.3.tar.gz) = 9e1f736411390c2807b46a555962b6346e8ce3b7cb2bb61ef38142992b02f2fcf636e4bc796d7bb582834810191a2f296b094cfc9630ab3ab170949c5aab1d23
+Size (hoogle-5.0.18.3.tar.gz) = 97704 bytes
