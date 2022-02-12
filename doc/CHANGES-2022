@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.825 2022/02/12 07:45:50 pho Exp $
+$NetBSD: CHANGES-2022,v 1.826 2022/02/12 07:50:45 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1086,3 +1086,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/hs-warp-tls to 3.3.2 [pho 2022-02-12]
 	Added devel/hs-microlens version 0.4.12.0 [pho 2022-02-12]
 	Added devel/hs-microlens-th version 0.4.3.10 [pho 2022-02-12]
+	Updated finance/hledger-lib to 1.24.1 [pho 2022-02-12]
