@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3577 2022/02/12 05:21:18 pho Exp $
+# $NetBSD: Makefile,v 1.3578 2022/02/12 05:22:34 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -547,6 +547,7 @@ SUBDIR+=	hs-haskell-src-exts
 SUBDIR+=	hs-hint
 SUBDIR+=	hs-hslua-module-system
 SUBDIR+=	hs-indexed-traversable
+SUBDIR+=	hs-indexed-traversable-instances
 SUBDIR+=	hs-ipynb
 SUBDIR+=	hs-libffi
 SUBDIR+=	hs-lifted-base
