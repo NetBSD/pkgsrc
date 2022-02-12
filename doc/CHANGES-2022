@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.786 2022/02/12 05:12:17 pho Exp $
+$NetBSD: CHANGES-2022,v 1.787 2022/02/12 05:13:02 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1047,3 +1047,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/hs-X11-xft to 0.3.4 [pho 2022-02-12]
 	Updated wm/xmonad-contrib to 0.17.0 [pho 2022-02-12]
 	Updated www/hs-xss-sanitize to 0.3.7 [pho 2022-02-12]
+	Updated security/hs-x509-store to 1.6.9 [pho 2022-02-12]
