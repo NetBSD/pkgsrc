@@ -1,0 +1,2 @@
+This package contains the C sources of LPeg, as well as some tiny Haskell
+helper to load the package.
