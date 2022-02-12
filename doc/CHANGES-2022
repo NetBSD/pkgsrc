@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.836 2022/02/12 08:13:15 pho Exp $
+$NetBSD: CHANGES-2022,v 1.837 2022/02/12 08:14:20 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1097,3 +1097,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added converters/hs-hslua-aeson version 2.1.0 [pho 2022-02-12]
 	Added devel/hs-hslua-module-version version 1.0.1 [pho 2022-02-12]
 	Added devel/hs-lpeg version 1.0.2 [pho 2022-02-12]
+	Added devel/hs-pandoc-lua-marshal version 0.1.4 [pho 2022-02-12]
