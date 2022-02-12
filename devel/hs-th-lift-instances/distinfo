@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/12 08:02:30 pho Exp $
+
+BLAKE2s (th-lift-instances-0.1.19.tar.gz) = d6c76b8e276a3d4e87667551655f0f02f566477c79ed3916a3aa29a416ae7e09
+SHA512 (th-lift-instances-0.1.19.tar.gz) = d8a38531a9a61dce426c43807e3764abbe22102e8886d9d23e76d27735bace672e10472b77b27dbe2fbb74bf6e32a5d528d690a608a81d8dce9963721fad6349
+Size (th-lift-instances-0.1.19.tar.gz) = 6113 bytes
