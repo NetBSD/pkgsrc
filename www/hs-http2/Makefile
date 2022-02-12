@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2022/01/18 02:48:32 pho Exp $
+# $NetBSD: Makefile,v 1.3 2022/02/12 05:05:55 pho Exp $
 
-DISTNAME=	http2-3.0.1
-PKGREVISION=	1
+DISTNAME=	http2-3.0.3
 CATEGORIES=	www
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	HTTP/2 library
 LICENSE=	modified-bsd
 
+.include "../../devel/hs-async/buildlink3.mk"
 .include "../../textproc/hs-case-insensitive/buildlink3.mk"
 .include "../../www/hs-http-types/buildlink3.mk"
 .include "../../net/hs-network/buildlink3.mk"
