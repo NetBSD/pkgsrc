@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.867 2022/02/12 17:55:41 adam Exp $
+$NetBSD: CHANGES-2022,v 1.868 2022/02/12 18:09:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1129,3 +1129,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/ruby-RMagick to 4.2.4 [taca 2022-02-12]
 	Updated converters/py-charset-normalizer to 2.0.12 [adam 2022-02-12]
 	Updated devel/py-ruamel-yaml to 0.17.21 [adam 2022-02-12]
+	Updated devel/colordiff to 1.0.20 [adam 2022-02-12]
+	Updated devel/py-packageurl to 0.9.8.1 [adam 2022-02-12]
