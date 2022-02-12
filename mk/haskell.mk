@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.40 2022/02/11 05:24:06 pho Exp $
+# $NetBSD: haskell.mk,v 1.41 2022/02/12 08:38:15 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages. Package
 # configuration, building, installation, registration and unregistration
@@ -114,7 +114,7 @@ HASKELL_ENABLE_SHARED_LIBRARY?=		yes
 HASKELL_ENABLE_LIBRARY_PROFILING?=	yes
 HASKELL_ENABLE_HADDOCK_DOCUMENTATION?=	yes
 
-.include "../../lang/ghc90/buildlink3.mk"
+.include "../../lang/ghc92/buildlink3.mk"
 
 # Some Cabal packages requires preprocessors to build, and we don't
 # want them to implicitly depend on such tools. Place dummy scripts by
