@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/04/24 11:14:51 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/02/12 07:59:09 pho Exp $
 bin/hledger
 lib/${PKGNAME}/${HS_VERSION}/package-description
 lib/${PKGNAME}/${HS_VERSION}/package-id
@@ -128,6 +128,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Paths_hledger.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+share/bash-completion/completions/hledger
 share/doc/${HS_PLATFORM}/${PKGNAME}/LICENSE
 share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Anon.html
 share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-CliOptions.html
@@ -170,6 +171,7 @@ share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Utils.html
 share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Version.html
 share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli.html
 share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-64.html
+share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-95.html
 share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-A.html
 share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-All.html
 share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-B.html
