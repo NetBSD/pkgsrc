@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:19:47 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/02/12 13:40:24 taca Exp $
 
-BLAKE2s (rspec_junit_formatter-0.4.1.gem) = 8addaba49237191d5c1dcd670dcb68de1fc59d80e95ee2ef94fa724cbc46ccc0
-SHA512 (rspec_junit_formatter-0.4.1.gem) = 8033f608a00a8a14a7c3166a2e55b9677ab9d941de3ce28deb3156fa8eb3307ed310ec128de1ff0a8e452b4b14192b429bcfc44af18a28ad1be5dfa467c6c4f1
-Size (rspec_junit_formatter-0.4.1.gem) = 14336 bytes
+BLAKE2s (rspec_junit_formatter-0.5.1.gem) = 7085c2fd750495706ed4c5903046a85b458c749123f305da284be3761e0d5389
+SHA512 (rspec_junit_formatter-0.5.1.gem) = 3282d1e413d5bfa5b3770cc2744395c921d00494ac56a43c09e2442aa9c934aa7765b7373078f82bbbcbbb93bb3d9ce2a52f5606d59ceea348d5c4ff481fb1cd
+Size (rspec_junit_formatter-0.5.1.gem) = 14336 bytes
