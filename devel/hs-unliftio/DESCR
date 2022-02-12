@@ -1,0 +1,2 @@
+Provides the core MonadUnliftIO typeclass, a number of common instances,
+and a collection of common functions working with it.
