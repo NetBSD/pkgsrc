@@ -1,0 +1,7 @@
+This package provides extra instances for type-classes in the
+indexed-traversable package.
+
+The intention is to keep this package minimal; it provides instances that
+formely existed in lens or optics-extra. We recommend putting other
+instances directly into their defining packages. The indexed-traversable
+package is light, having only GHC boot libraries as its dependencies.
