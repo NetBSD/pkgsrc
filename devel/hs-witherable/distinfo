@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2022/02/12 05:28:34 pho Exp $
+
+BLAKE2s (witherable-0.4.2.tar.gz) = 7004a4dfcaab709528a19fd34d21b2083bd857fdcde0174ad56a22fdab8f5e0f
+SHA512 (witherable-0.4.2.tar.gz) = 14ad590e24b93fc25f16fecaf71d6f9f891a903dd76e052d9f6c21b464f0d28df4f019d33ac36086341a6c5bd20833d7b0c2d19543460d1530899c0c25cea852
+Size (witherable-0.4.2.tar.gz) = 11876 bytes
+SHA1 (patch-witherable.cabal) = 6179b906e5e524d20b3e34b38307cbf5d6bed6ee
