@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.793 2022/02/12 05:20:49 pho Exp $
+$NetBSD: CHANGES-2022,v 1.794 2022/02/12 05:22:07 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1054,3 +1054,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/hs-tasty to 1.4.2.1 [pho 2022-02-12]
 	Updated math/hs-bifunctors to 5.5.11 [pho 2022-02-12]
 	Added devel/hs-OneTuple version 0.3.1 [pho 2022-02-12]
+	Added devel/hs-indexed-traversable-instances version 0.1.1 [pho 2022-02-12]
