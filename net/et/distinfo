@@ -1,5 +1,5 @@
 $NetBSD$
 
-BLAKE2s (EternalTerminal/et-v6.1.11.tar.gz) = 0e7079816a169b76e08c395c3f010df424a2f5abe95d99c0b08af53ae0b021e5
-SHA512 (EternalTerminal/et-v6.1.11.tar.gz) = 71b1fe20096a46e6f0ce87ec18d5074f90f48193a1637becb9692b20e7d92fc3b091cf843cecca30a4591fc94396494ff8282343ec6068a2905afd8f4225b3e4
-Size (EternalTerminal/et-v6.1.11.tar.gz) = 22081590 bytes
+BLAKE2s (EternalTerminal/et-6.1.11.tar.gz) = 0e7079816a169b76e08c395c3f010df424a2f5abe95d99c0b08af53ae0b021e5
+SHA512 (EternalTerminal/et-6.1.11.tar.gz) = 71b1fe20096a46e6f0ce87ec18d5074f90f48193a1637becb9692b20e7d92fc3b091cf843cecca30a4591fc94396494ff8282343ec6068a2905afd8f4225b3e4
+Size (EternalTerminal/et-6.1.11.tar.gz) = 22081590 bytes
