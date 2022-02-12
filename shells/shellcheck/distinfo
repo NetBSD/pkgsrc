@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:18:39 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/02/12 05:34:24 pho Exp $
 
-BLAKE2s (ShellCheck-0.7.2.tar.gz) = fd53c14cfa96337601ef28e4c60f4e8c10b96a8e663448e44947c8155d6e84cb
-SHA512 (ShellCheck-0.7.2.tar.gz) = ec77038763b3520deef3838d0f51f06bc3d755945f519b19be09765b3122f0251f00cd4907cb60c38612161b0c03f73025e0f52b3c47e22855f0b0e3ff5f81c5
-Size (ShellCheck-0.7.2.tar.gz) = 173937 bytes
+BLAKE2s (ShellCheck-0.8.0.tar.gz) = c6378fb7d5f224ffb37721e1cf63ba143427c8d752201ba9c6a44e2915283356
+SHA512 (ShellCheck-0.8.0.tar.gz) = 62de6241502fd9e1bb45b224ff5eaf27def9938f5e4ed8345f8173b0be8f9bb7511d8ccc1d1779da319a32843bbf005415c3fcd5b902293e037d44495ec5bb54
+Size (ShellCheck-0.8.0.tar.gz) = 194817 bytes
