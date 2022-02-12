@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.4 2022/01/18 02:48:24 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2022/02/12 08:09:35 pho Exp $
 
 BUILDLINK_TREE+=	hs-citeproc
 
 .if !defined(HS_CITEPROC_BUILDLINK3_MK)
 HS_CITEPROC_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-citeproc+=	hs-citeproc>=0.3.0
-BUILDLINK_ABI_DEPENDS.hs-citeproc+=	hs-citeproc>=0.3.0.9nb2
+BUILDLINK_API_DEPENDS.hs-citeproc+=	hs-citeproc>=0.6.0
+BUILDLINK_ABI_DEPENDS.hs-citeproc+=	hs-citeproc>=0.6.0.1
 BUILDLINK_PKGSRCDIR.hs-citeproc?=	../../textproc/hs-citeproc
 
 .include "../../converters/hs-aeson/buildlink3.mk"
@@ -18,6 +18,7 @@ BUILDLINK_PKGSRCDIR.hs-citeproc?=	../../textproc/hs-citeproc
 .include "../../textproc/hs-pandoc-types/buildlink3.mk"
 .include "../../devel/hs-safe/buildlink3.mk"
 .include "../../math/hs-scientific/buildlink3.mk"
+.include "../../textproc/hs-unicode-collation/buildlink3.mk"
 .include "../../devel/hs-uniplate/buildlink3.mk"
 .include "../../devel/hs-vector/buildlink3.mk"
 .include "../../textproc/hs-xml-conduit/buildlink3.mk"
