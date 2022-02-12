@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.868 2022/02/12 18:09:10 adam Exp $
+$NetBSD: CHANGES-2022,v 1.869 2022/02/12 19:53:00 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1131,3 +1131,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-ruamel-yaml to 0.17.21 [adam 2022-02-12]
 	Updated devel/colordiff to 1.0.20 [adam 2022-02-12]
 	Updated devel/py-packageurl to 0.9.8.1 [adam 2022-02-12]
+	Updated lang/go116 to 1.16.14 [bsiegert 2022-02-12]
