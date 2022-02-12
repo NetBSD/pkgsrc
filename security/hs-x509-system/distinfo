@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:17:10 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/02/12 06:59:05 pho Exp $
 
-BLAKE2s (x509-system-1.6.6.tar.gz) = 8619a2a8f47b5df264b0c952c17aca124f8c079fb715fa2f11e0dd166b68aef1
-SHA512 (x509-system-1.6.6.tar.gz) = 110f8e9566ab1cd9491f1bc9cb11ee950c34308af026e71b9f8e60beac09b0e062e1e3a0177d67b04aab824c54476b800b965bf616fe84ba0181991371c9c220
-Size (x509-system-1.6.6.tar.gz) = 3419 bytes
+BLAKE2s (x509-system-1.6.7.tar.gz) = 36f3ba919e250a270311cc23f34e1cb95e34910a508c7444c6f9d598ba2d0237
+SHA512 (x509-system-1.6.7.tar.gz) = 8414d8f6d0e704419ccdd6832522480022bb15ac225b6bd9cf5f2d8fffb7f979d414bcb5c465f4d73d9eef40210ef9aa5da51aea9eed2ce245d2b44daf2c415e
+Size (x509-system-1.6.7.tar.gz) = 3438 bytes
