@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/12 05:21:58 pho Exp $
+lib/indexed-traversable-instances-${PKGVERSION}/${HS_VERSION}/package-description
+lib/indexed-traversable-instances-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Functor/WithIndex/Instances.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Functor/WithIndex/Instances.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Functor/WithIndex/Instances.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+share/doc/${HS_PLATFORM}/indexed-traversable-instances-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/indexed-traversable-instances-${PKGVERSION}/html/Data-Functor-WithIndex-Instances.html
+share/doc/${HS_PLATFORM}/indexed-traversable-instances-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/indexed-traversable-instances-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/indexed-traversable-instances-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/indexed-traversable-instances-${PKGVERSION}/html/indexed-traversable-instances.haddock
+share/doc/${HS_PLATFORM}/indexed-traversable-instances-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/indexed-traversable-instances-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/indexed-traversable-instances-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/indexed-traversable-instances-${PKGVERSION}/html/synopsis.png
