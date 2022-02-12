@@ -1,13 +1,17 @@
-# $NetBSD: Makefile,v 1.6 2022/01/18 02:48:16 pho Exp $
+# $NetBSD: Makefile,v 1.7 2022/02/12 07:59:09 pho Exp $
 
-DISTNAME=	hledger-1.21
+DISTNAME=	hledger-1.24.1
 PKGNAME=	${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	finance
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Plain-text accounting tool
 LICENSE=	gnu-gpl-v3
+
+INSTALLATION_DIRS+=	share/bash-completion/completions
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/shell-completion/hledger-completion.bash \
+		${DESTDIR}${PREFIX}/share/bash-completion/completions/hledger
 
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../devel/hs-ansi-terminal/buildlink3.mk"
@@ -17,6 +21,7 @@ LICENSE=	gnu-gpl-v3
 .include "../../finance/hs-Decimal/buildlink3.mk"
 .include "../../textproc/hs-Diff/buildlink3.mk"
 .include "../../misc/hs-extra/buildlink3.mk"
+.include "../../devel/hs-githash/buildlink3.mk"
 .include "../../devel/hs-hashable/buildlink3.mk"
 .include "../../finance/hledger-lib/buildlink3.mk"
 .include "../../textproc/hs-lucid/buildlink3.mk"
