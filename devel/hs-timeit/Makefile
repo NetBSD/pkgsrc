@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/01/18 02:48:14 pho Exp $
+# $NetBSD: Makefile,v 1.5 2022/02/12 08:50:40 pho Exp $
 
 DISTNAME=	timeit-2.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2022/02/11 19:49:22 pho Exp $
+# $NetBSD: Makefile,v 1.17 2022/02/12 08:50:45 pho Exp $
 
 DISTNAME=	semigroups-0.20
+PKGREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	pho@cielonegro.org

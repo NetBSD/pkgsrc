@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2022/02/11 09:27:36 pho Exp $
+# $NetBSD: Makefile,v 1.15 2022/02/12 08:50:29 pho Exp $
 
 DISTNAME=	blaze-builder-0.4.2.2
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

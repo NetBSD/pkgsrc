@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/02/11 13:32:14 pho Exp $
+# $NetBSD: Makefile,v 1.6 2022/02/12 08:50:51 pho Exp $
 
 DISTNAME=	commonmark-extensions-0.2.3
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/02/11 13:19:59 pho Exp $
+# $NetBSD: Makefile,v 1.4 2022/02/12 08:50:36 pho Exp $
 
 DISTNAME=	psqueues-0.2.7.3
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/02/12 08:13:05 pho Exp $
+# $NetBSD: Makefile,v 1.2 2022/02/12 08:50:34 pho Exp $
 
 DISTNAME=	lpeg-1.0.2
 DIST_SUBDIR=	${PKGBASE} # To avoid conflicting with devel/lua-lpeg
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
