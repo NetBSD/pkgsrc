@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.869 2022/02/12 19:53:00 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.870 2022/02/12 20:14:19 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1132,3 +1132,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/colordiff to 1.0.20 [adam 2022-02-12]
 	Updated devel/py-packageurl to 0.9.8.1 [adam 2022-02-12]
 	Updated lang/go116 to 1.16.14 [bsiegert 2022-02-12]
+	Updated lang/go117 to 1.17.7 [bsiegert 2022-02-12]
