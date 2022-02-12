@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.817 2022/02/12 07:27:49 pho Exp $
+$NetBSD: CHANGES-2022,v 1.818 2022/02/12 07:33:06 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1078,3 +1078,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ZenTest to 4.12.1 [taca 2022-02-12]
 	Updated devel/hoe to 3.23.1 [taca 2022-02-12]
 	Updated textproc/hs-skylighting to 0.12.2 [pho 2022-02-12]
+	Updated textproc/hs-pandoc-types to 1.22.1 [pho 2022-02-12]
