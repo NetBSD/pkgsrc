@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/18 02:48:25 pho Exp $
+# $NetBSD: Makefile,v 1.4 2022/02/12 08:50:52 pho Exp $
 
 DISTNAME=	css-text-0.1.3.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org

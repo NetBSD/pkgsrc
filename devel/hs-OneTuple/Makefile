@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/02/12 05:20:39 pho Exp $
+# $NetBSD: Makefile,v 1.2 2022/02/12 08:50:27 pho Exp $
 
 DISTNAME=	OneTuple-0.3.1
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
