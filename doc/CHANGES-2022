@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.773 2022/02/12 04:49:43 pho Exp $
+$NetBSD: CHANGES-2022,v 1.774 2022/02/12 04:52:43 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1034,3 +1034,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/hs-hint to 0.9.0.5 [pho 2022-02-12]
 	Updated devel/hs-hashtables to 1.3 [pho 2022-02-12]
 	Updated sysutils/hs-typed-process to 0.2.8.0 [pho 2022-02-12]
+	Updated devel/hs-streaming-commons to 0.2.2.4 [pho 2022-02-12]
