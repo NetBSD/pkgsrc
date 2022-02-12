@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/01/18 02:48:25 pho Exp $
+# $NetBSD: Makefile,v 1.5 2022/02/12 07:35:44 pho Exp $
 
-DISTNAME=	doctemplates-0.9
-PKGREVISION=	2
+DISTNAME=	doctemplates-0.10.0.1
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
