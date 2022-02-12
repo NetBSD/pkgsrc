@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2022/02/11 05:57:57 fox Exp $
+# $NetBSD: Makefile,v 1.92 2022/02/12 20:04:32 nros Exp $
 
 DISTNAME=	fasttracker2-1.51
 CATEGORIES=	audio
@@ -14,6 +14,9 @@ LICENSE=	modified-bsd AND cc-by-nc-sa-v4.0-license
 
 USE_LANGUAGES=	c99 c++
 USE_CMAKE=	yes
+USE_TOOLS+=	pkg-config
+
+CMAKE_ARGS+=	-DEXTERNAL_LIBFLAC:BOOL=ON
 
 LDFLAGS+=	${BUILDLINK_LDADD.iconv}
 
@@ -53,6 +56,7 @@ BUILDLINK_TRANSFORM+=	rm:-lasound
 .else
 .  include "../../audio/alsa-lib/buildlink3.mk"
 .endif
+.include "../../audio/flac/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
