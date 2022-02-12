@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.842 2022/02/12 12:12:54 taca Exp $
+$NetBSD: CHANGES-2022,v 1.843 2022/02/12 12:23:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1103,3 +1103,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/dbcat to 0.1.5 [pin 2022-02-12]
 	Updated wm/shod to 2.3.0 [pin 2022-02-12]
 	Updated devel/ruby-backports to 3.23.0 [taca 2022-02-12]
+	Updated devel/ruby-cucumber-core to 10.1.1 [taca 2022-02-12]
