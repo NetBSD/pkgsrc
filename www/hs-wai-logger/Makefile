@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/01/18 02:48:32 pho Exp $
+# $NetBSD: Makefile,v 1.3 2022/02/12 07:11:03 pho Exp $
 
-DISTNAME=	wai-logger-2.3.6
-PKGREVISION=	1
+DISTNAME=	wai-logger-2.4.0
 CATEGORIES=	www
 
 MAINTAINER=	pho@cielonegro.org
