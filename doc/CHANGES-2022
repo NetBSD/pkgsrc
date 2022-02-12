@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.846 2022/02/12 12:31:02 taca Exp $
+$NetBSD: CHANGES-2022,v 1.847 2022/02/12 12:33:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1107,3 +1107,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-cucumber-wire to 6.2.1 [taca 2022-02-12]
 	Updated devel/ruby-curses to 1.4.4 [taca 2022-02-12]
 	Updated devel/ruby-ffi to 1.15.5 [taca 2022-02-12]
+	Updated devel/ruby-msgpack to 1.4.4 [taca 2022-02-12]
