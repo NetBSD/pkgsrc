@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3579 2022/02/12 05:28:02 pho Exp $
+# $NetBSD: Makefile,v 1.3580 2022/02/12 05:29:18 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -606,6 +606,7 @@ SUBDIR+=	hs-vector-algorithms
 SUBDIR+=	hs-vector-binary-instances
 SUBDIR+=	hs-vector-th-unbox
 SUBDIR+=	hs-void
+SUBDIR+=	hs-witherable
 SUBDIR+=	hs-wizards
 SUBDIR+=	hs-word8
 SUBDIR+=	ht
