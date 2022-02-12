@@ -1,0 +1,5 @@
+This library provides a pure Haskell implementation of the Unicode
+Collation Algorithm described at http://www.unicode.org/reports/tr10/. It
+is not as fully-featured or as performant as text-icu, but it avoids a
+dependency on a large C library. Locale-specific tailorings are also
+provided.
