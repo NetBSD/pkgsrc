@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:46:19 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/02/12 05:01:27 pho Exp $
 
-BLAKE2s (JuicyPixels-3.3.5.tar.gz) = 3a4a914af4b79f8bc8a631adb9f9365898ce9c12b5c58e1b4a2a7877b06f3fbf
-SHA512 (JuicyPixels-3.3.5.tar.gz) = 40ce63d01fb4dea77caeb055cf2f9f16b32252c7c5ea501b93c9020e426da9ea019b6e618da373fa41bae93789b76561f2b091bfe9340ee9c75f4d8fe29f90ed
-Size (JuicyPixels-3.3.5.tar.gz) = 131914 bytes
+BLAKE2s (JuicyPixels-3.3.6.tar.gz) = 2071062f89c5b99b2adc1a3c2e704de19bffda8c55f0872bce5ad58702b63193
+SHA512 (JuicyPixels-3.3.6.tar.gz) = 13d571cc23933748390f7566ce67d2ac2f2a2364f835ce67e96bdd234b2cf4606ad0cab729ae2e30bc5b1ff5bbca7ef9ceb0fd09b919f5f9522d3dc86cae7040
+Size (JuicyPixels-3.3.6.tar.gz) = 132070 bytes
