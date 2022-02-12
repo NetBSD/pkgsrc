@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.814 2022/02/12 07:23:54 pho Exp $
+$NetBSD: CHANGES-2022,v 1.815 2022/02/12 07:25:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1075,3 +1075,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/hlint to 3.3.6 [pho 2022-02-12]
 	Updated databases/ruby-sequel to 5.53.0 [taca 2022-02-12]
 	Updated textproc/hs-skylighting-core to 0.12.2 [pho 2022-02-12]
+	Updated devel/ZenTest to 4.12.1 [taca 2022-02-12]
