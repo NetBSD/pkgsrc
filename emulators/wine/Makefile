@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.234 2021/12/08 16:04:19 adam Exp $
+# $NetBSD: Makefile,v 1.235 2022/02/13 10:42:46 nia Exp $
 
 DISTNAME=	wine-5.0.5
 PKGREVISION=	5
@@ -18,6 +18,8 @@ GNU_CONFIGURE=	yes
 
 REPLACE_PERL+=	tools/winemaker/winemaker
 REPLACE_PERL+=	tools/winedump/function_grep.pl
+
+CHECK_PIE_SUPPORTED=	no
 
 ONLY_FOR_PLATFORM+=	*-*-i386 *-*-x86_64
 
