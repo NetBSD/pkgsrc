@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2022/01/05 20:07:11 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2022/02/13 08:53:44 wiz Exp $
 
 DISTNAME=	Nevow-0.14.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/twisted/nevow
 COMMENT=	Next-generation web application templating system
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-twisted>=13.0:../../net/py-twisted
+DEPENDS+=	${PYPKGPREFIX}-twisted>=13.0:../../net/py-twisted19
 
 USE_LANGUAGES=		# none
 

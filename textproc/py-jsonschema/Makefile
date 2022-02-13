@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/01/25 09:05:11 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2022/02/13 08:53:44 wiz Exp $
 
 DISTNAME=	jsonschema-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,6 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.4.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-pyrsistent>=0.14.0:../../devel/py-pyrsistent
 DEPENDS+=	${PYPKGPREFIX}-six>=1.11.0:../../lang/py-six
-TEST_DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} == 27
@@ -26,6 +25,7 @@ PYTHON_VERSIONED_DEPENDENCIES+=	importlib-metadata
 USE_PKG_RESOURCES=	yes
 
 PYTHON_VERSIONED_DEPENDENCIES+=	setuptools_scm:build
+PYTHON_VERSIONED_DEPENDENCIES+=	twisted:test
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
