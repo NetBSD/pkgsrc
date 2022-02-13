@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.890 2022/02/13 13:12:57 js Exp $
+$NetBSD: CHANGES-2022,v 1.891 2022/02/13 21:27:51 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1200,3 +1200,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/lua-penlight to 1.12.0 [nia 2022-02-13]
 	Updated audio/pt2-clone to 1.40 [nia 2022-02-13]
 	Removed chat/mautrix-hangouts [js 2022-02-13]
+	Updated comms/tio to 1.33 [fcambus 2022-02-13]
