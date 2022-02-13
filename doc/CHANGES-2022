@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.886 2022/02/13 08:55:08 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.887 2022/02/13 09:27:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1195,3 +1195,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added sysutils/ctv version 0.3.3 [pin 2022-02-13]
 	Updated mail/mutt to 2.2.0 [tron 2022-02-13]
 	Added net/py-twisted19 version 19.10.0 [wiz 2022-02-13]
+	Updated net/py-twisted to 22.1.0 [adam 2022-02-13]
+	Updated textproc/py-epr-reader to 2.4.13 [adam 2022-02-13]
