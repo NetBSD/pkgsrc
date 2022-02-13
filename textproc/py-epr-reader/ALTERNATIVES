@@ -1,0 +1,1 @@
+bin/epr @PREFIX@/bin/epr-@PYVERSSUFFIX@
