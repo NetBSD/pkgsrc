@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2022/01/05 15:41:16 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2022/02/13 08:53:44 wiz Exp $
 
 DISTNAME=	foolscap-21.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,8 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.6:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=3.6.1:../../devel/py-ZopeInterface
-DEPENDS+=	${PYPKGPREFIX}-twisted>=16.0:../../net/py-twisted
+
+PYTHON_VERSIONED_DEPENDENCIES+=	twisted
 
 # \todo Restore tests
 #TEST_TARGET=	test
@@ -33,4 +34,5 @@ post-install:
 		${DESTDIR}${PREFIX}/share/doc/py-foolscap
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
