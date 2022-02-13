@@ -1,4 +1,4 @@
-# $NetBSD: check-pie-elf.awk,v 1.1 2022/01/18 01:41:09 pho Exp $
+# $NetBSD: check-pie-elf.awk,v 1.2 2022/02/13 10:48:24 nia Exp $
 #
 # Read a list of potential ELF binaries from stdin. For each, extract the list
 # of headers. There are four possibilities:
@@ -7,7 +7,7 @@
 #    PT_INTERP does not exist
 #
 #	This is a statically-linked executable. Ignore these, as they cannot
-#	ever be a PIE.
+#	ever be position-independent.
 #
 # 2. Elf_Ehdr.e_type == ET_EXEC &&
 #    PT_INTERP exists in the program headers
@@ -19,7 +19,7 @@
 #    DT_FLAGS_1 exists in the dynamic section &&
 #    DT_FLAGS_1 contains DF_1_PIE
 #
-#	This is a PIE.
+#	This is a Position Independent Executable.
 #
 # 4. Elf_Ehdr.e_type == ET_DYN &&
 #    PT_INTERP does not exist in the program headers
@@ -73,7 +73,7 @@ function check_pie(ELF, is_non_pie, is_dyn_exec) {
 	}
 	close(cmd);
 	if (is_non_pie == 1 && is_dyn_exec == 1) {
-		print ELF ": not a PIE";
+		print ELF ": is not a Position Independent Executable";
 	}
 }
 
