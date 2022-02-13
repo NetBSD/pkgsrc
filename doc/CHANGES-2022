@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.876 2022/02/13 06:50:53 taca Exp $
+$NetBSD: CHANGES-2022,v 1.877 2022/02/13 07:17:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1139,3 +1139,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/ruby-mime-types-data to 3.2022.0105 [taca 2022-02-13]
 	Updated misc/ruby-bundler to 2.3.7 [taca 2022-02-13]
 	Updated misc/ruby-windows_error to 0.1.3 [taca 2022-02-13]
+	Updated devel/ruby-regexp_parser to 2.2.1 [taca 2022-02-13]
