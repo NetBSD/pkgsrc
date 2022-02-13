@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/09 20:10:40 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2022/02/13 19:24:26 bsiegert Exp $
 
 DISTNAME=	apisprout-1.3.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=danielgtaylor/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
