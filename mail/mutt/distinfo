@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.103 2021/12/31 07:33:02 tron Exp $
+$NetBSD: distinfo,v 1.104 2022/02/13 08:35:32 tron Exp $
 
-BLAKE2s (mutt-2.1.5.tar.gz) = f66ab01489f3909084dbb0ed625bb459b9a36bdbe84f58d8b3f6adfcbd4d0846
-SHA512 (mutt-2.1.5.tar.gz) = 8daf534ef6b8f97bdbbc1bccb64dad51de6fe0fbdb41d3d5cbe418fe234000dc09ea2b790d2529c205f16b89c6963b6de98eaa2fdc6e3f5b55a3cb5f7962e0d5
-Size (mutt-2.1.5.tar.gz) = 5414049 bytes
+BLAKE2s (mutt-2.2.0.tar.gz) = 307a504fe1ffae57c856179c2923e895442cce19994f0631f941286d02cd28e4
+SHA512 (mutt-2.2.0.tar.gz) = 91046063f0b3d670a2f7a8f38b291618caedb6ecd7290c71868bc45fffe4c8e7e560d91a13f797f74a9a5fabb26e61963566deaf4699ca0f582deb949016273e
+Size (mutt-2.2.0.tar.gz) = 5503348 bytes
 SHA1 (patch-Makefile.in) = 646eab10790053fff80bf8012ea85f40412b330c
 SHA1 (patch-color.c) = fc3777cace89e615b13118561ba133c504741bd0
 SHA1 (patch-configure) = e9c8afff997485ec6e363d52744c7446c447f293
