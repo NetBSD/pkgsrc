@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/01/10 21:56:04 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/02/13 08:53:42 wiz Exp $
 
 DISTNAME=	carbon-0.9.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://launchpad.net/graphite
 COMMENT=	Backend storage application for graphite
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
+DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted19
 DEPENDS+=	${PYPKGPREFIX}-whisper>=${PKGVERSION_NOREV}:../../databases/py-whisper
 
 USE_LANGUAGES=	# none
