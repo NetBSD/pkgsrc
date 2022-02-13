@@ -1,0 +1,15 @@
+$NetBSD: patch-meson.build,v 1.1 2022/02/13 21:27:39 fcambus Exp $
+
+Fix include path for termios.h on NetBSD.
+
+--- meson.build.orig	2022-02-13 20:06:11.931517636 +0000
++++ meson.build
+@@ -10,7 +10,7 @@ version_date = '2022-02-13'
+ 
+ # Test for dynamic baudrate configuration interface
+ compiler = meson.get_compiler('c')
+-tcgets2 = compiler.get_define('TCGETS2', prefix: '#include <asm/termios.h>')
++tcgets2 = compiler.get_define('TCGETS2', prefix: '#include <termios.h>')
+ 
+ # Test for supported baudrates
+ test_baudrates = [
