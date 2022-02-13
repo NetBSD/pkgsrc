@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.883 2022/02/13 08:17:26 pin Exp $
+$NetBSD: CHANGES-2022,v 1.884 2022/02/13 08:35:51 tron Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1192,3 +1192,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ruby-actiontext70 to 7.0.2.2 [taca 2022-02-13]
 	Updated www/ruby-rails70 to 7.0.2.2 [taca 2022-02-13]
 	Added sysutils/ctv version 0.3.3 [pin 2022-02-13]
+	Updated mail/mutt to 2.2.0 [tron 2022-02-13]
