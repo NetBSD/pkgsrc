@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2021/12/08 16:04:14 adam Exp $
+# $NetBSD: Makefile,v 1.64 2022/02/13 10:39:58 nia Exp $
 
 DISTNAME=		ckmame-1.1
 PKGREVISION=		2
@@ -16,7 +16,15 @@ USE_TOOLS+=		pkg-config perl:test
 USE_CMAKE=		yes
 TEST_TARGET=		check
 
-GCC_REQD+=	8 # std::filesystem
+GCC_REQD+=		8 # std::filesystem
+USE_GCC_RUNTIME=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099915
+USE_PKGSRC_GCC=		yes
+USE_PKGSRC_GCC_RUNTIME=	yes
+.endif
 
 .include "../../archivers/libarchive/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libzip+=	libzip>=1.8
