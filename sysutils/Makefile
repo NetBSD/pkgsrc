@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.991 2022/02/09 01:57:57 mrg Exp $
+# $NetBSD: Makefile,v 1.992 2022/02/13 08:16:59 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -138,6 +138,7 @@ SUBDIR+=	cpogm
 SUBDIR+=	cpuburn
 SUBDIR+=	cpuid
 SUBDIR+=	crashme
+SUBDIR+=	ctv
 SUBDIR+=	cuisine
 SUBDIR+=	cvsreport
 SUBDIR+=	daemond
