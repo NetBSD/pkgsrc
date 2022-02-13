@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.885 2022/02/13 08:52:06 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.886 2022/02/13 08:55:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -814,6 +814,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-zeroconf to 0.38.3 [adam 2022-02-05]
 	Updated www/py-uvicorn to 0.17.4 [adam 2022-02-05]
 	Updated net/py-twisted to 22.1.0rc1 [js 2022-02-05]
+	Updated net/py-twisted-docs to 22.1.0rc1 [js 2022-02-05]
 	Updated devel/py-treq to 22.1.0 [js 2022-02-05]
 	Added mail/qtraceaddr version 20061202 [schmonz 2022-02-05]
 	Updated finance/py-alphalens to 0.4.0 [adam 2022-02-05]
