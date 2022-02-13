@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/02/07 17:07:22 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/02/13 09:56:03 wiz Exp $
 
 DISTNAME=	ipyparallel-8.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -10,17 +10,15 @@ HOMEPAGE=	https://ipython.org/
 COMMENT=	Interactive Parallel Computing with IPython
 LICENSE=	modified-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-jupyter_client-[0-9]*:../../devel/py-jupyter_client
+DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
+# not listed, but used
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-entrypoints-[0-9]*:../../devel/py-entrypoints
-DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.1:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-ipykernel>=4.4:../../devel/py-ipykernel
 DEPENDS+=	${PYPKGPREFIX}-ipython>=4.0:../../devel/py-ipython
-DEPENDS+=	${PYPKGPREFIX}-jupyter_client-[0-9]*:../../devel/py-jupyter_client
 DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
-DEPENDS+=	${PYPKGPREFIX}-tornado>=5.1:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-tqdm-[0-9]*:../../misc/py-tqdm
-DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.3:../../devel/py-traitlets
-DEPENDS+=	${PYPKGPREFIX}-zmq>=18.0.0:../../net/py-zmq
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
