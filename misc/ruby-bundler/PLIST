@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2021/12/08 14:51:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.33 2022/02/13 06:47:15 taca Exp $
 bin/bundle2-${RUBY_SUFFIX}
 bin/bundler2-${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -9,6 +9,7 @@ ${GEM_LIBDIR}/bundler.gemspec
 ${GEM_LIBDIR}/exe/bundle
 ${GEM_LIBDIR}/exe/bundler
 ${GEM_LIBDIR}/lib/bundler.rb
+${GEM_LIBDIR}/lib/bundler/.document
 ${GEM_LIBDIR}/lib/bundler/build_metadata.rb
 ${GEM_LIBDIR}/lib/bundler/capistrano.rb
 ${GEM_LIBDIR}/lib/bundler/cli.rb
@@ -69,7 +70,6 @@ ${GEM_LIBDIR}/lib/bundler/gem_helper.rb
 ${GEM_LIBDIR}/lib/bundler/gem_helpers.rb
 ${GEM_LIBDIR}/lib/bundler/gem_tasks.rb
 ${GEM_LIBDIR}/lib/bundler/gem_version_promoter.rb
-${GEM_LIBDIR}/lib/bundler/gemdeps.rb
 ${GEM_LIBDIR}/lib/bundler/graph.rb
 ${GEM_LIBDIR}/lib/bundler/index.rb
 ${GEM_LIBDIR}/lib/bundler/injector.rb
@@ -146,7 +146,6 @@ ${GEM_LIBDIR}/lib/bundler/plugin/installer/git.rb
 ${GEM_LIBDIR}/lib/bundler/plugin/installer/rubygems.rb
 ${GEM_LIBDIR}/lib/bundler/plugin/source_list.rb
 ${GEM_LIBDIR}/lib/bundler/process_lock.rb
-${GEM_LIBDIR}/lib/bundler/psyched_yaml.rb
 ${GEM_LIBDIR}/lib/bundler/remote_specification.rb
 ${GEM_LIBDIR}/lib/bundler/resolver.rb
 ${GEM_LIBDIR}/lib/bundler/resolver/spec_group.rb
@@ -157,6 +156,7 @@ ${GEM_LIBDIR}/lib/bundler/rubygems_ext.rb
 ${GEM_LIBDIR}/lib/bundler/rubygems_gem_installer.rb
 ${GEM_LIBDIR}/lib/bundler/rubygems_integration.rb
 ${GEM_LIBDIR}/lib/bundler/runtime.rb
+${GEM_LIBDIR}/lib/bundler/self_manager.rb
 ${GEM_LIBDIR}/lib/bundler/settings.rb
 ${GEM_LIBDIR}/lib/bundler/settings/validator.rb
 ${GEM_LIBDIR}/lib/bundler/setup.rb
@@ -207,8 +207,8 @@ ${GEM_LIBDIR}/lib/bundler/templates/newgem/sig/newgem.rbs.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/spec/newgem_spec.rb.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/spec/spec_helper.rb.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/standard.yml.tt
-${GEM_LIBDIR}/lib/bundler/templates/newgem/test/minitest/newgem_test.rb.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/test/minitest/test_helper.rb.tt
+${GEM_LIBDIR}/lib/bundler/templates/newgem/test/minitest/test_newgem.rb.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/test/test-unit/newgem_test.rb.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/test/test-unit/test_helper.rb.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/travis.yml.tt
@@ -300,6 +300,8 @@ ${GEM_LIBDIR}/lib/bundler/vendor/uri/lib/uri/mailto.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/uri/lib/uri/rfc2396_parser.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/uri/lib/uri/rfc3986_parser.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/uri/lib/uri/version.rb
+${GEM_LIBDIR}/lib/bundler/vendor/uri/lib/uri/ws.rb
+${GEM_LIBDIR}/lib/bundler/vendor/uri/lib/uri/wss.rb
 ${GEM_LIBDIR}/lib/bundler/vendored_fileutils.rb
 ${GEM_LIBDIR}/lib/bundler/vendored_molinillo.rb
 ${GEM_LIBDIR}/lib/bundler/vendored_persistent.rb
