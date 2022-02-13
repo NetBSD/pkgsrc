@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/01/04 20:53:01 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/02/13 08:53:43 wiz Exp $
 
 DISTNAME=	pydoctor-16.3.0
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/}
@@ -12,7 +12,7 @@ COMMENT=	API doc generator
 LICENSE=	mit
 
 DEPENDS+=	epydoc-[0-9]*:../../devel/epydoc
-DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
+DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted19
 
 USE_LANGUAGES=	# none
 
