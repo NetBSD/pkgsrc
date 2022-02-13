@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/12/27 09:45:40 nia Exp $
+# $NetBSD: Makefile,v 1.6 2022/02/13 10:30:19 nia Exp $
 
 DISTNAME=	luv-1.42.0-1
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/-1$/.1/1}
@@ -26,7 +26,9 @@ CMAKE_ARGS+=	-DLUA_BUILD_TYPE=System
 CMAKE_ARGS+=	-DWITH_LUA_ENGINE=Lua
 
 pre-configure:
+.if ${_LUA_VERSION} == "51" || ${_LUA_VERSION} == "52"
 	${CP} ${PREFIX}/${LUA_INCDIR}/compat-5.3.* ${WRKSRC}/src
+.endif
 
 .include "../../lang/lua/module.mk"
 .include "../../devel/libuv/buildlink3.mk"
