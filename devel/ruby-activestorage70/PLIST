@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/12/19 06:07:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/02/13 07:44:29 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -70,7 +70,6 @@ ${GEM_LIBDIR}/lib/active_storage/attached/changes/purge_one.rb
 ${GEM_LIBDIR}/lib/active_storage/attached/many.rb
 ${GEM_LIBDIR}/lib/active_storage/attached/model.rb
 ${GEM_LIBDIR}/lib/active_storage/attached/one.rb
-${GEM_LIBDIR}/lib/active_storage/direct_upload_token.rb
 ${GEM_LIBDIR}/lib/active_storage/downloader.rb
 ${GEM_LIBDIR}/lib/active_storage/engine.rb
 ${GEM_LIBDIR}/lib/active_storage/errors.rb
