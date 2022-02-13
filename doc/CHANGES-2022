@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.873 2022/02/13 00:48:47 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.874 2022/02/13 06:40:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1136,3 +1136,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/tarsnap to 1.0.40 [wiz 2022-02-12]
 	Updated time/libical to 3.0.14 [gutteridge 2022-02-13]
 	Updated devel/mob to 2.4.0 [schmonz 2022-02-13]
+	Updated mail/ruby-mime-types-data to 3.2022.0105 [taca 2022-02-13]
