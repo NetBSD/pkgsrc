@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.48 2022/02/13 08:54:22 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2022/02/13 09:26:19 adam Exp $
+
+.include "../../net/py-twisted/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 COMMENT=	Framework for writing networked applications
-.include "../../net/py-twisted/Makefile.common"
 
-DEPENDS+=	${PYPKGPREFIX}-attrs>=17.4.0:../../devel/py-attrs
-DEPENDS+=	${PYPKGPREFIX}-automat>=0.3.0:../../devel/py-automat
+DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=4.4.2:../../devel/py-ZopeInterface
+DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2.0:../../devel/py-attrs
+DEPENDS+=	${PYPKGPREFIX}-automat>=0.8.0:../../devel/py-automat
 DEPENDS+=	${PYPKGPREFIX}-constantly>=15.1:../../devel/py-constantly
 DEPENDS+=	${PYPKGPREFIX}-hamcrest>=1.9.0:../../devel/py-hamcrest
 DEPENDS+=	${PYPKGPREFIX}-hyperlink>=17.1.1:../../www/py-hyperlink
-DEPENDS+=	${PYPKGPREFIX}-incremental>=16.10.1:../../devel/py-incremental
-DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=4.4.2:../../devel/py-ZopeInterface
+DEPENDS+=	${PYPKGPREFIX}-incremental>=21.3.0:../../devel/py-incremental
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.6.5:../../devel/py-typing-extensions
 # TLS
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=16.0.0:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-service_identity>=18.1.0:../../security/py-service_identity
