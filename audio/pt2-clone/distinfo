@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/01/24 14:01:01 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/02/13 11:44:43 nia Exp $
 
-BLAKE2s (pt2-clone-1.39.tar.gz) = cdb9e0680c4420cca96cb92240438142d02809d74d9e063d7f6b3d3916f72393
-SHA512 (pt2-clone-1.39.tar.gz) = a3118c32becaacc42d0d0a1c5b3973f6ff14303da54899addbaa0c04246b9be21bd06795237a34be2882f898b905a772a3342f00c3d0a909c46a5f330ec96600
-Size (pt2-clone-1.39.tar.gz) = 8132244 bytes
+BLAKE2s (pt2-clone-1.40.tar.gz) = eabd5332946c639b483d9e362279cc60e99a4938009c743e9fcadcf6035928e1
+SHA512 (pt2-clone-1.40.tar.gz) = af94b4f3915ada9599e9531a71933f52137cc75eccf951f8c4cf900efb3642e3eed27b198f15553ce56f20047cdefebed2751b590120c31cd58196763f9036d1
+Size (pt2-clone-1.40.tar.gz) = 8131999 bytes
