@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2022/01/16 14:10:09 taca Exp $
+$NetBSD: distinfo,v 1.3 2022/02/13 07:45:49 taca Exp $
 
-BLAKE2s (railties-7.0.1.gem) = aac68c59e24b4a782563b4147b865d6817ddc58b4c032140bb3409d15ec93751
-SHA512 (railties-7.0.1.gem) = 87ee0fbc38c898c340e13142c48101eabcd7f1ed16af7241cf0fecb6ad5aef0321d757c5bc380f221a08d0ad01f7bae837f4057e02c206ed036124e2a956b76c
-Size (railties-7.0.1.gem) = 159232 bytes
+BLAKE2s (railties-7.0.2.2.gem) = 6544a7d1968cf25ceeb3105214fda8a42809276e7c62880db56722894663da15
+SHA512 (railties-7.0.2.2.gem) = 962b5b5c144c31e42387b2ae5286c95a48c39379e180276c9baea70f5bb1d3c3ab5965af074cacf52683eeafcd04414a54a9e4f09d8a16f5001dbce9eb6bc30f
+Size (railties-7.0.2.2.gem) = 159232 bytes
