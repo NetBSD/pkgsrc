@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/02/11 12:14:20 fcambus Exp $
+# $NetBSD: Makefile,v 1.3 2022/02/13 21:27:39 fcambus Exp $
 
-DISTNAME=	tio-1.32
+DISTNAME=	tio-1.33
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tio/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/tio/tio
 COMMENT=	Simple TTY terminal I/O application
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
-CHECK_PORTABILITY_SKIP+= configure
+MESON_ARGS+=	-Dbashcompletiondir=${PREFIX}/share/bash-completion/completions
 
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
