@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.871 2022/02/12 22:58:17 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.872 2022/02/13 00:21:05 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1134,3 +1134,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/go116 to 1.16.14 [bsiegert 2022-02-12]
 	Updated lang/go117 to 1.17.7 [bsiegert 2022-02-12]
 	Updated sysutils/tarsnap to 1.0.40 [wiz 2022-02-12]
+	Updated time/libical to 3.0.14 [gutteridge 2022-02-13]
