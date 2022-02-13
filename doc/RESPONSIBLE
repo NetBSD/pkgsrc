@@ -1,4 +1,4 @@
-$NetBSD: RESPONSIBLE,v 1.24 2014/12/30 15:13:19 wiz Exp $
+$NetBSD: RESPONSIBLE,v 1.25 2022/02/13 11:30:05 nia Exp $
 
 List of sections of the system, and who is responsible for them (or
 at least considered an expert on them).
@@ -11,7 +11,7 @@ pkgsrc Infrastructure:
 
 Part of the infrastructure	People
 ---------------------------------------------------------------------------
-README.html generation		dmcmahill
+README.html generation		nia
 bootstrap			joerg
 bsd.options.mk			dillo
 buildlink3			-
