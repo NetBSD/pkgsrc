@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2021/12/10 13:16:20 nia Exp $
+# $NetBSD: Makefile,v 1.20 2022/02/13 11:39:39 nia Exp $
 #
 
-DISTNAME=	penlight-1.11.0
+DISTNAME=	penlight-1.12.0
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lunarmodules/}
@@ -9,7 +9,7 @@ GITHUB_TAG=	${PKGVERSION_NOREV}
 GITHUB_PROJECT=	Penlight
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://stevedonovan.github.com/Penlight/
+HOMEPAGE=	https://lunarmodules.github.io/Penlight/
 COMMENT=	Lua libraries for functional programming, OS path management, etc
 LICENSE=	mit
 
