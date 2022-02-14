@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1283 2022/02/12 08:05:15 pho Exp $
+# $NetBSD: Makefile,v 1.1284 2022/02/14 14:42:31 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -327,6 +327,7 @@ SUBDIR+=	hs-pandoc-types
 SUBDIR+=	hs-polyparse
 SUBDIR+=	hs-prettyprinter
 SUBDIR+=	hs-prettyprinter-ansi-terminal
+SUBDIR+=	hs-regex-applicative
 SUBDIR+=	hs-regex-base
 SUBDIR+=	hs-regex-pcre
 SUBDIR+=	hs-regex-posix
