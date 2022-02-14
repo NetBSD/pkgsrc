@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.914 2022/02/14 14:43:09 pho Exp $
+$NetBSD: CHANGES-2022,v 1.915 2022/02/14 14:45:19 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1226,3 +1226,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/ruby-metasploit-payloads to 2.0.74 [taca 2022-02-14]
 	Added textproc/hs-regex-applicative version 0.3.4 [pho 2022-02-14]
 	Added textproc/hs-regex-compat-tdfa version 0.95.1.4 [pho 2022-02-14]
+	Updated devel/darcs to 2.16.4 [pho 2022-02-14]
