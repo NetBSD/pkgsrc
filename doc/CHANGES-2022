@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.903 2022/02/14 14:16:00 taca Exp $
+$NetBSD: CHANGES-2022,v 1.904 2022/02/14 14:17:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1215,3 +1215,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/ruby-ruby_smb to 3.0.3 [taca 2022-02-14]
 	Updated time/p5-DateTime to 1.55 [wen 2022-02-14]
 	Updated print/ruby-pdf-reader to 2.9.1 [taca 2022-02-14]
+	Updated security/ruby-ed25519 to 1.3.0 [taca 2022-02-14]
