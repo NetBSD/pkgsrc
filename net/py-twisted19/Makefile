@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/02/13 08:43:12 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/02/14 09:14:10 wiz Exp $
 
 DISTNAME=	Twisted-19.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	5
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=T/Twisted/}
 EXTRACT_SUFX=	.tar.bz2
