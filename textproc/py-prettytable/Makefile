@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2022/01/07 23:15:04 fcambus Exp $
+# $NetBSD: Makefile,v 1.21 2022/02/14 08:53:14 adam Exp $
 
-DISTNAME=	prettytable-3.0.0
+DISTNAME=	prettytable-3.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/prettytable/}
@@ -13,6 +13,8 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-wcwidth-[0-9]*:../../devel/py-wcwidth
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-lazy-fixture-[0-9]*:../../devel/py-test-lazy-fixture
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
