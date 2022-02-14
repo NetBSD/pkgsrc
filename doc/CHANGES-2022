@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.916 2022/02/14 14:46:02 taca Exp $
+$NetBSD: CHANGES-2022,v 1.917 2022/02/14 18:28:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1228,3 +1228,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added textproc/hs-regex-compat-tdfa version 0.95.1.4 [pho 2022-02-14]
 	Updated devel/darcs to 2.16.4 [pho 2022-02-14]
 	Updated security/ruby-metasploit_payloads-mettle to 1.0.18 [taca 2022-02-14]
+	Updated lang/rust-analyzer to 0.0.2022.02.14 [adam 2022-02-14]
+	Updated textproc/py-breathe to 4.33.1 [adam 2022-02-14]
