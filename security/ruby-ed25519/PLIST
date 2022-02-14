@@ -1,19 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2020/01/19 14:20:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/02/14 14:17:24 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/ed25519_ref10.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
-${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.rspec
-${GEM_LIBDIR}/.rubocop.yml
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGES.md
-${GEM_LIBDIR}/CODE_OF_CONDUCT.md
-${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/appveyor.yml
-${GEM_LIBDIR}/ed25519.gemspec
 ${GEM_LIBDIR}/ed25519.png
 ${GEM_LIBDIR}/ext/ed25519_jruby/LICENSE.txt
 ${GEM_LIBDIR}/ext/ed25519_jruby/README.md
@@ -79,5 +70,6 @@ ${GEM_LIBDIR}/lib/ed25519.rb
 ${GEM_LIBDIR}/lib/ed25519/signing_key.rb
 ${GEM_LIBDIR}/lib/ed25519/verify_key.rb
 ${GEM_LIBDIR}/lib/ed25519/version.rb
+${GEM_LIBDIR}/lib/ed25519_jruby.jar
 ${GEM_LIBDIR}/lib/ed25519_ref10.${RUBY_DLEXT}
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
