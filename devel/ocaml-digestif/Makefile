@@ -1,19 +1,22 @@
-# $NetBSD: Makefile,v 1.5 2021/03/08 08:12:51 jaapb Exp $
+# $NetBSD: Makefile,v 1.6 2022/02/14 09:28:53 wiz Exp $
 
-GITHUB_PROJECT=	digestif
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	${GITHUB_PROJECT}-0.7.2
+DISTNAME=	digestif-1.1.0
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
+GITHUB_PROJECT=	digestif
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	https://github.com/mirage/digestif/
 COMMENT=	Simple hash algorithms in OCaml
 LICENSE=	mit
 
+DEPENDS+=	ocaml-bigarray-compat-[0-9]*:../../devel/ocaml-bigarray-compat
+DEPENDS+=	ocaml-stdlib-shims-[0-9]*:../../devel/ocaml-stdlib-shims
+
 USE_LANGUAGES=	# none
+USE_TOOLS+=	gmake pkg-config
 OCAML_USE_DUNE=	yes
 
 .include "../../mk/ocaml.mk"
