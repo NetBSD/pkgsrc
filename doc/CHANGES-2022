@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.901 2022/02/14 14:11:20 taca Exp $
+$NetBSD: CHANGES-2022,v 1.902 2022/02/14 14:14:13 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1213,3 +1213,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed devel/ocaml-jbuilder [wiz 2022-02-14]
 	Updated devel/py-approvaltests to 3.6.0 [schmonz 2022-02-14]
 	Updated net/ruby-ruby_smb to 3.0.3 [taca 2022-02-14]
+	Updated time/p5-DateTime to 1.55 [wen 2022-02-14]
