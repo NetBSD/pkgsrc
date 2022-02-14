@@ -1,0 +1,2 @@
+Class of filtrable containers, i.e. containers we can map over while
+selectively dropping elements.
