@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21518 2022/02/13 06:51:05 wiz Exp $
+$NetBSD: TODO,v 1.21519 2022/02/14 09:07:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1259,7 +1259,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-mtime-1.2.0
 	o ocaml-mysql-1.2.4
 	o ocaml-num-1.4
-	o ocaml-optint-0.1.0
 	o ocaml-parsexp-0.14.0
 	o ocaml-ppx_assert-0.14.0
 	o ocaml-ppx_base-0.14.0
@@ -1517,6 +1516,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
+	o py-flower-1.0.0
 	o py-gammu-3.1
 	o py-gcovr-4.2
 	o py-goocalendar-0.7.2
