@@ -1,3 +1,0 @@
-Configurator is a small library that helps writing OCaml scripts that test
-features available on the system, in order to generate config.h files for
-instance.
