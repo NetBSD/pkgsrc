@@ -1,0 +1,2 @@
+This library defines a propositional equality data type, shims
+Data.Type.Equality as well as possible for older GHCs (< 7.8).
