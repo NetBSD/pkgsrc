@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/01/31 11:39:40 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/02/14 10:17:22 adam Exp $
 
-DISTNAME=	breathe-4.32.0
+DISTNAME=	breathe-4.33.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/breathe/}
