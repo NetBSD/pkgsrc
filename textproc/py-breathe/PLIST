@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/01/30 07:29:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/02/14 10:17:22 adam Exp $
 bin/breathe-apidoc-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -43,6 +43,9 @@ ${PYSITELIB}/breathe/exception.pyo
 ${PYSITELIB}/breathe/file_state_cache.py
 ${PYSITELIB}/breathe/file_state_cache.pyc
 ${PYSITELIB}/breathe/file_state_cache.pyo
+${PYSITELIB}/breathe/filetypes.py
+${PYSITELIB}/breathe/filetypes.pyc
+${PYSITELIB}/breathe/filetypes.pyo
 ${PYSITELIB}/breathe/finder/__init__.py
 ${PYSITELIB}/breathe/finder/__init__.pyc
 ${PYSITELIB}/breathe/finder/__init__.pyo
