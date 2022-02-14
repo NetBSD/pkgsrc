@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.894 2022/02/14 09:09:38 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.895 2022/02/14 09:20:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1205,3 +1205,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-prettytable to 3.1.0 [adam 2022-02-14]
 	Updated devel/ocaml-optint to 0.1.0 [wiz 2022-02-14]
 	Updated devel/ocaml-checkseum to 0.3.2 [wiz 2022-02-14]
+	Removed devel/ocaml-configurator [wiz 2022-02-14]
