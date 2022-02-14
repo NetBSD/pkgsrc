@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.907 2022/02/14 14:34:28 wen Exp $
+$NetBSD: CHANGES-2022,v 1.908 2022/02/14 14:37:52 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1219,3 +1219,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated time/p5-DateTime-Format-Natural to 1.13 [wen 2022-02-14]
 	Updated time/p5-DateTime-Calendar-Julian to 0.107 [wen 2022-02-14]
 	Updated devel/p5-Test2-Suite to 0.000144 [wen 2022-02-14]
+	Added devel/hs-type-equality version 1 [pho 2022-02-14]
