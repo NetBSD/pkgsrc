@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.29 2021/10/03 07:06:42 nia Exp $
+# $NetBSD: ocaml.mk,v 1.30 2022/02/14 11:24:57 wiz Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -26,8 +26,6 @@
 # package uses OPAM installer [implies OCAML_USE_FINDLIB]
 # OCAML_USE_TOPKG
 # package uses topkg [implies OCAML_USE_FINDLIB]
-# OCAML_USE_JBUILDER
-# package uses jbuilder [implies OCAML_USE_OPAM]
 # OCAML_USE_DUNE
 # package uses dune [implies OCAML_USE_OPAM]
 # OCAML_TOPKG_DOCDIR
@@ -63,7 +61,6 @@ _PKG_VARS.ocaml=	\
 	OCAML_TOPKG_FLAGS \
 	OCAML_TOPKG_TARGETS \
 	OCAML_TOPKG_OPTIONAL_TARGETS \
-	OCAML_USE_JBUILDER \
 	JBUILDER_BUILD_FLAGS \
 	JBUILDER_BUILD_PACKAGES \
 	JBUILDER_BUILD_TARGETS \
@@ -90,9 +87,6 @@ OCAML_USE_OASIS_DYNRUN?=	no
 
 # Default value of OCAML_USE_TOPKG
 OCAML_USE_TOPKG?=	no
-
-# Default value of OCAML_USE_JBUILDER
-OCAML_USE_JBUILDER?=	no
 
 # Default value of OCAML_USE_DUNE
 OCAML_USE_DUNE?=	no
@@ -148,11 +142,8 @@ CONFIGURE_ARGS+=	--override is_native false
 .endif
 .endif
 
-# Configure stuff for JBUILDER/DUNE
-.if ${OCAML_USE_JBUILDER} == "yes"
-.include "../../devel/ocaml-jbuilder/buildlink3.mk"
-OCAML_USE_OPAM?=	yes
-.elif ${OCAML_USE_DUNE} == "yes"
+# Configure stuff for DUNE
+.if ${OCAML_USE_DUNE} == "yes"
 .include "../../devel/ocaml-dune/buildlink3.mk"
 OCAML_USE_OPAM?=	yes
 OPAM_INSTALL_DIR?=	_build/default
@@ -270,25 +261,6 @@ do-install:
 	done
 
 .endif # opam
-
-#
-# jbuilder targets
-#
-.if ${OCAML_USE_JBUILDER} == "yes"
-
-do-build:
-.if !empty(JBUILDER_BUILD_PACKAGES)
-	${RUN} ${_ULIMIT_CMD} \
-		cd ${WRKSRC} && jbuilder build -j ${MAKE_JOBS:U1} \
-		${JBUILDER_BUILD_FLAGS} -p ${JBUILDER_BUILD_PACKAGES:ts,} \
-		${JBUILDER_BUILD_TARGETS}
-.else
-	${RUN} ${_ULIMIT_CMD} \
-		cd ${WRKSRC} && jbuilder build -j ${MAKE_JOBS:U1} \
-		${JBUILDER_BUILD_FLAGS} ${JBUILDER_BUILD_TARGETS}
-.endif
-
-.endif # jbuilder
 
 #
 # dune targets
