@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.30 2022/02/14 11:24:57 wiz Exp $
+# $NetBSD: ocaml.mk,v 1.31 2022/02/14 11:37:48 wiz Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -172,6 +172,8 @@ OCAML_SITELIBDIR=	lib/ocaml/site-lib
 MAKE_ENV+=	OCAML_SITELIBDIR="${OCAML_SITELIBDIR}"
 PLIST_SUBST+=	OCAML_SITELIB="${OCAML_SITELIBDIR}"
 
+PRINT_PLIST_AWK+=	{ gsub(/^.+\.cmx/, "$${PLIST.ocaml-opt}&") }
+PRINT_PLIST_AWK+=	{ gsub(/^.+\.a$$/, "$${PLIST.ocaml-opt}&") }
 PRINT_PLIST_AWK+=	{ gsub(/${OCAML_SITELIBDIR:S|/|\\/|g}/, \
 			"$${OCAML_SITELIB}"); \
 			print; next; }
