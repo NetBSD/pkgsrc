@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.909 2022/02/14 14:39:06 pho Exp $
+$NetBSD: CHANGES-2022,v 1.910 2022/02/14 14:39:58 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1221,3 +1221,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/p5-Test2-Suite to 0.000144 [wen 2022-02-14]
 	Added devel/hs-type-equality version 1 [pho 2022-02-14]
 	Added devel/hs-constraints version 0.13.3 [pho 2022-02-14]
+	Added devel/hs-data-ordlist version 0.4.7.0 [pho 2022-02-14]
