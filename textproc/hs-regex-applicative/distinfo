@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/14 14:41:59 pho Exp $
+
+BLAKE2s (regex-applicative-0.3.4.tar.gz) = c36649ce696cea4781979c1dd340766308720d60948e3d1c0a5f13ed7d06fb83
+SHA512 (regex-applicative-0.3.4.tar.gz) = 84f32da62b336c7e8bd67ebfffdf0f13f98a39434efa5dd32d389a5db1fdaaeece462ecec7bc5d3c5b49e82acd7c4c4b0d8a5c552bb275c16c254bd3f5336470
+Size (regex-applicative-0.3.4.tar.gz) = 15924 bytes
