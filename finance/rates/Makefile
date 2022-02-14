@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2021/08/03 09:00:37 pin Exp $
+# $NetBSD: Makefile,v 1.7 2022/02/14 09:47:16 pin Exp $
 
-DISTNAME=	rates-0.5.0
+DISTNAME=	rates-0.6.0
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lunush/}
 
