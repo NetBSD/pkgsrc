@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.900 2022/02/14 12:02:40 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.901 2022/02/14 14:11:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1212,3 +1212,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-breathe to 4.33.0 [adam 2022-02-14]
 	Removed devel/ocaml-jbuilder [wiz 2022-02-14]
 	Updated devel/py-approvaltests to 3.6.0 [schmonz 2022-02-14]
+	Updated net/ruby-ruby_smb to 3.0.3 [taca 2022-02-14]
