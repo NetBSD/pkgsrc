@@ -1,4 +1,4 @@
-# $NetBSD
+# $NetBSD: check-pie.mk,v 1.2 2022/02/14 00:31:18 pho Exp $
 #
 # This file verifies that MKPIE (position-independent executables) was applied
 # accordingly at build-time.
