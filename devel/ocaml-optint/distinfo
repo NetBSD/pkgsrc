@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:51 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/02/14 09:07:04 wiz Exp $
 
-BLAKE2s (optint-0.0.4.tar.gz) = 981594d0bbe119cd97ccc9104ea084461e51febf3f7de8fb96a530e3a1f32998
-SHA512 (optint-0.0.4.tar.gz) = dc06fd05df723dbebf176e771d13ab103435fc10022e5adba6588a89c91f2437582235059123b3e74c25917096fd49ae8744d9139081c77c9a0aec3682990ed3
-Size (optint-0.0.4.tar.gz) = 7081 bytes
+BLAKE2s (optint-0.1.0.tar.gz) = 56df19d188c6a8c071174a9f5fb4d9d201f21a8dc02be26b62bf1d004793a4a7
+SHA512 (optint-0.1.0.tar.gz) = e9eac7e24aabe0e2358beb1198389ddfc32b5c39162f328eec8ee8df5642e7a81c483f0bc813a9b778c5c881abb6869e1faf539194b774bf2152e23e7595ec3d
+Size (optint-0.1.0.tar.gz) = 11617 bytes
