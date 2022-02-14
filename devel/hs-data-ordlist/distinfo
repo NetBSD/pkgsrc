@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/14 14:39:50 pho Exp $
+
+BLAKE2s (data-ordlist-0.4.7.0.tar.gz) = 657826d47946bcab9d023d59394662c2bee788cc227b3cba72a7b450454c2cc7
+SHA512 (data-ordlist-0.4.7.0.tar.gz) = a34ed99ea8eb34b29727a210f7a56c80b18a881e2da90fff0ae056b7c56b1f37212413a1daebc0b0118c193eb579d3d43bd426b25944da9044e8152eed80fa8b
+Size (data-ordlist-0.4.7.0.tar.gz) = 8906 bytes
