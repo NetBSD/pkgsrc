@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.899 2022/02/14 11:25:56 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.900 2022/02/14 12:02:40 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1211,3 +1211,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-treq to 22.2.0 [adam 2022-02-14]
 	Updated textproc/py-breathe to 4.33.0 [adam 2022-02-14]
 	Removed devel/ocaml-jbuilder [wiz 2022-02-14]
+	Updated devel/py-approvaltests to 3.6.0 [schmonz 2022-02-14]
