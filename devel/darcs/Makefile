@@ -1,21 +1,47 @@
-# $NetBSD: Makefile,v 1.62 2021/12/08 16:03:54 adam Exp $
+# $NetBSD: Makefile,v 1.63 2022/02/14 14:45:09 pho Exp $
 
-DISTNAME=		darcs-2.0.2
-PKGREVISION=		36
-CATEGORIES=		devel scm
-MASTER_SITES=		http://darcs.net/releases/
+DISTNAME=	darcs-2.16.4
+PKGNAME=	${DISTNAME}
+CATEGORIES=	devel scm
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.darcs.net/
-COMMENT=		Distributed revision control system
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.darcs.net/
+COMMENT=	Distributed revision control system
+LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=		latex2html>=2002.2.1nb3:../../textproc/latex2html
-BUILD_DEPENDS+=		tex-fancyvrb-[0-9]*:../../print/tex-fancyvrb
+INSTALLATION_DIRS+=	share/zsh/site-functions
+INSTALLATION_DIRS+=	share/bash-completion/completions
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/contrib/_darcs.zsh \
+		${DESTDIR}${PREFIX}/share/zsh/site-functions/_darcs
+	${INSTALL_DATA} ${WRKSRC}/contrib/darcs_completion \
+		${DESTDIR}${PREFIX}/share/bash-completion/completions/darcs
 
-USE_TOOLS+=		gmake perl
-MAKE_FILE=		GNUmakefile
-GNU_CONFIGURE=		yes
-
-.include "../../www/curl/buildlink3.mk"
-.include "../../lang/ghc/buildlink3.mk"
+.include "../../devel/hs-async/buildlink3.mk"
+.include "../../textproc/hs-attoparsec/buildlink3.mk"
+.include "../../converters/hs-base16-bytestring/buildlink3.mk"
+.include "../../devel/hs-conduit/buildlink3.mk"
+.include "../../devel/hs-constraints/buildlink3.mk"
+.include "../../security/hs-cryptonite/buildlink3.mk"
+.include "../../devel/hs-data-ordlist/buildlink3.mk"
+.include "../../devel/hs-fgl/buildlink3.mk"
+.include "../../devel/hs-hashable/buildlink3.mk"
+.include "../../textproc/hs-html/buildlink3.mk"
+.include "../../www/hs-http-conduit/buildlink3.mk"
+.include "../../www/hs-http-types/buildlink3.mk"
+.include "../../devel/hs-memory/buildlink3.mk"
+.include "../../devel/hs-mmap/buildlink3.mk"
+.include "../../net/hs-network/buildlink3.mk"
+.include "../../net/hs-network-uri/buildlink3.mk"
+.include "../../time/hs-old-time/buildlink3.mk"
+.include "../../textproc/hs-regex-applicative/buildlink3.mk"
+.include "../../textproc/hs-regex-compat-tdfa/buildlink3.mk"
+.include "../../archivers/hs-tar/buildlink3.mk"
+.include "../../sysutils/hs-temporary/buildlink3.mk"
+.include "../../devel/hs-unix-compat/buildlink3.mk"
+.include "../../devel/hs-utf8-string/buildlink3.mk"
+.include "../../devel/hs-vector/buildlink3.mk"
+.include "../../archivers/hs-zip-archive/buildlink3.mk"
+.include "../../archivers/hs-zlib/buildlink3.mk"
+.include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
