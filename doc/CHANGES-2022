@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.891 2022/02/13 21:27:51 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.892 2022/02/14 08:53:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1201,3 +1201,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/pt2-clone to 1.40 [nia 2022-02-13]
 	Removed chat/mautrix-hangouts [js 2022-02-13]
 	Updated comms/tio to 1.33 [fcambus 2022-02-13]
+	Added devel/py-test-lazy-fixture version 0.6.3 [adam 2022-02-14]
+	Updated textproc/py-prettytable to 3.1.0 [adam 2022-02-14]
