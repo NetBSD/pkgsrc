@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.897 2022/02/14 09:47:35 pin Exp $
+$NetBSD: CHANGES-2022,v 1.898 2022/02/14 10:17:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1208,3 +1208,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed devel/ocaml-configurator [wiz 2022-02-14]
 	Updated devel/ocaml-digestif to 1.1.0 [wiz 2022-02-14]
 	Updated finance/rates to 0.6.0 [pin 2022-02-14]
+	Updated devel/py-treq to 22.2.0 [adam 2022-02-14]
+	Updated textproc/py-breathe to 4.33.0 [adam 2022-02-14]
