@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.892 2022/02/14 08:53:53 adam Exp $
+$NetBSD: CHANGES-2022,v 1.893 2022/02/14 09:07:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1203,3 +1203,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated comms/tio to 1.33 [fcambus 2022-02-13]
 	Added devel/py-test-lazy-fixture version 0.6.3 [adam 2022-02-14]
 	Updated textproc/py-prettytable to 3.1.0 [adam 2022-02-14]
+	Updated devel/ocaml-optint to 0.1.0 [wiz 2022-02-14]
