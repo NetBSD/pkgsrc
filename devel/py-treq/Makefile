@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/02/13 08:53:43 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/02/14 09:16:33 wiz Exp $
 
 DISTNAME=	treq-22.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,13 +12,13 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-incremental-[0-9]*:../../devel/py-incremental
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.1.0:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
-PYTHON_VERSIONED_DEPENDENCIES+=	twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
