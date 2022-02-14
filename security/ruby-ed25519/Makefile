@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/01/19 14:20:38 taca Exp $
+# $NetBSD: Makefile,v 1.2 2022/02/14 14:17:24 taca Exp $
 
-DISTNAME=	ed25519-1.2.4
+DISTNAME=	ed25519-1.3.0
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
