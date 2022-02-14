@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2021/12/13 14:58:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/02/14 14:15:28 taca Exp $
 bin/pdf_callbacks${RUBY_SUFFIX}
 bin/pdf_object${RUBY_SUFFIX}
 bin/pdf_text${RUBY_SUFFIX}
@@ -24,6 +24,8 @@ ${GEM_LIBDIR}/examples/text.rb
 ${GEM_LIBDIR}/examples/version.rb
 ${GEM_LIBDIR}/lib/pdf-reader.rb
 ${GEM_LIBDIR}/lib/pdf/reader.rb
+${GEM_LIBDIR}/lib/pdf/reader/aes_v2_security_handler.rb
+${GEM_LIBDIR}/lib/pdf/reader/aes_v3_security_handler.rb
 ${GEM_LIBDIR}/lib/pdf/reader/afm/Courier-Bold.afm
 ${GEM_LIBDIR}/lib/pdf/reader/afm/Courier-BoldOblique.afm
 ${GEM_LIBDIR}/lib/pdf/reader/afm/Courier-Oblique.afm
@@ -39,6 +41,7 @@ ${GEM_LIBDIR}/lib/pdf/reader/afm/Times-BoldItalic.afm
 ${GEM_LIBDIR}/lib/pdf/reader/afm/Times-Italic.afm
 ${GEM_LIBDIR}/lib/pdf/reader/afm/Times-Roman.afm
 ${GEM_LIBDIR}/lib/pdf/reader/afm/ZapfDingbats.afm
+${GEM_LIBDIR}/lib/pdf/reader/bounding_rectangle_runs_filter.rb
 ${GEM_LIBDIR}/lib/pdf/reader/buffer.rb
 ${GEM_LIBDIR}/lib/pdf/reader/cid_widths.rb
 ${GEM_LIBDIR}/lib/pdf/reader/cmap.rb
@@ -65,6 +68,7 @@ ${GEM_LIBDIR}/lib/pdf/reader/form_xobject.rb
 ${GEM_LIBDIR}/lib/pdf/reader/glyph_hash.rb
 ${GEM_LIBDIR}/lib/pdf/reader/glyphlist-zapfdingbats.txt
 ${GEM_LIBDIR}/lib/pdf/reader/glyphlist.txt
+${GEM_LIBDIR}/lib/pdf/reader/key_builder_v5.rb
 ${GEM_LIBDIR}/lib/pdf/reader/lzw.rb
 ${GEM_LIBDIR}/lib/pdf/reader/null_security_handler.rb
 ${GEM_LIBDIR}/lib/pdf/reader/object_cache.rb
@@ -79,18 +83,21 @@ ${GEM_LIBDIR}/lib/pdf/reader/pages_strategy.rb
 ${GEM_LIBDIR}/lib/pdf/reader/parser.rb
 ${GEM_LIBDIR}/lib/pdf/reader/point.rb
 ${GEM_LIBDIR}/lib/pdf/reader/print_receiver.rb
+${GEM_LIBDIR}/lib/pdf/reader/rc4_security_handler.rb
 ${GEM_LIBDIR}/lib/pdf/reader/rectangle.rb
 ${GEM_LIBDIR}/lib/pdf/reader/reference.rb
 ${GEM_LIBDIR}/lib/pdf/reader/register_receiver.rb
-${GEM_LIBDIR}/lib/pdf/reader/resource_methods.rb
-${GEM_LIBDIR}/lib/pdf/reader/standard_security_handler.rb
-${GEM_LIBDIR}/lib/pdf/reader/standard_security_handler_v5.rb
+${GEM_LIBDIR}/lib/pdf/reader/resources.rb
+${GEM_LIBDIR}/lib/pdf/reader/security_handler_factory.rb
+${GEM_LIBDIR}/lib/pdf/reader/standard_key_builder.rb
 ${GEM_LIBDIR}/lib/pdf/reader/stream.rb
 ${GEM_LIBDIR}/lib/pdf/reader/synchronized_cache.rb
 ${GEM_LIBDIR}/lib/pdf/reader/text_run.rb
 ${GEM_LIBDIR}/lib/pdf/reader/token.rb
 ${GEM_LIBDIR}/lib/pdf/reader/transformation_matrix.rb
+${GEM_LIBDIR}/lib/pdf/reader/type_check.rb
 ${GEM_LIBDIR}/lib/pdf/reader/unimplemented_security_handler.rb
+${GEM_LIBDIR}/lib/pdf/reader/validating_receiver.rb
 ${GEM_LIBDIR}/lib/pdf/reader/width_calculator.rb
 ${GEM_LIBDIR}/lib/pdf/reader/width_calculator/built_in.rb
 ${GEM_LIBDIR}/lib/pdf/reader/width_calculator/composite.rb
