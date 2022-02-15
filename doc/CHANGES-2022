@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.932 2022/02/15 14:03:37 adam Exp $
+$NetBSD: CHANGES-2022,v 1.933 2022/02/15 14:37:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1253,3 +1253,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/nodejs to 14.19.0 [adam 2022-02-15]
 	Updated lang/nodejs12 to 12.22.10 [adam 2022-02-15]
 	Updated www/py-nbclient to 0.5.11 [adam 2022-02-15]
+	Updated net/py-kombu to 5.2.3 [wiz 2022-02-15]
