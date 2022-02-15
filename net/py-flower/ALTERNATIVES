@@ -1,1 +1,0 @@
-bin/flower @PREFIX@/bin/flower-@PYVERSSUFFIX@

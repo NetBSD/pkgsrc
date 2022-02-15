@@ -1,0 +1,13 @@
+$NetBSD: patch-requirements_default.txt,v 1.1 2022/02/15 16:38:15 wiz Exp $
+
+Relax restrictions.
+
+--- requirements/default.txt.orig	2021-05-16 01:11:31.000000000 +0000
++++ requirements/default.txt
+@@ -1,5 +1,5 @@
+ celery>=5.0.5
+-tornado>=5.0.0,<7.0.0
++tornado>=5.0.0
+ prometheus_client>=0.8.0
+ humanize
+ pytz
