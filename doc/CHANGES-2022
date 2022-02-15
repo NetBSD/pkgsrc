@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.917 2022/02/14 18:28:20 adam Exp $
+$NetBSD: CHANGES-2022,v 1.918 2022/02/15 07:15:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1230,3 +1230,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/ruby-metasploit_payloads-mettle to 1.0.18 [taca 2022-02-14]
 	Updated lang/rust-analyzer to 0.0.2022.02.14 [adam 2022-02-14]
 	Updated textproc/py-breathe to 4.33.1 [adam 2022-02-14]
+	Removed devel/python-mode [wiz 2022-02-15]
