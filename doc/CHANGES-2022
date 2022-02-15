@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.922 2022/02/15 09:22:37 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.923 2022/02/15 09:24:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1235,3 +1235,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/pugixml to 1.12 [wiz 2022-02-15]
 	Updated graphics/ImageMagick to 7.1.0.24 [wiz 2022-02-15]
 	Updated x11/dmenu to 5.1 [wiz 2022-02-15]
+	Updated mail/notmuch to 0.35 [wiz 2022-02-15]
