@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/25 20:02:39 cjep Exp $
-${EMACS_LISPPREFIX}/python-mode.el
-${EMACS_LISPPREFIX}/python-mode.elc
