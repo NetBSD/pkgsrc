@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:06:39 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/02/15 15:32:09 wiz Exp $
 
-BLAKE2s (moto-1.1.19.tar.gz) = b49e6c4dd9d986dd6999d0773b6346bc29641198c9fa81c43b070a1326fd6ec6
-SHA512 (moto-1.1.19.tar.gz) = 855723f33904059d82ac4a0ce0f889ffae5a4f7483001f33e941dc38585571287e8f15ba1a3f8e26cd10467cf602c084600ebbfa00022f4180b1f5642cf89ffd
-Size (moto-1.1.19.tar.gz) = 1171322 bytes
+BLAKE2s (moto-3.0.3.tar.gz) = d24c0ebc18e361e62928fa9b518113c717bd417fb987e38803ef28e84f3bccb8
+SHA512 (moto-3.0.3.tar.gz) = 1b14d8a5101103d31136fddfb12c4d6251aa75487347b049ea96baae662528f2f557fe31a9af1cce544fa97d02710ab66f5ee517540bcf137965bd2fe3ec24fa
+Size (moto-3.0.3.tar.gz) = 2071948 bytes
