@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2021/12/08 16:07:07 adam Exp $
+# $NetBSD: Makefile,v 1.39 2022/02/15 09:34:29 wiz Exp $
 
-DISTNAME=	libxkbcommon-1.3.1
-PKGREVISION=	1
+DISTNAME=	libxkbcommon-1.4.0
 CATEGORIES=	x11
 MASTER_SITES=	https://xkbcommon.org/download/
 EXTRACT_SUFX=	.tar.xz
@@ -14,6 +13,8 @@ LICENSE=	mit
 USE_TOOLS+=	bison pkg-config
 
 MESON_ARGS+=	-Denable-wayland=false
+
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
@@ -34,4 +35,6 @@ BUILDLINK_API_DEPENDS.libxcb+=	libxcb>=1.10
 .include "../../x11/xkeyboard-config/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/meson/build.mk"
+# for tests
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
