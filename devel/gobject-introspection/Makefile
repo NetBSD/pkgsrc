@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.78 2022/01/20 17:08:33 nros Exp $
+# $NetBSD: Makefile,v 1.79 2022/02/15 17:34:32 wiz Exp $
 
-DISTNAME=	gobject-introspection-1.68.0
-PKGREVISION=	1
+DISTNAME=	gobject-introspection-1.70.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -48,6 +47,9 @@ MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/girepository
 
 # Disable cache to keep fake homedir clean
 MAKE_ENV+=	GI_SCANNER_DISABLE_CACHE=yes
+
+post-install:
+	cd ${DESTDIR}${PREFIX} && find . -name *.orig -rm
 
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.58.0
 .include "../../devel/glib2/buildlink3.mk"
