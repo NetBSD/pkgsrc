@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2020/09/02 17:47:12 leot Exp $
-#
+# $NetBSD: Makefile,v 1.18 2022/02/15 09:22:28 wiz Exp $
 
-DISTNAME=	dmenu-5.0
+DISTNAME=	dmenu-5.1
 CATEGORIES=	x11
 MASTER_SITES=	http://dl.suckless.org/tools/
 
