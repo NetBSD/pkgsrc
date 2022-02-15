@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2021/05/31 20:28:11 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/02/15 10:13:23 adam Exp $
 
-DISTNAME=	mm-common-1.0.3
+DISTNAME=	mm-common-1.0.4
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mm-common/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -15,16 +15,12 @@ USE_TOOLS+=	gzip pkg-config
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-SUBST_CLASSES+=		python3
-SUBST_FILES.python3=	meson.build
-SUBST_SED.python3=	-e "s,'python3','${PYTHONBIN}',"
-SUBST_STAGE.python3=	pre-configure
-SUBST_MESSAGE.python3=	Fix python binary name.
-
 REPLACE_PYTHON+=	util/build_scripts/dist-build-scripts.py
 REPLACE_PYTHON+=	util/build_scripts/dist-changelog.py
 REPLACE_PYTHON+=	util/build_scripts/doc-reference.py
 REPLACE_PYTHON+=	util/build_scripts/generate-binding.py
+REPLACE_PYTHON+=	util/doc_install.py
+REPLACE_PYTHON+=	util/doc_postprocess.py
 REPLACE_PYTHON+=	util/mm-common-get.in
 
 .include "../../lang/python/application.mk"
