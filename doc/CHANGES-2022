@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.924 2022/02/15 09:26:55 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.925 2022/02/15 09:30:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1237,3 +1237,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/dmenu to 5.1 [wiz 2022-02-15]
 	Updated mail/notmuch to 0.35 [wiz 2022-02-15]
 	Updated databases/gdbm to 1.23 [wiz 2022-02-15]
+	Updated security/libgcrypt to 1.10.0 [wiz 2022-02-15]
