@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.944 2022/02/15 23:10:41 rillig Exp $
+$NetBSD: CHANGES-2022,v 1.945 2022/02/15 23:19:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1265,3 +1265,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/mimalloc to 2.0.5 [fcambus 2022-02-15]
 	Updated print/poppler to 22.02.0 [wiz 2022-02-15]
 	Updated devel/intellij-ce-bin to 2021.3.2 [rillig 2022-02-15]
+	Updated editors/emacs-packages to 0.12 [wiz 2022-02-15]
