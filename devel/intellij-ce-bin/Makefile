@@ -1,62 +1,55 @@
-# $NetBSD: Makefile,v 1.6 2020/12/04 20:45:10 nia Exp $
+# $NetBSD: Makefile,v 1.7 2022/02/15 21:21:24 rillig Exp $
 #
 # TODO Import intellij-fsnotifier with inotify support from FreeBSD.
 
-VERSION=	2019.1.2
+VERSION=	2021.3.2
 DISTNAME=	ideaIC-${VERSION:S/.0.0//}-no-jbr
 PKGNAME=	intellij-ce-bin-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	http://download.jetbrains.com/idea/
+MASTER_SITES=	https://download.jetbrains.com/idea/
 
 MAINTAINER=	youri@NetBSD.org
-HOMEPAGE=	http://www.jetbrains.org/
-COMMENT=	JetBrain\'s Java IDE
+HOMEPAGE=	https://www.jetbrains.com/idea/
+COMMENT=	JetBrain's Java IDE
 LICENSE=	apache-2.0
 
 DEPENDS+=	intellij-fsnotifier-[0-9]*:../../sysutils/intellij-fsnotifier
 
-WRKSRC=		${WRKDIR}/idea-IC-191.7141.44
+WRKSRC=		${WRKDIR}/idea-IC-213.6777.52
 USE_JAVA=	yes
-USE_JAVA2=	8
+USE_JAVA2=	9
 
 USE_TOOLS+=	bash pax sed
 
 REPLACE_PYTHON=	bin/printenv.py \
 		bin/restart.py  \
-		
+
 REPLACE_BASH=	plugins/Kotlin/kotlinc/bin/kotlin	\
 		plugins/Kotlin/kotlinc/bin/kotlin-dce-js\
 		plugins/Kotlin/kotlinc/bin/kotlinc	\
 		plugins/Kotlin/kotlinc/bin/kotlinc-js	\
 		plugins/Kotlin/kotlinc/bin/kotlinc-jvm
 
-.include "../../mk/bsd.prefs.mk"
+CHECK_PIE_SKIP=		${PKGNAME_NOREV}/bin/fsnotifier
+CHECK_PIE_SKIP+=	${PKGNAME_NOREV}/plugins/Kotlin/bin/linux/LLDBFrontend
+CHECK_SHLIBS_SKIP=	*
 
-INSTALLATION_DIRS=	intellij-ce-bin-${VERSION} \
+INSTALLATION_DIRS=	${PKGNAME_NOREV} \
 			share/applications
 
 NO_BUILD=	yes
 
 SUBST_CLASSES+=		jdk
-SUBST_STAGE.jdk=	pre-install
-SUBST_MESSAGE.jdk=	Adding JVM options
+SUBST_STAGE.jdk=	pre-configure
 SUBST_FILES.jdk=	bin/idea.sh
 SUBST_VARS.jdk=		PKG_JAVA_HOME
 
 do-install:
-	cd ${WRKSRC} &&	\
-	${RM} bin/fsnotifier bin/fsnotifier-arm bin/idea.sh.orig\
-	bin/fsnotifier64 bin/libdbm64.so			\
-	lib/pty4j-native/linux/x86/libpty.so			\
-	lib/pty4j-native/linux/x86_64/libpty.so			\
-	lib/pty4j-native/linux/ppc64le/libpty.so		\
-	plugins/android/lib/libwebp/linux/libwebp_jni.so	\
-	plugins/android/lib/libwebp/linux/libwebp_jni64.so &&	\
-	${ECHO} "idea.filewatcher.disabled=true" >> bin/idea.properties && \
 	${SED} -e "s|@@IDEA_HOME@@|${PREFIX}/${PKGNAME_NOREV}|g" \
-	${FILESDIR}/idea.desktop > ${DESTDIR}${PREFIX}/share/applications/idea.desktop && \
-	pax -rw -pm * ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}
+	    < ${FILESDIR}/idea.desktop \
+	    > ${DESTDIR}${PREFIX}/share/applications/idea.desktop
+	cd ${WRKSRC} &&	pax -rw -pm -s ',.*\.orig,,' \
+	    * ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}
 
 .include "../../lang/python/application.mk"
 .include "../../mk/java-vm.mk"
