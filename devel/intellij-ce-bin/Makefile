@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/02/15 21:21:24 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2022/02/15 23:13:18 rillig Exp $
 #
 # TODO Import intellij-fsnotifier with inotify support from FreeBSD.
 
@@ -16,13 +16,12 @@ LICENSE=	apache-2.0
 DEPENDS+=	intellij-fsnotifier-[0-9]*:../../sysutils/intellij-fsnotifier
 
 WRKSRC=		${WRKDIR}/idea-IC-213.6777.52
-USE_JAVA=	yes
 USE_JAVA2=	9
 
 USE_TOOLS+=	bash pax sed
 
 REPLACE_PYTHON=	bin/printenv.py \
-		bin/restart.py  \
+		bin/restart.py
 
 REPLACE_BASH=	plugins/Kotlin/kotlinc/bin/kotlin	\
 		plugins/Kotlin/kotlinc/bin/kotlin-dce-js\
