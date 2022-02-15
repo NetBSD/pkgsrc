@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.929 2022/02/15 10:21:38 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.930 2022/02/15 12:59:43 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1247,3 +1247,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/mm-common to 1.0.4 [adam 2022-02-15]
 	Updated devel/libsigc++ to 2.10.8 [adam 2022-02-15]
 	Updated devel/py-mercurial to 6.0.2 [wiz 2022-02-15]
+	Updated geography/qgis to 3.22.3 [gdt 2022-02-15]
