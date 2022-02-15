@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2021/10/26 11:06:38 nia Exp $
+$NetBSD: distinfo,v 1.29 2022/02/15 14:37:06 wiz Exp $
 
-BLAKE2s (kombu-5.1.0.tar.gz) = 142f9d6b87d23e867e9b99b057928eab0333e3cce6e89a0320067c6347ad6891
-SHA512 (kombu-5.1.0.tar.gz) = 62ef16e8e3fb592882b8060f29b95e7224ba635132ed688eece0c2d254e7f7fb525c778cac23f15495464c6dbcf84d7a1372fde6f55fcfe66677cf43d3e9d4de
-Size (kombu-5.1.0.tar.gz) = 416353 bytes
+BLAKE2s (kombu-5.2.3.tar.gz) = 6cad2a61a7b151f467dc0e246a17bc390e9289e23c25f8dd4d4cedd777d85119
+SHA512 (kombu-5.2.3.tar.gz) = 0e882063e89a25d324ccdf8745f11e1ea51443cc9a80b215e7f31c85053411cf1d5f26b5ffcd52165a15827ee036300a69a8a192af60d975a495a5a0b5ce3954
+Size (kombu-5.2.3.tar.gz) = 421943 bytes
