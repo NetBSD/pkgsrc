@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2021/07/02 08:59:05 adam Exp $
+# $NetBSD: Makefile,v 1.66 2022/02/15 10:19:28 adam Exp $
 
-DISTNAME=	libsigc++-2.10.7
+DISTNAME=	libsigc++-2.10.8
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsigc++/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -14,7 +14,7 @@ CONFLICTS+=	libsigc++2-[0-9]*
 GCC_REQD+=	4.8
 
 USE_LANGUAGES=		c c++11
-USE_TOOLS+=		gm4 perl:build pkg-config
+USE_TOOLS+=		gm4 pkg-config
 PKGCONFIG_OVERRIDE=	sigc++.pc.in
 PYTHON_FOR_BUILD_ONLY=	tool
 
