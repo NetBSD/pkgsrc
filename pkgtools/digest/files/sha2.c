@@ -548,7 +548,8 @@ void SHA256_Final(sha2_byte digest[], SHA256_CTX* context) {
 			*context->buffer = 0x80;
 		}
 		/* Set the bit count: */
-		*(sha2_word64*)&context->buffer[SHA256_SHORT_BLOCK_LENGTH] = context->bitcount;
+		MEMCPY_BCOPY(&context->buffer[SHA256_SHORT_BLOCK_LENGTH],
+		    &context->bitcount, sizeof(context->bitcount));
 
 		/* Final transform: */
 		SHA256_Transform(context, (sha2_word32*)context->buffer);
