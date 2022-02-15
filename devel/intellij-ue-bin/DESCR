@@ -1,20 +1,19 @@
-IntelliJ IDEA Ultimate Edition is the open source version of IntelliJ
-IDEA, a premier IDE (Integrated Development Environment) for Java,
-Groovy and other programming languages such as Scala or Clojure.
+IntelliJ IDEA Ultimate Edition is a premier IDE (Integrated Development
+Environment) for Java, Groovy and other programming languages such as
+Scala or Clojure.
 
 The Ultimate Edition includes:
 
-    An Intelligent code editor that has all the smarts for
-    understanding Java, XML and Groovy code
+    An Intelligent code editor that has all the smarts for understanding
+    Java, XML and Groovy code
 
-    Refactorings, code inspections and intentions, super-fast
-    navigation and search
+    Refactorings, code inspections and intentions, super-fast navigation
+    and search
 
     Testing frameworks integration: JUnit and TestNG
 
-    Build tools support: Ant and Maven
+    Build tools support: Ant, Maven, Gradle
 
-    Popular version control systems integration: CVS, Subversion
-    and Git
+    Popular version control systems integration: CVS, Subversion and Git
 
     Swing UI designer
