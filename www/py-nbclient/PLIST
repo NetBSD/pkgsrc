@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/02/05 11:26:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/02/15 14:03:15 adam Exp $
 bin/jupyter-execute-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -66,9 +66,9 @@ ${PYSITELIB}/nbclient/tests/files/update-display-id.ipynb
 ${PYSITELIB}/nbclient/tests/test_client.py
 ${PYSITELIB}/nbclient/tests/test_client.pyc
 ${PYSITELIB}/nbclient/tests/test_client.pyo
-${PYSITELIB}/nbclient/tests/util.py
-${PYSITELIB}/nbclient/tests/util.pyc
-${PYSITELIB}/nbclient/tests/util.pyo
+${PYSITELIB}/nbclient/tests/test_util.py
+${PYSITELIB}/nbclient/tests/test_util.pyc
+${PYSITELIB}/nbclient/tests/test_util.pyo
 ${PYSITELIB}/nbclient/util.py
 ${PYSITELIB}/nbclient/util.pyc
 ${PYSITELIB}/nbclient/util.pyo
