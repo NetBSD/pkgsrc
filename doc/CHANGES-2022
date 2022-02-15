@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.942 2022/02/15 19:13:16 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.943 2022/02/15 19:27:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1263,3 +1263,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/py-test-celery version 0.0.0 [wiz 2022-02-15]
 	Updated devel/gobject-introspection to 1.70.0 [wiz 2022-02-15]
 	Updated devel/mimalloc to 2.0.5 [fcambus 2022-02-15]
+	Updated print/poppler to 22.02.0 [wiz 2022-02-15]
