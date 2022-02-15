@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.931 2022/02/15 13:10:21 jun Exp $
+$NetBSD: CHANGES-2022,v 1.932 2022/02/15 14:03:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1249,3 +1249,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-mercurial to 6.0.2 [wiz 2022-02-15]
 	Updated geography/qgis to 3.22.3 [gdt 2022-02-15]
 	Updated emulators/nono to 0.2.6 [jun 2022-02-15]
+	Updated databases/repmgr to 5.3.1 [adam 2022-02-15]
+	Updated lang/nodejs to 14.19.0 [adam 2022-02-15]
+	Updated lang/nodejs12 to 12.22.10 [adam 2022-02-15]
+	Updated www/py-nbclient to 0.5.11 [adam 2022-02-15]
