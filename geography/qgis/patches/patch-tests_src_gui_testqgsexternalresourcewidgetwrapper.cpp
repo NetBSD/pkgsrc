@@ -1,35 +1,18 @@
-$NetBSD: patch-tests_src_gui_testqgsexternalresourcewidgetwrapper.cpp,v 1.1 2022/01/18 23:33:59 gdt Exp $
+$NetBSD: patch-tests_src_gui_testqgsexternalresourcewidgetwrapper.cpp,v 1.2 2022/02/15 12:59:21 gdt Exp $
 
-Fix a  test that should have been guarded based on qt5-webkit.
+Fix a test that should have been guarded on WITH_QTWEKBIT.
 
-Reported upstream via email 20210118.
+Not yet reported upstream.
 
---- tests/src/gui/testqgsexternalresourcewidgetwrapper.cpp.orig	2022-01-14 12:06:23.000000000 +0000
+--- tests/src/gui/testqgsexternalresourcewidgetwrapper.cpp.orig	2022-01-14 12:06:34.000000000 +0000
 +++ tests/src/gui/testqgsexternalresourcewidgetwrapper.cpp
-@@ -44,7 +44,9 @@ class TestQgsExternalResourceWidgetWrapp
-     void init();// will be called before each testfunction is executed.
-     void cleanup();// will be called after every testfunction.
-     void test_setNullValues();
+@@ -1258,7 +1258,9 @@ void TestQgsExternalResourceWidgetWrappe
+ 
+   // content still null, fetching in progress...
+   QVERIFY( !ww.mQgsWidget->mPixmapLabel->isVisible() );
 +#ifdef WITH_QTWEBKIT
-     void testBlankAfterValue();
-+#endif /* WITH_QTWEBKIT */
- 
-   private:
-     std::unique_ptr<QgsVectorLayer> vl;
-@@ -115,6 +117,8 @@ void TestQgsExternalResourceWidgetWrappe
-   delete widget;
- }
- 
-+#ifdef WITH_QTWEBKIT
-+
- void TestQgsExternalResourceWidgetWrapper::testBlankAfterValue()
- {
-   // test that application doesn't crash when we set a blank page in web preview
-@@ -152,5 +156,7 @@ void TestQgsExternalResourceWidgetWrappe
-   QCOMPARE( ww.mQgsWidget->mWebView->url().toString(), QStringLiteral( "about:blank" ) );
- }
- 
-+#endif /* WITH_QTWEBKIT */
-+
- QGSTEST_MAIN( TestQgsExternalResourceWidgetWrapper )
- #include "testqgsexternalresourcewidgetwrapper.moc"
+   QVERIFY( !ww.mQgsWidget->mWebView->isVisible() );
++#endif
+   QVERIFY( ww.mQgsWidget->mLoadingLabel->isVisible() );
+   QVERIFY( ww.mQgsWidget->mLoadingMovie->state() == QMovie::Running );
+   QVERIFY( !ww.mQgsWidget->mErrorLabel->isVisible() );
