@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.224 2022/01/11 08:02:04 adam Exp $
+# $NetBSD: Makefile,v 1.225 2022/02/15 13:59:42 adam Exp $
 
-DISTNAME=	node-v14.18.3
+DISTNAME=	node-v14.19.0
 EXTRACT_SUFX=	.tar.xz
 
 USE_LANGUAGES=	c gnu++14
@@ -13,6 +13,7 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${PREFIX}/lib
 CONFIGURE_ARGS+=	--shared-brotli
 CONFIGURE_ARGS+=	--shared-nghttp2
 CONFIGURE_ARGS+=	--with-intl=system-icu
+CONFIGURE_ARGS+=	--without-corepack
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
