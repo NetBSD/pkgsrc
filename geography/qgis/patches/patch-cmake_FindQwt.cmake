@@ -1,11 +1,12 @@
-$NetBSD: patch-cmake_FindQwt.cmake,v 1.3 2021/03/01 01:06:30 gdt Exp $
+$NetBSD: patch-cmake_FindQwt.cmake,v 1.4 2022/02/15 12:59:21 gdt Exp $
 
 Force pkgsrc path only rather than looking in a large number of random
 places.
 
-Not yet reported upstream.
+Not yet reported upstream; it's not clear how to merge how we want to
+handle this and upstream's approach.
 
---- cmake/FindQwt.cmake.orig	2021-02-19 12:09:21.000000000 +0000
+--- cmake/FindQwt.cmake.orig	2022-01-14 12:06:34.000000000 +0000
 +++ cmake/FindQwt.cmake
 @@ -17,11 +17,7 @@ set(QWT_LIBRARY_NAMES qwt-qt5 qwt6-qt5 q
  find_library(QWT_LIBRARY
@@ -30,7 +31,7 @@ Not yet reported upstream.
 -  /usr/local/include/qt5
 -  "$ENV{LIB_DIR}/include"
 -  "$ENV{INCLUDE}"
--  PATH_SUFFIXES qwt-qt5 qwt qwt6
+-  PATH_SUFFIXES qwt-qt5 qwt qwt6 qt5/qwt
 +  "${QWT_DIR}/include"
  )
  
