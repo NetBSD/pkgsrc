@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.920 2022/02/15 09:16:09 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.921 2022/02/15 09:20:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1233,3 +1233,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed devel/python-mode [wiz 2022-02-15]
 	Updated net/tor to 0.4.6.10 [wiz 2022-02-15]
 	Updated textproc/pugixml to 1.12 [wiz 2022-02-15]
+	Updated graphics/ImageMagick to 7.1.0.24 [wiz 2022-02-15]
