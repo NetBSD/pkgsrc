@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.926 2022/02/15 09:34:37 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.927 2022/02/15 10:02:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1239,3 +1239,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/gdbm to 1.23 [wiz 2022-02-15]
 	Updated security/libgcrypt to 1.10.0 [wiz 2022-02-15]
 	Updated x11/libxkbcommon to 1.4.0 [wiz 2022-02-15]
+	Updated devel/meson to 0.61.2 [adam 2022-02-15]
+	Updated devel/glib2 to 2.70.4 [adam 2022-02-15]
+	Updated devel/glib2-tools to 2.70.4 [adam 2022-02-15]
+	Updated devel/gdbus-codegen to 2.70.4 [adam 2022-02-15]
