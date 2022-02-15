@@ -1,10 +1,10 @@
-$NetBSD: patch-tools_install.py,v 1.6 2019/12/09 20:03:51 adam Exp $
+$NetBSD: patch-tools_install.py,v 1.7 2022/02/15 13:59:42 adam Exp $
 
 Install man pages under the right directory.
 
---- tools/install.py.orig	2019-11-19 08:29:09.000000000 +0000
+--- tools/install.py.orig	2022-02-01 13:01:47.000000000 +0000
 +++ tools/install.py
-@@ -151,10 +151,7 @@ def files(action):
+@@ -156,10 +156,7 @@ def files(action):
    action(['deps/v8/tools/gdbinit'], 'share/doc/node/')
    action(['deps/v8/tools/lldb_commands.py'], 'share/doc/node/')
  
@@ -14,5 +14,5 @@ Install man pages under the right directory.
 -    action(['doc/node.1'], 'share/man/man1/')
 +  action(['doc/node.1'], os.environ.get('PKGMANDIR') + '/man1/')
  
-   if 'true' == variables.get('node_install_npm'): npm_files(action)
- 
+   if 'true' == variables.get('node_install_npm'):
+     npm_files(action)
