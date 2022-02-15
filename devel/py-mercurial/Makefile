@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2022/01/29 07:23:59 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2022/02/15 10:21:30 wiz Exp $
 #
 # Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
 
@@ -29,11 +29,26 @@ PYTHON_SELF_CONFLICT=	yes
 .include "options.mk"
 
 USE_TOOLS+=		bash:test
-# Known test failures as of 6.0.1
+# Known test failures as of 6.0.2
 # test-removeemptydirs.t
 # https://bz.mercurial-scm.org/show_bug.cgi?id=6587
+# test-http-bad-server.t
+# https://bz.mercurial-scm.org/show_bug.cgi?id=6643
+# test-wireproto-content-redirects.t
+# test-http-protocol.t
+# test-wireproto-command-capabilities.t
+# test-http-api-httpv2.t
+# https://bz.mercurial-scm.org/show_bug.cgi?id=6644
+# test-https.t
+# test-patchbomb-tls.t
+# https://bz.mercurial-scm.org/show_bug.cgi?id=6645
+# test-paths.t
+# test-hgrc.t
+# test-parseindex.t
+# test-patchbomb-tls.t
+# https://bz.mercurial-scm.org/show_bug.cgi?id=6646
 #
-# Ran 899 tests, 81 skipped, 1 failed.
+# Ran 899 tests, 81 skipped, 11 failed.
 
 TEST_TARGET=		tests
 TEST_MAKE_FLAGS+=	PYTHON=${PYTHONBIN} TESTFLAGS=${_MAKE_JOBS:Q}
