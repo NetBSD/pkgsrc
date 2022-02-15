@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2021/04/02 04:12:00 taca Exp $
+# $NetBSD: Makefile,v 1.31 2022/02/15 23:19:12 wiz Exp $
 
-DISTNAME=	emacs-packages-0.11
+DISTNAME=	emacs-packages-0.12
 CATEGORIES=	meta-pkgs editors
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -64,7 +64,6 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}pcl-cvs-[0-9]*:../../devel/pcl-cvs
 .endif
 #DEPENDS+=	${EMACS_PKGNAME_PREFIX}pvs-[0-9]*:../../devel/pvs	# XXX pvs-license
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}psgml-mode-[0-9]*:../../textproc/psgml-mode
-DEPENDS+=	${EMACS_PKGNAME_PREFIX}python-mode-[0-9]*:../../devel/python-mode
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}ruby-rd-mode-[0-9]*:../../devel/ruby-rd-mode
 .if ${EMACS_VERSION_MAJOR} < 23
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}semantic-[0-9]*:../../devel/semantic
