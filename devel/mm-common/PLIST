@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/04/08 20:49:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/02/15 10:13:23 adam Exp $
 bin/mm-common-get
 bin/mm-common-prepare
 man/man1/mm-common-get.1
@@ -25,6 +25,8 @@ share/mm-common/build/generate-binding.py
 share/mm-common/doctags/libstdc++.tag
 share/mm-common/doctool/doc-install.pl
 share/mm-common/doctool/doc-postprocess.pl
+share/mm-common/doctool/doc_install.py
+share/mm-common/doctool/doc_postprocess.py
 share/mm-common/doctool/doxygen-extra.css
 share/mm-common/doctool/doxygen.css
 share/mm-common/doctool/tagfile-to-devhelp2.xsl
