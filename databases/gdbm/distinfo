@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.22 2021/11/01 18:37:05 wiz Exp $
+$NetBSD: distinfo,v 1.23 2022/02/15 09:26:46 wiz Exp $
 
-BLAKE2s (gdbm-1.22.tar.gz) = c7562c7d917b7144d139e6746a7db3c3a57e83c6b4e8afa3b2868770025aa80c
-SHA512 (gdbm-1.22.tar.gz) = 67461fc4f41e825d0134175ff99c913ccb4aa7ea3d0f64f32bdedbc7677b3ecabd2c525ac6b2ee47a9561e002e4224e492b72088d57bb4862a1f8c089521ec51
-Size (gdbm-1.22.tar.gz) = 1090100 bytes
-SHA1 (patch-src_Makefile.in) = 52b47f3dcd381143d1cdae40f1972bd989dcce1f
+BLAKE2s (gdbm-1.23.tar.gz) = 569fadc9e8913bb217b666995f2673e29846602069d04b23cec02aed12dfbb7c
+SHA512 (gdbm-1.23.tar.gz) = 918080cb0225b221c11eb7339634a95e00c526072395f7a3d46ccf42ef020dea7c4c5bec34aff2c4f16033e1fff6583252b7e978f68b8d7f8736b0e025838e10
+Size (gdbm-1.23.tar.gz) = 1115854 bytes

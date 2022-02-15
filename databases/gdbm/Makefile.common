@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.12 2021/11/01 18:37:05 wiz Exp $
+# $NetBSD: Makefile.common,v 1.13 2022/02/15 09:26:46 wiz Exp $
 #
 # used by databases/gdbm/Makefile
 # used by databases/gdbm_compat/Makefile
 
-DISTNAME=	gdbm-1.22
+DISTNAME=	gdbm-1.23
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GNU:=gdbm/}
 
@@ -16,6 +16,7 @@ DISTINFO_FILE=	${.CURDIR}/../../databases/gdbm/distinfo
 PATCHDIR=	${.CURDIR}/../../databases/gdbm/patches
 
 USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
 TEST_TARGET=		check
