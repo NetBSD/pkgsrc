@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:18:05 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/02/15 10:28:38 nros Exp $
 
-BLAKE2s (pstreams-0.8.1.tar.gz) = 990290a23fe801d845963fd96b642daf00f2a62dde1f080de9e9a547899cded2
-SHA512 (pstreams-0.8.1.tar.gz) = edb6fa30e0a77c4a83bbb7a15c427376d39d73db17112cc5888c404fa1e99407c42c09c9ca072027ac52c753071fb7d7333237bd49aa44488512ce64de22d8f3
-Size (pstreams-0.8.1.tar.gz) = 58588 bytes
-SHA1 (patch-Makefile) = 64d1f6d0ff991e5de03e23a038cd3227ae1edbfa
+BLAKE2s (pstreams-1.0.3.tar.gz) = e4f1b09ca0bebc064ac7f0c177b4c821cff8c29721d1f680204ecfcf2c0adc8e
+SHA512 (pstreams-1.0.3.tar.gz) = 5d23a98dacfe307ffaad40b72b70c62d1854fdf08e3f5cffb338060e0afe7c8d6fbddb89c1de38821914e35a88a1cbbda042fec156e17176774c823e9a526a74
+Size (pstreams-1.0.3.tar.gz) = 69119 bytes
+SHA1 (patch-Makefile) = 95a98894b81bf72890c4060a849e626fe9472306
