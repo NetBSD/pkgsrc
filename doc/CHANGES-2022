@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.918 2022/02/15 07:15:02 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.919 2022/02/15 09:14:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1231,3 +1231,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/rust-analyzer to 0.0.2022.02.14 [adam 2022-02-14]
 	Updated textproc/py-breathe to 4.33.1 [adam 2022-02-14]
 	Removed devel/python-mode [wiz 2022-02-15]
+	Updated net/tor to 0.4.6.10 [wiz 2022-02-15]
