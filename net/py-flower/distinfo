@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:06:36 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/02/15 16:38:15 wiz Exp $
 
-BLAKE2s (flower-0.9.7.tar.gz) = 465d1d2f1a90cb212fb9662fdc63152913172a372b49518a16c797216b1dbf61
-SHA512 (flower-0.9.7.tar.gz) = ebb74e2b612962839fe4bc774f9bea98da08edf7804a6b7b2bdaafe5c9368312a05f3c9692204e25909dcdd8e9d15e6b6dd3eca829b5440af3e2b60d495602eb
-Size (flower-0.9.7.tar.gz) = 3526930 bytes
+BLAKE2s (flower-1.0.0.tar.gz) = 45b751898fd8a3de00ed9b63d813db74e409402d219f67139c0f7fc95f9c90db
+SHA512 (flower-1.0.0.tar.gz) = 9c4b93d0c7190d59c27cdeb43b193a71d4d5b07bac03a50591b87facb7bd17994799eb65cc37932c92c2eb699ba8424ef0d6c0a29433f1c231e012cbd0a284e8
+Size (flower-1.0.0.tar.gz) = 4266671 bytes
+SHA1 (patch-requirements_default.txt) = e842b396ca87f5489ce4e1655f7d7aa078eb7c2a
