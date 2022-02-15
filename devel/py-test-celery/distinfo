@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/15 16:21:11 wiz Exp $
+
+BLAKE2s (pytest-celery-0.0.0.tar.gz) = 48d915ead6cfaef6d7ac77665d9088ec413ba21225f85d16426bec237a6463f5
+SHA512 (pytest-celery-0.0.0.tar.gz) = 5fc9c52da674ec2fcf55d6ebf278aec166877c5bd7962c786e5432e77d15132247021e4552001aad19bd7827e5b16256062eade43a8fc59c5b52e264d06b1cae
+Size (pytest-celery-0.0.0.tar.gz) = 3056 bytes
