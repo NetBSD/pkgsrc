@@ -1,0 +1,6 @@
+This pytest plugin was generated with Cookiecutter along with
+@hackebrot's cookiecutter-pytest-plugin template.
+
+* Adds support for TestCase.subTest.
+* New subtests fixture, providing similar functionality for pure
+  pytest tests.
