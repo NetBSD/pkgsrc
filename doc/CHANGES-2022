@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.928 2022/02/15 10:20:16 adam Exp $
+$NetBSD: CHANGES-2022,v 1.929 2022/02/15 10:21:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1246,3 +1246,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/pango to 1.48.11 [adam 2022-02-15]
 	Updated devel/mm-common to 1.0.4 [adam 2022-02-15]
 	Updated devel/libsigc++ to 2.10.8 [adam 2022-02-15]
+	Updated devel/py-mercurial to 6.0.2 [wiz 2022-02-15]
