@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2021/11/07 13:23:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/02/15 10:00:05 adam Exp $
 bin/meson
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -63,6 +63,9 @@ ${PYSITELIB}/mesonbuild/backend/vs2017backend.pyo
 ${PYSITELIB}/mesonbuild/backend/vs2019backend.py
 ${PYSITELIB}/mesonbuild/backend/vs2019backend.pyc
 ${PYSITELIB}/mesonbuild/backend/vs2019backend.pyo
+${PYSITELIB}/mesonbuild/backend/vs2022backend.py
+${PYSITELIB}/mesonbuild/backend/vs2022backend.pyc
+${PYSITELIB}/mesonbuild/backend/vs2022backend.pyo
 ${PYSITELIB}/mesonbuild/backend/xcodebackend.py
 ${PYSITELIB}/mesonbuild/backend/xcodebackend.pyc
 ${PYSITELIB}/mesonbuild/backend/xcodebackend.pyo
@@ -96,6 +99,9 @@ ${PYSITELIB}/mesonbuild/cmake/toolchain.pyo
 ${PYSITELIB}/mesonbuild/cmake/traceparser.py
 ${PYSITELIB}/mesonbuild/cmake/traceparser.pyc
 ${PYSITELIB}/mesonbuild/cmake/traceparser.pyo
+${PYSITELIB}/mesonbuild/cmake/tracetargets.py
+${PYSITELIB}/mesonbuild/cmake/tracetargets.pyc
+${PYSITELIB}/mesonbuild/cmake/tracetargets.pyo
 ${PYSITELIB}/mesonbuild/compilers/__init__.py
 ${PYSITELIB}/mesonbuild/compilers/__init__.pyc
 ${PYSITELIB}/mesonbuild/compilers/__init__.pyo
@@ -544,6 +550,9 @@ ${PYSITELIB}/mesonbuild/scripts/msgfmthelper.pyo
 ${PYSITELIB}/mesonbuild/scripts/regen_checker.py
 ${PYSITELIB}/mesonbuild/scripts/regen_checker.pyc
 ${PYSITELIB}/mesonbuild/scripts/regen_checker.pyo
+${PYSITELIB}/mesonbuild/scripts/run_tool.py
+${PYSITELIB}/mesonbuild/scripts/run_tool.pyc
+${PYSITELIB}/mesonbuild/scripts/run_tool.pyo
 ${PYSITELIB}/mesonbuild/scripts/scanbuild.py
 ${PYSITELIB}/mesonbuild/scripts/scanbuild.pyc
 ${PYSITELIB}/mesonbuild/scripts/scanbuild.pyo
@@ -559,9 +568,6 @@ ${PYSITELIB}/mesonbuild/scripts/uninstall.pyo
 ${PYSITELIB}/mesonbuild/scripts/vcstagger.py
 ${PYSITELIB}/mesonbuild/scripts/vcstagger.pyc
 ${PYSITELIB}/mesonbuild/scripts/vcstagger.pyo
-${PYSITELIB}/mesonbuild/scripts/yelphelper.py
-${PYSITELIB}/mesonbuild/scripts/yelphelper.pyc
-${PYSITELIB}/mesonbuild/scripts/yelphelper.pyo
 ${PYSITELIB}/mesonbuild/templates/__init__.py
 ${PYSITELIB}/mesonbuild/templates/__init__.pyc
 ${PYSITELIB}/mesonbuild/templates/__init__.pyo
@@ -604,6 +610,9 @@ ${PYSITELIB}/mesonbuild/templates/samplefactory.pyo
 ${PYSITELIB}/mesonbuild/templates/sampleimpl.py
 ${PYSITELIB}/mesonbuild/templates/sampleimpl.pyc
 ${PYSITELIB}/mesonbuild/templates/sampleimpl.pyo
+${PYSITELIB}/mesonbuild/templates/valatemplates.py
+${PYSITELIB}/mesonbuild/templates/valatemplates.pyc
+${PYSITELIB}/mesonbuild/templates/valatemplates.pyo
 ${PYSITELIB}/mesonbuild/wrap/__init__.py
 ${PYSITELIB}/mesonbuild/wrap/__init__.pyc
 ${PYSITELIB}/mesonbuild/wrap/__init__.pyo
