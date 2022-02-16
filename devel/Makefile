@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3616 2022/02/16 09:52:05 pho Exp $
+# $NetBSD: Makefile,v 1.3617 2022/02/16 09:53:30 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -588,6 +588,7 @@ SUBDIR+=	hs-parser-combinators
 SUBDIR+=	hs-pretty-show
 SUBDIR+=	hs-pretty-simple
 SUBDIR+=	hs-primitive
+SUBDIR+=	hs-primitive-unlifted
 SUBDIR+=	hs-psqueues
 SUBDIR+=	hs-random
 SUBDIR+=	hs-refact
