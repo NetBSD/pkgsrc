@@ -1,0 +1,2 @@
+Provides a type called DMap which generalizes Data.Map.Map, allowing keys
+to specify the type of value that can be associated with them.
