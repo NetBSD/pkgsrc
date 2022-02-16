@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/16 09:46:47 pho Exp $
+lib/list-t-${PKGVERSION}/${HS_VERSION}/package-description
+lib/list-t-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/${HS_PLATFORM}/${HS_PKGID}/ListT.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/ListT.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/ListT.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/ListT/Prelude.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/ListT/Prelude.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/ListT/Prelude.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/list-t-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/list-t-${PKGVERSION}/html/ListT.html
+share/doc/${HS_PLATFORM}/list-t-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/list-t-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/list-t-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/list-t-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/list-t-${PKGVERSION}/html/list-t.haddock
+share/doc/${HS_PLATFORM}/list-t-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/list-t-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/list-t-${PKGVERSION}/html/synopsis.png
