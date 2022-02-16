@@ -1,0 +1,3 @@
+Backports for HIE files to GHC 8.6, along with a few other backports of HIE
+file related fixes for ghcide. THIS DOES NOT LET YOU READ HIE FILES WITH
+MISMATCHED VERSIONS OF GHC.
