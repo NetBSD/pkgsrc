@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1013 2022/02/16 10:17:44 pho Exp $
+$NetBSD: CHANGES-2022,v 1.1014 2022/02/16 10:18:16 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1336,3 +1336,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-hls-pragmas-plugin version 1.0.2.0 [pho 2022-02-16]
 	Added devel/hs-hls-alternate-number-format-plugin version 1.0.1.0 [pho 2022-02-16]
 	Added devel/hs-hls-qualify-imported-names-plugin version 1.0.1.0 [pho 2022-02-16]
+	Added devel/hs-hls-selection-range-plugin version 1.0.0.0 [pho 2022-02-16]
