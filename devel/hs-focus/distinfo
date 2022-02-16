@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/16 05:08:34 pho Exp $
+
+BLAKE2s (focus-1.0.3.tar.gz) = 395155041a06cb831cecb3822e287c7ed893a89a36a9edfc0cfafaf7e8db774d
+SHA512 (focus-1.0.3.tar.gz) = c5dc9a0c683ddbfbe59888bd772e48f38eb2651e2966c4208559e81efaab198ce0e808b35d78e86135daea1d4033f3dc12d221432a29b511e3605e5262e9c52e
+Size (focus-1.0.3.tar.gz) = 6319 bytes
