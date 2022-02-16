@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/16 10:05:17 pho Exp $
+
+BLAKE2s (cryptohash-md5-0.11.101.0.tar.gz) = 39853adf6b662ea3ee43c987fee56bf06496699f0deb4a7b567d8e396493a436
+SHA512 (cryptohash-md5-0.11.101.0.tar.gz) = 6116b384e76927aed06748fac6088280d1ecc7eb5886692c287e971761b98960657b106ba8a700bd0c5b2e552797079e143836af3463acd75bbac207633867a4
+Size (cryptohash-md5-0.11.101.0.tar.gz) = 11872 bytes
