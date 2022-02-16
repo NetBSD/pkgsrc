@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/16 09:13:57 pho Exp $
+
+BLAKE2s (ghc-exactprint-1.5.0.tar.gz) = 267cd0ba217bf92c2cacee2dfcd70518463b51edd50a423e91ef6d5abb383930
+SHA512 (ghc-exactprint-1.5.0.tar.gz) = f716509df6a2d2f360c4e31c0f58df8ff760bb9c8de081530a35afec3f3a7938d3a715e42d3824a31118cea9af1cc1ac1c3034088bea2ac0b479b4a725ce71c9
+Size (ghc-exactprint-1.5.0.tar.gz) = 422243 bytes
