@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/11 13:39:09 pin Exp $
+$NetBSD: distinfo,v 1.2 2022/02/16 14:12:57 pin Exp $
 
-BLAKE2s (wmutils-libwm-1.2.tar.gz) = 7c8a9ec510d8a26cb007ed69bb3932628f7cb2e0b2daf93f1fe45b466ff062d0
-SHA512 (wmutils-libwm-1.2.tar.gz) = 6b7088cd3c4b40fd2ded4d4c73defb6d56ca83999ba454012bb530a051900371dcb02fdec1fdd37e93a6fed5c7c7485dbd27ef977270b27947c21ad750b493d4
-Size (wmutils-libwm-1.2.tar.gz) = 5826 bytes
+BLAKE2s (wmutils-libwm-1.3.tar.gz) = d260276b26ec59590dc4402cc3b9305c6c514b39a8d17f72761ed9e22dacc283
+SHA512 (wmutils-libwm-1.3.tar.gz) = 08d503a65f26683c2b6ca5c79b26337616f29cbb210940aaec40809e8eef83b5879f39fa088d7224ce00d5b2de54023c811a42286c3204447fe885d363b3f9a8
+Size (wmutils-libwm-1.3.tar.gz) = 6758 bytes
