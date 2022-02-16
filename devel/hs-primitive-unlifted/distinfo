@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/16 09:53:15 pho Exp $
+
+BLAKE2s (primitive-unlifted-0.1.3.1.tar.gz) = 97c018a935b70a48ff0af6836743ea5da41182d82fd5bcd7da9e0b8bde597cab
+SHA512 (primitive-unlifted-0.1.3.1.tar.gz) = 9e5d9a5c29d684a20fd87c8812b4263abd7a5a9cdece707400e32cbc8709b3d26df016502ffee6487df98c6590f2d96d5a4c5886cdd516272939ac6b5362ef9e
+Size (primitive-unlifted-0.1.3.1.tar.gz) = 7486 bytes
