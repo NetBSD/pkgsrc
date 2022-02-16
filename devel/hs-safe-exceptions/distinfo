@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/16 07:43:54 pho Exp $
+
+BLAKE2s (safe-exceptions-0.1.7.2.tar.gz) = 11d529b6e2e205ad88cf4cb5b6c1d835bec2f446f07391b144df06492632cf7a
+SHA512 (safe-exceptions-0.1.7.2.tar.gz) = 592cd1b611262a24dc1673ec283059223b47e70a33df22c05ff7222096027afa6358336e6c8e30256a6e40b71d59d59a90021ccd998a8ee6e193aa62d152c5ab
+Size (safe-exceptions-0.1.7.2.tar.gz) = 14152 bytes
