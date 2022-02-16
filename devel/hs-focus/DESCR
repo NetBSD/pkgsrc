@@ -1,0 +1,12 @@
+An API for construction of free-form strategies of access and manipulation
+of elements of arbitrary data structures. It allows to implement efficient
+composite patterns, e.g., a simultaneous update and lookup of an element,
+and even more complex things.
+
+Strategies are meant to be interpreted by the host data structure
+libraries. Thus they allow to implement all access and modification
+patterns of a data structure with just a single function, which interprets
+strategies.
+
+This library provides pure and monadic interfaces, so it supports both
+immutable and mutable data structures.
