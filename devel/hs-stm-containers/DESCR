@@ -1,0 +1,5 @@
+This library is based on an STM-specialized implementation of Hash Array
+Mapped Trie. It provides efficient implementations of Map, Set and other
+data structures, which starting from version 1 perform even better than
+their counterparts from "unordered-containers", but also scale well on
+concurrent access patterns.
