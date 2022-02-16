@@ -1,0 +1,3 @@
+Random shuffle implementation, on immutable lists. Based on "perfect
+shuffle" implementation by Oleg Kiselyov, available on
+http://okmij.org/ftp/Haskell/perfect-shuffle.txt
