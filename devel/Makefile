@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3650 2022/02/16 10:22:39 pho Exp $
+# $NetBSD: Makefile,v 1.3651 2022/02/16 10:23:16 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -1156,6 +1156,7 @@ SUBDIR+=	opengrok
 SUBDIR+=	openocd
 SUBDIR+=	openrcs
 SUBDIR+=	orc
+SUBDIR+=	ormolu
 SUBDIR+=	ossp-uuid
 SUBDIR+=	p5-Acme-Damn
 SUBDIR+=	p5-Acme-PlayCode
