@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.946 2022/02/16 03:32:02 pho Exp $
+$NetBSD: CHANGES-2022,v 1.947 2022/02/16 05:00:45 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1267,3 +1267,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/intellij-ce-bin to 2021.3.2 [rillig 2022-02-15]
 	Updated editors/emacs-packages to 0.12 [wiz 2022-02-15]
 	Added security/hs-cryptohash-sha1 version 0.11.101.0 [pho 2022-02-16]
+	Added devel/hs-constraints-extras version 0.3.2.1 [pho 2022-02-16]
