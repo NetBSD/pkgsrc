@@ -1,0 +1,2 @@
+A correct implementation of the list monad-transformer. Useful for basic
+streaming.
