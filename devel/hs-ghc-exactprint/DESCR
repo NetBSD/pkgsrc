@@ -1,0 +1,3 @@
+Using the API Annotations available from GHC 9.2.1, this library provides a
+means to round trip any code that can be compiled by GHC, currently
+excluding lhs files.
