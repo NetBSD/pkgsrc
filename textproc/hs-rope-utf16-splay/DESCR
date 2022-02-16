@@ -1,0 +1,4 @@
+Ropes optimised for updating using UTF-16 code units and row/column
+pairs. This implementation uses splay trees instead of the usual finger
+trees. According to my benchmarks, splay trees are faster in most
+situations.
