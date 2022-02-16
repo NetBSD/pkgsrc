@@ -1,0 +1,8 @@
+The haskell-language-server (HLS) project is an implementation of a server
+(a "language server") for the Language Server Protocol (LSP). A language
+server talks to a client (typically an editor), which can ask the server to
+perform various operations, such as reporting errors or providing code
+completions. The advantage of this system is that clients and servers can
+interoperate more easily so long as they all speak the LSP protocol. In the
+case of HLS, that means that it can be used with many different editors,
+since editor support for the LSP protocol is now widespread.
