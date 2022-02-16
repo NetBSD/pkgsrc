@@ -1,0 +1,15 @@
+$NetBSD: patch-foldl.cabal,v 1.1 2022/02/16 09:45:28 pho Exp $
+
+Fix build with hashable-1.4
+
+--- foldl.cabal.orig	2001-09-09 01:46:40.000000000 +0000
++++ foldl.cabal
+@@ -33,7 +33,7 @@ Library
+         vector       >= 0.7      && < 0.13,
+         containers   >= 0.5.0.0  && < 0.7 ,
+         unordered-containers        < 0.3 ,
+-        hashable                    < 1.4 ,
++        hashable                          ,
+         contravariant               < 1.6 ,
+         profunctors                 < 5.7 ,
+         semigroupoids >= 1.0     && < 5.4 ,

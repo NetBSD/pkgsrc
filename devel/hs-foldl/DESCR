@@ -1,0 +1,4 @@
+This library provides strict left folds that stream in constant memory, and
+you can combine folds using Applicative style to derive new folds. Derived
+folds still traverse the container just once and are often as efficient as
+hand-written folds.
