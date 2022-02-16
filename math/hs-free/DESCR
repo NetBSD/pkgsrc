@@ -1,0 +1,14 @@
+Free monads are useful for many tree-like structures and domain specific
+languages.
+
+If f is a Functor then the free Monad on f is the type of trees whose nodes
+are labeled with the constructors of f. The word "free" is used in the
+sense of "unrestricted" rather than "zero-cost": Free f makes no
+constraining assumptions beyond those given by f and the definition of
+Monad. As used here it is a standard term from the mathematical theory of
+adjoint functors.
+
+Cofree comonads are dual to free monads. They provide convenient ways to
+talk about branching streams and rose-trees, and can be used to annotate
+syntax trees. The cofree comonad can be seen as a stream parameterized by a
+Functor that controls its branching factor.
