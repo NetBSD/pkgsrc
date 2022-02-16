@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.966 2022/02/16 09:35:23 pho Exp $
+$NetBSD: CHANGES-2022,v 1.967 2022/02/16 09:36:04 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1288,3 +1288,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/py-peewee to 3.14.9 [adam 2022-02-16]
 	Added devel/hs-hie-compat version 0.2.1.1 [pho 2022-02-16]
 	Added math/hs-algebraic-graphs version 0.6 [pho 2022-02-16]
+	Added devel/hs-blaze-textual version 0.2.2.1 [pho 2022-02-16]
