@@ -1,0 +1,15 @@
+$NetBSD: patch-floskell.cabal,v 1.1 2022/02/16 10:19:20 pho Exp $
+
+Fix build with optparse-applicative-0.17
+
+--- floskell.cabal.orig	2001-09-09 01:46:40.000000000 +0000
++++ floskell.cabal
+@@ -87,7 +87,7 @@ executable floskell
+         directory >=1.2.6.2 && <1.4,
+         ghc-prim >=0.5.0.0 && <0.9,
+         haskell-src-exts >=1.19 && <1.24,
+-        optparse-applicative >=0.12.1.0 && <0.17,
++        optparse-applicative >=0.12.1.0,
+         text >=1.2.2.2 && <1.3
+ 
+ test-suite floskell-test
