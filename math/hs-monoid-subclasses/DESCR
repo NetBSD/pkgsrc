@@ -1,0 +1,2 @@
+A hierarchy of subclasses of Monoid together with their instances for all
+data structures from base, containers, and text packages.
