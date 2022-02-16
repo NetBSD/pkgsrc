@@ -1,0 +1,14 @@
+Haskellers are usually familiar with monoids and semigroups. A monoid has
+an appending operation <> (or mappend), and an identity element, mempty. A
+semigroup has an appending <> operation, but does not require a mempty
+element.
+
+A Semiring has two appending operations, plus and times, and two respective
+identity elements, zero and one.
+
+More formally, a Semiring R is a set equipped with two binary relations +
+and *, such that:
+- (R,+) is a commutative monoid with identity element 0,
+- (R,*) is a monoid with identity element 1,
+- (*) left and right distributes over addition, and multiplication by '0'
+  annihilates R.
