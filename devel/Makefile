@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3598 2022/02/15 16:44:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3599 2022/02/16 05:00:57 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -515,6 +515,7 @@ SUBDIR+=	hs-colour
 SUBDIR+=	hs-conduit
 SUBDIR+=	hs-conduit-extra
 SUBDIR+=	hs-constraints
+SUBDIR+=	hs-constraints-extras
 SUBDIR+=	hs-control-monad-free
 SUBDIR+=	hs-cpphs
 SUBDIR+=	hs-data-default
