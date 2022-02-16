@@ -1,0 +1,8 @@
+This library defines an existential type Some.
+
+data Some f where
+    Some :: f a -> Some f
+
+in few variants, and utilities to work with it.
+
+If you are unsure which variant to use, use the one in Data.Some module.
