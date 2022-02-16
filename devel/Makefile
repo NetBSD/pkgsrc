@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3609 2022/02/16 09:21:25 pho Exp $
+# $NetBSD: Makefile,v 1.3610 2022/02/16 09:34:41 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -556,6 +556,7 @@ SUBDIR+=	hs-hashtables
 SUBDIR+=	hs-haskell-lexer
 SUBDIR+=	hs-haskell-src-exts
 SUBDIR+=	hs-hie-bios
+SUBDIR+=	hs-hie-compat
 SUBDIR+=	hs-hint
 SUBDIR+=	hs-hslua-module-system
 SUBDIR+=	hs-hslua-module-version
