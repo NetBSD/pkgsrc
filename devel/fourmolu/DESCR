@@ -1,0 +1,22 @@
+Fourmolu is a formatter for Haskell source code. It is a fork of Ormolu,
+with the intention to continue to merge upstream improvements.
+
+We share all bar one of Ormolu's goals:
+
+* Using GHC's own parser to avoid parsing problems caused by
+  haskell-src-exts.
+* Let some whitespace be programmable. The layout of the input influences
+  the layout choices in the output. This means that the choices between
+  single-line/multi-line layouts in certain situations are made by the
+  user, not by an algorithm. This makes the implementation simpler and
+  leaves some control to the user while still guaranteeing that the
+  formatted code is stylistically consistent.
+* Writing code in such a way so it's easy to modify and maintain.
+* That formatting style aims to result in minimal diffs.
+* Choose a style compatible with modern dialects of Haskell. As new Haskell
+  extensions enter broad use, we may change the style to accommodate them.
+* Idempotence: formatting already formatted code doesn't change it.
+* Be well-tested and robust so that the formatter can be used in large
+  projects.
+* We allow configuration of various parameters, via CLI options or config
+  files. We encourage any contributions which add further flexibility.
