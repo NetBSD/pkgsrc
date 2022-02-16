@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3605 2022/02/16 07:44:49 pho Exp $
+# $NetBSD: Makefile,v 1.3606 2022/02/16 09:13:10 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -572,6 +572,7 @@ SUBDIR+=	hs-monad-control
 SUBDIR+=	hs-mono-traversable
 SUBDIR+=	hs-old-locale
 SUBDIR+=	hs-optparse-applicative
+SUBDIR+=	hs-ordered-containers
 SUBDIR+=	hs-pandoc-lua-marshal
 SUBDIR+=	hs-parser-combinators
 SUBDIR+=	hs-pretty-show
