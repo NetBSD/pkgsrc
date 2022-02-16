@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.979 2022/02/16 09:55:43 pho Exp $
+$NetBSD: CHANGES-2022,v 1.980 2022/02/16 09:56:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1301,3 +1301,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-primitive-extras version 0.10.1.4 [pho 2022-02-16]
 	Added devel/hs-stm-hamt version 1.2.0.7 [pho 2022-02-16]
 	Added devel/hs-stm-containers version 1.2 [pho 2022-02-16]
+	Updated devel/py-jupyter_core to 4.9.2 [adam 2022-02-16]
+	Updated devel/py-ipykernel to 6.9.1 [adam 2022-02-16]
