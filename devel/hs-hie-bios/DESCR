@@ -1,0 +1,9 @@
+hie-bios is the way to specify how haskell-language-server and ghcide set
+up a GHC API session.
+
+Given a Haskell project that is managed by Stack, Cabal, or other package
+tools, haskell-language-server needs to know the full set of flags to pass
+to GHC in order to build the project. These flags might contain some
+compilation options like -O2, but a lot of the time they are package
+dependencies such as -package-id directory-1.3.6.0, which also need to be
+built beforehand. hie-bios satisfies both these needs.
