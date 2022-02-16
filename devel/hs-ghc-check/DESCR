@@ -1,0 +1,2 @@
+A library to detect mismatches between compile-time and run-time versions
+of the GHC API.
