@@ -1,0 +1,6 @@
+Primitive GHC types with unlifted types inside. There used to be a module
+named Data.Primitive.UnliftedArray in the primitive library. However, it
+turns out that it is impossible to write such an API safely in versions of
+GHC before 8.10.1, thanks to some nasty interactions between unsafe
+coercions and the foreign function interface. This package also uses a
+somewhat different, and more flexible, approach than that module did.
