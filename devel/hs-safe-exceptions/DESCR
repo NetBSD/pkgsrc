@@ -1,0 +1,12 @@
+This package provides additional safety and simplicity versus
+Control.Exception by having its functions recognize the difference between
+synchronous and asynchronous exceptions. As described below, synchronous
+exceptions are treated as recoverable, allowing you to catch and handle
+them as well as clean up after them, whereas asynchronous exceptions can
+only be cleaned up after. In particular, this library prevents you from
+making the following mistakes:
+
+* Catching and swallowing an asynchronous exception
+* Throwing an asynchronous exception synchronously
+* Throwing a synchronous exception asynchronously
+* Swallowing asynchronous exceptions via failing cleanup handlers
