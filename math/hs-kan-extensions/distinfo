@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/16 09:59:14 pho Exp $
+
+BLAKE2s (kan-extensions-5.2.3.tar.gz) = a110130b9f9a152d0cfb932c38b036de5c25449e502b9b55dc04c1a4bba0926a
+SHA512 (kan-extensions-5.2.3.tar.gz) = a3bb00dec4652042754c00dd4b2ef02b3ed4d74f4f9b8edea36e77c8516ef5b2f9853af20ab63e8f03fc91745ceb286a71ee35b0c82cbc7b0452bbb5e9012f80
+Size (kan-extensions-5.2.3.tar.gz) = 22095 bytes
