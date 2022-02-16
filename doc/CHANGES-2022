@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.984 2022/02/16 09:59:20 pho Exp $
+$NetBSD: CHANGES-2022,v 1.985 2022/02/16 10:00:25 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1307,3 +1307,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added math/hs-adjunctions version 4.4 [pho 2022-02-16]
 	Added math/hs-invariant version 0.5.5 [pho 2022-02-16]
 	Added math/hs-kan-extensions version 5.2.3 [pho 2022-02-16]
+	Added devel/hs-parallel version 3.2.2.0 [pho 2022-02-16]
