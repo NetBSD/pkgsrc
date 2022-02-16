@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2022/01/26 12:00:18 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2022/02/16 10:24:16 wiz Exp $
 #
 # How to update this package:
 #
@@ -25,7 +25,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=	tor-browser-linux64-${PKGVERSION_NOREV}_en-US${EXTRACT_SUFX}
 #DISTFILES+=	src-tor-launcher-0.2.30${EXTRACT_SUFX}
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.torproject.org/projects/torbrowser.html.en
 COMMENT=	Tor Browser based on Firefox
 LICENSE=	mpl-1.1
