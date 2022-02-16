@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3631 2022/02/16 10:10:29 pho Exp $
+# $NetBSD: Makefile,v 1.3632 2022/02/16 10:11:14 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -2830,6 +2830,7 @@ SUBDIR+=	refinecvs
 SUBDIR+=	reftools
 SUBDIR+=	remake
 SUBDIR+=	reposurgeon
+SUBDIR+=	retrie
 SUBDIR+=	rgbds
 SUBDIR+=	rinutils
 SUBDIR+=	robin-map
