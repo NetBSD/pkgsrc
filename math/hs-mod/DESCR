@@ -1,0 +1,2 @@
+Modular arithmetic, promoting moduli to the type level, with an emphasis on
+performance. Originally a part of arithmoi package.
