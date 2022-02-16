@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/16 05:09:18 pho Exp $
+
+BLAKE2s (primes-0.2.1.0.tar.gz) = 954c73b3d2fd3bcf273896e1529c58b9deb53ab00dad5641ea1ce36772534e95
+SHA512 (primes-0.2.1.0.tar.gz) = 05ba4fd5de300782b0e38efab734a1e6544d96ed66ce3839ff0238e207d3e82a35174f476b1aea91fc0a981e9642ccaba81dd558da6012fc67f0b18a465c3e42
+Size (primes-0.2.1.0.tar.gz) = 4602 bytes
