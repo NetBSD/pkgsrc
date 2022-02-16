@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3652 2022/02/16 10:23:50 pho Exp $
+# $NetBSD: Makefile,v 1.3653 2022/02/16 10:24:47 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -475,6 +475,7 @@ SUBDIR+=	guile-www
 SUBDIR+=	guile22-slib
 SUBDIR+=	gyp
 SUBDIR+=	happy
+SUBDIR+=	haskell-language-server
 SUBDIR+=	haskell-mode
 SUBDIR+=	hdevtools
 SUBDIR+=	hdf
