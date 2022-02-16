@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1287 2022/02/16 10:03:41 pho Exp $
+# $NetBSD: Makefile,v 1.1288 2022/02/16 10:21:24 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -290,6 +290,7 @@ SUBDIR+=	hre
 SUBDIR+=	hs-Diff
 SUBDIR+=	hs-Glob
 SUBDIR+=	hs-HsYAML
+SUBDIR+=	hs-HsYAML-aeson
 SUBDIR+=	hs-annotated-wl-pprint
 SUBDIR+=	hs-ansi-wl-pprint
 SUBDIR+=	hs-appar
