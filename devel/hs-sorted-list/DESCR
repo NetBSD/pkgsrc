@@ -1,0 +1,13 @@
+Type-enforced sorted lists and related functions.
+
+These are useful for:
+* Constraining the argument of a function to be a sorted list by stating in
+  your type that the input list is a sorted list.
+* Avoiding sorting a list twice.
+* Creating a list that is sorted from the moment of its construction, so it
+  doesn't have to be sorted later.
+* Performing list operations keeping the input list sorted.
+* Improving those list operations that can be benefited from the ordering
+  of its elements.
+* Creating infinite lists that are sorted!
+* And more!
