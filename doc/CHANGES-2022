@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.974 2022/02/16 09:46:53 pho Exp $
+$NetBSD: CHANGES-2022,v 1.975 2022/02/16 09:51:58 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1296,3 +1296,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-foldl version 1.4.12 [pho 2022-02-16]
 	Added devel/hs-logict version 0.7.1.0 [pho 2022-02-16]
 	Added devel/hs-list-t version 1.0.5.1 [pho 2022-02-16]
+	Added devel/hs-deferred-folds version 0.9.18.1 [pho 2022-02-16]
