@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.951 2022/02/16 05:08:40 pho Exp $
+$NetBSD: CHANGES-2022,v 1.952 2022/02/16 05:09:24 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1272,3 +1272,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-dependent-sum version 0.7.1.0 [pho 2022-02-16]
 	Added devel/hs-dependent-map version 0.4.0.0 [pho 2022-02-16]
 	Added devel/hs-focus version 1.0.3 [pho 2022-02-16]
+	Added math/hs-primes version 0.2.1.0 [pho 2022-02-16]
