@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.650 2022/01/20 02:51:47 gutteridge Exp $
+# $NetBSD: Makefile,v 1.651 2022/02/16 09:42:45 pho Exp $
 
 COMMENT=	Databases
 
@@ -52,6 +52,7 @@ SUBDIR+=	gtksql
 SUBDIR+=	guile-pg
 SUBDIR+=	guile-sqlite3
 SUBDIR+=	hiredis
+SUBDIR+=	hs-direct-sqlite
 SUBDIR+=	hsqldb18
 SUBDIR+=	idzebra
 SUBDIR+=	influxdb
