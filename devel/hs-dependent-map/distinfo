@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/16 05:07:23 pho Exp $
+
+BLAKE2s (dependent-map-0.4.0.0.tar.gz) = 4d652aa9e88db84e81fc96679882d9bac6d93863c02eee5ecbd5c2a93f213085
+SHA512 (dependent-map-0.4.0.0.tar.gz) = 406d7eaf8c90088f2d39703f77c78779cffdb98ab0f424a0f8e80f67026a23f64af4747e0046d287218c422df075db2bf81939836c8aa576f7002429c5f42091
+Size (dependent-map-0.4.0.0.tar.gz) = 19375 bytes
