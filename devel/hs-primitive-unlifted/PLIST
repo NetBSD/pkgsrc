@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/16 09:53:15 pho Exp $
+lib/primitive-unlifted-${PKGVERSION}/${HS_VERSION}/package-description
+lib/primitive-unlifted-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Primitive/Unlifted/Array.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Primitive/Unlifted/Array.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Primitive/Unlifted/Array.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Primitive/Unlifted/Class.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Primitive/Unlifted/Class.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Primitive/Unlifted/Class.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/primitive-unlifted-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/primitive-unlifted-${PKGVERSION}/html/Data-Primitive-Unlifted-Array.html
+share/doc/${HS_PLATFORM}/primitive-unlifted-${PKGVERSION}/html/Data-Primitive-Unlifted-Class.html
+share/doc/${HS_PLATFORM}/primitive-unlifted-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/primitive-unlifted-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/primitive-unlifted-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/primitive-unlifted-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/primitive-unlifted-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/primitive-unlifted-${PKGVERSION}/html/primitive-unlifted.haddock
+share/doc/${HS_PLATFORM}/primitive-unlifted-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/primitive-unlifted-${PKGVERSION}/html/synopsis.png
