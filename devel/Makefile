@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3646 2022/02/16 10:19:36 pho Exp $
+# $NetBSD: Makefile,v 1.3647 2022/02/16 10:20:08 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -569,6 +569,7 @@ SUBDIR+=	hs-hint
 SUBDIR+=	hs-hls-alternate-number-format-plugin
 SUBDIR+=	hs-hls-call-hierarchy-plugin
 SUBDIR+=	hs-hls-explicit-imports-plugin
+SUBDIR+=	hs-hls-floskell-plugin
 SUBDIR+=	hs-hls-graph
 SUBDIR+=	hs-hls-module-name-plugin
 SUBDIR+=	hs-hls-plugin-api
