@@ -1,0 +1,4 @@
+ghcide was originally built on top of Shake, a Haskell build
+system. Nowadays Shake has been replaced by a special purpose
+implementation of a build graph called hls-graph, which drops all the
+persistency features in exchange for simplicity and performance.
