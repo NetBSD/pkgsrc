@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3603 2022/02/16 05:08:50 pho Exp $
+# $NetBSD: Makefile,v 1.3604 2022/02/16 07:44:11 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -582,6 +582,7 @@ SUBDIR+=	hs-refact
 SUBDIR+=	hs-reflection
 SUBDIR+=	hs-resourcet
 SUBDIR+=	hs-safe
+SUBDIR+=	hs-safe-exceptions
 SUBDIR+=	hs-semialign
 SUBDIR+=	hs-setlocale
 SUBDIR+=	hs-some
