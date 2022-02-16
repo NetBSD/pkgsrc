@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2021/08/15 13:20:11 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/02/16 10:25:15 wiz Exp $
 #
 # Changelog:
 # https://noscript.net/changelog
@@ -10,7 +10,7 @@ CATEGORIES=	security www
 MASTER_SITES=	https://secure.informaction.com/download/releases/
 EXTRACT_SUFX=	.xpi
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://noscript.net/
 COMMENT=	Noscript plugin for tor-browser
 LICENSE=	gnu-gpl-v3
