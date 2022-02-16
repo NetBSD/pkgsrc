@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3645 2022/02/16 10:18:59 pho Exp $
+# $NetBSD: Makefile,v 1.3646 2022/02/16 10:19:36 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -363,6 +363,7 @@ SUBDIR+=	flex
 SUBDIR+=	flexdock
 SUBDIR+=	flim
 SUBDIR+=	florist
+SUBDIR+=	floskell
 SUBDIR+=	fortran-utils
 SUBDIR+=	fossil
 SUBDIR+=	frama-c
