@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2022/02/08 16:43:03 adam Exp $
+$NetBSD: distinfo,v 1.21 2022/02/16 13:10:34 adam Exp $
 
-BLAKE2s (redis-4.1.3.tar.gz) = 998df8fe06191f7635008a2908e5352934355fdcb591aa290930aa9029dde8a8
-SHA512 (redis-4.1.3.tar.gz) = 797c1ee4ff4f0e32b52add5bc1cc81fd36cb1eb4d6f9328b38dca46c79a01bc105bc172f56d3bea20d802ee7a6eb934c2ee3ab5f611a49d77f9c4c50d7a4b0d8
-Size (redis-4.1.3.tar.gz) = 2349885 bytes
+BLAKE2s (redis-4.1.4.tar.gz) = ef5e0dcca304256301e4e7b1a00f8abac7825551e32ff7bc77ff8dbd80d0ce5f
+SHA512 (redis-4.1.4.tar.gz) = 6dd1bc7622529382901b2fe6e63a5f9d6a4b89175b486c879a63cc8f0e708737431dfe5b834124f0d33f34540ac54813a0e6953bbed3a9dbd226597b4b1cb3ae
+Size (redis-4.1.4.tar.gz) = 2352106 bytes

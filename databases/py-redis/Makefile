@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2022/02/08 16:43:03 adam Exp $
+# $NetBSD: Makefile,v 1.24 2022/02/16 13:10:34 adam Exp $
 
-DISTNAME=	redis-4.1.3
+DISTNAME=	redis-4.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/redis/}
