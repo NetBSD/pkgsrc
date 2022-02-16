@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1029 2022/02/16 20:42:16 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.1030 2022/02/16 21:19:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1353,3 +1353,4 @@ Changes to the packages collection and infrastructure in 2022:
         Updated www/gitea to 1.16.1 [tm 2022-02-16]
 	Updated textproc/py-prettytable to 3.1.1 [fcambus 2022-02-16]
 	Updated comms/tio to 1.34 [fcambus 2022-02-16]
+	Updated textproc/csview to 1.0.1 [pin 2022-02-16]
