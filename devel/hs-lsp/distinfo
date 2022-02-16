@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/16 10:07:05 pho Exp $
+
+BLAKE2s (lsp-1.4.0.0.tar.gz) = 15b317901b4d3ef1a57bc12e613a26cc62798a7d167b1db1e8b052f713c18266
+SHA512 (lsp-1.4.0.0.tar.gz) = f190ef30a676f56dc759ebce8b162e8f6bcbee95d19f4ffa501bc476c42f136a6ae2ed763a74c068280c5eaaf53f93d3c2f5d01c3275c1e4e7a085a9404858bd
+Size (lsp-1.4.0.0.tar.gz) = 37036 bytes
