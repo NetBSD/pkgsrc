@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1006 2022/02/16 10:13:25 pho Exp $
+$NetBSD: CHANGES-2022,v 1.1007 2022/02/16 10:14:03 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1329,3 +1329,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-heapsize version 0.3.0.1 [pho 2022-02-16]
 	Added devel/hs-ghcide version 1.6.0.0 [pho 2022-02-16]
 	Added devel/hs-optparse-simple version 0.1.1.4 [pho 2022-02-16]
+	Added devel/hs-hls-call-hierarchy-plugin version 1.0.2.0 [pho 2022-02-16]
