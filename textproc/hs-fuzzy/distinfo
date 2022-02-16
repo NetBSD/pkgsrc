@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/16 07:33:26 pho Exp $
+
+BLAKE2s (fuzzy-0.1.0.1.tar.gz) = c80d445a01d8201ee880c4486a7ae2442dc29f1771a7467399c558617c3ff499
+SHA512 (fuzzy-0.1.0.1.tar.gz) = 677f03be681c2943e6e5dd0badbc2b35fc78e2805fed999b53538b2fe0d5623fbc9b91218576f0bbe414e9cd5d03d7230698e966df4b258469630fba437c20e2
+Size (fuzzy-0.1.0.1.tar.gz) = 3385 bytes
