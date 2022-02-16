@@ -1,0 +1,2 @@
+This library provides Set- and Map-like types that remember the order
+elements were inserted.
