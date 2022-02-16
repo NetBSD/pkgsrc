@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/16 07:44:36 pho Exp $
+
+BLAKE2s (ghc-check-0.5.0.6.tar.gz) = 3ee84712b94cb953d2281def6d9b27dfe0781307fb2c2c7cdc456e768fdf1982
+SHA512 (ghc-check-0.5.0.6.tar.gz) = bfae0b338f94a4de6c2b57c56e07b630b066d26fa540bdc3ecfbf11c77da052d8ff9f337fa35329a57b53fdd5a0ffe2a7b3ae20632a248a36da823654a022e4d
+Size (ghc-check-0.5.0.6.tar.gz) = 7212 bytes
