@@ -1,0 +1,2 @@
+The goal of lens-aeson is to provide traversals and prisms for the Aeson
+library's Value type, while obeying the Traversal/Prism laws.
