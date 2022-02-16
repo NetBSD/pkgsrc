@@ -1,0 +1,2 @@
+A mostly platform independent method to obtain cryptographically strong
+entropy (RDRAND, urandom, CryptAPI, and patches welcome).
