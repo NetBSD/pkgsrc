@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/16 10:21:09 pho Exp $
+
+BLAKE2s (HsYAML-aeson-0.2.0.1.tar.gz) = 7c6cbd4968b39cc9da481eeace11c50a48e5870c309028f10c01af89c536fc49
+SHA512 (HsYAML-aeson-0.2.0.1.tar.gz) = 64602074e3e4424b7ff5055aa5aefac89e12127d56975c437189e434c168f129c6d5bb1ee6b0e22e201d0b25de574bb2a49f0fcd0ac1498250ae14920f89acf4
+Size (HsYAML-aeson-0.2.0.1.tar.gz) = 11954 bytes

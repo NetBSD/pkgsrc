@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/16 10:21:09 pho Exp $
+lib/HsYAML-aeson-${PKGVERSION}/${HS_VERSION}/package-description
+lib/HsYAML-aeson-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/YAML/Aeson.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/YAML/Aeson.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/YAML/Aeson.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/LICENSE.GPLv2
+share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/Data-YAML-Aeson.html
+share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/HsYAML-aeson.haddock
+share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/HsYAML-aeson-${PKGVERSION}/html/synopsis.png
