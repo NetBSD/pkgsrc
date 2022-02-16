@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/16 09:51:51 pho Exp $
+
+BLAKE2s (deferred-folds-0.9.18.1.tar.gz) = 8ab11b61d3a0e161f0c20d3b11ee6d506cce735ff1ccf64d8b84e750522d583c
+SHA512 (deferred-folds-0.9.18.1.tar.gz) = 0cf74d2bacacd2ff8df21606fa5aa69fe5e8c5dd9b6c92621719ccf27cffd18acfbf89876a05f182166ebec227bff314454bd5a2cff2bc1b543ddbf437731fcb
+Size (deferred-folds-0.9.18.1.tar.gz) = 10412 bytes
