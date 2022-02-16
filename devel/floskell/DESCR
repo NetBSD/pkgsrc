@@ -1,0 +1,3 @@
+Floskell started as a fork of version 4 of Chris Done's hindent. The
+formatting styles present in hindent 4 have been preserved in spirit, but
+generally will not produce exactly the same output.
