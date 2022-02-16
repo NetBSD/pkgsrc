@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.992 2022/02/16 10:04:48 pho Exp $
+$NetBSD: CHANGES-2022,v 1.993 2022/02/16 10:05:24 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1315,3 +1315,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added textproc/hs-rope-utf16-splay version 0.3.2.0 [pho 2022-02-16]
 	Added devel/hs-lsp-types version 1.4.0.1 [pho 2022-02-16]
 	Added devel/hs-sorted-list version 0.2.1.0 [pho 2022-02-16]
+	Added security/hs-cryptohash-md5 version 0.11.101.0 [pho 2022-02-16]
