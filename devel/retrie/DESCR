@@ -1,0 +1,9 @@
+Retrie is a tool for codemodding Haskell. Key goals include:
+
+* Speed: Efficiently rewrite in large (>1 million line) codebases.
+* Safety: Avoids large classes of codemod-related errors.
+* Ease-of-use: Haskell syntax instead of regular expressions. No
+  hand-rolled AST traversals.
+
+This package provides a command-line tool (retrie) and a library (Retrie)
+for making equational edits to Haskell code.
