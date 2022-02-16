@@ -1,0 +1,4 @@
+The alternate number format plugin provides alternative formatting for
+Numeric Literals in source code. These can be any numeric literal such as
+123, 0x45 or any of the other numeric formats. The plugin is context aware
+and will provide suggestions based on currently active GHC extensions.
