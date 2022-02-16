@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.961 2022/02/16 09:15:24 pho Exp $
+$NetBSD: CHANGES-2022,v 1.962 2022/02/16 09:19:49 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1282,3 +1282,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-ghc-exactprint version 1.5.0 [pho 2022-02-16]
 	Added devel/hs-ghc-trace-events version 0.1.2.4 [pho 2022-02-16]
 	Added net/hs-network-bsd version 2.8.1.0 [pho 2022-02-16]
+	Added sysutils/hs-hslogger version 1.3.1.0 [pho 2022-02-16]
