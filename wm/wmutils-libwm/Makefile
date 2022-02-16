@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/02/11 13:39:09 pin Exp $
+# $NetBSD: Makefile,v 1.2 2022/02/16 14:12:57 pin Exp $
 
-DISTNAME=	wmutils-libwm-1.2
+DISTNAME=	wmutils-libwm-1.3
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wmutils/}
 GITHUB_PROJECT=	libwm
