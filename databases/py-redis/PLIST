@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/01/10 17:41:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/02/16 13:10:34 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -46,6 +46,9 @@ ${PYSITELIB}/redis/commands/graph/edge.pyo
 ${PYSITELIB}/redis/commands/graph/exceptions.py
 ${PYSITELIB}/redis/commands/graph/exceptions.pyc
 ${PYSITELIB}/redis/commands/graph/exceptions.pyo
+${PYSITELIB}/redis/commands/graph/execution_plan.py
+${PYSITELIB}/redis/commands/graph/execution_plan.pyc
+${PYSITELIB}/redis/commands/graph/execution_plan.pyo
 ${PYSITELIB}/redis/commands/graph/node.py
 ${PYSITELIB}/redis/commands/graph/node.pyc
 ${PYSITELIB}/redis/commands/graph/node.pyo
