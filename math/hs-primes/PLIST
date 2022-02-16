@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/16 05:09:18 pho Exp $
+lib/primes-${PKGVERSION}/${HS_VERSION}/package-description
+lib/primes-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Numbers/Primes.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Numbers/Primes.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Numbers/Primes.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/primes-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/primes-${PKGVERSION}/html/Data-Numbers-Primes.html
+share/doc/${HS_PLATFORM}/primes-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/primes-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/primes-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/primes-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/primes-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/primes-${PKGVERSION}/html/primes.haddock
+share/doc/${HS_PLATFORM}/primes-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/primes-${PKGVERSION}/html/synopsis.png
