@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1001 2022/02/16 10:10:21 pho Exp $
+$NetBSD: CHANGES-2022,v 1.1002 2022/02/16 10:11:07 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1324,3 +1324,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-implicit-hie version 0.1.2.6 [pho 2022-02-16]
 	Added devel/hs-implicit-hie-cradle version 0.5.0.0 [pho 2022-02-16]
 	Added devel/hs-random-shuffle version 0.0.4 [pho 2022-02-16]
+	Added devel/retrie version 1.2.0.1 [pho 2022-02-16]
