@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/16 10:13:19 pho Exp $
+
+BLAKE2s (optparse-simple-0.1.1.4.tar.gz) = cb0087afa6a0d6d6822377d0c852dd9eec37298ad3175ea425550ea52fab0820
+SHA512 (optparse-simple-0.1.1.4.tar.gz) = 1e49f60eead8553d7dd4cc162b5a2a07a99eda2519a53947808d7b4c909e37cfa7734d4c8dce3cf83cbf1efbdeed6037bf480b768b7f9ee7add5e5afbe006557
+Size (optparse-simple-0.1.1.4.tar.gz) = 5067 bytes
