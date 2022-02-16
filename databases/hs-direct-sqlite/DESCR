@@ -1,0 +1,5 @@
+This package is not very different from the other SQLite3 bindings out
+there, but it fixes a few deficiencies I was finding. As compared to
+bindings-sqlite3, it is slightly higher-level, in that it supports
+marshalling of data values to and from the database. In particular, it
+supports strings encoded as UTF8, and BLOBs represented as ByteStrings.
