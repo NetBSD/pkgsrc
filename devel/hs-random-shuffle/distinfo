@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/16 10:10:15 pho Exp $
+
+BLAKE2s (random-shuffle-0.0.4.tar.gz) = 55732a609c2665d011f46e23f1d8b594d7f1b6fd4dda7bf07a1fe1470eedee73
+SHA512 (random-shuffle-0.0.4.tar.gz) = 492245380e60cc2cf4ac3596e9e0c158c58ce974439559cf3719578e95ac13a282dc43301f123530a17f6d88866186712e05a89cdde762b43596b2a3293f3aef
+Size (random-shuffle-0.0.4.tar.gz) = 2847 bytes
