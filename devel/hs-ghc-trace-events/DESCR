@@ -1,0 +1,5 @@
+ghc-trace-events provides faster traceEvent and traceMarker as well as
+arbitrary binary object logging for the eventlog framework. Unlike the
+eventlog tracing functions in base, all the tracing functions in this
+library don't evaluate the input if user event logging (the -lu flag) is
+disabled, which can give a significant boost in performance.
