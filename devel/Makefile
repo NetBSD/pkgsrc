@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3610 2022/02/16 09:34:41 pho Exp $
+# $NetBSD: Makefile,v 1.3611 2022/02/16 09:36:12 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -506,6 +506,7 @@ SUBDIR+=	hs-base-unicode-symbols
 SUBDIR+=	hs-basement
 SUBDIR+=	hs-bitarray
 SUBDIR+=	hs-blaze-builder
+SUBDIR+=	hs-blaze-textual
 SUBDIR+=	hs-bytestring-builder
 SUBDIR+=	hs-call-stack
 SUBDIR+=	hs-cereal
