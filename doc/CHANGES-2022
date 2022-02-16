@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.972 2022/02/16 09:45:34 pho Exp $
+$NetBSD: CHANGES-2022,v 1.973 2022/02/16 09:46:12 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1294,3 +1294,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-hiedb version 0.4.1.0 [pho 2022-02-16]
 	Added www/hs-js-dgtable version 0.5.2 [pho 2022-02-16]
 	Added devel/hs-foldl version 1.4.12 [pho 2022-02-16]
+	Added devel/hs-logict version 0.7.1.0 [pho 2022-02-16]
