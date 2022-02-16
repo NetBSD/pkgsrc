@@ -1,0 +1,2 @@
+This package provides Haskell bindings to the the POSIX network database
+(netdb.h) API.
