@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.526 2022/02/16 05:09:40 pho Exp $
+# $NetBSD: Makefile,v 1.527 2022/02/16 05:21:14 pho Exp $
 
 COMMENT=	Mathematics
 
@@ -218,6 +218,7 @@ SUBDIR+=	hs-distributive
 SUBDIR+=	hs-ieee754
 SUBDIR+=	hs-integer-logarithms
 SUBDIR+=	hs-math-functions
+SUBDIR+=	hs-monoid-subclasses
 SUBDIR+=	hs-mwc-random
 SUBDIR+=	hs-nats
 SUBDIR+=	hs-primes
