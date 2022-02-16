@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3626 2022/02/16 10:06:43 pho Exp $
+# $NetBSD: Makefile,v 1.3627 2022/02/16 10:07:19 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -574,6 +574,7 @@ SUBDIR+=	hs-lifted-base
 SUBDIR+=	hs-list-t
 SUBDIR+=	hs-logict
 SUBDIR+=	hs-lpeg
+SUBDIR+=	hs-lsp
 SUBDIR+=	hs-lsp-types
 SUBDIR+=	hs-lukko
 SUBDIR+=	hs-memory
