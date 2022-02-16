@@ -1,0 +1,2 @@
+heapsize is a tool to determine the size data structures. Determining the
+size of recursive data structures is supported. All sizes are in Bytes.
