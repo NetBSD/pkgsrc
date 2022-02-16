@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.969 2022/02/16 09:43:18 pho Exp $
+$NetBSD: CHANGES-2022,v 1.970 2022/02/16 09:44:17 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1291,3 +1291,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-blaze-textual version 0.2.2.1 [pho 2022-02-16]
 	Added databases/hs-direct-sqlite version 2.3.26 [pho 2022-02-16]
 	Added databases/hs-sqlite-simple version 0.4.18.0 [pho 2022-02-16]
+	Added devel/hs-hiedb version 0.4.1.0 [pho 2022-02-16]
