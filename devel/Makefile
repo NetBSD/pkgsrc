@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3620 2022/02/16 09:56:02 pho Exp $
+# $NetBSD: Makefile,v 1.3621 2022/02/16 09:57:03 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -562,6 +562,7 @@ SUBDIR+=	hs-hie-bios
 SUBDIR+=	hs-hie-compat
 SUBDIR+=	hs-hiedb
 SUBDIR+=	hs-hint
+SUBDIR+=	hs-hls-graph
 SUBDIR+=	hs-hslua-module-system
 SUBDIR+=	hs-hslua-module-version
 SUBDIR+=	hs-indexed-traversable
