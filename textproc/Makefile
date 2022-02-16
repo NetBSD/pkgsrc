@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1286 2022/02/16 07:36:53 pho Exp $
+# $NetBSD: Makefile,v 1.1287 2022/02/16 10:03:41 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -335,6 +335,7 @@ SUBDIR+=	hs-regex-pcre
 SUBDIR+=	hs-regex-posix
 SUBDIR+=	hs-regex-tdfa
 SUBDIR+=	hs-rfc5051
+SUBDIR+=	hs-rope-utf16-splay
 SUBDIR+=	hs-shakespeare
 SUBDIR+=	hs-skylighting
 SUBDIR+=	hs-skylighting-core
