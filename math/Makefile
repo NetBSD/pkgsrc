@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.528 2022/02/16 08:53:53 pho Exp $
+# $NetBSD: Makefile,v 1.529 2022/02/16 09:35:32 pho Exp $
 
 COMMENT=	Mathematics
 
@@ -211,6 +211,7 @@ SUBDIR+=	heirloom-units
 SUBDIR+=	hercules4sdl-decnumber
 SUBDIR+=	hercules4sdl-softfloat
 SUBDIR+=	herisvm
+SUBDIR+=	hs-algebraic-graphs
 SUBDIR+=	hs-bifunctors
 SUBDIR+=	hs-comonad
 SUBDIR+=	hs-contravariant
