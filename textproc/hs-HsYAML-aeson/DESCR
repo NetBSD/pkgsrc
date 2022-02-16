@@ -1,0 +1,8 @@
+The YAML 1.2 format provides a much richer data-model and feature-set than
+the JavaScript Object Notation (JSON) format. However, sometimes it's
+desirable to ignore the extra capabilities and treat YAML as if it was
+merely a more convenient markup format for humans to write JSON data. To
+this end this module provides a compatibility layer atop HsYAML which
+allows decoding YAML documents in the more limited JSON data-model while
+also providing convenience by reusing aeson's FromJSON instances for
+decoding the YAML data into native Haskell data types.
