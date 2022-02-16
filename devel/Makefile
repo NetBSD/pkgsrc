@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3615 2022/02/16 09:47:01 pho Exp $
+# $NetBSD: Makefile,v 1.3616 2022/02/16 09:52:05 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -528,6 +528,7 @@ SUBDIR+=	hs-data-default-instances-old-locale
 SUBDIR+=	hs-data-fix
 SUBDIR+=	hs-data-ordlist
 SUBDIR+=	hs-deepseq-generics
+SUBDIR+=	hs-deferred-folds
 SUBDIR+=	hs-dependent-map
 SUBDIR+=	hs-dependent-sum
 SUBDIR+=	hs-dlist
