@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/16 09:54:02 pho Exp $
+
+BLAKE2s (primitive-extras-0.10.1.4.tar.gz) = 5595fc73c62c6bfb118cecd3145d8233ec9788641c30f85b07996353a6a58c05
+SHA512 (primitive-extras-0.10.1.4.tar.gz) = 01e58aa204d0c75fc1d7257b50d1c66181f973c642699a5481e4757d697b293f785712ff167f047b20fa8f7154a7a8469dc3c8d2e93ace9ac11676af0db3fc18
+Size (primitive-extras-0.10.1.4.tar.gz) = 12382 bytes
