@@ -1,0 +1,2 @@
+An implementation of the types to allow language implementors to support
+the Language Server Protocol for their specific language.
