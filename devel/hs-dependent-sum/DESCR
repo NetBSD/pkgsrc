@@ -1,0 +1,7 @@
+A dependent sum is a generalization of a particular way of thinking about
+the Either type. Either a b can be thought of as a 2-tuple (tag, value),
+where the value of the tag determines the type of the value. In particular,
+either tag = Left and value :: a or tag = Right and value :: b.
+
+This package allows you to define your own dependent sum types by using
+your own "tag" types.
