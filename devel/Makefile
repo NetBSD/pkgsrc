@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3625 2022/02/16 10:04:56 pho Exp $
+# $NetBSD: Makefile,v 1.3626 2022/02/16 10:06:43 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -638,6 +638,7 @@ SUBDIR+=	hs-unliftio-core
 SUBDIR+=	hs-unordered-containers
 SUBDIR+=	hs-utf8-string
 SUBDIR+=	hs-utility-ht
+SUBDIR+=	hs-uuid
 SUBDIR+=	hs-uuid-types
 SUBDIR+=	hs-vault
 SUBDIR+=	hs-vector
