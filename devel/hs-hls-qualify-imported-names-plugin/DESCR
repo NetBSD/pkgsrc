@@ -1,0 +1,22 @@
+You've imported a number of modules, and have written a lot of code with
+unqualified names. You want to import a new module but you know there will
+be a number name clashes so you want to switch your current usage of names
+to be qualified. It would be nice if you could change
+
+  import Blah
+
+to
+
+  import Blah as Bloo
+
+then magically qualify all the previous names imported from Blah with
+Bloo. After doing that you could then change
+
+  import Blah as Bloo
+
+to
+
+  import qualified Blah as Bloo
+
+and import your the new module using names from it without worry. Well, now
+you can...
