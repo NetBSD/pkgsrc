@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/16 09:44:49 pho Exp $
+lib/js-dgtable-${PKGVERSION}/${HS_VERSION}/package-description
+lib/js-dgtable-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/${HS_PKGID}/Language/Javascript/DGTable.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Language/Javascript/DGTable.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Language/Javascript/DGTable.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Paths_js_dgtable.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Paths_js_dgtable.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Paths_js_dgtable.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+share/doc/${HS_PLATFORM}/js-dgtable-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/js-dgtable-${PKGVERSION}/html/CHANGES.txt
+share/doc/${HS_PLATFORM}/js-dgtable-${PKGVERSION}/html/Language-Javascript-DGTable.html
+share/doc/${HS_PLATFORM}/js-dgtable-${PKGVERSION}/html/README.md
+share/doc/${HS_PLATFORM}/js-dgtable-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/js-dgtable-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/js-dgtable-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/js-dgtable-${PKGVERSION}/html/js-dgtable.haddock
+share/doc/${HS_PLATFORM}/js-dgtable-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/js-dgtable-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/js-dgtable-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/js-dgtable-${PKGVERSION}/html/synopsis.png
+share/${HS_PLATFORM}/js-dgtable-${PKGVERSION}/jquery.dgtable.min.js
