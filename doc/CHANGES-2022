@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1008 2022/02/16 10:14:42 pho Exp $
+$NetBSD: CHANGES-2022,v 1.1009 2022/02/16 10:15:18 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1331,3 +1331,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-optparse-simple version 0.1.1.4 [pho 2022-02-16]
 	Added devel/hs-hls-call-hierarchy-plugin version 1.0.2.0 [pho 2022-02-16]
 	Added devel/hs-hls-explicit-imports-plugin version 1.0.2.0 [pho 2022-02-16]
+	Added devel/hs-hls-refine-imports-plugin version 1.0.1.0 [pho 2022-02-16]
