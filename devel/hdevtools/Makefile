@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/02/12 08:50:26 pho Exp $
+# $NetBSD: Makefile,v 1.23 2022/02/16 10:34:02 pho Exp $
 
 DISTNAME=	hdevtools-0.1.8.0
 PKGNAME=	${DISTNAME}
@@ -9,8 +9,10 @@ MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Persistent GHC powered background server for FAST haskell dev tools
 LICENSE=	mit
 
-# It appears it only supports GHC up to 8.6.x unfortunately.
-BROKEN=		"${PKGNAME} is incompatible with GHC 8.8.x"
+# The upstream is dead atm, and is probably forever.
+BROKEN+=	"${PKGBASE} is incompatible with GHC >= 8.8."
+BROKEN+=	"Consider using devel/haskell-language-server instead."
+BROKEN+=	"See https://github.com/hdevtools/hdevtools/issues/97 for more info."
 
 .include "../../mk/haskell.mk"
 .include "../../devel/hs-cmdargs/buildlink3.mk"
