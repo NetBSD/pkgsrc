@@ -1,0 +1,6 @@
+This library is a mid-level Haskell binding to the SQLite database.
+
+Sqlite-simple provides a convenient API to sqlite that does some level of
+automatic data conversion between the database and Haskell types. The API
+has been modeled directly after postgresql-simple which in turn borrows
+from mysql-simple.
