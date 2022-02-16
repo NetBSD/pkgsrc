@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/07/29 10:08:41 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/02/16 10:25:15 wiz Exp $
 #
 # Changelog:
 # https://www.eff.org/files/Changelog.txt
@@ -10,7 +10,7 @@ CATEGORIES=	security www
 MASTER_SITES=	https://www.eff.org/files/
 EXTRACT_SUFX=	.xpi
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.eff.org/https-everywhere
 COMMENT=	HTTPS Everywhere plugin for tor-browser
 LICENSE=	gnu-gpl-v3
