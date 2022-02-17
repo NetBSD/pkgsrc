@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/04/27 18:50:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/02/17 10:48:30 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -28,6 +28,9 @@ ${PYSITELIB}/gdspy/data/up.xbm
 ${PYSITELIB}/gdspy/gdsiiformat.py
 ${PYSITELIB}/gdspy/gdsiiformat.pyc
 ${PYSITELIB}/gdspy/gdsiiformat.pyo
+${PYSITELIB}/gdspy/hobby.py
+${PYSITELIB}/gdspy/hobby.pyc
+${PYSITELIB}/gdspy/hobby.pyo
 ${PYSITELIB}/gdspy/label.py
 ${PYSITELIB}/gdspy/label.pyc
 ${PYSITELIB}/gdspy/label.pyo
