@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1045 2022/02/17 16:55:20 leot Exp $
+$NetBSD: CHANGES-2022,v 1.1046 2022/02/17 17:19:25 abs Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1370,3 +1370,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xscreensaver to 6.02 [wiz 2022-02-17]
 	Updated net/terraform-provider-vultr to 2.9.1 [tpaul 2022-02-17]
 	Updated www/webkit-gtk to 2.34.6 [leot 2022-02-17]
+	Updated graphics/girara to 0.3.7 [abs 2022-02-17]
+	Updated print/zathura to 0.4.9 [abs 2022-02-17]
