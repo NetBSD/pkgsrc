@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.12 2019/05/01 02:51:49 gutteridge Exp $
+# $NetBSD: options.mk,v 1.13 2022/02/17 15:46:52 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xscreensaver
-PKG_SUPPORTED_OPTIONS=	pam webcollage opengl
-PKG_SUGGESTED_OPTIONS=	opengl
+PKG_SUPPORTED_OPTIONS=	pam
+PKG_SUGGESTED_OPTIONS=	pam
 
 .include "../../mk/bsd.options.mk"
 
@@ -19,26 +19,4 @@ CONFIGURE_ARGS+=	--without-pam
 # configure should figure out
 #CONFIGURE_ARGS+=	--without-shadow
 SPECIAL_PERMS+=		bin/xscreensaver ${SETUID_ROOT_PERMS}
-.endif
-
-PLIST_SRC+=	PLIST
-.if !empty(PKG_OPTIONS:Mwebcollage)
-PLIST_SRC+=	PLIST.webcollage
-.else
-.PHONY: delwebcollage
-post-install: delwebcollage
-delwebcollage:
-	rm ${DESTDIR}${PREFIX}/libexec/xscreensaver/config/webcollage.xml
-	rm ${DESTDIR}${PREFIX}/libexec/xscreensaver/webcollage
-	rm ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/webcollage.6
-.endif
-
-.if !empty(PKG_OPTIONS:Mopengl)
-PLIST_SRC+=		PLIST.opengl
-CONFIGURE_ARGS+=	--with-gl
-CONFIGURE_ARGS+=	--with-gle
-.include "../../graphics/gle/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-gl
-CONFIGURE_ARGS+=	--without-gle
 .endif
