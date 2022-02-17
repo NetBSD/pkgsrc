@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2022/02/17 00:22:59 gutteridge Exp $
+# $NetBSD: Makefile,v 1.35 2022/02/17 00:28:29 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -7,7 +7,7 @@ DISTNAME=	xfce4-notifyd-${VERSION}
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/apps/xfce4-notifyd/${VERSION:R}/
 
-HOMEPAGE=	https://goodies.xfce.org/projects/applications/xfce4-notifyd
+HOMEPAGE=	https://docs.xfce.org/apps/notifyd/start
 COMMENT=	Xfce Notify daemon
 
 USE_TOOLS+=	gdbus-codegen
