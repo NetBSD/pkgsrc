@@ -1,7 +1,7 @@
-dnl $Id: configure.ac,v 1.21 2019/01/27 22:50:55 agc Exp $
+dnl $Id: configure.ac,v 1.22 2022/02/17 17:34:56 gutteridge Exp $
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.57)
-AC_INIT([nbsd-digest],[20190127],[agc@netbsd.org])
+AC_INIT([nbsd-digest],[20220214],[agc@netbsd.org])
 AC_CONFIG_SRCDIR([digest.c])
 AC_CONFIG_HEADER(config.h)
 AC_ARG_PROGRAM
