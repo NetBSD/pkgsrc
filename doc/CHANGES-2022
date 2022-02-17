@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1046 2022/02/17 17:19:25 abs Exp $
+$NetBSD: CHANGES-2022,v 1.1047 2022/02/17 18:46:46 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1372,3 +1372,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/webkit-gtk to 2.34.6 [leot 2022-02-17]
 	Updated graphics/girara to 0.3.7 [abs 2022-02-17]
 	Updated print/zathura to 0.4.9 [abs 2022-02-17]
+	Updated devel/wabt to 1.0.27 [fcambus 2022-02-17]
