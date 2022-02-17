@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1044 2022/02/17 16:02:55 tpaul Exp $
+$NetBSD: CHANGES-2022,v 1.1045 2022/02/17 16:55:20 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1369,3 +1369,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed x11/xscreensaver-demo successor x11/xscreensaver [wiz 2022-02-17]
 	Updated x11/xscreensaver to 6.02 [wiz 2022-02-17]
 	Updated net/terraform-provider-vultr to 2.9.1 [tpaul 2022-02-17]
+	Updated www/webkit-gtk to 2.34.6 [leot 2022-02-17]
