@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/01/04 20:52:35 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/02/17 10:44:49 wiz Exp $
 
-DISTNAME=	biopython-1.74
+DISTNAME=	biopython-1.79
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	biology
 MASTER_SITES=	http://biopython.org/DIST/
 
@@ -13,12 +12,14 @@ LICENSE=	biopython
 
 USE_TOOLS+=	pax
 
-INSTALLATION_DIRS+=	share/doc/biopython share/examples/biopython
+INSTALLATION_DIRS+=	share/doc/biopython-${PYVERSSUFFIX} share/examples/biopython-${PYVERSSUFFIX}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/README.rst ${DESTDIR}${PREFIX}/share/doc/biopython
-	${INSTALL_DATA} ${WRKSRC}/Doc/Tutorial.pdf ${DESTDIR}${PREFIX}/share/doc/biopython
-	cd ${WRKSRC}/Doc/examples && ${PAX} -rw . ${DESTDIR}${PREFIX}/share/examples/biopython
+	${INSTALL_DATA} ${WRKSRC}/README.rst ${DESTDIR}${PREFIX}/share/doc/biopython-${PYVERSSUFFIX}
+	${INSTALL_DATA} ${WRKSRC}/Doc/Tutorial.pdf ${DESTDIR}${PREFIX}/share/doc/biopython-${PYVERSSUFFIX}
+	cd ${WRKSRC}/Doc/examples && ${PAX} -rw . ${DESTDIR}${PREFIX}/share/examples/biopython-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
