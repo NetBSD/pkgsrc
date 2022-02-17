@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2022/02/17 00:14:19 gutteridge Exp $
+# $NetBSD: Makefile,v 1.34 2022/02/17 00:22:59 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -19,7 +19,7 @@ CONF_FILES+=	${EGDIR}/${DESKTOP_FILE} \
 		${PKG_SYSCONFDIR}/xdg/autostart/${DESKTOP_FILE}
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-BUILDLINK_API_DEPENDS.glib2+=   glib2>=2.56.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.56.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/libxfce4ui/buildlink3.mk"
 .include "../../x11/xfce4-panel/buildlink3.mk"
