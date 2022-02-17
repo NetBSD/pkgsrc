@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1038 2022/02/17 10:54:56 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1039 2022/02/17 10:59:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1363,3 +1363,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated biology/py-biopython to 1.79 [wiz 2022-02-17]
 	Updated cad/py-gds to 1.6.11 [wiz 2022-02-17]
 	Removed math/py-autograd [wiz 2022-02-17]
+	Removed devel/py-hash [wiz 2022-02-17]
