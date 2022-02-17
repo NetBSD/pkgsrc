@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/01/04 20:54:16 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/02/17 10:29:57 wiz Exp $
 
 DISTNAME=	quadprog-0.1.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,8 @@ COMMENT=	Solver for a strictly convex quadratic program
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/egg.mk"
