@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1031 2022/02/16 22:32:24 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1032 2022/02/17 00:14:29 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1355,3 +1355,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated comms/tio to 1.34 [fcambus 2022-02-16]
 	Updated textproc/csview to 1.0.1 [pin 2022-02-16]
 	Updated fonts/harfbuzz to 3.4.0 [wiz 2022-02-16]
+	Updated x11/xfce4-notifyd to 0.6.3 [gutteridge 2022-02-17]
