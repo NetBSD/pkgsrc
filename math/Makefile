@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.535 2022/02/17 09:16:36 wiz Exp $
+# $NetBSD: Makefile,v 1.536 2022/02/17 10:54:56 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -371,7 +371,6 @@ SUBDIR+=	py-asteval
 SUBDIR+=	py-astroML
 SUBDIR+=	py-astropy
 SUBDIR+=	py-astropy-helpers
-SUBDIR+=	py-autograd
 SUBDIR+=	py-bottleneck
 SUBDIR+=	py-cdecimal
 SUBDIR+=	py-claripy
