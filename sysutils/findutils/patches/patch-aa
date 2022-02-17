@@ -1,16 +1,7 @@
-$NetBSD: patch-aa,v 1.9 2021/10/16 00:51:18 ryoon Exp $
+$NetBSD: patch-aa,v 1.10 2022/02/17 15:42:00 wiz Exp $
 
 --- locate/Makefile.in.orig	2021-01-09 16:35:33.000000000 +0000
 +++ locate/Makefile.in
-@@ -1999,7 +1999,7 @@ install_sh = @install_sh@
- libdir = @libdir@
- libexecdir = @libexecdir@
- localedir = $(datadir)/locale
--localstatedir = @localstatedir@
-+localstatedir = /var/run
- mandir = @mandir@
- mkdir_p = @mkdir_p@
- oldincludedir = @oldincludedir@
 @@ -2021,7 +2021,7 @@ top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  AUTOMAKE_OPTIONS = std-options
