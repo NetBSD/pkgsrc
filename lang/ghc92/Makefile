@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/02/17 07:16:10 pho Exp $
+# $NetBSD: Makefile,v 1.4 2022/02/17 15:57:07 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -106,6 +106,13 @@ CONFIGURE_ENV+=	CONF_HC_OPTS_STAGE${stage}=-fPIC\ -pie
 CONFIGURE_ENV+=	CONF_CC_OPTS_STAGE${stage}=${CFLAGS:M*:Q}\ -fPIC
 .  endif
 .endfor
+
+# MacOS X 10.7 is the oldest OS X version supporting __thread. Although
+# ${WRKSRC}/configure has a check for it, the actual build will fail
+# without this env.
+.if ${OPSYS} == "Darwin"
+ALL_ENV+=	MACOSX_DEPLOYMENT_TARGET="10.7"
+.endif
 
 
 # -----------------------------------------------------------------------------
