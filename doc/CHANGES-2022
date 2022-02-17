@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1043 2022/02/17 15:48:37 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1044 2022/02/17 16:02:55 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1368,3 +1368,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/php-composer to 2.2.6 [tpaul 2022-02-17]
 	Removed x11/xscreensaver-demo successor x11/xscreensaver [wiz 2022-02-17]
 	Updated x11/xscreensaver to 6.02 [wiz 2022-02-17]
+	Updated net/terraform-provider-vultr to 2.9.1 [tpaul 2022-02-17]
