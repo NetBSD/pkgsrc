@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1040 2022/02/17 15:42:08 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1041 2022/02/17 15:45:33 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1365,3 +1365,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed math/py-autograd [wiz 2022-02-17]
 	Removed devel/py-hash [wiz 2022-02-17]
 	Updated sysutils/findutils to 4.9.0 [wiz 2022-02-17]
+	Updated devel/php-composer to 2.2.6 [tpaul 2022-02-17]
