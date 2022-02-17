@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2022/02/10 12:21:11 pho Exp $
+# $NetBSD: Makefile,v 1.3 2022/02/17 07:16:10 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
 DISTNAME=	ghc-9.2.1-src
 PKGNAME=	${DISTNAME:S/-src$//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	https://downloads.haskell.org/~ghc/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -66,16 +66,6 @@ CONFIGURE_ARGS.common+= \
 	--with-ffi-libraries=${BUILDLINK_PREFIX.libffi}/${BUILDLINK_LIBDIRS.libffi:Q}
 
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "NetBSD"
-# The GHC rts, by default, creates executable objects on the heap by first
-# mmap(2)'ing an anonymous memory with PROT_READ|PROT_WRITE and then calling
-# mprotect(2) with PROT_READ|PROT_EXEC after filling its content. However,
-# NetBSD PaX mprotect doesn't allow this practice. That is, turning pages that
-# have been initially mapped as non-executable into something executable is a
-# no-no. We must therefore take a different path although it might be a bit slower.
-CONFIGURE_ARGS.common+=	--enable-libffi-adjustors
-# See rts/adjustor/NativeAmd64.c and rts/adjustor/LibffiAdjustor.c
-.endif
 
 # We must pass non-wrapper tools to ./configure because they will be
 # embedded in the compiler (actually ${WRKSRC}/settings).
