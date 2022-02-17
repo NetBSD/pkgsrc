@@ -1,4 +1,4 @@
-$NetBSD: patch-rts_Linker.c,v 1.1 2022/02/17 07:16:10 pho Exp $
+$NetBSD: patch-rts_Linker.c,v 1.2 2022/02/17 11:59:24 pho Exp $
 
 NetBSD-specific way of switching pages from rw- to r-x. Should not be
 upstreamed until we figure out why the hunk #0 is necessary.
@@ -9,6 +9,9 @@ executable code, which in turn calls mmapForLinker() and fails.
 
 Minimal test case:
 https://gist.github.com/depressed-pho/a629247b48b3e6178e35a14c62e9d44f
+
+tech-kern thread:
+https://mail-index.netbsd.org/tech-kern/2022/02/17/msg027969.html
 
 This was previously not an issue, until
 https://gitlab.haskell.org/ghc/ghc/-/issues/20051 happened and lead to
