@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1035 2022/02/17 10:21:27 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1036 2022/02/17 10:44:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1360,3 +1360,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed biology/py-mol [wiz 2022-02-17]
 	Updated devel/py-filelock to 3.5.1 [adam 2022-02-17]
 	Updated devel/py-tox to 3.24.5 [adam 2022-02-17]
+	Updated biology/py-biopython to 1.79 [wiz 2022-02-17]
