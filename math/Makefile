@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.534 2022/02/16 10:03:01 pho Exp $
+# $NetBSD: Makefile,v 1.535 2022/02/17 09:16:36 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -376,7 +376,6 @@ SUBDIR+=	py-bottleneck
 SUBDIR+=	py-cdecimal
 SUBDIR+=	py-claripy
 SUBDIR+=	py-ephem
-SUBDIR+=	py-fftw
 SUBDIR+=	py-fpconst
 SUBDIR+=	py-gmpy
 SUBDIR+=	py-gwcs
