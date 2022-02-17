@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.952 2022/01/18 19:25:56 rhialto Exp $
+# $NetBSD: Makefile,v 1.953 2022/02/17 15:48:21 wiz Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -671,7 +671,6 @@ SUBDIR+=	xrestop
 SUBDIR+=	xrootconsole
 SUBDIR+=	xscope
 SUBDIR+=	xscreensaver
-SUBDIR+=	xscreensaver-demo
 SUBDIR+=	xscribble
 SUBDIR+=	xscript
 SUBDIR+=	xsel
