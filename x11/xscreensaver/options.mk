@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.13 2022/02/17 15:46:52 wiz Exp $
+# $NetBSD: options.mk,v 1.14 2022/02/18 15:18:23 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xscreensaver
 PKG_SUPPORTED_OPTIONS=	pam
-PKG_SUGGESTED_OPTIONS=	pam
+PKG_SUGGESTED_OPTIONS=	# pam # needs fixing, complains about missing /etc/pam.d/xscreensaver
 
 .include "../../mk/bsd.options.mk"
 
