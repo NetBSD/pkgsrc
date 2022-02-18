@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:27:07 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/02/18 20:46:44 fcambus Exp $
 
-BLAKE2s (Blocks-20190308.txt) = ba3796ff742721987e18d663831a8d40fa40d30ee2904bad35eb4c9a52b3e9db
-SHA512 (Blocks-20190308.txt) = 2cd8a92ec3feabd77ddd48f7553287c057b9ff968244a91a29754837fe4e02175a0fd9d848bdab946fc44bd249442fe5862bb892d0e714ee3dadd571f1f7b77c
-Size (Blocks-20190308.txt) = 10086 bytes
-BLAKE2s (fntsample-5.3.tar.gz) = 0e50ec6021583b0c4770d845b797b15d0e30da8c39e9308e9a83b653c6055a7e
-SHA512 (fntsample-5.3.tar.gz) = 8490ce8746debf1e056ebed71fe5b4023e2ba6905bec100687c69b062bc31fbdfa98ba57ebdc05d7399c3d2ce946513c70f1eb38d842324710065976ed0aa341
-Size (fntsample-5.3.tar.gz) = 56508 bytes
+BLAKE2s (Blocks-20190308.txt) = 5f76d535e9d7a4beeab8610f5b54489b7a2405682b172dc6fce5c5683fc815cd
+SHA512 (Blocks-20190308.txt) = 65b5e88b51b52cb05cc36c8bf285cf78b5da0a2e8f034ad2bbe38333df3011c4ff2df4319ff4467164b1378fcf6645ad8ce50ef521e0af5a11c940a89c4c9f62
+Size (Blocks-20190308.txt) = 10720 bytes
+BLAKE2s (fntsample-5.4.tar.gz) = 6e671d6fa9972af09f3c79fd178f59fff72545b606dd9844a959c99aeaa59cd1
+SHA512 (fntsample-5.4.tar.gz) = 1355ab6bfa7da442e497cc64ed9a6063e4aea9ae8ef7b3a594df9a7d2cc355eb6c9338f680da50c9bd6414c2337bc17fe451acddcee0a8c7da274dd2f6bba605
+Size (fntsample-5.4.tar.gz) = 62162 bytes

@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/09/13 10:29:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/02/18 20:46:44 fcambus Exp $
 bin/fntsample
+bin/pdf-extract-outline
 bin/pdfoutline
 man/man1/fntsample.1
+man/man1/pdf-extract-outline.1
 man/man1/pdfoutline.1
 share/locale/uk/LC_MESSAGES/fntsample.mo
