@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.10 2022/01/21 16:07:33 bsiegert Exp $
-bin/borg-${PYVERSSUFFIX}
-bin/borgfs-${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.11 2022/02/18 08:02:40 wiz Exp $
+bin/borg
+bin/borgfs
 ${PYSITELIB}/borg/__init__.py
 ${PYSITELIB}/borg/__init__.pyc
 ${PYSITELIB}/borg/__init__.pyo

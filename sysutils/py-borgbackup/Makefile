@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2022/01/21 16:07:33 bsiegert Exp $
+# $NetBSD: Makefile,v 1.37 2022/02/18 08:02:40 wiz Exp $
 
 DISTNAME=	borgbackup-1.1.17
-PKGREVISION=	4
+PKGREVISION=	5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/borgbackup/}
@@ -16,6 +16,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_s
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_SELF_CONFLICT=		yes
 
 USE_PKG_RESOURCES=	yes
 
@@ -26,10 +27,7 @@ MAKE_ENV+=	BORG_LIBB2_PREFIX=${BUILDLINK_PREFIX.libb2}
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
-
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} borg borg-${PYVERSSUFFIX} || ${TRUE}
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} borgfs borgfs-${PYVERSSUFFIX} || ${TRUE}
 	${INSTALL_MAN} ${WRKSRC}/docs/man/*1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../archivers/lz4/buildlink3.mk"
