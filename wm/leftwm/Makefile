@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/12/13 19:04:02 pin Exp $
+# $NetBSD: Makefile,v 1.3 2022/02/18 17:43:48 pin Exp $
 
 DISTNAME=	leftwm-0.2.11
 CATEGORIES=	wm
@@ -32,5 +32,5 @@ DEPENDS+=	xrandr-[0-9]*:../../x11/xrandr
 
 .include "../../lang/rust/cargo.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.include "../..//x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
