@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1611 2022/02/16 09:45:06 pho Exp $
+# $NetBSD: Makefile,v 1.1612 2022/02/18 11:58:46 sborrill Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -1031,6 +1031,7 @@ SUBDIR+=	trac
 SUBDIR+=	tscrape
 SUBDIR+=	tuir
 SUBDIR+=	typo3_62
+SUBDIR+=	ufdbguard
 SUBDIR+=	uhttpmock
 SUBDIR+=	unit
 SUBDIR+=	unit-perl
