@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/03/28 03:52:54 mef Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/02/18 13:45:23 joerg Exp $
 bin/sile
 include/libtexpdf/agl.h
 include/libtexpdf/bmpimage.h
@@ -126,7 +126,6 @@ share/sile/core/units.lua
 share/sile/core/utilities.lua
 share/sile/languages/af.lua
 share/sile/languages/am.lua
-share/sile/languages/ar.lua
 share/sile/languages/as.lua
 share/sile/languages/bg.lua
 share/sile/languages/bn.lua
@@ -150,6 +149,7 @@ share/sile/languages/gu.lua
 share/sile/languages/hi.lua
 share/sile/languages/hr.lua
 share/sile/languages/hu.lua
+share/sile/languages/hy.lua
 share/sile/languages/id.lua
 share/sile/languages/is.lua
 share/sile/languages/it.lua
@@ -240,6 +240,7 @@ share/sile/packages/counters.lua
 share/sile/packages/cropmarks.lua
 share/sile/packages/date.lua
 share/sile/packages/debug.lua
+share/sile/packages/dropcaps.lua
 share/sile/packages/features.lua
 share/sile/packages/folio.lua
 share/sile/packages/font-fallback.lua
@@ -258,6 +259,11 @@ share/sile/packages/leaders.lua
 share/sile/packages/linespacing.lua
 share/sile/packages/lorem.lua
 share/sile/packages/masters.lua
+share/sile/packages/math.lua
+share/sile/packages/math/base-elements.lua
+share/sile/packages/math/texlike.lua
+share/sile/packages/math/typesetter.lua
+share/sile/packages/math/unicode-symbols.lua
 share/sile/packages/pagebuilder-bestfit.lua
 share/sile/packages/pandoc.lua
 share/sile/packages/parallel.lua
