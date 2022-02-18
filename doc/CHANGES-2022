@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1055 2022/02/18 20:34:07 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.1056 2022/02/18 20:46:55 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1384,3 +1384,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/sile to 0.12.2 [joerg 2022-02-18]
 	Updated devel/mob to 2.5.0 [schmonz 2022-02-18]
 	Updated fonts/liberation-ttf to 2.1.5 [fcambus 2022-02-18]
+	Updated fonts/fntsample to 5.4 [fcambus 2022-02-18]
