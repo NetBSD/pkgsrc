@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2021/04/13 08:20:51 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2022/02/18 20:33:56 fcambus Exp $
 
-DISTNAME=	liberation-fonts-ttf-2.1.3
+DISTNAME=	liberation-fonts-ttf-2.1.5
 PKGNAME=	${DISTNAME:S/-fonts//}
-PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=liberationfonts/}
 GITHUB_PROJECT=	liberation-fonts
