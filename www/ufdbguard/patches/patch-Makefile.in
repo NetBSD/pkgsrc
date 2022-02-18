@@ -1,0 +1,47 @@
+$NetBSD: patch-Makefile.in,v 1.1 2022/02/18 11:57:30 sborrill Exp $
+
+We will install the settings file and rc.d scripts ourselves.
+Ensure setuid/setgid files are not writable.
+Don't create directories that require specific ownership at packaging time
+
+--- src/Makefile.in.orig	2020-11-01 13:42:44.000000000 +0000
++++ src/Makefile.in	2022-02-01 12:16:25.509130107 +0000
+@@ -212,7 +212,7 @@
+ ipt: iptst
+ 	LANG=en_US.UTF-8 iptst
+ 
+-install::	 install.bin install.etc install.pid install.security install.checks install.log
++install::	 install.bin install.pid install.checks install.log
+ 	@echo making $@ in `basename \`pwd\``
+ 	@echo
+ 	@echo "=================================================================="
+@@ -237,7 +237,6 @@
+ 	$(INSTALL_PROGRAM) ufdb_top_urls.pl $(DESTDIR)$(bindir)/ufdb_top_urls
+ 	$(INSTALL_PROGRAM) ufdb_top_users.pl $(DESTDIR)$(bindir)/ufdb_top_users
+ 	@if [ -f ufdbpeek ] ; then $(INSTALL_PROGRAM) ufdbpeek $(DESTDIR)$(bindir)/ufdbpeek ; fi
+-	@if [ -f $(DESTDIR)$(cfgdir)/ufdbGuard.conf ] ; then echo "$(DESTDIR)$(cfgdir)/ufdbGuard.conf already exists." ; else $(INSTALL_DATA) ufdbGuard.conf $(DESTDIR)$(cfgdir)/ufdbGuard.conf ; fi
+ 
+ install.pid::
+ 	if [ $(piddir) != /var/tmp ] ; then $(INSTALL) -d $(DESTDIR)$(piddir) ; fi
+@@ -270,11 +269,8 @@
+ createdirs::
+ 	echo "Creating directories ..."
+ 	$(INSTALL) -d $(DESTDIR)$(bindir) 
+-	$(INSTALL) -o $(RUNAS) -d $(DESTDIR)$(logdir) 
+ 	$(INSTALL) -d $(DESTDIR)$(cfgdir)
+ 	$(INSTALL) -d $(DESTDIR)`dirname $(syscfgfile)`
+-	$(INSTALL) -o $(RUNAS) -d $(DESTDIR)$(dbhome)
+-	$(INSTALL) -o $(RUNAS) -d $(DESTDIR)$(dbhome)/security
+ 	$(INSTALL) -d $(DESTDIR)$(images_dir)
+ 
+ uninstall.bin::
+@@ -299,7 +295,8 @@
+ 	-$(RM) $(DESTDIR)$(bindir)/ufdbsignal ; \
+ 		$(INSTALL_PROGRAM) mtserver/ufdbsignal  $(DESTDIR)$(bindir)/ufdbsignal  ; \
+ 		chown root $(DESTDIR)$(bindir)/ufdbsignal  ;  \
+-		chmod +s $(DESTDIR)$(bindir)/ufdbsignal
++		chmod +s $(DESTDIR)$(bindir)/ufdbsignal; \
++		chmod -w $(DESTDIR)$(bindir)/ufdbsignal
+ 
+ install.images::
+ 	$(INSTALL_DATA) images/forbidden-normal-de.png $(DESTDIR)$(images_dir)/forbidden-normal-de.png
