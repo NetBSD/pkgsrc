@@ -1,2 +1,0 @@
-bin/borg @PREFIX@/bin/borg-@PYVERSSUFFIX@
-bin/borgfs @PREFIX@/bin/borgfs-@PYVERSSUFFIX@
