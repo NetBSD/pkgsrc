@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:12:18 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/02/18 13:45:23 joerg Exp $
 
-BLAKE2s (sile-0.10.15.tar.xz) = 37a489ca875e03e0ce70afde7e75362fc4103c4c7dccec50356012cc8d422763
-SHA512 (sile-0.10.15.tar.xz) = 7e3f251dd253266258779c9dd965861e95db9dde2c8200a83c5b792682f927b6cb44d5cba01a1c27745097cfd51a6c2a82bec317a629d7c9a2f43be780bad14b
-Size (sile-0.10.15.tar.xz) = 12198608 bytes
+BLAKE2s (sile-0.12.2.tar.xz) = cd23cd9d8a694d424cb3ef224dba91ba955bad4d044d25272eef42dd3e2b9c61
+SHA512 (sile-0.12.2.tar.xz) = d2e37e4a1d7f5bbb344ef2783d1b7b70591de33f1b0bd4919490b96acf5e44e9bef2c1024afcdefac0cf0806f86f6211d4a21c046b8f99de2fd11f4598c372fd
+Size (sile-0.12.2.tar.xz) = 2722568 bytes
