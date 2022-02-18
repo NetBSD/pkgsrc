@@ -1,0 +1,7 @@
+ufdbGuard is a URL filter to block unwanted web content on the internet.
+ufdbGuard can also enforce Google SafeSearch, detect UltraSurf, Tor, Skype
+and other chat applications, proxy tunnels and enforce safer HTTPS traffic.
+ufdbGuard is a redirector for the Squid web proxy with 50,000 URL
+verifications/second.  ufdbGuard integrates with user authorities like LDAP,
+Kerberos and Active Directory to assign different policies to different
+groups of users.
