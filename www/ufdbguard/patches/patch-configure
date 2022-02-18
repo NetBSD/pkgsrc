@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2022/02/18 11:57:30 sborrill Exp $
+
+Use correct locations for pkgsrc
+
+--- configure.orig	2020-11-02 13:42:38.000000000 +0000
++++ configure	2022-01-28 16:55:48.436979029 +0000
+@@ -7297,7 +7297,7 @@
+    ufdb_os_type=gentoo
+    ufdb_initdir=/etc/init.d
+    ufdb_sysconfigfile="/etc/conf.d/ufdb"
+-elif test -f /usr/pkg/etc					# NetBSD
++elif test $MYOS = NetBSD					# NetBSD
+ then
+    ufdb_os_type=netbsd
+    ufdb_initdir=/etc/init.d
+@@ -7307,6 +7307,8 @@
+    ufdb_initdir=/usr/local/etc
+    ufdb_sysconfigfile="/etc/urlfilterdb/ufdbguard"
+ fi
++ufdb_sysconfigfile=$ufdb_config/ufdbguard
++ 
+ echo "OS type is $ufdb_os_type and system configuration file is $ufdb_sysconfigfile"
+ 
+ if test ! -f $ufdb_sysconfigfile
