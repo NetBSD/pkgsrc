@@ -1,22 +1,54 @@
-$NetBSD: patch-Completion_BSD_Command___bsd__pkg,v 1.2 2020/12/25 21:47:47 ryoon Exp $
+$NetBSD: patch-Completion_BSD_Command___bsd__pkg,v 1.3 2022/02/18 09:48:44 pho Exp $
 
-* Use new pkgsrc database directory for NetBSD.
+* Better Darwin support.
+* Use pkgsrc PKG_DBDIR as the default database directory.
 
 --- Completion/BSD/Command/_bsd_pkg.orig	2019-05-06 03:42:37.000000000 +0000
 +++ Completion/BSD/Command/_bsd_pkg
-@@ -31,7 +31,14 @@ _bsd_pkg_pkgfiles() {
+@@ -15,6 +15,10 @@ _bsd_pkg_pkgfiles() {
+     pkgsdir=${${(M)${(f)"$(</etc/mk.conf)"}:#PACKAGE_REPOSITORY*}#*=[[:blank:]]#}
+     pkgsdir=${${pkgsdir:-$PACKAGE_REPOSITORY}:-$portsdir/packages/}/$(make -V MACHINE_ARCH)/All
+     ;;
++  darwin*)
++    portsdir=/opt/pkgsrc
++    pkgsdir=${PACKAGES:-$portsdir/packages}/All
++    ;;
+   *)
+     portsdir=${PORTSDIR:-/usr/ports}
+     pkgsdir=${PACKAGES:-$portsdir/packages}/All
+@@ -31,7 +35,7 @@ _bsd_pkg_pkgfiles() {
  
  (( $+functions[_bsd_pkg_pkgs] )) ||
  _bsd_pkg_pkgs() {
 -  compadd "$@" - ${PKG_DBDIR:-/var/db/pkg}/*(/:t)
-+  case $OSTYPE in
-+  netbsd*)
-+    compadd "$@" - ${PKG_DBDIR:-@PKG_DBDIR@}/*(/:t)
-+    ;;
-+  *)
-+    compadd "$@" - ${PKG_DBDIR:-/var/db/pkg}/*(/:t)
-+    ;;
-+  esac
++  compadd "$@" - ${PKG_DBDIR:-@PKG_DBDIR@}/*(/:t)
  }
  
  (( $+functions[_bsd_pkg_pkgs_and_files] )) ||
+@@ -58,7 +62,7 @@ _bsd_pkg() {
+     )
+ 
+     case "$OSTYPE" in
+-    netbsd*)
++    netbsd*|darwin*)
+       flags+=(
+         '-A[do not record packages as installed manually]'
+         '-C[specify configuration file]:config file:_files'
+@@ -141,7 +145,7 @@ _bsd_pkg() {
+     )
+ 
+     case "$OSTYPE" in
+-    netbsd*)
++    netbsd*|darwin*)
+       flags+=(
+         '(:)-a[delete all installed packages]'
+         "-D[don't execute deinstallation scripts]"
+@@ -202,7 +206,7 @@ _bsd_pkg() {
+     )
+ 
+     case "$OSTYPE" in
+-    netbsd*)
++    netbsd*|darwin*)
+       flags+=(
+         '-B[show build information]'
+         '-b[show RCS Id strings]'
