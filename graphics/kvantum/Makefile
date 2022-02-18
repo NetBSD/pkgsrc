@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2021/12/29 05:49:25 pin Exp $
+# $NetBSD: Makefile,v 1.18 2022/02/18 13:13:28 pin Exp $
 
+# kvantum-1.0.1 requires kf5-5.82
+# We only have kf5-5.80
 DISTNAME=	Kvantum-1.0.0
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	graphics
