@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1049 2022/02/18 08:02:49 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1050 2022/02/18 09:08:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1375,3 +1375,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/wabt to 1.0.27 [fcambus 2022-02-17]
 	Updated sysutils/hcal to 0.3.4 [pin 2022-02-17]
 	Updated sysutils/py-borgbackup to 1.1.17nb5 [wiz 2022-02-18]
+	Updated net/grpc to 1.44.0 [adam 2022-02-18]
+	Updated net/py-grpcio to 1.44.0 [adam 2022-02-18]
+	Updated net/py-grpcio-testing to 1.44.0 [adam 2022-02-18]
+	Updated net/py-grpcio-tools to 1.44.0 [adam 2022-02-18]
