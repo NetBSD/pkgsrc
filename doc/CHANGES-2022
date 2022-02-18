@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1050 2022/02/18 09:08:55 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1051 2022/02/18 09:16:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1379,3 +1379,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-grpcio to 1.44.0 [adam 2022-02-18]
 	Updated net/py-grpcio-testing to 1.44.0 [adam 2022-02-18]
 	Updated net/py-grpcio-tools to 1.44.0 [adam 2022-02-18]
+	Updated textproc/asciidoc to 10.1.2 [wiz 2022-02-18]
