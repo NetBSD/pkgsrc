@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2022/02/18 11:57:30 sborrill Exp $
+
+ufdbGuard does not include any blocklists and its default configuration
+assumes you will subscribe to their commercial lists. However, it can be
+used with blocklists from any source (they will need to be compiled into
+its own internal format using the ufdbConvertDB command).
+
+Full documentation (including how to configure squid) can be found at:
+https://urlfilterdb.com/files/downloads/ReferenceManual.pdf
+
+===========================================================================
