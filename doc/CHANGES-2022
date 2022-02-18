@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1048 2022/02/17 19:35:01 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1049 2022/02/18 08:02:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1374,3 +1374,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/zathura to 0.4.9 [abs 2022-02-17]
 	Updated devel/wabt to 1.0.27 [fcambus 2022-02-17]
 	Updated sysutils/hcal to 0.3.4 [pin 2022-02-17]
+	Updated sysutils/py-borgbackup to 1.1.17nb5 [wiz 2022-02-18]
