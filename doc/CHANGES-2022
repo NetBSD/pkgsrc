@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1053 2022/02/18 14:04:05 joerg Exp $
+$NetBSD: CHANGES-2022,v 1.1054 2022/02/18 17:55:46 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1382,3 +1382,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/asciidoc to 10.1.2 [wiz 2022-02-18]
 	Added www/ufdbguard version 1.35.3 [sborrill 2022-02-18]
 	Updated print/sile to 0.12.2 [joerg 2022-02-18]
+	Updated devel/mob to 2.5.0 [schmonz 2022-02-18]
