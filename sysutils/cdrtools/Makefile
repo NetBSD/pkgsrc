@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2021/12/03 17:45:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.125 2022/02/18 11:52:56 micha Exp $
 
 DISTNAME=	schily-2021-09-18
 PKGNAME=	cdrtools-3.02a10
@@ -12,6 +12,9 @@ COMMENT=	Software for creating ISO9660 images and writing CD/DVD/Blu-ray
 LICENSE=	cddl-1.0 AND gnu-gpl-v2 AND gnu-lgpl-v2.1 AND 2-clause-bsd
 
 MAKE_JOBS_SAFE=	no
+
+LDFLAGS.Darwin+=	-liconv
+LDFLAGS.SunOS+=		-liconv
 
 .include "../../mk/bsd.prefs.mk"
 
