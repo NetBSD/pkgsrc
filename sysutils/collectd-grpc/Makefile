@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2021/11/11 12:02:50 kim Exp $
+# $NetBSD: Makefile,v 1.6 2022/02/18 09:11:57 adam Exp $
 
 COLLECTD_PACKAGE=	grpc
 
-COMMENT=		Statistics collection daemon - grpc plugin
-PKGREVISION=		2
+COMMENT=	Statistics collection daemon - grpc plugin
+PKGREVISION=	3
 
 .include "../../net/grpc/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
