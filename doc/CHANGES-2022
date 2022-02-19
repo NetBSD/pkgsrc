@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1064 2022/02/19 16:27:10 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.1065 2022/02/19 17:53:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1393,3 +1393,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/mariadb105-client to 10.5.15 [nia 2022-02-19]
 	Updated databases/mariadb105-server to 10.5.15 [nia 2022-02-19]
 	Updated net/unison-snapshot to 2.51.70 [gdt 2022-02-19]
+	Updated textproc/expat to 2.4.5 [wiz 2022-02-19]
