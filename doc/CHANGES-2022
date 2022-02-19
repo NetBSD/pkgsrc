@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1057 2022/02/18 22:58:15 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1058 2022/02/19 08:18:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1386,3 +1386,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/liberation-ttf to 2.1.5 [fcambus 2022-02-18]
 	Updated fonts/fntsample to 5.4 [fcambus 2022-02-18]
 	Updated x11/xscreensaver to 6.02nb2 [wiz 2022-02-18]
+	Updated devel/lua-luv to 1.43.0.0 [nia 2022-02-19]
