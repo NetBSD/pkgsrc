@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/06/07 11:53:31 nia Exp $
+# $NetBSD: Makefile,v 1.3 2022/02/19 20:55:31 nia Exp $
 
 DISTNAME=	lua-rapidjson-0.7.1
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/^lua-//1}
@@ -12,10 +12,12 @@ HOMEPAGE=	https://github.com/xpol/lua-rapidjson
 COMMENT=	JSON module for Lua, based on the very fast RapidJSON C++ library
 LICENSE=	mit
 
-TEST_DEPENDS+=	${LUA_PKGPREFIX}-busted-[0-9]*:../../devel/lua-busted
-
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+
+LUA_USE_BUSTED=	yes
+
+TEST_DEPENDS+=	${LUA_PKGPREFIX}-utf8-[0-9]*:../../textproc/lua-utf8
 
 CMAKE_ARGS+=	-DLUA_RAPIDJSON_VERSION=${PKGVERSION}
 
@@ -30,9 +32,6 @@ pre-configure:
 
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/rapidjson.so ${DESTDIR}${PREFIX}/${LUA_CDIR}
-
-do-test:
-	cd ${WRKSRC} && ${PREFIX}/bin/busted${_LUA_DOT_VERSION}
 
 .include "../../lang/lua/module.mk"
 .include "../../mk/bsd.pkg.mk"
