@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1059 2022/02/19 08:24:17 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1060 2022/02/19 09:13:39 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1388,3 +1388,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xscreensaver to 6.02nb2 [wiz 2022-02-18]
 	Updated devel/lua-luv to 1.43.0.0 [nia 2022-02-19]
 	Updated emulators/mednaffe to 0.9.2 [nia 2022-02-19]
+	Updated databases/mariadb106-client to 10.6.7 [nia 2022-02-19]
