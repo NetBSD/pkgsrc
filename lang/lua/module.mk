@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.12 2021/12/06 18:54:32 nia Exp $
+# $NetBSD: module.mk,v 1.13 2022/02/19 20:39:58 nia Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # install Lua modules.
@@ -11,6 +11,12 @@
 #
 #	You probably want to set this to "no" if the package links
 #	binaries that are not Lua modules.
+#
+#	Possible values: yes no
+#	Default: yes
+#
+# LUA_USE_BUSTED
+#	Use busted to run tests and provide a do-test target.
 #
 #	Possible values: yes no
 #	Default: yes
@@ -84,4 +90,11 @@ BUILDLINK_TRANSFORM+=	rm:-std=c89
 BUILDLINK_TRANSFORM+=	rm:-std=c90
 .endif
 
-.endif  # LUA_MODULE_MK
+.if !empty(LUA_USE_BUSTED:M[yY][eE][sS])
+TEST_DEPENDS+=	${LUA_PKGPREFIX}-busted-[0-9]*:../../devel/lua-busted
+
+do-test:
+	cd ${WRKSRC} && ${PREFIX}/bin/busted${_LUA_DOT_VERSION}
+.endif # LUA_USE_BUSTED
+
+.endif # LUA_MODULE_MK
