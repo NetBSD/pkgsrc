@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2021/07/23 20:35:03 tsutsui Exp $
+# $NetBSD: Makefile,v 1.36 2022/02/19 18:48:52 tsutsui Exp $
 
-DISTNAME=	sayaka-3.5.2
+DISTNAME=	sayaka-3.5.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=isaki68k/}
 GITHUB_PROJECT=	${DISTNAME:S/-${PKGVERSION_NOREV}//}
