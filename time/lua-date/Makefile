@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/12/10 13:08:46 nia Exp $
+# $NetBSD: Makefile,v 1.5 2022/02/19 20:47:21 nia Exp $
 
 DISTNAME=	lua-date-2.2
 PKGNAME=	${DISTNAME:S/lua-/${LUA_PKGPREFIX}-/1}
@@ -12,21 +12,19 @@ HOMEPAGE=	https://tieske.github.io/date/
 COMMENT=	Date and Time module for Lua 5.x
 LICENSE=	mit
 
-TEST_DEPENDS+=	${LUA_PKGPREFIX}-busted-[0-9]*:../../devel/lua-busted
 TEST_DEPENDS+=	${LUA_PKGPREFIX}-cov-[0-9]*:../../devel/lua-cov
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
 
+LUA_USE_BUSTED=	yes
+
 INSTALLATION_DIRS+=	${LUA_LDIR}
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/src/date.lua \
 		${DESTDIR}${PREFIX}/${LUA_LDIR}/date.lua
-
-do-test:
-	cd ${WRKSRC} && ${PREFIX}/bin/busted${_LUA_DOT_VERSION}
 
 .include "../../lang/lua/module.mk"
 .include "../../mk/bsd.pkg.mk"
