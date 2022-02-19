@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/02/19 20:55:31 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/02/19 21:03:13 nia Exp $
 
-BLAKE2s (dkjson-2.6.tar.gz) = 984073f8c3135357e9bebf495cb283712856b6cba3e4c00a9fe5874dee6fdb5b
-SHA512 (dkjson-2.6.tar.gz) = af7101a5e4b5bb7e0bd88e555a023b78fad581b6caa6fdccd13ba6c15879b5a07d4eab46ab83d4479853a844506db1813fbb4ca8de65f5882637e567500faa07
-Size (dkjson-2.6.tar.gz) = 17143 bytes
+BLAKE2s (dkjson-2.5.tar.gz) = cc3013d3f07deab4c7642dd32c93436bb6e627a40fa100aa997d8ab9b185b0ed
+SHA512 (dkjson-2.5.tar.gz) = 91c84c662932579e8dd0a34bfb931730502981ad2937029aacd5b7ece972942c1b425ec4b0c9428935c550a060412614d6b26cb5e205c4c840f9effed7995148
+Size (dkjson-2.5.tar.gz) = 15878 bytes

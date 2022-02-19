@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/02/19 20:55:31 nia Exp $
+# $NetBSD: Makefile,v 1.3 2022/02/19 21:03:13 nia Exp $
 
-DISTNAME=	dkjson-2.6
+DISTNAME=	dkjson-2.5
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc lua
 MASTER_SITES=	http://dkolf.de/src/dkjson-lua.fsl/tarball/
