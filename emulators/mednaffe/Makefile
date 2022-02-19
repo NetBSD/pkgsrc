@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2021/12/08 16:04:17 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/02/19 08:24:04 nia Exp $
 
-DISTNAME=	mednaffe-0.9.1
-PKGREVISION=	1
+DISTNAME=	mednaffe-0.9.2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AmatCoder/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -11,7 +10,6 @@ HOMEPAGE=	https://github.com/AmatCoder/mednaffe
 COMMENT=	Graphical interface for the Mednafen multi-system emulator
 LICENSE=	gnu-gpl-v3
 
-HAS_CONFIGURE=	yes
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake
 
