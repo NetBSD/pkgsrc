@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1074 2022/02/20 13:15:37 taca Exp $
+$NetBSD: CHANGES-2022,v 1.1075 2022/02/20 13:23:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1403,3 +1403,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/php80 to 8.0.16 [taca 2022-02-20]
 	Updated lang/php81 to 8.1.3 [taca 2022-02-20]
 	Updated security/pear-Crypt_GPG to 1.6.7 [taca 2022-02-20]
+	Updated graphics/php-imagick to 3.7.0 [taca 2022-02-20]
