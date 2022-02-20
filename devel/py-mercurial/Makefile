@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2022/02/15 10:21:30 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2022/02/20 22:06:44 wiz Exp $
 #
 # Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
 
@@ -29,7 +29,7 @@ PYTHON_SELF_CONFLICT=	yes
 .include "options.mk"
 
 USE_TOOLS+=		bash:test
-# Known test failures as of 6.0.2
+# Known test failures as of 6.0.3
 # test-removeemptydirs.t
 # https://bz.mercurial-scm.org/show_bug.cgi?id=6587
 # test-http-bad-server.t
