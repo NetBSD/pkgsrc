@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/02/18 13:45:23 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2022/02/20 06:15:12 rillig Exp $
 
 DISTNAME=	sile-0.12.2
 CATEGORIES=	print
@@ -40,8 +40,9 @@ TEST_TARGET=	test
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	bash pkg-config gmake
 
+CONFIG_SHELL=		${BASH}
 CONFIGURE_ARGS+=	LUA=${LUA_INTERPRETER} GIT=${FALSE}
 CONFIGURE_ARGS+=	--with-system-luarocks
 
