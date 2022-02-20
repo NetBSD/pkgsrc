@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/12/12 10:04:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/02/20 21:27:35 wiz Exp $
 bin/pip-audit-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -42,6 +42,9 @@ ${PYSITELIB}/pip_audit/_dependency_source/resolvelib/pypi_provider.pyo
 ${PYSITELIB}/pip_audit/_dependency_source/resolvelib/resolvelib.py
 ${PYSITELIB}/pip_audit/_dependency_source/resolvelib/resolvelib.pyc
 ${PYSITELIB}/pip_audit/_dependency_source/resolvelib/resolvelib.pyo
+${PYSITELIB}/pip_audit/_fix.py
+${PYSITELIB}/pip_audit/_fix.pyc
+${PYSITELIB}/pip_audit/_fix.pyo
 ${PYSITELIB}/pip_audit/_format/__init__.py
 ${PYSITELIB}/pip_audit/_format/__init__.pyc
 ${PYSITELIB}/pip_audit/_format/__init__.pyo
@@ -72,6 +75,9 @@ ${PYSITELIB}/pip_audit/_service/pypi.pyo
 ${PYSITELIB}/pip_audit/_state.py
 ${PYSITELIB}/pip_audit/_state.pyc
 ${PYSITELIB}/pip_audit/_state.pyo
+${PYSITELIB}/pip_audit/_subprocess.py
+${PYSITELIB}/pip_audit/_subprocess.pyc
+${PYSITELIB}/pip_audit/_subprocess.pyo
 ${PYSITELIB}/pip_audit/_util.py
 ${PYSITELIB}/pip_audit/_util.pyc
 ${PYSITELIB}/pip_audit/_util.pyo
