@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.15 2022/02/18 22:58:05 wiz Exp $
+# $NetBSD: options.mk,v 1.16 2022/02/20 17:27:18 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xscreensaver
 PKG_SUPPORTED_OPTIONS=	pam
-PKG_SUGGESTED_OPTIONS=	# pam # needs fixing, complains about missing /etc/pam.d/xscreensaver
+PKG_SUGGESTED_OPTIONS=	# pam
 
 .include "../../mk/bsd.options.mk"
 
@@ -12,6 +12,7 @@ CONFIGURE_ARGS+=	--with-pam
 CONFIGURE_ARGS+=	--without-shadow
 .  if ${OPSYS} == "NetBSD"
 # needed to read shadow passwords
+# please follow pam-pwauth_suid's MESSAGE file to enable unlocking
 DEPENDS+=	pam-pwauth_suid-[0-9]*:../../security/pam-pwauth_suid
 .  endif
 .else
