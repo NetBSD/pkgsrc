@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2021/08/23 08:19:26 adam Exp $
+# $NetBSD: Makefile,v 1.68 2022/02/20 21:11:03 wiz Exp $
 
-DISTNAME=	help2man-1.48.5
+DISTNAME=	help2man-1.49.1
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GNU:=help2man/}
 EXTRACT_SUFX=	.tar.xz
@@ -49,9 +49,6 @@ SUBST_SED.soext+=	-e 's,bindtextdomain\.so,bindtextdomain.${SOEXT},g'
 SUBST_SED.soext+=	-e 's,$$(preload)\.so,$$(preload).${SOEXT},g'
 
 PLIST_SUBST+=		SOEXT=${SOEXT}
-
-post-patch:
-	${TOUCH} -r ${WRKSRC}/help2man.PL.orig ${WRKSRC}/help2man.PL
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
