@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1068 2022/02/20 09:34:51 tron Exp $
+$NetBSD: CHANGES-2022,v 1.1069 2022/02/20 12:49:01 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1397,3 +1397,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/sayaka to 3.5.3 [tsutsui 2022-02-19]
 	Updated comms/tio to 1.35 [fcambus 2022-02-20]
 	Updated mail/mutt to 2.2.1 [tron 2022-02-20]
+	Updated textproc/yq to 2.13.0 [fcambus 2022-02-20]
