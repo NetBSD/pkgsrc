@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q4,v 1.1.2.11 2022/02/07 07:10:47 tm Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q4,v 1.1.2.12 2022/02/20 10:32:05 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q4 branch:
 
@@ -68,4 +68,16 @@ security/polkit: security fix
 
 Pullup ticket #6578 - requested by bsiegert
 textproc/expat: security fix
+
+Pullup ticket #6579 - requested by khorben
+security/polkit: security fix
+
+Pullup ticket #6580 - requested by nia
+www/firefox91: security fix
+
+Pullup ticket #6581 - requested by nia
+www/firefox91-l10n: dependent update
+
+Pullup ticket #6581 - requested by nia
+www/firefox91-l10n: dependent update
 
