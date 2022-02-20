@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/01/16 13:57:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/02/20 15:59:09 taca Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 bin/erb${RUBY_SUFFIX}
@@ -356,7 +356,6 @@ ${RUBY_LIB}/bundler/plugin/installer/git.rb
 ${RUBY_LIB}/bundler/plugin/installer/rubygems.rb
 ${RUBY_LIB}/bundler/plugin/source_list.rb
 ${RUBY_LIB}/bundler/process_lock.rb
-${RUBY_LIB}/bundler/psyched_yaml.rb
 ${RUBY_LIB}/bundler/remote_specification.rb
 ${RUBY_LIB}/bundler/resolver.rb
 ${RUBY_LIB}/bundler/resolver/spec_group.rb
@@ -1416,8 +1415,6 @@ ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/Gemfile
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/LICENSE.txt
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/README.md
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/Rakefile
-${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/bin/console
-${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/bin/setup
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/authenticators.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/authenticators/cram_md5.rb
@@ -1426,6 +1423,7 @@ ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/authenticators/login
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/authenticators/plain.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/command_data.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/data_encoding.rb
+${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/errors.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/flags.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/response_data.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/response_parser.rb
@@ -1554,6 +1552,7 @@ ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/core/global_variables.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/core/hash.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/core/integer.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/core/io.rbs
+${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/core/io/buffer.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/core/io/wait.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/core/kernel.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/core/marshal.rbs
@@ -1572,6 +1571,7 @@ ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/core/random.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/core/range.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/core/rational.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/core/rb_config.rbs
+${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/core/refinement.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/core/regexp.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/core/ruby_vm.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/core/signal.rbs
@@ -1616,6 +1616,11 @@ ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/ext/rbs_extension/unescape.c
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/goodcheck.yml
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/lib/rbs.rb
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/lib/rbs/ancestor_graph.rb
+${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/lib/rbs/annotate.rb
+${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/lib/rbs/annotate/annotations.rb
+${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/lib/rbs/annotate/formatter.rb
+${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/lib/rbs/annotate/rdoc_annotator.rb
+${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/lib/rbs/annotate/rdoc_source.rb
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/lib/rbs/ast/annotation.rb
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/lib/rbs/ast/comment.rb
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/lib/rbs/ast/declarations.rb
@@ -1645,7 +1650,6 @@ ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/lib/rbs/environment_loader.rb
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/lib/rbs/environment_walker.rb
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/lib/rbs/errors.rb
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/lib/rbs/factory.rb
-${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/lib/rbs/location.rb
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/lib/rbs/location_aux.rb
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/lib/rbs/locator.rb
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/lib/rbs/method_type.rb
@@ -1692,6 +1696,10 @@ ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/schema/typeParam.json
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/schema/types.json
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/sig/ancestor_builder.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/sig/ancestor_graph.rbs
+${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/sig/annotate/annotations.rbs
+${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/sig/annotate/formatter.rbs
+${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/sig/annotate/rdoc_annotater.rbs
+${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/sig/annotate/rdoc_source.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/sig/annotation.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/sig/buffer.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/sig/builtin_names.rbs
@@ -1699,9 +1707,9 @@ ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/sig/char_scanner.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/sig/cli.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/sig/collection.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/sig/collection/cleaner.rbs
-${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/sig/collection/collections.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/sig/collection/config.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/sig/collection/installer.rbs
+${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/sig/collection/sources.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/sig/comment.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/sig/constant.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/sig/constant_table.rbs
@@ -1736,6 +1744,7 @@ ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/sig/vendorer.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/sig/version.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/sig/writer.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/stdlib/abbrev/0/abbrev.rbs
+${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/stdlib/abbrev/0/array.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/stdlib/base64/0/base64.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/stdlib/benchmark/0/benchmark.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/stdlib/bigdecimal-math/0/big_math.rbs
@@ -1767,6 +1776,7 @@ ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/stdlib/monitor/0/monitor.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/stdlib/mutex_m/0/mutex_m.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/stdlib/net-http/0/manifest.yaml
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/stdlib/net-http/0/net-http.rbs
+${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/stdlib/nkf/0/nkf.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/stdlib/objspace/0/objspace.rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/stdlib/openssl/0/manifest.yaml
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/stdlib/openssl/0/openssl.rbs
