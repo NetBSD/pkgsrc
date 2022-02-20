@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1071 2022/02/20 13:04:17 taca Exp $
+$NetBSD: CHANGES-2022,v 1.1072 2022/02/20 13:09:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1400,3 +1400,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/yq to 2.13.0 [fcambus 2022-02-20]
 	Updated net/bind916 to 9.16.26 [taca 2022-02-20]
 	Updated lang/php74 to 7.4.28 [taca 2022-02-20]
+	Updated lang/php80 to 8.0.16 [taca 2022-02-20]
