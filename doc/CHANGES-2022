@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1079 2022/02/20 16:00:03 taca Exp $
+$NetBSD: CHANGES-2022,v 1.1080 2022/02/20 21:11:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1409,3 +1409,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/php-redis to 5.3.7 [taca 2022-02-20]
 	Updated lang/ruby31-base to 3.1.1 [taca 2022-02-20]
 	Updated lang/ruby31 to 3.1.1 [taca 2022-02-20]
+	Updated converters/help2man to 1.49.1 [wiz 2022-02-20]
