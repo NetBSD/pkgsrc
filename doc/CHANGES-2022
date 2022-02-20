@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1066 2022/02/19 18:49:17 tsutsui Exp $
+$NetBSD: CHANGES-2022,v 1.1067 2022/02/20 08:34:50 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1395,3 +1395,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/unison-snapshot to 2.51.70 [gdt 2022-02-19]
 	Updated textproc/expat to 2.4.5 [wiz 2022-02-19]
 	Updated net/sayaka to 3.5.3 [tsutsui 2022-02-19]
+	Updated comms/tio to 1.35 [fcambus 2022-02-20]
