@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1080 2022/02/20 21:11:12 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1081 2022/02/20 21:12:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1410,3 +1410,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/ruby31-base to 3.1.1 [taca 2022-02-20]
 	Updated lang/ruby31 to 3.1.1 [taca 2022-02-20]
 	Updated converters/help2man to 1.49.1 [wiz 2022-02-20]
+	Updated textproc/pugixml to 1.12.1 [wiz 2022-02-20]
