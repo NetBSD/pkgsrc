@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1098 2022/02/21 17:15:54 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1099 2022/02/21 19:11:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1433,3 +1433,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated finance/py-braintree to 4.14.0 [adam 2022-02-21]
 	Updated net/haproxy to 2.5.3 [adam 2022-02-21]
 	Updated comms/py-rich to 11.2.0 [adam 2022-02-21]
+	Updated net/py-stone to 3.3.1 [adam 2022-02-21]
+	Updated net/py-dropbox to 11.27.0 [adam 2022-02-21]
