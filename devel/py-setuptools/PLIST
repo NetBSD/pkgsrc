@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.66 2022/02/07 11:45:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.67 2022/02/21 08:20:53 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -282,12 +282,18 @@ ${PYSITELIB}/setuptools/_distutils/version.pyo
 ${PYSITELIB}/setuptools/_distutils/versionpredicate.py
 ${PYSITELIB}/setuptools/_distutils/versionpredicate.pyc
 ${PYSITELIB}/setuptools/_distutils/versionpredicate.pyo
+${PYSITELIB}/setuptools/_entry_points.py
+${PYSITELIB}/setuptools/_entry_points.pyc
+${PYSITELIB}/setuptools/_entry_points.pyo
 ${PYSITELIB}/setuptools/_imp.py
 ${PYSITELIB}/setuptools/_imp.pyc
 ${PYSITELIB}/setuptools/_imp.pyo
 ${PYSITELIB}/setuptools/_importlib.py
 ${PYSITELIB}/setuptools/_importlib.pyc
 ${PYSITELIB}/setuptools/_importlib.pyo
+${PYSITELIB}/setuptools/_itertools.py
+${PYSITELIB}/setuptools/_itertools.pyc
+${PYSITELIB}/setuptools/_itertools.pyo
 ${PYSITELIB}/setuptools/_path.py
 ${PYSITELIB}/setuptools/_path.pyc
 ${PYSITELIB}/setuptools/_path.pyo
@@ -408,6 +414,9 @@ ${PYSITELIB}/setuptools/_vendor/packaging/version.pyo
 ${PYSITELIB}/setuptools/_vendor/pyparsing.py
 ${PYSITELIB}/setuptools/_vendor/pyparsing.pyc
 ${PYSITELIB}/setuptools/_vendor/pyparsing.pyo
+${PYSITELIB}/setuptools/_vendor/typing_extensions.py
+${PYSITELIB}/setuptools/_vendor/typing_extensions.pyc
+${PYSITELIB}/setuptools/_vendor/typing_extensions.pyo
 ${PYSITELIB}/setuptools/_vendor/zipp.py
 ${PYSITELIB}/setuptools/_vendor/zipp.pyc
 ${PYSITELIB}/setuptools/_vendor/zipp.pyo
