@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1091 2022/02/21 09:41:16 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1092 2022/02/21 09:42:45 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1424,3 +1424,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-test-asyncio to 0.18.1 [adam 2022-02-21]
 	Updated misc/py-platformdirs to 2.5.1 [adam 2022-02-21]
 	Updated devel/git-cliff to 0.6.0 [pin 2022-02-21]
+	Updated security/gpg-tui to 0.8.3 [pin 2022-02-21]
