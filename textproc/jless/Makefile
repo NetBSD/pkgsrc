@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2022/02/10 10:50:22 pin Exp $
+# $NetBSD: Makefile,v 1.5 2022/02/21 09:43:40 pin Exp $
 
-DISTNAME=	jless-0.7.1
-PKGREVISION=    1
+DISTNAME=	jless-0.7.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PaulJuliusMartinez/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/PaulJuliusMartinez/jless/
 COMMENT=	Command-line pager for JSON data
 LICENSE=	mit
