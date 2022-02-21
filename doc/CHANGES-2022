@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1097 2022/02/21 16:51:30 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1098 2022/02/21 17:15:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1431,3 +1431,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added textproc/ydiff version 1.2 [fcambus 2022-02-21]
 	Updated textproc/ugrep to 3.7.3 [adam 2022-02-21]
 	Updated finance/py-braintree to 4.14.0 [adam 2022-02-21]
+	Updated net/haproxy to 2.5.3 [adam 2022-02-21]
+	Updated comms/py-rich to 11.2.0 [adam 2022-02-21]
