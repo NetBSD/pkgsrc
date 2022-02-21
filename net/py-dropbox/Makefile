@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2022/01/04 20:54:26 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2022/02/21 19:10:46 adam Exp $
 
-DISTNAME=	dropbox-11.4.1
+DISTNAME=	dropbox-11.27.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dropbox/}
 
@@ -12,7 +11,6 @@ COMMENT=	Dropbox Python API
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner>=5.2.0:../../devel/py-test-runner
-
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.16.2:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-six>=1.12.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-stone>=2.0:../../net/py-stone
