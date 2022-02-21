@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1089 2022/02/21 08:27:54 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1090 2022/02/21 08:50:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1421,3 +1421,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-setuptools to 60.9.3 [adam 2022-02-21]
 	Updated www/py-websockets to 10.2 [adam 2022-02-21]
 	Updated devel/py-filelock to 3.6.0 [adam 2022-02-21]
+	Updated devel/py-test-asyncio to 0.18.1 [adam 2022-02-21]
+	Updated misc/py-platformdirs to 2.5.1 [adam 2022-02-21]
