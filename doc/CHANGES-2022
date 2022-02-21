@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1085 2022/02/20 22:06:52 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1086 2022/02/21 03:44:09 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1415,3 +1415,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-pip-audit to 2.0.0 [wiz 2022-02-20]
 	Updated graphics/ImageMagick to 7.1.0.25 [wiz 2022-02-20]
 	Updated devel/py-mercurial to 6.0.3 [wiz 2022-02-20]
+	Updated www/firefox91 to 91.6.0 [nia 2022-02-21]
