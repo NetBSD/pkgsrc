@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1093 2022/02/21 09:43:58 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1094 2022/02/21 11:02:19 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1426,3 +1426,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/git-cliff to 0.6.0 [pin 2022-02-21]
 	Updated security/gpg-tui to 0.8.3 [pin 2022-02-21]
 	Updated textproc/jless to 0.7.2 [pin 2022-02-21]
+	Updated devel/py-approvaltests to 3.7.0 [schmonz 2022-02-21]
