@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1096 2022/02/21 13:46:07 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.1097 2022/02/21 16:51:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1429,3 +1429,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-approvaltests to 3.7.0 [schmonz 2022-02-21]
 	Updated devel/mold to 1.1 [fcambus 2022-02-21]
 	Added textproc/ydiff version 1.2 [fcambus 2022-02-21]
+	Updated textproc/ugrep to 3.7.3 [adam 2022-02-21]
+	Updated finance/py-braintree to 4.14.0 [adam 2022-02-21]
