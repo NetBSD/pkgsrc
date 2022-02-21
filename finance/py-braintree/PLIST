@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2021/11/16 12:12:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2022/02/21 16:45:43 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -137,6 +137,9 @@ ${PYSITELIB}/braintree/document_upload.pyo
 ${PYSITELIB}/braintree/document_upload_gateway.py
 ${PYSITELIB}/braintree/document_upload_gateway.pyc
 ${PYSITELIB}/braintree/document_upload_gateway.pyo
+${PYSITELIB}/braintree/enriched_customer_data.py
+${PYSITELIB}/braintree/enriched_customer_data.pyc
+${PYSITELIB}/braintree/enriched_customer_data.pyo
 ${PYSITELIB}/braintree/environment.py
 ${PYSITELIB}/braintree/environment.pyc
 ${PYSITELIB}/braintree/environment.pyo
@@ -299,6 +302,9 @@ ${PYSITELIB}/braintree/payment_instrument_type.pyo
 ${PYSITELIB}/braintree/payment_method.py
 ${PYSITELIB}/braintree/payment_method.pyc
 ${PYSITELIB}/braintree/payment_method.pyo
+${PYSITELIB}/braintree/payment_method_customer_data_updated_metadata.py
+${PYSITELIB}/braintree/payment_method_customer_data_updated_metadata.pyc
+${PYSITELIB}/braintree/payment_method_customer_data_updated_metadata.pyo
 ${PYSITELIB}/braintree/payment_method_gateway.py
 ${PYSITELIB}/braintree/payment_method_gateway.pyc
 ${PYSITELIB}/braintree/payment_method_gateway.pyo
@@ -483,6 +489,9 @@ ${PYSITELIB}/braintree/validation_error_collection.pyo
 ${PYSITELIB}/braintree/venmo_account.py
 ${PYSITELIB}/braintree/venmo_account.pyc
 ${PYSITELIB}/braintree/venmo_account.pyo
+${PYSITELIB}/braintree/venmo_profile_data.py
+${PYSITELIB}/braintree/venmo_profile_data.pyc
+${PYSITELIB}/braintree/venmo_profile_data.pyo
 ${PYSITELIB}/braintree/version.py
 ${PYSITELIB}/braintree/version.pyc
 ${PYSITELIB}/braintree/version.pyo
