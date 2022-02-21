@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/21 13:44:31 fcambus Exp $
+
+BLAKE2s (ydiff-1.2.tar.gz) = 4282ecec06e40c2b83a125ae7740007a591e86945d3b4008cba4e4f15f5e4ab4
+SHA512 (ydiff-1.2.tar.gz) = 472355a1ff449eb7c8d3cab2c93e0c1eb89f81f1d6f2b08977aaf9f1df63a3b60ddafdc7377b29a24aa282d7fc213469e7f40bf02ee10cb76a6d57c0086ed1b4
+Size (ydiff-1.2.tar.gz) = 39600 bytes
