@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.961 2022/02/05 04:36:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.962 2022/02/22 10:12:04 pin Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -458,6 +458,7 @@ SUBDIR+=	php-exif
 SUBDIR+=	php-gd
 SUBDIR+=	php-imagick
 SUBDIR+=	php-jpgraph
+SUBDIR+=	picat
 SUBDIR+=	pikchr
 SUBDIR+=	pixmap
 SUBDIR+=	ploticus
