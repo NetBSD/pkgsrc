@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:01:11 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/02/22 06:20:55 mrg Exp $
 
-BLAKE2s (minidlna-git-799e6cf505ec470b2bf0ae4118143380aa16b837.zip) = 991ac7c8926e86cb29d4527bd3bafb879d3af16543ff62f1683a1e2cd6bef313
-SHA512 (minidlna-git-799e6cf505ec470b2bf0ae4118143380aa16b837.zip) = 9e9643ea67f305134172bd98789a6bc0ce7a8e6c0022484d04daf9f8031a1718373c9c21a9ec55f396fe5e23c8a05255fea897949a319811aeef5ecee7bab830
-Size (minidlna-git-799e6cf505ec470b2bf0ae4118143380aa16b837.zip) = 388259 bytes
+BLAKE2s (minidlna-1.3.0.tar.gz) = 6e98580816ef3ec59c5d1ddd9bd336ebc389d9db1375bb192e3803d958f96179
+SHA512 (minidlna-1.3.0.tar.gz) = 92a5ec0e59244c65dad5360ca68856ecc66fd32ec2aaddb9e49c142b866d2642726c7c62898059e5fa56431d2bbb644bbe60c7ae5eb0aba4fe2255c8e69dd2d6
+Size (minidlna-1.3.0.tar.gz) = 509576 bytes
 SHA1 (patch-configure.ac) = 514c50b89599f0dfdc5b5f75e0fd67848980da19
 SHA1 (patch-icons.c) = 953a0fa460c674c0cacba133c640028ef282fd8f
 SHA1 (patch-kqueue.c) = fb698c407bf21046625ae73b0051fa75eef71ff6
