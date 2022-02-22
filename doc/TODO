@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21551 2022/02/22 09:52:16 wiz Exp $
+$NetBSD: TODO,v 1.21552 2022/02/22 22:15:12 gutteridge Exp $
 
 Suggested new packages
 ======================
@@ -1080,6 +1080,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o librelp-1.10.0
 	o libressl-3.3.2
 	o libretro-core-info-1.9.1
+	o librsvg-2.52.6
 	o libslang-2.2.4
 	o libslang2-2.3.2
 	o libspatialite-5.0.1
@@ -1091,7 +1092,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libxdg-basedir-1.2.3
 	o libzookeeper-3.7.0
 	o libzrtpcpp-4.6.6
-	o lilypond-2.22.1
+	o lilypond-2.22.2
 	o lincvs-2.1.4 [now called CrossVC]
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
 	o liquidwar-6.0.0.11
