@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/22 08:19:16 pin Exp $
+
+BLAKE2s (glazier-1.1.tar.bz2) = 4cd4306101a97fae4deea05f59da0ed39639f16d06d3a2ab2c1d04941fa969a6
+SHA512 (glazier-1.1.tar.bz2) = d51836df9df31f7d9a02af14da78675acc9c5aabfc8251690080886164b48dda1172495086ca3cc5a986265f4197a973a49c8557fd14fe837191fe420153db88
+Size (glazier-1.1.tar.bz2) = 12816 bytes
