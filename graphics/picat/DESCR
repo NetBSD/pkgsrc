@@ -1,0 +1,5 @@
+picat - picture cat
+Picat converts images to sixel graphics, and outputs them to stdout. The tool
+achieves high quality output by making use of the
+libimagequant, https://pngquant.org/lib/ library for converting RGBA images
+to the sixel palette.
