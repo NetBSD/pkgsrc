@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1106 2022/02/22 22:08:32 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.1107 2022/02/22 23:15:35 morr Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1444,3 +1444,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-trio to 0.20.0 [adam 2022-02-22]
 	Updated textproc/py-rapidjson to 1.6 [adam 2022-02-22]
 	Updated devel/meson to 0.61.2nb1 [jperkin 2022-02-22]
+	Updated www/wordpress to 5.9.1 [morr 2022-02-22]
