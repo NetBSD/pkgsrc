@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/23 09:01:11 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/02/22 13:56:14 adam Exp $
 
-DISTNAME=	trio-0.19.0
+DISTNAME=	trio-0.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trio/}
 
@@ -11,7 +10,6 @@ HOMEPAGE=	https://github.com/python-trio/trio
 COMMENT=	Friendly Python library for async concurrency and I/O
 LICENSE=	mit OR apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-astor>=0.8.1:../../devel/py-astor
 DEPENDS+=	${PYPKGPREFIX}-async_generator>=1.9:../../devel/py-async_generator
 DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.14:../../devel/py-cffi
@@ -20,6 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-outcome>=1.1.0:../../devel/py-outcome
 DEPENDS+=	${PYPKGPREFIX}-sniffio>=1.2.0:../../misc/py-sniffio
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=2.2.2:../../devel/py-sortedcontainers
 TEST_DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
+TEST_DEPENDS+=	${PYPKGPREFIX}-astor>=0.8.1:../../devel/py-astor
 TEST_DEPENDS+=	${PYPKGPREFIX}-jedi-[0-9]*:../../editors/py-jedi
 TEST_DEPENDS+=	${PYPKGPREFIX}-pylint-[0-9]*:../../devel/py-pylint
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
@@ -29,9 +28,6 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# test status as of 0.19.0
-# hangs, needs to be stopped with ctrl-c; then
-# 3 failed, 466 passed, 12 skipped
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
