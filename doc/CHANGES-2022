@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1104 2022/02/22 16:39:37 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1105 2022/02/22 17:57:02 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1442,3 +1442,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added graphics/picat version 0.1.0 [pin 2022-02-22]
 	Updated devel/py-trio to 0.20.0 [adam 2022-02-22]
 	Updated textproc/py-rapidjson to 1.6 [adam 2022-02-22]
+	Updated devel/meson to 0.61.2nb1 [jperkin 2022-02-22]
