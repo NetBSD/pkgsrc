@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/01/19 21:14:26 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/02/22 13:56:14 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -298,6 +298,9 @@ ${PYSITELIB}/trio/tests/test_abc.pyo
 ${PYSITELIB}/trio/tests/test_channel.py
 ${PYSITELIB}/trio/tests/test_channel.pyc
 ${PYSITELIB}/trio/tests/test_channel.pyo
+${PYSITELIB}/trio/tests/test_contextvars.py
+${PYSITELIB}/trio/tests/test_contextvars.pyc
+${PYSITELIB}/trio/tests/test_contextvars.pyo
 ${PYSITELIB}/trio/tests/test_deprecate.py
 ${PYSITELIB}/trio/tests/test_deprecate.pyc
 ${PYSITELIB}/trio/tests/test_deprecate.pyo
