@@ -1,0 +1,15 @@
+X windows manipulator.
+
+Windows are manipulated using the mouse, and can be moved/resized in
+multiple ways. This utility is better used in combination with others like
+[wmutils][0] and [sxhkd][1] which leverage the keyboard interface,
+rather than mouse usage.
+
+Features
+- Floating window management
+- Sloppy Focus
+- All manipulations done with the mouse
+- Cool operations like teleport, inflate/deflate
+- 100% compatible with wmutils(1)
+- Optional EWMH support through ewmh(1)
+- Multi-monitor support through Xrandr(3)
