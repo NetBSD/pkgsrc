@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1103 2022/02/22 10:12:29 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1104 2022/02/22 16:39:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1440,3 +1440,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-bitarray to 2.3.7 [adam 2022-02-22]
 	Updated devel/py-construct to 2.10.68 [adam 2022-02-22]
 	Added graphics/picat version 0.1.0 [pin 2022-02-22]
+	Updated devel/py-trio to 0.20.0 [adam 2022-02-22]
+	Updated textproc/py-rapidjson to 1.6 [adam 2022-02-22]
