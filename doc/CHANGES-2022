@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1102 2022/02/22 08:39:47 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1103 2022/02/22 10:12:29 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1439,3 +1439,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added wm/glazier version 1.1 [pin 2022-02-22]
 	Updated devel/py-bitarray to 2.3.7 [adam 2022-02-22]
 	Updated devel/py-construct to 2.10.68 [adam 2022-02-22]
+	Added graphics/picat version 0.1.0 [pin 2022-02-22]
