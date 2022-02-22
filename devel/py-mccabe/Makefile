@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/01/31 11:56:36 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/02/22 09:08:48 wiz Exp $
 
 DISTNAME=	mccabe-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 # https://github.com/PyCQA/mccabe/issues/93
 # as of 0.7.0, tests do not run:
 # NameError: name 'settings' is not defined
+# probably fixed by adding hypothesmith dependency
+#TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesmith-[0-9]*:../../wip/py-hypothesmith
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
