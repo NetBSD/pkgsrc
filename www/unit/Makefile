@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/12/08 00:27:33 gutteridge Exp $
+# $NetBSD: Makefile,v 1.7 2022/02/23 04:24:37 osa Exp $
 
 .include "../../www/unit/version.mk"
 
@@ -6,7 +6,7 @@ DISTNAME=	unit-${UNIT_VERSION}
 
 COMMENT=	Dynamic web application server
 
-MAINTAINER=	osa@FreeBSD.org
+MAINTAINER=	osa@NetBSD.org
 
 RCD_SCRIPTS=	unit
 
