@@ -1,0 +1,2 @@
+This package implements the bijection between JSON and CBOR defined in the
+CBOR specification, RFC 7049.
