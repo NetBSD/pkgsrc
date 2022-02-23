@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.243 2022/02/20 15:59:09 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.244 2022/02/23 15:53:25 jperkin Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -620,6 +620,13 @@ RDOC?=			${PREFIX}/bin/rdoc${RUBY_SUFFIX}
 
 RUBY_ARCH?=	${MACHINE_GNU_ARCH}-${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}${APPEND_ABI}
 
+# NetBSD does not append an OS version, so we have to do this OPSYS-specific.
+.if ${OPSYS} == "NetBSD"
+RUBY_EXTARCH?=	${MACHINE_GNU_ARCH}-${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}${APPEND_ABI}
+.else
+RUBY_EXTARCH?=	${MACHINE_GNU_ARCH}-${LOWER_OPSYS}${APPEND_ELF}-${LOWER_OPSYS_VERSUFFIX}${APPEND_ABI}
+.endif
+
 RUBY_MAJOR_MINOR=	${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
 
 #
@@ -709,7 +716,7 @@ RUBY_EG?=		share/examples/${RUBY_NAME}
 
 RUBY_GEM_BASE?=		${RUBY_LIB_BASE}/gems
 GEM_HOME?=		${RUBY_GEM_BASE}/${RUBY_VER_DIR}
-GEM_EXTSBASE=		${GEM_HOME}/extensions/${RUBY_GEM_ARCH}/${RUBY_VER_DIR}
+GEM_EXTSBASE=		${GEM_HOME}/extensions/${RUBY_EXTARCH}/${RUBY_VER_DIR}
 GEM_PLUGINSDIR=		${GEM_HOME}/plugins
 GEM_PATH?=		${PREFIX}/${GEM_HOME}
 RUBYGEM=		${LOCALBASE}/bin/${RUBYGEM_NAME}
