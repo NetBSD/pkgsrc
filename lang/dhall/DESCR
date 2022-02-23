@@ -1,0 +1,8 @@
+Dhall is an explicitly typed configuration language that is not Turing
+complete. Despite being Turing incomplete, Dhall is a real programming
+language with a type-checker and evaluator.
+
+Use this library to parse, type-check, evaluate, and pretty-print the Dhall
+configuration language. This package also includes an executable which
+type-checks a Dhall file and reduces the file to a fully evaluated normal
+form.
