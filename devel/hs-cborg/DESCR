@@ -1,0 +1,3 @@
+This package provides an efficient implementation of the Concise Binary
+Object Representation (CBOR), as specified by RFC 7049
+(https:/tools.ietf.orghtml/rfc7049).
