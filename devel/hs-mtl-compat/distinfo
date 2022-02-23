@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/23 16:17:41 pho Exp $
+
+BLAKE2s (mtl-compat-0.2.2.tar.gz) = e4eb3e6a0b04bcbdc9f1cef3bda29fec4ea5dc5d56c69ba8c5cf5d2bd27bd9e2
+SHA512 (mtl-compat-0.2.2.tar.gz) = 78a93e9e59d01bf0ffeb32f1322decd65d87cba8912d00f77347f0fc2f7190a755297953ac363ca3342c83822d36101b43ef044dc1f3b2ffef7c7710afda9d0d
+Size (mtl-compat-0.2.2.tar.gz) = 5128 bytes
