@@ -1,0 +1,2 @@
+This library modifies the async package to allow for task pooling and
+many-to-many dependencies between tasks.
