@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q4,v 1.1.2.13 2022/02/21 13:49:12 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q4,v 1.1.2.14 2022/02/23 09:51:55 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q4 branch:
 
@@ -86,4 +86,10 @@ www/firefox91: security fix
 
 Pullup ticket #6583 - requested by nia
 www/firefox91-l10n: dependent update
+
+Pullup ticket #6584 - requested by nia
+databases/mariadb105-client, databases/mariadb105-server: security fix
+
+Pullup ticket #6585 - requested by nia
+databases/mariadb106-client, databases/mariadb106-server: security fix
 
