@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/23 16:17:41 pho Exp $
+lib/mtl-compat-${PKGVERSION}/${HS_VERSION}/package-description
+lib/mtl-compat-${PKGVERSION}/${HS_VERSION}/package-id
+share/doc/${HS_PLATFORM}/mtl-compat-${PKGVERSION}/LICENSE
