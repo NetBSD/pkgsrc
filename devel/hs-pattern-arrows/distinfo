@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/23 16:17:07 pho Exp $
+
+BLAKE2s (pattern-arrows-0.0.2.tar.gz) = f7205189936f395bc79e9037ab18e3e3141d4d47e059f684bea69e2700882e49
+SHA512 (pattern-arrows-0.0.2.tar.gz) = 085d4c2e023a4762af885ec9043ca5b16fae3de4b9ecca879d8a4415d027febeef6b10d705ef0bfbdae1db7346c29269bd60c14a4ca06197d2747748ed3e0070
+Size (pattern-arrows-0.0.2.tar.gz) = 2459 bytes
