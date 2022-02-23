@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/02/23 11:30:04 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/02/23 23:21:53 wiz Exp $
 
 DISTNAME=	typing_inspect-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_i/-i/}
@@ -13,11 +13,7 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-mypy_extensions>=0.3.0:../../lang/py-mypy_extensions
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4:../../devel/py-typing-extensions
 
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYPKGPREFIX} == "py27"
-DEPENDS+=	${PYPKGPREFIX}-typing>=3.7.4:../../devel/py-typing
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-mypy_extensions
 
 USE_LANGUAGES=	# none
 
