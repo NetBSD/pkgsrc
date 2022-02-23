@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1291 2022/02/23 16:55:01 pho Exp $
+# $NetBSD: Makefile,v 1.1292 2022/02/23 16:55:33 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -328,6 +328,7 @@ SUBDIR+=	hs-libyaml
 SUBDIR+=	hs-lucid
 SUBDIR+=	hs-megaparsec
 SUBDIR+=	hs-pandoc-types
+SUBDIR+=	hs-parsers
 SUBDIR+=	hs-polyparse
 SUBDIR+=	hs-prettyprinter
 SUBDIR+=	hs-prettyprinter-ansi-terminal
