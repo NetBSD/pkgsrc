@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/23 11:40:06 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/hypothesmith/__init__.py
+${PYSITELIB}/hypothesmith/__init__.pyc
+${PYSITELIB}/hypothesmith/__init__.pyo
+${PYSITELIB}/hypothesmith/cst.py
+${PYSITELIB}/hypothesmith/cst.pyc
+${PYSITELIB}/hypothesmith/cst.pyo
+${PYSITELIB}/hypothesmith/py.typed
+${PYSITELIB}/hypothesmith/python3.lark
+${PYSITELIB}/hypothesmith/syntactic.py
+${PYSITELIB}/hypothesmith/syntactic.pyc
+${PYSITELIB}/hypothesmith/syntactic.pyo
