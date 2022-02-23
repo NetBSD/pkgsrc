@@ -1,0 +1,3 @@
+A small package which gives you the tools to build parsers to decode JSON
+values, and gives good error messages when parsing fails. See also
+http://harry.garrood.me/blog/aeson-better-errors/
