@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1141 2022/02/23 16:53:44 pho Exp $
+$NetBSD: CHANGES-2022,v 1.1142 2022/02/23 16:54:21 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1481,3 +1481,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-atomic-write version 0.2.0.7 [pho 2022-02-23]
 	Added converters/hs-cborg-json version 0.2.3.0 [pho 2022-02-23]
 	Added graphics/hs-dotgen version 0.4.3 [pho 2022-02-23]
+	Added devel/hs-lens-family-core version 2.1.0 [pho 2022-02-23]
