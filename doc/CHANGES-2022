@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1108 2022/02/23 08:20:43 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.1109 2022/02/23 08:27:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1446,3 +1446,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/meson to 0.61.2nb1 [jperkin 2022-02-22]
 	Updated www/wordpress to 5.9.1 [morr 2022-02-22]
 	Updated textproc/lowdown to 0.11.0 [fcambus 2022-02-23]
+	Updated devel/py-setuptools-rust to 1.1.2 [adam 2022-02-23]
+	Updated www/py-httptools to 0.4.0 [adam 2022-02-23]
