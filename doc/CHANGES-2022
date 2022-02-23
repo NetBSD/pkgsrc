@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1139 2022/02/23 16:52:21 pho Exp $
+$NetBSD: CHANGES-2022,v 1.1140 2022/02/23 16:53:08 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1479,3 +1479,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added lang/purescript version 0.14.5 [pho 2022-02-23]
 	Added devel/hs-async-pool version 0.9.1 [pho 2022-02-23]
 	Added devel/hs-atomic-write version 0.2.0.7 [pho 2022-02-23]
+	Added converters/hs-cborg-json version 0.2.3.0 [pho 2022-02-23]
