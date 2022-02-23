@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3661 2022/02/23 16:14:27 pho Exp $
+# $NetBSD: Makefile,v 1.3662 2022/02/23 16:15:01 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -605,6 +605,7 @@ SUBDIR+=	hs-memory
 SUBDIR+=	hs-microlens
 SUBDIR+=	hs-microlens-ghc
 SUBDIR+=	hs-microlens-mtl
+SUBDIR+=	hs-microlens-platform
 SUBDIR+=	hs-microlens-th
 SUBDIR+=	hs-mmap
 SUBDIR+=	hs-mmorph
