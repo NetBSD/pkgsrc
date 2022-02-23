@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/23 16:12:12 pho Exp $
+
+BLAKE2s (language-javascript-0.7.1.0.tar.gz) = c22b561d5c4b449b4a837179cc82476bd40076d3cc2dff8d0618cf276b65792e
+SHA512 (language-javascript-0.7.1.0.tar.gz) = 35f935f121cb8aad1a28be50ba8d571ee60bd2c6721eaf9bc7f897cbc4a33b17213e89d84bf9525ddbf555030efd5fbe6b11157c113900354430a7193223516f
+Size (language-javascript-0.7.1.0.tar.gz) = 76438 bytes
