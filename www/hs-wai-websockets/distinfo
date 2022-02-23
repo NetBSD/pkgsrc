@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/23 16:21:40 pho Exp $
+
+BLAKE2s (wai-websockets-3.0.1.2.tar.gz) = 608a28c13c00897cff21b3afa862927e50b73ce3bbe2898f58bfa08b6f176b8e
+SHA512 (wai-websockets-3.0.1.2.tar.gz) = c3415d1a36ca2f063fb1ae0ff7d3d9d271d8ff2c6099a754baed45f1c36f24cf1fa346e8e6403499cbeb329bcdf89326a9ed95f8e60111b4a879f5e51967ecc0
+Size (wai-websockets-3.0.1.2.tar.gz) = 7051 bytes
