@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1134 2022/02/23 16:20:24 pho Exp $
+$NetBSD: CHANGES-2022,v 1.1135 2022/02/23 16:21:14 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1474,3 +1474,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-serialise version 0.2.4.0 [pho 2022-02-23]
 	Added lang/hs-purescript-cst version 0.4.0.0 [pho 2022-02-23]
 	Added lang/hs-sourcemap version 0.1.7 [pho 2022-02-23]
+	Added www/hs-websockets version 0.12.7.3 [pho 2022-02-23]
