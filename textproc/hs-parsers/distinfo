@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/23 16:55:19 pho Exp $
+
+BLAKE2s (parsers-0.12.10.tar.gz) = 791fe6fb52952acfd149b531cbb8c77fd985053f0dc985511c9177304111a1f1
+SHA512 (parsers-0.12.10.tar.gz) = 99ff90de4e60be3c03c8e1e5ae7902a37424c3139ccf566ff1cbc363d176787bd60bb709ef6c56f5b446f1f1b7eca65aa5d431897a0f82a9d6f7fe77fd2ee49f
+Size (parsers-0.12.10.tar.gz) = 26215 bytes
