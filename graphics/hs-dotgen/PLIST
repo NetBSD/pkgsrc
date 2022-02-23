@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/23 16:53:38 pho Exp $
+lib/dotgen-${PKGVERSION}/${HS_VERSION}/package-description
+lib/dotgen-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/Dot.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/Dot.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/Dot.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+share/doc/${HS_PLATFORM}/dotgen-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/dotgen-${PKGVERSION}/html/Text-Dot.html
+share/doc/${HS_PLATFORM}/dotgen-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/dotgen-${PKGVERSION}/html/dotgen.haddock
+share/doc/${HS_PLATFORM}/dotgen-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/dotgen-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/dotgen-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/dotgen-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/dotgen-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/dotgen-${PKGVERSION}/html/synopsis.png
