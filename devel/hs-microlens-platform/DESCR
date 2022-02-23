@@ -1,0 +1,5 @@
+This package exports a module which is the recommended starting point for
+using microlens if you aren't trying to keep your dependencies minimal. By
+importing Lens.Micro.Platform you get all functions and instances from
+microlens, microlens-th, microlens-mtl, microlens-ghc, as well as instances
+for Vector, Text, and HashMap.
