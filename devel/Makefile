@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3658 2022/02/23 16:11:46 pho Exp $
+# $NetBSD: Makefile,v 1.3659 2022/02/23 16:13:01 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -593,6 +593,7 @@ SUBDIR+=	hs-indexed-traversable-instances
 SUBDIR+=	hs-ipynb
 SUBDIR+=	hs-lens
 SUBDIR+=	hs-libffi
+SUBDIR+=	hs-lifted-async
 SUBDIR+=	hs-lifted-base
 SUBDIR+=	hs-list-t
 SUBDIR+=	hs-logict
