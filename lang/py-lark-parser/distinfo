@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/23 11:36:12 wiz Exp $
+
+BLAKE2s (lark-parser-0.12.0.tar.gz) = 778a5d69c93e1caae791b9794a70210cd1d6f5bc6f27fdfd2706e246cec42ecd
+SHA512 (lark-parser-0.12.0.tar.gz) = f4cabf21615343d1d53d9acc85d015c224d78274f19598d439074ef4cdfef9e2d8a15eed7bbf1b3c9c70cd4dc50d50658821b537118d81ad6ff8c3e9916a2813
+Size (lark-parser-0.12.0.tar.gz) = 235029 bytes
