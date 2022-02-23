@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/23 16:20:18 pho Exp $
+
+BLAKE2s (sourcemap-0.1.7.tar.gz) = 681ff4e22352b6de0e4934df7beb454293e2731e31e950342b9bf34b4b8a3280
+SHA512 (sourcemap-0.1.7.tar.gz) = 8bb22dc3a66e5e63cb2b3ea44bdc15843dfd83d28d4d8cfacdbf99730ed9d0d832e47d9e4bb462f66753ffb177c0374b1f5f58c4ee9597193a6f4486150a1846
+Size (sourcemap-0.1.7.tar.gz) = 6172 bytes
