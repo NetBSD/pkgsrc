@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2021/11/27 23:40:27 nia Exp $
+$NetBSD: distinfo,v 1.5.2.1 2022/02/23 09:36:11 bsiegert Exp $
 
-BLAKE2s (mariadb-10.6.5.tar.gz) = 44cd77d1120c509d6df6386feda2302e544be6d90d08d3f6cd0ed39ab12ae5a5
-SHA512 (mariadb-10.6.5.tar.gz) = 5aafe0a8d5ae54a6f798a6fd0cf922521f5b8e54ef5fb5c7db1cf798a7755f5910bb0b8a6c371cb8253dfb48f4ebca0becd6eb543b68473d564d2092df3185a1
-Size (mariadb-10.6.5.tar.gz) = 85061860 bytes
+BLAKE2s (mariadb-10.6.7.tar.gz) = 5d4b482e6e06b337ff8180a2fe8b94b8e9f1cc1cea6b7dfe89eaa05c56eab701
+SHA512 (mariadb-10.6.7.tar.gz) = 2d26f56ea5f39b800a6f279c8411d4091b4f4d3acbf3ea1864068328d34a1437e7c46c08d3772009357fd89602e58f214266038e177c0a4fac914a5e5d01e3e6
+Size (mariadb-10.6.7.tar.gz) = 85882896 bytes
 SHA1 (patch-BUILD_compile-pentium32-gcov) = 89a7da728f94f19c153b4d2d2d6ba5462acc941f
 SHA1 (patch-CMakeLists.txt) = ea2f334ff1743e1676fe73e9946d0759c68e1d31
 SHA1 (patch-client_CMakeLists.txt) = 8fdd8a182304f0b84e120ce95334ace23d02ce88
@@ -14,7 +14,7 @@ SHA1 (patch-scripts_mysqld__safe.sh) = 4124e4c8df1527049f5eec9f3d2d4bbe80e7c33f
 SHA1 (patch-sql_mysqld.cc) = 19d325124cde1b45376c9710cdd104dc460f4bea
 SHA1 (patch-storage_connect_ioapi.c) = 804e2d9d3722fbe4d5ed773cc98a4114fe4cf8a3
 SHA1 (patch-storage_connect_tabvct.cpp) = 2e3c7cd7e4b0a86d443da47d3cc514b8b276d836
-SHA1 (patch-storage_innobase_include_transactional__lock__guard.h) = 1db38a9c1ec3ce7274dc08cb9c5b42d474b431aa
+SHA1 (patch-storage_innobase_include_transactional__lock__guard.h) = e47938072cdbd5c21d24622d8550b2c127fbb9df
 SHA1 (patch-storage_rocksdb_rdb__io__watchdog.cc) = 85ee5007cfda0d3070ec20b2b774738b01f8e083
 SHA1 (patch-storage_rocksdb_rdb__io__watchdog.h) = d790c092d7d35d014c5ef209635c18614c3a8301
 SHA1 (patch-storage_rocksdb_rocksdb_Makefile) = 67ea4d154f4f623fdca739f50b236c973e118a12
