@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/23 16:15:57 pho Exp $
+lib/monad-loops-${PKGVERSION}/${HS_VERSION}/package-description
+lib/monad-loops-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Loops.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Loops.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Loops.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/monad-loops-${PKGVERSION}/html/Control-Monad-Loops.html
+share/doc/${HS_PLATFORM}/monad-loops-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/monad-loops-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/monad-loops-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/monad-loops-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/monad-loops-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/monad-loops-${PKGVERSION}/html/monad-loops.haddock
+share/doc/${HS_PLATFORM}/monad-loops-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/monad-loops-${PKGVERSION}/html/synopsis.png
