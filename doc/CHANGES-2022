@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1130 2022/02/23 16:17:47 pho Exp $
+$NetBSD: CHANGES-2022,v 1.1131 2022/02/23 16:18:28 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1470,3 +1470,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-monad-logger version 0.3.36 [pho 2022-02-23]
 	Added devel/hs-pattern-arrows version 0.0.2 [pho 2022-02-23]
 	Added devel/hs-mtl-compat version 0.2.2 [pho 2022-02-23]
+	Added devel/hs-protolude version 0.3.0 [pho 2022-02-23]
