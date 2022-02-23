@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/23 11:30:04 wiz Exp $
+
+BLAKE2s (typing_inspect-0.7.1.tar.gz) = df06ee4c8959858b4443de7e1856caaa4b6b9f00322e6da140cb8aff6932c5a6
+SHA512 (typing_inspect-0.7.1.tar.gz) = 16aa279e5bcdcaa4ad28b68a5c5cedcefee32ec78f57c75b4285888ab6d634e3306eedc63445839cc57923ae956e9b2234cb2afcf71216b3f6ff6839cd48fc58
+Size (typing_inspect-0.7.1.tar.gz) = 11799 bytes
