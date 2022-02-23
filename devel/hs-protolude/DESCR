@@ -1,0 +1,21 @@
+A sensible starting Prelude for building custom Preludes.
+
+Design points:
+
+* Banishes String.
+* Banishes partial functions.
+* Compiler warning on bottoms.
+* Polymorphic string IO functions.
+* Polymorphic show.
+* Automatic string conversions.
+* Types for common data structures in scope.
+* Types for all common string types (Text/ByteString) in scope.
+* Banishes impure exception throwing outside of IO.
+* StateT/ReaderT/ExceptT transformers in scope by default.
+* Foldable / Traversable functions in scope by default.
+* Unsafe functions are prefixed with "unsafe" in separate module.
+* Compiler agnostic, GHC internal modules are abstracted out into Base.
+* sum and product are strict by default.
+* Includes Semiring for GHC >= 7.6.
+* Includes Bifunctor for GHC >= 7.6.
+* Includes Semigroup for GHC >= 7.6.
