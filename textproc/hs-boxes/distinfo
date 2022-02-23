@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/23 16:10:26 pho Exp $
+
+BLAKE2s (boxes-0.1.5.tar.gz) = 1899d6fdacf92888df8d2ee4989ce65c2b79b092a0d3ed55786aa90cddb074c2
+SHA512 (boxes-0.1.5.tar.gz) = 44527be9a8351aef9e6a98bc90276c0137892e2672ca5ae15968ac21cfc1f0ce92d2c734c26b5493b2f8597ab1a65cb9cf5d050b6b02b0a61d6b6df4143ba4d7
+Size (boxes-0.1.5.tar.gz) = 7598 bytes
