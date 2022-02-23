@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1115 2022/02/23 11:46:07 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1116 2022/02/23 16:09:00 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1455,3 +1455,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/py-hypothesmith version 0.2.0 [wiz 2022-02-23]
 	Updated devel/py-attrs to 21.4.0 [adam 2022-02-23]
 	Updated devel/py-py to 1.11.0 [adam 2022-02-23]
+	Added converters/hs-aeson-better-errors version 0.9.1.0 [pho 2022-02-23]
