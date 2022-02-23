@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3670 2022/02/23 16:51:58 pho Exp $
+# $NetBSD: Makefile,v 1.3671 2022/02/23 16:52:30 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -502,6 +502,7 @@ SUBDIR+=	hs-asn1-types
 SUBDIR+=	hs-assoc
 SUBDIR+=	hs-async
 SUBDIR+=	hs-async-pool
+SUBDIR+=	hs-atomic-write
 SUBDIR+=	hs-auto-update
 SUBDIR+=	hs-base-compat
 SUBDIR+=	hs-base-compat-batteries
