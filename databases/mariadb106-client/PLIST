@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/11/27 23:40:27 nia Exp $
+@comment $NetBSD: PLIST,v 1.2.2.1 2022/02/23 09:36:11 bsiegert Exp $
 bin/mariadb
 bin/mariadb-access
 bin/mariadb-admin
@@ -233,6 +233,7 @@ include/mysql/server/sslopt-case.h
 include/mysql/server/sslopt-longopts.h
 include/mysql/server/sslopt-vars.h
 include/mysql/server/typelib.h
+lib/libmariadb.a
 lib/libmariadb.so
 lib/libmariadb.so.3
 lib/libmariadbclient.a
