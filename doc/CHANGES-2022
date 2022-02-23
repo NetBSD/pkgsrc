@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1150 2022/02/23 19:13:01 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1151 2022/02/23 20:45:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1493,3 +1493,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/sqlite3-tcl to 3.38.0 [adam 2022-02-23]
 	Updated devel/lemon to 1.0.3.38.0 [adam 2022-02-23]
 	Updated emulators/mame to 0.241 [wiz 2022-02-23]
+	Updated graphics/librsvg to 2.52.6 [wiz 2022-02-23]
