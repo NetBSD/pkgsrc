@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1 2022/02/23 16:22:33 pho Exp $
+
+BLAKE2s (purescript-0.14.5.tar.gz) = 79e67fc61551acf18fbdc81666444345ce2d5114a93a7f9323d5f313b693acae
+SHA512 (purescript-0.14.5.tar.gz) = 0b283f9538988323bd06b01db205916cd61fe8806cf0901ffd14b5a298f48fe8f9ccc59275058331655104222e78fc66375e4b96230ca1a92a5ece71453d2a6c
+Size (purescript-0.14.5.tar.gz) = 540327 bytes
+SHA1 (patch-app_Main.hs) = d522a384b245cef55deec8e114e46e0dc7db2772
+SHA1 (patch-purescript.cabal) = 30d2ba8248854653123ff053d62fa5ece6bd1f7c
+SHA1 (patch-src_Language_PureScript_CoreFn_ToJSON.hs) = eeff7a9f48c43a391405bd61175a7f75529ead24
+SHA1 (patch-src_Language_PureScript_Docs_Types.hs) = 20ed67a6382abe8dc59a947265c115497b0a0096
+SHA1 (patch-src_Language_PureScript_Errors_JSON.hs) = 441c229348b3aa4e8ac8c2f03a29044fe949c928
+SHA1 (patch-src_Language_PureScript_Graph.hs) = 7b3554e0273f0a1c4a5fac724e0d2d6e436b6813
+SHA1 (patch-src_Language_PureScript_Ide_Error.hs) = e2f23edd3774b5b2fa97593456207c5b3459170a
+SHA1 (patch-src_Language_PureScript_Publish.hs) = b3ca97415a77e4a7fe2c3cef8a189cd19953d0ac
