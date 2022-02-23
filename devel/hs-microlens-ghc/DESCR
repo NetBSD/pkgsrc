@@ -1,0 +1,4 @@
+Use this package instead of microlens if you don't mind depending on all
+dependencies here -- Lens.Micro.GHC reexports everything from Lens.Micro
+and additionally provides orphan instances of microlens classes for
+packages coming with GHC (array, bytestring, containers, transformers).
