@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1125 2022/02/23 16:14:52 pho Exp $
+$NetBSD: CHANGES-2022,v 1.1126 2022/02/23 16:15:28 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1465,3 +1465,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-microlens-ghc version 0.4.13.1 [pho 2022-02-23]
 	Added devel/hs-microlens-mtl version 0.2.0.1 [pho 2022-02-23]
 	Added devel/hs-microlens-platform version 0.4.2.1 [pho 2022-02-23]
+	Added devel/hs-stm-chans version 3.0.0.6 [pho 2022-02-23]
