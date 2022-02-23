@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/23 16:56:57 pho Exp $
+lib/uri-encode-${PKGVERSION}/${HS_VERSION}/package-description
+lib/uri-encode-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/URI/Encode.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/URI/Encode.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/URI/Encode.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/uri-encode-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/uri-encode-${PKGVERSION}/html/CHANGELOG.md
+share/doc/${HS_PLATFORM}/uri-encode-${PKGVERSION}/html/LICENSE
+share/doc/${HS_PLATFORM}/uri-encode-${PKGVERSION}/html/Network-URI-Encode.html
+share/doc/${HS_PLATFORM}/uri-encode-${PKGVERSION}/html/README.md
+share/doc/${HS_PLATFORM}/uri-encode-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/uri-encode-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/uri-encode-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/uri-encode-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/uri-encode-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/uri-encode-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/uri-encode-${PKGVERSION}/html/synopsis.png
+share/doc/${HS_PLATFORM}/uri-encode-${PKGVERSION}/html/uri-encode.haddock
