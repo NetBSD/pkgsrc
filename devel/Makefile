@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3657 2022/02/23 16:11:15 pho Exp $
+# $NetBSD: Makefile,v 1.3658 2022/02/23 16:11:46 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -512,6 +512,7 @@ SUBDIR+=	hs-blaze-builder
 SUBDIR+=	hs-blaze-textual
 SUBDIR+=	hs-bytestring-builder
 SUBDIR+=	hs-call-stack
+SUBDIR+=	hs-cborg
 SUBDIR+=	hs-cereal
 SUBDIR+=	hs-cmdargs
 SUBDIR+=	hs-code-page
