@@ -1,0 +1,16 @@
+Atomically write to a file on POSIX-compliant systems while preserving
+permissions.
+
+On most Unix systems, mv is an atomic operation. This makes it simple to
+write to a file atomically just by using the mv operation. However, this
+will destroy the permissions on the original file. This library does the
+following to preserve permissions while atomically writing to a file:
+
+* If an original file exists, take those permissions and apply them to the
+  temp file before mving the file into place.
+
+* If the original file does not exist, create a following with default
+  permissions (based on the currently-active umask).
+
+This way, when the file is mv'ed into place, the permissions will be the
+ones held by the original file.
