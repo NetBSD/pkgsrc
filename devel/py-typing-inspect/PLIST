@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/23 11:30:04 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/typing_inspect.py
+${PYSITELIB}/typing_inspect.pyc
+${PYSITELIB}/typing_inspect.pyo
