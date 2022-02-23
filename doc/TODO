@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21554 2022/02/23 11:30:57 wiz Exp $
+$NetBSD: TODO,v 1.21555 2022/02/23 17:18:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1314,6 +1314,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o openrct2-0.3.3
 	o openslp-2.0.0
 	o opensmtpd-6.8.0p2
+	o openssh-8.9
 	o openssl-3.0.0
 	o opera-26
 	o or1k-none-elf-binutils-2.36.1
@@ -1660,7 +1661,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o spin-649
 	o spiped-1.6.1b
 	o spl-1.0pre6
-	o sqlite-3.38
 	o squeak-5.0
 	o squeak-vm-4.10.2.2765
 	o squid-5.4
