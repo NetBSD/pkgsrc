@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1113 2022/02/23 11:36:55 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1114 2022/02/23 11:40:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1452,3 +1452,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/py-typing-inspect version 0.7.1 [wiz 2022-02-23]
 	Added lang/py-libcst version 0.4.1 [wiz 2022-02-23]
 	Added lang/py-lark-parser version 0.12.0 [wiz 2022-02-23]
+	Added devel/py-hypothesmith version 0.2.0 [wiz 2022-02-23]
