@@ -1,0 +1,2 @@
+This package allows you to uri encode and uri decode Strings, Texts and
+ByteString values.
