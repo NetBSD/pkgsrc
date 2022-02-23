@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.41 2022/02/12 08:38:15 pho Exp $
+# $NetBSD: haskell.mk,v 1.42 2022/02/23 16:03:00 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages. Package
 # configuration, building, installation, registration and unregistration
@@ -18,6 +18,13 @@
 #
 #	Possible values: 0 1 2
 #       Default value: 2
+#
+# HASKELL_ENABLE_DYNAMIC_EXECUTABLE
+#	Whether executables in the package should be linked dynamically or
+#	not.
+#
+#	Possible values: yes, no
+#	Default value: inherits ${HASKELL_ENABLE_SHARED_LIBRARY}
 #
 # User-settable variables:
 #
@@ -62,6 +69,7 @@ _SYS_VARS.haskell= \
 	HOMEPAGE UNLIMIT_RESOURCES PREFIX
 _DEF_VARS.haskell= \
 	BUILDLINK_PASSTHRU_DIRS \
+	HASKELL_ENABLE_DYNAMIC_EXECUTABLE \
 	HASKELL_OPTIMIZATION_LEVEL \
 	HASKELL_PKG_NAME \
 	USE_LANGUAGES \
@@ -110,6 +118,7 @@ TOOLS_FAIL+=	pkg-config
 UNLIMIT_RESOURCES+=	datasize virtualsize
 
 HASKELL_OPTIMIZATION_LEVEL?=		2
+HASKELL_ENABLE_DYNAMIC_EXECUTABLE?=	${HASKELL_ENABLE_SHARED_LIBRARY}
 HASKELL_ENABLE_SHARED_LIBRARY?=		yes
 HASKELL_ENABLE_LIBRARY_PROFILING?=	yes
 HASKELL_ENABLE_HADDOCK_DOCUMENTATION?=	yes
@@ -150,10 +159,16 @@ PKGSRC_OVERRIDE_MKPIE=	yes
 CONFIGURE_ARGS+=	--ghc-option=-fPIC --ghc-option=-pie
 .endif
 
-.if ${HASKELL_ENABLE_SHARED_LIBRARY} == "yes"
-CONFIGURE_ARGS+=	--enable-shared --enable-executable-dynamic
+.if ${HASKELL_ENABLE_DYNAMIC_EXECUTABLE} == "yes"
+CONFIGURE_ARGS+=	--enable-executable-dynamic
 .else
-CONFIGURE_ARGS+=	--disable-shared --disable-executable-dynamic
+CONFIGURE_ARGS+=	--disable-executable-dynamic
+.endif
+
+.if ${HASKELL_ENABLE_SHARED_LIBRARY} == "yes"
+CONFIGURE_ARGS+=	--enable-shared
+.else
+CONFIGURE_ARGS+=	--disable-shared
 .endif
 
 .if ${HASKELL_ENABLE_LIBRARY_PROFILING} == "yes"
