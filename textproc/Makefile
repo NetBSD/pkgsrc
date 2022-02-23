@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1292 2022/02/23 16:55:33 pho Exp $
+# $NetBSD: Makefile,v 1.1293 2022/02/23 16:56:36 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -346,6 +346,7 @@ SUBDIR+=	hs-skylighting-core
 SUBDIR+=	hs-stringsearch
 SUBDIR+=	hs-tagsoup
 SUBDIR+=	hs-texmath
+SUBDIR+=	hs-text-manipulate
 SUBDIR+=	hs-text-short
 SUBDIR+=	hs-unicode-collation
 SUBDIR+=	hs-unicode-data
