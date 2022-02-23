@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1114 2022/02/23 11:40:30 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1115 2022/02/23 11:46:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1453,3 +1453,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added lang/py-libcst version 0.4.1 [wiz 2022-02-23]
 	Added lang/py-lark-parser version 0.12.0 [wiz 2022-02-23]
 	Added devel/py-hypothesmith version 0.2.0 [wiz 2022-02-23]
+	Updated devel/py-attrs to 21.4.0 [adam 2022-02-23]
+	Updated devel/py-py to 1.11.0 [adam 2022-02-23]
