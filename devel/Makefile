@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3656 2022/02/23 11:40:21 wiz Exp $
+# $NetBSD: Makefile,v 1.3657 2022/02/23 16:11:15 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -560,6 +560,7 @@ SUBDIR+=	hs-ghc-trace-events
 SUBDIR+=	hs-ghcide
 SUBDIR+=	hs-githash
 SUBDIR+=	hs-gitrev
+SUBDIR+=	hs-half
 SUBDIR+=	hs-hashable
 SUBDIR+=	hs-hashtables
 SUBDIR+=	hs-haskell-lexer
