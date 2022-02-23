@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1145 2022/02/23 16:55:56 pho Exp $
+$NetBSD: CHANGES-2022,v 1.1146 2022/02/23 16:56:29 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1485,3 +1485,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added textproc/hs-charset version 0.3.9 [pho 2022-02-23]
 	Added textproc/hs-parsers version 0.12.10 [pho 2022-02-23]
 	Added devel/hs-repline version 0.4.0.0 [pho 2022-02-23]
+	Added textproc/hs-text-manipulate version 0.3.0.0 [pho 2022-02-23]
