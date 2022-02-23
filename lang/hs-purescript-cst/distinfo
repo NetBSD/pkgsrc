@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2022/02/23 16:19:45 pho Exp $
+
+BLAKE2s (purescript-cst-0.4.0.0.tar.gz) = 641d04e477314e6f302c9459fdf0fa5004851d1d0ced15f75ec3c1af881aaee3
+SHA512 (purescript-cst-0.4.0.0.tar.gz) = bb25df7774b215ce99eb85a0649df95226b2d133e4330f6510313b0b4f5b4da5c4c9491efdef0dd8a99ed104365fae47818c73a7c4c676ce203711b947df72d0
+Size (purescript-cst-0.4.0.0.tar.gz) = 78378 bytes
+SHA1 (patch-purescript-cst.cabal) = 817ad7e3a87ddea2444e54578e70cd2ed6be3ba2
+SHA1 (patch-src_Language_PureScript_AST_Declarations.hs) = 47f66a587a113ef56aa4a58d75cc56f2eb0e0d7c
+SHA1 (patch-src_Language_PureScript_CST_Parser.y) = ba484266aac19a9c38f395fa6aeb3394c2e609d6
+SHA1 (patch-src_Language_PureScript_Names.hs) = 2a318f048ba9cf564c066e2704226766e26e884d
