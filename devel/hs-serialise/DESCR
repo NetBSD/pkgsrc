@@ -1,0 +1,9 @@
+This package (formerly binary-serialise-cbor) provides pure, efficient
+serialization of Haskell values directly into ByteStrings for storage or
+transmission purposes. By providing a set of type class instances, you can
+also serialise any custom data type you have as well.
+
+The underlying binary format used is the 'Concise Binary Object
+Representation', or CBOR, specified in RFC 7049. As a result, serialised
+Haskell values have implicit structure outside of the Haskell program
+itself, meaning they can be inspected or analyzed without custom tools.
