@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1120 2022/02/23 16:11:38 pho Exp $
+$NetBSD: CHANGES-2022,v 1.1121 2022/02/23 16:12:18 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1460,3 +1460,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added textproc/hs-boxes version 0.1.5 [pho 2022-02-23]
 	Added devel/hs-half version 0.3.1 [pho 2022-02-23]
 	Added devel/hs-cborg version 0.2.6.0 [pho 2022-02-23]
+	Added lang/hs-language-javascript version 0.7.1.0 [pho 2022-02-23]
