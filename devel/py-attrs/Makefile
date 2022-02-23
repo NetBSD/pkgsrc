@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2022/01/04 20:52:51 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2022/02/23 11:43:41 adam Exp $
 
-DISTNAME=	attrs-19.3.0
+DISTNAME=	attrs-21.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/attrs/}
 
@@ -22,7 +21,7 @@ PYTHON_VERSIONED_DEPENDENCIES+=	hypothesis:test
 USE_LANGUAGES=	# none
 
 do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"

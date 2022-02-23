@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2019/10/15 07:53:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/02/23 11:43:41 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -9,6 +9,10 @@ ${PYSITELIB}/attr/__init__.py
 ${PYSITELIB}/attr/__init__.pyc
 ${PYSITELIB}/attr/__init__.pyi
 ${PYSITELIB}/attr/__init__.pyo
+${PYSITELIB}/attr/_cmp.py
+${PYSITELIB}/attr/_cmp.pyc
+${PYSITELIB}/attr/_cmp.pyi
+${PYSITELIB}/attr/_cmp.pyo
 ${PYSITELIB}/attr/_compat.py
 ${PYSITELIB}/attr/_compat.pyc
 ${PYSITELIB}/attr/_compat.pyo
@@ -21,6 +25,9 @@ ${PYSITELIB}/attr/_funcs.pyo
 ${PYSITELIB}/attr/_make.py
 ${PYSITELIB}/attr/_make.pyc
 ${PYSITELIB}/attr/_make.pyo
+${PYSITELIB}/attr/_next_gen.py
+${PYSITELIB}/attr/_next_gen.pyc
+${PYSITELIB}/attr/_next_gen.pyo
 ${PYSITELIB}/attr/_version_info.py
 ${PYSITELIB}/attr/_version_info.pyc
 ${PYSITELIB}/attr/_version_info.pyi
@@ -38,7 +45,31 @@ ${PYSITELIB}/attr/filters.pyc
 ${PYSITELIB}/attr/filters.pyi
 ${PYSITELIB}/attr/filters.pyo
 ${PYSITELIB}/attr/py.typed
+${PYSITELIB}/attr/setters.py
+${PYSITELIB}/attr/setters.pyc
+${PYSITELIB}/attr/setters.pyi
+${PYSITELIB}/attr/setters.pyo
 ${PYSITELIB}/attr/validators.py
 ${PYSITELIB}/attr/validators.pyc
 ${PYSITELIB}/attr/validators.pyi
 ${PYSITELIB}/attr/validators.pyo
+${PYSITELIB}/attrs/__init__.py
+${PYSITELIB}/attrs/__init__.pyc
+${PYSITELIB}/attrs/__init__.pyi
+${PYSITELIB}/attrs/__init__.pyo
+${PYSITELIB}/attrs/converters.py
+${PYSITELIB}/attrs/converters.pyc
+${PYSITELIB}/attrs/converters.pyo
+${PYSITELIB}/attrs/exceptions.py
+${PYSITELIB}/attrs/exceptions.pyc
+${PYSITELIB}/attrs/exceptions.pyo
+${PYSITELIB}/attrs/filters.py
+${PYSITELIB}/attrs/filters.pyc
+${PYSITELIB}/attrs/filters.pyo
+${PYSITELIB}/attrs/py.typed
+${PYSITELIB}/attrs/setters.py
+${PYSITELIB}/attrs/setters.pyc
+${PYSITELIB}/attrs/setters.pyo
+${PYSITELIB}/attrs/validators.py
+${PYSITELIB}/attrs/validators.pyc
+${PYSITELIB}/attrs/validators.pyo
