@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/23 16:15:22 pho Exp $
+
+BLAKE2s (stm-chans-3.0.0.6.tar.gz) = ca5bc2d43cb36b2f3858ad02341bf7961c2b7392a4638fce8da08699cc994141
+SHA512 (stm-chans-3.0.0.6.tar.gz) = da8f914f15c31c3c02b3e41cb01017fc8208fa47f24b5a9d90b92b17cc95c13a32b5cc14bd687a773276cd6e88c3ff80d4094b5899160abdd936df70618b122f
+Size (stm-chans-3.0.0.6.tar.gz) = 9680 bytes
