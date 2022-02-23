@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/02/23 08:48:27 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/02/23 23:23:06 wiz Exp $
 
 DISTNAME=	setuptools-rust-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-semantic_version>=2.8.2:../../devel/py-semantic_version
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=46.1:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4.3:../../devel/py-typing-extensions
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.3.2:../../devel/py-setuptools_scm
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
