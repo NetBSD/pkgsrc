@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/23 16:17:07 pho Exp $
+lib/pattern-arrows-${PKGVERSION}/${HS_VERSION}/package-description
+lib/pattern-arrows-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/${HS_PLATFORM}/${HS_PKGID}/Control/PatternArrows.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Control/PatternArrows.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Control/PatternArrows.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/pattern-arrows-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/pattern-arrows-${PKGVERSION}/html/Control-PatternArrows.html
+share/doc/${HS_PLATFORM}/pattern-arrows-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/pattern-arrows-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/pattern-arrows-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/pattern-arrows-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/pattern-arrows-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/pattern-arrows-${PKGVERSION}/html/pattern-arrows.haddock
+share/doc/${HS_PLATFORM}/pattern-arrows-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/pattern-arrows-${PKGVERSION}/html/synopsis.png
