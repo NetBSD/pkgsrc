@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/23 16:14:46 pho Exp $
+
+BLAKE2s (microlens-platform-0.4.2.1.tar.gz) = fb1a13de39edc941169b7769517155d332d3889e843bb39affcd4c258fd2c1b0
+SHA512 (microlens-platform-0.4.2.1.tar.gz) = 69bb073c10b804cc2bd9551903fdce74a5e597689a9aee0a842e4f5630e5e9b5ce4eb78acb421613365f5aa34a383c8fb60cf6c4bca1823866e2ad4a91a6c712
+Size (microlens-platform-0.4.2.1.tar.gz) = 4960 bytes
