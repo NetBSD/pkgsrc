@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1289 2022/02/21 13:45:48 fcambus Exp $
+# $NetBSD: Makefile,v 1.1290 2022/02/23 16:10:41 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -297,6 +297,7 @@ SUBDIR+=	hs-appar
 SUBDIR+=	hs-attoparsec
 SUBDIR+=	hs-blaze-html
 SUBDIR+=	hs-blaze-markup
+SUBDIR+=	hs-boxes
 SUBDIR+=	hs-case-insensitive
 SUBDIR+=	hs-cassava
 SUBDIR+=	hs-cassava-megaparsec
