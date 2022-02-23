@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/23 16:53:38 pho Exp $
+
+BLAKE2s (dotgen-0.4.3.tar.gz) = 798bdc8c983fec198b5d555010ffebc57aa364af14e500f645669381f7d941b8
+SHA512 (dotgen-0.4.3.tar.gz) = 145d71f331fde18452fe262a385dd48e8010b7a11fa12cd938c36e80ae03cd093fead73a02f0314d88c84ae9d2e63392dd10557d7615313a34262c6e41aa693f
+Size (dotgen-0.4.3.tar.gz) = 4955 bytes
