@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/02/17 15:57:07 pho Exp $
+# $NetBSD: Makefile,v 1.5 2022/02/23 16:01:20 jperkin Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -102,7 +102,7 @@ CONFIGURE_ENV+=	CONF_GCC_LINKER_OPTS_STAGE${stage}=${LDFLAGS:M*:Q}
 .  if ${stage} == 0
 CONFIGURE_ENV+=	CONF_CC_OPTS_STAGE${stage}=${CFLAGS:M*:Q}
 .  else
-CONFIGURE_ENV+=	CONF_HC_OPTS_STAGE${stage}=-fPIC\ -pie
+CONFIGURE_ENV+=	CONF_HC_OPTS_STAGE${stage}=-fPIC\ ${_OPSYS_SUPPORTS_MKPIE:D-pie}
 CONFIGURE_ENV+=	CONF_CC_OPTS_STAGE${stage}=${CFLAGS:M*:Q}\ -fPIC
 .  endif
 .endfor
