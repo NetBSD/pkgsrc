@@ -1,0 +1,14 @@
+This package provides first class functional references in Van Laarhoven
+style supporting the following optics:
+
+* Lenses (view, over)
+* Traversals (toListOf, matching, over)
+* Setters (over)
+* Grates (zipWithOf, under, review)
+* Resetters (under)
+* Adapters (view, review)
+* Grids (toListOf, over / under, review)
+* Prisms (matching, over / under, review)
+* Getters (view)
+* Folders (toListOf)
+* Reviewers (review)
