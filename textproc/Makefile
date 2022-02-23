@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1290 2022/02/23 16:10:41 pho Exp $
+# $NetBSD: Makefile,v 1.1291 2022/02/23 16:55:01 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -302,6 +302,7 @@ SUBDIR+=	hs-case-insensitive
 SUBDIR+=	hs-cassava
 SUBDIR+=	hs-cassava-megaparsec
 SUBDIR+=	hs-cgrep
+SUBDIR+=	hs-charset
 SUBDIR+=	hs-cheapskate
 SUBDIR+=	hs-citeproc
 SUBDIR+=	hs-cmark-gfm
