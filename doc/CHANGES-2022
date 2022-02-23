@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1116 2022/02/23 16:09:00 pho Exp $
+$NetBSD: CHANGES-2022,v 1.1117 2022/02/23 16:09:49 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1456,3 +1456,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-attrs to 21.4.0 [adam 2022-02-23]
 	Updated devel/py-py to 1.11.0 [adam 2022-02-23]
 	Added converters/hs-aeson-better-errors version 0.9.1.0 [pho 2022-02-23]
+	Added www/hs-bower-json version 1.0.0.1 [pho 2022-02-23]
