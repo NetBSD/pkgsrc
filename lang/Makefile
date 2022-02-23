@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.634 2022/02/23 16:20:33 pho Exp $
+# $NetBSD: Makefile,v 1.635 2022/02/23 16:22:47 pho Exp $
 #
 
 COMMENT=	Programming languages
@@ -206,6 +206,7 @@ SUBDIR+=	php81
 SUBDIR+=	picoc
 SUBDIR+=	pict
 SUBDIR+=	polyml
+SUBDIR+=	purescript
 SUBDIR+=	py-asttokens
 SUBDIR+=	py-basicproperty
 SUBDIR+=	py-byterun
