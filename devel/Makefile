@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3662 2022/02/23 16:15:01 pho Exp $
+# $NetBSD: Makefile,v 1.3663 2022/02/23 16:15:35 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -638,6 +638,7 @@ SUBDIR+=	hs-some
 SUBDIR+=	hs-sorted-list
 SUBDIR+=	hs-split
 SUBDIR+=	hs-splitmix
+SUBDIR+=	hs-stm-chans
 SUBDIR+=	hs-stm-containers
 SUBDIR+=	hs-stm-hamt
 SUBDIR+=	hs-storable-record
