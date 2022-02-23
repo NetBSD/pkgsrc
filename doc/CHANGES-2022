@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1111 2022/02/23 11:30:56 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1112 2022/02/23 11:33:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1450,3 +1450,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-httptools to 0.4.0 [adam 2022-02-23]
 	Updated www/so to 0.4.6 [pin 2022-02-23]
 	Added devel/py-typing-inspect version 0.7.1 [wiz 2022-02-23]
+	Added lang/py-libcst version 0.4.1 [wiz 2022-02-23]
