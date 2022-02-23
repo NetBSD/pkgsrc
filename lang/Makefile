@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.629 2022/02/11 12:08:48 pho Exp $
+# $NetBSD: Makefile,v 1.630 2022/02/23 11:33:07 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -214,6 +214,7 @@ SUBDIR+=	py-hy
 SUBDIR+=	py-inflect
 SUBDIR+=	py-js2py
 SUBDIR+=	py-jsparser
+SUBDIR+=	py-libcst
 SUBDIR+=	py-lsp-server
 SUBDIR+=	py-mypy
 SUBDIR+=	py-mypy_extensions
