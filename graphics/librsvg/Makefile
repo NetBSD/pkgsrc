@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.135 2021/12/08 16:02:12 adam Exp $
+# $NetBSD: Makefile,v 1.136 2022/02/23 20:45:44 wiz Exp $
 
-DISTNAME=	librsvg-2.50.7
-PKGREVISION=	1
+DISTNAME=	librsvg-2.52.6
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -20,6 +19,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-tools
 #CONFIGURE_ARGS+=	--enable-Bsymbolic=auto
 CONFIGURE_ARGS+=	--disable-Bsymbolic
+
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.cairo-gobject}/lib
 
 PKGCONFIG_OVERRIDE=	librsvg.pc.in
 
