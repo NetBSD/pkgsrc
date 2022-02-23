@@ -1,0 +1,2 @@
+Haskeline wrapper for GHCi-like REPL interfaces. Composable with normal mtl
+transformers.
