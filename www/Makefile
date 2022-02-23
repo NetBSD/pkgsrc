@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1614 2022/02/23 16:21:22 pho Exp $
+# $NetBSD: Makefile,v 1.1615 2022/02/23 16:22:01 pho Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -158,6 +158,7 @@ SUBDIR+=	hs-js-flot
 SUBDIR+=	hs-js-jquery
 SUBDIR+=	hs-wai
 SUBDIR+=	hs-wai-logger
+SUBDIR+=	hs-wai-websockets
 SUBDIR+=	hs-warp
 SUBDIR+=	hs-warp-tls
 SUBDIR+=	hs-websockets
