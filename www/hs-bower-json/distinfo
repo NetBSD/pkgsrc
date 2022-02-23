@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2022/02/23 16:09:43 pho Exp $
+
+BLAKE2s (bower-json-1.0.0.1.tar.gz) = bd8a3e94a160cbfcd959c1b3c026b660472af241a40790d466d8f718f0733e99
+SHA512 (bower-json-1.0.0.1.tar.gz) = 809a3b7b2653dc23e9704ab38ae446663a23edf071a72134de0da24dfeeaa8e714e565ba6429949bb4507e49e24cbeaaba1547a517b8fff6f35be619fb121928
+Size (bower-json-1.0.0.1.tar.gz) = 6721 bytes
+SHA1 (patch-src_Web_Bower_PackageMeta_Internal.hs) = 7f1eb26db7c12649556e8183b5ed734d01c77096
