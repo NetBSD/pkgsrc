@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/12/14 06:16:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/02/23 11:45:52 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -95,12 +95,13 @@ ${PYSITELIB}/py/_std.pyo
 ${PYSITELIB}/py/_vendored_packages/__init__.py
 ${PYSITELIB}/py/_vendored_packages/__init__.pyc
 ${PYSITELIB}/py/_vendored_packages/__init__.pyo
-${PYSITELIB}/py/_vendored_packages/apipkg-1.5.dist-info/INSTALLER
-${PYSITELIB}/py/_vendored_packages/apipkg-1.5.dist-info/METADATA
-${PYSITELIB}/py/_vendored_packages/apipkg-1.5.dist-info/RECORD
-${PYSITELIB}/py/_vendored_packages/apipkg-1.5.dist-info/REQUESTED
-${PYSITELIB}/py/_vendored_packages/apipkg-1.5.dist-info/WHEEL
-${PYSITELIB}/py/_vendored_packages/apipkg-1.5.dist-info/top_level.txt
+${PYSITELIB}/py/_vendored_packages/apipkg-2.0.0.dist-info/INSTALLER
+${PYSITELIB}/py/_vendored_packages/apipkg-2.0.0.dist-info/LICENSE
+${PYSITELIB}/py/_vendored_packages/apipkg-2.0.0.dist-info/METADATA
+${PYSITELIB}/py/_vendored_packages/apipkg-2.0.0.dist-info/RECORD
+${PYSITELIB}/py/_vendored_packages/apipkg-2.0.0.dist-info/REQUESTED
+${PYSITELIB}/py/_vendored_packages/apipkg-2.0.0.dist-info/WHEEL
+${PYSITELIB}/py/_vendored_packages/apipkg-2.0.0.dist-info/top_level.txt
 ${PYSITELIB}/py/_vendored_packages/apipkg/__init__.py
 ${PYSITELIB}/py/_vendored_packages/apipkg/__init__.pyc
 ${PYSITELIB}/py/_vendored_packages/apipkg/__init__.pyo
