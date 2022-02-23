@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/23 16:19:03 pho Exp $
+
+BLAKE2s (serialise-0.2.4.0.tar.gz) = 53efde4ec2c0fef635430ad6d37e5c85f9df61805bbb12743c0eaf7a1b4a4b96
+SHA512 (serialise-0.2.4.0.tar.gz) = de575c239ae8802ef8f1342a8a3c3360e83971a9178369cb0e9eaa1698ffe189a51de62ba7b6f4ff25a582f10bf0e346daf39a4e56792ba34d6df550eb34043f
+Size (serialise-0.2.4.0.tar.gz) = 75100 bytes
