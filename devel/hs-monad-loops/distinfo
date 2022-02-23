@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/23 16:15:57 pho Exp $
+
+BLAKE2s (monad-loops-0.4.3.tar.gz) = 8e3891d50e579f9ea74422919d4e70dacb473b527ce4bbda7d7c6e062442e7a8
+SHA512 (monad-loops-0.4.3.tar.gz) = 41a1314777661a411acf62dfa25cbb1a59fedd5d60d1a2b8566a3dd64dec361ab1fe35827320529a723a612e0443571ce38b17fa900eb8d5289bc52f653d47a5
+Size (monad-loops-0.4.3.tar.gz) = 4996 bytes
