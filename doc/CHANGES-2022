@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1148 2022/02/23 16:58:35 pho Exp $
+$NetBSD: CHANGES-2022,v 1.1149 2022/02/23 17:08:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1488,3 +1488,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Added textproc/hs-text-manipulate version 0.3.0.0 [pho 2022-02-23]
 	Added net/hs-uri-encode version 1.5.0.7 [pho 2022-02-23]
 	Added lang/dhall version 1.40.2 [pho 2022-02-23]
+	Updated databases/sqlite3 to 3.38.0 [adam 2022-02-23]
+	Updated databases/sqlite3-docs to 3.38.0 [adam 2022-02-23]
+	Updated databases/sqlite3-tcl to 3.38.0 [adam 2022-02-23]
+	Updated devel/lemon to 1.0.3.38.0 [adam 2022-02-23]
