@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1165 2022/02/24 01:13:11 pho Exp $
+$NetBSD: CHANGES-2022,v 1.1166 2022/02/24 01:15:39 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1508,3 +1508,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-pointed version 5.0.3 [pho 2022-02-24]
 	Added devel/hs-vector-instances version 3.4 [pho 2022-02-24]
 	Added devel/hs-mono-traversable-instances version 0.1.1.0 [pho 2022-02-24]
+	Added devel/hs-mutable-containers version 0.3.4 [pho 2022-02-24]
