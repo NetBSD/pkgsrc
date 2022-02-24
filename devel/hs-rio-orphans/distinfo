@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/24 01:01:05 pho Exp $
+
+BLAKE2s (rio-orphans-0.1.2.0.tar.gz) = 8be43f5a399c60eb5ddf946331797fb1812b080afd9dbcf3fb42c8c978737ca5
+SHA512 (rio-orphans-0.1.2.0.tar.gz) = 85e883977e161161e5ba8f4fa6d13026d71f7367bac262307f9a8cfdc0316b71a490fcb6c15737919a6b4e73b3355b413161e09f5167c95b1f0c5a22c045f7ac
+Size (rio-orphans-0.1.2.0.tar.gz) = 3251 bytes
