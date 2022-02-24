@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21557 2022/02/23 20:45:53 wiz Exp $
+$NetBSD: TODO,v 1.21558 2022/02/24 11:00:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -593,7 +593,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cxref-1.6e
 	o cygwin_lib-1.5.24.2
 	o cyrus-imapd-2.5.4
-	o cyrus-sasl-2.1.28
 	o dap-3.10
 	o dar-2.4.14
 	o darktable-3.8
