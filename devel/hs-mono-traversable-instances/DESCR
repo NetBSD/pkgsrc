@@ -1,0 +1,4 @@
+Extra typeclass instances for mono-traversable.
+
+Set up this way to allow mono-traversable itself to have minimal
+dependencies.

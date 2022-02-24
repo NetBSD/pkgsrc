@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/24 01:13:05 pho Exp $
+
+BLAKE2s (mono-traversable-instances-0.1.1.0.tar.gz) = 90addca33aa697ba412e48f156e4b17744a1b7cc11a40881e644784daed0caef
+SHA512 (mono-traversable-instances-0.1.1.0.tar.gz) = 367b92fc60c397816fd71d88133a4dd14f91ee927470b6c7967cf1f8f72de8f91c475a6a504fd4b3e520ceb18950ff300bb9530fccda7a7a81573ac93af41513
+Size (mono-traversable-instances-0.1.1.0.tar.gz) = 2724 bytes
