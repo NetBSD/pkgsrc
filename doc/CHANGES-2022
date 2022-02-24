@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1170 2022/02/24 01:18:29 pho Exp $
+$NetBSD: CHANGES-2022,v 1.1171 2022/02/24 01:19:15 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1513,3 +1513,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-classy-prelude version 1.5.0.2 [pho 2022-02-24]
 	Added devel/hs-semver-range version 0.2.8 [pho 2022-02-24]
 	Added sysutils/hs-hostname version 1.0 [pho 2022-02-24]
+	Added devel/hs-managed version 1.0.9 [pho 2022-02-24]
