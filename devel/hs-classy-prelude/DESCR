@@ -1,0 +1,14 @@
+A better Prelude. Haskell's Prelude needs to maintain backwards
+compatibility and has many aspects that no longer represents best
+practice. The goals of classy-prelude are:
+
+* remove all partial functions
+* modernize data structures
+  * generally use Text instead of String
+  * encourage the use of appropriate data structures such as Vectors or
+    HashMaps instead of always using lists and associated lists
+* reduce import lists and the need for qualified imports
+
+classy-prelude should only be used by application developers. Library
+authors should consider using mono-traversable, which classy-prelude builds
+upon.
