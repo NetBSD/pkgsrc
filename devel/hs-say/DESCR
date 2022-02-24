@@ -1,0 +1,16 @@
+Send textual messages to a Handle in a thread-friendly way.
+
+The motivation for this package is described in a blog post on Haskell's
+Missing Concurrency Basics
+(http://www.snoyman.com/blog/2016/11/haskells-missing-concurrency-basics). The
+simple explanation is, when writing a line of textual data to a Handle -
+such as sending some messages t o ther terminal - we'd like to have the
+following properties:
+
+* Properly handle character encoding settings on the Handle
+* For reasonably sized messages, ensure that the entire message is written
+  in one chunk to avoid interleaving data with other threads
+  * This includes the trailing newline character
+* Avoid unnecessary memory allocations and copies
+* Minimize locking
+* Provide a simple API
