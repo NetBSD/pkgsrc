@@ -1,0 +1,3 @@
+Provides parsing of semvers and range indicators, as well as logic such as
+version ordering and determining whether a given version falls in a given
+range.
