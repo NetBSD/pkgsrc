@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.994 2022/02/16 10:07:53 pho Exp $
+# $NetBSD: Makefile,v 1.995 2022/02/24 01:18:37 pho Exp $
 #
 
 COMMENT=	System utilities
@@ -342,6 +342,7 @@ SUBDIR+=	hs-byteorder
 SUBDIR+=	hs-easy-file
 SUBDIR+=	hs-fast-logger
 SUBDIR+=	hs-filepattern
+SUBDIR+=	hs-hostname
 SUBDIR+=	hs-hslogger
 SUBDIR+=	hs-hslua-module-path
 SUBDIR+=	hs-opentelemetry
