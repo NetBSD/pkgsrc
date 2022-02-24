@@ -1,0 +1,2 @@
+Open a web browser from Haskell. Currently BSD, Linux, OS X and Windows are
+supported.
