@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/24 01:17:02 pho Exp $
+
+BLAKE2s (classy-prelude-1.5.0.2.tar.gz) = 270820662263f9ae5b8f8318560965f72145bba75c5b8b89dd0459773cc76564
+SHA512 (classy-prelude-1.5.0.2.tar.gz) = 4cc39f6da6f10e38a82fa189445df3dfc9ae2383fba6c6142dcabf4ed65fa8cd7784618d44fe8f2f498dda7ef0ea004853adcde932817098d67ee3558707b62d
+Size (classy-prelude-1.5.0.2.tar.gz) = 12142 bytes
