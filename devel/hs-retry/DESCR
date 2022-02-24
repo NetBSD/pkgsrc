@@ -1,0 +1,8 @@
+This package exposes combinators that can wrap arbitrary monadic
+actions. They run the action and potentially retry running it with some
+configurable delay for a configurable number of times. The purpose is to
+make it easier to work with IO and especially network IO actions that often
+experience temporary failure and warrant retrying of the original
+action. For example, a database query may time out for a while, in which
+case we should hang back for a bit and retry the query instead of simply
+raising an exception.
