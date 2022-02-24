@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1175 2022/02/24 01:22:53 pho Exp $
+$NetBSD: CHANGES-2022,v 1.1176 2022/02/24 01:23:31 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1518,3 +1518,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added sysutils/hs-system-filepath version 0.4.14 [pho 2022-02-24]
 	Added sysutils/hs-system-fileio version 0.3.16.4 [pho 2022-02-24]
 	Added devel/hs-turtle version 1.5.24 [pho 2022-02-24]
+	Added devel/hs-versions version 5.0.2 [pho 2022-02-24]
