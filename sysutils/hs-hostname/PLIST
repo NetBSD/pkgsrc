@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/24 01:18:23 pho Exp $
+lib/hostname-${PKGVERSION}/${HS_VERSION}/package-description
+lib/hostname-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/HostName.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/HostName.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/HostName.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+share/doc/${HS_PLATFORM}/hostname-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/hostname-${PKGVERSION}/html/Network-HostName.html
+share/doc/${HS_PLATFORM}/hostname-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/hostname-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/hostname-${PKGVERSION}/html/hostname.haddock
+share/doc/${HS_PLATFORM}/hostname-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/hostname-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/hostname-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/hostname-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/hostname-${PKGVERSION}/html/synopsis.png
