@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3688 2022/02/24 01:17:15 pho Exp $
+# $NetBSD: Makefile,v 1.3689 2022/02/24 01:17:51 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -656,6 +656,7 @@ SUBDIR+=	hs-safe
 SUBDIR+=	hs-safe-exceptions
 SUBDIR+=	hs-say
 SUBDIR+=	hs-semialign
+SUBDIR+=	hs-semver-range
 SUBDIR+=	hs-serialise
 SUBDIR+=	hs-setlocale
 SUBDIR+=	hs-some
