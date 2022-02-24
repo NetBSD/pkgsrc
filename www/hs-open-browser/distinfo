@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2022/02/24 00:59:49 pho Exp $
+
+BLAKE2s (open-browser-0.2.1.0.tar.gz) = 417691745051fc2383571f0a2a20f75c78abf870c508b7befa2a31172b0f1233
+SHA512 (open-browser-0.2.1.0.tar.gz) = 94ba71597c270b518742534b1b9b9a7ca0ede2eeb08a030b03cca6dbe6e5a2de363dc443bae907ca5c90b126aeb7dc5f5dd1eada95ca78a0ba1a8d472df4ada1
+Size (open-browser-0.2.1.0.tar.gz) = 2629 bytes
+SHA1 (patch-open-browser.cabal) = 210d93308d7de548fbb9ddb9a332ae2d4706aa51
