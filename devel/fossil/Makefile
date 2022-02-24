@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2021/12/08 16:03:57 adam Exp $
+# $NetBSD: Makefile,v 1.73 2022/02/24 11:03:13 js Exp $
 
-DISTNAME=	fossil-src-2.17
+DISTNAME=	fossil-src-2.18
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	https://fossil-scm.org/home/tarball/version-${PKGVERSION_NOREV}/
 
@@ -29,7 +28,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/fossil.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT-BSD2.txt \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/src/linenoise.h \
+	${INSTALL_DATA} ${WRKSRC}/extsrc/linenoise.h \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../security/openssl/buildlink3.mk"
