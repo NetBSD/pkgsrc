@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.14 2018/04/17 01:57:18 christos Exp $
-bin/saslcache
+@comment $NetBSD: PLIST,v 1.15 2022/02/24 11:00:04 wiz Exp $
 man/man8/saslauthd.8
-sbin/saslcache
+man/man8/testsaslauthd.8
 sbin/saslauthd
 sbin/testsaslauthd
 ${PLIST.ldap}share/doc/cyrus-saslauthd/LDAP_SASLAUTHD

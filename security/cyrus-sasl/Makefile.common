@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.33 2020/05/14 14:31:16 nia Exp $
+# $NetBSD: Makefile.common,v 1.34 2022/02/24 11:00:03 wiz Exp $
 #
 # used by security/cyrus-sasl/Makefile
 # used by security/cy2-anonymous/Makefile
@@ -17,16 +17,10 @@
 # This Makefile fragment should be included _below_ any SASL_PLUGIN
 # definition and _above_ any CONFIGURE_ARGS definitions.
 
-DISTNAME=		cyrus-sasl-2.1.27
-DISTFILES=		${DISTNAME}-rc7${EXTRACT_SUFX}
+DISTNAME=		cyrus-sasl-2.1.28
 CATEGORIES=		security
-MASTER_SITES=		https://www.cyrusimap.org/releases/
-MASTER_SITES+=		https://www.cyrusimap.org/releases/old/
-#MASTER_SITES+=		ftp://ftp.cyrusimap.org/cyrus-sasl/OLD-VERSIONS/
-#PATCHFILES+=		cyrus-sasl-dedad73e5e7a75d01a5f3d5a6702ab8ccd2ff40d.patch.v2
-#SITES.cyrus-sasl-dedad73e5e7a75d01a5f3d5a6702ab8ccd2ff40d.patch.v2= \
-#			-https://cgit.cyrus.foundation/cyrus-sasl/patch/?id=dedad73e5e7a75d01a5f3d5a6702ab8ccd2ff40d
-#PATCH_DIST_STRIP=	-p1
+MASTER_SITES+=		${MASTER_SITE_GITHUB:=cyrusimap/}
+GITHUB_RELEASE=		${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.cyrusimap.org/sasl/
