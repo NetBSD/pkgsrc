@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/24 01:17:37 pho Exp $
+
+BLAKE2s (semver-range-0.2.8.tar.gz) = 0a431a5f86673047c4aa1ea4b3daa16ac7ed1e6158d6ccdb1ec717de8e9dcd45
+SHA512 (semver-range-0.2.8.tar.gz) = ad98edc35d140da901d3cf99a769820320061ce4457daf99add1df6ef2f76c15697cd6dc8b6917a98d2d0eff6412064ce987a141e9c5cbe7ef634005d66d357b
+Size (semver-range-0.2.8.tar.gz) = 10846 bytes
