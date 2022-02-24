@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/24 01:12:21 pho Exp $
+lib/vector-instances-${PKGVERSION}/${HS_VERSION}/package-description
+lib/vector-instances-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Vector/Instances.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Vector/Instances.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Vector/Instances.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/vector-instances-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/vector-instances-${PKGVERSION}/html/Data-Vector-Instances.html
+share/doc/${HS_PLATFORM}/vector-instances-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/vector-instances-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/vector-instances-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/vector-instances-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/vector-instances-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/vector-instances-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/vector-instances-${PKGVERSION}/html/synopsis.png
+share/doc/${HS_PLATFORM}/vector-instances-${PKGVERSION}/html/vector-instances.haddock
