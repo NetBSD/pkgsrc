@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/24 01:26:50 pho Exp $
+
+BLAKE2s (with-utf8-1.0.2.3.tar.gz) = 4cc23250809432ed291a9d5b300bcf8f0ddf82c41d6a8fd3ef8385d875b7597d
+SHA512 (with-utf8-1.0.2.3.tar.gz) = 2a8661a804d5bdbe7ef437c4dc31e3781a9566e69c4465a4937e8ea47cc06a9d83614487424a4951b9cae4213743cc9c4570d9723d4216a71f480b582a4bc157
+Size (with-utf8-1.0.2.3.tar.gz) = 16615 bytes
