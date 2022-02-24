@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1161 2022/02/24 01:10:25 pho Exp $
+$NetBSD: CHANGES-2022,v 1.1162 2022/02/24 01:11:13 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1504,3 +1504,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-basic-prelude version 0.7.0 [pho 2022-02-24]
 	Added devel/hs-chunked-data version 0.3.1 [pho 2022-02-24]
 	Added devel/hs-dlist-instances version 0.1.1.1 [pho 2022-02-24]
+	Added devel/hs-keys version 3.12.3 [pho 2022-02-24]
