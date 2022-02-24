@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3676 2022/02/24 01:00:40 pho Exp $
+# $NetBSD: Makefile,v 1.3677 2022/02/24 01:01:19 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -642,6 +642,7 @@ SUBDIR+=	hs-reflection
 SUBDIR+=	hs-repline
 SUBDIR+=	hs-resourcet
 SUBDIR+=	hs-rio
+SUBDIR+=	hs-rio-orphans
 SUBDIR+=	hs-safe
 SUBDIR+=	hs-safe-exceptions
 SUBDIR+=	hs-semialign
