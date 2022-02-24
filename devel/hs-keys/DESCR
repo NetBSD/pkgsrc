@@ -1,0 +1,5 @@
+This package provides a bunch of ad hoc classes for accessing parts of a
+container.
+
+In practice this package is largely subsumed by the lens package, but it is
+maintained for now as it has much simpler dependencies.
