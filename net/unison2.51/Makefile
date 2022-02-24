@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.37 2022/02/24 13:47:48 gdt Exp $
+# $NetBSD: Makefile,v 1.38 2022/02/24 13:50:39 gdt Exp $
 
 # Currently, 2.51.x is the standard approach, and thus this package
 # produces a "unison-2.51.x" package which installs a "unison" binary.
-# When the next unison branch is released, we will likely again have
-# multiple unison packages, with whichever is the standard approach
-# using the unversioned name.
+# Now, unison no longer has the problem of interoperating within minor
+# verisons, and the update to 2.52 will likely rename this to
+# net/unison, as there is no longer any reason to have old versions.
 DISTNAME=	unison-2.51.5
 #PKGREVISION=	0
 CATEGORIES=	net
