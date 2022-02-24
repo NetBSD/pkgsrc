@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/24 01:11:41 pho Exp $
+lib/pointed-${PKGVERSION}/${HS_VERSION}/package-description
+lib/pointed-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Copointed.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Copointed.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Copointed.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Pointed.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Pointed.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Pointed.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/pointed-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/pointed-${PKGVERSION}/html/Data-Copointed.html
+share/doc/${HS_PLATFORM}/pointed-${PKGVERSION}/html/Data-Pointed.html
+share/doc/${HS_PLATFORM}/pointed-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/pointed-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/pointed-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/pointed-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/pointed-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/pointed-${PKGVERSION}/html/pointed.haddock
+share/doc/${HS_PLATFORM}/pointed-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/pointed-${PKGVERSION}/html/synopsis.png
