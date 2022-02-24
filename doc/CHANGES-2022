@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1154 2022/02/24 00:59:10 pho Exp $
+$NetBSD: CHANGES-2022,v 1.1155 2022/02/24 00:59:55 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1497,3 +1497,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added math/hs-indexed-profunctors version 0.1.1 [pho 2022-02-24]
 	Added devel/hs-generic-lens-core version 2.2.1.0 [pho 2022-02-24]
 	Added devel/hs-generic-lens version 2.2.1.0 [pho 2022-02-24]
+	Added www/hs-open-browser version 0.2.1.0 [pho 2022-02-24]
