@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/24 01:03:05 pho Exp $
+
+BLAKE2s (chunked-data-0.3.1.tar.gz) = d2cd20d29c0690d85a5a072044c65fc24b06e5996eccf87f8f016bb064a6df66
+SHA512 (chunked-data-0.3.1.tar.gz) = 9bdfac0598017ac1817fff76f3ea05672624a1edbf7d0b83298002185f234134277cd6e710ae29738997abfaf1d8e900d43d5b3c1e9e7fd98557e4e7d9f647c4
+Size (chunked-data-0.3.1.tar.gz) = 4605 bytes
