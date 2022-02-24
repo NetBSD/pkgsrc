@@ -1,0 +1,2 @@
+TH splice that expands to an environment variable value. Can be used to
+embed build-time parameters in your application.
