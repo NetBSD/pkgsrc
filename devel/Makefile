@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3689 2022/02/24 01:17:51 pho Exp $
+# $NetBSD: Makefile,v 1.3690 2022/02/24 01:19:24 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -611,6 +611,7 @@ SUBDIR+=	hs-lpeg
 SUBDIR+=	hs-lsp
 SUBDIR+=	hs-lsp-types
 SUBDIR+=	hs-lukko
+SUBDIR+=	hs-managed
 SUBDIR+=	hs-memory
 SUBDIR+=	hs-microlens
 SUBDIR+=	hs-microlens-ghc
