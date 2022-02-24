@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/24 01:20:00 pho Exp $
+lib/optional-args-${PKGVERSION}/${HS_VERSION}/package-description
+lib/optional-args-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Optional.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Optional.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Optional.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/optional-args-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/optional-args-${PKGVERSION}/html/Data-Optional.html
+share/doc/${HS_PLATFORM}/optional-args-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/optional-args-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/optional-args-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/optional-args-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/optional-args-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/optional-args-${PKGVERSION}/html/optional-args.haddock
+share/doc/${HS_PLATFORM}/optional-args-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/optional-args-${PKGVERSION}/html/synopsis.png
