@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3673 2022/02/23 16:56:04 pho Exp $
+# $NetBSD: Makefile,v 1.3674 2022/02/24 00:58:40 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -553,6 +553,7 @@ SUBDIR+=	hs-foldl
 SUBDIR+=	hs-foundation
 SUBDIR+=	hs-fsnotify
 SUBDIR+=	hs-generic-deriving
+SUBDIR+=	hs-generic-lens-core
 SUBDIR+=	hs-ghc-check
 SUBDIR+=	hs-ghc-exactprint
 SUBDIR+=	hs-ghc-lib-parser
