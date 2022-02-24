@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/24 01:10:18 pho Exp $
+
+BLAKE2s (dlist-instances-0.1.1.1.tar.gz) = 24387d92b836eaf210f86bb30d0d6298cae5a989a80f3c4569fa52c559fb2763
+SHA512 (dlist-instances-0.1.1.1.tar.gz) = 9a66f9f3d73466731c1b1a3f208c564f0fd8fe990e81dd274a86441e94b48c40d778535a9d346e9ff8160b23c19efa73cc836b4dcb3a6cb0e81817348bc5041a
+Size (dlist-instances-0.1.1.1.tar.gz) = 1749 bytes
