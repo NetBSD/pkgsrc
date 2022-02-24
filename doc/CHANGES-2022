@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1156 2022/02/24 01:00:30 pho Exp $
+$NetBSD: CHANGES-2022,v 1.1157 2022/02/24 01:01:11 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1499,3 +1499,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-generic-lens version 2.2.1.0 [pho 2022-02-24]
 	Added www/hs-open-browser version 0.2.1.0 [pho 2022-02-24]
 	Added devel/hs-rio version 0.1.21.0 [pho 2022-02-24]
+	Added devel/hs-rio-orphans version 0.1.2.0 [pho 2022-02-24]
