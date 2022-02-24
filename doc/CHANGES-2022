@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1181 2022/02/24 11:03:22 js Exp $
+$NetBSD: CHANGES-2022,v 1.1182 2022/02/24 14:11:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1524,3 +1524,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added lang/spago version 0.20.7 [pho 2022-02-24]
 	Updated security/cyrus-sasl to 2.1.28 [wiz 2022-02-24]
 	Updated devel/fossil to 2.18 [js 2022-02-24]
+	Updated graphics/py-Pillow to 9.0.1 [wiz 2022-02-24]
