@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/02/06 05:31:57 pho Exp $
+# $NetBSD: Makefile,v 1.19 2022/02/24 09:18:09 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -103,17 +103,21 @@ CONFIGURE_ENV+=	CONF_GCC_LINKER_OPTS_STAGE${stage}=${LDFLAGS:M*:Q}
 # the buildlink.
 .endfor
 
-# The use of internal variable in mk/bsd.prefs.mk is not very satisfying,
-# but the current infrastructure does not export a public variable
-# indicating whether a PIE build is requested or not. Note that we can't
-# build stage-1 compiler as PIE, because our bootkit libraries aren't
+# The use of internal variable ${_PKGSRC_MKPIE} in mk/bsd.prefs.mk is not
+# very satisfying, but the current infrastructure does not export a public
+# variable indicating whether a PIE build is requested or not. Note that we
+# can't build stage-1 compiler as PIE, because our bootkit libraries aren't
 # necessarily built as PIC.
 .for stage in 0 1 2
 .  if ${stage} == 0
 CONFIGURE_ENV+=	CONF_CC_OPTS_STAGE${stage}=${CFLAGS:M*:Q}
 .  else
+.    if ${_PKGSRC_MKPIE} == "yes"
 CONFIGURE_ENV+=	CONF_HC_OPTS_STAGE${stage}=-fPIC\ -pie
 CONFIGURE_ENV+=	CONF_CC_OPTS_STAGE${stage}=${CFLAGS:M*:Q}\ -fPIC
+.    else
+CONFIGURE_ENV+=	CONF_CC_OPTS_STAGE${stage}=${CFLAGS:M*:Q}
+.    endif
 .  endif
 .endfor
 
