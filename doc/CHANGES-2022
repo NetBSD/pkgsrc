@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1178 2022/02/24 01:26:58 pho Exp $
+$NetBSD: CHANGES-2022,v 1.1179 2022/02/24 01:27:46 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1521,3 +1521,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-versions version 5.0.2 [pho 2022-02-24]
 	Added devel/hs-th-env version 0.1.0.3 [pho 2022-02-24]
 	Added devel/hs-with-utf8 version 1.0.2.3 [pho 2022-02-24]
+	Added lang/spago version 0.20.7 [pho 2022-02-24]
