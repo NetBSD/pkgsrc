@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/24 00:59:49 pho Exp $
+lib/open-browser-${PKGVERSION}/${HS_VERSION}/package-description
+lib/open-browser-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/${HS_PLATFORM}/${HS_PKGID}/Web/Browser.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Web/Browser.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Web/Browser.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Web/Browser/Linux.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Web/Browser/Linux.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Web/Browser/Linux.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Web/Browser/OSX.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Web/Browser/OSX.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Web/Browser/OSX.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/open-browser-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/open-browser-${PKGVERSION}/html/Web-Browser.html
+share/doc/${HS_PLATFORM}/open-browser-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/open-browser-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/open-browser-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/open-browser-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/open-browser-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/open-browser-${PKGVERSION}/html/open-browser.haddock
+share/doc/${HS_PLATFORM}/open-browser-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/open-browser-${PKGVERSION}/html/synopsis.png
