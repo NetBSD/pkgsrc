@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2021/12/18 16:41:36 gdt Exp $
+# $NetBSD: Makefile,v 1.37 2022/02/24 13:47:48 gdt Exp $
 
 # Currently, 2.51.x is the standard approach, and thus this package
 # produces a "unison-2.51.x" package which installs a "unison" binary.
@@ -21,9 +21,6 @@ MAKE_FLAGS+=	CFLAGS=""
 MAKE_ENV+=	HOME=${WRKDIR:Q}
 MAKE_JOBS_SAFE=	no
 
-.include "options.mk"
-.include "../../mk/bsd.prefs.mk"
-
 .include "../../mk/ocaml.mk"
 
 .if (${OCAML_USE_OPT_COMPILER} == "yes")
@@ -32,11 +29,10 @@ MAKE_FLAGS+=	NATIVE=true
 MAKE_FLAGS+=	NATIVE=false
 .endif
 
-.include "../../mk/pthread.buildlink3.mk"
-
-.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} != "none")
-MAKE_FLAGS+=	THREADS=true
-.endif
+# bsd.prefs.mk, included also by options, must be after ocaml to get
+# _PKGSRC_MKPIE set correctly.
+.include "options.mk"
+.include "../../mk/bsd.prefs.mk"
 
 TEST_TARGET=		test
 
@@ -51,6 +47,11 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/src/README ${DESTDIR}${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/src/ROADMAP.txt ${DESTDIR}${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/src/TODO.txt ${DESTDIR}${PREFIX}/share/doc/unison
+
+.include "../../mk/pthread.buildlink3.mk"
+.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} != "none")
+MAKE_FLAGS+=	THREADS=true
+.endif
 
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
