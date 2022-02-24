@@ -1,0 +1,16 @@
+$NetBSD: patch-src_plugins_ruby_CMakeLists.txt,v 1.1 2022/02/24 09:55:40 jperkin Exp $
+
+RUBY_LDFLAGS may contain strings unsuitable for target_link_libraries(), for
+example "-arch arm64" will get converted to "-arch -larm64".
+
+--- src/plugins/ruby/CMakeLists.txt.orig	2021-12-18 07:57:32.000000000 +0000
++++ src/plugins/ruby/CMakeLists.txt
+@@ -25,7 +25,7 @@ set_target_properties(ruby PROPERTIES PR
+ 
+ if(RUBY_FOUND)
+   include_directories(${RUBY_INCLUDE_DIRS})
+-  target_link_libraries(ruby ${RUBY_LDFLAGS} weechat_plugins_scripts coverage_config)
++  target_link_libraries(ruby ${RUBY_LIBRARIES} weechat_plugins_scripts coverage_config)
+ endif(RUBY_FOUND)
+ 
+ install(TARGETS ruby LIBRARY DESTINATION ${WEECHAT_LIBDIR}/plugins)
