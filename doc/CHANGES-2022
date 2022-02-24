@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1151 2022/02/23 20:45:53 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1152 2022/02/24 00:57:52 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1494,3 +1494,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/lemon to 1.0.3.38.0 [adam 2022-02-23]
 	Updated emulators/mame to 0.241 [wiz 2022-02-23]
 	Updated graphics/librsvg to 2.52.6 [wiz 2022-02-23]
+	Added math/hs-indexed-profunctors version 0.1.1 [pho 2022-02-24]
