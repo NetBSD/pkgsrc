@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.40 2021/11/15 18:12:45 wiz Exp $
+$NetBSD: distinfo,v 1.41 2022/02/24 11:00:03 wiz Exp $
 
-BLAKE2s (cyrus-sasl-2.1.27-rc7.tar.gz) = 66acec5390a4b208f8492fae9538b9df46169d00dc3228b41452cdc6eee28bdf
-SHA512 (cyrus-sasl-2.1.27-rc7.tar.gz) = 498b0f83e99f77dcf56bd2b735e71b554571703305ef9ef64038f04ef235b39d49e7b2363fc8b9952dbe2f4921542c31811e93618d7ceb468d73b4f6dafa89aa
-Size (cyrus-sasl-2.1.27-rc7.tar.gz) = 4146356 bytes
-SHA1 (patch-CVE-2019-19906) = 752de2053696f13de098267f8605b4b7afb24a6c
+BLAKE2s (cyrus-sasl-2.1.28.tar.gz) = 617623570c40af652ef1c19a746e2346f53591a4594cffdce835df29fc5aba61
+SHA512 (cyrus-sasl-2.1.28.tar.gz) = db15af9079758a9f385457a79390c8a7cd7ea666573dace8bf4fb01bb4b49037538d67285727d6a70ad799d2e2318f265c9372e2427de9371d626a1959dd6f78
+Size (cyrus-sasl-2.1.28.tar.gz) = 4034803 bytes
 SHA1 (patch-common_crypto-compat) = ad8575c62648aba83983172ec8fef08d2c9f537e
 SHA1 (patch-configure) = 1afa4777f2cc2a24bb526fab9fb6d9265677fb9f
 SHA1 (patch-plugins_otp.c) = 1dd8763d5b14c2f2462349ce5f73353ae70313fa
-SHA1 (patch-saslauthd_Makefile.in) = 397bc893975ff4d8b0067dae571381f06486493d
