@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2022/02/24 01:19:09 pho Exp $
+lib/managed-${PKGVERSION}/${HS_VERSION}/package-description
+lib/managed-${PKGVERSION}/${HS_VERSION}/package-id
+lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Managed.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Managed.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Managed.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Managed/Safe.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Managed/Safe.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Control/Monad/Managed/Safe.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+share/doc/${HS_PLATFORM}/managed-${PKGVERSION}/LICENSE
+share/doc/${HS_PLATFORM}/managed-${PKGVERSION}/html/Control-Monad-Managed-Safe.html
+share/doc/${HS_PLATFORM}/managed-${PKGVERSION}/html/Control-Monad-Managed.html
+share/doc/${HS_PLATFORM}/managed-${PKGVERSION}/html/doc-index.html
+share/doc/${HS_PLATFORM}/managed-${PKGVERSION}/html/haddock-bundle.min.js
+share/doc/${HS_PLATFORM}/managed-${PKGVERSION}/html/index.html
+share/doc/${HS_PLATFORM}/managed-${PKGVERSION}/html/linuwial.css
+share/doc/${HS_PLATFORM}/managed-${PKGVERSION}/html/managed.haddock
+share/doc/${HS_PLATFORM}/managed-${PKGVERSION}/html/meta.json
+share/doc/${HS_PLATFORM}/managed-${PKGVERSION}/html/quick-jump.css
+share/doc/${HS_PLATFORM}/managed-${PKGVERSION}/html/synopsis.png
