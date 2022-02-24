@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/02/01 20:00:56 nikita Exp $
+# $NetBSD: Makefile,v 1.7 2022/02/24 21:29:12 nikita Exp $
 
 DISTNAME=	1.2
 PKGNAME=	passphrase-1.2
@@ -16,6 +16,8 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 # \todo: There is currently an issue building this as a PIE, despite the
 # buildsystem targeting it as a PIE.
 MKPIE_SUPPORTED=	no
+# RELRO checks fail for this package at the moment
+RELRO_SUPPORTED=	no
 
 .include "../../lang/python/pyversion.mk"
 CONFLICTS+=	${PYPKGPREFIX}-pyutil-[0-9]*
