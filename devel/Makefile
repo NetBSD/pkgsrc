@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3682 2022/02/24 01:11:20 pho Exp $
+# $NetBSD: Makefile,v 1.3683 2022/02/24 01:11:54 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -632,6 +632,7 @@ SUBDIR+=	hs-pandoc-lua-marshal
 SUBDIR+=	hs-parallel
 SUBDIR+=	hs-parser-combinators
 SUBDIR+=	hs-pattern-arrows
+SUBDIR+=	hs-pointed
 SUBDIR+=	hs-pretty-show
 SUBDIR+=	hs-pretty-simple
 SUBDIR+=	hs-primitive
