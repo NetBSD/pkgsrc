@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/24 01:02:19 pho Exp $
+
+BLAKE2s (basic-prelude-0.7.0.tar.gz) = 4a1f6346043510db4ae7156e0c4e2a9a2589e3e1b5ce0a077f759f9ebda79940
+SHA512 (basic-prelude-0.7.0.tar.gz) = 34b62d1cdddb8d5c5ec51f0b9cca8746174f2daf40e5fe0f0188707da1f590844bffccfc6d049e8e161323f541281130aa92700514455a947c503274422e271f
+Size (basic-prelude-0.7.0.tar.gz) = 6471 bytes
