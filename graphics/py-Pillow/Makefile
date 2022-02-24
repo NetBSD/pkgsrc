@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2022/01/04 20:54:03 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2022/02/24 14:11:34 wiz Exp $
 
-DISTNAME=	Pillow-8.4.0
+DISTNAME=	Pillow-9.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pillow/}
 
@@ -23,6 +22,11 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 PYSETUPBUILDTARGET=	build_ext
 PYSETUPBUILDARGS+=	--disable-xcb
+
+DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} selftest.py
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
