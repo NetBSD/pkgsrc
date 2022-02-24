@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3681 2022/02/24 01:10:32 pho Exp $
+# $NetBSD: Makefile,v 1.3682 2022/02/24 01:11:20 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -598,6 +598,7 @@ SUBDIR+=	hs-implicit-hie-cradle
 SUBDIR+=	hs-indexed-traversable
 SUBDIR+=	hs-indexed-traversable-instances
 SUBDIR+=	hs-ipynb
+SUBDIR+=	hs-keys
 SUBDIR+=	hs-lens
 SUBDIR+=	hs-lens-family-core
 SUBDIR+=	hs-libffi
