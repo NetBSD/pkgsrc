@@ -1,0 +1,18 @@
+A library for parsing and comparing software version numbers. We like to
+give version numbers to our software in a myriad of ways. Some ways follow
+strict guidelines for incrementing and comparison. Some follow conventional
+wisdom and are generally self-consistent. Some are just plain asinine. This
+library provides a means of parsing and comparing any style of versioning,
+be it a nice Semantic Version like this:
+
+  1.2.3-r1+git123
+
+...or a monstrosity like this:
+
+  2:10.2+0.0093r3+1-1
+
+Please switch to Semantic Versioning if you aren't currently using it. It
+provides consistency in version incrementing and has the best constraints
+on comparisons.
+
+This library implements version 2.0.0 of the SemVer spec.
