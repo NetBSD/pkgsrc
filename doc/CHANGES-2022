@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1173 2022/02/24 01:21:18 pho Exp $
+$NetBSD: CHANGES-2022,v 1.1174 2022/02/24 01:22:01 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1516,3 +1516,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-managed version 1.0.9 [pho 2022-02-24]
 	Added devel/hs-optional-args version 1.0.2 [pho 2022-02-24]
 	Added sysutils/hs-system-filepath version 0.4.14 [pho 2022-02-24]
+	Added sysutils/hs-system-fileio version 0.3.16.4 [pho 2022-02-24]
