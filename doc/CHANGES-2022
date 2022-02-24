@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1158 2022/02/24 01:01:48 pho Exp $
+$NetBSD: CHANGES-2022,v 1.1159 2022/02/24 01:02:25 pho Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1501,3 +1501,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-rio version 0.1.21.0 [pho 2022-02-24]
 	Added devel/hs-rio-orphans version 0.1.2.0 [pho 2022-02-24]
 	Added devel/hs-retry version 0.9.1.0 [pho 2022-02-24]
+	Added devel/hs-basic-prelude version 0.7.0 [pho 2022-02-24]
