@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3680 2022/02/24 01:03:19 pho Exp $
+# $NetBSD: Makefile,v 1.3681 2022/02/24 01:10:32 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -540,6 +540,7 @@ SUBDIR+=	hs-deferred-folds
 SUBDIR+=	hs-dependent-map
 SUBDIR+=	hs-dependent-sum
 SUBDIR+=	hs-dlist
+SUBDIR+=	hs-dlist-instances
 SUBDIR+=	hs-echo
 SUBDIR+=	hs-either
 SUBDIR+=	hs-errors
