@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2022/02/24 00:13:22 gutteridge Exp $
+# $NetBSD: Makefile,v 1.138 2022/02/25 14:37:36 tnn Exp $
 
 DISTNAME=	librsvg-2.52.6
 CATEGORIES=	graphics gnome
@@ -30,7 +30,8 @@ TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
 
-# librsvg broken with rustc-1.54.0. Temp fix for pkgsrc freeze.
+# librsvg broken on aarch64 by rustc>=1.54.0 including 1.57.0 due to:
+# libtool: error: object name conflicts in archive
 .if \
   !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64)	|| \
   !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
