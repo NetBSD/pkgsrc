@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1193 2022/02/25 21:42:13 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.1194 2022/02/25 21:42:51 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1536,3 +1536,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/duktape to 2.7.0 [fcambus 2022-02-25]
 	Updated converters/p5-Sereal-Decoder to 4.023 [fcambus 2022-02-25]
 	Updated converters/p5-Sereal-Encoder to 4.023 [fcambus 2022-02-25]
+	Updated converters/p5-Sereal to 4.023 [fcambus 2022-02-25]
