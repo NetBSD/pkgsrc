@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2022/02/11 08:31:21 adam Exp $
+$NetBSD: distinfo,v 1.22 2022/02/25 15:39:57 jperkin Exp $
 
 BLAKE2s (postgresql-11.15.tar.bz2) = e6f70c1693bba23c70127b0234494d2d7a43b4e5a0f80f26477090e4fff6e4fa
 SHA512 (postgresql-11.15.tar.bz2) = 1eba7bddee1edf034617102c1d61ad0aa1b58927dad63de1d054817966c4c9a1d7d3fa6f6896af3fe5a6880b09a6ec86be298256ee6ecc3705ff2654d3d00c74
@@ -12,6 +12,7 @@ SHA1 (patch-src_Makefile.global.in) = 335b57afff23a9684ab0a09257665810c1ba2d1e
 SHA1 (patch-src_Makefile.shlib) = 4e093c79345add008a56c10d1c1bc8574f7a38e1
 SHA1 (patch-src_backend_Makefile) = 736ff7db09faf167c6e40a45a1099836f3e98911
 SHA1 (patch-src_backend_utils_adt_datetime.c) = d1ea70986634d3bfb663eff789425252656e1289
+SHA1 (patch-src_fe__utils_Makefile) = 3c3b373cda88368c9198f3df7ef9cfebe74e33d5
 SHA1 (patch-src_interfaces_libpq_Makefile) = 61bcf84eb69b6ec9faabab0b61913766f4b20f8c
 SHA1 (patch-src_makefiles_Makefile.solaris) = 0168f5bc105ffc89d5db40907a08966d8465f5a0
 SHA1 (patch-src_pl_plperl_GNUmakefile) = 161a8f7af61b3a33b255fdee9fa7d4918decde7d
