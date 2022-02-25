@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/01/30 10:24:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/02/25 16:36:35 js Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -12,3 +12,5 @@ ${PYSITELIB}/matrix_common/__init__.pyc
 ${PYSITELIB}/matrix_common/py.typed
 ${PYSITELIB}/matrix_common/regex.py
 ${PYSITELIB}/matrix_common/regex.pyc
+${PYSITELIB}/matrix_common/versionstring.py
+${PYSITELIB}/matrix_common/versionstring.pyc
