@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:51:41 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/02/25 20:50:07 fcambus Exp $
 
-BLAKE2s (duktape-2.6.0.tar.xz) = 45e6a612b3e8de7a95fd568ab639f4b0a7a17b9e68ca29eaaf077eeff6f3ea1a
-SHA512 (duktape-2.6.0.tar.xz) = d72a2aaa05391fa243861aca6ca6082f91a08b9c5d60c7b246d35d7161532b0048bb67bd8fec7996c700ee317ac2bb52e528582682e5425b0431757d8b1c5be4
-Size (duktape-2.6.0.tar.xz) = 1035160 bytes
+BLAKE2s (duktape-2.7.0.tar.xz) = bef5fd3d49722ef00b41b187fb8e966fb91ab6eb48a848c2bbe55bf819997a39
+SHA512 (duktape-2.7.0.tar.xz) = 8ff5465c9c335ea08ebb0d4a06569c991b9dc4661b63e10da6b123b882e7375e82291d6b883c2644902d68071a29ccc880dae8229447cebe710c910b54496c1d
+Size (duktape-2.7.0.tar.xz) = 1026524 bytes
