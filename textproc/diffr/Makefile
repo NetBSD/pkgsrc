@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2021/08/03 08:53:05 pin Exp $
+# $NetBSD: Makefile,v 1.3 2022/02/25 09:11:44 pin Exp $
 
 DISTNAME=	diffr-0.1.4
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mookid/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mookid/diffr/
 COMMENT=	Yet another diff highlighting tool
 LICENSE=	mit
