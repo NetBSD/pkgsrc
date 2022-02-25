@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:06:47 nia Exp $
+$NetBSD: distinfo,v 1.13 2022/02/25 21:42:39 fcambus Exp $
 
-BLAKE2s (Sereal-4.018.tar.gz) = 8bc5f7a5c91af059d2658d3df4acb010b6a41e7992889060cc2b1da4393658a8
-SHA512 (Sereal-4.018.tar.gz) = cfa4796efa2231b1f813fe15080c07cc1aac05a137041a74922e66737311b02859b8fd83d80c4f8f2dd79f13bda648dae8cf3a0f723c320aa09df177ddd77eec
-Size (Sereal-4.018.tar.gz) = 196147 bytes
+BLAKE2s (Sereal-4.023.tar.gz) = d3b14c881f22abbd657cbbc65e1f303f48d4da658d889d310ccfe46fcf6e4f7f
+SHA512 (Sereal-4.023.tar.gz) = 849cda34555e6d3cf428576be83e374e39a4a9e310da853aabac27acc2c4be81f4cf1da4f3513f975d3e6acd3eef5dcb8f8297926c903d7d21e1b7b3fccbf9ba
+Size (Sereal-4.023.tar.gz) = 197206 bytes
