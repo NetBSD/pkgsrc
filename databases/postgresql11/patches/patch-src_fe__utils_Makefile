@@ -1,0 +1,16 @@
+$NetBSD: patch-src_fe__utils_Makefile,v 1.1 2022/02/25 15:39:57 jperkin Exp $
+
+Ensure catalog/pg_type_d.h has been generated before print.c compiles, fixes
+build of postgresql client when MAKE_JOBS is set to a high value.
+
+--- src/fe_utils/Makefile.orig	2022-02-07 21:20:23.000000000 +0000
++++ src/fe_utils/Makefile
+@@ -21,6 +21,8 @@ override CPPFLAGS := -DFRONTEND -I$(libp
+ 
+ OBJS = mbprint.o print.o psqlscan.o simple_list.o string_utils.o conditional.o
+ 
++print.o: submake-generated-headers
++
+ all: libpgfeutils.a
+ 
+ libpgfeutils.a: $(OBJS)
