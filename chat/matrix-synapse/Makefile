@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2022/02/25 16:18:36 js Exp $
+# $NetBSD: Makefile,v 1.44 2022/02/25 16:37:22 js Exp $
 
 DISTNAME=	matrix-synapse-1.53.0
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
 EGG_NAME=	matrix_synapse-${PKGVERSION_NOREV}
@@ -26,7 +27,7 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.9:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=3.0.0:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-lxml>=3.5.0:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-macaroons>=0.13.0:../../devel/py-macaroons
-DEPENDS+=	${PYPKGPREFIX}-matrix-common>=1.0.0:../../chat/py-matrix-common
+DEPENDS+=	${PYPKGPREFIX}-matrix-common>=1.1.0:../../chat/py-matrix-common
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.5.2:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-nacl>=1.2.1:../../security/py-nacl
 DEPENDS+=	${PYPKGPREFIX}-netaddr>=0.7.18:../../net/py-netaddr
