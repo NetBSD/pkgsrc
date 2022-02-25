@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2022/02/14 09:47:16 pin Exp $
+# $NetBSD: Makefile,v 1.8 2022/02/25 07:27:00 pin Exp $
 
-DISTNAME=	rates-0.6.0
+DISTNAME=	rates-0.7.0
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lunush/}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/lunush/rates/
 COMMENT=	Currency exchange rates in your terminal
 LICENSE=	apache-2.0
@@ -14,7 +14,8 @@ LICENSE=	apache-2.0
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/rates ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/rates \
+		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
