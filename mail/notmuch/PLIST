@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2022/02/15 09:24:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2022/02/25 05:44:50 ryoon Exp $
 bin/notmuch
 ${PLIST.emacs}bin/notmuch-emacs-mua
 include/notmuch.h
@@ -64,7 +64,7 @@ ${PLIST.emacs}share/emacs/site-lisp/notmuch-jump.el
 ${PLIST.emacs}share/emacs/site-lisp/notmuch-jump.elc
 ${PLIST.emacs}share/emacs/site-lisp/notmuch-lib.el
 ${PLIST.emacs}share/emacs/site-lisp/notmuch-lib.elc
-${PLIST.emacs}share/emacs/site-lisp/notmuch-logo.png
+${PLIST.emacs}share/emacs/site-lisp/notmuch-logo.svg
 ${PLIST.emacs}share/emacs/site-lisp/notmuch-maildir-fcc.el
 ${PLIST.emacs}share/emacs/site-lisp/notmuch-maildir-fcc.elc
 ${PLIST.emacs}share/emacs/site-lisp/notmuch-message.el
