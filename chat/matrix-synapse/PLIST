@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2022/01/30 10:14:16 js Exp $
+@comment $NetBSD: PLIST,v 1.22 2022/02/25 16:18:36 js Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -1674,6 +1674,10 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/65/07_arbitrary_relations.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/65/08_device_inbox_background_updates.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/65/10_expirable_refresh_tokens.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/65/11_devices_auth_provider_session.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/67/01drop_public_room_list_stream.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/68/01event_columns.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/68/02_msc2409_add_device_id_appservice_stream_type.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/68/03_delete_account_data_for_deactivated_accounts.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_signatures.sql
@@ -1842,9 +1846,6 @@ ${PYSITELIB}/synapse/util/templates.pyo
 ${PYSITELIB}/synapse/util/threepids.py
 ${PYSITELIB}/synapse/util/threepids.pyc
 ${PYSITELIB}/synapse/util/threepids.pyo
-${PYSITELIB}/synapse/util/versionstring.py
-${PYSITELIB}/synapse/util/versionstring.pyc
-${PYSITELIB}/synapse/util/versionstring.pyo
 ${PYSITELIB}/synapse/util/wheel_timer.py
 ${PYSITELIB}/synapse/util/wheel_timer.pyc
 ${PYSITELIB}/synapse/util/wheel_timer.pyo
