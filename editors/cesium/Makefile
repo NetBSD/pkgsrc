@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2021/08/05 08:42:25 pin Exp $
+# $NetBSD: Makefile,v 1.6 2022/02/25 09:08:03 pin Exp $
 
 DISTNAME=	cesium-0.2.1
 CATEGORIES=	editors
 MASTER_SITES=	https://gitlab.com/NoahJelen/cesium/-/archive/${PKGVERSION_NOREV}/
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.com/NoahJelen/cesium/
 COMMENT=	Notepad-like text editor
 LICENSE=	gnu-gpl-v3
