@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1187 2022/02/25 16:36:44 js Exp $
+$NetBSD: CHANGES-2022,v 1.1188 2022/02/25 19:13:31 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1530,3 +1530,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ugrep to 3.7.4 [fcambus 2022-02-25]
 	Updated chat/matrix-synapse to 1.53.0 [js 2022-02-25]
 	Updated chat/py-matrix-common to 1.1.0 [js 2022-02-25]
+	Updated devel/goredo to 1.23.0 [schmonz 2022-02-25]
