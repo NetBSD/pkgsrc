@@ -1,4 +1,4 @@
-$NetBSD: README.NetBSD,v 1.1 2020/04/09 15:04:03 gdt Exp $
+$NetBSD: README.NetBSD,v 1.2 2022/02/25 23:03:10 gutteridge Exp $
 
 Generally, pkgsrc considers the current and previous major releases of
 NetBSD to be supported, and older ones not to be supported, following
@@ -20,5 +20,4 @@ bootstrap.  (Alternatively one could build bmake and use it, as a
 workaround.)
 
 As of 2020, it is believed that NetBSD 6 and newer have an adequate
-/usr/bin/make, and that NetBSD 5 and older require a bootstrap or
-replacement.
+/usr/bin/make; NetBSD 5 and older require a bootstrap or replacement.
