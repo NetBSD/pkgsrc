@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2021/05/02 20:05:24 pin Exp $
+# $NetBSD: Makefile,v 1.6 2022/02/25 09:18:56 pin Exp $
 
 DISTNAME=	xnotify-0.8.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=phillbush/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/phillbush/xnotify
 COMMENT=	Read notifications from stdin and display them on the screen
 LICENSE=	mit
