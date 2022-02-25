@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1189 2022/02/25 19:17:20 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.1190 2022/02/25 20:51:03 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1532,3 +1532,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/py-matrix-common to 1.1.0 [js 2022-02-25]
 	Updated devel/goredo to 1.23.0 [schmonz 2022-02-25]
 	Updated devel/p5-FindBin-libs to 3.0.1 [schmonz 2022-02-25]
+	Updated lang/libduktape to 2.7.0 [fcambus 2022-02-25]
