@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1198 2022/02/26 07:46:40 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1199 2022/02/26 07:54:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1541,3 +1541,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/din to 53.1 [fox 2022-02-26]
 	Updated security/wolfssl to 5.2.0 [fox 2022-02-26]
 	Updated graphics/babl to 0.1.90 [wiz 2022-02-26]
+	Updated graphics/gegl to 0.4.36 [wiz 2022-02-26]
