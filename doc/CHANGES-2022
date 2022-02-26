@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1195 2022/02/25 22:41:42 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.1196 2022/02/26 06:47:24 fox Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1538,3 +1538,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated converters/p5-Sereal-Encoder to 4.023 [fcambus 2022-02-25]
 	Updated converters/p5-Sereal to 4.023 [fcambus 2022-02-25]
 	Updated lang/python27 to 2.7.18nb8 [gutteridge 2022-02-25]
+	Updated audio/din to 53.1 [fox 2022-02-26]
