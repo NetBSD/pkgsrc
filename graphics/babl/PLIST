@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2021/10/01 14:27:09 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.19 2022/02/26 07:46:32 wiz Exp $
 include/babl-0.1/babl/babl-introspect.h
 include/babl-0.1/babl/babl-macros.h
 include/babl-0.1/babl/babl-types.h
@@ -22,6 +22,7 @@ lib/babl-0.1/gimp-8bit.${SOEXT}
 lib/babl-0.1/grey.${SOEXT}
 lib/babl-0.1/half.${SOEXT}
 lib/babl-0.1/naive-CMYK.${SOEXT}
+lib/babl-0.1/oklab.${SOEXT}
 lib/babl-0.1/simple.${SOEXT}
 lib/babl-0.1/sse-half.${SOEXT}
 lib/babl-0.1/sse2-float.${SOEXT}
@@ -31,9 +32,33 @@ lib/babl-0.1/sse4-int8.${SOEXT}
 lib/babl-0.1/two-table.${SOEXT}
 lib/babl-0.1/u16.${SOEXT}
 lib/babl-0.1/u32.${SOEXT}
+lib/babl-0.1/x86-64-v2-CIE.${SOEXT}
+lib/babl-0.1/x86-64-v2-cairo.${SOEXT}
+lib/babl-0.1/x86-64-v2-double.${SOEXT}
+lib/babl-0.1/x86-64-v2-float.${SOEXT}
+lib/babl-0.1/x86-64-v2-gegl-fixups.${SOEXT}
+lib/babl-0.1/x86-64-v2-gggl-lies.${SOEXT}
+lib/babl-0.1/x86-64-v2-gggl.${SOEXT}
+lib/babl-0.1/x86-64-v2-grey.${SOEXT}
+lib/babl-0.1/x86-64-v2-simple.${SOEXT}
+lib/babl-0.1/x86-64-v2-u16.${SOEXT}
+lib/babl-0.1/x86-64-v2-u32.${SOEXT}
+lib/babl-0.1/x86-64-v2-ycbcr.${SOEXT}
+lib/babl-0.1/x86-64-v3-CIE.${SOEXT}
+lib/babl-0.1/x86-64-v3-cairo.${SOEXT}
+lib/babl-0.1/x86-64-v3-double.${SOEXT}
+lib/babl-0.1/x86-64-v3-float.${SOEXT}
+lib/babl-0.1/x86-64-v3-gegl-fixups.${SOEXT}
+lib/babl-0.1/x86-64-v3-gggl-lies.${SOEXT}
+lib/babl-0.1/x86-64-v3-gggl.${SOEXT}
+lib/babl-0.1/x86-64-v3-grey.${SOEXT}
+lib/babl-0.1/x86-64-v3-simple.${SOEXT}
+lib/babl-0.1/x86-64-v3-u16.${SOEXT}
+lib/babl-0.1/x86-64-v3-u32.${SOEXT}
+lib/babl-0.1/x86-64-v3-ycbcr.${SOEXT}
 lib/babl-0.1/ycbcr.${SOEXT}
 lib/libbabl-0.1.${SOEXT}
 ${PLIST.Darwin}lib/libbabl-0.1.0.${SOEXT}
 ${PLIST.not_Darwin}lib/libbabl-0.1.${SOEXT}.0
-${PLIST.not_Darwin}lib/libbabl-0.1.${SOEXT}.0.187.1
+${PLIST.not_Darwin}lib/libbabl-0.1.${SOEXT}.0.189.1
 lib/pkgconfig/babl.pc
