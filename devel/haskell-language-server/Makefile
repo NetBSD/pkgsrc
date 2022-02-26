@@ -1,13 +1,19 @@
-# $NetBSD: Makefile,v 1.2 2022/02/26 03:57:46 pho Exp $
+# $NetBSD: Makefile,v 1.3 2022/02/26 09:00:21 pho Exp $
 
 DISTNAME=	haskell-language-server-1.6.1.1
 PKGNAME=	${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	LSP server for GHC
 LICENSE=	apache-2.0
+
+# HLS is built with optparse-applicative, and can generate shell completion
+# scripts automatically.
+OPTPARSE_APPLICATIVE_EXECUTABLES+=	haskell-language-server
+OPTPARSE_APPLICATIVE_EXECUTABLES+=	haskell-language-server-wrapper
+.include "../../devel/hs-optparse-applicative/application.mk"
 
 # lib:haskell-language-server
 .include "../../converters/hs-aeson-pretty/buildlink3.mk"
