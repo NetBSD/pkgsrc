@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.42 2022/02/23 16:03:00 pho Exp $
+# $NetBSD: haskell.mk,v 1.43 2022/02/26 03:55:37 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages. Package
 # configuration, building, installation, registration and unregistration
@@ -182,6 +182,7 @@ CONFIGURE_ARGS+=	--with-haddock=${BUILDLINK_PREFIX.ghc:Q}/bin/haddock
 .endif
 
 CONFIGURE_ARGS+=	-O${HASKELL_OPTIMIZATION_LEVEL}
+CONFIGURE_ARGS+=	--enable-split-sections
 
 # Support RELRO. When PKGSRC_USE_RELRO isn't set to "no",
 # mk/compiler/{ghc,clang}.mk add "-Wl,-z,relro" and optionally
