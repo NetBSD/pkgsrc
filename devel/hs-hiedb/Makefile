@@ -1,12 +1,17 @@
-# $NetBSD: Makefile,v 1.2 2022/02/26 03:57:57 pho Exp $
+# $NetBSD: Makefile,v 1.3 2022/02/26 08:18:42 pho Exp $
 
 DISTNAME=	hiedb-0.4.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Generates a references DB from .hie files
 LICENSE=	modified-bsd
+
+# purs is built with optparse-applicative, and can generate shell
+# completion scripts automatically.
+OPTPARSE_APPLICATIVE_EXECUTABLES+=	hiedb
+.include "../../devel/hs-optparse-applicative/application.mk"
 
 .include "../../math/hs-algebraic-graphs/buildlink3.mk"
 .include "../../devel/hs-ansi-terminal/buildlink3.mk"
