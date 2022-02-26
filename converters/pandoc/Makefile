@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2022/02/26 03:57:45 pho Exp $
+# $NetBSD: Makefile,v 1.8 2022/02/26 07:06:17 pho Exp $
 
 DISTNAME=	pandoc-2.17.1.1
 PKGNAME=	${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	converters
 
 MAINTAINER=	zecrazytux@zecrazytux.net
@@ -13,6 +13,13 @@ LICENSE=	gnu-gpl-v2
 # compile src/Text/Pandoc/Writers/RST.hs for some unknown reason, possibly
 # related to https://gitlab.haskell.org/ghc/ghc/issues/5642
 HASKELL_OPTIMIZATION_LEVEL=	1
+
+# If pandoc is to be linked dynamically, it will depend on more than 180
+# shared objects and the dynamic linker will spend several seconds to
+# resolve symbols on startup. This is unacceptable because pandoc tends to
+# be launched very frequently by build systems and editors. This wastes
+# storage, but time is more expensive than disks.
+HASKELL_ENABLE_DYNAMIC_EXECUTABLE=	no
 
 INSTALLATION_DIRS+=		${PKGMANDIR}/man1
 post-install:
