@@ -1,13 +1,20 @@
-# $NetBSD: Makefile,v 1.5 2022/02/26 03:58:19 pho Exp $
+# $NetBSD: Makefile,v 1.6 2022/02/26 07:13:07 pho Exp $
 
 DISTNAME=	hoogle-5.0.18.3
 PKGNAME=	${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Haskell API Search
 LICENSE=	modified-bsd
+
+# If hoogle is to be linked dynamically, it will depend on more than 160
+# shared objects and the dynamic linker will spend more than a second to
+# resolve symbols on startup. This is unacceptable because hoogle tends to
+# be launched very frequently by editors and IDEs. This wastes storage, but
+# time is more expensive than disks.
+HASKELL_ENABLE_DYNAMIC_EXECUTABLE=	no
 
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../textproc/hs-blaze-html/buildlink3.mk"
