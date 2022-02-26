@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 10:14:12 nia Exp $
+$NetBSD: distinfo,v 1.18 2022/02/26 16:26:38 fcambus Exp $
 
-BLAKE2s (acr-1.9.4.tar.gz) = 5cf367ea26022a32f81f029a4214a8dd0790aea367b8574f82bb2f83932521bf
-SHA512 (acr-1.9.4.tar.gz) = ca9b6941b4cc402285202b25aebeb0b7c499d7c7b8e1a8bbae22671c835ff9774d8dc3d7bfc292ef41924dc91ebbb454b08b0f47886b915f5bdc3009596a9421
-Size (acr-1.9.4.tar.gz) = 78010 bytes
+BLAKE2s (acr-2.0.0.tar.gz) = 25d3680f0c4f4fa86145752bf7623be55902a8a822d6fb1fcd8c3fd141fbffad
+SHA512 (acr-2.0.0.tar.gz) = e4b5b882ec72ea59e62f58b665cf4c7eebd6dc9ecd2fbf0e465ca1332eeafb9fc75f9888d3adc6c01b12d473d36924ad87362b998502d48c97894dbaf29dd538
+Size (acr-2.0.0.tar.gz) = 78461 bytes
