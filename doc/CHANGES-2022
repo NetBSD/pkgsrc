@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1202 2022/02/26 12:30:07 pho Exp $
+$NetBSD: CHANGES-2022,v 1.1203 2022/02/26 15:51:11 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1545,3 +1545,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-hinotify version 0.4.1 [pho 2022-02-26]
 	Added devel/hs-enclosed-exceptions version 1.0.3 [pho 2022-02-26]
 	Added devel/hs-shelly version 1.10.0 [pho 2022-02-26]
+	Updated devel/patchelf to 0.14.5 [fcambus 2022-02-26]
