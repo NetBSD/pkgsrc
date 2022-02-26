@@ -1,0 +1,16 @@
+$NetBSD: patch-hinotify.cabal,v 1.1 2022/02/26 12:27:40 pho Exp $
+
+Support NetBSD:
+https://github.com/kolmodin/hinotify/pull/35
+
+--- hinotify.cabal.orig	2022-02-26 10:33:22.134469468 +0000
++++ hinotify.cabal
+@@ -34,7 +34,7 @@ library
+     includes: sys/inotify.h
+     hs-source-dirs: src
+ 
+-    if os(freebsd) || os(openbsd)
++    if os(freebsd) || os(netbsd) || os(openbsd)
+       extra-libraries: inotify
+ 
+ test-suite test001
