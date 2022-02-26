@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2022/02/23 16:19:45 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2022/02/26 03:58:15 pho Exp $
 
 BUILDLINK_TREE+=	hs-purescript-cst
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-purescript-cst
 HS_PURESCRIPT_CST_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-purescript-cst+=	hs-purescript-cst>=0.4.0
-BUILDLINK_ABI_DEPENDS.hs-purescript-cst+=	hs-purescript-cst>=0.4.0.0
+BUILDLINK_ABI_DEPENDS.hs-purescript-cst+=	hs-purescript-cst>=0.4.0.0nb1
 BUILDLINK_PKGSRCDIR.hs-purescript-cst?=		../../lang/hs-purescript-cst
 
 .include "../../converters/hs-aeson/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/02/12 08:50:29 pho Exp $
+# $NetBSD: Makefile,v 1.6 2022/02/26 03:57:50 pho Exp $
 
 DISTNAME=	cereal-0.5.8.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

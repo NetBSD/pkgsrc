@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2022/02/12 08:50:28 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2022/02/26 03:57:48 pho Exp $
 
 BUILDLINK_TREE+=	hs-asn1-parse
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-asn1-parse
 HS_ASN1_PARSE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-asn1-parse+=	hs-asn1-parse>=0.9.5
-BUILDLINK_ABI_DEPENDS.hs-asn1-parse+=	hs-asn1-parse>=0.9.5nb3
+BUILDLINK_ABI_DEPENDS.hs-asn1-parse+=	hs-asn1-parse>=0.9.5nb4
 BUILDLINK_PKGSRCDIR.hs-asn1-parse?=	../../devel/hs-asn1-parse
 
 .include "../../devel/hs-asn1-encoding/buildlink3.mk"

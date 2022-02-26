@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2022/02/12 08:50:45 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2022/02/26 03:58:18 pho Exp $
 
 BUILDLINK_TREE+=	hs-profunctors
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-profunctors
 HS_PROFUNCTORS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-profunctors+=	hs-profunctors>=5.6.2
-BUILDLINK_ABI_DEPENDS.hs-profunctors+=	hs-profunctors>=5.6.2nb3
+BUILDLINK_ABI_DEPENDS.hs-profunctors+=	hs-profunctors>=5.6.2nb4
 BUILDLINK_PKGSRCDIR.hs-profunctors?=	../../math/hs-profunctors
 
 .include "../../devel/hs-base-orphans/buildlink3.mk"

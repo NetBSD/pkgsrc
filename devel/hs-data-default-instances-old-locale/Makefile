@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/02/12 08:50:31 pho Exp $
+# $NetBSD: Makefile,v 1.6 2022/02/26 03:57:52 pho Exp $
 
 DISTNAME=	data-default-instances-old-locale-0.0.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@NetBSD.org

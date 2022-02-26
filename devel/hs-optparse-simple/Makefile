@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/02/16 10:13:19 pho Exp $
+# $NetBSD: Makefile,v 1.2 2022/02/26 03:58:03 pho Exp $
 
 DISTNAME=	optparse-simple-0.1.1.4
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
