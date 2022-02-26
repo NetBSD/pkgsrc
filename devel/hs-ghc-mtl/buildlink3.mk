@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2022/02/12 08:50:33 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2022/02/26 03:57:55 pho Exp $
 
 BUILDLINK_TREE+=	hs-ghc-mtl
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-ghc-mtl
 HS_GHC_MTL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-ghc-mtl+=	hs-ghc-mtl>=1.2.1
-BUILDLINK_ABI_DEPENDS.hs-ghc-mtl+=	hs-ghc-mtl>=1.2.1.0nb4
+BUILDLINK_ABI_DEPENDS.hs-ghc-mtl+=	hs-ghc-mtl>=1.2.1.0nb5
 BUILDLINK_PKGSRCDIR.hs-ghc-mtl?=	../../devel/hs-ghc-mtl
 
 .include "../../devel/hs-exceptions/buildlink3.mk"

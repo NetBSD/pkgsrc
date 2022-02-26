@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2022/02/12 08:50:56 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2022/02/26 03:58:32 pho Exp $
 
 BUILDLINK_TREE+=	hs-xml-conduit
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-xml-conduit
 HS_XML_CONDUIT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-xml-conduit+=	hs-xml-conduit>=1.9.1
-BUILDLINK_ABI_DEPENDS.hs-xml-conduit+=	hs-xml-conduit>=1.9.1.1nb3
+BUILDLINK_ABI_DEPENDS.hs-xml-conduit+=	hs-xml-conduit>=1.9.1.1nb4
 BUILDLINK_PKGSRCDIR.hs-xml-conduit?=	../../textproc/hs-xml-conduit
 
 .include "../../textproc/hs-attoparsec/buildlink3.mk"
