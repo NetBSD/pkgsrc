@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/02/23 11:43:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/02/26 13:39:07 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -26,8 +26,8 @@ ${PYSITELIB}/attr/_make.py
 ${PYSITELIB}/attr/_make.pyc
 ${PYSITELIB}/attr/_make.pyo
 ${PYSITELIB}/attr/_next_gen.py
-${PYSITELIB}/attr/_next_gen.pyc
-${PYSITELIB}/attr/_next_gen.pyo
+${PLIST.py3x}${PYSITELIB}/attr/_next_gen.pyc
+${PLIST.py3x}${PYSITELIB}/attr/_next_gen.pyo
 ${PYSITELIB}/attr/_version_info.py
 ${PYSITELIB}/attr/_version_info.pyc
 ${PYSITELIB}/attr/_version_info.pyi
