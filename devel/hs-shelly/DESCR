@@ -1,0 +1,15 @@
+Shelly provides a single module for convenient systems programming in
+Haskell.
+
+* Shelly is aimed at convenience and getting things done rather than being
+  a demonstration of elegance.
+* It has detailed and useful error messages.
+* It maintains its own environment, making it thread-safe.
+* It has low memory usage: It has
+  * run_ and other underscore variants that do not return stdout,
+  * runFoldLines to run a fold operation over each line rather than loading
+    all of stdout into memory,
+  * runHandle and runHandles for complete control over handles.
+
+The focus of this library on convenience combined with good error messages
+should make shelly approachable for newer users of Haskell.
