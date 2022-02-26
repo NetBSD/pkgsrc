@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/12/17 15:14:35 bacon Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/02/26 23:14:33 bacon Exp $
 bin/bcftools
 bin/color-chrs
 bin/gff2gff.py
