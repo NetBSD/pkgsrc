@@ -1,9 +1,9 @@
-$NetBSD: patch-Setup.hs,v 1.3 2021/04/25 11:39:03 pho Exp $
+$NetBSD: patch-Setup.hs,v 1.4 2022/02/26 08:07:37 pho Exp $
 
 * Don't hard-code the gmake command (pkgsrc specific).
 
 * Set LD_LIBRARY_PATH while building its standard libraries. This is
-  needed because we link idris dynamically.
+  needed when idris is linked dynamically.
 
 * Don't try to invoke git. Cabal packages don't come with .git
   directory.
