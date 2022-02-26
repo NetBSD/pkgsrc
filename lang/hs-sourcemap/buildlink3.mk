@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2022/02/23 16:20:18 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2022/02/26 03:58:15 pho Exp $
 
 BUILDLINK_TREE+=	hs-sourcemap
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-sourcemap
 HS_SOURCEMAP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-sourcemap+=	hs-sourcemap>=0.1.7
-BUILDLINK_ABI_DEPENDS.hs-sourcemap+=	hs-sourcemap>=0.1.7
+BUILDLINK_ABI_DEPENDS.hs-sourcemap+=	hs-sourcemap>=0.1.7nb1
 BUILDLINK_PKGSRCDIR.hs-sourcemap?=	../../lang/hs-sourcemap
 
 .include "../../converters/hs-aeson/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2022/02/23 16:21:08 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2022/02/26 03:58:36 pho Exp $
 
 BUILDLINK_TREE+=	hs-websockets
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-websockets
 HS_WEBSOCKETS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-websockets+=	hs-websockets>=0.12.7
-BUILDLINK_ABI_DEPENDS.hs-websockets+=	hs-websockets>=0.12.7.3
+BUILDLINK_ABI_DEPENDS.hs-websockets+=	hs-websockets>=0.12.7.3nb1
 BUILDLINK_PKGSRCDIR.hs-websockets?=	../../www/hs-websockets
 
 .include "../../devel/hs-async/buildlink3.mk"

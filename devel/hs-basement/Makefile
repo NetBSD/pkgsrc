@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2022/02/12 08:50:29 pho Exp $
+# $NetBSD: Makefile,v 1.9 2022/02/26 03:57:49 pho Exp $
 
 DISTNAME=	basement-0.0.12
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 # Compatibility with GHC 9.2:

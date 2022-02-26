@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2022/02/12 08:50:48 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2022/02/26 03:58:22 pho Exp $
 
 BUILDLINK_TREE+=	hs-x509-validation
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-x509-validation
 HS_X509_VALIDATION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-x509-validation+=	hs-x509-validation>=1.6.12
-BUILDLINK_ABI_DEPENDS.hs-x509-validation+=	hs-x509-validation>=1.6.12nb1
+BUILDLINK_ABI_DEPENDS.hs-x509-validation+=	hs-x509-validation>=1.6.12nb2
 BUILDLINK_PKGSRCDIR.hs-x509-validation?=	../../security/hs-x509-validation
 
 .include "../../devel/hs-asn1-encoding/buildlink3.mk"

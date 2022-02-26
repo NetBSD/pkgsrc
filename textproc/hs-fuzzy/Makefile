@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/02/16 07:33:26 pho Exp $
+# $NetBSD: Makefile,v 1.2 2022/02/26 03:58:27 pho Exp $
 
 DISTNAME=	fuzzy-0.1.0.1
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

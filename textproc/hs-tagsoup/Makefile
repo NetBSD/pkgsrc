@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2022/02/12 08:50:55 pho Exp $
+# $NetBSD: Makefile,v 1.15 2022/02/26 03:58:31 pho Exp $
 
 DISTNAME=	tagsoup-0.14.8
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org

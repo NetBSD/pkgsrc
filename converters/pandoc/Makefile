@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2022/02/12 08:50:26 pho Exp $
+# $NetBSD: Makefile,v 1.7 2022/02/26 03:57:45 pho Exp $
 
 DISTNAME=	pandoc-2.17.1.1
 PKGNAME=	${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	converters
 
 MAINTAINER=	zecrazytux@zecrazytux.net

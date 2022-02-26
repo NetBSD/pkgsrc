@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/02/16 10:02:14 pho Exp $
+# $NetBSD: Makefile,v 1.2 2022/02/26 03:58:18 pho Exp $
 
 DISTNAME=	semirings-0.6
+PKGREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

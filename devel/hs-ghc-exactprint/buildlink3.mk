@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2022/02/16 09:13:57 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2022/02/26 03:57:55 pho Exp $
 
 BUILDLINK_TREE+=	hs-ghc-exactprint
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-ghc-exactprint
 HS_GHC_EXACTPRINT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-ghc-exactprint+=	hs-ghc-exactprint>=1.5.0
-BUILDLINK_ABI_DEPENDS.hs-ghc-exactprint+=	hs-ghc-exactprint>=1.5.0
+BUILDLINK_ABI_DEPENDS.hs-ghc-exactprint+=	hs-ghc-exactprint>=1.5.0nb1
 BUILDLINK_PKGSRCDIR.hs-ghc-exactprint?=		../../devel/hs-ghc-exactprint
 
 .include "../../devel/hs-data-default/buildlink3.mk"

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/02/14 14:41:59 pho Exp $
+# $NetBSD: Makefile,v 1.2 2022/02/26 03:58:29 pho Exp $
 
 DISTNAME=	regex-applicative-0.3.4
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
