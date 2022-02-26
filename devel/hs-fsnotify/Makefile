@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/02/26 03:57:54 pho Exp $
+# $NetBSD: Makefile,v 1.6 2022/02/26 12:33:45 pho Exp $
 
 DISTNAME=	fsnotify-0.3.0.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
@@ -11,11 +11,15 @@ LICENSE=	modified-bsd
 # On these platforms fsnotify depends on additional packages which
 # haven't been packaged yet.
 BROKEN_ON_PLATFORM+=	Darwin-*-*
-BROKEN_ON_PLATFORM+=	Linux-*-*
 
-# TODO: On *BSD this package falls back on an inefficient polling
-# backend as the last resort. We should consider implementing kqueue
-# backend and contributing it to the upstream.
+PLIST_SRC+=	PLIST.common
+
+.include "../../mk/bsd.fast.prefs.mk"
+.if ${OPSYS} == "Linux" || !empty(OPSYS:M*BSD)
+.  include "../../devel/hs-hinotify/buildlink3.mk"
+.  include "../../devel/hs-shelly/buildlink3.mk"
+PLIST_SRC+=	PLIST.inotify
+.endif
 
 .include "../../devel/hs-async/buildlink3.mk"
 .include "../../devel/hs-unix-compat/buildlink3.mk"

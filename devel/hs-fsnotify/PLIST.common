@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/04/23 13:07:39 pho Exp $
+@comment $NetBSD: PLIST.common,v 1.1 2022/02/26 12:33:45 pho Exp $
 lib/fsnotify-${PKGVERSION}/${HS_VERSION}/package-description
 lib/fsnotify-${PKGVERSION}/${HS_VERSION}/package-id
 lib/${HS_PLATFORM}/${HS_PKGID}/System/FSNotify.dyn_hi
