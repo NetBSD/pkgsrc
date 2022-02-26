@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1203 2022/02/26 15:51:11 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.1204 2022/02/26 16:26:53 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1546,3 +1546,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/hs-enclosed-exceptions version 1.0.3 [pho 2022-02-26]
 	Added devel/hs-shelly version 1.10.0 [pho 2022-02-26]
 	Updated devel/patchelf to 0.14.5 [fcambus 2022-02-26]
+	Updated devel/acr to 2.0.0 [fcambus 2022-02-26]
