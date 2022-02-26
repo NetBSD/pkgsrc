@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2022/02/12 08:50:29 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2022/02/26 03:57:49 pho Exp $
 
 BUILDLINK_TREE+=	hs-base-unicode-symbols
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-base-unicode-symbols
 HS_BASE_UNICODE_SYMBOLS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-base-unicode-symbols+=	hs-base-unicode-symbols>=0.2.4
-BUILDLINK_ABI_DEPENDS.hs-base-unicode-symbols+=	hs-base-unicode-symbols>=0.2.4.2nb3
+BUILDLINK_ABI_DEPENDS.hs-base-unicode-symbols+=	hs-base-unicode-symbols>=0.2.4.2nb4
 BUILDLINK_PKGSRCDIR.hs-base-unicode-symbols?=	../../devel/hs-base-unicode-symbols
 .endif	# HS_BASE_UNICODE_SYMBOLS_BUILDLINK3_MK
 

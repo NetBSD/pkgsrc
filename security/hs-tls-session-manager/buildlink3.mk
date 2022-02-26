@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2022/02/12 08:50:48 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2022/02/26 03:58:22 pho Exp $
 
 BUILDLINK_TREE+=	hs-tls-session-manager
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-tls-session-manager
 HS_TLS_SESSION_MANAGER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-tls-session-manager+=	hs-tls-session-manager>=0.0.4
-BUILDLINK_ABI_DEPENDS.hs-tls-session-manager+=	hs-tls-session-manager>=0.0.4nb2
+BUILDLINK_ABI_DEPENDS.hs-tls-session-manager+=	hs-tls-session-manager>=0.0.4nb3
 BUILDLINK_PKGSRCDIR.hs-tls-session-manager?=	../../security/hs-tls-session-manager
 
 .include "../../devel/hs-auto-update/buildlink3.mk"

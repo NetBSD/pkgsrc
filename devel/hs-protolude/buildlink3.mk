@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2022/02/23 16:18:22 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2022/02/26 03:58:05 pho Exp $
 
 BUILDLINK_TREE+=	hs-protolude
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-protolude
 HS_PROTOLUDE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-protolude+=	hs-protolude>=0.3.0
-BUILDLINK_ABI_DEPENDS.hs-protolude+=	hs-protolude>=0.3.0
+BUILDLINK_ABI_DEPENDS.hs-protolude+=	hs-protolude>=0.3.0nb1
 BUILDLINK_PKGSRCDIR.hs-protolude?=	../../devel/hs-protolude
 
 .include "../../devel/hs-async/buildlink3.mk"

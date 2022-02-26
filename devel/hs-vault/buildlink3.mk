@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2022/02/12 08:50:41 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2022/02/26 03:58:12 pho Exp $
 
 BUILDLINK_TREE+=	hs-vault
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-vault
 HS_VAULT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-vault+=	hs-vault>=0.3.1
-BUILDLINK_ABI_DEPENDS.hs-vault+=	hs-vault>=0.3.1.5nb3
+BUILDLINK_ABI_DEPENDS.hs-vault+=	hs-vault>=0.3.1.5nb4
 BUILDLINK_PKGSRCDIR.hs-vault?=		../../devel/hs-vault
 
 .include "../../devel/hs-hashable/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2022/02/12 08:50:46 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2022/02/26 03:58:19 pho Exp $
 
 BUILDLINK_TREE+=	hs-connection
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-connection
 HS_CONNECTION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-connection+=	hs-connection>=0.3.1
-BUILDLINK_ABI_DEPENDS.hs-connection+=	hs-connection>=0.3.1nb3
+BUILDLINK_ABI_DEPENDS.hs-connection+=	hs-connection>=0.3.1nb4
 BUILDLINK_PKGSRCDIR.hs-connection?=	../../net/hs-connection
 
 .include "../../devel/hs-basement/buildlink3.mk"

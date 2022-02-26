@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/02/12 08:50:50 pho Exp $
+# $NetBSD: Makefile,v 1.5 2022/02/26 03:58:24 pho Exp $
 
 DISTNAME=	annotated-wl-pprint-0.7.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
