@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.100 2022/01/04 12:58:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.101 2022/02/26 07:54:16 wiz Exp $
 
-DISTNAME=	gegl-0.4.34
+DISTNAME=	gegl-0.4.36
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/gegl/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -45,7 +45,7 @@ pre-build:
 .include "../../devel/meson/build.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.babl+=	babl>=0.1.72
+BUILDLINK_API_DEPENDS.babl+=	babl>=0.1.90
 .include "../../graphics/babl/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
