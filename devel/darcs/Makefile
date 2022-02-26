@@ -1,14 +1,25 @@
-# $NetBSD: Makefile,v 1.64 2022/02/26 03:57:45 pho Exp $
+# $NetBSD: Makefile,v 1.65 2022/02/26 07:26:54 pho Exp $
 
 DISTNAME=	darcs-2.16.4
 PKGNAME=	${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel scm
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.darcs.net/
 COMMENT=	Distributed revision control system
 LICENSE=	gnu-gpl-v2
+
+# If darcs is to be linked dynamically, it will depend on nearly 140 shared
+# objects and the dynamic linker will spend more than a second to resolve
+# symbols on startup. This is unacceptable because darcs tends to be
+# launched very frequently by users and IDEs. This wastes storage, but time
+# is more expensive than disks.
+HASKELL_ENABLE_SHARED_LIBRARY=	no
+
+# It makes no sense to build the profiling library because this package
+# isn't meant to be used as a library.
+HASKELL_ENABLE_LIBRARY_PROFILING=	no
 
 INSTALLATION_DIRS+=	share/zsh/site-functions
 INSTALLATION_DIRS+=	share/bash-completion/completions
