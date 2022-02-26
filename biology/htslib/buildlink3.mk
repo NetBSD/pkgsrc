@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2021/12/17 15:01:27 bacon Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2022/02/26 23:08:43 bacon Exp $
 
 BUILDLINK_TREE+=	htslib
 
