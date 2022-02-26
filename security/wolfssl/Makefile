@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2022/01/08 09:48:16 fox Exp $
+# $NetBSD: Makefile,v 1.12 2022/02/26 06:52:46 fox Exp $
 
-DISTNAME=	wolfssl-5.1.1
+DISTNAME=	wolfssl-5.2.0
 CATEGORIES=	security
 MASTER_SITES=	https://www.wolfssl.com/
 EXTRACT_SUFX=	.zip
