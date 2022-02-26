@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2022/02/12 08:50:46 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2022/02/26 03:58:20 pho Exp $
 
 BUILDLINK_TREE+=	hs-simple-sendfile
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-simple-sendfile
 HS_SIMPLE_SENDFILE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-simple-sendfile+=	hs-simple-sendfile>=0.2.30
-BUILDLINK_ABI_DEPENDS.hs-simple-sendfile+=	hs-simple-sendfile>=0.2.30nb2
+BUILDLINK_ABI_DEPENDS.hs-simple-sendfile+=	hs-simple-sendfile>=0.2.30nb3
 BUILDLINK_PKGSRCDIR.hs-simple-sendfile?=	../../net/hs-simple-sendfile
 
 .include "../../mk/bsd.fast.prefs.mk" # for ${OPSYS}

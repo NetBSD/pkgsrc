@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2022/02/24 01:15:33 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2022/02/26 03:58:03 pho Exp $
 
 BUILDLINK_TREE+=	hs-mutable-containers
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-mutable-containers
 HS_MUTABLE_CONTAINERS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-mutable-containers+=	hs-mutable-containers>=0.3.4
-BUILDLINK_ABI_DEPENDS.hs-mutable-containers+=	hs-mutable-containers>=0.3.4
+BUILDLINK_ABI_DEPENDS.hs-mutable-containers+=	hs-mutable-containers>=0.3.4nb1
 BUILDLINK_PKGSRCDIR.hs-mutable-containers?=	../../devel/hs-mutable-containers
 
 .include "../../devel/hs-mono-traversable/buildlink3.mk"

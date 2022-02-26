@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2022/02/23 16:53:02 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2022/02/26 03:57:44 pho Exp $
 
 BUILDLINK_TREE+=	hs-cborg-json
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-cborg-json
 HS_CBORG_JSON_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-cborg-json+=	hs-cborg-json>=0.2.3
-BUILDLINK_ABI_DEPENDS.hs-cborg-json+=	hs-cborg-json>=0.2.3.0
+BUILDLINK_ABI_DEPENDS.hs-cborg-json+=	hs-cborg-json>=0.2.3.0nb1
 BUILDLINK_PKGSRCDIR.hs-cborg-json?=	../../converters/hs-cborg-json
 
 .include "../../converters/hs-aeson/buildlink3.mk"
