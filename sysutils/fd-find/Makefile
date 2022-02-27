@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/01/13 21:59:08 pin Exp $
+# $NetBSD: Makefile,v 1.6 2022/02/27 14:43:06 fcambus Exp $
 
-DISTNAME=	fd-find-8.3.1
+DISTNAME=	fd-find-8.3.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sharkdp/}
 GITHUB_PROJECT=	fd
