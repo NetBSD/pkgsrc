@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:03:40 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/02/27 01:57:27 bacon Exp $
 
-BLAKE2s (kallisto-0.46.1.tar.gz) = 8468937c3735b7bd476db90557b0fd590b65de46b6bc80a58387702b6c34d86a
-SHA512 (kallisto-0.46.1.tar.gz) = 53a4db8fd5e0585693d8cd683651b4bdcc84c724a19e80a6162f1844fd491eb2d4e3180be2d9aabea7d49c9cbe0a05250f41da7d1de89d5d6cb6a8806f1afb7d
-Size (kallisto-0.46.1.tar.gz) = 2254560 bytes
+BLAKE2s (kallisto-0.48.0.tar.gz) = c31cdd71591d4784e5b48560dd2c8ed19f8baa77317f0c05441a75f7deb39d64
+SHA512 (kallisto-0.48.0.tar.gz) = 6325660c18c98b591bfa0f293f55f13fa45b58acf86dead3b0c9cd88942c9d3dfa548cf0b8f05fb89697845b7047627b8fcdfba4237a5876463311a6f7127feb
+Size (kallisto-0.48.0.tar.gz) = 2706838 bytes
+SHA1 (patch-CMakeLists.txt) = 9c96f53ec2e280b7f778ae04b002783559730df7
+SHA1 (patch-src_CMakeLists.txt) = dde489a9299207d189d3f94b875bb1929c958897
+SHA1 (patch-src_kseq.h) = c35bca57fb85367e8646a4b771449da7dbfbb439
