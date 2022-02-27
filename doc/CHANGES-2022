@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1214 2022/02/27 14:44:38 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.1215 2022/02/27 17:51:30 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1559,3 +1559,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/git-delta to 0.12.0 [fcambus 2022-02-27]
 	Updated sysutils/fd-find to 8.3.2 [fcambus 2022-02-27]
 	Updated x11/ocaml-lablgtk to 2.18.12 [gdt 2022-02-27]
+	Updated devel/mob to 2.6.0 [schmonz 2022-02-27]
