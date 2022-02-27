@@ -1,0 +1,22 @@
+$NetBSD: patch-CMakeLists.txt,v 1.3 2022/02/27 01:57:27 bacon Exp $
+
+# Unbundle htslib
+
+--- CMakeLists.txt.orig	2022-02-26 16:36:13.527572702 +0000
++++ CMakeLists.txt
+@@ -43,15 +43,6 @@ ENDIF(LINK MATCHES static)
+ 
+ 
+ include(ExternalProject)
+-ExternalProject_Add(htslib
+-    PREFIX ${PROJECT_SOURCE_DIR}/ext/htslib
+-    SOURCE_DIR ${PROJECT_SOURCE_DIR}/ext/htslib
+-    BUILD_IN_SOURCE 1
+-    CONFIGURE_COMMAND autoheader && autoconf && ${PROJECT_SOURCE_DIR}/ext/htslib/configure 
+-        --prefix=${PREFIX} --disable-bz2 --disable-lzma --disable-libcurl
+-    BUILD_COMMAND make lib-static
+-    INSTALL_COMMAND ""
+-)
+ 
+ include_directories(${htslib_PREFIX}/src/htslib)
+ 
