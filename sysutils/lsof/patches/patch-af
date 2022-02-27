@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.22 2022/02/27 02:10:45 gutteridge Exp $
+$NetBSD: patch-af,v 1.23 2022/02/27 02:13:44 gutteridge Exp $
 
 --- dialects/n+obsd/dlsof.h.orig	2006-03-28 21:54:15.000000000 +0000
 +++ dialects/n+obsd/dlsof.h
@@ -79,7 +79,7 @@ $NetBSD: patch-af,v 1.22 2022/02/27 02:10:45 gutteridge Exp $
 +#endif
 +/* 
 + * Needed for definition of curlwp, which isn't used by this code base,
-+ * but is exposed in procfs.h in an inline function declaraion.
++ * but is exposed in procfs.h in an inline function declaration.
 + */
 +#if (defined(NETBSDV) && __NetBSD_Version__>=999009300)
 +extern struct lwp	*curlwp;
