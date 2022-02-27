@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2021/12/13 19:04:02 pin Exp $
+$NetBSD: distinfo,v 1.3 2022/02/27 20:36:26 pin Exp $
 
 BLAKE2s (aho-corasick-0.7.18.crate) = 8925e88e2df4b5ca3b31783f527e1bb31dbe27846f409f631148fa239f3b2935
 SHA512 (aho-corasick-0.7.18.crate) = 7a23b16231a90d23ee60ad4c81bc225410599a4560d33d3a203138fc540c39cf1000100fed3aed40dcc371c3635656a3792545dca5dd1aefbde00d8774eebd00
@@ -393,3 +393,4 @@ Size (x11-dl-2.19.1.crate) = 64664 bytes
 BLAKE2s (xdg-2.4.0.crate) = 5076d6e37188a8857aa066427e8ceff6f12a7a2d0194521889cada799ce23c50
 SHA512 (xdg-2.4.0.crate) = d45b090c83bda578d89480f783e7238149203256d61aed46ae1657dc3de62551a618aa5a02e9d9867b39de82a8df527d37432b9b8c41afbbf0188f3644c4ad2d
 Size (xdg-2.4.0.crate) = 14035 bytes
+SHA1 (patch-leftwm-core_src_display__servers_xlib__display__server_xwrap_getters.rs) = 74d9075b42ecd671625240b4580eb2345e635e94
