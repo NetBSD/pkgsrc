@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1212 2022/02/27 13:41:11 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.1213 2022/02/27 14:43:18 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1557,3 +1557,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-softlayer to 5.9.9 [adam 2022-02-27]
 	Updated textproc/bat to 0.20.0 [fox 2022-02-27]
 	Updated textproc/git-delta to 0.12.0 [fcambus 2022-02-27]
+	Updated sysutils/fd-find to 8.3.2 [fcambus 2022-02-27]
