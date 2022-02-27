@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1210 2022/02/27 09:09:19 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1211 2022/02/27 11:25:40 fox Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1555,3 +1555,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-rope to 0.23.0 [adam 2022-02-27]
 	Updated finance/py-stripe to 2.66.0 [adam 2022-02-27]
 	Updated net/py-softlayer to 5.9.9 [adam 2022-02-27]
+	Updated textproc/bat to 0.20.0 [fox 2022-02-27]
