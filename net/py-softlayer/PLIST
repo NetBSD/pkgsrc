@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/12/16 20:30:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/02/27 09:08:57 adam Exp $
 bin/sl-${PYVERSSUFFIX}
 bin/slcli-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -17,6 +17,9 @@ ${PYSITELIB}/SoftLayer/CLI/__init__.pyo
 ${PYSITELIB}/SoftLayer/CLI/account/__init__.py
 ${PYSITELIB}/SoftLayer/CLI/account/__init__.pyc
 ${PYSITELIB}/SoftLayer/CLI/account/__init__.pyo
+${PYSITELIB}/SoftLayer/CLI/account/bandwidth_pools.py
+${PYSITELIB}/SoftLayer/CLI/account/bandwidth_pools.pyc
+${PYSITELIB}/SoftLayer/CLI/account/bandwidth_pools.pyo
 ${PYSITELIB}/SoftLayer/CLI/account/billing_items.py
 ${PYSITELIB}/SoftLayer/CLI/account/billing_items.pyc
 ${PYSITELIB}/SoftLayer/CLI/account/billing_items.pyo
@@ -971,6 +974,9 @@ ${PYSITELIB}/SoftLayer/CLI/vlan/cancel.pyo
 ${PYSITELIB}/SoftLayer/CLI/vlan/create.py
 ${PYSITELIB}/SoftLayer/CLI/vlan/create.pyc
 ${PYSITELIB}/SoftLayer/CLI/vlan/create.pyo
+${PYSITELIB}/SoftLayer/CLI/vlan/create_options.py
+${PYSITELIB}/SoftLayer/CLI/vlan/create_options.pyc
+${PYSITELIB}/SoftLayer/CLI/vlan/create_options.pyo
 ${PYSITELIB}/SoftLayer/CLI/vlan/detail.py
 ${PYSITELIB}/SoftLayer/CLI/vlan/detail.pyc
 ${PYSITELIB}/SoftLayer/CLI/vlan/detail.pyo
@@ -1109,6 +1115,9 @@ ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_Application_Delivery_Controlle
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer.py
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer.pyc
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer.pyo
+${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_Bandwidth_Version1_Allotment.py
+${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_Bandwidth_Version1_Allotment.pyc
+${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_Bandwidth_Version1_Allotment.pyo
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_CdnMarketplace_Configuration_Cache_Purge.py
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_CdnMarketplace_Configuration_Cache_Purge.pyc
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Network_CdnMarketplace_Configuration_Cache_Purge.pyo
