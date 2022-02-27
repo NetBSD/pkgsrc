@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1217 2022/02/27 21:09:39 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1218 2022/02/27 21:57:04 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1562,3 +1562,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/mob to 2.6.0 [schmonz 2022-02-27]
 	Updated sysutils/dust to 0.8.0 [pin 2022-02-27]
 	Added textproc/scatterbrainedsearch version 2.5.0 [pin 2022-02-27]
+	Updated chat/dino to 0.3.0 [nia 2022-02-27]
