@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1207 2022/02/26 23:14:41 bacon Exp $
+$NetBSD: CHANGES-2022,v 1.1208 2022/02/27 01:57:35 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1550,3 +1550,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated biology/htslib to 1.15 [bacon 2022-02-26]
 	Updated biology/samtools to 1.15 [bacon 2022-02-26]
 	Updated biology/bcftools to 1.15 [bacon 2022-02-26]
+	Updated biology/kallisto to 0.48.0 [bacon 2022-02-27]
