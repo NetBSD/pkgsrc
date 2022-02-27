@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2022/02/18 17:55:40 schmonz Exp $
+$NetBSD: distinfo,v 1.27 2022/02/27 17:51:24 schmonz Exp $
 
-BLAKE2s (mob-2.5.0.tar.gz) = 8cb21c9122c32b23ff485a36ac760dc8c277560b34d3eed2ea057772cc12d92d
-SHA512 (mob-2.5.0.tar.gz) = 1b2956fdf87258372ea240ca2895d09e72147be72a7d4bff4f651dd280b74e0453a68651e2f85f31af4f3d34d1f2a8049939e3d8feec2525f90c7f2b6527fe8c
-Size (mob-2.5.0.tar.gz) = 236973 bytes
+BLAKE2s (mob-2.6.0.tar.gz) = 940b61c7cc0d31191d9d06cea46985576cad35d658d02cd294510ccbdbb58a56
+SHA512 (mob-2.6.0.tar.gz) = 1c5129fd59ab8a580665bc976687a570803ca301c301b1397ea4501e88ce6043f8f65f0b80f594b46c9a5755f8d09ed734f59841e15f401f56dd2401c95cfe25
+Size (mob-2.6.0.tar.gz) = 237694 bytes
