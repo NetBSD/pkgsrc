@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/02/27 21:07:55 pin Exp $
+
+BLAKE2s (scatterbrainedsearch-2.5.0.tar.gz) = 5ea284960fb3bd8c40269e02ebb29611fbcb98c15e4a3248795c950024b781db
+SHA512 (scatterbrainedsearch-2.5.0.tar.gz) = f067cf3b91dfa477bd3b1649479f825d41bdcabb48707cc801ec40f11c0b493fb583b7c8f0d2af5aacb7153fd1b2941b670750b3b5781bcbbde40cd6aaf57fc2
+Size (scatterbrainedsearch-2.5.0.tar.gz) = 60609 bytes
