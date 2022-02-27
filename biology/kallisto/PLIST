@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/07/23 19:22:00 bacon Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/02/27 01:57:27 bacon Exp $
 bin/kallisto
 bin/kallisto-test
 share/kallisto/test/README.md
@@ -6,5 +6,7 @@ share/kallisto/test/Snakefile
 share/kallisto/test/chrom.txt
 share/kallisto/test/reads_1.fastq.gz
 share/kallisto/test/reads_2.fastq.gz
+share/kallisto/test/sc_reads_1.fastq.gz
+share/kallisto/test/sc_reads_2.fastq.gz
 share/kallisto/test/transcripts.fasta.gz
 share/kallisto/test/transcripts.gtf.gz
