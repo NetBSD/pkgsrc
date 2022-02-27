@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21558 2022/02/24 11:00:32 wiz Exp $
+$NetBSD: TODO,v 1.21559 2022/02/27 01:57:35 bacon Exp $
 
 Suggested new packages
 ======================
@@ -934,7 +934,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kactivities-stats-5.81.0
 	o kactivities5-5.81.0
 	o kaffe-1.1.9
-	o kallisto-0.46.2
 	o kapidox-5.81.0
 	o kapooka-0.3
 	o karchive-5.81.0
