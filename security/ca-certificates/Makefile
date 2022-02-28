@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/10/12 21:52:30 kim Exp $
+# $NetBSD: Makefile,v 1.4 2022/02/28 05:48:44 kim Exp $
 
-PKGNAME=	ca-certificates-20200601
-PKGREVISION=	1
+PKGNAME=	ca-certificates-20211016
 DISTNAME=	${PKGNAME_NOREV:C/-([^-]*)$/_\1/}
 CATEGORIES=	security
 MASTER_SITES=	http://deb.debian.org/debian/pool/main/c/ca-certificates/
@@ -14,6 +13,8 @@ LICENSE=	gnu-gpl-v2 AND mpl-2.0
 
 NO_CONFIGURE=		yes
 PYTHON_FOR_BUILD_ONLY=	yes
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 
 USE_TOOLS=	echo:run find:run ln:run openssl:run rm:run sed:run sort:run wc:run
 
