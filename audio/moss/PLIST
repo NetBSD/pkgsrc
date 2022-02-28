@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2014/03/11 14:04:58 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/02/28 10:06:34 wiz Exp $
 bin/moss
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/moss/__init__.py
 ${PYSITELIB}/moss/__init__.pyc
 ${PYSITELIB}/moss/__init__.pyo
@@ -12,12 +13,12 @@ ${PYSITELIB}/moss/htmltmpl.pyo
 ${PYSITELIB}/moss/live.py
 ${PYSITELIB}/moss/live.pyc
 ${PYSITELIB}/moss/live.pyo
-${PYSITELIB}/moss/moss.py
-${PYSITELIB}/moss/moss.pyc
-${PYSITELIB}/moss/moss.pyo
 ${PYSITELIB}/moss/mkpasswd.py
 ${PYSITELIB}/moss/mkpasswd.pyc
 ${PYSITELIB}/moss/mkpasswd.pyo
+${PYSITELIB}/moss/moss.py
+${PYSITELIB}/moss/moss.pyc
+${PYSITELIB}/moss/moss.pyo
 ${PYSITELIB}/moss/template.py
 ${PYSITELIB}/moss/template.pyc
 ${PYSITELIB}/moss/template.pyo
