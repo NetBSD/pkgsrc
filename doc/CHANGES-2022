@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1219 2022/02/28 05:48:55 kim Exp $
+$NetBSD: CHANGES-2022,v 1.1220 2022/02/28 08:28:19 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1564,3 +1564,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added textproc/scatterbrainedsearch version 2.5.0 [pin 2022-02-27]
 	Updated chat/dino to 0.3.0 [nia 2022-02-27]
 	Updated security/ca-certificates to 20211016 [kim 2022-02-28]
+	Updated sysutils/xplr to 0.17.3 [pin 2022-02-28]
