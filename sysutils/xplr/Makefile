@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2022/02/03 21:46:51 pin Exp $
+# $NetBSD: Makefile,v 1.43 2022/02/28 08:28:01 pin Exp $
 
-DISTNAME=	xplr-0.17.2
+DISTNAME=	xplr-0.17.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sayanarijit/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -20,8 +20,10 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.LuaJIT2}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.LuaJIT2}/lib
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/xplr ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/src/init.lua ${DESTDIR}${PREFIX}/share/examples/xplr
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/xplr \
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/src/init.lua \
+		${DESTDIR}${PREFIX}/share/examples/xplr
 
 .include "../../lang/rust/cargo.mk"
 .include "../../lang/LuaJIT2/buildlink3.mk"
