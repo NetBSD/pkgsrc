@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1222 2022/02/28 12:25:20 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1223 2022/02/28 12:55:35 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1567,3 +1567,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/xplr to 0.17.3 [pin 2022-02-28]
 	Updated multimedia/gstreamer1 to 1.18.5nb2 [wiz 2022-02-28]
 	Updated security/openssl to 1.1.1m [wiz 2022-02-28]
+	Updated graphics/ocaml-cairo to 0.6.2 [jaapb 2022-02-28]
