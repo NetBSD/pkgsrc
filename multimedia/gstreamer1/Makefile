@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2021/12/08 16:02:24 adam Exp $
+# $NetBSD: Makefile,v 1.54 2022/02/28 09:59:07 wiz Exp $
 
 DISTNAME=	gstreamer-1.18.5
 PKGNAME=	${DISTNAME:S/gstreamer/gstreamer1/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gstreamer/
 EXTRACT_SUFX=	.tar.xz
@@ -48,6 +48,8 @@ MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/output/gst:${WRKSRC}/output/libs/gst/check
 
 .include "../../lang/python/application.mk"
 .include "../../devel/meson/build.mk"
+# test framework, only needed at test time
+BUILDLINK_DEPMETHOD.check=	build
 .include "../../devel/check/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
