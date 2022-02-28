@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/09/23 13:15:28 tnn Exp $
-#
+# $NetBSD: Makefile,v 1.5 2022/02/28 10:01:18 wiz Exp $
 
 DISTNAME=		super_pi
 PKGNAME=		super_pi-20030927
@@ -22,6 +21,9 @@ INSTALLATION_DIRS=	bin
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base
+
+CHECK_PIE_SUPPORTED=	no
+CHECK_RELRO_SUPPORTED=	no
 
 WRKSRC=			${WRKDIR}
 
