@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/02/28 12:55:08 jaapb Exp $
+# $NetBSD: Makefile,v 1.14 2022/02/28 18:26:19 gdt Exp $
 
 GITHUB_PROJECT=	ocaml-cairo
 DISTNAME=	${GITHUB_PROJECT}-0.6.2
@@ -14,6 +14,10 @@ OCAML_USE_DUNE=		yes
 OCAML_FINDLIB_DIRS=	cairo2
 OPAM_INSTALL_FILES=	${OCAML_FINDLIB_DIRS}
 DUNE_BUILD_PACKAGES=	${OCAML_FINDLIB_DIRS}
+
+# (Se options.mk.)  Upstream says that lablgtk is required, but it is
+# not.
+#   https://github.com/Chris00/ocaml-cairo/issues/29
 
 .include "options.mk"
 .include "../../mk/ocaml.mk"
