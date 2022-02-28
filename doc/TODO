@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21560 2022/02/27 08:55:50 wiz Exp $
+$NetBSD: TODO,v 1.21561 2022/02/28 05:48:55 kim Exp $
 
 Suggested new packages
 ======================
@@ -529,7 +529,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bzr-svn-1.2.2
 	o bzrtools-2.6.0
 	o c4-1.10
-	o ca-certificates-20210119
 	o cacti-1.2.16
 	o cacti-spine-1.2.16
 	o calc-2.11.10.1
