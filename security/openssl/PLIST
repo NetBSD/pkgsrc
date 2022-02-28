@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/08/25 11:25:25 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/02/28 12:25:09 wiz Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -3780,6 +3780,8 @@ man/man3/d2i_X509_REQ_fp.3
 man/man3/d2i_X509_REVOKED.3
 man/man3/d2i_X509_SIG.3
 man/man3/d2i_X509_VAL.3
+man/man3/d2i_X509_bio.3
+man/man3/d2i_X509_fp.3
 man/man3/i2d_ACCESS_DESCRIPTION.3
 man/man3/i2d_ADMISSIONS.3
 man/man3/i2d_ADMISSION_SYNTAX.3
@@ -3974,6 +3976,8 @@ man/man3/i2d_X509_REQ_fp.3
 man/man3/i2d_X509_REVOKED.3
 man/man3/i2d_X509_SIG.3
 man/man3/i2d_X509_VAL.3
+man/man3/i2d_X509_bio.3
+man/man3/i2d_X509_fp.3
 man/man3/i2d_re_X509_CRL_tbs.3
 man/man3/i2d_re_X509_REQ_tbs.3
 man/man3/i2d_re_X509_tbs.3
@@ -4045,5 +4049,3 @@ share/examples/openssl/misc/tsget
 share/examples/openssl/misc/tsget.pl
 share/examples/openssl/openssl.cnf
 share/examples/openssl/openssl.cnf.dist
-@pkgdir share/examples/openssl/private
-@pkgdir share/examples/openssl/certs
