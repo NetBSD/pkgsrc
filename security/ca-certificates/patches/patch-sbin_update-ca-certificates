@@ -1,0 +1,15 @@
+$NetBSD: patch-sbin_update-ca-certificates,v 1.1 2022/02/28 06:46:52 kim Exp $
+
+--- sbin/update-ca-certificates.orig	2021-10-16 16:09:43.000000000 +0000
++++ sbin/update-ca-certificates	2022-02-28 06:38:12.674110664 +0000
+@@ -81,8 +81,8 @@
+ # Helper files.  (Some of them are not simple arrays because we spawn
+ # subshells later on.)
+ TEMPBUNDLE="${ETCCERTSDIR}/${CERTBUNDLE}.new"
+-ADDED="$(mktemp --tmpdir "ca-certificates.tmp.XXXXXX")"
+-REMOVED="$(mktemp --tmpdir "ca-certificates.tmp.XXXXXX")"
++ADDED="$(mktemp -t "ca-certificates.tmp.XXXXXX")"
++REMOVED="$(mktemp -t "ca-certificates.tmp.XXXXXX")"
+ 
+ # Adds a certificate to the list of trusted ones.  This includes a symlink
+ # in /etc/ssl/certs to the certificate file and its inclusion into the
