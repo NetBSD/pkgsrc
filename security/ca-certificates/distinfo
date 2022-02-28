@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:17:01 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/02/28 05:48:44 kim Exp $
 
-BLAKE2s (ca-certificates_20200601.tar.xz) = 9532328cd77238d8a1fca155eab7b91d411dcdb0cd32b6026ddab5e06eab3732
-SHA512 (ca-certificates_20200601.tar.xz) = 7bfd3122430be0a46bd10dcb0e0664561d1e0b2656b9f37677d89f71a1dcb0e668c25ffe08412888125fa9a53ee8245a4b3fc1004c419a159766665b1241113c
-Size (ca-certificates_20200601.tar.xz) = 245668 bytes
+BLAKE2s (ca-certificates_20211016.tar.xz) = ee1b82472068aef176dbc9dab2099848e299dbcc92ac309ba5a906a98414731d
+SHA512 (ca-certificates_20211016.tar.xz) = bedf072c8aa1b05b249ea272f5cecfe16bdcd762c02c712323f12ac7a278e8814453f5f3caad86a2581e451788b292ed3a76a6a81620926459bb890133cffde1
+Size (ca-certificates_20211016.tar.xz) = 239608 bytes
