@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2021/11/15 22:53:59 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2022/02/28 09:59:07 wiz Exp $
 
 BUILDLINK_TREE+=	gstreamer1
 
@@ -12,7 +12,6 @@ BUILDLINK_PKGSRCDIR.gstreamer1?=	../../multimedia/gstreamer1
 pkgbase := gstreamer1
 .include "../../mk/pkg-build-options.mk"
 
-.include "../../devel/check/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .endif # GSTREAMER1_BUILDLINK3_MK
 
