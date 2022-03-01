@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21565 2022/03/01 09:10:06 wiz Exp $
+$NetBSD: TODO,v 1.21566 2022/03/01 09:50:13 jaapb Exp $
 
 Suggested new packages
 ======================
@@ -1250,7 +1250,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-migrate-parsetree-2.1.0
 	o ocaml-mtime-1.2.0
 	o ocaml-mysql-1.2.4
-	o ocaml-num-1.4
 	o ocaml-parsexp-0.14.0
 	o ocaml-ppx_assert-0.14.0
 	o ocaml-ppx_base-0.14.0
