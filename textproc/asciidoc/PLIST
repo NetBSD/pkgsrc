@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2022/02/18 09:16:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2022/03/01 08:51:09 wiz Exp $
 bin/a2x
 bin/asciidoc
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -151,9 +151,3 @@ ${PYSITELIB}/asciidoc/resources/xhtml11.conf
 ${PYSITELIB}/asciidoc/utils.py
 ${PYSITELIB}/asciidoc/utils.pyc
 ${PYSITELIB}/asciidoc/utils.pyo
-${PYSITELIB}/tests/blocks/__init__.py
-${PYSITELIB}/tests/blocks/__init__.pyc
-${PYSITELIB}/tests/blocks/__init__.pyo
-${PYSITELIB}/tests/blocks/test_table.py
-${PYSITELIB}/tests/blocks/test_table.pyc
-${PYSITELIB}/tests/blocks/test_table.pyo
