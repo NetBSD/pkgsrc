@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1244 2022/03/01 21:16:29 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.1245 2022/03/01 21:17:14 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1591,3 +1591,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/qmail-qfilter to 2.1nb7 [schmonz 2022-03-01]
 	Updated net/unison-snapshot to 2.51.71 [gdt 2022-03-01]
 	Updated net/dbip-asn-lite to 2022.03 [fcambus 2022-03-01]
+	Updated net/dbip-city-lite to 2022.03 [fcambus 2022-03-01]
