@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:15:48 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/03/01 09:33:09 jaapb Exp $
 
-BLAKE2s (dune-2.7.1.tar.gz) = 70ed0ffc2818a4fee2a41e309400e6f4723eea35b8df0c46a923464a9aaa624d
-SHA512 (dune-2.7.1.tar.gz) = b77d0e207263107365e5a6e94423e8ab4ddbab1f920872d915e4014b7cc69915274b53fe946bb4b29dfe3de2bf5573ab3b2bffb4db8eb50b472e7dfb6cab88b7
-Size (dune-2.7.1.tar.gz) = 1290915 bytes
+BLAKE2s (dune-2.9.3.tar.gz) = ac5f47b68db9e3055f112bcff7966b781bf7eaedd904fcc5ea28aa98f400a5de
+SHA512 (dune-2.9.3.tar.gz) = df6e06a9beebf41f3ed375384be781b5c87c7949048995cc0bbad13dd65c96bd8b27415cd41e43b1112bd86524a59a7dd418e14b5c72b4f1f8fd4ac5ca2d1494
+Size (dune-2.9.3.tar.gz) = 1387667 bytes
