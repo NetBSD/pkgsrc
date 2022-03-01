@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2021/11/21 14:20:08 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/03/01 13:51:44 ryoon Exp $
 bin/openjdk11-jar
 bin/openjdk11-jarsigner
 bin/openjdk11-java
@@ -627,7 +627,7 @@ java/openjdk11/lib/libzip.so
 java/openjdk11/lib/modules
 java/openjdk11/lib/psfont.properties.ja
 java/openjdk11/lib/psfontj2d.properties
-java/openjdk11/lib/security/blacklisted.certs
+java/openjdk11/lib/security/blocked.certs
 java/openjdk11/lib/security/cacerts
 java/openjdk11/lib/security/default.policy
 java/openjdk11/lib/security/public_suffix_list.dat
