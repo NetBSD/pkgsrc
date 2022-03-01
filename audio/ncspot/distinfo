@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2022/01/19 14:04:45 pin Exp $
+$NetBSD: distinfo,v 1.28 2022/03/01 22:40:18 pin Exp $
 
 BLAKE2s (addr2line-0.17.0.crate) = f7fa3b016f0e80c4ea9967f8947de15edc9fa39d0c0cdea692dccd0c41c28039
 SHA512 (addr2line-0.17.0.crate) = ef3bbd7c6d1dfdd0b47e3be1fb4c8b15ed61a769bed7e80dce80461a1ee13ef21c75e62e9a66328504f862341f1e808abec5790ac79784e18655afcc16206b95
@@ -1270,4 +1270,3 @@ BLAKE2s (zvariant_derive-2.10.0.crate) = 78b7ecca2ea4d8f443bcef95d91ce08c1674e13
 SHA512 (zvariant_derive-2.10.0.crate) = ba06d0761de8e20839246517d89494e5728fd654cf95eec193a4ca4cdb90090542bbfd7ed0ffbc9fc44edda38c5270139f54e63cb88d09f6c26b39199ea1deec
 Size (zvariant_derive-2.10.0.crate) = 8746 bytes
 SHA1 (patch-Cargo.toml) = 15fe393b8dd873218b8cdcc8faa3b86689e76c1d
-SHA1 (patch-src_ui_listview.rs) = e402c55f8bfb82d3424e20d59b37abd52a29a35f
