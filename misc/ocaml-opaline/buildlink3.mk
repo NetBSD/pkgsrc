@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2019/11/03 17:04:24 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2022/03/01 09:36:20 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-opaline
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-opaline
 OCAML_OPALINE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-opaline+=	ocaml-opaline>=0.3.1
-BUILDLINK_ABI_DEPENDS.ocaml-opaline+=	ocaml-opaline>=0.3.2
+BUILDLINK_ABI_DEPENDS.ocaml-opaline+=	ocaml-opaline>=0.3.3
 BUILDLINK_PKGSRCDIR.ocaml-opaline?=	../../misc/ocaml-opaline
 
 # We only need this to install
