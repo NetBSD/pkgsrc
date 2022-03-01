@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.18 2020/01/26 17:31:05 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2022/03/01 17:49:46 schmonz Exp $
 #
 
-DISTNAME=		syncdir-1.0
-PKGREVISION=		4
+DISTNAME=		syncdir-1.1
 CATEGORIES=		devel
 MASTER_SITES=		${HOMEPAGE}
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://untroubled.org/syncdir/
 COMMENT=		Synchronous open, link, rename, and unlink
-LICENSE=		gnu-gpl-v2
+LICENSE=		unlicense
 
 USE_LIBTOOL=		yes
 
@@ -22,5 +21,11 @@ PATCHFILES+=		${DLSYM_PATCH}
 SITES.${DLSYM_PATCH}=	https://schmonz.com/qmail/syncdirdlsym/
 
 INSTALLATION_DIRS=	lib
+
+SUBST_CLASSES+=		space
+SUBST_STAGE.space=	post-extract
+SUBST_FILES.space=	syncdir.c
+SUBST_SED.space=	-e 's|if(SYS_RENAME(oldpath|if (SYS_RENAME(oldpath|'
+SUBST_SED.space+=	-e 's|if(fdirsyncfn(newpath|if (fdirsyncfn(newpath|'
 
 .include "../../mk/bsd.pkg.mk"
