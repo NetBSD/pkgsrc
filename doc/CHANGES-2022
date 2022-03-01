@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1234 2022/03/01 13:11:30 he Exp $
+$NetBSD: CHANGES-2022,v 1.1235 2022/03/01 13:36:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1581,3 +1581,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-cython to 0.29.28 [adam 2022-03-01]
 	Updated textproc/py-lxml to 4.8.0 [adam 2022-03-01]
 	Updated net/routinator to 0.11.0 [he 2022-03-01]
+	Updated www/firefox to 97.0.1 [ryoon 2022-03-01]
