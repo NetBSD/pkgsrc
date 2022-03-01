@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.31 2021/01/01 15:07:59 schmonz Exp $
+# $NetBSD: Makefile,v 1.32 2022/03/01 19:15:38 schmonz Exp $
 #
 
 DISTNAME=		qmail-qfilter-2.1
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://untroubled.org/qmail-qfilter/
 COMMENT=		Multi-filter front end for qmail-queue
-LICENSE=		gnu-gpl-v2
+LICENSE=		unlicense
 
 DEPENDS+=		qmail>=1.03nb9:../../mail/qmail
 
@@ -27,8 +27,12 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/qmail-qfilter
 BUILD_DEFS+=		QMAILDIR
 
 DJB_MAKE_TARGETS=	NO
+BUILD_TARGET=		programs
 
 .include "../../mk/bsd.prefs.mk"
+
+post-extract:
+	${RM} -f ${WRKSRC}/COPYING
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/qmail-qfilter			\

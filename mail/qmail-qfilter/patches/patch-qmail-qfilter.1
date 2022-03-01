@@ -1,0 +1,73 @@
+$NetBSD: patch-qmail-qfilter.1,v 1.1 2022/03/01 19:15:38 schmonz Exp $
+
+Apply all upstream changes since 2.1 (aff0c4a) through master (795718f).
+
+--- qmail-qfilter.1.orig	2005-08-12 23:40:51.000000000 +0000
++++ qmail-qfilter.1
+@@ -11,13 +11,13 @@ qmail-qfilter \- front end for qmail-que
+ .B qmail-qfilter
+ sends the message text through each of the filter commands named on
+ the command line. 
+-Each filter is run seperately, with standard input opened to the input
++Each filter is run separately, with standard input opened to the input
+ email, and standard output opened to a new temporary file that will
+ become the input to either the next filter, or
+ .BR qmail-queue .
+ If the filter does not modify the message it passes unchanged to the
+ next step.
+-It also makes the envelope avaliable to each filter as
++It also makes the envelope available to each filter as
+ file descriptor 3.  File descriptor 4 is opened to a new temporary file for the
+ modified envelope, allowing the filter to modify the envelope or the
+ message.  If the filter does not modify the envelope, the envelope
+@@ -27,10 +27,10 @@ This provides compatibility for existing
+ the envelope.
+ .B qmail-qfilter
+ also opens up file descriptor 5 to a temporary file.  If this file is
+-empty after all the filters have executed, its contents are read and
++not empty after all the filters have executed, its contents are read and
+ used to specify a program to execute in place of
+ .BR qmail-queue .
+-Each filter on the command line in seperated with
++Each filter on the command line is separated with
+ .BR -- .  
+ .SH "RETURN VALUES"
+ Returns 51 (out of memory), 53 (write error), or 81 (internal error)
+@@ -47,7 +47,14 @@ returns 0 immediately without running an
+ Otherwise returns the exit code of
+ .BR qmail-queue .
+ .SH ENVIRONMENT
+-For cmpatibility with previous versions,
++.B qmail-qfilter
++sets
++.B QMAILPPID
++to the PID of its parent (e.g.,
++.BR qmail-smtpd )
++so that a filter can log the PID of the session that invoked it.
++.P
++For compatibility with previous versions,
+ .B qmail-qfilter
+ sets
+ .B QMAILUSER
+@@ -95,17 +102,17 @@ and
+ by using
+ .B env -u QMAILNAME -u MAILNAME -u NAME qmail-inject -n
+ as the command to invoke qmail-inject.
+-Note that some the
++Note that the
+ .B env
+-command with some OS's doesn't support the
++command with some OSes doesn't support the
+ .B -u
+ option.
+ .P
+ A message with an excessive number of recipients (more than 64K bytes of
+ recipient data on Linux) will cause execution of the filter programs to
+-fail, and for the message to be rejected.
++fail, and the message to be rejected.
+ .P
+ The same temporary file is reused for file descriptor 5 for each filter.
+ Make sure each filter writes a trailing ASCII NUL byte following the
+ program name, as multiple filters could otherwise overwrite the value in
+-undesireable ways.
++undesirable ways.

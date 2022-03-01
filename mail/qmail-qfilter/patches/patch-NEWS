@@ -1,0 +1,12 @@
+$NetBSD: patch-NEWS,v 1.1 2022/03/01 19:15:38 schmonz Exp $
+
+Apply all upstream changes since 2.1 (aff0c4a) through master (795718f).
+
+--- NEWS.orig	2022-03-01 18:59:08.000000000 +0000
++++ NEWS
+@@ -1,3 +1,5 @@
++- Set $QMAILPPID in the executed filters so filters know the grandparent
++  PID (ie qmail-smtpd, etc). Thanks Amitai Schleier.
+ -------------------------------------------------------------------------------
+ Changes in version 2.1
+ 
