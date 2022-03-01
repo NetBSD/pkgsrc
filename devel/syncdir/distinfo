@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:19:58 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/03/01 17:49:46 schmonz Exp $
 
 BLAKE2s (syncdir-1.0-libtoolize-20181112-dlsym-20181203.1.patch) = dc7a07b4d18e20453d166907ca1ff6b6dbb3fc3a78436375a369db93e1e9fb9d
 SHA512 (syncdir-1.0-libtoolize-20181112-dlsym-20181203.1.patch) = b90c00f498d02aef5343adef3cb42458eadfcc20b888c27fbc0aae1bf55ec5d5b599c8e9e0e140ddf84d9659ac7eb73a668394d571c7a509779c0a74ed300895
@@ -6,6 +6,6 @@ Size (syncdir-1.0-libtoolize-20181112-dlsym-20181203.1.patch) = 6977 bytes
 BLAKE2s (syncdir-1.0-libtoolize-20181112.patch) = decf61b0a9865e2fb97398c7d54271586cc9b4c79c72ff28c143bde784b30b00
 SHA512 (syncdir-1.0-libtoolize-20181112.patch) = 67881906547d4928e939e5b35ecb8a26b07affd4946522473639aa7c346279bfbb27680a7c500ad3030cd4f5fb840e1c452f9e825f9bd5ee4f8e85ced335b408
 Size (syncdir-1.0-libtoolize-20181112.patch) = 2163 bytes
-BLAKE2s (syncdir-1.0.tar.gz) = 3cc772f60c665877f88821854a39308cadc77e3d3deaa773c691c0047a64371b
-SHA512 (syncdir-1.0.tar.gz) = 0b5262e23e43f34be7bc31ed6baf7624a115a509e459504651b184a0856c7918671db4be1b8e14552f275c49c5c6bbc00d786c57f1d96548a491048674f58317
-Size (syncdir-1.0.tar.gz) = 8878 bytes
+BLAKE2s (syncdir-1.1.tar.gz) = 6f750e8ddf303be5508bbfe8e03784ce5a2e1e9ace4e01a68bb09078058d0021
+SHA512 (syncdir-1.1.tar.gz) = 6dcf7a31c96a76d5709c31a22dbedef42f6ff689260cd67308a5055017aedd29fd955a6bef47aea86187d16df14563d907bd2b5a7a9cac6b679827c1183f75f0
+Size (syncdir-1.1.tar.gz) = 2757 bytes
