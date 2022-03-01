@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:59:17 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/03/01 09:36:20 jaapb Exp $
 
-BLAKE2s (opaline-0.3.2.tar.gz) = c979d1d5dc34d6dca88b2b4b4ddf61c469b54b67d8f9d3d05edd48801407bfc3
-SHA512 (opaline-0.3.2.tar.gz) = ac08f2b850a4e6426f0b4799622223c3fd5e7257238101440b7eeaa73b17dfe19746007cf5d5c2cf6de5ff1d81e744147d2373903626d445024ec5404c0ddd61
-Size (opaline-0.3.2.tar.gz) = 3270 bytes
+BLAKE2s (opaline-0.3.3.tar.gz) = f34434a3658fa99524d27bbb6ae6cf2d4f34a71242586ade35c20b5439e7eee4
+SHA512 (opaline-0.3.3.tar.gz) = 0c84897d2820bc08dd2e752aa5ab0a34ac34045c5109ea0c69da6a802ac1365aa0f7dcc3b26e6fb2c2a37fed926feac0a56e992908dc61a685900147d3e1098a
+Size (opaline-0.3.3.tar.gz) = 3304 bytes
