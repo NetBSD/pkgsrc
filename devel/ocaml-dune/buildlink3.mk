@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2020/12/09 10:48:33 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2022/03/01 09:33:09 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-dune
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-dune
 OCAML_DUNE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-dune+=	ocaml-dune>=2.2.0
-BUILDLINK_ABI_DEPENDS.ocaml-dune+=	ocaml-dune>=2.7.1
+BUILDLINK_ABI_DEPENDS.ocaml-dune+=	ocaml-dune>=2.9.3
 BUILDLINK_PKGSRCDIR.ocaml-dune?=	../../devel/ocaml-dune
 .endif	# OCAML_DUNE_BUILDLINK3_MK
 
