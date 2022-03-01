@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1233 2022/03/01 10:00:10 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1234 2022/03/01 13:11:30 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1580,3 +1580,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/ocaml-num to 1.4 [jaapb 2022-03-01]
 	Updated devel/py-cython to 0.29.28 [adam 2022-03-01]
 	Updated textproc/py-lxml to 4.8.0 [adam 2022-03-01]
+	Updated net/routinator to 0.11.0 [he 2022-03-01]
