@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21563 2022/03/01 08:51:19 wiz Exp $
+$NetBSD: TODO,v 1.21564 2022/03/01 09:07:38 jaapb Exp $
 
 Suggested new packages
 ======================
@@ -1292,7 +1292,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-variantslib-0.14.0
 	o ocaml-zarith-1.12
 	o ocaml-zip-110
-	o ocamlbuild-0.14.1
 	o ocamlnet-4.1.9
 	o ocrad-0.25
 	o odbc-postgresql-9.06.0500
