@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1246 2022/03/01 21:18:40 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.1247 2022/03/01 22:38:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1593,3 +1593,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/dbip-asn-lite to 2022.03 [fcambus 2022-03-01]
 	Updated net/dbip-city-lite to 2022.03 [fcambus 2022-03-01]
 	Updated net/dbip-country-lite to 2022.03 [fcambus 2022-03-01]
+	Updated sysutils/broot to 1.9.3 [pin 2022-03-01]
