@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2018/01/10 16:29:44 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/03/01 09:50:00 jaapb Exp $
+${PLIST.ocaml-opt}lib/ocaml/arith_flags.cmx
 lib/ocaml/arith_status.cmi
 lib/ocaml/arith_status.cmti
 ${PLIST.ocaml-opt}lib/ocaml/arith_status.cmx
@@ -7,6 +8,7 @@ lib/ocaml/big_int.cmi
 lib/ocaml/big_int.cmti
 ${PLIST.ocaml-opt}lib/ocaml/big_int.cmx
 lib/ocaml/big_int.mli
+${PLIST.ocaml-opt}lib/ocaml/int_misc.cmx
 lib/ocaml/libnums.a
 lib/ocaml/nat.cmi
 lib/ocaml/nat.cmti
@@ -25,7 +27,7 @@ lib/ocaml/ratio.cmti
 ${PLIST.ocaml-opt}lib/ocaml/ratio.cmx
 lib/ocaml/ratio.mli
 ${OCAML_SITELIB}/num-top/META
-${PLIST.ocaml-opt}${OCAML_SITELIB}/num-top/num_top.cma
+${OCAML_SITELIB}/num-top/num_top.cma
 ${OCAML_SITELIB}/num-top/num_top.cmi
 ${OCAML_SITELIB}/num-top/num_top_printers.cmi
 ${OCAML_SITELIB}/num/META
