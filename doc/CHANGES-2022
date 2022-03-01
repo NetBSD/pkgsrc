@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1228 2022/03/01 09:28:41 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1229 2022/03/01 09:33:22 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1574,3 +1574,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/xournalpp to 1.1.1 [wiz 2022-03-01]
 	Updated www/nghttp2 to 1.47.0 [adam 2022-03-01]
 	Updated www/nghttp2-tools to 1.47.0 [adam 2022-03-01]
+	Updated devel/ocaml-dune to 2.9.3 [jaapb 2022-03-01]
