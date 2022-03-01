@@ -1,0 +1,25 @@
+$NetBSD: patch-README,v 1.1 2022/03/01 19:15:38 schmonz Exp $
+
+Apply all upstream changes since 2.1 (aff0c4a) through master (795718f).
+
+--- README.orig	2005-08-12 23:40:51.000000000 +0000
++++ README
+@@ -27,9 +27,6 @@ Requirements:
+ 
+ How to install:
+ 
+-- Check the definitions at the top of qmail-qfilter.c, especially the
+-  value of TMPDIR.  This should be set to a temporary directory that
+-  only the executor of qmail-qfilter has write access to.
+ - Check the conf-* files for appropriate values for your compiler and
+   linker, and installation paths.
+ - Run "make"
+@@ -73,7 +70,4 @@ Notes on writing a filter program:
+ 
+ See the scripts in the "samples" directory for example scripts.
+ 
+-This program is Copyright(C) 2001,2004-2005 Bruce Guenter, and may be
+-copied according to the GNU GENERAL PUBLIC LICENSE (GPL) Version 2 or a
+-later version.  A copy of this license is included with this package.
+-This package comes with no warranty of any kind.
++This is free and unencumbered software released into the public domain.

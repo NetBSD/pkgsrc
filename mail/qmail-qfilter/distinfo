@@ -1,7 +1,11 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:54:24 nia Exp $
+$NetBSD: distinfo,v 1.13 2022/03/01 19:15:38 schmonz Exp $
 
 BLAKE2s (qmail-qfilter-2.1.tar.gz) = 1ad507f9f75aad955190a1fe1d6dfbea03be8efb5d2919a457cc90e0df12e19c
 SHA512 (qmail-qfilter-2.1.tar.gz) = a515969b60aaa08a06513a9d88f3bfb36fa9d1333ea87613facb1d65055d44e69c4cad2298870607c012dffdec4d03c36dc87b24b3b3c0602ba1d7df6cb1ff2c
 Size (qmail-qfilter-2.1.tar.gz) = 22242 bytes
+SHA1 (patch-LICENSE) = 225a249c4e051bcb50b8ec4f3da7e15a274f4a80
 SHA1 (patch-Makefile) = 6d511223e12c22b84f384318b33b205384424c82
-SHA1 (patch-qmail-qfilter.c) = 694cf8e942ebb9753d4d9325bdece3d0cab47e66
+SHA1 (patch-NEWS) = d020735b8f20f2e17d26d46069af51734ede5ac2
+SHA1 (patch-README) = e56584a4524e114f7c9a5a7925083c049fc62329
+SHA1 (patch-qmail-qfilter.1) = d6bd5875bf37312615bf76ac4c107aa17a2e81e8
+SHA1 (patch-qmail-qfilter.c) = 9553e07c3c4198df44ecc7b82b7f9cedc4c16fe1
