@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1239 2022/03/01 15:58:05 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.1240 2022/03/01 16:07:18 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1586,3 +1586,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/openjdk11 to 1.11.0.14.9 [ryoon 2022-03-01]
 	Updated textproc/p5-Search-Xapian to 1.2.25.5 [schmonz 2022-03-01]
 	Updated devel/py-approvaltests to 4.0.0 [schmonz 2022-03-01]
+	Updated lang/rust to 1.58.1 [he 2022-03-01]
