@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.66 2021/03/09 03:50:25 ryoon Exp $
+$NetBSD: patch-aa,v 1.67 2022/03/01 13:35:33 ryoon Exp $
 
 * Add Sun audio support
 
---- old-configure.in.orig	Tue Jan  7 17:23:36 2020
-+++ old-configure.in	Fri Jan 17 16:03:40 2020
-@@ -1960,6 +1960,19 @@
- AC_DEFINE(MOZ_WEBM_ENCODER)
- AC_SUBST(MOZ_WEBM_ENCODER)
+--- old-configure.in.orig	2022-02-02 21:01:47.000000000 +0000
++++ old-configure.in
+@@ -1335,6 +1335,19 @@ fi
+ AC_DEFINE_UNQUOTED(MOZ_MACBUNDLE_ID,$MOZ_MACBUNDLE_ID)
+ AC_SUBST(MOZ_MACBUNDLE_ID)
  
 +dnl ==================================
 +dnl = Check sunaudio availability
@@ -22,5 +22,5 @@ $NetBSD: patch-aa,v 1.66 2021/03/09 03:50:25 ryoon Exp $
 +AC_SUBST(MOZ_SUNAUDIO)
 +
  dnl ========================================================
- dnl NegotiateAuth
+ dnl = Child Process Name for IPC
  dnl ========================================================

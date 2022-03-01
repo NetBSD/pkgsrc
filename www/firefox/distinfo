@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.460 2022/01/31 22:44:21 ryoon Exp $
+$NetBSD: distinfo,v 1.461 2022/03/01 13:35:33 ryoon Exp $
 
-BLAKE2s (firefox-96.0.3.source.tar.xz) = 0e46f31421d6d86b06fb26b7f9dbeb6106a1b3c772c3f3fddbfb5ef3310cd45a
-SHA512 (firefox-96.0.3.source.tar.xz) = 3dd5fbc96e369d5f4fb3eca778c2bd3e2313d089f867de9fac3556810a797e9b5629ef1b8840fb2f22a18df7de95ea1993eee052f691d861a555cea544b05966
-Size (firefox-96.0.3.source.tar.xz) = 406721708 bytes
+BLAKE2s (firefox-97.0.1.source.tar.xz) = a549883f525e16669497f1e06b35d1b9fb173fa20dc2c960ffe2318c647233da
+SHA512 (firefox-97.0.1.source.tar.xz) = 8620aace77167593aab5acd230860eb3e67eeddc49c0aad0491b5dc20bd0ddb6089dbb8975aed241426f57b2ad772238b04d03b95390175f580cbd80bb6d5f6c
+Size (firefox-97.0.1.source.tar.xz) = 476866824 bytes
 BLAKE2s (nodejs-output-95.0.tgz) = c44b37d3605524a49157002f01c29f568f04194b0e635bc312de7ffdeb9a74c9
 SHA512 (nodejs-output-95.0.tgz) = 2faf326f4e100b66f8597c365cc2eb5d0eee26aae92a7e2446891f2178041aa71ba16eae37000acacd43a657025ec11c18db73b112f5c49cc21cdb882da6d798
 Size (nodejs-output-95.0.tgz) = 200627 bytes
-SHA1 (patch-aa) = 15b8567cee2af9853f6949c80345ffcb1fd3852a
+SHA1 (patch-aa) = 00561a3c0e5ba884145777c2abae64644bf40097
 SHA1 (patch-browser_app_profile_firefox.js) = 89cea0a66457c96ad0b94aaa524aa5942ad781d0
 SHA1 (patch-build_moz.configure_rust.configure) = 25ddfacd29cebbc6db005dbe61a2a7446d480678
 SHA1 (patch-config_gcc-stl-wrapper.template.h) = 9d1f15ff487efa9202114d19ed5668b4e7aa032a
@@ -23,7 +23,7 @@ SHA1 (patch-js_src_jit_ProcessExecutableMemory.cpp) = fad103cc698f9828ad58f74223
 SHA1 (patch-js_src_jit_arm64_vixl_MozCpu-vixl.cpp) = fdc522e3fb626b1b8a2ebf19ad60bfc25dfa4183
 SHA1 (patch-js_src_util_NativeStack.cpp) = a0a16d8d8d78d3cc3f4d2a508586f1a7821f7dba
 SHA1 (patch-js_src_vm_ArrayBufferObject.cpp) = 0501fdcae11568ae4ea78e0d2f6b3750b7a67d47
-SHA1 (patch-libwebrtc.diff) = b6b72d25e240622f837832ab3a21522ee1741f0a
+SHA1 (patch-libwebrtc.diff) = ad0b7b4ef00cc43d08eb5e94a4d600fd62cd6783
 SHA1 (patch-media_ffvpx_libavutil_arm_bswap.h) = de58daa0fd23d4fec50426602b65c9ea5862558a
 SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = 2ef11da83c90c41490db4c0d9809c3e1826b488a
 SHA1 (patch-media_libcubeb_src_moz.build) = e4e64a1135cf4157ae5b6f7c1710ebd076953479

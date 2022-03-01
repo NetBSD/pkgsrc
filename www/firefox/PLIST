@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.179 2021/11/11 16:48:04 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.180 2022/03/01 13:35:33 ryoon Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/chrome/icons/default/default128.png
@@ -9,7 +9,6 @@ lib/firefox/browser/chrome/icons/default/default64.png
 lib/firefox/browser/features/doh-rollout@mozilla.org.xpi
 lib/firefox/browser/features/formautofill@mozilla.org.xpi
 lib/firefox/browser/features/pictureinpicture@mozilla.org.xpi
-lib/firefox/browser/features/proxy-failover@mozilla.com.xpi
 lib/firefox/browser/features/screenshots@mozilla.org.xpi
 lib/firefox/browser/features/webcompat-reporter@mozilla.org.xpi
 lib/firefox/browser/features/webcompat@mozilla.org.xpi
@@ -21,6 +20,7 @@ lib/firefox/firefox-bin
 lib/firefox/fonts/TwemojiMozilla.ttf
 lib/firefox/gmp-clearkey/0.1/libclearkey.so
 lib/firefox/gmp-clearkey/0.1/manifest.json
+lib/firefox/libipcclientcerts.so
 lib/firefox/liblgpllibs.so
 ${PLIST.ffvpx}lib/firefox/libmozavcodec.so
 ${PLIST.ffvpx}lib/firefox/libmozavutil.so
