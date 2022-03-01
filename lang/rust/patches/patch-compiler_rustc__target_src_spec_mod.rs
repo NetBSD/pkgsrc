@@ -1,10 +1,10 @@
-$NetBSD: patch-compiler_rustc__target_src_spec_mod.rs,v 1.6 2022/01/21 23:20:36 he Exp $
+$NetBSD: patch-compiler_rustc__target_src_spec_mod.rs,v 1.7 2022/03/01 16:06:39 he Exp $
 
 Add i586(pentium) and aarch64_be targets.
 
 --- compiler/rustc_target/src/spec/mod.rs.orig	2021-03-23 16:15:10.000000000 +0000
 +++ compiler/rustc_target/src/spec/mod.rs
-@@ -821,9 +821,11 @@ supported_targets! {
+@@ -816,9 +816,11 @@ supported_targets! {
      ("powerpc-unknown-openbsd", powerpc_unknown_openbsd),
  
      ("aarch64-unknown-netbsd", aarch64_unknown_netbsd),

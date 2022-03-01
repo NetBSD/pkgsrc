@@ -1,28 +1,11 @@
-$NetBSD: patch-src_bootstrap_lib.rs,v 1.12 2022/02/07 09:16:05 tnn Exp $
+$NetBSD: patch-src_bootstrap_lib.rs,v 1.13 2022/03/01 16:06:39 he Exp $
 
 Don't filter out optimization flags.
 FreeBSD has a particular C++ runtime library name
 
-With rust-1.57.0 as bootstrap we get this:
-error: field is never read: `id`
-   --> src/bootstrap/lib.rs:280:5
-    |
-280 |     id: String,
-    |     ^^^^^^^^^^
-    |
-    = note: `-D dead-code` implied by `-D warnings`
-
---- src/bootstrap/lib.rs.orig	2021-11-29 19:27:11.000000000 +0000
+--- src/bootstrap/lib.rs.orig	2021-09-06 18:42:35.000000000 +0000
 +++ src/bootstrap/lib.rs
-@@ -273,6 +273,7 @@ pub struct Build {
-         RefCell<HashMap<TargetSelection, HashMap<String, (&'static str, PathBuf, Vec<String>)>>>,
- }
- 
-+#[allow(dead_code)]
- #[derive(Debug)]
- struct Crate {
-     name: Interned<String>,
-@@ -954,14 +955,13 @@ impl Build {
+@@ -954,14 +954,13 @@ impl Build {
              .args()
              .iter()
              .map(|s| s.to_string_lossy().into_owned())

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2022/02/28 11:32:26 jperkin Exp $
+# $NetBSD: options.mk,v 1.19 2022/03/01 16:06:39 he Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
 PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs
@@ -9,7 +9,7 @@ PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs
 .if ${OPSYS} != "SunOS"
 PKG_SUPPORTED_OPTIONS+=		rust-llvm
 # There may be compatibility issues with base LLVM.
-.  if !empty(HAVE_LLVM) || !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
+.  if !empty(HAVE_LLVM)
 PKG_SUGGESTED_OPTIONS+=		rust-llvm
 .  endif
 .endif
@@ -23,10 +23,11 @@ PKG_SUGGESTED_OPTIONS+=	rust-cargo-static
 .include "../../mk/bsd.options.mk"
 
 #
-# Use the internal copy of LLVM.
-# This contains some extra optimizations.
+# Use the internal copy of LLVM or the external one?
+# The internal one contains some extra optimizations.
 #
 .if empty(PKG_OPTIONS:Mrust-llvm)
+BUILDLINK_API_DEPENDS.llvm+=	llvm>=12.0.0
 .include "../../lang/llvm/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-llvm-link-shared
 CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
