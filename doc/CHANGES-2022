@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1241 2022/03/01 17:49:52 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.1242 2022/03/01 19:15:43 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1588,3 +1588,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-approvaltests to 4.0.0 [schmonz 2022-03-01]
 	Updated lang/rust to 1.58.1 [he 2022-03-01]
 	Updated devel/syncdir to 1.1 [schmonz 2022-03-01]
+	Updated mail/qmail-qfilter to 2.1nb7 [schmonz 2022-03-01]
