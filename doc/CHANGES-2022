@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1230 2022/03/01 09:36:30 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.1231 2022/03/01 09:44:23 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1576,3 +1576,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/nghttp2-tools to 1.47.0 [adam 2022-03-01]
 	Updated devel/ocaml-dune to 2.9.3 [jaapb 2022-03-01]
 	Updated misc/ocaml-opaline to 0.3.3 [jaapb 2022-03-01]
+	Updated devel/ocaml-csexp to 1.5.1 [jaapb 2022-03-01]
