@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1240 2022/03/01 16:07:18 he Exp $
+$NetBSD: CHANGES-2022,v 1.1241 2022/03/01 17:49:52 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1587,3 +1587,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/p5-Search-Xapian to 1.2.25.5 [schmonz 2022-03-01]
 	Updated devel/py-approvaltests to 4.0.0 [schmonz 2022-03-01]
 	Updated lang/rust to 1.58.1 [he 2022-03-01]
+	Updated devel/syncdir to 1.1 [schmonz 2022-03-01]
