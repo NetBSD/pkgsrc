@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1242 2022/03/01 19:15:43 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.1243 2022/03/01 20:03:02 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1589,3 +1589,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/rust to 1.58.1 [he 2022-03-01]
 	Updated devel/syncdir to 1.1 [schmonz 2022-03-01]
 	Updated mail/qmail-qfilter to 2.1nb7 [schmonz 2022-03-01]
+	Updated net/unison-snapshot to 2.51.71 [gdt 2022-03-01]
