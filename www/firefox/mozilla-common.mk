@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.225 2022/03/01 13:35:33 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.226 2022/03/01 18:01:24 gutteridge Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -208,7 +208,7 @@ BUILDLINK_API_DEPENDS.libwebp+=	libwebp>=1.0.2
 .include "../../graphics/libwebp/buildlink3.mk"
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
-RUST_REQ=	1.53.0
+RUST_REQ=	1.57.0
 .include "../../lang/rust/rust.mk"
 # webrtc option requires internal libvpx
 #BUILDLINK_API_DEPENDS.libvpx+=	libvpx>=1.3.0
