@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.224 2022/01/18 18:48:28 tnn Exp $
+# $NetBSD: mozilla-common.mk,v 1.225 2022/03/01 13:35:33 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -92,9 +92,8 @@ CONFIGURE_ARGS+=	--with-system-nss
 CONFIGURE_ARGS+=	--with-system-nspr
 #CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--with-system-zlib
-CONFIGURE_ARGS+=	--with-system-libevent=${BUILDLINK_PREFIX.libevent}
+CONFIGURE_ARGS+=	--with-system-libevent
 CONFIGURE_ARGS+=	--disable-crashreporter
-CONFIGURE_ARGS+=	--disable-necko-wifi
 CONFIGURE_ARGS+=	--enable-chrome-format=omni
 CONFIGURE_ARGS+=	--with-system-webp
 
