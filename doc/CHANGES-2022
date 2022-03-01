@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1236 2022/03/01 13:37:25 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.1237 2022/03/01 13:52:48 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1583,3 +1583,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/routinator to 0.11.0 [he 2022-03-01]
 	Updated www/firefox to 97.0.1 [ryoon 2022-03-01]
 	Updated www/firefox-l10n to 97.0.1 [ryoon 2022-03-01]
+	Updated lang/openjdk11 to 1.11.0.14.9 [ryoon 2022-03-01]
