@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2021/12/08 16:04:13 adam Exp $
+# $NetBSD: Makefile,v 1.35 2022/03/01 09:09:55 wiz Exp $
 
-DISTNAME=	xournalpp-1.1.0
-PKGREVISION=	4
+DISTNAME=	xournalpp-1.1.1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xournalpp/}
-GITHUB_PROJECT=	xournalpp
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/xournalpp/xournalpp
@@ -27,6 +26,11 @@ DEPENDS+=	tex-amsmath-[0-9]*:../../print/tex-amsmath
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=	tex-standalone-[0-9]*:../../print/tex-standalone
+
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/* ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 || ${TRUE}
 
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
