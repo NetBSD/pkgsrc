@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.9 2021/09/04 09:21:29 nia Exp $
+# $NetBSD: Makefile.common,v 1.10 2022/03/02 21:31:07 nia Exp $
 # used by games/stone-soup/Makefile
 # used by games/stone-soup-sdl/Makefile
 
-DISTNAME=	stone_soup-0.27.1-nodeps
+DISTNAME=	stone_soup-0.28.0-nodeps
 PKGNAME=	${DISTNAME:S/_/-/:S/-nodeps//1}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=crawl/}
