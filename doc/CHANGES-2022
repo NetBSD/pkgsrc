@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1253 2022/03/02 21:32:00 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1254 2022/03/02 22:56:36 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1601,3 +1601,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/goredo to 1.24.0 [schmonz 2022-03-02]
 	Updated games/stone-soup-sdl to 0.28.0 [nia 2022-03-02]
 	Updated games/stone-soup to 0.28.0 [nia 2022-03-02]
+	Added audio/davis version 0.1.1 [pin 2022-03-02]
