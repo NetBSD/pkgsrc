@@ -1,0 +1,12 @@
+Davis is a MDP client for music lovers.
+Davis displays any metadata you like! The performers, conductor, ensemble,
+work, movement, recording location, etc., can all be displayed so long as it's
+in your tags.
+
+It can fetch album art directly from MPD, using the albumart command of
+the MPD protocol. This means that davis can fetch album art even from remote
+MPD instances, and does not need to know the location of your music directory.
+With a custom subcommand, it is also possible to display the album art as sixel
+graphics in the terminal.
+
+Davis can be extended with custom subcommands, see upstream repository.
