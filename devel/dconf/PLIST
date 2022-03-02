@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2018/12/02 07:11:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/03/02 13:17:25 prlw1 Exp $
 bin/dconf
 include/dconf/client/dconf-client.h
 include/dconf/common/dconf-changeset.h
@@ -10,6 +10,7 @@ lib/libdconf.so
 lib/libdconf.so.1
 lib/libdconf.so.1.0.0
 lib/pkgconfig/dconf.pc
+lib/systemd/user/dconf.service
 libexec/dconf-service
 man/man1/dconf-service.1
 man/man1/dconf.1
