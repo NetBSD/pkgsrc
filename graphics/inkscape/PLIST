@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2021/07/02 06:59:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.34 2022/03/02 02:28:04 ryoon Exp $
 bin/inkscape
 bin/inkview
 include/2geom-1.1.0/2geom/2geom.h
@@ -210,7 +210,6 @@ share/inkscape/extensions/Poly3DObjects/trunc_icos.obj
 share/inkscape/extensions/Poly3DObjects/trunc_oct.obj
 share/inkscape/extensions/Poly3DObjects/trunc_tet.obj
 share/inkscape/extensions/README.md
-share/inkscape/extensions/STYLEGUIDE.md
 share/inkscape/extensions/TESTING.md
 share/inkscape/extensions/addnodes.inx
 share/inkscape/extensions/addnodes.py
@@ -2564,6 +2563,7 @@ share/inkscape/screens/start-welcome-text.ja.svg
 share/inkscape/screens/start-welcome-text.pl.svg
 share/inkscape/screens/start-welcome-text.pt.svg
 share/inkscape/screens/start-welcome-text.pt_BR.svg
+share/inkscape/screens/start-welcome-text.ro.svg
 share/inkscape/screens/start-welcome-text.ru.svg
 share/inkscape/screens/start-welcome-text.sk.svg
 share/inkscape/screens/start-welcome-text.svg
@@ -2622,6 +2622,7 @@ share/inkscape/templates/default.kok.svg
 share/inkscape/templates/default.kok@latin.svg
 share/inkscape/templates/default.ks@aran.svg
 share/inkscape/templates/default.ks@deva.svg
+share/inkscape/templates/default.lt.svg
 share/inkscape/templates/default.lv.svg
 share/inkscape/templates/default.mai.svg
 share/inkscape/templates/default.ml.svg
