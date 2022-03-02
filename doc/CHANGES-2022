@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1252 2022/03/02 17:46:07 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.1253 2022/03/02 21:32:00 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1599,3 +1599,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/dconf to 0.40.0 [prlw1 2022-03-02]
 	Updated devel/dconf-editor to 3.38.3nb3 [prlw1 2022-03-02]
 	Updated devel/goredo to 1.24.0 [schmonz 2022-03-02]
+	Updated games/stone-soup-sdl to 0.28.0 [nia 2022-03-02]
+	Updated games/stone-soup to 0.28.0 [nia 2022-03-02]
