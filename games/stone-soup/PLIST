@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/08/10 14:46:36 nia Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/03/02 21:31:07 nia Exp $
 bin/crawl
 share/stone-soup/dat/clua/autofight.lua
 share/stone-soup/dat/clua/automagic.lua
@@ -63,7 +63,9 @@ share/stone-soup/dat/des/branches/depths_encompass.des
 share/stone-soup/dat/des/branches/dis.des
 share/stone-soup/dat/des/branches/elf.des
 share/stone-soup/dat/des/branches/geh.des
+share/stone-soup/dat/des/branches/geh_lava_maze.des
 share/stone-soup/dat/des/branches/hell.des
+share/stone-soup/dat/des/branches/hells.des
 share/stone-soup/dat/des/branches/hilbert_zone.des
 share/stone-soup/dat/des/branches/lair.des
 share/stone-soup/dat/des/branches/orc.des
@@ -108,6 +110,7 @@ share/stone-soup/dat/des/builder/rooms.des
 share/stone-soup/dat/des/builder/shops.des
 share/stone-soup/dat/des/builder/uniques.des
 share/stone-soup/dat/des/guide.txt
+share/stone-soup/dat/des/portals/arena.des
 share/stone-soup/dat/des/portals/bailey.des
 share/stone-soup/dat/des/portals/bazaar.des
 share/stone-soup/dat/des/portals/desolation.des
@@ -133,6 +136,7 @@ share/stone-soup/dat/des/serial/park.des
 share/stone-soup/dat/des/serial/rivers.des
 share/stone-soup/dat/des/serial/serial_guide.txt
 share/stone-soup/dat/des/serial/sigils.des
+share/stone-soup/dat/des/serial/subway.des
 share/stone-soup/dat/des/serial/undead.des
 share/stone-soup/dat/des/serial/window.des
 share/stone-soup/dat/des/sprint/arena_sprint.des
@@ -353,6 +357,7 @@ share/stone-soup/dat/descript/lv/tutorial.txt
 share/stone-soup/dat/descript/lv/unident.txt
 share/stone-soup/dat/descript/lv/unrand.txt
 share/stone-soup/dat/descript/monsters.txt
+share/stone-soup/dat/descript/mutations.txt
 share/stone-soup/dat/descript/nl/ability.txt
 share/stone-soup/dat/descript/nl/tutorial.txt
 share/stone-soup/dat/descript/nl/unident.txt
