@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1251 2022/03/02 13:20:39 prlw1 Exp $
+$NetBSD: CHANGES-2022,v 1.1252 2022/03/02 17:46:07 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1598,3 +1598,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/inkscape to 1.1.2 [ryoon 2022-03-02]
 	Updated devel/dconf to 0.40.0 [prlw1 2022-03-02]
 	Updated devel/dconf-editor to 3.38.3nb3 [prlw1 2022-03-02]
+	Updated devel/goredo to 1.24.0 [schmonz 2022-03-02]
