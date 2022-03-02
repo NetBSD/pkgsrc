@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.86 2021/11/07 21:28:48 wiz Exp $
+$NetBSD: distinfo,v 1.87 2022/03/02 02:28:04 ryoon Exp $
 
-BLAKE2s (inkscape-1.1.1_2021-09-20_3bf5ae0d25.tar.xz) = a3cd5ffae74aefb0f553393204a36f76eae6d36c4fec8c68040f2c0a903d1904
-SHA512 (inkscape-1.1.1_2021-09-20_3bf5ae0d25.tar.xz) = 22b1b584a344c4f4ebd0b6e84a4af44e472ef47b3971cb97cbb026a4bf7cb5bea49a7de0c2af2a9e439c7c794f775081c8d1904f33eadb49a5389ea01bc0896c
-Size (inkscape-1.1.1_2021-09-20_3bf5ae0d25.tar.xz) = 34221284 bytes
+BLAKE2s (inkscape-1.1.2.tar.xz) = 4f7f3cad6faa377e25671a22bd156453b7d74cb7f0d8ecbc1e2ed6fcb2b540d3
+SHA512 (inkscape-1.1.2.tar.xz) = 55884f34e6fcc604027e7ea60f67702a658d3838332c1f3b56ec2cb05ab44992df0651ed741d6e7e807848366b24ee7415d0908ed1143b0bfb33ddbf26ae5c16
+Size (inkscape-1.1.2.tar.xz) = 34222832 bytes
 SHA1 (patch-CMakeScripts_DefineDependsandFlags.cmake) = 26351c300629e28f6523fe2167a2eed5802435cf
 SHA1 (patch-src_extension_implementation_script.cpp) = da46549f688da5c9c0ecbeaeac7962e4f261cae4
-SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.cpp) = e65c9c731927cec6ae595b7f2abbb94791dfde59
