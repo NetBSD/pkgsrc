@@ -1,12 +1,8 @@
-# $NetBSD: Makefile,v 1.243 2022/01/10 01:46:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.244 2022/03/02 02:28:04 ryoon Exp $
 
-DISTNAME=	inkscape-1.1.1_2021-09-20_3bf5ae0d25
-PKGNAME=	inkscape-1.1.1
-PKGREVISION=	2
+DISTNAME=	inkscape-1.1.2
 CATEGORIES=	graphics
-# master site is using a weird redirect that ftp(1) does not support
-#MASTER_SITES=	https://inkscape.org/gallery/item/29255/
-#https://media.inkscape.org/dl/resources/file/
+MASTER_SITES=	https://media.inkscape.org/dl/resources/file/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	reed@reedmedia.net
@@ -27,7 +23,7 @@ DEPENDS+=		${PYPKGPREFIX}-scour-[0-9]*:../../graphics/py-scour
 TOOL_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
 TOOLS_PLATFORM.msgfmt=	# empty
 
-WRKSRC=		${WRKDIR}/${DISTNAME}
+WRKSRC=		${WRKDIR}/inkscape-1.1.2_2022-02-04_0a00cf5339
 
 # std::optional
 GCC_REQD+=		7
