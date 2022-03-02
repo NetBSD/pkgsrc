@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.62 2021/12/08 16:03:55 adam Exp $
+# $NetBSD: Makefile,v 1.63 2022/03/02 13:20:15 prlw1 Exp $
 
 DISTNAME=	dconf-editor-3.38.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dconf-editor/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Projects/dconf
-COMMENT=	gsettings editor
+COMMENT=	GSettings editor
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c99

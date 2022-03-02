@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:14:31 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/03/02 13:20:15 prlw1 Exp $
 
 BLAKE2s (dconf-editor-3.38.3.tar.xz) = 6f0e7bbb48832ac7221dffc951abcdb1a87c7fb86081d55c00d0094e719c11b1
 SHA512 (dconf-editor-3.38.3.tar.xz) = cf00705c1e11eab980777b9696fbaaa0f5f8a8118276f2add4f4fcefe5aab46844a539539418ce61f285e65623179a9d63cc18a91339b70b5e7c9408c697e9d1
 Size (dconf-editor-3.38.3.tar.xz) = 594544 bytes
+SHA1 (patch-editor_meson.build) = 0bdabcf1c7fbb7220bb1c27036207ee0746b9604
