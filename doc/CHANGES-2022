@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1258 2022/03/03 12:13:44 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1259 2022/03/03 16:06:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1607,3 +1607,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/libwebp to 1.2.2 [adam 2022-03-03]
 	Updated sysutils/py-borgbackup to 1.2.0 [wiz 2022-03-03]
 	Updated devel/nss to 3.76 [wiz 2022-03-03]
+	Updated lang/rust-analyzer to 0.0.2022.02.28 [wiz 2022-03-03]
