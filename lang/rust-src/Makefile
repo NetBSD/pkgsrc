@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/01/22 17:31:01 he Exp $
+# $NetBSD: Makefile,v 1.3 2022/03/03 16:49:31 he Exp $
 
-DISTNAME=	rust-src-1.57.0
+DISTNAME=	rust-src-1.58.1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=rust/}
 
@@ -13,14 +13,19 @@ USE_TOOLS+=	bash sh
 
 LIBDIR=			lib/rustlib/src/rust/library
 SRCLIB=			rust-src/${LIBDIR}
+IST_TOOLS=		stdarch/crates/intrinsic-test/acle/tools
 REPLACE_BASH+=		install.sh
 REPLACE_BASH+=		${SRCLIB}/backtrace/ci/debuglink.sh
 REPLACE_BASH+=		${SRCLIB}/stdarch/ci/dox.sh
 REPLACE_BASH+=		${SRCLIB}/stdarch/ci/run-docker.sh
 REPLACE_BASH+=		${SRCLIB}/stdarch/ci/run.sh
 REPLACE_BASH+=		${SRCLIB}/stdarch/ci/style.sh
+REPLACE_BASH+=		${SRCLIB}/${IST_TOOLS}/check-rst-syntax.sh
+REPLACE_BASH+=		${SRCLIB}/${IST_TOOLS}/generate-intrinsics-specs.sh
+REPLACE_BASH+=		${SRCLIB}/${IST_TOOLS}/generate-pdfs.sh
 
 REPLACE_PYTHON+=	${SRCLIB}/core/src/unicode/printable.py
+REPLACE_PYTHON+=	${SRCLIB}/${IST_TOOLS}/gen-intrinsics-specs.py
 
 REPLACE_SH+=		${SRCLIB}/backtrace/ci/android-sdk.sh
 
