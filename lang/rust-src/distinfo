@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2022/01/22 17:31:01 he Exp $
+$NetBSD: distinfo,v 1.3 2022/03/03 16:49:31 he Exp $
 
-BLAKE2s (rust-src-1.57.0.tar.gz) = bfe703a857b963f3281705acc7520341d0c0e44eff2f88423a6ef1af26f4953d
-SHA512 (rust-src-1.57.0.tar.gz) = 24870ff910d11111afdd6f6744ac8750189c67315100ea68e26a05394288624e965d7b4edc99b6b5ed0d311768cf55acf6a7617dfe4f9079f24740af97200531
-Size (rust-src-1.57.0.tar.gz) = 3679703 bytes
+BLAKE2s (rust-src-1.58.1.tar.gz) = c548fab1edd5fe7e8c8faf2fd9d15f72057736afa8868318b8a62d355faad09f
+SHA512 (rust-src-1.58.1.tar.gz) = 216c7dcad314bcfac0a05e6f55fd88f2b15580c71ab4375295580078aa93e7873e85bdf0c22d7d95ea76201af1e491fe2b00ae1b3e2ff0a14ecee4aaa5177ade
+Size (rust-src-1.58.1.tar.gz) = 4128842 bytes
