@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2021/10/26 11:20:02 nia Exp $
+$NetBSD: distinfo,v 1.27 2022/03/03 12:01:09 wiz Exp $
 
-BLAKE2s (borgbackup-1.1.17.tar.gz) = 8c767c8e5c3bc3b8b75c68239686c49400ae205cbc8fdb1e665a72cab7275291
-SHA512 (borgbackup-1.1.17.tar.gz) = 6170680efcca35341031a8fcfd9434d2dca530bb6f7fcabbf452e6af6a8df5a825b4991d342f3c97bd7378d56b9ee86e6118f9281a31ba51235f49818852f4bb
-Size (borgbackup-1.1.17.tar.gz) = 3781411 bytes
+BLAKE2s (borgbackup-1.2.0.tar.gz) = ffe6db831195b61b68ad081336aff7b7386f647607bf8e6b3c0586210460cc8f
+SHA512 (borgbackup-1.2.0.tar.gz) = c06a797439078118fc57418be2a9af64e84248659ba25cfc04dff7c67f9f52a033a11cd1e830410be390ae59dcacd2474f97d8b5886db7d4910486d0ad9b7c51
+Size (borgbackup-1.2.0.tar.gz) = 4020793 bytes
