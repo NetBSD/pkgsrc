@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2021/04/21 08:39:56 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2022/03/03 09:36:09 jperkin Exp $
 
 DISTNAME=	avltree-1.1
 PKGREVISION=	1
@@ -19,5 +19,13 @@ INSTALLATION_DIRS=	include lib ${PKGMANDIR}/cat3 ${PKGMANDIR}/man3
 
 post-extract:
 	cp -f ${FILESDIR}/Makefile ${WRKSRC}/
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+post-install:
+	${RUN} install_name_tool -id ${PREFIX}/lib/libavltree.so.1.1 \
+	    ${DESTDIR}${PREFIX}/lib/libavltree.so.1.1
+.endif
 
 .include "../../mk/bsd.pkg.mk"
