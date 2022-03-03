@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2022/02/18 08:02:40 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2022/03/03 12:01:09 wiz Exp $
 
-DISTNAME=	borgbackup-1.1.17
-PKGREVISION=	5
+DISTNAME=	borgbackup-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/borgbackup/}
@@ -13,9 +12,10 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	c c++
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+DEPENDS+=	${PYPKGPREFIX}-msgpack>=1.0:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 PYTHON_SELF_CONFLICT=		yes
 
 USE_PKG_RESOURCES=	yes
