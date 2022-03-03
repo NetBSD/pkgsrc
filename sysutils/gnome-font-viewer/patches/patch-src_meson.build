@@ -1,0 +1,15 @@
+$NetBSD: patch-src_meson.build,v 1.1 2022/03/03 01:11:27 gutteridge Exp $
+
+Fix builds with meson>=0.61.
+
+--- src/meson.build.orig	2019-09-14 23:36:36.000000000 +0000
++++ src/meson.build
+@@ -37,7 +37,7 @@ executable('gnome-font-viewer', viewer_s
+   install: true)
+ 
+ desktop_file = 'org.gnome.font-viewer.desktop'
+-i18n.merge_file(desktop_file,
++i18n.merge_file(
+   input: desktop_file + '.in',
+   output: desktop_file,
+   po_dir: '../po',
