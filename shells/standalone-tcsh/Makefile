@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2022/03/03 07:30:47 nia Exp $
+# $NetBSD: Makefile,v 1.42 2022/03/03 07:39:00 nia Exp $
 #
 
 # FIXME: This is because of PREFIX=/ below.
@@ -18,7 +18,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-* OpenBSD-*-* SunOS-*-*
 
 .include "../../mk/bsd.prefs.mk"
 
-.if "${OPSYS}" == "NetBSD" && !defined(OPSYS_HAS_STATIC_PIE)
+.if !defined(OPSYS_HAS_STATIC_PIE)
 MKPIE_SUPPORTED= no
 .endif
 
