@@ -1,11 +1,11 @@
-$NetBSD: patch-.._package.xml,v 1.9 2021/09/06 15:08:44 taca Exp $
+$NetBSD: patch-.._package.xml,v 1.9.4.1 2022/03/03 19:15:19 bsiegert Exp $
 
 * Drop MD5 for replacing shbang line.
 
---- ../package.xml.orig	2021-09-05 08:36:03.000000000 +0000
+--- ../package.xml.orig	2022-02-16 17:41:21.000000000 +0000
 +++ ../package.xml
-@@ -65,7 +65,7 @@ Support generating keys without a user n
-    <file baseinstalldir="/" md5sum="67316b5765933f240787d7d8877cf228" name="data/pinentry-cli.xml" role="data">
+@@ -64,7 +64,7 @@ Ignore tests/debug.log and .gitattribute
+    <file baseinstalldir="/" md5sum="8fb0283a2cc4f1b5f97df1b9f57ab7e8" name="data/pinentry-cli.xml" role="data">
      <tasks:replace from="@package-version@" to="version" type="package-info" />
     </file>
 -   <file baseinstalldir="/" md5sum="069d671c63366eaf64b050132dd76da3" name="scripts/crypt-gpg-pinentry" role="script">
