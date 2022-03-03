@@ -1,8 +1,12 @@
-$NetBSD: patch-Lib_urlparse.py,v 1.2 2021/10/27 23:58:55 gutteridge Exp $
+$NetBSD: patch-Lib_urlparse.py,v 1.2.2.1 2022/03/03 19:33:58 bsiegert Exp $
 
 Fix CVE-2021-23336: Add `separator` argument to parse_qs; warn with default
 Via Fedora:
 https://src.fedoraproject.org/rpms/python2.7/blob/rawhide/f/00359-CVE-2021-23336.patch
+
+Fix CVE-2022-0391: urlparse does not sanitize URLs containing ASCII newline and tabs
+Via Fedora:
+https://src.fedoraproject.org/rpms/python2.7/raw/40dd05e5d77dbfa81777c9f84b704bc2239bf710/f/00377-CVE-2022-0391.patch
 
 --- Lib/urlparse.py.orig	2020-04-19 21:13:39.000000000 +0000
 +++ Lib/urlparse.py
@@ -14,7 +18,37 @@ https://src.fedoraproject.org/rpms/python2.7/blob/rawhide/f/00359-CVE-2021-23336
  
  __all__ = ["urlparse", "urlunparse", "urljoin", "urldefrag",
             "urlsplit", "urlunsplit", "parse_qs", "parse_qsl"]
-@@ -382,7 +383,8 @@ def unquote(s):
+@@ -62,6 +63,9 @@ scheme_chars = ('abcdefghijklmnopqrstuvw
+                 '0123456789'
+                 '+-.')
+ 
++# Unsafe bytes to be removed per WHATWG spec
++_UNSAFE_URL_BYTES_TO_REMOVE = ['\t', '\r', '\n']
++
+ MAX_CACHE_SIZE = 20
+ _parse_cache = {}
+ 
+@@ -184,12 +188,19 @@ def _checknetloc(netloc):
+                              "under NFKC normalization"
+                              % netloc)
+ 
++def _remove_unsafe_bytes_from_url(url):
++    for b in _UNSAFE_URL_BYTES_TO_REMOVE:
++        url = url.replace(b, "")
++    return url
++
+ def urlsplit(url, scheme='', allow_fragments=True):
+     """Parse a URL into 5 components:
+     <scheme>://<netloc>/<path>?<query>#<fragment>
+     Return a 5-tuple: (scheme, netloc, path, query, fragment).
+     Note that we don't break the components up in smaller bits
+     (e.g. netloc is a single string) and we don't expand % escapes."""
++    url = _remove_unsafe_bytes_from_url(url)
++    scheme = _remove_unsafe_bytes_from_url(scheme)
+     allow_fragments = bool(allow_fragments)
+     key = url, scheme, allow_fragments, type(url), type(scheme)
+     cached = _parse_cache.get(key, None)
+@@ -382,7 +393,8 @@ def unquote(s):
              append(item)
      return ''.join(res)
  
@@ -24,7 +58,7 @@ https://src.fedoraproject.org/rpms/python2.7/blob/rawhide/f/00359-CVE-2021-23336
      """Parse a query given as a string argument.
  
          Arguments:
-@@ -405,14 +407,23 @@ def parse_qs(qs, keep_blank_values=0, st
+@@ -405,14 +417,23 @@ def parse_qs(qs, keep_blank_values=0, st
      """
      dict = {}
      for name, value in parse_qsl(qs, keep_blank_values, strict_parsing,
@@ -50,7 +84,7 @@ https://src.fedoraproject.org/rpms/python2.7/blob/rawhide/f/00359-CVE-2021-23336
      """Parse a query given as a string argument.
  
      Arguments:
-@@ -434,15 +445,72 @@ def parse_qsl(qs, keep_blank_values=0, s
+@@ -434,15 +455,72 @@ def parse_qsl(qs, keep_blank_values=0, s
  
      Returns a list, as G-d intended.
      """
