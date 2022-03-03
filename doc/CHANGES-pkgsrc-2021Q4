@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q4,v 1.1.2.14 2022/02/23 09:51:55 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q4,v 1.1.2.15 2022/03/03 19:36:21 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q4 branch:
 
@@ -92,4 +92,34 @@ databases/mariadb105-client, databases/mariadb105-server: security fix
 
 Pullup ticket #6585 - requested by nia
 databases/mariadb106-client, databases/mariadb106-server: security fix
+
+Pullup ticket #6586 - requested by gutteridge
+net/bind916: SunOS build fix
+
+Pullup ticket #6587 - requested by taca
+www/ruby-rails52: security fix
+
+Pullup ticket #6588 - requested by taca
+www/ruby-rails60: security fix
+
+Pullup ticket #6589 - requested by taca
+www/wuby-rails61: security fix
+
+Pullup ticket #6590 - requested by taca
+security/pear-Crypt_GPG: security fix (CVE-2022-24953)
+
+Pullup ticket #6591 - requested by taca
+lang/php80: security fix
+
+Pullup ticket #6592 - requested by taca
+lang/php81: security fix
+
+Pullup ticket #6593 - requested by taca
+lang/php74: security fix
+
+Pullup ticket #6594 - requested by taca
+www/ruby-rails70: security fix
+
+Pullup ticket #6595 - requested by gutteridge
+lang/python27: security fix (CVE-2021-4189, CVE-2022-0391)
 
