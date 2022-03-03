@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2022/02/14 18:25:49 adam Exp $
+$NetBSD: distinfo,v 1.11 2022/03/03 16:06:16 wiz Exp $
 
 BLAKE2s (addr2line-0.17.0.crate) = f7fa3b016f0e80c4ea9967f8947de15edc9fa39d0c0cdea692dccd0c41c28039
 SHA512 (addr2line-0.17.0.crate) = ef3bbd7c6d1dfdd0b47e3be1fb4c8b15ed61a769bed7e80dce80461a1ee13ef21c75e62e9a66328504f862341f1e808abec5790ac79784e18655afcc16206b95
@@ -318,9 +318,9 @@ Size (regex-syntax-0.6.25.crate) = 293293 bytes
 BLAKE2s (rowan-0.15.3.crate) = 5381c056fde6cb6d86cf555c3ca17f37ebc0e2f0428d803fd46243e9b85e9252
 SHA512 (rowan-0.15.3.crate) = 1002ab3b87ca6f929a167600bb655e4cd76be4cafdccd2a314033b3032c7f0631ff455cd2337212644dc7625d0e543ac17396b1015b6dcba193f43e937083e14
 Size (rowan-0.15.3.crate) = 39158 bytes
-BLAKE2s (rust-analyzer-2022-02-14.tar.gz) = a3a30c5929575ab9112c69df83ee746e2bbb29a55d66fbd599a5aa2e331cfff5
-SHA512 (rust-analyzer-2022-02-14.tar.gz) = cad62bc2837daadf17fadd3e4ccb2cc9ea4203f14cdac6931548a025b2cd5daef5f4b645d36381fea5a5baf44b301d8b83f0136c095dcc3b500df476baab6f1b
-Size (rust-analyzer-2022-02-14.tar.gz) = 2266772 bytes
+BLAKE2s (rust-analyzer-2022-02-28.tar.gz) = 5e456b3820d559ae16ff7dfc594bcfb46fa195e6abac181dbe5a17395d9c097e
+SHA512 (rust-analyzer-2022-02-28.tar.gz) = e20052ec7046e86538ba2eb0c34da2bfeee7e9dd63cdbe63ff3a7ef684b068862696be2e2ca097d48c008000fa0921e618bb0a3f949ece6a82208a309e715dc9
+Size (rust-analyzer-2022-02-28.tar.gz) = 2275995 bytes
 BLAKE2s (rustc-ap-rustc_lexer-725.0.0.crate) = fb009ee9ee73e83fed1432958ea45d46a6c409955db6c764cd4b20667099c87f
 SHA512 (rustc-ap-rustc_lexer-725.0.0.crate) = 4239c4762d7ca351698be015ab251193f65487bda73a9dfaae5788e5b8395656c12d7f9cb5ee16cbd8c03dd5b9828dfb7d507498f40dc83d6a85ed3d59cc657a
 Size (rustc-ap-rustc_lexer-725.0.0.crate) = 14086 bytes
@@ -426,9 +426,9 @@ Size (tracing-tree-0.2.0.crate) = 17099 bytes
 BLAKE2s (typed-arena-2.0.1.crate) = f484d944cc67a0b122c9e02a4b8815bfd3c3843144cbd493052b3bd1666635de
 SHA512 (typed-arena-2.0.1.crate) = 182fdac0ef9b494fc2966005ece2107a3c53b6eafe4eebe9be3d552aebe143e05f3db2b51693c253831744fc265ec2a557d31ee42cf0ba5991b38d075278415d
 Size (typed-arena-2.0.1.crate) = 11439 bytes
-BLAKE2s (ungrammar-1.14.9.crate) = dee125530467c375bba04051403933dfa22b9b0aba60b215e8d4cec0029217ef
-SHA512 (ungrammar-1.14.9.crate) = a03f5740579407b196ab2c742da47e8461aaa20081f4e06eb6cdeda675892634c155d265002faacb87dd3ae3b8d6fa6abd63414938ac495e619ebf368db390f7
-Size (ungrammar-1.14.9.crate) = 8365 bytes
+BLAKE2s (ungrammar-1.15.0.crate) = 70eb83cbe550198ff71af6d737bbf0b2bf20be6c53067a137d862afed70e4129
+SHA512 (ungrammar-1.15.0.crate) = 46d063d9e55a911827ede92c02f23252040af75f0d1e556f529cf17427ce2cc804853e87be6f14837bed372e2e38dc1ff341277969f1fc54e79e8baec182189d
+Size (ungrammar-1.15.0.crate) = 8363 bytes
 BLAKE2s (unicase-2.6.0.crate) = 389082bf2c60fa4668d7b943d6eebc3a78d540e5f1525582ffbad9b7eee8b024
 SHA512 (unicase-2.6.0.crate) = 7e76a5f344e32c56cf87223585d87a56c79627b52bba0b29eb6de82de874b2964accededa8e9b5741f57944b6750fba5c61e679a50d4fd5a5646f431e2f4f188
 Size (unicase-2.6.0.crate) = 23478 bytes
@@ -519,9 +519,3 @@ Size (xshell-0.1.17.crate) = 21019 bytes
 BLAKE2s (xshell-macros-0.1.17.crate) = 98fe6d6cfdf1931df28789287100a183c72f2b65daf1d9e4e8b98d9cddcbb695
 SHA512 (xshell-macros-0.1.17.crate) = 838f8bfc530051d8fe6c1b2a3c8e2fe7c6946705d6e6a084807b35817d5d6bae6f2941cb97a47fdf5c970aa3f4baef222aac938039bb520aadbb3fd7fd1a7bf7
 Size (xshell-macros-0.1.17.crate) = 2682 bytes
-SHA1 (patch-crates_hir__expand_src_builtin__fn__macro.rs) = c564d9621047aa2717ee7cabf77b5ed2f6f9ee49
-SHA1 (patch-crates_ide__completion_src_completions_fn__param.rs) = 81360db924bc173e5b68e0c51818fc291e0b4306
-SHA1 (patch-crates_mbe_src_expander_matcher.rs) = 5221e1506cb31a3c58292e90c47990a440773c58
-SHA1 (patch-crates_mbe_src_expander_transcriber.rs) = daa047add6555ec77ddbe5ec06f7e175540a2293
-SHA1 (patch-crates_mbe_src_tt__iter.rs) = 0f5f7ca4c6356bce1a05f97d46e498cd3d7dd320
-SHA1 (patch-crates_project__model_src_rustc__cfg.rs) = 0b0eda6a833913732061c614d7e69e85ddbe207d
