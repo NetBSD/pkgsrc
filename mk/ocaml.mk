@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.31 2022/02/14 11:37:48 wiz Exp $
+# $NetBSD: ocaml.mk,v 1.32 2022/03/03 03:32:28 mrg Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -112,7 +112,7 @@ OASIS_BUILD_ARGS?=	# empty
 # Default value of OCAML_USE_OPT_COMPILER
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
     !empty(MACHINE_ARCH:M*arm*) || (${MACHINE_ARCH} == "aarch64") || \
-    (${MACHINE_ARCH} == "x86_64")
+    (${MACHINE_ARCH} == "aarch64eb") || (${MACHINE_ARCH} == "x86_64")
 OCAML_USE_OPT_COMPILER?=	yes
 .else
 OCAML_USE_OPT_COMPILER?=	no
