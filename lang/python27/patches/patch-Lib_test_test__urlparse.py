@@ -1,8 +1,12 @@
-$NetBSD: patch-Lib_test_test__urlparse.py,v 1.1 2021/10/10 03:00:59 gutteridge Exp $
+$NetBSD: patch-Lib_test_test__urlparse.py,v 1.1.4.1 2022/03/03 19:33:58 bsiegert Exp $
 
 Fix CVE-2021-23336: Add `separator` argument to parse_qs; warn with default
 Via Fedora:
 https://src.fedoraproject.org/rpms/python2.7/blob/rawhide/f/00359-CVE-2021-23336.patch
+
+Fix CVE-2022-0391: urlparse does not sanitize URLs containing ASCII newline and tabs
+Via Fedora:
+https://src.fedoraproject.org/rpms/python2.7/raw/40dd05e5d77dbfa81777c9f84b704bc2239bf710/f/00377-CVE-2022-0391.patch
 
 --- Lib/test/test_urlparse.py.orig	2020-04-19 21:13:39.000000000 +0000
 +++ Lib/test/test_urlparse.py
@@ -130,7 +134,63 @@ https://src.fedoraproject.org/rpms/python2.7/blob/rawhide/f/00359-CVE-2021-23336
      def test_roundtrips(self):
          testcases = [
              ('file:///tmp/junk.txt',
-@@ -626,6 +700,132 @@ class UrlParseTestCase(unittest.TestCase
+@@ -544,6 +618,55 @@ class UrlParseTestCase(unittest.TestCase
+         self.assertEqual(p1.path, '863-1234')
+         self.assertEqual(p1.params, 'phone-context=+1-914-555')
+ 
++    def test_urlsplit_remove_unsafe_bytes(self):
++        # Remove ASCII tabs and newlines from input, for http common case scenario.
++        url = "h\nttp://www.python\n.org\t/java\nscript:\talert('msg\r\n')/?query\n=\tsomething#frag\nment"
++        p = urlparse.urlsplit(url)
++        self.assertEqual(p.scheme, "http")
++        self.assertEqual(p.netloc, "www.python.org")
++        self.assertEqual(p.path, "/javascript:alert('msg')/")
++        self.assertEqual(p.query, "query=something")
++        self.assertEqual(p.fragment, "fragment")
++        self.assertEqual(p.username, None)
++        self.assertEqual(p.password, None)
++        self.assertEqual(p.hostname, "www.python.org")
++        self.assertEqual(p.port, None)
++        self.assertEqual(p.geturl(), "http://www.python.org/javascript:alert('msg')/?query=something#fragment")
++
++        # Remove ASCII tabs and newlines from input as bytes, for http common case scenario.
++        url = b"h\nttp://www.python\n.org\t/java\nscript:\talert('msg\r\n')/?query\n=\tsomething#frag\nment"
++        p = urlparse.urlsplit(url)
++        self.assertEqual(p.scheme, b"http")
++        self.assertEqual(p.netloc, b"www.python.org")
++        self.assertEqual(p.path, b"/javascript:alert('msg')/")
++        self.assertEqual(p.query, b"query=something")
++        self.assertEqual(p.fragment, b"fragment")
++        self.assertEqual(p.username, None)
++        self.assertEqual(p.password, None)
++        self.assertEqual(p.hostname, b"www.python.org")
++        self.assertEqual(p.port, None)
++        self.assertEqual(p.geturl(), b"http://www.python.org/javascript:alert('msg')/?query=something#fragment")
++
++        # any scheme
++        url = "x-new-scheme\t://www.python\n.org\t/java\nscript:\talert('msg\r\n')/?query\n=\tsomething#frag\nment"
++        p = urlparse.urlsplit(url)
++        self.assertEqual(p.geturl(), "x-new-scheme://www.python.org/javascript:alert('msg')/?query=something#fragment")
++
++        # Remove ASCII tabs and newlines from input as bytes, any scheme.
++        url = b"x-new-scheme\t://www.python\n.org\t/java\nscript:\talert('msg\r\n')/?query\n=\tsomething#frag\nment"
++        p = urlparse.urlsplit(url)
++        self.assertEqual(p.geturl(), b"x-new-scheme://www.python.org/javascript:alert('msg')/?query=something#fragment")
++
++        # Unsafe bytes is not returned from urlparse cache.
++        # scheme is stored after parsing, sending an scheme with unsafe bytes *will not* return an unsafe scheme
++        url = "https://www.python\n.org\t/java\nscript:\talert('msg\r\n')/?query\n=\tsomething#frag\nment"
++        scheme = "htt\nps"
++        for _ in range(2):
++            p = urlparse.urlsplit(url, scheme=scheme)
++            self.assertEqual(p.scheme, "https")
++            self.assertEqual(p.geturl(), "https://www.python.org/javascript:alert('msg')/?query=something#fragment")
++
++
+ 
+     def test_attributes_bad_port(self):
+         """Check handling of non-integer ports."""
+@@ -626,6 +749,132 @@ class UrlParseTestCase(unittest.TestCase
          self.assertEqual(urlparse.urlparse("http://www.python.org:80"),
                  ('http','www.python.org:80','','','',''))
  
