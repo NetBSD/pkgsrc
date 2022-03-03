@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1255 2022/03/03 10:41:11 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1256 2022/03/03 10:44:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1603,3 +1603,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated games/stone-soup to 0.28.0 [nia 2022-03-02]
 	Added audio/davis version 0.1.1 [pin 2022-03-02]
 	Updated misc/hexd to 1.1.0 [nia 2022-03-03]
+	Updated net/haproxy to 2.5.4 [adam 2022-03-03]
+	Updated graphics/libwebp to 1.2.2 [adam 2022-03-03]
