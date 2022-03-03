@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.7 2021/11/09 12:04:43 nia Exp $
+$NetBSD: README,v 1.8 2022/03/03 07:30:06 nia Exp $
 
 These files contain platform-specific definitions that are used by the
 pkgsrc infrastructure.
@@ -104,6 +104,11 @@ TODO: Document all these variables.
     OPSYS_HAS_TIMERFD is defined if timerfd(2) is supported.
 
     OPSYS_HAS_KQUEUE is defined if kqueue(2) is supported.
+
+    OPSYS_HAS_STATIC_PIE is defined if "-static -pie" is
+	supported by the toolchain.  Position-independent executables
+	may need to be disabled on a per-package basis if the
+	package uses static linking.
 
     _OPSYS_CAN_CHECK_SHLIBS is "yes" if "check-shlibs" in check/check-shlibs.mk
 	can be performed.
