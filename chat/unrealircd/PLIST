@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2021/07/15 09:57:47 nia Exp $
+@comment $NetBSD: PLIST,v 1.19.4.1 2022/03/04 10:29:19 bsiegert Exp $
 bin/unrealircd
 lib/unrealircd/modules/account-notify.so
 lib/unrealircd/modules/account-tag.so
@@ -200,6 +200,7 @@ share/examples/unrealircd/aliases/operstats.conf
 share/examples/unrealircd/badwords.conf
 share/examples/unrealircd/dccallow.conf
 share/examples/unrealircd/example.conf
+share/examples/unrealircd/example.es.conf
 share/examples/unrealircd/example.fr.conf
 share/examples/unrealircd/example.tr.conf
 share/examples/unrealircd/help/help.conf
