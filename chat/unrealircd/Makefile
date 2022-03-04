@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.81 2021/12/08 16:03:33 adam Exp $
+# $NetBSD: Makefile,v 1.82 2022/03/04 08:50:46 nia Exp $
 
-DISTNAME=	unrealircd-5.2.2
-PKGREVISION=	1
+DISTNAME=	unrealircd-5.2.4
 CATEGORIES=	chat
 MASTER_SITES=	https://www.unrealircd.org/downloads/
 
