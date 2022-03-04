@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.85 2021/12/08 16:03:34 adam Exp $
+# $NetBSD: Makefile,v 1.86 2022/03/04 12:22:31 ryoon Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
 #       to find out the current sound file versions
 
-DISTNAME=	asterisk-16.19.0
-PKGREVISION=	2
+DISTNAME=	asterisk-16.24.0
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -192,12 +191,14 @@ SUBST_STAGE.autoconfig=	post-configure
 SUBST_FILES.autoconfig=	include/asterisk/autoconfig.h
 SUBST_SED.autoconfig=	-e "s|^\#define HAVE_GCC_ATOMICS 1|\#undef HAVE_GCC_ATOMICS|"
 SUBST_SED.autoconfig+=	-e "s|^\#define HAVE_GETHOSTBYNAME_R_6 1|\#undef HAVE_GETHOSTBYNAME_R_6|"
+SUBST_NOOP_OK.autoconfig=	yes
 
 # XXX gross hack, IP_PKTINFO in NetBSD isn't compatible with anything else
 SUBST_CLASSES.NetBSD+=	pktinfo
 SUBST_STAGE.pktinfo=	post-configure
 SUBST_FILES.pktinfo=	include/asterisk/autoconfig.h
 SUBST_SED.pktinfo=	-e "s|^\#define HAVE_PKTINFO 1|\#undef HAVE_PKTINFO|"
+SUBST_NOOP_OK.pktinfo=	yes
 
 # XXX gross hack, gethostbyname_r on NETBSD is for internal use only
 SUBST_CLASSES.NetBSD+=		gethostbyname_r
@@ -205,6 +206,7 @@ SUBST_STAGE.gethostbyname_r=	post-configure
 SUBST_FILES.gethostbyname_r=	include/asterisk/autoconfig.h
 SUBST_SED.gethostbyname_r=	-e "s|^\#define HAVE_GETHOSTBYNAME_R_5 1|\#undef HAVE_GETHOSTBYNAME_R_5|"
 SUBST_SED.gethostbyname_r+=	-e "s|^\#define HAVE_GETHOSTBYNAME_R_6 1|\#undef HAVE_GETHOSTBYNAME_R_6|"
+SUBST_NOOP_OK.gethostbyname_r=	yes
 
 RCD_SCRIPTS=		asterisk
 OWN_DIRS_PERMS+=	${ASTDBDIR} ${ASTERISK_USER} ${ASTERISK_GROUP} 0755
