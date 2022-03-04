@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2020/12/10 13:52:30 gdt Exp $
+@comment $NetBSD: PLIST,v 1.27 2022/03/04 12:22:31 ryoon Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -247,6 +247,7 @@ lib/asterisk/modules/app_dictate.so
 lib/asterisk/modules/app_directed_pickup.so
 lib/asterisk/modules/app_directory.so
 lib/asterisk/modules/app_disa.so
+lib/asterisk/modules/app_dtmfstore.so
 lib/asterisk/modules/app_dumpchan.so
 lib/asterisk/modules/app_echo.so
 lib/asterisk/modules/app_exec.so
@@ -257,6 +258,7 @@ lib/asterisk/modules/app_forkcdr.so
 lib/asterisk/modules/app_getcpeid.so
 lib/asterisk/modules/app_ices.so
 lib/asterisk/modules/app_image.so
+lib/asterisk/modules/app_mf.so
 lib/asterisk/modules/app_milliwatt.so
 lib/asterisk/modules/app_minivm.so
 lib/asterisk/modules/app_mixmonitor.so
@@ -272,9 +274,11 @@ lib/asterisk/modules/app_queue.so
 lib/asterisk/modules/app_read.so
 lib/asterisk/modules/app_readexten.so
 lib/asterisk/modules/app_record.so
+lib/asterisk/modules/app_reload.so
 lib/asterisk/modules/app_sayunixtime.so
 lib/asterisk/modules/app_senddtmf.so
 lib/asterisk/modules/app_sendtext.so
+lib/asterisk/modules/app_sf.so
 lib/asterisk/modules/app_sms.so
 lib/asterisk/modules/app_softhangup.so
 lib/asterisk/modules/app_speech_utils.so
@@ -289,6 +293,7 @@ lib/asterisk/modules/app_url.so
 lib/asterisk/modules/app_userevent.so
 lib/asterisk/modules/app_verbose.so
 lib/asterisk/modules/app_voicemail.so
+lib/asterisk/modules/app_waitforcond.so
 lib/asterisk/modules/app_waitforring.so
 lib/asterisk/modules/app_waitforsilence.so
 lib/asterisk/modules/app_waituntil.so
@@ -366,6 +371,7 @@ lib/asterisk/modules/func_dialplan.so
 lib/asterisk/modules/func_enum.so
 lib/asterisk/modules/func_env.so
 lib/asterisk/modules/func_extstate.so
+lib/asterisk/modules/func_frame_drop.so
 lib/asterisk/modules/func_frame_trace.so
 lib/asterisk/modules/func_global.so
 lib/asterisk/modules/func_groupcount.so
@@ -373,6 +379,7 @@ lib/asterisk/modules/func_hangupcause.so
 lib/asterisk/modules/func_holdintercept.so
 lib/asterisk/modules/func_iconv.so
 lib/asterisk/modules/func_jitterbuffer.so
+lib/asterisk/modules/func_json.so
 lib/asterisk/modules/func_lock.so
 lib/asterisk/modules/func_logic.so
 lib/asterisk/modules/func_math.so
@@ -387,6 +394,8 @@ lib/asterisk/modules/func_pjsip_endpoint.so
 lib/asterisk/modules/func_presencestate.so
 lib/asterisk/modules/func_rand.so
 lib/asterisk/modules/func_realtime.so
+lib/asterisk/modules/func_sayfiles.so
+lib/asterisk/modules/func_scramble.so
 lib/asterisk/modules/func_sha1.so
 lib/asterisk/modules/func_shell.so
 lib/asterisk/modules/func_sorcery.so
@@ -532,6 +541,7 @@ lib/asterisk/modules/res_stir_shaken.so
 lib/asterisk/modules/res_stun_monitor.so
 ${PLIST.kqueue}lib/asterisk/modules/res_timing_kqueue.so
 lib/asterisk/modules/res_timing_pthread.so
+lib/asterisk/modules/res_tonedetect.so
 ${PLIST.timerfd}lib/asterisk/modules/res_timing_timerfd.so
 ${PLIST.jabber}lib/asterisk/modules/res_xmpp.so
 lib/libasteriskssl.so

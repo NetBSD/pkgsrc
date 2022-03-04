@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.3 2020/08/13 09:24:25 ryoon Exp $
+$NetBSD: patch-configure,v 1.4 2022/03/04 12:22:31 ryoon Exp $
 
 --- configure.orig	2020-07-16 16:00:28.000000000 +0000
 +++ configure
@@ -11,24 +11,6 @@ $NetBSD: patch-configure,v 1.3 2020/08/13 09:24:25 ryoon Exp $
  				AST_CLANG_BLOCKS_LIBS="-lBlocksRuntime"
  				AST_CLANG_BLOCKS="-fblocks"
  				{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
-@@ -9057,7 +9057,7 @@ if test "${with_pjproject_bundled+set}" 
- fi
- 
- 
--if test "${with_pjproject}" == "no" || test "${with_pjproject}" == "n" ; then
-+if test "${with_pjproject}" = "no" || test "${with_pjproject}" = "n" ; then
- 	PJPROJECT_BUNDLED=no
- fi
- 
-@@ -14689,7 +14689,7 @@ fi
- 
- 
- 
--if test "${PERMANENT_DLOPEN}" == "yes"; then
-+if test "${PERMANENT_DLOPEN}" = "yes"; then
- 
- $as_echo "#define HAVE_PERMANENT_DLOPEN 1" >>confdefs.h
- 
 @@ -14723,7 +14723,7 @@ fi
  done
  
