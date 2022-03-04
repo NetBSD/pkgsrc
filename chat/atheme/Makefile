@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2021/04/08 10:17:28 nia Exp $
+# $NetBSD: Makefile,v 1.22 2022/03/04 07:59:38 nia Exp $
 
-DISTNAME=	atheme-services-v7.2.11
+DISTNAME=	atheme-services-v7.2.12
 PKGNAME=	${DISTNAME:S/-services//1:S/-v/-/1}
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=atheme/}
