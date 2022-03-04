@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1276 2022/03/04 13:30:53 wen Exp $
+$NetBSD: CHANGES-2022,v 1.1277 2022/03/04 13:35:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1626,3 +1626,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/nim to 1.6.4 [ryoon 2022-03-04]
 	Updated www/p5-libwww to 6.61 [wen 2022-03-04]
 	Updated www/p5-HTTP-Message to 6.36 [wen 2022-03-04]
+	Updated www/p5-HTTP-Daemon to 6.14 [wen 2022-03-04]
