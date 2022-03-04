@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:30:02 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/03/04 13:34:59 wen Exp $
 
-BLAKE2s (HTTP-Daemon-6.12.tar.gz) = f7ba8146b6e56ea160c30a1c9739ecf55fb215cb0dac2a87f6661ee4cf83a21e
-SHA512 (HTTP-Daemon-6.12.tar.gz) = 83a8b868162dfa1be66d4267e99af1111d28122c793e89d905243c175617c22ceb66f88b6ea54c29e7b131c26668776ab24cf671c4cc6c1c8810505e0f072596
-Size (HTTP-Daemon-6.12.tar.gz) = 47117 bytes
+BLAKE2s (HTTP-Daemon-6.14.tar.gz) = dc74670fc9c031f99e6734439d5c6f3395af1bdb9d0f8118b452f77541f9b02e
+SHA512 (HTTP-Daemon-6.14.tar.gz) = baae522b24211d04bc53d0f89f9e7b6b98681772eb79e28a72aa2b57c023a92e1264923abc2fefc24e28be265e17530541fd9d3a559d5bcfca00a8f5b0e9d85e
+Size (HTTP-Daemon-6.14.tar.gz) = 46940 bytes
