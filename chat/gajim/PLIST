@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/08/10 12:03:37 nia Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/03/04 09:34:29 nia Exp $
 bin/gajim
 bin/gajim-history-manager
 bin/gajim-remote
@@ -1110,28 +1110,6 @@ ${PYSITELIB}/gajim/data/icons/hicolor/scalable/status/sun-xa.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/status/xmpp.svg
 ${PYSITELIB}/gajim/data/other/dh4096.pem
 ${PYSITELIB}/gajim/data/other/servers.json
-${PYSITELIB}/gajim/data/plugins/plugin_installer/__init__.py
-${PYSITELIB}/gajim/data/plugins/plugin_installer/__init__.pyc
-${PYSITELIB}/gajim/data/plugins/plugin_installer/__init__.pyo
-${PYSITELIB}/gajim/data/plugins/plugin_installer/config_dialog.py
-${PYSITELIB}/gajim/data/plugins/plugin_installer/config_dialog.pyc
-${PYSITELIB}/gajim/data/plugins/plugin_installer/config_dialog.pyo
-${PYSITELIB}/gajim/data/plugins/plugin_installer/config_dialog.ui~
-${PYSITELIB}/gajim/data/plugins/plugin_installer/installer.ui
-${PYSITELIB}/gajim/data/plugins/plugin_installer/manifest.ini
-${PYSITELIB}/gajim/data/plugins/plugin_installer/plugin_installer.png
-${PYSITELIB}/gajim/data/plugins/plugin_installer/plugin_installer.py
-${PYSITELIB}/gajim/data/plugins/plugin_installer/plugin_installer.pyc
-${PYSITELIB}/gajim/data/plugins/plugin_installer/plugin_installer.pyo
-${PYSITELIB}/gajim/data/plugins/plugin_installer/remote.py
-${PYSITELIB}/gajim/data/plugins/plugin_installer/remote.pyc
-${PYSITELIB}/gajim/data/plugins/plugin_installer/remote.pyo
-${PYSITELIB}/gajim/data/plugins/plugin_installer/utils.py
-${PYSITELIB}/gajim/data/plugins/plugin_installer/utils.pyc
-${PYSITELIB}/gajim/data/plugins/plugin_installer/utils.pyo
-${PYSITELIB}/gajim/data/plugins/plugin_installer/widget.py
-${PYSITELIB}/gajim/data/plugins/plugin_installer/widget.pyc
-${PYSITELIB}/gajim/data/plugins/plugin_installer/widget.pyo
 ${PYSITELIB}/gajim/data/sounds/attention.wav
 ${PYSITELIB}/gajim/data/sounds/bounce.wav
 ${PYSITELIB}/gajim/data/sounds/connected.wav
