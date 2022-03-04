@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:05:19 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/03/04 09:14:28 nia Exp $
 
-BLAKE2s (libmesode-0.9.3.tar.xz) = 4299ab1090e4895ecf1156e091c28a12990938a2bad9a00eb4614598ed4f9e1d
-SHA512 (libmesode-0.9.3.tar.xz) = 6da39a26809092093fb4610f51b8002e9046c44efbadcc802a670e4eedd8c388b6c527d4afbfc2341157a19811dc30cfd1b06f342e66652a9272fbd237694f57
-Size (libmesode-0.9.3.tar.xz) = 337992 bytes
-SHA1 (patch-configure.ac) = 72f6d77a9f0edbe6f681bb872e7f0ce1fefe210a
+BLAKE2s (libmesode-0.10.1.tar.gz) = de80e8880dff6c5a4cd971b9249702e0368bb1f88779d4fd37bbf2f2a871c2f5
+SHA512 (libmesode-0.10.1.tar.gz) = 00890ac903ed367872903242116527f229255bcc8988f87005b12a40a903d3b6133dff26229387c49de1ba6d911707adfc73a8a662864843899322c90e10dba7
+Size (libmesode-0.10.1.tar.gz) = 150629 bytes
+#SHA1 (patch-configure.ac) = 72f6d77a9f0edbe6f681bb872e7f0ce1fefe210a
