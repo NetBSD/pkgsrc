@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1265 2022/03/04 07:59:49 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1266 2022/03/04 08:10:58 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1614,3 +1614,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated emulators/dosbox-x to 0.83.23 [nia 2022-03-04]
 	Updated chat/hexchat to 2.16.1 [nia 2022-03-04]
 	Updated chat/atheme to 7.2.12 [nia 2022-03-04]
+	Updated chat/srain to 1.3.2 [nia 2022-03-04]
