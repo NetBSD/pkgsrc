@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2014/04/03 17:00:44 drochner Exp $
+$NetBSD: patch-ac,v 1.6 2022/03/04 13:55:13 ryoon Exp $
 
 portability
 
---- tests/testrun.sh.orig	2014-04-03 16:19:41.000000000 +0000
+--- tests/testrun.sh.orig	2021-10-25 13:05:43.000000000 +0000
 +++ tests/testrun.sh
 @@ -1,7 +1,7 @@
  #!/bin/sh
@@ -14,12 +14,12 @@ portability
  
  #
  # Get command line params
-@@ -436,7 +436,7 @@ execXkmsServerRequestTest() {
+@@ -472,7 +472,7 @@ execEncTest() {
  rm -rf $tmpfile $tmpfile.2 tmpfile.3
  
  # run tests
 -source "$testfile"
 +. "$testfile"
  
- # cleanup
- rm -rf $tmpfile $tmpfile.2 tmpfile.3
+ # print results
+ echo "--- TOTAL OK: $count_success; TOTAL FAILED: $count_fail; TOTAL SKIPPED: $count_skip" >> $logfile

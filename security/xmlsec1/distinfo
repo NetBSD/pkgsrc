@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 11:18:06 nia Exp $
+$NetBSD: distinfo,v 1.21 2022/03/04 13:55:13 ryoon Exp $
 
-BLAKE2s (xmlsec1-1.2.25.tar.gz) = 311751d83c9ab25456a52a82979d69d94119fdc5e70a11e12a0ffc5a8cd050cb
-SHA512 (xmlsec1-1.2.25.tar.gz) = ac61547a1cbf9016d7f75be3dc5249d6bc8a526bc51715e53ede13f056c1c72c57433a6be200c886000a25826c3e473954ded3ae988f25d37ac4ef4d777c66a6
-Size (xmlsec1-1.2.25.tar.gz) = 1839160 bytes
-SHA1 (patch-ab) = 917f2ffa1968994e6cc23e797c2d03e3ccbe3a81
-SHA1 (patch-ac) = eac6b9be709e316ea635109a0c366546a83cb1f6
+BLAKE2s (xmlsec1-1.2.33.tar.gz) = 1257ba28b777cd23b4e30dab85739ffb0e1e221169526ad82f3eae8a1c0c1043
+SHA512 (xmlsec1-1.2.33.tar.gz) = 6354554b5cdc0a1389f6991efeac919bea912330b36d3be3d3496d61331e9edd2771786d50d2571a439f62ccfc3bd32be0a50bb5a037c4993aac076ad94b46e8
+Size (xmlsec1-1.2.33.tar.gz) = 1991955 bytes
+SHA1 (patch-ab) = bf40dafa893b5d6d73bdd2af5c8c4d1d1143e061
+SHA1 (patch-ac) = db0e4e2f38358fc2e347f0117899f127c94861a7
