@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2019/05/08 17:19:41 nia Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/03/04 07:48:16 nia Exp $
 ${PLIST.gtk2}bin/hexchat
 bin/hexchat-text
 include/hexchat-plugin.h
@@ -12,8 +12,8 @@ lib/pkgconfig/hexchat-plugin.pc
 ${PLIST.gtk2}man/man1/hexchat.1
 ${PLIST.gtk2}share/applications/io.github.Hexchat.desktop
 ${PLIST.dbus}share/dbus-1/services/org.hexchat.service.service
-${PLIST.gtk2}share/icons/hicolor/48x48/apps/hexchat.png
-${PLIST.gtk2}share/icons/hicolor/scalable/apps/hexchat.svg
+${PLIST.gtk2}share/icons/hicolor/48x48/apps/io.github.Hexchat.png
+${PLIST.gtk2}share/icons/hicolor/scalable/apps/io.github.Hexchat.svg
 share/locale/af/LC_MESSAGES/hexchat.mo
 share/locale/am/LC_MESSAGES/hexchat.mo
 share/locale/ast/LC_MESSAGES/hexchat.mo
