@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.19 2021/10/26 10:23:48 nia Exp $
+$NetBSD: distinfo,v 1.20 2022/03/04 07:41:14 nia Exp $
 
-BLAKE2s (dosbox-x-0.83.16.tar.gz) = 521ff7f0d9a88c0f967cfbb2637969259528d0871bfcd10e6c05a327dc32ee0c
-SHA512 (dosbox-x-0.83.16.tar.gz) = f2be5a3d16d2377719a78b9e0f98ef69128370d951e67257b58ba4fb5dc654e40dae14773cf2cf89104406a4608b58dcc89f70cbd00e03e41979cb4d9f23ba99
-Size (dosbox-x-0.83.16.tar.gz) = 61998617 bytes
+BLAKE2s (dosbox-x-0.83.23.tar.gz) = d6cff5e7e54f3f63757bf0f41f2aa6c635c5bc7c029ebb5b69a0d2c55afe2b8c
+SHA512 (dosbox-x-0.83.23.tar.gz) = 26ca2fd8753cee8c4c931c54b6a0d0af11144c6b770c16f2b482386b06529ce1567e74d355fb9163e9801e833b4546482469e67def80e1aa1b93652663f31fbe
+Size (dosbox-x-0.83.23.tar.gz) = 64494344 bytes
 SHA1 (patch-configure.ac) = 906aa99b5fce6224ef4c001d9bba1e4fc89a34f9
 SHA1 (patch-include_dosbox.h) = 6f7397b4a611511fc1782b1603c9f5cd51b74eb9
-SHA1 (patch-src_dos_dos__programs.cpp) = 1f64cdd66c5b850609dbe7634f60da96fba7655e
+SHA1 (patch-src_dos_dos__programs.cpp) = 64444c54b319fbfc7de7219d88fa6add953a0fb0
 SHA1 (patch-src_libs_physfs_physfs__platform__unix.c) = 5cde2acf3691478f1d91945b3942c968af2eadc6
