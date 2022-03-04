@@ -1,0 +1,21 @@
+catgirl(1) is a TLS-only terminal IRC client.
+
+Notable Features:
+
+* Tab complete: most recently seen or mentioned nicks are completed first.
+Commas are inserted between multiple nicks.
+
+* Prompt: the prompt clearly shows whether input will be interpreted as a
+command or sent as a message.
+
+* Split scroll: keeps the latest messages in view while scrolling.
+
+* URL detection: recent URLs from a particular user or matching a substring
+can be opened or copied.
+
+* Nick coloring: color generation based on usernames remains stable across
+nick changes. Mentions of users in messages are colored.
+
+* Topic diffing: the modified portion of a channel topic change is highlighted.
+
+* Ignore: visibility of filtered messages can be toggled.
