@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1270 2022/03/04 09:16:41 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1271 2022/03/04 09:36:21 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1619,3 +1619,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/unrealircd to 5.2.4 [nia 2022-03-04]
 	Updated chat/libmesode to 0.10.1 [nia 2022-03-04]
 	Updated chat/profanity to 0.11.1 [nia 2022-03-04]
+	Updated chat/py-nbxmpp to 2.0.4 [nia 2022-03-04]
+	Updated chat/gajim to 1.3.3 [nia 2022-03-04]
