@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.33 2021/10/26 10:05:28 nia Exp $
+$NetBSD: distinfo,v 1.33.2.1 2022/03/04 10:29:19 bsiegert Exp $
 
-BLAKE2s (unrealircd-5.2.2.tar.gz) = 260be5b5738f6eee2a734bf668827f8670882820d5838f29e6c9521bcd48fa2a
-SHA512 (unrealircd-5.2.2.tar.gz) = 9d36eb1567431bc4a5420bc830bfc8dc89daa08ed1746efd6102e5ef161f67baf52e75e373454df7df6a443c4f575fb300d3c289d4dd99239a6de7d2b2a555a0
-Size (unrealircd-5.2.2.tar.gz) = 7192024 bytes
+BLAKE2s (unrealircd-5.2.4.tar.gz) = 379e3bf11e3e246dc2326dc0d14d7c1775805b0d69197ecce5ef5283fb012853
+SHA512 (unrealircd-5.2.4.tar.gz) = b6784d011bc56b0b8253d61fb1edddb2133e791e9ce4ae978f90059563d11f3f7b3ebca1cf13765b4077ebc39f0699e101bdfc71cbb0c5cf51d508c5a5fdacb3
+Size (unrealircd-5.2.4.tar.gz) = 7201203 bytes
 SHA1 (patch-include_h.h) = 3fa85b08f1d9e317a45cb8f54a61e0560617e72d
 SHA1 (patch-src_modules_Makefile.in) = e8e9f9a33f11a4f511b00dbf8bc0d31d5d3629eb
 SHA1 (patch-src_modules_chanmodes_Makefile.in) = 1e9b14a406d429c871fcd6be5c43a19c3c28b2b3
