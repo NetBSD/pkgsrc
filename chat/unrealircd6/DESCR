@@ -1,0 +1,5 @@
+UnrealIRCd is an IRC server based on the branch of IRCu called
+Dreamforge, formerly used by the DALnet IRC Network.
+
+Key features include SSL, cloaking, its advanced anti-flood and
+anti-spam systems, swear filtering and module support.
