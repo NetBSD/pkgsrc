@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1263 2022/03/04 07:41:34 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1264 2022/03/04 07:49:00 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1612,3 +1612,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/rust-bin to 1.58.1 [he 2022-03-03]
 	Updated games/nbsdgames to 5 [nia 2022-03-04]
 	Updated emulators/dosbox-x to 0.83.23 [nia 2022-03-04]
+	Updated chat/hexchat to 2.16.1 [nia 2022-03-04]
