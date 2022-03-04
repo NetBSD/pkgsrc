@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2021/12/08 16:03:31 adam Exp $
+# $NetBSD: Makefile,v 1.13 2022/03/04 09:16:05 nia Exp $
 
-DISTNAME=	profanity-0.9.5
-PKGREVISION=	8
+DISTNAME=	profanity-0.11.1
 CATEGORIES=	chat
-MASTER_SITES=	https://profanity-im.github.io/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=profanity-im/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://profanity-im.github.io/
@@ -42,7 +42,7 @@ CONFIGURE_ARGS+=	--enable-omemo
 pre-configure:
 	cd ${WRKSRC} && autoconf
 
-BUILDLINK_API_DEPENDS.libmesode+=	libmesode>=0.9.1
+BUILDLINK_API_DEPENDS.libmesode+=	libmesode>=0.10.0
 .include "../../chat/libmesode/buildlink3.mk"
 .include "../../chat/libotr/buildlink3.mk"
 .include "../../chat/libsignal-protocol-c/buildlink3.mk"
