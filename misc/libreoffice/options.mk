@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2022/02/05 04:53:43 ryoon Exp $
+# $NetBSD: options.mk,v 1.20 2022/03/04 13:47:01 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libreoffice
 
@@ -18,7 +18,7 @@ PKG_SUGGESTED_OPTIONS+=	java
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	ldap
+PLIST_VARS+=	ldap gtk3
 
 .if !empty(PKG_OPTIONS:Mjava)
 USE_JAVA=		yes
