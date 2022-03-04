@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:05:25 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/03/04 08:10:10 nia Exp $
 
-BLAKE2s (srain-1.2.4.tar.gz) = de195ea55e444775da3214d8701cbdd3623f9cbf5e2932f404c676bbdf37dd65
-SHA512 (srain-1.2.4.tar.gz) = 96d15f9d8bccc197b1bcda2c4707bdeea8e5cb33e3a8ad88ea5431b059c64e2ccb2e82897fcb1c02198420fed2c59148ff1c32f5f305cfffa88f096e41b42cb4
-Size (srain-1.2.4.tar.gz) = 954684 bytes
+BLAKE2s (srain-1.3.2.tar.gz) = e898529b5e7e77817a0a6ee089f36abfcad8ba13bb33cdab1d3fc854dd926c3e
+SHA512 (srain-1.3.2.tar.gz) = eb5456f548b89b0c17133c74aee03e1ca02d2e798401be92e542e4b8bf8ccfaf38a15afa0b75cbcbebdbd8f7fa584b809686d41b776a8e32079566d93f8c741d
+Size (srain-1.3.2.tar.gz) = 1931640 bytes
 SHA1 (patch-data_meson.build) = d24ed2caa3cd36bde4d808014c7bfb309366b6bf
 SHA1 (patch-src_lib_path.c) = 5885c65984ebb23a75ae88bc7e52b2b262104588
