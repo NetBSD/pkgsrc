@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2018/01/30 13:25:19 mef Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/03/04 13:55:13 ryoon Exp $
 bin/xmlsec1
 bin/xmlsec1-config
 include/xmlsec1/xmlsec/app.h
@@ -28,7 +28,6 @@ include/xmlsec1/xmlsec/openssl/symbols.h
 include/xmlsec1/xmlsec/openssl/x509.h
 include/xmlsec1/xmlsec/parser.h
 include/xmlsec1/xmlsec/private.h
-include/xmlsec1/xmlsec/private/xslt.h
 include/xmlsec1/xmlsec/strings.h
 include/xmlsec1/xmlsec/templates.h
 include/xmlsec1/xmlsec/transforms.h
@@ -97,6 +96,12 @@ share/doc/xmlsec1/api/xmlsec-keysdata.html
 share/doc/xmlsec1/api/xmlsec-keysmngr.html
 share/doc/xmlsec1/api/xmlsec-list.html
 share/doc/xmlsec1/api/xmlsec-membuf.html
+share/doc/xmlsec1/api/xmlsec-msccng-ref.html
+share/doc/xmlsec1/api/xmlsec-mscng-app.html
+share/doc/xmlsec1/api/xmlsec-mscng-certkeys.html
+share/doc/xmlsec1/api/xmlsec-mscng-crypto.html
+share/doc/xmlsec1/api/xmlsec-mscng-keysstore.html
+share/doc/xmlsec1/api/xmlsec-mscng-x509.html
 share/doc/xmlsec1/api/xmlsec-mscrypto-app.html
 share/doc/xmlsec1/api/xmlsec-mscrypto-certkeys.html
 share/doc/xmlsec1/api/xmlsec-mscrypto-crypto.html
