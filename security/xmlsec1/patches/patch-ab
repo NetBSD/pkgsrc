@@ -1,11 +1,10 @@
-$NetBSD: patch-ab,v 1.8 2018/01/30 13:25:19 mef Exp $
+$NetBSD: patch-ab,v 1.9 2022/03/04 13:55:13 ryoon Exp $
 
-* portability fix
-* DragonFly also not require extra libs for OpenSSL.
+* Fix macOS shared library logic.
 
---- configure.orig	2017-09-12 22:21:59.000000000 +0900
-+++ configure	2018-01-30 22:12:07.735855706 +0900
-@@ -11373,7 +11373,7 @@ darwin* | rhapsody*)
+--- configure.orig	2021-10-25 13:06:17.000000000 +0000
++++ configure
+@@ -11415,7 +11415,7 @@ darwin* | rhapsody*)
    soname_spec='$libname$release$major$shared_ext'
    shlibpath_overrides_runpath=yes
    shlibpath_var=DYLD_LIBRARY_PATH
@@ -14,49 +13,3 @@ $NetBSD: patch-ab,v 1.8 2018/01/30 13:25:19 mef Exp $
  
    sys_lib_search_path_spec="$sys_lib_search_path_spec /usr/local/lib"
    sys_lib_dlsearch_path_spec='/usr/local/lib /lib /usr/lib'
-@@ -12661,7 +12661,7 @@ CC=$lt_save_CC
- 
- 
- 
--if test "z$RM" == "z" ; then
-+if test "z$RM" = "z" ; then
-     # Extract the first word of "rm", so it can be a program name with args.
- set dummy rm; ac_word=$2
- { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
-@@ -13648,7 +13648,7 @@ case "${host}" in
-         ;;
- esac
- 
--if test "z$shrext" == "z" ; then
-+if test "z$shrext" = "z" ; then
-     shrext=$shrext_cmds
- fi
- 
-@@ -14384,15 +14384,13 @@ elif test "z$with_openssl" != "z" ; then
- 	*-*-osf5*) openssl_exlibs=;;
- 	*-*-openbsd*) openssl_exlibs=;;
- 	*-*-netbsd*) openssl_exlibs=;;
-+	*-*-freebsd*|*-*-dragonfly*) openssl_exlibs=;;
-+	*-*-darwin*) openssl_exlibs=;;
- 	#FIXME: check if lib "dl" is required
- 	*)          openssl_exlibs=-ldl;;
-     esac
-     OPENSSL_CFLAGS="$OPENSSL_CFLAGS -I$with_openssl/include"
--    if test -f "$with_openssl/lib/libcrypto${XMLSEC_SHLIBSFX}" ; then
--	OPENSSL_LIBS="-L$with_openssl/lib -lcrypto $openssl_exlibs"
--    else
--	OPENSSL_LIBS="$with_openssl/lib/libcrypto.a $openssl_exlibs"
--    fi
-+    OPENSSL_LIBS="-L$with_openssl/lib -lcrypto $openssl_exlibs"
-     OPENSSL_FOUND="yes"
- elif test "z$PKGCONFIG_FOUND" = "zyes" ; then
-     if test "z$OPENSSL_VERSION" = "z" ; then
-@@ -14754,7 +14752,7 @@ else
-     XMLSEC_CRYPTO_DISABLED_LIST="$XMLSEC_CRYPTO_DISABLED_LIST openssl"
- fi
- 
-- if test "z$XMLSEC_NO_OPENSSL" == "z1"; then
-+ if test "z$XMLSEC_NO_OPENSSL" = "z1"; then
-   XMLSEC_NO_OPENSSL_TRUE=
-   XMLSEC_NO_OPENSSL_FALSE='#'
- else
