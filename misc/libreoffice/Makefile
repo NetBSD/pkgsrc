@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.281 2022/02/05 04:54:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.282 2022/03/04 13:47:01 ryoon Exp $
 
-VERREL=		7.3.0
+VERREL=		7.3.1
 VERRC=		3
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
@@ -251,6 +251,7 @@ CONFIGURE_ARGS+=	ac_cv_path_SYSTEM_GENCMN=${BUILDLINK_PREFIX.icu}/sbin/gencmn
 CONFIGURE_ARGS+=	--without-system-cuckoo
 CONFIGURE_ARGS+=	--with-system-libtommath
 CONFIGURE_ARGS+=	--with-system-openjpeg
+CONFIGURE_ARGS+=	--with-help
 
 # more REPLACE_PERL are needed.
 REPLACE_PERL=	sd/res/webview/editpic.pl
