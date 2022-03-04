@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:44:16 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/03/04 07:12:50 nia Exp $
 
-BLAKE2s (nbsdgames-v4.1.2.tar.gz) = a5f502dd82366a213bca93132e6515abb7816813e2a999dab30722ab578a331d
-SHA512 (nbsdgames-v4.1.2.tar.gz) = 080fc09ada8c30c117c3b04440956c3df60e8eac407e0816d3bf7fe269a184275b0cfa15572bde6815bd0ba1adb73a04a2d52c4e05d7f348ae4939ac73f6a08c
-Size (nbsdgames-v4.1.2.tar.gz) = 49789 bytes
+BLAKE2s (nbsdgames-v5.tar.gz) = 2c8d70b4de1c0423dfbb90dbb5405739d93cff1fa01c8949408e39d98cbca385
+SHA512 (nbsdgames-v5.tar.gz) = 04fcc7628b7310bcbebf8ae7e1462605b2a4aa3bc7c50758e8fc54836d18c3d320a1ba5c766d388912d8f9a7a49bf78ba654f1430fdda730daa80ff189f49ffc
+Size (nbsdgames-v5.tar.gz) = 58893 bytes
