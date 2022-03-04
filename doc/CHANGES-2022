@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1275 2022/03/04 13:27:40 wen Exp $
+$NetBSD: CHANGES-2022,v 1.1276 2022/03/04 13:30:53 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1625,3 +1625,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated comms/asterisk16 to 16.24.0 [ryoon 2022-03-04]
 	Updated lang/nim to 1.6.4 [ryoon 2022-03-04]
 	Updated www/p5-libwww to 6.61 [wen 2022-03-04]
+	Updated www/p5-HTTP-Message to 6.36 [wen 2022-03-04]
