@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/04/08 10:17:28 nia Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/03/04 07:59:38 nia Exp $
 bin/atheme-dbverify
 bin/atheme-ecdsakeygen
 bin/atheme-services
@@ -31,6 +31,7 @@ include/atheme/i18n.h
 include/atheme/inline/account.h
 include/atheme/inline/channels.h
 include/atheme/inline/connection.h
+include/atheme/instpaths.h
 include/atheme/libathemecore.h
 include/atheme/linker.h
 include/atheme/match.h
