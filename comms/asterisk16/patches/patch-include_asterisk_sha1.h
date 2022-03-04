@@ -1,6 +1,6 @@
-$NetBSD: patch-include_asterisk_sha1.h,v 1.1 2019/08/20 13:47:42 ryoon Exp $
+$NetBSD: patch-include_asterisk_sha1.h,v 1.2 2022/03/04 12:22:31 ryoon Exp $
 
---- include/asterisk/sha1.h.orig	2016-09-09 16:14:37.000000000 +0000
+--- include/asterisk/sha1.h.orig	2022-02-10 11:53:37.000000000 +0000
 +++ include/asterisk/sha1.h
 @@ -191,49 +191,6 @@ typedef struct SHA256Context SHA224Conte
  typedef struct SHA512Context SHA384Context;
@@ -52,7 +52,7 @@ $NetBSD: patch-include_asterisk_sha1.h,v 1.1 2019/08/20 13:47:42 ryoon Exp $
   *  Function Prototypes
   */
  
-@@ -281,76 +238,6 @@ extern int SHA512FinalBits(SHA512Context
+@@ -281,19 +238,6 @@ extern int SHA512FinalBits(SHA512Context
  extern int SHA512Result(SHA512Context *,
                          uint8_t Message_Digest[SHA512HashSize]);
  
@@ -68,63 +68,6 @@ $NetBSD: patch-include_asterisk_sha1.h,v 1.1 2019/08/20 13:47:42 ryoon Exp $
 -extern int USHAHashSize(enum SHAversion whichSha);
 -extern int USHAHashSizeBits(enum SHAversion whichSha);
 -extern const char *USHAHashName(enum SHAversion whichSha);
--
--/*
-- * HMAC Keyed-Hashing for Message Authentication, RFC 2104,
-- * for all SHAs.
-- * This interface allows a fixed-length text input to be used.
-- */
--extern int hmac(SHAversion whichSha, /* which SHA algorithm to use */
--    const unsigned char *text,     /* pointer to data stream */
--    int text_len,                  /* length of data stream */
--    const unsigned char *key,      /* pointer to authentication key */
--    int key_len,                   /* length of authentication key */
--    uint8_t digest[USHAMaxHashSize]); /* caller digest to fill in */
--
--/*
-- * HMAC Keyed-Hashing for Message Authentication, RFC 2104,
-- * for all SHAs.
-- * This interface allows any length of text input to be used.
-- */
--extern int hmacReset(HMACContext *context, enum SHAversion whichSha,
--                     const unsigned char *key, int key_len);
--extern int hmacInput(HMACContext *context, const unsigned char *text,
--                     int text_len);
--extern int hmacFinalBits(HMACContext *context, uint8_t bits,
--                         unsigned int bit_count);
--extern int hmacResult(HMACContext *context,
--                      uint8_t digest[USHAMaxHashSize]);
--
--/*
-- * HKDF HMAC-based Extract-and-Expand Key Derivation Function,
-- * RFC 5869, for all SHAs.
-- */
--extern int hkdf(SHAversion whichSha, const unsigned char *salt,
--                int salt_len, const unsigned char *ikm, int ikm_len,
--                const unsigned char *info, int info_len,
--                uint8_t okm[ ], int okm_len);
--extern int hkdfExtract(SHAversion whichSha, const unsigned char *salt,
--                       int salt_len, const unsigned char *ikm,
--                       int ikm_len, uint8_t prk[USHAMaxHashSize]);
--extern int hkdfExpand(SHAversion whichSha, const uint8_t prk[ ],
--                      int prk_len, const unsigned char *info,
--                      int info_len, uint8_t okm[ ], int okm_len);
--
--/*
-- * HKDF HMAC-based Extract-and-Expand Key Derivation Function,
-- * RFC 5869, for all SHAs.
-- * This interface allows any length of text input to be used.
-- */
--extern int hkdfReset(HKDFContext *context, enum SHAversion whichSha,
--                     const unsigned char *salt, int salt_len);
--extern int hkdfInput(HKDFContext *context, const unsigned char *ikm,
--                     int ikm_len);
--extern int hkdfFinalBits(HKDFContext *context, uint8_t ikm_bits,
--                         unsigned int ikm_bit_count);
--extern int hkdfResult(HKDFContext *context,
--                      uint8_t prk[USHAMaxHashSize],
--                      const unsigned char *info, int info_len,
--                      uint8_t okm[USHAMaxHashSize], int okm_len);
 -
  /************************ sha-private.h ************************/
  /***************** See RFC 6234 for details. *******************/
