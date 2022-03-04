@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2021/12/08 16:04:15 adam Exp $
+# $NetBSD: Makefile,v 1.33 2022/03/04 07:41:14 nia Exp $
 
-DISTNAME=	dosbox-x-0.83.16
-PKGREVISION=	3
+DISTNAME=	dosbox-x-0.83.23
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=joncampbell123/}
 GITHUB_TAG=	dosbox-x-v${PKGVERSION_NOREV}
@@ -44,18 +43,11 @@ CONFIGURE_ARGS+=	--disable-dynamic-core
 NOT_PAX_MPROTECT_SAFE+=	bin/dosbox-x
 .endif
 
-PKGCONFIG_OVERRIDE+=	vs2015/libpng/libpng.pc.in
-PKGCONFIG_OVERRIDE+=	vs2015/sdl/sdl.pc.in
-PKGCONFIG_OVERRIDE+=	vs2015/sdl2/sdl2.pc.in
-PKGCONFIG_OVERRIDE+=	vs2015/sdlnet/SDL_net.pc.in
-PKGCONFIG_OVERRIDE+=	vs2015/zlib/zlib.pc.in
-
 INSTALLATION_DIRS+=	bin share/dosbox-x
 INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/pixmaps
 
-CHECK_PORTABILITY_SKIP+=	vs2015/sdl2/build-scripts/androidbuildlibs.sh
-CHECK_PORTABILITY_SKIP+=	vs2015/sdl2/build-scripts/iosbuild.sh
+CHECK_PORTABILITY_SKIP+=	vs/sdl2/build-scripts/*.sh
 CHECK_PORTABILITY_SKIP+=	make-flatpak-sdl2.sh
 CHECK_PORTABILITY_SKIP+=	make-flatpak.sh
 # [[ is used in an developer target that isn't useful for us
