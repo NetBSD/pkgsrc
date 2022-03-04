@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2021Q4,v 1.1.2.15 2022/03/03 19:36:21 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2021Q4,v 1.1.2.16 2022/03/04 10:29:36 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2021Q4 branch:
 
@@ -122,4 +122,7 @@ www/ruby-rails70: security fix
 
 Pullup ticket #6595 - requested by gutteridge
 lang/python27: security fix (CVE-2021-4189, CVE-2022-0391)
+
+Pullup ticket #6596 - requested by nia
+chat/unrealircd: bugfix
 
