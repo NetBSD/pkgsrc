@@ -5,3 +5,5 @@ can be used later to evaluate a function for specified variable values,
 to create a corresponding tree for the function derivative over a
 specified variable, or to write a textual tree representation to a
 specified string. The library exposes C and Fortran 77 interfaces.
+
+This package is unmaintained upstream.
