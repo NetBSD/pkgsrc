@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2022/02/23 11:32:52 wiz Exp $
+$NetBSD: distinfo,v 1.2 2022/03/05 11:23:11 wiz Exp $
 
 BLAKE2s (aho-corasick-0.7.18.crate) = 8925e88e2df4b5ca3b31783f527e1bb31dbe27846f409f631148fa239f3b2935
 SHA512 (aho-corasick-0.7.18.crate) = 7a23b16231a90d23ee60ad4c81bc225410599a4560d33d3a203138fc540c39cf1000100fed3aed40dcc371c3635656a3792545dca5dd1aefbde00d8774eebd00
@@ -141,15 +141,6 @@ Size (paste-1.0.5.crate) = 17669 bytes
 BLAKE2s (paste-impl-0.1.18.crate) = e633353e956baef76d979014915f674e305f5f2ae92a687a93071a25e270680b
 SHA512 (paste-impl-0.1.18.crate) = c635efee46cb251b76ee9427432f81a0d944cdf1d0a95693d824c6085e7dea7e1e3f48c692ae27946f69e4e78d8080220058acf98e5c8a78482007349f8a7a4b
 Size (paste-impl-0.1.18.crate) = 9451 bytes
-BLAKE2s (peg-0.7.0.crate) = 1089f49b8386b4643b3e20a4cd5aa2c6be8e8a72c00cef302dc29271fee8a2d4
-SHA512 (peg-0.7.0.crate) = 5d19af50d784e1345d9d636dc70e4726c7398fa311c6af0ed8fc381fc41fa712f23c44f0f306203039acc3481ae1a5cb3cc756aef5533d7407212a9f658b4e8d
-Size (peg-0.7.0.crate) = 15940 bytes
-BLAKE2s (peg-macros-0.7.0.crate) = d286a6418a8d231b9be5e2ff95e47772ab024f4c2a7deb4be8e8ffe80032ab62
-SHA512 (peg-macros-0.7.0.crate) = fa02a438e6fc6ffb5acbe872c1b5dabf650f74468bcd96540d5a8870f515e5e1a7ced58bdc8438d9d24f1544571d3475557cfb6b6029a7f553329e4a791bbdff
-Size (peg-macros-0.7.0.crate) = 25194 bytes
-BLAKE2s (peg-runtime-0.7.0.crate) = d77c856842f55bbea540e41533ddad8e82067ea7d937fe7554e9ce16640e8b33
-SHA512 (peg-runtime-0.7.0.crate) = 2412bde72b8fac593ac00e625405ce9e3ef7d3f4ecf303124dc2684fedb2c483658757c5548d5af0f3c5bc753f5a08d63114e41bbfd6d70c96d1a2661945981e
-Size (peg-runtime-0.7.0.crate) = 3731 bytes
 BLAKE2s (plotters-0.3.1.crate) = 314fb2a97d4d93c3194f8a11feae7eed6067dd9043e2f1d27029bab40462f51d
 SHA512 (plotters-0.3.1.crate) = c7bcdf9da56c2d1c03053f61256d44d2384fac1a9a7e0db058090c13b359bce76a2a96bbcbfde04fdcde0a9dd3db8a1a22bc57508b0b6e4a374c8b35ec6c9707
 Size (plotters-0.3.1.crate) = 8595577 bytes
@@ -198,6 +189,9 @@ Size (regex-automata-0.1.10.crate) = 114533 bytes
 BLAKE2s (regex-syntax-0.6.25.crate) = e37642d6bafc62a523b729a9b82712000ee5c603ab3e0d4389af0b5735c64d71
 SHA512 (regex-syntax-0.6.25.crate) = a3d31f82aadc6be1796f76c03152ff24f37fe42d6ce27fb98e2f55ab102f86502bc37ccd563f6e0eba61aab20d002184c618517b678b3b93cb8f0497cc046ca5
 Size (regex-syntax-0.6.25.crate) = 293293 bytes
+BLAKE2s (rust-peg-4b146b4b78a80c07e43d7ace2d97f65bfde279a8.tar.gz) = 629fe55630c1d5a96739bb9887b33af669ed88c0c20c4200360ecc01a5fe73e7
+SHA512 (rust-peg-4b146b4b78a80c07e43d7ace2d97f65bfde279a8.tar.gz) = dda6d73daee73bf11276d5d5f45cf5ba58ed15dcb876c3f087463431c96a444284d4a2255a60f4b115d8265636e275b2f80163009dcf82c00064cef0001aba41
+Size (rust-peg-4b146b4b78a80c07e43d7ace2d97f65bfde279a8.tar.gz) = 45641 bytes
 BLAKE2s (rustc_version-0.4.0.crate) = 8244e9157b6b8811ae926fc0ed00edeb2b0a0f0f34d6e7b93ad236cbb6ffffba
 SHA512 (rustc_version-0.4.0.crate) = f66da7c6efe431db06cd01180d84ba67fcd38f8cd6ef693762957c00ccc2211f23c08079d7f184776e08f28d2d6ca3bdb5f5016f7de245c6193d4722891ba1db
 Size (rustc_version-0.4.0.crate) = 12175 bytes
@@ -285,3 +279,4 @@ Size (winapi-util-0.1.5.crate) = 10164 bytes
 BLAKE2s (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 85ecec73b9874f5f443e29d99f93a11889e74ddf5a4bfeb929e2355a7cee32f1
 SHA512 (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 4a654af6a5d649dc87e00497245096b35a2894ae66f155cb62389902c3b93ddcc5cf7d0d8b9dd97b291d2d80bc686af2298e80abef6ac69883f4a54e79712513
 Size (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 2947998 bytes
+SHA1 (patch-native_libcst_Cargo.toml) = f09c3995340b49b0808a3a7af01318cedf0f1566
