@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1281 2022/03/05 08:53:13 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1282 2022/03/05 10:32:22 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1632,3 +1632,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/xenserver415 to 4.15.2 [bouyer 2022-03-04]
 	Updated sysutils/xentools415 to 4.15.2 [bouyer 2022-03-04]
 	Updated textproc/expat to 2.4.7 [wiz 2022-03-05]
+	Updated chat/quassel to 0.14.0 [nia 2022-03-05]
