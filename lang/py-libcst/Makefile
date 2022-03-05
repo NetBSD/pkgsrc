@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/02/23 11:32:52 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/03/05 11:23:11 wiz Exp $
 
 DISTNAME=	libcst-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,6 +21,18 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "cargo-depends.mk"
 # for updating cargo-depends, uncomment the next line since Cargo.lock lives there
 #WRKSRC=		${WRKDIR}/${DISTNAME}/native
+
+# Depends on an unpublished crate. Can't use cargo.mk to fetch it.
+RUST_PEG_REV=	4b146b4b78a80c07e43d7ace2d97f65bfde279a8
+DISTFILES=	${DEFAULT_DISTFILES}
+DISTFILES+=	rust-peg-${RUST_PEG_REV}.tar.gz
+SITES.rust-peg-${RUST_PEG_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=kevinmehall/}rust-peg/archive/${RUST_PEG_REV}.tar.gz
+
+USE_LANGUAGES=		c c++   # Rust, but needs toolchain for linking
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+post-extract:
+	mv ${WRKDIR}/rust-peg* ${WRKDIR}/rust-peg
 
 CHECK_WRKREF_SKIP+=	${PYSITELIB}/libcst/native.so
 
