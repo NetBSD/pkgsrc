@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2022/02/26 07:54:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.36 2022/03/05 13:17:42 tnn Exp $
 bin/gegl
 bin/gegl-imgcmp
 include/gegl-0.4/gegl-apply.h
@@ -87,21 +87,21 @@ include/gegl-0.4/sc/sc-sample.h
 lib/gegl-0.4/dropshadow2.json
 lib/gegl-0.4/exr-load.${SOEXT}
 lib/gegl-0.4/exr-save.${SOEXT}
-lib/gegl-0.4/gegl-common-cxx-x86_64-v2.${SOEXT}
-lib/gegl-0.4/gegl-common-cxx-x86_64-v3.${SOEXT}
+${PLIST.x86_64}lib/gegl-0.4/gegl-common-cxx-x86_64-v2.${SOEXT}
+${PLIST.x86_64}lib/gegl-0.4/gegl-common-cxx-x86_64-v3.${SOEXT}
 lib/gegl-0.4/gegl-common-cxx.${SOEXT}
-lib/gegl-0.4/gegl-common-gpl3-x86_64-v2.${SOEXT}
-lib/gegl-0.4/gegl-common-gpl3-x86_64-v3.${SOEXT}
+${PLIST.x86_64}lib/gegl-0.4/gegl-common-gpl3-x86_64-v2.${SOEXT}
+${PLIST.x86_64}lib/gegl-0.4/gegl-common-gpl3-x86_64-v3.${SOEXT}
 lib/gegl-0.4/gegl-common-gpl3.${SOEXT}
-lib/gegl-0.4/gegl-common-x86_64-v2.${SOEXT}
-lib/gegl-0.4/gegl-common-x86_64-v3.${SOEXT}
+${PLIST.x86_64}lib/gegl-0.4/gegl-common-x86_64-v2.${SOEXT}
+${PLIST.x86_64}lib/gegl-0.4/gegl-common-x86_64-v3.${SOEXT}
 lib/gegl-0.4/gegl-common.${SOEXT}
 lib/gegl-0.4/gegl-core.${SOEXT}
-lib/gegl-0.4/gegl-generated-x86_64-v2.${SOEXT}
-lib/gegl-0.4/gegl-generated-x86_64-v3.${SOEXT}
+${PLIST.x86_64}lib/gegl-0.4/gegl-generated-x86_64-v2.${SOEXT}
+${PLIST.x86_64}lib/gegl-0.4/gegl-generated-x86_64-v3.${SOEXT}
 lib/gegl-0.4/gegl-generated.${SOEXT}
-lib/gegl-0.4/gegl-transformops-x86_64-v2.${SOEXT}
-lib/gegl-0.4/gegl-transformops-x86_64-v3.${SOEXT}
+${PLIST.x86_64}lib/gegl-0.4/gegl-transformops-x86_64-v2.${SOEXT}
+${PLIST.x86_64}lib/gegl-0.4/gegl-transformops-x86_64-v3.${SOEXT}
 lib/gegl-0.4/gif-load.${SOEXT}
 lib/gegl-0.4/grey2.json
 lib/gegl-0.4/jpg-load.${SOEXT}
