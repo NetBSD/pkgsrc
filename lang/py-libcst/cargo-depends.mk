@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2022/02/23 11:32:52 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2022/03/05 11:23:11 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
 CARGO_CRATE_DEPENDS+=	annotate-snippets-0.6.1
@@ -46,9 +46,9 @@ CARGO_CRATE_DEPENDS+=	parking_lot_core-0.8.3
 CARGO_CRATE_DEPENDS+=	paste-0.1.18
 CARGO_CRATE_DEPENDS+=	paste-1.0.5
 CARGO_CRATE_DEPENDS+=	paste-impl-0.1.18
-CARGO_CRATE_DEPENDS+=	peg-0.7.0
-CARGO_CRATE_DEPENDS+=	peg-macros-0.7.0
-CARGO_CRATE_DEPENDS+=	peg-runtime-0.7.0
+#CARGO_CRATE_DEPENDS+=	peg-0.7.0
+#CARGO_CRATE_DEPENDS+=	peg-macros-0.7.0
+#CARGO_CRATE_DEPENDS+=	peg-runtime-0.7.0
 CARGO_CRATE_DEPENDS+=	plotters-0.3.1
 CARGO_CRATE_DEPENDS+=	plotters-backend-0.3.2
 CARGO_CRATE_DEPENDS+=	plotters-svg-0.3.1

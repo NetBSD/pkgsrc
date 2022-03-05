@@ -1,0 +1,15 @@
+$NetBSD: patch-native_libcst_Cargo.toml,v 1.1 2022/03/05 11:23:11 wiz Exp $
+
+Use pkgsrc extracted copy of peg git.
+
+--- native/libcst/Cargo.toml.orig	2022-01-26 16:51:52.000000000 +0000
++++ native/libcst/Cargo.toml
+@@ -32,7 +32,7 @@ trace = ["peg/trace"]
+ paste = "1.0.4"
+ pyo3 = { version = "0.14.4", optional = true }
+ thiserror = "1.0.23"
+-peg = { git = "https://github.com/kevinmehall/rust-peg", rev = "4b146b4b78a80c07e43d7ace2d97f65bfde279a8" }
++peg = { path = "../../../rust-peg" }
+ chic = "1.2.2"
+ itertools = "0.10.0"
+ once_cell = "1.5.2"
