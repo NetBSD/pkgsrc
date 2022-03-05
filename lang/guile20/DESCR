@@ -4,4 +4,5 @@ It's designed so that you can link it into an application or utility to
 make it extensible. Our plan is to link this library into all GNU programs
 that call for extensibility.
 
-This is guile 2.0, the previous stable version.
+This is guile 2.0, which became old in 2017.  It is installed into
+PREFIX proper, but this should not be expected to continue.
