@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2021/10/18 09:15:58 pin Exp $
+# $NetBSD: Makefile,v 1.4 2022/03/05 21:22:16 pin Exp $
 
-DISTNAME=	hyperfine-1.12.0
+DISTNAME=	hyperfine-1.13.0
 CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sharkdp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,8 +15,10 @@ LICENSE=	apache-2.0
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/hyperfine ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/doc/hyperfine.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/hyperfine.1
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/hyperfine \
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/doc/hyperfine.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/hyperfine.1
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
