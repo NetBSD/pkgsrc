@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2021/12/08 16:06:14 adam Exp $
+# $NetBSD: Makefile,v 1.135 2022/03/05 19:53:22 gdt Exp $
 
 DISTNAME=	lilypond-2.18.2
 PKGREVISION=	24
@@ -64,7 +64,10 @@ BUILDLINK_API_DEPENDS.flex+=	flex>=2.6.0
 .include "../../devel/flex/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
-# lilypond's configure rejects guile2
+# lilypond's configure rejects guile2.  It is a bug in lilypond that
+# maintained versions of guile are not usable, but it does not seem
+# likely that will be fixed.  See e.g.
+#   https://gitlab.com/lilypond/lilypond/-/issues/6163
 .include "../../lang/guile/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/omf-scrollkeeper.mk"
