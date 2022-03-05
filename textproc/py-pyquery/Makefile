@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2022/01/04 20:55:03 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2022/03/05 09:00:56 wiz Exp $
 
 DISTNAME=	pyquery-1.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
-CATEGORIES=	python textproc
+CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyquery/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
