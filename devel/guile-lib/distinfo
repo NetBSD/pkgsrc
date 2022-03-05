@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:14:49 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/03/05 19:28:37 gdt Exp $
 
-BLAKE2s (guile-lib-0.2.3.tar.gz) = b03a87a61b0f8f95be52fe0d1caacd42d99e459edb0e3482fb089934d2be5365
-SHA512 (guile-lib-0.2.3.tar.gz) = 88a69ebaf6bb705babfc849389fa6413e5542188fd1b208b1ca21946a5faa9ae656fb24bf65759fa0171f890f5361f7554f7a07d3b1abe4c8284395755125f41
-Size (guile-lib-0.2.3.tar.gz) = 560281 bytes
+BLAKE2s (guile-lib-0.2.7.tar.gz) = b1df928fc089130daa1387f210abee7de7aa1d10a6b273f21e7af27f504fcd77
+SHA512 (guile-lib-0.2.7.tar.gz) = d27d1398f81172e4488c5ac5c2d076baeeeaa12fa19d83a87faf0767c255b79f8eb24438950da3865e797299be90f7dc1dcc964076d53df9cab5925a61ad0d1f
+Size (guile-lib-0.2.7.tar.gz) = 451202 bytes
