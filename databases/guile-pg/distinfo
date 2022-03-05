@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2021/10/26 10:09:19 nia Exp $
+$NetBSD: distinfo,v 1.20 2022/03/05 14:57:31 gdt Exp $
 
-BLAKE2s (guile-pg-0.49.tar.xz) = dfc1b931179ae7c7d3e3483993426b373fab1215e216d002e89dd745e96e71cf
-SHA512 (guile-pg-0.49.tar.xz) = ae084d155b76d0c586ac1644dd36d62eac85bd2f15699cd48214d5e5403f6e90018234d6c861af14aa949cefa9397871058a047de8a52bbace95e71db1c4e07c
-Size (guile-pg-0.49.tar.xz) = 566368 bytes
+BLAKE2s (guile-pg-0.50.tar.lz) = dfd91b1975614dd8e632d7bcaa6b047a643d29ecdc90ac6022020431bbf048e5
+SHA512 (guile-pg-0.50.tar.lz) = b073491f5d20c9de2a1deff957c48f3eea4760c82b55e1f9192d63198295714d87c415c5275e4b1c782feb2bf8fdaae72e2d8202e87f634f7993346916b6c527
+Size (guile-pg-0.50.tar.lz) = 569509 bytes
