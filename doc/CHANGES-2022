@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1285 2022/03/05 18:13:47 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.1286 2022/03/05 19:28:50 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1636,3 +1636,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/hugo to 0.93.2 [nikita 2022-03-05]
 	Updated databases/guile-pg to 0.50 [gdt 2022-03-05]
 	Updated www/hugo to 0.93.2nb1 [nikita 2022-03-05]
+	Updated devel/guile-lib to 0.2.7 [gdt 2022-03-05]
