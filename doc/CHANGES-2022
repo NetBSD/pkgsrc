@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1286 2022/03/05 19:28:50 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.1287 2022/03/05 21:22:42 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1637,3 +1637,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/guile-pg to 0.50 [gdt 2022-03-05]
 	Updated www/hugo to 0.93.2nb1 [nikita 2022-03-05]
 	Updated devel/guile-lib to 0.2.7 [gdt 2022-03-05]
+	Updated benchmarks/hyperfine to 1.13.0 [pin 2022-03-05]
