@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:05:24 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/03/05 10:32:10 nia Exp $
 
-BLAKE2s (quassel-0.13.1.tar.bz2) = d431f449516e64083e088407361c8e8625c34859562a6b698cb129cc5c5d0378
-SHA512 (quassel-0.13.1.tar.bz2) = 4ed55e81b1638c8851ddae5d9c9d23a1c2cea92f307e19f426873c2600d8e183898d3ed7c290f2ea5d1b8c5e1be7f9ffcc3e8c3c0193d080fc879b10cc3a962c
-Size (quassel-0.13.1.tar.bz2) = 4289663 bytes
-SHA1 (patch-src_common_types.h) = bc1c32f97faf271402a7886cc4f1fd33cfce0984
+BLAKE2s (quassel-0.14.0.tar.bz2) = 047dd940bdc2ba65ded12ae82572a748b95d61e79e9880e9dd64786ec10e67cb
+SHA512 (quassel-0.14.0.tar.bz2) = ea6b9723acab5ce73f760692770c1340c03bf277d2c99a2520345bfb6a7bb6fdc64a01dccfd7026341b46ee727821e1bcc2f487be72dfbc155f1de1ad264763f
+Size (quassel-0.14.0.tar.bz2) = 4774297 bytes
