@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1283 2022/03/05 14:17:03 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.1284 2022/03/05 14:57:37 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1634,3 +1634,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/expat to 2.4.7 [wiz 2022-03-05]
 	Updated chat/quassel to 0.14.0 [nia 2022-03-05]
 	Updated www/hugo to 0.93.2 [nikita 2022-03-05]
+	Updated databases/guile-pg to 0.50 [gdt 2022-03-05]
