@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2022/02/26 07:46:32 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2022/03/05 12:19:41 tnn Exp $
 
 DISTNAME=	babl-0.1.90
 CATEGORIES=	graphics
@@ -29,6 +29,11 @@ PLIST_SUBST+=		SOEXT="dylib"
 .else
 PLIST.not_Darwin=	yes
 PLIST_SUBST+=		SOEXT="so"
+.endif
+
+PLIST_VARS+=		x86_64
+.if ${MACHINE_ARCH} == "x86_64"
+PLIST.x86_64=		yes
 .endif
 
 # Apply removals to post-wrapper transformed arguments.
