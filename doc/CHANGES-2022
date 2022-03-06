@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1299 2022/03/06 08:45:22 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1300 2022/03/06 08:46:18 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1655,3 +1655,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-dulwich to 0.20.33 [adam 2022-03-06]
 	Updated audio/strawberry to 1.0.2 [nia 2022-03-06]
 	Updated sysutils/felix to 0.4.1 [pin 2022-03-06]
+	Updated graphics/stitchy to 0.1.3nb1 [pin 2022-03-06]
