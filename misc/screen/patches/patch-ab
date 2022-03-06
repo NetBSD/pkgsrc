@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.13 2015/02/13 04:44:40 rodent Exp $
+$NetBSD: patch-ab,v 1.14 2022/03/06 13:04:20 ryoon Exp $
 
 Always use varargs on NetBSD
 
---- config.h.in.orig	2014-04-26 10:58:46.000000000 +0000
-+++ config.h.in
+--- acconfig.h.orig	2014-04-26 10:58:46.000000000 +0000
++++ acconfig.h
 @@ -498,6 +498,15 @@
   */
  #undef USEVARARGS
