@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1312 2022/03/06 17:22:36 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1313 2022/03/06 18:59:25 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1669,3 +1669,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ruby-nokogiri to 1.13.3 [tsutsui 2022-03-06]
 	Updated devel/py-ipython to 8.1.1 [adam 2022-03-06]
 	Updated devel/py-faker to 13.3.0 [adam 2022-03-06]
+	Updated net/unison-snapshot to 2.51.90 [gdt 2022-03-06]
