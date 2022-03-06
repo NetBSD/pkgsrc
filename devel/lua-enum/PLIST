@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/03/06 09:16:22 nia Exp $
+${LUA_LDIR}/enum/init.lua

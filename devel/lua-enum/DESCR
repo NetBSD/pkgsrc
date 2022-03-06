@@ -1,0 +1,4 @@
+This is a little module that simulates enumerated types in Lua.
+
+Its API is very similar to the Python 3 Enum API, although much
+more limited.
