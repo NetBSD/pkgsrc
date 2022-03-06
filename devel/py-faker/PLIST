@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2022/01/14 19:54:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.35 2022/03/06 17:22:18 adam Exp $
 bin/faker-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -29,6 +29,12 @@ ${PYSITELIB}/faker/contrib/pytest/__init__.pyo
 ${PYSITELIB}/faker/contrib/pytest/plugin.py
 ${PYSITELIB}/faker/contrib/pytest/plugin.pyc
 ${PYSITELIB}/faker/contrib/pytest/plugin.pyo
+${PYSITELIB}/faker/decode/__init__.py
+${PYSITELIB}/faker/decode/__init__.pyc
+${PYSITELIB}/faker/decode/__init__.pyo
+${PYSITELIB}/faker/decode/codes.py
+${PYSITELIB}/faker/decode/codes.pyc
+${PYSITELIB}/faker/decode/codes.pyo
 ${PYSITELIB}/faker/documentor.py
 ${PYSITELIB}/faker/documentor.pyc
 ${PYSITELIB}/faker/documentor.pyo
@@ -992,9 +998,18 @@ ${PYSITELIB}/faker/providers/lorem/ar_AA/__init__.pyo
 ${PYSITELIB}/faker/providers/lorem/az_AZ/__init__.py
 ${PYSITELIB}/faker/providers/lorem/az_AZ/__init__.pyc
 ${PYSITELIB}/faker/providers/lorem/az_AZ/__init__.pyo
+${PYSITELIB}/faker/providers/lorem/bn_BD/__init__.py
+${PYSITELIB}/faker/providers/lorem/bn_BD/__init__.pyc
+${PYSITELIB}/faker/providers/lorem/bn_BD/__init__.pyo
 ${PYSITELIB}/faker/providers/lorem/cs_CZ/__init__.py
 ${PYSITELIB}/faker/providers/lorem/cs_CZ/__init__.pyc
 ${PYSITELIB}/faker/providers/lorem/cs_CZ/__init__.pyo
+${PYSITELIB}/faker/providers/lorem/de_AT/__init__.py
+${PYSITELIB}/faker/providers/lorem/de_AT/__init__.pyc
+${PYSITELIB}/faker/providers/lorem/de_AT/__init__.pyo
+${PYSITELIB}/faker/providers/lorem/de_DE/__init__.py
+${PYSITELIB}/faker/providers/lorem/de_DE/__init__.pyc
+${PYSITELIB}/faker/providers/lorem/de_DE/__init__.pyo
 ${PYSITELIB}/faker/providers/lorem/el_GR/__init__.py
 ${PYSITELIB}/faker/providers/lorem/el_GR/__init__.pyc
 ${PYSITELIB}/faker/providers/lorem/el_GR/__init__.pyo
@@ -1004,6 +1019,9 @@ ${PYSITELIB}/faker/providers/lorem/en_PH/__init__.pyo
 ${PYSITELIB}/faker/providers/lorem/en_US/__init__.py
 ${PYSITELIB}/faker/providers/lorem/en_US/__init__.pyc
 ${PYSITELIB}/faker/providers/lorem/en_US/__init__.pyo
+${PYSITELIB}/faker/providers/lorem/fa_IR/__init__.py
+${PYSITELIB}/faker/providers/lorem/fa_IR/__init__.pyc
+${PYSITELIB}/faker/providers/lorem/fa_IR/__init__.pyo
 ${PYSITELIB}/faker/providers/lorem/fil_PH/__init__.py
 ${PYSITELIB}/faker/providers/lorem/fil_PH/__init__.pyc
 ${PYSITELIB}/faker/providers/lorem/fil_PH/__init__.pyo
