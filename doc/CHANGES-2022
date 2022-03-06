@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1309 2022/03/06 13:04:53 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.1310 2022/03/06 17:13:38 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1665,3 +1665,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/go116 to 1.16.15 [bsiegert 2022-03-06]
 	Added editors/PageEdit version 1.7.0 [wiz 2022-03-06]
 	Updated misc/screen to 4.9.0 [ryoon 2022-03-06]
+	Updated misc/ruby-mini_portile2 to 2.8.0 [tsutsui 2022-03-06]
