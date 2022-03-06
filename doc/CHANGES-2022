@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1301 2022/03/06 08:58:33 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1302 2022/03/06 09:01:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1657,3 +1657,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/felix to 0.4.1 [pin 2022-03-06]
 	Updated graphics/stitchy to 0.1.3nb1 [pin 2022-03-06]
 	Added time/lua-chronos version 0.2.4 [nia 2022-03-06]
+	Updated finance/ruby-braintree to 4.6.0 [taca 2022-03-06]
