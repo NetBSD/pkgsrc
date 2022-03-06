@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1311 2022/03/06 17:14:50 tsutsui Exp $
+$NetBSD: CHANGES-2022,v 1.1312 2022/03/06 17:22:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1667,3 +1667,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/screen to 4.9.0 [ryoon 2022-03-06]
 	Updated misc/ruby-mini_portile2 to 2.8.0 [tsutsui 2022-03-06]
 	Updated textproc/ruby-nokogiri to 1.13.3 [tsutsui 2022-03-06]
+	Updated devel/py-ipython to 8.1.1 [adam 2022-03-06]
+	Updated devel/py-faker to 13.3.0 [adam 2022-03-06]
