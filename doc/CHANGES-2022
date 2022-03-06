@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1310 2022/03/06 17:13:38 tsutsui Exp $
+$NetBSD: CHANGES-2022,v 1.1311 2022/03/06 17:14:50 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1666,3 +1666,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added editors/PageEdit version 1.7.0 [wiz 2022-03-06]
 	Updated misc/screen to 4.9.0 [ryoon 2022-03-06]
 	Updated misc/ruby-mini_portile2 to 2.8.0 [tsutsui 2022-03-06]
+	Updated textproc/ruby-nokogiri to 1.13.3 [tsutsui 2022-03-06]
