@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/01/16 13:58:20 taca Exp $
+# $NetBSD: Makefile,v 1.2 2022/03/06 04:00:58 taca Exp $
 
-DISTNAME=	deep_merge-1.2.1
+DISTNAME=	deep_merge-1.2.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
