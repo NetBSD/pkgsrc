@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1294 2022/02/27 21:09:09 pin Exp $
+# $NetBSD: Makefile,v 1.1295 2022/03/06 09:29:28 nia Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -494,6 +494,7 @@ SUBDIR+=	lua-cosmo
 SUBDIR+=	lua-dkjson
 SUBDIR+=	lua-etlua
 SUBDIR+=	lua-expat
+SUBDIR+=	lua-ftcsv
 SUBDIR+=	lua-inifile
 SUBDIR+=	lua-lustache
 SUBDIR+=	lua-lyaml
