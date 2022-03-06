@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1296 2022/03/06 08:01:19 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1297 2022/03/06 08:09:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1651,3 +1651,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/lua54 to 5.4.4 [nia 2022-03-06]
 	Updated parallel/lua-lanes to 3.16.0 [nia 2022-03-06]
 	Updated audio/schismtracker to 20220125 [nia 2022-03-06]
+	Updated devel/py-jupyter-console to 6.4.2 [adam 2022-03-06]
+	Updated devel/py-dulwich to 0.20.33 [adam 2022-03-06]
