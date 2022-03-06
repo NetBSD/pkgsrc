@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1289 2022/03/06 04:01:29 taca Exp $
+$NetBSD: CHANGES-2022,v 1.1290 2022/03/06 04:03:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1640,3 +1640,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated benchmarks/hyperfine to 1.13.0 [pin 2022-03-05]
 	Updated databases/ruby-sequel to 5.54.0 [taca 2022-03-06]
 	Updated devel/ruby-deep_merge to 1.2.2 [taca 2022-03-06]
+	Updated devel/ruby-msgpack to 1.4.5 [taca 2022-03-06]
