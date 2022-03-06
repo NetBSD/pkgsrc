@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1304 2022/03/06 09:05:37 taca Exp $
+$NetBSD: CHANGES-2022,v 1.1305 2022/03/06 09:16:41 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1660,3 +1660,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated finance/ruby-braintree to 4.6.0 [taca 2022-03-06]
 	Updated misc/ruby-bundler to 2.3.8 [taca 2022-03-06]
 	Updated misc/ruby-sprockets to 4.0.3 [taca 2022-03-06]
+	Added devel/lua-enum version 0.1.2 [nia 2022-03-06]
