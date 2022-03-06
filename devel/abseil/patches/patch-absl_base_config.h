@@ -1,6 +1,7 @@
-$NetBSD: patch-absl_base_config.h,v 1.3 2021/11/18 13:57:34 adam Exp $
+$NetBSD: patch-absl_base_config.h,v 1.4 2022/03/06 09:34:06 wiz Exp $
 
 Add support for NetBSD.
+https://github.com/abseil/abseil-cpp/pull/1121
 
 --- absl/base/config.h.orig	2021-11-03 15:26:14.000000000 +0000
 +++ absl/base/config.h
