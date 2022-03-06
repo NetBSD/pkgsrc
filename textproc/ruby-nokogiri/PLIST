@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2022/01/09 19:19:23 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.36 2022/03/06 17:14:34 tsutsui Exp $
 bin/nokogiri${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -173,9 +173,8 @@ ${GEM_LIBDIR}/patches/libxml2/0003-libxml2.la-is-in-top_builddir.patch
 ${GEM_LIBDIR}/patches/libxml2/0004-use-glibc-strlen.patch
 ${GEM_LIBDIR}/patches/libxml2/0005-avoid-isnan-isinf.patch
 ${GEM_LIBDIR}/patches/libxml2/0006-update-automake-files-for-arm64.patch
-${GEM_LIBDIR}/patches/libxml2/0007-Fix-XPath-recursion-limit.patch
 ${GEM_LIBDIR}/patches/libxml2/0008-htmlParseComment-handle-abruptly-closed-comments.patch
 ${GEM_LIBDIR}/patches/libxml2/0009-allow-wildcard-namespaces.patch
+${GEM_LIBDIR}/patches/libxml2/0010-Revert-Different-approach-to-fix-quadratic-behavior.patch
 ${GEM_LIBDIR}/patches/libxslt/0001-update-automake-files-for-arm64.patch
-${GEM_LIBDIR}/patches/libxslt/0002-Fix-xml2-config-check-in-configure-script.patch
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
