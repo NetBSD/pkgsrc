@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1313 2022/03/06 18:59:25 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.1314 2022/03/06 20:06:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1670,3 +1670,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-ipython to 8.1.1 [adam 2022-03-06]
 	Updated devel/py-faker to 13.3.0 [adam 2022-03-06]
 	Updated net/unison-snapshot to 2.51.90 [gdt 2022-03-06]
+	Updated devel/py-ZopeSchema to 6.2.0 [adam 2022-03-06]
+	Updated devel/py-ZopeTestrunner to 5.4.0 [adam 2022-03-06]
