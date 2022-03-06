@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.121 2022/01/03 21:21:12 christos Exp $
+# $NetBSD: Makefile,v 1.122 2022/03/06 13:04:20 ryoon Exp $
 
-DISTNAME=	screen-4.8.0
-PKGREVISION=	5
+DISTNAME=	screen-4.9.0
 CATEGORIES=	misc shells
 MASTER_SITES=	${MASTER_SITE_GNU:=screen/}
 
@@ -30,7 +29,7 @@ CONFIGURE_ARGS+=	--enable-colors256
 
 PKG_SHELL=		bin/screen
 
-USE_TOOLS+=		makeinfo
+USE_TOOLS+=		automake makeinfo
 INFO_FILES=		YES
 
 .include "../../mk/bsd.prefs.mk"
@@ -63,6 +62,9 @@ INSTALLATION_DIRS+=	share/examples/screen
 .if empty(UNPRIVILEGED:M[Yy][Ee][Ss])
 SPECIAL_PERMS+=		bin/${DISTNAME} ${SETUID_ROOT_PERMS}
 .endif
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -i
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/etcscreenrc			\
