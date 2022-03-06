@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1290 2022/03/06 04:03:47 taca Exp $
+$NetBSD: CHANGES-2022,v 1.1291 2022/03/06 04:53:46 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1641,3 +1641,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/ruby-sequel to 5.54.0 [taca 2022-03-06]
 	Updated devel/ruby-deep_merge to 1.2.2 [taca 2022-03-06]
 	Updated devel/ruby-msgpack to 1.4.5 [taca 2022-03-06]
+	Updated www/firefox to 97.0.2 [ryoon 2022-03-06]
