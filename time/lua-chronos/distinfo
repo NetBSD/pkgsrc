@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/03/06 08:58:21 nia Exp $
+
+BLAKE2s (chronos-0.2.4.tar.gz) = 3e1bf2b49d1ceb18a47a0f665ac7914b5e5c634263f743a64d31aeb3e0a7a12d
+SHA512 (chronos-0.2.4.tar.gz) = b7d88351ce3bac20ef4b5cbaffcee281cbfc8cdb2210c7e9076fc36bfa69a5d81d68da89704c6103bc94e90e591d36b6a1f4fba199da69f03fc26cb5a3f49c6f
+Size (chronos-0.2.4.tar.gz) = 4807 bytes
