@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2022/01/24 18:37:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2022/03/06 17:18:31 adam Exp $
 bin/ipython-${PYVERSSUFFIX}
 bin/ipython3-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -422,9 +422,6 @@ ${PYSITELIB}/IPython/lib/lexers.pyo
 ${PYSITELIB}/IPython/lib/pretty.py
 ${PYSITELIB}/IPython/lib/pretty.pyc
 ${PYSITELIB}/IPython/lib/pretty.pyo
-${PYSITELIB}/IPython/lib/security.py
-${PYSITELIB}/IPython/lib/security.pyc
-${PYSITELIB}/IPython/lib/security.pyo
 ${PYSITELIB}/IPython/lib/tests/__init__.py
 ${PYSITELIB}/IPython/lib/tests/__init__.pyc
 ${PYSITELIB}/IPython/lib/tests/__init__.pyo
@@ -456,9 +453,6 @@ ${PYSITELIB}/IPython/lib/tests/test_lexers.pyo
 ${PYSITELIB}/IPython/lib/tests/test_pretty.py
 ${PYSITELIB}/IPython/lib/tests/test_pretty.pyc
 ${PYSITELIB}/IPython/lib/tests/test_pretty.pyo
-${PYSITELIB}/IPython/lib/tests/test_security.py
-${PYSITELIB}/IPython/lib/tests/test_security.pyc
-${PYSITELIB}/IPython/lib/tests/test_security.pyo
 ${PYSITELIB}/IPython/paths.py
 ${PYSITELIB}/IPython/paths.pyc
 ${PYSITELIB}/IPython/paths.pyo
@@ -739,6 +733,9 @@ ${PYSITELIB}/IPython/utils/tests/test_capture.pyo
 ${PYSITELIB}/IPython/utils/tests/test_decorators.py
 ${PYSITELIB}/IPython/utils/tests/test_decorators.pyc
 ${PYSITELIB}/IPython/utils/tests/test_decorators.pyo
+${PYSITELIB}/IPython/utils/tests/test_deprecated.py
+${PYSITELIB}/IPython/utils/tests/test_deprecated.pyc
+${PYSITELIB}/IPython/utils/tests/test_deprecated.pyo
 ${PYSITELIB}/IPython/utils/tests/test_dir2.py
 ${PYSITELIB}/IPython/utils/tests/test_dir2.pyc
 ${PYSITELIB}/IPython/utils/tests/test_dir2.pyo
@@ -766,6 +763,9 @@ ${PYSITELIB}/IPython/utils/tests/test_process.pyo
 ${PYSITELIB}/IPython/utils/tests/test_pycolorize.py
 ${PYSITELIB}/IPython/utils/tests/test_pycolorize.pyc
 ${PYSITELIB}/IPython/utils/tests/test_pycolorize.pyo
+${PYSITELIB}/IPython/utils/tests/test_shimmodule.py
+${PYSITELIB}/IPython/utils/tests/test_shimmodule.pyc
+${PYSITELIB}/IPython/utils/tests/test_shimmodule.pyo
 ${PYSITELIB}/IPython/utils/tests/test_sysinfo.py
 ${PYSITELIB}/IPython/utils/tests/test_sysinfo.pyc
 ${PYSITELIB}/IPython/utils/tests/test_sysinfo.pyo
