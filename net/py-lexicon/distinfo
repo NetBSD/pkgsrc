@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.68 2022/01/31 11:48:26 adam Exp $
+$NetBSD: distinfo,v 1.69 2022/03/06 20:13:57 adam Exp $
 
-BLAKE2s (dns-lexicon-3.9.2.tar.gz) = 9dc96ae99a793346d3dd34cfb80f55345d7b89eae6fefcbdbe0c171fd29c3af8
-SHA512 (dns-lexicon-3.9.2.tar.gz) = 0426d2e863106df43137afdd05c848b6ede9604ffd2c642ca7016075c4ee586641e3b2fd2d8c1b23be779098c8b2f3f2aee4c2685c3431fff412466ffecdb131
-Size (dns-lexicon-3.9.2.tar.gz) = 141688 bytes
+BLAKE2s (dns-lexicon-3.9.4.tar.gz) = e8a193129072a76efeedd77479c80236bb3b3ddbe1ed90f163365d0ca75de507
+SHA512 (dns-lexicon-3.9.4.tar.gz) = 635e6e03c0ac9a8ad966358e4f8e05f1506c70c3ec90326f7d1c7959c53a572f47feb76f9f3833caf128bac2427ab8234b829472aae119cf67cd6c809af6e34c
+Size (dns-lexicon-3.9.4.tar.gz) = 144217 bytes
