@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2021/12/08 16:04:08 adam Exp $
+# $NetBSD: Makefile,v 1.149 2022/03/06 13:09:53 gdt Exp $
 #
 # changelog at http://www.texmacs.org/tmweb/about/changes.en.html
 
@@ -56,6 +56,8 @@ post-install:
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
+# Building with guile20 almost succeeds.
+# Building with guile22 fails (apparent use of withdrawn interfaces).
 .include "../../lang/guile/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../print/ghostscript/buildlink3.mk"
