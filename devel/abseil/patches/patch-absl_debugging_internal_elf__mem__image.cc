@@ -1,6 +1,7 @@
-$NetBSD: patch-absl_debugging_internal_elf__mem__image.cc,v 1.1 2021/11/18 13:57:34 adam Exp $
+$NetBSD: patch-absl_debugging_internal_elf__mem__image.cc,v 1.2 2022/03/06 09:34:06 wiz Exp $
 
 Support NetBSD.
+https://github.com/abseil/abseil-cpp/pull/1121
 
 --- absl/debugging/internal/elf_mem_image.cc.orig	2021-11-18 09:35:34.106564193 +0000
 +++ absl/debugging/internal/elf_mem_image.cc
