@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/03/06 09:29:28 nia Exp $
+
+BLAKE2s (ftcsv-1.2.1.tar.gz) = b6744c68c334c434ba1fc2b0f4e84c4c3b2168b30c30e835ead70d30bbe7f985
+SHA512 (ftcsv-1.2.1.tar.gz) = 9771d39b3ef4417657e259e5fd9cc063142750b547ff2c6c97f3fe51ba6e10349ebee0563225416aa6bd8b447fca057d80e83f5cd18bab6c96a47db79f465dc6
+Size (ftcsv-1.2.1.tar.gz) = 18195 bytes
