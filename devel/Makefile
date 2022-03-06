@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3698 2022/02/26 12:30:18 pho Exp $
+# $NetBSD: Makefile,v 1.3699 2022/03/06 09:16:21 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -979,6 +979,7 @@ SUBDIR+=	lua-compat53
 SUBDIR+=	lua-cov
 SUBDIR+=	lua-coxpcall
 SUBDIR+=	lua-cqueues
+SUBDIR+=	lua-enum
 SUBDIR+=	lua-epnf
 SUBDIR+=	lua-event
 SUBDIR+=	lua-fifo
