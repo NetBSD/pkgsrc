@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21573 2022/03/05 19:28:50 gdt Exp $
+$NetBSD: TODO,v 1.21574 2022/03/06 08:30:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -361,7 +361,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o GNUMail-1.2.2
 	o Gorm-1.2.26
 	o HElib-2.1.0
-	o ImageMagick-7.1.0.26
+	o ImageMagick-7.1.0.27
 	o ImageMagick6-6.9.12.8
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
@@ -412,7 +412,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o SOGo-5.4.0
 	o SOPE-2.4.1
 	o SQLiteCpp-2.5.0
-	o Sigil-1.9.0
+	o Sigil-1.9.1
 	o TeXmacs-1.99.19
 	o TiffIO-140a
 	o YoSucker-81
@@ -470,6 +470,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o arm-trusted-firmware-rk3399-2.4
 	o arm-trusted-firmware-sun50i_a64-2.4
 	o asapm-3.1
+	o asciidoc-10.1.4
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
@@ -531,7 +532,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cacti-spine-1.2.16
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-5.36.0
+	o calibre-5.38.0
 	o calligra-3.0.1 [in wip; koffice successor]
 	o camlp4-4.12
 	o camlp5-714
@@ -589,6 +590,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o csvkit-1.0.5
 	o ctemplate-2.4
 	o cups-2.4
+	o curl-7.82.0
 	o cvs-fast-export-1.56
 	o cxref-1.6e
 	o cygwin_lib-1.5.24.2
@@ -820,6 +822,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o golem-0.0.6
 	o goocanvas-2.0.2
 	o google-glog-2.2.2
+	o gopls-0.8.0
 	o gossip-0.31
 	o got-0.52
 	o gourmet-0.13.3
@@ -864,6 +867,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o h8300-elf-gcc-7.1.0
 	o hamster-applet-2.32.1
 	o hanzim-3.5
+	o harfbuzz-4.0
 	o harmbase2-20210110
 	o harminv-1.4.1
 	o hashcash-1.23
@@ -1452,6 +1456,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o podcastdl-0.3.3
 	o policyd-weight-0.1.15.2
 	o poppass-4.0.14
+	o poppler-22.03.0
 	o posh-0.14.1
 	o postal-0.72
 	o postfix-3.7.0
@@ -1496,6 +1501,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-cares-3.1.1
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
+	o py-cyclonedx-python-lib-2.0.0
 	o py-django-4.0
 	o py-django-debug-toolbar-3.2.1
 	o py-django-tagging-0.5.0
@@ -1510,6 +1516,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-hyperscan-0.2.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.2
+	o py-mercurial-6.1
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
 	o py-newt-0.52.21
@@ -1740,6 +1747,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
 	o tomboy-1.10.2
+	o tomlplusplus-3.0.1
 	o top-3.8beta1
 	o topgit-0.8
 	o tor-browser-11.0.6 [wip]
@@ -1798,6 +1806,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wcalc-2.4
 	o wcslib-7.6
 	o websvn-2.6.0
+	o wget-1.21.3
 	o wgetpaste-2.30
 	o whowatch-1.8.5
 	o widelands-1.0
