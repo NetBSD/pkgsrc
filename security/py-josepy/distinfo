@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/12/01 20:53:55 adam Exp $
+$NetBSD: distinfo,v 1.14 2022/03/06 20:18:37 adam Exp $
 
-BLAKE2s (josepy-1.11.0.tar.gz) = 7cc82de41f1eb8be70b54fec4202de5e3cb43634320d9bf08ecb1f391f663a55
-SHA512 (josepy-1.11.0.tar.gz) = 06aed9534434a94f7b922270221aaa85feb4ba9d836460303ecb7fea1c5679d557a6dad6d32bbd1a05ccc4855318fb56752ebea91498bb8c36884cf7b3d01859
-Size (josepy-1.11.0.tar.gz) = 59198 bytes
+BLAKE2s (josepy-1.12.0.tar.gz) = a4137c1e06d93abd2f60af2d026941eda39095e9df9109f83ec5c5aa51bfaf65
+SHA512 (josepy-1.12.0.tar.gz) = 7a5257d4a75feed65ff3abfd472e8f1c9cc81b62e27365d776d0f25e1efd94ae46374060ea463b9f04fe5e9577672bf2ab8dc8d6371cb8d01a4765921930e01b
+Size (josepy-1.12.0.tar.gz) = 59205 bytes

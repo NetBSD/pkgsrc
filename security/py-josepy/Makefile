@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2022/01/05 15:41:20 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/03/06 20:18:37 adam Exp $
 
-DISTNAME=	josepy-1.11.0
+DISTNAME=	josepy-1.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/josepy/}
 
@@ -12,7 +11,7 @@ COMMENT=	JOSE protocol implementation in Python using cryptography
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.13:../../security/py-OpenSSL
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=0.8:../../security/py-cryptography
+DEPENDS+=	${PYPKGPREFIX}-cryptography>=1.5:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=1.0:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=4.0:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
