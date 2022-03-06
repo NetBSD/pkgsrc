@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:10:36 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/03/06 07:51:10 nia Exp $
 
-BLAKE2s (lanes-3.13.0.tar.gz) = 093ac7ea5ad7d0a72013d37100e95088980aa23804931690b2f842241ca0ab75
-SHA512 (lanes-3.13.0.tar.gz) = bb509181757fa2b4f07a55962015b35ca6bb867b18ec89dd655f333babe2e12f56479fa85bc98e0dacf5bec2a523265bbc3a978396dc332dc1fdda4df760b2e5
-Size (lanes-3.13.0.tar.gz) = 247978 bytes
+BLAKE2s (lanes-3.16.0.tar.gz) = 643de4ad0a839b1c98bdd0cb6a0b251a4f5d0d7190ac0f9365f9896dd1fa4241
+SHA512 (lanes-3.16.0.tar.gz) = ffd935baae8af752591251bbb1a7f936034ad281870d453e6e1b4291c175c91537ccae23ec25a616b45e8ab601222f323e05e938d7887091ba7e132b0cd5e449
+Size (lanes-3.16.0.tar.gz) = 257945 bytes
 SHA1 (patch-src_Makefile) = a9f40a821f086574d5debc2ecd434eee1aa93b18
-SHA1 (patch-src_threading.c) = 2daf9d772fbbcd7a04cd41a0b10060c7a97d8b38
-SHA1 (patch-src_threading.h) = 036129d1c9c5e7bf7b6535caff07fbb15f65e23d
