@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2021/12/08 16:03:31 adam Exp $
+# $NetBSD: Makefile,v 1.67 2022/03/06 07:31:44 nia Exp $
 
 PKGNAME=	pidgin-silc-${PIDGIN_VERSION}
-PKGREVISION=	3
 
 COMMENT=	SILC plugin for the Pidgin instant messenger
 
