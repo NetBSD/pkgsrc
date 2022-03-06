@@ -1,6 +1,7 @@
-$NetBSD: patch-absl_debugging_internal_vdso__support.cc,v 1.1 2021/11/18 13:57:34 adam Exp $
+$NetBSD: patch-absl_debugging_internal_vdso__support.cc,v 1.2 2022/03/06 09:34:06 wiz Exp $
 
 Support NetBSD.
+https://github.com/abseil/abseil-cpp/pull/1121
 
 --- absl/debugging/internal/vdso_support.cc.orig	2021-11-18 10:00:05.006467401 +0000
 +++ absl/debugging/internal/vdso_support.cc
