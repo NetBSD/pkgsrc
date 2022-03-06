@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.75 2022/02/04 13:39:33 adam Exp $
+# $NetBSD: Makefile,v 1.76 2022/03/06 17:18:31 adam Exp $
 
-DISTNAME=	ipython-8.0.1
+DISTNAME=	ipython-8.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipython/}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-matplotlib-inline>0:../../graphics/py-matplotlib-inline
 DEPENDS+=	${PYPKGPREFIX}-pexpect>=4.4:../../devel/py-pexpect
 DEPENDS+=	${PYPKGPREFIX}-pickleshare-[0-9]*:../../databases/py-pickleshare
 DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit>=3.0.2:../../devel/py-prompt_toolkit
-DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
+DEPENDS+=	${PYPKGPREFIX}-pygments>=2.4.0:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=18.5:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-stack-data-[0-9]*:../../sysutils/py-stack-data
