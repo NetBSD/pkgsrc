@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/03/06 12:38:34 wiz Exp $
+
+BLAKE2s (PageEdit-1.7.0.tar.gz) = 904044a0ac0f5971399949a7646e81973d6bf5aa46195894f8ccfebff88e5610
+SHA512 (PageEdit-1.7.0.tar.gz) = af6e9d0b879a7138e4f5ccad78996e8d7c81f7827b97ccaa9c254d1d670479f4693b0371cf62baf02ed08a41923905958e99c436ba77da8424b70de85d4b67a9
+Size (PageEdit-1.7.0.tar.gz) = 6207640 bytes
