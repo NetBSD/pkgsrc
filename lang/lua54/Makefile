@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/10/27 13:02:40 nia Exp $
+# $NetBSD: Makefile,v 1.4 2022/03/06 07:46:10 nia Exp $
 
 DISTNAME=	lua-${LUA_VERSION}
 PKGNAME=	lua54-${LUA_VERSION}
-PKGREVISION=	1
 CATEGORIES=	lang lua
 MASTER_SITES=	https://www.lua.org/ftp/
 

@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2021/10/27 13:02:40 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/03/06 07:46:10 nia Exp $
 
-BLAKE2s (lua-5.4.3.tar.gz) = e137cfcfdc6a93e52120039bec5f92db06dbe8318350fe88fc3a11626d4aa193
-SHA512 (lua-5.4.3.tar.gz) = 3a1a3ee8694b72b4ec9d3ce76705fe179328294353604ca950c53f41b41161b449877d43318ef4501fee44ecbd6c83314ce7468d7425ba9b2903c9c32a28bbc0
-Size (lua-5.4.3.tar.gz) = 358216 bytes
+BLAKE2s (lua-5.4.4.tar.gz) = 16efe43030b76ca6630011e9491066036a1da00b8de69b84e5ee5c201691abe9
+SHA512 (lua-5.4.4.tar.gz) = af0c35d5ba00fecbb2dd617bd7b825edf7418a16a73076e04f2a0df58cdbf098dc3ff4402e974afd789eb5d86d2e12ec6df9c84b99b23656ea694a85f83bcd21
+Size (lua-5.4.4.tar.gz) = 360876 bytes
 SHA1 (patch-Makefile) = 22523bc60fe8d004f3bfd59396cfc6e43f645a75
 SHA1 (patch-src_Makefile) = ab840599eea7303a015a9d7a303e99cb162d81bd
