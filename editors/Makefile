@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.219 2022/01/28 11:51:19 micha Exp $
+# $NetBSD: Makefile,v 1.220 2022/03/06 12:38:53 wiz Exp $
 #
 
 COMMENT=	Text and binary editors
 
 SUBDIR+=	OmegaT
+SUBDIR+=	PageEdit
 SUBDIR+=	Sigil
 SUBDIR+=	TeXmacs
 SUBDIR+=	abiword
