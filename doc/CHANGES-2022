@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1295 2022/03/06 07:51:24 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1296 2022/03/06 08:01:19 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1650,3 +1650,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/pidgin to 2.14.8 [nia 2022-03-06]
 	Updated lang/lua54 to 5.4.4 [nia 2022-03-06]
 	Updated parallel/lua-lanes to 3.16.0 [nia 2022-03-06]
+	Updated audio/schismtracker to 20220125 [nia 2022-03-06]
