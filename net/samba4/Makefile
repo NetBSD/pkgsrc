@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2022/01/31 13:45:12 taca Exp $
+# $NetBSD: Makefile,v 1.138 2022/03/07 21:40:37 thor Exp $
 
 # WARNING: DO NOT UPDATE WITHOUT RESOLVING THIS ISSUE:
 #
@@ -7,9 +7,7 @@
 #
 # Please do not update without testing on NetBSD 9.2!
 #
-# https://bugzilla.samba.org/show_bug.cgi?id=14727
-#
-DISTNAME=	samba-4.13.17
+DISTNAME=	samba-4.15.4
 CATEGORIES=	net
 MASTER_SITES=	https://download.samba.org/pub/samba/stable/
 
@@ -168,7 +166,6 @@ SUBST_SED.docbook+=	-e 's,http://docbook.sourceforge.net/release/xsl/current,${P
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing paths.
 SUBST_FILES.paths=	${WRKDIR}/adduser.sh ${WRKDIR}/deluser.sh
-SUBST_FILES.paths+=	source3/script/findsmb.in source4/heimdal_build/roken.h
 SUBST_STAGE.paths=	pre-configure
 SUBST_SED.paths+=	-e 's,@PERL@,${PERL5},g'
 SUBST_VARS.paths=	AWK CAT MKTEMP RM PWD_MKDB SH PERL PKG_SYSCONFBASE
@@ -217,7 +214,7 @@ REPLACE_PYTHON+=	source4/scripting/bin/*
 .endif
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-BUILDLINK_API_DEPENDS.ldb+=	ldb>=2.2.3
+BUILDLINK_API_DEPENDS.ldb+=	ldb>=2.4.2
 .include "../../databases/ldb/buildlink3.mk"
 .include "../../databases/lmdb/buildlink3.mk"
 .include "../../devel/cmocka/buildlink3.mk"
