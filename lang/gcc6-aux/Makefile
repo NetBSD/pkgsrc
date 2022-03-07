@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/11/06 09:33:37 nia Exp $
+# $NetBSD: Makefile,v 1.10 2022/03/07 16:41:30 nia Exp $
 
 PKGNAME=	gcc6-aux-${SNAPSHOT}
 PKGREVISION=	${MAIN_PR}
@@ -16,6 +16,7 @@ LANGS=		c ada c++
 USE_TOOLS+=	gmake sed:run perl makeinfo bzip2 patch pod2man tar
 APPLY_DIFFS=	core ada cxx
 
+MKPIE_SUPPORTED=	no
 RELRO_SUPPORTED=	no
 
 .include "Makefile.version"
