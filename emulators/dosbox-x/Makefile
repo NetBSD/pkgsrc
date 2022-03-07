@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2022/03/04 07:41:14 nia Exp $
+# $NetBSD: Makefile,v 1.34 2022/03/07 16:37:51 nia Exp $
 
 DISTNAME=	dosbox-x-0.83.23
 CATEGORIES=	emulators
@@ -14,6 +14,8 @@ WRKSRC=		${WRKDIR}/dosbox-x-${GITHUB_TAG}
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf autoreconf automake pkg-config
 USE_LANGUAGES=	c c++
+
+TOOL_DEPENDS+=	dos2unix-[0-9]*:../../converters/dos2unix
 
 # C++11
 GCC_REQD+=	4.7
@@ -55,6 +57,9 @@ CHECK_PORTABILITY_SKIP+=	Makefile.in Makefile.am
 
 BUILDLINK_TRANSFORM+=	rm:-Wno-int-to-void-pointer-cast
 BUILDLINK_TRANSFORM+=	rm:-Wno-address-of-packed-member
+
+post-extract:
+	dos2unix ${WRKSRC}/include/iconvpp.hpp
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fi
