@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1323 2022/03/07 20:03:34 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1324 2022/03/07 20:38:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1684,3 +1684,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/py-peewee to 3.14.10 [adam 2022-03-07]
 	Updated devel/cmake to 3.22.3 [adam 2022-03-07]
 	Updated devel/py-ddt to 1.4.4 [adam 2022-03-07]
+	Added lang/guile18 [wiz 2022-03-07]
+	Removed lang/guile successor lang/guile18 [wiz 2022-03-07]
