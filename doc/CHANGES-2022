@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1329 2022/03/07 22:59:29 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1330 2022/03/07 23:01:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1691,3 +1691,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated news/sfeed to 1.3 [leot 2022-03-07]
 	Updated net/samba4 to 4.15.5 [thor 2022-03-07]
 	Updated lang/guile20 to 2.0.14nb5 [wiz 2022-03-07]
+	Updated lang/guile18 to 1.8.8nb12 [wiz 2022-03-07]
