@@ -1,4 +1,4 @@
-# $NetBSD: check-relro.mk,v 1.5 2021/02/01 16:03:49 tpaul Exp $
+# $NetBSD: check-relro.mk,v 1.6 2022/03/07 16:53:08 nia Exp $
 #
 # This file verifies that RELRO (read-only relocations) was applied
 # accordingly at build-time.
@@ -30,7 +30,8 @@ _USER_VARS.check-relro=		CHECK_RELRO
 _PKG_VARS.check-relro=		CHECK_RELRO_SUPPORTED
 
 .if ${_PKGSRC_USE_RELRO:Uno} != "no" && \
-    ${PKG_DEVELOPER:Uno} != "no"
+    ${PKG_DEVELOPER:Uno} != "no" && \
+    empty(EMUL_PLATFORMS)
 CHECK_RELRO?=			yes
 .else
 CHECK_RELRO?=			no
