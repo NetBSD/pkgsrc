@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:59:17 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/03/07 10:27:08 jaapb Exp $
 
-BLAKE2s (opam-file-format-2.1.0.tar.gz) = ed66d5a1db3302b2c125a129f8a0d74c476038f7977701e6ebd81232649872ee
-SHA512 (opam-file-format-2.1.0.tar.gz) = b948545497de0386457a9b5772924572249e38164aa49d5ab2ac9442d1231a56a3b8132a95197d74cbbe34336a7edc04eaca351a8763c4a009a512085ca0ab25
-Size (opam-file-format-2.1.0.tar.gz) = 23233 bytes
+BLAKE2s (opam-file-format-2.1.3.tar.gz) = 44fe54ca7fb44f6343a99cd85bbbcf04f79c6abcad074752dacf732d04fc1147
+SHA512 (opam-file-format-2.1.3.tar.gz) = 90da53a2b19eb97c17ec71d3ac00969863ef3458f421189413b3ec2d96f8822da9fba51ef95f55064bbb17f1729104a1fe4fed1d61d5006568b53165f0c6931f
+Size (opam-file-format-2.1.3.tar.gz) = 36255 bytes
