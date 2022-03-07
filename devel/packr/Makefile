@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/02/13 19:24:29 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2022/03/07 09:14:03 bsiegert Exp $
 
 DISTNAME=	packr-2.8.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gobuffalo/}
