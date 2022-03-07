@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.7 2022/03/03 16:06:16 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.8 2022/03/07 10:44:22 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.17.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -141,7 +141,7 @@ CARGO_CRATE_DEPENDS+=	tracing-log-0.1.2
 CARGO_CRATE_DEPENDS+=	tracing-subscriber-0.3.8
 CARGO_CRATE_DEPENDS+=	tracing-tree-0.2.0
 CARGO_CRATE_DEPENDS+=	typed-arena-2.0.1
-CARGO_CRATE_DEPENDS+=	ungrammar-1.15.0
+CARGO_CRATE_DEPENDS+=	ungrammar-1.16.1
 CARGO_CRATE_DEPENDS+=	unicase-2.6.0
 CARGO_CRATE_DEPENDS+=	unicode-bidi-0.3.7
 CARGO_CRATE_DEPENDS+=	unicode-normalization-0.1.19
