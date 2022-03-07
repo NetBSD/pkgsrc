@@ -1,0 +1,5 @@
+bin/guild @PREFIX@/guile/1.8/bin/guild
+bin/guile @PREFIX@/guile/1.8/bin/guile
+bin/guile-config @PREFIX@/guile/1.8/bin/guile-config
+bin/guile-snarf @PREFIX@/guile/1.8/bin/guile-snarf
+bin/guile-tools @PREFIX@/guile/1.8/bin/guile-tools
