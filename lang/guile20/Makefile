@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2021/12/08 16:02:16 adam Exp $
+# $NetBSD: Makefile,v 1.18 2022/03/07 22:59:18 wiz Exp $
 
 DISTNAME=	guile-2.0.14
 PKGNAME=	${DISTNAME:S/guile/guile20/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.gnu.org/gnu/guile/
 
@@ -12,8 +12,8 @@ COMMENT=	Official extension language for the GNU operating system (2.0 branch)
 LICENSE=	gnu-lgpl-v3
 
 # Currently, 2.0 is primary.
-#GUILE_SUBDIR=	guile/2.0
-GUILE_SUBDIR=	# empty
+GUILE_SUBDIR=	guile/2.0
+#GUILE_SUBDIR=	# empty
 
 # guile does not like the --build and --host triplets on NetBSD
 HAS_CONFIGURE=		yes
