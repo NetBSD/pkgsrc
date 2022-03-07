@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2021/12/08 16:01:53 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2022/03/07 22:59:49 wiz Exp $
 
 BUILDLINK_TREE+=	guile-gnome-platform
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	guile-gnome-platform
 GUILE_GNOME_PLATFORM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.guile-gnome-platform+=	guile-gnome-platform>=2.16.1nb10
-BUILDLINK_ABI_DEPENDS.guile-gnome-platform?=	guile-gnome-platform>=2.16.5nb11
+BUILDLINK_ABI_DEPENDS.guile-gnome-platform?=	guile-gnome-platform>=2.16.5nb13
 BUILDLINK_PKGSRCDIR.guile-gnome-platform?=	../../devel/guile-gnome
 
 .include "../../devel/g-wrap/buildlink3.mk"
