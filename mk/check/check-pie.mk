@@ -1,4 +1,4 @@
-# $NetBSD: check-pie.mk,v 1.2 2022/02/14 00:31:18 pho Exp $
+# $NetBSD: check-pie.mk,v 1.3 2022/03/07 16:53:08 nia Exp $
 #
 # This file verifies that MKPIE (position-independent executables) was applied
 # accordingly at build-time.
@@ -29,7 +29,9 @@ _VARGROUPS+=		check-pie
 _USER_VARS.check-pie=	CHECK_PIE
 _PKG_VARS.check-pie=	CHECK_PIE_SUPPORTED
 
-.if ${_PKGSRC_MKPIE:Uno} != "no" && ${PKG_DEVELOPER:Uno:tl} != "no"
+.if ${_PKGSRC_MKPIE:Uno} != "no" && \
+    ${PKG_DEVELOPER:Uno:tl} != "no" && \
+    empty(EMUL_PLATFORMS)
 CHECK_PIE?=		yes
 .else
 CHECK_PIE?=		no
