@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.16 2021/07/12 22:30:44 nia Exp $
+# $NetBSD: options.mk,v 1.17 2022/03/07 21:40:37 thor Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.samba4
-PKG_SUPPORTED_OPTIONS=	ads avahi fam ldap pam winbind # cups # cups option is broken for me.
+PKG_SUPPORTED_OPTIONS=	ads avahi fam ldap pam winbind cups # cups option is broken for me.
 PKG_SUGGESTED_OPTIONS=	avahi ldap pam winbind
 
 .include "../../mk/bsd.fast.prefs.mk"
