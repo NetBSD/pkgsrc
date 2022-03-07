@@ -1,4 +1,4 @@
-$NetBSD: patch-src_dos_dos__programs.cpp,v 1.3 2022/03/04 07:41:14 nia Exp $
+$NetBSD: patch-src_dos_dos__programs.cpp,v 1.4 2022/03/07 16:37:52 nia Exp $
 
 dos_programs.cpp: In member function 'bool AUTOTYPE::ReadDoubleArg(const string&, const char*, const double&, const double&, const double&, double&)':
 dos_programs.cpp:5556:12: error: expected unqualified-id before '(' token
