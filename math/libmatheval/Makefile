@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2022/03/05 19:55:53 gdt Exp $
+# $NetBSD: Makefile,v 1.26 2022/03/07 20:36:51 wiz Exp $
 
 DISTNAME=		libmatheval-1.1.11
+PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_GNU:=libmatheval/}
 
@@ -23,6 +24,6 @@ CONFIGURE_ENV+=		ac_cv_lib_lex="none needed"
 # guile 2.0 fails with "matheval.c:33:2: error: #error Neither scm_num2dbl() nor SCM_NUM2DBL available"
 # guile 2.2 fails
 # Upstream has no bugtracker; reported via bug mailinglist 20220305.
-.include "../../lang/guile/buildlink3.mk"
+.include "../../lang/guile18/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

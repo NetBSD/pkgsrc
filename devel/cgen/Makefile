@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2019/11/03 10:39:08 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2022/03/07 20:36:50 wiz Exp $
 
 DISTNAME=	cgen-20131001
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://sourceware.org/pub/cgen/snapshots/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,7 +11,7 @@ HOMEPAGE=	https://sourceware.org/cgen/
 COMMENT=	CGEN, the Cpu tools GENerator
 LICENSE=	gnu-gpl-v3 # with Red Hat exception
 
-DEPENDS+=	guile-[0-9]*:../../lang/guile
+DEPENDS+=	guile18-[0-9]*:../../lang/guile18
 
 WRKSRC=		${WRKDIR}/src
 
