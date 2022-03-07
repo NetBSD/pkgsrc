@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1317 2022/03/07 08:40:19 leot Exp $
+$NetBSD: CHANGES-2022,v 1.1318 2022/03/07 09:14:39 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1675,3 +1675,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-lexicon to 3.9.4 [adam 2022-03-06]
 	Updated security/py-josepy to 1.12.0 [adam 2022-03-06]
 	Updated chat/eggdrop to 1.9.2 [nia 2022-03-07]
+	Updated lang/go117 to 1.17.8 [bsiegert 2022-03-07]
