@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2022/03/07 21:40:37 thor Exp $
+# $NetBSD: Makefile,v 1.139 2022/03/07 22:45:49 thor Exp $
 
 # WARNING: DO NOT UPDATE WITHOUT RESOLVING THIS ISSUE:
 #
@@ -7,7 +7,7 @@
 #
 # Please do not update without testing on NetBSD 9.2!
 #
-DISTNAME=	samba-4.15.4
+DISTNAME=	samba-4.15.5
 CATEGORIES=	net
 MASTER_SITES=	https://download.samba.org/pub/samba/stable/
 
