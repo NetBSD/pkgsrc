@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2022/02/13 19:24:33 bsiegert Exp $
+# $NetBSD: Makefile,v 1.37 2022/03/07 09:14:05 bsiegert Exp $
 
 DISTNAME=	goreturns-0.0.20180301
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	35
+PKGREVISION=	36
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sqs/}
 GITHUB_PROJECT=	goreturns
