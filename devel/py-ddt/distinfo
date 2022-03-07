@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:18:22 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/03/07 20:03:14 adam Exp $
 
-BLAKE2s (ddt-1.4.3.tar.gz) = 08182a7669cb6eb3e25f8e2a306d17228409d32d3acb6a6948179161a8bd7fd6
-SHA512 (ddt-1.4.3.tar.gz) = 223afef7afa9a2eb5fa589e9bb9518b4e3248b37cba8568c38b2f6031c524a66653fd1f0ff03dbc087276f595fefef2bb8cbbc2c7b282c41a3cb6beb69353eb7
-Size (ddt-1.4.3.tar.gz) = 11498 bytes
+BLAKE2s (ddt-1.4.4.tar.gz) = 916693768cb2dadcb749b62eb082f1a42dd38fea05a71782aee3d446c7c3c98d
+SHA512 (ddt-1.4.4.tar.gz) = 506f5d9f1c11a57dc1a93a16f026fb0735654400259e297a96b4163348c3ef1ce66b6f82a46effe507cc66e07819415ffee028e3c96baf5fbbd9d26b14b96abc
+Size (ddt-1.4.4.tar.gz) = 12176 bytes
