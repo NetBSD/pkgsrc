@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21576 2022/03/06 14:23:05 taca Exp $
+$NetBSD: TODO,v 1.21577 2022/03/07 10:53:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -615,7 +615,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dhcpcd-icons-0.7.8
 	o dhcpcd-qt-0.7.8
 	o diction-1.14
-	o digikam-7.3
+	o digikam-7.6
 	o dikt-2s1
 	o direnv-2.28.0
 	o direvent-5.2
@@ -1859,6 +1859,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o xrmap-flags-2.9
 	o xrmap-hymns-1.4
 	o xsc-1.6
+	o xscreensaver-6.03
 	o xteddy-2.2
 	o xtermcontrol-3.7
 	o xtrace-1.4.0
