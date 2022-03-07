@@ -1,4 +1,4 @@
-$NetBSD: patch-modules_system_base_target.scm,v 1.2 2020/05/14 15:36:40 nikita Exp $
+$NetBSD: patch-module_system_base_target.scm,v 1.1 2022/03/07 23:03:14 wiz Exp $
 
 Crude patch to make target.scm conform to vendor field of gnu-tripplet
 being optional.
