@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.135 2022/03/05 19:53:22 gdt Exp $
+# $NetBSD: Makefile,v 1.136 2022/03/07 20:36:51 wiz Exp $
 
 DISTNAME=	lilypond-2.18.2
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	print
 MASTER_SITES=	http://download.linuxaudio.org/lilypond/sources/v2.18/
 
@@ -68,7 +68,7 @@ BUILDLINK_API_DEPENDS.flex+=	flex>=2.6.0
 # maintained versions of guile are not usable, but it does not seem
 # likely that will be fixed.  See e.g.
 #   https://gitlab.com/lilypond/lilypond/-/issues/6163
-.include "../../lang/guile/buildlink3.mk"
+.include "../../lang/guile18/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/bsd.pkg.mk"

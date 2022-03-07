@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.149 2022/03/06 13:09:53 gdt Exp $
+# $NetBSD: Makefile,v 1.150 2022/03/07 20:36:50 wiz Exp $
 #
 # changelog at http://www.texmacs.org/tmweb/about/changes.en.html
 
 DISTNAME=		TeXmacs-1.99.13-src
 PKGNAME=		${DISTNAME:S/-src//}
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.texmacs.org/pub/TeXmacs/tmftp/source/
 MASTER_SITES+=		http://www.texmacs.org/Download/ftp/tmftp/source/
@@ -58,7 +58,7 @@ post-install:
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 # Building with guile20 almost succeeds.
 # Building with guile22 fails (apparent use of withdrawn interfaces).
-.include "../../lang/guile/buildlink3.mk"
+.include "../../lang/guile18/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../print/ghostscript/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
