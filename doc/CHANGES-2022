@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1315 2022/03/06 20:18:54 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1316 2022/03/07 07:29:07 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1674,3 +1674,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-ZopeTestrunner to 5.4.0 [adam 2022-03-06]
 	Updated net/py-lexicon to 3.9.4 [adam 2022-03-06]
 	Updated security/py-josepy to 1.12.0 [adam 2022-03-06]
+	Updated chat/eggdrop to 1.9.2 [nia 2022-03-07]
