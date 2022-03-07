@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.22 2021/10/26 10:05:13 nia Exp $
+$NetBSD: distinfo,v 1.23 2022/03/07 07:28:45 nia Exp $
 
-BLAKE2s (eggdrop-1.9.1.tar.gz) = da623165f322e70aac58ed3275670959a52ec4267ba6dc6524a22c8d9053a00b
-SHA512 (eggdrop-1.9.1.tar.gz) = d8907d265f7e22f3bcd3e28b256c5788d5959ad11cc1425d59eb4411ebbc172fe8d90c31fd9f033369ab80cd29a36a5856f6bd32bc6c9cdfedea1d6509ea7f3b
-Size (eggdrop-1.9.1.tar.gz) = 2271120 bytes
+BLAKE2s (eggdrop-1.9.2.tar.gz) = 2c5a37d649f5550a68f2047ffb2fcf62a399901c200415b6fecae0bfca37127c
+SHA512 (eggdrop-1.9.2.tar.gz) = 67c8053a79ab5c4c418164e4e12f89a6e111b06b4e6dfdc69c52913b2f3b9a58b065a7601165112071c9ca2a778269aeb95c749a9da787c1932e6471a23146ce
+Size (eggdrop-1.9.2.tar.gz) = 2296300 bytes
 SHA1 (patch-Makefile.in) = c2c51e1a57889feab043fad4c4d17850fe11449e
 SHA1 (patch-src_eggdrop.h) = de7a4ee2f51a325542e22ebdf69cc75295b0b8de

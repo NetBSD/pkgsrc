@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.41 2021/08/10 11:02:04 nia Exp $
+# $NetBSD: Makefile,v 1.42 2022/03/07 07:28:45 nia Exp $
 
-DISTNAME=	eggdrop-1.9.1
+DISTNAME=	eggdrop-1.9.2
 CATEGORIES=	chat
 MASTER_SITES=	https://ftp.eggheads.org/pub/eggdrop/source/${PKGVERSION_NOREV:R}/
 
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.eggheads.org/
 COMMENT=	IRC robot with TCL scripting and multi-channel ability
 LICENSE=	gnu-gpl-v2

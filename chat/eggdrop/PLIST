@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2021/08/10 11:02:04 nia Exp $
+@comment $NetBSD: PLIST,v 1.18 2022/03/07 07:28:45 nia Exp $
 bin/eggdrop
 lib/eggdrop/assoc.so
 lib/eggdrop/blowfish.so
@@ -101,12 +101,14 @@ share/doc/eggdrop/html/installAndSetup/faq.html
 share/doc/eggdrop/html/installAndSetup/index.html
 share/doc/eggdrop/html/installAndSetup/install.html
 share/doc/eggdrop/html/installAndSetup/readme.html
+share/doc/eggdrop/html/installAndSetup/upgrading.html
 share/doc/eggdrop/html/mainDocs/about.html
 share/doc/eggdrop/html/mainDocs/bans.html
 share/doc/eggdrop/html/mainDocs/botnet.html
 share/doc/eggdrop/html/mainDocs/features.html
 share/doc/eggdrop/html/mainDocs/index.html
 share/doc/eggdrop/html/mainDocs/ipv6.html
+share/doc/eggdrop/html/mainDocs/ircv3.html
 share/doc/eggdrop/html/mainDocs/partyline.html
 share/doc/eggdrop/html/mainDocs/patch.html
 share/doc/eggdrop/html/mainDocs/pbkdf2.html
