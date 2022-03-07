@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2022/02/15 22:33:03 wiz Exp $
+# $NetBSD: Makefile.common,v 1.25 2022/03/07 16:40:36 nia Exp $
 #
 # used by emulators/suse131_alsa/Makefile
 # used by emulators/suse131_aspell/Makefile
@@ -68,6 +68,9 @@ ONLY_FOR_PLATFORM+=	NetBSD-6.99*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-[7-9]*-x86_64
 ONLY_FOR_PLATFORM+=	FreeBSD-1[0-9]*-x86_64
 
+CHECK_PIE_SUPPORTED=	no
+CHECK_RELRO_SUPPORTED=	no
+
 .include "../../mk/bsd.prefs.mk"
 
 # _SUSE_ARCH.* is a table of ${EMUL_ARCH} to SuSE architectures.
@@ -120,9 +123,6 @@ FILES_SUBST+=		LINUX_BASE=${LINUX_BASE:Q}
 LINUX_LIBSUBDIR?=	lib
 PLIST_SUBST+=		LINUX_LIBSUBDIR=${LINUX_LIBSUBDIR:Q}
 FILES_SUBST+=		LINUX_LIBSUBDIR=${LINUX_LIBSUBDIR:Q}
-
-MKPIE_SUPPORTED=	no
-CHECK_PIE_SUPPORTED=	no
 
 # Include an "override" SuSE-specific and architecture-specific
 # Makefile fragment if it exists.
