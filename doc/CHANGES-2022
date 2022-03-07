@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1320 2022/03/07 10:46:31 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1321 2022/03/07 12:21:23 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1679,3 +1679,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/ocaml-opam-file-format to 2.1.3 [jaapb 2022-03-07]
 	Updated lang/rust-analyzer to 0.0.2022.03.07 [adam 2022-03-07]
 	Updated devel/py-zope.testing to 4.10 [adam 2022-03-07]
+	Updated textproc/py-prettytable to 3.2.0 [fcambus 2022-03-07]
