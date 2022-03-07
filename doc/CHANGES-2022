@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1316 2022/03/07 07:29:07 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1317 2022/03/07 08:40:19 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1629,7 +1629,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/p5-HTTP-Daemon to 6.14 [wen 2022-03-04]
 	Updated misc/libreoffice to 7.3.1.3 [ryoon 2022-03-04]
 	Updated security/xmlsec1 to 1.2.33 [ryoon 2022-03-04]
-	Updated sysutils/xenserver415 to 4.15.2 [bouyer 2022-03-04]
+	Updated sysutils/xenkernel415 to 4.15.2 [bouyer 2022-03-04]
 	Updated sysutils/xentools415 to 4.15.2 [bouyer 2022-03-04]
 	Updated textproc/expat to 2.4.7 [wiz 2022-03-05]
 	Updated chat/quassel to 0.14.0 [nia 2022-03-05]
