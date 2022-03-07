@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2018/10/11 09:46:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/03/07 18:31:30 adam Exp $
 include/uv.h
 include/uv/aix.h
-include/uv/android-ifaddrs.h
 include/uv/bsd.h
 include/uv/darwin.h
 include/uv/errno.h
