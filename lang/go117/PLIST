@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/02/12 20:14:01 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/03/07 08:44:52 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go117/AUTHORS
@@ -4237,6 +4237,7 @@ go117/src/crypto/x509/internal/macos/security.go
 go117/src/crypto/x509/internal/macos/security.s
 go117/src/crypto/x509/name_constraints_test.go
 go117/src/crypto/x509/parser.go
+go117/src/crypto/x509/parser_test.go
 go117/src/crypto/x509/pem_decrypt.go
 go117/src/crypto/x509/pem_decrypt_test.go
 go117/src/crypto/x509/pkcs1.go
@@ -10043,6 +10044,7 @@ go117/test/fixedbugs/issue5089.go
 go117/test/fixedbugs/issue5105.dir/a.go
 go117/test/fixedbugs/issue5105.dir/b.go
 go117/test/fixedbugs/issue5105.go
+go117/test/fixedbugs/issue51101.go
 go117/test/fixedbugs/issue5125.dir/bug.go
 go117/test/fixedbugs/issue5125.dir/main.go
 go117/test/fixedbugs/issue5125.go
