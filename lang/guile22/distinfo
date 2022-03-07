@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:51:38 nia Exp $
+$NetBSD: distinfo,v 1.15 2022/03/07 23:03:14 wiz Exp $
 
 BLAKE2s (guile-2.2.7.tar.gz) = 3f9c16bba807ed79fff123d177370290e2f7b8a16f9e6876a2e10a52a7906576
 SHA512 (guile-2.2.7.tar.gz) = ad11885ffeb7655ef6c8543e67233992dc37bdcf91ed82188e6a144169c6b7d4e31cf7a6d01509c573d00904cb002719b851f71cdf1359a86de401daf613d773
@@ -7,4 +7,4 @@ SHA1 (patch-build-aux_config.rpath) = d6287edcf49f357d57ccc91c7e3b81862a2515c3
 SHA1 (patch-config.rpath) = 0ca52a58694fd2fad678ebebfb5fb3a7f2ec54dc
 SHA1 (patch-lib_Makefile.in) = ae3428997a653d89cef9bd51f52b57b64431b753
 SHA1 (patch-libguile_loader.c) = 32b012d095c343995f93d0c8160411c4b0cfbee1
-SHA1 (patch-modules_system_base_target.scm) = 5c7f66f71e27186bdbc4cba7233829c4298962fe
+SHA1 (patch-module_system_base_target.scm) = 5c7f66f71e27186bdbc4cba7233829c4298962fe
