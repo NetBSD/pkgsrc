@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/01/09 00:27:57 tnn Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/03/08 08:57:04 wiz Exp $
 include/va/va.h
 include/va/va_backend.h
 include/va/va_backend_prot.h
@@ -14,6 +14,7 @@ include/va/va_dricommon.h
 include/va/va_drm.h
 include/va/va_drmcommon.h
 include/va/va_egl.h
+include/va/va_enc_av1.h
 include/va/va_enc_h264.h
 include/va/va_enc_hevc.h
 include/va/va_enc_jpeg.h
