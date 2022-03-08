@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1337 2022/03/08 08:33:11 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1338 2022/03/08 08:37:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1699,3 +1699,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/ImageMagick to 7.1.0.27 [wiz 2022-03-08]
 	Updated www/curl to 7.82.0 [wiz 2022-03-08]
 	Updated devel/gopls to 0.8.0 [wiz 2022-03-08]
+	Updated net/wget to 1.21.3 [wiz 2022-03-08]
