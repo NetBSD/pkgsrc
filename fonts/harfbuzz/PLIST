@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2022/02/16 22:32:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.55 2022/03/08 09:04:07 wiz Exp $
 bin/hb-ot-shape-closure
 bin/hb-shape
 bin/hb-subset
@@ -42,13 +42,13 @@ lib/cmake/harfbuzz/harfbuzz-config.cmake
 ${PLIST.introspection}lib/girepository-1.0/HarfBuzz-0.0.typelib
 lib/libharfbuzz-gobject.so
 lib/libharfbuzz-gobject.so.0
-lib/libharfbuzz-gobject.so.0.30400.0
+lib/libharfbuzz-gobject.so.0.40000.0
 lib/libharfbuzz-subset.so
 lib/libharfbuzz-subset.so.0
-lib/libharfbuzz-subset.so.0.30400.0
+lib/libharfbuzz-subset.so.0.40000.0
 lib/libharfbuzz.so
 lib/libharfbuzz.so.0
-lib/libharfbuzz.so.0.30400.0
+lib/libharfbuzz.so.0.40000.0
 lib/pkgconfig/harfbuzz-gobject.pc
 lib/pkgconfig/harfbuzz-subset.pc
 lib/pkgconfig/harfbuzz.pc
@@ -81,6 +81,7 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-common.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-coretext.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-deprecated.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-directwrite.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-draw.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-face.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-font.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ft.html
