@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1349 2022/03/08 10:09:32 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1350 2022/03/08 10:13:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1711,3 +1711,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/texlab to 3.3.2 [wiz 2022-03-08]
 	Updated games/hitori to 3.38.3 [prlw1 2022-03-08]
 	Updated print/poppler to 22.03.0 [wiz 2022-03-08]
+	Updated sysutils/felix to 0.4.2 [pin 2022-03-08]
