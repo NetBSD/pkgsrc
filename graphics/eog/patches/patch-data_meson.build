@@ -1,0 +1,49 @@
+$NetBSD: patch-data_meson.build,v 1.1 2022/03/08 09:12:03 prlw1 Exp $
+
+Fix build with meson >= 0.61
+commits:
+- 07b60839da44988b3ad9e6ebc78bde4f3b0e622b
+- 7aad17c1471792590af6f614e8fbc324f381cc1d
+
+--- data/meson.build.orig	2021-08-14 16:04:19.984650600 +0000
++++ data/meson.build
+@@ -14,30 +14,22 @@ resource_data = files(
+   'popup-menus.ui',
+ )
+ 
+-desktop = 'org.gnome.eog.desktop'
+-
+-desktop_in = configure_file(
+-  input: desktop + '.in.in',
+-  output: '@BASENAME@',
+-  configuration: {'VERSION': eog_version, 'icon': application_id },
+-)
+-
+ i18n.merge_file(
+-  desktop,
+-  type: 'desktop',
+-  input: desktop_in,
+-  output: desktop,
++  input: configure_file(
++    input: 'org.gnome.eog.desktop.in.in',
++    output: '@BASENAME@',
++    configuration: {'VERSION': eog_version, 'icon': application_id },
++  ),
++  output: '@BASENAME@',
+   po_dir: po_dir,
++  type: 'desktop',
+   install: true,
+   install_dir: eog_datadir / 'applications',
+ )
+ 
+-appdata = 'eog.appdata.xml'
+-
+ i18n.merge_file(
+-  appdata,
+-  input: appdata + '.in',
+-  output: appdata,
++  input: 'eog.appdata.xml.in',
++  output: '@BASENAME@',
+   po_dir: po_dir,
+   install: true,
+   install_dir: eog_datadir / 'metainfo',
