@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.11 2022/01/14 14:59:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/03/08 13:50:23 gdt Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/03/08 13:50:23 gdt Exp $
 bin/chirpw
 bin/rpttool
 ${PYSITELIB}/${EGG_INFODIR}
@@ -281,6 +282,9 @@ ${PYSITELIB}/chirp/drivers/kguv8dplus.pyo
 ${PYSITELIB}/chirp/drivers/kguv8e.py
 ${PYSITELIB}/chirp/drivers/kguv8e.pyc
 ${PYSITELIB}/chirp/drivers/kguv8e.pyo
+${PYSITELIB}/chirp/drivers/kguv920pa.py
+${PYSITELIB}/chirp/drivers/kguv920pa.pyc
+${PYSITELIB}/chirp/drivers/kguv920pa.pyo
 ${PYSITELIB}/chirp/drivers/kguv9dplus.py
 ${PYSITELIB}/chirp/drivers/kguv9dplus.pyc
 ${PYSITELIB}/chirp/drivers/kguv9dplus.pyo
@@ -314,6 +318,9 @@ ${PYSITELIB}/chirp/drivers/radtel_t18.pyo
 ${PYSITELIB}/chirp/drivers/repeaterbook.py
 ${PYSITELIB}/chirp/drivers/repeaterbook.pyc
 ${PYSITELIB}/chirp/drivers/repeaterbook.pyo
+${PYSITELIB}/chirp/drivers/retevis_rb17p.py
+${PYSITELIB}/chirp/drivers/retevis_rb17p.pyc
+${PYSITELIB}/chirp/drivers/retevis_rb17p.pyo
 ${PYSITELIB}/chirp/drivers/retevis_rt1.py
 ${PYSITELIB}/chirp/drivers/retevis_rt1.pyc
 ${PYSITELIB}/chirp/drivers/retevis_rt1.pyo
@@ -350,6 +357,9 @@ ${PYSITELIB}/chirp/drivers/tdxone_tdq8a.pyo
 ${PYSITELIB}/chirp/drivers/template.py
 ${PYSITELIB}/chirp/drivers/template.pyc
 ${PYSITELIB}/chirp/drivers/template.pyo
+${PYSITELIB}/chirp/drivers/tg_uv2p.py
+${PYSITELIB}/chirp/drivers/tg_uv2p.pyc
+${PYSITELIB}/chirp/drivers/tg_uv2p.pyo
 ${PYSITELIB}/chirp/drivers/th350.py
 ${PYSITELIB}/chirp/drivers/th350.pyc
 ${PYSITELIB}/chirp/drivers/th350.pyo
