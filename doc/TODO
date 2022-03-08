@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21582 2022/03/08 08:33:11 wiz Exp $
+$NetBSD: TODO,v 1.21583 2022/03/08 08:37:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1801,7 +1801,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wcalc-2.4
 	o wcslib-7.6
 	o websvn-2.6.0
-	o wget-1.21.3
 	o wgetpaste-2.30
 	o whowatch-1.8.5
 	o widelands-1.0
