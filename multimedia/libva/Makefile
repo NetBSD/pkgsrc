@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2022/01/09 00:27:57 tnn Exp $
+# $NetBSD: Makefile,v 1.25 2022/03/08 08:57:04 wiz Exp $
 
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
-DISTNAME=	libva-2.13.0
+DISTNAME=	libva-2.14.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=intel/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
