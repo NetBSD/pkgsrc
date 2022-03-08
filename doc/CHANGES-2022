@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1347 2022/03/08 09:25:26 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1348 2022/03/08 09:34:04 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1709,3 +1709,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/eog to 40.3 [prlw1 2022-03-08]
 	Updated net/filezilla to 3.58.0 [wiz 2022-03-08]
 	Updated print/texlab to 3.3.2 [wiz 2022-03-08]
+	Updated games/hitori to 3.38.3 [prlw1 2022-03-08]
