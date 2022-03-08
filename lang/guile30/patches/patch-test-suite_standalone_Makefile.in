@@ -1,0 +1,114 @@
+$NetBSD: patch-test-suite_standalone_Makefile.in,v 1.1 2022/03/08 00:09:30 wiz Exp $
+
+Disable PaX MPROTECT for some tests (needed due to its JIT).
+
+--- test-suite/standalone/Makefile.in.orig	2021-05-10 08:30:31.000000000 +0000
++++ test-suite/standalone/Makefile.in
+@@ -2353,86 +2353,107 @@ libtest-ffi.la: $(libtest_ffi_la_OBJECTS
+ test-conversion$(EXEEXT): $(test_conversion_OBJECTS) $(test_conversion_DEPENDENCIES) $(EXTRA_test_conversion_DEPENDENCIES) 
+ 	@rm -f test-conversion$(EXEEXT)
+ 	$(AM_V_CCLD)$(test_conversion_LINK) $(test_conversion_OBJECTS) $(test_conversion_LDADD) $(LIBS)
++	$(PAXCTL) +m .libs/test-conversion$(EXEEXT)
+ 
+ test-foreign-object-c$(EXEEXT): $(test_foreign_object_c_OBJECTS) $(test_foreign_object_c_DEPENDENCIES) $(EXTRA_test_foreign_object_c_DEPENDENCIES) 
+ 	@rm -f test-foreign-object-c$(EXEEXT)
+ 	$(AM_V_CCLD)$(test_foreign_object_c_LINK) $(test_foreign_object_c_OBJECTS) $(test_foreign_object_c_LDADD) $(LIBS)
++	$(PAXCTL) +m .libs/test-foreign-object-c$(EXEEXT)
+ 
+ test-list$(EXEEXT): $(test_list_OBJECTS) $(test_list_DEPENDENCIES) $(EXTRA_test_list_DEPENDENCIES) 
+ 	@rm -f test-list$(EXEEXT)
+ 	$(AM_V_CCLD)$(test_list_LINK) $(test_list_OBJECTS) $(test_list_LDADD) $(LIBS)
++	$(PAXCTL) +m .libs/test-list$(EXEEXT)
+ 
+ test-loose-ends$(EXEEXT): $(test_loose_ends_OBJECTS) $(test_loose_ends_DEPENDENCIES) $(EXTRA_test_loose_ends_DEPENDENCIES) 
+ 	@rm -f test-loose-ends$(EXEEXT)
+ 	$(AM_V_CCLD)$(test_loose_ends_LINK) $(test_loose_ends_OBJECTS) $(test_loose_ends_LDADD) $(LIBS)
++	$(PAXCTL) +m .libs/test-loose-ends$(EXEEXT)
+ 
+ test-num2integral$(EXEEXT): $(test_num2integral_OBJECTS) $(test_num2integral_DEPENDENCIES) $(EXTRA_test_num2integral_DEPENDENCIES) 
+ 	@rm -f test-num2integral$(EXEEXT)
+ 	$(AM_V_CCLD)$(test_num2integral_LINK) $(test_num2integral_OBJECTS) $(test_num2integral_LDADD) $(LIBS)
++	$(PAXCTL) +m .libs/test-num2integral$(EXEEXT)
+ 
+ test-pthread-create$(EXEEXT): $(test_pthread_create_OBJECTS) $(test_pthread_create_DEPENDENCIES) $(EXTRA_test_pthread_create_DEPENDENCIES) 
+ 	@rm -f test-pthread-create$(EXEEXT)
+ 	$(AM_V_CCLD)$(test_pthread_create_LINK) $(test_pthread_create_OBJECTS) $(test_pthread_create_LDADD) $(LIBS)
++	$(PAXCTL) +m .libs/test-pthread-create$(EXEEXT)
+ 
+ test-pthread-create-secondary$(EXEEXT): $(test_pthread_create_secondary_OBJECTS) $(test_pthread_create_secondary_DEPENDENCIES) $(EXTRA_test_pthread_create_secondary_DEPENDENCIES) 
+ 	@rm -f test-pthread-create-secondary$(EXEEXT)
+ 	$(AM_V_CCLD)$(test_pthread_create_secondary_LINK) $(test_pthread_create_secondary_OBJECTS) $(test_pthread_create_secondary_LDADD) $(LIBS)
++	$(PAXCTL) +m .libs/test-pthread-create-secondary$(EXEEXT)
+ 
+ test-round$(EXEEXT): $(test_round_OBJECTS) $(test_round_DEPENDENCIES) $(EXTRA_test_round_DEPENDENCIES) 
+ 	@rm -f test-round$(EXEEXT)
+ 	$(AM_V_CCLD)$(test_round_LINK) $(test_round_OBJECTS) $(test_round_LDADD) $(LIBS)
++	$(PAXCTL) +m .libs/test-round$(EXEEXT)
+ 
+ test-scm-c-bind-keyword-arguments$(EXEEXT): $(test_scm_c_bind_keyword_arguments_OBJECTS) $(test_scm_c_bind_keyword_arguments_DEPENDENCIES) $(EXTRA_test_scm_c_bind_keyword_arguments_DEPENDENCIES) 
+ 	@rm -f test-scm-c-bind-keyword-arguments$(EXEEXT)
+ 	$(AM_V_CCLD)$(test_scm_c_bind_keyword_arguments_LINK) $(test_scm_c_bind_keyword_arguments_OBJECTS) $(test_scm_c_bind_keyword_arguments_LDADD) $(LIBS)
++	$(PAXCTL) +m .libs/test-scm-c-bind-keyword-arguments$(EXEEXT)
+ 
+ test-scm-c-read$(EXEEXT): $(test_scm_c_read_OBJECTS) $(test_scm_c_read_DEPENDENCIES) $(EXTRA_test_scm_c_read_DEPENDENCIES) 
+ 	@rm -f test-scm-c-read$(EXEEXT)
+ 	$(AM_V_CCLD)$(test_scm_c_read_LINK) $(test_scm_c_read_OBJECTS) $(test_scm_c_read_LDADD) $(LIBS)
++	$(PAXCTL) +m .libs/test-scm-c-read$(EXEEXT)
+ 
+ test-scm-spawn-thread$(EXEEXT): $(test_scm_spawn_thread_OBJECTS) $(test_scm_spawn_thread_DEPENDENCIES) $(EXTRA_test_scm_spawn_thread_DEPENDENCIES) 
+ 	@rm -f test-scm-spawn-thread$(EXEEXT)
+ 	$(AM_V_CCLD)$(test_scm_spawn_thread_LINK) $(test_scm_spawn_thread_OBJECTS) $(test_scm_spawn_thread_LDADD) $(LIBS)
++	$(PAXCTL) +m .libs/test-scm-spawn-thread$(EXEEXT)
+ 
+ test-scm-take-locale-symbol$(EXEEXT): $(test_scm_take_locale_symbol_OBJECTS) $(test_scm_take_locale_symbol_DEPENDENCIES) $(EXTRA_test_scm_take_locale_symbol_DEPENDENCIES) 
+ 	@rm -f test-scm-take-locale-symbol$(EXEEXT)
+ 	$(AM_V_CCLD)$(test_scm_take_locale_symbol_LINK) $(test_scm_take_locale_symbol_OBJECTS) $(test_scm_take_locale_symbol_LDADD) $(LIBS)
++	$(PAXCTL) +m .libs/test-scm-take-locale-symbol$(EXEEXT)
+ 
+ test-scm-take-u8vector$(EXEEXT): $(test_scm_take_u8vector_OBJECTS) $(test_scm_take_u8vector_DEPENDENCIES) $(EXTRA_test_scm_take_u8vector_DEPENDENCIES) 
+ 	@rm -f test-scm-take-u8vector$(EXEEXT)
+ 	$(AM_V_CCLD)$(test_scm_take_u8vector_LINK) $(test_scm_take_u8vector_OBJECTS) $(test_scm_take_u8vector_LDADD) $(LIBS)
++	$(PAXCTL) +m .libs/test-scm-take-u8vector$(EXEEXT)
+ 
+ test-scm-to-latin1-string$(EXEEXT): $(test_scm_to_latin1_string_OBJECTS) $(test_scm_to_latin1_string_DEPENDENCIES) $(EXTRA_test_scm_to_latin1_string_DEPENDENCIES) 
+ 	@rm -f test-scm-to-latin1-string$(EXEEXT)
+ 	$(AM_V_CCLD)$(test_scm_to_latin1_string_LINK) $(test_scm_to_latin1_string_OBJECTS) $(test_scm_to_latin1_string_LDADD) $(LIBS)
++	$(PAXCTL) +m .libs/test-scm-to-latin1-string$(EXEEXT)
+ 
+ test-scm-values$(EXEEXT): $(test_scm_values_OBJECTS) $(test_scm_values_DEPENDENCIES) $(EXTRA_test_scm_values_DEPENDENCIES) 
+ 	@rm -f test-scm-values$(EXEEXT)
+ 	$(AM_V_CCLD)$(test_scm_values_LINK) $(test_scm_values_OBJECTS) $(test_scm_values_LDADD) $(LIBS)
++	$(PAXCTL) +m .libs/test-scm-values$(EXEEXT)
+ 
+ test-scm-with-guile$(EXEEXT): $(test_scm_with_guile_OBJECTS) $(test_scm_with_guile_DEPENDENCIES) $(EXTRA_test_scm_with_guile_DEPENDENCIES) 
+ 	@rm -f test-scm-with-guile$(EXEEXT)
+ 	$(AM_V_CCLD)$(test_scm_with_guile_LINK) $(test_scm_with_guile_OBJECTS) $(test_scm_with_guile_LDADD) $(LIBS)
++	$(PAXCTL) +m .libs/test-scm-with-guile$(EXEEXT)
+ 
+ test-smob-mark$(EXEEXT): $(test_smob_mark_OBJECTS) $(test_smob_mark_DEPENDENCIES) $(EXTRA_test_smob_mark_DEPENDENCIES) 
+ 	@rm -f test-smob-mark$(EXEEXT)
+ 	$(AM_V_CCLD)$(test_smob_mark_LINK) $(test_smob_mark_OBJECTS) $(test_smob_mark_LDADD) $(LIBS)
++	$(PAXCTL) +m .libs/test-smob-mark$(EXEEXT)
+ 
+ test-smob-mark-race$(EXEEXT): $(test_smob_mark_race_OBJECTS) $(test_smob_mark_race_DEPENDENCIES) $(EXTRA_test_smob_mark_race_DEPENDENCIES) 
+ 	@rm -f test-smob-mark-race$(EXEEXT)
+ 	$(AM_V_CCLD)$(test_smob_mark_race_LINK) $(test_smob_mark_race_OBJECTS) $(test_smob_mark_race_LDADD) $(LIBS)
++	$(PAXCTL) +m .libs/test-smob-mark-race$(EXEEXT)
+ 
+ test-srfi-4$(EXEEXT): $(test_srfi_4_OBJECTS) $(test_srfi_4_DEPENDENCIES) $(EXTRA_test_srfi_4_DEPENDENCIES) 
+ 	@rm -f test-srfi-4$(EXEEXT)
+ 	$(AM_V_CCLD)$(test_srfi_4_LINK) $(test_srfi_4_OBJECTS) $(test_srfi_4_LDADD) $(LIBS)
++	$(PAXCTL) +m .libs/test-srfi-4$(EXEEXT)
+ 
+ test-unwind$(EXEEXT): $(test_unwind_OBJECTS) $(test_unwind_DEPENDENCIES) $(EXTRA_test_unwind_DEPENDENCIES) 
+ 	@rm -f test-unwind$(EXEEXT)
+ 	$(AM_V_CCLD)$(test_unwind_LINK) $(test_unwind_OBJECTS) $(test_unwind_LDADD) $(LIBS)
++	$(PAXCTL) +m .libs/test-unwind$(EXEEXT)
+ 
+ test-with-guile-module$(EXEEXT): $(test_with_guile_module_OBJECTS) $(test_with_guile_module_DEPENDENCIES) $(EXTRA_test_with_guile_module_DEPENDENCIES) 
+ 	@rm -f test-with-guile-module$(EXEEXT)
+ 	$(AM_V_CCLD)$(test_with_guile_module_LINK) $(test_with_guile_module_OBJECTS) $(test_with_guile_module_LDADD) $(LIBS)
++	$(PAXCTL) +m .libs/test-with-guile-module$(EXEEXT)
+ 
+ mostlyclean-compile:
+ 	-rm -f *.$(OBJEXT)
