@@ -1,12 +1,12 @@
-$NetBSD: patch-dbus_dbus-sysdeps-util-unix.c,v 1.4 2017/11/23 14:43:23 wiz Exp $
+$NetBSD: patch-dbus_dbus-sysdeps-util-unix.c,v 1.5 2022/03/08 11:16:00 wiz Exp $
 
 add solaris specific console_user test
 
---- dbus/dbus-sysdeps-util-unix.c.orig	2017-10-30 12:26:18.000000000 +0000
+--- dbus/dbus-sysdeps-util-unix.c.orig	2022-02-23 14:39:11.000000000 +0000
 +++ dbus/dbus-sysdeps-util-unix.c
-@@ -51,6 +51,10 @@
- #include <dirent.h>
- #include <sys/un.h>
+@@ -56,6 +56,10 @@
+ #include <sys/prctl.h>
+ #endif
  
 +#if defined(__sun) && defined(__SVR4)
 +#include <pwd.h>
@@ -15,7 +15,7 @@ add solaris specific console_user test
  #ifdef HAVE_SYS_SYSLIMITS_H
  #include <sys/syslimits.h>
  #endif
-@@ -551,8 +555,31 @@ _dbus_user_at_console (const char *usern
+@@ -581,8 +585,31 @@ _dbus_user_at_console (const char *usern
  #ifdef DBUS_CONSOLE_AUTH_DIR
    DBusString u, f;
    dbus_bool_t result;
@@ -47,7 +47,7 @@ add solaris specific console_user test
    if (!_dbus_string_init (&f))
      {
        _DBUS_SET_OOM (error);
-@@ -577,6 +604,7 @@ _dbus_user_at_console (const char *usern
+@@ -607,6 +634,7 @@ _dbus_user_at_console (const char *usern
  
   out:
    _dbus_string_free (&f);
