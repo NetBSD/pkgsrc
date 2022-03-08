@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/01/13 13:20:04 pin Exp $
+# $NetBSD: Makefile,v 1.8 2022/03/08 10:14:36 pin Exp $
 
-DISTNAME=	spotify-player-0.5.2
+DISTNAME=	spotify-player-0.6.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aome510/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -24,7 +24,8 @@ CARGO_NO_DEFAULT_FEATURES=	YES
 .include "options.mk"
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/spotify_player ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/spotify_player \
+		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
