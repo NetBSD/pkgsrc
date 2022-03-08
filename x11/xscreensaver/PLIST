@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2022/02/17 15:46:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.54 2022/03/08 07:27:11 wiz Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-demo
@@ -178,6 +178,7 @@ libexec/xscreensaver/config/lcdscrub.xml
 libexec/xscreensaver/config/lockward.xml
 libexec/xscreensaver/config/loop.xml
 libexec/xscreensaver/config/m6502.xml
+libexec/xscreensaver/config/mapscroller.xml
 libexec/xscreensaver/config/marbling.xml
 libexec/xscreensaver/config/maze.xml
 libexec/xscreensaver/config/maze3d.xml
@@ -221,7 +222,7 @@ libexec/xscreensaver/config/quasicrystal.xml
 libexec/xscreensaver/config/queens.xml
 libexec/xscreensaver/config/raverhoop.xml
 libexec/xscreensaver/config/razzledazzle.xml
-libexec/xscreensaver/config/rd-bomb.xml
+libexec/xscreensaver/config/rdbomb.xml
 libexec/xscreensaver/config/ripples.xml
 libexec/xscreensaver/config/rocks.xml
 libexec/xscreensaver/config/romanboy.xml
@@ -246,6 +247,7 @@ libexec/xscreensaver/config/splodesic.xml
 libexec/xscreensaver/config/spotlight.xml
 libexec/xscreensaver/config/sproingies.xml
 libexec/xscreensaver/config/squiral.xml
+libexec/xscreensaver/config/squirtorus.xml
 libexec/xscreensaver/config/stairs.xml
 libexec/xscreensaver/config/starfish.xml
 libexec/xscreensaver/config/starwars.xml
@@ -384,6 +386,8 @@ libexec/xscreensaver/lcdscrub
 libexec/xscreensaver/lockward
 libexec/xscreensaver/loop
 libexec/xscreensaver/m6502
+libexec/xscreensaver/mapscroller
+libexec/xscreensaver/mapscroller.pl
 libexec/xscreensaver/marbling
 libexec/xscreensaver/maze
 libexec/xscreensaver/maze3d
@@ -427,7 +431,7 @@ libexec/xscreensaver/quasicrystal
 libexec/xscreensaver/queens
 libexec/xscreensaver/raverhoop
 libexec/xscreensaver/razzledazzle
-libexec/xscreensaver/rd-bomb
+libexec/xscreensaver/rdbomb
 libexec/xscreensaver/ripples
 libexec/xscreensaver/rocks
 libexec/xscreensaver/romanboy
@@ -452,6 +456,7 @@ libexec/xscreensaver/splodesic
 libexec/xscreensaver/spotlight
 libexec/xscreensaver/sproingies
 libexec/xscreensaver/squiral
+libexec/xscreensaver/squirtorus
 libexec/xscreensaver/stairs
 libexec/xscreensaver/starfish
 libexec/xscreensaver/starwars
@@ -638,6 +643,7 @@ man/man6/lavalite.6
 man/man6/lcdscrub.6
 man/man6/lockward.6
 man/man6/loop.6
+man/man6/mapscroller.6
 man/man6/marbling.6
 man/man6/maze.6
 man/man6/maze3d.6
@@ -680,7 +686,7 @@ man/man6/quasicrystal.6
 man/man6/queens.6
 man/man6/raverhoop.6
 man/man6/razzledazzle.6
-man/man6/rd-bomb.6
+man/man6/rdbomb.6
 man/man6/ripples.6
 man/man6/rocks.6
 man/man6/romanboy.6
@@ -705,6 +711,7 @@ man/man6/splodesic.6
 man/man6/spotlight.6
 man/man6/sproingies.6
 man/man6/squiral.6
+man/man6/squirtorus.6
 man/man6/stairs.6
 man/man6/starfish.6
 man/man6/starwars.6
@@ -758,28 +765,6 @@ share/fonts/xscreensaver/SpecialElite.ttf
 share/fonts/xscreensaver/clacon.ttf
 share/fonts/xscreensaver/gallant12x22.ttf
 share/fonts/xscreensaver/luximr.ttf
-share/locale/da/LC_MESSAGES/xscreensaver.mo
-share/locale/de/LC_MESSAGES/xscreensaver.mo
-share/locale/es/LC_MESSAGES/xscreensaver.mo
-share/locale/et/LC_MESSAGES/xscreensaver.mo
-share/locale/fi/LC_MESSAGES/xscreensaver.mo
-share/locale/fr/LC_MESSAGES/xscreensaver.mo
-share/locale/hu/LC_MESSAGES/xscreensaver.mo
-share/locale/it/LC_MESSAGES/xscreensaver.mo
-share/locale/ja/LC_MESSAGES/xscreensaver.mo
-share/locale/ko/LC_MESSAGES/xscreensaver.mo
-share/locale/nb/LC_MESSAGES/xscreensaver.mo
-share/locale/nl/LC_MESSAGES/xscreensaver.mo
-share/locale/pl/LC_MESSAGES/xscreensaver.mo
-share/locale/pt/LC_MESSAGES/xscreensaver.mo
-share/locale/pt_BR/LC_MESSAGES/xscreensaver.mo
-share/locale/ru/LC_MESSAGES/xscreensaver.mo
-share/locale/sk/LC_MESSAGES/xscreensaver.mo
-share/locale/sv/LC_MESSAGES/xscreensaver.mo
-share/locale/vi/LC_MESSAGES/xscreensaver.mo
-share/locale/wa/LC_MESSAGES/xscreensaver.mo
-share/locale/zh_CN/LC_MESSAGES/xscreensaver.mo
-share/locale/zh_TW/LC_MESSAGES/xscreensaver.mo
 share/pixmaps/xscreensaver.xpm
 share/xscreensaver/ui/screensaver-cmndln.png
 share/xscreensaver/ui/screensaver-colorselector.png

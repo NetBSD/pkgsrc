@@ -1,0 +1,14 @@
+$NetBSD: patch-configure,v 1.1 2022/03/08 07:27:11 wiz Exp $
+
+configure script is overzealous.
+
+--- configure.orig	2022-02-27 21:30:07.732273168 +0000
++++ configure
+@@ -21135,7 +21135,6 @@ elif test "$have_pam" = no ; then
+   if test -d /etc/pam.d -o -f /etc/pam.conf ; then
+     warn  "Your system seems to have PAM, but PAM is not being used."
+     warn2 "That is probably not going to work out well."
+-    CONF_STATUS=1
+   fi
+ fi
+ 
