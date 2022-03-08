@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.135 2022/02/18 22:58:05 wiz Exp $
+# $NetBSD: Makefile,v 1.136 2022/03/08 07:27:11 wiz Exp $
 
-DISTNAME=		xscreensaver-6.02
-PKGREVISION=		2
+DISTNAME=		xscreensaver-6.03
 CATEGORIES=		x11
 MASTER_SITES=		https://www.jwz.org/xscreensaver/
 DIST_SUBDIR=		xscreensaver
@@ -13,7 +12,7 @@ HOMEPAGE=		https://www.jwz.org/xscreensaver/
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c99
-USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
+USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
 
 CHECK_PORTABILITY_SKIP+=	OSX/fuzztest.sh
 CHECK_PORTABILITY_SKIP+=	OSX/installer.sh
@@ -52,6 +51,8 @@ BUILD_DEPENDS+=		bc-[0-9]*:../../math/bc
 INSTALL_MAKE_FLAGS=	install_prefix=${DESTDIR}
 
 INSTALLATION_DIRS=	share/doc/${PKGBASE}
+
+REPLACE_PERL+=	hacks/*.pl hacks/*/*.pl
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/README.pkgsrc ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
