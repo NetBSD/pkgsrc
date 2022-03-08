@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1356 2022/03/08 14:05:08 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.1357 2022/03/08 22:32:53 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1718,3 +1718,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/dbus to 1.14.0 [wiz 2022-03-08]
 	Updated ham/chirp to 20220308 [gdt 2022-03-08]
 	Updated devel/mold to 1.1.1 [fcambus 2022-03-08]
+	Updated net/unison-snapshot to 2.51.91 [gdt 2022-03-08]
