@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1343 2022/03/08 09:04:17 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1344 2022/03/08 09:08:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1705,3 +1705,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/asciidoc to 10.1.4 [wiz 2022-03-08]
 	Updated multimedia/libva to 2.14.0 [wiz 2022-03-08]
 	Updated fonts/harfbuzz to 4.0.0 [wiz 2022-03-08]
+	Updated security/py-cyclonedx-python-lib to 2.0.0 [wiz 2022-03-08]
