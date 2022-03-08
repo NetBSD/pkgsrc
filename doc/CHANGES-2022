@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1346 2022/03/08 09:14:58 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1347 2022/03/08 09:25:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1708,3 +1708,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-cyclonedx-python-lib to 2.0.0 [wiz 2022-03-08]
 	Updated graphics/eog to 40.3 [prlw1 2022-03-08]
 	Updated net/filezilla to 3.58.0 [wiz 2022-03-08]
+	Updated print/texlab to 3.3.2 [wiz 2022-03-08]
