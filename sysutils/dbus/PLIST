@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2017/11/23 14:43:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2022/03/08 11:16:00 wiz Exp $
 ${PLIST.launchd}Library/LaunchAgents/org.freedesktop.dbus-session.plist
 bin/dbus-cleanup-sockets
 bin/dbus-daemon
@@ -61,8 +61,10 @@ share/doc/dbus/diagram.svg
 share/doc/dbus/examples/GetAllMatchRules.py
 share/doc/dbus/examples/example-session-disable-stats.conf
 share/doc/dbus/examples/example-system-enable-stats.conf
+share/doc/dbus/examples/example-system-hardening-without-traditional-activation.conf
 share/doc/dbus/introspect.dtd
 share/doc/dbus/introspect.xsl
 share/doc/dbus/system-activation.txt
 share/xml/dbus-1/busconfig.dtd
+share/xml/dbus-1/catalog.xml
 share/xml/dbus-1/introspect.dtd
