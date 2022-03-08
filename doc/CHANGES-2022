@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1352 2022/03/08 11:05:19 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1353 2022/03/08 11:06:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1714,3 +1714,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/felix to 0.4.2 [pin 2022-03-08]
 	Updated audio/spotify-player to 0.6.0 [pin 2022-03-08]
 	Updated devel/py-mercurial to 6.1 [wiz 2022-03-08]
+	Updated devel/py-hg-evolve to 10.5.0 [wiz 2022-03-08]
