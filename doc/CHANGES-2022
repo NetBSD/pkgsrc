@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1339 2022/03/08 08:47:49 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1340 2022/03/08 08:51:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1701,3 +1701,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/gopls to 0.8.0 [wiz 2022-03-08]
 	Updated net/wget to 1.21.3 [wiz 2022-03-08]
 	Updated www/restish to 0.10.0 [wiz 2022-03-08]
+	Updated devel/tomlplusplus to 3.0.1 [wiz 2022-03-08]
