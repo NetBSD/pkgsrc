@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2021/12/08 16:06:13 adam Exp $
+# $NetBSD: Makefile,v 1.99 2022/03/08 22:55:41 gutteridge Exp $
 
 DISTNAME=	hplip-3.19.12
 PKGREVISION=	13
@@ -152,7 +152,7 @@ SUBST_SED.fix-paths-6=		-e 's,"-I/usr/share/cups/fonts","-I${PREFIX}/share/cups/
 SUBST_SED.fix-paths-6+=		-e 's,"/usr/bin/gs","${PREFIX}/bin/gs",g'
 
 # NetBSD has strnlen(3) since 5.99.12
-.if ${OPSYS} == "NetBSD" && empty(OS_VERSION:M5.99.*) && empty(OS_VERSION:M[6-9].*)
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 059912
 SUBST_CLASSES+=			fix-strnlen
 SUBST_STAGE.fix-strnlen=	post-configure
 SUBST_MESSAGE.fix-strnlen=	Replacing strnlen() with strlen() in two C++ files.
