@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1333 2022/03/08 07:27:24 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1334 2022/03/08 07:51:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1695,3 +1695,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added lang/guile30 version 3.0.7 [wiz 2022-03-08]
 	Updated x11/xfce4-screenshooter to 1.9.10 [gutteridge 2022-03-08]
 	Updated x11/xscreensaver to 6.03 [wiz 2022-03-08]
+	Updated editors/Sigil to 1.9.1 [wiz 2022-03-08]
