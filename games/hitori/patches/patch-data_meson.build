@@ -1,0 +1,24 @@
+$NetBSD: patch-data_meson.build,v 1.1 2022/03/08 09:33:35 prlw1 Exp $
+
+Fix build with meson >= 0.61
+commit d25728e122f1d7b985029a5ba96810c3e57c27f7
+
+--- data/meson.build.orig	2021-09-17 11:09:51.891512600 +0000
++++ data/meson.build
+@@ -1,6 +1,6 @@
+ subdir('icons')
+ 
+-desktop_file = i18n.merge_file('desktop-file',
++desktop_file = i18n.merge_file(
+   type: 'desktop',
+   input: '@0@.desktop.in'.format(application_id),
+   output: '@0@.desktop'.format(application_id),
+@@ -20,7 +20,7 @@ if desktop_file_validate.found()
+   )
+ endif
+ 
+-appdata_file = i18n.merge_file('appdata-file',
++appdata_file = i18n.merge_file(
+   input: '@0@.appdata.xml.in'.format(application_id),
+   output: '@0@.appdata.xml'.format(application_id),
+   po_dir: join_paths(meson.source_root(), 'po'),
