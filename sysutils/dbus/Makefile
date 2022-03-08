@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.128 2022/01/27 09:02:58 nros Exp $
+# $NetBSD: Makefile,v 1.129 2022/03/08 11:16:00 wiz Exp $
 
-DISTNAME=	dbus-1.12.20
-PKGREVISION=	2
+DISTNAME=	dbus-1.14.0
 CATEGORIES=	sysutils
-MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
+MASTER_SITES=	https://dbus.freedesktop.org/releases/dbus/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.freedesktop.org/Software/dbus
