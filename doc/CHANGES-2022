@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1351 2022/03/08 10:14:55 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1352 2022/03/08 11:05:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1713,3 +1713,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/poppler to 22.03.0 [wiz 2022-03-08]
 	Updated sysutils/felix to 0.4.2 [pin 2022-03-08]
 	Updated audio/spotify-player to 0.6.0 [pin 2022-03-08]
+	Updated devel/py-mercurial to 6.1 [wiz 2022-03-08]
