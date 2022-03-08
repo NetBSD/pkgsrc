@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2022/01/22 15:25:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.41 2022/03/08 11:05:09 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgdemandimport/__init__.py
 ${PYSITELIB}/hgdemandimport/__init__.pyc
@@ -628,9 +628,6 @@ ${PYSITELIB}/mercurial/error.pyo
 ${PYSITELIB}/mercurial/exchange.py
 ${PYSITELIB}/mercurial/exchange.pyc
 ${PYSITELIB}/mercurial/exchange.pyo
-${PYSITELIB}/mercurial/exchangev2.py
-${PYSITELIB}/mercurial/exchangev2.pyc
-${PYSITELIB}/mercurial/exchangev2.pyo
 ${PYSITELIB}/mercurial/extensions.py
 ${PYSITELIB}/mercurial/extensions.pyc
 ${PYSITELIB}/mercurial/extensions.pyo
@@ -1456,12 +1453,6 @@ ${PYSITELIB}/mercurial/wireprotov1peer.pyo
 ${PYSITELIB}/mercurial/wireprotov1server.py
 ${PYSITELIB}/mercurial/wireprotov1server.pyc
 ${PYSITELIB}/mercurial/wireprotov1server.pyo
-${PYSITELIB}/mercurial/wireprotov2peer.py
-${PYSITELIB}/mercurial/wireprotov2peer.pyc
-${PYSITELIB}/mercurial/wireprotov2peer.pyo
-${PYSITELIB}/mercurial/wireprotov2server.py
-${PYSITELIB}/mercurial/wireprotov2server.pyc
-${PYSITELIB}/mercurial/wireprotov2server.pyo
 ${PYSITELIB}/mercurial/worker.py
 ${PYSITELIB}/mercurial/worker.pyc
 ${PYSITELIB}/mercurial/worker.pyo
