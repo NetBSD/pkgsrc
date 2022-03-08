@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21580 2022/03/08 08:09:48 wiz Exp $
+$NetBSD: TODO,v 1.21581 2022/03/08 08:18:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -588,7 +588,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o csvkit-1.0.5
 	o ctemplate-2.4
 	o cups-2.4
-	o curl-7.82.0
 	o cvs-fast-export-1.56
 	o cxref-1.6e
 	o cygwin_lib-1.5.24.2

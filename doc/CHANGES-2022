@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1335 2022/03/08 08:09:48 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1336 2022/03/08 08:18:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1697,3 +1697,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xscreensaver to 6.03 [wiz 2022-03-08]
 	Updated editors/Sigil to 1.9.1 [wiz 2022-03-08]
 	Updated graphics/ImageMagick to 7.1.0.27 [wiz 2022-03-08]
+	Updated www/curl to 7.82.0 [wiz 2022-03-08]
