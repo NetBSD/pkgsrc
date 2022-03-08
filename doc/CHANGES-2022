@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1355 2022/03/08 13:50:30 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.1356 2022/03/08 14:05:08 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1717,3 +1717,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-hg-evolve to 10.5.0 [wiz 2022-03-08]
 	Updated sysutils/dbus to 1.14.0 [wiz 2022-03-08]
 	Updated ham/chirp to 20220308 [gdt 2022-03-08]
+	Updated devel/mold to 1.1.1 [fcambus 2022-03-08]
