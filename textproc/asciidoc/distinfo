@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.33 2022/03/01 08:51:09 wiz Exp $
+$NetBSD: distinfo,v 1.34 2022/03/08 08:52:58 wiz Exp $
 
-BLAKE2s (asciidoc-10.1.3.tar.gz) = 43dff36bd67fce39932221e3d148e44d9c89b800a049ff489846a77d4828feca
-SHA512 (asciidoc-10.1.3.tar.gz) = c619d6e6643c2c408043456d229ad6944b133e45cc798e875bb596bf309f9a3ca19247e64a7d54465b85c9eeb9c59f91d7c414cc5a3288b17ff0d7d4b984b991
-Size (asciidoc-10.1.3.tar.gz) = 1196772 bytes
+BLAKE2s (asciidoc-10.1.4.tar.gz) = 2ff35762fc54c2680a74587c06c5d6aa35e425f8c422671539d82a10016a5609
+SHA512 (asciidoc-10.1.4.tar.gz) = 7ff87a3aa50864e7fc50ef4efd27b7df8d381b6de7547f45203863a49b56ed027f3a7520d2dc9c24f3f9c2f49c6adcdf170b83ff607c2f1b17c22e5cf0928ad0
+Size (asciidoc-10.1.4.tar.gz) = 1198144 bytes
