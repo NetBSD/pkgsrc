@@ -1,17 +1,14 @@
-# $NetBSD: Makefile,v 1.47 2022/03/08 01:39:06 gutteridge Exp $
+# $NetBSD: Makefile,v 1.48 2022/03/08 01:42:12 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 VERSION=	1.9.10
 DISTNAME=	xfce4-screenshooter-${VERSION}
-CATEGORIES=	misc
+CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/apps/xfce4-screenshooter/${VERSION:R}/
 
 HOMEPAGE=	https://archive.xfce.org/src/apps/xfce4-screenshooter/${VERSION:R}/
 COMMENT=	Xfce screenshoot application
-
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
 
 BUILDLINK_API_DEPENDS.xfce4-panel+=	xfce4-panel>=4.14.0
 .include "../../x11/xfce4-panel/buildlink3.mk"
