@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2022/03/07 22:45:49 thor Exp $
+# $NetBSD: Makefile,v 1.140 2022/03/09 16:36:54 nia Exp $
 
 # WARNING: DO NOT UPDATE WITHOUT RESOLVING THIS ISSUE:
 #
@@ -62,7 +62,7 @@ FILES_SUBST+=		SMB_PID=${SMB_PID}
 
 # mktemp is useful for the replacement adduser script, but don't require
 # a full dependency since it's not actually needed by samba.
-USE_TOOLS+=		gmake mktemp perl:run pkg-config flex
+USE_TOOLS+=		gmake mktemp perl:run pkg-config flex bison
 
 .if ${OPSYS} == "NetBSD"
 USE_GNU_ICONV=		yes	# FIXME: something doesn't work on NetBSD
