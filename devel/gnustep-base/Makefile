@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2021/12/08 16:01:52 adam Exp $
+# $NetBSD: Makefile,v 1.98 2022/03/09 16:34:48 nia Exp $
 
 DISTNAME=	gnustep-base-1.27.0
 PKGREVISION=	8
@@ -19,6 +19,9 @@ CONFIGURE_ARGS+=	--with-installation-domain=SYSTEM
 CONFIGURE_ARGS+=	--enable-stricticonv
 CONFIGURE_ENV+=		INSTALL_PROGRAM=${INSTALL_SCRIPT:Q}
 MAKE_FILE=		GNUmakefile
+
+# ld: -r and -pie may not be used together
+MKPIE_SUPPORTED=	no
 
 # GSMime.m:1098:7: error: array subscript is of type 'char' [-Werror,-Wchar-subscripts]
 # if (isxdigit(*src) && ctxt->pos < sizeof(ctxt->buf))
