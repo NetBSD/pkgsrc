@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.82 2022/02/15 10:12:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.83 2022/03/09 14:07:28 ryoon Exp $
 bin/pango-list
 bin/pango-segmentation
 bin/pango-view
 include/pango-1.0/pango/pango-attributes.h
 include/pango-1.0/pango/pango-bidi-type.h
 include/pango-1.0/pango/pango-break.h
+include/pango-1.0/pango/pango-color.h
 include/pango-1.0/pango/pango-context.h
 include/pango-1.0/pango/pango-coverage.h
 include/pango-1.0/pango/pango-direction.h
@@ -13,6 +14,7 @@ include/pango-1.0/pango/pango-enum-types.h
 include/pango-1.0/pango/pango-features.h
 include/pango-1.0/pango/pango-font.h
 include/pango-1.0/pango/pango-fontmap.h
+include/pango-1.0/pango/pango-fontset-simple.h
 include/pango-1.0/pango/pango-fontset.h
 include/pango-1.0/pango/pango-glyph-item.h
 include/pango-1.0/pango/pango-glyph.h
@@ -20,6 +22,7 @@ include/pango-1.0/pango/pango-gravity.h
 include/pango-1.0/pango/pango-item.h
 include/pango-1.0/pango/pango-language.h
 include/pango-1.0/pango/pango-layout.h
+include/pango-1.0/pango/pango-markup.h
 include/pango-1.0/pango/pango-matrix.h
 include/pango-1.0/pango/pango-modules.h
 include/pango-1.0/pango/pango-ot.h
@@ -45,16 +48,16 @@ lib/girepository-1.0/PangoOT-1.0.typelib
 ${PLIST.x11}lib/girepository-1.0/PangoXft-1.0.typelib
 lib/libpango-1.0.so
 lib/libpango-1.0.so.0
-lib/libpango-1.0.so.0.4800.11
+lib/libpango-1.0.so.0.5000.5
 lib/libpangocairo-1.0.so
 lib/libpangocairo-1.0.so.0
-lib/libpangocairo-1.0.so.0.4800.11
+lib/libpangocairo-1.0.so.0.5000.5
 lib/libpangoft2-1.0.so
 lib/libpangoft2-1.0.so.0
-lib/libpangoft2-1.0.so.0.4800.11
+lib/libpangoft2-1.0.so.0.5000.5
 ${PLIST.x11}lib/libpangoxft-1.0.so
 ${PLIST.x11}lib/libpangoxft-1.0.so.0
-${PLIST.x11}lib/libpangoxft-1.0.so.0.4800.11
+${PLIST.x11}lib/libpangoxft-1.0.so.0.5000.5
 lib/pkgconfig/pango.pc
 lib/pkgconfig/pangocairo.pc
 lib/pkgconfig/pangofc.pc
