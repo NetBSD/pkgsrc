@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1360 2022/03/09 14:15:19 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.1361 2022/03/09 14:27:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1722,3 +1722,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/pango to 1.50.5 [ryoon 2022-03-09]
 	Updated devel/pangomm to 2.46.1nb2 [ryoon 2022-03-09]
 	Updated devel/pangomm2.48 to 2.48.1nb2 [ryoon 2022-03-09]
+	Updated print/qpdf to 10.6.2 [ryoon 2022-03-09]
