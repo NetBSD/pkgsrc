@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/03/07 23:01:19 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/03/09 00:37:46 gdt Exp $
 
 DISTNAME=		guile-1.8.8
 PKGNAME=		${DISTNAME:S/guile/guile18/}
@@ -21,6 +21,10 @@ PTHREAD_AUTO_VARS=	YES
 INFO_FILES=		YES
 PKGCONFIG_OVERRIDE=	guile-1.8.pc.in
 
+# Currently, all versions are namespaced.
+# guile18 is hard-coded to a prefix, and does not use the scheme
+# used by the others.  That is ok because guile18 will never be
+primary.
 GUILE_PREFIX=			${PREFIX}/guile/1.8
 GNU_CONFIGURE_PREFIX=		${GUILE_PREFIX}
 BUILDLINK_PASSTHRU_DIRS+=	${GUILE_PREFIX}
