@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:17:58 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/03/09 14:14:11 ryoon Exp $
 
 BLAKE2s (pangomm-2.48.1.tar.xz) = 96dfc426fb2693e15005f6d779dea537762f049b4d548fbaf3bfebbddeb48b00
 SHA512 (pangomm-2.48.1.tar.xz) = c204a1cb7a404f055d62880a760716c5567a835ca495cc5e01589ed59fabb332490e529de716c3438cefbc4428c025d6d01c71e4412b2843e3ab3a3175ccc2f4
 Size (pangomm-2.48.1.tar.xz) = 675452 bytes
 SHA1 (patch-meson.build) = b09516870f4e33aab8d4039f995aedd4dc236832
+SHA1 (patch-untracked_pango_pangomm_attributes.h) = 2046525d7a30108194f9b64b75d8dfdd9229bd7e
