@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1357 2022/03/08 22:32:53 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.1358 2022/03/09 14:08:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1719,3 +1719,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated ham/chirp to 20220308 [gdt 2022-03-08]
 	Updated devel/mold to 1.1.1 [fcambus 2022-03-08]
 	Updated net/unison-snapshot to 2.51.91 [gdt 2022-03-08]
+	Updated devel/pango to 1.50.5 [ryoon 2022-03-09]
