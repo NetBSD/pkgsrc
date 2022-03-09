@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.69 2022/01/28 12:02:43 adam Exp $
+# $NetBSD: Makefile,v 1.70 2022/03/09 01:31:24 osa Exp $
 
 DISTNAME=	nginx-1.21.6
 
-MAINTAINER=	imil@NetBSD.org
+MAINTAINER=	osa@NetBSD.org
 
 .include "../../www/nginx/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
