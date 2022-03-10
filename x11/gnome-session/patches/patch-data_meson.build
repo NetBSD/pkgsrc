@@ -1,0 +1,23 @@
+$NetBSD: patch-data_meson.build,v 1.1 2022/03/10 17:05:13 nia Exp $
+
+Remove incorrect positional arguments, causing errors with newer
+meson versions (previously they were silently ignored).
+
+--- data/meson.build.orig	2021-04-28 08:32:22.873144100 +0000
++++ data/meson.build
+@@ -58,7 +58,6 @@ foreach name: desktops
+   endif
+ 
+   desktop_target = i18n.merge_file(
+-    desktop,
+     type: 'desktop',
+     input: desktop_in,
+     output: desktop,
+@@ -89,7 +88,6 @@ foreach session: sessions
+   )
+ 
+   i18n.merge_file(
+-    session_file,
+     type: 'desktop',
+     input: desktop_in,
+     output: session_file,
