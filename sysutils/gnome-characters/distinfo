@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:19:38 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/03/10 20:54:18 nia Exp $
 
 BLAKE2s (gnome-characters-3.34.0.tar.xz) = 09fa9cad82cb8e8d067ea96f1aa52f5265942ffc6965993b1804881fda8678f6
 SHA512 (gnome-characters-3.34.0.tar.xz) = 4dc2f0027c7079034d50c2743607391a0e529bcaf4f8fdd495b05aa776027609a43686f4621bcf30f09a29fa6f4d5fba6ed6166e51ab66f03dedf3032bc65632
 Size (gnome-characters-3.34.0.tar.xz) = 188012 bytes
+SHA1 (patch-data_meson.build) = c24f731956d0719de68e66ab5e7d7f481cfedc2d
