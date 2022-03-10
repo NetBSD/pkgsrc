@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2022/02/08 13:15:54 gavan Exp $
+# $NetBSD: Makefile,v 1.10 2022/03/10 15:05:05 ryoon Exp $
 
-PKGREVISION=		1
 .include "../../multimedia/mediainfo/Makefile.common"
 
 PKGNAME=		libmediainfo-${MIVER}
 
 COMMENT=		MediaInfoLib, support library for MediaInfo program
-LICENSE=		zlib
+LICENSE=		2-clause-bsd
 
 USE_TOOLS+=		autoconf automake autoreconf gmake pkg-config
 USE_LIBTOOL=		yes

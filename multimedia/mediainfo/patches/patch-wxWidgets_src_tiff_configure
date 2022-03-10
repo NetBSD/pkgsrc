@@ -1,0 +1,15 @@
+$NetBSD: patch-wxWidgets_src_tiff_configure,v 1.1 2022/03/10 15:05:05 ryoon Exp $
+
+* Fix shell portability issue.
+
+--- wxWidgets/src/tiff/configure.orig	2016-02-28 21:33:37.000000000 +0000
++++ wxWidgets/src/tiff/configure
+@@ -18145,7 +18145,7 @@ if test "${with_jpeg12_lib+set}" = set; 
+ fi
+ 
+ 
+-if test "x$enable_jpeg12" == "xyes" ; then
++if test "x$enable_jpeg12" = "xyes" ; then
+ 
+   if test "x$with_jpeg12_lib" != "x" ; then
+     LIBS="$with_jpeg12_lib $LIBS"
