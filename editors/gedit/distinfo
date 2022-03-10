@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.60 2021/10/26 10:21:29 nia Exp $
+$NetBSD: distinfo,v 1.61 2022/03/10 17:43:34 nia Exp $
 
 BLAKE2s (gedit-3.36.2.tar.xz) = ed32e26906db8eec8fe87782d31e9c8d34c94e1cb331f305a40ca2db5af0b3e5
 SHA512 (gedit-3.36.2.tar.xz) = 20c3592aaf08ad4a5842b14ecb1eb0c9ddbef190412dc3f70b60bbf6125c9c4791a48260c89402ce4773720ae65b36fab510f9d1e104f548e243d11bc49279b5
 Size (gedit-3.36.2.tar.xz) = 14770004 bytes
+SHA1 (patch-data_meson.build) = ba0a9f66ce17675946774772dbc29618e4799fd1
 SHA1 (patch-gedit_meson.build) = f08366fd749fc7c74348d54e3f619d490318e50c
 SHA1 (patch-meson.build) = 9b964d44282671136c3e39331e3fd5dee25d767f
