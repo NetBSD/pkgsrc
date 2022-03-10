@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1364 2022/03/09 18:56:46 osa Exp $
+$NetBSD: CHANGES-2022,v 1.1365 2022/03/10 01:31:27 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1726,3 +1726,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-httpie to 3.1.0 [wiz 2022-03-09]
 	Updated www/nginx to 1.20.2nb2 [osa 2022-03-09]
 	Updated www/nginx-devel to 1.21.6nb1 [osa 2022-03-09]
+	Updated sysutils/xfce4-diskperf-plugin to 2.7.0 [gutteridge 2022-03-10]
