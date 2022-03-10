@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2022/03/10 03:40:30 osa Exp $
+# $NetBSD: Makefile.common,v 1.22 2022/03/10 18:40:44 osa Exp $
 # used by www/nginx/Makefile
 # used by www/nginx-devel/Makefile
 
@@ -96,6 +96,14 @@ SOEXT=		so
 .endif
 PLIST_SUBST+=	SOEXT=${SOEXT}
 
+post-configure:
+.if !empty(PKG_OPTIONS:Mnjs)
+	${RUN} cd ${WRKDIR}/${NJS_DISTNAME} && ${PKGSRC_SETENV} ${_CONFIGURE_SCRIPT_ENV}	\
+		${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS} ${CONFIGURE_SCRIPT} ${NJS_CONFIGURE_ARGS}	\
+		&& ${PKGSRC_SETENV} ${MAKE_ENV} ${BUILD_MAKE_CMD} \
+		&& ${MV} build/njs ${WRKDIR}/${NJS_DISTNAME}/njs
+.endif
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/objs/nginx ${DESTDIR}${PREFIX}/sbin/nginx
 .for file in ${EGFILES}
@@ -118,6 +126,10 @@ do-install:
 	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/libexec/nginx
 	(cd ${WRKSRC}/objs/ && ${FIND} . -name '*.so' -maxdepth 1 -type f \
 		-exec ${INSTALL_PROGRAM} {} ${DESTDIR}${PREFIX}/libexec/nginx \;)
+.endif
+.if !empty(PKG_OPTIONS:Mnjs)
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKDIR}/${NJS_DISTNAME}/njs ${DESTDIR}${PREFIX}/bin/njs
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
