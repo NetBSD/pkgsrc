@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2020/11/25 11:40:06 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.21 2022/03/10 03:40:30 osa Exp $
 # used by www/nginx/Makefile
 # used by www/nginx-devel/Makefile
 
@@ -113,6 +113,11 @@ do-install:
 		${DESTDIR}${PERL5_INSTALLVENDORARCH}/auto/nginx
 	${INSTALL_DATA} ${WRKSRC}/objs/src/http/modules/perl/blib/lib/nginx.pm \
 		${DESTDIR}${PERL5_INSTALLVENDORARCH}
+.endif
+.if !empty(PKG_OPTIONS:Mdso)
+	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/libexec/nginx
+	(cd ${WRKSRC}/objs/ && ${FIND} . -name '*.so' -maxdepth 1 -type f \
+		-exec ${INSTALL_PROGRAM} {} ${DESTDIR}${PREFIX}/libexec/nginx \;)
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
