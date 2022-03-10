@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/12/17 00:03:51 gutteridge Exp $
+$NetBSD: distinfo,v 1.10 2022/03/10 20:53:35 nia Exp $
 
 BLAKE2s (gjs-1.68.4.tar.xz) = 470e00cbf97a18ce78f572c44202163bc3497cbc0570cc7bd8dbf6d2f30cef31
 SHA512 (gjs-1.68.4.tar.xz) = c610abfa701c0a61ffa6916ec5ebcd07b1dcb04607d74ab0b6d30583da27d60f9993e037fab73e66e1580d644d3a57f0a479f55a09e3bf56fea7f17367c787b3
 Size (gjs-1.68.4.tar.xz) = 559768 bytes
 SHA1 (patch-gjs_jsapi-util.cpp) = 91b267616071bde63afb835d82859bd44a364da1
-SHA1 (patch-meson.build) = 19091cf43cf5ddc2e096d628dfca7deca5b76b5f
