@@ -1,0 +1,23 @@
+$NetBSD: patch-data_meson.build,v 1.1 2022/03/10 20:54:18 nia Exp $
+
+Remove unused positional arguments. These were previously ignored by
+meson, now they cause build failures.
+
+--- data/meson.build.orig	2020-02-27 05:11:29.000000000 +0000
++++ data/meson.build
+@@ -47,7 +47,6 @@ desktop_conf.set('appid', characters_app
+ desktop_conf.set('bindir', characters_bindir)
+ 
+ i18n.merge_file(
+-  'desktop-file',
+   type: 'desktop',
+   input: configure_file (
+     input: characters_name + '.desktop.in',
+@@ -61,7 +60,6 @@ i18n.merge_file(
+ )
+ 
+ i18n.merge_file(
+-  'appdata-file',
+   input: characters_name + '.appdata.xml.in',
+   output: characters_application_id + '.appdata.xml',
+   po_dir: po_dir,
