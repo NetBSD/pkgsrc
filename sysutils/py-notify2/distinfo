@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/03/10 23:48:02 gutteridge Exp $
+
+BLAKE2s (notify2-0.3.1.tar.gz) = 10247e430aaade8ee1c9e05695473682858f26fc55bb46ca18a45fadcb70bdc0
+SHA512 (notify2-0.3.1.tar.gz) = 0b69a64e0a7e4955ee767c975db92c5c60d28c0e54f77498cfb98390771a8f536631fc34e42b5c46c138dfa1054b5516a0809b8e3b0cb9237a39825ddb827109
+Size (notify2-0.3.1.tar.gz) = 17792 bytes
