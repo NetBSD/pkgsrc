@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2021/05/24 19:52:30 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2022/03/10 16:40:30 nia Exp $
 
 PKGNAME=	gcc-aux-${SNAPSHOT}
 PKGREVISION=	6
@@ -15,6 +15,9 @@ LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 LANGS=		c ada c++
 USE_TOOLS+=	gmake sed:run perl makeinfo bzip2 patch pod2man tar
 APPLY_DIFFS=	core ada cxx
+
+RELRO_SUPPORTED=	no
+MKPIE_SUPPORTED=	no
 
 .include "Makefile.version"
 .include "Makefile.testsuite"
