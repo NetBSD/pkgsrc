@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2021/10/14 07:03:02 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/03/10 15:05:05 ryoon Exp $
 
-PKGREVISION=		1
 .include "../../multimedia/mediainfo/Makefile.common"
 
 PKGNAME=		mediainfo-${MIVER}
-LICENSE=		gnu-lgpl-v3
+LICENSE=		2-clause-bsd
 
 USE_TOOLS+=		autoconf automake autoreconf gmake pkg-config
 USE_LIBTOOL=		yes
