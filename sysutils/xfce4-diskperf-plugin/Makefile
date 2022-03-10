@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.62 2021/12/17 00:41:59 gutteridge Exp $
+# $NetBSD: Makefile,v 1.63 2022/03/10 01:31:17 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-diskperf-plugin-2.6.3
+DISTNAME=	xfce4-diskperf-plugin-2.7.0
 CATEGORIES=	sysutils
-MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-diskperf-plugin/2.6/
+MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-diskperf-plugin/2.7/
 
 HOMEPAGE=	https://goodies.xfce.org/projects/panel-plugins/xfce4-diskperf-plugin
 COMMENT=	Xfce disk performance plugin
