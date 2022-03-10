@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2022/03/10 07:42:32 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/03/10 16:32:25 gdt Exp $
 
 SLIBVERSION=	3.2.6
 DISTNAME=	guile-slib-${SLIBVERSION}
 PKGNAME=	${DISTNAME:S/guile/guile22/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -21,17 +21,20 @@ DEPENDS+=	slib>=${SLIBVERSION}:../../devel/slib
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}
 
-INSTALLATION_DIRS=	guile/${GUILE_DIR}/share/guile guile/${GUILE_DIR}/share/guile/site
+# See ../guile-slib for comments explaining the choice of paths and
+# how this works.
+
+INSTALLATION_DIRS=	guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR}
 
 do-install:
-	${RM} -f ${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/slib
+	${RM} -f ${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR}/slib
 	${LN} -sf ${PREFIX}/share/slib \
-		${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/slib
-	${RM} -f ${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/slibcat
-	cd ${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/slib && \
+		${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR}/slib
+	${RM} -f ${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR}/slibcat
+	cd ${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR}/slib && \
 		GUILE_LOAD_PATH=${PREFIX}/share \
-		GUILE_IMPLEMENTATION_PATH=${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site \
+		GUILE_IMPLEMENTATION_PATH=${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR} \
 		${PREFIX}/guile/${GUILE_DIR}/bin/guile -q -c "(begin (use-modules (ice-9 slib)) (require 'new-catalog))"
 
-.include "../../lang/guile22/buildlink3.mk"
+.include "../../lang/${GUILE_VERSION}/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
