@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2020/02/16 10:56:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2022/03/10 14:20:16 gdt Exp $
 info/slib.info
 share/doc/slib/FAQ
 share/doc/slib/README
@@ -144,7 +144,6 @@ share/slib/selfset.scm
 share/slib/sierpinski.scm
 share/slib/simetrix.scm
 share/slib/sisc.init
-share/slib/slib
 share/slib/solid.scm
 share/slib/sort.scm
 share/slib/soundex.scm
