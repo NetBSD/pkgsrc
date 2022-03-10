@@ -1,0 +1,23 @@
+$NetBSD: patch-data_meson.build,v 1.1 2022/03/10 17:11:18 nia Exp $
+
+Remove incorrect positional arguments causing failures with newer
+meson versions. These were previously silently ignored.
+
+--- data/meson.build.orig	2020-09-10 12:54:34.000000000 +0000
++++ data/meson.build
+@@ -1,7 +1,6 @@
+ gnome = import('gnome')
+ 
+ desktop_file = i18n.merge_file(
+-  'desktop',
+   type: 'desktop',
+   input: 'org.gnome.Screenshot.desktop.in',
+   output: 'org.gnome.Screenshot.desktop',
+@@ -23,7 +22,6 @@ if desktop_file_validate.found()
+ endif
+ 
+ metainfo_file = i18n.merge_file(
+-  'appdata',
+   input: 'org.gnome.Screenshot.metainfo.xml.in',
+   output: 'org.gnome.Screenshot.metainfo.xml',
+   po_dir: join_paths(meson.current_source_dir(), '../po'),
