@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1374 2022/03/10 16:29:18 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1375 2022/03/10 16:29:46 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1737,3 +1737,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/libmediainfo to 21.09 [ryoon 2022-03-10]
 	Updated multimedia/mediainfo to 21.09 [ryoon 2022-03-10]
 	Updated www/firefox91 to 91.7.0 [nia 2022-03-10]
+	Updated www/firefox91-l10n to 91.7.0 [nia 2022-03-10]
