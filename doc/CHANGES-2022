@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1369 2022/03/10 08:04:14 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1370 2022/03/10 08:05:26 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1732,3 +1732,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/nginx-devel to 1.21.6nb2 [osa 2022-03-09]
 	Updated audio/ncspot to 0.9.6 [pin 2022-03-10]
 	Updated shells/starship to 1.4.0 [pin 2022-03-10]
+	Updated audio/termusic to 0.6.11 [pin 2022-03-10]
