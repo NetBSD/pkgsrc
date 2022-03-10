@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2022/03/10 14:20:16 gdt Exp $
+# $NetBSD: Makefile,v 1.42 2022/03/10 14:35:14 wiz Exp $
 
 DISTNAME=	slib-3b6
 #
@@ -9,6 +9,7 @@ DISTNAME=	slib-3b6
 # Also update guile-slib
 #
 PKGNAME=	slib-3.2.6
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://groups.csail.mit.edu/mac/ftpdir/scm/
 
