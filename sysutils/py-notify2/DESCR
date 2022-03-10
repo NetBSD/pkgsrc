@@ -1,0 +1,4 @@
+A modern Python interface to DBus notifications, supporting Python 3.
+
+NB this is not the same package as sysutils/py-notify, despite similar names
+and versioning.
