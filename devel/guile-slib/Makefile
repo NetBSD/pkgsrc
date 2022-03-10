@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2022/03/10 13:43:59 gdt Exp $
+# $NetBSD: Makefile,v 1.54 2022/03/10 14:29:04 gdt Exp $
 
 SLIBVERSION=	3.2.6
 DISTNAME=	guile-slib-${SLIBVERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -20,23 +20,29 @@ DEPENDS+=	slib>=${SLIBVERSION}:../../devel/slib
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}
 
-INSTALLATION_DIRS=	guile/${GUILE_DIR}/share/guile guile/${GUILE_DIR}/share/guile/site
-
 # Instructions at
-#   https://www.gnu.org/software/guile/docs/docs-2.2/guile-ref/SLIB-installation.html
+#   https://www.gnu.org/software/guile/docs/docs-2.0/guile-ref/SLIB-installation.html
 # say
-#   ln -s /usr/local/lib/slib /usr/local/share/guile/2.2/slib
-# We were using site instead of 2.2 in previous guile-slib packages.
+#   ln -s /usr/local/lib/slib /usr/local/share/guile/2.0/slib
+# However, slib's default catalog location is guile/site/2.0, so we
+# use that.
 
+INSTALLATION_DIRS=	guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR}
+
+# GUILE_LOAD_PATH enables (ice-9 slib) to find slib, needed because
+# the symlink is in the DESTDIR but not yet in the installed system.
+# GUILE_IMPLEMENTATION_PATH is an override to the slib catalog build
+# procedure to write the catalog at that particular path instead of
+# the default value of (%site-dir), which is
+# /usr/pkg/guile/2.0/share/guile/site/2.0
 do-install:
 	${LN} -sf ${PREFIX}/share/slib \
-		${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/slib
-	cd ${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/slib && \
+		${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR}/slib
+	cd ${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR}/slib && \
 		GUILE_LOAD_PATH=${PREFIX}/share \
+		GUILE_IMPLEMENTATION_PATH=${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/${GUILE_DIR} \
 		${PREFIX}/guile/${GUILE_DIR}/bin/guile -q -c "(begin (use-modules (ice-9 slib)) (require 'new-catalog))"
 
-# historical - does not seem to be used in 2.2
-#		GUILE_IMPLEMENTATION_PATH=${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share \
 
 .include "../../lang/${GUILE_VERSION}/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
