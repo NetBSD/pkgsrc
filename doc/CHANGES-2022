@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1370 2022/03/10 08:05:26 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1371 2022/03/10 08:49:27 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1733,3 +1733,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/ncspot to 0.9.6 [pin 2022-03-10]
 	Updated shells/starship to 1.4.0 [pin 2022-03-10]
 	Updated audio/termusic to 0.6.11 [pin 2022-03-10]
+	Updated devel/ocaml-dune-configurator to 2.9.3nb2 [jaapb 2022-03-10]
