@@ -1,0 +1,23 @@
+$NetBSD: patch-data_meson.build,v 1.1 2022/03/10 21:28:03 prlw1 Exp $
+
+Fix build with meson >= 0.61
+commit bfbb5f7bab38301d8a4a444173acdae8d9692146
+
+--- data/meson.build.orig	2021-12-21 00:24:23.783496100 +0000
++++ data/meson.build
+@@ -16,7 +16,6 @@ install_data(
+ desktop_conf = configuration_data()
+ desktop_conf.set('icon', application_id)
+ desktop = i18n.merge_file(
+-  'desktop',
+   input: configure_file(
+     input: files('org.gnome.Epiphany.desktop.in.in'),
+     output: 'org.gnome.Epiphany.desktop.in',
+@@ -32,7 +31,6 @@ desktop = i18n.merge_file(
+ appdata_conf = configuration_data()
+ appdata_conf.set('appid', application_id)
+ appdata = i18n.merge_file(
+-  'appdata',
+   input: configure_file(
+     input: files('org.gnome.Epiphany.appdata.xml.in.in'),
+     output: 'org.gnome.Epiphany.appdata.xml.in',
