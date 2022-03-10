@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.54 2021/10/26 11:33:49 nia Exp $
+$NetBSD: distinfo,v 1.55 2022/03/10 17:05:13 nia Exp $
 
 BLAKE2s (gnome-session-40.1.1.tar.xz) = 0c2ddecd69dbd22f70f775e020b150a64002b5e04b0345b8ad1dfd9ad8ebaca4
 SHA512 (gnome-session-40.1.1.tar.xz) = 91609915366839806729e066e5ca0d42daff0591732cda08c3da7d4951f7e27964d72988c4e61a64045443969b9fb0a9697c7ace82bdd8843310cb4d7e9dfd8c
 Size (gnome-session-40.1.1.tar.xz) = 482304 bytes
+SHA1 (patch-data_meson.build) = 85ea24df80641afc6eddf7c0919a1738f7034161
 SHA1 (patch-meson__options.txt) = 6c0c9968c4546f60547cc0cf235e6d546532e85b
 SHA1 (patch-tools_meson.build) = a2ab4b52be4933a86f64fc08d8cf89542f5a15ca
