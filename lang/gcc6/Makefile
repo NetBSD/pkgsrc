@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2021/10/12 13:46:14 tnn Exp $
+# $NetBSD: Makefile,v 1.35 2022/03/10 16:43:11 nia Exp $
 
 GCC_PKGNAME=		gcc6
 .include		"version.mk"
@@ -23,6 +23,7 @@ EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 
 # Relocations result in a linker error on AArch64, but not x86.
 MKPIE_SUPPORTED=	no
+CHECK_RELRO_SKIP+=	${GCC_PKGNAME}/lib/*
 
 NOT_FOR_PLATFORM=	Interix-*-*
 
@@ -134,7 +135,6 @@ MAKE_ENV.SunOS+=	ac_cv_func_mkostemp=no
 
 .if !empty(PKGSRC_COMPILER:Mclang) || ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--disable-bootstrap
-CHECK_RELRO_SKIP+=	${GCC_PKGNAME}/lib/*
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || !empty(MACHINE_PLATFORM:MLinux-*-i386)
