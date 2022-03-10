@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 11:01:11 nia Exp $
+$NetBSD: distinfo,v 1.19 2022/03/10 15:05:05 ryoon Exp $
 
-BLAKE2s (mediainfo_20.03_AllInclusive.7z) = 105c0d9e3fe9ac48e166bab2da67cddd085743cdc9e28832bec3732fd96c2f8a
-SHA512 (mediainfo_20.03_AllInclusive.7z) = 850f4ee5f8ceb3a91a4466ff73c9f2fb70a1a63f8bdd7ffd8dd40e83b619b71c59e9b8659a8636758c90a62d7024b4e617b17025c72f23a7bcd25a3823d2ee39
-Size (mediainfo_20.03_AllInclusive.7z) = 3706487 bytes
+BLAKE2s (mediainfo_21.09_AllInclusive.7z) = 29ac47313bc39a1ea6f8be9c564485d0d69c2afa463d5cee4be4469a28e2548d
+SHA512 (mediainfo_21.09_AllInclusive.7z) = 8371b4f9b9a0a77c0b5a0930363266f1c236b6eff8acfd5873edde7a18bfd2e6305092742f9094a64252b6f13d339526ad153587d1f5d8b03a6b09594dbbf752
+Size (mediainfo_21.09_AllInclusive.7z) = 18232082 bytes
 SHA1 (patch-MediaInfoLib_Source_MediaInfo_MediaInfo__Config.h) = 19d6cba816c9e282e31fac527cbc39b9303f9f08
-SHA1 (patch-MediaInfoLib_Source_MediaInfo_Multiple_File__Gxf.cpp) = 04f3533bf6a79a2dd8dcee80fd0f68e73303ccbb
-SHA1 (patch-MediaInfoLib_Source_MediaInfo_Multiple_File__MpegPs.cpp) = 800904386799b205a366f4f693ad9a7ff3d5856b
+SHA1 (patch-wxWidgets_configure) = 1e66f21dd53cab7777650b82e0a030bd557c1de1
+SHA1 (patch-wxWidgets_src_tiff_configure) = 42c668792c114d17426f0c34ffff972bf1c90e0f
