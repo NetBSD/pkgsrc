@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2022/03/10 13:32:36 gdt Exp $
+# $NetBSD: Makefile,v 1.53 2022/03/10 13:43:59 gdt Exp $
 
 SLIBVERSION=	3.2.6
 DISTNAME=	guile-slib-${SLIBVERSION}
@@ -29,11 +29,10 @@ INSTALLATION_DIRS=	guile/${GUILE_DIR}/share/guile guile/${GUILE_DIR}/share/guile
 # We were using site instead of 2.2 in previous guile-slib packages.
 
 do-install:
-	${MKDIR} ${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/${GUILE_DIR}
 	${LN} -sf ${PREFIX}/share/slib \
-		${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/${GUILE_DIR}/slib
-	cd ${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/${GUILE_DIR} && \
-		GUILE_LOAD_PATH=${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/${GUILE_DIR} \
+		${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/slib
+	cd ${DESTDIR}${PREFIX}/guile/${GUILE_DIR}/share/guile/site/slib && \
+		GUILE_LOAD_PATH=${PREFIX}/share \
 		${PREFIX}/guile/${GUILE_DIR}/bin/guile -q -c "(begin (use-modules (ice-9 slib)) (require 'new-catalog))"
 
 # historical - does not seem to be used in 2.2
