@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2020/02/19 14:33:00 gdt Exp $
+# $NetBSD: Makefile,v 1.41 2022/03/10 14:20:16 gdt Exp $
 
 DISTNAME=	slib-3b6
 #
@@ -12,7 +12,7 @@ PKGNAME=	slib-3.2.6
 CATEGORIES=	devel
 MASTER_SITES=	http://groups.csail.mit.edu/mac/ftpdir/scm/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://people.csail.mit.edu/jaffer/SLIB.html
 COMMENT=	Portable Scheme library of compatibility and utility functions
 
@@ -32,10 +32,12 @@ SUBST_STAGE.scmpath=	pre-configure
 SUBST_FILES.scmpath=	guile.init
 SUBST_SED.scmpath=	-e "s|/usr/share/slib|${PREFIX}/share/slib|"
 
+# Previously, a symlink was created is a workaround for guile-slib
+# with guile 2.0.12.  No one understands why, and this comment is left
+# as a possible hint to my future self struggling with guile/slib.
+#	cd ${DESTDIR}${SLIBDIR} && ${LN} -s . slib
+
 do-install:
-	# symlink is a workaround for guile-slib with guile20-2.0.12
-	# remove when not needed any longer
-	cd ${DESTDIR}${SLIBDIR} && ${LN} -s . slib
 	cd ${WRKSRC}; ${INSTALL_DATA} *.scm *.init ${DESTDIR}${SLIBDIR}
 	cd ${WRKSRC}; ${INSTALL_DATA} README FAQ ${DESTDIR}${DOCDIR}
 	cd ${WRKSRC}; for f in slib.info slib.info-[0-9]*; do		\
