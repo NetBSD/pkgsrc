@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1376 2022/03/10 18:40:44 osa Exp $
+$NetBSD: CHANGES-2022,v 1.1377 2022/03/10 21:21:03 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1740,3 +1740,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/firefox91-l10n to 91.7.0 [nia 2022-03-10]
 	Updated www/nginx to 1.20.2nb4 [osa 2022-03-10]
 	Updated www/nginx-devel to 1.21.6nb3 [osa 2022-03-10]
+	Updated devel/libhandy to 1.5.91 [prlw1 2022-03-10]
