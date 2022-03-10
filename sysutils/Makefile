@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.997 2022/02/24 01:22:13 pho Exp $
+# $NetBSD: Makefile,v 1.998 2022/03/10 01:36:06 gutteridge Exp $
 #
 
 COMMENT=	System utilities
@@ -562,7 +562,6 @@ SUBDIR+=	py-jeepney
 SUBDIR+=	py-kazoo
 SUBDIR+=	py-magic
 SUBDIR+=	py-notify
-SUBDIR+=	py-notify-python
 SUBDIR+=	py-pathtools
 SUBDIR+=	py-pefile
 SUBDIR+=	py-pid
