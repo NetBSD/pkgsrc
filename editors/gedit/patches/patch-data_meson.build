@@ -1,0 +1,23 @@
+$NetBSD: patch-data_meson.build,v 1.1 2022/03/10 17:52:51 nia Exp $
+
+Remove invalid positional arguments (these now cause failures,
+previously they were ignored).
+
+--- data/meson.build.orig	2020-04-25 16:59:58.000000000 +0000
++++ data/meson.build
+@@ -4,7 +4,6 @@ install_man('gedit.1')
+ 
+ appdata = 'org.gnome.gedit.appdata.xml'
+ appdata_file = i18n.merge_file(
+-  appdata,
+   input: appdata + '.in',
+   output: appdata,
+   po_dir: '../po/',
+@@ -27,7 +26,6 @@ endif
+ 
+ desktop_file = 'org.gnome.gedit.desktop'
+ desktop_output_file = i18n.merge_file(
+-  desktop_file,
+   type: 'desktop',
+   input: desktop_file + '.in',
+   output: desktop_file,
