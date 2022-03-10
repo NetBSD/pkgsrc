@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.92 2022/03/09 14:10:34 osa Exp $
+$NetBSD: distinfo,v 1.93 2022/03/10 03:40:30 osa Exp $
 
 BLAKE2s (array-var-nginx-module-0.05.tar.gz) = 2f9af1e0eb209b7c20aa58cd8ec2afb1eb1cc122c5f4ea169e34131c463c1c26
 SHA512 (array-var-nginx-module-0.05.tar.gz) = 7c9fa9b76bc7cd2473ceae6d5ffb8de26993be9293ea967908d6c4550e086affa7016df4c936fb0b79f1142dc0aa1a5f2058d417e6433b5a3497a45d7e866e84
@@ -21,6 +21,9 @@ Size (lua-nginx-module-0.10.20.tar.gz) = 668516 bytes
 BLAKE2s (naxsi-1.3.tar.gz) = d3c819d8fbd2a896c56138f028b92fa4b26a51168ff24334f76e3d1d07626927
 SHA512 (naxsi-1.3.tar.gz) = d7aac69b5eceeb1b0db4741201159ade1e0e7f6f7c3e8c4afa2f8959c6c00c3b5285d5185747c2fb0b1400efda02e96799836315e7e492bb4a059b14acb2142d
 Size (naxsi-1.3.tar.gz) = 235626 bytes
+BLAKE2s (nchan-1.2.12.tar.gz) = 1505dd8fa8562643e0b7cfb1c34e12c6044bd604eced52eb6d968ebca9b39d75
+SHA512 (nchan-1.2.12.tar.gz) = 1378ecf7499603319f432a8ea4693f0bc7a18713cd02b7ed9eecd8dfa76b54dcef475b7b028ddfd2750dcb01e2ac73f8605a96950398fbea31ffa8b22fcacfc0
+Size (nchan-1.2.12.tar.gz) = 716150 bytes
 BLAKE2s (nginx-1.20.2.tar.gz) = 6b437b200e57db3988bd6737740c11833e5091e3b84eef1fbd95168a4f5914b2
 SHA512 (nginx-1.20.2.tar.gz) = 8b65e881ea4ac6162cbf32e5e95cf47a6d5418819f8763ca4a781cffa38187dd7886d4bc195d000a7046111a27121ff25800f8645405174995247e6738b4279a
 Size (nginx-1.20.2.tar.gz) = 1062124 bytes
@@ -30,9 +33,6 @@ Size (nginx-dav-ext-module-3.0.0.tar.gz) = 14558 bytes
 BLAKE2s (nginx-rtmp-module-1.2.2.tar.gz) = 5de03b71bb16b4129f1a2a99446f65ef6eeb3fd48bfc925e94fc27e99da3c069
 SHA512 (nginx-rtmp-module-1.2.2.tar.gz) = 3f8c803221854c4b1a06aadc6313fbfec74bd7179c0ee51d4365b26ffa8875881a6e1e48f777a9c9efbb9170ab7478a82920d5448a2c2df485503d37bb03ab81
 Size (nginx-rtmp-module-1.2.2.tar.gz) = 519934 bytes
-BLAKE2s (nginx_http_push_module-1.2.12.tar.gz) = 1505dd8fa8562643e0b7cfb1c34e12c6044bd604eced52eb6d968ebca9b39d75
-SHA512 (nginx_http_push_module-1.2.12.tar.gz) = 1378ecf7499603319f432a8ea4693f0bc7a18713cd02b7ed9eecd8dfa76b54dcef475b7b028ddfd2750dcb01e2ac73f8605a96950398fbea31ffa8b22fcacfc0
-Size (nginx_http_push_module-1.2.12.tar.gz) = 716150 bytes
 BLAKE2s (ngx_cache_purge-2.5.1.tar.gz) = f89badfa0dbc3c338129291d7c56f978d6db0348d5aaa0d723000881ae9b7b8d
 SHA512 (ngx_cache_purge-2.5.1.tar.gz) = 3ad37b4a251fb85a9a384f87fea5ca640166e3d7173c6ed9a857b191ae5f2e93819483b5d423fcafe8a10239b571677b342cc2d2d5d62315816f1316d7d5bb76
 Size (ngx_cache_purge-2.5.1.tar.gz) = 16614 bytes
