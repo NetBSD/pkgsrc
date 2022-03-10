@@ -1,7 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2020/12/09 10:52:17 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/03/10 08:49:18 jaapb Exp $
 ${OCAML_SITELIB}/dune-configurator/.private/configurator__Dune_lang.cmi
+${OCAML_SITELIB}/dune-configurator/.private/configurator__Dune_lang.cmt
+${OCAML_SITELIB}/dune-configurator/.private/configurator__Dune_lang.cmti
 ${OCAML_SITELIB}/dune-configurator/.private/configurator__Import.cmi
+${OCAML_SITELIB}/dune-configurator/.private/configurator__Import.cmt
 ${OCAML_SITELIB}/dune-configurator/.private/configurator__Ocaml_config.cmi
+${OCAML_SITELIB}/dune-configurator/.private/configurator__Ocaml_config.cmt
+${OCAML_SITELIB}/dune-configurator/.private/configurator__Ocaml_config.cmti
 ${OCAML_SITELIB}/dune-configurator/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/dune-configurator/configurator.a
 ${OCAML_SITELIB}/dune-configurator/configurator.cma
@@ -15,17 +20,12 @@ ${OCAML_SITELIB}/dune-configurator/configurator__.cmi
 ${OCAML_SITELIB}/dune-configurator/configurator__.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/dune-configurator/configurator__.cmx
 ${OCAML_SITELIB}/dune-configurator/configurator__.ml
-${OCAML_SITELIB}/dune-configurator/configurator__Dune_lang.cmt
-${OCAML_SITELIB}/dune-configurator/configurator__Dune_lang.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/dune-configurator/configurator__Dune_lang.cmx
 ${OCAML_SITELIB}/dune-configurator/configurator__Extract_obj.cmi
 ${OCAML_SITELIB}/dune-configurator/configurator__Extract_obj.cmt
 ${OCAML_SITELIB}/dune-configurator/configurator__Extract_obj.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/dune-configurator/configurator__Extract_obj.cmx
-${OCAML_SITELIB}/dune-configurator/configurator__Import.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/dune-configurator/configurator__Import.cmx
-${OCAML_SITELIB}/dune-configurator/configurator__Ocaml_config.cmt
-${OCAML_SITELIB}/dune-configurator/configurator__Ocaml_config.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/dune-configurator/configurator__Ocaml_config.cmx
 ${OCAML_SITELIB}/dune-configurator/configurator__V1.cmi
 ${OCAML_SITELIB}/dune-configurator/configurator__V1.cmt
