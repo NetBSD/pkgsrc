@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2021/12/08 16:06:27 adam Exp $
+# $NetBSD: Makefile,v 1.28 2022/03/10 10:09:42 jperkin Exp $
 #
 
 DISTNAME=	Terminal-0.2.0
@@ -25,7 +25,7 @@ MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 AUTO_MKDIRS=	yes
 
-DEPENDS+=	xterm-[0-9]*:../../x11/xterm
+DEPENDS+=	{xterm,mxterm}-[0-9]*:../../x11/xterm
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/html1/terminal.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/terminal.html
