@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2021/12/08 16:02:55 adam Exp $
+# $NetBSD: Makefile,v 1.17 2022/03/10 10:09:42 jperkin Exp $
 
 DISTNAME=	libqtxdg-3.8.0
 PKGREVISION=	1
@@ -40,7 +40,7 @@ TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "NetBSD" || ${X11_TYPE} == "modular"
-DEPENDS+=	xterm-[0-9]*:../../x11/xterm
+DEPENDS+=	{xterm,mxterm}-[0-9]*:../../x11/xterm
 .endif
 
 .include "../../devel/glib2/buildlink3.mk"
