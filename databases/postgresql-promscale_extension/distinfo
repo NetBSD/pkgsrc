@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2021/12/10 11:44:19 tnn Exp $
+$NetBSD: distinfo,v 1.9 2022/03/11 18:47:30 tnn Exp $
 
 BLAKE2s (addr2line-0.16.0.crate) = 24e229c429a7ffc5c9010ec4c102ab2fc3f9982cfa9897b42709fd96b8f83dc7
 SHA512 (addr2line-0.16.0.crate) = 7ea8fffcdff7f8f25c0a588fe2ee652053988ab2e1d39ac740f5199d6e7d30beed0272403d04b86ec5de6ad5459698cdf28f8efd5caab7b6693102df7ec4889c
@@ -396,9 +396,9 @@ Size (proc-macro-nested-0.1.7.crate) = 6495 bytes
 BLAKE2s (proc-macro2-1.0.32.crate) = aff793582e97c577d7e218bfa5a94ea7b4848b035aab24010e535b0e86c394dc
 SHA512 (proc-macro2-1.0.32.crate) = 8631714c226c8a6fb330a529f42214216057eca85cfa63afd3de8600d2638e2be45efa54155ce73625883bcbabc2c56cb865ad9dda04e2c7092d955caed48abf
 Size (proc-macro2-1.0.32.crate) = 41003 bytes
-BLAKE2s (promscale_extension-0.3.0.tar.gz) = 3c159a519ef9a7c371889d3dae4d3d347e4a82348a410912d3eb18bd1d97d613
-SHA512 (promscale_extension-0.3.0.tar.gz) = ccfccd7b059f0a571689f23a8c8ac252c7fcd59aef07a0a53493e0ca336c3b1e5d3a4fd33d6527dfb1b2bf3cb7e9aa3aaf43c8ce6d3c1dfa6736f76356539325
-Size (promscale_extension-0.3.0.tar.gz) = 29757 bytes
+BLAKE2s (promscale_extension-0.3.2.tar.gz) = 54ad21adaaf9f036adee33007b5fa0d8cf3d041802023463683bf64877bc5a59
+SHA512 (promscale_extension-0.3.2.tar.gz) = bb43b55eb5357bfe780a27773c441440f65291aa29a757d4af5a4fd3bd1d587a498e26b048b0b0f3abef126cf4351698e5bfb2a8ead76db7676795b70c3aed65
+Size (promscale_extension-0.3.2.tar.gz) = 31181 bytes
 BLAKE2s (quote-1.0.10.crate) = e9e1d8ab1339d53acc1847301ea98f79546b06b4360015009999a0ae6c54b6bf
 SHA512 (quote-1.0.10.crate) = 08613679b564ea7d750117d3a2907ba957d5d595bdfa8016344f99a232c72c6b08acb882dff45c34c9e4c8f93f879fb308b36125572722aac04fbc6bb0c666f0
 Size (quote-1.0.10.crate) = 29960 bytes
