@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2021/12/08 16:04:23 adam Exp $
+# $NetBSD: Makefile,v 1.124 2022/03/11 09:01:02 nia Exp $
 
 DISTNAME=	fontforge-20201107
 PKGREVISION=	3
@@ -32,9 +32,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/build
-
-# XXX msgfmt: unknown option -- xml
-_TOOLS_USE_PKGSRC.msgfmt=	yes
 
 .include "../../lang/python/application.mk"
 .include "../../converters/libiconv/buildlink3.mk"
