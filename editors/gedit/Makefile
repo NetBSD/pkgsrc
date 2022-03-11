@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.163 2021/12/08 16:04:10 adam Exp $
+# $NetBSD: Makefile,v 1.164 2022/03/11 08:59:27 nia Exp $
 
 DISTNAME=	gedit-3.36.2
 PKGREVISION=	7
@@ -15,7 +15,6 @@ PREV_PKGPATH=	editors/gedit3
 
 USE_TOOLS+=			gettext msgfmt perl pkg-config
 USE_TOOLS+=			itstool
-_TOOLS_USE_PKGSRC.msgfmt=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PY_PATCHPLIST=			yes
