@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2020/08/18 17:57:28 leot Exp $
+# $NetBSD: Makefile,v 1.33 2022/03/11 18:26:54 brook Exp $
 
 DISTNAME=		Coin-3.1.3
 PKGREVISION=		5
@@ -22,6 +22,12 @@ CONFIGURE_ARGS+=	--disable-debug
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} != "none"
 CONFIGURE_ARGS+=	--with-pthread=yes
 CONFIGURE_ARGS+=	--enable-threadsafe
+.endif
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(OPSYS:MDarwin)
+CONFIGURE_ARGS+=	--without-framework
 .endif
 
 .include "../../graphics/simage/buildlink3.mk"
