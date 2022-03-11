@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1392 2022/03/11 21:19:07 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.1393 2022/03/11 21:37:36 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1762,3 +1762,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/synergy to 1.14.3.5 [tnn 2022-03-11]
 	Updated math/volk to 2.5.1 [tnn 2022-03-11]
 	Updated devel/git-lfs to 3.1.2 [tnn 2022-03-11]
+	Updated devel/git-filter-repo to 2.34.0 [tnn 2022-03-11]
+	Updated x11/tint2 to 17.0.2 [tnn 2022-03-11]
+	Updated security/hitch to 1.7.2 [tnn 2022-03-11]
