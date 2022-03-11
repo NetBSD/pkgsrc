@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2022/03/07 09:14:05 bsiegert Exp $
+# $NetBSD: Makefile,v 1.47 2022/03/11 21:17:14 tnn Exp $
 
-DISTNAME=	git-lfs-2.13.3
-PKGREVISION=	12
+DISTNAME=	git-lfs-3.1.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=git-lfs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,7 +15,6 @@ USE_LANGUAGES=	c
 GO_BUILD_PATTERN=	.
 
 pre-build:
-	cp ${WRKSRC}/lfshttp/certs_openbsd.go ${WRKSRC}/lfshttp/certs_netbsd.go
 # generate content for "git-lfs --help"
 	ln -sf ${GO} ${BUILDLINK_DIR}/bin/go
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV}	\
