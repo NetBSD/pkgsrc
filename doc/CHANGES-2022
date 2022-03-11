@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1389 2022/03/11 17:12:03 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.1390 2022/03/11 18:00:34 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1752,3 +1752,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xlockmore to 5.69 [micha 2022-03-11]
 	Updated www/p5-Session-Storage-Secure to 1.000 [wen 2022-03-11]
 	Updated net/remmina to 1.4.25 [ryoon 2022-03-11]
+	Updated emulators/xnp2 to 0.86nb13 [ryoon 2022-03-11]
