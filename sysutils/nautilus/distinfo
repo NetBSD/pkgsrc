@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.57 2021/10/26 11:19:53 nia Exp $
+$NetBSD: distinfo,v 1.58 2022/03/11 07:45:02 nia Exp $
 
 BLAKE2s (nautilus-3.38.1.tar.xz) = 5d73695c7ea0fe7b2d7da638a9f89850dc2a642fc4e6809e45ab15037757ecd0
 SHA512 (nautilus-3.38.1.tar.xz) = 5b0f7bb3fd49d953976d1f71294c70eb3a4df883941d3a0134c63bd562367df45ffa982b40b9273bf8d85cd7cb6e5f0d9828ad2a71cfb82865cca91f624ea195
 Size (nautilus-3.38.1.tar.xz) = 3220728 bytes
+SHA1 (patch-data_meson.build) = c82d49d31d270e4e2c145e072ea81f3ef6c5d1ad
