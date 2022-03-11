@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1382 2022/03/11 07:13:12 gson Exp $
+$NetBSD: CHANGES-2022,v 1.1383 2022/03/11 10:21:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1745,3 +1745,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added sysutils/py-notify2 version 0.3.1 [gutteridge 2022-03-10]
 	Updated pkgtools/pkglint to 21.4.3 [rillig 2022-03-11]
 	Updated devel/egypt to 1.11 [gson 2022-03-11]
+	Updated shells/starship to 1.4.2 [pin 2022-03-11]
