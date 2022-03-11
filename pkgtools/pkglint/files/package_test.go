@@ -2014,9 +2014,12 @@ func (s *Suite) Test_Package_CheckVarorder__with_optional_variables(c *check.C) 
 	pkg.CheckVarorder(mklines)
 
 	// TODO: Make this warning more specific to the actual situation.
+
+	// Before 2022-03-11, the GitHub variables were allowed above DISTNAME,
+	// which allowed more variation than necessary and made the warning longer.
 	t.CheckOutputLines(
 		"WARN: Makefile:3: The canonical order of the variables is " +
-			"GITHUB_PROJECT, DISTNAME, CATEGORIES, GITHUB_PROJECT, empty line, " +
+			"DISTNAME, CATEGORIES, GITHUB_PROJECT, empty line, " +
 			"COMMENT, LICENSE.")
 }
 
@@ -2042,7 +2045,8 @@ func (s *Suite) Test_Package_CheckVarorder__no_tracing(c *check.C) {
 }
 
 // Ensure that comments and empty lines do not lead to panics.
-// This would be when accessing fields from the MkLine without checking the line type before.
+// This had been the case when the code accessed fields like Varname from the
+// MkLine without checking the line type before.
 func (s *Suite) Test_Package_CheckVarorder__comments_do_not_crash(c *check.C) {
 	t := s.Init(c)
 
@@ -2062,7 +2066,7 @@ func (s *Suite) Test_Package_CheckVarorder__comments_do_not_crash(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: Makefile:3: The canonical order of the variables is " +
-			"GITHUB_PROJECT, DISTNAME, CATEGORIES, GITHUB_PROJECT, empty line, " +
+			"DISTNAME, CATEGORIES, GITHUB_PROJECT, empty line, " +
 			"COMMENT, LICENSE.")
 }
 
@@ -2176,7 +2180,12 @@ func (s *Suite) Test_Package_CheckVarorder__GITHUB_PROJECT_at_the_top(c *check.C
 
 	pkg.CheckVarorder(mklines)
 
-	t.CheckOutputEmpty()
+	// Before 2022-03-11, the GitHub variables were allowed above DISTNAME,
+	// which allowed more variation than necessary and made the warning longer.
+	t.CheckOutputLines(
+		"WARN: Makefile:3: The canonical order of the variables is " +
+			"DISTNAME, CATEGORIES, MASTER_SITES, GITHUB_PROJECT, " +
+			"GITHUB_TAG, empty line, COMMENT, LICENSE.")
 }
 
 func (s *Suite) Test_Package_CheckVarorder__GITHUB_PROJECT_at_the_bottom(c *check.C) {
@@ -2279,7 +2288,7 @@ func (s *Suite) Test_Package_CheckVarorder__diagnostics(c *check.C) {
 
 	t.CheckOutputLines(
 		"WARN: Makefile:3: The canonical order of the variables is " +
-			"GITHUB_PROJECT, DISTNAME, PKGNAME, CATEGORIES, " +
+			"DISTNAME, PKGNAME, CATEGORIES, " +
 			"MASTER_SITES, GITHUB_PROJECT, DIST_SUBDIR, empty line, " +
 			"MAINTAINER, HOMEPAGE, COMMENT, LICENSE.")
 
@@ -2287,11 +2296,11 @@ func (s *Suite) Test_Package_CheckVarorder__diagnostics(c *check.C) {
 	mklines = t.NewMkLines("Makefile",
 		MkCvsID,
 		"",
-		"GITHUB_PROJECT= pkgbase",
 		"DISTNAME=       v1.0",
 		"PKGNAME=        ${GITHUB_PROJECT}-${DISTNAME}",
 		"CATEGORIES=     net",
 		"MASTER_SITES=   ${MASTER_SITE_GITHUB:=project/}",
+		"GITHUB_PROJECT= pkgbase",
 		"DIST_SUBDIR=    ${GITHUB_PROJECT}",
 		"",
 		"MAINTAINER=     maintainer@example.org",
