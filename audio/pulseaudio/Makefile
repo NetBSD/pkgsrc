@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.166 2021/12/08 16:01:44 adam Exp $
+# $NetBSD: Makefile,v 1.167 2022/03/11 08:56:02 nia Exp $
 
 DISTNAME=	pulseaudio-15.0
 PKGREVISION=	1
@@ -26,9 +26,6 @@ SUBST_MESSAGE.egdir=	Set EGDIR for config file installation for pkgsrc
 SUBST_FILES.egdir+=	src/pulse/meson.build
 SUBST_FILES.egdir+=	src/daemon/meson.build
 SUBST_VARS.egdir+=	EGDIR
-
-# Requires --desktop in msgfmt.
-_TOOLS_USE_PKGSRC.msgfmt=	yes
 
 LIBTOOL_REQD=	2.4
 GCC_REQD+=	4.8
