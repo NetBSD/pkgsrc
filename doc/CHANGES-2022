@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1383 2022/03/11 10:21:43 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1384 2022/03/11 10:22:46 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1746,3 +1746,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated pkgtools/pkglint to 21.4.3 [rillig 2022-03-11]
 	Updated devel/egypt to 1.11 [gson 2022-03-11]
 	Updated shells/starship to 1.4.2 [pin 2022-03-11]
+	Updated textproc/jless to 0.8.0 [pin 2022-03-11]
