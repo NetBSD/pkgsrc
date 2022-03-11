@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.71 2022/01/07 23:06:19 tnn Exp $
+# $NetBSD: Makefile,v 1.72 2022/03/11 20:49:13 tnn Exp $
 
-DISTNAME=		synergy-core-1.14.2.36
+DISTNAME=		synergy-core-1.14.3.5
 PKGNAME=		${DISTNAME:S/-core//}
 CATEGORIES=		net x11
 MASTER_SITES=		${MASTER_SITE_GITHUB:=symless/}
@@ -8,11 +8,11 @@ GITHUB_PROJECT=		synergy-core
 GITHUB_TAG=		${PKGVERSION_NOREV}-stable
 DISTFILES=		${DEFAULT_DISTFILES}		\
 			  googletest-1.10.0.tar.gz	\
-			  pugixml-1.11.tar.gz
+			  pugixml-1.12.1.tar.gz
 SITES.googletest-1.10.0.tar.gz=	\
 	-${MASTER_SITE_GITHUB:=google/}googletest/archive/release-1.10.0.tar.gz
-SITES.pugixml-1.11.tar.gz=	\
-	-${MASTER_SITE_GITHUB:=zeux/}pugixml/releases/download/v1.11/pugixml-1.11.tar.gz
+SITES.pugixml-1.12.1.tar.gz=	\
+	-${MASTER_SITE_GITHUB:=zeux/}pugixml/releases/download/v1.12.1/pugixml-1.12.1.tar.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://synergy-project.org/
@@ -24,7 +24,7 @@ USE_CMAKE=		yes
 CMAKE_ARGS+=		-DSYNERGY_BUILD_LEGACY_GUI=OFF
 CMAKE_ARGS+=		-DSYNERGY_BUILD_LEGACY_INSTALLER=OFF
 
-CONFIGURE_ENV+=		GIT_COMMIT=c6918b74
+CONFIGURE_ENV+=		GIT_COMMIT=218fa800
 
 EXAMPLES=	MacReadme.txt org.synergy-foss.org.synergyc.plist \
 		org.synergy-foss.org.synergys.plist synergy.conf.example \
