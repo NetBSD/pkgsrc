@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 11:17:08 nia Exp $
+$NetBSD: distinfo,v 1.15 2022/03/11 21:36:01 tnn Exp $
 
-BLAKE2s (hitch-1.7.0.tar.gz) = 5cf6d3a451494fa1176cd7ac64f3f86ff63978c7ff54c10ea0754722a24cc896
-SHA512 (hitch-1.7.0.tar.gz) = d82d2cb5d0be39dcd40ffd969d0a1c25d4d253c21078f8b2b1fca7a4e93acc84c15a53590966917b6382faffc24abdc7928b713460b1f28a321ac5b8fafd8313
-Size (hitch-1.7.0.tar.gz) = 323894 bytes
+BLAKE2s (hitch-1.7.2.tar.gz) = bdc049a4d21333eee6868b5fdce67513b5cbaae40b2a64d84536f2ed7da777ec
+SHA512 (hitch-1.7.2.tar.gz) = 7b35b5f4a3b6dab2599643c0bc90880a77ea518a627b31813f45a7ee8c52982ba4ac07228b640a0bcf90ea7d63421b62884a091fed6664732585585e5ec15bcf
+Size (hitch-1.7.2.tar.gz) = 324070 bytes
 SHA1 (patch-hitch.conf.example) = 21840c6028994953d9b05632c55f2da81fd817b0
 SHA1 (patch-src_configuration.c) = 61689ab5946e2762af1f9c02e6a7b95bfee63368
