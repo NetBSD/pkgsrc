@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1388 2022/03/11 12:38:21 wen Exp $
+$NetBSD: CHANGES-2022,v 1.1389 2022/03/11 17:12:03 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1751,3 +1751,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated games/woof to 9.0.0 [micha 2022-03-11]
 	Updated x11/xlockmore to 5.69 [micha 2022-03-11]
 	Updated www/p5-Session-Storage-Secure to 1.000 [wen 2022-03-11]
+	Updated net/remmina to 1.4.25 [ryoon 2022-03-11]
