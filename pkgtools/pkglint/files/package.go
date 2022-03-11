@@ -897,9 +897,6 @@ func (pkg *Package) CheckVarorder(mklines *MkLines) {
 	// See doc/Makefile-example.
 	// See https://netbsd.org/docs/pkgsrc/pkgsrc.html#components.Makefile.
 	var variables = []Variable{
-		{"GITHUB_PROJECT", optional}, // either here or below MASTER_SITES
-		{"GITHUB_TAG", optional},
-		{"GITHUB_RELEASE", optional},
 		{"DISTNAME", optional},
 		{"PKGNAME", optional},
 		{"R_PKGNAME", optional},
@@ -907,7 +904,7 @@ func (pkg *Package) CheckVarorder(mklines *MkLines) {
 		{"PKGREVISION", optional},
 		{"CATEGORIES", once},
 		{"MASTER_SITES", many},
-		{"GITHUB_PROJECT", optional}, // either here or at the very top
+		{"GITHUB_PROJECT", optional},
 		{"GITHUB_TAG", optional},
 		{"GITHUB_RELEASE", optional},
 		{"DIST_SUBDIR", optional},
@@ -915,9 +912,9 @@ func (pkg *Package) CheckVarorder(mklines *MkLines) {
 		{"DISTFILES", many},
 		{"SITES.*", many},
 		emptyLine,
-		{"PATCH_SITES", optional}, // or once?
+		{"PATCH_SITES", optional},
 		{"PATCH_SITE_SUBDIR", optional},
-		{"PATCHFILES", optional}, // or once?
+		{"PATCHFILES", optional},
 		{"PATCH_DIST_ARGS", optional},
 		{"PATCH_DIST_STRIP", optional},
 		{"PATCH_DIST_CAT", optional},
