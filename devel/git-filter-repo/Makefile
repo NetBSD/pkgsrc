@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2021/06/23 20:10:33 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2022/03/11 21:28:33 tnn Exp $
 
-DISTNAME=	git-filter-repo-2.32.0
+DISTNAME=	git-filter-repo-2.34.0
 EXTRACT_SUFX=	.tar.xz
 GITHUB_PROJECT=	git-filter-repo
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
