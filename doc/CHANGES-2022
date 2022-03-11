@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1390 2022/03/11 18:00:34 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.1391 2022/03/11 19:56:28 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1753,3 +1753,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/p5-Session-Storage-Secure to 1.000 [wen 2022-03-11]
 	Updated net/remmina to 1.4.25 [ryoon 2022-03-11]
 	Updated emulators/xnp2 to 0.86nb13 [ryoon 2022-03-11]
+	Updated databases/postgresql-timescaledb to 2.6.0 [tnn 2022-03-11]
+	Updated databases/postgresql-promscale_extension to 0.3.2 [tnn 2022-03-11]
+	Updated databases/promscale to 0.10.0 [tnn 2022-03-11]
+	Updated databases/prometheus to 2.33.5 [tnn 2022-03-11]
