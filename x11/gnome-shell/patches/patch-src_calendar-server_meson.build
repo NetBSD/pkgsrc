@@ -1,0 +1,16 @@
+$NetBSD: patch-src_calendar-server_meson.build,v 1.1 2022/03/11 07:37:41 nia Exp $
+
+Remove unused positional arguments. Previously they were
+ignored, now they cause build failures.
+
+--- src/calendar-server/meson.build.orig	2021-06-10 11:33:01.869923600 +0000
++++ src/calendar-server/meson.build
+@@ -27,7 +27,7 @@ configure_file(
+   install_dir: servicedir
+ )
+ 
+-i18n.merge_file('evolution-calendar.desktop',
++i18n.merge_file(
+   input: 'evolution-calendar.desktop.in',
+   output: 'evolution-calendar.desktop',
+   po_dir: po_dir,
