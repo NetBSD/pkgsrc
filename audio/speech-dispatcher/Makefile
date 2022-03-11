@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2021/12/08 16:01:44 adam Exp $
+# $NetBSD: Makefile,v 1.23 2022/03/11 08:56:02 nia Exp $
 
 DISTNAME=	speech-dispatcher-0.10.2
 PKGREVISION=	3
@@ -34,11 +34,6 @@ CONFIGURE_ARGS+=	--without-oss
 CONFIGURE_ARGS+=	--without-pulse
 
 .include "../../mk/bsd.prefs.mk"
-
-# msgfmt: unknown option -- desktop
-.if ${OPSYS} == "NetBSD"
-TOOLS_PLATFORM.msgfmt=
-.endif
 
 PKGCONFIG_OVERRIDE+=	speech-dispatcher.pc.in
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/01/09 16:18:55 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/03/11 08:56:02 nia Exp $
 
 DISTNAME=	quodlibet-4.4.0
 PKGREVISION=	4
@@ -35,11 +35,6 @@ DEPENDS+=	gst-plugins1-oss-[0-9]*:../../audio/gst-plugins1-oss
 USE_TOOLS+=	msgfmt
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
-
-# msgfmt: unknown option -- desktop
-.if ${OPSYS} == "NetBSD"
-TOOLS_PLATFORM.msgfmt=
-.endif
 
 # Requires Python 3.5 or higher
 PYTHON_VERSIONS_INCOMPATIBLE=	27
