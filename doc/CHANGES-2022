@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1391 2022/03/11 19:56:28 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.1392 2022/03/11 21:19:07 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1757,3 +1757,8 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/postgresql-promscale_extension to 0.3.2 [tnn 2022-03-11]
 	Updated databases/promscale to 0.10.0 [tnn 2022-03-11]
 	Updated databases/prometheus to 2.33.5 [tnn 2022-03-11]
+	Updated www/varnish to 7.0.2 [tnn 2022-03-11]
+	Updated www/grafana to 8.4.3 [tnn 2022-03-11]
+	Updated net/synergy to 1.14.3.5 [tnn 2022-03-11]
+	Updated math/volk to 2.5.1 [tnn 2022-03-11]
+	Updated devel/git-lfs to 3.1.2 [tnn 2022-03-11]
