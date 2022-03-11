@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2021/12/08 16:04:09 adam Exp $
+# $NetBSD: Makefile,v 1.109 2022/03/11 08:59:27 nia Exp $
 
 DISTNAME=	dasher-5.0.0.b20200225
 PKGREVISION=	2
@@ -22,13 +22,6 @@ USE_TOOLS+=	pkg-config
 
 # Workaround for glib2-2.68.0 c++ fallout.
 CXXFLAGS+=	-DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_66
-
-.include "../../mk/bsd.prefs.mk"
-
-# msgfmt: unknown option -- desktop
-.if ${OPSYS} == "NetBSD"
-TOOLS_PLATFORM.msgfmt=
-.endif
 
 pre-configure:
 	# tries to invoke git for something, probably fetching the ref
