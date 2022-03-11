@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1380 2022/03/10 23:50:46 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.1381 2022/03/11 00:33:25 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1743,3 +1743,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/libhandy to 1.5.91 [prlw1 2022-03-10]
 	Updated www/epiphany to 40.6 [prlw1 2022-03-10]
 	Added sysutils/py-notify2 version 0.3.1 [gutteridge 2022-03-10]
+	Updated pkgtools/pkglint to 21.4.3 [rillig 2022-03-11]
