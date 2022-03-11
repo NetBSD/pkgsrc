@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2021/12/08 16:03:20 adam Exp $
+# $NetBSD: Makefile,v 1.122 2022/03/11 08:56:02 nia Exp $
 
 DISTNAME=	sound-juicer-3.24.0
 PKGREVISION=	12
@@ -18,9 +18,6 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	msgfmt msgmerge xgettext itstool
 USE_TOOLS+=	gmake
-
-# XXX fails without GNU msgfmt
-_TOOLS_USE_PKGSRC.msgfmt=	yes
 
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../audio/libdiscid/buildlink3.mk"
