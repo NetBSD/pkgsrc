@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/11/11 16:58:23 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/03/11 17:11:19 ryoon Exp $
 bin/remmina
 bin/remmina-file-wrapper
 include/remmina/plugin.h
@@ -131,6 +131,7 @@ share/locale/th/LC_MESSAGES/remmina.mo
 share/locale/tr/LC_MESSAGES/remmina.mo
 share/locale/ug/LC_MESSAGES/remmina.mo
 share/locale/uk/LC_MESSAGES/remmina.mo
+share/locale/uz/LC_MESSAGES/remmina.mo
 share/locale/uz@cyrillic/LC_MESSAGES/remmina.mo
 share/locale/zh_CN/LC_MESSAGES/remmina.mo
 share/locale/zh_TW/LC_MESSAGES/remmina.mo
