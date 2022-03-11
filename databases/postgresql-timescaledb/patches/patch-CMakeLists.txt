@@ -1,14 +1,14 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2021/07/25 16:45:55 tnn Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2022/03/11 18:35:32 tnn Exp $
 
 pkgsrc postgresql-server is definitely built --with-openssl but for some reason it is not
 expressed in pg_config --configure, so override the check.
 
---- CMakeLists.txt.orig	2021-07-06 06:37:21.000000000 +0000
+--- CMakeLists.txt.orig	2022-02-17 17:53:00.000000000 +0000
 +++ CMakeLists.txt
-@@ -534,6 +534,7 @@ execute_process(
-   OUTPUT_VARIABLE PG_CONFIGURE_FLAGS
+@@ -570,6 +570,7 @@ execute_process(
    OUTPUT_STRIP_TRAILING_WHITESPACE)
- string(REGEX MATCH "--with-openssl" PG_USE_OPENSSL "${PG_CONFIGURE_FLAGS}")
+ string(REGEX MATCH "--with-(ssl=)?openssl" PG_USE_OPENSSL
+              "${PG_CONFIGURE_FLAGS}")
 +set(PG_USE_OPENSSL true)
  
  if(USE_OPENSSL AND (NOT PG_USE_OPENSSL))
