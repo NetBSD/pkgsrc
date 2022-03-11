@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2022/01/09 02:55:08 tnn Exp $
+# $NetBSD: Makefile,v 1.34 2022/03/11 20:35:40 tnn Exp $
 
-DISTNAME=	varnish-7.0.1
+DISTNAME=	varnish-7.0.2
 CATEGORIES=	www
 MASTER_SITES=	https://varnish-cache.org/_downloads/
 EXTRACT_SUFX=	.tgz
