@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2022/01/02 15:57:24 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2022/03/11 21:42:14 tnn Exp $
 #
 
-V=		6.0.0
+V=		6.0.2
 DISTNAME=	kicad-templates-${V}
 CATEGORIES=	cad
 MASTER_SITES=	https://gitlab.com/kicad/libraries/kicad-templates/-/archive/${V}/

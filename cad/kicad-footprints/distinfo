@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2022/01/02 16:14:39 tnn Exp $
+$NetBSD: distinfo,v 1.11 2022/03/11 21:42:14 tnn Exp $
 
-BLAKE2s (kicad-footprints-6.0.0.tar.bz2) = ed9cf87a54307389000c998279fedef2f643162537d313dc1e0634831b120580
-SHA512 (kicad-footprints-6.0.0.tar.bz2) = d8eac8fcc380ef67ccbd3b8f2529d7023aecef674299d83aabccd41beef1934507edf3a9bdbf4b440ae550470d7f16382aba4090fe5f1d5397a8e0a0f4364ec9
-Size (kicad-footprints-6.0.0.tar.bz2) = 3449091 bytes
+BLAKE2s (kicad-footprints-6.0.2.tar.bz2) = 6b854581b9198222d8e53dc82f82172be009ccacae036e6c78f95553949ac800
+SHA512 (kicad-footprints-6.0.2.tar.bz2) = 4f763d9a2893f8161469f1f38d09d14ae152e181c929b0626c170358e251607147619da4233edfeb1af9e2aabf8c3844e1d0903b2077f9692542d1df625162bb
+Size (kicad-footprints-6.0.2.tar.bz2) = 23530876 bytes
