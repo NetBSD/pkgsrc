@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.19 2022/01/02 19:10:03 tnn Exp $
+$NetBSD: distinfo,v 1.20 2022/03/11 21:42:14 tnn Exp $
 
-BLAKE2s (kicad-6.0.0.tar.bz2) = 0cd96294a42cf7f4f18bd45fd1c75fbdea77487fac1a58dba745fe41fd229754
-SHA512 (kicad-6.0.0.tar.bz2) = 1267b7cd35a63a3f26c2e9b0695722cbb9b279d1326f52f0b8497bd3011d79a5732e6da27f6413fb72064fe2aca72da95252011c6cb0b70c209f296f40a77b90
-Size (kicad-6.0.0.tar.bz2) = 33925942 bytes
+BLAKE2s (kicad-6.0.2.tar.bz2) = e90ead6f8884b5dbb392db46c4a7a8c2f9e036cc36e380bafc97397b7d16940e
+SHA512 (kicad-6.0.2.tar.bz2) = 44132084f09bf927716f93f64290ae63df1606cc60e48feb1371972eee8bf0bb96628763d6f09312fc9fd045f60043e87cce201bce205de93bcf7804e5ba76df
+Size (kicad-6.0.2.tar.bz2) = 33866213 bytes
 SHA1 (patch-3d-viewer_3d_cache_sg_CMakeLists.txt) = c6e55d62646e890ba02b2a56dc3481f75ffba8a0
 SHA1 (patch-CMakeLists.txt) = 3f7178bc7c1001c89d3f6cce85a9dd1368acf00e
 SHA1 (patch-CMakeModules_BuildSteps_CreateDocsetDoxyfile.cmake) = 0e931bfe471d39694e6bf942f1b9e4de30e27d05

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/01/02 15:54:12 tnn Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/03/11 21:42:14 tnn Exp $
 share/kicad/symbols/4xxx.kicad_sym
 share/kicad/symbols/4xxx_IEEE.kicad_sym
 share/kicad/symbols/74xGxx.kicad_sym
@@ -197,6 +197,7 @@ share/kicad/symbols/Transistor_Array.kicad_sym
 share/kicad/symbols/Transistor_BJT.kicad_sym
 share/kicad/symbols/Transistor_FET.kicad_sym
 share/kicad/symbols/Transistor_IGBT.kicad_sym
+share/kicad/symbols/Transistor_Power_Module.kicad_sym
 share/kicad/symbols/Triac_Thyristor.kicad_sym
 share/kicad/symbols/Valve.kicad_sym
 share/kicad/symbols/Video.kicad_sym
