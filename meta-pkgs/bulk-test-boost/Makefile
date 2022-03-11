@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2021/11/12 16:18:46 nia Exp $
+# $NetBSD: Makefile,v 1.10 2022/03/11 07:39:25 nia Exp $
 
-DISTNAME=	bulk-test-boost-20211112
+DISTNAME=	bulk-test-boost-20220311
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -49,6 +49,7 @@ BUILD_DEPENDS+=		poppler-glib-[0-9]*:../../print/poppler-glib
 BUILD_DEPENDS+=		powerdns-[0-9]*:../../net/powerdns
 BUILD_DEPENDS+=		powerdns-recursor-[0-9]*:../../net/powerdns-recursor
 BUILD_DEPENDS+=		qbittorrent-[0-9]*:../../net/qbittorrent
+BUILD_DEPENDS+=		quassel-[0-9]*:../../chat/quassel
 BUILD_DEPENDS+=		scribus>=1.5:../../print/scribus-qt5
 BUILD_DEPENDS+=		source-highlight-[0-9]*:../../textproc/source-highlight
 BUILD_DEPENDS+=		strawberry-[0-9]*:../../audio/strawberry
