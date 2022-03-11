@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2021/05/24 19:55:50 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/03/11 12:36:08 wen Exp $
 
-DISTNAME=	Session-Storage-Secure-0.011
+DISTNAME=	Session-Storage-Secure-1.000
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DA/DAGOLDEN/}
 
@@ -14,11 +13,9 @@ LICENSE=	${PERL5_LICENSE}
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Session/Storage/Secure/.packlist
 
-DEPENDS+=	p5-Crypt-CBC>=0:../../security/p5-Crypt-CBC
+DEPENDS+=	p5-Crypt-CBC>=3.01:../../security/p5-Crypt-CBC
 DEPENDS+=	p5-Crypt-Rijndael-[0-9]*:../../security/p5-Crypt-Rijndael
 DEPENDS+=	p5-Crypt-URandom-[0-9]*:../../security/p5-Crypt-URandom
-# Digest::SHA is in Core ...
-# MIME::Base64 : "3.12" - since 5.13.8 in Core
 DEPENDS+=	p5-Math-Random-ISAAC-XS-[0-9]*:../../math/p5-Math-Random-ISAAC-XS
 DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
 DEPENDS+=	p5-MooX-Types-MooseLike>=0.16:../../devel/p5-MooX-Types-MooseLike
