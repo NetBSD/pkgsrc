@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.77 2022/01/14 14:12:03 tnn Exp $
+# $NetBSD: Makefile,v 1.78 2022/03/12 07:33:22 kim Exp $
 
 .include "../../textproc/libxml2/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	5
 
 COMMENT=	Python wrapper for libxml2
 LICENSE=	modified-bsd
@@ -17,7 +16,7 @@ SUBST_CLASSES+=		setup
 SUBST_MESSAGE.setup=	Fixing hardcoded paths.
 SUBST_STAGE.setup=	pre-build
 SUBST_FILES.setup=	python/setup.py
-SUBST_SED.setup=	-e "/ROOT/s,'/usr','${BUILDLINK_PREFIX.libxml2}',g"
+SUBST_SED.setup=	-e "/ROOT/s,'/usr/local','${BUILDLINK_PREFIX.libxml2}',g"
 SUBST_SED.setup+=	-e "/^\"/s,/usr/include,${BUILDLINK_PREFIX.iconv}/include,g"
 SUBST_SED.setup+=	-e "/^\"/s,/usr/local/include,${BUILDLINK_PREFIX.iconv}/include,g"
 
