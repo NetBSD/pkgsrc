@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/12/08 16:06:48 adam Exp $
+# $NetBSD: Makefile,v 1.7 2022/03/12 07:42:32 nia Exp $
 
 DISTNAME=	gnome-pomodoro-0.17.0
 PKGREVISION=	3
@@ -14,9 +14,6 @@ LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=		autoconf-archive-[0-9]*:../../devel/autoconf-archive
 BUILD_DEPENDS+=		vala-[0-9]*:../../lang/vala
-
-# Requires --desktop in msgfmt.
-_TOOLS_USE_PKGSRC.msgfmt=	yes
 
 # Broken generated code uses g_return_if_fail when g_return_val_if_fail
 # is necessary
