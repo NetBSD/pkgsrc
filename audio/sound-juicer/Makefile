@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2022/03/11 08:56:02 nia Exp $
+# $NetBSD: Makefile,v 1.123 2022/03/12 08:01:48 nia Exp $
 
 DISTNAME=	sound-juicer-3.24.0
 PKGREVISION=	12
@@ -23,6 +23,7 @@ USE_TOOLS+=	gmake
 .include "../../audio/libdiscid/buildlink3.mk"
 .include "../../audio/libmusicbrainz5/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

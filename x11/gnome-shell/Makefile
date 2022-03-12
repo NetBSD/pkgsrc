@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/03/12 07:48:52 nia Exp $
+# $NetBSD: Makefile,v 1.17 2022/03/12 08:01:52 nia Exp $
 
 DISTNAME=	gnome-shell-40.2
 PKGREVISION=	4
@@ -43,6 +43,7 @@ BUILDLINK_API_DEPENDS.libgweather+=	libgweather>=40.0
 .include "../../archivers/gnome-autoar/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../devel/at-spi2-atk/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../graphics/adwaita-icon-theme/buildlink3.mk"

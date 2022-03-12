@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/03/12 07:28:19 nia Exp $
+# $NetBSD: Makefile,v 1.23 2022/03/12 08:01:51 nia Exp $
 
 DISTNAME=	gcr-3.38.1
 CATEGORIES=	security
@@ -30,6 +30,7 @@ TEST_TARGET=		check
 pre-configure:
 	cd ${WRKSRC} && NOCONFIGURE=1 ./autogen.sh
 
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"

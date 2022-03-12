@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.170 2022/03/12 07:28:19 nia Exp $
+# $NetBSD: Makefile,v 1.171 2022/03/12 08:01:51 nia Exp $
 
 DISTNAME=	seahorse-3.38.0.1
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/3.38/}
@@ -20,6 +20,7 @@ MESON_ARGS+=	-Dcheck-compatible-gpg=false
 PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/meson/build.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/libhandy1/buildlink3.mk"
