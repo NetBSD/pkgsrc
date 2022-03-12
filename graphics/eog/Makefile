@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2022/03/08 09:12:03 prlw1 Exp $
+# $NetBSD: Makefile,v 1.114 2022/03/12 07:06:26 nia Exp $
 
 DISTNAME=	eog-40.3
 CATEGORIES=	graphics gnome
@@ -18,13 +18,6 @@ USE_TOOLS+=	msgfmt pkg-config xgettext itstool
 MESON_ARGS+=	-Dlibportal=false
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/eog
-
-.include "../../mk/bsd.prefs.mk"
-
-# msgfmt: unknown option -- desktop
-.if ${OPSYS} == "NetBSD"
-TOOLS_PLATFORM.msgfmt=
-.endif
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
