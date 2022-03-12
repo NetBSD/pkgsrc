@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2022/03/12 07:17:19 nia Exp $
+# $NetBSD: Makefile,v 1.74 2022/03/12 08:01:50 nia Exp $
 #
 
 DISTNAME=	HandBrake-1.3.3-source
@@ -85,6 +85,7 @@ post-extract:
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/libass/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"

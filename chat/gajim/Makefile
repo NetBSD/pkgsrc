@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2022/03/04 09:34:29 nia Exp $
+# $NetBSD: Makefile,v 1.63 2022/03/12 08:01:53 nia Exp $
 
 DISTNAME=	gajim-1.3.3
 CATEGORIES=	chat
@@ -15,13 +15,6 @@ USE_TOOLS+=	gettext
 
 USE_PKG_RESOURCES=	yes
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-# needs --desktop
-TOOLS_PLATFORM.msgfmt=
-.endif
-
 MANCOMPRESSED=	yes
 MAKE_ENV+=	PKGMANDIR=${PKGMANDIR}
 
@@ -37,11 +30,13 @@ DEPENDS+=	${PYPKGPREFIX}-precis-i18n-[0-9]*:../../textproc/py-precis-i18n
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 .include "../../mk/bsd.prefs.mk"
+
 .if ${OPSYS} == "Darwin"
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-Cocoa-[0-9]*:../../devel/py-pyobjc-framework-Cocoa
 .endif
 
 .include "options.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../x11/gtk3/buildlink3.mk"
