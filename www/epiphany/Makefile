@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.207 2022/03/10 21:28:03 prlw1 Exp $
+# $NetBSD: Makefile,v 1.208 2022/03/12 07:44:12 nia Exp $
 
 DISTNAME=	epiphany-40.6
 CATEGORIES=	www gnome
@@ -19,9 +19,6 @@ MESON_ARGS+=	-Dunit_tests=disabled
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/epiphany
 
 PYTHON_FOR_BUILD_ONLY=	tool
-
-# XXX msgfmt: unknown option -- desktop
-_TOOLS_USE_PKGSRC.msgfmt=	yes
 
 .include "../../devel/meson/build.mk"
 .include "../../archivers/libarchive/buildlink3.mk"
