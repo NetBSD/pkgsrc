@@ -1,8 +1,0 @@
-$NetBSD: distinfo-2020.01.2014,v 1.2 2021/07/27 20:47:34 tnn Exp $
-
-SHA1 (u-boot-rockpro64-ayufan-2020.01-ayufan-2014-gff2cdd38.tar.gz) = 4636aaa91912081708ad69c610b8bfa545c200c7
-RMD160 (u-boot-rockpro64-ayufan-2020.01-ayufan-2014-gff2cdd38.tar.gz) = 7c32af7ca2411712e6960bce453bbf1fe1dc3445
-SHA512 (u-boot-rockpro64-ayufan-2020.01-ayufan-2014-gff2cdd38.tar.gz) = 938bb081805b1acfb75479115c3e38406b3753f60f13e663dc2a26921380b5c3fbd2adb477e2a83d28bab551294ae697fde72994514f55ed5e36894a29d4502b
-Size (u-boot-rockpro64-ayufan-2020.01-ayufan-2014-gff2cdd38.tar.gz) = 18847179 bytes
-SHA1 (patch-arch_arm_lib_interrupts__64.c) = 5f24ae8c358bd03383c121fec27fa983765b994f
-SHA1 (patch-drivers_pci_pcie__rockchip.c) = e216698695adcc7e842de9f4e63c36ecf46924d1
