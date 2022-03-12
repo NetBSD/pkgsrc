@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.75 2022/02/18 09:48:44 pho Exp $
+$NetBSD: distinfo,v 1.76 2022/03/12 06:07:48 kim Exp $
 
-BLAKE2s (zsh-5.8.tar.xz) = 3f0edcbb7b47f43f04cd373e98257702a1cfdc4efddcec12172cc1a34ac3b3da
-SHA512 (zsh-5.8.tar.xz) = 96198ecef498b7d7945fecebbe6bf14065fa8c5d81a7662164579eba8206b79575812d292adea1864bc7487ac0818ba900e25f9ab3802449340de80417c2c533
-Size (zsh-5.8.tar.xz) = 3193284 bytes
+BLAKE2s (zsh-5.8.1.tar.xz) = 4ee16432bdb40c9f7c79da389ca32d5e45c339608425214f84075a3cea8f3e9b
+SHA512 (zsh-5.8.1.tar.xz) = f54a5a47ed15d134902613f6169c985680afc45a67538505e11b66b348fcb367145e9b8ae2d9eac185e07ef5f97254b85df01ba97294002a8c036fd02ed5e76d
+Size (zsh-5.8.1.tar.xz) = 3200540 bytes
 SHA1 (patch-Completion_BSD_Command___bsd__pkg) = c15924342b827b0ee490ac01a89fe06d439fef0f
 SHA1 (patch-Completion_Unix_Command___gpg) = 226b6025e646f8c74e7e648f33a1001310c9ce3e
 SHA1 (patch-Config_installfns.sh) = ef0b250a0121c0e4925022e02553aefa23e6cc8d
