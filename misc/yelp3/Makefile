@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2021/12/08 16:05:44 adam Exp $
+# $NetBSD: Makefile,v 1.79 2022/03/12 07:14:17 nia Exp $
 
 DISTNAME=		yelp-3.32.0
 PKGREVISION=		11
@@ -15,9 +15,6 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config itstool
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-
-# Requires --desktop in msgfmt.
-_TOOLS_USE_PKGSRC.msgfmt=	yes
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38.0
 BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.13.3

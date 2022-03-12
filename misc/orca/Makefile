@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2021/12/08 16:05:42 adam Exp $
+# $NetBSD: Makefile,v 1.59 2022/03/12 07:14:17 nia Exp $
 
 DISTNAME=	orca-3.34.1
 PKGREVISION=	6
@@ -21,9 +21,6 @@ PY_PATCHPLIST=	yes
 
 USE_TOOLS+=	pkg-config gmake itstool
 USE_TOOLS+=	msgfmt msgmerge xgettext
-
-# XXX msgfmt: unknown option -- desktop
-_TOOLS_USE_PKGSRC.msgfmt=	yes
 
 # Python 3 only
 PYTHON_VERSIONS_INCOMPATIBLE=	27
