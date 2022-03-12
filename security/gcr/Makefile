@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/01/13 08:02:29 adam Exp $
+# $NetBSD: Makefile,v 1.22 2022/03/12 07:28:19 nia Exp $
 
 DISTNAME=	gcr-3.38.1
 CATEGORIES=	security
@@ -19,13 +19,6 @@ USE_TOOLS+=		gdbus-codegen readlink
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-gtk-doc
 CONFIGURE_ARGS+=	--enable-vala
-
-.include "../../mk/bsd.prefs.mk"
-
-# To avoid msgfmt: unknown option -- desktop
-.if ${OPSYS} == "NetBSD"
-TOOLS_PLATFORM.msgfmt=
-.endif
 
 PKGCONFIG_OVERRIDE+=	gck-1.pc.in
 PKGCONFIG_OVERRIDE+=	gcr-base-3.pc.in
