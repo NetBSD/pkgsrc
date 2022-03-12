@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2022/03/11 08:59:27 nia Exp $
+# $NetBSD: Makefile,v 1.110 2022/03/12 08:01:48 nia Exp $
 
 DISTNAME=	dasher-5.0.0.b20200225
 PKGREVISION=	2
@@ -29,6 +29,7 @@ pre-configure:
 	cd ${WRKSRC} && autoreconf -fi
 
 .include "../../audio/speech-dispatcher/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"

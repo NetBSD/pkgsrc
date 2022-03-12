@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2022/03/12 07:17:19 nia Exp $
+# $NetBSD: Makefile,v 1.122 2022/03/12 08:01:50 nia Exp $
 
 DISTNAME=	totem-3.34.1
 PKGREVISION=	13
@@ -25,6 +25,7 @@ PKGCONFIG_OVERRIDE+=	data/totem.pc.in
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/src
 
 .include "../../devel/meson/build.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/libpeas/buildlink3.mk"
 .include "../../graphics/clutter-gtk/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/03/12 07:06:26 nia Exp $
+# $NetBSD: Makefile,v 1.7 2022/03/12 08:01:49 nia Exp $
 
 DISTNAME=	drawing-0.8.3
 CATEGORIES=	graphics gnome
@@ -19,6 +19,7 @@ USE_TOOLS+=	pkg-config msgfmt xgettext
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/meson/build.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/tool.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2021/12/08 16:04:26 adam Exp $
+# $NetBSD: Makefile,v 1.24 2022/03/12 08:01:53 nia Exp $
 
 DISTNAME=		chromium-bsu-0.9.16.1
 PKGREVISION=		5
@@ -16,9 +16,6 @@ USE_LANGUAGES=		c c++03
 USE_TOOLS+=		gmake pkg-config
 USE_TOOLS+=		msgfmt msgmerge xgettext
 GNU_CONFIGURE=		yes
-
-# XXX needs gnu msgfmt for desktop file creation
-_TOOLS_USE_PKGSRC.msgfmt=	yes
 
 LDFLAGS+=		${BUILDLINK_LDADD.gettext}
 LDFLAGS.DragonFly=	-lSDL2
@@ -39,6 +36,7 @@ CFLAGS+=		-DWITH_JOYSTICK
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"

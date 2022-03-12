@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2022/03/12 07:28:19 nia Exp $
+# $NetBSD: Makefile,v 1.41 2022/03/12 08:01:51 nia Exp $
 
 DISTNAME=	polkit-0.120
 PKGREVISION=	2
@@ -82,6 +82,7 @@ pre-configure:
 
 .include "../../lang/libduktape/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

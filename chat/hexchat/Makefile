@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2022/03/04 07:48:16 nia Exp $
+# $NetBSD: Makefile,v 1.57 2022/03/12 08:01:53 nia Exp $
 
 DISTNAME=	hexchat-2.16.1
 CATEGORIES=	chat
@@ -27,17 +27,12 @@ PLIST_SUBST+=		SOEXT=${SOEXT}
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "NetBSD"
-# msgfmt: unknown option -- xml
-TOOLS_PLATFORM.msgfmt=
-.endif
-
 PKGCONFIG_OVERRIDE+=	data/pkgconfig/hexchat-plugin.pc.in
 
 .include "options.mk"
 .include "../../devel/meson/build.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 # Whether Python is required strictly as a build tool or also at runtime is

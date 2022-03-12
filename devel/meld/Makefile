@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2022/01/10 08:21:09 wiz Exp $
+# $NetBSD: Makefile,v 1.116 2022/03/12 08:01:53 nia Exp $
 
 DISTNAME=		meld-3.21.1
 CATEGORIES=		devel
@@ -18,9 +18,6 @@ DEPENDS+=		dconf-[0-9]*:../../devel/dconf
 USE_TOOLS+=		msgfmt pkg-config itstool
 # only used when building the python way (not meson)
 USE_TOOLS+=		intltool
-
-# Requires --desktop in msgfmt.
-_TOOLS_USE_PKGSRC.msgfmt=	yes
 
 SUBST_CLASSES+=		python3
 SUBST_FILES.python3=	meson.build
@@ -51,6 +48,7 @@ SUBST_MESSAGE.man=	Fixing man page installation path.
 BUILDLINK_API_DEPENDS.py-cairo+=	${PYPKGPREFIX}-cairo>=1.15.0
 .include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.48.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
