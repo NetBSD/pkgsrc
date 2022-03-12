@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2022/01/16 18:06:25 tnn Exp $
+@comment $NetBSD: PLIST,v 1.36 2022/03/12 23:04:45 tnn Exp $
 bin/gnuradio-config-info
 bin/gr_filter_design
 include/gnuradio/analog/agc.h
@@ -371,25 +371,25 @@ lib/cmake/gnuradio/gnuradio-runtimeConfig.cmake
 lib/cmake/gnuradio/gnuradio-runtimeTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-runtimeTargets.cmake
 lib/libgnuradio-analog.so
-lib/libgnuradio-analog.so.3.10.0
+lib/libgnuradio-analog.so.3.10.1
 lib/libgnuradio-analog.so.${PKGVERSION}
 lib/libgnuradio-audio.so
-lib/libgnuradio-audio.so.3.10.0
+lib/libgnuradio-audio.so.3.10.1
 lib/libgnuradio-audio.so.${PKGVERSION}
 lib/libgnuradio-blocks.so
-lib/libgnuradio-blocks.so.3.10.0
+lib/libgnuradio-blocks.so.3.10.1
 lib/libgnuradio-blocks.so.${PKGVERSION}
 lib/libgnuradio-fft.so
-lib/libgnuradio-fft.so.3.10.0
+lib/libgnuradio-fft.so.3.10.1
 lib/libgnuradio-fft.so.${PKGVERSION}
 lib/libgnuradio-filter.so
-lib/libgnuradio-filter.so.3.10.0
+lib/libgnuradio-filter.so.3.10.1
 lib/libgnuradio-filter.so.${PKGVERSION}
 lib/libgnuradio-pmt.so
-lib/libgnuradio-pmt.so.3.10.0
+lib/libgnuradio-pmt.so.3.10.1
 lib/libgnuradio-pmt.so.${PKGVERSION}
 lib/libgnuradio-runtime.so
-lib/libgnuradio-runtime.so.3.10.0
+lib/libgnuradio-runtime.so.3.10.1
 lib/libgnuradio-runtime.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-analog.pc
 lib/pkgconfig/gnuradio-audio.pc
@@ -457,6 +457,9 @@ ${PYSITELIB}/gnuradio/blocks/parse_file_metadata.pyo
 ${PYSITELIB}/gnuradio/blocks/pdu_compatibility.py
 ${PYSITELIB}/gnuradio/blocks/pdu_compatibility.pyc
 ${PYSITELIB}/gnuradio/blocks/pdu_compatibility.pyo
+${PYSITELIB}/gnuradio/blocks/sigmf_sink_minimal.py
+${PYSITELIB}/gnuradio/blocks/sigmf_sink_minimal.pyc
+${PYSITELIB}/gnuradio/blocks/sigmf_sink_minimal.pyo
 ${PYSITELIB}/gnuradio/blocks/stream_to_vector_decimator.py
 ${PYSITELIB}/gnuradio/blocks/stream_to_vector_decimator.pyc
 ${PYSITELIB}/gnuradio/blocks/stream_to_vector_decimator.pyo

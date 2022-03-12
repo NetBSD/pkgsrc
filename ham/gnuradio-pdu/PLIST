@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/01/16 18:06:26 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/03/12 23:04:45 tnn Exp $
 include/gnuradio/pdu/add_system_time.h
 include/gnuradio/pdu/api.h
 include/gnuradio/pdu/pdu_filter.h
@@ -16,7 +16,7 @@ lib/cmake/gnuradio/gnuradio-pduConfig.cmake
 lib/cmake/gnuradio/gnuradio-pduTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-pduTargets.cmake
 lib/libgnuradio-pdu.so
-lib/libgnuradio-pdu.so.3.10.0
+lib/libgnuradio-pdu.so.3.10.1
 lib/libgnuradio-pdu.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-pdu.pc
 ${PYSITELIB}/gnuradio/pdu/__init__.py
