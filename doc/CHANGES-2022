@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1402 2022/03/12 21:16:20 mef Exp $
+$NetBSD: CHANGES-2022,v 1.1403 2022/03/12 21:26:31 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1782,3 +1782,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed sysutils/u-boot-rockpro64-ayufan successor sysutils/u-boot-rockpro64 [tnn 2022-03-12]
 	Updated www/wordpress to 5.9.2 [morr 2022-03-12]
 	Updated cad/klayout to 0.27.8 [mef 2022-03-12]
+	Updated textproc/lowdown to 0.11.1 [fcambus 2022-03-12]
