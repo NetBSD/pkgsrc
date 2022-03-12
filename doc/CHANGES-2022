@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1403 2022/03/12 21:26:31 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.1404 2022/03/12 21:52:24 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1783,3 +1783,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/wordpress to 5.9.2 [morr 2022-03-12]
 	Updated cad/klayout to 0.27.8 [mef 2022-03-12]
 	Updated textproc/lowdown to 0.11.1 [fcambus 2022-03-12]
+	Updated wm/jwm to 2.4.1 [tsutsui 2022-03-12]
