@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1395 2022/03/12 06:07:59 kim Exp $
+$NetBSD: CHANGES-2022,v 1.1396 2022/03/12 07:33:48 kim Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1772,3 +1772,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated cad/kicad-symbols to 6.0.2 [tnn 2022-03-11]
 	Updated cad/kicad-templates to 6.0.2 [tnn 2022-03-11]
 	Updated shells/zsh to 5.8.1 [kim 2022-03-12]
+	Updated textproc/libxml2 to 2.9.13 [kim 2022-03-12]
