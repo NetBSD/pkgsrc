@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2022/01/16 18:06:25 tnn Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/03/12 23:04:45 tnn Exp $
 bin/gnuradio-companion
 bin/grcc
 ${PYSITELIB}/gnuradio/grc/__init__.py
@@ -434,6 +434,8 @@ share/gnuradio/grc/blocks/blocks_sample_and_hold_xx.block.yml
 share/gnuradio/grc/blocks/blocks_selector.block.yml
 share/gnuradio/grc/blocks/blocks_short_to_char.block.yml
 share/gnuradio/grc/blocks/blocks_short_to_float.block.yml
+share/gnuradio/grc/blocks/blocks_sigmf_sink_minimal.block.yml
+share/gnuradio/grc/blocks/blocks_sigmf_source_minimal.block.yml
 share/gnuradio/grc/blocks/blocks_skiphead.block.yml
 share/gnuradio/grc/blocks/blocks_stream_demux.block.yml
 share/gnuradio/grc/blocks/blocks_stream_mux.block.yml
