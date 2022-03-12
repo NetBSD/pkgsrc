@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/02/15 14:03:15 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/03/12 08:31:39 adam Exp $
 
-DISTNAME=	nbclient-0.5.11
+DISTNAME=	nbclient-0.5.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nbclient/}
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-jupyter_client>=6.1.5:../../devel/py-jupyter_client
 DEPENDS+=	${PYPKGPREFIX}-nbformat>=5.0:../../www/py-nbformat
 DEPENDS+=	${PYPKGPREFIX}-nest-asyncio>0:../../devel/py-nest-asyncio
-DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.2:../../devel/py-traitlets
+DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.0.0:../../devel/py-traitlets
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipykernel>0:../../devel/py-ipykernel
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipython>0:../../devel/py-ipython
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipywidgets>0:../../www/py-ipywidgets
