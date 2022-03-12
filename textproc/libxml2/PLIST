@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2019/11/06 13:19:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.47 2022/03/12 07:33:22 kim Exp $
 bin/xml2-config
 bin/xmlcatalog
 bin/xmllint
@@ -58,7 +58,7 @@ man/man1/xmlcatalog.1
 man/man1/xmllint.1
 man/man3/libxml.3
 share/aclocal/libxml.m4
-share/doc/${PKGNAME}/Copyright
+share/doc/libxml2/Copyright
 share/doc/libxml2/DOM.gif
 share/doc/libxml2/FAQ.html
 share/doc/libxml2/Libxml2-Logo-180x168.gif
@@ -197,7 +197,6 @@ share/doc/libxml2/tutorial/includekeyword.c
 share/doc/libxml2/tutorial/includexpath.c
 share/doc/libxml2/tutorial/index.html
 share/doc/libxml2/tutorial/ix01.html
-share/doc/libxml2/tutorial/xmltutorial.pdf
 share/doc/libxml2/w3c.png
 share/doc/libxml2/writer.xml
 share/doc/libxml2/xml.html
@@ -260,7 +259,7 @@ share/gtk-doc/html/libxml2/libxml2-xmlwriter.html
 share/gtk-doc/html/libxml2/libxml2-xpath.html
 share/gtk-doc/html/libxml2/libxml2-xpathInternals.html
 share/gtk-doc/html/libxml2/libxml2-xpointer.html
-share/gtk-doc/html/libxml2/libxml2.devhelp
+share/gtk-doc/html/libxml2/libxml2.devhelp2
 share/gtk-doc/html/libxml2/right.png
 share/gtk-doc/html/libxml2/style.css
 share/gtk-doc/html/libxml2/up.png
