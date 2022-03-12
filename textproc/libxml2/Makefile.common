@@ -1,11 +1,12 @@
-# $NetBSD: Makefile.common,v 1.14 2021/05/23 19:31:47 nia Exp $
+# $NetBSD: Makefile.common,v 1.15 2022/03/12 07:33:22 kim Exp $
 #
 # used by textproc/libxml2/Makefile
 # used by textproc/py-libxml2/Makefile
 
-DISTNAME=	libxml2-2.9.12
+DISTNAME=	libxml2-2.9.13
 CATEGORIES=	textproc
-MASTER_SITES=	http://xmlsoft.org/sources/
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxml2/${PKGVERSION_NOREV:R}/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xmlsoft.org/

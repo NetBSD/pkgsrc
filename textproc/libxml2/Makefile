@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.161 2021/12/08 16:02:43 adam Exp $
+# $NetBSD: Makefile,v 1.162 2022/03/12 07:33:22 kim Exp $
 
-PKGREVISION=	2
 .include "../../textproc/libxml2/Makefile.common"
 
 COMMENT=	XML parser library from the GNOME project
@@ -10,7 +9,7 @@ USE_FEATURES=		glob
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-html-subdir=libxml2
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/libxml2
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 CONFIGURE_ARGS+=	--with-lzma=${BUILDLINK_PREFIX.xz}
@@ -40,6 +39,9 @@ BUILDLINK_TRANSFORM.Darwin+=	rm:-Wno-array-bounds
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Werror=format=2
 
 LDFLAGS.SCO_SV+=	-lm
+
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/share/examples/libxml2/README
 
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
