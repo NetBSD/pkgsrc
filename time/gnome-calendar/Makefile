@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/01/03 08:23:59 cirnatdan Exp $
+# $NetBSD: Makefile,v 1.12 2022/03/12 07:42:32 nia Exp $
 
 DISTNAME=	gnome-calendar-40.0
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
@@ -13,13 +13,6 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config msgfmt xgettext
 USE_TOOLS+=	gdbus-codegen
-
-.include "../../mk/bsd.prefs.mk"
-
-# msgfmt: unknown option -- desktop
-.if ${OPSYS} == "NetBSD"
-TOOLS_PLATFORM.msgfmt=
-.endif
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
