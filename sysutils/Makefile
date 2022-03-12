@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.999 2022/03/10 23:49:17 gutteridge Exp $
+# $NetBSD: Makefile,v 1.1000 2022/03/12 14:28:54 tnn Exp $
 #
 
 COMMENT=	System utilities
@@ -780,7 +780,6 @@ SUBDIR+=	u-boot-pocketchip
 SUBDIR+=	u-boot-roc-rk3328-cc
 SUBDIR+=	u-boot-rock64
 SUBDIR+=	u-boot-rockpro64
-SUBDIR+=	u-boot-rockpro64-ayufan
 SUBDIR+=	u-boot-rpi3-32
 SUBDIR+=	u-boot-sopine-baseboard
 SUBDIR+=	u-boot-tinker

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:20:20 nia Exp $
-
-BLAKE2s (u-boot-rockpro64-ayufan-2020.01-ayufan-2014-gff2cdd38.tar.gz) = 0c9a52b2a58254af888cd4fd2c3ded4e1fd1478be1127689023a8bee752ae5a5
-SHA512 (u-boot-rockpro64-ayufan-2020.01-ayufan-2014-gff2cdd38.tar.gz) = 938bb081805b1acfb75479115c3e38406b3753f60f13e663dc2a26921380b5c3fbd2adb477e2a83d28bab551294ae697fde72994514f55ed5e36894a29d4502b
-Size (u-boot-rockpro64-ayufan-2020.01-ayufan-2014-gff2cdd38.tar.gz) = 18847179 bytes
