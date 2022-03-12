@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/03/12 07:37:42 nia Exp $
+# $NetBSD: Makefile,v 1.5 2022/03/12 08:01:51 nia Exp $
 
 DISTNAME=	gnome-characters-3.34.0
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
@@ -16,6 +16,7 @@ USE_TOOLS+=	pkg-config msgfmt xgettext
 PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/meson/build.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/gjs/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/03/04 08:10:10 nia Exp $
+# $NetBSD: Makefile,v 1.16 2022/03/12 08:01:53 nia Exp $
 
 DISTNAME=	srain-1.3.2
 CATEGORIES=	chat
@@ -19,13 +19,6 @@ OWN_DIRS+=	${PKG_SYSCONFDIR}/srain
 EGDIR=		${PREFIX}/share/examples/srain
 CONF_FILES=	${EGDIR}/builtin.cfg ${PKG_SYSCONFDIR}/srain/builtin.cfg
 
-.include "../../mk/bsd.prefs.mk"
-
-# msgfmt: unknown option -- desktop
-.if ${OPSYS} == "NetBSD"
-TOOLS_PLATFORM.msgfmt=
-.endif
-
 SUBST_CLASSES+=		sphinx
 SUBST_STAGE.sphinx=	pre-configure
 SUBST_FILES.sphinx=	doc/meson.build
@@ -40,6 +33,7 @@ post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/share/srain/themes/meson.build
 
 .include "../../devel/meson/build.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/libconfig/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/versioned_dependencies.mk"

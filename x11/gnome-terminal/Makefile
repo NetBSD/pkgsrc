@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2022/03/12 07:48:53 nia Exp $
+# $NetBSD: Makefile,v 1.100 2022/03/12 08:01:52 nia Exp $
 
 DISTNAME=	gnome-terminal-3.36.2
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-terminal/${PKGVERSION_NOREV:R}/}
@@ -26,6 +26,7 @@ post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/lib/systemd/user/gnome-terminal-server.service
 
 .include "../../devel/dconf/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

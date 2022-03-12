@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2022/03/11 08:59:27 nia Exp $
+# $NetBSD: Makefile,v 1.65 2022/03/12 08:01:49 nia Exp $
 
 DISTNAME=	ghex-3.18.4
 PKGREVISION=	4
@@ -19,6 +19,7 @@ PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/data/gtkhex-3.pc
 
 .include "../../devel/meson/build.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

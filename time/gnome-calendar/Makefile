@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/03/12 07:42:32 nia Exp $
+# $NetBSD: Makefile,v 1.13 2022/03/12 08:01:52 nia Exp $
 
 DISTNAME=	gnome-calendar-40.0
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
@@ -17,6 +17,7 @@ USE_TOOLS+=	gdbus-codegen
 PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/meson/build.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/libdazzle/buildlink3.mk"
 .include "../../devel/libgweather/buildlink3.mk"
