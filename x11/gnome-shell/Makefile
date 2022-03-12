@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/01/03 08:23:59 cirnatdan Exp $
+# $NetBSD: Makefile,v 1.16 2022/03/12 07:48:52 nia Exp $
 
 DISTNAME=	gnome-shell-40.2
 PKGREVISION=	4
@@ -30,13 +30,6 @@ LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/gnome-shell
 
 CONF_FILES+=	${PREFIX}/share/examples/xdg/autostart/gnome-shell-overrides-migration.desktop \
 		${PKG_SYSCONFDIR}/xdg/autostart/gnome-shell-overrides-migration.desktop
-
-.include "../../mk/bsd.prefs.mk"
-
-# msgfmt: unknown option -- desktop
-.if ${OPSYS} == "NetBSD"
-TOOLS_PLATFORM.msgfmt=
-.endif
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
