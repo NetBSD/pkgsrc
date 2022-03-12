@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.712 2022/03/11 00:33:12 rillig Exp $
+# $NetBSD: Makefile,v 1.713 2022/03/12 12:03:40 rillig Exp $
 
-PKGNAME=	pkglint-21.4.3
+PKGNAME=	pkglint-21.4.4
 CATEGORIES=	pkgtools
 DISTNAME=	tools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=golang/}
@@ -50,8 +50,6 @@ do-test:
 
 do-install:
 	${RUN} cd ${WRKDIR} && ${PAX} -rw bin/pkglint ${DESTDIR}${PREFIX}
-	${RUN} cd ${WRKDIR} && ${PAX} -rw src/netbsd.org/pkglint	\
-		pkg/${GO_PLATFORM}/netbsd.org/pkglint* ${DESTDIR}${PREFIX}/gopkg
 
 post-install: do-install-man
 
