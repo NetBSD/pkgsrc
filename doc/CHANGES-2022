@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1401 2022/03/12 17:17:28 morr Exp $
+$NetBSD: CHANGES-2022,v 1.1402 2022/03/12 21:16:20 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1781,3 +1781,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated pkgtools/pkglint to 21.4.4 [rillig 2022-03-12]
 	Removed sysutils/u-boot-rockpro64-ayufan successor sysutils/u-boot-rockpro64 [tnn 2022-03-12]
 	Updated www/wordpress to 5.9.2 [morr 2022-03-12]
+	Updated cad/klayout to 0.27.8 [mef 2022-03-12]
