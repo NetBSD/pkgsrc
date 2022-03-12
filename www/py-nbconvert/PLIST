@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/02/05 11:29:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/03/12 08:34:54 adam Exp $
 bin/jupyter-dejavu-${PYVERSSUFFIX}
 bin/jupyter-nbconvert-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -373,6 +373,9 @@ ${PYSITELIB}/nbconvert/utils/tests/test_pandoc.pyo
 ${PYSITELIB}/nbconvert/utils/tests/test_version.py
 ${PYSITELIB}/nbconvert/utils/tests/test_version.pyc
 ${PYSITELIB}/nbconvert/utils/tests/test_version.pyo
+${PYSITELIB}/nbconvert/utils/text.py
+${PYSITELIB}/nbconvert/utils/text.pyc
+${PYSITELIB}/nbconvert/utils/text.pyo
 ${PYSITELIB}/nbconvert/utils/version.py
 ${PYSITELIB}/nbconvert/utils/version.pyc
 ${PYSITELIB}/nbconvert/utils/version.pyo
