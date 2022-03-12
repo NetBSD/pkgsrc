@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/11/14 18:42:27 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/03/12 21:52:08 tsutsui Exp $
 bin/jwm
 man/man1/jwm.1
 share/examples/jwm/system.jwmrc
@@ -20,5 +20,6 @@ share/locale/pt/LC_MESSAGES/jwm.mo
 share/locale/pt_BR/LC_MESSAGES/jwm.mo
 share/locale/ru/LC_MESSAGES/jwm.mo
 share/locale/tr/LC_MESSAGES/jwm.mo
+share/locale/uk/LC_MESSAGES/jwm.mo
 share/locale/zh_CN/LC_MESSAGES/jwm.mo
 share/locale/zh_TW/LC_MESSAGES/jwm.mo
