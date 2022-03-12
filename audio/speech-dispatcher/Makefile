@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/03/11 08:56:02 nia Exp $
+# $NetBSD: Makefile,v 1.24 2022/03/12 08:01:52 nia Exp $
 
 DISTNAME=	speech-dispatcher-0.10.2
 PKGREVISION=	3
@@ -81,6 +81,7 @@ BUILDLINK_API_DEPENDS.glib2	+=	glib2>=2.66.0
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/dotconf/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../lang/python/application.mk"

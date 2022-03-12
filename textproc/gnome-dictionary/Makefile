@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/03/12 07:40:48 nia Exp $
+# $NetBSD: Makefile,v 1.8 2022/03/12 08:01:51 nia Exp $
 
 DISTNAME=	gnome-dictionary-3.26.1
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
@@ -21,6 +21,7 @@ PYTHON_FOR_BUILD_ONLY=	tool
 LDFLAGS.SunOS+=	-lnsl
 
 .include "../../devel/meson/build.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk3/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.208 2022/03/12 07:44:12 nia Exp $
+# $NetBSD: Makefile,v 1.209 2022/03/12 08:01:52 nia Exp $
 
 DISTNAME=	epiphany-40.6
 CATEGORIES=	www gnome
@@ -22,6 +22,7 @@ PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/meson/build.mk"
 .include "../../archivers/libarchive/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.64.0
 .include "../../devel/glib2/schemas.mk"
 BUILDLINK_API_DEPENDS.libdazzle+=	libdazzle>=3.37.1

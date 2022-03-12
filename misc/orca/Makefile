@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2022/03/12 07:14:17 nia Exp $
+# $NetBSD: Makefile,v 1.60 2022/03/12 08:01:50 nia Exp $
 
 DISTNAME=	orca-3.34.1
 PKGREVISION=	6
@@ -29,6 +29,7 @@ CHECK_PORTABILITY_SKIP+=	run_pylint.sh.in
 
 .include "../../devel/glib2/schemas.mk"
 .include "../../audio/speech-dispatcher/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/libwnck3/buildlink3.mk"
 .include "../../devel/py-gobject3-common/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

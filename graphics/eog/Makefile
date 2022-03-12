@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2022/03/12 07:06:26 nia Exp $
+# $NetBSD: Makefile,v 1.115 2022/03/12 08:01:49 nia Exp $
 
 DISTNAME=	eog-40.3
 CATEGORIES=	graphics gnome
@@ -25,6 +25,7 @@ PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/meson-private/eog.pc
 
 .include "../../devel/meson/build.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.42.0
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"

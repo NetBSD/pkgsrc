@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2022/03/12 07:11:13 nia Exp $
+# $NetBSD: Makefile,v 1.84 2022/03/12 08:01:50 nia Exp $
 
 PKGREVISION= 2
 .include "Makefile.common"
@@ -57,6 +57,7 @@ BUILDLINK_TRANSFORM+=	rm:-Wno-unused-but-set-variable
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/dconf/database.mk"
 .include "../../devel/dconf/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.6
 BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"

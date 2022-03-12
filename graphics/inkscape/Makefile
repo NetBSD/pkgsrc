@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.245 2022/03/12 07:06:26 nia Exp $
+# $NetBSD: Makefile,v 1.246 2022/03/12 08:01:49 nia Exp $
 
 DISTNAME=	inkscape-1.1.2
 CATEGORIES=	graphics
@@ -98,6 +98,7 @@ BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=7.4
 .include "../../converters/libwpg/buildlink3.mk"
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/googletest/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libsigcpp+=	libsigc++>=2.0.12
 .include "../../devel/libsigc++/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/03/12 07:06:26 nia Exp $
+# $NetBSD: Makefile,v 1.4 2022/03/12 08:01:49 nia Exp $
 
 DISTNAME=	gnome-screenshot-3.38.0
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
@@ -16,6 +16,7 @@ USE_TOOLS+=	pkg-config msgfmt xgettext
 PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../devel/meson/build.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/libhandy1/buildlink3.mk"

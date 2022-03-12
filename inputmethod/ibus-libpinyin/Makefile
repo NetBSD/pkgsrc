@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/03/12 07:11:14 nia Exp $
+# $NetBSD: Makefile,v 1.27 2022/03/12 08:01:50 nia Exp $
 
 DISTNAME=	ibus-libpinyin-1.12.0
 PKGREVISION=	2
@@ -38,6 +38,7 @@ CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-headers}
 
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
 .include "../../textproc/libpinyin/buildlink3.mk"

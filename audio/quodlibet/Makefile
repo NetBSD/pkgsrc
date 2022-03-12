@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/03/11 08:56:02 nia Exp $
+# $NetBSD: Makefile,v 1.17 2022/03/12 08:01:48 nia Exp $
 
 DISTNAME=	quodlibet-4.4.0
 PKGREVISION=	4
@@ -43,6 +43,7 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/* ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 || ${TRUE}
 
 .include "../../lang/python/egg.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-good/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"

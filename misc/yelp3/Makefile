@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2022/03/12 07:14:17 nia Exp $
+# $NetBSD: Makefile,v 1.80 2022/03/12 08:01:50 nia Exp $
 
 DISTNAME=		yelp-3.32.0
 PKGREVISION=		11
@@ -21,6 +21,7 @@ BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.13.3
 BUILDLINK_API_DEPENDS.libxslt+=	libxslt>=1.1.4
 
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
@@ -28,7 +29,5 @@ BUILDLINK_API_DEPENDS.libxslt+=	libxslt>=1.1.4
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../textproc/yelp-xsl/buildlink3.mk"
-
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-
 .include "../../mk/bsd.pkg.mk"

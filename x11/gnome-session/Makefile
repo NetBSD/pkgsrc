@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.207 2022/03/12 07:48:52 nia Exp $
+# $NetBSD: Makefile,v 1.208 2022/03/12 08:01:52 nia Exp $
 
 DISTNAME=		gnome-session-40.1.1
 PKGREVISION=		1
@@ -36,6 +36,7 @@ PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../devel/meson/build.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.16.0
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/pango/buildlink3.mk"

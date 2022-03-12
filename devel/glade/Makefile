@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2021/12/08 16:01:52 adam Exp $
+# $NetBSD: Makefile,v 1.104 2022/03/12 08:01:53 nia Exp $
 
 DISTNAME=		glade-3.36.0
 PKGREVISION=		4
@@ -19,11 +19,9 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config intltool gmake msgfmt
 USE_TOOLS+=		itstool
 
-# Requires --xml in msgfmt.
-_TOOLS_USE_PKGSRC.msgfmt=	yes
-
 PKGCONFIG_OVERRIDE+=	data/gladeui-2.0.pc.in
 
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
