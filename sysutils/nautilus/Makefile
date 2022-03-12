@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2021/12/08 16:06:34 adam Exp $
+# $NetBSD: Makefile,v 1.155 2022/03/12 07:37:42 nia Exp $
 
 DISTNAME=	nautilus-3.38.1
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
@@ -15,9 +15,6 @@ USE_TOOLS+=	pkg-config msgfmt xgettext
 USE_TOOLS+=	gdbus-codegen
 
 DEPENDS+=	gnome-tracker-miners-[0-9]*:../../sysutils/gnome-tracker-miners
-
-# XXX msgfmt: unknown option -- desktop
-_TOOLS_USE_PKGSRC.msgfmt=	yes
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
