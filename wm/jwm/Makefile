@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2021/12/08 16:06:51 adam Exp $
+# $NetBSD: Makefile,v 1.51 2022/03/12 21:52:08 tsutsui Exp $
 
-DISTNAME=		jwm-2.4.0
-PKGREVISION=		1
+DISTNAME=		jwm-2.4.1
 CATEGORIES=		wm x11
 MASTER_SITES=		http://joewing.net/projects/jwm/releases/
 EXTRACT_SUFX=		.tar.xz
