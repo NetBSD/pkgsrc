@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1399 2022/03/12 12:03:51 rillig Exp $
+$NetBSD: CHANGES-2022,v 1.1400 2022/03/12 14:28:54 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1779,3 +1779,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-nbconvert to 6.4.3 [adam 2022-03-12]
 	Updated www/py-uvicorn to 0.17.6 [adam 2022-03-12]
 	Updated pkgtools/pkglint to 21.4.4 [rillig 2022-03-12]
+	Removed sysutils/u-boot-rockpro64-ayufan successor sysutils/u-boot-rockpro64 [tnn 2022-03-12]
