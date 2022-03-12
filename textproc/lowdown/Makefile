@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2022/02/23 08:20:29 fcambus Exp $
+# $NetBSD: Makefile,v 1.27 2022/03/12 21:26:18 fcambus Exp $
 
-DISTNAME=	lowdown-0.11.0
+DISTNAME=	lowdown-0.11.1
 CATEGORIES=	textproc
 MASTER_SITES=	https://kristaps.bsd.lv/lowdown/snapshots/
 
@@ -20,6 +20,8 @@ SUBST_SED.install+=	-e 's,/usr/local,${PREFIX},' \
 SUBST_FILES.install+=	configure
 SUBST_STAGE.install=	pre-configure
 SUBST_MESSAGE.install=	Fixing installation path.
+
+INSTALL_TARGET=		install install_libs
 
 TEST_TARGET=	regress
 
