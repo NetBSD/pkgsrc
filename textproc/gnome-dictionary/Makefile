@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/12/08 16:06:44 adam Exp $
+# $NetBSD: Makefile,v 1.7 2022/03/12 07:40:48 nia Exp $
 
 DISTNAME=	gnome-dictionary-3.26.1
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
@@ -10,9 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Apps/Dictionary
 COMMENT=	GNOME application to look up definitions
 LICENSE=	gnu-gpl-v2
-
-# XXX msgfmt: unknown option -- desktop
-_TOOLS_USE_PKGSRC.msgfmt=	yes
 
 TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
