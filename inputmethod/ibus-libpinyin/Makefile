@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2021/12/08 16:05:14 adam Exp $
+# $NetBSD: Makefile,v 1.26 2022/03/12 07:11:14 nia Exp $
 
 DISTNAME=	ibus-libpinyin-1.12.0
 PKGREVISION=	2
@@ -26,11 +26,6 @@ PLIST_SUBST+=			PYVERSION_DIGIT=${PYVERSION_DIGIT}
 
 .if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 .  include "../../devel/libuuid/buildlink3.mk"
-.endif
-
-# msgfmt: unknown option -- desktop
-.if ${OPSYS} == "NetBSD"
-TOOLS_PLATFORM.msgfmt=
 .endif
 
 .if (!empty(PKGSRC_COMPILER:Mgcc) && !empty(CC_VERSION:Mgcc-4.[4-9]*)) || !empty(PKGSRC_COMPILER:Mclang)
