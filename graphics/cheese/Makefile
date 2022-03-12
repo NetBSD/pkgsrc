@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2021/12/08 16:04:49 adam Exp $
+# $NetBSD: Makefile,v 1.101 2022/03/12 07:06:26 nia Exp $
 
 DISTNAME=	cheese-3.34.0
 PKGREVISION=	9
@@ -25,9 +25,6 @@ PYTHON_FOR_BUILD_ONLY=	tool
 # workaround for build failure
 # https://gitlab.gnome.org/GNOME/json-glib/issues/35
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/libcheese
-
-# XXX msgfmt: unknown option -- desktop
-_TOOLS_USE_PKGSRC.msgfmt=	yes
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/meson-private/cheese.pc

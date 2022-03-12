@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/12/08 16:04:55 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/03/12 07:06:26 nia Exp $
 
 DISTNAME=	gnome-screenshot-3.38.0
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
@@ -12,13 +12,6 @@ COMMENT=	Screenshot capture utility for GNOME
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	pkg-config msgfmt xgettext
-
-.include "../../mk/bsd.prefs.mk"
-
-# msgfmt: unknown option -- desktop
-.if ${OPSYS} == "NetBSD"
-TOOLS_PLATFORM.msgfmt=
-.endif
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
