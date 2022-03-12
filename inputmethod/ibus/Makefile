@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2022/01/28 14:02:33 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2022/03/12 07:11:13 nia Exp $
 
 PKGREVISION= 2
 .include "Makefile.common"
@@ -14,9 +14,7 @@ PYTHON_VERSIONS_ACCEPTED=	27
 
 GNU_CONFIGURE=			yes
 USE_LIBTOOL=			yes
-# XXX fails without GNU msgfmt
-_TOOLS_USE_PKGSRC.msgfmt=	yes
-USE_TOOLS+=			pkg-config intltool gmsgfmt gmake msgmerge
+USE_TOOLS+=			pkg-config intltool msgfmt gmake msgmerge
 USE_LANGUAGES=			c c++
 USE_PKGLOCALEDIR=		yes
 
