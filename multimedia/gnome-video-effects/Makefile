@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/08/17 20:19:38 leot Exp $
+# $NetBSD: Makefile,v 1.3 2022/03/12 07:17:19 nia Exp $
 
 DISTNAME=	gnome-video-effects-0.5.0
 PKGREVISION=	1
@@ -16,9 +16,6 @@ USE_TOOLS+=	pkg-config msgfmt xgettext
 PYTHON_FOR_BUILD_ONLY=	tool
 
 PKGCONFIG_OVERRIDE+=	gnome-video-effects.pc.in
-
-# XXX msgfmt: unknown option -- desktop
-_TOOLS_USE_PKGSRC.msgfmt=	yes
 
 .include "../../devel/meson/build.mk"
 .include "../../multimedia/frei0r/buildlink3.mk"
