@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.244 2022/03/02 02:28:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.245 2022/03/12 07:06:26 nia Exp $
 
 DISTNAME=	inkscape-1.1.2
 CATEGORIES=	graphics
@@ -19,9 +19,6 @@ DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=		${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=		${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
 DEPENDS+=		${PYPKGPREFIX}-scour-[0-9]*:../../graphics/py-scour
-# for desktop
-TOOL_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
-TOOLS_PLATFORM.msgfmt=	# empty
 
 WRKSRC=		${WRKDIR}/inkscape-1.1.2_2022-02-04_0a00cf5339
 
