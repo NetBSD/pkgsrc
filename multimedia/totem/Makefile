@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2021/12/20 07:02:20 nia Exp $
+# $NetBSD: Makefile,v 1.121 2022/03/12 07:17:19 nia Exp $
 
 DISTNAME=	totem-3.34.1
 PKGREVISION=	13
@@ -23,9 +23,6 @@ PKGCONFIG_OVERRIDE+=	data/totem.pc.in
 # workaround for build failure
 # https://gitlab.gnome.org/GNOME/json-glib/issues/35
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/src
-
-# XXX msgfmt: unknown option -- desktop
-_TOOLS_USE_PKGSRC.msgfmt=	yes
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/schemas.mk"
