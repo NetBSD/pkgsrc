@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2021/05/02 11:06:14 nia Exp $
+# $NetBSD: Makefile.common,v 1.24 2022/03/12 07:19:24 nia Exp $
 #
 # used by print/evince3/Makefile
 # would probably be used by print/evince3-nautilus/Makefile if that existed
@@ -22,9 +22,6 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config itstool
 USE_TOOLS+=		gdbus-codegen
 USE_LANGUAGES=		c c++
-
-# Requires --desktop in msgfmt.
-_TOOLS_USE_PKGSRC.msgfmt=	yes
 
 CONFIGURE_ARGS+=	--disable-browser-plugin
 CONFIGURE_ARGS+=	--without-gspell
