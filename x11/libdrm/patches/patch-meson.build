@@ -1,0 +1,15 @@
+$NetBSD: patch-meson.build,v 1.1 2022/03/13 15:20:01 tnn Exp $
+
+xxx how to deal with this properly?
+
+--- meson.build.orig	2021-07-02 12:49:05.442438400 +0000
++++ meson.build
+@@ -35,7 +35,7 @@ config.set10('UDEV', get_option('udev'))
+ with_freedreno_kgsl = get_option('freedreno-kgsl')
+ with_install_tests = get_option('install-test-programs')
+ 
+-if ['freebsd', 'dragonfly', 'netbsd'].contains(host_machine.system())
++if ['freebsd', 'dragonfly'].contains(host_machine.system())
+   dep_pthread_stubs = dependency('pthread-stubs', version : '>= 0.4')
+ else
+   dep_pthread_stubs = []

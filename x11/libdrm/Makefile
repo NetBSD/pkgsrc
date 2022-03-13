@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.97 2021/12/01 13:01:15 nia Exp $
+# $NetBSD: Makefile,v 1.98 2022/03/13 15:20:01 tnn Exp $
 
-DISTNAME=		libdrm-2.4.100
+DISTNAME=		libdrm-2.4.110
 CATEGORIES=		x11 graphics
 MASTER_SITES=		https://dri.freedesktop.org/libdrm/
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		https://dri.freedesktop.org/wiki/DRM
@@ -13,11 +14,20 @@ LICENSE=		mit
 ONLY_FOR_PLATFORM=	NetBSD-*-* DragonFly-*-* FreeBSD-*-* OpenBSD-*-* \
 			Linux-*-* SunOS-*-*
 
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config
-USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
+
+PKGCONFIG_OVERRIDE+=	amdgpu/libdrm_amdgpu.pc.in
+PKGCONFIG_OVERRIDE+=	etnaviv/libdrm_etnaviv.pc.in
+PKGCONFIG_OVERRIDE+=	exynos/libdrm_exynos.pc.in
+PKGCONFIG_OVERRIDE+=	freedreno/libdrm_freedreno.pc.in
+PKGCONFIG_OVERRIDE+=	intel/libdrm_intel.pc.in
+PKGCONFIG_OVERRIDE+=	libkms/libkms.pc.in
+PKGCONFIG_OVERRIDE+=	nouveau/libdrm_nouveau.pc.in
+PKGCONFIG_OVERRIDE+=	omap/libdrm_omap.pc.in
+PKGCONFIG_OVERRIDE+=	radeon/libdrm_radeon.pc.in
+PKGCONFIG_OVERRIDE+=	tegra/libdrm_tegra.pc.in
+PKGCONFIG_OVERRIDE+=	vc4/libdrm_vc4.pc.in
 PKGCONFIG_OVERRIDE+=	libdrm.pc.in
-GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -32,34 +42,57 @@ ATOMIC_OPS_CHECK=	0
 ATOMIC_OPS_CHECK=	1
 .else
 .  include "../../devel/libatomic_ops/buildlink3.mk"
-CONFIGURE_ENV+=		drm_cv_atomic_primitives=libatomic-ops
 .endif
 
-CONFIGURE_ARGS+=	PTHREADSTUBS_CFLAGS=-I${PREFIX}/include \
-			PTHREADSTUBS_LIBS=-L${PREFIX}/lib
-CONFIGURE_ARGS+=	--disable-manpages
-CONFIGURE_ARGS+=	--disable-valgrind
+PLIST_VARS+=	intel arm kms
 
-LDFLAGS.NetBSD+=	-lpci
+.if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD"
+MESON_ARGS+=	-Dlibkms=true
+PLIST.kms=	yes
+.else
+MESON_ARGS+=	-Dlibkms=false
+.endif
 
 PLIST_VARS+=	intel arm kms
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
-# libpciaccess is needed to build support for the intel KMS API,
-# libdrm_intel.so.
+MESON_ARGS+=	-Dintel=true
+MESON_ARGS+=	-Dvmwgfx=true
 .include "../../sysutils/libpciaccess/buildlink3.mk"
 PLIST.intel=	yes
-.elif !empty(MACHINE_ARCH:Marm*) || \
-      !empty(MACHINE_ARCH:Mearm*) || \
-      ${MACHINE_ARCH} == "aarch64"
-PLIST.arm=	yes
-#.else
-#CONFIGURE_ARGS+=	--disable-intel
+.else
+MESON_ARGS+=	-Dintel=false
+MESON_ARGS+=	-Dvmwgfx=false
 .endif
 
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux"
-PLIST.kms=	yes
+MESON_ARGS+=	-Dradeon=true
+MESON_ARGS+=	-Damdgpu=true
+MESON_ARGS+=	-Dnouveau=true
+
+.if !empty(MACHINE_ARCH:Marm*) || \
+      !empty(MACHINE_ARCH:Mearm*) || \
+      ${MACHINE_ARCH} == "aarch64"
+MESON_ARGS+=	-Detnaviv=true
+MESON_ARGS+=	-Dexynos=true
+MESON_ARGS+=	-Dfreedreno=true
+MESON_ARGS+=	-Dvc4=true
+MESON_ARGS+=	-Domap=true
+MESON_ARGS+=	-Dtegra=true
+PLIST.arm=	yes
+.else
+MESON_ARGS+=	-Detnaviv=false
+MESON_ARGS+=	-Dexynos=false
+MESON_ARGS+=	-Dfreedreno=false
+MESON_ARGS+=	-Domap=false
+MESON_ARGS+=	-Dtegra=false
+MESON_ARGS+=	-Dvc4=false
 .endif
+
+MESON_ARGS+=	-Dman-pages=false
+MESON_ARGS+=	-Dvalgrind=false
+
+LDFLAGS.NetBSD+=	-lpci
 
 X11_BUILTIN_NAME?=		libdrm
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
+.include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"

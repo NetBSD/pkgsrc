@@ -1,13 +1,20 @@
-$NetBSD: distinfo,v 1.99 2021/10/26 11:34:08 nia Exp $
+$NetBSD: distinfo,v 1.100 2022/03/13 15:20:01 tnn Exp $
 
-BLAKE2s (libdrm-2.4.100.tar.gz) = 1cfd02d9d2ec59d0a32ba5287908d7056aa262e45c186f35b5fc327e99afb69a
-SHA512 (libdrm-2.4.100.tar.gz) = b61835473c77691c4a8e67b32b9df420661e8bf8700507334b58bde5e6a402dee4aea2bec1e5b83343dd28fcb6cf9fd084064d437332f178df81c4780552595b
-Size (libdrm-2.4.100.tar.gz) = 1149132 bytes
+BLAKE2s (libdrm-2.4.110.tar.xz) = 3f45410c126cfb5ad5d8166270faa108751c1476c5f3926cc9b471b341147d0b
+SHA512 (libdrm-2.4.110.tar.xz) = 52f92ef1fe4c218a1d7dba53ef43334dbfca80e3209afe59f3a32c4bf67473126534e990df07a931a12d46a3b997c21ef17c1c4d8a0c88d44d5c6c040e3b6be3
+Size (libdrm-2.4.110.tar.xz) = 436372 bytes
 SHA1 (patch-ac) = 67c998df7dfc0dabc86320ea6d015cede3e464ea
+SHA1 (patch-amdgpu_amdgpu__cs.c) = 125eca62cd3e00a6e039066152780174dcde0705
+SHA1 (patch-etnaviv_etnaviv__device.c) = 236b2df05a918c35c4decfee416ff5bfe9c073d4
+SHA1 (patch-exynos_exynos__drm.c) = 3fa4c8a592a5f4e0c4001eb6fa1bc7811e398605
+SHA1 (patch-exynos_exynos__fimg2d.c) = 298438b128bdb4ff57a8c0d7d6a081485e64e49a
 SHA1 (patch-include_drm_drm.h) = 48a912f40bf2b2a1c23edbe4446fa7869212f17b
 SHA1 (patch-libkms_vmwgfx.c) = d2204c0b79098c6c36b7f282b486c58c6354bd1d
 SHA1 (patch-libsync.h) = 1e0603e72a54a069fc9d2ab2c9559d22381a69d3
-SHA1 (patch-nouveau_private.h) = fe347abfaed3b37ef8fee645a388e19ca1e97552
-SHA1 (patch-xf86drm.c) = 02ef5f5ec351b7f52a97ab80d3d469e854ac957a
-SHA1 (patch-xf86drmMode.c) = 5f66d45a63b0915f22d0abe115aace13c53823a8
+SHA1 (patch-meson.build) = b9ebb763a807da931f83f4d5c02925ab5498ef69
+SHA1 (patch-omap_omap__drm.c) = a23eefa9a57315d3ae77e528fd29de70ff9b2648
+SHA1 (patch-tests_exynos_exynos__fimg2d__test.c) = 9fc874ecc9a42db75327f736d04038f7cf8f00ff
+SHA1 (patch-tests_nouveau_threaded.c) = 82b566666e77898c209d66ce804c913b53e53a50
+SHA1 (patch-xf86drm.c) = 6e4b3ee406666b37cc0b923ad49b945055919c83
+SHA1 (patch-xf86drmMode.c) = 078b1ecaa4fedd74992d682433701245ee51785b
 SHA1 (patch-xf86drmMode.h) = a28b02887389be8670193c119f711901af61a6b2
