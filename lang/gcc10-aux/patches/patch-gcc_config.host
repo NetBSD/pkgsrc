@@ -1,0 +1,15 @@
+$NetBSD: patch-gcc_config.host,v 1.1 2022/03/13 08:34:04 nia Exp $
+
+Add aarch64*-*-netbsd*.
+
+--- gcc/config.host.orig	2020-07-23 06:35:17.316384243 +0000
++++ gcc/config.host
+@@ -99,7 +99,7 @@ case ${host} in
+ esac
+ 
+ case ${host} in
+-  aarch64*-*-freebsd* | aarch64*-*-linux* | aarch64*-*-fuchsia*)
++  aarch64*-*-freebsd* | aarch64*-*-netbsd* | aarch64*-*-linux* | aarch64*-*-fuchsia*)
+     case ${target} in
+       aarch64*-*-*)
+ 	host_extra_gcc_objs="driver-aarch64.o"
