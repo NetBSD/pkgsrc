@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.85.2.1 2022/01/14 07:33:32 bsiegert Exp $
+$NetBSD: distinfo,v 1.85.2.2 2022/03/13 18:48:14 bsiegert Exp $
 
-BLAKE2s (wordpress-5.8.3.tar.gz) = 625bb95bf452587b451e7fac32f2d556d96094727c0a95d3141d0b37d2e6a5e3
-SHA512 (wordpress-5.8.3.tar.gz) = 08ebf959d9ae8ca33bee86fec222fb0266dc10bf6db4ed1ebeb7886a422abd838cbcc4d004002dea2c923c7a0822a1f410881b01f2e234560836b1635d98718b
-Size (wordpress-5.8.3.tar.gz) = 15087521 bytes
+BLAKE2s (wordpress-5.9.2.tar.gz) = 2346458ef9c4cff50befa0ebfa76b337b72b31fe2754c3038955c0bf6135c0f0
+SHA512 (wordpress-5.9.2.tar.gz) = d2a93d753fcc63f7361c8faea694fba265045db8728fd903417fca1a41362b0a5bf1d75e606a35f95cedcb4951c3392d0e37c266f5b26f627602450b8537df62
+Size (wordpress-5.9.2.tar.gz) = 18722604 bytes
