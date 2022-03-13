@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.103 2022/01/18 01:41:09 pho Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.104 2022/03/13 06:26:57 nia Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -310,7 +310,7 @@ _WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
 _WRAP_CMD_SINK.LD=	${WRAPPER_TMPDIR}/cmd-sink-mkpie-ld
 MKPIE_CFLAGS=		${_MKPIE_CFLAGS.gcc}
 .export MKPIE_CFLAGS
-MKPIE_LDFLAGS=		${_MKPIE_LDFLAGS.gcc}
+MKPIE_LDFLAGS=		${_MKPIE_LDFLAGS}
 .export MKPIE_LDFLAGS
 . endif
 .endif
