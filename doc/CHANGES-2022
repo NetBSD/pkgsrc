@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1409 2022/03/13 06:20:12 mef Exp $
+$NetBSD: CHANGES-2022,v 1.1410 2022/03/13 06:44:39 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1808,3 +1808,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed graphics/aqsis [nia 2022-03-13]
 	Updated devel/MoarVM to 2022.02 [mef 2022-03-13]
 	Updated lang/nqp to 2022.02 [mef 2022-03-13]
+	Updated lang/rakudo to 2022.02 [mef 2022-03-13]
