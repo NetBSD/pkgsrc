@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/03/04 17:54:08 bouyer Exp $
+# $NetBSD: Makefile,v 1.11 2022/03/13 20:44:56 bouyer Exp $
 #
 VERSION=	4.15.2
 
@@ -58,7 +58,7 @@ USE_TOOLS+=		pod2man gmake pkg-config makeinfo perl bash cmake gsed bison
 USE_LANGUAGES=		c c++
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--enable-rpath
+CONFIGURE_ARGS+=	--enable-rpath --disable-golang
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 
 MAKE_ENV+=		PREFIX=${prefix:Q} WRKSRC=${WRKSRC}
