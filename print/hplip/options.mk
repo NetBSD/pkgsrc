@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2021/03/10 18:53:49 adam Exp $
+# $NetBSD: options.mk,v 1.20 2022/03/13 05:46:55 gutteridge Exp $
 #
 # HPLIP dependencies are detailed in the following page:
 # http://hplipopensource.com/hplip-web/install/manual/distros/other.html
@@ -14,14 +14,14 @@ PKG_OPTIONS_LEGACY_OPTS+=	qt:qt5
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mqt5)
-PYTHON_VERSIONS_ACCEPTED=	 27 # py-notify
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-pyphen
 CONFIGURE_ARGS+=	--enable-gui-build
 CONFIGURE_ARGS+=	--enable-policykit
 EGFILES+=		dbus-1/system.d/com.hp.hplip.conf
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/dbus-1/system.d
 .include "../../security/policykit/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-DEPENDS+=	${PYPKGPREFIX}-notify-[0-9]*:../../sysutils/py-notify
+DEPENDS+=	${PYPKGPREFIX}-notify2-[0-9]*:../../sysutils/py-notify2
 PLIST_SRC+=		PLIST.qt5
 CONFIGURE_ARGS+=	--disable-qt4
 CONFIGURE_ARGS+=	--enable-qt5
