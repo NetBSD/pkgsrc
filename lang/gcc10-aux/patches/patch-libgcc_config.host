@@ -1,0 +1,15 @@
+$NetBSD: patch-libgcc_config.host,v 1.1 2022/03/13 08:34:04 nia Exp $
+
+This is needed to get Out-of-line LSE atomics linked into libgcc.
+libsupc++ fails to link without this.
+
+--- libgcc/config.host.orig	2020-07-23 06:35:18.752400064 +0000
++++ libgcc/config.host
+@@ -377,6 +377,7 @@ aarch64*-*-freebsd*)
+ aarch64*-*-netbsd*)
+ 	extra_parts="$extra_parts crtfastmath.o"
+ 	tmake_file="${tmake_file} ${cpu_type}/t-aarch64"
++	tmake_file="${tmake_file} ${cpu_type}/t-lse"
+ 	tmake_file="${tmake_file} ${cpu_type}/t-softfp t-softfp t-crtfm"
+ 	md_unwind_header=aarch64/aarch64-unwind.h
+ 	;;
