@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2021/06/24 15:24:56 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/03/13 15:01:21 gdt Exp $
 bin/unison
 share/doc/unison/CONTRIB
 share/doc/unison/COPYING
-share/doc/unison/NEWS
+share/doc/unison/NEWS.md
 share/doc/unison/README
 share/doc/unison/ROADMAP.txt
 share/doc/unison/TODO.txt
