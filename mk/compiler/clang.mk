@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.34 2022/01/30 13:07:34 wiz Exp $
+# $NetBSD: clang.mk,v 1.35 2022/03/13 06:26:57 nia Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -76,6 +76,17 @@ _SSP_CFLAGS=		-fstack-protector
 _CLANG_LDFLAGS+=	${_RELRO_LDFLAGS}
 CWRAPPERS_PREPEND.cc+=	${_RELRO_LDFLAGS}
 CWRAPPERS_PREPEND.cxx+=	${_RELRO_LDFLAGS}
+.endif
+
+.if ${_PKGSRC_MKPIE} == "yes"
+_MKPIE_CFLAGS.clang=	-fPIC
+_MKPIE_LDFLAGS=		-pie
+
+.  if ${PKGSRC_OVERRIDE_MKPIE:tl} == "no"
+CFLAGS+=		${_MKPIE_CFLAGS.clang}
+CWRAPPERS_APPEND.cc+=	${_MKPIE_CFLAGS.clang}
+CWRAPPERS_APPEND.cxx+=	${_MKPIE_CFLAGS.clang}
+.  endif
 .endif
 
 LDFLAGS+=	${_CLANG_LDFLAGS}
