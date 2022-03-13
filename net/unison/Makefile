@@ -1,4 +1,4 @@
-	# $NetBSD: Makefile,v 1.40 2022/03/13 15:01:21 gdt Exp $
+	# $NetBSD: Makefile,v 1.136 2022/03/13 15:07:13 gdt Exp $
 
 DISTNAME=	unison-2.52.0
 #PKGREVISION=	0
