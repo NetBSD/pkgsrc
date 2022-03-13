@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:06:44 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/03/13 06:59:19 mef Exp $
 
-BLAKE2s (OpenCC-ver.1.1.1.tar.gz) = 0941d604948b40e645eea2916d03a465b66d15f1be4855f52dfca30fda475640
-SHA512 (OpenCC-ver.1.1.1.tar.gz) = 48ccf61f63cf0a1c0fc484a52ae1d406a28949a52be7d7d1595e6aaf87f40ac47ea4697308441a9381f0cd6f404ee5a28b85a2fa2f288c4b3933be36f4a41363
-Size (OpenCC-ver.1.1.1.tar.gz) = 2212256 bytes
+BLAKE2s (OpenCC-ver.1.1.3.tar.gz) = b3cc15e5969385669fb84e7f9f4400274312d9b4aeb9b91073422f541cf3fa63
+SHA512 (OpenCC-ver.1.1.3.tar.gz) = 90da656fa4790c58932ad2240a076cc4a9e8cf70ac73d83e0d299e84472deb6491a823966a7686ed1487ef8405909981b9a12b661d8de7f086bd4b498594abac
+Size (OpenCC-ver.1.1.3.tar.gz) = 2805430 bytes
 SHA1 (patch-src_PhraseExtract.cpp) = 41ea305268331d9bc8547656450fd844209273b6
