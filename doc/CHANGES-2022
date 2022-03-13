@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1407 2022/03/13 06:02:37 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1408 2022/03/13 06:09:33 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1806,3 +1806,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated meta-pkgs/gnuradio to 3.10.1.1 [tnn 2022-03-12]
 	Updated print/hplip to 3.19.12nb14 [gutteridge 2022-03-13]
 	Removed graphics/aqsis [nia 2022-03-13]
+	Updated devel/MoarVM to 2022.02 [mef 2022-03-13]
