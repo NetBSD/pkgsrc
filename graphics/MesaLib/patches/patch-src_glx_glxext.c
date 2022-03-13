@@ -1,4 +1,4 @@
-$NetBSD: patch-src_glx_glxext.c,v 1.1 2019/08/21 13:35:28 nia Exp $
+$NetBSD: patch-src_glx_glxext.c,v 1.2 2022/03/13 15:50:05 tnn Exp $
 
 * Patch from FreeBSD ports graphics/mesa-dri 18.0.0
 
@@ -8,17 +8,9 @@ $NetBSD: patch-src_glx_glxext.c,v 1.1 2019/08/21 13:35:28 nia Exp $
 
 * Added logging statements to note dri3 initialization being invoked.
 
---- src/glx/glxext.c.orig	2017-12-08 13:49:11.000000000 +0000
+--- src/glx/glxext.c.orig	2021-07-14 20:04:55.750010300 +0000
 +++ src/glx/glxext.c
-@@ -55,6 +55,7 @@
- #include <xcb/xcb.h>
- #include <xcb/glx.h>
- 
-+#include "dri_common.h"
- 
- #ifdef DEBUG
- void __glXDumpDrawBuffer(struct glx_context * ctx);
-@@ -817,7 +818,11 @@ AllocAndFetchScreenConfigs(Display * dpy
+@@ -819,7 +819,11 @@ AllocAndFetchScreenConfigs(Display * dpy
  #if defined(GLX_USE_DRM)
  #if defined(HAVE_DRI3)
        if (priv->dri3Display)
@@ -30,7 +22,7 @@ $NetBSD: patch-src_glx_glxext.c,v 1.1 2019/08/21 13:35:28 nia Exp $
  #endif /* HAVE_DRI3 */
        if (psc == NULL && priv->dri2Display)
  	 psc = (*priv->dri2Display->createScreen) (i, priv);
-@@ -920,8 +925,13 @@ __glXInitialize(Display * dpy)
+@@ -925,8 +929,13 @@ __glXInitialize(Display * dpy)
  #if defined(GLX_USE_DRM)
     if (glx_direct && glx_accel) {
  #if defined(HAVE_DRI3)
@@ -43,5 +35,5 @@ $NetBSD: patch-src_glx_glxext.c,v 1.1 2019/08/21 13:35:28 nia Exp $
           dpyPriv->dri3Display = dri3_create_display(dpy);
 +      }
  #endif /* HAVE_DRI3 */
-       dpyPriv->dri2Display = dri2CreateDisplay(dpy);
-       dpyPriv->driDisplay = driCreateDisplay(dpy);
+       if (!env_var_as_boolean("LIBGL_DRI2_DISABLE", false))
+          dpyPriv->dri2Display = dri2CreateDisplay(dpy);
