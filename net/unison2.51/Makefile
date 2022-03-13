@@ -1,11 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2022/02/25 20:36:46 gdt Exp $
+	# $NetBSD: Makefile,v 1.40 2022/03/13 15:01:21 gdt Exp $
 
-# Currently, 2.51.x is the standard approach, and thus this package
-# produces a "unison-2.51.x" package which installs a "unison" binary.
-# Now, unison no longer has the problem of interoperating within minor
-# verisons, and the update to 2.52 will likely rename this to
-# net/unison, as there is no longer any reason to have old versions.
-DISTNAME=	unison-2.51.5
+DISTNAME=	unison-2.52.0
 #PKGREVISION=	0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
@@ -42,7 +37,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/unison ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/src/CONTRIB ${DESTDIR}${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/src/COPYING ${DESTDIR}${PREFIX}/share/doc/unison
-	${INSTALL_MAN} ${WRKSRC}/src/NEWS ${DESTDIR}${PREFIX}/share/doc/unison
+	${INSTALL_MAN} ${WRKSRC}/NEWS.md ${DESTDIR}${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/src/README ${DESTDIR}${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/src/ROADMAP.txt ${DESTDIR}${PREFIX}/share/doc/unison
 	${INSTALL_MAN} ${WRKSRC}/src/TODO.txt ${DESTDIR}${PREFIX}/share/doc/unison
