@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1417 2022/03/13 15:01:27 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.1418 2022/03/13 15:07:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1816,3 +1816,14 @@ Changes to the packages collection and infrastructure in 2022:
 	Added lang/gcc10-aux version 10.3.0 [nia 2022-03-13]
 	Updated geography/geos to 3.10.2 [gdt 2022-03-13]
 	Updated net/unison2.51 to 2.52.0 [gdt 2022-03-13]
+	Updated devel/ruby-activesupport52 to 5.2.6.3 [taca 2022-03-13]
+	Updated devel/ruby-activemodel52 to 5.2.6.3 [taca 2022-03-13]
+	Updated devel/ruby-activejob52 to 5.2.6.3 [taca 2022-03-13]
+	Updated www/ruby-actionview52 to 5.2.6.3 [taca 2022-03-13]
+	Updated www/ruby-actionpack52 to 5.2.6.3 [taca 2022-03-13]
+	Updated www/ruby-actioncable52 to 5.2.6.3 [taca 2022-03-13]
+	Updated databases/ruby-activerecord52 to 5.2.6.3 [taca 2022-03-13]
+	Updated devel/ruby-activestorage52 to 5.2.6.3 [taca 2022-03-13]
+	Updated mail/ruby-actionmailer52 to 5.2.6.3 [taca 2022-03-13]
+	Updated devel/ruby-railties52 to 5.2.6.3 [taca 2022-03-13]
+	Updated www/ruby-rails52 to 5.2.6.3 [taca 2022-03-13]
