@@ -1,4 +1,4 @@
-$NetBSD: patch-src_mapi_entry__x86-64__tls.h,v 1.5 2020/02/21 21:52:24 tnn Exp $
+$NetBSD: patch-src_mapi_entry__x86-64__tls.h,v 1.6 2022/03/13 15:50:05 tnn Exp $
 
 NetBSD only supports zero-initialized initial-exec tls variables in conjuction
 with dlopen(3) at the moment.
@@ -6,9 +6,9 @@ with dlopen(3) at the moment.
 table_noop_array is only defined for shared-glapi.
 es1api and es2api are not going to be patched for NetBSD.
 
---- src/mapi/entry_x86-64_tls.h.orig	2019-12-04 22:10:14.000000000 +0000
+--- src/mapi/entry_x86-64_tls.h.orig	2021-07-14 20:04:57.805030000 +0000
 +++ src/mapi/entry_x86-64_tls.h
-@@ -32,21 +32,33 @@
+@@ -38,22 +38,34 @@
  #endif
  
  __asm__(".text\n"
@@ -37,6 +37,7 @@ es1api and es2api are not going to be patched for NetBSD.
 +   "jmp *(8 * " slot ")(%rax)"
 +#else
  #define STUB_ASM_CODE(slot)                              \
+    ENDBR                                                 \
     "movq " ENTRY_CURRENT_TABLE "@GOTTPOFF(%rip), %rax\n\t"  \
     "movq %fs:(%rax), %r11\n\t"                           \
     "jmp *(8 * " slot ")(%r11)"
@@ -44,7 +45,7 @@ es1api and es2api are not going to be patched for NetBSD.
  
  #else
  
-@@ -77,7 +89,7 @@ x86_64_entry_start[] HIDDEN;
+@@ -85,7 +97,7 @@ x86_64_entry_start[] HIDDEN;
  mapi_func
  entry_get_public(int slot)
  {
