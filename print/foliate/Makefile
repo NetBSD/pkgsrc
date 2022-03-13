@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/01/16 04:52:09 fox Exp $
+# $NetBSD: Makefile,v 1.25 2022/03/13 04:19:03 gutteridge Exp $
 
 DISTNAME=	foliate-2.6.4
 CATEGORIES=	print
@@ -20,9 +20,6 @@ SUBST_STAGE.pyvers=	pre-configure
 SUBST_FILES.pyvers=	src/epubView.js
 SUBST_VARS.pyvers+=	PYVERSSUFFIX
 
-# Fails without GNU msgfmt
-USE_BUILTIN.gettext=	no
-
 REPLACE_PYTHON+=	build-aux/meson/postinstall.py
 REPLACE_PYTHON+=	src/assets/KindleUnpack/*.py
 
@@ -37,6 +34,7 @@ post-install:
 	${LN} -s -f ${DESTDIR}${PREFIX}/libexec/foliate/com.github.johnfactotum.Foliate \
 		${DESTDIR}${PREFIX}/bin/foliate
 
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
