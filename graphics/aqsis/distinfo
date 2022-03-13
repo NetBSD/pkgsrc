@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:45:58 nia Exp $
-
-BLAKE2s (aqsis-1.8.1.tar.gz) = 6738b2a35bb15a06e1eda53c9672d3db1e48d10bff968e9c641f064ab7fe5045
-SHA512 (aqsis-1.8.1.tar.gz) = 351d05781f7a376cddaa395ebd093c92274822b8d93a8baa38ac1aaf21844fef84f7d3254f592f92ecc32fb8f8c4342d254f56f54c9c74776283c93bfcab2a3e
-Size (aqsis-1.8.1.tar.gz) = 5663787 bytes
-SHA1 (patch-cmake_modules_FindPNG_cmake) = 24de84a90d62bcdbb767f5e16df2563f32e723aa
-SHA1 (patch-libs_tex_io_exrinputfile.h) = f1ac4d3f88c23df16ff1806aeca311ffd9bcb027
