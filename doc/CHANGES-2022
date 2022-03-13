@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1427 2022/03/13 16:48:52 bacon Exp $
+$NetBSD: CHANGES-2022,v 1.1428 2022/03/13 20:57:42 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1877,3 +1877,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/libLLVM to 13.0.1 [tnn 2022-03-13]
 	Updated graphics/MesaLib to 21.3.7 [tnn 2022-03-13]
 	Updated sysutils/auto-admin to 0.7.10 [bacon 2022-03-13]
+	Updated lang/go-bin to 1.17.8 [tnn 2022-03-13]
