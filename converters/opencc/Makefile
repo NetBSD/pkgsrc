@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2021/02/20 13:56:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2022/03/13 06:59:19 mef Exp $
 
+VERSION=	1.1.3
 GITHUB_PROJECT=	OpenCC
-GITHUB_TAG=	ver.${PKGVERSION_NOREV}
-DISTNAME=	OpenCC-ver.1.1.1
+GITHUB_TAG=	ver.${VERSION}
+DISTNAME=	OpenCC-ver.${VERSION}
 PKGNAME=	${DISTNAME:S/OpenCC-ver./opencc-/}
 CATEGORIES=	converters chinese
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BYVoid/}
