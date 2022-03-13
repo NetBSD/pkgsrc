@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2021/09/08 23:45:45 gdt Exp $
+# $NetBSD: Makefile,v 1.4 2022/03/13 14:38:10 gdt Exp $
 
+# 2.1.[56] fail: https://sourceforge.net/p/iperf2/tickets/186/
 DISTNAME=	iperf-2.1.4
 CATEGORIES=	net benchmarks
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=iperf2/}
