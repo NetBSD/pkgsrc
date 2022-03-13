@@ -1,0 +1,15 @@
+$NetBSD: patch-shell_appdata_meson.build,v 1.1 2022/03/13 19:36:08 nia Exp $
+
+Remove invalid positional argument. Previously this would have been
+ignored, now it results in failures.
+
+--- shell/appdata/meson.build.orig	2021-03-20 21:52:23.359853700 +0000
++++ shell/appdata/meson.build
+@@ -1,7 +1,6 @@
+ appdata = 'gnome-control-center.appdata.xml'
+ 
+ i18n.merge_file(
+-  appdata,
+   input: appdata + '.in',
+   output: appdata,
+   po_dir: po_dir,
