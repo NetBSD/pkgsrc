@@ -1,10 +1,10 @@
-$NetBSD: patch-SRC_CMakeLists.txt,v 1.3 2021/06/01 22:13:35 thor Exp $
+$NetBSD: patch-SRC_CMakeLists.txt,v 1.4 2022/03/13 07:31:56 nros Exp $
 
 Support combined build of shared and static libraries.
 
---- SRC/CMakeLists.txt.orig	2021-03-25 18:25:15.000000000 +0000
+--- SRC/CMakeLists.txt.orig	2021-06-28 16:39:12.000000000 +0000
 +++ SRC/CMakeLists.txt
-@@ -518,3 +518,23 @@ if(_is_coverage_build)
+@@ -524,3 +524,24 @@ if(_is_coverage_build)
  endif()
  
  lapack_install_library(${LAPACKLIB})
@@ -13,6 +13,7 @@ Support combined build of shared and static libraries.
 +  set_target_properties(
 +    ${LAPACKLIB}_static PROPERTIES
 +    OUTPUT_NAME ${LAPACKLIB}
++    Fortran_MODULE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${LAPACKLIB}_static_modules
 +    )
 +
 +  if(USE_XBLAS)
