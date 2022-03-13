@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2021/06/05 04:28:38 mef Exp $
+# $NetBSD: Makefile,v 1.3 2022/03/13 08:19:51 mef Exp $
 
 R_PKGNAME=	brio
-R_PKGVER=	1.1.2
+R_PKGVER=	1.1.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
