@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1413 2022/03/13 08:05:19 mef Exp $
+$NetBSD: CHANGES-2022,v 1.1414 2022/03/13 08:20:03 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1812,3 +1812,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated converters/erlang-iconv to 1.0.13 [mef 2022-03-13]
 	Updated converters/opencc to 1.1.3 [mef 2022-03-13]
 	Updated biology/minimap2 to 2.24 [mef 2022-03-13]
+	Updated devel/R-brio to 1.1.3 [mef 2022-03-13]
