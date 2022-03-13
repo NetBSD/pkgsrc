@@ -1,13 +1,37 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:19:38 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/03/13 19:36:08 nia Exp $
 
 BLAKE2s (gnome-control-center-40.0.tar.xz) = 520a14c891b7e594f96773dcab3473cdb7eb063907c2053a349b2a73efb82487
 SHA512 (gnome-control-center-40.0.tar.xz) = 26980cd18c414b12d2bf7e61be200e02302e170d53aba4f064154eda4c006648160919b6d4c9d168d8c5a461c05dc6593a52066b144af577c6aac420b9723cb9
 Size (gnome-control-center-40.0.tar.xz) = 6463616 bytes
 SHA1 (patch-meson.build) = b790a2af9fc48e520393fa7f0a15236aa6b409f5
+SHA1 (patch-panels_applications_meson.build) = c57d72e9d5e7dcf28c844649bcb38d8852d86e31
+SHA1 (patch-panels_background_meson.build) = 7fe2df44aa8616729d7ea70744636d1953633693
+SHA1 (patch-panels_camera_meson.build) = b891db8d9e5f24d8b7398cd7261b9e3d6312737e
+SHA1 (patch-panels_color_meson.build) = cf6808572f9300afd1b94fcbbb67d8ef9303f116
 SHA1 (patch-panels_common_meson.build) = dee53989c12235d6d26ad5bf5bb2b91d4b57838f
 SHA1 (patch-panels_datetime_date-endian.c) = e8c642b22a989066e53637932b0bb3677d6b0990
+SHA1 (patch-panels_datetime_meson.build) = 606939e00920165f3fe885ae5941e707a4989d84
+SHA1 (patch-panels_default-apps_meson.build) = 46c6503c31bf912767a572a75c6fa2b0132d8356
+SHA1 (patch-panels_diagnostics_meson.build) = 65e6257343ce2bc5396cfc68a91746e1d61a9804
+SHA1 (patch-panels_display_meson.build) = bc02d8dd1be4fe1cd8e0e6d7b9a18acf3aa1d758
 SHA1 (patch-panels_info-overview_cc-info-overview-panel.c) = 9ab6804005b8d96631ea39463b75ad2de15a050b
-SHA1 (patch-panels_info-overview_meson.build) = d6a7fe161f18fc061d6673b686ea04c55c34a513
+SHA1 (patch-panels_info-overview_meson.build) = 9796f5616202c996c281072f430c12d827012673
+SHA1 (patch-panels_keyboard_meson.build) = 88797b8190806f3221695706f500d7e2773705ba
+SHA1 (patch-panels_location_meson.build) = 086532050d1f3fea0c4c011c8b0ca3940b5001bb
+SHA1 (patch-panels_lock_meson.build) = df0c2a6fb4524c64d6ed9280a72397e91dbcb59f
 SHA1 (patch-panels_meson.build) = 365e4db1824f79ed64ed8b7558590f4d2db39e6f
+SHA1 (patch-panels_microphone_meson.build) = a8eb0ac833575bb8db6915eb97fbb47f17d57741
+SHA1 (patch-panels_notifications_meson.build) = 033f095f3b227e32e80d9f1a4710dcbbf133b22d
+SHA1 (patch-panels_online-accounts_meson.build) = e98a39f98c4a1c8f2fb286d3e343102256ed64f2
 SHA1 (patch-panels_power_cc-power-panel.c) = 5b5641ab5f5270cef07589e20e98bf78058592c3
+SHA1 (patch-panels_power_meson.build) = e5620f92ded3b80a8e0c138810139699262096c7
+SHA1 (patch-panels_printers_meson.build) = d4c5c1932b65c28df8795a6389fba13d7ffec7f8
+SHA1 (patch-panels_removable-media_meson.build) = 1127941536b6a2aef5cb7be41099ccc46bd1c0ce
+SHA1 (patch-panels_search_meson.build) = a0bf113d14cfd1d5769c37b5567d131aa7f7d3fe
+SHA1 (patch-panels_sharing_meson.build) = a65c51216e0bd8d3a955aec285db3bc77f916cf6
+SHA1 (patch-panels_sound_meson.build) = bb9e1004b308e9899c62e9b42196d0bc21dee446
+SHA1 (patch-panels_universal-access_meson.build) = 4871c2530ea963e9db20b6b4d95b1400aed47a68
+SHA1 (patch-panels_usage_meson.build) = b924fedccb980ad77d4d88234722931423ffaeaf
+SHA1 (patch-shell_appdata_meson.build) = b0506bc9b390694c98a0e61a2f0230d195212ece
 SHA1 (patch-shell_cc-panel-loader.c) = a9021eb224e16d44ec64a6df6372b84944702925
+SHA1 (patch-shell_meson.build) = 2261a49c07ea96a5e9c46981d079cbad61181bc4
