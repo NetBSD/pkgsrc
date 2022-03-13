@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.963 2022/02/23 16:53:53 pho Exp $
+# $NetBSD: Makefile,v 1.964 2022/03/13 06:02:10 nia Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -50,7 +50,6 @@ SUBDIR+=	adaptagrams
 SUBDIR+=	adwaita-icon-theme
 SUBDIR+=	agg
 SUBDIR+=	ansilove
-SUBDIR+=	aqsis
 SUBDIR+=	arc-theme
 SUBDIR+=	artist
 SUBDIR+=	asymptote
