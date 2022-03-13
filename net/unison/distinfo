@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.32 2022/03/13 15:07:13 gdt Exp $
+$NetBSD: distinfo,v 1.33 2022/03/13 15:20:13 gdt Exp $
 
 BLAKE2s (unison-2.52.0.tar.gz) = 59129fa38b89e23e2defdb7163754153b497d828a69c5d7f6695465d002390fe
 SHA512 (unison-2.52.0.tar.gz) = 24cfb43b40a05f85164c43e8744216142db4cd74d9d09ba7178f25f794b0dcce252597fa1eb49a4133e63d891c8d23fd7472669cf9f52777bc6aa86b0a50e6f5
 Size (unison-2.52.0.tar.gz) = 1354200 bytes
-SHA1 (patch-src_Makefile) = ff73628825232b9494844c020b78d2978f753d07
+SHA1 (patch-src_Makefile) = 0a453634bacf03516192128ad653446a3b760537
