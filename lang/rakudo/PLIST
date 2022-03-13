@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/01/23 23:54:20 mef Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/03/13 06:44:28 mef Exp $
 bin/perl6
 bin/perl6-debug
 bin/perl6-debug-m
@@ -74,7 +74,6 @@ share/perl6/lib/Perl6/World.moarvm
 share/perl6/runtime/CORE.c.setting.moarvm
 share/perl6/runtime/CORE.d.setting.moarvm
 share/perl6/runtime/CORE.e.setting.moarvm
-share/perl6/runtime/RESTRICTED.setting.moarvm
 share/perl6/runtime/dynext/libperl6_ops_moar.so
 share/perl6/runtime/perl6-debug.moarvm
 share/perl6/runtime/perl6.moarvm
