@@ -1,10 +1,10 @@
-$NetBSD: patch-common_dlpi.c,v 1.3 2016/03/30 15:55:44 taca Exp $
+$NetBSD: patch-common_dlpi.c,v 1.4 2022/03/13 15:24:38 taca Exp $
 
 Add support for Crossbow style NICs (SunOS).
 
---- common/dlpi.c.orig	2016-03-22 13:16:51.000000000 +0000
+--- common/dlpi.c.orig	2022-03-08 09:26:03.000000000 +0000
 +++ common/dlpi.c
-@@ -778,14 +778,26 @@ static int dlpiunit (ifname)
+@@ -782,14 +782,26 @@ static int dlpiunit (ifname)
   */
  static int
  dlpiopen(const char *ifname) {
@@ -13,11 +13,11 @@ Add support for Crossbow style NICs (SunOS).
  	char *dp;
  	const char *cp, *ep;
 +	int fd;
- 	
+ 
  	if (!ifname) {
  		return -1;
  	}
- 	
+ 
 +	/* Try Crossbow Device Path */
 +	if (ifname[0] == '/') {
 +		fd = open (ifname, O_RDWR, 0);
