@@ -1,5 +1,11 @@
-@comment $NetBSD: PLIST,v 1.13 2022/01/23 13:18:37 mef Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/03/13 06:09:21 mef Exp $
 bin/moar
+include/mimalloc/mimalloc-atomic.h
+include/mimalloc/mimalloc-internal.h
+include/mimalloc/mimalloc-new-delete.h
+include/mimalloc/mimalloc-override.h
+include/mimalloc/mimalloc-types.h
+include/mimalloc/mimalloc.h
 include/moar/6model/6model.h
 include/moar/6model/bootstrap.h
 include/moar/6model/containers.h
