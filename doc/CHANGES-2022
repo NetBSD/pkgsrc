@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1410 2022/03/13 06:44:39 mef Exp $
+$NetBSD: CHANGES-2022,v 1.1411 2022/03/13 06:48:03 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1809,3 +1809,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/MoarVM to 2022.02 [mef 2022-03-13]
 	Updated lang/nqp to 2022.02 [mef 2022-03-13]
 	Updated lang/rakudo to 2022.02 [mef 2022-03-13]
+	Updated converters/erlang-iconv to 1.0.13 [mef 2022-03-13]
