@@ -1,4 +1,4 @@
-[.$NetBSD: CHANGES-2022,v 1.1423 2022/03/13 15:18:15 taca Exp $
+[.$NetBSD: CHANGES-2022,v 1.1424 2022/03/13 15:26:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1869,3 +1869,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-railties70 to 7.0.2.3 [taca 2022-03-13]
 	Updated textproc/ruby-actiontext70 to 7.0.2.3 [taca 2022-03-13]
 	Updated www/ruby-rails70 to 7.0.2.3 [taca 2022-03-13]
+	Updated net/isc-dhcp4 to 4.4.3 [taca 2022-03-13]
+	Updated net/isc-dhclient4 to 4.4.3 [taca 2022-03-13]
+	Updated net/isc-dhcpd4 to 4.4.3 [taca 2022-03-13]
+	Updated net/isc-dhcrelay4 to 4.4.3 [taca 2022-03-13]
