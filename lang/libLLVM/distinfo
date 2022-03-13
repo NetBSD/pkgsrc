@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 10:51:40 nia Exp $
+$NetBSD: distinfo,v 1.19 2022/03/13 15:22:32 tnn Exp $
 
-BLAKE2s (llvm-9.0.1.src.tar.xz) = 16f02c65adb30c1d94c27efe3ffa7cb49dc737cb620446a393b7d40322aa94de
-SHA512 (llvm-9.0.1.src.tar.xz) = bfb6960a4dd1e18f4005f324f478a781c69e8ec7c20569d9b243fcb9372dc7733b254f26c683373537990cc9c109c78eaf0f65449629ee17caca1bce9b9ccccd
-Size (llvm-9.0.1.src.tar.xz) = 33035112 bytes
-SHA1 (patch-CMakeLists.txt) = af0dc7f54e5e11c481f78ffafc9a6833e4469f32
-SHA1 (patch-cmake_config-ix.cmake) = a6f4e9b0e635792acf18a41b310f55969f78bcd8
-SHA1 (patch-cmake_modules_AddLLVM.cmake) = 752852ec340e72428bf1087b454a75a4cb176632
-SHA1 (patch-cmake_modules_CMakeLists.txt) = 69514dafb36794eb6923a39ef219bdc7b09c37ee
-SHA1 (patch-cmake_modules_CheckAtomic.cmake) = 51e4fdf3bc24b50fc4d4bfa1ec5ba6c82ef946b4
-SHA1 (patch-include_llvm-c_DataTypes.h) = 025c035e0e10871727391bd58936bd67b3e58244
+BLAKE2s (llvm-13.0.1.src.tar.xz) = 5fff4c8506340cc14b2160478be6403c80f526841209a4b1b3a9f16cf61dcc05
+SHA512 (llvm-13.0.1.src.tar.xz) = 05fbe8708ac3d0dfef3a9135ee88185a95ed492095429a97d33b8aadb0187e59ad42d1a7184f02b5c84fdd31f3d7227c65bd292ed0aa039b29522e59cf90a965
+Size (llvm-13.0.1.src.tar.xz) = 45479112 bytes
+SHA1 (patch-CMakeLists.txt) = c60afc86b44ae6c37840b3fea3533136aae2616d
+SHA1 (patch-cmake_config-ix.cmake) = 3b8b5295872ac1a5d90a8b4c78540d8ce1224bf0
+SHA1 (patch-cmake_modules_AddLLVM.cmake) = 41000d0660af1bfe6ccd15d0e0611b7cbbd456a4
+SHA1 (patch-cmake_modules_CMakeLists.txt) = 57462a55dfd2af82df51f62fc222a081cdb3e0db
+SHA1 (patch-cmake_modules_CheckAtomic.cmake) = cb2eda89ca2413728fc594ff01fa7a287b2a22b9
+SHA1 (patch-include_llvm-c_DataTypes.h) = 790c9458d6590a0d6985fdcbd8785da340b9779b
 SHA1 (patch-include_llvm_Analysis_ConstantFolding.h) = 56b9374da236c346565897977040255b9766cab8
-SHA1 (patch-tools_llvm-config_llvm-config.cpp) = 6d9e13036e2b1639fa67de995eb61520581f4fbd
-SHA1 (patch-tools_llvm-shlib_CMakeLists.txt) = 5892d83e4b8f1c30eefb9b8560fed43cb1a226e9
+SHA1 (patch-tools_llvm-config_llvm-config.cpp) = 12b0f7dd0d8caf635ca139abdde3ba49dc753cbe
+SHA1 (patch-tools_llvm-shlib_CMakeLists.txt) = 97b9c7c3487989c2909dd0294a67a5328d9ef309
