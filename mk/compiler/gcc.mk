@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.235 2022/01/18 01:41:09 pho Exp $
+# $NetBSD: gcc.mk,v 1.236 2022/03/13 06:26:57 nia Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -103,7 +103,7 @@ _DEF_VARS.gcc=	\
 	_EXTRA_CC_DIRS \
 	_CXX_STD_VERSIONS \
 	${_CXX_STD_VERSIONS:@std@_CXX_STD_FLAG.${std}@} \
-	_MKPIE_CFLAGS.gcc _MKPIE_LDFLAGS.gcc \
+	_MKPIE_CFLAGS.gcc _MKPIE_LDFLAGS \
 	_FORTIFY_CFLAGS _RELRO_LDFLAGS _STACK_CHECK_CFLAGS \
 	_CTF_CFLAGS \
 	_GCC_DIR \
@@ -346,21 +346,16 @@ CWRAPPERS_APPEND.cc+=	-std=gnu99
 
 .if ${_PKGSRC_MKPIE} == "yes"
 _MKPIE_CFLAGS.gcc=	-fPIC
-# XXX for executables it should be:
-#_MKPIE_CFLAGS.gcc=	-fPIE
 _MKPIE_FCFLAGS.gcc=	-fPIC
-# XXX for libraries a sink wrapper around gcc is required and used instead
-_MKPIE_LDFLAGS.gcc=	-pie
+# for libraries a sink wrapper around gcc is required and used instead
+_MKPIE_LDFLAGS=		-pie
 
 .  if ${PKGSRC_OVERRIDE_MKPIE:tl} == "no"
 _GCC_CFLAGS+=		${_MKPIE_CFLAGS.gcc}
 _GCC_FCFLAGS+=		${_MKPIE_FCFLAGS.gcc}
-#_GCC_LDFLAGS+=		${_MKPIE_LDFLAGS.gcc}
 CWRAPPERS_APPEND.cc+=	${_MKPIE_CFLAGS.gcc}
 CWRAPPERS_APPEND.cxx+=	${_MKPIE_CFLAGS.gcc}
 CWRAPPERS_APPEND.f77+=	${_MKPIE_FCFLAGS.gcc}
-# this differs for libraries and executables (handled in mk/cwrappers.mk)
-# CWRAPPERS_APPEND.ld+=	${_MKPIE_LDFLAGS.gcc}
 .  endif
 .endif
 
