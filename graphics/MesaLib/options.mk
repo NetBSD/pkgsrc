@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.82 2021/07/22 10:34:01 tnn Exp $
+# $NetBSD: options.mk,v 1.83 2022/03/13 15:50:05 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 
@@ -63,14 +63,13 @@ BUILDLINK_TRANSFORM+=	rm:-DUSE_ELF_TLS
 # LLVM support
 #
 .if !empty(PKG_OPTIONS:Mllvm)
-MESON_ARGS+=		-Dllvm=true
-BUILDLINK_API_DEPENDS.libLLVM+=	libLLVM>=7.0.1nb2
+MESON_ARGS+=		-Dllvm=enabled
 .  include "../../devel/libelf/buildlink3.mk"
 .  include "../../lang/libLLVM/buildlink3.mk"
 
 .  if ${OPSYS} != "Darwin" && ${OPSYS} != "Cygwin"
 # This is the latest libdrm requirement for amdgpu.
-BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.99
+BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.107
 
 PLIST.r600=		yes
 GALLIUM_DRIVERS+=	r600
@@ -78,16 +77,25 @@ PLIST.radeonsi=		yes
 GALLIUM_DRIVERS+=	radeonsi
 .  endif
 .else
-MESON_ARGS+=		-Dllvm=false
+MESON_ARGS+=		-Dllvm=disabled
 .endif
 
 #
 # Vulkan support - experimental
 #
+PLIST_VARS+=		 vulkan vulkan_intel
 .if !empty(PKG_OPTIONS:Mvulkan)
-MESON_ARGS+=		-Dvulkan-drivers="auto"
-.else
-MESON_ARGS+=		-Dvulkan-drivers=""
+VULKAN_DRIVERS+=	amd
+VULKAN_DRIVERS+=	swrast
+PLIST.vulkan=		yes
+.  if ${MACHINE_ARCH} == "x86_64"
+VULKAN_DRIVERS+=	intel
+PLIST.vulkan_intel=	yes
+.  endif
+.  if ${MACHINE_ARCH} == "aarch64"
+VULKAN_DRIVERS+=	broadcom
+VULKAN_DRIVERS+=	freedreno
+.  endif
 .endif
 
 #

@@ -1,11 +1,11 @@
-$NetBSD: patch-src_glx_glxcurrent.c,v 1.4 2020/02/19 21:03:41 tnn Exp $
+$NetBSD: patch-src_glx_glxcurrent.c,v 1.5 2022/03/13 15:50:05 tnn Exp $
 
 Interim fix for toolchain/50277.
 
 NetBSD only supports zero-initialized initial-exec tls variables in conjuction
 with dlopen(3) at the moment.
 
---- src/glx/glxcurrent.c.orig	2019-12-04 22:10:12.000000000 +0000
+--- src/glx/glxcurrent.c.orig	2021-08-04 18:49:29.150474000 +0000
 +++ src/glx/glxcurrent.c
 @@ -40,6 +40,20 @@
  #include "glx_error.h"
@@ -28,14 +28,14 @@ with dlopen(3) at the moment.
  ** We setup some dummy structures here so that the API can be used
  ** even if no context is current.
  */
-@@ -77,7 +91,11 @@ _X_HIDDEN pthread_mutex_t __glXmutex = P
+@@ -76,7 +90,11 @@ _X_HIDDEN pthread_mutex_t __glXmutex = P
+  * \b never be \c NULL.  This is important!  Because of this
   * \c __glXGetCurrentContext can be implemented as trivial macro.
   */
- __thread void *__glX_tls_Context __attribute__ ((tls_model("initial-exec")))
 +#if defined(__NetBSD__)
-+   = NULL; /* non-zero initializers not supported with dlopen */
++__THREAD_INITIAL_EXEC void *__glX_tls_Context = NULL; /* non-zero initializers not supported with dlopen */
 +#else
-    = &dummyContext;
+ __THREAD_INITIAL_EXEC void *__glX_tls_Context = &dummyContext;
 +#endif
  
  _X_HIDDEN void
