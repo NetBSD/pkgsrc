@@ -1,4 +1,4 @@
-# $NetBSD: cwrappers.mk,v 1.32 2022/01/18 01:41:09 pho Exp $
+# $NetBSD: cwrappers.mk,v 1.33 2022/03/13 06:26:57 nia Exp $
 #
 # This Makefile fragment implements integration of pkgtools/cwrappers.
 
@@ -90,7 +90,7 @@ generate-cwrappers:
 .  endfor
 . if ${_PKGSRC_MKPIE} == "yes"
 .  if ${PKGSRC_OVERRIDE_MKPIE:tl} == "no"
-.    for arg in ${_MKPIE_LDFLAGS.gcc}
+.    for arg in ${_MKPIE_LDFLAGS}
 	${RUN}echo append_executable=${arg} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
 .    endfor
 .  endif
