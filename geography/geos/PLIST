@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2021/11/24 01:10:42 gdt Exp $
+@comment $NetBSD: PLIST,v 1.20 2022/03/13 14:28:59 gdt Exp $
 bin/geos-config
 bin/geosop
 include/geos/algorithm/Angle.h
@@ -460,6 +460,8 @@ include/geos/util/TopologyException.h
 include/geos/util/UniqueCoordinateArrayFilter.h
 include/geos/util/UnsupportedOperationException.h
 include/geos/util/math.h
+include/geos/vend/include_nlohmann_json.hpp
+include/geos/vend/json.hpp
 include/geos/version.h
 include/geos_c.h
 lib/cmake/GEOS/geos-config-version.cmake
@@ -467,7 +469,7 @@ lib/cmake/GEOS/geos-config.cmake
 lib/cmake/GEOS/geos-targets-release.cmake
 lib/cmake/GEOS/geos-targets.cmake
 lib/libgeos.so
-lib/libgeos.so.3.10.1
+lib/libgeos.so.${PKGVERSION}
 lib/libgeos_c.so
 lib/libgeos_c.so.1
 lib/libgeos_c.so.1.16.0
