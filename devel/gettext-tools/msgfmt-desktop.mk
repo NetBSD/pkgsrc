@@ -1,8 +1,11 @@
-# $NetBSD: msgfmt-desktop.mk,v 1.1 2022/03/12 08:01:48 nia Exp $
+# $NetBSD: msgfmt-desktop.mk,v 1.2 2022/03/13 04:42:56 gutteridge Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
 # Old GPLv2 version of msgfmt in NetBSD does not support --desktop/--xml.
+# XXX technically, we would require gettext-tools >= 0.19.7, as that's
+# when the --xml argument was added, rather than >= 0.15, which the tools
+# chain currently sets, but this seems non-trivial to adjust.
 TOOLS_PLATFORM.msgfmt=	# none
 .endif
