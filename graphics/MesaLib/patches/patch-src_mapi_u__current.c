@@ -1,23 +1,23 @@
-$NetBSD: patch-src_mapi_u__current.c,v 1.3 2019/10/18 09:57:07 nia Exp $
+$NetBSD: patch-src_mapi_u__current.c,v 1.4 2022/03/13 15:50:05 tnn Exp $
 
 NetBSD only supports zero-initialized initial-exec tls variables in conjuction
 with dlopen(3) at the moment.
 
---- src/mapi/u_current.c.orig	2019-10-09 16:52:00.000000000 +0000
+--- src/mapi/u_current.c.orig	2021-08-04 18:49:29.246474300 +0000
 +++ src/mapi/u_current.c
 @@ -101,7 +101,11 @@ extern void (*__glapi_noop_table[])(void
+ #if defined(USE_ELF_TLS)
  
- __thread struct _glapi_table *u_current_table
-     __attribute__((tls_model("initial-exec")))
+ __THREAD_INITIAL_EXEC struct _glapi_table *u_current_table
 +#if defined(__NetBSD__)
 +    = NULL; /* non-zero initializers not supported with dlopen */
 +#else
      = (struct _glapi_table *) table_noop_array;
 +#endif
  
- __thread void *u_current_context
-     __attribute__((tls_model("initial-exec")));
-@@ -283,7 +287,11 @@ struct _glapi_table *
+ __THREAD_INITIAL_EXEC void *u_current_context;
+ 
+@@ -251,7 +255,11 @@ struct _glapi_table *
  u_current_get_table_internal(void)
  {
  #if defined(USE_ELF_TLS)
