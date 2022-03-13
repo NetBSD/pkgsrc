@@ -1,28 +1,37 @@
-$NetBSD: patch-xf86drmMode.c,v 1.5 2019/01/19 13:21:29 tnn Exp $
+$NetBSD: patch-xf86drmMode.c,v 1.6 2022/03/13 15:20:01 tnn Exp $
 
 FreeBSD/DragonFly/NetBSD support. From FreeBSD ports and NetBSD xsrc
 
---- xf86drmMode.c.orig	2018-10-16 14:49:03.000000000 +0000
+--- xf86drmMode.c.orig	2021-07-02 12:49:05.459105300 +0000
 +++ xf86drmMode.c
-@@ -43,6 +43,7 @@
+@@ -38,9 +38,7 @@
  #include <stdlib.h>
  #include <sys/ioctl.h>
- #ifdef HAVE_SYS_SYSCTL_H
-+#include <sys/types.h>
+ #if HAVE_SYS_SYSCTL_H
+-#ifdef __FreeBSD__
+ #include <sys/types.h>
+-#endif
  #include <sys/sysctl.h>
  #endif
  #include <stdio.h>
-@@ -799,42 +800,60 @@ drm_public int drmCheckModesettingSuppor
+@@ -808,34 +806,59 @@ drm_public int drmCheckModesettingSuppor
  	closedir(sysdir);
  	if (found)
  		return 0;
 -#elif defined (__FreeBSD__) || defined (__FreeBSD_kernel__)
--	char kbusid[1024], sbusid[1024];
+-	char sbusid[1024];
 -	char oid[128];
--	int domain, bus, dev, func;
 -	int i, modesetting, ret;
 -	size_t len;
-+#elif defined (__FreeBSD__) || defined (__FreeBSD_kernel__) || defined (__DragonFly__)
+-
+-	/* How many GPUs do we expect in the machine ? */
+-	for (i = 0; i < 10; i++) {
+-		snprintf(oid, sizeof(oid), "hw.dri.%d.busid", i);
+-		len = sizeof(sbusid);
+-		ret = sysctlbyname(oid, sbusid, &len, NULL, 0);
+-		if (ret == -1) {
+-			if (errno == ENOENT)
++#elif defined (__FreeBSD__) || defined (__FreeBSD_kernel__) || defined(__DragonFly__)
 +	#define bus_fmt "pci:%04x:%02x:%02x.%u"
 +	#define name_fmt "%*s %*s " bus_fmt
 +	unsigned int d1 = 0, b1 = 0, s1 = 0, f1 = 0;
@@ -38,13 +47,7 @@ FreeBSD/DragonFly/NetBSD support. From FreeBSD ports and NetBSD xsrc
 +		snprintf(name, sizeof(name), "hw.dri.%i.name", i);
 +		if (sysctlbyname(name, value, &length, NULL, 0))
 +			continue;
- 
--	ret = sscanf(busid, "pci:%04x:%02x:%02x.%d", &domain, &bus, &dev,
--	    &func);
--	if (ret != 4)
--		return -EINVAL;
--	snprintf(kbusid, sizeof(kbusid), "pci:%04x:%02x:%02x.%d", domain, bus,
--	    dev, func);
++
 +		value[length] = '\0';
 +		unsigned int d2 = 0, b2 = 0, s2 = 0, f2 = 0;
 +		switch (sscanf(value, name_fmt, &d2, &b2, &s2, &f2)) {
@@ -53,14 +56,6 @@ FreeBSD/DragonFly/NetBSD support. From FreeBSD ports and NetBSD xsrc
 +			snprintf(name, sizeof(name), "hw.dri.%i.busid", i);
 +			if (sysctlbyname(name, value, &length, NULL, 0))
 +				continue;
- 
--	/* How many GPUs do we expect in the machine ? */
--	for (i = 0; i < 16; i++) {
--		snprintf(oid, sizeof(oid), "hw.dri.%d.busid", i);
--		len = sizeof(sbusid);
--		ret = sysctlbyname(oid, sbusid, &len, NULL, 0);
--		if (ret == -1) {
--			if (errno == ENOENT)
 +			value[length] = '\0';
 +			if (sscanf(value, bus_fmt, &d2, &b2, &s2, &f2) != 4)
  				continue;
@@ -88,7 +83,7 @@ FreeBSD/DragonFly/NetBSD support. From FreeBSD ports and NetBSD xsrc
 +		default:
 +			break;
  		}
--		if (strcmp(sbusid, kbusid) != 0)
+-		if (strcmp(sbusid, busid) != 0)
 -			continue;
 -		snprintf(oid, sizeof(oid), "hw.dri.%d.modesetting", i);
 -		len = sizeof(modesetting);
@@ -104,7 +99,7 @@ FreeBSD/DragonFly/NetBSD support. From FreeBSD ports and NetBSD xsrc
  	int	fd;
  	struct drm_mode_card_res res;
  	drmModeResPtr r = 0;
-@@ -987,7 +1006,7 @@ drm_public int drmModePageFlipTarget(int
+@@ -988,7 +1011,7 @@ drm_public int drmModePageFlipTarget(int
  
  drm_public int drmModeSetPlane(int fd, uint32_t plane_id, uint32_t crtc_id,
  		    uint32_t fb_id, uint32_t flags,

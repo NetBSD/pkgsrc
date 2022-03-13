@@ -1,8 +1,8 @@
-$NetBSD: patch-xf86drm.c,v 1.6 2019/09/08 15:55:04 maya Exp $
+$NetBSD: patch-xf86drm.c,v 1.7 2022/03/13 15:20:01 tnn Exp $
 
 Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
 
---- xf86drm.c.orig	2019-04-19 15:52:29.000000000 +0000
+--- xf86drm.c.orig	2021-07-02 12:49:05.459105300 +0000
 +++ xf86drm.c
 @@ -86,7 +86,10 @@
  #endif
@@ -16,10 +16,10 @@ Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
  #endif
  
  #ifdef __OpenBSD__
-@@ -3032,6 +3035,65 @@ static int drmParseSubsystemType(int maj
-     }
- 
-     return -EINVAL;
+@@ -3499,6 +3502,65 @@ static int drmParseSubsystemType(int maj
+             return DRM_BUS_VIRTIO;
+      }
+     return subsystem_type;
 +#elif defined(__NetBSD__)
 +    int type, fd;
 +    drmSetVersion sv;
@@ -29,7 +29,7 @@ Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
 +    int ret;
 +
 +    /* Get the type of device we're looking for to pick the right pathname.  */
-+    type = drmGetMinorType(min);
++    type = drmGetMinorType(maj, min);
 +    if (type == -1)
 +	return -ENODEV;
 +
@@ -79,10 +79,10 @@ Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
 +
 +    /* Success or not, we're done.  */
 +    return ret;
- #elif defined(__OpenBSD__) || defined(__DragonFly__)
+ #elif defined(__OpenBSD__) || defined(__DragonFly__) || defined(__FreeBSD__)
      return DRM_BUS_PCI;
  #else
-@@ -3081,6 +3143,73 @@ static int drmParsePciBusInfo(int maj, i
+@@ -3610,6 +3672,73 @@ static int drmParsePciBusInfo(int maj, i
      info->func = func;
  
      return 0;
@@ -95,7 +95,7 @@ Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
 +    int ret;
 +
 +    /* Get the type of device we're looking for to pick the right pathname.  */
-+    type = drmGetMinorType(min);
++    type = drmGetMinorType(maj, min);
 +    if (type == -1)
 +	return -ENODEV;
 +
@@ -156,7 +156,7 @@ Implement drmParseSubsystemType, drmParsePciBusInfo for NetBSD
  #elif defined(__OpenBSD__) || defined(__DragonFly__)
      struct drm_pciinfo pinfo;
      int fd, type;
-@@ -3247,6 +3376,48 @@ static int drmParsePciDeviceInfo(int maj
+@@ -3778,6 +3907,48 @@ static int drmParsePciDeviceInfo(int maj
          return parse_config_sysfs_file(maj, min, device);
  
      return 0;
