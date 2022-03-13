@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/03/07 21:36:19 thor Exp $
+# $NetBSD: Makefile,v 1.26 2022/03/13 17:32:59 nia Exp $
 
 # Before updating, make sure net/samba4 supports the newer version.
 DISTNAME=	ldb-2.4.2
@@ -68,6 +68,7 @@ CONFIGURE_ARGS+=	--without-ldb-lmdb
 .include "../../devel/cmocka/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/talloc/buildlink3.mk"
+BUILDLINK_API_DEPENDS.tevent+=	tevent>=0.11.0
 .include "../../devel/tevent/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
