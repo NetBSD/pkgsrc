@@ -1,10 +1,10 @@
-$NetBSD: patch-tools_llvm-shlib_CMakeLists.txt,v 1.7 2020/03/06 22:44:18 tnn Exp $
+$NetBSD: patch-tools_llvm-shlib_CMakeLists.txt,v 1.8 2022/03/13 15:22:32 tnn Exp $
 
 Use the Linux style linking everywhere except Darwin and SunOS.
 
---- tools/llvm-shlib/CMakeLists.txt.orig	2019-12-11 19:15:30.000000000 +0000
+--- tools/llvm-shlib/CMakeLists.txt.orig	2021-09-24 16:18:10.000000000 +0000
 +++ tools/llvm-shlib/CMakeLists.txt
-@@ -45,13 +45,11 @@ if(LLVM_BUILD_LLVM_DYLIB)
+@@ -33,13 +33,11 @@ if(LLVM_BUILD_LLVM_DYLIB)
    add_llvm_library(LLVM SHARED DISABLE_LLVM_LINK_LLVM_DYLIB SONAME ${INSTALL_WITH_TOOLCHAIN} ${SOURCES})
  
    list(REMOVE_DUPLICATES LIB_NAMES)
@@ -15,17 +15,17 @@ Use the Linux style linking everywhere except Darwin and SunOS.
 -     OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "Fuchsia")
 -     OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "DragonFly")
 -     OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "SunOS")) # FIXME: It should be "GNU ld for elf"
-+  if("${CMAKE_SYSTEM_NAME}" STREQUAL "Darwin")
-+    set(LIB_NAMES -Wl,-all_load ${LIB_NAMES})
-+  elseif("${CMAKE_SYSTEM_NAME}" STREQUAL "SunOS")
++  if("${CMAKE_SYSTEM_NAME}" STREQUAL "SunOS")
 +    set(LIB_NAMES -Wl,-Bsymbolic -Wl,-z -Wl,allextract ${LIB_NAMES} -Wl,-z -Wl,defaultextract)
++  elseif("${CMAKE_SYSTEM_NAME}" STREQUAL "Darwin")
++    set(LIB_NAMES -Wl,-all_load ${LIB_NAMES})
 +  else()
      configure_file(
      ${CMAKE_CURRENT_SOURCE_DIR}/simple_version_script.map.in
      ${LLVM_LIBRARY_DIR}/tools/llvm-shlib/simple_version_script.map)
-@@ -62,8 +60,6 @@ if(LLVM_BUILD_LLVM_DYLIB)
-       # Solaris ld does not accept global: *; so there is no way to version *all* global symbols
-       set(LIB_NAMES -Wl,--version-script,${LLVM_LIBRARY_DIR}/tools/llvm-shlib/simple_version_script.map ${LIB_NAMES})
+@@ -57,8 +55,6 @@ if(LLVM_BUILD_LLVM_DYLIB)
+       # inside and outside libLLVM.so.
+       target_link_options(LLVM PRIVATE LINKER:-Bsymbolic-functions)
      endif()
 -  elseif("${CMAKE_SYSTEM_NAME}" STREQUAL "Darwin")
 -    set(LIB_NAMES -Wl,-all_load ${LIB_NAMES})
