@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1405 2022/03/12 23:04:44 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.1406 2022/03/13 05:47:13 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1804,3 +1804,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated ham/gnuradio-wavelet to 3.10.1.1 [tnn 2022-03-12]
 	Updated ham/gnuradio-zeromq to 3.10.1.1 [tnn 2022-03-12]
 	Updated meta-pkgs/gnuradio to 3.10.1.1 [tnn 2022-03-12]
+	Updated print/hplip to 3.19.12nb14 [gutteridge 2022-03-13]
