@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.198 2021/12/08 16:04:48 adam Exp $
+# $NetBSD: Makefile,v 1.199 2022/03/13 15:50:05 tnn Exp $
 
-DISTNAME=	mesa-20.0.6
+DISTNAME=	mesa-21.3.7
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
-PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	https://mesa.freedesktop.org/archive/
 EXTRACT_SUFX=	.tar.xz
@@ -35,51 +34,43 @@ MESA_PLATFORMS=		#
 .include "options.mk"
 
 PLIST_SUBST+=	GLVER="1.2.0"
+PLIST_SUBST+=	MACHINE_ARCH=${MACHINE_ARCH}
 
 # classic DRI drivers
-PLIST_VARS+=		i915 i965 r100 r200 nouveau_dri
+PLIST_VARS+=		i830 i915 i965 r100 r200 nouveau_dri
 
 # Gallium drivers
-PLIST_VARS+=		r300 svga nouveau vc4 lima panfrost
+PLIST_VARS+=		r300 svga nouveau iris
 
 # other features
-PLIST_VARS+=		kms vaapi
+PLIST_VARS+=		arm kms vaapi
 
 .if ${MESALIB_SUPPORTS_DRI} == "yes"
 BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.100
 .include "../../x11/libdrm/buildlink3.mk"
-MESA_PLATFORMS+=	drm surfaceless
+.  if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+.    include "../../sysutils/libpciaccess/buildlink3.mk"
+.  endif
 MESON_ARGS+=		-Degl=true
 MESON_ARGS+=		-Dgbm=true
-MESON_ARGS+=		-Dgallium-xa=true
+MESON_ARGS+=		-Dgallium-xa=enabled
 .  if ${X11_TYPE} == "native" && !exists(${X11BASE}/include/xcb/dri3.h)
 MESON_ARGS+=		-Ddri3=false
 .  endif
 PLIST.kms=		yes
 .  if !empty(MACHINE_ARCH:M*arm*) || \
       ${MACHINE_CPU} == "aarch64"
-# ARM Mali Utgard
-GALLIUM_DRIVERS+=	lima
-PLIST.lima=		yes
-# ARM Mali Midgard, Bifrost
-GALLIUM_DRIVERS+=	panfrost
-PLIST.panfrost=		yes
-# Vivante GCxxx
-#GALLIUM_DRIVERS+=	etnaviv
-#PLIST.etnaviv=		yes
-# Qualcomm Snapdragon
-#GALLIUM_DRIVERS+=	freedreno
-#PLIST.freedreno=	yes
-# Broadcom VideoCore 4
-GALLIUM_DRIVERS+=	vc4
-PLIST.vc4=		yes
+GALLIUM_DRIVERS+=	freedreno vc4 etnaviv tegra panfrost lima
+PLIST.arm=		yes
 .  endif
 .  if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
-GALLIUM_DRIVERS+=	svga
+GALLIUM_DRIVERS+=	svga iris
 DRI_DRIVERS+=		i915 i965
 PLIST.svga=		yes
+PLIST.i830=		yes
 PLIST.i915=		yes
 PLIST.i965=		yes
+PLIST.iris=		yes
 .  endif
 # FreeBSD lacks nouveau support (there are official binaries from Nvidia)
 .  if ${OPSYS} != "FreeBSD"
@@ -107,14 +98,14 @@ PLIST.r300=		yes
 .  if ${VAAPI_AVAILABLE} == "yes" && \
       !(empty(GALLIUM_DRIVERS:Mr600) && empty(GALLIUM_DRIVERS:Mradeonsi) && \
         empty(GALLIUM_DRIVERS:Mnouveau))
-MESON_ARGS+=		-Dgallium-va=true
+MESON_ARGS+=		-Dgallium-va=enabled
 PLIST.vaapi=		yes
+BUILDLINK_API_DEPENDS.libva+=	libva>=2.13.0
 .    include "../../multimedia/libva/buildlink3.mk"
 .  else
-MESON_ARGS+=		-Dgallium-va=false
+MESON_ARGS+=		-Dgallium-va=disabled
 .  endif
 .else
-MESA_PLATFORMS+=	surfaceless
 MESON_ARGS+=		-Degl=false
 MESON_ARGS+=		-Dgbm=false
 .endif # ${MESALIB_SUPPORTS_DRI} == "yes"
@@ -132,7 +123,7 @@ CXXFLAGS+=	-march=i586
 
 MESON_ARGS+=	-Dgles1=true
 MESON_ARGS+=	-Dgles2=true
-MESON_ARGS+=	-Dosmesa=gallium
+MESON_ARGS+=	-Dosmesa=true
 MESON_ARGS+=	-Dshared-glapi=true
 MESON_ARGS+=	-Dgallium-xvmc=false
 
