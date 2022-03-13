@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2021/08/06 02:12:09 gutteridge Exp $
+# $NetBSD: Makefile.common,v 1.14 2022/03/13 03:22:37 gutteridge Exp $
 # used by meta-pkgs/mate/Makefile
 # used by print/atril/Makefile
 # used by sysutils/caja/Makefile
@@ -46,13 +46,11 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake msgfmt itstool pkg-config
 
-# Fails without GNU msgfmt
-_TOOLS_USE_PKGSRC.msgfmt=	yes
-
 MAINTAINER=	youri@NetBSD.org
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-libxml2-[0-9]*:../../textproc/py-libxml2
 
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../x11/gtk3/buildlink3.mk"
