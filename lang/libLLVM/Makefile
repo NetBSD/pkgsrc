@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.37 2021/05/24 19:52:33 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2022/03/13 15:22:32 tnn Exp $
 
-DISTNAME=	llvm-9.0.1.src
+DISTNAME=	llvm-13.0.1.src
 PKGNAME=	${DISTNAME:S/llvm/libLLVM/:S/.src//}
-PKGREVISION=	1
 CATEGORIES=	lang devel
-MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=llvm/}
+GITHUB_PROJECT=	llvm-project
+GITHUB_RELEASE=	llvmorg-${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -39,7 +40,7 @@ CMAKE_ARGS.Darwin+=	-DCMAKE_LIBTOOL=/usr/bin/libtool
 .for tool in	bugpoint bugpoint_passes dsymutil gold llc lli llvm_ar	\
 	llvm_as llvm_as_fuzzer llvm_bcanalyzer llvm_c_test llvm_cat	\
 	llvm_cfi_verify llvm_cov llvm_cvtres llvm_cxxdump llvm_cxxfilt	\
-	llvm_cxxmap llvm_diff llvm_dis llvm_dwarfdump llvm_dwp		\
+	llvm_cxxmap llvm_diff llvm_dis llvm_dwp				\
 	llvm_elfabi llvm_exegesis llvm_extract llvm_go llvm_isel_fuzzer	\
 	llvm_itanium_demangle_fuzzer llvm_jitlink llvm_jitlistener	\
 	llvm_link llvm_lipo llvm_lto llvm_lto2 llvm_mc			\
@@ -51,7 +52,10 @@ CMAKE_ARGS.Darwin+=	-DCMAKE_LIBTOOL=/usr/bin/libtool
 	llvm_strings llvm_symbolizer llvm_undname llvm_xray		\
 	llvm_yaml_numeric_parser_fuzzer lto msbuild obj2yaml		\
 	opt opt_viewer remarks_shlib sancov sanstats			\
-	verify_uselistorder xcode_toolchain yaml2obj
+	verify_uselistorder xcode_toolchain yaml2obj			\
+	llvm_ml llvm_profgen llvm_reduce llvm_gsymutil split_file	\
+	llvm_libtool_darwin llvm_ifs llvm_dwarfdump llvm_sim		\
+	llvm_tapi_diff
 
 CMAKE_ARGS+=	-DLLVM_TOOL_${tool:tu}_BUILD=OFF
 .endfor
@@ -76,7 +80,7 @@ REPLACE_PYTHON+=	utils/Misc/zkill
 REPLACE_PYTHON+=	utils/bisect
 REPLACE_PYTHON+=	utils/clang-parse-diagnostics-file
 REPLACE_PYTHON+=	utils/git/find-rev
-REPLACE_PYTHON+=	utils/lit/tests/Inputs/googletest-format/DummySubDir/OneTest
+REPLACE_PYTHON+=	utils/lit/tests/Inputs/googletest-format/DummySubDir/OneTest.py
 REPLACE_PYTHON+=	utils/llvm-build/llvm-build
 REPLACE_PYTHON+=	utils/llvm-compilers-check
 REPLACE_PYTHON+=	utils/llvm-lit/llvm-lit.in
@@ -104,12 +108,18 @@ PLIST.notdylib=	yes
 PLIST_SUBST+=	SOEXT=${SOEXT}
 PLIST_SUBST+=	LLVM_LIBNAME=${LLVM_LIBNAME}
 
-.include "options.mk"
-
 # needs std::atomic with 64-bit CAS
 .if ${MACHINE_ARCH} == "i386"
 CXXFLAGS+=	-march=i586
 .endif
+
+.if !empty(MACHINE_ARCH:Mpowerpc*)
+# Needed to avoid "relocation truncated to fit: R_PPC_REL24"
+CFLAGS+=	-mlongcall
+CXXFLAGS+=	-mlongcall
+.endif
+
+.include "options.mk"
 
 # replacing config.guess is required even for cmake.
 # It is used to detect correct LLVM_HOST_TRIPLE, e.g. for NetBSD/evbarm.

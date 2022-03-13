@@ -1,11 +1,12 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2019/01/26 21:17:20 tnn Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2022/03/13 15:22:32 tnn Exp $
 
 Put headers in subdirectory to avoid conflict with clang.
 Don't implement sys/regset.h workaround, fix source instead.
+Don't build locstats.
 
---- CMakeLists.txt.orig	2018-11-02 17:47:32.000000000 +0000
+--- CMakeLists.txt.orig	2021-06-28 16:23:38.000000000 +0000
 +++ CMakeLists.txt
-@@ -830,7 +830,7 @@ endif(${CMAKE_SYSTEM_NAME} MATCHES "(Fre
+@@ -902,7 +902,7 @@ endif()
  
  if( ${CMAKE_SYSTEM_NAME} MATCHES SunOS )
     # special hack for Solaris to handle crazy system sys/regset.h
@@ -14,7 +15,7 @@ Don't implement sys/regset.h workaround, fix source instead.
  endif( ${CMAKE_SYSTEM_NAME} MATCHES SunOS )
  
  # Make sure we don't get -rdynamic in every binary. For those that need it,
-@@ -966,7 +966,7 @@ endif()
+@@ -1027,7 +1027,7 @@ endif()
  
  if (NOT LLVM_INSTALL_TOOLCHAIN_ONLY)
    install(DIRECTORY include/llvm include/llvm-c
@@ -23,7 +24,7 @@ Don't implement sys/regset.h workaround, fix source instead.
      COMPONENT llvm-headers
      FILES_MATCHING
      PATTERN "*.def"
-@@ -978,7 +978,7 @@ if (NOT LLVM_INSTALL_TOOLCHAIN_ONLY)
+@@ -1038,7 +1038,7 @@ if (NOT LLVM_INSTALL_TOOLCHAIN_ONLY)
      )
  
    install(DIRECTORY ${LLVM_INCLUDE_DIR}/llvm ${LLVM_INCLUDE_DIR}/llvm-c
@@ -32,3 +33,10 @@ Don't implement sys/regset.h workaround, fix source instead.
      COMPONENT llvm-headers
      FILES_MATCHING
      PATTERN "*.def"
+@@ -1125,5 +1125,5 @@ if (LLVM_INCLUDE_BENCHMARKS)
+ endif()
+ 
+ if (LLVM_INCLUDE_UTILS AND LLVM_INCLUDE_TOOLS)
+-  add_subdirectory(utils/llvm-locstats)
++#  add_subdirectory(utils/llvm-locstats)
+ endif()

@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.4 2019/01/26 21:17:20 tnn Exp $
+# $NetBSD: options.mk,v 1.5 2022/03/13 15:22:32 tnn Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.llvm
+PKG_OPTIONS_VAR=	PKG_OPTIONS.libLLVM
 
-LLVM_TARGETS=	AArch64 AMDGPU ARM BPF Hexagon Lanai Mips MSP430 NVPTX PowerPC Sparc SystemZ X86 XCore
+LLVM_TARGETS=	AArch64 AMDGPU ARM AVR BPF Hexagon Lanai Mips MSP430 NVPTX PowerPC RISCV Sparc SystemZ WebAssembly X86 XCore
 
 .for tgt in ${LLVM_TARGETS}
 PLIST_VARS+=			${tgt}
@@ -23,20 +23,22 @@ PKG_SUGGESTED_OPTIONS+=		terminfo
 # Probably safe to assume that only x86 users are interested in
 # cross-compilation for now. This saves some build time for everyone else.
 .if !empty(MACHINE_ARCH:Msparc*)
-PKG_SUGGESTED_OPTIONS+=		llvm-target-sparc
+PKG_SUGGESTED_OPTIONS+=	llvm-target-sparc
 .elif !empty(MACHINE_ARCH:Mpowerpc*)
-PKG_SUGGESTED_OPTIONS+=		llvm-target-powerpc
+PKG_SUGGESTED_OPTIONS+=	llvm-target-powerpc
+.elif !empty(MACHINE_ARCH:Maarch64)
+PKG_SUGGESTED_OPTIONS+=	llvm-target-aarch64
 .elif !empty(MACHINE_ARCH:Mearm*)
-PKG_SUGGESTED_OPTIONS+=		llvm-target-arm
+PKG_SUGGESTED_OPTIONS+=	llvm-target-arm
 .elif !empty(MACHINE_ARCH:M*mips*)
-PKG_SUGGESTED_OPTIONS+=		llvm-target-mips
+PKG_SUGGESTED_OPTIONS+=	llvm-target-mips
 .else
 # X86 and everyone else get all targets by default.
 .  for tgt in ${LLVM_TARGETS}
-PKG_SUGGESTED_OPTIONS+=		llvm-target-${tgt:tl}
+PKG_SUGGESTED_OPTIONS+=	llvm-target-${tgt:tl}
 .  endfor
 .endif
-PKG_SUGGESTED_OPTIONS+=		llvm-target-amdgpu	# for mesa/radeon
+PKG_SUGGESTED_OPTIONS+=	llvm-target-amdgpu	# for mesa/radeon
 
 .include "../../mk/bsd.options.mk"
 
