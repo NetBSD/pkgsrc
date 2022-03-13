@@ -1,0 +1,18 @@
+$NetBSD: patch-gnattools_configure,v 1.1 2022/03/13 08:34:04 nia Exp $
+
+Include NetBSD in the gnat tools configure.
+
+--- gnattools/configure.orig	2021-08-28 14:19:25.404806918 +0000
++++ gnattools/configure	2021-08-28 14:25:51.208977452 +0000
+@@ -2079,6 +2079,11 @@
+     mlib-tgt-specific.adb<mlib-tgt-specific-linux.adb \
+     indepsw.adb<indepsw-gnu.adb"
+     ;;
++  *-*-netbsd*)
++    TOOLS_TARGET_PAIRS="\
++    mlib-tgt-specific.adb<mlib-tgt-specific-linux.adb \
++    indepsw.adb<indepsw-gnu.adb"
++    ;;
+   *-*-linux*)
+     TOOLS_TARGET_PAIRS="\
+     mlib-tgt-specific.adb<mlib-tgt-specific-linux.adb \
