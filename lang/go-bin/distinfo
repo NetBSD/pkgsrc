@@ -1,23 +1,23 @@
-$NetBSD: distinfo,v 1.4 2021/11/18 09:17:36 tnn Exp $
+$NetBSD: distinfo,v 1.5 2022/03/13 20:56:52 tnn Exp $
 
-BLAKE2s (go1.14.2.darwin-amd64.tar.gz) = 2d592b40cb6efa3cc8483cb100d0e4664e9c7c5a3a0983935c6efa52927758a4
-SHA512 (go1.14.2.darwin-amd64.tar.gz) = 99a7584df26d0269bd5fd550a022fece0daccf2325289ec70dbdcf6a8082b4d7bfdc38ec861ec9f1d0cf4dc52d830a38e6e3c41e4a95f7f2318cc1d41803f597
-Size (go1.14.2.darwin-amd64.tar.gz) = 125040726 bytes
-BLAKE2s (go1.14.2.linux-386.tar.gz) = c00f6ca636fd368a858a29cb283e0bc5b0fb93b8c85428d4073bba3aee7dff1c
-SHA512 (go1.14.2.linux-386.tar.gz) = e7bd127665f0a69f66345cd91f1df35a5eb914403fd1d653ad4cbb5fef3e31b3b33e6c4a5f2d9c08f8c59eb7775e7fdf0a8dd3d6fb0fa67cc67d52e1d7835e34
-Size (go1.14.2.linux-386.tar.gz) = 104851976 bytes
-BLAKE2s (go1.14.2.linux-amd64.tar.gz) = 9310d0ed71522c06fe63cc53c10aa7a3839fe35bbd08662c0f8e4c2fc50e0521
-SHA512 (go1.14.2.linux-amd64.tar.gz) = 41d71c2254ad6f441eec15824fb7fc2b5edbd3fc8786774ae182216981ded7854efc9650b5f6378463da5dfcc5bcaaf3b829e2a30d5fda1276e0e9d7a8d48d8f
-Size (go1.14.2.linux-amd64.tar.gz) = 123658438 bytes
-BLAKE2s (go1.14.2.linux-arm64.tar.gz) = 3c5c82280ff260880c27cfe081f5e70451eea23012bbeab0d53e1f0ac51ad259
-SHA512 (go1.14.2.linux-arm64.tar.gz) = c0aae993e75bc40594017aa7912d306a36e728da25f82a7c8c604647c4fbc4ca28c071aa58371b637555f17f534e532e201c1afd07b69411708fd47bb20cc916
-Size (go1.14.2.linux-arm64.tar.gz) = 101012554 bytes
-BLAKE2s (go1.14.2.linux-armv6l.tar.gz) = 88e5d228812ac216f8cad76d701d9db470be76ae9f59d2b5b7a9e28ab036357b
-SHA512 (go1.14.2.linux-armv6l.tar.gz) = 2325e93cb67195ffa61bb9a5371434f082bc7552f7f1f6039aec6a5989463b5c00df55f11a6ab46b44cac3daa25beea96163d60cf5f58ed46b07e65ea02eb8c8
-Size (go1.14.2.linux-armv6l.tar.gz) = 101770334 bytes
-BLAKE2s (go1.14.2.netbsd-arm64.tar.gz) = e73808a0854376a83ee546966a55be4d15579483e4d7e781198188956000c561
-SHA512 (go1.14.2.netbsd-arm64.tar.gz) = d3750a3092118e05aa9b4a0a59ae2d49950d0c259a92b54c230d98e239725acd240556643ce7019a5d1ea3ecd1ccc37fc6bcc4e8b7a9a0f32d347f4daa4dccbf
-Size (go1.14.2.netbsd-arm64.tar.gz) = 123662640 bytes
-BLAKE2s (go1.16beta1.darwin-arm64.tar.gz) = 609707c823f86118f67e43e7c79f6fe4cb649f60c4a618f73d9cd4b818030803
-SHA512 (go1.16beta1.darwin-arm64.tar.gz) = 9cc0def8c852e8f2550e8bd5ba0cdbba8892b3ecd8c855fb1e19603ec7fa2e0572d74bce47f62bfb3039024f65c8ff17fca777cef7fd5e25f2dd77ecb66c05d6
-Size (go1.16beta1.darwin-arm64.tar.gz) = 127918903 bytes
+BLAKE2s (go1.17.8.darwin-amd64.tar.gz) = 1c7db954c0928b456678672bff89713243689e470c9bfe19c2c1d960a7710b4d
+SHA512 (go1.17.8.darwin-amd64.tar.gz) = 0e61195cd61db6eba61fdc186966f69f87805e4f1a15c1392e42523ecd6ccb4167ebec85ce05a89eb75d0942fe0c2ee9faab5753f44984c0472a3df9c291e52b
+Size (go1.17.8.darwin-amd64.tar.gz) = 136872391 bytes
+BLAKE2s (go1.17.8.darwin-arm64.tar.gz) = b0948a2f56df30a650591bd150553f16b534409015202ee571a10d8fc07a28f7
+SHA512 (go1.17.8.darwin-arm64.tar.gz) = 1c987b62faaa57e344723529daa7b441dfdfc649b6267818e602ce35c2b1d5dda98b6e73770b20905930657fa5a0d4a604e09acdafe32dbe2e316835fde8d70a
+Size (go1.17.8.darwin-arm64.tar.gz) = 130325428 bytes
+BLAKE2s (go1.17.8.linux-386.tar.gz) = 2d245a7fc72e77ac8cd263fb2395281cacbc8cecf5d2c90fa0fc26d81f0f53d5
+SHA512 (go1.17.8.linux-386.tar.gz) = 737c4c5a4eedcfe9cc29a1e133f79b46ad0326ee6a295aeab7e7569186f3854f5873aed23ebcc1b490f4bec66aa65ccc7ebcc8b768622fd557b348cda45c0cc4
+Size (go1.17.8.linux-386.tar.gz) = 105678111 bytes
+BLAKE2s (go1.17.8.linux-amd64.tar.gz) = 2294e5367cd06a94d7a249aa3ee5d9bfd433fbf0dd8cf217a63b42448e210cae
+SHA512 (go1.17.8.linux-amd64.tar.gz) = f7dd9bd8bb4ddbf6906a8538f007b099d26a51ef13ccd8a3077945585e800d60e476934316a6a2335dcc25a425e641b73f96b00323c5468aa0bb938b5b6987d7
+Size (go1.17.8.linux-amd64.tar.gz) = 134902354 bytes
+BLAKE2s (go1.17.8.linux-arm64.tar.gz) = 83a9739d974619b8d15eefa53497f0a690d401d24dbb0254bff3ca2be4fddd5c
+SHA512 (go1.17.8.linux-arm64.tar.gz) = 58dac7340ed34ba81e675dd906c3512cf061c06cc7526fcc1724a9836452d557b3fe59da62e91cd41e9284f410f41b077f6375ffc7115393467f96067822893f
+Size (go1.17.8.linux-arm64.tar.gz) = 102690158 bytes
+BLAKE2s (go1.17.8.linux-armv6l.tar.gz) = 403e4f7356820e6f579728dab2adaa676c579ae69c3f32170eae565f3f3b1cab
+SHA512 (go1.17.8.linux-armv6l.tar.gz) = 778e618ad571436205d0855fddd8d21a59402af5ea60ed6b44be652d0cdde7e51fa89053dfb83cdc7c34de046f6728813da428fea5970a9a62efbe6a00b820c0
+Size (go1.17.8.linux-armv6l.tar.gz) = 103135744 bytes
+BLAKE2s (go1.17.8.netbsd-arm64.tar.gz) = 950e59dd31aaba7cfca8ddaa7b3dd9bca4560ea86e334965d9229a1ed09a579a
+SHA512 (go1.17.8.netbsd-arm64.tar.gz) = b640f9fa9c9dbbd0820e7d9bac9460b4a7a9aababf574d2409d9e1f0716231fd0dfbf6a3766da0ddd6fabdd340f761534fa71f8b4209f521be42471fbb863c60
+Size (go1.17.8.netbsd-arm64.tar.gz) = 135664717 bytes
