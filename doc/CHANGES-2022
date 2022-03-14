@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1432 2022/03/14 10:19:33 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1433 2022/03/14 10:20:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1887,3 +1887,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/lemon to 1.0.3.38.1 [adam 2022-03-14]
 	Updated sysutils/bkt to 0.5.3 [pin 2022-03-14]
 	Updated sysutils/broot to 1.9.4 [pin 2022-03-14]
+	Updated x11/citron to 0.14.2 [pin 2022-03-14]
