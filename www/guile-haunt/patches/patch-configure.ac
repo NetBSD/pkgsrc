@@ -1,0 +1,14 @@
+$NetBSD: patch-configure.ac,v 1.1 2022/03/14 11:17:22 nikita Exp $
+
+Taken from upstream commit 7d0b71f6a3f0e714da5a5c43e52408e27f44c383
+by the upstream developer. Fix building without inotify.
+
+--- configure.ac.orig	2022-03-14 11:49:23.183233537 +0100
++++ configure.ac	2022-03-14 11:50:23.094966055 +0100
+@@ -21,4 +21,6 @@
+ GUILE_MODULE_AVAILABLE([have_guile_commonmark], [(commonmark)])
+ AM_CONDITIONAL([HAVE_GUILE_COMMONMARK], [test "x$have_guile_commonmark" = "xyes"])
+ 
++AC_CHECK_FUNC([inotify_init], [AM_CONDITIONAL(HAVE_INOTIFY, true)], [AM_CONDITIONAL(HAVE_INOTIFY, false)])
++
+ AC_OUTPUT
