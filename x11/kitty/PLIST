@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2022/02/08 12:35:44 pin Exp $
+@comment $NetBSD: PLIST,v 1.17 2022/03/14 13:28:34 pin Exp $
 bin/kitty
 lib/kitty/__main__.py
 lib/kitty/__main__.pyc
@@ -550,6 +550,7 @@ lib/kitty/shell-integration/zsh/kitty.zsh
 lib/kitty/terminfo/x/xterm-kitty
 man/man1/kitty.1
 man/man5/kitty.conf.5
+share/applications/kitty-open.desktop
 share/applications/kitty.desktop
 share/doc/kitty/html/.buildinfo
 share/doc/kitty/html/.nojekyll
