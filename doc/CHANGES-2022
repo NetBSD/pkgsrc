@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1454 2022/03/14 14:12:52 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1455 2022/03/14 15:10:26 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1912,3 +1912,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-pip-audit to 2.1.0 [wiz 2022-03-14]
 	Updated fonts/unifont to 14.0.02 [wiz 2022-03-14]
 	Updated fonts/fontforge to 20220308 [wiz 2022-03-14]
+	Updated geography/gdal-lib to 3.4.2 [gdt 2022-03-14]
