@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:22:10 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/03/14 13:53:27 wiz Exp $
 
-BLAKE2s (ispell-3.4.04.tar.gz) = 022e5032a226a12b72addfd8367a9e91789846b54e1e40df346426d5c597feaa
-SHA512 (ispell-3.4.04.tar.gz) = d8613e020fbe216347a2a9abb83a7e291886f8f7c229bde42f87b3477de9c2dbce9da1230dc9b7aeb35c95727e34377489aac2cf46dc49a7c135da35b9cc6eb3
-Size (ispell-3.4.04.tar.gz) = 670046 bytes
+BLAKE2s (ispell-3.4.05.tar.gz) = ebb8fa93747d6904c9556ef76b08ab6145b3abfb8c36f04cf173bdf8f72b4220
+SHA512 (ispell-3.4.05.tar.gz) = 2ab9336a96bfac4b254367fd0664b376f216b7ff24511573dbce8b0e45b438ec686d944e4ae2641d5e1b062bd7a43761324a41281eb162214f79b82f5cb4c7b1
+Size (ispell-3.4.05.tar.gz) = 671406 bytes
 SHA1 (patch-Makefile) = e77f0502e3c4cda4f55e16f91030175f192844bb
 SHA1 (patch-ac) = 4faa82bdd628500aa35d94b2d4a1860919097b72
 SHA1 (patch-ad) = c47a406acf52244868e7a561ab7f1c9d394d4034
