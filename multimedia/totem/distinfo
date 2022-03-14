@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.47 2021/10/26 11:01:18 nia Exp $
+$NetBSD: distinfo,v 1.48 2022/03/14 03:10:49 nia Exp $
 
 BLAKE2s (totem-3.34.1.tar.xz) = 7f6f338122952e631a9fbd24a0cab39dd29e8a18c99648c259acdc930a2f66ee
 SHA512 (totem-3.34.1.tar.xz) = 9a3556f5cf522fca29926db185c2e5d25bdb80a25e14d0ba3062a7f15fc3ec40ae9f25752763bc444d4fd82ec2098efd732da662a1b1c5923ec19fde432606db
 Size (totem-3.34.1.tar.xz) = 2157160 bytes
+SHA1 (patch-data_appdata_meson.build) = c73994a4c3d21cda14e447ecc4c07d92062b6cef
+SHA1 (patch-data_meson.build) = 4ede548c7bb6f113cd9f6f1e0bc2af01d38e7bcf
