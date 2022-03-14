@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST.Linux,v 1.5 2021/05/26 12:29:24 nia Exp $
+@comment $NetBSD: PLIST.Linux,v 1.6 2022/03/14 19:54:15 markd Exp $
 lib/obs-plugins/linux-alsa.so
 lib/obs-plugins/linux-decklink.so
 lib/obs-plugins/linux-v4l2.so
 share/obs/obs-plugins/linux-alsa/locale/ar-SA.ini
 share/obs/obs-plugins/linux-alsa/locale/az-AZ.ini
+share/obs/obs-plugins/linux-alsa/locale/ba-RU.ini
 share/obs/obs-plugins/linux-alsa/locale/bg-BG.ini
 share/obs/obs-plugins/linux-alsa/locale/bn-BD.ini
 share/obs/obs-plugins/linux-alsa/locale/ca-ES.ini
@@ -11,6 +12,7 @@ share/obs/obs-plugins/linux-alsa/locale/cs-CZ.ini
 share/obs/obs-plugins/linux-alsa/locale/da-DK.ini
 share/obs/obs-plugins/linux-alsa/locale/de-DE.ini
 share/obs/obs-plugins/linux-alsa/locale/el-GR.ini
+share/obs/obs-plugins/linux-alsa/locale/en-GB.ini
 share/obs/obs-plugins/linux-alsa/locale/en-US.ini
 share/obs/obs-plugins/linux-alsa/locale/es-ES.ini
 share/obs/obs-plugins/linux-alsa/locale/et-EE.ini
@@ -24,6 +26,7 @@ share/obs/obs-plugins/linux-alsa/locale/gl-ES.ini
 share/obs/obs-plugins/linux-alsa/locale/he-IL.ini
 share/obs/obs-plugins/linux-alsa/locale/hr-HR.ini
 share/obs/obs-plugins/linux-alsa/locale/hu-HU.ini
+share/obs/obs-plugins/linux-alsa/locale/id-ID.ini
 share/obs/obs-plugins/linux-alsa/locale/it-IT.ini
 share/obs/obs-plugins/linux-alsa/locale/ja-JP.ini
 share/obs/obs-plugins/linux-alsa/locale/ka-GE.ini
@@ -41,6 +44,7 @@ share/obs/obs-plugins/linux-alsa/locale/sl-SI.ini
 share/obs/obs-plugins/linux-alsa/locale/sr-CS.ini
 share/obs/obs-plugins/linux-alsa/locale/sr-SP.ini
 share/obs/obs-plugins/linux-alsa/locale/sv-SE.ini
+share/obs/obs-plugins/linux-alsa/locale/ta-IN.ini
 share/obs/obs-plugins/linux-alsa/locale/tl-PH.ini
 share/obs/obs-plugins/linux-alsa/locale/tr-TR.ini
 share/obs/obs-plugins/linux-alsa/locale/uk-UA.ini
@@ -48,6 +52,8 @@ share/obs/obs-plugins/linux-alsa/locale/vi-VN.ini
 share/obs/obs-plugins/linux-alsa/locale/zh-CN.ini
 share/obs/obs-plugins/linux-alsa/locale/zh-TW.ini
 share/obs/obs-plugins/linux-decklink/locale/ar-SA.ini
+share/obs/obs-plugins/linux-decklink/locale/az-AZ.ini
+share/obs/obs-plugins/linux-decklink/locale/ba-RU.ini
 share/obs/obs-plugins/linux-decklink/locale/bg-BG.ini
 share/obs/obs-plugins/linux-decklink/locale/bn-BD.ini
 share/obs/obs-plugins/linux-decklink/locale/ca-ES.ini
@@ -55,7 +61,9 @@ share/obs/obs-plugins/linux-decklink/locale/cs-CZ.ini
 share/obs/obs-plugins/linux-decklink/locale/da-DK.ini
 share/obs/obs-plugins/linux-decklink/locale/de-DE.ini
 share/obs/obs-plugins/linux-decklink/locale/el-GR.ini
+share/obs/obs-plugins/linux-decklink/locale/en-GB.ini
 share/obs/obs-plugins/linux-decklink/locale/en-US.ini
+share/obs/obs-plugins/linux-decklink/locale/eo-UY.ini
 share/obs/obs-plugins/linux-decklink/locale/es-ES.ini
 share/obs/obs-plugins/linux-decklink/locale/et-EE.ini
 share/obs/obs-plugins/linux-decklink/locale/eu-ES.ini
@@ -68,10 +76,13 @@ share/obs/obs-plugins/linux-decklink/locale/gl-ES.ini
 share/obs/obs-plugins/linux-decklink/locale/he-IL.ini
 share/obs/obs-plugins/linux-decklink/locale/hr-HR.ini
 share/obs/obs-plugins/linux-decklink/locale/hu-HU.ini
+share/obs/obs-plugins/linux-decklink/locale/id-ID.ini
 share/obs/obs-plugins/linux-decklink/locale/it-IT.ini
 share/obs/obs-plugins/linux-decklink/locale/ja-JP.ini
 share/obs/obs-plugins/linux-decklink/locale/ka-GE.ini
+share/obs/obs-plugins/linux-decklink/locale/kab-KAB.ini
 share/obs/obs-plugins/linux-decklink/locale/ko-KR.ini
+share/obs/obs-plugins/linux-decklink/locale/lt-LT.ini
 share/obs/obs-plugins/linux-decklink/locale/mn-MN.ini
 share/obs/obs-plugins/linux-decklink/locale/nb-NO.ini
 share/obs/obs-plugins/linux-decklink/locale/nl-NL.ini
@@ -85,6 +96,7 @@ share/obs/obs-plugins/linux-decklink/locale/sl-SI.ini
 share/obs/obs-plugins/linux-decklink/locale/sr-CS.ini
 share/obs/obs-plugins/linux-decklink/locale/sr-SP.ini
 share/obs/obs-plugins/linux-decklink/locale/sv-SE.ini
+share/obs/obs-plugins/linux-decklink/locale/ta-IN.ini
 share/obs/obs-plugins/linux-decklink/locale/tl-PH.ini
 share/obs/obs-plugins/linux-decklink/locale/tr-TR.ini
 share/obs/obs-plugins/linux-decklink/locale/uk-UA.ini
@@ -92,6 +104,8 @@ share/obs/obs-plugins/linux-decklink/locale/vi-VN.ini
 share/obs/obs-plugins/linux-decklink/locale/zh-CN.ini
 share/obs/obs-plugins/linux-decklink/locale/zh-TW.ini
 share/obs/obs-plugins/linux-v4l2/locale/ar-SA.ini
+share/obs/obs-plugins/linux-v4l2/locale/az-AZ.ini
+share/obs/obs-plugins/linux-v4l2/locale/ba-RU.ini
 share/obs/obs-plugins/linux-v4l2/locale/bg-BG.ini
 share/obs/obs-plugins/linux-v4l2/locale/bn-BD.ini
 share/obs/obs-plugins/linux-v4l2/locale/ca-ES.ini
@@ -99,6 +113,7 @@ share/obs/obs-plugins/linux-v4l2/locale/cs-CZ.ini
 share/obs/obs-plugins/linux-v4l2/locale/da-DK.ini
 share/obs/obs-plugins/linux-v4l2/locale/de-DE.ini
 share/obs/obs-plugins/linux-v4l2/locale/el-GR.ini
+share/obs/obs-plugins/linux-v4l2/locale/en-GB.ini
 share/obs/obs-plugins/linux-v4l2/locale/en-US.ini
 share/obs/obs-plugins/linux-v4l2/locale/es-ES.ini
 share/obs/obs-plugins/linux-v4l2/locale/et-EE.ini
@@ -113,9 +128,11 @@ share/obs/obs-plugins/linux-v4l2/locale/he-IL.ini
 share/obs/obs-plugins/linux-v4l2/locale/hi-IN.ini
 share/obs/obs-plugins/linux-v4l2/locale/hr-HR.ini
 share/obs/obs-plugins/linux-v4l2/locale/hu-HU.ini
+share/obs/obs-plugins/linux-v4l2/locale/id-ID.ini
 share/obs/obs-plugins/linux-v4l2/locale/it-IT.ini
 share/obs/obs-plugins/linux-v4l2/locale/ja-JP.ini
 share/obs/obs-plugins/linux-v4l2/locale/ka-GE.ini
+share/obs/obs-plugins/linux-v4l2/locale/kab-KAB.ini
 share/obs/obs-plugins/linux-v4l2/locale/ko-KR.ini
 share/obs/obs-plugins/linux-v4l2/locale/nb-NO.ini
 share/obs/obs-plugins/linux-v4l2/locale/nl-NL.ini
@@ -129,6 +146,7 @@ share/obs/obs-plugins/linux-v4l2/locale/sl-SI.ini
 share/obs/obs-plugins/linux-v4l2/locale/sr-CS.ini
 share/obs/obs-plugins/linux-v4l2/locale/sr-SP.ini
 share/obs/obs-plugins/linux-v4l2/locale/sv-SE.ini
+share/obs/obs-plugins/linux-v4l2/locale/ta-IN.ini
 share/obs/obs-plugins/linux-v4l2/locale/th-TH.ini
 share/obs/obs-plugins/linux-v4l2/locale/tl-PH.ini
 share/obs/obs-plugins/linux-v4l2/locale/tr-TR.ini
