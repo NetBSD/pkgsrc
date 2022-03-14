@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/03/14 10:36:00 nikita Exp $
+# $NetBSD: Makefile,v 1.5 2022/03/14 11:17:22 nikita Exp $
 
-DISTNAME=	haunt-0.2.5
+DISTNAME=	haunt-0.2.6
 PKGNAME=	guile-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://files.dthompson.us/haunt/
 
