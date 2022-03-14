@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1457 2022/03/14 15:17:49 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.1458 2022/03/14 15:22:00 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1915,3 +1915,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated geography/gdal-lib to 3.4.2 [gdt 2022-03-14]
 	Updated geography/py-gdal to 3.4.2 [gdt 2022-03-14]
 	Updated devel/guile-gcrypt to 0.3.0nb1 [nikita 2022-03-14]
+	Updated textproc/guile-json to 4.7.0nb1 [nikita 2022-03-14]
