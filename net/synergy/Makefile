@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2022/03/11 20:49:13 tnn Exp $
+# $NetBSD: Makefile,v 1.73 2022/03/14 11:40:08 tnn Exp $
 
 DISTNAME=		synergy-core-1.14.3.5
 PKGNAME=		${DISTNAME:S/-core//}
@@ -12,7 +12,7 @@ DISTFILES=		${DEFAULT_DISTFILES}		\
 SITES.googletest-1.10.0.tar.gz=	\
 	-${MASTER_SITE_GITHUB:=google/}googletest/archive/release-1.10.0.tar.gz
 SITES.pugixml-1.12.1.tar.gz=	\
-	-${MASTER_SITE_GITHUB:=zeux/}pugixml/releases/download/v1.12.1/pugixml-1.12.1.tar.gz
+	-${MASTER_SITE_GITHUB:=zeux/}pugixml/archive/v1.12.1.tar.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://synergy-project.org/
