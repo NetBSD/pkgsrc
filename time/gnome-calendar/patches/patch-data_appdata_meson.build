@@ -1,0 +1,15 @@
+$NetBSD: patch-data_appdata_meson.build,v 1.1 2022/03/14 02:51:31 nia Exp $
+
+Remove unused positional argument. These were previously ignored
+and now cause failures.
+
+--- data/appdata/meson.build.orig	2021-03-22 18:55:09.573393600 +0000
++++ data/appdata/meson.build
+@@ -1,7 +1,6 @@
+ appdata_conf = configuration_data()
+ appdata_conf.set('appid', application_id)
+ appdata = i18n.merge_file(
+-  'appdata',
+   input: configure_file(
+     input: files('org.gnome.Calendar.appdata.xml.in.in'),
+     output: 'org.gnome.Calendar.appdata.xml.in',
