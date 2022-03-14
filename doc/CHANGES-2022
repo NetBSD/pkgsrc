@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1463 2022/03/14 15:46:50 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.1464 2022/03/14 18:21:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1921,3 +1921,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/guile-bytestructures to 1.0.10nb1 [nikita 2022-03-14]
 	Updated devel/guile-git to 0.5.2nb1 [nikita 2022-03-14]
 	Updated databases/guile-sqlite3 to 0.1.3nb1 [nikita 2022-03-14]
+	Updated devel/pangomm to 2.46.2 [adam 2022-03-14]
+	Updated x11/gtk3 to 3.24.33 [adam 2022-03-14]
