@@ -1,0 +1,16 @@
+$NetBSD: patch-data_appdata_meson.build,v 1.1 2022/03/14 03:10:49 nia Exp $
+
+Remove invalid positional argument. Previously these were ignored, now
+they cause failures.
+
+--- data/appdata/meson.build.orig	2019-10-04 15:59:28.000000000 +0000
++++ data/appdata/meson.build
+@@ -1,7 +1,6 @@
+ appdata = 'org.gnome.Totem.appdata.xml'
+ 
+-i18n.merge_file ('appdata',
+-                 input: appdata + '.in',
++i18n.merge_file (input: appdata + '.in',
+                  output: appdata,
+                  install: true,
+                  install_dir: join_paths(totem_datadir, 'metainfo'),
