@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/03/14 02:52:48 osa Exp $
+bin/njs
