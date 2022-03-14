@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/03/11 10:22:27 pin Exp $
+# $NetBSD: Makefile,v 1.7 2022/03/14 13:19:19 wiz Exp $
 
 DISTNAME=	jless-0.8.0
 CATEGORIES=	textproc
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/PaulJuliusMartinez/jless/
 COMMENT=	Command-line pager for JSON data
 LICENSE=	mit
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 .include "cargo-depends.mk"
 
@@ -30,5 +32,6 @@ do-install:
 		${DESTDIR}${PREFIX}/bin/j_less
 
 .include "../../lang/rust/cargo.mk"
+.include "../../lang/python/tool.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
