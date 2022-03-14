@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1442 2022/03/14 12:22:56 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.1443 2022/03/14 13:27:40 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1900,3 +1900,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/R-Rcpp to 1.0.8.2 [mef 2022-03-14]
 	Updated textproc/guile-commonmark to 0.1.2nb1 [nikita 2022-03-14]
 	Updated geography/libgeotiff to 1.7.1 [gdt 2022-03-14]
+	Updated x11/xterm to 372 [pin 2022-03-14]
