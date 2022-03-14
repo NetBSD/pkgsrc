@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2021/12/17 14:07:09 nikita Exp $
-guile/2.2/lib/guile/2.2/site-ccache/json.go
-guile/2.2/lib/guile/2.2/site-ccache/json/builder.go
-guile/2.2/lib/guile/2.2/site-ccache/json/parser.go
-guile/2.2/lib/guile/2.2/site-ccache/json/record.go
-guile/2.2/share/guile/site/2.2/json.scm
-guile/2.2/share/guile/site/2.2/json/builder.scm
-guile/2.2/share/guile/site/2.2/json/parser.scm
-guile/2.2/share/guile/site/2.2/json/record.scm
+@comment $NetBSD: PLIST,v 1.3 2022/03/14 15:21:39 nikita Exp $
+guile/3.0/lib/guile/3.0/site-ccache/json.go
+guile/3.0/lib/guile/3.0/site-ccache/json/builder.go
+guile/3.0/lib/guile/3.0/site-ccache/json/parser.go
+guile/3.0/lib/guile/3.0/site-ccache/json/record.go
+guile/3.0/share/guile/site/3.0/json.scm
+guile/3.0/share/guile/site/3.0/json/builder.scm
+guile/3.0/share/guile/site/3.0/json/parser.scm
+guile/3.0/share/guile/site/3.0/json/record.scm
