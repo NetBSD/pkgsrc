@@ -1,6 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2019/11/26 18:10:55 ng0 Exp $
-
-At the moment you can't use 'haunt serve' with the "-w" option on some
-platforms as this requires a build of guile 2.2 with threads.
-===========================================================================
