@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1443 2022/03/14 13:27:40 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1444 2022/03/14 13:28:55 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1901,3 +1901,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/guile-commonmark to 0.1.2nb1 [nikita 2022-03-14]
 	Updated geography/libgeotiff to 1.7.1 [gdt 2022-03-14]
 	Updated x11/xterm to 372 [pin 2022-03-14]
+	Updated x11/kitty to 0.24.4 [pin 2022-03-14]
