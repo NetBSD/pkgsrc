@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3699 2022/03/06 09:16:21 nia Exp $
+# $NetBSD: Makefile,v 1.3700 2022/03/14 13:38:47 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -473,6 +473,7 @@ SUBDIR+=	guile-lib
 SUBDIR+=	guile-slib
 SUBDIR+=	guile-www
 SUBDIR+=	guile22-slib
+SUBDIR+=	guile30-slib
 SUBDIR+=	gyp
 SUBDIR+=	happy
 SUBDIR+=	haskell-language-server
