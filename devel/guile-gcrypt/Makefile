@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2022/01/16 13:09:34 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/03/14 15:17:36 nikita Exp $
 
 DISTNAME=	v0.3.0
 DIST_SUBDIR=	guile-gcrypt
 PKGNAME=	guile-gcrypt-${DISTNAME:S/v//}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://notabug.org/cwebber/guile-gcrypt/archive/
 
@@ -20,6 +21,6 @@ GUILE_NEED_BOOTSTRAP=	yes
 
 CONFIGURE_ARGS+=	--with-libgcrypt-prefix=${BUILDLINK_PREFIX.libgcrypt}
 
-.include "../../lang/guile22/module.mk"
+.include "../../lang/guile30/module.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
