@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1437 2022/03/14 11:11:50 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1438 2022/03/14 11:17:42 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1895,3 +1895,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/harfbuzz-icu to 4.0.1 [adam 2022-03-14]
 	Updated multimedia/mkvtoolnix to 66.0.0 [adam 2022-03-14]
 	Updated lang/rust-analyzer to 0.0.2022.03.14 [adam 2022-03-14]
+	Updated www/guile-haunt to 0.2.6 [nikita 2022-03-14]
