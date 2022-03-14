@@ -1,0 +1,15 @@
+$NetBSD: patch-data_meson.build,v 1.1 2022/03/14 03:10:49 nia Exp $
+
+Remove invalid positional argument. Previously these were ignored, now
+they cause failures.
+
+--- data/meson.build.orig	2019-10-04 15:59:28.000000000 +0000
++++ data/meson.build
+@@ -68,7 +68,6 @@ desktop_in = configure_file(
+ )
+ 
+ i18n.merge_file (
+-  desktop,
+   type: 'desktop',
+   input: desktop_in,
+   output: desktop,
