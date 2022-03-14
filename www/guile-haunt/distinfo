@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.5 2022/03/14 10:36:00 nikita Exp $
+$NetBSD: distinfo,v 1.6 2022/03/14 11:17:22 nikita Exp $
 
-BLAKE2s (haunt-0.2.5.tar.gz) = da7977b49d7211ad90e8fc7cf3cc6ab811820450f715492339ef3453659e0d2c
-SHA512 (haunt-0.2.5.tar.gz) = f969da9fa008d88b2f7b6fb1c14333cdf701173177a2fd2ff35a731509c97ac33d23e7f5d3fcd5caf4c80475c790ebd76473d34ddfb0ab3590524dac6ddd15f0
-Size (haunt-0.2.5.tar.gz) = 301320 bytes
+BLAKE2s (haunt-0.2.6.tar.gz) = c4922f4a7be105806f8deccb970a1130e9bf3a0db849299096fddc20964d5223
+SHA512 (haunt-0.2.6.tar.gz) = 214d1a843385aeb428fecc45ee1f1f0c4e7024e80dd4092dbc17f3f7e8e5ab01d75b6bb4415719685b1162193381db5e5e7b91ac5d5178238ed8c856bf8fad55
+Size (haunt-0.2.6.tar.gz) = 311986 bytes
+SHA1 (patch-Makefile.am) = b87ddbb7b507bc638478d908437ef2dacf606bd9
+SHA1 (patch-configure.ac) = 823f155adabdca01d6531d9aa8220ad2ca709464
+SHA1 (patch-haunt_ui_serve.scm) = 8e99f1995cc54ac78c9e457eed7631d56cd5264d

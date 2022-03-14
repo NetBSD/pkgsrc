@@ -1,0 +1,28 @@
+$NetBSD: patch-Makefile.am,v 1.1 2022/03/14 11:17:22 nikita Exp $
+
+Taken from upstream commit ab0b722b0719e3370a21359e4d511af9c4f14e60
+by the upstream developer. Fix build without inotify.
+
+--- Makefile.am.orig	2022-03-14 11:50:45.022482834 +0100
++++ Makefile.am	2022-03-14 11:52:42.154492010 +0100
+@@ -46,7 +46,6 @@
+ SOURCES =					\
+   haunt/config.scm				\
+   haunt/utils.scm				\
+-  haunt/inotify.scm				\
+   haunt/post.scm				\
+   haunt/page.scm				\
+   haunt/asset.scm				\
+@@ -81,6 +80,12 @@
+ 
+ endif
+ 
++if HAVE_INOTIFY
++SOURCES+=					\
++  haunt/inotify.scm
++
++endif
++
+ TESTS =						\
+   tests/helper.scm				\
+   tests/post.scm				\
