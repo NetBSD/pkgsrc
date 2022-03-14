@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1428 2022/03/13 20:57:42 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.1429 2022/03/14 03:01:34 osa Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1878,3 +1878,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/MesaLib to 21.3.7 [tnn 2022-03-13]
 	Updated sysutils/auto-admin to 0.7.10 [bacon 2022-03-13]
 	Updated lang/go-bin to 1.17.8 [tnn 2022-03-13]
+	Updated www/nginx to 1.20.2nb5 [osa 2022-03-13]
+	Updated www/nginx-devel to 1.21.6nb4 [osa 2022-03-13]
+	Added lang/njs version 0.7.2 [osa 2022-03-13]
