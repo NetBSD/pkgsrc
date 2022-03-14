@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2019/11/26 16:52:25 ng0 Exp $
-guile/2.2/lib/guile/2.2/site-ccache/commonmark.go
-guile/2.2/lib/guile/2.2/site-ccache/commonmark/blocks.go
-guile/2.2/lib/guile/2.2/site-ccache/commonmark/common.go
-guile/2.2/lib/guile/2.2/site-ccache/commonmark/entities.go
-guile/2.2/lib/guile/2.2/site-ccache/commonmark/inlines.go
-guile/2.2/lib/guile/2.2/site-ccache/commonmark/node.go
-guile/2.2/lib/guile/2.2/site-ccache/commonmark/sxml.go
-guile/2.2/lib/guile/2.2/site-ccache/commonmark/utils.go
-guile/2.2/share/guile/site/2.2/commonmark.scm
-guile/2.2/share/guile/site/2.2/commonmark/blocks.scm
-guile/2.2/share/guile/site/2.2/commonmark/common.scm
-guile/2.2/share/guile/site/2.2/commonmark/entities.scm
-guile/2.2/share/guile/site/2.2/commonmark/inlines.scm
-guile/2.2/share/guile/site/2.2/commonmark/node.scm
-guile/2.2/share/guile/site/2.2/commonmark/sxml.scm
-guile/2.2/share/guile/site/2.2/commonmark/utils.scm
+@comment $NetBSD: PLIST,v 1.2 2022/03/14 11:46:28 nikita Exp $
+guile/3.0/lib/guile/3.0/site-ccache/commonmark.go
+guile/3.0/lib/guile/3.0/site-ccache/commonmark/blocks.go
+guile/3.0/lib/guile/3.0/site-ccache/commonmark/common.go
+guile/3.0/lib/guile/3.0/site-ccache/commonmark/entities.go
+guile/3.0/lib/guile/3.0/site-ccache/commonmark/inlines.go
+guile/3.0/lib/guile/3.0/site-ccache/commonmark/node.go
+guile/3.0/lib/guile/3.0/site-ccache/commonmark/sxml.go
+guile/3.0/lib/guile/3.0/site-ccache/commonmark/utils.go
+guile/3.0/share/guile/site/3.0/commonmark.scm
+guile/3.0/share/guile/site/3.0/commonmark/blocks.scm
+guile/3.0/share/guile/site/3.0/commonmark/common.scm
+guile/3.0/share/guile/site/3.0/commonmark/entities.scm
+guile/3.0/share/guile/site/3.0/commonmark/inlines.scm
+guile/3.0/share/guile/site/3.0/commonmark/node.scm
+guile/3.0/share/guile/site/3.0/commonmark/sxml.scm
+guile/3.0/share/guile/site/3.0/commonmark/utils.scm
