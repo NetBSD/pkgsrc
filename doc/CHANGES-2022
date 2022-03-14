@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1430 2022/03/14 10:02:15 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1431 2022/03/14 10:18:31 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1885,3 +1885,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/sqlite3-docs to 3.38.1 [adam 2022-03-14]
 	Updated databases/sqlite3-tcl to 3.38.1 [adam 2022-03-14]
 	Updated devel/lemon to 1.0.3.38.1 [adam 2022-03-14]
+	Updated sysutils/bkt to 0.5.3 [pin 2022-03-14]
