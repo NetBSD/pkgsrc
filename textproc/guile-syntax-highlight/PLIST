@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2019/11/13 13:19:39 ng0 Exp $
-guile/2.2/lib/guile/2.2/site-ccache/syntax-highlight.go
-guile/2.2/lib/guile/2.2/site-ccache/syntax-highlight/c.go
-guile/2.2/lib/guile/2.2/site-ccache/syntax-highlight/lexers.go
-guile/2.2/lib/guile/2.2/site-ccache/syntax-highlight/scheme.go
-guile/2.2/lib/guile/2.2/site-ccache/syntax-highlight/utils.go
-guile/2.2/lib/guile/2.2/site-ccache/syntax-highlight/xml.go
-guile/2.2/share/guile/site/2.2/syntax-highlight.scm
-guile/2.2/share/guile/site/2.2/syntax-highlight/c.scm
-guile/2.2/share/guile/site/2.2/syntax-highlight/lexers.scm
-guile/2.2/share/guile/site/2.2/syntax-highlight/scheme.scm
-guile/2.2/share/guile/site/2.2/syntax-highlight/utils.scm
-guile/2.2/share/guile/site/2.2/syntax-highlight/xml.scm
+@comment $NetBSD: PLIST,v 1.2 2022/03/14 15:29:16 nikita Exp $
+guile/3.0/lib/guile/3.0/site-ccache/syntax-highlight.go
+guile/3.0/lib/guile/3.0/site-ccache/syntax-highlight/c.go
+guile/3.0/lib/guile/3.0/site-ccache/syntax-highlight/lexers.go
+guile/3.0/lib/guile/3.0/site-ccache/syntax-highlight/scheme.go
+guile/3.0/lib/guile/3.0/site-ccache/syntax-highlight/utils.go
+guile/3.0/lib/guile/3.0/site-ccache/syntax-highlight/xml.go
+guile/3.0/share/guile/site/3.0/syntax-highlight.scm
+guile/3.0/share/guile/site/3.0/syntax-highlight/c.scm
+guile/3.0/share/guile/site/3.0/syntax-highlight/lexers.scm
+guile/3.0/share/guile/site/3.0/syntax-highlight/scheme.scm
+guile/3.0/share/guile/site/3.0/syntax-highlight/utils.scm
+guile/3.0/share/guile/site/3.0/syntax-highlight/xml.scm
