@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2022/02/07 13:14:40 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/03/14 13:59:36 wiz Exp $
 
-DISTNAME=	pip-api-0.0.27
+DISTNAME=	pip-api-0.0.29
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip-api/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/di/pip-api
+HOMEPAGE=	https://github.com/di/pip-api
 COMMENT=	Unofficial, importable pip API
 LICENSE=	apache-2.0
 
