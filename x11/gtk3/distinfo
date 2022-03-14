@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.93 2022/01/12 11:09:07 adam Exp $
+$NetBSD: distinfo,v 1.94 2022/03/14 18:21:20 adam Exp $
 
-BLAKE2s (gtk+-3.24.31.tar.xz) = 8951a4c3fed2aebfd2b5cb4f1911f692552578885f8da0e8f35ba7e4d99723bf
-SHA512 (gtk+-3.24.31.tar.xz) = e7f8e5003a919e297bd3e616acccbc5cc9bf9c9d41377c108c24db51817fcccec919abc12d05c0ed585d49526d52f0395a1c0f3ed9d9ef816bb0c4b2aa615f9b
-Size (gtk+-3.24.31.tar.xz) = 22449112 bytes
+BLAKE2s (gtk+-3.24.33.tar.xz) = df80d6beeba60dcd93d667321bacf99291cfc68ef2d5aecde0cca21e0900fe88
+SHA512 (gtk+-3.24.33.tar.xz) = 35c844af67d442a9d55197028c6b660668c701ad8f83a64791669fca2930ada15194452b59b2ee11f8068098986218744fe9fc4742897af5a6b3eba23c98395e
+Size (gtk+-3.24.33.tar.xz) = 22449472 bytes
 SHA1 (patch-Makefile.in) = 8edcfe2ff492d90138a24b680fe39814c3848d80
 SHA1 (patch-config.h.in) = dc5f8741eed554f88c0b6834cadad95083e4dc8f
 SHA1 (patch-configure) = d531b33e52facf960058f1223b70db680da35300
