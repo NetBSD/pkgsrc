@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2022/03/14 11:46:29 nikita Exp $
+
+Fix Guile 3.0 detection.
+
+--- configure.orig	2022-03-14 12:42:00.824030369 +0100
++++ configure	2022-03-14 12:42:23.915545954 +0100
+@@ -2455,7 +2455,7 @@
+ 		PKG_CONFIG=""
+ 	fi
+ fi
+-  _guile_versions_to_search="2.2 2.0"
++  _guile_versions_to_search="3.0 2.2 2.0"
+   if test -n "$GUILE_EFFECTIVE_VERSION"; then
+     _guile_tmp=""
+     for v in $_guile_versions_to_search; do
