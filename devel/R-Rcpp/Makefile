@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2021/08/21 13:37:31 mef Exp $
+# $NetBSD: Makefile,v 1.24 2022/03/14 11:25:38 mef Exp $
 
 R_PKGNAME=	Rcpp
-R_PKGVER=	1.0.7
+R_PKGVER=	1.0.8.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
