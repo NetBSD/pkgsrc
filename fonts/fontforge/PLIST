@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2020/11/09 14:27:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.39 2022/03/14 14:12:41 wiz Exp $
 bin/fontforge
 bin/fontimage
 bin/fontlint
@@ -12,6 +12,14 @@ man/man1/fontimage.1
 man/man1/fontlint.1
 man/man1/sfddiff.1
 share/applications/org.fontforge.FontForge.desktop
+share/fontforge/cidmap/Adobe-CNS1-6.cidmap
+share/fontforge/cidmap/Adobe-GB1-5.cidmap
+share/fontforge/cidmap/Adobe-Identity-0.cidmap
+share/fontforge/cidmap/Adobe-Japan1-5.cidmap
+share/fontforge/cidmap/Adobe-Japan1-6.cidmap
+share/fontforge/cidmap/Adobe-Japan1-7.cidmap
+share/fontforge/cidmap/Adobe-Japan2-0.cidmap
+share/fontforge/cidmap/Adobe-Korea1-2.cidmap
 share/fontforge/hotkeys/default
 share/fontforge/pixmaps/Cantarell-Bold.ttf
 share/fontforge/pixmaps/Cantarell-BoldOblique.ttf
@@ -60,6 +68,7 @@ share/fontforge/pixmaps/chooserupdir.png
 share/fontforge/pixmaps/chooservideo.png
 share/fontforge/pixmaps/colorwheel.png
 share/fontforge/pixmaps/downarrow.png
+share/fontforge/pixmaps/downarrow_disabled.png
 share/fontforge/pixmaps/editclear.png
 share/fontforge/pixmaps/editclearback.png
 share/fontforge/pixmaps/editcopy.png
@@ -87,9 +96,11 @@ share/fontforge/pixmaps/editselect.png
 share/fontforge/pixmaps/editundo.png
 share/fontforge/pixmaps/editunlink.png
 share/fontforge/pixmaps/elementaddextrema.png
+share/fontforge/pixmaps/elementaddinflections.png
 share/fontforge/pixmaps/elementalign.png
 share/fontforge/pixmaps/elementanticlock.png
 share/fontforge/pixmaps/elementautotrace.png
+share/fontforge/pixmaps/elementbalance.png
 share/fontforge/pixmaps/elementbdfinfo.png
 share/fontforge/pixmaps/elementbitmapsavail.png
 share/fontforge/pixmaps/elementbuildaccent.png
@@ -103,6 +114,7 @@ share/fontforge/pixmaps/elementfindprobs.png
 share/fontforge/pixmaps/elementfontinfo.png
 share/fontforge/pixmaps/elementgetinfo.png
 share/fontforge/pixmaps/elementglyphinfo.png
+share/fontforge/pixmaps/elementharmonize.png
 share/fontforge/pixmaps/elementhbaselines.png
 share/fontforge/pixmaps/elementinterpolatefonts.png
 share/fontforge/pixmaps/elementmathinfo.png
@@ -400,5 +412,3 @@ share/locale/zh_CN/LC_MESSAGES/FontForge.mo
 share/locale/zh_TW/LC_MESSAGES/FontForge.mo
 share/metainfo/org.fontforge.FontForge.appdata.xml
 share/mime/packages/fontforge.xml
-share/pixmaps/org.fontforge.FontForge.png
-share/pixmaps/org.fontforge.FontForge.xpm
