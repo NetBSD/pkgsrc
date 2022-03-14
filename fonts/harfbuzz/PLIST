@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2022/03/08 09:04:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.56 2022/03/14 11:08:13 adam Exp $
 bin/hb-ot-shape-closure
 bin/hb-shape
 bin/hb-subset
@@ -34,6 +34,7 @@ include/harfbuzz/hb-set.h
 include/harfbuzz/hb-shape-plan.h
 include/harfbuzz/hb-shape.h
 include/harfbuzz/hb-style.h
+include/harfbuzz/hb-subset-repacker.h
 include/harfbuzz/hb-subset.h
 include/harfbuzz/hb-unicode.h
 include/harfbuzz/hb-version.h
@@ -42,13 +43,13 @@ lib/cmake/harfbuzz/harfbuzz-config.cmake
 ${PLIST.introspection}lib/girepository-1.0/HarfBuzz-0.0.typelib
 lib/libharfbuzz-gobject.so
 lib/libharfbuzz-gobject.so.0
-lib/libharfbuzz-gobject.so.0.40000.0
+lib/libharfbuzz-gobject.so.0.40001.0
 lib/libharfbuzz-subset.so
 lib/libharfbuzz-subset.so.0
-lib/libharfbuzz-subset.so.0.40000.0
+lib/libharfbuzz-subset.so.0.40001.0
 lib/libharfbuzz.so
 lib/libharfbuzz.so.0
-lib/libharfbuzz.so.0.40000.0
+lib/libharfbuzz.so.0.40001.0
 lib/pkgconfig/harfbuzz-gobject.pc
 lib/pkgconfig/harfbuzz-subset.pc
 lib/pkgconfig/harfbuzz.pc
