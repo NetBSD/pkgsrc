@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.39 2022/03/11 20:49:13 tnn Exp $
+$NetBSD: distinfo,v 1.40 2022/03/14 11:40:08 tnn Exp $
 
 BLAKE2s (googletest-1.10.0.tar.gz) = 53d218b6e7821bf20289e24c4efec5b7a3cc2be8f06373c07a5af078dc4ee892
 SHA512 (googletest-1.10.0.tar.gz) = bd52abe938c3722adc2347afad52ea3a17ecc76730d8d16b065e165bc7477d762bce0997a427131866a89f1001e3f3315198204ffa5d643a9355f1f4d0d7b1a9
 Size (googletest-1.10.0.tar.gz) = 904349 bytes
-BLAKE2s (pugixml-1.12.1.tar.gz) = 5832bff3b1f25c36fb0ce5378acd01636df75c54857cb279520a1c9010a5f244
-SHA512 (pugixml-1.12.1.tar.gz) = af5200d1835a51a2a7ce3d7000c1be6e0ea69e46d512f8df4337ec5c72f9ffce0c0a72f2f03e23ddc048ae5c02e2554d189ee8faed2119719d44e93bf52e647b
-Size (pugixml-1.12.1.tar.gz) = 389692 bytes
+BLAKE2s (pugixml-1.12.1.tar.gz) = 89db006704bd615535d7b4eb78c2712de08c04c2f3669b39cd94532455afc1fc
+SHA512 (pugixml-1.12.1.tar.gz) = c1a80518e8d7b21f2a15b2023b77e87484f5b7581e68ff508785a60cab53d1689b5508f5a652d6f0d4fbcc91f66d59246fdfe499fd6b0e188c7914ed5919980b
+Size (pugixml-1.12.1.tar.gz) = 571665 bytes
 BLAKE2s (synergy-core-1.14.3.5.tar.gz) = 8e8a5fd46395aca12829b89ba881fca071b6ea2774e4081efdd6a42de176e7aa
 SHA512 (synergy-core-1.14.3.5.tar.gz) = aa35a5750c2431365707cdd9ad933711349c8008171e4c77f341e747f4de8417ad3091a37c2fd2ac30d8f37570b09927d31dd0b2af515becb8ba80a309cc1e67
 Size (synergy-core-1.14.3.5.tar.gz) = 4635452 bytes
