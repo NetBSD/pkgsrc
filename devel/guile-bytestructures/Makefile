@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/12/17 13:42:56 nikita Exp $
+# $NetBSD: Makefile,v 1.6 2022/03/14 15:39:07 nikita Exp $
 
 DISTNAME=	scheme-bytestructures-1.0.10
 PKGNAME=	${DISTNAME:S/scheme/guile/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TaylanUB/}
 GITHUB_PROJECT=	scheme-bytestructures
@@ -18,5 +19,5 @@ GNU_CONFIGURE=	yes
 
 GUILE_NEED_BOOTSTRAP=	yes
 
-.include "../../lang/guile22/module.mk"
+.include "../../lang/guile30/module.mk"
 .include "../../mk/bsd.pkg.mk"
