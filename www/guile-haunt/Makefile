@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2021/12/17 14:52:12 nikita Exp $
+# $NetBSD: Makefile,v 1.4 2022/03/14 10:36:00 nikita Exp $
 
 DISTNAME=	haunt-0.2.5
 PKGNAME=	guile-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://files.dthompson.us/haunt/
 
@@ -12,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
 GUILE_NEED_BOOTSTRAP=	yes
-GNU_CONFIGURE_PREFIX=	${PREFIX}/guile/2.2
+GNU_CONFIGURE_PREFIX=	${PREFIX}/guile/3.0
 USE_TOOLS+=		pkg-config
 INFO_FILES=		yes
 
@@ -24,7 +25,7 @@ DEPENDS+=	guile-commonmark-[0-9]*:../../textproc/guile-commonmark
 SUBST_CLASSES+=		guile
 SUBST_STAGE.guile=	pre-configure
 SUBST_FILES.guile=	scripts/haunt.in
-SUBST_SED.guile+=	-e 's,@GUILE@,${PREFIX}/guile/2.2/bin/guile,g'
+SUBST_SED.guile+=	-e 's,@GUILE@,${PREFIX}/guile/3.0/bin/guile,g'
 
-.include "../../lang/guile22/module.mk"
+.include "../../lang/guile30/module.mk"
 .include "../../mk/bsd.pkg.mk"
