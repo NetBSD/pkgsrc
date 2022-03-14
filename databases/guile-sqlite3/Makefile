@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2022/01/21 16:29:42 nikita Exp $
+# $NetBSD: Makefile,v 1.11 2022/03/14 15:46:39 nikita Exp $
 
 DISTNAME=	v0.1.3
 DIST_SUBDIR=	${PKGNAME_NOREV}
 PKGNAME=	guile-sqlite3-${DISTNAME:S/v//}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	https://notabug.org/guile-sqlite3/guile-sqlite3/archive/
 
@@ -22,6 +23,6 @@ CONFIGURE_ARGS+=	SQLITE_LIBDIR=${BUILDLINK_PREFIX.sqlite3}/lib
 
 TEST_TARGET=		check
 
-.include "../../lang/guile22/module.mk"
+.include "../../lang/guile30/module.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
