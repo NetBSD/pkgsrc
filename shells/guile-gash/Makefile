@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2021/12/17 13:26:23 nikita Exp $
+# $NetBSD: Makefile,v 1.4 2022/03/14 15:33:46 nikita Exp $
 
-DISTNAME=	gash-0.2.0
+DISTNAME=	gash-0.3.0
 PKGNAME=	guile-${DISTNAME}
 CATEGORIES=	shells
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/gash/
@@ -17,5 +17,5 @@ USE_TOOLS+=		pkg-config gmake makeinfo
 
 INFO_FILES=		YES
 
-.include "../../lang/guile22/module.mk"
+.include "../../lang/guile30/module.mk"
 .include "../../mk/bsd.pkg.mk"
