@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2022/01/21 16:34:59 nikita Exp $
+# $NetBSD: Makefile,v 1.7 2022/03/14 15:21:39 nikita Exp $
 
 DISTNAME=	guile-json-4.7.0
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.savannah.gnu.org/releases/guile-json/
 
@@ -14,5 +15,5 @@ USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		YES
 GUILE_NEED_BOOTSTRAP=	YES
 
-.include "../../lang/guile22/module.mk"
+.include "../../lang/guile30/module.mk"
 .include "../../mk/bsd.pkg.mk"
