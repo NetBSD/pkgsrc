@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1440 2022/03/14 11:25:51 mef Exp $
+$NetBSD: CHANGES-2022,v 1.1441 2022/03/14 11:46:49 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1898,3 +1898,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/guile-haunt to 0.2.6 [nikita 2022-03-14]
 	Updated sysutils/R-unix to 1.5.4 [mef 2022-03-14]
 	Updated devel/R-Rcpp to 1.0.8.2 [mef 2022-03-14]
+	Updated textproc/guile-commonmark to 0.1.2nb1 [nikita 2022-03-14]
