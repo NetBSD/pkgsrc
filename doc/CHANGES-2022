@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1459 2022/03/14 15:29:27 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.1460 2022/03/14 15:33:55 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1917,3 +1917,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/guile-gcrypt to 0.3.0nb1 [nikita 2022-03-14]
 	Updated textproc/guile-json to 4.7.0nb1 [nikita 2022-03-14]
 	Updated textproc/guile-syntax-highlight to 0.1nb1 [nikita 2022-03-14]
+	Updated shells/guile-gash to 0.3.0 [nikita 2022-03-14]
