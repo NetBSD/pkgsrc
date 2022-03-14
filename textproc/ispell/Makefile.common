@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.1 2021/06/10 23:43:26 gutteridge Exp $
+# $NetBSD: Makefile.common,v 1.2 2022/03/14 13:53:27 wiz Exp $
 
 # used by textproc/ispell/Makefile
 # used by textproc/ispell-en_GB/Makefile
 
-DISTNAME=	ispell-3.4.04
+DISTNAME=	ispell-3.4.05
 
 DISTINFO_FILE=	${.CURDIR}/../../textproc/ispell/distinfo
