@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1446 2022/03/14 13:40:36 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1447 2022/03/14 13:47:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1904,3 +1904,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/kitty to 0.24.4 [pin 2022-03-14]
 	Added devel/guile30-slib version 3.2.6 [wiz 2022-03-14]
 	Updated net/php-baikal to 0.9.1 [wiz 2022-03-14]
+	Updated editors/Sigil to 1.9.2 [wiz 2022-03-14]
