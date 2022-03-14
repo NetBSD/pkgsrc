@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/02/20 21:27:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/03/14 14:02:00 wiz Exp $
 bin/pip-audit-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -30,6 +30,9 @@ ${PYSITELIB}/pip_audit/_dependency_source/interface.pyo
 ${PYSITELIB}/pip_audit/_dependency_source/pip.py
 ${PYSITELIB}/pip_audit/_dependency_source/pip.pyc
 ${PYSITELIB}/pip_audit/_dependency_source/pip.pyo
+${PYSITELIB}/pip_audit/_dependency_source/pyproject.py
+${PYSITELIB}/pip_audit/_dependency_source/pyproject.pyc
+${PYSITELIB}/pip_audit/_dependency_source/pyproject.pyo
 ${PYSITELIB}/pip_audit/_dependency_source/requirement.py
 ${PYSITELIB}/pip_audit/_dependency_source/requirement.pyc
 ${PYSITELIB}/pip_audit/_dependency_source/requirement.pyo
