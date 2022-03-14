@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2022/02/08 12:35:44 pin Exp $
+# $NetBSD: Makefile,v 1.29 2022/03/14 13:28:34 pin Exp $
 
-DISTNAME=	kitty-0.24.2
+DISTNAME=	kitty-0.24.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kovidgoyal/}
 GITHUB_PROJECT=	kitty
