@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1478 2022/03/15 18:21:37 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1479 2022/03/15 18:54:18 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1942,3 +1942,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed security/libglobalplatform [nia 2022-03-15]
 	Removed security/gpshell [nia 2022-03-15]
 	Updated security/openssl to 1.1.1n [wiz 2022-03-15]
+	Updated x11/xf86-video-intel to 2.99.917.20210115 [tnn 2022-03-15]
