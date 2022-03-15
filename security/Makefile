@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.850 2022/02/16 10:06:08 pho Exp $
+# $NetBSD: Makefile,v 1.851 2022/03/15 18:18:55 nia Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -115,7 +115,6 @@ SUBDIR+=	gpg-tui
 SUBDIR+=	gpg2dot
 SUBDIR+=	gpgme
 SUBDIR+=	gpgmepp
-SUBDIR+=	gpshell
 SUBDIR+=	gsasl
 SUBDIR+=	gss
 SUBDIR+=	hackbot
@@ -173,7 +172,6 @@ SUBDIR+=	libfwbuilder
 SUBDIR+=	libgabe
 SUBDIR+=	libgcrypt
 SUBDIR+=	libgfshare
-SUBDIR+=	libglobalplatform
 SUBDIR+=	libgnome-keyring
 SUBDIR+=	libgpg-error
 SUBDIR+=	libidea

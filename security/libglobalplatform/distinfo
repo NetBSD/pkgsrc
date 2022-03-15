@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:17:13 nia Exp $
-
-BLAKE2s (globalplatform-6.0.0.tar.gz) = 0b7502520b87c125311a23ee68030d3803afd04942c2728ef8448ce73d6ca532
-SHA512 (globalplatform-6.0.0.tar.gz) = cb2fc79052a073b5099da6c02ff9ca87bb966d42c1d8cf4f9ef2a39eb9772e1c5f656bc03f5e305885a9995856c0fbd3648a2c7ceb38ed194d007f3fc1219be4
-Size (globalplatform-6.0.0.tar.gz) = 421171 bytes

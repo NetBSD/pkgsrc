@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:17:07 nia Exp $
-
-BLAKE2s (gpshell-1.4.4.tar.gz) = 68ba2ff16949333159e35f31189dd397060b08af0b8a5579967a8de476dff14d
-SHA512 (gpshell-1.4.4.tar.gz) = 612b1ebf637c00d1aa605820dab15ea94eed754e4a70162d333f0307289b92b81aa7156c6a0ae5ed5ecb2693dace45c17ca830420f2c5811505d712667ed7d86
-Size (gpshell-1.4.4.tar.gz) = 155861 bytes
-SHA1 (patch-src_gpshell.c) = bd70f712c90dcae959d6d25bb5df0f67c8e17490
