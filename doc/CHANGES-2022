@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1483 2022/03/15 21:08:39 bacon Exp $
+$NetBSD: CHANGES-2022,v 1.1484 2022/03/15 21:11:07 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1947,3 +1947,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/libxtend to 0.1.5 [bacon 2022-03-15]
 	Updated biology/biolibc to 0.2.2 [bacon 2022-03-15]
 	Updated biology/ad2vcf to 0.1.5 [bacon 2022-03-15]
+	Updated biology/biolibc-tools to 0.1.2 [bacon 2022-03-15]
