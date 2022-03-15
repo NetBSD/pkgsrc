@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1474 2022/03/15 17:15:27 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.1475 2022/03/15 17:53:32 scole Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1938,3 +1938,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/wasi-libc to 0.0.0pre20220311 [wiz 2022-03-15]
 	Updated finance/gnucash to 4.9nb2 [wiz 2022-03-15]
 	Updated misc/kdeartwork4 to 15.08.3nb31 [gutteridge 2022-03-15]
+	Updated textproc/split-thai to 2.15 [scole 2022-03-15]
