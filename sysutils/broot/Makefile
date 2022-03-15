@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2022/03/14 10:19:15 pin Exp $
+# $NetBSD: Makefile,v 1.43 2022/03/15 09:07:10 pin Exp $
 
-DISTNAME=	broot-1.9.4
+# broot >= 1.9.4 requires Rust-1.59
+DISTNAME=	broot-1.9.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Canop/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -23,8 +24,10 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libxcb}/lib
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/broot ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/man/page ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/broot.1
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/broot \
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/man/page \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/broot.1
 
 .include "../../lang/rust/cargo.mk"
 .include "../../lang/python/tool.mk"
