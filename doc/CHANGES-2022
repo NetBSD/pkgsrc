@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1472 2022/03/15 14:33:32 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1473 2022/03/15 15:44:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1936,3 +1936,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/unicode-emoji to 14.0 [tsutsui 2022-03-15]
 	Updated inputmethod/ibus to 1.5.26 [tsutsui 2022-03-15]
 	Updated lang/wasi-libc to 0.0.0pre20220311 [wiz 2022-03-15]
+	Updated finance/gnucash to 4.9nb2 [wiz 2022-03-15]
