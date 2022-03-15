@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.278 2022/02/28 12:25:09 wiz Exp $
+# $NetBSD: Makefile,v 1.279 2022/03/15 18:20:02 wiz Exp $
 
 # Remember to upload-distfiles when updating OpenSSL -- otherwise it
 # is not possible for users who have bootstrapped without OpenSSL
 # to install it and enable HTTPS fetching.
-DISTNAME=	openssl-1.1.1m
+DISTNAME=	openssl-1.1.1n
 CATEGORIES=	security
 MASTER_SITES=	https://www.openssl.org/source/
 
