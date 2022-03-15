@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1467 2022/03/15 09:08:16 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1468 2022/03/15 10:27:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1930,3 +1930,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/py-mypy to 0.941 [adam 2022-03-15]
 	Updated finance/py-stripe to 2.67.0 [adam 2022-03-15]
 	Updated devel/py-click to 8.0.4 [adam 2022-03-15]
+	Updated textproc/ugrep to 3.7.5 [adam 2022-03-15]
+	Updated net/py-minio to 7.1.5 [adam 2022-03-15]
