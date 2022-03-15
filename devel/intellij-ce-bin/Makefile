@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/02/15 23:13:18 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2022/03/15 18:00:16 nia Exp $
 #
 # TODO Import intellij-fsnotifier with inotify support from FreeBSD.
 
@@ -29,9 +29,9 @@ REPLACE_BASH=	plugins/Kotlin/kotlinc/bin/kotlin	\
 		plugins/Kotlin/kotlinc/bin/kotlinc-js	\
 		plugins/Kotlin/kotlinc/bin/kotlinc-jvm
 
-CHECK_PIE_SKIP=		${PKGNAME_NOREV}/bin/fsnotifier
-CHECK_PIE_SKIP+=	${PKGNAME_NOREV}/plugins/Kotlin/bin/linux/LLDBFrontend
 CHECK_SHLIBS_SKIP=	*
+CHECK_RELRO_SUPPORTED=	no
+CHECK_PIE_SUPPORTED=	no
 
 INSTALLATION_DIRS=	${PKGNAME_NOREV} \
 			share/applications
