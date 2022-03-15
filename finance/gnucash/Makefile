@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.314 2022/01/10 01:46:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.315 2022/03/15 15:43:54 wiz Exp $
 
 DISTNAME=		gnucash-4.9
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_GITHUB:=gnucash/}
 EXTRACT_SUFX=		.tar.bz2
@@ -12,12 +12,10 @@ HOMEPAGE=		http://www.gnucash.org/
 COMMENT=		Personal or business finance management program
 LICENSE=		gnu-gpl-v3
 
-DEPENDS+=		guile22-slib>=3.2.1:../../devel/guile22-slib
+DEPENDS+=		guile30-slib>=3.2.1:../../devel/guile30-slib
 DEPENDS+=		p5-Finance-Quote-[0-9]*:../../finance/p5-Finance-Quote
 DEPENDS+=		p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 DEPENDS+=		dconf-[0-9]*:../../devel/dconf
-# instead of USE_TOOLS+=msgfmt, since we need a newer version
-TOOL_DEPENDS+=		gettext-tools>=0.20:../../devel/gettext-tools
 
 GCC_REQD+=		8
 USE_LANGUAGES=		c c++17
@@ -25,7 +23,6 @@ USE_CMAKE=		yes
 USE_LIBTOOL=		yes
 INFO_FILES=		yes
 USE_TOOLS+=		bash perl:run pkg-config
-# remove when using ninja
 USE_TOOLS+=		gmake
 
 # build failure in test-tx_import and a couple test failures
@@ -44,14 +41,10 @@ MAKE_ENV+=		GUILE_AUTO_COMPILE=0
 CMAKE_ARGS+=		-DWITH_AQBANKING=OFF
 CMAKE_ARGS+=		-DPERL_EXECUTABLE=${PERL5}
 CMAKE_ARGS+=		-DCOMPILE_GSCHEMAS=OFF
-#CMAKE_ARGS+=		-GNinja
-#BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
-#do-build:
-#	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ninja
-#do-install:
-#	cd ${WRKSRC}; ${SETENV} ${INSTALL_ENV} ninja install
-
+# test status as of 4.9
+# 22 test failures, 17 after "paxctl +m ${WRKSRC}/bin/*"
+TEST_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/lib
 REPLACE_PERL+=		common/gnc-test-env.pl
 REPLACE_PERL+=		libgnucash/backend/xml/test/grab-types.pl
 REPLACE_PERL+=		util/elegant-sort.pl
@@ -62,8 +55,14 @@ PKG_SYSCONFSUBDIR=	gnucash
 CONF_FILES+=		${PREFIX}/share/examples/gnucash/environment ${PKG_SYSCONFDIR}/environment
 INSTALLATION_DIRS=	share/examples/gnucash
 
+.include "../../mk/bsd.prefs.mk"
+
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/etc/gnucash/environment ${DESTDIR}${PREFIX}/share/examples/gnucash/environment
+.if ${OPSYS} == "NetBSD"
+# needed for JIT of guile30 as of guile30-3.0.7
+	/usr/sbin/paxctl +m ${DESTDIR}${PREFIX}/bin/gnucash
+.endif
 
 .include "options.mk"
 
@@ -73,12 +72,13 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.56.1
 BUILDLINK_API_DEPENDS.boost-headers+=   boost-headers>=1.67
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 BUILDLINK_API_DEPENDS.googletest+=	googletest>=1.8.0
 .include "../../devel/googletest/buildlink3.mk"
 .include "../../devel/swig3/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-.include "../../lang/guile22/buildlink3.mk"
+.include "../../lang/guile30/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/icu/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.9.4
