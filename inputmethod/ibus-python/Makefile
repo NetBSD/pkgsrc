@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.23 2022/01/28 14:02:33 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2022/03/15 20:45:39 tsutsui Exp $
 
-PKGREVISION= 1
 .include "../../inputmethod/ibus/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/ibus/ibus-python/}
@@ -29,6 +28,7 @@ CONFIGURE_ARGS+=	--disable-engine
 CONFIGURE_ARGS+=	--disable-surround-text
 CONFIGURE_ARGS+=	--disable-emoji-dict
 CONFIGURE_ARGS+=	--disable-unicode-dict
+CONFIGURE_ARGS+=	--disable-systemd-services
 
 .include "../../mk/compiler.mk"
 .if !empty(CC_VERSION:Mgcc-4.1.[0-9]*)
