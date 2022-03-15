@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1485 2022/03/15 21:12:05 bacon Exp $
+$NetBSD: CHANGES-2022,v 1.1486 2022/03/15 21:12:58 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1949,3 +1949,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated biology/ad2vcf to 0.1.5 [bacon 2022-03-15]
 	Updated biology/biolibc-tools to 0.1.2 [bacon 2022-03-15]
 	Updated biology/peak-classifier to 0.1.3 [bacon 2022-03-15]
+	Updated biology/vcf-split to 0.1.4 [bacon 2022-03-15]
