@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.21 2022/03/07 16:37:51 nia Exp $
+$NetBSD: distinfo,v 1.22 2022/03/15 20:16:48 nia Exp $
 
 BLAKE2s (dosbox-x-0.83.23.tar.gz) = d6cff5e7e54f3f63757bf0f41f2aa6c635c5bc7c029ebb5b69a0d2c55afe2b8c
 SHA512 (dosbox-x-0.83.23.tar.gz) = 26ca2fd8753cee8c4c931c54b6a0d0af11144c6b770c16f2b482386b06529ce1567e74d355fb9163e9801e833b4546482469e67def80e1aa1b93652663f31fbe
 Size (dosbox-x-0.83.23.tar.gz) = 64494344 bytes
 SHA1 (patch-configure.ac) = 906aa99b5fce6224ef4c001d9bba1e4fc89a34f9
+SHA1 (patch-contrib_mappings_CP437.TXT) = 71f1284d3504f09480d475f4699f08d8f66ec626
+SHA1 (patch-contrib_mappings_CP950.TXT) = f945dd47577a6ae4bc68f5270d14b9501a588c1a
 SHA1 (patch-include_dosbox.h) = 6f7397b4a611511fc1782b1603c9f5cd51b74eb9
-SHA1 (patch-include_iconvpp.hpp) = 992f51ff790ff9ad8b89a4735f6e0a956675434d
+SHA1 (patch-include_iconvpp.hpp) = dcf1428d202ad0b71b898741908f00445b55fd54
 SHA1 (patch-src_dos_dos__programs.cpp) = 64444c54b319fbfc7de7219d88fa6add953a0fb0
 SHA1 (patch-src_libs_physfs_physfs__platform__unix.c) = 5cde2acf3691478f1d91945b3942c968af2eadc6
