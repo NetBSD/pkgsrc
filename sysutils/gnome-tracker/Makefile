@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/12/08 16:02:38 adam Exp $
+# $NetBSD: Makefile,v 1.10 2022/03/15 18:27:03 nia Exp $
 
 DISTNAME=	tracker-3.0.1
 PKGNAME=	gnome-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config xgettext
 
-TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=	asciidoc>=10.1.4:../../textproc/asciidoc
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt # xsltproc
 
 MESON_ARGS+=	-Ddocs=false
@@ -30,11 +30,13 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/src:${WRKSRC}/output/src/libtracker-
 PREFER.sqlite3=	pkgsrc # fts5
 .endif
 
+.include "../../lang/python/pyversion.mk"
+
 SUBST_CLASSES+=		asciidoc
 SUBST_STAGE.asciidoc=	pre-configure
 SUBST_MESSAGE.asciidoc=	Correcting the path to asciidoc files.
 SUBST_FILES.asciidoc+=	docs/manpages/meson.build
-SUBST_SED.asciidoc+=	-e "s,/etc/asciidoc,${PREFIX}/share/asciidoc,g"
+SUBST_SED.asciidoc+=	-e "s,/etc/asciidoc,${PREFIX}/${PYSITELIB}/asciidoc/resources/,g"
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
