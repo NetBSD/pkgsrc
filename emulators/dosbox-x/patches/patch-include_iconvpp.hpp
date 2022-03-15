@@ -1,8 +1,8 @@
-$NetBSD: patch-include_iconvpp.hpp,v 1.1 2022/03/07 16:37:52 nia Exp $
+$NetBSD: patch-include_iconvpp.hpp,v 1.2 2022/03/15 20:16:49 nia Exp $
 
 Support NetBSD 9.x and earlier.
 
---- include/iconvpp.hpp.orig	2022-03-07 16:24:10.486063951 +0000
+--- include/iconvpp.hpp.orig	2022-03-15 18:04:18.609036525 +0000
 +++ include/iconvpp.hpp
 @@ -31,6 +31,15 @@
  # define ICONV_BIG_ENDIAN BIG_ENDIAN
@@ -24,8 +24,8 @@ Support NetBSD 9.x and earlier.
              iconv(context,NULL,NULL,NULL,NULL);
  
              /* Ref: [http://man7.org/linux/man-pages/man3/iconv.3.html] */
-+#if defined(__sun) || (defined(__NetBSD__) && !defined(NETBSD_POSIX_ICONV))
-+            int ret = iconv(context,(&(pclass::src_ptr)),&src_left,(char**)(&(pclass::dst_ptr)),&dst_left);
++#if defined(__sun) || (defined(__NetBSD__) && !NETBSD_POSIX_ICONV)
++            int ret = iconv(context,(const char **)(&(pclass::src_ptr)),&src_left,(char**)(&(pclass::dst_ptr)),&dst_left);
 +#else
              int ret = iconv(context,(char**)(&(pclass::src_ptr)),&src_left,(char**)(&(pclass::dst_ptr)),&dst_left);
 +#endif
