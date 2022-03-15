@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1481 2022/03/15 21:03:36 bacon Exp $
+$NetBSD: CHANGES-2022,v 1.1482 2022/03/15 21:06:41 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1945,3 +1945,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xf86-video-intel to 2.99.917.20210115 [tnn 2022-03-15]
 	Added lang/go118 version 1.18 [bsiegert 2022-03-15]
 	Updated devel/libxtend to 0.1.5 [bacon 2022-03-15]
+	Updated biology/biolibc to 0.2.2 [bacon 2022-03-15]
