@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1470 2022/03/15 12:53:53 tsutsui Exp $
+$NetBSD: CHANGES-2022,v 1.1471 2022/03/15 13:13:53 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1934,3 +1934,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-minio to 7.1.5 [adam 2022-03-15]
 	Updated textproc/unicode-character-database to 14.0.0 [tsutsui 2022-03-15]
 	Updated textproc/unicode-emoji to 14.0 [tsutsui 2022-03-15]
+	Updated inputmethod/ibus to 1.5.26 [tsutsui 2022-03-15]
