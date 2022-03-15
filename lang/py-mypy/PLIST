@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2021/12/30 21:19:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2022/03/15 05:53:26 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/mypyc-${PYVERSSUFFIX}
@@ -46,6 +46,9 @@ ${PYSITELIB}/mypy/checkexpr.pyo
 ${PYSITELIB}/mypy/checkmember.py
 ${PYSITELIB}/mypy/checkmember.pyc
 ${PYSITELIB}/mypy/checkmember.pyo
+${PYSITELIB}/mypy/checkpattern.py
+${PYSITELIB}/mypy/checkpattern.pyc
+${PYSITELIB}/mypy/checkpattern.pyo
 ${PYSITELIB}/mypy/checkstrformat.py
 ${PYSITELIB}/mypy/checkstrformat.pyc
 ${PYSITELIB}/mypy/checkstrformat.pyo
@@ -181,6 +184,9 @@ ${PYSITELIB}/mypy/options.pyo
 ${PYSITELIB}/mypy/parse.py
 ${PYSITELIB}/mypy/parse.pyc
 ${PYSITELIB}/mypy/parse.pyo
+${PYSITELIB}/mypy/patterns.py
+${PYSITELIB}/mypy/patterns.pyc
+${PYSITELIB}/mypy/patterns.pyo
 ${PYSITELIB}/mypy/plugin.py
 ${PYSITELIB}/mypy/plugin.pyc
 ${PYSITELIB}/mypy/plugin.pyo
@@ -419,9 +425,6 @@ ${PYSITELIB}/mypy/test/testpythoneval.pyo
 ${PYSITELIB}/mypy/test/testreports.py
 ${PYSITELIB}/mypy/test/testreports.pyc
 ${PYSITELIB}/mypy/test/testreports.pyo
-${PYSITELIB}/mypy/test/testsamples.py
-${PYSITELIB}/mypy/test/testsamples.pyc
-${PYSITELIB}/mypy/test/testsamples.pyo
 ${PYSITELIB}/mypy/test/testsemanal.py
 ${PYSITELIB}/mypy/test/testsemanal.pyc
 ${PYSITELIB}/mypy/test/testsemanal.pyo
@@ -924,6 +927,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/_threading_local.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_tkinter.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_tracemalloc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_typeshed/__init__.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/_typeshed/dbapi.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_typeshed/wsgi.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_typeshed/xml.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_warnings.pyi
@@ -1072,6 +1076,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/doctest.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/dummy_threading.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/email/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/email/_header_value_parser.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/email/base64mime.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/email/charset.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/email/contentmanager.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/email/encoders.pyi
@@ -1093,9 +1098,11 @@ ${PYSITELIB}/mypy/typeshed/stdlib/email/mime/nonmultipart.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/email/mime/text.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/email/parser.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/email/policy.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/email/quoprimime.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/email/utils.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/encodings/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/encodings/utf_8.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/encodings/utf_8_sig.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/ensurepip/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/enum.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/errno.pyi
@@ -1134,7 +1141,8 @@ ${PYSITELIB}/mypy/typeshed/stdlib/imp.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/abc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/machinery.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/importlib/metadata.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/importlib/metadata/__init__.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/importlib/metadata/_meta.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/resources.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/util.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/inspect.pyi
@@ -1305,6 +1313,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/typing.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/typing_extensions.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/unicodedata.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/unittest/__init__.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/unittest/_log.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/unittest/async_case.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/unittest/case.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/unittest/loader.pyi
