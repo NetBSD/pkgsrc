@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.28 2021/10/26 10:49:33 nia Exp $
+$NetBSD: distinfo,v 1.29 2022/03/15 13:13:36 tsutsui Exp $
 
-BLAKE2s (ibus-1.5.25.tar.gz) = 381812c1f41f77c0abe73a7a9cd5d71e45edf9a3ab767fd3152292a6b340bc25
-SHA512 (ibus-1.5.25.tar.gz) = 4b8955a20a1e5a0daf61213817a9697874439866e235e6a7905f5994b145cd5a143e6cfc41f17204a828756baeb8edab70698596731ecebf7f1eea7cc5f36aa6
-Size (ibus-1.5.25.tar.gz) = 3669787 bytes
+BLAKE2s (ibus-1.5.26.tar.gz) = 4fe347ac8e771822e53d8c9b723a243e0b7694d1585f47a7e8d23cfbaf17ad28
+SHA512 (ibus-1.5.26.tar.gz) = 923607c17114af673dcc36532fb44a278b61161ee1b7d4e01b2e0dcffc40c95eb91c6416acc9c0da0333e933863e15263e9a5ff1e467cfc02b71398d601b9714
+Size (ibus-1.5.26.tar.gz) = 3715263 bytes
 SHA1 (patch-client_gtk2_ibusimcontext.c) = 8c7d0134600e0a56997853f51b9b05689bc35d83
 SHA1 (patch-client_gtk3_ibusimcontext.c) = 27fa6ecf69299f4db5f5788fa6fc1aec02254266
 SHA1 (patch-ui_gtk3_Makefile.am) = dd0c6bc9383b57c1451e4f8c96e41f7398e3e650

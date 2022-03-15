@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.84 2022/03/12 08:01:50 nia Exp $
+# $NetBSD: Makefile,v 1.85 2022/03/15 13:13:36 tsutsui Exp $
 
-PKGREVISION= 2
 .include "Makefile.common"
 
 COMMENT=	Intelligent Input Bus
 
-DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject32
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 BUILD_DEPENDS+=	cldr-emoji-annotation>=37.0.13.0.0.2:../../textproc/cldr-emoji-annotation
-BUILD_DEPENDS+=	unicode-character-database>=13.0.0:../../textproc/unicode-character-database
-BUILD_DEPENDS+=	unicode-emoji>=13.1:../../textproc/unicode-emoji
+BUILD_DEPENDS+=	unicode-character-database>=14.0.0:../../textproc/unicode-character-database
+BUILD_DEPENDS+=	unicode-emoji>=14.0:../../textproc/unicode-emoji
 
-PYTHON_VERSIONS_ACCEPTED=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 GNU_CONFIGURE=			yes
 USE_LIBTOOL=			yes
@@ -28,6 +27,7 @@ CONFIGURE_ARGS+=	--enable-gtk2
 CONFIGURE_ARGS+=	--enable-gtk3
 CONFIGURE_ARGS+=	--enable-surrounding-text
 CONFIGURE_ARGS+=	--enable-introspection=yes
+CONFIGURE_ARGS+=	--disable-systemd-services
 CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
 CONFIGURE_ARGS+=	--with-unicode-emoji-dir=${PREFIX}/share/unicode/emoji
 CONFIGURE_ARGS+=	--with-emoji-annotation-dir=${PREFIX}/share/unicode/cldr/common/annotations
