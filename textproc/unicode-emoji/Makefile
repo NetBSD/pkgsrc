@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/10/03 15:42:44 tsutsui Exp $
+# $NetBSD: Makefile,v 1.6 2022/03/15 12:53:38 tsutsui Exp $
 
 DISTNAME=	unicode-emoji-${EMOJI_VERSION}
 CATEGORIES=	textproc
@@ -19,14 +19,11 @@ NO_CONFIGURE=	YES
 WRKSRC=		${WRKDIR}
 EMOJIDIR=	${PREFIX}/share/unicode/emoji
 
-EMOJI_VERSION=	13.1
+EMOJI_VERSION=	14.0
 EMOJI_FILES=	ReadMe.txt
 EMOJI_FILES+=	emoji-sequences.txt
 EMOJI_FILES+=	emoji-test.txt
 EMOJI_FILES+=	emoji-zwj-sequences.txt
-# following files have been moved to unicode-charactoer-database 13.0.0
-#EMOJI_FILES+=	emoji-data.txt
-#EMOJI_FILES+=	emoji-variation-sequences.txt
 
 INSTALLATION_DIRS=	${EMOJIDIR}
 
