@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2021/12/19 09:47:59 maya Exp $
+# $NetBSD: Makefile,v 1.31 2022/03/15 18:12:12 nia Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 PKGREVISION=	7
@@ -45,6 +45,8 @@ CONFLICTS+=		xenstoretools-[0-9]*
 CHECK_PORTABILITY_SKIP=	tools/examples/* \
 			tools/qemu-xen/scripts/qemu-binfmt-conf.sh
 CHECK_RELRO_SKIP=	libexec/xen/boot/hvmloader
+CHECK_RELRO_SKIP+=	libexec/xen/boot/xen-shim
+CHECK_RELRO_SKIP+=	lib/debug/usr/pkg/libexec/xen/boot/xen-shim-syms
 
 EGDIR=			${PREFIX}/share/examples/xen
 MESSAGE_SUBST+=		EGDIR=${EGDIR}
