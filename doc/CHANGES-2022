@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1476 2022/03/15 18:19:29 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1477 2022/03/15 18:20:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1940,3 +1940,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/kdeartwork4 to 15.08.3nb31 [gutteridge 2022-03-15]
 	Updated textproc/split-thai to 2.15 [scole 2022-03-15]
 	Removed security/libglobalplatform [nia 2022-03-15]
+	Updated security/openssl to 1.1.1n [wiz 2022-03-15]
