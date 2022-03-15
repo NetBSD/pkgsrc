@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2021/12/08 16:06:30 adam Exp $
+# $NetBSD: Makefile,v 1.18 2022/03/15 18:27:04 nia Exp $
 
 DISTNAME=	tracker-miners-3.0.1
 PKGNAME=	gnome-${DISTNAME}
@@ -12,7 +12,7 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/Tracker
 COMMENT=	Desktop-neutral metadata-based search framework
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
-TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=	asciidoc>=10.1.4:../../textproc/asciidoc
 
 USE_TOOLS+=	pkg-config xgettext gdbus-codegen
 
@@ -36,11 +36,13 @@ SUBST_FILES.shabuild+=	meson.build
 SUBST_SED.shabuild+=	-e "s,sha256sum,shasum,g"
 .endif
 
+.include "../../lang/python/pyversion.mk"
+
 SUBST_CLASSES+=		asciidoc
 SUBST_STAGE.asciidoc=	pre-configure
 SUBST_MESSAGE.asciidoc=	Correcting the path to asciidoc files.
 SUBST_FILES.asciidoc+=	docs/manpages/meson.build
-SUBST_SED.asciidoc+=	-e "s,/etc/asciidoc,${PREFIX}/share/asciidoc,g"
+SUBST_SED.asciidoc+=	-e "s,/etc/asciidoc,${PREFIX}/${PYSITELIB}/asciidoc/resources/,g"
 
 CONF_FILES+=	${PREFIX}/share/examples/xdg/autostart/tracker-miner-fs-3.desktop \
 		${PKG_SYSCONFDIR}/xdg/autostart/tracker-miner-fs-3.desktop
