@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1465 2022/03/15 05:47:16 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1466 2022/03/15 06:03:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1927,3 +1927,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated archivers/unrar to 6.1.6 [adam 2022-03-15]
 	Updated devel/meson to 0.61.3 [adam 2022-03-15]
 	Updated www/apache24 to 2.4.53 [adam 2022-03-15]
+	Updated devel/py-ipykernel to 6.9.2 [adam 2022-03-15]
+	Updated lang/py-mypy to 0.941 [adam 2022-03-15]
+	Updated finance/py-stripe to 2.67.0 [adam 2022-03-15]
+	Updated devel/py-click to 8.0.4 [adam 2022-03-15]
