@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/12/14 19:02:21 bacon Exp $
+$NetBSD: distinfo,v 1.7 2022/03/15 21:08:32 bacon Exp $
 
-BLAKE2s (ad2vcf-0.1.4.tar.gz) = d1177710c60983ce0ad2ec954f98ddd87c1a23619e1c60f9856b373db07add85
-SHA512 (ad2vcf-0.1.4.tar.gz) = b167fd249861d10d48806150343768aa9f90d574b5439a2d851d26c6b7bd8e4533832499f91c70e8d90e17cfbdea11ae0b64cf7521a9c249ed5c0b69e3e19701
-Size (ad2vcf-0.1.4.tar.gz) = 15964 bytes
+BLAKE2s (ad2vcf-0.1.5.tar.gz) = 8a3f7bef9731f9a372cab73e575f645ee40854c1849263c13495d7ddf1999e24
+SHA512 (ad2vcf-0.1.5.tar.gz) = 70161e310e7a96d8bc0f9cd3306c1525b4fb97c8632b90a6ccacebaf69a4b9ceaed17c28b9cfcb912608ba26acbe80c21391bb524693bdb00495eb69c1e5ca07
+Size (ad2vcf-0.1.5.tar.gz) = 16311 bytes
