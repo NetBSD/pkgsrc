@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/03/09 00:37:46 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2022/03/15 10:10:19 wiz Exp $
 
 DISTNAME=	guile-3.0.7
 PKGNAME=	${DISTNAME:S/guile/guile30/}
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	SHELL=${CONFIG_SHELL}
 # Needed to work around broken configure check for accept4()
 LDFLAGS.SunOS+=		-lsocket -lnsl
 MAKE_ENV+=		PAXCTL=echo
-MAKE_ENV.NetBSD+=	PAXCTL=paxctl
+MAKE_ENV.NetBSD+=	PAXCTL=/usr/sbin/paxctl
 
 .if !empty(GUILE_SUBDIR)
 # Installation prefix is non-default.
