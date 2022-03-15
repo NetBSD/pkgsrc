@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/02/28 12:25:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/03/15 18:20:02 wiz Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -595,6 +595,7 @@ man/man3/BN_mod_mul.3
 man/man3/BN_mod_mul_montgomery.3
 man/man3/BN_mod_mul_reciprocal.3
 man/man3/BN_mod_sqr.3
+man/man3/BN_mod_sqrt.3
 man/man3/BN_mod_sub.3
 man/man3/BN_mod_word.3
 man/man3/BN_mpi2bn.3
@@ -3415,6 +3416,7 @@ man/man3/X509_STORE_CTX_init.3
 man/man3/X509_STORE_CTX_lookup_certs_fn.3
 man/man3/X509_STORE_CTX_lookup_crls_fn.3
 man/man3/X509_STORE_CTX_new.3
+man/man3/X509_STORE_CTX_purpose_inherit.3
 man/man3/X509_STORE_CTX_set0_crls.3
 man/man3/X509_STORE_CTX_set0_param.3
 man/man3/X509_STORE_CTX_set0_trusted_stack.3
@@ -3426,6 +3428,8 @@ man/man3/X509_STORE_CTX_set_default.3
 man/man3/X509_STORE_CTX_set_error.3
 man/man3/X509_STORE_CTX_set_error_depth.3
 man/man3/X509_STORE_CTX_set_ex_data.3
+man/man3/X509_STORE_CTX_set_purpose.3
+man/man3/X509_STORE_CTX_set_trust.3
 man/man3/X509_STORE_CTX_set_verify.3
 man/man3/X509_STORE_CTX_set_verify_cb.3
 man/man3/X509_STORE_CTX_verify_cb.3
