@@ -1,8 +1,16 @@
-$NetBSD: distinfo,v 1.34 2021/10/26 11:34:42 nia Exp $
+$NetBSD: distinfo,v 1.35 2022/03/15 18:53:42 tnn Exp $
 
-BLAKE2s (xf86-video-intel-5ca3ac1a90af177eb111a965e9b4dd8a27cc58fc.tar.bz2) = 87539a7dc3e3fe5ea0ba2e8d21982f77a07d1d0d7c9d9fe20be37bf5c2d6484f
-SHA512 (xf86-video-intel-5ca3ac1a90af177eb111a965e9b4dd8a27cc58fc.tar.bz2) = 29fea01332438ad7616bae56a926f5c6fa08f93f67c23a0bb38f775719f12b15fba5bcb096c0665948f80d3ff6b7c108f360e44aae008192ef6c9b21187b4bbb
-Size (xf86-video-intel-5ca3ac1a90af177eb111a965e9b4dd8a27cc58fc.tar.bz2) = 1250303 bytes
+BLAKE2s (xf86-video-intel-31486f40f8e8f8923ca0799aea84b58799754564.tar.bz2) = 65c61d6ed7c341e3d792d137562ad739cb622e002b2fcb3ae9494af63ad06724
+SHA512 (xf86-video-intel-31486f40f8e8f8923ca0799aea84b58799754564.tar.bz2) = 41f51778309cf619a04a978c796bac6fa3b9cc150ea00f5684f9e046ef4f656ec64cb296f2dedfca2bd215d247988d0f842b3b519d6edcd74331ebc49339f316
+Size (xf86-video-intel-31486f40f8e8f8923ca0799aea84b58799754564.tar.bz2) = 1250745 bytes
 SHA1 (patch-src_intel__device.c) = e9a4420e11244b9ec552adb603c8e75cd28a8f57
 SHA1 (patch-src_legacy_i810_i810__dri.c) = fb963b994d51c9db48457106048226214a2d986c
+SHA1 (patch-src_sna_kgem.c) = 669367b8e80d9a0c17548ccc1d742982075995df
+SHA1 (patch-src_sna_kgem__debug.c) = f82b9426ff8ce77ce632d59c829f657582bc9edf
+SHA1 (patch-src_sna_sna__damage.c) = dec2e635f24423b9da678b54d843cb6689fa380c
+SHA1 (patch-src_sna_sna__display.c) = 3274fdd5b7c9046226c5d76a8fea0366e225759c
+SHA1 (patch-src_sna_sna__dri3.c) = 2136a92314f25501bb1d710fcf8dcbbd49c7ac0a
+SHA1 (patch-src_sna_sna__present.c) = 5154bf06b807e7997b9e3f10c87a5dbfc5a2d3e2
 SHA1 (patch-src_sna_sna__video.c) = 2771938849a475fc8c346dce0251000932add3de
+SHA1 (patch-src_uxa_intel__batchbuffer.c) = f345d69b7ba8618012f3d990375d2d7077a0f338
+SHA1 (patch-src_uxa_intel__display.c) = 499966e9f8a255a2f20729d5723101ab7cb52f12
