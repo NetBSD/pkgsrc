@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.4 2021/12/14 19:10:43 bacon Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/03/15 21:12:52 bacon Exp $
 bin/vcf-split
 man/man1/vcf-split.1
