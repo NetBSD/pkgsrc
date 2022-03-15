@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.43 2021/11/09 23:19:49 wiz Exp $
+$NetBSD: distinfo,v 1.44 2022/03/15 21:22:59 wiz Exp $
 
 BLAKE2s (pip-21.3.1.tar.gz) = ef20009a7f7d9131debfb4b33f3438d4ca2f9a9f90c72d28b3c1bdcb6967cdf9
 SHA512 (pip-21.3.1.tar.gz) = cc8cb13a7f4f53ddcaa1bf10586d0caa51bc334728bbd664f7085b3bfbfd09d082c2f01f4d1ecd6a69d7228976058a965087f1852da6d1155526fac1f107bf13
 Size (pip-21.3.1.tar.gz) = 1731517 bytes
+SHA1 (patch-src_pip___internal_build__env.py) = bcf27c9cd169c487dd266f3747dc1ede4845e9c0
