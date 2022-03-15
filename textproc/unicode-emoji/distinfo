@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:23:37 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/03/15 12:53:38 tsutsui Exp $
 
-BLAKE2s (unicode-emoji-13.1/ReadMe.txt) = 2c18ff5ba938d4b27b5f9bd86e74570f9eb584d9bf37f9608e5bf7ad08029b99
-SHA512 (unicode-emoji-13.1/ReadMe.txt) = cedc49c4b303956c1bc6f031ccf29c4bb857aaebdb4384a4c20832ba43e82cd2453cb82d10820deda2d81dded18ddb374497cba4a23685e64c2a48f07a16b041
-Size (unicode-emoji-13.1/ReadMe.txt) = 571 bytes
-BLAKE2s (unicode-emoji-13.1/emoji-sequences.txt) = c55a077430b0a593708c0c900701c8e3e212abaa3ba6cf0354da942dec8ef48c
-SHA512 (unicode-emoji-13.1/emoji-sequences.txt) = d3deacd360f6e9838a6d3aa94e38099f77abce228debd598a1c010ff75f21197b92d5c31fb2d839551da262b1b1ea7a7adaeb7156909ef614dc81e52ea9d4478
-Size (unicode-emoji-13.1/emoji-sequences.txt) = 180011 bytes
-BLAKE2s (unicode-emoji-13.1/emoji-test.txt) = ffc367e79972d2dfed32e117269be7f5812e312c89628e901ed3f36a9e0eeb10
-SHA512 (unicode-emoji-13.1/emoji-test.txt) = a5f8189eb8a35af16427fdfbd00b16111cfced1f0c5677cdf749bfd8937796be82664b0410731c3b38cbbbf940521ceb753836204e4394475d3db4296a49f82d
-Size (unicode-emoji-13.1/emoji-test.txt) = 575499 bytes
-BLAKE2s (unicode-emoji-13.1/emoji-zwj-sequences.txt) = 86ed74ccf1f23b530d4cf67175aefd2817d53505332036f77fb0f624fd2f0874
-SHA512 (unicode-emoji-13.1/emoji-zwj-sequences.txt) = 3e3d849fc6d93abf91b962b7e81f53e2e1a4cdeeb2a0c27eca96a9915924c5865843610441339cf571ff32cf084ff183c3fdd9a4b3f3d59be9f92e2de324eda1
-Size (unicode-emoji-13.1/emoji-zwj-sequences.txt) = 227601 bytes
+BLAKE2s (unicode-emoji-14.0/ReadMe.txt) = b3bad5e08fe24e1bca3022db1977870e8582ccdba6710c9417e2d67623fbc84d
+SHA512 (unicode-emoji-14.0/ReadMe.txt) = be8b83e7b4f1a1b050bcc9e8d38ceff80ab57ff3a884d7780e8dc4430b077a405628e523affaf94b8afb6915b7b2bd8e81b0513357ec94cc90fa6c8fe55e4f72
+Size (unicode-emoji-14.0/ReadMe.txt) = 578 bytes
+BLAKE2s (unicode-emoji-14.0/emoji-sequences.txt) = d6a671663846dcf739b625c8ea687d512ff4a0aff348e967e23fb0906bb705ff
+SHA512 (unicode-emoji-14.0/emoji-sequences.txt) = 527a763fe43e4679b7a689c2b736a4cba9a76ebdd601a0550992391d98431a5248ebec3ba35b20e8bd34cfb3075bad399825371c8f11ffe78e12e0fe09bbc181
+Size (unicode-emoji-14.0/emoji-sequences.txt) = 188859 bytes
+BLAKE2s (unicode-emoji-14.0/emoji-test.txt) = f2c70804efa4ea2103dee3ec723f4ec8893854cf9174a9ee70c15d067157a85a
+SHA512 (unicode-emoji-14.0/emoji-test.txt) = 693fe5c225e28a694d7aa436d3c6546c3376854878bb92d15f1c88b2d6ce3e9f67ddf66bd08e6aa99930d2965a28f8ed4dd3a895fdf5311abb0a323de27e1a12
+Size (unicode-emoji-14.0/emoji-test.txt) = 589717 bytes
+BLAKE2s (unicode-emoji-14.0/emoji-zwj-sequences.txt) = b3639094b1dad921819cb7a5c7b6336fe315942ad36b311130565d75e97438d2
+SHA512 (unicode-emoji-14.0/emoji-zwj-sequences.txt) = f1098393fbea76ece6838b509b985f06d92ac3f3ee0a0faf14cc92dc1dce73c3d3b7517fb940d48de27243141568acac88bb5b4438ead445cec9434826932e59
+Size (unicode-emoji-14.0/emoji-zwj-sequences.txt) = 231001 bytes
