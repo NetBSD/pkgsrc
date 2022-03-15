@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2021/12/14 19:12:10 bacon Exp $
+# $NetBSD: Makefile,v 1.5 2022/03/15 21:13:46 bacon Exp $
 
-DISTNAME=	vcf2hap-0.1.4
+DISTNAME=	vcf2hap-0.1.5
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
 
