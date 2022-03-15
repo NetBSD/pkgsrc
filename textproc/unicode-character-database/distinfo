@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:23:37 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/03/15 12:52:53 tsutsui Exp $
 
-BLAKE2s (unicode-character-database-13.0.0/UCD.zip) = 7ff424a730d4272a9bd28b773ce83ea01e2cb490ab98f9c4e881acb922cfcc2e
-SHA512 (unicode-character-database-13.0.0/UCD.zip) = aed6d06c370dd87bc5713e19ff4cde47b065b76a18149194fa843e4efc5269f749ec8905cad9132d3b803ab621a46e372052b8f3c3e9b6a65afa6516b0f2b4f2
-Size (unicode-character-database-13.0.0/UCD.zip) = 7537310 bytes
-BLAKE2s (unicode-character-database-13.0.0/Unihan.zip) = 37f54904f13c187cc57c160a60a39efc6221c28138030c36da2d73745fffcfb6
-SHA512 (unicode-character-database-13.0.0/Unihan.zip) = 87238202b5da069ab1bbc4672d86c6fd0711e354fb17f53b0b4152850c56c0fa09e6e45820ae52d49756b25fe696518ceaa34cbfe5366ff60688c9a5c3a2d5be
-Size (unicode-character-database-13.0.0/Unihan.zip) = 7044963 bytes
+BLAKE2s (unicode-character-database-14.0.0/UCD.zip) = eac8ea653b8bea36388c41951b60c0ae1b23d29544d6ab5563bd2d10b66fd5ab
+SHA512 (unicode-character-database-14.0.0/UCD.zip) = 17fbfb3ebd3a75227526d87e19feb70c1b0ccee656e421e955aadc88847ed2597437eb8cf19619e2a49470d286b285e219aec18d6b29dab47cfa8317a212b458
+Size (unicode-character-database-14.0.0/UCD.zip) = 6985828 bytes
+BLAKE2s (unicode-character-database-14.0.0/Unihan.zip) = 8d2bca56576775a5e653c56991ff1a5c7475129f9be89c6fa2524aa0df1b9fa0
+SHA512 (unicode-character-database-14.0.0/Unihan.zip) = 1827e512dd1bd27f3553746275dc90e3c3add38590d56da3901eccb56b94fee9e2dd806514a866ca73dfe4770ec585d200a6b6a7a4293c2ff572a2f5b50ef091
+Size (unicode-character-database-14.0.0/Unihan.zip) = 7116482 bytes
