@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2021/08/21 17:40:17 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.21 2022/03/15 13:13:36 tsutsui Exp $
 bin/ibus
 bin/ibus-daemon
 bin/ibus-setup
@@ -69,6 +69,7 @@ share/dbus-1/services/org.freedesktop.IBus.service
 share/dbus-1/services/org.freedesktop.portal.IBus.service
 share/examples/ibus/dconf/db/ibus.d/00-upstream-settings
 share/examples/ibus/dconf/profile/ibus
+share/examples/ibus/xdg/Xwayland-session.d/10-ibus-x11
 share/gettext/its/ibus.its
 share/gettext/its/ibus.loc
 share/gir-1.0/IBus-1.0.gir
