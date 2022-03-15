@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.81 2022/01/10 01:46:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.82 2022/03/15 17:15:13 gutteridge Exp $
 
 DISTNAME=	kdeartwork-15.08.3
 PKGNAME=	${DISTNAME:S/-1/4-1/}
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	misc
 COMMENT=	Artwork for the KDE integrated X11 desktop
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.3/src/}
@@ -15,7 +15,10 @@ CMAKE_ARGS+=	-DWITH_Eigen3:BOOL=OFF
 
 #BUILD_MAKE_FLAGS+=	VERBOSE=1
 
-BUILDLINK_API_DEPENDS.xscreensaver+=	xscreensaver>=5.10
+# xscreensaver 6.x changed the name of a pre-existing screensaver, and
+# also webcollage is now built by default when it was disabled before,
+# which influences packaging here.
+BUILDLINK_API_DEPENDS.xscreensaver+=	xscreensaver>=6.03
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 
