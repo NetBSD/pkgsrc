@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2017/12/10 20:04:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/03/15 17:15:13 gutteridge Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
@@ -6577,7 +6577,6 @@ share/kde4/services/ScreenSavers/pulsar.desktop
 share/kde4/services/ScreenSavers/pyro.desktop
 share/kde4/services/ScreenSavers/qix.desktop
 share/kde4/services/ScreenSavers/queens.desktop
-share/kde4/services/ScreenSavers/rd-bomb.desktop
 share/kde4/services/ScreenSavers/ripples.desktop
 share/kde4/services/ScreenSavers/rocks.desktop
 share/kde4/services/ScreenSavers/rorschach.desktop
@@ -6615,6 +6614,7 @@ share/kde4/services/ScreenSavers/vermiculate.desktop
 share/kde4/services/ScreenSavers/vidwhacker.desktop
 share/kde4/services/ScreenSavers/voronoi.desktop
 share/kde4/services/ScreenSavers/wander.desktop
+share/kde4/services/ScreenSavers/webcollage.desktop
 share/kde4/services/ScreenSavers/whirlwindwarp.desktop
 share/kde4/services/ScreenSavers/wormhole.desktop
 share/kde4/services/ScreenSavers/xanalogtv.desktop
