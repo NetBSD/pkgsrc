@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1493 2022/03/16 16:02:58 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.1494 2022/03/16 18:39:06 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1958,3 +1958,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added textproc/csvlens version 0.1.4 [pin 2022-03-16]
 	Updated audio/libopenmpt to 0.6.2 [fcambus 2022-03-16]
 	Updated net/gh to 2.6.0 [bsiegert 2022-03-16]
+	Updated devel/cmake to 3.22.3nb1 [jperkin 2022-03-16]
