@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1488 2022/03/15 21:28:18 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1489 2022/03/16 06:26:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1952,3 +1952,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated biology/vcf-split to 0.1.4 [bacon 2022-03-15]
 	Updated biology/vcf2hap to 0.1.5 [bacon 2022-03-15]
 	Updated devel/py-pip to 21.3.1nb3 [wiz 2022-03-15]
+	Updated devel/py-dict2xml to 1.7.1 [adam 2022-03-16]
+	Updated devel/py-faker to 13.3.2 [adam 2022-03-16]
