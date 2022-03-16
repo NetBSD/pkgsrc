@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.228 2022/02/06 20:54:24 rillig Exp $
+# $NetBSD: Makefile,v 1.229 2022/03/16 13:32:37 tnn Exp $
 
 DISTNAME=	gnutls-3.7.3
 PKGREVISION=	1
@@ -80,6 +80,11 @@ GNUTLS_GAS_NEW_ENOUGH=	yes
 CONFIGURE_ARGS+=	--disable-hardware-acceleration
 .    endif
 .  endif
+.endif
+
+.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64)
+# don't assume GNU as(1) here
+BUILDLINK_TRANSFORM+=	rm:-Wa,-march=all
 .endif
 
 # Tests fail due to missing strndup for Solaris < 5.11, disable for now
