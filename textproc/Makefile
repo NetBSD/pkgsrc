@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1295 2022/03/06 09:29:28 nia Exp $
+# $NetBSD: Makefile,v 1.1296 2022/03/16 11:19:01 pin Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -176,6 +176,7 @@ SUBDIR+=	crush-tools
 SUBDIR+=	csharp-xapian
 SUBDIR+=	csview
 SUBDIR+=	csvkit
+SUBDIR+=	csvlens
 SUBDIR+=	csvtomd
 SUBDIR+=	csvutils
 SUBDIR+=	cwdiff
