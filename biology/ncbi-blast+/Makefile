@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2021/12/08 16:03:24 adam Exp $
+# $NetBSD: Makefile,v 1.27 2022/03/16 00:32:01 bacon Exp $
 
 DISTNAME=	ncbi-blast-2.11.0+-src
 PKGNAME=	${DISTNAME:S/+-src//:S/blast/blast+/}
@@ -30,6 +30,7 @@ REPLACE_BASH+=		src/app/blast/get_species_taxids.sh
 REPLACE_PERL=		src/app/blast/legacy_blast.pl src/app/blast/update_blastdb.pl
 REPLACE_PYTHON=		src/app/winmasker/windowmasker_2.2.22_adapter.py
 REPLACE_PYTHON+=	src/app/blast/cleanup-blastdb-volumes.py
+MKPIE_SUPPORTED=	no	# Temporary fix
 
 # The test for amq can hang, but amq is not needed so just avoid the test
 # configure chooses /usr/local/bin/ar with no flags
