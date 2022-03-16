@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2021/05/24 19:50:02 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2022/03/16 23:21:49 nia Exp $
 #
 
 DISTNAME=	netbeans-8.2-201609300101
@@ -27,6 +27,8 @@ REPLACE_PYTHON=	extide/ant/bin/runant.py
 SHAREDIR=	${PREFIX}/share/${PKGBASE}
 
 CHECK_SHLIBS_SUPPORTED=	no
+CHECK_PIE_SUPPORTED=	no
+CHECK_RELRO_SUPPORTED=	no
 CHECK_SSP_SUPPORTED=	no
 AUTO_MKDIRS=		yes
 
