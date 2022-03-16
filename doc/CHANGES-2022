@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1489 2022/03/16 06:26:03 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1490 2022/03/16 09:07:09 fox Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1954,3 +1954,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-pip to 21.3.1nb3 [wiz 2022-03-15]
 	Updated devel/py-dict2xml to 1.7.1 [adam 2022-03-16]
 	Updated devel/py-faker to 13.3.2 [adam 2022-03-16]
+	Updated audio/fasttracker2 to 1.52 [fox 2022-03-16]
