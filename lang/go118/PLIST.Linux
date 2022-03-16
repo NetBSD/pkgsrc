@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2022/03/16 09:21:05 tnn Exp $
+go118/pkg/${GO_PLATFORM}/runtime/internal/syscall.a
