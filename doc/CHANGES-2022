@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1494 2022/03/16 18:39:06 jperkin Exp $
+$NetBSD: CHANGES-2022,v 1.1495 2022/03/17 00:15:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1959,3 +1959,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/libopenmpt to 0.6.2 [fcambus 2022-03-16]
 	Updated net/gh to 2.6.0 [bsiegert 2022-03-16]
 	Updated devel/cmake to 3.22.3nb1 [jperkin 2022-03-16]
+	Updated net/bind911 to 9.11.37 [taca 2022-03-17]
