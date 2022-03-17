@@ -1,12 +1,12 @@
-$NetBSD: patch-config.h.in,v 1.4 2021/03/21 04:16:17 taca Exp $
+$NetBSD: patch-config.h.in,v 1.5 2022/03/17 00:18:05 taca Exp $
 
 * Based on NetBSD, add support for blocklist(blacklist).
 
---- config.h.in.orig	2021-03-11 13:20:59.000000000 +0000
+--- config.h.in.orig	2022-03-07 08:48:03.000000000 +0000
 +++ config.h.in
-@@ -51,6 +51,12 @@
- /* Define to 1 if you have the `BIO_write_ex' function. */
- #undef HAVE_BIO_WRITE_EX
+@@ -54,6 +54,12 @@
+ /* Define to 1 if you have the `BN_GENCB_new' function. */
+ #undef HAVE_BN_GENCB_NEW
  
 +/* Define to 1 if blacklist is supported. */
 +#undef HAVE_BLACKLIST_H
