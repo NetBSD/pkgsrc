@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1497 2022/03/17 03:08:02 osa Exp $
+$NetBSD: CHANGES-2022,v 1.1498 2022/03/17 07:51:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1963,3 +1963,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/bind916 to 9.16.27 [taca 2022-03-17]
 	Updated www/nginx to 1.20.2nb6 [osa 2022-03-16]
 	Updated www/nginx-devel to 1.21.6nb5 [osa 2022-03-16]
+	Updated net/openvpn to 2.5.6 [adam 2022-03-17]
+	Updated www/py-urllib3 to 1.26.9 [adam 2022-03-17]
