@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1498 2022/03/17 07:51:38 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1499 2022/03/17 08:21:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1965,3 +1965,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/nginx-devel to 1.21.6nb5 [osa 2022-03-16]
 	Updated net/openvpn to 2.5.6 [adam 2022-03-17]
 	Updated www/py-urllib3 to 1.26.9 [adam 2022-03-17]
+	Updated security/py-josepy to 1.13.0 [adam 2022-03-17]
+	Updated devel/py-jupyter-console to 6.4.3 [adam 2022-03-17]
