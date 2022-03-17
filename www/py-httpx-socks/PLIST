@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/11/17 08:37:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/03/17 14:26:27 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -16,6 +16,9 @@ ${PYSITELIB}/httpx_socks/_async_transport.pyo
 ${PYSITELIB}/httpx_socks/_sync_proxy.py
 ${PYSITELIB}/httpx_socks/_sync_proxy.pyc
 ${PYSITELIB}/httpx_socks/_sync_proxy.pyo
+${PYSITELIB}/httpx_socks/_sync_stream.py
+${PYSITELIB}/httpx_socks/_sync_stream.pyc
+${PYSITELIB}/httpx_socks/_sync_stream.pyo
 ${PYSITELIB}/httpx_socks/_sync_transport.py
 ${PYSITELIB}/httpx_socks/_sync_transport.pyc
 ${PYSITELIB}/httpx_socks/_sync_transport.pyo

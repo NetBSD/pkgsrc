@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2022/01/04 20:55:30 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/03/17 14:26:27 adam Exp $
 
-DISTNAME=	httpx-socks-0.6.0
+DISTNAME=	httpx-socks-0.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httpx-socks/}
 
@@ -13,7 +12,7 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-httpx>=0.21.0:../../www/py-httpx
 DEPENDS+=	${PYPKGPREFIX}-httpcore>=0.14.0:../../www/py-httpcore
-DEPENDS+=	${PYPKGPREFIX}-python-socks>=1.2.4:../../net/py-python-socks
+DEPENDS+=	${PYPKGPREFIX}-python-socks>=2.0.0:../../net/py-python-socks
 
 USE_LANGUAGES=	# none
 
