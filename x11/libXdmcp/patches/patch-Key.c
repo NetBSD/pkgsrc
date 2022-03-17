@@ -1,19 +1,20 @@
-$NetBSD: patch-Key.c,v 1.3 2022/02/23 03:10:26 gutteridge Exp $
+$NetBSD: patch-Key.c,v 1.4 2022/03/17 01:05:48 gutteridge Exp $
 
 Fix builds where getentropy() exists but arc4random_buf() does not, as
-reported to be the case with Solaris 11.3 in PR pkg/54628.
+the case with Solaris 11.3, reported in PR pkg/54628.
+https://gitlab.freedesktop.org/xorg/lib/libxdmcp/-/commit/4a71fdf6d34df67d3f1335590da6ae3050128fb2
 
 --- Key.c.orig	2019-03-16 16:21:22.000000000 +0000
 +++ Key.c
-@@ -82,6 +82,11 @@ arc4random_buf (void *auth, int len)
-     int	    ret;
+@@ -64,6 +64,11 @@ getbits (long data, unsigned char *dst)
  
- #if HAVE_GETENTROPY
-+
-+#ifdef __sun
-+#include <sys/random.h>
+ #ifndef HAVE_ARC4RANDOM_BUF
+ 
++/* Solaris 11.3.0 - 11.4.15 only define getentropy() in <sys/random.h> */
++#if HAVE_GETENTROPY && HAVE_SYS_RANDOM_H
++# include <sys/random.h>
 +#endif
 +
-     /* weak emulation of arc4random through the getentropy libc call */
-     ret = getentropy (auth, len);
-     if (ret == 0)
+ static void
+ insecure_getrandom_buf (unsigned char *auth, int len)
+ {
