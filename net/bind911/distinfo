@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.38 2021/10/29 07:55:00 taca Exp $
+$NetBSD: distinfo,v 1.39 2022/03/17 00:15:21 taca Exp $
 
-BLAKE2s (bind-9.11.36.tar.gz) = 4d78bb88fe7112c74b3bb20df32b63de21f3a6079845cf355469ab7fb59fbaad
-SHA512 (bind-9.11.36.tar.gz) = eafaf86095f5d4446b004ad7690a5c0b16a597c135a306881b7038d247b8975032fd43d087d7c3d296ba77969f3ac83081a9ed4cbc1d4c66b6a04f2b74a54cb2
-Size (bind-9.11.36.tar.gz) = 8313276 bytes
+BLAKE2s (bind-9.11.37.tar.gz) = 4155dd30b4ae4fe2653ce5a7d9c4324c11393a29601289478138ac8d69481a21
+SHA512 (bind-9.11.37.tar.gz) = f59ca8575725226b09482b10308ab259f570f8035b54c21c5555719229b11d4441ca235cb07608d4899184bde489d476d59a2dff3d0468ed4bea901e90c85bcb
+Size (bind-9.11.37.tar.gz) = 8314894 bytes
 SHA1 (patch-bin_named_Makefile.in) = 3e5b98e3e0bdb701be679d3580d6d2d7609d655b
 SHA1 (patch-bin_named_server.c) = 0294d74eb3039049c4672a3de6eb371407bb382d
 SHA1 (patch-bin_pkcs11_pkcs11-keygen.c) = ca2671a5e3216a08a212cf893e070b01705ef9ee
