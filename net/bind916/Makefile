@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2022/02/20 12:57:56 taca Exp $
+# $NetBSD: Makefile,v 1.37 2022/03/17 00:18:05 taca Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -15,7 +15,7 @@ CONFLICTS+=	host-[0-9]*
 
 MAKE_JOBS_SAFE=	no
 
-BIND_VERSION=	9.16.26
+BIND_VERSION=	9.16.27
 
 BUILD_DEFS+=	BIND_DIR VARBASE
 
