@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2021/05/24 19:49:12 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/03/17 23:49:08 bacon Exp $
 
-DISTNAME=	stacks-2.2
-PKGREVISION=	5
+DISTNAME=	stacks-2.60
 CATEGORIES=	biology
 MASTER_SITES=	http://catchenlab.life.illinois.edu/stacks/source/
 
@@ -11,17 +10,36 @@ COMMENT=	Software pipeline for building loci from short-read sequences
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++14
-GCC_REQD+=	4.9
 USE_TOOLS+=	bash perl:run
 GNU_CONFIGURE=	yes
 
-REPLACE_BASH=	scripts/stacks-integrate-alignments scripts/stacks-gdb
-REPLACE_BASH+=	scripts/stacks-dist-extract
-REPLACE_PERL=	scripts/*.pl
-REPLACE_PYTHON=	scripts/*.py
+REPLACE_BASH+=		scripts/stacks-count-reads-per-sample-per-locus
+REPLACE_BASH+=		scripts/stacks-dist-extract
+REPLACE_BASH+=		scripts/stacks-gdb
+REPLACE_BASH+=		scripts/stacks-samtools-tview
+REPLACE_PERL=		scripts/*.pl
+REPLACE_PYTHON+=	scripts/*.py
+REPLACE_PYTHON+=	scripts/stacks-integrate-alignments
 
-CFLAGS+=	-fopenmp
+REPLACE_INTERPRETER+=	Rscript
+REPLACE.Rscript.old=	.*Rscript
+REPLACE.Rscript.new=	${PREFIX}/bin/Rscript
+REPLACE_FILES.Rscript=	scripts/stacks-hist2d-loci-samples-coverage
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == Darwin
+# pkgsrc sed wrapper lacks -i
+SUBST_CLASSES+=		sed
+SUBST_STAGE.sed=	pre-configure
+SUBST_FILES.sed=	Makefile.in
+SUBST_SED.sed=		-e 's|sed -i.bkp|/usr/bin/sed -i .bkp|'
+.else
+# macOS clang lacks OpenMP
+CFLAGS+=		-fopenmp
+.endif
 
 .include "../../lang/python/application.mk"
+.include "../../math/R/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
