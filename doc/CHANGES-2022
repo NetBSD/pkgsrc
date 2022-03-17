@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1503 2022/03/17 16:01:21 bacon Exp $
+$NetBSD: CHANGES-2022,v 1.1504 2022/03/17 21:19:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1989,3 +1989,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-aiohttp-socks to 0.7.1 [adam 2022-03-17]
 	Updated www/py-httpx-socks to 0.7.3 [adam 2022-03-17]
 	Updated biology/hisat2 to 2.2.1 [bacon 2022-03-17]
+	Updated security/gnutls to 3.7.4 [adam 2022-03-17]
+	Updated textproc/ugrep to 3.7.6 [adam 2022-03-17]
