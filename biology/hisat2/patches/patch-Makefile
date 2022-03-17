@@ -1,0 +1,145 @@
+$NetBSD: patch-Makefile,v 1.1 2022/03/17 16:01:12 bacon Exp $
+
+# Respect env
+
+--- Makefile.orig	2020-07-24 20:07:54.000000000 +0000
++++ Makefile
+@@ -23,9 +23,11 @@
+ INC =
+ GCC_PREFIX = $(shell dirname `which gcc`)
+ GCC_SUFFIX =
+-CC = $(GCC_PREFIX)/gcc$(GCC_SUFFIX)
+-CPP = $(GCC_PREFIX)/g++$(GCC_SUFFIX)
+-CXX = $(CPP)
++CC	?= $(GCC_PREFIX)/gcc$(GCC_SUFFIX)
++CPP	?= $(GCC_PREFIX)/g++$(GCC_SUFFIX)
++CXX	?= $(CPP)
++INSTALL	?= install
++
+ HEADERS = $(wildcard *.h)
+ BOWTIE_MM = 1
+ BOWTIE_SHARED_MEM = 0
+@@ -55,7 +57,7 @@ ifneq (,$(findstring Darwin,$(shell unam
+ 	MACOS = 1
+ endif
+ 
+-EXTRA_FLAGS += -DPOPCNT_CAPABILITY -std=c++11
++EXTRA_FLAGS += -std=c++11
+ INC += -I. -I third_party 
+ 
+ MM_DEF = 
+@@ -150,33 +152,11 @@ HISAT2_BUILD_CPPS_MAIN = $(BUILD_CPPS) h
+ HISAT2_REPEAT_CPPS_MAIN = $(REPEAT_CPPS) $(BUILD_CPPS) hisat2_repeat_main.cpp
+ 
+ SEARCH_FRAGMENTS = $(wildcard search_*_phase*.c)
+-VERSION = $(shell cat VERSION)
+-
+-# Convert BITS=?? to a -m flag
+-BITS=32
+-ifeq (x86_64,$(shell uname -m))
+-BITS=64
+-endif
+-# msys will always be 32 bit so look at the cpu arch instead.
+-ifneq (,$(findstring AMD64,$(PROCESSOR_ARCHITEW6432)))
+-	ifeq (1,$(MINGW))
+-		BITS=64
+-	endif
+-endif
+-BITS_FLAG =
+-
+-ifeq (32,$(BITS))
+-	BITS_FLAG = -m32
+-endif
+-
+-ifeq (64,$(BITS))
+-	BITS_FLAG = -m64
+-endif
+-SSE_FLAG=-msse2
++HISAT2_VERSION = $(shell cat HISAT2_VERSION)
+ 
+ DEBUG_FLAGS    = -O0 -g3 $(BITS_FLAG) $(SSE_FLAG)
+ DEBUG_DEFS     = -DCOMPILER_OPTIONS="\"$(DEBUG_FLAGS) $(EXTRA_FLAGS)\""
+-RELEASE_FLAGS  = -O3 $(BITS_FLAG) $(SSE_FLAG) -funroll-loops -g3
++RELEASE_FLAGS  = $(CXXFLAGS)
+ RELEASE_DEFS   = -DCOMPILER_OPTIONS="\"$(RELEASE_FLAGS) $(EXTRA_FLAGS)\""
+ NOASSERT_FLAGS = -DNDEBUG
+ FILE_FLAGS     = -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE
+@@ -251,7 +231,7 @@ GENERAL_LIST = $(wildcard scripts/*.sh) 
+ 	MANUAL \
+ 	MANUAL.markdown \
+ 	TUTORIAL \
+-	VERSION
++	HISAT2_VERSION
+ 
+ ifeq (1,$(WINDOWS))
+ 	HISAT2_BIN_LIST := $(HISAT2_BIN_LIST) hisat2.bat hisat2-build.bat hisat2-inspect.bat 
+@@ -287,7 +267,7 @@ repeat: hisat2-repeat
+ repeat-debug: hisat2-repeat-debug
+ 
+ DEFS=-fno-strict-aliasing \
+-     -DHISAT2_VERSION="\"`cat VERSION`\"" \
++     -DHISAT2_VERSION="\"`cat HISAT2_VERSION`\"" \
+      -DBUILD_HOST="\"`hostname`\"" \
+      -DBUILD_TIME="\"`date`\"" \
+      -DCOMPILER_VERSION="\"`$(CXX) -v 2>&1 | tail -1`\"" \
+@@ -517,12 +497,12 @@ hisat2-inspect.bat:
+ hisat2-src: $(SRC_PKG_LIST)
+ 	chmod a+x scripts/*.sh scripts/*.pl
+ 	mkdir .src.tmp
+-	mkdir .src.tmp/hisat2-$(VERSION)
++	mkdir .src.tmp/hisat2-$(HISAT2_VERSION)
+ 	zip tmp.zip $(SRC_PKG_LIST)
+-	mv tmp.zip .src.tmp/hisat2-$(VERSION)
+-	cd .src.tmp/hisat2-$(VERSION) ; unzip tmp.zip ; rm -f tmp.zip
+-	cd .src.tmp ; zip -r hisat2-$(VERSION)-source.zip hisat2-$(VERSION)
+-	cp .src.tmp/hisat2-$(VERSION)-source.zip .
++	mv tmp.zip .src.tmp/hisat2-$(HISAT2_VERSION)
++	cd .src.tmp/hisat2-$(HISAT2_VERSION) ; unzip tmp.zip ; rm -f tmp.zip
++	cd .src.tmp ; zip -r hisat2-$(HISAT2_VERSION)-source.zip hisat2-$(HISAT2_VERSION)
++	cp .src.tmp/hisat2-$(HISAT2_VERSION)-source.zip .
+ 	rm -rf .src.tmp
+ 
+ .PHONY: hisat2-bin
+@@ -530,16 +510,16 @@ hisat2-bin: $(BIN_PKG_LIST) $(HISAT2_BIN
+ 	chmod a+x scripts/*.sh scripts/*.pl
+ 	rm -rf .bin.tmp
+ 	mkdir .bin.tmp
+-	mkdir .bin.tmp/hisat2-$(VERSION)
++	mkdir .bin.tmp/hisat2-$(HISAT2_VERSION)
+ 	if [ -f hisat2.exe ] ; then \
+ 		zip tmp.zip $(BIN_PKG_LIST) $(addsuffix .exe,$(HISAT2_BIN_LIST) $(HISAT2_BIN_LIST_AUX)) ; \
+ 	else \
+ 		zip tmp.zip $(BIN_PKG_LIST) $(HISAT2_BIN_LIST) $(HISAT2_BIN_LIST_AUX) ; \
+ 	fi
+-	mv tmp.zip .bin.tmp/hisat2-$(VERSION)
+-	cd .bin.tmp/hisat2-$(VERSION) ; unzip tmp.zip ; rm -f tmp.zip
+-	cd .bin.tmp ; zip -r hisat2-$(VERSION)-$(BITS).zip hisat2-$(VERSION)
+-	cp .bin.tmp/hisat2-$(VERSION)-$(BITS).zip .
++	mv tmp.zip .bin.tmp/hisat2-$(HISAT2_VERSION)
++	cd .bin.tmp/hisat2-$(HISAT2_VERSION) ; unzip tmp.zip ; rm -f tmp.zip
++	cd .bin.tmp ; zip -r hisat2-$(HISAT2_VERSION)-$(BITS).zip hisat2-$(HISAT2_VERSION)
++	cp .bin.tmp/hisat2-$(HISAT2_VERSION)-$(BITS).zip .
+ 	rm -rf .bin.tmp
+ 
+ .PHONY: doc
+@@ -554,6 +534,20 @@ doc/manual.inc.html: MANUAL.markdown
+ MANUAL: MANUAL.markdown
+ 	perl doc/strip_markdown.pl < $^ > $@
+ 
++# Install per filesystem hierarchy standard:
++# https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard
++
++.PHONY: install
++install:
++	mkdir -p ${DESTDIR}${PREFIX}/bin
++	${INSTALL} -c -s ${HISAT2_BIN_LIST} ${DESTDIR}${PREFIX}/bin
++	${INSTALL} -c hisat2 hisat2-build hisat2-inspect \
++		${DESTDIR}${PREFIX}/bin
++
++	mkdir -p ${DESTDIR}${PREFIX}/libexec/hisat2
++	${INSTALL} -c scripts/*.sh scripts/*.pl scripts/*.py *.py \
++		${DESTDIR}${PREFIX}/libexec/hisat2
++
+ .PHONY: clean
+ clean:
+ 	rm -f $(HISAT2_BIN_LIST) $(HISAT2_BIN_LIST_AUX) \

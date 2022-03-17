@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:03:40 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/03/17 16:01:11 bacon Exp $
 
-BLAKE2s (hisat2-2.1.0.23-20f333e2cfe7ff4d1362b248912893e2644683d7.tar.gz) = 6b114a873cfb9fa79a3e5e8d72495893d4d3fbadebc924e5826e5de2176e1397
-SHA512 (hisat2-2.1.0.23-20f333e2cfe7ff4d1362b248912893e2644683d7.tar.gz) = 5514f7462a6738e5fed5ef3bd2eb782e867178cd68eb36324407628b446a151d096326d859b2986877a26206ad182281ecac29f2abd01991c0640c5e4c5e5e0b
-Size (hisat2-2.1.0.23-20f333e2cfe7ff4d1362b248912893e2644683d7.tar.gz) = 3975385 bytes
-SHA1 (patch-hisat2) = ea55c8a99dcd2fd3651e832fbb402b94d0ea3fed
+BLAKE2s (hisat2-2.2.1.tar.gz) = 1cc424a10f1fcf25c70294bef3b21e67b07cebcb7b73e36c0176a2dfdec51bdb
+SHA512 (hisat2-2.2.1.tar.gz) = a5a688ad0ccfaf326b3ec6dc97206995306aa6f5b6e58223c2113adbca2745f1e8205b436fdf8e01f42da7a38718f9f3bf214b951fb5360d53247d99a0bdbf46
+Size (hisat2-2.2.1.tar.gz) = 6761242 bytes
+SHA1 (patch-Makefile) = 067b766ecebacd840db4a287bba25d2d2264b339
+SHA1 (patch-hisat2) = 6010f5fcc1e7dfcb383a4defc4e3d9f06322370d
+SHA1 (patch-processor__support.h) = 56d9cd4ba18e37879acba521a0f431fe2b4290af
