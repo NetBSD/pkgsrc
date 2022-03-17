@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.74 2022/03/10 18:40:44 osa Exp $
+# $NetBSD: options.mk,v 1.75 2022/03/17 02:37:49 osa Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	array-var auth-request cache-purge dav debug
@@ -56,7 +56,6 @@ SUBST_NOOP_OK.fix-ssl=	yes
 
 .if !empty(PKG_OPTIONS:Mpcre)
 .include "../../devel/pcre/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-pcre-jit
 SUBST_CLASSES+=		fix-pcre
 SUBST_STAGE.fix-pcre=	pre-configure
 SUBST_FILES.fix-pcre=	auto/lib/pcre/conf
