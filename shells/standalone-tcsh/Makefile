@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2022/03/03 07:39:00 nia Exp $
+# $NetBSD: Makefile,v 1.43 2022/03/17 08:27:31 nia Exp $
 #
 
 # FIXME: This is because of PREFIX=/ below.
@@ -16,11 +16,9 @@ DESCR_SRC=		../../shells/tcsh/DESCR DESCR
 # anyone wants.
 ONLY_FOR_PLATFORM+=	NetBSD-*-* OpenBSD-*-* SunOS-*-*
 
-.include "../../mk/bsd.prefs.mk"
-
-.if !defined(OPSYS_HAS_STATIC_PIE)
 MKPIE_SUPPORTED= no
-.endif
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${OS_VARIANT} == "OmniOS"
 NOT_FOR_PLATFORM+=	SunOS-*-*
