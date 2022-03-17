@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.91 2021/12/15 20:11:51 adam Exp $
+# $NetBSD: Makefile,v 1.92 2022/03/17 07:50:17 adam Exp $
 
 DISTNAME=	${OPENVPN_DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	${OPENVPN_MASTER_SITES}
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://openvpn.net/
