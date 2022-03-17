@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/02/10 21:23:34 adam Exp $
+# $NetBSD: Makefile,v 1.20 2022/03/17 12:23:33 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -10,8 +10,7 @@ COMMENT=	Nginx plugin for Certbot
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=17.3.0:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-acme>=${CERTBOT_VERSION}:../../security/py-acme
 DEPENDS+=	${PYPKGPREFIX}-certbot>=${CERTBOT_VERSION}:../../security/py-certbot
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=39.0.1:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.2.0:../../devel/py-pyparsing
+DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.2.1:../../devel/py-pyparsing
 
 PKG_SYSCONFVAR=		nginx
 

@@ -1,8 +1,8 @@
-$NetBSD: patch-certbot__nginx___internal_constants.py,v 1.4 2021/04/15 05:16:37 adam Exp $
+$NetBSD: patch-certbot__nginx___internal_constants.py,v 1.5 2022/03/17 12:23:33 adam Exp $
 
 Look for nginx.conf in PKG_SYSCONFDIR
 
---- certbot_nginx/_internal/constants.py.orig	2021-04-06 17:17:00.000000000 +0000
+--- certbot_nginx/_internal/constants.py.orig	2022-03-16 18:16:28.000000000 +0000
 +++ certbot_nginx/_internal/constants.py
 @@ -3,19 +3,8 @@ import platform
  from typing import Any
@@ -19,9 +19,9 @@ Look for nginx.conf in PKG_SYSCONFDIR
 -else:
 -    server_root_tmp = LINUX_SERVER_ROOT
 -
- CLI_DEFAULTS: Dict[str, Any] = dict(
--    server_root=server_root_tmp,
-+    server_root="@PKG_SYSCONFDIR@/nginx",
-     ctl="nginx",
-     sleep_seconds=1
- )
+ CLI_DEFAULTS: Dict[str, Any] = {
+-    "server_root": server_root_tmp,
++    "server_root": "@PKG_SYSCONFDIR@/nginx",
+     "ctl": "nginx",
+     "sleep_seconds": 1
+ }
