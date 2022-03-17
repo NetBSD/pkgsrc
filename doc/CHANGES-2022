@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1496 2022/03/17 00:18:39 taca Exp $
+$NetBSD: CHANGES-2022,v 1.1497 2022/03/17 03:08:02 osa Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1961,3 +1961,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/cmake to 3.22.3nb1 [jperkin 2022-03-16]
 	Updated net/bind911 to 9.11.37 [taca 2022-03-17]
 	Updated net/bind916 to 9.16.27 [taca 2022-03-17]
+	Updated www/nginx to 1.20.2nb6 [osa 2022-03-16]
+	Updated www/nginx-devel to 1.21.6nb5 [osa 2022-03-16]
