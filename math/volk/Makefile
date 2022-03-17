@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/03/11 20:59:42 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2022/03/17 14:35:34 tnn Exp $
 
 DISTNAME=	volk-2.5.1
 CATEGORIES=	math ham
@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 
+GCC_REQD+=	8	# std::filesystem
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
