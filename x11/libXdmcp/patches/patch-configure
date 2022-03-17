@@ -1,0 +1,20 @@
+$NetBSD: patch-configure,v 1.1 2022/03/17 01:05:48 gutteridge Exp $
+
+Fix builds where getentropy() exists but arc4random_buf() does not, as
+the case with Solaris 11.3, reported in PR pkg/54628.
+https://gitlab.freedesktop.org/xorg/lib/libxdmcp/-/commit/4a71fdf6d34df67d3f1335590da6ae3050128fb2
+
+--- configure.orig	2019-03-16 16:21:31.000000000 +0000
++++ configure
+@@ -19342,6 +19342,11 @@ else
+ $as_echo "no, using $LN_S" >&6; }
+ fi
+ 
++# Checks for header files.
++ac_fn_c_check_header_compile "$LINENO" "sys/random.h" "ac_cv_header_sys_random_h" "$ac_includes_default"
++if test "x$ac_cv_header_sys_random_h" = xyes; then :
++  printf "%s\n" "#define HAVE_SYS_RANDOM_H 1" >>confdefs.h
++fi
+ 
+ # Checks for libraries.
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing recvfrom" >&5
