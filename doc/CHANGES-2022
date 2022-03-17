@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1500 2022/03/17 12:24:14 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1501 2022/03/17 13:04:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1983,3 +1983,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-certbot-dns-route53 to 1.25.0 [adam 2022-03-17]
 	Updated security/py-certbot-dns-sakuracloud to 1.25.0 [adam 2022-03-17]
 	Updated security/py-certbot-nginx to 1.25.0 [adam 2022-03-17]
+	Updated net/py-zeroconf to 0.38.4 [adam 2022-03-17]
+	Updated www/py-curl to 7.45.1 [adam 2022-03-17]
