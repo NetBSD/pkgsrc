@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2022/02/10 21:23:32 adam Exp $
+# $NetBSD: Makefile,v 1.34 2022/03/17 12:23:31 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -12,11 +12,10 @@ DEPENDS+=	${PYPKGPREFIX}-configargparse>=0.9.3:../../devel/py-configargparse
 DEPENDS+=	${PYPKGPREFIX}-configobj>=5.0.6:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=2.5.0:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-distro>=1.0.1:../../devel/py-distro
-DEPENDS+=	${PYPKGPREFIX}-josepy>=1.9.0:../../security/py-josepy
+DEPENDS+=	${PYPKGPREFIX}-josepy>=1.13.0:../../security/py-josepy
 DEPENDS+=	${PYPKGPREFIX}-parsedatetime>=2.4:../../time/py-parsedatetime
-DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
+DEPENDS+=	${PYPKGPREFIX}-pytz>=2019.3:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-rfc3339-[0-9]*:../../time/py-rfc3339
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=39.0.1:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-ZopeComponent-[0-9]*:../../devel/py-ZopeComponent
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
 # Needed for the test target
