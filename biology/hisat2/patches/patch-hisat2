@@ -1,6 +1,6 @@
-$NetBSD: patch-hisat2,v 1.1 2019/01/15 01:26:29 bacon Exp $
+$NetBSD: patch-hisat2,v 1.2 2022/03/17 16:01:12 bacon Exp $
 
-# Limit Windows-specific patches to Windows
+# Support BSD, etc.
 
 --- hisat2.orig	2018-11-07 21:43:32 UTC
 +++ hisat2
