@@ -1,0 +1,18 @@
+$NetBSD: patch-config.h.in,v 1.1 2022/03/17 01:05:48 gutteridge Exp $
+
+Fix builds where getentropy() exists but arc4random_buf() does not, as
+the case with Solaris 11.3, reported in PR pkg/54628.
+https://gitlab.freedesktop.org/xorg/lib/libxdmcp/-/commit/4a71fdf6d34df67d3f1335590da6ae3050128fb2
+
+--- config.h.in.orig	2019-03-16 16:21:32.000000000 +0000
++++ config.h.in
+@@ -42,6 +42,9 @@
+ /* Define to 1 if you have the <string.h> header file. */
+ #undef HAVE_STRING_H
+ 
++/* Define to 1 if you have the <sys/random.h> header file. */
++#undef HAVE_SYS_RANDOM_H
++
+ /* Define to 1 if you have the <sys/stat.h> header file. */
+ #undef HAVE_SYS_STAT_H
+ 
