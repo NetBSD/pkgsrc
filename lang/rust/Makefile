@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.250 2022/03/01 16:06:39 he Exp $
+# $NetBSD: Makefile,v 1.251 2022/03/18 13:04:29 jperkin Exp $
 
 DISTNAME=	rustc-1.58.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -68,6 +68,7 @@ MAKE_ENV+=		CARGO_BUILD_JOBS=${_MAKE_JOBS_N}
 MAKE_ENV.Darwin+=	MACOSX_DEPLOYMENT_TARGET="10.7"
 
 CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
+MAKE_ENV.SunOS+=	AR=gar
 
 UNLIMIT_RESOURCES+=	cputime datasize virtualsize
 
