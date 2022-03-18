@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1506 2022/03/17 23:49:17 bacon Exp $
+$NetBSD: CHANGES-2022,v 1.1507 2022/03/18 12:23:59 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1993,3 +1993,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ugrep to 3.7.6 [adam 2022-03-17]
 	Updated geography/qgis to 3.22.4 [gdt 2022-03-17]
 	Updated biology/stacks to 2.60 [bacon 2022-03-17]
+	Updated chat/matrix-synapse to 1.54.0 [gdt 2022-03-18]
