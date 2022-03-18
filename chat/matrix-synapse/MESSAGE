@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2021/04/15 15:54:00 jperkin Exp $
+$NetBSD: MESSAGE,v 1.3 2022/03/18 12:59:38 gdt Exp $
 
 To generate a Synapse configuration, run:
 
@@ -11,6 +11,8 @@ ${PYTHONBIN} -m synapse.app.homeserver \
 	--generate-config \
 	--report-stats=no
 
-If you want to use Synapse with SQLite3 on NetBSD, you need to add
-PREFER_PKGSRC+= sqlite3 to mk.conf and rebuild databases/py-sqlite3.
+The builtin SQLite3 in NetBSD lacks features needed by Synapse.  To
+use Synapse with SQLite3, one must build with pgksrc sqlite3, via
+PREFER_PKGSRC+=sqlite3.
+
 ===========================================================================
