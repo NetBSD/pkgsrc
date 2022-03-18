@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2022/02/25 16:18:36 js Exp $
+@comment $NetBSD: PLIST,v 1.23 2022/03/18 12:23:50 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -360,6 +360,9 @@ ${PYSITELIB}/synapse/groups/groups_server.pyo
 ${PYSITELIB}/synapse/handlers/__init__.py
 ${PYSITELIB}/synapse/handlers/__init__.pyc
 ${PYSITELIB}/synapse/handlers/__init__.pyo
+${PYSITELIB}/synapse/handlers/account.py
+${PYSITELIB}/synapse/handlers/account.pyc
+${PYSITELIB}/synapse/handlers/account.pyo
 ${PYSITELIB}/synapse/handlers/account_data.py
 ${PYSITELIB}/synapse/handlers/account_data.pyc
 ${PYSITELIB}/synapse/handlers/account_data.pyo
@@ -546,9 +549,6 @@ ${PYSITELIB}/synapse/logging/__init__.pyo
 ${PYSITELIB}/synapse/logging/_remote.py
 ${PYSITELIB}/synapse/logging/_remote.pyc
 ${PYSITELIB}/synapse/logging/_remote.pyo
-${PYSITELIB}/synapse/logging/_structured.py
-${PYSITELIB}/synapse/logging/_structured.pyc
-${PYSITELIB}/synapse/logging/_structured.pyo
 ${PYSITELIB}/synapse/logging/_terse_json.py
 ${PYSITELIB}/synapse/logging/_terse_json.pyc
 ${PYSITELIB}/synapse/logging/_terse_json.pyo
@@ -1678,6 +1678,12 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/67/01drop_public_room_list_stream
 ${PYSITELIB}/synapse/storage/schema/main/delta/68/01event_columns.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/68/02_msc2409_add_device_id_appservice_stream_type.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/68/03_delete_account_data_for_deactivated_accounts.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/68/04_refresh_tokens_index_next_token_id.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/68/04partial_state_rooms.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/68/05_delete_non_strings_from_event_search.sql.sqlite
+${PYSITELIB}/synapse/storage/schema/main/delta/68/05partial_state_rooms_triggers.py
+${PYSITELIB}/synapse/storage/schema/main/delta/68/05partial_state_rooms_triggers.pyc
+${PYSITELIB}/synapse/storage/schema/main/delta/68/05partial_state_rooms_triggers.pyo
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/application_services.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_edges.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/16/event_signatures.sql
@@ -1777,6 +1783,9 @@ ${PYSITELIB}/synapse/util/caches/treecache.pyo
 ${PYSITELIB}/synapse/util/caches/ttlcache.py
 ${PYSITELIB}/synapse/util/caches/ttlcache.pyc
 ${PYSITELIB}/synapse/util/caches/ttlcache.pyo
+${PYSITELIB}/synapse/util/check_dependencies.py
+${PYSITELIB}/synapse/util/check_dependencies.pyc
+${PYSITELIB}/synapse/util/check_dependencies.pyo
 ${PYSITELIB}/synapse/util/daemonize.py
 ${PYSITELIB}/synapse/util/daemonize.pyc
 ${PYSITELIB}/synapse/util/daemonize.pyo
