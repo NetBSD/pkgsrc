@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1507 2022/03/18 12:23:59 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.1508 2022/03/18 14:42:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1994,3 +1994,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated geography/qgis to 3.22.4 [gdt 2022-03-17]
 	Updated biology/stacks to 2.60 [bacon 2022-03-17]
 	Updated chat/matrix-synapse to 1.54.0 [gdt 2022-03-18]
+	Updated lang/php80 to 8.0.17 [taca 2022-03-18]
