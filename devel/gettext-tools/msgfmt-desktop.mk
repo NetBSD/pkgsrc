@@ -1,4 +1,6 @@
-# $NetBSD: msgfmt-desktop.mk,v 1.2 2022/03/13 04:42:56 gutteridge Exp $
+# $NetBSD: msgfmt-desktop.mk,v 1.3 2022/03/18 17:49:46 wiz Exp $
+
+USE_TOOLS+=	msgfmt
 
 .include "../../mk/bsd.fast.prefs.mk"
 
