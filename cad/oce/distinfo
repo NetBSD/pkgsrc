@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:04:14 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/03/19 23:55:42 brook Exp $
 
 BLAKE2s (OCE-0.18.3.tar.gz) = ae4eede3763564fd33225a2966079f5c1f18ae5e6cdd4cfc8eb03027fcac4159
 SHA512 (OCE-0.18.3.tar.gz) = 6fdeb6ca4ce25361379872ccc465799d4a43407974c4f626b32df695e582b9e553cce17af6a6a7ff46ebed9b813d910ad23eb308a5356dabb9b9bbd4f42a8636
 Size (OCE-0.18.3.tar.gz) = 24633768 bytes
-SHA1 (patch-CMakeLists.txt) = 572853b493ce8551f1d910c897271827943b595a
+SHA1 (patch-CMakeLists.txt) = 5d3e3342f4d71858a5b4c686b269bed466c39f06
 SHA1 (patch-adm_cmake_TKernel_CMakeLists.txt) = acb153e88ce92c7f651a2762de5a60a51d1af5dd
 SHA1 (patch-src_MeshVS_MeshVS__MeshPrsBuilder.cxx) = f4778ecd72e5f984f316e85e535a7418ca7ae806
 SHA1 (patch-src_OSD_OSD__MemInfo.cxx) = e1328a861393d458bc110c930c5ecf5343e2a304

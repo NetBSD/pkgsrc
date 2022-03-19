@@ -1,10 +1,12 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2017/01/20 11:00:50 fhajny Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2022/03/19 23:55:42 brook Exp $
 
 Do not version lib and share subdirs.
 
---- CMakeLists.txt.orig	2017-01-13 05:34:36.000000000 +0000
+Do not install specially on Darwin.
+
+--- CMakeLists.txt.orig	2018-02-13 18:38:59.000000000 +0000
 +++ CMakeLists.txt
-@@ -853,7 +853,7 @@ if(MSVC OR (MINGW AND OCE_INSTALL_PRIVAT
+@@ -868,7 +868,7 @@ if(MSVC OR (MINGW AND OCE_INSTALL_PRIVAT
  	endif(NOT DEFINED OCE_INSTALL_PACKAGE_LIB_DIR)
  else(MSVC)
  	if(NOT DEFINED OCE_INSTALL_PACKAGE_LIB_DIR)
@@ -13,7 +15,7 @@ Do not version lib and share subdirs.
  	endif(NOT DEFINED OCE_INSTALL_PACKAGE_LIB_DIR)
  endif()
  
-@@ -883,7 +883,7 @@ endif(NOT DEFINED OCE_INSTALL_SCRIPT_DIR
+@@ -898,7 +898,7 @@ endif(NOT DEFINED OCE_INSTALL_SCRIPT_DIR
  # Data
  if(NOT DEFINED OCE_INSTALL_DATA_DIR)
  	if(NOT MSVC)
@@ -22,12 +24,19 @@ Do not version lib and share subdirs.
  	else ()
  		set(OCE_INSTALL_DATA_DIR "share/oce")
  	endif(NOT MSVC)
-@@ -908,7 +908,7 @@ if(NOT DEFINED OCE_INSTALL_CMAKE_DATA_DI
- 				OCE.framework/Versions/${OCE_VERSION}/Resources)
- 		else(APPLE)
- 			set(OCE_INSTALL_CMAKE_DATA_DIR
+@@ -918,13 +918,8 @@ if(NOT DEFINED OCE_INSTALL_CMAKE_DATA_DI
+ 	if(WIN32)
+ 		set(OCE_INSTALL_CMAKE_DATA_DIR cmake)
+ 	else(WIN32)
+-		if(APPLE)
+-			set(OCE_INSTALL_CMAKE_DATA_DIR
+-				OCE.framework/Versions/${OCE_VERSION}/Resources)
+-		else(APPLE)
+-			set(OCE_INSTALL_CMAKE_DATA_DIR
 -				lib${LIB_SUFFIX}/oce-${OCE_VERSION})
-+				lib${LIB_SUFFIX}/oce)
- 		endif(APPLE)
+-		endif(APPLE)
++		set(OCE_INSTALL_CMAKE_DATA_DIR
++			lib${LIB_SUFFIX}/oce)
  	endif(WIN32)
  endif(NOT DEFINED OCE_INSTALL_CMAKE_DATA_DIR)
+ 
