@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2021/12/30 15:16:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/03/19 18:55:44 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1374,7 +1374,7 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-20.1.1-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-22.0.4-py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-47.1.0-py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
@@ -2466,6 +2466,8 @@ lib/python${PY_VER_SUFFIX}/signal.pyc
 lib/python${PY_VER_SUFFIX}/signal.pyo
 lib/python${PY_VER_SUFFIX}/site-packages/README.txt
 lib/python${PY_VER_SUFFIX}/site-packages/_distutils_system_mod.py
+lib/python${PY_VER_SUFFIX}/site-packages/_distutils_system_mod.pyc
+lib/python${PY_VER_SUFFIX}/site-packages/_distutils_system_mod.pyo
 lib/python${PY_VER_SUFFIX}/site.py
 lib/python${PY_VER_SUFFIX}/site.pyc
 lib/python${PY_VER_SUFFIX}/site.pyo
