@@ -1,8 +1,7 @@
-# $NetBSD: java-vm.mk,v 1.125 2021/06/22 12:02:23 nia Exp $
+# $NetBSD: java-vm.mk,v 1.126 2022/03/19 14:10:51 rillig Exp $
 #
-# This Makefile fragment handles Java dependencies and make variables,
-# and is meant to be included by packages that require Java either at
-# build-time or at run-time.
+# This Makefile fragment provides a Java VM, either at build-time or at
+# run-time, depending on the package's needs.
 #
 # User-settable variables:
 #
@@ -49,6 +48,7 @@
 #
 # PKG_JVM
 #	The name of the selected Java implementation.
+#	See PKG_JVMS_ACCEPTED for the possible values.
 #
 # PKG_JAVA_HOME
 #	The directory where the JVM is installed.
