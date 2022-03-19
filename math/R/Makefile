@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.230 2022/03/11 10:27:29 wen Exp $
+# $NetBSD: Makefile,v 1.231 2022/03/19 23:13:59 brook Exp $
 
 #
 # If updating this package, please try to ensure PLIST.Darwin is kept in sync
@@ -136,6 +136,11 @@ INSTALL_SCRIPT=		${INSTALL} ${COPY} -m ${BINMODE}
 #BUILD_DEPENDS+=		tex-latexconfig-[0-9]*:../../print/tex-latexconfig
 #BUILD_DEPENDS+=		tex-mptopdf-[0-9]*:../../graphics/tex-mptopdf
 #BUILD_DEPENDS+=		tex-pdftex-def-[0-9]*:../../print/tex-pdftex
+
+SUBST_CLASSES+=		rpath
+SUBST_STAGE.rpath=	pre-configure
+SUBST_FILES.rpath=	configure.ac
+SUBST_VARS.rpath=	COMPILER_RPATH_FLAG
 
 SUBST_CLASSES+=		fixwrap
 SUBST_STAGE.fixwrap=	post-build
