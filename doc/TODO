@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21614 2022/03/19 00:20:42 wiz Exp $
+$NetBSD: TODO,v 1.21615 2022/03/19 08:47:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -425,7 +425,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o aegis-4.25
 	o aewm++-1.1.5
 	o afbinit-1.0.1
-	o afl++-3.12c
+	o afl++-4.00c
 	o aide-0.16
 	o akonadi-16.08.1
 	o album-4.17
@@ -1030,7 +1030,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libasr-1.0.4
 	o libbaloo4-21.04.0
 	o libbpg-0.9.8
-	o libbsd-0.11.3
+	o libbsd-0.11.5
 	o libburn-1.5.4
 	o libcap-2.49
 	o libcarddav-14.0.4
@@ -1045,7 +1045,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libdevq-0.0.4
 	o libdmapsharing3-3.9.9
 	o libdsk-1.5.15
-	o libdwarf-20210305
 	o libepoxy-1.5.5
 	o libextractor-1.11
 	o libflash-0.4.13
