@@ -1,13 +1,15 @@
-$NetBSD: patch-ab,v 1.2 2012/12/12 10:12:16 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2022/03/19 16:53:28 rhialto Exp $
 
---- src/_std.c.orig	2006-03-26 20:37:02.000000000 +0300
-+++ src/_std.c	2011-03-17 10:27:51.000000000 +0200
+- Use the default library location
+
+--- src/_std.c.orig	2016-12-28 20:32:00.000000000 +0000
++++ src/_std.c
 @@ -12,7 +12,7 @@
  
  
- // Variables
+ // variables
 -char	*AnyOS_lib_prefix	= NULL;	// header string of library tree
 +char	*AnyOS_lib_prefix	= DEFAULT_ACME_LIB;	// header string of library tree
  
  
- // Functions
+ // used as PLATFORM_INIT: reads "ACME" environment variable
