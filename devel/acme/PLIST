@@ -1,27 +1,52 @@
-@comment $NetBSD: PLIST,v 1.3 2012/12/12 10:12:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/03/19 16:53:28 rhialto Exp $
 bin/acme
-share/acme/6502/Help.txt
+share/acme/6502/opcodes.a
+share/acme/6502/rc4.a
+share/acme/6502/split.a
 share/acme/6502/std.a
-share/acme/65816/Help.txt
-share/acme/65816/scpu.a
 share/acme/65816/std.a
-share/acme/Acorn/Help.txt
-share/acme/Atari/Help.txt
-share/acme/C128/BASIC7.a
-share/acme/C128/Help.txt
-share/acme/C128/kernel.a
-share/acme/C128/mmu.a
-share/acme/C128/petscii.a
-share/acme/C128/vdc.a
-share/acme/C128/zeropage.a
-share/acme/C64/BASIC2.a
-share/acme/C64/Help.txt
-share/acme/C64/cia1.a
-share/acme/C64/cia2.a
-share/acme/C64/kernel.a
-share/acme/C64/petscii.a
-share/acme/C64/vic.a
-share/acme/Own/Help.txt
+share/acme/apple ii/convtab.bin
+share/acme/cbm/264/basic.a
+share/acme/cbm/264/petscii.a
+share/acme/cbm/264/ted.a
+share/acme/cbm/baserror.a
+share/acme/cbm/basic1.a
+share/acme/cbm/basic10.a
+share/acme/cbm/basic2.a
+share/acme/cbm/basic3.5.a
+share/acme/cbm/basic4.a
+share/acme/cbm/basic7.a
+share/acme/cbm/c128/basic.a
+share/acme/cbm/c128/kernal.a
+share/acme/cbm/c128/kernel.a
+share/acme/cbm/c128/mmu.a
+share/acme/cbm/c128/petscii.a
+share/acme/cbm/c128/vdc.a
+share/acme/cbm/c128/vic.a
+share/acme/cbm/c128/zeropage.a
+share/acme/cbm/c64/basic.a
+share/acme/cbm/c64/cia1.a
+share/acme/cbm/c64/cia2.a
+share/acme/cbm/c64/float.a
+share/acme/cbm/c64/georam.a
+share/acme/cbm/c64/kernal.a
+share/acme/cbm/c64/kernel.a
+share/acme/cbm/c64/memcopy.a
+share/acme/cbm/c64/petscii.a
+share/acme/cbm/c64/reu.a
+share/acme/cbm/c64/sid.a
+share/acme/cbm/c64/vic.a
+share/acme/cbm/c65/basic.a
+share/acme/cbm/cia.a
+share/acme/cbm/flpt.a
+share/acme/cbm/ioerror.a
+share/acme/cbm/kernal.a
+share/acme/cbm/kernel.a
+share/acme/cbm/mflpt.a
+share/acme/cbm/msbstring.a
+share/acme/cbm/multicolor.a
+share/acme/cbm/petscii.a
+share/acme/m65/std.a
 share/doc/acme/65816.txt
 share/doc/acme/AddrModes.txt
 share/doc/acme/AllPOs.txt
@@ -29,9 +54,20 @@ share/doc/acme/COPYING
 share/doc/acme/Changes.txt
 share/doc/acme/Errors.txt
 share/doc/acme/Example.txt
+share/doc/acme/Floats.txt
 share/doc/acme/Help.txt
 share/doc/acme/Illegals.txt
 share/doc/acme/Lib.txt
 share/doc/acme/QuickRef.txt
 share/doc/acme/Source.txt
 share/doc/acme/Upgrade.txt
+share/doc/acme/cputypes/all.txt
+share/doc/acme/cputypes/cpu 4502.txt
+share/doc/acme/cputypes/cpu 6502.txt
+share/doc/acme/cputypes/cpu 65816.txt
+share/doc/acme/cputypes/cpu 65c02.txt
+share/doc/acme/cputypes/cpu 65ce02.txt
+share/doc/acme/cputypes/cpu m65.txt
+share/doc/acme/cputypes/cpu nmos6502.txt
+share/doc/acme/cputypes/cpu r65c02.txt
+share/doc/acme/cputypes/cpu w65c02.txt

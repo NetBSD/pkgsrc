@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:14:12 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/03/19 16:53:28 rhialto Exp $
 
-BLAKE2s (acme091src.tar.gz) = 831ab2973b98e40c840aa4fec95f1bc4fcf71c802604e35d4719e9aa6ef5e5bd
-SHA512 (acme091src.tar.gz) = fe68ad1e8a77a520490484624e38d8eb251109efdba22cf8c8bc7d50ffa52e38d37a25726d7cfa3d7f49b278bc2cc6c004408522d67187453de55842e92c7534
-Size (acme091src.tar.gz) = 131953 bytes
-BLAKE2s (ACME_Lib2.zip) = bfab6b820ca353f72234f05613c08804a408e32f9556aeda508d65089a6b60f4
-SHA512 (ACME_Lib2.zip) = e61fa0777008e7424fa0b6b9b46de996ea27e85bc6f0120d4b743777ffae448fe81cf7489a5c1db88e72e0e2e701ecb7d33cccfe159864b09afec7e68c44b383
-Size (ACME_Lib2.zip) = 18197 bytes
-SHA1 (patch-aa) = bd08ee3c226d758080aa2c9f4094c668ab5c9105
-SHA1 (patch-ab) = 4491111185dc1502a6424f5efbe352e181117df4
+BLAKE2s (acme-crossass-code-0-r323-trunk.zip) = d2a2fbddc614dff1c55bdd6f9e56bef532da2d45fffd655e4afcdb65e3555198
+SHA512 (acme-crossass-code-0-r323-trunk.zip) = 841fe52c5c13228bacc52f25b7802193864ef6c6f7349ed84d8e4b39c076a1117d93828dec2fd30a2a57116a0308abce73ebc3b7b6a0118e3f5dfb5a10250435
+Size (acme-crossass-code-0-r323-trunk.zip) = 613411 bytes
+SHA1 (patch-aa) = caec06051fb65d13e97e6489bb8b74bbd80fb82a
+SHA1 (patch-ab) = 4b82aa131e513953fd404f4b9f025fb0b16d4c14
