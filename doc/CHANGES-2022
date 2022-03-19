@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1516 2022/03/19 19:00:45 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1517 2022/03/19 23:48:10 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2009,3 +2009,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/py38-html-docs to 3.8.13 [adam 2022-03-19]
 	Updated lang/py39-html-docs to 3.9.11 [adam 2022-03-19]
 	Updated lang/py310-html-docs to 3.10.3 [adam 2022-03-19]
+	Updated net/p5-Geo-IPfree to 1.160000 [wen 2022-03-19]
