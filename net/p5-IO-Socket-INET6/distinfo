@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:06:15 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/03/19 23:54:15 wen Exp $
 
-BLAKE2s (IO-Socket-INET6-2.72.tar.gz) = b86ca65413f258e857a50269d9424dedc7b63d14806ae0ec55f531fb120764bc
-SHA512 (IO-Socket-INET6-2.72.tar.gz) = c6dc0bbcc81682d317597de26d5023de84781e4bd2af224145cc4980db7fcbc93295a7d0a80c1eaa649c6aebf4057d0b0159f47e6a6379d4b545b49305f28a37
-Size (IO-Socket-INET6-2.72.tar.gz) = 27615 bytes
+BLAKE2s (IO-Socket-INET6-2.73.tar.gz) = ddb066bf1d8e90176a96494f2f69cd7a41691b73e145fc4d6f48112a9094e1fb
+SHA512 (IO-Socket-INET6-2.73.tar.gz) = 8d71b1fcb78b4338eb1973a2f9d1ccc539d6a6d83190b818df8ebcc43e978d7404eefedb51a7d6e0a64aa02375503325e8cd8723c7fec6dfdb277519b5a16b4b
+Size (IO-Socket-INET6-2.73.tar.gz) = 27786 bytes
