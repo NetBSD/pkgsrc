@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/12/17 13:26:23 nikita Exp $
+$NetBSD: distinfo,v 1.5 2022/03/19 09:39:10 nikita Exp $
 
-BLAKE2s (gash-0.2.0.tar.gz) = c77908192110eb33ac469e47ba77b5b75cfd34ba3e1577b54dcdeb62f9fdff30
-SHA512 (gash-0.2.0.tar.gz) = 8189e6ba4d896e9d1fb467e2b623a0385022312ece725f0b1a467d2d43a971391a15c5dd8f9a56866b3923df89e02f435516c4e9a712081d8d6cb86fff727a09
-Size (gash-0.2.0.tar.gz) = 328228 bytes
+BLAKE2s (gash-0.3.0.tar.gz) = 6f3481d8011718d4e74bbd3b3c0897ee24df5b73f71191aa63fcc2a76c0415b3
+SHA512 (gash-0.3.0.tar.gz) = 14e4d6a4eababe07a59f694baad3942122d3df3109478bc52c352431b0e0c13f7246ba722276d314f04a15cec78159cbbb390ce6df4d2eacecc2eaaf6987af59
+Size (gash-0.3.0.tar.gz) = 334781 bytes
 SHA1 (patch-Makefile.am) = 1e555c43f2f7476bcf6ce75baca227856ef0d5db
