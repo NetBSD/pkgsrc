@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/04/17 17:51:09 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/03/19 08:35:18 wiz Exp $
 
 DISTNAME=	AFLplusplus-2.62c
 PKGNAME=	${DISTNAME:C/AFLplusplus/afl++/}
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/AFLplusplus/AFLplusplus/
 COMMENT=	American Fuzzy Lop ++, a fuzzing tool for finding bugs by random input
 LICENSE=	apache-2.0
+
+PYTHON_VERSIONS_ACCEPTED=	27
 
 .include "../../lang/python/pyversion.mk"
 PYTHON_INCLUDE_CMD=	python${PYVERSSUFFIX}-config --includes
