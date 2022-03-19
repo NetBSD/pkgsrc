@@ -1,13 +1,12 @@
-# $NetBSD: options.mk,v 1.4 2019/11/03 19:26:21 rillig Exp $
+# $NetBSD: options.mk,v 1.5 2022/03/19 16:19:02 jakllsch Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openafs
 PKG_SUPPORTED_OPTIONS+=	server bitmap-later kernel-module supergroups namei
-.if ${MACHINE_ARCH} != "x86_64"
-PKG_SUPPORTED_OPTIONS+=	pam
-.endif
+PKG_SUPPORTED_OPTIONS+=	openafs-kauth
 PKG_SUGGESTED_OPTIONS=	server -bitmap-later namei -kernel-module supergroups
+PKG_SUGGESTED_OPTIONS+=	-openafs-kauth
 
 .include "../../mk/bsd.options.mk"
 
@@ -25,10 +24,10 @@ CONFIGURE_ARGS+=        --disable-kernel-module
 .if !empty(PKG_OPTIONS:Mnamei)
 CONFIGURE_ARGS+=        --enable-namei-fileserver
 .endif
-.if !empty(PKG_OPTIONS:Mpam)
-CONFIGURE_ARGS+=        --enable-pam
+.if !empty(PKG_OPTIONS:Mopenafs-kauth)
+CONFIGURE_ARGS+=        --enable-kauth
 .include "../../mk/pam.buildlink3.mk"
-PLIST_SRC+=             ${.CURDIR}/PLIST.pam
+PLIST_SRC+=             ${.CURDIR}/PLIST.kauth
 .else
-CONFIGURE_ARGS+=        --disable-pam
+CONFIGURE_ARGS+=        --disable-kauth
 .endif
