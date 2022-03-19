@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/01/10 22:24:39 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/03/19 11:36:29 wiz Exp $
 
 PKGREVISION= 3
 .include "../../textproc/xxdiff/Makefile.common"
@@ -20,6 +20,8 @@ REPLACE_PYTHON+=		bin/xx-sql-schemas bin/xx-svn-diff bin/xx-svn-resolve
 REPLACE_PYTHON+=		bin/xx-svn-review
 
 INSTALLATION_DIRS+=	${XXDIFFDOCDIR}
+
+EGG_NAME=	xxdiff_scripts-${PKGVERSION_NOREV}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/xxdiff-scripts.html ${DESTDIR}${PREFIX}/${XXDIFFDOCDIR}
