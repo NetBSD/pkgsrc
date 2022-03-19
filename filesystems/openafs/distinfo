@@ -1,17 +1,14 @@
-$NetBSD: distinfo,v 1.19 2021/10/26 10:25:29 nia Exp $
+$NetBSD: distinfo,v 1.20 2022/03/19 16:19:02 jakllsch Exp $
 
-BLAKE2s (openafs-1.6.21-src.tar.bz2) = ea3db99c8b04ad8594b5fd97b8189a104cfaa5b5044eef830e01814fcfba5a79
-SHA512 (openafs-1.6.21-src.tar.bz2) = 451c38ed5031b8a962da3276bf5d0f1b74c5956c2d10cdb8bbd22ea633880ebf35cf5fc71feb5d2eca4306762f6c2376a46f4522150291acfc469f8be2da757f
-Size (openafs-1.6.21-src.tar.bz2) = 14682997 bytes
-SHA1 (patch-acinclude.m4) = 1949234224ee12f6d70f2a7ac914342bdfe9b50d
-SHA1 (patch-configure) = fc07ae1945b047dcdafbeade183fad3b2bd876e4
-SHA1 (patch-src_cf_osconf.m4) = 2ae23bc82dd3f19cfa3fecf50dcca514e09d7a4b
-SHA1 (patch-src_comerr_Makefile.in) = dd5e996481d7ef908710868aa9dc1b65feb98717
-SHA1 (patch-src_config_afs__sysnames.h) = 26819b314797a149def42f5b63cbeb19ef6309e8
+BLAKE2s (openafs-1.8.8.1-src.tar.bz2) = cfa0eadf49551acae3e14a3b756ce618a30bece455915fde9a7a1311baa0f4c9
+SHA512 (openafs-1.8.8.1-src.tar.bz2) = fb181e0989e9bae714af26de916a96946eea20f98b47154f2de7b5e296cb4f42af5df037ef7b603073e97eafe52d7c401666f03130c1e0c9a6ae1a6c2707c384
+Size (openafs-1.8.8.1-src.tar.bz2) = 14866119 bytes
+SHA1 (patch-src_cf_osconf.m4) = 6eae9ab0821c496f59ebd611c270b46d511a751f
+SHA1 (patch-src_cf_sysname.m4) = 7f45f6387bf959d2026be369cbbfec1a96ff424b
+SHA1 (patch-src_comerr_Makefile.in) = 0213dcd89dc2894b9724d89cec61a0738ddd6696
+SHA1 (patch-src_config_afs__sysnames.h) = 558854bf3b89b2d9679224b548e8b743adf7a752
 SHA1 (patch-src_config_param.armv6_nbsd80.h) = eea7a8f8a141d285ba5a2bb4317950f0b860528f
-SHA1 (patch-src_config_param.nbsd70.h) = 700216e464d801aee3ada0a597a5e2b3a4dab510
-SHA1 (patch-src_config_param.nbsd80.h) = cc9445a1b06ac977d93c9fe0b68cc67475beec08
-SHA1 (patch-src_config_param.nbsd90.h) = d70f8983635b42a04a1dfa312c130c1afb669cb3
-SHA1 (patch-src_des_andrew-conf.h) = 6ea03fcaf988d3d91bc1d3386e239496fc3069f0
-SHA1 (patch-src_des_conf-arm32-bsd.h) = ff1b2a3cc35ab272913c95adab28c3304234a891
-SHA1 (patch-src_lwp_lwp.c) = c4a92a29621ceaf54c56cd20772c18f76b0fe745
+SHA1 (patch-src_config_param.nbsd80.h) = 52335bea3c5ae9becab4d9e8248ecc3c2ac24749
+SHA1 (patch-src_config_param.nbsd90.h) = 0a958172a80e694f0b59c0e5e03c0956740b1ddb
+SHA1 (patch-src_lwp_lwp.c) = be963332293d31137a46fb27d1dec25c7fbb120e
+SHA1 (patch-src_lwp_process.amd64.s) = c0be87a82e201855d9004859e01c90d8016efc7f
