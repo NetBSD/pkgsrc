@@ -1,10 +1,10 @@
-$NetBSD: patch-kodev_Makefile,v 1.4 2022/02/21 10:27:46 fcambus Exp $
+$NetBSD: patch-kodev_Makefile,v 1.5 2022/03/19 08:51:46 fcambus Exp $
 
 Remove hardcoded optimizations.
 
---- kodev/Makefile.orig	2020-08-26 07:20:35.000000000 +0000
+--- kodev/Makefile.orig	2022-03-18 20:06:33.000000000 +0000
 +++ kodev/Makefile
-@@ -16,8 +17,6 @@ LDFLAGS=-lcrypto
+@@ -17,8 +17,6 @@ LDFLAGS=-lcrypto
  
  ifneq ("$(NOOPT)", "")
  	CFLAGS+=-O0
