@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2022/03/14 02:52:48 osa Exp $
+# $NetBSD: Makefile,v 1.2 2022/03/19 23:20:27 osa Exp $
 
 DISTNAME=	njs-0.7.2
 CATEGORIES=	lang www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nginx/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	osa@NetBSD.org
 HOMEPAGE=	https://nginx.org/en/docs/njs
