@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21615 2022/03/19 08:47:35 wiz Exp $
+$NetBSD: TODO,v 1.21616 2022/03/19 16:23:50 jakllsch Exp $
 
 Suggested new packages
 ======================
@@ -1291,7 +1291,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o onscripter-20200722
 	o oo2c-2.1.7
 	o opal-3.16.2
-	o openafs-1.8
 	o openblas-0.3.20
 	o opencolorio-2.0.0
 	o opencpn-plugin-draw-1.8.5.2
