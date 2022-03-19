@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/03/16 06:23:44 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/03/19 08:54:29 wiz Exp $
 
 DISTNAME=	dict2xml-1.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Small utility to convert Python dict to XML string
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
