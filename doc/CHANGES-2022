@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1514 2022/03/19 16:23:50 jakllsch Exp $
+$NetBSD: CHANGES-2022,v 1.1515 2022/03/19 16:53:42 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2000,3 +2000,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/libdwarf to 0.3.4 [wiz 2022-03-19]
 	Updated www/kore to 4.2.0 [fcambus 2022-03-19]
 	Updated filesystems/openafs to 1.8.8.1 [jakllsch 2022-03-19]
+	Updated devel/acme to 0.97.0.0.323 [rhialto 2022-03-19]
