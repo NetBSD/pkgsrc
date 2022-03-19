@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/01/27 21:33:42 schmonz Exp $
+# $NetBSD: Makefile,v 1.19 2022/03/19 18:58:24 adam Exp $
 
 .include "dist.mk"
 
@@ -191,9 +191,11 @@ hpux-postinstall:
 		${DESTDIR}${PREFIX}/lib/libpython3.9.sl.1.0
 .endif
 
-post-install: setuptools-postinstall
-.PHONY: setuptools-postinstall
-setuptools-postinstall:
+INSTALLATION_DIRS+=	lib/python${PY_VER_SUFFIX}/site-packages
+
+pre-install: setuptools-preinstall
+.PHONY: setuptools-preinstall
+setuptools-preinstall:
 	${INSTALL_DATA} ${.CURDIR}/../../devel/py-setuptools/files/_distutils_system_mod \
 		${DESTDIR}${PREFIX}/lib/python${PY_VER_SUFFIX}/site-packages/_distutils_system_mod.py
 
