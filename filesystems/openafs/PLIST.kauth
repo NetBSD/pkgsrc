@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST.kauth,v 1.1 2022/03/19 16:19:02 jakllsch Exp $
+bin/klog
+bin/klog.krb
+bin/knfs
+bin/kpasswd
+bin/kpwvalid
+include/afs/kaport.h
+include/afs/kauth.h
+include/afs/kautils.h
+lib/afs/libkauth.a
+lib/afs/libkauth.krb.a
+lib/pam_afs.krb.so
+lib/pam_afs.so
+libexec/openafs/kaserver
+sbin/ka-forwarder
+sbin/kadb_check
+sbin/kas
+sbin/kdb
+sbin/kpwvalid
