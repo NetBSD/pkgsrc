@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1509 2022/03/18 14:43:19 taca Exp $
+$NetBSD: CHANGES-2022,v 1.1510 2022/03/19 00:38:08 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -1996,3 +1996,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/matrix-synapse to 1.54.0 [gdt 2022-03-18]
 	Updated lang/php80 to 8.0.17 [taca 2022-03-18]
 	Updated lang/php81 to 8.1.4 [taca 2022-03-18]
+	Updated graphics/librsvg to 2.52.8 [gutteridge 2022-03-19]
