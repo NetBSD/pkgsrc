@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/01/10 22:24:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/03/19 11:36:29 wiz Exp $
 bin/svn-foreign
 bin/xx-cond-replace
 bin/xx-cvs-diff
@@ -124,4 +124,5 @@ ${PYSITELIB}/xxdiff/utils.pyo
 ${PYSITELIB}/xxdiff/xformloop.py
 ${PYSITELIB}/xxdiff/xformloop.pyc
 ${PYSITELIB}/xxdiff/xformloop.pyo
+${PYSITELIB}/${EGG_INFODIR}
 share/doc/xxdiff/xxdiff-scripts.html
