@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1515 2022/03/19 16:53:42 rhialto Exp $
+$NetBSD: CHANGES-2022,v 1.1516 2022/03/19 19:00:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2001,3 +2001,11 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/kore to 4.2.0 [fcambus 2022-03-19]
 	Updated filesystems/openafs to 1.8.8.1 [jakllsch 2022-03-19]
 	Updated devel/acme to 0.97.0.0.323 [rhialto 2022-03-19]
+	Updated lang/python37 to 3.7.13 [adam 2022-03-19]
+	Updated lang/python38 to 3.8.13 [adam 2022-03-19]
+	Updated lang/python39 to 3.9.11 [adam 2022-03-19]
+	Updated lang/python310 to 3.10.3 [adam 2022-03-19]
+	Updated lang/py37-html-docs to 3.7.13 [adam 2022-03-19]
+	Updated lang/py38-html-docs to 3.8.13 [adam 2022-03-19]
+	Updated lang/py39-html-docs to 3.9.11 [adam 2022-03-19]
+	Updated lang/py310-html-docs to 3.10.3 [adam 2022-03-19]
