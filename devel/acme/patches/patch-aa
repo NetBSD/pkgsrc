@@ -1,11 +1,16 @@
-$NetBSD: patch-aa,v 1.2 2012/12/12 10:12:16 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2022/03/19 16:53:28 rhialto Exp $
 
---- src/Makefile.orig	2006-03-26 18:10:54.000000000 +0300
-+++ src/Makefile	2011-03-17 10:54:04.000000000 +0200
-@@ -1,12 +1,12 @@
--CFLAGS		= -O3 -Wall
-+CFLAGS+=	-DDEFAULT_ACME_LIB=\"${ACME_LIB}/\"
- #LIBS		= -lm
+- Use our own CFLAGS, CC, RM, BINDIR
+- Add the default library location
+
+--- src/Makefile.orig	2020-10-21 16:36:03.000000000 +0000
++++ src/Makefile
+@@ -1,13 +1,14 @@
+-CFLAGS		= -O3 -Wall -Wstrict-prototypes
++#CFLAGS		= -O3 -Wall -Wstrict-prototypes
+ #CFLAGS		= -O3 -Wall -Wextra -Wstrict-prototypes
++CFLAGS+=       -DDEFAULT_ACME_LIB=\"${ACME_LIB}/\"
+ LIBS		= -lm
 -CC		= gcc
 -RM		= rm
 +#CC		= gcc
@@ -17,5 +22,5 @@ $NetBSD: patch-aa,v 1.2 2012/12/12 10:12:16 wiz Exp $
 -BINDIR		= /usr/local/bin
 +BINDIR		= $(PREFIX)/bin
  USERBIN		= $(HOME)/bin
+ OBJS		= acme.o alu.o cliargs.o cpu.o dynabuf.o encoding.o flow.o global.o input.o macro.o mnemo.o output.o platform.o pseudoopcodes.o section.o symbol.o tree.o typesystem.o
  
- all: $(PROGS)
