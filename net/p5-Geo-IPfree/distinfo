@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:06:15 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/03/19 23:47:13 wen Exp $
 
-BLAKE2s (Geo-IPfree-1.151940.tar.gz) = 98250ecdbfaba8c0603f2126b382df4e5f486b0122b499f80c5a20a972bd4d14
-SHA512 (Geo-IPfree-1.151940.tar.gz) = 139f367e2797137ac5aafd070bb76bfe792e708f8dcddb6bc5a1cbaefb72b5d4e6bc1734eece991a64273bb12c640be017e32a2d049ba9dc85ccb694cc3fca96
-Size (Geo-IPfree-1.151940.tar.gz) = 642161 bytes
+BLAKE2s (Geo-IPfree-1.160000.tar.gz) = 8959fb40c5bb63b12596e2340ba86b791547e9e4e42291bffc7519c340ba9ea3
+SHA512 (Geo-IPfree-1.160000.tar.gz) = 7193d9c1895f99d41b4d15c1f11e8deeb729f4143eeb1a0b7aa8a2fe8e92e281c2208a5756f7d3da14983fd27fb9631e4cf897a967f04285e7b7394ca26d4945
+Size (Geo-IPfree-1.160000.tar.gz) = 653299 bytes
