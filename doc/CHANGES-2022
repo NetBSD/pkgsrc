@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1519 2022/03/20 01:23:28 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.1520 2022/03/20 01:37:29 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2012,3 +2012,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/p5-Geo-IPfree to 1.160000 [wen 2022-03-19]
 	Updated net/p5-IO-Socket-INET6 to 2.73 [wen 2022-03-19]
 	Updated print/brlaser to 6.1 [schmonz 2022-03-20]
+	Updated www/moodle to 3.11.6 [wen 2022-03-20]
