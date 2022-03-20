@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2021/10/26 10:17:56 nia Exp $
+$NetBSD: distinfo,v 1.25 2022/03/20 03:28:14 wen Exp $
 
-BLAKE2s (local-lib-2.000024.tar.gz) = b51fd344a7d432a26bbfd16f131f2b86937323d8637d3551517af19c85bf6356
-SHA512 (local-lib-2.000024.tar.gz) = d23c984f0652ea8dd7028cd2dcc00991e69a5ad1ac6fce9707f953a5e6456d8173b444b7631884e764eb5ff18cea29e8e560c3835eacc0aa34382c0d172a7fd0
-Size (local-lib-2.000024.tar.gz) = 62941 bytes
+BLAKE2s (local-lib-2.000028.tar.gz) = faef477a8a1e2e5f4de2a315c214d139a2d597e6ebf3b75f5bd8178295e8993d
+SHA512 (local-lib-2.000028.tar.gz) = 3311ab9807132405bed96defdea05873a2301dc9ee7acaee0989b1c1d85b00960f2cbe14350133f4156bd846defd1ea17e489d7c691996b01ade8ac50b343957
+Size (local-lib-2.000028.tar.gz) = 63662 bytes
