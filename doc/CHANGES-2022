@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1531 2022/03/20 09:33:17 wen Exp $
+$NetBSD: CHANGES-2022,v 1.1532 2022/03/20 13:37:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2024,3 +2024,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated pkgtools/pkg_p5up2date to 0.07 [wiz 2022-03-20]
 	Updated audio/musicpd to 0.23.6 [wiz 2022-03-20]
 	Updated net/p5-Net-Amazon-S3 to 0.99 [wen 2022-03-20]
+	Updated sysutils/dbus to 1.14.0nb1 [wiz 2022-03-20]
