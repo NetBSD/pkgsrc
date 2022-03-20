@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1524 2022/03/20 02:20:54 wen Exp $
+$NetBSD: CHANGES-2022,v 1.1525 2022/03/20 02:29:54 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2017,3 +2017,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/p5-Crypt-OpenSSL-Guess to 0.15 [wen 2022-03-20]
 	Updated www/p5-Dancer2 to 0.400000 [wen 2022-03-20]
 	Updated www/p5-CGI to 4.54 [wen 2022-03-20]
+	Updated time/p5-DateTime to 1.57 [wen 2022-03-20]
