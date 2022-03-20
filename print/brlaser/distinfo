@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:12:03 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/03/20 01:23:24 schmonz Exp $
 
-BLAKE2s (brlaser-v6.tar.gz) = 5cb18904ea12586e55aee0e475b59e85b47e318756b5cfc2db30a3868b8d3cde
-SHA512 (brlaser-v6.tar.gz) = d7e0e63b64be9ae7633381622c13ba0589e5fe58d277212bce4f5bb712a291ed0b0f2ac3d450dce61c7f9052c1ce7323fec66b5005c5cb3da1314b284d20f06f
-Size (brlaser-v6.tar.gz) = 22807 bytes
+BLAKE2s (brlaser-6.1.tar.gz) = 959eb510e583bf1266dc054bcd99e7a72590f32f72d4dda586f431d14fc4b1da
+SHA512 (brlaser-6.1.tar.gz) = 483c6b37bc2727a54c4b4e8803656f984270fc8525d847e0dcca79cb071842f4b79c162915ffbe5a0d7bcc4eeff05c778cbba8311976789455df67d8314d18e1
+Size (brlaser-6.1.tar.gz) = 23903 bytes
