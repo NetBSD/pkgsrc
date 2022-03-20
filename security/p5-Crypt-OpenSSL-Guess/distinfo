@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:17:27 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/03/20 01:48:58 wen Exp $
 
-BLAKE2s (Crypt-OpenSSL-Guess-0.13.tar.gz) = add47eb261729fd42db3e6f93b44e2c99821c35148bcbc483bd568d660e525c5
-SHA512 (Crypt-OpenSSL-Guess-0.13.tar.gz) = 1b3286d536bcb7545be636e33b5ff37bf334fbb7f3a99f4fcb32cf1166b1bc7cc179e9d39af1c7ac537630a75066353a1d7a0ab97816757a444dc0068029da97
-Size (Crypt-OpenSSL-Guess-0.13.tar.gz) = 11832 bytes
+BLAKE2s (Crypt-OpenSSL-Guess-0.15.tar.gz) = 76121f19f61fbe333cd3c7f973cf99baffe2fcf8ffcc25d19db36a9865ff73b4
+SHA512 (Crypt-OpenSSL-Guess-0.15.tar.gz) = d7527be1f07847fbafc10b30c00c43e7fdcd4db27535b16cac98c5b6507d138c14cebcdb3c4ef07dc3016a93fea95155548cc7d83a0309fbc13b7d3b9607bf5d
+Size (Crypt-OpenSSL-Guess-0.15.tar.gz) = 11952 bytes
