@@ -146,8 +146,10 @@ sub is_ne
 sub get_pkg_vars
 {
     my $varnames = join( " ", @_ );
-    my @vals = qx($make_bin show-vars VARNAMES="$varnames");  chomp @vals;
-    return @vals;
+    my @vals = qx($make_bin show-vars VARNAMES="$varnames");
+    my $retval = $?;
+    chomp @vals;
+    return $?, @vals;
 }
 
 sub get_inst_pkgs
@@ -300,7 +302,12 @@ my @p5_pkg_dirs = find( directory => name => "p5-*", in => $pkgsrc_base );
 foreach my $dn (@p5_pkg_dirs)
 {
     chdir( $dn );
-    my ($distnm, $extract_sufx, $pkgnm, $maint ) = get_pkg_vars( qw(DISTNAME EXTRACT_SUFX PKGNAME MAINTAINER) );
+    my ( $result, $distnm, $extract_sufx, $pkgnm, $maint ) = get_pkg_vars( qw(DISTNAME EXTRACT_SUFX PKGNAME MAINTAINER) );
+    if ( $result != 0) {
+	$writer->write_entry( $dn, "", "out of sync?", "n/a", "!=", "n/a", "" );
+	++$pkgcrank;
+	next;
+    }
     my $pkgver = 0;
     if( $distnm =~ m/^(.*)-(v?[0-9].*?)$/ )
     {
