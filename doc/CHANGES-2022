@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1529 2022/03/20 08:10:05 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1530 2022/03/20 08:25:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2022,3 +2022,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/p5-PPIx-Regexp to 0.083 [wen 2022-03-20]
 	Updated devel/p5-local-lib to 2.000028 [wen 2022-03-20]
 	Updated pkgtools/pkg_p5up2date to 0.07 [wiz 2022-03-20]
+	Updated audio/musicpd to 0.23.6 [wiz 2022-03-20]
