@@ -1,13 +1,6 @@
-# $NetBSD: Makefile,v 1.140 2022/03/09 16:36:54 nia Exp $
+# $NetBSD: Makefile,v 1.141 2022/03/20 21:53:53 adam Exp $
 
-# WARNING: DO NOT UPDATE WITHOUT RESOLVING THIS ISSUE:
-#
-# Samba 4.14 is incompatible with procfs in NetBSD 9.2 and other
-# BSDs!
-#
-# Please do not update without testing on NetBSD 9.2!
-#
-DISTNAME=	samba-4.15.5
+DISTNAME=	samba-4.15.6
 CATEGORIES=	net
 MASTER_SITES=	https://download.samba.org/pub/samba/stable/
 
