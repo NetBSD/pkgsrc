@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/02/14 09:09:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/03/21 07:52:04 jaapb Exp $
 bin/checkseum.checkseum
 ${OCAML_SITELIB}/checkseum/META
 ${OCAML_SITELIB}/checkseum/c/checkseum.cmi
@@ -27,16 +27,16 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/checkseum/ocaml/checkseum_ocaml.a
 ${OCAML_SITELIB}/checkseum/ocaml/checkseum_ocaml.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/checkseum/ocaml/checkseum_ocaml.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/checkseum/ocaml/checkseum_ocaml.cmxs
-${OCAML_SITELIB}/checkseum/ocaml/gin_adler32.cmt
+${OCAML_SITELIB}/checkseum/ocaml/.private/gin_adler32.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/checkseum/ocaml/gin_adler32.cmx
 ${OCAML_SITELIB}/checkseum/ocaml/gin_adler32.ml
-${OCAML_SITELIB}/checkseum/ocaml/gin_crc24.cmt
+${OCAML_SITELIB}/checkseum/ocaml/.private/gin_crc24.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/checkseum/ocaml/gin_crc24.cmx
 ${OCAML_SITELIB}/checkseum/ocaml/gin_crc24.ml
-${OCAML_SITELIB}/checkseum/ocaml/gin_crc32.cmt
+${OCAML_SITELIB}/checkseum/ocaml/.private/gin_crc32.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/checkseum/ocaml/gin_crc32.cmx
 ${OCAML_SITELIB}/checkseum/ocaml/gin_crc32.ml
-${OCAML_SITELIB}/checkseum/ocaml/gin_crc32c.cmt
+${OCAML_SITELIB}/checkseum/ocaml/.private/gin_crc32c.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/checkseum/ocaml/gin_crc32c.cmx
 ${OCAML_SITELIB}/checkseum/ocaml/gin_crc32c.ml
 ${OCAML_SITELIB}/checkseum/opam
