@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1537 2022/03/21 07:59:39 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.1538 2022/03/21 08:06:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2027,3 +2027,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/samba4 to 4.15.6 [adam 2022-03-20]
 	Updated devel/ocaml-checkseum to 0.3.2nb1 [jaapb 2022-03-21]
 	Updated devel/ocaml-digestif to 1.1.0nb1 [jaapb 2022-03-21]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2022Q1 branch [wiz 2021-03-21]
