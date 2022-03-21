@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2021,v 1.6477 2022/01/29 07:32:57 wiz Exp $
+$NetBSD: CHANGES-2021,v 1.6478 2022/03/21 22:09:13 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2021:
 
@@ -9599,7 +9599,7 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated cross/avrdude to 6.4 [dsainty 2021-12-29]
 	Updated x11/xfce4-exo to 4.16.3 [gutteridge 2021-12-29]
 	Updated meta-pkgs/bulk-medium to 20211229 [gutteridge 2021-12-29]
-	Added games/xchomp version pl1 [nia 2021-12-29]
+	Added games/xchomp version 1.1pl1 [nia 2021-12-29]
 	Added games/3dpong version 0.5 [nia 2021-12-30]
 	Added games/xtacy version 1.14 [nia 2021-12-30]
 	Updated security/wolfssl to 5.1.0 [fox 2021-12-30]
@@ -9652,7 +9652,6 @@ Changes to the packages collection and infrastructure in 2021:
 	Updated net/grpc to 1.43.0 [adam 2021-12-31]
 	Updated net/py-grpcio to 1.43.0 [adam 2021-12-31]
 	Updated net/py-grpcio-testing to 1.43.0 [adam 2021-12-31]
-	Updated net/py-grpcio-tools to 1.42.0 [adam 2021-12-31]
 	Updated net/kubectl to 1.22.5 [leot 2021-12-31]
 	Added devel/cxxopts version 3.0.0 [plunky 2021-12-31]
 	Added devel/elfio version 3.9 [plunky 2021-12-31]
