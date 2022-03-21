@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2021/03/08 08:13:03 jaapb Exp $
+# $NetBSD: Makefile,v 1.19 2022/03/21 07:50:50 jaapb Exp $
 
 DISTNAME=	dose3-5.0.1
 PKGREVISION=	6
@@ -24,6 +24,7 @@ CONFIGURE_ARGS+=	--with-bytecodeonly
 pre-configure:
 	cd ${WRKSRC} && aclocal -I m4 && autoconf
 
+.include "../../mk/ocaml.mk"
 .include "../../devel/ocaml-cppo/buildlink3.mk"
 .include "../../devel/ocaml-extlib/buildlink3.mk"
 .include "../../devel/ocaml-re/buildlink3.mk"
