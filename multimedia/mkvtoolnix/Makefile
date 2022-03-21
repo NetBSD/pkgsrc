@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.190 2022/03/14 11:09:23 adam Exp $
+# $NetBSD: Makefile,v 1.191 2022/03/21 21:30:16 jperkin Exp $
 
 DISTNAME=	mkvtoolnix-66.0.0
 CATEGORIES=	multimedia
@@ -38,6 +38,14 @@ LDFLAGS.DragonFly=	-lboost_system
 LDFLAGS.SunOS+=		-lintl
 
 INSTALL_ENV+=	SHELL=${SH:Q}
+
+.include "../../mk/bsd.prefs.mk"
+
+pre-build:
+	cd ${WRKSRC} && ${RM} src/common/*/windows.cpp
+.if ${OPSYS} != "Darwin"
+	cd ${WRKSRC} && ${RM} src/common/*/macos.cpp
+.endif
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${RAKE}
