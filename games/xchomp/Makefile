@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/12/29 23:56:01 nia Exp $
+# $NetBSD: Makefile,v 1.2 2022/03/21 22:07:57 rillig Exp $
 
 DISTNAME=	xchomp-pl1
+PKGNAME=	xchomp-1.1pl1
 CATEGORIES=	games
 MASTER_SITES=	https://ftp.gwdg.de/pub/x11/x.org/R5contrib/
 
