@@ -345,7 +345,8 @@ func (ck *MkAssignChecker) checkLeftRationale() {
 	}
 
 	mkline := ck.MkLine
-	vartype := G.Pkgsrc.VariableType(ck.MkLines, mkline.Varname())
+	varname := mkline.Varname()
+	vartype := G.Pkgsrc.VariableType(ck.MkLines, varname)
 	if vartype == nil || !vartype.NeedsRationale() {
 		return
 	}
@@ -354,7 +355,13 @@ func (ck *MkAssignChecker) checkLeftRationale() {
 		return
 	}
 
-	mkline.Warnf("Setting variable %s should have a rationale.", mkline.Varname())
+	if varname == "PYTHON_VERSIONS_INCOMPATIBLE" && mkline.Value() == "27" {
+		// No warning since it is rather common that a modern Python
+		// package supports all Python versions starting with 3.0.
+		return
+	}
+
+	mkline.Warnf("Setting variable %s should have a rationale.", varname)
 	mkline.Explain(
 		"Since this variable prevents the package from being built in some situations,",
 		"the reasons for this restriction should be documented.",
