@@ -645,7 +645,19 @@ func (s *Suite) Test_MkAssignChecker_checkLeftRationale(c *check.C) {
 		"WARN: filename.mk:1: Setting variable NOT_FOR_PLATFORM should have a rationale.",
 		"WARN: filename.mk:2: Setting variable NOT_FOR_PLATFORM should have a rationale.")
 
-	// The whole rationale check is only enabled when -Wextra is given.
+	// Many Python modules support Python 3 only.
+	// These don't need a rationale since this case is common knowledge.
+	testLines(
+		lines(
+			MkCvsID,
+			"",
+			"PYTHON_VERSIONS_INCOMPATIBLE=\t27",
+			"",
+			"PYTHON_VERSIONS_INCOMPATIBLE=\t38"),
+		"WARN: filename.mk:5: Setting variable "+
+			"PYTHON_VERSIONS_INCOMPATIBLE should have a rationale.")
+
+	// The rationale check is only enabled when -Wextra is given.
 	t.SetUpCommandLine()
 
 	test(
