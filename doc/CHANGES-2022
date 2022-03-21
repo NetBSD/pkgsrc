@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1536 2022/03/21 07:52:13 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.1537 2022/03/21 07:59:39 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2026,3 +2026,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/dua-cli to 2.17.1 [pin 2022-03-20]
 	Updated net/samba4 to 4.15.6 [adam 2022-03-20]
 	Updated devel/ocaml-checkseum to 0.3.2nb1 [jaapb 2022-03-21]
+	Updated devel/ocaml-digestif to 1.1.0nb1 [jaapb 2022-03-21]
