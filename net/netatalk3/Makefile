@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2022/03/07 16:52:25 nia Exp $
+# $NetBSD: Makefile,v 1.46 2022/03/22 08:25:37 hauke Exp $
 
-DISTNAME=	netatalk-3.1.12
+DISTNAME=	netatalk-3.1.13
 PKGNAME=	${DISTNAME:C/-/3-/}
-PKGREVISION=	20
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,7 +12,7 @@ COMMENT=	Netatalk AFP file services
 LICENSE=	gnu-gpl-v2
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl:run
+USE_TOOLS+=		gmake pkg-config perl:run
 GNU_CONFIGURE=		yes
 PKG_CONFIG=		yes
 
