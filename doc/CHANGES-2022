@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1541 2022/03/21 22:30:25 rillig Exp $
+$NetBSD: CHANGES-2022,v 1.1542 2022/03/22 08:25:57 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2030,3 +2030,4 @@ Changes to the packages collection and infrastructure in 2022:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2022Q1 branch [wiz 2021-03-21]
 	Updated www/kore to 4.2.1 [fcambus 2022-03-21]
 	Updated pkgtools/pkglint to 22.1.0 [rillig 2022-03-21]
+	Updated net/netatalk3 to 3.1.13 [hauke 2022-03-22]
