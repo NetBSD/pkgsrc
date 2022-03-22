@@ -9,7 +9,4 @@ and branch-prediction profiler, a call-graph generating cache and
 branch-prediction profiler, and a heap profiler. It also includes three
 experimental tools: a heap/stack/global array overrun detector, a second
 heap profiler that examines how heap blocks are used, and a SimPoint basic
-block vector generator. It runs on the following platforms: X86/Linux,
-AMD64/Linux, ARM/Linux, PPC32/Linux, PPC64/Linux, S390X/Linux, MIPS/Linux,
-ARM/Android (2.3.x and later), X86/Android (4.0 and later), X86/Darwin
-and AMD64/Darwin (Mac OS X 10.6 and 10.7, with limited support for 10.8).
+block vector generator.
