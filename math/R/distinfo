@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.94 2022/03/19 23:13:59 brook Exp $
+$NetBSD: distinfo,v 1.95 2022/03/23 21:16:44 wiz Exp $
 
 BLAKE2s (R-4.1.3.tar.gz) = bee2174be0be0102367553b25fbf38b1ed2324a9193310a3fe98babec69b7988
 SHA512 (R-4.1.3.tar.gz) = cb71cc6c9551cc9cef4819ed778a8d0ef40490ec2bed27669c8e93d464a93bef5e73c2a03a714db03c87112b291a752ec2d21194e5abef81d85cb6c62643127c
 Size (R-4.1.3.tar.gz) = 35026517 bytes
-SHA1 (patch-configure.ac) = 967450ec49d375cce254e108b062ad73857d261d
+SHA1 (patch-configure.ac) = d6661984716a131bbfa1a2aa56385c535881d43d
 SHA1 (patch-m4_R.m4) = 704d5514e10adf0b5217bb71b06f44a612eca6e0
 SHA1 (patch-src_library_stats_src_Makefile.in) = 4eb93292858392792c37a706399e2cef91821bbe
 SHA1 (patch-src_main_character.c) = 842ae5d291f36f2beead4d32c1d41b18cbff878d
