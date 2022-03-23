@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1543 2022/03/23 21:16:53 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1544 2022/03/23 23:35:54 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2032,3 +2032,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated pkgtools/pkglint to 22.1.0 [rillig 2022-03-21]
 	Updated net/netatalk3 to 3.1.13 [hauke 2022-03-22]
 	Updated math/R to 4.1.3nb1 [wiz 2022-03-23]
+	Updated geography/qgis to 3.22.5 [gdt 2022-03-23]
