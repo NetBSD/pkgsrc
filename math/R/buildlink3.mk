@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2020/10/12 21:51:58 bacon Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2022/03/23 21:16:44 wiz Exp $
 
 BUILDLINK_TREE+=	R
 
@@ -8,7 +8,6 @@ R_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.R+=	R>=1.7.0
 BUILDLINK_ABI_DEPENDS.R+=	R>=4.0.3nb1
 BUILDLINK_PKGSRCDIR.R?=		../../math/R
-.endif # R_BUILDLINK3_MK
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
@@ -17,5 +16,6 @@ BUILDLINK_PKGSRCDIR.R?=		../../math/R
 .if !exists(/System/Library/Frameworks/Accelerate.framework)
 .include "../../mk/blas.buildlink3.mk"
 .endif
+.endif # R_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-R

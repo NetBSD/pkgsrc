@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST.Darwin,v 1.11 2021/12/07 12:42:15 jperkin Exp $
-@comment 
+@comment $NetBSD: PLIST.Darwin,v 1.12 2022/03/23 21:16:44 wiz Exp $
+@comment
 @comment The configure script has explicit check for darwin and sets
 @comment   --with-internal-tzcode=yes
 @comment which results in these files in lib/R/share/zoneinfo
-@comment 
+@comment
 @comment This source file:
 @comment   https://svn.r-project.org/R/trunk/src/extra/tzone/Notes
 @comment explains that osx has problems stemming from 32 bit limitations in zic.
 @comment Some further discussion found at
 @comment   https://github.com/tzinfo/tzinfo-data/issues/1
-@comment 
+@comment
 @comment Even darwin 10.10.3 (osx 14D131) still shows zic --version of 7.116
-@comment 
+@comment
 lib/R/share/zoneinfo/Africa/Abidjan
 lib/R/share/zoneinfo/Africa/Accra
 lib/R/share/zoneinfo/Africa/Addis_Ababa
