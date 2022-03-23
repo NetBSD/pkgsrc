@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2022/03/11 21:42:14 tnn Exp $
+# $NetBSD: Makefile,v 1.61 2022/03/23 23:07:23 tnn Exp $
 #
 
 V=		6.0.2
@@ -39,6 +39,8 @@ PY_PATCHPLIST=		yes
 # I didn't commit them yet because it segfaults. -tnn 20220102
 NOT_FOR_PLATFORM+=	Darwin-*-*
 
+# needs 64-bit CAS for std::atomic<size_t>
+.include "../../mk/atomic64.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cmake/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
