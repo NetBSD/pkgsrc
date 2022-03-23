@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2022/02/08 12:38:09 pin Exp $
+# $NetBSD: Makefile,v 1.19 2022/03/23 09:15:32 pin Exp $
 
 DISTNAME=	nushell-0.44.0
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nushell/}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.nushell.sh/
 COMMENT=	New type of shell
 LICENSE=	mit
