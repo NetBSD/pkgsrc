@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2022/03/05 12:19:41 tnn Exp $
+# $NetBSD: Makefile,v 1.45 2022/03/23 22:27:34 tnn Exp $
 
 DISTNAME=	babl-0.1.90
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/babl/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -34,6 +35,13 @@ PLIST_SUBST+=		SOEXT="so"
 PLIST_VARS+=		x86_64
 .if ${MACHINE_ARCH} == "x86_64"
 PLIST.x86_64=		yes
+.endif
+
+.include "../../mk/compiler.mk"
+
+.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && \
+	!empty(CC_VERSION:Mgcc-7.*)
+MESON_ARGS+=	-Denable-mmx=false
 .endif
 
 # Apply removals to post-wrapper transformed arguments.
