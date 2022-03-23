@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.extension,v 1.27 2020/07/31 17:04:12 brook Exp $
+# $NetBSD: Makefile.extension,v 1.28 2022/03/23 21:16:44 wiz Exp $
 #
 # This Makefile fragment is included by packages for R library packages.
 #
@@ -70,7 +70,7 @@ R_PKG_INSTALL_ARGS+=	--configure-args='${CONFIGURE_ARGS}'
 .endif
 
 GENERATE_PLIST+=	( cd ${DESTDIR}${PREFIX}; for dir in ${R_INST_DIRS}; do \
-	${FIND} ${R_LIB}/$${dir} \( -type f -o -type l \) -print; done ) | ${SORT} -u;
+			${FIND} ${R_LIB}/$${dir} \( -type f -o -type l \) -print; done ) | ${SORT} -u;
 
 INSTALL_TEMPLATES+=	../../math/R/files/pkg-index.tmpl
 DEINSTALL_TEMPLATES+=	../../math/R/files/pkg-index.tmpl

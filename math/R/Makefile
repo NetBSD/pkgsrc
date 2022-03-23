@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.231 2022/03/19 23:13:59 brook Exp $
+# $NetBSD: Makefile,v 1.232 2022/03/23 21:16:44 wiz Exp $
 
 #
 # If updating this package, please try to ensure PLIST.Darwin is kept in sync
 # to avoid unnecessarily breaking macOS users.
 #
 DISTNAME=	R-4.1.3
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=base/R-4/}
 
@@ -61,7 +62,7 @@ PLIST.x11=		yes
 # BLAS/LAPACK by default and only on request accelerate. Just
 # BLAS_ACCEPTED=	${_BLAS_TYPES} accelerate.framework
 # (here and in buildlink3.mk) and deleting the first conditional
-# branch might work, given that R knows what todo with 
+# branch might work, given that R knows what todo with
 # -framework Accelerate. Someone on Darwin really needs to test.
 .if exists(/System/Library/Frameworks/Accelerate.framework)
 CONFIGURE_ARGS+=	--with-blas="-framework Accelerate"
@@ -156,7 +157,7 @@ CTF_FILES_SKIP+=	lib/R/library/mgcv/libs/mgcv.so
 CHECK_WRKREF_SKIP+=	lib/R/etc/Makeconf
 
 pre-configure:
-	${RUN} cd ${WRKSRC} && autoreconf -fvi || echo Ignore the warnings from autoreconf
+	${RUN} cd ${WRKSRC} && autoreconf -fvi || ${ECHO} Ignore the warnings from autoreconf
 
 # Fix library names.  Relies on build system using -headerpad_max_install_names.
 .if ${OPSYS} == "Darwin"
