@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: gitea.sh,v 1.4 2021/11/18 02:45:29 khorben Exp $
+# $NetBSD: gitea.sh,v 1.5 2022/03/23 23:41:14 khorben Exp $
 #
 # PROVIDE: gitea
 # REQUIRE: DAEMON
@@ -24,6 +24,8 @@ gitea_env="${gitea_env} USER=@GITEA_USER@"
 
 gitea_user="@GITEA_USER@"
 gitea_group="@GITEA_GROUP@"
+
+cd /
 
 load_rc_config $name
 run_rc_command "$1"
