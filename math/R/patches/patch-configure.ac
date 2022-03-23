@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.5 2022/03/19 23:13:59 brook Exp $
+$NetBSD: patch-configure.ac,v 1.6 2022/03/23 21:16:44 wiz Exp $
 
 Do not include system paths in R_LD_LIBRARY_PATH.
 NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
@@ -18,7 +18,7 @@ NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
  ## As from R 3.2.0 split up -L... and -lR
  if test "${want_R_shlib}" = yes; then
 -  LIBR0="-L\"\$(R_HOME)/lib\$(R_ARCH)\""
-+  LIBR0="-Wl,@COMPILER_RPATH_FLAG@${prefix}/lib/R/lib\$(R_ARCH) -L\"\$(R_HOME)/lib\$(R_ARCH)\""
++  LIBR0="@COMPILER_RPATH_FLAG@${prefix}/lib/R/lib\$(R_ARCH) -L\"\$(R_HOME)/lib\$(R_ARCH)\""
    LIBR1=-lR
  else
    LIBR0=
