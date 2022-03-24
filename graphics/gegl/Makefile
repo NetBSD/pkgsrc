@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2022/03/05 13:17:42 tnn Exp $
+# $NetBSD: Makefile,v 1.103 2022/03/24 00:02:25 tnn Exp $
 
 DISTNAME=	gegl-0.4.36
 CATEGORIES=	graphics
@@ -37,6 +37,11 @@ PLIST_SUBST+=		SOEXT="so"
 PLIST_VARS+=		x86_64
 .if ${MACHINE_ARCH} == "x86_64"
 PLIST.x86_64=		yes
+.endif
+
+PLIST_VARS+=		neon
+.if !empty(MACHINE_ARCH:Mearmv[67]*)
+PLIST.neon=		yes
 .endif
 
 # ../gegl/opencl/gegl-cl-color.c:32:10: fatal error: opencl/colors.cl.h: No such file or directory
