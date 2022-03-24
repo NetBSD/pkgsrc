@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.964 2022/03/13 06:02:10 nia Exp $
+# $NetBSD: Makefile,v 1.965 2022/03/24 19:53:53 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -70,7 +70,6 @@ SUBDIR+=	cairo-gobject
 SUBDIR+=	cairomm
 SUBDIR+=	cairomm1.16
 SUBDIR+=	cal3d
-SUBDIR+=	cal3d-examples
 SUBDIR+=	cambevao
 SUBDIR+=	camediaplay
 SUBDIR+=	camlimages
