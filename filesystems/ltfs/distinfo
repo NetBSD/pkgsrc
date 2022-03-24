@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:25:29 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/03/24 16:08:26 manu Exp $
 
 BLAKE2s (ltfs/v2.4.2.0-pre0.tar.gz) = b88151f07b93eacf09242e19d2a8958c13f6a7d852ebffc1b1fc4078294a6b0e
 SHA512 (ltfs/v2.4.2.0-pre0.tar.gz) = 700690203ff71d01fce130809df09ce313951a5e427136ae4e071d47a46cbad5736faaef7a2d793adaff147a5c833c33690f7efc1d432828b666244c3e291f8b
@@ -6,5 +6,6 @@ Size (ltfs/v2.4.2.0-pre0.tar.gz) = 591900 bytes
 SHA1 (patch-autogen.sh) = 31a598a44d5ffd18bcc4a517aef6f65879dc4c49
 SHA1 (patch-conf_Makefile.am) = 95ea905de7c4c71d8cc0effff99930c5af7997a0
 SHA1 (patch-configure.ac) = 3db34ab053172cbe572c977e09465266fdfd4da9
-SHA1 (patch-messages_make__message__src.sh) = 9caaf991f081b395eed9c3fb81dfefd837f6141a
+SHA1 (patch-messages_make_message_src.sh) = 838e17beaf48eeacea57ae37562eb7a77f1f6313
 SHA1 (patch-src_libltfs_fs.c) = 7a68425e24c2d79b2b3a56176f47009d917f5a18
+SHA1 (patch-src_ltfs_fuse.c) = d6304df91559e678c24a9402aa8503bb3f605899
