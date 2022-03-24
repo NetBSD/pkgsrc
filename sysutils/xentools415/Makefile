@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2021/12/19 09:47:59 maya Exp $
+# $NetBSD: Makefile,v 1.8.2.1 2022/03/24 18:59:43 bsiegert Exp $
 #
-VERSION=	4.15.1
+VERSION=	4.15.2
 
 DIST_SUBDIR=		xen415
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools415-${VERSION}
-PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		https://downloads.xenproject.org/release/xen/${VERSION}/
 
@@ -59,7 +58,7 @@ USE_TOOLS+=		pod2man gmake pkg-config makeinfo perl bash cmake gsed bison
 USE_LANGUAGES=		c c++
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--enable-rpath
+CONFIGURE_ARGS+=	--enable-rpath --disable-golang
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 
 MAKE_ENV+=		PREFIX=${prefix:Q} WRKSRC=${WRKSRC}
