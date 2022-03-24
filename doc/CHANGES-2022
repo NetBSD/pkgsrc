@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1544 2022/03/23 23:35:54 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.1545 2022/03/24 19:10:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2033,3 +2033,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/netatalk3 to 3.1.13 [hauke 2022-03-22]
 	Updated math/R to 4.1.3nb1 [wiz 2022-03-23]
 	Updated geography/qgis to 3.22.5 [gdt 2022-03-23]
+	Removed filesystems/openafs-devel [wiz 2022-03-24]
