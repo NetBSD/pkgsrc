@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.141 2022/03/20 21:53:53 adam Exp $
+# $NetBSD: Makefile,v 1.142 2022/03/24 10:16:13 hauke Exp $
 
 DISTNAME=	samba-4.15.6
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://download.samba.org/pub/samba/stable/
 
@@ -159,6 +160,7 @@ SUBST_SED.docbook+=	-e 's,http://docbook.sourceforge.net/release/xsl/current,${P
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing paths.
 SUBST_FILES.paths=	${WRKDIR}/adduser.sh ${WRKDIR}/deluser.sh
+SUBST_FILES.paths+=	source4/heimdal_build/roken.h
 SUBST_STAGE.paths=	pre-configure
 SUBST_SED.paths+=	-e 's,@PERL@,${PERL5},g'
 SUBST_VARS.paths=	AWK CAT MKTEMP RM PWD_MKDB SH PERL PKG_SYSCONFBASE
