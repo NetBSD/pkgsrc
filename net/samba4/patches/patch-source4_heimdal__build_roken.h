@@ -1,4 +1,4 @@
-$NetBSD: patch-source4_heimdal__build_roken.h,v 1.3 2022/03/07 21:40:38 thor Exp $
+$NetBSD: patch-source4_heimdal__build_roken.h,v 1.4 2022/03/24 10:16:13 hauke Exp $
 
 Substitute SYSCONFDIR in embedded Heimdal too.
 
@@ -9,7 +9,7 @@ Substitute SYSCONFDIR in embedded Heimdal too.
  
  /* path to sysconf - should we force this to samba LIBDIR ? */
 -#define SYSCONFDIR "/etc"
-+#define SYSCONFDIR "/data/pkg/etc"
++#define SYSCONFDIR "@PKG_SYSCONFBASE@"
  
  #define rk_PATH_DELIM '/'
  
