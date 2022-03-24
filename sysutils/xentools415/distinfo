@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:20:25 nia Exp $
+$NetBSD: distinfo,v 1.6.2.1 2022/03/24 18:59:43 bsiegert Exp $
 
 BLAKE2s (xen415/ipxe-988d2c13cdf0f0b4140685af35ced70ac5b3283c.tar.gz) = 67ded947316100f4f66fa61fe156baf1620db575450f4dc0dd8dcb323e57970b
 SHA512 (xen415/ipxe-988d2c13cdf0f0b4140685af35ced70ac5b3283c.tar.gz) = d888e0e653727ee9895fa866d8895e6d23a568b4e9e8439db4c4d790996700c60b0655e3a3129e599736ec2b4f7b987ce79d625ba208f06665fced8bddf94403
@@ -6,9 +6,9 @@ Size (xen415/ipxe-988d2c13cdf0f0b4140685af35ced70ac5b3283c.tar.gz) = 3937560 byt
 BLAKE2s (xen415/seabios-1.14.0.tar.gz) = c34103500436ad4726f15f2ed181205736143fc41af5c4b32a7055cd021edc1d
 SHA512 (xen415/seabios-1.14.0.tar.gz) = f282175484c99488f4349ff4d3af9a74d96df3e8dcbe679fcea5b8b559f95f600756939d99d6e61dabace206d3d9ccefdc8fa2bc7709d34d6a0dc085d6c79238
 Size (xen415/seabios-1.14.0.tar.gz) = 628981 bytes
-BLAKE2s (xen415/xen-4.15.1.tar.gz) = 87499f2cbe2a81fd92e0d4803adbe8681b9a26348aa8e069890b6ea441731986
-SHA512 (xen415/xen-4.15.1.tar.gz) = 8d3cbdf708f46477e32ee7cbd16a490c82efa855cecd84ee712b8680df4d69c987ba9ab00ff3851f627b98a8ebbc5dab71f92f142ed958ee2bc538bc792cd4b9
-Size (xen415/xen-4.15.1.tar.gz) = 40800852 bytes
+BLAKE2s (xen415/xen-4.15.2.tar.gz) = f6e3d354a144c9ff49a198ebcafbd5e8a4414690d5672b3e2ed394c461ab8ab0
+SHA512 (xen415/xen-4.15.2.tar.gz) = 1cbf988fa8ed38b7ad724978958092ca0e5506e38c709c7d1af196fb8cb8ec0197a79867782761ef230b268624b3d7a0d5d0cd186f37d25f495085c71bf70d54
+Size (xen415/xen-4.15.2.tar.gz) = 40773378 bytes
 SHA1 (patch-.._seabios-rel-1.14.0_src_string.c) = 87e2e28fe47c196e74fea073c7e7f7d03990fbe3
 SHA1 (patch-Config.mk) = d108a1743b5b5313d3ea957b02a005b49f5b3bf6
 SHA1 (patch-Makefile) = 6c580cbea532d08a38cf5e54228bd0210a98da21
