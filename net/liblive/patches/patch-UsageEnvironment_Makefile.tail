@@ -1,0 +1,15 @@
+$NetBSD: patch-UsageEnvironment_Makefile.tail,v 1.1 2022/03/24 19:36:29 wiz Exp $
+
+Fix whitespace issue when linking.
+
+--- UsageEnvironment/Makefile.tail.orig	2014-12-11 10:33:25.000000000 +0000
++++ UsageEnvironment/Makefile.tail
+@@ -8,7 +8,7 @@ all:	$(ALL)
+ OBJS = UsageEnvironment.$(OBJ) HashTable.$(OBJ) strDup.$(OBJ)
+ 
+ $(USAGE_ENVIRONMENT_LIB): $(OBJS)
+-	$(LIBRARY_LINK)$@ $(LIBRARY_LINK_OPTS) $(OBJS)
++	$(LIBRARY_LINK) $@ $(LIBRARY_LINK_OPTS) $(OBJS)
+ 
+ .$(C).$(OBJ):
+ 	$(C_COMPILER) -c $(C_FLAGS) $<       
