@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.15 2019/11/03 10:39:32 rillig Exp $
+# $NetBSD: builtin.mk,v 1.16 2022/03/24 07:56:00 wiz Exp $
 
 BUILTIN_PKG:=	zlib
 
@@ -90,6 +90,7 @@ BUILDLINK_TARGETS+=	fake-zlib-pc
 
 _FAKE_ZLIB_PC=	${BUILDLINK_DIR}/lib/pkgconfig/zlib.pc
 
+.PHONY: fake-zlib-pc
 fake-zlib-pc:
 	${RUN}	\
 	sedsrc=../../devel/zlib/files/zlib.pc.in;	\
