@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/02/25 02:38:59 maya Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/03/24 19:12:13 wiz Exp $
 ${PYSITELIB}/iso639/__init__.py
 ${PYSITELIB}/iso639/__init__.pyc
 ${PYSITELIB}/iso639/__init__.pyo
@@ -15,6 +15,6 @@ ${PYSITELIB}/iso639/iso639.pyo
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
