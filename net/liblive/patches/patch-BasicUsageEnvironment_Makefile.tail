@@ -1,0 +1,15 @@
+$NetBSD: patch-BasicUsageEnvironment_Makefile.tail,v 1.1 2022/03/24 19:36:29 wiz Exp $
+
+Fix whitespace issue when linking.
+
+--- BasicUsageEnvironment/Makefile.tail.orig	2014-12-11 10:33:25.000000000 +0000
++++ BasicUsageEnvironment/Makefile.tail
+@@ -10,7 +10,7 @@ OBJS = BasicUsageEnvironment0.$(OBJ) Bas
+ 	DelayQueue.$(OBJ) BasicHashTable.$(OBJ)
+ 
+ libBasicUsageEnvironment.$(LIB_SUFFIX): $(OBJS)
+-	$(LIBRARY_LINK)$@ $(LIBRARY_LINK_OPTS) \
++	$(LIBRARY_LINK) $@ $(LIBRARY_LINK_OPTS) \
+ 		$(OBJS)
+ 
+ .$(C).$(OBJ):
