@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2021/05/24 19:52:08 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/03/24 19:26:13 wiz Exp $
 
 DISTNAME=	Padre-Plugin-XS-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -24,6 +24,8 @@ PERL5_PACKLIST=		auto/Padre/Plugin/XS/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
+# blib/lib/auto/share/dist/Padre-Plugin-XS/locale isn't a directory at /usr/pkg/lib/perl5/vendor_perl/5.34.0/Locale/Msgfmt.pm line 21
+MAKE_JOBS_SAFE=	no
 
 #pre-configure:
 #	cd ${WRKSRC} && find `pwd` -name "*.orig" -type f | xargs rm
