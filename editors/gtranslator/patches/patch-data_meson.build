@@ -1,0 +1,22 @@
+$NetBSD: patch-data_meson.build,v 1.1 2022/03/24 20:15:57 wiz Exp $
+
+Fix build with latest meson.
+
+--- data/meson.build.orig	2019-04-21 17:46:14.000000000 +0000
++++ data/meson.build
+@@ -14,7 +14,6 @@ desktop_in = configure_file(
+ )
+ 
+ i18n.merge_file(
+-  desktop,
+   type: 'desktop',
+   input: desktop_in,
+   output: '@0@.desktop'.format(gtr_app_id),
+@@ -36,7 +35,6 @@ appdata_in = configure_file(
+ )
+ 
+ i18n.merge_file(
+-  appdata,
+   input: appdata_in,
+   output: appdata,
+   po_dir: po_dir,

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:21:29 nia Exp $
+$NetBSD: distinfo,v 1.15 2022/03/24 20:15:57 wiz Exp $
 
 BLAKE2s (gtranslator-3.32.1.tar.xz) = fcb1699eff1437e0a679a59eb8717b7d53dafaddcc8c297bbfc08db6dc4e7387
 SHA512 (gtranslator-3.32.1.tar.xz) = 932190242dc3a5d801ecf9272a163f0df8757d8c5aa1da30bd456b0d2762503b854f0c42cc2c4f93c9c6538d008001c8b120c8a73582d6cea84134aef9367431
 Size (gtranslator-3.32.1.tar.xz) = 2771008 bytes
+SHA1 (patch-data_meson.build) = 6541abcd667cfbe122ecf87b319ff23d3670144d
