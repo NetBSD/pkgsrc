@@ -1,9 +1,16 @@
-$NetBSD: distinfo,v 1.19 2021/10/26 11:05:55 nia Exp $
+$NetBSD: distinfo,v 1.20 2022/03/24 19:36:29 wiz Exp $
 
 BLAKE2s (live.2014.12.11.tar.gz) = e69dbb033094c33153c1aa1b738eb469171099f3af69c5d31143e5126dcdc056
 SHA512 (live.2014.12.11.tar.gz) = f0a538e78167f0390ca1f14ac90110fd7542db9e52b1ef6c64c9b1bccb2aff4ab5bef718801f58cc64afddd0dc6d065661220d692d4ad115feefc66db724c363
 Size (live.2014.12.11.tar.gz) = 628708 bytes
+SHA1 (patch-BasicUsageEnvironment_Makefile.tail) = b6d4706b78dbd2fc5fa5bad881248fc16b3feb28
+SHA1 (patch-UsageEnvironment_Makefile.tail) = d5083109c9050ee69c3c21e97f19c52e1f420cb6
 SHA1 (patch-aa) = 67d1928f6d085749aa19b6486b5fe841b76d4364
 SHA1 (patch-ba) = a60e7960c5e99a46ab2c974f3289a580cbfe9b4f
 SHA1 (patch-cc) = 1e968b8742c913f67654d83612bafe4fe01364c0
 SHA1 (patch-config.solaris-64bit) = a6c5f9b9027ebf3d78b939dc124efc964a9795c8
+SHA1 (patch-groupsock_Makefile.tail) = 1835e499bb53d140ed6b4e3e9e60c5d5599513b8
+SHA1 (patch-liveMedia_Makefile.tail) = 77725685dbecf5b4bf22b9b7f1bd2609717d3db3
+SHA1 (patch-mediaServer_Makefile.tail) = 576867eee345eb2e638d38408d93827947da5c85
+SHA1 (patch-proxyServer_Makefile.tail) = 5fb4040a2e6f79e851467ebc291062fd8b602603
+SHA1 (patch-testProgs_Makefile.tail) = 254aaa5cfb6a04e49ca1624d55c380371e1ed6a2
