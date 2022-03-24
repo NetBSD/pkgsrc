@@ -1,0 +1,15 @@
+$NetBSD: patch-groupsock_Makefile.tail,v 1.1 2022/03/24 19:36:29 wiz Exp $
+
+Fix whitespace issue when linking.
+
+--- groupsock/Makefile.tail.orig	2014-12-11 10:33:25.000000000 +0000
++++ groupsock/Makefile.tail
+@@ -27,7 +27,7 @@ IOHandlers.$(CPP):	include/IOHandlers.hh
+ 
+ libgroupsock.$(LIB_SUFFIX): $(GROUPSOCK_LIB_OBJS) \
+     $(PLATFORM_SPECIFIC_LIB_OBJS)
+-	$(LIBRARY_LINK)$@ $(LIBRARY_LINK_OPTS) \
++	$(LIBRARY_LINK) $@ $(LIBRARY_LINK_OPTS) \
+ 		$(GROUPSOCK_LIB_OBJS)
+ 
+ clean:
