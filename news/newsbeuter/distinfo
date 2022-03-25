@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2021/12/20 07:19:42 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/03/25 10:37:30 wiz Exp $
 
 BLAKE2s (newsbeuter-2.9.tar.gz) = d42446556199395cf370c229208d52e21fd8d666cc415ae6f4cd2bd92d9ea889
 SHA512 (newsbeuter-2.9.tar.gz) = b173008c8c8d3729f8ccef3ce62645a05c1803fb842d5c0afdf9ffd4ed3726030f9c359c20bc817402a6a0ea12af742d0ae7faf9b92d52c11f420f62b430b0aa
@@ -11,4 +11,4 @@ SHA1 (patch-src_controller.cpp) = 927b11064deac38acbb577aa0d3f750f72c0e55a
 SHA1 (patch-src_feedhq__api.cpp) = 53d2807fc03cc048b6af928d304efcf9c6bd5c70
 SHA1 (patch-src_oldreader__api.cpp) = fccad7823870717eab2f0c87e3ab78465dbf8128
 SHA1 (patch-src_ttrss__api.cpp) = 60e0f71819c6a91d7d8ab44daf24e1df06029601
-SHA1 (patch-src_utils.cpp) = e153e29a0234901176485e16b92360f1e9bdea7e
+SHA1 (patch-src_utils.cpp) = e8b63a872e5452a29205b3c62977cd9e546e61ee
