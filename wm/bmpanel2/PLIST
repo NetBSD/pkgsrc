@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2011/12/09 01:23:07 dholland Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/03/25 11:33:44 wiz Exp $
 bin/bmpanel2
 bin/bmpanel2cfg
 ${PYSITELIB}/bmpanel2.py
 ${PYSITELIB}/bmpanel2.pyc
+${PYSITELIB}/bmpanel2cfg-1.0-py2.7.egg-info
+man/man1/bmpanel2.1
 share/bmpanel2/themes/alduin-glossy/default_icon.png
 share/bmpanel2/themes/alduin-glossy/launchbar-arrow.png
 share/bmpanel2/themes/alduin-glossy/tb-left-active-hover.png
@@ -329,4 +331,3 @@ share/bmpanel2/themes/xsocam/tb_tile_idle_img.png
 share/bmpanel2/themes/xsocam/tb_tile_pressed_img.png
 share/bmpanel2/themes/xsocam/theme
 share/bmpanel2/themes/xsocam/tile_img.png
-share/man/man1/bmpanel2.1.gz
