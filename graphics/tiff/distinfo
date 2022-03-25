@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.100 2021/10/26 10:47:21 nia Exp $
+$NetBSD: distinfo,v 1.101 2022/03/25 08:36:37 nia Exp $
 
 BLAKE2s (tiff-4.3.0.tar.gz) = 28ba59df6d3d7a967dc168645bfc78f047ac8f7f548050abbbd0560f9dd21c75
 SHA512 (tiff-4.3.0.tar.gz) = e04a4a6c542e58a174c1e9516af3908acf1d3d3e1096648c5514f4963f73e7af27387a76b0fbabe43cf867a18874088f963796a7cd6e45deb998692e3e235493
 Size (tiff-4.3.0.tar.gz) = 2808254 bytes
+SHA1 (patch-CVE-2022-0561) = ceb02d9fb6a897a50d65fd3f46ab527ea84562a4
+SHA1 (patch-CVE-2022-22844) = 268d67ea1a24c6078006c37bf5c56b00a6a0183f
 SHA1 (patch-Makefile.in) = de93f4a2cea4bffc117482fdc6875adfb9aa67e0
