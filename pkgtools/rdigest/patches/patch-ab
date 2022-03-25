@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.6 2016/03/31 17:06:18 agc Exp $
+$NetBSD: patch-ab,v 1.7 2022/03/25 10:30:25 wiz Exp $
 
 Patch digest man page for rdigest functionality
 
---- digest.1.orig	2016-03-31 09:37:14.729218330 -0700
-+++ digest.1	2016-03-31 09:40:35.110066257 -0700
+--- digest.1.orig	2022-03-25 10:29:21.419832305 +0000
++++ digest.1
 @@ -24,20 +24,21 @@
  .\" THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  .\"
- .Dd February 16, 2016
+ .Dd September 28, 2021
 -.Dt DIGEST 1
 +.Dt RDIGEST 1
  .Os
@@ -30,7 +30,7 @@ Patch digest man page for rdigest functionality
  if no file is specified, standard input.
  .Pp
  It can also run self tests via the
-@@ -46,6 +47,12 @@
+@@ -46,6 +47,12 @@ command line option; the only self tests
  for the
  .Dv SHA3
  set of digests.
@@ -43,7 +43,7 @@ Patch digest man page for rdigest functionality
  .Pp
  The
  .Fl V
-@@ -111,12 +118,32 @@
+@@ -119,12 +126,32 @@ utility is a simple wrapper for the vari
  algorithm implementations, which are located in the standard
  C library, and was designed to be scalable as new message digest
  algorithms are developed.
@@ -76,7 +76,7 @@ Patch digest man page for rdigest functionality
  .Xr md5 3 ,
  .Xr rmd160 3 ,
  .Xr sha1 3
-@@ -124,9 +151,13 @@
+@@ -132,9 +159,13 @@ utility exits 0 on success, and \*[Gt]0 
  The
  .Nm
  utility first appeared in
