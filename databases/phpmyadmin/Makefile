@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.167 2022/02/02 13:41:12 tm Exp $
+# $NetBSD: Makefile,v 1.168 2022/03/25 12:59:46 mef Exp $
 
 DISTNAME=	phpMyAdmin-4.9.9-all-languages
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/-all-languages//:tl}
@@ -29,6 +29,9 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pecl-mcrypt>=1.0.1:../../security/php-pecl-mcrypt
 
 USE_LANGUAGE=	# none
 USE_TOOLS+=	pax
+
+REPLACE_BASH+=	vendor/pragmarx/google2fa/tests/tools/test.sh
+REPLACE_BASH+=	vendor/pragmarx/google2fa/tests/tools/analyse.sh
 
 APACHE_USER?=	www
 APACHE_GROUP?=	www
