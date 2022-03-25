@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1552 2022/03/25 17:56:07 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1553 2022/03/25 23:08:04 tron Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2044,3 +2044,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/python310 to 3.10.4 [adam 2022-03-25]
 	Updated lang/py39-html-docs to 3.9.12 [adam 2022-03-25]
 	Updated lang/py310-html-docs to 3.10.4 [adam 2022-03-25]
+	Updated mail/mutt to 2.2.2 [tron 2022-03-25]
