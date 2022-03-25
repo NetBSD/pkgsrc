@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.25 2021/10/26 11:06:09 nia Exp $
-
-BLAKE2s (ntop-4.1.0.tar.gz) = df7019a0961b0d20e975478dabc882aac936151df20b987eb43e0a024a3b59cd
-SHA512 (ntop-4.1.0.tar.gz) = 6759ef6396768b33db96db20ceb907f9d8a5e3421c920d277e043bec85eb1fb38e41b7c88e189e7dd316a02c627aa4c4ea9295beee8cd890ac09b5d8b161a579
-Size (ntop-4.1.0.tar.gz) = 39118983 bytes
-SHA1 (patch-aa) = 92fc5a3c22db1315397e84650361af25c932ca8b
-SHA1 (patch-ab) = 0df07d788aef1a472334e017a747fc6f71b1bf45
-SHA1 (patch-ac) = 122d498c4d8a5809cf4ca41bd32c8eb86001f01f
