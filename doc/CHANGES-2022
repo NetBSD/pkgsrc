@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1549 2022/03/25 10:41:34 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1550 2022/03/25 10:46:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2038,3 +2038,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/weechat to 3.4.1 [nia 2022-03-25]
 	Updated graphics/tiff to 4.3.0nb1 [nia 2022-03-25]
 	Removed news/nget [wiz 2022-03-25]
+	Removed parallel/gridscheduler [wiz 2022-03-25]
