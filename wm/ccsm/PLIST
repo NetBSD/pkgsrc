@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/11/26 20:11:13 imil Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/03/25 11:02:42 wiz Exp $
 bin/ccsm
 ${PYSITELIB}/ccm/Conflicts.py
 ${PYSITELIB}/ccm/Conflicts.pyc
@@ -24,6 +24,7 @@ ${PYSITELIB}/ccm/Window.pyo
 ${PYSITELIB}/ccm/__init__.py
 ${PYSITELIB}/ccm/__init__.pyc
 ${PYSITELIB}/ccm/__init__.pyo
+${PYSITELIB}/${EGG_INFODIR}
 share/applications/ccsm.desktop
 share/ccsm/icons/hicolor/22x22/categories/plugins-accessibility.png
 share/ccsm/icons/hicolor/22x22/categories/plugins-desktop.png

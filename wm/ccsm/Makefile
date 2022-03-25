@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2021/12/08 16:06:50 adam Exp $
+# $NetBSD: Makefile,v 1.34 2022/03/25 11:02:42 wiz Exp $
 
 PKGVER=			0.8.4
 DISTNAME=		ccsm-${PKGVER}
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		wm gnome
 MASTER_SITES=		http://releases.compiz.org/${PKGVER}/
 
@@ -16,16 +16,14 @@ DEPENDS+=		${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 
 USE_TOOLS+=		pkg-config gmake msgfmt intltool
 
-PY_PATCHPLIST=		yes
-PYDISTUTILSPKG=		yes
-REPLACE_PYTHON=		${WRKSRC}/setup.py ${WRKSRC}/ccm/*.py
+REPLACE_PYTHON=		setup.py ccm/*.py
 PYTHON_VERSIONS_ACCEPTED= 27 # py-gtk2
 
 MAKE_ENV+=	PYTHONBIN=${PYTHONBIN:Q}
 
 .include "../../devel/py-compizconfig/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
