@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1447 2022/03/13 15:12:12 gdt Exp $
+# $NetBSD: Makefile,v 1.1448 2022/03/25 11:27:33 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -467,7 +467,6 @@ SUBDIR+=	nsca-ng
 SUBDIR+=	nsd
 SUBDIR+=	nslint
 SUBDIR+=	nstx
-SUBDIR+=	ntop
 SUBDIR+=	ntopng
 SUBDIR+=	ntp4
 SUBDIR+=	nyx
