@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2013/10/21 19:38:15 gls Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/03/25 11:36:41 wiz Exp $
 bin/lshell
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/lshell/__init__.py
 ${PYSITELIB}/lshell/__init__.pyc
 ${PYSITELIB}/lshell/__init__.pyo
