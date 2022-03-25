@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/12/18 15:34:19 jym Exp $
+# $NetBSD: Makefile,v 1.5 2022/03/25 15:16:25 mef Exp $
 
 DISTNAME=	solr-${SOLR_VER}
 PKGNAME=	apache-solr-${SOLR_VER}
@@ -25,6 +25,7 @@ REPLACE_INTERPRETER+=	bash
 REPLACE.bash.old=	/usr/bin/env bash
 REPLACE.bash.new=	${TOOLS_PATH.bash}
 REPLACE_FILES.bash=	bin/solr server/scripts/cloud-scripts/*.sh
+REPLACE_BASH+=		contrib/prometheus-exporter/bin/solr-exporter
 
 .include "../../mk/bsd.prefs.mk"
 
