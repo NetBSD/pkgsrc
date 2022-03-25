@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2022/02/04 13:09:41 adam Exp $
+# $NetBSD: Makefile,v 1.37 2022/03/25 10:46:04 wiz Exp $
 #
 
 COMMENT=	Applications dealing with parallelism in computing
@@ -9,7 +9,6 @@ SUBDIR+=	dqs
 SUBDIR+=	dsh
 SUBDIR+=	fastflow
 SUBDIR+=	ganglia-monitor-core
-SUBDIR+=	gridscheduler
 SUBDIR+=	hwloc
 SUBDIR+=	linda
 SUBDIR+=	lua-lanes
