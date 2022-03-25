@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:19:43 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/03/25 11:39:06 wiz Exp $
 
 BLAKE2s (ioping-1.2.tar.gz) = 86dd511e809cdd54084871c3f3bed748e32e249b172eed23567a74bcf23e0cc2
 SHA512 (ioping-1.2.tar.gz) = 4029f1b50dc292734088dc741e594c56021610aad16a0b9f42875b5fe91fbdf8d566a41dab0384aa739350f74e62688efdaf88168ab0d838b9c848ddd1c5dd96
 Size (ioping-1.2.tar.gz) = 30819 bytes
+SHA1 (patch-ioping.c) = 5069a853c1c7c39904a8ea274058be802386cd31
