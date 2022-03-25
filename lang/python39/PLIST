@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/03/19 18:58:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/03/25 17:54:37 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -3295,9 +3295,6 @@ lib/python${PY_VER_SUFFIX}/test/test_asyncio/echo3.pyo
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/functional.py
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/functional.pyc
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/functional.pyo
-lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_asyncio_waitfor.py
-lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_asyncio_waitfor.pyc
-lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_asyncio_waitfor.pyo
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_base_events.py
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_base_events.pyc
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_base_events.pyo
@@ -3367,6 +3364,9 @@ lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_transports.pyo
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_unix_events.py
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_unix_events.pyc
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_unix_events.pyo
+lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_waitfor.py
+lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_waitfor.pyc
+lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_waitfor.pyo
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_windows_events.py
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_windows_events.pyc
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_windows_events.pyo
