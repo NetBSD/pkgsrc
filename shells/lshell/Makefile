@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.24 2020/12/04 20:45:40 nia Exp $
+# $NetBSD: Makefile,v 1.25 2022/03/25 11:36:41 wiz Exp $
 
 DISTNAME=	lshell-0.9.16
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	shells python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lshell/}
 
 MAINTAINER=	imil@gcu.info
 HOMEPAGE=	http://ghantoos.org/limited-shell-lshell/
-COMMENT=	Lshell restricts user's environment to specified commands
+COMMENT=	Restrict user environment to specified commands
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-readline>=0nb2:../../devel/py-readline
@@ -17,7 +17,6 @@ PKG_SHELL=	bin/lshell
 
 USE_LANGUAGES=		# none
 
-PYDISTUTILSPKG=		yes
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 0.9.16
 
 EGDIR=			share/examples/lshell
@@ -34,5 +33,5 @@ CONF_FILES=		${PREFIX}/${EGDIR}/lshell.conf \
 			${PKG_SYSCONFDIR}/lshell.conf
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
