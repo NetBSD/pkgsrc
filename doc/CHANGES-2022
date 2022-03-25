@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1551 2022/03/25 11:27:33 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1552 2022/03/25 17:56:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2040,3 +2040,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed news/nget [wiz 2022-03-25]
 	Removed parallel/gridscheduler [wiz 2022-03-25]
 	Removed net/ntop successor net/ntopng [wiz 2022-03-25]
+	Updated lang/python39 to 3.9.12 [adam 2022-03-25]
+	Updated lang/python310 to 3.10.4 [adam 2022-03-25]
+	Updated lang/py39-html-docs to 3.9.12 [adam 2022-03-25]
+	Updated lang/py310-html-docs to 3.10.4 [adam 2022-03-25]
