@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1546 2022/03/24 19:53:53 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1547 2022/03/25 08:22:35 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2035,3 +2035,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated geography/qgis to 3.22.5 [gdt 2022-03-23]
 	Removed filesystems/openafs-devel [wiz 2022-03-24]
 	Removed graphics/cal3d-examples [wiz 2022-03-24]
+	Updated chat/weechat to 3.4.1 [nia 2022-03-25]
