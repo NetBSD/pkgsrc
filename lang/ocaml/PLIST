@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2021/03/08 08:08:43 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.56 2022/03/26 19:19:07 jaapb Exp $
 bin/ocaml
 @comment ${PLIST.instrumented_runtime}bin/ocaml-instr-graph
 @comment ${PLIST.instrumented_runtime}bin/ocaml-instr-report
@@ -30,8 +30,8 @@ ${PLIST.ocaml-opt}bin/ocamlobjinfo.opt
 ${PLIST.ocaml-opt}bin/ocamlopt
 ${PLIST.ocaml-opt}bin/ocamlopt.byte
 ${PLIST.ocaml-opt}bin/ocamlopt.opt
-${PLIST.ocaml-opt}bin/ocamloptp
-${PLIST.ocaml-opt}bin/ocamloptp.byte
+bin/ocamloptp
+bin/ocamloptp.byte
 ${PLIST.ocaml-opt}bin/ocamloptp.opt
 bin/ocamlprof
 bin/ocamlprof.byte
@@ -434,12 +434,12 @@ lib/ocaml/compiler-libs/cmt_format.cmt
 lib/ocaml/compiler-libs/cmt_format.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmt_format.cmx
 lib/ocaml/compiler-libs/cmt_format.mli
-${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmx_format.cmi
-${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmx_format.cmti
-${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmx_format.mli
-${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmxs_format.cmi
-${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmxs_format.cmti
-${PLIST.ocaml-opt}lib/ocaml/compiler-libs/cmxs_format.mli
+lib/ocaml/compiler-libs/cmx_format.cmi
+lib/ocaml/compiler-libs/cmx_format.cmti
+lib/ocaml/compiler-libs/cmx_format.mli
+lib/ocaml/compiler-libs/cmxs_format.cmi
+lib/ocaml/compiler-libs/cmxs_format.cmti
+lib/ocaml/compiler-libs/cmxs_format.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/coloring.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/coloring.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/coloring.cmti
@@ -500,13 +500,13 @@ lib/ocaml/compiler-libs/compmisc.cmt
 lib/ocaml/compiler-libs/compmisc.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/compmisc.cmx
 lib/ocaml/compiler-libs/compmisc.mli
-lib/ocaml/compiler-libs/compute_ranges.cmi
-lib/ocaml/compiler-libs/compute_ranges.cmt
-lib/ocaml/compiler-libs/compute_ranges.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/compute_ranges.cmi
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/compute_ranges.cmt
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/compute_ranges.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/compute_ranges.cmx
-lib/ocaml/compiler-libs/compute_ranges.mli
-lib/ocaml/compiler-libs/compute_ranges_intf.cmi
-lib/ocaml/compiler-libs/compute_ranges_intf.cmt
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/compute_ranges.mli
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/compute_ranges_intf.cmi
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/compute_ranges_intf.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/compute_ranges_intf.cmx
 lib/ocaml/compiler-libs/config.cmi
 lib/ocaml/compiler-libs/config.cmt
@@ -518,11 +518,11 @@ lib/ocaml/compiler-libs/consistbl.cmt
 lib/ocaml/compiler-libs/consistbl.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/consistbl.cmx
 lib/ocaml/compiler-libs/consistbl.mli
-lib/ocaml/compiler-libs/convert_primitives.cmi
-lib/ocaml/compiler-libs/convert_primitives.cmt
-lib/ocaml/compiler-libs/convert_primitives.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/convert_primitives.cmi
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/convert_primitives.cmt
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/convert_primitives.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/convert_primitives.cmx
-lib/ocaml/compiler-libs/convert_primitives.mli
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/convert_primitives.mli
 lib/ocaml/compiler-libs/ctype.cmi
 lib/ocaml/compiler-libs/ctype.cmt
 lib/ocaml/compiler-libs/ctype.cmti
@@ -538,11 +538,11 @@ ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/deadcode.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/deadcode.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/deadcode.cmx
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/deadcode.mli
-${PLIST.ocaml-opt}lib/ocaml/compiler-libs/debuginfo.cmi
-${PLIST.ocaml-opt}lib/ocaml/compiler-libs/debuginfo.cmt
-${PLIST.ocaml-opt}lib/ocaml/compiler-libs/debuginfo.cmti
+lib/ocaml/compiler-libs/debuginfo.cmi
+lib/ocaml/compiler-libs/debuginfo.cmt
+lib/ocaml/compiler-libs/debuginfo.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/debuginfo.cmx
-${PLIST.ocaml-opt}lib/ocaml/compiler-libs/debuginfo.mli
+lib/ocaml/compiler-libs/debuginfo.mli
 lib/ocaml/compiler-libs/depend.cmi
 lib/ocaml/compiler-libs/depend.cmt
 lib/ocaml/compiler-libs/depend.cmti
@@ -752,11 +752,11 @@ lib/ocaml/compiler-libs/instruct.cmt
 lib/ocaml/compiler-libs/instruct.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/instruct.cmx
 lib/ocaml/compiler-libs/instruct.mli
-${PLIST.ocaml-opt}lib/ocaml/compiler-libs/int_replace_polymorphic_compare.cmi
-${PLIST.ocaml-opt}lib/ocaml/compiler-libs/int_replace_polymorphic_compare.cmt
-${PLIST.ocaml-opt}lib/ocaml/compiler-libs/int_replace_polymorphic_compare.cmti
+lib/ocaml/compiler-libs/int_replace_polymorphic_compare.cmi
+lib/ocaml/compiler-libs/int_replace_polymorphic_compare.cmt
+lib/ocaml/compiler-libs/int_replace_polymorphic_compare.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/int_replace_polymorphic_compare.cmx
-${PLIST.ocaml-opt}lib/ocaml/compiler-libs/int_replace_polymorphic_compare.mli
+lib/ocaml/compiler-libs/int_replace_polymorphic_compare.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/interf.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/interf.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/interf.cmti
@@ -1148,11 +1148,11 @@ ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/selection.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/selection.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/selection.cmx
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/selection.mli
-lib/ocaml/compiler-libs/semantics_of_primitives.cmi
-lib/ocaml/compiler-libs/semantics_of_primitives.cmt
-lib/ocaml/compiler-libs/semantics_of_primitives.cmti
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/semantics_of_primitives.cmi
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/semantics_of_primitives.cmt
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/semantics_of_primitives.cmti
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/semantics_of_primitives.cmx
-lib/ocaml/compiler-libs/semantics_of_primitives.mli
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/semantics_of_primitives.mli
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/set_of_closures_id.cmi
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/set_of_closures_id.cmt
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/set_of_closures_id.cmti
