@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.19 2021/11/01 20:30:27 wiz Exp $
+$NetBSD: distinfo,v 1.20 2022/03/26 22:06:10 tnn Exp $
 
 BLAKE2s (ladspa_sdk_1.17.tgz) = 9876c59c12ab9d15fab0fd6d9771d9a9e3b47af1fa286cdaf987d5e778ea0002
 SHA512 (ladspa_sdk_1.17.tgz) = 37f94aa52b5a2f8709528989dea289eb01342f3bcb9e85d0f4829ddd9d90b2934a113db11100f09375a50f6612122b78156fec916f2c78a22406253d5cb394c7
 Size (ladspa_sdk_1.17.tgz) = 71052 bytes
 SHA1 (patch-src_Makefile) = 7ec30356b85414d90194ad90b1ac50d1840aa947
 SHA1 (patch-src_applyplugin.c) = 0a3fb3f02d46655d913249e8f6f81bad04b6e4bc
+SHA1 (patch-src_plugins_sine.cpp) = e5b266e388ff8a568d598cb3e148ecc29e4e9148
