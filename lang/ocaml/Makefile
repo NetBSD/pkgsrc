@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.142 2021/11/29 16:24:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.143 2022/03/26 19:19:07 jaapb Exp $
 
 .include "Makefile.common"
 
-#CONFIGURE_ENV+=		disable_x11=yes
+#CONFIGURE_ENV+=	disable_x11=yes
+PKGREVISION=		1
 
 BUILD_TARGET=		world
 TEST_PROGRAM=		ocamltest
