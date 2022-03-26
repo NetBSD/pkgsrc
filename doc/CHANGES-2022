@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1554 2022/03/26 13:07:07 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1555 2022/03/26 19:19:32 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2046,3 +2046,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/py310-html-docs to 3.10.4 [adam 2022-03-25]
 	Updated mail/mutt to 2.2.2 [tron 2022-03-25]
 	Updated sysutils/ioping to 1.2nb1 [wiz 2022-03-26]
+	Updated lang/ocaml to 4.11.2nb1 [jaapb 2022-03-26]
