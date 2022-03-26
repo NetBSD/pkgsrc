@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/10/17 17:27:48 tm Exp $
+# $NetBSD: Makefile,v 1.4 2022/03/26 13:06:58 wiz Exp $
 
 DISTNAME=	ioping-1.2
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=koct9i/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
