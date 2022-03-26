@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.56 2022/03/19 00:37:44 gutteridge Exp $
+$NetBSD: distinfo,v 1.57 2022/03/26 15:24:29 tnn Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -792,4 +792,5 @@ Size (xml5ever-0.16.2.crate) = 40971 bytes
 BLAKE2s (yeslogic-fontconfig-sys-2.11.2.crate) = a431400dd6e7e2cae85dde14dc21435b5ec634db0c76c1fedc1ce910f183e710
 SHA512 (yeslogic-fontconfig-sys-2.11.2.crate) = cc43091ac04bbd4bd34ee413d93f46f9b7c4188425b38dbb6cf332926ca471f0567cdc3d33c78f441b3dcaf831124a1b1b59375b7c2a8b55198ed9b6dc444b2e
 Size (yeslogic-fontconfig-sys-2.11.2.crate) = 5763 bytes
+SHA1 (patch-.._vendor_cfg-expr-0.10.2_src_targets_builtins.rs) = bd2966b2668880739f684c6ffc6a41c28d9f2f62
 SHA1 (patch-Makefile.in) = 1aa0042de20a30daafae84510e2f76877ff38a99
