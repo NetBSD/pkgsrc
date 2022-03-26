@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2021/12/07 16:34:44 jperkin Exp $
+$NetBSD: distinfo,v 1.17 2022/03/26 19:25:51 tnn Exp $
 
 BLAKE2s (capstone-4.0.2.tar.gz) = d3767b622f0a91b3f38a24817097975ecbf4126b3118b6059dfa4a8b12d01f61
 SHA512 (capstone-4.0.2.tar.gz) = 7f93534517307b737422a8825b66b2a1f3e1cca2049465d60ab12595940154aaf843ba40ed348fce58de58b990c19a0caef289060eb72898cb008a88c470970e
@@ -7,3 +7,5 @@ SHA1 (patch-Makefile) = a96441309efa54cb8ec1beacb44891f981b0db3e
 SHA1 (patch-bindings_python_capstone_____init____.py) = ea410a99d4cd4ee0a109a7225b739971472c387d
 SHA1 (patch-bindings_python_setup.py) = aebe4104ece594a7432961dd07c5d739da70f963
 SHA1 (patch-cstool_Makefile) = 68dd0a175d0e2270e2813f784cae5ca9f89a3a05
+SHA1 (patch-cstool_getopt.h) = 662a70f1718654935ae0bfa32e79fc7fe3ef7fcb
+SHA1 (patch-suite_fuzz_driverbin.c) = c7ddd8ea65d8aea357ba086d6a57e0412fa2c193
