@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.356 2022/03/12 08:05:24 nia Exp $
+# $NetBSD: Makefile,v 1.357 2022/03/26 09:34:49 tnn Exp $
 
 DISTNAME=	gimp-2.10.30
 CATEGORIES=	graphics
@@ -10,6 +10,7 @@ HOMEPAGE=	https://www.gimp.org/
 COMMENT=	The GNU image manipulation program
 LICENSE=	gnu-lgpl-v3 AND gnu-gpl-v3
 
+BUILD_DEPENDS+=	vera-ttf-[0-9]*:../../fonts/vera-ttf
 TOOL_DEPENDS+=	gettext-tools>=0.19:../../devel/gettext-tools
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 DEPENDS+=	glib-networking>=2.36.2:../../net/glib-networking
