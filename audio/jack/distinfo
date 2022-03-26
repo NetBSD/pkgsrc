@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2021/10/26 09:59:03 nia Exp $
+$NetBSD: distinfo,v 1.32 2022/03/26 22:36:19 tnn Exp $
 
 BLAKE2s (jack2-1.9.19.tar.gz) = aa43a3ae606c00e7c8e047e89250e068717f44fa0443b8531a6d83ca2a9dff71
 SHA512 (jack2-1.9.19.tar.gz) = d8d5fe17e2984959546af3c53f044aa4648860e19ff8ffd54452e87fa6cdfd111f825c57e3df17cb8ed95de8392b6f354b12ded41e3e021a37f07b99a89ba18d
@@ -18,6 +18,7 @@ SHA1 (patch-netbsd_sun_JackSunDriver.h) = 9da5fbec2216081876174057f831da4c54e302
 SHA1 (patch-posix_JackNetUnixSocket.cpp) = 562242daf7c0f296bfcd03f468518aaf18d995d9
 SHA1 (patch-posix_JackNetUnixSocket.h) = ce9a9255dc0dd423562b94b0fcc1012c8ba3a37e
 SHA1 (patch-posix_JackPosixSemaphore.cpp) = 59425ada11a5cab83159691ae10a23c0d36750ef
+SHA1 (patch-posix_JackPosixThread.h) = 0aa94425ad44cc36fb583e48bdfa9f5f33a5eaa3
 SHA1 (patch-posix_JackSocket.cpp) = 88ae18c3d2cc31a43355ff9b0c78ab13b83bd314
 SHA1 (patch-tests_wscript) = e0bf616175a116df489808cda8cb8c70890d4da0
 SHA1 (patch-tools_wscript) = fab7472b29fc6e46ba1e8ca94c12aa8808b075da
