@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2020,v 1.6871 2021/04/27 10:11:22 wiz Exp $
+$NetBSD: CHANGES-2020,v 1.6872 2022/03/26 19:24:29 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2020:
 
@@ -6968,6 +6968,7 @@ Changes to the packages collection and infrastructure in 2020:
 	Updated lang/go114 to 1.14.7 [bsiegert 2020-08-14]
 	Updated mail/neomutt to 20200814 [wiz 2020-08-14]
 	Updated www/p5-libwww to 6.46 [wen 2020-08-14]
+	Updated devel/capstone to 4.0.2 [riastradh 2020-08-18]
 	Updated devel/popt to 1.18 [tnn 2020-08-15]
 	Updated devel/git-lfs to 2.11.0 [tnn 2020-08-15]
 	Updated net/ntp4 to 4.2.8p15 [tnn 2020-08-15]
