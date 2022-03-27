@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:33:48 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/03/27 10:26:53 nia Exp $
 
 BLAKE2s (FileRunner-2.5.1.tar.gz) = 7dbf2b69423ba302f4e94d828f284b8b632c16f81dfd2e5826b5c3d31e28a123
 SHA512 (FileRunner-2.5.1.tar.gz) = 922740549af2c03be47dfcf7e29815d682eebe63f06f7aaebdfa576e0f7fcb596150e76aa2b032046c4cb1cff4aae836b3e4c4fc6ae56b25ca63684f7d75e25e
 Size (FileRunner-2.5.1.tar.gz) = 122795 bytes
-SHA1 (patch-aa) = 3e929372fee6620c23022e5eaecd33830d9151f7
+SHA1 (patch-Makefile) = 83631302e9587df250f771e8deaa3394a62ec345
 SHA1 (patch-ab) = 58bc890c640a9b58589e9fcdef7a9201f84f6e53
 SHA1 (patch-ac) = fdef8612ff1ea187fbe26cb203f8f3f006032ef3
 SHA1 (patch-ad) = cf7999d58ec441b03a3baa5d8097b26781bd00eb
