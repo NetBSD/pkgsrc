@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:49:31 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/03/27 12:45:04 tnn Exp $
 
 BLAKE2s (en_dict-20121020.tar.gz) = 9945545f2402d0eb35bd46701e51f191da0b740854d0c8da11d7670aa1ad014f
 SHA512 (en_dict-20121020.tar.gz) = 8418bd02492bfd786c0fab93be4400ef027ec8e9fac02220cc1f653f5eb67f54573a6a84a15baba19bb34ab892745c87df16499d6304ea75009131e2ab3b97f2
@@ -7,6 +7,8 @@ BLAKE2s (fcitx5-5.0.5.tar.xz) = c4265cf8b03f0a1629355052808942be464f5e49fefa8e49
 SHA512 (fcitx5-5.0.5.tar.xz) = 3bc1a51119c9ee0c62a7112b520f88bdc6afe10b6a7d61c97d4b7b69556716a15815b9523eb9aa566918217ad299285116a60a60978cd8297225e6f4b856785a
 Size (fcitx5-5.0.5.tar.xz) = 1294560 bytes
 SHA1 (patch-src_frontend_ibusfrontend_ibusfrontend.cpp) = 06d009f2d3977f5f72ca727a41e6aeb15aa257a2
+SHA1 (patch-src_lib_fcitx-utils_endian__p.h) = dfc1ec5fdfacc589b2b0755066e8d3bc22419eb4
+SHA1 (patch-src_lib_fcitx-utils_library.cpp) = 89f5a45336823057fcaedb0b3dac5b546e15c537
 SHA1 (patch-src_lib_fcitx-utils_misc.cpp) = 3f7b13bea6fba8d59935465b3ede3732b1571c26
 SHA1 (patch-src_modules_spell_dict_CMakeLists.txt) = 3bbb67be4209af3d0cc50687c1f1be2ab8757c66
 SHA1 (patch-test_testdbus.cpp) = e20ca569ec6e79a7565471ebccd5fa54de645462
