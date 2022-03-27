@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/03/27 15:06:11 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2022/03/27 17:01:30 tnn Exp $
 
 GCC_PKGNAME=		gcc10
 PKGREVISION=		1
@@ -109,6 +109,8 @@ CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
 CONFIGURE_ARGS+=	--enable-threads=posix
 CONFIGURE_ARGS+=	--with-boot-ldflags=${BOOT_LDFLAGS:Q}
 CONFIGURE_ARGS+=	--without-zstd
+# causes build errors even when using lang/gcc10 to self-host.
+CONFIGURE_ARGS.SunOS+=	--disable-libsanitizer
 # multilib on Darwin requires fat-binaries
 CONFIGURE_ARGS.Darwin+=	--disable-multilib
 .if !empty(OSX_SDK_PATH)
