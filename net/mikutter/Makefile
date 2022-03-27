@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.206 2022/01/30 01:23:58 tsutsui Exp $
-#
+# $NetBSD: Makefile,v 1.207 2022/03/27 06:45:51 wiz Exp $
 
 DISTNAME=	mikutter-5.0.4
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -10,6 +9,8 @@ MAINTAINER=	tsutsui@NetBSD.org
 HOMEPAGE=	https://mikutter.hachune.net/
 COMMENT=	Simple, powerful, and moeful twitter client
 LICENSE=	mit AND cc-by-sa-v3.0
+
+RUBY_VERSIONS_INCOMPATIBLE=	26 # ruby-diva
 
 .include "../../lang/ruby/rubyversion.mk"
 
