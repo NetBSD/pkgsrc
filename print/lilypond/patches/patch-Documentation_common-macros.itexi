@@ -1,0 +1,45 @@
+$NetBSD: patch-Documentation_common-macros.itexi,v 1.1 2022/03/27 17:21:11 riastradh Exp $
+
+Fix makeinfo errors.
+
+Backported from upstream commit:
+
+https://gitlab.com/lilypond/lilypond/-/commit/094528f1d2dfa7de0ee61a0f3081b4e72701eafb
+
+--- Documentation/common-macros.itexi.orig	2014-03-17 15:29:16.000000000 +0000
++++ Documentation/common-macros.itexi
+@@ -178,21 +178,21 @@ UNTRANSLATED NODE: IGNORE ME
+ @end macro
+ 
+ @ifclear web_version
+-  @ifclear bigpage
+-    @macro docLink{name,target,webLink}
+-      @uref{../\target\, \name\}
+-    @end macro
+-  @end ifclear
+-  @ifset bigpage
+-    @macro docLink{name,target,webLink}
+-      @uref{\target\, \name\}
+-    @end macro
+-  @end ifset
++@ifclear bigpage
++@macro docLink{name,target,webLink}
++@uref{../\target\, \name\}
++@end macro
++@end ifclear
++@ifset bigpage
++@macro docLink{name,target,webLink}
++@uref{\target\, \name\}
++@end macro
++@end ifset
+ @end ifclear
+ @ifset web_version
+-  @macro docLink{name,target,webLink}
+-    \webLink\
+-  @end macro
++@macro docLink{name,target,webLink}
++\webLink\
++@end macro
+ @end ifset
+ 
+ @macro miscLink{MISC-FILE,MISC-TEXT}
