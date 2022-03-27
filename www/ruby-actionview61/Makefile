@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/02/14 13:58:16 taca Exp $
+# $NetBSD: Makefile,v 1.2 2022/03/27 06:29:58 wiz Exp $
 
 DISTNAME=	actionview-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-actionview${RUBY_RAILS}-${RAILS_VERSION}
@@ -6,7 +6,7 @@ CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rubyonrails.org/
-COMMENT=	Rendering framework putting the V in MVC (part of Rails 6.0)
+COMMENT=	Rendering framework putting the V in MVC (part of Rails 6.1)
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}

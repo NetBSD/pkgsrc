@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/02/14 14:00:43 taca Exp $
+# $NetBSD: Makefile,v 1.2 2022/03/27 06:29:57 wiz Exp $
 
 DISTNAME=	activerecord-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-activerecord${RUBY_RAILS}-${RAILS_VERSION}
@@ -6,7 +6,7 @@ CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rubyonrails.org/
-COMMENT=	Object-relational mapper framework (part of Rails 6.0)
+COMMENT=	Object-relational mapper framework (part of Rails 6.1)
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
