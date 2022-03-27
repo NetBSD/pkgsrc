@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21625 2022/03/26 20:54:46 wiz Exp $
+$NetBSD: TODO,v 1.21626 2022/03/27 06:59:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -361,6 +361,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o GNUMail-1.2.2
 	o Gorm-1.2.26
 	o HElib-2.1.0
+	o ImageMagick-7.1.0.28
 	o ImageMagick6-6.9.12.8
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
@@ -517,6 +518,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o botan-devel-2.18.0
 	o bottlerocket-0.05b3
 	o breeze-icons-5.81.0
+	o broot-1.9.4
 	o bugzilla3-3.6.13
 	o bwm-ng-0.6.3
 	o byobu-5.133
@@ -687,6 +689,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o flatbuffers-1.12.0
 	o flow-tools-0.411
 	o fluent-bit-1.7.4
+	o fluidsynth-2.2.6
 	o foomatic-filters-4.0.12
 	o foomatic4-db-20210421
 	o fop-2.6
@@ -839,7 +842,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gst-rtsp-server-1.18.5
-	o gstreamer1-1.20.0
+	o gstreamer1-1.20.1
 	o gthumb-3.4.0
 	o gtk-gnutella-1.2.0
 	o gtk4+-4.4
@@ -865,6 +868,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o h8300-elf-gcc-7.1.0
 	o hamster-applet-2.32.1
 	o hanzim-3.5
+	o harfbuzz-4.1.0
 	o harmbase2-20210110
 	o harminv-1.4.1
 	o hashcash-1.23
@@ -969,6 +973,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kdnssd-5.81.0
 	o kdoctools-5.81.0
 	o kdsoap-1.10.0
+	o keepassxc-2.7.0
 	o kemoticons-5.81.0
 	o keybinder-0.3.2
 	o kfilemetadata-5.81.0
@@ -1189,6 +1194,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nant-0.92
 	o nap-1.5.3
 	o nas-auscope-1.9.4
+	o ncspot-0.9.7
 	o ncview-2.1.8
 	o nedit-5.7
 	o netbt-hcidump-5.58
@@ -1482,6 +1488,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o privoxy-3.0.33
 	o profit-2.5.3
 	o proj-8.0.0
+	o protobuf-3.20.0
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
@@ -1582,6 +1589,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rep-gtk-0.90.8.1
 	o reposurgeon-4.26
 	o resize_image-0.7
+	o restish-0.11.0
 	o rexx-regina-3.9.0
 	o riemann-client-1.10.4.1
 	o rio500-0.8.1
@@ -1600,6 +1608,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
 	o rump-20131213
+	o rust-analyzer-0.0.20220321
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
@@ -1742,6 +1751,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o top-3.8beta1
 	o topgit-0.8
 	o tor-browser-11.0.9 [wip]
+	o tor-browser-https-everywhere-2022.3.24
 	o torrentzip-2.1.0
 	o toxcore-0.2.12
 	o trafficserver-9.0.1
@@ -1767,6 +1777,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o userppp-030706
 	o userspace-rcu-0.12.2
 	o utilisp-1.14
+	o vala-0.56.0
 	o valgrind-3.18.1
 	o vault-1.7.4
 	o vbetool-1.1
@@ -1794,6 +1805,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wbm-virtual-server-6.16
 	o wcalc-2.4
 	o wcslib-7.6
+	o webkit-gtk-2.36.0
 	o websvn-2.6.0
 	o wgetpaste-2.30
 	o whowatch-1.8.5
@@ -1802,6 +1814,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wine-7.0
 	o wine-devel-3.7
 	o wiredtiger-10.0.0
+	o wireshark-3.6.3
 	o wkhtmltopdf-0.12.5
 	o wmi-11
 	o wordwarvi-1.0.4
