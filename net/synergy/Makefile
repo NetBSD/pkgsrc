@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2022/03/14 11:40:08 tnn Exp $
+# $NetBSD: Makefile,v 1.74 2022/03/27 02:10:15 tnn Exp $
 
 DISTNAME=		synergy-core-1.14.3.5
 PKGNAME=		${DISTNAME:S/-core//}
@@ -21,6 +21,7 @@ LICENSE=		gnu-gpl-v2
 
 USE_LANGUAGES=		c c++11
 USE_CMAKE=		yes
+USE_TOOLS+=		pkg-config
 CMAKE_ARGS+=		-DSYNERGY_BUILD_LEGACY_GUI=OFF
 CMAKE_ARGS+=		-DSYNERGY_BUILD_LEGACY_INSTALLER=OFF
 
