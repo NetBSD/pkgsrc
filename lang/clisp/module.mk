@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.12 2019/11/02 10:20:42 rillig Exp $
+# $NetBSD: module.mk,v 1.13 2022/03/27 10:57:59 nia Exp $
 #
 # Package-settable variables:
 #
@@ -15,6 +15,10 @@ BUILD_TARGET=		clisp-module	# converting to "all"
 CONFIGURE_ENV+=		ac_install_sh="install -c"
 CONFIGURE_ENV+=		ac_aux_dir=${PREFIX}/lib/clisp/build-aux/
 #TEST_TARGET=		check mod-check
+
+# XXX temporary workaround, links shared object with ld directly
+CHECK_RELRO_SUPPORTED=	no
+CHECK_PIE_SUPPORTED=	no
 
 INSTALLATION_DIRS=	lib/clisp
 
