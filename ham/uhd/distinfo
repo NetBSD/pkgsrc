@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.30 2022/01/04 17:29:06 adam Exp $
+$NetBSD: distinfo,v 1.31 2022/03/27 17:03:28 tnn Exp $
 
 BLAKE2s (uhd-4.1.0.5.tar.gz) = f172a3e30a7e6b81cf79ead0b7a7bb2f34ea55777b94152c2fec267b2f68586a
 SHA512 (uhd-4.1.0.5.tar.gz) = 4929ebc8a12bcc0acfe4a64ceafe17387420e2f056e7bb7284a8d7b60d14aba05484b3c033ce63b00c6d9115f570b056df4e2b36e11a2b25079a8c34b1d084af
 Size (uhd-4.1.0.5.tar.gz) = 37975618 bytes
 SHA1 (patch-CMakeLists.txt) = 16cc883a0bffdb6c3a4733dda7060bd206928d68
 SHA1 (patch-lib_transport_nirio_lvbitx_process-lvbitx.py) = 5117c7593c4e92ed6bfb86388cc366c41a1dead7
+SHA1 (patch-lib_usrp_mpmd_mpmd__link__if__ctrl__udp.cpp) = f94b2a282161474a0a91f333fd2d733ce7d1d4f3
+SHA1 (patch-lib_usrp_mpmd_mpmd__link__if__ctrl__udp.hpp) = 3106d28c4ddc38fd304eb94de5773ff56fed0fd8
