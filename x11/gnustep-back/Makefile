@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2021/12/08 16:02:50 adam Exp $
+# $NetBSD: Makefile,v 1.84 2022/03/27 08:11:35 nia Exp $
 
 GITHUB_PROJECT=	libs-back
 GITHUB_TAG=	back-0_28_0
@@ -19,6 +19,9 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/libexec/GNUstep
 LDFLAGS=		${COMPILER_RPATH_FLAG}${PREFIX}/lib
 MAKE_FILE=		GNUmakefile
+
+# /usr/bin/ld: -r and -pie may not be used together
+MKPIE_SUPPORTED=	no
 
 PLIST_SUBST=	API_VERSION=${PKGVERSION_NOREV:C/\.[0-9]$//:C/\.//}
 
