@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2020/01/26 17:30:52 rillig Exp $
+# $NetBSD: Makefile.common,v 1.6 2022/03/27 10:53:39 nia Exp $
 # used by databases/apache-cassandra/Makefile
 # used by databases/apache-cassandra2/Makefile
 #
@@ -74,8 +74,10 @@ CHECK_INTERPRETER_SKIP+=	share/cassandra/interface/cassandra.thrift
 CHECK_INTERPRETER_SKIP+=	share/cassandra/pylib/setup.py
 CHECK_INTERPRETER_SKIP+=	share/cassandra/tools/bin/token-generator
 
-# Skip checks on other arch libs to keep this simple
+# Skip checks on prebuilt binaries for various archs to keep this simple
 CHECK_SHLIBS_SKIP+=	share/cassandra/lib/sigar-bin/*
+CHECK_RELRO_SKIP+=	share/cassandra/lib/sigar-bin/*
+CHECK_PIE_SKIP+=	share/cassandra/lib/sigar-bin/*
 
 do-install:
 .for d in ${WORK_DIRS}
