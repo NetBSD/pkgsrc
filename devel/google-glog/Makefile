@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/02/20 20:46:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2022/03/27 13:41:06 tnn Exp $
 
 DISTNAME=	glog-0.4.0
 PKGNAME=	google-${DISTNAME}
@@ -18,6 +18,8 @@ USE_TOOLS+=	automake pkg-config
 USE_LANGUAGES=	c c++11
 
 PKGCONFIG_OVERRIDE+=	libglog.pc.in
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-pie
 
 .include "../../mk/bsd.prefs.mk"
 
