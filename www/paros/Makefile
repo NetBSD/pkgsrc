@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/11/06 13:33:48 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2022/03/27 10:29:40 nia Exp $
 
 DISTNAME=	paros-3.2.13-unix
 PKGNAME=	${DISTNAME:S/-unix//}
@@ -26,6 +26,8 @@ CHECK_SHLIBS_SKIP=	lib/paros/libmozembed-linux-gtk1.2.so
 CHECK_SHLIBS_SKIP+=	lib/paros/libmozembed-linux-gtk2.so
 CHECK_SHLIBS_SKIP+=	lib/paros/libjdic.so lib/paros/libtray.so
 CHECK_SSP_SKIP+=	${CHECK_SHLIBS_SKIP}
+CHECK_MKPIE_SUPPORTED=	no
+CHECK_RELRO_SUPPORTED=	no
 
 SUBST_CLASSES+=		java
 SUBST_MESSAGE.java=	Fixing hardcoded path to Java.
