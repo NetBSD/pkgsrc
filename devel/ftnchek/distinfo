@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:14:39 nia Exp $
+$NetBSD: distinfo,v 1.13 2022/03/27 15:08:48 nia Exp $
 
 BLAKE2s (ftnchek-3.3.1.tar.gz) = bef4fa4fde385b4cf90697e74a0613f5c63a8a175d193432f04097493fe96ea4
 SHA512 (ftnchek-3.3.1.tar.gz) = 14c698a6d936ffcd1966822f3b307fc2a70ffd5d58dcff27e10a9491562cff12ef75d98c0e67a7053e106df4f6b4d920e8164950778c5e13e7c15543fa2ecc41
 Size (ftnchek-3.3.1.tar.gz) = 1048638 bytes
-SHA1 (patch-aa) = 06fd3c31a337e6d11cf10740da3f1ff40860dcde
 SHA1 (patch-ab) = 3d3801e7da1aed77ec8215fbf189333ab3f92b4e
+SHA1 (patch-configure) = 43186592c61fb5a198b535d98ac18510b5747000
