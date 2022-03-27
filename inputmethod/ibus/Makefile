@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2022/03/15 13:13:36 tsutsui Exp $
+# $NetBSD: Makefile,v 1.86 2022/03/27 11:48:16 tnn Exp $
 
 .include "Makefile.common"
 
@@ -53,6 +53,12 @@ CONF_FILES+=		${PREFIX}/share/examples/ibus/dconf/profile/ibus \
 .if !empty(CC_VERSION:Mgcc-4.1.[0-9]*)
 BUILDLINK_TRANSFORM+=	rm:-Wno-unused-but-set-variable
 .endif
+
+# Trigger .vala->.c regeneration of files that contain
+# "#if USE_GDK_WAYLAND" preprocessing directives since we
+# might be on a platform where gtk3 is not built with Wayland.
+pre-build:
+	${TOUCH} ${WRKSRC}/ui/gtk3/*.vala
 
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/dconf/database.mk"
