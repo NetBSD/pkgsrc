@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2022/03/11 18:47:30 tnn Exp $
+$NetBSD: distinfo,v 1.10 2022/03/27 14:05:36 tnn Exp $
 
 BLAKE2s (addr2line-0.16.0.crate) = 24e229c429a7ffc5c9010ec4c102ab2fc3f9982cfa9897b42709fd96b8f83dc7
 SHA512 (addr2line-0.16.0.crate) = 7ea8fffcdff7f8f25c0a588fe2ee652053988ab2e1d39ac740f5199d6e7d30beed0272403d04b86ec5de6ad5459698cdf28f8efd5caab7b6693102df7ec4889c
@@ -699,4 +699,4 @@ Size (wyz-0.2.0.crate) = 12926 bytes
 BLAKE2s (xml-rs-0.8.3.crate) = c3e5a0929985c446b51db74417a531906b9dafaf25fb4aead3583422eb7d60f3
 SHA512 (xml-rs-0.8.3.crate) = e44048aa2a010c6242d79c8590bceb300d7056cfd1397c4e4e4411089a3c3686b49603fc2336ea69596b6775b729f1197ab6d9d7d8f83a758e2d962c07aec033
 Size (xml-rs-0.8.3.crate) = 52547 bytes
-SHA1 (patch-pgx_pgx-pg-sys_src_submodules_mod.rs) = b9f0666cdb8414ee8061607156422bc125b5f6db
+SHA1 (patch-pgx_pgx-pg-sys_src_submodules_mod.rs) = 45081b2295cea8ca0f936a0c60a5e4df3c32c83d
