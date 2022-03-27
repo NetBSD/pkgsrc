@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/12/19 06:26:54 taca Exp $
+# $NetBSD: Makefile,v 1.2 2022/03/27 06:29:59 wiz Exp $
 
 DISTNAME=	rails-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-rails${RUBY_RAILS}-${RAILS_VERSION}
@@ -6,7 +6,7 @@ CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rubyonrails.org/
-COMMENT=	Full-stack web application framework, Rails 6.0
+COMMENT=	Full-stack web application framework, Rails 7.0
 LICENSE=	mit
 
 #DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
