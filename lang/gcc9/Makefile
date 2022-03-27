@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2022/03/10 16:43:11 nia Exp $
+# $NetBSD: Makefile,v 1.36 2022/03/27 15:06:11 tnn Exp $
 
 GCC_PKGNAME=	gcc9
 .include "version.mk"
@@ -40,8 +40,6 @@ GCC9_PREFIX=		${PREFIX}/${GCC9_SUBPREFIX}
 GNU_CONFIGURE_PREFIX=	${GCC9_PREFIX}
 INFO_FILES=		yes
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
-CONFIGURE_ARGS+=	--with-system-zlib
-CONFIGURE_ARGS.Linux+=	--without-system-zlib # to prevent "-lz not found"
 
 UNLIMIT_RESOURCES=	datasize stacksize
 
@@ -204,7 +202,15 @@ GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
 	${FIND} ${GCC9_SUBPREFIX} \( -type f -o -type l \) -print | ${SORT};
 
+CHECK_BUILTIN.zlib:=	yes
+.include "../../devel/zlib/builtin.mk"
+CHECK_BUILTIN.zlib:=	no
+.if !empty(USE_BUILTIN.zlib:M[yY][eE][sS])
+CONFIGURE_ARGS+=	--with-system-zlib
 .include "../../devel/zlib/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-system-zlib
+.endif
 .include "../../lang/python/application.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
