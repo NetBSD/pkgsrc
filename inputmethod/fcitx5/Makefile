@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2021/12/08 16:05:12 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/03/27 13:17:34 tnn Exp $
 
 DISTNAME=	fcitx5-5.0.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	inputmethod
 MASTER_SITES=	https://download.fcitx-im.org/fcitx5/fcitx5/
 EXTRACT_SUFX=	.tar.xz
@@ -47,6 +47,16 @@ PKGCONFIG_OVERRIDE+=	src/lib/fcitx-utils/Fcitx5Utils.pc.in
 PKGCONFIG_OVERRIDE+=	src/lib/fcitx/Fcitx5Core.pc.in
 PKGCONFIG_OVERRIDE+=	src/modules/Fcitx5Module.pc.in
 
+SUBST_CLASSES+=		xdg
+SUBST_STAGE.xdg=	pre-configure
+SUBST_MESSAGE.xdg=	Fix desktop autostart file installation
+SUBST_FILES.xdg=	data/CMakeLists.txt
+SUBST_SED.xdg=		-e 's,{CMAKE_INSTALL_FULL_SYSCONFDIR}/xdg/autostart,{CMAKE_INSTALL_PREFIX}/share/examples/fcitx5,'
+
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart
+CONF_FILES+=	${PREFIX}/share/examples/fcitx5/org.fcitx.Fcitx5.desktop	\
+		${PKG_SYSCONFDIR}/xdg/autostart/org.fcitx.Fcitx5.desktop
+
 pre-configure:
 	${LN} -s ${DISTDIR}/en_dict-20121020.tar.gz \
 		${WRKSRC}/src/modules/spell/dict
@@ -61,6 +71,7 @@ pre-configure:
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/cldr-emoji-annotation/buildlink3.mk"
 .include "../../textproc/enchant2/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
