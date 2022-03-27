@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/17 15:16:25 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/03/27 13:17:34 tnn Exp $
 bin/fcitx5
 bin/fcitx5-configtool
 bin/fcitx5-diagnose
 bin/fcitx5-remote
-etc/xdg/autostart/org.fcitx.Fcitx5.desktop
 include/Fcitx5/Config/fcitx-config/configuration.h
 include/Fcitx5/Config/fcitx-config/dbushelper.h
 include/Fcitx5/Config/fcitx-config/enum.h
@@ -169,6 +168,7 @@ lib/pkgconfig/Fcitx5Utils.pc
 share/applications/fcitx5-configtool.desktop
 share/applications/org.fcitx.Fcitx5.desktop
 share/dbus-1/services/org.fcitx.Fcitx5.service
+share/examples/fcitx5/org.fcitx.Fcitx5.desktop
 share/fcitx5/addon/classicui.conf
 share/fcitx5/addon/clipboard.conf
 share/fcitx5/addon/dbus.conf
