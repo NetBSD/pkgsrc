@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2020/01/26 17:30:56 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2022/03/27 15:01:09 nia Exp $
 
 DISTNAME=	${PKGNAME_NOREV}
 PKGNAME=	eclipse-${VERSION}
@@ -41,6 +41,8 @@ do-build:
 NO_BUILD=		yes
 CHECK_SHLIBS_SUPPORTED=	no
 CHECK_SSP_SUPPORTED=	no
+CHECK_RELRO_SUPPORTED=	no
+CHECK_PIE_SUPPORTED=	no
 
 do-extract:
 	${MKDIR} ${WRKDIR}/result
