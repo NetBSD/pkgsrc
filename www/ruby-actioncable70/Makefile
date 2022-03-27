@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/12/19 06:16:32 taca Exp $
+# $NetBSD: Makefile,v 1.2 2022/03/27 06:29:59 wiz Exp $
 
 DISTNAME=	actioncable-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-actioncable${RUBY_RAILS}-${RAILS_VERSION}
@@ -6,7 +6,7 @@ CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rubyonrails.org/
-COMMENT=	Toolkit for building modeling frameworks (part of Rails 6.0)
+COMMENT=	Toolkit for building modeling frameworks (part of Rails 7.0)
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_ACTIONPACK_DEPENDS}
