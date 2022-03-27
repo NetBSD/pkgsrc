@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2022/03/11 21:17:14 tnn Exp $
+$NetBSD: distinfo,v 1.13 2022/03/27 02:06:44 tnn Exp $
 
 BLAKE2s (git-lfs-3.1.2.tar.gz) = 88d36f8f444f7be1910fd6d0459a83cfb0b56e7bf39df5b2143b67ac25cad67f
 SHA512 (git-lfs-3.1.2.tar.gz) = de2b56146b929adf7f6ff1989f07d4aca59bde218a51273c0d443a4cace0ccfcf9d4d72c2458c53f95fe06f092baaf6ccbde304e9ca20691ccb9e7aa56f49ebb
@@ -333,4 +333,3 @@ Size (gopkg.in_yaml.v3_@v_v3.0.0-20200313102051-9f266ea9e77c.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.0-20200313102051-9f266ea9e77c.zip) = 179a5c92eac022e03c695f587194e22e5bdc5db9224b92d199205e48199c51c2
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.0-20200313102051-9f266ea9e77c.zip) = bee7757d760f5ba1b9f7523af358652a5cb65f2b0064da097f78450871b2636efcbab0298a9871bbb3ce8012bf95a155949251d4f61464dde510097b936b47a8
 Size (gopkg.in_yaml.v3_@v_v3.0.0-20200313102051-9f266ea9e77c.zip) = 101467 bytes
-SHA1 (patch-lfshttp_certs__solaris.go) = d1bc60350e75d769585e311c543688e2e0eb5d72
