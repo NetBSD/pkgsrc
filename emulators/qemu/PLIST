@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.79 2021/12/16 12:59:43 tnn Exp $
+@comment $NetBSD: PLIST,v 1.80 2022/03/27 01:44:17 tnn Exp $
 bin/elf2dmp
 ${PLIST.aarch64}bin/qemu-aarch64
 ${PLIST.aarch64_be}bin/qemu-aarch64_be
@@ -72,12 +72,13 @@ bin/qemu-system-xtensaeb
 ${PLIST.x86_64}bin/qemu-x86_64
 ${PLIST.xtensa}bin/qemu-xtensa
 ${PLIST.xtensaeb}bin/qemu-xtensaeb
-include/qemu-plugin.h
+${PLIST.plugins}include/qemu-plugin.h
 ${PLIST.bridge-helper}libexec/qemu-bridge-helper
 ${PLIST.virtfs-proxy-helper}libexec/virtfs-proxy-helper
 man/man1/qemu-img.1
 man/man1/qemu-storage-daemon.1
 man/man1/qemu.1
+${PLIST.virtfs-proxy-helper}man/man1/virtfs-proxy-helper.1
 man/man7/qemu-block-drivers.7
 man/man7/qemu-cpu-models.7
 man/man7/qemu-ga-ref.7
@@ -86,7 +87,6 @@ man/man7/qemu-storage-daemon-qmp-ref.7
 man/man8/qemu-ga.8
 man/man8/qemu-nbd.8
 man/man8/qemu-pr-helper.8
-${PLIST.virtfs-proxy-helper}man/man1/virtfs-proxy-helper.1
 share/applications/qemu.desktop
 share/doc/qemu/.buildinfo
 share/doc/qemu/Makefile.multinode-NetBSD

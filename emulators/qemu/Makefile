@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.291 2021/12/16 12:59:43 tnn Exp $
+# $NetBSD: Makefile,v 1.292 2022/03/27 01:44:17 tnn Exp $
 
 DISTNAME=	qemu-6.2.0
 CATEGORIES=	emulators
@@ -143,6 +143,14 @@ PLIST.pr-helper=		yes
 .elif !empty(MACHINE_PLATFORM:MSunOS-5.11-*)
 PLIST.nbd=			yes
 CONFIGURE_ARGS+=		--disable-coroutine-pool
+.endif
+
+PLIST_VARS+=		plugins
+.if ${OPSYS} != "SunOS"
+PLIST.plugins=		yes
+CONFIGURE_ARGS+=	--enable-plugins
+.else
+CONFIGURE_ARGS+=	--disable-plugins
 .endif
 
 PLIST_VARS+=		${UE_ARCHS} bridge-helper keymap nbd pr-helper
