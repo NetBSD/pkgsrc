@@ -1,4 +1,4 @@
-# $NetBSD: u-boot.mk,v 1.34 2021/08/12 07:33:49 wiz Exp $
+# $NetBSD: u-boot.mk,v 1.35 2022/03/27 17:27:59 tnn Exp $
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
@@ -58,7 +58,7 @@ post-patch:
 do-configure:
 .if !empty(UBOOT_SWIG_VERSION:M3)
 	${MKDIR} -p ${BUILDLINK_DIR}/bin
-	${RM} -f ${BUILDLINK_DIR}/bin/swig3.0
+	${RM} -f ${BUILDLINK_DIR}/bin/swig
 	${LN} -s ${PREFIX}/bin/swig3.0 ${BUILDLINK_DIR}/bin/swig
 .endif
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${UBOOT_CONFIG}
