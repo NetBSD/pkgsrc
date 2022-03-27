@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2022/01/10 01:46:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.66 2022/03/27 17:03:28 tnn Exp $
 
 DISTNAME=	uhd-4.1.0.5
 PKGREVISION=	1
@@ -83,5 +83,6 @@ INSTALLATION_DIRS+=	share/uhd/images
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/orc/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
