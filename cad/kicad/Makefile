@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2022/03/23 23:07:23 tnn Exp $
+# $NetBSD: Makefile,v 1.62 2022/03/27 17:55:10 tnn Exp $
 #
 
 V=		6.0.2
@@ -18,7 +18,7 @@ DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++11
 USE_CMAKE=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config msgfmt msgmerge xgettext
 
 CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=		-DKICAD_SPICE=OFF
