@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1555 2022/03/26 19:19:32 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.1556 2022/03/27 17:20:50 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2047,3 +2047,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/mutt to 2.2.2 [tron 2022-03-25]
 	Updated sysutils/ioping to 1.2nb1 [wiz 2022-03-26]
 	Updated lang/ocaml to 4.11.2nb1 [jaapb 2022-03-26]
+	Updated audio/libsndfile to 1.1.0 [nia 2022-03-27]
