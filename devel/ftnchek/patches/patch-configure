@@ -1,8 +1,18 @@
-$NetBSD: patch-aa,v 1.7 2009/12/17 21:27:32 abs Exp $
+$NetBSD: patch-configure,v 1.1 2022/03/27 15:08:48 nia Exp $
 
---- configure.orig	2003-04-01 03:19:35.000000000 +0000
+Honor CFLAGS/LDFLAGS from environment.
+
+--- configure.orig	2004-12-29 19:14:28.000000000 +0000
 +++ configure
-@@ -5816,6 +5816,7 @@ case $host_os in
+@@ -6772,7 +6772,6 @@ fi
+ OS_FLAGS=
+ OPT=
+ LDLIBS=
+-LDFLAGS=
+ case $host_os in
+   aix*)
+     if test -z "$GCC"; then
+@@ -6822,6 +6821,7 @@ case $host_os in
      if test -n "$GCC"; then
        OPT="-O2";
      fi;;
@@ -10,7 +20,7 @@ $NetBSD: patch-aa,v 1.7 2009/12/17 21:27:32 abs Exp $
    next*)
      OPT="-O2";;
  
-@@ -5931,7 +5932,7 @@ else
+@@ -6945,7 +6945,7 @@ else
  fi
  
  
