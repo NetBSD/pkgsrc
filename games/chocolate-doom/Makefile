@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2021/12/08 16:04:25 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/03/28 10:44:06 tnn Exp $
 
 DISTNAME=	chocolate-doom-3.0.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	http://www.chocolate-doom.org/downloads/${PKGVERSION_NOREV}/
 
