@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2021/12/08 16:05:01 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/03/28 10:44:24 tnn Exp $
 
 DISTNAME=	f9036699b53a
 PKGNAME=	mojoshader-0.0.20210110
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	https://hg.icculus.org/icculus/mojoshader/archive/
 

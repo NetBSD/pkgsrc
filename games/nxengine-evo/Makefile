@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/01/18 15:23:24 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2022/03/28 10:44:14 tnn Exp $
 
 PKGNAME=	nxengine-evo-2.6.5.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES+=	nxengine-evo.tar.gz
