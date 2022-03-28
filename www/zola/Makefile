@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/03/28 11:30:50 nikita Exp $
+# $NetBSD: Makefile,v 1.8 2022/03/28 12:58:26 wiz Exp $
 
 DISTNAME=	zola-0.15.3
 CATEGORIES=	www
@@ -13,7 +13,7 @@ LICENSE=	mit
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gmake
 
-.include "crates.mk"
+.include "cargo-depends.mk"
 
 INSTALLATION_DIRS=	bin
 
