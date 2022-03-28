@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.13 2021/04/06 18:46:06 joerg Exp $
+# $NetBSD: depends.mk,v 1.14 2022/03/28 10:45:22 tnn Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -150,6 +150,8 @@ _DEPENDS_INSTALL_CMD=							\
 			${ERROR_MSG} "    stale work directory for $$dir?"; \
 			exit 1;						\
 		esac;							\
+		${STEP_MSG} "Cleaning in $$dir";			\
+		${SETENV} ${PKGSRC_MAKE_ENV} ${MAKE} ${MAKEFLAGS} clean; \
 		${STEP_MSG} "Returning to build of ${PKGNAME}";		\
 		;;							\
 	*)								\
