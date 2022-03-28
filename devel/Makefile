@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3700 2022/03/14 13:38:47 wiz Exp $
+# $NetBSD: Makefile,v 1.3701 2022/03/28 15:59:03 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2280,6 +2280,7 @@ SUBDIR+=	py-ailment
 SUBDIR+=	py-aiofiles
 SUBDIR+=	py-aiosignal
 SUBDIR+=	py-aiounittest
+SUBDIR+=	py-allpairspy
 SUBDIR+=	py-angr
 SUBDIR+=	py-anyio
 SUBDIR+=	py-anytree
