@@ -1,10 +1,28 @@
-$NetBSD: patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp,v 1.3 2019/12/13 09:48:02 mrg Exp $
+$NetBSD: patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp,v 1.4 2022/03/28 14:38:50 tnn Exp $
 
 Support NetBSD on x86, arm, arm64 and mips.
+Support SunOS (Illumos-derived) on x86_64 
 
---- Source/JavaScriptCore/heap/MachineStackMarker.cpp.orig	2019-06-26 09:25:02.000000000 -0700
-+++ Source/JavaScriptCore/heap/MachineStackMarker.cpp	2019-12-12 19:40:05.519044971 -0800
-@@ -665,6 +665,22 @@
+--- Source/JavaScriptCore/heap/MachineStackMarker.cpp.orig	2020-03-04 17:16:37.000000000 +0000
++++ Source/JavaScriptCore/heap/MachineStackMarker.cpp
+@@ -54,6 +54,7 @@
+ 
+ #if OS(SOLARIS)
+ #include <thread.h>
++#include <sys/regset.h>
+ #else
+ #include <pthread.h>
+ #endif
+@@ -483,7 +484,7 @@ size_t MachineThreads::Thread::getRegist
+     return sizeof(CONTEXT);
+ #elif USE(PTHREADS)
+     pthread_attr_init(&regs.attribute);
+-#if HAVE(PTHREAD_NP_H) || OS(NETBSD)
++#if HAVE(PTHREAD_NP_H) || OS(NETBSD) || OS(SOLARIS) /* XXX this is OK for Illumos, but not Oracle */
+ #if !OS(OPENBSD)
+     // e.g. on FreeBSD 5.4, neundorf@kde.org
+     pthread_attr_get_np(platformThread, &regs.attribute);
+@@ -665,6 +666,31 @@ void* MachineThreads::Thread::Registers:
  #error Unknown Architecture
  #endif
  
@@ -24,10 +42,19 @@ Support NetBSD on x86, arm, arm64 and mips.
 +#error Unknown Architecture
 +#endif
 +
++#elif OS(SOLARIS)
++#if CPU(X86)
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.gregs[REG_EBP]);
++#elif CPU(X86_64)
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.gregs[REG_RBP]);
++#else
++#error Unknown Architecture
++#endif
++
  #elif defined(__GLIBC__)
  
  // The following sequence depends on glibc's sys/ucontext.h.
-@@ -747,6 +763,22 @@
+@@ -747,6 +773,31 @@ void* MachineThreads::Thread::Registers:
  #error Unknown Architecture
  #endif
  
@@ -47,10 +74,19 @@ Support NetBSD on x86, arm, arm64 and mips.
 +#error Unknown Architecture
 +#endif
 +
++#elif OS(SOLARIS)
++#if CPU(X86)
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.gregs[REG_EIP]);
++#elif CPU(X86_64)
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.gregs[REG_RIP]);
++#else
++#error Unknown Architecture
++#endif
++
  #elif defined(__GLIBC__)
  
  // The following sequence depends on glibc's sys/ucontext.h.
-@@ -838,6 +870,22 @@
+@@ -838,6 +889,31 @@ void* MachineThreads::Thread::Registers:
  #error Unknown Architecture
  #endif
  
@@ -66,6 +102,15 @@ Support NetBSD on x86, arm, arm64 and mips.
 +    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.__gregs[_REG_R4]);
 +#elif CPU(MIPS)
 +    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.__gregs[_REG_T4]);
++#else
++#error Unknown Architecture
++#endif
++
++#elif OS(SOLARIS)
++#if CPU(X86)
++#error fixme
++#elif CPU(X86_64)
++    return reinterpret_cast<void*>((uintptr_t) regs.machineContext.gregs[REG_R8]);
 +#else
 +#error Unknown Architecture
 +#endif

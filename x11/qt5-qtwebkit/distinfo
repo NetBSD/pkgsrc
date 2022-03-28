@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2022/03/26 12:14:25 tnn Exp $
+$NetBSD: distinfo,v 1.25 2022/03/28 14:38:50 tnn Exp $
 
 BLAKE2s (qtwebkit-5.212.0-alpha4.tar.xz) = 20858db08c7d297037d3ced34e441d4b657325c406b475e4e76dd367dc9c500c
 SHA512 (qtwebkit-5.212.0-alpha4.tar.xz) = 33f11270bd030599beff9c1983a6c5ff2d61f407cc8a6825f7f405d46f9184c720fc7f60c7359f08f828db96a2170092875066a0d5c0a21ff09bc48a2603fbf6
@@ -10,12 +10,12 @@ SHA1 (patch-Source_JavaScriptCore_assembler_ARMAssembler.h) = 7bbb0a59a0c087abaa
 SHA1 (patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp) = d3ed3a25085752598dc04582eb80636c9cc6eaa9
 SHA1 (patch-Source_JavaScriptCore_dfg_DFGNode.h) = a3eba122c7226a80dacf1b762747fe0a7408b849
 SHA1 (patch-Source_JavaScriptCore_generate-bytecode-files) = b58ca94781fcf7b9f6a3eba715af2784e7a0acc0
-SHA1 (patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp) = 35f2ba0cc3fe0d76c28a3a244621291a17a5334a
+SHA1 (patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp) = 2b7dba0d0e87ed96c4d7de6ddb5833209cfe51b5
 SHA1 (patch-Source_JavaScriptCore_jit_ThunkGenerators.cpp) = f0ca56e4b4060c0a8d756289d7c25d1ead6b07be
 SHA1 (patch-Source_JavaScriptCore_tools_CodeProfiling.cpp) = 94c139413eecb875bba98c7749bba24cfcc16632
 SHA1 (patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h) = 1e4b8cffbd7ec0a6130a0ec2112023bed5c0b78e
 SHA1 (patch-Source_WTF_wtf_Assertions.cpp) = 15b8ac40e49cfec78d46de634fd6a1edde2d2a96
-SHA1 (patch-Source_WTF_wtf_InlineASM.h) = 64ea54605fbe787be57f7423e33802def66d6432
+SHA1 (patch-Source_WTF_wtf_InlineASM.h) = 7ffc086a21f645112ad10296571464a1e15b8b44
 SHA1 (patch-Source_WTF_wtf_MathExtras.h) = 7dac41bf3e50944e49c3e3c29d482d2c3300665d
 SHA1 (patch-Source_WTF_wtf_Platform.h) = 73e8b07e8d7e718abe986a12b9f0b903dfcc4765
 SHA1 (patch-Source_WTF_wtf_ThreadIdentifierDataPthreads.cpp) = bfa570aa20e3508c77bbaebed051821a33f36209
