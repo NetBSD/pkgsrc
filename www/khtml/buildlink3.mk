@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2021/11/15 22:54:00 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2022/03/28 10:59:31 tnn Exp $
 
 BUILDLINK_TREE+=	khtml
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	khtml
 KHTML_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.khtml+=	khtml>=5.21.0
-BUILDLINK_ABI_DEPENDS.khtml?=	khtml>=5.80.0nb4
+BUILDLINK_ABI_DEPENDS.khtml?=	khtml>=5.80.0nb6
 BUILDLINK_PKGSRCDIR.khtml?=	../../www/khtml
 
 .include "../../graphics/giflib/buildlink3.mk"
