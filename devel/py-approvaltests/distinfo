@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.35 2022/03/01 15:58:00 schmonz Exp $
+$NetBSD: distinfo,v 1.36 2022/03/28 15:57:19 schmonz Exp $
 
-BLAKE2s (approvaltests-4.0.0.tar.gz) = 79de9f81861d57ce771d10eff6691b90ffe4e961d94351f742cae42b3efd1426
-SHA512 (approvaltests-4.0.0.tar.gz) = aa1edf38e975ae0c3ddf70a9b686e46578e8d00a5675e51411f6057055887bc036ea88f25dec836dff341cce4007415fc249506388fc740746ba989516074bc1
-Size (approvaltests-4.0.0.tar.gz) = 27401 bytes
+BLAKE2s (approvaltests-4.1.0.tar.gz) = bdba99cd907da2afc7b4cde7beef6dbc7f478244b937131c804fcf2a5d7751d7
+SHA512 (approvaltests-4.1.0.tar.gz) = 14290df0bf8494178aa5619250876f887a02e227e8e248759775775cf173b1975c2102cdfd7ff93d1b308ba4af07454165ac4c00187c236525930af42f9740c8
+Size (approvaltests-4.1.0.tar.gz) = 27860 bytes
