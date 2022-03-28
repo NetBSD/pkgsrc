@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2022/01/16 18:06:26 tnn Exp $
+# $NetBSD: Makefile,v 1.52 2022/03/28 10:56:16 tnn Exp $
 
 PKGNAME=	gnuradio-doxygen-${VERSION}
+PKGREVISION=	1
 COMMENT=	Doxygen documentation of GNU Radio
 
 .include	"../../ham/gnuradio-core/Makefile.common"
