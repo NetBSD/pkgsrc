@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2021/12/08 16:04:38 adam Exp $
+# $NetBSD: Makefile,v 1.40 2022/03/28 10:44:14 tnn Exp $
 
 DISTNAME=	neverball-1.6.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	games
 MASTER_SITES=	http://neverball.org/
 
