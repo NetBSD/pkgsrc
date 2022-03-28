@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2020/08/18 17:57:24 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2022/03/28 10:43:30 tnn Exp $
 
 BUILDLINK_TREE+=	aubio
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	aubio
 AUBIO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.aubio+=	aubio>=0.3.2
-BUILDLINK_ABI_DEPENDS.aubio?=	aubio>=0.4.9nb3
+BUILDLINK_ABI_DEPENDS.aubio?=	aubio>=0.4.9nb6
 BUILDLINK_PKGSRCDIR.aubio?=	../../audio/aubio
 
 .include "../../audio/libsamplerate/buildlink3.mk"
