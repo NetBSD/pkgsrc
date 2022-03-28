@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2022/03/28 15:58:29 schmonz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/allpairspy/__init__.py
+${PYSITELIB}/allpairspy/__init__.pyc
+${PYSITELIB}/allpairspy/__init__.pyo
+${PYSITELIB}/allpairspy/__version__.py
+${PYSITELIB}/allpairspy/__version__.pyc
+${PYSITELIB}/allpairspy/__version__.pyo
+${PYSITELIB}/allpairspy/allpairs.py
+${PYSITELIB}/allpairspy/allpairs.pyc
+${PYSITELIB}/allpairspy/allpairs.pyo
+${PYSITELIB}/allpairspy/pairs_storage.py
+${PYSITELIB}/allpairspy/pairs_storage.pyc
+${PYSITELIB}/allpairspy/pairs_storage.pyo

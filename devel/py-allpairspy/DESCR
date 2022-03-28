@@ -1,0 +1,10 @@
+AllPairs is an open source test combinations generator. It allows one to
+create a set of tests using "pairwise combinations" method, reducing a
+number of combinations of variables into a lesser set that covers most
+situations. Features:
+
+- Produces good enough dataset.
+- Pythonic, iterator-style enumeration interface.
+- Allows to filter out "invalid" combinations during search for the next
+  combination.
+- Goes beyond pairs! If/when required can generate n-wise combinations.
