@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1559 2022/03/28 14:11:10 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1560 2022/03/28 15:27:21 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2051,3 +2051,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/zola to 0.15.3 [nikita 2022-03-28]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2022Q1 branch [wiz 2022-03-28]
 	Updated devel/taplo-lsp to 0.6.0 [wiz 2022-03-28]
+	Updated devel/mob to 3.0.0 [schmonz 2022-03-28]
