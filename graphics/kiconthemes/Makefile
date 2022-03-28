@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2021/12/08 16:02:10 adam Exp $
+# $NetBSD: Makefile,v 1.41 2022/03/28 10:44:22 tnn Exp $
 
 DISTNAME=	kiconthemes-${KF5VER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://community.kde.org/Frameworks

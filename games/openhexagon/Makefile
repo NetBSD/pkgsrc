@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/08/18 17:57:56 leot Exp $
+# $NetBSD: Makefile,v 1.3 2022/03/28 10:44:14 tnn Exp $
 #
 
 DISTNAME=	openhexagon-2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

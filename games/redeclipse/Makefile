@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2021/12/08 16:04:40 adam Exp $
+# $NetBSD: Makefile,v 1.9 2022/03/28 10:44:16 tnn Exp $
 
 DISTNAME=	redeclipse_2.0.0_nix
 PKGNAME=	redeclipse-2.0.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=redeclipse/}
 EXTRACT_SUFX=	.tar.bz2
