@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/12/02 12:30:20 nia Exp $
+# $NetBSD: Makefile,v 1.2 2022/03/28 10:43:35 tnn Exp $
 
 DISTNAME=	libgig-4.2.0
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://download.linuxsampler.org/packages/
 EXTRACT_SUFX=	.tar.bz2
