@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2021/12/08 16:03:01 adam Exp $
+# $NetBSD: Makefile,v 1.95 2022/03/28 23:10:44 tnn Exp $
 
 QTWKVERSION=	5.212.0-alpha4
 DISTNAME=	qtwebkit-${QTWKVERSION}
@@ -75,6 +75,11 @@ BUILDLINK_TRANSFORM+=	rpath:${WRKSRC}/lib:${QTDIR}/lib
 
 .if ${OPSYS} == "NetBSD" && !empty(MACHINE_ARCH:M*arm*)
 LDFLAGS+=	-Wl,--no-keep-memory
+.endif
+
+.if ${OPSYS} == "SunOS"
+CMAKE_ARGS+=	-DUSE_LINKER_VERSION_SCRIPT=OFF
+LDFLAGS+=	-lsocket -lnsl
 .endif
 
 # JavaScriptCore requires at least MIPS32.
