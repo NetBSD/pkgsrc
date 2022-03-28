@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2021/06/01 09:12:23 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2022/03/28 21:38:54 riastradh Exp $
 
-DISTNAME=	asymptote-2.41
-PKGREVISION=	8
+DISTNAME=	asymptote-2.79
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=asymptote/}
 EXTRACT_SUFX=	.tgz
@@ -19,6 +18,7 @@ TOOL_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
 TOOL_DEPENDS+=	tex-epsf-[0-9]*:../../print/tex-epsf
 TOOL_DEPENDS+=	tex-etoolbox-[0-9]*:../../devel/tex-etoolbox
 TOOL_DEPENDS+=	tex-kvsetkeys-[0-9]*:../../print/tex-kvsetkeys
+TOOL_DEPENDS+=	tex-media9-[0-9]*:../../print/tex-media9
 TOOL_DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
 TOOL_DEPENDS+=	tex-parskip-[0-9]*:../../print/tex-parskip
 TOOL_DEPENDS+=	tex-texinfo-[0-9]*:../../print/tex-texinfo
@@ -26,12 +26,16 @@ TOOL_DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 TOOL_DEPENDS+=	ghostscript-agpl>=9.16:../../print/ghostscript-agpl
 DEPENDS+=	tex-geometry-[0-9]*:../../print/tex-geometry
 
+# Unclear what version is required -- 4.8 is too old, 6.8 is new enough.
+# Let's just leave it at 6.8 since that's what's in pkgsrc now.
+TEXINFO_REQD=		6.8
+
 UNLIMIT_RESOURCES=	datasize
 MAKE_JOBS_SAFE=		no # random failure during build as of 2.38
 
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
-USE_LANGUAGES=		c c++03
+USE_LANGUAGES=		c c++11
 
 CONFIGURE_ARGS+=	--enable-gc=system
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
@@ -44,7 +48,7 @@ SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure
 SUBST_FILES.python=	Makefile.in
 SUBST_MESSAGE.python=	Fixing path to python interpreter.
-SUBST_SED.python+=	-e "s|/usr/bin/env python|${PYTHONBIN:Q}|g"
+SUBST_SED.python+=	-e "s|/usr/bin/env python3|${PYTHONBIN:Q}|g"
 
 # DragonFly has stripped makeinfo in the base - without texi2dvi.
 OPSYSVARS+=			TOOL_DEPENDS
