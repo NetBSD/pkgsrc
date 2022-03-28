@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/03/28 15:58:29 schmonz Exp $
+
+BLAKE2s (allpairspy-2.5.0.tar.gz) = 4c529fba0110e242e75d6d19f3aaf285b13a4499c9895c876f88079788d28384
+SHA512 (allpairspy-2.5.0.tar.gz) = 57ebcadec52fce7353fecc8d47d44f85e577594e3e7fa8670350817a848a6cdcd62908f1f371ca37d3ca7e8a49682888f38032b27c2abf734367076b08e2b4b0
+Size (allpairspy-2.5.0.tar.gz) = 10729 bytes
