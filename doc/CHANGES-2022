@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1556 2022/03/27 17:20:50 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1557 2022/03/28 11:31:29 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2048,3 +2048,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/ioping to 1.2nb1 [wiz 2022-03-26]
 	Updated lang/ocaml to 4.11.2nb1 [jaapb 2022-03-26]
 	Updated audio/libsndfile to 1.1.0 [nia 2022-03-27]
+	Updated www/zola to 0.15.3 [nikita 2022-03-28]
