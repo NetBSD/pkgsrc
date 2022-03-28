@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/03/01 09:33:09 jaapb Exp $
+# $NetBSD: Makefile,v 1.12 2022/03/28 17:08:09 tnn Exp $
 
 .include "Makefile.common"
 
@@ -33,6 +33,11 @@ OPAM_INSTALL_FILES=	dune-glob \
 			dune-build-info \
 			dune \
 			dune-private-libs
+
+SUBST_CLASSES+=		mandir
+SUBST_STAGE.mandir=	pre-configure
+SUBST_FILES.mandir=	src/dune_engine/install.ml
+SUBST_SED.mandir=	-e 's,sprintf "man%c",sprintf  "${PKGMANDIR}%c",'
 
 post-build:
 	${RUN} cd ${WRKSRC} && ./dune.exe build -p dune,dune-action-plugin,dune-build-info,dune-glob,dune-private-libs @install
