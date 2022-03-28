@@ -1,4 +1,4 @@
-# $NetBSD: crates.mk,v 1.1 2022/03/28 11:30:50 nikita Exp $
+# $NetBSD: cargo-depends.mk,v 1.1 2022/03/28 12:58:26 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	adler32-1.2.0
