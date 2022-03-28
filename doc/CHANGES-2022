@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1567 2022/03/28 20:12:45 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1568 2022/03/28 21:45:06 riastradh Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2064,3 +2064,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/simde version 0.7.2 [bacon 2022-03-28]
 	Updated misc/stellarium to 0.22.0 [adam 2022-03-28]
 	Updated net/py-scp to 0.14.4 [adam 2022-03-28]
+	Updated graphics/asymptote to 2.79 [riastradh 2022-03-28]
