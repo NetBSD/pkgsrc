@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2020/12/03 21:37:10 nia Exp $
+# $NetBSD: Makefile,v 1.8 2022/03/28 10:43:40 tnn Exp $
 
 DISTNAME=	vamp-plugin-sdk-2.10.0
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://code.soundsoftware.ac.uk/attachments/download/2691/
 

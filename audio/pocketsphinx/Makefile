@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2020/12/04 20:44:59 nia Exp $
+# $NetBSD: Makefile,v 1.9 2022/03/28 10:43:38 tnn Exp $
 
 DISTNAME=	pocketsphinx-0.8
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cmusphinx/}
 
