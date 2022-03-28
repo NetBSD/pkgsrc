@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/12/04 20:45:05 nia Exp $
+# $NetBSD: Makefile,v 1.5 2022/03/28 15:51:46 wiz Exp $
 
 R_PKGNAME=	tcltk2
 R_PKGVER=	1.2-11
@@ -8,6 +8,8 @@ CATEGORIES=	devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Tcl/Tk additions
 LICENSE=	gnu-lgpl-v3	# + file LICENSE
+
+BROKEN=		"Infinite loop during build, see pkg/56696"
 
 USE_LANGUAGES=	# none
 
