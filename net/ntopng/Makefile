@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2021/12/08 16:06:04 adam Exp $
+# $NetBSD: Makefile,v 1.56 2022/03/28 19:32:24 adam Exp $
 
-DISTNAME=	ntopng-4.2
-PKGREVISION=	3
+DISTNAME=	ntopng-5.2.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ntop/}
 
@@ -22,7 +21,7 @@ RCD_SCRIPTS+=		ntopng
 
 CXXFLAGS+=		-std=c++11  # va_copy()
 
-MAKE_FLAGS+=		LUA_LIB=-llua5.3
+MAKE_FLAGS+=		LUA_LIB=-llua5.4
 
 # Portable types
 CFLAGS.SunOS+=		-Du_int8_t=uint8_t
@@ -37,23 +36,22 @@ REPLACE_BASH+=		httpdocs/misc/ntopng-utils-manage-config.in
 SUBST_CLASSES+=		fix-vers
 SUBST_STAGE.fix-vers=	pre-configure
 SUBST_MESSAGE.fix-vers=	Setting package version.
-SUBST_FILES.fix-vers=	configure.seed
+SUBST_FILES.fix-vers=	configure.ac.in
 SUBST_SED.fix-vers=	-e 's,@VERSION@,${PKGVERSION},g'
 SUBST_SED.fix-vers+=	-e 's,@SHORT_VERSION@,${PKGVERSION_NOREV},g'
 
-CHECK_PORTABILITY_SKIP=	third-party/zeromq-4.1.7/configure
-
 pre-configure:
-	cd ${WRKSRC} && ${CP} configure.seed configure.ac && autoreconf -fiv
+	cd ${WRKSRC} && ${CP} configure.ac.in configure.ac && autoreconf -fiv
 
 post-build:
 	${FIND} ${WRKSRC}/httpdocs -type f -print0 | xargs -0 chmod a-x
 
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../databases/hiredis/buildlink3.mk"
 .include "../../databases/rrdtool/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../geography/libmaxminddb/buildlink3.mk"
-.include "../../lang/lua53/buildlink3.mk"
+.include "../../lang/lua54/buildlink3.mk"
 .include "../../net/GeoIP/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../net/ndpi/buildlink3.mk"
