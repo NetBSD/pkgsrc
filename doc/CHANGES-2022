@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1557 2022/03/28 11:31:29 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.1558 2022/03/28 13:42:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2049,3 +2049,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/ocaml to 4.11.2nb1 [jaapb 2022-03-26]
 	Updated audio/libsndfile to 1.1.0 [nia 2022-03-27]
 	Updated www/zola to 0.15.3 [nikita 2022-03-28]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2022Q1 branch [wiz 2022-03-28]
