@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2021/09/20 21:09:47 wiz Exp $
+# $NetBSD: Makefile,v 1.114 2022/03/28 19:33:14 bouyer Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -68,6 +68,7 @@ SUBDIR+=	opencpn
 SUBDIR+=	opencpn-plugin-debugger
 SUBDIR+=	opencpn-plugin-draw
 SUBDIR+=	opencpn-plugin-gshhs
+SUBDIR+=	opencpn-plugin-plots
 SUBDIR+=	opencpn-plugin-statusbar
 SUBDIR+=	opencpn-plugin-watchdog
 SUBDIR+=	opencpn-plugin-weather_routing
