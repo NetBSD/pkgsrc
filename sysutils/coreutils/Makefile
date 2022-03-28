@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.81 2021/10/03 13:11:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.82 2022/03/28 19:48:29 wiz Exp $
 
 .include "../../sysutils/coreutils/Makefile.common"
-
-CONFIGURE_ARGS+=	--without-gmp
 
 CONFLICTS=	fileutils-[0-9]* gnuls-[0-9]* linuxls-[0-9]* sh-utils-[0-9]* textutils-[0-9]*
 
