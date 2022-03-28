@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/11/15 22:05:22 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/03/28 10:43:33 tnn Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-bad/-sndfile/}
+PKGREVISION=	1
 CATEGORIES=	audio gnome
 
 COMMENT=	Open source multimedia framework - libsndfile plugin
