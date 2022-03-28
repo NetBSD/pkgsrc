@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.235 2022/02/13 10:42:46 nia Exp $
+# $NetBSD: Makefile,v 1.236 2022/03/28 10:53:06 tnn Exp $
 
 DISTNAME=	wine-5.0.5
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	emulators
 MASTER_SITES=	https://dl.winehq.org/wine/source/${PKGVERSION_NOREV:R}/
 MASTER_SITES+=	http://mirrors.ibiblio.org/wine/source/${PKGVERSION_NOREV:R}/
