@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2022/02/13 11:44:43 nia Exp $
+# $NetBSD: Makefile,v 1.13 2022/03/28 10:43:38 tnn Exp $
 
 DISTNAME=	pt2-clone-1.40
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=8bitbubsy/}
 GITHUB_PROJECT=	pt2-clone
