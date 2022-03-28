@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2022/01/10 17:05:27 adam Exp $
+# $NetBSD: Makefile,v 1.42 2022/03/28 21:50:42 wiz Exp $
 
 DISTNAME=	psutil-5.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/psutil/}
 
