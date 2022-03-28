@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1564 2022/03/28 19:34:35 bouyer Exp $
+$NetBSD: CHANGES-2022,v 1.1565 2022/03/28 19:41:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2057,3 +2057,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/ndpi to 4.2 [adam 2022-03-28]
 	Updated net/ntopng to 5.2.1 [adam 2022-03-28]
 	Added geography/opencpn-plugin-plots version 2.2.12 [bouyer 2022-03-28]
+	Updated databases/sqlite3 to 3.38.2 [adam 2022-03-28]
+	Updated databases/sqlite3-docs to 3.38.2 [adam 2022-03-28]
+	Updated databases/sqlite3-tcl to 3.38.2 [adam 2022-03-28]
+	Updated devel/lemon to 1.0.3.38.2 [adam 2022-03-28]
