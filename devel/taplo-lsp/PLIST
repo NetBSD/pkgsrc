@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2021/12/21 15:10:51 wiz Exp $
-bin/taplo-lsp
+@comment $NetBSD: PLIST,v 1.2 2022/03/28 14:11:01 wiz Exp $
+bin/taplo
