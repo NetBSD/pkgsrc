@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1563 2022/03/28 19:32:43 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1564 2022/03/28 19:34:35 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2056,3 +2056,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/py-allpairspy version 2.5.0 [schmonz 2022-03-28]
 	Updated net/ndpi to 4.2 [adam 2022-03-28]
 	Updated net/ntopng to 5.2.1 [adam 2022-03-28]
+	Added geography/opencpn-plugin-plots version 2.2.12 [bouyer 2022-03-28]
