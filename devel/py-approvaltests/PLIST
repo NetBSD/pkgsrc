@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2022/02/21 11:02:13 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.15 2022/03/28 15:57:19 schmonz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -55,6 +55,9 @@ ${PYSITELIB}/approvaltests/file_approver.pyo
 ${PYSITELIB}/approvaltests/list_utils.py
 ${PYSITELIB}/approvaltests/list_utils.pyc
 ${PYSITELIB}/approvaltests/list_utils.pyo
+${PYSITELIB}/approvaltests/pairwise_combinations.py
+${PYSITELIB}/approvaltests/pairwise_combinations.pyc
+${PYSITELIB}/approvaltests/pairwise_combinations.pyo
 ${PYSITELIB}/approvaltests/pytest/__init__.py
 ${PYSITELIB}/approvaltests/pytest/__init__.pyc
 ${PYSITELIB}/approvaltests/pytest/__init__.pyo
