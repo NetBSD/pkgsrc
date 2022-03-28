@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2021/12/08 16:04:41 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/03/28 10:44:17 tnn Exp $
 
 DISTNAME=	simutrans-src-121-0
 PKGNAME=	${DISTNAME:S/-/./g:S/.src./-/1}
-PKGREVISION=	4
+PKGREVISION=	5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=simutrans/}
 CATEGORIES=	games
 EXTRACT_SUFX=	.zip
