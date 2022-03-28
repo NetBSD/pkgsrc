@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:06:09 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/03/28 19:32:24 adam Exp $
 
-BLAKE2s (ntopng-4.2.tar.gz) = 1dbf55dc0e6e3824ef7df9232881872b33aafcc8d24062d160c1e1d6adf1ee60
-SHA512 (ntopng-4.2.tar.gz) = e89ec3f35644ae8bc570d9802ecfadbf0067145e23a589df2032e8781e9c954f4166d3abb650ddafc65e4fbad656730ee1abf9c5273d3e09f8173d423436b8ff
-Size (ntopng-4.2.tar.gz) = 57554819 bytes
-SHA1 (patch-Makefile.in) = 39bd64f682f85451cd3f4945c8218af596f591f9
-SHA1 (patch-configure.seed) = bd93153c6088b7a140e7de0f18052574ed8e4b6c
+BLAKE2s (ntopng-5.2.1.tar.gz) = 11d1a6f878d0c02952bebf5a5813b265af47f6eb44b404acf9b2c4fc683c8aad
+SHA512 (ntopng-5.2.1.tar.gz) = 01cdf21deac61a3b11e7d0e6b662c911123241332e812bb676cb8c5c003fe1d50a4c61231f9c327d467e89dd1345fc1bdbab5d2599fe04b04a8fe12654c01bdd
+Size (ntopng-5.2.1.tar.gz) = 60280025 bytes
+SHA1 (patch-Makefile.in) = 62ce8cadc3b0e026684545b2c7db24268352c5f3
+SHA1 (patch-configure.ac.in) = ad1348831ebda24053c01a7312bd3458bccda819
 SHA1 (patch-include_Redis.h) = ad7b03b9ebfb8b9786cca3f8c49ea24dc559ba12
 SHA1 (patch-include_ntop__includes.h) = 2bf588dba941f25b71381c7848b237d964d77f31
 SHA1 (patch-src_PacketDumperTuntap.cpp) = 76415461ebbe88d886111aa2d6508c7eec66b11d
 SHA1 (patch-src_Redis.cpp) = 61d6c54c0e81e4936b777895d2d8408febdb519e
-SHA1 (patch-src_Utils.cpp) = 38445607703c620942dbc5cdb5b0408d44a6bd46
+SHA1 (patch-src_Utils.cpp) = 3ac13f9d4762e7f577a8c9f8a9b9aeb443567dfe
 SHA1 (patch-third-party_snmp_net.c) = defaacb719c2fb0276932554a7951f02a19ba4ef
