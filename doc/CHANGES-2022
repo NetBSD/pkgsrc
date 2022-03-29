@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1572 2022/03/29 10:10:23 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1573 2022/03/29 13:32:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2071,3 +2071,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-nbconvert to 6.4.5 [adam 2022-03-29]
 	Updated sysutils/felix to 0.4.3 [pin 2022-03-29]
 	Updated audio/ncspot to 0.9.7 [pin 2022-03-29]
+	Updated devel/nss to 3.76.1 [ryoon 2022-03-29]
