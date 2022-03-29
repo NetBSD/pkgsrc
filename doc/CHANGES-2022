@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1570 2022/03/29 07:40:13 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1571 2022/03/29 10:08:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2069,3 +2069,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/wireshark to 3.6.3 [adam 2022-03-29]
 	Updated devel/py-faker to 13.3.4 [adam 2022-03-29]
 	Updated www/py-nbconvert to 6.4.5 [adam 2022-03-29]
+	Updated sysutils/felix to 0.4.3 [pin 2022-03-29]
