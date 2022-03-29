@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.22 2021/10/26 10:14:32 nia Exp $
+$NetBSD: distinfo,v 1.23 2022/03/29 18:04:44 wiz Exp $
 
 BLAKE2s (devhelp-3.34.0.tar.xz) = 6e20f84df0db6203d88f7a790be4f390a5af11226c2bc36306a7fc434e8a8200
 SHA512 (devhelp-3.34.0.tar.xz) = 34ed48ed323827b01f7d32e186da856c788ddfe37d6836082a81e6c8e4cd7bfc2265309cc3b298a0aea542b85e9261987d47a5a4396d865ec7e4cc13a9d05814
 Size (devhelp-3.34.0.tar.xz) = 288352 bytes
+SHA1 (patch-data_meson.build) = b53b3c7f8f6393231f913a4f32d4ee40672a84f3
+SHA1 (patch-plugins_gedit-plugin_meson.build) = a15764de80fe1bc57c0640491465df1e2893599e
