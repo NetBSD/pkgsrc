@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1296 2022/03/16 11:19:01 pin Exp $
+# $NetBSD: Makefile,v 1.1297 2022/03/29 20:28:51 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -528,7 +528,6 @@ SUBDIR+=	multimarkdown
 SUBDIR+=	mxml
 SUBDIR+=	mythes
 SUBDIR+=	namazu
-SUBDIR+=	nanogrep
 SUBDIR+=	nbsed
 SUBDIR+=	ndtpd
 SUBDIR+=	nltk_data-abc
@@ -1267,7 +1266,6 @@ SUBDIR+=	ruby-yard
 SUBDIR+=	sablotron
 SUBDIR+=	sary
 SUBDIR+=	saxon
-SUBDIR+=	scatterbrainedsearch
 SUBDIR+=	scdoc
 SUBDIR+=	scew
 SUBDIR+=	scrollkeeper-dtd
