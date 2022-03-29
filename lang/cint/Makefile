@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2018/08/19 20:16:40 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2022/03/29 18:38:06 wiz Exp $
 
 DISTNAME=		cint-5.16.19-source
 PKGNAME=		${DISTNAME:S/-source//}
@@ -18,9 +18,7 @@ CONFIG_SHELL=		${BASH}
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 CONFIGURE_ARGS+=	--arch=netbsd
-CONFIGURE_ARGS+=	--readline=${PREFIX}/lib/libreadline.so
-
-USE_LANGUAGES=		c c++
+CONFIGURE_ARGS+=	--readline=${BUILDLINK_LIBNAME.editline}${BUILDLINK_LIBNAME.readline}
 
 HAS_CONFIGURE=			yes
 CFLAGS+=			-Wno-write-strings
