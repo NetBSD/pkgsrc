@@ -1,9 +1,0 @@
-Custom Implementation of minigrep with more functionality.
-
-Features:
--Colored Output
--Case Insensitive
--Summary
-	-Pattern Occurrence(s)
-	-Line(s)
--!Regex
