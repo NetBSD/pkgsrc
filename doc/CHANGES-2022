@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1578 2022/03/29 18:07:01 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1579 2022/03/29 18:43:36 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2077,3 +2077,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/weechat to 3.5 [ryoon 2022-03-29]
 	Updated games/love11 to 11.4 [ryoon 2022-03-29]
 	Removed net/xipdump [wiz 2022-03-29]
+	Added x11/gtk3-nocsd version 3.0.8 [nia 2022-03-29]
