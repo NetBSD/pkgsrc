@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2021/12/08 16:04:36 adam Exp $
+# $NetBSD: Makefile,v 1.77 2022/03/29 18:40:09 wiz Exp $
 
 DISTNAME=		kye-1.0
-PKGREVISION=		37
+PKGREVISION=		38
 CATEGORIES=		games
 MASTER_SITES=		http://games.moria.org.uk/kye/download/
 
@@ -18,7 +18,7 @@ SUBST_SED.prefix=	's|@PREFIX@|${PREFIX}|g'
 PYTHON_VERSIONS_ACCEPTED=	27 # py-gtk2
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
