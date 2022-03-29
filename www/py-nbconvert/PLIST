@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/03/12 08:34:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/03/29 07:39:58 adam Exp $
 bin/jupyter-dejavu-${PYVERSSUFFIX}
 bin/jupyter-nbconvert-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -331,6 +331,7 @@ ${PYSITELIB}/nbconvert/tests/files/notebook1.ipynb
 ${PYSITELIB}/nbconvert/tests/files/notebook2.ipynb
 ${PYSITELIB}/nbconvert/tests/files/notebook3_with_errors.ipynb
 ${PYSITELIB}/nbconvert/tests/files/notebook4_jpeg.ipynb
+${PYSITELIB}/nbconvert/tests/files/notebook5_embed_images.ipynb
 ${PYSITELIB}/nbconvert/tests/files/notebook_jl.ipynb
 ${PYSITELIB}/nbconvert/tests/files/notebook_tags.ipynb
 ${PYSITELIB}/nbconvert/tests/files/override.py
