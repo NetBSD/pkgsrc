@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1580 2022/03/29 20:05:19 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1581 2022/03/29 20:28:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2079,3 +2079,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed net/xipdump [wiz 2022-03-29]
 	Added x11/gtk3-nocsd version 3.0.8 [nia 2022-03-29]
 	Updated games/klavaro to 3.13 [wiz 2022-03-29]
+	Removed textproc/nanogrep [wiz 2022-03-29]
+	Removed net/maguro [wiz 2022-03-29]
+	Removed textproc/scatterbrainedsearch [wiz 2022-03-29]
