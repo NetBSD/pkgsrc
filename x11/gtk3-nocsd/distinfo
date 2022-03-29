@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2022/03/29 18:43:17 nia Exp $
+
+BLAKE2s (gtk3-nocsd-3.0.8.tar.gz) = dee636b656c980ee8a231c8d02109e55c59a26abdde51eb64650a25a94f799e9
+SHA512 (gtk3-nocsd-3.0.8.tar.gz) = 18fd81dbb8b5eb793429741bcaa8e821650569e395251dc1e83d182ee97b8e9d48318342dcb27fbddb9fbec2e439c96dabd09577dbc5933d2ebc3187625e2232
+Size (gtk3-nocsd-3.0.8.tar.gz) = 66746 bytes
+SHA1 (patch-gtk3-nocsd.in) = c03242c44796023b5305b234390dcfb485d700a7

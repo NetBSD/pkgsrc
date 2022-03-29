@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2022/03/29 18:43:17 nia Exp $
+bin/gtk3-nocsd
+lib/libgtk3-nocsd.so.0
+man/man1/gtk3-nocsd.1
+share/bash-completion/completions/gtk3-nocsd
