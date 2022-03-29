@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:44:08 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/03/29 20:05:08 wiz Exp $
 
-BLAKE2s (klavaro-2.01.tar.bz2) = a6962b060fcd6a07f3854828d5e3c38fe1a6cc18d81d7cbb10d1a1b29c2c2f55
-SHA512 (klavaro-2.01.tar.bz2) = ffeaaaafc2a72f95b7886e787ffd3ca79e4fe1aa75652870c4f0627a552c379bf1c4b2688bd1e1b9e8bed0e2664db4adef4f70ba7fbeaef69b1f2cf504d9da0d
-Size (klavaro-2.01.tar.bz2) = 878859 bytes
+BLAKE2s (klavaro-3.13.tar.bz2) = 630befde864df5c9243d9a01d63773e890440021f2b7e47ee5d05e47e81f22e3
+SHA512 (klavaro-3.13.tar.bz2) = 17765be33305a722f8d23006353c5de812075decc7931c596bd8c7efe2d93657687847f007adb4e7f758a535fd3cded36581fd1e9f5b4af7d6d3b441b7245b36
+Size (klavaro-3.13.tar.bz2) = 1237015 bytes
