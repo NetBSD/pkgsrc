@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21632 2022/03/29 20:03:07 wiz Exp $
+$NetBSD: TODO,v 1.21633 2022/03/29 20:05:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -999,7 +999,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kjobwidgets-5.81.0
 	o kjs-5.81.0
 	o kjsembed-5.81.0
-	o klavaro-3.0
 	o knewstuff-5.81.0
 	o knot-resolver-1.1.1
 	o knotifications-5.81.0
