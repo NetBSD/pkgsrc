@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2022/03/12 21:26:18 fcambus Exp $
+# $NetBSD: Makefile,v 1.28 2022/03/29 14:04:50 fcambus Exp $
 
-DISTNAME=	lowdown-0.11.1
+DISTNAME=	lowdown-0.11.2
 CATEGORIES=	textproc
 MASTER_SITES=	https://kristaps.bsd.lv/lowdown/snapshots/
 
