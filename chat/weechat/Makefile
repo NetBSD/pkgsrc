@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.131 2022/03/25 08:22:24 nia Exp $
+# $NetBSD: Makefile,v 1.132 2022/03/29 16:42:17 ryoon Exp $
 
-DISTNAME=	weechat-3.4.1
+DISTNAME=	weechat-3.5
 CATEGORIES=	chat
 MASTER_SITES=	https://www.weechat.org/files/src/
 EXTRACT_SUFX=	.tar.xz
@@ -53,6 +53,7 @@ pre-configure:
 	# Use the standard cmake mechanism for finding Lua.
 	${RM} -f ${WRKSRC}/cmake/FindLua.cmake
 
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
