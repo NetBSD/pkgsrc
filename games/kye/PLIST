@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:56:50 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/03/29 18:40:09 wiz Exp $
 bin/Kye
 bin/Kye-edit
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/kye/__init__.py
 ${PYSITELIB}/kye/__init__.pyc
 ${PYSITELIB}/kye/__init__.pyo
