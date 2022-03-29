@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1568 2022/03/28 21:45:06 riastradh Exp $
+$NetBSD: CHANGES-2022,v 1.1569 2022/03/29 07:17:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2065,3 +2065,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/stellarium to 0.22.0 [adam 2022-03-28]
 	Updated net/py-scp to 0.14.4 [adam 2022-03-28]
 	Updated graphics/asymptote to 2.79 [riastradh 2022-03-28]
+	Updated security/libgcrypt to 1.10.1 [adam 2022-03-29]
+	Updated net/wireshark to 3.6.3 [adam 2022-03-29]
