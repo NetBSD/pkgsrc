@@ -1,0 +1,11 @@
+gtk3-nocsd is a small module used to disable the client side window
+decorations (CSDs) in GTK+ 3, which are used by many GNOME
+applications.
+
+A shared library is included which can be loaded with LD_PRELOAD to
+override several Gdk and glib/gobject APIs used by GTK+ 3 to set up
+CSDs.
+
+A wrapper script is also included, which can be used as follows:
+
+	gtk3-nocsd gedit

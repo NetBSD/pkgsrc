@@ -1,0 +1,15 @@
+$NetBSD: patch-gtk3-nocsd.in,v 1.1 2022/03/29 18:43:17 nia Exp $
+
+Do not assume GNU-style readlink.
+
+--- gtk3-nocsd.in.orig	2021-06-23 18:46:13.000000000 +0000
++++ gtk3-nocsd.in
+@@ -17,7 +17,7 @@
+ #
+ 
+ OS=$(uname | tr "[:upper:]" "[:lower:]")
+-RLINK_ARGS=$([ "$OS" = "freebsd" ] && echo "-f" || echo "-fe")
++RLINK_ARGS=$([ "$OS" != "linux" ] && echo "-f" || echo "-fe")
+ 
+ GTK3_NOCSD_NAME=libgtk3-nocsd.so.0
+ 
