@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1581 2022/03/29 20:28:51 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1582 2022/03/29 21:11:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2082,3 +2082,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed textproc/nanogrep [wiz 2022-03-29]
 	Removed net/maguro [wiz 2022-03-29]
 	Removed textproc/scatterbrainedsearch [wiz 2022-03-29]
+	Updated sysutils/felix to 0.5.0 [pin 2022-03-29]
