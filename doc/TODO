@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21628 2022/03/28 19:32:44 adam Exp $
+$NetBSD: TODO,v 1.21629 2022/03/29 07:17:26 adam Exp $
 
 Suggested new packages
 ======================
@@ -1815,7 +1815,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wine-7.0
 	o wine-devel-3.7
 	o wiredtiger-10.0.0
-	o wireshark-3.6.3
 	o wkhtmltopdf-0.12.5
 	o wmi-11
 	o wordwarvi-1.0.4
