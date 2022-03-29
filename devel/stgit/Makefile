@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2022/01/10 22:06:47 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2022/03/29 20:07:41 wiz Exp $
 
 DISTNAME=	stgit-0.17.1
 PKGREVISION=	18
@@ -15,6 +15,7 @@ BUILD_DEPENDS+=	docbook-xsl>=1.72:../../textproc/docbook-xsl
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 DEPENDS+=	git-base>=1.5.2:../../devel/git-base
 
+EGG_NAME=	${DISTNAME}_dirty
 AUTO_MKDIRS=	yes
 USE_TOOLS+=	bash:run perl gmake
 USE_LANGUAGES=	#none
