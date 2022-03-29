@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1574 2022/03/29 13:58:11 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.1575 2022/03/29 14:05:00 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2073,3 +2073,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/ncspot to 0.9.7 [pin 2022-03-29]
 	Updated devel/nss to 3.76.1 [ryoon 2022-03-29]
 	Updated comms/tio to 1.36 [fcambus 2022-03-29]
+	Updated textproc/lowdown to 0.11.2 [fcambus 2022-03-29]
