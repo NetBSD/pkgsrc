@@ -1,0 +1,14 @@
+$NetBSD: patch-plugins_gedit-plugin_meson.build,v 1.1 2022/03/29 18:04:44 wiz Exp $
+
+meson compatibility.
+
+--- plugins/gedit-plugin/meson.build.orig	2019-09-09 14:01:26.000000000 +0000
++++ plugins/gedit-plugin/meson.build
+@@ -7,7 +7,6 @@ install_data(
+ 
+ plugin_info_file = 'devhelp.plugin'
+ I18N.merge_file(
+-        plugin_info_file,
+         type : 'desktop',
+         input : plugin_info_file + '.desktop.in',
+         output : plugin_info_file,
