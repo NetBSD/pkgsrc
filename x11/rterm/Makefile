@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2021/08/10 05:36:51 pin Exp $
+# $NetBSD: Makefile,v 1.7 2022/03/29 10:37:07 pin Exp $
 
 DISTNAME=	rterm-0.0.6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mechpen/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mechpen/rterm/
 COMMENT=	Port of suckless terminal to rust
 LICENSE=	unlicense
@@ -22,7 +22,8 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libXft}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libXft}/lib
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/rterm ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/rterm \
+		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../x11/libX11/buildlink3.mk"
