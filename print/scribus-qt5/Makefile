@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/03/28 10:56:20 tnn Exp $
+# $NetBSD: Makefile,v 1.26 2022/03/29 19:59:50 nia Exp $
 
 DISTNAME=	scribus-1.5.6pre20200611
 PKGREVISION=	23
@@ -12,12 +12,11 @@ HOMEPAGE=	https://www.scribus.net/
 COMMENT=	Publishing layout with graphical interface (Qt5 port)
 LICENSE=	gnu-gpl-v2
 
-HAS_CONFIGURE=	yes
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
+BROKEN+=	"Poppler headers want C++17, this package is C++11"
 
 .include "../../converters/libcdr/buildlink3.mk"
 .include "../../converters/libfreehand/buildlink3.mk"
@@ -49,6 +48,8 @@ BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
