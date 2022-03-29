@@ -1,0 +1,22 @@
+$NetBSD: patch-data_meson.build,v 1.1 2022/03/29 18:04:44 wiz Exp $
+
+meson compatibility.
+
+--- data/meson.build.orig	2019-09-09 14:01:26.000000000 +0000
++++ data/meson.build
+@@ -17,7 +17,6 @@ configure_file(
+ 
+ appdata = 'org.gnome.Devhelp.appdata.xml'
+ I18N.merge_file(
+-        appdata,
+         input : appdata + '.in',
+         output : appdata,
+         po_dir : '../po/',
+@@ -27,7 +26,6 @@ I18N.merge_file(
+ 
+ desktop_file = 'org.gnome.Devhelp.desktop'
+ I18N.merge_file(
+-        desktop_file,
+         type : 'desktop',
+         input : desktop_file + '.in',
+         output : desktop_file,
