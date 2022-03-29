@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2021/08/05 08:57:47 pin Exp $
+# $NetBSD: Makefile,v 1.3 2022/03/29 10:41:49 pin Exp $
 
 DISTNAME=	xurl-0.1.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=squioc/}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/squioc/xurl/
 COMMENT=	Little tool to manipulate urls
 LICENSE=	mit
@@ -14,7 +14,8 @@ LICENSE=	mit
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/xurl ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/xurl \
+		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
