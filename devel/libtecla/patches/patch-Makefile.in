@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile.in,v 1.1 2022/03/30 07:09:58 wiz Exp $
+
+Quote LDFLAGS/CPPFLAGS before passing them down.
+
+--- Makefile.in.orig	2004-10-31 20:30:57.000000000 +0000
++++ Makefile.in
+@@ -165,10 +165,10 @@ CFLAGS = $(OPT) $(WARNING_FLAGS) $(DEFIN
+ default: $(TARGETS)
+ 
+ normal:
+-	@$(MAKE) -f $(srcdir)/Makefile.rules TARGETS="$(TARGET_LIBS)" SUFFIX="" CFLAGS="$(CFLAGS)" CC="$(CC)" OBJDIR=normal_obj LINK_SHARED='@LINK_SHARED@' SHARED_EXT='@SHARED_EXT@' SHARED_ALT='@SHARED_ALT@' LIBS='$(LIBS)' srcdir='$(srcdir)' LIBDIR='$(LIBDIR)' LN_S='@LN_S@' DEMOS="$(DEMOS)" PROGRAMS='$(PROGRAMS)' RANLIB='$(RANLIB)' LDFLAGS=$(LDFLAGS) CPPFLAGS=$(CPPFLAGS)
++	@$(MAKE) -f $(srcdir)/Makefile.rules TARGETS="$(TARGET_LIBS)" SUFFIX="" CFLAGS="$(CFLAGS)" CC="$(CC)" OBJDIR=normal_obj LINK_SHARED='@LINK_SHARED@' SHARED_EXT='@SHARED_EXT@' SHARED_ALT='@SHARED_ALT@' LIBS='$(LIBS)' srcdir='$(srcdir)' LIBDIR='$(LIBDIR)' LN_S='@LN_S@' DEMOS="$(DEMOS)" PROGRAMS='$(PROGRAMS)' RANLIB='$(RANLIB)' LDFLAGS='$(LDFLAGS)' CPPFLAGS='$(CPPFLAGS)'
+ 
+ reentrant:
+-	@$(MAKE) -f $(srcdir)/Makefile.rules TARGETS="$(TARGET_LIBS)" SUFFIX="_r" CFLAGS="$(CFLAGS) $(DEFINES_R)" CC="$(CC)" OBJDIR=reentrant_obj LINK_SHARED='@LINK_SHARED@' SHARED_EXT='@SHARED_EXT@' SHARED_ALT='@SHARED_ALT@' LIBS='$(LIBS)' srcdir='$(srcdir)' LIBDIR='$(LIBDIR)' LN_S='@LN_S@' DEMOS="$(DEMOS)" PROGRAMS='$(PROGRAMS_R)' RANLIB='$(RANLIB)' LDFLAGS=$(LDFLAGS) CPPFLAGS=$(CPPFLAGS)
++	@$(MAKE) -f $(srcdir)/Makefile.rules TARGETS="$(TARGET_LIBS)" SUFFIX="_r" CFLAGS="$(CFLAGS) $(DEFINES_R)" CC="$(CC)" OBJDIR=reentrant_obj LINK_SHARED='@LINK_SHARED@' SHARED_EXT='@SHARED_EXT@' SHARED_ALT='@SHARED_ALT@' LIBS='$(LIBS)' srcdir='$(srcdir)' LIBDIR='$(LIBDIR)' LN_S='@LN_S@' DEMOS="$(DEMOS)" PROGRAMS='$(PROGRAMS_R)' RANLIB='$(RANLIB)' LDFLAGS='$(LDFLAGS)' CPPFLAGS='$(CPPFLAGS)'
+ 
+ demos: normal
+ 
