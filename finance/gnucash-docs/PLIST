@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2021/12/20 00:43:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2022/03/30 08:21:10 wiz Exp $
 share/gnome/help/gnucash-guide/C/appendixa.xml
 share/gnome/help/gnucash-guide/C/appendixd.xml
 share/gnome/help/gnucash-guide/C/ch_accts.xml
@@ -847,7 +847,6 @@ share/gnome/help/gnucash-guide/pt/ch_cbook.xml
 share/gnome/help/gnucash-guide/pt/ch_cc.xml
 share/gnome/help/gnucash-guide/pt/ch_currency.xml
 share/gnome/help/gnucash-guide/pt/ch_dep.xml
-share/gnome/help/gnucash-guide/pt/ch_import_business_data.xml
 share/gnome/help/gnucash-guide/pt/ch_invest.xml
 share/gnome/help/gnucash-guide/pt/ch_loans.xml
 share/gnome/help/gnucash-guide/pt/ch_oth_assets.xml
@@ -895,6 +894,7 @@ share/gnome/help/gnucash-guide/pt/figures/bus_ar_invoicechange3.png
 share/gnome/help/gnucash-guide/pt/figures/bus_ar_invoiceedit.png
 share/gnome/help/gnucash-guide/pt/figures/bus_ar_invoicenew.png
 share/gnome/help/gnucash-guide/pt/figures/bus_ar_invoicepost.png
+share/gnome/help/gnucash-guide/pt/figures/bus_ar_invoicepost_menu.png
 share/gnome/help/gnucash-guide/pt/figures/bus_ar_invoiceprint.png
 share/gnome/help/gnucash-guide/pt/figures/bus_ar_jobnew.png
 share/gnome/help/gnucash-guide/pt/figures/bus_ar_payment.png
@@ -1066,6 +1066,7 @@ share/gnome/help/gnucash-help/C/figures/Help_Pref_Accnts.png
 share/gnome/help/gnucash-help/C/figures/Help_Pref_Business.png
 share/gnome/help/gnucash-help/C/figures/Help_Pref_DateTime.png
 share/gnome/help/gnucash-help/C/figures/Help_Pref_General.png
+share/gnome/help/gnucash-help/C/figures/Help_Pref_Import.png
 share/gnome/help/gnucash-help/C/figures/Help_Pref_OnlineBanking.png
 share/gnome/help/gnucash-help/C/figures/Help_Pref_Printing.png
 share/gnome/help/gnucash-help/C/figures/Help_Pref_Quotes.png
