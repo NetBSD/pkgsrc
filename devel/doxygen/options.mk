@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2021/12/13 13:47:06 micha Exp $
+# $NetBSD: options.mk,v 1.17 2022/03/30 16:35:27 micha Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.doxygen
 PKG_SUPPORTED_OPTIONS=	latex qt
@@ -61,7 +61,7 @@ DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 DEPENDS+=	tex-ulem-[0-9]*:../../print/tex-ulem
 DEPENDS+=	tex-wasysym-[0-9]*:../../fonts/tex-wasysym
 DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
-DEPENDS+=	tex-xpatch-[0-9]*:../../print/tex-xpatch
+DEPENDS+=	tex-regexpatch-[0-9]*:../../print/tex-regexpatch
 DEPENDS+=	tex-xtab-[0-9]*:../../print/tex-xtab
 .endif
 
