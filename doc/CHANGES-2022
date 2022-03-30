@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1593 2022/03/30 09:06:28 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1594 2022/03/30 09:12:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2096,3 +2096,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/gopls to 0.8.1 [wiz 2022-03-30]
 	Updated fonts/harfbuzz to 4.1.0 [wiz 2022-03-30]
 	Updated security/keepassxc to 2.7.0 [wiz 2022-03-30]
+	Updated graphics/py-cairo to 1.21.0 [wiz 2022-03-30]
