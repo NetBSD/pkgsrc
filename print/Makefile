@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.818 2022/02/02 15:23:40 manu Exp $
+# $NetBSD: Makefile,v 1.819 2022/03/30 16:19:26 micha Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1316,6 +1316,8 @@ SUBDIR+=	tex-realscripts
 SUBDIR+=	tex-realscripts-doc
 SUBDIR+=	tex-refcount
 SUBDIR+=	tex-refcount-doc
+SUBDIR+=	tex-regexpatch
+SUBDIR+=	tex-regexpatch-doc
 SUBDIR+=	tex-relsize
 SUBDIR+=	tex-rerunfilecheck
 SUBDIR+=	tex-rerunfilecheck-doc
