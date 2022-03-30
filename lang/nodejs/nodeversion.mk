@@ -1,4 +1,4 @@
-# $NetBSD: nodeversion.mk,v 1.7 2021/02/16 13:16:38 adam Exp $
+# $NetBSD: nodeversion.mk,v 1.8 2022/03/30 06:52:33 adam Exp $
 
 # This file determins which nodejs version is used as a dependency for
 # a package.
@@ -8,7 +8,7 @@
 # NODE_VERSION_DEFAULT
 #	The preferred node version to use.
 #
-#	Possible values: 10 12 14
+#	Possible values: 10 12 14 16
 #	Default: 10
 #
 # === Infrastructure variables ===
@@ -27,13 +27,13 @@
 #	is significant; those listed earlier are preferred over those
 #	listed later.
 #
-#	Possible values: 10 12 14
-#	Default: 10 12 14
+#	Possible values: 10 12 14 16
+#	Default: 10 12 14 16
 #
 # NODE_VERSIONS_INCOMPATIBLE
 #	The node versions that the package *cannot* build against.
 #
-#	Possible values: 10 12 14
+#	Possible values: 10 12 14 16
 #	Default: <empty>
 #
 # Keywords: node
@@ -58,7 +58,7 @@ BUILD_DEFS+=		NODE_VERSION_DEFAULT
 BUILD_DEFS_EFFECTS+=	NODE_PACKAGE
 
 NODE_VERSION_DEFAULT?=		10
-NODE_VERSIONS_ACCEPTED?=	10 12 14
+NODE_VERSIONS_ACCEPTED?=	10 12 14 16
 NODE_VERSIONS_INCOMPATIBLE?=	# empty
 
 # Resolve NODE_VERSIONS_INCOMPATIBLE and generate the _OK vars.
@@ -93,6 +93,8 @@ _NODE_VERSION?=		none
 .elif ${_NODE_VERSION} == "12"
 .include "../../lang/nodejs12/buildlink3.mk"
 .elif ${_NODE_VERSION} == "14"
+.include "../../lang/nodejs14/buildlink3.mk"
+.elif ${_NODE_VERSION} == "16"
 .include "../../lang/nodejs/buildlink3.mk"
 .else
 PKG_FAIL_REASON+=	"No valid node version found"
