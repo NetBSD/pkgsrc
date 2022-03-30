@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.12 2022/03/28 19:32:24 adam Exp $
+$NetBSD: distinfo,v 1.13 2022/03/30 09:46:07 wiz Exp $
 
 BLAKE2s (ntopng-5.2.1.tar.gz) = 11d1a6f878d0c02952bebf5a5813b265af47f6eb44b404acf9b2c4fc683c8aad
 SHA512 (ntopng-5.2.1.tar.gz) = 01cdf21deac61a3b11e7d0e6b662c911123241332e812bb676cb8c5c003fe1d50a4c61231f9c327d467e89dd1345fc1bdbab5d2599fe04b04a8fe12654c01bdd
 Size (ntopng-5.2.1.tar.gz) = 60280025 bytes
 SHA1 (patch-Makefile.in) = 62ce8cadc3b0e026684545b2c7db24268352c5f3
 SHA1 (patch-configure.ac.in) = ad1348831ebda24053c01a7312bd3458bccda819
+SHA1 (patch-httpdocs_misc_ntopng-utils-manage-updates.in) = dd58ec396c6e2471c064307fd9bf1f31b0e0c9cf
 SHA1 (patch-include_Redis.h) = ad7b03b9ebfb8b9786cca3f8c49ea24dc559ba12
 SHA1 (patch-include_ntop__includes.h) = 2bf588dba941f25b71381c7848b237d964d77f31
 SHA1 (patch-src_PacketDumperTuntap.cpp) = 76415461ebbe88d886111aa2d6508c7eec66b11d
