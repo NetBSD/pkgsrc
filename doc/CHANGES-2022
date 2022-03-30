@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1607 2022/03/30 21:53:23 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1608 2022/03/30 21:57:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2110,3 +2110,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/alacritty to 0.10.1 [pin 2022-03-30]
 	Updated devel/doxygen to 1.9.3 [micha 2022-03-30]
 	Updated x11/libXvMC to 1.0.13 [wiz 2022-03-30]
+	Updated x11/libX11 to 1.7.4 [wiz 2022-03-30]
