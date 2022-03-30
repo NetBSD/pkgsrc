@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2021/12/13 13:47:06 micha Exp $
+@comment $NetBSD: PLIST,v 1.46 2022/03/30 16:35:27 micha Exp $
 bin/doxygen
 ${PLIST.qt}bin/doxywizard
 ${PLIST.latex}man/man1/doxygen.1
@@ -1081,6 +1081,7 @@ ${PLIST.latex}share/doc/doxygen/html/expert_list_filedir.png
 ${PLIST.latex}share/doc/doxygen/html/expert_list_string.png
 ${PLIST.latex}share/doc/doxygen/html/expert_string_dir.png
 ${PLIST.latex}share/doc/doxygen/html/expert_string_file.png
+${PLIST.latex}share/doc/doxygen/html/expert_string_filedir.png
 ${PLIST.latex}share/doc/doxygen/html/expert_string_image.png
 ${PLIST.latex}share/doc/doxygen/html/expert_string_string.png
 ${PLIST.latex}share/doc/doxygen/html/external.html
@@ -1098,6 +1099,8 @@ ${PLIST.latex}share/doc/doxygen/html/form_10.png
 ${PLIST.latex}share/doc/doxygen/html/form_11.png
 ${PLIST.latex}share/doc/doxygen/html/form_12.png
 ${PLIST.latex}share/doc/doxygen/html/form_13.png
+${PLIST.latex}share/doc/doxygen/html/form_14.png
+${PLIST.latex}share/doc/doxygen/html/form_15.png
 ${PLIST.latex}share/doc/doxygen/html/form_2.png
 ${PLIST.latex}share/doc/doxygen/html/form_3.png
 ${PLIST.latex}share/doc/doxygen/html/form_4.png
@@ -1134,7 +1137,6 @@ ${PLIST.latex}share/doc/doxygen/html/open.png
 ${PLIST.latex}share/doc/doxygen/html/output.html
 ${PLIST.latex}share/doc/doxygen/html/pages.html
 ${PLIST.latex}share/doc/doxygen/html/perlmod.html
-${PLIST.latex}share/doc/doxygen/html/perlmod_tree.html
 ${PLIST.latex}share/doc/doxygen/html/preprocessing.html
 ${PLIST.latex}share/doc/doxygen/html/refresh.png
 ${PLIST.latex}share/doc/doxygen/html/resize.js
