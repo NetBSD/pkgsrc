@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2022/01/26 00:24:22 tpaul Exp $
+# $NetBSD: Makefile,v 1.16 2022/03/30 16:15:13 pin Exp $
 
-DISTNAME=	alacritty-0.10.0
-PKGREVISION=	1
+DISTNAME=	alacritty-0.10.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alacritty/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/alacritty/alacritty
@@ -15,6 +14,8 @@ BUILD_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
 BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 .include "cargo-depends.mk"
+
+WRKSRC=			${WRKDIR}/${DISTNAME}
 
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake pkg-config	# for fontconfig-sys
