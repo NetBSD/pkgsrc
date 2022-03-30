@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1600 2022/03/30 16:11:28 micha Exp $
+$NetBSD: CHANGES-2022,v 1.1601 2022/03/30 16:11:42 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2103,3 +2103,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/vala to 0.56.0 [wiz 2022-03-30]
 	Added fonts/selawik-ttf version 1.01 [wiz 2022-03-30]
 	Added print/tex-regexpatch version 0.2f [micha 2022-03-30]
+	Updated sysutils/onefetch to 2.12.0 [pin 2022-03-30]
