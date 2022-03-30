@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1589 2022/03/30 08:13:01 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1590 2022/03/30 08:21:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2092,3 +2092,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/ImageMagick to 7.1.0.28 [wiz 2022-03-30]
 	Updated audio/fluidsynth to 2.2.6 [wiz 2022-03-30]
 	Updated finance/gnucash to 4.10 [wiz 2022-03-30]
+	Updated finance/gnucash-docs to 4.10.1 [wiz 2022-03-30]
