@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2022/03/30 13:56:02 wiz Exp $
+share/fonts/X11/TTF/selawk.ttf
+share/fonts/X11/TTF/selawkb.ttf
+share/fonts/X11/TTF/selawkl.ttf
+share/fonts/X11/TTF/selawksb.ttf
+share/fonts/X11/TTF/selawksl.ttf
