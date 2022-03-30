@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2022/03/10 21:20:41 prlw1 Exp $
+# $NetBSD: Makefile,v 1.16 2022/03/30 10:02:23 wiz Exp $
 
 DISTNAME=	libhandy-1.5.91
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libhandy/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
