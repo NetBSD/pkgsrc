@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:34:07 nia Exp $
+$NetBSD: distinfo,v 1.13 2022/03/30 21:53:13 wiz Exp $
 
-BLAKE2s (libXvMC-1.0.12.tar.bz2) = 7555c85d473eea5c0e9d10c08092db1d263ae0bbc464828dbbeb6b1a4cf4cda3
-SHA512 (libXvMC-1.0.12.tar.bz2) = 62cb9a72b20af3b081d2d555a253b0e2b8b26b31f4fad10bd3e53bbf96e1663b61bd8df2b78b16f18218cd37cce0c9e6809ae16ded226b37a8b199e41b223955
-Size (libXvMC-1.0.12.tar.bz2) = 306581 bytes
+BLAKE2s (libXvMC-1.0.13.tar.xz) = 6776154b390400f8fdb146b0705d437898cfbee6949e889bc42bc096d6390ed9
+SHA512 (libXvMC-1.0.13.tar.xz) = c9d0f73884a586efb9ea4f77fc8555f60d940077d7dff8eaa765b86345c8b4e3d80b860f68191d2830c272b9e464c08450fbb51bb64819753a6f4228c71861ac
+Size (libXvMC-1.0.13.tar.xz) = 274180 bytes
