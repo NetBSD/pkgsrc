@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2021/12/01 13:01:15 nia Exp $
+# $NetBSD: Makefile,v 1.19 2022/03/30 21:53:13 wiz Exp $
 
-DISTNAME=		libXvMC-1.0.12
+DISTNAME=		libXvMC-1.0.13
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
