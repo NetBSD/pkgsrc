@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1605 2022/03/30 16:15:34 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1606 2022/03/30 16:37:03 micha Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2108,3 +2108,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated geography/echomap to 0.7.1 [pin 2022-03-30]
 	Added print/tex-regexpatch-doc version 0.2f [micha 2022-03-30]
 	Updated x11/alacritty to 0.10.1 [pin 2022-03-30]
+	Updated devel/doxygen to 1.9.3 [micha 2022-03-30]
