@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2022/03/15 06:01:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2022/03/30 07:14:50 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -35,9 +35,15 @@ ${PYSITELIB}/stripe/api_resources/abstract/listable_api_resource.pyo
 ${PYSITELIB}/stripe/api_resources/abstract/nested_resource_class_methods.py
 ${PYSITELIB}/stripe/api_resources/abstract/nested_resource_class_methods.pyc
 ${PYSITELIB}/stripe/api_resources/abstract/nested_resource_class_methods.pyo
+${PYSITELIB}/stripe/api_resources/abstract/searchable_api_resource.py
+${PYSITELIB}/stripe/api_resources/abstract/searchable_api_resource.pyc
+${PYSITELIB}/stripe/api_resources/abstract/searchable_api_resource.pyo
 ${PYSITELIB}/stripe/api_resources/abstract/singleton_api_resource.py
 ${PYSITELIB}/stripe/api_resources/abstract/singleton_api_resource.pyc
 ${PYSITELIB}/stripe/api_resources/abstract/singleton_api_resource.pyo
+${PYSITELIB}/stripe/api_resources/abstract/test_helpers.py
+${PYSITELIB}/stripe/api_resources/abstract/test_helpers.pyc
+${PYSITELIB}/stripe/api_resources/abstract/test_helpers.pyo
 ${PYSITELIB}/stripe/api_resources/abstract/updateable_api_resource.py
 ${PYSITELIB}/stripe/api_resources/abstract/updateable_api_resource.pyc
 ${PYSITELIB}/stripe/api_resources/abstract/updateable_api_resource.pyo
@@ -266,6 +272,9 @@ ${PYSITELIB}/stripe/api_resources/reversal.pyo
 ${PYSITELIB}/stripe/api_resources/review.py
 ${PYSITELIB}/stripe/api_resources/review.pyc
 ${PYSITELIB}/stripe/api_resources/review.pyo
+${PYSITELIB}/stripe/api_resources/search_result_object.py
+${PYSITELIB}/stripe/api_resources/search_result_object.pyc
+${PYSITELIB}/stripe/api_resources/search_result_object.pyo
 ${PYSITELIB}/stripe/api_resources/setup_attempt.py
 ${PYSITELIB}/stripe/api_resources/setup_attempt.pyc
 ${PYSITELIB}/stripe/api_resources/setup_attempt.pyo
