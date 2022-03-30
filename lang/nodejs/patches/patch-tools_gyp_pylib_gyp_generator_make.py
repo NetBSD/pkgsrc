@@ -1,11 +1,11 @@
-$NetBSD: patch-tools_gyp_pylib_gyp_generator_make.py,v 1.4 2020/10/08 10:58:35 adam Exp $
+$NetBSD: patch-tools_gyp_pylib_gyp_generator_make.py,v 1.5 2022/03/30 06:52:33 adam Exp $
 
 Use the system libtool on Darwin.
 Add support for NetBSD and DragonFly.
 
---- tools/gyp/pylib/gyp/generator/make.py.orig	2020-10-07 17:47:43.000000000 +0000
+--- tools/gyp/pylib/gyp/generator/make.py.orig	2021-08-03 05:54:27.000000000 +0000
 +++ tools/gyp/pylib/gyp/generator/make.py
-@@ -180,7 +180,7 @@ cmd_solink_module = $(LINK.$(TOOLSET)) -
+@@ -179,7 +179,7 @@ cmd_solink_module = $(LINK.$(TOOLSET)) -
  
  LINK_COMMANDS_MAC = """\
  quiet_cmd_alink = LIBTOOL-STATIC $@
@@ -14,8 +14,8 @@ Add support for NetBSD and DragonFly.
  
  quiet_cmd_link = LINK($(TOOLSET)) $@
  cmd_link = $(LINK.$(TOOLSET)) $(GYP_LDFLAGS) $(LDFLAGS.$(TOOLSET)) -o "$@" $(LD_INPUTS) $(LIBS)
-@@ -2331,7 +2331,7 @@ def GenerateOutput(target_list, target_d
-                 "flock_index": 2
+@@ -2335,7 +2335,7 @@ def GenerateOutput(target_list, target_d
+                 "flock_index": 2,
              }
          )
 -    elif flavor == "freebsd":

@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.13 2020/01/25 10:45:12 jperkin Exp $
+# $NetBSD: options.mk,v 1.14 2022/03/30 06:52:33 adam Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.node
+PKG_OPTIONS_VAR=	PKG_OPTIONS.nodejs
 PKG_SUPPORTED_OPTIONS=	openssl dtrace
 PKG_SUGGESTED_OPTIONS=	openssl
 
