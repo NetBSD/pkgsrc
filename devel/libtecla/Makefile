@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/03/15 23:41:54 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2022/03/30 07:09:57 wiz Exp $
 
 DISTNAME=	libtecla-1.6.1
 PKGREVISION=	4
@@ -12,7 +12,6 @@ COMMENT=	Interactive command line editing facilities
 MAKE_JOBS_SAFE=		no
 
 WRKSRC=			${WRKDIR}/${PKGBASE}
-USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 BUILD_TARGET=		default
 
