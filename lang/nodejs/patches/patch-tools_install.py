@@ -1,8 +1,8 @@
-$NetBSD: patch-tools_install.py,v 1.7 2022/02/15 13:59:42 adam Exp $
+$NetBSD: patch-tools_install.py,v 1.8 2022/03/30 06:52:33 adam Exp $
 
 Install man pages under the right directory.
 
---- tools/install.py.orig	2022-02-01 13:01:47.000000000 +0000
+--- tools/install.py.orig	2021-09-10 17:25:14.000000000 +0000
 +++ tools/install.py
 @@ -156,10 +156,7 @@ def files(action):
    action(['deps/v8/tools/gdbinit'], 'share/doc/node/')

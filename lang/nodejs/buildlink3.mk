@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2021/12/08 16:02:16 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2022/03/30 06:52:33 adam Exp $
 
 BUILDLINK_TREE+=	nodejs
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	nodejs
 NODEJS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.nodejs+=	nodejs>=10
-BUILDLINK_ABI_DEPENDS.nodejs?=	nodejs>=14.18.1
+BUILDLINK_ABI_DEPENDS.nodejs?=	nodejs>=16.14.2
 BUILDLINK_PKGSRCDIR.nodejs?=	../../lang/nodejs
 
 .include "../../mk/bsd.fast.prefs.mk"
@@ -18,7 +18,6 @@ BUILDLINK_PKGSRCDIR.nodejs?=	../../lang/nodejs
 BUILDLINK_API_DEPENDS.libuv+=	libuv>=1.23
 .include "../../devel/libuv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../net/libcares/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 # Requires nghttp2_option_set_max_settings
 BUILDLINK_API_DEPENDS.nghttp2+=	nghttp2>=1.41.0
