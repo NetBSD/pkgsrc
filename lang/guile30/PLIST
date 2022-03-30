@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/03/08 00:09:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/03/30 07:48:13 wiz Exp $
 guile/3.0/bin/guild
 guile/3.0/bin/guile
 guile/3.0/bin/guile-config
@@ -46,7 +46,6 @@ guile/3.0/include/guile/3.0/libguile/fports.h
 guile/3.0/include/guile/3.0/libguile/frames.h
 guile/3.0/include/guile/3.0/libguile/gc-inline.h
 guile/3.0/include/guile/3.0/libguile/gc.h
-guile/3.0/include/guile/3.0/libguile/generalized-arrays.h
 guile/3.0/include/guile/3.0/libguile/generalized-vectors.h
 guile/3.0/include/guile/3.0/libguile/gettext.h
 guile/3.0/include/guile/3.0/libguile/goops.h
@@ -225,6 +224,7 @@ guile/3.0/lib/guile/3.0/ccache/language/cps/contification.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/cse.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/dce.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/devirtualize-integers.go
+guile/3.0/lib/guile/3.0/ccache/language/cps/dump.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/effects-analysis.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/elide-arity-checks.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/graphs.go
@@ -237,6 +237,7 @@ guile/3.0/lib/guile/3.0/ccache/language/cps/peel-loops.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/prune-top-level-scopes.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/reify-primitives.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/renumber.go
+guile/3.0/lib/guile/3.0/ccache/language/cps/return-types.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/rotate-loops.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/self-references.go
 guile/3.0/lib/guile/3.0/ccache/language/cps/simplify.go
@@ -282,10 +283,12 @@ guile/3.0/lib/guile/3.0/ccache/language/tree-il/debug.go
 guile/3.0/lib/guile/3.0/ccache/language/tree-il/effects.go
 guile/3.0/lib/guile/3.0/ccache/language/tree-il/eta-expand.go
 guile/3.0/lib/guile/3.0/ccache/language/tree-il/fix-letrec.go
+guile/3.0/lib/guile/3.0/ccache/language/tree-il/inlinable-exports.go
 guile/3.0/lib/guile/3.0/ccache/language/tree-il/letrectify.go
 guile/3.0/lib/guile/3.0/ccache/language/tree-il/optimize.go
 guile/3.0/lib/guile/3.0/ccache/language/tree-il/peval.go
 guile/3.0/lib/guile/3.0/ccache/language/tree-il/primitives.go
+guile/3.0/lib/guile/3.0/ccache/language/tree-il/resolve-free-vars.go
 guile/3.0/lib/guile/3.0/ccache/language/tree-il/spec.go
 guile/3.0/lib/guile/3.0/ccache/language/value/spec.go
 guile/3.0/lib/guile/3.0/ccache/oop/goops.go
@@ -463,7 +466,7 @@ guile/3.0/lib/guile/3.0/ccache/web/server/http.go
 guile/3.0/lib/guile/3.0/ccache/web/uri.go
 guile/3.0/lib/guile/3.0/extensions/guile-readline.la
 guile/3.0/lib/libguile-3.0.la
-guile/3.0/lib/libguile-3.0.so.1.4.0-gdb.scm
+guile/3.0/lib/libguile-3.0.so.1.5.0-gdb.scm
 guile/3.0/lib/pkgconfig/guile-3.0.pc
 guile/3.0/man/man1/guile.1
 guile/3.0/share/aclocal/guile.m4
@@ -565,6 +568,7 @@ guile/3.0/share/guile/3.0/language/cps/contification.scm
 guile/3.0/share/guile/3.0/language/cps/cse.scm
 guile/3.0/share/guile/3.0/language/cps/dce.scm
 guile/3.0/share/guile/3.0/language/cps/devirtualize-integers.scm
+guile/3.0/share/guile/3.0/language/cps/dump.scm
 guile/3.0/share/guile/3.0/language/cps/effects-analysis.scm
 guile/3.0/share/guile/3.0/language/cps/elide-arity-checks.scm
 guile/3.0/share/guile/3.0/language/cps/graphs.scm
@@ -577,6 +581,7 @@ guile/3.0/share/guile/3.0/language/cps/peel-loops.scm
 guile/3.0/share/guile/3.0/language/cps/prune-top-level-scopes.scm
 guile/3.0/share/guile/3.0/language/cps/reify-primitives.scm
 guile/3.0/share/guile/3.0/language/cps/renumber.scm
+guile/3.0/share/guile/3.0/language/cps/return-types.scm
 guile/3.0/share/guile/3.0/language/cps/rotate-loops.scm
 guile/3.0/share/guile/3.0/language/cps/self-references.scm
 guile/3.0/share/guile/3.0/language/cps/simplify.scm
@@ -622,10 +627,12 @@ guile/3.0/share/guile/3.0/language/tree-il/debug.scm
 guile/3.0/share/guile/3.0/language/tree-il/effects.scm
 guile/3.0/share/guile/3.0/language/tree-il/eta-expand.scm
 guile/3.0/share/guile/3.0/language/tree-il/fix-letrec.scm
+guile/3.0/share/guile/3.0/language/tree-il/inlinable-exports.scm
 guile/3.0/share/guile/3.0/language/tree-il/letrectify.scm
 guile/3.0/share/guile/3.0/language/tree-il/optimize.scm
 guile/3.0/share/guile/3.0/language/tree-il/peval.scm
 guile/3.0/share/guile/3.0/language/tree-il/primitives.scm
+guile/3.0/share/guile/3.0/language/tree-il/resolve-free-vars.scm
 guile/3.0/share/guile/3.0/language/tree-il/spec.scm
 guile/3.0/share/guile/3.0/language/value/spec.scm
 guile/3.0/share/guile/3.0/oop/goops.scm
