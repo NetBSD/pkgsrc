@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/03/30 13:56:02 wiz Exp $
+
+BLAKE2s (selawik-ttf-1.01/Selawik_Release.zip) = 28d756bbb042c919903eb9675fedc04ed258dce12a65237a8e19a5547416f093
+SHA512 (selawik-ttf-1.01/Selawik_Release.zip) = 65012935af9366ad15b52d5fc65e16a4f3e8678eefb0da15c8b458c5e6d77fb1307cedaca71ea75927f8450637bc0bf96691f01e11009ef5271194493ad5f157
+Size (selawik-ttf-1.01/Selawik_Release.zip) = 530652 bytes
