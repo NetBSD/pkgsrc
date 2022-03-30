@@ -1,0 +1,113 @@
+$NetBSD: patch-httpdocs_misc_ntopng-utils-manage-updates.in,v 1.1 2022/03/30 09:46:07 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- httpdocs/misc/ntopng-utils-manage-updates.in.orig	2022-02-03 18:00:06.000000000 +0000
++++ httpdocs/misc/ntopng-utils-manage-updates.in
+@@ -64,7 +64,7 @@ else
+ 	fi
+ fi
+ 
+-if [ "${OS}" == "DEBIAN" ]; then
++if [ "${OS}" = "DEBIAN" ]; then
+ 	# Check for nEdge
+ 	if dpkg --get-selections | grep -q "^nedge[[:space:]]*install$" >/dev/null; then
+ 		PRODUCT="nedge"
+@@ -202,7 +202,7 @@ function maintenance_check() {
+ 
+ function service_enabled_check() {
+ 	SERVICE_ENABLED=$(/bin/systemctl is-enabled ${PRODUCT} 2>/dev/null)
+-	if [ ! "${SERVICE_ENABLED}" == "enabled" ]; then
++	if [ ! "${SERVICE_ENABLED}" = "enabled" ]; then
+ 		set_failure "service-not-enabled"
+ 		exit 0
+ 	fi
+@@ -214,7 +214,7 @@ function run_upgrade() {
+ 
+ 	# Check if upgrade is in progress (it can take more than 1 min)
+ 	IN_PROGRESS=$(${REDIS_CLI} ${REDIS_CLI_OPT} GET ${REDIS_IN_PROGRESS_KEY} 2>/dev/null | grep 1)
+-	if [ "${IN_PROGRESS}" == "1" ]; then
++	if [ "${IN_PROGRESS}" = "1" ]; then
+ 		return
+ 	fi
+ 
+@@ -224,7 +224,7 @@ function run_upgrade() {
+ 	logsetup $ACTION
+ 	log Requested $ACTION
+ 
+-	if [ "${OS}" == "DEBIAN" ]; then
++	if [ "${OS}" = "DEBIAN" ]; then
+ 		# Debian or Ubuntu
+ 
+ 		# Update repo index
+@@ -284,7 +284,7 @@ function check_updates() {
+ 	logsetup $ACTION
+ 	log Requested $ACTION
+ 
+-	if [ "${OS}" == "DEBIAN" ]; then
++	if [ "${OS}" = "DEBIAN" ]; then
+ 		# Debian or Ubuntu
+ 
+ 		# Update repo index
+@@ -331,7 +331,7 @@ function check_updates() {
+ 		if [ "${CRON_UPDATES}" = "1" ]; then
+ 			# Check if automatic updates are enabled by the user
+ 			AUTO_UPDATES=$(${REDIS_CLI} ${REDIS_CLI_OPT} GET ${REDIS_AUTO_UPDATES_KEY} 2>/dev/null | grep 1)
+-			if [ "${AUTO_UPDATES}" == "1" ]; then
++			if [ "${AUTO_UPDATES}" = "1" ]; then
+ 				run_upgrade
+ 			fi
+ 		fi
+@@ -346,7 +346,7 @@ function check_updates() {
+ # Check if the user requested a 'Check for updates' manually
+ function check_updates_on_demand() {
+ 	CHECK_FOR_UPDATES=$(${REDIS_CLI} ${REDIS_CLI_OPT} GET ${REDIS_CHECK_FOR_UPDATES_KEY} 2>/dev/null | grep 1)
+-	if [ "${CHECK_FOR_UPDATES}" == "1" ]; then
++	if [ "${CHECK_FOR_UPDATES}" = "1" ]; then
+ 		stall_check
+ 		check_updates 0
+ 		${REDIS_CLI} ${REDIS_CLI_OPT} DEL ${REDIS_CHECK_FOR_UPDATES_KEY} >/dev/null 2>&1 
+@@ -357,7 +357,7 @@ function check_updates_on_demand() {
+ function handle_upgrade_requests() {
+ 	# Check redis for upgrade requests
+ 	UPGRADE=$(${REDIS_CLI} ${REDIS_CLI_OPT} GET ${REDIS_RUN_UPGRADE_KEY} 2>/dev/null | grep 1)
+-	if [ "${UPGRADE}" == "1" ]; then
++	if [ "${UPGRADE}" = "1" ]; then
+ 		stall_check
+ 		run_upgrade
+ 	fi
+@@ -368,29 +368,29 @@ maintenance_check
+ 
+ # Check OEM mode
+ OEM_MODE=$(${REDIS_CLI} ${REDIS_CLI_OPT} EXISTS ${REDIS_PRODUCT_NAME_KEY} 2>/dev/null | grep 1)
+-if [ "${OEM_MODE}" == "1" ]; then
++if [ "${OEM_MODE}" = "1" ]; then
+ 	# Exit unless there is an OEM source file
+ 	APT_SOURCE="ntop-oem.list"
+ 	eval $(apt-config shell APT_ETC Dir::Etc)
+ 	[ -e "/${APT_ETC}sources.list.d/${APT_SOURCE}" ] || exit 0
+ fi
+ 
+-if [ $ACTION == "check-updates" ]; then
++if [ $ACTION = "check-updates" ]; then
+ 
+ 	# Run automatic update check when the ntopng service is enabled only
+ 	service_enabled_check
+ 
+ 	check_updates 1
+ 
+-elif [ $ACTION == "check-updates-on-demand" ]; then
++elif [ $ACTION = "check-updates-on-demand" ]; then
+ 
+ 	check_updates_on_demand
+ 
+-elif [ $ACTION == "handle-upgrade-requests" ]; then
++elif [ $ACTION = "handle-upgrade-requests" ]; then
+ 
+ 	handle_upgrade_requests
+ 
+-elif [ $ACTION == "handle-on-demand-requests" ]; then
++elif [ $ACTION = "handle-on-demand-requests" ]; then
+ 	# Same as check-updates-on-demand + handle-upgrade-requests
+ 
+ 	check_updates_on_demand
