@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:15:29 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/03/30 07:09:57 wiz Exp $
 
 BLAKE2s (libtecla-1.6.1.tar.gz) = eb4bc5ef10493a400f11bce594e8dc03ed76f8cb1c7a6cd2dae98886b1e61f16
 SHA512 (libtecla-1.6.1.tar.gz) = 89d550868c99739b5cfd0ddba45f61d9a8fd1454c7044f29db6cced9cd1de83b895409706a8b85024d6c75678469a4b8b39dd184322d01e1ab6b5faf03c90fc7
 Size (libtecla-1.6.1.tar.gz) = 518995 bytes
+SHA1 (patch-Makefile.in) = c35528253258c5aa7a4cde643341e1cb71daaa32
 SHA1 (patch-aa) = 11be4b3d36a8bfc3247db1999b0c0546d5994413
 SHA1 (patch-configure) = 16200249075ab7379e3a0f03331b9265862742b0
