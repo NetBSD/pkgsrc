@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1599 2022/03/30 13:56:24 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1600 2022/03/30 16:11:28 micha Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2102,3 +2102,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/tor-browser-https-everywhere to 2022.3.24 [wiz 2022-03-30]
 	Updated lang/vala to 0.56.0 [wiz 2022-03-30]
 	Added fonts/selawik-ttf version 1.01 [wiz 2022-03-30]
+	Added print/tex-regexpatch version 0.2f [micha 2022-03-30]
