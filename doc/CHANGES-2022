@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1604 2022/03/30 16:15:14 micha Exp $
+$NetBSD: CHANGES-2022,v 1.1605 2022/03/30 16:15:34 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2107,3 +2107,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/felix to 0.5.1 [pin 2022-03-30]
 	Updated geography/echomap to 0.7.1 [pin 2022-03-30]
 	Added print/tex-regexpatch-doc version 0.2f [micha 2022-03-30]
+	Updated x11/alacritty to 0.10.1 [pin 2022-03-30]
