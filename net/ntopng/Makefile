@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2022/03/28 19:32:24 adam Exp $
+# $NetBSD: Makefile,v 1.57 2022/03/30 09:46:07 wiz Exp $
 
 DISTNAME=	ntopng-5.2.1
 CATEGORIES=	net
@@ -45,6 +45,9 @@ pre-configure:
 
 post-build:
 	${FIND} ${WRKSRC}/httpdocs -type f -print0 | xargs -0 chmod a-x
+
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/share/ntopng/httpdocs/misc/ntopng-utils-manage-updates.in.orig
 
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../databases/hiredis/buildlink3.mk"
