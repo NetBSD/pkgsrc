@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.11 2022/01/23 16:14:24 pin Exp $
+$NetBSD: distinfo,v 1.12 2022/03/30 16:15:13 pin Exp $
 
 BLAKE2s (adler32-1.2.0.crate) = 8bc63ca383f40390bb522c750ef33e14b5e49bc48eb0ec33a140f615c598a6df
 SHA512 (adler32-1.2.0.crate) = 8ed72612fb78e213fc92963fdae0508ef26988656c939e6c9cddccbe2658d4a956a8ae934d9658262a8b2687dc446b3f1ee7614128b440487c81e606526dfda3
 Size (adler32-1.2.0.crate) = 6411 bytes
-BLAKE2s (alacritty-0.10.0.tar.gz) = 2fdad0159677724774d5ade78f4c0feebb21e97a93d61415db1603a9c9b5be9b
-SHA512 (alacritty-0.10.0.tar.gz) = 25919fc7a0dac0011fc508e07f168fce953780ec8bbdbea440ee41a848bef93594d022a0d79018efacfcb9b7eca6c785b03f479bc12e09226e83b13245f5edab
-Size (alacritty-0.10.0.tar.gz) = 1437372 bytes
+BLAKE2s (alacritty-0.10.1.tar.gz) = 010f76f91ecf5033b2c31a96284634dbe5adc9b76e17dd6bf75a25144e7007e7
+SHA512 (alacritty-0.10.1.tar.gz) = 1321cfdf1ecc7210511ed84912e0d7a06951e21931c521decd3db8d0c1f50da4e50c01d9b39b4c77ce3a7ce0187f1f81abf3d3edc27388e6ec2e42c6c679f2d6
+Size (alacritty-0.10.1.tar.gz) = 1439045 bytes
 BLAKE2s (android_glue-0.2.3.crate) = 4dae3f330aaf6128eeb47e79d9360cbbeb725c3e096bf9d80254b3e8f14b0d09
 SHA512 (android_glue-0.2.3.crate) = 16ff1f0e1f50cd120dfbe57d45ebac1725fa75447c964a5b05a1a0565b13b0bc3b6c153edb4a50083ef5d802a889c9f9007e2e21a58dc408f9fb12e9437bd01b
 Size (android_glue-0.2.3.crate) = 1572 bytes
