@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/03/30 16:09:45 micha Exp $
+
+BLAKE2s (regexpatch.r58668.tar.xz) = d88c172e97f7e25d4317f822e23df2d88fd17ec54ffd4a9e547d88cb4a41f3e6
+SHA512 (regexpatch.r58668.tar.xz) = 80b3be47155c8cd654d1b3ff7a1e261da826d97237b15733e6f63f6e3e9f1e40fb8f1cfbff48b38c4ca3acabdd3209147664aa8aa408b4601751f58d596c0f38
+Size (regexpatch.r58668.tar.xz) = 3680 bytes
