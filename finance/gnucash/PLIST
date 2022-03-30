@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.82 2022/03/15 15:43:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.83 2022/03/30 08:12:51 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -324,7 +324,6 @@ lib/guile/3.0/site-ccache/gnucash/eguile/eguile-html-utilities.go
 lib/guile/3.0/site-ccache/gnucash/eguile/eguile-utilities.go
 lib/guile/3.0/site-ccache/gnucash/engine.go
 lib/guile/3.0/site-ccache/gnucash/engine/business-core.go
-lib/guile/3.0/site-ccache/gnucash/engine/commodity-table.go
 lib/guile/3.0/site-ccache/gnucash/engine/gnc-numeric.go
 lib/guile/3.0/site-ccache/gnucash/gnc-module.go
 lib/guile/3.0/site-ccache/gnucash/gnome-utils.go
@@ -468,6 +467,7 @@ share/doc/gnucash/ChangeLog.2017
 share/doc/gnucash/ChangeLog.2018
 share/doc/gnucash/ChangeLog.2019
 share/doc/gnucash/ChangeLog.2020
+share/doc/gnucash/ChangeLog.2021
 share/doc/gnucash/DOCUMENTERS
 share/doc/gnucash/HACKING
 share/doc/gnucash/LICENSE
@@ -861,8 +861,10 @@ share/gnucash/accounts/pt_BR/acctchrt_retiremt.gnucash-xea
 share/gnucash/accounts/pt_BR/acctchrt_spouseinc.gnucash-xea
 share/gnucash/accounts/pt_BR/acctchrt_spouseretire.gnucash-xea
 share/gnucash/accounts/pt_PT/acctchrt_brokerage.gnucash-xea
+share/gnucash/accounts/pt_PT/acctchrt_business.gnucash-xea
 share/gnucash/accounts/pt_PT/acctchrt_carloan.gnucash-xea
 share/gnucash/accounts/pt_PT/acctchrt_cdmoneymkt.gnucash-xea
+share/gnucash/accounts/pt_PT/acctchrt_checkbook.gnucash-xea
 share/gnucash/accounts/pt_PT/acctchrt_childcare.gnucash-xea
 share/gnucash/accounts/pt_PT/acctchrt_common.gnucash-xea
 share/gnucash/accounts/pt_PT/acctchrt_eduloan.gnucash-xea
@@ -966,6 +968,7 @@ share/gnucash/gtkbuilder/assistant-hierarchy.glade
 share/gnucash/gtkbuilder/assistant-loan.glade
 share/gnucash/gtkbuilder/assistant-qif-import.glade
 share/gnucash/gtkbuilder/assistant-stock-split.glade
+share/gnucash/gtkbuilder/assistant-stock-transaction.glade
 share/gnucash/gtkbuilder/assistant-xml-encoding.glade
 share/gnucash/gtkbuilder/business-options-gnome.glade
 share/gnucash/gtkbuilder/business-prefs.glade
@@ -1184,7 +1187,6 @@ share/guile/site/3.0/gnucash/eguile/eguile-html-utilities.scm
 share/guile/site/3.0/gnucash/eguile/eguile-utilities.scm
 share/guile/site/3.0/gnucash/engine.scm
 share/guile/site/3.0/gnucash/engine/business-core.scm
-share/guile/site/3.0/gnucash/engine/commodity-table.scm
 share/guile/site/3.0/gnucash/engine/gnc-numeric.scm
 share/guile/site/3.0/gnucash/gnc-module.scm
 share/guile/site/3.0/gnucash/gnome-utils.scm
