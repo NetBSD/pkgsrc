@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1595 2022/03/30 09:16:27 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1596 2022/03/30 09:18:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2098,3 +2098,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/keepassxc to 2.7.0 [wiz 2022-03-30]
 	Updated graphics/py-cairo to 1.21.0 [wiz 2022-03-30]
 	Updated www/restish to 0.11.0 [wiz 2022-03-30]
+	Updated multimedia/dav1d to 1.0.0 [wiz 2022-03-30]
