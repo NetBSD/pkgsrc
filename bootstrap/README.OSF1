@@ -1,4 +1,6 @@
-$NetBSD: README.OSF1,v 1.4 2015/04/19 19:29:44 tnn Exp $
+$NetBSD: README.OSF1,v 1.5 2022/03/31 21:36:24 gdt Exp $
+
+As of 2022-03, bootstrapping on OSF1 is believed to be broken.
 
 Compiler
 --------
