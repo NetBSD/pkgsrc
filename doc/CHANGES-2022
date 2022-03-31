@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1619 2022/03/31 18:27:41 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1620 2022/03/31 21:48:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2130,3 +2130,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/nss to 3.77 [wiz 2022-03-31]
 	Updated devel/py-ipython to 8.2.0 [adam 2022-03-31]
 	Updated devel/py-ipykernel to 6.11.0 [adam 2022-03-31]
+	Added devel/py-test-trio version 0.7.0 [wiz 2022-03-31]
