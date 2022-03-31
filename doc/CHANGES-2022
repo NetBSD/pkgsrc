@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1612 2022/03/31 09:02:49 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1613 2022/03/31 09:21:55 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2119,3 +2119,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-wrapt to 1.14.0 [adam 2022-03-31]
 	Removed devel/SDL-intro-en [nia 2022-03-31]
 	Removed devel/SDL-intro-ko [nia 2022-03-31]
+	Removed databases/virtuoso [nia 2022-03-31]
