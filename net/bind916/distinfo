@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2022/03/17 00:18:05 taca Exp $
+$NetBSD: distinfo,v 1.34 2022/03/31 12:16:24 jperkin Exp $
 
 BLAKE2s (bind-9.16.27.tar.xz) = 16da007bf1fce196969d93cc54e6849a624afa1d39ee57332ffb6d08c8c67cdd
 SHA512 (bind-9.16.27.tar.xz) = 5c71f228db83aa8cc9e65466d6e5afca4a9f80c693358111a003fe09e1a14522175eb2b6a0f11e2a2cd4fdba01f2ae315de52e394a441b3861ca2a011e02af62
@@ -16,7 +16,7 @@ SHA1 (patch-config.guess) = f44c6344a297e7c623dcbf75b308eb35f797a537
 SHA1 (patch-config.h.in) = 6072793048cdf590863046355eeffa1d93524c36
 SHA1 (patch-config.sub) = 7389c0f2500f2afe96d43979a2d3e0b9f8dff073
 SHA1 (patch-config.threads.in) = fc5cc7097d87523a34c0e630cb8dd1d081d859e5
-SHA1 (patch-configure.ac) = 3dd8c49eb6bc475c20c88edc20bd8457698ad500
+SHA1 (patch-configure.ac) = 9a8aa06ca82de5f3a37aac01aef2fc93af575309
 SHA1 (patch-contrib_dlz_config.dlz.in) = 6c53d61aaaf1a952a867e4c4da0194db94f511d7
 SHA1 (patch-lib_dns_byaddr.c) = 647ddaaaf040233e18d1a87d83bc2bd63d2a20e3
 SHA1 (patch-lib_dns_client.c) = 94909ebeaded676cca502d83bf8071ae651e1928
