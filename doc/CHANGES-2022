@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1613 2022/03/31 09:21:55 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1614 2022/03/31 10:53:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2120,3 +2120,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed devel/SDL-intro-en [nia 2022-03-31]
 	Removed devel/SDL-intro-ko [nia 2022-03-31]
 	Removed databases/virtuoso [nia 2022-03-31]
+	Updated devel/yarn to 1.22.18 [adam 2022-03-31]
+	Updated devel/py-test-asyncio to 0.18.3 [adam 2022-03-31]
