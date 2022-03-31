@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/11/18 07:16:16 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/03/31 09:23:13 nia Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-bad/-egl-gl/}
 CATEGORIES=	multimedia gnome
@@ -9,7 +9,7 @@ GST_EXT_BUILD=	# defined
 GST_PLUGINS+=	gl
 
 #Looking for a fallback subproject for the dependency gstreamer-gl-1.0
-BROKEN=		Needs updating for gstreamer1 1.18.x
+BROKEN=		"Needs updating for gstreamer1 1.18.x"
 
 #GST_PLUGINS1_NAME=	gl
 #GST_PLUGINS1_FLAGS=	egl
