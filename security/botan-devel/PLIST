@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2021/10/01 12:13:08 nia Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/03/31 23:24:22 wiz Exp $
 bin/botan
 include/botan-2/botan/adler32.h
 include/botan-2/botan/aead.h
@@ -312,11 +312,12 @@ include/botan-2/botan/xmss_wots_privatekey.h
 include/botan-2/botan/xmss_wots_publickey.h
 include/botan-2/botan/xtea.h
 include/botan-2/botan/xts.h
+include/botan-2/botan/zfec.h
 include/botan-2/botan/zlib.h
 lib/libbotan-2.a
 lib/libbotan-2.so
-lib/libbotan-2.so.17
-lib/libbotan-2.so.17.17.3
+lib/libbotan-2.so.19
+lib/libbotan-2.so.19.19.1
 lib/pkgconfig/botan-2.pc
 ${PYSITELIB}/botan2.py
 share/doc/${PKGNAME}/authors.txt
@@ -354,6 +355,7 @@ share/doc/${PKGNAME}/handbook/api_ref/tpm.rst
 share/doc/${PKGNAME}/handbook/api_ref/tss.rst
 share/doc/${PKGNAME}/handbook/api_ref/versions.rst
 share/doc/${PKGNAME}/handbook/api_ref/x509.rst
+share/doc/${PKGNAME}/handbook/api_ref/zfec.rst
 share/doc/${PKGNAME}/handbook/authors.txt
 share/doc/${PKGNAME}/handbook/building.rst
 share/doc/${PKGNAME}/handbook/cli.rst
