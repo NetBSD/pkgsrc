@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1617 2022/03/31 16:30:47 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.1618 2022/03/31 18:11:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2127,3 +2127,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/gdbus-codegen to 2.70.5 [adam 2022-03-31]
 	Updated www/zola to 0.15.3nb1 [nikita 2022-03-31]
 	Updated wm/obconf-qt to 0.16.2 [gutteridge 2022-03-31]
+	Updated devel/nss to 3.77 [wiz 2022-03-31]
