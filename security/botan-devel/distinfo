@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.19 2021/10/26 11:17:01 nia Exp $
+$NetBSD: distinfo,v 1.20 2022/03/31 23:24:22 wiz Exp $
 
-BLAKE2s (Botan-2.17.3.tar.xz) = 6f26bbbbfd4265b60867feaf89020d0f880cd0486243d54770b04cce1a10fbeb
-SHA512 (Botan-2.17.3.tar.xz) = ead0f144dfb9eca66d0e81e376d0d49f4b0b6bc1599f8cf52299e1753645b5b20100efa004ef5f9571f7bea88958f35db38367fc26f2603890f8f199cc890dbc
-Size (Botan-2.17.3.tar.xz) = 5937596 bytes
+BLAKE2s (Botan-2.19.1.tar.xz) = 8e7c4d58d26e388a8bc8cf83e4fc86096b47b8fe44c95dff611f906702fedabb
+SHA512 (Botan-2.19.1.tar.xz) = e604be0e7e82da89e3e1949d3035a87dc63314bd9854d5fe5129ccb3ed5bc78edb0406c7f8ad1a152b59a63b6d98ba207a0851a08428c3452cce794614b5eef5
+Size (Botan-2.19.1.tar.xz) = 6088380 bytes
 SHA1 (patch-configure.py) = 2688fe59474bf3de425b49d2e0c9c1f4ecccfd16
 SHA1 (patch-src_build-data_os_openbsd.txt) = 7858a819d457e0cb18a5b9d608c386bee36813ee
-SHA1 (patch-src_lib_compat_sodium_sodium__utils.cpp) = 2be13d873006bafe969c39e3af2a783f0372ad1b
 SHA1 (patch-src_lib_utils_os__utils.cpp) = ab44b46c0a9a649f055dc7cd8f54c6ffdf8246cb
