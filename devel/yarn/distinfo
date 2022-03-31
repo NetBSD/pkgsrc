@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 10:20:10 nia Exp $
+$NetBSD: distinfo,v 1.19 2022/03/31 10:40:50 adam Exp $
 
-BLAKE2s (yarn-v1.22.17.tar.gz) = e4da3ad7411db353f192315aeab3933d5733283b86d764c719df39d481bdb291
-SHA512 (yarn-v1.22.17.tar.gz) = 1f4a76e35057687d1437d21e1fffd14fcdad9793df36b695a52a44a16f844fb966a29342eb5799f80f880ef53c14ce86a39bf1d7ad929dc0cbf09d598d106b89
-Size (yarn-v1.22.17.tar.gz) = 1246198 bytes
+BLAKE2s (yarn-v1.22.18.tar.gz) = 75e64339128f3e59fae19dc3cf48d9c168d73c1ef702cfa4a9ef05fd288fbd66
+SHA512 (yarn-v1.22.18.tar.gz) = 0db7448e72271878782a85a785ced64e72711a7df976dcf05025336f4a0a882bdc8c6cad3b295c57ecdea5f43f38360c3c12bba310cb899136655f28b1e34b42
+Size (yarn-v1.22.18.tar.gz) = 1246681 bytes
