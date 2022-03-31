@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2022/02/05 14:53:33 adam Exp $
+# $NetBSD: Makefile,v 1.11 2022/03/31 07:28:01 adam Exp $
 
-DISTNAME=	pybind11-2.9.1
+DISTNAME=	pybind11-2.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pybind11/}
