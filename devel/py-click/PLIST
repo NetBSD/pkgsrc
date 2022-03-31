@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/01/31 09:52:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/03/31 07:25:58 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -16,9 +16,6 @@ ${PYSITELIB}/click/_termui_impl.pyo
 ${PYSITELIB}/click/_textwrap.py
 ${PYSITELIB}/click/_textwrap.pyc
 ${PYSITELIB}/click/_textwrap.pyo
-${PYSITELIB}/click/_unicodefun.py
-${PYSITELIB}/click/_unicodefun.pyc
-${PYSITELIB}/click/_unicodefun.pyo
 ${PYSITELIB}/click/_winconsole.py
 ${PYSITELIB}/click/_winconsole.pyc
 ${PYSITELIB}/click/_winconsole.pyo
