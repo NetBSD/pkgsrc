@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.226 2022/03/30 06:52:33 adam Exp $
+# $NetBSD: Makefile,v 1.227 2022/03/31 07:17:01 tnn Exp $
 
 DISTNAME=	node-v16.14.2
 EXTRACT_SUFX=	.tar.xz
@@ -17,6 +17,7 @@ CONFIGURE_ARGS+=	--without-corepack
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+CHECK_PORTABILITY_SKIP+=	deps/v8/tools/cppgc/export_to_github.sh
 CHECK_PORTABILITY_SKIP+=	tools/macos-installer/pkgbuild/npm/scripts/preinstall
 
 .if ${MACHINE_ARCH} == "i386"
