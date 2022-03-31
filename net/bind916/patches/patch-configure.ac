@@ -1,10 +1,11 @@
-$NetBSD: patch-configure.ac,v 1.1 2020/12/19 16:41:36 taca Exp $
+$NetBSD: patch-configure.ac,v 1.2 2022/03/31 12:16:24 jperkin Exp $
 
 Add support for blocklist(blacklist).
+Fix linker flags on SunOS.
 
---- configure.ac.orig	2020-12-07 08:16:53.000000000 +0000
+--- configure.ac.orig	2022-03-07 08:48:03.000000000 +0000
 +++ configure.ac
-@@ -695,6 +695,16 @@ AC_CHECK_FUNCS([pthread_setaffinity_np c
+@@ -721,6 +721,16 @@ AC_CHECK_FUNCS([sched_yield pthread_yiel
  AC_CHECK_FUNCS([pthread_setname_np pthread_set_name_np])
  AC_CHECK_HEADERS([pthread_np.h], [], [], [#include <pthread.h>])
  
@@ -21,7 +22,7 @@ Add support for blocklist(blacklist).
  # libuv
  AC_MSG_CHECKING(for libuv)
  PKG_CHECK_MODULES([LIBUV], [libuv >= 1.0.0], [],
-@@ -1342,6 +1352,18 @@ AS_CASE([$with_libxml2],
+@@ -1388,6 +1398,18 @@ AS_CASE([$with_libxml2],
  				 [AC_DEFINE([HAVE_LIBXML2], [1], [Use libxml2 library])])],
  	[AC_MSG_ERROR([Specifying libxml2 installation path is not supported, adjust PKG_CONFIG_PATH instead])])
  
@@ -40,3 +41,16 @@ Add support for blocklist(blacklist).
  #
  # DEPRECATED
  #
+@@ -2523,9 +2545,9 @@ AS_IF([test "$with_dlopen" = "yes"],
+ 		       ])
+ 	       ],
+ 	       [*-solaris*],[
+-		 SO_CFLAGS="-KPIC"
+-		 SO_LDFLAGS="-G -z text"
+-		 SO_LD="ld"
++		 SO_CFLAGS="-fPIC"
++		 SO_LDFLAGS="-Xcompiler -shared"
++		 SO_LD="${CC}"
+ 	       ],
+ 	       [ia64-hp-hpux*],[
+ 		 SO_CFLAGS="+z"
