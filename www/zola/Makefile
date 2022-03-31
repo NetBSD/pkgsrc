@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2022/03/28 12:58:26 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2022/03/31 15:29:29 nikita Exp $
 
 DISTNAME=	zola-0.15.3
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=getzola/}
 GITHUB_PROJECT=	zola
@@ -18,10 +19,12 @@ USE_TOOLS+=	gmake
 INSTALLATION_DIRS=	bin
 
 MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
+RUSTFLAGS+=		-C link-arg=-L${BUILDLINK_PREFIX.SDL2}/lib
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/zola ${DESTDIR}${PREFIX}/bin
 
+.include "../../devel/SDL2/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
