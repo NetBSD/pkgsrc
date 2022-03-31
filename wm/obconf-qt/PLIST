@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2021/04/20 18:16:33 pin Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/03/31 16:30:25 gutteridge Exp $
 bin/obconf-qt
 share/applications/obconf-qt.desktop
 share/icons/hicolor/48x48/apps/obconf-qt.png
 share/obconf-qt/translations/obconf-qt_arn.qm
 share/obconf-qt/translations/obconf-qt_ast.qm
+share/obconf-qt/translations/obconf-qt_bg.qm
 share/obconf-qt/translations/obconf-qt_ca.qm
 share/obconf-qt/translations/obconf-qt_cs.qm
 share/obconf-qt/translations/obconf-qt_cy.qm
@@ -11,6 +12,8 @@ share/obconf-qt/translations/obconf-qt_da.qm
 share/obconf-qt/translations/obconf-qt_de.qm
 share/obconf-qt/translations/obconf-qt_el.qm
 share/obconf-qt/translations/obconf-qt_es.qm
+share/obconf-qt/translations/obconf-qt_et.qm
+share/obconf-qt/translations/obconf-qt_fi.qm
 share/obconf-qt/translations/obconf-qt_fr.qm
 share/obconf-qt/translations/obconf-qt_gl.qm
 share/obconf-qt/translations/obconf-qt_he.qm
@@ -20,6 +23,7 @@ share/obconf-qt/translations/obconf-qt_id.qm
 share/obconf-qt/translations/obconf-qt_is.qm
 share/obconf-qt/translations/obconf-qt_it.qm
 share/obconf-qt/translations/obconf-qt_ja.qm
+share/obconf-qt/translations/obconf-qt_ko.qm
 share/obconf-qt/translations/obconf-qt_lt.qm
 share/obconf-qt/translations/obconf-qt_nb_NO.qm
 share/obconf-qt/translations/obconf-qt_nl.qm
