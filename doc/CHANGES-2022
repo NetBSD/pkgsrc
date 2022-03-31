@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1610 2022/03/31 08:43:21 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1611 2022/03/31 09:02:28 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2117,3 +2117,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/py-mypy to 0.942 [adam 2022-03-31]
 	Updated textproc/py-tomli to 2.0.1 [adam 2022-03-31]
 	Updated devel/py-wrapt to 1.14.0 [adam 2022-03-31]
+	Removed devel/SDL-intro-en [nia 2022-03-31]
