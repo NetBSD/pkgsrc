@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:11 nia Exp $
-
-BLAKE2s (SDL-1.0-korean-intro.tar.gz) = 5f14bd1370d42bc04c6600e357437c256f0d3a0eddbe947c42fe86dc3734befb
-SHA512 (SDL-1.0-korean-intro.tar.gz) = 01851a779cf6b25386e3e90a5edcbdfe2c0995a7209a6cd828cc9eb017831ff5040c4fdca1eb46f9e4bb4b1d663de12d975dccb62a162b4a60da46212be62add
-Size (SDL-1.0-korean-intro.tar.gz) = 14601 bytes
