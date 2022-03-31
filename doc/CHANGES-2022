@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1618 2022/03/31 18:11:00 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1619 2022/03/31 18:27:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2128,3 +2128,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/zola to 0.15.3nb1 [nikita 2022-03-31]
 	Updated wm/obconf-qt to 0.16.2 [gutteridge 2022-03-31]
 	Updated devel/nss to 3.77 [wiz 2022-03-31]
+	Updated devel/py-ipython to 8.2.0 [adam 2022-03-31]
+	Updated devel/py-ipykernel to 6.11.0 [adam 2022-03-31]
