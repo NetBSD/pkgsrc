@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1608 2022/03/30 21:57:36 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1609 2022/03/31 07:30:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2111,3 +2111,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/doxygen to 1.9.3 [micha 2022-03-30]
 	Updated x11/libXvMC to 1.0.13 [wiz 2022-03-30]
 	Updated x11/libX11 to 1.7.4 [wiz 2022-03-30]
+	Updated finance/py-stripe to 2.70.0 [adam 2022-03-31]
+	Updated devel/py-click to 8.1.1 [adam 2022-03-31]
+	Updated devel/py-pybind11 to 2.9.2 [adam 2022-03-31]
+	Updated lang/py-mypy to 0.942 [adam 2022-03-31]
