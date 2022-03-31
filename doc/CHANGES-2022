@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1614 2022/03/31 10:53:42 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1615 2022/03/31 11:55:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2122,3 +2122,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed databases/virtuoso [nia 2022-03-31]
 	Updated devel/yarn to 1.22.18 [adam 2022-03-31]
 	Updated devel/py-test-asyncio to 0.18.3 [adam 2022-03-31]
+	Updated devel/glib2 to 2.70.5 [adam 2022-03-31]
+	Updated devel/glib2-tools to 2.70.5 [adam 2022-03-31]
+	Updated devel/gdbus-codegen to 2.70.5 [adam 2022-03-31]
