@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/03/31 21:47:54 wiz Exp $
+
+BLAKE2s (pytest-trio-0.7.0.tar.gz) = 5fdcc33e7b3b00eac23cffa223157127ba60f01479fb178b1d785787cbcc1f00
+SHA512 (pytest-trio-0.7.0.tar.gz) = 547036c94f33cf8e755c88d608c5fddfa5c583fdaa7e604598d470e250a006c571702a81bac4f273b74450a8c10e4be404bad74d4104403fe1c9c70e872dff53
+Size (pytest-trio-0.7.0.tar.gz) = 47784 bytes
