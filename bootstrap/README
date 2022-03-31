@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.27 2022/03/31 22:09:43 gdt Exp $
+$NetBSD: README,v 1.28 2022/03/31 22:36:18 gdt Exp $
 
 To try to get pkgsrc working on your system, please try the following
 as root:
@@ -98,11 +98,11 @@ Platforms with active use and maintenance
 The following platforms have active users, and people that regularly
 fix problems.
 
-  Darwin (README.macOS, macOS)
+  macOS (perhaps also Darwin, if such still exists)
   FreeBSD
   Linux
   NetBSD
-  SunOS (README.Solaris, illumos, SmartOS, OmniOS)
+  Solaris (illumos, SmartOS, OmniOS)
 
 
 Platforms believed to have users
@@ -115,7 +115,7 @@ Platforms with at least a tiny number of users
 ----------------------------------------------
 
   HPUX
-  SCO OpenServer (README.OpenServer5)
+  OpenServer5 (SCO OpenServer)
   SCO UnixWare (no README)
 
 
@@ -125,7 +125,7 @@ Platforms with unknown status
   DragonFly (no README)
   FreeMiNT (no README)
   GNUkFreeBSD
-  Minix (no README)
+  Minix3
 
 
 Platforms believed to have almost no users
@@ -136,7 +136,6 @@ Platforms believed to have almost no users
   IRIX
   Interix
   MirBSD
-  * OSF1
   QNX (no README)
 
 
@@ -145,3 +144,4 @@ Platforms believed to have no users
 
   Bitrig
   Haiku
+  * OSF1
