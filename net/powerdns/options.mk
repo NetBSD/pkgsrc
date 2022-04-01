@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2020/07/02 13:01:38 otis Exp $
+# $NetBSD: options.mk,v 1.9 2022/04/01 08:07:28 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.powerdns
 PKG_SUPPORTED_OPTIONS=	bind botan luarecords pipe random remote sqlite tools zeromq
@@ -15,7 +15,7 @@ PLIST.bind=		yes
 
 .if !empty(PKG_OPTIONS:Mbotan)
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../security/botan-devel/buildlink3.mk"
+.include "../../security/botan2/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mluarecords)
