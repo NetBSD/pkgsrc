@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3704 2022/03/31 21:48:13 wiz Exp $
+# $NetBSD: Makefile,v 1.3705 2022/04/01 10:43:05 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -3154,6 +3154,7 @@ SUBDIR+=	scmcvs
 SUBDIR+=	scons
 SUBDIR+=	sdcc
 SUBDIR+=	sdcc3
+SUBDIR+=	sdl12-compat
 SUBDIR+=	semantic
 SUBDIR+=	semi
 SUBDIR+=	sfsexp
