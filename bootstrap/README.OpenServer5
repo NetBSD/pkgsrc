@@ -1,7 +1,4 @@
-$NetBSD: README.OpenServer5,v 1.3 2022/04/01 13:45:32 gdt Exp $
-
-As of 2022-04, "SCO/Xinuos UnixWare 7 Definitive" works, and 6 is
-likely to work.
+$NetBSD: README.OpenServer5,v 1.4 2022/04/01 17:19:28 gdt Exp $
 
 XXX You should change your /bin/sh to shells/pdksh under OpenServer 5.0.7/3.2!!
 

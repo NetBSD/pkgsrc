@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.28 2022/03/31 22:36:18 gdt Exp $
+$NetBSD: README,v 1.29 2022/04/01 17:19:28 gdt Exp $
 
 To try to get pkgsrc working on your system, please try the following
 as root:
@@ -96,14 +96,17 @@ Platforms with active use and maintenance
 -----------------------------------------
 
 The following platforms have active users, and people that regularly
-fix problems.
+fix problems.  They also have active bulk builds posted to
+`pkgsrc-bulk`.
 
   macOS (perhaps also Darwin, if such still exists)
-  FreeBSD
   Linux
   NetBSD
   Solaris (illumos, SmartOS, OmniOS)
 
+These platforms are active but lack published bulk builds.
+
+  FreeBSD
 
 Platforms believed to have users
 --------------------------------
@@ -115,8 +118,8 @@ Platforms with at least a tiny number of users
 ----------------------------------------------
 
   HPUX
-  OpenServer5 (SCO OpenServer)
-  SCO UnixWare (no README)
+  OpenServer5 (SCO OpenServer, platform/SCO_SV.mk)
+  SCO UnixWare
 
 
 Platforms with unknown status
