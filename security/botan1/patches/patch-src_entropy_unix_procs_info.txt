@@ -1,0 +1,12 @@
+$NetBSD: patch-src_entropy_unix_procs_info.txt,v 1.1 2022/04/01 08:00:34 wiz Exp $
+
+--- src/entropy/unix_procs/info.txt.orig	2016-02-03 07:57:06.000000000 +0000
++++ src/entropy/unix_procs/info.txt
+@@ -24,6 +24,7 @@ netbsd
+ qnx
+ solaris
+ tru64
++dragonfly
+ </os>
+ 
+ <requires>
