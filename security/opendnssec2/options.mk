@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2019/11/06 13:44:38 he Exp $
+# $NetBSD: options.mk,v 1.2 2022/04/01 08:07:28 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.opendnssec
 PKG_SUPPORTED_OPTIONS=		softhsm2
@@ -10,6 +10,5 @@ PKG_SUGGESTED_OPTIONS=		softhsm2
 ### SoftHSM
 ###
 .if !empty(PKG_OPTIONS:Msofthsm2)
-DEPENDS+=	softhsm2-[0-9]*:../../security/softhsm2
 .include "../../security/softhsm2/buildlink3.mk"
 .endif
