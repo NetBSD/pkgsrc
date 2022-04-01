@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.85 2021/10/26 10:14:10 nia Exp $
+$NetBSD: distinfo,v 1.85.4.1 2022/04/01 19:05:14 bsiegert Exp $
 
 BLAKE2s (SDL-1.2.15.tar.gz) = 4c189e4973635d37bbc9a4d87512bbbeb950d49c4862bc59f1bf2c37b9c54cc7
 SHA512 (SDL-1.2.15.tar.gz) = ac392d916e6953b0925a7cbb0f232affea33339ef69b47a0a7898492afb9784b93138986df53d6da6d3e2ad79af1e9482df565ecca30f89428be0ae6851b1adc
 Size (SDL-1.2.15.tar.gz) = 3920622 bytes
 SHA1 (patch-aa) = 00fb7a85caf8fc9f08298d0a07a4587757fdffb0
 SHA1 (patch-ac) = 8b2dddff9ad449b19b35ef364e2d960e46284563
+SHA1 (patch-build-scripts_strip__fPIC.sh) = 51a6271cadac350a76b6e556727e27955067afb5
 SHA1 (patch-src_audio_SDL__wave.c) = ff42d973c9c5a7643ffa5acb248e15e821d2145f
 SHA1 (patch-src_audio_bsd_SDL__bsdaudio.c) = 7f5fbf4d839e52fce028810dc807b404fcd51442
 SHA1 (patch-src_audio_dma_SDL__dmaaudio.c) = cede64d04e8872b11851bfcacbc99059df973881
