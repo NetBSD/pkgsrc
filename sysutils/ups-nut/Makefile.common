@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2021/03/21 15:42:29 gdt Exp $
+# $NetBSD: Makefile.common,v 1.11 2022/04/01 12:18:14 gdt Exp $
 # used by sysutils/ups-nut/Makefile
 # used by sysutils/ups-nut-cgi/Makefile
 # used by sysutils/ups-nut-snmp/Makefile
@@ -9,7 +9,7 @@ DISTNAME=		nut-2.7.4
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.networkupstools.org/source/${PKGVERSION_NOREV:R}/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER?=		gdt@NetBSD.org
 HOMEPAGE=		http://www.networkupstools.org/
 
 LICENSE=		gnu-gpl-v2 OR gnu-gpl-v3
