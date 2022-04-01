@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2020/10/16 07:42:48 nia Exp $
+# $NetBSD: options.mk,v 1.7 2022/04/01 11:53:28 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mumble
 PKG_SUPPORTED_OPTIONS=		alsa dbus jack pulseaudio portaudio
@@ -8,35 +8,35 @@ PKG_SUGGESTED_OPTIONS.Linux=	alsa
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Malsa)
-CONFIG_OPTIONS+=	CONFIG+=alsa
+CMAKE_ARGS+=	-Dalsa=on
 .include "../../audio/alsa-lib/buildlink3.mk"
 .else
-CONFIG_OPTIONS+=	CONFIG+=no-alsa
+CMAKE_ARGS+=	-Dalsa=off
 .endif
 
 .if !empty(PKG_OPTIONS:Mdbus)
-CONFIG_OPTIONS+=	CONFIG+=dbus
+CMAKE_ARGS+=	-Ddbus=on
 .else
-CONFIG_OPTIONS+=	CONFIG+=no-dbus
+CMAKE_ARGS+=	-Ddbus=off
 .endif
 
 .if !empty(PKG_OPTIONS:Mjack)
-CONFIG_OPTIONS+=	CONFIG+=jackaudio
+CMAKE_ARGS+=	-Djackaudio=on
 .include "../../audio/jack/buildlink3.mk"
 .else
-CONFIG_OPTIONS+=	CONFIG+=no-jackaudio
+CMAKE_ARGS+=	-Djackaudio=off
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
-CONFIG_OPTIONS+=	CONFIG+=pulseaudio
+CMAKE_ARGS+=	-Dpulseaudio=on
 .include "../../audio/pulseaudio/buildlink3.mk"
 .else
-CONFIG_OPTIONS+=	CONFIG+=no-pulseaudio
+CMAKE_ARGS+=	-Dpulseaudio=off
 .endif
 
 .if !empty(PKG_OPTIONS:Mportaudio)
-CONFIG_OPTIONS+=	CONFIG+=portaudio
+CMAKE_ARGS+=	-Dportaudio=on
 .include "../../audio/portaudio/buildlink3.mk"
 .else
-CONFIG_OPTIONS+=	CONFIG+=no-portaudio
+CMAKE_ARGS+=	-Dportaudio=off
 .endif

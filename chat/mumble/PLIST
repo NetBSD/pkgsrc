@@ -1,22 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2021/03/05 09:57:20 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/04/01 11:53:28 nia Exp $
 bin/mumble
-bin/murmurd
-lib/mumble/libcelt0.so
-lib/mumble/libcelt0.so.0
-lib/mumble/libcelt0.so.0.11
-lib/mumble/libcelt0.so.0.11.0
-lib/mumble/libcelt0.so.0.7
-lib/mumble/libcelt0.so.0.7.0
-lib/mumble/liblink.so
-lib/mumble/libmumble.so
-lib/mumble/libmumble.so.1
-lib/mumble/libmumble.so.1.3
-lib/mumble/libmumble.so.1.3.3
-lib/mumble/libmumble_proto.a
+bin/mumble-server
 man/man1/mumble.1
+man/man1/murmur-user-wrapper.1
 man/man1/murmurd.1
-share/applications/mumble.desktop
-share/icons/hicolor/128x128/apps/mumble.png
-share/icons/hicolor/512x512/apps/mumble.png
+share/applications/org.mumble_voip.mumble.desktop
+share/icons/hicolor/256x256/apps/mumble.png
 share/icons/hicolor/scalable/apps/mumble.svg
-share/pixmaps/mumble.xpm
+share/metainfo/org.mumble_voip.mumble.appdata.xml
