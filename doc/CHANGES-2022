@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1624 2022/04/01 09:34:14 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1625 2022/04/01 10:43:18 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2136,3 +2136,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Moved security/botan-devel to security/botan2 [wiz 2022-04-01]
 	Updated textproc/py-phonenumbers to 8.12.46 [adam 2022-04-01]
 	Updated textproc/py-tomlkit to 0.10.1 [adam 2022-04-01]
+	Added devel/sdl12-compat version 1.2.52 [nia 2022-04-01]
