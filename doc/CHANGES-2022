@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1626 2022/04/01 11:53:39 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1627 2022/04/01 16:39:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2138,3 +2138,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-tomlkit to 0.10.1 [adam 2022-04-01]
 	Added devel/sdl12-compat version 1.2.52 [nia 2022-04-01]
 	Updated chat/mumble to 1.4.230 [nia 2022-04-01]
+	Updated lang/perl5 to 5.34.1 [wiz 2022-04-01]
