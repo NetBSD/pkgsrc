@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.120 2021/12/08 16:04:02 adam Exp $
+# $NetBSD: Makefile,v 1.121 2022/04/01 08:07:28 wiz Exp $
 
 DISTNAME=	monotone-1.1
-PKGREVISION=	27
+PKGREVISION=	28
 CATEGORIES=	devel scm
 MASTER_SITES=	http://www.monotone.ca/downloads/1.1/
 EXTRACT_SUFX=	.tar.bz2
@@ -56,7 +56,6 @@ BUILDLINK_API_DEPENDS.pcre+=	pcre>=7.6
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
-# botan-devel is probably also fine
-.include "../../security/botan/buildlink3.mk"
+.include "../../security/botan1/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
