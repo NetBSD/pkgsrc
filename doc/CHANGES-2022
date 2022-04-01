@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1621 2022/03/31 23:24:32 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1622 2022/04/01 08:08:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2132,3 +2132,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-ipykernel to 6.11.0 [adam 2022-03-31]
 	Added devel/py-test-trio version 0.7.0 [wiz 2022-03-31]
 	Updated security/botan-devel to 2.19.1 [wiz 2022-03-31]
+	Moved security/botan to security/botan [wiz 2022-04-01]
+	Moved security/botan-devel to security/botan2 [wiz 2022-04-01]
