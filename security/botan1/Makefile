@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/04/01 08:00:34 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/01 08:04:55 wiz Exp $
 
 DISTNAME=	Botan-1.10.17
 PKGNAME=	${DISTNAME:tl}
@@ -28,16 +28,14 @@ MAKE_FLAGS+=	LIB_OPT=${CXXFLAGS:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=	x86 x86_64 i386
+PLIST_VARS+=	x86_64 i386
 
 .if ${MACHINE_ARCH} == "x86_64"
 CONFIGURE_ARGS+=	--cpu=amd64
 PLIST.x86_64=		yes
-PLIST.x86=		yes
 .elif ${MACHINE_ARCH} == "i386"
 CONFIGURE_ARGS+=	--cpu=i386
 PLIST.i386=		yes
-PLIST.x86=		yes
 .elif ${MACHINE_ARCH} == "powerpc"
 CONFIGURE_ARGS+=	--cpu=ppc
 .elif ${MACHINE_ARCH} == "powerpc64"
