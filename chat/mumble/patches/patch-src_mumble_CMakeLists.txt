@@ -1,0 +1,39 @@
+$NetBSD: patch-src_mumble_CMakeLists.txt,v 1.1 2022/04/01 11:53:28 nia Exp $
+
+- Do not limit audio backends to Linux/FreeBSD.
+- Recognize DNS-SD on NetBSD.
+
+--- src/mumble/CMakeLists.txt.orig	2022-01-18 01:00:00.342013800 +0000
++++ src/mumble/CMakeLists.txt
+@@ -43,16 +43,14 @@ if(WIN32)
+ 	option(xboxinput "Build support for global shortcuts from Xbox controllers via the XInput DLL." ON)
+ 	option(gkey "Build support for Logitech G-Keys. Note: This feature does not require any build-time dependencies, and requires Logitech Gaming Software to be installed to have any effect at runtime." ON)
+ elseif(UNIX)
++	option(alsa "Build support for ALSA." ON)
++	option(oss "Build support for OSS." ON)
++	option(pipewire "Build support for PipeWire." ON)
++	option(pulseaudio "Build support for PulseAudio." ON)
++	option(speechd "Build support for Speech Dispatcher." ON)
++	option(xinput2 "Build support for XI2" ON)
+ 	if(APPLE)
+ 		option(coreaudio "Build support for CoreAudio." ON)
+-	elseif(${CMAKE_SYSTEM_NAME} STREQUAL "FreeBSD")
+-		option(oss "Build support for OSS." ON)
+-	elseif(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
+-		option(alsa "Build support for ALSA." ON)
+-		option(pipewire "Build support for PipeWire." ON)
+-		option(pulseaudio "Build support for PulseAudio." ON)
+-		option(speechd "Build support for Speech Dispatcher." ON)
+-		option(xinput2 "Build support for XI2" ON)
+ 	endif()
+ endif()
+ 
+@@ -897,7 +895,7 @@ if(zeroconf)
+ 			target_include_directories(mumble PRIVATE ${avahi-compat-libdns_sd_INCLUDE_DIRS})
+ 			target_link_libraries(mumble PRIVATE ${avahi-compat-libdns_sd_LIBRARIES})
+ 		else()
+-			find_library(LIB_DNSSD "dnssd")
++			find_library(LIB_DNSSD NAMES "dnssd" "dns_sd")
+ 			if(${LIB_DNSSD} STREQUAL "LIB_DNSSD-NOTFOUND")
+ 				message(FATAL_ERROR "DNS-SD library not found!")
+ 			endif()

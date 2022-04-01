@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:05:21 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/04/01 11:53:28 nia Exp $
 
-BLAKE2s (mumble-1.3.4.tar.gz) = f5532d8db01b260f443b23c7da2af28b246c6c4d02cdf90d5073f36ac94f708c
-SHA512 (mumble-1.3.4.tar.gz) = e2dde5aad30d1a931e7acd8d7db0b8c785d3a268d0b8cf5626fa03953a51bcadb719c6682c440d02524e83beee13d73d8f5bb3fdf98ab1c82d3ecf824cc25f68
-Size (mumble-1.3.4.tar.gz) = 8592741 bytes
-SHA1 (patch-src_mumble_OSS.cpp) = cf441337a6284da7f87429610275ef14d084ddbf
-SHA1 (patch-src_mumble_mumble.pro) = a49c3263f6034b2ea7c8633e24823937f4c4d3f5
+BLAKE2s (mumble-1.4.230.tar.gz) = 71d12d9d94a06a3c57b8b2230040efe3dff77048cbc5c4da11d1762bd5378cc8
+SHA512 (mumble-1.4.230.tar.gz) = 6cffc7a95d88b33876f4093b99266468210f5c14f190fbd2fbe4991bef91a567e55296e7c8c6cc99e19c054853211085cc3cc08109e367e6776afb70766b3a53
+Size (mumble-1.4.230.tar.gz) = 9441667 bytes
+SHA1 (patch-overlay__gl_init__unix.c) = e8db446ee6b62af5c8e580a3927664c9b52bf4f7
+SHA1 (patch-src_ProcessResolver.cpp) = f75286127d01c2f44308d6483e2af5b5e7bc1304
+SHA1 (patch-src_mumble_CMakeLists.txt) = a171b707b8f5c8316f0c0c45bb0f8a38545f0f6a
+SHA1 (patch-src_mumble_OSS.cpp) = b0e38bade402998f7c5d0d71090a26fa4a77eb97
