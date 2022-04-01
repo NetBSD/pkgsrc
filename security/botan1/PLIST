@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/04/01 08:00:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/04/01 08:04:55 wiz Exp $
 bin/botan-config-1.10
 include/botan-1.10/botan/adler32.h
 include/botan-1.10/botan/aes.h
@@ -183,8 +183,8 @@ include/botan-1.10/botan/serp_simd.h
 ${PLIST.i386}include/botan-1.10/botan/serp_x86_32.h
 include/botan-1.10/botan/serpent.h
 include/botan-1.10/botan/sha160.h
-${PLIST.i386}include/botan-1.10/botan/sha1_x86_32.h
 ${PLIST.x86_64}include/botan-1.10/botan/sha1_sse2.h
+${PLIST.i386}include/botan-1.10/botan/sha1_x86_32.h
 ${PLIST.x86_64}include/botan-1.10/botan/sha1_x86_64.h
 include/botan-1.10/botan/sha2_32.h
 include/botan-1.10/botan/sha2_64.h
