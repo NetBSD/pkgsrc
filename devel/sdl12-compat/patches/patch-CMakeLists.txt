@@ -1,0 +1,33 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2022/04/01 10:43:05 nia Exp $
+
+Not every unix system has libdl.
+
+--- CMakeLists.txt.orig	2022-03-03 14:56:56.000000000 +0000
++++ CMakeLists.txt
+@@ -71,7 +71,7 @@ string(STRIP "${CMAKE_C_FLAGS}" CMAKE_C_
+ 
+ if(UNIX AND NOT APPLE)
+     set_target_properties(SDL PROPERTIES COMPILE_DEFINITIONS "_REENTRANT")
+-    target_link_libraries(SDL PRIVATE dl)
++    target_link_libraries(SDL PRIVATE ${CMAKE_DL_LIBS})
+ endif()
+ if(APPLE)
+     set_target_properties(SDL PROPERTIES INSTALL_NAME_DIR "")
+@@ -254,7 +254,7 @@ if(SDL12DEVEL)
+       set(SDL_CFLAGS "-D_GNU_SOURCE=1 -D_REENTRANT")
+       set(SDL_RLD_FLAGS "")  # !!! FIXME: this forces rpath, which we might want?
+       set(SDL_LIBS "-lSDL")
+-      set(SDL_STATIC_LIBS "-ldl")
++      set(SDL_STATIC_LIBS ${CMAKE_DL_LIBS})
+       if(NOT STATICDEVEL)
+         set(SDL_STATIC_LIBS "")
+       endif()
+@@ -297,7 +297,7 @@ if(STATICDEVEL AND SDL12DEVEL)
+   add_library(SDL-static STATIC ${SDL12COMPAT_SRCS})
+   target_include_directories(SDL-static PRIVATE ${SDL2_INCLUDE_DIRS})
+   set_target_properties(SDL-static PROPERTIES COMPILE_DEFINITIONS "_REENTRANT")
+-  target_link_libraries(SDL-static PRIVATE dl)
++  target_link_libraries(SDL-static PRIVATE ${CMAKE_DL_LIBS})
+   set_target_properties(SDL-static PROPERTIES
+           VERSION "${PROJECT_VERSION}"
+         OUTPUT_NAME "SDL")
