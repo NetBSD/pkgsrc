@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2021/12/08 16:02:36 adam Exp $
-#
+# $NetBSD: Makefile,v 1.50 2022/04/01 08:07:28 wiz Exp $
 
 DISTNAME=	softhsm-1.3.7
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	security
 MASTER_SITES=	https://www.opendnssec.org/files/source/
 
@@ -38,5 +37,5 @@ pre-install:
 	${INSTALL_DATA} ${WRKSRC}/softhsm.conf ${DESTDIR}${EGDIR}
 
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../security/botan/buildlink3.mk"
+.include "../../security/botan1/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

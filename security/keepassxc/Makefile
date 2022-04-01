@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2022/03/31 23:30:16 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2022/04/01 08:07:28 wiz Exp $
 
 DISTNAME=	keepassxc-${GITHUB_RELEASE}-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=keepassxreboot/}
 GITHUB_RELEASE=	2.7.0
@@ -41,7 +41,7 @@ pre-configure:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/argon2/buildlink3.mk"
-.include "../../security/botan-devel/buildlink3.mk"
+.include "../../security/botan2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
