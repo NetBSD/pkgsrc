@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2021/10/26 11:06:04 nia Exp $
+$NetBSD: distinfo,v 1.27 2022/04/02 10:35:35 nia Exp $
 
 BLAKE2s (nagios-plugins-2.2.1.tar.gz) = 976274874f96d7614ac6359b7feb9692874e947677d88a6d2daa6e569bb61ce5
 SHA512 (nagios-plugins-2.2.1.tar.gz) = 6ffe313a56a305b382f62abc0f0958d7078f9050e1340f30721d6e6f71944b57b1650e90e6835c35dd7c9f3f4b4cee9f235b8382b0811db30b3729daaafc9bc3
@@ -13,5 +13,6 @@ SHA1 (patch-plugins-root_Makefile.in) = 46e8968df375ca35d453e36c277d4052f125897b
 SHA1 (patch-plugins-scripts_check__breeze.pl) = 57ffda78989fd0d0c0fa26c74b7f53bd083dab4f
 SHA1 (patch-plugins-scripts_check__wave.pl) = 535b008877cad780afa2ed3429ffb84e7da3ec28
 SHA1 (patch-plugins__check_swap.c) = b822de3488ecace977a739ebcfc56229763cd945
+SHA1 (patch-plugins_check__ide__smart.c) = 34ea76bf79da83fa84b6f0ff7f425462d0aac69e
 SHA1 (patch-plugins_check__radius.c) = 3f86bac4f7aa52931bad46d9ee4a421c2ee744f3
-SHA1 (patch-plugins_check_nagios.c) = a137ba674b2b61daa3af9a7be705d30af4a48aa8
+SHA1 (patch-plugins_check_nagios.c) = a58d12f461a4501a8066101e091307456faf32cf
