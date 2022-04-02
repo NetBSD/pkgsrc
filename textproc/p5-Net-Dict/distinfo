@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:22:31 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/04/02 09:17:06 wen Exp $
 
-BLAKE2s (Net-Dict-2.21.tar.gz) = e8b150a24398768c874717c3419b51527b0657c71cf2156e06603c92c9e4eef1
-SHA512 (Net-Dict-2.21.tar.gz) = a32eb25d969a5730761535fd26423a48e3d4d25396d59d863bc07662f04217290a7dc8e074f9a1461e16ec80ca0e72bfdff76855c9ea032ba19bb8aded643e53
-Size (Net-Dict-2.21.tar.gz) = 36388 bytes
+BLAKE2s (Net-Dict-2.22.tar.gz) = ee3af699852293fb63afde3b744e6254802e715403fa7a60927ce9f78d245283
+SHA512 (Net-Dict-2.22.tar.gz) = 3503d5f9d96fe24a0bbacdb0077f60f52b75182e81660570d429cf3fa7362b9ab5cd46cf1c6d3f14fe6816d952a3f8db63580a7dc1ec87793a5a77062b3bbdc4
+Size (Net-Dict-2.22.tar.gz) = 38819 bytes
