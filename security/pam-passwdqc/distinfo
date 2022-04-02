@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:17:34 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/04/02 11:08:47 nia Exp $
 
 BLAKE2s (passwdqc-1.1.4.tar.gz) = ed7d45a28e4a2122bfd1a545fac29f4e943cd04e9b39d1df8e9f06db285e20b8
 SHA512 (passwdqc-1.1.4.tar.gz) = c5a8e6eb857bda1c829df837e490121fe31719cecf57b85c7959efc3533cac5885c8762150d57e656802ce878822de505672383a620c047641fa1608bd8bfaea
 Size (passwdqc-1.1.4.tar.gz) = 41760 bytes
-SHA1 (patch-aa) = 2a631c17278783cab5203199bff29ead3623a5f1
+SHA1 (patch-Makefile) = 0f0b95d644086ba3bb808189e76fd00c401c3aa3
