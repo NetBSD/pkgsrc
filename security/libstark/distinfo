@@ -1,13 +1,15 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:17:16 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/02 11:31:54 nia Exp $
 
 BLAKE2s (libstark-20191018-11c72adf909e259aa20a36317e22108784f6dd73.tar.gz) = 12f4a13efeeb700a92a658c5afce4a8618c63c2e05b595fbd75fb7fafa70805d
 SHA512 (libstark-20191018-11c72adf909e259aa20a36317e22108784f6dd73.tar.gz) = 049d0dc9605923f3975127528680a1e2d18c31eebd48aba95b3272d4ae95aec5833250c9094d491d8d8acbb02cc54332d2462203698c203bc42c6a8f72f8a1ad
 Size (libstark-20191018-11c72adf909e259aa20a36317e22108784f6dd73.tar.gz) = 358152 bytes
 SHA1 (patch-algebra__algebralib-tests__Makefile) = e469a8a03fae847c49bf523dbd65a0d50798484c
 SHA1 (patch-algebra__algebralib__src__ErrorHandling.cpp) = 3343a878efc35ee4001ffeea8e10bd9f02244863
+SHA1 (patch-flags.mk) = 5ab574b367afc3fcff4b35007e349a9c93cb4ce4
 SHA1 (patch-libstark-tests__Makefile) = 70c4e50c0cea2890d1972c652c294a82658571e6
 SHA1 (patch-libstark__src__common__Utils__ErrorHandling.cpp) = c3ee3bfbbe078b80ef81a2d9ff1a182a21088df0
 SHA1 (patch-libstark__src__protocols__Ali__prover.cpp) = 68b1a7827c0a821bb4e5e2dcc5a37ffca7f06977
+SHA1 (patch-libstark_src_protocols_common_CryptoCommitment_MerkleCommitment.hpp) = c2b4dcfe1db7f2d1740b747178376767b59c5fbd
 SHA1 (patch-starkdpm_Makefile) = cf8b105b16d4fb2d4988ab028e4e8d0f1b7801dc
 SHA1 (patch-tinyram__gadgetlib__gadgetlib__infrastructure.cpp) = 4d0f10b58e2cc4de0fe54add60f7490ea3d83872
 SHA1 (patch-tinyram__stark-tinyram-tests__Makefile) = 420e0906d6fb871704ccf5f7ab4ae23a1fb46667
