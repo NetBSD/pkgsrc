@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1637 2022/04/02 07:12:20 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1638 2022/04/02 08:55:58 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2149,3 +2149,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/R-uuid to 1.0.4 [wen 2022-04-02]
 	Updated finance/R-timeSeries to 3062.100 [wen 2022-04-02]
 	Updated audio/termusic to 0.6.12 [pin 2022-04-02]
+	Updated textproc/p5-PPIx-QuoteLike to 0.020 [wen 2022-04-02]
