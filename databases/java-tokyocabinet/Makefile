@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2019/07/11 09:25:24 nia Exp $
+# $NetBSD: Makefile,v 1.17 2022/04/02 11:51:21 nia Exp $
 #
 
 DISTNAME=	tokyocabinet-java-1.24
@@ -17,6 +17,8 @@ USE_LANGUAGES=	c
 MAKE_ENV+=	INCLUDEDIR=${BUILDLINK_PREFIX.tokyocabinet}/include
 
 TEST_TARGET=	check
+
+PKG_JVMS_ACCEPTED=	openjdk8
 
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 
