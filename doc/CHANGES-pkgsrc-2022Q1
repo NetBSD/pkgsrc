@@ -1,3 +1,19 @@
-$NetBSD: CHANGES-pkgsrc-2022Q1,v 1.1.2.1 2022/03/28 13:41:08 wiz Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q1,v 1.1.2.2 2022/04/02 09:21:06 bsiegert Exp $
 
-Changes to packages and infrastructure on the $BRANCH branch:
+Changes to packages and infrastructure on the 2022Q1 branch:
+
+Pullup ticket #6607 - requested by wiz
+devel/R-tcltk2: mark as broken (infinite loop)
+
+Pullup ticket #6608 - requested by tnn
+devel/SDL: NetBSD/i386 build fix
+
+Pullup ticket #6609 - requested by tnn
+www/gitea: build fix
+
+Pullup ticket #6610 - requested by wiz
+sysutils/ioping: build fix
+
+Pullup ticket #6611 - requested by nia
+lang/ruby: NetBSD/arm build fix
+
