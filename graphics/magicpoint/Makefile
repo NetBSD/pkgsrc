@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.107 2021/05/24 19:52:23 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2022/04/02 12:13:53 nia Exp $
 
 DISTNAME=		magicpoint-1.13a
 PKGREVISION=		35
-CATEGORIES=		x11 graphics
+CATEGORIES=		graphics x11
 MASTER_SITES=		ftp://sh.wide.ad.jp/WIDE/free-ware/mgp/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -17,6 +17,7 @@ CONFLICTS=		mgp-[0-9]*
 GNU_CONFIGURE=		yes
 USE_IMAKE=		yes
 USE_LANGUAGES+=		c99
+USE_TOOLS+=		gzip:run
 USE_TOOLS+=		perl
 USE_TOOLS+=		pkg-config
 USE_TOOLS+=		bison
@@ -27,6 +28,7 @@ CONFIGURE_ARGS+=	--enable-gif
 CONFIGURE_ARGS+=	--with-searchpath=${BUILDLINK_DIR}
 CONFIGURE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR}
 CONFIGURE_ENV+=		mgp_cv_path_perl=${TOOLS_PERL5}
+CONFIGURE_ENV+=		ac_cv_path_mgp_cv_path_gzip=${TOOLS_PATH.gzip}
 
 DOCDIR=			share/doc/mgp
 EGDIR=			share/examples/mgp
