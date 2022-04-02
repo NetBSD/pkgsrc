@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2021/10/26 11:10:38 nia Exp $
+$NetBSD: distinfo,v 1.24 2022/04/02 11:48:19 nia Exp $
 
 BLAKE2s (sge-8.1.6.tar.gz) = 0fb07789c3a66f1792f46f538f152d56bc3c34cc391ed153eb6e071e35c01315
 SHA512 (sge-8.1.6.tar.gz) = 5044acf4b3f37a785a383c6341b51fb026456ffd7e6f9c8bb7d115068f67e15a833fe2b504fa3652710fd54946ae36eabd872f0263f13d558ae4187b824a0aa6
@@ -14,5 +14,5 @@ SHA1 (patch-source-utilbin_Makefile) = 0a6fa06e71140ed8e74ebe0e5e37a4a3a515391b
 SHA1 (patch-source_3rdparty_sge_depend_def.h) = 92ad1ef5d0cf237fa083a262d38c67828593f679
 SHA1 (patch-source_libs_comm_cl_ssl_framework.c) = 230c2a510b52516d9eea934b8c797141167a0b6d
 SHA1 (patch-source_libs_spool_berkeleydb_Makefile) = 9418b67308c96cda40d2d70026cb31ef6c937693
-SHA1 (patch-source_libs_uti_sge__loadmem.c) = d781009ee8efbfa210a698c885f0aab51ae96818
+SHA1 (patch-source_libs_uti_sge__loadmem.c) = a0beb90df3f9ec927f3e2570aced53c36875adea
 SHA1 (patch-source_util_arch) = c544eca206d2b260ed881f5112bedde68ac5029a
