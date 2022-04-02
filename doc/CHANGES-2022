@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1628 2022/04/01 16:39:37 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1629 2022/04/02 01:15:25 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2140,3 +2140,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/mumble to 1.4.230 [nia 2022-04-01]
 	Updated lang/perl5 to 5.34.1 [wiz 2022-04-01]
 	Updated databases/p5-gdbm to 5.34.1 [wiz 2022-04-01]
+	Updated time/p5-DateTime-TimeZone to 2.52 [gutteridge 2022-04-02]
