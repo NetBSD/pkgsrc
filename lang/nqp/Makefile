@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2022/03/13 06:20:03 mef Exp $
+# $NetBSD: Makefile,v 1.39 2022/04/02 14:04:10 mef Exp $
 
-DISTNAME=	nqp-2022.02
+DISTNAME=	nqp-2022.03
 CATEGORIES=	lang perl6
 #ASTER_SITES=	${MASTER_SITE_GITHUB:=perl6/}
 MASTER_SITES=	https://github.com/perl6/nqp/releases/download/${PKGVERSION_NOREV}/
@@ -10,7 +10,7 @@ HOMEPAGE=	https://rakudo.org/
 COMMENT=	Not Quite Perl -- lightweight Perl 6-like environment for VM
 LICENSE=	artistic-2.0
 
-DEPENDS+=	MoarVM>=2021.09:../../devel/MoarVM
+DEPENDS+=	MoarVM>=2022.03:../../devel/MoarVM
 
 MAKE_JOBS_SAFE=	no
 
