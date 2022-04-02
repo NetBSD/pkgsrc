@@ -1,4 +1,4 @@
-# $NetBSD: gfortran.mk,v 1.17 2021/04/25 07:51:25 mrg Exp $
+# $NetBSD: gfortran.mk,v 1.18 2022/04/02 07:57:11 nia Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -41,8 +41,10 @@ COMPILER_GFORTRAN_MK=	defined
 # in that case.
 POSSIBLE_GFORTRAN_VERSION?=	${CC_VERSION:S/gcc-//:C/.[0-9].[0-9]$//}
 
-# gcc9 doesn't work on NetBSD/aarch64, but gcc10 does.
-.if !empty(POSSIBLE_GFORTRAN_VERSION:M9) && !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64*)
+# gcc9 doesn't work on NetBSD/arm, but gcc10 does.
+.if !empty(POSSIBLE_GFORTRAN_VERSION:M9) && \
+    (!empty(MACHINE_PLATFORM:MNetBSD-*-aarch64*) || \
+    !empty(MACHINE_PLATFORM:MNetBSD-*-earm*))
 POSSIBLE_GFORTRAN_VERSION=	10
 .endif
 
