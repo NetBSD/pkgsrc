@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/07/29 10:28:28 mef Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/04/02 13:23:09 mef Exp $
 share/examples/webmin/dovecot/config
 share/webmin/dovecot/CHANGELOG
 share/webmin/dovecot/apply.cgi
@@ -53,11 +53,14 @@ share/webmin/dovecot/lang/af.auto
 share/webmin/dovecot/lang/ar.auto
 share/webmin/dovecot/lang/be.auto
 share/webmin/dovecot/lang/bg
+share/webmin/dovecot/lang/bg.auto
 share/webmin/dovecot/lang/ca
+share/webmin/dovecot/lang/ca.auto
 share/webmin/dovecot/lang/cs
 share/webmin/dovecot/lang/cs.auto
 share/webmin/dovecot/lang/da.auto
 share/webmin/dovecot/lang/de
+share/webmin/dovecot/lang/de.auto
 share/webmin/dovecot/lang/el.auto
 share/webmin/dovecot/lang/en
 share/webmin/dovecot/lang/es
@@ -81,8 +84,11 @@ share/webmin/dovecot/lang/lv.auto
 share/webmin/dovecot/lang/ms.auto
 share/webmin/dovecot/lang/mt.auto
 share/webmin/dovecot/lang/nl
+share/webmin/dovecot/lang/nl.auto
 share/webmin/dovecot/lang/no
+share/webmin/dovecot/lang/no.auto
 share/webmin/dovecot/lang/pl
+share/webmin/dovecot/lang/pl.auto
 share/webmin/dovecot/lang/pt.auto
 share/webmin/dovecot/lang/pt_BR.auto
 share/webmin/dovecot/lang/ro.auto

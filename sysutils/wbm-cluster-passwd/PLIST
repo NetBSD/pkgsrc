@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/07/29 10:28:28 mef Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/04/02 13:23:09 mef Exp $
 share/examples/webmin/cluster-passwd/config
 share/webmin/cluster-passwd/CHANGELOG
 share/webmin/cluster-passwd/acl_security.pl
@@ -148,4 +148,5 @@ share/webmin/cluster-passwd/module.info.zh
 share/webmin/cluster-passwd/module.info.zh.auto
 share/webmin/cluster-passwd/module.info.zh_TW
 share/webmin/cluster-passwd/module.info.zh_TW.auto
+share/webmin/cluster-passwd/prefs.info
 share/webmin/cluster-passwd/save_passwd.cgi

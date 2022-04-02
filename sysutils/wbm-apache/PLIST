@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2020/07/29 10:28:27 mef Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/04/02 13:23:08 mef Exp $
 share/examples/webmin/apache/config
 share/examples/webmin/apache/site
 share/webmin/apache/CHANGELOG
@@ -14,10 +14,12 @@ share/webmin/apache/cache.pl
 share/webmin/apache/cgi_args.pl
 share/webmin/apache/change_dir.cgi
 share/webmin/apache/change_files.cgi
+share/webmin/apache/config-AlmaLinux-Linux-7.0-ALL
 share/webmin/apache/config-Amazon-Linux-2-ALL
 share/webmin/apache/config-CentOS-Linux-7.0-ALL
 share/webmin/apache/config-Fedora-Linux-20-ALL
 share/webmin/apache/config-Redhat-Enterprise-Linux-7.0-ALL
+share/webmin/apache/config-Rocky-Linux-7.0-ALL
 share/webmin/apache/config-Scientific-Linux-7.0-ALL
 share/webmin/apache/config-aix
 share/webmin/apache/config-cobalt-linux
@@ -265,6 +267,7 @@ share/webmin/apache/mod_expires.pl.broken
 share/webmin/apache/mod_ext_filter.pl
 share/webmin/apache/mod_fastcgi.pl
 share/webmin/apache/mod_fcgid.pl
+share/webmin/apache/mod_http2.pl
 share/webmin/apache/mod_imap.pl
 share/webmin/apache/mod_include.pl
 share/webmin/apache/mod_info.pl
@@ -383,6 +386,7 @@ share/webmin/apache/notes
 share/webmin/apache/perchild.pl
 share/webmin/apache/postinstall.pl
 share/webmin/apache/prefork.pl
+share/webmin/apache/prefs.info
 share/webmin/apache/reconfig.cgi
 share/webmin/apache/reconfig_form.cgi
 share/webmin/apache/remove_vserv.pl
