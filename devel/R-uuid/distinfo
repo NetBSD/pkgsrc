@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:14:09 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/04/02 03:01:33 wen Exp $
 
-BLAKE2s (R/uuid_0.1-2.tar.gz) = 8ff6e3d141ad66ab92ad4abd997522460c25d63567f9dcd941e5e3e6f3cc6c46
-SHA512 (R/uuid_0.1-2.tar.gz) = e13b3a13c913b86e7ff3649b2912ee9f5746d2cdd05a74026c2e89579a259268cdb4ddca77bc6ae7bc9e25e4fae772caaca751efccc573bc5808daf8ffd5837f
-Size (R/uuid_0.1-2.tar.gz) = 46706 bytes
+BLAKE2s (R/uuid_1.0-4.tar.gz) = 15373a9dc51e66f3fc3ed71c2ff1b9280c5eaef583076c63b10563342d86fbf7
+SHA512 (R/uuid_1.0-4.tar.gz) = feca3b4bbf064a1c25a6edf8c967bba931559a866071612d6454d83237080e75dac392e0cda2daabdf09ad1639132c722a7054f401857bbcdddb9e45673d679b
+Size (R/uuid_1.0-4.tar.gz) = 72187 bytes
