@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 10:55:37 nia Exp $
+$NetBSD: distinfo,v 1.19 2022/04/02 10:06:32 wen Exp $
 
-BLAKE2s (cln-1.3.4.tar.bz2) = 6ca5b9ff82ada55d3e2e5cb72a2fed9042bb665a2e805abbc9ae8954619df093
-SHA512 (cln-1.3.4.tar.bz2) = 2178a64b4388b3018c3847f6fb192ea51eb9c8618302986d7706accef17184e3333ddeca218d726f93f3b985598952ad58d705c9081201985611e383f788a631
-Size (cln-1.3.4.tar.bz2) = 1281348 bytes
+BLAKE2s (cln-1.3.6.tar.bz2) = bde4c5c6ff8bbf1b5fa265fda715a40bbb94fabd01de2c33ea22a741601a457d
+SHA512 (cln-1.3.6.tar.bz2) = a32a1449c5f0edac1444e58f500ef1a72ffab8dad65125082eff0995cc9855b45f38b89c7f754e3d4487756a8cd3f7db1e534865b8d0384fd28246f444ed7d14
+Size (cln-1.3.6.tar.bz2) = 1330815 bytes
 SHA1 (patch-src_base_cl__low.h) = 385d1bf88b8b80104da9a9e006a1b87edc3a0e84
