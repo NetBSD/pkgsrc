@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1649 2022/04/02 13:53:15 mef Exp $
+$NetBSD: CHANGES-2022,v 1.1650 2022/04/02 14:04:56 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2160,3 +2160,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/wbm-* to 1.990 [mef 2022-04-02]
 	Updated sysutils/fzf to 0.29.0 [mef 2022-04-02]
 	Updated devel/MoarVM to 2022.03 [mef 2022-04-02]
+	Updated lang/nqp to 2022.03 [mef 2022-04-02]
