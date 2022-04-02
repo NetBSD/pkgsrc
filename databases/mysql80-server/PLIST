@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/05/13 15:25:20 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/04/02 10:23:59 nia Exp $
 bin/comp_err
 bin/ibd2sdi
 bin/innochecksum
@@ -206,6 +206,7 @@ share/mysql/french/errmsg.sys
 share/mysql/german/errmsg.sys
 share/mysql/greek/errmsg.sys
 share/mysql/hungarian/errmsg.sys
+${PLIST.memcached}share/mysql/innodb_memcached_config.sql
 share/mysql/install_rewriter.sql
 share/mysql/italian/errmsg.sys
 share/mysql/japanese/errmsg.sys
