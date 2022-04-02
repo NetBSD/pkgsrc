@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2022/01/01 12:59:15 rhialto Exp $
+$NetBSD: patch-Makefile,v 1.1 2022/04/02 11:12:02 nia Exp $
 
 * use gcc flags on SunOS
 * for PKGSRC layout
@@ -6,6 +6,7 @@ $NetBSD: patch-aa,v 1.5 2022/01/01 12:59:15 rhialto Exp $
 * Use "ld -shared" rather than "ld --shared". The former allows cwrappers to
   detect shared lib link mode. This makes it omit "-pie" which would remove
   required symbols.
+* Do not override LDFLAGS.
 
 --- Makefile.orig	2011-08-24 07:53:32.000000000 +0000
 +++ Makefile
@@ -27,7 +28,7 @@ $NetBSD: patch-aa,v 1.5 2022/01/01 12:59:15 rhialto Exp $
  SHLDFLAGS_SUN = -s -G -lpam -lcrypt
  SHLDFLAGS_HP = -s -b -lpam -lsec
  
-@@ -102,16 +102,16 @@ DISTTOOLMAN = pam_af_tool.8
+@@ -102,39 +102,39 @@ DISTTOOLMAN = pam_af_tool.8
  LIBMAN = $(LIBDIR)/$(DISTLIBMAN)
  TOOLMAN = $(TOOLDIR)/$(DISTTOOLMAN)
  
@@ -47,5 +48,36 @@ $NetBSD: patch-aa,v 1.5 2022/01/01 12:59:15 rhialto Exp $
 -	if [ "`$(UNAME)`" = "FreeBSD" ]; then \
 +	if [ "`$(UNAME)`" = "FreeBSD" -o "`$(UNAME)`" = "NetBSD" -o "`$(UNAME)`" = "OpenBSD" -o "`$(UNAME)`" = "DragonFly" ]; then \
  		$(MAKE) CFLAGS="$(CFLAGS) $(CFLAGS_GCC) $(CFLAGS_BSD)" \
- 			LD=ld LDFLAGS="$(LDFLAGS_BSD) $(SHLDFLAGS_GCC)" \
+-			LD=ld LDFLAGS="$(LDFLAGS_BSD) $(SHLDFLAGS_GCC)" \
++			LD=ld LDFLAGS="$(LDFLAGS) $(LDFLAGS_BSD) $(SHLDFLAGS_GCC)" \
  			$(LIBBIN); \
+ 		$(MAKE) CFLAGS="$(CFLAGS) $(CFLAGS_GCC) $(CFLAGS_BSD)" \
+-			LDFLAGS="$(LDFLAGS_BSD)" $(TOOLBIN); \
++			LDFLAGS="$(LDFLAGS) $(LDFLAGS_BSD)" $(TOOLBIN); \
+ 	elif [ "`$(UNAME)`" = "Linux" ]; then \
+ 		$(MAKE) CFLAGS="$(CFLAGS) $(CFLAGS_GCC) $(CFLAGS_GNU)" \
+-			LD=ld LDFLAGS="$(LDFLAGS_LINUX) $(SHLDFLAGS_GCC)" \
++			LD=ld LDFLAGS="$(LDFLAGS) $(LDFLAGS_LINUX) $(SHLDFLAGS_GCC)" \
+ 			$(LIBBIN); \
+ 		$(MAKE) CFLAGS="$(CFLAGS) $(CFLAGS_GCC) $(CFLAGS_GNU)" \
+-			LDFLAGS="$(LDFLAGS_LINUX)" $(TOOLBIN); \
++			LDFLAGS="$(LDFLAGS) $(LDFLAGS_LINUX)" $(TOOLBIN); \
+ 	elif [ "`$(UNAME)`" = "SunOS" ]; then \
+ 		$(MAKE) CFLAGS="$(CFLAGS) $(CFLAGS_SUN)" \
+-			LD=ld LDFLAGS="$(LDFLAGS_SUN) $(SHLDFLAGS_SUN)" \
++			LD=ld LDFLAGS="$(LDFLAGS) $(LDFLAGS_SUN) $(SHLDFLAGS_SUN)" \
+ 			$(LIBBIN); \
+ 		$(MAKE) CFLAGS="$(CFLAGS) $(CFLAGS_SUN)" \
+-			LDFLAGS="$(LDFLAGS_SUN)" $(TOOLBIN); \
++			LDFLAGS="$(LDFLAGS) $(LDFLAGS_SUN)" $(TOOLBIN); \
+ 	elif [ "`$(UNAME)`" = "HP-UX" ]; then \
+ 		$(MAKE) CFLAGS="$(CFLAGS_HP)" \
+-			LD=ld LDFLAGS="$(LDFLAGS_HP) $(SHLDFLAGS_HP)" \
++			LD=ld LDFLAGS="$(LDFLAGS) $(LDFLAGS_HP) $(SHLDFLAGS_HP)" \
+ 			$(LIBBIN); \
+ 		$(MAKE) CFLAGS="$(CFLAGS) $(CFLAGS_HP)" \
+-			LDFLAGS="$(LDFLAGS_HP)" $(TOOLBIN); \
++			LDFLAGS="$(LDFLAGS) $(LDFLAGS_HP)" $(TOOLBIN); \
+ 	else \
+ 		$(MAKE) $(LIBBIN); \
+ 		$(MAKE) $(TOOLBIN); \
