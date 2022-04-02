@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21651 2022/04/01 17:59:29 wiz Exp $
+$NetBSD: TODO,v 1.21652 2022/04/02 02:58:10 wen Exp $
 
 Suggested new packages
 ======================
@@ -382,7 +382,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-bbmle-1.0.23.1
 	o R-blob-1.2.1
 	o R-coda-0.19.4
-	o R-crayon-1.4.1
 	o R-deldir-0.2.10
 	o R-digest-0.6.27
 	o R-effects-4.2.0
