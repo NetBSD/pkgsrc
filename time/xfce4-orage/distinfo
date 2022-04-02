@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:24:46 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/04/02 01:24:17 gutteridge Exp $
 
-BLAKE2s (orage-4.12.1.tar.bz2) = 3a2b84c7abba78130359c7f1ba70083dcd1c7b0e9ae81ed0abbed2eac410fa41
-SHA512 (orage-4.12.1.tar.bz2) = 3fec0201171140586cdc9bcf151450a7086515e18b5815afe4fe4c4726ba554c50582b0479e52985b330140c51b7233ef81f678f986f848afbeee74c66b2d196
-Size (orage-4.12.1.tar.bz2) = 2590788 bytes
+BLAKE2s (orage-4.16.0.tar.bz2) = 028cd13507c94e51036c2c65fccc3cac874e8935c33b9e9e1502cb10f7d2a541
+SHA512 (orage-4.16.0.tar.bz2) = 00f5dd069a90f5398cc6789006ba503097b5246111f88e28952de4fe7927deba8e8cfb136ed1ebe8a90e1bd656116259204f25af852aa0e502be38f37459243b
+Size (orage-4.16.0.tar.bz2) = 2054409 bytes
 SHA1 (patch-src_appointment.c) = 2122b4c398033339c396ca9f0c8980f5fbcc76bb
-SHA1 (patch-src_functions.c) = d6bbbdb0c306648dffd175b6a667f10808f4f761
-SHA1 (patch-src_ical-code.c) = c260f12ca80054894a571d9b47691fb8c9c3e56c
+SHA1 (patch-src_functions.c) = c832ed3fe093026cfe174577cc267c6b4a747172
