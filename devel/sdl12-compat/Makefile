@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/04/01 10:43:05 nia Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/02 07:17:55 nia Exp $
 
 DISTNAME=	sdl12-compat-1.2.52
 CATEGORIES=	devel
@@ -11,6 +11,8 @@ COMMENT=	SDL-1.2 compatibility layer that uses SDL 2.0 behind the scenes
 LICENSE=	zlib
 
 USE_CMAKE=	yes
+
+CONFLICTS+=	SDL-[0-9]*
 
 PKGCONFIG_OVERRIDE+=	sdl12_compat.pc.in
 
