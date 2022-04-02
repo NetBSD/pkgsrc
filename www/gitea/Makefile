@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.68 2022/03/23 23:41:14 khorben Exp $
+# $NetBSD: Makefile,v 1.68.2.1 2022/04/02 09:12:22 bsiegert Exp $
 
 DISTNAME=	gitea-1.16.1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=go-gitea/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
@@ -90,8 +90,8 @@ MAKE_ENV+=	TAGS="${GO_TAGS}"
 
 pre-patch:
 	${CP} ${FILESDIR}/app.ini.sample ${WRKDIR}/
-	${CP} ${WRKDIR}/${DISTNAME}/.eslint* ${WRKSRC}/
-	${CP} ${WRKDIR}/${DISTNAME}/.stylelintrc ${WRKSRC}/
+#	${CP} ${WRKDIR}/${DISTNAME}/.eslint* ${WRKSRC}/
+#	${CP} ${WRKDIR}/${DISTNAME}/.stylelintrc ${WRKSRC}/
 	${ECHO} ${PKGVERSION_NOREV} > ${WRKSRC}/VERSION
 
 do-build:
@@ -113,5 +113,7 @@ generate-frontend: build
 	cd ${WRKSRC} && ${TAR} -zcf ${WRKDIR}/${PKGNAME_NOREV}-frontend.tar.gz public
 	@${ECHO} "Now upload ${WRKDIR}/${PKGNAME_NOREV}-frontend.tar.gz to LOCAL_PORTS"
 
-.include "../../lang/go/go-package.mk"
+.include "go-modules.mk"
+
+.include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
