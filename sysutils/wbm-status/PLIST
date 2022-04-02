@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/07/29 10:28:31 mef Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/04/02 13:23:11 mef Exp $
 share/examples/webmin/status/config
 share/webmin/status/CHANGELOG
 share/webmin/status/WEBMIN-STATUS-MIB.txt
@@ -82,6 +82,7 @@ share/webmin/status/lang/cs
 share/webmin/status/lang/cs.auto
 share/webmin/status/lang/da.auto
 share/webmin/status/lang/de
+share/webmin/status/lang/de.auto
 share/webmin/status/lang/el.auto
 share/webmin/status/lang/en
 share/webmin/status/lang/es
@@ -233,6 +234,7 @@ share/webmin/status/ping-monitor.pl
 share/webmin/status/portsentry-monitor.pl
 share/webmin/status/postfix-monitor.pl
 share/webmin/status/postgresql-monitor.pl
+share/webmin/status/prefs.info
 share/webmin/status/proc-monitor.pl
 share/webmin/status/proftpd-monitor.pl
 share/webmin/status/qmailadmin-monitor.pl

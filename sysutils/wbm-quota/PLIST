@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/07/29 10:28:30 mef Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/04/02 13:23:11 mef Exp $
 share/examples/webmin/quota/config
 share/webmin/quota/CHANGELOG
 share/webmin/quota/acl_security.pl
@@ -754,6 +754,7 @@ share/webmin/quota/module.info.zh_TW.auto
 share/webmin/quota/netbsd-lib.pl
 share/webmin/quota/notes
 share/webmin/quota/openbsd-lib.pl
+share/webmin/quota/prefs.info
 share/webmin/quota/quota-lib.pl
 share/webmin/quota/save_email.cgi
 share/webmin/quota/save_gemail.cgi

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/07/29 10:28:28 mef Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/04/02 13:23:08 mef Exp $
 share/examples/webmin/cluster-copy/config
 share/webmin/cluster-copy/CHANGELOG
 share/webmin/cluster-copy/cluster-copy-lib.pl
@@ -6,6 +6,7 @@ share/webmin/cluster-copy/config
 share/webmin/cluster-copy/config.info
 share/webmin/cluster-copy/config.info.ca
 share/webmin/cluster-copy/config.info.de
+share/webmin/cluster-copy/config.info.fr
 share/webmin/cluster-copy/config.info.hu
 share/webmin/cluster-copy/config.info.ms
 share/webmin/cluster-copy/config.info.nl
@@ -75,7 +76,6 @@ share/webmin/cluster-copy/lang/eu.auto
 share/webmin/cluster-copy/lang/fa.auto
 share/webmin/cluster-copy/lang/fi.auto
 share/webmin/cluster-copy/lang/fr
-share/webmin/cluster-copy/lang/fr.auto
 share/webmin/cluster-copy/lang/he.auto
 share/webmin/cluster-copy/lang/hr
 share/webmin/cluster-copy/lang/hu
