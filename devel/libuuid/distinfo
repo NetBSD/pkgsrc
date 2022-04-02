@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2021/10/26 10:15:30 nia Exp $
+$NetBSD: distinfo,v 1.26 2022/04/02 21:00:54 riastradh Exp $
 
 BLAKE2s (util-linux-2.32.1.tar.xz) = 396ab70d86492b47f63c0e2b2447d5a95169046b8f37ac0f9480166c09167847
 SHA512 (util-linux-2.32.1.tar.xz) = 267fedae24a874ee4dc558081f6b8d07b33b955b0635f3348f021c111c17f2e95c01b2cbf909fe13c6ca448cbcf23c658c75f72f25749aa65e99f68fabb94698
@@ -8,13 +8,21 @@ SHA1 (patch-Makefile.in) = a415bb922d7154387f71882b1f1fa06c9e49c174
 SHA1 (patch-configure) = 400904ae2e58b717e990ba26c111b90bc8f240d1
 SHA1 (patch-include_c.h) = 4596369e4b742329be513952c66d1fa3705de017
 SHA1 (patch-include_randutils.h) = d28ade8554d218f2af4a815a611b833b2036a5eb
+SHA1 (patch-include_strutils.h) = abb960a2ce6fe9f22ef178aea4db17aac5e0df70
 SHA1 (patch-include_ttyutils.h) = fa2b253d568e5aface99727c397d3c4c892b2c93
+SHA1 (patch-lib_canonicalize.c) = 8e05ead75f6cef89e02b4915f6128a1ebd97bcc0
+SHA1 (patch-lib_colors.c) = a7f6c7700bcf1352037253486d16657dfa2804d3
 SHA1 (patch-lib_ismounted.c) = 11f5148020dba2a22e1fbe4882fe423dfb11ad73
+SHA1 (patch-lib_mangle.c) = b0acd6dbb28e429ca55d33cdccfb71a525d86b5d
 SHA1 (patch-lib_pager.c) = 3d4b65f9ccb6437bcc0777634660b5ae3150d14e
 SHA1 (patch-lib_randutils.c) = aece9cb8ec033966d535955654cc27263b3c4976
+SHA1 (patch-lib_signames.c) = ed5939c887c90bd5c9eeb6df047e5d7d22cb34f3
+SHA1 (patch-lib_sysfs.c) = a55660f82b6f88938eae0cd185d9db048a73d4ed
+SHA1 (patch-lib_ttyutils.c) = 093fe0d8755366e5e5ede3f3b4df193918c424db
 SHA1 (patch-libblkid_docs_Makefile.in) = 97a1559dad77e32d78bd504d8d3523b9cc403c36
 SHA1 (patch-libfdisk_docs_Makefile.in) = def97b85e8760cd18af736ab331e2f476f0c9c67
 SHA1 (patch-libmount_docs_Makefile.in) = a55063e89161221cecda661039d0a62174592669
 SHA1 (patch-libsmartcols_docs_Makefile.in) = aa44d1a9ffd9bf4422ed8892d91b4e0e72e50407
 SHA1 (patch-libuuid_src_gen__uuid.c) = 94d190ffca4357e62c6b0ae90fdc9a7456e10468
+SHA1 (patch-libuuid_src_parse.c) = 39396e6d96d0402ce8b0cf739641a73a467a4dd2
 SHA1 (patch-misc-utils_mcookie.c) = 1456f47881552162b1ba6218c620f23648eceb6c
