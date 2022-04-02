@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2021/11/08 12:50:06 wiz Exp $
+$NetBSD: distinfo,v 1.13 2022/04/02 13:43:21 mef Exp $
 
-BLAKE2s (fzf-0.28.0.tar.gz) = 0a23c83dd83eebb62dd1b0c72e6002bd7d7d4014f83d8e05c95d02de31ad735b
-SHA512 (fzf-0.28.0.tar.gz) = 5e5652272b90ef1b79ed9faa0563439fe184aa2d91a6a76388145fc92cd851753abb70b3c22b3a77a863b0e47f3960ca2cb6236a93b48ca8efc1b6aceffcd621
-Size (fzf-0.28.0.tar.gz) = 205763 bytes
+BLAKE2s (fzf-0.29.0.tar.gz) = 30d5133088635a84b6898f11c7b2fc0f540e2d19dc9ada98a1c67d1bb6b0b3b0
+SHA512 (fzf-0.29.0.tar.gz) = 65744b6ea9c7a475de2e5dfa609c00df70db07804311b938a94373aa6447b587fee417edcf3bf7d66524f25cb405a9cc5be96d26111690e2f7a373dc10423010
+Size (fzf-0.29.0.tar.gz) = 208296 bytes
 BLAKE2s (github.com_gdamore_encoding_@v_v1.0.0.mod) = d98306119aa62bd2bb2dc3fd0a93976e35a5396dd7d50fb0fc3eb0c157fb88c2
 SHA512 (github.com_gdamore_encoding_@v_v1.0.0.mod) = fb153c4e481c073133f0c933c67eba8a1f160ab146921f2c77125b6ff5c348cea57e3a5701a557c8db2212d32e3cba1c09b9509210660c17b66c2a45ba97cb75
 Size (github.com_gdamore_encoding_@v_v1.0.0.mod) = 77 bytes
