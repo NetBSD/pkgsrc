@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.58 2021/05/24 19:54:21 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2022/04/02 13:23:08 mef Exp $
 
-PKGREVISION= 2
 .include "version.mk"
 
 DISTNAME=	webmin-${WBM_VERSION}
@@ -81,6 +80,7 @@ REPLACE_PERL=	\
 	bin/enable-proxy \
 	bin/language-manager \
 	bin/list-config \
+	bin/passwd \
 	bin/set-config \
 	bin/update-devel \
 	bin/webmin

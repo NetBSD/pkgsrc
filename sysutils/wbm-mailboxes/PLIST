@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/07/29 10:28:29 mef Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/04/02 13:23:10 mef Exp $
 share/examples/webmin/mailboxes/config
 share/webmin/mailboxes/CHANGELOG
 share/webmin/mailboxes/Makefile
@@ -12,6 +12,7 @@ share/webmin/mailboxes/config.info.cs
 share/webmin/mailboxes/config.info.de
 share/webmin/mailboxes/config.info.el
 share/webmin/mailboxes/config.info.fi
+share/webmin/mailboxes/config.info.fr
 share/webmin/mailboxes/config.info.hu
 share/webmin/mailboxes/config.info.it
 share/webmin/mailboxes/config.info.ja
@@ -41,10 +42,12 @@ share/webmin/mailboxes/lang/ar.auto
 share/webmin/mailboxes/lang/be.auto
 share/webmin/mailboxes/lang/bg.auto
 share/webmin/mailboxes/lang/ca
+share/webmin/mailboxes/lang/ca.auto
 share/webmin/mailboxes/lang/cs
 share/webmin/mailboxes/lang/cs.auto
 share/webmin/mailboxes/lang/da.auto
 share/webmin/mailboxes/lang/de
+share/webmin/mailboxes/lang/de.auto
 share/webmin/mailboxes/lang/el
 share/webmin/mailboxes/lang/el.auto
 share/webmin/mailboxes/lang/en
@@ -55,7 +58,6 @@ share/webmin/mailboxes/lang/fa.auto
 share/webmin/mailboxes/lang/fi
 share/webmin/mailboxes/lang/fi.auto
 share/webmin/mailboxes/lang/fr
-share/webmin/mailboxes/lang/fr.auto
 share/webmin/mailboxes/lang/he.auto
 share/webmin/mailboxes/lang/hr.auto
 share/webmin/mailboxes/lang/hu
@@ -179,6 +181,7 @@ share/webmin/mailboxes/module.info.zh
 share/webmin/mailboxes/module.info.zh.auto
 share/webmin/mailboxes/module.info.zh_TW
 share/webmin/mailboxes/module.info.zh_TW.auto
+share/webmin/mailboxes/prefs.info
 share/webmin/mailboxes/reply_mail.cgi
 share/webmin/mailboxes/safeacl
 share/webmin/mailboxes/search_form.cgi

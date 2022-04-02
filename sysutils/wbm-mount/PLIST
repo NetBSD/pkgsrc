@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/07/29 10:28:29 mef Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/04/02 13:23:10 mef Exp $
 share/examples/webmin/mount/config
 share/webmin/mount/CHANGELOG
 share/webmin/mount/acl_security.pl
@@ -445,6 +445,7 @@ share/webmin/mount/help/linux_noexec.ur.auto.html
 share/webmin/mount/help/linux_noexec.vi.auto.html
 share/webmin/mount/help/linux_noexec.zh.auto.html
 share/webmin/mount/help/linux_noexec.zh_TW.auto.html
+share/webmin/mount/help/linux_nofail.html
 share/webmin/mount/help/linux_nosuid.af.auto.html
 share/webmin/mount/help/linux_nosuid.ar.auto.html
 share/webmin/mount/help/linux_nosuid.be.auto.html
@@ -1272,6 +1273,7 @@ share/webmin/mount/openbsd-mounts-3.c
 share/webmin/mount/openbsd-mounts-4.c
 share/webmin/mount/openbsd-mounts-5.c
 share/webmin/mount/osf1-lib.pl
+share/webmin/mount/prefs.info
 share/webmin/mount/rbac-mapping
 share/webmin/mount/save_mount.cgi
 share/webmin/mount/smb_server.cgi

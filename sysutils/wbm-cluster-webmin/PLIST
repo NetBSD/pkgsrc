@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/07/29 10:28:28 mef Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/04/02 13:23:09 mef Exp $
 share/examples/webmin/cluster-webmin/config
 share/webmin/cluster-webmin/CHANGELOG
 share/webmin/cluster-webmin/add.cgi
@@ -91,7 +91,6 @@ share/webmin/cluster-webmin/lang/eu.auto
 share/webmin/cluster-webmin/lang/fa.auto
 share/webmin/cluster-webmin/lang/fi.auto
 share/webmin/cluster-webmin/lang/fr
-share/webmin/cluster-webmin/lang/fr.auto
 share/webmin/cluster-webmin/lang/he.auto
 share/webmin/cluster-webmin/lang/hr
 share/webmin/cluster-webmin/lang/hr.auto
@@ -203,6 +202,7 @@ share/webmin/cluster-webmin/module.info.zh
 share/webmin/cluster-webmin/module.info.zh.auto
 share/webmin/cluster-webmin/module.info.zh_TW
 share/webmin/cluster-webmin/module.info.zh_TW.auto
+share/webmin/cluster-webmin/prefs.info
 share/webmin/cluster-webmin/refresh.cgi
 share/webmin/cluster-webmin/save_acl.cgi
 share/webmin/cluster-webmin/save_config.cgi

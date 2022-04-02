@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.8 2020/07/29 10:28:31 mef Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/04/02 13:23:11 mef Exp $
 share/examples/webmin/syslog/config
 share/webmin/syslog/CHANGELOG
 share/webmin/syslog/acl_security.pl
 share/webmin/syslog/backup_config.pl
 share/webmin/syslog/cgi_args.pl
+share/webmin/syslog/config-AlmaLinux-Linux-6.0-ALL
 share/webmin/syslog/config-CentOS-Linux-6.0-ALL
 share/webmin/syslog/config-Redhat-Enterprise-Linux-6.0-ALL
+share/webmin/syslog/config-Rocky-Linux-6.0-ALL
 share/webmin/syslog/config-Ubuntu-Linux-10.04-ALL
 share/webmin/syslog/config-aix
 share/webmin/syslog/config-cobalt-linux
@@ -205,6 +207,7 @@ share/webmin/syslog/module.info.zh
 share/webmin/syslog/module.info.zh.auto
 share/webmin/syslog/module.info.zh_TW
 share/webmin/syslog/module.info.zh_TW.auto
+share/webmin/syslog/prefs.info
 share/webmin/syslog/rbac-mapping
 share/webmin/syslog/restart.cgi
 share/webmin/syslog/safeacl

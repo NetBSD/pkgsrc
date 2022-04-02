@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/07/29 10:28:29 mef Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/04/02 13:23:10 mef Exp $
 share/examples/webmin/ldap-useradmin/config
 share/webmin/ldap-useradmin/CHANGELOG
 share/webmin/ldap-useradmin/acl_security.pl
@@ -209,9 +209,11 @@ share/webmin/ldap-useradmin/lang/ar.auto
 share/webmin/ldap-useradmin/lang/be.auto
 share/webmin/ldap-useradmin/lang/bg.auto
 share/webmin/ldap-useradmin/lang/ca
+share/webmin/ldap-useradmin/lang/ca.auto
 share/webmin/ldap-useradmin/lang/cs.auto
 share/webmin/ldap-useradmin/lang/da.auto
 share/webmin/ldap-useradmin/lang/de
+share/webmin/ldap-useradmin/lang/de.auto
 share/webmin/ldap-useradmin/lang/el.auto
 share/webmin/ldap-useradmin/lang/en
 share/webmin/ldap-useradmin/lang/es
@@ -334,6 +336,7 @@ share/webmin/ldap-useradmin/module.info.zh.auto
 share/webmin/ldap-useradmin/module.info.zh_TW
 share/webmin/ldap-useradmin/module.info.zh_TW.auto
 share/webmin/ldap-useradmin/postinstall.pl
+share/webmin/ldap-useradmin/prefs.info
 share/webmin/ldap-useradmin/raw.cgi
 share/webmin/ldap-useradmin/save_group.cgi
 share/webmin/ldap-useradmin/save_user.cgi

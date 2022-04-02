@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/07/29 10:28:30 mef Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/04/02 13:23:10 mef Exp $
 share/examples/webmin/mysql/config
 share/webmin/mysql/CHANGELOG
 share/webmin/mysql/acl_security.pl
@@ -8,9 +8,11 @@ share/webmin/mysql/backup_db.cgi
 share/webmin/mysql/backup_form.cgi
 share/webmin/mysql/cgi_args.pl
 share/webmin/mysql/config
+share/webmin/mysql/config-AlmaLinux-Linux-7.0-ALL
 share/webmin/mysql/config-Amazon-Linux-2-ALL
 share/webmin/mysql/config-CentOS-Linux-7.0-ALL
 share/webmin/mysql/config-Redhat-Enterprise-Linux-7.0-ALL
+share/webmin/mysql/config-Rocky-Linux-7.0-ALL
 share/webmin/mysql/config-Scientific-Linux-7.0-ALL
 share/webmin/mysql/config-Ubuntu-Linux-16.04-17.99
 share/webmin/mysql/config-Ubuntu-Linux-18.04-ALL
@@ -1539,6 +1541,7 @@ share/webmin/mysql/mysql-lib.pl
 share/webmin/mysql/newdb.cgi
 share/webmin/mysql/newdb_form.cgi
 share/webmin/mysql/postinstall.pl
+share/webmin/mysql/prefs.info
 share/webmin/mysql/root_form.cgi
 share/webmin/mysql/save_cnf.cgi
 share/webmin/mysql/save_cpriv.cgi

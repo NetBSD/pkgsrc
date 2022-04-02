@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2020/07/29 10:28:27 mef Exp $
+@comment $NetBSD: PLIST,v 1.23 2022/04/02 13:23:08 mef Exp $
 share/examples/webmin/acl/config
 share/examples/webmin/config
 share/examples/webmin/cron/config
@@ -198,6 +198,7 @@ share/webmin/acl/lang/cs.auto
 share/webmin/acl/lang/da
 share/webmin/acl/lang/da.auto
 share/webmin/acl/lang/de
+share/webmin/acl/lang/de.auto
 share/webmin/acl/lang/el
 share/webmin/acl/lang/el.auto
 share/webmin/acl/lang/en
@@ -346,6 +347,7 @@ share/webmin/acl/module.info.zh_TW.auto
 share/webmin/acl/negativeacl
 share/webmin/acl/openssl.cnf
 share/webmin/acl/postinstall.pl
+share/webmin/acl/prefs.info
 share/webmin/acl/save_acl.cgi
 share/webmin/acl/save_group.cgi
 share/webmin/acl/save_pass.cgi
@@ -367,6 +369,7 @@ share/webmin/bin/disable-twofactor
 share/webmin/bin/enable-proxy
 share/webmin/bin/language-manager
 share/webmin/bin/list-config
+share/webmin/bin/passwd
 share/webmin/bin/set-config
 share/webmin/bin/update-devel
 share/webmin/bin/webmin
@@ -411,6 +414,7 @@ share/webmin/create-module.pl
 share/webmin/cron/CHANGELOG
 share/webmin/cron/acl_security.pl
 share/webmin/cron/backup_config.pl
+share/webmin/cron/bootup.cgi
 share/webmin/cron/cgi_args.pl
 share/webmin/cron/config-aix
 share/webmin/cron/config-cobalt-linux
@@ -621,7 +625,6 @@ share/webmin/cron/lang/mt.auto
 share/webmin/cron/lang/nl
 share/webmin/cron/lang/nl.auto
 share/webmin/cron/lang/no
-share/webmin/cron/lang/no.auto
 share/webmin/cron/lang/pl
 share/webmin/cron/lang/pl.auto
 share/webmin/cron/lang/pt
@@ -733,7 +736,9 @@ share/webmin/cron/module.info.zh.auto
 share/webmin/cron/module.info.zh_TW
 share/webmin/cron/module.info.zh_TW.auto
 share/webmin/cron/move.cgi
+share/webmin/cron/negativeacl
 share/webmin/cron/postinstall.pl
+share/webmin/cron/prefs.info
 share/webmin/cron/range.pl
 share/webmin/cron/rbac-mapping
 share/webmin/cron/safeacl
@@ -741,6 +746,8 @@ share/webmin/cron/save_allow.cgi
 share/webmin/cron/save_cron.cgi
 share/webmin/cron/save_env.cgi
 share/webmin/cron/save_manual.cgi
+share/webmin/cron/start.cgi
+share/webmin/cron/stop.cgi
 share/webmin/cron/uninstall.pl
 share/webmin/cron/useradmin_update.pl
 share/webmin/date_chooser.cgi
@@ -1121,6 +1128,7 @@ share/webmin/init/module.info.zh
 share/webmin/init/module.info.zh.auto
 share/webmin/init/module.info.zh_TW
 share/webmin/init/module.info.zh_TW.auto
+share/webmin/init/prefs.info
 share/webmin/init/rbac-mapping
 share/webmin/init/reboot.cgi
 share/webmin/init/save_action.cgi
@@ -1597,8 +1605,8 @@ share/webmin/lang/hr.auto
 share/webmin/lang/hu
 share/webmin/lang/hu.auto
 share/webmin/lang/it
-share/webmin/lang/it.auto
 share/webmin/lang/ja
+share/webmin/lang/ja.auto
 share/webmin/lang/ko
 share/webmin/lang/ko.auto
 share/webmin/lang/lt
@@ -1783,7 +1791,6 @@ share/webmin/man/lang/mt.auto
 share/webmin/man/lang/nl
 share/webmin/man/lang/nl.auto
 share/webmin/man/lang/no
-share/webmin/man/lang/no.auto
 share/webmin/man/lang/pl
 share/webmin/man/lang/pl.auto
 share/webmin/man/lang/pt.auto
@@ -3272,6 +3279,7 @@ share/webmin/proc/module.info.zh_TW.auto
 share/webmin/proc/open_files.cgi
 share/webmin/proc/openbsd-lib.pl
 share/webmin/proc/osf-lib.pl
+share/webmin/proc/prefs.info
 share/webmin/proc/proc-lib.pl
 share/webmin/proc/rbac-mapping
 share/webmin/proc/renice_proc.cgi
@@ -3282,6 +3290,7 @@ share/webmin/proc/sysv-lib.pl
 share/webmin/proc/tail.cgi
 share/webmin/proc/trace.cgi
 share/webmin/proc/windows-lib.pl
+share/webmin/record-failed.pl
 share/webmin/record-login.pl
 share/webmin/record-logout.pl
 share/webmin/robots.txt
@@ -3307,6 +3316,7 @@ share/webmin/servers/config.info.es
 share/webmin/servers/config.info.fr
 share/webmin/servers/config.info.hu
 share/webmin/servers/config.info.it
+share/webmin/servers/config.info.ja
 share/webmin/servers/config.info.ko
 share/webmin/servers/config.info.ms
 share/webmin/servers/config.info.nl
@@ -3351,6 +3361,7 @@ share/webmin/servers/images/turbo.gif
 share/webmin/servers/images/ubuntu.gif
 share/webmin/servers/images/unknown.gif
 share/webmin/servers/images/windows.gif
+share/webmin/servers/index-json.cgi
 share/webmin/servers/index.cgi
 share/webmin/servers/lang/af.auto
 share/webmin/servers/lang/ar
@@ -3379,7 +3390,6 @@ share/webmin/servers/lang/hu.auto
 share/webmin/servers/lang/it
 share/webmin/servers/lang/it.auto
 share/webmin/servers/lang/ja
-share/webmin/servers/lang/ja.auto
 share/webmin/servers/lang/ko
 share/webmin/servers/lang/ko.auto
 share/webmin/servers/lang/lt.auto
@@ -3456,7 +3466,6 @@ share/webmin/servers/module.info.hu.auto
 share/webmin/servers/module.info.it
 share/webmin/servers/module.info.it.auto
 share/webmin/servers/module.info.ja
-share/webmin/servers/module.info.ja.auto
 share/webmin/servers/module.info.ko
 share/webmin/servers/module.info.ko.auto
 share/webmin/servers/module.info.lt
@@ -3501,6 +3510,7 @@ share/webmin/servers/module.info.zh
 share/webmin/servers/module.info.zh.auto
 share/webmin/servers/module.info.zh_TW
 share/webmin/servers/module.info.zh_TW.auto
+share/webmin/servers/prefs.info
 share/webmin/servers/save_auto.cgi
 share/webmin/servers/save_serv.cgi
 share/webmin/servers/servers-lib.pl
@@ -3514,6 +3524,7 @@ share/webmin/switch_skill.cgi
 share/webmin/switch_user.cgi
 share/webmin/thirdparty.pl
 share/webmin/ui-lib.pl
+share/webmin/unauthenticated/errors.css
 share/webmin/unauthenticated/filter_match.js
 share/webmin/uptracker.cgi
 share/webmin/user_chooser.cgi
@@ -3635,7 +3646,7 @@ share/webmin/webmin/help/twofactor.es.auto.html
 share/webmin/webmin/help/twofactor.eu.auto.html
 share/webmin/webmin/help/twofactor.fa.auto.html
 share/webmin/webmin/help/twofactor.fi.auto.html
-share/webmin/webmin/help/twofactor.fr.auto.html
+share/webmin/webmin/help/twofactor.fr.html
 share/webmin/webmin/help/twofactor.he.auto.html
 share/webmin/webmin/help/twofactor.hr.auto.html
 share/webmin/webmin/help/twofactor.html
@@ -3808,7 +3819,6 @@ share/webmin/webmin/module.info.hu.auto
 share/webmin/webmin/module.info.it
 share/webmin/webmin/module.info.it.auto
 share/webmin/webmin/module.info.ja
-share/webmin/webmin/module.info.ja.auto
 share/webmin/webmin/module.info.ko
 share/webmin/webmin/module.info.ko.auto
 share/webmin/webmin/module.info.lt
@@ -3874,10 +3884,9 @@ share/webmin/webmin/syslog_logs.pl
 share/webmin/webmin/system_info.pl
 share/webmin/webmin/test_sendmail.cgi
 share/webmin/webmin/third_chooser.cgi
+share/webmin/webmin/twofactor-funcs-lib.pl
 share/webmin/webmin/uninstall.pl
 share/webmin/webmin/update.cgi
-share/webmin/webmin/update.pl
-share/webmin/webmin/update_sched.cgi
 share/webmin/webmin/upgrade.cgi
 share/webmin/webmin/view_webmincron.cgi
 share/webmin/webmin/webmin-lib.pl
@@ -3893,6 +3902,7 @@ share/webmin/webminlog/config.info.de
 share/webmin/webminlog/config.info.es
 share/webmin/webminlog/config.info.hr
 share/webmin/webminlog/config.info.hu
+share/webmin/webminlog/config.info.ja
 share/webmin/webminlog/config.info.ko
 share/webmin/webminlog/config.info.ms
 share/webmin/webminlog/config.info.nl
@@ -3916,6 +3926,7 @@ share/webmin/webminlog/lang/cs
 share/webmin/webminlog/lang/cs.auto
 share/webmin/webminlog/lang/da.auto
 share/webmin/webminlog/lang/de
+share/webmin/webminlog/lang/de.auto
 share/webmin/webminlog/lang/el.auto
 share/webmin/webminlog/lang/en
 share/webmin/webminlog/lang/es
@@ -4008,7 +4019,6 @@ share/webmin/webminlog/module.info.hu.auto
 share/webmin/webminlog/module.info.it
 share/webmin/webminlog/module.info.it.auto
 share/webmin/webminlog/module.info.ja
-share/webmin/webminlog/module.info.ja.auto
 share/webmin/webminlog/module.info.ko
 share/webmin/webminlog/module.info.ko.auto
 share/webmin/webminlog/module.info.lt
@@ -4053,8 +4063,10 @@ share/webmin/webminlog/module.info.zh
 share/webmin/webminlog/module.info.zh.auto
 share/webmin/webminlog/module.info.zh_TW
 share/webmin/webminlog/module.info.zh_TW.auto
+share/webmin/webminlog/negativeacl
 share/webmin/webminlog/rollback.cgi
 share/webmin/webminlog/safeacl
+share/webmin/webminlog/save_notify.cgi
 share/webmin/webminlog/search.cgi
 share/webmin/webminlog/view.cgi
 share/webmin/webminlog/webminlog-lib.pl

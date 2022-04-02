@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/07/29 10:28:31 mef Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/04/02 13:23:11 mef Exp $
 share/examples/webmin/tunnel/config
 share/webmin/tunnel/CHANGELOG
 share/webmin/tunnel/config
@@ -31,7 +31,6 @@ share/webmin/tunnel/lang/eu.auto
 share/webmin/tunnel/lang/fa.auto
 share/webmin/tunnel/lang/fi.auto
 share/webmin/tunnel/lang/fr
-share/webmin/tunnel/lang/fr.auto
 share/webmin/tunnel/lang/he.auto
 share/webmin/tunnel/lang/hr.auto
 share/webmin/tunnel/lang/hu
@@ -49,7 +48,6 @@ share/webmin/tunnel/lang/mt.auto
 share/webmin/tunnel/lang/nl
 share/webmin/tunnel/lang/nl.auto
 share/webmin/tunnel/lang/no
-share/webmin/tunnel/lang/no.auto
 share/webmin/tunnel/lang/pl.auto
 share/webmin/tunnel/lang/pt.auto
 share/webmin/tunnel/lang/pt_BR.auto
