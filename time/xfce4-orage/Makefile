@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.62 2021/12/08 16:06:49 adam Exp $
+# $NetBSD: Makefile,v 1.63 2022/04/02 01:24:17 gutteridge Exp $
 
-VERSION=	4.12.1
-PKGREVISION= 26
+VERSION=	4.16.0
 DISTNAME=	orage-${VERSION}
 PKGNAME=	xfce4-orage-${VERSION}
 CATEGORIES=	time
-MASTER_SITES=	http://archive.xfce.org/src/apps/orage/4.12/
+MASTER_SITES=	https://archive.xfce.org/src/apps/orage/${VERSION:R}/
 
-HOMEPAGE=	http://www.kolumbus.fi/~w408237/orage/
+HOMEPAGE=	https://docs.xfce.org/apps/orage/start
 LICENSE=	gnu-gpl-v2
 COMMENT=	Xfce time managing application
 
-EXTRACT_SUFX=           .tar.bz2
+EXTRACT_SUFX=	.tar.bz2
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
@@ -38,11 +37,19 @@ SUBST_SED.zoneinfo+=	-e 's|zone\.tab|tab/zone_sun.tab|g'
 SUBST_SED.zoneinfo+=	-e 's|iso3166\.tab|tab/country.tab|g'
 .endif
 
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.52.0
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.24.0
+.include "../../x11/gtk3/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libxfce4ui+=	libxfce4ui>=4.16.0
+.include "../../x11/libxfce4ui/buildlink3.mk"
+BUILDLINK_API_DEPENDS.xfce4-panel+=	xfce4-panel>=4.16.0
+.include "../../x11/xfce4-panel/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libical+=	libical>=3.0
 .include "../../time/libical/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
