@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/12/04 12:45:27 fcambus Exp $
+$NetBSD: distinfo,v 1.9 2022/04/02 18:02:25 fcambus Exp $
 
-BLAKE2s (stagit-1.0.tar.gz) = 0499d084dd8d36cd367b50afece5e02d34ecc7037375b7d496e090f22bb232a1
-SHA512 (stagit-1.0.tar.gz) = d18d7adadf85979f3062f0d4c41580d06f11a39c8864184d5a37822689bd372bb26139c7ae16728d71e240f90e2dbe6ce829cd27ee2ea684474974341c208813
-Size (stagit-1.0.tar.gz) = 19110 bytes
+BLAKE2s (stagit-1.1.tar.gz) = 7cfb1b3b8f934f753a54b3f9aa8264fb8c4e0a2dacb09eacd5e3b4819eccb3ae
+SHA512 (stagit-1.1.tar.gz) = e75d47b84d2783f7396a932b402a4dd36572027931559eae908861f9b8c658f43f5110bdfc81c5a0b65be3a0c53939ba9adabcc1e36fe88a6dab54b929526e0f
+Size (stagit-1.1.tar.gz) = 19648 bytes
