@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1651 2022/04/02 14:15:21 mef Exp $
+$NetBSD: CHANGES-2022,v 1.1652 2022/04/02 15:27:05 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2162,3 +2162,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/MoarVM to 2022.03 [mef 2022-04-02]
 	Updated lang/nqp to 2022.03 [mef 2022-04-02]
 	Updated lang/rakudo to 2022.03 [mef 2022-04-02]
+	Updated net/dbip-asn-lite to 2022.04 [fcambus 2022-04-02]
