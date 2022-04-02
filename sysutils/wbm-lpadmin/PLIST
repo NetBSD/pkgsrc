@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/07/29 10:28:29 mef Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/04/02 13:23:10 mef Exp $
 share/examples/webmin/lpadmin/config
 share/webmin/lpadmin/CHANGELOG
 share/webmin/lpadmin/acl_security.pl
@@ -16,9 +16,11 @@ share/webmin/lpadmin/cluster_add.cgi
 share/webmin/lpadmin/cluster_delete.cgi
 share/webmin/lpadmin/colour.fig
 share/webmin/lpadmin/colour.ps
+share/webmin/lpadmin/config-AlmaLinux-Linux-7.0-ALL
 share/webmin/lpadmin/config-Amazon-Linux-2-ALL
 share/webmin/lpadmin/config-CentOS-Linux-7.0-ALL
 share/webmin/lpadmin/config-Redhat-Enterprise-Linux-7.0-ALL
+share/webmin/lpadmin/config-Rocky-Linux-7.0-ALL
 share/webmin/lpadmin/config-Scientific-Linux-7.0-ALL
 share/webmin/lpadmin/config-aix
 share/webmin/lpadmin/config-coherent-linux
@@ -107,7 +109,6 @@ share/webmin/lpadmin/lang/eu.auto
 share/webmin/lpadmin/lang/fa.auto
 share/webmin/lpadmin/lang/fi.auto
 share/webmin/lpadmin/lang/fr
-share/webmin/lpadmin/lang/fr.auto
 share/webmin/lpadmin/lang/he.auto
 share/webmin/lpadmin/lang/hr.auto
 share/webmin/lpadmin/lang/hu
@@ -236,6 +237,7 @@ share/webmin/lpadmin/module.info.zh_TW
 share/webmin/lpadmin/module.info.zh_TW.auto
 share/webmin/lpadmin/old-caldera-driver.pl
 share/webmin/lpadmin/openbsd-lib.pl
+share/webmin/lpadmin/prefs.info
 share/webmin/lpadmin/printconf-driver.pl
 share/webmin/lpadmin/rbac-mapping
 share/webmin/lpadmin/redhat-driver.pl

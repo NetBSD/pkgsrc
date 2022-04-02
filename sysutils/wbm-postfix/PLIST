@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/07/29 10:28:30 mef Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/04/02 13:23:10 mef Exp $
 share/examples/webmin/postfix/config
 share/webmin/postfix/CHANGELOG
 share/webmin/postfix/acl_security.pl
@@ -6927,6 +6927,7 @@ share/webmin/postfix/module.info.zh_TW
 share/webmin/postfix/module.info.zh_TW.auto
 share/webmin/postfix/postfinger.cgi
 share/webmin/postfix/postfix-lib.pl
+share/webmin/postfix/prefs.info
 share/webmin/postfix/rate.cgi
 share/webmin/postfix/reload.cgi
 share/webmin/postfix/relocated.cgi

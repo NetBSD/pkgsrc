@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2020/07/29 10:28:27 mef Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/04/02 13:23:08 mef Exp $
 share/examples/webmin/bind8/config
 share/webmin/bind8/CHANGELOG
 share/webmin/bind8/acl_security.pl
@@ -23,8 +23,10 @@ share/webmin/bind8/conf_rndc.cgi
 share/webmin/bind8/conf_servers.cgi
 share/webmin/bind8/conf_trusted.cgi
 share/webmin/bind8/conf_zonedef.cgi
+share/webmin/bind8/config-AlmaLinux-Linux-6.0-ALL
 share/webmin/bind8/config-CentOS-Linux-6.0-ALL
 share/webmin/bind8/config-Redhat-Enterprise-Linux-6.0-ALL
+share/webmin/bind8/config-Rocky-Linux-6.0-ALL
 share/webmin/bind8/config-Scientific-Linux-6.0-ALL
 share/webmin/bind8/config-aix
 share/webmin/bind8/config-cobalt-linux
@@ -365,6 +367,7 @@ share/webmin/bind8/module.info.zh_TW.auto
 share/webmin/bind8/move_zone.cgi
 share/webmin/bind8/old_save_controls.cgi
 share/webmin/bind8/open.cgi
+share/webmin/bind8/prefs.info
 share/webmin/bind8/records-lib.pl
 share/webmin/bind8/refetch.cgi
 share/webmin/bind8/resign.pl

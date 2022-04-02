@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/07/29 10:28:29 mef Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/04/02 13:23:10 mef Exp $
 share/examples/webmin/inetd/config
 share/webmin/inetd/CHANGELOG
 share/webmin/inetd/backup_config.pl
@@ -246,6 +246,7 @@ share/webmin/inetd/module.info.zh
 share/webmin/inetd/module.info.zh.auto
 share/webmin/inetd/module.info.zh_TW
 share/webmin/inetd/module.info.zh_TW.auto
+share/webmin/inetd/prefs.info
 share/webmin/inetd/restart_inetd.cgi
 share/webmin/inetd/save_rpc.cgi
 share/webmin/inetd/save_serv.cgi

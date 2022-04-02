@@ -1,16 +1,16 @@
-$NetBSD: patch-ap,v 1.3 2020/09/07 10:34:52 mef Exp $
+$NetBSD: patch-ap,v 1.4 2022/04/02 13:23:08 mef Exp $
 
 Set &html_escape for safety
 
---- webminlog/search.cgi.orig	2011-04-27 00:18:53.000000000 +0200
-+++ webminlog/search.cgi	2011-06-15 23:34:38.000000000 +0200
-@@ -147,7 +147,8 @@ elsif (@match) {
+--- webminlog/search.cgi.orig	2022-03-03 13:10:55.000000000 +0900
++++ webminlog/search.cgi	2022-04-02 20:58:04.828924454 +0900
+@@ -180,7 +180,8 @@ elsif (@match) {
  	# Show search results in table
  	if ($in{'sid'}) {
- 		print "<b>",&text('search_sid', "<tt>$match[0]->{'user'}</tt>",
+ 		print "<b data-search-action='sid'>",&text('search_sid', "<tt>$match[0]->{'user'}</tt>",
 -				  "<tt>$in{'sid'}</tt>")," ..</b><p>\n";
-+                                 "<tt>" . &html_escape($in{'sid'}) . "</tt>"),
-+                                 " ..</b><p>\n";
++		"<tt>" . &html_escape($in{'sid'}) . "</tt>"),
++		" ..</b><p>\n";
  		}
  	elsif ($in{'uall'} == 1 && $in{'mall'} && $in{'tall'}) {
- 		print "<b>$text{'search_critall'} ..</b><p>\n";
+ 		print "<b data-search-action='critall'>$text{'search_critall'} ..</b><p>\n";
