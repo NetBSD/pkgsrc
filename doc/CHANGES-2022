@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1655 2022/04/02 18:02:36 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.1656 2022/04/02 19:04:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2166,3 +2166,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/dbip-city-lite to 2022.04 [fcambus 2022-04-02]
 	Updated net/dbip-country-lite to 2022.04 [fcambus 2022-04-02]
 	Updated www/stagit to 1.1 [fcambus 2022-04-02]
+	Updated wm/twm to 1.0.12 [wiz 2022-04-02]
