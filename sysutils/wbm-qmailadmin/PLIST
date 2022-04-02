@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/07/29 10:28:30 mef Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/04/02 13:23:10 mef Exp $
 share/examples/webmin/qmailadmin/config
 share/webmin/qmailadmin/CHANGELOG
 share/webmin/qmailadmin/autoreply.pl
@@ -194,6 +194,7 @@ share/webmin/qmailadmin/old_edit_ffile.cgi
 share/webmin/qmailadmin/old_edit_rfile.cgi
 share/webmin/qmailadmin/old_save_ffile.cgi
 share/webmin/qmailadmin/old_save_rfile.cgi
+share/webmin/qmailadmin/prefs.info
 share/webmin/qmailadmin/qmail-lib.pl
 share/webmin/qmailadmin/save_afile.cgi
 share/webmin/qmailadmin/save_alias.cgi

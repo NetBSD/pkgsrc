@@ -1,15 +1,17 @@
-@comment $NetBSD: PLIST,v 1.9 2020/07/29 10:28:28 mef Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/04/02 13:23:09 mef Exp $
 share/examples/webmin/dhcpd/config
 share/webmin/dhcpd/CHANGELOG
 share/webmin/dhcpd/acl_security.pl
 share/webmin/dhcpd/backup_config.pl
 share/webmin/dhcpd/cgi_args.pl
+share/webmin/dhcpd/config-AlmaLinux-Linux-7.0-ALL
 share/webmin/dhcpd/config-Amazon-Linux-2-ALL
 share/webmin/dhcpd/config-CentOS-Linux-5
 share/webmin/dhcpd/config-CentOS-Linux-6.0-6.9
 share/webmin/dhcpd/config-CentOS-Linux-7.0-ALL
 share/webmin/dhcpd/config-Redhat-Enterprise-Linux-6.0-6.9
 share/webmin/dhcpd/config-Redhat-Enterprise-Linux-7.0-ALL
+share/webmin/dhcpd/config-Rocky-Linux-7.0-ALL
 share/webmin/dhcpd/config-Scientific-Linux-6.0-6.9
 share/webmin/dhcpd/config-Scientific-Linux-7.0-ALL
 share/webmin/dhcpd/config-Ubuntu-Linux-12.04-ALL
@@ -258,6 +260,7 @@ share/webmin/dhcpd/lookup_group.cgi
 share/webmin/dhcpd/lookup_host.cgi
 share/webmin/dhcpd/lookup_shared.cgi
 share/webmin/dhcpd/lookup_subnet.cgi
+share/webmin/dhcpd/mac-vendor.txt
 share/webmin/dhcpd/module.info
 share/webmin/dhcpd/module.info.af
 share/webmin/dhcpd/module.info.af.auto
@@ -342,6 +345,7 @@ share/webmin/dhcpd/module.info.zh.auto
 share/webmin/dhcpd/module.info.zh_TW
 share/webmin/dhcpd/module.info.zh_TW.auto
 share/webmin/dhcpd/params-lib.pl
+share/webmin/dhcpd/prefs.info
 share/webmin/dhcpd/rbac-mapping
 share/webmin/dhcpd/restart.cgi
 share/webmin/dhcpd/save_group.cgi
