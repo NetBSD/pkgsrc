@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.63 2022/02/23 19:12:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.64 2022/04/02 13:15:50 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -56,6 +56,7 @@ share/mame/artwork/bgfx/chains/hq2x.png
 share/mame/artwork/bgfx/chains/hq3x.png
 share/mame/artwork/bgfx/chains/hq4x.png
 share/mame/artwork/dir.txt
+share/mame/artwork/lut-default.png
 share/mame/artwork/monochrome-chessboard.png
 share/mame/artwork/monochrome-matrix.png
 share/mame/artwork/scanlines.png
@@ -99,6 +100,7 @@ share/mame/hash/altos8600.xml
 share/mame/hash/amiga_a1000.xml
 share/mame/hash/amiga_a3000.xml
 share/mame/hash/amiga_apps.xml
+share/mame/hash/amiga_demos.xml
 share/mame/hash/amiga_flop.xml
 share/mame/hash/amiga_hardware.xml
 share/mame/hash/amiga_hdd.xml
@@ -257,6 +259,7 @@ share/mame/hash/evio.xml
 share/mame/hash/ews286_flop.xml
 share/mame/hash/excalibur64.xml
 share/mame/hash/exl100.xml
+share/mame/hash/famibox.xml
 share/mame/hash/famicom_cass.xml
 share/mame/hash/famicom_flop.xml
 share/mame/hash/fidel_msc.xml
@@ -524,6 +527,7 @@ share/mame/hash/picno.xml
 share/mame/hash/pico.xml
 share/mame/hash/pippin.xml
 share/mame/hash/pippin_flop.xml
+share/mame/hash/playmaker.xml
 share/mame/hash/plus4_cart.xml
 share/mame/hash/plus4_cass.xml
 share/mame/hash/plus4_flop.xml
@@ -561,6 +565,7 @@ share/mame/hash/r9751.xml
 share/mame/hash/radio86_cart.xml
 share/mame/hash/radio86_cass.xml
 share/mame/hash/rainbow.xml
+share/mame/hash/roland_tnsc1.xml
 share/mame/hash/rwtrntcs.xml
 share/mame/hash/rx78_cart.xml
 share/mame/hash/rx78_cass.xml
