@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/11/04 21:28:50 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2022/04/02 10:50:26 nia Exp $
 
 DISTNAME=	pftop-0.7
 PKGREVISION=	2
@@ -16,6 +16,12 @@ CFLAGS+=		-I${PREFIX}/include
 OSVERSION_SPECIFIC=	yes
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} > 099974
+BROKEN+=	"Depends on removed CIRCLEQ API"
+.endif
 
 post-patch:
 	@${ECHO} "#include <pcap.h>" > ${WRKSRC}/pcap-int.h
