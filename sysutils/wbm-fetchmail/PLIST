@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/07/29 10:28:29 mef Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/04/02 13:23:09 mef Exp $
 share/examples/webmin/fetchmail/config
 share/webmin/fetchmail/CHANGELOG
 share/webmin/fetchmail/acl_security.pl
@@ -185,6 +185,7 @@ share/webmin/fetchmail/module.info.zh
 share/webmin/fetchmail/module.info.zh.auto
 share/webmin/fetchmail/module.info.zh_TW
 share/webmin/fetchmail/module.info.zh_TW.auto
+share/webmin/fetchmail/prefs.info
 share/webmin/fetchmail/save_cron.cgi
 share/webmin/fetchmail/save_global.cgi
 share/webmin/fetchmail/save_poll.cgi

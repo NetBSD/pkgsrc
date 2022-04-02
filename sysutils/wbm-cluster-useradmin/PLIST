@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/07/29 10:28:28 mef Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/04/02 13:23:09 mef Exp $
 share/examples/webmin/cluster-useradmin/config
 share/webmin/cluster-useradmin/CHANGELOG
 share/webmin/cluster-useradmin/add.cgi
@@ -74,9 +74,12 @@ share/webmin/cluster-useradmin/lang/ar.auto
 share/webmin/cluster-useradmin/lang/be.auto
 share/webmin/cluster-useradmin/lang/bg.auto
 share/webmin/cluster-useradmin/lang/ca
+share/webmin/cluster-useradmin/lang/ca.auto
 share/webmin/cluster-useradmin/lang/cs
+share/webmin/cluster-useradmin/lang/cs.auto
 share/webmin/cluster-useradmin/lang/da.auto
 share/webmin/cluster-useradmin/lang/de
+share/webmin/cluster-useradmin/lang/de.auto
 share/webmin/cluster-useradmin/lang/el.auto
 share/webmin/cluster-useradmin/lang/en
 share/webmin/cluster-useradmin/lang/es
@@ -90,6 +93,7 @@ share/webmin/cluster-useradmin/lang/he.auto
 share/webmin/cluster-useradmin/lang/hr
 share/webmin/cluster-useradmin/lang/hr.auto
 share/webmin/cluster-useradmin/lang/hu
+share/webmin/cluster-useradmin/lang/hu.auto
 share/webmin/cluster-useradmin/lang/it.auto
 share/webmin/cluster-useradmin/lang/ja.auto
 share/webmin/cluster-useradmin/lang/ko.auto
@@ -98,8 +102,11 @@ share/webmin/cluster-useradmin/lang/lv.auto
 share/webmin/cluster-useradmin/lang/ms.auto
 share/webmin/cluster-useradmin/lang/mt.auto
 share/webmin/cluster-useradmin/lang/nl
+share/webmin/cluster-useradmin/lang/nl.auto
 share/webmin/cluster-useradmin/lang/no
+share/webmin/cluster-useradmin/lang/no.auto
 share/webmin/cluster-useradmin/lang/pl
+share/webmin/cluster-useradmin/lang/pl.auto
 share/webmin/cluster-useradmin/lang/pt.auto
 share/webmin/cluster-useradmin/lang/pt_BR.auto
 share/webmin/cluster-useradmin/lang/ro.auto
@@ -198,6 +205,7 @@ share/webmin/cluster-useradmin/module.info.zh
 share/webmin/cluster-useradmin/module.info.zh.auto
 share/webmin/cluster-useradmin/module.info.zh_TW
 share/webmin/cluster-useradmin/module.info.zh_TW.auto
+share/webmin/cluster-useradmin/prefs.info
 share/webmin/cluster-useradmin/refresh.cgi
 share/webmin/cluster-useradmin/save_group.cgi
 share/webmin/cluster-useradmin/save_user.cgi

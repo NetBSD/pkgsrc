@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/07/29 10:28:28 mef Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/04/02 13:23:08 mef Exp $
 share/examples/webmin/cluster-cron/config
 share/webmin/cluster-cron/CHANGELOG
 share/webmin/cluster-cron/cluster-cron-lib.pl
@@ -68,7 +68,6 @@ share/webmin/cluster-cron/lang/eu.auto
 share/webmin/cluster-cron/lang/fa.auto
 share/webmin/cluster-cron/lang/fi.auto
 share/webmin/cluster-cron/lang/fr
-share/webmin/cluster-cron/lang/fr.auto
 share/webmin/cluster-cron/lang/he.auto
 share/webmin/cluster-cron/lang/hr
 share/webmin/cluster-cron/lang/hr.auto
@@ -84,7 +83,6 @@ share/webmin/cluster-cron/lang/mt.auto
 share/webmin/cluster-cron/lang/nl
 share/webmin/cluster-cron/lang/nl.auto
 share/webmin/cluster-cron/lang/no
-share/webmin/cluster-cron/lang/no.auto
 share/webmin/cluster-cron/lang/pl
 share/webmin/cluster-cron/lang/pl.auto
 share/webmin/cluster-cron/lang/pt.auto

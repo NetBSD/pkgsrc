@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/07/29 10:28:28 mef Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/04/02 13:23:09 mef Exp $
 share/examples/webmin/custom/config
 share/webmin/custom/CHANGELOG
 share/webmin/custom/acl_security.pl
@@ -1270,7 +1270,6 @@ share/webmin/custom/lang/eu.auto
 share/webmin/custom/lang/fa.auto
 share/webmin/custom/lang/fi.auto
 share/webmin/custom/lang/fr
-share/webmin/custom/lang/fr.auto
 share/webmin/custom/lang/he.auto
 share/webmin/custom/lang/hr
 share/webmin/custom/lang/hr.auto
@@ -1290,7 +1289,6 @@ share/webmin/custom/lang/mt.auto
 share/webmin/custom/lang/nl
 share/webmin/custom/lang/nl.auto
 share/webmin/custom/lang/no
-share/webmin/custom/lang/no.auto
 share/webmin/custom/lang/pl
 share/webmin/custom/lang/pl.auto
 share/webmin/custom/lang/pt
@@ -1399,6 +1397,7 @@ share/webmin/custom/module.info.zh
 share/webmin/custom/module.info.zh.auto
 share/webmin/custom/module.info.zh_TW
 share/webmin/custom/module.info.zh_TW.auto
+share/webmin/custom/prefs.info
 share/webmin/custom/run.cgi
 share/webmin/custom/save.cgi
 share/webmin/custom/save_cmd.cgi

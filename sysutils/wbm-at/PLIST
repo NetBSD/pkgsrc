@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/10/30 22:08:55 mef Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/04/02 13:23:08 mef Exp $
 share/examples/webmin/at/config
 share/webmin/at/CHANGELOG
 share/webmin/at/acl_security.pl
@@ -212,6 +212,7 @@ share/webmin/at/module.info.zh
 share/webmin/at/module.info.zh.auto
 share/webmin/at/module.info.zh_TW
 share/webmin/at/module.info.zh_TW.auto
+share/webmin/at/negativeacl
 share/webmin/at/openserver-lib.pl
 share/webmin/at/rbac-mapping
 share/webmin/at/save_allow.cgi

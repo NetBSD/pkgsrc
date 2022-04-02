@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2020/07/29 10:28:30 mef Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/04/02 13:23:10 mef Exp $
 share/examples/webmin/postgresql/config
 share/webmin/postgresql/CHANGELOG
 share/webmin/postgresql/acl_security.pl
@@ -8,9 +8,11 @@ share/webmin/postgresql/backup_config.pl
 share/webmin/postgresql/backup_form.cgi
 share/webmin/postgresql/cgi_args.pl
 share/webmin/postgresql/config
+share/webmin/postgresql/config-AlmaLinux-Linux-7.0-ALL
 share/webmin/postgresql/config-Amazon-Linux-2-ALL
 share/webmin/postgresql/config-CentOS-Linux-7.0-ALL
 share/webmin/postgresql/config-Redhat-Enterprise-Linux-7.0-ALL
+share/webmin/postgresql/config-Rocky-Linux-7.0-ALL
 share/webmin/postgresql/config-Scientific-Linux-7.0-ALL
 share/webmin/postgresql/config-cobalt-linux
 share/webmin/postgresql/config-coherent-linux
@@ -795,7 +797,6 @@ share/webmin/postgresql/lang/eu.auto
 share/webmin/postgresql/lang/fa.auto
 share/webmin/postgresql/lang/fi.auto
 share/webmin/postgresql/lang/fr
-share/webmin/postgresql/lang/fr.auto
 share/webmin/postgresql/lang/he.auto
 share/webmin/postgresql/lang/hr.auto
 share/webmin/postgresql/lang/hu
@@ -813,7 +814,6 @@ share/webmin/postgresql/lang/mt.auto
 share/webmin/postgresql/lang/nl
 share/webmin/postgresql/lang/nl.auto
 share/webmin/postgresql/lang/no
-share/webmin/postgresql/lang/no.auto
 share/webmin/postgresql/lang/pl
 share/webmin/postgresql/lang/pl.auto
 share/webmin/postgresql/lang/pt
@@ -931,6 +931,7 @@ share/webmin/postgresql/old/download.cgi
 share/webmin/postgresql/old/search_form.cgi
 share/webmin/postgresql/old/view_table.cgi
 share/webmin/postgresql/postgresql-lib.pl
+share/webmin/postgresql/prefs.info
 share/webmin/postgresql/restore.cgi
 share/webmin/postgresql/restore_form.cgi
 share/webmin/postgresql/save_field.cgi

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/07/29 10:28:30 mef Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/04/02 13:23:11 mef Exp $
 share/examples/webmin/sendmail/config
 share/webmin/sendmail/CHANGELOG
 share/webmin/sendmail/access-lib.pl
@@ -9,9 +9,11 @@ share/webmin/sendmail/backup_config.pl
 share/webmin/sendmail/boxes-lib.pl
 share/webmin/sendmail/build.cgi
 share/webmin/sendmail/cgi_args.pl
+share/webmin/sendmail/config-AlmaLinux-Linux-7.0-ALL
 share/webmin/sendmail/config-Amazon-Linux-2-ALL
 share/webmin/sendmail/config-CentOS-Linux-7.0-ALL
 share/webmin/sendmail/config-Redhat-Enterprise-Linux-7.0-ALL
+share/webmin/sendmail/config-Rocky-Linux-7.0-ALL
 share/webmin/sendmail/config-Scientific-Linux-7.0-ALL
 share/webmin/sendmail/config-aix
 share/webmin/sendmail/config-cobalt-linux
@@ -1695,6 +1697,7 @@ share/webmin/sendmail/module.info.zh_TW
 share/webmin/sendmail/module.info.zh_TW.auto
 share/webmin/sendmail/move.cgi
 share/webmin/sendmail/negativeacl
+share/webmin/sendmail/prefs.info
 share/webmin/sendmail/qdetach.cgi
 share/webmin/sendmail/rbac-mapping
 share/webmin/sendmail/save_access.cgi
