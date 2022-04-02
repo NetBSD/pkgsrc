@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2022/03/28 10:52:57 tnn Exp $
+# $NetBSD: Makefile,v 1.146 2022/04/02 07:17:55 nia Exp $
 
 DISTNAME=	SDL-1.2.15
 PKGREVISION=	37
@@ -15,6 +15,8 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
+
+CONFLICTS+=		sdl12-compat-[0-9]*
 
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
 CPPFLAGS+=		-DX11BASE="\"${X11BASE}\""
