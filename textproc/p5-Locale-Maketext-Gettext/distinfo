@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:22:30 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/04/02 10:42:39 wen Exp $
 
-BLAKE2s (Locale-Maketext-Gettext-1.30.tar.gz) = 92e7adfa74849a58744ab2bd4c612ab02e08c0c3e3bcb88acd93085370308186
-SHA512 (Locale-Maketext-Gettext-1.30.tar.gz) = 714b0dac97271ebdefa025155a98ce6c3fea796ed627e4606a86bef96fcf38a3cff6292cf861bcb57c895569739d3ab2a36769838718d0cc45ecf8501e5538c1
-Size (Locale-Maketext-Gettext-1.30.tar.gz) = 55400 bytes
+BLAKE2s (Locale-Maketext-Gettext-1.32.tar.gz) = 37f93bd8fc04742a34c1b1813ef8f0577704e2454f811efe6d29fdefa3516bbe
+SHA512 (Locale-Maketext-Gettext-1.32.tar.gz) = a366b7e11a6f5fc219f7fec66d020b1948cd318668c0be4e26fe0058fea66447bd9e8c078ba245109f7fe0fe5bfb682fcd1be979366dd6123e7216e41bb09833
+Size (Locale-Maketext-Gettext-1.32.tar.gz) = 55139 bytes
