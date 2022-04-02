@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1640 2022/04/02 09:17:57 wen Exp $
+$NetBSD: CHANGES-2022,v 1.1641 2022/04/02 09:38:10 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2152,3 +2152,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/p5-PPIx-QuoteLike to 0.020 [wen 2022-04-02]
 	Updated math/R-quantreg to 5.88 [wen 2022-04-02]
 	Updated textproc/p5-Net-Dict to 2.22 [wen 2022-04-02]
+	Updated editors/helix to 22.03 [nikita 2022-04-02]
