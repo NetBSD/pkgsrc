@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2020/06/15 07:22:10 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/04/02 19:03:58 wiz Exp $
 
-DISTNAME=	twm-1.0.11
+DISTNAME=	twm-1.0.12
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.xz
