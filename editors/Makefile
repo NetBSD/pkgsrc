@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.220 2022/03/06 12:38:53 wiz Exp $
+# $NetBSD: Makefile,v 1.221 2022/04/02 09:36:15 nikita Exp $
 #
 
 COMMENT=	Text and binary editors
@@ -59,6 +59,7 @@ SUBDIR+=	gnuserv
 SUBDIR+=	gobby
 SUBDIR+=	gtranslator
 SUBDIR+=	gummi
+SUBDIR+=	helix
 SUBDIR+=	heme
 SUBDIR+=	hexcurse
 SUBDIR+=	hexedit
