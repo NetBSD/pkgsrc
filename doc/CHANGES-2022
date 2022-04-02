@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1646 2022/04/02 13:26:46 mef Exp $
+$NetBSD: CHANGES-2022,v 1.1647 2022/04/02 13:27:26 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2157,3 +2157,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/p5-Locale-Maketext-Gettex to 1.32 [wen 2022-04-02]
 	Updated emulators/mame to 0.242 [wiz 2022-04-02]
 	Updated sysutils/webmin to 1.990 [mef 2022-04-02]
+	Updated sysutils/wbm-* to 1.990 [mef 2022-04-02]
