@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2017/08/16 20:21:10 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2022/04/02 21:41:38 spz Exp $
 
-DISTNAME=	libspf2-1.2.10
-PKGREVISION=	1
+DISTNAME=	libspf2-1.2.11
 CATEGORIES=	mail
-MASTER_SITES=	https://www.libspf2.org/spf/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.libspf2.org/

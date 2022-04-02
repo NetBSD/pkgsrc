@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:54:05 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/04/02 21:41:38 spz Exp $
 
-BLAKE2s (libspf2-1.2.10.tar.gz) = 5d6334413947d087d5bddbc24012899b660f9894328d6840816be74eaf4ccb86
-SHA512 (libspf2-1.2.10.tar.gz) = 162ce382628c6fcadac3e11f5a12442db622bb23f7ec503e16f5ba7fc88afdd777bce6b093c12a58210355985fd11b74b140f08fab347334d82d953dd183b130
-Size (libspf2-1.2.10.tar.gz) = 508842 bytes
+BLAKE2s (libspf2-1.2.11.tar.gz) = 47156637170752c1f614769befe9c2e384fca3d6d410b3a9f52d437dd1811af3
+SHA512 (libspf2-1.2.11.tar.gz) = 6a9505e68bd0f8b24acc98e8fd3a6815329a367c9a9cd3ec59d69eb6f9d1153fb2d1297f793828340050663a458a9bdb244d77a58253bfa7a3fbf74aadb01dfc
+Size (libspf2-1.2.11.tar.gz) = 530879 bytes
 SHA1 (patch-configure) = 0005180f6b9aedc45663dee6764c438d33078359
 SHA1 (patch-configure.ac) = eb0fae2a2bbe86f0e54b56c3ab2ec696f9a6788c
-SHA1 (patch-src_include_spf__log.h) = 87b534d338b7fa36168cf8b745a285e38598cfed
+SHA1 (patch-src_include_spf__log.h) = fdf6fe3447f465b364ddaa9f2d78f36458ba0266
 SHA1 (patch-src_libreplace_Makefile.in) = 12fab6f97efff6cc1944ebb5a5cf26fdb79971c2
 SHA1 (patch-src_libreplace_ensure__libreplace__symbol.c) = 1b2ccf11fe7cade3c7769e7388cdd79ee250b26e
 SHA1 (patch-src_libspf2_spf__dns__resolv.c) = b704c82f6627154470b07763d2233923bf0f6b10
