@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2021/09/08 10:48:20 pin Exp $
+# $NetBSD: options.mk,v 1.3 2022/04/03 10:04:09 pin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.spotify-player
 PKG_SUPPORTED_OPTIONS=	alsa gstreamer jack portaudio pulseaudio rodio sdl
@@ -17,7 +17,10 @@ RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.alsa-lib}/lib
 CARGO_FEATURES+=	gstreamer-backend
 RUSTFLAGS+=		-C link-arg=-L${BUILDLINK_PREFIX.gstreamer1}/lib
 RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gstreamer1}/lib
+DEPENDS+=		gstreamer1-default-backend-[0-9]*:../../meta-pkgs/gstreamer1-default-backend
 .include "../../multimedia/gstreamer1/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-good/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mjack)
