@@ -1,0 +1,21 @@
+libdeflate is a library for fast, whole-buffer DEFLATE-based compression and
+decompression.
+
+The supported formats are:
+
+- DEFLATE (raw)
+- zlib (a.k.a. DEFLATE with a zlib wrapper)
+- gzip (a.k.a. DEFLATE with a gzip wrapper)
+
+libdeflate is heavily optimized.  It is significantly faster than the zlib
+library, both for compression and decompression, and especially on x86
+processors.  In addition, libdeflate provides optional high compression modes
+that provide a better compression ratio than the zlib's "level 9".
+
+libdeflate itself is a library, but the following command-line programs which
+use this library are also provided:
+
+* gzip (or gunzip), a program which mostly behaves like the standard equivalent,
+  except that it does not yet have good streaming support and therefore does not
+  yet support very large files
+* benchmark, a program for benchmarking in-memory compression and decompression
