@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2020/01/18 23:35:56 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2022/04/03 21:06:26 wiz Exp $
 
-DISTNAME=	setxkbmap-1.3.2
+DISTNAME=	setxkbmap-1.3.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/

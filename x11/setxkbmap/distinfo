@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:34:28 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/04/03 21:06:26 wiz Exp $
 
-BLAKE2s (setxkbmap-1.3.2.tar.bz2) = 1f6df68427e81d6a2e7dd498f3f386abaad258ee7973e25c0d7401d4e98d39c9
-SHA512 (setxkbmap-1.3.2.tar.bz2) = bfa8015dee0d8d3fdbbd89afbd71c8606ce168d6edca8521d5ed05a00fecbea39bc4bfcce84b71458bdeb34c60bd80a5df27e0691ccee3966443ecdc937faf38
-Size (setxkbmap-1.3.2.tar.bz2) = 136253 bytes
+BLAKE2s (setxkbmap-1.3.3.tar.xz) = 15c55a7361358a2c3eeb11519a7bd73f9d9954278d5741aa5f5f116bef226afc
+SHA512 (setxkbmap-1.3.3.tar.xz) = 208f07a7f7bce47b573099d4cd8c941a3a4d74b456720bc3ca1cbba298381a2ab98c7500d6e6cd6d5dd61840b7c42cf6521da754ec395f266f8158102a55ad58
+Size (setxkbmap-1.3.3.tar.xz) = 130416 bytes
