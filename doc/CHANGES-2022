@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1671 2022/04/03 08:38:17 taca Exp $
+$NetBSD: CHANGES-2022,v 1.1672 2022/04/03 09:01:08 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2182,3 +2182,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed net/bing [wiz 2022-04-03]
 	Updated converters/p5-JSON to 4.05 [ast 2022-04-03]
 	Removed devel/ruby-i18n12 [taca 2022-04-03]
+	Removed x11/ruby-gtk2 [tsutsui 2022-04-03]
+	Removed www/ruby-webkit-gtk2 [tsutsui 2022-04-03]
+	Removed x11/ruby-gtksourceview2 [tsutsui 2022-04-03]
+	Removed x11/ruby-vte [tsutsui 2022-04-03]
