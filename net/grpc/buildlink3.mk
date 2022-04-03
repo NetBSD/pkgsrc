@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2021/11/11 12:02:47 kim Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2022/04/03 18:50:17 adam Exp $
 
 BUILDLINK_TREE+=	grpc
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	grpc
 GRPC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.grpc+=	grpc>=1.11.0
-BUILDLINK_ABI_DEPENDS.grpc?=	grpc>=1.41.1nb1
+BUILDLINK_ABI_DEPENDS.grpc?=	grpc>=1.44.0nb1
 BUILDLINK_PKGSRCDIR.grpc?=	../../net/grpc
 
 .include "../../devel/protobuf/buildlink3.mk"
