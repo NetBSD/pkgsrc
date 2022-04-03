@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2021/09/30 18:59:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2022/04/03 18:19:24 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -48,6 +48,9 @@ ${PYSITELIB}/google/protobuf/internal/_api_implementation.so
 ${PYSITELIB}/google/protobuf/internal/api_implementation.py
 ${PYSITELIB}/google/protobuf/internal/api_implementation.pyc
 ${PYSITELIB}/google/protobuf/internal/api_implementation.pyo
+${PYSITELIB}/google/protobuf/internal/builder.py
+${PYSITELIB}/google/protobuf/internal/builder.pyc
+${PYSITELIB}/google/protobuf/internal/builder.pyo
 ${PYSITELIB}/google/protobuf/internal/containers.py
 ${PYSITELIB}/google/protobuf/internal/containers.pyc
 ${PYSITELIB}/google/protobuf/internal/containers.pyo
