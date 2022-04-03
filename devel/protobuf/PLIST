@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2021/11/01 20:52:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2022/04/03 18:19:24 adam Exp $
 bin/protoc
 include/google/protobuf/any.h
 include/google/protobuf/any.pb.h
@@ -8,6 +8,7 @@ include/google/protobuf/api.proto
 include/google/protobuf/arena.h
 include/google/protobuf/arena_impl.h
 include/google/protobuf/arenastring.h
+include/google/protobuf/arenaz_sampler.h
 include/google/protobuf/compiler/code_generator.h
 include/google/protobuf/compiler/command_line_interface.h
 include/google/protobuf/compiler/cpp/cpp_file.h
@@ -31,6 +32,7 @@ include/google/protobuf/compiler/plugin.h
 include/google/protobuf/compiler/plugin.pb.h
 include/google/protobuf/compiler/plugin.proto
 include/google/protobuf/compiler/python/python_generator.h
+include/google/protobuf/compiler/python/python_pyi_generator.h
 include/google/protobuf/compiler/ruby/ruby_generator.h
 include/google/protobuf/descriptor.h
 include/google/protobuf/descriptor.pb.h
@@ -51,11 +53,8 @@ include/google/protobuf/generated_enum_reflection.h
 include/google/protobuf/generated_enum_util.h
 include/google/protobuf/generated_message_bases.h
 include/google/protobuf/generated_message_reflection.h
-include/google/protobuf/generated_message_table_driven.h
-include/google/protobuf/generated_message_table_driven_lite.h
 include/google/protobuf/generated_message_tctable_decl.h
 include/google/protobuf/generated_message_tctable_impl.h
-include/google/protobuf/generated_message_tctable_impl.inc
 include/google/protobuf/generated_message_util.h
 include/google/protobuf/has_bits.h
 include/google/protobuf/implicit_weak_message.h
