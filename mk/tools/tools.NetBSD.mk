@@ -1,4 +1,4 @@
-# $NetBSD: tools.NetBSD.mk,v 1.68 2021/10/22 19:00:06 jperkin Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.69 2022/04/03 10:33:44 riastradh Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
@@ -166,6 +166,8 @@ TOOLS_PATH.ar?=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-ar
 TOOLS_CREATE+=			ar
 TOOLS_PATH.ranlib?=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-ranlib
 TOOLS_CREATE+=			ranlib
+TOOLS_PATH.readelf?=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-readelf
+TOOLS_CREATE+=			readelf
 
 NATIVE_CC:=	/usr/bin/cc -B /usr/libexec -B /usr/bin
 CC=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-gcc
