@@ -1,15 +1,28 @@
-$NetBSD: patch-setup.py,v 1.4 2022/01/14 10:32:28 tnn Exp $
+$NetBSD: patch-setup.py,v 1.5 2022/04/03 10:54:52 riastradh Exp $
 
 Disable certain modules, so they can be built as separate packages.
 Do not look for ncursesw.
 Assume panel_library is correct; this is a fix for ncurses' gnupanel
 which will get transformed to panel in buildlink.
 Don't search for modules in PREFIX. Fixes build failure when py-setuptools
-  are installed.  
+  are installed.
+Enable cross-build by setting sys._home and sys.path to build directory
 
---- setup.py.orig	2021-12-06 18:23:39.000000000 +0000
+--- setup.py.orig	2022-03-23 20:12:04.000000000 +0000
 +++ setup.py
-@@ -13,6 +13,7 @@ import warnings
+@@ -1,5 +1,11 @@
+ # Autodetecting setup.py script for building the Python extensions
+ 
++import sys
++sys._home = __file__[:-len('/setup.py')]
++sys.path.append(__file__[:-len('/setup.py')] + '/Lib')
++with open('pybuilddir.txt') as pybuilddir:
++    sys.path.append(__file__[:-len('/setup.py')] + '/' + next(pybuilddir))
++
+ import argparse
+ import importlib._bootstrap
+ import importlib.machinery
+@@ -13,6 +19,7 @@ import warnings
  from glob import glob, escape
  import _osx_support
  
@@ -17,7 +30,7 @@ Don't search for modules in PREFIX. Fixes build failure when py-setuptools
  
  try:
      import subprocess
-@@ -45,6 +46,7 @@ with warnings.catch_warnings():
+@@ -45,6 +52,7 @@ with warnings.catch_warnings():
          DeprecationWarning
      )
  
@@ -25,7 +38,7 @@ Don't search for modules in PREFIX. Fixes build failure when py-setuptools
      from distutils.command.build_ext import build_ext
      from distutils.command.build_scripts import build_scripts
      from distutils.command.install import install
-@@ -58,7 +60,7 @@ with warnings.catch_warnings():
+@@ -58,7 +66,7 @@ with warnings.catch_warnings():
  TEST_EXTENSIONS = (sysconfig.get_config_var('TEST_MODULES') == 'yes')
  
  # This global variable is used to hold the list of modules to be disabled.
@@ -34,7 +47,7 @@ Don't search for modules in PREFIX. Fixes build failure when py-setuptools
  
  # --list-module-names option used by Tools/scripts/generate_module_names.py
  LIST_MODULE_NAMES = False
-@@ -249,6 +251,16 @@ def grep_headers_for(function, headers):
+@@ -249,6 +257,16 @@ def grep_headers_for(function, headers):
      return False
  
  
@@ -51,7 +64,7 @@ Don't search for modules in PREFIX. Fixes build failure when py-setuptools
  def find_file(filename, std_dirs, paths):
      """Searches for the directory where a given file is located,
      and returns a possibly-empty list of additional directories, or None
-@@ -821,15 +833,15 @@ class PyBuildExt(build_ext):
+@@ -823,15 +841,15 @@ class PyBuildExt(build_ext):
                          add_dir_to_list(dir_list, directory)
  
      def configure_compiler(self):
@@ -76,7 +89,7 @@ Don't search for modules in PREFIX. Fixes build failure when py-setuptools
          self.add_multiarch_paths()
          self.add_ldflags_cppflags()
  
-@@ -877,6 +889,9 @@ class PyBuildExt(build_ext):
+@@ -879,6 +897,9 @@ class PyBuildExt(build_ext):
              self.lib_dirs += ['/usr/lib/hpux64', '/usr/lib/hpux32']
  
          if MACOS:
@@ -86,7 +99,7 @@ Don't search for modules in PREFIX. Fixes build failure when py-setuptools
              # This should work on any unixy platform ;-)
              # If the user has bothered specifying additional -I and -L flags
              # in OPT and LDFLAGS we might as well use them here.
-@@ -1104,8 +1119,6 @@ class PyBuildExt(build_ext):
+@@ -1106,8 +1127,6 @@ class PyBuildExt(build_ext):
          # use the same library for the readline and curses modules.
          if 'curses' in readline_termcap_library:
              curses_library = readline_termcap_library
@@ -95,7 +108,7 @@ Don't search for modules in PREFIX. Fixes build failure when py-setuptools
          # Issue 36210: OSS provided ncurses does not link on AIX
          # Use IBM supplied 'curses' for successful build of _curses
          elif AIX and self.compiler.find_library_file(self.lib_dirs, 'curses'):
-@@ -1209,8 +1222,7 @@ class PyBuildExt(build_ext):
+@@ -1211,8 +1230,7 @@ class PyBuildExt(build_ext):
          # If the curses module is enabled, check for the panel module
          # _curses_panel needs some form of ncurses
          skip_curses_panel = True if AIX else False
@@ -105,7 +118,7 @@ Don't search for modules in PREFIX. Fixes build failure when py-setuptools
              self.add(Extension('_curses_panel', ['_curses_panel.c'],
                             include_dirs=curses_includes,
                             define_macros=curses_defines,
-@@ -1455,6 +1467,31 @@ class PyBuildExt(build_ext):
+@@ -1457,6 +1475,31 @@ class PyBuildExt(build_ext):
          dbm_order = ['gdbm']
          # The standard Unix dbm module:
          if not CYGWIN:
@@ -137,7 +150,7 @@ Don't search for modules in PREFIX. Fixes build failure when py-setuptools
              config_args = [arg.strip("'")
                             for arg in sysconfig.get_config_var("CONFIG_ARGS").split()]
              dbm_args = [arg for arg in config_args
-@@ -1466,7 +1503,7 @@ class PyBuildExt(build_ext):
+@@ -1468,7 +1511,7 @@ class PyBuildExt(build_ext):
              dbmext = None
              for cand in dbm_order:
                  if cand == "ndbm":
@@ -146,7 +159,7 @@ Don't search for modules in PREFIX. Fixes build failure when py-setuptools
                          # Some systems have -lndbm, others have -lgdbm_compat,
                          # others don't have either
                          if self.compiler.find_library_file(self.lib_dirs,
-@@ -2326,10 +2363,7 @@ class PyBuildExt(build_ext):
+@@ -2328,10 +2371,7 @@ class PyBuildExt(build_ext):
              sources = ['_decimal/_decimal.c']
              depends = ['_decimal/docstrings.h']
          else:
@@ -158,7 +171,7 @@ Don't search for modules in PREFIX. Fixes build failure when py-setuptools
              libraries = ['m']
              sources = [
                '_decimal/_decimal.c',
-@@ -2745,7 +2779,7 @@ def main():
+@@ -2747,7 +2787,7 @@ def main():
            # If you change the scripts installed here, you also need to
            # check the PyBuildScripts command above, and change the links
            # created by the bininstall target in Makefile.pre.in

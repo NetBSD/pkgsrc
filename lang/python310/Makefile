@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/03/19 18:59:40 adam Exp $
+# $NetBSD: Makefile,v 1.13 2022/04/03 10:54:52 riastradh Exp $
 
 .include "dist.mk"
 
@@ -35,6 +35,27 @@ PTHREAD_OPTS+=	require
 .include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.prefs.mk"
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+TOOL_DEPENDS+=		${PKGNAME}:../../${PKGPATH}
+# XXX copied from ../../lang/python/pyversion.mk to avoid including it
+# XXX should use NATIVE_PREFIX but we don't have that
+CONFIGURE_ARGS+=	PYTHON_FOR_BUILD=${PREFIX:Q}/bin/python3.10
+CONFIGURE_ARGS+=	MACHDEP=${PY_PLATNAME}
+CONFIGURE_ARGS+=	\
+	_PYTHON_HOST_PLATFORM=${LOWER_OPSYS}-${MACHINE_GNU_ARCH}
+CONFIGURE_ARGS+=	ac_sys_system=${OPSYS}
+.  if ${OPSYS} == "OSF1"
+CONFIGURE_ARGS+=	ac_cv_buggy_getaddrinfo=true
+.  else
+CONFIGURE_ARGS+=	ac_cv_buggy_getaddrinfo=false
+.  endif
+CONFIGURE_ARGS.NetBSD+=	ac_cv_file__dev_ptmx=yes
+CONFIGURE_ARGS.NetBSD+=	ac_cv_file__dev_ptc=no
+MAKE_ENV+=		\
+	_PYTHON_HOST_PLATFORM=${LOWER_OPSYS}-${MACHINE_GNU_ARCH}
+MAKE_ENV+=		_PYTHON_PROJECT_BASE=${WRKSRC:Q}
+.endif
 
 # http://bugs.python.org/issue13241
 .if !empty(MACHINE_PLATFORM:MDarwin-1[12].*)
