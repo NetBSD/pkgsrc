@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.29 2022/04/01 17:19:28 gdt Exp $
+$NetBSD: README,v 1.30 2022/04/03 13:10:18 gdt Exp $
 
 To try to get pkgsrc working on your system, please try the following
 as root:
@@ -64,16 +64,14 @@ PER PLATFORM INFORMATION
 ========================
 
 pkgsrc supports or has supported many operating systems (platforms).
-In general, there is a README.os for each platform that can run
-pkgsrc, explaining particular considerations.
+In general, there is a README.${platform} for each platform that can
+run pkgsrc, explaining particular considerations.
 
-Because pkgsrc contains many per-platform fixes and accommodations,
-and because the presence of those at times causes more work for
-others, we list platforms according to whether they are in active use.
-(If you feel a platform is miscategorized, send rationale to
-pkgsrc-users@.  Include a README.platform with instructions if it is
-missing and you are asserting that there are users.  Developers should
-of course feel free to make improvements.)
+Note that pkgsrc contains many per-platform fixes and accommodations,
+and pkgsrc does not always work well on very old platforms.  We list
+platforms according to whether they are in active use as a clue to
+whether pkgsrc on that platform is likely to work.  Improvements to
+code and documentation are always welcome.
 
 Note that listing a platform as having no users is not a decision to
 remove it from pkgsrc; this is merely recording information that
@@ -87,10 +85,10 @@ upstream and the upstream tracker URL included in the patch file or
 Makefile.
 
 Platforms are listed by the filename in mk/platform, annotated by the
-README.platform here if different.  Platforms with a * are believed to
-be non-working; see the README for the platform for perhaps more
-information.  A platform not having a README is a clue that it might
-not work.
+README.platform here if different (which is probably a bug).
+Platforms with a * are believed to be non-working; see the README for
+the platform for perhaps more information.  A platform not having a
+README is a clue that it might not work.
 
 Platforms with active use and maintenance
 -----------------------------------------
@@ -114,10 +112,11 @@ Platforms believed to have users
   OpenBSD
 
 
-Platforms with at least a tiny number of users
-----------------------------------------------
+Platforms with at least a small number of users
+-----------------------------------------------
 
   HPUX
+  Minix3
   OpenServer5 (SCO OpenServer, platform/SCO_SV.mk)
   SCO UnixWare
 
@@ -128,23 +127,17 @@ Platforms with unknown status
   DragonFly (no README)
   FreeMiNT (no README)
   GNUkFreeBSD
-  Minix3
-
-
-Platforms believed to have almost no users
-------------------------------------------
-
-  AIX (no cwrappers)
-  BSDOS (no README)
-  IRIX
-  Interix
-  MirBSD
-  QNX (no README)
 
 
 Platforms believed to have no users
 -----------------------------------
 
+  AIX (no cwrappers)
   Bitrig
+  BSDOS (no README)
   Haiku
+  IRIX
+  Interix
+  MirBSD
   * OSF1
+  QNX (no README)
