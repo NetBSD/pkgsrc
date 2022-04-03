@@ -1,4 +1,4 @@
-/*	$NetBSD: parse.c,v 1.12 2020/05/24 21:10:17 nia Exp $	*/
+/*	$NetBSD: parse.c,v 1.13 2022/04/03 19:18:00 tnn Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -69,14 +69,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: parse.c,v 1.12 2020/05/24 21:10:17 nia Exp $";
+static char rcsid[] = "$NetBSD: parse.c,v 1.13 2022/04/03 19:18:00 tnn Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)parse.c	8.3 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: parse.c,v 1.12 2020/05/24 21:10:17 nia Exp $");
+__RCSID("$NetBSD: parse.c,v 1.13 2022/04/03 19:18:00 tnn Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -140,6 +140,10 @@ __RCSID("$NetBSD: parse.c,v 1.12 2020/05/24 21:10:17 nia Exp $");
 
 #ifdef HAVE_STDINT_H
 #include <stdint.h>
+#else
+#ifndef SIZE_MAX
+#define SIZE_MAX 0xffffffffUL
+#endif
 #endif
 
 #ifdef HAVE_MMAP
