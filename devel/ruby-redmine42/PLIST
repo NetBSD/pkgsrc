@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/06/02 16:23:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/04/03 05:36:02 taca Exp $
 bin/redmine42_generate_secret_token${RUBY_SUFFIX}.sh
 bin/redmine42_load_default_data${RUBY_SUFFIX}.sh
 bin/redmine42_migrate_db${RUBY_SUFFIX}.sh
@@ -1748,6 +1748,7 @@ share/${RUBY_NAME}-redmine42/test/fixtures/files/import_iso8859-1.csv
 share/${RUBY_NAME}-redmine42/test/fixtures/files/import_issues.csv
 share/${RUBY_NAME}-redmine42/test/fixtures/files/import_issues_auto_mapping.csv
 share/${RUBY_NAME}-redmine42/test/fixtures/files/import_issues_utf8_with_bom.csv
+share/${RUBY_NAME}-redmine42/test/fixtures/files/import_issues_with_relation_and_invalid_issues.csv
 share/${RUBY_NAME}-redmine42/test/fixtures/files/import_subtasks.csv
 share/${RUBY_NAME}-redmine42/test/fixtures/files/import_subtasks_with_relations.csv
 share/${RUBY_NAME}-redmine42/test/fixtures/files/import_subtasks_with_unique_id.csv
