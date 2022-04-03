@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1659 2022/04/03 00:30:45 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.1660 2022/04/03 05:23:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2170,3 +2170,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/firefox to 98.0.2 [ryoon 2022-04-03]
 	Updated www/firefox-l10n to 98.0.2 [ryoon 2022-04-03]
 	Updated lang/openjdk11 to 1.11.0.14.9nb1 [ryoon 2022-04-03]
+	Updated devel/ruby-redmine41 to 4.1.7 [taca 2022-04-03]
