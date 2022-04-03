@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1684 2022/04/03 16:14:13 rhialto Exp $
+$NetBSD: CHANGES-2022,v 1.1685 2022/04/03 18:19:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2235,3 +2235,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ruby-asciidoctor to 2.0.17 [rhialto 2022-04-03]
 	Added devel/libdeflate version 1.10 [bsiegert 2022-04-03]
 	Updated x11/x3270 to 4.1ga13 [rhialto 2022-04-03]
+	Updated devel/protobuf to 3.20.0 [adam 2022-04-03]
+	Updated devel/py-protobuf to 3.20.0 [adam 2022-04-03]
