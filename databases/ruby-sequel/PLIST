@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.94 2022/03/06 03:58:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.95 2022/04/03 06:58:49 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -78,6 +78,7 @@ ${GEM_LIBDIR}/doc/release_notes/5.51.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.52.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.53.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.54.0.txt
+${GEM_LIBDIR}/doc/release_notes/5.55.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.6.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.7.0.txt
 ${GEM_LIBDIR}/doc/release_notes/5.8.0.txt
@@ -276,6 +277,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/association_multi_add_remove.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/association_pks.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/association_proxies.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/async_thread_pool.rb
+${GEM_LIBDIR}/lib/sequel/plugins/auto_restrict_eager_graph.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/auto_validations.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/auto_validations_constraint_validations_presence_message.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/before_after_save.rb
