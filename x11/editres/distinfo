@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:33:47 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/04/03 18:39:42 wiz Exp $
 
-BLAKE2s (editres-1.0.7.tar.bz2) = 5922c6c1b7ee0c5582a89508d2b99c1f8d892d874e615dfec11a9e56b1aa5593
-SHA512 (editres-1.0.7.tar.bz2) = b9c928b556116bf50cf4b6ea779bdc9fedf29f5db3e6a8cc75c122578c92e1cc530a81b226ec24aad183b8ebc2de570f200314b0d9ce7883b6e3306007365b32
-Size (editres-1.0.7.tar.bz2) = 166429 bytes
+BLAKE2s (editres-1.0.8.tar.xz) = c3b6dd78a5d1ada25bc66dfff169ddcdafbb367f6404476031710a9f5f7bfd7e
+SHA512 (editres-1.0.8.tar.xz) = 9a007ed7a02abf61af8b65a163a7289a1e960db390db401bdfad162aa642e0eb887ecf85be14093efd8567c68f5e01450bb8321403a203a00065fa21985c7922
+Size (editres-1.0.8.tar.xz) = 158476 bytes
