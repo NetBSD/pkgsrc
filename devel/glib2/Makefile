@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.288 2022/02/15 10:01:37 adam Exp $
+# $NetBSD: Makefile,v 1.289 2022/04/03 23:49:29 riastradh Exp $
 
 .include "Makefile.common"
 
@@ -22,6 +22,20 @@ MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/gio:${WRKSRC}/output/glib:${WRKSRC
 CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -D__EXTENSIONS__ -D__stub_epoll_create
 LDFLAGS.SunOS+=		-liconv -lintl -lnsl -lsocket
 LDFLAGS.FreeBSD+=	-liconv
+
+.include "../../mk/bsd.prefs.mk"
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+MESON_CROSS_ARCH_VARS+=			growing_stack
+MESON_CROSS_OPSYS_VARS+=		have_c99_snprintf
+MESON_CROSS_OPSYS_VARS+=		have_c99_vsnprintf
+MESON_CROSS_OPSYS_VARS+=		have_strlcpy
+MESON_CROSS_OPSYS_VARS+=		have_unix98_printf
+MESON_CROSS.NetBSD.have_c99_snprintf=	true
+MESON_CROSS.NetBSD.have_c99_vsnprintf=	true
+MESON_CROSS.NetBSD.have_strlcpy=	true
+MESON_CROSS.NetBSD.have_unix98_printf=	true
+MESON_CROSS.hppa.growing_stack=		true
+.endif
 
 REPLACE_PYTHON+=	gio/gio-querymodules-wrapper.py
 REPLACE_PYTHON+=	gio/tests/gengiotypefuncs.py
