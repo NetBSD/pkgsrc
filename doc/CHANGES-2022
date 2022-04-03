@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1682 2022/04/03 16:01:44 rhialto Exp $
+$NetBSD: CHANGES-2022,v 1.1683 2022/04/03 16:11:49 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2233,3 +2233,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/calibre to 5.40.0 [rhialto 2022-04-03]
 	Updated sysutils/mtools to 4.0.38 [rhialto 2022-04-03]
 	Updated textproc/ruby-asciidoctor to 2.0.17 [rhialto 2022-04-03]
+	Added devel/libdeflate version 1.10 [bsiegert 2022-04-03]
