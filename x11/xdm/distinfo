@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:34:37 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/04/03 22:10:30 wiz Exp $
 
-BLAKE2s (xdm-1.1.12.tar.bz2) = 8a1e7f083d64180c6a8ce88ae6f4c196d063f9126d941bb4298ca422ad46c829
-SHA512 (xdm-1.1.12.tar.bz2) = 1a4be0a070ced5db8fda6fc74794c9f9ed0cb37fa440fda6a3a7652aff62dfc3d7ba68b9facf054671ebf0f4db2a0eec29d0aa3716e3407ccd5529bac3553bdb
-Size (xdm-1.1.12.tar.bz2) = 512074 bytes
+BLAKE2s (xdm-1.1.13.tar.xz) = 6b31b9126b32f8bf4740df529b6589887e092e7b66a7db331262f541f5432dea
+SHA512 (xdm-1.1.13.tar.xz) = 1c7ba51dc8c6989ff6ede3a3abd06e002903609d4ebd31f06ec39fbfee3a80a690c6180f85c3ab135a0de4623261d92a191d1ca5f733cdb3bd2e7e78977b98e5
+Size (xdm-1.1.13.tar.xz) = 418404 bytes
