@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:34:27 nia Exp $
-
-BLAKE2s (vte-3.4.3.gem) = 81f1a2f83b618670f2f47f0077cc8cab8bd37d7c56c57fda935e11abdf0322c0
-SHA512 (vte-3.4.3.gem) = 31afceff4e9e9ae5e951969ac5ede4498c49833038f80ab2729992628b9bdde3718db8381ed9a2c0097be1c6516d2b837a500f42ba14d782e536980d5c09e346
-Size (vte-3.4.3.gem) = 24064 bytes
