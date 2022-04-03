@@ -1,14 +1,14 @@
-$NetBSD: patch-Gemfile,v 1.4 2022/01/18 13:35:42 taca Exp $
+$NetBSD: patch-Gemfile,v 1.5 2022/04/03 05:36:02 taca Exp $
 
 Relax dependency.
 
---- Gemfile.orig	2021-10-10 03:00:39.000000000 +0000
+--- Gemfile.orig	2022-03-28 19:50:40.000000000 +0000
 +++ Gemfile
 @@ -3,17 +3,17 @@ source 'https://rubygems.org'
  ruby '>= 2.4.0', '< 2.8.0'
  gem 'bundler', '>= 1.12.0'
  
--gem 'rails', '5.2.6'
+-gem 'rails', '5.2.6.3'
 +gem 'rails', '~> 5.2.6'
  gem 'sprockets', '~> 3.7.2' if RUBY_VERSION < '2.5'
  gem 'globalid', '~> 0.4.2' if Gem.ruby_version < Gem::Version.new('2.6.0')
@@ -25,7 +25,16 @@ Relax dependency.
  gem 'nokogiri', (RUBY_VERSION < '2.5' ? '~> 1.10.0' : '~> 1.11.1')
  gem 'i18n', '~> 1.8.2'
  gem "rbpdf", "~> 1.20.0"
-@@ -79,26 +79,6 @@ else
+@@ -63,7 +63,7 @@ if File.exist?(database_file)
+       when 'mysql2'
+         gem "mysql2", "~> 0.5.0", :platforms => [:mri, :mingw, :x64_mingw]
+       when /postgresql/
+-        gem "pg", "~> 1.2.2", :platforms => [:mri, :mingw, :x64_mingw]
++        gem "pg", "~> 1.2", :platforms => [:mri, :mingw, :x64_mingw]
+       when /sqlite3/
+         gem "sqlite3", "~> 1.4.0", :platforms => [:mri, :mingw, :x64_mingw]
+       when /sqlserver/
+@@ -80,26 +80,6 @@ else
    warn("Please configure your config/database.yml first")
  end
  
