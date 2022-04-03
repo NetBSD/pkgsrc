@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:33:43 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/04/03 19:03:22 wiz Exp $
 
-BLAKE2s (appres-1.0.5.tar.bz2) = 321d0f3aabfc96f485f0f173a9fa78f69a75c5fb9e1b472b65f6d026501e96c0
-SHA512 (appres-1.0.5.tar.bz2) = 70825563cd80f0f433c48ab2fdae888072939c1b22fb22340b70b9444c97916275ed92c9e5bf9a06bb76c32a5371b89ff7c0211a9a47a227c88311078c2c4137
-Size (appres-1.0.5.tar.bz2) = 124531 bytes
+BLAKE2s (appres-1.0.6.tar.xz) = 69b1df7a722bf43a6e483efd2eb53d3e41a13f67560a7dee62a1c714ad9c79f0
+SHA512 (appres-1.0.6.tar.xz) = 6d14f6a2ad5c83a4d42d4c51ec9a9f32652dfe7624881f1f41c0b1f4946904e7e5ca81a2fd9f4f4824488ce1bd2a4047f92320626bf33b0f1afc5e6b89d3e2b9
+Size (appres-1.0.6.tar.xz) = 118972 bytes
