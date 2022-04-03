@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2022/03/01 13:51:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.41 2022/04/03 00:30:19 ryoon Exp $
 
 DISTNAME=	jdk11u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk11-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=battleblow/}
 GITHUB_PROJECT=	jdk11u
@@ -126,13 +127,15 @@ SUBST_FILES.fontpaths+=		src/java.desktop/unix/native/common/awt/fontpath.c
 SUBST_VARS.fontpaths=		PREFIX BUILDLINK_PREFIX.fontconfig
 
 .if ${OPSYS} == "NetBSD"
-# NetBSD's EVFILT_* are different from FreeBSD/OpenBSD's values.
+# NetBSD's EVFILT_* EV_* are different from FreeBSD/OpenBSD's values.
 SUBST_CLASSES+=			kqueue
 SUBST_STAGE.kqueue=		pre-configure
 SUBST_MESSAGE.kqueue=		fixing kqueue filter values
 SUBST_FILES.kqueue=		src/java.base/bsd/classes/sun/nio/ch/KQueue.java
 SUBST_SED.kqueue=		-e 's/static final int EVFILT_READ  = -1;/static final int EVFILT_READ  = 0;/'
 SUBST_SED.kqueue+=		-e 's/static final int EVFILT_WRITE = -2;/static final int EVFILT_WRITE = 1;/'
+SUBST_SED.kqueue+=		-e 's/static final int EV_ONESHOT = 0x0010;/static final int EV_ONESHOT = 0x0004;/'
+SUBST_SED.kqueue+=		-e 's/static final int EV_CLEAR   = 0x0020;/static final int EV_CLEAR   = 0x0008;/'
 .endif
 
 PLIST_VARS+=			aot internal_vm_compiler jvmci
