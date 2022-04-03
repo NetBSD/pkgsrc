@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3706 2022/04/03 08:37:23 taca Exp $
+# $NetBSD: Makefile,v 1.3707 2022/04/03 16:11:01 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -825,6 +825,7 @@ SUBDIR+=	libdbusmenu-jsonloader
 SUBDIR+=	libdbusmenu-qt
 SUBDIR+=	libdbusmenu-qt5
 SUBDIR+=	libdbusmenu-tools
+SUBDIR+=	libdeflate
 SUBDIR+=	libdevq
 SUBDIR+=	libdivsufsort
 SUBDIR+=	libdnsres
