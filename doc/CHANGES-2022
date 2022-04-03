@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1673 2022/04/03 10:10:10 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1674 2022/04/03 12:01:16 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2154,7 +2154,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/p5-Net-Dict to 2.22 [wen 2022-04-02]
 	Added editors/helix version 22.03 [nikita 2022-04-02]
 	Updated math/cln to 1.3.6 [wen 2022-04-02]
-	Updated textproc/p5-Locale-Maketext-Gettex to 1.32 [wen 2022-04-02]
+	Updated textproc/p5-Locale-Maketext-Gettext to 1.32 [wen 2022-04-02]
 	Updated emulators/mame to 0.242 [wiz 2022-04-02]
 	Updated sysutils/webmin to 1.990 [mef 2022-04-02]
 	Updated sysutils/wbm-* to 1.990 [mef 2022-04-02]
