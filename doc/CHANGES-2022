@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1675 2022/04/03 12:13:00 leot Exp $
+$NetBSD: CHANGES-2022,v 1.1676 2022/04/03 13:45:27 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2226,3 +2226,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed x11/ruby-gtksourceview2 [tsutsui 2022-04-03]
 	Removed x11/ruby-vte [tsutsui 2022-04-03]
 	Updated print/pdf2djvu to 0.9.18.2 [wiz 2022-04-03]
+	Updated devel/breezy to 3.2.2 [rhialto 2022-04-03]
