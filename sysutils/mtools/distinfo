@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.28 2022/01/01 17:25:09 rhialto Exp $
+$NetBSD: distinfo,v 1.29 2022/04/03 15:51:42 rhialto Exp $
 
-BLAKE2s (mtools-4.0.36.tar.bz2) = 721456636f1a6283c8b5eeb98b828589eff26ec1911a36cb5b416bde63cd259a
-SHA512 (mtools-4.0.36.tar.bz2) = 2425ee0e39c06ea201a5303ab09a0aa9f0c59341522e2c15abc4f079320fd3d67d28afeb2870ee508d472bba6904c542e11c02b92652c8eda1bf338bab372d07
-Size (mtools-4.0.36.tar.bz2) = 445920 bytes
+BLAKE2s (mtools-4.0.38.tar.bz2) = 9cc9ef654d43be16cba72edcef9014a1d6c222223dfa8043042beaa4e9c812d8
+SHA512 (mtools-4.0.38.tar.bz2) = 045e7dba159699c53abefd69e2065c116e2e360e7ec537df1e4d38309fb03587c600bb930363ecffef48cef1c8c118146691cf9a35c36abbb40e4546e532ce4a
+Size (mtools-4.0.38.tar.bz2) = 440491 bytes
 SHA1 (patch-aa) = 493b06455ee3169e6db916a9d535dad5a124edbc
 SHA1 (patch-ae) = 0142fa2fccfc81da0daab2a3caee2dbcb107f895
