@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/03 16:11:01 bsiegert Exp $
+bin/libdeflate-gunzip
+bin/libdeflate-gzip
+include/libdeflate.h
+lib/libdeflate.a
+lib/libdeflate.so
+lib/libdeflate.so.0
+lib/pkgconfig/libdeflate.pc
