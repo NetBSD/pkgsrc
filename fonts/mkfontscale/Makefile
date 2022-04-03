@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2020/01/18 23:31:05 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2022/04/03 19:36:41 wiz Exp $
 
-DISTNAME=		mkfontscale-1.2.1
+DISTNAME=		mkfontscale-1.2.2
 CATEGORIES=		fonts x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
