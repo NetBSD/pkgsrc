@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2018/01/01 22:29:45 rillig Exp $
-man/man1/labrea.1
-man/man5/labrea.conf.5
-sbin/labrea
-share/doc/LaBrea/INSTALL
-share/doc/LaBrea/README
-share/examples/LaBrea/labrea.conf
