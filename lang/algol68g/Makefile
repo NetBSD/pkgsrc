@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2022/03/02 01:41:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2022/04/03 13:56:50 rhialto Exp $
 
 DISTNAME=	algol68g-3.0.4
 CATEGORIES=	lang
 MASTER_SITES=	http://jmvdveer.home.xs4all.nl/
 
-MAINTAINER=	olafs@cs.ru.nl
-HOMEPAGE=	https://jmvdveer.home.xs4all.nl/algol.html
+MAINTAINER=	rhialto@NetBSD.org
+HOMEPAGE=	https://jmvdveer.home.xs4all.nl/en.algol-68-genie.html
 COMMENT=	Algol 68genie compiler
 LICENSE=	gnu-gpl-v3
 
