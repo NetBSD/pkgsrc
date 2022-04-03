@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1690 2022/04/03 18:39:51 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1691 2022/04/03 18:52:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2242,3 +2242,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/gh to 2.7.0 [bsiegert 2022-04-03]
 	Updated x11/xcalc to 1.1.1 [wiz 2022-04-03]
 	Updated x11/editres to 1.0.8 [wiz 2022-04-03]
+	Updated x11/iceauth to 1.0.9 [wiz 2022-04-03]
