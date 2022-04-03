@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:55:37 nia Exp $
-
-BLAKE2s (cloog-0.18.4.tar.gz) = e0ec8e9a874cb72aa2da4c3343f756bab25748229648818982ceffad4b6925bc
-SHA512 (cloog-0.18.4.tar.gz) = d35d67b08ffe13c1a010b65bfe4dd02b0ae013d5b489e330dc950bd3514defca8f734bd37781856dcedf0491ff6122c34eecb4b0fe32a22d7e6bdadea98c8c23
-Size (cloog-0.18.4.tar.gz) = 4796456 bytes
-SHA1 (patch-test_checker.sh) = a62a4fba0f433e6c6685f2d7a92f0cb039a1d1f0
