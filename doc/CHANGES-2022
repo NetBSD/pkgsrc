@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1678 2022/04/03 14:33:55 rhialto Exp $
+$NetBSD: CHANGES-2022,v 1.1679 2022/04/03 14:52:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2229,3 +2229,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/breezy to 3.2.2 [rhialto 2022-04-03]
 	Removed databases/skytools [wiz 2022-04-03]
 	Updated emulators/simh to 4.0.0.20220401 [rhialto 2022-04-03]
+	Updated chat/libfolks to 0.15.5 [wiz 2022-04-03]
