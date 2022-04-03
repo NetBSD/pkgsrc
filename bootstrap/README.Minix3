@@ -1,8 +1,10 @@
-$NetBSD: README.Minix3,v 1.1 2013/03/11 22:48:23 tcort Exp $
+$NetBSD: README.Minix3,v 1.2 2022/04/03 13:01:34 gdt Exp $
 
-Please read the general README file as well.
+2021Q4 is reported to work with Minix 3.4.0rc6.
 
-==========================================================================
+Use the `pkgin_sets' script to install the toolchain (clang 3.6), and
+the developer tools.  This provides a pre-bootstrapped version of
+pkgsrc that is working but out of date.
 
-Most users will not need to run the bootstrap script as all supported 
-versions of Minix3 come with pkgsrc pre-bootstrapped.
+Then, one can update normally ("bmake update" has been reported to
+work).
