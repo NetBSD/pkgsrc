@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1451 2022/04/03 07:56:29 wiz Exp $
+# $NetBSD: Makefile,v 1.1452 2022/04/03 07:59:33 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -43,7 +43,6 @@ SUBDIR+=	beanstalkd
 SUBDIR+=	bftpd
 SUBDIR+=	bind911
 SUBDIR+=	bind916
-SUBDIR+=	bing
 SUBDIR+=	bird
 SUBDIR+=	bird6
 SUBDIR+=	bmon
