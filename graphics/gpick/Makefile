@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2022/01/10 01:46:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.35 2022/04/03 13:54:31 wiz Exp $
 
 DISTNAME=	gpick-0.2.6
 PKGREVISION=	2
@@ -39,4 +39,5 @@ PYTHON_FOR_BUILD_ONLY?=	yes
 .include "../../lang/lua/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
