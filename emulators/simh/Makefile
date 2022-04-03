@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.62 2022/03/28 10:53:05 tnn Exp $
+# $NetBSD: Makefile,v 1.63 2022/04/03 14:33:42 rhialto Exp $
 
 DISTNAME=	simh-4.0.0
-PKGNAME=	simh-4.0.0.20211212
-PKGREVISION=	1
+PKGNAME=	simh-4.0.0.20220401
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=simh/}
 GITHUB_PROJECT=	simh
-GITHUB_TAG=	40d46093853ed3d7e16331bfec713f4cfdea50fd
+GITHUB_TAG=	b8015349e269b45880b7c0a199a07c12f1cf746f
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	http://simh.trailing-edge.com/
