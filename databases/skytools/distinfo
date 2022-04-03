@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:10:04 nia Exp $
-
-BLAKE2s (skytools-3.2.tar.gz) = 202386d5ed185d062ebaa569d30514a5ae83b268dbebb21a1d10c610d1637d12
-SHA512 (skytools-3.2.tar.gz) = 975ee1023607a9125c6eb5e1cd4bf5a998bf21841251eebf9e3a5e865abd4074010422376f7ecca5cbcfbb2b5b1ccbadaed1810f50bc06996fdd29c544a58d3a
-Size (skytools-3.2.tar.gz) = 693507 bytes
