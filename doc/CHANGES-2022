@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1662 2022/04/03 05:46:19 taca Exp $
+$NetBSD: CHANGES-2022,v 1.1663 2022/04/03 06:59:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2173,3 +2173,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-redmine41 to 4.1.7 [taca 2022-04-03]
 	Updated devel/ruby-redmine42 to 4.2.5 [taca 2022-04-03]
 	Updated archivers/ruby-xz to 1.0.3 [taca 2022-04-03]
+	Updated databases/ruby-sequel to 5.55.0 [taca 2022-04-03]
