@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.101 2021/12/08 16:06:14 adam Exp $
+# $NetBSD: Makefile,v 1.102 2022/04/03 10:09:58 wiz Exp $
 
-DISTNAME=	pdf2djvu-0.9.17.1
-PKGREVISION=	9
+DISTNAME=	pdf2djvu-0.9.18.2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jwilk/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -17,7 +16,7 @@ DEPENDS+=	djvulibre-tools-[0-9]*:../../graphics/djvulibre-tools
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c++17
 USE_TOOLS+=		pkg-config gmake intltool msgfmt xgettext
 
 CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
