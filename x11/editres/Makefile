@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2020/01/18 23:35:47 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2022/04/03 18:39:42 wiz Exp $
 
-DISTNAME=		editres-1.0.7
+DISTNAME=		editres-1.0.8
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
