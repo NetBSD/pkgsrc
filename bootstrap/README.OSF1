@@ -1,6 +1,14 @@
-$NetBSD: README.OSF1,v 1.5 2022/03/31 21:36:24 gdt Exp $
+$NetBSD: README.OSF1,v 1.6 2022/04/03 22:28:13 tnn Exp $
 
-As of 2022-03, bootstrapping on OSF1 is believed to be broken.
+As of 2022-03, bootstrapping on OSF/1 is broken.
+This is due to bitrot in libarchive. Check this PR for updates:
+https://github.com/libarchive/libarchive/pull/925
+
+Prerequisites
+-------------
+Only Tru64 version 5.1B with the last patch kit is known to complete
+pkgsrc bootstrap. in other words 5.1B-6 also known as
+T64V51BB29AS0008-20100821.
 
 Compiler
 --------
@@ -8,21 +16,25 @@ Prebuilt GCC toolchains suitable for use with pkgsrc can be downloaded from
 	ftp://ftp.NetBSD.org/pub/pkgsrc/misc/tnn/ .
 
 Installation instructions can be found in the file "README.gcc".
+In particular, do not forget to run mkheaders.
 
 Bootstrapping pkgsrc
 --------------------
-To use the native compiler:
+To use the native compiler (CXX710V06.tar with CXXOSF license):
 
 	# env CPP=/usr/bin/cpp CC=/usr/bin/cc ./bootstrap --compiler ccc
 
 To use the GCC compiler kit from above:
 
-	# env CC=/usr/local/gcc4/bin/gcc CFLAGS=-O2 ./bootstrap --compiler gcc
+	# PATH=/usr/local/gcc4/bin:$PATH
+	# export PATH
+	# ./bootstrap --compiler gcc
 
 mk.conf setup
 -------------
 To use gcc, you must set the following variables in mk.conf:
 
 	PKGSRC_COMPILER=gcc
-	CC=/full/path/to/gcc
-	CXX=/full/path/to/g++
+	GCCBASE=/usr/local/gcc4
+
+It is necessary to keep /usr/local/gcc4/bin in PATH for GNU binutils.
