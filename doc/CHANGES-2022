@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1695 2022/04/03 19:33:27 rhialto Exp $
+$NetBSD: CHANGES-2022,v 1.1696 2022/04/03 19:36:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2247,3 +2247,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/listres to 1.0.5 [wiz 2022-04-03]
 	Updated x11/mkcomposecache to 1.2.2 [wiz 2022-04-03]
 	Updated news/pan to 0.150 [rhialto 2022-04-03]
+	Updated fonts/mkfontscale to 1.2.2 [wiz 2022-04-03]
