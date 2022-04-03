@@ -1,4 +1,4 @@
-# $NetBSD: egg.mk,v 1.37 2022/04/03 11:54:48 riastradh Exp $
+# $NetBSD: egg.mk,v 1.38 2022/04/03 13:59:33 wiz Exp $
 #
 # Common logic to handle Python Eggs
 #
@@ -54,8 +54,11 @@ SETUPTOOLS_PATH=../../devel/py-setuptools44
 SETUPTOOLS_PATH=../../devel/py-setuptools
 .  endif
 .  if "${USE_PKG_RESOURCES}" == "yes"
+# when packages use pkg_resources, setuptools is needed at runtime
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:${SETUPTOOLS_PATH}
 .  endif
+# in all cases (in particular, for cross-compilation), setuptools
+# also needs to be a tool dependency
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:${SETUPTOOLS_PATH}
 .endif
 
