@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2013,v 1.4629 2021/04/27 10:07:49 wiz Exp $
+$NetBSD: CHANGES-2013,v 1.4630 2022/04/03 09:12:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2013:
 
@@ -3884,8 +3884,9 @@ Changes to the packages collection and infrastructure in 2013:
 	Updated devel/editline to 3.1.20130712nb1 [ryoon 2013-07-15]
 	Updated www/apache22 to 2.2.25 [tron 2013-07-15]
 	Updated devel/mr to 1.20130710 [schmonz 2013-07-15]
-	Added net/libexosip version 4.0.0 [rodent 2013-07-16]
 	Updated parallel/hwloc to 1.7.1 [manu 2013-07-15]
+	Added net/libexosip version 4.0.0 [rodent 2013-07-16]
+	Added www/cppcms version 1.0.4 [joerg 2013-07-16]
 	Updated x11/xorg-cf-files to 1.0.4nb6 [dholland 2013-07-17]
 	Updated news/pan to 0.139nb10 [wiz 2013-07-17]
 	Updated net/mikutter to 0.2.2.1297 [obache 2013-07-17]
