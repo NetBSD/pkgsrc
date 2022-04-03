@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2020/01/18 23:35:49 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2022/04/03 18:52:46 wiz Exp $
 
-DISTNAME=		iceauth-1.0.8
-PKGREVISION=		1
+DISTNAME=		iceauth-1.0.9
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
