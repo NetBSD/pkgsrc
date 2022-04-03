@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.16 2021/12/29 13:34:39 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.17 2022/04/03 19:33:11 rhialto Exp $
 bin/pan
 man/man1/pan.1
 share/applications/org.gnome.pan.desktop
-share/metainfo/org.gnome.pan.metainfo.xml
 share/icons/hicolor/16x16/apps/org.gnome.pan.png
 share/icons/hicolor/24x24/apps/org.gnome.pan.png
 share/icons/hicolor/256x256/apps/org.gnome.pan.png
@@ -57,3 +56,4 @@ share/locale/uk/LC_MESSAGES/pan.mo
 share/locale/vi/LC_MESSAGES/pan.mo
 share/locale/zh_CN/LC_MESSAGES/pan.mo
 share/locale/zh_TW/LC_MESSAGES/pan.mo
+share/metainfo/org.gnome.pan.metainfo.xml
