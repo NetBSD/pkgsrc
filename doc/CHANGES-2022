@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1656 2022/04/02 19:04:07 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1657 2022/04/03 00:23:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2167,3 +2167,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/dbip-country-lite to 2022.04 [fcambus 2022-04-02]
 	Updated www/stagit to 1.1 [fcambus 2022-04-02]
 	Updated wm/twm to 1.0.12 [wiz 2022-04-02]
+	Updated www/firefox to 98.0.2 [ryoon 2022-04-03]
