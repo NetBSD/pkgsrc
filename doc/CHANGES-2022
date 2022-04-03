@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1666 2022/04/03 07:54:53 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1667 2022/04/03 07:56:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2177,3 +2177,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/p5-Net-DNS-SEC to 1.19 [ast 2022-04-03]
 	Updated net/p5-Net-DNS to 1.33 [ast 2022-04-03]
 	Removed math/cloog [wiz 2022-04-03]
+	Removed net/LaBrea [wiz 2022-04-03]
