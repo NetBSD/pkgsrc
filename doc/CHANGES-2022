@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1665 2022/04/03 07:50:04 ast Exp $
+$NetBSD: CHANGES-2022,v 1.1666 2022/04/03 07:54:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2176,3 +2176,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/ruby-sequel to 5.55.0 [taca 2022-04-03]
 	Updated security/p5-Net-DNS-SEC to 1.19 [ast 2022-04-03]
 	Updated net/p5-Net-DNS to 1.33 [ast 2022-04-03]
+	Removed math/cloog [wiz 2022-04-03]
