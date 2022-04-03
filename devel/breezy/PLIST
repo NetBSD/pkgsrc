@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/07/12 18:59:06 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/04/03 13:45:17 rhialto Exp $
 bin/brz
 bin/bzr-receive-pack
 bin/bzr-upload-pack
@@ -18,7 +18,6 @@ ${PYSITELIB}/breezy/_annotator_py.py
 ${PYSITELIB}/breezy/_annotator_py.pyc
 ${PYSITELIB}/breezy/_annotator_py.pyo
 ${PYSITELIB}/breezy/_annotator_pyx.so
-${PYSITELIB}/breezy/_bencode_pyx.so
 ${PYSITELIB}/breezy/_chunks_to_lines_py.py
 ${PYSITELIB}/breezy/_chunks_to_lines_py.pyc
 ${PYSITELIB}/breezy/_chunks_to_lines_py.pyo
@@ -64,9 +63,6 @@ ${PYSITELIB}/breezy/atomicfile.pyo
 ${PYSITELIB}/breezy/bedding.py
 ${PYSITELIB}/breezy/bedding.pyc
 ${PYSITELIB}/breezy/bedding.pyo
-${PYSITELIB}/breezy/bencode.py
-${PYSITELIB}/breezy/bencode.pyc
-${PYSITELIB}/breezy/bencode.pyo
 ${PYSITELIB}/breezy/bisect.py
 ${PYSITELIB}/breezy/bisect.pyc
 ${PYSITELIB}/breezy/bisect.pyo
@@ -2356,9 +2352,6 @@ ${PYSITELIB}/breezy/tests/stub_sftp.pyo
 ${PYSITELIB}/breezy/tests/test__annotator.py
 ${PYSITELIB}/breezy/tests/test__annotator.pyc
 ${PYSITELIB}/breezy/tests/test__annotator.pyo
-${PYSITELIB}/breezy/tests/test__bencode.py
-${PYSITELIB}/breezy/tests/test__bencode.pyc
-${PYSITELIB}/breezy/tests/test__bencode.pyo
 ${PYSITELIB}/breezy/tests/test__chunks_to_lines.py
 ${PYSITELIB}/breezy/tests/test__chunks_to_lines.pyc
 ${PYSITELIB}/breezy/tests/test__chunks_to_lines.pyo
@@ -3008,9 +3001,6 @@ ${PYSITELIB}/breezy/utextwrap.pyo
 ${PYSITELIB}/breezy/util/__init__.py
 ${PYSITELIB}/breezy/util/__init__.pyc
 ${PYSITELIB}/breezy/util/__init__.pyo
-${PYSITELIB}/breezy/util/_bencode_py.py
-${PYSITELIB}/breezy/util/_bencode_py.pyc
-${PYSITELIB}/breezy/util/_bencode_py.pyo
 ${PYSITELIB}/breezy/util/simplemapi.py
 ${PYSITELIB}/breezy/util/simplemapi.pyc
 ${PYSITELIB}/breezy/util/simplemapi.pyo
