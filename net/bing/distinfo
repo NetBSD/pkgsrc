@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:05:25 nia Exp $
-
-BLAKE2s (bing_src-1.1.3.tar.gz) = 085b437d4871c3f00426f9ccb680b53bae2e9a803072ba365d2855e15baa4032
-SHA512 (bing_src-1.1.3.tar.gz) = 7faa02c37cb04bdfab27a5e1783d119c36e3a050e66d11420396a8b45c998c9298bc7e5e294b0186d831e87359b463cc186166f34fa45e883b0b70d37c61e00e
-Size (bing_src-1.1.3.tar.gz) = 38821 bytes
-SHA1 (patch-aa) = 274c6b2f9d4151efaf9a7da0bfd87262e2732ea7
