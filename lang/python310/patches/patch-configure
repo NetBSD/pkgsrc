@@ -1,13 +1,23 @@
-$NetBSD: patch-configure,v 1.3 2022/01/15 16:23:47 adam Exp $
+$NetBSD: patch-configure,v 1.4 2022/04/03 10:54:52 riastradh Exp $
 
 Use gnu99 instead of c99 to avoid "alloca() undefined" problems.
 Fix linking on Darwin; don't use -stack_size.
 Changes for consistency across pkgsrc platforms.
 Simplify _sysconfigdata to include only platform name.
 detect netcan/can.h on NetBSD
+Disable barrier to cross-compilation.
 
---- configure.orig	2022-01-13 18:52:14.000000000 +0000
+--- configure.orig	2022-03-23 20:12:04.000000000 +0000
 +++ configure
+@@ -3380,7 +3380,7 @@ fi
+ $as_echo "\"$MACHDEP\"" >&6; }
+ 
+ 
+-if test "$cross_compiling" = yes; then
++if false && test "$cross_compiling" = yes; then
+ 	case "$host" in
+ 	*-*-linux*)
+ 		case "$host_cpu" in
 @@ -7051,7 +7051,7 @@ UNIVERSAL_ARCH_FLAGS=
  # tweak BASECFLAGS based on compiler and platform
  case $GCC in
@@ -35,7 +45,7 @@ detect netcan/can.h on NetBSD
  
  
  # Sizes and alignments of various common basic types
-@@ -14762,10 +14773,10 @@ _ACEOF
+@@ -14729,10 +14740,10 @@ _ACEOF
  if ac_fn_c_try_compile "$LINENO"; then :
  
  
@@ -48,7 +58,7 @@ detect netcan/can.h on NetBSD
    if test "$ax_cv_c_float_words_bigendian" = unknown; then
      ax_cv_c_float_words_bigendian=no
    else
-@@ -15666,7 +15677,7 @@ _ACEOF
+@@ -15633,7 +15644,7 @@ _ACEOF
  fi
  
  
@@ -57,7 +67,7 @@ detect netcan/can.h on NetBSD
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking LDVERSION" >&5
  $as_echo_n "checking LDVERSION... " >&6; }
-@@ -15719,11 +15730,7 @@ fi
+@@ -15686,11 +15697,7 @@ fi
  
  
  
