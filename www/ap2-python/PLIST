@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2014/02/17 17:20:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/04/03 08:58:46 wiz Exp $
 bin/mod_python
 lib/httpd/mod_python.so
+${PYSITELIB}/mod_python-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info
 ${PYSITELIB}/mod_python/Cookie.py
 ${PYSITELIB}/mod_python/Cookie.pyc
 ${PYSITELIB}/mod_python/Cookie.pyo
