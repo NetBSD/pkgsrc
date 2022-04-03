@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 23:35:54 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.6 2022/04/03 19:22:49 wiz Exp $
 
-DISTNAME=	mkcomposecache-1.2.1
+DISTNAME=	mkcomposecache-1.2.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
