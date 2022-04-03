@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.653 2022/03/31 09:21:29 nia Exp $
+# $NetBSD: Makefile,v 1.654 2022/04/03 14:08:20 wiz Exp $
 
 COMMENT=	Databases
 
@@ -500,7 +500,6 @@ SUBDIR+=	ruby-tokyotyrant
 SUBDIR+=	ruby-vapor
 SUBDIR+=	sdbm
 SUBDIR+=	shared-mime-info
-SUBDIR+=	skytools
 SUBDIR+=	slony1
 SUBDIR+=	soci
 SUBDIR+=	sql-workbench
