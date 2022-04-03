@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:14:20 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/04/03 13:45:17 rhialto Exp $
 
-BLAKE2s (breezy-3.2.1.tar.gz) = 646cf3a6f152cbaea95b714f83d40fd5fd0ef74959fc0bcb7f364cec3a2dd8b3
-SHA512 (breezy-3.2.1.tar.gz) = bfbbff1301f7cc13a2d59b1add80c196f3b45b69994194dcae96c0be151f807c965854047c86e43f54dd8c7aa24d56b25afdd00f0063e83b362a8c46d5858226
-Size (breezy-3.2.1.tar.gz) = 9445046 bytes
+BLAKE2s (breezy-3.2.2.tar.gz) = 3e1428f0163c1d48854e25ee951736dcb7ad9111922d87c050fabf6df38078fd
+SHA512 (breezy-3.2.2.tar.gz) = be77beee7b14c5ae0f3fb17c5c45802399b0c8a0b3ccff0c56545a2d7ff70bb2800f6d1bfc2c8047716f439fa3fb6beb9656b9af715021d8d8b222b9498323d7
+Size (breezy-3.2.2.tar.gz) = 9396541 bytes
 SHA1 (patch-breezy_tests_test__server.py) = 768c43eb412fc688c49ac5037c4dc18b046b1be0
