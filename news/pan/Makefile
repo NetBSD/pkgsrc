@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.119 2021/12/29 13:34:39 rhialto Exp $
+# $NetBSD: Makefile,v 1.120 2022/04/03 19:33:11 rhialto Exp $
 
-DISTNAME=		pan-0.149
+PKGNAME=		pan-0.150
 CATEGORIES=		news
-MASTER_SITES=		http://pan.rebelbase.com/download/releases/${DISTNAME:C/pan-//}/source/
+TAG=			${PKGNAME_NOREV:S/pan-/v/} # v0.150
+MASTER_SITES=		https://gitlab.gnome.org/GNOME/pan/-/archive/${TAG}/
 EXTRACT_SUFX=		.tar.bz2
+DISTNAME=		pan-${TAG}
 
 MAINTAINER=		rhialto@NetBSD.org
 HOMEPAGE=		http://pan.rebelbase.com/
@@ -11,6 +13,7 @@ COMMENT=		Newsreader for GTK3
 LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		gmake msgfmt perl pkg-config itstool
+USE_TOOLS+=		autoconf automake
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
@@ -24,6 +27,9 @@ LIBS+=			-lcompat
 .endif
 
 LIBS.SunOS+=	-lsocket -liconv
+
+pre-configure:
+	cd ${WRKSRC} && ./autogen.sh
 
 # "Build" these files out of thin air, since base msgfmt doesn't know
 # about --xml --desktop.
