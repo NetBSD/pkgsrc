@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.117 2021/10/26 11:01:20 nia Exp $
+$NetBSD: distinfo,v 1.118 2022/04/03 14:32:31 wiz Exp $
 
 BLAKE2s (xine-lib-1.2.11.tar.xz) = 48720e7a7bc299a2bca75dd2307f48a6f6089c1b356fc21a6dc892d5050057d2
 SHA512 (xine-lib-1.2.11.tar.xz) = 8208e4699819465ec9e820530f27b6129ee954ea17ab474eb9eda12137af1417ed5260830c1006ce32266a3913d22ba9957689bb5552464908038a1b8a8efbcf
@@ -26,5 +26,6 @@ SHA1 (patch-src-post-planar-pp.c) = f5bea421785132c5f1422ae9f0d468974fb0ae5d
 SHA1 (patch-src-post-planar-unsharp.c) = 9f29c624f96a91760df960343096247d8c09c58d
 SHA1 (patch-src_input_input__http.c) = 80de20be0f99efa5cb67230c900acbf6e4ee9e7c
 SHA1 (patch-src_input_input__pvr.c) = b6429e9a7c9309cbe9eb1bf5f50ab6b6c06d5b0c
+SHA1 (patch-src_video__dec_dav1d.c) = b2228106e3eecb6d1695038fead0e5d9f5b4746a
 SHA1 (patch-src_video__out_Makefile.am) = 623e41b3f142426c5128c6c61c6ebefee170734e
 SHA1 (patch-src_video__out_macosx_Makefile.am) = 8350a75e3a4c0b2f684e07dcc18259fcc5b28115
