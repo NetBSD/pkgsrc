@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2021/09/12 00:05:50 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2022/04/03 22:16:01 wiz Exp $
 
-DISTNAME=	xedit-1.2.2
-CATEGORIES=	editors x11
+DISTNAME=	xedit-1.2.3
+CATEGORIES=	x11 editors
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
