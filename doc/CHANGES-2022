@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1672 2022/04/03 09:01:08 tsutsui Exp $
+$NetBSD: CHANGES-2022,v 1.1673 2022/04/03 10:10:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2186,3 +2186,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed www/ruby-webkit-gtk2 [tsutsui 2022-04-03]
 	Removed x11/ruby-gtksourceview2 [tsutsui 2022-04-03]
 	Removed x11/ruby-vte [tsutsui 2022-04-03]
+	Updated print/pdf2djvu to 0.9.18.2 [wiz 2022-04-03]
