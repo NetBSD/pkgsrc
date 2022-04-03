@@ -1,4 +1,4 @@
-# $NetBSD: egg.mk,v 1.36 2022/02/08 17:19:50 gutteridge Exp $
+# $NetBSD: egg.mk,v 1.37 2022/04/03 11:54:48 riastradh Exp $
 #
 # Common logic to handle Python Eggs
 #
@@ -55,9 +55,8 @@ SETUPTOOLS_PATH=../../devel/py-setuptools
 .  endif
 .  if "${USE_PKG_RESOURCES}" == "yes"
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:${SETUPTOOLS_PATH}
-.  else
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:${SETUPTOOLS_PATH}
 .  endif
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:${SETUPTOOLS_PATH}
 .endif
 
 INSTALLATION_DIRS+=	${PYSITELIB}
