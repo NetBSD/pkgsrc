@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.96 2022/01/23 16:17:13 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.97 2022/04/03 15:00:54 rhialto Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -1011,7 +1011,6 @@ lib/calibre/calibre/gui2/store/stores/virtualo_plugin.py
 lib/calibre/calibre/gui2/store/stores/weightless_books_plugin.py
 lib/calibre/calibre/gui2/store/stores/woblink_plugin.py
 lib/calibre/calibre/gui2/store/stores/wolnelektury_plugin.py
-lib/calibre/calibre/gui2/store/stores/xinxii_plugin.py
 lib/calibre/calibre/gui2/store/web_store.py
 lib/calibre/calibre/gui2/store/web_store_dialog.py
 lib/calibre/calibre/gui2/tag_browser/__init__.py
@@ -1184,6 +1183,8 @@ lib/calibre/calibre/plugins/unicode_names.so
 lib/calibre/calibre/prints.py
 lib/calibre/calibre/ptempfile.py
 lib/calibre/calibre/rpdb.py
+lib/calibre/calibre/scraper/__init__.py
+lib/calibre/calibre/scraper/simple.py
 lib/calibre/calibre/spell/__init__.py
 lib/calibre/calibre/spell/break_iterator.py
 lib/calibre/calibre/spell/dictionary.py
@@ -1332,6 +1333,7 @@ lib/calibre/calibre/utils/search_query_parser_test.py
 lib/calibre/calibre/utils/serialize.py
 lib/calibre/calibre/utils/seven_zip.py
 lib/calibre/calibre/utils/shared_file.py
+lib/calibre/calibre/utils/shm.py
 lib/calibre/calibre/utils/short_uuid.py
 lib/calibre/calibre/utils/smartypants.py
 lib/calibre/calibre/utils/smtp.py
@@ -2319,6 +2321,7 @@ share/calibre/recipes/frederikssundlokalavisen_dk.recipe
 share/calibre/recipes/freenature.recipe
 share/calibre/recipes/freeway.recipe
 share/calibre/recipes/freisinger_tagblatt.recipe
+share/calibre/recipes/frontline.recipe
 share/calibre/recipes/fstream.recipe
 share/calibre/recipes/fudzilla.recipe
 share/calibre/recipes/furesoelokalavisen_dk.recipe
@@ -2415,6 +2418,7 @@ share/calibre/recipes/hindu.recipe
 share/calibre/recipes/hindu_business_line.recipe
 share/calibre/recipes/hindu_human_rights.recipe
 share/calibre/recipes/hindu_post.recipe
+share/calibre/recipes/hindustan_times.recipe
 share/calibre/recipes/historia_pl.recipe
 share/calibre/recipes/history_today.recipe
 share/calibre/recipes/hln_be.recipe
@@ -2471,6 +2475,7 @@ share/calibre/recipes/independent.recipe
 share/calibre/recipes/independent_australia.recipe
 share/calibre/recipes/index_hu.recipe
 share/calibre/recipes/india_facts.recipe
+share/calibre/recipes/india_legal_magazine.recipe
 share/calibre/recipes/india_speaks_reddit.recipe
 share/calibre/recipes/india_today.recipe
 share/calibre/recipes/indian_express.recipe
@@ -2856,6 +2861,7 @@ share/calibre/recipes/omgubuntu.recipe
 share/calibre/recipes/onda_rock.recipe
 share/calibre/recipes/onemagazine.recipe
 share/calibre/recipes/onionavclub.recipe
+share/calibre/recipes/open_magazine.recipe
 share/calibre/recipes/opindia.recipe
 share/calibre/recipes/opinion_bo.recipe
 share/calibre/recipes/optyczne_pl.recipe
@@ -2978,6 +2984,7 @@ share/calibre/recipes/readitlater.recipe
 share/calibre/recipes/real_clear.recipe
 share/calibre/recipes/real_world_economics_review.recipe
 share/calibre/recipes/realitatea.recipe
+share/calibre/recipes/reason_magazine.recipe
 share/calibre/recipes/rebelion.recipe
 share/calibre/recipes/red_aragon.recipe
 share/calibre/recipes/red_voltaire.recipe
@@ -3009,6 +3016,7 @@ share/calibre/recipes/rollingstone.recipe
 share/calibre/recipes/romanialibera.recipe
 share/calibre/recipes/root.recipe
 share/calibre/recipes/roskildelokalavisen_dk.recipe
+share/calibre/recipes/rt.recipe
 share/calibre/recipes/rte.recipe
 share/calibre/recipes/rtnews.recipe
 share/calibre/recipes/rts.recipe
@@ -3057,6 +3065,7 @@ share/calibre/recipes/seanhannity.recipe
 share/calibre/recipes/seattle_times.recipe
 share/calibre/recipes/security_watch.recipe
 share/calibre/recipes/sekurak_pl.recipe
+share/calibre/recipes/seminar_magazine.recipe
 share/calibre/recipes/serverside.recipe
 share/calibre/recipes/sfbg.recipe
 share/calibre/recipes/sfin.recipe
@@ -3128,6 +3137,7 @@ share/calibre/recipes/sunday_times_magazine.recipe
 share/calibre/recipes/superbebe.recipe
 share/calibre/recipes/superesportes.recipe
 share/calibre/recipes/svt_nyheter.recipe
+share/calibre/recipes/swarajya.recipe
 share/calibre/recipes/swiat_obrazu.recipe
 share/calibre/recipes/swiatkindle.recipe
 share/calibre/recipes/syddjurslokalavisen_dk.recipe
@@ -3369,6 +3379,7 @@ share/calibre/recipes/ziuaveche.recipe
 share/calibre/recipes/znadplanszy_pl.recipe
 share/calibre/recipes/zougla.recipe
 share/calibre/recipes/zycie_warszawy.recipe
+share/calibre/scraper.js
 share/calibre/scripts.calibre_msgpack
 share/calibre/template-functions.json
 share/calibre/templates/book_details.css
