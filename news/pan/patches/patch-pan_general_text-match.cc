@@ -1,5 +1,7 @@
-$NetBSD: patch-pan_general_text-match.cc,v 1.3 2021/09/19 18:02:37 rhialto Exp $
+$NetBSD: patch-pan_general_text-match.cc,v 1.4 2022/04/03 19:33:11 rhialto Exp $
+
 Avoid clash with host defined ERR (on SunOS)
+
 --- pan/general/text-match.cc.orig	2012-06-29 22:24:54.000000000 +0000
 +++ pan/general/text-match.cc
 @@ -209,7 +209,7 @@ TextMatch :: my_regexec (const StringVie
