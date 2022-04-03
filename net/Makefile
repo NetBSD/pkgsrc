@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1450 2022/03/29 20:28:51 wiz Exp $
+# $NetBSD: Makefile,v 1.1451 2022/04/03 07:56:29 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -9,7 +9,6 @@ SUBDIR+=	DarwinStreamingServer
 SUBDIR+=	GeoIP
 SUBDIR+=	Geomyidae
 SUBDIR+=	IglooFTP
-SUBDIR+=	LaBrea
 SUBDIR+=	ORBit2
 SUBDIR+=	R-pbdZMQ
 SUBDIR+=	R-pingr
