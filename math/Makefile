@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.537 2022/02/24 00:58:00 pho Exp $
+# $NetBSD: Makefile,v 1.538 2022/04/03 07:54:53 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -152,7 +152,6 @@ SUBDIR+=	cgal
 SUBDIR+=	classias
 SUBDIR+=	clisp-pari
 SUBDIR+=	cln
-SUBDIR+=	cloog
 SUBDIR+=	coinmp
 SUBDIR+=	congen
 SUBDIR+=	crfsuite
