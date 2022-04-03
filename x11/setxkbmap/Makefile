@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/04/03 21:06:26 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/04/03 23:38:30 tnn Exp $
 
 DISTNAME=	setxkbmap-1.3.3
 CATEGORIES=	x11
@@ -16,4 +16,5 @@ CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
