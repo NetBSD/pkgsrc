@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1706 2022/04/04 09:49:31 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1707 2022/04/04 09:50:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2258,3 +2258,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xlsfonts to 1.0.7 [wiz 2022-04-04]
 	Updated x11/xsm to 1.0.5 [wiz 2022-04-04]
 	Updated misc/xorg-sgml-doctools to 1.12 [wiz 2022-04-04]
+	Updated misc/xorg-docs to 1.7.2 [wiz 2022-04-04]
