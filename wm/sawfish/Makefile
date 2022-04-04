@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2022/04/04 01:18:43 gutteridge Exp $
+# $NetBSD: Makefile,v 1.102 2022/04/04 01:26:39 gutteridge Exp $
 
 DISTNAME=	sawfish_1.13.0
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sawfish.tuxfamily.org/
 COMMENT=	Extensible window manager that is fully configurable in Lisp
-LICENSE=	gnu-gpl-v2 AND artistic-2.0 # for sound files
+LICENSE=	gnu-gpl-v2 AND artistic-2.0 # the latter for sound files
 
 GNU_CONFIGURE=		yes
 INFO_FILES=		YES
