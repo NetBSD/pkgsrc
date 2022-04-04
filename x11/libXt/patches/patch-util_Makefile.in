@@ -1,0 +1,24 @@
+$NetBSD: patch-util_Makefile.in,v 1.1 2022/04/04 12:41:24 riastradh Exp $
+
+The rules to build the makestrs tool go through libtool, which goes
+through the wrong wrappers as if for cross-compiling, which is wrong
+for a tool that is run during the build.  In practice, this manifests
+as a PIE linking failure: the .o file was built without -fPIE, but the
+wrapper causes linker to be invoked with -pie.  Just use CC_FOR_BUILD
+directly to avoid this.
+
+--- util/Makefile.in.orig	2021-01-24 14:47:52.000000000 +0000
++++ util/Makefile.in
+@@ -394,7 +394,11 @@ clean-noinstPROGRAMS:
+ 
+ makestrs$(EXEEXT): $(makestrs_OBJECTS) $(makestrs_DEPENDENCIES) $(EXTRA_makestrs_DEPENDENCIES) 
+ 	@rm -f makestrs$(EXEEXT)
+-	$(AM_V_CCLD)$(LINK) $(makestrs_OBJECTS) $(makestrs_LDADD) $(LIBS)
++	$(AM_V_CCLD)$(CC_FOR_BUILD) $(CFLAGS_FOR_BUILD) $(LDFLAGS_FOR_BUILD) -o $@ $(makestrs_OBJECTS) $(LIBS_FOR_BUILD)
++
++makestrs.$(OBJEXT): makestrs.c
++	$(AM_V_CC)$(CC_FOR_BUILD) $(CFLAGS_FOR_BUILD) $(CPPFLAGS_FOR_BUILD) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
++	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+ 
+ mostlyclean-compile:
+ 	-rm -f *.$(OBJEXT)
