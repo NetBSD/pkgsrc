@@ -1,11 +1,11 @@
-$NetBSD: README.Solaris,v 1.17 2022/04/04 00:26:31 gdt Exp $
+$NetBSD: README.Solaris,v 1.18 2022/04/04 01:22:09 gutteridge Exp $
 
 This README describes pkgsrc on a variety of Solaris-derived operating
 systems.  It corresponds to pkgsrc/platform/SunOS.mk. The relevant
 operating systems are:
   - Solaris (from Sun/Oracle, also Sun Solaris, Oracle Solaris)
   - OpenSolaris (from Sun)
-  - illumos (open-source fork, OpenIndiana, SmartOS, and others)
+  - illumos (open-source fork, OpenIndiana, SmartOS, OmniOS, and others)
 
 (pkgsrc is not currently known to work on SunOS 4.)
 
