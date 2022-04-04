@@ -1,4 +1,4 @@
-/* $NetBSD: common.c,v 1.10 2018/03/25 20:45:25 joerg Exp $ */
+/* $NetBSD: common.c,v 1.11 2022/04/04 11:22:51 riastradh Exp $ */
 
 /*-
  * Copyright (c) 2009, 2017 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -48,6 +48,7 @@ static char *real_path;
 char *exec_path;
 char *exec_name;
 char *wrksrc;
+char *sysroot;
 int debug;
 enum operation_mode current_operation_mode = mode_unknown;
 
@@ -292,6 +293,11 @@ parse_config(const char *wrapper)
 		if (strncmp(line, "wrksrc=", 7) == 0) {
 			free(wrksrc);
 			wrksrc = xstrdup(line + 7);
+			continue;
+		}
+		if (strncmp(line, "sysroot=", 8) == 0) {
+			free(sysroot);
+			sysroot = xstrdup(line + 8);
 			continue;
 		}
 		if (strncmp(line, "unwrap=", 7) == 0) {
