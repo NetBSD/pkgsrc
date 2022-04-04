@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1707 2022/04/04 09:50:46 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1708 2022/04/04 09:59:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2259,3 +2259,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xsm to 1.0.5 [wiz 2022-04-04]
 	Updated misc/xorg-sgml-doctools to 1.12 [wiz 2022-04-04]
 	Updated misc/xorg-docs to 1.7.2 [wiz 2022-04-04]
+	Updated devel/py-frozendict to 2.3.1 [adam 2022-04-04]
+	Updated devel/py-semantic_version to 2.9.0 [adam 2022-04-04]
