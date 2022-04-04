@@ -1,4 +1,4 @@
-# $NetBSD: tools.NetBSD.mk,v 1.69 2022/04/03 10:33:44 riastradh Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.70 2022/04/04 11:23:07 riastradh Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
@@ -58,7 +58,7 @@ TOOLS_PLATFORM.head?=		/usr/bin/head
 TOOLS_PLATFORM.hostname?=	/bin/hostname
 TOOLS_PLATFORM.id?=		/usr/bin/id
 TOOLS_PLATFORM.ident?=		/usr/bin/ident
-.if empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
 TOOLS_PLATFORM.install?=	/usr/bin/install
 .else
 TOOLS_PLATFORM.install?=	${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-install
@@ -101,7 +101,7 @@ TOOLS_PLATFORM.paxctl?=		/usr/sbin/paxctl
 .endif
 TOOLS_PLATFORM.printf?=		/usr/bin/printf
 TOOLS_PLATFORM.pwd?=		/bin/pwd
-.if empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
 TOOLS_PLATFORM.readelf?=	/usr/bin/readelf
 .else
 TOOLS_PLATFORM.readelf?=	${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-readelf
@@ -119,7 +119,7 @@ TOOLS_PLATFORM.shlock?=		/usr/bin/shlock
 TOOLS_PLATFORM.sleep?=		/bin/sleep
 TOOLS_PLATFORM.soelim?=		/usr/bin/soelim
 TOOLS_PLATFORM.sort?=		/usr/bin/sort
-.if empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
 TOOLS_PLATFORM.strip?=		/usr/bin/strip
 .else
 TOOLS_PLATFORM.strip?=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-strip
@@ -155,7 +155,7 @@ TOOLS_PLATFORM.xzcat?=		/usr/bin/xzcat
 .endif
 TOOLS_PLATFORM.yacc?=		/usr/bin/yacc
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if !empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
 .  for _t_ in ar as ld nm objcopy objdump ranlib readelf strip
 TOOLS_PATH.${MACHINE_GNU_PLATFORM}-${_t_}?=	\
 	${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-${_t_}

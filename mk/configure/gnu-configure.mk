@@ -1,4 +1,4 @@
-# $NetBSD: gnu-configure.mk,v 1.28 2020/05/23 12:11:33 rillig Exp $
+# $NetBSD: gnu-configure.mk,v 1.29 2022/04/04 11:23:06 riastradh Exp $
 #
 # Package-settable variables:
 #
@@ -80,7 +80,7 @@ CONFIGURE_ARGS+=	--libdir=${GNU_CONFIGURE_LIBDIR}
 
 USE_GNU_CONFIGURE_HOST?=	yes
 .if !empty(USE_GNU_CONFIGURE_HOST:M[yY][eE][sS])
-.  if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.  if !empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--build=${NATIVE_MACHINE_GNU_PLATFORM:Q}
 .  else
 CONFIGURE_ARGS+=	--build=${MACHINE_GNU_PLATFORM:Q}
