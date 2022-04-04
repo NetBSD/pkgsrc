@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.417 2022/04/04 11:23:06 riastradh Exp $
+# $NetBSD: bsd.prefs.mk,v 1.418 2022/04/04 11:23:18 riastradh Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -717,8 +717,12 @@ MAKEFLAGS+=		_PKGSRCDIR=${_PKGSRCDIR:Q}
 .endif
 PKGSRCDIR=		${_PKGSRCDIR}
 
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+_CROSSDIR_SUFFIX=	.${MACHINE_ARCH}
+.endif
+
 DISTDIR?=		${PKGSRCDIR}/distfiles
-PACKAGES?=		${PKGSRCDIR}/packages
+PACKAGES?=		${PKGSRCDIR}/packages${_CROSSDIR_SUFFIX}
 TEMPLATES?=		${PKGSRCDIR}/templates
 
 PATCHDIR?=		${.CURDIR}/patches
@@ -743,13 +747,13 @@ BUILD_DIR!=		cd ${.CURDIR} && ${PWD_CMD}
 _HOSTNAME!=		${UNAME} -n
 MAKEFLAGS+=		_HOSTNAME=${_HOSTNAME:Q}
 .  endif
-WRKDIR_BASENAME?=	work.${_HOSTNAME:C|\..*||}
+WRKDIR_BASENAME?=	work${_CROSSDIR_SUFFIX}.${_HOSTNAME:C|\..*||}
 MAKEFLAGS+=		OBJHOSTNAME=${OBJHOSTNAME:Q}
 .elif defined(OBJMACHINE)
 WRKDIR_BASENAME?=	work.${MACHINE_ARCH}
 MAKEFLAGS+=		OBJMACHINE=${OBJMACHINE:Q}
 .else
-WRKDIR_BASENAME?=	work
+WRKDIR_BASENAME?=	work${_CROSSDIR_SUFFIX}
 .endif
 
 WRKDIR?=		${BUILD_DIR}/${WRKDIR_BASENAME}
