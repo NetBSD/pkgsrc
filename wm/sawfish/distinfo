@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.27 2022/04/04 00:44:53 gutteridge Exp $
+$NetBSD: distinfo,v 1.28 2022/04/04 01:18:43 gutteridge Exp $
 
-BLAKE2s (sawfish-1.13.0.tar.gz) = 8e1b928170fc2d0a6a65004449c40aab240740b7403e3151021cd7fb22a53181
-SHA512 (sawfish-1.13.0.tar.gz) = e294f3807bcf3664f7ce6410dcddd65657a8886d1117c0bf2ca233a1deb143a8c7374a46e47e9f2b74e17816d1b526152c51b59c62ffec5b07250f6b1cd9b6af
-Size (sawfish-1.13.0.tar.gz) = 5043050 bytes
+BLAKE2s (sawfish_1.13.0.tar.xz) = 18c9d61563f22c7e1e07d5c195116bd29d89f500d6a515333f765b254144d48e
+SHA512 (sawfish_1.13.0.tar.xz) = 3f7e033e3c6fd3b8ff3ecf98b3c912299fce181cb263038def733c392c3948ec03681a8b3bdec385b950c17c9dafb14c6dd41b2b1bbc50e8eb347f45c62dd477
+Size (sawfish_1.13.0.tar.xz) = 2830924 bytes
 SHA1 (patch-ab) = 21a89c87afa9cb5fdf3b028109b0db9c5991fb1e
-SHA1 (patch-configure.ac) = 961139be928a5aa68149a219bb792c9892ead7ef
+SHA1 (patch-configure) = b3218f5e42eab3640e7db755a27e8c54b50e9b36
 SHA1 (patch-themes_Makefile.in) = 0584333bad4f86e2129478c2194058ea2b002181
