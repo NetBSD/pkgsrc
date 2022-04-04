@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.32 2021/11/07 18:49:28 khorben Exp $
+# $NetBSD: metadata.mk,v 1.33 2022/04/04 11:23:07 riastradh Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -36,7 +36,7 @@ DARWIN_REQUIRES_FILTER=	${CAT}
 ${_BUILD_INFO_FILE}: ${_PLIST_NOKEYWORDS}
 	${RUN}${MKDIR} ${.TARGET:H}
 	${RUN}${RM} -f ${.TARGET}.tmp
-	${RUN} (${_BUILD_DEFS:NPATH:@v@${ECHO} ${v}=${${v}:Q} ;@})	\
+	${RUN} (${_BUILD_DEFS:NPATH:@v@${ECHO} ${v}=${_BUILD_DEFS.${v}:Q:U${${v}:Q}} ;@})	\
 		> ${.TARGET}.tmp
 .if !empty(USE_LANGUAGES)
 	${RUN}${ECHO} "CC_VERSION=${CC_VERSION}" >> ${.TARGET}.tmp
