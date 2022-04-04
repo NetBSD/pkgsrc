@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.1 2022/03/28 19:32:38 bouyer Exp $
+$NetBSD: distinfo,v 1.2 2022/04/04 21:14:51 bouyer Exp $
 
 BLAKE2s (ocpn_plots_pi-2.2.12.tar.gz) = 3e34c9c075351a38bad983a784b5faee10b863a107d542b2bb21f4766314667e
 SHA512 (ocpn_plots_pi-2.2.12.tar.gz) = fb2bb19da0866f08835b82c76e9b14c042aab531230f4398db9b912733446e9ab1e9c52804f2d8698de6c0b496a67645a89e60f2234587b7d5e0cb001b0d9304
 Size (ocpn_plots_pi-2.2.12.tar.gz) = 921352 bytes
 SHA1 (patch-cmake_PluginSetup.cmake) = 5cd62f288bea7993da60ff58af01b4c427afa99f
+SHA1 (patch-src_icons.cpp) = 4c3e9e5b2317dfda9a7c68610a7b6dd0b83a1a1c
+SHA1 (patch-src_plots_pi.cpp) = d26ef2ba3c08c78cb4abb6b7a4f041d3281c5689
