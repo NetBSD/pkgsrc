@@ -1,7 +1,7 @@
 Cross-compilation in pkgsrc (user's guide)              -*- outline -*-
 Taylor R. Campbell <riastradh@NetBSD.org>
 
-$NetBSD: HOWTO-use-crosscompile,v 1.8 2022/04/04 11:22:50 riastradh Exp $
+$NetBSD: HOWTO-use-crosscompile,v 1.9 2022/04/04 11:23:06 riastradh Exp $
 
 The following steps enable you to build binary packages for a machine
 architecture other than the one you are building on.  For example, you
@@ -40,14 +40,8 @@ In addition to whatever else you want in your mk.conf for pkgsrc, add:
    # which is a bug.
    USE_CROSS_COMPILE?=  yes
 
-   .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
-   # Specify the machine architecture of target packages.
-   #
-   # XXX This currently can't be set on the command line, which is a
-   # bug.
-   MACHINE_ARCH=        powerpc
-
-   # Point pkgsrc at the NetBSD tooldir and destdir.
+   # Point pkgsrc at the NetBSD tooldir and destdir.  These are used
+   # only for cross-builds.
    #
    # XXX There is no obvious variable that is set to amd64 so that we
    # could use
@@ -58,6 +52,13 @@ In addition to whatever else you want in your mk.conf for pkgsrc, add:
    # NATIVE_MACHINE_ARCH is x86_64, not amd64.
    TOOLDIR=             /usr/obj/tooldir.NetBSD-6.1-amd64
    CROSS_DESTDIR=       /usr/obj/destdir.evbppc
+
+   .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+   # Specify the machine architecture of target packages.
+   #
+   # XXX This currently can't be set on the command line, which is a
+   # bug.
+   MACHINE_ARCH=        powerpc
 
    # Put target work and packages in separate directories.  (You might
    # use OBJMACHINE=yes or WRKOBJDIR=/tmp/work.${MACHINE_ARCH} instead
@@ -75,22 +76,6 @@ course.
 XXX Some variables, notably LOCALBASE and other paths that get baked
 into packages, cannot currently be set differently for native and
 target packages.
-
-* Work around libtool
-
-Libtool's build system is broken -- it misuses the GNU build system
-build/host/target settings.  For now we need to kludge around it
-manually:
-
-   $ cd /usr/pkgsrc/cross/cross-libtool-base
-   $ make package
-   $ pkg_add -m powerpc /usr/pkgsrc/packages.powerpc/All/cross-libtool-base-powerpc-2.4.2.tgz
-
-(This builds a libtool package for the target, and then installs the
-target package natively.  This *shouldn't* work, and pkg_add normally
-refuses this, but it does work because libtool is a shell script, and
-`pkg_add -m powerpc' makes pkg_add pretend we are powerpc to suppress
-its refusal.)
 
 * Make some packages
 

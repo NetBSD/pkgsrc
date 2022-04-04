@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.416 2022/01/18 01:41:09 pho Exp $
+# $NetBSD: bsd.prefs.mk,v 1.417 2022/04/04 11:23:06 riastradh Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -337,6 +337,33 @@ MACHINE_PLATFORM?=		${OPSYS}-${OS_VERSION}-${MACHINE_ARCH}
 NATIVE_MACHINE_GNU_PLATFORM?=	${NATIVE_MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS:C/[0-9]//g}${NATIVE_APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}${NATIVE_APPEND_ABI}
 MACHINE_GNU_PLATFORM?=		${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS:C/[0-9]//g}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}${APPEND_ABI}
 
+#
+# cross-libtool is special -- it is built as a native package, but it
+# needs tools set up as if for a cross-compiled package because it
+# remembers the paths for use to later assist in cross-compiling other
+# packages.
+#
+# So normally TOOLS_USE_CROSS_COMPILE is the same as USE_CROSS_COMPILE,
+# but for cross-libtool, we set TOOLS_USE_CROSS_COMPILE=yes while doing
+# the rest of the native package build with USE_CROSS_COMPILE=no.
+#
+# This can't live inside the cross-libtool makefile because the
+# TARGET_ARCH / MACHINE_ARCH / NATIVE_MACHINE_ARCH switcheroo has to
+# happen in the middle of this file -- after NATIVE_MACHINE_ARCH is
+# determined, before MACHINE_ARCH is used for anything else.
+#
+.if !empty(LIBTOOL_CROSS_COMPILE:M[yY][eE][sS])
+.  if !defined(TARGET_ARCH)
+PKG_FAIL_REASON+=	"Must set TARGET_ARCH for cross-libtool."
+.  endif
+MACHINE_ARCH:=			${TARGET_ARCH}
+_BUILD_DEFS.MACHINE_ARCH=	${NATIVE_MACHINE_ARCH}
+_BUILD_DEFS.MACHINE_GNU_ARCH=	${NATIVE_MACHINE_GNU_ARCH}
+TOOLS_USE_CROSS_COMPILE=	yes
+.else
+TOOLS_USE_CROSS_COMPILE=	${USE_CROSS_COMPILE:Uno}
+.endif
+
 # Needed to prevent an "install:" target from being created in bsd.own.mk.
 NEED_OWN_INSTALL_TARGET=no
 
@@ -519,6 +546,11 @@ PKG_FAIL_REASON+=	"The cross-compiling root ${CROSS_DESTDIR:Q} is incomplete"
 _CROSS_DESTDIR=	${CROSS_DESTDIR}
 .  endif
 .endif
+
+# TOOLS_CROSS_DESTDIR is used for the libtool build to make a wrapper
+# that points at the cross-destdir as sysroot, without setting
+# _CROSS_DESTDIR because we're actually building a native package.
+TOOLS_CROSS_DESTDIR=		${CROSS_DESTDIR}
 
 # Depends on MACHINE_ARCH override above
 .if ${OPSYS} == "NetBSD"
