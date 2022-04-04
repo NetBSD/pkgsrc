@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2020/01/18 23:36:10 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2022/04/04 09:47:04 wiz Exp $
 
-DISTNAME=	xlsfonts-1.0.6
+DISTNAME=	xlsfonts-1.0.7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	https://xorg.freedesktop.org/
