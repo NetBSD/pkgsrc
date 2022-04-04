@@ -1,4 +1,4 @@
-/* $NetBSD: common.h,v 1.9 2021/11/07 12:38:12 christos Exp $ */
+/* $NetBSD: common.h,v 1.10 2022/04/04 11:22:51 riastradh Exp $ */
 
 /*-
  * Copyright (c) 2009, 2017 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -42,6 +42,7 @@ extern const char library_name_chars[];
 extern char *exec_path;
 extern char *exec_name;
 extern char *wrksrc;
+extern char *sysroot;
 extern int debug;
 
 enum operation_mode {
