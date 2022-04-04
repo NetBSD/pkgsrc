@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1700 2022/04/03 22:16:09 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1701 2022/04/04 00:45:02 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2252,3 +2252,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xdm to 1.1.13 [wiz 2022-04-03]
 	Updated time/xclock to 1.1.0 [wiz 2022-04-03]
 	Updated x11/xedit to 1.2.3 [wiz 2022-04-03]
+	Updated wm/sawfish to 1.13.0 [gutteridge 2022-04-04]
