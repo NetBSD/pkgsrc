@@ -1,0 +1,33 @@
+$NetBSD: patch-configure,v 1.1 2022/04/04 01:18:43 gutteridge Exp $
+
+* Fix PKGLOCALEDIR
+* Avoid differing PLIST depending on whether kde4-config was in the path or not
+
+--- configure.orig	2021-12-24 19:23:47.000000000 +0000
++++ configure
+@@ -11870,7 +11870,7 @@ SUBDIRS="src lisp scripts themes sounds 
+ 
+ sawfishdir='${datadir}/sawfish'
+ lispdir='${sawfishdir}/lisp'
+-localedir='${datadir}/locale'
++#localedir='${datadir}/locale'
+ sawfishexecdir='${libdir}/sawfish'
+ 
+ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for an ANSI C-conforming const" >&5
+@@ -14551,12 +14551,12 @@ fi
+ 
+ KDE4_SESSION="$with_kde4session"
+ 
+-if test "$with_kde4session" = "yes"; then
+-	KDED4IR="`kde4-config --install data`"
+-fi
++#if test "$with_kde4session" = "yes"; then
++#	KDED4IR="`kde4-config --install data`"
++#fi
+ 
+ if test "x$KDE4DIR" = x; then
+-       KDE4DIR="${datadir}/kde4/apps/"
++       KDE4DIR="${datadir}/kde/apps/"
+ fi
+ 
+ 
