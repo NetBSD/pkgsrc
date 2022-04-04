@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.70 2021/10/26 10:27:11 nia Exp $
+$NetBSD: distinfo,v 1.71 2022/04/04 12:47:47 riastradh Exp $
 
 BLAKE2s (fontconfig-2.13.1.tar.bz2) = f6d0899147f7699688153bdd9fab753a65046bb667aac02775c01c82fe40a05a
 SHA512 (fontconfig-2.13.1.tar.bz2) = f97f2a9db294fd72d416a7d76dd7db5934ade2cf76903764b09e7decc33e0e2eed1a1d35c5f1c7fd9ea39e2c7653b9e65365f0c6205e047e95e38ba5000dd100
@@ -9,7 +9,7 @@ SHA1 (patch-af) = d351265c894738284215f0bb38d47cc1c8f28ec7
 SHA1 (patch-configure) = a4b18983ad7d2cff658b733dab5a09b25019842e
 SHA1 (patch-scandir.c) = e35f4c005f635dd0d8bb949cd32aa34f5e314200
 SHA1 (patch-src_fcatomic.h) = 7c9b7be6d2c95b81a481a829b10b8607e4919c35
-SHA1 (patch-src_fccharset.c) = f3855554b3b3cab2530b46bc1ccec6a33303de7a
+SHA1 (patch-src_fccharset.c) = 6d68730b06ac5b7b12136eadc913d099e7cefd79
 SHA1 (patch-src_fcfreetype.c) = 42542ae666b292af700313ee103d0f295cf69e4e
 SHA1 (patch-src_fcftint.h) = d629fd7ef9713ccc56800d033ba2e09c5a9e2bff
 SHA1 (patch-src_fcint.h) = 0f8accec35b75ad4cd4c558f9680d1f82548a308
