@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.236 2022/03/13 06:26:57 nia Exp $
+# $NetBSD: gcc.mk,v 1.237 2022/04/04 11:23:06 riastradh Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -668,7 +668,7 @@ _GCCBINDIR=	${_GCC_PREFIX}bin
 .elif !empty(_IS_BUILTIN_GCC:M[yY][eE][sS])
 _GCCBINDIR=	${_CC:H}
 .endif
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if !empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
 _GCC_BIN_PREFIX=	${MACHINE_GNU_PLATFORM}-
 .endif
 _GCC_BIN_PREFIX?=	# empty
