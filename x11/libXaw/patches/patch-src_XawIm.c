@@ -1,6 +1,7 @@
-$NetBSD: patch-src_XawIm.c,v 1.1 2022/04/04 12:42:19 riastradh Exp $
+$NetBSD: patch-src_XawIm.c,v 1.2 2022/04/04 12:55:28 wiz Exp $
 
 Fix ctype(3) abuse.
+https://gitlab.freedesktop.org/xorg/lib/libxaw/-/merge_requests/11
 
 --- src/XawIm.c.orig	2021-03-27 17:40:21.000000000 +0000
 +++ src/XawIm.c
