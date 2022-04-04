@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.100 2022/04/04 00:44:53 gutteridge Exp $
+# $NetBSD: Makefile,v 1.101 2022/04/04 01:18:43 gutteridge Exp $
 
-DISTNAME=	sawfish-1.13.0
+DISTNAME=	sawfish_1.13.0
+PKGNAME=	${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	wm x11
-MASTER_SITES=	${MASTER_SITE_GITHUB:=SawfishWM/}
-GITHUB_TAG=	refs/tags/${PKGNAME_NOREV}
+MASTER_SITES=	https://download.tuxfamily.org/sawfish/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sawfish.tuxfamily.org/
@@ -13,11 +15,10 @@ LICENSE=	gnu-gpl-v2 AND artistic-2.0 # for sound files
 GNU_CONFIGURE=		yes
 INFO_FILES=		YES
 PKGCONFIG_OVERRIDE+=	sawfish.pc.in
-USE_TOOLS+=		gmake makeinfo msgfmt pkg-config xgettext autoconf automake
+USE_TOOLS+=		gmake makeinfo msgfmt pkg-config xgettext
 USE_TOOLS+=		gtar:run	# for librep run-time theme extraction
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-WRKSRC=			${WRKDIR}/${PKGBASE}-${DISTNAME}
 
 CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
@@ -38,10 +39,6 @@ REP_ENV_PKGSRC=		LD_PRELOAD=/usr/lib/libpthread.so
 .else
 REP_ENV_PKGSRC=
 .endif
-
-# The upstream presently isn't providing a pre-generated configure.
-pre-configure:
-	cd ${WRKSRC} && autoreconf -iv
 
 .include "../../graphics/gdk-pixbuf2-xlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
