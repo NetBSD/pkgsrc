@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 23:33:10 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.4 2022/04/04 09:49:22 wiz Exp $
 
-DISTNAME=		xorg-sgml-doctools-1.11
-CATEGORIES=		devel x11
+DISTNAME=		xorg-sgml-doctools-1.12
+CATEGORIES=		misc x11
 MASTER_SITES=		${MASTER_SITE_XORG:=doc/}
 EXTRACT_SUFX=		.tar.bz2
 
