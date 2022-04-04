@@ -1,10 +1,10 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: ufdbguardd.sh,v 1.1 2022/02/18 11:57:30 sborrill Exp $
+# $NetBSD: ufdbguardd.sh,v 1.2 2022/04/04 13:21:41 sborrill Exp $
 #
 
 # PROVIDE: ufdbguardd
-# REQUIRE: daemon
+# REQUIRE: DAEMON
 
 $_rc_subr_loaded . /etc/rc.subr
 
