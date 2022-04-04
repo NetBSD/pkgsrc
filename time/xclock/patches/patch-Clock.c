@@ -1,6 +1,7 @@
-$NetBSD: patch-Clock.c,v 1.1 2022/04/03 22:13:17 wiz Exp $
+$NetBSD: patch-Clock.c,v 1.2 2022/04/04 09:56:43 wiz Exp $
 
 NetBSD does not provide sincos().
+https://gitlab.freedesktop.org/xorg/app/xclock/-/merge_requests/9
 
 --- Clock.c.orig	2022-04-03 21:23:33.000000000 +0000
 +++ Clock.c
