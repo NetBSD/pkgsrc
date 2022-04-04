@@ -1,4 +1,4 @@
-# $NetBSD: cwrappers.mk,v 1.34 2022/04/04 11:22:50 riastradh Exp $
+# $NetBSD: cwrappers.mk,v 1.35 2022/04/04 11:23:06 riastradh Exp $
 #
 # This Makefile fragment implements integration of pkgtools/cwrappers.
 
@@ -37,7 +37,7 @@ CWRAPPERS_ALIASES.ld=		ld
 CWRAPPERS_ALIASES.libtool=	libtool
 CWRAPPERS_ALIASES.shlibtool=	shlibtool
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if !empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
 CWRAPPERS_ALIASES.cc+=		${CC:T}
 CWRAPPERS_ALIASES.cxx+=		${CXX:T}
 CWRAPPERS_ALIASES.ld+=		${LD:T}
@@ -101,8 +101,8 @@ generate-cwrappers:
 .    endfor
 .  endif
 . endif
-. if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
-	${RUN}echo sysroot=${_CROSS_DESTDIR:Q} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
+. if !empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
+	${RUN}echo sysroot=${TOOLS_CROSS_DESTDIR:Q} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
 . endif
 .endfor
 

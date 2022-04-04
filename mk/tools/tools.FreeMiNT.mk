@@ -1,4 +1,4 @@
-# $NetBSD: tools.FreeMiNT.mk,v 1.4 2014/03/06 07:34:20 uebayasi Exp $
+# $NetBSD: tools.FreeMiNT.mk,v 1.5 2022/04/04 11:23:07 riastradh Exp $
 #
 # System-supplied tools for the FreeMiNT operating system.
 
@@ -37,7 +37,7 @@ TOOLS_PLATFORM.gzip?=		/usr/bin/gzip -nf ${GZIP}
 TOOLS_PLATFORM.head?=		/usr/bin/head
 TOOLS_PLATFORM.hostname?=	/bin/hostname
 TOOLS_PLATFORM.id?=		/usr/bin/id
-.if empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
 TOOLS_PLATFORM.install?=	/usr/bin/install
 .else
 TOOLS_PLATFORM.install?=	${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-install
@@ -58,7 +58,7 @@ TOOLS_PLATFORM.openssl?=	/usr/bin/openssl
 TOOLS_PLATFORM.patch?=		/usr/bin/patch
 TOOLS_PLATFORM.printf?=		/usr/bin/printf
 TOOLS_PLATFORM.pwd?=		/bin/pwd
-.if empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
 TOOLS_PLATFORM.readelf?=	/usr/bin/readelf
 .else
 TOOLS_PLATFORM.readelf?=	${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-readelf
@@ -71,7 +71,7 @@ TOOLS_PLATFORM.sh?=		/bin/sh
 TOOLS_PLATFORM.sleep?=		/bin/sleep
 TOOLS_PLATFORM.soelim?=		/usr/bin/soelim
 TOOLS_PLATFORM.sort?=		/bin/sort
-.if empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
 TOOLS_PLATFORM.strip?=		/usr/bin/strip
 .else
 TOOLS_PLATFORM.strip?=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-strip
@@ -92,7 +92,7 @@ TOOLS_PLATFORM.xargs?=		/usr/bin/xargs -r
 TOOLS_PLATFORM.xgettext?=	/usr/bin/xgettext
 TOOLS_PLATFORM.yacc?=		/usr/bin/yacc
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if !empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
 .  for _t_ in ar as ld nm objdump ranlib readelf strip
 TOOLS_PATH.${MACHINE_GNU_PLATFORM}-${_t_}?=	\
 	${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-${_t_}
