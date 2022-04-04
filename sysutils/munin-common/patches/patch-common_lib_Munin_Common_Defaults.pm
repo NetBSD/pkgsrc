@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_Munin_Common_Defaults.pm,v 1.2 2019/09/13 08:21:08 jperkin Exp $
+$NetBSD: patch-common_lib_Munin_Common_Defaults.pm,v 1.1 2022/04/04 11:45:33 jperkin Exp $
 
 Initialize default paths for all Munin components.
 
