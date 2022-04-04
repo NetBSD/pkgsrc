@@ -1,4 +1,4 @@
-/* $NetBSD: normalise-cc.c,v 1.6 2021/11/07 12:38:12 christos Exp $ */
+/* $NetBSD: normalise-cc.c,v 1.7 2022/04/04 11:22:51 riastradh Exp $ */
 
 /*-
  * Copyright (c) 2009, 2017 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -38,7 +38,8 @@
 
 static void
 normalise_path_list(struct arglist *args, struct argument *arg,
-    const char *prefix, const char *val, int strip_relative)
+    const char *prefix, const char *sysroot_prefix, const char *val,
+    int strip_relative)
 {
 	const char *sep;
 	struct argument *arg2;
@@ -51,6 +52,14 @@ normalise_path_list(struct arglist *args, struct argument *arg,
 		arg2 = argument_new(concat2(prefix, val, sep - val));
 		TAILQ_INSERT_AFTER(args, arg, arg2, link);
 		arg = arg2;
+		if (sysroot_prefix && sysroot) {
+			char *sysroot_val = concat2(sysroot, val, sep - val);
+			arg2 = argument_new(concat(sysroot_prefix,
+				sysroot_val));
+			free(sysroot_val);
+			TAILQ_INSERT_AFTER(args, arg, arg2, link);
+			arg = arg2;
+		}
 		val = sep + 1;
 	}
 	if (val[0] == '\0' || (strip_relative && !isabs(val[0])))
@@ -58,6 +67,13 @@ normalise_path_list(struct arglist *args, struct argument *arg,
 	arg2 = argument_new(concat(prefix, val));
 	TAILQ_INSERT_AFTER(args, arg, arg2, link);
 	arg = arg2;
+	if (sysroot_prefix && sysroot) {
+		char *sysroot_val = concat(sysroot, val);
+		arg2 = argument_new(concat(sysroot_prefix, sysroot_val));
+		free(sysroot_val);
+		TAILQ_INSERT_AFTER(args, arg, arg2, link);
+		arg = arg2;
+	}
 }
 
 void
@@ -201,7 +217,8 @@ normalise_cc(struct arglist *args)
 		if (strcmp(arg->val, "-Wl,-rpath-link") == 0) {
 			if (arg2 == NULL || strncmp(arg2->val, "-Wl,", 4))
 				errx(255, "Missing argument for %s", arg->val);
-			normalise_path_list(args, arg, "-Wl,-rpath-link,",
+			normalise_path_list(args, arg,
+			    "-Wl,-rpath-link,", NULL,
 			    arg2->val + 4, 0);
 			argument_unlink(args, &arg);
 			argument_unlink(args, &arg2);
@@ -210,7 +227,8 @@ normalise_cc(struct arglist *args)
 		if (strcmp(arg->val, "-R") == 0) {
 			if (arg2 == NULL || arg2->val[0] == '-')
 				errx(255, "Missing argument for %s", arg->val);
-			normalise_path_list(args, arg, "-Wl,-rpath,",
+			normalise_path_list(args, arg,
+			    "-Wl,-rpath,", "-Wl,-rpath-link,"/*sysroot*/,
 			    arg2->val, 1);
 			argument_unlink(args, &arg);
 			argument_unlink(args, &arg2);
@@ -221,26 +239,30 @@ normalise_cc(struct arglist *args)
 		    strcmp(arg->val, "-Wl,--rpath") == 0) {
 			if (arg2 == NULL || strncmp(arg2->val, "-Wl,", 4))
 				errx(255, "Missing argument for %s", arg->val);
-			normalise_path_list(args, arg, "-Wl,-rpath,",
+			normalise_path_list(args, arg,
+			    "-Wl,-rpath,", "-Wl,-rpath-link,"/*sysroot*/,
 			    arg2->val + 4, 1);
 			argument_unlink(args, &arg);
 			argument_unlink(args, &arg2);
 			continue;
 		}
 		if (strncmp(arg->val, "-Wl,-R", 6) == 0) {
-			normalise_path_list(args, arg, "-Wl,-rpath,",
+			normalise_path_list(args, arg,
+			    "-Wl,-rpath,", "-Wl,-rpath-link,"/*sysroot*/,
 			    arg->val + 6, 1);
 			argument_unlink(args, &arg);
 			continue;
 		}
 		if (strncmp(arg->val, "-R", 2) == 0) {
-			normalise_path_list(args, arg, "-Wl,-rpath,",
+			normalise_path_list(args, arg,
+			    "-Wl,-rpath,", "-Wl,-rpath-link,"/*sysroot*/,
 			    arg->val + 2, 1);
 			argument_unlink(args, &arg);
 			continue;
 		}
 		if (strncmp(arg->val, "-Wl,-rpath,", 10) == 0) {
-			normalise_path_list(args, arg, "-Wl,-rpath,",
+			normalise_path_list(args, arg,
+			    "-Wl,-rpath,", "-Wl,-rpath-link,"/*sysroot*/,
 			    arg->val + 10, 1);
 			argument_unlink(args, &arg);
 			continue;
