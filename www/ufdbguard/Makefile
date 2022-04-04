@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/02/18 11:57:30 sborrill Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/04 13:21:41 sborrill Exp $
 
 DISTNAME=	ufdbGuard-${VERSION}
 VERSION=	1.35.3
+PKGREVISION=	1
 PKGNAME=	ufdbguard-${VERSION}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ufdbguard/}
