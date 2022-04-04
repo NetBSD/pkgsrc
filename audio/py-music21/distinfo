@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 09:59:25 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/04/04 01:51:59 gutteridge Exp $
 
-BLAKE2s (music21-noCorpus-7.1.0.tar.gz) = 29d3efebe31795f01e835eeea870ffb9c78d0ecd69d31bc6fc46dfad75263ee1
-SHA512 (music21-noCorpus-7.1.0.tar.gz) = 12844bf5b08791184792bb6cc2601db9410e136a4c1025c5088e6a1a3634021ae78b9fab332e36ea3b7061c97e4af37096e5c04ecdde3a47dc44b1ac973e6d9f
-Size (music21-noCorpus-7.1.0.tar.gz) = 5385205 bytes
+BLAKE2s (music21-noCorpus-7.3.1.tar.gz) = f1aadea438385f8943186b1c89ea1f6c462622880c5ffa567fa14aa7d48bde11
+SHA512 (music21-noCorpus-7.3.1.tar.gz) = 3c4f1e7489e65fb1700ff300ab571ff32823c67ae23870478cc0e57602d3d1b130c8555a3edf5c1c8902a52e708efb0a5f55926f80cadd104a04dd3ee969bd64
+Size (music21-noCorpus-7.3.1.tar.gz) = 5039374 bytes

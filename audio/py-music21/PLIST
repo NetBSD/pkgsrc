@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/09/16 00:23:52 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/04/04 01:51:59 gutteridge Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -151,6 +151,7 @@ ${PYSITELIB}/music21/braille/text.pyo
 ${PYSITELIB}/music21/braille/translate.py
 ${PYSITELIB}/music21/braille/translate.pyc
 ${PYSITELIB}/music21/braille/translate.pyo
+${PYSITELIB}/music21/capella/Nu_rue_mit_sorgen.capx
 ${PYSITELIB}/music21/capella/__init__.py
 ${PYSITELIB}/music21/capella/__init__.pyc
 ${PYSITELIB}/music21/capella/__init__.pyo
@@ -218,6 +219,7 @@ ${PYSITELIB}/music21/converter/incorrectExtension.txt
 ${PYSITELIB}/music21/converter/qmConverter.py
 ${PYSITELIB}/music21/converter/qmConverter.pyc
 ${PYSITELIB}/music21/converter/qmConverter.pyo
+${PYSITELIB}/music21/converter/quarterMusicTestIn.qm
 ${PYSITELIB}/music21/converter/subConverters.py
 ${PYSITELIB}/music21/converter/subConverters.pyc
 ${PYSITELIB}/music21/converter/subConverters.pyo
@@ -411,6 +413,7 @@ ${PYSITELIB}/music21/mei/base.pyc
 ${PYSITELIB}/music21/mei/base.pyo
 ${PYSITELIB}/music21/mei/test/notes_in_utf16.mei
 ${PYSITELIB}/music21/mei/test/notes_in_utf8.mei
+${PYSITELIB}/music21/mei/test/test_file.ly
 ${PYSITELIB}/music21/mei/test/test_file.mei
 ${PYSITELIB}/music21/mei/test/test_file.pdf
 ${PYSITELIB}/music21/mei/test_base.py
@@ -656,6 +659,7 @@ ${PYSITELIB}/music21/musicxml/lilypondTestSuite/__init__.pyo
 ${PYSITELIB}/music21/musicxml/m21ToXml.py
 ${PYSITELIB}/music21/musicxml/m21ToXml.pyc
 ${PYSITELIB}/music21/musicxml/m21ToXml.pyo
+${PYSITELIB}/music21/musicxml/musicxml.xsd
 ${PYSITELIB}/music21/musicxml/partStaffExporter.py
 ${PYSITELIB}/music21/musicxml/partStaffExporter.pyc
 ${PYSITELIB}/music21/musicxml/partStaffExporter.pyo
@@ -747,6 +751,7 @@ ${PYSITELIB}/music21/romanText/translate.pyo
 ${PYSITELIB}/music21/romanText/tsvConverter.py
 ${PYSITELIB}/music21/romanText/tsvConverter.pyc
 ${PYSITELIB}/music21/romanText/tsvConverter.pyo
+${PYSITELIB}/music21/romanText/tsvEg.tsv
 ${PYSITELIB}/music21/romanText/writeRoman.py
 ${PYSITELIB}/music21/romanText/writeRoman.pyc
 ${PYSITELIB}/music21/romanText/writeRoman.pyo
