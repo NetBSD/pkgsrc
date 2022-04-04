@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/02/16 13:10:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/04/04 18:18:33 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,27 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/redis/__init__.py
 ${PYSITELIB}/redis/__init__.pyc
 ${PYSITELIB}/redis/__init__.pyo
+${PYSITELIB}/redis/asyncio/__init__.py
+${PYSITELIB}/redis/asyncio/__init__.pyc
+${PYSITELIB}/redis/asyncio/__init__.pyo
+${PYSITELIB}/redis/asyncio/client.py
+${PYSITELIB}/redis/asyncio/client.pyc
+${PYSITELIB}/redis/asyncio/client.pyo
+${PYSITELIB}/redis/asyncio/connection.py
+${PYSITELIB}/redis/asyncio/connection.pyc
+${PYSITELIB}/redis/asyncio/connection.pyo
+${PYSITELIB}/redis/asyncio/lock.py
+${PYSITELIB}/redis/asyncio/lock.pyc
+${PYSITELIB}/redis/asyncio/lock.pyo
+${PYSITELIB}/redis/asyncio/retry.py
+${PYSITELIB}/redis/asyncio/retry.pyc
+${PYSITELIB}/redis/asyncio/retry.pyo
+${PYSITELIB}/redis/asyncio/sentinel.py
+${PYSITELIB}/redis/asyncio/sentinel.pyc
+${PYSITELIB}/redis/asyncio/sentinel.pyo
+${PYSITELIB}/redis/asyncio/utils.py
+${PYSITELIB}/redis/asyncio/utils.pyc
+${PYSITELIB}/redis/asyncio/utils.pyo
 ${PYSITELIB}/redis/backoff.py
 ${PYSITELIB}/redis/backoff.pyc
 ${PYSITELIB}/redis/backoff.pyo
@@ -64,6 +85,9 @@ ${PYSITELIB}/redis/commands/helpers.pyo
 ${PYSITELIB}/redis/commands/json/__init__.py
 ${PYSITELIB}/redis/commands/json/__init__.pyc
 ${PYSITELIB}/redis/commands/json/__init__.pyo
+${PYSITELIB}/redis/commands/json/_util.py
+${PYSITELIB}/redis/commands/json/_util.pyc
+${PYSITELIB}/redis/commands/json/_util.pyo
 ${PYSITELIB}/redis/commands/json/commands.py
 ${PYSITELIB}/redis/commands/json/commands.pyc
 ${PYSITELIB}/redis/commands/json/commands.pyo
@@ -130,6 +154,9 @@ ${PYSITELIB}/redis/commands/timeseries/info.pyo
 ${PYSITELIB}/redis/commands/timeseries/utils.py
 ${PYSITELIB}/redis/commands/timeseries/utils.pyc
 ${PYSITELIB}/redis/commands/timeseries/utils.pyo
+${PYSITELIB}/redis/compat.py
+${PYSITELIB}/redis/compat.pyc
+${PYSITELIB}/redis/compat.pyo
 ${PYSITELIB}/redis/connection.py
 ${PYSITELIB}/redis/connection.pyc
 ${PYSITELIB}/redis/connection.pyo
@@ -151,6 +178,9 @@ ${PYSITELIB}/redis/retry.pyo
 ${PYSITELIB}/redis/sentinel.py
 ${PYSITELIB}/redis/sentinel.pyc
 ${PYSITELIB}/redis/sentinel.pyo
+${PYSITELIB}/redis/typing.py
+${PYSITELIB}/redis/typing.pyc
+${PYSITELIB}/redis/typing.pyo
 ${PYSITELIB}/redis/utils.py
 ${PYSITELIB}/redis/utils.pyc
 ${PYSITELIB}/redis/utils.pyo
