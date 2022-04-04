@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:59:38 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/04 09:49:22 wiz Exp $
 
-BLAKE2s (xorg-sgml-doctools-1.11.tar.bz2) = 3c7c21d2223b1ca9a546d581c2e3d281c4a690dcef7940a3e73621a11ba9baff
-SHA512 (xorg-sgml-doctools-1.11.tar.bz2) = 64bf561bc7a6855f96d9df8b062860deb3b9967203339ae2fc02404ad29c05272f7ead3aa792b149811ecfc7af786567e0b8a66a2bf112d33ec7385dd1398e7e
-Size (xorg-sgml-doctools-1.11.tar.bz2) = 120356 bytes
+BLAKE2s (xorg-sgml-doctools-1.12.tar.bz2) = 147d8143c3ada7d1be7b32cea5a98a7684b72e7e7e9fa9ea7c6319643e374060
+SHA512 (xorg-sgml-doctools-1.12.tar.bz2) = 5c4f8506992abcc3d98b99d33b60ac770f039c3ffa11ad49005942bc9b7497367842a57967cee51b0e8e9095a660879af9a243abddf6b1af88741dbb882b3a4a
+Size (xorg-sgml-doctools-1.12.tar.bz2) = 131356 bytes
