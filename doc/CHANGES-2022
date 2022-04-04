@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1709 2022/04/04 11:45:42 jperkin Exp $
+$NetBSD: CHANGES-2022,v 1.1710 2022/04/04 18:22:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2262,3 +2262,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-frozendict to 2.3.1 [adam 2022-04-04]
 	Updated devel/py-semantic_version to 2.9.0 [adam 2022-04-04]
 	Updated sysutils/munin-common to 2.0.69 [jperkin 2022-04-04]
+	Updated databases/py-redis to 4.2.2 [adam 2022-04-04]
+	Updated databases/py-pypika to 0.48.9 [adam 2022-04-04]
