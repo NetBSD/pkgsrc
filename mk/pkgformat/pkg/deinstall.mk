@@ -1,4 +1,4 @@
-# $NetBSD: deinstall.mk,v 1.3 2017/08/19 00:30:19 jlam Exp $
+# $NetBSD: deinstall.mk,v 1.4 2022/04/04 11:40:20 riastradh Exp $
 
 # Set the appropriate flags to pass to pkg_delete(1) based on the value
 # of DEINSTALLDEPENDS (see pkgsrc/mk/install/deinstall.mk).
@@ -23,6 +23,10 @@ _PKG_ARGS_DEINSTALL+=	-N -f -f	# update w/o removing any files
 
 MAKEFLAGS.su-deinstall+=	_UPDATE_RUNNING=YES
 .  endif
+.endif
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+_PKG_ARGS_DEINSTALL+=	-p ${_CROSS_DESTDIR}${PREFIX}
 .endif
 
 # _pkgformat-deinstall:
