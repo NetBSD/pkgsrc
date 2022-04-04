@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.104 2022/03/13 06:26:57 nia Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.105 2022/04/04 11:23:07 riastradh Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -363,7 +363,7 @@ _WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
 _WRAP_CMD_SINK.LD=	${WRAPPER_TMPDIR}/cmd-sink-irix-ld
 .endif
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if !empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
 _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-cross-gcc
 _WRAP_CMD_SINK.CPP=	${WRAPPER_TMPDIR}/cmd-sink-cross-cpp
 _WRAP_CMD_SINK.CXX=	${WRAPPER_TMPDIR}/cmd-sink-cross-gxx
@@ -540,9 +540,9 @@ ${WRAPPER_TMPDIR}/${w}: ${WRAPPER_SRCDIR}/${w}
 	${RUN} ${CAT} ${.ALLSRC} | ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 .endfor
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if !empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
 _WRAP_CROSS_GCC_FILTER+= ${SED}						\
-	-e "s|@CROSS_DESTDIR@|${_CROSS_DESTDIR:Q}|g"			\
+	-e "s|@CROSS_DESTDIR@|${TOOLS_CROSS_DESTDIR:Q}|g"		\
 	-e "s|@PREFIX@|${PREFIX:Q}|g"
 ${WRAPPER_TMPDIR}/cmd-sink-cross-gcc: ${WRAPPER_SRCDIR}/cmd-sink-cross-gcc
 	${RUN} ${MKDIR} ${.TARGET:H}
