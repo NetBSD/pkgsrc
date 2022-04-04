@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/06/06 07:39:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/04/04 09:50:37 wiz Exp $
 man/man7/Consortium.7
 man/man7/Standards.7
 man/man7/X.7
@@ -22,5 +22,4 @@ share/doc/xorg-docs/input/XKB-Config.xml
 share/doc/xorg-docs/input/XKB-Enhancing.xml
 share/doc/xorg-docs/platforms/Darwin.xml
 share/doc/xorg-docs/platforms/Solaris.xml
-share/doc/xorg-docs/xext/lbxalg.xml
 share/doc/xorg-docs/xlfd/xlfd.xml

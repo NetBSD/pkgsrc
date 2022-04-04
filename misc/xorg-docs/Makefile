@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2020/01/18 23:33:10 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2022/04/04 09:50:37 wiz Exp $
 
-DISTNAME=		xorg-docs-1.7.1
-CATEGORIES=		devel x11
+DISTNAME=		xorg-docs-1.7.2
+CATEGORIES=		misc x11
 MASTER_SITES=		${MASTER_SITE_XORG:=doc/}
 EXTRACT_SUFX=		.tar.bz2
 
