@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.15 2022/04/04 12:42:19 riastradh Exp $
+$NetBSD: distinfo,v 1.16 2022/04/04 12:55:28 wiz Exp $
 
 BLAKE2s (libXaw-1.0.14.tar.bz2) = d323174f3703ba71caafeb2a1cdfe611a036f683ab6a76d5320d93d8cd87665e
 SHA512 (libXaw-1.0.14.tar.bz2) = 29d1c151369523ae6cb418e636b0b7b39ccccc35462a0b394dbeb46d5b6d780badd2eb872a55d9fbba1ee1af034e76c0463f40f8d8a7be2c336d08b3b1bf81d4
 Size (libXaw-1.0.14.tar.bz2) = 690994 bytes
 SHA1 (patch-Makefile.in) = bc701f17befebb04c0062c6c670f85f48adfaabf
 SHA1 (patch-aa) = 9fdbdf625260763fc7345421870633ed3e4b6b7b
-SHA1 (patch-src_AsciiSrc.c) = 068d7ffeb3dd04493332f06b9d75609b054165c1
-SHA1 (patch-src_DisplayList.c) = 12bf34410eb3c791ee2de0c78adfcdc1d5a55117
-SHA1 (patch-src_Panner.c) = c9e168da7a4c4f20018d55ac9bb1b9fa0e6e363f
-SHA1 (patch-src_TextAction.c) = 458faf8dd1178f19e826e46062ccec6e725c6651
-SHA1 (patch-src_TextSink.c) = 0feee4b06d432dca348ed1356c529e2fb77af886
-SHA1 (patch-src_XawIm.c) = 25f4b44ffffa2d6fe82162c73c054dc0938773fd
+SHA1 (patch-src_AsciiSrc.c) = c9d1748ef7f35fc4cc6e241c486343aa16ba3d1f
+SHA1 (patch-src_DisplayList.c) = dc9cb4cfb41de79345be077b04a8df692d7b38ae
+SHA1 (patch-src_Panner.c) = 5dc2f93433727d54ab78387331d7b2b62a57eb9f
+SHA1 (patch-src_TextAction.c) = 8df88ded30ddd49f9f65616425406c8ede79e4a2
+SHA1 (patch-src_TextSink.c) = 738abe7bfdd1aebd6ab7d256ecad10bbb3cab309
+SHA1 (patch-src_XawIm.c) = 290f68fe43ce0f32fb3c5c05875507f32bdf6d3a
