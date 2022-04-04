@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:34:52 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/04/04 09:47:04 wiz Exp $
 
-BLAKE2s (xlsfonts-1.0.6.tar.bz2) = 13e8d88cb70f9b922559a172f9b58a5ae3ff8b6964f8cdf0a0c9d8699fa39152
-SHA512 (xlsfonts-1.0.6.tar.bz2) = 052a3b1dec23cb20fdfacd4500cb836feb3b888bf568a548ea71deb58a4ba10a1ad5392d658e95272c6d4a1832edf1f19c3de2498b78dca82c43ee52800a30c0
-Size (xlsfonts-1.0.6.tar.bz2) = 133500 bytes
+BLAKE2s (xlsfonts-1.0.7.tar.xz) = 0c8cb7a5b2fab9bb569cb06412276f35972a32cddfdc426c73ddeb4970221f3b
+SHA512 (xlsfonts-1.0.7.tar.xz) = ec82be0a97500a9e64fb5a6adbbec470b249b1267c3081c2bd44cd3e7148107517d1234c1da2f81b0405230ab03ad2943ea53756c3380f4d561665b38d0cedc0
+Size (xlsfonts-1.0.7.tar.xz) = 126888 bytes
