@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2019/01/04 03:29:34 tnn Exp $
+@comment $NetBSD: PLIST,v 1.23 2022/04/04 00:44:53 gutteridge Exp $
 bin/sawfish
 bin/sawfish-about
 bin/sawfish-client
@@ -116,8 +116,6 @@ share/sawfish/lisp/decode-events.jl
 share/sawfish/lisp/decode-events.jlc
 share/sawfish/lisp/describe.jl
 share/sawfish/lisp/describe.jlc
-share/sawfish/lisp/diodon.jl
-share/sawfish/lisp/diodon.jlc
 share/sawfish/lisp/edge-actions.jl
 share/sawfish/lisp/edge-actions.jlc
 share/sawfish/lisp/edge-conf.jl
@@ -134,8 +132,6 @@ share/sawfish/lisp/edges.jl
 share/sawfish/lisp/edges.jlc
 share/sawfish/lisp/error-handler.jl
 share/sawfish/lisp/error-handler.jlc
-share/sawfish/lisp/fehlstart.jl
-share/sawfish/lisp/fehlstart.jlc
 share/sawfish/lisp/gnome-int.jl
 share/sawfish/lisp/gnome-int.jlc
 share/sawfish/lisp/group-funs.jl
@@ -148,8 +144,6 @@ share/sawfish/lisp/gtkrc.jl
 share/sawfish/lisp/gtkrc.jlc
 share/sawfish/lisp/hot-spots.jl
 share/sawfish/lisp/hot-spots.jlc
-share/sawfish/lisp/idesk.jl
-share/sawfish/lisp/idesk.jlc
 share/sawfish/lisp/kde-int.jl
 share/sawfish/lisp/kde-int.jlc
 share/sawfish/lisp/keymap.jl
@@ -174,18 +168,12 @@ share/sawfish/lisp/mousetrap.jl
 share/sawfish/lisp/mousetrap.jlc
 share/sawfish/lisp/move-resize.jl
 share/sawfish/lisp/move-resize.jlc
-share/sawfish/lisp/nm-applet.jl
-share/sawfish/lisp/nm-applet.jlc
 share/sawfish/lisp/old-window-menu.jl
 share/sawfish/lisp/old-window-menu.jlc
-share/sawfish/lisp/pancake.jl
-share/sawfish/lisp/pancake.jlc
 share/sawfish/lisp/poweroff.jl
 share/sawfish/lisp/poweroff.jlc
 share/sawfish/lisp/prompt.jl
 share/sawfish/lisp/prompt.jlc
-share/sawfish/lisp/razor-int.jl
-share/sawfish/lisp/razor-int.jlc
 share/sawfish/lisp/rects.jl
 share/sawfish/lisp/rects.jlc
 share/sawfish/lisp/sawfish/cfg/apply.jl
@@ -363,8 +351,6 @@ share/sawfish/lisp/sawfish/wm/integration/lxde.jl
 share/sawfish/lisp/sawfish/wm/integration/lxde.jlc
 share/sawfish/lisp/sawfish/wm/integration/mate.jl
 share/sawfish/lisp/sawfish/wm/integration/mate.jlc
-share/sawfish/lisp/sawfish/wm/integration/razor.jl
-share/sawfish/lisp/sawfish/wm/integration/razor.jlc
 share/sawfish/lisp/sawfish/wm/integration/xfce.jl
 share/sawfish/lisp/sawfish/wm/integration/xfce.jlc
 share/sawfish/lisp/sawfish/wm/keymaps.jl
@@ -387,16 +373,6 @@ share/sawfish/lisp/sawfish/wm/prg/compton.jl
 share/sawfish/lisp/sawfish/wm/prg/compton.jlc
 share/sawfish/lisp/sawfish/wm/prg/conky.jl
 share/sawfish/lisp/sawfish/wm/prg/conky.jlc
-share/sawfish/lisp/sawfish/wm/prg/diodon.jl
-share/sawfish/lisp/sawfish/wm/prg/diodon.jlc
-share/sawfish/lisp/sawfish/wm/prg/fehlstart.jl
-share/sawfish/lisp/sawfish/wm/prg/fehlstart.jlc
-share/sawfish/lisp/sawfish/wm/prg/idesk.jl
-share/sawfish/lisp/sawfish/wm/prg/idesk.jlc
-share/sawfish/lisp/sawfish/wm/prg/nm-applet.jl
-share/sawfish/lisp/sawfish/wm/prg/nm-applet.jlc
-share/sawfish/lisp/sawfish/wm/prg/pancake.jl
-share/sawfish/lisp/sawfish/wm/prg/pancake.jlc
 share/sawfish/lisp/sawfish/wm/prg/trayer.jl
 share/sawfish/lisp/sawfish/wm/prg/trayer.jlc
 share/sawfish/lisp/sawfish/wm/prg/xgamma.jl
