@@ -1,4 +1,4 @@
-/* $NetBSD: normalise-ld.c,v 1.4 2017/11/07 16:49:22 khorben Exp $ */
+/* $NetBSD: normalise-ld.c,v 1.5 2022/04/04 11:22:51 riastradh Exp $ */
 
 /*-
  * Copyright (c) 2009, 2017 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -62,6 +62,29 @@ operation_mode_ld(struct arglist *args)
 	}
 }
 
+/*
+ * append_rpath_link(args, path, &lastarg)
+ *
+ *	If sysroot is enabled, append `-rpath-link ${sysroot}${path}'
+ *	to the argument list after lastarg, and update lastarg to be
+ *	the last argument appended.
+ */
+static void
+append_rpath_link(struct arglist *args, const char *path,
+    struct argument **lastargp)
+{
+	struct argument *arg_opt, *arg_val;
+
+	if (sysroot == NULL)
+		return;
+
+	arg_opt = argument_new(xstrdup("-rpath-link"));
+	arg_val = argument_new(concat(sysroot, path));
+	TAILQ_INSERT_AFTER(args, *lastargp, arg_opt, link);
+	TAILQ_INSERT_AFTER(args, arg_opt, arg_val, link);
+	*lastargp = arg_val;
+}
+
 void
 normalise_ld(struct arglist *args)
 {
@@ -83,12 +106,20 @@ normalise_ld(struct arglist *args)
 			if (arg2 == NULL || arg2->val[0] == '-')
 				errx(255, "Missing argument for %s", arg->val);
 			argument_update(arg, xstrdup("-rpath"));
+			append_rpath_link(args, arg2->val, &arg2);
+			continue;
+		}
+		if (sysroot && strcmp(arg->val, "-rpath") == 0) {
+			if (arg2 == NULL || arg2->val[0] == '-')
+				errx(255, "Missing argument for %s", arg->val);
+			append_rpath_link(args, arg2->val, &arg2);
 			continue;
 		}
 		if (strncmp(arg->val, "-R", 2) == 0) {
 			argument_update(arg, xstrdup(arg->val + 2));
 			arg3 = argument_copy("-rpath");
 			TAILQ_INSERT_BEFORE(arg, arg3, link);
+			append_rpath_link(args, arg->val, &arg2);
 			continue;
 		}
 	}

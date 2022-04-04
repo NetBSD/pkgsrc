@@ -1,4 +1,4 @@
-/* $NetBSD: base-wrapper.c,v 1.6 2017/10/27 20:59:59 khorben Exp $ */
+/* $NetBSD: base-wrapper.c,v 1.7 2022/04/04 11:22:51 riastradh Exp $ */
 
 /*-
  * Copyright (c) 2007, 2017 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -99,6 +99,18 @@ libtool_mode(struct arglist *args)
 }
 #endif
 
+static void
+apply_sysroot(struct arglist *args)
+{
+	struct argument *arg;
+
+	if (sysroot == NULL)
+		return;
+
+	arg = argument_new(concat("--sysroot=", sysroot));
+	TAILQ_INSERT_HEAD(args, arg, link);
+}
+
 int
 main(int argc, char **argv)
 {
@@ -136,6 +148,13 @@ main(int argc, char **argv)
 	operation_mode_cc(&args);
 #endif
 	arglist_apply_config(&args);
+#if !defined(WRAPPER_LIBTOOL) && !defined(WRAPPER_SHLIBTOOL)
+	/*
+	 * The --sysroot argument will be applied only to the compiler
+	 * or linker that libtool invokes, not to libtool itself.
+	 */
+	apply_sysroot(&args);
+#endif
 #if defined(WRAPPER_LD)
 	normalise_ld(&args);
 #else
