@@ -1,8 +1,35 @@
-$NetBSD: README.Solaris,v 1.16 2021/11/23 09:10:03 schmonz Exp $
+$NetBSD: README.Solaris,v 1.17 2022/04/04 00:26:31 gdt Exp $
+
+This README describes pkgsrc on a variety of Solaris-derived operating
+systems.  It corresponds to pkgsrc/platform/SunOS.mk. The relevant
+operating systems are:
+  - Solaris (from Sun/Oracle, also Sun Solaris, Oracle Solaris)
+  - OpenSolaris (from Sun)
+  - illumos (open-source fork, OpenIndiana, SmartOS, and others)
+
+(pkgsrc is not currently known to work on SunOS 4.)
+
+Prerequisites
+-------------
 
 You will need a working C compiler. Any version of gcc >2.8 should
 work, 2.95.x and 3.x have been tested. SunPro 5 and 8 have been
 tested, but versions in between should work, too.
+
+Please note the use of GNU binutils on Solaris is not supported.
+
+Whichever compiler you use, please ensure the compiler tools and
+your $prefix are in your PATH. This includes /usr/ccs/{bin,lib}
+and e.g. /usr/pkg/{bin,sbin}.
+
+You should set the following variables in your mk.conf file:
+	CC= 	cc
+	CXX=	CC
+	CPP=	cc -E
+	CXXCPP=	CC -E
+
+To build 64-bit binaries, pass '--abi=64' to bootstrap, and also see the
+crle(1) man page to configure the runtime linking environment.
 
 The following packages are the minimum required on Solaris 8 to
 bootstrap and build packages.
@@ -16,8 +43,6 @@ bootstrap and build packages.
 
 Realistically you will need more, such as SUNWlibm, and SUNWlibC for
 C++ packages if you are using SunPro.
-
-Please note the use of GNU binutils on Solaris is not supported.
 
 pkgsrc in Solaris Zones
 -----------------------
@@ -42,6 +67,7 @@ Tested on OpenSolaris 5.11 snv_105 and pkgsrc bootstrap as at Jan 2009.
 
 If you are using gcc
 --------------------
+
 It makes life much simpler if you only use the same gcc consistently
 for building all packages.
 
@@ -64,6 +90,7 @@ http://www.sunfreeware.com/
 
 If you are using Sun WorkShop
 -----------------------------
+
 You will need at least the following packages installed to build C and
 C++ packages.
 
@@ -89,8 +116,23 @@ Sun ONE Studio 8:
 The corresponding 64-bit packages are also required to build 64-bit
 binaries and libraries.
 
-To build 64-bit binaries, pass '--abi=64' to bootstrap, and also see the
-crle(1) man page to configure the runtime linking environment.
+Oracle Studio 12 (IPS):
+
+	pkg:/developer/developerstudio-12[3-6]	studio
+	pkg:/system/library/studio-runtime	Runtime Support For Solaris Studio
+
+This will install the whole toolchain, along with the observability tools and
+the studio IDE.
+
+If you want to select individual packages, make sure to have runtime libraries
+installed. For instance, on Studio 12.6, you can do that with:
+
+   pkg install --accept developerstudio-126/library/c++-libs \
+        developerstudio-126/library/c-libs \
+        developerstudio-126/library/f90-libs \
+        developerstudio-126/library/math-libs \
+        developerstudio-126/library/perflib \
+        developerstudio-126/library/studio-gccrt
 
 pkgsrc defaults to finding the Sun compiler in /opt/SUNWspro.  If you use a
 different prefix, pass SUNWSPROBASE in the environment to bootstrap.  If 'cc'
@@ -101,21 +143,19 @@ bootstrap with a non-standard install:
 	    SUNWSPROBASE=/opt/studio12/SUNWspro \
 	    ./bootstrap --abi=64
 
+On Solaris 11:
+
+    env CC=/opt/developerstudio12.*/bin/cc \
+        SUNWSPROBASE=/opt/developerstudio12.* \
+        PKGSRC_COMPILER=sunpro \
+        ./bootstrap --abi=64
+
 When bootstrap is finished your default mk.conf will contain ABI and
 SUNWSPROBASE so you will not need to set these variables again.
 
-Whichever compiler you use, please ensure the compiler tools and
-your $prefix are in your PATH. This includes /usr/ccs/{bin,lib}
-and eg. /usr/pkg/{bin,sbin}.
-
-You should set the following variables in your mk.conf file:
-	CC= 	cc
-	CXX=	CC
-	CPP=	cc -E
-	CXXCPP=	CC -E
-
 Common problems
 ---------------
+
 Sometimes, when using libtool, /bin/ksh crashes with a segmentation fault. The
 workaround is to use another shell for the configure scripts, for example by
 installing shells/bash and adding the following lines to your mk.conf:
