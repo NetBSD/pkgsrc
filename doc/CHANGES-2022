@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1704 2022/04/04 09:47:13 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1705 2022/04/04 09:48:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2256,3 +2256,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/py-music21 to 7.3.1 [gutteridge 2022-04-04]
 	Updated x11/xload to 1.1.4 [wiz 2022-04-04]
 	Updated x11/xlsfonts to 1.0.7 [wiz 2022-04-04]
+	Updated x11/xsm to 1.0.5 [wiz 2022-04-04]
