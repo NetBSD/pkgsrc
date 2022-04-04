@@ -1,7 +1,7 @@
 Cross-compilation in pkgsrc (user's guide)              -*- outline -*-
 Taylor R. Campbell <riastradh@NetBSD.org>
 
-$NetBSD: HOWTO-use-crosscompile,v 1.9 2022/04/04 11:23:06 riastradh Exp $
+$NetBSD: HOWTO-use-crosscompile,v 1.10 2022/04/04 11:23:18 riastradh Exp $
 
 The following steps enable you to build binary packages for a machine
 architecture other than the one you are building on.  For example, you
@@ -53,20 +53,12 @@ In addition to whatever else you want in your mk.conf for pkgsrc, add:
    TOOLDIR=             /usr/obj/tooldir.NetBSD-6.1-amd64
    CROSS_DESTDIR=       /usr/obj/destdir.evbppc
 
-   .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
    # Specify the machine architecture of target packages.
    #
    # XXX This currently can't be set on the command line, which is a
    # bug.
+   .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
    MACHINE_ARCH=        powerpc
-
-   # Put target work and packages in separate directories.  (You might
-   # use OBJMACHINE=yes or WRKOBJDIR=/tmp/work.${MACHINE_ARCH} instead
-   # for the work directories.)
-   #
-   # XXX Should not need this.
-   PACKAGES=            ${PKGSRCDIR}/packages.${MACHINE_ARCH}
-   WRKDIR_BASENAME=     work.${MACHINE_ARCH}
    .endif
 
 You can bootstrap pkgsrc or not; it shouldn't make a difference for
