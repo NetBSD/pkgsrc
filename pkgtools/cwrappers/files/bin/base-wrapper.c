@@ -1,4 +1,4 @@
-/* $NetBSD: base-wrapper.c,v 1.7 2022/04/04 11:22:51 riastradh Exp $ */
+/* $NetBSD: base-wrapper.c,v 1.8 2022/04/04 11:54:35 ryoon Exp $ */
 
 /*-
  * Copyright (c) 2007, 2017 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -99,6 +99,7 @@ libtool_mode(struct arglist *args)
 }
 #endif
 
+#if !defined(WRAPPER_LIBTOOL) && !defined(WRAPPER_SHLIBTOOL)
 static void
 apply_sysroot(struct arglist *args)
 {
@@ -110,6 +111,7 @@ apply_sysroot(struct arglist *args)
 	arg = argument_new(concat("--sysroot=", sysroot));
 	TAILQ_INSERT_HEAD(args, arg, link);
 }
+#endif
 
 int
 main(int argc, char **argv)
