@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2022/04/03 22:13:17 wiz Exp $
+$NetBSD: distinfo,v 1.9 2022/04/04 09:56:42 wiz Exp $
 
 BLAKE2s (xclock-1.1.0.tar.xz) = 5421c4cf2f4e46dd6399e3f95ec64e8f4c050e044c3c978d41e35ecb70fa7cb9
 SHA512 (xclock-1.1.0.tar.xz) = 9456ed43cb8afce4a1f1c4edcb87bfb86f61fb54d1892f26812ed10662c9b8f8c28854934ce4eb981090d500fec0f295ba96df9867dd1685dc5f31202729a1a0
 Size (xclock-1.1.0.tar.xz) = 158984 bytes
-SHA1 (patch-Clock.c) = 3cea7082fc86b696cde8de0d5c6d6badd979cd2c
+SHA1 (patch-Clock.c) = c8f7bfdf297d00f051ffacfb7184c08197ce1846
