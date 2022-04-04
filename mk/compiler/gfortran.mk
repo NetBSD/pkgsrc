@@ -1,4 +1,4 @@
-# $NetBSD: gfortran.mk,v 1.19 2022/04/02 08:01:48 nia Exp $
+# $NetBSD: gfortran.mk,v 1.20 2022/04/04 15:38:47 jperkin Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -47,7 +47,7 @@ POSSIBLE_GFORTRAN_VERSION?=	${CC_VERSION:S/gcc-//:C/.[0-9].[0-9]$//}
 POSSIBLE_GFORTRAN_VERSION=	10
 .endif
 
-.if ${POSSIBLE_GFORTRAN_VERSION} <= 9 && \
+.if !empty(POSSIBLE_GFORTRAN_VERSION:M[0-9]) && \
     !empty(MACHINE_PLATFORM:MNetBSD-*-earm*)
 POSSIBLE_GFORTRAN_VERSION=	10
 .endif
