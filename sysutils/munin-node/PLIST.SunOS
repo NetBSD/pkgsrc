@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.SunOS,v 1.2 2020/04/09 15:00:47 tm Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.3 2022/04/04 11:46:02 jperkin Exp $
 lib/munin/plugins/cpu
 lib/munin/plugins/if_
 lib/munin/plugins/if_err_
@@ -6,12 +6,9 @@ lib/munin/plugins/io_busy_
 lib/munin/plugins/io_bytes_
 lib/munin/plugins/io_ops_
 lib/munin/plugins/iostat
-lib/munin/plugins/ipmi_
 lib/munin/plugins/load
 lib/munin/plugins/memory
-lib/munin/plugins/netopia
 lib/munin/plugins/paging_in
 lib/munin/plugins/paging_out
 lib/munin/plugins/temperature
 lib/munin/plugins/uptime
-lib/munin/plugins/users
