@@ -1,10 +1,15 @@
-$NetBSD: README.Minix3,v 1.2 2022/04/03 13:01:34 gdt Exp $
+$NetBSD: README.Minix3,v 1.3 2022/04/04 00:00:52 gdt Exp $
 
-2021Q4 is reported to work with Minix 3.4.0rc6.
+2022Q1 is reported to work with Minix 3.4.0rc6.
+
+A pre-bootstrapped version of pkg_install - working but out of
+date - is provided with the base system, with $prefix /usr/pkg.
+The system also comes with pkgin preinstalled. 
 
 Use the `pkgin_sets' script to install the toolchain (clang 3.6), and
-the developer tools.  This provides a pre-bootstrapped version of
-pkgsrc that is working but out of date.
+the developer tools, which includes bmake. You can type 'n' when pkgin
+asks for confirmation to skip the EXTRA_TOOLS set and avoid installing
+outdated packages.
 
 Then, one can update normally ("bmake update" has been reported to
 work).
