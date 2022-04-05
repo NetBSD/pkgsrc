@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2022/04/05 18:48:57 bacon Exp $
+
+BLAKE2s (fastx-toolkit-0.0.14.6-ea0ca83ba24dce80c20ca589b838a281fe5deb0c.tar.gz) = 973b56d722a2796aa28a04de56ef9273ce5a99fae5cf40bdbf9ef796acb2b6ef
+SHA512 (fastx-toolkit-0.0.14.6-ea0ca83ba24dce80c20ca589b838a281fe5deb0c.tar.gz) = bb9cc9685a37e0a88b5110ad48856d4160dc1a29e6b76f8cdf78baf12a9cea97c35f711b1aef270bba5d44b42c8e6bcc31ef9eae239de785fe1bd38cd4994d3e
+Size (fastx-toolkit-0.0.14.6-ea0ca83ba24dce80c20ca589b838a281fe5deb0c.tar.gz) = 259875 bytes
+SHA1 (patch-m4_Makefile.am) = f8cb138860f0a3708a6690ea6cd33302b35bce76
+SHA1 (patch-src_fasta__formatter_fasta__formatter.cpp) = 5fc622320186c5415cbcc4ae97cfc24f68983949
+SHA1 (patch-src_libfastx_fastx.h) = 5a387ac575a5269bc03e3f09ab752889efb8870c
