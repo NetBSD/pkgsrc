@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.92 2022/03/03 10:37:56 adam Exp $
+# $NetBSD: Makefile,v 1.93 2022/04/05 19:08:11 adam Exp $
 
-DISTNAME=	haproxy-2.5.4
+DISTNAME=	haproxy-2.5.5
 CATEGORIES=	net www
 MASTER_SITES=	https://www.haproxy.org/download/${PKGVERSION_NOREV:R}/src/
 
-MAINTAINER=	morr@NetBSD.org
+MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://www.haproxy.org/
 COMMENT=	Reliable, high performance TCP/HTTP load balancer
 LICENSE=	gnu-gpl-v2
