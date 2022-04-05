@@ -1,0 +1,19 @@
+$NetBSD: patch-config_util_Makefile.in,v 1.1 2022/04/05 10:00:21 riastradh Exp $
+
+Build makestrs as a tool to run during build.
+
+--- config/util/Makefile.in.orig	2017-12-05 12:49:57.000000000 +0000
++++ config/util/Makefile.in
+@@ -385,7 +385,11 @@ clean-noinstPROGRAMS:
+ 
+ makestrs$(EXEEXT): $(makestrs_OBJECTS) $(makestrs_DEPENDENCIES) $(EXTRA_makestrs_DEPENDENCIES) 
+ 	@rm -f makestrs$(EXEEXT)
+-	$(AM_V_CCLD)$(LINK) $(makestrs_OBJECTS) $(makestrs_LDADD) $(LIBS)
++	$(AM_V_CCLD)$(CC_FOR_BUILD) $(CFLAGS_FOR_BUILD) $(LDFLAGS_FOR_BUILD) -o $@ $(makestrs_OBJECTS) $(LIBS_FOR_BUILD)
++
++makestrs.$(OBJEXT): makestrs.c
++	$(AM_V_CC)$(CC_FOR_BUILD) $(CFLAGS_FOR_BUILD) $(CPPFLAGS_FOR_BUILD) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
++	$(AM_V_at)$(am__mv) $(DEPDIR)/$*.Tpo $(DEPDIR)/$*.Po
+ 
+ mostlyclean-compile:
+ 	-rm -f *.$(OBJEXT)
