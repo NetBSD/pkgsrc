@@ -1,17 +1,13 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 11:34:31 nia Exp $
+$NetBSD: distinfo,v 1.17 2022/04/05 15:51:57 jperkin Exp $
 
-BLAKE2s (vte-0.60.3.tar.xz) = 461043eadab4af4579353914eee51daeecb65ddd7d4fc402c499c192030ea7d2
-SHA512 (vte-0.60.3.tar.xz) = 3694fe711e0b3eb9d6ba37ad8036f5d3cca4265635ed7afcde750a8445b17f820d1c55b557d0ea1c8a5a45e5408915d8da2ffd65b4d397c6582f288812ae1f18
-Size (vte-0.60.3.tar.xz) = 535504 bytes
+BLAKE2s (vte-0.68.0.tar.gz) = 1583ddbed30f848687a1ce02df9d03ce89a5b905a72a9cd1d866195931acbcb1
+SHA512 (vte-0.68.0.tar.gz) = fb2260ae1363203cdccd0e0c6cafe29e5fb25947d2830a7ce1051f672fdc11c067791a8b74cb3017548e366976763fec2022e0c196ed501f46abb08876ad24d6
+Size (vte-0.68.0.tar.gz) = 641981 bytes
 SHA1 (patch-bindings_vala_app.vala) = 09444285f642ab48849bbbc1ae663bee3567b8d4
-SHA1 (patch-meson.build) = ac82a0168f221fb67839062cb9a832b542470616
-SHA1 (patch-src_app_app.cc) = ff76c74840342195a4d318418474f69e385f6571
-SHA1 (patch-src_decoder-cat.cc) = 438b934314a440f04ab586022fdb057b6512167b
+SHA1 (patch-meson.build) = 82125d3c18d848afffcb7a063c9e53ad8fd4ac62
+SHA1 (patch-src_app_app.cc) = 2548e01629aa563595387328638a52a5616ff0bd
 SHA1 (patch-src_dumpkeys.c) = 102f24d7404d46b13194f3431d0a864d480e5da7
 SHA1 (patch-src_meson.build) = a8e159688fb36e4cfac40249e279a670c9c6cda8
 SHA1 (patch-src_mev.c) = b38dc42e02a8d5fa1e579349319f0b8c8b31dbce
-SHA1 (patch-src_parser-cat.cc) = 2ee7d7113b4688a631021bcbef13ee6196f534e9
-SHA1 (patch-src_pty.cc) = a9f52d89f356eb0a34de90748a7881d34ae27f12
-SHA1 (patch-src_vte.cc) = 6f8c3a7d64be7a813b740d098d51e17d3187b2ce
-SHA1 (patch-src_vtedraw.cc) = 1deab7738ae7c7bbb53e5b951df4d8a6ad9312f9
-SHA1 (patch-src_widget.cc) = adcecb612c6a0945f13c26e3b6a89131bcab4b1f
+SHA1 (patch-src_pty.cc) = bf65a5384090772eafb441cd8d3aae4eb8383d5b
+SHA1 (patch-src_widget.cc) = cbc8b715b21248996bfb7c6abe355c5f4e510539
