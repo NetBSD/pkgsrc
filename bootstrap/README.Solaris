@@ -1,24 +1,22 @@
-$NetBSD: README.Solaris,v 1.20 2022/04/04 12:55:03 gdt Exp $
+$NetBSD: README.Solaris,v 1.21 2022/04/05 06:44:21 nia Exp $
 
 This README describes pkgsrc on a variety of Solaris-derived operating
 systems.  It corresponds to pkgsrc/platform/SunOS.mk.  The relevant
 operating systems are:
-  - Solaris (from Sun/Oracle, also Sun Solaris, Oracle Solaris)
-  - OpenSolaris (from Sun)
   - illumos (open-source fork, OpenIndiana, OmniOS, SmartOS, and others)
+  - Solaris (from Sun/Oracle, also Sun Solaris, Oracle Solaris)
+  - OpenSolaris (from Sun; superseded long ago by illumos)
 
-OpenSolaris has not been maintained for a very long time, so the only
-platforms of interest are Oracle Solaris and illumos distributions.
-As of 2022, pkgsrc is believed to work well on Oracle Solaris and
-illumos.  pkgsrc is not currently known to work on SunOS 4 or
-OpenSolaris.
+As of 2022, the primary platforms of interest where pkgsrc is known to
+work well are illumos distributions, Solaris 10, and Solaris 11.
+pkgsrc is not currently known to work on SunOS 4 or OpenSolaris.
 
 Prerequisites
 -------------
 
 You will need a working C compiler.  The two known options are gcc and
-Sun/Solaris Studio.  gcc can come from Sun, or other places.  On some
-systems, there is only one feasible choice.
+Sun/Solaris Studio.  gcc can come from the OS vendor, or other places.
+On some systems, there is only one feasible choice.
 
 As with pkgsrc on other platforms, one should use the same compiler
 family and ideally the same compiler version for building all packages.
@@ -78,7 +76,7 @@ Sun/Oracle toolchains on illumos.
 If you are using gcc
 --------------------
 
-See https://wiki.netbsd.org/pkgsrc/solarish/ for information about
+See https://wiki.NetBSD.org/pkgsrc/solarish/ for information about
 installing gcc on various illumos distributions.  One can use a
 distribution-provided gcc, or a gcc that has been built from sources.
 
