@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1711 2022/04/05 07:13:25 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1712 2022/04/05 07:25:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2265,3 +2265,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/py-redis to 4.2.2 [adam 2022-04-04]
 	Updated databases/py-pypika to 0.48.9 [adam 2022-04-04]
 	Updated wm/herbstluftwm to 0.9.4 [pin 2022-04-05]
+	Added devel/py-configupdater version 3.1 [adam 2022-04-05]
+	Added textproc/py-ini2toml version 0.10 [adam 2022-04-05]
+	Added textproc/py-validate-pyproject version 0.7.1 [adam 2022-04-05]
+	Updated devel/py-setuptools to 62.0.0 [adam 2022-04-05]
