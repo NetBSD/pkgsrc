@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.224 2022/03/31 18:10:52 wiz Exp $
+# $NetBSD: Makefile,v 1.225 2022/04/05 10:05:43 riastradh Exp $
 #
 # release notes
 # https://firefox-source-docs.mozilla.org/security/nss/releases/index.html
@@ -27,6 +27,50 @@ MAKE_JOBS_SAFE=		no
 BUILD_DIRS=		nss
 
 .include "../../mk/bsd.prefs.mk"
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+
+# nss doesn't really depend on nspr as a tool, but the
+# EXTRA_SHARED_LIBS we set there get passed through to the build of a
+# tool `nsinstall' and getting them to not be passed through is more
+# trouble than it is worth to nix this dependency.  (But if you feel
+# like going to the trouble to patch around it -- go for it!)
+TOOL_DEPENDS+=		nspr>=0:../../devel/nspr
+
+MAKE_FLAGS+=		CROSS_COMPILE=1
+MAKE_FLAGS+=		NATIVE_CC=${NATIVE_CC:Q}
+
+NSS_CPU_ARCH.aarch64eb=		aarch64
+NSS_CPU_ARCH.amd64=		x86_64
+NSS_CPU_ARCH.arm26?=		arm
+NSS_CPU_ARCH.arm32?=		arm
+NSS_CPU_ARCH.earm?=		arm
+NSS_CPU_ARCH.earmeb?=		arm
+NSS_CPU_ARCH.earmhf?=		arm
+NSS_CPU_ARCH.earmhfeb?=		arm
+NSS_CPU_ARCH.earmv4?=		arm
+NSS_CPU_ARCH.earmv4eb?=		arm
+NSS_CPU_ARCH.earmv5?=		arm
+NSS_CPU_ARCH.earmv5eb?=		arm
+NSS_CPU_ARCH.earmv6?=		arm
+NSS_CPU_ARCH.earmv6eb?=		arm
+NSS_CPU_ARCH.earmv6hf?=		arm
+NSS_CPU_ARCH.earmv6hfeb?=	arm
+NSS_CPU_ARCH.earmv7?=		arm
+NSS_CPU_ARCH.earmv7eb?=		arm
+NSS_CPU_ARCH.earmv7hf?=		arm
+NSS_CPU_ARCH.earmv7hfeb?=	arm
+NSS_CPU_ARCH.i386=		x86
+NSS_CPU_ARCH.i486=		x86
+NSS_CPU_ARCH.i586=		x86
+NSS_CPU_ARCH.i686=		x86
+NSS_CPU_ARCH.powerpc64=		ppc64
+NSS_CPU_ARCH.powerpc=		ppc
+
+NSS_CPU_ARCH=		${NSS_CPU_ARCH.${MACHINE_ARCH}:U${MACHINE_ARCH}}
+MAKE_FLAGS+=		CPU_ARCH=${NSS_CPU_ARCH:Q}
+
+.endif
 
 SUBST_CLASSES.Darwin+=		exec_path
 SUBST_STAGE.exec_path=		pre-configure
