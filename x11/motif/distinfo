@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:34:15 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/04/05 09:59:56 riastradh Exp $
 
 BLAKE2s (motif-2.3.8.tar.gz) = b82ee8dac7a840aaa0f364e5b5c018d053a1eb42433e52e5b54f7742d34cbb23
 SHA512 (motif-2.3.8.tar.gz) = 1ab8e8eece25ef97e948592b5fa3e19d98e932695290a18b7a8e90f1aa2766bc4f082bdbc3999dff5660e684821178a149040f76bb477163e53ca06474d02b55
@@ -10,9 +10,17 @@ SHA1 (patch-clients_uil_UilDiags.c) = 39ac8307219b435baf3d1bf829809fcb6536b1a9
 SHA1 (patch-doc_man_man3_Makefile.am) = b396f5e1235834f507a415c62b0efaa939943f1d
 SHA1 (patch-doc_man_man4_Makefile.am) = 154071494cf54a65e2e266861c81771a14156cae
 SHA1 (patch-doc_man_man5_Makefile.am) = 2f6e0cc239faf53e3391aef9da3def934023928e
+SHA1 (patch-lib_Xm_ColorS.c) = 62b25d550b76c01391e14b7ed9a19888e4ecec06
+SHA1 (patch-lib_Xm_DataF.c) = 1d0f55e0aef0621507af7c00eef1f3aeef7c0a4b
+SHA1 (patch-lib_Xm_Picture.c) = 2e47eff79c09cd0fc344da1d7c117591533d2ef5
+SHA1 (patch-lib_Xm_RepType.c) = 039b4ab7b0cee1c0de73794519c813b6e472fa0c
+SHA1 (patch-lib_Xm_ResConvert.c) = 24d527bcdc10cba749c1d1186d166214974d43e3
 SHA1 (patch-lib_Xm_Scale.c) = d78669a3332ab9d7dd140a1a1d9532e065573c7b
 SHA1 (patch-lib_Xm_TextF.c) = 1bd1801d708ff2c832c131c9954b3bbfd444ed42
+SHA1 (patch-lib_Xm_XmRenderT.c) = 674a0baae060fa32670cf38bd37323a206dd3f59
 SHA1 (patch-lib_Xm_Xmfuncs.h) = fef6a642988a8024da0bff00cdc40dc485695e2b
 SHA1 (patch-lib_Xm_Xmos.c) = 88af3627fad7c9ec40db0e8aca47e9617fe8c53b
 SHA1 (patch-lib_Xm_XpmI.h) = b27e0156bc2dd990a4d9642186b1638276054314
+SHA1 (patch-lib_Xm_Xpmparse.c) = 95eb0d2d59fcd8c3dd4c9622e17568b35ffbe133
+SHA1 (patch-lib_Xm_Xpmrgb.c) = 494506830c6e96bffe691b511ebe52dd0a1ac2ab
 SHA1 (patch-tools_wml_wmluiltok.l) = 1e79df5605ad8b25a55fbb617a707d27d27e3f2a
