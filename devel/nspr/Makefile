@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2021/12/17 19:13:48 wiz Exp $
+# $NetBSD: Makefile,v 1.117 2022/04/05 10:04:45 riastradh Exp $
 
 DISTNAME=	nspr-${NSPR_RELEASE:S/.0$//}
 NSPR_RELEASE=	4.33.0
@@ -30,6 +30,11 @@ CONFIGURE_ARGS+=	--with-pthreads
 CONFIGURE_ENV+=		LIBRUNPATH=${PREFIX:Q}/lib/nspr
 
 .include "../../mk/bsd.prefs.mk"
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+MAKE_FLAGS+=		HOST_CC=${NATIVE_CC:Q}
+MAKE_FLAGS+=		HOST_CXX=${NATIVE_CXX:Q}
+.endif
 
 BUILDLINK_TRANSFORM+=	rm:-Wall
 
