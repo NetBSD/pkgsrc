@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.106 2022/02/15 16:05:42 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2022/04/05 19:11:12 adam Exp $
 
-DISTNAME=	pytest-7.0.1
+DISTNAME=	pytest-7.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest/}
@@ -30,18 +30,18 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pygments>=2.7.2:../../textproc/py-pygments
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-xmlschema-[0-9]*:../../textproc/py-xmlschema
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+USE_LANGUAGES=	# none
+USE_TOOLS+=	bash:build
 
 USE_PKG_RESOURCES=	yes
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 .include "../../lang/python/pyversion.mk"
 
-.if ${PYPKGPREFIX} == "py37"
+.if ${_PYTHON_VERSION} == 37
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=0.12:../../devel/py-importlib-metadata
 .endif
-
-USE_LANGUAGES=	# none
-USE_TOOLS+=	bash:build
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
@@ -54,5 +54,5 @@ post-install:
 do-test:
 	cd ${WRKSRC}/testing && pytest-${PYVERSSUFFIX}
 
-.include "../../lang/python/wheel.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
