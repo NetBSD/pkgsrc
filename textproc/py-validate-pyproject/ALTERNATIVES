@@ -1,0 +1,1 @@
+bin/validate-pyproject @PREFIX@/bin/validate-pyproject-@PYVERSSUFFIX@
