@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1712 2022/04/05 07:25:44 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1713 2022/04/05 09:25:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2269,3 +2269,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added textproc/py-ini2toml version 0.10 [adam 2022-04-05]
 	Added textproc/py-validate-pyproject version 0.7.1 [adam 2022-04-05]
 	Updated devel/py-setuptools to 62.0.0 [adam 2022-04-05]
+	Updated multimedia/ffmpeg5 to 5.0.1 [adam 2022-04-05]
+	Updated multimedia/ffplay5 to 5.0.1 [adam 2022-04-05]
