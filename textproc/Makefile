@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1297 2022/03/29 20:28:51 wiz Exp $
+# $NetBSD: Makefile,v 1.1298 2022/04/05 07:15:09 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1016,6 +1016,7 @@ SUBDIR+=	py-html5-parser
 SUBDIR+=	py-html5lib
 SUBDIR+=	py-humanize
 SUBDIR+=	py-inflection
+SUBDIR+=	py-ini2toml
 SUBDIR+=	py-iniparse
 SUBDIR+=	py-isc_dhcp_leases
 SUBDIR+=	py-itemadapter
