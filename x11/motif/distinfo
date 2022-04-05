@@ -1,12 +1,16 @@
-$NetBSD: distinfo,v 1.12 2022/04/05 10:00:21 riastradh Exp $
+$NetBSD: distinfo,v 1.13 2022/04/05 10:01:06 riastradh Exp $
 
 BLAKE2s (motif-2.3.8.tar.gz) = b82ee8dac7a840aaa0f364e5b5c018d053a1eb42433e52e5b54f7742d34cbb23
 SHA512 (motif-2.3.8.tar.gz) = 1ab8e8eece25ef97e948592b5fa3e19d98e932695290a18b7a8e90f1aa2766bc4f082bdbc3999dff5660e684821178a149040f76bb477163e53ca06474d02b55
 Size (motif-2.3.8.tar.gz) = 5704328 bytes
 SHA1 (patch-Makefile.in) = 9f4573cd47989a821ea616df53da924766fe3d39
+SHA1 (patch-clients_mwm_WmMenu.c) = ce05e4c5650430501b6e1a54249e1a7df2cfc7ef
+SHA1 (patch-clients_mwm_WmResParse.c) = e0a4be8955d386114bb96f794ef2eb31496411aa
+SHA1 (patch-clients_mwm_WmXSMP.c) = ebe22e67a6550438289c70820dac67627e325082
 SHA1 (patch-clients_uil_UilDB.c) = 781b52e915e667eeb02359a51cfeefdb9556c4dd
 SHA1 (patch-clients_uil_UilDefI.h) = 6447a306809e65b4993d79e14a989a01aed2e0bc
 SHA1 (patch-clients_uil_UilDiags.c) = 39ac8307219b435baf3d1bf829809fcb6536b1a9
+SHA1 (patch-clients_uil_UilSymStor.c) = dbe0264118624f1184553e7696e4ee4f06f73db7
 SHA1 (patch-config_util_Makefile.in) = 38ee59c863c4fd1220850c9f35379d305611623a
 SHA1 (patch-doc_man_man3_Makefile.am) = b396f5e1235834f507a415c62b0efaa939943f1d
 SHA1 (patch-doc_man_man4_Makefile.am) = 154071494cf54a65e2e266861c81771a14156cae
