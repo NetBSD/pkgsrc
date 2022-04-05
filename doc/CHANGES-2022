@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1713 2022/04/05 09:25:02 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1714 2022/04/05 15:52:11 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2271,3 +2271,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-setuptools to 62.0.0 [adam 2022-04-05]
 	Updated multimedia/ffmpeg5 to 5.0.1 [adam 2022-04-05]
 	Updated multimedia/ffplay5 to 5.0.1 [adam 2022-04-05]
+	Updated x11/vte3 to 0.68.0 [jperkin 2022-04-05]
