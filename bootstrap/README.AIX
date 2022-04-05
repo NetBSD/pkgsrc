@@ -1,4 +1,16 @@
-$NetBSD: README.AIX,v 1.4 2007/10/02 18:29:55 heinz Exp $
+$NetBSD: README.AIX,v 1.5 2022/04/05 12:57:21 gdt Exp $
+
+In 2022-04, there was a report that pkgsrc-current fails to bootstrap
+on AIX 7.1 with gcc 8.3:
+  http://mail-index.netbsd.org/pkgsrc-users/2022/04/04/msg035424.html
+
+Ancient Information
+===================
+
+All of the below is from 2007 or earlier.
+
+Status
+-----
 
 pkgsrc has been tested on AIX 4.3 and 5.1. It will probably work on
 newer releases also.
@@ -11,6 +23,7 @@ not have GNU ld(1) in your path.
 
 If you are using gcc
 --------------------
+
 It makes life much simpler if you only use the same gcc consistently
 for building all packages.
 
