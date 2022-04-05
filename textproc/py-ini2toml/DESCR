@@ -1,0 +1,3 @@
+The original purpose of this project is to help migrating setup.cfg files to
+PEP 621, but by extension it can also be used to convert any compatible
+.ini/.cfg file to TOML.
