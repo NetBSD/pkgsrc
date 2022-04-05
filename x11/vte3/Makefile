@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.46 2022/03/30 10:02:26 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2022/04/05 15:51:57 jperkin Exp $
 
-DISTNAME=	vte-0.60.3
+DISTNAME=	vte-0.68.0
 PKGNAME=	${DISTNAME:S/vte/vte3/}
-PKGREVISION=	14
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vte/0.60/}
-EXTRACT_SUFX=	.tar.xz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
+GITHUB_PROJECT=	vte
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnome.org/
@@ -33,6 +33,7 @@ CONF_FILES+=		${PREFIX}/share/examples/profile.d/vte.csh \
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/profile.d
 
 PYTHON_FOR_BUILD_ONLY=	tool
+REPLACE_PYTHON=		src/*.py
 
 .include "options.mk"
 .include "../../devel/meson/build.mk"
@@ -42,7 +43,7 @@ PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-BUILDLINK_DEPMETHOD.vala?=	build
+.include "../../lang/python/tool.mk"
 .include "../../lang/vala/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
