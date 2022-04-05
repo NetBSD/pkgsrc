@@ -1,8 +1,8 @@
-$NetBSD: patch-src_widget.cc,v 1.1 2019/03/27 11:19:10 jperkin Exp $
+$NetBSD: patch-src_widget.cc,v 1.2 2022/04/05 15:51:58 jperkin Exp $
 
 Provide W_EXITCODE compat.
 
---- src/widget.cc.orig	2018-12-10 21:32:09.000000000 +0000
+--- src/widget.cc.orig	2022-03-27 17:52:19.000000000 +0000
 +++ src/widget.cc
 @@ -22,6 +22,10 @@
  
@@ -12,6 +12,6 @@ Provide W_EXITCODE compat.
 +#define W_EXITCODE(ret, sig)	((ret) << 8 | (sig))
 +#endif
 +
+ #include <exception>
  #include <new>
- #include <string>
- 
+ #include <stdexcept>
