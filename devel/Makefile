@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3708 2022/04/05 07:12:47 adam Exp $
+# $NetBSD: Makefile,v 1.3709 2022/04/05 18:41:47 bacon Exp $
 #
 
 COMMENT=	Development utilities
@@ -864,6 +864,7 @@ SUBDIR+=	libgnomeuimm
 SUBDIR+=	libgnt
 SUBDIR+=	libgphoto2
 SUBDIR+=	libgsf
+SUBDIR+=	libgtextutils
 SUBDIR+=	libgweather
 SUBDIR+=	libhandy
 SUBDIR+=	libhandy1
