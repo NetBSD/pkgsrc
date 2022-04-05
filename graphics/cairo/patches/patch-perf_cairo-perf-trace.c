@@ -1,0 +1,20 @@
+$NetBSD: patch-perf_cairo-perf-trace.c,v 1.1 2022/04/05 10:06:41 riastradh Exp $
+
+Fix ctype(3) abuse.
+
+--- perf/cairo-perf-trace.c.orig	2018-08-17 01:10:53.000000000 +0000
++++ perf/cairo-perf-trace.c
+@@ -409,11 +409,11 @@ read_excludes (cairo_perf_t *perf,
+ 
+ 	/* whitespace delimits */
+ 	s = line;
+-	while (*s != '\0' && isspace (*s))
++	while (*s != '\0' && isspace ((unsigned char)*s))
+ 	    s++;
+ 
+ 	t = s;
+-	while (*t != '\0' && ! isspace (*t))
++	while (*t != '\0' && ! isspace ((unsigned char)*t))
+ 	    t++;
+ 
+ 	if (s != t) {
