@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2020/11/17 12:05:01 nia Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/04/05 15:51:57 jperkin Exp $
 bin/vte-2.91
 include/vte-2.91/vte/vte.h
 include/vte-2.91/vte/vtedeprecated.h
@@ -8,17 +8,22 @@ include/vte-2.91/vte/vtemacros.h
 include/vte-2.91/vte/vtepty.h
 include/vte-2.91/vte/vteregex.h
 include/vte-2.91/vte/vteterminal.h
+include/vte-2.91/vte/vtetypebuiltins-gtk3.h
 include/vte-2.91/vte/vtetypebuiltins.h
 include/vte-2.91/vte/vteversion.h
 lib/girepository-1.0/Vte-2.91.typelib
 lib/libvte-2.91.so
 lib/libvte-2.91.so.0
-lib/libvte-2.91.so.0.6000.3
+lib/libvte-2.91.so.0.6800.0
 lib/pkgconfig/vte-2.91.pc
 libexec/vte-urlencode-cwd
 share/examples/profile.d/vte.csh
 share/examples/profile.d/vte.sh
 share/gir-1.0/Vte-2.91.gir
+share/glade/catalogs/vte-2.91.xml
+share/glade/pixmaps/hicolor/16x16/actions/widget-vte-terminal.png
+share/glade/pixmaps/hicolor/22x22/actions/widget-vte-terminal.png
+share/locale/ab/LC_MESSAGES/vte-2.91.mo
 share/locale/am/LC_MESSAGES/vte-2.91.mo
 share/locale/an/LC_MESSAGES/vte-2.91.mo
 share/locale/ang/LC_MESSAGES/vte-2.91.mo
