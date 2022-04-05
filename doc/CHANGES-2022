@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1715 2022/04/05 16:57:58 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1716 2022/04/05 17:19:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2273,3 +2273,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/ffplay5 to 5.0.1 [adam 2022-04-05]
 	Updated x11/vte3 to 0.68.0 [jperkin 2022-04-05]
 	Removed lang/nodejs10 [adam 2022-04-05]
+	Updated lang/nodejs12 to 12.22.12 [adam 2022-04-05]
+	Updated textproc/ugrep to 3.7.7 [adam 2022-04-05]
