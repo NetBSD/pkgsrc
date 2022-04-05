@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2022/04/05 09:59:56 riastradh Exp $
+$NetBSD: distinfo,v 1.12 2022/04/05 10:00:21 riastradh Exp $
 
 BLAKE2s (motif-2.3.8.tar.gz) = b82ee8dac7a840aaa0f364e5b5c018d053a1eb42433e52e5b54f7742d34cbb23
 SHA512 (motif-2.3.8.tar.gz) = 1ab8e8eece25ef97e948592b5fa3e19d98e932695290a18b7a8e90f1aa2766bc4f082bdbc3999dff5660e684821178a149040f76bb477163e53ca06474d02b55
@@ -7,6 +7,7 @@ SHA1 (patch-Makefile.in) = 9f4573cd47989a821ea616df53da924766fe3d39
 SHA1 (patch-clients_uil_UilDB.c) = 781b52e915e667eeb02359a51cfeefdb9556c4dd
 SHA1 (patch-clients_uil_UilDefI.h) = 6447a306809e65b4993d79e14a989a01aed2e0bc
 SHA1 (patch-clients_uil_UilDiags.c) = 39ac8307219b435baf3d1bf829809fcb6536b1a9
+SHA1 (patch-config_util_Makefile.in) = 38ee59c863c4fd1220850c9f35379d305611623a
 SHA1 (patch-doc_man_man3_Makefile.am) = b396f5e1235834f507a415c62b0efaa939943f1d
 SHA1 (patch-doc_man_man4_Makefile.am) = 154071494cf54a65e2e266861c81771a14156cae
 SHA1 (patch-doc_man_man5_Makefile.am) = 2f6e0cc239faf53e3391aef9da3def934023928e
@@ -23,4 +24,6 @@ SHA1 (patch-lib_Xm_Xmos.c) = 88af3627fad7c9ec40db0e8aca47e9617fe8c53b
 SHA1 (patch-lib_Xm_XpmI.h) = b27e0156bc2dd990a4d9642186b1638276054314
 SHA1 (patch-lib_Xm_Xpmparse.c) = 95eb0d2d59fcd8c3dd4c9622e17568b35ffbe133
 SHA1 (patch-lib_Xm_Xpmrgb.c) = 494506830c6e96bffe691b511ebe52dd0a1ac2ab
+SHA1 (patch-tools_wml_Makefile.in) = 766b58839ff92efc926e9aedac57c8da5f291933
+SHA1 (patch-tools_wml_wmldbcreate.c) = 72c7b768d960a41b6a3b9b4639f1fc042e3e9282
 SHA1 (patch-tools_wml_wmluiltok.l) = 1e79df5605ad8b25a55fbb617a707d27d27e3f2a

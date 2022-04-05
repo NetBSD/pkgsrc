@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2020/08/17 20:17:55 leot Exp $
+# $NetBSD: Makefile,v 1.18 2022/04/05 10:00:21 riastradh Exp $
 
 DISTNAME=		motif-2.3.8
 PKGREVISION=		1
@@ -49,7 +49,12 @@ CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 MAKE_FLAGS+=	CROSS_COMPILING=yes CC_FOR_BUILD=${NATIVE_CC:Q} \
-		CPPFLAGS_FOR_BUILD=-I${PREFIX}/include
+		CPPFLAGS_FOR_BUILD=-I${PREFIX:Q}/include \
+		LDFLAGS_FOR_BUILD=-L${PREFIX:Q}/lib\ ${COMPILER_RPATH_FLAG:Q}${PREFIX:Q}/lib \
+		LIBS_FOR_BUILD=-lXt
+CONFIGURE_ARGS.NetBSD+=	ac_cv_file__usr_X_include_X11_X_h=no
+CONFIGURE_ARGS.NetBSD+=	ac_cv_file__usr_X11R6_include_X11_X_h=no
+TOOL_DEPENDS+=		libXt>=0:../../x11/libXt
 .endif
 
 # 1) Fix the man pages to refer to the correct sections.
