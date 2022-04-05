@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/04/05 07:15:09 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/05 07:20:56 adam Exp $
 
 DISTNAME=	ini2toml-0.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-packaging>=20.7:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-configupdater>=3.0.1:../../devel/py-configupdater
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>0:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-validate-pyproject>=0.6:../../textproc/py-validate-pyproject
 
 USE_LANGUAGES=	# none
 
