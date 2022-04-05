@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/05 18:41:20 bacon Exp $
+include/gtextutils/gtextutils/container_join.h
+include/gtextutils/gtextutils/exit_manip.h
+include/gtextutils/gtextutils/inbuf1.hpp
+include/gtextutils/gtextutils/natsort.h
+include/gtextutils/gtextutils/outbuf3.hpp
+include/gtextutils/gtextutils/pipe_fitter.h
+include/gtextutils/gtextutils/stream_wrapper.h
+include/gtextutils/gtextutils/string_tokenize.h
+include/gtextutils/gtextutils/strnatcmp.h
+include/gtextutils/gtextutils/text_line_reader.h
+include/gtextutils/gtextutils/tuple_parser.h
+lib/libgtextutils.la
+lib/pkgconfig/gtextutils.pc

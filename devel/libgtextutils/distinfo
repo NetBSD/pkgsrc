@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/05 18:41:20 bacon Exp $
+
+BLAKE2s (libgtextutils-0.7.2-510270ecf2e342a81d5dffbf38505bfe18d23dca.tar.gz) = 8b5ce158e5081aae0da7349d90af8d2fb21087ea16c2c2af0a0470be714a9069
+SHA512 (libgtextutils-0.7.2-510270ecf2e342a81d5dffbf38505bfe18d23dca.tar.gz) = 5395ff3a3bd5e5f2baa7213e0df15b34ec13477491fd74fd0029b294c6760ed3ecd91363c4553addf67aba5e694a38dc7ea8664c4731b286b53c240716497f18
+Size (libgtextutils-0.7.2-510270ecf2e342a81d5dffbf38505bfe18d23dca.tar.gz) = 32601 bytes
