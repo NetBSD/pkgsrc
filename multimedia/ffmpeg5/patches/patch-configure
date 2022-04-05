@@ -1,14 +1,22 @@
-$NetBSD: patch-configure,v 1.1 2022/01/31 23:16:41 ryoon Exp $
+$NetBSD: patch-configure,v 1.2 2022/04/05 09:24:29 adam Exp $
 
 Sun audio support.
 
 Enable PIC and section_data_rel_ro on NetBSD, even on i386,
 to avoid text relocations.
 
+Fix install_name_dir on Darwin.
+
 Do not use 'rsync'.
 
---- configure.orig	2022-01-14 18:45:39.000000000 +0000
+--- configure.orig	2022-04-04 14:40:22.000000000 +0000
 +++ configure
+@@ -1,4 +1,4 @@
+-#!/bin/sh
++#!/dist/pkg/bin/mksh
+ #
+ # FFmpeg configure script
+ #
 @@ -2196,6 +2196,7 @@ HEADERS_LIST="
      sys_resource_h
      sys_select_h
@@ -43,6 +51,15 @@ Do not use 'rsync'.
          oss_indev_extralibs="-lossaudio"
          oss_outdev_extralibs="-lossaudio"
          enabled gcc || check_ldflags -Wl,-zmuldefs
+@@ -5516,7 +5520,7 @@ case $target_os in
+         ;;
+     darwin)
+         enabled ppc && add_asflags -force_cpusubtype_ALL
+-        install_name_dir_default='$(SHLIBDIR)'
++        install_name_dir_default=$shlibdir
+         SHFLAGS='-dynamiclib -Wl,-single_module -Wl,-install_name,$(INSTALL_NAME_DIR)/$(SLIBNAME_WITH_MAJOR),-current_version,$(LIBVERSION),-compatibility_version,$(LIBMAJOR)'
+         enabled x86_32 && append SHFLAGS -Wl,-read_only_relocs,suppress
+         strip="${strip} -x"
 @@ -5889,10 +5893,13 @@ done
  check_cc pragma_deprecated "" '_Pragma("GCC diagnostic ignored \"-Wdeprecated-declarations\"")'
  
@@ -68,7 +85,7 @@ Do not use 'rsync'.
  check_headers sys/param.h
  check_headers sys/resource.h
  check_headers sys/select.h
-@@ -6776,7 +6784,6 @@ enabled makeinfo \
+@@ -6783,7 +6791,6 @@ enabled makeinfo \
  disabled makeinfo_html && texi2html --help 2> /dev/null | grep -q 'init-file' && enable texi2html || disable texi2html
  perl -v            > /dev/null 2>&1 && enable perl      || disable perl
  pod2man --help     > /dev/null 2>&1 && enable pod2man   || disable pod2man
