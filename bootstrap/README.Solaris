@@ -1,4 +1,4 @@
-$NetBSD: README.Solaris,v 1.22 2022/04/05 06:57:48 nia Exp $
+$NetBSD: README.Solaris,v 1.23 2022/04/05 12:37:01 gdt Exp $
 
 This README describes pkgsrc on a variety of Solaris-derived operating
 systems.  It corresponds to pkgsrc/platform/SunOS.mk.  The relevant
@@ -42,7 +42,7 @@ C++ packages if you are using SunPro.
 
 Solaris Zones:
 
-If you are trying to bootstrap pkgsrc in a Solaris 10 Zone then you will
+If you are trying to bootstrap pkgsrc in a Solaris [8-10] Zone then you will
 need to install the following packages (assuming you will bootstrap using
 Sun's gcc package):
 
@@ -58,13 +58,32 @@ Sun's gcc package):
 	- SUNWloc
 	- SUNWsndm
 
+On illumos you can configure a ipkg or sparse branded zone to host your
+pkgsrc tree. Since the software database is generally managed
+independently from the host, the same essential development tools,
+required to deploy pkgsrc on the host distribution, need to be installed
+within the zone.
+
+OmniOS also provides pkgsrc branded zones. A pkgsrc zone is a sparse
+zone which is pre-configured to use Joyent’s binary package repository.
+Refer to https://omnios.org/setup/zones
+
 General
 ------
 
+Sun Solaris and Illumos come by default with a mixed {32,64}-bit
+userland.  This can include the compiler, which may shipped as a
+32-bit ELF.  In this case, the compiler by default will create 32-bit
+executables and shared libraries, unless told otherwise.
+
 To build 64-bit binaries, pass '--abi=64' to bootstrap, and also see
 the crle(1) man page to configure the runtime linking environment.
-(It is not clear if this is the default on sparc64/amd64, and if not,
-why not.)
+64-bit runtime libraries can be usually found at /usr/lib/amd64.
+NB: passing '-m64' to the compiler is not needed when using --abi=64.
+
+It is unclear whether --abi=64 is still a requirement on some modern
+illumos distributions, which provide a 64bit compiler. Joyent doesn't
+mention it in their pkgsrc bootstrap guide for SmartOS.
 
 Generally, illumos-based distributions come with gcc, and gcc is the
 standard approach.  As of 2022, there are no recent reports of using
@@ -73,10 +92,6 @@ Sun/Oracle toolchains on illumos.
 
 If you are using gcc
 --------------------
-
-See https://wiki.NetBSD.org/pkgsrc/solarish/ for information about
-installing gcc on various illumos distributions.  One can use a
-distribution-provided gcc, or a gcc that has been built from sources.
 
 If the gcc installation is not in your $PATH you will need to pass
 additional flags to bootstrap, for example:
@@ -89,17 +104,23 @@ It is recommended that an external gcc be used only for bootstrapping,
 and that you set USE_PKGSRC_GCC=yes in mk.conf so that the appropriate
 pkgsrc gcc is installed and used.
 
-Binary packages of gcc can be found through
-http://www.sunfreeware.com/
-[2020-04-04: This link appears no longer valid and is on a 30-day timer to be fixed or deleted.]
+Binary SVR4 packages of gcc can be found through:
+https://www.opencsw.org/get-it/packages/
+The CSW repo is most useful on Solaris 10, OpenSolaris and SXCE. 
 
+On Solaris 11 it is preferrable to install the IPS package for the
+preferred GCC version, available in the official repository. 
+
+See https://wiki.netbsd.org/pkgsrc/solarish/ for information about
+installing gcc on various illumos distributions.  One can use a
+distribution-provided gcc, or a gcc that has been built from sources.
 
 Alternatively, see https://pkgsrc.joyent.com/install-on-illumos/ for
 binary kits and initial packages (including gcc) that run on illumos
 variants.
 
 
-If you are using Sun Studio
+If you are using Solaris Studio
 ---------------------------
 
 This section describes the use of Sun-provided compilers, variously
@@ -107,16 +128,21 @@ termed WorkShop and Studio.
 
 You must ensure that the compiler tools and your $prefix are in your
 PATH.  This includes /usr/ccs/{bin,lib} and e.g. /usr/pkg/{bin,sbin}.
-Set the following variables in your mk.conf file:
+
+Usually, passing 'env CC=cc PKGSRC_COMPILER=sunpro' should be enough to
+use Solaris Studio. Additional compiler settings will be generated
+automatically by the boostrap process and written to $PREFIX/etc/mk.conf   
+
+In the past, however, the following mk.conf variables have been
+recommended:
+
 	CC= 	cc
 	CXX=	CC
 	CPP=	cc -E
 	CXXCPP=	CC -E
+
 NB: The make variable CC holds the command for the C compiler, and the
 command for the C++ compiler is CC.
-[It is not clear if one needs to specify these variables to bootstrap
-or not, and if so, whether they are in the generated mk.conf,a nd if
-not, why not.]
 
 The following indented sections provide a list of Solaris packages
 that must be installed in order for pkgsrc to build C and C++
