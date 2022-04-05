@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21663 2022/04/03 18:34:07 wiz Exp $
+$NetBSD: TODO,v 1.21664 2022/04/05 15:52:12 jperkin Exp $
 
 Suggested new packages
 ======================
@@ -1790,7 +1790,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o vms-empire-1.16
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vnstat-2.6
-	o vte3-0.68.0
 	o wMosaic-3.8.22
 	o wandio-4.2.3
 	o wap-utils-1.4.1
