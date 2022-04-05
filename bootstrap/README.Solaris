@@ -1,9 +1,9 @@
-$NetBSD: README.Solaris,v 1.21 2022/04/05 06:44:21 nia Exp $
+$NetBSD: README.Solaris,v 1.22 2022/04/05 06:57:48 nia Exp $
 
 This README describes pkgsrc on a variety of Solaris-derived operating
 systems.  It corresponds to pkgsrc/platform/SunOS.mk.  The relevant
 operating systems are:
-  - illumos (open-source fork, OpenIndiana, OmniOS, SmartOS, and others)
+  - illumos (open source fork, OpenIndiana, OmniOS, SmartOS, and others)
   - Solaris (from Sun/Oracle, also Sun Solaris, Oracle Solaris)
   - OpenSolaris (from Sun; superseded long ago by illumos)
 
@@ -16,7 +16,10 @@ Prerequisites
 
 You will need a working C compiler.  The two known options are gcc and
 Sun/Solaris Studio.  gcc can come from the OS vendor, or other places.
-On some systems, there is only one feasible choice.
+On some systems, it may only be possible to use the vendor gcc, or
+there might be no vendor gcc available by default.  In general, there's
+better support for gcc in third-party software, and much better support
+for gcc on illumos.
 
 As with pkgsrc on other platforms, one should use the same compiler
 family and ideally the same compiler version for building all packages.
@@ -39,10 +42,7 @@ C++ packages if you are using SunPro.
 
 Solaris Zones:
 
-(It is not clear if this is really about zones, or is just a different
-prereq list for a particular variant.)
-
-If you are trying to bootstrap pkgsrc in a Solaris Zone then you will
+If you are trying to bootstrap pkgsrc in a Solaris 10 Zone then you will
 need to install the following packages (assuming you will bootstrap using
 Sun's gcc package):
 
@@ -57,8 +57,6 @@ Sun's gcc package):
 	- SUNWlibm
 	- SUNWloc
 	- SUNWsndm
-
-Tested on OpenSolaris 5.11 snv_105 and pkgsrc bootstrap as at Jan 2009.
 
 General
 ------
