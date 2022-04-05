@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/05 07:12:47 adam Exp $
+
+BLAKE2s (ConfigUpdater-3.1.tar.gz) = ea30ee389db824ad197f8ee5a6546e255386fa16f87cd5be0c1f2e49964e7baa
+SHA512 (ConfigUpdater-3.1.tar.gz) = 1542236eeb760d3f5f38b7cc194093b6c16d6c7a42ce35dc209665ccddd0ecd3ae16a8fc3dbba06580993ec6152f93624e6603c62d53913bb93a1a76a3fa8b87
+Size (ConfigUpdater-3.1.tar.gz) = 139877 bytes
