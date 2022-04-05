@@ -1,0 +1,14 @@
+$NetBSD: patch-m4_Makefile.am,v 1.1 2022/04/05 18:48:57 bacon Exp $
+
+Do not install unrelated m4 files.
+
+--- m4/Makefile.am.orig	2017-08-14 18:08:32.000000000 +0000
++++ m4/Makefile.am
+@@ -17,6 +17,6 @@ m4macros = ax_c_long_long.m4 \
+ 	   ax_cxx_header_stdcxx_tr1.m4
+ 
+ # The following is boilerplate
+-m4data_DATA = $(m4macros) 
++#m4data_DATA = $(m4macros) 
+ EXTRA_DIST = $(m4data_DATA) 
+ 
