@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3707 2022/04/03 16:11:01 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3708 2022/04/05 07:12:47 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2362,6 +2362,7 @@ SUBDIR+=	py-compizconfig
 SUBDIR+=	py-configargparse
 SUBDIR+=	py-configobj
 SUBDIR+=	py-configparser
+SUBDIR+=	py-configupdater
 SUBDIR+=	py-confuse
 SUBDIR+=	py-constantly
 SUBDIR+=	py-constants
