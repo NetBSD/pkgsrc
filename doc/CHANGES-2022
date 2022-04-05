@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1717 2022/04/05 18:41:27 bacon Exp $
+$NetBSD: CHANGES-2022,v 1.1718 2022/04/05 18:49:05 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2276,3 +2276,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/nodejs12 to 12.22.12 [adam 2022-04-05]
 	Updated textproc/ugrep to 3.7.7 [adam 2022-04-05]
 	Added devel/libgtextutils version 0.7.2 [bacon 2022-04-05]
+	Added biology/fastx-toolkit version 0.0.14.6 [bacon 2022-04-05]
