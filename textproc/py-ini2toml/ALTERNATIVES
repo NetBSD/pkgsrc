@@ -1,0 +1,1 @@
+bin/ini2toml @PREFIX@/bin/ini2toml-@PYVERSSUFFIX@
