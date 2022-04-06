@@ -1,0 +1,40 @@
+$NetBSD: patch-Makefile,v 1.1 2022/04/06 16:32:21 nia Exp $
+
+pkgsrc-friendly install path that doesn't depend on GNU-like
+install(1).
+
+--- Makefile.orig	2020-12-20 06:54:49.000000000 +0000
++++ Makefile
+@@ -34,22 +34,22 @@ $(PLUGINS): libs
+ # --------------------------------------------------------------
+ 
+ install: all
+-	install -d $(DESTDIR)$(PREFIX)/$(LIBDIR)/ladspa \
+-		$(DESTDIR)$(PREFIX)/$(LIBDIR)/lv2 \
+-		$(DESTDIR)$(PREFIX)/$(LIBDIR)/vst \
+-		$(DESTDIR)$(PREFIX)/$(BINDIR) ; \
++	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(PREFIX)/$(LIBDIR)/ladspa
++	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(PREFIX)/$(LIBDIR)/lv2
++	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(PREFIX)/$(LIBDIR)/vst
++	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(PREFIX)/$(BINDIR)
+ 	for plugin in $(PLUGINS); do \
+-		install -d $(DESTDIR)$(PREFIX)/$(LIBDIR)/lv2/"$$plugin".lv2 ; \
+-		install -t $(DESTDIR)$(PREFIX)/$(LIBDIR)/lv2/"$$plugin".lv2 \
+-			bin/"$$plugin".lv2/* ; \
++		$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(PREFIX)/$(LIBDIR)/lv2/"$$plugin".lv2 ; \
++		$(BSD_INSTALL_LIB) bin/"$$plugin".lv2/* \
++			$(DESTDIR)$(PREFIX)/$(LIBDIR)/lv2/"$$plugin".lv2  ;\
+ 	done;
+ ifeq ($(HAVE_JACK),true)
+ 	for plugin in $(PLUGINS); do \
+-		install -t $(DESTDIR)$(PREFIX)/$(BINDIR) bin/"$$plugin" ; \
++		$(BSD_INSTALL_LIB) bin/"$$plugin" $(DESTDIR)$(PREFIX)/$(BINDIR)  ; \
+ 	done;
+ endif
+-	install -t $(DESTDIR)$(PREFIX)/$(LIBDIR)/ladspa bin/*-ladspa.so
+-	install -t $(DESTDIR)$(PREFIX)/$(LIBDIR)/vst bin/*-vst.so
++	$(BSD_INSTALL_LIB) bin/*-ladspa.so $(DESTDIR)$(PREFIX)/$(LIBDIR)/ladspa
++	$(BSD_INSTALL_LIB) bin/*-vst.so $(DESTDIR)$(PREFIX)/$(LIBDIR)/vst
+ 
+ uninstall:
+ 	for plugin in $(PLUGINS); do \
