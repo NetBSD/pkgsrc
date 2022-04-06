@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2022/03/14 10:18:08 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2022/04/06 09:55:37 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	anyhow-1.0.56
 CARGO_CRATE_DEPENDS+=	autocfg-1.1.0
@@ -8,7 +8,6 @@ CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	clap-3.1.6
 CARGO_CRATE_DEPENDS+=	clap_derive-3.1.4
 CARGO_CRATE_DEPENDS+=	filetime-0.2.15
-CARGO_CRATE_DEPENDS+=	getrandom-0.1.16
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.5
 CARGO_CRATE_DEPENDS+=	hashbrown-0.11.2
 CARGO_CRATE_DEPENDS+=	heck-0.4.0
@@ -24,24 +23,19 @@ CARGO_CRATE_DEPENDS+=	proc-macro-error-1.0.4
 CARGO_CRATE_DEPENDS+=	proc-macro-error-attr-1.0.4
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.36
 CARGO_CRATE_DEPENDS+=	quote-1.0.15
-CARGO_CRATE_DEPENDS+=	rand-0.7.3
 CARGO_CRATE_DEPENDS+=	rand-0.8.5
-CARGO_CRATE_DEPENDS+=	rand_chacha-0.2.2
 CARGO_CRATE_DEPENDS+=	rand_chacha-0.3.1
-CARGO_CRATE_DEPENDS+=	rand_core-0.5.1
 CARGO_CRATE_DEPENDS+=	rand_core-0.6.3
-CARGO_CRATE_DEPENDS+=	rand_hc-0.2.0
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.2.11
 CARGO_CRATE_DEPENDS+=	ryu-1.0.9
 CARGO_CRATE_DEPENDS+=	serde-1.0.136
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.136
 CARGO_CRATE_DEPENDS+=	serde_json-1.0.79
 CARGO_CRATE_DEPENDS+=	syn-1.0.86
-CARGO_CRATE_DEPENDS+=	test_dir-0.1.0
+CARGO_CRATE_DEPENDS+=	test_dir-0.2.0
 CARGO_CRATE_DEPENDS+=	textwrap-0.15.0
 CARGO_CRATE_DEPENDS+=	unicode-xid-0.2.2
 CARGO_CRATE_DEPENDS+=	version_check-0.9.4
-CARGO_CRATE_DEPENDS+=	wasi-0.9.0+wasi-snapshot-preview1
 CARGO_CRATE_DEPENDS+=	wasi-0.10.2+wasi-snapshot-preview1
 CARGO_CRATE_DEPENDS+=	winapi-0.3.9
 CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
