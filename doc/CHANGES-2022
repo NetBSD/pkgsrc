@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1731 2022/04/06 22:41:45 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1732 2022/04/06 22:46:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2296,3 +2296,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/lurch-purple to 0.7.0 [gdt 2022-04-06]
 	Added editors/emacs28 version 28.1 [wiz 2022-04-06]
 	Added editors/emacs28-nox11 version 28.1 [wiz 2022-04-06]
+	Updated fonts/noto-emoji-ttf to 2.034 [wiz 2022-04-06]
