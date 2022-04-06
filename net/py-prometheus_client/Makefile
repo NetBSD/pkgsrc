@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2022/01/04 20:54:30 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/04/06 09:28:38 adam Exp $
 
-DISTNAME=	prometheus_client-0.12.0
+DISTNAME=	prometheus_client-0.14.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/prometheus_client/}
 
@@ -12,6 +11,8 @@ COMMENT=	Prometheus instrumentation library for Python applications
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
