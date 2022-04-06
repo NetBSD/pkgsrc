@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.309 2022/04/03 20:46:11 tnn Exp $
+# $NetBSD: bootstrap,v 1.310 2022/04/06 13:06:09 schmonz Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -594,7 +594,8 @@ Darwin)
 	macos_version=`sw_vers -productVersion | \
 	    awk -F. '{ printf("%02d%02d", $1, $2) }'`
 
-	# Newer native sed does not support multibyte correctly.
+	# Since 10.9, native sed exits when called on files with UTF-8
+	# or other apparently-binary content.
 	if [ $macos_version -ge 1008 ]; then
 		need_awk=yes
 		need_sed=yes
