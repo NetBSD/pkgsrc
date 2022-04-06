@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2022/02/19 09:57:51 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/04/06 18:16:13 brook Exp $
 
 BLAKE2s (mariadb-10.5.15.tar.gz) = 947a7041705c273ca23d5882a1378077701fe7ab3b8e02a2914b5a96b9258853
 SHA512 (mariadb-10.5.15.tar.gz) = ea3d99fd9ad8adc8187fb5d722ff16cde90c7cca4b3572e410814ae39e0246b7a83b4dc1e72f95de58c1c12a9563fb524dcca2dd1fb8f595cc41625a2fb0af76
@@ -6,6 +6,7 @@ Size (mariadb-10.5.15.tar.gz) = 102803624 bytes
 SHA1 (patch-BUILD_compile-pentium32-gcov) = 89a7da728f94f19c153b4d2d2d6ba5462acc941f
 SHA1 (patch-CMakeLists.txt) = 893f329ed03e01144df166debb4d902ad0304811
 SHA1 (patch-client_CMakeLists.txt) = 8fdd8a182304f0b84e120ce95334ace23d02ce88
+SHA1 (patch-client_mysql.cc) = 89fe80fb66b8791131a8c6d1b209e57082804a01
 SHA1 (patch-extra_wolfssl_wolfssl_certs_intermediate_genintcerts.sh) = cd9a982889b88f811c3e14ebdf9795b0fa5d1fad
 SHA1 (patch-include_my__global.h) = a3b831f91ba2efea9f78e70ab4f706da23b80403
 SHA1 (patch-mysys_my__context.c) = f9c7e6b3b68b857e7781cf5f36c49e88051cfb66
