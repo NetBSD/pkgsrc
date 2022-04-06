@@ -1,0 +1,15 @@
+$NetBSD: patch-dpf_utils_lv2-ttl-generator_GNUmakefile,v 1.1 2022/04/06 16:32:21 nia Exp $
+
+Only use libdl on Linux.
+
+--- dpf/utils/lv2-ttl-generator/GNUmakefile.orig	2020-07-18 12:07:33.000000000 +0000
++++ dpf/utils/lv2-ttl-generator/GNUmakefile
+@@ -14,7 +14,7 @@ build: ../lv2_ttl_generator.exe
+ 
+ else # WINDOWS
+ 
+-ifneq ($(HAIKU),true)
++ifeq ($(LINUX),true)
+ LDFLAGS += -ldl
+ endif
+ 
