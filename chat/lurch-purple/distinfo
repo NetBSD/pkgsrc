@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:05:20 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/06 19:53:52 gdt Exp $
 
-BLAKE2s (lurch-0.6.8-src.tar.gz) = dd64cc511c71d9616a31d09b57ae6979933adfe08e95ddba084082f9755c5e3e
-SHA512 (lurch-0.6.8-src.tar.gz) = 8b93523049d05a00f1d7286ec9d0d8d03c7ae46793ac72ea08c0d12cb5193324be4805fb6278d6c0f906d9c63db9d7ce6ca2a21442236df51e0ee0b48de6ef1d
-Size (lurch-0.6.8-src.tar.gz) = 398267 bytes
-SHA1 (patch-Makefile) = f2e73ad5cf22ff9f700f87d5d2664aaea2addf8b
+BLAKE2s (lurch-0.7.0-src.tar.gz) = 2ceea74cd5e6360c91a014be081b894c265b58b59a0e42a46f2d14736572b8fe
+SHA512 (lurch-0.7.0-src.tar.gz) = ae45963313d2e145ac801fe1bb99f596dae69c8b44fdb71cdfcd5a8a81614960ba2010bc00fa84300019947f23965fc1dc6868f2bb0c045e83fb4f1dac690fa7
+Size (lurch-0.7.0-src.tar.gz) = 401110 bytes
+SHA1 (patch-Makefile) = ee55fe2fce1c75610b5f884dc397765bf6596af0
