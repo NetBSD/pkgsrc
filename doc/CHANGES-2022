@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1720 2022/04/05 20:49:47 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.1721 2022/04/06 06:00:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2280,3 +2280,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/haproxy to 2.5.5 [adam 2022-04-05]
 	Updated devel/py-test to 7.1.1 [adam 2022-04-05]
 	Updated shells/fish to 3.4.1 [bsiegert 2022-04-05]
+	Added textproc/py-typogrify version 2.0.7 [wiz 2022-04-06]
