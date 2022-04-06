@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1299 2022/04/05 07:17:31 adam Exp $
+# $NetBSD: Makefile,v 1.1300 2022/04/06 06:00:30 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1132,6 +1132,7 @@ SUBDIR+=	py-toml
 SUBDIR+=	py-tomli
 SUBDIR+=	py-tomli_w
 SUBDIR+=	py-tomlkit
+SUBDIR+=	py-typogrify
 SUBDIR+=	py-ujson
 SUBDIR+=	py-uritemplate
 SUBDIR+=	py-validate-pyproject
