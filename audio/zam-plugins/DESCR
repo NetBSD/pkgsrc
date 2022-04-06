@@ -1,0 +1,22 @@
+zam-plugins is a collection of LV2/LADSPA/VST/JACK audio plugins for sound
+processing. It includes:
+
+* ZaMaximX2: brickwall limiter for mastering.
+* ZamAutoSat: automatic saturation plugin.
+* ZamComp: powerful mono compressor strip.
+* ZamCompX2: stereo version of ZamComp with knee slew control.
+* ZamEQ2: two band parametric equaliser with high and low shelving circuits.
+* ZamGEQ31: 31 band graphic equaliser.
+* ZamPhono: collection of phono filters for restoring vinyl records, or
+  preparing to cut new ones.
+* ZamGate: gate plugin for ducking low gain sounds.
+* ZamGateX2: gate plugin for ducking low gain sounds, stereo version.
+* ZamTube: distortion effect. wave digital filter physical model of a triode
+  tube amplifier stage, with modelled tone stacks from real guitar amplifiers.
+* ZamDelay: simple feedback delay unit with sync-to-host BPM feature and
+  filter.
+* ZamDynamicEQ: dynamic equalizer that changes its gain based on detecting
+  a narrow band of frequencies.
+* ZaMultiComp: mono multiband compressor, with 3 adjustable bands.
+* ZaMultiCompX2: stereo version of ZaMultiComp, with individual threshold
+  controls for each band and real-time visualisation of comp curves.
