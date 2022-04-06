@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1724 2022/04/06 09:55:58 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1725 2022/04/06 14:50:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2285,3 +2285,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-ujson to 5.2.0 [adam 2022-04-06]
 	Updated net/py-prometheus_client to 0.14.0 [adam 2022-04-06]
 	Updated sysutils/bkt to 0.5.4 [pin 2022-04-06]
+	Updated net/rabbitmq to 3.9.14 [adam 2022-04-06]
+	Updated textproc/ugrep to 3.7.8 [adam 2022-04-06]
