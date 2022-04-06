@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1723 2022/04/06 09:28:54 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1724 2022/04/06 09:55:58 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2284,3 +2284,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/py-gi-docgen version 2022.1 [wiz 2022-04-06]
 	Updated textproc/py-ujson to 5.2.0 [adam 2022-04-06]
 	Updated net/py-prometheus_client to 0.14.0 [adam 2022-04-06]
+	Updated sysutils/bkt to 0.5.4 [pin 2022-04-06]
