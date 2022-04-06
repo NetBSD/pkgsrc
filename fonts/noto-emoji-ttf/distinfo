@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:27:20 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/06 22:46:13 wiz Exp $
 
-BLAKE2s (noto-emoji-ttf-1.05/NotoEmoji-Regular-2f1ffdd6fbbd05d6f382138a3d3adcd89c5ce800.tar.gz) = f67dd660d075ac4a2a2091d477778ebccbb54003cb1840b0292936273c8c7d7a
-SHA512 (noto-emoji-ttf-1.05/NotoEmoji-Regular-2f1ffdd6fbbd05d6f382138a3d3adcd89c5ce800.tar.gz) = 496a9449da24513b73c65d6a6663766be851f910dc6c822c1cf1c80bded36b65484008e5a6a61388aeec97b7786042be29664abc3ca1d73da6354282fbd90a1d
-Size (noto-emoji-ttf-1.05/NotoEmoji-Regular-2f1ffdd6fbbd05d6f382138a3d3adcd89c5ce800.tar.gz) = 14472470 bytes
+BLAKE2s (noto-emoji-2.034.tar.gz) = 4b7f75bb2a2d6968e7d47d5d50f6889315d6dc68d590b79cf0f1df9c2797b82b
+SHA512 (noto-emoji-2.034.tar.gz) = a7ea0c33f4703749d8a30f4be2fac5971429dcec7b6feed2645854d9ae1eebb428597a56ad148c3732e320a65d4133da30c0003ed39f07c5270462e31fdf3d0b
+Size (noto-emoji-2.034.tar.gz) = 170352518 bytes
