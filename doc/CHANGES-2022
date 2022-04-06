@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1726 2022/04/06 15:20:05 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1727 2022/04/06 16:32:33 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2291,3 +2291,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-ipykernel to 6.12.1 [adam 2022-04-06]
 	Updated parallel/py-ipyparallel to 8.2.1 [adam 2022-04-06]
 	Updated devel/py-prompt_toolkit to 3.0.29 [adam 2022-04-06]
+	Added audio/zam-plugins version 3.14 [nia 2022-04-06]
