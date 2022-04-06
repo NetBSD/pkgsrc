@@ -1,4 +1,4 @@
-$NetBSD: README.macOS,v 1.5 2021/02/10 17:30:20 gdt Exp $
+$NetBSD: README.macOS,v 1.6 2022/04/06 13:06:09 schmonz Exp $
 
 This file describes the use of current versions of pkgsrc with
 multiple versions of Darwin and macOS, omitting information about
@@ -108,12 +108,6 @@ an error with architecture mismatch from pkg_install requiring a "-f"
 option.  Repeatable data about recovery is somewhat hard to obtain, as
 most are past this issue already and no longer interested in
 experimenting.)
-
-** sed in 10.9
-
-The sed that comes with 10.9 appears to be broken; it exits when
-called on files with UTF-8 or other apparently-binary content.
-Therefore, pkgsrc uses nbsed on 10.9.
 
 * Developer tools and prerequisites
 
