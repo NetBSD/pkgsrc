@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1722 2022/04/06 06:03:18 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1723 2022/04/06 09:28:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2282,3 +2282,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated shells/fish to 3.4.1 [bsiegert 2022-04-05]
 	Added textproc/py-typogrify version 2.0.7 [wiz 2022-04-06]
 	Added devel/py-gi-docgen version 2022.1 [wiz 2022-04-06]
+	Updated textproc/py-ujson to 5.2.0 [adam 2022-04-06]
+	Updated net/py-prometheus_client to 0.14.0 [adam 2022-04-06]
