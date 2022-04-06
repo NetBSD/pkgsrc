@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1728 2022/04/06 19:33:48 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.1729 2022/04/06 19:53:59 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2293,3 +2293,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-prompt_toolkit to 3.0.29 [adam 2022-04-06]
 	Added audio/zam-plugins version 3.14 [nia 2022-04-06]
 	Updated devel/wabt to 1.0.28 [fcambus 2022-04-06]
+	Updated chat/lurch-purple to 0.7.0 [gdt 2022-04-06]
