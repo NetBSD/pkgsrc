@@ -1,29 +1,26 @@
-$NetBSD: README.OpenBSD,v 1.11 2021/02/10 21:47:15 cjep Exp $
+$NetBSD: README.OpenBSD,v 1.12 2022/04/06 00:23:30 schmonz Exp $
 
 Please read the general README file as well.
 
-Care should be taken so that the tools that this kit installs do not conflict
-with the OpenBSD userland tools. There are several steps:
+bootstrap-pkgsrc installs several tools whose names happen to match
+programs already provided by OpenBSD. The two sets of package tools are
+not interchangeable, so you'll need to decide which ones should appear
+earlier in your PATH -- probably pkgsrc paths before system ones.
 
-1. If you do not intend to use the OpenBSD ports tools, it's probably a
-good idea to move them out of the way to avoid confusion, e.g.:
-	cd /usr/sbin
-	mv pkg_add pkg_add.orig
-	mv pkg_create pkg_create.orig
-	mv pkg_delete pkg_delete.orig
-	mv pkg_info pkg_info.orig
+Once that's settled, you might think about moving OpenBSD's native
+package tools out of the way so they can't get invoked by mistake,
+perhaps like so:
 
-2. The bootstrap script will create an initial mk.conf file located in
-in your target pkgsrc directory. It contains the settings you provided to 
-bootstrap. The bootstrap will tell you where it is when it completes.
+	# cd /usr/sbin && for i in pkg_*; do mv $i $i.orig; done
 
-3. It's possible to use pkgsrc libraries instead of system libraries. For
-example, to use OpenSSL, you can use:
-	./bootstrap --prefer-pkgsrc=openssl
-Or after a bootstrap, you can add the following line to $prefix/etc/mk.conf:
-	PREFER.openssl=pkgsrc
+But you probably don't want to do this, because it would (for instance)
+also prevent OpenBSD's pkg_add(1) from being invoked on purpose by
+fw_update(1).
 
-The bootstrap has been tested on OpenBSD 6.8 (amd64, sparc64, i386). It
-has also been tested on these platforms with 6.9-beta and there should be
-no reason why it won't work on 6.9 when it is released.  Previously it 
-has been used on 5.5 (sparc64), 5.6 (amd64, sparc64) and 3.0.
+bootstrap-pkgsrc has been tested on OpenBSD 7.0 (amd64, i386) with the
+system-provided clang. Earlier version/platform/compiler combinations
+have previously been reported to work.
+
+Once bootstrapped, as is typical with pkgsrc, many packages build as is.
+For any particular package that doesn't, fixes are often in OpenBSD
+Ports waiting to be borrowed.
