@@ -1,19 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2016/07/09 06:24:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2022/04/06 22:46:13 wiz Exp $
 
-DISTNAME=		NotoEmoji-Regular
-PKGNAME=		noto-emoji-ttf-1.05
+DISTNAME=		noto-emoji-2.034
+PKGNAME=		${DISTNAME:S/emoji/emoji-ttf/}
 CATEGORIES=		fonts
 MASTER_SITES=		${MASTER_SITE_GITHUB:=googlei18n/}
+GITHUB_PROJECT=		noto-emoji
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		ryoon@NetBSD.org
 HOMEPAGE=		https://www.google.com/get/noto/
 COMMENT=		Noto Emoji Font from Google
 LICENSE=		apache-2.0
-
-GITHUB_PROJECT=		noto-emoji
-GITHUB_TAG=		2f1ffdd6fbbd05d6f382138a3d3adcd89c5ce800
-
-DIST_SUBDIR=		${PKGNAME_NOREV}
 
 NO_BUILD=		yes
 USE_LANGUAGES=		# none
@@ -23,7 +20,7 @@ FONTSDIR=		share/fonts/X11/TTF
 INSTALLATION_DIRS=	${FONTSDIR}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/fonts/NotoEmoji-Regular.ttf \
+	${INSTALL_DATA} ${WRKSRC}/fonts/*.ttf \
 		${DESTDIR}/${PREFIX}/${FONTSDIR}
 
 .include "../../mk/bsd.pkg.mk"

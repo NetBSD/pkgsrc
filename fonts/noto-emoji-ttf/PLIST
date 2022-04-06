@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/09 06:22:47 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/04/06 22:46:13 wiz Exp $
+share/fonts/X11/TTF/NotoColorEmoji.ttf
+share/fonts/X11/TTF/NotoColorEmoji_WindowsCompatible.ttf
 share/fonts/X11/TTF/NotoEmoji-Regular.ttf
