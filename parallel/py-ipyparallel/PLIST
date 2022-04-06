@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/02/07 17:07:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/04/06 15:17:17 adam Exp $
 bin/ipcluster-${PYVERSSUFFIX}
 bin/ipcontroller-${PYVERSSUFFIX}
 bin/ipengine-${PYVERSSUFFIX}
@@ -157,8 +157,8 @@ ${PYSITELIB}/ipyparallel/labextension/package.json
 ${PYSITELIB}/ipyparallel/labextension/schemas/ipyparallel-labextension/package.json.orig
 ${PYSITELIB}/ipyparallel/labextension/schemas/ipyparallel-labextension/plugin.json
 ${PYSITELIB}/ipyparallel/labextension/static/114.bf22097df2e8c0ccfac9.js
-${PYSITELIB}/ipyparallel/labextension/static/572.d4c49c9e00ca709b9f1d.js
-${PYSITELIB}/ipyparallel/labextension/static/remoteEntry.34efbd5c8b146e4195cf.js
+${PYSITELIB}/ipyparallel/labextension/static/572.ae182b75587369930453.js
+${PYSITELIB}/ipyparallel/labextension/static/remoteEntry.7ce01aaace933e93874b.js
 ${PYSITELIB}/ipyparallel/labextension/static/style.js
 ${PYSITELIB}/ipyparallel/labextension/static/third-party-licenses.json
 ${PYSITELIB}/ipyparallel/logger.py
@@ -283,8 +283,8 @@ share/jupyter/labextensions/ipyparallel-labextension/package.json
 share/jupyter/labextensions/ipyparallel-labextension/schemas/ipyparallel-labextension/package.json.orig
 share/jupyter/labextensions/ipyparallel-labextension/schemas/ipyparallel-labextension/plugin.json
 share/jupyter/labextensions/ipyparallel-labextension/static/114.bf22097df2e8c0ccfac9.js
-share/jupyter/labextensions/ipyparallel-labextension/static/572.d4c49c9e00ca709b9f1d.js
-share/jupyter/labextensions/ipyparallel-labextension/static/remoteEntry.34efbd5c8b146e4195cf.js
+share/jupyter/labextensions/ipyparallel-labextension/static/572.ae182b75587369930453.js
+share/jupyter/labextensions/ipyparallel-labextension/static/remoteEntry.7ce01aaace933e93874b.js
 share/jupyter/labextensions/ipyparallel-labextension/static/style.js
 share/jupyter/labextensions/ipyparallel-labextension/static/third-party-licenses.json
 share/jupyter/nbextensions/ipyparallel/clusterlist.css
