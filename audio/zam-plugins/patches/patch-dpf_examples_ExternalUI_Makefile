@@ -1,0 +1,15 @@
+$NetBSD: patch-dpf_examples_ExternalUI_Makefile,v 1.1 2022/04/06 16:32:21 nia Exp $
+
+Only use libdl on Linux.
+
+--- dpf/examples/ExternalUI/Makefile.orig	2020-07-18 12:07:33.000000000 +0000
++++ dpf/examples/ExternalUI/Makefile
+@@ -24,7 +24,7 @@ FILES_UI  = \
+ UI_TYPE = external
+ include ../../Makefile.plugins.mk
+ 
+-ifneq ($(HAIKU),true)
++ifeq ($(LINUX),true)
+ LINK_FLAGS += -ldl
+ endif
+ 
