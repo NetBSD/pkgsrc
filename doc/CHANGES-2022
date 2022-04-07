@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1736 2022/04/07 07:16:55 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1737 2022/04/07 10:21:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2331,3 +2331,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-nbformat to 5.3.0 [adam 2022-04-07]
 	Updated www/py-notebook to 6.4.10 [adam 2022-04-07]
 	Updated security/py-gssapi to 1.7.3 [adam 2022-04-07]
+	Added www/py-widgetsnbextension version 3.6.0 [adam 2022-04-07]
+	Updated www/py-ipywidgets to 7.7.0 [adam 2022-04-07]
