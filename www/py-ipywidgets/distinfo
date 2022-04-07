@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/01/31 18:19:36 adam Exp $
+$NetBSD: distinfo,v 1.6 2022/04/07 10:20:48 adam Exp $
 
-BLAKE2s (ipywidgets-7.6.5.tar.gz) = 2fd5e395e0ccb812c84505c79becfa70c8079fc065ec61e59eef4ae8e3bd6e5f
-SHA512 (ipywidgets-7.6.5.tar.gz) = 4952f1cd293f1a4bf1721222579273c95f59adfa9385963617924f5f28232e1940ec045e18aeae83ad138176e4d887e952fe875b960279f3e0b7d982a790a4dc
-Size (ipywidgets-7.6.5.tar.gz) = 4072535 bytes
+BLAKE2s (ipywidgets-7.7.0.tar.gz) = 515ff750d4e3f1eaa0799f2b9b1f972e3f6b102ae17614c3d0abc89428353abf
+SHA512 (ipywidgets-7.7.0.tar.gz) = 038da040912e6701762fb66fb3b6996ce0a59706afb05405b5932c02d34733842b227426f0b29eea115196bab384617425b0553c5db13a9dc832bddef63dfb92
+Size (ipywidgets-7.7.0.tar.gz) = 4074763 bytes
