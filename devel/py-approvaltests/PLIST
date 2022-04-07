@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2022/03/28 15:57:19 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.16 2022/04/07 17:29:26 schmonz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -55,15 +55,27 @@ ${PYSITELIB}/approvaltests/file_approver.pyo
 ${PYSITELIB}/approvaltests/list_utils.py
 ${PYSITELIB}/approvaltests/list_utils.pyc
 ${PYSITELIB}/approvaltests/list_utils.pyo
+${PYSITELIB}/approvaltests/namer/__init__.py
+${PYSITELIB}/approvaltests/namer/__init__.pyc
+${PYSITELIB}/approvaltests/namer/__init__.pyo
+${PYSITELIB}/approvaltests/namer/default_namer_factory.py
+${PYSITELIB}/approvaltests/namer/default_namer_factory.pyc
+${PYSITELIB}/approvaltests/namer/default_namer_factory.pyo
+${PYSITELIB}/approvaltests/namer/namer_base.py
+${PYSITELIB}/approvaltests/namer/namer_base.pyc
+${PYSITELIB}/approvaltests/namer/namer_base.pyo
+${PYSITELIB}/approvaltests/namer/stack_frame_namer.py
+${PYSITELIB}/approvaltests/namer/stack_frame_namer.pyc
+${PYSITELIB}/approvaltests/namer/stack_frame_namer.pyo
 ${PYSITELIB}/approvaltests/pairwise_combinations.py
 ${PYSITELIB}/approvaltests/pairwise_combinations.pyc
 ${PYSITELIB}/approvaltests/pairwise_combinations.pyo
 ${PYSITELIB}/approvaltests/pytest/__init__.py
 ${PYSITELIB}/approvaltests/pytest/__init__.pyc
 ${PYSITELIB}/approvaltests/pytest/__init__.pyo
-${PYSITELIB}/approvaltests/pytest/namer.py
-${PYSITELIB}/approvaltests/pytest/namer.pyc
-${PYSITELIB}/approvaltests/pytest/namer.pyo
+${PYSITELIB}/approvaltests/pytest/py_test_namer.py
+${PYSITELIB}/approvaltests/pytest/py_test_namer.pyc
+${PYSITELIB}/approvaltests/pytest/py_test_namer.pyo
 ${PYSITELIB}/approvaltests/reporter_missing_exception.py
 ${PYSITELIB}/approvaltests/reporter_missing_exception.pyc
 ${PYSITELIB}/approvaltests/reporter_missing_exception.pyo
@@ -73,6 +85,9 @@ ${PYSITELIB}/approvaltests/reporters/__init__.pyo
 ${PYSITELIB}/approvaltests/reporters/clipboard_reporter.py
 ${PYSITELIB}/approvaltests/reporters/clipboard_reporter.pyc
 ${PYSITELIB}/approvaltests/reporters/clipboard_reporter.pyo
+${PYSITELIB}/approvaltests/reporters/default_reporter_factory.py
+${PYSITELIB}/approvaltests/reporters/default_reporter_factory.pyc
+${PYSITELIB}/approvaltests/reporters/default_reporter_factory.pyo
 ${PYSITELIB}/approvaltests/reporters/diff_reporter.py
 ${PYSITELIB}/approvaltests/reporters/diff_reporter.pyc
 ${PYSITELIB}/approvaltests/reporters/diff_reporter.pyo
@@ -82,6 +97,9 @@ ${PYSITELIB}/approvaltests/reporters/first_working_reporter.pyo
 ${PYSITELIB}/approvaltests/reporters/generic_diff_reporter.py
 ${PYSITELIB}/approvaltests/reporters/generic_diff_reporter.pyc
 ${PYSITELIB}/approvaltests/reporters/generic_diff_reporter.pyo
+${PYSITELIB}/approvaltests/reporters/generic_diff_reporter_config.py
+${PYSITELIB}/approvaltests/reporters/generic_diff_reporter_config.pyc
+${PYSITELIB}/approvaltests/reporters/generic_diff_reporter_config.pyo
 ${PYSITELIB}/approvaltests/reporters/generic_diff_reporter_factory.py
 ${PYSITELIB}/approvaltests/reporters/generic_diff_reporter_factory.pyc
 ${PYSITELIB}/approvaltests/reporters/generic_diff_reporter_factory.pyo
