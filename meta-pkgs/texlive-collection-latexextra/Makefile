@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2021/06/07 00:39:31 markd Exp $
+# $NetBSD: Makefile,v 1.60 2022/04/07 03:44:04 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2021pre1
+PKGNAME=	texlive-${DISTNAME}-2021pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	59271
@@ -48,7 +48,7 @@ DEPENDS+=	tex-alphalph-[0-9]*:../../print/tex-alphalph
 DEPENDS+=	tex-animate-[0-9]*:../../graphics/tex-animate
 DEPENDS+=	tex-anonchap-[0-9]*:../../print/tex-anonchap
 DEPENDS+=	tex-answers-[0-9]*:../../print/tex-answers
-# depend anyfontsize
+DEPENDS+=	tex-anyfontsize-[0-9]*:../../print/tex-anyfontsize
 DEPENDS+=	tex-appendix-[0-9]*:../../print/tex-appendix
 DEPENDS+=	tex-appendixnumberbeamer-[0-9]*:../../print/tex-appendixnumberbeamer
 # depend apptools
@@ -1041,7 +1041,7 @@ DEPENDS+=	tex-realboxes-[0-9]*:../../print/tex-realboxes
 # depend refman
 # depend refstyle
 # depend regcount
-# depend regexpatch
+DEPENDS+=	tex-regexpatch-[0-9]*:../../print/tex-regexpatch
 # depend register
 # depend regstats
 # depend relenc
