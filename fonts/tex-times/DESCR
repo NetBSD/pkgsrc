@@ -1,4 +1,10 @@
-The times package is now obsolete, replaced by the mathptmx package,
-which supports Times Roman text and (mostly) matching mathematics.
-The times package remains available, for compatibility; both it and
-mathptmx are part of psnfss.
+A set of fonts for use as "drop-in" replacements for Adobe's
+basic set, comprising: Century Schoolbook (substituting for
+Adobe's New Century Schoolbook); Dingbats (substituting for
+Adobe's Zapf Dingbats); Nimbus Mono L (substituting for Abobe's
+Courier); Nimbus Roman No9 L (substituting for Adobe's Times);
+Nimbus Sans L (substituting for Adobe's Helvetica); Standard
+Symbols L (substituting for Adobe's Symbol); URW Bookman; URW
+Chancery L Medium Italic (substituting for Adobe's Zapf
+Chancery); URW Gothic L Book (substituting for Adobe's Avant
+Garde); and URW Palladio L (substituting for Adobe's Palatino).
