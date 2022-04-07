@@ -1,7 +1,8 @@
-$NetBSD: patch-src_fccharset.c,v 1.2 2022/04/04 12:47:47 riastradh Exp $
+$NetBSD: patch-src_fccharset.c,v 1.3 2022/04/07 11:47:48 riastradh Exp $
 
 - Fix build on SCO OpenServer 5.0.7/3.2.
 - Fix ctype(3) abuse.
+  https://gitlab.freedesktop.org/fontconfig/fontconfig/-/merge_requests/224
 
 --- src/fccharset.c.orig	2018-06-05 10:36:38.000000000 +0000
 +++ src/fccharset.c
