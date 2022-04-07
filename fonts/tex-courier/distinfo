@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:27:46 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/04/07 02:48:30 markd Exp $
 
-BLAKE2s (tex-courier-35058/courier.tar.xz) = 7a52a18b972de791e07dc279abe064072186a336df3073bce88e8b1f9cca444d
-SHA512 (tex-courier-35058/courier.tar.xz) = 88ecbbc140bef89886e52a3c6a046a7ecefbfeaf4fc0beffd4fa5c41d87972237fb93f15e1c1bf868ed4ed93c567edbebe4de9dbf1d446ab4842c94a86f6fc99
-Size (tex-courier-35058/courier.tar.xz) = 480992 bytes
+BLAKE2s (courier.r61719.tar.xz) = 561a5a1562810cc7ecbc68176d2b8da677a911140f87f826a094220ee4ea1b34
+SHA512 (courier.r61719.tar.xz) = 30d6c8906671239b9ef04b3c4d571f59e928ffefc965cd592ecd3277062c778b6f8cb0782f5eb8c6bc27d03b69a88a120593477ced93bcc44cdd4fbc3e5b8adb
+Size (courier.r61719.tar.xz) = 481072 bytes
