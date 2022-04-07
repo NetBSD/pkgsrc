@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2022/04/04 12:47:47 riastradh Exp $
+# $NetBSD: Makefile,v 1.124 2022/04/07 12:39:06 wiz Exp $
 
 DISTNAME=	fontconfig-2.13.1
 PKGREVISION=	6
@@ -17,7 +17,7 @@ TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config msgfmt
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-default-fonts=${LOCALBASE}/share/fonts/X11
+CONFIGURE_ARGS+=	--with-default-fonts=${PREFIX}/share/fonts/X11
 CONFIGURE_ARGS+=	--with-expat-includes=${BUILDLINK_PREFIX.expat}/include
 CONFIGURE_ARGS+=	--with-expat-lib=${BUILDLINK_PREFIX.expat}/lib
 CONFIGURE_ARGS+=	--with-baseconfigdir=${PKG_SYSCONFDIR}
@@ -69,12 +69,12 @@ TMPLDIR=	${PREFIX}/share/fontconfig/conf.avail
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/conf.d
 # following list from ${WRKSRC}/conf.d/Makefile.am
 FC_STDCONF=	10-scale-bitmap-fonts.conf 10-hinting-full.conf \
-	10-hinting-medium.conf 10-hinting-none.conf 10-hinting-slight.conf \
-	20-unhint-small-vera.conf \
-	30-metric-aliases.conf 40-nonlatin.conf \
-	45-latin.conf 49-sansserif.conf 50-user.conf 51-local.conf \
-	60-latin.conf 65-fonts-persian.conf 65-nonlatin.conf 69-unifont.conf \
-	80-delicious.conf 90-synthetic.conf
+		10-hinting-medium.conf 10-hinting-none.conf 10-hinting-slight.conf \
+		20-unhint-small-vera.conf \
+		30-metric-aliases.conf 40-nonlatin.conf \
+		45-latin.conf 49-sansserif.conf 50-user.conf 51-local.conf \
+		60-latin.conf 65-fonts-persian.conf 65-nonlatin.conf 69-unifont.conf \
+		80-delicious.conf 90-synthetic.conf
 # pkgsrc addition
 FC_STDCONF+=	30-pkgsrc-aliases.conf
 FC_STDCONF+=	70-no-bitmap-webfonts.conf
