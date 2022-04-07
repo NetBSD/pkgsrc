@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:27:31 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/04/07 02:47:10 markd Exp $
 
-BLAKE2s (tex-avantgar-31835/avantgar.tar.xz) = ab107fa82d05ba13cd0aaaf0dba2539c553ca86d9b9d1e91011952ec8628a65c
-SHA512 (tex-avantgar-31835/avantgar.tar.xz) = f4b303c8a0fe033ce32288357e5d19923304ce6f0b8cfcaa06635a04e3a4a7b1cd2690cde388e6abb80f5d646abe26be7c4e172c8f8e3f5c53ade530bfcf5c3a
-Size (tex-avantgar-31835/avantgar.tar.xz) = 241096 bytes
+BLAKE2s (avantgar.r61983.tar.xz) = eba4a4549393d7c1a368bbfdfb7e9af497e6307f8e3ac365aed672645b516088
+SHA512 (avantgar.r61983.tar.xz) = c08c987c385bf9eeca0f4f5b7edcd41570c81f18751593824da8eea770c29d63725bed100fa2ff37a80a5c70086533ddc1e91848d5ddeedec3c5c669907ed20b
+Size (avantgar.r61983.tar.xz) = 241568 bytes
