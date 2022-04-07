@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1617 2022/04/03 09:01:08 tsutsui Exp $
+# $NetBSD: Makefile,v 1.1618 2022/04/07 10:19:56 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -848,6 +848,7 @@ SUBDIR+=	py-websockets
 SUBDIR+=	py-werkzeug
 SUBDIR+=	py-werkzeug-docs
 SUBDIR+=	py-whitenoise
+SUBDIR+=	py-widgetsnbextension
 SUBDIR+=	py-wsproto
 SUBDIR+=	py-wstools
 SUBDIR+=	py-wtforms
