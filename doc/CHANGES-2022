@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1739 2022/04/07 13:13:36 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1740 2022/04/07 17:29:30 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2337,3 +2337,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-flit to 3.7.1 [adam 2022-04-07]
 	Updated devel/py-entrypoints to 0.4 [adam 2022-04-07]
 	Updated devel/py-jupyter_client to 7.2.1 [adam 2022-04-07]
+	Updated devel/py-approvaltests to 5.0.0 [schmonz 2022-04-07]
