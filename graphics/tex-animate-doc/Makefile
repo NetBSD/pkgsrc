@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2021/02/20 09:42:52 markd Exp $
+# $NetBSD: Makefile,v 1.16 2022/04/07 05:06:50 markd Exp $
 
 DISTNAME=	animate.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-20201007
-TEXLIVE_REV=	56583
+PKGNAME=	tex-${DISTNAME:S/./-/}-20220221
+TEXLIVE_REV=	62123
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/animate
