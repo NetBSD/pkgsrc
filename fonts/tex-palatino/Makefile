@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.8 2020/05/10 04:31:51 markd Exp $
+# $NetBSD: Makefile,v 1.9 2022/04/07 02:50:10 markd Exp $
 
 DISTNAME=	palatino
-PKGNAME=	tex-${DISTNAME}-2014
-PKGREVISION=	1
-TEXLIVE_REV=	31835
+PKGNAME=	tex-${DISTNAME}-2021
+TEXLIVE_REV=	61719
 
 MAINTAINER=	minskim@NetBSD.org
-COMMENT=	Palatino font family for TeX
-LICENSE=	lppl-1.3c
+HOMEPAGE=	https://ctan.org/pkg/urw-base35
+COMMENT=	Palatino font from URW 'Base 35' font pack for LaTeX
+LICENSE=	gnu-gpl-v2
 
 TEX_MAP_FILES+=	upl.map
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

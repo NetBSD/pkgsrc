@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:28:22 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/04/07 02:50:10 markd Exp $
 
-BLAKE2s (tex-palatino-31835/palatino.tar.xz) = 2e6ee5ce2f8319a2cab82c1ff7972e127dd4e5525435b62469c3652a9551a279
-SHA512 (tex-palatino-31835/palatino.tar.xz) = cd5859a71a1468c6f19121931979c40c8f02ad940e04828e81ad6f9167b17792c0eaebdc418081994fd7c5b6ac08b33cce0f865367a9d4265e0e3ec2c89bd95f
-Size (tex-palatino-31835/palatino.tar.xz) = 326000 bytes
+BLAKE2s (palatino.r61719.tar.xz) = 67704cd71d2725d83980834583c88730774ea4cc6433da5b349e7758b4366391
+SHA512 (palatino.r61719.tar.xz) = 5db043495b8daf0a5a854367ca1c82007a154d09b2bcae9f399e8f851f30a554fa98970cf45ccd8f0681f70ae7e01f54dfd414bcbd888b802e93993c2ed172df
+Size (palatino.r61719.tar.xz) = 325796 bytes
