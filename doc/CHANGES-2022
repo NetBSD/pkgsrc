@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1740 2022/04/07 17:29:30 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.1741 2022/04/07 20:00:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2338,3 +2338,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-entrypoints to 0.4 [adam 2022-04-07]
 	Updated devel/py-jupyter_client to 7.2.1 [adam 2022-04-07]
 	Updated devel/py-approvaltests to 5.0.0 [schmonz 2022-04-07]
+	Updated fonts/noto-emoji-ttf to 2.034nb1 [wiz 2022-04-07]
