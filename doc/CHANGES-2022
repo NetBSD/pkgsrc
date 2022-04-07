@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1733 2022/04/07 02:55:27 markd Exp $
+$NetBSD: CHANGES-2022,v 1.1734 2022/04/07 05:40:52 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2307,3 +2307,21 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/tex-times to 2021 [markd 2022-04-07]
 	Updated fonts/tex-zapfchan to 2021 [markd 2022-04-07]
 	Updated fonts/tex-zapfding to 2021 [markd 2022-04-07]
+	Updated fonts/tex-academicons to 1.9.12 [markd 2022-04-07]
+	Updated fonts/tex-academicons-doc to 1.9.12 [markd 2022-04-07]
+	Updated fonts/tex-albatross to 0.4.0 [markd 2022-04-07]
+	Updated fonts/tex-albatross-doc to 0.4.0 [markd 2022-04-07]
+	Updated print/tex-amsmath to 2.17l [markd 2022-04-07]
+	Updated print/tex-amsmath-doc to 2.17l [markd 2022-04-07]
+	Updated graphics/tex-animate to 20220221 [markd 2022-04-07]
+	Updated graphics/tex-animate-doc to 20220221 [markd 2022-04-07]
+	Updated fonts/tex-augie to 2021 [markd 2022-04-07]
+	Updated fonts/tex-augie-doc to 2021 [markd 2022-04-07]
+	Updated print/tex-beamer to 3.66 [markd 2022-04-07]
+	Updated print/tex-beamer-doc to 3.66 [markd 2022-04-07]
+	Updated print/tex-beamertheme-focus to 3.3.0 [markd 2022-04-07]
+	Updated print/tex-breqn to 0.98l [markd 2022-04-07]
+	Updated time/tex-bxjaholiday to 1.1.1 [markd 2022-04-07]
+	Updated time/tex-bxjaholiday-doc to 1.1.1 [markd 2022-04-07]
+	Updated print/tex-bxjaprnind to 0.4a [markd 2022-04-07]
+	Updated print/tex-bxjaprnind-doc to 0.4a [markd 2022-04-07]
