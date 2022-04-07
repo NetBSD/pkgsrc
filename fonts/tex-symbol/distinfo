@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:28:31 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/04/07 02:51:03 markd Exp $
 
-BLAKE2s (tex-symbol-31835/symbol.tar.xz) = 9f53a1b9a5b968bdb4095671ca231985f1f6e184a8c3ae8a822d95a74887b4b5
-SHA512 (tex-symbol-31835/symbol.tar.xz) = 246bf5d37fab1919902e8b39116a4da53964cd78eebea736676ef92ee17fd02ffb7a26cdac4b6ee5e4b14deaae37a98f43ae5cbbd76d5e0f985d1630712f01ab
-Size (tex-symbol-31835/symbol.tar.xz) = 36108 bytes
+BLAKE2s (symbol.r61719.tar.xz) = 055d2312b85654138a10d06aa8f02a5fef4091cb4dcdff9d3ed68b1b634de4e6
+SHA512 (symbol.r61719.tar.xz) = 1a2d3239cf7c9910b19db527d5c2b43af2b399114b3186505e790a139ae5ef82c2ff1ecd5adc858a46febaf2e46e028037ba65bd5b84fec0737edd89d5061c09
+Size (symbol.r61719.tar.xz) = 36104 bytes
