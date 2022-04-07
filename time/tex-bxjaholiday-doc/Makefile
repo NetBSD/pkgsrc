@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/02/21 09:40:13 markd Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/07 05:36:01 markd Exp $
 
 DISTNAME=	bxjaholiday.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.1.0
-TEXLIVE_REV=	57025
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.1.1
+TEXLIVE_REV=	60636
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/bxjaholiday
