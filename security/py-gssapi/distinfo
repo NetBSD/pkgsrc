@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2021/12/06 14:45:22 wiz Exp $
+$NetBSD: distinfo,v 1.20 2022/04/07 07:16:20 adam Exp $
 
-BLAKE2s (gssapi-1.7.2.tar.gz) = 2a08fd0e959d0cdb2619a29f27cc0751be13fa52da605e33f78e7b4db47f0b9b
-SHA512 (gssapi-1.7.2.tar.gz) = 2d14c286e50c3dda3a2e58588860abbda249fa3ff4fe8e7a759cd8bb009ca7d20a6a06cf9b5b7eea42dce4ba740c8a8cebf190d085ffa3e66ec79882bda882ed
-Size (gssapi-1.7.2.tar.gz) = 1227616 bytes
+BLAKE2s (gssapi-1.7.3.tar.gz) = 5d3325a6d985b20dfa6fe26d108ba49cbaa04eef5593f5ab7dbccb7bd9bfb600
+SHA512 (gssapi-1.7.3.tar.gz) = ffdff3ee2a8b47d2606b891fb6300331055faaecbf285ab57b6af56ec4d63f95e2c9445248269a3e3974ed4c9ac9664d4265693b15f7a66d1dac328eebc81292
+Size (gssapi-1.7.3.tar.gz) = 1260350 bytes
 SHA1 (patch-setup.py) = 506e05b248a6d372f0cff92881dc0f5e21499210
