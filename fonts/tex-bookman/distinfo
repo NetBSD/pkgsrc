@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:27:35 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/04/07 02:47:51 markd Exp $
 
-BLAKE2s (tex-bookman-31835/bookman.tar.xz) = ceef59633662820eb18ad6b578c0f58a0083ff43d4d4bd7fdeeb71221d9b63fd
-SHA512 (tex-bookman-31835/bookman.tar.xz) = dd5d3b0629d53109039e7ac06429953742ef08b4432c3a46a206efb508ae5bd4fdbf8b46517e4e584a781048b53405980dbad8743a036fdbf8f4620b2150d52f
-Size (tex-bookman-31835/bookman.tar.xz) = 278380 bytes
+BLAKE2s (bookman.r61719.tar.xz) = 44c6df36150656f2557971cf5c00db175bd1957fe7980b3a7e8d8761d3af2228
+SHA512 (bookman.r61719.tar.xz) = 8bef9b6e467384a2b5adc6bd61ed2e410f026f6ee867a5a62239c55391ebd6eb5e521c82f9bd0e4de995591458ec32f98ce821493a85113beaeef6535b938ff4
+Size (bookman.r61719.tar.xz) = 278744 bytes
