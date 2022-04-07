@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.238 2022/04/07 07:08:34 nia Exp $
+# $NetBSD: gcc.mk,v 1.239 2022/04/07 12:12:02 adam Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -318,7 +318,7 @@ _NEED_GCC8=	yes
 
 # April 2022: GCC below 10 from pkgsrc is broken on 32-bit arm NetBSD.
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-earm*) && \
-    ${OPSYS_VERSION} < 099900 && \ 
+    ${OPSYS_VERSION} < 099900 && \
     (${_NEED_GCC8:tl} == "yes" || ${_NEED_GCC9:tl} == "yes")
 _NEED_GCC6=	no
 _NEED_GCC7=	no
