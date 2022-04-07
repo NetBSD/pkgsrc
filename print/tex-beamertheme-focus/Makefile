@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/02/20 09:47:14 markd Exp $
+# $NetBSD: Makefile,v 1.3 2022/04/07 05:27:34 markd Exp $
 
 DISTNAME=	beamertheme-focus
-PKGNAME=	tex-${DISTNAME}-2.8.1
-TEXLIVE_REV=	56967
+PKGNAME=	tex-${DISTNAME}-3.3.0
+TEXLIVE_REV=	62551
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/beamertheme-focus
