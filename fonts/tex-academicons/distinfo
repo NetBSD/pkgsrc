@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:27:25 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/04/07 04:50:34 markd Exp $
 
-BLAKE2s (academicons.r56119.tar.xz) = bc0e572dc11bba5d233dbc76bd9e155d49d882d8a070441f5e93bf345a3590c6
-SHA512 (academicons.r56119.tar.xz) = 87e2c5436f92e288c94d612380a2bd6736a19b7a6ba714c0d33bfad27aaab79cdf264b585e722055b1d8402be5c0001c1d8759ac3b79d6c2759c90d6a36d2f6a
-Size (academicons.r56119.tar.xz) = 32636 bytes
+BLAKE2s (academicons.r62622.tar.xz) = 6f9648f65250236802d86b8d970ba8b28730e0fb3e03c641257b56faefba585f
+SHA512 (academicons.r62622.tar.xz) = 10fed2cdb2533a7291626eee2f3d46e79fe972eadd83cf7177f22228dcd13422549819dc5e1cf0b03e8397e23badc02a965857aca886ba004a3279efeb49b288
+Size (academicons.r62622.tar.xz) = 35252 bytes
