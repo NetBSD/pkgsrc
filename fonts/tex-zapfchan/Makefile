@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.7 2020/05/10 04:31:56 markd Exp $
+# $NetBSD: Makefile,v 1.8 2022/04/07 02:52:11 markd Exp $
 
 DISTNAME=	zapfchan
-PKGNAME=	tex-${DISTNAME}-2014
-PKGREVISION=	1
-TEXLIVE_REV=	31835
+PKGNAME=	tex-${DISTNAME}-2021
+TEXLIVE_REV=	61719
 
 MAINTAINER=	minskim@NetBSD.org
-COMMENT=	Zapf Chancery fonts
+HOMEPAGE=	https://ctan.org/pkg/urw-base35
+COMMENT=	Zapf Chancery fonts from URW 'Base 35' font pack for LaTeX
 LICENSE=	gnu-gpl-v2
 
 TEX_MAP_FILES+=	uzc.map
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
