@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/03/29 07:39:58 adam Exp $
+# $NetBSD: Makefile,v 1.17 2022/04/07 07:22:22 adam Exp $
 
 DISTNAME=	nbconvert-6.4.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://jupyter.org/
 COMMENT=	Converting Jupyter Notebooks
 LICENSE=	modified-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>0:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-bleach>0:../../www/py-bleach
 DEPENDS+=	${PYPKGPREFIX}-defusedxml>0:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-entrypoints>=0.2.2:../../devel/py-entrypoints
