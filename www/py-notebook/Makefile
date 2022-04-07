@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2022/02/05 12:03:44 adam Exp $
+# $NetBSD: Makefile,v 1.24 2022/04/07 07:08:54 adam Exp $
 
-DISTNAME=	notebook-6.4.8
+DISTNAME=	notebook-6.4.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/notebook/}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-ipython_genutils>0:../../devel/py-ipython_genutils
 DEPENDS+=	${PYPKGPREFIX}-jupyter_client>=5.3.4:../../devel/py-jupyter_client
 DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=4.6.1:../../devel/py-jupyter_core
 DEPENDS+=	${PYPKGPREFIX}-jinja2>0:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-nbconvert>0:../../www/py-nbconvert
+DEPENDS+=	${PYPKGPREFIX}-nbconvert>=5:../../www/py-nbconvert
 DEPENDS+=	${PYPKGPREFIX}-nbformat>0:../../www/py-nbformat
 DEPENDS+=	${PYPKGPREFIX}-nest-asyncio>=1.5:../../devel/py-nest-asyncio
 DEPENDS+=	${PYPKGPREFIX}-prometheus_client>0:../../net/py-prometheus_client
