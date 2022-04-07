@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.149 2022/03/31 18:10:52 wiz Exp $
+$NetBSD: distinfo,v 1.150 2022/04/07 19:08:40 riastradh Exp $
 
 BLAKE2s (nss-3.77.tar.gz) = 3565c858677fbccb6b773125b34e2e8cb3e83b45bdd68f05ebfa12c32af11d8e
 SHA512 (nss-3.77.tar.gz) = bd62eeb8f90ecd2d3999fd78fea6652736c02a6530f29e98d0cad0707f3b901b30409132eb6a6d53b9f5c05c6b464615a946a2a3e255553c793e44d0ed93179e
@@ -7,13 +7,25 @@ SHA1 (patch-md) = 8547c9414332c02221b96719dea1e09cb741f4d1
 SHA1 (patch-me) = ffb5f119764c158c0bd789bd18fc77c61f2e9d2b
 SHA1 (patch-mf) = 40e58385fb6f944f463bf00b9aad72bc4ea229d0
 SHA1 (patch-mn) = 5b79783e48249044be1a904a6cfd20ba175b5fd4
+SHA1 (patch-nss_cmd_certutil_certutil.c) = 76acb4c30779fb44d24fb59fcfe555b238816197
+SHA1 (patch-nss_cmd_fipstest_fipstest.c) = 2f2028b9ab1e63bc7160acc0f0c61d843755ff76
+SHA1 (patch-nss_cmd_pk11gcmtest_pk11gcmtest.c) = b31cb30343f3983e0afa5d0f322207620257cb98
 SHA1 (patch-nss_cmd_platlibs.mk) = 01f4350de601b29c94e8a791a28daca226866bb6
 SHA1 (patch-nss_cmd_shlibsign_sign.sh) = 7948b7b502a4c148ee185836dde8a84d3aa388af
+SHA1 (patch-nss_cmd_signtool_certgen.c) = 56bc3068543121d6bc34e7fdc41a021ae0c49364
+SHA1 (patch-nss_cmd_signtool_util.c) = ab9dc7cdcc6c33191edcb058b6004109bd5825d6
 SHA1 (patch-nss_coreconf_OpenBSD.mk) = 944f71fcaaa7d5b2b3ed008341b1392a65480f2b
 SHA1 (patch-nss_coreconf_command.mk) = a7b682d367825b48f8802fa30cee83f10680bb74
+SHA1 (patch-nss_lib_certdb_alg1485.c) = 71f1b1b2ce839d105a5be61640ee21ed91e742dd
+SHA1 (patch-nss_lib_certdb_certdb.c) = c3ce6300d981edf4054cabbd3ecb8bd6810718d5
+SHA1 (patch-nss_lib_dbm_src_mktemp.c) = e051e46ac36ea7670047b95d728e38b37af85b77
 SHA1 (patch-nss_lib_freebl_aes-armv8.c) = aa698f61dd3d66ba707a9b5425bc15d057244ad7
 SHA1 (patch-nss_lib_freebl_gcm-aarch64.c) = 311cfe7ca58e91285052d0ca27bd2df3f325071b
 SHA1 (patch-nss_lib_freebl_sha256-armv8.c) = 48ec50204493dd510099a3495f3b775c6bfa8828
-SHA1 (patch-nss_lib_util_utilpars.c) = 5d3000515b01037929730a752b7d7a0f46f06deb
+SHA1 (patch-nss_lib_nss_nssinit.c) = bcef361041afa6bd2462b49142b5e56b8641f038
+SHA1 (patch-nss_lib_softoken_legacydb_lowcert.c) = 79b20197ec901480bce5c91ce1abb1bbfa73612e
+SHA1 (patch-nss_lib_util_oidstring.c) = 76d792c9fd95c39c0bf75950a9c048fd43fd496c
+SHA1 (patch-nss_lib_util_portreg.c) = 52ea179827ef562394bdbb5408765ab5e04daf58
+SHA1 (patch-nss_lib_util_utilpars.c) = 1739a132d23edf17cea131c7186dd72cb545e424
 SHA1 (patch-nss_tests_all.sh) = b328778b538db66f5447f962f23afd6f650f7071
 SHA1 (patch-nss_tests_merge_merge.sh) = 42a4866d226b1076740ba9a5e42c7604f2cb15a7
