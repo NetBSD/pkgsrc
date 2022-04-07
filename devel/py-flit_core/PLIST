@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/01/11 21:49:03 nros Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/04/07 12:28:15 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -29,6 +29,11 @@ ${PYSITELIB}/flit_core/tests/samples/constructed_version/module1.pyc
 ${PYSITELIB}/flit_core/tests/samples/constructed_version/pyproject.toml
 ${PYSITELIB}/flit_core/tests/samples/extras-dev-conflict.toml
 ${PYSITELIB}/flit_core/tests/samples/extras.toml
+${PYSITELIB}/flit_core/tests/samples/imported_version/package1/__init__.py
+${PYSITELIB}/flit_core/tests/samples/imported_version/package1/__init__.pyc
+${PYSITELIB}/flit_core/tests/samples/imported_version/package1/_version.py
+${PYSITELIB}/flit_core/tests/samples/imported_version/package1/_version.pyc
+${PYSITELIB}/flit_core/tests/samples/imported_version/pyproject.toml
 ${PYSITELIB}/flit_core/tests/samples/inclusion/LICENSES/README
 ${PYSITELIB}/flit_core/tests/samples/inclusion/doc/subdir/test.txt
 ${PYSITELIB}/flit_core/tests/samples/inclusion/doc/test.rst
@@ -85,6 +90,12 @@ ${PYSITELIB}/flit_core/tests/samples/requires-dev.toml
 ${PYSITELIB}/flit_core/tests/samples/requires-envmark.toml
 ${PYSITELIB}/flit_core/tests/samples/requires-extra-envmark.toml
 ${PYSITELIB}/flit_core/tests/samples/requires-requests.toml
+${PYSITELIB}/flit_core/tests/samples/with_data_dir/LICENSE
+${PYSITELIB}/flit_core/tests/samples/with_data_dir/README.rst
+${PYSITELIB}/flit_core/tests/samples/with_data_dir/data/share/man/man1/foo.1
+${PYSITELIB}/flit_core/tests/samples/with_data_dir/module1.py
+${PYSITELIB}/flit_core/tests/samples/with_data_dir/module1.pyc
+${PYSITELIB}/flit_core/tests/samples/with_data_dir/pyproject.toml
 ${PYSITELIB}/flit_core/tests/test_build_thyself.py
 ${PYSITELIB}/flit_core/tests/test_build_thyself.pyc
 ${PYSITELIB}/flit_core/tests/test_buildapi.py
