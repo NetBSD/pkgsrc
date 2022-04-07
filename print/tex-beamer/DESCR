@@ -1,14 +1,16 @@
-The beamer LaTeX class can be used for producing slides. Its
-functionality is similar to Prosper but does not need any
-external programs and can directly produce a presentation using
-pdflatex. Beamer uses pgf for pdf/ps independent graphics.
-Frames are created using \frame{...}, and a frame can build
-multiple slides through a simple notation for specifying
-material for each slide within a frame. Beamer supports
-bibliographies, appendicies and transitions. Short versions of
-title, authors, institute can also be specified as optional
-parameters. A \plainframe{} allows a picture, for example, to
-fill the whole frame. Support figure and table environments,
-transparency effects, a \transduration command, animation
-commands, a pauses environment. Beamer also provides
-compatibility with other packages like prosper.
+The beamer LaTeX class can be used for producing slides. The
+class works in both PostScript and direct PDF output modes,
+using the pgf graphics system for visual effects. Content is
+created in the frame environment, and each frame can be made up
+of a number of slides using a simple notation for specifying
+material to appear on each slide within a frame. Short versions
+of title, authors, institute can also be specified as optional
+parameters. Whole frame graphics are supported by plain frames.
+The class supports figure and table environments, transparency
+effects, varying slide transitions and animations. Beamer also
+provides compatibility with other packages like prosper. The
+package now incorporates the functionality of the former
+translator package, which is used for customising the package
+for use in other language environments. Beamer depends on the
+following other packages: atbegshi, etoolbox, hyperref, ifpdf,
+pgf, and translator.
