@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/02/21 10:08:08 markd Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/07 05:39:14 markd Exp $
 
 DISTNAME=	bxjaprnind.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.3b
-TEXLIVE_REV=	45291
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.4a
+TEXLIVE_REV=	59641
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/bxjaprnind
