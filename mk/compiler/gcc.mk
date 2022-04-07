@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.237 2022/04/04 11:23:06 riastradh Exp $
+# $NetBSD: gcc.mk,v 1.238 2022/04/07 07:08:34 nia Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -314,6 +314,17 @@ _NEED_NEWER_GCC=NO
     !empty(_NEED_GCC10:M[nN][oO]) && \
     !empty(_NEED_GCC_AUX:M[nN][oO])
 _NEED_GCC8=	yes
+.endif
+
+# April 2022: GCC below 10 from pkgsrc is broken on 32-bit arm NetBSD.
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-earm*) && \
+    ${OPSYS_VERSION} < 099900 && \ 
+    (${_NEED_GCC8:tl} == "yes" || ${_NEED_GCC9:tl} == "yes")
+_NEED_GCC6=	no
+_NEED_GCC7=	no
+_NEED_GCC8=	no
+_NEED_GCC9=	no
+_NEED_GCC10=	yes
 .endif
 
 # Assume by default that GCC will only provide a C compiler.
