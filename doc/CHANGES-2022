@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1734 2022/04/07 05:40:52 markd Exp $
+$NetBSD: CHANGES-2022,v 1.1735 2022/04/07 06:54:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2325,3 +2325,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated time/tex-bxjaholiday-doc to 1.1.1 [markd 2022-04-07]
 	Updated print/tex-bxjaprnind to 0.4a [markd 2022-04-07]
 	Updated print/tex-bxjaprnind-doc to 0.4a [markd 2022-04-07]
+	Updated devel/py-pyrsistent to 0.18.1 [adam 2022-04-07]
+	Updated textproc/py-jsonschema to 4.4.0 [adam 2022-04-07]
