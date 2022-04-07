@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:28:32 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/04/07 02:51:30 markd Exp $
 
-BLAKE2s (tex-times-35058/times.tar.xz) = 5d29c91b47c297a839591174aefecbed534977352fb57b980cb1dbefad7330a5
-SHA512 (tex-times-35058/times.tar.xz) = 3ffcc0d9e479b6c56900763a39b16aba59d3096e272965359eebc47e4641e6c770592fdfdff10b77ee3845d2a0fbcad3f5eb8e9846bdba3874a286f71f688ad3
-Size (tex-times-35058/times.tar.xz) = 287044 bytes
+BLAKE2s (times.r61719.tar.xz) = de96b3cb3cebdc81d2223be951c985f49b9d24fda801322a0b212ed90c3d2d81
+SHA512 (times.r61719.tar.xz) = 06f93b823a6141a51554bbd682c128977676775b1c097f7787916c0c14b76d6e9c4041645003111d5a1b905de4faafde5b3efb61d9be9740b9627ab57f3f8eef
+Size (times.r61719.tar.xz) = 286904 bytes
