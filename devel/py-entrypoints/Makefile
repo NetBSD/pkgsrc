@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2022/01/09 11:58:14 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2022/04/07 12:39:06 adam Exp $
 
-DISTNAME=	entrypoints-0.3
+DISTNAME=	entrypoints-0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/entrypoints/}
 
@@ -11,18 +10,15 @@ HOMEPAGE=	https://github.com/takluyver/entrypoints
 COMMENT=	Discover and load entry points from installed packages
 LICENSE=	mit
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
-
-.include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 27
-DEPENDS+=	${PYPKGPREFIX}-configparser>=3.5:../../devel/py-configparser
-.endif
+BUILD_DEPENDS+=	${PYPKGPREFIX}-flit_core>=2:../../devel/py-flit_core
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
-do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
