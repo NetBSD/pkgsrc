@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.819 2022/03/30 16:19:26 micha Exp $
+# $NetBSD: Makefile,v 1.820 2022/04/07 03:37:40 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1498,7 +1498,6 @@ SUBDIR+=	tex-threeparttable-doc
 SUBDIR+=	tex-threeparttablex
 SUBDIR+=	tex-threeparttablex-doc
 SUBDIR+=	tex-thumbpdf
-SUBDIR+=	tex-tikzpagenodes
 SUBDIR+=	tex-timetable
 SUBDIR+=	tex-tipa-de-doc
 SUBDIR+=	tex-titlepages-doc
