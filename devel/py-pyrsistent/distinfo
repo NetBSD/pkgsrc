@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:18:59 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/04/07 06:46:29 adam Exp $
 
-BLAKE2s (pyrsistent-0.16.0.tar.gz) = 8beebb0248190a470f96bfef57a874f5f444664188f386c8cb340540cfbe9098
-SHA512 (pyrsistent-0.16.0.tar.gz) = d5764b1a185d4578bf308f338037e0546b06e79a3e7189b904e24e95e0e907bc98d7c1c68becc5549a541a5864df75aba6088cafa3558ecb0a63dafb22f5674a
-Size (pyrsistent-0.16.0.tar.gz) = 108012 bytes
+BLAKE2s (pyrsistent-0.18.1.tar.gz) = 11cf57c166e75e844ebc299ebd970ec1449dac1c1af128b162c762ba0bf0060d
+SHA512 (pyrsistent-0.18.1.tar.gz) = 353ad6e9165e1afdde37730a9289cf8dde28491abb688d702a8c8f5279e24f5ce387a5d00ac4a077322299f9c1a535781bcacdcd1cb914ddb317b3ca9641778b
+Size (pyrsistent-0.18.1.tar.gz) = 100522 bytes
