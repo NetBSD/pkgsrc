@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2022/01/04 20:54:41 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2022/04/07 07:16:20 adam Exp $
 
-DISTNAME=	gssapi-1.7.2
+DISTNAME=	gssapi-1.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gssapi/}
 
@@ -12,7 +11,6 @@ COMMENT=	Low-level and high-level wrappers around GSSAPI C libraries
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
-DEPENDS+=	${PYPKGPREFIX}-six>=1.4.0:../../lang/py-six
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
