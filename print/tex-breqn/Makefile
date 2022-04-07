@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2021/02/13 10:24:11 markd Exp $
+# $NetBSD: Makefile,v 1.10 2022/04/07 05:31:36 markd Exp $
 
 DISTNAME=	breqn
-PKGNAME=	tex-${DISTNAME}-0.98k
-TEXLIVE_REV=	56422
+PKGNAME=	tex-${DISTNAME}-0.98l
+TEXLIVE_REV=	60881
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/breqn
