@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/02 14:27:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/04/07 06:46:29 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/_pyrsistent_version.py
 ${PYSITELIB}/_pyrsistent_version.pyc
@@ -15,9 +14,6 @@ ${PYSITELIB}/pyrsistent/__init__.pyo
 ${PYSITELIB}/pyrsistent/_checked_types.py
 ${PYSITELIB}/pyrsistent/_checked_types.pyc
 ${PYSITELIB}/pyrsistent/_checked_types.pyo
-${PYSITELIB}/pyrsistent/_compat.py
-${PYSITELIB}/pyrsistent/_compat.pyc
-${PYSITELIB}/pyrsistent/_compat.pyo
 ${PYSITELIB}/pyrsistent/_field_common.py
 ${PYSITELIB}/pyrsistent/_field_common.pyc
 ${PYSITELIB}/pyrsistent/_field_common.pyo
