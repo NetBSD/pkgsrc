@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2022/04/05 15:51:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.48 2022/04/07 00:31:14 gutteridge Exp $
 
 DISTNAME=	vte-0.68.0
 PKGNAME=	${DISTNAME:S/vte/vte3/}
@@ -16,9 +16,9 @@ PKGCONFIG_OVERRIDE_STAGE=	post-configure
 PKGCONFIG_OVERRIDE+=		output/meson-private/vte-2.91.pc
 
 USE_TOOLS+=		msgfmt pkg-config bash
-USE_LANGUAGES=		c c++17
-# for c++17
-GCC_REQD+=		7
+USE_LANGUAGES=		c c++20
+# for c++20
+GCC_REQD+=		10
 
 # Otherwise, this will fail on Linux distributions that don't
 # have libsystemd.
