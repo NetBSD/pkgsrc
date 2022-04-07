@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2022/04/07 10:19:56 adam Exp $
+
+BLAKE2s (widgetsnbextension-3.6.0.tar.gz) = 91facf45f0978916d8f6d60e527adc87d35f76cb2e32784a839153c62d51c6d5
+SHA512 (widgetsnbextension-3.6.0.tar.gz) = d00b0e8d5edfc85ea1a9ac036dbdbe0b0ac6cb0eb694fc999f81e8f615e2a637890a2d5383c0f0ea041d886dbddf2e7036f8163fae0b8c3b5aa315a072b3ff7a
+Size (widgetsnbextension-3.6.0.tar.gz) = 802154 bytes
+SHA1 (patch-setup.py) = 9650a08244bd17c5c5aec2273c0cba731abb2c37
