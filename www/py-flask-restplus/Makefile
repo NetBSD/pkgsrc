@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:55:27 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/04/07 06:50:18 adam Exp $
 
 DISTNAME=	flask-restplus-0.13.0
 PKGREVISION=	1
@@ -16,13 +16,9 @@ DEPENDS+=	${PYPKGPREFIX}-jsonschema-[0-9]*:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-six>=1.3.0:../../lang/py-six
 
-.include "../../lang/python/pyversion.mk"
-
-.if ${_PYTHON_VERSION} == 27
-DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
-.endif
-
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27	# py-jsonschema
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
