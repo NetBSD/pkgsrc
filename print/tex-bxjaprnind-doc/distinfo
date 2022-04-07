@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:12:44 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/04/07 05:39:14 markd Exp $
 
-BLAKE2s (bxjaprnind.doc.r45291.tar.xz) = c119b4ed00d0559551b55a1f95a3dd2aac659149010d6e567cf9b9cfc4420861
-SHA512 (bxjaprnind.doc.r45291.tar.xz) = 0010c6e9d1041013401f59820795e338d9e0f852b2d29212fda0c66cda3e2dbdf59593547a8d83d9c6d78d48fb0372a4335976ad1fcc190c3c71a3b5607a47a4
-Size (bxjaprnind.doc.r45291.tar.xz) = 387396 bytes
+BLAKE2s (bxjaprnind.doc.r59641.tar.xz) = b50e65b7d8a5655044372ef9ee13747e9a2fa07777c3e4b27cc019992d99934a
+SHA512 (bxjaprnind.doc.r59641.tar.xz) = 40c81a58de05b25b5ec537ee6ce8feaa9476ce64898e7ebc67ff1d5497e53eab341734438160e578487753ec9bb747d8c69cbd4365895326b081588b92f6677e
+Size (bxjaprnind.doc.r59641.tar.xz) = 163424 bytes
