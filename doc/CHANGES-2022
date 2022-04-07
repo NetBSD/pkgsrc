@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1735 2022/04/07 06:54:09 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1736 2022/04/07 07:16:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2327,3 +2327,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/tex-bxjaprnind-doc to 0.4a [markd 2022-04-07]
 	Updated devel/py-pyrsistent to 0.18.1 [adam 2022-04-07]
 	Updated textproc/py-jsonschema to 4.4.0 [adam 2022-04-07]
+	Added textproc/py-fastjsonschema version 2.15.3 [adam 2022-04-07]
+	Updated www/py-nbformat to 5.3.0 [adam 2022-04-07]
+	Updated www/py-notebook to 6.4.10 [adam 2022-04-07]
+	Updated security/py-gssapi to 1.7.3 [adam 2022-04-07]
