@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1732 2022/04/06 22:46:22 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1733 2022/04/07 02:55:27 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2297,3 +2297,13 @@ Changes to the packages collection and infrastructure in 2022:
 	Added editors/emacs28 version 28.1 [wiz 2022-04-06]
 	Added editors/emacs28-nox11 version 28.1 [wiz 2022-04-06]
 	Updated fonts/noto-emoji-ttf to 2.034 [wiz 2022-04-06]
+	Updated fonts/tex-avantgar to 2021 [markd 2022-04-07]
+	Updated fonts/tex-bookman to 2021 [markd 2022-04-07]
+	Updated fonts/tex-courier to 2021 [markd 2022-04-07]
+	Updated fonts/tex-helvetic to 2021 [markd 2022-04-07]
+	Updated fonts/tex-ncntrsbk to 2021 [markd 2022-04-07]
+	Updated fonts/tex-palatino to 2021 [markd 2022-04-07]
+	Updated fonts/tex-symbol to 2021 [markd 2022-04-07]
+	Updated fonts/tex-times to 2021 [markd 2022-04-07]
+	Updated fonts/tex-zapfchan to 2021 [markd 2022-04-07]
+	Updated fonts/tex-zapfding to 2021 [markd 2022-04-07]
