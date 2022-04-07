@@ -1,16 +1,39 @@
-$NetBSD: README.Linux,v 1.9 2021/02/12 13:00:48 cjep Exp $
+$NetBSD: README.Linux,v 1.10 2022/04/07 15:16:55 gdt Exp $
 
-Please read the general README file as well.
+# General
 
-==========================================================================
+Generally, bootstrapping on GNU/Linux is expected to Just Work with
+gcc.
+
+# Compilers
+
+## gcc
+
+gcc is the standard approach.
+
+As of 2022 it has been reported that systems with gcc 4.8 (e.g. RHEL7)
+do not bootstrap, but that gcc7 (AWS-flavored RHEL7) and gcc8 (RHEL8) succeed.
+
+## clang
+
+There are no reports of success or failure with clang.
+
+## icc
+
+Long ago, it was reported that icc (Intel C++ Compiler) 8.0 and 8.1
+have been tested on i386.  See the old section at the end.
+
+# Debian and derivatives
 
 For Debian and derivatives such as Ubuntu the following packages should be
-installed prior to attempting bootstrap
+installed prior to attempting bootstrap:
 
 apt-get install cvs libncurses5 libncurses5-dev gcc g++ zlib1g-dev \
 			zlib1g libssl-dev libudev-dev
 
-==========================================================================
+#  RedHat and derivatives
+
+## Old, undated, information
 
 Some versions of Linux (RHEL3 Update 2 for i386 for example) have a
 /usr/lib/libacl.la libtool archive file that lists /lib/libattr.la as a
@@ -25,16 +48,9 @@ The solution is to copy /usr/lib/libattr.la to /lib/libattr.la with:
 
 cp -p /usr/lib/libattr.la /lib
 
-==========================================================================
+# General old, undated information
 
-Some versions of Linux (for example Debian GNU/Linux) need either libtermcap
-or libcurses (libncurses).  Installing the distribution's libncurses-dev
-package (or equivalent) should fix related build problems.
-
-==========================================================================
-
-pkgsrc supports both gcc (GNU Compiler Collection) and icc (Intel C++
-Compiler). gcc is the default. icc 8.0 and 8.1 on i386 have been tested.
+## Details of using icc
 
 To bootstrap using icc, assuming the default icc installation
 directory:
