@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:28:18 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/04/07 02:49:36 markd Exp $
 
-BLAKE2s (tex-ncntrsbk-31835/ncntrsbk.tar.xz) = 7d7600302618b6d937a7a4d7afadfba04296f2c9acc42206612f727373ed71aa
-SHA512 (tex-ncntrsbk-31835/ncntrsbk.tar.xz) = 5206d7201992166ebfddce677c9388575265de6811caba7af21ad18e7fde17215d3420d3a7268c1ac19bb323c283571080453e8039c9eddae657438cf7bdc5d2
-Size (tex-ncntrsbk-31835/ncntrsbk.tar.xz) = 290884 bytes
+BLAKE2s (ncntrsbk.r61719.tar.xz) = a9f3c530ab961554f2d53bf73d2cfd91524715d6068975a877ee20fc4c64d9bc
+SHA512 (ncntrsbk.r61719.tar.xz) = cafa6f6ba366c07bfa0fe37ae415cf924ca54249288a52726eed52b9c8147925b6ac4a85fcb69a19596944ed8585cab4ce8fc2710a7c32998b360ea2ab143d56
+Size (ncntrsbk.r61719.tar.xz) = 290856 bytes
