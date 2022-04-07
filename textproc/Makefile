@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1300 2022/04/06 06:00:30 wiz Exp $
+# $NetBSD: Makefile,v 1.1301 2022/04/07 07:00:29 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1003,6 +1003,7 @@ SUBDIR+=	py-enchant
 SUBDIR+=	py-epr-reader
 SUBDIR+=	py-eradicate
 SUBDIR+=	py-expat
+SUBDIR+=	py-fastjsonschema
 SUBDIR+=	py-feedparser
 SUBDIR+=	py-feedparser5
 SUBDIR+=	py-ftfy
