@@ -1,6 +1,7 @@
-$NetBSD: patch-util_cairo-trace_trace.c,v 1.1 2022/04/05 10:06:41 riastradh Exp $
+$NetBSD: patch-util_cairo-trace_trace.c,v 1.2 2022/04/07 10:57:57 riastradh Exp $
 
 Fix ctype(3) abuse.
+https://gitlab.freedesktop.org/cairo/cairo/-/merge_requests/309
 
 --- util/cairo-trace/trace.c.orig	2018-10-16 17:03:13.000000000 +0000
 +++ util/cairo-trace/trace.c
