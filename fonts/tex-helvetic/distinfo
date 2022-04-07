@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:28:04 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/04/07 02:48:59 markd Exp $
 
-BLAKE2s (tex-helvetic-31835/helvetic.tar.xz) = 006c8bb617409ea5f43c6fa36e99730841b0d5e987ff3d418e64507850a9c56d
-SHA512 (tex-helvetic-31835/helvetic.tar.xz) = eec23b68e6c6d5cc9205fa47117bb8d109bdf202d5c342bbe0d63e11405da5a10daf76d5ec8b52f344597140147d711ecc6d7dcc234ef0027c8a6dd417da7232
-Size (tex-helvetic-31835/helvetic.tar.xz) = 539892 bytes
+BLAKE2s (helvetic.r61719.tar.xz) = 627cd76b4ba76a7dced44289be66d5121a8d0b74d53624b8ad5011dafb1723c4
+SHA512 (helvetic.r61719.tar.xz) = 243904e50c3458e62bf346f5a48332709db226e54b17c731ed0bdac5fce04d76b19411a12b01b51ca93b5ff7f06eee38f78a8375f6244d7b7d53116713d601b8
+Size (helvetic.r61719.tar.xz) = 539616 bytes
