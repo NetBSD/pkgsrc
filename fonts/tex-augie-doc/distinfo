@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:27:31 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/07 05:10:38 markd Exp $
 
-BLAKE2s (tex-augie-18948/augie.doc.tar.xz) = 3e5a3ab361b72fc50a6d6bd41229cf36c84000da8d3ed1b3db459a2e652ccd4b
-SHA512 (tex-augie-18948/augie.doc.tar.xz) = ea7010833a47c0d8e0b59a949d84d50e3e959dc9fe67bbc0a03336f7ffacf25ca249b6e94dbc57e1653eb971cb3fb027a23cdb4ba6d40087d4b02f86881260c1
-Size (tex-augie-18948/augie.doc.tar.xz) = 3332 bytes
+BLAKE2s (augie.doc.r61719.tar.xz) = 493b04c90965c7c1f65a6f797c273dbcd2d645586b0809ec89a3d7e460b88150
+SHA512 (augie.doc.r61719.tar.xz) = 434c1d88522ae41e8a41fbeda6685a059fafb8f6cdec26d8737b5f6a6ddcf1e4f2a443ffdffa6b62a74f4abd2ed2e947176f59e64bf5691debeb62d9d54e719b
+Size (augie.doc.r61719.tar.xz) = 3324 bytes
