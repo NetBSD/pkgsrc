@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21667 2022/04/08 06:16:31 wiz Exp $
+$NetBSD: TODO,v 1.21668 2022/04/08 06:24:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -856,7 +856,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gvfs-1.22.0
 	o gworkspace-0.9.4
 	o gxmessage-3.4.3
-	o gzip-1.11
 	o h323plus-1.24.0 [replaces openh323, from http://www.h323plus.org/]
 	o h5utils-1.13.1
 	o h8300-elf-binutils-2.36.1
