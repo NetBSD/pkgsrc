@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.229 2022/03/06 08:58:20 nia Exp $
+# $NetBSD: Makefile,v 1.230 2022/04/08 10:22:40 pin Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -178,6 +178,7 @@ SUBDIR+=	quest-tui
 SUBDIR+=	rclock
 SUBDIR+=	rem2ics
 SUBDIR+=	remind
+SUBDIR+=	rsclock
 SUBDIR+=	rsibreak
 SUBDIR+=	ruby-hitimes
 SUBDIR+=	ruby-iso8601
