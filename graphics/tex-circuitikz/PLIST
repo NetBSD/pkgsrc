@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2021/02/18 19:42:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/04/08 05:21:48 markd Exp $
 share/texmf-dist/tex/context/third/circuitikz/t-circuitikz-0.8.3.tex
 share/texmf-dist/tex/context/third/circuitikz/t-circuitikz-0.9.3.tex
 share/texmf-dist/tex/context/third/circuitikz/t-circuitikz-0.9.6.tex
 share/texmf-dist/tex/context/third/circuitikz/t-circuitikz-1.0.tex
 share/texmf-dist/tex/context/third/circuitikz/t-circuitikz-1.1.2.tex
 share/texmf-dist/tex/context/third/circuitikz/t-circuitikz-1.2.7.tex
+share/texmf-dist/tex/context/third/circuitikz/t-circuitikz-1.4.6.tex
 share/texmf-dist/tex/context/third/circuitikz/t-circuitikz.tex
 share/texmf-dist/tex/generic/circuitikz/ctikzstyle-example.tex
 share/texmf-dist/tex/generic/circuitikz/ctikzstyle-legacy.tex
@@ -22,13 +23,24 @@ share/texmf-dist/tex/generic/circuitikz/pgfcircshapes.tex
 share/texmf-dist/tex/generic/circuitikz/pgfcirctripoles.tex
 share/texmf-dist/tex/generic/circuitikz/pgfcircutils.tex
 share/texmf-dist/tex/generic/circuitikz/pgfcircvoltage.tex
+share/texmf-dist/tex/latex/circuitikz/circuitikz-0.4-body.tex
 share/texmf-dist/tex/latex/circuitikz/circuitikz-0.4.sty
+share/texmf-dist/tex/latex/circuitikz/circuitikz-0.6-body.tex
 share/texmf-dist/tex/latex/circuitikz/circuitikz-0.6.sty
+share/texmf-dist/tex/latex/circuitikz/circuitikz-0.7-body.tex
 share/texmf-dist/tex/latex/circuitikz/circuitikz-0.7.sty
+share/texmf-dist/tex/latex/circuitikz/circuitikz-0.8.3-body.tex
 share/texmf-dist/tex/latex/circuitikz/circuitikz-0.8.3.sty
+share/texmf-dist/tex/latex/circuitikz/circuitikz-0.9.3-body.tex
 share/texmf-dist/tex/latex/circuitikz/circuitikz-0.9.3.sty
-share/texmf-dist/tex/latex/circuitikz/circuitikz-0.9.6.sty
+share/texmf-dist/tex/latex/circuitikz/circuitikz-0.9.6-body.tex
+share/texmf-dist/tex/latex/circuitikz/circuitikz-1.0-body.tex
 share/texmf-dist/tex/latex/circuitikz/circuitikz-1.0.sty
+share/texmf-dist/tex/latex/circuitikz/circuitikz-1.1.2-body.tex
 share/texmf-dist/tex/latex/circuitikz/circuitikz-1.1.2.sty
+share/texmf-dist/tex/latex/circuitikz/circuitikz-1.2.7-body.tex
 share/texmf-dist/tex/latex/circuitikz/circuitikz-1.2.7.sty
+share/texmf-dist/tex/latex/circuitikz/circuitikz-1.4.6-body.tex
+share/texmf-dist/tex/latex/circuitikz/circuitikz-1.4.6.sty
 share/texmf-dist/tex/latex/circuitikz/circuitikz.sty
+share/texmf-dist/tex/latex/circuitikz/circutikz-0.9.6.sty
