@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2017/01/20 21:09:07 markd Exp $
-share/texmf-dist/doc/latex/incgraph/CHANGES
-share/texmf-dist/doc/latex/incgraph/README
+@comment $NetBSD: PLIST,v 1.2 2022/04/08 23:27:33 markd Exp $
+share/texmf-dist/doc/latex/incgraph/CHANGES.md
+share/texmf-dist/doc/latex/incgraph/README.md
 share/texmf-dist/doc/latex/incgraph/exaimage-0001.png
 share/texmf-dist/doc/latex/incgraph/exaimage-0037.png
 share/texmf-dist/doc/latex/incgraph/exaimage-0123.png
 share/texmf-dist/doc/latex/incgraph/example.jpg
+share/texmf-dist/doc/latex/incgraph/incgraph-doc.sty
 share/texmf-dist/doc/latex/incgraph/incgraph-example-a.pdf
 share/texmf-dist/doc/latex/incgraph/incgraph-example-a.tex
 share/texmf-dist/doc/latex/incgraph/incgraph-example-b.pdf
