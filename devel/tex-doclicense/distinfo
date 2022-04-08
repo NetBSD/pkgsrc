@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:20:00 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/04/08 21:09:47 markd Exp $
 
-BLAKE2s (doclicense.r58350.tar.xz) = b14ebddae94505f49512198de519eb6ec83187573d9e4b6bbd0f0d3b9490a36c
-SHA512 (doclicense.r58350.tar.xz) = 1f701453752b32f1030dd7cda6f51bd94d6d9d67f465070b613f4ea55857f300be8c7a19c7440c6fab129e3fc1749fe6b9aad13b1fc28b5b61670f65bf0e0a81
-Size (doclicense.r58350.tar.xz) = 234912 bytes
+BLAKE2s (doclicense.r59899.tar.xz) = dc42df67576f4b5e6e59f151d2371a37f83750f3ff510a8f079f0a9dd8aa2dcb
+SHA512 (doclicense.r59899.tar.xz) = 4ab462ed5cea50837f3bf47cd5d43dd9e8f1666e34da55a3c5849b9c9b735962ba94fde97f1682ba8ef2fca4b9c4d985dc16121be28c552ec3a6cbf981872254
+Size (doclicense.r59899.tar.xz) = 235388 bytes
