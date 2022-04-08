@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 09:57:07 nia Exp $
+$NetBSD: distinfo,v 1.13 2022/04/08 06:24:00 wiz Exp $
 
-BLAKE2s (gzip-1.10.tar) = 480593a6dea69feae9d6b8622fdc442a5149f03746aa7eaabf8099e8f7a506c7
-SHA512 (gzip-1.10.tar) = fc54f62e5b1db56bde178e0019fb831af6bfad73fc346742ae830de9623e5982dbc1e5463a34fbf0b88777b53901ffbbecfba724fb3ae7d9f758c5701bb54098
-Size (gzip-1.10.tar) = 5355520 bytes
-SHA1 (patch-aa) = a08b277aa95df808d055f4daf95fd1462c300290
-SHA1 (patch-ab) = 738d6e5f9300c2718694cc4134b36637b323ea8a
-SHA1 (patch-lib_fflush.c) = 4012b674c04f83f2b3bffdef6107a7836ce21d8e
+BLAKE2s (gzip-1.12.tar) = 1edddfdf2946083367ef0295fb2c8d191a6ddc5777f6a2c48629bd25ad8b6033
+SHA512 (gzip-1.12.tar) = 79a54c63c3442061f3e47de7bdd5bfee2d2d40d1f09b8eabbbabe96295f9eb8fc2e0dd580f6bad528fd0e7e336f6e759ddf52863c0f0da733d1a184e57fde90f
+Size (gzip-1.12.tar) = 6041600 bytes
