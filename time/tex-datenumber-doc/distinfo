@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:24:38 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/04/08 21:04:07 markd Exp $
 
-BLAKE2s (tex-datenumber-18951/datenumber.doc.tar.xz) = 816bc00407246eea73e43a28f9580037cb6bf7d16c6c332b40e263b1e9cb85c9
-SHA512 (tex-datenumber-18951/datenumber.doc.tar.xz) = d597aebd037517a55cc36cbb7c48f7ffd58dbfe46dab72ead5fa4bfb64ec14411c4691fb3eac89edf38e0266f943e483537fba044beec95a084dd6d2aa135b48
-Size (tex-datenumber-18951/datenumber.doc.tar.xz) = 94368 bytes
+BLAKE2s (datenumber.doc.r61761.tar.xz) = 082aba6a745efa43c11abe876b521f3616ba31fe7ad9d6250b22f8aee0786898
+SHA512 (datenumber.doc.r61761.tar.xz) = 18f2573f8c02685d20085c31384b75dd1ab5a47a5bb2b9dcda036a7cd1ecec80db175a674c1f148cd51a078721ed88a3c9b7a0915acd7c023c02ea9a16e2a1f2
+Size (datenumber.doc.r61761.tar.xz) = 307264 bytes
