@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:28:06 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/04/08 23:30:06 markd Exp $
 
-BLAKE2s (ipaex.doc.r52032.tar.xz) = 23b5db31169169ef0c385f51b4f2c9c2e789eef4f5919dc96937edcf095a02d2
-SHA512 (ipaex.doc.r52032.tar.xz) = 04fca8414689b3b828937ba46767415b3b2de1a4cbc87ae95f790aee4bc82b658c1ff0ff705bea0c45952589693cb357cdf00c1721722d7c340a32f502d3b961
-Size (ipaex.doc.r52032.tar.xz) = 7480 bytes
+BLAKE2s (ipaex.doc.r61719.tar.xz) = 6e16802b5fd30fe3f338af0b3a33eca55fa3208a91d97cb196c9bdd3b2273d95
+SHA512 (ipaex.doc.r61719.tar.xz) = c53cf11bc81d9a8f5aa19c264a1970d4819400ceaffa20b688d0709546113f932b82b6b6d12cf9fb31b2a3d2c0d45b6b33ee3cb3bd0060c961360389839b1475
+Size (ipaex.doc.r61719.tar.xz) = 7484 bytes
