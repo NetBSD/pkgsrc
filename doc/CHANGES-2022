@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1741 2022/04/07 20:00:05 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1742 2022/04/08 05:44:59 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2339,3 +2339,25 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-jupyter_client to 7.2.1 [adam 2022-04-07]
 	Updated devel/py-approvaltests to 5.0.0 [schmonz 2022-04-07]
 	Updated fonts/noto-emoji-ttf to 2.034nb1 [wiz 2022-04-07]
+	Updated print/tex-c90 to 2021 [markd 2022-04-08]
+	Updated print/tex-c90-doc to 2021 [markd 2022-04-08]
+	Updated print/tex-carlisle to 2021 [markd 2022-04-08]
+	Updated print/tex-carlisle-doc to 2021 [markd 2022-04-08]
+	Updated print/tex-cellspace to 1.9.0 [markd 2022-04-08]
+	Updated print/tex-cellspace-doc to 1.9.0 [markd 2022-04-08]
+	Updated print/tex-changes to 4.2.1 [markd 2022-04-08]
+	Updated print/tex-changes-doc to 4.2.1 [markd 2022-04-08]
+	Updated graphics/tex-chemfig to 1.6b [markd 2022-04-08]
+	Updated graphics/tex-chemfig-doc to 1.6b [markd 2022-04-08]
+	Updated graphics/tex-circuitikz to 1.4.6 [markd 2022-04-08]
+	Updated graphics/tex-circuitikz-doc to 1.4.6 [markd 2022-04-08]
+	Updated print/tex-cjk-gs-integrate to 20210625.0 [markd 2022-04-08]
+	Updated print/tex-cjk-gs-integrate-doc to 20210625.0 [markd 2022-04-08]
+	Updated print/tex-cjk-ko to 2.2 [markd 2022-04-08]
+	Updated print/tex-cjk-ko-doc to 2.2 [markd 2022-04-08]
+	Updated print/tex-cjk to 4.8.5 [markd 2022-04-08]
+	Updated print/tex-cjk-doc to 4.8.5 [markd 2022-04-08]
+	Updated print/tex-cjkutils to 4.8.5 [markd 2022-04-08]
+	Updated print/tex-cjkutils-doc to 4.8.5 [markd 2022-04-08]
+	Updated fonts/tex-cmcyr to 2021 [markd 2022-04-08]
+	Updated fonts/tex-cmcyr-doc to 2021 [markd 2022-04-08]
