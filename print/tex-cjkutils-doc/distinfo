@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:12:52 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/04/08 05:40:12 markd Exp $
 
-BLAKE2s (tex-cjkutils-47198/cjkutils.doc.tar.xz) = e3d11154e64b4b1b44a3b6d73e58d51eef36475a1951a2369465ec82f4689e2c
-SHA512 (tex-cjkutils-47198/cjkutils.doc.tar.xz) = 036a708dc3e7478ac47f479fc84de4130966b35bd6a8c57b5085356b5fd8a31f5397e5c67e60383fc2c7f8c3707d6b712afb9fcf094dbbd3d7e9f62271bd8683
-Size (tex-cjkutils-47198/cjkutils.doc.tar.xz) = 98016 bytes
+BLAKE2s (cjkutils.doc.r60833.tar.xz) = e179ad7e808d5a8b67ff1330753aec9dc7106ce63755d4212242c6794b3099c4
+SHA512 (cjkutils.doc.r60833.tar.xz) = 636e6486f9661061d22d248b0b7a8debdb81cd08c56b449067782568fcc7db58922f7c9d40fbc992bdd008908f22a6733af4a8115d85c0572556d01e925c5587
+Size (cjkutils.doc.r60833.tar.xz) = 344216 bytes
