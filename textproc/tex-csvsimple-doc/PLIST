@@ -1,10 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2017/09/08 22:23:04 markd Exp $
-share/texmf-dist/doc/latex/csvsimple/CHANGES
-share/texmf-dist/doc/latex/csvsimple/README
+@comment $NetBSD: PLIST,v 1.2 2022/04/08 20:55:02 markd Exp $
+share/texmf-dist/doc/latex/csvsimple/CHANGES.md
+share/texmf-dist/doc/latex/csvsimple/README.md
 share/texmf-dist/doc/latex/csvsimple/amountsort.xml
 share/texmf-dist/doc/latex/csvsimple/catsort.xml
+share/texmf-dist/doc/latex/csvsimple/csvsimple-doc.sty
+share/texmf-dist/doc/latex/csvsimple/csvsimple-example.csv
 share/texmf-dist/doc/latex/csvsimple/csvsimple-example.pdf
 share/texmf-dist/doc/latex/csvsimple/csvsimple-example.tex
+share/texmf-dist/doc/latex/csvsimple/csvsimple-l3.pdf
+share/texmf-dist/doc/latex/csvsimple/csvsimple-l3.tex
+share/texmf-dist/doc/latex/csvsimple/csvsimple-legacy.pdf
+share/texmf-dist/doc/latex/csvsimple/csvsimple-legacy.tex
+share/texmf-dist/doc/latex/csvsimple/csvsimple-title.png
 share/texmf-dist/doc/latex/csvsimple/csvsimple.pdf
 share/texmf-dist/doc/latex/csvsimple/csvsimple.tex
 share/texmf-dist/doc/latex/csvsimple/encoding.xml
