@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:47:03 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/04/08 23:27:33 markd Exp $
 
-BLAKE2s (tex-incgraph-36500/incgraph.tar.xz) = 8bcbc970515a2599804d65575ed93fb5c3c96a863880b34c2868eaad74912fe2
-SHA512 (tex-incgraph-36500/incgraph.tar.xz) = a8b9e1ac397d8e47eb2f29b7d0aa445cf25679400abd381641b227e9964804a952cd68e7ce923a6c5e34fc51857106f55b58c162795217654d429e7184f3b221
-Size (tex-incgraph-36500/incgraph.tar.xz) = 4208 bytes
+BLAKE2s (incgraph.r60810.tar.xz) = 550318893495ca19c62759fe51e74c013b0954d6d218518b5fa6c4388c09a710
+SHA512 (incgraph.r60810.tar.xz) = 06c7228e1ef4d760f6d7b1d308d4946eef7a55a60ff39bba6bdc6a96407cb6fab9f47dfd2c26f37d4f674d815e0ab7196badf2590638e214c980d26343a6bd55
+Size (incgraph.r60810.tar.xz) = 4976 bytes
