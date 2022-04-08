@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.21 2021/10/26 09:57:19 nia Exp $
+$NetBSD: distinfo,v 1.22 2022/04/08 06:29:56 wiz Exp $
 
 BLAKE2s (xz-5.2.5.tar.bz2) = 0734b879a0da3d0a893428c0783bbd38cf22b2c4dbe9125bb9962961573c8e66
 SHA512 (xz-5.2.5.tar.bz2) = 89e25ddf72427ee9608cbf2e9dbc24d592cb67a27f44ccf7d47e4d9405774444e9cfcd02ac4bcb92064860371ed31d3cfbecd5fe063f296ead607714c0a664a1
 Size (xz-5.2.5.tar.bz2) = 1473322 bytes
+BLAKE2s (xzgrep-ZDI-CAN-16587.patch) = 73d70cf735d08be52703ff2dfda48323105381a0a186df98ba2e6cc75e265fa1
+SHA512 (xzgrep-ZDI-CAN-16587.patch) = 52b16268e333399444f433a11ccf3a9b020a6914ed23fc8e082128fec596011d7c6863d47414d4c0f245d20ebed4b3a50b422599b4b88d66f6c6eb2e74b9a939
+Size (xzgrep-ZDI-CAN-16587.patch) = 3488 bytes
 SHA1 (patch-src_xz_Makefile.in) = b9360c7b2b34159028fb8b84339aa2faf3922287
