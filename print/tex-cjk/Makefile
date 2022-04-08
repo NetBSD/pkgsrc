@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/05/02 02:52:55 markd Exp $
+# $NetBSD: Makefile,v 1.7 2022/04/08 05:36:36 markd Exp $
 
 DISTNAME=	cjk
-PKGNAME=	tex-${DISTNAME}-4.8.4
-PKGREVISION=	1
-TEXLIVE_REV=	36951
+PKGNAME=	tex-${DISTNAME}-4.8.5
+TEXLIVE_REV=	60865
 
 MAINTAINER=	rxg@NetBSD.org,hubertf@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/cjk
@@ -11,6 +10,7 @@ COMMENT=	CJK language support
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	tex-arphic-[0-9]*:../../fonts/tex-arphic
+DEPENDS+=	tex-cns-[0-9]*:../../fonts/tex-cns
 DEPENDS+=	tex-fontspec-[0-9]*:../../fonts/tex-fontspec
 DEPENDS+=	tex-garuda-c90-[0-9]*:../../fonts/tex-garuda-c90
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
@@ -23,6 +23,5 @@ DEPENDS+=	tex-uhc-[0-9]*:../../fonts/tex-uhc
 DEPENDS+=	tex-ulem-[0-9]*:../../print/tex-ulem
 DEPENDS+=	tex-wadalab-[0-9]*:../../fonts/tex-wadalab
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
