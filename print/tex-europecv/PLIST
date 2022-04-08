@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/26 10:52:25 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/04/08 21:23:48 markd Exp $
 share/texmf-dist/tex/latex/europecv/EuropeFlagBW.eps
 share/texmf-dist/tex/latex/europecv/EuropeFlagBW.pdf
 share/texmf-dist/tex/latex/europecv/EuropeFlagBlueCMYK.eps
@@ -34,6 +34,7 @@ share/texmf-dist/tex/latex/europecv/ecvsk.def
 share/texmf-dist/tex/latex/europecv/ecvsl.def
 share/texmf-dist/tex/latex/europecv/ecvsr.def
 share/texmf-dist/tex/latex/europecv/ecvsv.def
+share/texmf-dist/tex/latex/europecv/europasslogo-eps-converted-to.pdf
 share/texmf-dist/tex/latex/europecv/europasslogo.eps
 share/texmf-dist/tex/latex/europecv/europasslogo.pdf
 share/texmf-dist/tex/latex/europecv/europecv.cls
