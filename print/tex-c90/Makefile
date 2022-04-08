@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2019/12/06 20:19:03 markd Exp $
+# $NetBSD: Makefile,v 1.4 2022/04/08 05:02:04 markd Exp $
 
 DISTNAME=	c90
-PKGNAME=	tex-${DISTNAME}-2015
-TEXLIVE_REV=	37676
+PKGNAME=	tex-${DISTNAME}-2021
+TEXLIVE_REV=	60830
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-COMMENT=	C90 encoding for Thai
+HOMEPAGE=	https://ctan.org/pkg/cjk
+COMMENT=	C90 font encoding for Thai
+LICENSE=	gnu-gpl-v2
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
