@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:27:42 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/04/08 05:43:28 markd Exp $
 
-BLAKE2s (tex-cmcyr-39273/cmcyr.tar.xz) = aeab2dbcd067f4aaef5eec3e5c993c4d93ecf4e22e3f4f13bdf5fa2b9e5fc3ec
-SHA512 (tex-cmcyr-39273/cmcyr.tar.xz) = a7fa354aa9e876b9366a9b66cd32ccd58f70297a6460f32c6ba6b1c9c19b2636e387d9e15dec81260ce2a13f07468e1a03eaee3dc9178c2626f9713420155b71
-Size (tex-cmcyr-39273/cmcyr.tar.xz) = 901860 bytes
+BLAKE2s (cmcyr.r60630.tar.xz) = 015efa790fdc4f4dd0558b8a393cabce65979aaa6495823974bfd958611e7108
+SHA512 (cmcyr.r60630.tar.xz) = ecb1662bf6861744fa07126fa9cbcccfc0d53a1a9c1bd6b91a3c5482ccd83ec45b1dc17976d2d6c9cffc1dfb6aeb8ee583d753c427eb367b2c294defda98f519
+Size (cmcyr.r60630.tar.xz) = 901484 bytes
