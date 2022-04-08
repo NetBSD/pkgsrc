@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2022/04/03 19:33:11 rhialto Exp $
+# $NetBSD: Makefile,v 1.121 2022/04/08 06:52:53 wiz Exp $
 
 PKGNAME=		pan-0.150
 CATEGORIES=		news
@@ -11,6 +11,9 @@ MAINTAINER=		rhialto@NetBSD.org
 HOMEPAGE=		http://pan.rebelbase.com/
 COMMENT=		Newsreader for GTK3
 LICENSE=		gnu-gpl-v2
+
+TOOL_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
+TOOL_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
 
 USE_TOOLS+=		gmake msgfmt perl pkg-config itstool
 USE_TOOLS+=		autoconf automake
