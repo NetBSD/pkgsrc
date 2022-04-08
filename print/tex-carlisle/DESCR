@@ -1,3 +1,9 @@
-This package contains various LaTeX packages that are not related
-to each other except by the fact that they have the same author:
-David Carlisle.
+Many of David Carlisle's more substantial packages stand on
+their own, or as part of the LaTeX latex-tools set; this set
+contains: Making dotless 'j' characters for fonts that don't
+have them; A method for combining the capabilities of longtable
+and tabularx; An environment for including Plain TeX in LaTeX
+documents; A jiffy to remove counters from other counters'
+reset lists (now obsolete as it has been incorporated into the
+LaTeX format); A jiffy to create 'slashed' characters for
+physicists.

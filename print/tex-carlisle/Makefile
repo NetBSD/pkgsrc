@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2021/02/13 04:34:24 markd Exp $
+# $NetBSD: Makefile,v 1.13 2022/04/08 05:06:49 markd Exp $
 
 DISTNAME=	carlisle
-PKGNAME=	tex-${DISTNAME}-2020
-TEXLIVE_REV=	56753
+PKGNAME=	tex-${DISTNAME}-2021
+TEXLIVE_REV=	59577
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/carlisle
