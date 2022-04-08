@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2019/12/06 19:29:44 markd Exp $
+# $NetBSD: Makefile,v 1.7 2022/04/08 05:43:28 markd Exp $
 
 DISTNAME=	cmcyr.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2016
-TEXLIVE_REV=	39273
+PKGNAME=	tex-${DISTNAME:S/./-/}-2021
+TEXLIVE_REV=	60630
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	https://ctan.org/pkg/cmcyr
 COMMENT=	Documentation for tex-cmcyr
 LICENSE=	public-domain
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
