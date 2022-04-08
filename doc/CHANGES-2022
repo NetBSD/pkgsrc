@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1753 2022/04/08 18:02:19 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.1754 2022/04/08 21:37:17 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2388,3 +2388,25 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-certbot-dns-sakuracloud to 1.26.0 [adam 2022-04-08]
 	Updated security/py-certbot-nginx to 1.26.0 [adam 2022-04-08]
 	Updated graphics/p5-Image-ExifTool to 12.30nb1 [gdt 2022-04-08]
+	Updated textproc/tex-csvsimple to 2.3.0 [markd 2022-04-08]
+	Updated textproc/tex-csvsimple-doc to 2.3.0 [markd 2022-04-08]
+	Updated print/tex-cutwin to 0.2 [markd 2022-04-08]
+	Updated print/tex-cutwin-doc to 0.2 [markd 2022-04-08]
+	Updated time/tex-datenumber to 0.03 [markd 2022-04-08]
+	Updated time/tex-datenumber-doc to 0.03 [markd 2022-04-08]
+	Updated devel/tex-doclicense to 3.0.0 [markd 2022-04-08]
+	Updated devel/tex-doclicense-doc to 3.0.0 [markd 2022-04-08]
+	Updated print/tex-enotez to 0.10d [markd 2022-04-08]
+	Updated print/tex-enotez-doc to 0.10d [markd 2022-04-08]
+	Updated fonts/tex-erewhon to 1.119 [markd 2022-04-08]
+	Updated fonts/tex-erewhon-doc to 1.119 [markd 2022-04-08]
+	Updated print/tex-etoc to 1.09e [markd 2022-04-08]
+	Updated print/tex-etoc-doc to 1.09e [markd 2022-04-08]
+	Updated print/tex-europecv to 2021.62684 [markd 2022-04-08]
+	Updated print/tex-europecv-doc to 2021.62684 [markd 2022-04-08]
+	Updated print/tex-fancyvrb to 4.1b [markd 2022-04-08]
+	Updated print/tex-fancyvrb-doc to 4.1b [markd 2022-04-08]
+	Updated fonts/tex-fdsymbol to 0.8.61719 [markd 2022-04-08]
+	Updated fonts/tex-fdsymbol-doc to 0.8.61719 [markd 2022-04-08]
+	Updated print/tex-firstaid to 1.0q [markd 2022-04-08]
+	Updated print/tex-firstaid-doc to 1.0q [markd 2022-04-08]
