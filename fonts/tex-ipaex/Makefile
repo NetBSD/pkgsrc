@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/04/26 12:21:15 markd Exp $
+# $NetBSD: Makefile,v 1.5 2022/04/08 23:30:06 markd Exp $
 
 DISTNAME=	ipaex
-PKGNAME=	tex-${DISTNAME}-2020
-TEXLIVE_REV=	52032
+PKGNAME=	tex-${DISTNAME}-2021
+TEXLIVE_REV=	61719
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/ipaex
