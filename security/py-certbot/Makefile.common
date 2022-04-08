@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.63 2022/03/17 12:23:31 adam Exp $
+# $NetBSD: Makefile.common,v 1.64 2022/04/08 18:00:27 adam Exp $
 # used by security/py-acme/Makefile
 # used by security/py-certbot/Makefile
 # used by security/py-certbot-apache/Makefile
@@ -16,7 +16,7 @@
 # used by security/py-certbot-dns-sakuracloud/Makefile
 # used by security/py-certbot-nginx/Makefile
 
-CERTBOT_VERSION=	1.25.0
+CERTBOT_VERSION=	1.26.0
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES?=	security python
