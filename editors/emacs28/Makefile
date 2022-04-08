@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/04/06 22:40:38 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/08 15:14:02 wiz Exp $
 
 CONFLICTS+=	emacs28-nox11-[0-9]*
+
+PKGREVISION=	1
 
 .include "../../editors/emacs28/Makefile.common"
 
@@ -9,4 +11,5 @@ CONFLICTS+=	emacs28-nox11-[0-9]*
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
