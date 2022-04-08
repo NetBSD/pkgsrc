@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1754 2022/04/08 21:37:17 markd Exp $
+$NetBSD: CHANGES-2022,v 1.1755 2022/04/08 23:31:19 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2410,3 +2410,22 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/tex-fdsymbol-doc to 0.8.61719 [markd 2022-04-08]
 	Updated print/tex-firstaid to 1.0q [markd 2022-04-08]
 	Updated print/tex-firstaid-doc to 1.0q [markd 2022-04-08]
+	Updated fonts/tex-garuda-c90 to 2021 [markd 2022-04-08]
+	Updated fonts/tex-gentium-tug to 1.1.1.61719 [markd 2022-04-08]
+	Updated fonts/tex-gentium-tug-doc to 1.1.1.61719 [markd 2022-04-08]
+	Updated print/tex-glossaries to 4.49 [markd 2022-04-08]
+	Updated print/tex-glossaries-doc to 4.49 [markd 2022-04-08]
+	Updated fonts/tex-haranoaji to 20220220 [markd 2022-04-08]
+	Updated fonts/tex-haranoaji-doc to 20220220 [markd 2022-04-08]
+	Updated fonts/tex-haranoaji-extra to 20220220 [markd 2022-04-08]
+	Updated fonts/tex-haranoaji-extra-doc to 20220220 [markd 2022-04-08]
+	Updated print/tex-hologo to 1.15 [markd 2022-04-08]
+	Updated print/tex-hologo-doc to 1.15 [markd 2022-04-08]
+	Updated print/tex-ifptex to 2.1 [markd 2022-04-08]
+	Updated print/tex-ifptex-doc to 2.1 [markd 2022-04-08]
+	Updated print/tex-iftex to 1.0f [markd 2022-04-08]
+	Updated print/tex-iftex-doc to 1.0f [markd 2022-04-08]
+	Updated graphics/tex-incgraph to 1.2.0 [markd 2022-04-08]
+	Updated graphics/tex-incgraph-doc to 1.2.0 [markd 2022-04-08]
+	Updated fonts/tex-ipaex to 2021 [markd 2022-04-08]
+	Updated fonts/tex-ipaex-doc to 2021 [markd 2022-04-08]
