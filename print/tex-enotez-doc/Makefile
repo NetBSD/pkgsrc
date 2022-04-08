@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/02/20 10:10:30 markd Exp $
+# $NetBSD: Makefile,v 1.3 2022/04/08 21:13:55 markd Exp $
 
 DISTNAME=	enotez.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.10c
-TEXLIVE_REV=	57130
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.10d
+TEXLIVE_REV=	61490
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/enotez
