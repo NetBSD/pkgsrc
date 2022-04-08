@@ -1,0 +1,12 @@
+# $NetBSD: cargo-depends.mk,v 1.1 2022/04/08 10:25:20 pin Exp $
+
+CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
+CARGO_CRATE_DEPENDS+=	memchr-2.4.1
+CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.37
+CARGO_CRATE_DEPENDS+=	quote-1.0.17
+CARGO_CRATE_DEPENDS+=	regex-1.5.5
+CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.25
+CARGO_CRATE_DEPENDS+=	syn-1.0.91
+CARGO_CRATE_DEPENDS+=	thiserror-1.0.30
+CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.30
+CARGO_CRATE_DEPENDS+=	unicode-xid-0.2.2
