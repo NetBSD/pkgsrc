@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:12:48 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/04/08 05:13:55 markd Exp $
 
-BLAKE2s (changes.doc.r59408.tar.xz) = 4bc702c140c82f05e5c12c80f74598883a90542266fdb20d3d3ada8835b36a90
-SHA512 (changes.doc.r59408.tar.xz) = bfae2972419596fdae9e82e24e7b2309212637c82c39fb8ae9fe78a805a4ffabcaca62b4182324e406707b4cf47f10206e597cf466401978cac4e499a973735a
-Size (changes.doc.r59408.tar.xz) = 2491412 bytes
+BLAKE2s (changes.doc.r59950.tar.xz) = 9510ff5830d3fd0f58d4e17b02f40980363a2729a7ef6b5f49fb95b4cfc582ac
+SHA512 (changes.doc.r59950.tar.xz) = f35b3e0eb4318a97bc09361be9561a3b195678559f8311fb0d2bab4211f86853b1210e515e02e6312a8d46e52d7534ad9573b9bb3ed5611f1766a55e54d22c3f
+Size (changes.doc.r59950.tar.xz) = 3407656 bytes
