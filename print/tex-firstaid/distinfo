@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:13:20 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/08 21:36:21 markd Exp $
 
-BLAKE2s (firstaid.r58440.tar.xz) = dc270f3d77d4bd72486d6c72ba3eac81e05738062927a8b04b466a68cbbf6a29
-SHA512 (firstaid.r58440.tar.xz) = 31e74a644d0b2a9b0f659207195cc39b7b0cdfd44c878caf541869a114ca90990637c04b3da74f9f49e2dbcb30863030fe901a67b200d1aa4a9892ff41defe15
-Size (firstaid.r58440.tar.xz) = 2160 bytes
+BLAKE2s (firstaid.r61042.tar.xz) = 9cbc8c629a92b0490384dacf63a1bd7fe635710663f222e7fc81e3442467a737
+SHA512 (firstaid.r61042.tar.xz) = a36eaab9dce47b936cd5ecaf3a6134d967545b6807ae27f412b4ddb04bb8f6a72116509fdb6c7ad92b0c058ebaf021e1c901a55131e03845e7ca0a7ebf16bb16
+Size (firstaid.r61042.tar.xz) = 3340 bytes
