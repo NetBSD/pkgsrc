@@ -4,5 +4,5 @@ shown in a different color; deleted text is striked out.
 Additionally, text can be highlighted and/or commented. The
 package allows free definition of additional authors and their
 associated color. It also allows you to change the markup of
-changes, authors, highlights or comments. A bash script is
+changes, authors, highlights or comments. A Python script is
 provided for removing the changes.
