@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/05/03 05:30:38 markd Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/08 23:17:22 markd Exp $
 
 DISTNAME=	hologo.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.14
-TEXLIVE_REV=	53048
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.15
+TEXLIVE_REV=	61719
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/hologo
