@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2017/10/23 02:08:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/04/08 23:07:05 markd Exp $
 bin/makeglossaries
 share/texmf-dist/scripts/glossaries/glossaries.perl
+share/texmf-dist/tex/latex/glossaries/base/glossaries-2020-03-19.sty
 share/texmf-dist/tex/latex/glossaries/base/glossaries-babel.sty
 share/texmf-dist/tex/latex/glossaries/base/glossaries-compatible-207.sty
 share/texmf-dist/tex/latex/glossaries/base/glossaries-compatible-307.sty
@@ -10,6 +11,7 @@ share/texmf-dist/tex/latex/glossaries/base/glossaries.sty
 share/texmf-dist/tex/latex/glossaries/expl/glossaries-accsupp.sty
 share/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.sty
 share/texmf-dist/tex/latex/glossaries/styles/glossary-inline.sty
+share/texmf-dist/tex/latex/glossaries/styles/glossary-list-2020-03-19.sty
 share/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty
 share/texmf-dist/tex/latex/glossaries/styles/glossary-long.sty
 share/texmf-dist/tex/latex/glossaries/styles/glossary-longbooktabs.sty
@@ -22,10 +24,12 @@ share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-acronym-de
 share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-acronym.tex
 share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-acronyms-lang.tex
 share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-brief.tex
+share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-childmultipar.tex
 share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-childnoname.tex
 share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-cite.tex
 share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-images.tex
 share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-long.tex
+share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-longchild.tex
 share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-multipar.tex
 share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-parent.tex
 share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-symbolnames.tex
