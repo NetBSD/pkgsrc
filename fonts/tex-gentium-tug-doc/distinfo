@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:28:01 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/04/08 23:00:45 markd Exp $
 
-BLAKE2s (tex-gentium-tug-51613/gentium-tug.doc.tar.xz) = 45cfa36531a599d0e44c9c3a6f8db19e0653698341e2efc408f1b078158c31d1
-SHA512 (tex-gentium-tug-51613/gentium-tug.doc.tar.xz) = 074d5a42ddc427f240a956aca94d95b065813206b2ba66778de032665b924d02065cefa17dce14671b31bb8e455215bc34cdae29ee09a2db8b6e330fad3e7e1a
-Size (tex-gentium-tug-51613/gentium-tug.doc.tar.xz) = 1247116 bytes
+BLAKE2s (gentium-tug.doc.r61719.tar.xz) = 2a5a134cb6071ce9664d7a90aedf3c1f7056cb885b16dbfb34886f9b7fc3def8
+SHA512 (gentium-tug.doc.r61719.tar.xz) = 67f7320fa74748de6f007d5542ed67bb3e6a7f1fa2566fbd661cae051f12c4891bbc6d6ff9260ef34295b5b975bdb329bd6dbfdd846d69a4c3df166d53605d3f
+Size (gentium-tug.doc.r61719.tar.xz) = 1247120 bytes
