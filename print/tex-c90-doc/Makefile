@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2019/12/06 20:19:03 markd Exp $
+# $NetBSD: Makefile,v 1.5 2022/04/08 05:02:04 markd Exp $
 
 DISTNAME=	c90.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2015
-TEXLIVE_REV=	37676
+PKGNAME=	tex-${DISTNAME:S/./-/}-2021
+TEXLIVE_REV=	60830
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://ctan.org/pkg/cjk
 COMMENT=	Documentation for tex-c90
+LICENSE=	gnu-gpl-v2
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
