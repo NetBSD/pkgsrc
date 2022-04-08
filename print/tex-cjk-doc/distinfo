@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:12:51 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/04/08 05:36:36 markd Exp $
 
-BLAKE2s (tex-cjk-36951/cjk.doc.tar.xz) = 071bdc2a95183ee562ad0af7cd6a99df6bc3442a29b057d7974471d57444e641
-SHA512 (tex-cjk-36951/cjk.doc.tar.xz) = f728bdcb09f616ee6b5010617784bd7669c5ae61ed744907f1325d955fcd8b035f22d1a1f678244d11c75262c83ed768d2673cf68aedfd837332d1c0779c42ab
-Size (tex-cjk-36951/cjk.doc.tar.xz) = 1458276 bytes
+BLAKE2s (cjk.doc.r60865.tar.xz) = 03db7846b32caec45c0d0bc8a778fdc5d8623fa88c795a5ebe253ce79cfd5db2
+SHA512 (cjk.doc.r60865.tar.xz) = a8c6b2d4d0899b841ccc32b378855d61bdaa65d5f68fd408df3894d386bcde18f384410f34e6f33ee2a5ce770e1e663a05ab038d9b7483012a3cb414739c3705
+Size (cjk.doc.r60865.tar.xz) = 1477448 bytes
