@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1749 2022/04/08 10:26:27 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1750 2022/04/08 11:44:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2369,3 +2369,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-jupyter_client to 7.2.2 [adam 2022-04-08]
 	Added time/rsclock version 0.1.7 [pin 2022-04-08]
 	Added editors/ced version 0.1.3 [pin 2022-04-08]
+	Updated mail/neomutt to 20220408 [wiz 2022-04-08]
