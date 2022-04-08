@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1748 2022/04/08 10:23:08 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1749 2022/04/08 10:26:27 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2368,3 +2368,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/libgpg-error to 1.45 [adam 2022-04-08]
 	Updated devel/py-jupyter_client to 7.2.2 [adam 2022-04-08]
 	Added time/rsclock version 0.1.7 [pin 2022-04-08]
+	Added editors/ced version 0.1.3 [pin 2022-04-08]
