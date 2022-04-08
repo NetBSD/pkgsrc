@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.222 2022/04/06 22:41:26 wiz Exp $
+# $NetBSD: Makefile,v 1.223 2022/04/08 10:26:02 pin Exp $
 #
 
 COMMENT=	Text and binary editors
@@ -16,6 +16,7 @@ SUBDIR+=	bvi
 SUBDIR+=	ce
 SUBDIR+=	ce-doc
 SUBDIR+=	ce-x11
+SUBDIR+=	ced
 SUBDIR+=	cesium
 SUBDIR+=	codeblocks
 SUBDIR+=	codelite
