@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.8 2020/05/10 04:31:41 markd Exp $
+# $NetBSD: Makefile,v 1.9 2022/04/08 05:43:28 markd Exp $
 
 DISTNAME=	cmcyr
-PKGNAME=	tex-${DISTNAME}-2016
-PKGREVISION=	1
-TEXLIVE_REV=	39273
+PKGNAME=	tex-${DISTNAME}-2021
+TEXLIVE_REV=	60630
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	https://ctan.org/pkg/cmcyr
 COMMENT=	Computer Modern fonts with cyrillic extensions
 LICENSE=	public-domain
 
-TEX_MAP_FILES+=	cmcyr.map
+TEX_MIXEDMAP_FILES+=	cmcyr.map
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
