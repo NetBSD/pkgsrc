@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:12:48 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/04/08 05:10:15 markd Exp $
 
-BLAKE2s (tex-cellspace-50374/cellspace.doc.tar.xz) = 4ed8f01baa24237aed816a026432b760d7e247359479d2e76eb4431deb787d9a
-SHA512 (tex-cellspace-50374/cellspace.doc.tar.xz) = a1cdfb273e8c32374b03dfcd1d2ccbf12a19918fdeada025cf948fefa624decda07f8c3384a4dd859efdaa9048adcf0c513f59f28e48f31062819c1f9acdcd0d
-Size (tex-cellspace-50374/cellspace.doc.tar.xz) = 342008 bytes
+BLAKE2s (cellspace.doc.r61501.tar.xz) = 495a638d482a54ce1ee1f870166be08487ffe4a8ad94b7087431a7e248b6d158
+SHA512 (cellspace.doc.r61501.tar.xz) = 3a6044a5b3e38ea425174481bf0f079943b53b9cc7d68668f5666c72c33cc5edfb82aac08bc3347225e4838dc32579ea611e8fcd2619468e080cc63c11a38da3
+Size (cellspace.doc.r61501.tar.xz) = 342576 bytes
