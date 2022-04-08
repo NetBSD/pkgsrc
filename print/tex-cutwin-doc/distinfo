@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:13:04 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/04/08 20:59:11 markd Exp $
 
-BLAKE2s (tex-cutwin-29803/cutwin.doc.tar.xz) = 2d45436e574de482f443b1e393a354d7daa2250cc8f5269a5dda144c9ee38248
-SHA512 (tex-cutwin-29803/cutwin.doc.tar.xz) = c0f642cb90e6811d8175b96cd438709396cc7cc79c3ee0d9376b2b771e161bb15e7982dbe3678af9dd6ef638ebc7092c4eb45351c47d9ec6326fac74ed14b3d2
-Size (tex-cutwin-29803/cutwin.doc.tar.xz) = 304448 bytes
+BLAKE2s (cutwin.doc.r60901.tar.xz) = 0aaeb6dcf331540cdab81f88667e4d1ce4faef1b74d5648da9d7d2940068d2c1
+SHA512 (cutwin.doc.r60901.tar.xz) = f37bc538e4affa716aa315535fad7fdb2bb0e5188844d028b8bda4935339965e3f375439ab0abc62d63f2f57c3d439a25888f29cdf3be484092a57ff86c86c72
+Size (cutwin.doc.r60901.tar.xz) = 334216 bytes
