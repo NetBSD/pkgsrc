@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:46:58 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/04/08 05:17:03 markd Exp $
 
-BLAKE2s (chemfig.r58014.tar.xz) = 5f93abf0ee8d3f969f4a615123e89fa56a8b629cba6624b338c56f658bec5873
-SHA512 (chemfig.r58014.tar.xz) = ac0f3fff6f24fe83c3a1cd7bfd456cf187c57ae66776c672aab980d267d9552b7b480b0244e3d2e1c8d9f39f1d6524f9e882fc8a71be9fc8a5c0263d4899f718
-Size (chemfig.r58014.tar.xz) = 26356 bytes
+BLAKE2s (chemfig.r60135.tar.xz) = feccc9150e75580c6ceb0de3b14a370c6436f4a6c68f6b86f5ba8f0ca133c1eb
+SHA512 (chemfig.r60135.tar.xz) = 95a57f962e6f15d5e2bebc00491c60ab904afb739a0ae438346c57ffc47ed23109d436ff0f1f0ec2226d6e215d185a39e014ed24413066157c2830a1fabcee2c
+Size (chemfig.r60135.tar.xz) = 26480 bytes
