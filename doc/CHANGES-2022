@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1745 2022/04/08 06:24:49 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1746 2022/04/08 06:30:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2364,3 +2364,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated time/xclock to 1.1.1 [wiz 2022-04-08]
 	Updated x11/xdpyinfo to 1.3.3 [wiz 2022-04-08]
 	Updated archivers/gzip to 1.12 [wiz 2022-04-08]
+	Updated archivers/xz to 5.2.5nb1 [wiz 2022-04-08]
