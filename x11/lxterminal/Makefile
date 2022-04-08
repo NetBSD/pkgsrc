@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2021/12/08 16:07:09 adam Exp $
+# $NetBSD: Makefile,v 1.22 2022/04/08 22:31:47 gutteridge Exp $
 
 DISTNAME=	lxterminal-0.4.0
 PKGREVISION=	1
@@ -16,8 +16,8 @@ USE_TOOLS+=	gmake intltool pkg-config msgfmt
 
 LDFLAGS.SunOS+=	-lsocket
 
+.include "options.mk"
+
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/vte/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
