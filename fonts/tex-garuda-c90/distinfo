@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:28:00 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/04/08 22:58:22 markd Exp $
 
-BLAKE2s (tex-garuda-c90-37677/garuda-c90.tar.xz) = 668a2408636e6f31870c93ff8950f6f7b903e37a4895d1e7821b4469b8c83d78
-SHA512 (tex-garuda-c90-37677/garuda-c90.tar.xz) = 51c1e8edc489c86b821e75cec9f6273ff0e047a96d16e2a883b1ea0a18022fa38effd44fa8dbd3a686e302a2a76da7bdd7ce13f6b33d7d63878ee701af48758b
-Size (tex-garuda-c90-37677/garuda-c90.tar.xz) = 3412 bytes
+BLAKE2s (garuda-c90.r60832.tar.xz) = 17547ce45a6474fccc720382a60f16bd7d798a8af58e613fc305aa470dc6e1f1
+SHA512 (garuda-c90.r60832.tar.xz) = a806538598cae0365968ab20936631a052dc65f9f6056c39197f7b1c7a5aad717a7a8b72ed2a1af347f8ce91f27d7dcd74b758db8f01fc7810a8d658990bcc28
+Size (garuda-c90.r60832.tar.xz) = 3416 bytes
