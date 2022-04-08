@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/06/03 05:44:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/04/08 05:13:55 markd Exp $
 share/texmf-dist/doc/latex/changes/README
 share/texmf-dist/doc/latex/changes/changes.english.pdf
 share/texmf-dist/doc/latex/changes/changes.english.withcode.pdf
@@ -65,6 +65,8 @@ share/texmf-dist/doc/latex/changes/examples/changes.example.commentmarkup.todo.p
 share/texmf-dist/doc/latex/changes/examples/changes.example.commentmarkup.todo.tex
 share/texmf-dist/doc/latex/changes/examples/changes.example.commentmarkup.uwave.pdf
 share/texmf-dist/doc/latex/changes/examples/changes.example.commentmarkup.uwave.tex
+share/texmf-dist/doc/latex/changes/examples/changes.example.commentmarkup.wrong.pdf
+share/texmf-dist/doc/latex/changes/examples/changes.example.commentmarkup.wrong.tex
 share/texmf-dist/doc/latex/changes/examples/changes.example.defaultcolor.pdf
 share/texmf-dist/doc/latex/changes/examples/changes.example.defaultcolor.tex
 share/texmf-dist/doc/latex/changes/examples/changes.example.deletedmarkup.bf.pdf
@@ -103,6 +105,20 @@ share/texmf-dist/doc/latex/changes/examples/changes.example.highlightmarkup.uuli
 share/texmf-dist/doc/latex/changes/examples/changes.example.highlightmarkup.uuline.tex
 share/texmf-dist/doc/latex/changes/examples/changes.example.highlightmarkup.uwave.pdf
 share/texmf-dist/doc/latex/changes/examples/changes.example.highlightmarkup.uwave.tex
+share/texmf-dist/doc/latex/changes/examples/changes.example.highlightmarkup.wrong.pdf
+share/texmf-dist/doc/latex/changes/examples/changes.example.highlightmarkup.wrong.tex
+share/texmf-dist/doc/latex/changes/examples/changes.example.language.british.pdf
+share/texmf-dist/doc/latex/changes/examples/changes.example.language.british.tex
+share/texmf-dist/doc/latex/changes/examples/changes.example.language.english.pdf
+share/texmf-dist/doc/latex/changes/examples/changes.example.language.english.tex
+share/texmf-dist/doc/latex/changes/examples/changes.example.language.french.pdf
+share/texmf-dist/doc/latex/changes/examples/changes.example.language.french.tex
+share/texmf-dist/doc/latex/changes/examples/changes.example.language.german.pdf
+share/texmf-dist/doc/latex/changes/examples/changes.example.language.german.tex
+share/texmf-dist/doc/latex/changes/examples/changes.example.language.italian.pdf
+share/texmf-dist/doc/latex/changes/examples/changes.example.language.italian.tex
+share/texmf-dist/doc/latex/changes/examples/changes.example.language.ngerman.pdf
+share/texmf-dist/doc/latex/changes/examples/changes.example.language.ngerman.tex
 share/texmf-dist/doc/latex/changes/examples/changes.example.listofchanges.all.pdf
 share/texmf-dist/doc/latex/changes/examples/changes.example.listofchanges.all.tex
 share/texmf-dist/doc/latex/changes/examples/changes.example.listofchanges.compactsummary.pdf
@@ -126,9 +142,9 @@ share/texmf-dist/doc/latex/changes/examples/changes.example.markup.nocolor.tex
 share/texmf-dist/doc/latex/changes/examples/changes.example.markup.underlined.pdf
 share/texmf-dist/doc/latex/changes/examples/changes.example.markup.underlined.tex
 share/texmf-dist/doc/latex/changes/examples/changes.example.markup.wrong.pdf
+share/texmf-dist/doc/latex/changes/examples/changes.example.markup.wrong.tex
 share/texmf-dist/doc/latex/changes/examples/changes.example.package.hyperref.pdf
 share/texmf-dist/doc/latex/changes/examples/changes.example.package.hyperref.tex
-share/texmf-dist/doc/latex/changes/examples/changes.example.markup.wrong.tex
 share/texmf-dist/doc/latex/changes/examples/changes.example.packageoptions.todonotes.pdf
 share/texmf-dist/doc/latex/changes/examples/changes.example.packageoptions.todonotes.tex
 share/texmf-dist/doc/latex/changes/examples/changes.example.packageoptions.truncate.pdf
@@ -141,6 +157,8 @@ share/texmf-dist/doc/latex/changes/examples/changes.example.screenshot.pdf
 share/texmf-dist/doc/latex/changes/examples/changes.example.screenshot.tex
 share/texmf-dist/doc/latex/changes/examples/changes.example.setaddedmarkup.pdf
 share/texmf-dist/doc/latex/changes/examples/changes.example.setaddedmarkup.tex
+share/texmf-dist/doc/latex/changes/examples/changes.example.setanonymousname.pdf
+share/texmf-dist/doc/latex/changes/examples/changes.example.setanonymousname.tex
 share/texmf-dist/doc/latex/changes/examples/changes.example.setauthormarkup.pdf
 share/texmf-dist/doc/latex/changes/examples/changes.example.setauthormarkup.tex
 share/texmf-dist/doc/latex/changes/examples/changes.example.setauthormarkupposition.pdf
@@ -165,7 +183,10 @@ share/texmf-dist/doc/latex/changes/examples/changes.example.settruncatewidth.pdf
 share/texmf-dist/doc/latex/changes/examples/changes.example.settruncatewidth.tex
 share/texmf-dist/doc/latex/changes/examples/changes.example.simple.pdf
 share/texmf-dist/doc/latex/changes/examples/changes.example.simple.tex
-share/texmf-dist/doc/latex/changes/regression/changes.regression.draft.tex
+share/texmf-dist/doc/latex/changes/regression/changes.regression.draft.id.tex
+share/texmf-dist/doc/latex/changes/regression/changes.regression.draft.name.tex
+share/texmf-dist/doc/latex/changes/regression/changes.regression.draft.nobabel.tex
+share/texmf-dist/doc/latex/changes/regression/changes.regression.final.nobabel.tex
 share/texmf-dist/doc/latex/changes/regression/changes.regression.final.tex
 share/texmf-dist/doc/latex/changes/userdoc/added_ex.tex
 share/texmf-dist/doc/latex/changes/userdoc/added_in.tex
@@ -189,6 +210,8 @@ share/texmf-dist/doc/latex/changes/userdoc/script_pymergechanges.tex
 share/texmf-dist/doc/latex/changes/userdoc/script_pymergechanges_empty.tex
 share/texmf-dist/doc/latex/changes/userdoc/setaddedmarkup_ex.tex
 share/texmf-dist/doc/latex/changes/userdoc/setaddedmarkup_in.tex
+share/texmf-dist/doc/latex/changes/userdoc/setanonymousname_ex.tex
+share/texmf-dist/doc/latex/changes/userdoc/setanonymousname_in.tex
 share/texmf-dist/doc/latex/changes/userdoc/setauthormarkup_ex.tex
 share/texmf-dist/doc/latex/changes/userdoc/setauthormarkup_in.tex
 share/texmf-dist/doc/latex/changes/userdoc/setauthormarkupposition_ex.tex
