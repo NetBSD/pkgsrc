@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1760 2022/04/09 09:26:40 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.1761 2022/04/09 12:15:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2461,3 +2461,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/tex-rsfso to 1.03 [markd 2022-04-09]
 	Updated fonts/tex-rsfso-doc to 1.03 [markd 2022-04-09]
 	Added devel/gitui version 0.20.1 [bsiegert 2022-04-09]
+	Updated math/py-numpy to 1.22.3 [adam 2022-04-09]
+	Updated math/py-scipy to 1.8.0 [adam 2022-04-09]
