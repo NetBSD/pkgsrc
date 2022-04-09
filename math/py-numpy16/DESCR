@@ -8,5 +8,6 @@ create arrays of arbitrary type.
 There are also basic facilities for discrete fourier transform,
 basic linear algebra and random number generation.
 
-This is an old version that still supports Python 2.7, kept because it
-is required dependency of other packages that still require Python 2.7.
+This is an old version that still supports Python 2.7 and 3.7, kept because
+it is a required dependency of other packages that still require those
+versions.
