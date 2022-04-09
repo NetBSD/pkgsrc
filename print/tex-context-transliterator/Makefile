@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 23:33:55 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2022/04/09 20:44:14 markd Exp $
 
 DISTNAME=	context-transliterator
-PKGNAME=	tex-${DISTNAME}-2015
-TEXLIVE_REV=	29801
+PKGNAME=	tex-${DISTNAME}-2021
+TEXLIVE_REV=	61127
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/context-transliterator
@@ -11,6 +11,5 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	tex-context-[0-9]*:../../print/tex-context
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
