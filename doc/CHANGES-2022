@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1767 2022/04/09 21:16:21 markd Exp $
+$NetBSD: CHANGES-2022,v 1.1768 2022/04/09 22:07:29 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2492,3 +2492,14 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/tex-footnotehyper-doc to 1.1e [markd 2022-04-09]
 	Updated fonts/tex-fourier to 2.3 [markd 2022-04-09]
 	Updated fonts/tex-fourier-doc to 2.3 [markd 2022-04-09]
+	Updated fonts/tex-newpx to 1.505 [markd 2022-04-09]
+	Updated fonts/tex-newpx-doc to 1.505 [markd 2022-04-09]
+	Updated fonts/tex-newtx to 1.710 [markd 2022-04-09]
+	Updated fonts/tex-newtx-doc to 1.710 [markd 2022-04-09]
+	Updated print/tex-nomencl to 5.6 [markd 2022-04-09]
+	Updated print/tex-nomencl-doc to 5.6 [markd 2022-04-09]
+	Updated fonts/tex-norasi-c90 to 2021 [markd 2022-04-09]
+	Updated print/tex-oberdiek to 2021 [markd 2022-04-09]
+	Updated print/tex-oberdiek-doc to 2021 [markd 2022-04-09]
+	Updated print/tex-ocgx2 to 0.54 [markd 2022-04-09]
+	Updated print/tex-ocgx2-doc to 0.54 [markd 2022-04-09]
