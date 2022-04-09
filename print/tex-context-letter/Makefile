@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2021/02/15 04:23:40 markd Exp $
+# $NetBSD: Makefile,v 1.7 2022/04/09 20:41:08 markd Exp $
 
 DISTNAME=	context-letter
-PKGNAME=	tex-${DISTNAME}-2020.56073
-TEXLIVE_REV=	56073
+PKGNAME=	tex-${DISTNAME}-2021
+TEXLIVE_REV=	60787
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/context-letter
