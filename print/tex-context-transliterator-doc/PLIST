@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/17 21:59:33 wiz Exp $
-share/texmf-dist/doc/context/third/transliterator/COPYING
+@comment $NetBSD: PLIST,v 1.2 2022/04/09 20:44:14 markd Exp $
+share/texmf-dist/doc/context/third/transliterator/VERSION
 share/texmf-dist/doc/context/third/transliterator/transliterator.pdf
 share/texmf-dist/doc/context/third/transliterator/transliterator.tex
