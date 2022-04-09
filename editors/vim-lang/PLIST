@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2020/12/11 18:06:25 morr Exp $
+@comment $NetBSD: PLIST,v 1.30 2022/04/09 15:17:43 morr Exp $
 man/da.ISO8859-1/man1/ex.1
 man/da.ISO8859-1/man1/rview.1
 man/da.ISO8859-1/man1/rvim.1
@@ -388,6 +388,7 @@ share/vim/${VIM_SUBDIR}/lang/menu_tr_tr.iso_8859-9.vim
 share/vim/${VIM_SUBDIR}/lang/menu_tr_tr.utf-8.vim
 share/vim/${VIM_SUBDIR}/lang/menu_uk_ua.cp1251.vim
 share/vim/${VIM_SUBDIR}/lang/menu_uk_ua.koi8-u.vim
+share/vim/${VIM_SUBDIR}/lang/menu_uk_ua.utf-8.vim
 share/vim/${VIM_SUBDIR}/lang/menu_vi_vn.vim
 share/vim/${VIM_SUBDIR}/lang/menu_zh.big5.vim
 share/vim/${VIM_SUBDIR}/lang/menu_zh.cp936.vim
