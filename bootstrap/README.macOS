@@ -1,4 +1,4 @@
-$NetBSD: README.macOS,v 1.7 2022/04/08 01:21:49 schmonz Exp $
+$NetBSD: README.macOS,v 1.8 2022/04/09 17:23:12 schmonz Exp $
 
 Please read the general README file as well.
 
@@ -22,6 +22,8 @@ Once bootstrapped, install `devel/scmcvs` so you can update pkgsrc via
 anonymous CVS. Alternatively, swap out your CVS checkout for a clone
 from this git mirror: <https://github.com/NetBSD/pkgsrc/>
 
+For a local X11 display server, install `x11/modular-xorg-xquartz`.
+
 For any particular package that doesn't build, macOS fixes are often in
 MacPorts or Homebrew waiting to be borrowed.
 
@@ -33,3 +35,8 @@ Occasionally, after updating to a freshly released macOS version, you'll
 see "No suitable Xcode SDK or Command Line Tools installed." This
 usually means a pkgsrc developer needs to add another `OSX_SDK_MAP`
 entry to `mk/platform/Darwin.mk`.
+
+-----
+
+Additional historical details, likely useful with older systems:
+<https://wiki.netbsd.org/pkgsrc/macos_porting_notes/>
