@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:14:39 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/04/09 03:11:47 markd Exp $
 
-BLAKE2s (siunitx.doc.r59464.tar.xz) = 6eaf3fd4ce975f1c0c571a54be963582b38737d5e7ef12416cdf5ec64fdbe07a
-SHA512 (siunitx.doc.r59464.tar.xz) = ce9e857ea0fce11dc67dc128cf3015ba0f66fb8fdbd63179a871880a62afd569a741ddef8b3487f4a29d4997f311a84c08098fa5e99c0d2af32c4ab4152fca28
-Size (siunitx.doc.r59464.tar.xz) = 2414300 bytes
+BLAKE2s (siunitx.doc.r62903.tar.xz) = 1b1568fc3b9691ebbce1daeb5d46b1f7c2fe1ca082ed04f0414ba925dfe494f2
+SHA512 (siunitx.doc.r62903.tar.xz) = b4dc202ea14d328c6756033a70b9456ab41001a95f04ed4b492edc400fd895c46b714b6b10afea05c8c729a4c46c3c9522b3008009d1b59d03ea4dec550e36aa
+Size (siunitx.doc.r62903.tar.xz) = 1208380 bytes
