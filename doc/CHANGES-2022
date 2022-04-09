@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1762 2022/04/09 15:08:34 morr Exp $
+$NetBSD: CHANGES-2022,v 1.1763 2022/04/09 15:23:11 morr Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2464,3 +2464,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/py-numpy to 1.22.3 [adam 2022-04-09]
 	Updated math/py-scipy to 1.8.0 [adam 2022-04-09]
 	Updated www/wordpress to 5.9.3 [morr 2022-04-09]
+	Updated editors/vim-share to 8.2.4721 [morr 2022-04-09]
