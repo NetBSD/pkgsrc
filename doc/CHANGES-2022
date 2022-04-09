@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1755 2022/04/08 23:31:19 markd Exp $
+$NetBSD: CHANGES-2022,v 1.1756 2022/04/09 03:28:31 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2429,3 +2429,23 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/tex-incgraph-doc to 1.2.0 [markd 2022-04-08]
 	Updated fonts/tex-ipaex to 2021 [markd 2022-04-08]
 	Updated fonts/tex-ipaex-doc to 2021 [markd 2022-04-08]
+	Updated fonts/tex-sansmathfonts to 2021 [markd 2022-04-09]
+	Updated fonts/tex-sansmathfonts-doc to 2021 [markd 2022-04-09]
+	Updated print/tex-schulschriften to 5 [markd 2022-04-09]
+	Updated print/tex-schulschriften-doc to 5 [markd 2022-04-09]
+	Updated print/tex-seminar to 1.63a [markd 2022-04-09]
+	Updated print/tex-seminar-doc to 1.63a [markd 2022-04-09]
+	Updated print/tex-showlabels to 1.9.1 [markd 2022-04-09]
+	Updated print/tex-showlabels-doc to 1.9.1 [markd 2022-04-09]
+	Updated print/tex-siunitx to 3.0.50 [markd 2022-04-09]
+	Updated print/tex-siunitx-doc to 3.0.50 [markd 2022-04-09]
+	Updated print/tex-skak to 1.5.3.61719 [markd 2022-04-09]
+	Updated print/tex-skak-doc to 1.5.3.61719 [markd 2022-04-09]
+	Updated print/tex-soulpos to 1.2 [markd 2022-04-09]
+	Updated print/tex-soulpos-doc to 1.2 [markd 2022-04-09]
+	Updated print/tex-stackengine to 4.11 [markd 2022-04-09]
+	Updated print/tex-stackengine-doc to 4.11 [markd 2022-04-09]
+	Updated print/tex-sttools to 3.0 [markd 2022-04-09]
+	Updated print/tex-sttools-doc to 3.0 [markd 2022-04-09]
+	Updated print/tex-svninfo to 0.7.4.62157 [markd 2022-04-09]
+	Updated print/tex-svninfo-doc to 0.7.4.62157 [markd 2022-04-09]
