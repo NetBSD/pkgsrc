@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:16 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/09 18:45:37 bsiegert Exp $
 
-BLAKE2s (asmfmt-1.3.0.tar.gz) = 1070a28d8add20a806d88f79d213cbed9887389a014264bf333f323cf5841c78
-SHA512 (asmfmt-1.3.0.tar.gz) = 0f88eda2d9caa340fbcf7bdd40dfe818ff8615d210d3873903960b723f39c60a1c3815f17244732c2f198480f433ddfc3495b8079dd69e76962a5ae9ac432619
-Size (asmfmt-1.3.0.tar.gz) = 146363 bytes
+BLAKE2s (asmfmt-1.3.2.tar.gz) = b7bbba75129ebd243613daa06a806597c120490fd02ccbdcdfdba3c5bf8fbf76
+SHA512 (asmfmt-1.3.2.tar.gz) = 532c41b0b325989124677dd863e11e80b7b06183a66d414d69b86d123eb3ae28f6bf9c488519072a324c695f42ee5a6cacd15c53ae738e666639d577ce4d8276
+Size (asmfmt-1.3.2.tar.gz) = 147245 bytes
