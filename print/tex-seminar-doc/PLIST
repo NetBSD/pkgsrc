@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:53 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/04/09 02:59:57 markd Exp $
 share/texmf-dist/doc/latex/seminar/Changes
 share/texmf-dist/doc/latex/seminar/README
 share/texmf-dist/doc/latex/seminar/run.sh
@@ -6,7 +6,6 @@ share/texmf-dist/doc/latex/seminar/sem-code.tex
 share/texmf-dist/doc/latex/seminar/sem-make.tex
 share/texmf-dist/doc/latex/seminar/seminar-doc.pdf
 share/texmf-dist/doc/latex/seminar/seminar-doc.tex
-share/texmf-dist/doc/latex/seminar/seminar.bg3
 share/texmf-dist/doc/latex/seminar/seminar.con
 share/texmf-dist/doc/latex/seminar/seminar.doc
 share/texmf-dist/doc/latex/seminar/semlayer.doc
