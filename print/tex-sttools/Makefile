@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2021/02/20 10:45:42 markd Exp $
+# $NetBSD: Makefile,v 1.11 2022/04/09 03:23:32 markd Exp $
 
 DISTNAME=	sttools
-PKGNAME=	tex-${DISTNAME}-2.1
-TEXLIVE_REV=	56774
+PKGNAME=	tex-${DISTNAME}-3.0
+TEXLIVE_REV=	60736
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/sttools
