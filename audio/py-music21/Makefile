@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/04/04 01:51:59 gutteridge Exp $
+# $NetBSD: Makefile,v 1.18 2022/04/09 21:55:17 gutteridge Exp $
 
 VERSION=	7.3.1
 DISTNAME=	music21-noCorpus-${VERSION}
@@ -14,7 +14,7 @@ HOMEPAGE=	https://github.com/cuthbertLab/music21
 COMMENT=	Python toolkit for computer-aided musical analysis
 LICENSE=	modified-bsd OR gnu-lgpl-v3
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-scipy
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-scipy
 
 EGG_NAME=	music21-${VERSION}
 
