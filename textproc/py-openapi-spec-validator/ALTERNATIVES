@@ -1,0 +1,1 @@
+bin/openapi-spec-validator @PREFIX@/bin/openapi-spec-validator-@PYVERSSUFFIX@
