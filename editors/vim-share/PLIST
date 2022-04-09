@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.59 2022/01/25 13:46:33 morr Exp $
+@comment $NetBSD: PLIST,v 1.60 2022/04/09 15:22:20 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -16,6 +16,8 @@ share/vim/${VIM_SUBDIR}/autoload/contextcomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/csscomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/decada.vim
 share/vim/${VIM_SUBDIR}/autoload/dist/ft.vim
+share/vim/${VIM_SUBDIR}/autoload/dist/script.vim
+share/vim/${VIM_SUBDIR}/autoload/freebasic.vim
 share/vim/${VIM_SUBDIR}/autoload/getscript.vim
 share/vim/${VIM_SUBDIR}/autoload/gnat.vim
 share/vim/${VIM_SUBDIR}/autoload/gzip.vim
@@ -317,6 +319,7 @@ share/vim/${VIM_SUBDIR}/doc/version5.txt
 share/vim/${VIM_SUBDIR}/doc/version6.txt
 share/vim/${VIM_SUBDIR}/doc/version7.txt
 share/vim/${VIM_SUBDIR}/doc/version8.txt
+share/vim/${VIM_SUBDIR}/doc/version9.txt
 share/vim/${VIM_SUBDIR}/doc/vi_diff.txt
 share/vim/${VIM_SUBDIR}/doc/vim2html.pl
 share/vim/${VIM_SUBDIR}/doc/vim9.txt
@@ -499,6 +502,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/ps1.vim
 share/vim/${VIM_SUBDIR}/ftplugin/ps1xml.vim
 share/vim/${VIM_SUBDIR}/ftplugin/pyrex.vim
 share/vim/${VIM_SUBDIR}/ftplugin/python.vim
+share/vim/${VIM_SUBDIR}/ftplugin/qb64.vim
 share/vim/${VIM_SUBDIR}/ftplugin/qf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/quake.vim
 share/vim/${VIM_SUBDIR}/ftplugin/r.vim
@@ -589,6 +593,7 @@ share/vim/${VIM_SUBDIR}/indent/ant.vim
 share/vim/${VIM_SUBDIR}/indent/automake.vim
 share/vim/${VIM_SUBDIR}/indent/awk.vim
 share/vim/${VIM_SUBDIR}/indent/bash.vim
+share/vim/${VIM_SUBDIR}/indent/basic.vim
 share/vim/${VIM_SUBDIR}/indent/bib.vim
 share/vim/${VIM_SUBDIR}/indent/bst.vim
 share/vim/${VIM_SUBDIR}/indent/bzl.vim
@@ -624,6 +629,7 @@ share/vim/${VIM_SUBDIR}/indent/eterm.vim
 share/vim/${VIM_SUBDIR}/indent/falcon.vim
 share/vim/${VIM_SUBDIR}/indent/fortran.vim
 share/vim/${VIM_SUBDIR}/indent/framescript.vim
+share/vim/${VIM_SUBDIR}/indent/freebasic.vim
 share/vim/${VIM_SUBDIR}/indent/gitconfig.vim
 share/vim/${VIM_SUBDIR}/indent/gitolite.vim
 share/vim/${VIM_SUBDIR}/indent/go.vim
@@ -670,6 +676,7 @@ share/vim/${VIM_SUBDIR}/indent/prolog.vim
 share/vim/${VIM_SUBDIR}/indent/ps1.vim
 share/vim/${VIM_SUBDIR}/indent/pyrex.vim
 share/vim/${VIM_SUBDIR}/indent/python.vim
+share/vim/${VIM_SUBDIR}/indent/qb64.vim
 share/vim/${VIM_SUBDIR}/indent/r.vim
 share/vim/${VIM_SUBDIR}/indent/raku.vim
 share/vim/${VIM_SUBDIR}/indent/raml.vim
@@ -1249,6 +1256,7 @@ share/vim/${VIM_SUBDIR}/syntax/ptcap.vim
 share/vim/${VIM_SUBDIR}/syntax/purifylog.vim
 share/vim/${VIM_SUBDIR}/syntax/pyrex.vim
 share/vim/${VIM_SUBDIR}/syntax/python.vim
+share/vim/${VIM_SUBDIR}/syntax/qb64.vim
 share/vim/${VIM_SUBDIR}/syntax/qf.vim
 share/vim/${VIM_SUBDIR}/syntax/quake.vim
 share/vim/${VIM_SUBDIR}/syntax/r.vim
