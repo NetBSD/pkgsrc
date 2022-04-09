@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:55 wiz Exp $
-share/texmf-dist/doc/fonts/sansmathfonts/README
+@comment $NetBSD: PLIST,v 1.2 2022/04/09 02:52:01 markd Exp $
+share/texmf-dist/doc/fonts/sansmathfonts/README.txt
 share/texmf-dist/doc/fonts/sansmathfonts/sansmathfonts.pdf
 share/texmf-dist/doc/fonts/sansmathfonts/sansmathfonts.tex
