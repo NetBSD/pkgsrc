@@ -1,8 +1,10 @@
-# $NetBSD: go-modules.mk,v 1.22 2022/03/30 08:23:21 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.23 2022/04/09 18:49:49 bsiegert Exp $
 
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v0.3.1.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.0.0.zip
+GO_MODULE_FILES+=	github.com/client9/misspell/@v/v0.3.4.mod
+GO_MODULE_FILES+=	github.com/client9/misspell/@v/v0.3.4.zip
 GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.9.mod
 GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.9.zip
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.0.mod
@@ -79,9 +81,11 @@ GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.7.zip
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20180917221912-90fa682c2a6e.mod
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20191119224855-298f0cb1881e.mod
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.0.mod
-GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.10-0.20220315142906-0c66750444e6.mod
-GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.10-0.20220315142906-0c66750444e6.zip
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.11-0.20220329213715-7cf6cf0fb5fd.mod
+GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.11-0.20220329213715-7cf6cf0fb5fd.zip
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.1.9.mod
+GO_MODULE_FILES+=	golang.org/x/vuln/@v/v0.0.0-20220324005316-18fd808f5c7f.mod
+GO_MODULE_FILES+=	golang.org/x/vuln/@v/v0.0.0-20220324005316-18fd808f5c7f.zip
 GO_MODULE_FILES+=	golang.org/x/xerrors/@v/v0.0.0-20190717185122-a985d3407aa7.mod
 GO_MODULE_FILES+=	golang.org/x/xerrors/@v/v0.0.0-20191011141410-1b5146add898.mod
 GO_MODULE_FILES+=	golang.org/x/xerrors/@v/v0.0.0-20191204190536-9bdfabe68543.mod
@@ -100,5 +104,7 @@ GO_MODULE_FILES+=	honnef.co/go/tools/@v/v0.2.2.mod
 GO_MODULE_FILES+=	honnef.co/go/tools/@v/v0.2.2.zip
 GO_MODULE_FILES+=	mvdan.cc/gofumpt/@v/v0.3.0.mod
 GO_MODULE_FILES+=	mvdan.cc/gofumpt/@v/v0.3.0.zip
+GO_MODULE_FILES+=	mvdan.cc/unparam/@v/v0.0.0-20211214103731-d0ef000c54e5.mod
+GO_MODULE_FILES+=	mvdan.cc/unparam/@v/v0.0.0-20211214103731-d0ef000c54e5.zip
 GO_MODULE_FILES+=	mvdan.cc/xurls/v2/@v/v2.4.0.mod
 GO_MODULE_FILES+=	mvdan.cc/xurls/v2/@v/v2.4.0.zip
