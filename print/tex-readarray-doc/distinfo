@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:14:31 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/04/09 07:51:45 markd Exp $
 
-BLAKE2s (tex-readarray-42467/readarray.doc.tar.xz) = 06b61c5f02f4022392a168ce640a5f33b6702a7a848dad5f0b567d1cd7772f33
-SHA512 (tex-readarray-42467/readarray.doc.tar.xz) = f0e0eb06d3a6763262eef1959a0f2f51081eaef0de523eba265ec855f5266d897d5c10c97fc46ae5e04a9e4b9fdaa5c97fc07d72f5adf329ab1bfb754465d317
-Size (tex-readarray-42467/readarray.doc.tar.xz) = 487376 bytes
+BLAKE2s (readarray.doc.r60540.tar.xz) = 872b29ead183743870140c815fe1e8272eb13aab933af1a4f4504329b62af4ee
+SHA512 (readarray.doc.r60540.tar.xz) = d9f87dc14d40c33b06591b611e8a79df95fc62c32d16f72cff96222e7fe48f4c09c95bb0b02a6acddc8b4630158ed61c9375dd370c2f2d21ec8a9328f63fff47
+Size (readarray.doc.r60540.tar.xz) = 506352 bytes
