@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/04/26 12:21:14 markd Exp $
+# $NetBSD: Makefile,v 1.6 2022/04/09 20:57:20 markd Exp $
 
 DISTNAME=	fontinst
-PKGNAME=	tex-${DISTNAME}-1.933.53562
-TEXLIVE_REV=	53562
+PKGNAME=	tex-${DISTNAME}-1.933.62517
+TEXLIVE_REV=	62517
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/fontinst
