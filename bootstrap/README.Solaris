@@ -1,4 +1,4 @@
-$NetBSD: README.Solaris,v 1.25 2022/04/05 14:00:02 nia Exp $
+$NetBSD: README.Solaris,v 1.26 2022/04/09 14:45:32 nia Exp $
 
 This README describes pkgsrc on a variety of Solaris-derived operating
 systems.  It corresponds to pkgsrc/platform/SunOS.mk.  The relevant
@@ -10,6 +10,11 @@ operating systems are:
 As of 2022, the primary platforms of interest where pkgsrc is known to
 work well are illumos distributions, Solaris 10, and Solaris 11.
 pkgsrc is not currently known to work on SunOS 4 or OpenSolaris.
+
+As of 2022-04-09, bootstrapping does not work on Tribblix due to the
+multi-arch toolchain:
+ld: Relocatable linking with relocations from format elf64-x86-64-sol2
+(common.o.o) to format elf32-i386-sol2 (common.o) is not supported.
 
 Prerequisites
 -------------
