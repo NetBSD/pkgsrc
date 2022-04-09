@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/25 04:34:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/04/09 02:59:57 markd Exp $
 share/texmf-dist/tex/latex/seminar/npsfont.sty
 share/texmf-dist/tex/latex/seminar/sem-a4.sty
 share/texmf-dist/tex/latex/seminar/sem-dem.sty
@@ -6,6 +6,7 @@ share/texmf-dist/tex/latex/seminar/sem-page.sty
 share/texmf-dist/tex/latex/seminar/semcolor.sty
 share/texmf-dist/tex/latex/seminar/semhelv.sty
 share/texmf-dist/tex/latex/seminar/seminar.bg2
+share/texmf-dist/tex/latex/seminar/seminar.bg3
 share/texmf-dist/tex/latex/seminar/seminar.bug
 share/texmf-dist/tex/latex/seminar/seminar.cls
 share/texmf-dist/tex/latex/seminar/seminar.sty
