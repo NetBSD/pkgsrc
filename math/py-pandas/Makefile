@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2022/01/04 20:54:15 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2022/04/09 21:33:50 gutteridge Exp $
 
 DISTNAME=	pandas-1.3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -31,6 +31,6 @@ PYSETUPTESTTARGET=	pytest
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
-BUILDLINK_API_DEPENDS.pynumpy+= ${PYPKGPREFIX}-numpy>=1.16.5
+BUILDLINK_API_DEPENDS.py-numpy+= ${PYPKGPREFIX}-numpy>=1.16.5
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
