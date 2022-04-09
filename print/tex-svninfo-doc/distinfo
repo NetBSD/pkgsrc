@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:14:44 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/09 03:27:20 markd Exp $
 
-BLAKE2s (tex-svninfo-17554/svninfo.doc.tar.xz) = 5f70f086a8ac9d7b3a354ec408a79fd244273bc4f8a0f770f8ed7aa8ccc18e85
-SHA512 (tex-svninfo-17554/svninfo.doc.tar.xz) = d8a26e2c69d88a4a3d7f64e4b51d313052c80ac21cd6af70a9fc99c3ea65df74383aa7df227d307386c53bfd172e65c855a982034f3a87e05ca55ee92552823e
-Size (tex-svninfo-17554/svninfo.doc.tar.xz) = 258440 bytes
+BLAKE2s (svninfo.doc.r62157.tar.xz) = 273a036de3f10d44f941029d5269757338390d21c5d633ad1cadcf3bd905bff5
+SHA512 (svninfo.doc.r62157.tar.xz) = aa4bd06d31bad0a2441623b80f52702d67fdef03912b6f96058f3a89d00f4601cc4bae76a24f49540169ad30883177d038ddc7dedabd8d643b59df5c94be4a65
+Size (svninfo.doc.r62157.tar.xz) = 258436 bytes
