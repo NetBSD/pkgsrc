@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2021/06/05 06:09:38 markd Exp $
+# $NetBSD: Makefile,v 1.4 2022/04/09 07:46:52 markd Exp $
 
 DISTNAME=	ragged2e
-PKGNAME=	tex-${DISTNAME}-3.0
-TEXLIVE_REV=	57638
+PKGNAME=	tex-${DISTNAME}-3.1
+TEXLIVE_REV=	61313
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/ragged2e
