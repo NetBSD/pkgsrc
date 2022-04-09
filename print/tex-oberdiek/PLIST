@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2021/02/13 05:31:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/04/09 21:59:07 markd Exp $
 share/texmf-dist/bibtex/bib/oberdiek/oberdiek-bundle.bib
 share/texmf-dist/bibtex/bib/oberdiek/oberdiek-source.bib
 share/texmf-dist/tex/generic/oberdiek/engord.sty
@@ -31,7 +31,6 @@ share/texmf-dist/tex/latex/oberdiek/flags.sty
 share/texmf-dist/tex/latex/oberdiek/holtxdoc.sty
 share/texmf-dist/tex/latex/oberdiek/hypbmsec.sty
 share/texmf-dist/tex/latex/oberdiek/hypcap.sty
-share/texmf-dist/tex/latex/oberdiek/hypdoc.sty
 share/texmf-dist/tex/latex/oberdiek/hypgotoe.sty
 share/texmf-dist/tex/latex/oberdiek/ifdraft.sty
 share/texmf-dist/tex/latex/oberdiek/pagegrid.sty
