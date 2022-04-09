@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1768 2022/04/09 22:07:29 markd Exp $
+$NetBSD: CHANGES-2022,v 1.1769 2022/04/09 22:19:29 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2503,3 +2503,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/tex-oberdiek-doc to 2021 [markd 2022-04-09]
 	Updated print/tex-ocgx2 to 0.54 [markd 2022-04-09]
 	Updated print/tex-ocgx2-doc to 0.54 [markd 2022-04-09]
+	Added print/tex-hypdoc version 1.15 [markd 2022-04-09]
+	Added print/tex-hypdoc-doc version 1.15 [markd 2022-04-09]
