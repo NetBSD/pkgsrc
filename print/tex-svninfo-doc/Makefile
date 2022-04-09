@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 20:23:23 markd Exp $
+# $NetBSD: Makefile,v 1.3 2022/04/09 03:27:20 markd Exp $
 
 DISTNAME=	svninfo.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.7.4
-TEXLIVE_REV=	17554
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.7.4.62157
+TEXLIVE_REV=	62157
 
 MAINTAINER=	cfuhrman@panix.com
+HOMEPAGE=	https://ctan.org/pkg/svninfo
 COMMENT=	Documentation for tex-svninfo
-LICENSE=	lppl-1.3c
+LICENSE=	lppl-1.0
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
