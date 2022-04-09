@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.58 2020/05/09 10:52:23 leot Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.59 2022/04/09 10:14:20 nia Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -441,13 +441,15 @@ the one that corresponds to your release (determine via <command>uname
 <!-- ================================================================== -->
 
 <sect1 id="using-sudo-with-pkgsrc">
-<title>Using 'sudo' with pkgsrc</title>
+<title>Using 'sudo' or `priv` with pkgsrc</title>
 
 <para>When installing packages as non-root user and using the just-in-time
 &man.su.1; feature of pkgsrc, it can become annoying to type in the root
 password for each required package installed.  To avoid this, the sudo
 package can be used, which does password caching over a limited time.  To
-use it, install sudo (either as binary package or from
+use it, install <command>sudo</command> or
+<command>priv</command> (either as binary package, from
+<filename role="pkg">security/priv</filename>, or
 <filename role="pkg">security/sudo</filename>) and then put the
 following into your &mk.conf;, somewhere
 <emphasis>after</emphasis> the definition of the
