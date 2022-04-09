@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/04/02 09:36:15 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/09 11:11:09 nikita Exp $
 
 GITHUB_PROJECT=	helix
 DISTNAME=	22.03
@@ -409,6 +409,5 @@ post-install:
 	${INSTALL_LIB} ${WRKSRC}/runtime/grammars/*.so ${DESTDIR}${PREFIX}/share/helix/runtime/grammars/
 
 .include "../../lang/rust/cargo.mk"
-.include "../../lang/rust/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
