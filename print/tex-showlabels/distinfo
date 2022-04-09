@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:14:38 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/04/09 03:04:34 markd Exp $
 
-BLAKE2s (tex-showlabels-41322/showlabels.tar.xz) = 094bd1f6c89526b0d8b7c659643fb3464c08e64a13df553d9a2a3bfb30c50037
-SHA512 (tex-showlabels-41322/showlabels.tar.xz) = b5553e162dc75199e7c4365617a6bec3bec8351d336594be6ef468f3135acf4ab47a26f446ebbe0a9bc6900b0805b9fef02b5b653591bf472523e3163107bccc
-Size (tex-showlabels-41322/showlabels.tar.xz) = 3172 bytes
+BLAKE2s (showlabels.r60877.tar.xz) = 37497d9ea06db7d47c272eb5b6871bfb2b0c8a8a254bfd087ec9df8f5625d294
+SHA512 (showlabels.r60877.tar.xz) = 4d619e52b40b06a7d31ac0627ec00a19f38c4ff56551279e185d1b86461b776dc75d711d52ff5d83ab9ddf04dc3828cf0302760e71cba2dcaf4c284c8c65ff6e
+Size (showlabels.r60877.tar.xz) = 3212 bytes
