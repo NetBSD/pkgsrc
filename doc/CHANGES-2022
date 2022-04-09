@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1759 2022/04/09 08:07:15 markd Exp $
+$NetBSD: CHANGES-2022,v 1.1760 2022/04/09 09:26:40 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2460,3 +2460,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/tex-repere-doc to 21.11 [markd 2022-04-09]
 	Updated fonts/tex-rsfso to 1.03 [markd 2022-04-09]
 	Updated fonts/tex-rsfso-doc to 1.03 [markd 2022-04-09]
+	Added devel/gitui version 0.20.1 [bsiegert 2022-04-09]
