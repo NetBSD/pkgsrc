@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.9 2020/06/21 19:53:01 morr Exp $
+$NetBSD: patch-Makefile,v 1.10 2022/04/09 15:22:21 morr Exp $
 
 Handle Xaw support appropiately.
 
@@ -6,41 +6,6 @@ Fix GNUmakeism by not depending on $< in non-suffix rules.
 
 --- src/Makefile.orig	2018-07-27 21:16:51.000000000 +0000
 +++ src/Makefile
-@@ -1297,22 +1297,27 @@ MOTIF_BUNDLE	=
- ### Athena GUI
- ### Use Xaw3d to make the menus look a little bit nicer
- #XAW_LIB = -lXaw3d
--XAW_LIB = -lXaw
-+#XAW_LIB = -lXaw
- 
- ### When using Xaw3d, uncomment/comment the following lines to also get the
- ### scrollbars from Xaw3d.
--#ATHENA_SRC	= gui.c gui_athena.c gui_x11.c gui_beval.c gui_at_fs.c
--#ATHENA_OBJ	= objects/gui.o objects/gui_athena.o objects/gui_x11.o \
--#			objects/gui_beval.o objects/gui_at_fs.o
--#ATHENA_DEFS	= -DFEAT_GUI_ATHENA $(NARROW_PROTO) \
--#		    -Dvim_scrollbarWidgetClass=scrollbarWidgetClass \
--#		    -Dvim_XawScrollbarSetThumb=XawScrollbarSetThumb
-+.if defined(XAW_LIB)
-+.if (${XAW_LIB} != "-lXaw")
-+ATHENA_SRC	= gui.c gui_athena.c gui_x11.c gui_beval.c gui_at_fs.c
-+ATHENA_OBJ	= objects/gui.o objects/gui_athena.o objects/gui_x11.o \
-+			objects/gui_beval.o objects/gui_at_fs.o
-+ATHENA_DEFS	= -DFEAT_GUI_ATHENA $(NARROW_PROTO) \
-+		    -Dvim_scrollbarWidgetClass=scrollbarWidgetClass \
-+		    -Dvim_XawScrollbarSetThumb=XawScrollbarSetThumb
-+.else
- ATHENA_SRC	= gui.c gui_athena.c gui_x11.c gui_beval.c \
- 			gui_at_sb.c gui_at_fs.c
- ATHENA_OBJ	= objects/gui.o objects/gui_athena.o objects/gui_x11.o \
- 			objects/gui_beval.o \
- 			objects/gui_at_sb.o objects/gui_at_fs.o
- ATHENA_DEFS	= -DFEAT_GUI_ATHENA $(NARROW_PROTO)
-+.endif # Xaw
-+.endif # defined(XAW_LIB)
- 
- ATHENA_IPATH	= $(GUI_INC_LOC)
- ATHENA_LIBS_DIR = $(GUI_LIB_LOC)
 @@ -2236,7 +2241,7 @@ installrtbase: $(HELPSOURCE)/vim.1 $(DES
  		mv -f tags tags.dist; fi
  	@echo generating help tags
