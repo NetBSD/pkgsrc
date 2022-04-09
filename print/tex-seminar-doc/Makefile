@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2019/12/06 20:23:15 markd Exp $
+# $NetBSD: Makefile,v 1.7 2022/04/09 02:59:57 markd Exp $
 
 DISTNAME=	seminar.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.61
-TEXLIVE_REV=	34011
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.63a
+TEXLIVE_REV=	59801
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	https://ctan.org/pkg/seminar
 COMMENT=	Documentation for tex-seminar
 LICENSE=	lppl-1.2
 
 REPLACE_SH+=	doc/latex/seminar/run.sh
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

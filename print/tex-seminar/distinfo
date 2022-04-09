@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:14:36 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/04/09 02:59:57 markd Exp $
 
-BLAKE2s (tex-seminar-34011/seminar.tar.xz) = bf58c2cf4b633ce12434d477a4c4dd21661cc0c18ce034fbceff1efb1fa26a63
-SHA512 (tex-seminar-34011/seminar.tar.xz) = c60991fd8a38e5aedd82b2119e102e301376c0ab06b1ea4467f2a3e8e56f7129df5a530cf58bc8ba2d1fb7e95139ed710d9b81c25411b50f6f47f9cd7aa42b6f
-Size (tex-seminar-34011/seminar.tar.xz) = 29916 bytes
+BLAKE2s (seminar.r59801.tar.xz) = 618f566e5037b2b07e2443e80c7cd92601743a4059f79f95213634019b6b0c4c
+SHA512 (seminar.r59801.tar.xz) = 28795c64e4af5296e228986c28115305cb76087d241e91312cfff351f7e51833a0d76b2acd667fc5f7616dcb1685cd02b2d9352ef7f0e36d5bffdaa5f421e6eb
+Size (seminar.r59801.tar.xz) = 30320 bytes
