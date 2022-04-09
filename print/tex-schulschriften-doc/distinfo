@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:14:34 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/09 02:56:35 markd Exp $
 
-BLAKE2s (tex-schulschriften-35730/schulschriften.doc.tar.xz) = 30e3a1778e2780474d6dccfb5a6a2b1daf9f9f511138418d957ca056a6d75fbe
-SHA512 (tex-schulschriften-35730/schulschriften.doc.tar.xz) = 00ac81df81201fe2695f042036faa03f22b120f3cd4255ae6abbcf766c5db243565c182b41276da3fa87ce5843d8f877a54f7dc886e575bb9610d570b6883fb1
-Size (tex-schulschriften-35730/schulschriften.doc.tar.xz) = 720148 bytes
+BLAKE2s (schulschriften.doc.r59388.tar.xz) = abbd745a7f0a29bfdcf65755fa46a03f210fa5d42b132e14d7980cbe387924a9
+SHA512 (schulschriften.doc.r59388.tar.xz) = c9b6b43bff7a90f158b0a10c431cc52e65c4c2d49c773aafe7e54d1283d97c3badfca5315ff982cf0a524b514594faff5666063164483987973ce60d2edcadb8
+Size (schulschriften.doc.r59388.tar.xz) = 720848 bytes
