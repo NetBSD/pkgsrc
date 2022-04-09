@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/09 09:24:56 bsiegert Exp $
+bin/gitui
+share/doc/gitui/KEY_CONFIG.md
+share/doc/gitui/LICENSE.md
+share/doc/gitui/README.md
+share/doc/gitui/THEMES.md
+share/examples/gitui/vim_style_key_config.ron
