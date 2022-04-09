@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:14:10 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/04/09 21:53:22 markd Exp $
 
-BLAKE2s (nomencl.doc.r57263.tar.xz) = 05844b1d9a947047d6b43816a5a17c288ced0de36c92703d04180f0baaf67ebb
-SHA512 (nomencl.doc.r57263.tar.xz) = cf29a353af0a32e41d18087d3ae9c8447d52cb0f95dabfbde01150d15637022d53a8576c362bd7489e8110cdc5dc1892159652d67e61f165f25a78b64d8e095c
-Size (nomencl.doc.r57263.tar.xz) = 531236 bytes
+BLAKE2s (nomencl.doc.r61029.tar.xz) = 1490bd6b0bf237eb676343358ed3e0ebe3e0004fb375dc90da0fdc9aecc3be9f
+SHA512 (nomencl.doc.r61029.tar.xz) = 1caa5bcde6c1a3ac5de024f513793c52011285e70e32664d6c5d1a103027c74d45c716d01aaf849726b5b7ffac511ebe6cd16ba669bfeb5fdf37addc59e24a6e
+Size (nomencl.doc.r61029.tar.xz) = 547080 bytes
