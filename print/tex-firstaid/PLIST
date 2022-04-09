@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/13 04:44:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/04/09 08:48:21 tnn Exp $
+share/texmf-dist/tex/latex/firstaid/everysel-ltx.sty
 share/texmf-dist/tex/latex/firstaid/filehook-ltx.sty
 share/texmf-dist/tex/latex/firstaid/latex2e-first-aid-for-external-files.ltx
