@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:28:28 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/04/09 02:52:01 markd Exp $
 
-BLAKE2s (tex-sansmathfonts-51356/sansmathfonts.tar.xz) = 58a0d314077a9bda6779596f41d2bd14e91a39c8dec7ec7b4d3054272fcf1e33
-SHA512 (tex-sansmathfonts-51356/sansmathfonts.tar.xz) = 71d70b034c7e0da6f8e1876c40ce2821e05cc814e5d8e1194f5a76c4b490d8d191bf6b3c9bb7fe880d0273ec8e1f3211bd335b526b154116d7ccdcdf0b61d0d5
-Size (tex-sansmathfonts-51356/sansmathfonts.tar.xz) = 4275192 bytes
+BLAKE2s (sansmathfonts.r59673.tar.xz) = 79c72c6f96b05c2882e20d00cd49b74c189f39eddda5570e12d68f34e0cb31b7
+SHA512 (sansmathfonts.r59673.tar.xz) = d94d362ac6bac44177f61d73baeb4eebff6bd1309fedf0d152b422e1b5f2bd2014c4b95876cce75033d6f6a7835c277b6e1cff2beabdd510be3e32ac7501f393
+Size (sansmathfonts.r59673.tar.xz) = 4275628 bytes
