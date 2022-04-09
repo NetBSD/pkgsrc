@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3710 2022/04/06 06:03:06 wiz Exp $
+# $NetBSD: Makefile,v 1.3711 2022/04/09 09:24:56 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -403,6 +403,7 @@ SUBDIR+=	git-lfs
 SUBDIR+=	git-remote-hg
 SUBDIR+=	git-svn
 SUBDIR+=	gitolite
+SUBDIR+=	gitui
 SUBDIR+=	glade
 SUBDIR+=	glib
 SUBDIR+=	glib2
