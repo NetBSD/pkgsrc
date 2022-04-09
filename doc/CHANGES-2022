@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1766 2022/04/09 18:50:03 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.1767 2022/04/09 21:16:21 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2468,3 +2468,27 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/catch2 to 2.13.8 [bsiegert 2022-04-09]
 	Updated devel/asmfmt to 1.3.2 [bsiegert 2022-04-09]
 	Updated devel/gopls to 0.8.2 [bsiegert 2022-04-09]
+	Updated print/tex-context-filter to 2021.62070 [markd 2022-04-09]
+	Updated print/tex-context-filter-doc to 2021.62070 [markd 2022-04-09]
+	Updated print/tex-context-letter to 2021 [markd 2022-04-09]
+	Updated print/tex-context-letter-doc to 2021 [markd 2022-04-09]
+	Updated print/tex-context-transliterator to 2021 [markd 2022-04-09]
+	Updated print/tex-context-transliterator-doc to 2021 [markd 2022-04-09]
+	Updated print/tex-context-typescripts to 2021 [markd 2022-04-09]
+	Updated print/tex-context-typescripts-doc to 2021 [markd 2022-04-09]
+	Updated print/tex-context-vim to 2021.62071 [markd 2022-04-09]
+	Updated print/tex-context-vim-doc to 2021.62071 [markd 2022-04-09]
+	Updated graphics/tex-fiziko to 0.2.0 [markd 2022-04-09]
+	Updated graphics/tex-fiziko-doc to 0.2.0 [markd 2022-04-09]
+	Updated fonts/tex-fontinst to 1.933.62517 [markd 2022-04-09]
+	Updated fonts/tex-fontinst-doc to 1.933.62517 [markd 2022-04-09]
+	Updated fonts/tex-fontools to 2021.61726 [markd 2022-04-09]
+	Updated fonts/tex-fontools-doc to 2021.61726 [markd 2022-04-09]
+	Updated fonts/tex-fonts-tlwg to 0.7.3 [markd 2022-04-09]
+	Updated fonts/tex-fonts-tlwg-doc to 0.7.3 [markd 2022-04-09]
+	Updated fonts/tex-fontspec to 2.8a [markd 2022-04-09]
+	Updated fonts/tex-fontspec-doc to 2.8a [markd 2022-04-09]
+	Updated print/tex-footnotehyper to 1.1e [markd 2022-04-09]
+	Updated print/tex-footnotehyper-doc to 1.1e [markd 2022-04-09]
+	Updated fonts/tex-fourier to 2.3 [markd 2022-04-09]
+	Updated fonts/tex-fourier-doc to 2.3 [markd 2022-04-09]
