@@ -1,4 +1,4 @@
-# $NetBSD: bsd.depends.mk,v 1.30 2019/05/07 19:36:44 rillig Exp $
+# $NetBSD: bsd.depends.mk,v 1.31 2022/04/09 00:46:12 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to dependencies.
@@ -129,12 +129,19 @@ depends-cookie:
 	${RUN}${TOUCH} ${TOUCH_ARGS} ${_COOKIE.depends}
 
 # show-depends:
-#	Prints a list of dependencies.
+#	Prints the dependencies that need to be installed before this
+#	package can be installed.  Each line of the output has the format
+#	'dependency:directory', as in DEPENDS and the related variables.
 #
 #	Command line variables:
 #
 #	VARNAME
 #		DEPENDS, BUILD_DEPENDS, TEST_DEPENDS, or TOOL_DEPENDS.
+#
+# See also:
+#	show-depends-pkgpaths	Prints the PKGPATH of all direct dependencies.
+#	show-depends-all	Prints the PKGPATH of all direct and
+#				indirect dependencies.
 #
 # Keywords: depends dependencies
 show-depends: .PHONY _pkgformat-show-depends
