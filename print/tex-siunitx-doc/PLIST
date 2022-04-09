@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2021/06/05 06:20:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/04/09 03:11:47 markd Exp $
 share/texmf-dist/doc/latex/siunitx/CHANGELOG.md
 share/texmf-dist/doc/latex/siunitx/README.md
 share/texmf-dist/doc/latex/siunitx/siunitx-code.pdf
-share/texmf-dist/doc/latex/siunitx/siunitx-table.pdf
 share/texmf-dist/doc/latex/siunitx/siunitx.pdf
