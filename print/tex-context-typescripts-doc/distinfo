@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:13:01 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/04/09 20:47:30 markd Exp $
 
-BLAKE2s (tex-context-typescripts-25411/context-typescripts.doc.tar.xz) = cbb0cccd6dcb1291c8c14b37960c325b16ef2f8550f48c3bb5544d5d30d48841
-SHA512 (tex-context-typescripts-25411/context-typescripts.doc.tar.xz) = a9a06df4b08304fea2ee45bce2c68af30fc376ca3f4e093b05deb845ec5ee694dbd8bfe78273dc35af3d99c939115498c3eae15dca540b27b917177b88607f09
-Size (tex-context-typescripts-25411/context-typescripts.doc.tar.xz) = 608 bytes
+BLAKE2s (context-typescripts.doc.r60422.tar.xz) = 8c2fa0f6388420fd25548ace18d278e9b0d4c19be97510bfae32789a8416e3d6
+SHA512 (context-typescripts.doc.r60422.tar.xz) = 3d948f22da14b1d481817477235657cee714e4a2a69834729c20e18157f1175890ddc7fce992e8f5f27e26cd6d08186ff1521e2186681557cfff1a4778267324
+Size (context-typescripts.doc.r60422.tar.xz) = 644 bytes
