@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:12:58 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/04/09 20:41:08 markd Exp $
 
-BLAKE2s (context-letter.r56073.tar.xz) = 28e086f1490088f1319aa66220447bb5d8cef8eba1c6d2ba23e9798621dc8901
-SHA512 (context-letter.r56073.tar.xz) = 12c0e37865f241eb37b46989346e16c75cd49672e76e22f511d2a146ea221e0279c93ebacd0b85e0377cffab0ae07e26515fe3a6abb86bc85df52b87569dec2a
-Size (context-letter.r56073.tar.xz) = 27176 bytes
+BLAKE2s (context-letter.r60787.tar.xz) = 249177ec4d0ed99ef47ece2ec2cead09ddcaf6017109eeae6f795d9c536529e9
+SHA512 (context-letter.r60787.tar.xz) = 558836a8c95743270f627a18dfe7a29ffc7a2eaeb4cf663d589ef5c07eab4dad6f09db31511379c90a41d1e9e7da5766e8dc3c8bb0902fa06bda4fb33caa97c9
+Size (context-letter.r60787.tar.xz) = 20808 bytes
