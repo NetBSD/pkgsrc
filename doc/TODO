@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21670 2022/04/08 11:44:49 wiz Exp $
+$NetBSD: TODO,v 1.21671 2022/04/09 18:33:27 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -535,7 +535,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o canu-2.1.1
 	o carbons-purple-0.2.3
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
-	o catch2-2.13.6
 	o catdoc-1.1
 	o catdoc-tk-1.1
 	o ccache-4.2.1
