@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2022/04/06 14:46:28 adam Exp $
+# $NetBSD: Makefile,v 1.65 2022/04/09 00:33:45 gutteridge Exp $
 
 DISTNAME=	rabbitmq-server-3.9.14
 PKGNAME=	${DISTNAME:S/-server//}
@@ -107,6 +107,7 @@ MAKE_ENV+=		RSYNC="${PREFIX}/bin/rsync"
 MAKE_ENV+=		VERSION="${PKGVERSION_NOREV}"
 
 INSTALL_TARGET=		install-erlapp install-scripts install-bin install-man
+# XXX this test target doesn't work correctly at present, needs investigation.
 TEST_TARGET=		check
 
 post-install:
