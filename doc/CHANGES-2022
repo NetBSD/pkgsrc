@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1761 2022/04/09 12:15:55 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1762 2022/04/09 15:08:34 morr Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2463,3 +2463,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/gitui version 0.20.1 [bsiegert 2022-04-09]
 	Updated math/py-numpy to 1.22.3 [adam 2022-04-09]
 	Updated math/py-scipy to 1.8.0 [adam 2022-04-09]
+	Updated www/wordpress to 5.9.3 [morr 2022-04-09]
