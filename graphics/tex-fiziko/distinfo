@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:47:01 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/04/09 20:54:36 markd Exp $
 
-BLAKE2s (tex-fiziko-50293/fiziko.tar.xz) = f985a6692cd08e402447016cc6c3e6f31e9875a5f004b582caa94be63d14f398
-SHA512 (tex-fiziko-50293/fiziko.tar.xz) = 785f99a52193acc630e5fb00cc2db9e16795f42059d65054b0fa07f8081b95e66a245fd05c8b3ee49a69d91a17e7447d10c39863612e44e2632afd5fd0165e38
-Size (tex-fiziko-50293/fiziko.tar.xz) = 20908 bytes
+BLAKE2s (fiziko.r61944.tar.xz) = 559faebf864ed65e4069e99d0346f92541e96931036a663976a45ad39a67f799
+SHA512 (fiziko.r61944.tar.xz) = 4ad67bab5850464deee4a3a29fd7c02d011eca50dbba03dafc5059ee54aa434bfae5c173e6022fef4cb761f2c760b6dd5aff403b33b7ddc8e632961ce4f8dccf
+Size (fiziko.r61944.tar.xz) = 22700 bytes
