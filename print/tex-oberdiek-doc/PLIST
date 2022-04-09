@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/02/13 05:31:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/04/09 21:59:07 markd Exp $
 share/texmf-dist/doc/latex/oberdiek/README.md
 share/texmf-dist/doc/latex/oberdiek/aliascnt.pdf
 share/texmf-dist/doc/latex/oberdiek/bmpsize.pdf
@@ -17,10 +17,8 @@ share/texmf-dist/doc/latex/oberdiek/example/eolgrab-example-sec.tex
 share/texmf-dist/doc/latex/oberdiek/fibnum.pdf
 share/texmf-dist/doc/latex/oberdiek/flags.pdf
 share/texmf-dist/doc/latex/oberdiek/holtxdoc.pdf
-share/texmf-dist/doc/latex/oberdiek/hopatch.pdf
 share/texmf-dist/doc/latex/oberdiek/hypbmsec.pdf
 share/texmf-dist/doc/latex/oberdiek/hypcap.pdf
-share/texmf-dist/doc/latex/oberdiek/hypdoc.pdf
 share/texmf-dist/doc/latex/oberdiek/hypgotoe-example.tex
 share/texmf-dist/doc/latex/oberdiek/hypgotoe.pdf
 share/texmf-dist/doc/latex/oberdiek/hyphsubst.pdf
