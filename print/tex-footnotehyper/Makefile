@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/02/13 11:00:10 markd Exp $
+# $NetBSD: Makefile,v 1.6 2022/04/09 21:11:38 markd Exp $
 
 DISTNAME=	footnotehyper
-PKGNAME=	tex-${DISTNAME}-1.1d
-TEXLIVE_REV=	57618
+PKGNAME=	tex-${DISTNAME}-1.1e
+TEXLIVE_REV=	60374
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/footnotehyper
