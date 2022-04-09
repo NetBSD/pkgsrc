@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/05 15:41:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/04/09 07:42:19 adam Exp $
 
-DISTNAME=	openapi-spec-validator-0.3.1
+DISTNAME=	openapi-spec-validator-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	textproc www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/openapi-spec-validator/}
 
@@ -11,22 +10,19 @@ HOMEPAGE=	https://github.com/p1c2u/openapi-spec-validator
 COMMENT=	OpenAPI 2.0 (aka Swagger) and OpenAPI 3.0 spec validator
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-jsonschema-[0-9]*:../../textproc/py-jsonschema
-DEPENDS+=	${PYPKGPREFIX}-openapi-schema-validator-[0-9]*:../../textproc/py-openapi-schema-validator
-DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
+DEPENDS+=	${PYPKGPREFIX}-jsonschema>=3.2.0:../../textproc/py-jsonschema
+DEPENDS+=	${PYPKGPREFIX}-openapi-schema-validator>=0.2.0:../../textproc/py-openapi-schema-validator
+DEPENDS+=	${PYPKGPREFIX}-yaml>=5.1:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
 
-TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} openapi-spec-validator openapi-spec-validator-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
