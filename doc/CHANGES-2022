@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1756 2022/04/09 03:28:31 markd Exp $
+$NetBSD: CHANGES-2022,v 1.1757 2022/04/09 07:02:10 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2449,3 +2449,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/tex-sttools-doc to 3.0 [markd 2022-04-09]
 	Updated print/tex-svninfo to 0.7.4.62157 [markd 2022-04-09]
 	Updated print/tex-svninfo-doc to 0.7.4.62157 [markd 2022-04-09]
+	Updated geography/py-googlemaps to 4.6.0 [kleink 2022-04-09]
