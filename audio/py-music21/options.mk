@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2021/08/09 04:46:26 gutteridge Exp $
+# $NetBSD: options.mk,v 1.5 2022/04/09 21:57:28 gutteridge Exp $
 
 # print/lilypond and devel/py-game are optional because they pull in
-# large and complex dependency chains that don't presently build in
-# some environments.
+# large and complex dependency chains.
 
 # audio/musescore is also an application dependency that gets called
 # by music21's show() method, but it's a pretty heavy dependency for
