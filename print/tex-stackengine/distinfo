@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:14:41 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/04/09 03:20:29 markd Exp $
 
-BLAKE2s (tex-stackengine-43221/stackengine.tar.xz) = fb71f698d2cc5f8272eb2dab088e9e74b77c1932ce29cd655689d1b0f108f523
-SHA512 (tex-stackengine-43221/stackengine.tar.xz) = a97438b6eeda42feefdf024b50e0aa1bd62509a81ba8e789b365f95e82e323e9e1302c442cad8f85befbc228aa5546f74c68b741f16599f463a476515f211ec8
-Size (tex-stackengine-43221/stackengine.tar.xz) = 5072 bytes
+BLAKE2s (stackengine.r60019.tar.xz) = 306b128194e03648f559d65adae843db29c0f265979a4fd7764bceacbf4679e0
+SHA512 (stackengine.r60019.tar.xz) = 15327eda5a6eda2b58055efc419ef50b8d8cf8c35283bcc41ee85e354f61ede6efeabf5e75bbb4cd022b95e52109bce1ee2e28fc701c5940723f3b15dd44c75a
+Size (stackengine.r60019.tar.xz) = 5356 bytes
