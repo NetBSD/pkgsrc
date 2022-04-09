@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1758 2022/04/09 07:43:13 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1759 2022/04/09 08:07:15 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2452,3 +2452,11 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated geography/py-googlemaps to 4.6.0 [kleink 2022-04-09]
 	Updated textproc/py-openapi-schema-validator to 0.2.3 [adam 2022-04-09]
 	Updated textproc/py-openapi-spec-validator to 0.4.0 [adam 2022-04-09]
+	Updated print/tex-ragged2e to 3.1 [markd 2022-04-09]
+	Updated print/tex-ragged2e-doc to 3.1 [markd 2022-04-09]
+	Updated print/tex-readarray to 3.1 [markd 2022-04-09]
+	Updated print/tex-readarray-doc to 3.1 [markd 2022-04-09]
+	Updated graphics/tex-repere to 21.11 [markd 2022-04-09]
+	Updated graphics/tex-repere-doc to 21.11 [markd 2022-04-09]
+	Updated fonts/tex-rsfso to 1.03 [markd 2022-04-09]
+	Updated fonts/tex-rsfso-doc to 1.03 [markd 2022-04-09]
