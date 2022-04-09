@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2020/01/18 23:34:44 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2022/04/09 07:51:45 markd Exp $
 
 DISTNAME=	readarray
-PKGNAME=	tex-${DISTNAME}-2.0
-PKGREVISION=	1
-TEXLIVE_REV=	42467
+PKGNAME=	tex-${DISTNAME}-3.1
+TEXLIVE_REV=	60540
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/readarray
@@ -13,6 +12,5 @@ LICENSE=	lppl-1.3c
 DEPENDS+=	tex-ifnextok-[0-9]*:../../print/tex-ifnextok
 DEPENDS+=	tex-listofitems-[0-9]*:../../print/tex-listofitems
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
