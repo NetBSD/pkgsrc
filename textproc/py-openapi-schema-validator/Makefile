@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:55:01 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/04/09 07:40:34 adam Exp $
 
-DISTNAME=	openapi-schema-validator-0.1.5
+DISTNAME=	openapi-schema-validator-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/openapi-schema-validator/}
 
@@ -11,20 +10,12 @@ HOMEPAGE=	https://github.com/p1c2u/openapi-schema-validator
 COMMENT=	OpenAPI schema validation for Python
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-jsonschema>=3:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-isodate-[0-9]*:../../time/py-isodate
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
-#        mock; python_version<"3.0"
+DEPENDS+=	${PYPKGPREFIX}-jsonschema>=3:../../textproc/py-jsonschema
 
 USE_LANGUAGES=	# none
 
-TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
