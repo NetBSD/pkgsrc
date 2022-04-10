@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2017/06/21 11:45:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/04/10 06:21:01 markd Exp $
 share/texmf-dist/dvips/pst-geo/pst-geo.pro
-share/texmf-dist/tex/generic/pst-geo/data/README
+share/texmf-dist/tex/generic/pst-geo/data/README.data
 share/texmf-dist/tex/generic/pst-geo/data/Staedte3dJG.tex
 share/texmf-dist/tex/generic/pst-geo/data/africa-bdy_II.dat
 share/texmf-dist/tex/generic/pst-geo/data/africa-cil_II.dat
