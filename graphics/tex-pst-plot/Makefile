@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2019/12/06 20:04:34 markd Exp $
+# $NetBSD: Makefile,v 1.12 2022/04/10 06:26:51 markd Exp $
 
 DISTNAME=	pst-plot
-PKGNAME=	tex-${DISTNAME}-1.92
-TEXLIVE_REV=	51650
+PKGNAME=	tex-${DISTNAME}-1.93
+TEXLIVE_REV=	60620
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/pst-plot
@@ -13,6 +13,5 @@ DEPENDS+=	tex-multido-[0-9]*:../../devel/tex-multido
 DEPENDS+=	tex-pstricks-[0-9]*:../../graphics/tex-pstricks
 DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
