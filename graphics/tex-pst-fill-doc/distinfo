@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:47:10 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/10 06:15:33 markd Exp $
 
-BLAKE2s (tex-pst-fill-15878/pst-fill.doc.tar.xz) = 52f3b31563af9fcf9743406756cea2157eb235012331849661c883804fc173aa
-SHA512 (tex-pst-fill-15878/pst-fill.doc.tar.xz) = dc56e98672d6e7335fe30e841aac8aff84deae01f4caa9b9fb90ccd6769148a93e2bfa3e7d48c72b6c0b77f28d7d51536da1244b64798ce475dc2c92eab8257e
-Size (tex-pst-fill-15878/pst-fill.doc.tar.xz) = 1121256 bytes
+BLAKE2s (pst-fill.doc.r60671.tar.xz) = e3c2860905393d1d6de0efcfb9f9345b69a7d0ff68e4d07fc12ff8fc93f7555c
+SHA512 (pst-fill.doc.r60671.tar.xz) = ad51d3aba8d9ee19b4a53081a5956e8cf26f2673faf521af088076c6a356e321ca2fb9a0b504e61529c5a2ae49480b3918bd12235a66ad5c45035ce92e2eae92
+Size (pst-fill.doc.r60671.tar.xz) = 838084 bytes
