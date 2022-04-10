@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:15 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/04/10 14:42:18 nia Exp $
 
 DISTNAME=	photutils-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://photutils.readthedocs.io/en/stable/
 COMMENT=	Astropy coordinated module for astronomical photometry
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-scikit
 
 DEPENDS+=	${PYPKGPREFIX}-scikit-image>=0.14.2:../../math/py-scikit-image
 DEPENDS+=	${PYPKGPREFIX}-scikit-learn>=0.19:../../math/py-scikit-learn
