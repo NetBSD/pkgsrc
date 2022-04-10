@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2022/03/16 00:32:01 bacon Exp $
+# $NetBSD: Makefile,v 1.28 2022/04/10 20:54:51 bacon Exp $
 
-DISTNAME=	ncbi-blast-2.11.0+-src
+DISTNAME=	ncbi-blast-2.13.0+-src
 PKGNAME=	${DISTNAME:S/+-src//:S/blast/blast+/}
-PKGREVISION=	2
 CATEGORIES=	biology
 MASTER_SITES=	https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ \
 		https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/${PKGVERSION_NOREV}/
@@ -46,6 +45,10 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/c++
 # statfs is deprecated on NetBSD, but still exists in libc
 # configure checks only for undefined reference, not for usability
 CONFIGURE_ENV+=		ac_cv_func_statfs=no
+.endif
+
+.if ${OPSYS} == Darwin
+CONFIGURE_ARGS+=	--without-openmp
 .endif
 
 # c++/src/objtools/edit/seq_entry_edit.cpp: In member function 'void ncbi::objects::edit::{anonymous}::CSeqdescSortMap::Init()':
