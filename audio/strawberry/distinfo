@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2022/03/06 08:31:31 nia Exp $
+$NetBSD: distinfo,v 1.18 2022/04/10 15:25:22 nia Exp $
 
-BLAKE2s (strawberry-1.0.2.tar.xz) = 5a67be5cddfad6408c92cc712e0eb4489fc66301208a937271c91a6055b8ec3e
-SHA512 (strawberry-1.0.2.tar.xz) = 196be23dde8fee531b2996bc7dacaf5b00dcd3f1aaaeb6630ed2a2fdeb777abb66d6c19928fc157dde7d5bceffdc646ff615a6d52bc0e6ee5ddcc14de6ee7a59
-Size (strawberry-1.0.2.tar.xz) = 11202768 bytes
+BLAKE2s (strawberry-1.0.4.tar.xz) = a4a21708497f4c01d71540a8d97347459c0eb49ed7f990944485688ae10230c1
+SHA512 (strawberry-1.0.4.tar.xz) = e2a90911acd47735715266cb3745910a6e04a2ef4e98b0c9734230a5e2b382cf7d3681fc2e368a361e7a7c53bc0627a88a36e6df6c4f6941d54f65e2424d29ee
+Size (strawberry-1.0.4.tar.xz) = 11208992 bytes
