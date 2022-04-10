@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.118 2022/04/03 14:32:31 wiz Exp $
+$NetBSD: distinfo,v 1.119 2022/04/10 16:47:32 nia Exp $
 
-BLAKE2s (xine-lib-1.2.11.tar.xz) = 48720e7a7bc299a2bca75dd2307f48a6f6089c1b356fc21a6dc892d5050057d2
-SHA512 (xine-lib-1.2.11.tar.xz) = 8208e4699819465ec9e820530f27b6129ee954ea17ab474eb9eda12137af1417ed5260830c1006ce32266a3913d22ba9957689bb5552464908038a1b8a8efbcf
-Size (xine-lib-1.2.11.tar.xz) = 5282204 bytes
+BLAKE2s (xine-lib-1.2.12.tar.xz) = 6576144af35552e4c9144ab7981520f014ce78ad790e61e1fb526ec15bc8f283
+SHA512 (xine-lib-1.2.12.tar.xz) = cdc913d0c78a3a34bd6e4060040fd844f22dbc673330e30769c83e9682a46f3369af8f59bd0c759ddc601de979b13d53e7ed10c54f3b78bdc63afceb484826be
+Size (xine-lib-1.2.12.tar.xz) = 5341212 bytes
 SHA1 (patch-ag) = ef924c08b4d1d0dbc48f619d69b608c9d0def9fe
 SHA1 (patch-contrib_libxdg-basedir_basedir.c) = 8dd88fd712853e58363148023be6ef0906486206
 SHA1 (patch-fa) = 9312a3bab4ae8482a208948277f1d11fb7eaaf8c
