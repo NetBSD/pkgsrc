@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2022/03/30 10:02:24 wiz Exp $
+# $NetBSD: Makefile,v 1.129 2022/04/10 07:55:12 nia Exp $
 
 DISTNAME=	shotwell-0.30.8
 PKGREVISION=	19
@@ -14,6 +14,8 @@ LICENSE=	gnu-lgpl-v2.1
 USE_TOOLS+=	pkg-config msgfmt xgettext itstool
 
 MESON_ARGS+=	-Dudev=false
+
+BROKEN+=	"Incompatbile with latest Vala/libraw"
 
 # uses python3
 PYTHON_VERSIONS_INCOMPATIBLE=	27
