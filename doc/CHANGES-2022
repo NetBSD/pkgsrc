@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1785 2022/04/10 18:49:32 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.1786 2022/04/10 20:35:26 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2541,3 +2541,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/xine-lib to 1.2.12 [nia 2022-04-10]
 	Updated multimedia/xine-ui to 0.99.13 [nia 2022-04-10]
 	Updated chat/py-xmpppy to 0.7.1 [gdt 2022-04-10]
+	Updated print/tex-ifptex to 2.2 [markd 2022-04-10]
+	Updated print/tex-ifptex-doc to 2.2 [markd 2022-04-10]
