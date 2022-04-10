@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2021/06/05 05:54:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/04/10 12:36:01 markd Exp $
 share/texmf-dist/dvips/pstricks/pst-algparser.pro
 share/texmf-dist/dvips/pstricks/pst-dots.pro
 share/texmf-dist/dvips/pstricks/pst-dots97.pro
@@ -14,11 +14,13 @@ share/texmf-dist/tex/generic/pstricks/config/vtex.cfg
 share/texmf-dist/tex/generic/pstricks/config/xdvipdfmx.cfg
 share/texmf-dist/tex/generic/pstricks/pst-fp.tex
 share/texmf-dist/tex/generic/pstricks/pst-key.tex
+share/texmf-dist/tex/generic/pstricks/pstricks-arrows.tex
+share/texmf-dist/tex/generic/pstricks/pstricks-color.tex
+share/texmf-dist/tex/generic/pstricks/pstricks-dots.tex
 share/texmf-dist/tex/generic/pstricks/pstricks-tex.def
 share/texmf-dist/tex/generic/pstricks/pstricks-xetex.def
 share/texmf-dist/tex/generic/pstricks/pstricks.con
 share/texmf-dist/tex/generic/pstricks/pstricks.tex
-share/texmf-dist/tex/generic/pstricks/pstricks.tex.neu
 share/texmf-dist/tex/generic/pstricks/pstricks97.tex
 share/texmf-dist/tex/latex/pstricks/pst-all.sty
 share/texmf-dist/tex/latex/pstricks/pst-doc.cls
