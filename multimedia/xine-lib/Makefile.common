@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.91 2020/12/18 23:33:06 nia Exp $
+# $NetBSD: Makefile.common,v 1.92 2022/04/10 16:47:32 nia Exp $
 #
 # used by audio/xine-alsa/Makefile
 # used by audio/xine-pulse/Makefile
 # used by multimedia/xine-v4l/Makefile
 # used by multimedia/xine-v4l2/Makefile
 
-DISTNAME=		xine-lib-1.2.11
-XINE_PKGNAME=		xine-lib-1.2.11
+DISTNAME=		xine-lib-1.2.12
+XINE_PKGNAME=		${DISTNAME}
 PKGNAME?=		${XINE_PKGNAME}
 CATEGORIES?=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
@@ -17,7 +17,7 @@ HOMEPAGE=		https://www.xine-project.org/
 
 MAKE_JOBS_SAFE=		no
 
-XINE_MOD_DIR_VER=	2.9
+XINE_MOD_DIR_VER=	2.10
 PLIST_SUBST+=		XINE_MOD_DIR_VER=${XINE_MOD_DIR_VER:Q}
 
 DISTINFO_FILE=		${.CURDIR}/../../multimedia/xine-lib/distinfo
@@ -52,6 +52,6 @@ pre-configure:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../multimedia/ffmpeg5/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
