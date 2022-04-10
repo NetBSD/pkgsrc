@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:54:06 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/04/10 00:57:13 gutteridge Exp $
 
 DISTNAME=	matplotlib-venn-0.11.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-scipy
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-scipy
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

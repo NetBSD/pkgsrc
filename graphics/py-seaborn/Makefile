@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/01/04 20:54:07 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2022/04/10 00:57:14 gutteridge Exp $
 
 DISTNAME=	seaborn-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-scipy>=0.14.0:../../math/py-scipy
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-matplotlib, py-scipy
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-matplotlib, py-scipy
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
