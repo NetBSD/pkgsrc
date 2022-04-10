@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2017/06/21 11:46:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/04/10 12:30:12 markd Exp $
 share/texmf-dist/doc/generic/pstricks-add/Changes
+share/texmf-dist/doc/generic/pstricks-add/History
 share/texmf-dist/doc/generic/pstricks-add/README
 share/texmf-dist/doc/generic/pstricks-add/data/contourN.data
 share/texmf-dist/doc/generic/pstricks-add/data/data.data
