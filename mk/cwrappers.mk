@@ -1,11 +1,11 @@
-# $NetBSD: cwrappers.mk,v 1.35 2022/04/04 11:23:06 riastradh Exp $
+# $NetBSD: cwrappers.mk,v 1.36 2022/04/10 19:54:02 riastradh Exp $
 #
 # This Makefile fragment implements integration of pkgtools/cwrappers.
 
 .include "../../mk/wrapper/wrapper-defs.mk"
 .include "../../mk/buildlink3/bsd.buildlink3.mk"
 
-TOOL_DEPENDS+=		cwrappers>=20220403:../../pkgtools/cwrappers
+TOOL_DEPENDS+=		cwrappers>=20150314:../../pkgtools/cwrappers
 
 # XXX This should be PREFIX, but USE_CROSSBASE overrides it.
 CWRAPPERS_SRC_DIR=	${LOCALBASE}/libexec/cwrappers
@@ -100,9 +100,6 @@ generate-cwrappers:
 	${RUN}echo append_executable=${arg} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
 .    endfor
 .  endif
-. endif
-. if !empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
-	${RUN}echo sysroot=${TOOLS_CROSS_DESTDIR:Q} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
 . endif
 .endfor
 
