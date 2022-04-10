@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2021/05/14 07:13:14 nia Exp $
+# $NetBSD: Makefile.common,v 1.20 2022/04/10 12:18:19 adam Exp $
 # used by games/mirrormagic/Makefile
 # used by games/rocksndiamonds/Makefile
 
@@ -41,8 +41,6 @@ PLIST_SRC=	PLIST ${WRKDIR}/PLIST.F
 MAKE_FLAGS+=	JOYSTICK=-DHAVE_JOYSTICK
 .endif
 
-MAKE_FLAGS+=	RO_GAME_DIR=${PREFIX}/share/${PKGBASE}
-MAKE_FLAGS+=	RW_GAME_DIR=${SCORE_PATH:Q}
 MAKE_FLAGS+=	TARGET=sdl2
 
 do-install:

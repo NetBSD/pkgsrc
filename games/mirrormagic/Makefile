@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2022/03/28 10:44:14 tnn Exp $
+# $NetBSD: Makefile,v 1.38 2022/04/10 12:18:20 adam Exp $
 
 DISTNAME=	mirrormagic-3.0.0
 
@@ -13,5 +13,7 @@ LEVEL_NAMES=	classic_deflektor classic_mindbender
 
 # bug in src/Makefile
 MAKE_FLAGS+=	PROGBASE=${PKGBASE}
+MAKE_FLAGS+=	RO_GAME_DIR=${PREFIX}/share/${PKGBASE}
+MAKE_FLAGS+=	RW_GAME_DIR=${SCORE_PATH:Q}
 
 .include "../../mk/bsd.pkg.mk"
