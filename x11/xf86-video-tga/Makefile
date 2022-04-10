@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2021/12/02 18:15:29 nia Exp $
+# $NetBSD: Makefile,v 1.21 2022/04/10 08:53:23 nia Exp $
 
 DISTNAME=	xf86-video-tga-1.2.2
 PKGREVISION=	5
@@ -18,7 +18,7 @@ RELRO_SUPPORTED=	partial
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
-X11_BUILTIN_NAME=	xf86-video-tga
+X11_DRV_NAME=	tga
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"

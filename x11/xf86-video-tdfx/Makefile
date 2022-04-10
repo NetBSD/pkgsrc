@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2021/12/02 18:15:29 nia Exp $
+# $NetBSD: Makefile,v 1.27 2022/04/10 08:53:23 nia Exp $
 
 DISTNAME=	xf86-video-tdfx-1.5.0
 CATEGORIES=	x11
@@ -19,7 +19,7 @@ RELRO_SUPPORTED=	partial
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
-X11_BUILTIN_NAME=	xf86-video-tdfx
+X11_DRV_NAME=	tdfx
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"

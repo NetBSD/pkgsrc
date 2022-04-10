@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/12/01 13:01:16 nia Exp $
+# $NetBSD: Makefile,v 1.10 2022/04/10 08:53:18 nia Exp $
 
 DISTNAME=		xbitmaps-1.1.2
 CATEGORIES=		x11 devel
@@ -11,6 +11,4 @@ COMMENT=		Common X11 bitmaps
 
 GNU_CONFIGURE=		yes
 
-X11_BUILTIN_NAME=	xbitmaps
-.include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../mk/bsd.pkg.mk"

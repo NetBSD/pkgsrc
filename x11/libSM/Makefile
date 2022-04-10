@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2021/12/01 13:01:13 nia Exp $
+# $NetBSD: Makefile,v 1.18 2022/04/10 08:53:14 nia Exp $
 
 DISTNAME=		libSM-1.2.3
 CATEGORIES=		x11 devel
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--without-libuuid
 
 .include "options.mk"
 
-X11_BUILTIN_NAME?=		libSM
+X11_LIB_NAME?=		libSM
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 .include "../../x11/libICE/buildlink3.mk"

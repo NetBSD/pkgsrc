@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2022/03/15 18:53:42 tnn Exp $
+# $NetBSD: Makefile,v 1.52 2022/04/10 08:53:21 nia Exp $
 
 PKGNAME=	xf86-video-intel-2.99.917.20210115
 COMMIT_ID=	31486f40f8e8f8923ca0799aea84b58799754564
@@ -46,7 +46,7 @@ CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 pre-configure:
 	cd ${WRKSRC} && autoreconf -vif
 
-X11_BUILTIN_NAME=	xf86-video-intel
+X11_DRV_NAME=	intel
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../x11/modular-xorg-server/buildlink3.mk"

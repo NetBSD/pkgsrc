@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2021/12/02 18:15:26 nia Exp $
+# $NetBSD: Makefile,v 1.25 2022/04/10 08:53:19 nia Exp $
 
 DISTNAME=	xf86-video-ast-1.1.5
 PKGREVISION=	1
@@ -18,7 +18,7 @@ RELRO_SUPPORTED=	partial
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
-X11_BUILTIN_NAME=	xf86-video-ast
+X11_DRV_NAME=	ast
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
