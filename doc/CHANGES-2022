@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1787 2022/04/10 20:54:58 bacon Exp $
+$NetBSD: CHANGES-2022,v 1.1788 2022/04/10 21:16:45 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2544,3 +2544,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/tex-ifptex to 2.2 [markd 2022-04-10]
 	Updated print/tex-ifptex-doc to 2.2 [markd 2022-04-10]
 	Updated biology/ncbi-blast+ to 2.13.0 [bacon 2022-04-10]
+	Updated www/hugo to 0.96.0 [nikita 2022-04-10]
