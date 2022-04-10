@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1769 2022/04/09 22:19:29 markd Exp $
+$NetBSD: CHANGES-2022,v 1.1770 2022/04/10 02:28:58 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2505,3 +2505,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/tex-ocgx2-doc to 0.54 [markd 2022-04-09]
 	Added print/tex-hypdoc version 1.15 [markd 2022-04-09]
 	Added print/tex-hypdoc-doc version 1.15 [markd 2022-04-09]
+	Updated sysutils/xfce4-thunar to 4.16.11 [gutteridge 2022-04-10]
