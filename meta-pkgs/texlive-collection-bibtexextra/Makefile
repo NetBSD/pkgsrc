@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.24 2021/06/07 00:12:47 markd Exp $
+# $NetBSD: Makefile,v 1.25 2022/04/10 04:06:58 markd Exp $
 
 DISTNAME=	collection-bibtexextra
 PKGNAME=	texlive-${DISTNAME}-2021pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	58437
+TEXLIVE_REV=	61687
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -18,6 +18,7 @@ DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-lat
 DEPENDS+=	tex-amsrefs-[0-9]*:../../print/tex-amsrefs
 # depend annotate
 DEPENDS+=	tex-apacite-[0-9]*:../../print/tex-apacite
+# depend apalike-ejor
 # depend apalike2
 # depend archaeologie
 # depend authordate
@@ -45,6 +46,7 @@ DEPENDS+=	tex-biblatex-apa-[0-9]*:../../print/tex-biblatex-apa
 # depend biblatex-chem
 # depend biblatex-chicago
 # depend biblatex-claves
+# depend biblatex-cv
 # depend biblatex-dw
 # depend biblatex-enc
 # depend biblatex-ext
@@ -59,6 +61,7 @@ DEPENDS+=	tex-biblatex-ieee-[0-9]*:../../print/tex-biblatex-ieee
 # depend biblatex-jura2
 # depend biblatex-juradiss
 # depend biblatex-license
+# depend biblatex-lncs
 # depend biblatex-lni
 # depend biblatex-luh-ipw
 # depend biblatex-manuscripts-philology
@@ -74,6 +77,7 @@ DEPENDS+=	tex-biblatex-nature-[0-9]*:../../print/tex-biblatex-nature
 # depend biblatex-philosophy
 # depend biblatex-phys
 # depend biblatex-publist
+# depend biblatex-readbbl
 # depend biblatex-realauthor
 # depend biblatex-sbl
 # depend biblatex-science
@@ -81,6 +85,7 @@ DEPENDS+=	tex-biblatex-nature-[0-9]*:../../print/tex-biblatex-nature
 # depend biblatex-socialscienceshuberlin
 # depend biblatex-software
 # depend biblatex-source-division
+# depend biblatex-spbasic
 # depend biblatex-subseries
 # depend biblatex-swiss-legal
 # depend biblatex-trad
@@ -103,6 +108,7 @@ DEPENDS+=	tex-chbibref-[0-9]*:../../print/tex-chbibref
 # depend chicago-annote
 # depend chicagoa
 # depend chscite
+# depend citation-style-language
 # depend citeall
 # depend citeref
 # depend collref
@@ -123,6 +129,7 @@ DEPENDS+=	tex-footbib-[0-9]*:../../print/tex-footbib
 # depend geschichtsfrkl
 DEPENDS+=	tex-harvard-[0-9]*:../../print/tex-harvard
 # depend harvmac
+# depend hep-bibliography
 # depend historische-zeitschrift
 # depend icite
 # depend ietfbibs
@@ -144,6 +151,7 @@ DEPENDS+=	tex-multibib-[0-9]*:../../print/tex-multibib
 # depend multibibliography
 # depend munich
 # depend nar
+# depend newcastle-bst
 # depend nmbib
 # depend notes2bib
 # depend notex-bst
