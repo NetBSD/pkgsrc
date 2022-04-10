@@ -1,31 +1,18 @@
-@comment $NetBSD: PLIST,v 1.2 2017/06/21 11:45:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/04/10 06:21:01 markd Exp $
 share/texmf-dist/doc/generic/pst-geo/Changes
 share/texmf-dist/doc/generic/pst-geo/README
-share/texmf-dist/doc/generic/pst-geo/examples/Africa.pdf
 share/texmf-dist/doc/generic/pst-geo/examples/Africa.tex
-share/texmf-dist/doc/generic/pst-geo/examples/Animate0.pdf
 share/texmf-dist/doc/generic/pst-geo/examples/Animate0.tex
-share/texmf-dist/doc/generic/pst-geo/examples/Animate1.pdf
 share/texmf-dist/doc/generic/pst-geo/examples/Animate1.tex
-share/texmf-dist/doc/generic/pst-geo/examples/Animate2.pdf
 share/texmf-dist/doc/generic/pst-geo/examples/Animate2.tex
-share/texmf-dist/doc/generic/pst-geo/examples/AntarticaII.pdf
 share/texmf-dist/doc/generic/pst-geo/examples/AntarticaII.tex
-share/texmf-dist/doc/generic/pst-geo/examples/AsiaII.pdf
 share/texmf-dist/doc/generic/pst-geo/examples/AsiaII.tex
-share/texmf-dist/doc/generic/pst-geo/examples/Berlin.pdf
 share/texmf-dist/doc/generic/pst-geo/examples/Berlin.tex
-share/texmf-dist/doc/generic/pst-geo/examples/D-Karte-3dJG.pdf
 share/texmf-dist/doc/generic/pst-geo/examples/D-Karte-3dJG.tex
-share/texmf-dist/doc/generic/pst-geo/examples/D-karte-3d.pdf
 share/texmf-dist/doc/generic/pst-geo/examples/D-karte-3d.tex
-share/texmf-dist/doc/generic/pst-geo/examples/DANTE.pdf
 share/texmf-dist/doc/generic/pst-geo/examples/DANTE.tex
-share/texmf-dist/doc/generic/pst-geo/examples/Europa.pdf
 share/texmf-dist/doc/generic/pst-geo/examples/Europa.tex
-share/texmf-dist/doc/generic/pst-geo/examples/EuropeII.pdf
 share/texmf-dist/doc/generic/pst-geo/examples/EuropeII.tex
-share/texmf-dist/doc/generic/pst-geo/examples/Greek.pdf
 share/texmf-dist/doc/generic/pst-geo/examples/Greek.tex
 share/texmf-dist/doc/generic/pst-geo/pst-geo-compress.pl
 share/texmf-dist/doc/generic/pst-geo/pst-geo-decompress.pl
