@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1784 2022/04/10 16:49:33 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1785 2022/04/10 18:49:32 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2540,3 +2540,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/felix to 0.5.2 [pin 2022-04-10]
 	Updated multimedia/xine-lib to 1.2.12 [nia 2022-04-10]
 	Updated multimedia/xine-ui to 0.99.13 [nia 2022-04-10]
+	Updated chat/py-xmpppy to 0.7.1 [gdt 2022-04-10]
