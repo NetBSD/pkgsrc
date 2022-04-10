@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/04/05 10:00:21 riastradh Exp $
+# $NetBSD: Makefile,v 1.19 2022/04/10 12:52:26 riastradh Exp $
 
 DISTNAME=		motif-2.3.8
 PKGREVISION=		1
@@ -47,14 +47,21 @@ CONFIGURE_ENV.NetBSD+=	ac_cv_func_setpgrp_void=no
 CONFIGURE_ARGS+=	--enable-xft
 CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
-MAKE_FLAGS+=	CROSS_COMPILING=yes CC_FOR_BUILD=${NATIVE_CC:Q} \
+TOOL_DEPENDS+=		libXt>=0:../../x11/libXt
+
+MAKE_FLAGS+=		CC_FOR_BUILD=${NATIVE_CC:Q:U${CC:Q}}
+MAKE_FLAGS+=		LIBS_FOR_BUILD=-lXt
+
+.if empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+MAKE_FLAGS+=	CPPFLAGS_FOR_BUILD=${BUILDLINK_CPPFLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS_FOR_BUILD=${BUILDLINK_LDFLAGS:Q}
+.else
+# XXX should support independent cross PREFIX
+MAKE_FLAGS+=	CROSS_COMPILING=yes \
 		CPPFLAGS_FOR_BUILD=-I${PREFIX:Q}/include \
-		LDFLAGS_FOR_BUILD=-L${PREFIX:Q}/lib\ ${COMPILER_RPATH_FLAG:Q}${PREFIX:Q}/lib \
-		LIBS_FOR_BUILD=-lXt
+		LDFLAGS_FOR_BUILD=-L${PREFIX:Q}/lib\ ${COMPILER_RPATH_FLAG:Q}${PREFIX:Q}/lib
 CONFIGURE_ARGS.NetBSD+=	ac_cv_file__usr_X_include_X11_X_h=no
 CONFIGURE_ARGS.NetBSD+=	ac_cv_file__usr_X11R6_include_X11_X_h=no
-TOOL_DEPENDS+=		libXt>=0:../../x11/libXt
 .endif
 
 # 1) Fix the man pages to refer to the correct sections.
