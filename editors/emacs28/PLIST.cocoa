@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST.cocoa,v 1.1 2022/04/06 22:40:38 wiz Exp $
+@comment $NetBSD: PLIST.cocoa,v 1.2 2022/04/10 22:42:26 tnn Exp $
 Applications/Emacs.app/Contents/Info.plist
 Applications/Emacs.app/Contents/MacOS/Emacs
-Applications/Emacs.app/Contents/MacOS/Emacs.pdmp
+Applications/Emacs.app/Contents/MacOS/libexec/Emacs.pdmp
 Applications/Emacs.app/Contents/PkgInfo
 Applications/Emacs.app/Contents/Resources/Credits.html
 Applications/Emacs.app/Contents/Resources/Emacs.icns
