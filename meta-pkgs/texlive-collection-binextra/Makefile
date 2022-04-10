@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2021/02/15 02:46:59 markd Exp $
+# $NetBSD: Makefile,v 1.21 2022/04/10 04:00:45 markd Exp $
 
 DISTNAME=	collection-binextra
 PKGNAME=	texlive-${DISTNAME}-2020pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	56352
+TEXLIVE_REV=	61780
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -72,6 +72,7 @@ DEPENDS+=	tex-make4ht-[0-9]*:../../print/tex-make4ht
 # depend match_parens
 # depend mflua
 # depend mkjobtexmf
+# depend optexcount
 # patgen entirely included in web2c
 # depend pdfbook2
 DEPENDS+=	tex-pdfcrop-[0-9]*:../../graphics/tex-pdfcrop
@@ -101,6 +102,8 @@ DEPENDS+=	tex-texdoctk-[0-9]*:../../print/tex-texdoctk
 DEPENDS+=	tex-texlive-scripts-extra-[0-9]*:../../print/tex-texlive-scripts-extra
 # depend texliveonfly
 # depend texloganalyser
+# depend texlogfilter
+# depend texlogsieve
 # depend texosquery
 # depend texplate
 # texware entirely included in web2c
