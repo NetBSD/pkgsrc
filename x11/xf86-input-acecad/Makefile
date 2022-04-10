@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2021/12/03 12:50:13 nia Exp $
+# $NetBSD: Makefile,v 1.13 2022/04/10 08:53:18 nia Exp $
 
 DISTNAME=	xf86-input-acecad-1.5.0
 PKGREVISION=	5
@@ -19,7 +19,7 @@ RELRO_SUPPORTED=	partial
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
-X11_BUILTIN_NAME=	xf86-input-acecad
+X11_DRV_NAME=	acecad
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"

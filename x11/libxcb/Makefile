@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2021/12/01 13:01:15 nia Exp $
+# $NetBSD: Makefile,v 1.37 2022/04/10 08:53:17 nia Exp $
 
 DISTNAME=	libxcb-1.14
 CATEGORIES=	x11
@@ -87,7 +87,7 @@ post-extract:
 ###	so it's not needed (nor should it ever be, really).
 ###
 #.include "../../devel/gperf/buildlink3.mk"
-X11_BUILTIN_NAME?=		libxcb
+X11_LIB_NAME?=		libxcb
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../lang/python/application.mk"
