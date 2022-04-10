@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1771 2022/04/10 12:21:51 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1772 2022/04/10 12:37:04 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2508,3 +2508,23 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/xfce4-thunar to 4.16.11 [gutteridge 2022-04-10]
 	Updated games/rocksndiamonds to 4.3.1.1 [adam 2022-04-10]
 	Updated textproc/ugrep to 3.7.9 [adam 2022-04-10]
+	Updated graphics/tex-pst-3dplot to 2.07a [markd 2022-04-10]
+	Updated graphics/tex-pst-3dplot-doc to 2.07a [markd 2022-04-10]
+	Updated graphics/tex-pst-circ to 2.19 [markd 2022-04-10]
+	Updated graphics/tex-pst-circ-doc to 2.19 [markd 2022-04-10]
+	Updated graphics/tex-pst-fill to 1.02 [markd 2022-04-10]
+	Updated graphics/tex-pst-fill-doc to 1.02 [markd 2022-04-10]
+	Updated geography/tex-pst-geo to 2.07 [markd 2022-04-10]
+	Updated geography/tex-pst-geo-doc to 2.07 [markd 2022-04-10]
+	Updated graphics/tex-pst-node to 1.43 [markd 2022-04-10]
+	Updated graphics/tex-pst-node-doc to 1.43 [markd 2022-04-10]
+	Updated graphics/tex-pst-plot to 1.93 [markd 2022-04-10]
+	Updated graphics/tex-pst-plot-doc to 1.93 [markd 2022-04-10]
+	Updated graphics/tex-pst-tools to 0.12 [markd 2022-04-10]
+	Updated graphics/tex-pst-tools-doc to 0.12 [markd 2022-04-10]
+	Updated graphics/tex-pst-tree to 1.14 [markd 2022-04-10]
+	Updated graphics/tex-pst-tree-doc to 1.14 [markd 2022-04-10]
+	Updated graphics/tex-pstricks-add to 3.92 [markd 2022-04-10]
+	Updated graphics/tex-pstricks-add-doc to 3.92 [markd 2022-04-10]
+	Updated graphics/tex-pstricks to 3.13 [markd 2022-04-10]
+	Updated graphics/tex-pstricks-doc to 3.13 [markd 2022-04-10]
