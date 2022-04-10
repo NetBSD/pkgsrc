@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2022/04/06 14:49:56 adam Exp $
+# $NetBSD: Makefile,v 1.34 2022/04/10 12:21:30 adam Exp $
 
-DISTNAME=	ugrep-3.7.8
+DISTNAME=	ugrep-3.7.9
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Genivia/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
