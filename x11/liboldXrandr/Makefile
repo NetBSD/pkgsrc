@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/12/01 13:01:15 nia Exp $
+# $NetBSD: Makefile,v 1.8 2022/04/10 08:53:17 nia Exp $
 
 DISTNAME=		libXrandr-1.0.2
 PKGNAME=		Xrandr-1.0.2
@@ -19,7 +19,7 @@ GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	xrandr.pc.in
 
-X11_BUILTIN_NAME?=		Xrandr
+X11_LIB_NAME?=		Xrandr
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../x11/libXext/buildlink3.mk"
 BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8

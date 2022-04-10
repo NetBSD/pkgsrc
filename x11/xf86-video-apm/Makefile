@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2021/12/02 18:15:25 nia Exp $
+# $NetBSD: Makefile,v 1.24 2022/04/10 08:53:19 nia Exp $
 
 DISTNAME=	xf86-video-apm-1.3.0
 CATEGORIES=	x11
@@ -17,7 +17,7 @@ RELRO_SUPPORTED=	partial
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
-X11_BUILTIN_NAME=	xf86-video-apm
+X11_DRV_NAME=	apm
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"

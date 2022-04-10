@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2021/12/05 19:07:07 nia Exp $
+# $NetBSD: Makefile,v 1.30 2022/04/10 08:53:18 nia Exp $
 #
 
 DISTNAME=		libXcursor-1.1.2
@@ -23,7 +23,7 @@ PKGCONFIG_OVERRIDE+=	xcursor.pc.in
 
 BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
 
-X11_BUILTIN_NAME=	xcursor
+X11_LIB=	libXcursor
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
