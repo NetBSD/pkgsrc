@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/01/05 15:41:14 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/04/10 00:57:15 gutteridge Exp $
 
 DISTNAME=	scikit-image-0.18.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,7 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-tifffile
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-tifffile, py-scipy
 
 USE_PKG_RESOURCES=	yes
 
