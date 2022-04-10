@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:01:01 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/10 15:14:15 nia Exp $
 
-BLAKE2s (frei0r-plugins-1.7.0.tar.gz) = 875987352cfe7d33949ccabc36318472fb7afa8afbfa5d8328a727d5faf4d350
-SHA512 (frei0r-plugins-1.7.0.tar.gz) = 8c80e8e0ce8c302e633ea1f6ff4e2a141fd7a8bcb7fce25dc7f1f6521be11258a3efa1074c224c7323e6a17bc405413385be193a5c787e2f276252b50477ebce
-Size (frei0r-plugins-1.7.0.tar.gz) = 1214323 bytes
+BLAKE2s (frei0r-plugins-1.8.0.tar.gz) = 9f7dedf16d803bb6c6ab693c9a7482937e4b80a7fafd30f6d6e5d1d7baaaa078
+SHA512 (frei0r-plugins-1.8.0.tar.gz) = b9933b5e46da6e6b4ae242ec48b3ca4e51fb21d7924fd83375bf6628437b194697dd2bff43a42220bd5e6bc4c50b0352480d6986956f110eb966e1005b51dc35
+Size (frei0r-plugins-1.8.0.tar.gz) = 823119 bytes
