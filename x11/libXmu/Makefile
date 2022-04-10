@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2021/12/01 13:01:14 nia Exp $
+# $NetBSD: Makefile,v 1.15 2022/04/10 08:53:16 nia Exp $
 
 DISTNAME=		libXmu-1.1.3
 CATEGORIES=		x11 devel
@@ -15,7 +15,7 @@ PKGCONFIG_OVERRIDE+=	xmuu.pc.in
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 
-X11_BUILTIN_NAME?=		libXmu
+X11_LIB_NAME?=		libXmu
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 .include "../../x11/libXext/buildlink3.mk"
