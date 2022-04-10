@@ -1,4 +1,4 @@
-$NetBSD: patch-src_build-system_cmake_cmake-cfg-xcode.sh,v 1.1 2021/06/11 13:47:40 bacon Exp $
+$NetBSD: patch-src_build-system_cmake_cmake-cfg-xcode.sh,v 1.2 2022/04/10 20:54:51 bacon Exp $
 
 # Portability
 
