@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/04/08 23:20:28 markd Exp $
+$NetBSD: distinfo,v 1.5 2022/04/10 20:34:27 markd Exp $
 
-BLAKE2s (ifptex.r59820.tar.xz) = e6eb10533828f31eaa06bcb5498aab0b387f18bda191e75e39997b8f02546da1
-SHA512 (ifptex.r59820.tar.xz) = 22d50e2dc21a320d759ffadde2b12f667cdc348096eb590f253dd7479477c995998fc54736eb6f9cbd9e37323fd5ff675cd90c41698b795ba3f7808c1a87237a
-Size (ifptex.r59820.tar.xz) = 3148 bytes
+BLAKE2s (ifptex.r62982.tar.xz) = 2b944888b700a2600fccb2b690b3df0427a1bdfd13fa5c38e0361fafb11520e5
+SHA512 (ifptex.r62982.tar.xz) = 54f4e4a1077a5f394811a4b0b08818fb17060496c7915c85dc69b55d2adcc7793f4047069b1bd067229bdd945c2e2a35f19b59d048cf242d489ab652813f5cf0
+Size (ifptex.r62982.tar.xz) = 4016 bytes
