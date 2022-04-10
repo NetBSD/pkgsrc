@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.44 2021/05/17 14:09:39 nia Exp $
+@comment $NetBSD: PLIST.common,v 1.45 2022/04/10 16:47:32 nia Exp $
 bin/xine-config
 bin/xine-list-1.2
 include/xine.h
@@ -17,6 +17,7 @@ include/xine/input_plugin.h
 include/xine/io_helper.h
 include/xine/list.h
 include/xine/metronom.h
+include/xine/mfrag.h
 include/xine/os_types.h
 include/xine/osd.h
 include/xine/plugin_catalog.h
@@ -29,6 +30,7 @@ include/xine/scratch.h
 include/xine/sorted_array.h
 include/xine/spu.h
 include/xine/spu_decoder.h
+include/xine/stree.h
 include/xine/tickets.h
 include/xine/vdr.h
 include/xine/version.h
