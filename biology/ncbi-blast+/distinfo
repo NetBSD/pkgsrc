@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:03:41 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/04/10 20:54:51 bacon Exp $
 
-BLAKE2s (ncbi-blast-2.11.0+-src.tar.gz) = 0f6acaa372e9ded638d6ec462fccb01f28028e0d4eb0b0f3eef26eda8c3fee6d
-SHA512 (ncbi-blast-2.11.0+-src.tar.gz) = 617994a0e3a4675a5f7048f165ac405bbd6a715ece9aba115d7c26b6be446b889b817dd496a2e15673545e5b594684c83fc4edb22cb5ecca2fd6d342c3bd642e
-Size (ncbi-blast-2.11.0+-src.tar.gz) = 58493096 bytes
+BLAKE2s (ncbi-blast-2.13.0+-src.tar.gz) = a83651c7f2824def1c86a8541cf7060ed77e6d60e8f7bd0383464088591733f3
+SHA512 (ncbi-blast-2.13.0+-src.tar.gz) = 7842ba4dac3d046a23cb182c6289d88cb1173e8570fb6334c1aa88dd2e640aacad43efe1ef7d69b8fedbf9b8093b7d601ef8999812d5735a6789ab2752e97c2b
+Size (ncbi-blast-2.13.0+-src.tar.gz) = 59995353 bytes
 SHA1 (patch-compilers_xcode30__prj_configure) = b89b3be8671c6c692ba474476879ee67a76fdbe5
 SHA1 (patch-src_algo_blast_core_blast__kappa.c) = 6fcad996b3a8e5b6c2400608bff9de62ebf6927f
 SHA1 (patch-src_build-system_Makefile.in.top) = 71d5246867a8c985c1175c338fb0af664094ca01
