@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1782 2022/04/10 15:41:18 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1783 2022/04/10 16:47:45 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2538,3 +2538,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/get_iplayer to 3.29 [nia 2022-04-10]
 	Updated audio/strawberry to 1.0.4 [nia 2022-04-10]
 	Updated sysutils/felix to 0.5.2 [pin 2022-04-10]
+	Updated multimedia/xine-lib to 1.2.12 [nia 2022-04-10]
