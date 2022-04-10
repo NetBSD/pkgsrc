@@ -1,4 +1,4 @@
-$NetBSD: patch-src_rig-daemon-check.c,v 1.1 2021/03/09 08:14:01 nia Exp $
+$NetBSD: patch-src_rig-daemon-check.c,v 1.2 2022/04/10 08:04:39 nia Exp $
 
 Description: align affected parts for Hamlib4.0
 Author: Ervin Hegedus <airween@gmail.com>
@@ -24,3 +24,21 @@ https://sources.debian.org/data/main/g/grig/0.8.1-3/debian/patches/04-hamlib-ali
  				
  				grig_debug_local (RIG_DEBUG_VERBOSE,
  						  _("%s: Found frequency range for mode %d"),
+@@ -884,7 +884,7 @@ rig_daemon_check_level     (RIG         
+ 	if (has_get->att || has_set->att) {
+ 		int i = 0;
+ 
+-		while ((i < MAXDBLSTSIZ) && (myrig->state.attenuator[i] != 0)) {
++		while ((i < HAMLIB_MAXDBLSTSIZ) && (myrig->state.attenuator[i] != 0)) {
+ 			rig_data_set_att_data (i, myrig->state.attenuator[i]);
+ 			i++;
+ 		}
+@@ -895,7 +895,7 @@ rig_daemon_check_level     (RIG         
+ 	if (has_get->preamp || has_set->preamp) {
+ 		int i = 0;
+ 
+-		while ((i < MAXDBLSTSIZ) && (myrig->state.preamp[i] != 0)) {
++		while ((i < HAMLIB_MAXDBLSTSIZ) && (myrig->state.preamp[i] != 0)) {
+ 			rig_data_set_preamp_data (i, myrig->state.preamp[i]);
+ 			i++;
+ 		}
