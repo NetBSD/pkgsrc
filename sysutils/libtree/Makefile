@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/12/31 17:28:11 plunky Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/10 08:09:31 nia Exp $
 
 DISTNAME=	libtree-2.0.0
 CATEGORIES=	sysutils
@@ -12,6 +12,8 @@ LICENSE=	mit
 
 USE_LANGUAGES=	c c++17
 USE_CMAKE=	yes
+
+GCC_REQD+=	8 # std::filesystem
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 
