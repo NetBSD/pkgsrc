@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2021/12/02 18:15:28 nia Exp $
+# $NetBSD: Makefile,v 1.32 2022/04/10 08:53:22 nia Exp $
 
 DISTNAME=	xf86-video-sis-0.12.0
 CATEGORIES=	x11
@@ -24,7 +24,7 @@ CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
-X11_BUILTIN_NAME=	xf86-video-sis
+X11_DRV_NAME=	sis
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"

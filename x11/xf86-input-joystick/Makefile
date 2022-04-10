@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2021/12/03 12:50:13 nia Exp $
+# $NetBSD: Makefile,v 1.13 2022/04/10 08:53:18 nia Exp $
 
 DISTNAME=	xf86-input-joystick-1.6.3
 PKGREVISION=	2
@@ -28,7 +28,7 @@ SUBST_FILES.usbhid+=		src/backend_bsd.c
 SUBST_SED.usbhid=		-e 's,dev/usb/,bus/u4b/,g'
 SUBST_MESSAGE.usbhid=		Correct usbhid include paths
 
-X11_BUILTIN_NAME=	xf86-input-joystick
+X11_DRV_NAME=	joystick
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/12/02 18:17:55 nia Exp $
+# $NetBSD: Makefile,v 1.7 2022/04/10 08:53:23 nia Exp $
 
 DISTNAME=	xf86-video-sunleo-1.2.2
 PKGREVISION=	1
@@ -21,7 +21,7 @@ ONLY_FOR_PLATFORM+=	*-*-sparc *-*-sparc64
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
-X11_BUILTIN_NAME=	xf86-video-sunleo
+X11_DRV_NAME=	sunleo
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/modular-xorg-server/buildlink3.mk"

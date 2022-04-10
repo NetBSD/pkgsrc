@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2021/12/03 12:50:14 nia Exp $
+# $NetBSD: Makefile,v 1.21 2022/04/10 08:53:19 nia Exp $
 
 DISTNAME=	xf86-input-void-1.4.1
 PKGREVISION=	2
@@ -18,7 +18,7 @@ RELRO_SUPPORTED=	partial
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
-X11_BUILTIN_NAME=	xf86-input-void
+X11_DRV_NAME=	void
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"

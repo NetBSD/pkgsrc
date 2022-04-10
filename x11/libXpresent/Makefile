@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/12/01 13:01:14 nia Exp $
+# $NetBSD: Makefile,v 1.5 2022/04/10 08:53:16 nia Exp $
 
 DISTNAME=		libXpresent-1.0.0
 PKGREVISION=		1
@@ -15,7 +15,7 @@ USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	xpresent.pc.in
 GNU_CONFIGURE=		yes
 
-X11_BUILTIN_NAME?=		libXpresent
+X11_LIB_NAME?=		libXpresent
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"

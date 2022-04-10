@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2021/12/01 13:01:13 nia Exp $
+# $NetBSD: Makefile,v 1.14 2022/04/10 08:53:15 nia Exp $
 
 DISTNAME=		libXdamage-1.1.5
 CATEGORIES=		x11 devel
@@ -16,7 +16,7 @@ USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	xdamage.pc.in
 
-X11_BUILTIN_NAME?=		libXdamage
+X11_LIB_NAME?=		libXdamage
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

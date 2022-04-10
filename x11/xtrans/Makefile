@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2021/12/01 13:01:17 nia Exp $
+# $NetBSD: Makefile,v 1.30 2022/04/10 08:53:24 nia Exp $
 
 DISTNAME=		xtrans-1.4.0
 CATEGORIES=		x11 net
@@ -13,6 +13,4 @@ GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	xtrans.pc.in
 
-X11_BUILTIN_NAME=	xtrans
-.include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2021/12/02 18:17:54 nia Exp $
+# $NetBSD: Makefile,v 1.14 2022/04/10 08:53:22 nia Exp $
 
 DISTNAME=	xf86-video-suncg14-1.1.2
 PKGREVISION=	5
@@ -23,7 +23,7 @@ ONLY_FOR_PLATFORM+=	*-*-sparc *-*-sparc64
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
-X11_BUILTIN_NAME=	xf86-video-suncg14
+X11_DRV_NAME=	suncg14
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/modular-xorg-server/buildlink3.mk"

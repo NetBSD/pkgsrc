@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2021/12/01 13:01:14 nia Exp $
+# $NetBSD: Makefile,v 1.39 2022/04/10 08:53:16 nia Exp $
 
 DISTNAME=		libXi-1.8
 CATEGORIES=		x11 devel
@@ -19,7 +19,7 @@ PKGCONFIG_OVERRIDE+=	xi.pc.in
 
 CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
-X11_BUILTIN_NAME?=		libXi
+X11_LIB_NAME?=		libXi
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 BUILDLINK_API_DEPENDS.libX11+=		libX11>=1.6
 BUILDLINK_API_DEPENDS.libXext+=		libXext>=1.1

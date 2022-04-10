@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2021/12/03 12:50:13 nia Exp $
+# $NetBSD: Makefile,v 1.31 2022/04/10 08:53:18 nia Exp $
 
 DISTNAME=	xf86-input-keyboard-1.9.0
 PKGREVISION=	3
@@ -19,7 +19,7 @@ RELRO_SUPPORTED=	partial
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
-X11_BUILTIN_NAME=	xf86-input-keyboard
+X11_DRV_NAME=	keyboard
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/modular-xorg-server/buildlink3.mk"
