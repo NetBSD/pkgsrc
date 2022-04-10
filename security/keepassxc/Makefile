@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2022/04/01 08:07:28 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2022/04/10 18:23:13 wiz Exp $
 
 DISTNAME=	keepassxc-${GITHUB_RELEASE}-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -49,4 +49,5 @@ pre-configure:
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
 # does not support editline
 .include "../../devel/readline/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
