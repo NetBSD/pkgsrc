@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1772 2022/04/10 12:37:04 markd Exp $
+$NetBSD: CHANGES-2022,v 1.1773 2022/04/10 13:21:35 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2528,3 +2528,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/tex-pstricks-add-doc to 3.92 [markd 2022-04-10]
 	Updated graphics/tex-pstricks to 3.13 [markd 2022-04-10]
 	Updated graphics/tex-pstricks-doc to 3.13 [markd 2022-04-10]
+	Updated textproc/ruby-kramdown to 2.3.2 [fcambus 2022-04-10]
