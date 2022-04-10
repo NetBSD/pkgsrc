@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:47:11 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/04/10 06:24:01 markd Exp $
 
-BLAKE2s (pst-node.doc.r54687.tar.xz) = 174f15011686632e89317a7118d0616d87fad7569156e993d7033562d3e3322e
-SHA512 (pst-node.doc.r54687.tar.xz) = da13d6f9584cb2810b0aac8ed65af49a48128049433a845b6a2d73bc2395e043f6ce89ca84978eb52455cdc713931a610cb1047e46badaa2c6b4baf5073c15e6
-Size (pst-node.doc.r54687.tar.xz) = 418912 bytes
+BLAKE2s (pst-node.doc.r61838.tar.xz) = dafbd63be52e784923528b4fca53c9bf73fe1861ae7169a6aa964d2ed062b5dd
+SHA512 (pst-node.doc.r61838.tar.xz) = 5cf9cb60b0c36915945a4e2fb4e79a35e2ff9e957df1b1e39d8158560843fe1dae6867aa6270e70cf3ba387b104e9dd8b6965434168d89748e65aa77368a0707
+Size (pst-node.doc.r61838.tar.xz) = 529992 bytes

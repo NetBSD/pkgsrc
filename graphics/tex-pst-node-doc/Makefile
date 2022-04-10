@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2020/04/27 02:08:14 markd Exp $
+# $NetBSD: Makefile,v 1.11 2022/04/10 06:24:01 markd Exp $
 
 DISTNAME=	pst-node.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.42a
-TEXLIVE_REV=	54687
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.43
+TEXLIVE_REV=	61838
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/pst-node
