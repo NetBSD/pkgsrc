@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:47:09 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/04/10 06:04:05 markd Exp $
 
-BLAKE2s (pst-circ.doc.r59017.tar.xz) = cc6478660ae71827099217e30d4f8ebb1af0116b5191b85686fe93004fcaecd3
-SHA512 (pst-circ.doc.r59017.tar.xz) = a2e119d4a75345784d0789f64d8e6bb0ef27578b00bfe043b755d2b435a6e6efe0c099bd1e7d528744c9a17f86f94c55c3f34c4e5806671608d5e327d3ff4c87
-Size (pst-circ.doc.r59017.tar.xz) = 508896 bytes
+BLAKE2s (pst-circ.doc.r60464.tar.xz) = af147001487878e3584cc641ceb094baa0e77d7b176bf29e5bab7d1fe60976c1
+SHA512 (pst-circ.doc.r60464.tar.xz) = c2eb37603cbba656eb1282130e112d0c3bbb49d4b3703c3d9b19d0d250d272d31fd19d2790c97cf8cd5226b0735e8466eab824a35754f41d7584208e606a6ce7
+Size (pst-circ.doc.r60464.tar.xz) = 574764 bytes

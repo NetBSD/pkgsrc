@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2021/06/05 05:48:04 markd Exp $
+# $NetBSD: Makefile,v 1.11 2022/04/10 06:04:05 markd Exp $
 
 DISTNAME=	pst-circ
-PKGNAME=	tex-${DISTNAME}-2.18
-TEXLIVE_REV=	59017
+PKGNAME=	tex-${DISTNAME}-2.19
+TEXLIVE_REV=	60464
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/pst-circ
