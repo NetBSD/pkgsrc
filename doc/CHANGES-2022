@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1777 2022/04/10 15:02:38 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1778 2022/04/10 15:05:52 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2533,3 +2533,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/firefox91-l10n to 91.8.0 [nia 2022-04-10]
 	Updated devel/xa65 to 2.3.13 [fcambus 2022-04-10]
 	Updated audio/quodlibet to 4.5.0 [nia 2022-04-10]
+	Updated audio/pt2-clone to 1.46 [nia 2022-04-10]
