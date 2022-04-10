@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:48:38 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/04/10 08:04:38 nia Exp $
 
 BLAKE2s (grig-0.8.1.tar.gz) = 9414be30de8fe2f26629497c27716b78334580545ba53dc7095f886d90ac1b59
 SHA512 (grig-0.8.1.tar.gz) = 84eda8db5d18324f26f0775483c8272296aad05dd75f0572c01a3c7af6dbd14bff7b98cc6a61fe3c43d25193866be4b3dafdc4e68dfc37217e88b53ca53266f9
 Size (grig-0.8.1.tar.gz) = 621728 bytes
-SHA1 (patch-src_rig-daemon-check.c) = 04c958c5a9fe5dfcd6db931e0de96f017201a053
-SHA1 (patch-src_rig-daemon.c) = e70633aad4468c3302f2abedf8d92ab27f17f823
+SHA1 (patch-src_rig-daemon-check.c) = a64b81269a521a94384eaf469e122f0db28505d2
+SHA1 (patch-src_rig-daemon.c) = 7905153e879059422d68df3ddf9bfec22b9b39f9
+SHA1 (patch-src_rig-data.c) = 4d23d504a590248651370bed5b45c634b230c5b8
 SHA1 (patch-src_rig-data.h) = cb2acfb5fdaa2bda4cc8674ee5977bcb003912ac
+SHA1 (patch-src_rig-gui-buttons.c) = 0b2413bd83ac4824bb52aa45e5ff1fa2c64baeb3
+SHA1 (patch-src_rig-gui-info.c) = 9dd6256e91994f3f95df88bf19dc10f29f16bf84
