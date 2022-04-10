@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1780 2022/04/10 15:16:20 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1781 2022/04/10 15:25:34 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2536,3 +2536,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/pt2-clone to 1.46 [nia 2022-04-10]
 	Updated multimedia/frei0r to 1.8.0 [nia 2022-04-10]
 	Updated net/get_iplayer to 3.29 [nia 2022-04-10]
+	Updated audio/strawberry to 1.0.4 [nia 2022-04-10]
