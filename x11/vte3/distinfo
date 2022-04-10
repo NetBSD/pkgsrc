@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2022/04/10 03:53:32 gutteridge Exp $
+$NetBSD: distinfo,v 1.19 2022/04/10 22:14:50 gutteridge Exp $
 
 BLAKE2s (vte-0.68.0.tar.gz) = 1583ddbed30f848687a1ce02df9d03ce89a5b905a72a9cd1d866195931acbcb1
 SHA512 (vte-0.68.0.tar.gz) = fb2260ae1363203cdccd0e0c6cafe29e5fb25947d2830a7ce1051f672fdc11c067791a8b74cb3017548e366976763fec2022e0c196ed501f46abb08876ad24d6
@@ -10,5 +10,5 @@ SHA1 (patch-src_dumpkeys.c) = 102f24d7404d46b13194f3431d0a864d480e5da7
 SHA1 (patch-src_meson.build) = a8e159688fb36e4cfac40249e279a670c9c6cda8
 SHA1 (patch-src_mev.c) = b38dc42e02a8d5fa1e579349319f0b8c8b31dbce
 SHA1 (patch-src_missing.cc) = 4bd47362721afb27594ea12aa2c80495205bd906
-SHA1 (patch-src_pty.cc) = bf65a5384090772eafb441cd8d3aae4eb8383d5b
+SHA1 (patch-src_pty.cc) = 24d0f4e17fce33fc525184d4829625ca84be8b4e
 SHA1 (patch-src_widget.cc) = cbc8b715b21248996bfb7c6abe355c5f4e510539
