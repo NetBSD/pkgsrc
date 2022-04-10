@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.96 2021/12/03 07:40:26 wiz Exp $
+# $NetBSD: compiler.mk,v 1.97 2022/04/10 19:54:02 riastradh Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -218,6 +218,15 @@ CWRAPPERS_APPEND.f77+=	${_SSP_CFLAGS}
 .if ${_PKGSRC_USE_CTF} == "yes" && defined(_CTF_CFLAGS)
 _WRAP_EXTRA_ARGS.CC+=	${_CTF_CFLAGS}
 CWRAPPERS_APPEND.cc+=	${_CTF_CFLAGS}
+.endif
+
+# Add sysroot if using cross-compilation tools.
+#
+.if !empty(TOOLS_USE_CROSS_COMPILE:M[yY][eE][sS])
+CWRAPPERS_PREPEND.cc+=	--sysroot=${TOOLS_CROSS_DESTDIR:Q}
+CWRAPPERS_PREPEND.cxx+=	--sysroot=${TOOLS_CROSS_DESTDIR:Q}
+CWRAPPERS_PREPEND.ld+=	--sysroot=${TOOLS_CROSS_DESTDIR:Q}
+# XXX cross fortran
 .endif
 
 # If the languages are not requested, force them not to be available
