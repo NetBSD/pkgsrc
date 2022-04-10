@@ -1,7 +1,7 @@
 Cross-compilation in pkgsrc (user's guide)              -*- outline -*-
 Taylor R. Campbell <riastradh@NetBSD.org>
 
-$NetBSD: HOWTO-use-crosscompile,v 1.10 2022/04/04 11:23:18 riastradh Exp $
+$NetBSD: HOWTO-use-crosscompile,v 1.11 2022/04/10 19:54:02 riastradh Exp $
 
 The following steps enable you to build binary packages for a machine
 architecture other than the one you are building on.  For example, you
@@ -61,13 +61,29 @@ In addition to whatever else you want in your mk.conf for pkgsrc, add:
    MACHINE_ARCH=        powerpc
    .endif
 
-You can bootstrap pkgsrc or not; it shouldn't make a difference for
-cross-compilation.  If you do, replace `make' by `bmake' below, of
-course.
-
 XXX Some variables, notably LOCALBASE and other paths that get baked
 into packages, cannot currently be set differently for native and
 target packages.
+
+** Bootstrapped pkgsrc
+
+You can bootstrap pkgsrc or not; it shouldn't make a difference for
+cross-compilation.  If you do:
+
+ - Replace `make' by `bmake' below.
+
+ - Make sure any ABI setting in mk.conf is conditionally set
+   appropriately.
+
+   For example, bootstrap on amd64 leaves ABI=64 in mk.conf, which must
+   be left empty or undefined for earmv7hf cross-builds.  So you might
+   need:
+
+      .if empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+      ABI=    64 # set for native amd64 build
+      .else
+      ABI=    # empty for earmv7hf cross-build
+      .endif
 
 * Make some packages
 
