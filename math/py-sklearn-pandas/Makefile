@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:54:17 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/04/10 14:42:18 nia Exp $
 
 DISTNAME=	sklearn-pandas-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-pandas-[0-9]*:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-scikit-learn>=0.17:../../math/py-scikit-learn
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-scikit-learn
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-scikit-learn
 
 USE_LANGUAGES=	# none
 
