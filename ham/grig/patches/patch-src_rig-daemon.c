@@ -1,4 +1,4 @@
-$NetBSD: patch-src_rig-daemon.c,v 1.1 2021/03/09 08:14:01 nia Exp $
+$NetBSD: patch-src_rig-daemon.c,v 1.2 2022/04/10 08:04:39 nia Exp $
 
 Description: align affected parts for Hamlib4.0
 Author: Ervin Hegedus <airween@gmail.com>
@@ -7,6 +7,15 @@ https://sources.debian.org/data/main/g/grig/0.8.1-3/debian/patches/04-hamlib-ali
 
 --- src/rig-daemon.c.orig	2015-12-19 15:14:27.000000000 +0000
 +++ src/rig-daemon.c
+@@ -537,7 +537,7 @@ rig_daemon_start       (int          rig
+ 	}
+ 
+ 	/* configure and open rig device */
+-	strncpy (myrig->state.rigport.pathname, rigport, FILPATHLEN);
++	strncpy (myrig->state.rigport.pathname, rigport, HAMLIB_FILPATHLEN);
+ 	g_free (rigport);
+ 
+ 	/* set speed if any special whishes */
 @@ -1674,12 +1674,12 @@ rig_daemon_exec_cmd         (rig_cmd_t c
  						   is the current frequency within this range?
  						*/
