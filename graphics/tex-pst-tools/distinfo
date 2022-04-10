@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:47:13 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/04/10 06:30:44 markd Exp $
 
-BLAKE2s (pst-tools.r54518.tar.xz) = 0a46b266636c7eb66381bc69ae87129bce22334103b85a71e97bc184a5aaea9b
-SHA512 (pst-tools.r54518.tar.xz) = b6f1432b44483470d2dc740aaafd254d0f7051e37e9b8675aa85fc50812b9f19fb8b021cb00da405734c25a3dc6b9645d25981c7b603e3a01016421c2d1b4140
-Size (pst-tools.r54518.tar.xz) = 6500 bytes
+BLAKE2s (pst-tools.r60621.tar.xz) = 51e3b0a6b182904b1614c3d2b943683f3854849267261734f54c4addca79b3c1
+SHA512 (pst-tools.r60621.tar.xz) = 591dbff503faef5316eda8364a422d8810524775e6c6b59569d24928c8702c54463e4433a3c28953d2f36c873aa6a6e52c71dd9cdcce5bb0c362ab2231f5a165
+Size (pst-tools.r60621.tar.xz) = 6564 bytes
