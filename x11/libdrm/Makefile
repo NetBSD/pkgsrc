@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2022/04/04 11:23:07 riastradh Exp $
+# $NetBSD: Makefile,v 1.101 2022/04/10 08:53:17 nia Exp $
 
 DISTNAME=		libdrm-2.4.110
 CATEGORIES=		x11 graphics
@@ -93,7 +93,7 @@ MESON_ARGS+=	-Dvalgrind=false
 LDFLAGS.NetBSD+=	-lpci
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__	# posix_memalign, ...
 
-X11_BUILTIN_NAME?=		libdrm
+X11_LIB_NAME?=		libdrm
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"

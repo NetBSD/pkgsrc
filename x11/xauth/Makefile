@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2021/12/01 13:01:16 nia Exp $
+# $NetBSD: Makefile,v 1.15 2022/04/10 08:53:17 nia Exp $
 
 DISTNAME=		xauth-1.1.1
 CATEGORIES=		x11
@@ -13,7 +13,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 CPPFLAGS.NetBSD+=	-D_OPENBSD_SOURCE
 
-X11_BUILTIN_NAME=	xauth
+X11_BIN_NAME=	xauth
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
