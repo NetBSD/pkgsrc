@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:47:10 nia Exp $
-
-BLAKE2s (tex-pst-ghsb-15878/pst-ghsb.tar.xz) = d7c58e0b87a806726e65cc6e559c5a4edf2d58aa56373a878ad1785c15c7a389
-SHA512 (tex-pst-ghsb-15878/pst-ghsb.tar.xz) = 5173b6b5ff2202a3cc8d95bc10926508617143e4d47b2f8b8ddc4882a68c5384502e337f354aef694ec4019e91062fc86ec193e11318e780521a16ebcafef99e
-Size (tex-pst-ghsb-15878/pst-ghsb.tar.xz) = 2616 bytes
