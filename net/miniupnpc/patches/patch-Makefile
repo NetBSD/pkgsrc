@@ -1,12 +1,13 @@
-$NetBSD: patch-Makefile,v 1.4 2021/06/10 16:45:22 nia Exp $
+$NetBSD: patch-Makefile,v 1.5 2022/04/11 10:04:38 nikita Exp $
 
 Do not pick pkgsrc libtool on Darwin.
 Use correct installation dirs.
 Avoid non-portable sed in updateversion.
+Fix Makefile rules to account for $(BUILD) (fixed in upstream).
 
---- Makefile.orig	2020-11-27 18:25:02.000000000 +0000
-+++ Makefile
-@@ -15,7 +15,7 @@ VERSION = $(shell cat VERSION)
+--- Makefile.orig	2021-09-28 23:11:31.000000000 +0200
++++ Makefile	2022-04-11 11:58:41.017331131 +0200
+@@ -15,7 +15,7 @@
  
  ifneq (, $(findstring darwin, $(OS)))
  JARSUFFIX=mac
@@ -15,7 +16,7 @@ Avoid non-portable sed in updateversion.
  endif
  ifneq (, $(findstring linux, $(OS)))
  JARSUFFIX=linux
-@@ -155,7 +155,7 @@ endif
+@@ -157,12 +157,12 @@
  INSTALLDIRINC = $(INSTALLPREFIX)/include/miniupnpc
  INSTALLDIRLIB = $(INSTALLPREFIX)/$(LIBDIR)
  INSTALLDIRBIN = $(INSTALLPREFIX)/bin
@@ -24,12 +25,37 @@ Avoid non-portable sed in updateversion.
  PKGCONFIGDIR = $(INSTALLDIRLIB)/pkgconfig
  
  FILESTOINSTALL = $(LIBRARY) $(EXECUTABLES)
-@@ -242,7 +242,7 @@ updateversion:	miniupnpc.h
- 	cp miniupnpc.h miniupnpc.h.bak
- 	sed 's/\(.*MINIUPNPC_API_VERSION\s\+\)[0-9]\+/\1$(APIVERSION)/' < miniupnpc.h.bak > miniupnpc.h
+ ifeq (, $(findstring amiga, $(OS)))
+-FILESTOINSTALL += $(SHAREDLIBRARY) miniupnpc.pc
++FILESTOINSTALL += $(SHAREDLIBRARY) $(BUILD)/miniupnpc.pc
+ endif
+ 
+ 
+@@ -244,22 +244,22 @@
+ 	cp $< $<.bak
+ 	sed 's/\(.*MINIUPNPC_API_VERSION\s\+\)[0-9]\+/\1$(APIVERSION)/' < $<.bak > $<
  
 -install:	updateversion $(FILESTOINSTALL)
 +install:	$(FILESTOINSTALL)
  	$(INSTALL) -d $(DESTDIR)$(INSTALLDIRINC)
  	$(INSTALL) -m 644 $(HEADERS) $(DESTDIR)$(INSTALLDIRINC)
  	$(INSTALL) -d $(DESTDIR)$(INSTALLDIRLIB)
+ 	$(INSTALL) -m 644 $(LIBRARY) $(DESTDIR)$(INSTALLDIRLIB)
+ ifeq (, $(findstring amiga, $(OS)))
+ 	$(INSTALL) -m 644 $(SHAREDLIBRARY) $(DESTDIR)$(INSTALLDIRLIB)/$(SONAME)
+-	ln -fs $(SONAME) $(DESTDIR)$(INSTALLDIRLIB)/$(SHAREDLIBRARY)
++	ln -fs $(SONAME) $(DESTDIR)$(INSTALLDIRLIB)/$(notdir $(SHAREDLIBRARY))
+ 	$(INSTALL) -d $(DESTDIR)$(PKGCONFIGDIR)
+-	$(INSTALL) -m 644 miniupnpc.pc $(DESTDIR)$(PKGCONFIGDIR)
++	$(INSTALL) -m 644 $(BUILD)/miniupnpc.pc $(DESTDIR)$(PKGCONFIGDIR)
+ endif
+ 	$(INSTALL) -d $(DESTDIR)$(INSTALLDIRBIN)
+ ifneq (, $(findstring amiga, $(OS)))
+-	$(INSTALL) -m 755 upnpc-static $(DESTDIR)$(INSTALLDIRBIN)/upnpc
++	$(INSTALL) -m 755 $(BUILD)/upnpc-static $(DESTDIR)$(INSTALLDIRBIN)/upnpc
+ else
+-	$(INSTALL) -m 755 upnpc-shared $(DESTDIR)$(INSTALLDIRBIN)/upnpc
++	$(INSTALL) -m 755 $(BUILD)/upnpc-shared $(DESTDIR)$(INSTALLDIRBIN)/upnpc
+ endif
+ 	$(INSTALL) -m 755 external-ip.sh $(DESTDIR)$(INSTALLDIRBIN)/external-ip
+ ifeq (, $(findstring amiga, $(OS)))
