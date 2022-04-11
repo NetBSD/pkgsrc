@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1790 2022/04/10 22:23:57 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.1791 2022/04/11 02:05:39 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2547,3 +2547,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/hugo to 0.96.0 [nikita 2022-04-10]
 	Updated x11/vte3 to 0.68.0nb2 [gutteridge 2022-04-10]
 	Updated x11/xfce4-terminal to 1.0.0 [gutteridge 2022-04-10]
+	Updated net/freeradius to 3.0.25nb1 [gutteridge 2022-04-11]
