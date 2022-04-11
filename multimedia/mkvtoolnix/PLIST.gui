@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.gui,v 1.6 2020/01/07 07:27:09 adam Exp $
+@comment $NetBSD: PLIST.gui,v 1.7 2022/04/11 11:19:55 adam Exp $
 bin/mkvtoolnix-gui
 man/bg/man1/mkvtoolnix-gui.1
 man/ca/man1/mkvtoolnix-gui.1
@@ -58,6 +58,6 @@ share/icons/hicolor/96x96/apps/mkvpropedit.png
 share/icons/hicolor/96x96/apps/mkvtoolnix-gui.png
 share/metainfo/org.bunkus.mkvtoolnix-gui.appdata.xml
 share/mime/packages/org.bunkus.mkvtoolnix-gui.xml
-share/mkvtoolnix/sounds/finished-1.ogg
-share/mkvtoolnix/sounds/finished-2.ogg
-share/mkvtoolnix/sounds/finished-3.ogg
+share/mkvtoolnix/sounds/finished-1.webm
+share/mkvtoolnix/sounds/finished-2.webm
+share/mkvtoolnix/sounds/finished-3.webm
