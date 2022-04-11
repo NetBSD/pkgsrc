@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.35 2021/12/30 20:39:00 adam Exp $
+$NetBSD: distinfo,v 1.36 2022/04/11 16:33:56 adam Exp $
 
-BLAKE2s (xmlschema-1.9.2.tar.gz) = 5f549666ad4cd27234b4687de243aa58d8200d70abaafa466163caee3d7fc8f9
-SHA512 (xmlschema-1.9.2.tar.gz) = 99abc53da52ba8f7f0f269c791b227d2b5c81d7ede847ccd98e18c5817ddd988ba26b88ad5afe0a0933e0c5af5425c0efdd4a1beb218d009e476de5b2931a0fb
-Size (xmlschema-1.9.2.tar.gz) = 394954 bytes
+BLAKE2s (xmlschema-1.10.0.tar.gz) = 79c982e67134d13ebdf4c23cac96d6ce956be4b168e058b2712cf4a35603eb2a
+SHA512 (xmlschema-1.10.0.tar.gz) = c4358b210cc96e46617cc11b1b7e2a4d69c1bd6489cc73602552b184f209eb90b13eff353741aa7b1dbc3ff8514f90b7bb331ac18ffc466b3ce36f42f7497899
+Size (xmlschema-1.10.0.tar.gz) = 396057 bytes

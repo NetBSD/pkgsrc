@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2022/01/05 15:41:27 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2022/04/11 16:33:56 adam Exp $
 
-DISTNAME=	xmlschema-1.9.2
+DISTNAME=	xmlschema-1.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xmlschema/}
 
@@ -11,7 +10,7 @@ HOMEPAGE=	https://github.com/brunato/xmlschema
 COMMENT=	XML Schema validator and decoder
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-elementpath>=2.2.2:../../textproc/py-elementpath
+DEPENDS+=	${PYPKGPREFIX}-elementpath>=2.5.0:../../textproc/py-elementpath
 TEST_DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 
 USE_LANGUAGES=	# none
