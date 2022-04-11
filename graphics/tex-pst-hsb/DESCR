@@ -1,0 +1,3 @@
+This is a PSTricks-related package. It can plot lines and/or
+curves with continuous colours. Only colours defined in the hsb
+model are supported

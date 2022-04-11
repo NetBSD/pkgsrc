@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.965 2022/03/24 19:53:53 wiz Exp $
+# $NetBSD: Makefile,v 1.966 2022/04/11 20:34:43 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -718,6 +718,8 @@ SUBDIR+=	tex-pst-gr3d
 SUBDIR+=	tex-pst-gr3d-doc
 SUBDIR+=	tex-pst-grad
 SUBDIR+=	tex-pst-grad-doc
+SUBDIR+=	tex-pst-hsb
+SUBDIR+=	tex-pst-hsb-doc
 SUBDIR+=	tex-pst-lens
 SUBDIR+=	tex-pst-lens-doc
 SUBDIR+=	tex-pst-math
