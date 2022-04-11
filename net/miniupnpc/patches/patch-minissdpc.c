@@ -1,9 +1,9 @@
-$NetBSD: patch-minissdpc.c,v 1.2 2018/10/03 22:27:05 nia Exp $
+$NetBSD: patch-minissdpc.c,v 1.3 2022/04/11 10:04:38 nikita Exp $
 
 need sockio.h for SIOCGIFADDR on SunOS
 
---- minissdpc.c.orig	2018-04-06 10:53:30.000000000 +0000
-+++ minissdpc.c
+--- src/minissdpc.c.orig	2018-04-06 10:53:30.000000000 +0000
++++ src/minissdpc.c
 @@ -14,6 +14,9 @@
  #if defined (__NetBSD__)
  #include <net/if.h>
