@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.112 2021/06/30 22:20:32 mef Exp $
+# $NetBSD: Makefile,v 1.113 2022/04/11 02:05:27 gutteridge Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-server//}
+PKGREVISION=	1
 COMMENT=	Free RADIUS server implementation
 
 BUILD_DEFS+=		VARBASE
