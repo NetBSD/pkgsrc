@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1792 2022/04/11 08:29:55 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1793 2022/04/11 10:04:49 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2549,3 +2549,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xfce4-terminal to 1.0.0 [gutteridge 2022-04-10]
 	Updated net/freeradius to 3.0.25nb1 [gutteridge 2022-04-11]
 	Updated net/yaydl to 0.7.0 [pin 2022-04-11]
+	Updated net/miniupnpc to 2.2.3 [nikita 2022-04-11]
