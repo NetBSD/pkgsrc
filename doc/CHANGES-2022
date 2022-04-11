@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1793 2022/04/11 10:04:49 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.1794 2022/04/11 11:21:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2550,3 +2550,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/freeradius to 3.0.25nb1 [gutteridge 2022-04-11]
 	Updated net/yaydl to 0.7.0 [pin 2022-04-11]
 	Updated net/miniupnpc to 2.2.3 [nikita 2022-04-11]
+	Updated multimedia/mkvtoolnix to 67.0.0 [adam 2022-04-11]
+	Updated devel/py-pyparsing to 3.0.8 [adam 2022-04-11]
