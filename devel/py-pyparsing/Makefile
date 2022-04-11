@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2022/01/21 11:31:47 adam Exp $
+# $NetBSD: Makefile,v 1.26 2022/04/11 11:21:05 adam Exp $
 
-DISTNAME=	pyparsing-3.0.7
+DISTNAME=	pyparsing-3.0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyparsing/}
@@ -14,5 +14,5 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
