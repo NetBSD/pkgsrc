@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.966 2022/04/11 20:34:43 markd Exp $
+# $NetBSD: Makefile,v 1.967 2022/04/11 20:36:46 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -712,8 +712,6 @@ SUBDIR+=	tex-pst-eps
 SUBDIR+=	tex-pst-eps-doc
 SUBDIR+=	tex-pst-fill
 SUBDIR+=	tex-pst-fill-doc
-SUBDIR+=	tex-pst-ghsb
-SUBDIR+=	tex-pst-ghsb-doc
 SUBDIR+=	tex-pst-gr3d
 SUBDIR+=	tex-pst-gr3d-doc
 SUBDIR+=	tex-pst-grad
