@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/12/09 21:34:26 otis Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/04/11 21:35:36 spz Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -40,7 +40,7 @@ share/tomcat/lib/catalina-ssi.jar
 share/tomcat/lib/catalina-storeconfig.jar
 share/tomcat/lib/catalina-tribes.jar
 share/tomcat/lib/catalina.jar
-share/tomcat/lib/ecj-4.17.jar
+share/tomcat/lib/ecj-4.20.jar
 share/tomcat/lib/el-api.jar
 share/tomcat/lib/jasper-el.jar
 share/tomcat/lib/jasper.jar
@@ -405,10 +405,9 @@ share/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/SnakeAnnotation.ja
 share/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/SnakeTimer$1.class
 share/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/SnakeTimer.class
 share/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/SnakeTimer.java
-share/tomcat/webapps/examples/WEB-INF/jsp/applet/Clock2.java
 share/tomcat/webapps/examples/WEB-INF/jsp/debug-taglib.tld
 share/tomcat/webapps/examples/WEB-INF/jsp/example-taglib.tld
-share/tomcat/webapps/examples/WEB-INF/jsp2/jsp2-example-taglib.tld
+share/tomcat/webapps/examples/WEB-INF/jsp/jsp2-example-taglib.tld
 share/tomcat/webapps/examples/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar
 share/tomcat/webapps/examples/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar
 share/tomcat/webapps/examples/WEB-INF/tags/displayProducts.tag
@@ -549,11 +548,6 @@ share/tomcat/webapps/examples/jsp/jsptoserv/jts.html
 share/tomcat/webapps/examples/jsp/num/numguess.html
 share/tomcat/webapps/examples/jsp/num/numguess.jsp
 share/tomcat/webapps/examples/jsp/num/numguess.jsp.html
-share/tomcat/webapps/examples/jsp/plugin/applet/Clock2.class
-share/tomcat/webapps/examples/jsp/plugin/applet/Clock2.java
-share/tomcat/webapps/examples/jsp/plugin/plugin.html
-share/tomcat/webapps/examples/jsp/plugin/plugin.jsp
-share/tomcat/webapps/examples/jsp/plugin/plugin.jsp.html
 share/tomcat/webapps/examples/jsp/security/protected/error.jsp
 share/tomcat/webapps/examples/jsp/security/protected/error.jsp.html
 share/tomcat/webapps/examples/jsp/security/protected/index.jsp

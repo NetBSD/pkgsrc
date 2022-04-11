@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/12/09 21:34:26 otis Exp $
+# $NetBSD: Makefile,v 1.12 2022/04/11 21:35:36 spz Exp $
 #
 
 DISTNAME=	apache-tomcat-${TOMCAT_VER}
@@ -24,7 +24,7 @@ USE_TOOLS+=	pax
 
 .include "../../mk/bsd.prefs.mk"
 
-TOMCAT_VER=		9.0.41
+TOMCAT_VER=		9.0.62
 TOMCAT_HOME=		${PREFIX}/share/tomcat
 EGDIR=			${PREFIX}/share/examples/tomcat
 DOCDIR=			${PREFIX}/share/doc/tomcat
