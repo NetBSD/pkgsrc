@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2022/03/11 19:56:00 tnn Exp $
+# $NetBSD: Makefile,v 1.64 2022/04/11 18:53:43 adam Exp $
 
 # Important: UI has to be manually built when updating. See instructions below.
 
-DISTNAME=	prometheus-2.33.5
+DISTNAME=	prometheus-2.34.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=prometheus/}
 CATEGORIES=	databases
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,22 +15,22 @@ LICENSE=	apache-2.0
 .include "go-modules.mk"
 
 # How to rebuild UI after bumping version:
-# 1. install npm>=7 (not in pkgsrc yet)
+# 1. install lang/npm
 # 2. comment out the DISTFILES=... line
 # 3. run "make distinfo extract update-ui"
 # 4. publish the resulting distfile on MASTER_SITE_LOCAL
 # 5. uncomment the DISTFILES=... line and regen distinfo
 .PHONY: update-ui
 update-ui:
-	cd ${WRKSRC}/web/ui &&						\
-	  npm7 install &&						\
-	  npm7 run build &&						\
-	  chmod -x static/react/favicon.ico static/react/manifest.json	\
-	  cd ../../.. &&						\
-	  tar czf ${REACT_UI_DIST} ${DISTNAME}/web/ui/static/react &&	\
-	  cp ${REACT_UI_DIST} ${DISTDIR}/${REACT_UI_DIST} &&		\
-	  ${ECHO} "UI built. Run this command:"  &&			\
-	  ${ECHO} "# scp ${DISTDIR}/${REACT_UI_DIST} ftp.netbsd.org:/pub/pkgsrc/distfiles/LOCAL_PORTS/."
+	cd ${WRKSRC}/web/ui &&							\
+	npm install &&								\
+	npm run build &&							\
+	${CHMOD} -x static/react/favicon.ico static/react/manifest.json &&	\
+	cd ../../.. &&								\
+	${TAR} -czf ${REACT_UI_DIST} ${DISTNAME}/web/ui/static/react &&		\
+	${CP} ${REACT_UI_DIST} ${DISTDIR}/${REACT_UI_DIST} &&			\
+	${ECHO} "UI built. Run this command:" &&				\
+	${ECHO} "# scp ${DISTDIR}/${REACT_UI_DIST} ftp.netbsd.org:/pub/pkgsrc/distfiles/LOCAL_PORTS/."
 
 REACT_UI_DIST=		${DISTNAME}-react-ui.tar.gz
 SITES.${REACT_UI_DIST}=	${MASTER_SITE_LOCAL}
@@ -93,10 +93,8 @@ post-install:
 .for f in consoles console_libraries
 	cd ${WRKSRC} && ${PAX} -rw ${f} ${DESTDIR}${PREFIX}/${EXAMPLE_DIR}
 .endfor
-.for f in static templates
-	cd ${WRKSRC}/web/ui && ${PAX} -rw ${f} ${DESTDIR}${WEBUI_DIR}
-	${CHMOD} -R g-w ${DESTDIR}${WEBUI_DIR}/${f}
-.endfor
+	cd ${WRKSRC}/web/ui && ${PAX} -rw static ${DESTDIR}${WEBUI_DIR}
+	${CHMOD} -R g-w ${DESTDIR}${WEBUI_DIR}/static
 .for f in ${EXAMPLE_FILES}
 	${CHMOD} ${NONBINMODE} ${DESTDIR}${PREFIX}/${EXAMPLE_DIR}/${f}
 .endfor
