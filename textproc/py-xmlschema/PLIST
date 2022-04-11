@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2021/11/12 12:30:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2022/04/11 16:33:56 adam Exp $
 bin/xmlschema-json2xml-${PYVERSSUFFIX}
 bin/xmlschema-validate-${PYVERSSUFFIX}
 bin/xmlschema-xml2json-${PYVERSSUFFIX}
@@ -98,21 +98,21 @@ ${PYSITELIB}/xmlschema/schemas/XSI/XMLSchema-instance_minimal.xsd
 ${PYSITELIB}/xmlschema/testing/__init__.py
 ${PYSITELIB}/xmlschema/testing/__init__.pyc
 ${PYSITELIB}/xmlschema/testing/__init__.pyo
-${PYSITELIB}/xmlschema/testing/builders.py
-${PYSITELIB}/xmlschema/testing/builders.pyc
-${PYSITELIB}/xmlschema/testing/builders.pyo
-${PYSITELIB}/xmlschema/testing/case_class.py
-${PYSITELIB}/xmlschema/testing/case_class.pyc
-${PYSITELIB}/xmlschema/testing/case_class.pyo
-${PYSITELIB}/xmlschema/testing/factory.py
-${PYSITELIB}/xmlschema/testing/factory.pyc
-${PYSITELIB}/xmlschema/testing/factory.pyo
-${PYSITELIB}/xmlschema/testing/helpers.py
-${PYSITELIB}/xmlschema/testing/helpers.pyc
-${PYSITELIB}/xmlschema/testing/helpers.pyo
-${PYSITELIB}/xmlschema/testing/observers.py
-${PYSITELIB}/xmlschema/testing/observers.pyc
-${PYSITELIB}/xmlschema/testing/observers.pyo
+${PYSITELIB}/xmlschema/testing/_builders.py
+${PYSITELIB}/xmlschema/testing/_builders.pyc
+${PYSITELIB}/xmlschema/testing/_builders.pyo
+${PYSITELIB}/xmlschema/testing/_case_class.py
+${PYSITELIB}/xmlschema/testing/_case_class.pyc
+${PYSITELIB}/xmlschema/testing/_case_class.pyo
+${PYSITELIB}/xmlschema/testing/_factory.py
+${PYSITELIB}/xmlschema/testing/_factory.pyc
+${PYSITELIB}/xmlschema/testing/_factory.pyo
+${PYSITELIB}/xmlschema/testing/_helpers.py
+${PYSITELIB}/xmlschema/testing/_helpers.pyc
+${PYSITELIB}/xmlschema/testing/_helpers.pyo
+${PYSITELIB}/xmlschema/testing/_observers.py
+${PYSITELIB}/xmlschema/testing/_observers.pyc
+${PYSITELIB}/xmlschema/testing/_observers.pyo
 ${PYSITELIB}/xmlschema/validators/__init__.py
 ${PYSITELIB}/xmlschema/validators/__init__.pyc
 ${PYSITELIB}/xmlschema/validators/__init__.pyo
