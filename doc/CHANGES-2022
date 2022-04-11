@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1795 2022/04/11 16:36:05 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1796 2022/04/11 18:54:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2556,3 +2556,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-elementpath to 2.5.0 [adam 2022-04-11]
 	Updated textproc/py-xmlschema to 1.10.0 [adam 2022-04-11]
 	Updated finance/py-stripe to 2.71.0 [adam 2022-04-11]
+	Updated lang/npm to 8.6.0 [adam 2022-04-11]
+	Updated databases/prometheus to 2.34.0 [adam 2022-04-11]
