@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2022/01/21 11:31:47 adam Exp $
+$NetBSD: distinfo,v 1.26 2022/04/11 11:21:05 adam Exp $
 
-BLAKE2s (pyparsing-3.0.7.tar.gz) = 7c6ed7109b79c8b886a0fc854d7b518285e49e68001355a479968c6033ef931f
-SHA512 (pyparsing-3.0.7.tar.gz) = 1e692f4cdaa6b6e8ca2729d0a3e2ba16d978f1957c538b6de3a4220ec7d996bdbe87c41c43abab851fffa3b0498a05841373e435602917b8c095042e273badb5
-Size (pyparsing-3.0.7.tar.gz) = 884709 bytes
+BLAKE2s (pyparsing-3.0.8.tar.gz) = 5f83b4f07c8a66e238e1cd67b8382210bbd4842b73836bcb218ceda25128e75e
+SHA512 (pyparsing-3.0.8.tar.gz) = 7495d95cb35174bd6419c8fddbc885083874c4ea782e483a4253b3b20cd3d8fc93bf5b51dcc55cd00674e251e6757f2cc69467a27be4c45de71486bb5f0f3e45
+Size (pyparsing-3.0.8.tar.gz) = 1971138 bytes
