@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2021/05/24 19:53:04 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/04/11 20:39:58 markd Exp $
 
 DISTNAME=	collection-pstricks
-PKGNAME=	texlive-${DISTNAME}-2020pre1
-PKGREVISION=	1
+PKGNAME=	texlive-${DISTNAME}-2021pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	54455
+TEXLIVE_REV=	61329
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -26,9 +25,9 @@ DEPENDS+=	tex-pst-2dplot-[0-9]*:../../graphics/tex-pst-2dplot
 DEPENDS+=	tex-pst-3d-[0-9]*:../../graphics/tex-pst-3d
 DEPENDS+=	tex-pst-3dplot-[0-9]*:../../graphics/tex-pst-3dplot
 # depend pst-abspos
-# depend pst-arrow
 # depend pst-am
 # depend pst-antiprism
+# depend pst-arrow
 # depend pst-asr
 # depend pst-bar
 DEPENDS+=	tex-pst-barcode-[0-9]*:../../graphics/tex-pst-barcode
@@ -59,10 +58,10 @@ DEPENDS+=	tex-pst-fill-[0-9]*:../../graphics/tex-pst-fill
 # depend pst-gantt
 DEPENDS+=	tex-pst-geo-[0-9]*:../../geography/tex-pst-geo
 # depend pst-geometrictools
-DEPENDS+=	tex-pst-ghsb-[0-9]*:../../graphics/tex-pst-ghsb
 DEPENDS+=	tex-pst-gr3d-[0-9]*:../../graphics/tex-pst-gr3d
 DEPENDS+=	tex-pst-grad-[0-9]*:../../graphics/tex-pst-grad
 # depend pst-graphicx
+DEPENDS+=	tex-pst-hsb-[0-9]*:../../graphics/tex-pst-hsb
 # depend pst-infixplot
 # depend pst-intersect
 # depend pst-jtree
