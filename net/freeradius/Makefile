@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2022/04/11 02:05:27 gutteridge Exp $
+# $NetBSD: Makefile,v 1.114 2022/04/11 02:59:28 gutteridge Exp $
 
 .include "Makefile.common"
 
@@ -81,5 +81,4 @@ post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/lib/*.a ${DESTDIR}${PREFIX}/lib/*.la
 
 .include "../../mk/pam.buildlink3.mk"
-.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
