@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1812 2022/04/12 22:02:36 khorben Exp $
+$NetBSD: CHANGES-2022,v 1.1813 2022/04/12 22:27:11 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2584,3 +2584,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/subversion to 1.14.2 [bsiegert 2022-04-12]
 	Updated textproc/py-markovify to 0.9.4 [nikita 2022-04-12]
 	Updated devel/deforaos-libsystem to 0.4.3 [khorben 2022-04-12]
+	Added sysutils/libcpuid version 0.5.1 [nikita 2022-04-12]
