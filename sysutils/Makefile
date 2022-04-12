@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1000 2022/03/12 14:28:54 tnn Exp $
+# $NetBSD: Makefile,v 1.1001 2022/04/12 22:22:26 nikita Exp $
 #
 
 COMMENT=	System utilities
@@ -389,6 +389,7 @@ SUBDIR+=	lf
 SUBDIR+=	libbaloo4
 SUBDIR+=	libburn
 SUBDIR+=	libcap
+SUBDIR+=	libcpuid
 SUBDIR+=	libdevkit-gobject
 SUBDIR+=	libfm
 SUBDIR+=	libfm-extra
