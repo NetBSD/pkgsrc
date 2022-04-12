@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1802 2022/04/12 14:20:06 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1803 2022/04/12 14:22:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2570,3 +2570,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/ruby26-base to 2.6.10 [taca 2022-04-12]
 	Updated lang/ruby26 to 2.6.10 [taca 2022-04-12]
 	Updated net/chrony to 4.2 [nia 2022-04-12]
+	Updated lang/ruby27-base to 2.7.6 [taca 2022-04-12]
+	Updated databases/ruby-gdbm to 2.7.6 [taca 2022-04-12]
+	Updated devel/ruby-readline to 2.7.6 [taca 2022-04-12]
+	Updated lang/ruby27 to 2.7.6 [taca 2022-04-12]
