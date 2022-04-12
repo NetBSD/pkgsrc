@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1797 2022/04/11 20:42:43 markd Exp $
+$NetBSD: CHANGES-2022,v 1.1798 2022/04/12 10:14:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2562,3 +2562,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added graphics/tex-pst-hsb-doc version 0.02 [markd 2022-04-11]
 	Removed graphics/tex-pst-ghsb [markd 2022-04-11]
 	Removed graphics/tex-pst-ghsb-doc [markd 2022-04-11]
+	Updated textproc/py-black to 22.3.0 [adam 2022-04-12]
+	Updated net/py-minio to 7.1.6 [adam 2022-04-12]
