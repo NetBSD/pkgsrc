@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1806 2022/04/12 14:53:22 taca Exp $
+$NetBSD: CHANGES-2022,v 1.1807 2022/04/12 15:13:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2578,3 +2578,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/i3status to 2.14 [nia 2022-04-12]
 	Updated lang/ruby30-base to 3.0.4 [taca 2022-04-12]
 	Updated lang/ruby30 to 3.0.4 [taca 2022-04-12]
+	Updated lang/ruby31-base to 3.1.2 [taca 2022-04-12]
+	Updated lang/ruby31 to 3.1.2 [taca 2022-04-12]
