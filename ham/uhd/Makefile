@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2022/03/27 17:03:28 tnn Exp $
+# $NetBSD: Makefile,v 1.67 2022/04/12 20:10:46 tnn Exp $
 
 DISTNAME=	uhd-4.1.0.5
 PKGREVISION=	1
@@ -71,6 +71,10 @@ REPLACE_PYTHON+=	tests/streaming_performance/batch_run_benchmark_rate.py
 REPLACE_PYTHON+=	tests/streaming_performance/run_E3xx_max_rate_tests.py
 REPLACE_PYTHON+=	tests/streaming_performance/run_N3xx_max_rate_tests.py
 REPLACE_PYTHON+=	tests/streaming_performance/run_X3xx_max_rate_tests.py
+
+# -pthread needed to turn on boost threads on some platforms
+CXXFLAGS.SunOS+=	-pthread
+LDFLAGS.SunOS+=		-lsocket
 
 INSTALLATION_DIRS+=	share/uhd
 INSTALLATION_DIRS+=	share/uhd/firmware
