@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.4 2016/09/12 18:06:44 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2022/04/12 23:38:13 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.freetype2
 PKG_SUPPORTED_OPTIONS=	png
+PKG_SUGGESTED_OPTIONS=	png
 
 .include "../../mk/bsd.options.mk"
 
