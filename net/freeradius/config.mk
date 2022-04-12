@@ -1,6 +1,6 @@
-# $NetBSD: config.mk,v 1.3 2022/04/11 02:05:27 gutteridge Exp $
+# $NetBSD: config.mk,v 1.4 2022/04/12 01:02:47 gutteridge Exp $
 
-# cd ${WRKSRC}/raddb; find . -type f -or -type l | sort | sed 's,^./,EGFILES+=\t,'
+# cd ${DESTDIR}${EGDIR}/raddb; find . -type f -or -type l | sort | sed 's,^./,EGFILES+=\t,'
 EGFILES+=	README.rst
 EGFILES+=	certs/Makefile
 EGFILES+=	certs/README.md
@@ -274,7 +274,7 @@ EGFILES+=	sites-enabled/inner-tunnel
 EGFILES+=	templates.conf
 EGFILES+=	trigger.conf
 
-# cd ${WRKSRC}/raddb; find . -type d | sort | sed 's,^./,EGDIRS+=\t,'
+# cd ${DESTDIR}${EGDIR}/raddb; find . -type d | sort | sed 's,^./,EGDIRS+=\t,'
 EGDIRS+=	certs
 EGDIRS+=	mods-available
 EGDIRS+=	mods-config
