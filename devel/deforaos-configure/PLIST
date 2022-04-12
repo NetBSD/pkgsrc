@@ -1,5 +1,25 @@
-@comment $NetBSD: PLIST,v 1.4 2019/10/09 02:23:17 khorben Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/04/12 22:28:04 khorben Exp $
 bin/configure
+bin/configure-update
+libexec/configure/scripts/data/pkgconfig.sh
+libexec/configure/scripts/doc/docbook.sh
+libexec/configure/scripts/doc/gtkdoc.sh
+libexec/configure/scripts/doc/manual.css.xml
+libexec/configure/scripts/doc/markdown.sh
+libexec/configure/scripts/po/gettext.sh
+libexec/configure/scripts/tests/clint.sh
+libexec/configure/scripts/tests/coverage.sh
+libexec/configure/scripts/tests/distcheck.sh
+libexec/configure/scripts/tests/fixme.sh
+libexec/configure/scripts/tests/htmllint.sh
+libexec/configure/scripts/tests/phplint.sh
+libexec/configure/scripts/tests/pylint.sh
+libexec/configure/scripts/tests/shlint.sh
+libexec/configure/scripts/tests/xmllint.sh
+libexec/configure/scripts/tools/appbroker.sh
+libexec/configure/scripts/tools/platform.sh
+libexec/configure/scripts/tools/subst.sh
+libexec/configure/scripts/tools/template.sh
 man/html1/configure.html
 man/html5/project.conf.html
 man/man1/configure.1
@@ -15,23 +35,7 @@ share/configure/platform/Windows.conf
 share/doc/configure/AUTHORS
 share/doc/configure/BUGS
 share/doc/configure/CHANGES
+share/doc/configure/COPYING
 share/doc/configure/INSTALL.md
 share/doc/configure/README.md
-share/doc/configure/scripts/appbroker.sh
-share/doc/configure/scripts/clint.sh
-share/doc/configure/scripts/coverage.sh
-share/doc/configure/scripts/docbook.sh
-share/doc/configure/scripts/fixme.sh
-share/doc/configure/scripts/gettext.sh
-share/doc/configure/scripts/gtkdoc.sh
-share/doc/configure/scripts/htmllint.sh
-share/doc/configure/scripts/manual.css.xml
-share/doc/configure/scripts/markdown.sh
-share/doc/configure/scripts/phplint.sh
-share/doc/configure/scripts/pkgconfig.sh
-share/doc/configure/scripts/platform.sh
-share/doc/configure/scripts/pylint.sh
-share/doc/configure/scripts/shlint.sh
-share/doc/configure/scripts/subst.sh
-share/doc/configure/scripts/template.sh
-share/doc/configure/scripts/xmllint.sh
+@pkgdir share/doc/configure/scripts
