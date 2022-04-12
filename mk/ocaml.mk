@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.32 2022/03/03 03:32:28 mrg Exp $
+# $NetBSD: ocaml.mk,v 1.33 2022/04/12 11:27:13 tnn Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -246,7 +246,7 @@ do-build:
 #
 # opam targets
 #
-.if ${OCAML_USE_OPAM} == "yes" 
+.if ${OCAML_USE_OPAM} == "yes"
 
 do-install:
 	${RUN} for i in ${OPAM_INSTALL_FILES}; do \
@@ -256,6 +256,7 @@ do-install:
 		-destdir ${DESTDIR} \
 		-prefix ${PREFIX} \
 		-libdir ${PREFIX}/${OCAML_SITELIBDIR} \
+		-mandir ${PREFIX}/${PKGMANDIR} \
 		-docdir ${OCAML_TOPKG_DOCDIR}/$$i \
 		-stublibsdir ${PREFIX}/${OCAML_SITELIBDIR}/stublibs \
 		-bindir ${PREFIX}/bin \
