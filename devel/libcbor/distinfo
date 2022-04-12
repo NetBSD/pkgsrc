@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:15 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/12 22:36:02 tnn Exp $
 
-BLAKE2s (libcbor-0.8.0.tar.gz) = 7fc053ea3baa0f26696421e328909f0b9f1c2c59ef0a89e5b68c9b9f9a451305
-SHA512 (libcbor-0.8.0.tar.gz) = 694d2d3a78d80072f96e0afb73590ca1f3572e41d2117330ef4313ed06271743b048d3ba3259c6ffe9a802d5e441379d0e54787d1d42fed08dc81ac4f06c6dbc
-Size (libcbor-0.8.0.tar.gz) = 267044 bytes
+BLAKE2s (libcbor-0.9.0.tar.gz) = 581b66f34846c1e52c09a458727c91e8b961a1de546c5201952682e7706de088
+SHA512 (libcbor-0.9.0.tar.gz) = 710239f69d770212a82e933e59df1aba0fb3ec516ef6666a366f30a950565a52981b0d46ca7e0eea739f5785d79cc21fc19acd857a4a0b135f4f6aa3ef5fd3b0
+Size (libcbor-0.9.0.tar.gz) = 275405 bytes
