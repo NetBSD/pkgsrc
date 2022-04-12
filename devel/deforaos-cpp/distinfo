@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:14:32 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/04/12 23:32:03 khorben Exp $
 
 BLAKE2s (CPP-0.0.3.tar.gz) = 1e3d5eb256bd1b2fbbb6a6287077fe9e543a14867367d7d7307ce448df9edb92
 SHA512 (CPP-0.0.3.tar.gz) = cc436c92f9ff55c3a4bbcc952546b09b7665b435561176e8cec0cc427d1a5bb92b0475dc0a1016db2c2f634649a1c73280e57508312ba632c9b1548e0b38b578
 Size (CPP-0.0.3.tar.gz) = 21742 bytes
-SHA1 (patch-Makefile) = 9772302b7f40b1f43e8b4d1f2e001b4841039bba
+SHA1 (patch-project.conf) = ec82075e4f509c2e5b8f866a82f3d14746485821
