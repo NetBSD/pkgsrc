@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2020/10/22 23:37:21 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/04/12 22:30:55 tnn Exp $
 bin/pamu2fcfg
-lib/security/pam_u2f.la
+lib/security/pam_u2f.a
+lib/security/pam_u2f.so
 man/man1/pamu2fcfg.1
 man/man8/pam_u2f.8
