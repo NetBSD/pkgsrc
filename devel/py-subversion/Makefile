@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.94 2021/12/08 16:04:05 adam Exp $
+# $NetBSD: Makefile,v 1.95 2022/04/12 16:24:28 bsiegert Exp $
 
 PKGNAME=	${PYPKGPREFIX}-subversion-${SVNVER}
-PKGREVISION=	3
 COMMENT=	Python bindings and tools for Subversion
 
 .include "../../devel/subversion/Makefile.common"
