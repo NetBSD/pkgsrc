@@ -1,7 +1,6 @@
-#	$NetBSD: Makefile,v 1.3 2020/11/20 05:55:02 riastradh Exp $
+#	$NetBSD: Makefile,v 1.4 2022/04/12 22:27:58 tnn Exp $
 
-DISTNAME=	libfido2-1.5.0
-PKGREVISION=	1
+DISTNAME=	libfido2-1.10.0
 CATEGORIES=	security devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Yubico/}
 GITHUB_PROJECT=	${PKGBASE}
@@ -24,5 +23,6 @@ pre-configure:
 	${MKDIR} ${WRKSRC}/build
 
 .include "../../devel/libcbor/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
