@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.93 2022/03/10 03:40:30 osa Exp $
+$NetBSD: distinfo,v 1.94 2022/04/12 13:09:46 osa Exp $
 
 BLAKE2s (array-var-nginx-module-0.05.tar.gz) = 2f9af1e0eb209b7c20aa58cd8ec2afb1eb1cc122c5f4ea169e34131c463c1c26
 SHA512 (array-var-nginx-module-0.05.tar.gz) = 7c9fa9b76bc7cd2473ceae6d5ffb8de26993be9293ea967908d6c4550e086affa7016df4c936fb0b79f1142dc0aa1a5f2058d417e6433b5a3497a45d7e866e84
@@ -42,9 +42,9 @@ Size (ngx_devel_kit-0.3.1.tar.gz) = 66542 bytes
 BLAKE2s (ngx_http_geoip2_module-3.3.tar.gz) = cfa0bbf88d6b5f21129fc9f653d30516d782ca474a68159d367017b96e05b330
 SHA512 (ngx_http_geoip2_module-3.3.tar.gz) = 06963b598c54e22d75ce837fb222f5aa6c9494c29e558ff46f1205d7159fc305414bfac4ed3288c836dcbf7628d92f26458e1992d34fc2f4b73275a32847bdc0
 Size (ngx_http_geoip2_module-3.3.tar.gz) = 8509 bytes
-BLAKE2s (njs-0.7.2.tar.gz) = 6aa7f4d62a9012badde72236cd4d2d8c32a3ea7842b582a7211a4dc836835af1
-SHA512 (njs-0.7.2.tar.gz) = 7ff9c8f4e8cf1a3aeb0f2ed9f37e2b3f4966812966d1aca17dae8b454dd7fa725ccdc631b7dc1f3434f588e589f4cd419b9e087f3c745cd6ca092a683c92d82f
-Size (njs-0.7.2.tar.gz) = 584483 bytes
+BLAKE2s (njs-0.7.3.tar.gz) = bc5fc802c6eadffe1a125c5cfe25c702260c7c874aa7b91b222b23f7763a4a53
+SHA512 (njs-0.7.3.tar.gz) = 73e78ebfe0060699e3d9fc4a777245a3630f14b5fe67eee205f03699f76850b4de6f6a4185e1054ddd59014c3fe2801962993a8f50f841ce8e6d138d0d841086
+Size (njs-0.7.3.tar.gz) = 586271 bytes
 BLAKE2s (set-misc-nginx-module-0.33.tar.gz) = 306eb7a96ce5650c7e97a91e9cdba48d154d10cf6445d31193ffab889054d893
 SHA512 (set-misc-nginx-module-0.33.tar.gz) = 1ff4c947538a5bd5f9d6adcd87b37f2702f5cc90e3342bc08359cbe8f290b705a3a2daa3dedfb1df3ce4bc19478c8fcac07081c4a53a804fc2862d50078278dc
 Size (set-misc-nginx-module-0.33.tar.gz) = 30084 bytes
