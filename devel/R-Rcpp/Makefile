@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2022/03/15 00:16:09 mef Exp $
+# $NetBSD: Makefile,v 1.26 2022/04/12 14:37:21 mef Exp $
 
 R_PKGNAME=	Rcpp
-R_PKGVER=	1.0.8.2
+R_PKGVER=	1.0.8.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,6 +19,7 @@ TEST_DEPENDS+=	tex-pdfpages-[0-9]*:../../print/tex-pdfpages
 TEST_DEPENDS+=	tex-fancyvrb-[0-9]*:../../print/tex-fancyvrb
 TEST_DEPENDS+=	tex-iftex-[0-9]*d:../../print/tex-iftex
 TEST_DEPENDS+=	tex-pdflscape-[0-9]*:../../print/tex-pdflscape
+TEST_DEPENDS+=	tex-ae-[0-9]*:../../fonts/tex-ae
 TEST_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
 TEST_DEPENDS+=	tex-inconsolata-[0-9]*:../../fonts/tex-inconsolata
 
