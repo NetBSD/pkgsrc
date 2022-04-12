@@ -1,70 +1,45 @@
-$NetBSD: patch-src_print__volume.c,v 1.2 2020/03/11 23:28:21 nia Exp $
+$NetBSD: patch-src_print__volume.c,v 1.3 2022/04/12 14:43:01 nia Exp $
 
-Use sunaudio on NetBSD.
+Fix building on BSD. Upstream code was changed and the BSD paths
+were not tested.
 
-https://github.com/i3/i3status/pull/391
-
---- src/print_volume.c.orig	2019-01-23 08:03:56.000000000 +0000
+--- src/print_volume.c.orig	2021-11-09 07:27:11.977591500 +0000
 +++ src/print_volume.c
-@@ -21,7 +21,7 @@
- #include <sys/soundcard.h>
- #endif
+@@ -250,8 +250,8 @@ void print_volume(volume_ctx_t *ctx) {
+     const char *devicename = "UNSUPPORTED"; /* TODO: implement support for this */
+     pbval = 1;
  
--#ifdef __OpenBSD__
-+#if defined(__NetBSD__) || defined(__OpenBSD__)
- #include <fcntl.h>
- #include <unistd.h>
- #include <sys/audioio.h>
-@@ -86,7 +86,7 @@ void print_volume(yajl_gen json_gen, cha
-         free(instance);
+-    if (mixer_idx > 0)
+-        asprintf(&mixerpath, "/dev/mixer%d", mixer_idx);
++    if (ctx->mixer_idx > 0)
++        asprintf(&mixerpath, "/dev/mixer%d", ctx->mixer_idx);
+     else
+         mixerpath = defaultmixer;
+ 
+@@ -264,7 +264,7 @@ void print_volume(volume_ctx_t *ctx) {
+         goto out;
      }
  
--#if !defined(__DragonFly__) && !defined(__OpenBSD__)
-+#if defined(__linux__)
-     /* Try PulseAudio first */
- 
-     /* If the device name has the format "pulse[:N]" where N is the
-@@ -248,7 +248,7 @@ void print_volume(yajl_gen json_gen, cha
-     snd_mixer_selem_id_free(sid);
- 
- #endif
--#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
-     char *mixerpath;
-     char defaultmixer[] = "/dev/mixer";
-     int mixfd, vol, devmask = 0;
-@@ -272,7 +272,7 @@ void print_volume(yajl_gen json_gen, cha
-     if (mixer_idx > 0)
+-    if (mixer_idx > 0)
++    if (ctx->mixer_idx > 0)
          free(mixerpath);
  
--#if defined(__OpenBSD__)
-+#if defined(__NetBSD__) || defined(__OpenBSD__)
-     int oclass_idx = -1, master_idx = -1, master_mute_idx = -1;
-     int master_next = AUDIO_MIXER_LAST;
-     mixer_devinfo_t devinfo, devinfo2;
-@@ -327,15 +327,17 @@ void print_volume(yajl_gen json_gen, cha
-         vol = (int)vinfo.un.value.level[AUDIO_MIXER_LEVEL_MONO];
+ #if defined(__NetBSD__) || defined(__OpenBSD__)
+@@ -330,7 +330,7 @@ void print_volume(volume_ctx_t *ctx) {
+ 
+         if (vinfo.un.ord) {
+             START_COLOR("color_degraded");
+-            fmt = fmt_muted;
++            ctx->fmt = ctx->fmt_muted;
+             pbval = 0;
+         }
+     }
+@@ -351,7 +351,7 @@ void print_volume(volume_ctx_t *ctx) {
      }
  
--    vinfo.dev = master_mute_idx;
--    vinfo.type = AUDIO_MIXER_ENUM;
--    if (ioctl(mixfd, AUDIO_MIXER_READ, &vinfo) == -1)
--        goto out;
-+    if (master_mute_idx != -1) {
-+        vinfo.dev = master_mute_idx;
-+        vinfo.type = AUDIO_MIXER_ENUM;
-+        if (ioctl(mixfd, AUDIO_MIXER_READ, &vinfo) == -1)
-+            goto out;
- 
--    if (master_mute_idx != -1 && vinfo.un.ord) {
--        START_COLOR("color_degraded");
--        fmt = fmt_muted;
--        pbval = 0;
-+        if (vinfo.un.ord) {
-+            START_COLOR("color_degraded");
-+            fmt = fmt_muted;
-+            pbval = 0;
-+        }
-     }
- 
- #else
+ #endif
+-    buffer = apply_volume_format(fmt, buffer, vol & 0x7f, devicename);
++    ctx->buf = apply_volume_format(ctx->fmt, vol & 0x7f, devicename);
+     close(mixfd);
+     goto out_with_format;
+ #endif

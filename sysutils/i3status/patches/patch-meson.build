@@ -1,0 +1,15 @@
+$NetBSD: patch-meson.build,v 1.1 2022/04/12 14:43:01 nia Exp $
+
+Install configuration to examples, per pkgsrc conventions.
+
+--- meson.build.orig	2021-11-09 07:27:11.974258400 +0000
++++ meson.build
+@@ -215,7 +215,7 @@ executable(
+ install_subdir(
+   'etc',
+   strip_directory: true,
+-  install_dir: get_option('sysconfdir'),
++  install_dir: 'share/examples/i3status'
+ )
+ 
+ # We cannot use configure_file for run-tests.pl.in
