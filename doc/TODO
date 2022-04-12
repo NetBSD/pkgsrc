@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21673 2022/04/11 18:54:09 adam Exp $
+$NetBSD: TODO,v 1.21674 2022/04/12 21:41:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -745,6 +745,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gimp-docs-sv-2.10.0
 	o gimp-docs-zh_CN-2.10.0
 	o gindent-2.2.12
+	o git-2.35.2
 	o gitolite-3.6.12
 	o gjs-1.70.1
 	o gkrellm-2.3.11
