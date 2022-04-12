@@ -1,3 +1,2 @@
 bin/black @PREFIX@/bin/black-@PYVERSSUFFIX@
-bin/black-primer @PREFIX@/bin/black-primer-@PYVERSSUFFIX@
 bin/blackd @PREFIX@/bin/blackd-@PYVERSSUFFIX@
