@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2022/03/23 22:27:34 tnn Exp $
+# $NetBSD: Makefile,v 1.46 2022/04/12 23:42:58 tnn Exp $
 
 DISTNAME=	babl-0.1.90
 PKGREVISION=	1
@@ -37,10 +37,25 @@ PLIST_VARS+=		x86_64
 PLIST.x86_64=		yes
 .endif
 
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.babl
+PKG_SUPPORTED_OPTIONS=
+.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
+PKG_SUPPORTED_OPTIONS+=	mmx
+.endif
+
 .include "../../mk/compiler.mk"
 
-.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && \
-	!empty(CC_VERSION:Mgcc-7.*)
+.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") \
+	&& empty(CC_VERSION:Mgcc-7.*)
+PKG_SUGGESTED_OPTIONS=	mmx
+.endif
+
+.include "../../mk/bsd.options.mk"
+
+.if empty(PKG_OPTIONS:Mmmx)
+MESON_ARGS+=	-Denable-mmx=true
+.else
 MESON_ARGS+=	-Denable-mmx=false
 .endif
 
