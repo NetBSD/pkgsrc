@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.357 2022/03/26 09:34:49 tnn Exp $
+# $NetBSD: Makefile,v 1.358 2022/04/12 13:40:56 tnn Exp $
 
 DISTNAME=	gimp-2.10.30
 CATEGORIES=	graphics
@@ -31,6 +31,7 @@ CONFIGURE_ARGS+=	--disable-glibtest
 CONFIGURE_ARGS+=	--disable-gtktest
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-linux-input
+CONFIGURE_ARGS+=	--without-gs
 
 PKG_SYSCONFSUBDIR=	gimp/2.0
 PKGCONFIG_OVERRIDE=	gimp.pc.in
