@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/12 22:22:26 nikita Exp $
+bin/cpuid_tool
+include/libcpuid/libcpuid.h
+include/libcpuid/libcpuid_constants.h
+include/libcpuid/libcpuid_types.h
+lib/libcpuid.la
+lib/pkgconfig/libcpuid.pc
