@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/04/11 11:21:05 adam Exp $
+# $NetBSD: Makefile,v 1.27 2022/04/12 07:39:15 adam Exp $
 
 DISTNAME=	pyparsing-3.0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,5 +14,10 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/wheel.mk"
+# Important: do not use wheel.mk. It depends on py-build,
+# which depends py-packaging, and that depends on this package.
+pre-configure:
+	${CP} ${FILESDIR}/setup.py ${WRKSRC}/
+
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
