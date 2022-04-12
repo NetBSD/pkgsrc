@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.268 2022/04/05 03:59:59 markd Exp $
+# $NetBSD: Makefile,v 1.269 2022/04/12 20:38:37 tnn Exp $
 
 DISTNAME=	wireshark-3.6.3
 CATEGORIES=	net
@@ -42,6 +42,8 @@ REPLACE_PYTHON+=		tools/ncp2222.py
 REPLACE_PYTHON+=		tools/netscreen2dump.py
 REPLACE_PYTHON+=		tools/pkt-from-core.py
 REPLACE_PYTHON+=		tools/rdps.py
+
+CFLAGS.SunOS+=		-D__EXTENSIONS__ # for getc_unlocked(3)
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/build
