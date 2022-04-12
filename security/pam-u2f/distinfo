@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:17:35 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/12 22:30:55 tnn Exp $
 
-BLAKE2s (pam_u2f-1.1.1.tar.gz) = fb0dec0d699308568f3bdc0a982eee86c3132e2efb15942760e9a7abd17c5f95
-SHA512 (pam_u2f-1.1.1.tar.gz) = ca81c78e67c17c369117e9d38e50033eaa96e0b15673521db2c382de1aa2566f7406fb43801a5938758480966c5e7316943769db5be826983d3865710e0274c1
-Size (pam_u2f-1.1.1.tar.gz) = 429822 bytes
+BLAKE2s (pam_u2f-1.2.0.tar.gz) = 6addc6a3def655542302f3c7355737571a62242fc64fe4045aa888eced390e39
+SHA512 (pam_u2f-1.2.0.tar.gz) = a00135e49b22dad5ec2513236a64dca67f04062fd8fa4c8d5ac7cb05d93b4d743ceb8ac5ee99a19667bdbfe8c0be9de904fb50110bed0b55ba8d5fd2aa5fcf28
+Size (pam_u2f-1.2.0.tar.gz) = 442214 bytes
