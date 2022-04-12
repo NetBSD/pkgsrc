@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2021/09/22 14:22:45 nia Exp $
+# $NetBSD: Makefile,v 1.5 2022/04/12 22:30:55 tnn Exp $
 
-DISTNAME=	pam_u2f-1.1.1
+DISTNAME=	pam_u2f-1.2.0
 PKGNAME=	${DISTNAME:S/pam_/pam-/}
 CATEGORIES=	security
 MASTER_SITES=	https://developers.yubico.com/pam-u2f/Releases/
