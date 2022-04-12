@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/04/12 13:09:42 nia Exp $
+# $NetBSD: Makefile,v 1.3 2022/04/12 11:50:23 tnn Exp $
 
 DISTNAME=	microdns-0.2.0
 PKGNAME=	${DISTNAME:S/microdns/libmicrodns/}
@@ -14,6 +14,7 @@ COMMENT=	Minimal mDNS resolver (and announcer) cross-platform library
 LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config
+LDFLAGS.SunOS+=	-lsocket
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
