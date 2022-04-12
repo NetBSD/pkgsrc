@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1810 2022/04/12 18:28:26 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.1811 2022/04/12 21:41:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2581,5 +2581,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/ruby31-base to 3.1.2 [taca 2022-04-12]
 	Updated lang/ruby31 to 3.1.2 [taca 2022-04-12]
 	Updated sysutils/mc to 4.8.28 [nia 2022-04-12]
-	Updated devel/subversion to 1.14.2nb2 [bsiegert 2022-04-12]
+	Updated devel/subversion to 1.14.2 [bsiegert 2022-04-12]
 	Updated textproc/py-markovify to 0.9.4 [nikita 2022-04-12]
