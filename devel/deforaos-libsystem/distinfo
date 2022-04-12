@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.16 2022/04/12 22:02:17 khorben Exp $
+$NetBSD: distinfo,v 1.17 2022/04/12 22:04:05 khorben Exp $
 
 BLAKE2s (libSystem-0.4.3.tar.gz) = b2144db7f6ea334afe89e5bd717f2230e5a253d87775c9a3c819ba6a06320790
 SHA512 (libSystem-0.4.3.tar.gz) = c8f3272532358347380a0f576ab22ca0cd9eb0fdaa8c3655afb5ee2ac9a1e7c244130b2e48f594c1cc16da3a6103eeaf5d0271da41dc90904ec2108130a36f7e
 Size (libSystem-0.4.3.tar.gz) = 55770 bytes
 SHA1 (patch-doc_Makefile) = 5a4553921065295e9b84d2c39c641990a88672cf
 SHA1 (patch-src_Makefile) = 4094503bd8d25de0632eb0d448d1fd32de73159d
-SHA1 (patch-tests_tests.sh) = 3a6066569543b01fa672fa055d492b405d227d1f
+SHA1 (patch-tests_tests.sh) = 7cc0c26fd35d6cdd6cd0842e9f1f0e1eb6811633
