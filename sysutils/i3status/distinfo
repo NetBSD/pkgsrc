@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:19:42 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/04/12 14:43:01 nia Exp $
 
-BLAKE2s (i3status-2.13.tar.bz2) = 75d0bb8994ee49219b2605e397b39f8a0433f1e97dd20e2f9f6d19d5fa17f882
-SHA512 (i3status-2.13.tar.bz2) = 6dadff19e53499d169ba4f491e1f821014b4f92fc3c93d7947c85cbbbdeaba538d02bd8ab98fe266a8f80756a287fd5803ec77a8cd874d50082b5cad309875c2
-Size (i3status-2.13.tar.bz2) = 201409 bytes
-SHA1 (patch-Makefile.in) = e50ed614d41a1bcef33feb6414322affa5e20a92
-SHA1 (patch-src_print__volume.c) = b855472d429f17491c7441924e0aca9ce4ee6190
-SHA1 (patch-src_print__wireless__info.c) = 7039b7fbd2f43b798763793cd4296035610eeee0
-SHA1 (patch-src_pulse.c) = bfc5265c5c11f3a56e9b88c936b9856245b998f4
+BLAKE2s (i3status-2.14.tar.xz) = 06556d5a7be94cc298368068a9657f0c18b1568a98565e8815231346e51c02c4
+SHA512 (i3status-2.14.tar.xz) = 10a1235cc314f5fc4dde4e1369a30f49118c95271f636c5803caa52d94d99ad8565b89fcd602d0c8aa7c830a79d3a3bb08e5ac8123cf07cfddc8ef0126b10f80
+Size (i3status-2.14.tar.xz) = 68900 bytes
+SHA1 (patch-meson.build) = 8c3a34e49bcedd1a381909afca4357d001b665ab
+SHA1 (patch-src_print__disk__info.c) = a9fbbcd4aab59cddf6163a9a31e35af78e4c5254
+SHA1 (patch-src_print__volume.c) = d57447621989f470d41463810a1f865bf2aed0da
