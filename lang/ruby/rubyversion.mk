@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.249 2022/04/12 15:12:13 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.250 2022/04/12 19:07:11 nia Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -621,7 +621,7 @@ RDOC?=			${PREFIX}/bin/rdoc${RUBY_SUFFIX}
 RUBY_ARCH?=	${MACHINE_GNU_ARCH}-${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}${APPEND_ABI}
 
 # NetBSD does not append an OS version, so we have to do this OPSYS-specific.
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "Linux"
 RUBY_EXTARCH?=	${MACHINE_GNU_ARCH}-${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}
 .else
 RUBY_EXTARCH?=	${MACHINE_GNU_ARCH}-${LOWER_OPSYS}${APPEND_ELF}-${LOWER_OPSYS_VERSUFFIX}${APPEND_ABI}
