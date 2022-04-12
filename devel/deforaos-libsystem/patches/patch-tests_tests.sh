@@ -1,10 +1,10 @@
-$NetBSD: patch-tests_tests.sh,v 1.6 2019/10/09 01:58:56 khorben Exp $
+$NetBSD: patch-tests_tests.sh,v 1.7 2022/04/12 22:02:17 khorben Exp $
 
 Avoid building the (experimental) Python binding.
 
---- tests/tests.sh.orig	2019-08-29 00:00:20.000000000 +0000
+--- tests/tests.sh.orig	2022-04-12 20:24:02.000000000 +0000
 +++ tests/tests.sh
-@@ -119,21 +119,6 @@ fi
+@@ -122,21 +122,6 @@ fi
  
  tests="array buffer config error event includes parser string variable"
  failures=
