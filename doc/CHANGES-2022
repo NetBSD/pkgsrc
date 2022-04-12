@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1804 2022/04/12 14:24:29 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1805 2022/04/12 14:46:01 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2575,3 +2575,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-readline to 2.7.6 [taca 2022-04-12]
 	Updated lang/ruby27 to 2.7.6 [taca 2022-04-12]
 	Updated devel/diffutils to 3.8 [nia 2022-04-12]
+	Updated sysutils/i3status to 2.14 [nia 2022-04-12]
