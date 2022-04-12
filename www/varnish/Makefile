@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2022/03/11 20:35:40 tnn Exp $
+# $NetBSD: Makefile,v 1.35 2022/04/12 22:13:36 tnn Exp $
 
-DISTNAME=	varnish-7.0.2
+DISTNAME=	varnish-7.1.0
 CATEGORIES=	www
 MASTER_SITES=	https://varnish-cache.org/_downloads/
 EXTRACT_SUFX=	.tgz
@@ -45,7 +45,7 @@ FILES_SUBST+=		VRNUSER=${VRNUSER}
 FILES_SUBST+=		VRNGROUP=${VRNGROUP}
 
 REPLACE_PYTHON+=	lib/libvcc/vmodtool.py
-REPLACE_PYTHON+=	lib/libvcc/vsctool.py
+REPLACE_PYTHON+=	lib/libvsc/vsctool.py
 
 CONFIGURE_ARGS+=	--localstatedir=${STATEDIR}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
