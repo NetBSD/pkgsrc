@@ -1,5 +1,6 @@
-# $NetBSD: deforaos-configure.mk,v 1.1 2022/04/12 23:32:03 khorben Exp $
+# $NetBSD: deforaos-configure.mk,v 1.2 2022/04/12 23:50:43 khorben Exp $
 #
+# used by devel/deforaos-asm/Makefile
 # used by devel/deforaos-cpp/Makefile
 
 BUILD_DEPENDS+=	deforaos-configure-[0-9]*:../../devel/deforaos-configure
