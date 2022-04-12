@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2022/04/12 23:42:58 tnn Exp $
+# $NetBSD: Makefile,v 1.47 2022/04/12 23:43:44 tnn Exp $
 
 DISTNAME=	babl-0.1.90
 PKGREVISION=	1
@@ -53,7 +53,7 @@ PKG_SUGGESTED_OPTIONS=	mmx
 
 .include "../../mk/bsd.options.mk"
 
-.if empty(PKG_OPTIONS:Mmmx)
+.if !empty(PKG_OPTIONS:Mmmx)
 MESON_ARGS+=	-Denable-mmx=true
 .else
 MESON_ARGS+=	-Denable-mmx=false
