@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2019/10/09 01:58:55 khorben Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/04/12 22:02:17 khorben Exp $
 bin/configctl
 include/System.h
 include/System/array.h
@@ -15,12 +15,11 @@ include/System/parser.h
 include/System/plugin.h
 include/System/string.h
 include/System/token.h
+include/System/userdata.h
 include/System/variable.h
-lib/libSystem.a
-lib/libSystem.so
-lib/libSystem.so.0
-lib/libSystem.so.0.0
+lib/libSystem.la
 lib/pkgconfig/libSystem.pc
 man/html1/configctl.html
 man/man1/configctl.1
+share/doc/libSystem/COPYING
 share/doc/libSystem/README.md
