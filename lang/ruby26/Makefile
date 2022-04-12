@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2022/01/14 16:15:14 taca Exp $
+# $NetBSD: Makefile,v 1.6 2022/04/12 14:16:43 taca Exp $
 #
 
 DISTNAME=	# empty
 PKGNAME=	${RUBY_PKGPREFIX}-${RUBY_VERSION}
-PKGREVISION=	1
 CATEGORIES=	lang ruby
 MASTER_SITES=	# empty
 DISTFILES=	# empty
