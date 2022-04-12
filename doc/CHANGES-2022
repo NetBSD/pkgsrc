@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1799 2022/04/12 13:17:01 osa Exp $
+$NetBSD: CHANGES-2022,v 1.1800 2022/04/12 14:07:48 osa Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2566,3 +2566,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-minio to 7.1.6 [adam 2022-04-12]
 	Updated www/nginx to 1.20.2nb7 [osa 2022-04-12]
 	Updated www/nginx-devel to 1.21.6nb6 [osa 2022-04-12]
+	Updated lang/njs to 0.7.3 [osa 2022-04-12]
