@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2021/10/18 13:36:45 nia Exp $
+@comment $NetBSD: PLIST,v 1.23 2022/04/12 15:29:04 nia Exp $
 bin/mc
 bin/mcdiff
 bin/mcedit
@@ -88,9 +88,12 @@ share/examples/mc/mc.keymap
 share/examples/mc/mc.menu
 share/examples/mc/mcedit.menu
 share/examples/mc/sfs.ini
+share/locale/af/LC_MESSAGES/mc.mo
+share/locale/ar/LC_MESSAGES/mc.mo
 share/locale/az/LC_MESSAGES/mc.mo
 share/locale/be/LC_MESSAGES/mc.mo
 share/locale/bg/LC_MESSAGES/mc.mo
+share/locale/br/LC_MESSAGES/mc.mo
 share/locale/ca/LC_MESSAGES/mc.mo
 share/locale/cs/LC_MESSAGES/mc.mo
 share/locale/da/LC_MESSAGES/mc.mo
@@ -106,21 +109,26 @@ share/locale/fa/LC_MESSAGES/mc.mo
 share/locale/fi/LC_MESSAGES/mc.mo
 share/locale/fr/LC_MESSAGES/mc.mo
 share/locale/fr_CA/LC_MESSAGES/mc.mo
+share/locale/ga/LC_MESSAGES/mc.mo
 share/locale/gl/LC_MESSAGES/mc.mo
+share/locale/he/LC_MESSAGES/mc.mo
 share/locale/hr/LC_MESSAGES/mc.mo
 share/locale/hu/LC_MESSAGES/mc.mo
 share/locale/ia/LC_MESSAGES/mc.mo
 share/locale/id/LC_MESSAGES/mc.mo
+share/locale/ie/LC_MESSAGES/mc.mo
 share/locale/it/LC_MESSAGES/mc.mo
 share/locale/ja/LC_MESSAGES/mc.mo
 share/locale/ka/LC_MESSAGES/mc.mo
 share/locale/kk/LC_MESSAGES/mc.mo
 share/locale/ko/LC_MESSAGES/mc.mo
+share/locale/kw/LC_MESSAGES/mc.mo
 share/locale/lt/LC_MESSAGES/mc.mo
 share/locale/lv/LC_MESSAGES/mc.mo
 share/locale/mn/LC_MESSAGES/mc.mo
 share/locale/nb/LC_MESSAGES/mc.mo
 share/locale/nl/LC_MESSAGES/mc.mo
+share/locale/nl_BE/LC_MESSAGES/mc.mo
 share/locale/pl/LC_MESSAGES/mc.mo
 share/locale/pt/LC_MESSAGES/mc.mo
 share/locale/pt_BR/LC_MESSAGES/mc.mo
@@ -135,6 +143,7 @@ share/locale/ta/LC_MESSAGES/mc.mo
 share/locale/te/LC_MESSAGES/mc.mo
 share/locale/tr/LC_MESSAGES/mc.mo
 share/locale/uk/LC_MESSAGES/mc.mo
+share/locale/uz/LC_MESSAGES/mc.mo
 share/locale/vi/LC_MESSAGES/mc.mo
 share/locale/wa/LC_MESSAGES/mc.mo
 share/locale/zh_CN/LC_MESSAGES/mc.mo
@@ -195,6 +204,7 @@ share/mc/hints/mc.hint.uk
 share/mc/hints/mc.hint.zh
 share/mc/hints/mc.hint.zh_CN
 share/mc/hints/mc.hint.zh_TW
+share/mc/mc.charsets
 share/mc/mc.lib
 share/mc/skins/dark.ini
 share/mc/skins/darkfar.ini
@@ -249,6 +259,7 @@ share/mc/syntax/debian-sources-list.syntax
 share/mc/syntax/diff.syntax
 share/mc/syntax/dlink.syntax
 share/mc/syntax/dos.syntax
+share/mc/syntax/dot.syntax
 share/mc/syntax/ebuild.syntax
 share/mc/syntax/eiffel.syntax
 share/mc/syntax/erlang.syntax
@@ -302,6 +313,7 @@ share/mc/syntax/sh.syntax
 share/mc/syntax/slang.syntax
 share/mc/syntax/smalltalk.syntax
 share/mc/syntax/spec.syntax
+share/mc/syntax/spice.syntax
 share/mc/syntax/sql.syntax
 share/mc/syntax/strace.syntax
 share/mc/syntax/swift.syntax
