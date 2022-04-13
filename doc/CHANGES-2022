@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1818 2022/04/13 07:37:27 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.1819 2022/04/13 07:47:14 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2596,3 +2596,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/freetype2 to 2.11.1nb1 [wiz 2022-04-12]
 	Updated x11/deforaos-libdesktop to 0.4.1 [khorben 2022-04-13]
 	Updated lang/go117 to 1.17.9 [bsiegert 2022-04-13]
+	Updated lang/go118 to 1.18.1 [bsiegert 2022-04-13]
