@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/04/09 21:55:22 markd Exp $
+# $NetBSD: Makefile,v 1.8 2022/04/13 10:37:20 wiz Exp $
 
 DISTNAME=	norasi-c90
 PKGNAME=	tex-${DISTNAME}-2021
@@ -9,7 +9,7 @@ HOMEPAGE=	https://ctan.org/pkg/cjk
 COMMENT=	TeX support (from CJK) for the norasi font
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	tex-fonts-tlwg-[0-9]*:../../print/tex-fonts-tlwg
+DEPENDS+=	tex-fonts-tlwg-[0-9]*:../../fonts/tex-fonts-tlwg
 
 TEX_MAP_FILES+=	norasi-c90.map
 
