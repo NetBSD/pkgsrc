@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.92 2021/06/24 14:41:23 adam Exp $
+# $NetBSD: Makefile,v 1.93 2022/04/13 11:33:49 nros Exp $
 
 DISTNAME=	pcre-8.45
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.pcre.org/pub/pcre/
-MASTER_SITES+=	https://ftp.pcre.org/pub/pcre/
-MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=pcre/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcre/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
