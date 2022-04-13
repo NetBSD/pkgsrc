@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1820 2022/04/13 08:24:49 tron Exp $
+$NetBSD: CHANGES-2022,v 1.1821 2022/04/13 08:32:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2598,3 +2598,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/go117 to 1.17.9 [bsiegert 2022-04-13]
 	Updated lang/go118 to 1.18.1 [bsiegert 2022-04-13]
 	Updated mail/mutt to 2.2.3 [tron 2022-04-13]
+	Added graphics/nsxiv version 29 [pin 2022-04-13]
