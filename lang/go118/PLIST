@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/03/15 20:13:45 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/04/13 07:46:56 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go118/AUTHORS
@@ -305,6 +305,9 @@ go118/misc/cgo/testplugin/testdata/method/plugin.go
 go118/misc/cgo/testplugin/testdata/method2/main.go
 go118/misc/cgo/testplugin/testdata/method2/p/p.go
 go118/misc/cgo/testplugin/testdata/method2/plugin.go
+go118/misc/cgo/testplugin/testdata/method3/main.go
+go118/misc/cgo/testplugin/testdata/method3/p/p.go
+go118/misc/cgo/testplugin/testdata/method3/plugin.go
 go118/misc/cgo/testplugin/testdata/plugin1/plugin1.go
 go118/misc/cgo/testplugin/testdata/plugin2/plugin2.go
 go118/misc/cgo/testplugin/testdata/sub/plugin1/plugin1.go
@@ -1864,6 +1867,8 @@ go118/src/cmd/compile/internal/types2/testdata/fixedbugs/issue51472.go2
 go118/src/cmd/compile/internal/types2/testdata/fixedbugs/issue51509.go
 go118/src/cmd/compile/internal/types2/testdata/fixedbugs/issue51578.go2
 go118/src/cmd/compile/internal/types2/testdata/fixedbugs/issue51593.go2
+go118/src/cmd/compile/internal/types2/testdata/fixedbugs/issue51607.go2
+go118/src/cmd/compile/internal/types2/testdata/fixedbugs/issue51658.go2
 go118/src/cmd/compile/internal/types2/testdata/fixedbugs/issue6977.src
 go118/src/cmd/compile/internal/types2/testdata/manual.go2
 go118/src/cmd/compile/internal/types2/testdata/spec/assignability.go2
@@ -2922,6 +2927,7 @@ go118/src/cmd/go/testdata/script/test_benchmark_fatal.txt
 go118/src/cmd/go/testdata/script/test_benchmark_labels.txt
 go118/src/cmd/go/testdata/script/test_benchmark_timeout.txt
 go118/src/cmd/go/testdata/script/test_build_failure.txt
+go118/src/cmd/go/testdata/script/test_buildvcs.txt
 go118/src/cmd/go/testdata/script/test_cache_inputs.txt
 go118/src/cmd/go/testdata/script/test_chatty_fail.txt
 go118/src/cmd/go/testdata/script/test_chatty_parallel_fail.txt
@@ -3079,6 +3085,7 @@ go118/src/cmd/go/testdata/script/work_use_deleted.txt
 go118/src/cmd/go/testdata/script/work_use_dot.txt
 go118/src/cmd/go/testdata/script/work_use_issue50958.txt
 go118/src/cmd/go/testdata/script/work_use_noargs.txt
+go118/src/cmd/go/testdata/script/work_use_only_dirs.txt
 go118/src/cmd/go/testdata/script/work_vet.txt
 go118/src/cmd/go/testdata/script/work_why_download_graph.txt
 go118/src/cmd/go/testdata/testterminal18153/terminal_test.go
@@ -5487,6 +5494,8 @@ go118/src/go/types/testdata/fixedbugs/issue51472.go2
 go118/src/go/types/testdata/fixedbugs/issue51509.go
 go118/src/go/types/testdata/fixedbugs/issue51578.go2
 go118/src/go/types/testdata/fixedbugs/issue51593.go2
+go118/src/go/types/testdata/fixedbugs/issue51658.go2
+go118/src/go/types/testdata/fixedbugs/issue52031.go
 go118/src/go/types/testdata/fixedbugs/issue6977.src
 go118/src/go/types/testdata/manual.go2
 go118/src/go/types/testdata/spec/assignability.go2
@@ -10758,6 +10767,7 @@ go118/test/fixedbugs/issue51437.go
 go118/test/fixedbugs/issue51531.go
 go118/test/fixedbugs/issue5162.go
 go118/test/fixedbugs/issue5172.go
+go118/test/fixedbugs/issue51839.go
 go118/test/fixedbugs/issue5231.go
 go118/test/fixedbugs/issue5244.go
 go118/test/fixedbugs/issue5259.dir/bug.go
@@ -11602,6 +11612,12 @@ go118/test/typeparam/issue51423.dir/b.go
 go118/test/typeparam/issue51423.go
 go118/test/typeparam/issue51522a.go
 go118/test/typeparam/issue51522b.go
+go118/test/typeparam/issue51733.go
+go118/test/typeparam/issue51765.go
+go118/test/typeparam/issue51836.dir/a.go
+go118/test/typeparam/issue51836.dir/aa.go
+go118/test/typeparam/issue51836.dir/p.go
+go118/test/typeparam/issue51836.go
 go118/test/typeparam/list.go
 go118/test/typeparam/list2.go
 go118/test/typeparam/listimp.dir/a.go
@@ -11630,6 +11646,7 @@ go118/test/typeparam/mdempsky/12.dir/a.go
 go118/test/typeparam/mdempsky/12.dir/main.go
 go118/test/typeparam/mdempsky/12.go
 go118/test/typeparam/mdempsky/13.go
+go118/test/typeparam/mdempsky/13b.go
 go118/test/typeparam/mdempsky/14.go
 go118/test/typeparam/mdempsky/15.go
 go118/test/typeparam/mdempsky/2.go
