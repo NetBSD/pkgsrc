@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/04/05 07:17:31 adam Exp $
+$NetBSD: distinfo,v 1.2 2022/04/13 19:35:08 adam Exp $
 
-BLAKE2s (validate-pyproject-0.7.1.tar.gz) = dc0c090aba4c06bcd57e41c07bea8203b432f7d0447c329808661abe4c0aec23
-SHA512 (validate-pyproject-0.7.1.tar.gz) = b893e2d051c759452a1c26344a5964d065025eb58993e7314475217b7b385938234346f32c57bc46edc087a505914c2be971b011d881e228720685fda52ba628
-Size (validate-pyproject-0.7.1.tar.gz) = 102987 bytes
+BLAKE2s (validate-pyproject-0.7.2.tar.gz) = b00b40f86257398a9c66494c7ed417fcabc1088fd823d31afe16dcf4a1651d2c
+SHA512 (validate-pyproject-0.7.2.tar.gz) = 694c462d292fd7c0da404e27ee38185fed256c06a96d4293c9dcaececea84837da4dbe2c39654bf806595657ced332ddcf2be78dc5f6cf36e30434f39d0cf8da
+Size (validate-pyproject-0.7.2.tar.gz) = 103345 bytes
