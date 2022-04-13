@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1822 2022/04/13 10:20:13 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1823 2022/04/13 10:48:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2600,3 +2600,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/mutt to 2.2.3 [tron 2022-04-13]
 	Added graphics/nsxiv version 29 [pin 2022-04-13]
 	Updated sysutils/felix to 0.6.0 [pin 2022-04-13]
+	Updated devel/protobuf-c to 1.4.0 [wiz 2022-04-13]
