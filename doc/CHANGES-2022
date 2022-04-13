@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1823 2022/04/13 10:48:24 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1824 2022/04/13 19:35:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2601,3 +2601,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added graphics/nsxiv version 29 [pin 2022-04-13]
 	Updated sysutils/felix to 0.6.0 [pin 2022-04-13]
 	Updated devel/protobuf-c to 1.4.0 [wiz 2022-04-13]
+	Updated net/rabbitmq to 3.9.15 [adam 2022-04-13]
+	Updated textproc/py-validate-pyproject to 0.7.2 [adam 2022-04-13]
