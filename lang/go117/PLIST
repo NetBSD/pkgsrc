@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2022/03/07 08:44:52 bsiegert Exp $
-bin/go${GOVERSSUFFIX}
-bin/gofmt${GOVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.8 2022/04/13 07:36:53 bsiegert Exp $
+bin/go117
+bin/gofmt117
 go117/AUTHORS
 go117/CONTRIBUTING.md
 go117/CONTRIBUTORS
@@ -295,6 +295,9 @@ go117/misc/cgo/testplugin/testdata/method/plugin.go
 go117/misc/cgo/testplugin/testdata/method2/main.go
 go117/misc/cgo/testplugin/testdata/method2/p/p.go
 go117/misc/cgo/testplugin/testdata/method2/plugin.go
+go117/misc/cgo/testplugin/testdata/method3/main.go
+go117/misc/cgo/testplugin/testdata/method3/p/p.go
+go117/misc/cgo/testplugin/testdata/method3/plugin.go
 go117/misc/cgo/testplugin/testdata/plugin1/plugin1.go
 go117/misc/cgo/testplugin/testdata/plugin2/plugin2.go
 go117/misc/cgo/testplugin/testdata/sub/plugin1/plugin1.go
@@ -783,7 +786,7 @@ go117/pkg/${GO_PLATFORM}/net/url.a
 go117/pkg/${GO_PLATFORM}/os.a
 go117/pkg/${GO_PLATFORM}/os/exec.a
 go117/pkg/${GO_PLATFORM}/os/signal.a
-${PLIST.pty}go117/pkg/${GO_PLATFORM}/os/signal/internal/pty.a
+go117/pkg/${GO_PLATFORM}/os/signal/internal/pty.a
 go117/pkg/${GO_PLATFORM}/os/user.a
 go117/pkg/${GO_PLATFORM}/path.a
 go117/pkg/${GO_PLATFORM}/path/filepath.a
@@ -837,7 +840,7 @@ go117/pkg/${GO_PLATFORM}/vendor/golang.org/x/net/http/httpproxy.a
 go117/pkg/${GO_PLATFORM}/vendor/golang.org/x/net/http2/hpack.a
 go117/pkg/${GO_PLATFORM}/vendor/golang.org/x/net/idna.a
 go117/pkg/${GO_PLATFORM}/vendor/golang.org/x/net/nettest.a
-${PLIST.route}go117/pkg/${GO_PLATFORM}/vendor/golang.org/x/net/route.a
+go117/pkg/${GO_PLATFORM}/vendor/golang.org/x/net/route.a
 go117/pkg/${GO_PLATFORM}/vendor/golang.org/x/sys/cpu.a
 go117/pkg/${GO_PLATFORM}/vendor/golang.org/x/text/secure/bidirule.a
 go117/pkg/${GO_PLATFORM}/vendor/golang.org/x/text/transform.a
