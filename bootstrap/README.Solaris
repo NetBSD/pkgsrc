@@ -1,4 +1,4 @@
-$NetBSD: README.Solaris,v 1.26 2022/04/09 14:45:32 nia Exp $
+$NetBSD: README.Solaris,v 1.27 2022/04/13 07:41:00 nia Exp $
 
 This README describes pkgsrc on a variety of Solaris-derived operating
 systems.  It corresponds to pkgsrc/platform/SunOS.mk.  The relevant
@@ -11,10 +11,9 @@ As of 2022, the primary platforms of interest where pkgsrc is known to
 work well are illumos distributions, Solaris 10, and Solaris 11.
 pkgsrc is not currently known to work on SunOS 4 or OpenSolaris.
 
-As of 2022-04-09, bootstrapping does not work on Tribblix due to the
-multi-arch toolchain:
-ld: Relocatable linking with relocations from format elf64-x86-64-sol2
-(common.o.o) to format elf32-i386-sol2 (common.o) is not supported.
+As of 2022-04-09, it isn't possible to use GNU ld.  This is relevant
+on Tribblix: when bootstrapping, ensure /usr/gnu/bin is last in your
+$PATH.
 
 Prerequisites
 -------------
@@ -28,9 +27,6 @@ for gcc on illumos.
 
 As with pkgsrc on other platforms, one should use the same compiler
 family and ideally the same compiler version for building all packages.
-
-At some time in the past, GNU binutils was not usable on some systems,
-but the status is unclear in 2022.
 
 The following packages are the minimum required on Solaris 8 to
 bootstrap and build packages.
