@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2020/04/26 09:47:41 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2022/04/13 21:02:33 tnn Exp $
 
-DISTNAME=	binutils-2.32
-PKGREVISION=	1
+DISTNAME=	binutils-2.35.2
 PKGNAME=	${DISTNAME:C/.*binutils(-gdb)?/xtensa-esp32-elf-binutils/}
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
 EXTRACT_SUFX=	.tar.xz
 # Espressif overlays
 DISTFILES=	${DEFAULT_DISTFILES}
-DISTFILES+=	crosstool-ng-esp32-2019r1.tar.gz
-SITES.crosstool-ng-esp32-2019r1.tar.gz=	-https://github.com/espressif/crosstool-NG/archive/ce035ad3351127e4fdb3ff96790caba42b9f1aa3.tar.gz
+DISTFILES+=	crosstool-NG-esp-2021r2-patch3.tar.gz
+SITES.crosstool-NG-esp-2021r2-patch3.tar.gz=	-https://github.com/espressif/crosstool-NG/releases/download/esp-2021r2-patch3/crosstool-NG-esp-2021r2-patch3.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/espressif/binutils-gdb
@@ -34,7 +33,7 @@ CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--disable-gdb
 
 post-extract:
-	${CP} -r ${WRKDIR}/crosstool-NG*/overlays/xtensa_esp32/binutils/. \
+	${CP} -r ${WRKDIR}/overlays/xtensa_esp32/binutils/. \
 	    ${WRKSRC}/.
 
 pre-configure:
