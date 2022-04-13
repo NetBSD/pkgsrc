@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1816 2022/04/12 23:38:23 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1817 2022/04/13 00:47:23 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2594,3 +2594,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/libcbor to 0.9.0 [tnn 2022-04-12]
 	Updated www/geckodriver to 0.31.0 [tnn 2022-04-12]
 	Updated graphics/freetype2 to 2.11.1nb1 [wiz 2022-04-12]
+	Updated x11/deforaos-libdesktop to 0.4.1 [khorben 2022-04-13]
