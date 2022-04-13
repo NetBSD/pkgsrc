@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2022/04/10 15:41:01 pin Exp $
+$NetBSD: distinfo,v 1.17 2022/04/13 10:19:54 pin Exp $
 
 BLAKE2s (aho-corasick-0.7.18.crate) = 8925e88e2df4b5ca3b31783f527e1bb31dbe27846f409f631148fa239f3b2935
 SHA512 (aho-corasick-0.7.18.crate) = 7a23b16231a90d23ee60ad4c81bc225410599a4560d33d3a203138fc540c39cf1000100fed3aed40dcc371c3635656a3792545dca5dd1aefbde00d8774eebd00
@@ -27,9 +27,9 @@ Size (dirs-sys-0.3.6.crate) = 10626 bytes
 BLAKE2s (env_logger-0.9.0.crate) = dc9832f568b18f635942b1a247b81c3e57a4ce6a63b36309e7f57c5f7e3b98c0
 SHA512 (env_logger-0.9.0.crate) = d7db85d2f7d16f7f97b6714e01e342ab6b784c799ef26ee322ec85fcee28a549b6e49a49200ff78eceacd0c682e941f8538a497e2a2a196040769c2365feb566
 Size (env_logger-0.9.0.crate) = 33573 bytes
-BLAKE2s (felix-0.5.2.tar.gz) = c69e5999ac81377655d3914b20f4a9e1702debb7ad2406b25aba4dd9a43e10fa
-SHA512 (felix-0.5.2.tar.gz) = d91aee4404d244ccf0b0593bd964e22e3152fcb6f58e6bd7d5b554bde29d85bb8af4619848153e7342630b4d41936d1105ab41ba6de1dcaec5cbdf039a2f08a8
-Size (felix-0.5.2.tar.gz) = 471205 bytes
+BLAKE2s (felix-0.6.0.tar.gz) = e876be200eeeff8d77119938a2700bb02c806516ab4dd8358bf12c603823f024
+SHA512 (felix-0.6.0.tar.gz) = 1b42eb2d1546f4847354f108072a90c19916b227abc9c1f916e2412a8a189cba891d6b91eb75513e2f44daf874819aeba130008097e853cbdeb6abc86c6d664a
+Size (felix-0.6.0.tar.gz) = 724913 bytes
 BLAKE2s (getrandom-0.2.3.crate) = c451e4c9701d09c79572625708c12711e2a0a14a925b614b8be72f231a601f18
 SHA512 (getrandom-0.2.3.crate) = e6da64ed529cb0fc000b613f75187ed6b20f716e721d8a02ac2ae39c507fb9f6189ebb66b522d28584eff1e7e9efc274cad6bfe43f464f58053701e1d51c603d
 Size (getrandom-0.2.3.crate) = 26261 bytes
