@@ -1,4 +1,4 @@
-# $NetBSD: bsd.depends.mk,v 1.31 2022/04/09 00:46:12 rillig Exp $
+# $NetBSD: bsd.depends.mk,v 1.32 2022/04/13 22:02:36 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to dependencies.
@@ -140,7 +140,7 @@ depends-cookie:
 #
 # See also:
 #	show-depends-pkgpaths	Prints the PKGPATH of all direct dependencies.
-#	show-depends-all	Prints the PKGPATH of all direct and
+#	show-depends-recursive	Prints the PKGPATH of all direct and
 #				indirect dependencies.
 #
 # Keywords: depends dependencies
