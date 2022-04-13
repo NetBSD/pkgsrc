@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1824 2022/04/13 19:35:27 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1825 2022/04/13 19:46:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2603,3 +2603,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/protobuf-c to 1.4.0 [wiz 2022-04-13]
 	Updated net/rabbitmq to 3.9.15 [adam 2022-04-13]
 	Updated textproc/py-validate-pyproject to 0.7.2 [adam 2022-04-13]
+	Updated devel/py-click to 8.1.2 [adam 2022-04-13]
+	Updated finance/py-braintree to 4.15.2 [adam 2022-04-13]
