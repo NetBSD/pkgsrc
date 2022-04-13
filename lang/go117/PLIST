@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/04/13 07:36:53 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/04/13 19:37:39 jperkin Exp $
 bin/go117
 bin/gofmt117
 go117/AUTHORS
@@ -786,7 +786,7 @@ go117/pkg/${GO_PLATFORM}/net/url.a
 go117/pkg/${GO_PLATFORM}/os.a
 go117/pkg/${GO_PLATFORM}/os/exec.a
 go117/pkg/${GO_PLATFORM}/os/signal.a
-go117/pkg/${GO_PLATFORM}/os/signal/internal/pty.a
+${PLIST.pty}go117/pkg/${GO_PLATFORM}/os/signal/internal/pty.a
 go117/pkg/${GO_PLATFORM}/os/user.a
 go117/pkg/${GO_PLATFORM}/path.a
 go117/pkg/${GO_PLATFORM}/path/filepath.a
@@ -840,7 +840,7 @@ go117/pkg/${GO_PLATFORM}/vendor/golang.org/x/net/http/httpproxy.a
 go117/pkg/${GO_PLATFORM}/vendor/golang.org/x/net/http2/hpack.a
 go117/pkg/${GO_PLATFORM}/vendor/golang.org/x/net/idna.a
 go117/pkg/${GO_PLATFORM}/vendor/golang.org/x/net/nettest.a
-go117/pkg/${GO_PLATFORM}/vendor/golang.org/x/net/route.a
+${PLIST.route}go117/pkg/${GO_PLATFORM}/vendor/golang.org/x/net/route.a
 go117/pkg/${GO_PLATFORM}/vendor/golang.org/x/sys/cpu.a
 go117/pkg/${GO_PLATFORM}/vendor/golang.org/x/text/secure/bidirule.a
 go117/pkg/${GO_PLATFORM}/vendor/golang.org/x/text/transform.a
