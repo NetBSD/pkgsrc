@@ -1,4 +1,4 @@
-# $NetBSD: bsd.utils.mk,v 1.13 2022/04/09 00:46:12 rillig Exp $
+# $NetBSD: bsd.utils.mk,v 1.14 2022/04/13 22:02:36 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines utility
 # and otherwise miscellaneous variables and targets.
@@ -54,7 +54,7 @@ _PKG_PATHS_CMD=								\
 #
 #	See also:
 #		show-depends
-#		show-depends-all
+#		show-depends-recursive
 #
 # Keywords: depends dependencies
 .PHONY: show-depends-dirs show-depends-pkgpaths
@@ -73,7 +73,7 @@ _DEPENDS_WALK_CMD=							\
 		PKGSRCDIR=${PKGSRCDIR:Q} TEST=${TOOLS_TEST:Q}		\
 	${AWK} -f ${.CURDIR}/../../mk/scripts/depends-depth-first.awk --
 
-# show-depends-all:
+# show-depends-recursive:
 #	Lists the PKGPATH of all direct or indirect dependencies of the
 #	current package.
 #
@@ -86,6 +86,7 @@ _DEPENDS_WALK_CMD=							\
 #	See also:
 #		show-depends
 #		show-depends-pkgpaths
-# Keywords: depends dependencies recursive indirect
-show-depends-all: .PHONY
+#
+# Keywords: depends dependencies recursive indirect transitive
+show-depends-recursive: .PHONY
 	${RUN} ${_DEPENDS_WALK_CMD} ${PKGPATH}
