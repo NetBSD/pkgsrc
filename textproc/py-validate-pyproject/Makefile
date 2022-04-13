@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/04/05 07:17:31 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/13 10:45:11 wiz Exp $
 
 DISTNAME=	validate-pyproject-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,7 @@ COMMENT=	Validation library and CLI tool for checking on pyproject.toml files
 LICENSE=	mpl-2.0 AND mit AND modified-bsd
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-packaging>=20.7:../../devel/py-packaging
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>0:../../devel/py-test-cov
 
