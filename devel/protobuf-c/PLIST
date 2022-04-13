@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2017/08/30 11:05:05 wiedi Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/04/13 10:48:15 wiz Exp $
 bin/protoc-c
 bin/protoc-gen-c
 include/google/protobuf-c/protobuf-c.h
 include/protobuf-c/protobuf-c.h
+include/protobuf-c/protobuf-c.proto
 lib/libprotobuf-c.la
 lib/pkgconfig/libprotobuf-c.pc
