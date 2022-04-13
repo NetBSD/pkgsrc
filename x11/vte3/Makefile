@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2022/04/10 22:14:50 gutteridge Exp $
+# $NetBSD: Makefile,v 1.51 2022/04/13 01:24:33 gutteridge Exp $
 
 DISTNAME=	vte-0.68.0
 PKGNAME=	${DISTNAME:S/vte/vte3/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
 GITHUB_PROJECT=	vte
@@ -20,6 +20,17 @@ USE_TOOLS+=		msgfmt pkg-config bash
 USE_LANGUAGES=		c c++20
 # for c++20
 GCC_REQD+=		10
+
+.include "../../mk/bsd.prefs.mk"
+
+# This package will link against libstdc++.so from the pkgsrc GCC when the
+# base OS GCC doesn't meet the minimum requirement. Thus we do this so the
+# appropriate gcc-libs package will be captured as a dependency, otherwise
+# binary packages will be broken.
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099982
+USE_PKGSRC_GCC=		yes
+USE_PKGSRC_GCC_RUNTIME=	yes
+.endif
 
 # Otherwise, this will fail on Linux distributions that don't
 # have libsystemd.
