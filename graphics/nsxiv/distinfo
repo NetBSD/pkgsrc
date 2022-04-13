@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/13 08:31:25 pin Exp $
+
+BLAKE2s (nsxiv-29.tar.gz) = 91b5e07a53924ca572917335a1f83b48ab43f18af991b8bb6e7dc1d7d9d00b3f
+SHA512 (nsxiv-29.tar.gz) = d891fc0885f280a622401e105dc1ed9ba39e40f3e760e3e0cd34ae79fdb32187b1d3dc15590bbefd68a18db2aa12795433907e6e744561cc891fc03e7a1f1e94
+Size (nsxiv-29.tar.gz) = 64012 bytes

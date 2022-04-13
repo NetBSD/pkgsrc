@@ -1,0 +1,6 @@
+Neo (or New or Not) Simple (or Small or Suckless) X Image Viewer.
+
+nsxiv is a fork of now unmaintained sxiv with the purpose of being a drop-in
+replacement of sxiv, maintaining it and adding simple, sensible features.
+nsxiv is free software licensed under GPLv2 and aims to be easy to modify
+and customize.
