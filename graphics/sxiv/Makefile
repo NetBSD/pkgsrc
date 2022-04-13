@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2020/08/17 20:19:10 leot Exp $
+# $NetBSD: Makefile,v 1.11 2022/04/13 08:29:11 pin Exp $
 #
 
 DISTNAME=	sxiv-26
@@ -11,6 +11,8 @@ MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://github.com/muennich/sxiv
 COMMENT=	Simple (or small or suckless) X Image Viewer
 LICENSE=	gnu-gpl-v2
+
+CONFLICTS=	nsxiv-[0-9]*
 
 MAKE_FLAGS+=	PREFIX=${PREFIX} MANPREFIX=${PREFIX}/${PKGMANDIR}
 MAKE_FLAGS+=	AUTORELOAD=nop
