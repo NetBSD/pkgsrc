@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2022/04/10 15:01:50 nia Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/04/13 10:39:54 wiz Exp $
 bin/exfalso
 bin/operon
 bin/quodlibet
-${PYSITELIB}/${EGG_INFODIR}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/quodlibet/__init__.py
 ${PYSITELIB}/quodlibet/__init__.pyc
 ${PYSITELIB}/quodlibet/__init__.pyo
