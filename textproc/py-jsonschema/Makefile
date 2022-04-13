@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/04/07 06:49:20 adam Exp $
+# $NetBSD: Makefile,v 1.23 2022/04/13 10:33:28 wiz Exp $
 
 DISTNAME=	jsonschema-4.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,7 @@ COMMENT=	Implementation of JSON Schema for Python
 LICENSE=	modified-bsd
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4:../../devel/py-setuptools_scm
+BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.4.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-pyrsistent>=0.17.3:../../devel/py-pyrsistent
 TEST_DEPENDS+=	${PYPKGPREFIX}-twisted>0:../../net/py-twisted
