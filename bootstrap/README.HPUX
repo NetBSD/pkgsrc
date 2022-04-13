@@ -1,4 +1,8 @@
-$NetBSD: README.HPUX,v 1.5 2015/04/19 19:29:44 tnn Exp $
+$NetBSD: README.HPUX,v 1.6 2022/04/13 07:03:24 nia Exp $
+
+As of 2021-06-18, pkgsrc was known to bootstrap on HP-UX 11.31 ia64
+using the HP compiler if "--compiler hp" was specified.
+If a GCC toolchain is available, it may be preferrable to use that.
 
 Prerequisite patches (downloadable from HP itrc)
 ------------------------------------------------
@@ -7,7 +11,8 @@ Prerequisite patches (downloadable from HP itrc)
 
 Compiler
 --------
-Prebuilt GCC toolchains suitable for use with pkgsrc can be downloaded from
+Prebuilt PA-RISC GCC toolchains suitable for use with pkgsrc can be
+downloaded from
 ftp://ftp.NetBSD.org/pub/pkgsrc/misc/tnn/ .
 
 Installation instructions can be found in the file "README.gcc".
