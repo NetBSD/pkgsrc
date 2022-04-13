@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.967 2022/04/11 20:36:46 markd Exp $
+# $NetBSD: Makefile,v 1.968 2022/04/13 08:32:30 pin Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -385,6 +385,7 @@ SUBDIR+=	mypaint-brushes
 SUBDIR+=	ncview
 SUBDIR+=	netpbm
 SUBDIR+=	ns-cult3d
+SUBDIR+=	nsxiv
 SUBDIR+=	numix-gtk-theme
 SUBDIR+=	numix-icon-theme
 SUBDIR+=	numix-icon-theme-circle
