@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.18 2021/12/08 16:02:13 adam Exp $
+# $NetBSD: Makefile,v 1.19 2022/04/13 10:09:20 adam Exp $
 
 DISTNAME=	VTK-9.0.3
-PKGNAME=	${DISTNAME:S/VTK/vtk/}
-PKGREVISION=	2
+PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	graphics
-MASTER_SITES=	https://www.vtk.org/files/release/9.0/
+MASTER_SITES=	https://www.vtk.org/files/release/${PKGVERSION_NOREV:R}/
 
 MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	https://vtk.org/
 COMMENT=	Visualization toolkit
 LICENSE=	modified-bsd
+
+BUILD_DEPENDS=	ninja-build-[0-9]*:../../devel/ninja-build
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++11
@@ -17,16 +18,6 @@ USE_LANGUAGES=	c c++11
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-
-
-MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/build/lib
-#MAKE_ENV+=	CPPFLAGS=-I/usr/pkg/include
-
-post-extract:
-	mkdir ${WRKSRC}/build
-
-BUILD_DEPENDS=	ninja-build-[0-9]*:../../devel/ninja-build
-
 CMAKE_ARGS+=	-DVTK_LEGACY_REMOVE=ON
 CMAKE_ARGS+=	-DVTK_USE_MPI=OFF
 CMAKE_ARGS+=	-DVTK_USE_CUDA=OFF
@@ -42,6 +33,21 @@ CMAKE_ARGS+=	-DVTK_WRAP_JAVA=OFF
 CMAKE_ARGS+=	-DVTK_FORBID_DOWNLOADS=ON
 # https://discourse.vtk.org/t/9-0-0-rc1-contextopengl2-not-built/2933
 CMAKE_ARGS+=	-DVTK_MODULE_ENABLE_VTK_RenderingContextOpenGL2=YES
+
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/build/lib
+
+PLIST_VARS+=	cocoa opengl
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+PLIST.cocoa=	yes
+.else
+PLIST.opengl=	yes
+.endif
+
+post-extract:
+	${MKDIR} ${WRKSRC}/build
 
 .include "options.mk"
 
