@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/04/05 07:20:56 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/04/13 10:42:32 wiz Exp $
 
 DISTNAME=	ini2toml-0.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,7 @@ COMMENT=	Automatically conversion of .ini/.cfg files to TOML equivalents
 LICENSE=	mpl-2.0
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-packaging>=20.7:../../devel/py-packaging
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-configupdater>=3.0.1:../../devel/py-configupdater
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>0:../../devel/py-test-cov
