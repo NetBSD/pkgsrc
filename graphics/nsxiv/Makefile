@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/04/13 08:31:25 pin Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/13 09:36:32 pin Exp $
 
 DISTNAME=	nsxiv-29
 CATEGORIES=	graphics
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/nsxiv/nsxiv/
 COMMENT=	Neo (or New or Not) Simple (or Small or Suckless) X Image Viewer
 LICENSE=	gnu-gpl-v2
-
-CONFLICTS=	sxiv-[0-9]*
 
 MAKE_FLAGS+=	PREFIX=${PREFIX} MANPREFIX=${PREFIX}/${PKGMANDIR}
 MAKE_FLAGS+=	HAVE_INOTIFY=0
