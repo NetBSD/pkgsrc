@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/05/10 04:31:50 markd Exp $
+# $NetBSD: Makefile,v 1.7 2022/04/14 02:59:40 markd Exp $
 
 DISTNAME=	musixtex-fonts
-PKGNAME=	tex-${DISTNAME}-2015
-PKGREVISION=	1
-TEXLIVE_REV=	37762
+PKGNAME=	tex-${DISTNAME}-2021
+TEXLIVE_REV=	60381
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/musixtex-fonts
@@ -12,6 +11,5 @@ LICENSE=	gnu-gpl-v2
 
 TEX_MIXEDMAP_FILES+=	musix.map
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
