@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:23:34 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/04/14 02:08:44 markd Exp $
 
-BLAKE2s (latexdiff.doc.r55540.tar.xz) = 7836ff505bb44c1fd0dd862ba925fde4af781a50964e2d097bbf7554b6d50172
-SHA512 (latexdiff.doc.r55540.tar.xz) = 33931c4a47ce1ae61119a54caf074049504ea044159afb6a8ad59dcfea1d54782939ef5d2e8f3303f0aa623c64c4dc84a209eefb179fd057b6903ef6c9409f67
-Size (latexdiff.doc.r55540.tar.xz) = 478708 bytes
+BLAKE2s (latexdiff.doc.r61434.tar.xz) = 7a5abf64d4e683a1a23bc27c9e4f0086c4ca1bfa5aaa60d55c9a207a5ac2bd47
+SHA512 (latexdiff.doc.r61434.tar.xz) = b3c09b5ea391ad7b2d5821e41e3e4e05d4749b2aaa8b8aad1219c7f81aeccd65a98e3fe77ccbf4770d658dcb4797d9bf37a42604b380f666a6bd281d8b677ed4
+Size (latexdiff.doc.r61434.tar.xz) = 472568 bytes
