@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:28:37 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/04/14 06:58:40 markd Exp $
 
-BLAKE2s (tex-zlmtt-51368/zlmtt.tar.xz) = b3aece2e287f70ef5e4c2f601870c17a5b7074a4d42afcf10b9b6f7ee8977bbc
-SHA512 (tex-zlmtt-51368/zlmtt.tar.xz) = b60e880508e08fc0a3f265b7d85c7ae8667c0a16264148a2944184a598f690f337149348157dc7b7b11f1cac59d44117425b50a26bbdaa0fbf1dcebb023093e6
-Size (tex-zlmtt-51368/zlmtt.tar.xz) = 3072 bytes
+BLAKE2s (zlmtt.r61567.tar.xz) = 62e5c319091969322431588bb4636b13d8539def458198178213a1c039baefe5
+SHA512 (zlmtt.r61567.tar.xz) = beb32b3a3a89f02f1dadd51e4c585d4f268c277f78dbac11325299dd59de1987c12ffee92f2ca713e92ecc797d9228779cb542a31428e4ef6b73255b7f5ce987
+Size (zlmtt.r61567.tar.xz) = 3284 bytes
