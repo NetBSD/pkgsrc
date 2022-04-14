@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1839 2022/04/14 15:05:49 mef Exp $
+$NetBSD: CHANGES-2022,v 1.1840 2022/04/14 15:19:23 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2720,3 +2720,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added misc/bbdb3 version 3.2.2a [nikita 2022-04-14]
 	Added devel/zig-mode version 0.0.20220105 [nikita 2022-04-14]
 	Updated devel/R-Rcpp to 1.0.8.3 [mef 2022-04-14]
+	Updated devel/R-clipr to 0.8.0 [mef 2022-04-14]
