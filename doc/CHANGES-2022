@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1841 2022/04/14 15:33:06 mef Exp $
+$NetBSD: CHANGES-2022,v 1.1842 2022/04/14 15:40:29 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2722,3 +2722,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/R-Rcpp to 1.0.8.3 [mef 2022-04-14]
 	Updated devel/R-clipr to 0.8.0 [mef 2022-04-14]
 	Updated devel/R-desc to 1.4.1 [mef 2022-04-14]
+	Updated ham/xlog to 2.0.24 [mef 2022-04-14]
