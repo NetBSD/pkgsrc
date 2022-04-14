@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2019/12/06 20:17:04 markd Exp $
+# $NetBSD: Makefile,v 1.5 2022/04/14 04:39:09 markd Exp $
 
-DISTNAME=	SIunits
+DISTNAME=	siunits
 PKGNAME=	tex-${DISTNAME}-1.36
-TEXLIVE_REV=	15878
+TEXLIVE_REV=	59702
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://ctan.org/pkg/siunits
 COMMENT=	International System of Units
 LICENSE=	lppl-1.3c
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
