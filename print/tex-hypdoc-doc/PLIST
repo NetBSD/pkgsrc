@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/14 05:02:59 markd Exp $
+share/texmf-dist/doc/latex/hypdoc/README.md
+share/texmf-dist/doc/latex/hypdoc/hypdoc.pdf
