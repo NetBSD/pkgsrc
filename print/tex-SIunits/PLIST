@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/10/19 20:43:38 markd Exp $
-share/texmf-dist/tex/latex/SIunits/SIunits.cfg
-share/texmf-dist/tex/latex/SIunits/SIunits.sty
-share/texmf-dist/tex/latex/SIunits/binary.sty
+@comment $NetBSD: PLIST,v 1.2 2022/04/14 04:39:09 markd Exp $
+share/texmf-dist/tex/latex/siunits/SIunits.cfg
+share/texmf-dist/tex/latex/siunits/SIunits.sty
+share/texmf-dist/tex/latex/siunits/binary.sty

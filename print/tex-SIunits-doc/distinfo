@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:12:19 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/14 04:39:09 markd Exp $
 
-BLAKE2s (tex-SIunits-15878/SIunits.doc.tar.xz) = f57bb2bb20358376da6547cdc67db002eee4e842bfd77cfb2ee9e98cf054bb4a
-SHA512 (tex-SIunits-15878/SIunits.doc.tar.xz) = 7c8eade41ad68a4cef0747deea52efca7a967f57d0d1c3c6adc2e907220031acf8cb6d86c21eed444c5ae190b292ab51a69c697a0fe4bd2ab55f7fec746fc7ff
-Size (tex-SIunits-15878/SIunits.doc.tar.xz) = 250180 bytes
+BLAKE2s (siunits.doc.r59702.tar.xz) = 7bac6672b575ca5e6e2b75a6907c8e29935c5a6d42c204c3689f404d99d6d17e
+SHA512 (siunits.doc.r59702.tar.xz) = d6c34f20671b68a1ffdf47b32e037d7660b660fb8a8e3768083ee7e33b08e7c313eb5f2c585657dcfa258f85574bf6b13a86ef81e49c2ed1b407e4dfc8dc5d04
+Size (siunits.doc.r59702.tar.xz) = 250232 bytes
