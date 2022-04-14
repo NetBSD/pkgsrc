@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1833 2022/04/14 10:21:31 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.1834 2022/04/14 10:59:25 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2715,3 +2715,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed fonts/stix-otf successor fonts/stixfonts [wiz 2022-04-14]
 	Added fonts/juliamono version 0.044 [wiz 2022-04-14]
 	Updated devel/lua-mode to 20210802 [nikita 2022-04-14]
+	Updated sysutils/xplr to 0.17.4 [pin 2022-04-14]
