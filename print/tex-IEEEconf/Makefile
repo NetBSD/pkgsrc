@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/12/06 20:17:03 markd Exp $
+# $NetBSD: Makefile,v 1.3 2022/04/14 04:36:46 markd Exp $
 
-DISTNAME=	IEEEconf
+DISTNAME=	ieeeconf
 PKGNAME=	tex-${DISTNAME}-1.4
-TEXLIVE_REV=	15878
+TEXLIVE_REV=	59665
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://ctan.org/pkg/ieeeconf
 COMMENT=	Macros for IEEE conference proceedings
 LICENSE=	lppl-1.3c
 
@@ -15,6 +16,5 @@ DEPENDS+=	tex-psnfss-[0-9]*:../../fonts/tex-psnfss
 DEPENDS+=	tex-titlesec-[0-9]*:../../print/tex-titlesec
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/18 19:09:54 minskim Exp $
-share/texmf-dist/tex/latex/IEEEconf/IEEEconf.cls
+@comment $NetBSD: PLIST,v 1.2 2022/04/14 04:36:46 markd Exp $
+share/texmf-dist/tex/latex/ieeeconf/IEEEconf.cls
