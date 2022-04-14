@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:12:19 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/14 04:36:47 markd Exp $
 
-BLAKE2s (tex-IEEEconf-15878/IEEEconf.doc.tar.xz) = cfe8534e9a9d1b6c6c0952a3f34bde0f6ec46305a8d6f3fff36cbda784cd0afb
-SHA512 (tex-IEEEconf-15878/IEEEconf.doc.tar.xz) = c9f073e362ae6a13e7d7fed8af10f8639acd97a8b7a8f3ea59d029d6789cc98dc8d8bf9b31e6d30b253ccb23bc653f8f33730c35299bd2bf025a883e5f77cc38
-Size (tex-IEEEconf-15878/IEEEconf.doc.tar.xz) = 177428 bytes
+BLAKE2s (ieeeconf.doc.r59665.tar.xz) = 38b29c10e06ea4156764d9865ffda7c0bfcedf57859f86792a05d9f18e112583
+SHA512 (ieeeconf.doc.r59665.tar.xz) = a0133638d4da1822c2cc7c41052fc69d71feb89bfe0351594343166cdb217a62cb849d2a355bbaa3a12e38882ca76c94740f9f4711b42280c81a58bcc9fd17f2
+Size (ieeeconf.doc.r59665.tar.xz) = 177420 bytes
