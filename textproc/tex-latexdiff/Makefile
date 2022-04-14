@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2021/05/24 19:55:00 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/04/14 02:08:44 markd Exp $
 
 DISTNAME=	latexdiff
-PKGNAME=	tex-${DISTNAME}-1.3.1.1
-PKGREVISION=	1
-TEXLIVE_REV=	55540
+PKGNAME=	tex-${DISTNAME}-1.3.2
+TEXLIVE_REV=	61434
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/latexdiff
