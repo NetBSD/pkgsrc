@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/09 21:32:41 markd Exp $
-share/texmf-dist/tex/latex/SIstyle/sistyle.sty
+@comment $NetBSD: PLIST,v 1.2 2022/04/14 04:38:23 markd Exp $
+share/texmf-dist/tex/latex/sistyle/sistyle.sty
