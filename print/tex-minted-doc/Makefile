@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2020/01/18 23:34:31 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2022/04/14 02:48:26 markd Exp $
 
 DISTNAME=	minted.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.5
-TEXLIVE_REV=	44855
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.6
+TEXLIVE_REV=	61405
 
-MAINTAINER=	markd@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/minted
 COMMENT=	Documentation for tex-minted
 LICENSE=	lppl-1.3c
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
