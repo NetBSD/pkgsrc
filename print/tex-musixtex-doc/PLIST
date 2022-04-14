@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2021/06/05 04:31:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/04/14 02:56:04 markd Exp $
 man/man1/musixflx.1
 man/man1/musixtex.1
 share/texmf-dist/doc/generic/musixtex/ChangeLog-114.txt
@@ -20,6 +20,9 @@ share/texmf-dist/doc/generic/musixtex/ChangeLog-129.txt
 share/texmf-dist/doc/generic/musixtex/ChangeLog-130.txt
 share/texmf-dist/doc/generic/musixtex/ChangeLog-131.txt
 share/texmf-dist/doc/generic/musixtex/ChangeLog-132.txt
+share/texmf-dist/doc/generic/musixtex/ChangeLog-133.txt
+share/texmf-dist/doc/generic/musixtex/ChangeLog-134.txt
+share/texmf-dist/doc/generic/musixtex/ChangeLog-135.txt
 share/texmf-dist/doc/generic/musixtex/ChangeLog-musixdoc.txt
 share/texmf-dist/doc/generic/musixtex/README
 share/texmf-dist/doc/generic/musixtex/examples/adagio.tex
@@ -133,6 +136,8 @@ share/texmf-dist/doc/generic/musixtex/musixdoc/staffsize.tex
 share/texmf-dist/doc/generic/musixtex/musixdoc/summary.tex
 share/texmf-dist/doc/generic/musixtex/musixdoc/transposition.tex
 share/texmf-dist/doc/generic/musixtex/musixdoc/writingnotes.tex
+share/texmf-dist/doc/generic/musixtex/musixftab/frenchtab-samples.pdf
+share/texmf-dist/doc/generic/musixtex/musixftab/frenchtab-samples.tex
 share/texmf-dist/doc/generic/musixtex/musixlyr/README.musixlyr
 share/texmf-dist/doc/generic/musixtex/musixlyr/examples/nonmoriar.pdf
 share/texmf-dist/doc/generic/musixtex/musixlyr/examples/nonmoriar.tex
