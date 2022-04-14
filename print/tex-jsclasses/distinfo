@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:13:46 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/04/14 01:51:19 markd Exp $
 
-BLAKE2s (jsclasses.r56608.tar.xz) = 2d82f121c5e04f02333769e9f2f87bd14af6f7cb8b32f72425b4bc075faef0c6
-SHA512 (jsclasses.r56608.tar.xz) = 18c5cd1e63e4fedbf1ec0faf069d40d34dd72ca18af0d634eab16b5c7ce92139cf4892492782f816c0c0deab4706ee1c5a83d052cd122f7d5df35f1d5d2ff4dc
-Size (jsclasses.r56608.tar.xz) = 21760 bytes
+BLAKE2s (jsclasses.r59795.tar.xz) = 187f4113deca1f1da3406c9cf06e884d613aa270a1fbe1825b5bea12cce5da40
+SHA512 (jsclasses.r59795.tar.xz) = a479d9fdaf3b966f4e05647d34ea620822d91984fa73abf818cfe5afca2442f21ecb2f1a9dde274ad2528747d32c92c8b5cfd937acbbd9659181cebca339c62e
+Size (jsclasses.r59795.tar.xz) = 21720 bytes
