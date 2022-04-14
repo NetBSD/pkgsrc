@@ -1,4 +1,4 @@
-# $NetBSD: oss.builtin.mk,v 1.6 2019/06/30 21:28:28 rillig Exp $
+# $NetBSD: oss.builtin.mk,v 1.7 2022/04/14 06:17:40 nia Exp $
 
 BUILTIN_PKG:=	oss
 
@@ -71,9 +71,18 @@ BUILDLINK_TRANSFORM+=	rm:-lossaudio
 .  endif
 
 # Many OSS-aware programs expect <soundcard.h> to be found as either
-# <sys/soundcard.h> or <machine/soundcard.h>, so create a dummy version.
+# <sys/soundcard.h> or <machine/soundcard.h>, so create a dummy version
+# if only <soundcard.h> exists (needed for OSSv4 on Linux and similar?
+# Definitely not needed on BSD or Solaris!)
+#
 # Also include <sys/ioctl.h> prior to including <soundcard.h> since we
 # need definitions for _IOWR and friends.
+#
+# illumos provides <sys/soundcard.h>, but no <soundcard.h>, so
+# we also need to create <soundcard.h> if it doesn't exist in order
+# to compile OSSv4 programs.
+#
+# What a mess!
 #
 BUILDLINK_TARGETS+=	buildlink-oss-soundcard-h
 .PHONY: buildlink-oss-soundcard-h
@@ -96,6 +105,13 @@ buildlink-oss-soundcard-h:
 		${ECHO_BUILDLINK_MSG} "Creating $${mach_soundcard_h}.";	\
 		${MKDIR} `${DIRNAME} $${mach_soundcard_h}`;		\
 		${LN} -s $${sys_soundcard_h} $${mach_soundcard_h};	\
-	fi
+	fi;								\
+	soundcard_h=${BUILDLINK_DIR}/include/soundcard.h;		\
+	sys_soundcard_h=${BUILDLINK_PREFIX.oss}/include/sys/soundcard.h; \
+	if ${TEST} ! -f $${soundcard_h} -a -f $${sys_soundcard_h}; then \
+		${ECHO_BUILDLINK_MSG} "Creating $${soundcard_h}.";	\
+		${MKDIR} `${DIRNAME} $${soundcard_h}`;			\
+		${LN} -s $${sys_soundcard_h} $${soundcard_h};		\
+	fi;								\
 
 .endif	# CHECK_BUILTIN.oss
