@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2020/04/26 12:21:16 markd Exp $
+# $NetBSD: Makefile,v 1.4 2022/04/14 02:15:58 markd Exp $
 
 DISTNAME=	mathalpha
-PKGNAME=	tex-${DISTNAME}-1.13
-TEXLIVE_REV=	52305
+PKGNAME=	tex-${DISTNAME}-1.143
+TEXLIVE_REV=	61089
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/mathalpha
