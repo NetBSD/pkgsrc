@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2021/02/14 02:10:57 markd Exp $
+# $NetBSD: Makefile,v 1.5 2022/04/14 02:35:50 markd Exp $
 
 DISTNAME=	mf2pt1.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.6
-TEXLIVE_REV=	57018
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.7
+TEXLIVE_REV=	61217
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/mf2pt1
