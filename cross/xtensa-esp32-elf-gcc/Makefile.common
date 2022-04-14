@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2022/04/14 00:50:00 tnn Exp $
+# $NetBSD: Makefile.common,v 1.2 2022/04/14 13:11:49 tnn Exp $
 
 # used by cross/xtensa-esp32-elf-gcc/Makefile
 # used by cross/xtensa-esp32s2-elf-gcc/Makefile
@@ -55,6 +55,7 @@ CONFIGURE_SCRIPT=	${WRKSRC}/configure
 CONFIG_SHELL=		${TOOLS_PATH.bash}
 WRAPPER_SHELL=		${TOOLS_PATH.bash}
 GNU_CONFIGURE_PREFIX=	${PREFIX}/xtensa-${ESP32_TYPE}-elf
+MKPIE_SUPPORTED=	no
 
 # This is based on "gcc -v" output from the binary release
 # xtensa-esp32-elf-gcc8_4_0-esp-2021r2-patch3-linux-amd64.tar.gz
@@ -80,6 +81,8 @@ CONFIGURE_ARGS+=	--disable-libstdcxx-verbose
 CONFIGURE_ARGS+=	--enable-threads=posix
 CONFIGURE_ARGS+=	--enable-gcov-custom-rtio
 CONFIGURE_ARGS+=	--enable-libstdcxx-time=yes
+
+CONFIGURE_ARGS+=	--disable-bootstrap
 
 CHECK_PORTABILITY_SKIP+=	contrib/*
 
