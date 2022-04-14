@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:28:07 nia Exp $
-
-BLAKE2s (japanese-otf-uptex.r56932.tar.xz) = e7521f66637d0867f8fbd43b69a0d8a0e04255eb3168927f40401ea5b0e0faa7
-SHA512 (japanese-otf-uptex.r56932.tar.xz) = cd95656f02cd97a06119134406b519928ced50c31647a4dd421850d7e83b3705cd2b715be2e23c45b77d1634c47fd5cf8733aea05c654a0d3fd7fd223a3742a7
-Size (japanese-otf-uptex.r56932.tar.xz) = 64232 bytes

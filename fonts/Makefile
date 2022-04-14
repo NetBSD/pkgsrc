@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.367 2022/03/30 13:56:14 wiz Exp $
+# $NetBSD: Makefile,v 1.368 2022/04/14 01:39:39 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -590,8 +590,6 @@ SUBDIR+=	tex-jamtimes
 SUBDIR+=	tex-jamtimes-doc
 SUBDIR+=	tex-japanese-otf
 SUBDIR+=	tex-japanese-otf-doc
-SUBDIR+=	tex-japanese-otf-uptex
-SUBDIR+=	tex-japanese-otf-uptex-doc
 SUBDIR+=	tex-jlreq-deluxe
 SUBDIR+=	tex-jlreq-deluxe-doc
 SUBDIR+=	tex-jmn
