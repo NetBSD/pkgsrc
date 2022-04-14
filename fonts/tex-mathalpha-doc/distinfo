@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:28:14 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/14 02:15:58 markd Exp $
 
-BLAKE2s (mathalpha.doc.r52305.tar.xz) = 73326b5826e50f11654af720b3060a577f097d747bfa101989f08db3d6be442f
-SHA512 (mathalpha.doc.r52305.tar.xz) = 5a1d993f73d3684ccd8a855cf8e016d35aa29c34fecea0f01f147a0cb108b355108faf43734c83bdb74f59287a7963b4b418894e0a5c0ec4ffd884f3f4ef1d0e
-Size (mathalpha.doc.r52305.tar.xz) = 992992 bytes
+BLAKE2s (mathalpha.doc.r61089.tar.xz) = e8ed2be8b46f68ccc32aeb148222024974ced100e612b9313ced0d5526729d8b
+SHA512 (mathalpha.doc.r61089.tar.xz) = 5de9923e39ccf9b55f10f0b97067d001ead5598423174808d2a7636c96f8fbd2e8a8e6c0d66140f62d51b9263a736cb6106cf6db0e16e62ee5d9f3887baa3159
+Size (mathalpha.doc.r61089.tar.xz) = 1888792 bytes
