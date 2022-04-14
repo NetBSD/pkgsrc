@@ -6,5 +6,4 @@ should be no need to worry about such incompatibilities,
 because specific patches are loaded automatically whenever
 necessary. This helps not only to simplify source files, but
 also to make the appearance of working pLaTeX/upLaTeX sources
-similar to those of ordinary LaTeX ones. This package depends
-on the filehook package written by Martin Scharrer.
+similar to those of ordinary LaTeX ones.
