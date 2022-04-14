@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.561 2022/02/05 09:39:19 adam Exp $
+# $NetBSD: Makefile,v 1.562 2022/04/14 12:40:48 nikita Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -20,6 +20,7 @@ SUBDIR+=	attica-qt5
 SUBDIR+=	autocue
 SUBDIR+=	bbappconf
 SUBDIR+=	bbdb
+SUBDIR+=	bbdb3
 SUBDIR+=	bbweather
 SUBDIR+=	bibletime
 SUBDIR+=	blccc
