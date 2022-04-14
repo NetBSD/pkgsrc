@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2022/04/13 23:09:09 tnn Exp $
+# $NetBSD: Makefile.common,v 1.2 2022/04/14 12:55:52 tnn Exp $
 
 # used by cross/xtensa-esp32-elf-binutils/Makefile
 # used by cross/xtensa-esp32s2-elf-binutils/Makefile
@@ -24,6 +24,7 @@ GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # several sub-configures know --enable-nls
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake makeinfo
+MKPIE_SUPPORTED=	no	# strange errors with libiberty. checking for fcntl.h ... no
 
 #PATCHDIR=	${.CURDIR}/../../cross/xtensa-esp32-elf-binutils/patches
 DISTINFO_FILE=	${.CURDIR}/../../cross/xtensa-esp32-elf-binutils/distinfo
