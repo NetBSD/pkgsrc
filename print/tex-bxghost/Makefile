@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/02/21 10:03:18 markd Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/14 06:23:32 markd Exp $
 
 DISTNAME=	bxghost
-PKGNAME=	tex-${DISTNAME}-0.3.0
-TEXLIVE_REV=	53606
+PKGNAME=	tex-${DISTNAME}-0.4.0
+TEXLIVE_REV=	61989
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/bxghost
