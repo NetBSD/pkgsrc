@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2018/09/13 14:21:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.35 2022/04/14 14:31:09 nikita Exp $
 
 DISTNAME=		bbdb-2.35
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -15,6 +15,7 @@ EMACS_VERSIONS_ACCEPTED=	emacs25 emacs25nox emacs21 emacs21nox
 EMACS_VERSIONS_ACCEPTED+=	emacs26 emacs26nox
 
 CONFLICTS+=		xemacs-packages-[0-9]*
+CONFLICTS+=		bbdb3-[0-9]*
 
 USE_PKGLOCALEDIR=	yes
 CONFIGURE_ARGS+=	--enable-rmail
