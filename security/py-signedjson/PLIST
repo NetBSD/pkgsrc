@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/04/18 12:50:44 js Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/04/14 20:35:37 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -10,6 +10,7 @@ ${PYSITELIB}/signedjson/__init__.pyo
 ${PYSITELIB}/signedjson/key.py
 ${PYSITELIB}/signedjson/key.pyc
 ${PYSITELIB}/signedjson/key.pyo
+${PYSITELIB}/signedjson/py.typed
 ${PYSITELIB}/signedjson/sign.py
 ${PYSITELIB}/signedjson/sign.pyc
 ${PYSITELIB}/signedjson/sign.pyo
