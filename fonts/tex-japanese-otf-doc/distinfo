@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:28:07 nia Exp $
+$NetBSD: distinfo,v 1.13 2022/04/14 01:33:35 markd Exp $
 
-BLAKE2s (japanese-otf.doc.r57826.tar.xz) = b57ecf819db546f97e53f81ab679de4e7d60d792204554a70303f576af005d02
-SHA512 (japanese-otf.doc.r57826.tar.xz) = 92f23d5d376451a6103183e6924328432e3e983577a98f8a911da5cf2421baaffaf617065c48c339bdd0a33868976c55ba2a8b254f3f0a3d7d8a85414495c902
-Size (japanese-otf.doc.r57826.tar.xz) = 12328 bytes
+BLAKE2s (japanese-otf.doc.r62455.tar.xz) = ff83717e98ce56bec91b2e3783ec6383cc92c6edc1f5de405bd55cbc5eafeeb2
+SHA512 (japanese-otf.doc.r62455.tar.xz) = 6a626d29a20132d1cd1141ddf1118845255ad869f670ce780c29bcba2f143b3980b1c45822d49f83cad9d9528cc52c03b63548ca93d45ac7e0c03a5cbce1f880
+Size (japanese-otf.doc.r62455.tar.xz) = 36636 bytes
