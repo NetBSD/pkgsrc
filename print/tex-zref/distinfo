@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:15:11 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/14 07:01:35 markd Exp $
 
-BLAKE2s (zref.r56611.tar.xz) = 4b20d3b9e8a4bc6c28c793916c0643ca2f31f956e777b85c240ea933d93db7dc
-SHA512 (zref.r56611.tar.xz) = f64604e9308278b34347bcbcaed39b500371c575082311c1fb28bf6bd7db26fc2d2e3d3e8843e3a195fd22050450bffb18c3e8b64a54f0787c1122ac3901ad2f
-Size (zref.r56611.tar.xz) = 14364 bytes
+BLAKE2s (zref.r62977.tar.xz) = b0b2d1d4c45e4f80bfe27bf6014e665074934ea6a0bc1a87f87ac599aeb9655e
+SHA512 (zref.r62977.tar.xz) = 4516c2b785e26dac293dd028c314bdaf75d195c454cd2acd54aeaf6a298b0494031a86926abc670d27bed1ce8622a9607ea71d2b4d268bacdff26b8937c67dfa
+Size (zref.r62977.tar.xz) = 14476 bytes
