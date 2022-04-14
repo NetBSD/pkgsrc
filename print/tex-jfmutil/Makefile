@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2021/05/24 19:53:49 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/04/14 01:45:49 markd Exp $
 
 DISTNAME=	jfmutil
-PKGNAME=	tex-${DISTNAME}-1.3.1
-PKGREVISION=	1
-TEXLIVE_REV=	55044
-
+PKGNAME=	tex-${DISTNAME}-1.3.3
+TEXLIVE_REV=	60987
+ 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/jfmutil
 COMMENT=	Utility to process pTeX-extended TFM and VF
