@@ -1,9 +1,9 @@
 This is a temporary package, which is used during a test phase
 to load the new PDF management code of LaTeX. The new PDF
-management code offers backend independant interfaces to
+management code offers backend-independent interfaces to
 central PDF dictionaries, tools to create annotations, form
 Xobjects, to embed files, and to handle PDF standards. The code
-is provided, during a testphase, as an independant package to
+is provided, during a testphase, as an independent package to
 allow users and package authors to safely test the code. At a
 later stage it will be integrated into the LaTeX kernel (or in
 parts into permanent support packages), and the current
