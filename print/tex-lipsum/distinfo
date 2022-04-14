@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:13:55 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/04/14 02:13:20 markd Exp $
 
-BLAKE2s (lipsum.r58123.tar.xz) = dc8ed3b1655b115d20c6c4b70b970faf9b4233f2dafd5d0cd41cee23349dcdaa
-SHA512 (lipsum.r58123.tar.xz) = 6d93dbb16d94f7aa199e59b85096583a9e8e7a07b107bbfe1e0be7615717c29d94ecfd308c4adf462062251adb03b171a332cd688425f6854ce442c390c47396
-Size (lipsum.r58123.tar.xz) = 75536 bytes
+BLAKE2s (lipsum.r60561.tar.xz) = 5b19aeec91d0850a3cfd65d1de6f17f3c2706cc58d8092fed9c61c9c6317f14d
+SHA512 (lipsum.r60561.tar.xz) = 24697be378aa490bf71194c8622400c11e27d5c6549caf2362250017ac97b4443986a4ad5f8d2d96aa53cfd7bcf5cd7ada0e1ddbbbfd27135e2a23bbad21563a
+Size (lipsum.r60561.tar.xz) = 125324 bytes
