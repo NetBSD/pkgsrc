@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2022/04/14 13:51:45 nikita Exp $
+
+To use the Emacs zig mode add the following to your .emacs file:
+
+   (autoload 'zig-mode "zig-mode" nil t)
+   (add-to-list 'auto-mode-alist '("\\.zig\\'" . zig-mode))
+
+===========================================================================

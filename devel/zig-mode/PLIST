@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/14 13:51:45 nikita Exp $
+${EMACS_LISPPREFIX}/zig-mode/zig-mode.el
+${EMACS_LISPPREFIX}/zig-mode/zig-mode.elc
