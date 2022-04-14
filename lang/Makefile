@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.645 2022/04/14 17:29:10 nikita Exp $
+# $NetBSD: Makefile,v 1.646 2022/04/14 17:36:20 nikita Exp $
 #
 
 COMMENT=	Programming languages
@@ -13,7 +13,7 @@ SUBDIR+=	abcl
 SUBDIR+=	adoptopenjdk11-bin
 SUBDIR+=	algol68g
 SUBDIR+=	asn1c
-SUBDIR+=	ast2
+SUBDIR+=	ats2
 SUBDIR+=	awka
 SUBDIR+=	baci
 SUBDIR+=	boomerang
