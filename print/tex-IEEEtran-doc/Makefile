@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2019/12/06 20:17:04 markd Exp $
+# $NetBSD: Makefile,v 1.8 2022/04/14 04:37:28 markd Exp $
 
-DISTNAME=	IEEEtran.doc
+DISTNAME=	ieeetran.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.8b
-TEXLIVE_REV=	38238
+TEXLIVE_REV=	59672
 
 MAINTAINER=	minskim@NetBSD.org
-COMMENT=	Documentation for tex-IEEEtran
+HOMEPAGE=	https://ctan.org/pkg/ieeetran
+COMMENT=	Documentation for tex-ieeetran
 LICENSE=	lppl-1.3c
 
-CONFLICTS+=	tex-IEEEtran<=1.7nb1
-
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

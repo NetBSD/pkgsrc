@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.23 2020/01/26 17:32:01 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2022/04/14 04:37:28 markd Exp $
 
-DISTNAME=	IEEEtran
+DISTNAME=	ieeetran
 PKGNAME=	tex-${DISTNAME}-1.8b
-TEXLIVE_REV=	38238
+TEXLIVE_REV=	59672
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	https://www.michaelshell.org/tex/ieeetran/
-COMMENT=	LaTeX class for IEEE journals and conferences
+HOMEPAGE=	https://ctan.org/pkg/ieeetran
+COMMENT=	LaTeX class for IEEE Transactions journals and conferences
 LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=	tex-psnfss>=9.2anb2:../../fonts/tex-psnfss
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
