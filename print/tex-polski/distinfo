@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:14:23 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/14 03:20:20 markd Exp $
 
-BLAKE2s (tex-polski-44213/polski.tar.xz) = 68388cf0cddb5b79ebae14f45e7f3019062f9b7d607601c2c3143a52649a3ba7
-SHA512 (tex-polski-44213/polski.tar.xz) = 5a2c466892bdef8a837e4329e5c1ebb6a5bd0ada13d73b04ee1ffe015c589670b5f3a283d1363fece4cb1525c291e831a7ae38fdf2739384bdf52669a4586874
-Size (tex-polski-44213/polski.tar.xz) = 9064 bytes
+BLAKE2s (polski.r60322.tar.xz) = cbfef3008952b0aa90c2790dbaa543e08cb6cad0c632aec4d023f474601aa43a
+SHA512 (polski.r60322.tar.xz) = 24bdb98990f66e89085056e6ad3e0930dd16d0f4bbd07a2c9a49931796e143505276d2025fee21b2b52d927c3b2992d31f4edae4668cdb549f6f00ef43dc1c69
+Size (polski.r60322.tar.xz) = 9296 bytes
