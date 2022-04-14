@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.7 2009/07/07 23:24:14 minskim Exp $
-share/texmf-dist/bibtex/bib/IEEEtran/IEEEabrv.bib
-share/texmf-dist/bibtex/bib/IEEEtran/IEEEexample.bib
-share/texmf-dist/bibtex/bib/IEEEtran/IEEEfull.bib
-share/texmf-dist/bibtex/bst/IEEEtran/IEEEtran.bst
-share/texmf-dist/bibtex/bst/IEEEtran/IEEEtranN.bst
-share/texmf-dist/bibtex/bst/IEEEtran/IEEEtranS.bst
-share/texmf-dist/bibtex/bst/IEEEtran/IEEEtranSA.bst
-share/texmf-dist/bibtex/bst/IEEEtran/IEEEtranSN.bst
-share/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
-share/texmf-dist/tex/latex/IEEEtran/IEEEtrantools.sty
+@comment $NetBSD: PLIST,v 1.8 2022/04/14 04:37:28 markd Exp $
+share/texmf-dist/bibtex/bib/ieeetran/IEEEabrv.bib
+share/texmf-dist/bibtex/bib/ieeetran/IEEEexample.bib
+share/texmf-dist/bibtex/bib/ieeetran/IEEEfull.bib
+share/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst
+share/texmf-dist/bibtex/bst/ieeetran/IEEEtranN.bst
+share/texmf-dist/bibtex/bst/ieeetran/IEEEtranS.bst
+share/texmf-dist/bibtex/bst/ieeetran/IEEEtranSA.bst
+share/texmf-dist/bibtex/bst/ieeetran/IEEEtranSN.bst
+share/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
+share/texmf-dist/tex/latex/ieeetran/IEEEtrantools.sty
