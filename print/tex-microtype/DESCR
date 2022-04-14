@@ -1,9 +1,20 @@
-The package provides a LaTeX interface to pdfTeX's micro-typographic
-extensions: character protrusion and font expansion.  The package allows
-you to restrict character protrusion and/or font expansion to a certain
-set of fonts, or to certain parts of the document (for example, based on
-selected language), and to configure micro-typographic aspects of the
-fonts in a straight-forward and flexible way.  Settings for various fonts
-are provided.  The bundle also provides a letterspace package; this
-improves on the alternatives (letterspacing and soul), and also provides
-a means of protecting ligatures--notably those in fraktur fonts.
+The package provides a LaTeX interface to the micro-typographic
+extensions that were introduced by pdfTeX and have since also
+propagated to XeTeX and LuaTeX: most prominently, character
+protrusion and font expansion, furthermore the adjustment of
+interword spacing and additional kerning, as well as
+hyphenatable letterspacing (tracking) and the possibility to
+disable all or selected ligatures. These features may be
+applied to customisable sets of fonts, and all
+micro-typographic aspects of the fonts can be configured in a
+straight-forward and flexible way. Settings for various fonts
+are provided. Note that character protrusion requires pdfTeX,
+LuaTeX, or XeTeX. Font expansion works with pdfTeX or LuaTeX.
+The package will by default enable protrusion and expansion if
+they can safely be assumed to work. Disabling ligatures
+requires pdfTeX or LuaTeX, while the adjustment of interword
+spacing and of kerning only works with pdfTeX. Letterspacing is
+available with pdfTeX or LuaTeX. The alternative package
+'letterspace', which also works with plain TeX, provides the
+user commands for letterspacing only, omitting support for all
+other extensions.
