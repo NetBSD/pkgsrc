@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2022/04/14 20:13:19 nikita Exp $
+
+To use the Emacs ats mode add the following to your .emacs file:
+
+  (load-file "/usr/pkg/share/emacs/site-lisp/ats2-mode/ats2-mode.el")
+  (require 'ats-mode)
+
+===========================================================================
