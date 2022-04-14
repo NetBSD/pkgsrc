@@ -1,9 +1,9 @@
 This package (once part of the exsheets package), provides a
 framework for providing multilingual features to a LaTeX
 package. The package has its own basic dictionaries for
-English, Dutch, French, German and Spanish; it aims to use
-translation material for English, Dutch, French, German,
-Italian, Spanish, Catalan, Turkish, Croatian, Hungarian, Danish
-and Portuguese from babel or polyglossia if either is in use in
-the document. (Additional languages from the multilingual
-packages may be possible: ask the author.)
+English, Brazilian, Catalan, Dutch, French, German and Spanish;
+it aims to use translation material for English, Dutch, French,
+German, Italian, Spanish, Catalan, Turkish, Croatian,
+Hungarian, Danish and Portuguese from babel or polyglossia if
+either is in use in the document. (Additional languages from
+the multilingual packages may be possible: ask the author.)
