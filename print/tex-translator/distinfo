@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:14:57 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/04/14 03:42:24 markd Exp $
 
-BLAKE2s (translator.r56052.tar.xz) = 1107d31731ba0f8ad04d5ce9beefff26d01762e9cdd52ed99d1e46336f5ac5a6
-SHA512 (translator.r56052.tar.xz) = 87eb30409270c63236f5933a52d7815b529a4aca0d7ecc2cb7cb69199d0597684cd48e25b2f00be80024f734d2f4067650adf457ef942aa8477359a6be20d886
-Size (translator.r56052.tar.xz) = 25580 bytes
+BLAKE2s (translator.r59412.tar.xz) = 39352a58e493376c54cfdd76acd8df9f8f41a07168d02c1f4a68ba58861d2baa
+SHA512 (translator.r59412.tar.xz) = 5700b0b8a95b244c93f17c5e1bfc74d4defec842892eec358b308dc55f45ffd5bef050a1ed938c9100cad771ce5ccd53bfcc917083a9ba23a60a3b339d241f2f
+Size (translator.r59412.tar.xz) = 28304 bytes
