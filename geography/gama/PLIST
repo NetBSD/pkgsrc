@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2021/01/24 14:52:25 gdt Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/04/14 12:34:16 gdt Exp $
+bin/cmp_xml_file
 bin/gama-g3
 bin/gama-local
 bin/gama-local-gkf2yaml
 bin/gama-local-xml2sql
 bin/gama-local-xml2txt
 bin/gama-local-yaml2gkf
+bin/krumm2gama-local
 info/gama.info
