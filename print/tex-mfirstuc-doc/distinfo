@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:14:04 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/14 02:38:45 markd Exp $
 
-BLAKE2s (tex-mfirstuc-45803/mfirstuc.doc.tar.xz) = 7c6253d624967721a2bd7aa132f3b91832fd2e364fc8511b29ea57b0a88be306
-SHA512 (tex-mfirstuc-45803/mfirstuc.doc.tar.xz) = 41f1e68878866fa567acb407b71f49336ed50b05bb6260b3169c35c32e94844e6d3739d34451b9be8b1207e90591eb02c6c2679ec9aa43e262df26589d4c9c39
-Size (tex-mfirstuc-45803/mfirstuc.doc.tar.xz) = 661836 bytes
+BLAKE2s (mfirstuc.doc.r60770.tar.xz) = 2c301605cf994c300417752974a164caa4630ae38e14fd61a2e2b434099d1165
+SHA512 (mfirstuc.doc.r60770.tar.xz) = 227110ec17f336a9c443bfdf6294259a45457fbbfd33c14bbc2d7c58d28bfd6cb83182ef6c6a09e3ca89dff6fb98a807304bb41695e1d823bd80c17a1f5a862d
+Size (mfirstuc.doc.r60770.tar.xz) = 676092 bytes
