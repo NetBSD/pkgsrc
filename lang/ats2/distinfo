@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2022/04/14 17:29:10 nikita Exp $
+
+BLAKE2s (ATS2-Postiats-0.4.2.tgz) = 12c4fab8256534f03139c3276c1a2376d4d4dc2101e106d763da5fc0082240d6
+SHA512 (ATS2-Postiats-0.4.2.tgz) = 10d00e53105edb4c471d3f3b0c437a12e5a7a596b69c423976ea81887aa7e2baf22aa7860e9a73fb45873ff2e439c2e3644e8126bff9997c35d2d01c2d923a23
+Size (ATS2-Postiats-0.4.2.tgz) = 4530964 bytes
+SHA1 (patch-Makefile) = 6695c27284c2e5f765439f0d2b77c3bda3c2a5ed

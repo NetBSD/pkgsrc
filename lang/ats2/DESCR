@@ -1,0 +1,14 @@
+ATS is a statically typed programming language that unifies
+implementation with formal specification. It is equipped with
+a highly expressive type system rooted in the framework Applied
+Type System, which gives the language its name. In particular,
+both dependent types and linear types are available in ATS.
+
+In addition, ATS contains a subsystem ATS/LF that supports a form
+of (interactive) theorem-proving, where proofs are constructed as
+total functions. With this subsystem, ATS is able to advocate a
+programmer-centric approach to program verification that combines
+programming with theorem-proving in a syntactically intertwined
+manner. Furthermore, ATS/LF can also serve as a logical framework
+(LF) for encoding various formal systems (such as logic systems
+and type systems) together with proofs of their (meta-)properties.
