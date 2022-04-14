@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:07:57 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/04/14 00:50:00 tnn Exp $
 
-BLAKE2s (crosstool-ng-esp32-2019r1.tar.gz) = bed8d08d2fc99b7b787a0e112e6e94951fdfdd067e3e0393b3cb54a61c05beec
-SHA512 (crosstool-ng-esp32-2019r1.tar.gz) = ff4dc1a31db96449ca6334296315d0edc1afdd4eef23fd0a3f8c327648f023dc732d9f25da4713d918eae764c31c6a5bea1245578185b267072f6b2b7d93c155
-Size (crosstool-ng-esp32-2019r1.tar.gz) = 2494124 bytes
-BLAKE2s (espressif-gcc-8.2.0-35d9a8eb86910a6acac7579f22f8e88a92dbb251.tar.gz) = 35463882631ffc6a5b3ba517ffc503e06928efabaef578ee2a472ee0fddedc14
-SHA512 (espressif-gcc-8.2.0-35d9a8eb86910a6acac7579f22f8e88a92dbb251.tar.gz) = 65c30b988f22718da2a59a8161406080f35e6850111d2fdb6607e085975c2daff277b853bd24ff9856405abc24726d8e2f5caca397afd0c92f0798d03e428c29
-Size (espressif-gcc-8.2.0-35d9a8eb86910a6acac7579f22f8e88a92dbb251.tar.gz) = 102473573 bytes
-BLAKE2s (newlib-esp32-2019r1_newlib-3_0_0.tar.gz) = e689211a8bf041bf687bec3f074d74aae0dfb7578cc5215d3a9b0ad0dd7d986c
-SHA512 (newlib-esp32-2019r1_newlib-3_0_0.tar.gz) = d08ed86765d939f3d5cd42d69b9ba0c1b87e75a8e258baf2ee5fd75dbd2f298da36a7c704dd3944570fc5359292a3795f9de0aa7208baf20c013b37c3f925ff4
-Size (newlib-esp32-2019r1_newlib-3_0_0.tar.gz) = 21247297 bytes
-SHA1 (patch-configure) = e8ce6b8126845e03bbaa28569074fada93466d85
-SHA1 (patch-contrib_download__prerequisites) = be9b02068b3d4d783e92bee66d480bb2bfe35a84
+BLAKE2s (crosstool-NG-esp-2021r2-patch3.tar.gz) = 2013c2818fd818473d5a6d923108f6c80bd6b62345a1e2a835bb4ba9a5f104b7
+SHA512 (crosstool-NG-esp-2021r2-patch3.tar.gz) = 65a4c60151fb13311c21092c9b575fa29cac1beb9642ed73940c2d5fb5b11b8129b73ccfab847a02fb99d0a6b596b98d7f54c40fdcf304a2b667ca78746ed2cb
+Size (crosstool-NG-esp-2021r2-patch3.tar.gz) = 3145346 bytes
+BLAKE2s (espressif-gcc-8.4.0-f9333cfc1a790dff864aea3478cb862cc442be30.tar.gz) = bf9fb66a7c0042cfc762adf67e2c3f8df15be176d4c3f95e15dd3d75908ea970
+SHA512 (espressif-gcc-8.4.0-f9333cfc1a790dff864aea3478cb862cc442be30.tar.gz) = 304af9506b6e69d7405eef87ca558d8467438a3bc4dfe98e1cff22a9b1250f4f72e9aa0908a157a4c1d1b21387116335de0745ba7bafb6af0fce5cee43f71be2
+Size (espressif-gcc-8.4.0-f9333cfc1a790dff864aea3478cb862cc442be30.tar.gz) = 102886468 bytes
+BLAKE2s (newlib-esp32-2021r2-patch3_newlib-3_3_0.tar.gz) = f49c5ba7d678b9d05e6eb6abf543e5fc24ca4af1ca1d172edd028fe5f9396e1c
+SHA512 (newlib-esp32-2021r2-patch3_newlib-3_3_0.tar.gz) = 24e2200b5e16db12a40ada1a03d01389214859382d06f2068a57fd4e8d87e4f74bf963e139fbfd3f24e5815ba2ead897b0ac190fc0848a1c49895ed0c8ab54ac
+Size (newlib-esp32-2021r2-patch3_newlib-3_3_0.tar.gz) = 21938580 bytes
 SHA1 (patch-gcc_system.h) = 72a75ff773b9b5f3d2f16f4ec7d29e032aba5f53
+SHA1 (patch-newlib_libc_posix_collate.c) = 2916597f1ca3b7beb2f67a457d8f448e1da8f896
+SHA1 (patch-newlib_libc_posix_regcomp.c) = acb145e6ac4a74b545ac335e034180166c20904d
