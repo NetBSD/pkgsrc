@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1835 2022/04/14 12:34:23 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.1836 2022/04/14 12:45:59 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2717,3 +2717,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/lua-mode to 20210802 [nikita 2022-04-14]
 	Updated sysutils/xplr to 0.17.4 [pin 2022-04-14]
 	Updated geography/gama to 2.18 [gdt 2022-04-14]
+	Added misc/bbdb3 version 3.2.2a [nikita 2022-04-14]
+	Updated misc/bbdb3 to 3.2.2a [nikita 2022-04-14]
