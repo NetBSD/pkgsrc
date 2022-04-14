@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2021/02/20 10:30:42 markd Exp $
+# $NetBSD: Makefile,v 1.10 2022/04/14 02:50:50 markd Exp $
 
 DISTNAME=	moderncv
-PKGNAME=	tex-${DISTNAME}-2.1.0
-TEXLIVE_REV=	57496
+PKGNAME=	tex-${DISTNAME}-2.3.1
+TEXLIVE_REV=	62128
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/moderncv
-COMMENT=	Modern CV latex class
+COMMENT=	Modern curriculum vitae class
 LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-changepage-[0-9]*:../../print/tex-changepage
