@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 11:12:19 nia Exp $
+$NetBSD: distinfo,v 1.16 2022/04/14 04:37:28 markd Exp $
 
-BLAKE2s (tex-IEEEtran-38238/IEEEtran.tar.xz) = 5193cff5087fcc702fb3d047795654ceb841202e765853b7d17cd176f265b282
-SHA512 (tex-IEEEtran-38238/IEEEtran.tar.xz) = 57aae8dd833d092e225714d26292886e2bf0b5a1e8424392cb71c70b394b10cc42de1b823c62fba54042fa7981a169c6146a261d951ee87a9166bd51d303faf4
-Size (tex-IEEEtran-38238/IEEEtran.tar.xz) = 89352 bytes
+BLAKE2s (ieeetran.r59672.tar.xz) = 33c7c05edb1ecee8db6bba2a2e10a6aa3d2a882b2c374a402822bf2d5ec6cdd2
+SHA512 (ieeetran.r59672.tar.xz) = d688e4be2d145652c16b028cccd05ec5f41a94ca190caff0c6b3fbadaa5c859516a28e4555569d072dd1d550c8794c1ddaaefecce49945284dd304938360f419
+Size (ieeetran.r59672.tar.xz) = 89348 bytes
