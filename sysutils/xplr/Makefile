@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.43 2022/02/28 08:28:01 pin Exp $
+# $NetBSD: Makefile,v 1.44 2022/04/14 10:59:06 pin Exp $
 
-DISTNAME=	xplr-0.17.3
+DISTNAME=	xplr-0.17.4
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sayanarijit/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
-HOMEPAGE=	https://github.com/sayanarijit/xplr/
+HOMEPAGE=	https://xplr.dev/
 COMMENT=	Hackable, minimal, fast TUI file explorer
 LICENSE=	mit
 
