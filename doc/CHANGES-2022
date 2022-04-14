@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1838 2022/04/14 13:54:08 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.1839 2022/04/14 15:05:49 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2719,3 +2719,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated geography/gama to 2.18 [gdt 2022-04-14]
 	Added misc/bbdb3 version 3.2.2a [nikita 2022-04-14]
 	Added devel/zig-mode version 0.0.20220105 [nikita 2022-04-14]
+	Updated devel/R-Rcpp to 1.0.8.3 [mef 2022-04-14]
