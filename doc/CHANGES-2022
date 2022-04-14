@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1825 2022/04/13 19:46:35 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1826 2022/04/14 00:53:43 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2605,3 +2605,9 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-validate-pyproject to 0.7.2 [adam 2022-04-13]
 	Updated devel/py-click to 8.1.2 [adam 2022-04-13]
 	Updated finance/py-braintree to 4.15.2 [adam 2022-04-13]
+	Updated cross/xtensa-esp32-elf-binutils to 2.35.2 [tnn 2022-04-13]
+	Added cross/xtensa-esp32s2-elf-binutils version 2.35.2 [tnn 2022-04-13]
+	Added cross/xtensa-esp32s3-elf-binutils version 2.35.2 [tnn 2022-04-13]
+	Updated cross/xtensa-esp32-elf-gcc to 8.4.0 [tnn 2022-04-13]
+	Added cross/xtensa-esp32s2-elf-gcc version 8.4.0 [tnn 2022-04-13]
+	Added cross/xtensa-esp32s3-elf-gcc version 8.4.0 [tnn 2022-04-14]
