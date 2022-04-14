@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1844 2022/04/14 17:30:44 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.1845 2022/04/14 20:39:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2725,3 +2725,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated ham/xlog to 2.0.24 [mef 2022-04-14]
 	Updated graphics/libansilove to 1.3.0 [fcambus 2022-04-14]
 	Added lang/ats2 version 0.4.2 [nikita 2022-04-14]
+	Updated devel/py-poetry-core to 1.0.8 [adam 2022-04-14]
+	Updated devel/py-poetry to 1.1.13 [adam 2022-04-14]
+	Updated security/py-signedjson to 1.1.4 [adam 2022-04-14]
+	Updated devel/py-packageurl to 0.9.9 [adam 2022-04-14]
