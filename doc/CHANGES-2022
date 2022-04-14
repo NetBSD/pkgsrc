@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1827 2022/04/14 03:43:55 markd Exp $
+$NetBSD: CHANGES-2022,v 1.1828 2022/04/14 07:04:31 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2683,3 +2683,29 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/tex-translations-doc to 1.12 [markd 2022-04-14]
 	Updated print/tex-translator to 1.12d [markd 2022-04-14]
 	Updated print/tex-translator-doc to 1.12d [markd 2022-04-14]
+	Updated print/tex-bxghost to 0.4.0 [markd 2022-04-14]
+	Updated print/tex-bxghost-doc to 0.4.0 [markd 2022-04-14]
+	Updated print/tex-bxjscls to 2.7a [markd 2022-04-14]
+	Updated print/tex-bxjscls-doc to 2.7a [markd 2022-04-14]
+	Updated print/tex-bxorigcapt to 0.4 [markd 2022-04-14]
+	Updated print/tex-bxorigcapt-doc to 0.4 [markd 2022-04-14]
+	Updated print/tex-caption to 20220317 [markd 2022-04-14]
+	Updated print/tex-caption-doc to 20220317 [markd 2022-04-14]
+	Updated graphics/tex-tkz-base to 4.05b [markd 2022-04-14]
+	Updated graphics/tex-tkz-base-doc to 4.05b [markd 2022-04-14]
+	Updated graphics/tex-tkz-fct to 1.7c [markd 2022-04-14]
+	Updated graphics/tex-tkz-fct-doc to 1.7c [markd 2022-04-14]
+	Updated print/tex-unicode-data to 1.15 [markd 2022-04-14]
+	Updated print/tex-unicode-data-doc to 1.15 [markd 2022-04-14]
+	Updated fonts/tex-xcharter to 1.230 [markd 2022-04-14]
+	Updated fonts/tex-xcharter-doc to 1.230 [markd 2022-04-14]
+	Updated print/tex-xcolor to 2.13 [markd 2022-04-14]
+	Updated print/tex-xcolor-doc to 2.13 [markd 2022-04-14]
+	Updated print/tex-xstring to 1.84 [markd 2022-04-14]
+	Updated print/tex-xstring-doc to 1.84 [markd 2022-04-14]
+	Updated fonts/tex-zlmtt to 1.031 [markd 2022-04-14]
+	Updated fonts/tex-zlmtt-doc to 1.031 [markd 2022-04-14]
+	Updated print/tex-zref to 2.34 [markd 2022-04-14]
+	Updated print/tex-zref-doc to 2.34 [markd 2022-04-14]
+	Updated print/tex-zxjafont to 1.3 [markd 2022-04-14]
+	Updated print/tex-zxjafont-doc to 1.3 [markd 2022-04-14]
