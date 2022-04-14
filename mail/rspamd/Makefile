@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2021/12/21 15:00:41 triaxx Exp $
+# $NetBSD: Makefile,v 1.79 2022/04/14 06:29:19 nia Exp $
 
 DISTNAME=	rspamd-3.1
 CATEGORIES=	mail
@@ -20,6 +20,13 @@ USE_LANGUAGES=	c99 c++
 BUILD_DEFS+=	VARBASE
 
 LUA_VERSIONS_ACCEPTED=	54 53 52 51
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099915
+USE_PKGSRC_GCC=		yes
+USE_PKGSRC_GCC_RUNTIME=	yes
+.endif
 
 CPPFLAGS.SunOS+=			-D__EXTENSIONS__
 
