@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2019/12/06 20:21:49 markd Exp $
+# $NetBSD: Makefile,v 1.5 2022/04/14 02:01:03 markd Exp $
 
 DISTNAME=	lastpage.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.2m
-TEXLIVE_REV=	36680
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.2n
+TEXLIVE_REV=	60414
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	https://ctan.org/pkg/lastpage
 COMMENT=	Documentation for tex-lastpage
 LICENSE=	lppl-1.3c
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
