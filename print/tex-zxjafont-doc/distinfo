@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:15:11 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/04/14 07:03:43 markd Exp $
 
-BLAKE2s (zxjafont.doc.r53884.tar.xz) = 4e28ea1a46aaac5db2135f86dd7333bb08863a92c3c54d7af5bccc4a62e2ab25
-SHA512 (zxjafont.doc.r53884.tar.xz) = c1cc759857b60c123ae798e1a9168f85e7fa663b875f241a8d5160b14cf366bcc282d09b9e527469986ee268b160cadc89a906facf8f38bd76ffb9d07e0a7ffa
-Size (zxjafont.doc.r53884.tar.xz) = 179452 bytes
+BLAKE2s (zxjafont.doc.r62864.tar.xz) = 9b180e86c7c49ad654b5da12250c00373e01c6fdeb61af9d074dc9e13a23b477
+SHA512 (zxjafont.doc.r62864.tar.xz) = 598a13775cac68ae6f176bd01b609373a4033583a83ed42f7914b15a01776d40b0c7200258dd68563510b2a3c11ec29a25ab3b26477650b60652e7332ef3f131
+Size (zxjafont.doc.r62864.tar.xz) = 171908 bytes
