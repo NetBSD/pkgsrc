@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:47:19 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/04/14 03:31:41 markd Exp $
 
-BLAKE2s (tex-tikzsymbols-49975/tikzsymbols.tar.xz) = 1722815af60de1e41699e0cd263618b84ca3ffe2e67599f02402e05d0b5c9154
-SHA512 (tex-tikzsymbols-49975/tikzsymbols.tar.xz) = ef8a3d26ceee10c8336a3afb01891cc6d81d3235b1da1e871b7f1bae95d04aadc33f9a454357aed4e08d46962cdd997de651831dbb361bf3a085bbde4c066510
-Size (tex-tikzsymbols-49975/tikzsymbols.tar.xz) = 14012 bytes
+BLAKE2s (tikzsymbols.r61300.tar.xz) = 8158d4aa411b22e51e656cf09307bc6c127230f7ea603ccadbecc8c7eb5f6dcb
+SHA512 (tikzsymbols.r61300.tar.xz) = 4e1a479e6e238026dfbdcf152d63c8b67419919f74bffe3c259828a5ab6bec62955cfe5f5a7f407646fc2e5b742fd009280ec4a57cf708317bd9dad95a35a1b2
+Size (tikzsymbols.r61300.tar.xz) = 14852 bytes
