@@ -1,4 +1,12 @@
-Tools to typeset documents in Polish using LaTeX2e with Polish
-fonts (the so-called PL fonts), EC fonts or CM fonts. (This
-package was previously known as platex, but has been renamed to
-resolve a name clash.)
+Tools to typeset monolingual Polish documents in LaTeX2e
+without babel or polyglossia. The package loads Polish
+hyphenation patterns, ensures that a font encoding suitable for
+Polish is used; in particular it enables Polish adaptation of
+Computer Modern fonts (the so-called PL fonts), provides
+translations of \today and names like "Bibliography" or
+"Chapter", redefines math symbols according to Polish
+typographical tradition, provides macros for dashes according
+to Polish orthography, provides a historical input method for
+"Polish characters", works with traditional TeX as well as with
+Unicode aware variants. (This package was previously known as
+platex, but has been renamed to resolve a name clash.)
