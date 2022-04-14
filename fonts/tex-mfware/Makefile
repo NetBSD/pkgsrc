@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2020/05/21 10:32:20 markd Exp $
+# $NetBSD: Makefile,v 1.11 2022/04/14 02:40:23 markd Exp $
 
 DISTNAME=	mfware
-PKGNAME=	tex-${DISTNAME}-2020
-TEXLIVE_REV=	54994
+PKGNAME=	tex-${DISTNAME}-2021
+TEXLIVE_REV=	62387
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/mfware
