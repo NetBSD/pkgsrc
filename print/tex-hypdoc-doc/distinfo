@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/14 05:02:59 markd Exp $
+
+BLAKE2s (hypdoc.doc.r61077.tar.xz) = 4e340b457cd51297921a93c52d31c00104eee1b047a783f620bb45d1265fa71e
+SHA512 (hypdoc.doc.r61077.tar.xz) = 1239c2766d9e150655bf185091da1e8ce7b55da3acf023121d19dec284a4ffe11fb0053ecff85878aaf2beefcce90ef14de7d1b631563676088c2e7fae9d43af
+Size (hypdoc.doc.r61077.tar.xz) = 322512 bytes
