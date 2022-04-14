@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:28:17 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/04/14 02:59:40 markd Exp $
 
-BLAKE2s (tex-musixtex-fonts-37762/musixtex-fonts.tar.xz) = 2e7528ffa6dc9e88bf0d43b130e793dee8b6003b0d1b9bd6d0cd85da74f47ac7
-SHA512 (tex-musixtex-fonts-37762/musixtex-fonts.tar.xz) = 9e2b128de38d2dbdd73c35a0b32b79a5ce290de6be388ea1c61118547960b330f4c3163ac33d5a8cd32db3037f839f8f0590c48237b14ee15738fc8d0d7dfb5e
-Size (tex-musixtex-fonts-37762/musixtex-fonts.tar.xz) = 4183288 bytes
+BLAKE2s (musixtex-fonts.r60381.tar.xz) = 558a13a493a5b73178b58f19a51adbe848d30987c8e4699fd2e0e95d017b3eae
+SHA512 (musixtex-fonts.r60381.tar.xz) = fb78a536fb7e5527472af46d89d97c6f932f2d72318d285039b7ce8cde842cf5df0e4ab780433319fb65b6b5fb226efa7634e006cf5831a22fae7dee6e9a2f05
+Size (musixtex-fonts.r60381.tar.xz) = 5066212 bytes
