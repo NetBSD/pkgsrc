@@ -1,0 +1,97 @@
+# $NetBSD: Makefile.common,v 1.1 2022/04/14 00:50:00 tnn Exp $
+
+# used by cross/xtensa-esp32-elf-gcc/Makefile
+# used by cross/xtensa-esp32s2-elf-gcc/Makefile
+# used by cross/xtensa-esp32s3-elf-gcc/Makefile
+
+# We could use the upstream GCC distfile, but Espressif has important vendor
+# patches in their branch and it seems not worth the maintenance overhead to
+# extract them and put them in pkgsrc.
+#DISTNAME=		gcc-8.3.0
+#MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${PKGVERSION_NOREV}/}
+#EXTRACT_SUFX=		.tar.xz
+
+DISTNAME=		espressif-gcc-8.4.0
+PKGNAME=		${DISTNAME:C/.*gcc/xtensa-${ESP32_TYPE}-elf-gcc/}
+CATEGORIES=		cross
+MASTER_SITES=		${MASTER_SITE_GITHUB:=espressif/}
+GITHUB_PROJECT=		gcc
+GITHUB_TAG=		f9333cfc1a790dff864aea3478cb862cc442be30
+# Espressif overlays
+DISTFILES=		${DEFAULT_DISTFILES}
+DISTFILES+=		crosstool-NG-esp-2021r2-patch3.tar.gz
+SITES.crosstool-NG-esp-2021r2-patch3.tar.gz=	\
+	-https://github.com/espressif/crosstool-NG/releases/download/esp-2021r2-patch3/crosstool-NG-esp-2021r2-patch3.tar.gz
+# Custom ESP32 newlib
+DISTFILES+=		newlib-${NEWLIBVER}.tar.gz
+NEWLIBVER=		esp32-2021r2-patch3_newlib-3_3_0
+SITES.newlib-${NEWLIBVER}.tar.gz= \
+	-https://github.com/espressif/newlib-esp32/archive/8a3197a2a9a42dd99605cf8cc1e0f2d3c976c58c.tar.gz
+
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		https://github.com/espressif/gcc
+COMMENT=		Cross GCC for Espressif ${ESP32_TYPE:tu} bare metal environment
+LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
+
+DEPENDS+=	xtensa-${ESP32_TYPE}-elf-binutils>=2.35.2:../../cross/xtensa-${ESP32_TYPE}-elf-binutils
+
+GNU_CONFIGURE=		yes
+INFO_FILES=		yes
+USE_LANGUAGES+=		c c++
+USE_TOOLS+=		bash gmake makeinfo perl
+
+PATCHDIR=	${.CURDIR}/../../cross/xtensa-esp32-elf-gcc/patches
+DISTINFO_FILE=	${.CURDIR}/../../cross/xtensa-esp32-elf-gcc/distinfo
+DESCR_SRC=	${.CURDIR}/../../cross/xtensa-esp32-elf-gcc/DESCR
+
+# for http://gcc.gnu.org/bugzilla/show_bug.cgi?id=33549
+# use makeinfo from pkgsrc/devel/gtexinfo.
+TOOL_DEPENDS+=		gtexinfo>=5.1:../../devel/gtexinfo
+_TOOLS_USE_PKGSRC.makeinfo= yes
+
+OBJDIR=			../build
+CONFIGURE_DIRS=		${OBJDIR}
+CONFIGURE_SCRIPT=	${WRKSRC}/configure
+CONFIG_SHELL=		${TOOLS_PATH.bash}
+WRAPPER_SHELL=		${TOOLS_PATH.bash}
+GNU_CONFIGURE_PREFIX=	${PREFIX}/xtensa-${ESP32_TYPE}-elf
+
+# This is based on "gcc -v" output from the binary release
+# xtensa-esp32-elf-gcc8_4_0-esp-2021r2-patch3-linux-amd64.tar.gz
+CONFIGURE_ARGS+=	--target=xtensa-${ESP32_TYPE}-elf
+CONFIGURE_ARGS+=	--with-newlib
+CONFIGURE_ARGS+=	--enable-threads=no
+CONFIGURE_ARGS+=	--disable-shared
+CONFIGURE_ARGS+=	--disable-__cxa_atexit
+CONFIGURE_ARGS+=	--enable-cxx-flags="-ffunction-sections"
+CONFIGURE_ARGS+=	--disable-libgomp
+CONFIGURE_ARGS+=	--disable-libmudflap
+CONFIGURE_ARGS+=	--disable-libmpx
+CONFIGURE_ARGS+=	--disable-libssp
+CONFIGURE_ARGS+=	--disable-libquadmath
+CONFIGURE_ARGS+=	--disable-libquadmath-support
+CONFIGURE_ARGS+=	--enable-lto
+CONFIGURE_ARGS+=	--enable-target-optspace
+CONFIGURE_ARGS+=	--without-long-double-128
+CONFIGURE_ARGS+=	--disable-nls
+CONFIGURE_ARGS+=	--enable-multiarch
+CONFIGURE_ARGS+=	--enable-languages=c,c++
+CONFIGURE_ARGS+=	--disable-libstdcxx-verbose
+CONFIGURE_ARGS+=	--enable-threads=posix
+CONFIGURE_ARGS+=	--enable-gcov-custom-rtio
+CONFIGURE_ARGS+=	--enable-libstdcxx-time=yes
+
+CHECK_PORTABILITY_SKIP+=	contrib/*
+
+post-extract:
+	mv ${WRKDIR}/newlib-*/newlib ${WRKSRC}/newlib
+	mv ${WRKDIR}/newlib-*/libgloss ${WRKSRC}/libgloss
+	${CP} -r ${WRKDIR}/overlays/xtensa_${ESP32_TYPE}/gcc/. ${WRKSRC}/.
+	${CP} -r ${WRKDIR}/overlays/xtensa_${ESP32_TYPE}/newlib/. ${WRKSRC}/.
+
+pre-configure:
+	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
+
+.include "../../devel/gmp/buildlink3.mk"
+.include "../../math/mpfr/buildlink3.mk"
+.include "../../math/mpcomplex/buildlink3.mk"
