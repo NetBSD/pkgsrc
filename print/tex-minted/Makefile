@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2021/04/06 15:03:32 adam Exp $
+# $NetBSD: Makefile,v 1.12 2022/04/14 02:48:26 markd Exp $
 
 DISTNAME=	minted
-PKGNAME=	tex-${DISTNAME}-2.5
-PKGREVISION=	1
-TEXLIVE_REV=	44855
+PKGNAME=	tex-${DISTNAME}-2.6
+TEXLIVE_REV=	61405
 
-MAINTAINER=	markd@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/minted
 COMMENT=	Highlighted source code for LaTeX
 LICENSE=	lppl-1.3c
@@ -17,8 +16,6 @@ DEPENDS+=	tex-ifplatform-[0-9]*:../../print/tex-ifplatform
 DEPENDS+=	tex-lineno-[0-9]*:../../print/tex-lineno
 DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
 DEPENDS+=	tex-xstring-[0-9]*:../../print/tex-xstring
-
-TEXLIVE_UNVERSIONED=	yes
 
 PYTHON_VERSIONED_DEPENDENCIES=	pygments
 
