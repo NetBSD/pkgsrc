@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:47:07 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/14 03:13:24 markd Exp $
 
-BLAKE2s (tex-pictex-21943/pictex.tar.xz) = dc1b6244a7a2a5800741509e1b174bf791d2da3900d6aebfe2b3c4825c88714b
-SHA512 (tex-pictex-21943/pictex.tar.xz) = d5854426024369965592242c523f384890484046696f4721fb3139c9de2fbd86434589e466f2875376bfd7ea90d478b06f076ab40df951bb1dfe40bea9dc2b14
-Size (tex-pictex-21943/pictex.tar.xz) = 41424 bytes
+BLAKE2s (pictex.r59551.tar.xz) = fe03a8afbb9bb6a7596c49ea283b407769a4b59667d61e773487df8cad4acb89
+SHA512 (pictex.r59551.tar.xz) = cca6216568bead5120ef39eb2743897ad97d285b55e7d9b0723b3f6c7fa94ab17cb8cecb946845aefc57eae3c69305de6d839feb9df8212be83d2c7f242c2fd4
+Size (pictex.r59551.tar.xz) = 41444 bytes
