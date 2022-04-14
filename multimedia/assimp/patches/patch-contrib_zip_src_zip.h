@@ -1,22 +1,20 @@
-$NetBSD: patch-contrib_zip_src_zip.h,v 1.2 2021/01/10 05:20:00 gutteridge Exp $
+$NetBSD: patch-contrib_zip_src_zip.h,v 1.3 2022/04/14 13:20:42 nros Exp $
 
 Fix builds on some 32-bit architectures.
 
---- contrib/zip/src/zip.h.orig	2020-01-12 11:56:40.000000000 +0000
+--- contrib/zip/src/zip.h.orig	2022-03-17 10:35:44.000000000 +0000
 +++ contrib/zip/src/zip.h
-@@ -19,18 +19,6 @@
+@@ -19,16 +19,6 @@
  extern "C" {
  #endif
  
--#if !defined(_SSIZE_T_DEFINED) && !defined(_SSIZE_T_DEFINED_) &&               \
--    !defined(_SSIZE_T) && !defined(_SSIZE_T_) && !defined(__ssize_t_defined)
--#define _SSIZE_T
+-#if !defined(_POSIX_C_SOURCE) && defined(_MSC_VER)
 -// 64-bit Windows is the only mainstream platform
 -// where sizeof(long) != sizeof(void*)
 -#ifdef _WIN64
--typedef long long  ssize_t;  /* byte count or error */
+-typedef long long ssize_t; /* byte count or error */
 -#else
--typedef long  ssize_t;  /* byte count or error */
+-typedef long ssize_t; /* byte count or error */
 -#endif
 -#endif
 -
