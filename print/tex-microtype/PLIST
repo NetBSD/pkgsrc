@@ -1,17 +1,19 @@
-@comment $NetBSD: PLIST,v 1.4 2021/06/05 04:23:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/04/14 02:46:05 markd Exp $
 share/texmf-dist/tex/latex/microtype/letterspace.sty
 share/texmf-dist/tex/latex/microtype/microtype-luatex.def
 share/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+share/texmf-dist/tex/latex/microtype/microtype-show.sty
 share/texmf-dist/tex/latex/microtype/microtype-xetex.def
 share/texmf-dist/tex/latex/microtype/microtype.cfg
 share/texmf-dist/tex/latex/microtype/microtype.lua
 share/texmf-dist/tex/latex/microtype/microtype.sty
 share/texmf-dist/tex/latex/microtype/mt-CharisSIL.cfg
 share/texmf-dist/tex/latex/microtype/mt-EBGaramond.cfg
-share/texmf-dist/tex/latex/microtype/mt-FontAwesome.cfg
 share/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
-share/texmf-dist/tex/latex/microtype/mt-Lato.cfg
+share/texmf-dist/tex/latex/microtype/mt-NewComputerModern.cfg
 share/texmf-dist/tex/latex/microtype/mt-Palatino.cfg
+share/texmf-dist/tex/latex/microtype/mt-TU-basic.cfg
+share/texmf-dist/tex/latex/microtype/mt-TU-empty.cfg
 share/texmf-dist/tex/latex/microtype/mt-bch.cfg
 share/texmf-dist/tex/latex/microtype/mt-blg.cfg
 share/texmf-dist/tex/latex/microtype/mt-cmr.cfg
