@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:14:53 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/04/14 03:33:36 markd Exp $
 
-BLAKE2s (titlesec.r52413.tar.xz) = 6f123cf0812adbf888e3111784d2c7849c9594c2f8d06fe900954a2174cedc00
-SHA512 (titlesec.r52413.tar.xz) = bd1538a4596c55a6e0a542df5587f4466795a59ac55472340bcfc400670b79a04f0b141ad5705c826789ce0094fa4b106b5917f4232167a66047d8e6edd4998c
-Size (titlesec.r52413.tar.xz) = 19980 bytes
+BLAKE2s (titlesec.r59845.tar.xz) = 136586b2af0b8496dd151e941bbc5e5c1ce9f5e7c0aaed85daeb4b08cc92b00d
+SHA512 (titlesec.r59845.tar.xz) = 50af3f379bedf55c3c53809dfa5dfa8fa4ed072e232dde83f4a257b12d7b4bf06f041eb6891b95fd0efdf9420a5d252cb9688c28b91161036eee7f45516a8b86
+Size (titlesec.r59845.tar.xz) = 20028 bytes
