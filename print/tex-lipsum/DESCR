@@ -1,4 +1,3 @@
-This package gives you easy access to the Lorem Ipsum dummy
-text; an option is available to separate the paragraphs of the
-dummy text into TeX-paragraphs. All the paragraphs are taken
-with permission from http://lipsum.com/.
+This package gives you easy access to 150 paragraphs of the
+Lorem Ipsum dummy text provided by https://lipsum.com, plus a
+growing list of other dummy texts in different languages.
