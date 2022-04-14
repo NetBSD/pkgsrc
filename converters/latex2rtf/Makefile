@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2020/01/26 05:26:18 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2022/04/14 11:55:56 tnn Exp $
 
 DISTNAME=	latex2rtf-2.3.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print converters textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=latex2rtf/}
 MASTER_SITES+=	${MASTER_SITE_TEX_CTAN:=support/latex2rtf/}
@@ -18,6 +18,6 @@ REPLACE_BASH=	scripts/latex2png
 
 INSTALL_TARGET=	install install-info
 
-DEPENDS+=	stix-otf-[0-9]*:../../fonts/stix-otf
+DEPENDS+=	stixfonts-[0-9]*:../../fonts/stixfonts
 
 .include "../../mk/bsd.pkg.mk"
