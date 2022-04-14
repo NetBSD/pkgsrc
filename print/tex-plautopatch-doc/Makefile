@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/06/06 23:08:24 markd Exp $
+# $NetBSD: Makefile,v 1.3 2022/04/14 03:16:48 markd Exp $
 
 DISTNAME=	plautopatch.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.9p
-TEXLIVE_REV=	59405
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.9q
+TEXLIVE_REV=	61240
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/plautopatch
