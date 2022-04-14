@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/05/22 03:27:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/04/14 03:39:52 markd Exp $
 share/texmf-dist/doc/latex/translations/README
-share/texmf-dist/doc/latex/translations/translations_en.pdf
-share/texmf-dist/doc/latex/translations/translations_en.tex
+share/texmf-dist/doc/latex/translations/translations-manual.pdf
+share/texmf-dist/doc/latex/translations/translations-manual.tex
