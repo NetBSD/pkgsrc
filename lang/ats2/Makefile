@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/04/14 17:29:10 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/14 20:13:19 nikita Exp $
 
 DISTNAME=	ATS2-Postiats-0.4.2
+PKGNAME=	${DISTNAME:S/ATS2-Postiats/ats2/}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ats2-lang/}
 EXTRACT_SUFX=	.tgz
@@ -15,5 +16,17 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 # build is not job safe
 MAKE_JOBS_SAFE=	no
+
+.include "options.mk"
+
+.if ${PKG_OPTIONS:Memacs}
+.include "../../editors/emacs/modules.mk"
+# flycheck is not packaged, only build ats-mode.
+pre-configure:
+	cd ${WRKSRC}/utils/emacs && ${EMACS_BIN} -batch -f batch-byte-compile ats2-mode.el
+	${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}/ats2-mode
+	${INSTALL_DATA} ${WRKSRC}/utils/emacs/ats2-mode.e* \
+		${DESTDIR}${EMACS_LISPPREFIX}/ats2-mode
+.endif
 
 .include "../../mk/bsd.pkg.mk"

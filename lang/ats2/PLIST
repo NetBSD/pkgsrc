@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/04/14 17:29:10 nikita Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/04/14 20:13:19 nikita Exp $
 bin/myatscc
 bin/patscc
 bin/patsopt
@@ -1724,3 +1724,5 @@ lib/ats2-postiats-${PKGVERSION}/share/atspre_staload_libats_ML.hats
 @pkgdir lib/ats2-postiats-${PKGVERSION}/ccomp/atslib/output
 @pkgdir lib/ats2-postiats-${PKGVERSION}/ccomp/atslib/lib64
 @pkgdir lib/ats2-postiats-${PKGVERSION}/ccomp/atslib/lib32
+${PLIST.emacs}${EMACS_LISPPREFIX}/ats2-mode/ats2-mode.el
+${PLIST.emacs}${EMACS_LISPPREFIX}/ats2-mode/ats2-mode.elc
