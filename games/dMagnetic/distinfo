@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:43:53 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/04/14 08:40:04 wiz Exp $
 
-BLAKE2s (dMagnetic_0.32.tar.bz2) = c1a3f0660ae44540a1ddda23203710f384793064d9fdb5e37971e8a8da8ffce3
-SHA512 (dMagnetic_0.32.tar.bz2) = aeee63e836c43018dc7f8bfe104342be18fd336404986b9dc3bfa0c64a8ddda359fa5a0babe952baa4737f5d21d6783821763160268b73f8f32dcf5b8978e49b
-Size (dMagnetic_0.32.tar.bz2) = 89191 bytes
+BLAKE2s (dMagnetic_0.33.tar.bz2) = 453fb9dddccfc83b0c1c9461573f9e311a1681252c673f485dc0809c4e89962b
+SHA512 (dMagnetic_0.33.tar.bz2) = c35674eccf0e0a433ce9a6f87b63be69cc4d12325bb94f831b657e7784652997c8bb68eac27ae7385ff2bbb097a9ed8478c800d471620dd1e55f6e6bd2a7a154
+Size (dMagnetic_0.33.tar.bz2) = 90675 bytes
