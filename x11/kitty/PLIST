@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2022/03/14 13:28:34 pin Exp $
+@comment $NetBSD: PLIST,v 1.18 2022/04/14 07:20:39 pin Exp $
 bin/kitty
 lib/kitty/__main__.py
 lib/kitty/__main__.pyc
@@ -149,9 +149,30 @@ lib/kitty/kittens/ssh/__init__.pyo
 lib/kitty/kittens/ssh/completion.py
 lib/kitty/kittens/ssh/completion.pyc
 lib/kitty/kittens/ssh/completion.pyo
+lib/kitty/kittens/ssh/config.py
+lib/kitty/kittens/ssh/config.pyc
+lib/kitty/kittens/ssh/config.pyo
+lib/kitty/kittens/ssh/copy.py
+lib/kitty/kittens/ssh/copy.pyc
+lib/kitty/kittens/ssh/copy.pyo
 lib/kitty/kittens/ssh/main.py
 lib/kitty/kittens/ssh/main.pyc
 lib/kitty/kittens/ssh/main.pyo
+lib/kitty/kittens/ssh/options/__init__.py
+lib/kitty/kittens/ssh/options/__init__.pyc
+lib/kitty/kittens/ssh/options/__init__.pyo
+lib/kitty/kittens/ssh/options/definition.py
+lib/kitty/kittens/ssh/options/definition.pyc
+lib/kitty/kittens/ssh/options/definition.pyo
+lib/kitty/kittens/ssh/options/parse.py
+lib/kitty/kittens/ssh/options/parse.pyc
+lib/kitty/kittens/ssh/options/parse.pyo
+lib/kitty/kittens/ssh/options/types.py
+lib/kitty/kittens/ssh/options/types.pyc
+lib/kitty/kittens/ssh/options/types.pyo
+lib/kitty/kittens/ssh/options/utils.py
+lib/kitty/kittens/ssh/options/utils.pyc
+lib/kitty/kittens/ssh/options/utils.pyo
 lib/kitty/kittens/themes/__init__.py
 lib/kitty/kittens/themes/__init__.pyc
 lib/kitty/kittens/themes/__init__.pyo
@@ -504,6 +525,9 @@ lib/kitty/kitty/shell.pyo
 lib/kitty/kitty/shell_integration.py
 lib/kitty/kitty/shell_integration.pyc
 lib/kitty/kitty/shell_integration.pyo
+lib/kitty/kitty/shm.py
+lib/kitty/kitty/shm.pyc
+lib/kitty/kitty/shm.pyo
 lib/kitty/kitty/short_uuid.py
 lib/kitty/kitty/short_uuid.pyc
 lib/kitty/kitty/short_uuid.pyo
@@ -543,10 +567,18 @@ lib/kitty/logo/kitty.png
 lib/kitty/shell-integration/bash/kitty.bash
 lib/kitty/shell-integration/fish/vendor_completions.d/kitty.fish
 lib/kitty/shell-integration/fish/vendor_conf.d/kitty-shell-integration.fish
+lib/kitty/shell-integration/ssh/askpass.py
+lib/kitty/shell-integration/ssh/askpass.pyc
+lib/kitty/shell-integration/ssh/askpass.pyo
+lib/kitty/shell-integration/ssh/bootstrap-utils.sh
+lib/kitty/shell-integration/ssh/bootstrap.py
+lib/kitty/shell-integration/ssh/bootstrap.sh
+lib/kitty/shell-integration/ssh/kitty
 lib/kitty/shell-integration/zsh/.zshenv
 lib/kitty/shell-integration/zsh/completions/_kitty
 lib/kitty/shell-integration/zsh/kitty-integration
 lib/kitty/shell-integration/zsh/kitty.zsh
+lib/kitty/terminfo/kitty.terminfo
 lib/kitty/terminfo/x/xterm-kitty
 man/man1/kitty.1
 man/man5/kitty.conf.5
@@ -579,6 +611,7 @@ share/doc/kitty/html/_sources/faq.rst.txt
 share/doc/kitty/html/_sources/file-transfer-protocol.rst.txt
 share/doc/kitty/html/_sources/generated/launch.rst.txt
 share/doc/kitty/html/_sources/generated/rc.rst.txt
+share/doc/kitty/html/_sources/generated/ssh-copy.rst.txt
 share/doc/kitty/html/_sources/glossary.rst.txt
 share/doc/kitty/html/_sources/graphics-protocol.rst.txt
 share/doc/kitty/html/_sources/index.rst.txt
@@ -595,6 +628,7 @@ share/doc/kitty/html/_sources/kittens/icat.rst.txt
 share/doc/kitty/html/_sources/kittens/panel.rst.txt
 share/doc/kitty/html/_sources/kittens/query_terminal.rst.txt
 share/doc/kitty/html/_sources/kittens/remote_file.rst.txt
+share/doc/kitty/html/_sources/kittens/ssh.rst.txt
 share/doc/kitty/html/_sources/kittens/themes.rst.txt
 share/doc/kitty/html/_sources/kittens/transfer.rst.txt
 share/doc/kitty/html/_sources/kittens/unicode_input.rst.txt
@@ -660,6 +694,7 @@ share/doc/kitty/html/faq.html
 share/doc/kitty/html/file-transfer-protocol.html
 share/doc/kitty/html/generated/launch.html
 share/doc/kitty/html/generated/rc.html
+share/doc/kitty/html/generated/ssh-copy.html
 share/doc/kitty/html/genindex.html
 share/doc/kitty/html/glossary.html
 share/doc/kitty/html/graphics-protocol.html
@@ -677,6 +712,7 @@ share/doc/kitty/html/kittens/icat.html
 share/doc/kitty/html/kittens/panel.html
 share/doc/kitty/html/kittens/query_terminal.html
 share/doc/kitty/html/kittens/remote_file.html
+share/doc/kitty/html/kittens/ssh.html
 share/doc/kitty/html/kittens/themes.html
 share/doc/kitty/html/kittens/transfer.html
 share/doc/kitty/html/kittens/unicode_input.html
