@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1832 2022/04/14 09:10:40 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1833 2022/04/14 10:21:31 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2714,3 +2714,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added fonts/stixfonts version 2.13b171 [wiz 2022-04-14]
 	Removed fonts/stix-otf successor fonts/stixfonts [wiz 2022-04-14]
 	Added fonts/juliamono version 0.044 [wiz 2022-04-14]
+	Updated devel/lua-mode to 20210802 [nikita 2022-04-14]
