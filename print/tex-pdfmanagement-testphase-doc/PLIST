@@ -1,11 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2021/06/07 01:01:01 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/04/14 03:05:36 markd Exp $
 share/texmf-dist/doc/latex/pdfmanagement-testphase/CHANGELOG.md
 share/texmf-dist/doc/latex/pdfmanagement-testphase/README.md
 share/texmf-dist/doc/latex/pdfmanagement-testphase/hyperref-generic.pdf
 share/texmf-dist/doc/latex/pdfmanagement-testphase/l3backend-testphase.pdf
 share/texmf-dist/doc/latex/pdfmanagement-testphase/l3pdfannot.pdf
 share/texmf-dist/doc/latex/pdfmanagement-testphase/l3pdfdict.pdf
+share/texmf-dist/doc/latex/pdfmanagement-testphase/l3pdffield-action.pdf
 share/texmf-dist/doc/latex/pdfmanagement-testphase/l3pdffield-checkbox.pdf
+share/texmf-dist/doc/latex/pdfmanagement-testphase/l3pdffield-choice.pdf
+share/texmf-dist/doc/latex/pdfmanagement-testphase/l3pdffield-pushbutton.pdf
 share/texmf-dist/doc/latex/pdfmanagement-testphase/l3pdffield-radiobutton.pdf
 share/texmf-dist/doc/latex/pdfmanagement-testphase/l3pdffield-textfield.pdf
 share/texmf-dist/doc/latex/pdfmanagement-testphase/l3pdffield.pdf
@@ -15,5 +18,6 @@ share/texmf-dist/doc/latex/pdfmanagement-testphase/l3pdfmeta.pdf
 share/texmf-dist/doc/latex/pdfmanagement-testphase/l3pdftools.pdf
 share/texmf-dist/doc/latex/pdfmanagement-testphase/l3pdfxform.pdf
 share/texmf-dist/doc/latex/pdfmanagement-testphase/ltdocinit.pdf
+share/texmf-dist/doc/latex/pdfmanagement-testphase/output-patches-tmp-ltx.pdf
 share/texmf-dist/doc/latex/pdfmanagement-testphase/pdfmanagement-firstaid.pdf
 share/texmf-dist/doc/latex/pdfmanagement-testphase/pdfmanagement-testphase.pdf
