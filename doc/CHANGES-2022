@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1845 2022/04/14 20:39:33 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1846 2022/04/14 23:40:17 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2729,3 +2729,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-poetry to 1.1.13 [adam 2022-04-14]
 	Updated security/py-signedjson to 1.1.4 [adam 2022-04-14]
 	Updated devel/py-packageurl to 0.9.9 [adam 2022-04-14]
+	Updated devel/git to 2.35.3 [gutteridge 2022-04-14]
