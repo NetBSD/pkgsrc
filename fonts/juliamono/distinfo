@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/14 09:10:19 wiz Exp $
+
+BLAKE2s (juliamono-0.044/JuliaMono.tar.gz) = b68d4c0189fd0f6de0938fafe6c08243c23d3cee029ec54f43035b171875c22f
+SHA512 (juliamono-0.044/JuliaMono.tar.gz) = e8d595338cfb803369de361832e10352650bf78900b50a75c1eec5974a341fbbb4f3ba50a2633d89968b06c691dcf6b5d5977dda64fb34ab3200ed8700bc4ab5
+Size (juliamono-0.044/JuliaMono.tar.gz) = 28359564 bytes
