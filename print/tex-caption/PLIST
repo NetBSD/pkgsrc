@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/02/13 10:27:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/04/14 06:32:00 markd Exp $
 share/texmf-dist/tex/latex/caption/bicaption.sty
 share/texmf-dist/tex/latex/caption/caption-ams-smf.sto
 share/texmf-dist/tex/latex/caption/caption-beamer.sto
@@ -10,6 +10,21 @@ share/texmf-dist/tex/latex/caption/caption-ntg.sto
 share/texmf-dist/tex/latex/caption/caption-thesis.sto
 share/texmf-dist/tex/latex/caption/caption.sty
 share/texmf-dist/tex/latex/caption/caption2.sty
+share/texmf-dist/tex/latex/caption/caption2_1995-10-09.sty
+share/texmf-dist/tex/latex/caption/caption2_2005-10-03.sty
 share/texmf-dist/tex/latex/caption/caption3.sty
+share/texmf-dist/tex/latex/caption/caption3_2007-04-11.sty
+share/texmf-dist/tex/latex/caption/caption3_2010-01-14.sty
+share/texmf-dist/tex/latex/caption/caption3_2011-11-01.sty
+share/texmf-dist/tex/latex/caption/caption3_2019-09-01.sty
+share/texmf-dist/tex/latex/caption/caption3_2020-07-29.sty
+share/texmf-dist/tex/latex/caption/caption3_2020-10-26.sty
+share/texmf-dist/tex/latex/caption/caption_1995-04-05.sty
+share/texmf-dist/tex/latex/caption/caption_2007-04-16.sty
+share/texmf-dist/tex/latex/caption/caption_2010-01-09.sty
+share/texmf-dist/tex/latex/caption/caption_2011-11-10.sty
+share/texmf-dist/tex/latex/caption/caption_2019-09-01.sty
+share/texmf-dist/tex/latex/caption/caption_2020-07-29.sty
+share/texmf-dist/tex/latex/caption/caption_2020-10-26.sty
 share/texmf-dist/tex/latex/caption/ltcaption.sty
 share/texmf-dist/tex/latex/caption/subcaption.sty
