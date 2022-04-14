@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/14 09:01:30 wiz Exp $
+
+BLAKE2s (stixfonts-2.13b171.tar.gz) = d9d4bd51b4fa6f4471898d9e46f32ffb4c007c9500e44fd6fb449af400c49c6b
+SHA512 (stixfonts-2.13b171.tar.gz) = 6d034ce6f760ba9ea571c715eff7c9d874e20f942b97613178dfb62f059d472d4648b2f5f91ec7c2da2b4d4347465c406f0ba630cf8180244af5d6dd1a2d9d3c
+Size (stixfonts-2.13b171.tar.gz) = 73836641 bytes
