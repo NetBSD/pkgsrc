@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/02/12 02:15:02 markd Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/14 01:45:49 markd Exp $
 
 DISTNAME=	jfmutil.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.3.1
-TEXLIVE_REV=	55044
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.3.3
+TEXLIVE_REV=	60987
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/jfmutil
