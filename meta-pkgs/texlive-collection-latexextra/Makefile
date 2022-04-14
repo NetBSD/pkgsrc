@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.60 2022/04/07 03:44:04 markd Exp $
+# $NetBSD: Makefile,v 1.61 2022/04/14 05:30:07 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2021pre2
+PKGNAME=	texlive-${DISTNAME}-2021pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	59271
+TEXLIVE_REV=	62901
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -14,10 +14,6 @@ DEPENDS+=	texlive-collection-latexrecommended-[0-9]*:../../meta-pkgs/texlive-col
 DEPENDS+=	texlive-collection-pictures-[0-9]*:../../meta-pkgs/texlive-collection-pictures
 
 DEPENDS+=	tex-2up-[0-9]*:../../print/tex-2up
-# depend ESIEEcv
-# depend GS1
-# depend HA-prosper
-# depend Tabbing
 DEPENDS+=	tex-a0poster-[0-9]*:../../print/tex-a0poster
 DEPENDS+=	tex-a4wide-[0-9]*:../../print/tex-a4wide
 DEPENDS+=	tex-a5comb-[0-9]*:../../print/tex-a5comb
@@ -44,6 +40,7 @@ DEPENDS+=	tex-advdate-[0-9]*:../../print/tex-advdate
 DEPENDS+=	tex-alphalph-[0-9]*:../../print/tex-alphalph
 # depend alterqcm
 # depend altfont
+# depend altsubsup
 # depend amsaddr
 DEPENDS+=	tex-animate-[0-9]*:../../graphics/tex-animate
 DEPENDS+=	tex-anonchap-[0-9]*:../../print/tex-anonchap
@@ -64,6 +61,7 @@ DEPENDS+=	tex-askinclude-[0-9]*:../../print/tex-askinclude
 # depend assoccnt
 # depend association-matrix
 DEPENDS+=	tex-atenddvi-[0-9]*:../../print/tex-atenddvi
+# depend atendofenv
 # depend attachfile
 # depend aurl
 # depend authoraftertitle
@@ -72,6 +70,7 @@ DEPENDS+=	tex-atenddvi-[0-9]*:../../print/tex-atenddvi
 # depend autofancyhdr
 # depend autonum
 # depend autopdf
+# depend autopuncitems
 # depend avremu
 # depend axessibility
 DEPENDS+=	tex-background-[0-9]*:../../print/tex-background
@@ -88,6 +87,7 @@ DEPENDS+=	tex-background-[0-9]*:../../print/tex-background
 # depend beamerdarkthemes
 DEPENDS+=	tex-beamerposter-[0-9]*:../../print/tex-beamerposter
 # depend beamersubframe
+# depend beamertheme-arguelles
 DEPENDS+=	tex-beamertheme-cuerna-[0-9]*:../../print/tex-beamertheme-cuerna
 DEPENDS+=	tex-beamertheme-detlevcm-[0-9]*:../../print/tex-beamertheme-detlevcm
 DEPENDS+=	tex-beamertheme-epyt-[0-9]*:../../print/tex-beamertheme-epyt
@@ -98,6 +98,7 @@ DEPENDS+=	tex-beamertheme-npbt-[0-9]*:../../print/tex-beamertheme-npbt
 DEPENDS+=	tex-beamertheme-phnompenh-[0-9]*:../../print/tex-beamertheme-phnompenh
 # depend beamertheme-pure-minimalistic
 DEPENDS+=	tex-beamertheme-saintpetersburg-[0-9]*:../../print/tex-beamertheme-saintpetersburg
+# depend beamertheme-simpledarkblue
 # depend beamertheme-trigon
 DEPENDS+=	tex-beamertheme-upenn-bc-[0-9]*:../../print/tex-beamertheme-upenn-bc
 DEPENDS+=	tex-beamerthemejltree-[0-9]*:../../print/tex-beamerthemejltree
@@ -113,6 +114,7 @@ DEPENDS+=	tex-beton-[0-9]*:../../print/tex-beton
 # depend bibletext
 DEPENDS+=	tex-bigfoot-[0-9]*:../../print/tex-bigfoot
 # depend bigints
+# depend bilingualpages
 # depend biochemistry-colors
 # depend bithesis
 # depend bizcard
@@ -123,6 +125,7 @@ DEPENDS+=	tex-block-[0-9]*:../../print/tex-block
 # depend bnumexpr
 # depend boites
 DEPENDS+=	tex-bold-extra-[0-9]*:../../print/tex-bold-extra
+# depend book-of-common-prayer
 # depend bookcover
 # depend bookest
 # depend booklet
@@ -167,6 +170,7 @@ DEPENDS+=	tex-ccaption-[0-9]*:../../print/tex-ccaption
 # depend cclicenses
 # depend cd
 # depend cd-cover
+# depend cdcmd
 # depend cdpbundl
 # depend cellprops
 DEPENDS+=	tex-cellspace-[0-9]*:../../print/tex-cellspace
@@ -195,7 +199,9 @@ DEPENDS+=	tex-chngcntr-[0-9]*:../../print/tex-chngcntr
 DEPENDS+=	tex-classpack-[0-9]*:../../print/tex-classpack
 # depend clefval
 DEPENDS+=	tex-cleveref-[0-9]*:../../print/tex-cleveref
+# depend clicks
 # depend clipboard
+# depend clistmap
 # depend clock
 # depend clrdblpg
 # depend clrstrip
@@ -205,6 +211,7 @@ DEPENDS+=	tex-cmsd-[0-9]*:../../fonts/tex-cmsd
 # depend cnltx
 # depend cntformats
 # depend cntperchap
+# depend codebox
 # depend codedoc
 # depend codehigh
 # depend codepage
@@ -228,6 +235,7 @@ DEPENDS+=	tex-collectbox-[0-9]*:../../print/tex-collectbox
 # depend commado
 # depend commedit
 DEPENDS+=	tex-comment-[0-9]*:../../print/tex-comment
+# depend commonunicode
 # depend competences
 # depend concepts
 DEPENDS+=	tex-concprog-[0-9]*:../../print/tex-concprog
@@ -244,6 +252,7 @@ DEPENDS+=	tex-cooking-[0-9]*:../../print/tex-cooking
 # depend coolstr
 # depend coolthms
 # depend cooltooltips
+# depend coop-writing
 # depend coordsys
 # depend copyedit
 # depend copyrightbox
@@ -254,8 +263,11 @@ DEPENDS+=	tex-cooking-[0-9]*:../../print/tex-cooking
 # depend coverpage
 # depend cprotect
 # depend crbox
+# depend create-theorem
+# depend crefthe
 # depend crossreference
 # depend crossreftools
+# depend crumbs
 DEPENDS+=	tex-csquotes-[0-9]*:../../print/tex-csquotes
 # depend css-colors
 # depend csvmerge
@@ -278,6 +290,7 @@ DEPENDS+=	tex-datatool-[0-9]*:../../print/tex-datatool
 # depend datax
 # depend dateiliste
 DEPENDS+=	tex-datenumber-[0-9]*:../../time/tex-datenumber
+# depend datestamp
 DEPENDS+=	tex-datetime-[0-9]*:../../print/tex-datetime
 DEPENDS+=	tex-datetime2-bahasai-[0-9]*:../../time/tex-datetime2-bahasai
 DEPENDS+=	tex-datetime2-basque-[0-9]*:../../time/tex-datetime2-basque
@@ -322,6 +335,8 @@ DEPENDS+=	tex-datetime2-ukrainian-[0-9]*:../../time/tex-datetime2-ukrainian
 DEPENDS+=	tex-datetime2-usorbian-[0-9]*:../../time/tex-datetime2-usorbian
 DEPENDS+=	tex-datetime2-welsh-[0-9]*:../../time/tex-datetime2-welsh
 DEPENDS+=	tex-dblfloatfix-[0-9]*:../../print/tex-dblfloatfix
+# depend dbshow
+# depend debate
 # depend decimal
 # depend decorule
 # depend delimtxt
@@ -424,11 +439,13 @@ DEPENDS+=	tex-eqparbox-[0-9]*:../../print/tex-eqparbox
 # depend erw-l3
 # depend esami
 # depend esdiff
+# depend esieecv
 # depend esindex
 DEPENDS+=	tex-esint-[0-9]*:../../fonts/tex-esint
 # depend esint-type1
 # depend etaremune
 # depend etextools
+# depend etl
 DEPENDS+=	tex-etoc-[0-9]*:../../print/tex-etoc
 # depend eukdate
 # depend eulerpx
@@ -469,9 +486,9 @@ DEPENDS+=	tex-excludeonly-[0-9]*:../../print/tex-excludeonly
 # depend fcolumn
 # depend fetchcls
 # depend fewerfloatpages
+# depend ffcode
 # depend ffslides
 # depend fgruler
-# depend fibeamer
 # depend fifo-stack
 # depend figsize
 DEPENDS+=	tex-filecontents-[0-9]*:../../print/tex-filecontents
@@ -534,6 +551,7 @@ DEPENDS+=	tex-ftcap-[0-9]*:../../print/tex-ftcap
 # depend fullblck
 # depend fullminipage
 # depend fullwidth
+# depend functional
 DEPENDS+=	tex-fundus-calligra-[0-9]*:../../print/tex-fundus-calligra
 # depend fundus-cyr
 # depend fundus-sueterlin
@@ -581,7 +599,9 @@ DEPENDS+=	tex-glossaries-[0-9]*:../../print/tex-glossaries
 # depend gmutils
 # depend gmverb
 # depend grabbox
+# depend grading-scheme
 # depend graphbox
+# depend graphicscache
 # depend graphicx-psmin
 # depend graphicxbox
 # depend graphpaper
@@ -592,11 +612,14 @@ DEPENDS+=	tex-glossaries-[0-9]*:../../print/tex-glossaries
 # depend gridpapers
 # depend gridset
 # depend gridslides
+# depend gs1
 # depend guitlogo
+# depend ha-prosper
 # depend hackthefootline
 # depend halloweenmath
 # depend handin
 # depend handout
+# depend handoutwithnotes
 DEPENDS+=	tex-hang-[0-9]*:../../print/tex-hang
 DEPENDS+=	tex-hanging-[0-9]*:../../print/tex-hanging
 # depend hardwrap
@@ -604,6 +627,11 @@ DEPENDS+=	tex-hanging-[0-9]*:../../print/tex-hanging
 # depend harpoon
 # depend hc
 # depend he-she
+# depend hep-acronym
+# depend hep-float
+# depend hep-math
+# depend hep-text
+# depend hep-title
 # depend hhtensor
 # depend highlightlatex
 # depend histogr
@@ -612,9 +640,13 @@ DEPENDS+=	tex-hanging-[0-9]*:../../print/tex-hanging
 # depend hletter
 DEPENDS+=	tex-hobsub-[0-9]*:../../print/tex-hobsub
 # depend hpsdiss
+# depend href-ul
 # depend hrefhide
 # depend huawei
 # depend hvindex
+# depend hvlogos
+# depend hvpygmentex
+DEPENDS+=	tex-hypdoc-[0-9]*:../../print/tex-hypdoc
 # depend hvqrurl
 DEPENDS+=	tex-hypdestopt-[0-9]*:../../print/tex-hypdestopt
 # depend hypdvips
@@ -626,6 +658,8 @@ DEPENDS+=	tex-hyphenat-[0-9]*:../../print/tex-hyphenat
 # depend identkey
 # depend idxcmds
 # depend idxlayout
+# depend iexec
+# depend ifallfalse
 # depend iffont
 # depend ifmslide
 DEPENDS+=	tex-ifmtarg-[0-9]*:../../print/tex-ifmtarg
@@ -660,6 +694,7 @@ DEPENDS+=	tex-inputenx-[0-9]*:../../print/tex-inputenx
 # depend issuulinks
 # depend iwhdp
 # depend jlabels
+# depend jmsdelim
 # depend jslectureplanner
 # depend jumplines
 # depend jvlisting
@@ -669,6 +704,7 @@ DEPENDS+=	tex-inputenx-[0-9]*:../../print/tex-inputenx
 DEPENDS+=	tex-keycommand-[0-9]*:../../print/tex-keycommand
 # depend keyfloat
 # depend keyindex
+# depend keyparse
 # depend keyreader
 # depend keystroke
 # depend keyval2e
@@ -685,6 +721,7 @@ DEPENDS+=	tex-kix-[0-9]*:../../print/tex-kix
 DEPENDS+=	tex-labels-[0-9]*:../../print/tex-labels
 # depend labels4easylist
 # depend labelschanged
+# depend lambdax
 # depend lastpackage
 DEPENDS+=	tex-lastpage-[0-9]*:../../print/tex-lastpage
 # depend latex-amsmath-dev
@@ -692,6 +729,7 @@ DEPENDS+=	tex-latex-base-dev-[0-9]*:../../print/tex-latex-base-dev
 # depend latex-bin-dev
 DEPENDS+=	tex-latex-firstaid-dev-[0-9]*:../../print/tex-latex-firstaid-dev
 # depend latex-graphics-dev
+# depend latex-lab-dev
 # depend latex-tools-dev
 # depend latex-uni8
 # depend latexcolors
@@ -750,6 +788,7 @@ DEPENDS+=	tex-ltabptch-[0-9]*:../../print/tex-ltabptch
 # depend lua-check-hyphen
 # depend lua-physical
 # depend luatodonotes
+# depend macrolist
 # depend macroswap
 DEPENDS+=	tex-magaz-[0-9]*:../../print/tex-magaz
 DEPENDS+=	tex-magicnum-[0-9]*:../../print/tex-magicnum
@@ -764,6 +803,7 @@ DEPENDS+=	tex-makecmds-[0-9]*:../../print/tex-makecmds
 # depend makecookbook
 # depend makedtx
 # depend makeglos
+# depend makelabels
 DEPENDS+=	tex-makerobust-[0-9]*:../../print/tex-makerobust
 # depend mandi
 DEPENDS+=	tex-manfnt-[0-9]*:../../fonts/tex-manfnt
@@ -924,6 +964,7 @@ DEPENDS+=	tex-overpic-[0-9]*:../../print/tex-overpic
 DEPENDS+=	tex-pagenote-[0-9]*:../../print/tex-pagenote
 # depend pagerange
 DEPENDS+=	tex-pageslts-[0-9]*:../../print/tex-pageslts
+# depend palette
 # depend paper
 # depend papercdcase
 # depend papermas
@@ -967,6 +1008,8 @@ DEPENDS+=	tex-pdfcomment-[0-9]*:../../print/tex-pdfcomment
 # depend permute
 # depend petiteannonce
 # depend pgfmath-xfp
+# depend phfcc
+# depend phfextendedabstract
 # depend phffullpagefigure
 # depend phfnote
 # depend phfparen
@@ -1080,6 +1123,7 @@ DEPENDS+=	tex-scale-[0-9]*:../../print/tex-scale
 # depend schedule
 # depend schooldocs
 # depend scontents
+# depend scrambledenvs
 # depend scrlayer-fancyhdr
 # depend scrlttr2copy
 # depend sdaps
@@ -1121,6 +1165,7 @@ DEPENDS+=	tex-showlabels-[0-9]*:../../print/tex-showlabels
 DEPENDS+=	tex-sidecap-[0-9]*:../../print/tex-sidecap
 # depend sidenotes
 DEPENDS+=	tex-silence-[0-9]*:../../print/tex-silence
+# depend sillypage
 # depend simplecd
 # depend simplecv
 # depend simpleinvoice
@@ -1135,9 +1180,11 @@ DEPENDS+=	tex-silence-[0-9]*:../../print/tex-silence
 # depend skrapport
 # depend slantsc
 # depend smalltableof
+# depend smart-eqn
 # depend smartref
 # depend smartunits
 DEPENDS+=	tex-snapshot-[0-9]*:../../print/tex-snapshot
+# depend snaptodo
 # depend snotez
 DEPENDS+=	tex-soulpos-[0-9]*:../../print/tex-soulpos
 DEPENDS+=	tex-soulutf8-[0-9]*:../../print/tex-soulutf8
@@ -1167,6 +1214,7 @@ DEPENDS+=	tex-stringstrings-[0-9]*:../../print/tex-stringstrings
 DEPENDS+=	tex-sttools-[0-9]*:../../print/tex-sttools
 # depend stubs
 # depend studenthandouts
+# depend styledcmd
 # depend subdepth
 DEPENDS+=	tex-subdocs-[0-9]*:../../print/tex-subdocs
 # depend subeqn
@@ -1189,6 +1237,7 @@ DEPENDS+=	tex-svninfo-[0-9]*:../../print/tex-svninfo
 # depend syntax
 # depend syntrace
 # depend synttree
+# depend tabbing
 # depend tabfigures
 # depend tableaux
 # depend tablefootnote
@@ -1219,6 +1268,7 @@ DEPENDS+=	tex-tcolorbox-[0-9]*:../../print/tex-tcolorbox
 # depend templatetools
 # depend termcal
 # depend termlist
+# depend termsim
 # depend testhyphens
 # depend testidx
 # depend tex-label
@@ -1228,6 +1278,7 @@ DEPENDS+=	tex-texmate-[0-9]*:../../print/tex-texmate
 # depend texments
 DEPENDS+=	tex-texpower-[0-9]*:../../print/tex-texpower
 # depend texshade
+# depend texsurgery
 DEPENDS+=	tex-textfit-[0-9]*:../../print/tex-textfit
 DEPENDS+=	tex-textmerg-[0-9]*:../../print/tex-textmerg
 DEPENDS+=	tex-textpos-[0-9]*:../../print/tex-textpos
@@ -1250,6 +1301,7 @@ DEPENDS+=	tex-threeparttablex-[0-9]*:../../print/tex-threeparttablex
 DEPENDS+=	tex-titleref-[0-9]*:../../print/tex-titleref
 DEPENDS+=	tex-titlesec-[0-9]*:../../print/tex-titlesec
 DEPENDS+=	tex-titling-[0-9]*:../../print/tex-titling
+# depend to-be-determined
 DEPENDS+=	tex-tocbibind-[0-9]*:../../print/tex-tocbibind
 # depend tocdata
 DEPENDS+=	tex-tocloft-[0-9]*:../../print/tex-tocloft
@@ -1288,8 +1340,9 @@ DEPENDS+=	tex-ucs-[0-9]*:../../print/tex-ucs
 # depend underlin
 # depend underoverlap
 DEPENDS+=	tex-undolabl-[0-9]*:../../print/tex-undolabl
+# depend uni-titlepage
+# depend unicodefonttable
 # depend unitconv
-# depend unitipa
 DEPENDS+=	tex-units-[0-9]*:../../print/tex-units
 # depend unravel
 # depend upmethodology
@@ -1338,6 +1391,7 @@ DEPENDS+=	tex-was-[0-9]*:../../print/tex-was
 # depend wordlike
 # depend worksheet
 DEPENDS+=	tex-wrapfig-[0-9]*:../../print/tex-wrapfig
+# depend wrapfig2
 # depend wtref
 DEPENDS+=	tex-xargs-[0-9]*:../../print/tex-xargs
 # depend xassoccnt
@@ -1381,6 +1435,9 @@ DEPENDS+=	tex-ydoc-[0-9]*:../../print/tex-ydoc
 # depend zed-csp
 # depend ziffer
 DEPENDS+=	tex-zref-[0-9]*:../../print/tex-zref
+# depend zref-check
+# depend zref-clever
+# depend zref-vario
 # depend zwgetfdate
 # depend zwpagelayout
 
