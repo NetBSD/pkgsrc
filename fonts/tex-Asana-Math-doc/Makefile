@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 23:31:06 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2022/04/14 04:36:03 markd Exp $
 
-DISTNAME=	Asana-Math.doc
+DISTNAME=	asana-math.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-000.958
-TEXLIVE_REV=	50999
+TEXLIVE_REV=	59629
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://ctan.org/pkg/Asana-Math
-COMMENT=	Documentation for tex-Asana-Math
+HOMEPAGE=	https://ctan.org/pkg/asana-math
+COMMENT=	Documentation for tex-asana-math
 LICENSE=	ofl-v1.1
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
