@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1830 2022/04/14 08:40:17 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1831 2022/04/14 09:03:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2711,3 +2711,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/tex-zxjafont-doc to 1.3 [markd 2022-04-14]
 	Updated x11/kitty to 0.25.0 [pin 2022-04-14]
 	Updated games/dMagnetic to 0.33 [wiz 2022-04-14]
+	Added fonts/stixfonts version 2.13b171 [wiz 2022-04-14]
+	Removed fonts/stix-otf successor fonts/stixfonts [wiz 2022-04-14]
