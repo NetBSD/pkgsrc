@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.14 2021/06/06 21:34:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2022/04/14 01:55:51 markd Exp $
 share/texmf-dist/doc/latex/koma-script/INSTALL.txt
 share/texmf-dist/doc/latex/koma-script/INSTALLD.txt
 share/texmf-dist/doc/latex/koma-script/README
 share/texmf-dist/doc/latex/koma-script/koma-script.html
-share/texmf-dist/doc/latex/koma-script/komabug.tex
 share/texmf-dist/doc/latex/koma-script/komascr.html
 share/texmf-dist/doc/latex/koma-script/komascript.html
 share/texmf-dist/doc/latex/koma-script/lppl-de.txt
@@ -251,6 +250,7 @@ share/texmf-dist/tex/latex/koma-script/scrlayer-scrpage.sty
 share/texmf-dist/tex/latex/koma-script/scrlayer.sty
 share/texmf-dist/tex/latex/koma-script/scrletter.cls
 share/texmf-dist/tex/latex/koma-script/scrletter.sty
+share/texmf-dist/tex/latex/koma-script/scrlfile-hook-3.34.sty
 share/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
 share/texmf-dist/tex/latex/koma-script/scrlfile-patcholdlatex.sty
 share/texmf-dist/tex/latex/koma-script/scrlfile.sty
