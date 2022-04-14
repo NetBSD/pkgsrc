@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2022/03/28 10:53:02 tnn Exp $
+# $NetBSD: Makefile,v 1.37 2022/04/14 06:29:19 nia Exp $
 
 DISTNAME=	xournalpp-1.1.1
 PKGREVISION=	1
@@ -20,6 +20,15 @@ BUILD_TARGET=	translations xournalpp
 
 # C++17, std::filesystem
 GCC_REQD+=	8
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099915
+USE_PKGSRC_GCC=		yes
+USE_PKGSRC_GCC_RUNTIME=	yes
+.endif
+
+.include "../../archivers/libarchive/buildlink3.mk"
 
 BUILD_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
