@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2018/05/13 11:38:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/04/14 03:42:24 markd Exp $
 share/texmf-dist/tex/latex/translator/translator-basic-dictionary-Bulgarian.dict
 share/texmf-dist/tex/latex/translator/translator-basic-dictionary-Catalan.dict
 share/texmf-dist/tex/latex/translator/translator-basic-dictionary-Croatian.dict
+share/texmf-dist/tex/latex/translator/translator-basic-dictionary-Czech.dict
 share/texmf-dist/tex/latex/translator/translator-basic-dictionary-Danish.dict
+share/texmf-dist/tex/latex/translator/translator-basic-dictionary-Dutch.dict
 share/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 share/texmf-dist/tex/latex/translator/translator-basic-dictionary-French.dict
 share/texmf-dist/tex/latex/translator/translator-basic-dictionary-German.dict
@@ -20,7 +22,9 @@ share/texmf-dist/tex/latex/translator/translator-basic-dictionary-Turkish.dict
 share/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-Bulgarian.dict
 share/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-Catalan.dict
 share/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-Croatian.dict
+share/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-Czech.dict
 share/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-Danish.dict
+share/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-Dutch.dict
 share/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-English.dict
 share/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-French.dict
 share/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-German.dict
@@ -36,7 +40,9 @@ share/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-Turkish
 share/texmf-dist/tex/latex/translator/translator-environment-dictionary-Bulgarian.dict
 share/texmf-dist/tex/latex/translator/translator-environment-dictionary-Catalan.dict
 share/texmf-dist/tex/latex/translator/translator-environment-dictionary-Croatian.dict
+share/texmf-dist/tex/latex/translator/translator-environment-dictionary-Czech.dict
 share/texmf-dist/tex/latex/translator/translator-environment-dictionary-Danish.dict
+share/texmf-dist/tex/latex/translator/translator-environment-dictionary-Dutch.dict
 share/texmf-dist/tex/latex/translator/translator-environment-dictionary-English.dict
 share/texmf-dist/tex/latex/translator/translator-environment-dictionary-French.dict
 share/texmf-dist/tex/latex/translator/translator-environment-dictionary-German.dict
@@ -52,7 +58,9 @@ share/texmf-dist/tex/latex/translator/translator-environment-dictionary-Turkish.
 share/texmf-dist/tex/latex/translator/translator-months-dictionary-Bulgarian.dict
 share/texmf-dist/tex/latex/translator/translator-months-dictionary-Catalan.dict
 share/texmf-dist/tex/latex/translator/translator-months-dictionary-Croatian.dict
+share/texmf-dist/tex/latex/translator/translator-months-dictionary-Czech.dict
 share/texmf-dist/tex/latex/translator/translator-months-dictionary-Danish.dict
+share/texmf-dist/tex/latex/translator/translator-months-dictionary-Dutch.dict
 share/texmf-dist/tex/latex/translator/translator-months-dictionary-English.dict
 share/texmf-dist/tex/latex/translator/translator-months-dictionary-French.dict
 share/texmf-dist/tex/latex/translator/translator-months-dictionary-German.dict
@@ -70,7 +78,9 @@ share/texmf-dist/tex/latex/translator/translator-months-dictionary-Turkish.dict
 share/texmf-dist/tex/latex/translator/translator-numbers-dictionary-Bulgarian.dict
 share/texmf-dist/tex/latex/translator/translator-numbers-dictionary-Catalan.dict
 share/texmf-dist/tex/latex/translator/translator-numbers-dictionary-Croatian.dict
+share/texmf-dist/tex/latex/translator/translator-numbers-dictionary-Czech.dict
 share/texmf-dist/tex/latex/translator/translator-numbers-dictionary-Danish.dict
+share/texmf-dist/tex/latex/translator/translator-numbers-dictionary-Dutch.dict
 share/texmf-dist/tex/latex/translator/translator-numbers-dictionary-English.dict
 share/texmf-dist/tex/latex/translator/translator-numbers-dictionary-French.dict
 share/texmf-dist/tex/latex/translator/translator-numbers-dictionary-German.dict
@@ -88,7 +98,9 @@ share/texmf-dist/tex/latex/translator/translator-numbers-dictionary-Turkish.dict
 share/texmf-dist/tex/latex/translator/translator-theorem-dictionary-Bulgarian.dict
 share/texmf-dist/tex/latex/translator/translator-theorem-dictionary-Catalan.dict
 share/texmf-dist/tex/latex/translator/translator-theorem-dictionary-Croatian.dict
+share/texmf-dist/tex/latex/translator/translator-theorem-dictionary-Czech.dict
 share/texmf-dist/tex/latex/translator/translator-theorem-dictionary-Danish.dict
+share/texmf-dist/tex/latex/translator/translator-theorem-dictionary-Dutch.dict
 share/texmf-dist/tex/latex/translator/translator-theorem-dictionary-English.dict
 share/texmf-dist/tex/latex/translator/translator-theorem-dictionary-French.dict
 share/texmf-dist/tex/latex/translator/translator-theorem-dictionary-German.dict
