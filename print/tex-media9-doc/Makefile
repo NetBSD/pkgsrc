@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2021/06/05 04:18:00 markd Exp $
+# $NetBSD: Makefile,v 1.17 2022/04/14 02:29:41 markd Exp $
 
 DISTNAME=	media9.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.15
-TEXLIVE_REV=	58025
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.24
+TEXLIVE_REV=	62786
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/media9
