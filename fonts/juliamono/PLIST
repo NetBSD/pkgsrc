@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/14 09:10:19 wiz Exp $
+share/fonts/X11/TTF/JuliaMono-Black.ttf
+share/fonts/X11/TTF/JuliaMono-BlackItalic.ttf
+share/fonts/X11/TTF/JuliaMono-Bold.ttf
+share/fonts/X11/TTF/JuliaMono-BoldItalic.ttf
+share/fonts/X11/TTF/JuliaMono-BoldLatin.ttf
+share/fonts/X11/TTF/JuliaMono-ExtraBold.ttf
+share/fonts/X11/TTF/JuliaMono-ExtraBoldItalic.ttf
+share/fonts/X11/TTF/JuliaMono-Light.ttf
+share/fonts/X11/TTF/JuliaMono-LightItalic.ttf
+share/fonts/X11/TTF/JuliaMono-Medium.ttf
+share/fonts/X11/TTF/JuliaMono-MediumItalic.ttf
+share/fonts/X11/TTF/JuliaMono-Regular.ttf
+share/fonts/X11/TTF/JuliaMono-RegularItalic.ttf
+share/fonts/X11/TTF/JuliaMono-RegularLatin.ttf
+share/fonts/X11/TTF/JuliaMono-SemiBold.ttf
+share/fonts/X11/TTF/JuliaMono-SemiBoldItalic.ttf
