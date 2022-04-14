@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:28:15 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/04/14 02:35:50 markd Exp $
 
-BLAKE2s (mf2pt1.r57018.tar.xz) = 587f88494b7c3f73d118c00db627b094314ae34b5ec3da6ca6f67ce9a0a09b25
-SHA512 (mf2pt1.r57018.tar.xz) = 87df5858f4a383f4915d469479460d55a6975a841d31b9993c9e3c9af422965d5eb869eac82c2dda968c17160e96c794ce85760c56d3d931d09fd13425d3c508
-Size (mf2pt1.r57018.tar.xz) = 14288 bytes
+BLAKE2s (mf2pt1.r61217.tar.xz) = 3b06d73b5c53fb0ec5ca7b961e8968938642f9ef27d9d9b5e12bddd3766cd9dd
+SHA512 (mf2pt1.r61217.tar.xz) = ca93a3ae439f9cd8029720bd1d90fbe75a403e7ab4ebcbe1ba1e5a7a28aa9269197f90a4aee849fea59d734d5dc38f04eedc140ff1be64fd805a10ab5510a2f5
+Size (mf2pt1.r61217.tar.xz) = 15184 bytes
