@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:14:19 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/04/14 03:05:36 markd Exp $
 
-BLAKE2s (pdfmanagement-testphase.r59194.tar.xz) = 5e506af28b180d538edc712863e60cfbcf3ed6c98452311f4f71ff87d1f83a3f
-SHA512 (pdfmanagement-testphase.r59194.tar.xz) = 42f5e51453ada0a19242bd12496da930aeaaf41817dab7b902b9e2c27060723ea997f708ef4f5dd616c27b1d2565e3cbce116def7be69e9496f5a42003cc71bc
-Size (pdfmanagement-testphase.r59194.tar.xz) = 42816 bytes
+BLAKE2s (pdfmanagement-testphase.r62763.tar.xz) = 213af6d356941d25ae385f61cf2a602bc8fefcd40f9bf503ffe962e3627aa3a6
+SHA512 (pdfmanagement-testphase.r62763.tar.xz) = 5ffdf241d1b8dfd3ec9d8c029bae27b4ec849d83fedf37ed756c7455c40e1e9732d3a20953273941b4de426a5d35f5bdd52ec2b05cc22f33398fcab47cf634e2
+Size (pdfmanagement-testphase.r62763.tar.xz) = 50552 bytes
