@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/05/11 11:33:48 markd Exp $
+# $NetBSD: Makefile,v 1.7 2022/04/14 06:37:42 markd Exp $
 
 DISTNAME=	tkz-fct
-PKGNAME=	tex-${DISTNAME}-1.3c.55031
-TEXLIVE_REV=	55031
+PKGNAME=	tex-${DISTNAME}-1.7c
+TEXLIVE_REV=	61949
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/tkz-fct
