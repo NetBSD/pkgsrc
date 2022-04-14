@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1834 2022/04/14 10:59:25 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1835 2022/04/14 12:34:23 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2716,3 +2716,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added fonts/juliamono version 0.044 [wiz 2022-04-14]
 	Updated devel/lua-mode to 20210802 [nikita 2022-04-14]
 	Updated sysutils/xplr to 0.17.4 [pin 2022-04-14]
+	Updated geography/gama to 2.18 [gdt 2022-04-14]
