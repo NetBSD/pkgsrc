@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2021/06/07 00:43:36 markd Exp $
+# $NetBSD: Makefile,v 1.17 2022/04/14 04:58:24 markd Exp $
 
 DISTNAME=	collection-mathscience
-PKGNAME=	texlive-${DISTNAME}-2021pre1
+PKGNAME=	texlive-${DISTNAME}-2021pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	59247
+TEXLIVE_REV=	62932
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -14,8 +14,6 @@ DEPENDS+=	texlive-collection-fontsrecommended-[0-9]*:../../meta-pkgs/texlive-col
 DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-latex
 
 # depend 12many
-DEPENDS+=	tex-SIstyle-[0-9]*:../../print/tex-SIstyle
-DEPENDS+=	tex-SIunits-[0-9]*:../../print/tex-SIunits
 DEPENDS+=	tex-accents-[0-9]*:../../print/tex-accents
 # depend alg
 # depend algobox
@@ -27,6 +25,7 @@ DEPENDS+=	tex-algorithms-[0-9]*:../../print/tex-algorithms
 # depend aligned-overset
 # depend amscdx
 DEPENDS+=	tex-amstex-[0-9]*:../../print/tex-amstex
+# depend annotate-equations
 # depend apxproof
 # depend autobreak
 # depend axodraw2
@@ -35,6 +34,7 @@ DEPENDS+=	tex-amstex-[0-9]*:../../print/tex-amstex
 # depend binomexp
 # depend biocon
 # depend bitpattern
+# depend bodeplot
 # depend bohr
 # depend boldtensors
 # depend bosisio
@@ -44,6 +44,7 @@ DEPENDS+=	tex-bussproofs-[0-9]*:../../print/tex-bussproofs
 # depend bussproofs-extra
 # depend bytefield
 # depend calculation
+# depend cartonaugh
 # depend cascade
 # depend causets
 DEPENDS+=	tex-ccfonts-[0-9]*:../../fonts/tex-ccfonts
@@ -83,6 +84,7 @@ DEPENDS+=	tex-concrete-[0-9]*:../../fonts/tex-concrete
 # depend drawmatrix
 # depend drawstack
 # depend dyntree
+# depend easing
 DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend econometrics
 # depend eltex
@@ -98,6 +100,7 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend faktor
 # depend fascicules
 # depend fnspe
+# depend formal-grammar
 # depend fouridx
 # depend functan
 # depend galois
@@ -126,6 +129,7 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend kvmap
 # depend letterswitharrows
 # depend lie-hasse
+# depend linenoamsmath
 # depend logicproof
 # depend longdivision
 # depend lpform
@@ -140,8 +144,10 @@ DEPENDS+=	tex-mathpartir-[0-9]*:../../math/tex-mathpartir
 # depend matlab-prettifier
 # depend matrix-skeleton
 # depend mattens
+# depend mecaso
 # depend membranecomputing
 # depend memorygraphs
+# depend messagepassing
 # depend mgltex
 DEPENDS+=	tex-mhchem-[0-9]*:../../print/tex-mhchem
 # depend mhequ
@@ -150,15 +156,20 @@ DEPENDS+=	tex-mhchem-[0-9]*:../../print/tex-mhchem
 # depend multiobjective
 # depend natded
 # depend nath
+# depend nchairx
 # depend nicematrix
 # depend nuc
 # depend nucleardata
 # depend numerica
+# depend numerica-plus
+# depend numerica-tables
 # depend objectz
 # depend oplotsymbl
 # depend ot-tableau
 DEPENDS+=	tex-oubraces-[0-9]*:../../print/tex-oubraces
+# depend pascaltriangle
 # depend perfectcut
+# depend pfdicons
 # depend physconst
 DEPENDS+=	tex-physics-[0-9]*:../../math/tex-physics
 # depend physunits
@@ -175,6 +186,7 @@ DEPENDS+=	tex-physics-[0-9]*:../../math/tex-physics
 # depend pythonhighlight
 # depend qsharp
 # depend rank-2-roots
+# depend rbt-mathnotes
 # depend rec-thy
 # depend rest-api
 # depend revquantum
@@ -191,9 +203,12 @@ DEPENDS+=	tex-physics-[0-9]*:../../math/tex-physics
 # depend simplebnf
 # depend simpler-wick
 # depend simplewick
+DEPENDS+=	tex-sistyle-[0-9]*:../../print/tex-SIstyle
+DEPENDS+=	tex-siunits-[0-9]*:../../print/tex-SIunits
 DEPENDS+=	tex-siunitx-[0-9]*:../../print/tex-siunitx
 # depend skmath
 # depend spalign
+# depend spbmark
 # depend stanli
 DEPENDS+=	tex-statex-[0-9]*:../../print/tex-statex
 # depend statex2
@@ -230,6 +245,7 @@ DEPENDS+=	tex-tensind-[0-9]*:../../print/tex-tensind
 # depend youngtab
 # depend yquant
 # depend ytableau
+# depend zx-calculus
 
 META_PACKAGE=	yes
 
