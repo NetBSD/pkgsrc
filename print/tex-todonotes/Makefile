@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2021/06/05 06:59:38 markd Exp $
+# $NetBSD: Makefile,v 1.8 2022/04/14 03:36:05 markd Exp $
 
 DISTNAME=	todonotes
-PKGNAME=	tex-${DISTNAME}-1.1.4
-TEXLIVE_REV=	58998
+PKGNAME=	tex-${DISTNAME}-1.1.5
+TEXLIVE_REV=	59465
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/todonotes
