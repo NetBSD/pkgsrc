@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2021/02/13 10:27:35 markd Exp $
+# $NetBSD: Makefile,v 1.12 2022/04/14 06:32:00 markd Exp $
 
 DISTNAME=	caption
-PKGNAME=	tex-${DISTNAME}-20201026
-TEXLIVE_REV=	56771
+PKGNAME=	tex-${DISTNAME}-20220317
+TEXLIVE_REV=	62757
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/caption
