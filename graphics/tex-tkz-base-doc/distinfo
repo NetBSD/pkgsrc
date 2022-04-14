@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:47:20 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/04/14 06:35:06 markd Exp $
 
-BLAKE2s (tkz-base.doc.r54758.tar.xz) = ebf0e938e22960fc7712765cde4632caa9289651b1bfee7e157737a93c1ba882
-SHA512 (tkz-base.doc.r54758.tar.xz) = c0393a07d50626349ff214bf8047bd6c20e14da3c036ca0ca277ce30a220bd52d2fa02cdb56d28733f9a69bd5f22d611f8b80dc130f6016cba46f4e889e0aaca
-Size (tkz-base.doc.r54758.tar.xz) = 375376 bytes
+BLAKE2s (tkz-base.doc.r61947.tar.xz) = f47004a90c2d8c98cf8e0177552fc737bf3636187228719f3dacca839fd7868a
+SHA512 (tkz-base.doc.r61947.tar.xz) = afe33901a229b5f5b1152481db34b9cd901d0fc66c933cf1340bbb70776a7060601bfa522229dc6106cbf7135b5c0a5148c3830bff0f20a4120b93c4f0f185c1
+Size (tkz-base.doc.r61947.tar.xz) = 381520 bytes

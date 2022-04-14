@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/04/27 02:08:15 markd Exp $
+# $NetBSD: Makefile,v 1.6 2022/04/14 06:35:06 markd Exp $
 
 DISTNAME=	tkz-base.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-3.06c
-TEXLIVE_REV=	54758
+PKGNAME=	tex-${DISTNAME:S/./-/}-4.05b
+TEXLIVE_REV=	61947
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/tkz-base
