@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3712 2022/04/14 13:51:45 nikita Exp $
+# $NetBSD: Makefile,v 1.3713 2022/04/15 11:40:20 nikita Exp $
 #
 
 COMMENT=	Development utilities
@@ -430,7 +430,6 @@ SUBDIR+=	go-gopkgs
 SUBDIR+=	go-goptlib
 SUBDIR+=	go-goreturns
 SUBDIR+=	go-gox
-SUBDIR+=	go-jwt-go
 SUBDIR+=	go-logrus
 SUBDIR+=	go-nbreader
 SUBDIR+=	go-protobuf
