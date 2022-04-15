@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1855 2022/04/15 11:42:57 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.1856 2022/04/15 11:52:31 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2828,3 +2828,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated comms/tio to 1.37 [fcambus 2022-04-15]
 	Added misc/emacs-neotree version 0.5.2.98fe213 [nikita 2022-04-15]
 	Removed devel/go-jwt-go [nikita 2022-04-15]
+	Removed databses/go-tiedot [nikita 2022-04-15]
