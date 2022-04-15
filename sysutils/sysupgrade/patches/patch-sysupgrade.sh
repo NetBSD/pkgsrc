@@ -1,7 +1,9 @@
-$NetBSD: patch-sysupgrade.sh,v 1.6 2020/10/21 21:34:21 kamil Exp $
+$NetBSD: patch-sysupgrade.sh,v 1.7 2022/04/15 08:07:25 nia Exp $
 
 * Don't reject https in sysupgrade_fetch()
 * Add ARCHIVE_EXTENSION variable (Fix PR pkg/53697)
+* Use direct paths to etcupdate and postinstall
+  (protect against user misconfiguration).
 
 --- sysupgrade.sh.orig	2013-07-28 21:27:57.000000000 +0000
 +++ sysupgrade.sh
@@ -103,7 +105,7 @@ $NetBSD: patch-sysupgrade.sh,v 1.6 2020/10/21 21:34:21 kamil Exp $
      [ ${#} -eq 0 ] || shtk_cli_usage_error "etcupdate does not take any" \
          "arguments"
  
-@@ -366,8 +382,8 @@ sysupgrade_etcupdate() {
+@@ -366,12 +382,12 @@ sysupgrade_etcupdate() {
  
      local sflags=
      for set_name in ${sets}; do
@@ -114,6 +116,11 @@ $NetBSD: patch-sysupgrade.sh,v 1.6 2020/10/21 21:34:21 kamil Exp $
      done
  
      shtk_cli_info "Upgrading /etc interactively"
+-    etcupdate -a -l ${sflags}
++    /usr/sbin/etcupdate -a -l ${sflags}
+ }
+ 
+ 
 @@ -381,6 +397,7 @@ sysupgrade_etcupdate() {
  sysupgrade_postinstall() {
      local sets=
@@ -133,7 +140,15 @@ $NetBSD: patch-sysupgrade.sh,v 1.6 2020/10/21 21:34:21 kamil Exp $
      done
  
      shtk_cli_info "Performing postinstall checks"
-@@ -409,10 +426,13 @@ sysupgrade_postinstall() {
+@@ -402,17 +419,20 @@ sysupgrade_postinstall() {
+         postinstall "-d${destdir}/" ${sflags} fix \
+             $(shtk_config_get POSTINSTALL_AUTOFIX)
+     fi
+-    postinstall "-d${destdir}/" ${sflags} "${@:-check}" \
++    /usr/sbin/postinstall "-d${destdir}/" ${sflags} "${@:-check}" \
+         || shtk_cli_error "Some postinstall(8) checks have failed"
+ }
+ 
  
  # Cleans up the cache directory.
  sysupgrade_clean() {
