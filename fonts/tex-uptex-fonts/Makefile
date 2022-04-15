@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/02/21 09:02:00 markd Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/15 05:01:18 markd Exp $
 
 DISTNAME=	uptex-fonts
-PKGNAME=	tex-${DISTNAME}-2020
-TEXLIVE_REV=	54045
+PKGNAME=	tex-${DISTNAME}-2021
+TEXLIVE_REV=	62592
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/uptex-fonts
