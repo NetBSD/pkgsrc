@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:20:16 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/04/15 08:07:25 nia Exp $
 
 BLAKE2s (sysupgrade-1.5.tar.gz) = 5fb73e83c7b9b1a891ce0cfb26422f07822061e2df42db6a4e3692468d028186
 SHA512 (sysupgrade-1.5.tar.gz) = 47f37ce6802b8ba74d6edd19a2c80d46394c992b58d3077e6d1316e4f5505afbe53a68d28b28779a10a78d7be05f2f5b9d2a55b5b2f845bcc59a78950a8306f8
 Size (sysupgrade-1.5.tar.gz) = 75833 bytes
 SHA1 (patch-default.conf) = 2457714998c86994192ef57c5dd22646f76828c4
 SHA1 (patch-sysupgrade.conf.5.in) = dfe5d90d0360212ea052f2e25a26820ad277480b
-SHA1 (patch-sysupgrade.sh) = d7a9371ead06d27e5dc00f9004994d3a91129875
+SHA1 (patch-sysupgrade.sh) = 47ec28af4527bb779f67ad92926be71c752ab091
