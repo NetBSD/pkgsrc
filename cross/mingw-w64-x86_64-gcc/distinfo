@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:07:54 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/04/15 17:16:08 tnn Exp $
 
 BLAKE2s (gcc-10.3.0.tar.xz) = 6d7c42f9386e5e32a3148122471cb207e5f65d7b5f53b3c9adba2d45a4f28715
 SHA512 (gcc-10.3.0.tar.xz) = 2b2dd7453d48a398c29eaebd1422b70341001b8c90a62aee51e83344e7fdd8a8e45f82a4a9165bd7edc76dada912c932f4b6632c5636760fec4c5d7e402b3f86
 Size (gcc-10.3.0.tar.xz) = 76692288 bytes
-SHA1 (patch-contrib_download__prerequisites) = 50f8aaf7403ce9f63cc119ff038d5f3e952bb8b6
 SHA1 (patch-libcc1_Makefile.in) = d228d3ab264ef0c4b133af27c027888502c886eb
 SHA1 (patch-libcc1_connection.cc) = 3b21290f4228dd29430e61b207aec0b153ae8120
