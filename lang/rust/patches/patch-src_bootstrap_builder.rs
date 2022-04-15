@@ -1,4 +1,4 @@
-$NetBSD: patch-src_bootstrap_builder.rs,v 1.19 2022/01/21 23:20:36 he Exp $
+$NetBSD: patch-src_bootstrap_builder.rs,v 1.20 2022/04/15 14:00:37 he Exp $
 
 Do not install 'src'.
 Use @PREFIX@, not $ORIGIN in rpath.
@@ -15,10 +15,10 @@ Fix RPATH for pkgsrc.
                  install::Rustc
              ),
              Kind::Run => describe!(run::ExpandYamlAnchors, run::BuildManifest, run::BumpStage0),
-@@ -1157,7 +1156,7 @@ impl<'a> Builder<'a> {
-                 rustflags.arg("-Zosx-rpath-install-name");
+@@ -1186,7 +1185,7 @@ impl<'a> Builder<'a> {
                  Some("-Wl,-rpath,@loader_path/../lib")
              } else if !target.contains("windows") {
+                 rustflags.arg("-Clink-args=-Wl,-z,origin");
 -                Some("-Wl,-rpath,$ORIGIN/../lib")
 +                Some("-Wl,-rpath,@PREFIX@/lib")
              } else {
