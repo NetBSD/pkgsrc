@@ -1,2 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/04 12:35:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/04/15 00:34:29 markd Exp $
+share/texmf-dist/tex/generic/babel-latin/classiclatin.ldf
+share/texmf-dist/tex/generic/babel-latin/ecclesiasticlatin.ldf
+share/texmf-dist/tex/generic/babel-latin/ecclesiasticlatin.lua
 share/texmf-dist/tex/generic/babel-latin/latin.ldf
+share/texmf-dist/tex/generic/babel-latin/medievallatin.ldf
