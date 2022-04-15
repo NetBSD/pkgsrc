@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/15 09:48:19 nikita Exp $
+${EMACS_LISPPREFIX}/neotree/icons/close.xpm
+${EMACS_LISPPREFIX}/neotree/icons/leaf.xpm
+${EMACS_LISPPREFIX}/neotree/icons/open.xpm
+${EMACS_LISPPREFIX}/neotree/neotree.el
+${EMACS_LISPPREFIX}/neotree/neotree.elc
