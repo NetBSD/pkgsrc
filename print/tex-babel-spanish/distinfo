@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:12:34 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/04/15 00:43:58 markd Exp $
 
-BLAKE2s (tex-babel-spanish-39920/babel-spanish.tar.xz) = 3b606cf4516f533e7886839da5af650d8737c2566061f12e16b2c684b47ad0a3
-SHA512 (tex-babel-spanish-39920/babel-spanish.tar.xz) = 20c2f4fb6a26f987d69d8408f5238de45b1d7013814ecc8d4ffa18f47bff85c8e5511f24db991dcc97ff3dc6fc13613972ffaac3adf1e8b952c9a212b45c4173
-Size (tex-babel-spanish-39920/babel-spanish.tar.xz) = 8672 bytes
+BLAKE2s (babel-spanish.r59367.tar.xz) = 6cfe0ebcf7bebcf0fcf8698d2502d1c8413c1da5a2ccb6f679adc14699cffed6
+SHA512 (babel-spanish.r59367.tar.xz) = 2da1b62772f462c8e058edac7d305804be6234a720446288fbcbe2e574a1cd9f905e4220b4008dad64c0e59b15194e2627cd1e295003c1bcbdd523c8498fa26b
+Size (babel-spanish.r59367.tar.xz) = 8876 bytes
