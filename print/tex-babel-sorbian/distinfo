@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:12:34 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/04/15 00:42:28 markd Exp $
 
-BLAKE2s (babel-sorbian.r57646.tar.xz) = ae5f08097d08778dde270d268083298f2ace6c23e7e18dbd33440ff06235cbb8
-SHA512 (babel-sorbian.r57646.tar.xz) = a19f913f590ea66b411a2215ac555590b3ac9f23480096236ccf9c84714bc7b64c0649c1bbeef36bef4f1e56b0e16f3d2abf6c929992fc4accd708ecd6f54681
-Size (babel-sorbian.r57646.tar.xz) = 3156 bytes
+BLAKE2s (babel-sorbian.r60975.tar.xz) = ea1b97d1d72995250e60ae1f25a13171a7f8a9a9d5991713231ecf6e06d413e9
+SHA512 (babel-sorbian.r60975.tar.xz) = 629a4f09de7ba1a444af0fc4e6db9f53635b0e000d375296697096c2debd782496d7b36f7745af42a8a19f6cc24c6a832595bc6c89ae20d79701c7181d1a5d68
+Size (babel-sorbian.r60975.tar.xz) = 3156 bytes
