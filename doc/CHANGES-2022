@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1870 2022/04/15 17:09:38 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.1871 2022/04/15 17:46:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2843,3 +2843,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/mold to 1.2 [fcambus 2022-04-15]
 	Updated misc/dialog to 1.3.20220414 [fcambus 2022-04-15]
 	Updated devel/go-sys to 0.0.20220412 [tnn 2022-04-15]
+	Updated lang/rust-analyzer to 0.0.2022.04.11 [adam 2022-04-15]
+	Updated lang/py-executing to 0.8.3 [adam 2022-04-15]
