@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2021/06/03 04:09:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/04/15 00:26:20 markd Exp $
 share/texmf-dist/makeindex/babel/bbglo.ist
 share/texmf-dist/makeindex/babel/bbind.ist
 share/texmf-dist/tex/generic/babel/UKenglish.sty
@@ -11,6 +11,7 @@ share/texmf-dist/tex/generic/babel/babel-bidi-basic-r.lua
 share/texmf-dist/tex/generic/babel/babel-bidi-basic.lua
 share/texmf-dist/tex/generic/babel/babel-data-bidi.lua
 share/texmf-dist/tex/generic/babel/babel-data-cjk.lua
+share/texmf-dist/tex/generic/babel/babel-transforms.lua
 share/texmf-dist/tex/generic/babel/babel.def
 share/texmf-dist/tex/generic/babel/babel.sty
 share/texmf-dist/tex/generic/babel/bahasa.sty
@@ -424,7 +425,6 @@ share/texmf-dist/tex/generic/babel/locale/mzn/babel-mzn.ini
 share/texmf-dist/tex/generic/babel/locale/naq/babel-nama.tex
 share/texmf-dist/tex/generic/babel/locale/naq/babel-naq.ini
 share/texmf-dist/tex/generic/babel/locale/nb/babel-nb.ini
-share/texmf-dist/tex/generic/babel/locale/nb/babel-norsk.tex
 share/texmf-dist/tex/generic/babel/locale/nb/babel-norwegianbokmal.tex
 share/texmf-dist/tex/generic/babel/locale/nd/babel-nd.ini
 share/texmf-dist/tex/generic/babel/locale/nd/babel-northndebele.tex
@@ -439,6 +439,9 @@ share/texmf-dist/tex/generic/babel/locale/nn/babel-norwegiannynorsk.tex
 share/texmf-dist/tex/generic/babel/locale/nn/babel-nynorsk.tex
 share/texmf-dist/tex/generic/babel/locale/nnh/babel-ngiemboon.tex
 share/texmf-dist/tex/generic/babel/locale/nnh/babel-nnh.ini
+share/texmf-dist/tex/generic/babel/locale/no/babel-no.ini
+share/texmf-dist/tex/generic/babel/locale/no/babel-norsk.tex
+share/texmf-dist/tex/generic/babel/locale/no/babel-norwegian.tex
 share/texmf-dist/tex/generic/babel/locale/nus/babel-nuer.tex
 share/texmf-dist/tex/generic/babel/locale/nus/babel-nus.ini
 share/texmf-dist/tex/generic/babel/locale/nyn/babel-nyankole.tex
