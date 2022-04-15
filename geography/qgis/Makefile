@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2022/04/03 18:50:18 adam Exp $
+# $NetBSD: Makefile,v 1.142 2022/04/15 11:37:46 nia Exp $
 
 # This is intentionally 3.22 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
@@ -63,7 +63,7 @@ CMAKE_ARGS+=		-DSIP_BINARY_PATH:PATH=${BUILDLINK_PREFIX.py-sip}/bin
 CMAKE_ARGS+=		-DWITH_INTERNAL_MARKUPSAFE=FALSE
 
 .include "../../lang/python/application.mk"
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-gdal
 
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-psycopg2-[0-9]*:../../databases/py-psycopg2
