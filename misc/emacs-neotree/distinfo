@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/15 09:48:19 nikita Exp $
+
+BLAKE2s (emacs-neotree-0.5.2.98fe213-98fe21334affaffe2334bf7c987edaf1980d2d0b.tar.gz) = 2fa81cb14477d9865db13ce0a9eca07f43f4558e9f30be6955af011489126ba3
+SHA512 (emacs-neotree-0.5.2.98fe213-98fe21334affaffe2334bf7c987edaf1980d2d0b.tar.gz) = 5049d580ca031c3bb081006a26d9ba8a8fb5f073c58822d48b5821ca89c9f323df657a89d29d429409517c921fd0f9c2fe6146a2315503da0c939e6c700e8105
+Size (emacs-neotree-0.5.2.98fe213-98fe21334affaffe2334bf7c987edaf1980d2d0b.tar.gz) = 469934 bytes
