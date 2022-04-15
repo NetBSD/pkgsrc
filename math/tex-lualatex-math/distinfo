@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:56:09 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/04/15 03:54:51 markd Exp $
 
-BLAKE2s (lualatex-math.r56541.tar.xz) = a2690001933aec54a1b335f01eaca7d1309adf12bb18af7be80f32c574100a4b
-SHA512 (lualatex-math.r56541.tar.xz) = a5568fa178fef7d7348a8e1b72f5671a5dc00c9c8ec59dded7da3fb62105697cb09c2cdb4f0c58fd5cc16b8966a66554cd7ba0650d757cc16377406de35d1005
-Size (lualatex-math.r56541.tar.xz) = 3192 bytes
+BLAKE2s (lualatex-math.r61464.tar.xz) = 9f714b215affabd376320c2bb89e992403c92505217dca812d5488d3091833a5
+SHA512 (lualatex-math.r61464.tar.xz) = 16c945e72165acd9f4bcf20f81e6c5df9ec22f19d45cbb8f076763d2d1a1a2e230938dabbadfcc065e3a060487885ac2edb223aae22d12f6981f5fca5c0f951f
+Size (lualatex-math.r61464.tar.xz) = 3332 bytes
