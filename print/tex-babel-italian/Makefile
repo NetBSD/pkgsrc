@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2021/02/14 20:21:51 markd Exp $
+# $NetBSD: Makefile,v 1.7 2022/04/15 00:32:06 markd Exp $
 
 DISTNAME=	babel-italian
-PKGNAME=	tex-${DISTNAME}-1.4.04
-TEXLIVE_REV=	55232
+PKGNAME=	tex-${DISTNAME}-1.4.07
+TEXLIVE_REV=	62890
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/babel-italian
