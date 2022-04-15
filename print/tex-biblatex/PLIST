@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/02/14 21:25:52 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/04/15 00:46:49 markd Exp $
 share/texmf-dist/bibtex/bib/biblatex/biblatex/biblatex-examples.bib
 share/texmf-dist/bibtex/bst/biblatex/biblatex.bst
 share/texmf-dist/tex/latex/biblatex/bbx/alphabetic-verb.bbx
@@ -94,6 +94,7 @@ share/texmf-dist/tex/latex/biblatex/lbx/italian.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/latvian.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/lithuanian.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/magyar.lbx
+share/texmf-dist/tex/latex/biblatex/lbx/marathi.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/naustrian.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/newzealand.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx
@@ -103,6 +104,7 @@ share/texmf-dist/tex/latex/biblatex/lbx/nynorsk.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/polish.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/portuges.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/portuguese.lbx
+share/texmf-dist/tex/latex/biblatex/lbx/romanian.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/russian.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/serbian.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/serbianc.lbx
