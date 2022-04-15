@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1851 2022/04/15 06:06:49 markd Exp $
+$NetBSD: CHANGES-2022,v 1.1852 2022/04/15 07:30:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2824,3 +2824,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added print/tex-lua-uni-algos-doc version 0.4.1 [markd 2022-04-15]
 	Updated fonts/tex-luaotfload to 3.21 [markd 2022-04-15]
 	Updated fonts/tex-luaotfload-doc to 3.21 [markd 2022-04-15]
+	Updated sysutils/felix to 0.6.1 [pin 2022-04-15]
