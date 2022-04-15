@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.562 2022/04/14 12:40:48 nikita Exp $
+# $NetBSD: Makefile,v 1.563 2022/04/15 09:48:18 nikita Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -67,6 +67,7 @@ SUBDIR+=	edict
 SUBDIR+=	elizatalk
 SUBDIR+=	elscreen
 SUBDIR+=	emacs-wiki
+SUBDIR+=	emacs-neotree
 SUBDIR+=	epm
 SUBDIR+=	erlang-p1_utils
 SUBDIR+=	esniper

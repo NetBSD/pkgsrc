@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2022/04/15 09:48:19 nikita Exp $
+
+To use the Neotree plugin for Emacs add the following to your .emacs file:
+
+  (add-to-list 'load-path "/usr/pkg/share/emacs/site-lisp/neotree/")
+  (require 'neotree)
+
+===========================================================================
