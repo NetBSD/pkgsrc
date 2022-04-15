@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:07:56 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/04/15 16:56:08 tnn Exp $
 
 BLAKE2s (sdk-source-20210211.tar.xz) = 2beb02bed78ad24be545f436bcfe0af2cfec716c3c7a8b4c2a5a6f98c20f597b
 SHA512 (sdk-source-20210211.tar.xz) = 7f4fcd370c2b57765ae81807ef66a54de4f44ef2bcc5659902e3097f7f834bfd29bc608e72c738c82b446d903c578f49f2fe7c0c22d62ef60a5cef8911944a33
 Size (sdk-source-20210211.tar.xz) = 565963672 bytes
 SHA1 (patch-config_override.m4) = 1ee0186b006a987dc57151a9d112654eabd24db9
+SHA1 (patch-gcc_config_host-darwin.c) = 62d75a4ce61a0ae42a756c9fd1476a329bb44600
 SHA1 (patch-gcc_config_rs6000_morphos.h) = c3702354f0dea476ba1516896e67b857dbfe7700
 SHA1 (patch-libcc1_configure.ac) = ca40be7af4a4ffc3a4fba1a0dbda76fcde1fa2d9
 SHA1 (patch-libstdc++-v3_configure.ac) = 4db5bf349ca5ca8315eb1b9baf3cadd5f463e8b4
