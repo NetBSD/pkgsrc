@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.9 2020/04/27 03:26:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/04/15 05:33:48 markd Exp $
 share/texmf-dist/doc/latex/l3kernel/CHANGELOG.md
 share/texmf-dist/doc/latex/l3kernel/README.md
 share/texmf-dist/doc/latex/l3kernel/expl3.pdf
 share/texmf-dist/doc/latex/l3kernel/interface3.pdf
 share/texmf-dist/doc/latex/l3kernel/interface3.tex
+share/texmf-dist/doc/latex/l3kernel/l3doc.pdf
 share/texmf-dist/doc/latex/l3kernel/l3docstrip.pdf
 share/texmf-dist/doc/latex/l3kernel/l3news.pdf
 share/texmf-dist/doc/latex/l3kernel/l3news.tex
