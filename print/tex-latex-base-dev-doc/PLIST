@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/06/06 12:07:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/04/15 03:48:27 markd Exp $
 share/texmf-dist/doc/latex-dev/base/README.md
 share/texmf-dist/doc/latex-dev/base/alltt.pdf
 share/texmf-dist/doc/latex-dev/base/bugs.txt
@@ -12,6 +12,8 @@ share/texmf-dist/doc/latex-dev/base/clsguide.tex
 share/texmf-dist/doc/latex-dev/base/cmfonts.pdf
 share/texmf-dist/doc/latex-dev/base/cyrguide.pdf
 share/texmf-dist/doc/latex-dev/base/cyrguide.tex
+share/texmf-dist/doc/latex-dev/base/doc-code.pdf
+share/texmf-dist/doc/latex-dev/base/doc-code.tex
 share/texmf-dist/doc/latex-dev/base/doc.pdf
 share/texmf-dist/doc/latex-dev/base/docstrip.pdf
 share/texmf-dist/doc/latex-dev/base/encguide.pdf
@@ -23,8 +25,8 @@ share/texmf-dist/doc/latex-dev/base/fntguide.tex
 share/texmf-dist/doc/latex-dev/base/graphpap.pdf
 share/texmf-dist/doc/latex-dev/base/ifthen.pdf
 share/texmf-dist/doc/latex-dev/base/inputenc.pdf
-share/texmf-dist/doc/latex-dev/base/latexchanges.pdf
-share/texmf-dist/doc/latex-dev/base/latexchanges.tex
+share/texmf-dist/doc/latex-dev/base/lamport-manual.err
+share/texmf-dist/doc/latex-dev/base/lamport-manual.pdf
 share/texmf-dist/doc/latex-dev/base/latexrelease.pdf
 share/texmf-dist/doc/latex-dev/base/latexsym.pdf
 share/texmf-dist/doc/latex-dev/base/lb2.err
@@ -119,6 +121,10 @@ share/texmf-dist/doc/latex-dev/base/ltnews32.pdf
 share/texmf-dist/doc/latex-dev/base/ltnews32.tex
 share/texmf-dist/doc/latex-dev/base/ltnews33.pdf
 share/texmf-dist/doc/latex-dev/base/ltnews33.tex
+share/texmf-dist/doc/latex-dev/base/ltnews34.pdf
+share/texmf-dist/doc/latex-dev/base/ltnews34.tex
+share/texmf-dist/doc/latex-dev/base/ltnews35.pdf
+share/texmf-dist/doc/latex-dev/base/ltnews35.tex
 share/texmf-dist/doc/latex-dev/base/ltpara-code.pdf
 share/texmf-dist/doc/latex-dev/base/ltpara-code.tex
 share/texmf-dist/doc/latex-dev/base/ltpara-doc.pdf
@@ -132,8 +138,6 @@ share/texmf-dist/doc/latex-dev/base/ltx3info.tex
 share/texmf-dist/doc/latex-dev/base/ltxdoc.pdf
 share/texmf-dist/doc/latex-dev/base/makeindx.pdf
 share/texmf-dist/doc/latex-dev/base/manifest.txt
-share/texmf-dist/doc/latex-dev/base/manual.err
-share/texmf-dist/doc/latex-dev/base/manual.pdf
 share/texmf-dist/doc/latex-dev/base/modguide.pdf
 share/texmf-dist/doc/latex-dev/base/modguide.tex
 share/texmf-dist/doc/latex-dev/base/nfssfont.pdf
@@ -143,8 +147,6 @@ share/texmf-dist/doc/latex-dev/base/slifonts.pdf
 share/texmf-dist/doc/latex-dev/base/source2e.pdf
 share/texmf-dist/doc/latex-dev/base/source2e.tex
 share/texmf-dist/doc/latex-dev/base/syntonly.pdf
-share/texmf-dist/doc/latex-dev/base/tex2.txt
-share/texmf-dist/doc/latex-dev/base/texpert.txt
 share/texmf-dist/doc/latex-dev/base/tlc2.err
 share/texmf-dist/doc/latex-dev/base/tlc2.pdf
 share/texmf-dist/doc/latex-dev/base/tulm.pdf
