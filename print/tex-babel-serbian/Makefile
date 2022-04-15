@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2021/06/03 04:18:50 markd Exp $
+# $NetBSD: Makefile,v 1.5 2022/04/15 00:39:59 markd Exp $
 
 DISTNAME=	babel-serbian
-PKGNAME=	tex-${DISTNAME}-2.1
-TEXLIVE_REV=	58836
+PKGNAME=	tex-${DISTNAME}-2.2
+TEXLIVE_REV=	62041
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/babel-serbian
