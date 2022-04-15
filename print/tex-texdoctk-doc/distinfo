@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:14:49 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/04/15 04:47:34 markd Exp $
 
-BLAKE2s (texdoctk.doc.r54557.tar.xz) = 65b79f2afd6a389afc1607fea16f91cc840d73ba5e1bc7507da2cdf77f93922b
-SHA512 (texdoctk.doc.r54557.tar.xz) = 54fe4ca2618e4b8d6eb1f5590745fbb6ed6264a9e6ab4b34040bac52062ce4d7e8214a4fa3010cb6c78ad0003afcc3f929b112528940396973647a6672a0422e
-Size (texdoctk.doc.r54557.tar.xz) = 30728 bytes
+BLAKE2s (texdoctk.doc.r62186.tar.xz) = 5aa363f221eb0147fdb8fb302b6329f0b4da67f05c28b57cede3802ba0345bec
+SHA512 (texdoctk.doc.r62186.tar.xz) = fb403dc17ad839ea64bcf6da84e59288a8745b5eb731051d7df8593138aa5d3b6891d56f52bdbe5c9a41e590f1f36db390e7e7a825d9aaf00d4fbc01c8dc16ba
+Size (texdoctk.doc.r62186.tar.xz) = 30728 bytes
