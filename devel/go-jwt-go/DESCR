@@ -1,6 +1,0 @@
-A Go implementation of JSON Web Tokens.
-
-This library supports the parsing and verification as well as the
-generation and signing of JWTs. Current supported signing algorithms
-are HMAC SHA, RSA, RSA-PSS, and ECDSA, though hooks are present for
-adding your own.
