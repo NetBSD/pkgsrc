@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:12:30 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/04/15 00:28:07 markd Exp $
 
-BLAKE2s (babel-dutch.r56827.tar.xz) = 2a96ee26d54f45221171d9d7dfea9fe7151a8421c1e10a3b7fd2ea8644f2a095
-SHA512 (babel-dutch.r56827.tar.xz) = 4bdebadb6dabd378fb52eedacd8181623e40bd0a8215aa77c34f7a051a020d6c60230fa0203c2d519bfffcb9a374702ccb1d7c6b0482a232f1eeda5ff52f6c1e
-Size (babel-dutch.r56827.tar.xz) = 2900 bytes
+BLAKE2s (babel-dutch.r60362.tar.xz) = ba2ab04496a970782b24b1c3139c70d0d2edf13ec69b5fd5f3fb044b6e15cf8d
+SHA512 (babel-dutch.r60362.tar.xz) = bef13adf26cbbd16604af041fc7af866c82e88cd9d7d05318abd10f7d6f0ae718e1186f5527b4b38f1f099ba5da3d85b5e2f6d1ac0dfe8fe64ea52fcf6f06df1
+Size (babel-dutch.r60362.tar.xz) = 2920 bytes
