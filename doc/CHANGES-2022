@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1857 2022/04/15 11:53:47 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.1858 2022/04/15 12:41:14 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2829,3 +2829,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added misc/emacs-neotree version 0.5.2.98fe213 [nikita 2022-04-15]
 	Removed devel/go-jwt-go [nikita 2022-04-15]
 	Removed databases/go-tiedot [nikita 2022-04-15]
+	Updated devel/libosip to 5.3.0 [schwarz 2022-04-15]
