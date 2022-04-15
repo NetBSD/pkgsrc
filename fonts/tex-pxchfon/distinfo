@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:28:25 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/04/15 04:31:17 markd Exp $
 
-BLAKE2s (pxchfon.r56537.tar.xz) = 177c184f47bc358248ae2f1503af02acfd01a1ff78ec57cc42b8e3fe332d7bf5
-SHA512 (pxchfon.r56537.tar.xz) = 0883ab31076052a9f970e8a2704d6fe69e4cc4d98e5e58528b48393c4878177cc206baa454539a6f228252c82199a409333ba9dc250b6c79d429e00f8da26cc1
-Size (pxchfon.r56537.tar.xz) = 19104 bytes
+BLAKE2s (pxchfon.r59449.tar.xz) = 3bc4a4818e757a5b81829968afd327a71c20eeabae6a62acbfdfa73e417c6788
+SHA512 (pxchfon.r59449.tar.xz) = 816c45ea035ceca853795857e93cf064d94ac0937ad9774b3bf2316f6e6e15e58df64814116a0fca5a1aea3a986e31982f80d365a53447fa86e1e771a4ffa429
+Size (pxchfon.r59449.tar.xz) = 19936 bytes
