@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 10:15:25 nia Exp $
+$NetBSD: distinfo,v 1.21 2022/04/15 12:41:15 schwarz Exp $
 
-BLAKE2s (libosip2-5.2.0.tar.gz) = 7608e319d0ee6530490a3dd7fa8874ca905ddbc08364f037f0ed63c365fa21f3
-SHA512 (libosip2-5.2.0.tar.gz) = cc714ab5669c466ee8f0de78cf74a8b7633f3089bf104c9c1474326840db3d791270159456f9deb877af2df346b04493e8f796b2bb7d2be134f6c08b25a29f83
-Size (libosip2-5.2.0.tar.gz) = 718388 bytes
+BLAKE2s (libosip2-5.3.0.tar.gz) = d02db9b9ed1e1bce05f85a423e1934bbb90705e4f3895ce4fe2e44072021a8a8
+SHA512 (libosip2-5.3.0.tar.gz) = 010830af0aca7cab48f2d28b130bf8a2443a7eb552ccfd3e6100d3262a1e2a4cca4ab457a073cbf6ff032ed7177a781e2ce980a1f095688659cff8c0005fce50
+Size (libosip2-5.3.0.tar.gz) = 722152 bytes
