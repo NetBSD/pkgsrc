@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2022/03/01 16:06:39 he Exp $
+# $NetBSD: options.mk,v 1.20 2022/04/15 14:00:37 he Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
 PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs
@@ -28,11 +28,11 @@ PKG_SUGGESTED_OPTIONS+=	rust-cargo-static
 #
 .if empty(PKG_OPTIONS:Mrust-llvm)
 BUILDLINK_API_DEPENDS.llvm+=	llvm>=12.0.0
+.include "../../lang/libunwind/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-llvm-link-shared
+#CONFIGURE_ARGS+=	--llvm-libunwind=system
 CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
-# XXX: fix for Rust 1.41.0 https://github.com/rust-lang/rust/issues/68714
-MAKE_ENV+=	LIBRARY_PATH=${BUILDLINK_PREFIX.llvm}/lib
 .endif
 
 #
