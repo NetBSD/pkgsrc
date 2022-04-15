@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2022/01/14 18:17:23 tnn Exp $
+# $NetBSD: Makefile,v 1.50 2022/04/15 15:05:30 wiz Exp $
 
 DISTNAME=		tigervnc-1.12.0
 PKGNAME=		${DISTNAME}.1.20.13
@@ -109,6 +109,8 @@ post-install:
 # when using native X, tigervnc server can't find xkb rules or xkbcomp without the following:
 XORG_CONFIGURE_ARGS+=	--with-xkb-path=${X11BASE}/lib/X11/xkb
 XORG_CONFIGURE_ARGS+=	--with-xkb-bin-directory=${X11BASE}/bin
+.else
+DEPENDS+=		xkbcomp-[0-9]*:../../x11/xkbcomp
 .endif
 
 pre-configure:
