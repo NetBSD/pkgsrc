@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:07:53 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/15 16:56:07 tnn Exp $
 
 BLAKE2s (gcc-6.2.0.tar.bz2) = a11b22cf9748a09cecfa7a688f5b4840986932c8617042b56db955c08eb54d89
 SHA512 (gcc-6.2.0.tar.bz2) = 1e8b826a3d44b9d5899309894e20c03abeb352bf3d273b8ad63af814c0ee2911f1a83ce1cd4cdd2d1cb0b3e3c34e9b7ae1b2ab83dfc649ee817ab05247c76198
@@ -6,5 +6,6 @@ Size (gcc-6.2.0.tar.bz2) = 99778648 bytes
 BLAKE2s (newlib-2.4.0.tar.gz) = 7d83665cb71cd2b70f3723350539572e996d163fb22c15a8078f24748cd861bf
 SHA512 (newlib-2.4.0.tar.gz) = c60665e793dce2368a5baf23560beb50f641e1831854d702d1d7629fb6e9200cf814527f29796792a3d2dff81afee4255723df99ceb0732f99dd9580a17d2ac0
 Size (newlib-2.4.0.tar.gz) = 17574364 bytes
+SHA1 (patch-gcc_config_host-darwin.c) = 95c88d477a1687163f3430d0cf4470550d992d0a
 SHA1 (patch-libcc1_connection.cc) = d32841d602cb4c71acd7f53a0a2f50dc501117a2
 SHA1 (patch-libstdc++-v3_src_c++11_cow-stdexcept.cc) = 709efa4e8d287dbae16430f1f9917c2815494eb4
