@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/04/26 12:21:19 markd Exp $
+# $NetBSD: Makefile,v 1.5 2022/04/15 04:36:23 markd Exp $
 
 DISTNAME=	pxtxalfa.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.54080
-TEXLIVE_REV=	54080
+PKGNAME=	tex-${DISTNAME:S/./-/}-2
+TEXLIVE_REV=	60847
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/pxtxalfa

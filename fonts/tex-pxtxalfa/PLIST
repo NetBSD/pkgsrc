@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:53 wiz Exp $
-share/texmf-dist/fonts/map/dvips/pxtxalfa/pxtx.map
+@comment $NetBSD: PLIST,v 1.2 2022/04/15 04:36:23 markd Exp $
 share/texmf-dist/fonts/tfm/public/pxtxalfa/pxb-ds.tfm
 share/texmf-dist/fonts/tfm/public/pxtxalfa/pxr-ds.tfm
 share/texmf-dist/fonts/tfm/public/pxtxalfa/rtxmia.tfm
@@ -19,11 +18,13 @@ share/texmf-dist/fonts/vf/public/pxtxalfa/txr-cal.vf
 share/texmf-dist/fonts/vf/public/pxtxalfa/txr-ds.vf
 share/texmf-dist/fonts/vf/public/pxtxalfa/txr-frak.vf
 share/texmf-dist/fonts/vf/public/pxtxalfa/txr-of.vf
+share/texmf-dist/tex/latex/pxtxalfa/ot1tx-ds.fd
+share/texmf-dist/tex/latex/pxtxalfa/ot1tx-frak.fd
 share/texmf-dist/tex/latex/pxtxalfa/px-ds.sty
 share/texmf-dist/tex/latex/pxtxalfa/pxtx-cal.sty
 share/texmf-dist/tex/latex/pxtxalfa/pxtx-frak.sty
+share/texmf-dist/tex/latex/pxtxalfa/tx-ds.sty
 share/texmf-dist/tex/latex/pxtxalfa/tx-of.sty
 share/texmf-dist/tex/latex/pxtxalfa/upx-ds.fd
 share/texmf-dist/tex/latex/pxtxalfa/utx-cal.fd
-share/texmf-dist/tex/latex/pxtxalfa/utx-frak.fd
 share/texmf-dist/tex/latex/pxtxalfa/utx-of.fd
