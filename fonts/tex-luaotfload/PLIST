@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.12 2021/06/06 11:09:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/04/15 06:06:00 markd Exp $
 share/texmf-dist/scripts/luaotfload/luaotfload-tool.lua
-share/texmf-dist/tex/luatex/luaotfload/fontloader-2021-05-20.lua
+share/texmf-dist/tex/luatex/luaotfload/fontloader-2022-02-24.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-basics-chr.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-basics-gen.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-basics-nod.lua
@@ -72,6 +72,9 @@ share/texmf-dist/tex/luatex/luaotfload/luaotfload-filelist.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-glyphlist.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-harf-define.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-harf-plug.lua
+share/texmf-dist/tex/luatex/luaotfload/luaotfload-harf-var-cff2.lua
+share/texmf-dist/tex/luatex/luaotfload/luaotfload-harf-var-t2-writer.lua
+share/texmf-dist/tex/luatex/luaotfload/luaotfload-harf-var-ttf.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-init.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-letterspace.lua
 share/texmf-dist/tex/luatex/luaotfload/luaotfload-loaders.lua
