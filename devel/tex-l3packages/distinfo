@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 10:20:01 nia Exp $
+$NetBSD: distinfo,v 1.18 2022/04/15 05:35:35 markd Exp $
 
-BLAKE2s (l3packages.r59425.tar.xz) = 1e9f9f7c5620cd527ba941aa86feedabfadb6c2afc84f73caff48da301a18f7e
-SHA512 (l3packages.r59425.tar.xz) = f97b02a22a0c6d6f34fa12a24a0cfe4316be5fb84b3c842a6b96fdd71c27d8d39f25b1c8055835b80b127982d0870750443e7e9b3c6081f8ce3e0a9188dcbf5f
-Size (l3packages.r59425.tar.xz) = 21576 bytes
+BLAKE2s (l3packages.r61588.tar.xz) = d38a1434ac262dca7a0fcc60b53f918c6397629596353a6e3e16d4ed75de0ed5
+SHA512 (l3packages.r61588.tar.xz) = 4a6ec384f2b8ad262eb05f0d30a9b622f99a2c641b2382dfc8601b0c8bc7f4c105865b28e1275c917519d32095fc5b7e66a8c0c4253f7da32af01072092e85bf
+Size (l3packages.r61588.tar.xz) = 21640 bytes
