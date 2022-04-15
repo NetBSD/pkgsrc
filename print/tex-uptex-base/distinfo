@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:15:02 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/04/15 04:59:07 markd Exp $
 
-BLAKE2s (uptex-base.r56832.tar.xz) = ee8fc6072eecf214ebefca98625f893f32cbf4b60dbc7e7786e6a7cc596019e6
-SHA512 (uptex-base.r56832.tar.xz) = ad62a640e04807f62f9efdd67720f57c7dbab0190fcfea7a82109f4f8223138b8d413c49e878c70ea04f733576828a4bdf475ebd1b6ed471268cb21bbfaebfae
-Size (uptex-base.r56832.tar.xz) = 9784 bytes
+BLAKE2s (uptex-base.r61795.tar.xz) = 38b0b60f3ee681ec314f2fa36acaae203a73410bb07566838c49096c8d59caa8
+SHA512 (uptex-base.r61795.tar.xz) = 8003f3ccb6d2c7de511ebd417f080868b5dec4b72ca613e4d4619b17127d6f0072ef83331ec0d021c7f8fedeaebaa1a9c95153e12571e14336a49cf9004f481e
+Size (uptex-base.r61795.tar.xz) = 9800 bytes
