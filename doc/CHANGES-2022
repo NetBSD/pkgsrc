@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1867 2022/04/15 16:20:10 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1868 2022/04/15 16:30:57 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2840,3 +2840,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/csvlens to 0.1.5 [pin 2022-04-15]
 	Updated textproc/lok to 0.2.0 [pin 2022-04-15]
 	Updated shells/starship to 1.5.4 [pin 2022-04-15]
+	Updated devel/mold to 1.2 [fcambus 2022-04-15]
