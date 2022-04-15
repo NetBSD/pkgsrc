@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:09:18 nia Exp $
-
-BLAKE2s (tiedot/3.4.tar.gz) = d334ab7dd91e86612b2bd00a8301ee110a0aa937ac0ead63ba73651c8803cc89
-SHA512 (tiedot/3.4.tar.gz) = e87e37d3330da1b3915e7e0c136419e5b9041ca0e66465986615e57ca34054261a120da1a62ec6279da20ecf672f9b2d011d8fb3eca40daf31c404ff82ece98d
-Size (tiedot/3.4.tar.gz) = 608687 bytes
