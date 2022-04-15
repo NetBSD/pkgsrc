@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 11:13:33 nia Exp $
+$NetBSD: distinfo,v 1.21 2022/04/15 03:42:39 markd Exp $
 
-BLAKE2s (hyperref.doc.r58024.tar.xz) = 82733f8aac0b9a4a57d1a9ea51d6ffe9bc593f2db432b5a01c57cd006fa7cbbb
-SHA512 (hyperref.doc.r58024.tar.xz) = 9005eb33d3f8b90199131eb2104fd961fd7d248c17c67af73162a0b90f0b90de1e5f5c79ffce59564f7d19e835765c59b385fb0e9e19ef4935f1de49655b03dc
-Size (hyperref.doc.r58024.tar.xz) = 3287788 bytes
+BLAKE2s (hyperref.doc.r62142.tar.xz) = 2c99cfa0d6b46b207b56fcafaa1fe9542af3694304448a4f90e8c8546958416c
+SHA512 (hyperref.doc.r62142.tar.xz) = 3b70f6fbbc789d55f61cbd78b30243be4782693d71aa8db5a2383354afbe5f4e4debe79bd53a3d72e090e7bf25459c8cb82d60db129f27f164c502615c55101d
+Size (hyperref.doc.r62142.tar.xz) = 3250152 bytes
