@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1853 2022/04/15 07:57:27 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.1854 2022/04/15 09:49:33 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2826,3 +2826,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/tex-luaotfload-doc to 3.21 [markd 2022-04-15]
 	Updated sysutils/felix to 0.6.1 [pin 2022-04-15]
 	Updated comms/tio to 1.37 [fcambus 2022-04-15]
+	Added misc/emacs-neotree version 0.5.2.98fe213 [nikita 2022-04-15]
