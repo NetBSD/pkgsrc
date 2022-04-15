@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/01/05 15:41:14 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/04/15 11:27:41 nia Exp $
 
 DISTNAME=	tables-3.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-numexpr>=2.6.2:../../math/py-numexpr
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
 USE_PKG_RESOURCES=	yes
 
