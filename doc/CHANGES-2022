@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1865 2022/04/15 16:17:45 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1866 2022/04/15 16:19:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2838,3 +2838,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-macholib to 1.16 [adam 2022-04-15]
 	Updated sysutils/broot to 1.11.1 [pin 2022-04-15]
 	Updated textproc/csvlens to 0.1.5 [pin 2022-04-15]
+	Updated textproc/lok to 0.2.0 [pin 2022-04-15]
