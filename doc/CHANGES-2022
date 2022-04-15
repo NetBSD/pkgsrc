@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1846 2022/04/14 23:40:17 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.1847 2022/04/15 00:54:46 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2730,3 +2730,22 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-signedjson to 1.1.4 [adam 2022-04-14]
 	Updated devel/py-packageurl to 0.9.9 [adam 2022-04-14]
 	Updated devel/git to 2.35.3 [gutteridge 2022-04-14]
+	Updated print/tex-babel to 3.73 [markd 2022-04-15]
+	Updated print/tex-babel-doc to 3.73 [markd 2022-04-15]
+	Updated print/tex-babel-dutch to 3.8l [markd 2022-04-15]
+	Updated print/tex-babel-french to 3.5m [markd 2022-04-15]
+	Updated print/tex-babel-italian to 1.4.07 [markd 2022-04-15]
+	Updated print/tex-babel-latin to 4.0 [markd 2022-04-15]
+	Updated print/tex-babel-polish to 1.3 [markd 2022-04-15]
+	Updated print/tex-babel-portuges to 1.2t [markd 2022-04-15]
+	Updated print/tex-babel-serbian to 2.2 [markd 2022-04-15]
+	Updated print/tex-babel-serbianc to 3.2 [markd 2022-04-15]
+	Updated print/tex-babel-sorbian to 1.0j [markd 2022-04-15]
+	Updated print/tex-babel-spanish to 5.0q [markd 2022-04-15]
+	Updated print/tex-biblatex to 3.17 [markd 2022-04-15]
+	Updated print/tex-biblatex-doc to 3.17 [markd 2022-04-15]
+	Updated print/tex-biblatex-apa to 9.15 [markd 2022-04-15]
+	Updated print/tex-biblatex-apa-doc to 9.15 [markd 2022-04-15]
+	Updated print/tex-biblatex-ieee to 1.3f [markd 2022-04-15]
+	Updated print/tex-biblatex-ieee-doc to 1.3f [markd 2022-04-15]
+	Updated print/p5-biblatex-biber to 2.17 [markd 2022-04-15]
