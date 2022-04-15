@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2021/02/21 05:56:42 markd Exp $
+# $NetBSD: Makefile,v 1.11 2022/04/15 04:26:32 markd Exp $
 
 DISTNAME=	ptex-base.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2020.56487
-TEXLIVE_REV=	56487
+PKGNAME=	tex-${DISTNAME:S/./-/}-2021
+TEXLIVE_REV=	59406
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/ptex-base
