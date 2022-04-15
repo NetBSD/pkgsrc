@@ -1,4 +1,4 @@
-$NetBSD: patch-sysupgrade.sh,v 1.7 2022/04/15 08:07:25 nia Exp $
+$NetBSD: patch-sysupgrade.sh,v 1.8 2022/04/15 09:10:56 nia Exp $
 
 * Don't reject https in sysupgrade_fetch()
 * Add ARCHIVE_EXTENSION variable (Fix PR pkg/53697)
@@ -17,15 +17,19 @@ $NetBSD: patch-sysupgrade.sh,v 1.7 2022/04/15 08:07:25 nia Exp $
  
  
  # Directory in which to keep downloaded release files.
-@@ -66,6 +67,7 @@ sysupgrade_set_defaults() {
+@@ -66,6 +67,11 @@ sysupgrade_set_defaults() {
      shtk_config_set ETCUPDATE "yes"
      shtk_config_set KERNEL "AUTO"
      shtk_config_set SETS "AUTO"
-+    shtk_config_set ARCHIVE_EXTENSION "tar.xz"
++    if [ "$(uname -p)" = 'x86_64' ] || [ "$(uname -p)" = 'sparc64' ]; then
++        shtk_config_set ARCHIVE_EXTENSION "tar.xz"
++    else
++        shtk_config_set ARCHIVE_EXTENSION "tgz"
++    fi
  }
  
  
-@@ -163,18 +165,29 @@ require_cached_file() {
+@@ -163,18 +169,29 @@ require_cached_file() {
  # The set to be extracted must have been previously fetched into the cache
  # directory by sysupgrade_fetch command.
  #
@@ -59,7 +63,7 @@ $NetBSD: patch-sysupgrade.sh,v 1.7 2022/04/15 08:07:25 nia Exp $
  }
  
  
-@@ -189,9 +202,10 @@ sysupgrade_fetch() {
+@@ -189,9 +206,10 @@ sysupgrade_fetch() {
  
      local releasedir="$(shtk_config_get RELEASEDIR)"
      local cachedir="$(shtk_config_get CACHEDIR)"
@@ -71,7 +75,7 @@ $NetBSD: patch-sysupgrade.sh,v 1.7 2022/04/15 08:07:25 nia Exp $
      done
      if shtk_config_has KERNEL; then
          local kernel_name="$(shtk_config_get KERNEL)"
-@@ -199,7 +213,7 @@ sysupgrade_fetch() {
+@@ -199,7 +217,7 @@ sysupgrade_fetch() {
      fi
  
      case "${releasedir}" in
@@ -80,7 +84,7 @@ $NetBSD: patch-sysupgrade.sh,v 1.7 2022/04/15 08:07:25 nia Exp $
              mkdir -p "${cachedir}"
  
              for relative_file in ${fetch_files}; do
-@@ -320,6 +334,7 @@ sysupgrade_modules() {
+@@ -320,6 +338,7 @@ sysupgrade_modules() {
  #
  # \param ... Names of the sets to extract, to override SETS.
  sysupgrade_sets() {
@@ -88,7 +92,7 @@ $NetBSD: patch-sysupgrade.sh,v 1.7 2022/04/15 08:07:25 nia Exp $
      local sets=
      for set_name in "${@:-$(shtk_config_get SETS)}"; do
          case "${set_name}" in
-@@ -334,7 +349,7 @@ sysupgrade_sets() {
+@@ -334,7 +353,7 @@ sysupgrade_sets() {
      done
  
      for set_name in ${sets}; do
@@ -97,7 +101,7 @@ $NetBSD: patch-sysupgrade.sh,v 1.7 2022/04/15 08:07:25 nia Exp $
      done
  
      shtk_cli_info "Upgrading base system"
-@@ -346,6 +361,7 @@ sysupgrade_sets() {
+@@ -346,6 +365,7 @@ sysupgrade_sets() {
  
  # Runs etcupdate to install new configuration files.
  sysupgrade_etcupdate() {
@@ -105,7 +109,7 @@ $NetBSD: patch-sysupgrade.sh,v 1.7 2022/04/15 08:07:25 nia Exp $
      [ ${#} -eq 0 ] || shtk_cli_usage_error "etcupdate does not take any" \
          "arguments"
  
-@@ -366,12 +382,12 @@ sysupgrade_etcupdate() {
+@@ -366,12 +386,12 @@ sysupgrade_etcupdate() {
  
      local sflags=
      for set_name in ${sets}; do
@@ -121,7 +125,7 @@ $NetBSD: patch-sysupgrade.sh,v 1.7 2022/04/15 08:07:25 nia Exp $
  }
  
  
-@@ -381,6 +397,7 @@ sysupgrade_etcupdate() {
+@@ -381,6 +401,7 @@ sysupgrade_etcupdate() {
  sysupgrade_postinstall() {
      local sets=
      local sets="$(shtk_list_filter '*etc' $(shtk_config_get SETS))"
@@ -129,7 +133,7 @@ $NetBSD: patch-sysupgrade.sh,v 1.7 2022/04/15 08:07:25 nia Exp $
      if [ -z "${sets}" ]; then
          shtk_cli_info "Skipping postinstall (no etc sets in SETS)"
          return 0
-@@ -392,8 +409,8 @@ sysupgrade_postinstall() {
+@@ -392,8 +413,8 @@ sysupgrade_postinstall() {
  
      local sflags=
      for set_name in ${sets}; do
@@ -140,7 +144,7 @@ $NetBSD: patch-sysupgrade.sh,v 1.7 2022/04/15 08:07:25 nia Exp $
      done
  
      shtk_cli_info "Performing postinstall checks"
-@@ -402,17 +419,20 @@ sysupgrade_postinstall() {
+@@ -402,17 +423,20 @@ sysupgrade_postinstall() {
          postinstall "-d${destdir}/" ${sflags} fix \
              $(shtk_config_get POSTINSTALL_AUTOFIX)
      fi
