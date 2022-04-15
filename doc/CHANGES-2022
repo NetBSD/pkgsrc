@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1860 2022/04/15 13:51:07 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.1861 2022/04/15 14:02:29 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2832,3 +2832,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/libosip to 5.3.0 [schwarz 2022-04-15]
 	Updated net/libexosip to 5.3.0 [schwarz 2022-04-15]
 	Updated devel/mimalloc to 2.0.6 [fcambus 2022-04-15]
+	Updated lang/rust to 1.59.0 [he 2022-04-15]
