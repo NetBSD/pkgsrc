@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/02/13 05:22:01 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/04/15 03:45:24 markd Exp $
 share/texmf-dist/makeindex/latex/gglo.ist
 share/texmf-dist/makeindex/latex/gind.ist
 share/texmf-dist/tex/latex/base/alltt.sty
@@ -25,9 +25,9 @@ share/texmf-dist/tex/latex/base/cp852.def
 share/texmf-dist/tex/latex/base/cp858.def
 share/texmf-dist/tex/latex/base/cp865.def
 share/texmf-dist/tex/latex/base/decmulti.def
+share/texmf-dist/tex/latex/base/doc-v3beta.sty
 share/texmf-dist/tex/latex/base/doc.sty
 share/texmf-dist/tex/latex/base/docstrip.tex
-share/texmf-dist/tex/latex/base/everyshi-ltx.sty
 share/texmf-dist/tex/latex/base/exscale.sty
 share/texmf-dist/tex/latex/base/fix-cm.sty
 share/texmf-dist/tex/latex/base/fixltx2e.sty
