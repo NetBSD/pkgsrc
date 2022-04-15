@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.61 2021/06/14 22:53:02 nia Exp $ -->
+<!-- $NetBSD: components.xml,v 1.62 2022/04/15 13:47:57 gutteridge Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -285,8 +285,8 @@ converters    games         mbone         print         x11
 
   <para>For even more automation, we recommend using
   <command>mkpatches</command> from the same package to make a
-  whole set of patches. You just have to backup files before you
-  edit them to <filename>filename.orig</filename>, e.g. with
+  whole set of patches. You just have to back up files before you
+  edit them to <filename>filename.orig</filename>, e.g., with
   <command>cp -p filename filename.orig</command> or, easier, by
   using <command>pkgvi</command> again from the same package. If
   you upgrade a package this way, you can easily compare the new
@@ -315,6 +315,14 @@ converters    games         mbone         print         x11
   <command>mkpatches</command> included in <filename
   role="pkg">pkgtools/pkgdiff</filename> takes care of the name
   automatically.</para>
+
+  <para>When updating pre-existing patch files, if a file uses the old
+  <filename>patch-<replaceable>[a-z][a-z]</replaceable></filename>
+  convention, it's best not to change it to the new form, as that will
+  just cause churn that makes it harder to track changes to patching
+  over time. Similarly, if a patch now applies at different line offsets,
+  but still applies cleanly as-is, there's no need to update it, as that
+  also unnecessarily complicates the patch history.</para>
 
 </sect2>
 <sect2 id="components.patches.sources">
