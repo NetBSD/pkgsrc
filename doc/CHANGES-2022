@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1848 2022/04/15 05:06:22 markd Exp $
+$NetBSD: CHANGES-2022,v 1.1849 2022/04/15 05:42:40 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2809,3 +2809,12 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/tex-uptex-fonts-doc to 2021 [markd 2022-04-15]
 	Updated print/tex-vntex to 3.2.2 [markd 2022-04-15]
 	Updated print/tex-vntex-doc to 3.2.2 [markd 2022-04-15]
+	Updated devel/tex-l3backend to 2021.63025 [markd 2022-04-15]
+	Updated devel/tex-l3backend-doc to 2021.63025 [markd 2022-04-15]
+	Updated devel/tex-l3experimental to 2021.63007 [markd 2022-04-15]
+	Updated devel/tex-l3kernel to 2021.63007 [markd 2022-04-15]
+	Updated devel/tex-l3kernel-doc to 2021.63007 [markd 2022-04-15]
+	Updated devel/tex-l3packages to 2021.61588 [markd 2022-04-15]
+	Updated devel/tex-l3packages-doc to 2021.61588 [markd 2022-04-15]
+	Updated devel/tex-tlshell to 2021.62795 [markd 2022-04-15]
+	Updated devel/tex-tlshell-doc to 2021.62795 [markd 2022-04-15]
