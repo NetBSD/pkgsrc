@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:14:48 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/04/15 04:40:01 markd Exp $
 
-BLAKE2s (tex4ebook.r56878.tar.xz) = c7b9633bde2d83e3221052ac2b9ea5d3e61e249099f5b860137974ba57665f7d
-SHA512 (tex4ebook.r56878.tar.xz) = 9ef3a2b820f1f7015b61b8cff017affbf8cdc07fb1d4c39f629e46e2457a08875dd83252526e75465ec75a42d6580b7ec75b085455e5ba62dd14dd13a898a8f2
-Size (tex4ebook.r56878.tar.xz) = 16960 bytes
+BLAKE2s (tex4ebook.r62076.tar.xz) = ba9fd6f2717805e92eb905e46661cd2755397bf533c38134d6341588a6691342
+SHA512 (tex4ebook.r62076.tar.xz) = ce9a19544d63fdec5e37fd129bfc87c6fa7c35ebfd719a703b9ba59dfd4ddcded42d03d075f2fd80730a5f295b2393c083098e5782b3a0ab2cbace335bb78c50
+Size (tex4ebook.r62076.tar.xz) = 17748 bytes
