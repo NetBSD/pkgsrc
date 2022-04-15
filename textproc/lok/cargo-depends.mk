@@ -1,14 +1,14 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2021/02/12 08:15:52 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2022/04/15 16:18:45 pin Exp $
 
-CARGO_CRATE_DEPENDS+=	ansi_term-0.11.0
+CARGO_CRATE_DEPENDS+=	ansi_term-0.12.1
 CARGO_CRATE_DEPENDS+=	atty-0.2.13
 CARGO_CRATE_DEPENDS+=	autocfg-1.0.1
 CARGO_CRATE_DEPENDS+=	bitflags-1.2.1
 CARGO_CRATE_DEPENDS+=	bright-0.4.0
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
-CARGO_CRATE_DEPENDS+=	clap-2.33.3
+CARGO_CRATE_DEPENDS+=	clap-2.34.0
 CARGO_CRATE_DEPENDS+=	const_fn-0.4.5
-CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.0
+CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.1
 CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.1
 CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.1
 CARGO_CRATE_DEPENDS+=	glob-0.3.0
@@ -16,14 +16,14 @@ CARGO_CRATE_DEPENDS+=	hermit-abi-0.1.3
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.70
 CARGO_CRATE_DEPENDS+=	memoffset-0.6.1
-CARGO_CRATE_DEPENDS+=	num_cpus-1.13.0
+CARGO_CRATE_DEPENDS+=	num_cpus-1.13.1
 CARGO_CRATE_DEPENDS+=	same-file-1.0.5
 CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
 CARGO_CRATE_DEPENDS+=	strsim-0.8.0
 CARGO_CRATE_DEPENDS+=	textwrap-0.11.0
 CARGO_CRATE_DEPENDS+=	unicode-width-0.1.8
 CARGO_CRATE_DEPENDS+=	vec_map-0.8.2
-CARGO_CRATE_DEPENDS+=	walkdir-2.3.1
+CARGO_CRATE_DEPENDS+=	walkdir-2.3.2
 CARGO_CRATE_DEPENDS+=	winapi-0.3.8
 CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
 CARGO_CRATE_DEPENDS+=	winapi-util-0.1.2

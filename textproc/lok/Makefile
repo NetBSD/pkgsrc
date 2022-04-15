@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/03/14 10:24:40 pin Exp $
+# $NetBSD: Makefile,v 1.8 2022/04/15 16:18:45 pin Exp $
 
-# lok >= 0.1.5 (currently 0.2.0) requires rust-1.59.0
-DISTNAME=	lok-0.1.4
+DISTNAME=	lok-0.2.0
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wyhaya/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
