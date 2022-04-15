@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2021/02/14 20:15:06 markd Exp $
+# $NetBSD: Makefile,v 1.5 2022/04/15 00:28:07 markd Exp $
 
 DISTNAME=	babel-dutch
-PKGNAME=	tex-${DISTNAME}-3.8j
-TEXLIVE_REV=	56827
+PKGNAME=	tex-${DISTNAME}-3.8l
+TEXLIVE_REV=	60362
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/babel-dutch
