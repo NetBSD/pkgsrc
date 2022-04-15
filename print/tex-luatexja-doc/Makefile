@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2021/06/06 11:14:36 markd Exp $
+# $NetBSD: Makefile,v 1.3 2022/04/15 03:59:24 markd Exp $
 
 DISTNAME=	luatexja.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-20210521.0
-TEXLIVE_REV=	59299
+PKGNAME=	tex-${DISTNAME:S/./-/}-20220411.0
+TEXLIVE_REV=	63006
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/luatexja
