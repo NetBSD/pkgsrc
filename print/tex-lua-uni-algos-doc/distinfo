@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/15 05:54:52 markd Exp $
+
+BLAKE2s (lua-uni-algos.doc.r62204.tar.xz) = 837dbacea46c90372cd30400146180b445f3d8cd1a7afa57137b0e8235914695
+SHA512 (lua-uni-algos.doc.r62204.tar.xz) = 5f667cebc56682225d8a68668bf7e02545e6239b6fba3f8f6ab49bc34d50d537d39484b060d8239631bc4a0de42b63824af04e5e3cc33c528c0925de8419b5c5
+Size (lua-uni-algos.doc.r62204.tar.xz) = 73912 bytes
