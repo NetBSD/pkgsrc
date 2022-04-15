@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:14:46 nia Exp $
-
-BLAKE2s (jwt-go/v3.2.0.tar.gz) = e66f58927443cb4a73a1329013d5ad0c305fcd5a177b098fa131c04b8b0c1dd4
-SHA512 (jwt-go/v3.2.0.tar.gz) = 782dd5fb85e56915fca96b894eb4c6f57ea05cc2ed725f3504868a7acf9c75a4ce1acc46d179b3e4ab14100ec7eb05a906fd291bf016897c4490c27126c0fb0f
-Size (jwt-go/v3.2.0.tar.gz) = 36960 bytes
