@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1850 2022/04/15 05:43:46 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1851 2022/04/15 06:06:49 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2820,3 +2820,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/tex-tlshell-doc to 2021.62795 [markd 2022-04-15]
 	Updated sysutils/py-setproctitle to 1.2.3 [adam 2022-04-15]
 	Updated devel/py-dulwich to 0.20.35 [adam 2022-04-15]
+	Added print/tex-lua-uni-algos version 0.4.1 [markd 2022-04-15]
+	Added print/tex-lua-uni-algos-doc version 0.4.1 [markd 2022-04-15]
+	Updated fonts/tex-luaotfload to 3.21 [markd 2022-04-15]
+	Updated fonts/tex-luaotfload-doc to 3.21 [markd 2022-04-15]
