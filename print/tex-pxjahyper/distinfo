@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:14:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/15 04:33:53 markd Exp $
 
-BLAKE2s (pxjahyper.r59395.tar.xz) = 97200762a67f9e23bbb308a1da22cf0eaef3796d710f272f50e28a2352f8c05f
-SHA512 (pxjahyper.r59395.tar.xz) = e1e8d78be8c9de9168d66c8189b8e5268530ff3e2ad20eccf652d4017de80db779253963fc84935498a573c0acb6013c932ef94540604b1be0e1113bc154d209
-Size (pxjahyper.r59395.tar.xz) = 16516 bytes
+BLAKE2s (pxjahyper.r62921.tar.xz) = f76cb04e37ca29aa433431d0aafe040118f4380ca309f266e11d412baed0192b
+SHA512 (pxjahyper.r62921.tar.xz) = 1dfedad891d61a0ee1b062a23f9ed2a7a1389737485f5fa2e918e953a797e24829b8003346dcad61fcd8eeefc88a5c8041161203460579d67ddd67b66bed6b8b
+Size (pxjahyper.r62921.tar.xz) = 17432 bytes
