@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:15:05 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/15 05:04:02 markd Exp $
 
-BLAKE2s (tex-vntex-30579/vntex.tar.xz) = b1010bea78b8568f6366c48ff9205363f760d126cdfbaa36e4d17be00a13a2c4
-SHA512 (tex-vntex-30579/vntex.tar.xz) = 9a70c0932c6d486a38e9739d2043f720ca89789e495f87f5a2be62374bbcead243cefa818fcd6087c23a9b5e76d5294e8a4f84b1602b69bc574e589f91b1e543
-Size (tex-vntex-30579/vntex.tar.xz) = 5301992 bytes
+BLAKE2s (vntex.r62837.tar.xz) = 607d5191503bebfc9a88b3942c1e2c69dfcf1fd84bd27fde855515a63ffdf334
+SHA512 (vntex.r62837.tar.xz) = f6a4396c473b6b0dd067c88911457a21ed393cd1d10edc90db0122fefedca2a6809ff50c34932d28bc1d6774ee176a165002d24062f8b6b949e85cb1468747ee
+Size (vntex.r62837.tar.xz) = 5391740 bytes
