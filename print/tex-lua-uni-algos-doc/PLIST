@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/15 05:54:52 markd Exp $
+share/texmf-dist/doc/luatex/lua-uni-algos/README.md
+share/texmf-dist/doc/luatex/lua-uni-algos/lua-uni-algos.pdf
+share/texmf-dist/doc/luatex/lua-uni-algos/lua-uni-algos.tex
