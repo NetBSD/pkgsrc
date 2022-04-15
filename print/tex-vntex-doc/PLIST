@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/03 17:43:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/04/15 05:04:03 markd Exp $
 share/texmf-dist/doc/generic/vntex/INSTALL
+share/texmf-dist/doc/generic/vntex/README.md
 share/texmf-dist/doc/generic/vntex/ReleaseNotes.pdf
 share/texmf-dist/doc/generic/vntex/vn-fonts-print.pdf
 share/texmf-dist/doc/generic/vntex/vn-fonts.pdf
