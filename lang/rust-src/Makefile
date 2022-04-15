@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/03/03 16:49:31 he Exp $
+# $NetBSD: Makefile,v 1.4 2022/04/15 17:46:14 he Exp $
 
-DISTNAME=	rust-src-1.58.1
+DISTNAME=	rust-src-1.59.0
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=rust/}
 
