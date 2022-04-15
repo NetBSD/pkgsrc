@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/01/04 23:35:37 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2022/04/15 11:27:41 nia Exp $
 
 DISTNAME=	numexpr-2.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	mit
 USE_LANGUAGES=	c c++
 REPLACE_PYTHON=	numexpr/cpuinfo.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # numpy
 
 # needs to be installed first
 do-test:
