@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1871 2022/04/15 17:46:35 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1872 2022/04/15 17:47:55 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2845,3 +2845,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/go-sys to 0.0.20220412 [tnn 2022-04-15]
 	Updated lang/rust-analyzer to 0.0.2022.04.11 [adam 2022-04-15]
 	Updated lang/py-executing to 0.8.3 [adam 2022-04-15]
+	Updated lang/rust-src to 1.59.0 [he 2022-04-15]
