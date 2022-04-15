@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:13:52 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/04/15 03:50:30 markd Exp $
 
-BLAKE2s (latex-firstaid-dev.doc.r59474.tar.xz) = dd3a3957bd1fd0491b53c171656e37c051bc5273693acf1d58c4f8d56fef87fd
-SHA512 (latex-firstaid-dev.doc.r59474.tar.xz) = be2f39a62b59efd74db39601595e951e0973638e70b3570ef3c18cb9d7c459bf4adf1086b18aa9886d41a49acbf1abe333eef195eb8f42d5e96716083fa52ea3
-Size (latex-firstaid-dev.doc.r59474.tar.xz) = 223000 bytes
+BLAKE2s (latex-firstaid-dev.doc.r62725.tar.xz) = 0bd3b27173519a100e4a9ba5e8cdc9192452c479bd0f0db7af0fec9eccff8a02
+SHA512 (latex-firstaid-dev.doc.r62725.tar.xz) = b32e044c88397fac4c122cbccfc3ea21a733fef6d8457a5cc6b7426aa54015d4c98c9a1ec5f2fcd39388f659682129466f69e3fce263d63953bf0586a5eb758d
+Size (latex-firstaid-dev.doc.r62725.tar.xz) = 234740 bytes
