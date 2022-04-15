@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1863 2022/04/15 16:02:45 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1864 2022/04/15 16:16:35 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2836,3 +2836,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/neomutt to 20220415 [wiz 2022-04-15]
 	Updated textproc/py-sphinx to 4.5.0 [adam 2022-04-15]
 	Updated devel/py-macholib to 1.16 [adam 2022-04-15]
+	Updated sysutils/broot to 1.11.1 [pin 2022-04-15]
