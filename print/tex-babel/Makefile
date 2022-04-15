@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.21 2021/06/05 01:46:19 mef Exp $
+# $NetBSD: Makefile,v 1.22 2022/04/15 00:26:20 markd Exp $
 
 DISTNAME=	babel
-PKGNAME=	tex-${DISTNAME}-3.60
-TEXLIVE_REV=	59439
+PKGNAME=	tex-${DISTNAME}-3.73
+TEXLIVE_REV=	62202
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/babel
-COMMENT=	Multilingual support for Plain TeX or LaTeX
+COMMENT=	Multilingual support for LaTeX, LuaLaTeX, XeLaTeX, and Plain TeX
 LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-carlisle>=2010:../../print/tex-carlisle
