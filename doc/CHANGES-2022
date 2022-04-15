@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1859 2022/04/15 12:43:32 schwarz Exp $
+$NetBSD: CHANGES-2022,v 1.1860 2022/04/15 13:51:07 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2831,3 +2831,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed databases/go-tiedot [nikita 2022-04-15]
 	Updated devel/libosip to 5.3.0 [schwarz 2022-04-15]
 	Updated net/libexosip to 5.3.0 [schwarz 2022-04-15]
+	Updated devel/mimalloc to 2.0.6 [fcambus 2022-04-15]
