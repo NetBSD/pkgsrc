@@ -1,4 +1,4 @@
-$NetBSD: patch-sysupgrade.conf.5.in,v 1.1 2019/06/03 20:35:55 triaxx Exp $
+$NetBSD: patch-sysupgrade.conf.5.in,v 1.2 2022/04/15 09:10:56 nia Exp $
 
 * Add variable for archive file extension
 
@@ -15,7 +15,7 @@ $NetBSD: patch-sysupgrade.conf.5.in,v 1.1 2019/06/03 20:35:55 triaxx Exp $
 +or
 +.Sq tar.xz .
 +.Pp
-+Default: tgz.
++Default: depends on CPU architecture.
  .El
  .Sh SEE ALSO
  .Xr sysupgrade 8
