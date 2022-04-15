@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.654 2022/04/03 14:08:20 wiz Exp $
+# $NetBSD: Makefile,v 1.655 2022/04/15 11:48:50 nikita Exp $
 
 COMMENT=	Databases
 
@@ -42,7 +42,6 @@ SUBDIR+=	gigabase
 SUBDIR+=	gnats
 SUBDIR+=	gnome-mime-data
 SUBDIR+=	go-ldap
-SUBDIR+=	go-tiedot
 SUBDIR+=	gobang
 SUBDIR+=	gom
 SUBDIR+=	gourmet
