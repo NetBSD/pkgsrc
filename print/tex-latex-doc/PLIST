@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/02/13 05:22:01 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/04/15 03:45:24 markd Exp $
 share/texmf-dist/doc/latex/base/README.md
 share/texmf-dist/doc/latex/base/alltt.pdf
 share/texmf-dist/doc/latex/base/bugs.txt
@@ -23,6 +23,8 @@ share/texmf-dist/doc/latex/base/fntguide.tex
 share/texmf-dist/doc/latex/base/graphpap.pdf
 share/texmf-dist/doc/latex/base/ifthen.pdf
 share/texmf-dist/doc/latex/base/inputenc.pdf
+share/texmf-dist/doc/latex/base/lamport-manual.err
+share/texmf-dist/doc/latex/base/lamport-manual.pdf
 share/texmf-dist/doc/latex/base/latexchanges.pdf
 share/texmf-dist/doc/latex/base/latexchanges.tex
 share/texmf-dist/doc/latex/base/latexrelease.pdf
@@ -38,6 +40,10 @@ share/texmf-dist/doc/latex/base/lppl-1-1.txt
 share/texmf-dist/doc/latex/base/lppl-1-2.txt
 share/texmf-dist/doc/latex/base/lppl.pdf
 share/texmf-dist/doc/latex/base/lppl.txt
+share/texmf-dist/doc/latex/base/ltcmdhooks-code.pdf
+share/texmf-dist/doc/latex/base/ltcmdhooks-code.tex
+share/texmf-dist/doc/latex/base/ltcmdhooks-doc.pdf
+share/texmf-dist/doc/latex/base/ltcmdhooks-doc.tex
 share/texmf-dist/doc/latex/base/ltfilehook-code.pdf
 share/texmf-dist/doc/latex/base/ltfilehook-code.tex
 share/texmf-dist/doc/latex/base/ltfilehook-doc.pdf
@@ -113,6 +119,14 @@ share/texmf-dist/doc/latex/base/ltnews31.pdf
 share/texmf-dist/doc/latex/base/ltnews31.tex
 share/texmf-dist/doc/latex/base/ltnews32.pdf
 share/texmf-dist/doc/latex/base/ltnews32.tex
+share/texmf-dist/doc/latex/base/ltnews33.pdf
+share/texmf-dist/doc/latex/base/ltnews33.tex
+share/texmf-dist/doc/latex/base/ltnews34.pdf
+share/texmf-dist/doc/latex/base/ltnews34.tex
+share/texmf-dist/doc/latex/base/ltpara-code.pdf
+share/texmf-dist/doc/latex/base/ltpara-code.tex
+share/texmf-dist/doc/latex/base/ltpara-doc.pdf
+share/texmf-dist/doc/latex/base/ltpara-doc.tex
 share/texmf-dist/doc/latex/base/ltshipout-code.pdf
 share/texmf-dist/doc/latex/base/ltshipout-code.tex
 share/texmf-dist/doc/latex/base/ltshipout-doc.pdf
@@ -122,8 +136,6 @@ share/texmf-dist/doc/latex/base/ltx3info.tex
 share/texmf-dist/doc/latex/base/ltxdoc.pdf
 share/texmf-dist/doc/latex/base/makeindx.pdf
 share/texmf-dist/doc/latex/base/manifest.txt
-share/texmf-dist/doc/latex/base/manual.err
-share/texmf-dist/doc/latex/base/manual.pdf
 share/texmf-dist/doc/latex/base/modguide.pdf
 share/texmf-dist/doc/latex/base/modguide.tex
 share/texmf-dist/doc/latex/base/nfssfont.pdf
