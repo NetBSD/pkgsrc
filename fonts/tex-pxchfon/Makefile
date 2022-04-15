@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/02/21 08:53:28 markd Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/15 04:31:17 markd Exp $
 
 DISTNAME=	pxchfon
-PKGNAME=	tex-${DISTNAME}-1.7e
-TEXLIVE_REV=	56537
+PKGNAME=	tex-${DISTNAME}-1.9
+TEXLIVE_REV=	59449
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/pxchfon
