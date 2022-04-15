@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 09:58:52 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/04/15 21:16:50 khorben Exp $
 
-BLAKE2s (Mixer-0.4.0.tar.gz) = d67399e200ad75f20efd1f4e485f82d50843e1a89fd1e7d42b21e28ad8a19454
-SHA512 (Mixer-0.4.0.tar.gz) = b2294f8a44b1415068302bf4bde0d6b4b9e5d525c9e46469271579f86d54e80262d5ed40cbd08241ed4c98cd92f5644058b02bb4142b949f26c30816d2b5c5c3
-Size (Mixer-0.4.0.tar.gz) = 31365 bytes
+BLAKE2s (Mixer-0.4.1.tar.gz) = 3aa83c50d999d88f48456afe882cf07d2ed93b215e882c95236821df1defb5b6
+SHA512 (Mixer-0.4.1.tar.gz) = ae30b955efc58d31a561f47787eb9d50b4ddaed74a9c07f84f11e0e7203e3b18cfa2fbd1c75b2b889428e31e063bcd9afc07d00fa33ace306c993e9c2dca06ac
+Size (Mixer-0.4.1.tar.gz) = 31489 bytes
