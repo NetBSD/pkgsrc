@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.252 2022/04/15 14:00:37 he Exp $
+# $NetBSD: Makefile,v 1.253 2022/04/15 17:30:34 adam Exp $
 
 DISTNAME=	rustc-1.59.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -44,6 +44,7 @@ CONFIGURE_ARGS+=		--disable-codegen-tests
 CONFIGURE_ARGS+=		--disable-compiler-docs
 CONFIGURE_ARGS+=		--disable-llvm-static-stdcpp
 CONFIGURE_ARGS+=		--disable-ninja
+CONFIGURE_ARGS+=		--dist-compression-formats=xz
 
 # Include (optional) settings to cross-build rust
 .include "cross.mk"
