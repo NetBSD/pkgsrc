@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/02/15 19:13:04 fcambus Exp $
+$NetBSD: distinfo,v 1.6 2022/04/15 13:50:56 fcambus Exp $
 
-BLAKE2s (mimalloc-2.0.5.tar.gz) = 2e6bb232177add1d099a010179b32e34ad5f4eca96b69551954056c49f8c3cf5
-SHA512 (mimalloc-2.0.5.tar.gz) = d164392ace523a3fa0aa00fc58d8a9e8fbe913f07957e19ca977675b389e6d2a2eaf4772e72cae0d87aabb960f3fd6ea3923a066ece4ba4fdaa0c6860cfa414d
-Size (mimalloc-2.0.5.tar.gz) = 1125567 bytes
+BLAKE2s (mimalloc-2.0.6.tar.gz) = 1113416316ab2159d3525c695601369dc659836629c22ac7b6bb24caa18ef81a
+SHA512 (mimalloc-2.0.6.tar.gz) = f2fc0fbfb6384e85959897f129e5d5d9acc51bda536d5cabcd7d4177dbda9fb735b8a8c239b961f8bea31d37c9ae10f66da23aa91d497f95393253d4ac792bb3
+Size (mimalloc-2.0.6.tar.gz) = 1127052 bytes
