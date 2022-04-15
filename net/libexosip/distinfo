@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:05:54 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/04/15 12:43:32 schwarz Exp $
 
-BLAKE2s (libexosip2-5.2.0.tar.gz) = b182acda65a63685a0c6a61d4dee6c9928a2d95a8c39f50e20ccb798e809bfad
-SHA512 (libexosip2-5.2.0.tar.gz) = 0abfa695d466a10e67eb89ea5228578e42b713c0aab556e53a76919f7b96069338c3edc151f44566834894244a51cbacda1958612ae58dd2040caa654094d9af
-Size (libexosip2-5.2.0.tar.gz) = 641925 bytes
+BLAKE2s (libexosip2-5.3.0.tar.gz) = e83414f0b63be4318c5bd3e7aba7688f94a966ae449667b7316992e1efdbb66d
+SHA512 (libexosip2-5.3.0.tar.gz) = 546491224d2ac542c032d704be0e08ef0a08dcf74aa706ad40bd0d30d8e3c28419139d14fa2c31f601e19879d00b2b0cea65c08edecbf560b3f5599ef0335828
+Size (libexosip2-5.3.0.tar.gz) = 646401 bytes
 SHA1 (patch-src_eXutils.c) = 4e60454423360f82799f2194308123b332d5ca5b
 SHA1 (patch-tools_sip__reg.c) = 297c4467010e8ea3e41806fc3f9777a3ce73e095
