@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.827 2022/04/16 01:55:24 markd Exp $
+# $NetBSD: Makefile,v 1.828 2022/04/16 01:58:45 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -892,6 +892,8 @@ SUBDIR+=	tex-hyphenat-doc
 SUBDIR+=	tex-hyphenex
 SUBDIR+=	tex-hyplain
 SUBDIR+=	tex-hyplain-doc
+SUBDIR+=	tex-ieejtran
+SUBDIR+=	tex-ieejtran-doc
 SUBDIR+=	tex-ifmtarg
 SUBDIR+=	tex-ifmtarg-doc
 SUBDIR+=	tex-ifnextok
