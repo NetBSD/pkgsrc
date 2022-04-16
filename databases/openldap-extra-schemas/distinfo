@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/16 02:48:41 khorben Exp $
+
+BLAKE2s (openldap-extra-schemas-4.3.tar.gz) = 34a1cd28f8637d5d979d4a41e7695541897ea466646a973f36d8c66f19860ba8
+SHA512 (openldap-extra-schemas-4.3.tar.gz) = c7d37abbcacee37fbbe0a59f710c79c3257ce315b0478b85bf6fd8342c8c3222414e1e0532f0e10270b81fc4547840d71285027854f9917893281ff119ccc8ae
+Size (openldap-extra-schemas-4.3.tar.gz) = 43585 bytes
