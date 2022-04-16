@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/16 01:55:24 markd Exp $
+share/texmf-dist/doc/bibtex/jieeetran/README
+share/texmf-dist/doc/bibtex/jieeetran/jieeetran-en.pdf
+share/texmf-dist/doc/bibtex/jieeetran/jieeetran-en.tex
+share/texmf-dist/doc/bibtex/jieeetran/jieeetran.pdf
+share/texmf-dist/doc/bibtex/jieeetran/jieeetran.tex
+share/texmf-dist/doc/bibtex/jieeetran/mixej.py
