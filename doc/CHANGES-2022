@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1875 2022/04/16 00:53:06 taca Exp $
+$NetBSD: CHANGES-2022,v 1.1876 2022/04/16 00:54:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2849,3 +2849,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xfce4-terminal to 1.0.1 [gutteridge 2022-04-15]
 	Updated audio/deforaos-mixer to 0.4.1 [khorben 2022-04-15]
 	Updated lang/php74 to 7.4.29 [taca 2022-04-16]
+	Updated lang/php80 to 8.0.18 [taca 2022-04-16]
