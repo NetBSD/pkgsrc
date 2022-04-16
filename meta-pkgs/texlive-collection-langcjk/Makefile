@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2021/02/12 02:30:56 markd Exp $
+# $NetBSD: Makefile,v 1.14 2022/04/16 02:12:42 markd Exp $
 
 DISTNAME=	collection-langcjk
-PKGNAME=	texlive-${DISTNAME}-2020
+PKGNAME=	texlive-${DISTNAME}-2022
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	54191
+TEXLIVE_REV=	61912
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -25,6 +25,8 @@ DEPENDS+=	tex-jfmutil-[0-9]*:../../print/tex-jfmutil
 DEPENDS+=	tex-norasi-c90-[0-9]*:../../fonts/tex-norasi-c90
 DEPENDS+=	tex-pxtatescale-[0-9]*:../../print/tex-pxtatescale
 DEPENDS+=	tex-xcjk2uni-[0-9]*:../../print/tex-xcjk2uni
+DEPENDS+=	tex-xecjk-[0-9]*:../../print/tex-xecjk
+DEPENDS+=	tex-zitie-[0-9]*:../../print/tex-zitie
 DEPENDS+=	tex-zxjafont-[0-9]*:../../print/tex-zxjafont
 
 META_PACKAGE=	yes
