@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/16 01:03:01 markd Exp $
+
+BLAKE2s (minim-hatching.r62395.tar.xz) = 1b6ee7d4fc58e843dd8b33c3b9593770a51f97a67b0988990117a163159b43a2
+SHA512 (minim-hatching.r62395.tar.xz) = 3d6720c4bbce847f1ca08279593398d162c80c14034ba6b8d168517ab30af883ce4fcc6cb0cea4dac0b0720be8fb8f67ddd131a026ed6ca5ea46182af1c41110
+Size (minim-hatching.r62395.tar.xz) = 2232 bytes
