@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.825 2022/04/16 01:47:13 markd Exp $
+# $NetBSD: Makefile,v 1.826 2022/04/16 01:50:22 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -931,6 +931,8 @@ SUBDIR+=	tex-js-misc-doc
 SUBDIR+=	tex-jsclasses
 SUBDIR+=	tex-jurabib
 SUBDIR+=	tex-jurabib-doc
+SUBDIR+=	tex-kanbun
+SUBDIR+=	tex-kanbun-doc
 SUBDIR+=	tex-keycommand
 SUBDIR+=	tex-keycommand-doc
 SUBDIR+=	tex-kix
