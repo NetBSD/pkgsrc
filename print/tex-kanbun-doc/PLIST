@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/16 01:50:22 markd Exp $
+share/texmf-dist/doc/latex/kanbun/README.md
+share/texmf-dist/doc/latex/kanbun/kanbun-en.pdf
+share/texmf-dist/doc/latex/kanbun/kanbun-en.tex
+share/texmf-dist/doc/latex/kanbun/kanbun-example.pdf
+share/texmf-dist/doc/latex/kanbun/kanbun-example.tex
+share/texmf-dist/doc/latex/kanbun/kanbun-ja.pdf
+share/texmf-dist/doc/latex/kanbun/kanbun-ja.tex
+share/texmf-dist/doc/latex/kanbun/kanbun.tex
