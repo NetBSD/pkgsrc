@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1885 2022/04/16 15:38:10 he Exp $
+$NetBSD: CHANGES-2022,v 1.1886 2022/04/16 15:46:28 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2893,3 +2893,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/R-evaluate to 0.15 [mef 2022-04-16]
 	Updated textproc/ruby-nokogiri to 1.13.4 [tsutsui 2022-04-16]
 	Updated lang/rust-bin to 1.59.0 [he 2022-04-16]
+	Updated www/wiki-tui to 0.4.7 [pin 2022-04-16]
