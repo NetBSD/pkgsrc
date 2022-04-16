@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/16 01:37:30 markd Exp $
+share/texmf-dist/fonts/opentype/public/fandol/FandolBraille-Display.otf
+share/texmf-dist/fonts/opentype/public/fandol/FandolBraille-Regular.otf
+share/texmf-dist/fonts/opentype/public/fandol/FandolFang-Regular.otf
+share/texmf-dist/fonts/opentype/public/fandol/FandolHei-Bold.otf
+share/texmf-dist/fonts/opentype/public/fandol/FandolHei-Regular.otf
+share/texmf-dist/fonts/opentype/public/fandol/FandolKai-Regular.otf
+share/texmf-dist/fonts/opentype/public/fandol/FandolSong-Bold.otf
+share/texmf-dist/fonts/opentype/public/fandol/FandolSong-Regular.otf
