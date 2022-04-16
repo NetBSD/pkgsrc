@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q1,v 1.1.2.3 2022/04/13 07:17:05 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q1,v 1.1.2.4 2022/04/16 10:17:03 spz Exp $
 
 Changes to packages and infrastructure on the 2022Q1 branch:
 
@@ -20,4 +20,31 @@ lang/ruby: NetBSD/arm build fix
 Pullup ticket #6612 - requested by nia
 www/firefox91: security fix
 www/firefox91-l10n: dependent update
+
+Pullup ticket #6613 - requested by bsiegert
+devel/java-subversion: security update
+devel/p5-subversion: security update
+devel/py-subversion: security update
+devel/ruby-subversion: security update
+devel/subversion-base: security update
+devel/subversion: security update
+
+Pullup ticket #6614 - requested by tron
+mail/mutt: security update
+
+Pullup ticket #6615 - requested by taca
+lang/ruby26-base: security-update
+
+Pullup ticket #6616 - requested by taca
+lang/ruby27: security update
+
+Pullup ticket #6617 - requested by taca
+lang/ruby30-base: security update
+
+Pullup ticket #6618 - requested by taca
+lang/ruby31-base: security update
+
+Pullup ticket #6619 - requested by gutteridge
+devel/git-base: security update
+devel/git: security update
 
