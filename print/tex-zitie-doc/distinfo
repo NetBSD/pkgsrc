@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/16 01:15:37 markd Exp $
+
+BLAKE2s (zitie.doc.r60676.tar.xz) = fa2e2343c6cabdf66da4e9c3f589a65296f206e4ccb5318df31f388da532f1c8
+SHA512 (zitie.doc.r60676.tar.xz) = 84f8e20beec5ba5ffbd79c6ffa68f0530b285761a8de6ed53e621ef39c0c14f59c33d76373581f94f10b1149a9fe5c92c1c74bbe2c4d6b8aa589d3a574bd9153
+Size (zitie.doc.r60676.tar.xz) = 345476 bytes
