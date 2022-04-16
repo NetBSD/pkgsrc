@@ -1,0 +1,5 @@
+The package introduces Subversion variants of the standard
+LaTeX macros \ProvidesPackage, \ProvidesClass and \ProvidesFile
+where the file name and date is extracted from Subversion Id
+keywords. The file name may also be given explicitly as an
+optional argument.
