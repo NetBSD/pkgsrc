@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.538 2022/04/03 07:54:53 wiz Exp $
+# $NetBSD: Makefile,v 1.539 2022/04/16 01:20:10 markd Exp $
 
 COMMENT=	Mathematics
 
@@ -464,6 +464,8 @@ SUBDIR+=	tex-physics
 SUBDIR+=	tex-physics-doc
 SUBDIR+=	tex-unicode-math
 SUBDIR+=	tex-unicode-math-doc
+SUBDIR+=	tex-zhnumber
+SUBDIR+=	tex-zhnumber-doc
 SUBDIR+=	texdrive
 SUBDIR+=	tochnog
 SUBDIR+=	udunits
