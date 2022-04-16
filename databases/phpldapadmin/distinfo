@@ -1,13 +1,29 @@
-$NetBSD: distinfo,v 1.19 2021/10/26 10:09:45 nia Exp $
+$NetBSD: distinfo,v 1.20 2022/04/16 03:11:28 khorben Exp $
 
-BLAKE2s (phpldapadmin-1.2.3.tgz) = 87fad8e94727f824af91ed9576a85009d5bd7a69ab8ed2d8f805147a8c7a2cdd
-SHA512 (phpldapadmin-1.2.3.tgz) = 58a57ca577586685ebd0d7fde7e299b8945d1693018c7803e19239b79f4b9d72a4d207d53c9f284268e32398108038efafcdb434e634619bfe87db3524d267b6
-Size (phpldapadmin-1.2.3.tgz) = 1115707 bytes
-SHA1 (patch-config_config.php.example) = c6cdc8e62ec8c06ae99f219f1a20694502d6fe0d
-SHA1 (patch-htdocs_index.php) = 4788ea606b6aa0cc93bb319c8d6b180ccf3010e6
-SHA1 (patch-lib_PageRender.php) = 198e637024c01b164017a15b5449782ce8829996
-SHA1 (patch-lib_QueryRender.php) = 806e3d2f874aca0ff8c0c07d4f4db57a2008185c
-SHA1 (patch-lib_TemplateRender.php) = 766981b0a31221d2580e7f592140dd95601caf40
-SHA1 (patch-lib_ds__ldap.php) = 55563684fba16c1fbebbfa88ff1ce506f6c947fc
-SHA1 (patch-lib_ds__ldap__pla.php) = 5331d8410ace331a5924f96e3f90a991866b9345
-SHA1 (patch-lib_functions.php) = 06be1a704070e5466278dfc3003f5c015fcc93c9
+BLAKE2s (phpldapadmin-1.2.6.3.tar.gz) = 357714bc52f95ce722eb85b008b395ce22843b223e312e9ec22e5ecb7304a2e9
+SHA512 (phpldapadmin-1.2.6.3.tar.gz) = 66aeb81c812830968df5d3a2f0ccdd479fe5d7ed3bb729c0fb9991d3efa20263a493b38bfe48c99ad2c93c2ee549f51f53e064fb1381bc7e126ca2ad2bfc3167
+Size (phpldapadmin-1.2.6.3.tar.gz) = 1130061 bytes
+SHA1 (patch-htdocs_collapse.php) = 2ba096f8ba5c8304e27f3d10818605da667be72c
+SHA1 (patch-htdocs_draw__tree__node.php) = 63ec819e6fdc7be05188df9a4d603e0d01261b2e
+SHA1 (patch-htdocs_expand.php) = 06b83f5093e23f1628cb1be7a741b0eabe5e0e97
+SHA1 (patch-htdocs_refresh.php) = ea724a89cd540191ec4c2e2adbb3c25b359cdbe6
+SHA1 (patch-lib_Attribute.php) = e0d95fc787e19da0b779dc0b974a2755f0d1c0e7
+SHA1 (patch-lib_AttributeFactory.php) = 7db91e50bc649ee0a4bea6a63cb9f055be3f9340
+SHA1 (patch-lib_BinaryAttribute.php) = 108b6fdca6f0013513adc81c6f092ef85c821a2b
+SHA1 (patch-lib_DateAttribute.php) = 051ebe274fa7ebb53955464d7b6a63d34c334d4b
+SHA1 (patch-lib_DnAttribute.php) = 8014cf8e8fe278298979197aaf8370b31adf65cb
+SHA1 (patch-lib_GidAttribute.php) = 483c4a5ad673a2244cbdf5efd008395174520544
+SHA1 (patch-lib_MultiLineAttribute.php) = e5ac91a1d20b1103fd708c463b3bab1b42cc3b4d
+SHA1 (patch-lib_ObjectClassAttribute.php) = 710741d4938345b4548c7fdc7b281c7f50c18eab
+SHA1 (patch-lib_PLAAttribute.php) = 4ea90a667d341789a825f2d3a022d47e0c31f582
+SHA1 (patch-lib_PageRender.php) = b9dfb3a1eb7d7170fc054b46ce78a333a5693047
+SHA1 (patch-lib_PasswordAttribute.php) = 6c75b2e79c185ab213f4b5b12838c457b56641fc
+SHA1 (patch-lib_SelectionAttribute.php) = 541fa3d50c0d971d86eb57c53c2cafbb2ed79076
+SHA1 (patch-lib_ShadowAttribute.php) = f75dbda7c48172381d786d170cde674232673798
+SHA1 (patch-lib_Tree.php) = 3a19a78e12c125d86e5c61abcceee40e620f2558
+SHA1 (patch-lib_Visitor.php) = fa7606271887feaa94eb74f80933d6c2f572f21b
+SHA1 (patch-lib_common.php) = e039f34c44640022cb3501cc0e625b1dfc348268
+SHA1 (patch-lib_ds__ldap.php) = 5ef5eabcbca6b4c4d877f864e8beae3cb6d84c41
+SHA1 (patch-lib_ds__ldap__pla.php) = 69f1fd2e6b019ed741595099f6acfe5052a65833
+SHA1 (patch-lib_functions.php) = 1a2fa831a150d84b67dd3c9e5dde9d153d5e6383
+SHA1 (patch-lib_xmlTemplates.php) = f58ea751b9d2c9f5adfc968a73dcb94a3fe121c2

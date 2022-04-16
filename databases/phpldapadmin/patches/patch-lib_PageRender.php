@@ -1,33 +1,35 @@
-$NetBSD: patch-lib_PageRender.php,v 1.1 2021/02/21 22:22:22 khorben Exp $
+$NetBSD: patch-lib_PageRender.php,v 1.2 2022/04/16 03:11:28 khorben Exp $
 
 Fix for PHP >= 5.5
 
---- lib/PageRender.php.orig	2012-10-01 06:54:14.000000000 +0000
+--- lib/PageRender.php.orig	2022-04-15 22:45:43.000000000 +0000
 +++ lib/PageRender.php
-@@ -287,7 +287,7 @@ class PageRender extends Visitor {
- 						break;
+@@ -827,7 +827,7 @@ class PageRender extends Visitor {
+ 		if (! $attribute->getOldValue($i))
+ 			return;
  
- 					default:
--						$vals[$i] = password_hash($passwordvalue,$enc);
-+						$vals[$i] = pla_password_hash($passwordvalue,$enc);
- 				}
+-		draw_jpeg_photo($this->getServer(),$this->template->getDN(),$attribute->getName(),$i,false,false);
++		draw_jpeg_photo($this->getServer(),$this->template->getDN(),$i,$attribute->getName(),false,false);
+ 	}
  
- 				$vals = array_unique($vals);
-@@ -957,7 +957,7 @@ class PageRender extends Visitor {
- 		if (trim($val))
- 			$enc_type = get_enc_type($val);
- 		else
--			$enc_type = $server->getValue('appearance','password_hash');
-+			$enc_type = $server->getValue('appearance','pla_password_hash');
+ 	/**
+@@ -844,16 +844,16 @@ class PageRender extends Visitor {
+ 		# If the attribute is modified, the new value needs to be stored in a session variable for the draw_jpeg_photo callback.
+ 		if ($attribute->hasBeenModified()) {
+ 			$_SESSION['tmp'][$attribute->getName()][$i] = $attribute->getValue($i);
+-			draw_jpeg_photo(null,$this->template->getDN(),$attribute->getName(),$i,false,false);
++			draw_jpeg_photo(null,$this->template->getDN(),$i,$attribute->getName(),false,false);
+ 		} else
+-			draw_jpeg_photo($this->getServer(),$this->template->getDN(),$attribute->getName(),$i,false,false);
++			draw_jpeg_photo($this->getServer(),$this->template->getDN(),$i,$attribute->getName(),false,false);
+ 	}
  
- 		$obfuscate_password = obfuscate_password_display($enc_type);
+ 	protected function drawFormReadOnlyValueJpegAttribute($attribute,$i) {
+ 		$this->draw('HiddenValue',$attribute,$i);
+ 		$_SESSION['tmp'][$attribute->getName()][$i] = $attribute->getValue($i);
  
-@@ -982,7 +982,7 @@ class PageRender extends Visitor {
- 		if (trim($val))
- 			$enc_type = get_enc_type($val);
- 		else
--			$enc_type = $server->getValue('appearance','password_hash');
-+			$enc_type = $server->getValue('appearance','pla_password_hash');
+-		draw_jpeg_photo(null,$this->template->getDN(),$attribute->getName(),$i,false,false);
++		draw_jpeg_photo(null,$this->template->getDN(),$i,$attribute->getName(),false,false);
+ 	}
  
- 		echo '<table cellspacing="0" cellpadding="0"><tr><td valign="top">';
- 
+ 	protected function drawFormReadOnlyValueMultiLineAttribute($attribute,$i) {

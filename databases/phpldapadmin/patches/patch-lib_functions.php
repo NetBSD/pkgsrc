@@ -1,114 +1,53 @@
-$NetBSD: patch-lib_functions.php,v 1.4 2021/02/21 22:22:22 khorben Exp $
+$NetBSD: patch-lib_functions.php,v 1.5 2022/04/16 03:11:28 khorben Exp $
 
 Fix for PHP 5.5 and later: 
 	https://bugzilla.redhat.com/show_bug.cgi?id=974928
 
---- lib/functions.php.orig	2012-10-01 06:54:14.000000000 +0000
+--- lib/functions.php.orig	2022-04-15 22:45:43.000000000 +0000
 +++ lib/functions.php
-@@ -51,7 +51,7 @@ if (file_exists(LIBDIR.'functions.custom
- /**
-  * Loads class definition
-  */
--function __autoload($className) {
-+function pla_autoload($className) {
- 	if (file_exists(HOOKSDIR."classes/$className.php"))
- 		require_once(HOOKSDIR."classes/$className.php");
- 	elseif (file_exists(LIBDIR."$className.php"))
-@@ -66,6 +66,12 @@ function __autoload($className) {
- 			'type'=>'error'));
- }
+@@ -130,12 +130,13 @@ function app_error_handler($errno,$errst
+ 		debug_log('Entered (%%)',1,0,__FILE__,__LINE__,__METHOD__,$fargs);
  
-+if (version_compare(phpversion(), '7.0', '>=')) {
-+	spl_autoload_register('pla_autoload');
-+} else {
-+	eval('function __autoload($className) {pla_autoload($className);}');
-+}
-+
- /**
-  * Strips all slashes from the specified array in place (pass by ref).
-  * @param Array The array to strip slashes from, typically one of
-@@ -994,6 +1000,22 @@ function get_custom_file($index,$filenam
- }
+ 	/**
+-	 * error_reporting will be 0 if the error context occurred
+-	 * within a function call with '@' preprended (ie, @ldap_bind() );
++	 * error_reporting will be only the non-ignorable error number bits
++	 * if the error context occurred within a function call with '@'
++	 * preprended (ie, @ldap_bind() );
+ 	 * So, don't report errors if the caller has specifically
+ 	 * disabled them with '@'
+ 	 */
+-	if (ini_get('error_reporting') == 0 || error_reporting() == 0)
++	if (!(ini_get('error_reporting') & error_reporting() & $errno))
+ 		return;
  
- /**
-+ * Replacement for create_function() which is deprecated as of PHP 7.2
-+ *
-+ * @param string The function arguments
-+ * @param string The function code
-+ */
-+function pla_create_function($args, $code) {
-+	if (version_compare(phpversion(), '7.0', '>=')) {
-+		# anonymous functions were introduced in PHP 5.3.0
-+		return eval("return function(".$args."){".$code."};");
-+	} else {
-+		# create_function is deprecated in PHP 7.2
-+		return create_function($args, $code);
-+	}
-+}
-+
-+/**
-  * Sort a multi dimensional array.
+ 	$file = basename($file);
+@@ -928,7 +929,7 @@ function get_cached_item($index,$item,$s
   *
-  * @param array Multi demension array passed by reference
-@@ -1080,7 +1102,7 @@ function masort(&$data,$sortby,$rev=0) {
- 
- 		$code .= 'return $c;';
- 
--		$CACHE[$sortby] = create_function('$a, $b',$code);
-+		$CACHE[$sortby] = pla_create_function('$a, $b',$code);
- 	}
- 
- 	uasort($data,$CACHE[$sortby]);
-@@ -2127,7 +2149,7 @@ function password_types() {
-  *        crypt, ext_des, md5crypt, blowfish, md5, sha, smd5, ssha, sha512, or clear.
-  * @return string The hashed password.
+  * Returns true on success of false on failure.
   */
--function password_hash($password_clear,$enc_type) {
-+function pla_password_hash($password_clear,$enc_type) {
+-function set_cached_item($index,$item,$subitem='null',$data) {
++function set_cached_item($index,$data,$item,$subitem='null') {
  	if (DEBUG_ENABLED && (($fargs=func_get_args())||$fargs='NOARGS'))
  		debug_log('Entered (%%)',1,0,__FILE__,__LINE__,__METHOD__,$fargs);
  
-@@ -2318,7 +2340,7 @@ function password_check($cryptedpassword
- 
- 		# SHA crypted passwords
- 		case 'sha':
--			if (strcasecmp(password_hash($plainpassword,'sha'),'{SHA}'.$cryptedpassword) == 0)
-+			if (strcasecmp(pla_password_hash($plainpassword,'sha'),'{SHA}'.$cryptedpassword) == 0)
- 				return true;
- 			else
- 				return false;
-@@ -2327,7 +2349,7 @@ function password_check($cryptedpassword
- 
- 		# MD5 crypted passwords
- 		case 'md5':
--			if( strcasecmp(password_hash($plainpassword,'md5'),'{MD5}'.$cryptedpassword) == 0)
-+			if( strcasecmp(pla_password_hash($plainpassword,'md5'),'{MD5}'.$cryptedpassword) == 0)
- 				return true;
- 			else
- 				return false;
-@@ -2392,7 +2414,7 @@ function password_check($cryptedpassword
- 
- 		# SHA512 crypted passwords
- 		case 'sha512':
--			if (strcasecmp(password_hash($plainpassword,'sha512'),'{SHA512}'.$cryptedpassword) == 0)
-+			if (strcasecmp(pla_password_hash($plainpassword,'sha512'),'{SHA512}'.$cryptedpassword) == 0)
- 				return true;
- 			else
- 				return false;
-@@ -2565,12 +2587,14 @@ function dn_unescape($dn) {
- 		$a = array();
- 
- 		foreach ($dn as $key => $rdn)
--			$a[$key] = preg_replace('/\\\([0-9A-Fa-f]{2})/e',"''.chr(hexdec('\\1')).''",$rdn);
-+			$a[$key] = preg_replace_callback('/\\\([0-9A-Fa-f]{2})/', 
-+				function ($matches) { return chr(hexdec($matches[1])); }, $rdn );
- 
- 		return $a;
- 
- 	} else {
--		return preg_replace('/\\\([0-9A-Fa-f]{2})/e',"''.chr(hexdec('\\1')).''",$dn);
-+		return preg_replace_callback('/\\\([0-9A-Fa-f]{2})/',
-+				function ($matches) { return chr(hexdec($matches[1])); }, $dn);
- 	}
- }
+@@ -2032,8 +2033,8 @@ function ldap_error_msg($msg,$errnum) {
+  *
+  * Usage Examples:
+  *  <code>
+- *   draw_jpeg_photo(0,'cn=Bob,ou=People,dc=example,dc=com',"jpegPhoto",0,true,array('img_opts'=>"border: 1px; width: 150px"));
+- *   draw_jpeg_photo(1,'cn=Fred,ou=People,dc=example,dc=com',null,1);
++ *   draw_jpeg_photo(0,'cn=Bob,ou=People,dc=example,dc=com',0,"jpegPhoto",true,array('img_opts'=>"border: 1px; width: 150px"));
++ *   draw_jpeg_photo(1,'cn=Fred,ou=People,dc=example,dc=com',1,null);
+  *  </code>
+  *
+  * @param object The Server to get the image from.
+@@ -2046,7 +2047,7 @@ function ldap_error_msg($msg,$errnum) {
+  * @param array Specifies optional image and CSS style attributes for the table tag. Supported keys are
+  *                fixed_width, fixed_height, img_opts.
+  */
+-function draw_jpeg_photo($server,$dn,$attr_name='jpegphoto',$index,$draw_delete_buttons=false,$options=array()) {
++function draw_jpeg_photo($server,$dn,$index,$attr_name='jpegphoto',$draw_delete_buttons=false,$options=array()) {
+ 	if (DEBUG_ENABLED && (($fargs=func_get_args())||$fargs='NOARGS'))
+ 		debug_log('Entered (%%)',1,0,__FILE__,__LINE__,__METHOD__,$fargs);
  
