@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.824 2022/04/16 01:43:19 markd Exp $
+# $NetBSD: Makefile,v 1.825 2022/04/16 01:47:13 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1638,6 +1638,8 @@ SUBDIR+=	tex-xcolor-doc
 SUBDIR+=	tex-xcomment
 SUBDIR+=	tex-xcomment-doc
 SUBDIR+=	tex-xdvi
+SUBDIR+=	tex-xecjk
+SUBDIR+=	tex-xecjk-doc
 SUBDIR+=	tex-xetex
 SUBDIR+=	tex-xetex-doc
 SUBDIR+=	tex-xetexconfig

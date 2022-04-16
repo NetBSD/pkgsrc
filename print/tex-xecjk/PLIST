@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/16 01:47:13 markd Exp $
+share/texmf-dist/fonts/misc/xetex/fontmapping/xecjk/full-stop.map
+share/texmf-dist/fonts/misc/xetex/fontmapping/xecjk/full-stop.tec
+share/texmf-dist/fonts/misc/xetex/fontmapping/xecjk/fullwidth-stop.map
+share/texmf-dist/fonts/misc/xetex/fontmapping/xecjk/fullwidth-stop.tec
+share/texmf-dist/fonts/misc/xetex/fontmapping/xecjk/han-simp.map
+share/texmf-dist/fonts/misc/xetex/fontmapping/xecjk/han-simp.tec
+share/texmf-dist/fonts/misc/xetex/fontmapping/xecjk/han-trad.map
+share/texmf-dist/fonts/misc/xetex/fontmapping/xecjk/han-trad.tec
+share/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
+share/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
+share/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+share/texmf-dist/tex/xelatex/xecjk/xeCJKfntef.sty
+share/texmf-dist/tex/xelatex/xecjk/xunicode-addon.sty
+share/texmf-dist/tex/xelatex/xecjk/xunicode-extra.def

@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/16 01:47:13 markd Exp $
+share/texmf-dist/doc/xelatex/xecjk/README.md
+share/texmf-dist/doc/xelatex/xecjk/example/xeCJK-example-CJKecglue.tex
+share/texmf-dist/doc/xelatex/xecjk/example/xeCJK-example-CJKfntef.tex
+share/texmf-dist/doc/xelatex/xecjk/example/xeCJK-example-CM.tex
+share/texmf-dist/doc/xelatex/xecjk/example/xeCJK-example-autofake.tex
+share/texmf-dist/doc/xelatex/xecjk/example/xeCJK-example-checksingle.tex
+share/texmf-dist/doc/xelatex/xecjk/example/xeCJK-example-fallback.tex
+share/texmf-dist/doc/xelatex/xecjk/example/xeCJK-example-listings.tex
+share/texmf-dist/doc/xelatex/xecjk/example/xeCJK-example-mathblock.tex
+share/texmf-dist/doc/xelatex/xecjk/example/xeCJK-example-punctstyle.tex
+share/texmf-dist/doc/xelatex/xecjk/example/xeCJK-example-subCJKblock.tex
+share/texmf-dist/doc/xelatex/xecjk/example/xeCJK-example-verbatim.tex
+share/texmf-dist/doc/xelatex/xecjk/xeCJK.pdf
+share/texmf-dist/doc/xelatex/xecjk/xunicode-symbols.pdf
+share/texmf-dist/doc/xelatex/xecjk/xunicode-symbols.tex
