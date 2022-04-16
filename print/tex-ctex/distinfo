@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/16 02:10:06 markd Exp $
+
+BLAKE2s (ctex.r61285.tar.xz) = c21dbc285f8a0a8e5c7428fd1e85456f68aaae0a30dc8543cbfb25a417e80589
+SHA512 (ctex.r61285.tar.xz) = ea740753717aea341cae663253e0d6bd9fcaaf65bee67a30031cd3c09fbc1ff295a5d8c5b317ec423fa51679d988599414868ddcb623e84c1864e2805931398a
+Size (ctex.r61285.tar.xz) = 130588 bytes
