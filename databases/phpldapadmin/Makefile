@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.46 2021/03/07 13:08:47 taca Exp $
+# $NetBSD: Makefile,v 1.47 2022/04/16 03:11:28 khorben Exp $
 
 DISTNAME=	phpldapadmin-${VERSION}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	databases www
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpldapadmin/}
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=leenooks/}
+GITHUB_PROJECT=	phpLDAPadmin
+GITHUB_TAG=	${VERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://phpldapadmin.sourceforge.net/
@@ -19,7 +20,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=4.1.2:../../devel/php-gettext
 
 USE_TOOLS+=	pax
 
-VERSION=	1.2.3
+VERSION=	1.2.6.3
 NO_BUILD=	YES
 
 CONF_FILES+=	${PREFIX}/share/examples/phpldapadmin/config.php.example \
@@ -51,7 +52,7 @@ do-install:
 	cd ${WRKSRC}/${i:Q} && ${FIND} . -type f \! -name '*.orig' -print | \
 		 pax -rwppm  ${DESTDIR}${PREFIX}/share/phpldapadmin/${i:Q}
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/INSTALL \
+	${INSTALL_DATA} ${WRKSRC}/INSTALL.md \
 		${DESTDIR}${PREFIX}/share/doc/phpldapadmin
 	${INSTALL_DATA} ${WRKSRC}/LICENSE \
 		${DESTDIR}${PREFIX}/share/doc/phpldapadmin

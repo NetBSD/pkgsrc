@@ -1,24 +1,43 @@
-$NetBSD: patch-lib_ds__ldap.php,v 1.1 2015/11/29 11:25:53 taca Exp $
+$NetBSD: patch-lib_ds__ldap.php,v 1.2 2022/04/16 03:11:28 khorben Exp $
 
 Fix for PHP 5.5 and later: 
 	https://bugzilla.redhat.com/show_bug.cgi?id=974928
 
---- lib/ds_ldap.php.orig	2012-10-01 06:54:14.000000000 +0000
+--- lib/ds_ldap.php.orig	2022-04-15 22:45:43.000000000 +0000
 +++ lib/ds_ldap.php
-@@ -1117,12 +1117,14 @@ class ldap extends DS {
- 		if (is_array($dn)) {
- 			$a = array();
- 			foreach ($dn as $key => $rdn)
--				$a[$key] = preg_replace('/\\\([0-9A-Fa-f]{2})/e',"''.chr(hexdec('\\1')).''",$rdn);
-+				$a[$key] = preg_replace_callback('/\\\([0-9A-Fa-f]{2})/',
-+					function ($matches) { return chr(hexdec($matches[1])); }, $rdn);
+@@ -1768,7 +1768,7 @@ class ldap extends DS {
+ 			ksort($return);
  
- 			return $a;
+ 			# cache the schema to prevent multiple schema fetches from LDAP server
+-			set_cached_item($this->index,'schema','objectclasses',$return);
++			set_cached_item($this->index,$return,'schema','objectclasses');
+ 		}
  
- 		} else
--			return preg_replace('/\\\([0-9A-Fa-f]{2})/e',"''.chr(hexdec('\\1')).''",$dn);
-+			return preg_replace_callback('/\\\([0-9A-Fa-f]{2})/',
-+					function ($matches) { return chr(hexdec($matches[1])); }, $dn);
- 	}
+ 		if (DEBUG_ENABLED)
+@@ -1953,7 +1953,7 @@ class ldap extends DS {
+ 			$return = $attrs;
  
- 	public function getRootDSE($method=null) {
+ 			# cache the schema to prevent multiple schema fetches from LDAP server
+-			set_cached_item($this->index,'schema','attributes',$return);
++			set_cached_item($this->index,$return,'schema','attributes');
+ 		}
+ 
+ 		if (DEBUG_ENABLED)
+@@ -2029,7 +2029,7 @@ class ldap extends DS {
+ 			$return = $rules;
+ 
+ 			# cache the schema to prevent multiple schema fetches from LDAP server
+-			set_cached_item($this->index,'schema','matchingrules',$return);
++			set_cached_item($this->index,$return,'schema','matchingrules');
+ 		}
+ 
+ 		if (DEBUG_ENABLED)
+@@ -2078,7 +2078,7 @@ class ldap extends DS {
+ 			ksort($return);
+ 
+ 			# cache the schema to prevent multiple schema fetches from LDAP server
+-			set_cached_item($this->index,'schema','syntaxes',$return);
++			set_cached_item($this->index,$return,'schema','syntaxes');
+ 		}
+ 
+ 		if (DEBUG_ENABLED)
