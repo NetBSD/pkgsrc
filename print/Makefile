@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.826 2022/04/16 01:50:22 markd Exp $
+# $NetBSD: Makefile,v 1.827 2022/04/16 01:55:24 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -923,6 +923,8 @@ SUBDIR+=	tex-jadetex
 SUBDIR+=	tex-jadetex-doc
 SUBDIR+=	tex-jfmutil
 SUBDIR+=	tex-jfmutil-doc
+SUBDIR+=	tex-jieeetran
+SUBDIR+=	tex-jieeetran-doc
 SUBDIR+=	tex-jknapltx
 SUBDIR+=	tex-jlreq
 SUBDIR+=	tex-jlreq-doc
