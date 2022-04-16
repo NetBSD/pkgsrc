@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/16 01:43:19 markd Exp $
+
+BLAKE2s (xpinyin.doc.r56709.tar.xz) = fba4ba6bf9bfbfe38a397bc131b8d104716e69e4603d1a900f09cccc1b1091fe
+SHA512 (xpinyin.doc.r56709.tar.xz) = 58715c5eb8e0e336bf6de29b47760eedc27802fd82bb120ce37a6502eeb00c8b8230503d660e687131d8312be93a72dc6b2dc15b89cb82d46be5f5b7200a91e9
+Size (xpinyin.doc.r56709.tar.xz) = 200480 bytes
