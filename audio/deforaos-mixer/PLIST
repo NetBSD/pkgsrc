@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/01/13 01:26:03 khorben Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/04/16 10:57:47 khorben Exp $
 bin/mixer
 include/Desktop/Mixer.h
 include/Desktop/Mixer/control.h
@@ -7,7 +7,7 @@ lib/Mixer/controls/radio.so
 lib/Mixer/controls/set.so
 man/html1/mixer.html
 man/man1/mixer.1
-share/applications/deforaos-mixer.desktop
+share/applications/org.defora.mixer.desktop
 share/doc/Mixer/COPYING
 share/doc/Mixer/README.md
 share/locale/es/LC_MESSAGES/Mixer.mo
