@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/04/16 10:39:50 riastradh Exp $
+# $NetBSD: Makefile,v 1.22 2022/04/16 10:40:05 riastradh Exp $
 
 DISTNAME=		motif-2.3.8
 PKGREVISION=		1
@@ -86,6 +86,12 @@ LDFLAGS_FOR_BUILD+=	${COMPILER_RPATH_FLAG:Q}${PREFIX:Q}/lib
 CONFIGURE_ARGS.NetBSD+=	ac_cv_file__usr_X_include_X11_X_h=no
 CONFIGURE_ARGS.NetBSD+=	ac_cv_file__usr_X11R6_include_X11_X_h=no
 .  if ${X11_TYPE} != "native"
+# Motif's build involves building and running tools, wml*, that are
+# linked against libXt.  Thus we need libXt as a tool dependency, not
+# as a build or run dependency.  This occurs for both native and cross
+# builds -- but missing this dependency only causes problems for cross
+# builds, because the build dependency on libXmu effectively brings in
+# libXt for this purpose in native builds.
 TOOL_DEPENDS+=		libXt>=0:../../x11/libXt
 .  endif
 .endif
