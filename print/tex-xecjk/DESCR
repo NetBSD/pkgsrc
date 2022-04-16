@@ -1,0 +1,4 @@
+A LaTeX package for typesetting CJK documents in the way users
+have become used to, in the CJK package. The package requires a
+current version of xtemplate (and hence of the current LaTeX3
+development environment).
