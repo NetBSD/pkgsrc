@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2022/04/14 05:30:07 markd Exp $
+# $NetBSD: Makefile,v 1.62 2022/04/16 02:28:38 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2021pre3
+PKGNAME=	texlive-${DISTNAME}-2022pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	62901
@@ -451,7 +451,7 @@ DEPENDS+=	tex-etoc-[0-9]*:../../print/tex-etoc
 # depend eulerpx
 DEPENDS+=	tex-europasscv-[0-9]*:../../print/tex-europasscv
 DEPENDS+=	tex-europecv-[0-9]*:../../print/tex-europecv
-# depend everyhook
+DEPENDS+=	tex-everyhook-[0-9]*:../../print/tex-everyhook
 DEPENDS+=	tex-everypage-[0-9]*:../../print/tex-everypage
 DEPENDS+=	tex-exam-[0-9]*:../../print/tex-exam
 # depend exam-n
@@ -1231,7 +1231,7 @@ DEPENDS+=	tex-supertabular-[0-9]*:../../print/tex-supertabular
 # depend svgcolor
 # depend svn
 # depend svn-multi
-# depend svn-prov
+DEPENDS+=	tex-svn-prov-[0-9]*:../../print/tex-svn-prov
 DEPENDS+=	tex-svninfo-[0-9]*:../../print/tex-svninfo
 # depend swfigure
 # depend syntax
