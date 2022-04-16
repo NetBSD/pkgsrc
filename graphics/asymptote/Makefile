@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2022/04/16 10:04:21 riastradh Exp $
+# $NetBSD: Makefile,v 1.46 2022/04/16 10:29:23 riastradh Exp $
 
 DISTNAME=	asymptote-2.79
 CATEGORIES=	graphics
@@ -16,7 +16,7 @@ TOOL_DEPENDS+=	makeindexk-[0-9]*:../../textproc/makeindexk
 TOOL_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 TOOL_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
 TOOL_DEPENDS+=	tex-epsf-[0-9]*:../../print/tex-epsf
-#TOOL_DEPENDS+=	tex-epstopdf-pkg-[0-9]*:../../print/tex-epstopdf-pkg
+TOOL_DEPENDS+=	tex-epstopdf-pkg-[0-9]*:../../print/tex-epstopdf-pkg
 TOOL_DEPENDS+=	tex-etoolbox-[0-9]*:../../devel/tex-etoolbox
 TOOL_DEPENDS+=	tex-kvsetkeys-[0-9]*:../../print/tex-kvsetkeys
 TOOL_DEPENDS+=	tex-media9-[0-9]*:../../print/tex-media9
