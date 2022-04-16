@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/04/16 21:49:26 nikita Exp $
+# $NetBSD: Makefile,v 1.5 2022/04/16 22:09:48 nikita Exp $
 
 GITHUB_PROJECT=	helix
 DISTNAME=	22.03
@@ -71,10 +71,11 @@ WGSL_TAG=	f00ff52251edbd58f4d39c9c3204383253032c11
 YAML_TAG=	0e36bed171768908f331ff7dff9d956bae016efb
 ZIG_TAG=	42e93d02ca945094699e2dc4de785bbaf8f740ec
 
+DISTFILES+=	tree-sitter-c-${C_TAG}.tar.gz
+DISTFILES+=	tree-sitter-git-diff-${GITDIFF_TAG}.tar.gz
 
 TREESITTER_DISTFILES+=	tree-sitter-toml-${TOML_TAG}.tar.gz
 TREESITTER_DISTFILES+=	tree-sitter-bash-${BASH_TAG}.tar.gz
-DISTFILES+=	tree-sitter-c-${C_TAG}.tar.gz
 TREESITTER_DISTFILES+=	tree-sitter-css-${CSS_TAG}.tar.gz
 TREESITTER_DISTFILES+=	tree-sitter-c-sharp-${CSHARP_TAG}.tar.gz
 TREESITTER_DISTFILES+=	tree-sitter-cpp-${CPP_TAG}.tar.gz
@@ -88,7 +89,6 @@ TREESITTER_DISTFILES+=	tree-sitter-erlang-${ERLANG_TAG}.tar.gz
 TREESITTER_DISTFILES+=	tree-sitter-fish-${FISH_TAG}.tar.gz
 TREESITTER_DISTFILES+=	tree-sitter-git-commit-${GITCOMMIT_TAG}.tar.gz
 TREESITTER_DISTFILES+=	tree-sitter-git-config-${GITCONFIG_TAG}.tar.gz
-DISTFILES+=	tree-sitter-git-diff-${GITDIFF_TAG}.tar.gz
 TREESITTER_DISTFILES+=	tree-sitter-git-rebase-${GITREBASE_TAG}.tar.gz
 TREESITTER_DISTFILES+=	tree-sitter-glsl-${GLSL_TAG}.tar.gz
 TREESITTER_DISTFILES+=	tree-sitter-go-${GO_TAG}.tar.gz
@@ -355,7 +355,7 @@ post-install:
 .for dirs in queries themes
 	(cd ${WRKSRC}/runtime && ${INSTALL_DATA_DIR} ${dirs} ${DESTDIR}${PREFIX}/share/helix/runtime/${dirs})
 .endfor
-	${INSTALL} ${WRKSRC}/runtime/tutor.txt ${DESTDIR}${PREFIX}/share/helix/runtime/tutor.txt
+	${INSTALL_DATA} ${WRKSRC}/runtime/tutor.txt ${DESTDIR}${PREFIX}/share/helix/runtime/tutor.txt
 	${INSTALL_LIB} ${WRKSRC}/runtime/grammars/*.so ${DESTDIR}${PREFIX}/share/helix/runtime/grammars/
 
 .include "../../lang/rust/cargo.mk"
