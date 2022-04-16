@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:13:07 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/04/16 02:45:31 markd Exp $
 
-BLAKE2s (dehyph-exptl.doc.r58212.tar.xz) = ad58048316b6222be9520791c1eef7deb9de2d042b9e1e86766684213927a662
-SHA512 (dehyph-exptl.doc.r58212.tar.xz) = e40955db986b94bb9bbbbf9daaf6a12d2898ae736741fb0a5626755b55908b056a2b4dbc1d87e9681201d7e45c99297393d6e1d2de17d135d8d74c732106897a
-Size (dehyph-exptl.doc.r58212.tar.xz) = 137796 bytes
+BLAKE2s (dehyph-exptl.doc.r62734.tar.xz) = 8c4ad1a7714ccbc297bc3e2f9d3c2193fedd28b277e99a99648ec5538a5089b8
+SHA512 (dehyph-exptl.doc.r62734.tar.xz) = 812af78620465987b65654b1b0e270ac911a18019106c54d24622b4f146534f9474b691247e8cde140c1101bf48d843fb1238e5713f9a59a79e969b9314ae895
+Size (dehyph-exptl.doc.r62734.tar.xz) = 144676 bytes
