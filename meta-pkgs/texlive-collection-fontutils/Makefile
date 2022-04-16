@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2021/02/14 02:16:59 markd Exp $
+# $NetBSD: Makefile,v 1.14 2022/04/16 00:56:38 markd Exp $
 
 DISTNAME=	collection-fontutils
-PKGNAME=	texlive-${DISTNAME}-2020.57089
+PKGNAME=	texlive-${DISTNAME}-2022
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	57089
+TEXLIVE_REV=	61207
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -22,6 +22,7 @@ DEPENDS+=	tex-fontinst-[0-9]*:../../fonts/tex-fontinst
 DEPENDS+=	tex-fontools-[0-9]*:../../fonts/tex-fontools
 # fontware is entirely included in web2c
 DEPENDS+=	lcdftypetools-[0-9]*:../../fonts/lcdftypetools
+DEPENDS+=	tex-luafindfont-[0-9]*:../../fonts/tex-luafindfont
 # metatype1 is empty
 DEPENDS+=	tex-mf2pt1-[0-9]*:../../fonts/tex-mf2pt1
 DEPENDS+=	ps2eps-[0-9]*:../../graphics/ps2eps
