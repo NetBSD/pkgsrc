@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/16 01:15:37 markd Exp $
+share/texmf-dist/doc/xelatex/zitie/README.md
+share/texmf-dist/doc/xelatex/zitie/zitie-cn.pdf
+share/texmf-dist/doc/xelatex/zitie/zitie-cn.tex
