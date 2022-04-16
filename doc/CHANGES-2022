@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1874 2022/04/15 21:17:06 khorben Exp $
+$NetBSD: CHANGES-2022,v 1.1875 2022/04/16 00:53:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2848,3 +2848,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/rust-src to 1.59.0 [he 2022-04-15]
 	Updated x11/xfce4-terminal to 1.0.1 [gutteridge 2022-04-15]
 	Updated audio/deforaos-mixer to 0.4.1 [khorben 2022-04-15]
+	Updated lang/php74 to 7.4.29 [taca 2022-04-16]
