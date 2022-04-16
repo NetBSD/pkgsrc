@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/16 01:28:35 markd Exp $
+
+BLAKE2s (zhmetrics.doc.r22207.tar.xz) = 287c93048733e036c71f6b6f87e7d58518ed65c82c8cb0ff5acb2bdc6154d9c0
+SHA512 (zhmetrics.doc.r22207.tar.xz) = e77fd912d10d8ab535c366f8e5b99e996607788b9ede295a3d7739fc4c14e0679c66c36bdefe2ce5433967b28b2ab228c332d9b0a23a841d42d3fa56cd204040
+Size (zhmetrics.doc.r22207.tar.xz) = 1396 bytes

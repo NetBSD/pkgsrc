@@ -1,0 +1,5 @@
+These are metrics to use existing Chinese TrueType fonts in
+workflows that use LaTeX & dvipdfmx, or pdfLaTeX. The fonts
+themselves are not included in the package. Six font families
+are supported: kai, song, lishu, fangsong, youyuan and hei. Two
+encodings (GBK and UTF-8) are supported.
