@@ -1,4 +1,4 @@
-# $NetBSD: tools.NetBSD.mk,v 1.70 2022/04/04 11:23:07 riastradh Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.71 2022/04/16 08:58:19 riastradh Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
@@ -177,5 +177,8 @@ CXX=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-g++
 
 NATIVE_LD:=	/usr/bin/ld
 LD=		${TOOLDIR}/bin/${MACHINE_GNU_PLATFORM}-ld
+
+NATIVE_AR:=	/usr/bin/ar
+NATIVE_RANLIB:=	/usr/bin/ranlib
 
 .endif
