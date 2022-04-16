@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2021/01/02 14:18:22 spz Exp $
+@comment $NetBSD: PLIST,v 1.28 2022/04/16 11:44:53 spz Exp $
 bin/inews
 bin/rnews
 include/inn/buffer.h
@@ -161,17 +161,17 @@ man/man1/simpleftp.1
 man/man1/sm.1
 man/man3/INN::Config.3pm
 man/man3/INN::Utils::Shlock.3pm
-man/man3/clientlib.3
-man/man3/dbz.3
-man/man3/inndcomm.3
 man/man3/libauth.3
 man/man3/libinn.3
+man/man3/libinn_clientlib.3
+man/man3/libinn_dbz.3
+man/man3/libinn_inndcomm.3
+man/man3/libinn_list.3
+man/man3/libinn_qio.3
+man/man3/libinn_tst.3
+man/man3/libinn_uwildmat.3
 man/man3/libinnhist.3
 man/man3/libstorage.3
-man/man3/list.3
-man/man3/qio.3
-man/man3/tst.3
-man/man3/uwildmat.3
 man/man5/active.5
 man/man5/active.times.5
 man/man5/buffindexed.conf.5
@@ -186,6 +186,7 @@ man/man5/inn-radius.conf.5
 man/man5/inn.conf.5
 man/man5/innfeed.conf.5
 man/man5/innwatch.ctl.5
+man/man5/innreport.conf.5
 man/man5/localgroups.5
 man/man5/moderators.5
 man/man5/motd.innd.5
@@ -255,9 +256,11 @@ man/man8/radius.8
 man/man8/rc.news.8
 man/man8/scanlogs.8
 man/man8/scanspool.8
+man/man8/send-ihave.8
 man/man8/send-nntp.8
 man/man8/send-uucp.8
 man/man8/sendinpaths.8
+man/man8/sendxbatches.8
 man/man8/tally.control.8
 man/man8/tdx-util.8
 man/man8/tinyleaf.8

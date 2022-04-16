@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.12 2014/08/03 17:33:34 spz Exp $
+$NetBSD: patch-ac,v 1.13 2022/04/16 11:44:53 spz Exp $
 
 --- Makefile.global.in.orig	2014-05-17 08:24:49.000000000 +0000
 +++ Makefile.global.in
-@@ -303,7 +303,7 @@ INSTALL		= $(top)/support/install-sh -c
+@@ -340,7 +340,7 @@ INSTALL		= $(top)/support/install-sh -c
  ##  files like active and newsgroups that should have the same permissions as
  ##  article files.
  
--BACKUP_OPTION	= -B .OLD
-+#BACKUP_OPTION	= -B .OLD
+-BACKUP_OPTION	= -S .OLD
++#BACKUP_OPTION	= -S .OLD
  
  LI_SPRI		= $(LIBTOOLINST) $(INSTALL) -o root -g $(RUNASGROUP) -m 4550 $(BACKUP_OPTION)
  LI_XPRI		= $(LIBTOOLINST) $(INSTALL) $(OWNER) -m 0550 $(BACKUP_OPTION)
