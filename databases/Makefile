@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.655 2022/04/15 11:48:50 nikita Exp $
+# $NetBSD: Makefile,v 1.656 2022/04/16 02:49:30 khorben Exp $
 
 COMMENT=	Databases
 
@@ -133,6 +133,7 @@ SUBDIR+=	openldap
 SUBDIR+=	openldap-client
 SUBDIR+=	openldap-cloak
 SUBDIR+=	openldap-doc
+SUBDIR+=	openldap-extra-schemas
 SUBDIR+=	openldap-nops
 SUBDIR+=	openldap-server
 SUBDIR+=	openldap-smbk5pwd
