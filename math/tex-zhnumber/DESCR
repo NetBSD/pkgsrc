@@ -1,0 +1,4 @@
+The package provides commands to typeset Chinese
+representations of numbers. The main difference between this
+package and CJKnumb is that the commands provided are
+expandable in the 'proper' way.
