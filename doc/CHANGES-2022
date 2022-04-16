@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1879 2022/04/16 02:48:15 markd Exp $
+$NetBSD: CHANGES-2022,v 1.1880 2022/04/16 02:48:56 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2887,3 +2887,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added print/tex-ctex-doc version 2.5.8 [markd 2022-04-16]
 	Updated print/tex-dehyph-exptl to 0.8 [markd 2022-04-16]
 	Updated print/tex-dehyph-exptl-doc to 0.8 [markd 2022-04-16]
+	Added databases/openldap-extra-schemas version 4.3 [khorben 2022-04-16]
