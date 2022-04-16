@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:15:08 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/04/16 00:38:00 markd Exp $
 
-BLAKE2s (xetex.doc.r54276.tar.xz) = 9e0914d42ce4574838b92f8dbcfae67890c167ff95cee28f7dbcba99e9cbdc99
-SHA512 (xetex.doc.r54276.tar.xz) = 6f18897e5759ffe30b6ae4439a0ce3c9d5748a9b0bda07f904897cc3310d9d601631d031139b58ef3b4f078f2cec298be3583df23b28656f6c2e80f2370159a6
-Size (xetex.doc.r54276.tar.xz) = 617016 bytes
+BLAKE2s (xetex.doc.r62387.tar.xz) = 54d20836f0ebfb96231a7b3cdd63ad82aa3ee7982ccb0344873253c75fd02568
+SHA512 (xetex.doc.r62387.tar.xz) = 31f03ee1ae00bc7883109ab7b7374feedc384d86b491873e90797658eae12299dd60b95edc1c86f1faa61a0b7a952cca23993e991863b37e49c27afd6c21c034
+Size (xetex.doc.r62387.tar.xz) = 634624 bytes

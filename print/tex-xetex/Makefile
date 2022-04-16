@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.15 2020/05/10 04:32:07 markd Exp $
+# $NetBSD: Makefile,v 1.16 2022/04/16 00:38:00 markd Exp $
 
 DISTNAME=	xetex
-PKGNAME=	tex-${DISTNAME}-2020
-PKGREVISION=	1
-TEXLIVE_REV=	54276
+PKGNAME=	tex-${DISTNAME}-2021
+TEXLIVE_REV=	62387
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/xetex
 COMMENT=	Unicode and OpenType-enabled TeX engine
+LICENSE=	x11
 
 DEPENDS+=	tex-babel-[0-9]*:../../print/tex-babel
 DEPENDS+=	tex-etex>=2.1:../../print/tex-etex
@@ -31,5 +31,9 @@ TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf-dist
 
 post-install:
 	${LN} -sf xetex ${DESTDIR}${PREFIX}/bin/xelatex
+	${LN} -sf ${PREFIX}/share/texmf-dist/scripts/texlive-extra/xelatex-unsafe.sh \
+		${DESTDIR}${PREFIX}/bin/xelatex-unsafe
+	${LN} -sf ${PREFIX}/share/texmf-dist/scripts/texlive-extra/xetex-unsafe.sh \
+		${DESTDIR}${PREFIX}/bin/xetex-unsafe
 
 .include "../../mk/bsd.pkg.mk"
