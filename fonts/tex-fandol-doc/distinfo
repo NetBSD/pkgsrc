@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/16 01:37:30 markd Exp $
+
+BLAKE2s (fandol.doc.r37889.tar.xz) = 1709e4f877a604b72bee18e5798a8e70fc3a7cfa342c290ce75d4e200e4b4211
+SHA512 (fandol.doc.r37889.tar.xz) = d74e78a1c863d3865ec4b21a4c762bf6e2c30a8656fe0ec830d1e56b9fcb48861f316ccf8d8641e7c674e25f1ac2292d10ff2127315275347096ad325828d7e5
+Size (fandol.doc.r37889.tar.xz) = 12168 bytes
