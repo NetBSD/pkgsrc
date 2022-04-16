@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/16 00:52:11 markd Exp $
+
+BLAKE2s (luafindfont.doc.r61959.tar.xz) = bbff409516236d25fbad7752cb4219ce167d1cd3f5afb98b1e70294b7a1781ba
+SHA512 (luafindfont.doc.r61959.tar.xz) = 1e3555311aeadf360e669210f2cf525f54d74d3f7b8a458e4a9116114bb10de63936497eb50e3965ebb204bf8cf40e37e0c737453d2a30726e1fe4a196b59371
+Size (luafindfont.doc.r61959.tar.xz) = 108596 bytes
