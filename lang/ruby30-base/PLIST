@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/01/14 16:16:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.6.2.1 2022/04/16 09:23:40 spz Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 bin/erb${RUBY_SUFFIX}
@@ -402,6 +402,7 @@ ${RUBY_LIB}/bundler/templates/newgem/lib/newgem/version.rb.tt
 ${RUBY_LIB}/bundler/templates/newgem/newgem.gemspec.tt
 ${RUBY_LIB}/bundler/templates/newgem/rspec.tt
 ${RUBY_LIB}/bundler/templates/newgem/rubocop.yml.tt
+${RUBY_LIB}/bundler/templates/newgem/sig/newgem.rbs.tt
 ${RUBY_LIB}/bundler/templates/newgem/spec/newgem_spec.rb.tt
 ${RUBY_LIB}/bundler/templates/newgem/spec/spec_helper.rb.tt
 ${RUBY_LIB}/bundler/templates/newgem/standard.yml.tt
@@ -415,11 +416,13 @@ ${RUBY_LIB}/bundler/ui/rg_proxy.rb
 ${RUBY_LIB}/bundler/ui/shell.rb
 ${RUBY_LIB}/bundler/ui/silent.rb
 ${RUBY_LIB}/bundler/uri_credentials_filter.rb
+${RUBY_LIB}/bundler/vendor/connection_pool/LICENSE
 ${RUBY_LIB}/bundler/vendor/connection_pool/lib/connection_pool.rb
 ${RUBY_LIB}/bundler/vendor/connection_pool/lib/connection_pool/timed_stack.rb
 ${RUBY_LIB}/bundler/vendor/connection_pool/lib/connection_pool/version.rb
 ${RUBY_LIB}/bundler/vendor/connection_pool/lib/connection_pool/wrapper.rb
 ${RUBY_LIB}/bundler/vendor/fileutils/lib/fileutils.rb
+${RUBY_LIB}/bundler/vendor/molinillo/LICENSE
 ${RUBY_LIB}/bundler/vendor/molinillo/lib/molinillo.rb
 ${RUBY_LIB}/bundler/vendor/molinillo/lib/molinillo/delegates/resolution_state.rb
 ${RUBY_LIB}/bundler/vendor/molinillo/lib/molinillo/delegates/specification_provider.rb
@@ -444,6 +447,7 @@ ${RUBY_LIB}/bundler/vendor/net-http-persistent/lib/net/http/persistent.rb
 ${RUBY_LIB}/bundler/vendor/net-http-persistent/lib/net/http/persistent/connection.rb
 ${RUBY_LIB}/bundler/vendor/net-http-persistent/lib/net/http/persistent/pool.rb
 ${RUBY_LIB}/bundler/vendor/net-http-persistent/lib/net/http/persistent/timed_stack_multi.rb
+${RUBY_LIB}/bundler/vendor/thor/LICENSE.md
 ${RUBY_LIB}/bundler/vendor/thor/lib/thor.rb
 ${RUBY_LIB}/bundler/vendor/thor/lib/thor/actions.rb
 ${RUBY_LIB}/bundler/vendor/thor/lib/thor/actions/create_file.rb
@@ -1035,6 +1039,7 @@ ${RUBY_LIB}/rubygems/mock_gem_ui.rb
 ${RUBY_LIB}/rubygems/name_tuple.rb
 ${RUBY_LIB}/rubygems/openssl.rb
 ${RUBY_LIB}/rubygems/optparse.rb
+${RUBY_LIB}/rubygems/optparse/COPYING
 ${RUBY_LIB}/rubygems/optparse/lib/optionparser.rb
 ${RUBY_LIB}/rubygems/optparse/lib/optparse.rb
 ${RUBY_LIB}/rubygems/optparse/lib/optparse/ac.rb
@@ -1092,6 +1097,7 @@ ${RUBY_LIB}/rubygems/resolver/local_specification.rb
 ${RUBY_LIB}/rubygems/resolver/lock_set.rb
 ${RUBY_LIB}/rubygems/resolver/lock_specification.rb
 ${RUBY_LIB}/rubygems/resolver/molinillo.rb
+${RUBY_LIB}/rubygems/resolver/molinillo/LICENSE
 ${RUBY_LIB}/rubygems/resolver/molinillo/lib/molinillo.rb
 ${RUBY_LIB}/rubygems/resolver/molinillo/lib/molinillo/delegates/resolution_state.rb
 ${RUBY_LIB}/rubygems/resolver/molinillo/lib/molinillo/delegates/specification_provider.rb
