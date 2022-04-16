@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.370 2022/04/14 09:10:32 wiz Exp $
+# $NetBSD: Makefile,v 1.371 2022/04/16 00:52:11 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -629,6 +629,8 @@ SUBDIR+=	tex-lm-math
 SUBDIR+=	tex-lm-math-doc
 SUBDIR+=	tex-lobster2
 SUBDIR+=	tex-lobster2-doc
+SUBDIR+=	tex-luafindfont
+SUBDIR+=	tex-luafindfont-doc
 SUBDIR+=	tex-luaotfload
 SUBDIR+=	tex-luaotfload-doc
 SUBDIR+=	tex-lxfonts
