@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/16 00:52:11 markd Exp $
+man/man1/luafindfont.1
+share/texmf-dist/doc/support/luafindfont/CHANGELOG
+share/texmf-dist/doc/support/luafindfont/README.md
+share/texmf-dist/doc/support/luafindfont/exa01.txt
+share/texmf-dist/doc/support/luafindfont/exa02.txt
+share/texmf-dist/doc/support/luafindfont/exa03.txt
+share/texmf-dist/doc/support/luafindfont/exa04.txt
+share/texmf-dist/doc/support/luafindfont/exa05.txt
+share/texmf-dist/doc/support/luafindfont/exa06.txt
+share/texmf-dist/doc/support/luafindfont/luafindfont-doc.pdf
+share/texmf-dist/doc/support/luafindfont/luafindfont-doc.tex
