@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/16 01:20:10 markd Exp $
+
+BLAKE2s (zhnumber.doc.r54960.tar.xz) = 42a4ef9793df8ee6f3774a0716f08505f9c49ba541fad6945a83723358f3e430
+SHA512 (zhnumber.doc.r54960.tar.xz) = 36de5c397a5966d5da5b71ee1a05b0e3d597782122e86dd184e146699fd5ecf08b6c2ed014bcaa86db8c9b2146d3863d8aa46078b94b33fb3fcf4a7a5a14f271
+Size (zhnumber.doc.r54960.tar.xz) = 267108 bytes
