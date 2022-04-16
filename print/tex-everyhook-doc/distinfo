@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/16 02:06:05 markd Exp $
+
+BLAKE2s (everyhook.doc.r35675.tar.xz) = 09fa90d552ffdfc403688d5b5cc1f58f375d6c6bb281f9b3b4e1828add0ec93a
+SHA512 (everyhook.doc.r35675.tar.xz) = 331def0138dac385605b3ea1d88af6d5d1ae29bac696b76f41cdcfd070d50915eb3371a14a894b1e59bf35d55eb7dabecfe18e89f0bfbe6f028ce5fedfe1bbc2
+Size (everyhook.doc.r35675.tar.xz) = 116288 bytes

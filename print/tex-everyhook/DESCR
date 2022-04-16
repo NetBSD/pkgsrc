@@ -1,0 +1,6 @@
+The package takes control of the six TeX token registers
+\everypar, \everymath, \everydisplay, \everyhbox, \everyvbox
+and \everycr. Real hooks for each of the registers may be
+installed using a stack like interface. For backwards
+compatibility, each of the \everyX token lists can be set
+without interfering with the hooks.
