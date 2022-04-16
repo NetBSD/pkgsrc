@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/16 02:02:47 markd Exp $
+
+BLAKE2s (svn-prov.r56291.tar.xz) = 317620e140156ed5ef15a612a72d4e6b67dd9234b34fc0c1e023193b3a8bb069
+SHA512 (svn-prov.r56291.tar.xz) = 0ac31432d148e5b05cadb041ee238fdd27b695a5be2e9553d062084443f97b961e1d9530ce3e5bc0b97ca8cc1bedecf9abb6f189f4e75184816e4ca36f8117d8
+Size (svn-prov.r56291.tar.xz) = 2420 bytes
