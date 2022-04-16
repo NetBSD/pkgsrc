@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/16 02:06:05 markd Exp $
+share/texmf-dist/doc/latex/everyhook/README
+share/texmf-dist/doc/latex/everyhook/everyhook.pdf
