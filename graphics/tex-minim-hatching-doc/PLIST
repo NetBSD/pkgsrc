@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/16 01:03:01 markd Exp $
+share/texmf-dist/doc/latex/minim-hatching/EUPL-1.2-EN.txt
+share/texmf-dist/doc/latex/minim-hatching/README
+share/texmf-dist/doc/latex/minim-hatching/minim-hatching-doc.mp
+share/texmf-dist/doc/latex/minim-hatching/minim-hatching-doc.pdf
