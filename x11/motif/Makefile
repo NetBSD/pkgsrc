@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/04/11 09:04:51 nia Exp $
+# $NetBSD: Makefile,v 1.21 2022/04/16 10:39:50 riastradh Exp $
 
 DISTNAME=		motif-2.3.8
 PKGREVISION=		1
@@ -48,16 +48,41 @@ CONFIGURE_ARGS+=	--enable-xft
 CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 
 MAKE_FLAGS+=		CC_FOR_BUILD=${NATIVE_CC:Q:U${CC:Q}}
+MAKE_FLAGS+=		AR_FOR_BUILD=${NATIVE_AR:Q:U${AR:Q}}
+MAKE_FLAGS+=		RANLIB_FOR_BUILD=${NATIVE_RANLIB:Q:U${RANLIB:Q}}
+MAKE_FLAGS+=		CPPFLAGS_FOR_BUILD=${CPPFLAGS_FOR_BUILD:Q}
+MAKE_FLAGS+=		LDFLAGS_FOR_BUILD=${LDFLAGS_FOR_BUILD:Q}
 MAKE_FLAGS+=		LIBS_FOR_BUILD=-lXt
 
+# wml.c has
+#
+#	#ifdef HAVE_CONFIG_H
+#	#include <config.h>
+#	#endif
+#	...
+#	#ifdef HAVE_FCNTL_H
+#	#include <fcntl.h>
+#	#else
+#	#include <sys/file.h>
+#	#endif
+#
+# Using config.h doesn't make sense for cross-builds because it
+# describes the target system, not the native system.  But <fcntl.h> is
+# in POSIX and has been for a very long time.  If there are any systems
+# that _don't_ have it and really need <sys/file.h>, and still run
+# pkgsrc, we can make this conditional or find another way to do it.
+#
+CPPFLAGS_FOR_BUILD+=	-DHAVE_FCNTL_H
+
 .if empty(USE_CROSS_COMPILE:M[yY][eE][sS])
-MAKE_FLAGS+=	CPPFLAGS_FOR_BUILD=${BUILDLINK_CPPFLAGS:Q}
-MAKE_FLAGS+=	LDFLAGS_FOR_BUILD=${BUILDLINK_LDFLAGS:Q}
+CPPFLAGS_FOR_BUILD+=	${BUILDLINK_CPPFLAGS}
+LDFLAGS_FOR_BUILD+=	${BUILDLINK_LDFLAGS}
 .else
+MAKE_FLAGS+=		CROSS_COMPILING=yes
 # XXX should support independent cross PREFIX
-MAKE_FLAGS+=	CROSS_COMPILING=yes \
-		CPPFLAGS_FOR_BUILD=-I${PREFIX:Q}/include \
-		LDFLAGS_FOR_BUILD=-L${PREFIX:Q}/lib\ ${COMPILER_RPATH_FLAG:Q}${PREFIX:Q}/lib
+CPPFLAGS_FOR_BUILD+=	-I${PREFIX:Q}/include
+LDFLAGS_FOR_BUILD+=	-L${PREFIX:Q}/lib
+LDFLAGS_FOR_BUILD+=	${COMPILER_RPATH_FLAG:Q}${PREFIX:Q}/lib
 CONFIGURE_ARGS.NetBSD+=	ac_cv_file__usr_X_include_X11_X_h=no
 CONFIGURE_ARGS.NetBSD+=	ac_cv_file__usr_X11R6_include_X11_X_h=no
 .  if ${X11_TYPE} != "native"

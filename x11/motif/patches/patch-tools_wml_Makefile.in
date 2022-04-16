@@ -1,9 +1,27 @@
-$NetBSD: patch-tools_wml_Makefile.in,v 1.1 2022/04/05 10:00:21 riastradh Exp $
+$NetBSD: patch-tools_wml_Makefile.in,v 1.2 2022/04/16 10:39:51 riastradh Exp $
 
 Build wml, wmldbcreate, and wmluitok as tools to run at build-time.
 
 --- tools/wml/Makefile.in.orig	2017-12-05 12:49:59.000000000 +0000
 +++ tools/wml/Makefile.in
+@@ -114,7 +114,7 @@ AM_V_AR = $(am__v_AR_@AM_V@)
+ am__v_AR_ = $(am__v_AR_@AM_DEFAULT_V@)
+ am__v_AR_0 = @echo "  AR      " $@;
+ am__v_AR_1 = 
+-libwml_a_AR = $(AR) $(ARFLAGS)
++libwml_a_AR = $(AR_FOR_BUILD) $(ARFLAGS)
+ libwml_a_LIBADD =
+ am_libwml_a_OBJECTS = wmlparse.$(OBJEXT) wml.$(OBJEXT) \
+ 	wmloutkey.$(OBJEXT) wmlouth.$(OBJEXT) wmloutmm.$(OBJEXT) \
+@@ -471,7 +471,7 @@ wmlparse.h: wmlparse.c
+ libwml.a: $(libwml_a_OBJECTS) $(libwml_a_DEPENDENCIES) $(EXTRA_libwml_a_DEPENDENCIES) 
+ 	$(AM_V_at)-rm -f libwml.a
+ 	$(AM_V_AR)$(libwml_a_AR) libwml.a $(libwml_a_OBJECTS) $(libwml_a_LIBADD)
+-	$(AM_V_at)$(RANLIB) libwml.a
++	$(AM_V_at)$(RANLIB_FOR_BUILD) libwml.a
+ 
+ clean-noinstPROGRAMS:
+ 	@list='$(noinst_PROGRAMS)'; test -n "$$list" || exit 0; \
 @@ -484,15 +484,15 @@ clean-noinstPROGRAMS:
  
  wml$(EXEEXT): $(wml_OBJECTS) $(wml_DEPENDENCIES) $(EXTRA_wml_DEPENDENCIES) 
