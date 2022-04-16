@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2022/04/14 01:41:18 markd Exp $
+# $NetBSD: Makefile,v 1.21 2022/04/16 02:17:59 markd Exp $
 
 DISTNAME=	collection-langjapanese
-PKGNAME=	texlive-${DISTNAME}-2021
-PKGREVISION=	1
+PKGNAME=	texlive-${DISTNAME}-2022
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	58754
+TEXLIVE_REV=	62958
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -31,18 +30,22 @@ DEPENDS+=	tex-gckanbun-[0-9]*:../../print/tex-gckanbun
 DEPENDS+=	tex-gentombow-[0-9]*:../../print/tex-gentombow
 DEPENDS+=	tex-haranoaji-[0-9]*:../../fonts/tex-haranoaji
 DEPENDS+=	tex-haranoaji-extra-[0-9]*:../../fonts/tex-haranoaji-extra
+DEPENDS+=	tex-ieejtran-[0-9]*:../../print/tex-ieejtran
 DEPENDS+=	tex-ifptex-[0-9]*:../../print/tex-ifptex
 DEPENDS+=	tex-ifxptex-[0-9]*:../../print/tex-ifxptex
 DEPENDS+=	tex-ipaex-[0-9]*:../../fonts/tex-ipaex
 DEPENDS+=	tex-japanese-otf-[0-9]*:../../fonts/tex-japanese-otf
+DEPENDS+=	tex-jieeetran-[0-9]*:../../print/tex-jieeetran
 DEPENDS+=	tex-jlreq-[0-9]*:../../print/tex-jlreq
 DEPENDS+=	tex-jlreq-deluxe-[0-9]*:../../fonts/tex-jlreq-deluxe
 DEPENDS+=	tex-jsclasses-[0-9]*:../../print/tex-jsclasses
+DEPENDS+=	tex-kanbun-[0-9]*:../../print/tex-kanbun
 # lshort-japanese is documentation only
 DEPENDS+=	tex-luatexja-[0-9]*:../../print/tex-luatexja
 # mendex-doc is documentation only
 DEPENDS+=	tex-morisawa-[0-9]*:../../fonts/tex-morisawa
 DEPENDS+=	tex-pbibtex-base-[0-9]*:../../print/tex-pbibtex-base
+# pbibtex-manual is documentation only
 DEPENDS+=	tex-platex-[0-9]*:../../print/tex-platex
 DEPENDS+=	tex-platex-tools-[0-9]*:../../print/tex-platex-tools
 # platexcheat is documentation only
