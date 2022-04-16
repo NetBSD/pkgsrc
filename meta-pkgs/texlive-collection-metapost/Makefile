@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2020/05/10 04:13:27 markd Exp $
+# $NetBSD: Makefile,v 1.15 2022/04/16 01:04:50 markd Exp $
 
 DISTNAME=	collection-metapost
-PKGNAME=	texlive-${DISTNAME}-2020
+PKGNAME=	texlive-${DISTNAME}-2022
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	50293
+TEXLIVE_REV=	59531
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -40,6 +40,7 @@ DEPENDS+=	tex-metapost-colorbrewer-[0-9]*:../../graphics/tex-metapost-colorbrewe
 DEPENDS+=	tex-metauml-[0-9]*:../../graphics/tex-metauml
 DEPENDS+=	tex-mfpic-[0-9]*:../../graphics/tex-mfpic
 DEPENDS+=	tex-mfpic4ode-[0-9]*:../../graphics/tex-mfpic4ode
+DEPENDS+=	tex-minim-hatching-[0-9]*:../../graphics/tex-minim-hatching
 DEPENDS+=	tex-mp3d-[0-9]*:../../graphics/tex-mp3d
 DEPENDS+=	tex-mparrows-[0-9]*:../../graphics/tex-mparrows
 DEPENDS+=	tex-mpattern-[0-9]*:../../graphics/tex-mpattern
