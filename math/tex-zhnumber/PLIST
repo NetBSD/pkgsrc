@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/16 01:20:10 markd Exp $
+share/texmf-dist/tex/latex/zhnumber/zhnumber-big5.cfg
+share/texmf-dist/tex/latex/zhnumber/zhnumber-gbk.cfg
+share/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
+share/texmf-dist/tex/latex/zhnumber/zhnumber.sty
