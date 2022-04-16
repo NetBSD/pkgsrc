@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/16 02:10:06 markd Exp $
+share/texmf-dist/doc/latex/ctex/README.md
+share/texmf-dist/doc/latex/ctex/ctex.pdf
