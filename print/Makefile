@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.823 2022/04/16 01:15:37 markd Exp $
+# $NetBSD: Makefile,v 1.824 2022/04/16 01:43:19 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1651,6 +1651,8 @@ SUBDIR+=	tex-xltxtra
 SUBDIR+=	tex-xltxtra-doc
 SUBDIR+=	tex-xpatch
 SUBDIR+=	tex-xpatch-doc
+SUBDIR+=	tex-xpinyin
+SUBDIR+=	tex-xpinyin-doc
 SUBDIR+=	tex-xskak
 SUBDIR+=	tex-xskak-doc
 SUBDIR+=	tex-xstring
