@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/16 01:33:52 markd Exp $
+share/texmf-dist/doc/fonts/zhmetrics-uptex/README.md
+share/texmf-dist/doc/fonts/zhmetrics-uptex/doc/README.md
+share/texmf-dist/doc/fonts/zhmetrics-uptex/makemetrics.lua
+share/texmf-dist/doc/fonts/zhmetrics-uptex/upzhfandolfonts-test.pdf
+share/texmf-dist/doc/fonts/zhmetrics-uptex/upzhfandolfonts-test.tex
+share/texmf-dist/doc/fonts/zhmetrics-uptex/upzhfandolfonts.tex
+share/texmf-dist/doc/fonts/zhmetrics-uptex/upzhm-h.pl
+share/texmf-dist/doc/fonts/zhmetrics-uptex/upzhm-v.pl

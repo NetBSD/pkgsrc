@@ -1,0 +1,3 @@
+The package contains some Chinese font metrics (JFM, VF, etc)
+for upTeX engine, together with a simple DVIPDFMx font mapping
+of Fandol fonts for DVIPDFMx.
