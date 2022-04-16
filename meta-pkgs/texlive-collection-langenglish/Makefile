@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2021/06/07 00:23:57 markd Exp $
+# $NetBSD: Makefile,v 1.17 2022/04/16 00:29:55 markd Exp $
 
 DISTNAME=	collection-langenglish
-PKGNAME=	texlive-${DISTNAME}-2021
+PKGNAME=	texlive-${DISTNAME}-2022
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	58290
+TEXLIVE_REV=	62971
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -12,8 +12,6 @@ COMMENT=	US and UK English TeX packages
 
 DEPENDS+=	texlive-collection-basic>=2014:../../meta-pkgs/texlive-collection-basic
 
-# MemoirChapStyles is documentation only
-# Type1fonts is documentation only
 # amiweb2c-guide is documentation only
 # amscls-doc is documentation only
 # amslatex-primer is documentation only
@@ -26,6 +24,7 @@ DEPENDS+=	texlive-collection-basic>=2014:../../meta-pkgs/texlive-collection-basi
 # docsurvey is documentation only
 # dtxtut is documentation only
 # first-latex-doc is documentation only
+# fontinstallationguide is documentation only
 # forest-quickstart is documentation only
 # gentle is documentation only
 DEPENDS+=	tex-guide-to-latex-[0-9]*:../../print/tex-guide-to-latex
@@ -34,11 +33,13 @@ DEPENDS+=	tex-hyphen-english-[0-9]*:../../print/tex-hyphen-english
 # impatient is documentation only
 # intro-scientific is documentation only
 # knuth-errata is documentation only
+# knuth-hint is documentation only
 # knuth-pdf is documentation only
 # l2tabu-english is documentation only
 # latex-brochure is documentation only
 # latex-course is documentation only
 # latex-doc-ptr is documentation only
+# latex-for-undergraduates is documentation only
 # latex-graphics-companion is documentation only
 # latex-refsheet is documentation only
 # latex-veryshortguide is documentation only
@@ -53,6 +54,7 @@ DEPENDS+=	tex-latexfileinfo-pkgs-[0-9]*:../../print/tex-latexfileinfo-pkgs
 # math-into-latex-4 is documentation only
 # maths-symbols is documentation only
 # memdesign is documentation only
+# memoirchapterstyles is documentation only
 # metafont-beginners is documentation only
 # metapost-examples is documentation only
 # patgen2-tutorial is documentation only
@@ -60,7 +62,6 @@ DEPENDS+=	tex-latexfileinfo-pkgs-[0-9]*:../../print/tex-latexfileinfo-pkgs
 # plain-doc is documentation only
 # short-math-guide is documentation only
 # simplified-latex is documentation only
-# startlatex2e is documentation only
 # svg-inkscape is documentation only
 # tamethebeast is documentation only
 # tds is documentation only
@@ -68,6 +69,7 @@ DEPENDS+=	tex-latexfileinfo-pkgs-[0-9]*:../../print/tex-latexfileinfo-pkgs
 # tex-nutshell is documentation only
 # tex-overview is documentation only
 # tex-refs is documentation only
+# tex-vpat is documentation only
 # texbytopic is documentation only
 # texonly is documentation only
 # titlepages is documentation only
@@ -77,6 +79,7 @@ DEPENDS+=	tex-latexfileinfo-pkgs-[0-9]*:../../print/tex-latexfileinfo-pkgs
 # visualfaq is documentation only
 # webguide is documentation only
 # xetexref is documentation only
+# yet-another-guide-latex2e is documentation only
 
 META_PACKAGE=	yes
 
