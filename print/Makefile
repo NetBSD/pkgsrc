@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.822 2022/04/15 05:54:51 markd Exp $
+# $NetBSD: Makefile,v 1.823 2022/04/16 01:15:37 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1663,6 +1663,8 @@ SUBDIR+=	tex-ydoc
 SUBDIR+=	tex-ydoc-doc
 SUBDIR+=	tex-yfonts
 SUBDIR+=	tex-yfonts-doc
+SUBDIR+=	tex-zitie
+SUBDIR+=	tex-zitie-doc
 SUBDIR+=	tex-zref
 SUBDIR+=	tex-zref-doc
 SUBDIR+=	tex-zxjafbfont
