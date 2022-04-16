@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1882 2022/04/16 05:42:56 mef Exp $
+$NetBSD: CHANGES-2022,v 1.1883 2022/04/16 06:04:51 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2890,3 +2890,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added databases/openldap-extra-schemas version 4.3 [khorben 2022-04-16]
 	Updated databases/phpldapadmin to 1.2.6.3 [khorben 2022-04-16]
 	Updated devel/R-devtools to 2.4.3 [mef 2022-04-16]
+	Updated devel/R-evaluate to 0.15 [mef 2022-04-16]
