@@ -1,0 +1,5 @@
+This package allows users to manually input macros for elements
+in a kanbun-kundoku (Han Wen Xun Du ) paragraph. More
+importantly, it accepts plain text input in the "kanbun
+annotation" form when used with LuaLaTeX, which allows
+typesetting kanbun-kundoku paragraphs efficiently.

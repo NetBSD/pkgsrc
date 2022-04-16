@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/16 01:50:22 markd Exp $
+share/texmf-dist/tex/latex/kanbun/kanbun.lua
+share/texmf-dist/tex/latex/kanbun/kanbun.sty
