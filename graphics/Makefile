@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.968 2022/04/13 08:32:30 pin Exp $
+# $NetBSD: Makefile,v 1.969 2022/04/16 01:03:01 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -669,6 +669,8 @@ SUBDIR+=	tex-mfpic
 SUBDIR+=	tex-mfpic-doc
 SUBDIR+=	tex-mfpic4ode
 SUBDIR+=	tex-mfpic4ode-doc
+SUBDIR+=	tex-minim-hatching
+SUBDIR+=	tex-minim-hatching-doc
 SUBDIR+=	tex-mp3d
 SUBDIR+=	tex-mp3d-doc
 SUBDIR+=	tex-mparrows
