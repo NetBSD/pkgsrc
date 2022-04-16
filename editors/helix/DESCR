@@ -1,1 +1,25 @@
-A kakoune / neovim inspired editor.
+A modal editor inspired by kakoune.
+Its main features include:
+Multiple selections by default, based on Kakoune.
+The whole design is based around multiple selections as an editing
+primitive, with a single cursor just being a subset of that. Commands
+manipulate selections which then allow you to concurrently edit code.
+Editing is focused on being easy to reason with.
+
+Syntax highlighting and code editing using Tree-sitter.
+No more slow regex highlighting! Tree-sitter parses code into syntax
+trees much like a compiler, giving us a lot more information about
+code structure. We can track local variables, calculate indentation
+and manipulate selection to select syntax nodes.
+Parsing is incremental and fast enough to run on every keystroke.
+Robust enough to produce results even with syntax errors.
+
+- Built-in language server support.
+  Context aware completion
+  Documentation
+  Diagnostics
+  Code actions
+
+- Runs in a terminal.
+The base implementation uses a terminal frontend and combines well
+with tmux or usage over ssh.

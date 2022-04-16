@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/04/09 11:11:09 nikita Exp $
+# $NetBSD: Makefile,v 1.3 2022/04/16 17:25:46 nikita Exp $
 
 GITHUB_PROJECT=	helix
 DISTNAME=	22.03
@@ -316,7 +316,7 @@ SITES.tree-sitter-zig-${ZIG_TAG}.tar.gz= \
 
 MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://helix-editor.com/
-COMMENT=	Editor inspired by kakoune / neovim
+COMMENT=	Modal editor inspired by kakoune / neovim
 # Additionally, the tree-sitter sources have various licenses.
 LICENSE=	mpl-2.0
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME}
