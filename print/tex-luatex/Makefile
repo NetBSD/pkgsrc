@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.25 2021/06/06 01:23:13 markd Exp $
+# $NetBSD: Makefile,v 1.26 2022/04/17 10:22:58 markd Exp $
 
 DISTNAME=	luatex
-PKGNAME=	tex-${DISTNAME}-1.13.0
-TEXLIVE_REV=	58822
+PKGNAME=	tex-${DISTNAME}-1.15.0
+TEXLIVE_REV=	62387
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.luatex.org/
+HOMEPAGE=	https://www.luatex.org/
 COMMENT=	LuaTeX basic definition package
 LICENSE=	gnu-gpl-v2
 
