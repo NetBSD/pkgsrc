@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2021/06/06 01:17:20 markd Exp $
+# $NetBSD: Makefile,v 1.15 2022/04/17 10:49:44 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	xpdfopen-0.86
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	print
 
 HOMEPAGE=	https://www.tug.org/texlive/
