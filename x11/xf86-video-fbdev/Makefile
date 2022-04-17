@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/04/10 08:53:20 nia Exp $
+# $NetBSD: Makefile,v 1.17 2022/04/17 07:38:51 nia Exp $
 
 DISTNAME=	xf86-video-fbdev-0.5.0
 CATEGORIES=	x11
@@ -15,6 +15,8 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
 RELRO_SUPPORTED=	partial
+
+NOT_FOR_PLATFORM+=	NetBSD-*-*
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
