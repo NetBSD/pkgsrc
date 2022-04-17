@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1888 2022/04/16 21:52:39 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.1889 2022/04/17 01:44:39 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2896,3 +2896,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/wiki-tui to 0.4.7 [pin 2022-04-16]
 	Updated net/ruby-public_suffix to 4.0.7 [tsutsui 2022-04-16]
 	Updated editors/helix to 22.03nb1 [nikita 2022-04-16]
+	Updated x11/xview-lib to 3.2.1nb11 [gutteridge 2022-04-17]
