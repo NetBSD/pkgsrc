@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 11:14:50 nia Exp $
+$NetBSD: distinfo,v 1.21 2022/04/17 10:24:32 markd Exp $
 
-BLAKE2s (texlive.infra.r59352.tar.xz) = b87445b09e707d4ba71c58170815f3300894e08887b16e47058e82eb98214090
-SHA512 (texlive.infra.r59352.tar.xz) = 318d24e48a2880488924a2beb54552f028f47397b5b75b7a606926b63ad9bb26017bbbd128ca16a7f3c7578e89047b58955d0106fb6a00c4c7085e241d5213f4
-Size (texlive.infra.r59352.tar.xz) = 230640 bytes
+BLAKE2s (texlive.infra.r62297.tar.xz) = 3fee50b18ff1c22f0c8145e7739e8c56deb4ef4f2342e88e4875eec01002137d
+SHA512 (texlive.infra.r62297.tar.xz) = 01713f8087a6d21e186a01bdfae0db8f735792cd20dbf1a1dd5cbbe72f99ef06393a03bcbd0d0129fce2aa3c1f01f55df33e3f3208c62713114a5984afd23191
+Size (texlive.infra.r62297.tar.xz) = 348832 bytes
 SHA1 (patch-aa) = fa49e775842a96e0667b35fb9629cd007d043544
-SHA1 (patch-ab) = e9a708b1d2df9442a30a45f8937a1560840f7be1
+SHA1 (patch-ab) = be4e0ac2390a2d3dc35b5bdcedfdf7525e8598d0
