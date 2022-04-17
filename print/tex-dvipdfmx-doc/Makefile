@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2021/02/14 00:40:25 markd Exp $
+# $NetBSD: Makefile,v 1.15 2022/04/17 10:18:56 markd Exp $
 
 DISTNAME=	dvipdfmx.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2020
-TEXLIVE_REV=	56557
+PKGNAME=	tex-${DISTNAME:S/./-/}-2021
+TEXLIVE_REV=	61101
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/dvipdfmx
