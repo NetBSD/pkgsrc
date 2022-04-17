@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2022/04/13 07:51:02 bsiegert Exp $
+# $NetBSD: Makefile,v 1.5 2022/04/17 19:09:40 bsiegert Exp $
 
 GITHUB_PROJECT=	go-tools
-GITHUB_TAG=	2021.1.2
-DISTNAME=	go-tools-2021.1.2
+GITHUB_TAG=	2022.1
+DISTNAME=	go-tools-2022.1
 PKGNAME=	go-staticcheck-${GITHUB_TAG}
-PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dominikh/}
 
@@ -13,7 +12,6 @@ HOMEPAGE=	https://github.com/dominikh/go-tools/
 COMMENT=	Advanced Go linter
 LICENSE=	mit
 
-USE_LANGUAGES=		# Go
 GO_BUILD_PATTERN=	./cmd/...
 INSTALLATION_DIRS=	bin
 
