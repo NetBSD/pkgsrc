@@ -1,0 +1,61 @@
+$NetBSD: patch-libmysql_CMakeLists.txt,v 1.1 2022/04/17 04:07:14 jnemeth Exp $
+
+* Generate libmysqlclient.so.18.0.0 file and libmysqlclient_r.so.18.0.0 symlink
+  on FreeBSD to supress PLIST divergence.
+
+--- libmysql/CMakeLists.txt.orig	2021-09-14 09:08:08.000000000 +0000
++++ libmysql/CMakeLists.txt
+@@ -316,7 +316,7 @@ IF(NOT DISABLE_SHARED)
+   TARGET_LINK_LIBRARIES(libmysql ${LIBS_TO_LINK})
+   IF(UNIX)
+     # libtool compatability
+-    IF(CMAKE_SYSTEM_NAME MATCHES "FreeBSD" OR APPLE)
++    IF(CMAKE_SYSTEM_NAME MATCHES APPLE)
+       SET(OS_SHARED_LIB_VERSION "${SHARED_LIB_MAJOR_VERSION}")
+     ELSE()
+       SET(OS_SHARED_LIB_VERSION
+@@ -360,44 +360,3 @@ IF(NOT DISABLE_SHARED)
+   ENDIF()
+ ENDIF()
+ 
+-#
+-#  Basic application for testing linking against dynamic client library.
+-#
+-
+-#
+-# Generate a comma separated list of C API functions which is used
+-# to initialize api_calls[] array in api_test.c
+-#
+-SET(CLIENT_API_FUNCTION_LIST "")
+-FOREACH(api ${CLIENT_API_FUNCTIONS})
+-  SET(CLIENT_API_FUNCTION_LIST "${CLIENT_API_FUNCTION_LIST} ${api},")
+-ENDFOREACH()
+-
+-#
+-# Generate api_test.c source, substituting @CLIENT_API_FUNCTION_LIST@
+-# with the list of API functions.
+-#
+-CONFIGURE_FILE(api_test.c.in ${CMAKE_CURRENT_BINARY_DIR}/api_test.c)
+-
+-#
+-# Note: Compiling this test application will fail if not all symbols
+-# from @CLIENT_API_FUNCTIONS@ are declared by <mysql.h>. It will fail
+-# to run if not all of these symbols are exported by the library.
+-#
+-ADD_EXECUTABLE(libmysql_api_test ${CMAKE_CURRENT_BINARY_DIR}/api_test.c)
+-SET_TARGET_PROPERTIES(libmysql_api_test PROPERTIES LINKER_LANGUAGE CXX)
+-IF(LIBRT)
+-  TARGET_LINK_LIBRARIES(libmysql_api_test ${LIBRT})
+-ENDIF()
+-
+-IF(DISABLE_SHARED)
+-  TARGET_LINK_LIBRARIES(libmysql_api_test ${LIBS_TO_MERGE})
+-ELSE()
+-  TARGET_LINK_LIBRARIES(libmysql_api_test libmysql)
+-ENDIF()
+-
+-# Verify that libmysql_api_test runs OK
+-ADD_CUSTOM_COMMAND(TARGET libmysql_api_test POST_BUILD
+-  COMMAND $<TARGET_FILE:libmysql_api_test>
+-  > ${CMAKE_CURRENT_BINARY_DIR}/libmysql_api_test.out
+-  )
