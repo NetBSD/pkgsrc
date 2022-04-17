@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/17 11:06:40 markd Exp $
+bin/hilatex
+share/texmf-dist/makeindex/hitex/hint.ist
+share/texmf-dist/tex/hitex/base/hilatex.ini
+share/texmf-dist/tex/hitex/base/hiltxpage.tex
+share/texmf-dist/tex/hitex/base/hiplainpage.tex
+share/texmf-dist/tex/hitex/base/hitex.ini
+share/texmf-dist/tex/hitex/base/ifhint.tex
