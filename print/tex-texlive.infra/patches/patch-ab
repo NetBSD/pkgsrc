@@ -1,37 +1,46 @@
-$NetBSD: patch-ab,v 1.1 2012/07/24 09:24:22 jperkin Exp $
+$NetBSD: patch-ab,v 1.2 2022/04/17 10:24:32 markd Exp $
 
 Fix paths to kpsewhich.
 
---- tlpkg/TeXLive/TLUtils.pm.orig	2012-07-24 09:03:04.471178595 +0000
-+++ tlpkg/TeXLive/TLUtils.pm	2012-07-24 09:03:27.491955121 +0000
-@@ -1609,7 +1609,7 @@
+--- tlpkg/TeXLive/TLUtils.pm.orig	2022-02-28 22:13:17.000000000 +0000
++++ tlpkg/TeXLive/TLUtils.pm
+@@ -1802,7 +1802,7 @@ sub _do_postaction_filetype {
    }
    my $cmd = $keyval{'cmd'};
  
--  my $texdir = `kpsewhich -var-value=SELFAUTOPARENT`;
-+  my $texdir = `@KPSEWHICH@ -var-value=SELFAUTOPARENT`;
+-  my $texdir = `kpsewhich -var-value=TEXMFROOT`;
++  my $texdir = `@KPSEWHICH@ -var-value=TEXMFROOT`;
    chomp($texdir);
    my $texdir_bsl = conv_to_w32_path($texdir);
    $cmd =~ s!^("?)TEXDIR/!$1$texdir/!g;
-@@ -1684,7 +1684,7 @@
+@@ -1877,7 +1877,7 @@ sub _do_postaction_script {
    if (win32() && defined($keyval{'filew32'})) {
      $file = $keyval{'filew32'};
    }
--  my $texdir = `kpsewhich -var-value=SELFAUTOPARENT`;
-+  my $texdir = `@KPSEWHICH@ -var-value=SELFAUTOPARENT`;
+-  my $texdir = `kpsewhich -var-value=TEXMFROOT`;
++  my $texdir = `@KPSEWHICH@ -var-value=TEXMFROOT`;
    chomp($texdir);
    my @syscmd;
    if ($file =~ m/\.pl$/i) {
-@@ -1759,7 +1759,7 @@
+@@ -1952,7 +1952,7 @@ sub _do_postaction_shortcut {
  
    &log("postaction $how shortcut for " . $tlpobj->name . "\n");
    if ($how eq "install") {
--    my $texdir = `kpsewhich -var-value=SELFAUTOPARENT`;
-+    my $texdir = `@KPSEWHICH@ -var-value=SELFAUTOPARENT`;
+-    my $texdir = `kpsewhich -var-value=TEXMFROOT`;
++    my $texdir = `@KPSEWHICH@ -var-value=TEXMFROOT`;
      chomp($texdir);
      my $texdir_bsl = conv_to_w32_path($texdir);
      $icon =~ s!^TEXDIR/!$texdir/!;
-@@ -3863,7 +3863,7 @@
+@@ -3193,7 +3193,7 @@ sub create_updmap {
+ }
+ 
+ sub check_for_old_updmap_cfg {
+-  chomp( my $tmfsysconf = `kpsewhich -var-value=TEXMFSYSCONFIG` ) ;
++  chomp( my $tmfsysconf = `@KPSEWHICH@ -var-value=TEXMFSYSCONFIG` ) ;
+   my $oldupd = "$tmfsysconf/web2c/updmap.cfg";
+   return unless -r $oldupd;  # if no such file, good.
+ 
+@@ -4699,7 +4699,7 @@ sub mktexupd {
        }
        my $delim= (&win32)? ';' : ':';
        my $TEXMFDBS;
