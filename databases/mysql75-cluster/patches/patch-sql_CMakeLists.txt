@@ -1,0 +1,13 @@
+$NetBSD: patch-sql_CMakeLists.txt,v 1.1 2022/04/17 04:07:14 jnemeth Exp $
+
+--- sql/CMakeLists.txt.orig	2021-09-14 09:08:08.000000000 +0000
++++ sql/CMakeLists.txt
+@@ -30,6 +30,8 @@ INCLUDE_DIRECTORIES(
+   ${CMAKE_SOURCE_DIR}/regex 
+   ${SSL_INCLUDE_DIRS}
+   ${CMAKE_BINARY_DIR}/sql
++  ${CMAKE_BINARY_DIR}/include
++  ${CMAKE_BINARY_DIR}
+ )
+ 
+ SET(CONF_SOURCES

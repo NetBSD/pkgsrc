@@ -1,0 +1,18 @@
+$NetBSD: patch-mysql-test_CMakeLists.txt,v 1.1 2022/04/17 04:07:14 jnemeth Exp $
+
+Exclude some unwated files.
+
+--- mysql-test/CMakeLists.txt.orig	2021-09-14 09:08:08.000000000 +0000
++++ mysql-test/CMakeLists.txt
+@@ -31,9 +31,11 @@ INSTALL(
+   PATTERN "lib/t*" EXCLUDE
+   PATTERN "CPack" EXCLUDE
+   PATTERN "CMake*" EXCLUDE
++  PATTERN "Makefile" EXCLUDE
+   PATTERN "mtr.out*" EXCLUDE
+   PATTERN ".cvsignore" EXCLUDE
+   PATTERN "*.am" EXCLUDE
++  PATTERN "*.cmake" EXCLUDE
+   PATTERN "*.in" EXCLUDE
+ )
+   IF(NOT INSTALL_LAYOUT MATCHES "RPM")

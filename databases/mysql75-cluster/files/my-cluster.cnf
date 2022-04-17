@@ -1,0 +1,15 @@
+[mysqld]
+ndbcluster
+bind-address=@INTERNAL_IP@
+ndb-connectstring=
+
+[ndbd]
+bind-address=@INTERNAL_IP@
+ndb-connectstring=
+
+[ndb_mgmd]
+configdir=@VARBASE@/mysql
+bind-address=@INTERNAL_IP@
+
+[ndb_mgm]
+ndb-connectstring=@INTERNAL_IP@

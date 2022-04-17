@@ -1,0 +1,14 @@
+$NetBSD: patch-storage_ndb_src_common_util_CMakeLists.txt,v 1.1 2022/04/17 04:07:14 jnemeth Exp $
+
+--- storage/ndb/src/common/util/CMakeLists.txt.orig	2021-03-26 07:56:01.000000000 +0000
++++ storage/ndb/src/common/util/CMakeLists.txt
+@@ -29,7 +29,8 @@ INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOUR
+                     ${CMAKE_SOURCE_DIR}/storage/ndb/include
+                     ${CMAKE_SOURCE_DIR}/storage/ndb/include/util
+                     ${CMAKE_SOURCE_DIR}/storage/ndb/include/portlib
+-                    ${CMAKE_SOURCE_DIR}/storage/ndb/include/logger)
++                    ${CMAKE_SOURCE_DIR}/storage/ndb/include/logger
++                    ${CMAKE_SOURCE_DIR}/zlib)
+ 
+ ADD_DEFINITIONS(-DNO_DUMMY_DECL)
+ ADD_CONVENIENCE_LIBRARY(ndbgeneral
