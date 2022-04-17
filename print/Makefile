@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.831 2022/04/16 02:10:06 markd Exp $
+# $NetBSD: Makefile,v 1.832 2022/04/17 11:06:40 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -806,6 +806,8 @@ SUBDIR+=	tex-hausarbeit-jura
 SUBDIR+=	tex-hausarbeit-jura-doc
 SUBDIR+=	tex-here
 SUBDIR+=	tex-here-doc
+SUBDIR+=	tex-hitex
+SUBDIR+=	tex-hitex-doc
 SUBDIR+=	tex-hobsub
 SUBDIR+=	tex-hobsub-doc
 SUBDIR+=	tex-hologo

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/17 11:06:41 markd Exp $
+
+BLAKE2s (hitex.doc.r62529.tar.xz) = 7422255b4fa6e1b2837dcab88a3450ef4d2d89d8c2d2fab7ba09be1e9d07b66e
+SHA512 (hitex.doc.r62529.tar.xz) = 995e0750d2fb93f8a5c7b663739bdc5a71ae28a3892f87674cb90ce2d238896bd9cbcb1f0bcfec61703e9d27f152c0667f60481376cc855cdb775292517866a5
+Size (hitex.doc.r62529.tar.xz) = 2623172 bytes
