@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2022/03/18 12:59:38 gdt Exp $
+# $NetBSD: Makefile,v 1.47 2022/04/17 11:08:33 js Exp $
 
-DISTNAME=	matrix-synapse-1.54.0
+DISTNAME=	matrix-synapse-1.56.0
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
 EGG_NAME=	matrix_synapse-${PKGVERSION_NOREV}
@@ -41,7 +41,7 @@ DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=1.4.4:../../devel/py-sortedcontainers
 DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-treq>=15.1:../../devel/py-treq
 DEPENDS+=	${PYPKGPREFIX}-twisted>=18.9.0:../../net/py-twisted
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10.0:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-unpaddedbase64>=1.1.0:../../devel/py-unpaddedbase64
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.11:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
