@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/17 11:06:41 markd Exp $
+share/texmf-dist/doc/hitex/base/hiformat.hnt
+share/texmf-dist/doc/hitex/base/hiformat.pdf
+share/texmf-dist/doc/hitex/base/hintmac.tex
+share/texmf-dist/doc/hitex/base/hitexman.hnt
+share/texmf-dist/doc/hitex/base/hitexman.pdf
+share/texmf-dist/doc/hitex/base/hitexman.tex
