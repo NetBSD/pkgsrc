@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/11/20 00:31:10 sjmulder Exp $
+$NetBSD: distinfo,v 1.8 2022/04/17 20:00:34 sjmulder Exp $
 
 BLAKE2s (mustach-1.2.2.tar.gz) = bfb5bb378dd3f9535a7188bd81d9624242b85f5f30364dc0c8bb179badb1b265
 SHA512 (mustach-1.2.2.tar.gz) = d714dd5a0c58d9bd23826cd56f91b0ad04ff0bb0733b0dfca41100219436ab90b42b8fd3878932f5101cfd2a4f6ae3c85dcaea9010521ef1a17dd00e980363a7
 Size (mustach-1.2.2.tar.gz) = 36229 bytes
-SHA1 (patch-test6_Makefile) = 59d63febabaad20b880ed440587d12d3c5a40599
+SHA1 (patch-Makefile) = c24272ce1671a9bce63cef16a52289260842826a

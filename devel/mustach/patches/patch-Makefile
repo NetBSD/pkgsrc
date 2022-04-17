@@ -1,0 +1,55 @@
+$NetBSD: patch-Makefile,v 1.1 2022/04/17 20:00:34 sjmulder Exp $
+
+Don't use -soname on macOS.
+https://gitlab.com/jobol/mustach/-/merge_requests/26
+
+--- Makefile.orig	2022-04-17 19:51:45.000000000 +0000
++++ Makefile
+@@ -148,11 +148,17 @@ $(info cjson   = ${cjson})
+ override CFLAGS += -fPIC -Wall -Wextra -DVERSION=${VERSION}
+ 
+ ifeq ($(shell uname),Darwin)
+- darwin_single = -install_name $(LIBDIR)/libmustach.so$(SOVEREV)
+- darwin_core = -install_name $(LIBDIR)/libmustach-core.so$(SOVEREV)
+- darwin_cjson = -install_name $(LIBDIR)/libmustach-cjson.so$(SOVEREV)
+- darwin_jsonc = -install_name $(LIBDIR)/libmustach-json-c.so$(SOVEREV)
+- darwin_jansson = -install_name $(LIBDIR)/libmustach-jansson.so$(SOVEREV)
++ LDFLAGS_single  += -install_name $(LIBDIR)/libmustach.so$(SOVEREV)
++ LDFLAGS_core    += -install_name $(LIBDIR)/libmustach-core.so$(SOVEREV)
++ LDFLAGS_cjson   += -install_name $(LIBDIR)/libmustach-cjson.so$(SOVEREV)
++ LDFLAGS_jsonc   += -install_name $(LIBDIR)/libmustach-json-c.so$(SOVEREV)
++ LDFLAGS_jansson += -install_name $(LIBDIR)/libmustach-jansson.so$(SOVEREV)
++else
++ LDFLAGS_single  += -Wl,-soname,libmustach.so$(SOVER)
++ LDFLAGS_core    += -Wl,-soname,libmustach-core.so$(SOVER)
++ LDFLAGS_cjson   += -Wl,-soname,libmustach-cjson.so$(SOVER)
++ LDFLAGS_jsonc   += -Wl,-soname,libmustach-json-c.so$(SOVER)
++ LDFLAGS_jansson += -Wl,-soname,libmustach-jansson.so$(SOVER)
+ endif
+ 
+ # targets
+@@ -164,19 +170,19 @@ mustach: $(TOOLOBJS)
+ 	$(CC) $(LDFLAGS) $(TOOLFLAGS) -o mustach $(TOOLOBJS) $(TOOLLIBS)
+ 
+ libmustach.so$(SOVEREV): $(SINGLEOBJS)
+-	$(CC) -shared -Wl,-soname,libmustach.so$(SOVER) $(LDFLAGS) $(darwin_single) -o $@ $^ $(SINGLELIBS)
++	$(CC) -shared $(LDFLAGS) $(LDFLAGS_single) -o $@ $^ $(SINGLELIBS)
+ 
+ libmustach-core.so$(SOVEREV): $(COREOBJS)
+-	$(CC) -shared -Wl,-soname,libmustach-core.so$(SOVER) $(LDFLAGS) $(darwin_core) -o $@ $(COREOBJS) $(lib_OBJ)
++	$(CC) -shared $(LDFLAGS) $(LDFLAGS_core) -o $@ $(COREOBJS) $(lib_OBJ)
+ 
+ libmustach-cjson.so$(SOVEREV): $(COREOBJS) mustach-cjson.o
+-	$(CC) -shared -Wl,-soname,libmustach-cjson.so$(SOVER) $(LDFLAGS) $(darwin_cjson) -o $@ $^ $(cjson_libs)
++	$(CC) -shared $(LDFLAGS) $(LDFLAGS_cjson) -o $@ $^ $(cjson_libs)
+ 
+ libmustach-json-c.so$(SOVEREV): $(COREOBJS) mustach-json-c.o
+-	$(CC) -shared -Wl,-soname,libmustach-json-c.so$(SOVER) $(LDFLAGS) $(darwin_jsonc) -o $@ $^ $(jsonc_libs)
++	$(CC) -shared $(LDFLAGS) $(LDFLAGS_jsonc) -o $@ $^ $(jsonc_libs)
+ 
+ libmustach-jansson.so$(SOVEREV): $(COREOBJS) mustach-jansson.o
+-	$(CC) -shared -Wl,-soname,libmustach-jansson.so$(SOVER) $(LDFLAGS) $(darwin_jansson) -o $@ $^ $(jansson_libs)
++	$(CC) -shared $(LDFLAGS) $(LDFLAGS_jansson) -o $@ $^ $(jansson_libs)
+ 
+ # pkgconfigs
+ 
