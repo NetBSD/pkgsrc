@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2021/06/06 01:17:17 markd Exp $
+# $NetBSD: Makefile,v 1.40 2022/04/17 10:33:09 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	ttf2pk-2.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	fonts print
 
 MAINTAINER=	bernhard@SDG.de
