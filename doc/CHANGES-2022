@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1899 2022/04/17 21:16:29 sjmulder Exp $
+$NetBSD: CHANGES-2022,v 1.1900 2022/04/17 22:50:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2948,3 +2948,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/mustach to 1.2.2nb1 [sjmulder 2022-04-17]
 	Added textproc/glow version 1.4.1 [sjmulder 2022-04-17]
 	Updated wm/progman to 1.0nb2 [sjmulder 2022-04-17]
+	Removed textproc/p5-MultiMarkdown successor textproc/p5-Text-MultiMarkdown [wiz 2022-04-17]
