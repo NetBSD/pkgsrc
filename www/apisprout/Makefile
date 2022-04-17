@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/04/13 07:50:55 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2022/04/17 18:52:22 bsiegert Exp $
 
 DISTNAME=	apisprout-1.3.0
 PKGREVISION=	5
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/danielgtaylor/apisprout/
 COMMENT=	Lightweight, fast, validating OpenAPI 3 mock server
 LICENSE=	mit
 
-USE_LANGUAGES=	# none
+USE_LANGUAGES=	c
 
 GO_BUILD_PATTERN+=	.
 
