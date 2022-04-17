@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.108 2021/12/08 16:06:14 adam Exp $
+# $NetBSD: Makefile,v 1.109 2022/04/17 10:41:27 markd Exp $
 
-PKGREVISION= 1
 .include "../../print/texlive/Makefile.common"
 
-PKGNAME=	luatex-1.13.0
+PKGNAME=	luatex-1.15.0
 CATEGORIES=	print
 
 HOMEPAGE=	https://www.tug.org/web2c/
@@ -21,6 +20,7 @@ CONFIGURE_ARGS+=	--disable-aleph
 CONFIGURE_ARGS+=	--disable-eptex
 CONFIGURE_ARGS+=	--disable-etex
 CONFIGURE_ARGS+=	--disable-euptex
+CONFIGURE_ARGS+=	--disable-hitex
 CONFIGURE_ARGS+=	--disable-mf
 CONFIGURE_ARGS+=	--disable-mf-nowin
 CONFIGURE_ARGS+=	--disable-luajittex
