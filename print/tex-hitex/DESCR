@@ -1,0 +1,12 @@
+An extension of TeX which generates HINT output. The HINT file
+format is an alternative to the DVI and PDF formats which was
+designed specifically for on-screen reading of documents.
+Especially on mobile devices, reading DVI or PDF documents can
+be cumbersome. Mobile devices are available in a large variety
+of sizes but typically are not large enough to display
+documents formated for a4/letter-size paper. To compensate for
+the limitations of a small screen, users are used to
+alternating between landscape (few long lines) and portrait
+(more short lines) mode. The HINT format supports variable and
+varying screen sizes, leveraging the ability of TeX to format a
+document for nearly-arbitrary values of \hsize and \vsize.
