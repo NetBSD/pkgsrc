@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.42 2021/10/26 11:15:12 nia Exp $
+$NetBSD: distinfo,v 1.43 2022/04/17 10:46:46 markd Exp $
 
-BLAKE2s (texlive-20210325-source.tar.xz) = 1ff1ac8c15651d79483605f071a71c7eb253477627b3f478c261a87bf98a7186
-SHA512 (texlive-20210325-source.tar.xz) = afd6eb24efaeac7c58d43ff24162aece919079a9ae02934509f068c7a3828223c33c14d9db11ff7fea3560b08a06f352446ba7f845eefb4a56a87b96f088f213
-Size (texlive-20210325-source.tar.xz) = 54837368 bytes
+BLAKE2s (texlive-20220321-source.tar.xz) = 1f3a5c33cba94663158aba15b12da5a265b8ec44eab741a6b9f1037d0c412341
+SHA512 (texlive-20220321-source.tar.xz) = 1c6b4c80d474b661060c3ac126b41782fd34e883139b9bca89ca1ffe543891bd9451df3be5e6297af965ddbceea9802008a61589344c3dee8075044b1b288dd7
+Size (texlive-20220321-source.tar.xz) = 67975836 bytes
 SHA1 (patch-Makefile.in) = e4446fc146b419ca5f2105d2a78c7789149b40ea
-SHA1 (patch-man_Makefile.in) = 9b57fbd750476ef3aff268918135ce63f553ef14
+SHA1 (patch-man_Makefile.in) = 503f9394e2bd7cebeddbef32901cacb96db036b2

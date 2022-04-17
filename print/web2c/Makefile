@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.108 2021/06/15 13:21:04 nia Exp $
+# $NetBSD: Makefile,v 1.109 2022/04/17 10:46:46 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
-PKGNAME=	web2c-2021
+PKGNAME=	web2c-2022
 CATEGORIES=	print
 
 HOMEPAGE=	https://www.tug.org/web2c/

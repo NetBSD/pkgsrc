@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2020/10/29 19:47:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2022/04/17 10:46:46 markd Exp $
 bin/aleph
 bin/bibtex
 bin/ctangle
@@ -15,6 +15,9 @@ bin/euptex
 bin/gftodvi
 bin/gftopk
 bin/gftype
+bin/hishrink
+bin/histretch
+bin/hitex
 bin/inimf
 bin/initex
 bin/mf
@@ -57,6 +60,7 @@ bin/tex
 bin/tftopl
 bin/tie
 bin/ttf2afm
+bin/twill
 bin/upbibtex
 bin/updvitomp
 bin/updvitype
@@ -94,9 +98,11 @@ man/man1/euptex.1
 man/man1/gftodvi.1
 man/man1/gftopk.1
 man/man1/gftype.1
+man/man1/hishrink.1
+man/man1/histretch.1
+man/man1/hitex.1
 man/man1/inimf.1
 man/man1/initex.1
-man/man1/lamed.1
 man/man1/mf-nowin.1
 man/man1/mf.1
 man/man1/mft.1
@@ -113,6 +119,7 @@ man/man1/outocp.1
 man/man1/ovf2ovp.1
 man/man1/ovp2ovf.1
 man/man1/patgen.1
+man/man1/pbibtex.1
 man/man1/pdftex.1
 man/man1/pdftosrc.1
 man/man1/pktogf.1
@@ -128,6 +135,8 @@ man/man1/tex.1
 man/man1/tftopl.1
 man/man1/tie.1
 man/man1/ttf2afm.1
+man/man1/twill.1
+man/man1/upbibtex.1
 man/man1/uppltotf.1
 man/man1/uptex.1
 man/man1/uptftopl.1
