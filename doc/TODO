@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21681 2022/04/17 05:21:07 wiz Exp $
+$NetBSD: TODO,v 1.21682 2022/04/17 05:59:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -361,7 +361,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o GNUMail-1.2.2
 	o Gorm-1.2.26
 	o HElib-2.1.0
-	o ImageMagick-7.1.0.29
+	o ImageMagick-7.1.0.30
 	o ImageMagick6-6.9.12.8
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
@@ -506,6 +506,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bioperl-1.7.8
 	o bird-2.0.8
 	o bird6-2.0.8
+	o blas-3.10.1
 	o blender-3.1
 	o bliz++-0.10
 	o blur6ex-0.3.462
@@ -641,6 +642,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o elm-me-2.4.127
 	o elscreen-1.5.3
 	o emerillon-0.1.90
+	o enchant2-2.3.3
 	o enlightenment-0.25
 	o eog-plugins-3.6.1
 	o epic4-2.10.6
@@ -678,6 +680,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o felinks-0.14.0
 	o felt-3.07 [wip]
 	o fet-6.0.1
+	o ffmpeg4-4.4.2
 	o filerunner-14.06.18.10
 	o flashplayer-0.4.13
 	o flatbuffers-1.12.0
@@ -816,6 +819,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o golem-0.0.6
 	o goocanvas-2.0.2
 	o google-glog-2.2.2
+	o gopls-0.8.3
 	o gossip-0.31
 	o got-0.52
 	o gourmet-0.13.3
@@ -830,7 +834,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o greed-4.2
 	o gromacs-2021.1
 	o groonga-11.0.1
-	o grpc-1.45.1
+	o grpc-1.45.2
 	o grub2-2.06
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
@@ -928,6 +932,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
+	o json-c-0.16
 	o kactivities-5.81.0
 	o kactivities-stats-5.81.0
 	o kactivities5-5.81.0
@@ -1076,6 +1081,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o librelp-1.10.0
 	o libressl-3.3.2
 	o libretro-core-info-1.9.1
+	o libshout-2.4.6
 	o libslang-2.2.4
 	o libslang2-2.3.2
 	o libspatialite-5.0.1
@@ -1301,6 +1307,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencpn-plugin-draw-1.8.5.2
 	o opencsg-1.4.2
 	o opendnssec-2.1.8
+	o openexr-3.1.5
 	o opengrok-1.7.1
 	o openh323-1.19.1
 	o openmortal-0.7.1
@@ -1390,6 +1397,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o parrot-8.1.0
 	o pcc-1.1.0
 	o pcc-current-20210421
+	o pcre2-10.40
 	o pdf-redact-tools-0.1.2
 	o pdfpc-4.4.1
 	o pdmenu-1.2.87
@@ -1494,7 +1502,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-cares-3.1.1
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
-	o py-cyclonedx-python-lib-2.1.1
+	o py-cyclonedx-python-lib-2.2.0
 	o py-django-4.0
 	o py-django-debug-toolbar-3.2.1
 	o py-django-tagging-0.5.0
@@ -1580,7 +1588,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rep-gtk-0.90.8.1
 	o reposurgeon-4.26
 	o resize_image-0.7
-	o restish-0.13.0
+	o restish-0.13.1
 	o rexx-regina-3.9.0
 	o riemann-client-1.10.4.1
 	o rio500-0.8.1
@@ -1595,6 +1603,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rp-l2tp-0.4
 	o rp-pppoe-3.11
 	o rpc2-2.14
+	o rsync-3.2.4
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
