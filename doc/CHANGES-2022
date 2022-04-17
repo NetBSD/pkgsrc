@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1889 2022/04/17 01:44:39 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.1890 2022/04/17 04:07:39 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2897,3 +2897,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/ruby-public_suffix to 4.0.7 [tsutsui 2022-04-16]
 	Updated editors/helix to 22.03nb1 [nikita 2022-04-16]
 	Updated x11/xview-lib to 3.2.1nb11 [gutteridge 2022-04-17]
+	Updated databases/mysql75-cluster to 7.5.25 [jnemeth 2022-04-17]
