@@ -1,0 +1,31 @@
+$NetBSD: patch-rapid_plugin_x_CMakeLists.txt,v 1.1 2022/04/17 04:07:14 jnemeth Exp $
+
+--- rapid/plugin/x/CMakeLists.txt.orig	2021-09-14 09:08:08.000000000 +0000
++++ rapid/plugin/x/CMakeLists.txt
+@@ -99,13 +99,13 @@ ELSE()
+     ${CMAKE_SOURCE_DIR}/include #temporary
+     ${CMAKE_CURRENT_SOURCE_DIR}/include/mysql
+     ${CMAKE_CURRENT_BINARY_DIR}/generated
+-    ${SSL_INCLUDE_DIRS}
+   )
+ 
+   INCLUDE_DIRECTORIES(SYSTEM
+     ${BOOST_INCLUDE_DIR}
+     ${PROTOBUF_INCLUDE_DIRS}
+     ${LIBEVENT_INCLUDE_DIRS}
++    ${SSL_INCLUDE_DIRS}
+   )
+ 
+   IF(XPLUGIN_NO_LITE_PROTOBUF)
+@@ -221,7 +221,10 @@ ELSE()
+   ENDIF()
+ 
+   TARGET_LINK_LIBRARIES(mysqlxtest mysys strings ${FORCE_SSL_SOLARIS} mysqlclient)
+-  TARGET_LINK_LIBRARIES(mysqlxtest ${PROTOBUF_LIBRARY})
++  TARGET_LINK_LIBRARIES(mysqlxtest ${PROTOBUF_LIBRARY} ${CRYPTO_LIBRARY})
++  IF(CMAKE_SYSTEM_NAME STREQUAL "SunOS")
++    TARGET_LINK_LIBRARIES(mysqlxtest "socket")
++  ENDIF()
+ 
+   IF(INSTALL_MYSQLTESTDIR)
+     INSTALL(

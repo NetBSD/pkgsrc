@@ -1,0 +1,18 @@
+$NetBSD: patch-storage_ndb_CMakeLists.txt,v 1.1 2022/04/17 04:07:14 jnemeth Exp $
+
+--- storage/ndb/CMakeLists.txt.orig	2021-09-14 08:39:29.000000000 +0000
++++ storage/ndb/CMakeLists.txt
+@@ -394,9 +394,10 @@ ENDIF(WITHOUT_PARTITION_STORAGE_ENGINE)
+ 
+ ADD_SUBDIRECTORY(wix)
+ 
+-IF(WITH_UNIT_TESTS)
+-  FILE(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/unittest/ndb)
+-ENDIF()
++# pkgsrc
++# IF(WITH_UNIT_TESTS)
++#   FILE(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/unittest/ndb)
++# ENDIF()
+ 
+ # Show any MySQL Server patches
+ #INCLUDE(ndb_show_patches)

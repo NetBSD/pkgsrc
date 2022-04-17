@@ -1,0 +1,25 @@
+$NetBSD: patch-regex_CMakeLists.txt,v 1.1 2022/04/17 04:07:14 jnemeth Exp $
+
+--- regex/CMakeLists.txt.orig	2021-09-14 08:39:29.000000000 +0000
++++ regex/CMakeLists.txt
+@@ -25,11 +25,12 @@ INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/
+ SET(REGEX_SOURCES regcomp.c regerror.c regexec.c regfree.c reginit.c)
+ ADD_CONVENIENCE_LIBRARY(regex ${REGEX_SOURCES})
+ 
+-IF(WITH_UNIT_TESTS)
+-  ADD_EXECUTABLE(re main.c split.c debug.c)
+-  TARGET_LINK_LIBRARIES(re regex strings mysys)
+-
+-  ADD_TEST(regex1 re     -I)
+-  ADD_TEST(regex2 re -el -I)
+-  ADD_TEST(regex3 re -er -I)
+-ENDIF()
++# pkgsrc
++# IF(WITH_UNIT_TESTS)
++#   ADD_EXECUTABLE(re main.c split.c debug.c)
++#   TARGET_LINK_LIBRARIES(re regex strings mysys)
++# 
++#   ADD_TEST(regex1 re     -I)
++#   ADD_TEST(regex2 re -el -I)
++#   ADD_TEST(regex3 re -er -I)
++# ENDIF()
