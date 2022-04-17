@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/09/18 20:18:55 schmonz Exp $
-#
+# $NetBSD: Makefile,v 1.12 2022/04/17 22:41:39 wiz Exp $
 
 DISTNAME=	discount-2.2.7
 CATEGORIES=	textproc
@@ -12,6 +11,8 @@ COMMENT=	Markdown C implementation
 LICENSE=	modified-bsd
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+
+CONFLICTS+=		multimarkdown-[0-9]*
 
 HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	./configure.sh
