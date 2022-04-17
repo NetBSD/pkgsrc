@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2021/06/06 01:17:18 markd Exp $
+# $NetBSD: Makefile,v 1.19 2022/04/17 10:34:54 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	dvidvi-1.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	print
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
