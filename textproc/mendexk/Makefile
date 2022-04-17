@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2021/06/06 01:17:20 markd Exp $
+# $NetBSD: Makefile,v 1.16 2022/04/17 10:51:05 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
-PKGNAME=	mendexk-3.3
+PKGNAME=	mendexk-3.6
 CATEGORIES=	textproc
 
 HOMEPAGE=	https://www.tug.org/texlive/
