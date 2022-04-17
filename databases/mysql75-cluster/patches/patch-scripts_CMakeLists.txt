@@ -1,0 +1,19 @@
+$NetBSD: patch-scripts_CMakeLists.txt,v 1.1 2022/04/17 04:07:14 jnemeth Exp $
+
+Fix paths.
+
+--- scripts/CMakeLists.txt.orig	2021-09-14 09:08:08.000000000 +0000
++++ scripts/CMakeLists.txt
+@@ -301,11 +301,7 @@ SET(sbindir ${prefix}/${INSTALL_SBINDIR}
+ SET(scriptdir ${prefix}/${INSTALL_BINDIR})
+ SET(libexecdir ${prefix}/${INSTALL_SBINDIR})
+ SET(pkgdatadir ${prefix}/${INSTALL_MYSQLSHAREDIR})
+-IF(INSTALL_LAYOUT MATCHES "STANDALONE")
+-  SET(localstatedir ${prefix}/data)
+-ELSE()
+-  SET(localstatedir ${MYSQL_DATADIR})
+-ENDIF()
++SET(localstatedir ${MYSQL_DATADIR})
+ 
+ SET(prefix "${CMAKE_INSTALL_PREFIX}")
+ SET(sysconfdir ${prefix})
