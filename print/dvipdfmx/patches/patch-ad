@@ -1,15 +1,15 @@
-$NetBSD: patch-ad,v 1.6 2021/06/06 01:17:18 markd Exp $
+$NetBSD: patch-ad,v 1.7 2022/04/17 10:36:43 markd Exp $
 
 use explicit path
 
---- data/dvipdfmx.cfg.orig	2021-03-23 18:18:30.000000000 +0000
+--- data/dvipdfmx.cfg.orig	2021-11-20 23:01:11.000000000 +0000
 +++ data/dvipdfmx.cfg
-@@ -156,7 +156,7 @@ P  0x003C
+@@ -149,7 +149,7 @@ P  0x003C
  %%   kpsewhich -progname=dvipdfmx -format=othertext dvipdfmx.cfg
  %% and control which one is found by setting DVIPDFMXINPUTS.
  %%
--D  "rungs -q -dALLOWPSTRANSPARENCY -dSAFER -dNOPAUSE -dBATCH -dEPSCrop -sPAPERSIZE=a0 -sDEVICE=pdfwrite -dCompatibilityLevel=%v -dAutoFilterGrayImages=false -dGrayImageFilter=/FlateEncode -dAutoFilterColorImages=false -dColorImageFilter=/FlateEncode -dAutoRotatePages=/None -sOutputFile='%o' '%i' -c quit"
-+D  "@RUNGS@ -q -dALLOWPSTRANSPARENCY -dSAFER -dNOPAUSE -dBATCH -dEPSCrop -sPAPERSIZE=a0 -sDEVICE=pdfwrite -dCompatibilityLevel=%v -dAutoFilterGrayImages=false -dGrayImageFilter=/FlateEncode -dAutoFilterColorImages=false -dColorImageFilter=/FlateEncode -dAutoRotatePages=/None -sOutputFile='%o' '%i' -c quit"
- %% If you change the above invocation, also change dvipdfmx-unsafe.cfg!
+-D  "rungs -q -dSAFER -dNOPAUSE -dBATCH -dEPSCrop -sPAPERSIZE=a0 -sDEVICE=pdfwrite -dCompatibilityLevel=%v -dAutoFilterGrayImages=false -dGrayImageFilter=/FlateEncode -dAutoFilterColorImages=false -dColorImageFilter=/FlateEncode -dAutoRotatePages=/None -sOutputFile='%o' '%i' -c quit"
++D  "@RUNGS@ -q -dSAFER -dNOPAUSE -dBATCH -dEPSCrop -sPAPERSIZE=a0 -sDEVICE=pdfwrite -dCompatibilityLevel=%v -dAutoFilterGrayImages=false -dGrayImageFilter=/FlateEncode -dAutoFilterColorImages=false -dColorImageFilter=/FlateEncode -dAutoRotatePages=/None -sOutputFile='%o' '%i' -c quit"
+ %% If you change the above rungs invocation, also change dvipdfmx-unsafe.cfg!
  
  % other random ps converters people have experimented with.
