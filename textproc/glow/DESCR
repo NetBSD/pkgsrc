@@ -1,0 +1,3 @@
+Terminal based markdown reader with support for local markdown files
+(including a file browser), online files, git repositories, etc. with
+encrypted stashing.
