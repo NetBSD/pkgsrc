@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:01:15 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/04/17 07:18:06 nia Exp $
 
 BLAKE2s (pitivi-0.999.tar.xz) = d94e1fd226ed99f979c02a99d653f4214dd3de3064d028f7210333012f8766f4
 SHA512 (pitivi-0.999.tar.xz) = 663db84a00634f0e83f0c1dd80a4f3a6603a50826905adb24fdd567c6e8bb58e20de04c7753fa04a36692cdcf5bbbcc9a87327fd3b56ebb70caffcff13835fc8
 Size (pitivi-0.999.tar.xz) = 12296928 bytes
-SHA1 (patch-meson.build) = 2438425071aebe6ab78eb9c3b6ccfe17fcc22829
+SHA1 (patch-meson.build) = ce789869f6076be3f81de838d013467eb6da2bb3

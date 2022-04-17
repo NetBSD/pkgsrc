@@ -1,6 +1,9 @@
-$NetBSD: patch-meson.build,v 1.1 2019/10/03 14:59:48 nia Exp $
+$NetBSD: patch-meson.build,v 1.2 2022/04/17 07:18:06 nia Exp $
 
-Allow use of pkgsrc's weird names for python.
+- pkgsrc does not provide a "python3" link by default, use a
+  different executable name
+- gst-transcoder-1.0 is now part of gst-plugins1-bad and was
+  renamed. Update pkg-config checks for this.
 
 --- meson.build.orig	2018-08-29 14:05:21.000000000 +0000
 +++ meson.build
@@ -18,3 +21,12 @@ Allow use of pkgsrc's weird names for python.
  
  if get_option('build-gst')
      subproject('gst-build', default_options: ['enable_python=true',
+@@ -23,7 +23,7 @@ gst_dep = dependency('gstreamer-1.0', ve
+ cairo_dep = dependency('cairo')
+ pycairo_dep = dependency('py3cairo')
+ 
+-gst_transcoder_dep = dependency('gst-transcoder-1.0', version : '>= 1.8.1',
++gst_transcoder_dep = dependency('gstreamer-transcoder-1.0', version : '>= 1.8.1',
+     fallback : ['gst-transcoder', 'gst_transcoder_dep'])
+ 
+ pkgdatadir = join_paths(get_option('datadir'), meson.project_name())
