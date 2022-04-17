@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2021/11/19 18:59:09 sjmulder Exp $
+$NetBSD: distinfo,v 1.2 2022/04/17 21:16:12 sjmulder Exp $
 
 BLAKE2s (progman-1.0.tar.gz) = 2b10d1b755eda1883f4906dd0df5e95e8ef3c36df25f82dc0d7dc7a0d533a403
 SHA512 (progman-1.0.tar.gz) = bfc329277b39b500ae829a2e97e2c4d6058b2c6a8fdb2c453073c32b526c582c6e6a4632ec4df1f98ae3d7b072c8744370e1017f2bc5e757c9bd9f78e5add5dd
 Size (progman-1.0.tar.gz) = 44214 bytes
 SHA1 (patch-Makefile) = 4da84f934ed6a4f03b5a3a3eac1f0cfe2cc59a4d
+SHA1 (patch-progman.c) = 565d16797cbcb2a2be58ca880b0cb15760e2ffe2
 SHA1 (patch-progman.ini) = be2de652e956f5794be41afcc2041a4eb6f92da1
