@@ -1,0 +1,97 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2022/04/17 04:07:14 jnemeth Exp $
+
+Fix for DTrace on newer platforms, taken from
+
+https://bugs.launchpad.net/percona-server/+bug/1196460
+
+--- CMakeLists.txt.orig	2021-09-14 09:08:08.000000000 +0000
++++ CMakeLists.txt
+@@ -287,6 +287,7 @@ IF(DISABLE_SHARED)
+   SET(WITHOUT_DYNAMIC_PLUGINS 1)
+ ENDIF()
+ OPTION(ENABLED_PROFILING "Enable profiling" ON)
++OPTION(ENABLE_DTRACE "Include support for DTrace probes" OFF)
+ OPTION(WITHOUT_SERVER OFF)
+ IF(UNIX)
+   OPTION(WITH_VALGRIND "Valgrind instrumentation" OFF)
+@@ -294,9 +295,10 @@ ENDIF()
+ IF(WIN32)
+   OPTION(WITH_MSCRT_DEBUG "MS Visual Studio Debug CRT instrumentation" OFF)
+ ENDIF()
+-IF(NOT WITHOUT_SERVER)
+-  OPTION (WITH_UNIT_TESTS "Compile MySQL with unit tests" ON)
+-ENDIF()
++# pkgsrc
++# IF(NOT WITHOUT_SERVER)
++#   OPTION (WITH_UNIT_TESTS "Compile MySQL with unit tests" ON)
++# ENDIF()
+ OPTION(WITH_AUTHENTICATION_LDAP
+   "Report error if the LDAP authentication plugin cannot be built." OFF)
+ 
+@@ -450,7 +452,7 @@ IF(REPRODUCIBLE_BUILD)
+ ENDIF()
+ 
+ OPTION(ENABLED_LOCAL_INFILE
+- "If we should enable LOAD DATA LOCAL by default" ${IF_WIN})
++ "If we should enable LOAD DATA LOCAL by default" OFF)
+ MARK_AS_ADVANCED(ENABLED_LOCAL_INFILE)
+ 
+ OPTION(OPTIMIZER_TRACE "Support tracing of Optimizer" ON)
+@@ -656,9 +658,10 @@ OPTION(MYSQL_MAINTAINER_MODE
+ 
+ INCLUDE(maintainer)
+ 
+-IF(WITH_UNIT_TESTS)
+- ENABLE_TESTING()
+-ENDIF()
++# pkgsrc
++# IF(WITH_UNIT_TESTS)
++#  ENABLE_TESTING()
++# ENDIF()
+ 
+ ADD_SUBDIRECTORY(include)
+ ADD_SUBDIRECTORY(dbug)
+@@ -686,24 +689,25 @@ ELSE()
+   ADD_SUBDIRECTORY(storage/ndb)
+ ENDIF()
+ 
+-IF(WITH_UNIT_TESTS)
+-  # Visual Studio 11 needs this extra flag in order to compile gmock.
+-  IF(WIN32)
+-    ADD_DEFINITIONS( /D _VARIADIC_MAX=10 )
+-  ENDIF()
+-  # libc++ doesn't have tuple in tr1
+-  IF(HAVE_LLVM_LIBCPP)
+-    ADD_DEFINITIONS(-DGTEST_USE_OWN_TR1_TUPLE=1)
+-  ENDIF()
+-
+-  ADD_SUBDIRECTORY(unittest)
+-  ADD_SUBDIRECTORY(unittest/examples)
+-  ADD_SUBDIRECTORY(unittest/mytap)
+-  ADD_SUBDIRECTORY(unittest/mytap/t)
+-  IF(WITH_RAPID AND EXISTS ${CMAKE_SOURCE_DIR}/rapid/unittest/gunit)
+-    ADD_SUBDIRECTORY(rapid/unittest/gunit)
+-  ENDIF()
+-ENDIF()
++# pkgsrc
++# IF(WITH_UNIT_TESTS)
++#   # Visual Studio 11 needs this extra flag in order to compile gmock.
++#   IF(WIN32)
++#     ADD_DEFINITIONS( /D _VARIADIC_MAX=10 )
++#   ENDIF()
++#   # libc++ doesn't have tuple in tr1
++#   IF(HAVE_LLVM_LIBCPP)
++#     ADD_DEFINITIONS(-DGTEST_USE_OWN_TR1_TUPLE=1)
++#   ENDIF()
++# 
++#   ADD_SUBDIRECTORY(unittest)
++#   ADD_SUBDIRECTORY(unittest/examples)
++#   ADD_SUBDIRECTORY(unittest/mytap)
++#   ADD_SUBDIRECTORY(unittest/mytap/t)
++#   IF(WITH_RAPID AND EXISTS ${CMAKE_SOURCE_DIR}/rapid/unittest/gunit)
++#     ADD_SUBDIRECTORY(rapid/unittest/gunit)
++#   ENDIF()
++# ENDIF()
+ 
+ ADD_SUBDIRECTORY(extra)
+ ADD_SUBDIRECTORY(client)
