@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/03/19 08:35:18 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/04/17 07:34:46 nia Exp $
 
 DISTNAME=	AFLplusplus-2.62c
 PKGNAME=	${DISTNAME:C/AFLplusplus/afl++/}
@@ -32,5 +32,12 @@ USE_TOOLS+=	bash:run gmake
 REPLACE_SH+=	afl-plot
 REPLACE_BASH+=	afl-cmin
 REPLACE_BASH+=	afl-cmin.bash
+
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=	amd64
+.if ${MACHINE_ARCH} == "x86_64"
+PLIST.amd64=	yes
+.endif
 
 .include "../../mk/bsd.pkg.mk"
