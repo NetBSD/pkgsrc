@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2021/12/08 16:06:51 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/04/17 21:16:12 sjmulder Exp $
 
 DISTNAME=	progman-1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jcs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -19,8 +19,8 @@ TOOL_DEPENDS+=	vim-share-[0-9]*:../../editors/vim-share
 CFLAGS+=	-DINFTIM=-1
 LDFLAGS+=	-lXext
 
-MAKE_FLAGS+=	PREFIX=${DESTDIR:Q}${PREFIX:Q}
-MAKE_FLAGS+=	MANDIR=${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR}/man1
+MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
+MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
