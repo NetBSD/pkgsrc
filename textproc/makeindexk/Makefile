@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2021/06/06 01:17:20 markd Exp $
+# $NetBSD: Makefile,v 1.19 2022/04/17 10:50:30 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	makeindexk-2.15
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	print
 
 HOMEPAGE=	https://www.tug.org/texlive/
