@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.114 2021/12/08 16:06:15 adam Exp $
+# $NetBSD: Makefile,v 1.115 2022/04/17 10:48:58 markd Exp $
 
-PKGREVISION= 1
 .include "../../print/texlive/Makefile.common"
 
-PKGNAME=	xetex-0.999993
+PKGNAME=	xetex-0.999994
 CATEGORIES=	print
 
 HOMEPAGE=	https://www.tug.org/xetex/
@@ -24,6 +23,7 @@ CONFIGURE_ARGS+=	--disable-aleph
 CONFIGURE_ARGS+=	--disable-eptex
 CONFIGURE_ARGS+=	--disable-euptex
 CONFIGURE_ARGS+=	--disable-etex
+CONFIGURE_ARGS+=	--disable-hitex
 CONFIGURE_ARGS+=	--disable-luajittex
 CONFIGURE_ARGS+=	--disable-luajithbtex
 CONFIGURE_ARGS+=	--disable-luahbtex
