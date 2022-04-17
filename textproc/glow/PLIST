@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/17 20:11:15 sjmulder Exp $
+bin/glow
