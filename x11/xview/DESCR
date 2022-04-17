@@ -12,4 +12,7 @@ Programmer's Interface (API) that is straightforward and easy to learn.
 This package does not contain anything by itself -- it is a "meta-package"
 that depends on other XView packages.  Its sole purpose is to require
 dependencies so users can install this package only and have all the XView
-stuff pulled in by the port/package dependency mechanism.
+stuff pulled in by the package dependency mechanism.
+
+Note that fonts from fonts/font-sun-misc must be in your X server's font
+path in order for any XView clients to be usable.

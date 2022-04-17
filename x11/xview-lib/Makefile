@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2021/11/06 13:55:04 mef Exp $
+# $NetBSD: Makefile,v 1.44 2022/04/17 01:44:23 gutteridge Exp $
 
 DISTNAME=		xview3.2p1-X11R6
 PKGNAME=		xview-lib-3.2.1
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
@@ -11,6 +11,8 @@ COMMENT=		OpenLook Toolkit libs, includes, and man pages
 
 MAKE_JOBS_SAFE=		no
 
+# Not functional without fundamental images from font-sun-misc.
+DEPENDS+=		font-sun-misc>=1.0.3:../../fonts/font-sun-misc
 DEPENDS+=		xview-config>=3.2.1nb6:../../x11/xview-config
 
 LICENSE=		sun-openlook-license
