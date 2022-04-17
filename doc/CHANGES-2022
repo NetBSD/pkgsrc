@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1892 2022/04/17 08:39:45 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1893 2022/04/17 09:24:53 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2900,3 +2900,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/mysql75-cluster to 7.5.25 [jnemeth 2022-04-17]
 	Updated audio/fasttracker2 to 1.53 [nia 2022-04-17]
 	Updated emulators/dosbox-x to 0.83.24 [nia 2022-04-17]
+	Updated games/etlegacy-server to 2.80.0 [nia 2022-04-17]
+	Updated games/etlegacy to 2.80.0 [nia 2022-04-17]
