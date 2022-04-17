@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1895 2022/04/17 11:24:28 markd Exp $
+$NetBSD: CHANGES-2022,v 1.1896 2022/04/17 19:09:57 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2944,3 +2944,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/xindy to 2.5.1nb8 [markd 2022-04-17]
 	Added print/tex-hitex version 2022 [markd 2022-04-17]
 	Added print/tex-hitex-doc version 2022 [markd 2022-04-17]
+	Updated devel/go-staticcheck to 2022.1 [bsiegert 2022-04-17]
