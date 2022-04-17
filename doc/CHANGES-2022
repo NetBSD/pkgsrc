@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1898 2022/04/17 20:11:39 sjmulder Exp $
+$NetBSD: CHANGES-2022,v 1.1899 2022/04/17 21:16:29 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2947,3 +2947,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/go-staticcheck to 2022.1 [bsiegert 2022-04-17]
 	Updated devel/mustach to 1.2.2nb1 [sjmulder 2022-04-17]
 	Added textproc/glow version 1.4.1 [sjmulder 2022-04-17]
+	Updated wm/progman to 1.0nb2 [sjmulder 2022-04-17]
