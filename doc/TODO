@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21680 2022/04/15 16:30:57 fcambus Exp $
+$NetBSD: TODO,v 1.21681 2022/04/17 05:21:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -570,6 +570,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cook-2.31
 	o coordgenlibs-2.0.3
 	o coq-8.13.2
+	o coreutils-9.1
 	o couchdb-3.1.1
 	o courier-0.77.0
 	o courier-imap-4.16.1
@@ -1105,6 +1106,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lua-sql-postgres-2.4.0
 	o lua-sql-sqlite3-2.4.0
 	o lumina-1.6.2
+	o lxqt-1.1
 	o lzma-9.18
 	o mDNSResponder-1310.80.1
 	o mDNSResponder-nss-1310.80.1
