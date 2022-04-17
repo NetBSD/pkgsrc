@@ -1,0 +1,12 @@
+$NetBSD: patch-mysys_mf__iocache2.c,v 1.1 2022/04/17 04:07:14 jnemeth Exp $
+
+--- mysys/mf_iocache2.c.orig	2021-09-14 09:08:08.000000000 +0000
++++ mysys/mf_iocache2.c
+@@ -29,6 +29,7 @@
+   More functions to be used with IO_CACHE files
+ */
+ 
++#include "mysql/psi/mysql_file.h"
+ #include "mysys_priv.h"
+ #include "my_sys.h"
+ #include <m_string.h>

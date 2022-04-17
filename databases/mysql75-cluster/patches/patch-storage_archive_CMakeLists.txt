@@ -1,0 +1,13 @@
+$NetBSD: patch-storage_archive_CMakeLists.txt,v 1.1 2022/04/17 04:07:14 jnemeth Exp $
+
+Build with newer DTrace.
+
+--- storage/archive/CMakeLists.txt.orig	2021-09-14 09:08:08.000000000 +0000
++++ storage/archive/CMakeLists.txt
+@@ -22,5 +22,5 @@
+ 
+ SET(ARCHIVE_SOURCES  azio.c ha_archive.cc ha_archive.h)
+ MYSQL_ADD_PLUGIN(archive ${ARCHIVE_SOURCES}
+-  STORAGE_ENGINE RECOMPILE_FOR_EMBEDDED LINK_LIBRARIES ${ZLIB_LIBRARY})
++  STORAGE_ENGINE RECOMPILE_FOR_EMBEDDED LINK_LIBRARIES ${ZLIB_LIBRARY} DTRACE_INSTRUMENTED)
+ 
