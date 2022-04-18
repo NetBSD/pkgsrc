@@ -1,0 +1,5 @@
+Puts text below the normal page content (the default text marks
+the document as draft and puts a timestamp on it). Can be used
+together with e.g. the vrsion, rcs and rcsinfo packages. Uses
+the everyshi package and can use the scrtime package from the
+koma-script bundle.
