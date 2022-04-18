@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/04/13 07:50:56 bsiegert Exp $
+# $NetBSD: Makefile,v 1.12 2022/04/18 18:47:47 bsiegert Exp $
 #
 # Changelog:
 # https://github.com/danielgtaylor/restish/releases/
@@ -13,8 +13,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://rest.sh/
 COMMENT=	CLI for interacting with REST-ish HTTP APIs
 LICENSE=	mit
-
-USE_LANGUAGES=	# none
 
 GO_BUILD_PATTERN=	.
 
