@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/18 05:00:17 markd Exp $
+
+BLAKE2s (bredzenie.r44371.tar.xz) = 57caf4ee42cd3d929e3b724d55be6fe58e95fcee3baef7861927dc56d67c8cac
+SHA512 (bredzenie.r44371.tar.xz) = 1e5629a2e6e6099a319d8b8a1efec83262780c70a57c482f66a33a48722bcdb18fb891a96b6b6f29c54d71ce581dd1c82decdd22ad74d6ef61765fec3f8c3614
+Size (bredzenie.r44371.tar.xz) = 49840 bytes

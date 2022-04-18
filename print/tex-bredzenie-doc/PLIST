@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/18 05:00:17 markd Exp $
+share/texmf-dist/doc/latex/bredzenie/README
+share/texmf-dist/doc/latex/bredzenie/bredzenie.pdf
+share/texmf-dist/doc/latex/bredzenie/bredzenie.tex
