@@ -1,0 +1,6 @@
+The module parses an ini-file and prints the contents with a
+user-defined layout. The entries of the file may be sorted by
+up to three sort keys. The format of a simple ini-file would
+be: [key1] symbol1 = value1 symbol2 = value2 [key2] symbol1 =
+value3 symbol2 = value4 The module only works with ConTeXt
+MkIV, and uses Lua to help process the input.
