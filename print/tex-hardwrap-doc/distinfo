@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/18 03:15:09 markd Exp $
+
+BLAKE2s (hardwrap.doc.r21396.tar.xz) = b172b214b4f2ccf14ec06d0fd848e49f8bc63df845f409a73dda2ea1f66a922c
+SHA512 (hardwrap.doc.r21396.tar.xz) = 6dbb83fc5d4b82d11bc8d97d0ded3bcfe583c2b21ec2a260000b6bfb0bdea9c10df834735ffdcddfa9785b7c86b53920a20146d020b0435b8dc04610f05b9b16
+Size (hardwrap.doc.r21396.tar.xz) = 120084 bytes
