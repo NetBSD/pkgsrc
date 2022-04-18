@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/18 03:42:00 markd Exp $
+share/texmf-dist/doc/latex/autonum/README
+share/texmf-dist/doc/latex/autonum/autonum.pdf
+share/texmf-dist/doc/latex/autonum/test-autonum.pdf
+share/texmf-dist/doc/latex/autonum/test-autonum.tex
+share/texmf-dist/doc/latex/autonum/test-freeze.tex
