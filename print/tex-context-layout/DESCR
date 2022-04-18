@@ -1,0 +1,3 @@
+Draws a representation of the layout of the current page and
+displays the sizes of the widths and heights of the margins,
+header, footer and text body.
