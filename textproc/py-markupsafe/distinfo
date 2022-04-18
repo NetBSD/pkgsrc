@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:23:08 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/04/18 13:35:43 js Exp $
 
-BLAKE2s (MarkupSafe-1.1.1.tar.gz) = 87391bf7d75c2bc7fc2eedf18778ace122ba3ece28109ef2d65f2fa399f57262
-SHA512 (MarkupSafe-1.1.1.tar.gz) = f3014e6131a3ab866914c5635b5397ef71906bffb1b6f8c5f2ed2acf167429ff7914236d38943e872683a57a9be9669f4c5aace6274f3307ab21ef25373db0b6
-Size (MarkupSafe-1.1.1.tar.gz) = 19151 bytes
+BLAKE2s (MarkupSafe-2.1.1.tar.gz) = a9f0c0a8a015902c694bc230a936374e791e464b3f8525d99d4a0afca1d6fc5a
+SHA512 (MarkupSafe-2.1.1.tar.gz) = 1d9bf55614b4e0aeca726ebda7bab2829452212f03f2295efdd0340f3dd05eefc9733d6dd0e37f0d06a432ce00ed7d06b28c9e817fc25212675006577f468b3e
+Size (MarkupSafe-2.1.1.tar.gz) = 18668 bytes
