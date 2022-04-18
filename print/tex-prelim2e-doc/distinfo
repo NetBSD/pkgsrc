@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/18 03:30:14 markd Exp $
+
+BLAKE2s (prelim2e.doc.r57000.tar.xz) = 2d91d8b36ff49cd7044bd755699cbb265b634cb791b022926b3f824419539d94
+SHA512 (prelim2e.doc.r57000.tar.xz) = 196640bfbf73f3f269f5b27f024f4c1e677b61b6cc452d796f025196786c166f60bd2f41ad83ac6cc6b9eca56778a07b77af05fc68f05330f14c92cf391bbbc2
+Size (prelim2e.doc.r57000.tar.xz) = 427020 bytes
