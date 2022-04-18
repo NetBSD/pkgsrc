@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 09:59:39 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/04/18 18:43:07 nia Exp $
 
 BLAKE2s (ympd-1.3.0.tar.gz) = b5ca6d6c898366f89d61805960a568a093008cfe8b307fa24405194ebd9c6f01
 SHA512 (ympd-1.3.0.tar.gz) = 7e2bd4124b0e7692e2528e9fc50955d1b357ba042d8c97941160ad31ee0c89bc53b349195b45d27ce77aaa954bc01aceba1a30cdb89d9f58644a0b4934498a16
 Size (ympd-1.3.0.tar.gz) = 350115 bytes
-SHA1 (patch-CMakeLists.txt) = 727b742ffc579575b00d0a185f071b67805f1ef8
+SHA1 (patch-CMakeLists.txt) = 74d21cf3d850b1a723ea803b5c0bbc459bd8a452
+SHA1 (patch-src_mongoose.c) = 9ef4d9fe2f7a9e9e337f5c81f335e4111329f8e9
