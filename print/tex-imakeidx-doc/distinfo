@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/18 03:18:01 markd Exp $
+
+BLAKE2s (imakeidx.doc.r42287.tar.xz) = e9f3fdd1bde324f0c97c8225e8f7a36d0c1ddc3018158a516f5dc4d43f42fe75
+SHA512 (imakeidx.doc.r42287.tar.xz) = a07d9461013045274f03145e97d286d930055c4573e917a78e8913841cae30fb61b99e66d098b4ba014cf44e92982301c7d72414e3ce1df176bfd35ecd26ddf0
+Size (imakeidx.doc.r42287.tar.xz) = 518160 bytes
