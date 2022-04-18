@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2022/01/04 20:54:57 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2022/04/18 12:58:27 js Exp $
 
-DISTNAME=	Jinja2-2.11.3
+DISTNAME=	Jinja2-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=J/Jinja2/}
 
