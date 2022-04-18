@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.64 2022/02/23 20:48:56 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.65 2022/04/18 19:09:53 adam Exp $
 
 BUILDLINK_TREE+=	librsvg
 
@@ -10,6 +10,7 @@ LIBRSVG_BUILDLINK3_MK:=
 .include "../../graphics/librsvg/available.mk"
 
 .if ${LIBRSVG_TYPE} == "rust"
+BUILDLINK_ABI_DEPENDS.librsvg?=	librsvg>=2.52.8nb1
 BUILDLINK_PKGSRCDIR.librsvg?=	../../graphics/librsvg
 BUILDLINK_ABI_DEPENDS.librsvg?=	librsvg>=2.50.7
 BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.41

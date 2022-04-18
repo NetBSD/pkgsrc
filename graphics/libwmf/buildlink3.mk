@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.30 2021/04/21 11:40:25 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.31 2022/04/18 19:09:53 adam Exp $
 
 BUILDLINK_TREE+=	libwmf
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libwmf
 LIBWMF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libwmf+=	libwmf>=0.2.8nb2
-BUILDLINK_ABI_DEPENDS.libwmf+=	libwmf>=0.2.8.4nb19
+BUILDLINK_ABI_DEPENDS.libwmf+=	libwmf>=0.2.8.4nb21
 BUILDLINK_PKGSRCDIR.libwmf?=	../../graphics/libwmf
 
 pkgbase:= libwmf

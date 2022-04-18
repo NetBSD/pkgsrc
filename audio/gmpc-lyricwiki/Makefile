@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2021/12/08 16:03:10 adam Exp $
+# $NetBSD: Makefile,v 1.40 2022/04/18 19:10:20 adam Exp $
 
 DISTNAME=	gmpc-lyricwiki-11.8.16
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	audio
 MASTER_SITES=	http://download.sarine.nl/Programs/gmpc/11.8/
 

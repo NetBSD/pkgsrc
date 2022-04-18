@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2021/04/21 11:40:31 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2022/04/18 19:10:00 adam Exp $
 
 BUILDLINK_TREE+=	gst-plugins0.10-ugly
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gst-plugins0.10-ugly
 GST_PLUGINS0.10_UGLY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gst-plugins0.10-ugly+=	gst-plugins0.10-ugly>=0.10.3
-BUILDLINK_ABI_DEPENDS.gst-plugins0.10-ugly+=	gst-plugins0.10-ugly>=0.10.19nb7
+BUILDLINK_ABI_DEPENDS.gst-plugins0.10-ugly+=	gst-plugins0.10-ugly>=0.10.19nb9
 BUILDLINK_PKGSRCDIR.gst-plugins0.10-ugly?=	../../multimedia/gst-plugins0.10-ugly
 
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
