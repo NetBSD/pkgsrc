@@ -1,0 +1,10 @@
+Authors using LaTeX to typeset books with significant margin
+material often run into the problem of long notes running off
+the bottom of the page. A typical workaround is to insert
+\vshift commands by hand, but this is a tedious process that is
+invalidated when pagination changes. Another workaround is
+memoir's \sidebar function, but this can be unsatisfying for
+short textual notes, and standard marginpars cannot be mixed
+with sidebars. This package implements a solution to make
+marginpars "just work" by keeping a list of floating inserts
+and arranging them intelligently in the output routine.
