@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2022/04/16 02:28:38 markd Exp $
+# $NetBSD: Makefile,v 1.63 2022/04/18 03:51:53 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2022pre1
+PKGNAME=	texlive-${DISTNAME}-2022pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	62901
@@ -69,6 +69,7 @@ DEPENDS+=	tex-atenddvi-[0-9]*:../../print/tex-atenddvi
 # depend authorindex
 # depend autofancyhdr
 # depend autonum
+DEPENDS+=	tex-autonum-[0-9]*:../../print/tex-autonum
 # depend autopdf
 # depend autopuncitems
 # depend avremu
@@ -358,7 +359,7 @@ DEPENDS+=	tex-doclicense-[0-9]*:../../devel/tex-doclicense
 # depend doctools
 # depend documentation
 # depend docutils
-# depend doi
+DEPENDS+=	tex-doi-[0-9]*:../../print/tex-doi
 # depend dotarrow
 DEPENDS+=	tex-dotlessi-[0-9]*:../../print/tex-dotlessi
 # depend dotseqn
@@ -444,7 +445,7 @@ DEPENDS+=	tex-eqparbox-[0-9]*:../../print/tex-eqparbox
 DEPENDS+=	tex-esint-[0-9]*:../../fonts/tex-esint
 # depend esint-type1
 # depend etaremune
-# depend etextools
+DEPENDS+=	tex-etextools-[0-9]*:../../print/tex-etextools
 # depend etl
 DEPENDS+=	tex-etoc-[0-9]*:../../print/tex-etoc
 # depend eukdate
@@ -512,7 +513,7 @@ DEPENDS+=	tex-fixmetodonotes-[0-9]*:../../print/tex-fixmetodonotes
 # depend flipbook
 # depend flippdf
 DEPENDS+=	tex-floatflt-[0-9]*:../../print/tex-floatflt
-# depend floatrow
+DEPENDS+=	tex-floatrow-[0-9]*:../../print/tex-floatrow
 DEPENDS+=	tex-flowfram-[0-9]*:../../print/tex-flowfram
 # depend fmp
 DEPENDS+=	tex-fmtcount-[0-9]*:../../print/tex-fmtcount
@@ -531,7 +532,7 @@ DEPENDS+=	tex-fontaxes-[0-9]*:../../print/tex-fontaxes
 # depend fonttable
 DEPENDS+=	tex-footmisc-[0-9]*:../../print/tex-footmisc
 # depend footmisx
-# depend footnotebackref
+DEPENDS+=	tex-footnotebackref-[0-9]*:../../print/tex-footnotebackref
 # depend footnoterange
 DEPENDS+=	tex-footnpag-[0-9]*:../../print/tex-footnpag
 # depend forarray
@@ -622,7 +623,7 @@ DEPENDS+=	tex-glossaries-[0-9]*:../../print/tex-glossaries
 # depend handoutwithnotes
 DEPENDS+=	tex-hang-[0-9]*:../../print/tex-hang
 DEPENDS+=	tex-hanging-[0-9]*:../../print/tex-hanging
-# depend hardwrap
+DEPENDS+=	tex-hardwrap-[0-9]*:../../print/tex-hardwrap
 # depend harnon-cv
 # depend harpoon
 # depend hc
@@ -668,7 +669,7 @@ DEPENDS+=	tex-ifoddpage-[0-9]*:../../print/tex-ifoddpage
 # depend ifthenx
 # depend iitem
 # depend image-gallery
-# depend imakeidx
+DEPENDS+=	tex-imakeidx-[0-9]*:../../print/tex-imakeidx
 DEPENDS+=	tex-import-[0-9]*:../../print/tex-import
 DEPENDS+=	tex-incgraph-[0-9]*:../../graphics/tex-incgraph
 # depend indextools
@@ -810,7 +811,7 @@ DEPENDS+=	tex-manfnt-[0-9]*:../../fonts/tex-manfnt
 # depend manuscript
 # depend manyind
 # depend marginfit
-# depend marginfix
+DEPENDS+=	tex-marginfix-[0-9]*:../../print/tex-marginfix
 DEPENDS+=	tex-marginnote-[0-9]*:../../print/tex-marginnote
 # depend markdown
 DEPENDS+=	tex-mathalpha-[0-9]*:../../fonts/tex-mathalpha
@@ -868,11 +869,11 @@ DEPENDS+=	tex-moderncv-[0-9]*:../../print/tex-moderncv
 # depend monofill
 # depend moodle
 # depend moreenum
-# depend morefloats
+DEPENDS+=	tex-morefloats-[0-9]*:../../print/tex-morefloats
 # depend morehype
 # depend moresize
 DEPENDS+=	tex-moreverb-[0-9]*:../../print/tex-moreverb
-# depend morewrites
+DEPENDS+=	tex-morewrites-[0-9]*:../../print/tex-morewrites
 # depend movie15
 DEPENDS+=	tex-mparhack-[0-9]*:../../print/tex-mparhack
 # depend mpostinl
@@ -1036,7 +1037,7 @@ DEPENDS+=	tex-polytable-[0-9]*:../../print/tex-polytable
 DEPENDS+=	tex-powerdot-[0-9]*:../../print/tex-powerdot
 # depend ppr-prv
 # depend practicalreports
-# depend prelim2e
+DEPENDS+=	tex-prelim2e-[0-9]*:../../print/tex-prelim2e
 DEPENDS+=	tex-preprint-[0-9]*:../../print/tex-preprint
 # depend pressrelease
 # depend prettyref
@@ -1118,7 +1119,7 @@ DEPENDS+=	tex-savesym-[0-9]*:../../print/tex-savesym
 # depend savetrees
 DEPENDS+=	tex-scale-[0-9]*:../../print/tex-scale
 # depend scalebar
-# depend scalerel
+DEPENDS+=	tex-scalerel-[0-9]*:../../print/tex-scalerel
 # depend scanpages
 # depend schedule
 # depend schooldocs
@@ -1163,7 +1164,7 @@ DEPENDS+=	tex-showdim-[0-9]*:../../print/tex-showdim
 # depend showhyphens
 DEPENDS+=	tex-showlabels-[0-9]*:../../print/tex-showlabels
 DEPENDS+=	tex-sidecap-[0-9]*:../../print/tex-sidecap
-# depend sidenotes
+DEPENDS+=	tex-sidenotes-[0-9]*:../../print/tex-sidenotes
 DEPENDS+=	tex-silence-[0-9]*:../../print/tex-silence
 # depend sillypage
 # depend simplecd
@@ -1269,7 +1270,7 @@ DEPENDS+=	tex-tcolorbox-[0-9]*:../../print/tex-tcolorbox
 # depend termcal
 # depend termlist
 # depend termsim
-# depend testhyphens
+DEPENDS+=	tex-testhyphens-[0-9]*:../../print/tex-testhyphens
 # depend testidx
 # depend tex-label
 # depend tex-locale
