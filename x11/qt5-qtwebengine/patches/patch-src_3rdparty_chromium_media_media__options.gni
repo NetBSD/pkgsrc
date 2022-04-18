@@ -1,8 +1,8 @@
-$NetBSD: patch-src_3rdparty_chromium_media_media__options.gni,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_media_media__options.gni,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/media/media_options.gni.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/media/media_options.gni.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/media/media_options.gni
-@@ -123,9 +123,12 @@ declare_args() {
+@@ -130,9 +130,12 @@ declare_args() {
    # Enables runtime selection of ALSA library for audio.
    use_alsa = false
  
@@ -16,7 +16,7 @@ $NetBSD: patch-src_3rdparty_chromium_media_media__options.gni,v 1.1 2021/08/03 2
        (!is_chromecast || is_cast_desktop_build || is_cast_audio_only)) {
      use_alsa = true
  
-@@ -141,6 +144,10 @@ declare_args() {
+@@ -148,6 +151,10 @@ declare_args() {
        use_pulseaudio = true
      }
    }
@@ -27,12 +27,12 @@ $NetBSD: patch-src_3rdparty_chromium_media_media__options.gni,v 1.1 2021/08/03 2
  }
  
  # Use another declare_args() to pick up possible overrides of media_use_ffmpeg
-@@ -159,7 +166,7 @@ declare_args() {
+@@ -166,7 +173,7 @@ declare_args() {
  # On Fuchsia, this is only enabled to build libclearkeycdm.so, the mojo CDM
  # service is not used.
- enable_library_cdms =
--    (is_linux && !is_chromecast) || is_mac || is_win || is_fuchsia
-+    ((is_linux || is_bsd) && !is_chromecast) || is_mac || is_win || is_fuchsia
+ enable_library_cdms = (is_linux && !is_chromecast) || is_chromeos || is_mac ||
+-                      is_win || is_fuchsia
++                      is_win || is_fuchsia || is_bsd
  
  declare_args() {
-   # Experiment to enable mojo media services (e.g. "renderer", "cdm", see
+   # When enabled, this feature allows developers to use a runtime flag to

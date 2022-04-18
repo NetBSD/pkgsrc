@@ -1,31 +1,31 @@
-$NetBSD: patch-src_3rdparty_chromium_weblayer_shell_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_weblayer_shell_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/weblayer/shell/BUILD.gn.orig	2020-07-15 18:56:34.000000000 +0000
+--- src/3rdparty/chromium/weblayer/shell/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/weblayer/shell/BUILD.gn
-@@ -61,7 +61,7 @@ static_library("weblayer_shell_lib") {
+@@ -68,7 +68,7 @@ static_library("weblayer_shell_lib") {
      "//weblayer:resources",
    ]
  
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      deps += [
        "//third_party/fontconfig",
        "//ui/gfx:test_support",
-@@ -103,7 +103,7 @@ static_library("weblayer_shell_lib") {
+@@ -110,7 +110,7 @@ static_library("weblayer_shell_lib") {
      }
    }
  
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      deps += [ "//build/config/freetype" ]
    }
  }
-@@ -259,7 +259,7 @@ if (is_android) {
+@@ -266,7 +266,7 @@ if (is_android) {
            [ "//third_party/crashpad/crashpad/handler:crashpad_handler" ]
      }
  
--    if (is_linux && !is_component_build) {
-+    if ((is_linux || is_bsd) && !is_component_build) {
+-    if ((is_linux || is_chromeos) && !is_component_build) {
++    if ((is_linux || is_chromeos || is_bsd) && !is_component_build) {
        # Set rpath to find our own libfreetype even in a non-component build.
        configs += [ "//build/config/gcc:rpath_for_built_shared_libraries" ]
      }

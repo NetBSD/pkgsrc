@@ -1,22 +1,31 @@
-$NetBSD: patch-src_3rdparty_chromium_base_test_BUILD.gn,v 1.1 2021/08/03 21:04:34 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_test_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/base/test/BUILD.gn.orig	2020-06-25 09:31:18.000000000 +0000
+--- src/3rdparty/chromium/base/test/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/base/test/BUILD.gn
-@@ -403,7 +403,7 @@ static_library("run_all_base_unittests")
+@@ -179,7 +179,7 @@ static_library("test_support") {
+     ]
+   }
+ 
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
+     sources += [ "test_file_util_linux.cc" ]
+     public_deps += [ ":fontconfig_util_linux" ]
+     data_deps = [ "//third_party/test_fonts" ]
+@@ -400,7 +400,7 @@ static_library("run_all_base_unittests")
    deps = [ ":test_support" ]
  }
  
--if (is_linux) {
-+if (is_linux || is_bsd) {
+-if (is_linux || is_chromeos) {
++if (is_linux || is_chromeos || is_bsd) {
    source_set("fontconfig_util_linux") {
      sources = [
        "fontconfig_util_linux.cc",
-@@ -444,7 +444,7 @@ if (is_linux) {
+@@ -441,7 +441,7 @@ if (is_linux || is_chromeos) {
    }
  }
  
--if (is_fuchsia || is_linux) {
-+if (is_fuchsia || is_linux || is_bsd) {
+-if (is_fuchsia || is_linux || is_chromeos) {
++if (is_fuchsia || is_linux || is_chromeos || is_bsd) {
    shared_library("malloc_wrapper") {
      testonly = true
      sources = [ "malloc_wrapper.cc" ]

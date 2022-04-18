@@ -1,15 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_ui_webui_webui__features.gni,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_ui_webui_webui__features.gni,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/ui/webui/webui_features.gni.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/ui/webui/webui_features.gni.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/ui/webui/webui_features.gni
-@@ -11,8 +11,8 @@ declare_args() {
-   # Enable closure type-checking for Chrome's web technology-based UI. This
-   # enables the webui_closure_compile target which does a no-op without this
-   # flag enabled. Requires Java.
--  closure_compile = is_chromeos || is_linux || is_android
-+  closure_compile = is_chromeos || is_linux || is_android || is_bsd
+@@ -11,7 +11,7 @@ declare_args() {
+   optimize_webui = !is_debug
  
    # Enable the WebUI version of the browser's tab strip.
 -  enable_webui_tab_strip = is_chromeos || is_linux || is_win
 +  enable_webui_tab_strip = is_chromeos || is_linux || is_win || is_bsd
- }
+ 
+   # Enable tab search only on a branded desktop build.
+   # In order to get commit queue coverage for C++ tests,

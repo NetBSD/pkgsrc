@@ -1,43 +1,40 @@
-$NetBSD: patch-src_3rdparty_chromium_gpu_vulkan_vulkan__function__pointers.h,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_gpu_vulkan_vulkan__function__pointers.h,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/gpu/vulkan/vulkan_function_pointers.h.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/gpu/vulkan/vulkan_function_pointers.h.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/gpu/vulkan/vulkan_function_pointers.h
-@@ -227,12 +227,12 @@ struct VulkanFunctionPointers {
-       vkGetAndroidHardwareBufferPropertiesANDROIDFn;
+@@ -236,7 +236,7 @@ struct COMPONENT_EXPORT(VULKAN) VulkanFu
+       vkGetAndroidHardwareBufferPropertiesANDROID;
  #endif  // defined(OS_ANDROID)
  
--#if defined(OS_LINUX) || defined(OS_ANDROID)
-+#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_BSD)
-   VulkanFunction<PFN_vkGetSemaphoreFdKHR> vkGetSemaphoreFdKHRFn;
-   VulkanFunction<PFN_vkImportSemaphoreFdKHR> vkImportSemaphoreFdKHRFn;
- #endif  // defined(OS_LINUX) || defined(OS_ANDROID)
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_ANDROID)
++#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_ANDROID) || defined(OS_BSD)
+   VulkanFunction<PFN_vkGetSemaphoreFdKHR> vkGetSemaphoreFdKHR;
+   VulkanFunction<PFN_vkImportSemaphoreFdKHR> vkImportSemaphoreFdKHR;
+ #endif  // defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_ANDROID)
+@@ -247,7 +247,7 @@ struct COMPONENT_EXPORT(VULKAN) VulkanFu
+       vkImportSemaphoreWin32HandleKHR;
+ #endif  // defined(OS_WIN)
  
--#if defined(OS_LINUX) || defined(OS_ANDROID)
-+#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_BSD)
-   VulkanFunction<PFN_vkGetMemoryFdKHR> vkGetMemoryFdKHRFn;
-   VulkanFunction<PFN_vkGetMemoryFdPropertiesKHR> vkGetMemoryFdPropertiesKHRFn;
- #endif  // defined(OS_LINUX) || defined(OS_ANDROID)
-@@ -447,14 +447,14 @@ struct VulkanFunctionPointers {
-       ->vkGetAndroidHardwareBufferPropertiesANDROIDFn
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_ANDROID)
++#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_ANDROID) || defined(OS_BSD)
+   VulkanFunction<PFN_vkGetMemoryFdKHR> vkGetMemoryFdKHR;
+   VulkanFunction<PFN_vkGetMemoryFdPropertiesKHR> vkGetMemoryFdPropertiesKHR;
+ #endif  // defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_ANDROID)
+@@ -955,7 +955,7 @@ ALWAYS_INLINE VkResult vkGetAndroidHardw
+ }
  #endif  // defined(OS_ANDROID)
  
--#if defined(OS_LINUX) || defined(OS_ANDROID)
-+#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_BSD)
- #define vkGetSemaphoreFdKHR \
-   gpu::GetVulkanFunctionPointers()->vkGetSemaphoreFdKHRFn
- #define vkImportSemaphoreFdKHR \
-   gpu::GetVulkanFunctionPointers()->vkImportSemaphoreFdKHRFn
- #endif  // defined(OS_LINUX) || defined(OS_ANDROID)
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_ANDROID)
++#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_ANDROID) || defined(OS_BSD)
+ ALWAYS_INLINE VkResult
+ vkGetSemaphoreFdKHR(VkDevice device,
+                     const VkSemaphoreGetFdInfoKHR* pGetFdInfo,
+@@ -988,7 +988,7 @@ vkImportSemaphoreWin32HandleKHR(VkDevice
+ }
+ #endif  // defined(OS_WIN)
  
--#if defined(OS_LINUX) || defined(OS_ANDROID)
-+#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_BSD)
- #define vkGetMemoryFdKHR gpu::GetVulkanFunctionPointers()->vkGetMemoryFdKHRFn
- #define vkGetMemoryFdPropertiesKHR \
-   gpu::GetVulkanFunctionPointers()->vkGetMemoryFdPropertiesKHRFn
-@@ -493,4 +493,4 @@ struct VulkanFunctionPointers {
-   gpu::GetVulkanFunctionPointers()->vkGetSwapchainImagesKHRFn
- #define vkQueuePresentKHR gpu::GetVulkanFunctionPointers()->vkQueuePresentKHRFn
- 
--#endif  // GPU_VULKAN_VULKAN_FUNCTION_POINTERS_H_
-\ No newline at end of file
-+#endif  // GPU_VULKAN_VULKAN_FUNCTION_POINTERS_H_
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_ANDROID)
++#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_ANDROID) || defined(OS_BSD)
+ ALWAYS_INLINE VkResult vkGetMemoryFdKHR(VkDevice device,
+                                         const VkMemoryGetFdInfoKHR* pGetFdInfo,
+                                         int* pFd) {

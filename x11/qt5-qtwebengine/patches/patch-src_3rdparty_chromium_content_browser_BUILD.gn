@@ -1,44 +1,44 @@
-$NetBSD: patch-src_3rdparty_chromium_content_browser_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_content_browser_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/content/browser/BUILD.gn.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/content/browser/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/content/browser/BUILD.gn
-@@ -1936,7 +1936,7 @@ jumbo_static_library("browser") {
+@@ -2067,7 +2067,7 @@ jumbo_static_library("browser") {
      deps += [ "//ui/events" ]
    }
  
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      sources += [
-       "font_service.cc",
-       "font_service.h",
-@@ -1972,7 +1972,7 @@ jumbo_static_library("browser") {
-     ]
+       "font_access/font_enumeration_cache_fontconfig.cc",
+       "font_access/font_enumeration_cache_fontconfig.h",
+@@ -2110,7 +2110,7 @@ jumbo_static_library("browser") {
+     deps += [ "//chromecast:chromecast_buildflags" ]
    }
  
--  if (is_chromecast && is_linux) {
-+  if (is_chromecast && (is_linux || is_bsd)) {
+-  if (is_chromecast && (is_linux || is_chromeos)) {
++  if (is_chromecast && (is_linux || is_chromeos || is_bsd)) {
      sources += [
        "tracing/cast_tracing_agent.cc",
        "tracing/cast_tracing_agent.h",
-@@ -2253,7 +2253,7 @@ jumbo_static_library("browser") {
-     } else if (use_pangocairo) {
+@@ -2417,7 +2417,7 @@ jumbo_static_library("browser") {
        sources += [ "renderer_host/pepper/pepper_truetype_font_list_pango.cc" ]
      }
--    if (is_linux) {
-+    if (is_linux || is_bsd) {
+ 
+-    if (is_linux || is_chromeos) {
++    if (is_linux || is_chromeos || is_bsd) {
        deps += [ "//components/services/font:ppapi_fontconfig_matching" ]
      }
    }
-@@ -2291,7 +2291,7 @@ jumbo_static_library("browser") {
+@@ -2455,7 +2455,7 @@ jumbo_static_library("browser") {
      }
    }
  
--  if (is_linux && use_aura) {
-+  if ((is_linux || is_bsd) && use_aura) {
+-  if ((is_linux || is_chromeos) && use_aura) {
++  if ((is_linux || is_chromeos || is_bsd) && use_aura) {
      deps += [ "//third_party/fontconfig" ]
    }
  
-@@ -2580,7 +2580,7 @@ jumbo_static_library("browser") {
+@@ -2726,7 +2726,7 @@ jumbo_static_library("browser") {
        "web_contents/aura/gesture_nav_simple.h",
      ]
  
@@ -47,12 +47,12 @@ $NetBSD: patch-src_3rdparty_chromium_content_browser_BUILD.gn,v 1.1 2021/08/03 2
        deps += [ "//ui/base/ime/linux" ]
      }
    } else {  # Not aura.
-@@ -2660,7 +2660,7 @@ jumbo_static_library("browser") {
+@@ -2807,7 +2807,7 @@ jumbo_static_library("browser") {
      ]
    }
  
--  if (is_linux && use_dbus) {
-+  if ((is_linux || is_bsd) && use_dbus) {
+-  if ((is_linux || is_chromeos) && use_dbus) {
++  if ((is_linux || is_chromeos || is_bsd) && use_dbus) {
      deps += [ "//dbus" ]
    }
  

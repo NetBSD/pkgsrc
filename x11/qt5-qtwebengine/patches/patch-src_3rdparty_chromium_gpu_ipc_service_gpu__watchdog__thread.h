@@ -1,6 +1,6 @@
-$NetBSD: patch-src_3rdparty_chromium_gpu_ipc_service_gpu__watchdog__thread.h,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_gpu_ipc_service_gpu__watchdog__thread.h,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/gpu/ipc/service/gpu_watchdog_thread.h.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/gpu/ipc/service/gpu_watchdog_thread.h.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/gpu/ipc/service/gpu_watchdog_thread.h
 @@ -213,7 +213,7 @@ class GPU_IPC_SERVICE_EXPORT GpuWatchdog
    base::ThreadTicks GetWatchedThreadTime();
@@ -11,9 +11,9 @@ $NetBSD: patch-src_3rdparty_chromium_gpu_ipc_service_gpu__watchdog__thread.h,v 1
    void UpdateActiveTTY();
  #endif
  
-@@ -271,7 +271,7 @@ class GPU_IPC_SERVICE_EXPORT GpuWatchdog
-   // whether GpuWatchdogThreadEvent::kGpuWatchdogStart has been recorded.
-   bool is_watchdog_start_histogram_recorded = false;
+@@ -261,7 +261,7 @@ class GPU_IPC_SERVICE_EXPORT GpuWatchdog
+   base::Time check_time_;
+   base::TimeTicks check_timeticks_;
  
 -#if defined(USE_X11)
 +#if defined(USE_X11) && !defined(OS_BSD)

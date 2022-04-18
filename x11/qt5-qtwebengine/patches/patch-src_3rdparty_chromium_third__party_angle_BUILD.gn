@@ -1,26 +1,26 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_angle_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_angle_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/third_party/angle/BUILD.gn.orig	2020-07-15 19:01:32.000000000 +0000
+--- src/3rdparty/chromium/third_party/angle/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/third_party/angle/BUILD.gn
-@@ -19,7 +19,7 @@ if (angle_has_build) {
- 
+@@ -20,7 +20,7 @@ if (angle_has_build) {
  declare_args() {
    # Use the PCI lib to collect GPU information on Linux.
--  use_libpci = is_linux && (!is_chromecast || is_cast_desktop_build) &&
-+  use_libpci = (is_linux || is_bsd) && (!is_chromecast || is_cast_desktop_build) &&
-                (angle_use_x11 || use_ozone)
+   use_libpci =
+-      (is_linux || is_chromeos) && (!is_chromecast || is_cast_desktop_build) &&
++      (is_linux || is_chromeos || is_bsd) && (!is_chromecast || is_cast_desktop_build) &&
+       (angle_use_x11 || use_ozone) && angle_has_build
  
    # Link in system libGL, to work with apitrace.  See doc/DebuggingTips.md.
-@@ -352,7 +352,7 @@ angle_static_library("angle_gpu_info_uti
+@@ -385,7 +385,7 @@ angle_static_library("angle_gpu_info_uti
      libs += [ "dxgi.lib" ]
    }
  
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      sources += libangle_gpu_info_util_linux_sources
  
-     if (angle_use_x11) {
-@@ -363,6 +363,7 @@ angle_static_library("angle_gpu_info_uti
+     if (angle_use_x11 && angle_has_build) {
+@@ -396,6 +396,7 @@ angle_static_library("angle_gpu_info_uti
          "X11",
          "Xi",
          "Xext",
@@ -28,12 +28,3 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_angle_BUILD.gn,v 1.1 2021/08/0
        ]
      }
    }
-@@ -684,7 +685,7 @@ angle_source_set("libANGLE_base") {
-       sources += libangle_gl_egl_dl_sources
-       sources += libangle_gl_egl_android_sources
-     }
--    if (is_linux) {
-+    if (is_linux || is_bsd) {
-       sources += libangle_gl_egl_sources
-       sources += libangle_gl_egl_dl_sources
-     }

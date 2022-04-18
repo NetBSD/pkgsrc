@@ -1,6 +1,5 @@
-$NetBSD: patch-src_3rdparty_gn_base_files_file_util_posix.cc,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_gn_base_files_file_util_posix.cc,v 1.2 2022/04/18 11:18:19 adam Exp $
 
-Index: src/3rdparty/gn/base/files/file_util_posix.cc
 --- src/3rdparty/gn/base/files/file_util_posix.cc.orig
 +++ src/3rdparty/gn/base/files/file_util_posix.cc
 @@ -254,7 +254,7 @@ bool ReplaceFile(const FilePath& from_path,

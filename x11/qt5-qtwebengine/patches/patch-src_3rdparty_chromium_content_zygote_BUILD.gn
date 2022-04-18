@@ -1,0 +1,13 @@
+$NetBSD: patch-src_3rdparty_chromium_content_zygote_BUILD.gn,v 1.1 2022/04/18 11:18:19 adam Exp $
+
+--- src/3rdparty/chromium/content/zygote/BUILD.gn.orig	2022-03-12 08:00:58.000000000 +0000
++++ src/3rdparty/chromium/content/zygote/BUILD.gn
+@@ -5,7 +5,7 @@
+ import("//build/config/nacl/config.gni")
+ import("//content/public/common/zygote/features.gni")
+ 
+-if (is_linux || is_chromeos) {
++if (is_linux || is_chromeos || is_bsd) {
+   source_set("zygote") {
+     sources = [
+       "zygote_linux.cc",

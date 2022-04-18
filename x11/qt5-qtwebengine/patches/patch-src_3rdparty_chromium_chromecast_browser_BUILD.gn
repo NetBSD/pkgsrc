@@ -1,22 +1,22 @@
-$NetBSD: patch-src_3rdparty_chromium_chromecast_browser_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_chromecast_browser_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/chromecast/browser/BUILD.gn.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/chromecast/browser/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/chromecast/browser/BUILD.gn
-@@ -243,7 +243,7 @@ cast_source_set("browser") {
+@@ -266,7 +266,7 @@ cast_source_set("browser") {
      ]
    }
  
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      sources += [
        "cast_system_memory_pressure_evaluator.cc",
        "cast_system_memory_pressure_evaluator.h",
-@@ -402,7 +402,7 @@ cast_source_set("browser") {
-     ]
+@@ -428,7 +428,7 @@ cast_source_set("browser") {
+     sources += [ "webui/cast_webui_default.cc" ]
    }
  
--  if (is_linux && use_ozone) {
-+  if ((is_linux || is_bsd) && use_ozone) {
+-  if ((is_linux || is_chromeos) && use_ozone) {
++  if ((is_linux || is_chromeos || is_bsd) && use_ozone) {
      sources += [
        "exo/cast_wm_helper.cc",
        "exo/cast_wm_helper.h",

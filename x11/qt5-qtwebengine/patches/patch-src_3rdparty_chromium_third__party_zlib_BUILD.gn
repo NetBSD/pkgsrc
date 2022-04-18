@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_zlib_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_zlib_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/third_party/zlib/BUILD.gn.orig	2020-06-25 09:32:39.000000000 +0000
+--- src/3rdparty/chromium/third_party/zlib/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/third_party/zlib/BUILD.gn
-@@ -356,7 +356,7 @@ static_library("minizip") {
+@@ -438,7 +438,7 @@ static_library("bundled_minizip") {
      ]
    }
  
--  if (is_mac || is_ios || is_android || is_nacl) {
-+  if (is_mac || is_ios || is_android || is_nacl || is_bsd) {
+-  if (is_apple || is_android || is_nacl) {
++  if (is_apple || is_android || is_nacl || is_bsd) {
      # Mac, Android and the BSDs don't have fopen64, ftello64, or fseeko64. We
      # use fopen, ftell, and fseek instead on these systems.
      defines = [ "USE_FILE32API" ]

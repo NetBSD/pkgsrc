@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_media_audio_audio__features.cc,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_media_audio_audio__features.cc,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/media/audio/audio_features.cc.orig	2020-07-08 21:40:45.000000000 +0000
+--- src/3rdparty/chromium/media/audio/audio_features.cc.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/media/audio/audio_features.cc
-@@ -11,7 +11,7 @@ namespace features {
- // detected. It will be restarted when needed.
+@@ -12,7 +12,7 @@ namespace features {
  const base::Feature kAudioServiceOutOfProcessKillAtHang{
    "AudioServiceOutOfProcessKillAtHang",
--#if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX)
-+#if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || defined(OS_BSD)
+ #if defined(OS_WIN) || defined(OS_MAC) || defined(OS_LINUX) || \
+-    defined(OS_CHROMEOS)
++    defined(OS_CHROMEOS) || defined(OS_BSD)
        base::FEATURE_ENABLED_BY_DEFAULT
  #else
        base::FEATURE_DISABLED_BY_DEFAULT
