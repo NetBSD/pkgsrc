@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2022/04/10 03:41:38 markd Exp $
+# $NetBSD: Makefile,v 1.16 2022/04/18 05:59:05 markd Exp $
 
 DISTNAME=	collection-langfrench
-PKGNAME=	texlive-${DISTNAME}-2020pre1
+PKGNAME=	texlive-${DISTNAME}-2022pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	62879
@@ -26,7 +26,7 @@ DEPENDS+=	tex-babel-french-[0-9]*:../../print/tex-babel-french
 # depend droit-fr
 # depend e-french
 # epslatex-fr is documentation only
-# depend expose-expl3-dunkerque-2019
+# expose-expl3-dunkerque-2019 is documentation only
 # depend facture
 # formation-latex-ul is documentation only
 # depend frenchmath
@@ -52,7 +52,7 @@ DEPENDS+=	tex-hyphen-french-[0-9]*:../../print/tex-hyphen-french
 # translation-natbib-fr is documentation only
 # translation-tabbing-fr is documentation only
 # depend variations
-# depend visualfaq-fr
+# visualfaq-fr is documentation only
 # visualtikz is documentation only
 
 META_PACKAGE=	yes
