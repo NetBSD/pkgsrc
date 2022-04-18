@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2022/02/13 00:20:57 gutteridge Exp $
+# $NetBSD: Makefile,v 1.41 2022/04/18 19:10:10 adam Exp $
 
 DISTNAME=	libical-3.0.14
+PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libical/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}

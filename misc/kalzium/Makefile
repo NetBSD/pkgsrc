@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2022/03/28 10:45:19 tnn Exp $
+# $NetBSD: Makefile,v 1.67 2022/04/18 19:11:37 adam Exp $
 
 DISTNAME=	kalzium-${KAPPSVER}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/education/kalzium/

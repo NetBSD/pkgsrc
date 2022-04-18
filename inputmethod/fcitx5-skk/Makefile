@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2021/12/08 16:05:13 adam Exp $
+# $NetBSD: Makefile,v 1.7 2022/04/18 19:11:28 adam Exp $
 
 DISTNAME=	fcitx5-skk-5.0.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	inputmethod
 MASTER_SITES=	https://download.fcitx-im.org/fcitx5/fcitx5-skk/
 EXTRACT_SUFX=	.tar.xz

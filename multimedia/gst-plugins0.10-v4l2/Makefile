@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2021/12/08 16:05:47 adam Exp $
+# $NetBSD: Makefile,v 1.20 2022/04/18 19:11:44 adam Exp $
 #
 
 GST_PLUGINS0.10_NAME=	v4l2
 GST_PLUGINS0.10_DIRS=	sys/v4l2
 GST_PLUGINS0.10_FLAGS=	gst_v4l2
-PKGREVISION=		7
+PKGREVISION=		8
 
 ONLY_FOR_PLATFORM=	NetBSD-* Linux-* SunOS-5.11-*
 

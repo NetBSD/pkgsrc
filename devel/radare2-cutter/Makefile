@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2021/12/08 16:04:06 adam Exp $
+# $NetBSD: Makefile,v 1.29 2022/04/18 19:10:55 adam Exp $
 
 # Upstream cutter forked radare2 and created rizin. cutter uses rizin now.
 # radare2 cutter was forked as r2cutter and is not ready for radare2 5.1.0.
@@ -8,7 +8,7 @@ BROKEN=		"Not compatible with radare2 5.1.0"
 
 DISTNAME=	cutter-1.8.3
 PKGNAME=	radare2-${DISTNAME}
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=radareorg/}
 GITHUB_PROJECT=	cutter

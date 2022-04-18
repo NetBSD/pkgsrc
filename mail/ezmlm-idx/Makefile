@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2021/12/08 16:05:28 adam Exp $
+# $NetBSD: Makefile,v 1.63 2022/04/18 19:11:33 adam Exp $
 #
 
 DISTNAME=		ezmlm-idx-${IDXVERSION}
-PKGREVISION=		17
+PKGREVISION=		18
 CATEGORIES=		mail
 IDXVERSION=		7.2.2
 MASTER_SITES=		http://untroubled.org/ezmlm/archive/${IDXVERSION}/
