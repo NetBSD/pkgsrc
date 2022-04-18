@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.851 2022/04/18 04:30:24 markd Exp $
+# $NetBSD: Makefile,v 1.852 2022/04/18 04:33:20 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -524,6 +524,8 @@ SUBDIR+=	tex-context-handlecsv
 SUBDIR+=	tex-context-handlecsv-doc
 SUBDIR+=	tex-context-inifile
 SUBDIR+=	tex-context-inifile-doc
+SUBDIR+=	tex-context-layout
+SUBDIR+=	tex-context-layout-doc
 SUBDIR+=	tex-context-letter
 SUBDIR+=	tex-context-letter-doc
 SUBDIR+=	tex-context-lettrine
