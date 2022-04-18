@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2019/10/07 05:34:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/04/18 12:58:27 js Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,18 +8,12 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/jinja2/__init__.py
 ${PYSITELIB}/jinja2/__init__.pyc
 ${PYSITELIB}/jinja2/__init__.pyo
-${PYSITELIB}/jinja2/_compat.py
-${PYSITELIB}/jinja2/_compat.pyc
-${PYSITELIB}/jinja2/_compat.pyo
 ${PYSITELIB}/jinja2/_identifier.py
 ${PYSITELIB}/jinja2/_identifier.pyc
 ${PYSITELIB}/jinja2/_identifier.pyo
-${PYSITELIB}/jinja2/asyncfilters.py
-${PLIST.async}${PYSITELIB}/jinja2/asyncfilters.pyc
-${PLIST.async}${PYSITELIB}/jinja2/asyncfilters.pyo
-${PYSITELIB}/jinja2/asyncsupport.py
-${PLIST.async}${PYSITELIB}/jinja2/asyncsupport.pyc
-${PLIST.async}${PYSITELIB}/jinja2/asyncsupport.pyo
+${PYSITELIB}/jinja2/async_utils.py
+${PYSITELIB}/jinja2/async_utils.pyc
+${PYSITELIB}/jinja2/async_utils.pyo
 ${PYSITELIB}/jinja2/bccache.py
 ${PYSITELIB}/jinja2/bccache.pyc
 ${PYSITELIB}/jinja2/bccache.pyo
@@ -71,6 +65,7 @@ ${PYSITELIB}/jinja2/optimizer.pyo
 ${PYSITELIB}/jinja2/parser.py
 ${PYSITELIB}/jinja2/parser.pyc
 ${PYSITELIB}/jinja2/parser.pyo
+${PYSITELIB}/jinja2/py.typed
 ${PYSITELIB}/jinja2/runtime.py
 ${PYSITELIB}/jinja2/runtime.pyc
 ${PYSITELIB}/jinja2/runtime.pyo
