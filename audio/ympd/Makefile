@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/07/20 06:37:18 nia Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/18 18:43:07 nia Exp $
 
 DISTNAME=	ympd-1.3.0
 CATEGORIES=	audio
@@ -15,6 +15,9 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 BUILD_DEFS+=	VARBASE
+
+CFLAGS.SunOS+=	-D_POSIX_C_SOURCE=200112L
+LDFLAGS.SunOS+=	-lnsl -lsocket
 
 .include "../../mk/bsd.prefs.mk"
 
