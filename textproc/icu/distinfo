@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.96 2021/12/08 08:21:05 adam Exp $
+$NetBSD: distinfo,v 1.97 2022/04/18 11:03:24 adam Exp $
 
-BLAKE2s (icu4c-70_1-src.tgz) = 6b51807933c94099b2b62ec07c4048a47e486535b915d7570551da71b965598d
-SHA512 (icu4c-70_1-src.tgz) = 0b26ae7207155cb65a8fdb25f7b2fa4431e74b12bccbed0884a17feaae3c96833d12451064dd152197fd6ea5fd3adfd95594284a463e66c82e0d860f645880c9
-Size (icu4c-70_1-src.tgz) = 25449582 bytes
+BLAKE2s (icu4c-71_1-src.tgz) = a18db0c84e7fedafd38029e41910110ec9a9f3b060e569862723c9264c42e99c
+SHA512 (icu4c-71_1-src.tgz) = 1fd2a20aef48369d1f06e2bb74584877b8ad0eb529320b976264ec2db87420bae242715795f372dbc513ea80047bc49077a064e78205cd5e8b33d746fd2a2912
+Size (icu4c-71_1-src.tgz) = 25701340 bytes
 SHA1 (patch-Makefile.in) = 67440d3af9b62b8c0be258c490255ba17f778ab4
 SHA1 (patch-acinclude.m4) = f7de1a16aad0ca77c4bbc457ba76b6171199ce09
 SHA1 (patch-common_putil.cpp) = cc867aaef753c23ff12db019e41836c0dd5ac6d1
@@ -15,7 +15,7 @@ SHA1 (patch-config_Makefile.inc.in) = e7cee161315321d2580074054d87714b55319886
 SHA1 (patch-config_icu-config-bottom) = 168b89ee9180d4ae545125866ee91eb004010501
 SHA1 (patch-config_mh-darwin) = 4fd2c664b23078692b61557ebb66693712d333cd
 SHA1 (patch-config_mh-scoosr5) = 47703dcc184f58c0382da3225f849424ab74d472
-SHA1 (patch-configure) = 1f96ffb2c2c023b38a45326c0273be0ae9cc02ff
+SHA1 (patch-configure) = 0043c23cffaab9851b6121e9f46eb474175dbc26
 SHA1 (patch-configure.ac) = 2cb4601e20ee6b93e08e8790df3f8212510aeb1b
 SHA1 (patch-i18n_double-conversion-utils.h) = 9bee115bb9ddc597607e30f95050de7b21751fca
 SHA1 (patch-icudefs.mk.in) = c2a9469bf896b5f0702d5795c3b1c2b394893663
