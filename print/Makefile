@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.834 2022/04/18 03:06:43 markd Exp $
+# $NetBSD: Makefile,v 1.835 2022/04/18 03:09:25 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -721,6 +721,8 @@ SUBDIR+=	tex-float
 SUBDIR+=	tex-float-doc
 SUBDIR+=	tex-floatflt
 SUBDIR+=	tex-floatflt-doc
+SUBDIR+=	tex-floatrow
+SUBDIR+=	tex-floatrow-doc
 SUBDIR+=	tex-flowfram
 SUBDIR+=	tex-flowfram-doc
 SUBDIR+=	tex-fmtcount

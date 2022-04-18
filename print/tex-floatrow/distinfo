@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/18 03:09:25 markd Exp $
+
+BLAKE2s (floatrow.r15878.tar.xz) = 0510c36912939b625f7aa3e4ab40c2ff1505c79b71f657a4a02ea45074f4ffa7
+SHA512 (floatrow.r15878.tar.xz) = c650b5c856bd625ad192901f3c056171f790c549748d5de5675f14cedca5cf32931ece537ce2280c0e4895895a8eff0cf140c3408dffc2b081ebc8c62d2ae1e3
+Size (floatrow.r15878.tar.xz) = 16088 bytes
