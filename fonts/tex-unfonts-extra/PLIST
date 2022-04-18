@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/18 05:08:47 markd Exp $
+share/texmf-dist/fonts/truetype/public/unfonts-extra/UnJamoBatang.ttf
+share/texmf-dist/fonts/truetype/public/unfonts-extra/UnJamoDotum.ttf
+share/texmf-dist/fonts/truetype/public/unfonts-extra/UnJamoNovel.ttf
+share/texmf-dist/fonts/truetype/public/unfonts-extra/UnJamoSora.ttf
+share/texmf-dist/fonts/truetype/public/unfonts-extra/UnPen.ttf
+share/texmf-dist/fonts/truetype/public/unfonts-extra/UnPenheulim.ttf
+share/texmf-dist/fonts/truetype/public/unfonts-extra/UnPilgia.ttf
+share/texmf-dist/fonts/truetype/public/unfonts-extra/UnShinmun.ttf
+share/texmf-dist/fonts/truetype/public/unfonts-extra/UnTaza.ttf
+share/texmf-dist/fonts/truetype/public/unfonts-extra/UnVada.ttf
+share/texmf-dist/fonts/truetype/public/unfonts-extra/UnYetgul.ttf
