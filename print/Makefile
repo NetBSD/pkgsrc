@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.845 2022/04/18 03:38:28 markd Exp $
+# $NetBSD: Makefile,v 1.846 2022/04/18 03:42:00 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -258,6 +258,8 @@ SUBDIR+=	tex-attachfile2
 SUBDIR+=	tex-attachfile2-doc
 SUBDIR+=	tex-atveryend
 SUBDIR+=	tex-atveryend-doc
+SUBDIR+=	tex-autonum
+SUBDIR+=	tex-autonum-doc
 SUBDIR+=	tex-auxhook
 SUBDIR+=	tex-auxhook-doc
 SUBDIR+=	tex-babel

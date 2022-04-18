@@ -1,0 +1,3 @@
+The package arranges that equation numbers are applied only to
+those equations that are referenced. This operation is similar
+to the showonlyrefs option of the package mathtools.
