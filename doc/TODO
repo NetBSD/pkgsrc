@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21683 2022/04/18 11:02:06 adam Exp $
+$NetBSD: TODO,v 1.21684 2022/04/18 13:21:38 nia Exp $
 
 Suggested new packages
 ======================
@@ -838,7 +838,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gst-rtsp-server-1.18.5
-	o gstreamer1-1.20.1
 	o gthumb-3.4.0
 	o gtk-gnutella-1.2.0
 	o gtk4+-4.4
