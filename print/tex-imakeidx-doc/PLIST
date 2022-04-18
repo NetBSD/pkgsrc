@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/18 03:18:01 markd Exp $
+share/texmf-dist/doc/latex/imakeidx/README
+share/texmf-dist/doc/latex/imakeidx/imakeidx.pdf
+share/texmf-dist/doc/latex/imakeidx/manifest.txt
