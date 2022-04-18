@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/04/17 10:22:02 markd Exp $
+# $NetBSD: Makefile,v 1.24 2022/04/18 22:42:10 markd Exp $
 
 DISTNAME=	kpathsea.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2022
@@ -13,7 +13,7 @@ CONFLICTS+=	texlive-tetex<=2011nb1
 
 INFO_FILES=	yes
 
-TEXLIVE_IGNORE_PATTERNS=	texmf-dist/doc/info \
+TEXLIVE_IGNORE_PATTERNS=	texmf-dist/doc/info/[kw]* \
 				texmf-dist/doc/man
 
 .include "../../print/texlive/package.mk"
