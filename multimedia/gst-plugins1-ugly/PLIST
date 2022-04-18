@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/11/15 22:01:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/04/18 12:36:09 nia Exp $
 lib/gstreamer-1.0/libgstasf.so
 lib/gstreamer-1.0/libgstdvdlpcmdec.so
 lib/gstreamer-1.0/libgstdvdsub.so
@@ -47,3 +47,4 @@ share/locale/tr/LC_MESSAGES/gst-plugins-ugly-1.0.mo
 share/locale/uk/LC_MESSAGES/gst-plugins-ugly-1.0.mo
 share/locale/vi/LC_MESSAGES/gst-plugins-ugly-1.0.mo
 share/locale/zh_CN/LC_MESSAGES/gst-plugins-ugly-1.0.mo
+share/locale/zh_TW/LC_MESSAGES/gst-plugins-ugly-1.0.mo

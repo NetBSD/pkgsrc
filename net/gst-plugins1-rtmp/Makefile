@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2021/12/08 16:05:59 adam Exp $
+# $NetBSD: Makefile,v 1.18 2022/04/18 12:36:07 nia Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-bad/-rtmp/}
-PKGREVISION=	1
 CATEGORIES=	net gnome
 
 COMMENT=	Open source multimedia framework - RTMP streaming plugin
