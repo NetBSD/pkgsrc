@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/18 05:08:47 markd Exp $
+share/texmf-dist/doc/fonts/unfonts-extra/COPYING
+share/texmf-dist/doc/fonts/unfonts-extra/README.md
+share/texmf-dist/doc/fonts/unfonts-extra/README_original
+share/texmf-dist/doc/fonts/unfonts-extra/changelog.Debian
