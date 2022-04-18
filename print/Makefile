@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.835 2022/04/18 03:09:25 markd Exp $
+# $NetBSD: Makefile,v 1.836 2022/04/18 03:12:39 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -744,6 +744,8 @@ SUBDIR+=	tex-footbib
 SUBDIR+=	tex-footbib-doc
 SUBDIR+=	tex-footmisc
 SUBDIR+=	tex-footmisc-doc
+SUBDIR+=	tex-footnotebackref
+SUBDIR+=	tex-footnotebackref-doc
 SUBDIR+=	tex-footnotehyper
 SUBDIR+=	tex-footnotehyper-doc
 SUBDIR+=	tex-footnpag
