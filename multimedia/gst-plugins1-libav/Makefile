@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2021/12/08 16:05:48 adam Exp $
+# $NetBSD: Makefile,v 1.58 2022/04/18 12:36:08 nia Exp $
 
-DISTNAME=	gst-libav-1.18.5
+DISTNAME=	gst-libav-1.20.1
 PKGNAME=	${DISTNAME:S/gst/gst-plugins1/}
-PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-libav/
 EXTRACT_SUFX=	.tar.xz
@@ -20,6 +19,6 @@ BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.18
 .include "../../lang/python/tool.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
-.include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../multimedia/ffmpeg5/buildlink3.mk"
 .include "../../devel/orc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

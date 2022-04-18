@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.38 2021/11/15 22:01:18 wiz Exp $
+# $NetBSD: Makefile.common,v 1.39 2022/04/18 12:36:07 nia Exp $
 
-DISTNAME=	gst-plugins-bad-1.18.5
+DISTNAME=	gst-plugins-bad-1.20.1
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-plugins-bad/
 EXTRACT_SUFX=	.tar.xz
 
@@ -21,6 +21,10 @@ PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
+# grep '^option' meson_options.txt | grep feature | \
+# sed -e "s/',.*//g" -e "s/option('//g" | \
+# xargs printf 'GST_PLUGINS_SET+=\t%s\n'
+
 # unpackaged dependencies:
 # dssim
 # tinyalsa
@@ -38,6 +42,7 @@ GST_PLUGINS_SET+=	audiovisualizers
 GST_PLUGINS_SET+=	autoconvert
 GST_PLUGINS_SET+=	bayer
 GST_PLUGINS_SET+=	camerabin2
+GST_PLUGINS_SET+=	codecalpha
 GST_PLUGINS_SET+=	coloreffects
 GST_PLUGINS_SET+=	debugutils
 GST_PLUGINS_SET+=	dvbsubenc
@@ -92,10 +97,12 @@ GST_PLUGINS_SET+=	y4m
 GST_PLUGINS_SET+=	opencv
 GST_PLUGINS_SET+=	wayland
 GST_PLUGINS_SET+=	x11
+GST_PLUGINS_SET+=	aes
 GST_PLUGINS_SET+=	aom
 GST_PLUGINS_SET+=	avtp
 GST_PLUGINS_SET+=	androidmedia
 GST_PLUGINS_SET+=	applemedia
+GST_PLUGINS_SET+=	asio
 GST_PLUGINS_SET+=	assrender
 GST_PLUGINS_SET+=	bluez
 GST_PLUGINS_SET+=	bs2b
@@ -123,14 +130,16 @@ GST_PLUGINS_SET+=	flite
 GST_PLUGINS_SET+=	fluidsynth
 GST_PLUGINS_SET+=	gl
 GST_PLUGINS_SET+=	gme
+GST_PLUGINS_SET+=	gs
 GST_PLUGINS_SET+=	gsm
 GST_PLUGINS_SET+=	ipcpipeline
 GST_PLUGINS_SET+=	iqa
 GST_PLUGINS_SET+=	kate
 GST_PLUGINS_SET+=	kms
 GST_PLUGINS_SET+=	ladspa
+GST_PLUGINS_SET+=	ldac
 GST_PLUGINS_SET+=	libde265
-GST_PLUGINS_SET+=	libmms
+GST_PLUGINS_SET+=	openaptx
 GST_PLUGINS_SET+=	lv2
 GST_PLUGINS_SET+=	mediafoundation
 GST_PLUGINS_SET+=	microdns
@@ -141,7 +150,7 @@ GST_PLUGINS_SET+=	msdk
 GST_PLUGINS_SET+=	musepack
 GST_PLUGINS_SET+=	neon
 GST_PLUGINS_SET+=	nvcodec
-GST_PLUGINS_SET+=	ofa
+GST_PLUGINS_SET+=	onnx
 GST_PLUGINS_SET+=	openal
 GST_PLUGINS_SET+=	openexr
 GST_PLUGINS_SET+=	openh264
@@ -150,6 +159,7 @@ GST_PLUGINS_SET+=	openmpt
 GST_PLUGINS_SET+=	openni2
 GST_PLUGINS_SET+=	opensles
 GST_PLUGINS_SET+=	opus
+GST_PLUGINS_SET+=	qroverlay
 GST_PLUGINS_SET+=	resindvd
 GST_PLUGINS_SET+=	rsvg
 GST_PLUGINS_SET+=	rtmp
@@ -186,6 +196,7 @@ GST_PLUGINS_SET+=	zxing
 GST_PLUGINS_SET+=	wpe
 GST_PLUGINS_SET+=	magicleap
 GST_PLUGINS_SET+=	v4l2codecs
+GST_PLUGINS_SET+=	isac
 GST_PLUGINS_SET+=	hls
 GST_PLUGINS_SET+=	sctp-internal-usrsctp
 GST_PLUGINS_SET+=	examples
@@ -194,6 +205,7 @@ GST_PLUGINS_SET+=	introspection
 GST_PLUGINS_SET+=	nls
 GST_PLUGINS_SET+=	orc
 GST_PLUGINS_SET+=	doc
+GST_PLUGINS_SET+=	gpl
 
 .for i in ${GST_PLUGINS_SET}
 .  if !empty(GST_PLUGINS:M${i})
@@ -213,6 +225,9 @@ fix-subdirs:
 	    -v basedir=${GST_EXT_BASEDIR} \
 	    ${WRKSRC}/meson.build > ${WRKSRC}/meson.build.new
 	${MV} ${WRKSRC}/meson.build.new ${WRKSRC}/meson.build
+
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/lib/pkgconfig/gstreamer-plugins-bad-1.0.pc
 .endif
 
 .include "../../devel/meson/build.mk"

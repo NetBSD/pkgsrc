@@ -1,0 +1,16 @@
+$NetBSD: patch-meson.build,v 1.1 2022/04/18 12:36:08 nia Exp $
+
+build_gstgl must be defined in the root meson.build so it's available
+when we are building plugins independently.
+
+--- meson.build.orig	2022-03-14 11:33:40.000000000 +0000
++++ meson.build
+@@ -4,6 +4,8 @@ project('gst-plugins-base', 'c',
+   default_options : [ 'warning_level=1',
+                       'buildtype=debugoptimized' ])
+ 
++build_gstgl = false
++
+ gst_version = meson.project_version()
+ version_arr = gst_version.split('.')
+ gst_version_major = version_arr[0].to_int()

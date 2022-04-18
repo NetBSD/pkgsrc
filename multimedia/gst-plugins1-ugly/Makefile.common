@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.34 2021/11/15 22:01:21 wiz Exp $
+# $NetBSD: Makefile.common,v 1.35 2022/04/18 12:36:09 nia Exp $
 
-DISTNAME=	gst-plugins-ugly-1.18.5
+DISTNAME=	gst-plugins-ugly-1.20.1
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-plugins-ugly/
 EXTRACT_SUFX=	.tar.xz
 
@@ -21,9 +21,9 @@ PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
-# grep '^option' meson_options.txt | \
+# grep '^option' meson_options.txt | grep feature | \
 # sed -e "s/',.*//g" -e "s/option('//g" | \
-# xargs printf 'GST_PLUGINS_SET+=	%s\n'
+# xargs printf 'GST_PLUGINS_SET+=\t%s\n'
 GST_PLUGINS_SET+=	x264_libraries
 GST_PLUGINS_SET+=	asfdemux
 GST_PLUGINS_SET+=	dvdlpcmdec
