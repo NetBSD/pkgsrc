@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1908 2022/04/18 11:20:27 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1909 2022/04/18 11:35:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3009,3 +3009,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/element-web to 1.10.10 [js 2022-04-18]
 	Updated textproc/icu to 71.1 [adam 2022-04-18]
 	Updated x11/qt5 to 5.15.3 [adam 2022-04-18]
+	Updated textproc/py-ICU to 2.9 [adam 2022-04-18]
+	Updated sysutils/py-filetype to 1.0.10 [adam 2022-04-18]
