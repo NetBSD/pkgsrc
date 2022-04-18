@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/18 03:09:25 markd Exp $
+share/texmf-dist/doc/latex/floatrow/README
+share/texmf-dist/doc/latex/floatrow/floatrow-rus.pdf
+share/texmf-dist/doc/latex/floatrow/floatrow-rus.tex
+share/texmf-dist/doc/latex/floatrow/floatrow.pdf
+share/texmf-dist/doc/latex/floatrow/fr-sample.tex
+share/texmf-dist/doc/latex/floatrow/frsample01.tex
+share/texmf-dist/doc/latex/floatrow/frsample02.tex
+share/texmf-dist/doc/latex/floatrow/frsample03.tex
+share/texmf-dist/doc/latex/floatrow/frsample04.tex
+share/texmf-dist/doc/latex/floatrow/frsample05.tex
+share/texmf-dist/doc/latex/floatrow/frsample06.tex
+share/texmf-dist/doc/latex/floatrow/frsample07.tex
+share/texmf-dist/doc/latex/floatrow/frsample10.tex
+share/texmf-dist/doc/latex/floatrow/frsample11.tex
+share/texmf-dist/doc/latex/floatrow/frsample12.tex
+share/texmf-dist/doc/latex/floatrow/pictures.tex
+share/texmf-dist/doc/latex/floatrow/sample-longtable-rus.tex
+share/texmf-dist/doc/latex/floatrow/sample-longtable.tex
