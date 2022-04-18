@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/18 03:06:43 markd Exp $
+
+BLAKE2s (etextools.doc.r20694.tar.xz) = 524783b94d8ebd8542a1f7408323c8960a2b3c1d23aefcb7923e467bd5922650
+SHA512 (etextools.doc.r20694.tar.xz) = 5a8d722f9e2e59d483c7421909b4a0f8719b0de81f2b8b95801f905d478624eb4df936f193eb3e4ad1e3f0c2d844c7672a5e2ab1c0ff0654ed88c66bee4802ef
+Size (etextools.doc.r20694.tar.xz) = 928644 bytes

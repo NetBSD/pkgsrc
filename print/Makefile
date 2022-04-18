@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.833 2022/04/18 03:03:01 markd Exp $
+# $NetBSD: Makefile,v 1.834 2022/04/18 03:06:43 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -662,6 +662,8 @@ SUBDIR+=	tex-etex-pkg
 SUBDIR+=	tex-etex-pkg-doc
 SUBDIR+=	tex-etexcmds
 SUBDIR+=	tex-etexcmds-doc
+SUBDIR+=	tex-etextools
+SUBDIR+=	tex-etextools-doc
 SUBDIR+=	tex-ethiop
 SUBDIR+=	tex-ethiop-doc
 SUBDIR+=	tex-etoc
