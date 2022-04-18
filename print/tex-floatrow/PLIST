@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/18 03:09:25 markd Exp $
+share/texmf-dist/tex/latex/floatrow/floatpagestyle.sty
+share/texmf-dist/tex/latex/floatrow/floatrow.sty
+share/texmf-dist/tex/latex/floatrow/fr-fancy.sty
+share/texmf-dist/tex/latex/floatrow/fr-longtable.sty
+share/texmf-dist/tex/latex/floatrow/fr-subfig.sty
+share/texmf-dist/tex/latex/floatrow/listpen.sty
