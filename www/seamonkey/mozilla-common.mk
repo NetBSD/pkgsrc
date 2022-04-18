@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.10 2021/11/30 15:41:24 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.11 2022/04/18 18:34:33 dholland Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -18,6 +18,8 @@ GCC_REQD+=		4.9
 PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 TOOL_DEPENDS+=			${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+# Include pyversion.mk after setting PYTHON_* but before testing the default.
+.include "../../lang/python/pyversion.mk"
 .if !empty(PYTHON_VERSION_DEFAULT:M3[6789])
 TOOL_DEPENDS+=			python${PYTHON_VERSION_DEFAULT}-[0-9]*:../../lang/python${PYTHON_VERSION_DEFAULT}
 ALL_ENV+=			PYTHON3=${PREFIX}/bin/python${PYTHON_VERSION_DEFAULT:S/3/3./}
@@ -25,8 +27,6 @@ ALL_ENV+=			PYTHON3=${PREFIX}/bin/python${PYTHON_VERSION_DEFAULT:S/3/3./}
 TOOL_DEPENDS+=			python38-[0-9]*:../../lang/python38
 ALL_ENV+=			PYTHON3=${PREFIX}/bin/python3.8
 .endif
-
-.include "../../lang/python/pyversion.mk"
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 BUILD_DEPENDS+=		yasm>=1.1:../../devel/yasm
