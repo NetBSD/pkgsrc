@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.852 2022/04/18 04:33:20 markd Exp $
+# $NetBSD: Makefile,v 1.853 2022/04/18 05:00:16 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -384,6 +384,8 @@ SUBDIR+=	tex-braket
 SUBDIR+=	tex-braket-doc
 SUBDIR+=	tex-breakcites
 SUBDIR+=	tex-breakcites-doc
+SUBDIR+=	tex-bredzenie
+SUBDIR+=	tex-bredzenie-doc
 SUBDIR+=	tex-breqn
 SUBDIR+=	tex-bussproofs
 SUBDIR+=	tex-bussproofs-doc
