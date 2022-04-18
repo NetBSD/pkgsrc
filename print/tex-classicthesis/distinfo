@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/18 03:45:00 markd Exp $
+
+BLAKE2s (classicthesis.r48041.tar.xz) = bdcc29e2f85bbb278450810691f0d3187621ad75f4e2e495027416851111d6d7
+SHA512 (classicthesis.r48041.tar.xz) = 9a8c0c9ad0d97f187cf66679613514000324a72d2745c1026889b73e5981e0dcf36f388a0bf630f5ab35d28a39ae50ac842db28c214442ccfd987ff2c132ce7b
+Size (classicthesis.r48041.tar.xz) = 8944 bytes
