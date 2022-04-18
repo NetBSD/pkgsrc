@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2020/05/10 04:13:26 markd Exp $
+# $NetBSD: Makefile,v 1.13 2022/04/18 05:11:22 markd Exp $
 
 DISTNAME=	collection-langpolish
-PKGNAME=	texlive-${DISTNAME}-2020pre1
+PKGNAME=	texlive-${DISTNAME}-2022
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	54074
@@ -14,7 +14,7 @@ DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-lat
 DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
 
 DEPENDS+=	tex-babel-polish-[0-9]*:../../print/tex-babel-polish
-# depend bredzenie
+DEPENDS+=	tex-bredzenie-[0-9]*:../../print/tex-bredzenie
 DEPENDS+=	tex-cc-pl-[0-9]*:../../fonts/tex-cc-pl
 DEPENDS+=	tex-gustlib-[0-9]*:../../print/tex-gustlib
 # gustprog is documentation only
