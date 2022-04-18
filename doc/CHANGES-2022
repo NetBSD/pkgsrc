@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1911 2022/04/18 12:58:35 js Exp $
+$NetBSD: CHANGES-2022,v 1.1912 2022/04/18 13:21:38 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3019,3 +3019,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/gst-plugins1-libav to 1.20.1 [nia 2022-04-18]
 	Updated multimedia/gst-plugins1-editing-services to 1.20.1 [nia 2022-04-18]
 	Updated textproc/py-jinja2 to 3.1.1 [js 2022-04-18]
+	Updated multimedia/olive-editor to 0.1.2 [nia 2022-04-18]
