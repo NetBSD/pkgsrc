@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1909 2022/04/18 11:35:27 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1910 2022/04/18 12:38:14 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3011,3 +3011,10 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/qt5 to 5.15.3 [adam 2022-04-18]
 	Updated textproc/py-ICU to 2.9 [adam 2022-04-18]
 	Updated sysutils/py-filetype to 1.0.10 [adam 2022-04-18]
+	Updated multimedia/gstreamer1 to 1.20.1 [nia 2022-04-18]
+	Updated multimedia/gst-plugins1-base to 1.20.1 [nia 2022-04-18]
+	Updated multimedia/gst-plugins1-good to 1.20.1 [nia 2022-04-18]
+	Updated multimedia/gst-plugins1-bad to 1.20.1 [nia 2022-04-18]
+	Updated multimedia/gst-plugins1-ugly to 1.20.1 [nia 2022-04-18]
+	Updated multimedia/gst-plugins1-libav to 1.20.1 [nia 2022-04-18]
+	Updated multimedia/gst-plugins1-editing-services to 1.20.1 [nia 2022-04-18]
