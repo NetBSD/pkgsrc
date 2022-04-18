@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2022/01/13 21:30:00 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/04/18 11:28:54 adam Exp $
 
 DISTNAME=	build-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/build/}
 
@@ -25,6 +25,10 @@ USE_PKG_RESOURCES=	yes
 .if ${PYPKGPREFIX} == "py37"
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
 .endif
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} pyproject-build pyproject-build-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
