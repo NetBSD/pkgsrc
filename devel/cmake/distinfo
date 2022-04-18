@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.193 2022/03/16 18:36:47 jperkin Exp $
+$NetBSD: distinfo,v 1.194 2022/04/18 11:01:33 adam Exp $
 
-BLAKE2s (cmake-3.22.3.tar.gz) = eafa5d81e2a1ab1cb7aee21fec3a4706330cb44ef0cbc9633be9fabad67ab536
-SHA512 (cmake-3.22.3.tar.gz) = a35003468153b99770ac6bbdeaa611a231a1104560da36aca0f393b8b71dbb44d854378504d2ec6b4af615f78efe18d91453fe15a1b7ec58129aa0289a5a1507
-Size (cmake-3.22.3.tar.gz) = 9779118 bytes
-SHA1 (patch-CMakeLists.txt) = fabdb0590f4b97c34c2242749ae3b6af18aefc0a
+BLAKE2s (cmake-3.23.1.tar.gz) = 2dd8098b57407a364b3b2da6073d790ff5dda976f12d7af28f651a89d66873b9
+SHA512 (cmake-3.23.1.tar.gz) = 94893f888c0cbfc58e54a0bd65d6c0697fe4a0e95c678b7cb35e7dc8854d57eb360bfc952750f97983348817f847f6df85903f21a5857b1a3880b2a7eb6cc029
+Size (cmake-3.23.1.tar.gz) = 9982020 bytes
+SHA1 (patch-CMakeLists.txt) = 500b8645e7fbfa54dd97555432c453a1b0a57ff3
 SHA1 (patch-Modules_Compiler_GNU.cmake) = e091c53ac3f3a6cd811119d3231563df32e76bf9
 SHA1 (patch-Modules_FindCurses.cmake) = 98cac805a6abafcfb8b61e441b50a1d6aec27ad0
 SHA1 (patch-Modules_FindGTK2.cmake) = 51b7520d35fdec2a7bfcf494fe35ce0e3863e4ee
@@ -18,6 +18,5 @@ SHA1 (patch-Source_Checks_Curses_CMakeLists.txt) = 37d95c6162cc1f4c0e47b537ac820
 SHA1 (patch-Source_Checks_Curses_CheckCurses.c) = c86cae48f7b39fb735eba4788d4e9d595b2ccf3b
 SHA1 (patch-Source_Checks_cm__cxx17__check.cpp) = d5e2708df6fcda078b1b5ea59264c663d2633ced
 SHA1 (patch-Source_QtDialog_CMakeLists.txt) = 0858da256bba174694a165d5f910eedb3faa06d5
-SHA1 (patch-Source_cmMachO.h) = 9d9065625e5f4df08e5a4ecf62b8582e3858f0bc
 SHA1 (patch-Utilities_KWIML_CMakeLists.txt) = e4bdf9fc58757e87bf7e3e3e195839eededbc796
 SHA1 (patch-bootstrap) = e34f5b888790e766338086b8c3680be79b71ef18
