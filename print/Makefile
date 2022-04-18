@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.841 2022/04/18 03:26:44 markd Exp $
+# $NetBSD: Makefile,v 1.842 2022/04/18 03:30:14 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1289,6 +1289,8 @@ SUBDIR+=	tex-polyglossia-doc
 SUBDIR+=	tex-polytable
 SUBDIR+=	tex-polytable-doc
 SUBDIR+=	tex-powerdot
+SUBDIR+=	tex-prelim2e
+SUBDIR+=	tex-prelim2e-doc
 SUBDIR+=	tex-preprint
 SUBDIR+=	tex-preprint-doc
 SUBDIR+=	tex-present

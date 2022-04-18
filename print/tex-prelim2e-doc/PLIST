@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/18 03:30:14 markd Exp $
+share/texmf-dist/doc/latex/prelim2e/README.md
+share/texmf-dist/doc/latex/prelim2e/prelim2e.pdf
