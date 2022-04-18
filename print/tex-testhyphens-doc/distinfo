@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/18 03:38:28 markd Exp $
+
+BLAKE2s (testhyphens.doc.r38928.tar.xz) = 5788511ba44533ac2fef3ff71832aa45ac171af8699c18f292c0b67dfb42839d
+SHA512 (testhyphens.doc.r38928.tar.xz) = 44cc1d9afa4e12ef2dc1f7be2d7718fa33b80e5ee16c7396053690bfea6246f444b50cb044d314ec677436a3559ff1ba9fa227acb446db37bacaa2829c309b2b
+Size (testhyphens.doc.r38928.tar.xz) = 383684 bytes
