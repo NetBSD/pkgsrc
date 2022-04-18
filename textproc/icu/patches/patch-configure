@@ -1,14 +1,12 @@
-$NetBSD: patch-configure,v 1.10 2019/04/03 00:13:00 ryoon Exp $
+$NetBSD: patch-configure,v 1.11 2022/04/18 11:03:24 adam Exp $
 
 Portability fix.
 Solaris seems to need -std=c99 with recent pkgsrc so keep it.
-don't throw away -std=c++11 on solaris unconditionally, it's
-required.
 Add support for Bitrig.
 
---- configure.orig	2019-03-27 18:47:14.000000000 +0000
+--- configure.orig	2022-04-07 22:41:55.000000000 +0000
 +++ configure
-@@ -5242,7 +5242,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -5314,7 +5314,7 @@ rm -f core conftest.err conftest.$ac_obj
  		*-*-cygwin) icu_cv_host_frag=mh-cygwin-msvc ;;
  		esac
  	fi ;;
@@ -17,7 +15,7 @@ Add support for Bitrig.
  *-*-aix*)
  	if test "$GCC" = yes; then
  		icu_cv_host_frag=mh-aix-gcc
-@@ -5267,6 +5267,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -5339,6 +5339,7 @@ rm -f core conftest.err conftest.$ac_obj
  *-dec-osf*) icu_cv_host_frag=mh-alpha-osf ;;
  *-*-nto*)	icu_cv_host_frag=mh-qnx ;;
  *-ncr-*)	icu_cv_host_frag=mh-mpras ;;
@@ -25,7 +23,7 @@ Add support for Bitrig.
  *) 		icu_cv_host_frag=mh-unknown ;;
  esac
  
-@@ -5875,6 +5876,29 @@ if test "x$plugins" = "xtrue"; then
+@@ -5947,6 +5948,29 @@ if test "x$plugins" = "xtrue"; then
  fi
  
  
@@ -55,19 +53,7 @@ Add support for Bitrig.
  U_ENABLE_DYLOAD=1
  enable=yes
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to enable dynamic loading of plugins. Ignored if plugins disabled." >&5
-@@ -6088,11 +6112,6 @@ $as_echo "$as_me: Adding CXXFLAGS option
-         else
-             CXXFLAGS="$OLD_CXXFLAGS"
-         fi
--        case "${host}" in
--        *-*-solaris*)
--            CXXFLAGS="$OLD_CXXFLAGS"
--            ;;
--        esac
-     fi
- fi
- 
-@@ -7819,7 +7838,7 @@ ICUDATA_CHAR=$U_ENDIAN_CHAR
+@@ -7941,7 +7965,7 @@ ICUDATA_CHAR=$U_ENDIAN_CHAR
  case "${host}" in
  	*-*-solaris*) 	platform=U_SOLARIS ;;
  	*-*-linux*|*-*-gnu|*-*-k*bsd*-gnu|*-*-kopensolaris*-gnu)        platform=U_LINUX ;;
