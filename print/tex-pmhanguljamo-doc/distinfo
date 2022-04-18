@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/18 05:03:04 markd Exp $
+
+BLAKE2s (pmhanguljamo.doc.r61183.tar.xz) = 725c16ae00c5efd2c86ccd563f7b545950a163e6107bcb55d8c835e5b411d37d
+SHA512 (pmhanguljamo.doc.r61183.tar.xz) = 2c0cb2a787c73f88e87ce37d1d3237a3f3dc57bbb6d37473d00180927f644a6fabd1a3982fa61f46b1e3161a4f5eaea8086a21834f85d82e3c93615b31ed01eb
+Size (pmhanguljamo.doc.r61183.tar.xz) = 709996 bytes

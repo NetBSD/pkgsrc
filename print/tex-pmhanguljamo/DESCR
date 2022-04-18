@@ -1,0 +1,5 @@
+This package provides a Hangul transliteration input method
+that allows to typeset Korean letters (Hangul) using the proper
+fonts. The name is derived from "Poor man's Hangul Jamo Input
+Method". The use of XeLaTeX is recommended. pdfTeX is not
+supported.
