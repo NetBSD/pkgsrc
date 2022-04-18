@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/18 03:35:47 markd Exp $
+share/texmf-dist/tex/latex/sidenotes/caesar_book.cls
+share/texmf-dist/tex/latex/sidenotes/sidenotes.sty

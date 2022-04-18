@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.843 2022/04/18 03:33:09 markd Exp $
+# $NetBSD: Makefile,v 1.844 2022/04/18 03:35:47 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1417,6 +1417,8 @@ SUBDIR+=	tex-showtags
 SUBDIR+=	tex-showtags-doc
 SUBDIR+=	tex-sidecap
 SUBDIR+=	tex-sidecap-doc
+SUBDIR+=	tex-sidenotes
+SUBDIR+=	tex-sidenotes-doc
 SUBDIR+=	tex-silence
 SUBDIR+=	tex-silence-doc
 SUBDIR+=	tex-simplified-latex-doc
