@@ -1,9 +1,21 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2021/07/20 06:37:18 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2022/04/18 18:43:07 nia Exp $
 
+Honor CFLAGS.
 Use CMAKE_INSTALL_MANDIR.
 
 --- CMakeLists.txt.orig	2016-02-13 21:01:52.000000000 +0000
 +++ CMakeLists.txt
+@@ -24,8 +24,8 @@ include_directories(${PROJECT_BINARY_DIR
+ 
+ include(CheckCSourceCompiles)
+ 
+-set(CMAKE_C_FLAGS "-std=gnu99 -Wall")
+-set(CMAKE_C_FLAGS_DEBUG "-ggdb -pedantic")
++set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=gnu99 -Wall")
++set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -ggdb -pedantic")
+ if(WITH_IPV6)
+     set_property(DIRECTORY APPEND PROPERTY COMPILE_DEFINITIONS NS_ENABLE_IPV6)
+ endif()
 @@ -72,8 +72,10 @@ endif()
  add_executable(ympd ${SOURCES})
  target_link_libraries(ympd ${LIBMPDCLIENT_LIBRARY} ${CMAKE_THREAD_LIBS_INIT} ${OPENSSL_LIBRARIES})
