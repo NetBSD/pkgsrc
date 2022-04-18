@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_remoting_protocol_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_remoting_protocol_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/remoting/protocol/BUILD.gn.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/remoting/protocol/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/remoting/protocol/BUILD.gn
-@@ -210,7 +210,7 @@ static_library("protocol") {
+@@ -239,7 +239,7 @@ static_library("protocol") {
+   defines = []
  
-   if (!is_nacl) {
-     # This condition needs to match with //remoting/codec/BUILD.gn
--    if (is_win || is_linux) {
-+    if (is_win || is_linux || is_bsd) {
-       defines += [ "USE_H264_ENCODER" ]
-       deps += [
-         "//media",
+   # Must match condition in //remoting/codec/BUILD.gn
+-  if (is_win || is_linux || is_chromeos) {
++  if (is_win || is_linux || is_chromeos || is_bsd) {
+     defines += [ "USE_H264_ENCODER" ]
+     deps += [
+       "//media",

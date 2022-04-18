@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.48 2021/03/15 19:32:21 markd Exp $
+# $NetBSD: Makefile.common,v 1.49 2022/04/18 11:18:15 adam Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
@@ -26,9 +26,12 @@
 # used by x11/qt5-qtvirtualkeyboard/Makefile
 # used by x11/qt5-qtwayland/Makefile
 # used by x11/qt5-qtwebchannel/Makefile
+# used by x11/qt5-qtwebengine/Makefile
 # used by x11/qt5-qtwebsockets/Makefile
 # used by x11/qt5-qtx11extras/Makefile
 # used by x11/qt5-qtxmlpatterns/Makefile
+
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-opensource//}
 
 # https://doc.qt.io/qt-5/supported-platforms.html
 GCC_REQD+=	5

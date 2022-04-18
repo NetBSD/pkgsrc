@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_pdfium_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_pdfium_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/third_party/pdfium/BUILD.gn.orig	2020-07-15 19:01:38.000000000 +0000
+--- src/3rdparty/chromium/third_party/pdfium/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/third_party/pdfium/BUILD.gn
-@@ -86,7 +86,7 @@ config("pdfium_core_config") {
+@@ -100,7 +100,7 @@ config("pdfium_core_config") {
      "//build/config/compiler:noshadowing",
    ]
    defines = []
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      if (current_cpu == "x64") {
        defines += [ "_FX_CPU_=_FX_X64_" ]
        cflags += [ "-fPIC" ]

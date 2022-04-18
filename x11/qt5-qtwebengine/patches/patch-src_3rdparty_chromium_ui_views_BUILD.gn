@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_ui_views_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_ui_views_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/ui/views/BUILD.gn.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/ui/views/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/ui/views/BUILD.gn
-@@ -520,12 +520,12 @@ jumbo_component("views") {
+@@ -525,12 +525,12 @@ jumbo_component("views") {
      deps += [ "//ui/display/util" ]
    }
  
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      public += [ "color_chooser/color_chooser_view.h" ]
      sources += [ "color_chooser/color_chooser_view.cc" ]
    }
@@ -15,27 +15,27 @@ $NetBSD: patch-src_3rdparty_chromium_ui_views_BUILD.gn,v 1.1 2021/08/03 21:04:36
 -  if (is_linux && !is_chromeos) {
 +  if ((is_linux || is_bsd) && !is_chromeos) {
      sources -= [ "window/window_button_order_provider.cc" ]
+     public_deps += [ "//ui/base/cursor:theme_manager" ]
      deps += [
-       "//ui/base/ime/linux",
-@@ -794,7 +794,7 @@ jumbo_component("views") {
-           "widget/desktop_aura/desktop_screen_ozone.cc",
-         ]
+@@ -783,7 +783,7 @@ jumbo_component("views") {
+         public += [ "widget/desktop_aura/desktop_screen_ozone.h" ]
+         sources += [ "widget/desktop_aura/desktop_screen_ozone.cc" ]
        }
--      if (is_linux) {
-+      if (is_linux || is_bsd) {
+-      if (is_linux || is_chromeos) {
++      if (is_linux || is_chromeos || is_bsd) {
          public += [ "widget/desktop_aura/desktop_window_tree_host_linux.h" ]
          sources += [
            "style/platform_style_linux.cc",
-@@ -807,7 +807,7 @@ jumbo_component("views") {
-           "//ui/platform_window/extensions",
+@@ -794,7 +794,7 @@ jumbo_component("views") {
          ]
+         deps += [ "//ui/base:hit_test" ]
        }
--      if (is_linux || is_fuchsia) {
-+      if (is_linux || is_fuchsia || is_bsd) {
-         public += [ "widget/desktop_aura/desktop_window_tree_host_platform.h" ]
-         sources +=
-             [ "widget/desktop_aura/desktop_window_tree_host_platform.cc" ]
-@@ -1186,7 +1186,7 @@ test("views_unittests") {
+-      if (is_linux || is_chromeos || is_fuchsia) {
++      if (is_linux || is_chromeos || is_fuchsia || is_bsd) {
+         public += [
+           "widget/desktop_aura/desktop_window_tree_host_platform.h",
+           "widget/desktop_aura/window_move_client_platform.h",
+@@ -1203,7 +1203,7 @@ test("views_unittests") {
      ]
    }
  
@@ -44,12 +44,12 @@ $NetBSD: patch-src_3rdparty_chromium_ui_views_BUILD.gn,v 1.1 2021/08/03 21:04:36
      deps += [ "//ui/base/ime/linux" ]
    }
  
-@@ -1281,7 +1281,7 @@ test("views_unittests") {
-           "widget/desktop_aura/desktop_window_tree_host_x11_unittest.cc",
+@@ -1295,7 +1295,7 @@ test("views_unittests") {
          ]
+         deps += [ "//ui/base/x:test_support" ]
        }
--      if (is_linux || is_fuchsia) {
-+      if (is_linux || is_fuchsia || is_bsd) {
+-      if (is_linux || is_chromeos || is_fuchsia) {
++      if (is_linux || is_chromeos || is_fuchsia || is_bsd) {
          sources += [
            "widget/desktop_aura/desktop_window_tree_host_platform_unittest.cc",
          ]

@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_blink_renderer_core_layout_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_blink_renderer_core_layout_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/third_party/blink/renderer/core/layout/BUILD.gn.orig	2020-07-15 18:56:48.000000000 +0000
+--- src/3rdparty/chromium/third_party/blink/renderer/core/layout/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/third_party/blink/renderer/core/layout/BUILD.gn
-@@ -614,7 +614,7 @@ blink_core_sources("layout") {
+@@ -648,7 +648,7 @@ blink_core_sources("layout") {
      sources += [ "layout_theme_font_provider_default.cc" ]
    }
  
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      sources += [
        "layout_theme_linux.cc",
        "layout_theme_linux.h",

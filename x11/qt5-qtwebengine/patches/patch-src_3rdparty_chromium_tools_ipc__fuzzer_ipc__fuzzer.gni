@@ -1,11 +1,11 @@
-$NetBSD: patch-src_3rdparty_chromium_tools_ipc__fuzzer_ipc__fuzzer.gni,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_tools_ipc__fuzzer_ipc__fuzzer.gni,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/tools/ipc_fuzzer/ipc_fuzzer.gni.orig	2020-07-15 18:56:33.000000000 +0000
+--- src/3rdparty/chromium/tools/ipc_fuzzer/ipc_fuzzer.gni.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/tools/ipc_fuzzer/ipc_fuzzer.gni
 @@ -13,5 +13,5 @@ declare_args() {
    # (especially MSan).
    enable_ipc_fuzzer =
        is_clang && !is_component_build && !is_official_build && !is_chromecast &&
--      !using_sanitizer && (is_linux || is_mac || is_win) && !use_ozone
+-      !using_sanitizer && (is_linux || is_chromeos || is_mac || is_win) && !use_ozone
 +      !using_sanitizer && (is_linux || is_mac || is_win || is_bsd) && !use_ozone
  }

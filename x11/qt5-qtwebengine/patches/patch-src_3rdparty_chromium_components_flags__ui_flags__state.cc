@@ -1,10 +1,10 @@
-$NetBSD: patch-src_3rdparty_chromium_components_flags__ui_flags__state.cc,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_components_flags__ui_flags__state.cc,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/components/flags_ui/flags_state.cc.orig	2020-07-08 21:40:39.000000000 +0000
+--- src/3rdparty/chromium/components/flags_ui/flags_state.cc.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/components/flags_ui/flags_state.cc
-@@ -684,7 +684,7 @@ int FlagsState::GetCurrentPlatform() {
+@@ -687,7 +687,7 @@ int FlagsState::GetCurrentPlatform() {
    return kOsWin;
- #elif defined(OS_CHROMEOS)  // Needs to be before the OS_LINUX check.
+ #elif defined(OS_CHROMEOS)
    return kOsCrOS;
 -#elif defined(OS_LINUX) || defined(OS_OPENBSD)
 +#elif defined(OS_LINUX) || defined(OS_BSD)

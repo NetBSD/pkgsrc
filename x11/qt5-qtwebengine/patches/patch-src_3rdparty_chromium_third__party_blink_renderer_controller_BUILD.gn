@@ -1,40 +1,40 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_blink_renderer_controller_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_blink_renderer_controller_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/third_party/blink/renderer/controller/BUILD.gn.orig	2020-07-15 18:56:47.000000000 +0000
+--- src/3rdparty/chromium/third_party/blink/renderer/controller/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/third_party/blink/renderer/controller/BUILD.gn
-@@ -45,7 +45,7 @@ jumbo_component("controller") {
-     "memory_usage_monitor.h",
+@@ -52,7 +52,7 @@ jumbo_component("controller") {
+     "performance_manager/v8_worker_memory_reporter.h",
    ]
  
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      sources += [
        "memory_usage_monitor_posix.cc",
        "memory_usage_monitor_posix.h",
-@@ -81,7 +81,7 @@ jumbo_component("controller") {
+@@ -89,7 +89,7 @@ jumbo_component("controller") {
  
    # HighestPmfReporter depends on MemoryUsageMonitor and MemoryUsageMonitor
    # depends on platform specific code. Explicitly specify supported platforms.
--  if (is_linux || is_win || is_android || is_mac) {
-+  if (is_linux || is_win || is_android || is_mac || is_bsd) {
+-  if (is_linux || is_chromeos || is_win || is_android || is_mac) {
++  if (is_linux || is_chromeos || is_win || is_android || is_mac || is_bsd) {
      sources += [
        "highest_pmf_reporter.cc",
        "highest_pmf_reporter.h",
-@@ -165,7 +165,7 @@ jumbo_source_set("blink_unittests_source
- 
-   sources = [ "tests/run_all_tests.cc" ]
-   sources += bindings_unittest_files
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+@@ -201,7 +201,7 @@ jumbo_source_set("blink_unittests_source
+     "performance_manager/v8_worker_memory_reporter_test.cc",
+     "tests/run_all_tests.cc",
+   ]
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      sources += [ "memory_usage_monitor_posix_test.cc" ]
    }
    if (is_android) {
-@@ -176,7 +176,7 @@ jumbo_source_set("blink_unittests_source
+@@ -212,7 +212,7 @@ jumbo_source_set("blink_unittests_source
      ]
    }
  
--  if (is_linux || is_android || is_mac || is_win) {
-+  if (is_linux || is_android || is_mac || is_win || is_bsd) {
+-  if (is_linux || is_chromeos || is_android || is_mac || is_win) {
++  if (is_linux || is_chromeos || is_android || is_mac || is_win || is_bsd) {
      sources += [
        "highest_pmf_reporter_test.cc",
        "memory_usage_monitor_test.cc",

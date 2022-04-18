@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2020/09/14 20:08:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2022/04/18 11:18:16 adam Exp $
 lib/pkgconfig/Qt5Qml.pc
 lib/pkgconfig/Qt5Quick.pc
 lib/pkgconfig/Qt5QuickTest.pc
@@ -15,6 +15,7 @@ qt5/bin/qmlpreview
 qt5/bin/qmlprofiler
 qt5/bin/qmlscene
 qt5/bin/qmltestrunner
+qt5/bin/qmltime
 qt5/bin/qmltyperegistrar
 qt5/include/QtPacketProtocol/${PKGVERSION}/QtPacketProtocol/private/qpacket_p.h
 qt5/include/QtPacketProtocol/${PKGVERSION}/QtPacketProtocol/private/qpacketprotocol_p.h

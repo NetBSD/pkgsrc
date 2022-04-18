@@ -1,6 +1,5 @@
-$NetBSD: patch-src_buildtools_buildtools.pro,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_buildtools_buildtools.pro,v 1.2 2022/04/18 11:18:19 adam Exp $
 
-Index: src/buildtools/buildtools.pro
 --- src/buildtools/buildtools.pro.orig
 +++ src/buildtools/buildtools.pro
 @@ -1,6 +1,6 @@

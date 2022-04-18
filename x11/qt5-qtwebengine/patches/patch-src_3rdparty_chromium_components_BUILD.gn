@@ -1,17 +1,17 @@
-$NetBSD: patch-src_3rdparty_chromium_components_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_components_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/components/BUILD.gn.orig	2020-07-15 18:56:46.000000000 +0000
+--- src/3rdparty/chromium/components/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/components/BUILD.gn
-@@ -45,7 +45,7 @@ if (is_ios) {
- # no tests will run) and add a reference here. You can add more than one unit
- # test target if convenient.
+@@ -48,7 +48,7 @@ if (is_ios) {
  test("components_unittests") {
--  if (is_android || is_linux || is_mac || is_win) {
-+  if (is_android || is_linux || is_mac || is_win || is_bsd) {
+   use_xvfb = use_xvfb_in_this_config
+ 
+-  if (is_android || is_linux || is_chromeos || is_mac || is_win) {
++  if (is_android || is_linux || is_chromeos || is_mac || is_win || is_bsd) {
      data = [ "test/data/" ]
    }
  
-@@ -194,9 +194,13 @@ test("components_unittests") {
+@@ -199,9 +199,13 @@ test("components_unittests") {
    }
  
    if (!is_fuchsia) {
@@ -27,21 +27,21 @@ $NetBSD: patch-src_3rdparty_chromium_components_BUILD.gn,v 1.1 2021/08/03 21:04:
        "//components/sync_device_info:unit_tests",
        "//components/sync_sessions:unit_tests",
        "//components/update_client:unit_tests",
-@@ -313,7 +317,7 @@ test("components_unittests") {
+@@ -333,7 +337,7 @@ test("components_unittests") {
      deps += [ ":components_tests_pak_bundle_data" ]
    }
  
--  if (is_mac || is_linux) {
-+  if (is_mac || is_linux || is_bsd) {
+-  if (is_mac || is_linux || is_chromeos) {
++  if (is_mac || is_linux || is_chromeos || is_bsd) {
      data_deps += [ "//content/shell:pak" ]
    }
  
-@@ -663,7 +667,7 @@ if (!is_ios && !is_fuchsia) {
+@@ -690,7 +694,7 @@ if (!is_ios && !is_fuchsia) {
        ]
      }
  
--    if (is_linux) {
-+    if (is_linux || is_bsd) {
+-    if (is_linux || is_chromeos) {
++    if (is_linux || is_chromeos || is_bsd) {
        # content_extractor_browsertest is a standalone content extraction tool built as
        # a MANUAL component_browsertest.
        sources += [ "dom_distiller/standalone/content_extractor_browsertest.cc" ]

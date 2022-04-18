@@ -1,0 +1,31 @@
+$NetBSD: patch-src_3rdparty_chromium_sandbox_policy_BUILD.gn,v 1.1 2022/04/18 11:18:19 adam Exp $
+
+--- src/3rdparty/chromium/sandbox/policy/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
++++ src/3rdparty/chromium/sandbox/policy/BUILD.gn
+@@ -76,6 +76,26 @@ component("policy") {
+       "//sandbox/linux:suid_sandbox_client",
+     ]
+   }
++  if (is_openbsd) {
++    sources += [
++      "openbsd/sandbox_openbsd.cc",
++      "openbsd/sandbox_openbsd.h",
++    ]
++    deps += [
++      "//sandbox:sandbox_buildflags",
++    ]
++    libs = [ "util" ]
++  }
++  if (is_netbsd) {
++    sources += [
++      "netbsd/sandbox_netbsd.cc",
++      "netbsd/sandbox_netbsd.h",
++    ]
++    deps += [
++      "//sandbox:sandbox_buildflags",
++    ]
++    libs = [ "util" ]
++  }
+   if (is_chromeos) {
+     sources += [
+       "linux/bpf_ime_policy_linux.cc",

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2021/12/08 16:02:58 adam Exp $
+# $NetBSD: Makefile,v 1.55 2022/04/18 11:18:15 adam Exp $
 
-DISTNAME=	qtbase-everywhere-src-${QTVERSION}
+DISTNAME=	qtbase-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-psql-${QTVERSION}
-PKGREVISION=	3
 COMMENT=	Qt5 PostgreSQL plugin
 
 BUILD_QT5=		yes
