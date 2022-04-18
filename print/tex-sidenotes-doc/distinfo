@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/18 03:35:47 markd Exp $
+
+BLAKE2s (sidenotes.doc.r54524.tar.xz) = 18f4c4790eda8bb642540a36433c10c1ca36c9c23e52b807b37982c10bc403ff
+SHA512 (sidenotes.doc.r54524.tar.xz) = db5f8666987eeb2c8e29426a91bc731f8c380176b3f0285c4c4ca8554b91c85af52d0ebe16d57cdb558d8c7d1e97c6f169addb12a57a107c00ff36486dd2d218
+Size (sidenotes.doc.r54524.tar.xz) = 304908 bytes
