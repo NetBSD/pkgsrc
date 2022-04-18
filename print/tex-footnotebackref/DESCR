@@ -1,0 +1,3 @@
+The package provides the means of creating hyperlinks, from a
+footnote at the bottom of the page, back to the occurence of
+the footnote in the main text.
