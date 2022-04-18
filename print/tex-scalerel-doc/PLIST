@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/18 03:33:09 markd Exp $
+share/texmf-dist/doc/latex/scalerel/README
+share/texmf-dist/doc/latex/scalerel/scalerel.pdf
+share/texmf-dist/doc/latex/scalerel/scalerel.tex
