@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2022/04/16 00:31:35 markd Exp $
+# $NetBSD: Makefile,v 1.26 2022/04/18 03:53:16 markd Exp $
 
 DISTNAME=	collection-publishers
-PKGNAME=	texlive-${DISTNAME}-2022pre1
+PKGNAME=	texlive-${DISTNAME}-2022pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	62987
@@ -59,7 +59,7 @@ DEPENDS+=	tex-arsclassica-[0-9]*:../../print/tex-arsclassica
 # depend chifoot
 # depend chs-physics-report
 # depend cje
-# depend classicthesis
+DEPENDS+=	tex-classicthesis-[0-9]*:../../print/tex-classicthesis
 # depend cleanthesis
 # depend cmpj
 # depend confproc
