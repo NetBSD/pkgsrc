@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2021/12/08 16:05:49 adam Exp $
+# $NetBSD: Makefile,v 1.7 2022/04/18 12:36:09 nia Exp $
 
 DISTNAME=	gstreamer-vaapi-1.18.5
 PKGNAME=	${DISTNAME:S/^gstreamer/gst-plugins1/1}
-PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gstreamer-vaapi/
 EXTRACT_SUFX=	.tar.xz

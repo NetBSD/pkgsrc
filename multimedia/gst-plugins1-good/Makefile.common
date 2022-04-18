@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.38 2021/11/15 22:01:20 wiz Exp $
+# $NetBSD: Makefile.common,v 1.39 2022/04/18 12:36:08 nia Exp $
 
-DISTNAME=	gst-plugins-good-1.18.5
+DISTNAME=	gst-plugins-good-1.20.1
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-plugins-good/
 EXTRACT_SUFX=	.tar.xz
 
@@ -25,9 +25,9 @@ PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
-# grep '^option' meson_options.txt | \
+# grep '^option' meson_options.txt | grep feature | \
 # sed -e "s/',.*//g" -e "s/option('//g" | \
-# xargs printf 'GST_PLUGINS_SET+=	%s\n'
+# xargs printf 'GST_PLUGINS_SET+=\t%s\n'
 GST_PLUGINS_SET+=	alpha
 GST_PLUGINS_SET+=	apetag
 GST_PLUGINS_SET+=	audiofx
