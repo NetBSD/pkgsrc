@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/01/05 15:41:27 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/04/18 20:18:45 tnn Exp $
 
 DISTNAME=	xml2rfc-3.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,8 +7,8 @@ CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xml2rfc/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://tools.ietf.org/tools/xml2rfc/trac/
-COMMENT=	IETF RFC 7749 XML-to-RFC conversion too
+HOMEPAGE=	https://github.com/ietf-tools/xml2rfc
+COMMENT=	IETF RFC 7749 XML-to-RFC conversion tool
 LICENSE=	modified-bsd
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-fonttools via py-weasyprint
@@ -20,7 +20,8 @@ DEPENDS+=	${PYPKGPREFIX}-flakes>=0.8.1:../../devel/py-flakes
 DEPENDS+=	${PYPKGPREFIX}-google-i18n-address>=2.3.2:../../devel/py-google-i18n-address
 DEPENDS+=	${PYPKGPREFIX}-html5lib>=1.0.1:../../textproc/py-html5lib
 DEPENDS+=	${PYPKGPREFIX}-intervaltree>=2.1.0,!=3.0.0:../../devel/py-intervaltree
-DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.11,<3.0:../../textproc/py-jinja2
+BROKEN=		"broken by jinja2 3.x update"
+#DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.11,<3.0:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-kitchen>=1.2.6:../../devel/py-kitchen
 DEPENDS+=	${PYPKGPREFIX}-lxml>=2.2.8,!=4.3.1:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.5.0:../../devel/py-requests
