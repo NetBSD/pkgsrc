@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2020/05/10 04:13:24 markd Exp $
+# $NetBSD: Makefile,v 1.11 2022/04/18 04:37:13 markd Exp $
 
 DISTNAME=	collection-context
-PKGNAME=	texlive-${DISTNAME}-2020pre1
+PKGNAME=	texlive-${DISTNAME}-2022
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	54074
@@ -20,8 +20,8 @@ DEPENDS+=	tex-context-animation-[0-9]*:../../print/tex-context-animation
 DEPENDS+=	tex-context-annotation-[0-9]*:../../print/tex-context-annotation
 DEPENDS+=	tex-context-bnf-[0-9]*:../../print/tex-context-bnf
 DEPENDS+=	tex-context-chromato-[0-9]*:../../print/tex-context-chromato
-# depend context-cmscbf
-# depend context-cmttbf
+DEPENDS+=	tex-context-cmscbf-[0-9]*:../../print/tex-context-cmscbf
+DEPENDS+=	tex-context-cmttbf-[0-9]*:../../print/tex-context-cmttbf
 DEPENDS+=	tex-context-construction-plan-[0-9]*:../../print/tex-context-construction-plan
 DEPENDS+=	tex-context-cyrillicnumbers-[0-9]*:../../print/tex-context-cyrillicnumbers
 DEPENDS+=	tex-context-degrade-[0-9]*:../../print/tex-context-degrade
@@ -31,14 +31,13 @@ DEPENDS+=	tex-context-french-[0-9]*:../../print/tex-context-french
 DEPENDS+=	tex-context-fullpage-[0-9]*:../../print/tex-context-fullpage
 DEPENDS+=	tex-context-gantt-[0-9]*:../../print/tex-context-gantt
 DEPENDS+=	tex-context-gnuplot-[0-9]*:../../print/tex-context-gnuplot
-# depend context-handlecsv
-# depend context-inifile
-# depend context-layout
+DEPENDS+=	tex-context-handlecsv-[0-9]*:../../print/tex-context-handlecsv
+DEPENDS+=	tex-context-inifile-[0-9]*:../../print/tex-context-inifile
+DEPENDS+=	tex-context-layout-[0-9]*:../../print/tex-context-layout
 DEPENDS+=	tex-context-letter-[0-9]*:../../print/tex-context-letter
 DEPENDS+=	tex-context-lettrine-[0-9]*:../../print/tex-context-lettrine
 DEPENDS+=	tex-context-mathsets-[0-9]*:../../print/tex-context-mathsets
-# only a doc package exists
-#DEPENDS+=	tex-context-notes-zh-cn-[0-9]*:../../print/tex-context-notes-zh-cn
+# context-notes-zh-cn is documentation only
 DEPENDS+=	tex-context-rst-[0-9]*:../../print/tex-context-rst
 DEPENDS+=	tex-context-ruby-[0-9]*:../../print/tex-context-ruby
 DEPENDS+=	tex-context-simplefonts-[0-9]*:../../print/tex-context-simplefonts
@@ -49,7 +48,7 @@ DEPENDS+=	tex-context-typearea-[0-9]*:../../print/tex-context-typearea
 DEPENDS+=	tex-context-typescripts-[0-9]*:../../print/tex-context-typescripts
 DEPENDS+=	tex-context-vim-[0-9]*:../../print/tex-context-vim
 DEPENDS+=	tex-context-visualcounter-[0-9]*:../../print/tex-context-visualcounter
-# depend npp-for-context
+# npp-for-context is documentation only
 
 META_PACKAGE=	yes
 
