@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/18 03:12:39 markd Exp $
+
+BLAKE2s (footnotebackref.doc.r27034.tar.xz) = eb4c6f1da42f14ffc1a38382e5192eb29413c29ad974dcfa90629edbc45e5902
+SHA512 (footnotebackref.doc.r27034.tar.xz) = 685484323b721c5277aeaa041b1d40b0d4675bc901a371f36dbff6246063252bca69261748a096919c7345a4a6e6284a6093068555bb43eb92fbf7cfea41facc
+Size (footnotebackref.doc.r27034.tar.xz) = 112100 bytes
