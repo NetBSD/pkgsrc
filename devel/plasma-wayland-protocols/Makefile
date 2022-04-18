@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/12/08 16:04:05 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/04/18 19:10:54 adam Exp $
 
 DISTNAME=	plasma-wayland-protocols-1.1.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel kde
 MASTER_SITES=	${MASTER_SITE_KDE:=plasma-wayland-protocols/1.1.1/}
 EXTRACT_SUFX=	.tar.xz

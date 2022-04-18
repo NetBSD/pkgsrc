@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.93 2021/12/08 16:05:35 adam Exp $
+# $NetBSD: Makefile,v 1.94 2022/04/18 19:11:36 adam Exp $
 
 DISTNAME=	qalculate-gtk-3.5.0
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Qalculate/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}

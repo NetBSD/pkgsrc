@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2021/12/08 16:07:00 adam Exp $
+# $NetBSD: Makefile,v 1.67 2022/04/18 19:12:20 adam Exp $
 
 DISTNAME=	snownews-1.9
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=msharov/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

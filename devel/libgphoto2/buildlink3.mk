@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2021/12/08 16:01:58 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2022/04/18 19:09:48 adam Exp $
 
 BUILDLINK_TREE+=	libgphoto2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgphoto2
 LIBGPHOTO2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgphoto2+=	libgphoto2>=2.1.2
-BUILDLINK_ABI_DEPENDS.libgphoto2+=	libgphoto2>=2.5.27
+BUILDLINK_ABI_DEPENDS.libgphoto2+=	libgphoto2>=2.5.27nb2
 BUILDLINK_PKGSRCDIR.libgphoto2?=	../../devel/libgphoto2
 
 .include "../../mk/bsd.fast.prefs.mk"
