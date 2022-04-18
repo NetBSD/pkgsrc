@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/18 04:27:38 markd Exp $
+share/texmf-dist/tex/context/third/handlecsv/t-handlecsv-extra.lua
+share/texmf-dist/tex/context/third/handlecsv/t-handlecsv-tools.lua
+share/texmf-dist/tex/context/third/handlecsv/t-handlecsv.lua
+share/texmf-dist/tex/context/third/handlecsv/t-handlecsv.tex
