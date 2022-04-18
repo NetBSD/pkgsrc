@@ -1,52 +1,52 @@
-$NetBSD: patch-src_3rdparty_chromium_chrome_browser_BUILD.gn,v 1.1 2021/08/03 21:04:34 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_chrome_browser_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/chrome/browser/BUILD.gn.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/chrome/browser/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/chrome/browser/BUILD.gn
-@@ -4114,7 +4114,7 @@ jumbo_static_library("browser") {
+@@ -4709,7 +4709,7 @@ static_library("browser") {
      ]
    }
  
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
-     if (use_aura) {
-       deps += [ "//third_party/fontconfig" ]
-       if (use_dbus) {
-@@ -4200,7 +4200,7 @@ jumbo_static_library("browser") {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
+     sources += [
+       "chrome_browser_main_linux.cc",
+       "chrome_browser_main_linux.h",
+@@ -4806,7 +4806,7 @@ static_library("browser") {
      sources += [ "hang_monitor/hang_crash_dump.cc" ]
    }
  
--  if (is_win || is_linux) {
-+  if (is_win || is_linux || is_bsd) {
+-  if (is_win || is_linux || is_chromeos) {
++  if (is_win || is_linux || is_chromeos || is_bsd) {
      sources += [
        "renderer_context_menu/spelling_options_submenu_observer.cc",
        "renderer_context_menu/spelling_options_submenu_observer.h",
-@@ -4338,7 +4338,7 @@ jumbo_static_library("browser") {
+@@ -4938,7 +4938,7 @@ static_library("browser") {
      ]
    }
  
 -  if (is_posix && !is_mac) {
 +  if (is_posix && !is_mac && !is_bsd) {
-     # TODO(crbug.com/753619): Enable crash reporting on Fuchsia.
+     # TODO(crbug.com / 753619): Enable crash reporting on Fuchsia.
      sources += [
        "//chrome/app/chrome_crash_reporter_client.cc",
-@@ -4351,14 +4351,14 @@ jumbo_static_library("browser") {
+@@ -4951,14 +4951,14 @@ static_library("browser") {
      ]
    }
  
 -  if (is_win || is_mac || (is_linux && !is_chromeos)) {
-+  if (is_win || is_mac || ((is_linux || is_bsd) && !is_chromeos)) {
++  if (is_win || is_mac || (is_linux && !is_chromeos) || is_bsd) {
      sources += [
        "password_manager/password_store_signin_notifier_impl.cc",
        "password_manager/password_store_signin_notifier_impl.h",
      ]
    }
  
--  if (is_win || is_mac || is_linux) {
-+  if (is_win || is_mac || is_linux || is_bsd) {
+-  if (is_win || is_mac || is_linux || is_chromeos) {
++  if (is_win || is_mac || is_linux || is_chromeos || is_bsd) {
      sources += [
        "crash_upload_list/crash_upload_list_crashpad.cc",
        "crash_upload_list/crash_upload_list_crashpad.h",
-@@ -5647,7 +5647,7 @@ grit("resources") {
+@@ -6258,7 +6258,7 @@ grit("resources") {
      if (is_chromeos) {
        inputs = [ "resources/plugin_metadata/plugins_chromeos.json" ]
      }

@@ -1,22 +1,22 @@
-$NetBSD: patch-src_3rdparty_chromium_chromecast_bindings_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_chromecast_bindings_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/chromecast/bindings/BUILD.gn.orig	2020-07-15 18:56:46.000000000 +0000
+--- src/3rdparty/chromium/chromecast/bindings/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/chromecast/bindings/BUILD.gn
-@@ -52,7 +52,7 @@ if (is_fuchsia) {
+@@ -51,7 +51,7 @@ if (is_fuchsia) {
    }
  }
  
--if (is_linux || is_android) {
-+if (is_linux || is_android || is_bsd) {
+-if (is_linux || is_chromeos || is_android) {
++if (is_linux || is_chromeos || is_android || is_bsd) {
    source_set("bindings_manager_cast") {
      sources = [
        "bindings_manager_cast.cc",
-@@ -99,7 +99,7 @@ if (is_linux || is_android) {
+@@ -98,7 +98,7 @@ if (is_linux || is_chromeos || is_androi
  source_set("browsertests") {
    testonly = true
    deps = []
--  if (is_linux || is_android) {
-+  if (is_linux || is_android || is_bsd) {
+-  if (is_linux || is_chromeos || is_android) {
++  if (is_linux || is_chromeos || is_android || is_bsd) {
      deps += [ "//chromecast/bindings:browsertests_cast" ]
    }
  }

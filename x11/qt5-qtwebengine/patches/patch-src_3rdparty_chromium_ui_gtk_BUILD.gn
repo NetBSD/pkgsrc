@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_ui_gtk_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_ui_gtk_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/ui/gtk/BUILD.gn.orig	2020-06-25 09:32:24.000000000 +0000
+--- src/3rdparty/chromium/ui/gtk/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/ui/gtk/BUILD.gn
 @@ -2,7 +2,7 @@
  # Use of this source code is governed by a BSD-style license that can be
  # found in the LICENSE file.
  
--assert(is_linux, "This file should only be referenced on Linux")
-+assert(is_linux || is_bsd, "This file should only be referenced on Linux")
+-assert(is_linux || is_chromeos, "This file should only be referenced on Linux")
++assert(is_linux || is_chromeos || is_bsd,, "This file should only be referenced on Linux")
  
  import("//build/config/features.gni")
  import("//build/config/jumbo.gni")

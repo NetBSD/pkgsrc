@@ -1,22 +1,22 @@
-$NetBSD: patch-src_3rdparty_chromium_gpu_command__buffer_service_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_gpu_command__buffer_service_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/gpu/command_buffer/service/BUILD.gn.orig	2020-07-15 18:56:47.000000000 +0000
+--- src/3rdparty/chromium/gpu/command_buffer/service/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/gpu/command_buffer/service/BUILD.gn
-@@ -331,7 +331,7 @@ target(link_target_type, "gles2_sources"
+@@ -340,7 +340,7 @@ target(link_target_type, "gles2_sources"
        "//gpu/vulkan",
      ]
  
--    if (is_linux || is_fuchsia || is_android || is_win) {
-+    if (is_linux || is_fuchsia || is_android || is_win || is_bsd) {
+-    if (is_linux || is_chromeos || is_fuchsia || is_android || is_win) {
++    if (is_linux || is_chromeos || is_fuchsia || is_android || is_win || is_bsd) {
        sources += [
-         "external_vk_image_backing.cc",
-         "external_vk_image_backing.h",
-@@ -355,7 +355,7 @@ target(link_target_type, "gles2_sources"
+         "external_semaphore.cc",
+         "external_semaphore.h",
+@@ -368,7 +368,7 @@ target(link_target_type, "gles2_sources"
        ]
      }
  
--    if (is_linux && use_dawn) {
-+    if ((is_linux || is_bsd) && use_dawn) {
+-    if ((is_linux || is_chromeos) && use_dawn) {
++    if ((is_linux || is_chromeos || is_bsd) && use_dawn) {
        sources += [
          "external_vk_image_dawn_representation.cc",
          "external_vk_image_dawn_representation.h",

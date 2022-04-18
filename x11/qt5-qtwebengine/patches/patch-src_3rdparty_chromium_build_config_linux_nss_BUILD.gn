@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_build_config_linux_nss_BUILD.gn,v 1.1 2021/08/03 21:04:34 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_build_config_linux_nss_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/build/config/linux/nss/BUILD.gn.orig	2020-07-15 18:55:48.000000000 +0000
+--- src/3rdparty/chromium/build/config/linux/nss/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/build/config/linux/nss/BUILD.gn
 @@ -4,7 +4,7 @@
  
  import("//build/config/linux/pkg_config.gni")
  
--if (is_linux) {
-+if (is_linux || is_bsd) {
+-if (is_linux || is_chromeos) {
++if (is_linux || is_chromeos || is_bsd) {
    # This is a dependency on NSS with no libssl. On Linux we use a built-in SSL
    # library but the system NSS libraries. Non-Linux platforms using NSS use the
    # hermetic one in //third_party/nss.

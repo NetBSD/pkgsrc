@@ -1,0 +1,13 @@
+$NetBSD: patch-src_3rdparty_chromium_build_config_deprecated__default__sources__assignment__filter.gni,v 1.1 2022/04/18 11:18:18 adam Exp $
+
+--- src/3rdparty/chromium/build/config/deprecated_default_sources_assignment_filter.gni.orig	2022-03-12 17:13:24.563114193 +0000
++++ src/3rdparty/chromium/build/config/deprecated_default_sources_assignment_filter.gni
+@@ -61,7 +61,7 @@ if (!is_ios) {
+ if (!is_apple) {
+   deprecated_default_sources_assignment_filter += [ "*.mm" ]
+ }
+-if (!is_linux && !is_chromeos) {
++if (!is_linux && !is_chromeos && !is_bsd) {
+   deprecated_default_sources_assignment_filter += [
+     "*_linux.h",
+     "*_linux.cc",

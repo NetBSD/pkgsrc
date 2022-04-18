@@ -1,19 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_chrome_browser_extensions_BUILD.gn,v 1.1 2021/08/03 21:04:34 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_chrome_browser_extensions_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/chrome/browser/extensions/BUILD.gn.orig	2020-07-08 21:41:46.000000000 +0000
+--- src/3rdparty/chromium/chrome/browser/extensions/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/chrome/browser/extensions/BUILD.gn
-@@ -1110,7 +1110,13 @@ static_library("extensions") {
+@@ -1137,7 +1137,7 @@ static_library("extensions") {
      ]
    }
  
--  if (is_linux) {
-+  #if (is_bsd) {
-+  #  deps -= [
-+  #    "api/image_writer_private/removable_storage_provider_linux.cc",
-+  #  ]
-+  #}
-+
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      deps += [ "//third_party/fontconfig" ]
  
      if (use_dbus) {

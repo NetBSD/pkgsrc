@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_ui_gl_features.gni,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_ui_gl_features.gni,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/ui/gl/features.gni.orig	2020-06-25 09:32:24.000000000 +0000
+--- src/3rdparty/chromium/ui/gl/features.gni.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/ui/gl/features.gni
-@@ -9,7 +9,7 @@ declare_args() {
+@@ -13,7 +13,7 @@ declare_args() {
  
    # Should EGL support be compiled?
    # Can be overriden to test during bring up of EGL support on other platforms.
--  use_egl = is_win || is_android || is_linux || is_fuchsia || is_mac
-+  use_egl = is_win || is_android || is_linux || is_fuchsia || is_mac || is_bsd
+-  use_egl = is_win || is_android || is_linux || is_chromeos || is_fuchsia || is_mac
++  use_egl = is_win || is_android || is_linux || is_chromeos || is_fuchsia || is_mac || is_bsd
  
    # Should Dawn support be compiled to back the WebGPU implementation?
    # Also controls linking Dawn depedencies in such as SPIRV-Tools/SPIRV-Cross.

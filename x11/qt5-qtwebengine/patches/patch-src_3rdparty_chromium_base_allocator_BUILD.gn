@@ -1,22 +1,22 @@
-$NetBSD: patch-src_3rdparty_chromium_base_allocator_BUILD.gn,v 1.1 2021/08/03 21:04:34 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_allocator_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/base/allocator/BUILD.gn.orig	2020-07-15 18:55:48.000000000 +0000
+--- src/3rdparty/chromium/base/allocator/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/base/allocator/BUILD.gn
-@@ -64,7 +64,7 @@ config("tcmalloc_flags") {
+@@ -70,7 +70,7 @@ config("tcmalloc_flags") {
      cflags = []
    }
  
--  if (is_linux || is_android) {
-+  if (is_linux || is_android || is_bsd) {
+-  if (is_linux || is_chromeos || is_android) {
++  if (is_linux || is_chromeos || is_android || is_bsd) {
      # We enable all warnings by default, but upstream disables a few.
      # Keep "-Wno-*" flags in sync with upstream by comparing against:
      # http://code.google.com/p/google-perftools/source/browse/trunk/Makefile.am
-@@ -233,7 +233,7 @@ if (use_allocator == "tcmalloc") {
+@@ -239,7 +239,7 @@ if (use_allocator == "tcmalloc") {
        defines += [ "ENABLE_PROFILING=1" ]
      }
  
--    if (is_linux || is_android) {
-+    if (is_linux || is_android || is_bsd) {
+-    if (is_linux || is_chromeos || is_android) {
++    if (is_linux || is_chromeos || is_android || is_bsd) {
        sources -= [
          "$tcmalloc_dir/src/system-alloc.h",
          "$tcmalloc_dir/src/windows/port.cc",

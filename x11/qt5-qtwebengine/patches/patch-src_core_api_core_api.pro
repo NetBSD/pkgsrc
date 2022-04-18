@@ -1,6 +1,5 @@
-$NetBSD: patch-src_core_api_core_api.pro,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_core_api_core_api.pro,v 1.2 2022/04/18 11:18:19 adam Exp $
 
-Index: src/core/api/core_api.pro
 --- src/core/api/core_api.pro.orig
 +++ src/core/api/core_api.pro
 @@ -67,7 +67,7 @@ SOURCES = \

@@ -1,8 +1,8 @@
-$NetBSD: patch-src_3rdparty_chromium_base_debug_elf__reader.cc,v 1.1 2021/08/03 21:04:34 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_debug_elf__reader.cc,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/base/debug/elf_reader.cc.orig	2020-06-25 09:31:18.000000000 +0000
+--- src/3rdparty/chromium/base/debug/elf_reader.cc.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/base/debug/elf_reader.cc
-@@ -36,7 +36,9 @@ using Nhdr = Elf64_Nhdr;
+@@ -38,7 +38,9 @@ using Nhdr = Elf64_Nhdr;
  using Word = Elf64_Word;
  #endif
  
@@ -10,9 +10,9 @@ $NetBSD: patch-src_3rdparty_chromium_base_debug_elf__reader.cc,v 1.1 2021/08/03 
  constexpr char kGnuNoteName[] = "GNU";
 +#endif
  
- // Returns a pointer to the header of the ELF binary mapped into memory,
- // or a null pointer if the header is invalid.
-@@ -99,6 +101,7 @@ size_t ReadElfBuildId(const void* elf_ma
+ // Returns a pointer to the header of the ELF binary mapped into memory, or a
+ // null pointer if the header is invalid. Here and below |elf_mapped_base| is a
+@@ -75,6 +77,7 @@ size_t ReadElfBuildId(const void* elf_ma
      bool found = false;
      while (current_section < section_end) {
        current_note = reinterpret_cast<const Nhdr*>(current_section);
@@ -20,7 +20,7 @@ $NetBSD: patch-src_3rdparty_chromium_base_debug_elf__reader.cc,v 1.1 2021/08/03 
        if (current_note->n_type == NT_GNU_BUILD_ID) {
          StringPiece note_name(current_section + sizeof(Nhdr),
                                current_note->n_namesz);
-@@ -108,6 +111,7 @@ size_t ReadElfBuildId(const void* elf_ma
+@@ -84,6 +87,7 @@ size_t ReadElfBuildId(const void* elf_ma
            break;
          }
        }

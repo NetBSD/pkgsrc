@@ -1,40 +1,39 @@
-$NetBSD: patch-src_3rdparty_chromium_content_browser_child__process__launcher__helper__linux.cc,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_content_browser_child__process__launcher__helper__linux.cc,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/content/browser/child_process_launcher_helper_linux.cc.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/content/browser/child_process_launcher_helper_linux.cc.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/content/browser/child_process_launcher_helper_linux.cc
-@@ -18,7 +18,9 @@
+@@ -19,7 +19,9 @@
+ #include "content/public/common/result_codes.h"
  #include "content/public/common/sandboxed_process_launcher_delegate.h"
- #include "services/service_manager/sandbox/linux/sandbox_linux.h"
- #include "services/service_manager/zygote/common/common_sandbox_support_linux.h"
+ #include "content/public/common/zygote/sandbox_support_linux.h"
 +#if !defined(OS_BSD)
- #include "services/service_manager/zygote/common/zygote_handle.h"
+ #include "content/public/common/zygote/zygote_handle.h"
 +#endif
- #include "services/service_manager/zygote/host/zygote_communication_linux.h"
- #include "services/service_manager/zygote/host/zygote_host_impl_linux.h"
+ #include "sandbox/policy/linux/sandbox_linux.h"
  
-@@ -50,11 +52,13 @@ bool ChildProcessLauncherHelper::BeforeL
+ namespace content {
+@@ -50,10 +52,12 @@ bool ChildProcessLauncherHelper::BeforeL
    options->fds_to_remap = files_to_register.GetMappingWithIDAdjustment(
        base::GlobalDescriptors::kBaseDescriptor);
  
 +#if !defined(OS_BSD)
    if (GetProcessType() == switches::kRendererProcess) {
      const int sandbox_fd = SandboxHostLinux::GetInstance()->GetChildSocket();
-     options->fds_to_remap.push_back(
-         std::make_pair(sandbox_fd, service_manager::GetSandboxFD()));
+     options->fds_to_remap.push_back(std::make_pair(sandbox_fd, GetSandboxFD()));
    }
 +#endif
  
    options->environment = delegate_->GetEnvironment();
  
-@@ -69,6 +73,7 @@ ChildProcessLauncherHelper::LaunchProces
+@@ -68,6 +72,7 @@ ChildProcessLauncherHelper::LaunchProces
      int* launch_result) {
    *is_synchronous_launch = true;
  
 +#if !defined(OS_BSD)
-   service_manager::ZygoteHandle zygote_handle =
+   ZygoteHandle zygote_handle =
        base::CommandLine::ForCurrentProcess()->HasSwitch(switches::kNoZygote)
            ? nullptr
-@@ -82,7 +87,6 @@ ChildProcessLauncherHelper::LaunchProces
+@@ -81,7 +86,6 @@ ChildProcessLauncherHelper::LaunchProces
          GetProcessType());
      *launch_result = LAUNCH_RESULT_SUCCESS;
  
@@ -42,9 +41,9 @@ $NetBSD: patch-src_3rdparty_chromium_content_browser_child__process__launcher__h
      if (handle) {
        // It could be a renderer process or an utility process.
        int oom_score = content::kMiscOomScore;
-@@ -92,13 +96,13 @@ ChildProcessLauncherHelper::LaunchProces
-       service_manager::ZygoteHostImpl::GetInstance()->AdjustRendererOOMScore(
-           handle, oom_score);
+@@ -90,13 +94,13 @@ ChildProcessLauncherHelper::LaunchProces
+         oom_score = content::kLowestRendererOomScore;
+       ZygoteHostImpl::GetInstance()->AdjustRendererOOMScore(handle, oom_score);
      }
 -#endif
  
@@ -57,7 +56,7 @@ $NetBSD: patch-src_3rdparty_chromium_content_browser_child__process__launcher__h
  
    Process process;
    process.process = base::LaunchProcess(*command_line(), options);
-@@ -116,10 +120,13 @@ ChildProcessTerminationInfo ChildProcess
+@@ -114,10 +118,13 @@ ChildProcessTerminationInfo ChildProcess
      const ChildProcessLauncherHelper::Process& process,
      bool known_dead) {
    ChildProcessTerminationInfo info;
@@ -72,9 +71,9 @@ $NetBSD: patch-src_3rdparty_chromium_content_browser_child__process__launcher__h
      info.status = base::GetKnownDeadTerminationStatus(process.process.Handle(),
                                                        &info.exit_code);
    } else {
-@@ -143,13 +150,17 @@ void ChildProcessLauncherHelper::ForceNo
+@@ -141,13 +148,17 @@ void ChildProcessLauncherHelper::ForceNo
    DCHECK(CurrentlyOnProcessLauncherTaskRunner());
-   process.process.Terminate(service_manager::RESULT_CODE_NORMAL_EXIT, false);
+   process.process.Terminate(RESULT_CODE_NORMAL_EXIT, false);
    // On POSIX, we must additionally reap the child.
 +#if !defined(OS_BSD)
    if (process.zygote) {

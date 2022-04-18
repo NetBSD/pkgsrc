@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_build_config_linux_dri_BUILD.gn,v 1.1 2021/08/03 21:04:34 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_build_config_linux_dri_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/build/config/linux/dri/BUILD.gn.orig	2020-06-25 09:31:19.000000000 +0000
+--- src/3rdparty/chromium/build/config/linux/dri/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/build/config/linux/dri/BUILD.gn
 @@ -4,7 +4,7 @@
  
  import("//build/config/linux/pkg_config.gni")
  
--assert(is_linux, "This file should only be referenced on Linux")
-+assert(is_linux || is_bsd, "This file should only be referenced on Linux")
+-assert(is_linux || is_chromeos, "This file should only be referenced on Linux")
++assert(is_linux || is_chromeos || is_bsd, "This file should only be referenced on Linux")
  
  pkg_config("dri") {
    packages = [ "dri" ]

@@ -1,21 +1,21 @@
-$NetBSD: patch-src_3rdparty_chromium_ui_base_ui__features.gni,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_ui_base_ui__features.gni,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/ui/base/ui_features.gni.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/ui/base/ui_features.gni.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/ui/base/ui_features.gni
 @@ -6,13 +6,13 @@ import("//build/config/ui.gni")
  
  declare_args() {
    # Optional system library.
--  use_xkbcommon = use_ozone && is_linux && !is_chromecast
-+  use_xkbcommon = use_ozone && (is_linux || is_bsd) && !is_chromecast
+-  use_xkbcommon = use_ozone && (is_linux || is_chromeos) && !is_chromecast
++  use_xkbcommon = use_ozone && (is_linux || is_chromeos || is_bsd) && !is_chromecast
  
    # Whether the platform provides a native accessibility toolkit.
    has_native_accessibility = use_atk || is_win || is_mac
  
    # Whether the message center should be included for displaying notifications.
--  enable_message_center = is_win || is_mac || is_linux
-+  enable_message_center = is_win || is_mac || is_linux || is_bsd
+-  enable_message_center = is_win || is_mac || is_linux || is_chromeos || is_fuchsia
++  enable_message_center = is_win || is_mac || is_linux || is_chromeos || is_fuchsia || is_bsd
  }
  
--enable_hidpi = is_mac || is_win || is_linux || is_ios
-+enable_hidpi = is_mac || is_win || is_linux || is_ios || is_bsd
+-enable_hidpi = is_mac || is_win || is_linux || is_chromeos || is_ios
++enable_hidpi = is_mac || is_win || is_linux || is_chromeos || is_ios || is_bsd

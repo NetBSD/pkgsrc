@@ -1,0 +1,13 @@
+$NetBSD: patch-src_3rdparty_chromium_ui_platform__window_BUILD.gn,v 1.1 2022/04/18 11:18:19 adam Exp $
+
+--- src/3rdparty/chromium/ui/platform_window/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
++++ src/3rdparty/chromium/ui/platform_window/BUILD.gn
+@@ -41,7 +41,7 @@ component("platform_window") {
+     ]
+   }
+ 
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
+     sources += [
+       "extensions/wayland_extension.cc",
+       "extensions/wayland_extension.h",

@@ -1,74 +1,74 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_angle_src_tests_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_angle_src_tests_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/third_party/angle/src/tests/BUILD.gn.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/third_party/angle/src/tests/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/third_party/angle/src/tests/BUILD.gn
-@@ -130,7 +130,7 @@ angle_test("angle_unittests") {
+@@ -13,7 +13,7 @@ declare_args() {
+   build_angle_gles1_conform_tests = false
+   build_angle_trace_perf_tests = false
+   build_angle_perftests =
+-      is_win || is_linux || is_chromeos || is_android || is_mac || is_fuchsia
++      is_win || is_linux || is_chromeos || is_android || is_mac || is_fuchsia || is_bsd
+ }
+ 
+ angle_test("test_utils_unittest_helper") {
+@@ -146,7 +146,7 @@ angle_test("angle_unittests") {
    }
  }
  
--if (is_win || is_linux || is_mac || is_android || is_fuchsia) {
-+if (is_win || is_linux || is_mac || is_android || is_fuchsia || is_bsd) {
+-if (is_win || is_linux || is_chromeos || is_mac || is_android || is_fuchsia) {
++if (is_win || is_linux || is_chromeos || is_mac || is_android || is_fuchsia || is_bsd) {
    import("angle_end2end_tests.gni")
  
    angle_test("angle_end2end_tests") {
-@@ -185,7 +185,7 @@ if (is_win || is_linux || is_mac || is_a
+@@ -203,7 +203,7 @@ if (is_win || is_linux || is_chromeos ||
    }
  }
  
--if (is_win || is_linux || is_mac || is_android) {
-+if (is_win || is_linux || is_mac || is_android || is_bsd) {
+-if (is_win || is_linux || is_chromeos || is_mac || is_android) {
++if (is_win || is_linux || is_chromeos || is_mac || is_android || is_bsd) {
    import("angle_white_box_tests.gni")
  
    angle_test("angle_white_box_tests") {
-@@ -251,7 +251,7 @@ angle_perftests_common("angle_perftests_
+@@ -267,7 +267,7 @@ angle_perftests_common("angle_perftests_
    test_utils = ":angle_common_test_utils_static"
  }
  
--if (is_win || is_linux || is_android || is_mac) {
-+if (is_win || is_linux || is_android || is_mac || is_bsd) {
+-if (is_win || is_linux || is_chromeos || is_android || is_mac) {
++if (is_win || is_linux || is_chromeos || is_android || is_mac || is_bsd) {
    import("angle_perftests.gni")
  
    # This test suite is for perf tests that use ANGLE's internals in some direct way.
-@@ -279,7 +279,7 @@ if (is_win || is_linux || is_android || 
-   }
- }
+@@ -342,13 +342,13 @@ if (build_angle_perftests) {
+       data_deps += [ "//testing:run_perf_test" ]
+     }
  
--if (is_win || is_linux || is_android || is_mac || is_fuchsia) {
-+if (is_win || is_linux || is_android || is_mac || is_fuchsia || is_bsd) {
-   import("angle_perftests.gni")
- 
-   angle_source_set("angle_trace_perftests") {
-@@ -330,13 +330,13 @@ if (is_win || is_linux || is_android || 
-       "${angle_root}:libGLESv2",
-     ]
- 
--    if (is_win || is_linux) {
-+    if (is_win || is_linux || is_bsd) {
+-    if (is_win || is_linux || is_chromeos) {
++    if (is_win || is_linux || is_chromeos || is_bsd) {
        data_deps += [ "${angle_root}/third_party/glmark2:glmark2_angle" ]
      }
      if (is_win && target_cpu != "arm64") {
        data_deps += [ "${angle_root}/third_party/glmark2:glmark2_wgl" ]
      }
--    if (is_linux) {
-+    if (is_linux || is_bsd) {
+-    if (is_linux || is_chromeos) {
++    if (is_linux || is_chromeos || is_bsd) {
        data_deps += [ "${angle_root}/third_party/glmark2:glmark2_glx" ]
      }
  
-@@ -740,7 +740,7 @@ if (build_angle_deqp_tests && !is_fuchsi
+@@ -885,7 +885,7 @@ if (build_angle_deqp_tests && !is_fuchsi
      # Ask the system headers to expose all the regular function otherwise
      # dEQP doesn't compile and produces warnings about implicitly defined
      # functions.
--    if (is_linux) {
-+    if (is_linux || is_bsd) {
+-    if (is_linux || is_chromeos) {
++    if (is_linux || is_chromeos || is_bsd) {
        # This has to be GNU_SOURCE as on Linux dEQP uses syscall()
        defines += [ "_GNU_SOURCE" ]
      }
-@@ -854,7 +854,7 @@ if (build_angle_deqp_tests && !is_fuchsi
+@@ -1020,7 +1020,7 @@ if (build_angle_deqp_tests && !is_fuchsi
      if (is_win) {
        sources += deqp_framework_delibs_sources_win
      }
--    if (is_linux || is_android || is_mac) {
-+    if (is_linux || is_android || is_mac || is_bsd) {
+-    if (is_linux || is_chromeos || is_android || is_mac) {
++    if (is_linux || is_chromeos || is_android || is_mac || is_bsd) {
        sources += deqp_framework_delibs_sources_unix
      }
  

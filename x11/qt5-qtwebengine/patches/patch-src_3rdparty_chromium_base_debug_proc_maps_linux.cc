@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_base_debug_proc_maps_linux.cc,v 1.1 2021/08/03 21:04:34 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_debug_proc_maps_linux.cc,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/base/debug/proc_maps_linux.cc.orig	2020-06-25 09:31:18.000000000 +0000
+--- src/3rdparty/chromium/base/debug/proc_maps_linux.cc.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/base/debug/proc_maps_linux.cc
 @@ -13,7 +13,7 @@
  #include "base/strings/string_split.h"
  #include "build/build_config.h"
  
--#if defined(OS_LINUX) || defined(OS_ANDROID)
-+#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_BSD)
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_ANDROID)
++#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_ANDROID) || defined(OS_BSD)
  #include <inttypes.h>
  #endif
  

@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_ui_gl_sync__control__vsync__provider.cc,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_ui_gl_sync__control__vsync__provider.cc,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/ui/gl/sync_control_vsync_provider.cc.orig	2020-07-15 18:56:34.000000000 +0000
+--- src/3rdparty/chromium/ui/gl/sync_control_vsync_provider.cc.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/ui/gl/sync_control_vsync_provider.cc
 @@ -11,7 +11,7 @@
  #include "base/trace_event/trace_event.h"
  #include "build/build_config.h"
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS)
++#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
  // These constants define a reasonable range for a calculated refresh interval.
  // Calculating refreshes out of this range will be considered a fatal error.
  const int64_t kMinVsyncIntervalUs = base::Time::kMicrosecondsPerSecond / 400;
@@ -15,8 +15,8 @@ $NetBSD: patch-src_3rdparty_chromium_ui_gl_sync__control__vsync__provider.cc,v 1
  namespace gl {
  
  SyncControlVSyncProvider::SyncControlVSyncProvider() : gfx::VSyncProvider() {
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS)
++#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
    // On platforms where we can't get an accurate reading on the refresh
    // rate we fall back to the assumption that we're displaying 60 frames
    // per second.
@@ -24,8 +24,8 @@ $NetBSD: patch-src_3rdparty_chromium_ui_gl_sync__control__vsync__provider.cc,v 1
      base::TimeTicks* timebase_out,
      base::TimeDelta* interval_out) {
    TRACE_EVENT0("gpu", "SyncControlVSyncProvider::GetVSyncParameters");
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS)
++#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
    // The actual clock used for the system time returned by glXGetSyncValuesOML
    // is unspecified. In practice, the clock used is likely to be either
    // CLOCK_REALTIME or CLOCK_MONOTONIC, so we compare the returned time to the
@@ -33,8 +33,8 @@ $NetBSD: patch-src_3rdparty_chromium_ui_gl_sync__control__vsync__provider.cc,v 1
  }
  
  bool SyncControlVSyncProvider::SupportGetVSyncParametersIfAvailable() const {
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS)
++#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
    return true;
  #else
    return false;

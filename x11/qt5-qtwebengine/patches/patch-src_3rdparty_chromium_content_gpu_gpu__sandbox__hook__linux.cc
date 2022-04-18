@@ -1,8 +1,8 @@
-$NetBSD: patch-src_3rdparty_chromium_content_gpu_gpu__sandbox__hook__linux.cc,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_content_gpu_gpu__sandbox__hook__linux.cc,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/content/gpu/gpu_sandbox_hook_linux.cc.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/content/gpu/gpu_sandbox_hook_linux.cc.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/content/gpu/gpu_sandbox_hook_linux.cc
-@@ -97,8 +97,13 @@ static const char kLibV4lEncPluginPath[]
+@@ -98,8 +98,13 @@ static const char kLibV4lEncPluginPath[]
      "/usr/lib/libv4l/plugins/libv4l-encplugin.so";
  #endif
  
@@ -13,11 +13,11 @@ $NetBSD: patch-src_3rdparty_chromium_content_gpu_gpu__sandbox__hook__linux.cc,v 
 +#endif
  
 +#if !defined(OS_BSD)
- void AddV4L2GpuWhitelist(
+ void AddV4L2GpuPermissions(
      std::vector<BrokerFilePermission>* permissions,
-     const service_manager::SandboxSeccompBPF::Options& options) {
-@@ -333,8 +338,10 @@ std::vector<BrokerFilePermission> FilePe
-   AddStandardGpuWhiteList(&permissions);
+     const sandbox::policy::SandboxSeccompBPF::Options& options) {
+@@ -359,8 +364,10 @@ std::vector<BrokerFilePermission> FilePe
+   AddStandardGpuPermissions(&permissions);
    return permissions;
  }
 +#endif
@@ -25,9 +25,9 @@ $NetBSD: patch-src_3rdparty_chromium_content_gpu_gpu__sandbox__hook__linux.cc,v 
  void LoadArmGpuLibraries() {
 +#if !defined(OS_BSD)
    // Preload the Mali library.
-   if (UseChromecastSandboxWhitelist()) {
-     for (const char* path : kWhitelistedChromecastPaths) {
-@@ -349,6 +356,7 @@ void LoadArmGpuLibraries() {
+   if (UseChromecastSandboxAllowlist()) {
+     for (const char* path : kAllowedChromecastPaths) {
+@@ -375,6 +382,7 @@ void LoadArmGpuLibraries() {
      // Preload the Tegra V4L2 (video decode acceleration) library.
      dlopen(kLibTegraPath, dlopen_flag);
    }
@@ -35,27 +35,42 @@ $NetBSD: patch-src_3rdparty_chromium_content_gpu_gpu__sandbox__hook__linux.cc,v 
  }
  
  bool LoadAmdGpuLibraries() {
-@@ -404,6 +412,7 @@ bool LoadLibrariesForGpu(
+@@ -414,12 +422,14 @@ void LoadV4L2Libraries(
+ }
+ 
+ void LoadChromecastV4L2Libraries() {
++#if !defined(OS_BSD)
+   for (const char* path : kAllowedChromecastPaths) {
+     const std::string library_path(std::string(path) +
+                                    std::string("libvpcodec.so"));
+     if (dlopen(library_path.c_str(), dlopen_flag))
+       break;
+   }
++#endif
+ }
+ 
+ bool LoadLibrariesForGpu(
+@@ -441,6 +451,7 @@ bool LoadLibrariesForGpu(
    return true;
  }
  
 +#if !defined(OS_BSD)
  sandbox::syscall_broker::BrokerCommandSet CommandSetForGPU(
-     const service_manager::SandboxLinux::Options& options) {
+     const sandbox::policy::SandboxLinux::Options& options) {
    sandbox::syscall_broker::BrokerCommandSet command_set;
-@@ -425,13 +434,18 @@ bool BrokerProcessPreSandboxHook(
-   service_manager::SetProcessTitleFromCommandLine(nullptr);
+@@ -462,13 +473,18 @@ bool BrokerProcessPreSandboxHook(
+   SetProcessTitleFromCommandLine(nullptr);
    return true;
  }
 +#endif
  
  }  // namespace
  
- bool GpuProcessPreSandboxHook(service_manager::SandboxLinux::Options options) {
+ bool GpuProcessPreSandboxHook(sandbox::policy::SandboxLinux::Options options) {
 +#if defined(OS_BSD)
 +  NOTIMPLEMENTED();
 +#else
-   service_manager::SandboxLinux::GetInstance()->StartBrokerProcess(
+   sandbox::policy::SandboxLinux::GetInstance()->StartBrokerProcess(
        CommandSetForGPU(options), FilePermissionsForGpu(options),
        base::BindOnce(BrokerProcessPreSandboxHook), options);
 +#endif

@@ -1,8 +1,8 @@
-$NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.1 2021/08/03 21:04:34 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/BUILD.gn.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/BUILD.gn
-@@ -199,7 +199,7 @@ group("gn_all") {
+@@ -206,7 +206,7 @@ group("gn_all") {
      ]
    }
  
@@ -11,12 +11,12 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.1 2021/08/03 21:04:34 markd Ex
      deps += [
        "//weblayer/shell:weblayer_shell",
        "//weblayer/test:weblayer_browsertests",
-@@ -405,12 +405,12 @@ group("gn_all") {
+@@ -409,12 +409,12 @@ group("gn_all") {
    #       seems currently broken for this platform at the moment, and the
    #       corresponding code build and works on Linux unmodified.
    #       See instructions in the corresponding BUILD.gn.
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      deps +=
          [ "//third_party/android_crazy_linker:android_crazy_linker_zip_fuzzer" ]
    }
@@ -26,7 +26,7 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.1 2021/08/03 21:04:34 markd Ex
      # This is only used by ChromeOS, but we want maximal fuzzer coverage, so
      # run it under linux too.
      deps += [
-@@ -465,6 +465,15 @@ group("gn_all") {
+@@ -469,6 +469,15 @@ group("gn_all") {
        "//testing:empty_main",
      ]
  
@@ -42,7 +42,7 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.1 2021/08/03 21:04:34 markd Ex
      if (use_dbus) {
        deps += [
          "//dbus:dbus_test_server",
-@@ -478,7 +487,7 @@ group("gn_all") {
+@@ -482,7 +491,7 @@ group("gn_all") {
      }
    }
  
@@ -51,7 +51,7 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.1 2021/08/03 21:04:34 markd Ex
      deps += [
        "//base:base_i18n_perftests",
        "//google_apis:google_apis_unittests",
-@@ -511,7 +520,7 @@ group("gn_all") {
+@@ -515,7 +524,7 @@ group("gn_all") {
        "//ui/compositor:compositor_unittests",
      ]
  
@@ -60,7 +60,7 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.1 2021/08/03 21:04:34 markd Ex
        deps += [
          "//chrome/test:load_library_perf_tests",
          "//chrome/test:sync_performance_tests",
-@@ -548,6 +557,27 @@ group("gn_all") {
+@@ -552,6 +561,27 @@ group("gn_all") {
        }
      }
  
@@ -88,16 +88,16 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.1 2021/08/03 21:04:34 markd Ex
      if (is_android) {
        deps += [ "//chrome/test/chromedriver:chromedriver($host_toolchain)" ]
      }
-@@ -562,7 +592,7 @@ group("gn_all") {
+@@ -566,7 +596,7 @@ group("gn_all") {
      if (enable_nacl) {
        deps += [ "//components/nacl/loader:nacl_loader_unittests" ]
  
--      if (is_linux) {
-+      if (is_linux || is_bsd) {
+-      if (is_linux || is_chromeos) {
++      if (is_linux || is_chromeos || is_bsd) {
          # TODO(dpranke): Figure out what platforms should actually have this.
          deps += [ "//components/nacl/loader:nacl_helper" ]
  
-@@ -597,6 +627,17 @@ group("gn_all") {
+@@ -600,6 +630,17 @@ group("gn_all") {
        "//third_party/breakpad:minidump_dump($host_toolchain)",
        "//third_party/breakpad:minidump_stackwalk($host_toolchain)",
      ]
@@ -115,7 +115,7 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.1 2021/08/03 21:04:34 markd Ex
  
      if (!is_android) {
        deps += [
-@@ -669,7 +710,7 @@ group("gn_all") {
+@@ -676,7 +717,7 @@ group("gn_all") {
          host_os == "win" && !use_qt) {
        deps += [ "//chrome/test/mini_installer:mini_installer_tests" ]
      }
@@ -124,7 +124,7 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.1 2021/08/03 21:04:34 markd Ex
      deps += [ "//third_party/breakpad:symupload($host_toolchain)" ]
    }
  
-@@ -684,7 +725,7 @@ group("gn_all") {
+@@ -691,7 +732,7 @@ group("gn_all") {
      }
    }
  
@@ -133,22 +133,22 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.1 2021/08/03 21:04:34 markd Ex
      deps += [
        "//third_party/crashpad/crashpad:crashpad_tests",
        "//third_party/crashpad/crashpad/handler:crashpad_handler",
-@@ -708,19 +749,19 @@ group("gn_all") {
+@@ -715,19 +756,19 @@ group("gn_all") {
      deps += [ "//content/browser/bluetooth/tools:bluetooth_metrics_hash" ]
    }
  
--  if (is_win || is_linux) {
-+  if (is_win || is_linux || is_bsd) {
+-  if (is_win || is_linux || is_chromeos) {
++  if (is_win || is_linux || is_chromeos || is_bsd) {
      deps += [ "//mojo" ]
    }
  
--  if (is_mac || is_linux || is_android || is_fuchsia) {
-+  if (is_mac || is_linux || is_android || is_fuchsia || is_bsd) {
+-  if (is_mac || is_linux || is_chromeos || is_android || is_fuchsia) {
++  if (is_mac || is_linux || is_chromeos || is_android || is_fuchsia || is_bsd) {
      deps += [ "//third_party/perfetto:all" ]
    }
  
--  if (is_win || is_mac || is_linux) {
-+  if (is_win || is_mac || is_linux || is_bsd) {
+-  if (is_win || is_mac || is_linux || is_chromeos) {
++  if (is_win || is_mac || is_linux || is_chromeos || is_bsd) {
      deps += [ "//third_party/sqlite:sqlite_shell" ]
    }
  
@@ -157,32 +157,31 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.1 2021/08/03 21:04:34 markd Ex
      # TODO(GYP): Figure out if any of these should be in gn_all
      # and figure out how cross-platform they are
      deps += [
-@@ -762,13 +803,13 @@ group("gn_all") {
+@@ -769,12 +810,12 @@ group("gn_all") {
        }
        deps += [ "//third_party/libjpeg_turbo:simd_asm" ]
      }
--    if (is_linux && current_toolchain == host_toolchain) {
-+    if ((is_linux || is_bsd) && current_toolchain == host_toolchain) {
+-    if ((is_linux || is_chromeos) && current_toolchain == host_toolchain) {
++    if ((is_linux || is_chromeos || is_bsd) && current_toolchain == host_toolchain) {
        deps += [ "//v8:v8_shell" ]
      }
    }
  
-   if ((is_linux && !is_chromecast) || (is_win && use_libfuzzer) ||
--      (use_libfuzzer && is_mac)) {
-+      (use_libfuzzer && is_mac) || is_bsd) {
+-  if (((is_linux || is_chromeos) && !is_chromecast) ||
++  if (((is_linux || is_chromeos || is_bsd) && !is_chromecast) ||
+       (is_win && use_libfuzzer) || (use_libfuzzer && is_mac)) {
      deps += [
        "//chrome/services/ipp_parser/public/cpp:fuzzers",
-       "//testing/libfuzzer/fuzzers",
-@@ -790,7 +831,7 @@ group("gn_all") {
+@@ -798,7 +839,7 @@ group("gn_all") {
      deps += [ "//native_client_sdk/src:nacl_core_sdk" ]
    }
  
--  if (is_linux && use_ozone) {
-+  if ((is_linux || is_bsd) && use_ozone) {
+-  if ((is_linux || is_chromeos) && use_ozone) {
++  if ((is_linux || is_chromeos || is_bsd) && use_ozone) {
      deps += [
        "//headless:headless_non_renderer",
        "//headless:headless_tests",
-@@ -802,8 +843,12 @@ group("gn_all") {
+@@ -810,8 +851,12 @@ group("gn_all") {
        "//chrome/browser/vr:vr_common_perftests",
        "//chrome/browser/vr:vr_common_unittests",
        "//chrome/browser/vr:vr_pixeltests",
@@ -192,20 +191,20 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.1 2021/08/03 21:04:34 markd Ex
        "//tools/perf/contrib/vr_benchmarks:vr_perf_tests",
      ]
 +    }
-     if (is_desktop_linux && use_ozone) {
-       deps += [ "//chrome/browser/vr/testapp:vr_testapp" ]
+     if (is_android) {
+       deps += [ "//chrome/browser/android/vr:vr_android_unittests" ]
      }
-@@ -838,7 +883,7 @@ group("gn_all") {
-   ]
- }
- 
--if ((is_linux || is_win) && enable_remoting && !use_ozone) {
-+if ((is_linux || is_win || is_bsd) && enable_remoting && !use_ozone) {
+@@ -851,7 +896,7 @@ group("gn_all") {
+ # ozone. We also need to figure out what to do with remoting_host that is set for
+ # use_x11 && is_linux. See remoting/remoting_options.gni.  For now, just allow to
+ # enable remoting for is_linux && use_x11 && use_ozone.
+-if ((is_linux || is_chromeos || is_win) && enable_remoting &&
++if ((is_linux || is_chromeos || is_win || is_bsd) && enable_remoting &&
+     (use_x11 || !use_ozone)) {
    # This group is used for network annotation check test.
    group("shipped_binaries") {
-     deps = [
-@@ -1085,7 +1130,7 @@ if (!is_ios && !use_qt) {
-       ]
+@@ -1103,7 +1148,7 @@ if (!is_ios && !use_qt) {
+       data_deps += [ "//content/web_test:web_test_common_mojom_js_data_deps" ]
      }
  
 -    if (!is_win && !is_android) {
@@ -213,7 +212,7 @@ $NetBSD: patch-src_3rdparty_chromium_BUILD.gn,v 1.1 2021/08/03 21:04:34 markd Ex
        data_deps +=
            [ "//third_party/breakpad:minidump_stackwalk($host_toolchain)" ]
      }
-@@ -1286,7 +1331,7 @@ group("chromium_builder_perf") {
+@@ -1308,7 +1353,7 @@ group("chromium_builder_perf") {
  
      if (is_win) {
        data_deps += [ "//chrome/installer/mini_installer:mini_installer" ]

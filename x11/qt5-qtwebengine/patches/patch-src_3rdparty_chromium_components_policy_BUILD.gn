@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_components_policy_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_components_policy_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/components/policy/BUILD.gn.orig	2020-07-15 18:55:55.000000000 +0000
+--- src/3rdparty/chromium/components/policy/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/components/policy/BUILD.gn
 @@ -19,7 +19,7 @@ gen_policy_templates_local = false
  # enable these flags (but don't check that in!).
  gen_policy_templates_common = true
  gen_policy_templates_win = is_win
--gen_policy_templates_linux = is_linux
-+gen_policy_templates_linux = is_linux || is_bsd
+-gen_policy_templates_linux = is_linux || is_chromeos
++gen_policy_templates_linux = is_linux || is_chromeos || is_bsd
  gen_policy_templates_android = is_android
  gen_policy_templates_mac = is_mac
  gen_policy_templates_chromeos = is_chromeos

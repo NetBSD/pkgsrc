@@ -1,6 +1,5 @@
-$NetBSD: patch-src_buildtools_configure.json,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_buildtools_configure.json,v 1.2 2022/04/18 11:18:19 adam Exp $
 
-Index: src/buildtools/configure.json
 --- src/buildtools/configure.json.orig
 +++ src/buildtools/configure.json
 @@ -362,7 +362,7 @@

@@ -1,22 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_content_gpu_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_content_gpu_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/content/gpu/BUILD.gn.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/content/gpu/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/content/gpu/BUILD.gn
-@@ -96,7 +96,7 @@ target(link_target_type, "gpu_sources") 
-     ]
-   }
- 
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
-     deps += [ "//services/service_manager/zygote" ]
-   }
- 
-@@ -104,7 +104,7 @@ target(link_target_type, "gpu_sources") 
+@@ -105,7 +105,7 @@ target(link_target_type, "gpu_sources") 
      deps += [ "//media/mojo/services" ]
    }
  
--  if (is_linux || is_mac || is_win) {
-+  if (is_linux || is_mac || is_win || is_bsd) {
+-  if (is_linux || is_chromeos || is_mac || is_win) {
++  if (is_linux || is_chromeos || is_mac || is_win || is_bsd) {
      deps += [ "//sandbox" ]
    }
  
