@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/18 04:30:24 markd Exp $
+share/texmf-dist/doc/context/third/inifile/VERSION
+share/texmf-dist/doc/context/third/inifile/inifile-demo.pdf
+share/texmf-dist/doc/context/third/inifile/inifile-doc.pdf
