@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/18 03:20:56 markd Exp $
+
+BLAKE2s (marginfix.r55064.tar.xz) = 09fc401276638a9253e9fbbc018dc56736b46cd3db1e27e8c9ace5d38f223238
+SHA512 (marginfix.r55064.tar.xz) = 70dc40b9823cd82a52a7e55e5af47e5b2373fd7cf16567f6eca2bb886d3612473141435444b538f81ab9467d1b3e5ba04424b1ca47d95cc0869dea02faf82b03
+Size (marginfix.r55064.tar.xz) = 3752 bytes
