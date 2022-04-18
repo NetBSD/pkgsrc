@@ -1,10 +1,8 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2019/09/19 14:28:15 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2022/04/18 13:21:26 nia Exp $
 
 Don't try to find the git hash.
 
-ts/olive_tr.ts's format is invalid.
-
---- CMakeLists.txt.orig	2019-07-09 15:16:17.000000000 +0000
+--- CMakeLists.txt.orig	2019-11-11 06:05:02.000000000 +0000
 +++ CMakeLists.txt
 @@ -54,31 +54,6 @@ if(WIN32)
    endif()
@@ -38,11 +36,3 @@ ts/olive_tr.ts's format is invalid.
  find_package(Doxygen)
  
  set(OLIVE_SOURCES
-@@ -428,7 +403,6 @@ qt5_add_translation(OLIVE_QM_FILES
-   ts/olive_ru.ts
-   ts/olive_sr.ts
-   ts/olive_id.ts
--  ts/olive_tr.ts
-   ts/olive_pt-BR.ts
-   ts/olive_zh-CN.ts
-   ts/olive_zh-TW.ts
