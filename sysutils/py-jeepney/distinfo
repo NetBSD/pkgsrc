@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2022/01/23 09:09:51 adam Exp $
+$NetBSD: distinfo,v 1.3 2022/04/18 10:57:54 adam Exp $
 
-BLAKE2s (jeepney-0.7.1.tar.gz) = fd41f1c3d2df2643b158d5bbe147c353eb2b5251b3d214a04c037db9f5427b23
-SHA512 (jeepney-0.7.1.tar.gz) = f0af5a18a669f1a6322925201cad83ee01bc5a1b91577565042fd8a18b506a3650ff67b0ba333c8fb3b179f43ef243d16b07a9a1f7a7e5baec825dda0e6b0571
-Size (jeepney-0.7.1.tar.gz) = 61833 bytes
+BLAKE2s (jeepney-0.8.0.tar.gz) = 3f46e4031d8a6fb0420a38afbc6c31bab544a23e5425d5fb1932363d9aee56c8
+SHA512 (jeepney-0.8.0.tar.gz) = 823675f262c2c9778ccf9c1083601d936cca534fc0d2d9309b52aa6beeb7f73d225a37c5f18f6b0683c4829a93b1299a2cb4f8f341e55b92bedf58c8dce0aa75
+Size (jeepney-0.8.0.tar.gz) = 106005 bytes
