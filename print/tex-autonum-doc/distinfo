@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/18 03:42:00 markd Exp $
+
+BLAKE2s (autonum.doc.r36084.tar.xz) = b9928f96a0cae778016e0e0d5f21b6851d8fb5271cfbbf4dd654e9d0796695de
+SHA512 (autonum.doc.r36084.tar.xz) = 2d0c515fac8afb219aaa1ee270b30bac09bcc310afcad71ff6ad2a3448187733718c03c304c09a0d631595d36043dc3eb0b6849fce0e4c3bf7f5d249b15c99c2
+Size (autonum.doc.r36084.tar.xz) = 400788 bytes
