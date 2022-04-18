@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2022/04/10 03:33:41 markd Exp $
+# $NetBSD: Makefile,v 1.17 2022/04/18 06:14:02 markd Exp $
 
 DISTNAME=	collection-langother
-PKGNAME=	texlive-${DISTNAME}-2021pre1
+PKGNAME=	texlive-${DISTNAME}-2022pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	59564
@@ -51,7 +51,7 @@ DEPENDS+=	tex-hyphen-interlingua-[0-9]*:../../print/tex-hyphen-interlingua
 DEPENDS+=	tex-hyphen-sanskrit-[0-9]*:../../print/tex-hyphen-sanskrit
 DEPENDS+=	tex-hyphen-thai-[0-9]*:../../print/tex-hyphen-thai
 DEPENDS+=	tex-hyphen-turkmen-[0-9]*:../../print/tex-hyphen-turkmen
-# depend latex-mr
+# latex-mr is documentation only
 # depend latexbangla
 # depend latino-sine-flexione
 # lshort-thai is documentation only
