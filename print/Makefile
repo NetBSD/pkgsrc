@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.849 2022/04/18 04:24:09 markd Exp $
+# $NetBSD: Makefile,v 1.850 2022/04/18 04:27:38 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -520,6 +520,8 @@ SUBDIR+=	tex-context-gantt
 SUBDIR+=	tex-context-gantt-doc
 SUBDIR+=	tex-context-gnuplot
 SUBDIR+=	tex-context-gnuplot-doc
+SUBDIR+=	tex-context-handlecsv
+SUBDIR+=	tex-context-handlecsv-doc
 SUBDIR+=	tex-context-letter
 SUBDIR+=	tex-context-letter-doc
 SUBDIR+=	tex-context-lettrine
