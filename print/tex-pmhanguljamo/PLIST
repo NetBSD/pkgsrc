@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/18 05:03:04 markd Exp $
+share/texmf-dist/tex/latex/pmhanguljamo/pmhanguljamo-rrk.sty
+share/texmf-dist/tex/latex/pmhanguljamo/pmhanguljamo.sty

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.853 2022/04/18 05:00:16 markd Exp $
+# $NetBSD: Makefile,v 1.854 2022/04/18 05:03:03 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1296,6 +1296,8 @@ SUBDIR+=	tex-plstmary
 SUBDIR+=	tex-plstmary-doc
 SUBDIR+=	tex-pmboxdraw
 SUBDIR+=	tex-pmboxdraw-doc
+SUBDIR+=	tex-pmhanguljamo
+SUBDIR+=	tex-pmhanguljamo-doc
 SUBDIR+=	tex-polski
 SUBDIR+=	tex-polski-doc
 SUBDIR+=	tex-poltawski
