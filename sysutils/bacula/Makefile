@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.94 2021/12/08 16:06:25 adam Exp $
+# $NetBSD: Makefile,v 1.95 2022/04/18 19:12:02 adam Exp $
 
 CONFLICTS+=		bacula-client-[0-9]* bacula-clientonly-[0-9]* bareos-[0-9]* bareos-clientonly-[0-9]*
 
-PKGREVISION=	6
+PKGREVISION=	7
 
 .include "options.mk"
 

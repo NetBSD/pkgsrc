@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.142 2022/04/15 11:37:46 nia Exp $
+# $NetBSD: Makefile,v 1.143 2022/04/18 19:11:13 adam Exp $
 
 # This is intentionally 3.22 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
 # versions.
 DISTNAME=	qgis-3.22.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	geography
 MASTER_SITES=	https://qgis.org/downloads/
 EXTRACT_SUFX=	.tar.bz2

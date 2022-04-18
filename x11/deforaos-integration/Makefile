@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2022/03/28 10:59:47 tnn Exp $
+# $NetBSD: Makefile,v 1.39 2022/04/18 19:12:21 adam Exp $
 
 DISTNAME=	Integration-0.1.1
 PKGNAME=	deforaos-integration-0.1.1
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	x11
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Integration/
 

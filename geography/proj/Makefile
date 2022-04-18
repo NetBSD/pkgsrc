@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2021/12/08 16:02:07 adam Exp $
+# $NetBSD: Makefile,v 1.27 2022/04/18 19:09:51 adam Exp $
 
 # An update to 7 is on hold because I have not yet assessed how much
 # trouble it will cause.  -gdt
@@ -10,7 +10,7 @@ VERSION=	${VERSION_BASE}${VERSION_RC}
 WRKFINAL=	proj-${VERSION_BASE}
 WRKSRC=		${WRKDIR}/${WRKFINAL}
 DISTNAME=	proj-${VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	geography
 MASTER_SITES=	https://download.osgeo.org/proj/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}

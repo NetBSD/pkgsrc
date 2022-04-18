@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2021/12/08 16:02:31 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2022/04/18 19:10:04 adam Exp $
 
 BUILDLINK_TREE+=	openmpi
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	openmpi
 OPENMPI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.openmpi+=	openmpi>=1.5.1
-BUILDLINK_ABI_DEPENDS.openmpi?=	openmpi>=1.10.7nb7
+BUILDLINK_ABI_DEPENDS.openmpi?=	openmpi>=1.10.7nb9
 BUILDLINK_PKGSRCDIR.openmpi?=	../../parallel/openmpi
 
 .include "../../parallel/hwloc/buildlink3.mk"

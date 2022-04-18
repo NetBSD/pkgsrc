@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2021/12/08 16:06:12 adam Exp $
+# $NetBSD: Makefile,v 1.74 2022/04/18 19:11:56 adam Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	atril-${VERSION:R}.1
