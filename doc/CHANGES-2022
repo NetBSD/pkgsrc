@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1905 2022/04/18 05:09:54 markd Exp $
+$NetBSD: CHANGES-2022,v 1.1906 2022/04/18 11:02:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3002,3 +3002,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Added fonts/tex-unfonts-core-doc version 2022 [markd 2022-04-18]
 	Added fonts/tex-unfonts-extra version 2022 [markd 2022-04-18]
 	Added fonts/tex-unfonts-extra-doc version 2022 [markd 2022-04-18]
+	Updated sysutils/py-jeepney to 0.8.0 [adam 2022-04-18]
+	Updated finance/py-stripe to 2.72.0 [adam 2022-04-18]
+	Updated devel/cmake to 3.23.1 [adam 2022-04-18]
+	Updated devel/cmake-gui to 3.23.1 [adam 2022-04-18]
