@@ -1,6 +1,6 @@
-$NetBSD: patch-src_3rdparty_chromium_extensions_common_api___permission__features.json,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_extensions_common_api___permission__features.json,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/extensions/common/api/_permission_features.json.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/extensions/common/api/_permission_features.json.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/extensions/common/api/_permission_features.json
 @@ -135,7 +135,7 @@
      {
@@ -11,16 +11,16 @@ $NetBSD: patch-src_3rdparty_chromium_extensions_common_api___permission__feature
        "whitelist": [
          "1C93BD3CF875F4A73C0B2A163BB8FBDA8B8B3D80",  // http://crbug.com/387169
          "A3BC37E2148AC4E99BE4B16AF9D42DD1E592BBBE",  // http://crbug.com/387169
-@@ -481,7 +481,7 @@
-       "platform_app",
-       "login_screen_extension"
-     ],
+@@ -473,7 +473,7 @@
+   }, {
+     "channel": "stable",
+     "extension_types": ["extension", "legacy_packaged_app", "platform_app"],
 -    "platforms": ["chromeos", "mac", "win", "linux"],
 +    "platforms": ["chromeos", "mac", "win", "linux", "netbsd"],
      "whitelist": [
        "0DE0F05680A4A056BCEC864ED8DDA84296F82B40",  // http://crbug.com/434651
        "1C93BD3CF875F4A73C0B2A163BB8FBDA8B8B3D80",  // http://crbug.com/293683
-@@ -520,7 +520,7 @@
+@@ -508,7 +508,7 @@
    "networkingPrivate": {
      "channel": "stable",
      "extension_types": ["extension", "legacy_packaged_app", "platform_app"],

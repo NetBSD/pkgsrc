@@ -1,0 +1,13 @@
+$NetBSD: patch-src_3rdparty_chromium_chrome_browser_ui_webui_discards_BUILD.gn,v 1.1 2022/04/18 11:18:18 adam Exp $
+
+--- src/3rdparty/chromium/chrome/browser/ui/webui/discards/BUILD.gn.orig	2022-03-12 17:29:22.567911324 +0000
++++ src/3rdparty/chromium/chrome/browser/ui/webui/discards/BUILD.gn
+@@ -4,7 +4,7 @@
+ 
+ import("//mojo/public/tools/bindings/mojom.gni")
+ 
+-if (is_win || is_mac || is_linux || is_chromeos) {
++if (is_win || is_mac || is_linux || is_chromeos || is_bsd) {
+   mojom("mojo_bindings") {
+     sources = [
+       "discards.mojom",

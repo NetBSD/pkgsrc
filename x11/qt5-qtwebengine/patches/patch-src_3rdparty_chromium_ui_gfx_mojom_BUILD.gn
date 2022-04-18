@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_ui_gfx_mojom_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_ui_gfx_mojom_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/ui/gfx/mojom/BUILD.gn.orig	2020-07-15 18:56:34.000000000 +0000
+--- src/3rdparty/chromium/ui/gfx/mojom/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/ui/gfx/mojom/BUILD.gn
-@@ -212,7 +212,7 @@ mojom("mojom") {
+@@ -214,7 +214,7 @@ mojom("mojom") {
  
  mojom("native_handle_types") {
    sources = [ "native_handle_types.mojom" ]
--  if (is_linux || use_ozone) {
-+  if (is_linux || use_ozone || is_bsd) {
+-  if (is_linux || is_chromeos || use_ozone) {
++  if (is_linux || is_chromeos || use_ozone || is_bsd) {
      enabled_features = [ "supports_native_pixmap" ]
    }
    public_deps = [ "//mojo/public/mojom/base" ]

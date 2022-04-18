@@ -1,10 +1,10 @@
-$NetBSD: patch-src_3rdparty_chromium_base_trace__event_malloc__dump__dump__provider.cc,v 1.1 2021/08/03 21:04:34 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_trace__event_malloc__dump__dump__provider.cc,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/base/trace_event/malloc_dump_provider.cc.orig	2020-06-25 09:31:18.000000000 +0000
+--- src/3rdparty/chromium/base/trace_event/malloc_dump_provider.cc.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/base/trace_event/malloc_dump_provider.cc
 @@ -17,6 +17,8 @@
  
- #if defined(OS_MACOSX)
+ #if defined(OS_APPLE)
  #include <malloc/malloc.h>
 +#elif defined(OS_FREEBSD) || defined(OS_NETBSD)
 +#include <stdlib.h>

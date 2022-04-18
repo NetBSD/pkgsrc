@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_services_device_wake__lock_power__save__blocker_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_services_device_wake__lock_power__save__blocker_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/services/device/wake_lock/power_save_blocker/BUILD.gn.orig	2020-07-15 18:56:47.000000000 +0000
+--- src/3rdparty/chromium/services/device/wake_lock/power_save_blocker/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/services/device/wake_lock/power_save_blocker/BUILD.gn
 @@ -40,7 +40,7 @@ source_set("power_save_blocker") {
        "//chromeos/dbus/power",
        "//chromeos/dbus/power:power_manager_proto",
      ]
--  } else if (is_linux && use_dbus) {
-+  } else if ((is_linux || is_bsd) && use_dbus) {
+-  } else if ((is_linux || is_chromeos) && use_dbus) {
++  } else if ((is_linux || is_chromeos || is_bsd) && use_dbus) {
      sources += [ "power_save_blocker_linux.cc" ]
      deps += [
        "//dbus",

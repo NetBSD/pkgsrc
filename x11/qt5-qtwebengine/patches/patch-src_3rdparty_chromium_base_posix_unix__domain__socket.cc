@@ -1,6 +1,6 @@
-$NetBSD: patch-src_3rdparty_chromium_base_posix_unix__domain__socket.cc,v 1.1 2021/08/03 21:04:34 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_posix_unix__domain__socket.cc,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/base/posix/unix_domain_socket.cc.orig	2020-06-25 09:31:18.000000000 +0000
+--- src/3rdparty/chromium/base/posix/unix_domain_socket.cc.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/base/posix/unix_domain_socket.cc
 @@ -6,6 +6,8 @@
  
@@ -15,13 +15,13 @@ $NetBSD: patch-src_3rdparty_chromium_base_posix_unix__domain__socket.cc,v 1.1 20
  
  // static
  bool UnixDomainSocket::EnableReceiveProcessId(int fd) {
--#if !defined(OS_MACOSX)
-+#if !defined(OS_MACOSX) && !defined(OS_NETBSD)
+-#if !defined(OS_APPLE)
++#if !defined(OS_APPLE) && !defined(OS_NETBSD)
    const int enable = 1;
    return setsockopt(fd, SOL_SOCKET, SO_PASSCRED, &enable, sizeof(enable)) == 0;
  #else
 @@ -151,7 +153,11 @@ ssize_t UnixDomainSocket::RecvMsgWithFla
- #if !defined(OS_NACL_NONSFI) && !defined(OS_MACOSX)
+ #if !defined(OS_NACL_NONSFI) && !defined(OS_APPLE)
        // The PNaCl toolchain for Non-SFI binary build and macOS do not support
        // ucred. macOS supports xucred, but this structure is insufficient.
 +#if defined(OS_NETBSD)
@@ -29,15 +29,15 @@ $NetBSD: patch-src_3rdparty_chromium_base_posix_unix__domain__socket.cc,v 1.1 20
 +#else
        + CMSG_SPACE(sizeof(struct ucred))
 +#endif
- #endif  // OS_NACL_NONSFI or OS_MACOSX
+ #endif  // !defined(OS_NACL_NONSFI) && !defined(OS_APPLE)
        ;
    char control_buffer[kControlBufferSize];
 @@ -176,7 +182,7 @@ ssize_t UnixDomainSocket::RecvMsgWithFla
          wire_fds = reinterpret_cast<int*>(CMSG_DATA(cmsg));
          wire_fds_len = payload_len / sizeof(int);
        }
--#if !defined(OS_NACL_NONSFI) && !defined(OS_MACOSX)
-+#if !defined(OS_NACL_NONSFI) && !defined(OS_MACOSX) && !defined(OS_NETBSD)
+-#if !defined(OS_NACL_NONSFI) && !defined(OS_APPLE)
++#if !defined(OS_NACL_NONSFI) && !defined(OS_APPLE) && !defined(OS_NETBSD)
        // The PNaCl toolchain for Non-SFI binary build and macOS do not support
        // SCM_CREDENTIALS.
        if (cmsg->cmsg_level == SOL_SOCKET &&

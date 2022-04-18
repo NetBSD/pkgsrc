@@ -1,26 +1,26 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_angle_gni_angle.gni,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_angle_gni_angle.gni,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/third_party/angle/gni/angle.gni.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/third_party/angle/gni/angle.gni.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/third_party/angle/gni/angle.gni
 @@ -33,7 +33,7 @@ if (angle_has_build) {
      is_asan = false
      build_with_chromium = false
      dcheck_always_on = false
--    angle_use_x11 = is_linux && !is_ggp
-+    angle_use_x11 = (is_linux || is_bsd) && !is_ggp
+-    angle_use_x11 = (is_linux || is_chromeos) && !is_ggp
++    angle_use_x11 = (is_linux || is_chromeos || is_bsd) && !is_ggp
      use_ozone = false
      use_fuzzing_engine = false
    }
-@@ -95,7 +95,7 @@ declare_args() {
+@@ -100,7 +100,7 @@ declare_args() {
+ 
    angle_enable_d3d9 = is_win && !angle_is_winuwp
    angle_enable_d3d11 = is_win
-   angle_enable_gl =
--      (ozone_platform_gbm || ozone_platform_x11 || !is_linux || (angle_use_x11 && !is_chromeos)) &&
-+      (ozone_platform_gbm || ozone_platform_x11 || !(is_linux || is_bsd) || (angle_use_x11 && !is_chromeos)) &&
-       !is_fuchsia && !angle_is_winuwp && !is_ggp && !is_win_arm64
+-  angle_enable_gl = (ozone_platform_gbm || ozone_platform_x11 || (!is_linux && !is_chromeos) ||
++  angle_enable_gl = (ozone_platform_gbm || ozone_platform_x11 || (!is_linux && !is_chromeos && !is_bsd) ||
+                      (angle_use_x11 && !is_chromeos)) && !is_fuchsia &&
+                     !angle_is_winuwp && !is_ggp && !is_win_arm64
  
-   # ANGLE Vulkan backend on Android requires API level 26, i.e. Oreo, due to
-@@ -103,7 +103,7 @@ declare_args() {
+@@ -109,7 +109,7 @@ declare_args() {
    # Otherwise, API level 24 would have been enough.
    angle_enable_vulkan =
        angle_has_build && ((is_win && !angle_is_winuwp) ||
@@ -29,21 +29,30 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_angle_gni_angle.gni,v 1.1 2021
                            (is_android && ndk_api_level_at_least_26) ||
                            is_fuchsia || is_ggp || is_mac)
    angle_enable_null = true
-@@ -149,7 +149,7 @@ if (angle_has_build) {
+@@ -158,7 +158,7 @@ if (angle_has_build) {
    angle_remove_configs += [ "//build/config/compiler:default_include_dirs" ]
  }
- angle_better_stack_traces =
--    (is_debug || dcheck_always_on) && is_linux && !is_asan && !is_cfi
-+    (is_debug || dcheck_always_on) && (is_linux || is_bsd) && !is_asan && !is_cfi
+ angle_better_stack_traces = (is_debug || dcheck_always_on) &&
+-                            (is_linux || is_chromeos) && !is_asan && !is_cfi
++                            (is_linux || is_chromeos || is_bsd) && !is_asan && !is_cfi
  
  if (angle_has_build && is_clang) {
    angle_remove_configs += [ "//build/config/clang:find_bad_constructs" ]
-@@ -314,7 +314,7 @@ template("angle_test") {
-                  "$angle_root:extra_warnings",
-                ]
+@@ -361,7 +361,7 @@ template("angle_test") {
+         configs -= [ "//build/config/android:hide_all_but_jni" ]
+       }
  
--    if (is_linux && !is_component_build) {
-+    if ((is_linux || is_bsd) && !is_component_build) {
+-      if ((is_linux || is_chromeos) && !is_component_build) {
++      if ((is_linux || is_chromeos || is_bsd) && !is_component_build) {
+         # Set rpath to find shared libs in a non-component build.
+         configs += [ "//build/config/gcc:rpath_for_built_shared_libraries" ]
+       }
+@@ -392,7 +392,7 @@ template("angle_test") {
+              "//testing/xvfb.py",
+            ]
+ 
+-    if ((is_linux || is_chromeos) && !is_component_build) {
++    if ((is_linux || is_chromeos || is_bsd) && !is_component_build) {
        # Set rpath to find shared libs in a non-component build.
        configs += [ "//build/config/gcc:rpath_for_built_shared_libraries" ]
      }

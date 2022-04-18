@@ -1,10 +1,10 @@
-$NetBSD: patch-src_3rdparty_chromium_content_common_features.gni,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_content_common_features.gni,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/content/common/features.gni.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/content/common/features.gni.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/content/common/features.gni
-@@ -15,4 +15,4 @@ declare_args() {
-   enable_web_auth = !is_android
+@@ -13,4 +13,4 @@ declare_args() {
+   allow_critical_memory_pressure_handling_in_foreground = is_chromecast
  }
  
--enable_screen_capture = is_linux || is_mac || is_win || is_android
-+enable_screen_capture = is_linux || is_mac || is_win || is_android || is_bsd
+-enable_screen_capture = is_linux || is_chromeos || is_mac || is_win || is_android
++enable_screen_capture = is_linux || is_chromeos || is_mac || is_win || is_android || is_bsd

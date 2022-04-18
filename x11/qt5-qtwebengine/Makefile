@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2022/04/13 21:56:10 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/04/18 11:18:18 adam Exp $
 
-DISTNAME=	qtwebengine-everywhere-src-${QTVERSION}
+DISTNAME=	qtwebengine-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtwebengine-${QTVERSION}
-PKGREVISION=	9
 COMMENT=	Chromium-based web engine for Qt5
 
 MAKE_ENV+=		QTDIR=${QTDIR}
@@ -19,6 +18,7 @@ TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 #TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
 #TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 TOOL_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
 BUILD_DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
@@ -29,7 +29,7 @@ BUILDLINK_TRANSFORM.NetBSD+=	rm:-fgnu-inline-asm
 
 MAKE_ENV+=	NINJAJOBS="-j ${MAKE_JOBS:U1}"
 
-#UNLIMIT_RESOURCES+=	cputime
+UNLIMIT_RESOURCES+=	datasize
 
 CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/sqlite/src/configure
 CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/protobuf/post_process_dist.sh
@@ -41,18 +41,18 @@ CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/v8/tools/run-llprof.sh
 # These libraries are used from the system and the build infrastructure
 # removes them from the bundled third_party directory and replaces them
 # with hooks to use them from the system.
-GN_SYSTEM_LIBS=	libevent libxslt yasm
+GN_SYSTEM_LIBS=	libevent libxslt #yasm
 CHROMESRC=	${WRKSRC}/src/3rdparty/chromium
 
 pre-configure:
-	cp ${FILESDIR}/netbsd.pri ${WRKSRC}/src/core/config/
-	cp ${FILESDIR}/openbsd.pri ${WRKSRC}/src/core/config/
-	cp ${FILESDIR}/netbsd.pri ${WRKSRC}/src/buildtools/config/
-	cp ${FILESDIR}/openbsd.pri ${WRKSRC}/src/buildtools/config/
-	mkdir -p ${CHROMESRC}/media/audio/sndio ${CHROMESRC}/media/audio/openbsd
-	cp ${FILESDIR}/sndio_* ${CHROMESRC}/media/audio/sndio
-	cp ${FILESDIR}/hid_* ${CHROMESRC}/services/device/hid
-	cp ${FILESDIR}/audio_manager_openbsd.* ${CHROMESRC}/media/audio/openbsd
+	${CP} ${FILESDIR}/netbsd.pri ${WRKSRC}/src/core/config/
+	${CP} ${FILESDIR}/openbsd.pri ${WRKSRC}/src/core/config/
+	${CP} ${FILESDIR}/netbsd.pri ${WRKSRC}/src/buildtools/config/
+	${CP} ${FILESDIR}/openbsd.pri ${WRKSRC}/src/buildtools/config/
+	${MKDIR} ${CHROMESRC}/media/audio/sndio ${CHROMESRC}/media/audio/openbsd
+	${CP} ${FILESDIR}/sndio_* ${CHROMESRC}/media/audio/sndio
+	${CP} ${FILESDIR}/hid_* ${CHROMESRC}/services/device/hid
+	${CP} ${FILESDIR}/audio_manager_openbsd.* ${CHROMESRC}/media/audio/openbsd
 	cd ${WRKSRC} && env -i ${MAKE_ENV} ${CHROMESRC}/build/linux/unbundle/replace_gn_files.py \
 		--system-libraries ${GN_SYSTEM_LIBS}
 
@@ -69,7 +69,9 @@ post-install:
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} != "Darwin"
 .include "../../audio/alsa-lib/buildlink3.mk"
+.endif
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"

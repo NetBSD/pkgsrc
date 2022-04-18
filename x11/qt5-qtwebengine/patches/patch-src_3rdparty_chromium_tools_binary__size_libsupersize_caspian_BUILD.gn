@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_tools_binary__size_libsupersize_caspian_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_tools_binary__size_libsupersize_caspian_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/tools/binary_size/libsupersize/caspian/BUILD.gn.orig	2020-07-15 18:56:32.000000000 +0000
+--- src/3rdparty/chromium/tools/binary_size/libsupersize/caspian/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/tools/binary_size/libsupersize/caspian/BUILD.gn
 @@ -9,7 +9,7 @@ if (!defined(is_wasm)) {
    is_wasm = current_os == "wasm"
  }
  
--assert(is_linux || is_wasm)
-+assert(is_linux || is_wasm || is_bsd)
+-assert(is_linux || is_chromeos || is_wasm)
++assert(is_linux || is_chromeos || is_wasm || is_bsd)
  
  source_set("caspian-lib") {
    sources = [

@@ -1,17 +1,17 @@
-$NetBSD: patch-src_3rdparty_chromium_extensions_shell_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_extensions_shell_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/extensions/shell/BUILD.gn.orig	2020-07-08 21:40:43.000000000 +0000
+--- src/3rdparty/chromium/extensions/shell/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/extensions/shell/BUILD.gn
 @@ -12,7 +12,7 @@ import("//testing/test.gni")
  import("//tools/grit/grit_rule.gni")
  import("//tools/v8_context_snapshot/v8_context_snapshot.gni")
  
--if (is_linux) {
-+if (is_linux || is_bsd) {
+-if (is_linux || is_chromeos) {
++if (is_linux || is_chromeos || is_bsd) {
    import("//build/linux/extract_symbols.gni")
  }
  
-@@ -195,7 +195,7 @@ source_set("app_shell_lib") {
+@@ -202,7 +202,7 @@ source_set("app_shell_lib") {
      }
    }
  

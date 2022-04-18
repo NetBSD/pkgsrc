@@ -1,40 +1,49 @@
-$NetBSD: patch-src_3rdparty_chromium_skia_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_skia_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/skia/BUILD.gn.orig	2020-07-15 18:56:47.000000000 +0000
+--- src/3rdparty/chromium/skia/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/skia/BUILD.gn
-@@ -150,7 +150,7 @@ config("skia_library_config") {
+@@ -145,7 +145,7 @@ config("skia_library_config") {
    }
  
    # Settings for text blitting, chosen to approximate the system browser.
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      defines += [
        "SK_GAMMA_EXPONENT=1.2",
        "SK_GAMMA_CONTRAST=0.2",
-@@ -447,7 +447,7 @@ component("skia") {
-     set_sources_assignment_filter(sources_assignment_filter)
+@@ -271,7 +271,7 @@ component("skia") {
+   if (is_android) {
+     sources += [ "ext/fontmgr_default_android.cc" ]
+   }
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
+     sources += [ "ext/fontmgr_default_linux.cc" ]
+   }
+   if (is_ios) {
+@@ -464,7 +464,7 @@ component("skia") {
+     ]
    }
  
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      sources += [
        "//third_party/skia/src/ports/SkFontConfigInterface.cpp",
        "//third_party/skia/src/ports/SkFontConfigInterface_direct.cpp",
-@@ -456,7 +456,7 @@ component("skia") {
+@@ -473,7 +473,7 @@ component("skia") {
      ]
    }
  
--  if (is_linux || is_android) {
-+  if (is_linux || is_android || is_bsd) {
+-  if (is_linux || is_chromeos || is_android) {
++  if (is_linux || is_chromeos || is_android || is_bsd) {
      sources += [
        # Retain the files for the SkFontMgr_Android on linux to emulate android
        # fonts. See content/zygote/zygote_main_linux.cc
-@@ -534,7 +534,7 @@ component("skia") {
+@@ -551,7 +551,7 @@ component("skia") {
      ]
    }
  
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      deps += [
        "//third_party/expat",
        "//third_party/fontconfig",

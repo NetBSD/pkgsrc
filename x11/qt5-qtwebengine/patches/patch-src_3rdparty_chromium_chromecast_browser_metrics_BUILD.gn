@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_chromecast_browser_metrics_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_chromecast_browser_metrics_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/chromecast/browser/metrics/BUILD.gn.orig	2020-07-08 21:40:38.000000000 +0000
+--- src/3rdparty/chromium/chromecast/browser/metrics/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/chromecast/browser/metrics/BUILD.gn
 @@ -32,7 +32,7 @@ cast_source_set("metrics") {
      "//third_party/metrics_proto",
    ]
  
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      sources += [
        "external_metrics.cc",
        "external_metrics.h",

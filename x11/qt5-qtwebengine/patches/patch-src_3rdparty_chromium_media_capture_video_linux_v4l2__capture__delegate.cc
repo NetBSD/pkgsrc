@@ -1,6 +1,6 @@
-$NetBSD: patch-src_3rdparty_chromium_media_capture_video_linux_v4l2__capture__delegate.cc,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_media_capture_video_linux_v4l2__capture__delegate.cc,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/media/capture/video/linux/v4l2_capture_delegate.cc.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/media/capture/video/linux/v4l2_capture_delegate.cc.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/media/capture/video/linux/v4l2_capture_delegate.cc
 @@ -4,8 +4,12 @@
  
@@ -78,12 +78,12 @@ $NetBSD: patch-src_3rdparty_chromium_media_capture_video_linux_v4l2__capture__de
 @@ -146,6 +158,7 @@ bool IsSpecialControl(int control_id) {
  #define V4L2_CID_PANTILT_CMD (V4L2_CID_CAMERA_CLASS_BASE + 34)
  #endif
- bool IsBlacklistedControl(int control_id) {
+ bool IsBlockedControl(int control_id) {
 +#if !defined(OS_NETBSD)
    switch (control_id) {
      case V4L2_CID_PAN_RELATIVE:
      case V4L2_CID_TILT_RELATIVE:
-@@ -161,6 +174,7 @@ bool IsBlacklistedControl(int control_id
+@@ -161,6 +174,7 @@ bool IsBlockedControl(int control_id) {
      case V4L2_CID_PANTILT_CMD:
        return true;
    }

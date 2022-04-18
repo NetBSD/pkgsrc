@@ -1,9 +1,9 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_webrtc_rtc__base_network.h,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_webrtc_rtc__base_network.h,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/third_party/webrtc/rtc_base/network.h.orig	2020-07-15 19:01:42.000000000 +0000
+--- src/3rdparty/chromium/third_party/webrtc/rtc_base/network.h.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/third_party/webrtc/rtc_base/network.h
-@@ -27,6 +27,10 @@
- #include "rtc_base/third_party/sigslot/sigslot.h"
+@@ -30,6 +30,10 @@
+ #include "rtc_base/thread_annotations.h"
  
  #if defined(WEBRTC_POSIX)
 +#include <sys/types.h>

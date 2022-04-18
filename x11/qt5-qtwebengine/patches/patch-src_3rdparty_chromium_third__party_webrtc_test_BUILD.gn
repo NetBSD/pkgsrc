@@ -1,25 +1,25 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_webrtc_test_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_webrtc_test_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/third_party/webrtc/test/BUILD.gn.orig	2020-07-15 19:01:42.000000000 +0000
+--- src/3rdparty/chromium/third_party/webrtc/test/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/third_party/webrtc/test/BUILD.gn
-@@ -956,17 +956,17 @@ rtc_library("test_renderer_generic") {
+@@ -969,17 +969,17 @@ rtc_library("test_renderer_generic") {
      ]
      deps += [ "../api:scoped_refptr" ]
    }
--  if (!(is_linux && rtc_use_x11) && !is_mac && !is_win) {
-+  if (!((is_linux || is_bsd) && rtc_use_x11) && !is_mac && !is_win) {
+-  if (!((is_linux || is_chromeos) && rtc_use_x11) && !is_mac && !is_win) {
++  if (!((is_linux || is_chromeos || is_bsd) && rtc_use_x11) && !is_mac && !is_win) {
      sources += [ "null_platform_renderer.cc" ]
    }
--  if ((is_linux && rtc_use_x11) || is_mac) {
-+  if (((is_linux || is_bsd) && rtc_use_x11) || is_mac) {
+-  if (((is_linux || is_chromeos) && rtc_use_x11) || is_mac) {
++  if (((is_linux || is_chromeos || is_bsd) && rtc_use_x11) || is_mac) {
      sources += [
        "gl/gl_renderer.cc",
        "gl/gl_renderer.h",
      ]
    }
  
--  if (is_linux && rtc_use_x11) {
-+  if ((is_linux || is_bsd) && rtc_use_x11) {
+-  if ((is_linux || is_chromeos) && rtc_use_x11) {
++  if ((is_linux || is_chromeos || is_bsd) && rtc_use_x11) {
      sources += [
        "linux/glx_renderer.cc",
        "linux/glx_renderer.h",

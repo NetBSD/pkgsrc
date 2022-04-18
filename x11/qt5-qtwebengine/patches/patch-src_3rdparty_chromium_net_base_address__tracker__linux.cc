@@ -1,6 +1,6 @@
-$NetBSD: patch-src_3rdparty_chromium_net_base_address__tracker__linux.cc,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_net_base_address__tracker__linux.cc,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/net/base/address_tracker_linux.cc.orig	2020-07-08 21:40:46.000000000 +0000
+--- src/3rdparty/chromium/net/base/address_tracker_linux.cc.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/net/base/address_tracker_linux.cc
 @@ -5,7 +5,9 @@
  #include "net/base/address_tracker_linux.h"
@@ -12,15 +12,7 @@ $NetBSD: patch-src_3rdparty_chromium_net_base_address__tracker__linux.cc,v 1.1 2
  #include <stdint.h>
  #include <sys/ioctl.h>
  #include <utility>
-@@ -177,6 +179,7 @@ AddressTrackerLinux::AddressTrackerLinux
- AddressTrackerLinux::~AddressTrackerLinux() = default;
- 
- void AddressTrackerLinux::Init() {
-+#if !defined(OS_BSD)
-   netlink_fd_.reset(socket(AF_NETLINK, SOCK_RAW, NETLINK_ROUTE));
-   if (!netlink_fd_.is_valid()) {
-     PLOG(ERROR) << "Could not create NETLINK socket";
-@@ -272,6 +275,7 @@ void AddressTrackerLinux::AbortAndForceO
+@@ -285,6 +287,7 @@ void AddressTrackerLinux::AbortAndForceO
    connection_type_initialized_cv_.Broadcast();
  }
  
@@ -28,7 +20,7 @@ $NetBSD: patch-src_3rdparty_chromium_net_base_address__tracker__linux.cc,v 1.1 2
  AddressTrackerLinux::AddressMap AddressTrackerLinux::GetAddressMap() const {
    AddressTrackerAutoLock lock(*this, address_map_lock_);
    return address_map_;
-@@ -290,6 +294,7 @@ bool AddressTrackerLinux::IsInterfaceIgn
+@@ -303,6 +306,7 @@ bool AddressTrackerLinux::IsInterfaceIgn
    const char* interface_name = get_interface_name_(interface_index, buf);
    return ignored_interfaces_.find(interface_name) != ignored_interfaces_.end();
  }
@@ -36,7 +28,7 @@ $NetBSD: patch-src_3rdparty_chromium_net_base_address__tracker__linux.cc,v 1.1 2
  
  NetworkChangeNotifier::ConnectionType
  AddressTrackerLinux::GetCurrentConnectionType() {
-@@ -348,6 +353,7 @@ void AddressTrackerLinux::HandleMessage(
+@@ -361,6 +365,7 @@ void AddressTrackerLinux::HandleMessage(
                                          bool* address_changed,
                                          bool* link_changed,
                                          bool* tunnel_changed) {
@@ -44,7 +36,7 @@ $NetBSD: patch-src_3rdparty_chromium_net_base_address__tracker__linux.cc,v 1.1 2
    DCHECK(buffer);
    // Note that NLMSG_NEXT decrements |length| to reflect the number of bytes
    // remaining in |buffer|.
-@@ -460,6 +466,10 @@ void AddressTrackerLinux::HandleMessage(
+@@ -473,6 +478,10 @@ void AddressTrackerLinux::HandleMessage(
          break;
      }
    }
@@ -55,7 +47,7 @@ $NetBSD: patch-src_3rdparty_chromium_net_base_address__tracker__linux.cc,v 1.1 2
  }
  
  void AddressTrackerLinux::OnFileCanReadWithoutBlocking() {
-@@ -487,6 +497,7 @@ bool AddressTrackerLinux::IsTunnelInterf
+@@ -500,6 +509,7 @@ bool AddressTrackerLinux::IsTunnelInterf
  }
  
  void AddressTrackerLinux::UpdateCurrentConnectionType() {
@@ -63,7 +55,7 @@ $NetBSD: patch-src_3rdparty_chromium_net_base_address__tracker__linux.cc,v 1.1 2
    AddressTrackerLinux::AddressMap address_map = GetAddressMap();
    std::unordered_set<int> online_links = GetOnlineLinks();
  
-@@ -512,6 +523,9 @@ void AddressTrackerLinux::UpdateCurrentC
+@@ -525,6 +535,9 @@ void AddressTrackerLinux::UpdateCurrentC
  
    AddressTrackerAutoLock lock(*this, connection_type_lock_);
    current_connection_type_ = type;

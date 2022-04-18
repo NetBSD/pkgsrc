@@ -1,6 +1,5 @@
-$NetBSD: patch-src_3rdparty_gn_tools_gn_args.cc,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_gn_tools_gn_args.cc,v 1.2 2022/04/18 11:18:19 adam Exp $
 
-Index: src/3rdparty/gn/tools/gn/args.cc
 --- src/3rdparty/gn/tools/gn/args.cc.orig
 +++ src/3rdparty/gn/tools/gn/args.cc
 @@ -314,6 +314,8 @@ void Args::SetSystemVarsLocked(Scope* de

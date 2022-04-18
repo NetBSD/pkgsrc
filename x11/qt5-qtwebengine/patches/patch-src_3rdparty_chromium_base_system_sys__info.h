@@ -1,8 +1,8 @@
-$NetBSD: patch-src_3rdparty_chromium_base_system_sys__info.h,v 1.1 2021/08/03 21:04:34 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_system_sys__info.h,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/base/system/sys_info.h.orig	2020-06-25 09:31:18.000000000 +0000
+--- src/3rdparty/chromium/base/system/sys_info.h.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/base/system/sys_info.h
-@@ -201,6 +201,8 @@ class BASE_EXPORT SysInfo {
+@@ -202,6 +202,8 @@ class BASE_EXPORT SysInfo {
    // On Desktop this returns true when memory <= 512MB.
    static bool IsLowEndDevice();
  
@@ -11,12 +11,12 @@ $NetBSD: patch-src_3rdparty_chromium_base_system_sys__info.h,v 1.1 2021/08/03 21
   private:
    FRIEND_TEST_ALL_PREFIXES(SysInfoTest, AmountOfAvailablePhysicalMemory);
    FRIEND_TEST_ALL_PREFIXES(debug::SystemMetricsTest, ParseMeminfo);
-@@ -210,7 +212,7 @@ class BASE_EXPORT SysInfo {
-   static bool IsLowEndDeviceImpl();
+@@ -212,7 +214,7 @@ class BASE_EXPORT SysInfo {
    static HardwareInfo GetHardwareInfoSync();
  
--#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_AIX)
-+#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_AIX) || defined(OS_BSD)
+ #if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_ANDROID) || \
+-    defined(OS_AIX)
++    defined(OS_AIX) || defined(OS_BSD)
    static int64_t AmountOfAvailablePhysicalMemory(
        const SystemMemoryInfoKB& meminfo);
  #endif

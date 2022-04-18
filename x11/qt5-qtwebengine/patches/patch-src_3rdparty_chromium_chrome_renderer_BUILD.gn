@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_chrome_renderer_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_chrome_renderer_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/chrome/renderer/BUILD.gn.orig	2020-07-15 18:56:46.000000000 +0000
+--- src/3rdparty/chromium/chrome/renderer/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/chrome/renderer/BUILD.gn
-@@ -244,7 +244,7 @@ static_library("renderer") {
+@@ -247,7 +247,7 @@ static_library("renderer") {
        "//ppapi/shared_impl",
      ]
  
--    if (is_linux) {
-+    if (is_linux || is_bsd) {
+-    if (is_linux || is_chromeos) {
++    if (is_linux || is_chromeos || is_bsd) {
        deps += [ "//components/services/font/public/cpp" ]
      }
    }

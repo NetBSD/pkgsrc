@@ -1,8 +1,8 @@
-$NetBSD: patch-src_3rdparty_chromium_base_BUILD.gn,v 1.1 2021/08/03 21:04:34 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/base/BUILD.gn.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/base/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/base/BUILD.gn
-@@ -59,7 +59,7 @@ declare_args() {
+@@ -54,7 +54,7 @@ declare_args() {
    # replacement base::Location::Current(). On by default in non-official builds
    # for testing purposes.
    # TODO(https://crbug.com/974061): remove this eventually.
@@ -11,16 +11,16 @@ $NetBSD: patch-src_3rdparty_chromium_base_BUILD.gn,v 1.1 2021/08/03 21:04:34 mar
  
    # Unsafe developer build. Has developer-friendly features that may weaken or
    # disable security measures like sandboxing or ASLR.
-@@ -929,7 +929,7 @@ jumbo_component("base") {
+@@ -886,7 +886,7 @@ jumbo_component("base") {
        "timer/hi_res_timer_manager_posix.cc",
      ]
  
--    if (!is_nacl && !is_mac && !is_ios) {
-+    if (!is_nacl && !is_mac && !is_ios && !is_bsd) {
+-    if (!is_nacl && !is_apple) {
++    if (!is_nacl && !is_apple && !is_bsd) {
        sources += [
-         "profiler/stack_copier_signal.cc",
-         "profiler/stack_copier_signal.h",
-@@ -938,6 +938,12 @@ jumbo_component("base") {
+         "cpu_affinity_posix.cc",
+         "cpu_affinity_posix.h",
+@@ -897,6 +897,12 @@ jumbo_component("base") {
          "profiler/thread_delegate_posix.h",
        ]
      }
@@ -32,53 +32,53 @@ $NetBSD: patch-src_3rdparty_chromium_base_BUILD.gn,v 1.1 2021/08/03 21:04:34 mar
 +    }
    }
  
-   jumbo_excluded_sources = []
-@@ -1223,7 +1229,7 @@ jumbo_component("base") {
+   jumbo_excluded_sources = [
+@@ -1197,7 +1203,7 @@ jumbo_component("base") {
      ]
    }
  
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      sources += [
        "debug/proc_maps_linux.cc",
        "debug/proc_maps_linux.h",
-@@ -1275,7 +1281,7 @@ jumbo_component("base") {
+@@ -1249,7 +1255,7 @@ jumbo_component("base") {
        sources += [ "base_paths_posix.h" ]
      }
  
--    if (is_linux) {
-+    if (is_linux || is_bsd) {
+-    if (is_linux || is_chromeos) {
++    if (is_linux || is_chromeos || is_bsd) {
        sources += [
          "base_paths_posix.cc",
          "debug/elf_reader.cc",
-@@ -1324,7 +1330,7 @@ jumbo_component("base") {
-   # Needed for <atomic> if using newer C++ library than sysroot, except if
+@@ -1308,7 +1314,7 @@ jumbo_component("base") {
    # building inside the cros_sdk environment - use host_toolchain as a
    # more robust check for this.
--  if (!use_sysroot && (is_android || (is_linux && !is_chromecast && !use_qt)) &&
-+  if (!use_sysroot && (is_android || ((is_linux || is_bsd) && !is_chromecast && !use_qt)) &&
+   if (!use_sysroot &&
+-      (is_android || ((is_linux || is_chromeos) && !is_chromecast && !use_qt)) &&
++      (is_android || ((is_linux || is_chromeos || is_bsd) && !is_chromecast && !use_qt)) &&
        host_toolchain != "//build/toolchain/cros:host") {
      libs += [ "atomic" ]
    }
-@@ -1350,7 +1356,7 @@ jumbo_component("base") {
-         "allocator/allocator_shim_override_glibc_weak_symbols.h",
-       ]
-       deps += [ "//base/allocator:tcmalloc" ]
--    } else if (is_linux && use_allocator == "none") {
-+    } else if ((is_linux || is_bsd) && use_allocator == "none") {
-       sources += [ "allocator/allocator_shim_default_dispatch_to_glibc.cc" ]
-     } else if (is_android && use_allocator == "none") {
-       sources += [
-@@ -1911,7 +1917,7 @@ jumbo_component("base") {
+@@ -1355,7 +1361,7 @@ jumbo_component("base") {
+           "allocator/allocator_shim_default_dispatch_to_mac_zoned_malloc.cc",
+         ]
+       }
+-      if (is_chromeos || is_linux) {
++      if (is_chromeos || is_linux || is_bsd) {
+         sources += [ "allocator/allocator_shim_default_dispatch_to_glibc.cc" ]
+       }
+       if (is_win) {
+@@ -1946,7 +1952,7 @@ jumbo_component("base") {
    }
  
    # Linux.
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      # TODO(brettw) this will need to be parameterized at some point.
      linux_configs = []
      if (use_glib) {
-@@ -1947,6 +1953,32 @@ jumbo_component("base") {
+@@ -1982,6 +1988,31 @@ jumbo_component("base") {
      }
    }
  
@@ -95,7 +95,6 @@ $NetBSD: patch-src_3rdparty_chromium_base_BUILD.gn,v 1.1 2021/08/03 21:04:34 mar
 +      "files/file_path_watcher_kqueue.cc",
 +      "files/file_path_watcher_kqueue.h",
 +      "files/file_path_watcher_stub.cc",
-+      "process/memory_stubs.cc",
 +      "process/process_handle_netbsd.cc",
 +      "process/process_iterator_netbsd.cc",
 +      "process/process_metrics_netbsd.cc",
@@ -111,35 +110,35 @@ $NetBSD: patch-src_3rdparty_chromium_base_BUILD.gn,v 1.1 2021/08/03 21:04:34 mar
    # iOS
    if (is_ios) {
      sources -= [
-@@ -2865,7 +2898,7 @@ test("base_unittests") {
+@@ -3095,7 +3126,7 @@ test("base_unittests") {
      ]
    }
  
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      sources += [ "debug/proc_maps_linux_unittest.cc" ]
    }
  
-@@ -2903,7 +2936,7 @@ test("base_unittests") {
+@@ -3136,7 +3167,7 @@ test("base_unittests") {
        "posix/unix_domain_socket_unittest.cc",
        "task/thread_pool/task_tracker_posix_unittest.cc",
      ]
--    if (!is_nacl && !is_mac && !is_ios) {
-+    if (!is_nacl && !is_mac && !is_ios && !is_bsd) {
-       sources += [ "profiler/stack_copier_signal_unittest.cc" ]
-     }
-   }
-@@ -3026,7 +3059,7 @@ test("base_unittests") {
+-    if (!is_nacl && !is_apple) {
++    if (!is_nacl && !is_apple && !is_bsd) {
+       sources += [
+         "cpu_affinity_posix_unittest.cc",
+         "profiler/stack_copier_signal_unittest.cc",
+@@ -3295,7 +3326,7 @@ test("base_unittests") {
      }
    }
  
--  if (is_fuchsia || is_linux) {
-+  if (is_fuchsia || is_linux || is_bsd) {
-     sources += [ "debug/elf_reader_unittest.cc" ]
- 
-     deps += [ "//base/test:malloc_wrapper" ]
-@@ -3093,6 +3126,12 @@ test("base_unittests") {
-     manifest = "//build/config/fuchsia/tests.cmx"
+-  if (is_fuchsia || is_linux || is_chromeos) {
++  if (is_fuchsia || is_linux || is_chromeos || is_bsd) {
+     sources += [
+       "debug/elf_reader_unittest.cc",
+       "debug/test_elf_image_builder.cc",
+@@ -3367,6 +3398,12 @@ test("base_unittests") {
+     manifest = "fuchsia/base_unittests.cmx"
    }
  
 +  if (is_bsd) {

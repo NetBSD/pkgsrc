@@ -1,6 +1,6 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_boringssl_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_boringssl_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/third_party/boringssl/BUILD.gn.orig	2020-07-15 18:56:30.000000000 +0000
+--- src/3rdparty/chromium/third_party/boringssl/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/third_party/boringssl/BUILD.gn
 @@ -35,7 +35,6 @@ config("internal_config") {
    ]
@@ -14,8 +14,8 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_boringssl_BUILD.gn,v 1.1 2021/
      } else if (current_cpu == "x64") {
        if (is_mac) {
          sources += crypto_sources_mac_x86_64
--      } else if (is_linux || is_android) {
-+      } else if (is_linux || is_android || is_bsd) {
+-      } else if (is_linux || is_chromeos || is_android) {
++      } else if (is_linux || is_chromeos || is_android || is_bsd) {
          sources += crypto_sources_linux_x86_64
        } else {
          public_configs = [ ":no_asm_config" ]
@@ -23,15 +23,15 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_boringssl_BUILD.gn,v 1.1 2021/
      } else if (current_cpu == "x86") {
        if (is_mac) {
          sources += crypto_sources_mac_x86
--      } else if (is_linux || is_android) {
-+      } else if (is_linux || is_android || is_bsd) {
+-      } else if (is_linux || is_chromeos || is_android) {
++      } else if (is_linux || is_chromeos || is_android || is_bsd) {
          sources += crypto_sources_linux_x86
        } else {
          public_configs = [ ":no_asm_config" ]
        }
      } else if (current_cpu == "arm") {
--      if (is_linux || is_android) {
-+      if (is_linux || is_android || is_bsd) {
+-      if (is_linux || is_chromeos || is_android) {
++      if (is_linux || is_chromeos || is_android || is_bsd) {
          sources += crypto_sources_linux_arm
        } else if (is_ios) {
          sources += crypto_sources_ios_arm
@@ -39,8 +39,8 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_boringssl_BUILD.gn,v 1.1 2021/
          public_configs = [ ":no_asm_config" ]
        }
      } else if (current_cpu == "arm64") {
--      if (is_linux || is_android) {
-+      if (is_linux || is_android || is_bsd) {
+-      if (is_linux || is_chromeos || is_android) {
++      if (is_linux || is_chromeos || is_android || is_bsd) {
          sources += crypto_sources_linux_aarch64
        } else if (is_ios) {
          sources += crypto_sources_ios_aarch64

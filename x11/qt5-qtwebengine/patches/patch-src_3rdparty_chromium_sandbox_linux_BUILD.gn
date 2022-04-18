@@ -1,8 +1,8 @@
-$NetBSD: patch-src_3rdparty_chromium_sandbox_linux_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_sandbox_linux_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/sandbox/linux/BUILD.gn.orig	2020-06-25 09:31:34.000000000 +0000
+--- src/3rdparty/chromium/sandbox/linux/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/sandbox/linux/BUILD.gn
-@@ -265,6 +265,8 @@ component("seccomp_bpf") {
+@@ -276,6 +276,8 @@ component("seccomp_bpf") {
        "seccomp-bpf-helpers/baseline_policy.h",
        "seccomp-bpf-helpers/syscall_sets.cc",
        "seccomp-bpf-helpers/syscall_sets.h",
@@ -11,7 +11,7 @@ $NetBSD: patch-src_3rdparty_chromium_sandbox_linux_BUILD.gn,v 1.1 2021/08/03 21:
      ]
      configs += [ ":nacl_nonsfi_warnings" ]
    }
-@@ -371,7 +373,7 @@ component("sandbox_services") {
+@@ -386,7 +388,7 @@ component("sandbox_services") {
      public_deps += [ ":sandbox_services_headers" ]
    }
  
@@ -20,7 +20,7 @@ $NetBSD: patch-src_3rdparty_chromium_sandbox_linux_BUILD.gn,v 1.1 2021/08/03 21:
      cflags = [ "-fgnu-inline-asm" ]
  
      sources -= [
-@@ -379,6 +381,8 @@ component("sandbox_services") {
+@@ -394,6 +396,8 @@ component("sandbox_services") {
        "services/init_process_reaper.h",
        "services/scoped_process.cc",
        "services/scoped_process.h",
@@ -29,9 +29,9 @@ $NetBSD: patch-src_3rdparty_chromium_sandbox_linux_BUILD.gn,v 1.1 2021/08/03 21:
        "services/yama.cc",
        "services/yama.h",
        "syscall_broker/broker_channel.cc",
-@@ -398,6 +402,10 @@ component("sandbox_services") {
-       "syscall_broker/broker_simple_message.cc",
-       "syscall_broker/broker_simple_message.h",
+@@ -417,6 +421,10 @@ component("sandbox_services") {
+       "syscall_broker/syscall_dispatcher.cc",
+       "syscall_broker/syscall_dispatcher.h",
      ]
 +    sources += [
 +      "services/libc_interceptor.cc",

@@ -1,8 +1,16 @@
-$NetBSD: patch-src_3rdparty_chromium_base_process_internal__linux.h,v 1.1 2021/08/03 21:04:34 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_process_internal__linux.h,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/base/process/internal_linux.h.orig	2020-06-25 09:31:18.000000000 +0000
+--- src/3rdparty/chromium/base/process/internal_linux.h.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/base/process/internal_linux.h
-@@ -55,6 +55,14 @@ bool ParseProcStats(const std::string& s
+@@ -10,6 +10,7 @@
+ 
+ #include <stddef.h>
+ #include <stdint.h>
++#include <string.h>
+ #include <unistd.h>
+ 
+ #include "base/files/dir_reader_posix.h"
+@@ -59,6 +60,14 @@ bool ParseProcStats(const std::string& s
  // If the ordering ever changes, carefully review functions that use these
  // values.
  enum ProcStatsFields {
@@ -17,7 +25,7 @@ $NetBSD: patch-src_3rdparty_chromium_base_process_internal__linux.h,v 1.1 2021/0
    VM_COMM = 1,         // Filename of executable, without parentheses.
    VM_STATE = 2,        // Letter indicating the state of the process.
    VM_PPID = 3,         // PID of the parent.
-@@ -67,6 +75,7 @@ enum ProcStatsFields {
+@@ -71,6 +80,7 @@ enum ProcStatsFields {
    VM_STARTTIME = 21,   // The time the process started in clock ticks.
    VM_VSIZE = 22,       // Virtual memory size in bytes.
    VM_RSS = 23,         // Resident Set Size in pages.
