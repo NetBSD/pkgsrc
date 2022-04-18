@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.832 2022/04/17 11:06:40 markd Exp $
+# $NetBSD: Makefile,v 1.833 2022/04/18 03:03:01 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -600,6 +600,8 @@ SUBDIR+=	tex-dinbrief-doc
 SUBDIR+=	tex-dk-bib
 SUBDIR+=	tex-dk-bib-doc
 SUBDIR+=	tex-dnp
+SUBDIR+=	tex-doi
+SUBDIR+=	tex-doi-doc
 SUBDIR+=	tex-dotlessi
 SUBDIR+=	tex-dotlessi-doc
 SUBDIR+=	tex-draftcopy

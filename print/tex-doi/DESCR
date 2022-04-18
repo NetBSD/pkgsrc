@@ -1,0 +1,7 @@
+You can hyperlink DOI numbers to doi.org. However, some
+publishers have elected to use nasty characters in their DOI
+numbering scheme ('<', '>', '_' and ';' have all been spotted).
+This will either upset (La)TeX, or your PDF reader. This
+package contains a single user-level command \doi{}, which
+takes a DOI number, and creates a correct hyperlink to the
+target of the DOI.
