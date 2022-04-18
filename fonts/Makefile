@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.374 2022/04/16 01:37:30 markd Exp $
+# $NetBSD: Makefile,v 1.375 2022/04/18 05:06:04 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -825,6 +825,8 @@ SUBDIR+=	tex-typicons-doc
 SUBDIR+=	tex-uhc
 SUBDIR+=	tex-uhc-doc
 SUBDIR+=	tex-umtypewriter
+SUBDIR+=	tex-unfonts-core
+SUBDIR+=	tex-unfonts-core-doc
 SUBDIR+=	tex-universa
 SUBDIR+=	tex-universa-doc
 SUBDIR+=	tex-universalis
