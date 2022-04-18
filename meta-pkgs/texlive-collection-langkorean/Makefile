@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2020/05/10 04:13:26 markd Exp $
+# $NetBSD: Makefile,v 1.13 2022/04/18 05:13:11 markd Exp $
 
 DISTNAME=	collection-langkorean
-PKGNAME=	texlive-${DISTNAME}-2020pre1
+PKGNAME=	texlive-${DISTNAME}-2022
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	54074
@@ -20,10 +20,10 @@ DEPENDS+=	tex-kotex-utf-[0-9]*:../../print/tex-kotex-utf
 DEPENDS+=	tex-kotex-utils-[0-9]*:../../print/tex-kotex-utils
 # lshort-korean is documentation only
 DEPENDS+=	tex-nanumtype1-[0-9]*:../../fonts/tex-nanumtype1
-# depend pmhanguljamo
+DEPENDS+=	tex-pmhanguljamo-[0-9]*:../../print/tex-pmhanguljamo
 DEPENDS+=	tex-uhc-[0-9]*:../../fonts/tex-uhc
-# depend unfonts-core
-# depend unfonts-extra
+DEPENDS+=	tex-unfonts-core-[0-9]*:../../fonts/tex-unfonts-core
+DEPENDS+=	tex-unfonts-extra-[0-9]*:../../fonts/tex-unfonts-extra
 
 META_PACKAGE=	yes
 
