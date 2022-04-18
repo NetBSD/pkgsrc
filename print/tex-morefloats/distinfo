@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/18 03:23:24 markd Exp $
+
+BLAKE2s (morefloats.r37927.tar.xz) = b4796d821d62c41688b814c61ad592686b3d71e9f7230053d61eee963f8ac4a2
+SHA512 (morefloats.r37927.tar.xz) = 28fd471aa854852cc2a48597dda19cadda3c92c589d0419b8d36e044f9c04e406037f162e1d02c1f4b20a6288efe4a689fe4e03aafbfc6b06cf14019f7e880f0
+Size (morefloats.r37927.tar.xz) = 4456 bytes
