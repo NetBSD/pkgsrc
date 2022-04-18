@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1904 2022/04/18 04:38:42 markd Exp $
+$NetBSD: CHANGES-2022,v 1.1905 2022/04/18 05:09:54 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2994,3 +2994,11 @@ Changes to the packages collection and infrastructure in 2022:
 	Added print/tex-context-inifile-doc version 20080715 [markd 2022-04-18]
 	Added print/tex-context-layout version 20070627 [markd 2022-04-18]
 	Added print/tex-context-layout-doc version 20070627 [markd 2022-04-18]
+	Added print/tex-bredzenie version 1.0 [markd 2022-04-18]
+	Added print/tex-bredzenie-doc version 1.0 [markd 2022-04-18]
+	Added print/tex-pmhanguljamo version 0.4 [markd 2022-04-18]
+	Added print/tex-pmhanguljamo-doc version 0.4 [markd 2022-04-18]
+	Added fonts/tex-unfonts-core version 2022 [markd 2022-04-18]
+	Added fonts/tex-unfonts-core-doc version 2022 [markd 2022-04-18]
+	Added fonts/tex-unfonts-extra version 2022 [markd 2022-04-18]
+	Added fonts/tex-unfonts-extra-doc version 2022 [markd 2022-04-18]
