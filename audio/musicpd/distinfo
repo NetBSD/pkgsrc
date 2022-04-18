@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.134 2022/03/20 08:25:06 wiz Exp $
+$NetBSD: distinfo,v 1.135 2022/04/18 18:13:55 nia Exp $
 
 BLAKE2s (mpd-0.23.6.tar.xz) = 804b2600782b47177bb9ef35c5f927bd4b33f76345faf244b0335628e49e2953
 SHA512 (mpd-0.23.6.tar.xz) = 1595fcc53a67f1a68b0c0516697d242da53b91626e37bc2f49095add78eb497a52c67c961a421f20b40f3c57a571557a76559a212838de2a3ec4aec6c7a3288d
 Size (mpd-0.23.6.tar.xz) = 770812 bytes
 SHA1 (patch-src_net_IPv6Address.hxx) = 3e0ad6e63a970a17d0d8b2403acc538d8b08342e
+SHA1 (patch-src_util_WStringAPI.hxx) = 92f39096770943c26d8aaae8a7581d4daca2d233
