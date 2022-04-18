@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/18 04:27:38 markd Exp $
+
+BLAKE2s (context-handlecsv.r51306.tar.xz) = ae594e66c1c80defdd2fd14776a86e5d934858a8535d817f9ba7a0eeeb0f2b73
+SHA512 (context-handlecsv.r51306.tar.xz) = 10f862b7152e0efe2a8444fcf847ade2aad2c1499e146b94643a7e08a438359c2f7d1927e7e9773f3dd14475fb4535d17fb4f29ff053e7a29c9463f40c6e5598
+Size (context-handlecsv.r51306.tar.xz) = 16056 bytes
