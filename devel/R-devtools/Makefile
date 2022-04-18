@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/04/16 05:42:39 mef Exp $
+# $NetBSD: Makefile,v 1.14 2022/04/18 14:50:03 mef Exp $
 
 R_PKGNAME=	devtools
 R_PKGVER=	2.4.3
@@ -9,7 +9,7 @@ COMMENT=	Tools to make developing R packages easier
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 DEPENDS+=	R-callr>=3.6.0:../../devel/R-callr
-DEPENDS+=	R-cli>=2.4.0:../../devel/R-cli
+DEPENDS+=	R-cli>=3.0.0:../../devel/R-cli
 DEPENDS+=	R-covr>=3.5.1:../../devel/R-covr
 DEPENDS+=	R-desc>=1.3.0:../../devel/R-desc
 DEPENDS+=	R-ellipsis>=0.3.1:../../math/R-ellipsis
