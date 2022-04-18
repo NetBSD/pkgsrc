@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:01:14 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/18 13:21:26 nia Exp $
 
-BLAKE2s (olive-editor-0.1.1.tar.gz) = 6f37af882b8c58d015ca68f1aa1857ea9de8415f81586a585075b128f0bd6ee6
-SHA512 (olive-editor-0.1.1.tar.gz) = 72aefc03956b3a64d4fb69d15f9a5c88429e8988dac7a6f10287265c065e7b85cb7c6c63ea35e07aef34cdc71e6a3611a8622a1916163c08182bab227d8555e1
-Size (olive-editor-0.1.1.tar.gz) = 2237511 bytes
-SHA1 (patch-CMakeLists.txt) = c38f07520052a40dd235768f4ccb7d34885a121a
+BLAKE2s (olive-editor-0.1.2.tar.gz) = f699bc4fbed8b6e12f2f91ff1b1142ffe9d1571e0dd2217c0e0fc95f999c1ac5
+SHA512 (olive-editor-0.1.2.tar.gz) = 48cf44b5ba1bd95e20efb5312d61d6c37e6dedc1f02156ef436ab51705be4bdaf5bb68875b55b06337c25a34aee23eac645fe295d08ab0038872adccf12fc95e
+Size (olive-editor-0.1.2.tar.gz) = 2174284 bytes
+SHA1 (patch-CMakeLists.txt) = 4379576d9087ed5494fa374791aaadf03f2416b0
 SHA1 (patch-cmake_FindFFMPEG.cmake) = 2f2aef426f7a3e93e66ff500840dcadec5e499e3
 SHA1 (patch-effects_internal_texteffect.cpp) = 0bc1d2b67980ca3168c6e355cdd9740f44c9bc74
 SHA1 (patch-effects_internal_timecodeeffect.cpp) = fbd5ff65f8019f7b863d3ea4dc9f3fc2c184d317

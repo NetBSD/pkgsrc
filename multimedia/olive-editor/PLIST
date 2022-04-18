@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/09/19 14:28:15 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/04/18 13:21:26 nia Exp $
 bin/olive-editor
 share/applications/org.olivevideoeditor.Olive.desktop
 share/icons/hicolor/128x128/apps/org.olivevideoeditor.Olive.png
@@ -89,5 +89,7 @@ share/olive-editor/ts/olive_it.qm
 share/olive-editor/ts/olive_pt-BR.qm
 share/olive-editor/ts/olive_ru.qm
 share/olive-editor/ts/olive_sr.qm
+share/olive-editor/ts/olive_tr.qm
+share/olive-editor/ts/olive_uk.qm
 share/olive-editor/ts/olive_zh-CN.qm
 share/olive-editor/ts/olive_zh-TW.qm
