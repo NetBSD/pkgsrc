@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2022/04/10 03:45:14 markd Exp $
+# $NetBSD: Makefile,v 1.15 2022/04/18 05:53:31 markd Exp $
 
 DISTNAME=	collection-langeuropean
-PKGNAME=	texlive-${DISTNAME}-2021pre1
+PKGNAME=	texlive-${DISTNAME}-2022pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	61419
@@ -41,7 +41,7 @@ DEPENDS+=	tex-babel-swedish-[0-9]*:../../print/tex-babel-swedish
 DEPENDS+=	tex-babel-turkish-[0-9]*:../../print/tex-babel-turkish
 DEPENDS+=	tex-babel-welsh-[0-9]*:../../print/tex-babel-welsh
 # depend finbib
-# depend gloss-occitan
+# gloss-occitan is documentation only
 # depend hrlatex
 # depend hulipsum
 DEPENDS+=	tex-hyphen-croatian-[0-9]*:../../print/tex-hyphen-croatian
@@ -68,7 +68,7 @@ DEPENDS+=	tex-hyphen-swedish-[0-9]*:../../print/tex-hyphen-swedish
 DEPENDS+=	tex-hyphen-turkish-[0-9]*:../../print/tex-hyphen-turkish
 DEPENDS+=	tex-hyphen-uppersorbian-[0-9]*:../../print/tex-hyphen-uppersorbian
 DEPENDS+=	tex-hyphen-welsh-[0-9]*:../../print/tex-hyphen-welsh
-# depend kaytannollista-latexia
+# kaytannollista-latexia is documentation only
 # depend lithuanian
 # lshort-dutch is documentation only
 # lshort-estonian is documentation only
