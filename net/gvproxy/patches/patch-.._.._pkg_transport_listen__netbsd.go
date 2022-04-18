@@ -1,9 +1,9 @@
-$NetBSD: patch-.._.._pkg_transport_listen__netbsd.go,v 1.1 2021/09/04 20:19:29 maya Exp $
+$NetBSD: patch-.._.._pkg_transport_listen__netbsd.go,v 1.2 2022/04/18 18:24:26 bsiegert Exp $
 
 Port to NetBSD
 
 --- /dev/null	2021-09-04 13:19:08.635043216 +0000
-+++ ../../pkg/transport/listen_netbsd.go
++++ pkg/transport/listen_netbsd.go
 @@ -0,0 +1,41 @@
 +package transport
 +
