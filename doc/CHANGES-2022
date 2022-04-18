@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1901 2022/04/17 22:56:42 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1902 2022/04/18 00:21:51 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2950,3 +2950,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated wm/progman to 1.0nb2 [sjmulder 2022-04-17]
 	Removed textproc/p5-MultiMarkdown successor textproc/p5-Text-MultiMarkdown [wiz 2022-04-17]
 	Updated textproc/hgrep to 0.2.4 [pin 2022-04-17]
+	Updated print/tex-pxjahyper to 1.0a [markd 2022-04-18]
+	Updated print/tex-pxjahyper-doc to 1.0a [markd 2022-04-18]
+	Updated print/tex-graphics-def to 2022 [markd 2022-04-18]
+	Updated print/tex-graphics-def-doc to 2022 [markd 2022-04-18]
