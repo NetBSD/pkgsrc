@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2022/04/10 03:52:02 markd Exp $
+# $NetBSD: Makefile,v 1.16 2022/04/18 05:44:45 markd Exp $
 
 DISTNAME=	collection-langarabic
-PKGNAME=	texlive-${DISTNAME}-2021pre1
+PKGNAME=	texlive-${DISTNAME}-2022pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	59594
@@ -40,7 +40,7 @@ DEPENDS+=	tex-hyphen-farsi-[0-9]*:../../print/tex-hyphen-farsi
 # depend tram
 # depend xepersian
 # depend xepersian-hm
-# depend xindy-persian
+# xindy-persian is documentation only
 
 META_PACKAGE=	yes
 
