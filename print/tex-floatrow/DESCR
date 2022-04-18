@@ -1,0 +1,7 @@
+The floatrow package provides many ways to customize layouts of
+floating environments and has code to cooperate with the
+caption 3.x package. The package offers mechanisms to put
+floats side by side, and to put the caption beside its float.
+The floatrow settings could be expanded to the floats created
+by packages rotating, wrapfig, subfig (in the case of rows of
+subfloats), and longtable.
