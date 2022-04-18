@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.152 2021/12/08 16:02:33 adam Exp $
+# $NetBSD: Makefile,v 1.153 2022/04/18 19:10:04 adam Exp $
 
 DISTNAME=	heimdal-7.7.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=heimdal/}
 GITHUB_RELEASE=	${DISTNAME}

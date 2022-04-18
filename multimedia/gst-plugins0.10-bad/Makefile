@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.37 2021/12/08 16:02:22 adam Exp $
+# $NetBSD: Makefile,v 1.38 2022/04/18 19:09:59 adam Exp $
 #
 
 USE_LANGUAGES=	c c++
 
 .include "Makefile.common"
-PKGREVISION=	12
+PKGREVISION=	13
 
 COMMENT+=	Bad plugins
 
