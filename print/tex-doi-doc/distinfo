@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/18 03:03:01 markd Exp $
+
+BLAKE2s (doi.doc.r48634.tar.xz) = 99c06bcdd9f0204bdbd907a7ab36e2213db08e721f0c0d114ab3b6656dc3e36a
+SHA512 (doi.doc.r48634.tar.xz) = 3dd77559fbcb32d8bee7121f62bc37ca14c14c8e62f8d2ba44978438920dcdd54605a543135a6294e2ea9742f5fde4862a2efe3eeb6bf22b6d7418b4b01a2ebd
+Size (doi.doc.r48634.tar.xz) = 1024 bytes
