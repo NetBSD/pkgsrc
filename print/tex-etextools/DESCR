@@ -1,0 +1,12 @@
+The package provides many (purely expandable) tools for LaTeX:
+Extensive list management (csv lists, lists of single
+tokens/characters, etoolbox lists); purely expandable loops
+(csvloop, forcsvloop, etc.); conversion (csvtolist, etc.));
+addition/deletion (csvadd, listdel, etc.); Expansion and group
+control: \expandnext, \ExpandAfterCmds, \AfterGroup...; Tests
+on tokens, characters and control sequences (\iffirstchar,
+\ifiscs, \ifdefcount, \@ifchar...); Tests on strings
+(\ifstrnum, \ifuppercase, \DeclareStringFilter...); Purely
+expandable macros with options (\FE@testopt, \FE@ifstar) or
+modifiers (\FE@modifiers); Some purely expandable numerics
+(\interval, \locinterplin).

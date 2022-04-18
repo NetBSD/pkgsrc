@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/18 03:06:43 markd Exp $
+share/texmf-dist/doc/latex/etextools/README
+share/texmf-dist/doc/latex/etextools/etextools-examples.pdf
+share/texmf-dist/doc/latex/etextools/etextools-examples.tex
+share/texmf-dist/doc/latex/etextools/etextools.pdf
