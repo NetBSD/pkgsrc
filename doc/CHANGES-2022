@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1903 2022/04/18 03:56:55 markd Exp $
+$NetBSD: CHANGES-2022,v 1.1904 2022/04/18 04:38:42 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -2984,3 +2984,13 @@ Changes to the packages collection and infrastructure in 2022:
 	Added print/tex-autonum-doc version 0.3.11 [markd 2022-04-18]
 	Added print/tex-classicthesis version 4.6 [markd 2022-04-18]
 	Added print/tex-classicthesis-doc version 4.6 [markd 2022-04-18]
+	Added print/tex-context-cmscbf version 20060912 [markd 2022-04-18]
+	Added print/tex-context-cmscbf-doc version 20060912 [markd 2022-04-18]
+	Added print/tex-context-cmttbf version 20060912 [markd 2022-04-18]
+	Added print/tex-context-cmttbf-doc version 20060912 [markd 2022-04-18]
+	Added print/tex-context-handlecsv version 20190527 [markd 2022-04-18]
+	Added print/tex-context-handlecsv-doc version 20190527 [markd 2022-04-18]
+	Added print/tex-context-inifile version 20080715 [markd 2022-04-18]
+	Added print/tex-context-inifile-doc version 20080715 [markd 2022-04-18]
+	Added print/tex-context-layout version 20070627 [markd 2022-04-18]
+	Added print/tex-context-layout-doc version 20070627 [markd 2022-04-18]
