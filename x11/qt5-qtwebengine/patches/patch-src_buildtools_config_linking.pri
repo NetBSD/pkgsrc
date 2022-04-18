@@ -1,6 +1,5 @@
-$NetBSD: patch-src_buildtools_config_linking.pri,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_buildtools_config_linking.pri,v 1.2 2022/04/18 11:18:19 adam Exp $
 
-Index: src/buildtools/config/linking.pri
 --- src/buildtools/config/linking.pri.orig
 +++ src/buildtools/config/linking.pri
 @@ -1,6 +1,14 @@

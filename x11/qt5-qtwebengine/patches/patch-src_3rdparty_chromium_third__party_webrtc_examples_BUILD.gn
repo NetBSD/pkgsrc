@@ -1,31 +1,31 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_webrtc_examples_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_webrtc_examples_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/third_party/webrtc/examples/BUILD.gn.orig	2020-07-15 19:01:41.000000000 +0000
+--- src/3rdparty/chromium/third_party/webrtc/examples/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/third_party/webrtc/examples/BUILD.gn
-@@ -44,7 +44,7 @@ group("examples") {
+@@ -45,7 +45,7 @@ group("examples") {
      deps += [ ":AppRTCMobile" ]
    }
  
--  if (is_linux || is_win) {
-+  if (is_linux || is_win || is_bsd) {
+-  if (is_linux || is_chromeos || is_win) {
++  if (is_linux || is_chromeos || is_win || is_bsd) {
      deps += [
        ":peerconnection_server",
        ":stunserver",
-@@ -642,7 +642,7 @@ if (is_ios || (is_mac && target_cpu != "
+@@ -647,7 +647,7 @@ if (is_ios || (is_mac && target_cpu != "
    }
  }
  
--if (is_linux || is_win) {
-+if (is_linux || is_win || is_bsd) {
+-if (is_linux || is_chromeos || is_win) {
++if (is_linux || is_chromeos || is_win || is_bsd) {
    rtc_executable("peerconnection_client") {
      testonly = true
      sources = [
-@@ -686,7 +686,7 @@ if (is_linux || is_win) {
-       configs += [ "//build/config/win:windowed" ]
-       deps += [ "../media:rtc_media_base" ]
+@@ -695,7 +695,7 @@ if (is_linux || is_chromeos || is_win) {
+         "../rtc_base:win32",
+       ]
      }
--    if (is_linux) {
-+    if (is_linux || is_bsd) {
+-    if (is_linux || is_chromeos) {
++    if (is_linux || is_chromeos || is_bsd) {
        sources += [
          "peerconnection/client/linux/main.cc",
          "peerconnection/client/linux/main_wnd.cc",

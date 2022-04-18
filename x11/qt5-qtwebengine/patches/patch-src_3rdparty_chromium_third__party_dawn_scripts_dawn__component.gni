@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_dawn_scripts_dawn__component.gni,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_dawn_scripts_dawn__component.gni,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/third_party/dawn/scripts/dawn_component.gni.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/third_party/dawn/scripts/dawn_component.gni.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/third_party/dawn/scripts/dawn_component.gni
 @@ -63,7 +63,7 @@ template("dawn_component") {
          "@executable_path/",
        ]
      }
--    if (is_linux) {
-+    if (is_linux || is_bsd) {
+-    if ((is_linux || is_chromeos) && dawn_has_build) {
++    if ((is_linux || is_chromeos || is_bsd) && dawn_has_build) {
        configs = [ "//build/config/gcc:rpath_for_built_shared_libraries" ]
      }
    }

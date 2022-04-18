@@ -1,11 +1,9 @@
-$NetBSD: patch-src_3rdparty_gn_tools_gn_c_tool.cc,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_gn_tools_gn_c_tool.cc,v 1.2 2022/04/18 11:18:19 adam Exp $
 
-Add support of -Wl,-R
-
---- src/3rdparty/gn/tools/gn/c_tool.cc.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/gn/tools/gn/c_tool.cc.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/gn/tools/gn/c_tool.cc
-@@ -23,6 +23,7 @@ CTool::CTool(const char* n)
-   set_framework_switch("-framework ");
+@@ -24,6 +24,7 @@ CTool::CTool(const char* n)
+   set_weak_framework_switch("-weak_framework ");
    set_framework_dir_switch("-F");
    set_lib_dir_switch("-L");
 +  set_lib_dir_Rswitch("-Wl,-R");

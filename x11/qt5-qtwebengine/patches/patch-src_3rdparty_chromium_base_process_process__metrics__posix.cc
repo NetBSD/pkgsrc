@@ -1,10 +1,10 @@
-$NetBSD: patch-src_3rdparty_chromium_base_process_process__metrics__posix.cc,v 1.1 2021/08/03 21:04:34 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_process_process__metrics__posix.cc,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/base/process/process_metrics_posix.cc.orig	2020-06-25 09:31:18.000000000 +0000
+--- src/3rdparty/chromium/base/process/process_metrics_posix.cc.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/base/process/process_metrics_posix.cc
 @@ -20,6 +20,7 @@
  
- #if defined(OS_MACOSX)
+ #if defined(OS_APPLE)
  #include <malloc/malloc.h>
 +#elif defined(OS_FREEBSD) || defined(OS_NETBSD)
  #else

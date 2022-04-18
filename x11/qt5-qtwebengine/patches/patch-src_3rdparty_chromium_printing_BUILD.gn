@@ -1,13 +1,22 @@
-$NetBSD: patch-src_3rdparty_chromium_printing_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_printing_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/printing/BUILD.gn.orig	2020-07-15 18:56:47.000000000 +0000
+--- src/3rdparty/chromium/printing/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/printing/BUILD.gn
+@@ -141,7 +141,7 @@ component("printing") {
+     ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux || is_bsd) {
+     sources += [
+       "printed_document_linux.cc",
+       "printing_context_linux.cc",
 @@ -206,7 +206,7 @@ component("printing") {
    if (use_cups) {
      configs += [ ":cups" ]
  
--    if (is_linux) {
-+    if (is_linux || is_bsd) {
+-    if (is_linux || is_chromeos) {
++    if (is_linux || is_chromeos || is_bsd) {
        # CUPS 1.6 deprecated the PPD APIs, but we will stay with this API
        # for now as the suitability of the replacement is unclear.
        # More info: crbug.com/226176
@@ -15,8 +24,8 @@ $NetBSD: patch-src_3rdparty_chromium_printing_BUILD.gn,v 1.1 2021/08/03 21:04:35
    if (is_fuchsia) {
      sources += [ "image_fuchsia.cc" ]
    }
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      sources += [ "image_linux.cc" ]
    }
    if (is_mac) {

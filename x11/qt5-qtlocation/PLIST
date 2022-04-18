@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2020/06/02 06:41:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2022/04/18 11:18:16 adam Exp $
 lib/pkgconfig/Qt5Location.pc
 lib/pkgconfig/Qt5Positioning.pc
 qt5/include/QtLocation/${PKGVERSION}/QtLocation/private/error_messages_p.h
@@ -349,9 +349,6 @@ qt5/plugins/geoservices/libqtgeoservices_nokia.so
 qt5/plugins/geoservices/libqtgeoservices_osm.so
 qt5/plugins/position/libqtposition_positionpoll.so
 qt5/plugins/position/libqtposition_serialnmea.so
-qt5/qml/Qt/labs/location/liblocationlabsplugin.so
-qt5/qml/Qt/labs/location/plugins.qmltypes
-qt5/qml/Qt/labs/location/qmldir
 qt5/qml/QtLocation/libdeclarative_location.so
 qt5/qml/QtLocation/plugins.qmltypes
 qt5/qml/QtLocation/qmldir

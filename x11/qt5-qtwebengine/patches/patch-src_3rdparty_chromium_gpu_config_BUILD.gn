@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_gpu_config_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_gpu_config_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/gpu/config/BUILD.gn.orig	2020-07-15 18:56:47.000000000 +0000
+--- src/3rdparty/chromium/gpu/config/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/gpu/config/BUILD.gn
-@@ -216,7 +216,7 @@ jumbo_source_set("config_sources") {
+@@ -226,7 +226,7 @@ source_set("config_sources") {
    if (is_mac) {
-     libs = [ "OpenGL.framework" ]
+     frameworks = [ "OpenGL.framework" ]
    }
--  if (is_linux || is_mac) {
-+  if (is_linux || is_mac || is_bsd) {
+-  if (is_linux || is_chromeos || is_mac) {
++  if (is_linux || is_chromeos || is_mac || is_bsd) {
      deps += [ "//third_party/angle:angle_gpu_info_util" ]
    }
    if (use_x11) {

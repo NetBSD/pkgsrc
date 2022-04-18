@@ -1,17 +1,17 @@
-$NetBSD: patch-src_3rdparty_chromium_weblayer_browser_content__browser__client__impl.cc,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_weblayer_browser_content__browser__client__impl.cc,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/weblayer/browser/content_browser_client_impl.cc.orig	2020-07-15 18:56:49.000000000 +0000
+--- src/3rdparty/chromium/weblayer/browser/content_browser_client_impl.cc.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/weblayer/browser/content_browser_client_impl.cc
-@@ -120,7 +120,7 @@
- #include "weblayer/browser/safe_browsing/safe_browsing_service.h"
+@@ -135,7 +135,7 @@
+ #include "weblayer/browser/weblayer_factory_impl_android.h"
  #endif
  
--#if defined(OS_LINUX) || defined(OS_ANDROID)
-+#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_BSD)
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_ANDROID)
++#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_ANDROID) || defined(OS_BSD)
  #include "content/public/common/content_descriptors.h"
  #endif
  
-@@ -355,7 +355,7 @@ void ContentBrowserClientImpl::Configure
+@@ -382,7 +382,7 @@ void ContentBrowserClientImpl::Configure
  
  void ContentBrowserClientImpl::OnNetworkServiceCreated(
      network::mojom::NetworkService* network_service) {
@@ -20,12 +20,12 @@ $NetBSD: patch-src_3rdparty_chromium_weblayer_browser_content__browser__client__
    network::mojom::CryptConfigPtr config = network::mojom::CryptConfig::New();
    content::GetNetworkService()->SetCryptConfig(std::move(config));
  #endif
-@@ -708,7 +708,7 @@ SafeBrowsingService* ContentBrowserClien
+@@ -825,7 +825,7 @@ SafeBrowsingService* ContentBrowserClien
  }
  #endif
  
--#if defined(OS_LINUX) || defined(OS_ANDROID)
-+#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_BSD)
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_ANDROID)
++#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_ANDROID) || defined(OS_BSD)
  void ContentBrowserClientImpl::GetAdditionalMappedFilesForChildProcess(
      const base::CommandLine& command_line,
      int child_process_id,

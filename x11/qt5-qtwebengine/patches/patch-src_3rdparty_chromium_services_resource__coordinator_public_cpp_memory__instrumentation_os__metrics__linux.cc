@@ -1,11 +1,23 @@
-$NetBSD: patch-src_3rdparty_chromium_services_resource__coordinator_public_cpp_memory__instrumentation_os__metrics__linux.cc,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_services_resource__coordinator_public_cpp_memory__instrumentation_os__metrics__linux.cc,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_linux.cc.orig	2020-07-15 18:56:01.000000000 +0000
+--- src/3rdparty/chromium/services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_linux.cc.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_linux.cc
-@@ -23,8 +23,10 @@
+@@ -5,7 +5,6 @@
+ #include <dlfcn.h>
+ #include <fcntl.h>
+ #include <stdint.h>
+-#include <sys/prctl.h>
+ 
+ #include <memory>
+ 
+@@ -27,8 +26,14 @@
  #include "build/build_config.h"
  #include "services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics.h"
  
++#if !defined(OS_BSD)
++#include <sys/prctl.h>
++#endif
++
 +#if !defined(OS_BSD)
  // Symbol with virtual address of the start of ELF header of the current binary.
  extern char __ehdr_start;
@@ -13,7 +25,7 @@ $NetBSD: patch-src_3rdparty_chromium_services_resource__coordinator_public_cpp_m
  
  namespace memory_instrumentation {
  
-@@ -36,6 +38,7 @@ using mojom::VmRegionPtr;
+@@ -40,6 +45,7 @@ using mojom::VmRegionPtr;
  const char kClearPeakRssCommand[] = "5";
  const uint32_t kMaxLineSize = 4096;
  
@@ -21,15 +33,15 @@ $NetBSD: patch-src_3rdparty_chromium_services_resource__coordinator_public_cpp_m
  // TODO(chiniforooshan): Many of the utility functions in this anonymous
  // namespace should move to base/process/process_metrics_linux.cc to make the
  // code a lot cleaner.  However, we should do so after we made sure the metrics
-@@ -227,6 +230,7 @@ uint32_t ReadLinuxProcSmapsFile(FILE* sm
-   }
-   return num_valid_regions;
- }
+@@ -269,6 +275,7 @@ class ScopedProcessSetDumpable {
+ 
+   bool was_dumpable_;
+ };
 +#endif
  
  }  // namespace
  
-@@ -240,6 +244,9 @@ void OSMetrics::SetProcSmapsForTesting(F
+@@ -282,6 +289,9 @@ void OSMetrics::SetProcSmapsForTesting(F
  // static
  bool OSMetrics::FillOSMemoryDump(base::ProcessId pid,
                                   mojom::RawOSMemDump* dump) {
@@ -39,7 +51,7 @@ $NetBSD: patch-src_3rdparty_chromium_services_resource__coordinator_public_cpp_m
    // TODO(chiniforooshan): There is no need to read both /statm and /status
    // files. Refactor to get everything from /status using ProcessMetric.
    auto statm_file = GetProcPidDir(pid).Append("statm");
-@@ -296,10 +303,15 @@ bool OSMetrics::FillOSMemoryDump(base::P
+@@ -338,10 +348,15 @@ bool OSMetrics::FillOSMemoryDump(base::P
  #endif  //  defined(OS_ANDROID)
  
    return true;
@@ -55,7 +67,7 @@ $NetBSD: patch-src_3rdparty_chromium_services_resource__coordinator_public_cpp_m
    std::vector<VmRegionPtr> maps;
    uint32_t res = 0;
    if (g_proc_smaps_for_testing) {
-@@ -317,8 +329,10 @@ std::vector<VmRegionPtr> OSMetrics::GetP
+@@ -359,8 +374,10 @@ std::vector<VmRegionPtr> OSMetrics::GetP
      return std::vector<VmRegionPtr>();
  
    return maps;
@@ -66,7 +78,7 @@ $NetBSD: patch-src_3rdparty_chromium_services_resource__coordinator_public_cpp_m
  // static
  OSMetrics::MappedAndResidentPagesDumpState OSMetrics::GetMappedAndResidentPages(
      const size_t start_address,
-@@ -400,5 +414,6 @@ size_t OSMetrics::GetPeakResidentSetSize
+@@ -448,5 +465,6 @@ size_t OSMetrics::GetPeakResidentSetSize
    }
    return 0;
  }

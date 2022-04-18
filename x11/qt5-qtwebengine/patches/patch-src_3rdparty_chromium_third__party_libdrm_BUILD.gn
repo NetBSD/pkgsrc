@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_libdrm_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_libdrm_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/third_party/libdrm/BUILD.gn.orig	2020-07-15 18:56:31.000000000 +0000
+--- src/3rdparty/chromium/third_party/libdrm/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/third_party/libdrm/BUILD.gn
 @@ -1,7 +1,7 @@
  # Copyright 2016 The Chromium Authors. All rights reserved.
  # Use of this source code is governed by a BSD-style license that can be
  # found in the LICENSE file.
--assert(is_linux)
-+assert(is_linux || is_bsd)
+-assert(is_linux || is_chromeos)
++assert(is_linux || is_chromeos || is_bsd)
  
  config("libdrm_config") {
    # TODO(thomasanderson): Remove this hack once

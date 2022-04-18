@@ -1,8 +1,8 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_skia_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_skia_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
 https://skia-review.googlesource.com/c/skia/+/310856
 
---- src/3rdparty/chromium/third_party/skia/BUILD.gn.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/third_party/skia/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/third_party/skia/BUILD.gn
 @@ -32,7 +32,7 @@ config("skia_public") {
    if (is_component_build) {
@@ -13,16 +13,16 @@ https://skia-review.googlesource.com/c/skia/+/310856
      defines += [ "SK_R32_SHIFT=16" ]
    }
    if (skia_enable_flutter_defines) {
-@@ -534,7 +534,7 @@ optional("gpu") {
-     } else if (skia_use_egl) {
-       sources += [ "src/gpu/gl/egl/GrGLMakeNativeInterface_egl.cpp" ]
+@@ -798,7 +798,7 @@ optional("gpu") {
        libs += [ "EGL" ]
+     } else if (skia_use_webgl) {
+       sources += [ "src/gpu/gl/webgl/GrGLMakeNativeInterface_webgl.cpp" ]
 -    } else if (is_linux && skia_use_x11) {
 +    } else if ((is_linux || is_bsd) && skia_use_x11) {
        sources += [ "src/gpu/gl/glx/GrGLMakeNativeInterface_glx.cpp" ]
        libs += [ "GL" ]
      } else if (is_mac) {
-@@ -978,7 +978,7 @@ component("skia") {
+@@ -1263,7 +1263,7 @@ component("skia") {
      ]
    }
  
@@ -31,7 +31,7 @@ https://skia-review.googlesource.com/c/skia/+/310856
      sources += [ "src/ports/SkDebug_stdio.cpp" ]
      if (skia_use_egl) {
        libs += [ "GLESv2" ]
-@@ -1356,7 +1356,7 @@ if (skia_enable_tools) {
+@@ -1643,7 +1643,7 @@ if (skia_enable_tools) {
        if (is_android || skia_use_egl) {
          sources += [ "tools/gpu/gl/egl/CreatePlatformGLTestContext_egl.cpp" ]
          libs += [ "EGL" ]
@@ -40,8 +40,8 @@ https://skia-review.googlesource.com/c/skia/+/310856
          sources += [ "tools/gpu/gl/glx/CreatePlatformGLTestContext_glx.cpp" ]
          libs += [
            "GLU",
-@@ -1676,7 +1676,7 @@ if (skia_enable_tools) {
-     }
+@@ -1942,7 +1942,7 @@ if (skia_enable_tools) {
+     deps = [ ":skia" ]
    }
  
 -  if (is_linux || is_mac) {
@@ -49,17 +49,17 @@ https://skia-review.googlesource.com/c/skia/+/310856
      test_app("skottie_tool") {
        deps = [ "modules/skottie:tool" ]
      }
-@@ -2118,7 +2118,7 @@ if (skia_enable_tools) {
-         "tools/sk_app/android/surface_glue_android.cpp",
+@@ -2393,7 +2393,7 @@ if (skia_enable_tools) {
+         "tools/sk_app/android/surface_glue_android.h",
        ]
        libs += [ "android" ]
 -    } else if (is_linux) {
 +    } else if (is_linux || is_bsd) {
        sources += [
          "tools/sk_app/unix/RasterWindowContext_unix.cpp",
-         "tools/sk_app/unix/Window_unix.cpp",
-@@ -2159,7 +2159,7 @@ if (skia_enable_tools) {
-       sources += [ "tools/sk_app/GLWindowContext.cpp" ]
+         "tools/sk_app/unix/WindowContextFactory_unix.h",
+@@ -2444,7 +2444,7 @@ if (skia_enable_tools) {
+       sources += [ "tools/sk_app/GLWindowContext.h" ]
        if (is_android) {
          sources += [ "tools/sk_app/android/GLWindowContext_android.cpp" ]
 -      } else if (is_linux) {
@@ -67,8 +67,8 @@ https://skia-review.googlesource.com/c/skia/+/310856
          sources += [ "tools/sk_app/unix/GLWindowContext_unix.cpp" ]
        } else if (is_win) {
          sources += [ "tools/sk_app/win/GLWindowContext_win.cpp" ]
-@@ -2177,7 +2177,7 @@ if (skia_enable_tools) {
-       sources += [ "tools/sk_app/VulkanWindowContext.cpp" ]
+@@ -2463,7 +2463,7 @@ if (skia_enable_tools) {
+       sources += [ "tools/sk_app/VulkanWindowContext.h" ]
        if (is_android) {
          sources += [ "tools/sk_app/android/VulkanWindowContext_android.cpp" ]
 -      } else if (is_linux) {
@@ -76,16 +76,16 @@ https://skia-review.googlesource.com/c/skia/+/310856
          sources += [ "tools/sk_app/unix/VulkanWindowContext_unix.cpp" ]
          libs += [ "X11-xcb" ]
        } else if (is_win) {
-@@ -2196,7 +2196,7 @@ if (skia_enable_tools) {
- 
+@@ -2488,7 +2488,7 @@ if (skia_enable_tools) {
      if (skia_use_dawn) {
        sources += [ "tools/sk_app/DawnWindowContext.cpp" ]
+       sources += [ "tools/sk_app/DawnWindowContext.h" ]
 -      if (is_linux) {
 +      if (is_linux || is_bsd) {
          if (dawn_enable_vulkan) {
            sources += [ "tools/sk_app/unix/DawnVulkanWindowContext_unix.cpp" ]
            defines = [ "VK_USE_PLATFORM_XCB_KHR" ]
-@@ -2222,7 +2222,7 @@ if (skia_enable_tools) {
+@@ -2514,7 +2514,7 @@ if (skia_enable_tools) {
      }
    }
  
@@ -94,7 +94,7 @@ https://skia-review.googlesource.com/c/skia/+/310856
      test_app("fiddle_examples") {
        sources = [
          "tools/fiddle/all_examples.cpp",
-@@ -2292,7 +2292,7 @@ if (skia_enable_tools) {
+@@ -2597,7 +2597,7 @@ if (skia_enable_tools) {
      }
    }
  
@@ -103,16 +103,16 @@ https://skia-review.googlesource.com/c/skia/+/310856
      test_app("HelloWorld") {
        sources = [ "example/HelloWorld.cpp" ]
        libs = []
-@@ -2307,7 +2307,7 @@ if (skia_enable_tools) {
+@@ -2612,7 +2612,7 @@ if (skia_enable_tools) {
      }
    }
  
--  if (skia_use_gl && (is_linux || is_mac || is_ios) &&
-+  if (skia_use_gl && (is_linux || is_mac || is_ios || is_bsd) &&
-       target_cpu != "mips64el" && target_cpu != "loongson3a") {
+-  if (skia_use_gl && (is_linux || is_mac || is_ios)) {
++  if (skia_use_gl && (is_linux || is_mac || is_ios || is_bsd)) {
      test_app("SkiaSDLExample") {
        sources = [ "example/SkiaSDLExample.cpp" ]
-@@ -2320,7 +2320,7 @@ if (skia_enable_tools) {
+       libs = []
+@@ -2624,7 +2624,7 @@ if (skia_enable_tools) {
      }
    }
  

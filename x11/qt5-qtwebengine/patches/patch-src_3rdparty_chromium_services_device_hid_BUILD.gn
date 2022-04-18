@@ -1,28 +1,17 @@
-$NetBSD: patch-src_3rdparty_chromium_services_device_hid_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_services_device_hid_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/services/device/hid/BUILD.gn.orig	2020-07-15 18:56:01.000000000 +0000
+--- src/3rdparty/chromium/services/device/hid/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/services/device/hid/BUILD.gn
-@@ -51,6 +51,26 @@ source_set("hid") {
+@@ -43,6 +43,15 @@ source_set("hid") {
      deps += [ "//device/udev_linux" ]
    }
  
 +  if (is_freebsd) {
-+    sources -= [
-+      "hid_connection_linux.cc",
-+      "hid_connection_linux.h",
-+    ]
 +    sources += [
 +      "hid_connection_freebsd.cc",
 +      "hid_connection_freebsd.h",
 +      "hid_service_freebsd.cc",
 +      "hid_service_freebsd.h",
-+    ]
-+  }
-+
-+  if (is_netbsd) {
-+    sources -= [
-+      "hid_connection_linux.cc",
-+      "hid_connection_linux.h",
 +    ]
 +  }
 +

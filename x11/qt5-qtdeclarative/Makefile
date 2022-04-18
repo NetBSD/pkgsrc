@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2021/12/08 16:02:59 adam Exp $
+# $NetBSD: Makefile,v 1.60 2022/04/18 11:18:16 adam Exp $
 
-DISTNAME=	qtdeclarative-everywhere-src-${QTVERSION}
+DISTNAME=	qtdeclarative-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtdeclarative-${QTVERSION}
-PKGREVISION=	4
 COMMENT=	Qt5 module for declarative framework
 
 BUILD_TARGET=		sub-tools

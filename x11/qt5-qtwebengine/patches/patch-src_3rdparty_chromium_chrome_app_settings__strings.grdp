@@ -1,9 +1,9 @@
-$NetBSD: patch-src_3rdparty_chromium_chrome_app_settings__strings.grdp,v 1.1 2021/08/03 21:04:34 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_chrome_app_settings__strings.grdp,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/chrome/app/settings_strings.grdp.orig	2020-07-08 21:41:46.000000000 +0000
+--- src/3rdparty/chromium/chrome/app/settings_strings.grdp.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/chrome/app/settings_strings.grdp
-@@ -88,7 +88,7 @@
-       Themes
+@@ -110,7 +110,7 @@
+       Theme
      </message>
    </if>
 -  <if expr="is_linux and not chromeos">
@@ -11,7 +11,7 @@ $NetBSD: patch-src_3rdparty_chromium_chrome_app_settings__strings.grdp,v 1.1 202
      <message name="IDS_SETTINGS_SYSTEM_THEME" desc="Text of the label describing the system (GTK+) browser theme on Linux">
        GTK+
      </message>
-@@ -102,7 +102,7 @@
+@@ -124,7 +124,7 @@
        Use Classic
      </message>
    </if>

@@ -1,17 +1,17 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_swiftshader_src_Reactor_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_swiftshader_src_Reactor_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/third_party/swiftshader/src/Reactor/BUILD.gn.orig	2020-07-15 19:01:39.000000000 +0000
+--- src/3rdparty/chromium/third_party/swiftshader/src/Reactor/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/third_party/swiftshader/src/Reactor/BUILD.gn
 @@ -19,7 +19,7 @@ declare_args() {
    # PPC64.
    use_swiftshader_with_subzero =
        current_cpu != "arm64" && current_cpu != "mips64el" && current_cpu != "ppc64"
--  supports_llvm = is_linux || is_fuchsia || is_win || is_android || is_mac
-+  supports_llvm = is_linux || is_fuchsia || is_win || is_android || is_mac || is_bsd
+-  supports_llvm = is_linux || is_chromeos || is_fuchsia || is_win || is_android || is_mac
++  supports_llvm = is_linux || is_chromeos || is_fuchsia || is_win || is_android || is_mac || is_bsd
  }
  
  config("swiftshader_reactor_private_config") {
-@@ -109,6 +109,8 @@ if (use_swiftshader_with_subzero) {
+@@ -110,6 +110,8 @@ if (use_swiftshader_with_subzero) {
            [ "../../third_party/llvm-subzero/build/Fuchsia/include/" ]
      } else if (is_mac) {
        include_dirs += [ "../../third_party/llvm-subzero/build/MacOS/include/" ]
@@ -20,21 +20,21 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_swiftshader_src_Reactor_BUILD.
      }
    }
  
-@@ -143,7 +145,7 @@ if (use_swiftshader_with_subzero) {
+@@ -144,7 +146,7 @@ if (use_swiftshader_with_subzero) {
            cflags += [ "-Wno-sign-compare" ]
          }
        }
--    } else if (is_linux || is_mac || is_fuchsia) {
-+    } else if (is_linux || is_mac || is_fuchsia || is_bsd) {
+-    } else if (is_linux || is_chromeos || is_mac || is_fuchsia) {
++    } else if (is_linux || is_chromeos || is_mac || is_fuchsia || is_bsd) {
        cflags += [ "-Wno-macro-redefined" ]
      }
  
-@@ -352,6 +354,8 @@ if (supports_llvm) {
-       include_dirs += [ "$llvm7_dir/configs/android/include/" ]
+@@ -350,6 +352,8 @@ if (supports_llvm) {
+       include_dirs += [ "$llvm_dir/configs/android/include/" ]
      } else if (is_mac) {
-       include_dirs += [ "$llvm7_dir/configs/darwin/include/" ]
+       include_dirs += [ "$llvm_dir/configs/darwin/include/" ]
 +    } else if (is_netbsd) {
-+      include_dirs += [ "$llvm7_dir/configs/netbsd/include/" ]
++      include_dirs += [ "$llvm_dir/configs/netbsd/include/" ]
      } else {
        assert(false, "llvm-7.0 not configured for target platform")
      }

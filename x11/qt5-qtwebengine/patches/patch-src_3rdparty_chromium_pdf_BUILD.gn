@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_pdf_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_pdf_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/pdf/BUILD.gn.orig	2020-07-15 18:56:47.000000000 +0000
+--- src/3rdparty/chromium/pdf/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/pdf/BUILD.gn
-@@ -121,7 +121,7 @@ if (enable_pdf) {
-         "pdfium/pdfium_unsupported_features.h",
-       ]
+@@ -155,7 +155,7 @@ if (enable_pdf) {
+       "//ui/gfx/range",
+     ]
  
--      if (is_linux) {
-+      if (is_linux || is_bsd) {
-         sources += [
-           "pdfium/pdfium_font_linux.cc",
-           "pdfium/pdfium_font_linux.h",
+-    if (is_linux || is_chromeos) {
++    if (is_linux || is_chromeos || is_bsd) {
+       sources += [
+         "pdfium/pdfium_font_linux.cc",
+         "pdfium/pdfium_font_linux.h",

@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_build_config_features.gni,v 1.1 2021/08/03 21:04:34 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_build_config_features.gni,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/build/config/features.gni.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/build/config/features.gni.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/build/config/features.gni
 @@ -28,9 +28,9 @@ declare_args() {
    # libudev usage. This currently only affects the content layer.
-   use_udev = is_linux && !is_chromecast
+   use_udev = (is_linux || is_chromeos) && !is_chromecast
  
--  use_dbus = is_linux && !is_chromecast
-+  use_dbus = (is_linux || is_bsd) && !is_chromecast
+-  use_dbus = (is_linux || is_chromeos) && !is_chromecast
++  use_dbus = (is_linux || is_chromeos || is_bsd) && !is_chromecast
  
 -  use_gio = is_linux && !is_chromeos && !is_chromecast
 +  use_gio = (is_linux || is_bsd) && !is_chromeos && !is_chromecast

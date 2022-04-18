@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_net_features.gni,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_net_features.gni,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/net/features.gni.orig	2020-06-25 09:31:33.000000000 +0000
+--- src/3rdparty/chromium/net/features.gni.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/net/features.gni
 @@ -23,7 +23,7 @@ declare_args() {
    disable_brotli_filter = false
  
    # Multicast DNS.
--  enable_mdns = is_win || is_linux || is_fuchsia || is_mac || is_ios
-+  enable_mdns = is_win || is_linux || is_fuchsia || is_mac || is_ios || is_bsd
+-  enable_mdns = is_win || is_linux || is_chromeos || is_fuchsia || is_apple
++  enable_mdns = is_win || is_linux || is_chromeos || is_fuchsia || is_apple || is_bsd
  
    # Reporting not used on iOS.
    enable_reporting = !is_ios

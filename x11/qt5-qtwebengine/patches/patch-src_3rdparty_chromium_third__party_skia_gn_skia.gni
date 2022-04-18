@@ -1,33 +1,24 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_skia_gn_skia.gni,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_skia_gn_skia.gni,v 1.2 2022/04/18 11:18:19 adam Exp $
 
 https://skia-review.googlesource.com/c/skia/+/310856
 
---- src/3rdparty/chromium/third_party/skia/gn/skia.gni.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/third_party/skia/gn/skia.gni.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/third_party/skia/gn/skia.gni
-@@ -24,7 +24,7 @@ declare_args() {
-   skia_enable_skottie = !(is_win && is_component_build)
-   skia_enable_sksl_interpreter = is_skia_dev_build
-   skia_enable_skvm_jit =
--      is_skia_dev_build && ((target_cpu == "x64" && (is_linux || is_mac)) ||
-+      is_skia_dev_build && ((target_cpu == "x64" && (is_linux || is_mac || is_bsd)) ||
-                             (target_cpu == "arm64" && is_android))
-   skia_enable_tools = is_skia_dev_build
-   skia_enable_gpu_debug_layers = is_skia_dev_build && is_debug
-@@ -45,9 +45,9 @@ declare_args() {
+@@ -46,9 +46,9 @@ declare_args() {
    skia_use_experimental_xform = false
    skia_use_ffmpeg = false
    skia_use_fixed_gamma_text = is_android
 -  skia_use_fontconfig = is_linux
 +  skia_use_fontconfig = is_linux || is_bsd
-   skia_use_fonthost_mac = is_mac
+   skia_use_fonthost_mac = is_mac || is_ios
 -  skia_use_freetype = is_android || is_fuchsia || is_linux
 +  skia_use_freetype = is_android || is_fuchsia || is_linux || is_bsd
    skia_use_harfbuzz = true
    skia_use_gl = !is_fuchsia
    skia_use_icu = !is_fuchsia
-@@ -63,7 +63,7 @@ declare_args() {
-   skia_use_opencl = false
-   skia_use_piex = !is_win
+@@ -67,7 +67,7 @@ declare_args() {
+   skia_use_sfml = false
+   skia_use_webgl = false
    skia_use_wuffs = false
 -  skia_use_x11 = is_linux
 +  skia_use_x11 = is_linux || is_bsd

@@ -1,67 +1,67 @@
-$NetBSD: patch-src_3rdparty_chromium_ui_gfx_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_ui_gfx_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/ui/gfx/BUILD.gn.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/ui/gfx/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/ui/gfx/BUILD.gn
-@@ -149,7 +149,7 @@ jumbo_component("gfx") {
+@@ -144,7 +144,7 @@ jumbo_component("gfx") {
        "android/view_configuration.h",
      ]
    }
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      sources += [
        "font_fallback_linux.cc",
        "font_fallback_linux.h",
-@@ -387,7 +387,7 @@ jumbo_component("gfx") {
+@@ -380,7 +380,7 @@ jumbo_component("gfx") {
    }
  
    # Linux.
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      deps += [ "//third_party/fontconfig" ]
    }
  
-@@ -569,7 +569,7 @@ jumbo_source_set("memory_buffer_sources"
+@@ -560,7 +560,7 @@ jumbo_source_set("memory_buffer_sources"
      "//ui/gfx/geometry",
    ]
  
--  if (is_linux && !use_qt) {
-+  if ((is_linux || is_bsd) && !use_qt) {
+-  if ((is_linux || is_chromeos) && !use_qt) {
++  if ((is_linux || is_chromeos || is_bsd) && !use_qt) {
      sources += [
        "linux/client_native_pixmap_dmabuf.cc",
        "linux/client_native_pixmap_dmabuf.h",
-@@ -599,7 +599,7 @@ jumbo_source_set("memory_buffer_sources"
+@@ -590,7 +590,7 @@ jumbo_source_set("memory_buffer_sources"
      public_deps += [ "//ipc:message_support" ]
    }
  
--  if ((is_linux || use_ozone) && !is_nacl) {
-+  if ((is_linux || use_ozone || is_bsd) && !is_nacl) {
+-  if ((is_linux || is_chromeos || use_ozone) && !is_nacl) {
++  if ((is_linux || is_chromeos || use_ozone || is_bsd) && !is_nacl) {
      sources += [
        "native_pixmap_handle.cc",
        "native_pixmap_handle.h",
-@@ -675,7 +675,7 @@ test("gfx_unittests") {
+@@ -666,7 +666,7 @@ test("gfx_unittests") {
      "text_elider_unittest.cc",
      "text_utils_unittest.cc",
    ]
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      sources += [
        "font_fallback_linux_unittest.cc",
        "font_render_params_linux_unittest.cc",
-@@ -765,7 +765,7 @@ test("gfx_unittests") {
+@@ -756,7 +756,7 @@ test("gfx_unittests") {
      sources += [ "system_fonts_win_unittest.cc" ]
    }
  
--  if (is_linux || is_android || is_fuchsia || is_win) {
-+  if (is_linux || is_android || is_fuchsia || is_win || is_bsd) {
+-  if (is_linux || is_chromeos || is_android || is_fuchsia || is_win) {
++  if (is_linux || is_chromeos || is_android || is_fuchsia || is_win || is_bsd) {
      sources += [ "platform_font_skia_unittest.cc" ]
    }
  
-@@ -857,7 +857,7 @@ test("gfx_unittests") {
+@@ -848,7 +848,7 @@ test("gfx_unittests") {
      ]
    }
  
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      sources += [
        "linux/fontconfig_util_unittest.cc",
        "linux/native_pixmap_dmabuf_unittest.cc",

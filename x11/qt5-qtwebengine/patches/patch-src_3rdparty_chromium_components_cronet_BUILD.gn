@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_components_cronet_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_components_cronet_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/components/cronet/BUILD.gn.orig	2020-07-15 18:55:54.000000000 +0000
+--- src/3rdparty/chromium/components/cronet/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/components/cronet/BUILD.gn
 @@ -158,7 +158,7 @@ if (is_android) {
  
      defines = [ "CRONET_TESTS_IMPLEMENTATION" ]
  
--    if (is_linux && !is_component_build) {
-+    if ((is_linux || is_bsd) && !is_component_build) {
+-    if ((is_linux || is_chromeos) && !is_component_build) {
++    if ((is_linux || is_chromeos || is_bsd) && !is_component_build) {
        public_configs = [ "//build/config/gcc:rpath_for_built_shared_libraries" ]
      }
    }
@@ -15,8 +15,8 @@ $NetBSD: patch-src_3rdparty_chromium_components_cronet_BUILD.gn,v 1.1 2021/08/03
        "//components/cronet",
        "//components/cronet/native:cronet_native_headers",
      ]
--    if (is_linux && !is_component_build) {
-+    if ((is_linux || is_bsd) && !is_component_build) {
+-    if ((is_linux || is_chromeos) && !is_component_build) {
++    if ((is_linux || is_chromeos || is_bsd) && !is_component_build) {
        public_configs = [ "//build/config/gcc:rpath_for_built_shared_libraries" ]
      }
    }

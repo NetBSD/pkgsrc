@@ -1,6 +1,5 @@
-$NetBSD: patch-src_buildtools_config_support.pri,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_buildtools_config_support.pri,v 1.2 2022/04/18 11:18:19 adam Exp $
 
-Index: src/buildtools/config/support.pri
 --- src/buildtools/config/support.pri.orig
 +++ src/buildtools/config/support.pri
 @@ -5,7 +5,7 @@ defineTest(qtwebengine_skipBuild) {

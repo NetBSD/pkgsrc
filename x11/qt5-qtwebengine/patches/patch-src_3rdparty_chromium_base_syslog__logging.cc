@@ -1,22 +1,22 @@
-$NetBSD: patch-src_3rdparty_chromium_base_syslog__logging.cc,v 1.1 2021/08/03 21:04:34 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_syslog__logging.cc,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/base/syslog_logging.cc.orig	2020-07-08 21:40:31.000000000 +0000
+--- src/3rdparty/chromium/base/syslog_logging.cc.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/base/syslog_logging.cc
-@@ -14,7 +14,7 @@
- #include "base/debug/stack_trace.h"
+@@ -13,7 +13,7 @@
  #include "base/strings/string_util.h"
+ #include "base/win/scoped_handle.h"
  #include "base/win/win_util.h"
--#elif defined(OS_LINUX)
-+#elif defined(OS_LINUX) || defined(OS_BSD)
+-#elif defined(OS_LINUX) || defined(OS_CHROMEOS)
++#elif defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
  // <syslog.h> defines LOG_INFO, LOG_WARNING macros that could conflict with
  // base::LOG_INFO, base::LOG_WARNING.
  #include <syslog.h>
-@@ -113,7 +113,7 @@ EventLogMessage::~EventLogMessage() {
+@@ -134,7 +134,7 @@ EventLogMessage::~EventLogMessage() {
  
    if (user_sid != nullptr)
      ::LocalFree(user_sid);
--#elif defined(OS_LINUX)
-+#elif defined(OS_LINUX) || defined(OS_BSD)
+-#elif defined(OS_LINUX) || defined(OS_CHROMEOS)
++#elif defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
    const char kEventSource[] = "chrome";
    openlog(kEventSource, LOG_NOWAIT | LOG_PID, LOG_USER);
    // We can't use the defined names for the logging severity from syslog.h

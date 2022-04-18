@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_blink_renderer_controller_memory__usage__monitor__posix.h,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_blink_renderer_controller_memory__usage__monitor__posix.h,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/third_party/blink/renderer/controller/memory_usage_monitor_posix.h.orig	2020-07-15 18:56:02.000000000 +0000
+--- src/3rdparty/chromium/third_party/blink/renderer/controller/memory_usage_monitor_posix.h.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/third_party/blink/renderer/controller/memory_usage_monitor_posix.h
 @@ -12,7 +12,7 @@
  #include "third_party/blink/renderer/controller/controller_export.h"
  #include "third_party/blink/renderer/controller/memory_usage_monitor.h"
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS)
++#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
  #include "third_party/blink/public/mojom/memory_usage_monitor_linux.mojom-blink.h"
  #endif
  
@@ -15,8 +15,8 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_blink_renderer_controller_memo
  // MemoryUsageMonitor implementation for Android and Linux.
  class CONTROLLER_EXPORT MemoryUsageMonitorPosix
      : public MemoryUsageMonitor
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS)
++#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
      ,
        public mojom::blink::MemoryUsageMonitorLinux
  #endif
@@ -24,8 +24,8 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_blink_renderer_controller_memo
   public:
    MemoryUsageMonitorPosix() = default;
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS)
++#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
    static void Bind(
        mojo::PendingReceiver<mojom::blink::MemoryUsageMonitorLinux> receiver);
  #endif
@@ -33,8 +33,8 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_blink_renderer_controller_memo
                                                uint64_t* vm_size,
                                                uint64_t* vm_hwm_size);
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS)
++#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
    // mojom::MemoryUsageMonitorLinux implementations:
    void SetProcFiles(base::File statm_file, base::File status_file) override;
  #endif
@@ -42,8 +42,8 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_blink_renderer_controller_memo
    base::ScopedFD statm_fd_;
    base::ScopedFD status_fd_;
  
--#if defined(OS_LINUX)
-+#if defined(OS_LINUX) || defined(OS_BSD)
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS)
++#if defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
    mojo::Receiver<mojom::blink::MemoryUsageMonitorLinux> receiver_{this};
  #endif
  };

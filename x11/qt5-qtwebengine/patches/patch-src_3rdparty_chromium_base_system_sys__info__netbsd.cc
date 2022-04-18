@@ -1,13 +1,14 @@
-$NetBSD: patch-src_3rdparty_chromium_base_system_sys__info__netbsd.cc,v 1.1 2021/08/03 21:04:34 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_system_sys__info__netbsd.cc,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/base/system/sys_info_netbsd.cc.orig	2020-07-09 13:28:11.909266556 +0000
+--- src/3rdparty/chromium/base/system/sys_info_netbsd.cc.orig	2022-03-12 17:04:19.502788486 +0000
 +++ src/3rdparty/chromium/base/system/sys_info_netbsd.cc
-@@ -0,0 +1,77 @@
+@@ -0,0 +1,78 @@
 +// Copyright (c) 2011 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
 +
 +#include "base/system/sys_info.h"
++#include "base/notreached.h"
 +
 +#include <stddef.h>
 +#include <stdint.h>

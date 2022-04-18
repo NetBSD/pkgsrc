@@ -1,0 +1,13 @@
+$NetBSD: patch-src_3rdparty_chromium_third__party_swiftshader_third__party_llvm-10.0_BUILD.gn,v 1.1 2022/04/18 11:18:19 adam Exp $
+
+--- src/3rdparty/chromium/third_party/swiftshader/third_party/llvm-10.0/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
++++ src/3rdparty/chromium/third_party/swiftshader/third_party/llvm-10.0/BUILD.gn
+@@ -108,6 +108,8 @@ if (is_linux || is_chromeos) {
+   llvm_include_dirs += [ "configs/android/include/" ]
+ } else if (is_mac) {
+   llvm_include_dirs += [ "configs/darwin/include/" ]
++} else if (is_netbsd) {
++  llvm_include_dirs += [ "configs/netbsd/include/" ]
+ } else {
+   assert(false, "llvm-10.0 not configured for target platform")
+ }

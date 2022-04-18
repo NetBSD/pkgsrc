@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_media_gpu_vaapi_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_media_gpu_vaapi_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/media/gpu/vaapi/BUILD.gn.orig	2020-07-15 18:56:47.000000000 +0000
+--- src/3rdparty/chromium/media/gpu/vaapi/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/media/gpu/vaapi/BUILD.gn
-@@ -10,7 +10,7 @@ import("//tools/generate_stubs/rules.gni
+@@ -9,7 +9,7 @@ import("//testing/test.gni")
+ import("//tools/generate_stubs/rules.gni")
  import("//ui/gl/features.gni")
- import("//ui/ozone/ozone.gni")
  
--assert(is_linux)  # is_chromeos is a subset of is_linux
-+assert(is_linux && is_bsd)  # is_chromeos is a subset of is_linux
+-assert(is_linux || is_chromeos)
++assert(is_linux || is_chromeos || is_bsd)
  assert(use_vaapi)
  
  generate_stubs("libva_stubs") {

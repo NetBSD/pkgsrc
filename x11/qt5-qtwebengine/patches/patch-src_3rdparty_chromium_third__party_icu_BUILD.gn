@@ -1,22 +1,22 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_icu_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_icu_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/third_party/icu/BUILD.gn.orig	2020-06-25 09:34:44.000000000 +0000
+--- src/3rdparty/chromium/third_party/icu/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/third_party/icu/BUILD.gn
-@@ -92,7 +92,7 @@ config("icu_code") {
+@@ -100,7 +100,7 @@ config("icu_code") {
        "/wd4267",  # Conversion from size_t on 64-bits.
-       "/utf-8",   # ICU source files are in UTF-8.
+       "/utf-8",  # ICU source files are in UTF-8.
      ]
--  } else if (is_linux || is_android) {
-+  } else if (is_linux || is_android || is_bsd) {
-     cflags += [
-       "-Wno-unused-function",
-     ]
-@@ -110,7 +110,7 @@ config("icu_code") {
+-  } else if (is_linux || is_chromeos || is_android || icu_is_in_fuchsia) {
++  } else if (is_linux || is_chromeos || is_android || icu_is_in_fuchsia || is_bsd) {
+     cflags += [ "-Wno-unused-function" ]
+   }
+   if (is_clang) {
+@@ -118,7 +118,7 @@ config("icu_code") {
        "-Wno-unused-variable",
      ]
    }
--  if (is_clang || is_linux || is_android) {
-+  if (is_clang || is_linux || is_android || is_bsd) {
+-  if (is_clang || is_linux || is_chromeos || is_android || icu_is_in_fuchsia) {
++  if (is_clang || is_linux || is_chromeos || is_android || icu_is_in_fuchsia || is_bsd) {
      cflags += [
        # ICU uses its own deprecated functions.
        "-Wno-deprecated-declarations",

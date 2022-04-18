@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_ui_color_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_ui_color_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/ui/color/BUILD.gn.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/ui/color/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/ui/color/BUILD.gn
 @@ -86,7 +86,7 @@ component("mixers") {
-     sources += [ "cros/native_color_mixer.cc" ]
+     sources += [ "cros/native_color_mixers.cc" ]
    } else if (is_fuchsia) {
-     sources += [ "fuchsia/native_color_mixer.cc" ]
--  } else if (is_linux) {
-+  } else if (is_linux || is_bsd) {
-     sources += [ "linux/native_color_mixer.cc" ]
+     sources += [ "fuchsia/native_color_mixers.cc" ]
+-  } else if (is_linux || is_chromeos) {
++  } else if (is_linux || is_chromeos || is_bsd) {
+     sources += [ "linux/native_color_mixers.cc" ]
    } else if (is_mac) {
-     sources += [ "mac/native_color_mixer.cc" ]
+     frameworks = [ "AppKit.framework" ]

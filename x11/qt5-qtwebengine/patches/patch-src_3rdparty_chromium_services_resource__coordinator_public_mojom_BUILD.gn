@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_services_resource__coordinator_public_mojom_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_services_resource__coordinator_public_mojom_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/services/resource_coordinator/public/mojom/BUILD.gn.orig	2020-07-15 18:56:01.000000000 +0000
+--- src/3rdparty/chromium/services/resource_coordinator/public/mojom/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/services/resource_coordinator/public/mojom/BUILD.gn
 @@ -20,7 +20,7 @@ mojom_component("mojom") {
    ]
  
    enabled_features = []
--  if (is_linux || is_android) {
-+  if (is_linux || is_android || is_bsd) {
+-  if (is_linux || is_chromeos || is_android) {
++  if (is_linux || is_chromeos || is_android || is_bsd) {
      enabled_features += [ "private_swap_info" ]
    }
- }
+ 

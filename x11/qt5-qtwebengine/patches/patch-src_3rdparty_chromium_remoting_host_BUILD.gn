@@ -1,18 +1,18 @@
-$NetBSD: patch-src_3rdparty_chromium_remoting_host_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_remoting_host_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/remoting/host/BUILD.gn.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/remoting/host/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/remoting/host/BUILD.gn
-@@ -359,7 +359,7 @@ static_library("common") {
+@@ -363,7 +363,7 @@ static_library("common") {
      deps += [ "//components/policy:generated" ]
    }
  
 -  if (is_linux && !is_chromeos) {
 +  if ((is_linux || is_bsd) && !is_chromeos) {
+     sources += [ "desktop_resizer_linux.cc" ]
      public_deps += [ "//remoting/host/linux" ]
      libs += [ "pam" ]
-   }
-@@ -561,7 +561,7 @@ source_set("unit_tests") {
-     "//third_party/grpc:grpcpp",
+@@ -575,7 +575,7 @@ source_set("unit_tests") {
+     "//testing/gtest",
    ]
  
 -  if (is_linux && !is_chromeos) {
@@ -20,7 +20,7 @@ $NetBSD: patch-src_3rdparty_chromium_remoting_host_BUILD.gn,v 1.1 2021/08/03 21:
      deps += [ "//remoting/host/linux:unit_tests" ]
    }
  
-@@ -766,7 +766,7 @@ if (enable_me2me_host) {
+@@ -780,7 +780,7 @@ if (enable_me2me_host) {
      if (use_gtk) {
        deps += [ "//build/config/linux/gtk" ]
      }
@@ -29,7 +29,7 @@ $NetBSD: patch-src_3rdparty_chromium_remoting_host_BUILD.gn,v 1.1 2021/08/03 21:
        libs = [ "pam" ]
      }
  
-@@ -826,7 +826,7 @@ if (enable_me2me_host) {
+@@ -840,7 +840,7 @@ if (enable_me2me_host) {
        }
      }
    }

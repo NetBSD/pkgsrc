@@ -1,52 +1,44 @@
-$NetBSD: patch-src_3rdparty_chromium_chrome_test_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_chrome_test_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/chrome/test/BUILD.gn.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/chrome/test/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/chrome/test/BUILD.gn
-@@ -262,7 +262,7 @@ static_library("test_support") {
+@@ -300,7 +300,7 @@ static_library("test_support") {
      ]
    }
  
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      public_deps += [ "//crypto:platform" ]
    }
  
-@@ -1586,14 +1586,14 @@ if (!is_android) {
-         if (enable_nacl_nonsfi) {
-           data_deps += [ "//components/nacl/loader:helper_nonsfi" ]
+@@ -1789,7 +1789,7 @@ if (!is_android) {
          }
--      } else if (is_linux || is_win) {
-+      } else if (is_linux || is_win || is_bsd) {
-         sources += [
-           "../browser/ui/views/ime/ime_warning_bubble_browsertest.cc",
-           "../browser/ui/views/ime/ime_window_browsertest.cc",
-         ]
        }
  
--      if (is_win || is_linux) {
-+      if (is_win || is_linux || is_bsd) {
+-      if (is_win || is_linux || is_chromeos) {
++      if (is_win || is_linux || is_chromeos || is_bsd) {
          sources += [ "../browser/nacl_host/test/nacl_gdb_browsertest.cc" ]
          data_deps += [ "//chrome/browser/nacl_host/test:mock_nacl_gdb" ]
        }
-@@ -2037,7 +2037,7 @@ if (!is_android) {
-       }
+@@ -2264,7 +2264,7 @@ if (!is_android) {
+       sources += [ "../browser/ui/views/payments/payment_handler_header_view_ui_browsertest.cc" ]
      }
  
--    if (is_linux && !is_component_build) {
-+    if ((is_linux || is_bsd) && !is_component_build) {
+-    if ((is_linux || is_chromeos) && !is_component_build) {
++    if ((is_linux || is_chromeos || is_bsd) && !is_component_build) {
        # Set rpath to find the CDM adapter even in a non-component build.
        configs += [ "//build/config/gcc:rpath_for_built_shared_libraries" ]
      }
-@@ -2673,7 +2673,7 @@ if (!is_android) {
+@@ -2935,7 +2935,7 @@ if (!is_android) {
        ]
        deps += [ "//components/wifi:test_support" ]
      }
--    if (is_linux || is_win) {
-+    if (is_linux || is_win || is_bsd) {
+-    if (is_linux || is_chromeos || is_win) {
++    if (is_linux || is_chromeos || is_win || is_bsd) {
        sources += [
          # This test is for the spelling options submenu that's only for Windows,
          # ChromeOS, and Linux.
-@@ -2684,7 +2684,7 @@ if (!is_android) {
+@@ -2946,7 +2946,7 @@ if (!is_android) {
        sources -= [ "../common/time_format_browsertest.cc" ]
      }
  
@@ -55,16 +47,16 @@ $NetBSD: patch-src_3rdparty_chromium_chrome_test_BUILD.gn,v 1.1 2021/08/03 21:04
        sources += [
          # Tests for non mobile and non CrOS (includes Linux, Win, Mac).
          "../browser/browser_switcher/browser_switcher_browsertest.cc",
-@@ -2723,7 +2723,7 @@ if (!is_android) {
+@@ -2987,7 +2987,7 @@ if (!is_android) {
          ]
        }
      }
--    if (is_linux && is_asan && is_lsan) {
-+    if ((is_linux || is_bsd) && is_asan && is_lsan) {
+-    if ((is_linux || is_chromeos) && is_asan && is_lsan) {
++    if ((is_linux || is_chromeos || is_bsd) && is_asan && is_lsan) {
        # TODO(crbug.com/793426): Fix the flakiness on Linux Asan Lsan bot.
        sources -= [ "../browser/media/encrypted_media_browsertest.cc" ]
      }
-@@ -2802,7 +2802,7 @@ if (!is_android) {
+@@ -3067,7 +3067,7 @@ if (!is_android) {
        }
      }
  
@@ -73,43 +65,34 @@ $NetBSD: patch-src_3rdparty_chromium_chrome_test_BUILD.gn,v 1.1 2021/08/03 21:04
        sources += [ "../browser/extensions/api/bluetooth_low_energy/bluetooth_low_energy_apitest.cc" ]
      }
  
-@@ -2832,7 +2832,7 @@ if (!is_android) {
+@@ -3126,7 +3126,7 @@ if (chromeos_is_browser_only) {
    }
  }
  
--if (is_linux || is_mac || is_win) {
-+if (is_linux || is_mac || is_win || is_bsd) {
+-if (is_linux || is_chromeos || is_mac || is_win) {
++if (is_linux || is_chromeos || is_mac || is_win || is_bsd) {
    import("//tools/binary_size/sizes.gni")
  
    group("browser_tests_apprtc") {
-@@ -2966,7 +2966,7 @@ group("telemetry_perf_webview_tests") {
- group("angle_perftests") {
-   testonly = true
-   data_deps = [ "//testing:run_perf_test" ]
--  if (is_win || is_linux || is_android) {
-+  if (is_win || is_linux || is_android || is_bsd) {
-     data_deps += [ "//third_party/angle/src/tests:angle_perftests" ]
-   }
- }
-@@ -3647,7 +3647,7 @@ test("unit_tests") {
+@@ -4011,7 +4011,7 @@ test("unit_tests") {
        "$root_gen_dir/chrome/android/chrome_apk_paks/resources.pak",
      ]
    }
--  if (is_linux || is_win) {
-+  if (is_linux || is_win || is_bsd) {
+-  if (is_linux || is_chromeos || is_win) {
++  if (is_linux || is_chromeos || is_win || is_bsd) {
      data_deps += [ "//chrome:packed_resources" ]
    }
    if (is_win) {
-@@ -5176,7 +5176,7 @@ test("unit_tests") {
+@@ -5628,7 +5628,7 @@ test("unit_tests") {
    } else {
      sources -= [ "../browser/password_manager/password_store_x_unittest.cc" ]
    }
--  if (is_linux && use_aura) {
-+  if ((is_linux || is_bsd) && use_aura) {
+-  if ((is_linux || is_chromeos) && use_aura) {
++  if ((is_linux || is_chromeos || is_bsd) && use_aura) {
      deps += [ "//ui/aura:test_support" ]
      if (use_dbus) {
        deps += [ "//dbus:test_support" ]
-@@ -5419,7 +5419,7 @@ test("unit_tests") {
+@@ -5890,7 +5890,7 @@ test("unit_tests") {
          "../browser/ui/views/sync/profile_signin_confirmation_dialog_views_unittest.cc",
        ]
      }
@@ -118,8 +101,8 @@ $NetBSD: patch-src_3rdparty_chromium_chrome_test_BUILD.gn,v 1.1 2021/08/03 21:04
        sources +=
            [ "../browser/notifications/popups_only_ui_controller_unittest.cc" ]
      }
-@@ -5472,7 +5472,7 @@ test("unit_tests") {
-     sources += [ "../browser/extensions/blacklist_unittest.cc" ]
+@@ -5946,7 +5946,7 @@ test("unit_tests") {
+     sources += [ "../browser/extensions/blocklist_unittest.cc" ]
    }
  
 -  if (is_win || is_mac || (is_linux && !is_chromeos)) {
@@ -127,34 +110,34 @@ $NetBSD: patch-src_3rdparty_chromium_chrome_test_BUILD.gn,v 1.1 2021/08/03 21:04
      sources += [
        "../browser/browser_switcher/alternative_browser_driver_unittest.cc",
        "../browser/browser_switcher/browser_switcher_navigation_throttle_unittest.cc",
-@@ -5789,7 +5789,7 @@ if (!is_android) {
+@@ -6278,7 +6278,7 @@ if (!is_android) {
      }
  
      configs += [ "//build/config:precompiled_headers" ]
--    if (is_linux && !is_component_build) {
-+    if ((is_linux || is_bsd) && !is_component_build) {
+-    if ((is_linux || is_chromeos) && !is_component_build) {
++    if ((is_linux || is_chromeos || is_bsd) && !is_component_build) {
        configs += [ "//build/config/gcc:rpath_for_built_shared_libraries" ]
      }
  
-@@ -5814,7 +5814,7 @@ if (!is_android) {
+@@ -6303,7 +6303,7 @@ if (!is_android) {
        "$root_out_dir/test_page.css.mock-http-headers",
      ]
      data += js2gtest_js_libraries
--    if (is_linux) {
-+    if (is_linux || is_bsd) {
+-    if (is_linux || is_chromeos) {
++    if (is_linux || is_chromeos || is_bsd) {
        data += [ "$root_out_dir/libppapi_tests.so" ]
      }
  
-@@ -5874,7 +5874,7 @@ if (!is_android) {
+@@ -6371,7 +6371,7 @@ if (!is_android) {
        "//third_party/mesa_headers",
        "//ui/resources:ui_test_pak_data",
      ]
--    if (is_linux || is_win) {
-+    if (is_linux || is_win || is_bsd) {
+-    if (is_linux || is_chromeos || is_win) {
++    if (is_linux || is_chromeos || is_win || is_bsd) {
        data_deps += [ "//chrome:packed_resources" ]
      }
  
-@@ -5938,7 +5938,7 @@ if (!is_android) {
+@@ -6437,7 +6437,7 @@ if (!is_android) {
          "//ui/views:views_interactive_ui_tests",
          "//ui/views/controls/webview:test_support",
        ]
@@ -163,7 +146,7 @@ $NetBSD: patch-src_3rdparty_chromium_chrome_test_BUILD.gn,v 1.1 2021/08/03 21:04
          # Desktop linux.
          sources -= [
            # TODO(port): This times out. Attempts have been made to fix the
-@@ -6111,7 +6111,7 @@ if (!is_android) {
+@@ -6571,7 +6571,7 @@ if (!is_android) {
        configs += [ "//build/config/linux/atk" ]
      }
  
@@ -172,30 +155,30 @@ $NetBSD: patch-src_3rdparty_chromium_chrome_test_BUILD.gn,v 1.1 2021/08/03 21:04
        deps += [ "//ui/base/ime/linux" ]
      }
  
-@@ -6144,7 +6144,7 @@ test("chrome_app_unittests") {
-     "//components/gwp_asan/buildflags",
+@@ -6606,7 +6606,7 @@ test("chrome_app_unittests") {
      "//components/safe_browsing:buildflags",
+     "//pdf:pdf_ppapi",
    ]
 -  if (!is_fuchsia) {
 +  if (!is_fuchsia && !is_bsd) {
      # TODO(crbug.com/753619): Enable crash reporting on Fuchsia.
      deps += [ "//third_party/breakpad:client" ]
    }
-@@ -6434,7 +6434,7 @@ if (!is_fuchsia && !is_android) {
+@@ -6912,7 +6912,7 @@ if (!is_fuchsia && !is_android) {
        "//third_party/mesa_headers",
      ]
  
--    if (is_linux || is_win) {
-+    if (is_linux || is_win || is_bsd) {
+-    if (is_linux || is_chromeos || is_win) {
++    if (is_linux || is_chromeos || is_win || is_bsd) {
        data_deps += [ "//chrome:packed_resources" ]
      }
  
-@@ -6625,7 +6625,7 @@ if (!is_fuchsia && !is_android) {
+@@ -7107,7 +7107,7 @@ if (!is_fuchsia && !is_android) {
        "//third_party/catapult/web_page_replay_go/deterministic.js",
      ]
  
--    if (is_linux || is_win) {
-+    if (is_linux || is_win || is_bsd) {
+-    if (is_linux || is_chromeos || is_win) {
++    if (is_linux || is_chromeos || is_win || is_bsd) {
        data_deps = [ "//chrome:packed_resources" ]
      }
  
