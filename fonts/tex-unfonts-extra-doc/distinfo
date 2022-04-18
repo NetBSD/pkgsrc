@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/18 05:08:47 markd Exp $
+
+BLAKE2s (unfonts-extra.doc.r56291.tar.xz) = c687ed3f9d4e05f613ad55ef0f34bf0f762f9620eaa826ba3a256bdab6e43dc1
+SHA512 (unfonts-extra.doc.r56291.tar.xz) = 6173d49bb64c9b162763ff08af445e518fa650fcc13e02f5c72454d335285d9c82347cf79f945fae94429f3a9d15f9c9b58ff1d175c8f59ea7b75766cd279303
+Size (unfonts-extra.doc.r56291.tar.xz) = 10160 bytes
