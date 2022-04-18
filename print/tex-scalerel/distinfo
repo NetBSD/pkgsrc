@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/18 03:33:09 markd Exp $
+
+BLAKE2s (scalerel.r42809.tar.xz) = e8ef212bb233035e9c0c685b8bc807c43882268e0f74245edfc277054f3848b8
+SHA512 (scalerel.r42809.tar.xz) = 0b0a996bbed0fc185714f84e32c76e5a9277137d3d8dcc6b12b516afa97f3c80b2684c3c22af8717bb3e6acca267a3862c1244df7cb71eca61b10074fe1c3a89
+Size (scalerel.r42809.tar.xz) = 3052 bytes

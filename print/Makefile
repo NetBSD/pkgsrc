@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.842 2022/04/18 03:30:14 markd Exp $
+# $NetBSD: Makefile,v 1.843 2022/04/18 03:33:09 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1379,6 +1379,8 @@ SUBDIR+=	tex-sauerj-doc
 SUBDIR+=	tex-savesym
 SUBDIR+=	tex-scale
 SUBDIR+=	tex-scale-doc
+SUBDIR+=	tex-scalerel
+SUBDIR+=	tex-scalerel-doc
 SUBDIR+=	tex-schulschriften
 SUBDIR+=	tex-schulschriften-doc
 SUBDIR+=	tex-schwalbe-chess
