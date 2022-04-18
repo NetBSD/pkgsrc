@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1915 2022/04/18 14:36:11 mef Exp $
+$NetBSD: CHANGES-2022,v 1.1916 2022/04/18 18:24:44 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3023,3 +3023,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-markupsafe to 2.1.1 [js 2022-04-18]
 	Updated devel/R-glue to 1.6.2 [mef 2022-04-18]
 	Updated devel/R-cli to 3.2.0 [mef 2022-04-18]
+	Updated net/gvproxy to 0.3.0 [bsiegert 2022-04-18]
