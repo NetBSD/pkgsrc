@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1914 2022/04/18 14:35:27 mef Exp $
+$NetBSD: CHANGES-2022,v 1.1915 2022/04/18 14:36:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3022,3 +3022,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/olive-editor to 0.1.2 [nia 2022-04-18]
 	Updated textproc/py-markupsafe to 2.1.1 [js 2022-04-18]
 	Updated devel/R-glue to 1.6.2 [mef 2022-04-18]
+	Updated devel/R-cli to 3.2.0 [mef 2022-04-18]
