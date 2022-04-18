@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/18 04:30:24 markd Exp $
+
+BLAKE2s (context-inifile.doc.r47085.tar.xz) = badad8cafa9b3a089b720d16d20c96e69c7f418e89ed9a5399904e13dc9ee9b3
+SHA512 (context-inifile.doc.r47085.tar.xz) = 9635bc80ae7222c6a38004ad5f985004634b7db9596e03a23123ad71bbf177639bb1b028bdfe79d51b75c1c429c327f65c2b5e0720723d8bcdf63f4939312850
+Size (context-inifile.doc.r47085.tar.xz) = 81492 bytes
