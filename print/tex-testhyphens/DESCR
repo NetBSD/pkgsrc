@@ -1,0 +1,7 @@
+The package may be used for testing hyphenation patterns or for
+controlling that specific words are hyphenated as expected.
+This package implements some old TUGboat code to adapt it to
+LaTeX with some enhancements. It differs form \showhyphens,
+because it typesets its output on the document's output file.
+It also works with xelatex, where \showhyphens requires a
+workaround.
