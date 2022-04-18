@@ -1,17 +1,17 @@
-$NetBSD: patch-src_3rdparty_chromium_ui_gl_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_ui_gl_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/ui/gl/BUILD.gn.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/ui/gl/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/ui/gl/BUILD.gn
-@@ -203,7 +203,7 @@ jumbo_component("gl") {
+@@ -208,7 +208,7 @@ jumbo_component("gl") {
        "shared_gl_fence_egl.h",
      ]
  
--    if (is_linux || use_ozone) {
-+    if (is_linux || use_ozone || is_bsd) {
+-    if (is_linux || is_chromeos || use_ozone) {
++    if (is_linux || is_chromeos || use_ozone || is_bsd) {
        sources += [
          "gl_image_native_pixmap.cc",
          "gl_image_native_pixmap.h",
-@@ -219,7 +219,7 @@ jumbo_component("gl") {
+@@ -224,7 +224,7 @@ jumbo_component("gl") {
        ]
      }
  
@@ -20,7 +20,7 @@ $NetBSD: patch-src_3rdparty_chromium_ui_gl_BUILD.gn,v 1.1 2021/08/03 21:04:36 ma
        # Windows has USE_EGL but doesn't support base::FileDescriptor.
        # libsync isn't supported or needed on MacOSX.
        # Fuchsia is excluded due to a libsync dependency and because it's
-@@ -417,7 +417,7 @@ jumbo_component("gl") {
+@@ -428,7 +428,7 @@ jumbo_component("gl") {
          "swap_chain_presenter.h",
        ]
      }
@@ -29,12 +29,12 @@ $NetBSD: patch-src_3rdparty_chromium_ui_gl_BUILD.gn,v 1.1 2021/08/03 21:04:36 ma
        sources -= [
          "gl_surface_egl.cc",
          "gl_surface_egl.h",
-@@ -527,7 +527,7 @@ jumbo_static_library("test_support") {
+@@ -534,7 +534,7 @@ jumbo_static_library("test_support") {
      "//ui/base",
    ]
  
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      deps += [ "//ui/platform_window/common" ]
    }
  

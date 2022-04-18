@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_mojo_public_js_mojo__bindings__resources.grd,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_mojo_public_js_mojo__bindings__resources.grd,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/mojo/public/js/mojo_bindings_resources.grd.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/mojo/public/js/mojo_bindings_resources.grd.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/mojo/public/js/mojo_bindings_resources.grd
-@@ -70,7 +70,7 @@
+@@ -59,7 +59,7 @@
+           file="${root_gen_dir}/mojo/public/mojom/base/text_direction.mojom-lite.js"
            use_base_dir="false"
-           type="BINDATA"
-           compress="gzip" />
--      <if expr="is_win or is_macosx or is_linux">
-+      <if expr="is_win or is_macosx or is_posix">
+           type="BINDATA" />
+-      <if expr="is_win or is_macosx or is_linux or is_android">
++      <if expr="is_win or is_macosx or is_posix or is_android">
          <include name="IDR_MOJO_TIME_MOJOM_HTML"
              file="${root_gen_dir}/mojo/public/mojom/base/time.mojom.html"
              use_base_dir="false"

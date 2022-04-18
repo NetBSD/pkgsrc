@@ -1,31 +1,31 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_swiftshader_src_vulkan_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_swiftshader_src_vulkan_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/third_party/swiftshader/src/Vulkan/BUILD.gn.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/third_party/swiftshader/src/Vulkan/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/third_party/swiftshader/src/Vulkan/BUILD.gn
 @@ -18,7 +18,7 @@ import("vulkan.gni")
  
  # Need a separate config to ensure the warnings are added to the end.
  config("swiftshader_libvulkan_private_config") {
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      defines = [
        "VK_USE_PLATFORM_XLIB_KHR",
        "VK_USE_PLATFORM_XCB_KHR",
-@@ -94,7 +94,7 @@ swiftshader_source_set("swiftshader_libv
+@@ -96,7 +96,7 @@ swiftshader_source_set("swiftshader_libv
      "VkStringify.hpp",
-     "VulkanPlatform.h",
+     "VulkanPlatform.hpp",
    ]
--  if (is_linux || is_android) {
-+  if (is_linux || is_android || is_bsd) {
+-  if (is_linux || is_chromeos || is_android) {
++  if (is_linux || is_chromeos || is_android || is_bsd) {
      sources += [
        "VkDeviceMemoryExternalLinux.hpp",
        "VkSemaphoreExternalLinux.hpp",
-@@ -156,7 +156,7 @@ swiftshader_shared_library("swiftshader_
+@@ -166,7 +166,7 @@ swiftshader_shared_library("swiftshader_
        "-Wl,-exported_symbols_list," +
            rebase_path("vk_swiftshader.exports", root_build_dir),
      ]
--  } else if (is_linux || is_fuchsia) {
-+  } else if (is_linux || is_fuchsia || is_bsd) {
+-  } else if (is_linux || is_chromeos || is_fuchsia) {
++  } else if (is_linux || is_chromeos || is_fuchsia || is_bsd) {
      inputs = [
        "vk_swiftshader.lds",
      ]

@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_base_memory_discardable__memory.cc,v 1.1 2021/08/03 21:04:34 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_memory_discardable__memory.cc,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/base/memory/discardable_memory.cc.orig	2020-06-25 09:31:18.000000000 +0000
+--- src/3rdparty/chromium/base/memory/discardable_memory.cc.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/base/memory/discardable_memory.cc
 @@ -23,7 +23,7 @@ const base::Feature kMadvFreeDiscardable
      "MadvFreeDiscardableMemory", base::FEATURE_DISABLED_BY_DEFAULT};
  #endif  // defined(OS_POSIX)
  
--#if defined(OS_ANDROID) || defined(OS_LINUX)
-+#if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_BSD)
+-#if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_CHROMEOS)
++#if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
  const base::Feature kDiscardableMemoryBackingTrial{
      "DiscardableMemoryBackingTrial", base::FEATURE_DISABLED_BY_DEFAULT};
  
@@ -15,8 +15,8 @@ $NetBSD: patch-src_3rdparty_chromium_base_memory_discardable__memory.cc,v 1.1 20
  
  namespace {
  
--#if defined(OS_ANDROID) || defined(OS_LINUX)
-+#if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_BSD)
+-#if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_CHROMEOS)
++#if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
  
  DiscardableMemoryBacking GetBackingForFieldTrial() {
    DiscardableMemoryTrialGroup trial_group =
@@ -24,8 +24,8 @@ $NetBSD: patch-src_3rdparty_chromium_base_memory_discardable__memory.cc,v 1.1 20
  
  }  // namespace
  
--#if defined(OS_ANDROID) || defined(OS_LINUX)
-+#if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_BSD)
+-#if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_CHROMEOS)
++#if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
  
  // Probe capabilities of this device to determine whether we should participate
  // in the discardable memory backing trial.
@@ -33,8 +33,8 @@ $NetBSD: patch-src_3rdparty_chromium_base_memory_discardable__memory.cc,v 1.1 20
  DiscardableMemory::~DiscardableMemory() = default;
  
  DiscardableMemoryBacking GetDiscardableMemoryBacking() {
--#if defined(OS_ANDROID) || defined(OS_LINUX)
-+#if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_BSD)
+-#if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_CHROMEOS)
++#if defined(OS_ANDROID) || defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD)
    if (DiscardableMemoryBackingFieldTrialIsEnabled()) {
      return GetBackingForFieldTrial();
    }

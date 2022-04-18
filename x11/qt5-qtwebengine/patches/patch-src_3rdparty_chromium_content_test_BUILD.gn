@@ -1,44 +1,44 @@
-$NetBSD: patch-src_3rdparty_chromium_content_test_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_content_test_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/content/test/BUILD.gn.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/content/test/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/content/test/BUILD.gn
-@@ -606,7 +606,7 @@ jumbo_static_library("test_support") {
+@@ -631,7 +631,7 @@ jumbo_static_library("test_support") {
      ]
    }
  
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      deps += [ "//ui/platform_window/common" ]
    }
- }
-@@ -1262,7 +1262,7 @@ test("content_browsertests") {
+ 
+@@ -1327,7 +1327,7 @@ test("content_browsertests") {
      }
    }
  
--  if (is_android || is_linux || is_mac || is_win) {
-+  if (is_android || is_linux || is_mac || is_win || is_bsd) {
+-  if (is_android || is_linux || is_chromeos || is_mac || is_win) {
++  if (is_android || is_linux || is_chromeos || is_mac || is_win || is_bsd) {
      data += [
        "$root_out_dir/content_shell.pak",
        "data/",
-@@ -1270,7 +1270,7 @@ test("content_browsertests") {
+@@ -1335,7 +1335,7 @@ test("content_browsertests") {
      ]
    }
  
--  if (is_linux || is_mac || is_win) {
-+  if (is_linux || is_mac || is_win || is_bsd) {
+-  if (is_linux || is_chromeos || is_mac || is_win) {
++  if (is_linux || is_chromeos || is_mac || is_win || is_bsd) {
      sources += [
        "../browser/media/capture/content_capture_device_browsertest_base.cc",
        "../browser/media/capture/content_capture_device_browsertest_base.h",
-@@ -1331,7 +1331,7 @@ test("content_browsertests") {
+@@ -1397,7 +1397,7 @@ test("content_browsertests") {
      configs += [ "//build/config/win:delayloads" ]
    }
  
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      sources += [
        "../browser/utility_process_sandbox_browsertest.cc",
-       "../zygote/zygote_browsertest.cc",
-@@ -1342,6 +1342,12 @@ test("content_browsertests") {
+       "../browser/zygote_host/zygote_browsertest.cc",
+@@ -1407,6 +1407,12 @@ test("content_browsertests") {
        "//ui/gfx:test_support",
      ]
  
@@ -51,16 +51,16 @@ $NetBSD: patch-src_3rdparty_chromium_content_test_BUILD.gn,v 1.1 2021/08/03 21:0
      if (use_atk) {
        sources += [
          "../browser/accessibility/accessibility_auralinux_browsertest.cc",
-@@ -1562,7 +1568,7 @@ static_library("run_all_unittests") {
+@@ -1655,7 +1661,7 @@ static_library("run_all_unittests") {
      ":test_support",
      "//base/test:test_support",
    ]
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
-     deps += [ "//services/service_manager/embedder:set_process_title_linux" ]
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
+     deps += [ "//content/common:set_process_title_linux" ]
    }
  }
-@@ -2269,7 +2275,7 @@ test("content_unittests") {
+@@ -2380,7 +2386,7 @@ test("content_unittests") {
        "//ui/shell_dialogs:shell_dialogs",
      ]
  
@@ -69,21 +69,21 @@ $NetBSD: patch-src_3rdparty_chromium_content_test_BUILD.gn,v 1.1 2021/08/03 21:0
        sources +=
            [ "../browser/media/capture/desktop_capture_device_unittest.cc" ]
        deps += [ "//third_party/webrtc_overrides:webrtc_component" ]
-@@ -2308,7 +2314,7 @@ test("content_unittests") {
+@@ -2419,7 +2425,7 @@ test("content_unittests") {
      }
    }
  
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      if (use_dbus) {
        deps += [ "//dbus:test_support" ]
      }
-@@ -2448,7 +2454,7 @@ test("content_unittests") {
+@@ -2563,7 +2569,7 @@ test("content_unittests") {
      deps += [ "//ui/gfx/x" ]
    }
  
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
-     sources += [ "../../services/service_manager/embedder/set_process_title_linux_unittest.cc" ]
-     deps += [ "//services/service_manager/embedder:set_process_title_linux" ]
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
+     sources += [ "../common/set_process_title_linux_unittest.cc" ]
+     deps += [ "//content/common:set_process_title_linux" ]
    }

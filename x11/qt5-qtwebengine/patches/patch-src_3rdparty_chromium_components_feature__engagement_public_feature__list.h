@@ -1,22 +1,22 @@
-$NetBSD: patch-src_3rdparty_chromium_components_feature__engagement_public_feature__list.h,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_components_feature__engagement_public_feature__list.h,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/components/feature_engagement/public/feature_list.h.orig	2020-11-07 01:22:36.000000000 +0000
+--- src/3rdparty/chromium/components/feature_engagement/public/feature_list.h.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/components/feature_engagement/public/feature_list.h
-@@ -112,7 +112,7 @@ DEFINE_VARIATION_PARAM(kIPHBadgedTransla
+@@ -127,7 +127,7 @@ DEFINE_VARIATION_PARAM(kIPHDiscoverFeedH
  #endif  // defined(OS_IOS)
  
- #if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || \
+ #if defined(OS_WIN) || defined(OS_APPLE) || defined(OS_LINUX) || \
 -    defined(OS_CHROMEOS)
 +    defined(OS_CHROMEOS) || defined(OS_BSD)
+ DEFINE_VARIATION_PARAM(kIPHDesktopTabGroupsNewGroupFeature,
+                        "IPH_DesktopTabGroupsNewGroup");
  DEFINE_VARIATION_PARAM(kIPHFocusModeFeature, "IPH_FocusMode");
- DEFINE_VARIATION_PARAM(kIPHGlobalMediaControls, "IPH_GlobalMediaControls");
- DEFINE_VARIATION_PARAM(kIPHReopenTabFeature, "IPH_ReopenTab");
-@@ -173,7 +173,7 @@ constexpr flags_ui::FeatureEntry::Featur
-         VARIATION_ENTRY(kIPHBadgedReadingListFeature),
+@@ -197,7 +197,7 @@ constexpr flags_ui::FeatureEntry::Featur
          VARIATION_ENTRY(kIPHBadgedTranslateManualTriggerFeature),
- #elif defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX) || \
+         VARIATION_ENTRY(kIPHDiscoverFeedHeaderFeature),
+ #elif defined(OS_WIN) || defined(OS_APPLE) || defined(OS_LINUX) || \
 -    defined(OS_CHROMEOS)
 +    defined(OS_CHROMEOS) || defined(OS_BSD)
+         VARIATION_ENTRY(kIPHDesktopTabGroupsNewGroupFeature),
          VARIATION_ENTRY(kIPHFocusModeFeature),
          VARIATION_ENTRY(kIPHGlobalMediaControls),
-         VARIATION_ENTRY(kIPHReopenTabFeature),

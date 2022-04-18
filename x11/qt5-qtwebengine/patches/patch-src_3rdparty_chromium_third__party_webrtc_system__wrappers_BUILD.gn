@@ -1,22 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_webrtc_system__wrappers_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_webrtc_system__wrappers_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/third_party/webrtc/system_wrappers/BUILD.gn.orig	2020-07-15 19:01:42.000000000 +0000
+--- src/3rdparty/chromium/third_party/webrtc/system_wrappers/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/third_party/webrtc/system_wrappers/BUILD.gn
-@@ -55,7 +55,7 @@ rtc_library("system_wrappers") {
+@@ -58,7 +58,7 @@ rtc_library("system_wrappers") {
      libs += [ "log" ]
    }
  
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      if (!build_with_chromium) {
-       deps += [ ":cpu_features_linux" ]
+       sources += [ "source/cpu_features_linux.cc" ]
      }
-@@ -117,7 +117,7 @@ if (is_android && !build_with_mozilla) {
-   }
- }
- 
--if (is_linux) {
-+if (is_linux || is_bsd) {
-   rtc_library("cpu_features_linux") {
-     sources = [ "source/cpu_features_linux.c" ]
-     deps = [

@@ -1,31 +1,31 @@
-$NetBSD: patch-src_3rdparty_chromium_media_base_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_media_base_BUILD.gn,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/media/base/BUILD.gn.orig	2020-07-15 18:56:47.000000000 +0000
+--- src/3rdparty/chromium/media/base/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/media/base/BUILD.gn
-@@ -397,7 +397,7 @@ jumbo_source_set("base") {
+@@ -410,7 +410,7 @@ jumbo_source_set("base") {
      defines += [ "DISABLE_USER_INPUT_MONITOR" ]
    }
  
--  if (is_linux || is_win) {
-+  if (is_linux || is_win || is_bsd) {
+-  if (is_linux || is_chromeos || is_win) {
++  if (is_linux || is_chromeos || is_win || is_bsd) {
      sources += [
        "keyboard_event_counter.cc",
        "keyboard_event_counter.h",
-@@ -405,7 +405,7 @@ jumbo_source_set("base") {
+@@ -418,7 +418,7 @@ jumbo_source_set("base") {
    }
  
    # Note: should also work on is_posix || is_fuchsia
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      sources += [
        "scopedfd_helper.cc",
        "scopedfd_helper.h",
-@@ -612,7 +612,7 @@ source_set("unit_tests") {
+@@ -623,7 +623,7 @@ source_set("unit_tests") {
      deps += [ "//media/base/mac:unit_tests" ]
    }
  
--  if (is_linux || is_win) {
-+  if (is_linux || is_win || is_bsd) {
+-  if (is_linux || is_chromeos || is_win) {
++  if (is_linux || is_chromeos || is_win || is_bsd) {
      sources += [ "keyboard_event_counter_unittest.cc" ]
    }
    if (is_win) {

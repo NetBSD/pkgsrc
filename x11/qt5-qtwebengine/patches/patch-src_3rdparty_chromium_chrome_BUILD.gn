@@ -1,40 +1,40 @@
-$NetBSD: patch-src_3rdparty_chromium_chrome_BUILD.gn,v 1.1 2021/08/03 21:04:34 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_chrome_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/chrome/BUILD.gn.orig	2020-07-15 18:56:44.000000000 +0000
+--- src/3rdparty/chromium/chrome/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/chrome/BUILD.gn
-@@ -28,7 +28,7 @@ import("//v8/gni/v8.gni")
+@@ -29,7 +29,7 @@ import("//v8/gni/v8.gni")
  
  if (is_android) {
    import("//build/config/android/rules.gni")
--} else if (is_linux) {
-+} else if (is_linux || is_bsd) {
+-} else if (is_linux || is_chromeos) {
++} else if (is_linux || is_chromeos || is_bsd) {
    import("//build/linux/extract_symbols.gni")
  } else if (is_mac) {
-   import("//build/compiled_action.gni")
-@@ -131,7 +131,7 @@ if (!is_android && !is_mac) {
+   import("//build/apple/tweak_info_plist.gni")
+@@ -139,7 +139,7 @@ if (!is_android && !is_mac) {
      deps = [ "//printing/buildflags" ]
  
      data = [ "$root_out_dir/resources.pak" ]
--    if (is_linux || is_win) {
-+    if (is_linux || is_win || is_bsd) {
+-    if (is_linux || is_chromeos || is_win) {
++    if (is_linux || is_chromeos || is_win || is_bsd) {
        data_deps = [ "//chrome:packed_resources" ]
      }
  
-@@ -211,7 +211,7 @@ if (!is_android && !is_mac) {
+@@ -224,7 +224,7 @@ if (!is_android && !is_mac) {
        sources += [ "app/chrome_exe_main_aura.cc" ]
      }
  
--    if (is_linux) {
-+    if (is_linux || is_bsd) {
+-    if (is_linux || is_chromeos) {
++    if (is_linux || is_chromeos || is_bsd) {
        sources += [
          "app/chrome_dll_resource.h",
          "app/chrome_main.cc",
-@@ -1536,7 +1536,7 @@ if (enable_resource_whitelist_generation
+@@ -1589,7 +1589,7 @@ if (enable_resource_allowlist_generation
    }
  }
  
--if (is_linux) {
-+if (is_linux || is_bsd) {
+-if (is_linux || is_chromeos) {
++if (is_linux || is_chromeos || is_bsd) {
    if (is_official_build) {
      group("linux_symbols") {
        deps = [

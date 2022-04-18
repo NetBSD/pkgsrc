@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_ui_views_views__delegate.h,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_ui_views_views__delegate.h,v 1.2 2022/04/18 11:18:19 adam Exp $
 
---- src/3rdparty/chromium/ui/views/views_delegate.h.orig	2020-07-15 18:56:49.000000000 +0000
+--- src/3rdparty/chromium/ui/views/views_delegate.h.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/ui/views/views_delegate.h
-@@ -133,7 +133,7 @@ class VIEWS_EXPORT ViewsDelegate {
-   // Returns true if the window passed in is in the Windows 8 metro
+@@ -134,7 +134,7 @@ class VIEWS_EXPORT ViewsDelegate {
    // environment.
    virtual bool IsWindowInMetro(gfx::NativeWindow window) const;
--#elif defined(OS_LINUX) && BUILDFLAG(ENABLE_DESKTOP_AURA)
-+#elif (defined(OS_LINUX) || defined(OS_BSD)) && BUILDFLAG(ENABLE_DESKTOP_AURA)
+ #elif BUILDFLAG(ENABLE_DESKTOP_AURA) && \
+-  (defined(OS_LINUX) || defined(OS_CHROMEOS))
++  (defined(OS_LINUX) || defined(OS_CHROMEOS) || defined(OS_BSD))
    virtual gfx::ImageSkia* GetDefaultWindowIcon() const;
  #endif
  

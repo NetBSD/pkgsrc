@@ -1,13 +1,13 @@
-$NetBSD: patch-src_3rdparty_chromium_chromecast_net_BUILD.gn,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_chromecast_net_BUILD.gn,v 1.2 2022/04/18 11:18:18 adam Exp $
 
---- src/3rdparty/chromium/chromecast/net/BUILD.gn.orig	2020-07-15 18:55:53.000000000 +0000
+--- src/3rdparty/chromium/chromecast/net/BUILD.gn.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/chromecast/net/BUILD.gn
 @@ -11,7 +11,7 @@ cast_source_set("net") {
      "net_util_cast.h",
    ]
  
--  if (is_linux) {
-+  if (is_linux || is_bsd) {
+-  if (is_linux || is_chromeos) {
++  if (is_linux || is_chromeos || is_bsd) {
      sources += [
        "network_change_notifier_factory_cast.cc",
        "network_change_notifier_factory_cast.h",
