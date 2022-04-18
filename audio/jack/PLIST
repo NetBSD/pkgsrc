@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2021/09/15 07:44:09 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.15 2022/04/18 15:56:34 schmonz Exp $
 ${PLIST.alsa}bin/alsa_in
 ${PLIST.alsa}bin/alsa_out
 bin/jack_alias
@@ -35,7 +35,6 @@ bin/jack_simple_client
 bin/jack_simple_session_client
 bin/jack_test
 bin/jack_thru
-${PLIST.darwin}bin/jack_transport
 bin/jack_unload
 bin/jack_wait
 bin/jack_zombie
