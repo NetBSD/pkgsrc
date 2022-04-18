@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/18 05:03:04 markd Exp $
+share/texmf-dist/doc/latex/pmhanguljamo/README.md
+share/texmf-dist/doc/latex/pmhanguljamo/munjangganghwa.jpg
+share/texmf-dist/doc/latex/pmhanguljamo/pmhanguljamo-doc.pdf
+share/texmf-dist/doc/latex/pmhanguljamo/pmhanguljamo-doc.tex
+share/texmf-dist/doc/latex/pmhanguljamo/pmhanguljamo-kdoc.pdf
+share/texmf-dist/doc/latex/pmhanguljamo/pmhanguljamo-kdoc.tex
