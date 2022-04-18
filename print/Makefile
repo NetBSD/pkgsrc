@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.847 2022/04/18 03:44:59 markd Exp $
+# $NetBSD: Makefile,v 1.848 2022/04/18 04:21:04 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -497,6 +497,8 @@ SUBDIR+=	tex-context-bnf
 SUBDIR+=	tex-context-bnf-doc
 SUBDIR+=	tex-context-chromato
 SUBDIR+=	tex-context-chromato-doc
+SUBDIR+=	tex-context-cmscbf
+SUBDIR+=	tex-context-cmscbf-doc
 SUBDIR+=	tex-context-construction-plan
 SUBDIR+=	tex-context-construction-plan-doc
 SUBDIR+=	tex-context-cyrillicnumbers
