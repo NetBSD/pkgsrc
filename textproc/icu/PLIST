@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2021/12/08 08:21:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.52 2022/04/18 11:03:24 adam Exp $
 bin/derb
 bin/genbrk
 bin/gencfu
@@ -163,6 +163,7 @@ include/unicode/uniset.h
 include/unicode/unistr.h
 include/unicode/unorm.h
 include/unicode/unorm2.h
+include/unicode/unounclass.h
 include/unicode/unum.h
 include/unicode/unumberformatter.h
 include/unicode/unumberrangeformatter.h
@@ -207,27 +208,27 @@ lib/icu/pkgdata.inc
 lib/libicudata.a
 lib/libicudata.so
 lib/libicudata.so.${PKGVERSION}
-lib/libicudata.so.70
+lib/libicudata.so.71
 lib/libicui18n.a
 lib/libicui18n.so
 lib/libicui18n.so.${PKGVERSION}
-lib/libicui18n.so.70
+lib/libicui18n.so.71
 lib/libicuio.a
 lib/libicuio.so
 lib/libicuio.so.${PKGVERSION}
-lib/libicuio.so.70
+lib/libicuio.so.71
 lib/libicutest.a
 lib/libicutest.so
 lib/libicutest.so.${PKGVERSION}
-lib/libicutest.so.70
+lib/libicutest.so.71
 lib/libicutu.a
 lib/libicutu.so
 lib/libicutu.so.${PKGVERSION}
-lib/libicutu.so.70
+lib/libicutu.so.71
 lib/libicuuc.a
 lib/libicuuc.so
 lib/libicuuc.so.${PKGVERSION}
-lib/libicuuc.so.70
+lib/libicuuc.so.71
 lib/pkgconfig/icu-i18n.pc
 lib/pkgconfig/icu-io.pc
 lib/pkgconfig/icu-uc.pc
