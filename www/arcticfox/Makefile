@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/03/28 10:59:30 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2022/04/18 19:12:16 adam Exp $
 
 DISTNAME=	arcticfox-39.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wicknix/}
 GITHUB_PROJECT=	Arctic-Fox

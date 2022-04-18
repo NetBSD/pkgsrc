@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2021/12/08 16:04:44 adam Exp $
+# $NetBSD: Makefile,v 1.12 2022/04/18 19:11:12 adam Exp $
 #
 
 DISTNAME=	xu4-1.0beta3
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xu4/}
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2021/04/21 11:40:26 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2022/04/18 19:09:55 adam Exp $
 
 BUILDLINK_TREE+=	gjs
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gjs
 GJS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gjs+=	gjs>=1.53.4
-BUILDLINK_ABI_DEPENDS.gjs?=	gjs>=1.68.0nb1
+BUILDLINK_ABI_DEPENDS.gjs?=	gjs>=1.68.4nb1
 BUILDLINK_PKGSRCDIR.gjs?=	../../lang/gjs
 
 .include "../../devel/glib2/buildlink3.mk"

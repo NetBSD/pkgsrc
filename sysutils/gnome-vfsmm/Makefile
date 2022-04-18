@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2021/12/08 16:02:38 adam Exp $
+# $NetBSD: Makefile,v 1.73 2022/04/18 19:10:07 adam Exp $
 
 DISTNAME=	gnome-vfsmm-2.26.0
-PKGREVISION=	45
+PKGREVISION=	46
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-vfsmm/2.26/}
 EXTRACT_SUFX=	.tar.bz2

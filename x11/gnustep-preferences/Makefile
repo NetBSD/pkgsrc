@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2021/12/08 16:07:04 adam Exp $
+# $NetBSD: Makefile,v 1.64 2022/04/18 19:12:22 adam Exp $
 
 DISTNAME=	Preferences-1.2.0
 PKGNAME=	gnustep-${DISTNAME:S/P/p/}
-PKGREVISION=	41
+PKGREVISION=	42
 CATEGORIES=	x11 gnustep
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=prefsapp/}
 EXTRACT_SUFX=	.tar.bz2

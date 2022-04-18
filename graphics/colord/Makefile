@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2021/12/08 16:04:50 adam Exp $
+# $NetBSD: Makefile,v 1.16 2022/04/18 19:11:14 adam Exp $
 
 DISTNAME=	colord-1.3.5
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	graphics gnome
 MASTER_SITES=	https://www.freedesktop.org/software/colord/releases/
 EXTRACT_SUFX=	.tar.xz

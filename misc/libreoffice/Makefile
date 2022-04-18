@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.282 2022/03/04 13:47:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.283 2022/04/18 19:11:40 adam Exp $
 
 VERREL=		7.3.1
 VERRC=		3
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz

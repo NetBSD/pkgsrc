@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2022/01/10 01:46:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.42 2022/04/18 19:11:51 adam Exp $
 
 DISTNAME=	kppp-16.12.0
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	net
 COMMENT=	Dialer and front end for pppd
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.12.0/src/}

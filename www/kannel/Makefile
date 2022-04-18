@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2021/12/08 16:06:56 adam Exp $
+# $NetBSD: Makefile,v 1.49 2022/04/18 19:12:17 adam Exp $
 
 DISTNAME=	gateway-${KANNEL_VER}
 PKGNAME=	kannel-${KANNEL_VER}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	www net
 MASTER_SITES=	https://www.kannel.org/download/${KANNEL_VER}/
 EXTRACT_SUFX=	.tar.bz2

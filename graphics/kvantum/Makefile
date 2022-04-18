@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2022/02/18 13:13:28 pin Exp $
+# $NetBSD: Makefile,v 1.19 2022/04/18 19:11:21 adam Exp $
 
 # kvantum-1.0.1 requires kf5-5.82
 # We only have kf5-5.80
 DISTNAME=	Kvantum-1.0.0
 PKGNAME=	${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tsujan/}
 GITHUB_TAG=	V${PKGVERSION_NOREV}

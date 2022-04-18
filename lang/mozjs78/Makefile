@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2021/12/08 16:02:16 adam Exp $
+# $NetBSD: Makefile,v 1.25 2022/04/18 19:09:55 adam Exp $
 
 DISTNAME=	mozjs78_78.15.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	http://deb.debian.org/debian/pool/main/m/mozjs78/
 EXTRACT_SUFX=	.tar.xz

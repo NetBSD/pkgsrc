@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.45 2021/12/08 16:04:53 adam Exp $
+# $NetBSD: Makefile,v 1.46 2022/04/18 19:11:16 adam Exp $
 
 DISTNAME=	exif-browser
 PKGNAME=	gimp-exif-browser-0.1.0
 DIST_SUBDIR=	gimp-exif-browser-0.1.0
-PKGREVISION=	42
+PKGREVISION=	43
 CATEGORIES=	graphics
 MASTER_SITES=	http://registry.gimp.org/files/
 

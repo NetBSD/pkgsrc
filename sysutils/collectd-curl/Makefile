@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2021/12/08 16:06:26 adam Exp $
+# $NetBSD: Makefile,v 1.35 2022/04/18 19:12:03 adam Exp $
 
 COLLECTD_PACKAGE=	curl
 COLLECTD_PLUGINS=	curl curl_json curl_xml apache bind nginx write_http ascent
 
 COMMENT=		Statistics collection daemon - curl-based plugins
-PKGREVISION=		4
+PKGREVISION=		5
 
 .include "../../devel/yajl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

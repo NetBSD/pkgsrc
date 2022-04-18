@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2021/12/08 16:04:56 adam Exp $
+# $NetBSD: Makefile,v 1.23 2022/04/18 19:11:18 adam Exp $
 #
 
 GST_PLUGINS0.10_NAME=	png
 GST_PLUGINS0.10_DIRS=	ext/libpng
 GST_PLUGINS0.10_FLAGS=	libpng
-PKGREVISION=		8
+PKGREVISION=		9
 
 .include "../../multimedia/gst-plugins0.10-good/Makefile.common"
 

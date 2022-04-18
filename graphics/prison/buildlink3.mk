@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2021/04/21 11:40:25 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2022/04/18 19:09:54 adam Exp $
 
 BUILDLINK_TREE+=	prison
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	prison
 PRISON_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.prison+=	prison>=5.41.0
-BUILDLINK_ABI_DEPENDS.prison?=	prison>=5.80.0nb1
+BUILDLINK_ABI_DEPENDS.prison?=	prison>=5.80.0nb3
 BUILDLINK_PKGSRCDIR.prison?=	../../graphics/prison
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"

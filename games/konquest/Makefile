@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2022/03/28 10:44:11 tnn Exp $
+# $NetBSD: Makefile,v 1.51 2022/04/18 19:11:08 adam Exp $
 
 DISTNAME=	konquest-${KAPPSVER}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/konquest/

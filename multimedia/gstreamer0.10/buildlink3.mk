@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2021/12/08 16:02:24 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2022/04/18 19:10:00 adam Exp $
 
 BUILDLINK_TREE+=	gstreamer0.10
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gstreamer0.10
 GSTREAMER0.10_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gstreamer0.10+=	gstreamer0.10>=0.10.1
-BUILDLINK_ABI_DEPENDS.gstreamer0.10+=	gstreamer0.10>=0.10.36nb17
+BUILDLINK_ABI_DEPENDS.gstreamer0.10+=	gstreamer0.10>=0.10.36nb19
 BUILDLINK_PKGSRCDIR.gstreamer0.10?=	../../multimedia/gstreamer0.10
 
 pkgbase := gstreamer0.10
