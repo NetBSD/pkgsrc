@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/18 05:06:05 markd Exp $
+share/texmf-dist/fonts/truetype/public/unfonts-core/UnBatang.ttf
+share/texmf-dist/fonts/truetype/public/unfonts-core/UnBatangBold.ttf
+share/texmf-dist/fonts/truetype/public/unfonts-core/UnDinaru.ttf
+share/texmf-dist/fonts/truetype/public/unfonts-core/UnDinaruBold.ttf
+share/texmf-dist/fonts/truetype/public/unfonts-core/UnDinaruLight.ttf
+share/texmf-dist/fonts/truetype/public/unfonts-core/UnDotum.ttf
+share/texmf-dist/fonts/truetype/public/unfonts-core/UnDotumBold.ttf
+share/texmf-dist/fonts/truetype/public/unfonts-core/UnGraphic.ttf
+share/texmf-dist/fonts/truetype/public/unfonts-core/UnGraphicBold.ttf
+share/texmf-dist/fonts/truetype/public/unfonts-core/UnGungseo.ttf
+share/texmf-dist/fonts/truetype/public/unfonts-core/UnPilgi.ttf
+share/texmf-dist/fonts/truetype/public/unfonts-core/UnPilgiBold.ttf
