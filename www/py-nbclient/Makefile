@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/03/12 08:31:39 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/04/19 11:39:40 adam Exp $
 
-DISTNAME=	nbclient-0.5.13
+DISTNAME=	nbclient-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nbclient/}
@@ -19,6 +19,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-ipython>0:../../devel/py-ipython
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipywidgets>0:../../www/py-ipywidgets
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-testpath-[0-9]*:../../devel/py-testpath
 TEST_DEPENDS+=	${PYPKGPREFIX}-xmltodict-[0-9]*:../../textproc/py-xmltodict
 
 USE_LANGUAGES=	# none
