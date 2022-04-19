@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2022/02/16 09:53:20 adam Exp $
+$NetBSD: distinfo,v 1.14 2022/04/19 11:34:27 adam Exp $
 
-BLAKE2s (jupyter_core-4.9.2.tar.gz) = 429bb7ea0cd69e4701a07c13fba4b4e9d1e1c45ee91ce72a7be8bcb1cc19bf3a
-SHA512 (jupyter_core-4.9.2.tar.gz) = 2779d7857b3efb979df29f65e5db0a625e4c96b1bbed017aa7bdaa7d23d7cb202d745c92db663a183bdcdc5f55133aa32bc6c982d5a9d36decceb9a348e7754b
-Size (jupyter_core-4.9.2.tar.gz) = 74912 bytes
-SHA1 (patch-jupyter__core_paths.py) = 2ed2b8bda891e323f7102e36fd66cfd61340b822
+BLAKE2s (jupyter_core-4.10.0.tar.gz) = 3b86b32689fd0282ef0964818a8daac28dd2cb35a8c7dd47104b9e56ef21b9c2
+SHA512 (jupyter_core-4.10.0.tar.gz) = b11257aa6239d2cc51b63c4ae696b5e2862fd824f662875a9e2b663a84b86aec14aa21baae6e5c720155f2be37fd40925b913503e002401eee442d6d3258704d
+Size (jupyter_core-4.10.0.tar.gz) = 76535 bytes
+SHA1 (patch-jupyter__core_paths.py) = 6e4b61b6d261a56f8111f0f878031366112eadc8
