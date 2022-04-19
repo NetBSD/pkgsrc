@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.859 2022/04/19 03:04:19 markd Exp $
+# $NetBSD: Makefile,v 1.860 2022/04/19 03:07:31 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1524,6 +1524,8 @@ SUBDIR+=	tex-templates-fenn-doc
 SUBDIR+=	tex-templates-sommer-doc
 SUBDIR+=	tex-tensind
 SUBDIR+=	tex-tensind-doc
+SUBDIR+=	tex-termcal
+SUBDIR+=	tex-termcal-doc
 SUBDIR+=	tex-testhyphens
 SUBDIR+=	tex-testhyphens-doc
 SUBDIR+=	tex-tex

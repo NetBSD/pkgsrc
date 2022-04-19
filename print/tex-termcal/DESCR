@@ -1,0 +1,8 @@
+This package is intended to print a term calendar for use in
+planning a class. It has a flexible mechanism for specifying
+which days of the week are to be included and for inserting
+text either regularly on the same day each week, or on selected
+days, or for a series of consecutive days. It also has a
+flexible mechanism for specifing class and nonclass days. Text
+may be inserted into consecutive days so that it automatically
+flows around nonclass days.
