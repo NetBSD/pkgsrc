@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1921 2022/04/19 11:45:39 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1922 2022/04/19 11:52:48 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3051,3 +3051,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-jupyter_core to 4.10.0 [adam 2022-04-19]
 	Updated www/py-nbclient to 0.6.0 [adam 2022-04-19]
 	Updated www/py-nbconvert to 6.5.0 [adam 2022-04-19]
+	Added devel/difftastic version 0.27.0 [bsiegert 2022-04-19]
