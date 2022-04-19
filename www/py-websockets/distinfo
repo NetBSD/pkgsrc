@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2022/02/21 08:23:53 adam Exp $
+$NetBSD: distinfo,v 1.15 2022/04/19 12:04:38 adam Exp $
 
-BLAKE2s (websockets-10.2.tar.gz) = f44752306633d3f6f49aaf610b3ebfebbd9bfa1a9f3f35040ef57ae27e6e25f3
-SHA512 (websockets-10.2.tar.gz) = b54bbdae63e5140f5158414f750e63124cf2f53abc5bed559e537d0f583a5e468a79b0428f185eaebb0c21dc3d0034de00a9f125a2f579368a0544447c255934
-Size (websockets-10.2.tar.gz) = 83402 bytes
+BLAKE2s (websockets-10.3.tar.gz) = 1d078750c54dd4b88dcc503f30df5d5711850adf73e0317fadb11f17081db8f4
+SHA512 (websockets-10.3.tar.gz) = 14be8739dc61d9487a99c1fb406b035305c215ba8f75a68b54d4de378234b05ed5a72d503fc3de855ea7cd77e31803d726988af20fcb07b6458fe0cf99877b94
+Size (websockets-10.3.tar.gz) = 84097 bytes
