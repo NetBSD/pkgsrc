@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.856 2022/04/19 02:53:13 markd Exp $
+# $NetBSD: Makefile,v 1.857 2022/04/19 02:57:16 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1358,6 +1358,8 @@ SUBDIR+=	tex-pxtatescale-doc
 SUBDIR+=	tex-qtree
 SUBDIR+=	tex-quoting
 SUBDIR+=	tex-quoting-doc
+SUBDIR+=	tex-quran
+SUBDIR+=	tex-quran-doc
 SUBDIR+=	tex-r_und_s
 SUBDIR+=	tex-r_und_s-doc
 SUBDIR+=	tex-ragged2e
