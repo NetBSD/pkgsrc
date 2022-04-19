@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.141 2022/04/18 19:10:08 adam Exp $
+# $NetBSD: Makefile,v 1.142 2022/04/19 15:54:34 adam Exp $
 
 DISTNAME=	icu4c-71_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
-PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=unicode-org/}
 EXTRACT_SUFX=	.tgz
