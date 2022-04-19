@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2022/02/05 12:03:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/04/19 12:14:10 adam Exp $
 bin/jupyter-bundlerextension-${PYVERSSUFFIX}
 bin/jupyter-nbextension-${PYVERSSUFFIX}
 bin/jupyter-notebook-${PYVERSSUFFIX}
@@ -1337,6 +1337,7 @@ ${PYSITELIB}/notebook/static/components/font-awesome/fonts/fontawesome-webfont.s
 ${PYSITELIB}/notebook/static/components/font-awesome/fonts/fontawesome-webfont.ttf
 ${PYSITELIB}/notebook/static/components/font-awesome/fonts/fontawesome-webfont.woff
 ${PYSITELIB}/notebook/static/components/font-awesome/fonts/fontawesome-webfont.woff2
+${PYSITELIB}/notebook/static/components/google-caja/html-css-sanitizer-minified.js
 ${PYSITELIB}/notebook/static/components/jed/jed.js
 ${PYSITELIB}/notebook/static/components/jquery-typeahead/dist/jquery.typeahead.min.css
 ${PYSITELIB}/notebook/static/components/jquery-typeahead/dist/jquery.typeahead.min.js
