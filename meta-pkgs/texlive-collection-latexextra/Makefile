@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2022/04/18 03:51:53 markd Exp $
+# $NetBSD: Makefile,v 1.64 2022/04/19 03:21:41 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2022pre2
+PKGNAME=	texlive-${DISTNAME}-2022pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	62901
@@ -1267,7 +1267,7 @@ DEPENDS+=	tex-tcolorbox-[0-9]*:../../print/tex-tcolorbox
 # depend technics
 # depend ted
 # depend templatetools
-# depend termcal
+DEPENDS+=	tex-termcal-[0-9]*:../../print/tex-termcal
 # depend termlist
 # depend termsim
 DEPENDS+=	tex-testhyphens-[0-9]*:../../print/tex-testhyphens
