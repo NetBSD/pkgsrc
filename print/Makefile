@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.854 2022/04/18 05:03:03 markd Exp $
+# $NetBSD: Makefile,v 1.855 2022/04/19 02:50:25 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -234,6 +234,8 @@ SUBDIR+=	tex-apa6
 SUBDIR+=	tex-apa6-doc
 SUBDIR+=	tex-apacite
 SUBDIR+=	tex-apacite-doc
+SUBDIR+=	tex-apalike-german
+SUBDIR+=	tex-apalike-german-doc
 SUBDIR+=	tex-appendix
 SUBDIR+=	tex-appendix-doc
 SUBDIR+=	tex-appendixnumberbeamer
