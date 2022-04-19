@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/19 03:11:48 markd Exp $
+
+BLAKE2s (termcal-de.r47111.tar.xz) = 020d0fd42796963de06e76ef7a9097ee39014e17f5f10f889cc14b9671dc019d
+SHA512 (termcal-de.r47111.tar.xz) = 9d4d0be3e26dc69fa3986fbe41099330e97cdd4d3aa0b12a180657577ef839878aea9e546a5651cdd0ea45e7af3968c5b83b509ad5bb3ef210d42af5c00fd91b
+Size (termcal-de.r47111.tar.xz) = 2164 bytes
