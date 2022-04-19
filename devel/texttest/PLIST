@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 2022/01/28 12:04:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/04/19 16:50:15 schmonz Exp $
 bin/filter_fpdiff.py
 bin/filter_rundependent.py
 bin/interpretcore
 bin/texttest
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/TextTest-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/TextTest-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/TextTest-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/TextTest-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/requires.txt
+${PYSITELIB}/TextTest-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
 ${PYSITELIB}/texttestlib/__init__.py
 ${PYSITELIB}/texttestlib/__init__.pyc
 ${PYSITELIB}/texttestlib/__init__.pyo
@@ -266,7 +266,6 @@ ${PYSITELIB}/texttestlib/images/throbber_inactive.png
 ${PYSITELIB}/texttestlib/jobprocess.py
 ${PYSITELIB}/texttestlib/jobprocess.pyc
 ${PYSITELIB}/texttestlib/jobprocess.pyo
-${PYSITELIB}/texttestlib/libexec/interpretcore
 ${PYSITELIB}/texttestlib/libexec/sitecustomize.py
 ${PYSITELIB}/texttestlib/libexec/sitecustomize.pyc
 ${PYSITELIB}/texttestlib/libexec/sitecustomize.pyo
