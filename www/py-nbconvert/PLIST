@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2022/03/29 07:39:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/04/19 11:45:05 adam Exp $
 bin/jupyter-dejavu-${PYVERSSUFFIX}
 bin/jupyter-nbconvert-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -16,6 +16,9 @@ ${PYSITELIB}/nbconvert/__main__.pyo
 ${PYSITELIB}/nbconvert/_version.py
 ${PYSITELIB}/nbconvert/_version.pyc
 ${PYSITELIB}/nbconvert/_version.pyo
+${PYSITELIB}/nbconvert/conftest.py
+${PYSITELIB}/nbconvert/conftest.pyc
+${PYSITELIB}/nbconvert/conftest.pyo
 ${PYSITELIB}/nbconvert/exporters/__init__.py
 ${PYSITELIB}/nbconvert/exporters/__init__.pyc
 ${PYSITELIB}/nbconvert/exporters/__init__.pyo
@@ -347,6 +350,9 @@ ${PYSITELIB}/nbconvert/tests/utils.pyo
 ${PYSITELIB}/nbconvert/utils/__init__.py
 ${PYSITELIB}/nbconvert/utils/__init__.pyc
 ${PYSITELIB}/nbconvert/utils/__init__.pyo
+${PYSITELIB}/nbconvert/utils/_contextlib_chdir.py
+${PYSITELIB}/nbconvert/utils/_contextlib_chdir.pyc
+${PYSITELIB}/nbconvert/utils/_contextlib_chdir.pyo
 ${PYSITELIB}/nbconvert/utils/base.py
 ${PYSITELIB}/nbconvert/utils/base.pyc
 ${PYSITELIB}/nbconvert/utils/base.pyo
