@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3713 2022/04/15 11:40:20 nikita Exp $
+# $NetBSD: Makefile,v 1.3714 2022/04/19 11:52:18 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -302,6 +302,7 @@ SUBDIR+=	device-driver-doc-de
 SUBDIR+=	dia2code
 SUBDIR+=	diff-so-fancy
 SUBDIR+=	diffbreaker
+SUBDIR+=	difftastic
 SUBDIR+=	diffuse
 SUBDIR+=	diffutils
 SUBDIR+=	distcc
