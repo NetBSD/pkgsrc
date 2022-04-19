@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2022/04/18 20:18:45 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2022/04/19 11:27:13 js Exp $
 
 DISTNAME=	xml2rfc-3.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xml2rfc/}
 
@@ -20,8 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-flakes>=0.8.1:../../devel/py-flakes
 DEPENDS+=	${PYPKGPREFIX}-google-i18n-address>=2.3.2:../../devel/py-google-i18n-address
 DEPENDS+=	${PYPKGPREFIX}-html5lib>=1.0.1:../../textproc/py-html5lib
 DEPENDS+=	${PYPKGPREFIX}-intervaltree>=2.1.0,!=3.0.0:../../devel/py-intervaltree
-BROKEN=		"broken by jinja2 3.x update"
-#DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.11,<3.0:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.11:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-kitchen>=1.2.6:../../devel/py-kitchen
 DEPENDS+=	${PYPKGPREFIX}-lxml>=2.2.8,!=4.3.1:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.5.0:../../devel/py-requests
