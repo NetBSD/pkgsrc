@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/19 02:50:26 markd Exp $
+
+BLAKE2s (apalike-german.r61719.tar.xz) = 0fa31420faf6a270cc1fd69fa0a3307c7fae23ffd07434bc2e21cab889fa5dd0
+SHA512 (apalike-german.r61719.tar.xz) = 46f79d5e0b95f9a89611abeb1797f08be355524c4d28f66e18aa3bc267f76d80b6ab74fcae68a7ade731fbb454cd10334107b6c3c293937f806d891812c37a00
+Size (apalike-german.r61719.tar.xz) = 5804 bytes

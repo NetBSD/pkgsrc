@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/19 02:50:26 markd Exp $
+share/texmf-dist/bibtex/bst/apalike-german/apalike-german.bst
