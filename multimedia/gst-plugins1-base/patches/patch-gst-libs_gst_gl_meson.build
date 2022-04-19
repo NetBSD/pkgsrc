@@ -1,22 +1,19 @@
-$NetBSD: patch-gst-libs_gst_gl_meson.build,v 1.1 2022/04/18 12:36:08 nia Exp $
+$NetBSD: patch-gst-libs_gst_gl_meson.build,v 1.2 2022/04/19 13:00:27 tnn Exp $
 
 build_gstgl must be defined in the root meson.build so it's available
 when we are building plugins independently.
 
 --- gst-libs/gst/gl/meson.build.orig	2022-03-14 11:33:40.000000000 +0000
 +++ gst-libs/gst/gl/meson.build
-@@ -1,10 +1,3 @@
+@@ -1,5 +1,5 @@
 -if get_option('gl').disabled()
 -  message('GStreamer OpenGL integration disabled via options.')
--  gstgl_dep = dependency('', required: false)
--  build_gstgl = false
--  subdir_done()
--endif
--
- gl_sources = files([
-   'gstglapi.c',
-   'gstglbasefilter.c',
-@@ -952,18 +945,24 @@ if egl_dep.found()
++if 1 == 1
++  message('GStreamer OpenGL integration disabled via pkgsrc kludge')
+   gstgl_dep = dependency('', required: false)
+   build_gstgl = false
+   subdir_done()
+@@ -952,18 +952,22 @@ if egl_dep.found()
    endif
  endif
  
@@ -24,12 +21,12 @@ when we are building plugins independently.
  if enabled_gl_apis.length() == 0
    message('No OpenGL API libraries found or requested')
    build_gstgl = false
- endif
+-endif
 -if enabled_gl_platforms.length() == 0
 +elif enabled_gl_platforms.length() == 0
    message('No OpenGL Platforms found or requested')
    build_gstgl = false
- endif
+-endif
 -if enabled_gl_winsys.length() == 0
 +elif enabled_gl_winsys.length() == 0
    message('No OpenGL Window systems found or requested')
