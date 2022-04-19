@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21684 2022/04/18 13:21:38 nia Exp $
+$NetBSD: TODO,v 1.21685 2022/04/19 15:34:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1500,6 +1500,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-cares-3.1.1
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
+	o py-cryptography-36.0.2
 	o py-cyclonedx-python-lib-2.2.0
 	o py-django-4.0
 	o py-django-debug-toolbar-3.2.1
@@ -1521,6 +1522,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-newt-0.52.21
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
+	o py-pip-22.0.4
 	o py-pip-audit-2.1.1
 	o py-postgresql-5.1.2
 	o py-ptt-1.10.2
