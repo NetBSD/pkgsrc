@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/19 03:04:19 markd Exp $
+share/texmf-dist/doc/latex/schulmathematik/README
+share/texmf-dist/doc/latex/schulmathematik/schulmathematik.pdf
+share/texmf-dist/doc/latex/schulmathematik/schulmathematik.tex
