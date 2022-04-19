@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.230 2022/04/18 19:09:55 adam Exp $
+# $NetBSD: Makefile,v 1.231 2022/04/19 12:42:38 jperkin Exp $
 
 DISTNAME=	node-v16.14.2
 PKGREVISION=	2
 EXTRACT_SUFX=	.tar.xz
 
 USE_LANGUAGES=	c gnu++14
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
 .include "../../mk/bsd.prefs.mk"
 
