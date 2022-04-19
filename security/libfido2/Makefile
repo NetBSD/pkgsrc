@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.4 2022/04/12 22:27:58 tnn Exp $
+#	$NetBSD: Makefile,v 1.5 2022/04/19 07:11:10 nia Exp $
 
 DISTNAME=	libfido2-1.10.0
 CATEGORIES=	security devel
@@ -13,6 +13,7 @@ LICENSE=	2-clause-bsd
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c
+USE_TOOLS+=		pkg-config
 CONFIGURE_DIRS+=	build
 CMAKE_ARG_PATH=		..
 CMAKE_ARGS.NetBSD+=	-DBASE_LIBRARIES:STRING=usbhid
