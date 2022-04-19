@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/08/19 14:06:47 mef Exp $
+# $NetBSD: Makefile,v 1.4 2022/04/19 13:25:30 mef Exp $
 
 R_PKGNAME=	gert
-R_PKGVER=	1.3.2
+R_PKGVER=	1.6.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,6 +16,7 @@ DEPENDS+=	R-credentials-[0-9]*:../../security/R-credentials
 
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 TEST_DEPENDS+=	R-spelling-[0-9]*:../../textproc/R-spelling
+TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 
 USE_LANGUAGES=	c
 
