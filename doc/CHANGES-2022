@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1917 2022/04/18 20:13:15 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1918 2022/04/19 03:14:36 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3025,3 +3025,17 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/R-cli to 3.2.0 [mef 2022-04-18]
 	Updated net/gvproxy to 0.3.0 [bsiegert 2022-04-18]
 	Updated editors/ced to 0.1.4 [pin 2022-04-18]
+	Added print/tex-apalike-german version 2022 [markd 2022-04-19]
+	Added print/tex-apalike-german-doc version 2022 [markd 2022-04-19]
+	Added print/tex-bidi version 36.7 [markd 2022-04-19]
+	Added print/tex-bidi-doc version 36.7 [markd 2022-04-19]
+	Added print/tex-quran version 1.81 [markd 2022-04-19]
+	Added print/tex-quran-doc version 1.81 [markd 2022-04-19]
+	Added print/tex-quran-de version 0.2 [markd 2022-04-19]
+	Added print/tex-quran-de-doc version 0.2 [markd 2022-04-19]
+	Added print/tex-schulmathematik version 1.2 [markd 2022-04-19]
+	Added print/tex-schulmathematik-doc version 1.2 [markd 2022-04-19]
+	Added print/tex-termcal version 1.8 [markd 2022-04-19]
+	Added print/tex-termcal-doc version 1.8 [markd 2022-04-19]
+	Added print/tex-termcal-de version 2.0 [markd 2022-04-19]
+	Added print/tex-termcal-de-doc version 2.0 [markd 2022-04-19]
