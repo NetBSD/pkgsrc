@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1925 2022/04/19 13:25:42 mef Exp $
+$NetBSD: CHANGES-2022,v 1.1926 2022/04/19 16:38:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3056,3 +3056,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-notebook to 6.4.11 [adam 2022-04-19]
 	Updated devel/R-fs to 1.5.2 [mef 2022-04-19]
 	Updated devel/R-gert to 1.6.0 [mef 2022-04-19]
+	Updated net/libtorrent-rasterbar to 2.0.6 [adam 2022-04-19]
+	Updated net/qbittorrent to 4.4.2 [adam 2022-04-19]
