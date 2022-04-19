@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.93 2022/01/05 15:41:32 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2022/04/19 12:13:11 tnn Exp $
 
 DISTNAME=	Trac-1.4.2
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www devel
 MASTER_SITES=	http://ftp.edgewall.org/pub/trac/
 
@@ -20,7 +20,7 @@ LICENSE=	modified-bsd
 # that use the other.
 
 DEPENDS+=	${PYPKGPREFIX}-genshi>=0.6:../../www/py-genshi
-DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.11:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.11:../../textproc/py27-jinja2
 
 USE_TOOLS+=	pax
 
