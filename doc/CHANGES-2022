@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1918 2022/04/19 03:14:36 markd Exp $
+$NetBSD: CHANGES-2022,v 1.1919 2022/04/19 04:32:48 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3039,3 +3039,9 @@ Changes to the packages collection and infrastructure in 2022:
 	Added print/tex-termcal-doc version 1.8 [markd 2022-04-19]
 	Added print/tex-termcal-de version 2.0 [markd 2022-04-19]
 	Added print/tex-termcal-de-doc version 2.0 [markd 2022-04-19]
+	Updated fonts/tex-xcharter to 1.240 [markd 2022-04-19]
+	Updated fonts/tex-xcharter-doc to 1.240 [markd 2022-04-19]
+	Updated print/tex-bxorigcapt to 1.0 [markd 2022-04-19]
+	Updated print/tex-bxorigcapt-doc to 1.0 [markd 2022-04-19]
+	Updated print/tex-tex4ht to 2022 [markd 2022-04-19]
+	Updated print/tex-tex4ht-doc to 2022 [markd 2022-04-19]
