@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2022/03/31 18:27:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/04/19 11:28:38 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -121,6 +121,7 @@ ${PYSITELIB}/ipykernel/parentpoller.pyo
 ${PYSITELIB}/ipykernel/pickleutil.py
 ${PYSITELIB}/ipykernel/pickleutil.pyc
 ${PYSITELIB}/ipykernel/pickleutil.pyo
+${PYSITELIB}/ipykernel/py.typed
 ${PYSITELIB}/ipykernel/pylab/__init__.py
 ${PYSITELIB}/ipykernel/pylab/__init__.pyc
 ${PYSITELIB}/ipykernel/pylab/__init__.pyo
