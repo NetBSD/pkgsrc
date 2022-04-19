@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/02/15 14:03:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/04/19 11:39:40 adam Exp $
 bin/jupyter-execute-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -27,6 +27,7 @@ ${PYSITELIB}/nbclient/jsonutil.pyo
 ${PYSITELIB}/nbclient/output_widget.py
 ${PYSITELIB}/nbclient/output_widget.pyc
 ${PYSITELIB}/nbclient/output_widget.pyo
+${PYSITELIB}/nbclient/py.typed
 ${PYSITELIB}/nbclient/tests/__init__.py
 ${PYSITELIB}/nbclient/tests/__init__.pyc
 ${PYSITELIB}/nbclient/tests/__init__.pyo
