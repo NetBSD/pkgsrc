@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1927 2022/04/19 16:50:22 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.1928 2022/04/19 19:12:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3059,3 +3059,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/libtorrent-rasterbar to 2.0.6 [adam 2022-04-19]
 	Updated net/qbittorrent to 4.4.2 [adam 2022-04-19]
 	Updated devel/texttest to 4.1.0 [schmonz 2022-04-19]
+	Updated devel/py-restructuredtext_lint to 1.4.0 [adam 2022-04-19]
+	Updated devel/py-setuptools to 62.1.0 [adam 2022-04-19]
