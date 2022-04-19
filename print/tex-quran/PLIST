@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/19 02:57:16 markd Exp $
+share/texmf-dist/tex/latex/quran/quran-transde.def
+share/texmf-dist/tex/latex/quran/quran-transen.def
+share/texmf-dist/tex/latex/quran/quran-transfa.def
+share/texmf-dist/tex/latex/quran/quran-transfr.def
+share/texmf-dist/tex/latex/quran/quran-translt.def
+share/texmf-dist/tex/latex/quran/quran.sty
+share/texmf-dist/tex/latex/quran/qurantext-de.translation.def
+share/texmf-dist/tex/latex/quran/qurantext-en.translation.def
+share/texmf-dist/tex/latex/quran/qurantext-en.transliteration.def
+share/texmf-dist/tex/latex/quran/qurantext-fa.translation.def
+share/texmf-dist/tex/latex/quran/qurantext-fr.translation.def
+share/texmf-dist/tex/latex/quran/qurantext-simple.def
+share/texmf-dist/tex/latex/quran/qurantext-uthmani-min.def
+share/texmf-dist/tex/latex/quran/qurantext-uthmani.def
