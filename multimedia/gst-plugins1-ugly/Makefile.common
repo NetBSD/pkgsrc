@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2022/04/18 12:36:09 nia Exp $
+# $NetBSD: Makefile.common,v 1.36 2022/04/19 07:55:45 nia Exp $
 
 DISTNAME=	gst-plugins-ugly-1.20.1
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-plugins-ugly/
@@ -53,4 +53,5 @@ MESON_ARGS+=	-D${i}=disabled
 .include "../../devel/meson/build.mk"
 .include "../../lang/python/tool.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.20.0
 .include "../../multimedia/gstreamer1/buildlink3.mk"
