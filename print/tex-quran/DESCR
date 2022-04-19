@@ -1,0 +1,7 @@
+This package offers the user an easy way to typeset The Holy
+Quran. It has been inspired by the lipsum and ptext packages
+and provides several macros for typesetting the whole or any
+part of the Quran based on its popular division, including
+surah, ayah, juz, hizb, quarter, and page. Besides the Arabic
+original, translations to English, German, French, and Persian
+are provided, as well as an English transliteration.
