@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/04/14 06:27:31 markd Exp $
+# $NetBSD: Makefile,v 1.3 2022/04/19 04:29:08 markd Exp $
 
 DISTNAME=	bxorigcapt.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.4
-TEXLIVE_REV=	62714
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.0
+TEXLIVE_REV=	63058
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/bxorigcapt
