@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2022/04/18 12:36:08 nia Exp $
+# $NetBSD: Makefile.common,v 1.42 2022/04/19 07:55:44 nia Exp $
 
 DISTNAME=	gst-plugins-base-1.20.1
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-plugins-base/
@@ -115,4 +115,5 @@ post-install:
 .include "../../lang/python/tool.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.20.0
 .include "../../multimedia/gstreamer1/buildlink3.mk"
