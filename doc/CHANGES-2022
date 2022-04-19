@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1928 2022/04/19 19:12:57 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1929 2022/04/19 20:34:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3061,3 +3061,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/texttest to 4.1.0 [schmonz 2022-04-19]
 	Updated devel/py-restructuredtext_lint to 1.4.0 [adam 2022-04-19]
 	Updated devel/py-setuptools to 62.1.0 [adam 2022-04-19]
+	Updated audio/termusic to 0.6.13 [pin 2022-04-19]
