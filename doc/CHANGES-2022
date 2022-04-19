@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1920 2022/04/19 10:19:38 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1921 2022/04/19 11:45:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3047,3 +3047,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/tex-tex4ht-doc to 2022 [markd 2022-04-19]
 	Updated misc/stellarium to 0.22.1 [adam 2022-04-19]
 	Updated devel/py-typed-ast to 1.5.3 [adam 2022-04-19]
+	Updated devel/py-ipykernel to 6.13.0 [adam 2022-04-19]
+	Updated devel/py-jupyter_core to 4.10.0 [adam 2022-04-19]
+	Updated www/py-nbclient to 0.6.0 [adam 2022-04-19]
+	Updated www/py-nbconvert to 6.5.0 [adam 2022-04-19]
