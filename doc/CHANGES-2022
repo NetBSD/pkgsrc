@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1922 2022/04/19 11:52:48 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.1923 2022/04/19 12:16:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3052,3 +3052,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-nbclient to 0.6.0 [adam 2022-04-19]
 	Updated www/py-nbconvert to 6.5.0 [adam 2022-04-19]
 	Added devel/difftastic version 0.27.0 [bsiegert 2022-04-19]
+	Updated www/py-websockets to 10.3 [adam 2022-04-19]
+	Updated www/py-notebook to 6.4.11 [adam 2022-04-19]
