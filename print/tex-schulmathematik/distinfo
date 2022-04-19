@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/19 03:04:19 markd Exp $
+
+BLAKE2s (schulmathematik.r61719.tar.xz) = e72adaeec2262fde758234c6a8e4a142b5980f0dc10fa2bd339dff520e324c3d
+SHA512 (schulmathematik.r61719.tar.xz) = 8597b417f703de8aa5353d9ba604559a01890e9745a0c59b6b4e52ff4744d559b1639ddcd55bd2d03a5b35c2006ff10cc278a0ed52315b49142b2ff172183b64
+Size (schulmathematik.r61719.tar.xz) = 11584 bytes

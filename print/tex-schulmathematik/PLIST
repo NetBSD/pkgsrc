@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/19 03:04:19 markd Exp $
+share/texmf-dist/tex/latex/schulmathematik/schulma-ab.cls
+share/texmf-dist/tex/latex/schulmathematik/schulma-gutachten.cls
+share/texmf-dist/tex/latex/schulmathematik/schulma-klausur.cls
+share/texmf-dist/tex/latex/schulmathematik/schulma-komp.cls
+share/texmf-dist/tex/latex/schulmathematik/schulma-mdlprf.cls
+share/texmf-dist/tex/latex/schulmathematik/schulma-physik.sty
+share/texmf-dist/tex/latex/schulmathematik/schulma-praes.cls
+share/texmf-dist/tex/latex/schulmathematik/schulma.sty
