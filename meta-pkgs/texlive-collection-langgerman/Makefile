@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2021/02/14 22:35:06 markd Exp $
+# $NetBSD: Makefile,v 1.17 2022/04/19 03:19:37 markd Exp $
 
 DISTNAME=	collection-langgerman
-PKGNAME=	texlive-${DISTNAME}-2020pre1
+PKGNAME=	texlive-${DISTNAME}-2022
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	55706
@@ -12,7 +12,7 @@ COMMENT=	German TeX packages
 
 DEPENDS+=	texlive-collection-basic>=2014:../../meta-pkgs/texlive-collection-basic
 
-# depend apalike-german
+DEPENDS+=	tex-apalike-german-[0-9]*:../../print/tex-apalike-german
 DEPENDS+=	tex-babel-german-[0-9]*:../../print/tex-babel-german
 DEPENDS+=	tex-bibleref-german-[0-9]*:../../print/tex-bibleref-german
 # booktabs-de is documentation only
@@ -37,12 +37,12 @@ DEPENDS+=	tex-hyphen-german-[0-9]*:../../print/tex-hyphen-german
 # lualatex-doc-de is documentation only
 # microtype-de is documentation only
 DEPENDS+=	tex-milog-[0-9]*:../../print/tex-milog
-# depend quran-de
+DEPENDS+=	tex-quran-de-[0-9]*:../../print/tex-quran-de
 DEPENDS+=	tex-r_und_s-[0-9]*:../../print/tex-r_und_s
-# depend schulmathematik
+DEPENDS+=	tex-schulmathematik-[0-9]*:../../print/tex-schulmathematik
 # templates-fenn is documentation only
 # templates-sommer is documentation only
-# depend termcal-de
+DEPENDS+=	tex-termcal-de-[0-9]*:../../print/tex-termcal-de
 # texlive-de is documentation only
 # tipa-de is documentation only
 # translation-arsclassica-de is documentation only
