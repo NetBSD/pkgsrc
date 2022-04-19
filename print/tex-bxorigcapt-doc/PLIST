@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/21 10:17:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/04/19 04:29:08 markd Exp $
 share/texmf-dist/doc/latex/bxorigcapt/LICENSE
 share/texmf-dist/doc/latex/bxorigcapt/README.md
+share/texmf-dist/doc/latex/bxorigcapt/bxorigcapt.pdf
+share/texmf-dist/doc/latex/bxorigcapt/bxorigcapt.tex
