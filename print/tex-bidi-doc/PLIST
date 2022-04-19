@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/19 02:53:14 markd Exp $
+share/texmf-dist/doc/xelatex/bidi/README
+share/texmf-dist/doc/xelatex/bidi/bidi-bibitem.pdf
+share/texmf-dist/doc/xelatex/bidi/bidi-doc.pdf
+share/texmf-dist/doc/xelatex/bidi/bidi-logo.tex
+share/texmf-dist/doc/xelatex/bidi/bidi.pdf
+share/texmf-dist/doc/xelatex/bidi/bidisample2e.tex
+share/texmf-dist/doc/xelatex/bidi/bidismall2e.tex
+share/texmf-dist/doc/xelatex/bidi/gull.jpg
+share/texmf-dist/doc/xelatex/bidi/picture.jpg
+share/texmf-dist/doc/xelatex/bidi/test-arydshln.tex
+share/texmf-dist/doc/xelatex/bidi/test-bidi.tex
+share/texmf-dist/doc/xelatex/bidi/test-brochure.tex
+share/texmf-dist/doc/xelatex/bidi/test-casualcv.tex
+share/texmf-dist/doc/xelatex/bidi/test-classiccv.tex
+share/texmf-dist/doc/xelatex/bidi/test-color.tex
+share/texmf-dist/doc/xelatex/bidi/test-supertabular.tex
+share/texmf-dist/doc/xelatex/bidi/test-tabular.tex
+share/texmf-dist/doc/xelatex/bidi/test-tabularx.tex
+share/texmf-dist/doc/xelatex/bidi/test-tabulary.tex
+share/texmf-dist/doc/xelatex/bidi/test1-colortbl.tex
+share/texmf-dist/doc/xelatex/bidi/test1-wrapfig.tex
+share/texmf-dist/doc/xelatex/bidi/test2-colortbl.tex
+share/texmf-dist/doc/xelatex/bidi/test2-wrapfig.tex
+share/texmf-dist/doc/xelatex/bidi/test3-wrapfig.tex
