@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.855 2022/04/19 02:50:25 markd Exp $
+# $NetBSD: Makefile,v 1.856 2022/04/19 02:53:13 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -361,6 +361,8 @@ SUBDIR+=	tex-bibtopic
 SUBDIR+=	tex-bibtopic-doc
 SUBDIR+=	tex-bibunits
 SUBDIR+=	tex-bibunits-doc
+SUBDIR+=	tex-bidi
+SUBDIR+=	tex-bidi-doc
 SUBDIR+=	tex-bigfoot
 SUBDIR+=	tex-bigfoot-doc
 SUBDIR+=	tex-bigintcalc
