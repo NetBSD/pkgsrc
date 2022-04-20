@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.27 2021/10/26 10:46:21 nia Exp $
+$NetBSD: distinfo,v 1.28 2022/04/20 21:39:46 tnn Exp $
 
-BLAKE2s (jpegsrc.v9d.tar.gz) = 7548a6057c6df1a60690def882e9da664c54cb6aba96590b153f52e34ca03f2e
-SHA512 (jpegsrc.v9d.tar.gz) = c425cf413e679e4112b428592e6facc813cadf92e42a6b850c5d348b3dd47b0599e2f4a119d7ff543b762cdcadd42a77ed1429a08874e73f64a54fb869714357
-Size (jpegsrc.v9d.tar.gz) = 1070160 bytes
+BLAKE2s (jpegsrc.v9e.tar.gz) = 65b58f2a469db82d55018f0ea4db2bd7ab5806746bf5f6f5c86c53bdd5719aa5
+SHA512 (jpegsrc.v9e.tar.gz) = f0b91cca8c87f848d2c3294b889c91549b0ae9332debd57c97e6191d1fb71bba6ea044d149d9a8613e37676cd7d533f730032fa5cdaf7efe0f367d49c782b8c9
+Size (jpegsrc.v9e.tar.gz) = 1046935 bytes
 SHA1 (patch-af) = 925604706574009aacd452dab2d736039b0654e9
 SHA1 (patch-ag) = bffff318a2db88a0b6c1691549b0f01da5c1906c
 SHA1 (patch-jmorecfg.h) = c00f81ba94e2ad6b55ca9892553eedbe4eca3ad1
