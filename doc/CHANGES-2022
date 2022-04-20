@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1978 2022/04/20 22:14:37 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1979 2022/04/20 23:52:00 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3112,3 +3112,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-cyclonedx-python-lib to 2.3.0 [wiz 2022-04-20]
 	Updated graphics/jpeg to 9e [tnn 2022-04-20]
 	Updated devel/py-mercurial to 6.1.1 [wiz 2022-04-20]
+	Updated devel/php-composer to 2.2.12 [tpaul 2022-04-20]
