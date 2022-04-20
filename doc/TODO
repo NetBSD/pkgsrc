@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21689 2022/04/20 20:12:41 wiz Exp $
+$NetBSD: TODO,v 1.21690 2022/04/20 20:14:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1393,7 +1393,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o parrot-8.1.0
 	o pcc-1.1.0
 	o pcc-current-20210421
-	o pcre2-10.40
 	o pdf-redact-tools-0.1.2
 	o pdfpc-4.4.1
 	o pdmenu-1.2.87
