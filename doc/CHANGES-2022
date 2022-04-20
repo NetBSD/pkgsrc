@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1938 2022/04/20 10:52:28 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1939 2022/04/20 12:25:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3071,3 +3071,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added textproc/py-dill version 0.3.4 [adam 2022-04-20]
 	Updated devel/py-astroid to 2.11.3 [adam 2022-04-20]
 	Updated devel/py-pylint to 2.13.6 [adam 2022-04-20]
+	Updated comms/py-esptool to 3.3 [adam 2022-04-20]
+	Updated www/py-asgiref to 3.5.0 [adam 2022-04-20]
