@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2022/03/30 09:06:18 wiz Exp $
+$NetBSD: distinfo,v 1.18 2022/04/20 21:24:52 wiz Exp $
 
-BLAKE2s (keepassxc-2.7.0-src.tar.xz) = 958eb9f4a0a5cc6f1367bc5a957eb57f0f98dc15e04caf8687c91f878ee9e3dc
-SHA512 (keepassxc-2.7.0-src.tar.xz) = 0fc436ae5fb8fb82765a0c2df20c9567b1baf6aceff1e08c843a151ddcc0920d4cb2d416aebd89bdd8f1b53efb0a4ad0f579955c6943ee66c20b0becbb978e12
-Size (keepassxc-2.7.0-src.tar.xz) = 8846780 bytes
+BLAKE2s (keepassxc-2.7.1-src.tar.xz) = e3b59508e046e2ccbf86fcbd841ccfcc6de987f9c34d8b3fd424363836810df1
+SHA512 (keepassxc-2.7.1-src.tar.xz) = ca0950e7c0e6d119b7c7122ac2684084a668be6798eb22a6e1271f8e05a86c943203f7f1c56b948deab3948f6b376e838db364e5bc5f6f7bc73ba72ad9461299
+Size (keepassxc-2.7.1-src.tar.xz) = 8804436 bytes
