@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1937 2022/04/20 10:19:26 js Exp $
+$NetBSD: CHANGES-2022,v 1.1938 2022/04/20 10:52:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3068,3 +3068,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/conftest to 0.31.0 [leot 2022-04-20]
 	Added net/mangos version 3.4.1 [khorben 2022-04-20]
 	Removed chat/maubot [js 2022-04-20]
+	Added textproc/py-dill version 0.3.4 [adam 2022-04-20]
+	Updated devel/py-astroid to 2.11.3 [adam 2022-04-20]
+	Updated devel/py-pylint to 2.13.6 [adam 2022-04-20]
