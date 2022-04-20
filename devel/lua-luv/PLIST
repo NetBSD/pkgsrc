@@ -1,2 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2020/07/02 20:48:09 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/04/20 16:15:01 nia Exp $
+include/luv/lhandle.h
+include/luv/lreq.h
+include/luv/luv.h
+include/luv/util.h
+lib/libluv.so
+lib/libluv.so.1
+lib/libluv.so.1.43.0
 ${LUA_CDIR}/luv.so
+lib/pkgconfig/libluv.pc
