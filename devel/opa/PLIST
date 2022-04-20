@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/20 19:56:27 leot Exp $
+bin/opa
