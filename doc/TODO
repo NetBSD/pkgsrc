@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21696 2022/04/20 20:30:04 wiz Exp $
+$NetBSD: TODO,v 1.21697 2022/04/20 20:31:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -607,7 +607,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dhcpcd-icons-0.7.8
 	o dhcpcd-qt-0.7.8
 	o diction-1.14
-	o diff-so-fancy-1.4.3
 	o digikam-7.6
 	o dikt-2s1
 	o direnv-2.28.0
