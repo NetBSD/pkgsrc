@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1953 2022/04/20 20:10:05 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1954 2022/04/20 20:11:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3087,3 +3087,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated shells/starship to 1.6.2 [pin 2022-04-20]
 	Added devel/opa version 0.39.0 [leot 2022-04-20]
 	Updated net/rsync to 3.2.4 [wiz 2022-04-20]
+	Updated math/libnumbertext to 1.0.10 [wiz 2022-04-20]
