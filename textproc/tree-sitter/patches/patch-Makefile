@@ -1,0 +1,26 @@
+$NetBSD: patch-Makefile,v 1.1 2022/04/20 17:21:28 nia Exp $
+
+- Avoid to possibly pass extra optimization CFLAGS
+- Do not override PCLIBDIR for FreeBSD, NetBSD and DragonFly
+
+--- Makefile.orig	2021-06-30 00:18:39.000000000 +0000
++++ Makefile
+@@ -18,7 +18,7 @@ endif
+ OBJ := $(SRC:.c=.o)
+ 
+ # define default flags, and override to append mandatory flags
+-CFLAGS ?= -O3 -Wall -Wextra -Werror
++CFLAGS += -Wall -Wextra
+ override CFLAGS += -std=gnu99 -fPIC -Ilib/src -Ilib/include
+ 
+ # ABI versioning
+@@ -37,9 +37,6 @@ else
+ 	SOEXTVER = so.$(SONAME_MAJOR).$(SONAME_MINOR)
+ 	LINKSHARED += -shared -Wl,-soname,libtree-sitter.so.$(SONAME_MAJOR)
+ endif
+-ifneq (,$(filter $(shell uname),FreeBSD NetBSD DragonFly))
+-	PCLIBDIR := $(PREFIX)/libdata/pkgconfig
+-endif
+ 
+ all: libtree-sitter.a libtree-sitter.$(SOEXTVER)
+ 
