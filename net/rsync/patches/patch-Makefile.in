@@ -1,11 +1,10 @@
-$NetBSD: patch-Makefile.in,v 1.5 2020/08/07 08:33:37 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.6 2022/04/20 20:09:55 wiz Exp $
 
-https://bugzilla.samba.org/show_bug.cgi?id=11594
 Fix installation.
 
---- Makefile.in.orig	2020-08-03 19:23:18.000000000 +0000
+--- Makefile.in.orig	2022-03-04 01:00:57.000000000 +0000
 +++ Makefile.in
-@@ -73,13 +73,13 @@ all: Makefile rsync$(EXEEXT) stunnel-rsy
+@@ -76,13 +76,13 @@ all: Makefile rsync$(EXEEXT) stunnel-rsy
  .PHONY: install
  install: all
  	-$(MKDIR_P) $(DESTDIR)$(bindir)
@@ -21,6 +20,6 @@ Fix installation.
 +	if test -f rsync.1; then ${BSD_INSTALL_MAN} rsync.1 ${DESTDIR}${mandir}/man1; fi
 +	if test -f rsync-ssl.1; then ${BSD_INSTALL_MAN} rsync-ssl.1 ${DESTDIR}${mandir}/man1; fi
 +	if test -f rsyncd.conf.5; then ${BSD_INSTALL_MAN} rsyncd.conf.5 ${DESTDIR}${mandir}/man5; fi
- 
- install-ssl-daemon: stunnel-rsyncd.conf
- 	-$(MKDIR_P) $(DESTDIR)/etc/stunnel
+ 	if test "$(with_rrsync)" = yes; then \
+ 	    $(INSTALLCMD) -m 755 rrsync $(DESTDIR)$(bindir); \
+ 	    if test -f rrsync.1; then $(INSTALLMAN) -m 644 rrsync.1 $(DESTDIR)$(mandir)/man1; fi; \
