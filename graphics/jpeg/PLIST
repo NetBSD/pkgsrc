@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2018/01/28 15:55:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/04/20 21:39:46 tnn Exp $
 bin/cjpeg
 bin/djpeg
 bin/exifautotran
@@ -18,6 +18,7 @@ man/man1/djpeg.1
 man/man1/jpegtran.1
 man/man1/rdjpgcom.1
 man/man1/wrjpgcom.1
+share/doc/jpeg/cdaltui.txt
 share/doc/jpeg/coderules.txt
 share/doc/jpeg/filelist.txt
 share/doc/jpeg/install.txt
