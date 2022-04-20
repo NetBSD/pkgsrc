@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3716 2022/04/20 17:33:05 nia Exp $
+# $NetBSD: Makefile,v 1.3717 2022/04/20 17:41:08 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -932,6 +932,7 @@ SUBDIR+=	libstubborn
 SUBDIR+=	libtai
 SUBDIR+=	libtar
 SUBDIR+=	libtecla
+SUBDIR+=	libtermkey
 SUBDIR+=	libthai
 SUBDIR+=	libthrift
 SUBDIR+=	libthrift_c_glib
