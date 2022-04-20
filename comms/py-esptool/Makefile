@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2022/01/04 20:52:38 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/04/20 12:22:11 adam Exp $
 
-DISTNAME=	esptool-3.2
+DISTNAME=	esptool-3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	comms python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/esptool/}
 
