@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1944 2022/04/20 17:41:28 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1945 2022/04/20 17:56:41 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3079,3 +3079,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added textproc/tree-sitter version 0.20.6 [nia 2022-04-20]
 	Added devel/unibilium version 2.1.1 [nia 2022-04-20]
 	Added devel/libtermkey version 0.22 [nia 2022-04-20]
+	Added devel/libmpack version 1.0.5 [nia 2022-04-20]
