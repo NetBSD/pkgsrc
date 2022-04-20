@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3717 2022/04/20 17:41:08 nia Exp $
+# $NetBSD: Makefile,v 1.3718 2022/04/20 17:56:29 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -893,6 +893,7 @@ SUBDIR+=	libmemmgr
 SUBDIR+=	libmimedir
 SUBDIR+=	libmm
 SUBDIR+=	libmowgli
+SUBDIR+=	libmpack
 SUBDIR+=	libmtp
 SUBDIR+=	libnet
 SUBDIR+=	libnet10

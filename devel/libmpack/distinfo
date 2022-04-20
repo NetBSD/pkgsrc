@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2022/04/20 17:56:29 nia Exp $
+
+RMD160 (libmpack-1.0.5.tar.gz) = 9fe75c368af72d7b96fc6ea03b07ef8daeb41d87
+SHA512 (libmpack-1.0.5.tar.gz) = 6e30edafcacfb580b410bc6749ed7fe8f18b3be0cb98959339853e77bc3ec0cda6df08a0f1f22768cfc773458a2ea6bcef4f0421eea55cf56c58981d13711a04
+Size (libmpack-1.0.5.tar.gz) = 32966 bytes
+SHA1 (patch-test_deps_tap_tap.c) = fd935cbc243e54ef02d692fd9d514923cc61de15
