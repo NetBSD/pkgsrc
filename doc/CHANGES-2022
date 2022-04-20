@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1930 2022/04/20 05:29:06 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1931 2022/04/20 06:15:54 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3063,3 +3063,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-setuptools to 62.1.0 [adam 2022-04-19]
 	Updated audio/termusic to 0.6.13 [pin 2022-04-19]
 	Updated x11/xauth to 1.1.2 [wiz 2022-04-20]
+	Updated sysutils/intel-microcode-netbsd to 20220419 [msaitoh 2022-04-20]
