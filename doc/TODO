@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21697 2022/04/20 20:31:10 wiz Exp $
+$NetBSD: TODO,v 1.21698 2022/04/20 20:32:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -926,7 +926,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
-	o json-c-0.16
 	o kactivities-5.81.0
 	o kactivities-stats-5.81.0
 	o kactivities5-5.81.0
