@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2022/02/27 08:50:48 adam Exp $
+# $NetBSD: Makefile,v 1.26 2022/04/20 21:47:24 tnn Exp $
 
 DISTNAME=	libjpeg-turbo-2.1.3
 CATEGORIES=	graphics
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libjpeg-turbo/}
 MAINTAINER=	dsainty@NetBSD.org
 HOMEPAGE=	https://libjpeg-turbo.org/
 COMMENT=	Accelerated libjpeg with SIMD instructions
-LICENSE=	gnu-lgpl-v2 # OR wxWindows Library Licence, Version 3.1
+LICENSE=	gnu-lgpl-v2 AND ijg # OR wxWindows Library Licence, Version 3.1
 
 # Note also that libjpeg-turbo's library has a different major version
 # number (8) than that installed by the jpeg package (9).
