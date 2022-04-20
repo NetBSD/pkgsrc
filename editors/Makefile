@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.223 2022/04/08 10:26:02 pin Exp $
+# $NetBSD: Makefile,v 1.224 2022/04/20 18:32:32 nia Exp $
 #
 
 COMMENT=	Text and binary editors
@@ -100,6 +100,7 @@ SUBDIR+=	nano
 SUBDIR+=	ne
 SUBDIR+=	neatvi
 SUBDIR+=	nedit
+SUBDIR+=	neovim
 SUBDIR+=	ng
 SUBDIR+=	nts
 SUBDIR+=	nvi
