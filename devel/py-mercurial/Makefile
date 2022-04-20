@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2022/03/08 11:05:09 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2022/04/20 22:14:01 wiz Exp $
 #
 # Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
 
@@ -29,7 +29,7 @@ PYTHON_SELF_CONFLICT=	yes
 .include "options.mk"
 
 USE_TOOLS+=		bash:test
-# Known test failures as of 6.1
+# Known test failures as of 6.1.1
 # test-run-tests.t
 # https://bz.mercurial-scm.org/show_bug.cgi?id=6661
 # test-http-bad-server.t
@@ -46,8 +46,10 @@ USE_TOOLS+=		bash:test
 # https://bz.mercurial-scm.org/show_bug.cgi?id=6587
 # test-status-tracked-key.t
 # https://bz.mercurial-scm.org/show_bug.cgi?id=6662
+# test-demandimport.py:
+# https://bz.mercurial-scm.org/show_bug.cgi?id=6680
 #
-# Ran 883 tests, 82 skipped, 9 failed.
+# Ran 883 tests, 82 skipped, 10 failed.
 
 TEST_TARGET=		tests
 TEST_MAKE_FLAGS+=	PYTHON=${PYTHONBIN} TESTFLAGS=${_MAKE_JOBS:Q}
