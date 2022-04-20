@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2020/01/26 17:31:22 rillig Exp $
+# $NetBSD: Makefile,v 1.58 2022/04/20 21:39:46 tnn Exp $
 
-DISTNAME=	jpegsrc.v9d
+DISTNAME=	jpegsrc.v9e
 PKGNAME=	${DISTNAME:S/src.v/-/}
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.ijg.org/files/
@@ -8,6 +8,7 @@ MASTER_SITES=	http://www.ijg.org/files/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.ijg.org/
 COMMENT=	IJG's jpeg compression utilities
+LICENSE=	ijg
 
 CONFLICTS=		libjpeg-turbo-[0-9]*
 
