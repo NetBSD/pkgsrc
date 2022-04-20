@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.657 2022/04/17 04:09:48 jnemeth Exp $
+# $NetBSD: Makefile,v 1.658 2022/04/20 07:03:46 nia Exp $
 
 COMMENT=	Databases
 
@@ -109,7 +109,6 @@ SUBDIR+=	mongo-tools
 SUBDIR+=	mongodb
 SUBDIR+=	mongodb3
 SUBDIR+=	myodbc
-SUBDIR+=	mysql-cluster
 SUBDIR+=	mysql-connector-c++
 SUBDIR+=	mysql-workbench
 SUBDIR+=	mysql56-client
