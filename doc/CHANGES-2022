@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1936 2022/04/20 10:14:35 khorben Exp $
+$NetBSD: CHANGES-2022,v 1.1937 2022/04/20 10:19:26 js Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3067,3 +3067,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed databases/mysql-cluster successor databases/mysql75-cluster [nia 2022-04-20]
 	Updated devel/conftest to 0.31.0 [leot 2022-04-20]
 	Added net/mangos version 3.4.1 [khorben 2022-04-20]
+	Removed chat/maubot [js 2022-04-20]
