@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1941 2022/04/20 17:14:33 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1942 2022/04/20 17:21:40 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3076,3 +3076,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-django2 to 2.2.28 [adam 2022-04-20]
 	Updated www/py-django3 to 3.2.13 [adam 2022-04-20]
 	Added devel/libvterm01 version 0.1.4 [nia 2022-04-20]
+	Added textproc/tree-sitter version 0.20.6 [nia 2022-04-20]
