@@ -1,4 +1,4 @@
-/*	$NetBSD: license.c,v 1.58 2021/03/06 04:37:28 ryoon Exp $	*/
+/*	$NetBSD: license.c,v 1.59 2022/04/20 21:47:26 wiz Exp $	*/
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -68,6 +68,7 @@ const char *default_acceptable_licenses =
     "gnu-gpl-v3 gnu-lgpl-v3 "
     "happy "
     "hpnd "
+    "ijg "
     "info-zip "
     "ipafont "
     "ipl-1.0 "
@@ -78,10 +79,11 @@ const char *default_acceptable_licenses =
     "mit "
     "mpl-1.0 mpl-1.1 mpl-2.0 "
     "mplusfont "
+    "ms-pl "
     "odbl-v1 "
     "ofl-v1.0 ofl-v1.1 "
     "openssl "
-    "original-bsd modified-bsd 2-clause-bsd "
+    "original-bsd modified-bsd 2-clause-bsd 0-clause-bsd "
     "osl "
     "paratype "
     "php "
