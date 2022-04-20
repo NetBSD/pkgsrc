@@ -1,0 +1,20 @@
+$NetBSD: patch-Makefile,v 1.1 2022/04/20 17:14:20 nia Exp $
+
+We want to install libvterm 0.1.4 to its own isolated include
+directories so that it doesn't conflict with (pontential)
+packages for newer versions.
+
+Inspired by Arch Linux:
+https://archlinux.org/packages/community/x86_64/libvterm01/
+
+--- Makefile.orig	2020-08-22 14:54:34.000000000 +0000
++++ Makefile
+@@ -97,7 +97,7 @@ install-inc:
+ 	install -d $(DESTDIR)$(INCDIR)
+ 	install -m644 $(HFILES) $(DESTDIR)$(INCDIR)
+ 	install -d $(DESTDIR)$(LIBDIR)/pkgconfig
+-	sed -e "s,@PREFIX@,$(PREFIX)," -e "s,@LIBDIR@,$(LIBDIR)," -e "s,@VERSION@,$(VERSION)," <vterm.pc.in >$(DESTDIR)$(LIBDIR)/pkgconfig/vterm.pc
++	sed -e "s,@PREFIX@,$(PREFIX)," -e "s,@INCDIR@,$(INCDIR)," -e "s,@LIBDIR@,$(LIBDIR)," -e "s,@VERSION@,$(VERSION)," <vterm.pc.in >$(DESTDIR)$(LIBDIR)/pkgconfig/vterm.pc
+ 
+ install-lib: $(LIBRARY)
+ 	install -d $(DESTDIR)$(LIBDIR)
