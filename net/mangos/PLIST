@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/20 10:10:59 khorben Exp $
+bin/autobahn
+bin/bus
+bin/chat
+bin/command
+bin/context
+bin/etw-provider-gen
+bin/filewatch
+bin/macat
+bin/mkwinsyscall
+bin/pair
+bin/perf
+bin/pipeline
+bin/pubsub
+bin/raw
+bin/reqrep
+bin/sample
+bin/survey
+bin/validate
+bin/websocket
