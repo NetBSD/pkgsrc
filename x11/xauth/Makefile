@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2022/04/10 08:53:17 nia Exp $
+# $NetBSD: Makefile,v 1.16 2022/04/20 05:28:56 wiz Exp $
 
-DISTNAME=		xauth-1.1.1
+DISTNAME=		xauth-1.1.2
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
