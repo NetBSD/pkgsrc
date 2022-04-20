@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/04/18 19:10:37 adam Exp $
+# $NetBSD: Makefile,v 1.14 2022/04/20 17:29:06 tm Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 PKGREVISION=	1
@@ -13,11 +13,8 @@ BUILD_DEFS+=		VARBASE
 .include "../../mk/bsd.fast.prefs.mk"
 
 # mariabackup is not built on SunOS due to symbol resolution problems
-# auth_pam is not built on SunOS due to lack of getgrouplist
-
-PLIST_VARS+=		auth_pam mariabackup
+PLIST_VARS+=		mariabackup
 .if ${OPSYS} != "SunOS"
-PLIST.auth_pam=		yes
 PLIST.mariabackup=	yes
 .endif
 
