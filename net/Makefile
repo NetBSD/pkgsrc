@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1452 2022/04/03 07:59:33 wiz Exp $
+# $NetBSD: Makefile,v 1.1453 2022/04/20 10:11:34 khorben Exp $
 #
 
 COMMENT=	Networking tools
@@ -361,6 +361,7 @@ SUBDIR+=	lua-copas
 SUBDIR+=	lua-socket
 SUBDIR+=	mDNSResponder
 SUBDIR+=	mDNSResponder-nss
+SUBDIR+=	mangos
 SUBDIR+=	maradns
 SUBDIR+=	mate-user-share
 SUBDIR+=	mbrowse
