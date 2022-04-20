@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/20 10:40:29 adam Exp $
+
+BLAKE2s (dill-0.3.4.zip) = 7c35c8f41c46dc233644013127ccb14f3bb5a12061e7e4b98c189c4a70f608e6
+SHA512 (dill-0.3.4.zip) = 25f1683d725e5ed2d6ce61fcd82d679c0504ef506ad7cb501be6dfce3b80f1fdacbb39991eea8899259f9803248c75cb1bc3bd4b28a43be5902dd724946c68f6
+Size (dill-0.3.4.zip) = 186823 bytes
