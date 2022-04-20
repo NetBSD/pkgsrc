@@ -1,13 +1,13 @@
 #!@SMF_METHOD_SHELL@
 #
-# $NetBSD: mariadb.sh,v 1.1 2021/08/04 15:47:25 nia Exp $
+# $NetBSD: mariadb.sh,v 1.2 2022/04/20 17:36:03 tm Exp $
 #
 # Init script for mysqld.
 #
 
 . /lib/svc/share/smf_include.sh
 
-PIDFILE="@VARBASE@/run/mariadb/mariadb.pid"
+PIDFILE="@MARIADB_DATADIR@/mariadb.pid"
 
 ulimit -n 10240
 
