@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1970 2022/04/20 21:00:00 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1971 2022/04/20 21:04:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3104,3 +3104,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/ImageMagick to 7.1.0.30 [wiz 2022-04-20]
 	Updated devel/gopls to 0.8.3 [wiz 2022-04-20]
 	Updated graphics/freetype2 to 2.12.0 [wiz 2022-04-20]
+	Updated devel/py-pip to 22.0.4 [wiz 2022-04-20]
