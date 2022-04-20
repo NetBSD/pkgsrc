@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.852 2022/04/01 08:07:28 wiz Exp $
+# $NetBSD: Makefile,v 1.853 2022/04/20 19:22:23 nikita Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -43,6 +43,7 @@ SUBDIR+=	botan1
 SUBDIR+=	botan2
 SUBDIR+=	ca-certificates
 SUBDIR+=	caff
+SUBDIR+=	cargo-audit
 SUBDIR+=	ccid
 SUBDIR+=	cfs
 SUBDIR+=	chkrootkit
