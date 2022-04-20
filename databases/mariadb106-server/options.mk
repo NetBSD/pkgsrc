@@ -1,15 +1,21 @@
-# $NetBSD: options.mk,v 1.2 2021/08/04 16:01:28 nia Exp $
+# $NetBSD: options.mk,v 1.3 2022/04/20 17:29:06 tm Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mysql-server
 
 #PKG_SUPPORTED_OPTIONS+=	columnstore
 
-PKG_SUPPORTED_OPTIONS+=	embedded-server lzo lz4 oqgraph rocksdb
-PKG_SUPPORTED_OPTIONS+=	snappy ssl zstd
+PKG_SUPPORTED_OPTIONS+=	auth-pam embedded-server lzo lz4 oqgraph
+PKG_SUPPORTED_OPTIONS+=	rocksdb snappy ssl zstd
 
 .include "../../mk/bsd.fast.prefs.mk"
 
 PKG_SUGGESTED_OPTIONS=	ssl
+
+# auth_pam is not built on Solaris < 11.2 due to lack of getgrouplist
+# but will work on illumos
+.if ${OS_VARIANT} != "Solaris"
+PKG_SUGGESTED_OPTIONS+=	auth-pam
+.endif
 
 .include "../../mk/bsd.options.mk"
 
@@ -89,4 +95,14 @@ CMAKE_ARGS+=	-DWITH_SSL=no
 CMAKE_ARGS+=	-DWITH_ROCKSDB_zstd=ON
 .else
 CMAKE_ARGS+=	-DWITH_ROCKSDB_zstd=OFF
+.endif
+
+PLIST_VARS+=	auth_pam
+.if !empty(PKG_OPTIONS:Mauth-pam)
+CMAKE_ARGS+=	-DPLUGIN_AUTH_PAM=YES
+CMAKE_ARGS+=	-DPLUGIN_AUTH_PAM_V1=YES
+PLIST.auth_pam=	yes
+.else
+CMAKE_ARGS+=	-DPLUGIN_AUTH_PAM=NO
+CMAKE_ARGS+=	-DPLUGIN_AUTH_PAM_V1=NO
 .endif
