@@ -1,0 +1,7 @@
+Neovim is a project that seeks to aggressively refactor the "Vim"
+text editor in order to:
+
+* Simplify maintenance and encourage contributions
+* Split the work between multiple developers
+* Enable advanced UIs without modifications to the core
+* Maximize extensibility
