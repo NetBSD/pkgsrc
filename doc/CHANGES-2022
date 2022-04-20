@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1958 2022/04/20 20:18:16 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1959 2022/04/20 20:19:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3092,3 +3092,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/pcre2 to 10.40 [wiz 2022-04-20]
 	Updated textproc/enchant2 to 2.3.3 [wiz 2022-04-20]
 	Updated math/imath to 3.1.5 [wiz 2022-04-20]
+	Updated archivers/minizip to 1.2.12 [wiz 2022-04-20]
