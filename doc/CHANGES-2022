@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1968 2022/04/20 20:52:17 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1969 2022/04/20 20:54:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3102,3 +3102,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/spdlog to 1.10.0 [wiz 2022-04-20]
 	Updated x11/libXfixes to 6.0.0 [wiz 2022-04-20]
 	Updated graphics/ImageMagick to 7.1.0.30 [wiz 2022-04-20]
+	Updated devel/gopls to 0.8.3 [wiz 2022-04-20]
