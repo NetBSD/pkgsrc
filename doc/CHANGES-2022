@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1954 2022/04/20 20:11:43 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1955 2022/04/20 20:12:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3088,3 +3088,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/opa version 0.39.0 [leot 2022-04-20]
 	Updated net/rsync to 3.2.4 [wiz 2022-04-20]
 	Updated math/libnumbertext to 1.0.10 [wiz 2022-04-20]
+	Updated audio/libshout to 2.4.6 [wiz 2022-04-20]
