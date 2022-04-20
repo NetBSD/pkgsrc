@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/20 17:41:08 nia Exp $
+
+RMD160 (libtermkey-0.22.tar.gz) = 553e744534a5318e75f5a696481efe941b7f6ead
+SHA512 (libtermkey-0.22.tar.gz) = 2e8242cd1e6acb8900125dcee9fd47f7554c359363f760b88858c82667e1f3871bdd87358b14c8a133ef3cd2699947a5045477e64cdf7f96d4ead1723e73a219
+Size (libtermkey-0.22.tar.gz) = 46147 bytes
