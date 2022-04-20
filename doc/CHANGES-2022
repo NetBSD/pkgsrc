@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1976 2022/04/20 21:29:17 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1977 2022/04/20 21:41:45 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3110,3 +3110,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/ffplay4 to 4.4.2 [wiz 2022-04-20]
 	Updated security/keepassxc to 2.7.1 [wiz 2022-04-20]
 	Updated security/py-cyclonedx-python-lib to 2.3.0 [wiz 2022-04-20]
+	Updated graphics/jpeg to 9e [tnn 2022-04-20]
