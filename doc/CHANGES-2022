@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1956 2022/04/20 20:14:57 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1957 2022/04/20 20:17:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3090,3 +3090,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/libnumbertext to 1.0.10 [wiz 2022-04-20]
 	Updated audio/libshout to 2.4.6 [wiz 2022-04-20]
 	Updated devel/pcre2 to 10.40 [wiz 2022-04-20]
+	Updated textproc/enchant2 to 2.3.3 [wiz 2022-04-20]
