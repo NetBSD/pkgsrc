@@ -1,0 +1,2 @@
+Mangos is an implementation in pure Go of the SP (Scalability Protocols)
+messaging system. These are colloquially known as nanomsg.
