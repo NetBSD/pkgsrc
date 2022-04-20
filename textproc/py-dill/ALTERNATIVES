@@ -1,0 +1,2 @@
+bin/get_objgraph @PREFIX@/bin/get_objgraph-@PYVERSSUFFIX@
+bin/undill @PREFIX@/bin/undill-@PYVERSSUFFIX@
