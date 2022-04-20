@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.111 2022/04/20 21:39:36 tnn Exp $
+# $NetBSD: license.mk,v 1.112 2022/04/20 21:48:14 wiz Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -133,8 +133,10 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	gnu-gpl-v1 \
 	gnu-gpl-v2 gnu-lgpl-v2 gnu-lgpl-v2.1 \
 	gnu-gpl-v3 gnu-lgpl-v3 \
+	happy \
 	hpnd \
 	ijg \
+	info-zip \
 	ipafont \
 	ipl-1.0 \
 	isc \
@@ -158,15 +160,15 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	python-software-foundation \
 	qpl-v1.0 \
 	sgi-free-software-b-v2.0 \
-	sleepycat-public \
 	sissl-1.1 \
+	sleepycat-public \
 	unicode \
 	unlicense \
+	vera-ttf-license \
 	w3c \
 	x11 \
 	zlib \
-	zpl-2.0 \
-	zpl-2.1 \
+	zpl-2.0 zpl-2.1 \
 	zsh
 
 # The following licenses meet the DFSG (but are not formally approved
