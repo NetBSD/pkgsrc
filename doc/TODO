@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21703 2022/04/20 20:54:54 wiz Exp $
+$NetBSD: TODO,v 1.21704 2022/04/20 21:00:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -700,7 +700,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o freetds-1.2.9
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
-	o freetype2-2.12
 	o freewais-sf-2.2.14
 	o frink-2.3.1a2
 	o fstrm-0.6.1
