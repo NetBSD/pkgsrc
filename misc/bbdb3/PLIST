@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/04/14 12:40:48 nikita Exp $
-info/bbdb.info
+@comment $NetBSD: PLIST,v 1.2 2022/04/20 18:07:19 nikita Exp $
 ${EMACS_LISPPREFIX}/bbdb/bbdb-anniv.el
 ${EMACS_LISPPREFIX}/bbdb/bbdb-anniv.elc
 ${EMACS_LISPPREFIX}/bbdb/bbdb-com.el
