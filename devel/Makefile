@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3715 2022/04/20 17:14:20 nia Exp $
+# $NetBSD: Makefile,v 1.3716 2022/04/20 17:33:05 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -3264,6 +3264,7 @@ SUBDIR+=	ucpp
 SUBDIR+=	ugdb
 SUBDIR+=	umbrello
 SUBDIR+=	undebt
+SUBDIR+=	unibilium
 SUBDIR+=	unidiff
 SUBDIR+=	unifdef
 SUBDIR+=	unittest-cpp
