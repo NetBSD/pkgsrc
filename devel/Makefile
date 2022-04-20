@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3719 2022/04/20 18:15:51 nia Exp $
+# $NetBSD: Makefile,v 1.3720 2022/04/20 19:56:50 leot Exp $
 #
 
 COMMENT=	Development utilities
@@ -1202,6 +1202,7 @@ SUBDIR+=	ode
 SUBDIR+=	ogre
 SUBDIR+=	okteta
 SUBDIR+=	omake
+SUBDIR+=	opa
 SUBDIR+=	open-vcdiff
 SUBDIR+=	opengrok
 SUBDIR+=	openocd
