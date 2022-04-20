@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2022/04/20 17:14:20 nia Exp $
+
+BLAKE2s (libvterm-0.1.4.tar.gz) = 566a0a5fdcab3e8be63a8e2373a690ec6f7314b0643864ca23de3589a2c81173
+SHA512 (libvterm-0.1.4.tar.gz) = 90b5d47417e3f469df5c6574a27d12bd6bd1571d17cab7c4ac0ee61b1dbcb6361987f6fdfd11e314ea32f8958ec165c319a34d0f77288947c7cbc11de697d524
+Size (libvterm-0.1.4.tar.gz) = 69122 bytes
+SHA1 (patch-Makefile) = b45cabfdabb20bebc6837818dd89cc1b5e36fa3a
+SHA1 (patch-src_screen.c) = c41f68d526cd7f1b8a625be6a9a2e4a6adfe5ee6
+SHA1 (patch-src_state.c) = ada2ea37ec6642039011b55557b38cfb88f37cc6
+SHA1 (patch-src_vterm.c) = 5dc781dfe804f13f1b0a0f8b00bf24aa0f8804f2
+SHA1 (patch-vterm.pc.in) = 00cf19f04b87fe84b95e88984d62e95d79f1a965

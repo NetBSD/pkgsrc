@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3714 2022/04/19 11:52:18 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3715 2022/04/20 17:14:20 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -949,6 +949,7 @@ SUBDIR+=	libuv
 SUBDIR+=	libuxre
 SUBDIR+=	libview
 SUBDIR+=	libvolume_id
+SUBDIR+=	libvterm01
 SUBDIR+=	libwhisker2
 SUBDIR+=	libwnck
 SUBDIR+=	libwnck3
