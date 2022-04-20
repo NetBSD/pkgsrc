@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/10/01 09:16:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/04/20 20:32:32 wiz Exp $
 include/json-c/arraylist.h
 include/json-c/debug.h
 include/json-c/json.h
@@ -20,5 +20,5 @@ lib/cmake/json-c/json-c-targets.cmake
 lib/libjson-c.a
 lib/libjson-c.so
 lib/libjson-c.so.5
-lib/libjson-c.so.5.1.0
+lib/libjson-c.so.5.2.0
 lib/pkgconfig/json-c.pc
