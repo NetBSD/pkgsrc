@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2022/02/19 08:18:22 nia Exp $
+# $NetBSD: Makefile,v 1.8 2022/04/20 16:15:01 nia Exp $
 
 DISTNAME=	luv-1.43.0-0
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/-0$/.0/1}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=luvit/}
 GITHUB_PROJECT=	luv
@@ -11,6 +12,8 @@ MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://github.com/luvit/luv
 COMMENT=	Bare libuv bindings for Lua
 LICENSE=	apache-2.0
+
+LUA_SELF_CONFLICT=	yes
 
 .include "../../lang/lua/luaversion.mk"
 
@@ -22,8 +25,11 @@ USE_CMAKE=	yes
 
 CMAKE_ARGS+=	-DWITH_SHARED_LIBUV=ON
 CMAKE_ARGS+=	-DBUILD_MODULE=ON
+CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 CMAKE_ARGS+=	-DLUA_BUILD_TYPE=System
 CMAKE_ARGS+=	-DWITH_LUA_ENGINE=Lua
+
+PKGCONFIG_OVERRIDE+=	libluv.pc.in
 
 pre-configure:
 .if ${_LUA_VERSION} == "51" || ${_LUA_VERSION} == "52"
