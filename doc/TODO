@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21707 2022/04/20 21:16:13 wiz Exp $
+$NetBSD: TODO,v 1.21708 2022/04/20 21:25:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -959,7 +959,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kdnssd-5.81.0
 	o kdoctools-5.81.0
 	o kdsoap-1.10.0
-	o keepassxc-2.7.1
 	o kemoticons-5.81.0
 	o keybinder-0.3.2
 	o kfilemetadata-5.81.0
