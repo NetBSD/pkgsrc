@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1951 2022/04/20 19:41:36 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1952 2022/04/20 19:57:01 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3085,3 +3085,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added editors/neovim version 0.7.0 [nia 2022-04-20]
 	Added security/cargo-audit version 0.16.0 [nikita 2022-04-20]
 	Updated shells/starship to 1.6.2 [pin 2022-04-20]
+	Added devel/opa version 0.39.0 [leot 2022-04-20]
