@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1304 2022/04/20 10:40:29 adam Exp $
+# $NetBSD: Makefile,v 1.1305 2022/04/20 17:21:27 nia Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1326,6 +1326,7 @@ SUBDIR+=	tokyodystopia
 SUBDIR+=	trang
 SUBDIR+=	translate-shell
 SUBDIR+=	translate-toolkit
+SUBDIR+=	tree-sitter
 SUBDIR+=	troffcvt
 SUBDIR+=	uchardet
 SUBDIR+=	ugrep

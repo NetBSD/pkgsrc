@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/20 17:21:28 nia Exp $
+include/tree_sitter/api.h
+include/tree_sitter/parser.h
+lib/libtree-sitter.a
+lib/libtree-sitter.so
+lib/libtree-sitter.so.0
+lib/libtree-sitter.so.0.0
+lib/pkgconfig/tree-sitter.pc
