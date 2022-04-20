@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1932 2022/04/20 07:05:21 nia Exp $
+$NetBSD: CHANGES-2022,v 1.1933 2022/04/20 10:10:46 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3065,3 +3065,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/xauth to 1.1.2 [wiz 2022-04-20]
 	Updated sysutils/intel-microcode-netbsd to 20220419 [msaitoh 2022-04-20]
 	Removed databases/mysql-cluster successor databases/mysql75-cluster [nia 2022-04-20]
+	Updated devel/conftest to 0.31.0 [leot 2022-04-20]
