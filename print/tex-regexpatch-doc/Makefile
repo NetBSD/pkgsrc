@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/03/30 16:14:00 micha Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/20 16:24:07 micha Exp $
 
 DISTNAME=	regexpatch.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.3
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.2f
 TEXLIVE_REV=	58668
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
