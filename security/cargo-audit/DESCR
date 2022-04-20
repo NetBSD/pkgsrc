@@ -1,0 +1,4 @@
+Cargo-audit allows you to audit Cargo.lock files for crates with
+security vulnerabilities reported to the RustSec Advisory Database.
+
+Cargo-audit is provided as the cargo subcommand "audit".
