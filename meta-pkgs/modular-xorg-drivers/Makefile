@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2021/10/31 08:58:37 nia Exp $
+# $NetBSD: Makefile,v 1.46 2022/04/21 16:53:25 nia Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.19.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 DISTFILES=	# empty
@@ -39,6 +39,9 @@ DEPENDS+=	xf86-video-dummy-[0-9]*:../../x11/xf86-video-dummy
 
 .if ${OPSYS} == "Linux"
 DEPENDS+=	xf86-video-fbdev-[0-9]*:../../x11/xf86-video-fbdev
+.  if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+DEPENDS+=	xf86-video-qxl-[0-9]*:../../x11/xf86-video-qxl
+.  endif
 .endif
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
@@ -66,7 +69,6 @@ DEPENDS+=	xf86-video-neomagic-[0-9]*:../../x11/xf86-video-neomagic
 DEPENDS+=	xf86-video-nv-[0-9]*:../../x11/xf86-video-nv
 DEPENDS+=	xf86-video-nouveau-[0-9]*:../../x11/xf86-video-nouveau
 DEPENDS+=	xf86-video-openchrome-[0-9]*:../../x11/xf86-video-openchrome
-DEPENDS+=	xf86-video-qxl-[0-9]*:../../x11/xf86-video-qxl
 DEPENDS+=	xf86-video-s3-[0-9]*:../../x11/xf86-video-s3
 DEPENDS+=	xf86-video-s3virge-[0-9]*:../../x11/xf86-video-s3virge
 DEPENDS+=	xf86-video-savage-[0-9]*:../../x11/xf86-video-savage
