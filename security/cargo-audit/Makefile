@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2022/04/20 19:35:08 nikita Exp $
+# $NetBSD: Makefile,v 1.3 2022/04/21 07:57:30 wiz Exp $
 
-GITHUB_PROJECT=	cargo-audit
-DISTNAME=	v0.16.0
-GITHUB_TAG=	${GITHUB_PROJECT}/${PKGVERSION_NOREV}
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S,v,,}
+DISTNAME=	cargo-audit-0.16.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rustsec/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+GITHUB_TAG=	cargo-audit/v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/rustsec/cargo-audit/
@@ -15,7 +12,7 @@ LICENSE=	apache-2.0 # or MIT
 
 .include "cargo-depends.mk"
 
-WRKSRC=			${WRKDIR}/rustsec-cargo-audit-${DISTNAME}
+WRKSRC=			${WRKDIR}/rustsec-cargo-audit-v${PKGVERSION_NOREV}
 USE_LANGUAGES=		c
 INSTALLATION_DIRS=	bin
 MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl}
