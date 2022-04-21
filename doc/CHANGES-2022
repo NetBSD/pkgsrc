@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1988 2022/04/21 14:15:05 taca Exp $
+$NetBSD: CHANGES-2022,v 1.1989 2022/04/21 20:41:53 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3126,3 +3126,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added security/py27-cryptography version 3.3.2nb1 [wiz 2022-04-21]
 	Updated devel/R-git2r to 0.30.1 [mef 2022-04-21]
 	Updated net/bind916 to 9.16.28 [taca 2022-04-21]
+	Updated www/kore to 4.2.2 [fcambus 2022-04-21]
