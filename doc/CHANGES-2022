@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1985 2022/04/21 10:46:22 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1986 2022/04/21 10:49:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3123,3 +3123,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/gpgme to 1.17.1 [wiz 2022-04-21]
 	Updated math/lapack to 3.10.1 [wiz 2022-04-21]
 	Updated devel/py-pathlib2 to 2.3.7nb1 [wiz 2022-04-21]
+	Added security/py27-cryptography version 3.3.2nb1 [wiz 2022-04-21]
