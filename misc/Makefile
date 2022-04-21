@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.563 2022/04/15 09:48:18 nikita Exp $
+# $NetBSD: Makefile,v 1.564 2022/04/21 07:39:36 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -66,8 +66,8 @@ SUBDIR+=	ec2-api-tools
 SUBDIR+=	edict
 SUBDIR+=	elizatalk
 SUBDIR+=	elscreen
-SUBDIR+=	emacs-wiki
 SUBDIR+=	emacs-neotree
+SUBDIR+=	emacs-wiki
 SUBDIR+=	epm
 SUBDIR+=	erlang-p1_utils
 SUBDIR+=	esniper
