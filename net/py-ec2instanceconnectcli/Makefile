@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:54:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/04/21 11:00:00 wiz Exp $
 
 DISTNAME=	ec2instanceconnectcli-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,8 @@ COMMENT=	AWS EC2 Instance Connect Client
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-botocore>=1.12.179:../../net/py-botocore
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=1.9:../../security/py-cryptography
+
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 
 USE_LANGUAGES=	# none
 
@@ -22,5 +23,6 @@ post-install:
 .endfor
 	${RM} ${DESTDIR}${PREFIX}/bin/*.cmd
 
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
