@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2021/01/31 13:03:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2022/04/21 09:45:34 wiz Exp $
 bin/gpgme-config
 bin/gpgme-json
 bin/gpgme-tool
@@ -14,6 +14,7 @@ include/gpgme++/error.h
 include/gpgme++/eventloopinteractor.h
 include/gpgme++/exception.h
 include/gpgme++/global.h
+include/gpgme++/gpgaddexistingsubkeyeditinteractor.h
 include/gpgme++/gpgadduserideditinteractor.h
 include/gpgme++/gpgagentgetinfoassuantransaction.h
 include/gpgme++/gpggencardkeyinteractor.h
