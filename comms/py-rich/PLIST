@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/08/29 08:40:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/04/21 07:43:12 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -52,9 +52,15 @@ ${PYSITELIB}/rich/_stack.pyo
 ${PYSITELIB}/rich/_timer.py
 ${PYSITELIB}/rich/_timer.pyc
 ${PYSITELIB}/rich/_timer.pyo
+${PYSITELIB}/rich/_win32_console.py
+${PYSITELIB}/rich/_win32_console.pyc
+${PYSITELIB}/rich/_win32_console.pyo
 ${PYSITELIB}/rich/_windows.py
 ${PYSITELIB}/rich/_windows.pyc
 ${PYSITELIB}/rich/_windows.pyo
+${PYSITELIB}/rich/_windows_renderer.py
+${PYSITELIB}/rich/_windows_renderer.pyc
+${PYSITELIB}/rich/_windows_renderer.pyo
 ${PYSITELIB}/rich/_wrap.py
 ${PYSITELIB}/rich/_wrap.pyc
 ${PYSITELIB}/rich/_wrap.pyo
@@ -209,9 +215,6 @@ ${PYSITELIB}/rich/syntax.pyo
 ${PYSITELIB}/rich/table.py
 ${PYSITELIB}/rich/table.pyc
 ${PYSITELIB}/rich/table.pyo
-${PYSITELIB}/rich/tabulate.py
-${PYSITELIB}/rich/tabulate.pyc
-${PYSITELIB}/rich/tabulate.pyo
 ${PYSITELIB}/rich/terminal_theme.py
 ${PYSITELIB}/rich/terminal_theme.pyc
 ${PYSITELIB}/rich/terminal_theme.pyo
