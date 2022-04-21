@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2022/03/30 07:14:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2022/04/21 07:54:15 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -146,6 +146,9 @@ ${PYSITELIB}/stripe/api_resources/file.pyo
 ${PYSITELIB}/stripe/api_resources/file_link.py
 ${PYSITELIB}/stripe/api_resources/file_link.pyc
 ${PYSITELIB}/stripe/api_resources/file_link.pyo
+${PYSITELIB}/stripe/api_resources/funding_instructions.py
+${PYSITELIB}/stripe/api_resources/funding_instructions.pyc
+${PYSITELIB}/stripe/api_resources/funding_instructions.pyo
 ${PYSITELIB}/stripe/api_resources/identity/__init__.py
 ${PYSITELIB}/stripe/api_resources/identity/__init__.pyc
 ${PYSITELIB}/stripe/api_resources/identity/__init__.pyo
@@ -320,6 +323,9 @@ ${PYSITELIB}/stripe/api_resources/tax_rate.pyo
 ${PYSITELIB}/stripe/api_resources/terminal/__init__.py
 ${PYSITELIB}/stripe/api_resources/terminal/__init__.pyc
 ${PYSITELIB}/stripe/api_resources/terminal/__init__.pyo
+${PYSITELIB}/stripe/api_resources/terminal/configuration.py
+${PYSITELIB}/stripe/api_resources/terminal/configuration.pyc
+${PYSITELIB}/stripe/api_resources/terminal/configuration.pyo
 ${PYSITELIB}/stripe/api_resources/terminal/connection_token.py
 ${PYSITELIB}/stripe/api_resources/terminal/connection_token.pyc
 ${PYSITELIB}/stripe/api_resources/terminal/connection_token.pyo
