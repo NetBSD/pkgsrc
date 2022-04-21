@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2022/01/07 16:23:16 adam Exp $
+# $NetBSD: Makefile,v 1.53 2022/04/21 11:00:00 wiz Exp $
 
 DISTNAME=	requests-2.27.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	HTTP library, written in Python, for human beings
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-certifi>=2017.4.17:../../security/py-certifi
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=1.3.4:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.5:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.21.1:../../www/py-urllib3
 TEST_DEPENDS+=	${PYPKGPREFIX}-Socks>=1.5.8:../../net/py-Socks
@@ -20,7 +19,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-httpbin-[0-9]*:../../www/py-test-httpbin
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test
+PYTHON_VERSIONED_DEPENDENCIES+=	test:test
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 
 USE_LANGUAGES=		# none
 REPLACE_PYTHON+=	requests/certs.py

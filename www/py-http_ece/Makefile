@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:55:29 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/04/21 11:00:01 wiz Exp $
 
 DISTNAME=	http_ece-1.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,8 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
