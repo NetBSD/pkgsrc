@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2022/01/25 01:44:22 wiz Exp $
+# $NetBSD: options.mk,v 1.14 2022/04/21 11:00:00 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.scapy
 
@@ -20,7 +20,8 @@ PKG_SUGGESTED_OPTIONS=	libpcap
 ### Add in crypto support for WEP operations
 ###
 .if !empty(PKG_OPTIONS:Mscapy-crypto)
-DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
+.include "../../lang/python/versioned_dependencies.mk"
 .endif
 
 ###

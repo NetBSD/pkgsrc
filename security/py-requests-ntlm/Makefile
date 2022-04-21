@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:54:44 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/04/21 11:00:01 wiz Exp $
 
 DISTNAME=	requests_ntlm-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,11 +11,13 @@ HOMEPAGE=	https://github.com/requests/requests-ntlm
 COMMENT=	NTLM authentication handler for python-requests
 LICENSE=	isc
 
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=1.3:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-ntlm-auth>=1.0.2:../../security/py-ntlm-auth
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.0.0:../../devel/py-requests
+
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
