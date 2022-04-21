@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/04/02 07:17:55 nia Exp $
+# $NetBSD: Makefile,v 1.3 2022/04/21 06:56:18 nia Exp $
 
 DISTNAME=	sdl12-compat-1.2.52
 CATEGORIES=	devel
@@ -20,4 +20,9 @@ post-install:
 	${RM} ${DESTDIR}${PREFIX}/include/SDL/*.orig
 
 .include "../../devel/SDL2/buildlink3.mk"
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "Darwin"
+.  include "../../graphics/MesaLib/buildlink3.mk"
+.  include "../../graphics/glu/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
