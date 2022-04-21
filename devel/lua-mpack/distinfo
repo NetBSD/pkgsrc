@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/04/20 18:15:51 nia Exp $
+$NetBSD: distinfo,v 1.2 2022/04/21 07:39:02 wiz Exp $
 
-RMD160 (libmpack-lua-1.0.8.tar.gz) = 981b8129aeb608f6c9f805f2c269fa946150cb24
+BLAKE2s (libmpack-lua-1.0.8.tar.gz) = 4cabc954d6cc4f756725c7e6aaadaea752dc86198aea084781e0c52c7428f001
 SHA512 (libmpack-lua-1.0.8.tar.gz) = 6d21cc6bbdee583a1d808742991459e4b1796f347b2f4eaa747b576f5bb1ca989123339120e43246bac859c20e6f46ac57116ce9f135157256fecbd8cf817f75
 Size (libmpack-lua-1.0.8.tar.gz) = 15616 bytes
