@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/04/20 17:14:20 nia Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/21 07:14:12 nia Exp $
 
 DISTNAME=	libvterm-0.1.4
 PKGNAME=	${DISTNAME:S/libvterm/libvterm01/g}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://www.leonerd.org.uk/code/libvterm/
 
@@ -22,5 +23,11 @@ MAKE_FLAGS+=	LIBDIR=${PREFIX}/lib/${PKGBASE}
 INSTALL_TARGET=	install-lib install-inc
 
 PKGCONFIG_OVERRIDE+=	vterm.pc.in
+
+INSTALLATION_DIRS+=	lib/pkgconfig
+
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/lib/libvterm01/pkgconfig/vterm.pc \
+	    ${DESTDIR}${PREFIX}/lib/pkgconfig/vterm01.pc
 
 .include "../../mk/bsd.pkg.mk"
