@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2022/04/20 17:14:20 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2022/04/21 07:14:12 nia Exp $
 
 BUILDLINK_TREE+=	libvterm01
 
@@ -6,9 +6,16 @@ BUILDLINK_TREE+=	libvterm01
 LIBVTERM01_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libvterm01+=	libvterm01>=0.0.0
+BUILDLINK_ABI_DEPENDS.libvterm01+=	libvterm01>=0.1.4nb1
 BUILDLINK_PKGSRCDIR.libvterm01?=	../../devel/libvterm01
-BUILDLINK_INCDIRS.libvterm01?=		include/libvterm01
-BUILDLINK_LIBDIRS.libvterm01?=		lib/libvterm01
+BUILDLINK_INCDIRS.libvterm01+=		include/libvterm01
+BUILDLINK_LIBDIRS.libvterm01+=		lib/libvterm01
+
+BUILDLINK_TARGETS+=	buildlink-vterm-unversioned
+
+buildlink-vterm-unversioned:
+	${LN} -s ${BUILDLINK_DIR}/lib/pkgconfig/vterm01.pc \
+	    ${BUILDLINK_DIR}/lib/pkgconfig/vterm.pc
 
 .endif	# LIBVTERM01_BUILDLINK3_MK
 
