@@ -1,11 +1,11 @@
-$NetBSD: patch-Makefile.in,v 1.1 2020/08/25 08:54:52 schmonz Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2022/04/21 09:45:34 wiz Exp $
 
 Don't run tests before TEST_TARGET.
 
---- Makefile.in.orig	2020-07-16 15:21:00.000000000 +0000
+--- Makefile.in.orig	2022-03-06 16:51:58.000000000 +0000
 +++ Makefile.in
-@@ -458,7 +458,7 @@ EXTRA_DIST = autogen.sh autogen.rc gpgme
-              conf/whatisthis VERSION
+@@ -459,7 +459,7 @@ EXTRA_DIST = autogen.sh autogen.rc gpgme
+              conf/whatisthis VERSION LICENSES
  
  @RUN_GPG_TESTS_FALSE@tests = 
 -@RUN_GPG_TESTS_TRUE@tests = tests
