@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/21 10:48:49 wiz Exp $
+
+BLAKE2s (cryptography-3.3.2.tar.gz) = 8ff42f679d01215069547cd6ca98b9f9f828ef7d85397b5d7af260c5a67718f1
+SHA512 (cryptography-3.3.2.tar.gz) = 55f6ee13342b3209b1fcb310f4c4d33d22856ee785cb2347e6ad36c34e9b42f6e0d5bece8e458b09663a5b78e34c4567fe7a211b51ca71f55ccc93e3f62dc5e4
+Size (cryptography-3.3.2.tar.gz) = 539883 bytes
