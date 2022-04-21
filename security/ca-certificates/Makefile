@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/02/28 06:46:52 kim Exp $
+# $NetBSD: Makefile,v 1.6 2022/04/21 11:00:00 wiz Exp $
 
 PKGNAME=	ca-certificates-20211016
 PKGREVISION=	1
@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v2 AND mpl-2.0
 NO_CONFIGURE=		yes
 PYTHON_FOR_BUILD_ONLY=	yes
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography:build
 
 USE_TOOLS=	echo:run find:run ln:run openssl:run rm:run sed:run sort:run wc:run
 
@@ -81,4 +81,5 @@ post-install:
 	    ${DESTDIR}${EGDIR}/
 
 .include "../../lang/python/tool.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
