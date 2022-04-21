@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/06/17 09:04:45 otis Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/04/21 14:14:46 taca Exp $
 bin/arpaname
 bin/delv
 bin/dig
@@ -175,7 +175,6 @@ include/isc/md.h
 include/isc/mem.h
 include/isc/meminfo.h
 include/isc/mutex.h
-include/isc/mutexatomic.h
 include/isc/mutexblock.h
 include/isc/net.h
 include/isc/netaddr.h
