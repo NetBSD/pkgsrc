@@ -1,15 +1,13 @@
-# $NetBSD: options.mk,v 1.1 2022/04/21 16:41:26 nia Exp $
+# $NetBSD: options.mk,v 1.2 2022/04/21 16:49:27 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gvfs
 PKG_SUPPORTED_OPTIONS+=	avahi hal fuse samba
-PKG_SUGGESTED_OPTIONS+=	samba
 PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-# XXX fuse.bl3.mk will fail if we include it and fuse is not available
-.if ${OPSYS} == "Linux" || (${OPSYS} == "NetBSD" && exists(/usr/include/fuse.h))
-PKG_SUGGESTED_OPTIONS=+	fuse
+.if ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
+PKG_SUGGESTED_OPTIONS+=	samba fuse
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -49,5 +47,3 @@ PLIST.fuse=		yes
 .else
 CONFIGURE_ARGS+=	--disable-fuse
 .endif
-
-
