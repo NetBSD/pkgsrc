@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 11:34:54 nia Exp $
+$NetBSD: distinfo,v 1.18 2022/04/21 07:59:48 wiz Exp $
 
-BLAKE2s (xorgproto-2021.5.tar.bz2) = 88da54e8aea3a7197435dd89a347042ffc7d48c593d2b8c2f3c3c9aa26623c57
-SHA512 (xorgproto-2021.5.tar.bz2) = 0f5c4ee4fd56cd46f4d5850bcf3e04c92d2e98de54d0113987cb49fc83cf1f4d0e50e976333179c72fe2178cfa15ec6c1bfc4e76fc3bc2a4be80616ce079da87
-Size (xorgproto-2021.5.tar.bz2) = 870473 bytes
+BLAKE2s (xorgproto-2022.1.tar.bz2) = 7a8702728f9b247a8bef7e80ac674e386b86589bfc26325a8d4e6564990c31f9
+SHA512 (xorgproto-2022.1.tar.bz2) = add275a9c0d005053f31fdca6da009142792a3c7e2cd4b56da93eed3a397adf52d91c441ff6455959b87559f402eb9f46fdd8932e951c7d2d96623975391202a
+Size (xorgproto-2022.1.tar.bz2) = 870526 bytes
