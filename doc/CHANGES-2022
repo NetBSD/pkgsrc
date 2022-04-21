@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1982 2022/04/21 07:59:58 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1983 2022/04/21 09:45:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3120,3 +3120,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/py-tqdm to 4.64.0 [adam 2022-04-21]
 	Updated finance/py-stripe to 2.73.0 [adam 2022-04-21]
 	Updated x11/xorgproto to 2022.1 [wiz 2022-04-21]
+	Updated security/gpgme to 1.17.1 [wiz 2022-04-21]
