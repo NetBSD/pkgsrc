@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/02/08 16:41:06 adam Exp $
+# $NetBSD: Makefile,v 1.16 2022/04/21 11:00:01 wiz Exp $
 
 DISTNAME=	ansible-base-2.10.17
 CATEGORIES=	sysutils python
@@ -11,12 +11,12 @@ LICENSE=	gnu-gpl-v3
 
 CONFLICTS+=	ansible<2.10
 
-DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 PYTHON_VERSIONED_DEPENDENCIES+=	packaging
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 
 USE_PKG_RESOURCES=	yes
 
