@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2022/03/21 17:57:57 fcambus Exp $
+$NetBSD: distinfo,v 1.11 2022/04/21 20:41:41 fcambus Exp $
 
-BLAKE2s (kore-4.2.1.tar.gz) = a6502851ac8ccf5ab1495cdd6cfd604fb2b9563aeef83370d2c9161f9f29efee
-SHA512 (kore-4.2.1.tar.gz) = 1b6936bd1aa68d0678fb8234bedb2b6fa9bd70e074357761c9bb58f5654cd80bdcf98637d964b65dde819bf85c705d4d27ed4087d04246f7c9c99c1f2110d457
-Size (kore-4.2.1.tar.gz) = 1085374 bytes
+BLAKE2s (kore-4.2.2.tar.gz) = 4e3d2a003810c803cebd8b5a96f6f8a8f24d91069f63c8eaa6cc417ee76d3b9c
+SHA512 (kore-4.2.2.tar.gz) = 4490a9f35a4b81a516bcbd0bfcf77e50522efcf6167e6de5d4aee976005862aff007c5cd4386d20ca3168a740871adb9c10404afe27ce8c1f12006b648f3a74b
+Size (kore-4.2.2.tar.gz) = 1085762 bytes
 SHA1 (patch-Makefile) = 15bd43f4460e6db0b34f9a16f2a262c94c002278
 SHA1 (patch-kodev_Makefile) = b47802614534567a1cfe3eba37bdcb620f24abd1
