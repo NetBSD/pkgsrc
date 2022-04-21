@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1981 2022/04/21 07:54:36 adam Exp $
+$NetBSD: CHANGES-2022,v 1.1982 2022/04/21 07:59:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3119,3 +3119,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated comms/py-rich to 12.2.0 [adam 2022-04-21]
 	Updated misc/py-tqdm to 4.64.0 [adam 2022-04-21]
 	Updated finance/py-stripe to 2.73.0 [adam 2022-04-21]
+	Updated x11/xorgproto to 2022.1 [wiz 2022-04-21]
