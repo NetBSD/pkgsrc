@@ -1,0 +1,20 @@
+phpMyAdmin is a free software tool written in PHP, intended to handle the 
+administration of MySQL over the Web. phpMyAdmin supports a wide range of 
+operations on MySQL and MariaDB.
+
+Features:
+- Intuitive web interface
+- Support for most MySQL features:
+  - browse and drop databases, tables, views, fields and indexes
+  - create, copy, drop, rename and alter databases, tables, fields and indexes
+  - maintenance server, databases and tables, with proposals on server config
+  - execute, edit and bookmark any SQL-statement, even batch-queries
+  - manage MySQL user accounts and privileges
+  - manage stored procedures and triggers
+- Import data from CSV and SQL
+- Export data to various formats: CSV, SQL, XML, PDF and others
+- Administering multiple servers
+- Creating graphics of your database layout in various formats
+- Creating complex queries using Query-by-example (QBE)
+- Searching globally in a database or a subset of it
+- And much more...
