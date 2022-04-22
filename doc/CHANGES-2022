@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1990 2022/04/22 07:39:15 pin Exp $
+$NetBSD: CHANGES-2022,v 1.1991 2022/04/22 08:28:33 gson Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3128,3 +3128,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/bind916 to 9.16.28 [taca 2022-04-21]
 	Updated www/kore to 4.2.2 [fcambus 2022-04-21]
 	Updated graphics/stitchy to 0.1.4 [pin 2022-04-22]
+	Updated misc/py-anita to 2.10 [gson 2022-04-22]
