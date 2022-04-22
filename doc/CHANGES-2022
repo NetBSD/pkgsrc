@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1993 2022/04/22 10:01:41 wen Exp $
+$NetBSD: CHANGES-2022,v 1.1994 2022/04/22 10:14:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3131,3 +3131,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/py-anita to 2.10 [gson 2022-04-22]
 	Updated games/monsterz to 0.7.1nb7 [wiz 2022-04-22]
 	Updated textproc/p5-PPIx-QuoteLike to 0.022 [wen 2022-04-22]
+	Updated devel/protobuf to 3.20.1 [adam 2022-04-22]
