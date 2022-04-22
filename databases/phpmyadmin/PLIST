@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2022/02/02 13:41:12 tm Exp $
+@comment $NetBSD: PLIST,v 1.54 2022/04/22 18:06:05 tm Exp $
 share/doc/phpmyadmin/CONTRIBUTING.md
 share/doc/phpmyadmin/ChangeLog
 share/doc/phpmyadmin/LICENSE
@@ -1884,22 +1884,16 @@ share/phpmyadmin/vendor/phpseclib/phpseclib/phpseclib/bootstrap.php
 share/phpmyadmin/vendor/phpseclib/phpseclib/phpseclib/openssl.cnf
 share/phpmyadmin/vendor/pragmarx/google2fa/.scrutinizer.yml
 share/phpmyadmin/vendor/pragmarx/google2fa/.travis.yml
-share/phpmyadmin/vendor/pragmarx/google2fa/CHANGELOG.md
 share/phpmyadmin/vendor/pragmarx/google2fa/LICENSE.md
 share/phpmyadmin/vendor/pragmarx/google2fa/README.md
 share/phpmyadmin/vendor/pragmarx/google2fa/RELICENSED.md
+share/phpmyadmin/vendor/pragmarx/google2fa/changelog.md
 share/phpmyadmin/vendor/pragmarx/google2fa/composer.json
 share/phpmyadmin/vendor/pragmarx/google2fa/composer.lock
 share/phpmyadmin/vendor/pragmarx/google2fa/docs/playground.jpg
 share/phpmyadmin/vendor/pragmarx/google2fa/phpunit.xml
-share/phpmyadmin/vendor/pragmarx/google2fa/src/Exceptions/Contracts/Google2FA.php
-share/phpmyadmin/vendor/pragmarx/google2fa/src/Exceptions/Contracts/IncompatibleWithGoogleAuthenticator.php
-share/phpmyadmin/vendor/pragmarx/google2fa/src/Exceptions/Contracts/InvalidAlgorithm.php
-share/phpmyadmin/vendor/pragmarx/google2fa/src/Exceptions/Contracts/InvalidCharacters.php
-share/phpmyadmin/vendor/pragmarx/google2fa/src/Exceptions/Contracts/SecretKeyTooShort.php
-share/phpmyadmin/vendor/pragmarx/google2fa/src/Exceptions/Google2FAException.php
 share/phpmyadmin/vendor/pragmarx/google2fa/src/Exceptions/IncompatibleWithGoogleAuthenticatorException.php
-share/phpmyadmin/vendor/pragmarx/google2fa/src/Exceptions/InvalidAlgorithmException.php
+share/phpmyadmin/vendor/pragmarx/google2fa/src/Exceptions/InsecureCallException.php
 share/phpmyadmin/vendor/pragmarx/google2fa/src/Exceptions/InvalidCharactersException.php
 share/phpmyadmin/vendor/pragmarx/google2fa/src/Exceptions/SecretKeyTooShortException.php
 share/phpmyadmin/vendor/pragmarx/google2fa/src/Google2FA.php
@@ -1911,9 +1905,6 @@ share/phpmyadmin/vendor/pragmarx/google2fa/tests/.gitkeep
 share/phpmyadmin/vendor/pragmarx/google2fa/tests/Constants.php
 share/phpmyadmin/vendor/pragmarx/google2fa/tests/Google2FATest.php
 share/phpmyadmin/vendor/pragmarx/google2fa/tests/bootstrap.php
-share/phpmyadmin/vendor/pragmarx/google2fa/tests/tools/analyse.sh
-share/phpmyadmin/vendor/pragmarx/google2fa/tests/tools/helpers.sh
-share/phpmyadmin/vendor/pragmarx/google2fa/tests/tools/test.sh
 share/phpmyadmin/vendor/pragmarx/google2fa/upgrading.md
 share/phpmyadmin/vendor/psr/container/LICENSE
 share/phpmyadmin/vendor/psr/container/README.md
