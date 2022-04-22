@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2022/04/02 08:55:04 wen Exp $
+$NetBSD: distinfo,v 1.12 2022/04/22 09:59:15 wen Exp $
 
-BLAKE2s (PPIx-QuoteLike-0.020.tar.gz) = 39c69917d7ca6d5eac00eeaebbee562c0a17c928d8c56151a507b82544eed024
-SHA512 (PPIx-QuoteLike-0.020.tar.gz) = 81b2d1ebe26f597a0050c1662263797e4445813c574fb166aacd8fcf9b0a1578dcb2d66878805897bee2fd70862335726718d3258af22da1db28dc83a87abd3d
-Size (PPIx-QuoteLike-0.020.tar.gz) = 73977 bytes
+BLAKE2s (PPIx-QuoteLike-0.022.tar.gz) = 9ff9e41afc5798be4f70a154c7d39ebe5149649b129c2e53516a757c618e69f8
+SHA512 (PPIx-QuoteLike-0.022.tar.gz) = b5b7f1de4b4d08f7167560f12a3ec0b24f4cd92739911a3c18bc6b5ecc54b2d2facd7470672e322b5360c4b235f5b8a55e7a9f382d30177f579ef9b70aadc54a
+Size (PPIx-QuoteLike-0.022.tar.gz) = 74248 bytes
