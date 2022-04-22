@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1995 2022/04/22 10:24:18 wen Exp $
+$NetBSD: CHANGES-2022,v 1.1996 2022/04/22 11:14:13 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3133,3 +3133,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/p5-PPIx-QuoteLike to 0.022 [wen 2022-04-22]
 	Updated devel/protobuf to 3.20.1 [adam 2022-04-22]
 	Updated mail/p5-Email-MIME to 1.952 [wen 2022-04-22]
+	Updated www/moodle to 4.0 [wen 2022-04-22]
