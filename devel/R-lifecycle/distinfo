@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:05 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/22 22:55:50 mef Exp $
 
-BLAKE2s (R/lifecycle_1.0.0.tar.gz) = 455d8366058b31e0248f298ff39e9eb000122fc81a3de326e5f5dffc06290488
-SHA512 (R/lifecycle_1.0.0.tar.gz) = 603e1889c41b970a10956aff5b547111bd0166de7c6721419d2ea1667ff36202803faa9a0913710993d15e4713227ae8d9801ab26b0f2e54b06d44838de495a4
-Size (R/lifecycle_1.0.0.tar.gz) = 83389 bytes
+BLAKE2s (R/lifecycle_1.0.1.tar.gz) = 9685b99f300656c9cc0bd5f61b47313c4663771bbaee8ada01c5d53b5b248752
+SHA512 (R/lifecycle_1.0.1.tar.gz) = 63d3bda7086a50fc8e818e82f87d75e8850c60c8b10c54810ae62e9f20c944c23666df2be71d260f4c61c09218d9c8dca7d45d227799d851278079e4d9954f87
+Size (R/lifecycle_1.0.1.tar.gz) = 99716 bytes
