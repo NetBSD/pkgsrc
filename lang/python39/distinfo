@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2022/04/03 10:51:19 riastradh Exp $
+$NetBSD: distinfo,v 1.28 2022/04/22 14:25:34 sjmulder Exp $
 
 BLAKE2s (Python-3.9.12.tar.xz) = 501eaf0162b3030762c2a7e20ed83294a91afbf8b491fb560c2d5517ee9ec5a8
 SHA512 (Python-3.9.12.tar.xz) = 081981901e14149748fd35228db0b3b1d96fef227ae7404f07b8bad0fda4b02649bf31c348c94aefdaf3327565d78f9489437c2c02f647b15d41376a27a23e97
@@ -9,6 +9,7 @@ SHA1 (patch-Lib_distutils_unixccompiler.py) = 2e65a8dd5dd3fe25957206c062106fa7a6
 SHA1 (patch-Lib_lib2to3_pgen2_driver.py) = 5d6dab14197f27363394ff1aeee22a8ced8026d2
 SHA1 (patch-Lib_sysconfig.py) = a4f009ed73ebbd9d9c4bf7e12b7981182ed8fd7c
 SHA1 (patch-Makefile.pre.in) = dd5ff571ac9fe2dc2e41fa678261d8e3648ac908
+SHA1 (patch-Modules___hashopenssl.c) = d7157254630259b2073e67a921edf0dfe151e32a
 SHA1 (patch-Modules___ssl.c) = f241ba148e4c244a641386be5ac07817b03f04f7
 SHA1 (patch-Modules_makesetup) = a06786eebffadecedba5e3a50a9785fb47613567
 SHA1 (patch-Modules_nismodule.c) = 1bafe9b06359586d027a77011b103877590d947d
