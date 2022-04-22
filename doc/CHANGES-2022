@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1992 2022/04/22 09:37:10 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.1993 2022/04/22 10:01:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3130,3 +3130,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/stitchy to 0.1.4 [pin 2022-04-22]
 	Updated misc/py-anita to 2.10 [gson 2022-04-22]
 	Updated games/monsterz to 0.7.1nb7 [wiz 2022-04-22]
+	Updated textproc/p5-PPIx-QuoteLike to 0.022 [wen 2022-04-22]
