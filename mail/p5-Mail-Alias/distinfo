@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:54:15 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/22 13:31:00 wen Exp $
 
-BLAKE2s (Mail-Alias-1.12.tar.gz) = 784baeaa0e57e147186f93cccb063bf3b20750d8600bbd3e2dd9c4927b6db9b1
-SHA512 (Mail-Alias-1.12.tar.gz) = 8a74f55b566e00495b3c8f32b52200aa252bc297b2682a4e4bbd8cde60267ad5233773a33065dd12ce955be760486b526e7dc8a1a56cac8acdea543dc0f51f17
-Size (Mail-Alias-1.12.tar.gz) = 10650 bytes
+BLAKE2s (Mail-Alias-1.15.tar.gz) = 5c5731a21a5cf7295a0cebf032bb3b01030223c4f40387c50d9b02943613f63f
+SHA512 (Mail-Alias-1.15.tar.gz) = 43fb186d5da2fbff05f7baa04390dad80ebeda410b6bc30f9a71d482b5a00f2c305810bc7c8edbd3e360560c00d1846566296f5ee87e9287e727ce7a00741f33
+Size (Mail-Alias-1.15.tar.gz) = 11977 bytes
