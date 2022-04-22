@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21717 2022/04/21 13:52:08 taca Exp $
+$NetBSD: TODO,v 1.21718 2022/04/22 19:30:33 tm Exp $
 
 Suggested new packages
 ======================
@@ -1414,7 +1414,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o php-tt-rss-17.4
 	o php-tt-rss-fever-plugin-1.4.7
 	o phpldapadmin-1.2.5
-	o phpmyadmin-5.1.1
 	o phraseanet-4.1.2
 	o phraseanet-indexer-3.8.6
 	o pick-4.0.0
