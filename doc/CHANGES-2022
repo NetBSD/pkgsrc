@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1991 2022/04/22 08:28:33 gson Exp $
+$NetBSD: CHANGES-2022,v 1.1992 2022/04/22 09:37:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3129,3 +3129,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/kore to 4.2.2 [fcambus 2022-04-21]
 	Updated graphics/stitchy to 0.1.4 [pin 2022-04-22]
 	Updated misc/py-anita to 2.10 [gson 2022-04-22]
+	Updated games/monsterz to 0.7.1nb7 [wiz 2022-04-22]
