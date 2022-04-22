@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3720 2022/04/20 19:56:50 leot Exp $
+# $NetBSD: Makefile,v 1.3721 2022/04/22 23:01:20 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -88,6 +88,7 @@ SUBDIR+=	R-tcltk2
 SUBDIR+=	R-testit
 SUBDIR+=	R-testthat
 SUBDIR+=	R-tidyselect
+SUBDIR+=	R-tidyverse
 SUBDIR+=	R-tinytest
 SUBDIR+=	R-usethis
 SUBDIR+=	R-uuid
