@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2022/03/28 23:10:44 tnn Exp $
+$NetBSD: distinfo,v 1.27 2022/04/22 06:06:38 markd Exp $
 
 BLAKE2s (qtwebkit-5.212.0-alpha4.tar.xz) = 20858db08c7d297037d3ced34e441d4b657325c406b475e4e76dd367dc9c500c
 SHA512 (qtwebkit-5.212.0-alpha4.tar.xz) = 33f11270bd030599beff9c1983a6c5ff2d61f407cc8a6825f7f405d46f9184c720fc7f60c7359f08f828db96a2170092875066a0d5c0a21ff09bc48a2603fbf6
@@ -21,6 +21,7 @@ SHA1 (patch-Source_WTF_wtf_Platform.h) = 73e8b07e8d7e718abe986a12b9f0b903dfcc476
 SHA1 (patch-Source_WTF_wtf_ThreadIdentifierDataPthreads.cpp) = bfa570aa20e3508c77bbaebed051821a33f36209
 SHA1 (patch-Source_WebCore_css_makegrammar.pl) = 2f1977c925069243d76379ae6d065e850143b2e3
 SHA1 (patch-Source_WebCore_page_NavigatorBase.cpp) = e8972f4b703a9ff45ce313609d2540f89064b4ff
+SHA1 (patch-Source_WebCore_platform_audio_gstreamer_AudioFileReaderGStreamer.cpp) = 7bd24adde2cc0e1cbad2143fc83699d659d61045
 SHA1 (patch-Source_WebCore_platform_graphics_cpu_arm_filters_FELightingNEON.cpp) = ec7c7533c2d5a4258170745bfc49655848d0780c
 SHA1 (patch-Source_WebCore_platform_graphics_surfaces_GraphicsSurface.h) = d1d986afd5525143fc786a959240a72167f03352
 SHA1 (patch-Source_WebCore_platform_graphics_surfaces_GraphicsSurfaceToken.h) = 838acb2d7ecf41e5f6989d98459d103f4268cdcf
