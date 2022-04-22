@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.1998 2022/04/22 14:03:12 wen Exp $
+$NetBSD: CHANGES-2022,v 1.1999 2022/04/22 18:08:10 tm Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3136,3 +3136,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/moodle to 4.0 [wen 2022-04-22]
 	Updated mail/p5-Mail-Alias to 1.15 [wen 2022-04-22]
 	Updated math/R to 4.2.0 [wen 2022-04-22]
+	Updated databases/phpmyadmin to 4.9.10 [tm 2022-04-22]
