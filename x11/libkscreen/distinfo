@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:34:09 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/22 04:32:33 gutteridge Exp $
 
 BLAKE2s (libkscreen-5.18.5.tar.xz) = b8d07a4327de6e4d9171f509df13304acb5cc9e658692986f903189248e2fc50
 SHA512 (libkscreen-5.18.5.tar.xz) = 8fc36bfd5aeb94fada51be1895ff2cf1b9fa98332f1795ac5e9d5339a35d87a24ed15c1f44af85205198c584eb411191f72ef8de370d1f97476d75db1458cb00
 Size (libkscreen-5.18.5.tar.xz) = 85532 bytes
+SHA1 (patch-src_edid.cpp) = 9fe3c0f1ec14f7077f2547c9bce7df3a0e554bd7
