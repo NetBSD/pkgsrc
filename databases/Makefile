@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.658 2022/04/20 07:03:46 nia Exp $
+# $NetBSD: Makefile,v 1.659 2022/04/22 19:28:59 tm Exp $
 
 COMMENT=	Databases
 
@@ -291,6 +291,7 @@ SUBDIR+=	php-sqlite3
 SUBDIR+=	php-sqlrelay
 SUBDIR+=	phpldapadmin
 SUBDIR+=	phpmyadmin
+SUBDIR+=	phpmyadmin5
 SUBDIR+=	phppgadmin
 SUBDIR+=	poco-data
 SUBDIR+=	poco-data-mysql
