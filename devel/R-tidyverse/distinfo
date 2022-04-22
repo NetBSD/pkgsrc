@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/22 22:59:02 mef Exp $
+
+BLAKE2s (R/tidyverse_1.3.1.tar.gz) = 36dfc33f72d657b7426c89b03089087c4a1bb8ac01d787937e6c16bb5b8e9229
+SHA512 (R/tidyverse_1.3.1.tar.gz) = a4fa9cd6a67ba5f387696c3edcc7f0c821321192843fa6687f5a1f7a91e3c68a878d7f61519a1fe2e3de99bf622d4e3d18a7105e4d33d5b8e12eadad1b71a292
+Size (R/tidyverse_1.3.1.tar.gz) = 702779 bytes
