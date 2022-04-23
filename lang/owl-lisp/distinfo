@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:51:46 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/04/23 23:27:55 tnn Exp $
 
-BLAKE2s (owl-lisp-0.1.13.tar.gz) = fe13ece5b55df85a15260a2db5d53be3b777e01615509db5ce0eead219fa4781
-SHA512 (owl-lisp-0.1.13.tar.gz) = 141543d8c5c8e3bca504fdeb533b2bc10e455f72bf24bb454c24d146a991f92b0b0777eef32cf12f9ddf50ee05a1ad143c80ea075f7f25946acb6eb61bc010c0
-Size (owl-lisp-0.1.13.tar.gz) = 590201 bytes
+BLAKE2s (owl-v0.2.tar.bz2) = 9937bab87842a3704b2375a52183e261a2a5db3b2dfbc7a827d74ca9dfa8670e
+SHA512 (owl-v0.2.tar.bz2) = 48ea746d9d855662ee8800571989fafd784ec15a27fd28053bccab435198a1bd7fb95f9e614d88e2e265df0c1876295397f526b15d10e915243291d99a3ae9d2
+Size (owl-v0.2.tar.bz2) = 452190 bytes
