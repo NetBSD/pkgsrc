@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.539 2022/04/16 01:20:10 markd Exp $
+# $NetBSD: Makefile,v 1.540 2022/04/23 05:17:13 mef Exp $
 
 COMMENT=	Mathematics
 
@@ -78,6 +78,7 @@ SUBDIR+=	R-mapproj
 SUBDIR+=	R-minqa
 SUBDIR+=	R-mitools
 SUBDIR+=	R-mnormt
+SUBDIR+=	R-modelr
 SUBDIR+=	R-moonsun
 SUBDIR+=	R-mvtnorm
 SUBDIR+=	R-ncdf
