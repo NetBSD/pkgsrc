@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2028 2022/04/23 23:29:19 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.2029 2022/04/23 23:56:54 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3167,3 +3167,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/libtheoraplay to 0.0.20210704 [tnn 2022-04-23]
 	Updated graphics/mojoshader to 0.0.20220415 [tnn 2022-04-23]
 	Updated lang/owl-lisp to 0.2 [tnn 2022-04-23]
+	Updated devel/R-withr to 2.4.3 [gutteridge 2022-04-23]
