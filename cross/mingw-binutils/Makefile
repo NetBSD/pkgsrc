@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2021/09/26 02:33:14 mef Exp $
+# $NetBSD: Makefile,v 1.12 2022/04/23 22:33:02 tnn Exp $
 
-DISTNAME=	binutils-2.18
-PKGNAME=	mingw-${DISTNAME:S/-src//}
-PKGREVISION=	2
+DISTNAME=	binutils-2.18a
+PKGNAME=	mingw-binutils-2.18
+PKGREVISION=	3
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
 EXTRACT_SUFX=	.tar.bz2
