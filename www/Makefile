@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1619 2022/04/23 06:05:20 mef Exp $
+# $NetBSD: Makefile,v 1.1620 2022/04/23 06:12:13 mef Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -9,6 +9,7 @@ SUBDIR+=	R-curl
 SUBDIR+=	R-diffviewer
 SUBDIR+=	R-gargle
 SUBDIR+=	R-gh
+SUBDIR+=	R-googledrive
 SUBDIR+=	R-htmlwidgets
 SUBDIR+=	R-httpuv
 SUBDIR+=	R-httr
