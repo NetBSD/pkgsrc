@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/23 05:15:16 mef Exp $
+
+BLAKE2s (R/modelr_0.1.8.tar.gz) = 8ba42d39266e2105f964e4dbf0971aba0c2f2e8a9fc5d62a3d7ee1321f62270b
+SHA512 (R/modelr_0.1.8.tar.gz) = 712e7e63a2f5beec3845b3e16f444a69eacd00759d51bec1428ce84907bfe42545fe0d6e592c82bc2c2dd6bce4d58ae5865225a4697fc8e35f420f3b5ed51b2b
+Size (R/modelr_0.1.8.tar.gz) = 121333 bytes
