@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.1 2021/01/24 18:22:25 maya Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/23 22:09:34 tnn Exp $
 
-DISTNAME=	99e5fc74603e
-PKGNAME=	libtheoraplay-0.0.20190909
+DISTNAME=	libtheoraplay-0.0.20210704
 CATEGORIES=	multimedia
-MASTER_SITES=	https://hg.icculus.org/icculus/theoraplay/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=icculus/}
+GITHUB_PROJECT=	theoraplay
+GITHUB_TAG=	abd0bf6b42213bebecb5105ebcbe9b364db071c2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://hg.icculus.org/icculus/theoraplay/archive/
+HOMEPAGE=	https://icculus.org/theoraplay/
 COMMENT=	Simple library to make decoding of Ogg Theora videos easier
 LICENSE=	zlib
-
-WRKSRC=	${WRKDIR}/theoraplay-99e5fc74603e
-
 
 do-build:
 	cd ${WRKSRC} && \
