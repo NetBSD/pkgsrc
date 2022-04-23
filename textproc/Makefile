@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1307 2022/04/23 05:12:36 mef Exp $
+# $NetBSD: Makefile,v 1.1308 2022/04/23 05:37:37 mef Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -33,6 +33,7 @@ SUBDIR+=	R-openxlsx
 SUBDIR+=	R-readr
 SUBDIR+=	R-readstata13
 SUBDIR+=	R-readxl
+SUBDIR+=	R-reprex
 SUBDIR+=	R-rjson
 SUBDIR+=	R-rmarkdown
 SUBDIR+=	R-selectr

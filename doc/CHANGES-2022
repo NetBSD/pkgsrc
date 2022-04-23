@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2008 2022/04/23 05:17:14 mef Exp $
+$NetBSD: CHANGES-2022,v 1.2009 2022/04/23 05:37:37 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3146,3 +3146,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/R-jsonlite to 1.8.0 [mef 2022-04-23]
 	Added textproc/R-dtplyr version 1.2.1 [mef 2022-04-23]
 	Added math/R-modelr version 0.1.8 [mef 2022-04-23]
+	Added textproc/R-reprex version 2.0.1 [mef 2022-04-23]
