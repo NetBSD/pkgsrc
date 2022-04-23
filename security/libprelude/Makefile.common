@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2019/05/23 19:23:15 rillig Exp $
+# $NetBSD: Makefile.common,v 1.15 2022/04/23 11:56:24 tnn Exp $
 #
 # used by security/libprelude/Makefile
 # used by security/libprelude-lua/Makefile
@@ -8,7 +8,7 @@
 DISTNAME=		libprelude-${VERSION}
 VERSION=		0.9.24.1
 CATEGORIES=		security
-MASTER_SITES=		http://www.prelude-ids.com/download/releases/libprelude/
+#MASTER_SITES=		http://www.prelude-ids.com/download/releases/libprelude/
 
 MAINTAINER?=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.prelude-siem.org/
