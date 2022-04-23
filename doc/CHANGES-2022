@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2013 2022/04/23 06:19:29 mef Exp $
+$NetBSD: CHANGES-2022,v 1.2014 2022/04/23 06:44:41 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3151,3 +3151,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added www/R-gargle version 1.2.0 [mef 2022-04-23]
 	Added www/R-googledrive version 2.0.0 [mef 2022-04-23]
 	Added math/R-ids version 1.0.1 [mef 2022-04-23]
+	Updated devel/R-rlang to 1.0.2 [mef 2022-04-23]
