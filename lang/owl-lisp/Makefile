@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.1 2017/02/11 01:40:27 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/23 23:27:55 tnn Exp $
 
-DISTNAME=	owl-lisp-0.1.13
+DISTNAME=	owl-v0.2
+PKGNAME=	${DISTNAME:S/owl-v/owl-lisp-/}
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_GITHUB:=aoh/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	https://gitlab.com/owl-lisp/owl/-/archive/v${PKGVERSION_NOREV}/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://haltp.org/n/owl
 COMMENT=	Purely functional dialect of Scheme
 LICENSE=	mit
 
-MANCOMPRESSED=	yes
-
-MAKE_ENV=	MANDIR=/${PKGMANDIR}
+INSTALL_MAKE_FLAGS=	DESTDIR=${DESTDIR}
+INSTALL_MAKE_FLAGS+=	PREFIX=${PREFIX}
+INSTALL_MAKE_FLAGS+=	MANDIR=/${PKGMANDIR}
+MANCOMPRESSED=		yes
 
 .include "../../mk/bsd.pkg.mk"
