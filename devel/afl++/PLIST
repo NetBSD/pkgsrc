@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/04/17 17:51:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.1.16.1 2022/04/23 19:04:36 bsiegert Exp $
 bin/afl-analyze
 bin/afl-clang
 bin/afl-clang++
@@ -14,11 +14,11 @@ bin/afl-system-config
 bin/afl-tmin
 bin/afl-whatsup
 lib/afl/afl-as
-lib/afl/argvfuzz32.so
-lib/afl/argvfuzz64.so
+${PLIST.amd64}lib/afl/argvfuzz32.so
+${PLIST.amd64}lib/afl/argvfuzz64.so
 lib/afl/as
-lib/afl/socketfuzz32.so
-lib/afl/socketfuzz64.so
+${PLIST.amd64}lib/afl/socketfuzz32.so
+${PLIST.amd64}lib/afl/socketfuzz64.so
 man/man8/afl-analyze.8
 man/man8/afl-as.8
 man/man8/afl-cmin.8
