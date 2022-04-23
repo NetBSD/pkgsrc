@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.11 2022/01/15 21:29:50 js Exp $
+# $NetBSD: Makefile,v 1.12 2022/04/23 13:49:50 js Exp $
 
-DISTNAME=	mautrix-telegram-0.11.1
-PKGREVISION=	1
+DISTNAME=	telegram-0.11.3
+PKGNAME=	mautrix-${DISTNAME}
 CATEGORIES=	chat python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=tulir/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mautrix/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-WRKSRC=		${WRKDIR}/telegram-${PKGVERSION_NOREV}
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 MAINTAINER=	js@pkgsrc.org
-HOMEPAGE=	https://github.com/tulir/mautrix-telegram
+HOMEPAGE=	https://github.com/mautrix/telegram
 COMMENT=	Matrix-Telegram hybrid puppeting/relaybot bridge
 LICENSE=	gnu-agpl-v3
 
@@ -20,14 +20,14 @@ DEPENDS+=	${PYPKGPREFIX}-magic>=0.4<0.5:../../sysutils/py-magic
 DEPENDS+=	${PYPKGPREFIX}-commonmark>=0.8<0.10:../../textproc/py-commonmark
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3<4:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-yarl>=1<2:../../www/py-yarl
-DEPENDS+=	${PYPKGPREFIX}-mautrix>=0.14.3<0.15:../../chat/py-mautrix
-DEPENDS+=	${PYPKGPREFIX}-tulir-telethon>=1.25.0a3:../../chat/py-tulir-telethon
+DEPENDS+=	${PYPKGPREFIX}-mautrix>=0.16<0.17:../../chat/py-mautrix
+DEPENDS+=	${PYPKGPREFIX}-tulir-telethon>=1.25.0a7:../../chat/py-tulir-telethon
 DEPENDS+=	${PYPKGPREFIX}-asyncpg>=0.20<0.26:../../databases/py-asyncpg
 DEPENDS+=	${PYPKGPREFIX}-mako>=1<2:../../devel/py-mako
 # webp_convert and qr_login
-DEPENDS+=	${PYPKGPREFIX}-Pillow>=4<9:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=4<10:../../graphics/py-Pillow
 # qr_login
-DEPENDS+=	${PYPKGPREFIX}-qrcode>=6<7:../../graphics/py-qrcode
+DEPENDS+=	${PYPKGPREFIX}-qrcode>=6<8:../../graphics/py-qrcode
 
 USE_LANGUAGES=	# none
 
