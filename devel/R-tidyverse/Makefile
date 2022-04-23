@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/04/22 22:59:02 mef Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/23 04:53:59 mef Exp $
 
 R_PKGNAME=	tidyverse
 R_PKGVER=	1.3.1
@@ -7,6 +7,9 @@ CATEGORIES=	devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Easily Install and Load the 'Tidyverse'
 LICENSE=	mit	# + file LICENSE
+
+BROKEN=		'dtplyr, googledrive, googlesheets4, modelr, reprex are not available'
+
 
 DEPENDS+=	R-dbplyr>=2.1.1:../../databases/R-dbplyr
 DEPENDS+=	R-cli>=2.4.0:../../devel/R-cli
