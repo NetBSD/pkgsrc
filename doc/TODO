@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21719 2022/04/23 02:20:48 mef Exp $
+$NetBSD: TODO,v 1.21720 2022/04/23 23:29:19 tnn Exp $
 
 Suggested new packages
 ======================
@@ -1305,7 +1305,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o oroborus-2.0.18
 	o ortp-0.27.0
 	o oto-0.5
-	o owl-lisp-0.1.16
 	o p0f-3.09b
 	o p5-Alien-Hunspell-0.17
 	o p5-Archive-Peek-0.38
