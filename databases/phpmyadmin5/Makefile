@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/04/22 19:28:59 tm Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/23 00:10:44 taca Exp $
 
 DISTNAME=	phpMyAdmin-5.1.3-all-languages
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/-all-languages//:tl}
@@ -24,10 +24,11 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=7.2.5:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=7.2.5:../../devel/php-gettext
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=7.2.5:../../graphics/php-gd
 
+PHP_VERSIONS_INCOMPATIBLE=	56
+
 .include "../../lang/php/phpversion.mk"
 
 CONFLICTS+=			${PHP_PKG_PREFIX}-phpmyadmin-4..*
-PHP_VERSIONS_INCOMPATIBLE=	56
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pax
