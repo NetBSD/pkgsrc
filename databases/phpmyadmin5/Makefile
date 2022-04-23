@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/04/23 00:10:44 taca Exp $
+# $NetBSD: Makefile,v 1.3 2022/04/23 11:04:50 tnn Exp $
 
 DISTNAME=	phpMyAdmin-5.1.3-all-languages
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/-all-languages//:tl}
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v2
 
 # Required
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=7.2.5:../../converters/php-iconv
-DEPENDS+=	${PHP_PKG_PREFIX}-json>=7.2.5:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=7.2.5:../../databases/php-mysqli
 
 # Suggest
