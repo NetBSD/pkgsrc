@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2022/04/17 01:44:23 gutteridge Exp $
+# $NetBSD: Makefile,v 1.41 2022/04/23 00:15:46 gutteridge Exp $
 
 DISTNAME=		xview3.2p1-X11R6
 PKGNAME=		xview-clients-3.2.1
@@ -11,7 +11,7 @@ COMMENT=		OpenLook applications and man pages
 
 MAKE_JOBS_SAFE=		no
 
-NOT_FOR_PLATFORM=	*-*-alpha	# it builds but everything segfaults...
+BROKEN_ON_PLATFORM=	${LP64PLATFORMS}  # It builds but everything segfaults.
 
 LICENSE=		sun-openlook-license
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
