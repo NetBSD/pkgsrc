@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/01/15 13:36:41 js Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/04/23 12:35:57 js Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -46,12 +46,6 @@ ${PYSITELIB}/mautrix/appservice/state_store/sqlalchemy.pyo
 ${PYSITELIB}/mautrix/bridge/__init__.py
 ${PYSITELIB}/mautrix/bridge/__init__.pyc
 ${PYSITELIB}/mautrix/bridge/__init__.pyo
-${PYSITELIB}/mautrix/bridge/_community.py
-${PYSITELIB}/mautrix/bridge/_community.pyc
-${PYSITELIB}/mautrix/bridge/_community.pyo
-${PYSITELIB}/mautrix/bridge/async_getter_lock.py
-${PYSITELIB}/mautrix/bridge/async_getter_lock.pyc
-${PYSITELIB}/mautrix/bridge/async_getter_lock.pyo
 ${PYSITELIB}/mautrix/bridge/bridge.py
 ${PYSITELIB}/mautrix/bridge/bridge.pyc
 ${PYSITELIB}/mautrix/bridge/bridge.pyo
@@ -94,6 +88,9 @@ ${PYSITELIB}/mautrix/bridge/crypto_state_store.pyo
 ${PYSITELIB}/mautrix/bridge/custom_puppet.py
 ${PYSITELIB}/mautrix/bridge/custom_puppet.pyc
 ${PYSITELIB}/mautrix/bridge/custom_puppet.pyo
+${PYSITELIB}/mautrix/bridge/disappearing_message.py
+${PYSITELIB}/mautrix/bridge/disappearing_message.pyc
+${PYSITELIB}/mautrix/bridge/disappearing_message.pyo
 ${PYSITELIB}/mautrix/bridge/e2ee.py
 ${PYSITELIB}/mautrix/bridge/e2ee.pyc
 ${PYSITELIB}/mautrix/bridge/e2ee.pyo
@@ -289,9 +286,6 @@ ${PYSITELIB}/mautrix/crypto/store/asyncpg/upgrade.pyo
 ${PYSITELIB}/mautrix/crypto/store/memory.py
 ${PYSITELIB}/mautrix/crypto/store/memory.pyc
 ${PYSITELIB}/mautrix/crypto/store/memory.pyo
-${PYSITELIB}/mautrix/crypto/types.py
-${PYSITELIB}/mautrix/crypto/types.pyc
-${PYSITELIB}/mautrix/crypto/types.pyo
 ${PYSITELIB}/mautrix/crypto/unwedge.py
 ${PYSITELIB}/mautrix/crypto/unwedge.pyc
 ${PYSITELIB}/mautrix/crypto/unwedge.pyo
@@ -313,6 +307,9 @@ ${PYSITELIB}/mautrix/errors/well_known.pyo
 ${PYSITELIB}/mautrix/fixmodule.py
 ${PYSITELIB}/mautrix/fixmodule.pyc
 ${PYSITELIB}/mautrix/fixmodule.pyo
+${PYSITELIB}/mautrix/genall.py
+${PYSITELIB}/mautrix/genall.pyc
+${PYSITELIB}/mautrix/genall.pyo
 ${PYSITELIB}/mautrix/py.typed
 ${PYSITELIB}/mautrix/types/__init__.py
 ${PYSITELIB}/mautrix/types/__init__.pyc
@@ -420,12 +417,24 @@ ${PYSITELIB}/mautrix/util/async_db/aiosqlite.pyo
 ${PYSITELIB}/mautrix/util/async_db/asyncpg.py
 ${PYSITELIB}/mautrix/util/async_db/asyncpg.pyc
 ${PYSITELIB}/mautrix/util/async_db/asyncpg.pyo
+${PYSITELIB}/mautrix/util/async_db/connection.py
+${PYSITELIB}/mautrix/util/async_db/connection.pyc
+${PYSITELIB}/mautrix/util/async_db/connection.pyo
 ${PYSITELIB}/mautrix/util/async_db/database.py
 ${PYSITELIB}/mautrix/util/async_db/database.pyc
 ${PYSITELIB}/mautrix/util/async_db/database.pyo
+${PYSITELIB}/mautrix/util/async_db/errors.py
+${PYSITELIB}/mautrix/util/async_db/errors.pyc
+${PYSITELIB}/mautrix/util/async_db/errors.pyo
+${PYSITELIB}/mautrix/util/async_db/scheme.py
+${PYSITELIB}/mautrix/util/async_db/scheme.pyc
+${PYSITELIB}/mautrix/util/async_db/scheme.pyo
 ${PYSITELIB}/mautrix/util/async_db/upgrade.py
 ${PYSITELIB}/mautrix/util/async_db/upgrade.pyc
 ${PYSITELIB}/mautrix/util/async_db/upgrade.pyo
+${PYSITELIB}/mautrix/util/async_getter_lock.py
+${PYSITELIB}/mautrix/util/async_getter_lock.pyc
+${PYSITELIB}/mautrix/util/async_getter_lock.pyo
 ${PYSITELIB}/mautrix/util/bridge_state.py
 ${PYSITELIB}/mautrix/util/bridge_state.pyc
 ${PYSITELIB}/mautrix/util/bridge_state.pyo
@@ -484,12 +493,6 @@ ${PYSITELIB}/mautrix/util/formatter/html_reader.py
 ${PYSITELIB}/mautrix/util/formatter/html_reader.pyc
 ${PYSITELIB}/mautrix/util/formatter/html_reader.pyi
 ${PYSITELIB}/mautrix/util/formatter/html_reader.pyo
-${PYSITELIB}/mautrix/util/formatter/html_reader_htmlparser.py
-${PYSITELIB}/mautrix/util/formatter/html_reader_htmlparser.pyc
-${PYSITELIB}/mautrix/util/formatter/html_reader_htmlparser.pyo
-${PYSITELIB}/mautrix/util/formatter/html_reader_lxml.py
-${PYSITELIB}/mautrix/util/formatter/html_reader_lxml.pyc
-${PYSITELIB}/mautrix/util/formatter/html_reader_lxml.pyo
 ${PYSITELIB}/mautrix/util/formatter/markdown_string.py
 ${PYSITELIB}/mautrix/util/formatter/markdown_string.pyc
 ${PYSITELIB}/mautrix/util/formatter/markdown_string.pyo
@@ -536,6 +539,9 @@ ${PYSITELIB}/mautrix/util/simple_lock.pyo
 ${PYSITELIB}/mautrix/util/simple_template.py
 ${PYSITELIB}/mautrix/util/simple_template.pyc
 ${PYSITELIB}/mautrix/util/simple_template.pyo
+${PYSITELIB}/mautrix/util/utf16_surrogate.py
+${PYSITELIB}/mautrix/util/utf16_surrogate.pyc
+${PYSITELIB}/mautrix/util/utf16_surrogate.pyo
 ${PYSITELIB}/mautrix/util/variation_selector.json
 ${PYSITELIB}/mautrix/util/variation_selector.py
 ${PYSITELIB}/mautrix/util/variation_selector.pyc
