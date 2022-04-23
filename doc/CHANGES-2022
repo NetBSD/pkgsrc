@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2006 2022/04/23 02:20:48 mef Exp $
+$NetBSD: CHANGES-2022,v 1.2007 2022/04/23 05:12:36 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3144,3 +3144,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/R-xfun to 0.30 [mef 2022-04-23]
 	Updated print/R-knitr to 1.38 [mef 2022-04-23]
 	Updated textproc/R-jsonlite to 1.8.0 [mef 2022-04-23]
+	Added textproc/R-dtplyr version 1.2.1 [mef 2022-04-23]
