@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2023 2022/04/23 20:44:01 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.2024 2022/04/23 21:10:00 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3162,3 +3162,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/R-stringi to 1.7.6 [mef 2022-04-23]
 	Updated lang/rust to 1.59.0nb1 [he 2022-04-23]
 	Removed multimedia/fxtv [tnn 2022-04-23]
+	Updated editors/featherpad to 1.2.0 [pin 2022-04-23]
