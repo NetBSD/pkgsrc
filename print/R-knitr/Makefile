@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/04/23 11:42:58 mef Exp $
+# $NetBSD: Makefile,v 1.14 2022/04/23 14:31:10 mef Exp $
 
 R_PKGNAME=	knitr
 R_PKGVER=	1.38
@@ -8,7 +8,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	General-purpose package for dynamic report generation in R
 LICENSE=	gnu-gpl-v1 OR gnu-gpl-v2 OR gnu-gpl-v3
 
-DEPENDS+=	R-evaluate>=0.10:../../devel/R-evaluate
+DEPENDS+=	R-evaluate>=0.15:../../devel/R-evaluate
 DEPENDS+=	R-xfun>=0.29:../../devel/R-xfun
 DEPENDS+=	R-digest>=0.6.4:../../security/R-digest
 DEPENDS+=	R-formatR>=0.10:../../textproc/R-formatR
@@ -34,7 +34,6 @@ TEST_DEPENDS+=	R-httr-[0-9]*:../../www/R-httr
 # Packages suggested but not available:
 #  'tikzDevice', 'reticulate', 'JuliaCall', 'magick', 'gifski',
 #  'showtext', 'ragg', 'styler', 'targets'
-
 
 USE_LANGUAGES=	# none
 
