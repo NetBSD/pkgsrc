@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2022/04/17 01:44:23 gutteridge Exp $
+# $NetBSD: Makefile,v 1.45 2022/04/23 00:15:46 gutteridge Exp $
 
 DISTNAME=		xview3.2p1-X11R6
 PKGNAME=		xview-lib-3.2.1
@@ -17,9 +17,8 @@ DEPENDS+=		xview-config>=3.2.1nb6:../../x11/xview-config
 
 LICENSE=		sun-openlook-license
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
-# builds, but binaries in../xview-clients all crash
-NOT_FOR_PLATFORM=	*-*-alpha
-NOT_FOR_PLATFORM+=	Linux-*-*
+# Builds, but binaries in ../xview-clients all crash. Broken va_arg handling.
+BROKEN_ON_PLATFORM=	${LP64PLATFORMS}
 
 USE_IMAKE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/04/17 01:44:23 gutteridge Exp $
+# $NetBSD: Makefile,v 1.27 2022/04/23 00:15:46 gutteridge Exp $
 #
 
 DISTNAME=	xview3.2p1-X11R6
@@ -17,6 +17,6 @@ DEPENDS+=	xview-config>=3.2.1:../../x11/xview-config
 DEPENDS+=	xview-lib>=3.2.1nb11:../../x11/xview-lib
 DEPENDS+=	xview-clients>=3.2.1:../../x11/xview-clients
 
-NOT_FOR_PLATFORM=	*-*-alpha       # broken va_arg handling in xview-lib
+BROKEN_ON_PLATFORM=	${LP64PLATFORMS}  # broken va_arg handling in xview-lib
 
 .include "../../mk/bsd.pkg.mk"
