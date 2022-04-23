@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2022/01/15 13:36:41 js Exp $
+# $NetBSD: Makefile,v 1.17 2022/04/23 12:35:57 js Exp $
 
-DISTNAME=	mautrix-python-0.14.5
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
+DISTNAME=	python-0.16.3
+PKGNAME=	mautrix-${DISTNAME}
 CATEGORIES=	chat python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=tulir/}
-GITHUB_PROJECT=	mautrix-python
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mautrix/}
+GITHUB_PROJECT=	python
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-WRKSRC=		${WRKDIR}/python-${PKGVERSION_NOREV}
 
 MAINTAINER=	js@pkgsrc.org
 HOMEPAGE=	https://github.com/tulir/mautrix-python
