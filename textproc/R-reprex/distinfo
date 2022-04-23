@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/23 05:35:10 mef Exp $
+
+BLAKE2s (R/reprex_2.0.1.tar.gz) = c675ab4510c72e81be269f1dc5122990ff46673b24e25f8dd4c4c2be19468e32
+SHA512 (R/reprex_2.0.1.tar.gz) = f5eaeac1854e1d2bc89e27642fdb65744a305937d781e77e1e57a581c11e6b392e34cfebfc8166d21ad4d68b18637f5d7cf114be4428d7bb40d827fa0ee7ee80
+Size (R/reprex_2.0.1.tar.gz) = 1087338 bytes
