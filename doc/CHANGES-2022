@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2010 2022/04/23 05:55:40 mef Exp $
+$NetBSD: CHANGES-2022,v 1.2011 2022/04/23 06:05:20 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3148,3 +3148,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added math/R-modelr version 0.1.8 [mef 2022-04-23]
 	Added textproc/R-reprex version 2.0.1 [mef 2022-04-23]
 	Updated devel/R-uuid to 1.1.0 [mef 2022-04-23]
+	Added www/R-gargle version 1.2.0 [mef 2022-04-23]
