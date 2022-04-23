@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:23:11 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/04/23 09:29:43 adam Exp $
 
-BLAKE2s (pyphen-0.11.0.tar.gz) = fef3a572f8d87abc0d3ee117c147e578010c1c11e96849a58b3b6ec088e4e2a4
-SHA512 (pyphen-0.11.0.tar.gz) = 49f510cdc00af479054c64380de8fb5722e2c99a3cf0f882c4b78b82c80300b6cb28c53c593a091e358eae662b28a50ac6e63afb8d57f2adf5c03e5a7f879c68
-Size (pyphen-0.11.0.tar.gz) = 1954944 bytes
-SHA1 (patch-setup.py) = bd47141df7bfd0cedd47d58a1ed8637c748ca345
+BLAKE2s (pyphen-0.12.0.tar.gz) = c1a2a4d30c2b2fed0e446641a00258c0b1b46401e56a4df7c56907d8946e40f9
+SHA512 (pyphen-0.12.0.tar.gz) = 144218b8d5454fffc16de0c839c93a0badadd5c9b7867195072b77d9130440059ec84b5819d7eed12b65d2cc51cb7202226cb44ef6844f18fa428c4b3a1ef2b5
+Size (pyphen-0.12.0.tar.gz) = 1958745 bytes
