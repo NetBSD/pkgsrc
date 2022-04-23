@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2021/06/05 13:06:41 mef Exp $
+# $NetBSD: Makefile,v 1.13 2022/04/23 06:44:29 mef Exp $
 
 R_PKGNAME=	rlang
-R_PKGVER=	0.4.11
+R_PKGVER=	1.0.2
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
@@ -17,7 +17,7 @@ TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 TEST_DEPENDS+=	R-vctrs-[0-9]*:../../math/R-vctrs
 
-USE_LANGUAGES=	c
+USE_LANGUAGES=	c c++
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
