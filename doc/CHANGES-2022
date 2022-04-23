@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2018 2022/04/23 12:45:17 js Exp $
+$NetBSD: CHANGES-2022,v 1.2019 2022/04/23 13:49:58 js Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3157,3 +3157,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/py-mautrix to 0.16.3 [js 2022-04-23]
 	Updated devel/R-testthat to 3.1.3 [mef 2022-04-23]
 	Updated chat/py-tulir-telethon to 1.25.0a7 [js 2022-04-23]
+	Updated chat/mautrix-telegram to 0.11.3 [js 2022-04-23]
