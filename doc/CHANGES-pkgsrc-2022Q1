@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q1,v 1.1.2.4 2022/04/16 10:17:03 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q1,v 1.1.2.5 2022/04/23 19:04:59 bsiegert Exp $
 
 Changes to packages and infrastructure on the 2022Q1 branch:
 
@@ -47,4 +47,10 @@ lang/ruby31-base: security update
 Pullup ticket #6619 - requested by gutteridge
 devel/git-base: security update
 devel/git: security update
+
+Pullup ticket #6620 - requested by nia
+multimedia/pitivi: build fix
+
+Pullup ticket #6621 - requested by nia
+devel/afl++: ARM build fix
 
