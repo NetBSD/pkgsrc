@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.5 2020/11/06 18:04:26 maya Exp $
+# $NetBSD: Makefile,v 1.6 2022/04/23 23:34:21 tnn Exp $
 
 DISTNAME=	paratype-ttf-20140616
 CATEGORIES=	fonts
-MASTER_SITES=	http://www.paratype.com/uni/public/
 DISTFILES=	PTSans.zip PTSerif.zip PTMono.zip
+SITES.PTSans.zip=	-https://company.paratype.com/system/attachments/629/original/ptsans.zip
+SITES.PTSerif.zip=	-https://company.paratype.com/system/attachments/634/original/ptserif.zip
+SITES.PTMono.zip=	-https://company.paratype.com/system/attachments/631/original/ptmono.zip
 DIST_SUBDIR=	${DISTNAME}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.paratype.com/public/
+HOMEPAGE=	https://company.paratype.com/pt-sans-pt-serif
 COMMENT=	Public Fonts for Minority Languages of Russia
 LICENSE=	paratype
 
