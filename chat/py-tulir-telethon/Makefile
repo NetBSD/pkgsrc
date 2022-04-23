@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/01/15 21:11:24 js Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/23 12:45:09 js Exp $
 
-DISTNAME=	tulir-telethon-1.25.0a3
+DISTNAME=	tulir-telethon-1.25.0a7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tulir-telethon/}
