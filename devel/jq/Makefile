@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2018/11/03 12:47:16 leot Exp $
+# $NetBSD: Makefile,v 1.18 2022/04/23 21:05:18 tnn Exp $
 
 DISTNAME=	jq-1.6
+PKGREVISION=	1
+DIST_SUBDIR=	${DISTNAME}	# remove on next update
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=stedolan/}
 GITHUB_RELEASE=	${DISTNAME}
