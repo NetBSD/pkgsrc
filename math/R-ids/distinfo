@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/23 06:17:06 mef Exp $
+
+BLAKE2s (R/ids_1.0.1.tar.gz) = 62f2aace068516ee776ec0edc3ab68067c5c870fa40464f11e173d7ccffaedcc
+SHA512 (R/ids_1.0.1.tar.gz) = 132fc37ba07695a26791596e348079a2275acc1d92bac736b3b6edd4128c61270cb9bc38b8a00e8bd848fd15a91d4c672154f630bb8d6a270bbdcbe8344be18c
+Size (R/ids_1.0.1.tar.gz) = 91213 bytes
