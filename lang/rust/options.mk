@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2022/04/18 14:59:59 he Exp $
+# $NetBSD: options.mk,v 1.22 2022/04/23 15:54:34 he Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
 PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs
@@ -20,15 +20,6 @@ PKG_SUGGESTED_OPTIONS+=		rust-llvm
 PKG_SUGGESTED_OPTIONS+=	rust-cargo-static
 .endif
 
-# (NetBSD)/sparc64 systems fail to build libunwind 13.0.1,
-# and libunwind is depended on here unless rust-llvm is turned
-# on.  The latter succeeds, though.  So default to using
-# rust-llvm on NetBSD/sparc64.
-# Ref. PR#56791
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64)
-PKG_SUGGESTED_OPTIONS+=		rust-llvm
-.endif
-
 .include "../../mk/bsd.options.mk"
 
 #
@@ -37,7 +28,6 @@ PKG_SUGGESTED_OPTIONS+=		rust-llvm
 #
 .if empty(PKG_OPTIONS:Mrust-llvm)
 BUILDLINK_API_DEPENDS.llvm+=	llvm>=12.0.0
-.include "../../lang/libunwind/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-llvm-link-shared
 #CONFIGURE_ARGS+=	--llvm-libunwind=system
