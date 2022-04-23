@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21718 2022/04/22 19:30:33 tm Exp $
+$NetBSD: TODO,v 1.21719 2022/04/23 02:20:48 mef Exp $
 
 Suggested new packages
 ======================
@@ -391,7 +391,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-fracdiff-1.5.1
 	o R-gss-2.2.2
 	o R-igraph-1.2.6
-	o R-jsonlite-1.7.2
 	o R-labeling-0.4.2
 	o R-latticeExtra-0.6.29
 	o R-lmtest-0.9.38
