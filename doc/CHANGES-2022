@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2027 2022/04/23 22:43:47 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.2028 2022/04/23 23:29:19 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3166,3 +3166,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/hgrep to 0.2.5 [pin 2022-04-23]
 	Updated multimedia/libtheoraplay to 0.0.20210704 [tnn 2022-04-23]
 	Updated graphics/mojoshader to 0.0.20220415 [tnn 2022-04-23]
+	Updated lang/owl-lisp to 0.2 [tnn 2022-04-23]
