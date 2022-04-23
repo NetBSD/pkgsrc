@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2022/03/28 10:44:24 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2022/04/23 22:43:19 tnn Exp $
 
-DISTNAME=	f9036699b53a
-PKGNAME=	mojoshader-0.0.20210110
-PKGREVISION=	3
+DISTNAME=	mojoshader-0.0.20220415
 CATEGORIES=	graphics
-MASTER_SITES=	https://hg.icculus.org/icculus/mojoshader/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=icculus/}
+GITHUB_TAG=	335f92c67a719bff03b51dc83d34431ca823228a
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.icculus.org/mojoshader/
@@ -13,9 +12,7 @@ LICENSE=	zlib
 
 USE_LANGUAGES+=	c c++
 
-WRKSRC=		${WRKDIR}/mojoshader-f9036699b53a
 USE_CMAKE=	yes
-
 
 # FLIP_VIEWPORT is needed by some FNA games (FEZ if I recall correctly)
 CMAKE_ARGS=	-DBUILD_SHARED_LIBS=ON \
