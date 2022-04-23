@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/23 05:09:51 mef Exp $
+
+BLAKE2s (R/dtplyr_1.2.1.tar.gz) = 4dcb593f4cd72c3f4e5a5f76a04b6cd5d778e3016b26c1deac4881dbdfb6ddc2
+SHA512 (R/dtplyr_1.2.1.tar.gz) = 1257ce97f17cce4141364280231ba441e35550d9c9b73c6836290c7e5890314a08437d78cbfdd20ae9690312f96e00ae4e0e5dd51166de7ef914bd5417f0c6e4
+Size (R/dtplyr_1.2.1.tar.gz) = 288369 bytes
