@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.Linux,v 1.4 2018/03/24 18:05:58 bacon Exp $
-share/examples/munge/rc.d/init.d/munge
-share/examples/munge/sysconfig/munge

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2018/03/24 18:05:58 bacon Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/04/23 22:50:50 tnn Exp $
 bin/munge
 bin/remunge
 bin/unmunge
@@ -28,6 +28,8 @@ man/man3/munge_strerror.3
 man/man7/munge.7
 man/man8/munged.8
 sbin/munged
+share/examples/munge/default/munge
+share/examples/munge/init.d/munge
 @pkgdir var/run/munge
 @pkgdir var/log/munge
 @pkgdir var/lib/munge
