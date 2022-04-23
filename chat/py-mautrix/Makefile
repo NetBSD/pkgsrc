@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/04/23 12:35:57 js Exp $
+# $NetBSD: Makefile,v 1.18 2022/04/23 12:36:30 js Exp $
 
 DISTNAME=	python-0.16.3
 PKGNAME=	mautrix-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3<4:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-attrs>=18.1.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-yarl>=1.5.1:../../www/py-yarl
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37
 
 USE_LANGUAGES=	# none
 EGG_NAME=	mautrix-${PKGVERSION_NOREV}
