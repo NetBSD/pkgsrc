@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.12 2020/03/20 11:58:03 nia Exp $
+# $NetBSD: Makefile.common,v 1.13 2022/04/23 21:40:41 tnn Exp $
 #
 # used by multimedia/flashplayer/Makefile
 
 DISTNAME=	flash-0.4.10
 CATEGORIES=	multimedia
-MASTER_SITES=	http://www.swift-tools.com/Flash/
+#MASTER_SITES=	http://www.swift-tools.com/Flash/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
