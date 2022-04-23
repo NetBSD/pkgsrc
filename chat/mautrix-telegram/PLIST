@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/01/15 20:22:06 js Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/04/23 13:49:50 js Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -73,6 +73,9 @@ ${PYSITELIB}/mautrix_telegram/db/__init__.pyo
 ${PYSITELIB}/mautrix_telegram/db/bot_chat.py
 ${PYSITELIB}/mautrix_telegram/db/bot_chat.pyc
 ${PYSITELIB}/mautrix_telegram/db/bot_chat.pyo
+${PYSITELIB}/mautrix_telegram/db/disappearing_message.py
+${PYSITELIB}/mautrix_telegram/db/disappearing_message.pyc
+${PYSITELIB}/mautrix_telegram/db/disappearing_message.pyo
 ${PYSITELIB}/mautrix_telegram/db/message.py
 ${PYSITELIB}/mautrix_telegram/db/message.pyc
 ${PYSITELIB}/mautrix_telegram/db/message.pyo
@@ -94,6 +97,9 @@ ${PYSITELIB}/mautrix_telegram/db/telethon_session.pyo
 ${PYSITELIB}/mautrix_telegram/db/upgrade/__init__.py
 ${PYSITELIB}/mautrix_telegram/db/upgrade/__init__.pyc
 ${PYSITELIB}/mautrix_telegram/db/upgrade/__init__.pyo
+${PYSITELIB}/mautrix_telegram/db/upgrade/v00_latest_revision.py
+${PYSITELIB}/mautrix_telegram/db/upgrade/v00_latest_revision.pyc
+${PYSITELIB}/mautrix_telegram/db/upgrade/v00_latest_revision.pyo
 ${PYSITELIB}/mautrix_telegram/db/upgrade/v01_initial_revision.py
 ${PYSITELIB}/mautrix_telegram/db/upgrade/v01_initial_revision.pyc
 ${PYSITELIB}/mautrix_telegram/db/upgrade/v01_initial_revision.pyo
@@ -103,6 +109,18 @@ ${PYSITELIB}/mautrix_telegram/db/upgrade/v02_sponsored_events.pyo
 ${PYSITELIB}/mautrix_telegram/db/upgrade/v03_reactions.py
 ${PYSITELIB}/mautrix_telegram/db/upgrade/v03_reactions.pyc
 ${PYSITELIB}/mautrix_telegram/db/upgrade/v03_reactions.pyo
+${PYSITELIB}/mautrix_telegram/db/upgrade/v04_disappearing_messages.py
+${PYSITELIB}/mautrix_telegram/db/upgrade/v04_disappearing_messages.pyc
+${PYSITELIB}/mautrix_telegram/db/upgrade/v04_disappearing_messages.pyo
+${PYSITELIB}/mautrix_telegram/db/upgrade/v05_channel_ghosts.py
+${PYSITELIB}/mautrix_telegram/db/upgrade/v05_channel_ghosts.pyc
+${PYSITELIB}/mautrix_telegram/db/upgrade/v05_channel_ghosts.pyo
+${PYSITELIB}/mautrix_telegram/db/upgrade/v06_puppet_avatar_url.py
+${PYSITELIB}/mautrix_telegram/db/upgrade/v06_puppet_avatar_url.pyc
+${PYSITELIB}/mautrix_telegram/db/upgrade/v06_puppet_avatar_url.pyo
+${PYSITELIB}/mautrix_telegram/db/upgrade/v07_puppet_phone_number.py
+${PYSITELIB}/mautrix_telegram/db/upgrade/v07_puppet_phone_number.pyc
+${PYSITELIB}/mautrix_telegram/db/upgrade/v07_puppet_phone_number.pyo
 ${PYSITELIB}/mautrix_telegram/db/user.py
 ${PYSITELIB}/mautrix_telegram/db/user.pyc
 ${PYSITELIB}/mautrix_telegram/db/user.pyo

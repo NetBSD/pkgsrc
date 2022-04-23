@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/01/15 20:22:06 js Exp $
+$NetBSD: distinfo,v 1.6 2022/04/23 13:49:50 js Exp $
 
-BLAKE2s (mautrix-telegram-0.11.1.tar.gz) = 9a13327174f1c4120913bebb97f050b3fae0d12f8b4613d4bce66230c3f51240
-SHA512 (mautrix-telegram-0.11.1.tar.gz) = 699bd0dd7b472bdb0329307ee309b3ee98d09dc2501d9544ab6e6031ec88e4ab9b422d77ecefdfa0a573e3e8726d5f1cb10cb87c94cf0e452f32564d79ca4f9d
-Size (mautrix-telegram-0.11.1.tar.gz) = 688634 bytes
+BLAKE2s (telegram-0.11.3.tar.gz) = 0275fba27113439b0e76409bc36d2b17cb744402f9e3cd3da27251a4d378fb32
+SHA512 (telegram-0.11.3.tar.gz) = e7746cfa85fb4d54a0e1f694436ab69b6bbda903d081e9c7af151e710e2ed980a33c454643adddd682d932efbd8cc2cf4230f1fc5f75f39eaafef89df4630218
+Size (telegram-0.11.3.tar.gz) = 698132 bytes
