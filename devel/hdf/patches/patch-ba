@@ -1,27 +1,13 @@
-$NetBSD: patch-ba,v 1.4 2013/10/27 20:31:21 joerg Exp $
+$NetBSD: patch-ba,v 1.5 2022/04/24 21:50:48 tnn Exp $
 
---- configure.orig	2009-01-21 02:44:10.000000000 +0000
+--- configure.orig	2020-03-03 17:40:50.000000000 +0000
 +++ configure
-@@ -5057,7 +5057,12 @@ fi
- 
-           done
-           ;;
--        -[lLR]*)
-+        -R*)
-+          ac_arg="-Wl,$ac_arg"
-+          shift
-+          set X $ac_arg "$@"
-+          ;;
-+        -[lLR]*|-Wl*)
-             ac_exists=false
-   for ac_i in $ac_cv_f77_libs; do
-     if test x"$ac_arg" = x"$ac_i"; then
-@@ -7515,6 +7515,8 @@ case "$host" in
-   mips*-sgi-irix4*)     BAR="irix4"       ;;
+@@ -24808,6 +24808,8 @@ done
+ case "$host" in
    *-linux*)             BAR="linux"       ;;
    *-freebsd*)           BAR="fbsd"        ;;
-+  *-netbsd*)		BAR="fbsd"	  ;;
-+  *-dragonfly*)		BAR="fbsd"	  ;;
-   ia64-*-*)             BAR="ia64"        ;;
++  *-netbsd*)           BAR="fbsd"        ;;
++  *-dragonfly*)           BAR="fbsd"        ;;
    *-ibm-aix*)           BAR="aix"         ;;
-   i386-*-solaris2*)     BAR="solarisx86"  ;;
+   sparc64-*-solaris2*)  BAR="solaris64"   ;;
+   *-*-solaris2*)        BAR="solaris"     ;;
