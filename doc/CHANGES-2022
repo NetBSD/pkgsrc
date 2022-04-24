@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2080 2022/04/24 21:52:28 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.2081 2022/04/24 23:53:08 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3239,3 +3239,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/kubectl to 1.22.9 [leot 2022-04-24]
 	Updated devel/git-cliff to 0.7.0 [pin 2022-04-24]
 	Updated devel/hdf to 4.2.15 [tnn 2022-04-24]
+	Removed security/tacshell [tnn 2022-04-24]
