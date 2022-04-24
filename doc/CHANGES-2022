@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2064 2022/04/24 15:32:28 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2065 2022/04/24 15:33:53 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3208,3 +3208,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/lxqt-notificationd to 1.1.0 [pin 2022-04-24]
 	Updated x11/lxqt-config to 1.1.0 [pin 2022-04-24]
 	Updated security/lxqt-openssh-askpass to 1.1.0 [pin 2022-04-24]
+	Updated security/lxqt-policykit to 1.1.0 [pin 2022-04-24]
