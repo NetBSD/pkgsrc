@@ -1,12 +1,10 @@
-# $NetBSD: options.mk,v 1.68 2021/06/22 12:35:45 nia Exp $
+# $NetBSD: options.mk,v 1.69 2022/04/24 15:00:42 nia Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
 # Note: This expression is the same as ${PKGBASE}, but the latter is
 # not defined yet, so we cannot use it here.
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
-
-.include "../../mk/oss.buildlink3.mk"
 
 .include "../../multimedia/libvdpau/available.mk"
 .include "../../comms/lirc/available.mk"
@@ -23,17 +21,15 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
 
 # Options supported by both mplayer* or mencoder*.
 
-PKG_SUPPORTED_OPTIONS=	gif jpeg mad dts dv png theora vorbis x264 debug
+PKG_SUPPORTED_OPTIONS=	gif gnutls jpeg mad dts dv png theora vorbis x264 debug
 PKG_SUPPORTED_OPTIONS+=	dvdread dvdnav libmpg123 opus
-.  if ${OSS_TYPE} != "none"
-PKG_SUPPORTED_OPTIONS+=	oss
-.  endif
 
 PKG_SUPPORTED_OPTIONS+=		faad
 
 # Set options based on the specific package being built.
 .  if !empty(PKGNAME:M*mplayer*)
-PKG_SUPPORTED_OPTIONS+=	aalib alsa caca ggi mplayer-menu nas pulseaudio sdl
+PKG_SUPPORTED_OPTIONS+=	aalib alsa caca ggi gnutls jack ladspa mplayer-menu nas
+PKG_SUPPORTED_OPTIONS+=	openal pulseaudio sdl
 
 .    if ${VDPAU_AVAILABLE} == "yes"
 PKG_SUPPORTED_OPTIONS+=	vdpau
@@ -54,8 +50,7 @@ PKG_SUPPORTED_OPTIONS+=		cdparanoia
 PKG_SUPPORTED_OPTIONS.SunOS+=	mlib
 PKG_SUPPORTED_OPTIONS.Linux+=	vidix
 
-# TODO: v4l2 option probably could be supported on Linux and OpenBSD too
-.  if ${OPSYS} == "NetBSD" && exists(/usr/include/sys/videoio.h)
+.  if ${OPSYS} == "NetBSD" || ${OPSYS} == "Linux"
 PKG_SUPPORTED_OPTIONS+=	v4l2
 PKG_SUGGESTED_OPTIONS+=	v4l2
 .  endif
@@ -66,7 +61,7 @@ PKG_SUGGESTED_OPTIONS+=	v4l2
 PKG_SUPPORTED_OPTIONS+=	mplayer-runtime-cpudetection
 .  endif
 .  if ${MACHINE_ARCH} == "i386"
-PKG_SUPPORTED_OPTIONS+=	mplayer-default-cflags mplayer-win32
+PKG_SUPPORTED_OPTIONS+=	mplayer-win32
 .  endif
 .  if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 PKG_SUPPORTED_OPTIONS+=	mplayer-ssse3
@@ -80,10 +75,10 @@ PKG_SUPPORTED_OPTIONS+=	xvid
 # Define PKG_SUGGESTED_OPTIONS.
 # -------------------------------------------------------------------------
 
-.  for o in   dvdread dvdnav gif jpeg \
-	    mplayer-menu \
-	    mplayer-default-cflags mplayer-runtime-cpudetection \
-	    oss png sdl vdpau lirc
+.  for o in   dvdread dvdnav gif gnutls jpeg \
+	    ladspa mplayer-menu \
+	    mplayer-runtime-cpudetection \
+	    png sdl vdpau lirc
 .    if !empty(PKG_SUPPORTED_OPTIONS:M${o})
 PKG_SUGGESTED_OPTIONS+=		${o}
 .    endif
@@ -265,12 +260,6 @@ CONFIGURE_ARGS+=	--enable-nas
 CONFIGURE_ARGS+=	--disable-nas
 .  endif
 
-.  if ${OSS_TYPE} != "none" && !empty(PKG_OPTIONS:Moss)
-CONFIGURE_ARGS+=	--enable-ossaudio
-.  else
-CONFIGURE_ARGS+=	--disable-ossaudio
-.  endif
-
 .  if !empty(PKG_OPTIONS:Mpng)
 CONFIGURE_ARGS+=	--enable-png
 .    include "../../graphics/png/buildlink3.mk"
@@ -347,6 +336,34 @@ CONFIGURE_ARGS+=	--enable-lirc
 .    include "../../comms/lirc/buildlink3.mk"
 .  else
 CONFIGURE_ARGS+=	--disable-lirc
+.  endif
+
+.  if !empty(PKG_OPTIONS:Mgnutls)
+CONFIGURE_ARGS+=	--enable-gnutls
+.    include "../../security/gnutls/buildlink3.mk"
+.  else
+CONFIGURE_ARGS+=	--disable-gnutls
+.  endif
+
+.  if !empty(PKG_OPTIONS:Mjack)
+CONFIGURE_ARGS+=	--enable-jack
+.    include "../../audio/jack/buildlink3.mk"
+.  else
+CONFIGURE_ARGS+=	--disable-jack
+.  endif
+
+.  if !empty(PKG_OPTIONS:Mopenal)
+CONFIGURE_ARGS+=	--enable-openal
+.    include "../../audio/openal-soft/buildlink3.mk"
+.  else
+CONFIGURE_ARGS+=	--disable-openal
+.  endif
+
+.  if !empty(PKG_OPTIONS:Mladspa)
+CONFIGURE_ARGS+=	--enable-ladspa
+.    include "../../audio/ladspa/buildlink3.mk"
+.  else
+CONFIGURE_ARGS+=	--disable-ladspa
 .  endif
 
 # -------------------------------------------------------------------------
