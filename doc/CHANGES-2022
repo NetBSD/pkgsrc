@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2074 2022/04/24 17:24:34 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2075 2022/04/24 17:38:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3222,3 +3222,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-xml2rfc to 3.12.4 [adam 2022-04-24]
 	Updated fonts/harfbuzz to 4.2.1 [adam 2022-04-24]
 	Updated fonts/harfbuzz-icu to 4.2.1 [adam 2022-04-24]
+	Updated devel/py-pylru to 1.2.1 [adam 2022-04-24]
+	Updated www/py-pylint-django to 2.5.3 [adam 2022-04-24]
+	Removed math/py-Numeric [adam 2022-04-24]
