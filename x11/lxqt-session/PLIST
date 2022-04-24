@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/11/19 14:17:44 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/04/24 15:42:08 pin Exp $
 bin/lxqt-config-session
 bin/lxqt-leave
 bin/lxqt-session
@@ -16,7 +16,6 @@ share/applications/lxqt-reboot.desktop
 share/applications/lxqt-shutdown.desktop
 share/applications/lxqt-suspend.desktop
 share/examples/autostart/lxqt-xscreensaver-autostart.desktop
-share/kdm/sessions/lxqt.desktop
 share/lxqt/lxqt.conf
 share/lxqt/session.conf
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_ar.qm
