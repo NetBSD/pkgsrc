@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:23 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/04/24 17:30:35 adam Exp $
 
-DISTNAME=	pylru-1.2.0
+DISTNAME=	pylru-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylru/}
 
@@ -12,6 +11,9 @@ COMMENT=	Implementation of a least recently used (LRU) cache
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} test.py
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
