@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:18:04 nia Exp $
-
-BLAKE2s (tacshell-0.91.tar.gz) = 4e2353f86845843fa8cb400f5ae59ebd89c6482cb8d1968e09366e0313e51032
-SHA512 (tacshell-0.91.tar.gz) = da7610f67cb2c2be08f7a7a31289547ef7fbd7540eaf1d3d865ca7cd4f448957223eabcd3f9f95f221bd5a5cdf82eb470c7a9cf69e9556af556802cde70d156f
-Size (tacshell-0.91.tar.gz) = 56453 bytes
