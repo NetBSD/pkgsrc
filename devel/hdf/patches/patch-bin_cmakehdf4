@@ -1,0 +1,13 @@
+$NetBSD: patch-bin_cmakehdf4,v 1.1 2022/04/24 21:50:48 tnn Exp $
+
+--- bin/cmakehdf4.orig	2020-03-03 17:40:50.000000000 +0000
++++ bin/cmakehdf4
+@@ -29,7 +29,7 @@ exit_code=0
+ # and should have invoked as "$srcdir/bin/$progname" or
+ # "bin/$progname". So, by striping bin/$program from $0,
+ # we can find $srcdir.
+-if [ $0 == bin/$progname ]; then
++if [ $0 = bin/$progname ]; then
+     srcdir="."        # current directory
+ else
+     # $0 is $srdir/bin/$progname
