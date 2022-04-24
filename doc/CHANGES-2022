@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2052 2022/04/24 15:14:13 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2053 2022/04/24 15:18:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3196,3 +3196,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/lxqt-admin to 1.1.0 [pin 2022-04-24]
 	Updated graphics/screengrab to 2.4.0 [pin 2022-04-24]
 	Updated sysutils/pcmanfm-qt to 1.1.0 [pin 2022-04-24]
+	Updated x11/qtermwidget to 1.1.0 [pin 2022-04-24]
