@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2048 2022/04/24 15:07:01 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2049 2022/04/24 15:08:28 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3192,3 +3192,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/liblxqt to 1.1.0 [pin 2022-04-24]
 	Updated x11/libfm-qt to 1.1.0 [pin 2022-04-24]
 	Updated graphics/lximage-qt to 1.1.0 [pin 2022-04-24]
+	Updated x11/lxqt-about to 1.1.0 [pin 2022-04-24]
