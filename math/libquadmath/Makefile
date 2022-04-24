@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/06/21 20:41:30 nia Exp $
+# $NetBSD: Makefile,v 1.4 2022/04/24 19:50:30 tnn Exp $
 
 DISTNAME=	gcc-11.1.0
 PKGNAME=	${DISTNAME:S/gcc/libquadmath/}
@@ -12,7 +12,7 @@ COMMENT=	GCC Quad-Precision Math Library
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c99 c++
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake perl
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 INFO_FILES=	yes
