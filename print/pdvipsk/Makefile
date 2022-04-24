@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/11/04 19:58:00 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2022/04/24 00:02:49 tnn Exp $
 
 DISTNAME=	texlive-20091011-source
 PKGNAME=	pdvipsk-5.98pl1.7b
@@ -35,8 +35,11 @@ INSTALLATION_DIRS+=	bin
 
 .include "../../print/kpathsea/buildlink3.mk"
 
+### NetBSD's patch(1) fails in patching dvips.info.
+###
+TOOL_DEPENDS+=	patch-[0-9]*:../../devel/patch
 pre-patch:
-	${PATCH} -d ${WRKSRC} -p1 -s \
+	${PREFIX}/bin/gpatch -d ${WRKSRC} -p1 -s \
 		< ${WRKDIR}/dvipsk-5.98-p1.7b-tl2009.diff
 
 do-install:
