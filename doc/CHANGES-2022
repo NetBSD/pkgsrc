@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2076 2022/04/24 17:44:14 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.2077 2022/04/24 17:54:28 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3228,3 +3228,11 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/tcllib to 1.20 [tnn 2022-04-24]
 	Updated textproc/groonga to 12.0.2 [tnn 2022-04-24]
 	Updated databases/postgresql-pgroonga to 2.3.6 [tnn 2022-04-24]
+	Removed databases/postgresql96 [tnn 2022-04-24]
+	Removed databases/postgresql96-client [tnn 2022-04-24]
+	Removed databases/postgresql96-contrib [tnn 2022-04-24]
+	Removed databases/postgresql96-docs [tnn 2022-04-24]
+	Removed databases/postgresql96-plperl [tnn 2022-04-24]
+	Removed databases/postgresql96-plpython [tnn 2022-04-24]
+	Removed databases/postgresql96-pltcl [tnn 2022-04-24]
+	Removed databases/postgresql96-server [tnn 2022-04-24]
