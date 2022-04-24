@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2056 2022/04/24 15:22:40 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2057 2022/04/24 15:24:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3200,3 +3200,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/qterminal to 1.1.0 [pin 2022-04-24]
 	Updated audio/pavucontrol-qt to 1.1.0 [pin 2022-04-24]
 	Updated graphics/lxqt-themes to 1.1.0 [pin 2022-04-24]
+	Updated security/lxqt-sudo to 1.1.0 [pin 2022-04-24]
