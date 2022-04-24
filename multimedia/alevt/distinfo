@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:00:58 nia Exp $
-
-BLAKE2s (alevt-1.6.1.tar.gz) = 26cedc3e4edc5991f860786517856ed578d27c122c0997e47005b9e7f96751bf
-SHA512 (alevt-1.6.1.tar.gz) = 39311377b0a763fc647b4225570e7a42e4f97a0bd40826c4449beb9d86ceee739f6830a82b13f3406416754ccb76db53997331ad101107b76fe0f2e03c8cba6a
-Size (alevt-1.6.1.tar.gz) = 117731 bytes
-SHA1 (patch-aa) = 2079d6f12a27f7a17ed2ea4aa85331c93abc0b3b
-SHA1 (patch-ab) = 6761ff96fe89fd61b63b0c91ee79a07c2c9628cf
-SHA1 (patch-exp-gfx.c) = d17a8a6420a7c549170fc33820382bddd6eea510
