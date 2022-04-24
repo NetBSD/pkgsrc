@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2022/04/18 19:10:32 adam Exp $
+# $NetBSD: Makefile,v 1.74 2022/04/24 22:45:40 tnn Exp $
 
 DISTNAME=	swift-3.0
 PKGREVISION=	55
@@ -28,6 +28,8 @@ SUBST_FILES.path+=	SwifTools/Application/UnixApplicationPathProvider.cpp
 SUBST_MESSAGE.path=	Fixing path to support files.
 
 MAKE_ENV+=		qt5=1
+
+CHECK_PORTABILITY_SKIP+=	Swift/Packaging/MacOSX/package.sh
 
 do-configure:
 	cd ${WRKSRC} ; \
