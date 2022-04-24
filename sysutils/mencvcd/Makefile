@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2020/03/01 11:50:24 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/04/24 15:00:42 nia Exp $
 
-DISTNAME=	MPlayer-1.4
+DISTNAME=	MPlayer-1.5
 PKGNAME=	${DISTNAME:S/MPlayer/mencvcd/}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.mplayerhq.hu/MPlayer/releases/
