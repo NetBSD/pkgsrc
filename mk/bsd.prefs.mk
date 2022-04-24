@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.418 2022/04/04 11:23:18 riastradh Exp $
+# $NetBSD: bsd.prefs.mk,v 1.419 2022/04/24 17:55:55 gutteridge Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -923,7 +923,7 @@ LP32PLATFORMS=		*-*-earm* *-*-hppa *-*-i386 *-*-m68000 *-*-m68k \
 # Keywords: BROKEN_ON_PLATFORM 64bit
 #
 LP64PLATFORMS=		*-*-aarch64 *-*-aarch64eb *-*-alpha *-*-ia64 \
-			*-*-powerpc64 *-*-riscv64 *-*-sparc64 *-*-x86_64
+			*-*-powerpc64* *-*-riscv64 *-*-sparc64 *-*-x86_64
 
 # Lists of big-endian and little-endian platforms, to be used with
 # BROKEN_ON_PLATFORM.
