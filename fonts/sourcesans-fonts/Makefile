@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.9 2019/11/02 22:24:43 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2022/04/24 15:30:43 tnn Exp $
 
-DISTNAME=	source-sans-pro-2.020R-ro-1.075R-it
-PKGNAME=	sourcesans-fonts-2.020
-PKGREVISION=	1
+DISTNAME=	OTF-source-sans-3.046R
+PKGNAME=	${DISTNAME:S/OTF-source-sans/sourcesans-fonts/}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=adobe-fonts/}
-GITHUB_PROJECT=	source-sans-pro
-GITHUB_TAG=	2.020R-ro/1.075R-it
-EXTRACT_SUFX=	.tar.gz
+GITHUB_PROJECT=	source-sans
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://adobe-fonts.github.io/source-sans-pro/
+HOMEPAGE=	https://github.com/adobe-fonts/source-sans
 COMMENT=	Set of OpenType fonts designed for user interfaces from Adobe
 LICENSE=	ofl-v1.1
 
-WRKSRC=		${WRKDIR}/${DISTNAME:S|/|-|}
+WRKSRC=		${WRKDIR}
 
 USE_LANGUAGES=		# none
 NO_BUILD=		yes
