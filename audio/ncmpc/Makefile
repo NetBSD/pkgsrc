@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2021/12/13 12:45:37 nia Exp $
+# $NetBSD: Makefile,v 1.46 2022/04/24 13:51:41 nia Exp $
 
-DISTNAME=	ncmpc-0.45
+DISTNAME=	ncmpc-0.46
 CATEGORIES=	audio
 MASTER_SITES=	https://musicpd.org/download/ncmpc/0/
 EXTRACT_SUFX=	.tar.xz
@@ -42,9 +42,8 @@ SUBST_VARS.py+=		PYVERSSUFFIX
 .include "../../devel/meson/build.mk"
 .include "../../audio/libmpdclient/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/pthread.buildlink3.mk"
