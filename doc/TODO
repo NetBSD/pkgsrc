@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21721 2022/04/24 08:33:05 wiz Exp $
+$NetBSD: TODO,v 1.21722 2022/04/24 08:36:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -361,6 +361,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o GNUMail-1.2.2
 	o Gorm-1.2.26
 	o HElib-2.1.0
+	o ImageMagick-7.1.0.31
 	o ImageMagick6-6.9.12.8
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
@@ -740,6 +741,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gimp-docs-sv-2.10.0
 	o gimp-docs-zh_CN-2.10.0
 	o gindent-2.2.12
+	o git-2.36.0
 	o gitolite-3.6.12
 	o gjs-1.70.1
 	o gkrellm-2.3.11
@@ -1284,6 +1286,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o onscripter-20200722
 	o oo2c-2.1.7
 	o opal-3.16.2
+	o openal-soft-1.22.0
 	o openblas-0.3.20
 	o opencolorio-2.0.0
 	o opencpn-plugin-draw-1.8.5.2
@@ -1377,6 +1380,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o parrot-8.1.0
 	o pcc-1.1.0
 	o pcc-current-20210421
+	o pciutils-3.8.0
 	o pdf-redact-tools-0.1.2
 	o pdfpc-4.4.1
 	o pdmenu-1.2.87
@@ -1490,6 +1494,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-gammu-3.1
 	o py-gcovr-4.2
 	o py-goocalendar-0.7.2
+	o py-gstreamer1-1.20.1
 	o py-gsutil-5.6
 	o py-hgview-1.9.0
 	o py-hyperscan-0.2.0
@@ -1565,6 +1570,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rep-gtk-0.90.8.1
 	o reposurgeon-4.26
 	o resize_image-0.7
+	o restish-0.13.2
 	o rexx-regina-3.9.0
 	o riemann-client-1.10.4.1
 	o rio500-0.8.1
@@ -1584,6 +1590,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rubber-1.5.1
 	o rudiments-1.4.2
 	o rump-20131213
+	o rust-analyzer-0.0.20220418
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
@@ -1750,12 +1757,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o uhttpmock-0.5.3
 	o unicap-0.9.8
 	o unicode-screensaver-0.5.2
+	o unifont-14.0.03
 	o units-2.21
 	o upower-0.99.17 [switches to build with meson]
 	o urlgrabber-3.10.2
 	o userppp-030706
 	o userspace-rcu-0.12.2
 	o utilisp-1.14
+	o vala-0.56.1
 	o valgrind-3.18.1
 	o vault-1.7.4
 	o vbetool-1.1
@@ -1783,7 +1792,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wbm-virtual-server-6.16
 	o wcalc-2.4
 	o wcslib-7.6
-	o webkit-gtk-2.36.0
+	o webkit-gtk-2.36.1
 	o websvn-2.6.0
 	o wgetpaste-2.30
 	o whowatch-1.8.5
