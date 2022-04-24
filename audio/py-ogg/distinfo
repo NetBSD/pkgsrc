@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 09:59:26 nia Exp $
-
-BLAKE2s (pyogg-1.3.tar.gz) = d6ed3409cbc74782ef50c5b1fc43f6ebd75c91fbb459ecb30f662ef896e82fe1
-SHA512 (pyogg-1.3.tar.gz) = 396d2d5c15bf35c40d34b2937ac59d918195d1f3b6cf137d74571ddd8b568c7e77727b1af05aae2aec91e6db23b308f11582c3dcc1876c00b6150150a011b82f
-Size (pyogg-1.3.tar.gz) = 23871 bytes
