@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.856 2022/04/24 16:10:05 tnn Exp $
+# $NetBSD: Makefile,v 1.857 2022/04/24 23:52:43 tnn Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -633,7 +633,6 @@ SUBDIR+=	steghide
 SUBDIR+=	stegtunnel
 SUBDIR+=	stunnel
 SUBDIR+=	sudo
-SUBDIR+=	tacshell
 SUBDIR+=	tcl-tls
 SUBDIR+=	tcp_wrappers
 SUBDIR+=	tct
