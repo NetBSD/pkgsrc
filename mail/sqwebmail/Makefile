@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2021/05/24 19:52:54 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2022/04/24 15:58:42 tnn Exp $
 
 DISTNAME=	sqwebmail-5.5.3
 PKGREVISION=	12
@@ -20,6 +20,9 @@ USE_LIBTOOL=		yes
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sqwebmail
 PKG_SUPPORTED_OPTIONS=	fam
+# checking for courierauthconfig... /opt/pkg/bin/courierauthconfig
+# Cannot obtain information for user courier: Error 0
+NOT_FOR_UNPRIVILEGED=	yes
 
 .include "../../mk/bsd.options.mk"
 
