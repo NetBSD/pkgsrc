@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/11/19 09:25:52 pin Exp $
+$NetBSD: distinfo,v 1.8 2022/04/24 14:58:12 pin Exp $
 
-BLAKE2s (lxqt-build-tools-0.10.0.tar.xz) = bdc8752e9f5bf79c6a698ed2e565c67f7ec3487b75986fad5a8344c9b6cea506
-SHA512 (lxqt-build-tools-0.10.0.tar.xz) = ee7282344c6fbf09d85f845c60075b6c343ce6b6f8c233c7d664faff3b570e2836192aa2233b951242b66d86254971011d4d0bc225811344829fdc5bc83b0e5f
-Size (lxqt-build-tools-0.10.0.tar.xz) = 25312 bytes
+BLAKE2s (lxqt-build-tools-0.11.0.tar.xz) = f7914fe91aeffaf55a2ec3d2c4602ec5ab89d4b8d76373dacf74e517088e5dbb
+SHA512 (lxqt-build-tools-0.11.0.tar.xz) = d421aaf74b13efa3b603b5c8a998bfd6091f5d3c45e0201d64e0c1f12d93c45fdc12d9232b0ac1c98ccf47007560c5814612162d1ac879bb3173bad57164408d
+Size (lxqt-build-tools-0.11.0.tar.xz) = 25348 bytes
