@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2020/01/26 17:31:12 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2022/04/24 15:32:05 tnn Exp $
 
 DISTNAME=	SourceHanSansOTF-1.000
 PKGNAME=	${DISTNAME:S/SourceHanSansOTF/sourcehansans-fonts/}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=source-han-sans.adobe/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://example.com/
+HOMEPAGE=	https://github.com/adobe-fonts/source-han-sans
 COMMENT=	Set of Pan-CJK fonts from Adobe
 LICENSE=	apache-2.0
 
