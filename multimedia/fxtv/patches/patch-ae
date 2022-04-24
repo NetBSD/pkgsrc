@@ -1,0 +1,167 @@
+$NetBSD: patch-ae,v 1.5 2022/04/24 10:57:28 tnn Exp $
+
+Support png screenshots.
+Fix LP64 problems.
+
+--- imgsav.c.orig	1999-09-26 14:35:06.000000000 +0000
++++ imgsav.c
+@@ -29,6 +29,8 @@
+ 
+ /*      ******************** Include Files                ************** */
+ 
++#include <png.h>
++#include <zlib.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <unistd.h>
+@@ -137,7 +139,7 @@ static void TVIMGSAVFmtScanline24bpp( 
+                      break;
+             default:
+                 fprintf( stderr, 
+-                         "TVIMGSAVFmtScanline24bpp: Unsupported Bpp %ld\n",
++                         "TVIMGSAVFmtScanline24bpp: Unsupported Bpp %d\n",
+                          img->pix_geom.Bpp );
+                 exit(1);
+         }
+@@ -146,7 +148,7 @@ static void TVIMGSAVFmtScanline24bpp( 
+         if (( !img->pix_geom.swap_shorts ) &&
+             ( img->pix_geom.Bpp == 4 ))
+             pix = (pix >> 16) | (pix << 16);
+-        if ( !img->pix_geom.swap_bytes ) 
++        if ( !img->pix_geom.swap_bytes ) {
+             if ( img->pix_geom.Bpp == 3 )
+                 pix = ((pix & 0x00FF0000) >> 16) |
+                       ((pix & 0x000000FF) << 16);
+@@ -155,6 +157,7 @@ static void TVIMGSAVFmtScanline24bpp( 
+                       ((pix & 0x00FF0000) << 8) |
+                       ((pix & 0x0000FF00) >> 8) |
+                       ((pix & 0x000000FF) << 8);
++	}
+ 
+         pix       = SHIFT_AND_MASK( pix, shf[0], msk[0] ) |
+                     SHIFT_AND_MASK( pix, shf[1], msk[1] ) |
+@@ -216,7 +219,7 @@ void TVIMGSAVDoSaveTIFF( char filename[]
+ #endif
+ 
+     if ( TIFFScanlineSize(out) != linebytes ) {
+-        fprintf( stderr, "Linebytes mismatch: TIFF says %ld, we say %ld\n",
++        fprintf( stderr, "Linebytes mismatch: TIFF says %d, we say %d\n",
+                  TIFFScanlineSize(out), linebytes );
+         exit(1);
+     }
+@@ -254,6 +257,96 @@ void TVIMGSAVDoSaveTIFF( char filename[]
+ }
+ 
+ 
++void TVIMGSAVDoSavePNG( char filename[], TV_IMAGE *img )
++{
++    char       errmsg[160];
++    png_structp png_ptr;
++    png_infop  info_ptr;
++    FILE      *out;
++    TV_INT32   linebytes,
++               y,
++               pass,
++               compon;
++    TV_UINT8  *buf;
++
++    buf = NULL;
++    if ( img->pix_geom.type != TV_PIXELTYPE_RGB ) {
++        fprintf( stderr, "Attempt to save non-RGB data as TIFF\n" );
++        exit(1);
++    }
++
++    /*  Open output file  */
++    if ( (out = fopen( filename, "wb" )) == NULL ) {
++        sprintf( errmsg, "Can't open output file '%s'", filename );
++        XUTILDialogPause( TVTOPLEVEL, "Error", errmsg, TV_DIALOG_TYPE_OK );
++        return;
++    }
++
++    /*  Create PNG data structures and initialize  */
++    png_ptr = png_create_write_struct
++	(PNG_LIBPNG_VER_STRING, NULL, NULL, NULL);
++    if (!png_ptr) {
++        sprintf( errmsg, "Can't create PNG write structure" );
++        XUTILDialogPause( TVTOPLEVEL, "Error", errmsg, TV_DIALOG_TYPE_OK );
++	return;
++    }
++    info_ptr = png_create_info_struct(png_ptr);
++    if (!info_ptr) {
++	png_destroy_write_struct(&png_ptr, NULL);
++        sprintf( errmsg, "Can't create PNG info structure" );
++        XUTILDialogPause( TVTOPLEVEL, "Error", errmsg, TV_DIALOG_TYPE_OK );
++	return;
++    }
++
++    if (setjmp(png_jmpbuf(png_ptr))) {
++	fprintf( stderr, "PNG write error\n" );
++	XBell( TVDISPLAY, 100 );
++	png_destroy_write_struct( &png_ptr, &info_ptr );
++	free( buf );
++	fclose( out );
++	unlink( filename );
++	return;
++    }
++    png_init_io(png_ptr, out);
++    /*  fast compression  */
++    png_set_compression_level(png_ptr, Z_BEST_SPEED);
++
++    /*  Setup image format info (chunks)  */
++    png_set_IHDR(png_ptr, info_ptr, img->geom.w, img->geom.h,
++		 TV_BITS_PER_COMP, PNG_COLOR_TYPE_RGB /* XXX: ? */,
++		 PNG_INTERLACE_NONE, PNG_COMPRESSION_TYPE_DEFAULT,
++		 PNG_FILTER_TYPE_DEFAULT);
++    /*  and write it  */
++    png_write_info(png_ptr, info_ptr);
++    /*  flush image out every 50 rows */
++    png_set_flush(png_ptr, 50);
++
++    linebytes = img->geom.w * TV_BYTES_PER_PIX;
++
++    if ( (buf = malloc( linebytes )) == NULL )
++        TVUTILOutOfMemory();
++
++    /*  Convert & write the image data  */
++    for ( pass = 0; pass < 1; pass++ ) {
++        compon = DoRed | DoGreen | DoBlue;
++        for ( y = 0; y < img->geom.h; y++ ) {
++
++            /*  Format scanline  */
++            TVIMGSAVFmtScanline24bpp( img, y, compon, buf );
++
++            /*  And write it in PNG  */
++	    png_write_row(png_ptr, buf);
++        }
++    }
++
++    /*  All done.  Close up shop and go home  */
++    png_write_end(png_ptr, NULL);
++    png_destroy_write_struct(&png_ptr, &info_ptr);
++    fclose(out);
++    free( buf );
++}
++
++
+ void TVIMGSAVDoSavePPM( char filename[], TV_IMAGE *img )
+ {
+     static char     *S_fp_buf   = NULL;
+@@ -288,7 +381,7 @@ void TVIMGSAVDoSavePPM( char filename[],
+         out = stdout;
+ 
+     /*  Write binary PPM header  */
+-    fprintf( out, "P6\n%ld %ld\n%d\n", img->geom.w, img->geom.h, 
++    fprintf( out, "P6\n%d %d\n%d\n", img->geom.w, img->geom.h, 
+                                      (1 << TV_BITS_PER_COMP) - 1 );
+ 
+     linebytes = img->geom.w * TV_BYTES_PER_PIX;
+@@ -408,6 +501,9 @@ void TVIMGSAVDoSave( char filename[], TV
+             }
+             TVIMGSAVDoSaveTIFF( filename, img );  break;
+ 
++        case TV_STILL_FMT_PNG :
++            TVIMGSAVDoSavePNG ( filename, img );  break;
++
+         case TV_STILL_FMT_PPM :
+             TVIMGSAVDoSavePPM ( filename, img );  break;
+ 

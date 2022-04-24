@@ -1,0 +1,105 @@
+$NetBSD: patch-aq,v 1.4 2022/04/24 10:57:28 tnn Exp $
+
+Support Dragonfly.
+Fix LP64 problems.
+
+--- tvcapture.c.orig	2001-02-12 18:59:22.000000000 +0000
++++ tvcapture.c
+@@ -37,6 +37,8 @@
+ #include <sys/mman.h>
+ #ifdef __NetBSD__
+ # include <dev/ic/bt8xx.h>
++#elif defined(__DragonFly__)
++# include <dev/video/bktr/ioctl_bt848.h>
+ #else
+ # include <machine/ioctl_bt848.h>
+ #endif
+@@ -238,7 +240,7 @@ TV_BOOL TVCAPTUREGetPendingFrame( TV_IMA
+             return FALSE;
+ 
+         if ( S_frame_done_count-- > 0 )
+-            DRVPRINTF(( "%ld frames behind\n", S_frame_done_count ));
++            DRVPRINTF(( "%d frames behind\n", S_frame_done_count ));
+ 
+         image.buf = c->drv_buf;
+         memcpy( &image.geom, &c->geom, sizeof( image.geom ) );
+@@ -815,7 +817,7 @@ TV_BOOL TVCAPTUREQueryDriverState( TV_CA
+         case METEOR_INPUT_DEV3       : s->input_dev = TV_DEVICE_DEV3   ; break;
+ #endif
+         default :
+-             fprintf( stderr, "TVCAPTUREQueryDriverState(): Bad INPUT %ld\n",
++             fprintf( stderr, "TVCAPTUREQueryDriverState(): Bad INPUT %d\n",
+                       larg );
+              return False;
+     }
+@@ -835,7 +837,7 @@ TV_BOOL TVCAPTUREQueryDriverState( TV_CA
+         case BT848_IFORM_F_SECAM   : s->input_fmt = TV_INPUT_SECAM   ;  break;
+         case BT848_IFORM_F_RSVD    : s->input_fmt = TV_INPUT_PALNCOMB;  break;
+         default :
+-             fprintf( stderr, "TVCAPTUREQueryDriverState(): Bad FMT %ld\n",
++             fprintf( stderr, "TVCAPTUREQueryDriverState(): Bad FMT %d\n",
+                       larg );
+              return False;
+     }
+@@ -1289,7 +1291,7 @@ void TVCAPTUREPrintPixelFormats( TV_CAPT
+         }
+ 
+         SUPRINTF(( 
+-            "    %2ld  %2ld   %.8lx, %.8lx, %.8lx  %s\n",
++            "    %2d  %2d   %.8x, %.8x, %.8x  %s\n",
+             bpp, pg->Bpp, pg->mask[0], pg->mask[1], pg->mask[2], 
+             swap_chars ));
+     }
+@@ -1306,7 +1308,7 @@ void TVCAPTUREPrintPixelFormats( TV_CAPT
+             continue;
+         
+         SUPRINTF(( 
+-          "    %ld,%ld,%ld   %ld,%ld,%ld  %ld,%ld,%ld  %-7s %-10s  "
++          "    %d,%d,%d   %d,%d,%d  %d,%d,%d  %-7s %-10s  "
+           "%-5s %-6s %s\n",
+           pg->samp_size [0], pg->samp_size [1], pg->samp_size [2],
+           pg->samp_int_h[0], pg->samp_int_h[1], pg->samp_int_h[2],
+@@ -1535,7 +1537,7 @@ void TVCAPTUREInit( TV_CAPTURE *c )
+     c->contrast      =  70.0; /* % */
+     c->sat_u         =  100.0; /* % */
+     c->sat_v         =  100.0; /* % */
+-    c->addr          = NULL;
++    c->addr          = 0;
+     /*  geom -- see below */
+ 
+     c->frame_done_cb    = NULL;
+@@ -1565,7 +1567,7 @@ void TVCAPTUREInit( TV_CAPTURE *c )
+         default                :
+         case TV_INPUT_AUTO     :
+             fprintf( stderr, 
+-             "TVCAPTUREInit: Unsupported input format %ld\n", 
++             "TVCAPTUREInit: Unsupported input format %d\n", 
+              c->input_format );
+             exit(1);
+     }
+@@ -1729,7 +1731,7 @@ TV_BOOL TVCAPTUREConfigure( TV_CAPTURE  
+         goto RETURN;
+     }
+ 
+-    if ( c->xfer_mode == TV_TRANSFER_DIRECT )
++    if ( c->xfer_mode == TV_TRANSFER_DIRECT ) {
+         if ( !( x->visual_modes[ x->active_visual ] & TV_TRANSFER_DIRECT )) {
+             strcpy( S_err_msg, "Active visual does not support direct video");
+             goto RETURN;
+@@ -1738,6 +1740,7 @@ TV_BOOL TVCAPTUREConfigure( TV_CAPTURE  
+             strcpy( S_err_msg, "Direct transfer only supported for video" );
+             goto RETURN;
+         }
++    }
+ 
+     /*  Get capture geometry  */
+     if ( c->xfer_mode == TV_TRANSFER_DIRECT ) {
+@@ -1752,7 +1755,7 @@ TV_BOOL TVCAPTUREConfigure( TV_CAPTURE  
+     /*  Verify res limits and precision (all modes)  */
+     if (( g.w != g.w / c->width_res  * c->width_res  ) ||
+         ( g.h != g.h / c->height_res * c->height_res )) {
+-        sprintf( S_err_msg, "Capture geometry must be a multiple of %ldx%ld",
++        sprintf( S_err_msg, "Capture geometry must be a multiple of %dx%d",
+                  c->width_res, c->height_res );
+         goto RETURN;
+     }
