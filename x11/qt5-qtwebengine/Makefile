@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/04/20 12:49:41 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/04/24 22:31:39 tnn Exp $
 
 DISTNAME=	qtwebengine-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtwebengine-${QTVERSION}
@@ -31,11 +31,15 @@ MAKE_ENV+=	NINJAJOBS="-j ${MAKE_JOBS:U1}"
 
 UNLIMIT_RESOURCES+=	datasize
 
-CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/sqlite/src/configure
-CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/protobuf/post_process_dist.sh
 CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/ffmpeg/configure
+CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/opus/src/doc/build_draft.sh
+CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/protobuf/post_process_dist.sh
+CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/protobuf/src/google/protobuf/compiler/zip_output_unittest.sh
+CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/sqlite/src/configure
 CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/xdg-utils/scripts/xdg-terminal
 CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/third_party/xdg-utils/scripts/xdg-terminal.in
+CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/v8/tools/cppgc/export_to_github.sh
+CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/v8/tools/cppgc/test_cmake.sh
 CHECK_PORTABILITY_SKIP+=	src/3rdparty/chromium/v8/tools/run-llprof.sh
 
 # These libraries are used from the system and the build infrastructure
