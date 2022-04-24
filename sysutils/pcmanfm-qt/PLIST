@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/11/19 09:42:53 pin Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/04/24 15:13:51 pin Exp $
 bin/pcmanfm-qt
 man/man1/pcmanfm-qt.1
 share/applications/pcmanfm-qt-desktop-pref.desktop
@@ -42,6 +42,7 @@ share/pcmanfm-qt/translations/pcmanfm-qt_ro.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_ru.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_si.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_sk_SK.qm
+share/pcmanfm-qt/translations/pcmanfm-qt_sl.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_sv.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_tr.qm
 share/pcmanfm-qt/translations/pcmanfm-qt_uk.qm
