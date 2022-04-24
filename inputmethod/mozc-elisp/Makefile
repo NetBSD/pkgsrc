@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2022/04/18 19:11:29 adam Exp $
+# $NetBSD: Makefile,v 1.64 2022/04/24 22:19:15 tnn Exp $
 
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/mozc-/mozc-elisp-/}
 PKGREVISION=	9
@@ -30,3 +30,4 @@ do-install:
 		${DESTDIR}${EMACS_LISPPREFIX}
 
 .include "../../inputmethod/mozc-server/Makefile.common"
+.include "../../mk/bsd.pkg.mk"
