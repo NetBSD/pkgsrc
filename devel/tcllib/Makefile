@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2020/05/16 11:59:45 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2022/04/24 17:20:34 tnn Exp $
 
-DISTNAME=		tcllib-1.19
+DISTNAME=		tcllib-1.20
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=tcltk/}
 GITHUB_TAG=		${DISTNAME:S/./-/}
