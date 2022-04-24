@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2021/01/16 19:11:45 riastradh Exp $
-bin/xml2rfc
+@comment $NetBSD: PLIST,v 1.2 2022/04/24 17:23:07 adam Exp $
+bin/xml2rfc-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -28,6 +28,8 @@ ${PYSITELIB}/xml2rfc/data/mt.css
 ${PYSITELIB}/xml2rfc/data/mt.js
 ${PYSITELIB}/xml2rfc/data/reference.rnc
 ${PYSITELIB}/xml2rfc/data/reference.rng
+${PYSITELIB}/xml2rfc/data/referencegroup.rnc
+${PYSITELIB}/xml2rfc/data/referencegroup.rng
 ${PYSITELIB}/xml2rfc/data/rfc7991.rnc
 ${PYSITELIB}/xml2rfc/data/rfc7991.rng
 ${PYSITELIB}/xml2rfc/data/v2.rnc
@@ -103,9 +105,6 @@ ${PYSITELIB}/xml2rfc/writers/__init__.pyo
 ${PYSITELIB}/xml2rfc/writers/base.py
 ${PYSITELIB}/xml2rfc/writers/base.pyc
 ${PYSITELIB}/xml2rfc/writers/base.pyo
-${PYSITELIB}/xml2rfc/writers/debug.py
-${PYSITELIB}/xml2rfc/writers/debug.pyc
-${PYSITELIB}/xml2rfc/writers/debug.pyo
 ${PYSITELIB}/xml2rfc/writers/doc.py
 ${PYSITELIB}/xml2rfc/writers/doc.pyc
 ${PYSITELIB}/xml2rfc/writers/doc.pyo
