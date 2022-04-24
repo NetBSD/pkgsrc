@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2040 2022/04/24 13:51:52 nia Exp $
+$NetBSD: CHANGES-2022,v 1.2041 2022/04/24 14:39:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3180,3 +3180,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated chat/unrealircd6 to 6.0.3 [nia 2022-04-24]
 	Updated audio/libmpdclient to 2.20 [nia 2022-04-24]
 	Updated audio/ncmpc to 0.46 [nia 2022-04-24]
+	Updated textproc/ruby-yajl to 1.4.2 [taca 2022-04-24]
