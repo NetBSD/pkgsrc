@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2038 2022/04/24 13:47:09 nia Exp $
+$NetBSD: CHANGES-2022,v 1.2039 2022/04/24 13:49:17 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3178,3 +3178,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mbone/rtptools to 1.22 [tnn 2022-04-24]
 	Updated security/secpanel to 0.6.1 [tnn 2022-04-24]
 	Updated chat/unrealircd6 to 6.0.3 [nia 2022-04-24]
+	Updated audio/libmpdclient to 2.20 [nia 2022-04-24]
