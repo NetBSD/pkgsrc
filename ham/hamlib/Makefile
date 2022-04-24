@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2021/09/28 19:52:17 gdt Exp $
+# $NetBSD: Makefile,v 1.53 2022/04/24 22:09:31 tnn Exp $
 #
 
 DISTNAME=	hamlib-${VERSION}
@@ -25,6 +25,8 @@ USE_LIBTOOL=	yes
 CONFIGURE_ARGS+=	--without-tcl-binding \
 			--without-perl-binding \
 			--without-python-binding
+
+CHECK_PORTABILITY_SKIP+=	scripts/build-w64-jtsdk.sh
 
 # Reported to upstream mailinglist 20210915
 post-install:
