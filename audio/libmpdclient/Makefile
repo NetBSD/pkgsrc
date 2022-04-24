@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2020/07/07 12:55:33 nia Exp $
+# $NetBSD: Makefile,v 1.19 2022/04/24 13:49:07 nia Exp $
 
-DISTNAME=	libmpdclient-2.19
+DISTNAME=	libmpdclient-2.20
 CATEGORIES=	audio
 MASTER_SITES=	https://www.musicpd.org/download/libmpdclient/2/
 EXTRACT_SUFX=	.tar.xz
