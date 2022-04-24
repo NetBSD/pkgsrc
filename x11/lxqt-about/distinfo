@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/11/19 10:00:59 pin Exp $
+$NetBSD: distinfo,v 1.8 2022/04/24 15:08:06 pin Exp $
 
-BLAKE2s (lxqt-about-1.0.0.tar.xz) = 1ea9dc82202d695311c7606fe5a211341e8d27385dd99a869e1fef8ce0710328
-SHA512 (lxqt-about-1.0.0.tar.xz) = 2bfeaaee5779f51dcc023cf22025e1c651b09d0e67923bb292a5b259acd30dcedf9e45998fbca3d68231fcef66812446bfc90f79e08c218cbd3989fca8f5fb22
-Size (lxqt-about-1.0.0.tar.xz) = 43176 bytes
+BLAKE2s (lxqt-about-1.1.0.tar.xz) = 1386b065c66c27abcae01dea29a0533bb04af91e841df18841fc42ce05125113
+SHA512 (lxqt-about-1.1.0.tar.xz) = d98f7892d416ed4dc6b77fd9d0ef1ce090f41e21f964b651cfd049b285766a46bf72f5111879c56760fd701926b8760734322edc0969019c3b161436e14a2104
+Size (lxqt-about-1.1.0.tar.xz) = 45324 bytes
