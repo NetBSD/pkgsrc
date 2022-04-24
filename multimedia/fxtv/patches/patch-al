@@ -1,0 +1,170 @@
+$NetBSD: patch-al,v 1.4 2022/04/24 10:57:28 tnn Exp $
+
+Support png.
+Fix LP64 problems.
+
+--- vidsav_dlg.c.orig	2001-02-12 21:20:10.000000000 +0000
++++ vidsav_dlg.c
+@@ -235,6 +235,7 @@ static TV_ICAPFMT_ITEM_DEF     Icap_fmt_
+ 
+ static TV_IFILEFMT_ITEM_DEF    Ifile_fmt_item_def[] = {
+     { TV_STILL_FMT_TIFF   ,  "tiff", "tiffCmd" },
++    { TV_STILL_FMT_PNG    ,  "png",  "pngCmd" },
+     { TV_STILL_FMT_PPM    ,  "ppm" , "ppmCmd"  },
+     { TV_STILL_FMT_YUV    ,  "yuv" , "yuvCmd"  }
+ };
+@@ -270,7 +271,7 @@ static void SetMenuSelection( Widget men
+             }
+         if ( i >= Icap_fmt_item_def_size ) {
+             fprintf( stderr, 
+-                     "TVVIDSAVDIALOGSetSel: Unsupported filefmt %lu\n", 
++                     "TVVIDSAVDIALOGSetSel: Unsupported filefmt %u\n", 
+                      choice );
+             exit(1);
+         }
+@@ -287,7 +288,7 @@ static void SetMenuSelection( Widget men
+             }
+         if ( i >= Ifile_fmt_item_def_size ) {
+             fprintf( stderr, 
+-                     "TVVIDSAVDIALOGSetSel: Unsupported filefmt %lu\n", 
++                     "TVVIDSAVDIALOGSetSel: Unsupported filefmt %u\n", 
+                      choice );
+             exit(1);
+         }
+@@ -304,7 +305,7 @@ static void SetMenuSelection( Widget men
+             }
+         if ( i >= Ffmt_item_def_size ) {
+             fprintf( stderr, 
+-                     "TVVIDSAVDIALOGSetSel: Unsupported filefmt %lu\n", 
++                     "TVVIDSAVDIALOGSetSel: Unsupported filefmt %u\n", 
+                      choice );
+             exit(1);
+         }
+@@ -321,7 +322,7 @@ static void SetMenuSelection( Widget men
+             }
+         if ( i >= Sfmt_item_def_size ) {
+             fprintf( stderr, 
+-                     "TVVIDSAVDIALOGSetSel: Unsupported sampfmt %lu\n", 
++                     "TVVIDSAVDIALOGSetSel: Unsupported sampfmt %u\n", 
+                      choice );
+             exit(1);
+         }
+@@ -338,7 +339,7 @@ static void SetMenuSelection( Widget men
+             }
+         if ( i >= Chan_item_def_size ) {
+             fprintf( stderr, 
+-                     "TVVIDSAVDIALOGSetSel: Unsupported #chan %lu\n", 
++                     "TVVIDSAVDIALOGSetSel: Unsupported #chan %u\n", 
+                      choice );
+             exit(1);
+         }
+@@ -355,7 +356,7 @@ static void SetMenuSelection( Widget men
+             }
+         if ( i >= Rate_item_def_size ) {
+             fprintf( stderr, 
+-                     "TVVIDSAVDIALOGSetSel: Unsupported rate %lu\n", 
++                     "TVVIDSAVDIALOGSetSel: Unsupported rate %u\n", 
+                      choice );
+             exit(1);
+         }
+@@ -372,7 +373,7 @@ static void SetMenuSelection( Widget men
+             }
+         if ( i >= XtNumber( Vtrg_item_def ) ) {
+             fprintf( stderr, 
+-                     "TVVIDSAVDIALOGSetSel: Unsupported filefmt %lu\n", 
++                     "TVVIDSAVDIALOGSetSel: Unsupported filefmt %u\n", 
+                      choice );
+             exit(1);
+         }
+@@ -507,7 +508,7 @@ static TV_BOOL PrepareForVideo( TV_BOOL 
+                              NULL );
+     if ( str == NULL )
+         str = "";
+-    if (( sscanf( str, "%ldx%ld", &g.w, &g.h ) != 2 ) ||
++    if (( sscanf( str, "%dx%d", &g.w, &g.h ) != 2 ) ||
+         !TVCAPTUREValidRegionGeom( c, &g )) {
+         XUTILDialogPause( TVTOPLEVEL, "Error", "Invalid size.",
+                           TV_DIALOG_TYPE_OK );
+@@ -521,7 +522,7 @@ static TV_BOOL PrepareForVideo( TV_BOOL 
+                                  NULL );
+         if ( str == NULL )
+             str = "";
+-        if (( sscanf( str, "%ld", &fps ) != 1 ) ||
++        if (( sscanf( str, "%d", &fps ) != 1 ) ||
+             ( fps < 1 ) || ( fps > c->fps_max )) {
+             XUTILDialogPause( TVTOPLEVEL, "Error", "Invalid speed.",
+                               TV_DIALOG_TYPE_OK );
+@@ -840,7 +841,7 @@ static TV_BOOL WriteVidConvertShScript( 
+     }
+     fprintf( fp, "AUDIO_CAP_FMT_SAMPLE='%s'\n", str );
+     fprintf( fp, "AUDIO_CAP_FMT_CHAN='%d'\n", p->snd_fmt.stereo ? 2 : 1 );
+-    fprintf( fp, "AUDIO_CAP_FMT_FREQ='%ld'\n", p->snd_fmt.samp_rate );
++    fprintf( fp, "AUDIO_CAP_FMT_FREQ='%d'\n", p->snd_fmt.samp_rate );
+ 
+     switch ( p->snd_fmt.file_fmt ) {
+         case TV_AUDIO_FILE_FMT_RAW    : str = "RAW"  ;  break;
+@@ -855,8 +856,8 @@ static TV_BOOL WriteVidConvertShScript( 
+         
+     fprintf( fp, "AUDIO_TARGET_FMT='%s'\n\n", str );
+ 
+-    fprintf( fp, "VIDEO_RES_X='%ld'\n", p->geom.w );
+-    fprintf( fp, "VIDEO_RES_Y='%ld'\n", p->geom.h );
++    fprintf( fp, "VIDEO_RES_X='%d'\n", p->geom.w );
++    fprintf( fp, "VIDEO_RES_Y='%d'\n", p->geom.h );
+    
+     switch ( p->img_cap_fmt ) {
+         case TV_ICAP_FMT_RGB16 : str = "RGB16";  break;
+@@ -867,11 +868,12 @@ static TV_BOOL WriteVidConvertShScript( 
+     }
+ 
+     fprintf( fp, "VIDEO_CAP_FMT='%s'\n", str );
+-    fprintf( fp, "VIDEO_TARGET_FPS='%ld'\n", p->fps );
++    fprintf( fp, "VIDEO_TARGET_FPS='%d'\n", p->fps );
+     fprintf( fp, "VIDEO_STREAM='%s'\n\n", ( p->streaming ? "YES" : "NO" ) );
+ 
+     switch ( p->img_sav_fmt ) {
+         case TV_STILL_FMT_TIFF : str = "TIFF";  break;
++        case TV_STILL_FMT_PNG  : str = "PNG";  break;
+         case TV_STILL_FMT_PPM  : str = "PPM" ;  break;
+         case TV_STILL_FMT_YUV  : str = "YUV" ;  break;
+         default                : str = ""    ;  break;
+@@ -1202,7 +1204,7 @@ static void RecordCmdCB( Widget w, XtPoi
+ 
+         /*  This is a cheesy first-cut  */
+         fps = Vid_stats.frames*1000000L/Vid_stats.time_us;
+-        sprintf( str, "%ld", fps );
++        sprintf( str, "%d", fps );
+         TextValUpdate( FPS_text, str );
+     }
+ 
+@@ -1926,10 +1928,10 @@ void TVVIDSAVDIALOGResync()
+     /*  Set text fields to current settings  */
+     TextValUpdate( Fname_text, d->fn_video_base );
+ 
+-    sprintf( str, "%ldx%ld", d->video.geom.w, d->video.geom.h );
++    sprintf( str, "%dx%d", d->video.geom.w, d->video.geom.h );
+     TextValUpdate( Res_text, str );
+ 
+-    sprintf( str, "%ld", d->video.fps );
++    sprintf( str, "%d", d->video.fps );
+     TextValUpdate( FPS_text, str );
+ 
+     /*  Set selections based on active format  */
+@@ -2048,7 +2050,7 @@ void TVVIDSAVDIALOGNewFrameHdlr( TV_IMAG
+             else
+                 in_a_row = 0;
+ 
+-            VDPRINTF(("%4ld: Delay = %7ld us (Avg = %7ld ms, FPS = %2ld)%s\n", 
++            VDPRINTF(("%4d: Delay = %7ld us (Avg = %7d ms, FPS = %2ld)%s\n", 
+                        Vid_stats.frames, diff, 
+                        Vid_stats.time_us/Vid_stats.frames/1000, 
+                        Vid_stats.frames*1000000L/Vid_stats.time_us,
+@@ -2158,7 +2160,7 @@ void TVVIDSAVDIALOGRecordStart( TV_INT32
+         d->video.geom.w = w;
+         d->video.geom.h = h;
+         if ( Res_text ) {
+-            sprintf( res_str, "%ldx%ld", w,h );
++            sprintf( res_str, "%dx%d", w,h );
+             TextValUpdate( Res_text, res_str );
+         }
+     }
