@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2035 2022/04/24 11:10:14 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.2036 2022/04/24 12:02:43 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3175,3 +3175,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/rinetd to 0.73 [tnn 2022-04-24]
 	Removed meta-pkgs/fxtv-capture [wiz 2022-04-24]
 	Removed multimedia/alevt [wiz 2022-04-24]
+	Updated mbone/rtptools to 1.22 [tnn 2022-04-24]
