@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:06:48 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/04/24 01:35:38 tnn Exp $
 
-BLAKE2s (rinetd.tar.gz) = ef14ffc19ef8eccd30cc20caa38660e188138f228ee56681d95ea63f81e94008
-SHA512 (rinetd.tar.gz) = b6ddb496b4542ad46aacaef4b2241b16b9ee43f2f6761a18a4813d83a0a9db23fbd73a554393dcf01ae7350e8b6662571414ca6f93a949ce4effbbeddc198606
-Size (rinetd.tar.gz) = 115541 bytes
-SHA1 (patch-ab) = 9fa5cf00111a56051a40d73293ca071c125802a0
-SHA1 (patch-ac) = 743b979bfc287bb0968e418a06cab8a8d2b6dc64
+BLAKE2s (rinetd-0.73.tar.gz) = 209c299937246e078a9434f8b6c12036d06be645cd01d68c3b729538b9923f3f
+SHA512 (rinetd-0.73.tar.gz) = e4a96f9251707eb130d063a76413beda13c2aebee9756d3b2d0d5987bcb735f8f38be348a41ead128b4177ebab6da9d8344223fcdce7404858944e2c954a4662
+Size (rinetd-0.73.tar.gz) = 140115 bytes
+SHA1 (patch-Makefile.in) = baf3940ae964e534abb674572e1ea711373c23ee
+SHA1 (patch-src_rinetd.c) = 24e600beadd00dc3ede98aa1280c95e498b00176

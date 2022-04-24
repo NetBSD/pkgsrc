@@ -1,38 +1,32 @@
-# $NetBSD: Makefile,v 1.19 2019/05/23 19:23:10 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2022/04/24 01:35:38 tnn Exp $
 #
 
-DISTNAME=		rinetd
-PKGNAME=		${DISTNAME}-0.62
-PKGREVISION=		3
+DISTNAME=		rinetd-0.73
 CATEGORIES=		net
-MASTER_SITES=		http://www.boutell.com/rinetd/http/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=samhocevar/}
+GITHUB_RELEASE=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.boutell.com/rinetd/
+HOMEPAGE=		https://github.com/samhocevar/rinetd
 COMMENT=		Internet redirection server
+LICENSE=		gnu-gpl-v2
 
-NO_CONFIGURE=		yes
-BUILD_TARGET=		rinetd
+GNU_CONFIGURE=		yes
 
-CPPFLAGS+=		-DRINETD_CONF="\"${PKG_SYSCONFDIR}/rinetd.conf\""
+CPPFLAGS.NetBSD+=	-D_NETBSD_SOURCE # for SA_RESTART
+CPPFLAGS.SunOS+=	-D__EXTENSIONS__ # for SA_RESTART
 
-INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	src/rinetd.h
+SUBST_SED.paths=	-e 's,/etc/rinetd.conf,${PKG_SYSCONFDIR}/rinetd.conf,'
+SUBST_STAGE.paths=	pre-configure
 
 RCD_SCRIPTS=		rinetd
 
-SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	rinetd.8
-SUBST_VARS.paths=	PREFIX
-SUBST_VARS.paths+=	PKG_SYSCONFDIR
-SUBST_STAGE.paths=	pre-configure
+INSTALLATION_DIRS=	share/examples/rinetd
+EGDIR=			${PREFIX}/share/examples/rinetd
+CONF_FILES=		${EGDIR}/rinetd.conf ${PKG_SYSCONFDIR}/rinetd.conf
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
-
-do-build:
-	cd ${WRKSRC} && env ${MAKE_ENV} ${CC} ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} -o rinetd *.c
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/rinetd ${DESTDIR}${PREFIX}/sbin/.
-	${INSTALL_MAN} ${WRKSRC}/rinetd.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/.
 
 .include "../../mk/bsd.pkg.mk"
