@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2059 2022/04/24 15:27:09 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2060 2022/04/24 15:27:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3203,3 +3203,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/lxqt-sudo to 1.1.0 [pin 2022-04-24]
 	Updated archivers/lxqt-archiver to 0.6.0 [pin 2022-04-24]
 	Updated x11/lxqt-runner to 1.1.0 [pin 2022-04-24]
+	Updated time/ruby-tzinfo-data to 1.2022.1 [taca 2022-04-24]
