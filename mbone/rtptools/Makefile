@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.12 2019/10/12 20:14:08 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2022/04/24 11:48:43 tnn Exp $
 #
 
 DISTNAME=		rtptools-1.21
 PKGREVISION=		1
 CATEGORIES=		mbone
-MASTER_SITES=		http://www.cs.columbia.edu/IRT/software/rtptools/download/
+#MASTER_SITES=		http://www.cs.columbia.edu/IRT/software/rtptools/download/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.cs.columbia.edu/IRT/software/rtptools/
+HOMEPAGE=		https://web.archive.org/web/20200220182022/http://www.cs.columbia.edu/irt/software/rtptools/
 COMMENT=		Tools for processing RTP data
 # LICENSE=		# See COPYRIGHT file, avoid direct commercial advantate
 
