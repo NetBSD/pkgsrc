@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.155 2021/12/08 16:05:46 adam Exp $
+# $NetBSD: Makefile,v 1.156 2022/04/24 15:16:34 nia Exp $
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
 # that *both* distinfo files contain the correct, up-to-date files and
@@ -8,7 +8,6 @@
 #
 
 PKGNAME=	gmplayer-${MPLAYER_VERSION}
-PKGREVISION=	8
 
 SKIN_SITES=	http://www1.mplayerhq.hu/MPlayer/skins/		\
 		http://www2.mplayerhq.hu/MPlayer/skins/		\
@@ -128,17 +127,14 @@ do-install:
 	${RM} -f ${DESTDIR}${PREFIX}/share/mplayer/skins/disappearer/volume/spec
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../multimedia/libdvdnav/buildlink3.mk"
+.include "../../multimedia/mplayer-share/depends.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
 .include "../../x11/libXvMC/buildlink3.mk"
 .include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
-
-.include "../../multimedia/mplayer-share/Makefile.depends"
-
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-.include "../../multimedia/mplayer-share/Makefile.cflags"
