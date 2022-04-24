@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:18:48 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/04/24 17:30:35 adam Exp $
 
-BLAKE2s (pylru-1.2.0.tar.gz) = bbd184eb5b349834e97fd273143ea47f110150e2c3a0755128907879fe8ff8f7
-SHA512 (pylru-1.2.0.tar.gz) = d4b247cb3740c2f94f4f41bd9affbb87db4e2ec8ff566978d130d08fee9df6109c13b64f22536903bf8be3ea60d4b105dd969d1156a279115b6bfedb817cdbf5
-Size (pylru-1.2.0.tar.gz) = 18533 bytes
+BLAKE2s (pylru-1.2.1.tar.gz) = f71ee8753001a022046df4c2f7169ec5056e655f452020e90eade0bf92a8edf4
+SHA512 (pylru-1.2.1.tar.gz) = 06549ec128d13e00cf95638775d962c3feb25450eb26dd5cbd1275350768a3de895049b438191a9968926f4de37624e7a8774edd58b6007c040bf75a4450d727
+Size (pylru-1.2.1.tar.gz) = 16923 bytes
