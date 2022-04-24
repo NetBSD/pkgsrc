@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/11/19 10:12:53 pin Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/04/24 15:09:41 pin Exp $
 bin/lxqt-admin-user
 bin/lxqt-admin-user-helper
 share/applications/lxqt-admin-user.desktop
@@ -18,6 +18,7 @@ share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_et.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_fr.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_gl.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_he.qm
+share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_hi.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_hr.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_hu.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_id.qm
