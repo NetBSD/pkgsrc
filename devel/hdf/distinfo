@@ -1,14 +1,11 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 10:14:50 nia Exp $
+$NetBSD: distinfo,v 1.17 2022/04/24 21:50:48 tnn Exp $
 
-BLAKE2s (HDF4.2r4.tar.gz) = f4a3d8769280b953447317e4c03ea001e71d4b940caaaae02c399708a2b112db
-SHA512 (HDF4.2r4.tar.gz) = 184166a79154bbae4e4efa888042d3b1d398e0b35f6bca680a598bbfc137122b4109da9db6ae45c0caea02a0bd64c2d6a6459ba88f411a3f62edc5de57e83e0a
-Size (HDF4.2r4.tar.gz) = 3914118 bytes
-SHA1 (patch-ai) = 3b85a0d32ca8e7d4065bf09960de2769c12740cd
-SHA1 (patch-aj) = f1f64d19b4346da5b18c2d80c93f929a96b56b70
-SHA1 (patch-ao) = cf461ca847ddef05c4876fe3527beda3242ee2f2
-SHA1 (patch-ap) = 18a209229a60742a73c720d55f558949285351f2
-SHA1 (patch-ar) = 5fbb6e8c56ccf05db0217e9551a0c72ecd9f5c06
-SHA1 (patch-as) = b4fa7cd3bcafd75c9bfc045c2849bde21becd2de
-SHA1 (patch-ba) = 33e79d38ce68540308445f709f5cbafb1b917d05
-SHA1 (patch-hdf_fmpool_configure.in) = 78c80e18fdc931476c36fc451a36dc93cc254484
-SHA1 (patch-mfhdf_ncgen_ncgen.l) = a2d5a5de6a1491582d73dad291fdb0ffa40b7e9a
+BLAKE2s (hdf-4.2.15.tar.bz2) = ff1c7833d9b0c21f46e437a3071bf376a3f5783ea2c91e5b8afb96d56360e223
+SHA512 (hdf-4.2.15.tar.bz2) = 7d4037800ef8950ed74f225355ef5458444bed26fc189fbbd2ce7d36009998013ac1f6ba5d4e60834acf8f6f73550357238745acc35e162679919400a48191e9
+Size (hdf-4.2.15.tar.bz2) = 3647900 bytes
+SHA1 (patch-ao) = 1d17fef8c7b10670a1a82fd41aacf5761684a693
+SHA1 (patch-ap) = 6587f64f688d39aac99dad9d445d388f555f8aff
+SHA1 (patch-ba) = e1bc12d455a0b85c93ea8cab9f0b39621b349980
+SHA1 (patch-bin_cmakehdf4) = 13c1f36d72f6fc780c61591ac4623a07421217dc
+SHA1 (patch-hdf_test_tutils.h) = 98d99e153f33cfaa1fc24321c993b734f9dba9ab
+SHA1 (patch-mfhdf_ncgen_ncgen.l) = 721f73cb5b219922fdc096b7f7fe1e9c8db5e9cc
