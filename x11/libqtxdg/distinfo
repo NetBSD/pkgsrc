@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/11/19 09:30:11 pin Exp $
+$NetBSD: distinfo,v 1.8 2022/04/24 15:00:00 pin Exp $
 
-BLAKE2s (libqtxdg-3.8.0.tar.xz) = ea439c2dcf435c86155de7a9087bf33143a33b479461e02da996e9a8a338b558
-SHA512 (libqtxdg-3.8.0.tar.xz) = e9e8d163fe1a60a2d03787ec3feef6ff6e89dfea4df7c0c7b3a72784992baf49ffeb352894d3cb8747ec0cd49576562f7dae3abbde932d13374f51bc77f14ea1
-Size (libqtxdg-3.8.0.tar.xz) = 76044 bytes
+BLAKE2s (libqtxdg-3.9.0.tar.xz) = 94fdd6cad1d45c21390f5710595de910b9f1754563818b8671ed6d1144e6c37f
+SHA512 (libqtxdg-3.9.0.tar.xz) = ec2763f148125fc62518eedbc28d1c1bed9337c15da566342749cbb3659ed7d5b8771785df116fe3d707f613c5d79337e440993bfa713fbc5b280acc3d687cfa
+Size (libqtxdg-3.9.0.tar.xz) = 76760 bytes
