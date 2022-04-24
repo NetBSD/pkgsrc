@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.35 2022/04/24 22:16:03 tnn Exp $
+# $NetBSD: Makefile.common,v 1.36 2022/04/24 22:19:15 tnn Exp $
+
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
 # used by inputmethod/mozc-server/Makefile
 # used by inputmethod/mozc-tool/Makefile
 # used by inputmethod/mozc-renderer/Makefile
 # used by inputmethod/uim-mozc/Makefile
-#
 
 DISTNAME=	mozc-2.26.4282.100
 CATEGORIES=	inputmethod
@@ -93,4 +93,3 @@ do-configure:
 
 .include "../../lang/python/tool.mk"
 .include "../../mk/atomic64.mk"
-.include "../../mk/bsd.pkg.mk"
