@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2002/09/30 13:52:55 taca Exp $
-bin/rats
-man/man1/rats.1
-share/rats/rats-c.xml
-share/rats/rats-openssl.xml
-share/rats/rats-perl.xml
-share/rats/rats-php.xml
-share/rats/rats-python.xml

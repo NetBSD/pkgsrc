@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:17:52 nia Exp $
-
-BLAKE2s (rats-2.1.tar.gz) = 809064c2b12f978f094883ec066fd4c3f778f76c3f30882eff5be7fa9e6d9721
-SHA512 (rats-2.1.tar.gz) = 2fdb670dc9559c453a6c69ee2d411e2626c0ee4cca4b59ceda878142008e136dfd11f8265c0719383212b38b0358a9cab1a29f1cc92a986fc800dd0c46bdf0d3
-Size (rats-2.1.tar.gz) = 326930 bytes
-SHA1 (patch-aa) = e03d134c5c24bfad0577532faa8e846acb20adbb
-SHA1 (patch-ab) = 7acde84cdd1a25c1bc4ce66cec12152a7cade341
