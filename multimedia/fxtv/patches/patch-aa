@@ -1,0 +1,118 @@
+$NetBSD: patch-aa,v 1.13 2022/04/24 10:57:28 tnn Exp $
+
+Config for pkgsrc.
+
+--- Makefile.orig	2001-02-12 22:08:59.000000000 +0000
++++ Makefile
+@@ -4,13 +4,10 @@
+ 
+ HAVE_XFREE86 = YES
+ 
+-ifneq ($(X11PREFIX),)                      # NetBSD
+-X11BASE      ?= $(X11PREFIX)
+-else
+ X11BASE      ?= /usr/X11R6
+-endif
++X11BASEINST  ?= $(PREFIX)
+ 
+-X11BASEINST  ?= $(X11BASE)
++PREFIX       ?= /usr/local
+ LOCALBASE    ?= /usr/local
+ DEBUG        = NO
+ OS           = $(shell uname -s)
+@@ -24,15 +21,6 @@ override LIBDIRS           = $(X11BASE)/
+ override SHELL             = /bin/sh
+ 
+ #
+-# NetBSD stuff
+-#
+-ifeq ($(OS),NetBSD)
+-  override INC            += -I/usr/pkg/include
+-  override LIBDIRS        += /usr/pkg/lib
+-  override LD_INC         += -lossaudio -lz
+-endif
+-
+-#
+ # OpenBSD stuff
+ #
+ ifeq ($(OS),OpenBSD)
+@@ -50,19 +38,22 @@ endif
+ ifeq ($(OS),NetBSD)
+   override RPATH_FLAG      = -R
+ endif
++ifeq ($(OS),DragonFly)
++  override RPATH_FLAG      = -R
++endif
+ 
+-override LD_INC            = $(foreach dir,$(LIBDIRS),-Wl,-L,$(dir))
++override LD_INC            = $(foreach dir,$(LIBDIRS),-Wl,-L$(dir))
+ ifneq ($(RPATH_FLAG),)
+-  override LD_INC         += $(foreach dir,$(LIBDIRS),-Wl,$(RPATH_FLAG),$(dir))
++  override LD_INC         += $(foreach dir,$(LIBDIRS),-Wl,$(RPATH_FLAG)$(dir))
+ endif
+ 
+ #
+ # CFLAGS
+ #
+ ifneq ($(DEBUG),NO)
+-  override CFLAGS          = -DDEBUG -g
++  override CFLAGS          += -DDEBUG -g
+ else
+-  override CFLAGS          = -DNDEBUG -O2
++  override CFLAGS          += -DNDEBUG
+ endif
+ C_WARN_FLAG                = -Wall
+ override CFLAGS           += $(C_WARN_FLAG) $(INC) $(CF_VERS)
+@@ -72,6 +63,15 @@ endif
+ 
+ override CFLAGS           += $(C_WARN_FLAG) -DX11BASE=\"$(X11BASEINST)\"
+ 
++#
++# NetBSD stuff
++#
++ifeq ($(OS),NetBSD)
++  override INC            += -I$(LOCALBASE)/include
++  override LIBDIRS        += $(LOCALBASE)/lib
++  override LD_INC         += $(LIBOSSAUDIO) -lz
++endif
++
+ ifeq ($(OS), linux)
+ override CFLAGS            = $(CFLAGS) -DOLD_TUNER_IFACE
+ endif
+@@ -79,9 +79,9 @@ endif
+ #
+ # LDFLAGS,LIBS
+ #
+-override LDFLAGS           = $(LD_INC) 
++override LDFLAGS           += $(LD_INC) 
+ override VIDEOLIB_LIB      = $(VIDEOLIB_DIR)/libvideo.a
+-override LIBS              = -ltiff -ljpeg -lXaw3d -lXmu -lXt -lXpm \
++override LIBS              = -lpng -ltiff -ljpeg -lXaw -lXmu -lXt -lXpm \
+                              -lSM -lICE -lXext -lX11 -lm
+ ifeq ($(HAVE_XFREE86),YES)
+   override LIBS           += -lXxf86dga -lXxf86vm
+@@ -116,15 +116,15 @@ $(VIDEOLIB_LIB) :
+ tv.o : tv.c app_rsrc.h
+ 
+ install : fxtv
+-	mkdir -p $(FXTV_LIBDIR)/bitmaps
+-	install -c -m 444 -o root $(PIXMAPS) $(FXTV_LIBDIR)/bitmaps
+-	install -c -m 444 -o root README $(FXTV_LIBDIR)
+-	mkdir -p $(X11BASEINST)/lib/X11/app-defaults
+-	install -c -m 444 -o root Fxtv $(X11BASEINST)/lib/X11/app-defaults
+-	mkdir -p $(X11BASEINST)/bin
+-	install -c -m 444 -o root fxtv.1 $(X11BASEINST)/man/man1/fxtv.1
+-	install -c -m 555 -o root fxtv $(X11BASEINST)/bin
+-	install -c -m 555 -o root fxtv_cnvt.sh $(FXTV_LIBDIR)
++	mkdir -p ${DESTDIR}$(FXTV_LIBDIR)/bitmaps
++	${BSD_INSTALL_DATA} $(PIXMAPS) ${DESTDIR}$(FXTV_LIBDIR)/bitmaps
++	${BSD_INSTALL_DATA} README ${DESTDIR}$(FXTV_LIBDIR)
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}$(X11BASEINST)/lib/X11/app-defaults
++	${BSD_INSTALL_DATA} Fxtv ${DESTDIR}$(X11BASEINST)/lib/X11/app-defaults
++	${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}$(X11BASEINST)/bin
++	${BSD_INSTALL_MAN} fxtv.1 ${DESTDIR}$(X11BASEINST)/$(PKGMANDIR)/man1/fxtv.1
++	${BSD_INSTALL_PROGRAM} fxtv ${DESTDIR}$(X11BASEINST)/bin
++	${BSD_INSTALL_SCRIPT} fxtv_cnvt.sh ${DESTDIR}$(FXTV_LIBDIR)
+ 
+ clean:
+ 	rm -f *.o fxtv *.core *~

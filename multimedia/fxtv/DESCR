@@ -1,0 +1,4 @@
+To use this application, you need a video capture/tuner card
+that's based on the Brooktree 848 capture chip, such as one of the
+Hauppauge Wincast/TV or Win/TV cards, the STV TV PCI card, or the
+Intel Smart Video Recorder III.
