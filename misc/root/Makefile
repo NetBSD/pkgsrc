@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2021/06/01 09:12:26 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2022/04/24 22:34:12 tnn Exp $
 
 DISTNAME=		root_v5.26.00b.source
 PKGNAME=		root-5.26
@@ -15,7 +15,7 @@ USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++ fortran
 NOT_FOR_COMPILER+=	f2c #lacks LOC()
 
-CHECK_PORTABILITY_SKIP=	build/win/*.sh cint/tool/INSTALLBIN
+CHECK_PORTABILITY_SKIP=	build/win/*.sh cint/tool/INSTALLBIN tmva/test/setup.sh
 BUILD_TARGET=
 
 .include "../../mk/bsd.prefs.mk"
