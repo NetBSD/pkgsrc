@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2071 2022/04/24 15:44:00 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2072 2022/04/24 16:10:05 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3215,3 +3215,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/lxqt-panel to 1.1.0 [pin 2022-04-24]
 	Updated x11/lxqt-session to 1.1.0 [pin 2022-04-24]
 	Updated meta-pkgs/lxqt to 1.1.0 [pin 2022-04-24]
+	Removed security/ssh-ip-tunnel [tnn 2022-04-24]
