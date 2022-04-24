@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/04/18 19:10:12 adam Exp $
+# $NetBSD: Makefile,v 1.14 2022/04/24 15:43:39 tnn Exp $
 
 DISTNAME=	spdylay-1.4.0
 PKGREVISION=	6
@@ -33,7 +33,7 @@ LIBS.SunOS+=	-lsocket
 
 # bin/spdyd requires epoll or kqueue
 PLIST_VARS+=	spdyd
-.if ${OPSYS} != "SunOS"
+.if ${OPSYS} != "SunOS" || exists(/usr/include/sys/epoll.h)
 PLIST.spdyd=	yes
 .endif
 
