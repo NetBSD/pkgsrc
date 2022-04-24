@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/11/19 10:02:40 pin Exp $
+$NetBSD: distinfo,v 1.8 2022/04/24 15:33:31 pin Exp $
 
-BLAKE2s (lxqt-policykit-1.0.0.tar.xz) = 3e810889bc81441fc913f5e737578dfe9a8bbf4b34155bf0f172c0692e7e00d4
-SHA512 (lxqt-policykit-1.0.0.tar.xz) = c0d7c5ff8a5e95e74eefd094625d71603026e9d30c033e224fc4e62eba63f1bfe76ddf666eb1875a14c2c1bea3d21e4ac6d191e90bc2442f7e4e62845a63a3f0
-Size (lxqt-policykit-1.0.0.tar.xz) = 39040 bytes
+BLAKE2s (lxqt-policykit-1.1.0.tar.xz) = 2b3784c118bb3b6dcdaf407416a22b788a7cb3821f04fbc0f6f6ba50493875b0
+SHA512 (lxqt-policykit-1.1.0.tar.xz) = 41592a2f086c5308ed71ef856bba8c3f81aa392700696e8a82554ce049bec07f41221a9862244d22f732b8f09a7c157596a50ef48bd30f1acf491317c4e21d12
+Size (lxqt-policykit-1.1.0.tar.xz) = 39280 bytes
 SHA1 (patch-autostart_CMakeLists.txt) = 6ec078b9a98a84fd73b9e512eceb4f632bc3721d
