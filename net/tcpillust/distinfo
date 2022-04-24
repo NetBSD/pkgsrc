@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:07:00 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/04/24 22:57:52 tnn Exp $
 
 BLAKE2s (tcpillust-1.0a.tar.gz) = ed3ff8e9e30dee0b21ddcda12a13bd79e3a931ad944de5b512f04a3f15b9cf48
 SHA512 (tcpillust-1.0a.tar.gz) = b1f503c084dc1f9e42d2a2ba04490da3a3a7fb0eb13bafa18906c029faa8c84e4b1f586648762ad7d880305904ddb9fb4703e165e1f5501f11bd364d7cbc9297
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = 3202a17e41f2976acc3504db95de4c0caaa9741a
 SHA1 (patch-ab) = b674343b8036c8ffbe0d2cce371f40f3ed8ee0c0
 SHA1 (patch-ac) = 8c1a77f8b123fddefc5db0482839768f292a59d7
 SHA1 (patch-tcpillust.c) = 3dda69f3bd8cf8b0560a063e4f3ea6870d9b1dd6
+SHA1 (patch-tcpillust.h) = 5352a3f2011b1ab414df935944c6ba405d528374
