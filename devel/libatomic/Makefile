@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2021/11/08 13:00:33 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/04/24 19:48:52 tnn Exp $
 
 DISTNAME=	gcc-11.2.0
 PKGNAME=	${DISTNAME:S/gcc/libatomic/}
@@ -12,7 +12,7 @@ COMMENT=	Atomic fallback implementation for GCC
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=		c99 c++
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
