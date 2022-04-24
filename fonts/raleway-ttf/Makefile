@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.1 2016/10/18 12:57:04 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/24 00:45:07 tnn Exp $
 
-DISTNAME=		Raleway-0.0.2016830
+DISTNAME=		Raleway-0.0.20161116
 PKGNAME=		${DISTNAME:S/Raleway/raleway-ttf/}
 CATEGORIES=		fonts
 MASTER_SITES=		${MASTER_SITE_GITHUB:=impallari/}
+GITHUB_PROJECT=		Raleway
+GITHUB_TAG=		fa27f47b087fc093c6ae11cfdeb3999ac602929a
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/impallari/Raleway
 COMMENT=		Elegant sans-serif typeface family
 LICENSE=		ofl-v1.1
 
-GITHUB_PROJECT=		Raleway
-GITHUB_TAG=		fa27f47b087fc093c6ae11cfdeb3999ac602929a
 
 EXTRACT_USING=		bsdtar
 USE_TOOLS+=		bsdtar
