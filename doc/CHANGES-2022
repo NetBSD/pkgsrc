@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2072 2022/04/24 16:10:05 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.2073 2022/04/24 16:53:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3216,3 +3216,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/lxqt-session to 1.1.0 [pin 2022-04-24]
 	Updated meta-pkgs/lxqt to 1.1.0 [pin 2022-04-24]
 	Removed security/ssh-ip-tunnel [tnn 2022-04-24]
+	Updated devel/py-test to 7.1.2 [adam 2022-04-24]
+	Updated textproc/py-tomlkit to 0.10.2 [adam 2022-04-24]
