@@ -1,0 +1,48 @@
+$NetBSD: patch-configure.ac,v 1.1 2022/04/24 12:02:14 tnn Exp $
+
+shell portability
+
+--- configure.ac.orig	2018-03-24 13:37:56.000000000 +0000
++++ configure.ac
+@@ -21,33 +21,33 @@ AC_PROG_CPP
+ AC_PROG_INSTALL
+ 
+ AC_CHECK_PROG([FOUND_CLANG], [clang], [yes])
+-if test "x$FOUND_CLANG" == "xyes" ; then
++if test "x$FOUND_CLANG" = "xyes" ; then
+   CC="clang"
+ fi
+ 
+-if test "x$GCC" == "xyes" -o "x$CC" == "xclang"; then
++if test "x$GCC" = "xyes" -o "x$CC" = "xclang"; then
+   CFLAGS="$CFLAGS -Wall"
+ fi
+ 
+ dnl Checks for html conversion tool from man page
+ AC_CHECK_PROG([FOUND_GROFF], [groff], [yes])
+-if test x"$FOUND_GROFF" == x"yes" ; then
++if test x"$FOUND_GROFF" = x"yes" ; then
+   if $(groff -Thtml -mdoc rtpplay.1 > /dev/null 2>&1) ; then
+     WORKS_GROFF="yes"
+   fi
+ fi
+-AM_CONDITIONAL([HAVE_GROFF], [test x"$WORKS_GROFF" == x"yes"])
++AM_CONDITIONAL([HAVE_GROFF], [test x"$WORKS_GROFF" = x"yes"])
+ 
+ AC_CHECK_PROG([FOUND_MANDOC], [mandoc], [yes])
+-if test x"$FOUND_MANDOC" == x"yes" ; then
++if test x"$FOUND_MANDOC" = x"yes" ; then
+   if $(mandoc -Thtml rtpplay.1 > /dev/null 2>&1)  ; then
+     WORKS_MANDOC="yes"
+   fi
+ fi
+-AM_CONDITIONAL([HAVE_MANDOC], [test x"$WORKS_MANDOC" == x"yes"])
++AM_CONDITIONAL([HAVE_MANDOC], [test x"$WORKS_MANDOC" = x"yes"])
+ 
+-AM_CONDITIONAL([FOUND_GEN_HTML], [test x"$WORKS_GROFF" == x"yes"] || 
+-  [test x"$WORKS_MANDOC" == x"yes"])
++AM_CONDITIONAL([FOUND_GEN_HTML], [test x"$WORKS_GROFF" = x"yes"] || 
++  [test x"$WORKS_MANDOC" = x"yes"])
+ 
+ dnl Checks for header files.
+ AC_HEADER_STDC
