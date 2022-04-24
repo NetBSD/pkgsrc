@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 09:59:26 nia Exp $
-
-BLAKE2s (pyvorbis-1.3.tar.gz) = e6bdcc39cfb8872215ecfea0ea509b5c80b563861e6f1ca145ed1968e666731c
-SHA512 (pyvorbis-1.3.tar.gz) = 85cfa6438c6a2c68160ce8ff4afa36ddfccedd695d900c9575c9ea3d64c5cdc692de1f5417a33a28350c05878acd1a886f65ff8cc8e34eaddc6ba51ed12694a6
-Size (pyvorbis-1.3.tar.gz) = 38075 bytes
-SHA1 (patch-aa) = d698a2e6000882d8ec512b8549f1e35f88f10127
