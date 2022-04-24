@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.7 2005/02/24 16:25:38 adam Exp $
+$NetBSD: patch-ao,v 1.8 2022/04/24 21:50:48 tnn Exp $
 
---- hdf/src/hdfi.h.orig	2005-01-25 03:36:44.000000000 +0000
+--- hdf/src/hdfi.h.orig	2020-03-03 17:40:50.000000000 +0000
 +++ hdf/src/hdfi.h
-@@ -147,6 +147,8 @@
+@@ -95,6 +95,8 @@
   * Define options for each platform
   *-------------------------------------------------------------------------*/
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ao,v 1.7 2005/02/24 16:25:38 adam Exp $
  /*
   * Meaning of each defined macros (not completed yet)
   *
-@@ -1386,6 +1388,71 @@ typedef long              hdf_pint_t;   
+@@ -1115,6 +1117,71 @@ typedef long              hdf_pint_t;   
  
  #endif /* IA64 */
  
@@ -52,7 +52,7 @@ $NetBSD: patch-ao,v 1.7 2005/02/24 16:25:38 adam Exp $
 +typedef int               intf;     /* size of INTEGERs in Fortran compiler */
 +typedef float             float32;
 +typedef double            float64;
-+#if defined(__alpha__) || defined(__sparc64__) || defined(__x86_64__)
++#if defined(__alpha__) || defined(__sparc64__) || defined(__x86_64__) || defined(__aarch64__)
 +typedef long              hdf_pint_t;   /* an integer the same size as a pointer */
 +#else
 +typedef int               hdf_pint_t;   /* an integer the same size as a pointer */
