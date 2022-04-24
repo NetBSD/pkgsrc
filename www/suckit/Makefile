@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/08/02 15:39:35 pin Exp $
+# $NetBSD: Makefile,v 1.4 2022/04/24 22:35:58 tnn Exp $
 
 DISTNAME=	suckit-0.1.2
 CATEGORIES=	www
@@ -18,6 +18,8 @@ INSTALLATION_DIRS=	bin
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
+
+CHECK_PORTABILITY_SKIP+=	tests/local_server_setup.sh
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/suckit ${DESTDIR}${PREFIX}/bin
