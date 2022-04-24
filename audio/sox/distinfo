@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.30 2021/10/26 09:59:30 nia Exp $
+$NetBSD: distinfo,v 1.31 2022/04/24 09:39:46 nia Exp $
 
 BLAKE2s (sox-14.4.2.tar.gz) = a995d9682dad17ae557248bc008e16309537b49e3229390478e432882445b6d2
 SHA512 (sox-14.4.2.tar.gz) = b5c6203f4f5577503a034fe5b3d6a033ee97fe4d171c533933e2b036118a43a14f97c9668433229708609ccf9ee16abdeca3fc7501aa0aafe06baacbba537eca
 Size (sox-14.4.2.tar.gz) = 1134299 bytes
-SHA1 (patch-aa) = e6f3d06450862795648622a017b2c696328872f5
 SHA1 (patch-ak) = 28675f56a0e2969d0facd98282667c53eb10c0ed
 SHA1 (patch-src_coreaudio.c) = baee5596ec5efdc12f99ea9dab9e9c691a17b08d
 SHA1 (patch-src_oss.c) = dca4dcf55d4bfa1da80b789cbddb48a9302e694b
-SHA1 (patch-src_sunaudio.c) = 286ad890a32d69d499f76faa255473889b091d56
+SHA1 (patch-src_sox.c) = 2ac1ec7157a1cd9581d07fea5093f49df2dd7b7f
+SHA1 (patch-src_sunaudio.c) = 9f6a67b09c46cbc8298c226d972c43e86aeaae26
