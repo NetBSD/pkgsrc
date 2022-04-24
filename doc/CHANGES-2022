@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2033 2022/04/24 01:36:05 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.2034 2022/04/24 08:33:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3174,3 +3174,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/raleway-ttf to 0.0.20161116 [tnn 2022-04-24]
 	Removed security/rats [tnn 2022-04-24]
 	Updated net/rinetd to 0.73 [tnn 2022-04-24]
+	Removed meta-pkgs/fxtv-capture [wiz 2022-04-24]
+	Removed multimedia/alevt [wiz 2022-04-24]
