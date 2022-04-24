@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2020/04/24 12:59:00 rhialto Exp $
+# $NetBSD: Makefile.common,v 1.44 2022/04/24 22:21:33 tnn Exp $
 #
 # used by games/nethack/Makefile
 # used by games/nethack-lib/Makefile
@@ -77,6 +77,8 @@ WINTTYLIB=		-L${BUILDLINK_PREFIX.termcap}/lib \
 			${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.termcap}/lib \
 			-l${BUILDLINK_LIBNAME.termcap}
 MAKE_ENV+=		WINTTYLIB=${WINTTYLIB:Q}
+
+CHECK_PORTABILITY_SKIP+=	sys/unix/hints/macosx.sh
 
 pre-configure:
 	${RUN}${CHMOD} 755 ${WRKSRC}/sys/unix/setup.sh
