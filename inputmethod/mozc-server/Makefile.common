@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2021/02/27 04:19:46 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.35 2022/04/24 22:16:03 tnn Exp $
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
 # used by inputmethod/mozc-server/Makefile
@@ -35,9 +35,10 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
 USE_LANGUAGES=	c c++
-
 USE_TOOLS+=	gmake pkg-config
 GCC_REQD+=	4.7	# for c++11
+
+CHECK_PORTABILITY_SKIP+=	third_party/protobuf/src/google/protobuf/compiler/zip_output_unittest.sh
 
 OPENSSL_CFLAGS=		-I${BUILDLINK_PREFIX.openssl}/include
 OPENSSL_INC=		-I${BUILDLINK_PREFIX.openssl}/include
