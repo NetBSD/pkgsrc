@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/11/19 10:11:27 pin Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/04/24 15:25:18 pin Exp $
 bin/lxqt-archiver
 share/applications/lxqt-archiver.desktop
 share/icons/hicolor/scalable/apps/lxqt-archiver.svg
@@ -22,6 +22,7 @@ share/lxqt-archiver/translations/lxqt-archiver_hu.qm
 share/lxqt-archiver/translations/lxqt-archiver_id.qm
 share/lxqt-archiver/translations/lxqt-archiver_it.qm
 share/lxqt-archiver/translations/lxqt-archiver_ja.qm
+share/lxqt-archiver/translations/lxqt-archiver_ko.qm
 share/lxqt-archiver/translations/lxqt-archiver_lt.qm
 share/lxqt-archiver/translations/lxqt-archiver_nb_NO.qm
 share/lxqt-archiver/translations/lxqt-archiver_nl.qm
