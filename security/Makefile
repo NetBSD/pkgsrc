@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.854 2022/04/21 10:49:14 wiz Exp $
+# $NetBSD: Makefile,v 1.855 2022/04/24 00:58:26 tnn Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -535,7 +535,6 @@ SUBDIR+=	qore-xmlsec-module
 SUBDIR+=	qt4-qtkeychain
 SUBDIR+=	qt5-qtkeychain
 SUBDIR+=	racoon2
-SUBDIR+=	rats
 SUBDIR+=	rc5des
 SUBDIR+=	rid
 SUBDIR+=	rsaref
