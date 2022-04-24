@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.19 2021/10/26 10:55:59 nia Exp $
-
-BLAKE2s (Numeric-24.2.tar.gz) = 6b090a5ac9f67b8ad92d8b22a1292a2f5195970afc70ae7869c6ee8ddf39b3d7
-SHA512 (Numeric-24.2.tar.gz) = 3735060e72f4252a191daafdf55a813bbb8b6b07088f6c7970a769a2bc18af760e4041081b287b51e685fdba4bc16c6018f999ed83afb230f9a6bb94d176a7a3
-Size (Numeric-24.2.tar.gz) = 743800 bytes
-SHA1 (patch-aa) = 31920706522b5730644da8191e0c1c8191d4add1
-SHA1 (patch-ac) = 45ca40e38123dc72ec42b3775b2401c0037674c0
-SHA1 (patch-setup.py) = a7dab66b75c2bb5a75e8d841ef2ebe15d8b7176c
