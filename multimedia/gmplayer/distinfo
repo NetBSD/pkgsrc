@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.109 2021/10/26 11:01:02 nia Exp $
+$NetBSD: distinfo,v 1.110 2022/04/24 15:16:34 nia Exp $
 
 BLAKE2s (mplayer/Abyss-1.7.tar.bz2) = 8f2e3b2454234f396d8eec5916617133627621aa1690e68a876beb4716bdb2da
 SHA512 (mplayer/Abyss-1.7.tar.bz2) = e60aae7a6a264023ebb49421696bc78ec46b463ce6d7f869cc5561e183a6d5abd3846b71a45656c8ad2a6f35bafd76d15235216dcba3b4936ff7b364b7a66407
@@ -66,9 +66,9 @@ Size (mplayer/KDE-0.3.tar.bz2) = 130502 bytes
 BLAKE2s (mplayer/Linea-1.0.tar.bz2) = 9a6421e17de30090d4905674185f9f44e1dd17e4c8fd5509111ac6f7da77e34a
 SHA512 (mplayer/Linea-1.0.tar.bz2) = a55e11b6ac40e17acf54b290e2763448085e5962da992ec24bc8c3ecd9df40d5ad2965079c930ce30338d64b8a2544dc5ba7f5fcdd84c0ffd14a7e6d1a9ac3d8
 Size (mplayer/Linea-1.0.tar.bz2) = 46965 bytes
-BLAKE2s (mplayer/MPlayer-1.4.tar.xz) = 6a705d082c5742bb4e0e1da296e910c6696cc768bb56325d15c203d77dd7c831
-SHA512 (mplayer/MPlayer-1.4.tar.xz) = 8ef71cad187d8c8f81c837279bd3a421b440c892d3347a667670b21c954007e35cf0d15828f0901f347b9c1b053e8da4bc7f0fb6de34382d1e463074923d7b34
-Size (mplayer/MPlayer-1.4.tar.xz) = 15054920 bytes
+BLAKE2s (mplayer/MPlayer-1.5.tar.xz) = 1a86b823bcc82e07cf43551151449dd1cbdd768d8281ebe32cea6ced91d029c5
+SHA512 (mplayer/MPlayer-1.5.tar.xz) = 05fe1edf23cec53be676333b6299df4b3f1ee746e5ccd96dc0bed550e7a1602ba7ba182c1cc23fcac67aacde849a46628b1dcab8ee3d3d4117415c11b6a6ad74
+Size (mplayer/MPlayer-1.5.tar.xz) = 15379972 bytes
 BLAKE2s (mplayer/MidnightLove-1.7.tar.bz2) = f936af41516a2904d1ed8f6573b4782fb54251e32e2d8a2bf5ab7f7b8c2e5f9b
 SHA512 (mplayer/MidnightLove-1.7.tar.bz2) = 1ff7a7dbcc920c2f65d3a2ad0c555e5742e1deb86d1cc1a65fd55390161fc06e6e074105c797c896b808993ddf32fea5e01769cae831a597c1f5fe4e5539cc9e
 Size (mplayer/MidnightLove-1.7.tar.bz2) = 539636 bytes
@@ -228,18 +228,14 @@ Size (mplayer/xmmplayer-1.5.tar.bz2) = 74184 bytes
 SHA1 (patch-Makefile) = be30a8e90383d6af5902380587b5075fd9c73b83
 SHA1 (patch-ae) = 286f5ac075ea4123a1a6276f97e02a4dda9b3e67
 SHA1 (patch-an) = 330c427e30b686165fda15a85b730a3f53e0d217
-SHA1 (patch-configure) = 1bba1d39be27c31f2345c8303f252404538c192f
+SHA1 (patch-configure) = 70eee721bfb49e811d1b3c9376bdada5438f6b17
 SHA1 (patch-gui_interface.c) = 04c347b6cb0a54132e6b089142c8ed282f583a1c
 SHA1 (patch-libao2_ao__alsa.c) = da568da8b9290f1ed49ecedec7dc9141408698b1
 SHA1 (patch-libao2_ao_sun.c) = ce7042b394b9b8c051597c734b70290c8bf0a8d5
-SHA1 (patch-libmpcodecs_ad__spdif.c) = e44131414a599efc5bc0b96ed19b5ad46cb0d381
 SHA1 (patch-libvo_vo__corevideo.h) = c29a24266edb6727dda68a378fac413b5b0ab7ec
-SHA1 (patch-libvo_vo__gif89a.c) = f7ee649bebef4b7f3fd4659613f61667109ee825
-SHA1 (patch-libvo_vo__vdpau.c) = df3de0e079f7047228065bf36390aa3ad01b7f97
 SHA1 (patch-mplayer.c) = 8cfdca9d062d4a10320a0471c91dd7c264aa963c
 SHA1 (patch-stream_ai__alsa.c) = 1ed116931f4fde910c9bbe23680463a71631185c
 SHA1 (patch-stream_dvb_tune.c) = 46cb5fb4700d7da5ed997dd468033c1edbe9be03
 SHA1 (patch-stream_dvbin.h) = ee4f74eb786100e7cc62be228d73ce29d88638d1
 SHA1 (patch-stream_stream__dvdnav.c) = 6f7e54629b32c83de8e4b31fe414b78f6043e0e8
-SHA1 (patch-sub_osd.c) = 95f1bc1c20f181720a2a073acbb3abdde3921608
 SHA1 (patch-sub_subreader.c) = 3ec0d3824b6e9fe34cb33e9463d833868f0b03c1
