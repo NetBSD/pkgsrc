@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2042 2022/04/24 14:43:36 taca Exp $
+$NetBSD: CHANGES-2022,v 1.2043 2022/04/24 14:58:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3182,3 +3182,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/ncmpc to 0.46 [nia 2022-04-24]
 	Updated textproc/ruby-yajl to 1.4.2 [taca 2022-04-24]
 	Updated www/ruby-puma to 5.6.4 [taca 2022-04-24]
+	Updated devel/lxqt-build-tools to 0.11.0 [pin 2022-04-24]
