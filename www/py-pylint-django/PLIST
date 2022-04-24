@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2021/01/07 22:03:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2022/04/24 17:36:43 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -69,6 +69,9 @@ ${PYSITELIB}/pylint_django/tests/input/external_psycopg2_noerror_postgres_fields
 ${PYSITELIB}/pylint_django/tests/input/external_psycopg2_noerror_postgres_fields.pyc
 ${PYSITELIB}/pylint_django/tests/input/external_psycopg2_noerror_postgres_fields.pyo
 ${PYSITELIB}/pylint_django/tests/input/external_psycopg2_noerror_postgres_fields.rc
+${PYSITELIB}/pylint_django/tests/input/external_tastypie_noerror_foreign_key.py
+${PYSITELIB}/pylint_django/tests/input/external_tastypie_noerror_foreign_key.pyc
+${PYSITELIB}/pylint_django/tests/input/external_tastypie_noerror_foreign_key.pyo
 ${PYSITELIB}/pylint_django/tests/input/func_hard_coded_auth_user.py
 ${PYSITELIB}/pylint_django/tests/input/func_hard_coded_auth_user.pyc
 ${PYSITELIB}/pylint_django/tests/input/func_hard_coded_auth_user.pyo
@@ -236,9 +239,11 @@ ${PYSITELIB}/pylint_django/tests/input/test_app/models.pyo
 ${PYSITELIB}/pylint_django/tests/settings.py
 ${PYSITELIB}/pylint_django/tests/settings.pyc
 ${PYSITELIB}/pylint_django/tests/settings.pyo
+${PYSITELIB}/pylint_django/tests/test_django_not_installed.sh
 ${PYSITELIB}/pylint_django/tests/test_func.py
 ${PYSITELIB}/pylint_django/tests/test_func.pyc
 ${PYSITELIB}/pylint_django/tests/test_func.pyo
+${PYSITELIB}/pylint_django/tests/testing_pylint.rc
 ${PYSITELIB}/pylint_django/transforms/__init__.py
 ${PYSITELIB}/pylint_django/transforms/__init__.pyc
 ${PYSITELIB}/pylint_django/transforms/__init__.pyo
