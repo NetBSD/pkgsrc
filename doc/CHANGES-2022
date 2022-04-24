@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2068 2022/04/24 15:39:12 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.2069 2022/04/24 15:39:27 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3212,3 +3212,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/lxqt-qtplugin to 1.1.0 [pin 2022-04-24]
 	Updated sysutils/lxqt-powermanagement to 1.1.0 [pin 2022-04-24]
 	Updated fonts/sourcesans-fonts to 3.046R [tnn 2022-04-24]
+	Updated x11/lxqt-panel to 1.1.0 [pin 2022-04-24]
