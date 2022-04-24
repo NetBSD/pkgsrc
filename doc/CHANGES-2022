@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2078 2022/04/24 19:25:02 leot Exp $
+$NetBSD: CHANGES-2022,v 1.2079 2022/04/24 20:17:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3237,3 +3237,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed databases/postgresql96-pltcl [tnn 2022-04-24]
 	Removed databases/postgresql96-server [tnn 2022-04-24]
 	Updated net/kubectl to 1.22.9 [leot 2022-04-24]
+	Updated devel/git-cliff to 0.7.0 [pin 2022-04-24]
