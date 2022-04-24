@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:18:00 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/24 13:13:43 tnn Exp $
 
-BLAKE2s (secpanel-0.5.1.tar.gz) = 8beb80ed7acdd1a0ea9d60eb37051e621ab901ceae660580d7e1b787f6c81d23
-SHA512 (secpanel-0.5.1.tar.gz) = 7a8472e5656aed1d42518c85c17a4774f714db54e32a8786625360321879a4bc060adc7778b0ea64c798c914495d5ad781d74b13681e6ee99808b8296bf0f2c0
-Size (secpanel-0.5.1.tar.gz) = 54382 bytes
+BLAKE2s (secpanel-0.6.1.tgz) = a823295ee92aa4eb2484acba6256d0a5f7936e28396d084c5cca737afa330f5a
+SHA512 (secpanel-0.6.1.tgz) = 9cb654c1aa1fbb81c948b95194bc6198df0e3411e39bef09156d516c5ed2980ea364dc2f60e1549e6224e738a6bdeee26fa8e091aa3ba2d8e1f1fd2cc59c4ce1
+Size (secpanel-0.6.1.tgz) = 51417 bytes
