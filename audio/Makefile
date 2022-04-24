@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.653 2022/04/06 16:32:21 nia Exp $
+# $NetBSD: Makefile,v 1.654 2022/04/24 00:20:01 tnn Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -316,7 +316,6 @@ SUBDIR+=	mixxx
 SUBDIR+=	mkcdtoc
 SUBDIR+=	moc
 SUBDIR+=	moodbar
-SUBDIR+=	moss
 SUBDIR+=	mp32ogg
 SUBDIR+=	mp3_check
 SUBDIR+=	mp3asm
@@ -420,9 +419,7 @@ SUBDIR+=	py-music21
 SUBDIR+=	py-musicbrainz-ngs
 SUBDIR+=	py-musique
 SUBDIR+=	py-mutagen
-SUBDIR+=	py-ogg
 SUBDIR+=	py-soundfile
-SUBDIR+=	py-vorbis
 SUBDIR+=	qjackctl
 SUBDIR+=	qmmp
 SUBDIR+=	qsynth
