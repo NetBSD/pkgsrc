@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2029 2022/04/23 23:56:54 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.2030 2022/04/24 00:20:21 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3168,3 +3168,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/mojoshader to 0.0.20220415 [tnn 2022-04-23]
 	Updated lang/owl-lisp to 0.2 [tnn 2022-04-23]
 	Updated devel/R-withr to 2.4.3 [gutteridge 2022-04-23]
+	Removed audio/moss [tnn 2022-04-24]
+	Removed audio/py-ogg [tnn 2022-04-24]
+	Removed audio/py-vorbis [tnn 2022-04-24]
