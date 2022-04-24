@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2046 2022/04/24 15:03:06 nia Exp $
+$NetBSD: CHANGES-2022,v 1.2047 2022/04/24 15:03:35 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3190,3 +3190,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/gmplayer to 1.5 [nia 2022-04-24]
 	Updated sysutils/mencvcd to 1.5 [nia 2022-04-24]
 	Updated x11/liblxqt to 1.1.0 [pin 2022-04-24]
+	Updated x11/libfm-qt to 1.1.0 [pin 2022-04-24]
