@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2022/04/18 19:11:29 adam Exp $
+# $NetBSD: Makefile,v 1.73 2022/04/24 22:19:15 tnn Exp $
 
 PKGNAME=	${DISTNAME:S/mozc-/mozc-server-/}
 PKGREVISION=	9
@@ -20,3 +20,4 @@ do-install:
 		${DESTDIR}${PREFIX}/libexec/mozc_server
 
 .include "../../inputmethod/mozc-server/Makefile.common"
+.include "../../mk/bsd.pkg.mk"
