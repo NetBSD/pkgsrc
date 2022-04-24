@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2045 2022/04/24 15:01:52 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2046 2022/04/24 15:03:06 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3184,4 +3184,9 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-puma to 5.6.4 [taca 2022-04-24]
 	Updated devel/lxqt-build-tools to 0.11.0 [pin 2022-04-24]
 	Updated x11/libqtxdg to 3.9.0 [pin 2022-04-24]
+	Updated multimedia/mplayer-share to 1.5 [nia 2022-04-24]
+	Updated multimedia/mencoder to 1.5 [nia 2022-04-24]
+	Updated multimedia/mplayer to 1.5 [nia 2022-04-24]
+	Updated multimedia/gmplayer to 1.5 [nia 2022-04-24]
+	Updated sysutils/mencvcd to 1.5 [nia 2022-04-24]
 	Updated x11/liblxqt to 1.1.0 [pin 2022-04-24]
