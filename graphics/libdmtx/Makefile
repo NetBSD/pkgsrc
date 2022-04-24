@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/03/24 14:52:30 nia Exp $
+# $NetBSD: Makefile,v 1.5 2022/04/24 22:07:56 tnn Exp $
 
 DISTNAME=	libdmtx-0.7.5
 CATEGORIES=	graphics
@@ -16,6 +16,10 @@ USE_LANGUAGES=	c99
 USE_TOOLS+=	autoreconf autoconf automake
 
 PKGCONFIG_OVERRIDE+=	libdmtx.pc.in
+
+CHECK_PORTABILITY_SKIP+=	autogen.sh
+CHECK_PORTABILITY_SKIP+=	script/check*
+CHECK_PORTABILITY_SKIP+=	test/compare_test/*
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fi
