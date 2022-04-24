@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2018/04/29 21:09:08 ryoon Exp $
-share/fonts/X11/TTF/SourceSansPro-Black.otf
-share/fonts/X11/TTF/SourceSansPro-BlackIt.otf
-share/fonts/X11/TTF/SourceSansPro-Bold.otf
-share/fonts/X11/TTF/SourceSansPro-BoldIt.otf
-share/fonts/X11/TTF/SourceSansPro-ExtraLight.otf
-share/fonts/X11/TTF/SourceSansPro-ExtraLightIt.otf
-share/fonts/X11/TTF/SourceSansPro-It.otf
-share/fonts/X11/TTF/SourceSansPro-Light.otf
-share/fonts/X11/TTF/SourceSansPro-LightIt.otf
-share/fonts/X11/TTF/SourceSansPro-Regular.otf
-share/fonts/X11/TTF/SourceSansPro-Semibold.otf
-share/fonts/X11/TTF/SourceSansPro-SemiboldIt.otf
+@comment $NetBSD: PLIST,v 1.3 2022/04/24 15:30:43 tnn Exp $
+share/fonts/X11/TTF/SourceSans3-Black.otf
+share/fonts/X11/TTF/SourceSans3-BlackIt.otf
+share/fonts/X11/TTF/SourceSans3-Bold.otf
+share/fonts/X11/TTF/SourceSans3-BoldIt.otf
+share/fonts/X11/TTF/SourceSans3-ExtraLight.otf
+share/fonts/X11/TTF/SourceSans3-ExtraLightIt.otf
+share/fonts/X11/TTF/SourceSans3-It.otf
+share/fonts/X11/TTF/SourceSans3-Light.otf
+share/fonts/X11/TTF/SourceSans3-LightIt.otf
+share/fonts/X11/TTF/SourceSans3-Regular.otf
+share/fonts/X11/TTF/SourceSans3-Semibold.otf
+share/fonts/X11/TTF/SourceSans3-SemiboldIt.otf
