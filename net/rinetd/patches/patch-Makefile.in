@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2022/04/24 01:35:38 tnn Exp $
+
+Fix config file installation.
+
+--- Makefile.in.orig	2021-02-19 08:57:40.000000000 +0000
++++ Makefile.in
+@@ -420,7 +420,7 @@ install-sysconfDATA: $(sysconf_DATA)
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+ 	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(sysconfdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(sysconfdir)" || exit $$?; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(PREFIX)/share/examples/rinetd" || exit $$?; \
+ 	done
+ 
+ uninstall-sysconfDATA:
