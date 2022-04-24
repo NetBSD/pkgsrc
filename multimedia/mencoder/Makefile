@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.74 2021/06/22 12:35:45 nia Exp $
+# $NetBSD: Makefile,v 1.75 2022/04/24 15:17:22 nia Exp $
 
 PKGNAME=	mencoder-${MPLAYER_VERSION}
-PKGREVISION=	2
 
 COMMENT=	Simple movie encoder for MPlayer-playable movies
 
@@ -30,8 +29,6 @@ do-install:
 			${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/mencoder.1.gz; \
 	fi
 
-.include "../../multimedia/mplayer-share/Makefile.depends"
-
+.include "../../multimedia/mplayer-share/depends.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-.include "../../multimedia/mplayer-share/Makefile.cflags"
