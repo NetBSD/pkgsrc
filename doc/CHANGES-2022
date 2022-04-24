@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2030 2022/04/24 00:20:21 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.2031 2022/04/24 00:45:54 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3171,3 +3171,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed audio/moss [tnn 2022-04-24]
 	Removed audio/py-ogg [tnn 2022-04-24]
 	Removed audio/py-vorbis [tnn 2022-04-24]
+	Updated fonts/raleway-ttf to 0.0.20161116 [tnn 2022-04-24]
