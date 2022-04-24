@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:27:23 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/04/24 15:30:43 tnn Exp $
 
-BLAKE2s (source-sans-pro-2.020R-ro-1.075R-it.tar.gz) = 27aff6b9d836e7fe170e3a8151d9b70f035da1bc8afb1c7600f7f7202ade824f
-SHA512 (source-sans-pro-2.020R-ro-1.075R-it.tar.gz) = 877b47b203d6f8ee71e60ba612a25b5a1b707205b0a4aaf02cfe2c806466acc6d393c93ad2fd6e76d761150b2594fcd6abce7b3c0415b5b915b06c6c143b6b53
-Size (source-sans-pro-2.020R-ro-1.075R-it.tar.gz) = 6735736 bytes
+BLAKE2s (OTF-source-sans-3.046R.zip) = 8ecf80bed2c05d93f8cc20abb025728b3e1ec5f5d2de1c3491c4259fb80386f3
+SHA512 (OTF-source-sans-3.046R.zip) = 13f369ab4ca1491a48d206f534f34ee6a42e62ee82caedd70bff7da35ebd7a9a5382a1fb73910363aa9fc4faa7d0becec717f7b94c4d1fffb67a3f6266330f8c
+Size (OTF-source-sans-3.046R.zip) = 2066530 bytes
