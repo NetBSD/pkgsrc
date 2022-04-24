@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2034 2022/04/24 08:33:04 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2035 2022/04/24 11:10:14 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3161,7 +3161,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Added math/R-googlesheets4 version 1.0.0 [mef 2022-04-23]
 	Updated textproc/R-stringi to 1.7.6 [mef 2022-04-23]
 	Updated lang/rust to 1.59.0nb1 [he 2022-04-23]
-	Removed multimedia/fxtv [tnn 2022-04-23]
 	Updated editors/featherpad to 1.2.0 [pin 2022-04-23]
 	Updated textproc/hgrep to 0.2.5 [pin 2022-04-23]
 	Updated multimedia/libtheoraplay to 0.0.20210704 [tnn 2022-04-23]
