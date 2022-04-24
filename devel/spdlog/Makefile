@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/04/20 20:42:45 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2022/04/24 19:53:22 tnn Exp $
 
 DISTNAME=		spdlog-1.10.0
 CATEGORIES=		devel
@@ -17,6 +17,8 @@ USE_CMAKE=		yes
 CMAKE_ARGS+=		-DSPDLOG_BUILD_SHARED=ON
 
 PKGCONFIG_OVERRIDE+=	cmake/spdlog.pc.in
+
+LDFLAGS.SunOS+=		-lsocket
 
 # This doesn't work due to mk/plist bug. See tech-pkg@
 #PLIST_VARS+=		dylib notdylib
