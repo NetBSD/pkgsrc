@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:05:52 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/04/25 06:27:25 markd Exp $
 
-BLAKE2s (kxmlrpcclient-5.80.0.tar.xz) = 85e8c7bc663ec887d1762f99c00c5bc800af672e4b287a8c7336359e5fb3c1f9
-SHA512 (kxmlrpcclient-5.80.0.tar.xz) = b568232f3fe55909180da63925f0a48b0128f1e2a02c28eaadd7d86a0bf8346e56fc8024ececafbbaf6d1a8f425b35bd477ad005904911276a354dffe72b0a66
-Size (kxmlrpcclient-5.80.0.tar.xz) = 29356 bytes
+BLAKE2s (kxmlrpcclient-5.93.0.tar.xz) = 67a1aa8ec51a6c1ff0b72fffc8abd598dfd3f02795c09833701ab26e2b18649f
+SHA512 (kxmlrpcclient-5.93.0.tar.xz) = 294d6830896c5ca262375cf2b1b866e30a71c2a7e42a491d5c14968cd82db6024286413ba471f4bf9a9db6a049162ffed172adc9926499bab84d8b90101e91c0
+Size (kxmlrpcclient-5.93.0.tar.xz) = 31876 bytes
