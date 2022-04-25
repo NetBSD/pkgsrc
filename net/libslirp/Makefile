@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/04/25 06:27:10 nia Exp $
+# $NetBSD: Makefile,v 1.4 2022/04/25 09:17:22 tnn Exp $
 
 DISTNAME=	libslirp-4.6.1
 CATEGORIES=	net
@@ -16,6 +16,8 @@ PYTHON_FOR_BUILD_ONLY=	tool
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/meson-private/slirp.pc
+
+LDFLAGS.SunOS+=		-lsocket
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
