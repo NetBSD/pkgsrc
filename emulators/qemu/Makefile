@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.293 2022/03/28 10:53:05 tnn Exp $
+# $NetBSD: Makefile,v 1.294 2022/04/25 16:09:53 nia Exp $
 
 DISTNAME=	qemu-6.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
@@ -204,6 +204,7 @@ post-install:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../lang/python/versioned_dependencies.mk"
+.include "../../net/libslirp/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
