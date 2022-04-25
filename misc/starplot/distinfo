@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:59:33 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/25 14:40:13 tnn Exp $
 
 BLAKE2s (starplot-0.95.5.tar.gz) = 3acc5714e0e2c6228eecf38d7ee43f40c82a83834502543def18106439623230
 SHA512 (starplot-0.95.5.tar.gz) = cfc451b9ec8593054b76ef29170408b486e932ef467f3c2f847b40275c8a52e539142d09c76f0057c01ef87bf0628102f99151827030995a5f8bcb9541f24a11
 Size (starplot-0.95.5.tar.gz) = 892878 bytes
+SHA1 (patch-src_gui_starplot.cc) = c7401154a638563548ff334954a9478f33b80e58
