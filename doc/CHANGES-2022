@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2086 2022/04/25 09:10:07 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2087 2022/04/25 09:26:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3245,3 +3245,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/py-gstreamer1 to 1.20.1 [wiz 2022-04-25]
 	Removed databases/gtksql [wiz 2022-04-25]
 	Updated fonts/unifont to 14.0.03 [wiz 2022-04-25]
+	Updated graphics/ImageMagick to 7.1.0.31 [wiz 2022-04-25]
