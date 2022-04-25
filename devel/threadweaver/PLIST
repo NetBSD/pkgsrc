@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/26 08:29:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/04/25 05:32:12 markd Exp $
 include/KF5/ThreadWeaver/ThreadWeaver/Collection
 include/KF5/ThreadWeaver/ThreadWeaver/DebuggingAids
 include/KF5/ThreadWeaver/ThreadWeaver/Dependency
@@ -66,7 +66,7 @@ include/KF5/ThreadWeaver/threadweaver/weaver.h
 include/KF5/ThreadWeaver/threadweaver/weaverimplstate.h
 include/KF5/ThreadWeaver/threadweaver/weaverinterface.h
 include/KF5/ThreadWeaver/threadweaver/workinghardstate.h
-include/KF5/threadweaver_version.h
+include/KF5/ThreadWeaver/threadweaver_version.h
 lib/cmake/KF5ThreadWeaver/KF5ThreadWeaverConfig.cmake
 lib/cmake/KF5ThreadWeaver/KF5ThreadWeaverConfigVersion.cmake
 lib/cmake/KF5ThreadWeaver/KF5ThreadWeaverTargets-noconfig.cmake
