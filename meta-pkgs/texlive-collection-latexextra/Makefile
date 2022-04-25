@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.64 2022/04/19 03:21:41 markd Exp $
+# $NetBSD: Makefile,v 1.65 2022/04/25 10:41:59 markd Exp $
 
 DISTNAME=	collection-latexextra
 PKGNAME=	texlive-${DISTNAME}-2022pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	62901
+TEXLIVE_REV=	63101
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -1034,6 +1034,7 @@ DEPENDS+=	tex-pmboxdraw-[0-9]*:../../print/tex-pmboxdraw
 DEPENDS+=	tex-polytable-[0-9]*:../../print/tex-polytable
 # depend postcards
 # depend poster-mac
+# depend postnotes
 DEPENDS+=	tex-powerdot-[0-9]*:../../print/tex-powerdot
 # depend ppr-prv
 # depend practicalreports
@@ -1343,6 +1344,7 @@ DEPENDS+=	tex-ucs-[0-9]*:../../print/tex-ucs
 DEPENDS+=	tex-undolabl-[0-9]*:../../print/tex-undolabl
 # depend uni-titlepage
 # depend unicodefonttable
+# depend unisc
 # depend unitconv
 DEPENDS+=	tex-units-[0-9]*:../../print/tex-units
 # depend unravel
