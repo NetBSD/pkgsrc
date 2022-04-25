@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.11 2021/03/30 10:58:28 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/04/25 06:57:34 markd Exp $
 bin/gentrigrams
 bin/parsetrigrams
+include/KF5/Sonnet/sonnet_version.h
 include/KF5/SonnetCore/Sonnet/BackgroundChecker
 include/KF5/SonnetCore/Sonnet/GuessLanguage
 include/KF5/SonnetCore/Sonnet/Settings
@@ -25,7 +26,6 @@ include/KF5/SonnetUi/sonnet/dictionarycombobox.h
 include/KF5/SonnetUi/sonnet/highlighter.h
 include/KF5/SonnetUi/sonnet/sonnetui_export.h
 include/KF5/SonnetUi/sonnet/spellcheckdecorator.h
-include/KF5/sonnet_version.h
 lib/cmake/KF5Sonnet/KF5SonnetConfig.cmake
 lib/cmake/KF5Sonnet/KF5SonnetConfigVersion.cmake
 lib/cmake/KF5Sonnet/KF5SonnetTargets-noconfig.cmake
@@ -41,6 +41,9 @@ qt5/mkspecs/modules/qt_SonnetUi.pri
 qt5/plugins/designer/sonnetui5widgets.so
 qt5/plugins/kf5/sonnet/sonnet_aspell.so
 qt5/plugins/kf5/sonnet/sonnet_hunspell.so
+qt5/qml/org/kde/sonnet/libsonnetquickplugin.so
+qt5/qml/org/kde/sonnet/plugins.qmltypes
+qt5/qml/org/kde/sonnet/qmldir
 share/locale/af/LC_MESSAGES/sonnet5_qt.qm
 share/locale/ar/LC_MESSAGES/sonnet5_qt.qm
 share/locale/as/LC_MESSAGES/sonnet5_qt.qm
