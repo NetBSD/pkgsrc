@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/03/30 10:58:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/04/25 09:37:06 markd Exp $
 lib/cmake/KF5QQC2DeskopStyle/KF5QQC2DeskopStyleConfig.cmake
 lib/cmake/KF5QQC2DeskopStyle/KF5QQC2DeskopStyleConfigVersion.cmake
 lib/cmake/KF5QQC2DesktopStyle/KF5QQC2DesktopStyleConfig.cmake
@@ -22,10 +22,12 @@ qt5/qml/QtQuick/Controls.2/org.kde.desktop/GroupBox.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/ItemDelegate.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/Label.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/Menu.qml
+qt5/qml/QtQuick/Controls.2/org.kde.desktop/MenuBar.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/MenuBarItem.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/MenuItem.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/MenuSeparator.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/Page.qml
+qt5/qml/QtQuick/Controls.2/org.kde.desktop/Pane.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/Popup.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/ProgressBar.qml
 qt5/qml/QtQuick/Controls.2/org.kde.desktop/RadioButton.qml
