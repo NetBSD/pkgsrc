@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2021/03/30 10:58:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/04/25 04:06:09 markd Exp $
 include/KF5/KIdleTime/KIdleTime
 include/KF5/KIdleTime/kidletime.h
 include/KF5/KIdleTime/kidletime_export.h
+include/KF5/KIdleTime/kidletime_version.h
 include/KF5/KIdleTime/private/abstractsystempoller.h
-include/KF5/kidletime_version.h
 lib/cmake/KF5IdleTime/KF5IdleTimeConfig.cmake
 lib/cmake/KF5IdleTime/KF5IdleTimeConfigVersion.cmake
 lib/cmake/KF5IdleTime/KF5IdleTimeTargets-noconfig.cmake
