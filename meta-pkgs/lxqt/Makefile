@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/04/24 15:43:40 pin Exp $
+# $NetBSD: Makefile,v 1.12 2022/04/25 05:56:44 pin Exp $
 
 PKGNAME=	lxqt-1.1.0
 CATEGORIES=	meta-pkgs
@@ -37,8 +37,8 @@ DEPENDS+=	lxqt-panel>=1.1.0:../../x11/lxqt-panel
 DEPENDS+=	lxqt-runner>=1.1.0:../../x11/lxqt-runner
 DEPENDS+=	screengrab>=2.4.0:../../graphics/screengrab
 DEPENDS+=	lxqt-archiver>=0.6.0:../../archivers/lxqt-archiver
-# The Oxygen icon set is the default that LXQt expects, and a compatible icon
-# theme must be present for it to be fully usable. Breeze is another option.
+# The Breeze icon set is the default that LXQt expects, and a compatible icon
+# theme must be present for the DE to be fully usable.
 DEPENDS+=	breeze-icons-[0-9]*:../../graphics/breeze-icons
 DEPENDS+=	xscreensaver-[0-9]*:../../x11/xscreensaver
 # This pulls in quite a lot of dependencies, but, if translations are wanted,
