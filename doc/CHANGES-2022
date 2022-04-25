@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2096 2022/04/25 13:09:20 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.2097 2022/04/25 13:29:29 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3339,3 +3339,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/erlang-idna to 6.1.1nb3 [nikita 2022-04-25]
 	Updated geography/R-maps to 3.4.0 [mef 2022-04-25]
 	Updated devel/pax-utils to 1.3.4 [fcambus 2022-04-25]
+	Updated misc/R-Hmisc to 4.7.0 [mef 2022-04-25]
