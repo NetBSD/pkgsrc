@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:22:17 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/25 23:22:58 tnn Exp $
 
 BLAKE2s (snowball-2.1.0.tar.gz) = 721871eda75290a6f9279d94beb5ab1383564dfdf782bf0cc9a8c0fccacc656d
 SHA512 (snowball-2.1.0.tar.gz) = 1efd7d8ab58852987e83247048244882c517e32237c8cb3c0558b66ecfb075733ce8805ebb76041e6e7d6664c236054effe66838e7c524ee529ce869aa8134f0
 Size (snowball-2.1.0.tar.gz) = 220324 bytes
-SHA1 (patch-GNUmakefile) = 0a0c0a1760338fc55374e88b4ab853b47dc24ea0
+SHA1 (patch-GNUmakefile) = 85aa0b62ac0d51f31890d8c0f3eed82a3b3cba92
 SHA1 (patch-libstemmer_symbol.map) = 0122f03d0ac54dae908ffd873f1ae4a6e502a56f
