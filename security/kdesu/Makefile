@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2022/04/18 19:10:04 adam Exp $
+# $NetBSD: Makefile,v 1.32 2022/04/25 06:31:34 markd Exp $
 
 DISTNAME=	kdesu-${KF5VER}
-PKGREVISION=	3
 CATEGORIES=	security
 
 HOMEPAGE=	https://community.kde.org/Frameworks
