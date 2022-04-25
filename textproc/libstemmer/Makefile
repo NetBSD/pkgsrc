@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/05/24 19:54:26 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/04/25 23:22:58 tnn Exp $
 
 DISTNAME=	snowball-2.1.0
 PKGNAME=	${DISTNAME:S/snowball/libstemmer/}
@@ -17,6 +17,8 @@ USE_TOOLS+=	gmake perl
 MAKE_FILE=	GNUmakefile
 
 INSTALLATION_DIRS+=	bin include lib
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=libstemmer/symbol.map
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/include/libstemmer.h \
