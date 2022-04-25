@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2084 2022/04/25 07:20:35 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2085 2022/04/25 07:55:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3243,3 +3243,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/libslirp to 4.6.1 [nia 2022-04-25]
 	Removed net/gst-plugins1-mms [wiz 2022-04-25]
 	Updated multimedia/py-gstreamer1 to 1.20.1 [wiz 2022-04-25]
+	Removed databases/gtksql [wiz 2022-04-25]
