@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/04/28 11:46:29 nikita Exp $
+# $NetBSD: Makefile,v 1.5 2022/04/25 15:43:12 tnn Exp $
 
 DISTNAME=	remake-4.2.1+dbg-1.4
 CATEGORIES=	devel
@@ -24,13 +24,11 @@ CONFIGURE_ARGS=		--without-guile
 # XXX: based on possible /dev/kmem permissions.
 CONFIGURE_ARGS+=	ac_cv_func_getloadavg_setgid=no
 
-AUTO_MKDIRS=	yes
-
 # \todo: patch upstream.
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/info/make.info ${DESTDIR}${PREFIX}/info/remake.info
-	${MV} ${DESTDIR}${PREFIX}/info/make.info-1 ${DESTDIR}${PREFIX}/info/remake.info-1
-	${MV} ${DESTDIR}${PREFIX}/info/make.info-2 ${DESTDIR}${PREFIX}/info/remake.info-2
+	${MV} ${DESTDIR}${PREFIX}/${PKGINFODIR}/make.info ${DESTDIR}${PREFIX}/${PKGINFODIR}/remake.info
+	${MV} ${DESTDIR}${PREFIX}/${PKGINFODIR}/make.info-1 ${DESTDIR}${PREFIX}/${PKGINFODIR}/remake.info-1
+	${MV} ${DESTDIR}${PREFIX}/${PKGINFODIR}/make.info-2 ${DESTDIR}${PREFIX}/${PKGINFODIR}/remake.info-2
 
 # \todo: most of this package could probably be shorter if
 # gmake had a Makefile file to re-use.
