@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/03/30 10:58:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/04/25 04:48:55 markd Exp $
 bin/kpackagetool5
 include/KF5/KPackage/KPackage/Package
 include/KF5/KPackage/KPackage/PackageLoader
@@ -8,7 +8,7 @@ include/KF5/KPackage/kpackage/package_export.h
 include/KF5/KPackage/kpackage/packageloader.h
 include/KF5/KPackage/kpackage/packagestructure.h
 include/KF5/KPackage/kpackage/version.h
-include/KF5/kpackage_version.h
+include/KF5/KPackage/kpackage_version.h
 lib/cmake/KF5Package/KF5PackageConfig.cmake
 lib/cmake/KF5Package/KF5PackageConfigVersion.cmake
 lib/cmake/KF5Package/KF5PackageMacros.cmake
