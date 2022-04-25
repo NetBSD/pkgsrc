@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2021/08/31 11:49:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/04/25 06:16:59 markd Exp $
 include/KF5/KMediaPlayer/KMediaPlayer/Player
 include/KF5/KMediaPlayer/KMediaPlayer/View
 include/KF5/KMediaPlayer/kmediaplayer/kmediaplayer_export.h
 include/KF5/KMediaPlayer/kmediaplayer/player.h
 include/KF5/KMediaPlayer/kmediaplayer/view.h
-include/KF5/kmediaplayer_version.h
+include/KF5/KMediaPlayer/kmediaplayer_version.h
 lib/cmake/KF5MediaPlayer/KF5MediaPlayerConfig.cmake
 lib/cmake/KF5MediaPlayer/KF5MediaPlayerConfigVersion.cmake
 lib/cmake/KF5MediaPlayer/KF5MediaPlayerTargets-noconfig.cmake
