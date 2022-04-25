@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2022/04/18 19:09:58 adam Exp $
+# $NetBSD: Makefile,v 1.15 2022/04/25 06:09:48 markd Exp $
 
 DISTNAME=	kcontacts-${KF5VER}
-PKGREVISION=	3
 CATEGORIES=	misc
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -17,5 +16,6 @@ USE_TOOLS+=	msgmerge
 .include "../../devel/ki18n/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../textproc/kcodecs/buildlink3.mk"
+.include "../../x11/qt5-qtdeclarative/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
