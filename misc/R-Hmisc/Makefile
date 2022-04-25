@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2019/09/26 22:14:05 brook Exp $
+# $NetBSD: Makefile,v 1.4 2022/04/25 13:29:17 mef Exp $
 
 R_PKGNAME=	Hmisc
-R_PKGVER=	4.2-0
+R_PKGVER=	4.7-0
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
