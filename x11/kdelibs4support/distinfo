@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:34:02 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/04/25 08:35:56 markd Exp $
 
-BLAKE2s (kdelibs4support-5.80.0.tar.xz) = a7b2986335ccebc0056fe06435bb80bef7384453f088f8b4e2ca625c1d70d5eb
-SHA512 (kdelibs4support-5.80.0.tar.xz) = 2cffc9c291adf24125e5b3898cf9138cd95cec9ac325a4a619d3b8fded50978c5850bb40265e4dcbf3dc3a0c851cdeaea3e3cbd0b873ef6b46f2b2d53ca32c09
-Size (kdelibs4support-5.80.0.tar.xz) = 3547060 bytes
+BLAKE2s (kdelibs4support-5.93.0.tar.xz) = 8b44b425ab14f104c1226a8d0382ddb948cdf160d6b208709250d64b1a5b27a5
+SHA512 (kdelibs4support-5.93.0.tar.xz) = e30d43caa45572ced9111d12a86d92371e6b5c842dd018583d1adfd69f279e6e0b1430bd07758a7862323f85937a57f41ea63308c41d64cc4474e300f0f88da5
+Size (kdelibs4support-5.93.0.tar.xz) = 3651032 bytes
