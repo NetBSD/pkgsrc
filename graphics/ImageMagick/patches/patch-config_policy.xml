@@ -1,11 +1,11 @@
-$NetBSD: patch-config_policy.xml,v 1.10 2021/05/04 14:31:57 nia Exp $
+$NetBSD: patch-config_policy.xml,v 1.11 2022/04/25 09:26:14 wiz Exp $
 
 Update default policies for better resistance to untrusted input.
 
 Discussion:
 http://mail-index.netbsd.org/tech-pkg/2021/04/03/msg024740.html
 
---- config/policy.xml.orig	2021-04-29 02:01:58.000000000 +0000
+--- config/policy.xml.orig	2022-04-23 13:47:41.000000000 +0000
 +++ config/policy.xml
 @@ -76,6 +76,30 @@
    <!-- <policy domain="cache" name="synchronize" value="True"/> -->
@@ -36,5 +36,5 @@ http://mail-index.netbsd.org/tech-pkg/2021/04/03/msg024740.html
 +  <policy domain="coder" rights="none" pattern="PLT" />
 +
    <!-- <policy domain="system" name="shred" value="2"/> -->
-   <!-- <policy domain="system" name="precision" value="6"/> -->
    <!-- <policy domain="system" name="font" value="/path/to/unicode-font.ttf"/> -->
+   <policy domain="system" name="precision" value="6"/>
