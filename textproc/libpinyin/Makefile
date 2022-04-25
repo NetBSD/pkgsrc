@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/12/08 16:02:43 adam Exp $
+# $NetBSD: Makefile,v 1.10 2022/04/25 09:13:52 tnn Exp $
 
 DISTNAME=	libpinyin-2.6.0
 PKGREVISION=	1
@@ -20,8 +20,10 @@ CONFIGURE_ARGS+=	--enable-libzhuyin
 PKGCONFIG_OVERRIDE+=	libpinyin.pc.in
 PKGCONFIG_OVERRIDE+=	libzhuyin.pc.in
 
-BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--version-script=./libpinyin.ver
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=./libpinyin.ver
+.for os in Darwin SunOS
+BUILDLINK_TRANSFORM.${os}+=	rm:-Wl,--version-script=./libpinyin.ver
+BUILDLINK_TRANSFORM.${os}+=	rm:-Wl,--version-script=./libzhuyin.ver
+.endfor
 
 .include "../../databases/db4/buildlink3.mk"
 BUILDLINK_TRANSFORM+=	l:db:db4
