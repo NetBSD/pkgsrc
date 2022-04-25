@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/03/30 09:43:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/04/25 02:52:44 markd Exp $
 lib/cmake/PlasmaWaylandProtocols/PlasmaWaylandProtocolsConfig.cmake
 lib/cmake/PlasmaWaylandProtocols/PlasmaWaylandProtocolsConfigVersion.cmake
 share/plasma-wayland-protocols/appmenu.xml
@@ -8,6 +8,9 @@ share/plasma-wayland-protocols/dpms.xml
 share/plasma-wayland-protocols/fake-input.xml
 share/plasma-wayland-protocols/fullscreen-shell.xml
 share/plasma-wayland-protocols/idle.xml
+share/plasma-wayland-protocols/kde-output-device-v2.xml
+share/plasma-wayland-protocols/kde-output-management-v2.xml
+share/plasma-wayland-protocols/kde-primary-output-v1.xml
 share/plasma-wayland-protocols/keystate.xml
 share/plasma-wayland-protocols/output-management.xml
 share/plasma-wayland-protocols/outputdevice.xml
