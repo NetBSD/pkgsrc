@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/03/30 10:58:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/04/25 04:39:12 markd Exp $
 include/KF5/KItemModels/KBreadcrumbSelectionModel
 include/KF5/KItemModels/KCheckableProxyModel
 include/KF5/KItemModels/KColumnHeadersModel
@@ -18,13 +18,13 @@ include/KF5/KItemModels/kconcatenaterowsproxymodel.h
 include/KF5/KItemModels/kdescendantsproxymodel.h
 include/KF5/KItemModels/kextracolumnsproxymodel.h
 include/KF5/KItemModels/kitemmodels_export.h
+include/KF5/KItemModels/kitemmodels_version.h
 include/KF5/KItemModels/klinkitemselectionmodel.h
 include/KF5/KItemModels/kmodelindexproxymapper.h
 include/KF5/KItemModels/knumbermodel.h
 include/KF5/KItemModels/krearrangecolumnsproxymodel.h
 include/KF5/KItemModels/krecursivefilterproxymodel.h
 include/KF5/KItemModels/kselectionproxymodel.h
-include/KF5/kitemmodels_version.h
 lib/cmake/KF5ItemModels/KF5ItemModelsConfig.cmake
 lib/cmake/KF5ItemModels/KF5ItemModelsConfigVersion.cmake
 lib/cmake/KF5ItemModels/KF5ItemModelsTargets-noconfig.cmake
