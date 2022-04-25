@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/03/30 10:58:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/04/25 06:05:45 markd Exp $
 include/KF5/Attica/Attica/AccountBalance
 include/KF5/Attica/Attica/Achievement
 include/KF5/Attica/Attica/Activity
@@ -6,8 +6,8 @@ include/KF5/Attica/Attica/BuildService
 include/KF5/Attica/Attica/BuildServiceJob
 include/KF5/Attica/Attica/BuildServiceJobOutput
 include/KF5/Attica/Attica/Category
-include/KF5/Attica/Attica/Config
 include/KF5/Attica/Attica/Comment
+include/KF5/Attica/Attica/Config
 include/KF5/Attica/Attica/Content
 include/KF5/Attica/Attica/DeleteJob
 include/KF5/Attica/Attica/Distribution
@@ -81,7 +81,7 @@ include/KF5/Attica/attica/putjob.h
 include/KF5/Attica/attica/remoteaccount.h
 include/KF5/Attica/attica/topic.h
 include/KF5/Attica/attica/version.h
-include/KF5/attica_version.h
+include/KF5/Attica/attica_version.h
 lib/cmake/KF5Attica/KF5AtticaConfig.cmake
 lib/cmake/KF5Attica/KF5AtticaConfigVersion.cmake
 lib/cmake/KF5Attica/KF5AtticaTargets-noconfig.cmake
