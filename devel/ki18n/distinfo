@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:15:10 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/04/25 04:02:39 markd Exp $
 
-BLAKE2s (ki18n-5.80.0.tar.xz) = ae7601dbf72f383c7a037f303c5b68bbc1692a386ab7ab01611ffacfa69276e0
-SHA512 (ki18n-5.80.0.tar.xz) = 0ba5b71c40f98c77792d73fd15a97e59cfb3d7f33da5d49a48621dbeed36a893c914b61e179c6f457ac552a91ebead55f59d70266ed02e6cac270e9936cd2494
-Size (ki18n-5.80.0.tar.xz) = 591016 bytes
+BLAKE2s (ki18n-5.93.0.tar.xz) = ef5cb8ef11efa55de3cf6e73fc98d796265b4fd66c330217925e55bab3737709
+SHA512 (ki18n-5.93.0.tar.xz) = ce34151080eeb99fe52995463cd0a29a6be0b10c500f24451c058fcedf291618d0d6c578f402a9d1326e60e4a1b19eb87c0ac148826e6aaaf6e4501d8e36a13a
+Size (ki18n-5.93.0.tar.xz) = 955916 bytes
