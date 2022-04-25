@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:20:03 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/04/25 05:32:12 markd Exp $
 
-BLAKE2s (threadweaver-5.80.0.tar.xz) = 41615082d05ab2ecb98e7795588edd9193f6305d08fe9fc5d24784306b24a87c
-SHA512 (threadweaver-5.80.0.tar.xz) = e7b30f2fdee4b1d4ec5153afe83bcbc238d7075214fb6623639ee5700ee62cea5b51ca335b1b08b1fc7ca471e55dda6b87e5a1b9d4660c299d6dfacfa5573e73
-Size (threadweaver-5.80.0.tar.xz) = 1410660 bytes
+BLAKE2s (threadweaver-5.93.0.tar.xz) = 02893b9d0b90fe1ccc91d648d061ce60449d043b2f269c7ef21eb3cfc41e67dc
+SHA512 (threadweaver-5.93.0.tar.xz) = 793aa5b95106a402ba384e0d603b3ff5f80bdc0567bb23dbf0ba0fe6a9dc2ecc435c10c79a84ff62ac86b132f298e6a27d93475f30d14850748df34eab89f768
+Size (threadweaver-5.93.0.tar.xz) = 1412636 bytes
