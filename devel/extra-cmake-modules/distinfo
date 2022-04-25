@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.20 2022/01/28 09:00:36 wiz Exp $
+$NetBSD: distinfo,v 1.21 2022/04/25 03:04:59 markd Exp $
 
-BLAKE2s (extra-cmake-modules-5.83.0.tar.xz) = fc2a072106405e234f842a7757ebf5bfba080943c1657daa85da059b62a89d0c
-SHA512 (extra-cmake-modules-5.83.0.tar.xz) = 23085dc82dfcaa63a58a1fcc9fe03db6ce8c31dc059370464240f510de9578f617fe20297b1a8e153dd028db178a3ec7faafb8cd4edaea20913f43ce385c0ecf
-Size (extra-cmake-modules-5.83.0.tar.xz) = 314824 bytes
-SHA1 (patch-find-modules_FindPythonModuleGeneration.cmake) = 227b3c11f2eacf09e267f77a12b696f82fca50f6
+BLAKE2s (extra-cmake-modules-5.93.0.tar.xz) = 51e1e6b145079b6a351debb611292af4c17f88fca920f74b2c7254fd8afcae96
+SHA512 (extra-cmake-modules-5.93.0.tar.xz) = a7b79a3db555e7a140ebc49f6b987c5950a2a002cfb4641b30be823dd39b97d3239ce0892c31c8f41463d3a40f6ba9183343a65d52d087bd464289fa93bca882
+Size (extra-cmake-modules-5.93.0.tar.xz) = 331192 bytes
 SHA1 (patch-kde-modules_KDECompilerSettings.cmake) = fd20a82370a451aa45d4d8fa59127c76bdc5a441
+SHA1 (patch-kde-modules_KDEMetaInfoPlatformCheck.cmake) = 4642c8b7d665af28f2fc79112ae3881356190cb4
