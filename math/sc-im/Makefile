@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2022/04/18 19:11:36 adam Exp $
+# $NetBSD: Makefile,v 1.35 2022/04/25 11:03:45 tnn Exp $
 
 DISTNAME=	sc-im-0.8.2
 PKGREVISION=	6
@@ -17,7 +17,7 @@ INSTALL_DIRS=	src
 .include "../../mk/bsd.prefs.mk"
 
 # pkg-config to avoid broken Makefile self-configuration
-USE_TOOLS+=	gmake pkg-config yacc bash:run
+USE_TOOLS+=	gmake pkg-config bison bash:run
 
 REPLACE_BASH+=	src/scopen
 
