@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/11/15 11:36:58 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/25 15:33:58 tnn Exp $
 
 GITHUB_PROJECT=		tcpexec
 GITHUB_TAG=		7e02e755aca4cb377910b729e43de8e3fb48eece
@@ -17,6 +17,8 @@ TEST_DEPENDS+=		bats-[0-9]*:../../devel/bats
 TEST_TARGET=		test	# XXX needs to be run as root
 
 INSTALLATION_DIRS=	bin share/doc/${PKGBASE}
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tcpexec ${DESTDIR}${PREFIX}/bin
