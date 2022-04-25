@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2021/11/15 22:01:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/04/25 07:20:25 wiz Exp $
 lib/gstreamer-1.0/libgstpython.so
 ${PYSITELIB}/gi/overrides/Gst.py
+${PYSITELIB}/gi/overrides/GstAudio.py
 ${PYSITELIB}/gi/overrides/GstPbutils.py
+${PYSITELIB}/gi/overrides/GstVideo.py
 ${PYSITELIB}/gi/overrides/_gi_gst.so
