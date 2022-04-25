@@ -1,4 +1,7 @@
-$NetBSD: patch-pawns.cpp,v 1.1 2019/12/20 00:00:55 joerg Exp $
+$NetBSD: patch-pawns.cpp,v 1.2 2022/04/25 15:24:31 tnn Exp $
+
+date: 2019-12-20 01:00:55 +0100;  author: joerg;  state: Exp;  commitid: QhSAW31NXzINnnPB;
+Fix popcount conflict on NetBSD. Avoid LTO and 32bit binaries on NetBSD.
 
 --- pawns.cpp.orig	2019-12-19 22:50:55.102229747 +0000
 +++ pawns.cpp
