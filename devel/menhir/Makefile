@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2021/03/08 08:12:47 jaapb Exp $
+# $NetBSD: Makefile,v 1.31 2022/04/25 10:51:50 tnn Exp $
 #
 
 DISTNAME=	menhir-20190924
@@ -30,6 +30,7 @@ MAKE_ENV+=	TARGET=byte
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 MAKE_ENV+=	EGDIR=${EGDIR:Q} USE_OCAMLFIND=true \
 		OCAML_SITELIBDIR=${OCAML_SITELIBDIR}
+MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/ocamlbuild/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
