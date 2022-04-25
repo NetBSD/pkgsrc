@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1453 2022/04/20 10:11:34 khorben Exp $
+# $NetBSD: Makefile,v 1.1454 2022/04/25 07:18:45 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -213,7 +213,6 @@ SUBDIR+=	gst-plugins0.10-mms
 SUBDIR+=	gst-plugins0.10-rtmp
 SUBDIR+=	gst-plugins0.10-soup
 SUBDIR+=	gst-plugins1-libnice
-SUBDIR+=	gst-plugins1-mms
 SUBDIR+=	gst-plugins1-rtmp
 SUBDIR+=	gst-plugins1-soup
 SUBDIR+=	gst-rtsp-server
