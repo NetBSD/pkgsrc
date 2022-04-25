@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/10/08 10:23:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/04/25 08:16:38 adam Exp $
 bin/oid2name
 bin/vacuumlo
 include/postgresql/server/extension/cube/cubedata.h
@@ -77,6 +77,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/hstore/hstore_gin.bc
 ${PLIST.llvm}lib/postgresql/bitcode/hstore/hstore_gist.bc
 ${PLIST.llvm}lib/postgresql/bitcode/hstore/hstore_io.bc
 ${PLIST.llvm}lib/postgresql/bitcode/hstore/hstore_op.bc
+${PLIST.llvm}lib/postgresql/bitcode/hstore/hstore_subs.bc
 ${PLIST.llvm}lib/postgresql/bitcode/insert_username.index.bc
 ${PLIST.llvm}lib/postgresql/bitcode/insert_username/insert_username.bc
 ${PLIST.llvm}lib/postgresql/bitcode/isn.index.bc
@@ -100,6 +101,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/pageinspect/brinfuncs.bc
 ${PLIST.llvm}lib/postgresql/bitcode/pageinspect/btreefuncs.bc
 ${PLIST.llvm}lib/postgresql/bitcode/pageinspect/fsmfuncs.bc
 ${PLIST.llvm}lib/postgresql/bitcode/pageinspect/ginfuncs.bc
+${PLIST.llvm}lib/postgresql/bitcode/pageinspect/gistfuncs.bc
 ${PLIST.llvm}lib/postgresql/bitcode/pageinspect/hashfuncs.bc
 ${PLIST.llvm}lib/postgresql/bitcode/pageinspect/heapfuncs.bc
 ${PLIST.llvm}lib/postgresql/bitcode/pageinspect/rawpage.bc
@@ -176,8 +178,6 @@ ${PLIST.llvm}lib/postgresql/bitcode/tsm_system_time/tsm_system_time.bc
 ${PLIST.llvm}lib/postgresql/bitcode/unaccent.index.bc
 ${PLIST.llvm}lib/postgresql/bitcode/unaccent/unaccent.bc
 ${PLIST.llvm}${PLIST.uuid}lib/postgresql/bitcode/uuid-ossp.index.bc
-${PLIST.llvm}${PLIST.uuid}lib/postgresql/bitcode/uuid-ossp/md5.bc
-${PLIST.llvm}${PLIST.uuid}lib/postgresql/bitcode/uuid-ossp/sha1.bc
 ${PLIST.llvm}${PLIST.uuid}lib/postgresql/bitcode/uuid-ossp/uuid-ossp.bc
 lib/postgresql/btree_gin.so
 lib/postgresql/btree_gist.so
