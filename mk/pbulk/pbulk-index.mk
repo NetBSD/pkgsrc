@@ -1,4 +1,4 @@
-#	$NetBSD: pbulk-index.mk,v 1.25 2020/01/13 22:08:33 joerg Exp $
+#	$NetBSD: pbulk-index.mk,v 1.26 2022/04/25 10:59:23 jperkin Exp $
 
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to the parallel bulk build
@@ -99,10 +99,16 @@ pbulk-index:
 		${_PBULK_MULTI_NEEDED:@._t.@;done@}
 .endif
 
-.if defined(PBULK_CACHE_DIRECTORY)
-_PBULK_SCAN_DEPENDS=	${.MAKE.MAKEFILES:N${PBULK_CACHE_DIRECTORY}/*}
-.else
 _PBULK_SCAN_DEPENDS=	${.MAKE.MAKEFILES}
+
+.if defined(PBULK_CACHE_DIRECTORY)
+_PBULK_SCAN_DEPENDS:=	${_PBULK_SCAN_DEPENDS:N${PBULK_CACHE_DIRECTORY}/*}
+.endif
+
+.if defined(SCAN_DEPENDS_SKIP)
+.  for _dir_ in ${SCAN_DEPENDS_SKIP}
+_PBULK_SCAN_DEPENDS:=	${_PBULK_SCAN_DEPENDS:N${_dir_}}
+.  endfor
 .endif
 
 pbulk-index-item:
