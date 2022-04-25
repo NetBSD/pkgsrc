@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/03/30 10:58:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/04/25 08:26:08 markd Exp $
 bin/kactivities-cli
 include/KF5/KActivities/KActivities/ActivitiesModel
 include/KF5/KActivities/KActivities/Consumer
@@ -13,7 +13,7 @@ include/KF5/KActivities/kactivities/info.h
 include/KF5/KActivities/kactivities/kactivities_export.h
 include/KF5/KActivities/kactivities/resourceinstance.h
 include/KF5/KActivities/kactivities/version.h
-include/KF5/kactivities_version.h
+include/KF5/KActivities/kactivities_version.h
 lib/cmake/KF5Activities/KF5ActivitiesConfig.cmake
 lib/cmake/KF5Activities/KF5ActivitiesConfigVersion.cmake
 lib/cmake/KF5Activities/KF5ActivitiesLibraryTargets-noconfig.cmake
