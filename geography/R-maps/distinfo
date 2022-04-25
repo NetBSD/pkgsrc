@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:45:05 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/25 12:53:58 mef Exp $
 
-BLAKE2s (R/maps_3.3.0.tar.gz) = c7f97e22cf17671224cb34145d05417c08740860fb4e294331675790846c5ea3
-SHA512 (R/maps_3.3.0.tar.gz) = 4310748976ab262f818de589d63d5a5b49bc356c5df0651b123124152701e4c2003387a5cb9b5e8b7fbd0ecc8bbe010c707fc86461f152d544451f1fa65ac647
-Size (R/maps_3.3.0.tar.gz) = 2493744 bytes
+BLAKE2s (R/maps_3.4.0.tar.gz) = c74bab8bf08723d7494ecdf3bf23954e9a6a0fc0dc49ce2df489f03673398903
+SHA512 (R/maps_3.4.0.tar.gz) = 30d8b6e6519d0fb642a7f59e96c2ca5e7fc9ed29d9ad42e068821b7f370132c7d2ddf9dc8de177d5e5269504e9701c86b3cfc6401872c71af30291a10aed2b1f
+Size (R/maps_3.4.0.tar.gz) = 2278225 bytes
