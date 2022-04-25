@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2098 2022/04/25 15:09:53 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.2099 2022/04/25 15:11:58 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3341,3 +3341,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/pax-utils to 1.3.4 [fcambus 2022-04-25]
 	Updated misc/R-Hmisc to 4.7.0 [mef 2022-04-25]
 	Updated net/djbdnscurve6 to 42a [schmonz 2022-04-25]
+	Updated devel/py-approvaltests to 5.0.1 [schmonz 2022-04-25]
