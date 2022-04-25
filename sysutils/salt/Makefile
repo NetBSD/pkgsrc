@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2022/01/05 15:41:23 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2022/04/25 16:34:39 jperkin Exp $
 
 DISTNAME=	salt-3004
 PKGREVISION=	2
@@ -74,6 +74,7 @@ SUBST_NOOP_OK.fix-path=	yes
 
 # Contains hardcoded paths to find installed libraries.
 CHECK_WRKREF_SKIP+=	*/salt/utils/rsax931.py
+CHECK_WRKREF_SKIP+=	*/smartos.*
 
 CHECK_PORTABILITY_SKIP+=	pkg/*/* pkg/*/*/*
 
