@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2022/02/15 09:24:13 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2022/04/25 15:37:28 tnn Exp $
 
 DISTNAME=	notmuch-0.35
 CATEGORIES=	mail
@@ -25,7 +25,7 @@ REPLACE_BASH+=	emacs/notmuch-emacs-mua
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
-CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
+CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 CONFIGURE_ARGS+=	--without-ruby
 
 SUBST_CLASSES.SunOS+=	gnuld
