@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2021/12/07 12:06:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.117 2022/04/25 16:03:19 tnn Exp $
 
 DISTNAME=	make-4.3
 PKGNAME=	g${DISTNAME}
@@ -49,8 +49,6 @@ CPPFLAGS+=	-DPKGSRC_DEFAULT_SHELL="\"/usr/bin/bash\""
 .if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[0-9].*)
 CONFIGURE_ARGS.NetBSD+=	--disable-posix-spawn
 .endif
-
-AUTO_MKDIRS=		yes
 
 .include "options.mk"
 
