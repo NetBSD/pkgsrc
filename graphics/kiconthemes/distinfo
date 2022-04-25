@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:46:23 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/04/25 05:53:53 markd Exp $
 
-BLAKE2s (kiconthemes-5.80.0.tar.xz) = 13637b5a034fe98b059a48d4ccbd2e11684c077de0c0225a329f0e230ac77484
-SHA512 (kiconthemes-5.80.0.tar.xz) = bf5adcd46b695038b66ef9374603e9e88090f31259971fc92c97f367e2055d96fe8c4a5c486954b372c369eb17a31858fde426e1cb373535e48138692f1b0ee8
-Size (kiconthemes-5.80.0.tar.xz) = 222692 bytes
+BLAKE2s (kiconthemes-5.93.0.tar.xz) = dbeff182fc2954b1c3fd8c84a3a6c656eb5ef5902be016ac8fe12d84c273a881
+SHA512 (kiconthemes-5.93.0.tar.xz) = 47f8a88f3d231b31785bbfecd7a978a93097df25ea2d9fe49b9569f984571913e7690e130d42ab75908be62f2ab4092c05d829a5eff14a91a8f989d9d7705952
+Size (kiconthemes-5.93.0.tar.xz) = 226336 bytes
