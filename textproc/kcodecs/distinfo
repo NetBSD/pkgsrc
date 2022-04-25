@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:22:14 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/04/25 06:52:22 markd Exp $
 
-BLAKE2s (kcodecs-5.80.0.tar.xz) = b580d2e81d3d35a7935919e0ffd5a7dfda667add86421c7c022429d3332e132c
-SHA512 (kcodecs-5.80.0.tar.xz) = 27e367d12c995d96908ab0e956a6fba766374dc26c720ea97303cfa5a1e1b644076c5d68487a35ec8300204e556460d74a55be78239a073e1b3b72cebd153919
-Size (kcodecs-5.80.0.tar.xz) = 229456 bytes
+BLAKE2s (kcodecs-5.93.0.tar.xz) = 10c25c9dd4b7479d7fb85e08f300052c74c06dd5a6e15772b8e4c7ed9f6f3d6f
+SHA512 (kcodecs-5.93.0.tar.xz) = 491b817176997fe5433ab146294ccc841a3a404ceafe80b90f6484fa26857b2c970d5687251cedad3c4b845b13e0f625ead23093030ec43cc7c0e59cf672f7bc
+Size (kcodecs-5.93.0.tar.xz) = 236844 bytes
