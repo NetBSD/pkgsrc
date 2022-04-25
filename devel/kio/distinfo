@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 10:15:10 nia Exp $
+$NetBSD: distinfo,v 1.17 2022/04/25 04:34:43 markd Exp $
 
-BLAKE2s (kio-5.80.1.tar.xz) = d1e6e9f387af493910e9e3c6fa65844ae89706dffddd6c892654bb1ad765a156
-SHA512 (kio-5.80.1.tar.xz) = c3080291d06956bd197e7104eacdfbab3e166fb5b598bc6c902c4e6ff9cc7922b59c2ae5acb2a565e61d2a6047ca09651446f0a41d268568b4cb192477969213
-Size (kio-5.80.1.tar.xz) = 3318204 bytes
-SHA1 (patch-src_core_config-kmountpoint.h.cmake) = 7da0ea584a8c10b7b5476dd91f56a284869f056c
+BLAKE2s (kio-5.93.0.tar.xz) = 9a66c32f1e321b6c10064d780cc1f919ecab2ee72f33468fb074b44b1ca84f19
+SHA512 (kio-5.93.0.tar.xz) = d7f1f5ed834dbdc4919dd90def14561e4a8cd1c7f31f0a8b1bb62cb9009509ee2649ed17147bd2197067149942eb65938c41cd3605c9463f7d2cc109d7688747
+Size (kio-5.93.0.tar.xz) = 3327996 bytes
+SHA1 (patch-src_core_kmountpoint.cpp) = 463809efb317c5eb721209504521a0c0013b0442
+SHA1 (patch-src_filewidgets_kurlnavigator.cpp) = a6a459fdbeaa7e07b2596079c8f5f4a6789fd0eb
