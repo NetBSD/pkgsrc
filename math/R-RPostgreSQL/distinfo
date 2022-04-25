@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:55:23 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/04/25 12:26:46 mef Exp $
 
-BLAKE2s (R/RPostgreSQL_0.7.tar.gz) = 12b22cfeb2da299b464a2e2e9b27cb3bd84a19b00168f494f4faa41f40122899
-SHA512 (R/RPostgreSQL_0.7.tar.gz) = ea42d36cdefbf5a9aaa499e4cf9f02fa7db50dc240b481b2b7b13c5231f0192f6766e07dd99ae960d93571f31b18f13b334b17af4626e92b2529b37676ac53cf
-Size (R/RPostgreSQL_0.7.tar.gz) = 581710 bytes
+BLAKE2s (R/RPostgreSQL_0.7-3.tar.gz) = 766089572c3d0e35d536ffa4ee858a687a2d232fc860f4dfd5bbb90baa2b8e86
+SHA512 (R/RPostgreSQL_0.7-3.tar.gz) = 76d67e514a8a01df771687fed3de1b35a0924a3d18957630fed34cfb6686d8d14b0dd2b8eee929796e97df866b42bd8bf76aa9849b1ba740f87f5d712d6dc3ac
+Size (R/RPostgreSQL_0.7-3.tar.gz) = 580771 bytes
