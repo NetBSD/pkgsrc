@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.7 2021/03/30 10:58:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/04/25 05:53:53 markd Exp $
 bin/kiconfinder5
 include/KF5/KIconThemes/KIconButton
+include/KF5/KIconThemes/KIconColors
 include/KF5/KIconThemes/KIconDialog
 include/KF5/KIconThemes/KIconEffect
 include/KF5/KIconThemes/KIconEngine
 include/KF5/KIconThemes/KIconLoader
 include/KF5/KIconThemes/KIconTheme
 include/KF5/KIconThemes/kiconbutton.h
+include/KF5/KIconThemes/kiconcolors.h
 include/KF5/KIconThemes/kicondialog.h
 include/KF5/KIconThemes/kiconeffect.h
 include/KF5/KIconThemes/kiconengine.h
 include/KF5/KIconThemes/kiconloader.h
 include/KF5/KIconThemes/kicontheme.h
 include/KF5/KIconThemes/kiconthemes_export.h
-include/KF5/kiconthemes_version.h
+include/KF5/KIconThemes/kiconthemes_version.h
 lib/cmake/KF5IconThemes/KF5IconThemesConfig.cmake
 lib/cmake/KF5IconThemes/KF5IconThemesConfigVersion.cmake
 lib/cmake/KF5IconThemes/KF5IconThemesTargets-noconfig.cmake
