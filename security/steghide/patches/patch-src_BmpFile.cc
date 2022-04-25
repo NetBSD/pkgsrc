@@ -1,8 +1,19 @@
-$NetBSD: patch-src_BmpFile.cc,v 1.1 2013/03/02 17:57:08 joerg Exp $
+$NetBSD: patch-src_BmpFile.cc,v 1.2 2022/04/25 15:01:53 tnn Exp $
 
---- src/BmpFile.cc.orig	2013-03-01 15:07:01.000000000 +0000
+avoid ambiguous math functions
+
+--- src/BmpFile.cc.orig	2003-09-28 15:30:30.000000000 +0000
 +++ src/BmpFile.cc
-@@ -214,10 +214,10 @@ std::vector<SampleValueAdjacencyList*> B
+@@ -36,6 +36,8 @@
+ #include "common.h"
+ #include "error.h"
+ 
++using std:sqrt;
++
+ BmpFile::BmpFile (BinaryIO *io)
+ 	: CvrStgFile()
+ {
+@@ -214,10 +216,10 @@ std::vector<SampleValueAdjacencyList*> B
  		// create reservoir - for every i reservoir[i] contains the sample values that are neighbourss of
  		// the sample value with label i and have a lower label (and have already been found)
  		// This is necessary to use collapsing trees together with bucket sort (without huge increase in memory usage)
