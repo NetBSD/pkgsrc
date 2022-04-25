@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/03/30 10:58:28 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/04/25 07:14:03 markd Exp $
 include/KF5/KHolidays/KHolidays/AstroSeasons
 include/KF5/KHolidays/KHolidays/Holiday
 include/KF5/KHolidays/KHolidays/HolidayRegion
@@ -12,7 +12,7 @@ include/KF5/KHolidays/kholidays/kholidays_export.h
 include/KF5/KHolidays/kholidays/lunarphase.h
 include/KF5/KHolidays/kholidays/sunriseset.h
 include/KF5/KHolidays/kholidays/zodiac.h
-include/KF5/kholidays_version.h
+include/KF5/KHolidays/kholidays_version.h
 lib/cmake/KF5Holidays/KF5HolidaysConfig.cmake
 lib/cmake/KF5Holidays/KF5HolidaysConfigVersion.cmake
 lib/cmake/KF5Holidays/KF5HolidaysTargets-noconfig.cmake
