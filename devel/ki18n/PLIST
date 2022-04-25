@@ -1,16 +1,25 @@
-@comment $NetBSD: PLIST,v 1.6 2021/03/30 10:58:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/04/25 04:02:39 markd Exp $
+include/KF5/KI18n/KLazyLocalizedString
 include/KF5/KI18n/KLocalizedContext
 include/KF5/KI18n/KLocalizedString
 include/KF5/KI18n/KLocalizedTranslator
 include/KF5/KI18n/KuitMarkup
 include/KF5/KI18n/KuitSetup
 include/KF5/KI18n/ki18n_export.h
+include/KF5/KI18n/ki18n_version.h
+include/KF5/KI18n/klazylocalizedstring.h
 include/KF5/KI18n/klocalizedcontext.h
 include/KF5/KI18n/klocalizedstring.h
 include/KF5/KI18n/klocalizedtranslator.h
 include/KF5/KI18n/kuitmarkup.h
 include/KF5/KI18n/kuitsetup.h
-include/KF5/ki18n_version.h
+include/KF5/KI18nLocaleData/KCountry
+include/KF5/KI18nLocaleData/KCountrySubdivision
+include/KF5/KI18nLocaleData/KTimeZone
+include/KF5/KI18nLocaleData/kcountry.h
+include/KF5/KI18nLocaleData/kcountrysubdivision.h
+include/KF5/KI18nLocaleData/ki18nlocaledata_export.h
+include/KF5/KI18nLocaleData/ktimezone.h
 lib/cmake/KF5I18n/KF5I18nConfig.cmake
 lib/cmake/KF5I18n/KF5I18nConfigVersion.cmake
 lib/cmake/KF5I18n/KF5I18nMacros.cmake
@@ -23,8 +32,13 @@ lib/cmake/KF5I18n/ts-pmap-compile.py
 lib/libKF5I18n.so
 lib/libKF5I18n.so.5
 lib/libKF5I18n.so.${PKGVERSION}
+lib/libKF5I18nLocaleData.so
+lib/libKF5I18nLocaleData.so.5
+lib/libKF5I18nLocaleData.so.${PKGVERSION}
 qt5/mkspecs/modules/qt_KI18n.pri
 qt5/plugins/kf5/ktranscript.so
+qt5/qml/org/kde/i18n/localeData/libki18nlocaledataqmlplugin.so
+qt5/qml/org/kde/i18n/localeData/qmldir
 share/locale/af/LC_MESSAGES/ki18n5.mo
 share/locale/ar/LC_MESSAGES/ki18n5.mo
 share/locale/as/LC_MESSAGES/ki18n5.mo
