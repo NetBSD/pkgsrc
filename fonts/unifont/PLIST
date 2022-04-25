@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2019/03/10 10:51:15 leot Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/04/25 09:09:58 wiz Exp $
 bin/bdfimplode
 bin/hex2bdf
+bin/hex2otf
 bin/hex2sfd
 bin/hexbraille
 bin/hexdraw
