@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.5 2021/03/30 10:58:30 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/04/25 08:40:32 markd Exp $
 bin/kglobalaccel5
 include/KF5/KGlobalAccel/KGlobalAccel
 include/KF5/KGlobalAccel/KGlobalShortcutInfo
 include/KF5/KGlobalAccel/kglobalaccel.h
 include/KF5/KGlobalAccel/kglobalaccel_export.h
+include/KF5/KGlobalAccel/kglobalaccel_version.h
 include/KF5/KGlobalAccel/kglobalshortcutinfo.h
 include/KF5/KGlobalAccel/private/kf5globalaccelprivate_export.h
 include/KF5/KGlobalAccel/private/kglobalaccel_interface.h
 include/KF5/KGlobalAccel/private/kglobalacceld.h
-include/KF5/kglobalaccel_version.h
 lib/cmake/KF5GlobalAccel/KF5GlobalAccelConfig.cmake
 lib/cmake/KF5GlobalAccel/KF5GlobalAccelConfigVersion.cmake
 lib/cmake/KF5GlobalAccel/KF5GlobalAccelTargets-noconfig.cmake
