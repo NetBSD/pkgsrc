@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/04/25 17:39:51 schmonz Exp $
+# $NetBSD: Makefile,v 1.17 2022/04/25 18:21:52 wiz Exp $
 
 DISTNAME=		feed2exec-0.18.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -34,7 +34,7 @@ DEPENDS+=		${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 DEPENDS+=		${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 TEST_DEPENDS+=		${PYPKGPREFIX}-betamax>=0.8.0:../../www/py-betamax
 TEST_DEPENDS+=		${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-TEST_DEPENDS+=		${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-runner
+TEST_DEPENDS+=		${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=		${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=		# none
