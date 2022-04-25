@@ -1,0 +1,16 @@
+$NetBSD: patch-Docs_makefile.in,v 1.1 2022/04/25 10:35:06 tnn Exp $
+
+robodoc: manh is not a valid man section. HTML manual goes in share/doc/robodoc.
+
+--- Docs/makefile.in.orig	2004-09-26 10:10:25.000000000 +0000
++++ Docs/makefile.in
+@@ -180,6 +180,9 @@ uninstall-man1:
+ 
+ manhdir = $(mandir)/manh
+ install-manh: $(manh_MANS) $(man_MANS)
++	true
++
++do-not-install-manh: $(manh_MANS) $(man_MANS)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(manhdir)
+ 	@list='$(manh_MANS) $(dist_manh_MANS) $(nodist_manh_MANS)'; \

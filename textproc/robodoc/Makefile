@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2020/04/27 17:35:22 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2022/04/25 10:35:06 tnn Exp $
 #
 
 DISTNAME=	robodoc-4.99.6
+PKGREVISION=	1
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=robodoc/}
 
