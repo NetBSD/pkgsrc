@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/08/09 17:11:46 brook Exp $
+# $NetBSD: Makefile,v 1.4 2022/04/25 12:53:58 mef Exp $
 
 R_PKGNAME=	maps
-R_PKGVER=	3.3.0
+R_PKGVER=	3.4.0
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
