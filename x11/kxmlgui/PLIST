@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/03/30 10:58:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/04/25 09:17:52 markd Exp $
 include/KF5/KXmlGui/KAboutApplicationDialog
 include/KF5/KXmlGui/KAboutPluginDialog
 include/KF5/KXmlGui/KActionCategory
@@ -13,6 +13,7 @@ include/KF5/KXmlGui/KShortcutsDialog
 include/KF5/KXmlGui/KShortcutsEditor
 include/KF5/KXmlGui/KToggleToolBarAction
 include/KF5/KXmlGui/KToolBar
+include/KF5/KXmlGui/KToolTipHelper
 include/KF5/KXmlGui/KUndoActions
 include/KF5/KXmlGui/KXMLGUIBuilder
 include/KF5/KXmlGui/KXMLGUIClient
@@ -32,13 +33,14 @@ include/KF5/KXmlGui/kshortcutseditor.h
 include/KF5/KXmlGui/kshortcutwidget.h
 include/KF5/KXmlGui/ktoggletoolbaraction.h
 include/KF5/KXmlGui/ktoolbar.h
+include/KF5/KXmlGui/ktooltiphelper.h
 include/KF5/KXmlGui/kundoactions.h
 include/KF5/KXmlGui/kxmlgui_export.h
+include/KF5/KXmlGui/kxmlgui_version.h
 include/KF5/KXmlGui/kxmlguibuilder.h
 include/KF5/KXmlGui/kxmlguiclient.h
 include/KF5/KXmlGui/kxmlguifactory.h
 include/KF5/KXmlGui/kxmlguiwindow.h
-include/KF5/kxmlgui_version.h
 lib/cmake/KF5XmlGui/KF5XmlGuiConfig.cmake
 lib/cmake/KF5XmlGui/KF5XmlGuiConfigVersion.cmake
 lib/cmake/KF5XmlGui/KF5XmlGuiTargets-noconfig.cmake
@@ -111,6 +113,7 @@ share/locale/mk/LC_MESSAGES/kxmlgui5.mo
 share/locale/ml/LC_MESSAGES/kxmlgui5.mo
 share/locale/mr/LC_MESSAGES/kxmlgui5.mo
 share/locale/ms/LC_MESSAGES/kxmlgui5.mo
+share/locale/my/LC_MESSAGES/kxmlgui5.mo
 share/locale/nb/LC_MESSAGES/kxmlgui5.mo
 share/locale/nds/LC_MESSAGES/kxmlgui5.mo
 share/locale/ne/LC_MESSAGES/kxmlgui5.mo
@@ -139,6 +142,7 @@ share/locale/ta/LC_MESSAGES/kxmlgui5.mo
 share/locale/te/LC_MESSAGES/kxmlgui5.mo
 share/locale/tg/LC_MESSAGES/kxmlgui5.mo
 share/locale/th/LC_MESSAGES/kxmlgui5.mo
+share/locale/tok/LC_MESSAGES/kxmlgui5.mo
 share/locale/tr/LC_MESSAGES/kxmlgui5.mo
 share/locale/tt/LC_MESSAGES/kxmlgui5.mo
 share/locale/ug/LC_MESSAGES/kxmlgui5.mo
