@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/06 11:54:53 asau Exp $
+# $NetBSD: Makefile,v 1.17 2022/04/25 10:21:12 tnn Exp $
 
 DISTNAME=	rocksndiamonds-levels-1.0
 PKGREVISION=	3
@@ -81,7 +81,7 @@ OWN_DIRS_PERMS+=	${SCORE_PATH}/scores/${directory} \
 
 do-install:
 	cd ${WRKSRC} && ${FIND} DX_Boulderdash Emerald_Mine_Club Supaplex | \
-		${CPIO} -p ${DESTDIR}${PREFIX}/share/rocksndiamonds/levels
+		${CPIO} -pd ${DESTDIR}${PREFIX}/share/rocksndiamonds/levels
 	${RM} -f ${WRKDIR}/PLIST
 .for levdir in DX_Boulderdash Emerald_Mine_Club Supaplex
 	cd ${DESTDIR}${PREFIX} && \
