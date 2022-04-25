@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2021/03/30 10:58:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/04/25 03:56:16 markd Exp $
 bin/kpackagelauncherqml
 include/KF5/KDeclarative/CalendarEvents/CalendarEventsPlugin
 include/KF5/KDeclarative/KDeclarative/ConfigPropertyMap
@@ -20,6 +20,7 @@ include/KF5/KDeclarative/kdeclarative/kdeclarative.h
 include/KF5/KDeclarative/kdeclarative/kdeclarative_export.h
 include/KF5/KDeclarative/kdeclarative/qmlobject.h
 include/KF5/KDeclarative/kdeclarative/qmlobjectsharedengine.h
+include/KF5/KDeclarative/kdeclarative_version.h
 include/KF5/KDeclarative/kquickaddons/configmodule.h
 include/KF5/KDeclarative/kquickaddons/imagetexturescache.h
 include/KF5/KDeclarative/kquickaddons/managedconfigmodule.h
@@ -30,7 +31,6 @@ include/KF5/KDeclarative/kquickaddons/quickviewsharedengine.h
 include/KF5/KDeclarative/quickaddons/imagetexturescache.h
 include/KF5/KDeclarative/quickaddons/managedtexturenode.h
 include/KF5/KDeclarative/quickaddons/quickaddons_export.h
-include/KF5/kdeclarative_version.h
 lib/cmake/KF5Declarative/KF5DeclarativeConfig.cmake
 lib/cmake/KF5Declarative/KF5DeclarativeConfigVersion.cmake
 lib/cmake/KF5Declarative/KF5DeclarativeTargets-noconfig.cmake
@@ -48,7 +48,14 @@ qt5/mkspecs/modules/qt_KDeclarative.pri
 qt5/mkspecs/modules/qt_QuickAddons.pri
 qt5/qml/org/kde/draganddrop/libdraganddropplugin.so
 qt5/qml/org/kde/draganddrop/qmldir
+qt5/qml/org/kde/graphicaleffects/Lanczos.qml
+qt5/qml/org/kde/graphicaleffects/lanczos2sharp.frag
+qt5/qml/org/kde/graphicaleffects/lanczos2sharp_core.frag
+qt5/qml/org/kde/graphicaleffects/preserveaspect.vert
+qt5/qml/org/kde/graphicaleffects/preserveaspect_core.vert
+qt5/qml/org/kde/graphicaleffects/qmldir
 qt5/qml/org/kde/kcm/AbstractKCM.qml
+qt5/qml/org/kde/kcm/ContextualHelpButton.qml
 qt5/qml/org/kde/kcm/GridDelegate.qml
 qt5/qml/org/kde/kcm/GridView.qml
 qt5/qml/org/kde/kcm/GridViewKCM.qml
