@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/03/30 10:58:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/04/25 08:21:14 markd Exp $
 include/KF5/Syndication/Syndication/AbstractParser
 include/KF5/Syndication/Syndication/Atom/Atom
 include/KF5/Syndication/Syndication/Atom/Category
@@ -130,7 +130,7 @@ include/KF5/Syndication/syndication/specificitemvisitor.h
 include/KF5/Syndication/syndication/syndication.h
 include/KF5/Syndication/syndication/syndication_export.h
 include/KF5/Syndication/syndication/tools.h
-include/KF5/syndication_version.h
+include/KF5/Syndication/syndication_version.h
 lib/cmake/KF5Syndication/KF5SyndicationConfig.cmake
 lib/cmake/KF5Syndication/KF5SyndicationConfigVersion.cmake
 lib/cmake/KF5Syndication/KF5SyndicationTargets-noconfig.cmake
