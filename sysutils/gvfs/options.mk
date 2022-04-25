@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2022/04/21 16:49:27 nia Exp $
+# $NetBSD: options.mk,v 1.3 2022/04/25 08:26:15 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gvfs
 PKG_SUPPORTED_OPTIONS+=	avahi hal fuse samba
@@ -41,6 +41,7 @@ CONFIGURE_ARGS+=	--disable-cdda
 .endif
 
 .if !empty(PKG_OPTIONS:Mfuse)
+BUILDLINK_API_DEPENDS.fuse+=	fuse>=2.8
 .include "../../mk/fuse.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-fuse
 PLIST.fuse=		yes
