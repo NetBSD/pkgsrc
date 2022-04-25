@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/03/30 10:58:28 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/04/25 06:54:39 markd Exp $
 include/KF5/KCompletion/KComboBox
 include/KF5/KCompletion/KCompletion
 include/KF5/KCompletion/KCompletionBase
@@ -11,6 +11,7 @@ include/KF5/KCompletion/KSortableList
 include/KF5/KCompletion/kcombobox.h
 include/KF5/KCompletion/kcompletion.h
 include/KF5/KCompletion/kcompletion_export.h
+include/KF5/KCompletion/kcompletion_version.h
 include/KF5/KCompletion/kcompletionbase.h
 include/KF5/KCompletion/kcompletionbox.h
 include/KF5/KCompletion/kcompletionmatches.h
@@ -18,7 +19,6 @@ include/KF5/KCompletion/khistorycombobox.h
 include/KF5/KCompletion/klineedit.h
 include/KF5/KCompletion/kpixmapprovider.h
 include/KF5/KCompletion/ksortablelist.h
-include/KF5/kcompletion_version.h
 lib/cmake/KF5Completion/KF5CompletionConfig.cmake
 lib/cmake/KF5Completion/KF5CompletionConfigVersion.cmake
 lib/cmake/KF5Completion/KF5CompletionTargets-noconfig.cmake
