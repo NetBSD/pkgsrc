@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2022/04/18 19:09:43 adam Exp $
+# $NetBSD: Makefile,v 1.55 2022/04/25 09:33:39 tnn Exp $
 
 DISTNAME=	mongo-c-driver-1.17.7
 PKGREVISION=	2
@@ -32,7 +32,8 @@ PKGCONFIG_OVERRIDE+=	src/libmongoc/src/libmongoc-static-1.0.pc.in
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man3
 
-LDFLAGS.SunOS+=	-lsocket
+LDFLAGS.SunOS+=			-lsocket
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=${WRKSRC}/src/libmongoc/../../build/cmake/libmongoc-hidden-symbols.map
 
 PLIST_VARS+=	unix
 
