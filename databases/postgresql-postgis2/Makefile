@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2022/04/18 19:09:43 adam Exp $
+# $NetBSD: Makefile,v 1.113 2022/04/25 06:25:43 wiz Exp $
 
 # Note that the directory is still postgis2, for historical reasons.
 # It remains, due to inertia and the pain of renaming outweighing the
@@ -17,7 +17,6 @@ COMMENT=	Spatial database capabilities for PostgreSQL
 
 LICENSE=	gnu-gpl-v2
 
-PGSQL_VERSIONS_ACCEPTED?=	14 13 12 11 10 96
 DEPENDS+=		postgresql${PGSQL_VERSION}-server-[0-9]*:../../databases/postgresql${PGSQL_VERSION}-server
 
 BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
