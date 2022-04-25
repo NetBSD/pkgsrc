@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.23 2021/10/26 11:31:08 nia Exp $
+$NetBSD: distinfo,v 1.24 2022/04/25 10:17:16 tnn Exp $
 
 BLAKE2s (snownews-1.9.tar.gz) = 741557a40d85ae97ecb01b1c8bbd93670ba258cfa83b37dfdabba8a53d131685
 SHA512 (snownews-1.9.tar.gz) = f833dbb41b5c0215c034b8388d787398360fac0ec9670f8f31b76c3ee2ffd974b4c6ebebc30aebb539b9904f513628124b393f4f473a92d4969f483caeca8596
 Size (snownews-1.9.tar.gz) = 149935 bytes
 SHA1 (patch-Config.mk.in) = 4e0ff89e7c9721bfbde23cbf3b51345f2f3097de
 SHA1 (patch-configure) = ed02a64c3f238aaf7e4c5ebe74a4129dad45bb98
+SHA1 (patch-conv.c) = 551b10ee98dd2ea8a83aed4a8a6d150caadd390d
