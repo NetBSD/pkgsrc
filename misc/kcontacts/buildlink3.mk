@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2022/04/18 19:09:58 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2022/04/25 06:09:48 markd Exp $
 
 BUILDLINK_TREE+=	kcontacts
 
@@ -13,6 +13,7 @@ BUILDLINK_PKGSRCDIR.kcontacts?=		../../misc/kcontacts
 .include "../../devel/kcoreaddons/buildlink3.mk"
 .include "../../devel/ki18n/buildlink3.mk"
 .include "../../textproc/kcodecs/buildlink3.mk"
+.include "../../x11/qt5-qtdeclarative/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .endif	# KCONTACTS_BUILDLINK3_MK
 
