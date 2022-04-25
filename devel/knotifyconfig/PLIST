@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2021/03/30 10:58:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/04/25 04:45:08 markd Exp $
 include/KF5/KNotifyConfig/KNotifyConfigWidget
 include/KF5/KNotifyConfig/knotifyconfig_export.h
+include/KF5/KNotifyConfig/knotifyconfig_version.h
 include/KF5/KNotifyConfig/knotifyconfigwidget.h
-include/KF5/knotifyconfig_version.h
 lib/cmake/KF5NotifyConfig/KF5NotifyConfigConfig.cmake
 lib/cmake/KF5NotifyConfig/KF5NotifyConfigConfigVersion.cmake
 lib/cmake/KF5NotifyConfig/KF5NotifyConfigTargets-noconfig.cmake
