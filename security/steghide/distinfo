@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:18:03 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/04/25 15:01:53 tnn Exp $
 
 BLAKE2s (steghide-0.5.1.tar.gz) = 38a3ca6889fc8b460ee4922517e7f2ee9257a7fed7f8dc20ed7e5bdcdcbb4621
 SHA512 (steghide-0.5.1.tar.gz) = 6cda3e33e91123fbc5caa112efcacf09180505abd4f6f229878cd443817c60a04498aead02509c7532fd6924225c6b752820c51e452a83c520f228273d610a57
@@ -14,5 +14,6 @@ SHA1 (patch-ah) = c19a9ae3976147704c7e0b45f437c12ecd850c77
 SHA1 (patch-ai) = 9ae6443ee9a997a859456a712327cc7d17ede0f4
 SHA1 (patch-aj) = 36039401484d85cec20bc157b29f55e219a762b3
 SHA1 (patch-ak) = 404abb1935208b9eba9711677e1514154486543b
-SHA1 (patch-src_BmpFile.cc) = fb2c6ac488ddb50f993ac9179a557ccda393b7f5
+SHA1 (patch-src_AUtils.h) = 7a3c001943ce0802f15119b3d32b4fc6ad00b4af
+SHA1 (patch-src_BmpFile.cc) = 0a0ee8f65f4e808ec2514e4bfad9e09864c5ab3e
 SHA1 (patch-src_Graph.cc) = 211d2607ccb5b9c4de0a91497a14376d89e0fe63
