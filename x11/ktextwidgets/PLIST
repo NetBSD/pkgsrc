@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/03/30 10:58:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/04/25 09:04:46 markd Exp $
 include/KF5/KTextWidgets/KFind
 include/KF5/KTextWidgets/KFindDialog
 include/KF5/KTextWidgets/KPluralHandlingSpinBox
@@ -18,7 +18,7 @@ include/KF5/KTextWidgets/krichtextedit.h
 include/KF5/KTextWidgets/krichtextwidget.h
 include/KF5/KTextWidgets/ktextedit.h
 include/KF5/KTextWidgets/ktextwidgets_export.h
-include/KF5/ktextwidgets_version.h
+include/KF5/KTextWidgets/ktextwidgets_version.h
 lib/cmake/KF5TextWidgets/KF5TextWidgetsConfig.cmake
 lib/cmake/KF5TextWidgets/KF5TextWidgetsConfigVersion.cmake
 lib/cmake/KF5TextWidgets/KF5TextWidgetsTargets-noconfig.cmake
