@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2022/04/18 19:10:10 adam Exp $
+# $NetBSD: Makefile,v 1.27 2022/04/25 07:14:03 markd Exp $
 
 DISTNAME=	kholidays-${KF5VER}
-PKGREVISION=	6
 CATEGORIES=	time
 
 HOMEPAGE=	https://community.kde.org/Frameworks
