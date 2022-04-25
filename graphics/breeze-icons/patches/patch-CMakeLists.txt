@@ -1,11 +1,11 @@
-$NetBSD: patch-CMakeLists.txt,v 1.4 2021/03/30 10:58:24 markd Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.5 2022/04/25 05:46:22 markd Exp $
 
 Don't find xmllint if it happens to be around.
 
---- CMakeLists.txt.orig	2021-03-05 16:43:49.000000000 +0000
+--- CMakeLists.txt.orig	2022-04-02 09:54:33.000000000 +0000
 +++ CMakeLists.txt
 @@ -116,7 +116,7 @@ endif()
- if(NOT WIN32)
+ if(NOT WIN32 AND NOT CMAKE_CROSSCOMPILING)
      # validate
      find_program(SH_EXE sh)
 -    find_program(XMLLINT_EXE xmllint)
