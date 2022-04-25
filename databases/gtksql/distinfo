@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 10:09:19 nia Exp $
-
-BLAKE2s (gtksql-0.3.tar.gz) = c1e38e277261f9bd71ef47e6d734b280604b420de97cb7f78f7954fa7d2a9c3d
-SHA512 (gtksql-0.3.tar.gz) = a36ff4624d71b1477e3e22f3f42c7faca09e5a3d39e3bef33e8d1ef4a37b2754a5536798f45cf768d5baf9dc8410ee79306471e114d1d4058d17e6f67684bc2d
-Size (gtksql-0.3.tar.gz) = 50557 bytes
-SHA1 (patch-aa) = e7c521a660c8f48fbb1a3cd6fdfacd54b50aecc3
-SHA1 (patch-ab) = 0d194dd153e3d3ce34b0f0d805ae0d83408de33b
