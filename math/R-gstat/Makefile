@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2021/09/16 22:17:41 mef Exp $
+# $NetBSD: Makefile,v 1.15 2022/04/25 23:48:53 mef Exp $
 
 R_PKGNAME=	gstat
-R_PKGVER=	2.0-7
+R_PKGVER=	2.0-9
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Spatial & spatio-temporal modelling, prediction and simulation
