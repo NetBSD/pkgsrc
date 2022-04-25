@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/03/30 10:58:28 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/04/25 06:52:22 markd Exp $
 include/KF5/KCodecs/KCharsets
 include/KF5/KCodecs/KCodecs
 include/KF5/KCodecs/KEmailAddress
@@ -6,9 +6,9 @@ include/KF5/KCodecs/KEncodingProber
 include/KF5/KCodecs/kcharsets.h
 include/KF5/KCodecs/kcodecs.h
 include/KF5/KCodecs/kcodecs_export.h
+include/KF5/KCodecs/kcodecs_version.h
 include/KF5/KCodecs/kemailaddress.h
 include/KF5/KCodecs/kencodingprober.h
-include/KF5/kcodecs_version.h
 lib/cmake/KF5Codecs/KF5CodecsConfig.cmake
 lib/cmake/KF5Codecs/KF5CodecsConfigVersion.cmake
 lib/cmake/KF5Codecs/KF5CodecsTargets-noconfig.cmake
