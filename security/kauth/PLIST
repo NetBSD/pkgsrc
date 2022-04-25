@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/03/30 10:58:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/04/25 06:29:40 markd Exp $
 include/KF5/KAuth/KAuth
 include/KF5/KAuth/KAuthAction
 include/KF5/KAuth/KAuthActionReply
@@ -6,14 +6,24 @@ include/KF5/KAuth/KAuthExecuteJob
 include/KF5/KAuth/KAuthHelperSupport
 include/KF5/KAuth/KAuthObjectDecorator
 include/KF5/KAuth/kauth.h
-include/KF5/KAuth/kauth_export.h
+include/KF5/KAuth/kauth_version.h
 include/KF5/KAuth/kauthaction.h
 include/KF5/KAuth/kauthactionreply.h
-include/KF5/KAuth/kauthcore_export.h
 include/KF5/KAuth/kauthexecutejob.h
 include/KF5/KAuth/kauthhelpersupport.h
 include/KF5/KAuth/kauthobjectdecorator.h
-include/KF5/kauth_version.h
+include/KF5/KAuthCore/KAuth/Action
+include/KF5/KAuthCore/KAuth/ActionReply
+include/KF5/KAuthCore/KAuth/ExecuteJob
+include/KF5/KAuthCore/KAuth/HelperSupport
+include/KF5/KAuthCore/kauth/action.h
+include/KF5/KAuthCore/kauth/actionreply.h
+include/KF5/KAuthCore/kauth/executejob.h
+include/KF5/KAuthCore/kauth/helpersupport.h
+include/KF5/KAuthCore/kauth/kauthcore_export.h
+include/KF5/KAuthWidgets/KAuth/ObjectDecorator
+include/KF5/KAuthWidgets/kauth/kauth_export.h
+include/KF5/KAuthWidgets/kauth/objectdecorator.h
 lib/cmake/KF5Auth/KF5AuthConfig.cmake
 lib/cmake/KF5Auth/KF5AuthConfigVersion.cmake
 lib/cmake/KF5Auth/KF5AuthMacros.cmake
