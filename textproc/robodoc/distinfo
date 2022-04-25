@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:23:20 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/04/25 10:35:06 tnn Exp $
 
 BLAKE2s (robodoc-4.99.6.tar.gz) = a6f109445b149e7fae61d5ee90c93eea310408bd6e40623b8c2a7a840b7b80a0
 SHA512 (robodoc-4.99.6.tar.gz) = e6f619cc091c614ae9531bc8ea991d2184bf72d0f31e503281afc3114cd1c3f423ecb3d9dab780564cc832cbf1484e32e04d0ea9d137afdd9cd57f26903835b2
 Size (robodoc-4.99.6.tar.gz) = 210861 bytes
+SHA1 (patch-Docs_makefile.in) = 87827093a1e7dde2a6beef77557818e91da36a7d

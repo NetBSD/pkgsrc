@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2019/10/12 21:25:02 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/04/25 10:35:06 tnn Exp $
 bin/robodoc
 bin/robohdrs
 man/man1/robodoc.1
 man/man1/robohdrs.1
-man/manh/manual.html
 share/doc/robodoc/AUTHORS
 share/doc/robodoc/COPYING
 share/doc/robodoc/ChangeLog
