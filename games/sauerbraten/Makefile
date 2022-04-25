@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/03/28 10:44:16 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2022/04/25 11:04:43 tnn Exp $
 
 DISTNAME=	sauerbraten_2020_12_27_linux
 PKGNAME=	sauerbraten-2020_12_27
@@ -23,6 +23,7 @@ BUILD_TARGET=	client master server
 RELRO_SUPPORTED=	no
 
 LDFLAGS.NetBSD+=	-lrt
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	libexec
