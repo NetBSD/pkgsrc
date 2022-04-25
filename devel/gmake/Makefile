@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2022/04/25 16:03:19 tnn Exp $
+# $NetBSD: Makefile,v 1.118 2022/04/25 16:05:44 tnn Exp $
 
 DISTNAME=	make-4.3
 PKGNAME=	g${DISTNAME}
@@ -51,6 +51,8 @@ CONFIGURE_ARGS.NetBSD+=	--disable-posix-spawn
 .endif
 
 .include "options.mk"
+
+AUTO_MKDIRS=		yes
 
 post-install:
 	${LN} -sf ${PREFIX}/bin/gmake ${DESTDIR}${PREFIX}/${PKGGNUDIR}bin/make
