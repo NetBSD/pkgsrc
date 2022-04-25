@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2082 2022/04/25 06:27:20 nia Exp $
+$NetBSD: CHANGES-2022,v 1.2083 2022/04/25 07:18:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3241,3 +3241,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/hdf to 4.2.15 [tnn 2022-04-24]
 	Removed security/tacshell [tnn 2022-04-24]
 	Updated net/libslirp to 4.6.1 [nia 2022-04-25]
+	Removed net/gst-plugins1-mms [wiz 2022-04-25]
