@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.25 2022/01/27 10:06:38 wiz Exp $
+$NetBSD: distinfo,v 1.26 2022/04/25 21:46:49 tnn Exp $
 
 BLAKE2s (uvloop-0.16.0.tar.gz) = 0c9a34b053ad5d385f6e840d5098016cff71f854f730c33a060287e3d979491a
 SHA512 (uvloop-0.16.0.tar.gz) = dd6dcec38f7f94dc0cf0123302fd6fe404428196b452a80a8258a207654e3f67e210233be3d649668c22b48390232d0347706b1d87fb50016287142c742b806d
 Size (uvloop-0.16.0.tar.gz) = 2129067 bytes
 SHA1 (patch-setup.py) = 31968fa87f7a5a626f79e4bdfb0bd3f054cfc95e
+SHA1 (patch-uvloop_loop.c) = 23e35e68c2cc1ab4c9ddedfe74b87f2d293d2f2b
