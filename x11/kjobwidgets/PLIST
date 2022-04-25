@@ -1,18 +1,20 @@
-@comment $NetBSD: PLIST,v 1.5 2021/03/30 10:58:30 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/04/25 09:03:01 markd Exp $
 include/KF5/KJobWidgets/KAbstractWidgetJobTracker
 include/KF5/KJobWidgets/KDialogJobUiDelegate
 include/KF5/KJobWidgets/KJobWidgets
 include/KF5/KJobWidgets/KStatusBarJobTracker
 include/KF5/KJobWidgets/KUiServerJobTracker
+include/KF5/KJobWidgets/KUiServerV2JobTracker
 include/KF5/KJobWidgets/KWidgetJobTracker
 include/KF5/KJobWidgets/kabstractwidgetjobtracker.h
 include/KF5/KJobWidgets/kdialogjobuidelegate.h
 include/KF5/KJobWidgets/kjobwidgets.h
 include/KF5/KJobWidgets/kjobwidgets_export.h
+include/KF5/KJobWidgets/kjobwidgets_version.h
 include/KF5/KJobWidgets/kstatusbarjobtracker.h
 include/KF5/KJobWidgets/kuiserverjobtracker.h
+include/KF5/KJobWidgets/kuiserverv2jobtracker.h
 include/KF5/KJobWidgets/kwidgetjobtracker.h
-include/KF5/kjobwidgets_version.h
 lib/cmake/KF5JobWidgets/KF5JobWidgetsConfig.cmake
 lib/cmake/KF5JobWidgets/KF5JobWidgetsConfigVersion.cmake
 lib/cmake/KF5JobWidgets/KF5JobWidgetsTargets-noconfig.cmake
