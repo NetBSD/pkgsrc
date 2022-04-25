@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/04/24 15:03:14 pin Exp $
+# $NetBSD: Makefile,v 1.20 2022/04/25 22:53:52 tnn Exp $
 
 DISTNAME=	libfm-qt-1.1.0
 CATEGORIES=	x11
@@ -35,6 +35,9 @@ pre-configure:
 
 TOOL_DEPENDS+=	lxqt-build-tools>=0.11.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-Bsymbolic-functions
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-Bsymbolic
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtx11extras/buildlink3.mk"
