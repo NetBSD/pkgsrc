@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.96 2022/04/18 19:10:17 adam Exp $
+# $NetBSD: Makefile,v 1.97 2022/04/25 02:45:44 markd Exp $
 
 QTWKVERSION=	5.212.0-alpha4
 DISTNAME=	qtwebkit-${QTWKVERSION}
 PKGNAME=	qt5-qtwebkit-${QTWKVERSION:S/-/./}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	x11 www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qtwebkit/}
 GITHUB_PROJECT=	qtwebkit
