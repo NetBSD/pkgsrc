@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2094 2022/04/25 12:37:25 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.2095 2022/04/25 12:54:15 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3337,3 +3337,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/R-RPostgreSQL to 0.7.3 [mef 2022-04-25]
 	Updated devel/rebar3 to 3.18.0 [nikita 2022-04-25]
 	Updated devel/erlang-idna to 6.1.1nb3 [nikita 2022-04-25]
+	Updated geography/R-maps to 3.4.0 [mef 2022-04-25]
