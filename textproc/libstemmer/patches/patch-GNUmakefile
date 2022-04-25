@@ -1,4 +1,4 @@
-$NetBSD: patch-GNUmakefile,v 1.2 2021/02/18 10:26:56 wiz Exp $
+$NetBSD: patch-GNUmakefile,v 1.3 2022/04/25 23:22:58 tnn Exp $
 
 * Build dynamic library, from archlinux.
 
@@ -23,7 +23,7 @@ $NetBSD: patch-GNUmakefile,v 1.2 2021/02/18 10:26:56 wiz Exp $
  	$(AR) -cru $@ $^
  
 +libstemmer.so: libstemmer/libstemmer.o $(RUNTIME_OBJECTS) $(C_LIB_OBJECTS)
-+	$(CC) $(CFLAGS) -shared $(LDFLAGS) -Wl,-soname,libstemmer.so.0,-version-script,libstemmer/symbol.map -o $@.0.0.0 $^
++	$(CC) $(CFLAGS) -shared $(LDFLAGS) -Wl,-soname,libstemmer.so.0 -Wl,--version-script=libstemmer/symbol.map -o $@.0.0.0 $^
 +
  stemwords: $(STEMWORDS_OBJECTS) libstemmer.o
  	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
