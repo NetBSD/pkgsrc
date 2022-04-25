@@ -1,0 +1,17 @@
+$NetBSD: patch-Source_Qt5WebKitConfig.cmake.in,v 1.1 2022/04/25 02:45:44 markd Exp $
+
+Fix build of packages such as kdewebkit with cmake>=3.23
+
+--- Source/Qt5WebKitConfig.cmake.in.orig	2020-03-04 17:16:37.000000000 +0000
++++ Source/Qt5WebKitConfig.cmake.in
+@@ -4,6 +4,10 @@
+ find_dependency_with_major_and_minor(Qt5Core @Qt5_VERSION_MAJOR@ @Qt5_VERSION_MINOR@)
+ find_dependency_with_major_and_minor(Qt5Gui @Qt5_VERSION_MAJOR@ @Qt5_VERSION_MINOR@)
+ find_dependency_with_major_and_minor(Qt5Network @Qt5_VERSION_MAJOR@ @Qt5_VERSION_MINOR@)
++find_dependency_with_major_and_minor(Qt5Sensors @Qt5_VERSION_MAJOR@ @Qt5_VERSION_MINOR@)
++find_dependency_with_major_and_minor(Qt5Positioning @Qt5_VERSION_MAJOR@ @Qt5_VERSION_MINOR@)
++find_dependency_with_major_and_minor(Qt5Quick @Qt5_VERSION_MAJOR@ @Qt5_VERSION_MINOR@)
++find_dependency_with_major_and_minor(Qt5WebChannel @Qt5_VERSION_MAJOR@ @Qt5_VERSION_MINOR@)
+ 
+ include("${CMAKE_CURRENT_LIST_DIR}/WebKitTargets.cmake")
+ 
