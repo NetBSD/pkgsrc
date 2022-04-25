@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/03/17 23:49:08 bacon Exp $
+# $NetBSD: Makefile,v 1.8 2022/04/25 14:36:19 tnn Exp $
 
 DISTNAME=	stacks-2.60
 CATEGORIES=	biology
@@ -38,6 +38,8 @@ SUBST_SED.sed=		-e 's|sed -i.bkp|/usr/bin/sed -i .bkp|'
 # macOS clang lacks OpenMP
 CFLAGS+=		-fopenmp
 .endif
+
+LDFLAGS.SunOS+=		-lsocket
 
 .include "../../lang/python/application.mk"
 .include "../../math/R/buildlink3.mk"
