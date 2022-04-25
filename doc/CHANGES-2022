@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2090 2022/04/25 11:40:10 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2091 2022/04/25 12:26:57 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3334,3 +3334,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-mechanize to 0.4.8 [adam 2022-04-25]
 	Updated net/py-prometheus_client to 0.14.1 [adam 2022-04-25]
 	Updated sysutils/py-appnope to 0.1.3 [adam 2022-04-25]
+	Updated math/R-RPostgreSQL to 0.7.3 [mef 2022-04-25]
