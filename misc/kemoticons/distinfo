@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:59:09 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/04/25 06:13:13 markd Exp $
 
-BLAKE2s (kemoticons-5.80.0.tar.xz) = 91a54b83a2f45d64c160b952656a1e8a85a94a4d44efc191b7af81b2d549a485
-SHA512 (kemoticons-5.80.0.tar.xz) = 1fe07740d3869748c3fa384fbfe480b6ecdbf9ca5e9c089b6fd11b14cea854eec677f0aece9f15fc4e96bc4b90e7a7bb9fa5b80bf938c009ef2b7f0267d03b37
-Size (kemoticons-5.80.0.tar.xz) = 1697816 bytes
+BLAKE2s (kemoticons-5.93.0.tar.xz) = 47e1c1669d1b59d10e6e812675ab494a5fdff1b61b1d2344a4ce73b1d9f44f7a
+SHA512 (kemoticons-5.93.0.tar.xz) = f608e0d3f9a2784e8738a69ecf8f970c2a53946fb9cc0e1bf81e9ab087494860f61165ff90b6c58eb5e35afa4d93e7beaa428ebd7c4713e35302064aa669034a
+Size (kemoticons-5.93.0.tar.xz) = 1700640 bytes
