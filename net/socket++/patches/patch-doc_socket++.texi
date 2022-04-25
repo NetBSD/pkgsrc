@@ -1,7 +1,8 @@
-$NetBSD: patch-doc_socket++.texi,v 1.1 2022/04/25 16:17:48 tnn Exp $
+$NetBSD: patch-doc_socket++.texi,v 1.2 2022/04/25 16:19:45 tnn Exp $
 
 socket++.texi:2337: raising the section level of @subsection which is too low
 socket++.texi:2452: raising the section level of @subsection which is too low
+socket++.texi:2350: raising the section level of @subsection which is too low
 
 --- doc/socket++.texi.orig	2002-11-25 12:31:56.000000000 +0000
 +++ doc/socket++.texi
@@ -13,7 +14,15 @@ socket++.texi:2452: raising the section level of @subsection which is too low
  @example
  // echo server. Serves clients at port 4000.
  #include <echo.h>
-@@ -2449,7 +2448,6 @@ recipient previously established through
+@@ -2348,7 +2347,6 @@ int main ()
+ @}
+ @end example
+ 
+-@subsection tcecho.C
+ @example
+ // echo client. Sends "mary had a litte lamb" to the server
+ #include <echo.h>
+@@ -2449,7 +2447,6 @@ recipient previously established through
  
  @end table
  
