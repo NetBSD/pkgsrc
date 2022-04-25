@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/06/09 13:53:00 nia Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/25 23:16:50 tnn Exp $
 
 DISTNAME=	uchardet-0.0.7
 CATEGORIES=	textproc
@@ -19,5 +19,7 @@ TEST_TARGET=	test
 GCC_REQD+=	4.7
 
 PKGCONFIG_OVERRIDE+=	uchardet.pc.in
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=${WRKSRC}/src/version.script
 
 .include "../../mk/bsd.pkg.mk"
