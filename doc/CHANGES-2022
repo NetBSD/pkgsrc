@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2101 2022/04/25 17:25:56 christos Exp $
+$NetBSD: CHANGES-2022,v 1.2102 2022/04/25 19:06:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3344,3 +3344,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-approvaltests to 5.0.1 [schmonz 2022-04-25]
 	Updated devel/mob to 3.1.0 [schmonz 2022-04-25]
 	Updated devel/mantis to 2.25.3 [christos 2022-04-25]
+	Updated wm/leftwm to 0.3.0 [pin 2022-04-25]
