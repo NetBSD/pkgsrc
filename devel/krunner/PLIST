@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/03/30 10:58:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/04/25 05:02:23 markd Exp $
 include/KF5/KRunner/KRunner/AbstractRunner
 include/KF5/KRunner/KRunner/AbstractRunnerTest
 include/KF5/KRunner/KRunner/QueryMatch
@@ -12,7 +12,7 @@ include/KF5/KRunner/krunner/querymatch.h
 include/KF5/KRunner/krunner/runnercontext.h
 include/KF5/KRunner/krunner/runnermanager.h
 include/KF5/KRunner/krunner/runnersyntax.h
-include/KF5/krunner_version.h
+include/KF5/KRunner/krunner_version.h
 lib/cmake/KF5Runner/KF5KRunnerMacros.cmake
 lib/cmake/KF5Runner/KF5RunnerConfig.cmake
 lib/cmake/KF5Runner/KF5RunnerConfigVersion.cmake
@@ -25,8 +25,8 @@ qt5/mkspecs/modules/qt_KRunner.pri
 qt5/qml/org/kde/runnermodel/librunnermodelplugin.so
 qt5/qml/org/kde/runnermodel/qmldir
 share/dbus-1/interfaces/kf5_org.kde.krunner1.xml
-share/kdevappwizard/templates/runner.tar.bz2
-share/kdevappwizard/templates/runnerpython.tar.bz2
+share/kdevfiletemplates/templates/runner.tar.bz2
+share/kdevfiletemplates/templates/runnerpython.tar.bz2
 share/kservicetypes5/plasma-runner.desktop
 share/qlogging-categories5/krunner.categories
 share/qlogging-categories5/krunner.renamecategories
