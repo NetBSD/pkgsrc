@@ -1,13 +1,14 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:06:57 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/04/25 16:17:48 tnn Exp $
 
 BLAKE2s (socket++-1.12.10.tar.gz) = d09b25892fbd45493a08daf416cee43f6ea349560ead28e9d3c213ce46f803bf
 SHA512 (socket++-1.12.10.tar.gz) = 297dfc7283e8fcfb717679fa2e8b02c51115e6bda1586badead35bc4a37d0defeef3b198bc14e64b59a74cbd3fe61b9496516205e7d5bfa6f5d65890d629db6c
 Size (socket++-1.12.10.tar.gz) = 62741 bytes
-SHA1 (patch-aa) = 7d59c11daba6cd05c7e9bbff032dfb85532e06e4
+SHA1 (patch-aa) = 6fc10ecc5e4a78d452bd4264fea0b88628de360f
 SHA1 (patch-ab) = 2fa03c7ee83dca495db14887e3c179388f71c71a
 SHA1 (patch-ac) = a7e48aa5795fd4d78bc2d133e72c51417172b6f9
 SHA1 (patch-ad) = 7f0ffbf79592b340a45f2c7868b7a6904a63c9f3
 SHA1 (patch-ae) = df00fd55c4af18ec1aaed4a1a16432146e026aff
-SHA1 (patch-af) = 5e298f495802fb7fb64785b083b1c8b51015749d
+SHA1 (patch-af) = 11a301e5b4ce55e048dbafbf41465a3513d96bb1
 SHA1 (patch-ag) = 403b04500cb267d70f4bb6254a1b479f181eda32
 SHA1 (patch-configure.in) = f1e1f1466553f619254f477bf9343bdeb2aaeec1
+SHA1 (patch-doc_socket++.texi) = 53b6d2d01b99252ba19eddcd67516034ff8f4850
