@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2021/03/30 10:58:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/04/25 03:40:56 markd Exp $
 bin/kreadconfig5
 bin/kwriteconfig5
+include/KF5/KConfig/kconfig_version.h
 include/KF5/KConfigCore/ConversionCheck
 include/KF5/KConfigCore/KAuthorized
 include/KF5/KConfigCore/KConfig
@@ -17,6 +18,7 @@ include/KF5/KConfigCore/kconfig.h
 include/KF5/KConfigCore/kconfigbase.h
 include/KF5/KConfigCore/kconfigcore_export.h
 include/KF5/KConfigCore/kconfiggroup.h
+include/KF5/KConfigCore/kconfigwatcher.h
 include/KF5/KConfigCore/kcoreconfigskeleton.h
 include/KF5/KConfigCore/kdesktopfile.h
 include/KF5/KConfigCore/kemailsettings.h
@@ -25,15 +27,20 @@ include/KF5/KConfigGui/KConfigGui
 include/KF5/KConfigGui/KConfigLoader
 include/KF5/KConfigGui/KConfigSkeleton
 include/KF5/KConfigGui/KStandardShortcut
+include/KF5/KConfigGui/KStandardShortcutWatcher
 include/KF5/KConfigGui/KWindowConfig
+include/KF5/KConfigGui/KWindowStateSaver
 include/KF5/KConfigGui/kconfiggui.h
 include/KF5/KConfigGui/kconfiggui_export.h
 include/KF5/KConfigGui/kconfigloader.h
 include/KF5/KConfigGui/kconfigskeleton.h
-include/KF5/KConfigCore/kconfigwatcher.h
 include/KF5/KConfigGui/kstandardshortcut.h
+include/KF5/KConfigGui/kstandardshortcutwatcher.h
 include/KF5/KConfigGui/kwindowconfig.h
-include/KF5/kconfig_version.h
+include/KF5/KConfigGui/kwindowstatesaver.h
+include/KF5/KConfigQml/KConfigPropertyMap
+include/KF5/KConfigQml/kconfigpropertymap.h
+include/KF5/KConfigQml/kconfigqml_export.h
 lib/cmake/KF5Config/KF5ConfigCompilerTargets-noconfig.cmake
 lib/cmake/KF5Config/KF5ConfigCompilerTargets.cmake
 lib/cmake/KF5Config/KF5ConfigConfig.cmake
@@ -47,6 +54,9 @@ lib/libKF5ConfigCore.so.${PKGVERSION}
 lib/libKF5ConfigGui.so
 lib/libKF5ConfigGui.so.5
 lib/libKF5ConfigGui.so.${PKGVERSION}
+lib/libKF5ConfigQml.so
+lib/libKF5ConfigQml.so.5
+lib/libKF5ConfigQml.so.${PKGVERSION}
 libexec/kf5/kconf_update
 libexec/kf5/kconfig_compiler_kf5
 qt5/mkspecs/modules/qt_KConfigCore.pri
@@ -93,6 +103,7 @@ share/locale/id/LC_MESSAGES/kconfig5_qt.qm
 share/locale/is/LC_MESSAGES/kconfig5_qt.qm
 share/locale/it/LC_MESSAGES/kconfig5_qt.qm
 share/locale/ja/LC_MESSAGES/kconfig5_qt.qm
+share/locale/kab/LC_MESSAGES/kconfig5_qt.qm
 share/locale/kk/LC_MESSAGES/kconfig5_qt.qm
 share/locale/km/LC_MESSAGES/kconfig5_qt.qm
 share/locale/kn/LC_MESSAGES/kconfig5_qt.qm
