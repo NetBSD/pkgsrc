@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2021/10/26 10:15:39 nia Exp $
+$NetBSD: distinfo,v 1.26 2022/04/25 17:24:50 christos Exp $
 
-BLAKE2s (mantisbt-2.24.5.tar.gz) = 2bdcbfbff6015942053aa7b4ce28822322eff0b7ce6afd02d4296d648bc571b4
-SHA512 (mantisbt-2.24.5.tar.gz) = bb84634154dd4b4a3a5549a45742501d7f852b19f5f7479239ab020ccbc8c54b0aa43f27cfbb39ce976931f483b77600b0a28f0096ac77b799656ceb35a9bea6
-Size (mantisbt-2.24.5.tar.gz) = 14407448 bytes
+BLAKE2s (mantisbt-2.25.3.tar.gz) = efd42a6758f7a54c02308e31c9de6d70de4d0acfb6a926b275d492152765ca02
+SHA512 (mantisbt-2.25.3.tar.gz) = eebf77a365f28815305c788e2a5c7e430efc07a5e9e844a94235e1e4ebd669fa26125c034e1613a6d81f572e7f1b68871eff19b01e9419eace0dc4e395f057c1
+Size (mantisbt-2.25.3.tar.gz) = 15122369 bytes

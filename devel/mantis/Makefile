@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2021/05/24 19:50:02 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2022/04/25 17:24:50 christos Exp $
 
-DISTNAME=	mantisbt-2.24.5
+DISTNAME=	mantisbt-2.25.3
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/mantisbt/mantis/}
-PKGREVISION=	1
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mantisbt/}
 
@@ -34,8 +33,6 @@ SUBST_STAGE.conf=	pre-install
 SUBST_FILES.conf=	mantis.conf
 SUBST_VARS.conf=	MANTIS_HOME
 SUBST_MESSAGE.conf=	Fixing configuration files.
-
-REPLACE_BASH+=		scripts/travis_before_script.sh
 
 REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	/usr/bin/php
