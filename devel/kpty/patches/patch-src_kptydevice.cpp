@@ -1,8 +1,8 @@
-$NetBSD: patch-src_kptydevice.cpp,v 1.2 2021/03/30 10:58:23 markd Exp $
+$NetBSD: patch-src_kptydevice.cpp,v 1.3 2022/04/25 04:55:47 markd Exp $
 
 NetBSD like FreeBSD
 
---- src/kptydevice.cpp.orig	2021-03-06 16:29:41.000000000 +0000
+--- src/kptydevice.cpp.orig	2022-04-02 10:26:01.000000000 +0000
 +++ src/kptydevice.cpp
 @@ -29,7 +29,7 @@
  #include <sys/time.h>
@@ -10,6 +10,6 @@ NetBSD like FreeBSD
  
 -#if defined(Q_OS_FREEBSD) || defined(Q_OS_MAC)
 +#if defined(Q_OS_FREEBSD) || defined(Q_OS_MAC) || defined(Q_OS_NETBSD)
- // "the other end's output queue size" - kinda braindead, huh?
+ // "the other end's output queue size" -- that is is our end's input
  #define PTY_BYTES_AVAILABLE TIOCOUTQ
  #elif defined(TIOCINQ)
