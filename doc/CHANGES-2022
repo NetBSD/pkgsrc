@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2092 2022/04/25 12:28:56 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.2093 2022/04/25 12:36:03 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3335,4 +3335,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-prometheus_client to 0.14.1 [adam 2022-04-25]
 	Updated sysutils/py-appnope to 0.1.3 [adam 2022-04-25]
 	Updated math/R-RPostgreSQL to 0.7.3 [mef 2022-04-25]
+	Updated devel/rebar3 to 3.18.0 [nikita 2022-04-25]
 	Updated devel/rebar3 to 3.18.0 [nikita 2022-04-25]
