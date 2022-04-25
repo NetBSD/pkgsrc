@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2103 2022/04/25 19:32:52 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2104 2022/04/25 23:49:06 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3346,3 +3346,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/mantis to 2.25.3 [christos 2022-04-25]
 	Updated wm/leftwm to 0.3.0 [pin 2022-04-25]
 	Updated editors/ced to 0.1.5 [pin 2022-04-25]
+	Updated math/R-gstat to 2.0.9 [mef 2022-04-25]
