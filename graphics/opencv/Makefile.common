@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2021/10/10 12:54:13 wiz Exp $
+# $NetBSD: Makefile.common,v 1.12 2022/04/25 22:12:56 tnn Exp $
 # used by graphics/opencv/Makefile
 # used by graphics/opencv-contrib-face/Makefile
 #
@@ -22,6 +22,7 @@ CONFIGURE_DIRS+=	build
 CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
 CHECK_PORTABILITY_SKIP+=	platforms/ios/cmake/Toolchains/xcodebuild_wrapper.in
+CHECK_PORTABILITY_SKIP+=	cmake/templates/xcode-*
 
 CMAKE_ARG_PATH=		${WRKSRC}
 CMAKE_ARGS+=		-DBUILD_PROTOBUF=OFF
