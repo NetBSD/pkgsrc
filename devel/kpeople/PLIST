@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2021/03/30 10:58:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/04/25 04:53:55 markd Exp $
 include/KF5/KPeople/KPeople/Global
 include/KF5/KPeople/KPeople/PersonData
 include/KF5/KPeople/KPeople/PersonPluginManager
 include/KF5/KPeople/KPeople/PersonsModel
+include/KF5/KPeople/KPeople/PersonsSortFilterProxyModel
 include/KF5/KPeople/KPeople/Widgets/AbstractFieldWidgetFactory
 include/KF5/KPeople/KPeople/Widgets/Actions
 include/KF5/KPeople/KPeople/Widgets/MergeDialog
@@ -19,6 +20,7 @@ include/KF5/KPeople/kpeople/kpeople_export.h
 include/KF5/KPeople/kpeople/persondata.h
 include/KF5/KPeople/kpeople/personpluginmanager.h
 include/KF5/KPeople/kpeople/personsmodel.h
+include/KF5/KPeople/kpeople/personssortfilterproxymodel.h
 include/KF5/KPeople/kpeople/widgets/abstractfieldwidgetfactory.h
 include/KF5/KPeople/kpeople/widgets/actions.h
 include/KF5/KPeople/kpeople/widgets/kpeoplewidgets_export.h
@@ -32,6 +34,7 @@ include/KF5/KPeople/kpeoplebackend/allcontactsmonitor.h
 include/KF5/KPeople/kpeoplebackend/basepersonsdatasource.h
 include/KF5/KPeople/kpeoplebackend/contactmonitor.h
 include/KF5/KPeople/kpeoplebackend/kpeoplebackend_export.h
+include/KF5/KPeople/kpeopleprivate/personmanager_p.h
 lib/cmake/KF5People/KF5PeopleConfig.cmake
 lib/cmake/KF5People/KF5PeopleConfigVersion.cmake
 lib/cmake/KF5People/KPeopleTargets-noconfig.cmake
@@ -70,6 +73,7 @@ share/locale/fr/LC_MESSAGES/kpeople5.mo
 share/locale/gd/LC_MESSAGES/kpeople5.mo
 share/locale/gl/LC_MESSAGES/kpeople5.mo
 share/locale/he/LC_MESSAGES/kpeople5.mo
+share/locale/hi/LC_MESSAGES/kpeople5.mo
 share/locale/hu/LC_MESSAGES/kpeople5.mo
 share/locale/ia/LC_MESSAGES/kpeople5.mo
 share/locale/id/LC_MESSAGES/kpeople5.mo
