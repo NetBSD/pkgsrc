@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2088 2022/04/25 09:56:33 markd Exp $
+$NetBSD: CHANGES-2022,v 1.2089 2022/04/25 10:39:43 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3326,3 +3326,8 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/kxmlgui to 5.93.0 [markd 2022-04-25]
 	Updated x11/plasma-framework to 5.93.0 [markd 2022-04-25]
 	Updated x11/qqc2-desktop-style to 5.93.0 [markd 2022-04-25]
+	Updated print/tex-babel-french to 3.5n [markd 2022-04-25]
+	Updated print/tex-polyglossia to 1.56 [markd 2022-04-25]
+	Updated print/tex-polyglossia-doc to 1.56 [markd 2022-04-25]
+	Updated graphics/tex-circuitikz to 1.5.0 [markd 2022-04-25]
+	Updated graphics/tex-circuitikz-doc to 1.5.0 [markd 2022-04-25]
