@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2022/04/16 02:26:43 markd Exp $
+# $NetBSD: Makefile,v 1.19 2022/04/25 10:43:14 markd Exp $
 
 DISTNAME=	collection-luatex
 PKGNAME=	texlive-${DISTNAME}-2022pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	62829
+TEXLIVE_REV=	63081
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -51,6 +51,7 @@ DEPENDS+=	tex-luacolor-[0-9]*:../../print/tex-luacolor
 DEPENDS+=	tex-lualatex-math-[0-9]*:../../math/tex-lualatex-math
 # depend lualatex-truncate
 DEPENDS+=	tex-lualibs-[0-9]*:../../devel/tex-lualibs
+# depend luamathalign
 # depend luamplib
 DEPENDS+=	tex-luaotfload-[0-9]*:../../fonts/tex-luaotfload
 # depend luapackageloader
