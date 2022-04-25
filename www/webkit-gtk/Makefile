@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.224 2022/04/18 19:10:12 adam Exp $
+# $NetBSD: Makefile,v 1.225 2022/04/25 23:28:51 tnn Exp $
 
 DISTNAME=	webkitgtk-2.34.6
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
@@ -137,6 +137,8 @@ CFLAGS+=	-DRELEASE_WITHOUT_OPTIMIZATIONS
 # Needed for JavaScript JIT
 NOT_PAX_MPROTECT_SAFE+=	libexec/webkit2gtk-4.0/WebKitWebProcess
 NOT_PAX_MPROTECT_SAFE+=	libexec/webkit2gtk-4.0/jsc
+
+CHECK_PORTABILITY_SKIP+=	Source/WebKit/Scripts/generate-feature-flags-plist.sh
 
 .include "options.mk"
 
