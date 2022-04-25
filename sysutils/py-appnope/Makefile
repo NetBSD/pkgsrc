@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:54:47 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/04/25 11:33:05 adam Exp $
 
-DISTNAME=	appnope-0.1.2
+DISTNAME=	appnope-0.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/appnope/}
 
