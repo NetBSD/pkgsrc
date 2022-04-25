@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/03/30 10:58:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/04/25 03:28:33 markd Exp $
 include/KF5/KArchive/K7Zip
 include/KF5/KArchive/KAr
 include/KF5/KArchive/KArchive
@@ -16,6 +16,7 @@ include/KF5/KArchive/k7zip.h
 include/KF5/KArchive/kar.h
 include/KF5/KArchive/karchive.h
 include/KF5/KArchive/karchive_export.h
+include/KF5/KArchive/karchive_version.h
 include/KF5/KArchive/karchivedirectory.h
 include/KF5/KArchive/karchiveentry.h
 include/KF5/KArchive/karchivefile.h
@@ -26,7 +27,6 @@ include/KF5/KArchive/krcc.h
 include/KF5/KArchive/ktar.h
 include/KF5/KArchive/kzip.h
 include/KF5/KArchive/kzipfileentry.h
-include/KF5/karchive_version.h
 lib/cmake/KF5Archive/KF5ArchiveConfig.cmake
 lib/cmake/KF5Archive/KF5ArchiveConfigVersion.cmake
 lib/cmake/KF5Archive/KF5ArchiveTargets-noconfig.cmake
