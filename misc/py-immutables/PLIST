@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/02/15 21:17:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/04/26 18:45:53 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -11,6 +11,9 @@ ${PYSITELIB}/immutables/_map.c
 ${PYSITELIB}/immutables/_map.h
 ${PYSITELIB}/immutables/_map.pyi
 ${PYSITELIB}/immutables/_map.so
+${PYSITELIB}/immutables/_protocols.py
+${PYSITELIB}/immutables/_protocols.pyc
+${PYSITELIB}/immutables/_protocols.pyo
 ${PYSITELIB}/immutables/_testutils.py
 ${PYSITELIB}/immutables/_testutils.pyc
 ${PYSITELIB}/immutables/_testutils.pyo
