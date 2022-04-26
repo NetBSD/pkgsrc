@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2109 2022/04/26 08:21:24 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2110 2022/04/26 10:42:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3356,3 +3356,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed devel/py-darcsver [adam 2022-04-26]
 	Removed converters/py-zbase32 [adam 2022-04-26]
 	Removed www/py-static [adam 2022-04-26]
+	Updated devel/py-test-mock to 3.7.0 [adam 2022-04-26]
+	Updated net/py-tldextract to 3.2.1 [adam 2022-04-26]
+	Updated net/py-lexicon to 3.9.5 [adam 2022-04-26]
+	Updated devel/py-pbr to 5.8.1 [adam 2022-04-26]
