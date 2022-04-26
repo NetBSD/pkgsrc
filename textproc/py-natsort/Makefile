@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2022/01/05 15:41:25 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2022/04/26 17:55:37 adam Exp $
 
-DISTNAME=	natsort-7.1.1
+DISTNAME=	natsort-8.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/natsort/}
 
@@ -25,7 +24,7 @@ post-install:
 	${MV} natsort natsort-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} tests
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
