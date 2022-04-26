@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2118 2022/04/26 21:36:45 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2119 2022/04/26 23:29:29 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3374,3 +3374,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/haproxy to 2.5.6 [adam 2022-04-26]
 	Updated misc/py-immutables to 0.17 [adam 2022-04-26]
 	Added devel/py-gidgethub version 5.1.0 [wiz 2022-04-26]
+	Updated sysutils/ups-nut to 2.8.0 [gdt 2022-04-26]
+	Updated sysutils/ups-nut-cgi to 2.8.0 [gdt 2022-04-26]
+	Updated sysutils/ups-nut-snmp to 2.8.0 [gdt 2022-04-26]
+	Updated sysutils/ups-nut-usb to 2.8.0 [gdt 2022-04-26]
