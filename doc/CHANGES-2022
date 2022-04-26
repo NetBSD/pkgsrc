@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2104 2022/04/25 23:49:06 mef Exp $
+$NetBSD: CHANGES-2022,v 1.2105 2022/04/26 00:26:08 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3347,3 +3347,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated wm/leftwm to 0.3.0 [pin 2022-04-25]
 	Updated editors/ced to 0.1.5 [pin 2022-04-25]
 	Updated math/R-gstat to 2.0.9 [mef 2022-04-25]
+	Updated x11/xfce4-panel to 4.16.4 [gutteridge 2022-04-26]
