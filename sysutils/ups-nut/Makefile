@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2021/05/24 19:54:20 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2022/04/26 23:28:25 gdt Exp $
 
 .include "Makefile.common"
 
 PKGNAME=		ups-${DISTNAME}
-PKGREVISION=		7
 COMMENT=		Network UPS Tools
 
 SUBST_CLASSES+=		man-so
@@ -58,6 +57,8 @@ OWN_DIRS=		${NUT_CONFDIR}
 OWN_DIRS_PERMS=		${NUT_STATEDIR} ${NUT_USER} ${NUT_GROUP} 0770
 
 INSTALLATION_DIRS+=	${NUT_EGDIR} ${NUT_DOCDIR}/cables ${NUT_DOCDIR}/drivers
+
+CHECK_INTERPRETER_SKIP+=	share/nut/solaris-init/nut
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${NUT_EGDIR}

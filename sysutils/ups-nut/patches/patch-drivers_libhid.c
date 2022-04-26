@@ -1,21 +1,24 @@
-$NetBSD: patch-drivers_libhid.c,v 1.1 2022/04/18 19:49:18 mrg Exp $
+$NetBSD: patch-drivers_libhid.c,v 1.2 2022/04/26 23:28:25 gdt Exp $
 
 As comm_driver->get_interrupt() can return larger than the buffer size,
 limit the future accesses by this amount.  Bump the size of the buffer
 here as returns as high as 3500 have been seen.
 
---- drivers/libhid.c.orig	2015-12-29 04:08:34.000000000 -0800
-+++ drivers/libhid.c	2022-04-18 12:40:35.352022446 -0700
-@@ -477,7 +477,7 @@
+Not yet filed upstream.
+\todo Test with 2.8.0 release and drop or file upstream.
+
+--- drivers/libhid.c.orig	2022-04-04 12:00:53.000000000 +0000
++++ drivers/libhid.c
+@@ -686,7 +686,7 @@ bool_t HIDSetItemValue(hid_dev_handle_t 
   */
  int HIDGetEvents(hid_dev_handle_t udev, HIDData_t **event, int eventsize)
  {
 -	unsigned char	buf[SMALLBUF];
 +	unsigned char	buf[SMALLBUF * 16]; /* XXXMRG: seen at least 8x */
  	int		itemCount = 0;
- 	int		buflen, r, i;
- 	HIDData_t	*pData;
-@@ -488,6 +488,14 @@
+ 	int		buflen, ret;
+ 	size_t	i, r;
+@@ -758,6 +758,14 @@ int HIDGetEvents(hid_dev_handle_t udev, 
  		return buflen;	/* propagate "error" or "no event" code */
  	}
  
@@ -27,6 +30,6 @@ here as returns as high as 3500 have been seen.
 +		buflen = sizeof buf;
 +	}
 +
- 	r = file_report_buffer(reportbuf, buf, buflen);
- 	if (r < 0) {
+ 	ret = file_report_buffer(reportbuf, buf, (size_t)buflen);
+ 	if (ret < 0) {
  		upsdebug_with_errno(1, "%s: failed to buffer report", __func__);
