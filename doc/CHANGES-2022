@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2111 2022/04/26 10:53:46 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2112 2022/04/26 12:22:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3362,3 +3362,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-pbr to 5.8.1 [adam 2022-04-26]
 	Added graphics/py-wcag-contrast-ratio version 0.9 [adam 2022-04-26]
 	Updated textproc/py-pygments to 2.12.0 [adam 2022-04-26]
+	Updated devel/py-jupyter_client to 7.3.0 [adam 2022-04-26]
+	Updated net/py-minio to 7.1.7 [adam 2022-04-26]
