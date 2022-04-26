@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2021/12/19 13:33:26 wiz Exp $
+$NetBSD: distinfo,v 1.29 2022/04/26 10:42:22 adam Exp $
 
-BLAKE2s (pbr-5.8.0.tar.gz) = b1b0747e4ce9ef0ae3dad081c0f2f7bb316d88725e3f91515f2c6bf8fb3400d8
-SHA512 (pbr-5.8.0.tar.gz) = 61a8eb63bb76ce8515c4203d60df7c973e02ea61b603d155b611724efb2b15c42416bf8a0285451d3378056d390bbf63d991cec32cc4114ae5cc30ebae0a5a69
-Size (pbr-5.8.0.tar.gz) = 127170 bytes
+BLAKE2s (pbr-5.8.1.tar.gz) = 7a1b15427f31c6980cda2953d7ee34a14cf46076d94ff3a957c5f50025eb5188
+SHA512 (pbr-5.8.1.tar.gz) = 794de7ad823610ac7fe48e31a1cc66dd7eba0e3470e275e394fdfa02cc9e5be6f049d75826e81897093892a1e07724e7a30a5b05301774cba8abd92bec15e633
+Size (pbr-5.8.1.tar.gz) = 127537 bytes
