@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/26 10:52:16 adam Exp $
+
+BLAKE2s (wcag-contrast-ratio-0.9.tar.gz) = eb20edf0906c1a8a56482fafd77c57cd2196f8b7512ada1afbbab4afab689ff6
+SHA512 (wcag-contrast-ratio-0.9.tar.gz) = 2723b4b317383151724fe8213d0662e401eb562622afcebb5632be7c5b8f643e34859f4ace9e9e95215648ea443c11ddb5d3ab5859dc5d2c93815f5391d5434c
+Size (wcag-contrast-ratio-0.9.tar.gz) = 2131 bytes
