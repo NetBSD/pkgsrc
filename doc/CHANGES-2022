@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2108 2022/04/26 08:15:52 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2109 2022/04/26 08:21:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3352,3 +3352,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/libansilove to 1.3.1 [fcambus 2022-04-26]
 	Updated audio/fluidsynth to 2.2.7 [adam 2022-04-26]
 	Updated security/gnupg2 to 2.2.35 [adam 2022-04-26]
+	Removed security/py-cryptopp [adam 2022-04-26]
+	Removed devel/py-darcsver [adam 2022-04-26]
+	Removed converters/py-zbase32 [adam 2022-04-26]
+	Removed www/py-static [adam 2022-04-26]
