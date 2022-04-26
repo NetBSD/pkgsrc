@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/26 21:36:21 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
+${PYSITELIB}/gidgethub/__init__.py
+${PYSITELIB}/gidgethub/__init__.pyc
+${PYSITELIB}/gidgethub/abc.py
+${PYSITELIB}/gidgethub/abc.pyc
+${PYSITELIB}/gidgethub/actions.py
+${PYSITELIB}/gidgethub/actions.pyc
+${PYSITELIB}/gidgethub/aiohttp.py
+${PYSITELIB}/gidgethub/aiohttp.pyc
+${PYSITELIB}/gidgethub/apps.py
+${PYSITELIB}/gidgethub/apps.pyc
+${PYSITELIB}/gidgethub/httpx.py
+${PYSITELIB}/gidgethub/httpx.pyc
+${PYSITELIB}/gidgethub/py.typed
+${PYSITELIB}/gidgethub/routing.py
+${PYSITELIB}/gidgethub/routing.pyc
+${PYSITELIB}/gidgethub/sansio.py
+${PYSITELIB}/gidgethub/sansio.pyc
+${PYSITELIB}/gidgethub/tornado.py
+${PYSITELIB}/gidgethub/tornado.pyc
