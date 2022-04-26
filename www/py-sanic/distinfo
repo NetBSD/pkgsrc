@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.22 2022/01/27 09:57:08 wiz Exp $
+$NetBSD: distinfo,v 1.23 2022/04/26 12:36:31 adam Exp $
 
-BLAKE2s (sanic-21.12.1.tar.gz) = 32986c1fc1452c29f1c491f15b789b6bc25fd378f9a7a182e125b24c164f6591
-SHA512 (sanic-21.12.1.tar.gz) = 922446fce87be6b043bf9b88dd0e1c4776b8bec1f2d12bec2f3bc7d659d602f555892d66689c511bfa2884a437bd83b661d6f2aead5a41e9c612fe9ed6c212b2
-Size (sanic-21.12.1.tar.gz) = 225688 bytes
-SHA1 (patch-setup.py) = d67e265a1b6c7b11eac5eca07b780223722250e6
+BLAKE2s (sanic-22.3.1.tar.gz) = 42423375eb0dc2d899190d0faeba27748c913be67520bc85e38dcccff95f70bf
+SHA512 (sanic-22.3.1.tar.gz) = 039d45aebcb6bbe5598449d6602275df8b53230b05f7744faec86a49eab5ad5ef9c57699edd10c984bd314370c7938feee0da5ed8e07ca906cfa9798d7d22eca
+Size (sanic-22.3.1.tar.gz) = 231454 bytes
