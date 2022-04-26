@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.17 2019/07/03 17:19:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2022/04/26 17:50:11 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/PIL/BdfFontFile.py
@@ -34,6 +35,9 @@ ${PYSITELIB}/PIL/EpsImagePlugin.pyo
 ${PYSITELIB}/PIL/ExifTags.py
 ${PYSITELIB}/PIL/ExifTags.pyc
 ${PYSITELIB}/PIL/ExifTags.pyo
+${PYSITELIB}/PIL/FitsImagePlugin.py
+${PYSITELIB}/PIL/FitsImagePlugin.pyc
+${PYSITELIB}/PIL/FitsImagePlugin.pyo
 ${PYSITELIB}/PIL/FitsStubImagePlugin.py
 ${PYSITELIB}/PIL/FitsStubImagePlugin.pyc
 ${PYSITELIB}/PIL/FitsStubImagePlugin.pyo
