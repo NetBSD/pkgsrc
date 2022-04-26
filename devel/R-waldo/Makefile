@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2021/09/18 14:27:43 mef Exp $
+# $NetBSD: Makefile,v 1.6 2022/04/26 14:37:22 mef Exp $
 
 R_PKGNAME=	waldo
-R_PKGVER=	0.3.1
+R_PKGVER=	0.4.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
