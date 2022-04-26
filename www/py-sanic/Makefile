@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2022/01/27 09:57:08 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2022/04/26 12:36:31 adam Exp $
 
-DISTNAME=	sanic-21.12.1
+DISTNAME=	sanic-22.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sanic/}
 
@@ -14,7 +13,7 @@ LICENSE=	mit AND apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-aiofiles>=0.6.0:../../devel/py-aiofiles
 DEPENDS+=	${PYPKGPREFIX}-httptools>=0.0.10:../../www/py-httptools
 DEPENDS+=	${PYPKGPREFIX}-multidict>=5.0.0:../../databases/py-multidict
-DEPENDS+=	${PYPKGPREFIX}-sanic-routing>=0.7.0:../../www/py-sanic-routing
+DEPENDS+=	${PYPKGPREFIX}-sanic-routing>=22.3.0:../../www/py-sanic-routing
 DEPENDS+=	${PYPKGPREFIX}-ujson>=1.35:../../textproc/py-ujson
 DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.5.3:../../devel/py-uvloop
 DEPENDS+=	${PYPKGPREFIX}-websockets>=10.0:../../www/py-websockets
