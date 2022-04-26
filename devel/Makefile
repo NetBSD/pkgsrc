@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3722 2022/04/26 08:19:34 adam Exp $
+# $NetBSD: Makefile,v 1.3723 2022/04/26 21:43:08 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2462,6 +2462,7 @@ SUBDIR+=	py-gcovr
 SUBDIR+=	py-generate
 SUBDIR+=	py-gflags
 SUBDIR+=	py-gi-docgen
+SUBDIR+=	py-gidgethub
 SUBDIR+=	py-gitdb
 SUBDIR+=	py-gitinspector
 SUBDIR+=	py-gitinspector-devel
