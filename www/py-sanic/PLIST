@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2022/01/13 18:23:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/04/26 12:36:31 adam Exp $
 bin/sanic-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -108,6 +108,9 @@ ${PYSITELIB}/sanic/mixins/middleware.pyo
 ${PYSITELIB}/sanic/mixins/routes.py
 ${PYSITELIB}/sanic/mixins/routes.pyc
 ${PYSITELIB}/sanic/mixins/routes.pyo
+${PYSITELIB}/sanic/mixins/runner.py
+${PYSITELIB}/sanic/mixins/runner.pyc
+${PYSITELIB}/sanic/mixins/runner.pyo
 ${PYSITELIB}/sanic/mixins/signals.py
 ${PYSITELIB}/sanic/mixins/signals.pyc
 ${PYSITELIB}/sanic/mixins/signals.pyo
@@ -123,6 +126,9 @@ ${PYSITELIB}/sanic/models/futures.pyo
 ${PYSITELIB}/sanic/models/handler_types.py
 ${PYSITELIB}/sanic/models/handler_types.pyc
 ${PYSITELIB}/sanic/models/handler_types.pyo
+${PYSITELIB}/sanic/models/http_types.py
+${PYSITELIB}/sanic/models/http_types.pyc
+${PYSITELIB}/sanic/models/http_types.pyo
 ${PYSITELIB}/sanic/models/protocol_types.py
 ${PYSITELIB}/sanic/models/protocol_types.pyc
 ${PYSITELIB}/sanic/models/protocol_types.pyo
@@ -223,6 +229,3 @@ ${PYSITELIB}/sanic/utils.pyo
 ${PYSITELIB}/sanic/views.py
 ${PYSITELIB}/sanic/views.pyc
 ${PYSITELIB}/sanic/views.pyo
-${PYSITELIB}/sanic/worker.py
-${PYSITELIB}/sanic/worker.pyc
-${PYSITELIB}/sanic/worker.pyo
