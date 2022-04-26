@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2115 2022/04/26 17:59:00 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2116 2022/04/26 18:37:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3369,3 +3369,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/R-waldo to 0.4.0 [mef 2022-04-26]
 	Updated graphics/py-Pillow to 9.1.0 [adam 2022-04-26]
 	Updated textproc/py-natsort to 8.1.0 [adam 2022-04-26]
+	Updated math/py-jplephem to 2.17 [adam 2022-04-26]
+	Updated devel/py-cachelib to 0.6.0 [adam 2022-04-26]
