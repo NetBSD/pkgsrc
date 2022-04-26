@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.193 2022/02/23 16:53:19 pho Exp $
+# $NetBSD: Makefile,v 1.194 2022/04/26 08:20:06 adam Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -126,7 +126,6 @@ SUBDIR+=	py-reedsolo
 SUBDIR+=	py-simplejson
 SUBDIR+=	py-unicode-slugify
 SUBDIR+=	py-yenc
-SUBDIR+=	py-zbase32
 SUBDIR+=	py-zfec
 SUBDIR+=	py-zhCodecs
 SUBDIR+=	py27-cairosvg
