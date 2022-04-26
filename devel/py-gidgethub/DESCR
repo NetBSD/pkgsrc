@@ -1,0 +1,7 @@
+This is a library for the GitHub API which performs no I/O of its
+own (a sans-I/O library). This allows users to choose whatever HTTP
+library they prefer while parceling out GitHub-specific details to
+this library. This base library is then built upon to provide an
+abstract base class to a cleaner API to work with. Finally,
+implementations of the abstract base class are provided for
+asynchronous HTTP libraries for immediate usage.
