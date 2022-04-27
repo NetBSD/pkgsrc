@@ -1,4 +1,4 @@
-$NetBSD: README.Solaris,v 1.27 2022/04/13 07:41:00 nia Exp $
+$NetBSD: README.Solaris,v 1.28 2022/04/27 17:43:34 nia Exp $
 
 This README describes pkgsrc on a variety of Solaris-derived operating
 systems.  It corresponds to pkgsrc/platform/SunOS.mk.  The relevant
@@ -42,6 +42,17 @@ Realistically you will need more, such as SUNWlibm, and SUNWlibC for
 C++ packages if you are using SunPro.
 
 Solaris Zones:
+
+To bootstrap pkgsrc on a Solaris 11 Zone, these packages are going to be
+required, regardless of the compiler used:  
+
+	- pkg:/system/header 
+	- pkg:/system/linker
+	- pkg:/system/library/math
+	- pkg:/library/glib2
+	- pkg:/library/zlib
+	- pkg:/developer/library/lint
+	- pkg:/developer/object-file
 
 If you are trying to bootstrap pkgsrc in a Solaris [8-10] Zone then you will
 need to install the following packages (assuming you will bootstrap using
@@ -173,9 +184,11 @@ packages.
 
     Oracle Studio 12 (IPS):
 
-	pkg:/developer/developerstudio-12[3-6]	studio
+	pkg:/developer/developerstudio-12[3-6]	Oracle Developer Studio 12.[3-6]
 	pkg:/system/library/studio-runtime	Runtime Support For Solaris Studio
-
+	pkg:/consolidation/sunpro/sunpro-incorporation	sunpro consolidation incorporation	
+	pkg:/group/feature/developer-studio-utilities	Tools and runtime support libraries for use with Oracle Solaris Studio
+ 
 	This will install the whole toolchain, along with the
 	observability tools and the studio IDE.
 
