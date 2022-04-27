@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2130 2022/04/27 21:02:28 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2131 2022/04/27 22:25:35 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3394,3 +3394,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/sqlite3-tcl to 3.38.3 [adam 2022-04-27]
 	Updated devel/lemon to 1.0.3.38.3 [adam 2022-04-27]
 	Updated net/tor to 0.4.7.7 [wiz 2022-04-27]
+	Updated pkgtools/lintpkgsrc to 4.98 [rillig 2022-04-27]
