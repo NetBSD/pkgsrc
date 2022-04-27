@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/13 19:31:20 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/04/27 10:33:41 adam Exp $
 
-DISTNAME=	zopfli-0.1.9
+DISTNAME=	zopfli-0.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zopfli/}
 EXTRACT_SUFX=	.zip
@@ -12,8 +11,15 @@ HOMEPAGE=	https://github.com/fonttools/py-zopfli
 COMMENT=	Zopfli module for Python
 LICENSE=	apache-2.0
 
-PYTHON_VERSIONED_DEPENDENCIES=	setuptools_scm:build
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>0:../../devel/py-setuptools_scm
+TEST_DEPENDS+=	${PYPKGPREFIX}-test>0:../../devel/py-test
+
+USE_LANGUAGES=	c c++
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
