@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.254 2022/03/08 08:18:27 wiz Exp $
+# $NetBSD: Makefile,v 1.255 2022/04/27 07:51:20 wiz Exp $
 
-DISTNAME=	curl-7.82.0
+DISTNAME=	curl-7.83.0
 CATEGORIES=	www
 MASTER_SITES=	https://curl.se/download/
 EXTRACT_SUFX=	.tar.xz
