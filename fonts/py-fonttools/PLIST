@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2022/02/07 21:12:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.41 2022/04/27 09:43:23 adam Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
@@ -48,6 +48,9 @@ ${PYSITELIB}/fontTools/colorLib/table_builder.pyo
 ${PYSITELIB}/fontTools/colorLib/unbuilder.py
 ${PYSITELIB}/fontTools/colorLib/unbuilder.pyc
 ${PYSITELIB}/fontTools/colorLib/unbuilder.pyo
+${PYSITELIB}/fontTools/config/__init__.py
+${PYSITELIB}/fontTools/config/__init__.pyc
+${PYSITELIB}/fontTools/config/__init__.pyo
 ${PYSITELIB}/fontTools/cu2qu/__init__.py
 ${PYSITELIB}/fontTools/cu2qu/__init__.pyc
 ${PYSITELIB}/fontTools/cu2qu/__init__.pyo
@@ -71,6 +74,15 @@ ${PYSITELIB}/fontTools/cu2qu/ufo.pyo
 ${PYSITELIB}/fontTools/designspaceLib/__init__.py
 ${PYSITELIB}/fontTools/designspaceLib/__init__.pyc
 ${PYSITELIB}/fontTools/designspaceLib/__init__.pyo
+${PYSITELIB}/fontTools/designspaceLib/split.py
+${PYSITELIB}/fontTools/designspaceLib/split.pyc
+${PYSITELIB}/fontTools/designspaceLib/split.pyo
+${PYSITELIB}/fontTools/designspaceLib/statNames.py
+${PYSITELIB}/fontTools/designspaceLib/statNames.pyc
+${PYSITELIB}/fontTools/designspaceLib/statNames.pyo
+${PYSITELIB}/fontTools/designspaceLib/types.py
+${PYSITELIB}/fontTools/designspaceLib/types.pyc
+${PYSITELIB}/fontTools/designspaceLib/types.pyo
 ${PYSITELIB}/fontTools/encodings/MacRoman.py
 ${PYSITELIB}/fontTools/encodings/MacRoman.pyc
 ${PYSITELIB}/fontTools/encodings/MacRoman.pyo
@@ -161,6 +173,9 @@ ${PYSITELIB}/fontTools/misc/classifyTools.pyo
 ${PYSITELIB}/fontTools/misc/cliTools.py
 ${PYSITELIB}/fontTools/misc/cliTools.pyc
 ${PYSITELIB}/fontTools/misc/cliTools.pyo
+${PYSITELIB}/fontTools/misc/configTools.py
+${PYSITELIB}/fontTools/misc/configTools.pyc
+${PYSITELIB}/fontTools/misc/configTools.pyo
 ${PYSITELIB}/fontTools/misc/cython.py
 ${PYSITELIB}/fontTools/misc/cython.pyc
 ${PYSITELIB}/fontTools/misc/cython.pyo
@@ -799,6 +814,9 @@ ${PYSITELIB}/fontTools/varLib/mvar.pyo
 ${PYSITELIB}/fontTools/varLib/plot.py
 ${PYSITELIB}/fontTools/varLib/plot.pyc
 ${PYSITELIB}/fontTools/varLib/plot.pyo
+${PYSITELIB}/fontTools/varLib/stat.py
+${PYSITELIB}/fontTools/varLib/stat.pyc
+${PYSITELIB}/fontTools/varLib/stat.pyo
 ${PYSITELIB}/fontTools/varLib/varStore.py
 ${PYSITELIB}/fontTools/varLib/varStore.pyc
 ${PYSITELIB}/fontTools/varLib/varStore.pyo
