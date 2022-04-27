@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2119 2022/04/26 23:29:29 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.2120 2022/04/27 07:51:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3378,3 +3378,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/ups-nut-cgi to 2.8.0 [gdt 2022-04-26]
 	Updated sysutils/ups-nut-snmp to 2.8.0 [gdt 2022-04-26]
 	Updated sysutils/ups-nut-usb to 2.8.0 [gdt 2022-04-26]
+	Updated www/curl to 7.83.0 [wiz 2022-04-27]
