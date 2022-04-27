@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2127 2022/04/27 15:58:23 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.2128 2022/04/27 16:09:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3388,3 +3388,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-genshi to 0.7.7 [adam 2022-04-27]
 	Updated devel/py-mando to 0.7.1 [adam 2022-04-27]
 	Updated geography/qgis to 3.22.6 [gdt 2022-04-27]
+	Updated sysutils/felix to 0.7.0 [pin 2022-04-27]
