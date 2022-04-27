@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2128 2022/04/27 16:09:49 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2129 2022/04/27 17:13:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3389,3 +3389,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-mando to 0.7.1 [adam 2022-04-27]
 	Updated geography/qgis to 3.22.6 [gdt 2022-04-27]
 	Updated sysutils/felix to 0.7.0 [pin 2022-04-27]
+	Updated databases/sqlite3 to 3.38.3 [adam 2022-04-27]
+	Updated databases/sqlite3-docs to 3.38.3 [adam 2022-04-27]
+	Updated databases/sqlite3-tcl to 3.38.3 [adam 2022-04-27]
+	Updated devel/lemon to 1.0.3.38.3 [adam 2022-04-27]
