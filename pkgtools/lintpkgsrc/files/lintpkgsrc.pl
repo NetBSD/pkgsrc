@@ -1,6 +1,6 @@
 #!@PERL5@
 
-# $NetBSD: lintpkgsrc.pl,v 1.21 2022/01/01 13:27:37 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.22 2022/04/27 22:24:16 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -485,6 +485,7 @@ sub deweycmp($$$) {
         $cmp = deweycmp_extract( $match_nb, $val_nb );
     }
 
+    debug("eval deweycmp $cmp $test 0\n");
     eval "$cmp $test 0";
 }
 
@@ -1309,7 +1310,7 @@ sub parse_makefile_vars($$) {
                 foreach (@patterns) {
                     if (m#(U)(.*)#) {
 			$result ||= $2;
-                    } elsif (m#([CS])(.)([^/]+)\2([^/]*)\2([1g]*)#) {
+                    } elsif (m#([CS])(.)([^/@]+)\2([^/@]*)\2([1g]*)#) {
 
                         my ( $how, $from, $to, $global ) = ( $1, $3, $4, $5 );
 
@@ -1332,6 +1333,7 @@ sub parse_makefile_vars($$) {
                         debug(
                             "$file: substituteperl $subvar, $how, $from, $to\n"
                         );
+                        debug("eval substitute <$from> <$to> <$global>\n");
                         eval "\$result =~ s/$from/$to/$global";
                         if ( defined $notfirst ) {
                             $result .= " $notfirst";
@@ -1456,6 +1458,7 @@ sub parse_eval_make_false($$) {
     }
 
     if ( $test !~ /[^<>\d()\s&|.!]/ ) {
+	debug("eval test $test\n");
         $false = eval "($test)?0:1";
         if ( !defined $false ) {
             fail("Eval failed $line - $test");
@@ -1686,6 +1689,7 @@ sub load_pkgsrc_makefiles() {
     our ( $pkgcnt, $pkgnum, $subpkgcnt, $subpkgnum );
     $pkglist = new PkgList;
     while (<STORE>) {
+	debug("eval store $_");
         eval $_;
     }
     close(STORE);
