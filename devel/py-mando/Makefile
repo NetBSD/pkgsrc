@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:53:16 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/04/27 11:55:12 adam Exp $
 
-DISTNAME=	mando-0.7.0
+DISTNAME=	mando-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mando/}
 
