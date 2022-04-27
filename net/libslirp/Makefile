@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2022/04/25 09:17:22 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2022/04/27 09:42:52 nia Exp $
 
-DISTNAME=	libslirp-4.6.1
+DISTNAME=	libslirp-4.7.0
 CATEGORIES=	net
-MASTER_SITES=	https://gitlab.freedesktop.org/slirp/libslirp/uploads/83b199ea6fcdfc0c243dfde8546ee4c9/
+MASTER_SITES=	https://gitlab.freedesktop.org/slirp/libslirp/uploads/60113f60cfd6abe2c16dde9f6c81b631/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
