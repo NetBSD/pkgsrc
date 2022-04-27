@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/04/27 08:06:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/04/27 10:36:38 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -57,6 +57,9 @@ ${PYSITELIB}/bottleneck/src/bn_template.pyo
 ${PYSITELIB}/bottleneck/tests/__init__.py
 ${PYSITELIB}/bottleneck/tests/__init__.pyc
 ${PYSITELIB}/bottleneck/tests/__init__.pyo
+${PYSITELIB}/bottleneck/tests/common.py
+${PYSITELIB}/bottleneck/tests/common.pyc
+${PYSITELIB}/bottleneck/tests/common.pyo
 ${PYSITELIB}/bottleneck/tests/input_modification_test.py
 ${PYSITELIB}/bottleneck/tests/input_modification_test.pyc
 ${PYSITELIB}/bottleneck/tests/input_modification_test.pyo
@@ -81,6 +84,9 @@ ${PYSITELIB}/bottleneck/tests/reduce_test.pyo
 ${PYSITELIB}/bottleneck/tests/scalar_input_test.py
 ${PYSITELIB}/bottleneck/tests/scalar_input_test.pyc
 ${PYSITELIB}/bottleneck/tests/scalar_input_test.pyo
+${PYSITELIB}/bottleneck/tests/test_template.py
+${PYSITELIB}/bottleneck/tests/test_template.pyc
+${PYSITELIB}/bottleneck/tests/test_template.pyo
 ${PYSITELIB}/bottleneck/tests/util.py
 ${PYSITELIB}/bottleneck/tests/util.pyc
 ${PYSITELIB}/bottleneck/tests/util.pyo
