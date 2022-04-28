@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/04/25 18:21:52 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/04/28 12:33:30 wiz Exp $
 
 DISTNAME=		feed2exec-0.18.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -42,6 +42,9 @@ USE_LANGUAGES=		# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_PKG_RESOURCES=	yes
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
