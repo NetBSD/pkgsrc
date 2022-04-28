@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2133 2022/04/28 11:43:31 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.2134 2022/04/28 13:19:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3397,3 +3397,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated pkgtools/lintpkgsrc to 4.98 [rillig 2022-04-27]
 	Updated devel/nss to 3.78 [wiz 2022-04-28]
 	Updated geography/gpsd to 3.24 [gdt 2022-04-28]
+	Updated databases/mysql57-client to 5.7.38 [adam 2022-04-28]
+	Updated databases/mysql57-server to 5.7.38 [adam 2022-04-28]
