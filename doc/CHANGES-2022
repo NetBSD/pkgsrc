@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2131 2022/04/27 22:25:35 rillig Exp $
+$NetBSD: CHANGES-2022,v 1.2132 2022/04/28 11:16:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3395,3 +3395,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/lemon to 1.0.3.38.3 [adam 2022-04-27]
 	Updated net/tor to 0.4.7.7 [wiz 2022-04-27]
 	Updated pkgtools/lintpkgsrc to 4.98 [rillig 2022-04-27]
+	Updated devel/nss to 3.78 [wiz 2022-04-28]
