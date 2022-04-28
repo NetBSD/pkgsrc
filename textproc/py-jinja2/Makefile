@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2022/04/18 21:36:15 js Exp $
+# $NetBSD: Makefile,v 1.35 2022/04/28 18:13:35 adam Exp $
 
-DISTNAME=	Jinja2-3.1.1
-PKGREVISION=	2
+DISTNAME=	Jinja2-3.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=J/Jinja2/}
@@ -18,12 +17,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
-
-# async byte-compilation fails for Python < 3.6
-# see https://github.com/pallets/jinja/issues/643
-PLIST_VARS+=	async
 
 PYSETUPTESTTARGET=	pytest
 
