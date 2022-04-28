@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2139 2022/04/28 18:13:56 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2140 2022/04/28 19:51:45 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3405,3 +3405,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/R-mapproj to 1.2.8 [mef 2022-04-28]
 	Updated textproc/py-elementpath to 2.5.1 [adam 2022-04-28]
 	Updated textproc/py-jinja2 to 3.1.2 [adam 2022-04-28]
+	Updated audio/libopenmpt to 0.6.3 [fcambus 2022-04-28]
