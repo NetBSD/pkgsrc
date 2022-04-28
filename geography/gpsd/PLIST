@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2021/08/08 23:14:46 gdt Exp $
+@comment $NetBSD: PLIST,v 1.19 2022/04/28 11:43:14 gdt Exp $
 bin/cgps
 bin/gegps
 bin/gps2udp
@@ -26,10 +26,10 @@ include/gps.h
 include/libgpsmm.h
 lib/libgps${PLIST_SO}${PLIST_DYLIB}
 lib/libgps${PLIST_SO}.29${PLIST_DYLIB}
-lib/libgps${PLIST_SO}.29.0.0${PLIST_DYLIB}
+lib/libgps${PLIST_SO}.29.0.1${PLIST_DYLIB}
 lib/libgpsdpacket${PLIST_SO}${PLIST_DYLIB}
 lib/libgpsdpacket${PLIST_SO}.29${PLIST_DYLIB}
-lib/libgpsdpacket${PLIST_SO}.29.0.0${PLIST_DYLIB}
+lib/libgpsdpacket${PLIST_SO}.29.0.1${PLIST_DYLIB}
 lib/pkgconfig/libgps.pc
 ${PYSITELIB}/gps-${PKGVERSION}.egg-info
 ${PYSITELIB}/gps/__init__.py
