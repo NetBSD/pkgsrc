@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/10/01 09:37:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/04/28 19:51:33 fcambus Exp $
 bin/openmpt123
 include/libopenmpt/libopenmpt.h
 include/libopenmpt/libopenmpt.hpp
