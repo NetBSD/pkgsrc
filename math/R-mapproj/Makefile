@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2021/09/20 13:09:37 mef Exp $
+# $NetBSD: Makefile,v 1.15 2022/04/28 15:55:37 mef Exp $
 
 R_PKGNAME=	mapproj
-R_PKGVER=	1.2.7
+R_PKGVER=	1.2.8
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Map projections
