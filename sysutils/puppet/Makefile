@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2021/12/14 14:47:28 taca Exp $
+# $NetBSD: Makefile,v 1.54 2022/04/28 14:54:53 jperkin Exp $
 
 DISTNAME=		puppet-7.13.1
 CATEGORIES=		sysutils
@@ -27,6 +27,12 @@ USE_LANAUGES=		# none
 PKG_SYSCONFSUBDIR=	puppet
 RCD_SCRIPTS=		puppetd puppetmasterd
 
+SMF_SRCDIR=		${WRKSRC}/ext/solaris/smf
+SMF_MANIFEST=		puppet.xml
+SMF_METHODS=		puppet
+SMF_METHOD_SRC.puppet=	${SMF_SRCDIR}/puppet
+SMF_NAME=		puppet
+
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	install.rb
@@ -37,8 +43,6 @@ SUBST_FILES.prefix+=	lib/puppet/face/module/uninstall.rb
 SUBST_FILES.prefix+=	lib/puppet/face/module/upgrade.rb
 SUBST_FILES.prefix+=	lib/puppet/reference/configuration.rb
 SUBST_FILES.prefix+=	lib/puppet/util/run_mode.rb
-SUBST_FILES.prefix+=	ext/solaris/smf/puppet
-SUBST_FILES.prefix+=	ext/solaris/smf/puppet.xml
 SUBST_FILES.prefix+=	man/man5/puppet.conf.5
 SUBST_FILES.prefix+=	man/man8/puppet-apply.8
 SUBST_FILES.prefix+=	man/man8/puppet-module.8
@@ -46,7 +50,14 @@ SUBST_FILES.prefix+=	man/man8/puppet-parser.8
 SUBST_FILES.prefix+=	spec/unit/util/run_mode_spec.rb
 SUBST_FILES.prefix+=	spec/unit/util/selinux_spec.rb
 SUBST_SED.prefix=	-e "s|/etc/puppet|${PKG_SYSCONFDIR}|g"
-SUBST_SED.prefix+=	-e "s|/opt/csw/lib|${PREFIX}/lib|g"
+
+SUBST_CLASSES+=		smf
+SUBST_STAGE.smf=	pre-configure
+SUBST_FILES.smf+=	ext/solaris/smf/puppet
+SUBST_FILES.smf+=	ext/solaris/smf/puppet.xml
+SUBST_SED.smf=		-e "s,/etc/puppetlabs/puppet,${PKG_SYSCONFDIR},g"
+SUBST_SED.smf+=		-e "s,/opt/puppetlabs/bin/puppet,${PREFIX}/bin/puppet${RUBY_SUFFIX},g"
+SUBST_SED.smf+=		-e "s,network/puppet,${SMF_PREFIX}/puppet,g"
 
 SUBST_CLASSES+=		sufx
 SUBST_STAGE.sufx=	pre-configure
@@ -73,7 +84,6 @@ CONF_FILES=		${EGDIR}/puppet.conf ${PKG_SYSCONFDIR}/puppet.conf
 #PKG_GECOS.${PUPPET_USER}=	Puppet configuration management pseudo-user
 
 PLIST_SUBST+=		EGDIR=${EGDIR}
-PLIST_VARS+=		sunos
 
 BUILD_DEFS+=		VARBASE
 INSTALLATION_DIRS+=	${EGDIR}
@@ -82,14 +92,6 @@ INSTALLATION_DIRS+=	${EGDIR}
 
 #PUPPET_GROUP?=		puppet
 #PUPPET_USER?=		puppet
-
-.if ${OPSYS} == "SunOS"
-INSTALLATION_DIRS+=	lib/svc/method ${EGDIR}/svc
-CONF_DIRS+=		${VARBASE}/svc/manifest
-CONF_FILES+=		${EGDIR}/svc/puppetd.xml ${VARBASE}/svc/manifest/puppetd.xml
-CONF_FILES+=		${EGDIR}/svc/puppetmasterd.xml ${VARBASE}/svc/manifest/puppetmasterd.xml
-PLIST.sunos=		yes
-.endif
 
 pre-configure:
 	cd ${WRKSRC}/bin && ${CHMOD} ${BINMODE} puppet
@@ -106,16 +108,6 @@ pre-build:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/puppet.conf			\
 		${DESTDIR}${PREFIX}/${EGDIR}
-.if ${OPSYS} == "SunOS"
-	${INSTALL_DATA} ${WRKSRC}/ext/solaris/smf/puppetd.xml		\
-		${DESTDIR}${PREFIX}/${EGDIR}/svc
-	${INSTALL_DATA} ${WRKSRC}/ext/solaris/smf/puppetmasterd.xml	\
-		${DESTDIR}${PREFIX}/${EGDIR}/svc
-	${INSTALL_SCRIPT} ${WRKSRC}/ext/solaris/smf/svc-puppetd		\
-		${DESTDIR}${PREFIX}/lib/svc/method
-	${INSTALL_SCRIPT} ${WRKSRC}/ext/solaris/smf/svc-puppetmasterd	\
-		${DESTDIR}${PREFIX}/lib/svc/method
-.endif
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
