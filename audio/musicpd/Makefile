@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.261 2022/04/18 19:10:24 adam Exp $
+# $NetBSD: Makefile,v 1.262 2022/04/28 05:48:01 wiz Exp $
 
 DISTNAME=	mpd-0.23.6
 PKGNAME=	${DISTNAME:S/mpd/musicpd/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	https://www.musicpd.org/download/mpd/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -72,6 +72,7 @@ EGDIR=		${PREFIX}/share/examples/mpd
 CONF_FILES+=	${EGDIR}/mpd.conf ${PKG_SYSCONFDIR}/mpd.conf
 CONF_FILES+=	${EGDIR}/logrotate.d/mpd ${PKG_SYSCONFDIR}/logrotate.d/mpd
 RCD_SCRIPTS=	mpd
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/logrotate.d
 
 FILES_SUBST+=	MPD_USER=${MPD_USER:Q}
 FILES_SUBST+=	MPD_GROUP=${MPD_GROUP:Q}
