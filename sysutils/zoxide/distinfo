@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2022/04/22 21:55:05 pin Exp $
+$NetBSD: distinfo,v 1.15 2022/04/28 07:34:10 pin Exp $
 
 BLAKE2s (aho-corasick-0.7.18.crate) = 8925e88e2df4b5ca3b31783f527e1bb31dbe27846f409f631148fa239f3b2935
 SHA512 (aho-corasick-0.7.18.crate) = 7a23b16231a90d23ee60ad4c81bc225410599a4560d33d3a203138fc540c39cf1000100fed3aed40dcc371c3635656a3792545dca5dd1aefbde00d8774eebd00
@@ -276,6 +276,6 @@ Size (winapi-util-0.1.5.crate) = 10164 bytes
 BLAKE2s (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 85ecec73b9874f5f443e29d99f93a11889e74ddf5a4bfeb929e2355a7cee32f1
 SHA512 (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 4a654af6a5d649dc87e00497245096b35a2894ae66f155cb62389902c3b93ddcc5cf7d0d8b9dd97b291d2d80bc686af2298e80abef6ac69883f4a54e79712513
 Size (winapi-x86_64-pc-windows-gnu-0.4.0.crate) = 2947998 bytes
-BLAKE2s (zoxide-0.8.1.tar.gz) = 8bccf21d45952a6525997a9d1e699ce5596d8602d8ad463eecc86e12b8c3946e
-SHA512 (zoxide-0.8.1.tar.gz) = 3536e97e7554d771c8e6b6e757a9f506affe4cbe2dd141fc0bb6a3dae4e45c9e1a8bab81f0e2506b47556810e1c5c8495f277572d9748b29fe55c8a5d73a2c53
-Size (zoxide-0.8.1.tar.gz) = 131470 bytes
+BLAKE2s (zoxide-0.8.1.tar.gz) = c6fe3d739571720656cd27a0291b46975b7e4b3fcf5d18e245022bafb6ec7275
+SHA512 (zoxide-0.8.1.tar.gz) = 3df2f7dcbafb13326b2dfdf46fdb7d952bbc63c04b9fb4b219ab0ddb9533b6d12a4f4f4bbb4938881874e99f16c5b6b959b4a83309c023bb93899bc0b019b143
+Size (zoxide-0.8.1.tar.gz) = 131439 bytes
