@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2021/10/19 18:57:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2022/04/28 13:19:04 adam Exp $
 bin/innochecksum
 bin/lz4_decompress
 bin/my_print_defaults
@@ -1601,6 +1601,7 @@ share/mysql/test/r/mysqldump-max.result
 share/mysql/test/r/mysqldump-no-binlog.result
 share/mysql/test/r/mysqldump.result
 share/mysql/test/r/mysqldump_bug29998457.result
+share/mysql/test/r/mysqldump_bug30042589.result
 share/mysql/test/r/mysqldump_bugs.result
 share/mysql/test/r/mysqldump_gtid_state.result
 share/mysql/test/r/mysqldump_restore.result
@@ -1854,6 +1855,7 @@ share/mysql/test/r/skip_log_bin.result
 share/mysql/test/r/skip_name_resolve.result
 share/mysql/test/r/slave-running.result
 share/mysql/test/r/slave-stopped.result
+share/mysql/test/r/slow_log.result
 share/mysql/test/r/sort_buffer_size_functionality.result
 share/mysql/test/r/sp-big.result
 share/mysql/test/r/sp-bugs.result
@@ -14195,6 +14197,7 @@ share/mysql/test/t/mysqldump-no-binlog-master.opt
 share/mysql/test/t/mysqldump-no-binlog.test
 share/mysql/test/t/mysqldump.test
 share/mysql/test/t/mysqldump_bug29998457.test
+share/mysql/test/t/mysqldump_bug30042589.test
 share/mysql/test/t/mysqldump_bugs.test
 share/mysql/test/t/mysqldump_gtid_state-master.opt
 share/mysql/test/t/mysqldump_gtid_state.test
@@ -14497,6 +14500,7 @@ share/mysql/test/t/skip_log_bin-master.opt
 share/mysql/test/t/skip_log_bin.test
 share/mysql/test/t/skip_name_resolve-master.opt
 share/mysql/test/t/skip_name_resolve.test
+share/mysql/test/t/slow_log.test
 share/mysql/test/t/sort_buffer_size_functionality-master.opt
 share/mysql/test/t/sort_buffer_size_functionality.test
 share/mysql/test/t/sp-big.test
