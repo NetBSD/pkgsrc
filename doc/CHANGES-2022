@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2138 2022/04/28 15:55:46 mef Exp $
+$NetBSD: CHANGES-2022,v 1.2139 2022/04/28 18:13:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3403,3 +3403,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/R-magrittr to 2.0.3 [mef 2022-04-28]
 	Updated math/R-nimble to 0.12.2 [mef 2022-04-28]
 	Updated math/R-mapproj to 1.2.8 [mef 2022-04-28]
+	Updated textproc/py-elementpath to 2.5.1 [adam 2022-04-28]
+	Updated textproc/py-jinja2 to 3.1.2 [adam 2022-04-28]
