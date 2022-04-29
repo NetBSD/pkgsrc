@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/08/09 19:10:28 brook Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/29 13:52:36 mef Exp $
 
 R_PKGNAME=	rcmdcheck
-R_PKGVER=	1.3.3
+R_PKGVER=	1.4.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,6 +19,14 @@ DEPENDS+=	R-withr>=2.1.2:../../devel/R-withr
 DEPENDS+=	R-prettyunits>=1.0.2:../../math/R-prettyunits
 DEPENDS+=	R-digest>=0.6.20:../../security/R-digest
 DEPENDS+=	R-xopen>=1.0.0:../../sysutils/R-xopen
+DEPENDS+=	R-curl-[0-9]*:../../www/R-curl
+
+# Packages suggested but not available: 'svglite', 'webfakes'
+TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
+TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
+TEST_DEPENDS+=	R-mockery-[0-9]*:../../devel/R-mockery
+TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
+TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 
 USE_LANGUAGES=	# none
 
