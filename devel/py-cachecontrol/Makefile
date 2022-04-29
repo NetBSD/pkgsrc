@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/01/11 19:05:17 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/04/29 23:33:05 wiz Exp $
 
 DISTNAME=	CacheControl-0.12.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-requests>=0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-lockfile>=0.9:../../devel/py-lockfile
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_PKG_RESOURCES=	yes
 
