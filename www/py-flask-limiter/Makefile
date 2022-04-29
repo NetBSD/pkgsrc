@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/01/04 20:55:26 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/04/29 11:56:45 wiz Exp $
 
 DISTNAME=	Flask-Limiter-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-limits-[0-9]*:../../devel/py-limits
 DEPENDS+=	${PYPKGPREFIX}-six>=1.4.1:../../lang/py-six
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 EGG_NAME=	${DISTNAME:S/-/_/1}
 
