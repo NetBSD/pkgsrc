@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/01/27 10:57:32 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/04/29 23:29:18 wiz Exp $
 
 DISTNAME=	testresources-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,12 +13,13 @@ LICENSE=	apache-2.0 OR modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
 DEPENDS+=	${PYPKGPREFIX}-fixtures-[0-9]*:../../devel/py-fixtures
+DEPENDS+=	${PYPKGPREFIX}-testttols-[0-9]*:../../devel/py-testttols
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-PYTHON_VERSIONED_DEPENDENCIES=	test:test testtools
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

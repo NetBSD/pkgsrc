@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:55:38 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/04/29 23:29:18 wiz Exp $
 
 DISTNAME=	wstools-0.4.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
