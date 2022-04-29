@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/04/21 07:43:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/04/29 12:57:33 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -19,6 +19,9 @@ ${PYSITELIB}/rich/_emoji_codes.pyo
 ${PYSITELIB}/rich/_emoji_replace.py
 ${PYSITELIB}/rich/_emoji_replace.pyc
 ${PYSITELIB}/rich/_emoji_replace.pyo
+${PYSITELIB}/rich/_export_format.py
+${PYSITELIB}/rich/_export_format.pyc
+${PYSITELIB}/rich/_export_format.pyo
 ${PYSITELIB}/rich/_extension.py
 ${PYSITELIB}/rich/_extension.pyc
 ${PYSITELIB}/rich/_extension.pyo
