@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.common,v 1.27 2020/05/16 08:37:47 adam Exp $
+# $NetBSD: Makefile.common,v 1.28 2022/04/29 13:36:19 wiz Exp $
+#
 # used by www/py-werkzeug/Makefile
 # used by www/py-werkzeug-docs/Makefile
 
-DISTNAME=	Werkzeug-1.0.1
+DISTNAME=	Werkzeug-2.1.2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/Werkzeug/}
 
@@ -14,4 +15,3 @@ HOMEPAGE=	https://werkzeug.palletsprojects.com/
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
-USE_TOOLS+=	pax
