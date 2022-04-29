@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/01/05 15:41:13 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/04/29 23:22:31 wiz Exp $
 
 DISTNAME=	Paver-1.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -16,6 +16,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-cogapp-[0-9]*:../../devel/py-cogapp
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
