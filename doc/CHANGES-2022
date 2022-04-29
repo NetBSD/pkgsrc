@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2142 2022/04/29 06:41:54 taca Exp $
+$NetBSD: CHANGES-2022,v 1.2143 2022/04/29 06:45:56 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3408,3 +3408,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/libopenmpt to 0.6.3 [fcambus 2022-04-28]
 	Updated devel/R-mockery to 0.4.3 [mef 2022-04-29]
 	Updated textproc/ruby-diff-lcs to 1.5.0 [taca 2022-04-29]
+	Updated devel/mold to 1.2.1 [fcambus 2022-04-29]
