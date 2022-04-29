@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/04/19 12:09:09 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2022/04/29 11:56:44 wiz Exp $
 
 DISTNAME=	Flask-Babel-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -13,12 +13,12 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-babel>=2.3:../../devel/py-babel
 DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
+DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 
-PYTHON_VERSIONED_DEPENDENCIES+=	jinja2
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
