@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2145 2022/04/29 11:57:42 mef Exp $
+$NetBSD: CHANGES-2022,v 1.2146 2022/04/29 12:05:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3411,3 +3411,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/mold to 1.2.1 [fcambus 2022-04-29]
 	Updated devel/R-checkmate to 2.1.0 [mef 2022-04-29]
 	Updated devel/R-pak to 0.3.0 [mef 2022-04-29]
+	Updated security/py-itsdangerous to 2.1.2 [wiz 2022-04-29]
