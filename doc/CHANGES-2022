@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2146 2022/04/29 12:05:12 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2147 2022/04/29 12:10:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3412,3 +3412,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/R-checkmate to 2.1.0 [mef 2022-04-29]
 	Updated devel/R-pak to 0.3.0 [mef 2022-04-29]
 	Updated security/py-itsdangerous to 2.1.2 [wiz 2022-04-29]
+	Updated devel/py-click to 8.1.3 [adam 2022-04-29]
+	Updated graphics/py-openexr to 1.3.8 [adam 2022-04-29]
