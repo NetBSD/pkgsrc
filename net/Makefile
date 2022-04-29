@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1454 2022/04/25 07:18:45 wiz Exp $
+# $NetBSD: Makefile,v 1.1455 2022/04/29 13:05:49 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -699,6 +699,7 @@ SUBDIR+=	py-dnsdiag
 SUBDIR+=	py-dpkt
 SUBDIR+=	py-dropbox
 SUBDIR+=	py-ec2instanceconnectcli
+SUBDIR+=	py-ephemeral_port_reserve
 SUBDIR+=	py-flower
 SUBDIR+=	py-foolscap
 SUBDIR+=	py-gcs-oauth2-boto-plugin
