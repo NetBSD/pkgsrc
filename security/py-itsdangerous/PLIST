@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2018/11/11 16:20:42 kleink Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/04/29 12:05:02 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -6,9 +6,6 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/itsdangerous/__init__.py
 ${PYSITELIB}/itsdangerous/__init__.pyc
 ${PYSITELIB}/itsdangerous/__init__.pyo
-${PYSITELIB}/itsdangerous/_compat.py
-${PYSITELIB}/itsdangerous/_compat.pyc
-${PYSITELIB}/itsdangerous/_compat.pyo
 ${PYSITELIB}/itsdangerous/_json.py
 ${PYSITELIB}/itsdangerous/_json.pyc
 ${PYSITELIB}/itsdangerous/_json.pyo
@@ -18,9 +15,7 @@ ${PYSITELIB}/itsdangerous/encoding.pyo
 ${PYSITELIB}/itsdangerous/exc.py
 ${PYSITELIB}/itsdangerous/exc.pyc
 ${PYSITELIB}/itsdangerous/exc.pyo
-${PYSITELIB}/itsdangerous/jws.py
-${PYSITELIB}/itsdangerous/jws.pyc
-${PYSITELIB}/itsdangerous/jws.pyo
+${PYSITELIB}/itsdangerous/py.typed
 ${PYSITELIB}/itsdangerous/serializer.py
 ${PYSITELIB}/itsdangerous/serializer.pyc
 ${PYSITELIB}/itsdangerous/serializer.pyo
