@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2166 2022/04/29 17:01:18 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2167 2022/04/29 23:44:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3434,3 +3434,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/citron to 0.15.0 [pin 2022-04-29]
 	Updated www/suckit to 0.2.0 [pin 2022-04-29]
 	Updated audio/termusic to 0.6.14 [pin 2022-04-29]
+	Removed devel/py-ipython5 successor devel/py-ipython [wiz 2022-04-29]

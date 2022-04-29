@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3723 2022/04/26 21:43:08 wiz Exp $
+# $NetBSD: Makefile,v 1.3724 2022/04/29 23:44:02 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2505,7 +2505,6 @@ SUBDIR+=	py-iowait
 SUBDIR+=	py-ipaddr
 SUBDIR+=	py-ipykernel
 SUBDIR+=	py-ipython
-SUBDIR+=	py-ipython5
 SUBDIR+=	py-ipython_genutils
 SUBDIR+=	py-iso-639
 SUBDIR+=	py-iso3166
