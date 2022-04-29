@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/01/04 20:55:28 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2022/04/29 11:56:46 wiz Exp $
 
 DISTNAME=	Flask-Uploads-0.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,9 +11,11 @@ HOMEPAGE=	https://flask-uploads.readthedocs.io/
 COMMENT=	Flexible and efficient upload handling for Flask
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-flask>=0.8:../../www/py-flask
+
 USE_LANGUAGES=	#empty
 
-DEPENDS+=	${PYPKGPREFIX}-flask>=0.8:../../www/py-flask
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

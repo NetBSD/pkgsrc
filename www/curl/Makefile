@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.255 2022/04/27 07:51:20 wiz Exp $
+# $NetBSD: Makefile,v 1.256 2022/04/29 11:56:44 wiz Exp $
 
 DISTNAME=	curl-7.83.0
 CATEGORIES=	www
@@ -14,6 +14,8 @@ LICENSE=	mit
 BUILD_DEFS+=	IPV6_READY
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-impacket-[0-9]*:../../net/py-impacket
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-impacket
 
 USE_TOOLS+=		nroff perl
 USE_LIBTOOL=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:55:27 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/04/29 11:56:46 wiz Exp $
 
 DISTNAME=	Flask-RESTful-0.3.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -19,6 +19,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-blinker-[0-9]*:../../devel/py-blinker
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

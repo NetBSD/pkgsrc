@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/01/04 20:55:25 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2022/04/29 11:56:44 wiz Exp $
 
 DISTNAME=	Flask-Assets-2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,12 +11,14 @@ HOMEPAGE=	https://github.com/miracle2k/flask-assets
 COMMENT=	Flask webassets integration
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	# empty
-
 DEPENDS+=	${PYPKGPREFIX}-flask>=0.8:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-webassets>=2.0:../../www/py-webassets
 TEST_DEPENDS+=	${PYPKGPREFIX}-flask-script-[0-9]*:../../www/py-flask-script
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+
+USE_LANGUAGES=	# empty
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
