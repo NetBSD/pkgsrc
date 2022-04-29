@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2022/04/29 00:07:17 nia Exp $
+# $NetBSD: options.mk,v 1.5 2022/04/29 23:56:36 gutteridge Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gvfs
 PKG_SUPPORTED_OPTIONS+=	avahi hal fuse samba
@@ -10,7 +10,7 @@ PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
 PKG_SUGGESTED_OPTIONS+=	samba
 .endif
 
-.if ${OPSYS} == "Linux" || (${OPSYS} == "NetBSD" && ${OPSYS_VERSION} > 099900)
+.if ${OPSYS} == "Linux" || (${OPSYS} == "NetBSD" && ${OPSYS_VERSION} > 099993)
 PKG_SUGGESTED_OPTIONS+=	fuse
 .endif
 
