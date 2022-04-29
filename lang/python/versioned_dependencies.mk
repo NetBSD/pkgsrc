@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.67 2022/04/21 10:50:52 wiz Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.68 2022/04/29 23:44:02 wiz Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -9,7 +9,7 @@
 # PYTHON_VERSIONED_DEPENDENCIES
 #       The Python package which should be added as a dependency.
 #
-#       Possible values: Pmw Pillow X cairo click cryptography flake8 html2text hypothesis importlib-metadata ipython jinja2 markdown mccabe more-itertools pip packaging pygments pyparsing python-digest rsa setuptools setuptools_scm sphinx test testtools twisted zipp
+#       Possible values: Pillow Pmw X cairo click cryptography flake8 html2text hypothesis importlib-metadata jinja2 markdown mccabe more-itertools pip packaging pygments pyparsing python-digest rsa setuptools setuptools_scm sphinx test testtools twisted zipp
 #       Default: (nothing)
 #
 
@@ -17,19 +17,16 @@
 
 # format: short name for PYTHON_VERSIONED_DEPENDENCIES<space>Python-2.x path<space>Python-3.x path
 _SUPPORTED_PACKAGES=	# empty
-_SUPPORTED_PACKAGES+=	Pmw x11/py-Pmw x11/py-Pmw2
 _SUPPORTED_PACKAGES+=	Pillow graphics/py-Pillow6 graphics/py-Pillow
+_SUPPORTED_PACKAGES+=	Pmw x11/py-Pmw x11/py-Pmw2
 _SUPPORTED_PACKAGES+=	X textproc/py-X2 textproc/py-X
 _SUPPORTED_PACKAGES+=	cairo graphics/py-cairo118 graphics/py-cairo
 _SUPPORTED_PACKAGES+=	click devel/py-click7 devel/py-click
 _SUPPORTED_PACKAGES+=	cryptography security/py27-cryptography security/py-cryptography 
-# XXX feedparser 6.x is not only py27-incompatible, but also 5.x-API-incompatible
-#_SUPPORTED_PACKAGES+=	feedparser textproc/py-feedparser5 textproc/py-feedparser
 _SUPPORTED_PACKAGES+=	flake8 devel/py-flake8-3 devel/py-flake8
 _SUPPORTED_PACKAGES+=	html2text textproc/py-html2text-2019.8.11 textproc/py-html2text
 _SUPPORTED_PACKAGES+=	hypothesis devel/py-hypothesis4 devel/py-hypothesis
 _SUPPORTED_PACKAGES+=	importlib-metadata devel/py-importlib-metadata2 devel/py-importlib-metadata
-_SUPPORTED_PACKAGES+=	ipython devel/py-ipython5 devel/py-ipython
 _SUPPORTED_PACKAGES+=	isort devel/py-isort4 devel/py-isort
 _SUPPORTED_PACKAGES+=	jinja2 textproc/py27-jinja2 textproc/py-jinja2
 _SUPPORTED_PACKAGES+=	markdown textproc/py-markdown3 textproc/py-markdown
