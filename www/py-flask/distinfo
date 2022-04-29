@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:30:37 nia Exp $
+$NetBSD: distinfo,v 1.13 2022/04/29 13:41:38 wiz Exp $
 
-BLAKE2s (Flask-1.1.2.tar.gz) = 9dfad14ce31ae82f8012857fa860653a95790ab53c84ab44cde768a6692be8ed
-SHA512 (Flask-1.1.2.tar.gz) = 9feb6a9a8f34fadbea508d465f73c24b1d81b3f66243804dc3904d198c2fd78e2e1bef94df6a4940a7eec6b9b54abea06557a87de8b27b0a9497d18b3e071384
-Size (Flask-1.1.2.tar.gz) = 637516 bytes
+BLAKE2s (Flask-2.1.2.tar.gz) = 392f238d20e69a453ba749d68e6a4358cd3ede13344dcdb489e6a3cf23d78dde
+SHA512 (Flask-2.1.2.tar.gz) = 65ca756d63da05e74863fbfd2ae574d6e75d6fab683dd08ea97b22a9b27be4f9a03ce7be44312a1f2c6a802bdf77ede3899734f3f1546000dd8b9c592571deec
+Size (Flask-2.1.2.tar.gz) = 631846 bytes
