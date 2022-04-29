@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2021/08/24 11:09:50 mef Exp $
+# $NetBSD: Makefile,v 1.3 2022/04/29 04:18:39 mef Exp $
 
 R_PKGNAME=	mockery
-R_PKGVER=	0.4.2
+R_PKGVER=	0.4.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
