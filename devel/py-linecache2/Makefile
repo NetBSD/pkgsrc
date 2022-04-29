@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 20:53:15 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/04/29 23:29:17 wiz Exp $
 
 DISTNAME=		linecache2-1.0.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,8 @@ COMMENT=		Backport of the linecache module to older Python versions
 LICENSE=		python-software-foundation
 
 DEPENDS+=		${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # https://github.com/testing-cabal/linecache2/issues/2
 # https://bugs.python.org/issue24054
