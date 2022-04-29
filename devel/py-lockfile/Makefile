@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 20:53:15 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/04/29 23:29:17 wiz Exp $
 
 DISTNAME=	lockfile-0.12.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
 BUILD_DEPENDS+=	${PYPKGPREFIX}-pbr>=1.8:../../devel/py-pbr
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=   27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
