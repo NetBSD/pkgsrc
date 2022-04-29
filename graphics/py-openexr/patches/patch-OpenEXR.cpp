@@ -1,9 +1,9 @@
-$NetBSD: patch-OpenEXR.cpp,v 1.2 2021/07/08 21:23:23 markd Exp $
+$NetBSD: patch-OpenEXR.cpp,v 1.3 2022/04/29 12:07:43 adam Exp $
 
 Avoid CS define on SunOS.
 openexr3 deprecates Int64
 
---- OpenEXR.cpp.orig	2018-08-30 14:53:51.000000000 +0000
+--- OpenEXR.cpp.orig	2022-04-17 06:27:41.000000000 +0000
 +++ OpenEXR.cpp
 @@ -1,5 +1,9 @@
  #include <Python.h>
@@ -15,7 +15,7 @@ openexr3 deprecates Int64
  #if PY_VERSION_HEX < 0x02050000 && !defined(PY_SSIZE_T_MIN)
  typedef int Py_ssize_t;
  #define PY_SSIZE_T_MAX INT_MAX
-@@ -44,6 +48,7 @@ typedef int Py_ssize_t;
+@@ -43,6 +47,7 @@ typedef int Py_ssize_t;
  #include <ImfChannelListAttribute.h>
  #include <ImfChromaticitiesAttribute.h>
  #include <ImfCompressionAttribute.h>
@@ -23,15 +23,15 @@ openexr3 deprecates Int64
  #include <ImfDoubleAttribute.h>
  #include <ImfEnvmapAttribute.h>
  #include <ImfFloatAttribute.h>
-@@ -72,6 +77,7 @@ typedef int Py_ssize_t;
+@@ -73,6 +78,7 @@ typedef int Py_ssize_t;
  #include <iostream>
  #include <iomanip>
  #include <iostream>
 +#include <fstream>
  #include <vector>
  
- using namespace std;
-@@ -105,8 +111,8 @@ class C_IStream: public IStream
+ #define IMATH_VERSION IMATH_VERSION_MAJOR * 10000 + \
+@@ -115,8 +121,8 @@ class C_IStream: public IStream
      C_IStream (PyObject *fo):
          IStream(""), _fo(fo) {}
      virtual bool    read (char c[], int n);
@@ -42,7 +42,7 @@ openexr3 deprecates Int64
      virtual void    clear ();
      virtual const char*     fileName() const;
    private:
-@@ -132,7 +138,7 @@ const char* C_IStream::fileName() const
+@@ -142,7 +148,7 @@ const char* C_IStream::fileName() const
  }
  
  
@@ -51,7 +51,7 @@ openexr3 deprecates Int64
  C_IStream::tellg ()
  {
      PyObject *rv = PyObject_CallMethod(_fo, (char*)"tell", NULL);
-@@ -141,14 +147,14 @@ C_IStream::tellg ()
+@@ -151,14 +157,14 @@ C_IStream::tellg ()
        long long t = PyLong_AsLong(lrv);
        Py_DECREF(lrv);
        Py_DECREF(rv);
@@ -68,7 +68,7 @@ openexr3 deprecates Int64
  {
      PyObject *data = PyObject_CallMethod(_fo, (char*)"seek", (char*)"(L)", pos);
      if (data != NULL) {
-@@ -170,8 +176,8 @@ class C_OStream: public OStream
+@@ -180,8 +186,8 @@ class C_OStream: public OStream
    public:
      C_OStream (PyObject *fo): OStream(""), _fo(fo) {}
      virtual void    write (const char *c, int n);
@@ -79,7 +79,7 @@ openexr3 deprecates Int64
      virtual void    clear ();
      virtual const char*     fileName() const;
    private:
-@@ -196,7 +202,7 @@ const char* C_OStream::fileName() const
+@@ -206,7 +212,7 @@ const char* C_OStream::fileName() const
  }
  
  
@@ -88,7 +88,7 @@ openexr3 deprecates Int64
  C_OStream::tellp ()
  {
      PyObject *rv = PyObject_CallMethod(_fo, (char*)"tell", NULL);
-@@ -205,14 +211,14 @@ C_OStream::tellp ()
+@@ -215,14 +221,14 @@ C_OStream::tellp ()
        long long t = PyLong_AsLong(lrv);
        Py_DECREF(lrv);
        Py_DECREF(rv);
