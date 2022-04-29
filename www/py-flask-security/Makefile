@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/01/04 20:55:27 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2022/04/29 11:56:46 wiz Exp $
 
 DISTNAME=	Flask-Security-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -23,6 +23,8 @@ DEPENDS+=	${PYPKGPREFIX}-itsdangerous>=0.21:../../security/py-itsdangerous
 DEPENDS+=	${PYPKGPREFIX}-passlib>=1.7:../../security/py-passlib
 
 USE_LANGUAGES=	# empty
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-extract:
 	${FIND} ${WRKSRC} -type f -name .DS_Store -exec ${RM} {} \;
