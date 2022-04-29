@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:23:09 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/04/29 13:34:52 wiz Exp $
 
-BLAKE2s (Pallets-Sphinx-Themes-1.2.3.tar.gz) = 064a1177b41b447e940125b88a57cf96c1e86da05de8ded105cbb86405ec2813
-SHA512 (Pallets-Sphinx-Themes-1.2.3.tar.gz) = 26a8ea77307c1e7afefdef3ee63749235348dfa370dd8ef4bf0b7bc5871a144f47199b615a0a20d63033e4117ad134d51e064cf0368eeb852ef4b87e355a0586
-Size (Pallets-Sphinx-Themes-1.2.3.tar.gz) = 21382 bytes
+BLAKE2s (Pallets-Sphinx-Themes-2.0.2.tar.gz) = 67c6a109c4ec638e94361b43216a3215485e7c51f67f02b618ddfedc8e106941
+SHA512 (Pallets-Sphinx-Themes-2.0.2.tar.gz) = c835256c92f25b35068042a7c0ce1594b58121edaa036940880459ba6ae4757dad7ad5de72afd122372e03aaf7523fdb5714fe3fb94eb55569501556c9f01d71
+Size (Pallets-Sphinx-Themes-2.0.2.tar.gz) = 21818 bytes
