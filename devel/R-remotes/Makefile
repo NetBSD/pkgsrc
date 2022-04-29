@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2021/06/12 01:43:34 mef Exp $
+# $NetBSD: Makefile,v 1.5 2022/04/29 14:56:15 mef Exp $
 
 R_PKGNAME=	remotes
-R_PKGVER=	2.4.0
+R_PKGVER=	2.4.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,6 +11,12 @@ LICENSE=	mit
 # Package suggested but not available: 'webfakes'
 #EST_DEPENDS+=	R-webfake-[0-9]*:../../www/R-webfakes
 TEST_DEPENDS+=	R-mockery-[0-9]*:../../devel/R-mockery
+TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
+TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
+TEST_DEPENDS+=	R-curl-[0-9]*:../../www/R-curl
+TEST_DEPENDS+=	R-git2r-[0-9]*:../../devel/R-git2r
+TEST_DEPENDS+=	R-pingr-[0-9]*:../../net/R-pingr
+TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 
 USE_LANGUAGES=	# none
 
