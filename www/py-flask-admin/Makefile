@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/01/04 20:55:25 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2022/04/29 11:56:44 wiz Exp $
 
 DISTNAME=	Flask-Admin-1.5.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-flask>=0.7:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-wtforms-[0-9]*:../../www/py-wtforms
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-extract:
 	${FIND} ${WRKSRC}/flask_admin/static -type f -exec ${CHMOD} a-x {} +

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/01/04 20:55:26 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2022/04/29 11:56:45 wiz Exp $
 
 DISTNAME=	Flask-Login-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -14,6 +14,8 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
