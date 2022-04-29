@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/01/05 15:41:16 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2022/04/29 11:56:44 wiz Exp $
 
 DISTNAME=	impacket-0.9.24
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,10 +24,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 
 USE_PKG_RESOURCES=	yes
 
-.include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION} == 27
-DEPENDS+=	${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # flask
 
 SUBST_CLASSES+=		crypto
 SUBST_STAGE.crypto=	pre-configure
