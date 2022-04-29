@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/08/09 18:32:49 brook Exp $
+# $NetBSD: Makefile,v 1.2 2022/04/29 15:20:06 mef Exp $
 
 R_PKGNAME=	brew
-R_PKGVER=	1.0-6
+R_PKGVER=	1.0-7
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
