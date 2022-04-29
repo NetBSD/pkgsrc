@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:30 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/04/29 13:19:28 adam Exp $
 
-DISTNAME=	pika-1.2.0
+DISTNAME=	pika-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pika/}
 
