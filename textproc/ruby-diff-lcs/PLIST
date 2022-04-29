@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/09/14 14:26:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/04/29 06:41:31 taca Exp $
 bin/htmldiff${RUBY_SUFFIX}
 bin/ldiff${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -10,7 +10,6 @@ ${GEM_LIBDIR}/License.md
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/autotest/discover.rb
 ${GEM_LIBDIR}/bin/htmldiff
 ${GEM_LIBDIR}/bin/ldiff
 ${GEM_LIBDIR}/docs/COPYING.txt
@@ -38,6 +37,21 @@ ${GEM_LIBDIR}/spec/fixtures/ldiff/output.diff-c
 ${GEM_LIBDIR}/spec/fixtures/ldiff/output.diff-e
 ${GEM_LIBDIR}/spec/fixtures/ldiff/output.diff-f
 ${GEM_LIBDIR}/spec/fixtures/ldiff/output.diff-u
+${GEM_LIBDIR}/spec/fixtures/ldiff/output.diff.chef
+${GEM_LIBDIR}/spec/fixtures/ldiff/output.diff.chef-c
+${GEM_LIBDIR}/spec/fixtures/ldiff/output.diff.chef-e
+${GEM_LIBDIR}/spec/fixtures/ldiff/output.diff.chef-f
+${GEM_LIBDIR}/spec/fixtures/ldiff/output.diff.chef-u
+${GEM_LIBDIR}/spec/fixtures/ldiff/output.diff.chef2
+${GEM_LIBDIR}/spec/fixtures/ldiff/output.diff.chef2-c
+${GEM_LIBDIR}/spec/fixtures/ldiff/output.diff.chef2-d
+${GEM_LIBDIR}/spec/fixtures/ldiff/output.diff.chef2-e
+${GEM_LIBDIR}/spec/fixtures/ldiff/output.diff.chef2-f
+${GEM_LIBDIR}/spec/fixtures/ldiff/output.diff.chef2-u
+${GEM_LIBDIR}/spec/fixtures/new-chef
+${GEM_LIBDIR}/spec/fixtures/new-chef2
+${GEM_LIBDIR}/spec/fixtures/old-chef
+${GEM_LIBDIR}/spec/fixtures/old-chef2
 ${GEM_LIBDIR}/spec/hunk_spec.rb
 ${GEM_LIBDIR}/spec/issues_spec.rb
 ${GEM_LIBDIR}/spec/lcs_spec.rb
