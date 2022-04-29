@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/29 13:05:35 wiz Exp $
+
+BLAKE2s (ephemeral_port_reserve-1.1.4.tar.gz) = 8f6af493ce79d9655a2a1eac52b026c977f868708f34110a88e83e3693cb070f
+SHA512 (ephemeral_port_reserve-1.1.4.tar.gz) = 7a406d092ddaeca28e55a6e0a367f10f21b635e3c32571b304453b86df0a852fb91a9b12619f300833ee58d6ef5aafcd7338801eeb7d330ad43c4f2caa14d50f
+Size (ephemeral_port_reserve-1.1.4.tar.gz) = 3541 bytes
