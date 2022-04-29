@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:14:06 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/04/29 13:13:51 mef Exp $
 
-BLAKE2s (R/pkgbuild_1.2.0.tar.gz) = 1da1bb814a93624dcb39a0f07ea4907a69c0ce5ffefb55ab7e25f673ff1501c9
-SHA512 (R/pkgbuild_1.2.0.tar.gz) = f94f924ec6cca5cd61a9bbffdbc09ba3a7c48cd3300223900f8d9a5d4bd24d288be61e4d03a50f72a7c06297d01e276b1164279cd6c6cb0add9ebed20fec456c
-Size (R/pkgbuild_1.2.0.tar.gz) = 30383 bytes
+BLAKE2s (R/pkgbuild_1.3.1.tar.gz) = 8d7db34b5ff50f77599aa45b1e17f2994028d3eb1a6fadf2e1949f0e67fed4d6
+SHA512 (R/pkgbuild_1.3.1.tar.gz) = 392e1937ee2145e15eef82d5b4900e72e274a70462a911adaf80f7a76e3cdb8533e134c4f15c596b8b8779fd4b9ba3021831e2c89cf5c727c993afd8a18e5ead
+Size (R/pkgbuild_1.3.1.tar.gz) = 31937 bytes
