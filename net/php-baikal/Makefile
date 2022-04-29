@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2022/03/14 13:40:28 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2022/04/29 13:49:13 wiz Exp $
 
-DISTNAME=	baikal-0.9.1
+DISTNAME=	baikal-0.9.2
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fruux/}
@@ -17,6 +17,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=5.3.1:../../databases/php-pdo
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_sqlite>=5.3.1:../../databases/php-pdo_sqlite
 
 REPLACE_SH+=	vendor/twig/twig/drupal_test.sh
+REPLACE_SH+=	vendor/bin/sabredav
 
 PHP_VERSIONS_INCOMPATIBLE=	56 # as of 0.6.0
 
