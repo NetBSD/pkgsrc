@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1621 2022/04/26 08:21:00 adam Exp $
+# $NetBSD: Makefile,v 1.1622 2022/04/29 15:03:16 mef Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -20,6 +20,7 @@ SUBDIR+=	R-rvest
 SUBDIR+=	R-sass
 SUBDIR+=	R-shiny
 SUBDIR+=	R-shinyjs
+SUBDIR+=	R-webfakes
 SUBDIR+=	R-webshot
 SUBDIR+=	SOGo
 SUBDIR+=	SOGo4
