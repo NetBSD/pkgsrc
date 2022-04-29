@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/04/19 12:07:43 tnn Exp $
+# $NetBSD: Makefile,v 1.22 2022/04/29 13:33:51 wiz Exp $
 
 DISTNAME=	Flask-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -14,6 +14,7 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-itsdangerous>=0.24:../../security/py-itsdangerous
 DEPENDS+=	${PYPKGPREFIX}-werkzeug>=0.15:../../www/py-werkzeug
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_VERSIONED_DEPENDENCIES+=	click jinja2
 PYTHON_VERSIONED_DEPENDENCIES+=	test:test
 
