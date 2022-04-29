@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2150 2022/04/29 13:03:40 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.2151 2022/04/29 13:05:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3418,3 +3418,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/rabbitmq to 3.9.16 [adam 2022-04-29]
 	Updated comms/py-rich to 12.3.0 [adam 2022-04-29]
 	Updated devel/mob to 3.1.1 [schmonz 2022-04-29]
+	Added net/py-ephemeral_port_reserve version 1.1.4 [wiz 2022-04-29]
