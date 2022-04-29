@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/02/13 08:53:44 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/04/29 23:14:02 wiz Exp $
 
 DISTNAME=	klein-20.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,13 +16,13 @@ DEPENDS+=	${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-hyperlink-[0-9]*:../../www/py-hyperlink
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-tubes-[0-9]*:../../devel/py-tubes
+DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-werkzeug-[0-9]*:../../www/py-werkzeug
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
 
-PYTHON_VERSIONED_DEPENDENCIES+=	twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
