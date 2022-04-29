@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2165 2022/04/29 17:00:04 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2166 2022/04/29 17:01:18 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3433,3 +3433,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/R-brew to 1.0.7 [mef 2022-04-29]
 	Updated x11/citron to 0.15.0 [pin 2022-04-29]
 	Updated www/suckit to 0.2.0 [pin 2022-04-29]
+	Updated audio/termusic to 0.6.14 [pin 2022-04-29]
