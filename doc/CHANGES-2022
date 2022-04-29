@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2155 2022/04/29 13:36:30 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2156 2022/04/29 13:41:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3424,3 +3424,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/py-alembic to 1.7.7 [adam 2022-04-29]
 	Updated textproc/py-pallets-sphinx-themes to 2.0.2 [wiz 2022-04-29]
 	Updated www/py-werkzeug to 2.1.2 [wiz 2022-04-29]
+	Updated www/py-flask to 2.1.2 [wiz 2022-04-29]
