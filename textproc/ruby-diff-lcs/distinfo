@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:23:22 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/04/29 06:41:31 taca Exp $
 
-BLAKE2s (diff-lcs-1.4.4.gem) = 180f4a8113ddbabd485ba16aa3a5d0de42a387b8a7abf3ef9a044319f64c0ac4
-SHA512 (diff-lcs-1.4.4.gem) = fcc6c86f392697c4b3690827f7c20d50fe68e367626b85a56446356d7bb21b4020bdb2bc5c2faf4e82807cd9f3049d71c94d166c85a1a4231f0fd9fc032f41c7
-Size (diff-lcs-1.4.4.gem) = 50688 bytes
+BLAKE2s (diff-lcs-1.5.0.gem) = 6d3026d16c5aaab6a5efc25ecb8bd6982c01b8d14ff853f676f020bf7b7f3f43
+SHA512 (diff-lcs-1.5.0.gem) = 5cef9dc1d143217cc402173e2b84ffdcbb8d5a4d05716bdbca732ac00d73591e4cab2f7e792382a3686d8e72fdc32269fd7100941d602ca6d683e7645229ef8d
+Size (diff-lcs-1.5.0.gem) = 52736 bytes
