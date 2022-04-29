@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2022/04/29 13:05:35 wiz Exp $
+bin/ephemeral-port-reserve-${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/ephemeral_port_reserve.py
+${PYSITELIB}/ephemeral_port_reserve.pyc
+${PYSITELIB}/ephemeral_port_reserve.pyo
