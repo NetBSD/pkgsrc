@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2020/09/24 00:44:53 mef Exp $
+# $NetBSD: Makefile,v 1.4 2022/04/30 14:39:03 mef Exp $
 
 R_PKGNAME=	roxygen2
-R_PKGVER=	7.1.1
+R_PKGVER=	7.1.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	In-line documentation for R
-LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+LICENSE=	mit
 
 DEPENDS+=	R-desc>=1.2.0:../../devel/R-desc
 DEPENDS+=	R-pkgload>=1.0.2:../../devel/R-pkgload
@@ -27,5 +27,5 @@ TEST_DEPENDS+=	R-devtools-[0-9]*:../../devel/R-devtools
 USE_LANGUAGES=	c c++
 
 .include "../../math/R/Makefile.extension"
-.include "../../devel/R-Rcpp/buildlink3.mk"
+.include "../../lang/R-cpp11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
