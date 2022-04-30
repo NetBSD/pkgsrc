@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/09/04 14:32:31 mef Exp $
+# $NetBSD: Makefile,v 1.4 2022/04/30 14:33:39 mef Exp $
 
 R_PKGNAME=	cpp11
-R_PKGVER=	0.3.1
+R_PKGVER=	0.4.2
 CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
