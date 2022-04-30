@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/04/11 04:00:18 khorben Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/04/30 21:12:46 khorben Exp $
 bin/asm
 bin/deasm
 include/Devel/Asm.h
@@ -12,6 +12,7 @@ lib/Asm/arch/arm.so
 lib/Asm/arch/armeb.so
 lib/Asm/arch/armel.so
 lib/Asm/arch/dalvik.so
+lib/Asm/arch/eth.so
 lib/Asm/arch/i386.so
 lib/Asm/arch/i386_real.so
 lib/Asm/arch/i486.so
