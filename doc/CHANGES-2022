@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2194 2022/04/30 14:47:41 mef Exp $
+$NetBSD: CHANGES-2022,v 1.2195 2022/04/30 15:17:45 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3462,3 +3462,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/R-cpp11 to 0.4.2 [mef 2022-04-30]
 	Updated devel/R-roxygen2 to 7.1.2 [mef 2022-04-30]
 	Updated devel/R-withr to 2.5.0 [mef 2022-04-30]
+	Updated devel/R-usethis to 2.1.5 [mef 2022-04-30]
