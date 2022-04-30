@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.254 2022/04/23 15:55:31 he Exp $
+# $NetBSD: Makefile,v 1.255 2022/04/30 21:02:39 nia Exp $
 
 DISTNAME=	rustc-1.59.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -21,9 +21,6 @@ USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bash grep gmake perl:build pkg-config
 
-# The NetBSD bootstraps are built for NetBSD 8 (because rust doesn't
-# build on 7).  Mark earlier versions as broken.
-BROKEN_ON_PLATFORM+=	NetBSD-[1-7].*-*
 # Bootstrap is built for NetBSD 9.x on these platforms:
 BROKEN_ON_PLATFORM+=	NetBSD-8.*-*arm*
 BROKEN_ON_PLATFORM+=	NetBSD-8.*-aarch64
@@ -81,6 +78,10 @@ CHECK_RELRO_SUPPORTED=	no
 CHECK_SSP_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 080000
+BROKEN+=		"Bootstrap unavailable for old NetBSD version"
+.endif
 
 # Allow overriding MAKE_JOBS_SAFE
 # some may chose to mostly build faster,
@@ -292,7 +293,7 @@ RUST_STAGE0_VER=	1.58.1
 RUST_ARCH=		powerpc-unknown-netbsd
 
 # Cross-built against NetBSD 9.0
-.  if empty(OS_VERSION:M8.*) || make(distinfo) || make(makesum) || make(mdi)
+.  if ${OPSYS_VERSION} >= 090000 || make(distinfo) || make(makesum) || make(mdi)
 RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}90.tar.gz
 RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}90.tar.gz
 DISTFILES:=			${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
@@ -301,7 +302,7 @@ SITES.${RUST_STD_STAGE0}=	${MASTER_SITE_LOCAL:=rust/}
 .  endif
 
 # Cross-built against NetBSD 8.0
-.  if !empty(OS_VERSION:M8.*) || make(distinfo) || make(makesum) || make(mdi)
+.  if ${OPSYS_VERSION} < 090000 || make(distinfo) || make(makesum) || make(mdi)
 RUST_STAGE0:=			rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 RUST_STD_STAGE0:=		rust-std-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 DISTFILES:=			${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
@@ -598,7 +599,7 @@ stage0-bootstrap: install
 
 # rust i386 bootstraps are built for 8.0 and still depend on libstdc++.so.8.
 # Pull in compat80 on 9.x and newer.
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) && empty(OS_VERSION:M8.*)
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) && ${OPSYS_VERSION} >= 090000
 BUILD_DEPENDS+=	compat80>=0:../../emulators/compat80
 .endif
 
