@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2188 2022/04/30 10:05:33 wen Exp $
+$NetBSD: CHANGES-2022,v 1.2189 2022/04/30 13:07:15 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3456,3 +3456,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/drupal7 to 7.89 [wen 2022-04-22]
 	Updated devel/R-tidyselect to 1.1.2 [mef 2022-04-30]
 	Added www/drupal9 version 9.3.12 [wen 2022-04-30]
+	Updated print/mupdf to 1.19.1 [wen 2022-04-30]
