@@ -1,6 +1,7 @@
-$NetBSD: patch-include_grpc_impl_codegen_port__platform.h,v 1.4 2021/01/21 17:27:07 adam Exp $
+$NetBSD: patch-include_grpc_impl_codegen_port__platform.h,v 1.5 2022/04/30 21:36:26 wiz Exp $
 
 Add NetBSD support.
+https://github.com/grpc/grpc/pull/29542
 
 --- include/grpc/impl/codegen/port_platform.h.orig	2021-01-19 18:07:57.000000000 +0000
 +++ include/grpc/impl/codegen/port_platform.h
