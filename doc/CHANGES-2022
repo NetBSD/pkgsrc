@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2167 2022/04/29 23:44:02 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2168 2022/04/30 00:13:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3435,3 +3435,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/suckit to 0.2.0 [pin 2022-04-29]
 	Updated audio/termusic to 0.6.14 [pin 2022-04-29]
 	Removed devel/py-ipython5 successor devel/py-ipython [wiz 2022-04-29]
+	Added devel/p5-Parse-Distname version 0.05 [wen 2022-04-30]
