@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.419 2022/04/24 17:55:55 gutteridge Exp $
+# $NetBSD: bsd.prefs.mk,v 1.420 2022/04/30 21:27:57 tnn Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -112,7 +112,7 @@ MAKEFLAGS+=		OS_VERSION=${OS_VERSION:Q}
 #
 .if !defined(OPSYS_VERSION)
 _OPSYS_VERSION_CMD=	${UNAME} -r | \
-			awk -F. '{printf "%02d%02d%02d", $$1, $$2, $$3}'
+			awk -F. '{major=int($$1); minor=int($$2); if (minor>=100) minor=99; patch=int($$3); if (patch>=100) patch=99; printf "%02d%02d%02d", major, minor, patch}'
 OPSYS_VERSION=		${_OPSYS_VERSION_CMD:sh}
 MAKEFLAGS+=		OPSYS_VERSION=${OPSYS_VERSION:Q}
 .endif
@@ -186,7 +186,7 @@ LOWER_OPSYS?=		darwin
 LOWER_OPSYS_VERSUFFIX=	${OS_VERSION:C/([0-9]*).*/\1/}
 LOWER_VENDOR?=		apple
 _OPSYS_VERSION_CMD=	sw_vers -productVersion | \
-			awk -F. '{printf("%02d%02d%02d", $$1, $$2, $$3)}'
+			awk -F. '{major=int($$1); minor=int($$2); if (minor>=100) minor=99; patch=int($$3); if (patch>=100) patch=99; printf "%02d%02d%02d", major, minor, patch}'
 
 .elif ${OPSYS} == "DragonFly"
 OS_VERSION:=		${OS_VERSION:C/-.*$//}
