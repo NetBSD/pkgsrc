@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1622 2022/04/29 15:03:16 mef Exp $
+# $NetBSD: Makefile,v 1.1623 2022/04/30 10:02:24 wen Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -102,6 +102,7 @@ SUBDIR+=	dillo
 SUBDIR+=	drraw
 SUBDIR+=	drupal7
 SUBDIR+=	drupal8
+SUBDIR+=	drupal9
 SUBDIR+=	e2guardian
 SUBDIR+=	elinks
 SUBDIR+=	eliom
