@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:08 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/30 01:55:53 mef Exp $
 
-BLAKE2s (R/rex_1.2.0.tar.gz) = bc2fa5a7b42c83a875910ebdc5319ad7abacb8b85c4ed86d0e1704c74d3841b2
-SHA512 (R/rex_1.2.0.tar.gz) = 32f3d02be639c28036360ff42444c49a5c556086a645dba454eb99b31a84cbc92ffe1da77a66c7bd959efc4c850fc3a7cc42cea1cb963eaab665c338e60a5bb9
-Size (R/rex_1.2.0.tar.gz) = 91925 bytes
+BLAKE2s (R/rex_1.2.1.tar.gz) = 340654deacb8abdf2c0e1f7886f563363bb37265c82188eefcfffebacdd5d690
+SHA512 (R/rex_1.2.1.tar.gz) = 9af2fb36dcba381e3358549ca074f83c991ff2fb7113434e17ef2b7e77e44bb7a8ba4eb40582e874e0d8ce3bd15c079d343a13ba504ca4a94c5b66ee86a5a4a8
+Size (R/rex_1.2.1.tar.gz) = 93583 bytes
