@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2021/06/03 21:01:07 mef Exp $
+# $NetBSD: Makefile,v 1.6 2022/04/30 01:01:41 mef Exp $
 
 R_PKGNAME=	pkgcache
-R_PKGVER=	1.2.2
+R_PKGVER=	2.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -24,10 +24,17 @@ DEPENDS+=	R-filelock-[0-9]*:../../devel/R-filelock
 DEPENDS+=	R-jsonlite-[0-9]*:../../textproc/R-jsonlite
 
 # Packages suggested but not available: 'debugme', 'webfakes'
+TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
 #TEST_DEPENDS+=	R-debugme-[0-9]*:
+TEST_DEPENDS+=	R-fs-[0-9]*:../../devel/R-fs
+TEST_DEPENDS+=	R-mockery-[0-9]*:../../devel/R-mockery
+TEST_DEPENDS+=	R-pingr-[0-9]*:../../net/R-pingr
+TEST_DEPENDS+=	R-sessioninfo-[0-9]*:../../devel/R-sessioninfo
+TEST_DEPENDS+=	R-spelling-[0-9]*:../../textproc/R-spelling
+TEST_DEPENDS+=	R-webfakes-[0-9]*:../../www/R-webfakes
 
 
-USE_LANGUAGES=	# none
+USE_LANGUAGES=	c	
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
