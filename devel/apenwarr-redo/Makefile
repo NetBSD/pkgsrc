@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/01/05 15:45:10 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2022/04/30 11:01:04 wiz Exp $
 
 DISTNAME=	redo-0.42d
 PKGNAME=	apenwarr-${DISTNAME}
@@ -13,14 +13,14 @@ COMMENT=	Python implementation of DJB's redo build tool
 LICENSE=	apache-2.0
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
-
+BUILD_DEPENDS+=	${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
 DEPENDS+=	dash-[0-9]*:../../shells/dash
 DEPENDS+=	${PYPKGPREFIX}-setproctitle-[0-9]*:../../sysutils/py-setproctitle
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 WRKSRC=		${WRKDIR}/redo-${DISTNAME}
 
-PYTHON_VERSIONED_DEPENDENCIES+=	markdown:build
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure
@@ -37,5 +37,4 @@ post-install:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
