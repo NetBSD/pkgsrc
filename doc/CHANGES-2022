@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2195 2022/04/30 15:17:45 mef Exp $
+$NetBSD: CHANGES-2022,v 1.2196 2022/04/30 21:01:41 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3463,3 +3463,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/R-roxygen2 to 7.1.2 [mef 2022-04-30]
 	Updated devel/R-withr to 2.5.0 [mef 2022-04-30]
 	Updated devel/R-usethis to 2.1.5 [mef 2022-04-30]
+	Updated devel/deforaos-cpp to 0.0.6 [khorben 2022-04-30]
