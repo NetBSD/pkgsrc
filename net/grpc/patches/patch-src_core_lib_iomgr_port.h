@@ -1,6 +1,8 @@
-$NetBSD: patch-src_core_lib_iomgr_port.h,v 1.2 2018/12/31 23:00:08 leot Exp $
+$NetBSD: patch-src_core_lib_iomgr_port.h,v 1.3 2022/04/30 21:36:26 wiz Exp $
 
 Add NetBSD support.
+https://github.com/grpc/grpc/pull/29542
+
 Add SunOS support.
 
 --- src/core/lib/iomgr/port.h.orig	2018-07-12 14:40:09.000000000 +0000
