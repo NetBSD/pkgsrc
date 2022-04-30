@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/30 01:38:19 mef Exp $
+
+BLAKE2s (R/fontawesome_0.2.2.tar.gz) = b7a436a6bc044e9a207a60256cececd967af0d978ea1ec20fba35aa75b78fc8a
+SHA512 (R/fontawesome_0.2.2.tar.gz) = 29407669ecf0fd797ada9d5ecf925d66f6415158e5cc4b15f0f241f23c3529225a7418ddd03846800c183845eb30a98ed137a46223258cf8f35ef570a586ceeb
+Size (R/fontawesome_0.2.2.tar.gz) = 1117463 bytes
