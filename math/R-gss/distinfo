@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:55:27 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/04/30 03:18:15 wen Exp $
 
-BLAKE2s (R/gss_2.1-10.tar.gz) = 9c34b9670df6a5a9ca950c48b0105e41f06f5731d8bcccead8df4b6e7873e864
-SHA512 (R/gss_2.1-10.tar.gz) = 24116dc51b071e39941a7fd5f279380839e03c750393f47993b6da83a4e1e2c7fb0b6dccb80e518fc349d1c802e4362525c399759b21fb80d8b848e4aa595667
-Size (R/gss_2.1-10.tar.gz) = 481825 bytes
+BLAKE2s (R/gss_2.2-3.tar.gz) = 431bb30aa067296fc36dfde6fdf0aee97ed44e940af47465647eacbaf212b03b
+SHA512 (R/gss_2.2-3.tar.gz) = e2f092aaf277c566437eace7f79fe61a0b0c11babffeb779f5e291fd568ba5db49609728d2da861705ed5e2f22be9e8230b74d34b3b72e7024c2f2e2398bc527
+Size (R/gss_2.2-3.tar.gz) = 544127 bytes
