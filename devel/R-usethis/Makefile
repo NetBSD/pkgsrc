@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2021/05/31 21:50:20 mef Exp $
+# $NetBSD: Makefile,v 1.6 2022/04/30 15:17:25 mef Exp $
 
 R_PKGNAME=	usethis
-R_PKGVER=	2.0.1
+R_PKGVER=	2.1.5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -28,14 +28,20 @@ DEPENDS+=	R-gh>=1.0.1:../../www/R-gh
 DEPENDS+=	R-rappdirs-[0-9]*:../../devel/R-rappdirs
 DEPENDS+=	R-whisker-[0-9]*:../../devel/R-whisker
 
+# Packages suggested but not available: 'magick', 'pkgdown', 'styler'
+#
+TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
+TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
+#EST_DEPENDS+=	R-magick-[0-9]*:
+TEST_DEPENDS+=	R-mockr-[0-9]*:../../devel/R-mockr
+TEST_DEPENDS+=	R-pkgload-[0-9]*:../../devel/R-pkgload
+TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
+TEST_DEPENDS+=	R-roxygen2-[0-9]*:../../devel/R-roxygen2
 TEST_DEPENDS+=	R-spelling-[0-9]*:../../textproc/R-spelling
+#EST_DEPENDS+=	R-styler-[0-9]*:
+TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 
 USE_LANGUAGES=	# none
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
-
-
-# Packages suggested but not available: 'magick', 'pkgdown', 'styler'
-#
-# Package required and available but unsuitable version: 'gh'
