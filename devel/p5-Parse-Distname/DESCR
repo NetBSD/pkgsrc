@@ -1,0 +1,5 @@
+Parse::Distname is yet another distribution name parser. It works almost the
+same as CPAN::DistnameInfo, but Parse::Distname takes a different approach. It
+tries to extract a version part of a distribution and treat the rest as a
+distribution name, contrary to CPAN::DistnameInfo which tries to define a name
+part and treat the rest as a version.
