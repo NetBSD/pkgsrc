@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2020/03/13 10:05:42 nia Exp $
+$NetBSD: MESSAGE,v 1.5 2022/04/30 02:28:40 wen Exp $
 
 To use OrangeHRM, you will need to perform the following steps.
 
@@ -12,7 +12,7 @@ To use OrangeHRM, you will need to perform the following steps.
 3. Be sure to have the following lines in ${PREFIX}/etc/httpd/httpd.conf
 
 	DocumentRoot "${PREFIX}/share/orangehrm"
-	LoadModule php5_module lib/httpd/mod_php5.so
+	LoadModule php7_module lib/httpd/mod_php7.so
 	AddType application/x-httpd-php .php
 	<Directory ${PREFIX}/share/orangehrm>
 		Options All
@@ -22,8 +22,8 @@ To use OrangeHRM, you will need to perform the following steps.
 
 4. Be sure to have the following lines in ${PREFIX}/etc/php.ini.
 
-	extension=mysql.so
-	extension=mysqli.so
+	extension=iconv.so
+	extension=json.so
 	extension=pdo.so
 	extension=pdo_mysql.so
 
