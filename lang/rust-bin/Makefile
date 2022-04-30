@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2022/04/30 21:04:01 nia Exp $
+# $NetBSD: Makefile,v 1.36 2022/04/30 21:12:17 nia Exp $
 
 DISTNAME=	rust-1.59.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
@@ -32,10 +32,6 @@ NETBSD_REPO=	https://cdn.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/rust/
 
 CHECK_RELRO_SKIP+=	lib/rustlib/*/bin/*
 
-# The NetBSD bootstraps are built for NetBSD 8 (because rust doesn't
-# build on 7).  Mark earlier versions as broken.
-BROKEN_ON_PLATFORM+=	NetBSD-[1-7].*-*
-
 # Bootstraps built for 9.0.
 BROKEN_ON_PLATFORM+=	NetBSD-8.*-earmv7hf
 
@@ -52,6 +48,10 @@ GENERATE_PLIST+=	find ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
 INSTALLATION_DIRS=	bin ${PKGMANDIR} share/doc/cargo/bash_completion.d
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 080000
+BROKEN+=		"Bootstrap unavailable for old NetBSD version"
+.endif
 
 DISTFILES:=	# empty
 
