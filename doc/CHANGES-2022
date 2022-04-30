@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2177 2022/04/30 03:06:43 wen Exp $
+$NetBSD: CHANGES-2022,v 1.2178 2022/04/30 03:19:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3445,3 +3445,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/R-rex to 1.2.1 [mef 2022-04-30]
 	Updated misc/php-orangehrm to 4.10.1 [wen 2022-04-30]
 	Updated devel/p5-Perl-Tidy to 20220217 [wen 2022-04-30]
+	Updated math/R-gss to 2.2.3 [wen 2022-04-30]
