@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2186 2022/04/30 08:53:11 wen Exp $
+$NetBSD: CHANGES-2022,v 1.2187 2022/04/30 09:42:10 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3454,3 +3454,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/p5-PPI to 1.273 [wen 2022-04-30]
 	Updated devel/R-sessioninfo to 1.2.2 [mef 2022-04-30]
 	Updated www/drupal7 to 7.89 [wen 2022-04-22]
+	Updated devel/R-tidyselect to 1.1.2 [mef 2022-04-30]
