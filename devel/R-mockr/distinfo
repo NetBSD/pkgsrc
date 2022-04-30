@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/04/30 05:19:03 mef Exp $
+
+BLAKE2s (R/mockr_0.2.0.tar.gz) = b77c29ad3b9f87d9be3daf94f3eaf612a1e655f903ff8cb48428eba60e26f01f
+SHA512 (R/mockr_0.2.0.tar.gz) = 06554d4f0e4c25a2a809907a50af3799a4f0321429feb5efc86ed34e840a9d4634585df811370ea8624a61a79da73d29ab93de0751a38868ce7e0aaebe006ee6
+Size (R/mockr_0.2.0.tar.gz) = 21539 bytes
