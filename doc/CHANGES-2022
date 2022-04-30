@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2169 2022/04/30 00:18:37 wen Exp $
+$NetBSD: CHANGES-2022,v 1.2170 2022/04/30 00:49:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3437,3 +3437,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed devel/py-ipython5 successor devel/py-ipython [wiz 2022-04-29]
 	Added devel/p5-Parse-Distname version 0.05 [wen 2022-04-30]
 	Updated devel/p5-Perl-PrereqScanner-NotQuiteLite to 0.9916 [wen 2022-04-30]
+	Updated devel/R-pkgload to 1.2.4 [mef 2022-04-30]
