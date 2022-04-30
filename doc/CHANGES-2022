@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2171 2022/04/30 01:01:53 mef Exp $
+$NetBSD: CHANGES-2022,v 1.2172 2022/04/30 01:16:32 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3439,3 +3439,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/p5-Perl-PrereqScanner-NotQuiteLite to 0.9916 [wen 2022-04-30]
 	Updated devel/R-pkgload to 1.2.4 [mef 2022-04-30]
 	Updated devel/R-pkgcache to 2.0.1 [mef 2022-04-30]
+	Updated www/R-httpuv to 1.6.5 [mef 2022-04-30]
