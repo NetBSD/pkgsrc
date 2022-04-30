@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2190 2022/04/30 13:37:11 wen Exp $
+$NetBSD: CHANGES-2022,v 1.2191 2022/04/30 14:24:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3458,3 +3458,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added www/drupal9 version 9.3.12 [wen 2022-04-30]
 	Updated print/mupdf to 1.19.1 [wen 2022-04-30]
 	Updated time/p5-DateTime to 1.58 [wen 2022-04-30]
+	Updated devel/py-tortoisehg to 6.1.1nb1 [wiz 2022-04-30]
