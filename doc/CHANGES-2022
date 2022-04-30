@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2183 2022/04/30 05:31:34 mef Exp $
+$NetBSD: CHANGES-2022,v 1.2184 2022/04/30 08:01:09 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3451,3 +3451,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/R-rio to 0.5.29 [mef 2022-04-30]
 	Added devel/R-mockr version 0.2.0 [mef 2022-04-30]
 	Updated devel/R-rprojroot to 2.0.3 [mef 2022-04-30]
+	Updated devel/p5-PPI to 1.273 [wen 2022-04-30]
