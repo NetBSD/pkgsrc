@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/04/11 02:46:59 khorben Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/04/30 21:01:19 khorben Exp $
 bin/deforaos-cpp
 include/Devel/CPP.h
 lib/libcpp.a
@@ -6,6 +6,7 @@ lib/libcpp.so
 lib/libcpp.so.0
 lib/libcpp.so.0.0
 lib/pkgconfig/cpp.pc
+share/doc/CPP/COPYING
 share/gtk-doc/html/CPP/CPP-CPP:CAPS.html
 share/gtk-doc/html/CPP/CPP.devhelp2
 share/gtk-doc/html/CPP/api-index-full.html
