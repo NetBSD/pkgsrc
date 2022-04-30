@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:33:44 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/04/30 21:15:33 wiz Exp $
 
-BLAKE2s (bitmap-1.0.9.tar.bz2) = 21967abb7af02abf7f73222c2ed6ab33cc8dec777bfc64d83fa104e367cbc9a4
-SHA512 (bitmap-1.0.9.tar.bz2) = 873c626c72a0f4025fe8c8aeedbf3fe4ee5657fb487ad7410406a20da518c0358041dc45c2549926cc10e1d031977073b9d1ddb32830fdce95b716a52fe44456
-Size (bitmap-1.0.9.tar.bz2) = 181401 bytes
+BLAKE2s (bitmap-1.1.0.tar.xz) = 1624a9bc484263c630153997b60d20e21a5390664bc550276f64749a25267bc9
+SHA512 (bitmap-1.1.0.tar.xz) = 3d6c94675f10772daeb71598c3e0ddcb51569b1bfc4771159e9df89599bfeb8bf49f464c24fef54d30a8f737af32136f859f844be03e088d24ed962f88381193
+Size (bitmap-1.1.0.tar.xz) = 163560 bytes
