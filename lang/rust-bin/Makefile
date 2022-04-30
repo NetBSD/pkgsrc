@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2022/04/16 15:37:38 he Exp $
+# $NetBSD: Makefile,v 1.35 2022/04/30 21:04:01 nia Exp $
 
 DISTNAME=	rust-1.59.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
@@ -116,12 +116,13 @@ SITES.${DN}-${RUST_ARCH}.tar.gz= \
 		${NETBSD_REPO}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || make(distinfo) || make(makesum) || make(mdi)
+.  if ${OPSYS_VERSION} >= 090000
 RUST_ARCH:=	powerpc-unknown-netbsd90
 DN:=		${DISTNAME}${NBSUF}
 DISTFILES:=	${DISTFILES} ${DN}-${RUST_ARCH}.tar.gz
 SITES.${DN}-${RUST_ARCH}.tar.gz= \
 		${NETBSD_REPO}
-.  if !empty(OS_VERSION:M8.*)
+.  else
 RUST_ARCH:=	powerpc-unknown-netbsd
 DN:=		${DISTNAME}${NBSUF}
 DISTFILES:=	${DISTFILES} ${DN}-${RUST_ARCH}.tar.gz
@@ -185,7 +186,7 @@ fix-darwin-install-name:
 TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
 
 # The llvm utilities need a specific libstdc++ version from compat80
-.  if ${OPSYS} == "NetBSD" && empty(OS_VERSION:M[0-8].*)
+.  if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} >= 090000
 .    if ${MACHINE_ARCH} != "aarch64" && ${MACHINE_ARCH} != "earmv7hf" && \
         ${MACHINE_ARCH} != "powerpc"
 DEPENDS+=		compat80-[0-9]*:../../emulators/compat80
