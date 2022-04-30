@@ -3,6 +3,7 @@ following architectures:
  * amd64
  * arm (little and big endian)
  * dalvik (Android bytecode)
+ * eth (Ethereum)
  * i386 and compatible
  * java (bytecode)
  * mips (little and big endian)
