@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1308 2022/04/23 05:37:37 mef Exp $
+# $NetBSD: Makefile,v 1.1309 2022/04/30 01:40:42 mef Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -20,6 +20,7 @@ SUBDIR+=	R-commonmark
 SUBDIR+=	R-crosstalk
 SUBDIR+=	R-data.table
 SUBDIR+=	R-dtplyr
+SUBDIR+=	R-fontawesome
 SUBDIR+=	R-formatR
 SUBDIR+=	R-gsubfn
 SUBDIR+=	R-haven
