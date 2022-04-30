@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2022/01/18 10:03:41 wen Exp $
+# $NetBSD: Makefile,v 1.12 2022/04/30 00:17:42 wen Exp $
 
-DISTNAME=	Perl-PrereqScanner-NotQuiteLite-0.9914
+DISTNAME=	Perl-PrereqScanner-NotQuiteLite-0.9916
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Perl/}
@@ -14,6 +14,7 @@ DEPENDS+=	p5-Data-Dump>=0:../../devel/p5-Data-Dump
 DEPENDS+=	p5-Module-CPANfile>=1.1004:../../devel/p5-Module-CPANfile
 DEPENDS+=	p5-Module-Find>=0:../../devel/p5-Module-Find
 DEPENDS+=	p5-Regexp-Trie>=0:../../devel/p5-Regexp-Trie
+DEPENDS+=	p5-Parse-Distname>=0:../../devel/p5-Parse-Distname
 
 BUILD_DEPENDS+=	p5-ExtUtils-MakeMaker-CPANfile>=0.06:../../devel/p5-ExtUtils-MakeMaker-CPANfile
 BUILD_DEPENDS+=	p5-Test-FailWarnings-[0-9]*:../../devel/p5-Test-FailWarnings
