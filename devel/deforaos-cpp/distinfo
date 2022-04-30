@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2022/04/12 23:32:03 khorben Exp $
+$NetBSD: distinfo,v 1.5 2022/04/30 21:01:19 khorben Exp $
 
-BLAKE2s (CPP-0.0.3.tar.gz) = 1e3d5eb256bd1b2fbbb6a6287077fe9e543a14867367d7d7307ce448df9edb92
-SHA512 (CPP-0.0.3.tar.gz) = cc436c92f9ff55c3a4bbcc952546b09b7665b435561176e8cec0cc427d1a5bb92b0475dc0a1016db2c2f634649a1c73280e57508312ba632c9b1548e0b38b578
-Size (CPP-0.0.3.tar.gz) = 21742 bytes
-SHA1 (patch-project.conf) = ec82075e4f509c2e5b8f866a82f3d14746485821
+BLAKE2s (CPP-0.0.6.tar.gz) = d50963fa6d3a5e3adfe9b90cc8541c6eacfdd4019b585300b0038109ac315a19
+SHA512 (CPP-0.0.6.tar.gz) = 79252792f799b8db3f9f211fb2ecbf232165d58f16a902303018f18ae8980d2a19100efe280f9201202724a96efbc18dd9af1fe7d56cda438080264b87df96ad
+Size (CPP-0.0.6.tar.gz) = 25248 bytes
+SHA1 (patch-project.conf) = 4187dde94f6ae8c17aed3b51c7d0974c5cd92c4f
+SHA1 (patch-src_project.conf) = 514d6dd6870706c308b805a5f414ea889a3fc64d
