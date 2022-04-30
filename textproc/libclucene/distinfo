@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:22:14 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/04/30 01:08:20 mrg Exp $
 
 BLAKE2s (clucene-core-2.3.3.4.tar.gz) = 16a8b55d6fd0148ac229a3ebc98bb82e0f82d460dec69382bb489867ac799912
 SHA512 (clucene-core-2.3.3.4.tar.gz) = 1c9da9077edcebd46563bd9e47d330518e0b30061016650a759cfe051e9748fdad8932a472b1cca53a6adafed5f41656527271fc5f55ddfcefb558f0d83286b4
 Size (clucene-core-2.3.3.4.tar.gz) = 2241498 bytes
 SHA1 (patch-CMakeLists.txt) = 1c127bdc90a9f7b3c0f3debe46a9681f3b85df9a
+SHA1 (patch-src_contribs-lib_CLucene_analysis_cjk_CJKAnalyzer.cpp) = 02459a4f338036dc66bfdf48d391262a622ac271
 SHA1 (patch-src_contribs-lib_CMakeLists.txt) = c4cf7505474368a7a7b4b826c5d0a7df1cbc2a63
 SHA1 (patch-src_core_CLucene_queryParser_QueryParser.cpp) = 32dc9691fce2c5dfc086d897feb9ee4b7cb381d8
 SHA1 (patch-src_core_CLucene_queryParser_QueryParser.h) = 28457f254ee1aa63362482d43c0f1868fb846eb1
