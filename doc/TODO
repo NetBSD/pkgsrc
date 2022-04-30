@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21743 2022/04/30 03:19:17 wen Exp $
+$NetBSD: TODO,v 1.21744 2022/04/30 10:05:33 wen Exp $
 
 Suggested new packages
 ======================
@@ -616,7 +616,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o doclifter-2.19
 	o drawpile-2.1.20
 	o drivel-3.0.5
-	o drupal-9.2.2
 	o dtc-1.6.0
 	o dte-1.10
 	o dunst-1.6.1 [adds Linux- and wayland-specific code]
