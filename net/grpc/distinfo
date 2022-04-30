@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.54 2022/02/18 09:08:08 adam Exp $
+$NetBSD: distinfo,v 1.55 2022/04/30 21:36:26 wiz Exp $
 
 BLAKE2s (grpc-1.44.0.tar.gz) = 5cd7b05801f2d6f76d0603b69e1d5ad6282f5187443698c2b1dfafb52b099c63
 SHA512 (grpc-1.44.0.tar.gz) = 8e6d26643d08650adf2a9885facf44a7c25943d632f535921c3b2203bce81b59da355f7d1e88899014eacfa7bc460b55b72de769f3972ed743bb9b95041bb290
 Size (grpc-1.44.0.tar.gz) = 8580632 bytes
 SHA1 (patch-CMakeLists.txt) = d32a78bb8fdc28c0946aa2d62a5c810211692e62
-SHA1 (patch-include_grpc_event__engine_port.h) = eb54a66374611fd63ffb21f60b043d3854b3c807
-SHA1 (patch-include_grpc_impl_codegen_port__platform.h) = 77137590f488d81ee731d82148b6e982f29b7aad
+SHA1 (patch-include_grpc_event__engine_port.h) = 842fa47d98303f25417aa1a45aa9d78e5402a3bd
+SHA1 (patch-include_grpc_impl_codegen_port__platform.h) = a9d2f116c941d1ed23b18f25cf4fb638ed004181
 SHA1 (patch-src_core_ext_filters_client__channel_resolver_dns_c__ares_grpc__ares__ev__driver__posix.cc) = 0aa7fcadae98d1dd5229f0a695cffc1e9c1e8164
-SHA1 (patch-src_core_lib_iomgr_port.h) = e3c5e6ee071557c717df0a1a61597f9906fbeff5
+SHA1 (patch-src_core_lib_iomgr_port.h) = 21275c54771f91e7fa34629827343169024c0df0
