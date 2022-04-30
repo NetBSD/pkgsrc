@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2174 2022/04/30 01:50:10 mef Exp $
+$NetBSD: CHANGES-2022,v 1.2175 2022/04/30 01:56:12 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3442,3 +3442,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/R-httpuv to 1.6.5 [mef 2022-04-30]
 	Added textproc/R-fontawesome version 0.2.2 [mef 2022-04-30]
 	Updated www/R-shiny to 1.7.1 [mef 2022-04-30]
+	Updated devel/R-rex to 1.2.1 [mef 2022-04-30]
