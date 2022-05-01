@@ -1,4 +1,4 @@
-$NetBSD: README.Linux,v 1.10 2022/04/07 15:16:55 gdt Exp $
+$NetBSD: README.Linux,v 1.11 2022/05/01 08:06:46 nia Exp $
 
 # General
 
@@ -30,6 +30,14 @@ installed prior to attempting bootstrap:
 
 apt-get install cvs libncurses5 libncurses5-dev gcc g++ zlib1g-dev \
 			zlib1g libssl-dev libudev-dev
+
+# NixOS
+
+stdenv.cc should be installed prior to attempting bootstrap.
+
+Please note that if you run the Nix garbage collector and it collects
+libc, every pkgsrc binary (including binaries generated during bootstrap)
+will need to be rebuilt.
 
 #  RedHat and derivatives
 
