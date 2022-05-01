@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2210 2022/05/01 14:23:11 mef Exp $
+$NetBSD: CHANGES-2022,v 1.2211 2022/05/01 15:54:12 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3478,3 +3478,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/ncspot to 0.9.8 [pin 2022-05-01]
 	Updated time/R-tzdb to 0.3.0 [mef 2022-05-01]
 	Updated textproc/R-vroom to 1.5.7 [mef 2022-05-01]
+	Updated textproc/R-readr to 2.1.2 [mef 2022-05-01]
