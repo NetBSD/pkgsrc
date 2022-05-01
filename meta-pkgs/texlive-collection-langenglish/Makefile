@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2022/04/16 00:29:55 markd Exp $
+# $NetBSD: Makefile,v 1.18 2022/05/01 20:41:18 markd Exp $
 
 DISTNAME=	collection-langenglish
 PKGNAME=	texlive-${DISTNAME}-2022
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	62971
+TEXLIVE_REV=	63184
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -18,7 +18,7 @@ DEPENDS+=	texlive-collection-basic>=2014:../../meta-pkgs/texlive-collection-basi
 # around-the-bend is documentation only
 # ascii-chart is documentation only
 # biblatex-cheatsheet is documentation only
-# components-of-TeX is documentation only
+# components is documentation only
 # comprehensive is documentation only
 # dickimaw is documentation only
 # docsurvey is documentation only
