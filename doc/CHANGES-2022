@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2207 2022/05/01 09:33:19 jun Exp $
+$NetBSD: CHANGES-2022,v 1.2208 2022/05/01 10:51:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3475,3 +3475,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed net/py-soappy [wiz 2022-05-01]
 	Removed devel/py-unittest2 [wiz 2022-05-01]
 	Updated emulators/nono to 0.3.0 [jun 2022-05-01]
+	Updated audio/ncspot to 0.9.8 [pin 2022-05-01]
