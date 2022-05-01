@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 20:53:06 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/05/01 09:20:56 wiz Exp $
 
 DISTNAME=	funcsigs-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,8 @@ LICENSE=	apache-2.0
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-unittest2-[0-9]*:../../devel/py-unittest2
+# removed from pkgsrc
+#TEST_DEPENDS+=	${PYPKGPREFIX}-unittest2-[0-9]*:../../devel/py-unittest2
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
