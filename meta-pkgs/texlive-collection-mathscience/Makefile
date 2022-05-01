@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2022/04/14 04:58:24 markd Exp $
+# $NetBSD: Makefile,v 1.18 2022/05/01 20:46:44 markd Exp $
 
 DISTNAME=	collection-mathscience
-PKGNAME=	texlive-${DISTNAME}-2021pre2
+PKGNAME=	texlive-${DISTNAME}-2022pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	62932
+TEXLIVE_REV=	63188
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -233,6 +233,7 @@ DEPENDS+=	tex-tensind-[0-9]*:../../print/tex-tensind
 # depend tex-ewd
 # depend textgreek
 # depend textopo
+# depend thermodynamics
 # depend thmbox
 # depend tiscreen
 # depend turnstile
