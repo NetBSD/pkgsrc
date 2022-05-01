@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.89 2022/05/01 08:03:41 nia Exp $
+# $NetBSD: Linux.mk,v 1.90 2022/05/01 08:10:11 nia Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -28,6 +28,8 @@ SU?=		/bin/su
 .endif
 .if exists(/sbin/nologin)
 NOLOGIN?=	/sbin/nologin
+.elif exists(/usr/sbin/nologin)
+NOLOGIN?=	/usr/sbin/nologin
 .else
 NOLOGIN?=	/bin/false
 .endif
