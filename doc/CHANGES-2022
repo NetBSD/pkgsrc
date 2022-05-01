@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2208 2022/05/01 10:51:13 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2209 2022/05/01 14:11:14 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3476,3 +3476,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed devel/py-unittest2 [wiz 2022-05-01]
 	Updated emulators/nono to 0.3.0 [jun 2022-05-01]
 	Updated audio/ncspot to 0.9.8 [pin 2022-05-01]
+	Updated time/R-tzdb to 0.3.0 [mef 2022-05-01]
