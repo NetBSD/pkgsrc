@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2220 2022/05/01 20:51:03 markd Exp $
+$NetBSD: CHANGES-2022,v 1.2221 2022/05/01 23:31:18 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3492,3 +3492,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/tex-circuitikz-doc to 1.5.1 [markd 2022-05-01]
 	Updated fonts/tex-linearA to 2022 [markd 2022-05-01]
 	Updated fonts/tex-linearA-doc to 2022 [markd 2022-05-01]
+	Updated geography/R-wk to 0.6.0 [mef 2022-05-01]
