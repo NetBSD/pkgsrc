@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2201 2022/05/01 06:53:01 tron Exp $
+$NetBSD: CHANGES-2022,v 1.2202 2022/05/01 07:56:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3469,3 +3469,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/difftastic to 0.28.0 [pin 2022-04-30]
 	Updated wm/sdorfehs to 1.3 [pin 2022-05-01]
 	Updated mail/mutt to 2.2.4 [tron 2022-05-01]
+	Removed devel/bzr-svn [wiz 2022-05-01]

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3726 2022/04/30 05:22:09 mef Exp $
+# $NetBSD: Makefile,v 1.3727 2022/05/01 07:56:00 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -198,7 +198,6 @@ SUBDIR+=	byacc
 SUBDIR+=	bzr
 SUBDIR+=	bzr-explorer
 SUBDIR+=	bzr-gtk
-SUBDIR+=	bzr-svn
 SUBDIR+=	bzrtools
 SUBDIR+=	c++gsl
 SUBDIR+=	calltree-perl
