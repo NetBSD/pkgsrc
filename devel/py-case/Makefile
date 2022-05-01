@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/01/27 11:39:38 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/05/01 09:17:48 wiz Exp $
 
 DISTNAME=	case-1.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,11 +18,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=3.0:../../devel/py-coverage
 
 USE_LANGUAGES=		# none
 
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYPKGPREFIX} == "py27"
-DEPENDS+=	${PYPKGPREFIX}-unittest2>=0.5.1:../../devel/py-unittest2
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
