@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2020/01/18 23:31:41 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2022/05/01 20:33:22 markd Exp $
 
-DISTNAME=	linearA.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2014
-TEXLIVE_REV=	15878
+DISTNAME=	lineara.doc
+PKGNAME=	tex-${DISTNAME:S/./-/}-2022
+TEXLIVE_REV=	63169
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://ctan.org/pkg/linearA
-COMMENT=	Documentation for tex-linearA
+HOMEPAGE=	https://ctan.org/pkg/lineara
+COMMENT=	Documentation for tex-lineara
 LICENSE=	lppl-1.3c
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
