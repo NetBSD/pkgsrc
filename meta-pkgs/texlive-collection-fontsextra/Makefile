@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2022/04/14 04:44:21 markd Exp $
+# $NetBSD: Makefile,v 1.27 2022/05/01 20:39:59 markd Exp $
 
 DISTNAME=	collection-fontsextra
-PKGNAME=	texlive-${DISTNAME}-2021pre2
+PKGNAME=	texlive-${DISTNAME}-2022pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	62069
+TEXLIVE_REV=	63169
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -228,7 +228,7 @@ DEPENDS+=	tex-librebaskerville-[0-9]*:../../fonts/tex-librebaskerville
 DEPENDS+=	tex-librecaslon-[0-9]*:../../fonts/tex-librecaslon
 # depend librefranklin
 DEPENDS+=	tex-libris-[0-9]*:../../fonts/tex-libris
-DEPENDS+=	tex-linearA-[0-9]*:../../fonts/tex-linearA
+DEPENDS+=	tex-lineara-[0-9]*:../../fonts/tex-linearA
 # depend linguisticspro
 DEPENDS+=	tex-lobster2-[0-9]*:../../fonts/tex-lobster2
 # depend logix
