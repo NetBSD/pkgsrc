@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2022/04/10 03:19:23 markd Exp $
+# $NetBSD: Makefile,v 1.21 2022/05/01 20:48:16 markd Exp $
 
 DISTNAME=	collection-plaingeneric
-PKGNAME=	texlive-${DISTNAME}-2021pre1
+PKGNAME=	texlive-${DISTNAME}-2022pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	59850
+TEXLIVE_REV=	63165
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -34,6 +34,7 @@ DEPENDS+=	tex-eijkhout-[0-9]*:../../print/tex-eijkhout
 # depend epigram
 DEPENDS+=	tex-epsf>=2.7.4:../../print/tex-epsf
 DEPENDS+=	tex-epsf-dvipdfmx-[0-9]*:../../print/tex-epsf-dvipdfmx
+# depend expex-acro
 # depend expkv
 # depend expkv-cs
 # depend expkv-def
