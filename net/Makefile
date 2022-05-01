@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1456 2022/05/01 08:03:13 wiz Exp $
+# $NetBSD: Makefile,v 1.1457 2022/05/01 08:03:53 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -765,7 +765,6 @@ SUBDIR+=	py-simplesoap
 SUBDIR+=	py-smb
 SUBDIR+=	py-smbc
 SUBDIR+=	py-soaplib
-SUBDIR+=	py-soappy
 SUBDIR+=	py-socketpool
 SUBDIR+=	py-socksipy-branch
 SUBDIR+=	py-softlayer
