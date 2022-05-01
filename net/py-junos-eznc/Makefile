@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/04/19 12:04:07 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2022/05/01 12:51:31 wiz Exp $
 
 DISTNAME=	junos-eznc-2.1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,11 +19,13 @@ DEPENDS+=	${PYPKGPREFIX}-scp>=0.7.0:../../net/py-scp
 DEPENDS+=	${PYPKGPREFIX}-jxmlease-[0-9]*:../../textproc/py-jxmlease
 DEPENDS+=	${PYPKGPREFIX}-netaddr-[0-9]*:../../net/py-netaddr
 DEPENDS+=	${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONED_DEPENDENCIES+=	jinja2 setuptools
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
