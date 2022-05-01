@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:28:11 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/05/01 20:33:21 markd Exp $
 
-BLAKE2s (tex-linearA-15878/linearA.tar.xz) = 5d2c5f9e4dcea9bd30bdc19d4c42d4c42cafdf821c45f4690d80ec3861722473
-SHA512 (tex-linearA-15878/linearA.tar.xz) = 467b586fc4d646a199e5c7bbc00cac8b579574e55b0c2c7a067abdf9f65503719160b9d4b93bf69383ed82c4795d88814ecb972b545ac2a3c1d0bdffc9eef9bc
-Size (tex-linearA-15878/linearA.tar.xz) = 151800 bytes
+BLAKE2s (lineara.r63169.tar.xz) = 1e96bf4855bb3776d374ae8cb156339a0c1845d148769652be4da4cd7abbde8c
+SHA512 (lineara.r63169.tar.xz) = b87051ba4647ed2f0beb8e5bfe8419d8558421f509cb6eaa931f47a10488dfac4e36b3ece1cfdbf3e46eb431c3d15e7a7005f27522dbc4cfe6de52ce6127bea5
+Size (lineara.r63169.tar.xz) = 151824 bytes
