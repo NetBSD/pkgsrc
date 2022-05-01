@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2021/11/01 21:41:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2022/05/01 00:22:58 khorben Exp $
 bin/tor-browser
 lib/tor-browser/actors/AboutHttpsOnlyErrorChild.jsm
 lib/tor-browser/actors/AboutHttpsOnlyErrorParent.jsm
@@ -2908,10 +2908,15 @@ lib/tor-browser/browser/chrome/devtools/modules/devtools/client/shared/vendor/fl
 lib/tor-browser/browser/chrome/devtools/modules/devtools/client/shared/vendor/immutable.js
 lib/tor-browser/browser/chrome/devtools/modules/devtools/client/shared/vendor/jszip.js
 lib/tor-browser/browser/chrome/devtools/modules/devtools/client/shared/vendor/lodash.js
+${PLIST.debug}lib/tor-browser/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dev.js
+${PLIST.debug}lib/tor-browser/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-dev.js
 lib/tor-browser/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-factories.js
+${PLIST.debug}lib/tor-browser/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-server-dev.js
 lib/tor-browser/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-server.js
+${PLIST.debug}lib/tor-browser/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-test-utils-dev.js
 lib/tor-browser/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom-test-utils.js
 lib/tor-browser/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom.js
+${PLIST.debug}lib/tor-browser/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-prop-types-dev.js
 lib/tor-browser/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-prop-types.js
 lib/tor-browser/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-redux.js
 lib/tor-browser/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-router-dom.js
