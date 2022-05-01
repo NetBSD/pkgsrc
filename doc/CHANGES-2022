@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2199 2022/04/30 22:01:42 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2200 2022/05/01 06:47:25 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3467,3 +3467,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/deforaos-asm to 0.2.6 [khorben 2022-04-30]
 	Updated x11/bitmap to 1.1.0 [wiz 2022-04-30]
 	Updated devel/difftastic to 0.28.0 [pin 2022-04-30]
+	Updated wm/sdorfehs to 1.3 [pin 2022-05-01]
