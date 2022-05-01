@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/01/09 20:06:05 pho Exp $
+# $NetBSD: Makefile,v 1.15 2022/05/01 09:45:41 wiz Exp $
 
 DISTNAME=	fuse-pcachefs-0.3
 PKGREVISION=	3
@@ -28,5 +28,4 @@ post-install:
 .include "../../filesystems/py-fuse-bindings/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/fuse.buildlink3.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

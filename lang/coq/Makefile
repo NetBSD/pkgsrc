@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2022/04/18 19:11:30 adam Exp $
-#
+# $NetBSD: Makefile,v 1.143 2022/05/01 09:45:42 wiz Exp $
 
 DISTNAME=	coq-8.12.2
 PKGREVISION=	4

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2021/02/09 22:37:43 dholland Exp $
+# $NetBSD: options.mk,v 1.12 2022/05/01 09:45:42 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.coq
 PKG_SUPPORTED_OPTIONS=	doc coqide
@@ -17,7 +17,6 @@ BUILD_DEPENDS+=			hevea>=1.10:../../textproc/hevea
 #
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-PYTHON_VERSIONED_DEPENDENCIES=	sphinx:tool
 .include "../../lang/python/tool.mk"
 SUBST_CLASSES+=			sphinx-build
 SUBST_STAGE.sphinx-build=	pre-configure
@@ -25,6 +24,7 @@ SUBST_MESSAGE.sphinx-build=	Fix hardcoded sphinx-build
 SUBST_FILES.sphinx-build+=	Makefile.doc configure.ml doc/dune
 SUBST_SED.sphinx-build+=	-e 's/sphinx-build/sphinx-build-${PYVERSSUFFIX}/g'
 
+TOOL_DEPENDS+=			py[0-9]*-sphinx-[0-9]*:../../textproc/py-sphinx
 BUILD_DEPENDS+=			py[0-9]*-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-rtd-theme
 BUILD_DEPENDS+=			py[0-9]*-sphinxcontrib-bibtex-[0-9]*:../../textproc/py-sphinxcontrib-bibtex
 BUILD_DEPENDS+=			py[0-9]*-pybtex-[0-9]*:../../textproc/py-pybtex
