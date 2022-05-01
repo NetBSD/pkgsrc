@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1457 2022/05/01 08:03:53 wiz Exp $
+# $NetBSD: Makefile,v 1.1458 2022/05/01 16:01:46 pin Exp $
 #
 
 COMMENT=	Networking tools
@@ -952,6 +952,7 @@ SUBDIR+=	transmission
 SUBDIR+=	transmission-gtk
 SUBDIR+=	transmission-qt
 SUBDIR+=	trickle
+SUBDIR+=	trippy
 SUBDIR+=	tsocks
 SUBDIR+=	tspc
 SUBDIR+=	ttt
