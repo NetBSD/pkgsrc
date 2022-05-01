@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2203 2022/05/01 07:57:42 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2204 2022/05/01 08:03:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3471,3 +3471,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/mutt to 2.2.4 [tron 2022-05-01]
 	Removed devel/bzr-svn [wiz 2022-05-01]
 	Removed devel/py-testtools24 [wiz 2022-05-01]
+	Removed net/py-google [wiz 2022-05-01]
