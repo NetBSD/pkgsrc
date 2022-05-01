@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/04/30 09:56:55 wen Exp $
+# $NetBSD: Makefile,v 1.2 2022/05/01 23:35:35 wiz Exp $
 
 DISTNAME=	drupal-9.3.12
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Open source content management system
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.4.0:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.4.0:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-opcache>=5.4.0:../../devel/php-opcache
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=5.4.0:../../databases/php-pdo
 
@@ -79,4 +78,5 @@ do-install:
 
 
 .include "../../lang/php/phpversion.mk"
+.include "../../lang/php/json.mk"
 .include "../../mk/bsd.pkg.mk"
