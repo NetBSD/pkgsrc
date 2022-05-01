@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/04/18 19:12:16 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/05/01 00:36:10 manu Exp $
 
 DISTNAME=	arcticfox-39.0
 PKGREVISION=	2
@@ -58,6 +58,11 @@ CONFIGURE_ARGS+=	--with-system-zlib
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
+.endif
+
+PLIST_VARS+=		nopowerpc
+.if ${MACHINE_ARCH} != "powerpc"
+PLIST.nopowerpc=	yes
 .endif
 
 CONFIGURE_DIRS=		${WRKDIR}/build
@@ -129,4 +134,5 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
