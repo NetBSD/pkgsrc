@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2218 2022/05/01 19:07:59 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.2219 2022/05/01 20:05:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3486,3 +3486,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/dbip-city-lite to 2022.05 [fcambus 2022-05-01]
 	Updated net/dbip-country-lite to 2022.05 [fcambus 2022-05-01]
 	Updated devel/binaryen to 106 [fcambus 2022-05-01]
+	Updated graphics/freetype2 to 2.12.1 [adam 2022-05-01]
+	Updated www/py-asgiref to 3.5.1 [adam 2022-05-01]
