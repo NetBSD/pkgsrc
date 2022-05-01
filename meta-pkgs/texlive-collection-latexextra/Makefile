@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.65 2022/04/25 10:41:59 markd Exp $
+# $NetBSD: Makefile,v 1.66 2022/05/01 20:45:29 markd Exp $
 
 DISTNAME=	collection-latexextra
 PKGNAME=	texlive-${DISTNAME}-2022pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	63101
+TEXLIVE_REV=	63140
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -196,6 +196,7 @@ DEPENDS+=	tex-chngcntr-[0-9]*:../../print/tex-chngcntr
 # depend chronology
 # depend circ
 # depend circledsteps
+# depend circledtext
 # depend classics
 DEPENDS+=	tex-classpack-[0-9]*:../../print/tex-classpack
 # depend clefval
@@ -644,6 +645,7 @@ DEPENDS+=	tex-hobsub-[0-9]*:../../print/tex-hobsub
 # depend href-ul
 # depend hrefhide
 # depend huawei
+# depend hvextern
 # depend hvindex
 # depend hvlogos
 # depend hvpygmentex
