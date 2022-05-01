@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/01/13 09:10:29 fcambus Exp $
+# $NetBSD: Makefile,v 1.8 2022/05/01 19:07:47 fcambus Exp $
 
-VERSION=	105
+VERSION=	106
 DISTNAME=	binaryen-${VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=WebAssembly/}
@@ -20,5 +20,6 @@ CMAKE_ARGS+=	-DENABLE_WERROR=OFF
 
 PYTHON_FOR_BUILD_ONLY=	yes
 
+.include "../../devel/googletest/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
