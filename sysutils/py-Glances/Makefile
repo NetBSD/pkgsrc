@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/01/05 15:41:21 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2022/05/01 09:13:42 wiz Exp $
 
 DISTNAME=	Glances-3.2.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,6 +19,8 @@ DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_PKG_RESOURCES=	yes
 
