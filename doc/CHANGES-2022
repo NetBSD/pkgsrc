@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2204 2022/05/01 08:03:13 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2205 2022/05/01 08:03:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3472,3 +3472,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed devel/bzr-svn [wiz 2022-05-01]
 	Removed devel/py-testtools24 [wiz 2022-05-01]
 	Removed net/py-google [wiz 2022-05-01]
+	Removed net/py-soappy [wiz 2022-05-01]
