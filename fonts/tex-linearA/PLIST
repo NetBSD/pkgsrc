@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:48 wiz Exp $
-share/texmf-dist/fonts/afm/public/linearA/LinearA.afm
-share/texmf-dist/fonts/afm/public/linearA/LinearACmplxSigns.afm
-share/texmf-dist/fonts/map/dvips/linearA/linearA.map
-share/texmf-dist/fonts/tfm/public/linearA/LinearA.tfm
-share/texmf-dist/fonts/tfm/public/linearA/LinearACmplxSigns.tfm
-share/texmf-dist/fonts/type1/public/linearA/LinearA.pfb
-share/texmf-dist/fonts/type1/public/linearA/LinearACmplxSigns.pfb
-share/texmf-dist/tex/latex/linearA/linearA.sty
+@comment $NetBSD: PLIST,v 1.2 2022/05/01 20:33:21 markd Exp $
+share/texmf-dist/fonts/afm/public/lineara/LinearA.afm
+share/texmf-dist/fonts/afm/public/lineara/LinearACmplxSigns.afm
+share/texmf-dist/fonts/map/dvips/lineara/linearA.map
+share/texmf-dist/fonts/tfm/public/lineara/LinearA.tfm
+share/texmf-dist/fonts/tfm/public/lineara/LinearACmplxSigns.tfm
+share/texmf-dist/fonts/type1/public/lineara/LinearA.pfb
+share/texmf-dist/fonts/type1/public/lineara/LinearACmplxSigns.pfb
+share/texmf-dist/tex/latex/lineara/linearA.sty
