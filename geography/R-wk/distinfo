@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:45:08 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/05/01 23:31:07 mef Exp $
 
-BLAKE2s (R/wk_0.5.0.tar.gz) = c77d2af5901eefc864a481f1a860c27c8b22e9d59966bca09e3f16c1d040c196
-SHA512 (R/wk_0.5.0.tar.gz) = 2fff9b4712b79320239c33692330f7e74b3ff8c132b58e7a5fd07e76a1dc05ad8d134a7df05daf6091b20745d780f891610603c79f13d9869c9c015acd7ed783
-Size (R/wk_0.5.0.tar.gz) = 138686 bytes
+BLAKE2s (R/wk_0.6.0.tar.gz) = e13c09cebd469e15316eae9f02714c6e28fab7f8d237a2783ca7ee1413b8f41e
+SHA512 (R/wk_0.6.0.tar.gz) = b4b3bdc6b69272fd36cb07e6d3810da179e78209f296dbbd97a6dec3372bb2de36514db2dd13c46af1e6ff54e8be4a1318e14cedb68482c249e466f0f7214f3b
+Size (R/wk_0.6.0.tar.gz) = 193841 bytes
