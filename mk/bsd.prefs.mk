@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.420 2022/04/30 21:27:57 tnn Exp $
+# $NetBSD: bsd.prefs.mk,v 1.421 2022/05/01 08:03:40 nia Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -81,6 +81,8 @@ _CLEANING:=	${"${.TARGETS:C,( [[:alnum:]-]*clean[[:alnum:]-]*)+$,,W:M*clean*}":?
 UNAME=/usr/bin/uname
 .elif exists(/bin/uname)
 UNAME=/bin/uname
+.elif exists(/run/current-system/sw/bin/uname)
+UNAME=/run/current-system/sw/bin/uname
 .else
 UNAME=echo Unknown
 .endif
