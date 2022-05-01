@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3728 2022/05/01 07:57:42 wiz Exp $
+# $NetBSD: Makefile,v 1.3729 2022/05/01 09:23:25 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2848,7 +2848,6 @@ SUBDIR+=	py-typing-inspect
 SUBDIR+=	py-unit
 SUBDIR+=	py-unitgui
 SUBDIR+=	py-unittest-mixins
-SUBDIR+=	py-unittest2
 SUBDIR+=	py-unittest2pytest
 SUBDIR+=	py-unpaddedbase64
 SUBDIR+=	py-urwid
