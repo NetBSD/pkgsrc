@@ -1,302 +1,302 @@
-# $NetBSD: tools.Linux.mk,v 1.65 2020/12/05 13:15:58 js Exp $
+# $NetBSD: tools.Linux.mk,v 1.66 2022/05/01 08:03:41 nia Exp $
 #
 # System-supplied tools for the Linux operating system.
+#
+# Yet all ye who enter be warned: various Linux distributions
+# place binaries in a myriad of different paths and have a myriad
+# of different userspaces.  No assumptions can be made, so this
+# is best-effort.  Some distributions do not follow a remotely
+# Unix-like file hierarchy.
+#
+# This file still assumes (until it is proven wrong) that some
+# tools are provided by GNU.
+
+.if exists(/etc/NIXOS)
+_LINUX_BINPATHS?=	/run/current-system/sw/bin
+.else
+_LINUX_BINPATHS?=	/bin /usr/bin /sbin /usr/sbin
+.endif
+
+.for _path in ${_LINUX_BINPATHS}
+.  if exists(${_path}/autopoint)
+TOOLS_PLATFORM.autopoint?=	${_path}/autopoint
+.  endif
+.  if exists(${_path}/basename)
+TOOLS_PLATFORM.basename?=	${_path}/basename
+.  endif
+.  if exists(${_path}/bash)
+TOOLS_PLATFORM.bash?=		${_path}/bash
+.  endif
+.  if exists(${_path}/bison)
+TOOLS_PLATFORM.bison?=		${_path}/bison
+.  endif
+.  if exists(${_path}/bzcat)
+TOOLS_PLATFORM.bzcat?=		${_path}/bzcat
+.  endif
+.  if exists(${_path}/bzip2)
+TOOLS_PLATFORM.bzip2?=		${_path}/bzip2
+.  endif
+.  if exists(${_path}/cat)
+TOOLS_PLATFORM.cat?=		${_path}/cat
+.  endif
+.  if exists(${_path}/chgrp)
+TOOLS_PLATFORM.chgrp?=		${_path}/chgrp
+.  endif
+.  if exists(${_path}/chmod)
+TOOLS_PLATFORM.chmod?=		${_path}/chmod
+.  endif
+.  if exists(${_path}/chown)
+TOOLS_PLATFORM.chown?=		${_path}/chown
+.  endif
+.  if exists(${_path}/cmp)
+TOOLS_PLATFORM.cmp?=		${_path}/cmp
+.  endif
+.  if exists(${_path}/cp)
+TOOLS_PLATFORM.cp?=		${_path}/cp
+.  endif
+.  if exists(${_path}/tcsh)
+TOOLS_PLATFORM.csh?=		${_path}/tcsh
+.  endif
+.  if exists(${_path}/curl)
+TOOLS_PLATFORM.curl?=		${_path}/curl
+.  endif
+.  if exists(${_path}/cut)
+TOOLS_PLATFORM.cut?=		${_path}/cut
+.  endif
+.  if exists(${_path}/diff)
+TOOLS_PLATFORM.diff?=		${_path}/diff
+.  endif
+.  if exists(${_path}/diff3)
+TOOLS_PLATFORM.diff3?=		${_path}/diff3
+.  endif
+.  if exists(${_path}/dirname)
+TOOLS_PLATFORM.dirname?=	${_path}/dirname
+.  endif
+.  if exists(${_path}/egrep)
+TOOLS_PLATFORM.egrep?=		${_path}/egrep
+.  endif
+.  if exists(${_path}/env)
+TOOLS_PLATFORM.env?=		${_path}/env
+.  endif
+.  if exists(${_path}/expr)
+TOOLS_PLATFORM.expr?=		${_path}/expr
+.  endif
+.  if exists(${_path}/fgrep)
+TOOLS_PLATFORM.fgrep?=		${_path}/fgrep
+.  endif
+.  if exists(${_path}/file)
+TOOLS_PLATFORM.file?=		${_path}/file
+.  endif
+.  if exists(${_path}/find)
+TOOLS_PLATFORM.find?=		${_path}/find
+.  endif
+.  if exists(${_path}/gettext)
+TOOLS_PLATFORM.gettext?=	${_path}/gettext
+.  endif
+.  if exists(${_path}/m4)
+TOOLS_PLATFORM.m4?=		${_path}/m4
+.  endif
+.  if exists(${_path}/make)
+TOOLS_PLATFORM.gmake?=		${_path}/make
+.  endif
+.  if exists(${_path}/gawk)
+TOOLS_PLATFORM.gawk?=		${_path}/gawk
+.  endif
+.  if exists(${_path}/grep)
+TOOLS_PLATFORM.grep?=		${_path}/grep
+.  endif
+.  if exists(${_path}/groff)
+TOOLS_PLATFORM.groff?=		${_path}/groff
+.  endif
+.  if exists(${_path}/sed)
+TOOLS_PLATFORM.sed?=		${_path}/sed
+.  endif
+.  if exists(${_path}/soelim)
+TOOLS_PLATFORM.gsoelim?=	${_path}/soelim
+.  endif
+.  if exists(${_path}/tar)
+TOOLS_PLATFORM.tar?=		${_path}/tar
+.  endif
+.  if exists(${_path}/gunzip)
+TOOLS_PLATFORM.gunzip?=		${_path}/gunzip -f
+.  endif
+.  if exists(${_path}/zcat)
+TOOLS_PLATFORM.gzcat?=		${_path}/zcat
+.  endif
+.  if exists(${_path}/gzip)
+TOOLS_PLATFORM.gzip?=		${_path}/gzip -nf ${GZIP}
+.  endif
+.  if exists(${_path}/head)
+TOOLS_PLATFORM.head?=		${_path}/head
+.  endif
+.  if exists(${_path}/hostname)
+TOOLS_PLATFORM.hostname?=	${_path}/hostname
+.  endif
+.  if exists(${_path}/id)
+TOOLS_PLATFORM.id?=		${_path}/id
+.  endif
+.  if exists(${_path}/ident)
+TOOLS_PLATFORM.ident?=		${_path}/ident
+.  endif
+.  if exists(${_path}/install)
+TOOLS_PLATFORM.install?=	${_path}/install
+.  endif
+.  if exists(${_path}/install-info)
+TOOLS_PLATFORM.install-info?=	${_path}/install-info
+.  endif
+.  if exists(${_path}/ldconfig)
+TOOLS_PLATFORM.ldconfig?=	${_path}/ldconfig
+.  endif
+.  if exists(${_path}/ln)
+TOOLS_PLATFORM.ln?=		${_path}/ln
+.  endif
+.  if exists(${_path}/ls)
+TOOLS_PLATFORM.ls?=		${_path}/ls
+.  endif
+.  if exists(${_path}/mail)
+TOOLS_PLATFORM.mail?=		${_path}/mail	# Debian, Slackware, SuSE
+.  endif
+.  if exists(${_path}/makeinfo)
+TOOLS_PLATFORM.makeinfo?=	${_path}/makeinfo
+.  endif
+.  if exists(${_path}/mkdir)
+TOOLS_PLATFORM.mkdir?=		${_path}/mkdir -p
+.  endif
+.  if exists(${_path}/mktemp)
+TOOLS_PLATFORM.mktemp?=		${_path}/mktemp
+.  endif
+.  if exists(${_path}/msgconv)
+TOOLS_PLATFORM.msgconv?=	${_path}/msgconv
+.  endif
+.  if exists(${_path}/msgfmt)
+TOOLS_PLATFORM.msgfmt?=		${_path}/msgfmt
+.  endif
+.  if exists(${_path}/msgmerge)
+TOOLS_PLATFORM.msgmerge?=	${_path}/msgmerge
+.  endif
+.  if exists(${_path}/mv)
+TOOLS_PLATFORM.mv?=		${_path}/mv
+.  endif
+.  if exists(${_path}/nice)
+TOOLS_PLATFORM.nice?=		${_path}/nice
+.  endif
+.  if exists(${_path}/nroff)
+TOOLS_PLATFORM.nroff?=		${_path}/nroff
+.  endif
+.  if exists(${_path}/openssl)
+TOOLS_PLATFORM.openssl?=	${_path}/openssl
+.  endif
+.  if exists(${_path}/printf)
+TOOLS_PLATFORM.printf?=		${_path}/printf
+.  endif
+.  if exists(${_path}/pwd)
+TOOLS_PLATFORM.pwd?=		${_path}/pwd
+.  endif
+.  if exists(${_path}/readlink)
+TOOLS_PLATFORM.readlink?=	${_path}/readlink
+.  endif
+.  if exists(${_path}/rm)
+TOOLS_PLATFORM.rm?=		${_path}/rm
+.  endif
+.  if exists(${_path}/rmdir)
+TOOLS_PLATFORM.rmdir?=		${_path}/rmdir
+.  endif
+.  if exists(${_path}/sdiff)
+TOOLS_PLATFORM.sdiff?=		${_path}/sdiff
+.  endif
+.  if exists(${_path}/sh)
+TOOLS_PLATFORM.sh?=		${_path}/sh
+.  endif
+.  if exists(${_path}/sleep)
+TOOLS_PLATFORM.sleep?=		${_path}/sleep
+.  endif
+.  if exists(${_path}/soelim)
+TOOLS_PLATFORM.soelim?=		${_path}/soelim
+.  endif
+.  if exists(${_path}/sort)
+TOOLS_PLATFORM.sort?=		${_path}/sort
+.  endif
+.  if exists(${_path}/strip)
+TOOLS_PLATFORM.strip?=		${_path}/strip
+.  endif
+.  if exists(${_path}/tail)
+TOOLS_PLATFORM.tail?=		${_path}/tail
+.  endif
+.  if exists(${_path}/tbl)
+TOOLS_PLATFORM.tbl?=		${_path}/tbl
+.  endif
+.  if exists(${_path}/tee)
+TOOLS_PLATFORM.tee?=		${_path}/tee
+.  endif
+.  if exists(${_path}/touch)
+TOOLS_PLATFORM.touch?=		${_path}/touch
+.  endif
+.  if exists(${_path}/tr)
+TOOLS_PLATFORM.tr?=		${_path}/tr
+.  endif
+.  if exists(${_path}/tsort)
+TOOLS_PLATFORM.tsort?=		${_path}/tsort
+.  endif
+.  if exists(${_path}/uniq)
+TOOLS_PLATFORM.uniq?=		${_path}/uniq
+.  endif
+.  if exists(${_path}/wc)
+TOOLS_PLATFORM.wc?=		${_path}/wc
+.  endif
+.  if exists(${_path}/wget)
+TOOLS_PLATFORM.wget?=		${_path}/wget
+.  endif
+.  if exists(${_path}/xargs)
+TOOLS_PLATFORM.xargs?=		${_path}/xargs -r
+.  endif
+.  if exists(${_path}/xgettext)
+TOOLS_PLATFORM.xgettext?=	${_path}/xgettext
+.  endif
+.  if exists(${_path}/yacc)
+TOOLS_PLATFORM.yacc?=		${_path}/yacc
+.  endif
+.  if exists(${_path}/xz)
+TOOLS_PLATFORM.xz?=		${_path}/xz
+.  endif
+.  if exists(${_path}/xzcat)
+TOOLS_PLATFORM.xzcat?=		${_path}/xzcat
+.  endif
+.endfor
 
 TOOLS_PLATFORM.[?=		[			# shell builtin
-.if exists(/etc/debian_version)
-TOOLS_PLATFORM.awk?=		/usr/bin/awk
-.else
-TOOLS_PLATFORM.awk?=		${TOOLS_PLATFORM.gawk}
-.endif
-.if exists(/usr/bin/autopoint)
-TOOLS_PLATFORM.autopoint?=	/usr/bin/autopoint
-.endif
-.if exists(/bin/basename)
-TOOLS_PLATFORM.basename?=	/bin/basename
-.elif exists(/usr/bin/basename)
-TOOLS_PLATFORM.basename?=	/usr/bin/basename
-.endif
-.if exists(/bin/bash)
-TOOLS_PLATFORM.bash?=		/bin/bash
-.endif
-.if exists(/usr/bin/bison)
-TOOLS_PLATFORM.bison?=		/usr/bin/bison
-TOOLS_PLATFORM.bison-yacc?=	/usr/bin/bison -y
-.endif
-.if exists(/usr/bin/bzcat)
-TOOLS_PLATFORM.bzcat?=		/usr/bin/bzcat
-.elif exists(/bin/bzcat)
-TOOLS_PLATFORM.bzcat?=		/bin/bzcat
-.elif exists(/usr/bin/bzip2)
-TOOLS_PLATFORM.bzcat?=		/usr/bin/bzip2 -cd
-.endif
-.if exists(/usr/bin/bzip2)
-TOOLS_PLATFORM.bzip2?=		/usr/bin/bzip2
-.elif exists(/bin/bzip2)
-TOOLS_PLATFORM.bzip2?=		/bin/bzip2
-.endif
-TOOLS_PLATFORM.cat?=		/bin/cat
-.if exists(/bin/chgrp)
-TOOLS_PLATFORM.chgrp?=		/bin/chgrp
-.elif exists(/usr/bin/chgrp)
-TOOLS_PLATFORM.chgrp?=		/usr/bin/chgrp
-.endif
-TOOLS_PLATFORM.chmod?=		/bin/chmod
-.if exists(/bin/chown)
-TOOLS_PLATFORM.chown?=		/bin/chown
-.elif exists(/usr/sbin/chown)
-TOOLS_PLATFORM.chown?=		/usr/sbin/chown
-.endif
-.if exists(/bin/cmp)
-TOOLS_PLATFORM.cmp?=		/bin/cmp
-.elif exists(/usr/bin/cmp)
-TOOLS_PLATFORM.cmp?=		/usr/bin/cmp
-.endif
-TOOLS_PLATFORM.cp?=		/bin/cp
-.if exists(/bin/tcsh)
-TOOLS_PLATFORM.csh?=		/bin/tcsh
-.endif
-.if exists(/usr/bin/curl)
-TOOLS_PLATFORM.curl?=		/usr/bin/curl
-.endif
-.if exists(/bin/cut)
-TOOLS_PLATFORM.cut?=		/bin/cut
-.elif exists(/usr/bin/cut)
-TOOLS_PLATFORM.cut?=		/usr/bin/cut
-.endif
-TOOLS_PLATFORM.date?=		/bin/date
-.if exists(/bin/diff)
-TOOLS_PLATFORM.diff?=		/bin/diff
-.elif exists(/usr/bin/diff)
-TOOLS_PLATFORM.diff?=		/usr/bin/diff
-.endif
-.if exists(/bin/diff3)
-TOOLS_PLATFORM.diff3?=		/bin/diff3
-.elif exists(/usr/bin/diff3)
-TOOLS_PLATFORM.diff3?=		/usr/bin/diff3
-.endif
-TOOLS_PLATFORM.dirname?=	/usr/bin/dirname
 TOOLS_PLATFORM.echo?=		echo			# shell builtin
-.if exists(/bin/egrep)
-TOOLS_PLATFORM.egrep?=		/bin/egrep
-TOOLS_PLATFORM.gegrep?=		/bin/egrep
-.elif exists(/usr/bin/egrep)
-TOOLS_PLATFORM.egrep?=		/usr/bin/egrep
-TOOLS_PLATFORM.gegrep?=		/usr/bin/egrep
-.endif
-TOOLS_PLATFORM.env?=		/usr/bin/env
-.if exists(/usr/bin/expr)
-TOOLS_PLATFORM.expr?=		/usr/bin/expr
-.elif exists(/bin/expr)
-TOOLS_PLATFORM.expr?=		/bin/expr
-.endif
 TOOLS_PLATFORM.false?=		false			# shell builtin
-.if exists(/bin/fgrep)
-TOOLS_PLATFORM.fgrep?=		/bin/fgrep
-TOOLS_PLATFORM.gfgrep?=		/bin/fgrep
-.elif exists(/usr/bin/fgrep)
-TOOLS_PLATFORM.fgrep?=		/usr/bin/fgrep
-TOOLS_PLATFORM.gfgrep?=		/usr/bin/fgrep
-.endif
-TOOLS_PLATFORM.file?=		/usr/bin/file
-.if exists(/bin/find)
-TOOLS_PLATFORM.find?=		/bin/find
-.else
-TOOLS_PLATFORM.find?=		/usr/bin/find
-.endif
-.if exists(/etc/debian_version)
-.  if exists(/usr/bin/gawk)
-TOOLS_PLATFORM.gawk?=		/usr/bin/gawk
-.  endif
-.else
-.  if exists(/bin/awk)
-TOOLS_PLATFORM.gawk?=		/bin/awk
-.  else
-TOOLS_PLATFORM.gawk?=		/usr/bin/awk
-.  endif
-.endif
-.if exists(/usr/bin/gettext)
-TOOLS_PLATFORM.gettext?=	/usr/bin/gettext
-.endif
-.if exists(/usr/bin/m4)
-TOOLS_PLATFORM.gm4?=		/usr/bin/m4
-.endif
-.if exists(/usr/bin/make)
-TOOLS_PLATFORM.gmake?=		/usr/bin/make
-.endif
-.if exists(/bin/grep)
-TOOLS_PLATFORM.grep?=		/bin/grep
-TOOLS_PLATFORM.ggrep?=		/bin/grep
-.elif exists(/usr/bin/grep)
-TOOLS_PLATFORM.grep?=		/usr/bin/grep
-TOOLS_PLATFORM.ggrep?=		/usr/bin/grep
-.endif
-.if exists(/usr/bin/groff)
-TOOLS_PLATFORM.groff?=		/usr/bin/groff
-.endif
-.if exists(/bin/sed)
-TOOLS_PLATFORM.gsed?=		/bin/sed
-.elif exists(/usr/bin/sed)
-TOOLS_PLATFORM.gsed?=		/usr/bin/sed
-.endif
-.if exists(/usr/bin/soelim)
-TOOLS_PLATFORM.gsoelim?=	/usr/bin/soelim
-.endif
-TOOLS_PLATFORM.gstrip?=		/usr/bin/strip
-.if exists(/bin/tar)
-TOOLS_PLATFORM.gtar?=		/bin/tar
-.elif exists(/usr/bin/tar)
-TOOLS_PLATFORM.gtar?=		/usr/bin/tar
-.endif
-.if exists(/bin/gunzip)
-TOOLS_PLATFORM.gunzip?=		/bin/gunzip -f
-.elif exists(/usr/bin/gunzip)
-TOOLS_PLATFORM.gunzip?=		/usr/bin/gunzip -f
-.endif
-.if exists(/bin/zcat)
-TOOLS_PLATFORM.gzcat?=		/bin/zcat
-.elif exists(/usr/bin/zcat)
-TOOLS_PLATFORM.gzcat?=		/usr/bin/zcat
-.endif
-.if exists(/bin/gzip)
-TOOLS_PLATFORM.gzip?=		/bin/gzip -nf ${GZIP}
-.elif exists(/usr/bin/gzip)
-TOOLS_PLATFORM.gzip?=		/usr/bin/gzip -nf ${GZIP}
-.endif
-.if exists(/bin/head)
-TOOLS_PLATFORM.head?=		/bin/head
-.elif exists(/usr/bin/head)
-TOOLS_PLATFORM.head?=		/usr/bin/head
-.endif
-TOOLS_PLATFORM.hostname?=	/bin/hostname
-.if exists(/bin/id)
-TOOLS_PLATFORM.id?=		/bin/id
-.elif exists(/usr/bin/id)
-TOOLS_PLATFORM.id?=		/usr/bin/id
-.endif
-.if exists(/usr/bin/ident)
-TOOLS_PLATFORM.ident?=		/usr/bin/ident
-.endif
-.if exists(/bin/install)
-TOOLS_PLATFORM.install?=	/bin/install
-.else
-TOOLS_PLATFORM.install?=	/usr/bin/install
-.endif
-.if exists(/sbin/install-info)
-TOOLS_PLATFORM.install-info?=	/sbin/install-info
-.elif exists(/usr/sbin/install-info)
-TOOLS_PLATFORM.install-info?=	/usr/sbin/install-info
-.elif exists(/usr/bin/install-info)
-TOOLS_PLATFORM.install-info?=	/usr/bin/install-info
-.endif
-TOOLS_PLATFORM.ldconfig?=	/sbin/ldconfig
-TOOLS_PLATFORM.ln?=		/bin/ln
-TOOLS_PLATFORM.ls?=		/bin/ls
-TOOLS_PLATFORM.m4?=		${TOOLS_PLATFORM.gm4}
-.if exists(/bin/mail)
-TOOLS_PLATFORM.mail?=		/bin/mail	# RH, Mandrake
-.elif exists(/usr/bin/mail)
-TOOLS_PLATFORM.mail?=		/usr/bin/mail	# Debian, Slackware, SuSE
-.endif
-.if exists(/usr/bin/makeinfo)
-TOOLS_PLATFORM.makeinfo?=	/usr/bin/makeinfo
-.endif
-TOOLS_PLATFORM.mkdir?=		/bin/mkdir -p
-.if exists(/usr/bin/mktemp)
-TOOLS_PLATFORM.mktemp?=		/usr/bin/mktemp
-.elif exists(/bin/mktemp)
-TOOLS_PLATFORM.mktemp?=		/bin/mktemp
-.endif
-.if exists(/usr/bin/msgconv)
-TOOLS_PLATFORM.msgconv?=	/usr/bin/msgconv
-.endif
-.if exists(/usr/bin/msgfmt)
-TOOLS_PLATFORM.msgfmt?=		/usr/bin/msgfmt
-.endif
-.if exists(/usr/bin/msgmerge)
-TOOLS_PLATFORM.msgmerge?=	/usr/bin/msgmerge
-.endif
-TOOLS_PLATFORM.mv?=		/bin/mv
-.if exists(/bin/nice)
-TOOLS_PLATFORM.nice?=		/bin/nice
-.elif exists(/usr/bin/nice)
-TOOLS_PLATFORM.nice?=		/usr/bin/nice
-.endif
-.if exists(/usr/bin/nroff)
-TOOLS_PLATFORM.nroff?=		/usr/bin/nroff
-.endif
-.if exists(/usr/bin/openssl)
-TOOLS_PLATFORM.openssl?=	/usr/bin/openssl
-.endif
-# Don't use GNU patch
-#TOOLS_PLATFORM.patch?=		/usr/bin/patch
-.if exists(/usr/bin/printf)
-TOOLS_PLATFORM.printf?=		/usr/bin/printf
-.endif
-TOOLS_PLATFORM.pwd?=		/bin/pwd
-TOOLS_PLATFORM.readlink?=	/bin/readlink
-TOOLS_PLATFORM.rm?=		/bin/rm
-TOOLS_PLATFORM.rmdir?=		/bin/rmdir
-.if exists(/bin/sdiff)
-TOOLS_PLATFORM.sdiff?=		/bin/sdiff
-.elif exists(/usr/bin/sdiff)
-TOOLS_PLATFORM.sdiff?=		/usr/bin/sdiff
-.endif
-TOOLS_PLATFORM.sed?=		${TOOLS_PLATFORM.gsed}
-TOOLS_PLATFORM.sh?=		/bin/sh
-.if exists(/usr/bin/sleep)
-TOOLS_PLATFORM.sleep?=		/usr/bin/sleep
-.else
-TOOLS_PLATFORM.sleep?=		/bin/sleep
-.endif
-.if exists(/usr/bin/soelim)
-TOOLS_PLATFORM.soelim?=		/usr/bin/soelim
-.endif
-.if exists(/bin/sort)
-TOOLS_PLATFORM.sort?=		/bin/sort
-.elif exists(/usr/bin/sort)
-TOOLS_PLATFORM.sort?=		/usr/bin/sort
-.endif
-TOOLS_PLATFORM.strip?=		/usr/bin/strip
-TOOLS_PLATFORM.tail?=		/usr/bin/tail
-TOOLS_PLATFORM.tar?=		${TOOLS_PLATFORM.gtar}
-.if exists(/usr/bin/tbl)
-TOOLS_PLATFORM.tbl?=		/usr/bin/tbl
-.endif
-TOOLS_PLATFORM.tee?=		/usr/bin/tee
 TOOLS_PLATFORM.test?=		test			# shell builtin
-.if exists(/bin/touch)
-TOOLS_PLATFORM.touch?=		/bin/touch
-.elif exists(/usr/bin/touch)
-TOOLS_PLATFORM.touch?=		/usr/bin/touch
-.endif
-TOOLS_PLATFORM.tr?=		/usr/bin/tr
 TOOLS_PLATFORM.true?=		true			# shell builtin
-TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
-.if exists(/bin/uniq)
-TOOLS_PLATFORM.uniq?=		/bin/uniq
-.elif exists(/usr/bin/uniq)
-TOOLS_PLATFORM.uniq?=		/usr/bin/uniq
-.endif
-.if exists(/bin/wc)
-TOOLS_PLATFORM.wc?=		/bin/wc
-.elif exists(/usr/bin/wc)
-TOOLS_PLATFORM.wc?=		/usr/bin/wc
-.endif
-.if exists(/usr/bin/wget)
-TOOLS_PLATFORM.wget?=		/usr/bin/wget
-.endif
-TOOLS_PLATFORM.xargs?=		/usr/bin/xargs -r
-.if exists(/usr/bin/xgettext)
-TOOLS_PLATFORM.xgettext?=	/usr/bin/xgettext
-.endif
-.if exists(/usr/bin/yacc)
-TOOLS_PLATFORM.yacc?=		/usr/bin/yacc
-.endif
-.if exists(/usr/bin/xz)
-TOOLS_PLATFORM.xz?=		/usr/bin/xz
-.endif
-.if exists(/usr/bin/xzcat)
-TOOLS_PLATFORM.xzcat?=		/usr/bin/xzcat
+
+# assuming grep/sed/tar/awk are usually the GNU versions, is this safe?
+
+.if !empty(TOOLS_PLATFORM.bison)
+TOOLS_PLATFORM.bison-yacc?=	${TOOLS_PLATFORM.bison} -y
 .endif
 
+TOOLS_PLATFORM.awk?=		${TOOLS_PLATFORM.gawk}
+
+TOOLS_PLATFORM.gsed?=		${TOOLS_PLATFORM.sed}
+TOOLS_PLATFORM.gtar?=		${TOOLS_PLATFORM.tar}
+TOOLS_PLATFORM.gm4?=		${TOOLS_PLATFORM.m4}
+
+TOOLS_PLATFORM.gstrip?=		${TOOLS_PLATFORM.strip}
+
+.if !empty(TOOLS_PLATFORM.grep)
+TOOLS_PLATFORM.egrep?=		${TOOLS_PLATFORM.grep} -E
+TOOLS_PLATFORM.fgrep?=		${TOOLS_PLATFORM.grep} -F
+TOOLS_PLATFORM.ggrep?=		${TOOLS_PLATFORM.grep}
+TOOLS_PLATFORM.gegrep?=		${TOOLS_PLATFORM.egrep}
+TOOLS_PLATFORM.gfgrep?=		${TOOLS_PLATFORM.fgrep}
+.endif
+
+.if !empty(TOOLS_PLATFORM.xz)
+TOOLS_PLATFORM.xzcat?=		${TOOLS_PLATFORM.xz} -cd
+.endif
+.if !empty(TOOLS_PLATFORM.bzip2)
+TOOLS_PLATFORM.bzcat?=		${TOOLS_PLATFORM.bzip2} -cd
+.endif
+.if !empty(TOOLS_PLATFORM.gzip)
+TOOLS_PLATFORM.zcat?=		${TOOLS_PLATFORM.gzip} -cd
+.endif
