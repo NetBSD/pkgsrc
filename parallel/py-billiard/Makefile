@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/01/04 20:54:35 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2022/05/01 09:17:48 wiz Exp $
 
 DISTNAME=	billiard-3.6.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,11 +14,9 @@ LICENSE=	modified-bsd
 TEST_DEPENDS+=	${PYPKGPREFIX}-case>=1.3.1:../../devel/py-case
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
-.include "../../lang/python/pyversion.mk"
-# builds _billiard.so
-.if ${_PYTHON_VERSION} != 27
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
 USE_LANGUAGES=		# none
-.endif
 
 PYSETUPTESTTARGET=	pytest
 
