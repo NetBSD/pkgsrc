@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/09/18 14:01:44 mef Exp $
+# $NetBSD: Makefile,v 1.4 2022/05/01 16:10:16 mef Exp $
 
 R_PKGNAME=	tidyr
-R_PKGVER=	1.1.3
+R_PKGVER=	1.2.0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Easily tidy data with 'spread()' and 'gather()' functions
@@ -27,6 +27,9 @@ TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
 TEST_DEPENDS+=	R-readr-[0-9]*:../../textproc/R-readr
 TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
+TEST_DEPENDS+=	R-dplyr-[0-9]*:../../math/R-dplyr
+TEST_DEPENDS+=	R-purrr-[0-9]*:../../devel/R-purrr
+TEST_DEPENDS+=	R-tidyselect-[0-9]*:../../devel/R-tidyselect
 
 USE_LANGUAGES=	c c++
 
