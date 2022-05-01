@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/02/18 06:22:59 adam Exp $
+# $NetBSD: Makefile,v 1.29 2022/05/01 09:45:41 wiz Exp $
 
 DISTNAME=	tox-3.24.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -32,7 +32,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-filelock
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} < 38
-PYTHON_VERSIONED_DEPENDENCIES+=	importlib-metadata
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
 .endif
 
 USE_LANGUAGES=	# none
