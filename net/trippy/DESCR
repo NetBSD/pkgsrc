@@ -1,0 +1,7 @@
+A network diagnostic tool, inspired by mtr, https://github.com/traviscross/mtr
+
+Trippy uses a raw socket which require elevated privileges. Enabling the
+required privilege can be achieved in several ways.
+
+Trippy is made possible by tui-rs , crossterm & pnet as well as several common
+foundational Rust libraries.
