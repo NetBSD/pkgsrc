@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:21:31 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/05/01 15:52:39 mef Exp $
 
-BLAKE2s (R/readr_2.0.1.tar.gz) = a6b4a5eca1bef10fa8f7a02948eb0e46ee293342df572f12f84291afb3841319
-SHA512 (R/readr_2.0.1.tar.gz) = b63c0c82316245eaca84cdb95232e52dabd81f3feecd7df9b6cb87e55f48d833ba3ae7dd07919f3d91555f13f1b94d33a102542d236b7af5a8accda609103269
-Size (R/readr_2.0.1.tar.gz) = 517944 bytes
+BLAKE2s (R/readr_2.1.2.tar.gz) = 16fb9cffe0a8e39f8cc8d583427cf272568ec5d228f04d41e791d207b5252265
+SHA512 (R/readr_2.1.2.tar.gz) = 449bb104a244448b72fe7d9f4c99e622652bc09a3636dbd1091c12de3971b822e5e10d09918ed97ae346508ef8819640a9a778feaf56f82de5af4300f4bdd021
+Size (R/readr_2.1.2.tar.gz) = 302240 bytes
