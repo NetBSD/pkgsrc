@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2219 2022/05/01 20:05:03 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2220 2022/05/01 20:51:03 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3488,3 +3488,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/binaryen to 106 [fcambus 2022-05-01]
 	Updated graphics/freetype2 to 2.12.1 [adam 2022-05-01]
 	Updated www/py-asgiref to 3.5.1 [adam 2022-05-01]
+	Updated graphics/tex-circuitikz to 1.5.1 [markd 2022-05-01]
+	Updated graphics/tex-circuitikz-doc to 1.5.1 [markd 2022-05-01]
+	Updated fonts/tex-linearA to 2022 [markd 2022-05-01]
+	Updated fonts/tex-linearA-doc to 2022 [markd 2022-05-01]
