@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:54:58 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/05/01 09:45:42 wiz Exp $
 
 DISTNAME=	python-lsp-jsonrpc-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -26,6 +26,5 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} py.test-${PYVERSSUFFIX}
 
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/01/04 20:53:56 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/05/01 09:45:41 wiz Exp $
 TRYTON_MODULE_NAME=	trytond_account_payment_sepa
 PKGREVISION= 1
 .include "../../devel/py-trytond/Makefile.common"
@@ -21,5 +21,4 @@ REPLACE_PYTHON+=	tests/test_account_payment_sepa.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
