@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/04/18 19:10:48 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/05/01 09:13:41 wiz Exp $
 
 DISTNAME=	cvise-2.4.0
 PKGREVISION=	2
@@ -13,6 +13,8 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-pebble-[0-9]*:../../devel/py-pebble
 DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../mk/bsd.prefs.mk"
 
