@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2022/04/29 23:17:52 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2022/05/02 09:08:53 wiz Exp $
 
 DISTNAME=	virtualenv-16.7.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -29,12 +29,16 @@ USE_LANGUAGES=	# none
 
 REPLACE_PYTHON=	virtualenv.py
 
+TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
+
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} virtualenv virtualenv-${PYVERSSUFFIX} || ${TRUE}
 
+# as of 16.7.9
+# 15 failed, 10 passed, 10 skipped, 5 warnings, 59 errors
 do-test:
-	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
