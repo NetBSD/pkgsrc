@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/01/14 22:14:42 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/05/02 14:27:07 jaapb Exp $
 ${OCAML_SITELIB}/ocaml-compiler-libs/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/bytecomp/ocaml_bytecomp.a
 ${OCAML_SITELIB}/ocaml-compiler-libs/bytecomp/ocaml_bytecomp.cma
@@ -42,5 +42,6 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/toplevel/ocaml_toplevel.c
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/toplevel/ocaml_toplevel.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocaml-compiler-libs/toplevel/ocaml_toplevel.cmxs
 ${OCAML_SITELIB}/ocaml-compiler-libs/toplevel/ocaml_toplevel.ml
+share/doc/ocaml-compiler-libs/CHANGES.md
 share/doc/ocaml-compiler-libs/LICENSE.md
 share/doc/ocaml-compiler-libs/README.org
