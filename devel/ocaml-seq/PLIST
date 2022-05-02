@@ -1,14 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2019/05/13 11:30:24 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/05/02 13:53:44 jaapb Exp $
 ${OCAML_SITELIB}/seq/META
+${OCAML_SITELIB}/seq/dune-package
+${OCAML_SITELIB}/seq/opam
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/seq/seq.a
 ${OCAML_SITELIB}/seq/seq.cma
 ${OCAML_SITELIB}/seq/seq.cmi
-${OCAML_SITELIB}/seq/seq.cmo
+${OCAML_SITELIB}/seq/seq.cmt
+${OCAML_SITELIB}/seq/seq.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/seq/seq.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/seq/seq.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/seq/seq.cmxs
 ${OCAML_SITELIB}/seq/seq.ml
-${OCAML_SITELIB}/seq/seq.ml.depends
 ${OCAML_SITELIB}/seq/seq.mli
-${OCAML_SITELIB}/seq/seq.mli.depends
-${PLIST.ocaml-opt}${OCAML_SITELIB}/seq/seq.o
+share/doc/seq/LICENSE
+share/doc/seq/README.md
