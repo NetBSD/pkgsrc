@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2242 2022/05/02 14:32:24 mef Exp $
+$NetBSD: CHANGES-2022,v 1.2243 2022/05/02 14:44:36 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3518,3 +3518,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/R-diffviewer to 0.1.1 [mef 2022-05-02]
 	Updated devel/ocaml-compiler-libs to 0.12.4 [jaapb 2022-05-02]
 	Updated devel/R-cli to 3.3.0 [mef 2022-05-02]
+	Updated devel/ocaml-sexplib0 to 0.15.0 [jaapb 2022-05-02]
