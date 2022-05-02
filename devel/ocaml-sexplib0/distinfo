@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:15:56 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/05/02 14:41:56 jaapb Exp $
 
-BLAKE2s (sexplib0-0.13.0.tar.gz) = 80df2e47142ecfd2718367e15ff89d10df4e58fc3180c3dc5380828027c68ff5
-SHA512 (sexplib0-0.13.0.tar.gz) = 0dae41ac80a0208285d9f044cf616b10a912de4c4bf2d7adbaeb8d8c45233fd7502203c8f6932aaae4c3480872f22691174a81dc2058ef6b5fd598458b7f990b
-Size (sexplib0-0.13.0.tar.gz) = 13420 bytes
+BLAKE2s (sexplib0-0.15.0.tar.gz) = 77e0e1209a15c0e615eb13a632e415d8f8c7c047c3cca9071ef37e27c76add96
+SHA512 (sexplib0-0.15.0.tar.gz) = ae44c3724b8f7bf8a19bbb10464a21d74b662c77ba3937bab6ca9709843ee2ae7da44432d6dbf4f744cabc3e369b5d2fc89c16e372c3cb77e55077b5efda3041
+Size (sexplib0-0.15.0.tar.gz) = 16706 bytes

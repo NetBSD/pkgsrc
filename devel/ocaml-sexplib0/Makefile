@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2021/03/08 08:13:00 jaapb Exp $
+# $NetBSD: Makefile,v 1.9 2022/05/02 14:41:56 jaapb Exp $
 
-GITHUB_PROJECT=	sexplib0
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	${GITHUB_PROJECT}-0.13.0
+DISTNAME=	${GITHUB_PROJECT}-0.15.0
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
+GITHUB_PROJECT=	sexplib0
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	https://github.com/janestreet/sexplib0/
