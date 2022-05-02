@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2022/04/26 10:36:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.41 2022/05/02 07:51:19 adam Exp $
 bin/lexicon-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -255,6 +255,9 @@ ${PYSITELIB}/lexicon/providers/webgo.pyo
 ${PYSITELIB}/lexicon/providers/yandex.py
 ${PYSITELIB}/lexicon/providers/yandex.pyc
 ${PYSITELIB}/lexicon/providers/yandex.pyo
+${PYSITELIB}/lexicon/providers/yandexcloud.py
+${PYSITELIB}/lexicon/providers/yandexcloud.pyc
+${PYSITELIB}/lexicon/providers/yandexcloud.pyo
 ${PYSITELIB}/lexicon/providers/zeit.py
 ${PYSITELIB}/lexicon/providers/zeit.pyc
 ${PYSITELIB}/lexicon/providers/zeit.pyo
