@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/04/07 11:42:13 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/05/02 18:12:13 jaapb Exp $
 ${OCAML_SITELIB}/cmdliner/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner.a
 ${OCAML_SITELIB}/cmdliner/cmdliner.cma
@@ -11,14 +11,22 @@ ${OCAML_SITELIB}/cmdliner/cmdliner.mli
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner_arg.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner_base.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner_cline.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner_cmd.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner_docgen.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner_eval.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner_exit.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner_info.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner_manpage.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner_msg.cmx
-${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner_suggest.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner_term.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner_term_deprecated.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner_trie.cmx
 ${OCAML_SITELIB}/cmdliner/opam
 share/doc/cmdliner/CHANGES.md
 share/doc/cmdliner/LICENSE.md
 share/doc/cmdliner/README.md
+share/doc/cmdliner/odoc-pages/cli.mld
+share/doc/cmdliner/odoc-pages/examples.mld
+share/doc/cmdliner/odoc-pages/index.mld
+share/doc/cmdliner/odoc-pages/tool_man.mld
+share/doc/cmdliner/odoc-pages/tutorial.mld
