@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2225 2022/05/02 08:46:36 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2226 2022/05/02 11:58:07 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3500,3 +3500,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/py-mypy to 0.950 [adam 2022-05-02]
 	Updated graphics/py-Willow to 1.4.1 [adam 2022-05-02]
 	Updated sysutils/py-filetype to 1.0.13 [adam 2022-05-02]
+	Updated geography/R-lwgeom to 0.2.8 [mef 2022-05-02]
