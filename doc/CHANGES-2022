@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2253 2022/05/02 19:02:43 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2254 2022/05/02 21:03:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3530,3 +3530,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ocaml-tyxml to 4.5.0nb1 [jaapb 2022-05-02]
 	Updated lang/nodejs to 16.15.0 [adam 2022-05-02]
 	Updated www/py-flask-caching to 1.10.1 [adam 2022-05-02]
+	Added games/termatrix version 1.0.0 [pin 2022-05-02]
