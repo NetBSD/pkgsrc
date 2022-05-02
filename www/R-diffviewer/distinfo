@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:29:14 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/05/02 14:19:29 mef Exp $
 
-BLAKE2s (R/diffviewer_0.1.0.tar.gz) = 2d00f68f3fcbb4aa399a9a8348bad0329ffdee2940855a9cd154300f7ed9b402
-SHA512 (R/diffviewer_0.1.0.tar.gz) = d1373b051585ca1154fd525cfdef4fcecd657cbb681e32b7ed2be11d324c803769a18f988be209b6fc2d1327e203d69429be023cc1697fbd631d246912b37482
-Size (R/diffviewer_0.1.0.tar.gz) = 172150 bytes
+BLAKE2s (R/diffviewer_0.1.1.tar.gz) = e53bcc50f4d18fccdfd951ad6851e7aa3f01bf2c9029e9dfb328f3083c68b3f7
+SHA512 (R/diffviewer_0.1.1.tar.gz) = 911fe4f5345b6e269f0167303b1fd21c43083f8db226ff057bc46a07f758077fac72d18eaa1e08465379f9360fe35cceda49e6c389d900de5fa12344d2ee65ad
+Size (R/diffviewer_0.1.1.tar.gz) = 165978 bytes
