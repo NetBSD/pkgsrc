@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2022/04/23 12:43:35 mef Exp $
+# $NetBSD: Makefile,v 1.13 2022/05/02 14:42:48 mef Exp $
 
 R_PKGNAME=	testthat
-R_PKGVER=	3.1.3
+R_PKGVER=	3.1.4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,7 +9,7 @@ COMMENT=	Unit testing for R
 LICENSE=	mit
 
 DEPENDS+=	R-R6>=2.4.0:../../devel/R-R6
-DEPENDS+=	R-cli>=2.4.0:../../devel/R-cli
+DEPENDS+=	R-cli>=3.3.0:../../devel/R-cli
 DEPENDS+=	R-crayon>=1.3.4:../../devel/R-crayon
 DEPENDS+=	R-evaluate>=0.14:../../devel/R-evaluate
 DEPENDS+=	R-magrittr>=1.5:../../devel/R-magrittr
@@ -20,7 +20,7 @@ DEPENDS+=	R-digest>=0.6.20:../../security/R-digest
 DEPENDS+=	R-ellipsis>=0.2.0:../../math/R-ellipsis
 DEPENDS+=	R-pkgload-[0-9]*:../../devel/R-pkgload
 DEPENDS+=	R-brio-[0-9]*:../../devel/R-brio
-DEPENDS+=	R-waldo>=0.2.1:../../devel/R-waldo
+DEPENDS+=	R-waldo>=0.4.0:../../devel/R-waldo
 DEPENDS+=	R-ps>=1.5.0:../../sysutils/R-ps
 DEPENDS+=	R-lifecycle-[0-9]*:../../devel/R-lifecycle
 DEPENDS+=	R-jsonlite-[0-9]*:../../textproc/R-jsonlite
@@ -41,3 +41,4 @@ USE_LANGUAGES=	c c++
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
+TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
