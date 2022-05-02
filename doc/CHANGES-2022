@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2251 2022/05/02 18:20:38 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2252 2022/05/02 18:22:38 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3527,3 +3527,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ocaml-cmdliner to 1.1.1 [jaapb 2022-05-02]
 	Updated textproc/ocaml-uutf to 1.0.3 [jaapb 2022-05-02]
 	Updated textproc/ocaml-markup to 1.0.3 [jaapb 2022-05-02]
+	Updated textproc/ocaml-tyxml to 4.5.0nb1 [jaapb 2022-05-02]
