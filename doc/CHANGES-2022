@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2230 2022/05/02 12:40:25 mef Exp $
+$NetBSD: CHANGES-2022,v 1.2231 2022/05/02 12:49:34 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3506,3 +3506,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-types-toml to 0.10.6 [adam 2022-05-02]
 	Updated devel/py-types-setuptools to 57.4.14 [adam 2022-05-02]
 	Updated geography/R-geosphere to 1.5.14 [mef 2022-05-02]
+	Updated misc/ocaml-opam-file-format to 2.1.4 [jaapb 2022-05-02]
