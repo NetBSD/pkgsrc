@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2245 2022/05/02 14:56:56 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2246 2022/05/02 15:06:46 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3521,3 +3521,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ocaml-sexplib0 to 0.15.0 [jaapb 2022-05-02]
 	Updated devel/R-testthat to 3.1.4 [mef 2022-05-02]
 	Updated devel/ocaml-stdlib-shims to 0.3.0 [jaapb 2022-05-02]
+	Updated devel/ocaml-ppxlib to 0.26.0 [jaapb 2022-05-02]
