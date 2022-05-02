@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/05/02 14:44:55 mef Exp $
+# $NetBSD: Makefile,v 1.15 2022/05/02 14:47:49 mef Exp $
 
 R_PKGNAME=	testthat
 R_PKGVER=	3.1.4
@@ -33,9 +33,6 @@ TEST_DEPENDS+=	R-callr>=3.5.1:../../devel/R-callr
 TEST_DEPENDS+=	tex-inconsolata-[0-9]*:../../fonts/tex-inconsolata
 TEST_DEPENDS+=	R-brio-[0-9]*:../../devel/R-brio
 TEST_DEPENDS+=	R-desc-[0-9]*:../../devel/R-desc
-TEST_DEPENDS+=	R-pkgload-[0-9]*:../../devel/R-pkgload
-TEST_DEPENDS+=	R-praise-[0-9]*:../../misc/R-praise
-TEST_DEPENDS+=	R-waldo-[0-9]*:../../devel/R-waldo
 
 USE_LANGUAGES=	c c++
 
