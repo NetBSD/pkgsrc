@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.512 2022/01/17 13:23:17 nia Exp $
+# $NetBSD: Makefile,v 1.513 2022/05/02 21:02:33 pin Exp $
 #
 
 COMMENT=	Games
@@ -396,6 +396,7 @@ SUBDIR+=	tanked
 SUBDIR+=	tcl-theo
 SUBDIR+=	teeworlds
 SUBDIR+=	teg
+SUBDIR+=	termatrix
 SUBDIR+=	tetrinetx
 SUBDIR+=	thew
 SUBDIR+=	tileworld
