@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2223 2022/05/02 07:51:35 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2224 2022/05/02 08:19:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3496,3 +3496,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/wcslib to 7.11 [wen 2022-05-02]
 	Updated devel/py-wrapt to 1.14.1 [adam 2022-05-02]
 	Updated net/py-lexicon to 3.10.0 [adam 2022-05-02]
+	Updated devel/py-ZopeConfiguration to 4.4.1 [adam 2022-05-02]
+	Updated lang/py-mypy to 0.950 [adam 2022-05-02]
