@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2229 2022/05/02 12:38:12 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2230 2022/05/02 12:40:25 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3505,3 +3505,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated geography/R-deldir to 1.0.6 [mef 2022-05-02]
 	Updated devel/py-types-toml to 0.10.6 [adam 2022-05-02]
 	Updated devel/py-types-setuptools to 57.4.14 [adam 2022-05-02]
+	Updated geography/R-geosphere to 1.5.14 [mef 2022-05-02]
