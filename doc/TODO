@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21751 2022/05/02 13:16:15 jaapb Exp $
+$NetBSD: TODO,v 1.21752 2022/05/02 14:29:49 jaapb Exp $
 
 Suggested new packages
 ======================
@@ -1211,7 +1211,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-bin_prot-0.14.0
 	o ocaml-cmdliner-1.1.0
 	o ocaml-cohttp-4.0.0
-	o ocaml-compiler-libs-0.12.3
 	o ocaml-conduit-4.0.0
 	o ocaml-core-0.14.1
 	o ocaml-core_kernel-0.14.1
