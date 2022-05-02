@@ -1,21 +1,17 @@
-# $NetBSD: Makefile,v 1.7 2022/04/03 18:50:18 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/05/02 08:43:30 adam Exp $
 
-DISTNAME=	Willow-1.4
+DISTNAME=	Willow-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	5
 CATEGORIES=	graphics python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=wagtail/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=W/Willow/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/wagtail/Willow
 COMMENT=	Wrapper library for Pillow, OpenCV and Wand
 LICENSE=	modified-bsd
 
-GITHUB_PROJECT=	Willow
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-
 DEPENDS+=	${PYPKGPREFIX}-wand-[0-9]*:../../graphics/py-wand
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=3.0.0:../../devel/py-mock
 
 PYTHON_VERSIONED_DEPENDENCIES=	Pillow
 
