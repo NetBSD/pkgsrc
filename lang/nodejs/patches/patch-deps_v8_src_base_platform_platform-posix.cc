@@ -1,4 +1,4 @@
-$NetBSD: patch-deps_v8_src_base_platform_platform-posix.cc,v 1.7 2021/04/24 06:30:28 rin Exp $
+$NetBSD: patch-deps_v8_src_base_platform_platform-posix.cc,v 1.8 2022/05/02 18:59:24 adam Exp $
 
 Use sysconf(_SC_THREAD_STACK_MIN) instead of PTHREAD_STACK_MIN.
 Cast explicitly.
@@ -13,7 +13,7 @@ Avoid using a random hint, some low numbers cause spurious ENOMEM on netbsd
  #endif
  #endif
 +
-+#if V8_OS_NETBSD && V8_TARGET_ARCH_ARM64
++#if V8_OS_NETBSD
 +  raw_addr = 0;
 +#endif
    return reinterpret_cast<void*>(raw_addr);
