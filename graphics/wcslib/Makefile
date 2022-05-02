@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/03/20 11:05:03 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/05/02 00:07:44 wen Exp $
 
-DISTNAME=	wcslib-7.2
+DISTNAME=	wcslib-7.11
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.atnf.csiro.au/pub/software/wcslib/
 EXTRACT_SUFX=	.tar.bz2
