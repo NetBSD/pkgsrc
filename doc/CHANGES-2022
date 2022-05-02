@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2239 2022/05/02 14:15:02 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2240 2022/05/02 14:19:47 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3515,3 +3515,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ocaml-lwt to 5.5.0 [jaapb 2022-05-02]
 	Updated devel/ocaml-lwt_ppx to 2.0.3 [jaapb 2022-05-02]
 	Updated devel/ocaml-lwt_react to 1.1.5 [jaapb 2022-05-02]
+	Updated www/R-diffviewer to 0.1.1 [mef 2022-05-02]
