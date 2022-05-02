@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2234 2022/05/02 13:35:41 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2235 2022/05/02 13:47:19 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3510,3 +3510,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ocaml-migrate-parsetree to 2.3.0 [jaapb 2022-05-02]
 	Updated devel/ocaml-bigarray-compat to 1.1.0 [jaapb 2022-05-02]
 	Updated devel/ocaml-mmap to 1.2.0 [jaapb 2022-05-02]
+	Updated devel/ocaml-ocplib-endian to 1.2 [jaapb 2022-05-02]
