@@ -1,7 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2022/01/07 17:20:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/05/02 12:35:18 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/toml-stubs/METADATA.toml
 ${PYSITELIB}/toml-stubs/__init__.pyi
+${PYSITELIB}/toml-stubs/decoder.pyi
+${PYSITELIB}/toml-stubs/encoder.pyi
+${PYSITELIB}/toml-stubs/ordered.pyi
+${PYSITELIB}/toml-stubs/tz.pyi
