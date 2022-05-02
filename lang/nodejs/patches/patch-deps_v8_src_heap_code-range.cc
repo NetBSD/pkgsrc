@@ -1,4 +1,4 @@
-$NetBSD: patch-deps_v8_src_heap_code-range.cc,v 1.1 2022/04/01 18:41:02 tnn Exp $
+$NetBSD: patch-deps_v8_src_heap_code-range.cc,v 1.2 2022/05/02 18:59:24 adam Exp $
 
 nodejs: disable "near code ranges" on NetBSD/evbarm-aarch64 for now.
 It results in mmap(2) errors of the PR kern/55533 variety.
@@ -9,7 +9,7 @@ It results in mmap(2) errors of the PR kern/55533 variety.
    base::MutexGuard guard(&mutex_);
    auto it = recently_freed_.find(code_range_size);
    if (it == recently_freed_.end() || it->second.empty()) {
-+#if V8_OS_NETBSD && V8_TARGET_ARCH_ARM64
++#if V8_OS_NETBSD
 +    return 0;
 +#else
      return FUNCTION_ADDR(&FunctionInStaticBinaryForAddressHint);
