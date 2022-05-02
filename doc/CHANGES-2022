@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2222 2022/05/02 00:09:05 wen Exp $
+$NetBSD: CHANGES-2022,v 1.2223 2022/05/02 07:51:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3494,3 +3494,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/tex-linearA-doc to 2022 [markd 2022-05-01]
 	Updated geography/R-wk to 0.6.0 [mef 2022-05-01]
 	Updated graphics/wcslib to 7.11 [wen 2022-05-02]
+	Updated devel/py-wrapt to 1.14.1 [adam 2022-05-02]
+	Updated net/py-lexicon to 3.10.0 [adam 2022-05-02]
