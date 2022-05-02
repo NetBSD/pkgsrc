@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/01/04 20:52:47 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2022/05/02 08:05:45 adam Exp $
 
-DISTNAME=	zope.configuration-4.4.0
+DISTNAME=	zope.configuration-4.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/zope.c/ZopeC/}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.configuration/}
 
