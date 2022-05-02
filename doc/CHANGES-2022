@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2248 2022/05/02 15:24:33 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2249 2022/05/02 18:12:24 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3524,3 +3524,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ocaml-ppxlib to 0.26.0 [jaapb 2022-05-02]
 	Updated devel/ocaml-re to 1.10.4 [jaapb 2022-05-02]
 	Updated emulators/mame to 0.243 [wiz 2022-05-02]
+	Updated devel/ocaml-cmdliner to 1.1.1 [jaapb 2022-05-02]
