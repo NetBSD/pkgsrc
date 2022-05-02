@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/05/02 14:42:48 mef Exp $
+# $NetBSD: Makefile,v 1.14 2022/05/02 14:44:55 mef Exp $
 
 R_PKGNAME=	testthat
 R_PKGVER=	3.1.4
@@ -28,7 +28,7 @@ DEPENDS+=	R-jsonlite-[0-9]*:../../textproc/R-jsonlite
 TEST_DEPENDS+=	R-devtools-[0-9]*:../../devel/R-devtools
 TEST_DEPENDS+=	R-rematch2-[0-9]*:../../devel/R-rematch2
 TEST_DEPENDS+=	R-mockery-[0-9]*:../../devel/R-mockery
-TEST_DEPENDS+=	R-diffviewer-[0-9]*:../../www/R-diffviewer
+TEST_DEPENDS+=	R-diffviewer>=0.1.1:../../www/R-diffviewer
 TEST_DEPENDS+=	R-callr>=3.5.1:../../devel/R-callr
 TEST_DEPENDS+=	tex-inconsolata-[0-9]*:../../fonts/tex-inconsolata
 TEST_DEPENDS+=	R-brio-[0-9]*:../../devel/R-brio
