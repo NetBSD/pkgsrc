@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2022/03/15 05:53:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2022/05/02 08:19:25 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/mypyc-${PYVERSSUFFIX}
@@ -955,6 +955,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/format_helpers.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/futures.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/locks.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/log.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/asyncio/mixins.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/proactor_events.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/protocols.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/queues.pyi
@@ -964,6 +965,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/sslproto.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/staggered.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/streams.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/subprocess.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/asyncio/taskgroups.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/tasks.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/threads.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/transports.pyi
@@ -1195,6 +1197,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/multiprocessing/managers.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/multiprocessing/pool.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/multiprocessing/process.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/multiprocessing/queues.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/multiprocessing/reduction.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/multiprocessing/shared_memory.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/multiprocessing/sharedctypes.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/multiprocessing/spawn.pyi
@@ -1303,6 +1306,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/tkinter/tix.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/tkinter/ttk.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/token.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/tokenize.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/tomllib.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/trace.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/traceback.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/tracemalloc.pyi
