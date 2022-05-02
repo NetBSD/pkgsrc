@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:45:05 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/05/02 12:10:56 mef Exp $
 
-BLAKE2s (R/countrycode_1.3.0.tar.gz) = 7f246cba6dfa3960179613c1f0b1db52b83c1d10595f7398311887c8661c8a69
-SHA512 (R/countrycode_1.3.0.tar.gz) = 026048e5add8ab987298fe2db082b214c42cd7dc1edc18ad7fc0fd9827ae48cbce25991b687fe50f2d7b380a47a68c15ffe22e71f68ce7a85b7efdfd21e97e73
-Size (R/countrycode_1.3.0.tar.gz) = 504013 bytes
+BLAKE2s (R/countrycode_1.3.1.tar.gz) = dc1629e215300d7f53d926fa9cef3f01d3b7a028c2bfd51ff109e2332f58abd1
+SHA512 (R/countrycode_1.3.1.tar.gz) = 996f562fda0671e1b0b8c4c758b88869bb5c814a0c6ac91ee7cdc974824e710bab8d42398ac94bf6631f9c72e2c9c2f5cda0cbae1649795244c8b4c77ed45801
+Size (R/countrycode_1.3.1.tar.gz) = 504729 bytes

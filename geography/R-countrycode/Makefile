@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2021/09/20 04:11:53 mef Exp $
+# $NetBSD: Makefile,v 1.7 2022/05/02 12:10:56 mef Exp $
 
 R_PKGNAME=	countrycode
-R_PKGVER=	1.3.0
+R_PKGVER=	1.3.1
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
