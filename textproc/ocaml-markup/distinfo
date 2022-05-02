@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:22:24 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/05/02 18:20:27 jaapb Exp $
 
-BLAKE2s (markup-0.8.2.tar.gz) = 848ab51d9aac717c2ce34007046f89697e58426501866780948133e7be927fad
-SHA512 (markup-0.8.2.tar.gz) = d529e5bf8ef154244603474a5e017d0a62baf64e3550346e8440adcc1166576813a22b17d0419b0399d35673f463bea5e2ae46ab5abef3f3b9befc4821fd7e1b
-Size (markup-0.8.2.tar.gz) = 280961 bytes
+BLAKE2s (markup-1.0.3.tar.gz) = 76a924296732684ba9c593a134c1620579d8bb5eb9f5dd2d3cc93bab4de62d83
+SHA512 (markup-1.0.3.tar.gz) = 1bb030fa2d79f7a7ac2d04c07c72a39e83620757b1d7d8a33eea1ec9b4c32883a67de45d1eea9bfa6533ae8076009fab9af5f180ad2be9c1fef66e3e5937048a
+Size (markup-1.0.3.tar.gz) = 281554 bytes
