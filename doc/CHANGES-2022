@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2236 2022/05/02 13:56:24 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2237 2022/05/02 14:04:49 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3512,3 +3512,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ocaml-mmap to 1.2.0 [jaapb 2022-05-02]
 	Updated devel/ocaml-ocplib-endian to 1.2 [jaapb 2022-05-02]
 	Updated devel/ocaml-seq to 0.2.2 [jaapb 2022-05-02]
+	Updated devel/ocaml-lwt to 5.5.0 [jaapb 2022-05-02]
