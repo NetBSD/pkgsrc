@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2021/03/08 08:12:53 jaapb Exp $
+# $NetBSD: Makefile,v 1.45 2022/05/02 14:02:09 jaapb Exp $
 #
 
-PKGREVISION= 1
 .include "Makefile.common"
 
 PKGNAME=	ocaml-${DISTNAME}
@@ -27,7 +26,6 @@ MAKE_ENV+=	LWT_DISCOVER_ARGUMENTS="--use-pthread true --use-libev true --verbose
 .include "../../devel/ocaml-migrate-parsetree/buildlink3.mk"
 .include "../../devel/ocaml-mmap/buildlink3.mk"
 .include "../../devel/ocaml-ocplib-endian/buildlink3.mk"
-.include "../../devel/ocaml-ppx_tools_versioned/buildlink3.mk"
 .include "../../devel/ocaml-result/buildlink3.mk"
 .include "../../devel/ocaml-seq/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

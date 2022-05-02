@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2020/04/21 11:29:59 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.19 2022/05/02 14:02:09 jaapb Exp $
 ${OCAML_SITELIB}/lwt/META
 ${OCAML_SITELIB}/lwt/dune-package
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt/lwt.a
@@ -53,6 +53,12 @@ ${OCAML_SITELIB}/lwt/lwt_result.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt/lwt_result.cmx
 ${OCAML_SITELIB}/lwt/lwt_result.ml
 ${OCAML_SITELIB}/lwt/lwt_result.mli
+${OCAML_SITELIB}/lwt/lwt_seq.cmi
+${OCAML_SITELIB}/lwt/lwt_seq.cmt
+${OCAML_SITELIB}/lwt/lwt_seq.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lwt/lwt_seq.cmx
+${OCAML_SITELIB}/lwt/lwt_seq.ml
+${OCAML_SITELIB}/lwt/lwt_seq.mli
 ${OCAML_SITELIB}/lwt/lwt_sequence.cmi
 ${OCAML_SITELIB}/lwt/lwt_sequence.cmt
 ${OCAML_SITELIB}/lwt/lwt_sequence.cmti
