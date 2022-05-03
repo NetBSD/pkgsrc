@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.10 2019/10/10 14:16:33 wiz Exp $
+# $NetBSD: options.mk,v 1.11 2022/05/03 09:40:28 jaapb Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ocamlnet
 PKG_SUPPORTED_OPTIONS=	gtk2 gnutls
 PKG_SUGGESTED_OPTIONS=	gnutls
 
-PLIST_VARS+=		gnutls cmxs
+PLIST_VARS+=		gnutls
 
 .include "../../mk/bsd.prefs.mk"
 
