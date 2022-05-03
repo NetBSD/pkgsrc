@@ -1,6 +1,7 @@
-$NetBSD: patch-src_netsys_netsys__c.c,v 1.6 2016/02/03 13:19:33 jaapb Exp $
+$NetBSD: patch-src_netsys_netsys__c.c,v 1.7 2022/05/03 09:40:28 jaapb Exp $
 
 Work around absence of AT_REMOVEDIR, as on NetBSD 6.0.
+
 --- src/netsys/netsys_c.c.orig	2015-06-21 15:26:42.000000000 +0000
 +++ src/netsys/netsys_c.c
 @@ -432,6 +432,10 @@ CAMLprim value netsys_at_fdcwd(value dum
