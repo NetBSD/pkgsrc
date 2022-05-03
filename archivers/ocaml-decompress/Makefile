@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2021/03/08 08:12:46 jaapb Exp $
+# $NetBSD: Makefile,v 1.3 2022/05/03 19:45:12 jaapb Exp $
 
-GITHUB_PROJECT=	decompress
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	${GITHUB_PROJECT}-0.8.1
+DISTNAME=	${GITHUB_PROJECT}-1.4.3
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
+GITHUB_PROJECT=	decompress
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	https://github.com/mirage/decompress/
