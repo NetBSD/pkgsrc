@@ -1,0 +1,13 @@
+$NetBSD: patch-configure.in,v 1.1 2022/05/03 18:29:18 jaapb Exp $
+
+Include the ocaml m4 file for autoconf to find
+
+--- configure.in.orig	2021-01-18 16:38:53.000000000 +0000
++++ configure.in
+@@ -1,5 +1,5 @@
+ # autoconf input using ocaml.m4
+-
++m4_include([ocaml.m4])
+ AC_INIT(bz2.mli)
+ 
+ use_findlib=yes
