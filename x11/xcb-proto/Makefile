@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2022/04/18 19:12:26 adam Exp $
+# $NetBSD: Makefile,v 1.28 2022/05/03 21:42:49 wiz Exp $
 
-DISTNAME=	xcb-proto-1.14.1
-PKGREVISION=	4
+DISTNAME=	xcb-proto-1.15
 CATEGORIES=	x11
 MASTER_SITES=	https://xorg.freedesktop.org/archive/individual/proto/
 EXTRACT_SUFX=	.tar.xz
