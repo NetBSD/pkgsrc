@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2019/03/05 16:21:31 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/05/03 09:09:08 jaapb Exp $
 ${OCAML_SITELIB}/stdio/META
 ${OCAML_SITELIB}/stdio/dune-package
-${OCAML_SITELIB}/stdio/import.ml
 ${OCAML_SITELIB}/stdio/in_channel.ml
 ${OCAML_SITELIB}/stdio/in_channel.mli
 ${OCAML_SITELIB}/stdio/opam
@@ -20,10 +19,7 @@ ${OCAML_SITELIB}/stdio/stdio.mli
 ${OCAML_SITELIB}/stdio/stdio__.cmi
 ${OCAML_SITELIB}/stdio/stdio__.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/stdio/stdio__.cmx
-${PLIST.ocaml-opt}${OCAML_SITELIB}/stdio/stdio__.ml
-${OCAML_SITELIB}/stdio/stdio__Import.cmi
-${OCAML_SITELIB}/stdio/stdio__Import.cmt
-${PLIST.ocaml-opt}${OCAML_SITELIB}/stdio/stdio__Import.cmx
+${OCAML_SITELIB}/stdio/stdio__.ml
 ${OCAML_SITELIB}/stdio/stdio__In_channel.cmi
 ${OCAML_SITELIB}/stdio/stdio__In_channel.cmt
 ${OCAML_SITELIB}/stdio/stdio__In_channel.cmti
@@ -34,4 +30,5 @@ ${OCAML_SITELIB}/stdio/stdio__Out_channel.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/stdio/stdio__Out_channel.cmx
 share/doc/stdio/CHANGES.md
 share/doc/stdio/LICENSE.md
-share/doc/stdio/README.org
+share/doc/stdio/README.md
+share/doc/stdio/odoc-pages/index.mld
