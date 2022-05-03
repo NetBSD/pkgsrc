@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1311 2022/05/03 19:14:39 pin Exp $
+# $NetBSD: Makefile,v 1.1312 2022/05/03 19:18:16 pin Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -166,6 +166,7 @@ SUBDIR+=	cawf
 SUBDIR+=	cdif
 SUBDIR+=	chasen
 SUBDIR+=	chasen-base
+SUBDIR+=	choose
 SUBDIR+=	cityhash
 SUBDIR+=	cjose
 SUBDIR+=	cldr-emoji-annotation
