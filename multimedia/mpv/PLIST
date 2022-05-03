@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2020/12/19 11:27:51 leot Exp $
+@comment $NetBSD: PLIST,v 1.12 2022/05/03 07:04:27 nia Exp $
 bin/mpv
 include/mpv/client.h
 include/mpv/opengl_cb.h
@@ -14,9 +14,9 @@ share/applications/mpv.desktop
 share/bash-completion/completions/mpv
 share/doc/mpv/input.conf
 share/doc/mpv/mplayer-input.conf
-share/doc/mpv/mpv.conf
 share/doc/mpv/restore-old-bindings.conf
 share/examples/mpv/encoding-profiles.conf
+share/examples/mpv/mpv.conf
 share/icons/hicolor/128x128/apps/mpv.png
 share/icons/hicolor/16x16/apps/mpv.png
 share/icons/hicolor/32x32/apps/mpv.png
