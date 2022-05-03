@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1312 2022/05/03 19:18:16 pin Exp $
+# $NetBSD: Makefile,v 1.1313 2022/05/03 19:22:29 pin Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -367,6 +367,7 @@ SUBDIR+=	hs-yaml
 SUBDIR+=	html
 SUBDIR+=	html2text
 SUBDIR+=	html2wml
+SUBDIR+=	htmlq
 SUBDIR+=	hugs-HaXml
 SUBDIR+=	hunspell
 SUBDIR+=	hunspell-af_ZA
