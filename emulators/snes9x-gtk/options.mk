@@ -1,12 +1,9 @@
-# $NetBSD: options.mk,v 1.4 2020/04/01 10:08:15 nia Exp $
+# $NetBSD: options.mk,v 1.5 2022/05/03 17:09:19 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.snes9x-gtk
 PKG_SUPPORTED_OPTIONS=		alsa opengl pulseaudio portaudio wayland
 
-PKG_OPTIONS_REQUIRED_GROUPS=	gtk
-PKG_OPTIONS_GROUP.gtk=		gtk2 gtk3
-
-PKG_SUGGESTED_OPTIONS+=		gtk3 opengl
+PKG_SUGGESTED_OPTIONS+=		opengl
 PKG_SUGGESTED_OPTIONS.Linux+=	alsa
 
 .include "../../mk/oss.buildlink3.mk"
@@ -27,20 +24,6 @@ PKG_SUGGESTED_OPTIONS+=		wayland
 .include "../../audio/alsa-lib/buildlink3.mk"
 .else
 MESON_ARGS+=	-Dalsa=false
-.endif
-
-.if !empty(PKG_OPTIONS:Mgtk2)
-.include "../../x11/gtk2/buildlink3.mk"
-MESON_ARGS+=	-Dgtk2=true
-.else
-MESON_ARGS+=	-Dgtk2=false
-.endif
-
-.if !empty(PKG_OPTIONS:Mgtk3)
-.include "../../x11/gtk3/buildlink3.mk"
-MESON_ARGS+=	-Dgtk3=true
-.else
-MESON_ARGS+=	-Dgtk3=false
 .endif
 
 .if !empty(PKG_OPTIONS:Mopengl)
