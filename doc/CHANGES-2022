@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2268 2022/05/03 17:15:15 nia Exp $
+$NetBSD: CHANGES-2022,v 1.2269 2022/05/03 17:53:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3546,3 +3546,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated emulators/snes9x-gtk to 1.61 [nia 2022-05-03]
 	Updated emulators/libretro-snes9x to 1.61 [nia 2022-05-03]
 	Updated devel/SDL2 to 2.0.22 [nia 2022-05-03]
+	Updated devel/py-astroid to 2.11.4 [adam 2022-05-03]
+	Updated devel/py-pylint to 2.13.8 [adam 2022-05-03]
