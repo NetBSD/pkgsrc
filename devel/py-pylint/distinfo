@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.51 2022/04/21 07:36:29 adam Exp $
+$NetBSD: distinfo,v 1.52 2022/05/03 17:52:55 adam Exp $
 
-BLAKE2s (pylint-2.13.7.tar.gz) = f76497016fadc8300682df197474f248353e67a24ca1454301cf598502706628
-SHA512 (pylint-2.13.7.tar.gz) = 784b7e8bdc775a9ad7d248535c6c19e3079e7975d4bd976adef40fa9f60603da0b0323e76cc6b138bc29bd591fbec6f9b679055b33f59c0af549a97b7c7c305c
-Size (pylint-2.13.7.tar.gz) = 359826 bytes
+BLAKE2s (pylint-2.13.8.tar.gz) = 44a5a62c691f914c0fba3dad90f51c75c020425400cc5780635269a61d095d5d
+SHA512 (pylint-2.13.8.tar.gz) = 2a711eaae64070cda8afe886be3b0f68bff1d90bf4bb7aae3eb978c579732e86e04c6de335d02c97d33fd20e9e18471428b9c28ed5544a7223c9f7f7628c252c
+Size (pylint-2.13.8.tar.gz) = 360092 bytes
