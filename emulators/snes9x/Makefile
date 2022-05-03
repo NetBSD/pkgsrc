@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2020/04/01 10:08:15 nia Exp $
-
-PKGREVISION=	1
+# $NetBSD: Makefile,v 1.60 2022/05/03 17:09:19 nia Exp $
 
 .include "../../emulators/snes9x/Makefile.common"
 
@@ -17,20 +15,6 @@ USE_TOOLS+=		gmake pkg-config
 CONFIGURE_ARGS+=	--enable-netplay
 
 CONFIGURE_ARGS+=	--with-system-zip
-
-.include "../../mk/oss.buildlink3.mk"
-
-.if ${OSS_TYPE} != "none"
-SUBST_CLASSES+=		oss
-SUBST_STAGE.oss=	pre-configure
-SUBST_MESSAGE.oss=	Correct path to OSS device.
-SUBST_FILES.oss+=	unix/unix.cpp
-SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
-
-CONFIGURE_ARGS+=	--enable-sound
-.else
-PKG_SKIP_REASON+=	"No sound support on this platform"
-.endif
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/doc/snes9x
@@ -51,6 +35,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/unix/docs/readme_unix.html \
 	    ${DESTDIR}${PREFIX}/share/doc/snes9x
 
+.include "options.mk"
 .include "../../archivers/minizip/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

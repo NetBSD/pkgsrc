@@ -1,17 +1,20 @@
-# $NetBSD: Makefile.common,v 1.5 2020/04/01 10:08:15 nia Exp $
+# $NetBSD: Makefile.common,v 1.6 2022/05/03 17:09:19 nia Exp $
 
 # used by emulators/libretro-snes9x/Makefile
 # used by emulators/snes9x/Makefile
 # used by emulators/snes9x-gtk/Makefile
 
-SNES9X_VERSION=		1.60
+SNES9X_VERSION=		1.61
 DISTNAME=		snes9x-${SNES9X_VERSION}
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_GITHUB:=snes9xgit/}
 GITHUB_PROJECT=		snes9x
 GITHUB_TAG=		${SNES9X_VERSION}
 
+GITHUB_SUBMODULES+=	KhronosGroup SPIRV-Cross 1458bae62ec67ea7d12c5a13b740e23ed4bb226c shaders/SPIRV-Cross
+GITHUB_SUBMODULES+=	KhronosGroup glslang bcf6a2430e99e8fc24f9f266e99316905e6d5134 shaders/glslang
+
 HOMEPAGE=		http://www.snes9x.com/
 LICENSE=		snes9x-license
 
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++

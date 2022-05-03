@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2019/03/05 12:12:31 nia Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/05/03 17:09:19 nia Exp $
 bin/snes9x-gtk
 share/applications/snes9x-gtk.desktop
 share/icons/hicolor/128x128/apps/snes9x.png
@@ -13,4 +13,6 @@ share/locale/ja/LC_MESSAGES/snes9x-gtk.mo
 share/locale/pt_BR/LC_MESSAGES/snes9x-gtk.mo
 share/locale/ru/LC_MESSAGES/snes9x-gtk.mo
 share/locale/sr@latin/LC_MESSAGES/snes9x-gtk.mo
+share/locale/uk/LC_MESSAGES/snes9x-gtk.mo
+share/locale/zh_CN/LC_MESSAGES/snes9x-gtk.mo
 share/snes9x/cheats.bml
