@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/05/02 21:01:37 pin Exp $
+# $NetBSD: Makefile,v 1.2 2022/05/03 06:22:22 nia Exp $
 
 DISTNAME=	termatrix-1.0.0
 CATEGORIES=	games
@@ -7,7 +7,7 @@ GITHUB_TAG=	25d0f655c50d63deaeff1e39a1bf59da927aa3f5
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/joeledwards/termatrix/
-COMMENT=	Cli to simulate the display from The Matrix
+COMMENT=	Terminal application to simulate the display from The Matrix
 LICENSE=	isc
 
 .include "cargo-depends.mk"
