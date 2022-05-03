@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2022/05/03 19:34:55 pin Exp $
+bin/xh
+man/man1/xh.1
+share/examples/xh/auto-completion/_xh
+share/examples/xh/auto-completion/_xh.ps1
+share/examples/xh/auto-completion/xh.bash
+share/examples/xh/auto-completion/xh.fish

@@ -1,0 +1,3 @@
+xh is a friendly and fast tool for sending HTTP requests. It reimplements as
+much as possible of HTTPie's, https://httpie.io/ excellent design, with a focus
+on improved performance.
