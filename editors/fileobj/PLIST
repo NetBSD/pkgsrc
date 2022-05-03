@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/01/10 08:15:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/05/03 15:12:33 tkusumi Exp $
 bin/fileobj-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -23,6 +23,9 @@ ${PYSITELIB}/fileobj/candidate.pyo
 ${PYSITELIB}/fileobj/chunk.py
 ${PYSITELIB}/fileobj/chunk.pyc
 ${PYSITELIB}/fileobj/chunk.pyo
+${PYSITELIB}/fileobj/cmp.py
+${PYSITELIB}/fileobj/cmp.pyc
+${PYSITELIB}/fileobj/cmp.pyo
 ${PYSITELIB}/fileobj/console.py
 ${PYSITELIB}/fileobj/console.pyc
 ${PYSITELIB}/fileobj/console.pyo
@@ -188,6 +191,9 @@ ${PYSITELIB}/fileobj/magic.pyo
 ${PYSITELIB}/fileobj/marks.py
 ${PYSITELIB}/fileobj/marks.pyc
 ${PYSITELIB}/fileobj/marks.pyo
+${PYSITELIB}/fileobj/md.py
+${PYSITELIB}/fileobj/md.pyc
+${PYSITELIB}/fileobj/md.pyo
 ${PYSITELIB}/fileobj/methods.py
 ${PYSITELIB}/fileobj/methods.pyc
 ${PYSITELIB}/fileobj/methods.pyo
