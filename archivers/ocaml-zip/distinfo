@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 09:57:11 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/05/03 09:27:09 jaapb Exp $
 
-BLAKE2s (camlzip-1.07.tar.gz) = f5d75f3e1716febe1e2d4dcf86940031d6d1f46ad00d2792b268fc173e3266e6
-SHA512 (camlzip-1.07.tar.gz) = b92e9db002b9b398fd132c6ecd8098fac4cc7ddb3f770cc412990dcdf4bd62ba358c762d31fb0b5cd6b32f20d3bf4b3410ca6e86c511a438b92ece940f9831bd
-Size (camlzip-1.07.tar.gz) = 26652 bytes
+BLAKE2s (camlzip-1.11.tar.gz) = 5f349eebac193485d2e9c06b34663640a89032ad0f0df31c28da1526577ac86c
+SHA512 (camlzip-1.11.tar.gz) = 4d69ef900437e66e00cd345497ec70f407f28cd8344ee5f2fad685d3bfe356924597d1854b752f2841b4007f96d6e0307cfae7e13cfb6f74951ae3eba5198a06
+Size (camlzip-1.11.tar.gz) = 28483 bytes
