@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21759 2022/05/03 08:14:18 wiz Exp $
+$NetBSD: TODO,v 1.21760 2022/05/03 08:27:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -361,7 +361,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o GNUMail-1.2.2
 	o Gorm-1.2.26
 	o HElib-2.1.0
-	o ImageMagick-7.1.0.32
 	o ImageMagick6-6.9.12.8
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
