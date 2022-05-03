@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.91 2022/04/18 19:09:52 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.92 2022/05/03 08:27:11 wiz Exp $
 
 BUILDLINK_TREE+=	ImageMagick
 
@@ -27,6 +27,9 @@ pkgbase := ImageMagick
 .if ${PKG_BUILD_OPTIONS.ImageMagick:Mopenexr}
 .include "../../graphics/openexr/buildlink3.mk"
 .endif
+.if ${PKG_BUILD_OPTIONS.ImageMagick:Mtiff}
+.include "../../graphics/tiff/buildlink3.mk"
+.endif
 .if ${PKG_BUILD_OPTIONS.ImageMagick:Mwmf}
 .include "../../graphics/libwmf/buildlink3.mk"
 .endif
@@ -45,7 +48,6 @@ pkgbase := ImageMagick
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../print/ghostscript/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
