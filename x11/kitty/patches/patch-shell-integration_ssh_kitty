@@ -1,0 +1,15 @@
+$NetBSD: patch-shell-integration_ssh_kitty,v 1.1 2022/05/03 18:50:24 nia Exp $
+
+Fix a shell portability issue.
+
+--- shell-integration/ssh/kitty.orig	2022-04-11 14:01:45.000000000 +0000
++++ shell-integration/ssh/kitty
+@@ -24,7 +24,7 @@ exec_kitty() {
+ 
+ lock_dir=""
+ script_path=$(command readlink -f "$0" 2> /dev/null)
+-[ $? == 0 ] || script_path="$0"
++[ $? = 0 ] || script_path="$0"
+ script_dir=$(command dirname "$script_path")
+ install_dir="$(command dirname "$script_dir")/install"
+ remote_kitty_version_file="$script_dir/../version"
