@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2272 2022/05/03 19:14:32 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2273 2022/05/03 19:15:08 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3551,3 +3551,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated emulators/dosbox-x to 0.83.25 [nia 2022-05-03]
 	Updated archivers/ocaml-bz2 to 0.7.0 [jaapb 2022-05-03]
 	Updated devel/ocaml-optint to 0.2.0 [jaapb 2022-05-03]
+	Added textproc/angle-grinder version 0.18.0 [pin 2022-05-03]
