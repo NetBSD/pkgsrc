@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2269 2022/05/03 17:53:17 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2270 2022/05/03 18:26:37 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3548,3 +3548,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/SDL2 to 2.0.22 [nia 2022-05-03]
 	Updated devel/py-astroid to 2.11.4 [adam 2022-05-03]
 	Updated devel/py-pylint to 2.13.8 [adam 2022-05-03]
+	Updated emulators/dosbox-x to 0.83.25 [nia 2022-05-03]
