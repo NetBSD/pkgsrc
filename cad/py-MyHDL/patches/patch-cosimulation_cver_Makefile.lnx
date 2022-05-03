@@ -1,0 +1,27 @@
+$NetBSD: patch-cosimulation_cver_Makefile.lnx,v 1.1 2022/05/03 17:38:34 nia Exp $
+
+Use LDFLAGS (more standard than 'LFLAGS', allows pkgsrc to pass
+security hardening flags). Don't override CFLAGS.
+
+--- cosimulation/cver/Makefile.lnx.orig	2018-04-02 07:30:11.000000000 +0000
++++ cosimulation/cver/Makefile.lnx
+@@ -6,8 +6,8 @@ INCS=-I$(HOME)/Tools/gplcver-2.12a.src/p
+ 
+ # maybe want -O<something> and/or -g
+ # -fno-stack-protector apparently needed with newer gcc's
+-CFLAGS= -fPIC -fno-stack-protector -Wall -g $(INCS)
+-LFLAGS= -G -shared -export-dynamic
++CFLAGS+= -fPIC -fno-stack-protector -Wall -g $(INCS)
++LDFLAGS+= -G -shared -export-dynamic
+ 
+ # change to your compiler
+ CC=gcc
+@@ -19,7 +19,7 @@ myhdl_vpi.o:	myhdl_vpi.c 
+ 
+ # make rules for dynamic libaries
+ myhdl_vpi.so:	myhdl_vpi.o
+-	$(LD) $(LFLAGS) myhdl_vpi.o -o myhdl_vpi.so
++	$(LD) $(LDFLAGS) myhdl_vpi.o -o myhdl_vpi.so
+ 
+ clean:
+ 	-rm *.o *.so
