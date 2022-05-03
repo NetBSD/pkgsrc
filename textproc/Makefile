@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1310 2022/05/03 13:01:51 pin Exp $
+# $NetBSD: Makefile,v 1.1311 2022/05/03 19:14:39 pin Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -50,6 +50,7 @@ SUBDIR+=	WordNet
 SUBDIR+=	aha
 SUBDIR+=	aiksaurus
 SUBDIR+=	align
+SUBDIR+=	angle-grinder
 SUBDIR+=	ansifilter
 SUBDIR+=	antiword
 SUBDIR+=	artha
