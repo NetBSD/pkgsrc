@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2266 2022/05/03 13:02:17 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2267 2022/05/03 17:11:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3542,3 +3542,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/felix to 0.8.0 [pin 2022-05-03]
 	Updated games/termatrix to 1.0.2 [pin 2022-05-03]
 	Added textproc/tuc version 0.5.0 [pin 2022-05-03]
+	Updated emulators/snes9x to 1.61 [nia 2022-05-03]
+	Updated emulators/snes9x-gtk to 1.61 [nia 2022-05-03]
+	Updated emulators/libretro-snes9x to 1.61 [nia 2022-05-03]
