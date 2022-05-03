@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21765 2022/05/03 19:47:54 jaapb Exp $
+$NetBSD: TODO,v 1.21766 2022/05/03 20:03:45 nia Exp $
 
 Suggested new packages
 ======================
@@ -1665,7 +1665,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o swi-prolog-jpl-8.3.22
 	o swi-prolog-lite-8.3.22
 	o swi-prolog-packages-8.3.22
-	o swift-4.0.2
 	o sympa-6.2.60
 	o syndication-5.81.0
 	o syntax-highlighting-5.81.0
