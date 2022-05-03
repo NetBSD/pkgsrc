@@ -1,6 +1,7 @@
-$NetBSD: patch-Makefile.in,v 1.1 2012/09/16 12:30:46 jaapb Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2022/05/03 18:29:18 jaapb Exp $
 
 Install into the right DESTDIR
+
 --- Makefile.in.orig	2008-11-08 11:19:40.000000000 +0000
 +++ Makefile.in
 @@ -43,10 +43,10 @@ install : findlib-install
