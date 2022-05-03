@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/04/30 21:15:33 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/05/03 13:17:24 tnn Exp $
 
 DISTNAME=		bitmap-1.1.0
 CATEGORIES=		x11
@@ -13,6 +13,8 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 
 MAKE_FLAGS+=		appdefaultdir=${PREFIX}/lib/X11/app-defaults
+
+CHECK_PORTABILITY_SKIP+=	test/round-trip-test.in
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 
