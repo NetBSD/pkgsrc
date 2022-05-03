@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/04/29 23:29:17 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/05/03 17:33:09 nia Exp $
 
 DISTNAME=	fixtures-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,10 +15,11 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.0.0:../../lang/py-six
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+TOOL_DEPENDS+=		${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
+
 # 9 test failures as of 3.0.0
 # https://github.com/testing-cabal/fixtures/issues/35
 TEST_DEPENDS+=		${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-TEST_DEPENDS+=		${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
 # needs py-testtools for testing, but that depends on this
 #TEST_DEPENDS+=		${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
 
