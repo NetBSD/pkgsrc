@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2276 2022/05/03 19:27:16 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2277 2022/05/03 19:32:59 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3555,3 +3555,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added textproc/choose version 1.3.4 [pin 2022-05-03]
 	Added textproc/htmlq version 0.4.0 [pin 2022-05-03]
 	Updated devel/ocaml-fmt to 0.9.0 [jaapb 2022-05-03]
+	Updated devel/ocaml-rresult to 0.7.0 [jaapb 2022-05-03]
