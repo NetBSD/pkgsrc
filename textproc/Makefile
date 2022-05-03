@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1309 2022/04/30 01:40:42 mef Exp $
+# $NetBSD: Makefile,v 1.1310 2022/05/03 13:01:51 pin Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1332,6 +1332,7 @@ SUBDIR+=	translate-shell
 SUBDIR+=	translate-toolkit
 SUBDIR+=	tree-sitter
 SUBDIR+=	troffcvt
+SUBDIR+=	tuc
 SUBDIR+=	uchardet
 SUBDIR+=	ugrep
 SUBDIR+=	unac
