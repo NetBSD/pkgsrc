@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2254 2022/05/02 21:03:04 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2255 2022/05/03 01:27:17 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3531,3 +3531,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/nodejs to 16.15.0 [adam 2022-05-02]
 	Updated www/py-flask-caching to 1.10.1 [adam 2022-05-02]
 	Added games/termatrix version 1.0.0 [pin 2022-05-02]
+	Updated devel/git to 2.36.0 [gutteridge 2022-05-03]
