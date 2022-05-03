@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/02/14 09:07:04 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2022/05/03 19:11:52 jaapb Exp $
 
-DISTNAME=	optint-0.1.0
+DISTNAME=	optint-0.2.0
 PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
