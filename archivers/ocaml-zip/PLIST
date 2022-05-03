@@ -1,18 +1,24 @@
-@comment $NetBSD: PLIST,v 1.6 2017/07/11 10:00:51 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/05/03 09:27:09 jaapb Exp $
 ${OCAML_SITELIB}/camlzip/META
 ${OCAML_SITELIB}/zip/META
 ${OCAML_SITELIB}/zip/dllcamlzip.so
 ${OCAML_SITELIB}/zip/gzip.cmi
+${OCAML_SITELIB}/zip/gzip.cmt
+${OCAML_SITELIB}/zip/gzip.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/zip/gzip.cmx
 ${OCAML_SITELIB}/zip/gzip.mli
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/zip/libcamlzip.a
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/zip/zip.a
 ${OCAML_SITELIB}/zip/zip.cma
 ${OCAML_SITELIB}/zip/zip.cmi
+${OCAML_SITELIB}/zip/zip.cmt
+${OCAML_SITELIB}/zip/zip.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/zip/zip.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/zip/zip.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/zip/zip.cmxs
 ${OCAML_SITELIB}/zip/zip.mli
 ${OCAML_SITELIB}/zip/zlib.cmi
+${OCAML_SITELIB}/zip/zlib.cmt
+${OCAML_SITELIB}/zip/zlib.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/zip/zlib.cmx
 ${OCAML_SITELIB}/zip/zlib.mli
