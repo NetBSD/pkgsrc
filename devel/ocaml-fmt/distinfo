@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:15:49 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/05/03 19:24:37 jaapb Exp $
 
-BLAKE2s (fmt-0.8.5.tbz) = 999529b772debec374f03df0a39cf31cf5b380a2e90c6c91160dc2655d4fb8fa
-SHA512 (fmt-0.8.5.tbz) = 3ec8991ac008b0b8a942b4aec7a24d7a9cb047b68c81b2abe6e3074bf6f54c4e30a7cf6707c93edbd516ed5ef05de1adf1a879267f1cac4ccbc441de78b1d37c
-Size (fmt-0.8.5.tbz) = 14348 bytes
+BLAKE2s (fmt-0.9.0.tbz) = 173a7eaefb3117db2a4a1175a771e1de1a94f5284c5b324ae6a86ba876653cdf
+SHA512 (fmt-0.9.0.tbz) = 66cf4b8bb92232a091dfda5e94d1c178486a358cdc34b1eec516d48ea5acb6209c0dfcb416f0c516c50ddbddb3c94549a45e4a6d5c5fd1c81d3374dec823a83b
+Size (fmt-0.9.0.tbz) = 22699 bytes

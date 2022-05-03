@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/12 17:41:27 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/05/03 19:24:37 jaapb Exp $
 ${OCAML_SITELIB}/fmt/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/fmt/fmt.a
 ${OCAML_SITELIB}/fmt/fmt.cma
@@ -21,7 +21,6 @@ ${OCAML_SITELIB}/fmt/fmt_top.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/fmt/fmt_top.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/fmt/fmt_top.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/fmt/fmt_top.cmxs
-${OCAML_SITELIB}/fmt/fmt_top_init.ml
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/fmt/fmt_tty.a
 ${OCAML_SITELIB}/fmt/fmt_tty.cma
 ${OCAML_SITELIB}/fmt/fmt_tty.cmi
@@ -30,6 +29,7 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/fmt/fmt_tty.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/fmt/fmt_tty.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/fmt/fmt_tty.cmxs
 ${OCAML_SITELIB}/fmt/fmt_tty.mli
+${OCAML_SITELIB}/fmt/fmt_tty_top_init.ml
 ${OCAML_SITELIB}/fmt/opam
 share/doc/fmt/CHANGES.md
 share/doc/fmt/LICENSE.md
