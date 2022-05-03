@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2258 2022/05/03 09:01:36 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.2259 2022/05/03 09:09:18 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3534,3 +3534,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/git to 2.36.0 [gutteridge 2022-05-03]
 	Updated graphics/ImageMagick to 7.1.0.32 [wiz 2022-05-03]
 	Added lang/gleam version 0.21.0 [nikita 2022-05-03]
+	Updated devel/ocaml-stdio to 0.15.0 [jaapb 2022-05-03]
