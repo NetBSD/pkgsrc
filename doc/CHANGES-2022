@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2280 2022/05/03 19:47:54 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2281 2022/05/03 20:03:44 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3559,3 +3559,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added www/xh version 0.16.0 [pin 2022-05-03]
 	Updated devel/ocaml-checkseum to 0.3.3 [jaapb 2022-05-03]
 	Updated archivers/ocaml-decompress to 1.4.3 [jaapb 2022-05-03]
+	Updated chat/swift to 4.0.2 [nia 2022-05-03]
