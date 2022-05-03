@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/12 17:49:59 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/05/03 19:30:18 jaapb Exp $
 ${OCAML_SITELIB}/rresult/META
 ${OCAML_SITELIB}/rresult/opam
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/rresult/rresult.a
@@ -18,3 +18,4 @@ ${OCAML_SITELIB}/rresult/rresult_top_init.ml
 share/doc/rresult/CHANGES.md
 share/doc/rresult/LICENSE.md
 share/doc/rresult/README.md
+share/doc/rresult/odoc-pages/index.mld
