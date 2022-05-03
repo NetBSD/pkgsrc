@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2262 2022/05/03 09:40:38 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2263 2022/05/03 10:11:28 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3538,3 +3538,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/pcre-ocaml to 7.5.0 [jaapb 2022-05-03]
 	Updated archivers/ocaml-zip to 1.11 [jaapb 2022-05-03]
 	Updated net/ocamlnet to 4.1.9 [jaapb 2022-05-03]
+	Updated net/erlang-idna to 6.1.1nb4 [nikita 2022-05-03]
