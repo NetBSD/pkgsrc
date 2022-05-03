@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2019/08/21 17:40:41 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2022/05/03 17:07:10 nia Exp $
 
 BUILDLINK_TREE+=	modular-xorg-server
 
@@ -9,6 +9,7 @@ MODULAR_XORG_SERVER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.modular-xorg-server+=	modular-xorg-server>=1.18
 BUILDLINK_PKGSRCDIR.modular-xorg-server?=	../../x11/modular-xorg-server
+BUILDLINK_INCDIRS.modular-xorg-server+=		include/xorg
 
 BUILDLINK_DEPMETHOD.libpciaccess=	full
 .include "../../sysutils/libpciaccess/buildlink3.mk"
