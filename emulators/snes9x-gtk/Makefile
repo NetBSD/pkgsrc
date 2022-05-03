@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.84 2022/03/28 10:53:05 tnn Exp $
+# $NetBSD: Makefile,v 1.85 2022/05/03 17:09:19 nia Exp $
 
-PKGREVISION= 15
 .include "../../emulators/snes9x/Makefile.common"
 
 PKGNAME=	snes9x-gtk-${SNES9X_VERSION}
@@ -14,7 +13,9 @@ USE_TOOLS+=	gawk
 
 CONFIGURE_DIRS=	gtk
 
-BUILD_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
+TOOL_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
+
+GCC_REQD+=	7 # C++17
 
 .include "../../mk/oss.buildlink3.mk"
 
@@ -41,6 +42,7 @@ LDFLAGS.SunOS+=		-lsocket -lnsl
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../x11/gtkmm3/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
 .include "../../lang/python/application.mk"
