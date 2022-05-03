@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/05/03 15:12:33 tkusumi Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/05/03 15:23:59 tkusumi Exp $
 bin/fileobj-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -122,6 +122,9 @@ ${PYSITELIB}/fileobj/ext/modules.pyo
 ${PYSITELIB}/fileobj/ext/pcidev.py
 ${PYSITELIB}/fileobj/ext/pcidev.pyc
 ${PYSITELIB}/fileobj/ext/pcidev.pyo
+${PYSITELIB}/fileobj/ext/pls.py
+${PYSITELIB}/fileobj/ext/pls.pyc
+${PYSITELIB}/fileobj/ext/pls.pyo
 ${PYSITELIB}/fileobj/ext/py.py
 ${PYSITELIB}/fileobj/ext/py.pyc
 ${PYSITELIB}/fileobj/ext/py.pyo
