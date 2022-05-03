@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1623 2022/04/30 10:02:24 wen Exp $
+# $NetBSD: Makefile,v 1.1624 2022/05/03 19:35:38 pin Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -1076,6 +1076,7 @@ SUBDIR+=	wslay
 SUBDIR+=	www6to4
 SUBDIR+=	wwwcount
 SUBDIR+=	wwwoffle
+SUBDIR+=	xh
 SUBDIR+=	xurl
 SUBDIR+=	yahttp
 SUBDIR+=	yaws
