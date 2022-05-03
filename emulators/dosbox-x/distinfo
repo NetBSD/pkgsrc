@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.24 2022/04/17 08:39:33 nia Exp $
+$NetBSD: distinfo,v 1.25 2022/05/03 18:26:24 nia Exp $
 
-BLAKE2s (dosbox-x-0.83.24.tar.gz) = 6c8d601b71c41a7046f7d2d5ab0d173887b10e165af245545e4acbb62dd554a9
-SHA512 (dosbox-x-0.83.24.tar.gz) = 2745fde5a767957f20d63fbde823d6991c282c149fc41c53968a83afcb679c741900aa84cc257b42ac5020d5b341b3c135a08907c41e60acda6e1c87549dd1f4
-Size (dosbox-x-0.83.24.tar.gz) = 64650623 bytes
+BLAKE2s (dosbox-x-0.83.25.tar.gz) = 8b0dd2da8dbc59ea12edb6e80506d7f2473d475ecf3c3ed27d5b80569552fe52
+SHA512 (dosbox-x-0.83.25.tar.gz) = 372214459150c7511e542a9f19e65dcede6ca6e5c57211f6a807bf324b25ea676ab5cf0743ef1e58ea3bdc503c6a7045bec4107f90f944f9400641ea6af826b7
+Size (dosbox-x-0.83.25.tar.gz) = 64715876 bytes
 SHA1 (patch-configure.ac) = 906aa99b5fce6224ef4c001d9bba1e4fc89a34f9
 SHA1 (patch-include_dosbox.h) = 6f7397b4a611511fc1782b1603c9f5cd51b74eb9
 SHA1 (patch-include_iconvpp.hpp) = dcf1428d202ad0b71b898741908f00445b55fd54
