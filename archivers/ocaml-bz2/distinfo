@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 09:57:11 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/05/03 18:29:18 jaapb Exp $
 
-BLAKE2s (camlbz2-0.6.0.tar.gz) = 262f949178cc52c91248963cac41e6a911b4f98e73975c01d5cb0e15a3fb343d
-SHA512 (camlbz2-0.6.0.tar.gz) = 1052536bb08c9d9f9bdf4a063a5a01389445b55117ce423dd1732de00cd79db5e4befb4ce5c81c5db8a6d40b28a2ac4b897bb00598fdccf76ea92a2966592680
-Size (camlbz2-0.6.0.tar.gz) = 57771 bytes
-SHA1 (patch-Makefile.in) = 461eaf03de4bafca9d174d7ad242b8c496b07742
+BLAKE2s (camlbz2-0.7.0.tar.gz) = 18734902bf0adefa59d0a44b799cbca983580626720822db92b4cacb1decf266
+SHA512 (camlbz2-0.7.0.tar.gz) = 570901199df4b5ef79e158f5309ff69d2b85babe002a0324244868f4201f0e9d6aeec377b2ec9a6bf657a29857dc13a0f63e05d162f76c7d412fa6c5f3c0e0f6
+Size (camlbz2-0.7.0.tar.gz) = 22769 bytes
+SHA1 (patch-Makefile.in) = 3178ff69e946d65c793a33aff1eda4fb6f007ae7
+SHA1 (patch-configure.in) = ee0798cc92a5796220fb3b176b4508c6d0936825
