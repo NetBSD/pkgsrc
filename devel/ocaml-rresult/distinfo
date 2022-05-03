@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:15:56 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/05/03 19:30:18 jaapb Exp $
 
-BLAKE2s (rresult-0.6.0.tbz) = 9b591195dfdff3986d6d239d19064db0a7cf38addb7ea3cf775a219fdfd47087
-SHA512 (rresult-0.6.0.tbz) = 66cb7acb525c17dde4e7572fa5a0d925466f8e759b90a12d952ca076d25de49404c962e061557f2255112fbf1d731f8da696acd536cbb9433a4b1d9662095c3a
-Size (rresult-0.6.0.tbz) = 7731 bytes
+BLAKE2s (rresult-0.7.0.tbz) = 2bf7729d5f04f708707d0ac9be2b59b9558df893c05639bf34ec7785314f4013
+SHA512 (rresult-0.7.0.tbz) = f1bb631c986996388e9686d49d5ae4d8aaf14034f6865c62a88fb58c48ce19ad2eb785327d69ca27c032f835984e0bd2efd969b415438628a31f3e84ec4551d3
+Size (rresult-0.7.0.tbz) = 8506 bytes
