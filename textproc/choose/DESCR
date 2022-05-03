@@ -1,0 +1,13 @@
+The AWK programming language is designed for text processing and is extremely
+capable in this endeavor. However, the awk command is not ideal for rapid shell
+use, with its requisite quoting of a line wrapped in curly braces, even for
+the simplest of programs.
+
+Likewise, cut is far from ideal for rapid shell use, because of its confusing
+syntax. Field separators and ranges are just plain difficult to get right on
+the first try.
+
+It is for these reasons that I present to you choose. It is not meant to be a
+drop-in or complete replacement for either of the aforementioned tools, but
+rather a simple and intuitive tool to reach for when the basics of awk or cut
+will do, but the overhead of getting them to behave should not be necessary.
