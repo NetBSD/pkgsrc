@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2022/04/24 13:13:43 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2022/05/03 01:26:54 tnn Exp $
 #
 
 DISTNAME=		secpanel-0.6.1
 CATEGORIES=		security
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sln2/}
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=secpanel/}
 EXTRACT_SUFX=		.tgz
 MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		https://web.archive.org/web/20210506224950/http://themediahost.de/secpanel/
