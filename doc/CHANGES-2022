@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2264 2022/05/03 12:57:41 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2265 2022/05/03 12:58:51 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3540,3 +3540,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/ocamlnet to 4.1.9 [jaapb 2022-05-03]
 	Updated net/erlang-idna to 6.1.1nb4 [nikita 2022-05-03]
 	Updated sysutils/felix to 0.8.0 [pin 2022-05-03]
+	Updated games/termatrix to 1.0.2 [pin 2022-05-03]
