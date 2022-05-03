@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/04/25 12:34:46 nikita Exp $
+# $NetBSD: Makefile,v 1.6 2022/05/03 09:08:36 nikita Exp $
 
 DISTNAME=	idna-6.1.1
 PKGREVISION=	3
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/benoitc/erlang-idna/
 COMMENT=	Pure Erlang IDNA implementation following the RFC5891
 LICENSE=	mit
 
+REBAR3_BUILD=	yes
 BUILD_DEPENDS+=	rebar3-[0-9]*:../../devel/rebar3
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
