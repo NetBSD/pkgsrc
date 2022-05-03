@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2022/01/10 08:15:33 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/05/03 15:12:33 tkusumi Exp $
 
-DISTNAME=	fileobj-0.7.106
+DISTNAME=	fileobj-0.7.107
 PKGREVISION=	2
 CATEGORIES=	editors python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kusumi/}
