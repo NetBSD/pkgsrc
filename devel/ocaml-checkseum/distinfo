@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/02/14 09:09:29 wiz Exp $
+$NetBSD: distinfo,v 1.6 2022/05/03 19:34:52 jaapb Exp $
 
-BLAKE2s (checkseum-0.3.2.tar.gz) = 60fa9e8b84522a57559d157e8420b6334ee186c4b9a55c2a33a5cb1bb79bb029
-SHA512 (checkseum-0.3.2.tar.gz) = 08de1ebbc83fb7edb6c1148b4793473a5b254d14a9d50818748fbfeea6e14977bd9399d62458f95949a60dcab10240ff299060af9159bffc3cc28708b7e92d63
-Size (checkseum-0.3.2.tar.gz) = 35826 bytes
+BLAKE2s (checkseum-0.3.3.tar.gz) = f8a482eb36f05286150a06f151e639e215eed016ab8bdc238969186493415a2a
+SHA512 (checkseum-0.3.3.tar.gz) = 85d7b1972061505b9ba428794ee2999d4f06556922cac50d925a8882012d10ae8ea97612c36542b89300f33dd2c1039145e7c114458224f7779dc5cbd98097df
+Size (checkseum-0.3.3.tar.gz) = 37691 bytes
