@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21757 2022/05/03 01:27:17 gutteridge Exp $
+$NetBSD: TODO,v 1.21758 2022/05/03 06:16:51 nia Exp $
 
 Suggested new packages
 ======================
@@ -1954,6 +1954,10 @@ Suggested cleanups in pkgsrc
 	  Affects: cross/h8300-hms-binutils, cross/h8300-hms-gcc,
 	  sysutils/apcupsd, sysutils/gnometoaster,
 	  sysutils/mtoolsfm, sysutils/xnc
+
+	o Convert packages to use mk/curses.buildlink3.mk instead of
+	  devel/ncurses/buildlink3.mk and devel/ncursesw/buildlink3.mk,
+	  test with NetBSD curses.
 
 	o Convert packages to use VARBASE instead of hardcoding /var.
 
