@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2256 2022/05/03 08:27:20 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2257 2022/05/03 09:00:56 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3533,3 +3533,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added games/termatrix version 1.0.0 [pin 2022-05-02]
 	Updated devel/git to 2.36.0 [gutteridge 2022-05-03]
 	Updated graphics/ImageMagick to 7.1.0.32 [wiz 2022-05-03]
+	Added lang/gleam version 0.21.0 [nikita 2022-05-03]
+	Added lang/gleam version 0.21.0 [nikita 2022-05-03]
