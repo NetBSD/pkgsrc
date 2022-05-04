@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2022/04/25 22:12:56 tnn Exp $
+# $NetBSD: Makefile.common,v 1.13 2022/05/04 17:51:33 jperkin Exp $
 # used by graphics/opencv/Makefile
 # used by graphics/opencv-contrib-face/Makefile
 #
@@ -34,6 +34,8 @@ CMAKE_ARGS+=		-DWITH_EIGEN=OFF
 CMAKE_ARGS+=		-DZLIB_ROOT=${BUILDLINK_PREFIX.zlib}
 CMAKE_ARGS.SunOS+=	-DENABLE_PRECOMPILED_HEADERS=OFF
 CMAKE_ARGS.SunOS+=	-DOPENCV_PYTHON_SKIP_LINKER_EXCLUDE_LIBS=ON
+
+BUILDLINK_TRANSFORM+=	rm:-Werror=non-virtual-dtor
 
 .include "../../mk/bsd.prefs.mk"
 
