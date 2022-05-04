@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2343 2022/05/04 18:36:09 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2344 2022/05/04 18:41:44 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3635,3 +3635,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ocaml-ppx_optional to 0.15.0 [jaapb 2022-05-04]
 	Updated devel/ocaml-ppx_pipebang to 0.15.0 [jaapb 2022-05-04]
 	Updated devel/ocaml-ppx_stable to 0.15.0 [jaapb 2022-05-04]
+	Updated devel/ocaml-typerep to 0.15.0 [jaapb 2022-05-04]
