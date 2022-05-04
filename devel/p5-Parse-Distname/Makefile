@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/04/30 00:03:35 wen Exp $
+# $NetBSD: Makefile,v 1.2 2022/05/04 08:13:40 wiz Exp $
 
 DISTNAME=	Parse-Distname-0.05
 PKGNAME=	p5-${DISTNAME}
@@ -10,10 +10,10 @@ HOMEPAGE=	https://metacpan.org/release/Parse-Distname
 COMMENT=	Parse a distribution name
 LICENSE=	${PERL5_LICENSE}
 
-BUILD_DEPENDS+=	p5-ExtUtils-MakeMaker-CPANfile>=0.06:../../devel/p5-ExtUtils-MakeMaker-CPANfile
-
-TEST_DEPENDS+=	p5-Test-Differences>=0:../../devel/p5-Test-Differences \
-		p5-Test-UseAllModules>=0.17:../../devel/p5-Test-UseAllModules
+BUILD_DEPENDS+=	p5-Module-CPANfile-[0-9]*:../../devel/p5-Module-CPANfile
+BUILD_DEPENDS+=	p5-ExtUtils-MakeMaker-CPANfile-[0-9]*:../../devel/p5-ExtUtils-MakeMaker-CPANfile
+TEST_DEPENDS+=	p5-Test-Differences>=0:../../devel/p5-Test-Differences
+TEST_DEPENDS+=	p5-Test-UseAllModules>=0.17:../../devel/p5-Test-UseAllModules
 
 PERL5_PACKLIST=	auto/Parse/Distname/.packlist
 
