@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.39 2021/03/08 08:13:06 jaapb Exp $
+# $NetBSD: Makefile,v 1.40 2022/05/04 09:08:23 jaapb Exp $
 #
 
-DISTNAME=	ocaml-ssl-0.5.9
-PKGREVISION=	2
+DISTNAME=	ocaml-ssl-0.5.10
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=savonet/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	https://github.com/savonet/ocaml-ssl

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 11:17:21 nia Exp $
+$NetBSD: distinfo,v 1.16 2022/05/04 09:08:23 jaapb Exp $
 
-BLAKE2s (ocaml-ssl-0.5.9.tar.gz) = 5d8562cc4f28bfd8d520526b0e56e365c2a39e70a9ced0c770c6c7549a9caecf
-SHA512 (ocaml-ssl-0.5.9.tar.gz) = 6826e5a6ab9f51013e8d097900f443d091e085e3d2d232a315a0e3a90ca334c9b9779d20dcae267f9ed961bc4a08fcb80372e669389c59a22d5c7706d37fcd5f
-Size (ocaml-ssl-0.5.9.tar.gz) = 32721 bytes
+BLAKE2s (ocaml-ssl-0.5.10.tar.gz) = eca411e128c391f677b6714d5962bacb40ccf2845aee8e70d5cc6b9a022eca32
+SHA512 (ocaml-ssl-0.5.10.tar.gz) = f2d0acc8dcdb0a36c8ad236f60c6e9d7f8f76ea25183017218953dbe3432a19de5b0be8214714add71b88b211ac78318f09429d4df7ecba1e19dc94d4414f0e1
+Size (ocaml-ssl-0.5.10.tar.gz) = 33951 bytes
