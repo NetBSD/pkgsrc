@@ -1,22 +1,20 @@
-# $NetBSD: Makefile,v 1.15 2021/03/08 08:12:46 jaapb Exp $
+# $NetBSD: Makefile,v 1.16 2022/05/04 10:06:59 jaapb Exp $
 
-VERSION=	2.3.0
+VERSION=	2.4.2
 GITHUB_PROJECT=	ocamldap
 GITHUB_TAG=	${VERSION}
 PKGNAME=	ocaml-ldap-${VERSION}
-PKGREVISION=	7
 DISTNAME=	ocamldap-${VERSION}
 CATEGORIES=	databases
-MASTER_SITES=	${MASTER_SITE_GITHUB:=jpdeplaix/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=kit-ty-kate/}
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	http://ocamldap.sourceforge.net/
+HOMEPAGE=	https://github.com/kit-ty-kate/ocamldap
 COMMENT=	OCamL implementation of the LDAP protocol
 LICENSE=	gnu-lgpl-v2.1
 
-HAS_CONFIGURE=		yes
 USE_LANGUAGES=		# none
-OCAML_USE_OASIS=	yes
+OCAML_USE_DUNE=		yes
 
 .include "../../mk/ocaml.mk"
 .include "../../devel/pcre-ocaml/buildlink3.mk"
