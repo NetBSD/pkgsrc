@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/13 11:39:36 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/05/04 16:37:41 jaapb Exp $
 ${OCAML_SITELIB}/jst-config/META
 ${OCAML_SITELIB}/jst-config/config.h
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/jst-config/config_h.a
@@ -11,6 +11,5 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/jst-config/config_h.cmxs
 ${OCAML_SITELIB}/jst-config/config_h.ml
 ${OCAML_SITELIB}/jst-config/dune-package
 ${OCAML_SITELIB}/jst-config/opam
-${OCAML_SITELIB}/jst-config/rt-flags
 ${OCAML_SITELIB}/jst-config/thread_id.h
 share/doc/jst-config/LICENSE.md

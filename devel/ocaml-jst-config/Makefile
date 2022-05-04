@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2021/03/08 08:12:52 jaapb Exp $
+# $NetBSD: Makefile,v 1.3 2022/05/04 16:37:41 jaapb Exp $
 
-GITHUB_PROJECT=	jst-config
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	${GITHUB_PROJECT}-0.12.0
+DISTNAME=	${GITHUB_PROJECT}-0.15.1
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
+GITHUB_PROJECT=	jst-config
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	https://github.com/janestreet/jst-config/
