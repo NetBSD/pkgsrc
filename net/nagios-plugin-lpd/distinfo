@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2022/05/04 15:19:24 manu Exp $
+
+SHA1 (check_lpd-0.1.tgz) = e066b722d4800f4211e032c5e3053e2697fd8159
+RMD160 (check_lpd-0.1.tgz) = 28beb86372b24ed84c563cf89eea4716c5d4ae00
+BLAKE2s (check_lpd-0.1.tgz) = d284f07fc48c07fffd964b81e312354c37926e4fe11cca6348340ca26daea036
+SHA512 (check_lpd-0.1.tgz) = fa726553e0ddf39e6d5003794bafa44230ec1c3bcdee91f56b9acd63dd4ffd94b04f54fdf3d19474da80b8a1c220190b404c2cac910a3ea8629bfd4b41bdf63d
+Size (check_lpd-0.1.tgz) = 2169 bytes
