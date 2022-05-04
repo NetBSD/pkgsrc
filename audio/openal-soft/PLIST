@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/03/21 20:05:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/05/04 06:53:06 wiz Exp $
 bin/makemhr
 bin/openal-info
 include/AL/al.h
@@ -7,11 +7,12 @@ include/AL/alext.h
 include/AL/efx-creative.h
 include/AL/efx-presets.h
 include/AL/efx.h
-lib/cmake/OpenAL/OpenALConfig-relwithdebinfo.cmake
 lib/cmake/OpenAL/OpenALConfig.cmake
+lib/cmake/OpenAL/OpenALTargets-relwithdebinfo.cmake
+lib/cmake/OpenAL/OpenALTargets.cmake
 lib/libopenal.so
-lib/libopenal.so.${PKGVERSION}
 lib/libopenal.so.1
+lib/libopenal.so.${PKGVERSION}
 lib/pkgconfig/openal.pc
 share/openal/alsoftrc.sample
 share/openal/hrtf/Default HRTF.mhr
