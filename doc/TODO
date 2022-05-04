@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21786 2022/05/04 16:03:52 jaapb Exp $
+$NetBSD: TODO,v 1.21787 2022/05/04 16:10:36 jaapb Exp $
 
 Suggested new packages
 ======================
@@ -1230,7 +1230,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-ppx_expect-0.14.1
 	o ocaml-ppx_fail-0.14.0
 	o ocaml-ppx_jane-0.14.0
-	o ocaml-ppx_let-0.14.0
 	o ocaml-ppx_module_timer-0.14.0
 	o ocaml-ppx_optcomp-0.14.1
 	o ocaml-ppx_optional-0.14.0
