@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2021/03/08 08:12:56 jaapb Exp $
+# $NetBSD: Makefile,v 1.3 2022/05/04 18:16:40 jaapb Exp $
 
-GITHUB_PROJECT=	ppx_fail
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	${GITHUB_PROJECT}-0.12.0
+DISTNAME=	${GITHUB_PROJECT}-0.14.0
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
+GITHUB_PROJECT=	ppx_fail
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	https://github.com/janestreet/ppx_fail/
