@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.33 2022/01/17 13:35:01 nia Exp $
+$NetBSD: distinfo,v 1.34 2022/05/04 13:59:09 wiz Exp $
 
-BLAKE2s (lgogdownloader-3.8.tar.gz) = 898750ba2a26d96e663fc1d2c848a2fc08739c78faddaacfc39b9fd935f1625a
-SHA512 (lgogdownloader-3.8.tar.gz) = 28d5ca08c4cd879437a9616df9832ff4962dd41a810eff36cde1746663fc5d26ebd50ecfc56c7ee1cfc38112efa3705af8e868e6382fe85d0c5c3d5b056cc69c
-Size (lgogdownloader-3.8.tar.gz) = 87126 bytes
+BLAKE2s (lgogdownloader-3.9.tar.gz) = 2d86b1aa4655b39b944f10218ad90802e9c6e2876ea568d3a8ed626f30898170
+SHA512 (lgogdownloader-3.9.tar.gz) = 9bb5ebe4cf0cbc6a2355e78e29e18965259892960b87c98f39f94278334b3d9d82deea9d1f482a66b08a8aa740f631ab4d45c5628b9cf560235ace8489ec3946
+Size (lgogdownloader-3.9.tar.gz) = 88063 bytes
