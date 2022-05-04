@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2022/03/30 09:56:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.36 2022/05/04 05:42:49 wiz Exp $
 bin/vala
 bin/vala-0.56
 bin/vala-gen-introspect
@@ -214,6 +214,10 @@ share/vala-0.56/vapi/gtk+-unix-print-3.0.deps
 share/vala-0.56/vapi/gtk+-unix-print-3.0.vapi
 share/vala-0.56/vapi/gtk4-unix-print.deps
 share/vala-0.56/vapi/gtk4-unix-print.vapi
+share/vala-0.56/vapi/gtk4-wayland.deps
+share/vala-0.56/vapi/gtk4-wayland.vapi
+share/vala-0.56/vapi/gtk4-x11.deps
+share/vala-0.56/vapi/gtk4-x11.vapi
 share/vala-0.56/vapi/gtk4.deps
 share/vala-0.56/vapi/gtk4.vapi
 share/vala-0.56/vapi/gtkmozembed.deps
