@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2022/02/07 10:48:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2022/05/04 05:46:46 wiz Exp $
 include/libfilezilla/apply.hpp
 include/libfilezilla/buffer.hpp
 include/libfilezilla/encode.hpp
@@ -10,7 +10,6 @@ include/libfilezilla/file.hpp
 include/libfilezilla/format.hpp
 include/libfilezilla/fsresult.hpp
 include/libfilezilla/glue/unix.hpp
-include/libfilezilla/glue/windows.hpp
 include/libfilezilla/glue/wx.hpp
 include/libfilezilla/glue/wxinvoker.hpp
 include/libfilezilla/hash.hpp
