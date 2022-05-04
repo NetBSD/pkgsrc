@@ -1,15 +1,16 @@
-@comment $NetBSD: PLIST,v 1.4 2014/10/09 19:44:07 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/05/04 12:55:21 jaapb Exp $
 ${OCAML_SITELIB}/mysql/META
 ${OCAML_SITELIB}/mysql/dllmysql_stubs.so
-${OCAML_SITELIB}/mysql/libmysql_stubs.a
+${PLIST.ocaml-opt}${OCAML_SITELIB}/mysql/libmysql_stubs.a
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/mysql/mysql.a
 ${OCAML_SITELIB}/mysql/mysql.cma
+${OCAML_SITELIB}/mysql/mysql.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/mysql/mysql.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/mysql/mysql.cmxa
-${OCAML_SITELIB}/mysql/mysql.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/mysql/mysql.cmxs
 ${OCAML_SITELIB}/mysql/mysql.mli
-share/doc/ocaml-mysql/Mysql.html
 share/doc/ocaml-mysql/Mysql.Prepared.html
+share/doc/ocaml-mysql/Mysql.html
 share/doc/ocaml-mysql/index.html
 share/doc/ocaml-mysql/index_attributes.html
 share/doc/ocaml-mysql/index_class_types.html
@@ -21,5 +22,5 @@ share/doc/ocaml-mysql/index_module_types.html
 share/doc/ocaml-mysql/index_modules.html
 share/doc/ocaml-mysql/index_types.html
 share/doc/ocaml-mysql/index_values.html
-share/doc/ocaml-mysql/type_Mysql.html
 share/doc/ocaml-mysql/type_Mysql.Prepared.html
+share/doc/ocaml-mysql/type_Mysql.html
