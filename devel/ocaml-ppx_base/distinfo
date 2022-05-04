@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:15:51 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/05/04 15:32:22 jaapb Exp $
 
-BLAKE2s (ppx_base-0.12.0.tar.gz) = 8d8a8707164bd95a49a4c524e1c19fc4906475bdb2cfbf201ca13094ea348897
-SHA512 (ppx_base-0.12.0.tar.gz) = 9d9931857b286df2ae5bffe60a09ee725ce5e4937bc2a5082d09a76a5b1168a5c8e8d7c50a9a9b6853002f25d887351b084bd142ea21fdd39407f299892ba964
-Size (ppx_base-0.12.0.tar.gz) = 2945 bytes
-SHA1 (patch-ppx__base.opam) = d2e185d1b843196c8e4fa67e587c34335d88fbb0
-SHA1 (patch-src_dune) = 153b9a88afbdd114006e96dc9e7991f7aceba1f6
+BLAKE2s (ppx_base-0.15.0.tar.gz) = cfedac4fe1f393a8cc65ccbcef74137e144457a25ba1a17bc66205d0f7389e8d
+SHA512 (ppx_base-0.15.0.tar.gz) = 6843c496bde4e9bccab1a7169da373bf315c5c6a551fd3e71b9e2b589e1d3b9a6361ccf2130ebde4bcb10a6c07d2c25acbf9951463e4b18e91bf289ce04daf72
+Size (ppx_base-0.15.0.tar.gz) = 2942 bytes
