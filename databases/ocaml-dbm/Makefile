@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.21 2021/03/08 08:12:46 jaapb Exp $
+# $NetBSD: Makefile,v 1.22 2022/05/04 08:56:02 jaapb Exp $
 #
 
-PKGNAME=	ocaml-dbm-${VERSION}
-DISTNAME=	camldbm-${VERSION}
-VERSION=	1.0
-PKGREVISION=	18
+DISTNAME=	caml${GITHUB_PROJECT}-1.3
+PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	databases
-MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/728/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
+GITHUB_PROJECT=	dbm
+GITHUB_TAG=	camldbm-${PKGVERSION_NOREV}
+DIST_SUBDIR=	ocaml-
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	http://camldbm.forge.ocamlcore.org/
+HOMEPAGE=	https://github.com/ocaml/dbm/
 COMMENT=	OCaml binding to the NDBM and GDBM database library
 LICENSE=	gnu-lgpl-v2
 
@@ -18,8 +18,9 @@ CONFLICTS=	ocaml-findlib<1.4nb1
 
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake
-MAKE_ENV+=		HAS_OCAMLOPT="${OCAML_USE_OPT_COMPILER}"
-OCAML_USE_FINDLIB=	yes
+MAKE_ENV+=		HAS_OCAMLOPT="${OCAML_USE_OPT_COMPILER}" \
+			STUBLIBDIR="${DESTDIR}${PREFIX}/lib/ocaml/site-lib/dbm" \
+			LIBDIR="${DESTDIR}${PREFIX}/lib/ocaml/site-lib/dbm"
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/META ${DESTDIR}${PREFIX}/lib/ocaml/site-lib/dbm
