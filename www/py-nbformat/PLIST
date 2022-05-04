@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/04/07 07:01:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/05/04 07:30:55 adam Exp $
 bin/jupyter-trust-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -42,6 +42,7 @@ ${PYSITELIB}/nbformat/json_compat.pyo
 ${PYSITELIB}/nbformat/notebooknode.py
 ${PYSITELIB}/nbformat/notebooknode.pyc
 ${PYSITELIB}/nbformat/notebooknode.pyo
+${PYSITELIB}/nbformat/py.typed
 ${PYSITELIB}/nbformat/reader.py
 ${PYSITELIB}/nbformat/reader.pyc
 ${PYSITELIB}/nbformat/reader.pyo
