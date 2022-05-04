@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21782 2022/05/04 15:12:30 jaapb Exp $
+$NetBSD: TODO,v 1.21783 2022/05/04 15:26:53 jaapb Exp $
 
 Suggested new packages
 ======================
@@ -1227,7 +1227,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-ppx_assert-0.14.0
 	o ocaml-ppx_base-0.14.0
 	o ocaml-ppx_bin_prot-0.14.0
-	o ocaml-ppx_cold-0.14.0
 	o ocaml-ppx_custom_printf-0.14.1
 	o ocaml-ppx_deriving-5.2.1
 	o ocaml-ppx_expect-0.14.1
