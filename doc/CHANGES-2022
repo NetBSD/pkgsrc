@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2284 2022/05/04 04:38:26 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2285 2022/05/04 04:39:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3563,3 +3563,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/fileobj to 0.7.108 [tkusumi 2022-05-03]
 	Updated x11/xcb-proto to 1.15 [wiz 2022-05-03]
 	Updated x11/py-xcbgen to 1.15 [wiz 2022-05-04]
+	Updated x11/libxcb to 1.15 [wiz 2022-05-04]
