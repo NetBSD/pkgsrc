@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2315 2022/05/04 15:49:25 jperkin Exp $
+$NetBSD: CHANGES-2022,v 1.2316 2022/05/04 15:50:00 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3611,3 +3611,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ocaml-ppx_base to 0.15.0 [jaapb 2022-05-04]
 	Updated devel/ocaml-fieldslib to 0.15.0 [jaapb 2022-05-04]
 	Updated lang/ruby30-base to 3.0.4nb1 [jperkin 2022-05-04]
+	Updated lang/ruby31-base to 3.1.2nb1 [jperkin 2022-05-04]
