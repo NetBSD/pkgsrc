@@ -1,6 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/12 18:38:53 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/05/04 16:14:30 jaapb Exp $
 ${OCAML_SITELIB}/ppx_sexp_message/META
 ${OCAML_SITELIB}/ppx_sexp_message/dune-package
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_message/expander/ppx_sexp_message_expander.a
+${OCAML_SITELIB}/ppx_sexp_message/expander/ppx_sexp_message_expander.cma
+${OCAML_SITELIB}/ppx_sexp_message/expander/ppx_sexp_message_expander.cmi
+${OCAML_SITELIB}/ppx_sexp_message/expander/ppx_sexp_message_expander.cmt
+${OCAML_SITELIB}/ppx_sexp_message/expander/ppx_sexp_message_expander.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_message/expander/ppx_sexp_message_expander.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_message/expander/ppx_sexp_message_expander.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_message/expander/ppx_sexp_message_expander.cmxs
+${OCAML_SITELIB}/ppx_sexp_message/expander/ppx_sexp_message_expander.ml
+${OCAML_SITELIB}/ppx_sexp_message/expander/ppx_sexp_message_expander.mli
 ${OCAML_SITELIB}/ppx_sexp_message/opam
 ${OCAML_SITELIB}/ppx_sexp_message/ppx.exe
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_message/ppx_sexp_message.a
