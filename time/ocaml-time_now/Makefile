@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2021/03/08 08:13:08 jaapb Exp $
+# $NetBSD: Makefile,v 1.5 2022/05/04 16:50:34 jaapb Exp $
 
-GITHUB_PROJECT=	time_now
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	${GITHUB_PROJECT}-0.12.0
+DISTNAME=	${GITHUB_PROJECT}-0.15.0
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
+GITHUB_PROJECT=	time_now
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	https://github.com/janestreet/time_now/
