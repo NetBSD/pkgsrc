@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/04/25 13:29:17 mef Exp $
+# $NetBSD: Makefile,v 1.5 2022/05/04 23:07:00 mef Exp $
 
 R_PKGNAME=	Hmisc
 R_PKGVER=	4.7-0
@@ -18,6 +18,20 @@ DEPENDS+=	R-gtable>=0.3.0:../../math/R-gtable
 DEPENDS+=	R-data.table>=1.12.2:../../textproc/R-data.table
 DEPENDS+=	R-htmlTable>=1.11.0:../../textproc/R-htmlTable
 DEPENDS+=	R-htmltools>=0.3.6:../../textproc/R-htmltools
+
+TEST_DEPENDS+=	R-base64enc-[0-9]*:../../converters/R-base64enc
+TEST_DEPENDS+=	R-chron-[0-9]*:../../math/R-chron
+TEST_DEPENDS+=	R-Formula-[0-9]*:../../math/R-Formula
+TEST_DEPENDS+=	R-gridExtra-[0-9]*:../../graphics/R-gridExtra
+TEST_DEPENDS+=	R-htmlTable-[0-9]*:../../textproc/R-htmlTable
+TEST_DEPENDS+=	R-htmltools-[0-9]*:../../textproc/R-htmltools
+TEST_DEPENDS+=	R-latticeExtra-[0-9]*:../../graphics/R-latticeExtra
+TEST_DEPENDS+=	R-VGAM-[0-9]*:../../math/R-VGAM
+TEST_DEPENDS+=	R-viridis-[0-9]*:../../graphics/R-viridis
+#EST_DEPENDS+=	R-rms-[0-9]*:
+#EST_DEPENDS+=	R-mice-[0-9]*:
+#EST_DEPENDS+=	R-tables-[0-9]*:
+#EST_DEPENDS+=	R-plotly-[0-9]*:
 
 USE_LANGUAGES=	c fortran
 
