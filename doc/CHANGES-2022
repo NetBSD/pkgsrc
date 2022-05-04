@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2302 2022/05/04 12:58:01 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2303 2022/05/04 13:12:54 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3598,3 +3598,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/py-coverage-enable-subprocess version 1.0 [adam 2022-05-04]
 	Added devel/py-test-freezegun version 0.4.2 [adam 2022-05-04]
 	Updated databases/ocaml-mysql to 1.2.4 [jaapb 2022-05-04]
+	Updated databases/ocaml-sqlite3 to 5.1.0 [jaapb 2022-05-04]
