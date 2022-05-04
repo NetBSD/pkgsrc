@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/04 12:36:42 adam Exp $
+
+BLAKE2s (coverage_enable_subprocess-1.0.tar.gz) = 313a338c290fe582d978d0ea707155ab4ff16ad2bbe67f140aa56780053f518a
+SHA512 (coverage_enable_subprocess-1.0.tar.gz) = cb1eb7e41962944812f746e872aa476840916932735ed14be034fe9a11d8e401911d6bf8c5fc34e90c7de94576e3085296c80e496034a9ed6e12f0e55d9105a7
+Size (coverage_enable_subprocess-1.0.tar.gz) = 2695 bytes
