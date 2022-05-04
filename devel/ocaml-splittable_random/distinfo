@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:56 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/05/04 17:07:55 jaapb Exp $
 
-BLAKE2s (splittable_random-0.13.0.tar.gz) = ece34b43f66c9e83900f4e91a86a4e53eed9f211b80f9981807928b8b588a32c
-SHA512 (splittable_random-0.13.0.tar.gz) = 1423ffdedb2ae2e7e3e180fdc3d12214294e983b619880eeea4d53196b287cf6d3d02fc845b1a344506c0e929de5c6f13eacc284480c6e7aea21c4d36566b71a
-Size (splittable_random-0.13.0.tar.gz) = 9935 bytes
+BLAKE2s (splittable_random-0.15.0.tar.gz) = 4aa63e125dd36a08cb78ceb2091f184dd550464d0c8357b0f23abb6575957061
+SHA512 (splittable_random-0.15.0.tar.gz) = 10adeedcda260301f8866a8f128d2f6a59ebbb70898fd82bf2c9db9b40cb1bc24bdb9706d0d0983e8abd8c4a4a920b06d16a3196dc6ba522b13af5c4b9302811
+Size (splittable_random-0.15.0.tar.gz) = 9945 bytes
