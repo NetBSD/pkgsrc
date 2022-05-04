@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2022/03/28 10:43:37 tnn Exp $
+# $NetBSD: Makefile,v 1.24 2022/05/04 06:53:06 wiz Exp $
 
-DISTNAME=	openal-soft-1.21.1
-PKGREVISION=	4
+DISTNAME=	openal-soft-1.22.0
 CATEGORIES=	audio
 MASTER_SITES=	https://openal-soft.org/openal-releases/
 EXTRACT_SUFX=	.tar.bz2
