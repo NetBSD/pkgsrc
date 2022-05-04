@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.7 2022/02/15 09:24:14 wiz Exp $
+$NetBSD: patch-configure,v 1.8 2022/05/04 06:35:50 wiz Exp $
 
 * Select GnuPG binary
 * Don't let CDPATH affect the build
 * Ignore errors for gpgme tests, can be affected by running gpg-agent
 
---- configure.orig	2022-02-06 17:16:24.000000000 +0000
+--- configure.orig	2022-04-25 11:48:07.000000000 +0000
 +++ configure
 @@ -525,7 +525,7 @@ EOF
  	printf 'No.\nCould not make tempdir for testing session-key support.\n'
@@ -15,15 +15,15 @@ $NetBSD: patch-configure,v 1.7 2022/02/15 09:24:14 wiz Exp $
  	   && SESSION_KEY=$(GNUPGHOME=${TEMP_GPG} ./_check_session_keys) \
  	   && [ $SESSION_KEY = 9:0BACD64099D1468AB07C796F0C0AC4851948A658A15B34E803865E9FC635F2F5 ]
      then
-@@ -617,7 +617,6 @@ is later than 3.2.7, which should have f
+@@ -624,7 +624,6 @@ is later than 3.2.7, which should have f
  Please follow up on https://github.com/jstedfast/gmime/pull/90 with
  more details.
  EOF
 -		errors=$((errors + 1))
  	    fi
  	fi
-     else
-@@ -676,7 +675,7 @@ EOF
+ 	printf "Checking whether GMime emits email addresses with angle brackets... "
+@@ -692,7 +691,7 @@ EOF
  	printf 'No.\nCould not make tempdir for testing signature verification when decrypting with session keys.\n'
  	errors=$((errors + 1))
      elif ${CC} ${CFLAGS} ${gmime_cflags} _verify_sig_with_session_key.c ${gmime_ldflags} -o _verify_sig_with_session_key \
@@ -32,7 +32,7 @@ $NetBSD: patch-configure,v 1.7 2022/02/15 09:24:14 wiz Exp $
  	    && rm -f ${TEMP_GPG}/private-keys-v1.d/*.key
      then
  	if GNUPGHOME=${TEMP_GPG} ./_verify_sig_with_session_key; then
-@@ -1608,7 +1607,7 @@ EOF
+@@ -1627,7 +1626,7 @@ EOF
      if [ $WITH_PYTHON_DOCS = "1" ]; then
  	echo "tags.add('WITH_PYTHON')"
      fi
