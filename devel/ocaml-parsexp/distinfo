@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:51 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/05/04 13:25:03 jaapb Exp $
 
-BLAKE2s (parsexp-0.12.0.tar.gz) = b2660d08e7e2339f8f98bda501b77241b12c6fbc8342756721ff76b3e4707c4f
-SHA512 (parsexp-0.12.0.tar.gz) = fad8fad12bc093c2e1d6d3e3db491a6b9ad5e39e2b7c05ae8106f62d96851bbc421ceadda43e1431490fdcf20accc37cb0efe947cbbe7b09a550f20a9394213b
-Size (parsexp-0.12.0.tar.gz) = 46429 bytes
+BLAKE2s (parsexp-0.14.2.tar.gz) = 3ff9e59b3638fdce2eb20d55c6e5ad77915e9227cc419f99ba3c5572d5852564
+SHA512 (parsexp-0.14.2.tar.gz) = f16bee13ba54c67f74b93127b9c9262b644762db05756ea413691fffa4fa6112c811d65aaf78f30a32b35bd8819025c93f72455ec565e85081c74d1339683cc7
+Size (parsexp-0.14.2.tar.gz) = 48609 bytes
