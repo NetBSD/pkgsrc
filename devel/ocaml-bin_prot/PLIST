@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/13 11:06:00 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/05/04 17:52:52 jaapb Exp $
 ${OCAML_SITELIB}/bin_prot/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/bin_prot/bin_prot.a
 ${OCAML_SITELIB}/bin_prot/bin_prot.cma
@@ -49,6 +49,9 @@ ${OCAML_SITELIB}/bin_prot/bin_prot__Utils.cmi
 ${OCAML_SITELIB}/bin_prot/bin_prot__Utils.cmt
 ${OCAML_SITELIB}/bin_prot/bin_prot__Utils.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/bin_prot/bin_prot__Utils.cmx
+${OCAML_SITELIB}/bin_prot/bin_prot__Utils_intf.cmi
+${OCAML_SITELIB}/bin_prot/bin_prot__Utils_intf.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/bin_prot/bin_prot__Utils_intf.cmx
 ${OCAML_SITELIB}/bin_prot/bin_prot__Write.cmi
 ${OCAML_SITELIB}/bin_prot/bin_prot__Write.cmt
 ${OCAML_SITELIB}/bin_prot/bin_prot__Write.cmti
@@ -94,6 +97,7 @@ ${OCAML_SITELIB}/bin_prot/type_class.ml
 ${OCAML_SITELIB}/bin_prot/type_class.mli
 ${OCAML_SITELIB}/bin_prot/utils.ml
 ${OCAML_SITELIB}/bin_prot/utils.mli
+${OCAML_SITELIB}/bin_prot/utils_intf.ml
 ${OCAML_SITELIB}/bin_prot/write.ml
 ${OCAML_SITELIB}/bin_prot/write.mli
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/bin_prot/xen/bin_prot_xen.a

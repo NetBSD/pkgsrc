@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:46 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/05/04 17:52:52 jaapb Exp $
 
-BLAKE2s (bin_prot-0.13.0.tar.gz) = ebca14a77affbbf04987c8f9adfdf903b2fd6068dcdace8279752e79beb17660
-SHA512 (bin_prot-0.13.0.tar.gz) = b7d120222c3c1b2313d8bbd357d06dcd3433b7b906e89d4188c8746ce83ca7960853f15a81a3721ed7ab63876c4307346af2d4ce3ca68b15650b9e14140c3550
-Size (bin_prot-0.13.0.tar.gz) = 341301 bytes
+BLAKE2s (bin_prot-0.14.1.tar.gz) = 1c108f62db05d016873ef91ea1ddefd7169f551b1ec589c8bf5395e15bd9915e
+SHA512 (bin_prot-0.14.1.tar.gz) = dd970a2e9cab38363dfb4f723dddf8a0a9bf0ef36c0f38091cd5df051801c897508c41c1acefa0488d42a98e17e54d7210f164d5c473a04a1ad7b11585a9342f
+Size (bin_prot-0.14.1.tar.gz) = 342868 bytes
