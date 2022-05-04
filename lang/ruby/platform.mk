@@ -1,4 +1,4 @@
-# $NetBSD: platform.mk,v 1.9 2022/01/14 15:42:08 taca Exp $
+# $NetBSD: platform.mk,v 1.10 2022/05/04 16:16:49 taca Exp $
 #
 
 #
@@ -111,6 +111,15 @@ CONFIGURE_ARGS+=	--disable-dtrace
 # dtrace support can cause problems with miniruby on arm.
 #
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*) || !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64*)
+CONFIGURE_ARGS+=	--disable-dtrace
+.endif
+
+#
+# NetBSD
+#
+# Ruby 3.1 seems to have problem "dtrace -G" on NetBSD 8.
+#
+.if ${RUBY_VER} == 31 && ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M8*)
 CONFIGURE_ARGS+=	--disable-dtrace
 .endif
 
