@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2316 2022/05/04 15:50:00 jperkin Exp $
+$NetBSD: CHANGES-2022,v 1.2317 2022/05/04 15:55:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3607,7 +3607,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ocaml-ppx_hash to 0.15.0 [jaapb 2022-05-04]
 	Added net/nagios-plugin-lpd version 0.1 [manu 2022-05-04]
 	Updated devel/ocaml-ppx_cold to 0.15.0 [jaapb 2022-05-04]
-	Updated devel/ocaml-ppx_base to 0.15.0 [jaapb 2022-05-04]
 	Updated devel/ocaml-ppx_base to 0.15.0 [jaapb 2022-05-04]
 	Updated devel/ocaml-fieldslib to 0.15.0 [jaapb 2022-05-04]
 	Updated lang/ruby30-base to 3.0.4nb1 [jperkin 2022-05-04]
