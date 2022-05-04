@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/05/19 07:08:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/05/04 04:38:06 wiz Exp $
 ${PYSITELIB}/xcbgen/__init__.py
 ${PYSITELIB}/xcbgen/__init__.pyc
 ${PYSITELIB}/xcbgen/__init__.pyo
