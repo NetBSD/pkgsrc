@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2021/03/08 08:12:52 jaapb Exp $
+# $NetBSD: Makefile,v 1.5 2022/05/04 16:32:13 jaapb Exp $
 
-GITHUB_PROJECT=	jane-street-headers
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	${GITHUB_PROJECT}-0.13.0
+DISTNAME=	${GITHUB_PROJECT}-0.15.0
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
+GITHUB_PROJECT=	jane-street-headers
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	https://github.com/janestreet/jane-street-headers/

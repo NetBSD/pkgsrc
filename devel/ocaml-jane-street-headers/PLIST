@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/13 11:35:47 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/05/04 16:32:13 jaapb Exp $
 ${OCAML_SITELIB}/jane-street-headers/META
 ${OCAML_SITELIB}/jane-street-headers/core_params.h
 ${OCAML_SITELIB}/jane-street-headers/dune-package
@@ -12,6 +12,7 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/jane-street-headers/jane_street_headers.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/jane-street-headers/jane_street_headers.cmxs
 ${OCAML_SITELIB}/jane-street-headers/jane_street_headers.ml
 ${OCAML_SITELIB}/jane-street-headers/ocaml_utils.h
+${OCAML_SITELIB}/jane-street-headers/ocaml_utils_macros.h
 ${OCAML_SITELIB}/jane-street-headers/opam
 ${OCAML_SITELIB}/jane-street-headers/unix_utils.h
 share/doc/jane-street-headers/LICENSE.md
