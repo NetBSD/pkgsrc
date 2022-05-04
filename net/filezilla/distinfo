@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.67 2022/03/08 09:14:47 wiz Exp $
+$NetBSD: distinfo,v 1.68 2022/05/04 05:55:46 wiz Exp $
 
-BLAKE2s (FileZilla_3.58.0_src.tar.bz2) = f369b695644e3042ec56ea7a6c514b5f6f2a5ffefdbc03a7ef2ad34fb7f37b1e
-SHA512 (FileZilla_3.58.0_src.tar.bz2) = f613f210d9176be2dd41046ecdf4598604f8902829edfe5981564217561417ca35029618b0c50cdb6232220ec0440bd390f098b602c05845c846efe0689d9d54
-Size (FileZilla_3.58.0_src.tar.bz2) = 4931087 bytes
+BLAKE2s (FileZilla_3.59.0_src.tar.bz2) = 9f0ddbeba2d03b1152839feff345c381e92ce8182239f1a2e37f00590f2e8e76
+SHA512 (FileZilla_3.59.0_src.tar.bz2) = 063de23e7b529ee7422479ebb1af00ab86a82ee25cf0e7e1e06995bf897aeeb25aab161ab202de889ea750c796a0ac1317c5a08dcb89fa1f4cbdb79caa3cbfc7
+Size (FileZilla_3.59.0_src.tar.bz2) = 4946231 bytes
