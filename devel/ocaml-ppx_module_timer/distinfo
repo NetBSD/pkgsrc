@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:53 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/05/04 18:10:01 jaapb Exp $
 
-BLAKE2s (ppx_module_timer-0.13.0.tar.gz) = 145aec9cf1d4aedcf5e582cd0fbbbfdd08c5a8022d86a76faf6776693b8894a3
-SHA512 (ppx_module_timer-0.13.0.tar.gz) = 7599f3d77e0c9cdfd18b6eda02c3d36bb0ecf925cd250896f348a064dc0c563d0a77ae7dc006c920e44a0cccbe78724b5879895abf3d0567008dc1399310d65f
-Size (ppx_module_timer-0.13.0.tar.gz) = 7180 bytes
+BLAKE2s (ppx_module_timer-0.15.0.tar.gz) = 432c9b42200d21d606e533f86707ed9a7cf7fb687d29b8753657b0a6bca9d0eb
+SHA512 (ppx_module_timer-0.15.0.tar.gz) = 4cd55dce6872cbed1d34c34043500651e605c406747914173584cee1d8f3ff298a75efeb8a4beb7840df76b5d7c7db98d15399d3c4a3a5dca2a11d57339df6de
+Size (ppx_module_timer-0.15.0.tar.gz) = 7242 bytes
