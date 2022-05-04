@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.39 2022/04/08 18:00:28 adam Exp $
+$NetBSD: distinfo,v 1.40 2022/05/04 11:27:11 adam Exp $
 
-BLAKE2s (certbot-dns-rfc2136-1.26.0.tar.gz) = e962717c2759feb795a3c64b608f3d0f9e4bf33af306010ee2ba6126e7949466
-SHA512 (certbot-dns-rfc2136-1.26.0.tar.gz) = 2a3471afb22e0a7a09cda3559354a87d41d0cb9f4c42b877bdd8ecf9e0b467dbbd9f8d0892dfa44f92d6d0e5cf849618e0360d681af622ab9414fab60e09c021
-Size (certbot-dns-rfc2136-1.26.0.tar.gz) = 15477 bytes
+BLAKE2s (certbot-dns-rfc2136-1.27.0.tar.gz) = 49a13311c41844c14bdcf69388983a8016a876db1d6803e7550589a40835fab8
+SHA512 (certbot-dns-rfc2136-1.27.0.tar.gz) = 4c8c43dc1dcd06532c8b7f6bb81a7dbd5117cc216befdd0512c07c44424e6b12da70975f6e8fe1557fdd944fd9cc1a073fd4381d5755df881798e1a5cc4bae73
+Size (certbot-dns-rfc2136-1.27.0.tar.gz) = 16370 bytes
