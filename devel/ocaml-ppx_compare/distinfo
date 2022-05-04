@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:15:52 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/05/04 13:57:10 jaapb Exp $
 
-BLAKE2s (ppx_compare-0.13.0.tar.gz) = 2babe89996e39a3870e856effe9a1939b48cca7ad69b8607a374e0731ace1921
-SHA512 (ppx_compare-0.13.0.tar.gz) = 42573ed49fd4457a8866c3304046ffbad87a45295d3f8e0a15df316a0a34528e9b050dd42b16fc94a76bf766b393744dd893fc1798291598148104912a6afab3
-Size (ppx_compare-0.13.0.tar.gz) = 13256 bytes
+BLAKE2s (ppx_compare-0.15.0.tar.gz) = 19696df35c0d01867a8fbbfec910419bf1c2a27233442512f4d48ec20aeee941
+SHA512 (ppx_compare-0.15.0.tar.gz) = 2c2ae8bdaf08a478bcabdcdcd724abb53773c8633273d3d7a9f8a8eab01d04c281d11299f2890a2f9919adcf38a65bcfcfd79c613f27325e536e2d7cf0527781
+Size (ppx_compare-0.15.0.tar.gz) = 13905 bytes
