@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21777 2022/05/04 12:58:01 jaapb Exp $
+$NetBSD: TODO,v 1.21778 2022/05/04 13:34:55 jaapb Exp $
 
 Suggested new packages
 ======================
@@ -1250,7 +1250,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-psq-0.2.0
 	o ocaml-resource-pooling-1.2
 	o ocaml-safepass-3.1
-	o ocaml-sexplib-0.14.0
 	o ocaml-spawn-0.14.0
 	o ocaml-splittable_random-0.14.0
 	o ocaml-textutils-0.14.0
