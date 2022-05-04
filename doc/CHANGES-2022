@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2293 2022/05/04 06:50:32 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2294 2022/05/04 06:53:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3572,3 +3572,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/oniguruma to 6.9.8 [wiz 2022-05-04]
 	Updated devel/tomlplusplus to 3.1.0 [wiz 2022-05-04]
 	Updated www/restish to 0.14.0 [wiz 2022-05-04]
+	Updated audio/openal-soft to 1.22.0 [wiz 2022-05-04]
