@@ -1,18 +1,9 @@
-$NetBSD: patch-CMakeLists.txt,v 1.4 2022/05/04 16:31:30 tnn Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.5 2022/05/04 17:23:35 tnn Exp $
 
 Fix building.
 
 --- CMakeLists.txt.orig	2022-04-23 01:46:14.000000000 +0000
 +++ CMakeLists.txt
-@@ -60,7 +60,7 @@ if(NOT CMAKE_DEBUG_POSTFIX)
-         FORCE)
- endif()
- 
--set(CMAKE_MODULE_PATH "${OpenAL_SOURCE_DIR}/cmake")
-+set (CMAKE_MODULE_PATH "/tmp/pkgsrc-obj/audio/openal-soft/work/.buildlink/cmake-Modules" "${OpenAL_SOURCE_DIR}/cmake")
- 
- include(CheckFunctionExists)
- include(CheckLibraryExists)
 @@ -1206,9 +1206,9 @@ if(ALSOFT_EMBED_HRTF_DATA)
  
          add_custom_command(OUTPUT "${outfile}"
