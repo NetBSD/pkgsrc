@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/04/19 11:39:40 adam Exp $
+$NetBSD: distinfo,v 1.5 2022/05/04 07:32:34 adam Exp $
 
-BLAKE2s (nbclient-0.6.0.tar.gz) = 783ba515bd913ecaf443dd9b9ac42d1ec95c8a49e123978d8db4c732a9d7839c
-SHA512 (nbclient-0.6.0.tar.gz) = 0520ddf3b11b26f145733776d5804b4c6793bae2eaeed39be1337ed48d65db060e788d86100f45fc30183dda53c5d6d46c75cdf39ee0ba0c1d6e7dd56735d2dc
-Size (nbclient-0.6.0.tar.gz) = 76703 bytes
+BLAKE2s (nbclient-0.6.2.tar.gz) = 41d6c0063b4de6578dde13def9462160ab5d421740c76bd801ee687313740a78
+SHA512 (nbclient-0.6.2.tar.gz) = 2e7acc52c8d04bf75f75f6e2d13e23a3484bc9992b00aa9decf49f8e9c994f4842396af72c6ab347a3f74ea5f11693421783fb118fffaeba1f99add2d89f4a84
+Size (nbclient-0.6.2.tar.gz) = 77683 bytes
