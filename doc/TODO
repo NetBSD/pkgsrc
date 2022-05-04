@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21805 2022/05/04 18:29:54 jaapb Exp $
+$NetBSD: TODO,v 1.21806 2022/05/04 18:41:44 jaapb Exp $
 
 Suggested new packages
 ======================
@@ -1228,7 +1228,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-safepass-3.1
 	o ocaml-spawn-0.14.0
 	o ocaml-textutils-0.14.0
-	o ocaml-typerep-0.14.0
 	o ocaml-uri-4.1.0
 	o ocaml-zarith-1.12
 	o ocaml-zip-110
