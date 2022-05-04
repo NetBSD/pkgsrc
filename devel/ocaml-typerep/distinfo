@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:57 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/05/04 18:38:58 jaapb Exp $
 
-BLAKE2s (typerep-0.13.0.tar.gz) = 84d05776c30401a3f748cacbb1e8a4224a137cc19d8696ebdf847b8194cc1af4
-SHA512 (typerep-0.13.0.tar.gz) = f0a788b6e09b0e7080115ad1d24fbbd539506bff61305c15b02e82b32af047ac04c21056f0845055bdff32a3f1b198c6c765944df7ab499dce43c515e17837e2
-Size (typerep-0.13.0.tar.gz) = 22882 bytes
+BLAKE2s (typerep-0.15.0.tar.gz) = 4f99fa6dcc524eb8610f5e0c2128d1be20db75214d3d1a44f62d9530abe4d3c8
+SHA512 (typerep-0.15.0.tar.gz) = d86821dbf4dd808a6310986cebed50029fa5388e0dba8fdc165e50f5346214a9e110c14070fcbbaf2ba3f4261595f9370b0acd723b6445729f562600500b795b
+Size (typerep-0.15.0.tar.gz) = 22737 bytes
