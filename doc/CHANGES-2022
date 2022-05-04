@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2287 2022/05/04 05:46:55 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2288 2022/05/04 05:55:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3566,3 +3566,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/libxcb to 1.15 [wiz 2022-05-04]
 	Updated lang/vala to 0.56.1 [wiz 2022-05-04]
 	Updated net/libfilezilla to 0.37.2 [wiz 2022-05-04]
+	Updated net/filezilla to 3.59.0 [wiz 2022-05-04]
