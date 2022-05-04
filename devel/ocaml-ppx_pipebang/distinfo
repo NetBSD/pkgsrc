@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:15:54 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/05/04 18:27:14 jaapb Exp $
 
-BLAKE2s (ppx_pipebang-0.12.0.tar.gz) = 4d34a0496b50c81063b31f8c9001a600066d330cffcd789b5f5951b414359052
-SHA512 (ppx_pipebang-0.12.0.tar.gz) = c3757fbc714f0fd79de1c48f21127de9df437dbae2c980693bf337b094f98abe0dc3fa508dc417d965a5877a680f5e37221110d2ac4d1f5599986ed96a7651d6
-Size (ppx_pipebang-0.12.0.tar.gz) = 3754 bytes
+BLAKE2s (ppx_pipebang-0.15.0.tar.gz) = ded8a6359100220a68211734deec0822b77ef9596fc7bff6ca62dbbb74f5f9cd
+SHA512 (ppx_pipebang-0.15.0.tar.gz) = 778dae2cd6176f9ce18f20486e16f6f76e9137095759b29ddc10fee15d8a21f51fff94245c4a750ae68cd75edbd06b9cad6ff1b56aacb38ac9e6d7d71c0bf701
+Size (ppx_pipebang-0.15.0.tar.gz) = 3759 bytes
