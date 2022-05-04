@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.31 2021/06/23 20:33:08 nia Exp $
+# $NetBSD: Makefile,v 1.32 2022/05/04 12:55:21 jaapb Exp $
 #
 
-VERSION=	1.2.0
+VERSION=	1.2.4
 GITHUB_PROJECT=	ocaml-mysql
 GITHUB_TAG=	v${VERSION}
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
-PKGREVISION=	9
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ygrek/}
 
 MAINTAINER=		jaapb@NetBSD.org
-HOMEPAGE=		http://ocaml-mysql.forge.ocamlcore.org/
+HOMEPAGE=		https://github.com/ygrek/ocaml-mysql
 COMMENT=		Ocaml library for MySQL database access
 LICENSE=		gnu-lgpl-v2.1
 
@@ -20,7 +19,9 @@ USE_TOOLS+=		gmake
 
 DOCDIR=			${PREFIX}/share/doc/ocaml-mysql
 INSTALLATION_DIRS=	${DOCDIR}
-
+MAKE_JOBS_SAFE=		no
+# parallelism here leads to errors and there's not much that can be done
+# in parallel anyway
 OCAML_USE_FINDLIB=	yes
 
 .include "../../mk/ocaml.mk"
