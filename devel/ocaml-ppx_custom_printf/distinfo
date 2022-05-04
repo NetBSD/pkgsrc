@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:52 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/05/04 17:18:53 jaapb Exp $
 
-BLAKE2s (ppx_custom_printf-0.12.1.tar.gz) = d8462a6900d10d476a4ba73c2f5500382fb0c942e5c9bd696704da4777765c6f
-SHA512 (ppx_custom_printf-0.12.1.tar.gz) = 1a1f78670e326d02cf27eee29436cd752b52ebd071d53fbc72e98e9217a3fe71600913e4a5db1a70b4040101cb5811f4389a106d501b4ea7cda089348266fc64
-Size (ppx_custom_printf-0.12.1.tar.gz) = 9314 bytes
+BLAKE2s (ppx_custom_printf-0.15.0.tar.gz) = fd5ef4f3bb7d171bfdc442bcdf1de7f9641586d385b2cb43893c12f0464626ce
+SHA512 (ppx_custom_printf-0.15.0.tar.gz) = f8776e9037f491b120b0d43ac9b76231c422b9e5f0d7c3f75efdadf9d4ec401266d61f441a2c7c831c99fac10ac98d84e4e62eda44e6fc86f2fa60ead5ecbc86
+Size (ppx_custom_printf-0.15.0.tar.gz) = 9609 bytes
