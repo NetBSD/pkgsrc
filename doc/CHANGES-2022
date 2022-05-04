@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2307 2022/05/04 14:14:15 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2308 2022/05/04 14:46:26 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3603,3 +3603,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated games/lgogdownloader to 3.9 [wiz 2022-05-04]
 	Updated devel/ocaml-ppx_compare to 0.15.0 [jaapb 2022-05-04]
 	Updated devel/ocaml-ppx_enumerate to 0.15.0 [jaapb 2022-05-04]
+	Updated devel/ocaml-ppx_sexp_conv to 0.15.1 [jaapb 2022-05-04]
