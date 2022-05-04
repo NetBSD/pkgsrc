@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.64 2022/02/15 09:24:13 wiz Exp $
+$NetBSD: distinfo,v 1.65 2022/05/04 06:35:50 wiz Exp $
 
-BLAKE2s (notmuch-0.35.tar.xz) = c15d3dcd3480a01723b3f60480a00d60a80f48bfd527e1411106593a0605eabf
-SHA512 (notmuch-0.35.tar.xz) = 3ec28bc578a250b8a04507383e0cc44d0bccc5f359c1cf1c83e9631ab04ab370071298c50f9940d33bb10eee28fcb6bf3a548b4e908da6e18b38a0371e989af4
-Size (notmuch-0.35.tar.xz) = 755112 bytes
-SHA1 (patch-configure) = 4f0a25d163575de27bd6fe559204f3e15ce692d0
+BLAKE2s (notmuch-0.36.tar.xz) = 0ba9279eebae57cdb671ec63aa99bd8a1ddf97a20da4a0576743784432bac107
+SHA512 (notmuch-0.36.tar.xz) = 00f89e46467cad1cb8135644ed6655e88c93edcba553ced503c21e53f048eb49a333127649ea69bd30e164e8322a3e1dd0fcd672b93e087a8b470e60a6e838fa
+Size (notmuch-0.36.tar.xz) = 761260 bytes
+SHA1 (patch-configure) = 8a5f92857fef23030d10aa16670ea963fa4c5359
 SHA1 (patch-emacs_Makefile.local) = 4a36a2c165852a098a45c8b99c8372d65d33b07c
