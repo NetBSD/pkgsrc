@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:09:25 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/05/04 08:56:02 jaapb Exp $
 
-BLAKE2s (camldbm-1.0.tgz) = 9af16f4d81bb42a34d22cb8d943c917ed8d059ba0984702bca56a35b500b54c7
-SHA512 (camldbm-1.0.tgz) = d0b752754650efb400f13f957e83fddccf1fc9ac9e1d11f453af94e9aa599546a316eb110685b3728b593c99cbf859cdc7bcf924c878cf8b6dead3dc413ccfbf
-Size (camldbm-1.0.tgz) = 14397 bytes
-SHA1 (patch-Makefile) = 20c4d5b50fea2829c69bb8c5bb69085dafca64b4
+BLAKE2s (ocaml-/camldbm-1.3.tar.gz) = daac40d2b8b3a948b9e962ac14f35abbec6285e9a65867d0ad4d84c3e5b463fd
+SHA512 (ocaml-/camldbm-1.3.tar.gz) = cf2d24e7e169a71cc117541dbf6b89e048f62e92f00af229c512ad13a226a7f7dba1ee7db0370393d08b5a342a1c296d70ecddfec13f300369513421ef4da0ce
+Size (ocaml-/camldbm-1.3.tar.gz) = 14831 bytes
+SHA1 (patch-Makefile) = 6e156ab18f514dfbcb884d2d52bd60252be2ee78
