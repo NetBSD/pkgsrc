@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:15:52 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/05/04 17:58:56 jaapb Exp $
 
-BLAKE2s (ppx_bin_prot-0.13.0.tar.gz) = fa06340bb3746d2757fee063c32704f516abdae276c8148e7c454a51fc5f5143
-SHA512 (ppx_bin_prot-0.13.0.tar.gz) = 986c56f10b19aab1ea42f688eb232e7ca004283e267a5f4f0a0732b4944e388f7002f5b101d486e7fb9cac4e38f1277db18c5293cd49888f153c65f34f9d9a0e
-Size (ppx_bin_prot-0.13.0.tar.gz) = 36574 bytes
+BLAKE2s (ppx_bin_prot-0.15.0.tar.gz) = ad2b4d3bb7b985ed984e235622017688a6e21caa2670af65a9a80743e93048d9
+SHA512 (ppx_bin_prot-0.15.0.tar.gz) = 3fdc7e9431458b752d553f093762e3ed3c96af3a789eceeb94895284de961a887e358d137c21da372cadf6c0e6329628f6c698499581f672e0e1913b3274cc14
+Size (ppx_bin_prot-0.15.0.tar.gz) = 37045 bytes
