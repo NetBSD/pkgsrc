@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/04/03 05:36:02 taca Exp $
+# $NetBSD: Makefile,v 1.9 2022/05/04 17:34:05 jperkin Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
@@ -10,6 +10,8 @@ HOMEPAGE=	https://www.redmine.org/
 COMMENT=	Flexible project management web application
 LICENSE=	gnu-gpl-v2 # and so on.
 
+USE_TOOLS+=	pax
+
 RM_VERSION=	4.2.5
 
 NO_BUILD=	yes
@@ -19,6 +21,11 @@ RUBY_VERSIONS_ACCEPTED=	26 27
 RUBY_RAILS_ACCEPTED=	52
 
 OVERRIDE_GEMSPEC+=	nokogiri>=1.11.0 mini_mime>=1.0.1 csv>=3.1.1
+
+REPLACE_RUBY+=	bin/*
+REPLACE_RUBY+=	extra/mail_handler/rdm-mailhandler.rb
+REPLACE_RUBY+=	extra/svn/reposman.rb
+REPLACE_RUBY+=	public/dispatch.fcgi.example
 
 .include "../../lang/ruby/modules.mk"
 
@@ -48,11 +55,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-mini-magick>=4.11.0<4.12:../../graphics/ruby-mini-ma
 DEPENDS+=	${RUBY_PKGPREFIX}-redcarpet>=3.5.1<3.6:../../textproc/ruby-redcarpet
 
 .include "options.mk"
-
-REPLACE_RUBY+=	${DISTNAME}/bin/*
-REPLACE_RUBY+=	${DISTNAME}/extra/mail_handler/rdm-mailhandler.rb
-REPLACE_RUBY+=	${DISTNAME}/extra/svn/reposman.rb
-REPLACE_RUBY+=	${DISTNAME}/public/dispatch.fcgi.example
 
 SUBST_CLASSES+=		shell
 SUBST_FILES.shell=	${DESTDIR}${PREFIX}/bin/redmine42_*${RUBY_SUFFIX}.sh
@@ -84,10 +86,7 @@ FILES_SUBST+=	WWWGRP=${APACHE_GROUP} WWWOWN=${APACHE_USER} \
 		RM_DIR=${RM_DIR}
 
 do-install:
-	cd ${WRKSRC} && ${FIND} . -type d -exec ${INSTALL_DATA_DIR} \
-		${DESTDIR}${PREFIX}/${RM_DIR}/{} \;
-	cd ${WRKSRC} && ${FIND} . -type f ! -name "*.orig" -exec \
-		${INSTALL_DATA} {} ${DESTDIR}${PREFIX}/${RM_DIR}/{} \;
+	cd ${WRKSRC} && ${PAX} -rw -pp . ${DESTDIR}${PREFIX}/${RM_DIR}/
 	${INSTALL_SCRIPT} ${FILESDIR}/redmine42_migrate_plugins.sh \
 		${DESTDIR}${PREFIX}/bin/redmine42_migrate_plugins${RUBY_SUFFIX}.sh
 	${INSTALL_SCRIPT} ${FILESDIR}/redmine42_generate_secret_token.sh \
@@ -98,7 +97,11 @@ do-install:
 		${DESTDIR}${PREFIX}/bin/redmine42_load_default_data${RUBY_SUFFIX}.sh
 
 post-install: unicorn-post-install
-	${FIND} ${DESTDIR}/ -name ".*" \( -type f -or -type d \) | xargs rm -rf
+	${FIND} ${DESTDIR}${PREFIX}/${RM_DIR} \
+		\( -name ".*" -or -name "*.orig" \) -type f -exec ${RM} {} \;
+	${RM} -rf ${DESTDIR}${PREFIX}/${RM_DIR}/.github
+	${CHMOD} -x ${DESTDIR}${PREFIX}/${RM_DIR}/Rakefile
+	${CHMOD} -R g-w ${DESTDIR}${PREFIX}/${RM_DIR}
 	${MV} ${DESTDIR}${PREFIX}/${RM_DIR}/config/configuration.yml.example \
 		${DESTDIR}/${EGDIR}
 	${MV} ${DESTDIR}${PREFIX}/${RM_DIR}/config/database.yml.example \
