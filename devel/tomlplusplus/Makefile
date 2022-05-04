@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/03/08 08:51:49 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/05/04 06:44:12 wiz Exp $
 
-DISTNAME=	tomlplusplus-3.0.1
+DISTNAME=	tomlplusplus-3.1.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=marzer/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
