@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2020/01/16 13:18:13 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/05/04 15:24:10 jaapb Exp $
 ${OCAML_SITELIB}/ppx_cold/META
 ${OCAML_SITELIB}/ppx_cold/dune-package
 ${OCAML_SITELIB}/ppx_cold/opam
+${OCAML_SITELIB}/ppx_cold/ppx.exe
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_cold/ppx_cold.a
 ${OCAML_SITELIB}/ppx_cold/ppx_cold.cma
 ${OCAML_SITELIB}/ppx_cold/ppx_cold.cmi

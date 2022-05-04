@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:15:52 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/05/04 15:24:10 jaapb Exp $
 
-BLAKE2s (ppx_cold-0.13.0.tar.gz) = 21bafed299ee3c8eae0b9874cca2250cbac5a53bb432fc67e482ebae2474a9aa
-SHA512 (ppx_cold-0.13.0.tar.gz) = 37fd6f85df26a8c6eb688b38f7a38e4aa5aeaaa1ceedc58bffb4fb9104af79fa41555ba96db64d01606f0df128c9ed1824ea1037d9dd2f68c33ebdde882d325f
-Size (ppx_cold-0.13.0.tar.gz) = 3705 bytes
+BLAKE2s (ppx_cold-0.15.0.tar.gz) = 62b25ab0e8f192a13253572478587b821b292acf7c59568189bbd5923b87be1b
+SHA512 (ppx_cold-0.15.0.tar.gz) = 239b78e8c03d47973be4d72d4879a0290367f96033b9d3a5d723a1c35e02121af86d5e41fd08dcf4746a8c6d521c94cf41eff6b4a439a204e0a5a3a0c49d9bf1
+Size (ppx_cold-0.15.0.tar.gz) = 3779 bytes
