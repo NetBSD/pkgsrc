@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2020/12/11 09:10:57 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/05/04 18:33:21 jaapb Exp $
 ${OCAML_SITELIB}/ppx_stable/META
 ${OCAML_SITELIB}/ppx_stable/dune-package
+${OCAML_SITELIB}/ppx_stable/generic_map.ml
+${OCAML_SITELIB}/ppx_stable/generic_map.mli
 ${OCAML_SITELIB}/ppx_stable/opam
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_stable/ppx_stable.a
 ${OCAML_SITELIB}/ppx_stable/ppx_stable.cma
@@ -12,6 +14,13 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_stable/ppx_stable.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_stable/ppx_stable.cmxs
 ${OCAML_SITELIB}/ppx_stable/ppx_stable.ml
 ${OCAML_SITELIB}/ppx_stable/ppx_stable.mli
-share/doc/ppx_stable/CHANGES.md
+${OCAML_SITELIB}/ppx_stable/ppx_stable__.cmi
+${OCAML_SITELIB}/ppx_stable/ppx_stable__.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_stable/ppx_stable__.cmx
+${OCAML_SITELIB}/ppx_stable/ppx_stable__.ml
+${OCAML_SITELIB}/ppx_stable/ppx_stable__Generic_map.cmi
+${OCAML_SITELIB}/ppx_stable/ppx_stable__Generic_map.cmt
+${OCAML_SITELIB}/ppx_stable/ppx_stable__Generic_map.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_stable/ppx_stable__Generic_map.cmx
 share/doc/ppx_stable/LICENSE.md
 share/doc/ppx_stable/README.md
