@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2294 2022/05/04 06:53:16 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2295 2022/05/04 07:32:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3573,3 +3573,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/tomlplusplus to 3.1.0 [wiz 2022-05-04]
 	Updated www/restish to 0.14.0 [wiz 2022-05-04]
 	Updated audio/openal-soft to 1.22.0 [wiz 2022-05-04]
+	Updated www/py-nbformat to 5.4.0 [adam 2022-05-04]
+	Updated www/py-nbclient to 0.6.2 [adam 2022-05-04]
