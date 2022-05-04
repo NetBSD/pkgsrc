@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2304 2022/05/04 13:34:54 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2305 2022/05/04 13:59:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3600,3 +3600,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/ocaml-mysql to 1.2.4 [jaapb 2022-05-04]
 	Updated databases/ocaml-sqlite3 to 5.1.0 [jaapb 2022-05-04]
 	Updated devel/ocaml-sexplib to 0.15.0 [jaapb 2022-05-04]
+	Updated games/lgogdownloader to 3.9 [wiz 2022-05-04]
