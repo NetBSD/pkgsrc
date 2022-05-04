@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/05/04 15:19:24 manu Exp $
+libexec/nagios/check_lpd
