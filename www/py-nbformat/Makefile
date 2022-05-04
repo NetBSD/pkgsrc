@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2022/04/07 07:01:44 adam Exp $
+# $NetBSD: Makefile,v 1.14 2022/05/04 07:30:55 adam Exp $
 
-DISTNAME=	nbformat-5.3.0
+DISTNAME=	nbformat-5.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nbformat/}
