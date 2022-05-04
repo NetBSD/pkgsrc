@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/04 12:22:05 mef Exp $
+
+BLAKE2s (R/repurrrsive_1.0.0.tar.gz) = 9099be83f537694afbad70681387c152adf20502c925469f0a4c7eacf41c0a10
+SHA512 (R/repurrrsive_1.0.0.tar.gz) = 6112eba3f5d55d6f3db63ed3599c7274d9ba84088b959c25865c644b49b78c1c1d8c507bf0eea56ffab1cb311263045e7839570cdef2f0e28fccf9711e183a6b
+Size (R/repurrrsive_1.0.0.tar.gz) = 594022 bytes
