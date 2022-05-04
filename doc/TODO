@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21770 2022/05/04 05:55:56 wiz Exp $
+$NetBSD: TODO,v 1.21771 2022/05/04 06:33:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1422,7 +1422,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o podcastdl-0.3.3
 	o policyd-weight-0.1.15.2
 	o poppass-4.0.14
-	o poppler-22.04.0
 	o posh-0.14.1
 	o postal-0.72
 	o postfix-3.7.1
@@ -1719,7 +1718,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o top-3.8beta1
 	o topgit-0.8
 	o tor-browser-11.0.9 [wip]
-	o tor-browser-11.0.10
+	o tor-browser-11.0.11
 	o torrentzip-2.1.0
 	o toxcore-0.2.12
 	o trafficserver-9.0.1
