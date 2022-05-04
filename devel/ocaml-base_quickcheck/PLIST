@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/12 18:59:16 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/05/04 17:12:41 jaapb Exp $
 ${OCAML_SITELIB}/base_quickcheck/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/base_quickcheck/base_quickcheck.a
 ${OCAML_SITELIB}/base_quickcheck/base_quickcheck.cma
@@ -12,6 +12,10 @@ ${OCAML_SITELIB}/base_quickcheck/base_quickcheck__.cmi
 ${OCAML_SITELIB}/base_quickcheck/base_quickcheck__.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/base_quickcheck/base_quickcheck__.cmx
 ${OCAML_SITELIB}/base_quickcheck/base_quickcheck__.ml
+${OCAML_SITELIB}/base_quickcheck/base_quickcheck__Bigarray_helpers.cmi
+${OCAML_SITELIB}/base_quickcheck/base_quickcheck__Bigarray_helpers.cmt
+${OCAML_SITELIB}/base_quickcheck/base_quickcheck__Bigarray_helpers.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base_quickcheck/base_quickcheck__Bigarray_helpers.cmx
 ${OCAML_SITELIB}/base_quickcheck/base_quickcheck__Export.cmi
 ${OCAML_SITELIB}/base_quickcheck/base_quickcheck__Export.cmt
 ${OCAML_SITELIB}/base_quickcheck/base_quickcheck__Export.cmti
@@ -42,6 +46,8 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/base_quickcheck/base_quickcheck__Test_intf.cm
 ${OCAML_SITELIB}/base_quickcheck/base_quickcheck__With_basic_types.cmi
 ${OCAML_SITELIB}/base_quickcheck/base_quickcheck__With_basic_types.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/base_quickcheck/base_quickcheck__With_basic_types.cmx
+${OCAML_SITELIB}/base_quickcheck/bigarray_helpers.ml
+${OCAML_SITELIB}/base_quickcheck/bigarray_helpers.mli
 ${OCAML_SITELIB}/base_quickcheck/dune-package
 ${OCAML_SITELIB}/base_quickcheck/export.ml
 ${OCAML_SITELIB}/base_quickcheck/export.mli
@@ -124,6 +130,22 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/base_quickcheck/ppx_quickcheck/ppx_quickcheck
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/base_quickcheck/ppx_quickcheck/ppx_quickcheck.cmxs
 ${OCAML_SITELIB}/base_quickcheck/ppx_quickcheck/ppx_quickcheck.ml
 ${OCAML_SITELIB}/base_quickcheck/ppx_quickcheck/ppx_quickcheck.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base_quickcheck/ppx_quickcheck/runtime/ppx_quickcheck_runtime.a
+${OCAML_SITELIB}/base_quickcheck/ppx_quickcheck/runtime/ppx_quickcheck_runtime.cma
+${OCAML_SITELIB}/base_quickcheck/ppx_quickcheck/runtime/ppx_quickcheck_runtime.cmi
+${OCAML_SITELIB}/base_quickcheck/ppx_quickcheck/runtime/ppx_quickcheck_runtime.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base_quickcheck/ppx_quickcheck/runtime/ppx_quickcheck_runtime.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base_quickcheck/ppx_quickcheck/runtime/ppx_quickcheck_runtime.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base_quickcheck/ppx_quickcheck/runtime/ppx_quickcheck_runtime.cmxs
+${OCAML_SITELIB}/base_quickcheck/ppx_quickcheck/runtime/ppx_quickcheck_runtime.ml
+${OCAML_SITELIB}/base_quickcheck/ppx_quickcheck/runtime/ppx_quickcheck_runtime__.cmi
+${OCAML_SITELIB}/base_quickcheck/ppx_quickcheck/runtime/ppx_quickcheck_runtime__.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base_quickcheck/ppx_quickcheck/runtime/ppx_quickcheck_runtime__.cmx
+${OCAML_SITELIB}/base_quickcheck/ppx_quickcheck/runtime/ppx_quickcheck_runtime__.ml
+${OCAML_SITELIB}/base_quickcheck/ppx_quickcheck/runtime/ppx_quickcheck_runtime__Quickcheckable.cmi
+${OCAML_SITELIB}/base_quickcheck/ppx_quickcheck/runtime/ppx_quickcheck_runtime__Quickcheckable.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base_quickcheck/ppx_quickcheck/runtime/ppx_quickcheck_runtime__Quickcheckable.cmx
+${OCAML_SITELIB}/base_quickcheck/ppx_quickcheck/runtime/quickcheckable.ml
 ${OCAML_SITELIB}/base_quickcheck/shrinker.ml
 ${OCAML_SITELIB}/base_quickcheck/shrinker.mli
 ${OCAML_SITELIB}/base_quickcheck/test.ml
@@ -131,3 +153,4 @@ ${OCAML_SITELIB}/base_quickcheck/test.mli
 ${OCAML_SITELIB}/base_quickcheck/test_intf.ml
 ${OCAML_SITELIB}/base_quickcheck/with_basic_types.ml
 share/doc/base_quickcheck/LICENSE.md
+share/doc/base_quickcheck/odoc-pages/index.mld
