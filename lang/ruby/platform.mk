@@ -1,4 +1,4 @@
-# $NetBSD: platform.mk,v 1.10 2022/05/04 16:16:49 taca Exp $
+# $NetBSD: platform.mk,v 1.11 2022/05/04 16:44:53 taca Exp $
 #
 
 #
@@ -121,6 +121,16 @@ CONFIGURE_ARGS+=	--disable-dtrace
 #
 .if ${RUBY_VER} == 31 && ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M8*)
 CONFIGURE_ARGS+=	--disable-dtrace
+.endif
+
+#
+# NetBSD
+#
+# NetBSD 8.0 has problem with using static_assert macro.
+# This is very ad hoc fix to prevent it.
+#
+.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M8.0*)
+CFLAGS+=	-DRB_AVOID_STATIC_ASSERT
 .endif
 
 #
