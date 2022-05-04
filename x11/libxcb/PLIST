@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2018/03/05 10:20:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/05/04 06:02:19 wiz Exp $
 include/xcb/bigreq.h
 include/xcb/composite.h
 include/xcb/damage.h
@@ -900,6 +900,8 @@ man/man3/xcb_input_device_property_notify_event_t.3
 man/man3/xcb_input_device_state_notify_event_t.3
 man/man3/xcb_input_device_valuator_event_t.3
 man/man3/xcb_input_enter_event_t.3
+man/man3/xcb_input_gesture_pinch_begin_event_t.3
+man/man3/xcb_input_gesture_swipe_begin_event_t.3
 man/man3/xcb_input_get_device_button_mapping.3
 man/man3/xcb_input_get_device_button_mapping_map.3
 man/man3/xcb_input_get_device_button_mapping_map_end.3
@@ -2063,6 +2065,9 @@ man/man3/xcb_xfixes_fetch_region_rectangles_iterator.3
 man/man3/xcb_xfixes_fetch_region_rectangles_length.3
 man/man3/xcb_xfixes_fetch_region_reply.3
 man/man3/xcb_xfixes_fetch_region_unchecked.3
+man/man3/xcb_xfixes_get_client_disconnect_mode.3
+man/man3/xcb_xfixes_get_client_disconnect_mode_reply.3
+man/man3/xcb_xfixes_get_client_disconnect_mode_unchecked.3
 man/man3/xcb_xfixes_get_cursor_image.3
 man/man3/xcb_xfixes_get_cursor_image_and_name.3
 man/man3/xcb_xfixes_get_cursor_image_and_name_cursor_image.3
@@ -2100,6 +2105,8 @@ man/man3/xcb_xfixes_select_cursor_input_checked.3
 man/man3/xcb_xfixes_select_selection_input.3
 man/man3/xcb_xfixes_select_selection_input_checked.3
 man/man3/xcb_xfixes_selection_notify_event_t.3
+man/man3/xcb_xfixes_set_client_disconnect_mode.3
+man/man3/xcb_xfixes_set_client_disconnect_mode_checked.3
 man/man3/xcb_xfixes_set_cursor_name.3
 man/man3/xcb_xfixes_set_cursor_name_checked.3
 man/man3/xcb_xfixes_set_gc_clip_region.3
