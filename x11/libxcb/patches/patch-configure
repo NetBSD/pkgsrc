@@ -1,8 +1,8 @@
-$NetBSD: patch-configure,v 1.1 2020/02/23 22:37:45 wiz Exp $
+$NetBSD: patch-configure,v 1.2 2022/05/04 04:39:09 wiz Exp $
 
---- configure.orig	2020-02-22 20:50:24.000000000 +0000
+--- configure.orig	2022-05-03 22:15:58.000000000 +0000
 +++ configure
-@@ -19693,10 +19693,6 @@ $as_echo "yes" >&6; }
+@@ -20661,10 +20661,6 @@ printf "%s\n" "yes" >&6; }
  
  fi
  NEEDED="xau >= 0.99.2"
@@ -12,4 +12,4 @@ $NetBSD: patch-configure,v 1.1 2020/02/23 22:37:45 wiz Exp $
 -esac
  
  pkg_failed=no
- { $as_echo "$as_me:${as_lineno-$LINENO}: checking for NEEDED" >&5
+ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for NEEDED" >&5
