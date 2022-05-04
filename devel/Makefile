@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3729 2022/05/01 09:23:25 wiz Exp $
+# $NetBSD: Makefile,v 1.3730 2022/05/04 12:38:38 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2380,6 +2380,7 @@ SUBDIR+=	py-contextlib2
 SUBDIR+=	py-cookiecutter
 SUBDIR+=	py-cooldict
 SUBDIR+=	py-coverage
+SUBDIR+=	py-coverage-enable-subprocess
 SUBDIR+=	py-cparser
 SUBDIR+=	py-cpplint
 SUBDIR+=	py-cppy
@@ -2792,6 +2793,7 @@ SUBDIR+=	py-test-env
 SUBDIR+=	py-test-fixture-config
 SUBDIR+=	py-test-flake8
 SUBDIR+=	py-test-forked
+SUBDIR+=	py-test-freezegun
 SUBDIR+=	py-test-isort
 SUBDIR+=	py-test-lazy-fixture
 SUBDIR+=	py-test-localserver
