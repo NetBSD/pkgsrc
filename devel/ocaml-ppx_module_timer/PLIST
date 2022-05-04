@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/13 11:53:56 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/05/04 18:10:01 jaapb Exp $
 ${OCAML_SITELIB}/ppx_module_timer/META
 ${OCAML_SITELIB}/ppx_module_timer/dune-package
 ${OCAML_SITELIB}/ppx_module_timer/opam
+${OCAML_SITELIB}/ppx_module_timer/ppx.exe
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_module_timer/ppx_module_timer.a
 ${OCAML_SITELIB}/ppx_module_timer/ppx_module_timer.cma
 ${OCAML_SITELIB}/ppx_module_timer/ppx_module_timer.cmi
