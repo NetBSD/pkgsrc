@@ -1,11 +1,10 @@
-$NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcstubs_netbsd_m68k.cpp,v 1.1 2022/05/01 00:36:11 manu Exp $
+$NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcstubs_netbsd_m68k.cpp,v 1.2 2022/05/05 14:07:39 nia Exp $
 
 Update to fit current code
 
---- xpcom/reflect/xptcall/md/unix/xptcstubs_netbsd_m68k.cpp.orig	2022-04-18 02:30:50.528949644 +0000
-+++ xpcom/reflect/xptcall/md/unix/xptcstubs_netbsd_m68k.cpp	2022-04-18 01:58:14.671629551 +0000
-@@ -5,8 +5,9 @@
- 
+--- xpcom/reflect/xptcall/md/unix/xptcstubs_netbsd_m68k.cpp.orig	2022-02-03 04:20:33.000000000 +0000
++++ xpcom/reflect/xptcall/md/unix/xptcstubs_netbsd_m68k.cpp
+@@ -6,6 +6,7 @@
  /* Implement shared vtbl methods. */
  
  #include "xptcprivate.h"
@@ -13,9 +12,7 @@ Update to fit current code
  
  #if !defined(__NetBSD__) || !defined(__m68k__)
  #error This code is for NetBSD/m68k only
- #endif
-@@ -18,21 +19,19 @@
- #define PARAM_BUFFER_COUNT     16
+@@ -19,19 +20,17 @@ extern "C" {
  
          nsXPTCMiniVariant paramBuffer[PARAM_BUFFER_COUNT];
          nsXPTCMiniVariant* dispatchParams = nullptr;
@@ -40,9 +37,7 @@ Update to fit current code
  
          paramCount = info->GetParamCount();
  
-         // setup variant array pointer
-@@ -79,11 +78,9 @@
-                 break;
+@@ -80,9 +79,7 @@ extern "C" {
              }
          }
  
@@ -53,4 +48,3 @@ Update to fit current code
  
          if(dispatchParams != paramBuffer)
              delete [] dispatchParams;
- 
