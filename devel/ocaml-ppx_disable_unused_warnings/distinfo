@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/05 06:36:25 jaapb Exp $
+
+BLAKE2s (ppx_disable_unused_warnings-0.15.0.tar.gz) = e93b970c617080ce5c4171acf4d7f3df9800a66d5cec61b6a70cbf9268d28aaf
+SHA512 (ppx_disable_unused_warnings-0.15.0.tar.gz) = 837bb96b5cc2623205ce778e6100d97a0a029e8c20a945509c06ee44784e67b8e9033b5387681c0f86c07f48ca4541e356ca62e19c1baa8d1b52c813400bb024
+Size (ppx_disable_unused_warnings-0.15.0.tar.gz) = 3966 bytes
