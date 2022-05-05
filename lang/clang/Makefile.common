@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2021/11/23 20:55:43 wiz Exp $
+# $NetBSD: Makefile.common,v 1.48 2022/05/05 08:24:41 nia Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-tools-extra/Makefile
 
@@ -33,7 +33,7 @@ CMAKE_ARGS.Darwin+=	-DDEFAULT_SYSROOT=${OSX_SDK_PATH:Q}
 
 # NetBSD < 10 did not provide ENOTRECOVERABLE
 # https://bugs.llvm.org/show_bug.cgi?id=52587
-.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[123456789].*)
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099949
 CXXFLAGS+=	-D_GLIBCXX_HAVE_ENOTRECOVERABLE=1
 CXXFLAGS+=	-DENOTRECOVERABLE=98
 .endif
