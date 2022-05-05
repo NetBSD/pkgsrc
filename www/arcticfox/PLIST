@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/05/05 09:36:03 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/05/05 14:07:38 nia Exp $
 bin/arcticfox
 include/${PKGNAME}/AbstractMediaDecoder.h
 include/${PKGNAME}/ActiveLayerTracker.h
@@ -181,6 +181,7 @@ include/${PKGNAME}/LayerTreeInvalidation.h
 include/${PKGNAME}/Layers.h
 include/${PKGNAME}/LayersLogging.h
 include/${PKGNAME}/LayersTypes.h
+include/${PKGNAME}/LayoutLogging.h
 include/${PKGNAME}/MP3Decoder.h
 include/${PKGNAME}/MP3Demuxer.h
 include/${PKGNAME}/MP3FrameParser.h
@@ -255,6 +256,7 @@ include/${PKGNAME}/SharedDecoderManager.h
 include/${PKGNAME}/SharedSurface.h
 include/${PKGNAME}/SharedSurfaceEGL.h
 include/${PKGNAME}/SharedSurfaceGL.h
+include/${PKGNAME}/SharedSurfaceGLX.h
 ${PLIST.skia}include/${PKGNAME}/SkiaGLGlue.h
 include/${PKGNAME}/SoftwareVsyncSource.h
 include/${PKGNAME}/SoftwareWebMVideoDecoder.h
@@ -620,6 +622,7 @@ include/${PKGNAME}/mozilla/Assertions.h
 include/${PKGNAME}/mozilla/AsyncEventDispatcher.h
 include/${PKGNAME}/mozilla/Atomics.h
 include/${PKGNAME}/mozilla/Attributes.h
+include/${PKGNAME}/mozilla/AutoGlobalTimelineMarker.h
 include/${PKGNAME}/mozilla/AutoRestore.h
 include/${PKGNAME}/mozilla/AutoTimelineMarker.h
 include/${PKGNAME}/mozilla/AvailableMemoryTracker.h
@@ -669,6 +672,7 @@ include/${PKGNAME}/mozilla/EventClassList.h
 include/${PKGNAME}/mozilla/EventDispatcher.h
 include/${PKGNAME}/mozilla/EventForwards.h
 include/${PKGNAME}/mozilla/EventListenerManager.h
+include/${PKGNAME}/mozilla/EventMessageList.h
 include/${PKGNAME}/mozilla/EventNameList.h
 include/${PKGNAME}/mozilla/EventStateManager.h
 include/${PKGNAME}/mozilla/EventStates.h
@@ -745,6 +749,7 @@ include/${PKGNAME}/mozilla/OSFileConstants.h
 include/${PKGNAME}/mozilla/Observer.h
 include/${PKGNAME}/mozilla/Omnijar.h
 include/${PKGNAME}/mozilla/Opaque.h
+include/${PKGNAME}/mozilla/OwningNonNull.h
 include/${PKGNAME}/mozilla/PaintTracker.h
 include/${PKGNAME}/mozilla/Pair.h
 include/${PKGNAME}/mozilla/PeerIdentity.h
@@ -818,6 +823,7 @@ include/${PKGNAME}/mozilla/TextUtils.h
 include/${PKGNAME}/mozilla/ThreadHangStats.h
 include/${PKGNAME}/mozilla/ThreadLocal.h
 include/${PKGNAME}/mozilla/TimeStamp.h
+include/${PKGNAME}/mozilla/TimelineConsumers.h
 include/${PKGNAME}/mozilla/ToString.h
 include/${PKGNAME}/mozilla/Tokenizer.h
 include/${PKGNAME}/mozilla/TouchEvents.h
@@ -881,6 +887,8 @@ include/${PKGNAME}/mozilla/dom/AnimationEffectReadOnly.h
 include/${PKGNAME}/mozilla/dom/AnimationEffectReadOnlyBinding.h
 include/${PKGNAME}/mozilla/dom/AnimationEvent.h
 include/${PKGNAME}/mozilla/dom/AnimationEventBinding.h
+include/${PKGNAME}/mozilla/dom/AnimationPlaybackEvent.h
+include/${PKGNAME}/mozilla/dom/AnimationPlaybackEventBinding.h
 include/${PKGNAME}/mozilla/dom/AnimationTimeline.h
 include/${PKGNAME}/mozilla/dom/AnimationTimelineBinding.h
 include/${PKGNAME}/mozilla/dom/AnonymousContent.h
@@ -1564,7 +1572,6 @@ include/${PKGNAME}/mozilla/dom/OfflineAudioContextBinding.h
 include/${PKGNAME}/mozilla/dom/OfflineResourceListBinding.h
 include/${PKGNAME}/mozilla/dom/OscillatorNode.h
 include/${PKGNAME}/mozilla/dom/OscillatorNodeBinding.h
-include/${PKGNAME}/mozilla/dom/OwningNonNull.h
 include/${PKGNAME}/mozilla/dom/PageTransitionEvent.h
 include/${PKGNAME}/mozilla/dom/PageTransitionEventBinding.h
 include/${PKGNAME}/mozilla/dom/PaintRequest.h
@@ -1639,6 +1646,7 @@ include/${PKGNAME}/mozilla/dom/PromiseNativeHandler.h
 include/${PKGNAME}/mozilla/dom/PromiseWorkerProxy.h
 include/${PKGNAME}/mozilla/dom/PrototypeList.h
 include/${PKGNAME}/mozilla/dom/PushEventBinding.h
+include/${PKGNAME}/mozilla/dom/PushManager.h
 include/${PKGNAME}/mozilla/dom/PushManagerBinding.h
 include/${PKGNAME}/mozilla/dom/PushMessageDataBinding.h
 include/${PKGNAME}/mozilla/dom/PushSubscriptionBinding.h
@@ -2125,6 +2133,7 @@ include/${PKGNAME}/mozilla/dom/bluetooth/BluetoothDiscoveryHandle.h
 include/${PKGNAME}/mozilla/dom/bluetooth/BluetoothGatt.h
 include/${PKGNAME}/mozilla/dom/bluetooth/BluetoothGattCharacteristic.h
 include/${PKGNAME}/mozilla/dom/bluetooth/BluetoothGattDescriptor.h
+include/${PKGNAME}/mozilla/dom/bluetooth/BluetoothGattServer.h
 include/${PKGNAME}/mozilla/dom/bluetooth/BluetoothGattService.h
 include/${PKGNAME}/mozilla/dom/bluetooth/BluetoothLeDeviceEvent.h
 include/${PKGNAME}/mozilla/dom/bluetooth/BluetoothManager.h
@@ -2284,12 +2293,17 @@ include/${PKGNAME}/mozilla/gfx/BaseSize.h
 include/${PKGNAME}/mozilla/gfx/Blur.h
 include/${PKGNAME}/mozilla/gfx/BorrowedContext.h
 include/${PKGNAME}/mozilla/gfx/Coord.h
+include/${PKGNAME}/mozilla/gfx/CriticalSection.h
 include/${PKGNAME}/mozilla/gfx/DataSurfaceHelpers.h
 include/${PKGNAME}/mozilla/gfx/DrawTargetTiled.h
 include/${PKGNAME}/mozilla/gfx/Filters.h
 include/${PKGNAME}/mozilla/gfx/Helpers.h
 include/${PKGNAME}/mozilla/gfx/HelpersCairo.h
 ${PLIST.skia}include/${PKGNAME}/mozilla/gfx/HelpersSkia.h
+include/${PKGNAME}/mozilla/gfx/IterableArena.h
+include/${PKGNAME}/mozilla/gfx/JobScheduler.h
+include/${PKGNAME}/mozilla/gfx/JobScheduler_posix.h
+include/${PKGNAME}/mozilla/gfx/JobScheduler_win32.h
 include/${PKGNAME}/mozilla/gfx/Logging.h
 include/${PKGNAME}/mozilla/gfx/Matrix.h
 include/${PKGNAME}/mozilla/gfx/NumericTools.h
@@ -2638,6 +2652,7 @@ include/${PKGNAME}/nsCharSeparatedTokenizer.h
 include/${PKGNAME}/nsCharTraits.h
 include/${PKGNAME}/nsCharsetSource.h
 include/${PKGNAME}/nsCheapSets.h
+include/${PKGNAME}/nsChildContentList.h
 include/${PKGNAME}/nsClassHashtable.h
 include/${PKGNAME}/nsClientAuthRemember.h
 include/${PKGNAME}/nsCollation.h
@@ -3000,7 +3015,6 @@ include/${PKGNAME}/nsIDOMAttr.h
 include/${PKGNAME}/nsIDOMBeforeUnloadEvent.h
 include/${PKGNAME}/nsIDOMBlob.h
 include/${PKGNAME}/nsIDOMCDATASection.h
-include/${PKGNAME}/nsIDOMCSSCharsetRule.h
 include/${PKGNAME}/nsIDOMCSSConditionRule.h
 include/${PKGNAME}/nsIDOMCSSCounterStyleRule.h
 include/${PKGNAME}/nsIDOMCSSFontFaceRule.h
@@ -3210,6 +3224,7 @@ include/${PKGNAME}/nsIDirIndexListener.h
 include/${PKGNAME}/nsIDirectoryEnumerator.h
 include/${PKGNAME}/nsIDirectoryService.h
 include/${PKGNAME}/nsIDiskSpaceWatcher.h
+include/${PKGNAME}/nsIDisplayInfo.h
 include/${PKGNAME}/nsIDivertableChannel.h
 include/${PKGNAME}/nsIDocCharset.h
 include/${PKGNAME}/nsIDocShell.h
@@ -3563,6 +3578,7 @@ include/${PKGNAME}/nsIProtocolProxyService2.h
 include/${PKGNAME}/nsIProxiedChannel.h
 include/${PKGNAME}/nsIProxiedProtocolHandler.h
 include/${PKGNAME}/nsIProxyInfo.h
+include/${PKGNAME}/nsIPushClient.h
 include/${PKGNAME}/nsIPushNotificationService.h
 include/${PKGNAME}/nsIPushObserverNotification.h
 include/${PKGNAME}/nsIQueryContentEventResult.h
@@ -4565,7 +4581,6 @@ share/idl/${PKGNAME}/nsIDOMAttr.idl
 share/idl/${PKGNAME}/nsIDOMBeforeUnloadEvent.idl
 share/idl/${PKGNAME}/nsIDOMBlob.idl
 share/idl/${PKGNAME}/nsIDOMCDATASection.idl
-share/idl/${PKGNAME}/nsIDOMCSSCharsetRule.idl
 share/idl/${PKGNAME}/nsIDOMCSSConditionRule.idl
 share/idl/${PKGNAME}/nsIDOMCSSCounterStyleRule.idl
 share/idl/${PKGNAME}/nsIDOMCSSFontFaceRule.idl
@@ -4770,6 +4785,7 @@ share/idl/${PKGNAME}/nsIDirIndexListener.idl
 share/idl/${PKGNAME}/nsIDirectoryEnumerator.idl
 share/idl/${PKGNAME}/nsIDirectoryService.idl
 share/idl/${PKGNAME}/nsIDiskSpaceWatcher.idl
+share/idl/${PKGNAME}/nsIDisplayInfo.idl
 share/idl/${PKGNAME}/nsIDivertableChannel.idl
 share/idl/${PKGNAME}/nsIDocCharset.idl
 share/idl/${PKGNAME}/nsIDocShell.idl
@@ -5076,6 +5092,7 @@ share/idl/${PKGNAME}/nsIProtocolProxyService2.idl
 share/idl/${PKGNAME}/nsIProxiedChannel.idl
 share/idl/${PKGNAME}/nsIProxiedProtocolHandler.idl
 share/idl/${PKGNAME}/nsIProxyInfo.idl
+share/idl/${PKGNAME}/nsIPushClient.idl
 share/idl/${PKGNAME}/nsIPushNotificationService.idl
 share/idl/${PKGNAME}/nsIPushObserverNotification.idl
 share/idl/${PKGNAME}/nsIQueryContentEventResult.idl

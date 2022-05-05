@@ -1,21 +1,21 @@
-$NetBSD: distinfo,v 1.2 2022/05/01 00:36:10 manu Exp $
+$NetBSD: distinfo,v 1.3 2022/05/05 14:07:38 nia Exp $
 
-BLAKE2s (arcticfox-39.0.tar.gz) = 87d8ae46ac9b5f0acebbad1962150804781f29fc9eb2bf1f77442624e4a4fea0
-SHA512 (arcticfox-39.0.tar.gz) = 38fc4fa73c5c7d3ea692b2411580c519f6296622ea7f1cd86e784a3cc4d630a76ee699bb7f679a8dabd302c90bb4b7d786e853bed459b6e3b1efac59740db564
-Size (arcticfox-39.0.tar.gz) = 186594664 bytes
-SHA1 (patch-configure.in) = a5c3c9534a776e61d761139161617ca6279db838
+BLAKE2s (arcticfox-39.1.tar.gz) = f88422215565c49f1e01314ff59fafff29a6aa39af5b09b73a4c689229eb3e79
+SHA512 (arcticfox-39.1.tar.gz) = 4ccdfe22e834d95eee35cf0d9b4927160475386c01a4100179cd52ef45af6c3516a9b06145cbe8d68ab8f9e19e84b3b2cf67e7f6c95afe3f9da5dfb427cd3087
+Size (arcticfox-39.1.tar.gz) = 187176131 bytes
+SHA1 (patch-configure.in) = 488f4be41d5ab9e0607f2c9947934c3fd0dfe3a3
 SHA1 (patch-ipc_chromium_src_base_message__pump__libevent.cc) = 38cf700d07d468526e16cfe63d434c4752da8cc5
 SHA1 (patch-media_libcubeb_src_cubeb.c) = b3c4bd8146e2f7146baf1c2050260f7629cdb09a
 SHA1 (patch-media_libcubeb_src_moz.build) = e98b39b6272b58d4183c526f36987ea239fadd5d
-SHA1 (patch-xpcom_reflect_xptcall_genstubs.pl) = f120ff2d52f6875505da477b12e32c40bbf005a2
-SHA1 (patch-xpcom_reflect_xptcall_md_unix_moz.build) = 0c6b7851dce1d3554be6fa4d11032e7bc0d47b19
-SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcinvoke_arm_netbsd.cpp) = a8f9e48088a09479fe510ca5be584ad71ecaa2f4
-SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcinvoke_ppc_netbsd.cpp) = 42a82f3fe496b49afada33537b1b1d3dda2e5bf5
-SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcstubs_arm_netbsd.cpp) = e576e939f7acb44bd7c0fc07d0dddf5bf745d6a6
-SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcstubs_netbsd_m68k.cpp) = 47bc75f3991964b50f0b2bdb615004cbdcae145f
-SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcstubs_ppc_linux.cpp) = 60cb1b77d6737663ff4509ef00348ee32ba81e2d
-SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcstubs_ppc_netbsd.cpp) = 879f5d69d3c52a8ce6bea9373bd32f7c7762c03b
-SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcstubs_sparc_netbsd.cpp) = e8d15f754261c5e0f99b49b63ba01e339625eb59
-SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcstubs_sparc_openbsd.cpp) = ef5b28501ebc4e462998f2f28edd883353579789
-SHA1 (patch-xpcom_reflect_xptcall_xptcprivate.h) = 42d708c26969b6749fa14ed790c17dd96ca879d4
-SHA1 (patch-xpcom_reflect_xptcall_xptcstubsdecl.inc) = 0747a1b666494dec8d6005ade8cae8f33e6c928d
+SHA1 (patch-xpcom_reflect_xptcall_genstubs.pl) = 88a431a961fd910e1e7043877eba77d377185bc3
+SHA1 (patch-xpcom_reflect_xptcall_md_unix_moz.build) = b62af604ca0f409ecfba20c13a3deead54787192
+SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcinvoke_arm_netbsd.cpp) = 6e9337c0b8ddacc06d3fa72d5bc9044be9a3d93f
+SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcinvoke_ppc_netbsd.cpp) = 84049cb04067ac3ec630eefd9677c8060d78432e
+SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcstubs_arm_netbsd.cpp) = ff53173caecafc3e1d23e63329e1fe71771738a0
+SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcstubs_netbsd_m68k.cpp) = 63730d3c7006c1508f21b137cbd9bfb473931fd5
+SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcstubs_ppc_linux.cpp) = cfeeddcec71236f0bf9b3dc34e0f3af4dc7f8970
+SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcstubs_ppc_netbsd.cpp) = 3b1353ae3f696dd81aebd888d076b661015f3e03
+SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcstubs_sparc_netbsd.cpp) = 856cf5a977cbcfe23a03fa6116a9a6332e08df7f
+SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcstubs_sparc_openbsd.cpp) = 4868a76ac0de585fb7184462aa3904cb9491f24f
+SHA1 (patch-xpcom_reflect_xptcall_xptcprivate.h) = 44b48cd47efff5210259d110bc604d96b2642055
+SHA1 (patch-xpcom_reflect_xptcall_xptcstubsdecl.inc) = d33de5ce11c3f0a7b24b4572047d08988c278add

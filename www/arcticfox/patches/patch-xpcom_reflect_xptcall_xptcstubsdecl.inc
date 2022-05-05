@@ -1,12 +1,11 @@
-$NetBSD: patch-xpcom_reflect_xptcall_xptcstubsdecl.inc,v 1.1 2022/05/01 00:36:11 manu Exp $
+$NetBSD: patch-xpcom_reflect_xptcall_xptcstubsdecl.inc,v 1.2 2022/05/05 14:07:39 nia Exp $
 
 Bring NetBSD in line with other BSDs. 
 Not sure abut the impact, but there is no reason to single it out
 
---- xpcom/reflect/xptcall/xptcstubsdecl.inc.orig	2022-04-18 02:30:50.590253192 +0000
-+++ xpcom/reflect/xptcall/xptcstubsdecl.inc	2022-04-17 07:00:09.391086988 +0000
-@@ -7,9 +7,9 @@
- *  0 is QueryInterface
+--- xpcom/reflect/xptcall/xptcstubsdecl.inc.orig	2022-02-03 04:20:33.000000000 +0000
++++ xpcom/reflect/xptcall/xptcstubsdecl.inc
+@@ -8,7 +8,7 @@
  *  1 is AddRef
  *  2 is Release
  */
@@ -15,4 +14,3 @@ Not sure abut the impact, but there is no reason to single it out
  NS_IMETHOD Stub3();
  NS_IMETHOD Stub4();
  NS_IMETHOD Stub5();
- NS_IMETHOD Stub6();
