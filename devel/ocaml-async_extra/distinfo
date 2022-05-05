@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:44 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/05/05 10:53:17 jaapb Exp $
 
-BLAKE2s (async_extra-0.13.0.tar.gz) = dfc08b15e7b53a32f4de27b70a69a5bf5fffa09f52b2901aacd619b446f52e91
-SHA512 (async_extra-0.13.0.tar.gz) = d8cbe44ba2cc02b3289b98961714e6d2869982331e58d246dd055bec46e95d44d55b8c64872cc9edc8b392219b7fcc3031fa6a68cc1e78b300ae5c78104e5257
-Size (async_extra-0.13.0.tar.gz) = 17699 bytes
-SHA1 (patch-async__bus_src_dune) = 089089d2021a76bb165630eabe5b0c8f0a82d1ac
+BLAKE2s (async_extra-0.15.0.tar.gz) = 9a2177e219a3e8c1c8d9bc437ddccb0cb6ab551930b9976061cb43f6dd4c20b5
+SHA512 (async_extra-0.15.0.tar.gz) = d54c324b615dd6575024a1694790e247f1982949399aaab4b75a8918d819798c64c6d3a5fafd17274d3a3b0b45b7e3b022b4e263aad9701c2eecce3c25d032b7
+Size (async_extra-0.15.0.tar.gz) = 18236 bytes
