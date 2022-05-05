@@ -1,4 +1,4 @@
-# $NetBSD: nodeversion.mk,v 1.10 2022/05/05 07:08:06 adam Exp $
+# $NetBSD: nodeversion.mk,v 1.11 2022/05/05 13:10:03 gutteridge Exp $
 
 # This file determins which nodejs version is used as a dependency for
 # a package.
@@ -28,7 +28,7 @@
 #	listed later.
 #
 #	Possible values: 12 14 16 18
-#	Default: 12 14 16
+#	Default: 12 14 16 18
 #
 # NODE_VERSIONS_INCOMPATIBLE
 #	The node versions that the package *cannot* build against.
