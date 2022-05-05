@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2371 2022/05/05 08:06:49 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2372 2022/05/05 08:23:25 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3710,3 +3710,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ocaml-spawn to 0.15.1 [jaapb 2022-05-05]
 	Updated devel/ocaml-core to 0.15.0 [jaapb 2022-05-05]
 	Updated devel/ocaml-core_kernel to 0.15.0 [jaapb 2022-05-05]
+	Updated devel/ocaml-async_kernel to 0.15.0 [jaapb 2022-05-05]
