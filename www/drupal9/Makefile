@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/05/01 23:35:35 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/05/05 11:10:51 wen Exp $
 
 DISTNAME=	drupal-9.3.12
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.drupal.org/files/projects/
 
@@ -39,12 +40,18 @@ CONF_FILES_PERMS+=	share/examples/drupal/default.settings.php \
 			${WWW_USER} ${WWW_GROUP} 0640
 
 REPLACE_INTERPRETER+=	php
-REPLACE.php.old=	.*php[^ ]*
+REPLACE.php.old=	/usr/bin/env php
 REPLACE.php.new=	${PREFIX}/bin/php
 REPLACE_FILES.php=	core/scripts/drupal.sh core/scripts/password-hash.sh
-REPLACE_FILES.php+=	core/scripts/update-countries.sh
 REPLACE_FILES.php+=	core/scripts/rebuild_token_calculator.sh
-REPLACE_FILES.php+=	vendor/pear/archive_tar/scripts/phptar.in
+REPLACE_FILES.php+=	vendor/bin/var-dump-server
+REPLACE_FILES.php+=	vendor/symfony/var-dumper/Resources/bin/var-dump-server
+
+REPLACE_INTERPRETER+=	php2
+REPLACE.php2.old=	.*php
+REPLACE.php2.new=	${PREFIX}/bin/php
+REPLACE_FILES.php2=	core/scripts/update-countries.sh
+REPLACE_FILES.php2+=	vendor/pear/archive_tar/scripts/phptar.in
 
 REPLACE_BASH+=		core/scripts/dev/commit-code-check.sh
 
