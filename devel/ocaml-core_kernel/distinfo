@@ -1,24 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:15:47 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/05/05 08:04:05 jaapb Exp $
 
-BLAKE2s (core_kernel-0.13.1.tar.gz) = 86246030d0d568cf5b409dcecc33ecb6d79a30072d11c523ed40358b1082a2e7
-SHA512 (core_kernel-0.13.1.tar.gz) = c29d4013f1b6fa84bfe1f5589911aea1ec4949529de68fcf6702f44596ce0ee2f030eba5cbb260a3dd3ef129978103899eb884d71e058eea3604bad3747c9f6d
-Size (core_kernel-0.13.1.tar.gz) = 638728 bytes
-SHA1 (patch-balanced__reducer_src_dune) = e730285aa24a2bc7764e3f8ae8b27ed829e587ff
-SHA1 (patch-binary__packing_src_dune) = 56085a0a70dfe5a5eb5fd65222cd6e5bf03d9434
-SHA1 (patch-bounded__int__table_src_dune) = f7cf752b774f7282c96121c20e549bbd5f79c630
-SHA1 (patch-bounded__int__table_test_dune) = 3b3f147422230c4c0ff7ef63a6bab1b46e883bcf
-SHA1 (patch-int__set_src_dune) = 6102c6810e1802649809c9578dd57dfcc9a10451
-SHA1 (patch-moption_src_dune) = e127777f7e8a38a15ea724b1110e8c324f44f8bf
-SHA1 (patch-pairing__heap_bench__bin_dune) = 053c3517240cebfbba6eb549f75f2e15435eef61
-SHA1 (patch-pairing__heap_test__bin_dune) = b4a7c6947d7bc308341cf6db05bf597eef623ac9
-SHA1 (patch-pairing__heap_test_dune) = fdab6c2c39054076ca0dc15cb7a9707df387d30a
-SHA1 (patch-sexp__hidden__in__test_src_dune) = 35caa4d5c3374a997cfe46c7b103eb6240872494
-SHA1 (patch-src_dune) = 35302ca46fc73067c7ba1e2f68de3799823989e0
-SHA1 (patch-thread__pool__cpu__affinity_src_dune) = 1afb8d778479d734413ed6a197da76ee025b0ee9
-SHA1 (patch-thread__safe__queue_src_dune) = 60db742962a3e7e9a133e44ce38fae1d449edc92
-SHA1 (patch-timing__wheel_src_dune) = f4aa7ca65bb0b7b828280a179fa3e2ac3eefe53f
-SHA1 (patch-timing__wheel_test_dune) = 107529675230f8a30c63f45b22c696375ee73aaf
-SHA1 (patch-tuple__pool_test_dune) = aaa19348af0d2118cc557dfefa08b0ef8d1107a6
-SHA1 (patch-unpack__buffer_src_dune) = 767950c8a43589cdad3e46601c76291c0246a8c2
-SHA1 (patch-uopt_src_dune) = cb09b773b7d701a892f43a580580bbf815906219
-SHA1 (patch-weak__hashtbl_test_dune) = e5ac29cbdc2760528b3e96ac867e83cc102d36e7
+BLAKE2s (core_kernel-0.15.0.tar.gz) = 7ad2888d91a73a5ce5e861229f9e8056d6725e613ec19045b7df20aeafb818a2
+SHA512 (core_kernel-0.15.0.tar.gz) = da28f11374fda2e869b5ef3f7131461c6d896b52413654f2aeb7c74bc77ba4a8e2a25830eb3e3ef393e0bbae903db20f54773b356c53cab75c1bba1b9ce265bc
+Size (core_kernel-0.15.0.tar.gz) = 265183 bytes
