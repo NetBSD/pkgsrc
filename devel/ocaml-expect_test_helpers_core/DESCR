@@ -1,0 +1,3 @@
+Expect_test_helpers_core is a library intended for use with expect tests,
+in particular stable types and allocation tests that use the Core.Gc
+module.
