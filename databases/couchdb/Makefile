@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2022/05/05 13:18:51 nia Exp $
+# $NetBSD: Makefile,v 1.79 2022/05/05 13:42:57 nia Exp $
 
 DISTNAME=		apache-couchdb-2.3.1
 PKGNAME=		${DISTNAME:S/apache-//}
@@ -84,12 +84,10 @@ COUCHDB_BIN_FILES+=	couchdb/erts*/bin/*
 COUCHDB_BIN_FILES+=	couchdb/lib/*/priv/bin/*
 COUCHDB_BIN_FILES+=	couchdb/lib/*/priv/lib/*.so
 
-.for binpath in ${COUCHDB_BIN_FILES}
-CHECK_PIE_SKIP+=	${binpath}
-CHECK_RELRO_SKIP+=	${binpath}
-CHECK_SHLIBS_SKIP+=	${binpath}
-CTF_FILES_SKIP+=	${binpath}
-.endfor
+CHECK_PIE_SKIP+=	${COUCHDB_BIN_FILES}
+CHECK_RELRO_SKIP+=	${COUCHDB_BIN_FILES}
+CHECK_SHLIBS_SKIP+=	${COUCHDB_BIN_FILES}
+CTF_FILES_SKIP+=	${COUCHDB_BIN_FILES}
 
 RCD_SCRIPTS+=		couchdb
 
