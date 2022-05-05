@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:22:24 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/05/05 11:22:01 jaapb Exp $
 
-BLAKE2s (textutils-0.13.0.tar.gz) = 310c7ac46ac1caa05a08471345e6d7a05a592a4ddbc628d892c61b76d448baf8
-SHA512 (textutils-0.13.0.tar.gz) = b48241e48eb988fc2fcf83ff3ff86370450fd94f390d757e19bbe985eb2a54c8dfe0c287d3ad17019b03c8010194d1bf7a0769cc129d0f3e76d3a71c1abf2f18
-Size (textutils-0.13.0.tar.gz) = 12589 bytes
+BLAKE2s (textutils-0.15.0.tar.gz) = c9920ead610a4dc50e5b5104506ca2b91f81b84b36e138cefc8c1bbf8f8b0141
+SHA512 (textutils-0.15.0.tar.gz) = d45dd57a3490330ab800cd06903bba760e89fc46b1209d3ad91395a729f999fec1af62f3c74c08d0270fb7a89de115f1cc08bdaf77d74a043183e629fc367e1b
+Size (textutils-0.15.0.tar.gz) = 15477 bytes
