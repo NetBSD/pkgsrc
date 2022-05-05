@@ -1,0 +1,2 @@
+Timezone handles parsing timezone data and creates a Timezone.t that
+can later be used to manipulate time in core_kernel or core.
