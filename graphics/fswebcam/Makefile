@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/09/02 12:01:30 nia Exp $
+# $NetBSD: Makefile,v 1.4 2022/05/05 08:29:37 nia Exp $
 
 DISTNAME=	fswebcam-20200725
 CATEGORIES=	graphics
@@ -18,8 +18,7 @@ CONFIGURE_ARGS+=	--disable-v4l1
 pre-configure:
 .if exists(/usr/include/sys/videoio.h)
 # Older NetBSD versions need a newer videoio.h.
-.  if ${OPSYS} == "NetBSD" && \
-    (!empty(OS_VERSION:M[56789].*) && empty(OS_VERSION:M9.99.*))
+.  if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099970
 	${CP} ${.CURDIR}/../../graphics/libv4l/files/videoio.h \
 		${WRKSRC}/videodev2.h
 .  else
