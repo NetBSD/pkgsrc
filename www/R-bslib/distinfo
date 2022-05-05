@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:29:14 nia Exp $
+$NetBSD: distinfo,v 1.4 2022/05/05 02:24:41 mef Exp $
 
-BLAKE2s (R/bslib_0.2.5.1.tar.gz) = c4374b1476175fe394fabf9f6f2961a2aaccbcfecddcceb16d00c696ebd57d70
-SHA512 (R/bslib_0.2.5.1.tar.gz) = 910cb3f90d6ec143f9237c50ec895022e8b8d1360a1176ec7b87051e548a642f4dfb0d150f2815cfa0e2e2b51a148cd689acdd42c05106896ef52e971eea831a
-Size (R/bslib_0.2.5.1.tar.gz) = 3810412 bytes
+BLAKE2s (R/bslib_0.3.1.tar.gz) = 2e34801f76665d9359ea51e07a454e9558c5ef7a829210774855f4d3e0bfab6e
+SHA512 (R/bslib_0.3.1.tar.gz) = c17ea68dd6111275915713c5e6721ca18ed7db406125967e0d2f8ade83a1608e88dbdeb0d8acd67d84aaa2ae67931898b334e079b540c86b1c8544678c28b43a
+Size (R/bslib_0.3.1.tar.gz) = 4908277 bytes
