@@ -1,11 +1,9 @@
-# $NetBSD: application.mk,v 1.1 2019/08/18 03:44:42 maya Exp $
+# $NetBSD: application.mk,v 1.2 2022/05/05 13:06:50 gutteridge Exp $
 #
-# Replace the #! interpreter for nodejs scripts.
+# Replace the #! interpreter for node.js scripts.
 #
 # This mk fragment should be included in all node.js packages that
-# install node scripts, or at least those that don't use setuptools
-# or some other mechanism to set the real path.  Specifically, it is
-# reasonable to include both egg.mk and application.mk.
+# install node scripts.
 #
 # Package-settable variables:
 #
