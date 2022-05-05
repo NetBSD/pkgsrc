@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/06/08 01:56:05 mef Exp $
+# $NetBSD: Makefile,v 1.2 2022/05/05 02:24:41 mef Exp $
 
 R_PKGNAME=	bslib
-R_PKGVER=	0.2.5.1
+R_PKGVER=	0.3.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,12 +15,11 @@ DEPENDS+=	R-jsonlite>=1.7.1:../../textproc/R-jsonlite
 DEPENDS+=	R-sass>=0.4.0:../../www/R-sass
 DEPENDS+=	R-jquerylib-[0-9]*:../../www/R-jquerylib
 
-# Packages suggested but not available: 'rmarkdown', 'thematic'
-
+TEST_DEPENDS+=	R-curl-[0-9]*:../../www/R-curl
+TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 TEST_DEPENDS+=	R-shiny-[0-9]*:../../www/R-shiny
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 TEST_DEPENDS+=	R-thematic-[0-9]*:../../graphics/R-thematic
-TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 
 USE_LANGUAGES=	# none
 
