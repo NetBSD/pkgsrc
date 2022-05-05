@@ -1,6 +1,6 @@
-# $NetBSD: nodeversion.mk,v 1.11 2022/05/05 13:10:03 gutteridge Exp $
+# $NetBSD: nodeversion.mk,v 1.12 2022/05/05 13:31:16 gutteridge Exp $
 
-# This file determins which nodejs version is used as a dependency for
+# This file determines which nodejs version is used as a dependency for
 # a package.
 #
 # === User-settable variables ===
