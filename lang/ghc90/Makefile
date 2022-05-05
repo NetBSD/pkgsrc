@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/02/24 09:18:09 pho Exp $
+# $NetBSD: Makefile,v 1.20 2022/05/05 08:18:59 nia Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -235,7 +235,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 # NetBSD 9.x have libcurses with a newer major version than the
 # bootstrap kit is linked against. For now, work around this with
 # compat80.
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) && empty(OS_VERSION:M[0-8].*)
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) && ${OPSYS_VERSION} >= 090000
 BUILD_DEPENDS+=	compat80-[0-9]*:../../emulators/compat80
 # In a sandboxed build environment, we have to reach over to the
 # installed libraries themselves, since the symlinks compat80 adds
