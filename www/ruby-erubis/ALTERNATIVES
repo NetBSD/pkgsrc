@@ -1,0 +1,1 @@
+bin/erubis @PREFIX@/bin/erubis@RUBY_SUFFIX@
