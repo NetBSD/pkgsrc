@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/14 14:02:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/05/05 03:31:47 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -39,6 +39,7 @@ ${GEM_LIBDIR}/lib/action_mailbox/mail_ext/address_wrapping.rb
 ${GEM_LIBDIR}/lib/action_mailbox/mail_ext/addresses.rb
 ${GEM_LIBDIR}/lib/action_mailbox/mail_ext/from_source.rb
 ${GEM_LIBDIR}/lib/action_mailbox/mail_ext/recipients.rb
+${GEM_LIBDIR}/lib/action_mailbox/mail_with_error_handling.rb
 ${GEM_LIBDIR}/lib/action_mailbox/relayer.rb
 ${GEM_LIBDIR}/lib/action_mailbox/router.rb
 ${GEM_LIBDIR}/lib/action_mailbox/router/route.rb
