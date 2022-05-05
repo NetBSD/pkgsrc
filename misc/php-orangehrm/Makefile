@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/05/01 23:34:31 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/05/05 11:38:09 mef Exp $
 #
 
 DISTNAME=	orangehrm-4.10.1
@@ -37,6 +37,7 @@ CHECK_INTERPRETER_SKIP+=	share/orangehrm/symfony/symfony
 CHECK_INTERPRETER_SKIP+=	share/orangehrm/upgrader/symfony
 
 do-install:
+	${RM} -f symfony/lib/vendor/google/apiclient-services/generator/run_tests.sh.orig
 	${FIND} ${WRKSRC} -type f -exec ${CHMOD} og-w {} \;
 	cd ${WRKSRC} && pax -rw -pmp * \
 		${DESTDIR}${PREFIX}/${OHRDIR}
