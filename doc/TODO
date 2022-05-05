@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21807 2022/05/04 18:48:30 jaapb Exp $
+$NetBSD: TODO,v 1.21808 2022/05/05 00:45:23 taca Exp $
 
 Suggested new packages
 ======================
@@ -544,7 +544,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o chrpath-0.16
 	o cim-5.1
 	o cjk-lyx-1.4.4
-	o clamav-0.104.0
+	o clamav-0.105.0
 	o classpath-0.99
 	o classpath-gui-0.99
 	o clawsker-0.7.13
