@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2386 2022/05/05 11:16:55 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2387 2022/05/05 11:24:46 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3726,3 +3726,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added textproc/ocaml-textutils_kernel version 0.15.0 [jaapb 2022-05-05]
 	Updated www/drupal9 to 9.3.12nb1 [wen 2022-05-05]
 	Updated databases/openldap to 2.6.2 [adam 2022-05-05]
+	Updated textproc/ocaml-textutils to 0.15.0 [jaapb 2022-05-05]
