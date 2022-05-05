@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.230 2022/04/08 10:22:40 pin Exp $
+# $NetBSD: Makefile,v 1.231 2022/05/05 09:17:22 jaapb Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -65,6 +65,7 @@ SUBDIR+=	ntpsec
 SUBDIR+=	ocaml-calendar
 SUBDIR+=	ocaml-mtime
 SUBDIR+=	ocaml-time_now
+SUBDIR+=	ocaml-timezone
 SUBDIR+=	oclock
 SUBDIR+=	p5-Business-Hours
 SUBDIR+=	p5-Calendar-Simple
