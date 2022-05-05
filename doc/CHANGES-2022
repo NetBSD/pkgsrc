@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2357 2022/05/05 06:13:37 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2358 2022/05/05 06:20:37 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3695,3 +3695,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/ruby-taglib to 1.1.2 [taca 2022-05-05]
 	Added devel/ocaml-ppx_ignore_instrumentation version 0.15.0 [jaapb 2022-05-05]
 	Added devel/ocaml-ppx_log version 0.15.0 [jaapb 2022-05-05]
+	Added devel/ocaml-ppx_string version 0.15.0 [jaapb 2022-05-05]
