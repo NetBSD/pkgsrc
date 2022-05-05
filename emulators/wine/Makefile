@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.237 2022/04/18 19:11:01 adam Exp $
+# $NetBSD: Makefile,v 1.238 2022/05/05 08:32:50 nia Exp $
 
 DISTNAME=	wine-5.0.5
 PKGREVISION=	7
@@ -51,7 +51,7 @@ NOT_PAX_MPROTECT_SAFE+=	bin/wine
 .endif
 
 .if ${OPSYS} == "NetBSD"
-.  if !empty(OS_VERSION:M[0-8].*)
+.  if ${OPSYS_VERSION} < 090000
 # Disable new_dtags as NetBSD versions prior to 9.0 don't honor DT_RUNPATH
 CONFIGURE_ENV+=		ac_cv_cflags__Wl___enable_new_dtags=no
 .  endif
