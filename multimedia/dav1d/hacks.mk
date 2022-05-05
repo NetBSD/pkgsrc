@@ -1,9 +1,9 @@
-# $NetBSD: hacks.mk,v 1.1 2021/09/06 06:59:06 nia Exp $
+# $NetBSD: hacks.mk,v 1.2 2022/05/05 08:25:59 nia Exp $
 
 .if !defined(DAV1D_HACKS_MK)
 DAV1D_HACKS_MK=	# defined
 
-.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[5678].*)
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 090000
 PKG_HACKS+=	disable-tests
 
 # checkasm test fails to link
