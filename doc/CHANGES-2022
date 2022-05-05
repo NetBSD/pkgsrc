@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2378 2022/05/05 09:04:52 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2379 2022/05/05 09:22:17 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3717,3 +3717,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/ocaml-sexp_pretty version 0.15.0 [jaapb 2022-05-05]
 	Added devel/ocaml-expect_test_helpers_core version 0.15.0 [jaapb 2022-05-05]
 	Added devel/ocaml-intrinsics version 0.15.2 [jaapb 2022-05-05]
+	Added time/ocaml-timezone version 0.15.0 [jaapb 2022-05-05]
