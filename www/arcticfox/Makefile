@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/05/01 00:36:10 manu Exp $
+# $NetBSD: Makefile,v 1.7 2022/05/05 09:36:03 nia Exp $
 
 DISTNAME=	arcticfox-39.0
 PKGREVISION=	2
@@ -60,9 +60,9 @@ CONFIGURE_ARGS+=	--with-system-zlib
 TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
 .endif
 
-PLIST_VARS+=		nopowerpc
+PLIST_VARS+=		skia
 .if ${MACHINE_ARCH} != "powerpc"
-PLIST.nopowerpc=	yes
+PLIST.skia=	yes
 .endif
 
 CONFIGURE_DIRS=		${WRKDIR}/build
