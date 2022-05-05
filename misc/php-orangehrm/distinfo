@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2022/04/30 02:28:40 wen Exp $
+$NetBSD: distinfo,v 1.7 2022/05/05 11:38:09 mef Exp $
 
 BLAKE2s (orangehrm-4.10.1.zip) = 5c8e65bece6f65cc8b6eaf8ad39b8dd467f344872acf684b30f084c5c44f19cb
 SHA512 (orangehrm-4.10.1.zip) = 7c259f78f194c51abf72bac09407e12ca69b5dfa4e8ba559091e26845688c286def1ef4cccd5b50d8c4a0723b01cc66edd0bde0a28a4a85bf545fa50bdc4f139
 Size (orangehrm-4.10.1.zip) = 44753882 bytes
+SHA1 (patch-symfony_lib_vendor_google_apiclient-services_generator_run__tests.sh) = 31f9135db80f3c6a4149ffcc4fcae8d985b1712d
