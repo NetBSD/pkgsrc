@@ -1,0 +1,3 @@
+A ppx rewriter that defines extension nodes for logging:
+primarily useful to avoid the allocation of sexps that will
+never be logged.
