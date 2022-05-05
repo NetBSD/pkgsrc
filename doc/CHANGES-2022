@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2361 2022/05/05 07:00:28 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2362 2022/05/05 07:01:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3699,3 +3699,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/ocaml-ppx_fixed_literal version 0.15.0 [jaapb 2022-05-05]
 	Added devel/ocaml-ppx_disable_unused_warnings version 0.15.0 [jaapb 2022-05-05]
 	Updated sysutils/felix to 0.8.1 [pin 2022-05-05]
+	Updated sysutils/xplr to 0.17.6 [pin 2022-05-05]
