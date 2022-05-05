@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2020/06/19 23:11:37 scole Exp $
+# $NetBSD: options.mk,v 1.6 2022/05/05 13:22:44 gutteridge Exp $
 
 # xxx unsquashfs hung for me without any error message when extracting
 # an xattr archive and xattr was not included as a package option
@@ -13,7 +13,7 @@ PKG_SUGGESTED_OPTIONS=	zlib xz lzo lz4 zstd xattr reproducible
     empty(PKG_OPTIONS:Mlzo) && \
     empty(PKG_OPTIONS:Mxz) && \
     empty(PKG_OPTIONS:Mzstd)
-PKG_FAIL_REASON=	"need at least one compression algorithm selected"
+PKG_FAIL_REASON+=	"Need at least one compression algorithm selected"
 .endif
 
 .if !empty(PKG_OPTIONS:Mzlib)
