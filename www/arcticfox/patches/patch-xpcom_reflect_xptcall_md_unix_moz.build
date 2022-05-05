@@ -1,12 +1,11 @@
-$NetBSD: patch-xpcom_reflect_xptcall_md_unix_moz.build,v 1.1 2022/05/01 00:36:10 manu Exp $
+$NetBSD: patch-xpcom_reflect_xptcall_md_unix_moz.build,v 1.2 2022/05/05 14:07:39 nia Exp $
 
 - NetBSD/macppc reports OS_TEST as powerpc and not macppc
 - Use OpenBSD/powerpc MD stubs for NetBSD/powerpc
 
---- xpcom/reflect/xptcall/md/unix/moz.build.orig	2022-04-18 02:30:50.487997116 +0000
-+++ xpcom/reflect/xptcall/md/unix/moz.build	2022-04-23 01:07:48.540922360 +0000
-@@ -214,15 +214,16 @@
-               'xptcstubs_asm_ppc64_linux.S',
+--- xpcom/reflect/xptcall/md/unix/moz.build.orig	2022-02-03 04:20:33.000000000 +0000
++++ xpcom/reflect/xptcall/md/unix/moz.build
+@@ -215,13 +215,14 @@ if CONFIG['OS_TEST'] in ('powerpc64', 'p
                'xptcstubs_ppc64_linux.cpp',
            ]
  
@@ -26,4 +25,3 @@ $NetBSD: patch-xpcom_reflect_xptcall_md_unix_moz.build,v 1.1 2022/05/01 00:36:10
          ]
  
  if CONFIG['OS_ARCH'] == 'OpenBSD' and CONFIG['OS_TEST'] == 'powerpc':
-     SOURCES += [
