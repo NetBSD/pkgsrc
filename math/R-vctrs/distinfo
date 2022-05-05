@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:55:34 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/05/05 02:09:10 mef Exp $
 
-BLAKE2s (R/vctrs_0.3.8.tar.gz) = e5fe67785e1a52a0538d802d7ab419efd7c7fb5ea5395090631b13c0b3d60dd1
-SHA512 (R/vctrs_0.3.8.tar.gz) = f5162fa4641779fc7cd0f77efb1d83efc01af0ba13d910337531980e2fa93abe6ce03f23a9a51db4f506faf716cc3fac820b91abac3e3282bc9cb73038fc5787
-Size (R/vctrs_0.3.8.tar.gz) = 782608 bytes
+BLAKE2s (R/vctrs_0.4.1.tar.gz) = 18e00a3a10ac4089d68a89c212acb96e3e7c3fe6cd1d5c73c607258b668c042d
+SHA512 (R/vctrs_0.4.1.tar.gz) = 3b135106ac641774a08840f0487546d12ffba660ddc3c2ee3d3197e941bcab1c2b165d7babd8d31b60f954d4966352029776de77aa22f7e2f25f5e33f4024bc5
+Size (R/vctrs_0.4.1.tar.gz) = 916782 bytes
