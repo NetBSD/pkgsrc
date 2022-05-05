@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2366 2022/05/05 07:09:39 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2367 2022/05/05 07:16:03 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3705,3 +3705,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/wabt to 1.0.29 [fcambus 2022-05-05]
 	Added lang/nodejs16 version 16.15.0 [adam 2022-05-05]
 	Updated lang/nodejs to 18.1.0 [adam 2022-05-05]
+	Updated devel/ocaml-ppx_jane to 0.15.0 [jaapb 2022-05-05]
