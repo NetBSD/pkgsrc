@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/01/04 20:52:35 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2022/05/05 07:11:55 nia Exp $
 
 .include "Makefile.common"
 
@@ -22,6 +22,9 @@ do-test:
 		${SETENV} ${TEST_ENV} \
 		PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} \
 			py.test-${PYVERSSUFFIX}
+
+post-install:
+	${FIND} ${DESTDIR} -name '*.orig' -exec rm -rf '{}' ';'
 
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"
