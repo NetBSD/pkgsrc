@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2390 2022/05/05 11:46:28 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2391 2022/05/05 11:48:27 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3730,3 +3730,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ocaml-async to 0.15.0 [jaapb 2022-05-05]
 	Updated devel/ocaml-cstruct to 6.1.0 [jaapb 2022-05-05]
 	Updated net/asuka to 0.8.5 [pin 2022-05-05]
+	Updated devel/ocaml-hex to 1.5.0 [jaapb 2022-05-05]
