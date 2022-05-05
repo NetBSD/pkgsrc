@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:53 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/05/05 07:13:22 jaapb Exp $
 
-BLAKE2s (ppx_jane-0.13.0.tar.gz) = 66833002740dda674597e86cd1d20b5ba1de4fd7c9bfc8bd87c6c9b7125e81db
-SHA512 (ppx_jane-0.13.0.tar.gz) = bfd04fa60573a988dcd28554d54ece8a48a8d72fe5ec363a1bebc147ec5ae1f8fb81eaa9bf89e9e3eddec78747fb3581e5d3375c875dc55cab5e2946d4161642
-Size (ppx_jane-0.13.0.tar.gz) = 3648 bytes
+BLAKE2s (ppx_jane-0.15.0.tar.gz) = f71fc8809920ef2bec6f6d2de99b31ab83ec4198c75dc468614f60d2a41485e2
+SHA512 (ppx_jane-0.15.0.tar.gz) = e594a0caea66e0f976615b2a1db50aad89389888678d9ec7c023b2adb3211817a841a5065de9a65956bde0cb6088ce1b0b3afed6b57b618b9b50e5c07684e3fa
+Size (ppx_jane-0.15.0.tar.gz) = 4647 bytes
