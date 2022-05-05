@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/05 08:53:02 jaapb Exp $
+
+BLAKE2s (expect_test_helpers_core-0.15.0.tar.gz) = 07ebb1fe26e65265b536c43e83af7128bf1dd7bd258c0acca399b6e8a8e14812
+SHA512 (expect_test_helpers_core-0.15.0.tar.gz) = c08bda03c3bbc5c7ee1e970b5ba03e319826b7dd550d073f69b373bfa429c489ae1fcd388a2629f3d81729a96aac5614b4b1bcadd4040a290ffaab55b26bb9d6
+Size (expect_test_helpers_core-0.15.0.tar.gz) = 19807 bytes
