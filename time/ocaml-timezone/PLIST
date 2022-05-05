@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2022/05/05 09:19:34 jaapb Exp $
+${OCAML_SITELIB}/timezone/META
+${OCAML_SITELIB}/timezone/dune-package
+${OCAML_SITELIB}/timezone/opam
+${OCAML_SITELIB}/timezone/runtime.js
+${PLIST.ocaml-opt}${OCAML_SITELIB}/timezone/timezone.a
+${OCAML_SITELIB}/timezone/timezone.cma
+${OCAML_SITELIB}/timezone/timezone.cmi
+${OCAML_SITELIB}/timezone/timezone.cmt
+${OCAML_SITELIB}/timezone/timezone.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/timezone/timezone.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/timezone/timezone.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/timezone/timezone.cmxs
+${OCAML_SITELIB}/timezone/timezone.ml
+${OCAML_SITELIB}/timezone/timezone.mli
+${OCAML_SITELIB}/timezone/timezone__.cmi
+${OCAML_SITELIB}/timezone/timezone__.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/timezone/timezone__.cmx
+${OCAML_SITELIB}/timezone/timezone__.ml
+${OCAML_SITELIB}/timezone/timezone__Timezone_intf.cmi
+${OCAML_SITELIB}/timezone/timezone__Timezone_intf.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/timezone/timezone__Timezone_intf.cmx
+${OCAML_SITELIB}/timezone/timezone_intf.ml
+share/doc/timezone/LICENSE.md
+share/doc/timezone/README.md
