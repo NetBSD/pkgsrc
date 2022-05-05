@@ -1,11 +1,10 @@
-$NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcinvoke_arm_netbsd.cpp,v 1.1 2022/05/01 00:36:10 manu Exp $
+$NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcinvoke_arm_netbsd.cpp,v 1.2 2022/05/05 14:07:39 nia Exp $
 
 Update to fit current code
 
---- xpcom/reflect/xptcall/md/unix/xptcinvoke_arm_netbsd.cpp.orig	2022-04-18 02:30:50.498239249 +0000
-+++ xpcom/reflect/xptcall/md/unix/xptcinvoke_arm_netbsd.cpp	2022-04-18 01:08:05.177311630 +0000
-@@ -100,9 +100,10 @@
-     uint32_t fn_count;     
+--- xpcom/reflect/xptcall/md/unix/xptcinvoke_arm_netbsd.cpp.orig	2022-02-03 04:20:33.000000000 +0000
++++ xpcom/reflect/xptcall/md/unix/xptcinvoke_arm_netbsd.cpp
+@@ -101,7 +101,8 @@ struct my_params_struct {
      uint32_t fn_copy;      
  };
  
@@ -15,4 +14,3 @@ Update to fit current code
  XPTC_InvokeByIndex(nsISupports* that, uint32_t methodIndex,
                     uint32_t paramCount, nsXPTCVariant* params)
  {
-     uint32_t result;
