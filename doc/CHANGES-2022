@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2354 2022/05/05 03:42:48 taca Exp $
+$NetBSD: CHANGES-2022,v 1.2355 2022/05/05 04:23:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3692,3 +3692,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ruby-railties70 to 7.0.2.4 [taca 2022-05-05]
 	Updated textproc/ruby-actiontext70 to 7.0.2.4 [taca 2022-05-05]
 	Updated www/ruby-rails70 to 7.0.2.4 [taca 2022-05-05]
+	Updated audio/ruby-taglib to 1.1.2 [taca 2022-05-05]
