@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/05 11:08:13 jaapb Exp $
+
+BLAKE2s (textutils_kernel-0.15.0.tar.gz) = 98a8b69ebeb33e2ff07ec21ca40154fee1c6aa178973447a97609472849d8758
+SHA512 (textutils_kernel-0.15.0.tar.gz) = 6295f0285e16829ba2282ca23225e783a422edfc2ea1a1e7b02df519430efd05b7e8e21a61078a1a523ddfb3668dba04f44836341efa260ffe3e9738603afdaf
+Size (textutils_kernel-0.15.0.tar.gz) = 17691 bytes
