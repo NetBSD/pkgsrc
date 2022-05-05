@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/05 06:10:54 jaapb Exp $
+
+BLAKE2s (ppx_log-0.15.0.tar.gz) = 6f293dde16fcc9866c9ac3c2c699b7d5ef6d7dbe9c7886987ef2ae049589d728
+SHA512 (ppx_log-0.15.0.tar.gz) = 1585f82615def2fc1c94853e9a1b9e3ebd2ef8193067f229f24580ea124c06736a2b361377801b9a44b7347e1938da051ed652764142e2270de3d3e8f375bf46
+Size (ppx_log-0.15.0.tar.gz) = 6672 bytes
