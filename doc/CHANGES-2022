@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2383 2022/05/05 11:02:59 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2384 2022/05/05 11:10:54 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3723,3 +3723,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ocaml-async_extra to 0.15.0 [jaapb 2022-05-05]
 	Updated lang/npm to 8.8.0 [adam 2022-05-05]
 	Updated net/wireshark to 3.6.5 [adam 2022-05-05]
+	Added textproc/ocaml-textutils_kernel version 0.15.0 [jaapb 2022-05-05]
