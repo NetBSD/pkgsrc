@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2022/01/28 21:18:18 nat Exp $
+# $NetBSD: Makefile,v 1.46 2022/05/05 08:23:27 nia Exp $
 
 DISTNAME=	netatalk-2.2.6
 PKGNAME=	${DISTNAME:C/-/22-/}
@@ -71,7 +71,7 @@ PLIST.rcd=		yes
 
 PLIST_VARS+=		ea
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux" || \
-	(${OPSYS} == "NetBSD" && empty(OS_VERSION:M[0-6].[0-8].*)) || \
+	(${OPSYS} == "NetBSD" && ${OPSYS_VERSION} >= 070000) || \
 	${OPSYS} == "FreeBSD"
 PLIST.ea=		yes
 .endif
