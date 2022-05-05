@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2400 2022/05/05 18:04:31 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2401 2022/05/05 21:02:28 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3744,3 +3744,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/lemon to 1.0.3.38.4 [adam 2022-05-05]
 	Updated security/py-paramiko to 2.10.4 [adam 2022-05-05]
 	Updated net/py-ncclient to 0.6.13 [adam 2022-05-05]
+	Updated textproc/py-prettytable to 3.3.0 [fcambus 2022-05-05]
