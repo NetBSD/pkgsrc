@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2399 2022/05/05 17:27:37 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2400 2022/05/05 18:04:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3742,3 +3742,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/sqlite3-docs to 3.38.4 [adam 2022-05-05]
 	Updated databases/sqlite3-tcl to 3.38.4 [adam 2022-05-05]
 	Updated devel/lemon to 1.0.3.38.4 [adam 2022-05-05]
+	Updated security/py-paramiko to 2.10.4 [adam 2022-05-05]
+	Updated net/py-ncclient to 0.6.13 [adam 2022-05-05]
