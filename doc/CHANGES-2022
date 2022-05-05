@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2349 2022/05/05 02:09:22 mef Exp $
+$NetBSD: CHANGES-2022,v 1.2350 2022/05/05 02:24:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3641,3 +3641,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/clamav to 0.103.6 [taca 2022-05-05]
 	Updated math/R-broom to 0.8.0 [mef 2022-05-05]
 	Updated math/R-vctrs to 0.4.1 [mef 2022-05-05]
+	Updated www/R-bslib to 0.3.1 [mef 2022-05-05]
