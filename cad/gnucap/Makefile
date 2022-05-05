@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2020/05/30 03:10:44 markd Exp $
+# $NetBSD: Makefile,v 1.32 2022/05/05 13:19:39 nia Exp $
 #
 
 DISTNAME=	gnucap-2006-07-08
@@ -19,7 +19,7 @@ BUILD_DEPENDS+=	tex-hyperref>=6.81pnb2:../../print/tex-hyperref
 
 CONFLICTS+=	gnucap-2006-07-[0-9]*
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++03
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
 
