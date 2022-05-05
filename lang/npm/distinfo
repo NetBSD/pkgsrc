@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.37 2022/04/11 18:50:31 adam Exp $
+$NetBSD: distinfo,v 1.38 2022/05/05 10:52:39 adam Exp $
 
-BLAKE2s (npm-8.6.0.tar.gz) = 200686dee077da21263a3fd0e8475b36e0b07e9a1947178e7f2341619e329092
-SHA512 (npm-8.6.0.tar.gz) = 8a2702fdd07fd6231381396834b879c04c3becb5355384b2ea6b5838d9d24b0f70db524a1dd5a640b11e1a9f45b9e99e8c51a322d9a9ed77c03c4f9ae36fe93d
-Size (npm-8.6.0.tar.gz) = 92847853 bytes
-SHA1 (patch-Makefile) = f8906559adbd4eab2c9cd6ba7e7fd6e4565795c1
+BLAKE2s (npm-8.8.0.tar.gz) = 94a8d77c2d78d35b1fb7abf2b2a9fd52ca36671b76e9d7352299937556b2bb3a
+SHA512 (npm-8.8.0.tar.gz) = 85d3c11345bb0d584089cdf7b4ae3c2773a69258f0bc8833d1bef3c3f554583c9c93b1e4a42ce7a8821c5b38b92ec05314184466dc62fd7cf0b9f421f8200352
+Size (npm-8.8.0.tar.gz) = 92909786 bytes
+SHA1 (patch-Makefile) = 07b3b31fc3171aa688242ced7ba9eeadd943aee3
 SHA1 (patch-node__modules_@npmcli_config_lib_index.js) = 10565ad4a1eee79dc962e00d1c8d486fceb073cd
 SHA1 (patch-node__modules_bin-links_lib_man-target.js) = ece52effb0d44a0fb5252bd67f8e503c1c6ea602
 SHA1 (patch-node__modules_node-gyp_gyp_pylib_gyp_generator_make.py) = 291e079fb48caea7501ab864c19ef26672b76bc5
 SHA1 (patch-node__modules_node-gyp_gyp_pylib_gyp_xcode__emulation.py) = 282ff62c368a0c6b73d6da83b76a20899a7cbb55
 SHA1 (patch-node__modules_node-gyp_lib_configure.js) = 65e9e19fcf984bc7f5c100b2a280cc2a2406e30d
-SHA1 (patch-scripts_resetdeps.sh) = 8d74e7cde05ca1efa648a0edb1a82213755b6d33
+SHA1 (patch-scripts_resetdeps.sh) = e28eb3e3644cc73098ca60f0831d714eff6bc66f

@@ -1,24 +1,24 @@
-$NetBSD: patch-Makefile,v 1.4 2022/04/11 18:50:31 adam Exp $
+$NetBSD: patch-Makefile,v 1.5 2022/05/05 10:52:39 adam Exp $
 
 Do not build npm-index.html on rebuild.
 Do not build htmldocs, as these need some binary packages.
 
---- Makefile.orig	2022-03-31 22:14:06.000000000 +0000
+--- Makefile.orig	2022-04-26 22:02:20.000000000 +0000
 +++ Makefile
-@@ -21,6 +21,7 @@ files_mandocs = $(shell find docs/conten
-                |sed 's|docs/content/configuring-npm/|man/man5/|g' ) \
+@@ -19,6 +19,7 @@ files_mandocs = $(shell find docs/conten
+                |sed 's|docs/content/configuring-npm/|man/man5/|g' )
  
  misc_mandocs = $(shell find docs/content/using-npm -name '*.md' \
 +               \! -name 'npm-index.md' \
                 |sed 's|.md|.7|g' \
-                |sed 's|docs/content/using-npm/|man/man7/|g' ) \
+                |sed 's|docs/content/using-npm/|man/man7/|g' )
  
-@@ -28,7 +29,7 @@ mandocs = $(cli_mandocs) $(files_mandocs
+@@ -28,7 +29,7 @@ markdown_docs = $(shell for file in $(fi
  
  all: docs
  
--docs: mandocs htmldocs
-+docs: mandocs
+-docs: mandocs htmldocs $(markdown_docs)
++docs: mandocs $(markdown_docs)
  
  # don't regenerate the snapshot if we're generating
  # snapshots, since presumably we just did that.
