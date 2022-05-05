@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 11:06:40 nia Exp $
+$NetBSD: distinfo,v 1.18 2022/05/05 18:02:13 adam Exp $
 
-BLAKE2s (ncclient-0.6.10.tar.gz) = f1303197be7a553d06f32c1d97b60c647329fdb721724d21e29d829d2ef4731b
-SHA512 (ncclient-0.6.10.tar.gz) = 7af9e3fdc4981713782bcf60936a4eb50e658a179359a271aefde78857ae8064fe446cbecb1d320a09c8b223b1b6a4a5c3fbc59ae4b890a158f4c10dff7ccaf5
-Size (ncclient-0.6.10.tar.gz) = 105349 bytes
+BLAKE2s (ncclient-0.6.13.tar.gz) = a8c8329ba164f6d35103d4aa6ba4e2a62917099597e5ff7fc7a0dc691e600782
+SHA512 (ncclient-0.6.13.tar.gz) = 46f2bed7b578170d31b5574477f1d946a3768b9b1487e6b3541c3a4c763f65903c6115af590b38af1e8e352c82f11791b79984daf9ec28265fbdc946aa660ad1
+Size (ncclient-0.6.13.tar.gz) = 105739 bytes
 SHA1 (patch-README.rst) = d053d8371219f04ff3ff9cf8e43dcbadf8dd7761
-SHA1 (patch-setup.py) = 47e1aaca2214e9fbc924c6097cf304ea4c66f955
