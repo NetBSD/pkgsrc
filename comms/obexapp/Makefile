@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2020/05/21 13:04:16 mef Exp $
+# $NetBSD: Makefile,v 1.36 2022/05/05 08:33:57 nia Exp $
 #
 
 DISTNAME=	obexapp-1.4.15
@@ -34,8 +34,7 @@ USE_BSD_MAKEFILE=	yes
 .include "../../mk/bsd.prefs.mk"
 
 # This uses the older ServiceDiscovery API
-.if (${OPSYS} == "NetBSD" && \
-    (!empty(OS_VERSION:M5.99.*) || !empty(OS_VERSION:M[6-9].*)))
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} >= 059900
 MAKE_ENV+=	HAVE_LIBSDP=no
 RCD_SDPD=	bluetooth
 .endif
