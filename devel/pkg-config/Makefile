@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2021/05/24 19:52:01 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2022/05/05 08:32:27 nia Exp $
 
 DISTNAME=	pkg-config-0.29.2
 PKGREVISION=	1
@@ -26,7 +26,7 @@ CONFLICTS=		pkgconfig-[0-9]*
 CONFIGURE_ARGS.IRIX+=	--cache-file=/dev/null
 
 .if ${OPSYS} == "NetBSD"
-.  if ${MACHINE_ARCH} == "i386" && !empty(OS_VERSION:M[12345].*)
+.  if ${MACHINE_ARCH} == "i386" && ${OPSYS_VERSION} < 060000
 # Built-in GLib wants __sync_bool_compare_and_swap_4
 CFLAGS+=		-march=i486
 .  endif
