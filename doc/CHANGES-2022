@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2395 2022/05/05 12:14:05 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2396 2022/05/05 12:23:34 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3735,3 +3735,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ocaml-csv to 2.4 [jaapb 2022-05-05]
 	Updated devel/ocaml-ppx_tools to 6.5 [jaapb 2022-05-05]
 	Updated databases/pgocaml to 4.3.0 [jaapb 2022-05-05]
+	Removed security/prelude-pflogger [nia 2022-05-05]
