@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/04/08 11:55:26 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/05/05 11:33:13 jaapb Exp $
 ${OCAML_SITELIB}/async/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/async/async.a
 ${OCAML_SITELIB}/async/async.cma
@@ -16,10 +16,18 @@ ${OCAML_SITELIB}/async/async__Deferred_or_error_expect_test_config.cmi
 ${OCAML_SITELIB}/async/async__Deferred_or_error_expect_test_config.cmt
 ${OCAML_SITELIB}/async/async__Deferred_or_error_expect_test_config.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/async/async__Deferred_or_error_expect_test_config.cmx
-${OCAML_SITELIB}/async/async__Expect_test_config_with_unit_expect.cmi
-${OCAML_SITELIB}/async/async__Expect_test_config_with_unit_expect.cmt
-${OCAML_SITELIB}/async/async__Expect_test_config_with_unit_expect.cmti
-${PLIST.ocaml-opt}${OCAML_SITELIB}/async/async__Expect_test_config_with_unit_expect.cmx
+${OCAML_SITELIB}/async/async__Expect_test_config.cmi
+${OCAML_SITELIB}/async/async__Expect_test_config.cmt
+${OCAML_SITELIB}/async/async__Expect_test_config.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/async/async__Expect_test_config.cmx
+${OCAML_SITELIB}/async/async__Expect_test_config_or_error.cmi
+${OCAML_SITELIB}/async/async__Expect_test_config_or_error.cmt
+${OCAML_SITELIB}/async/async__Expect_test_config_or_error.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/async/async__Expect_test_config_or_error.cmx
+${OCAML_SITELIB}/async/async__Ppx_log_syntax.cmi
+${OCAML_SITELIB}/async/async__Ppx_log_syntax.cmt
+${OCAML_SITELIB}/async/async__Ppx_log_syntax.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/async/async__Ppx_log_syntax.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/async/async_command/async_command.a
 ${OCAML_SITELIB}/async/async_command/async_command.cma
 ${OCAML_SITELIB}/async/async_command/async_command.cmi
@@ -84,7 +92,7 @@ ${OCAML_SITELIB}/async/async_rpc/async_rpc__Rpc_transport_low_latency.cmt
 ${OCAML_SITELIB}/async/async_rpc/async_rpc__Rpc_transport_low_latency.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/async/async_rpc/async_rpc__Rpc_transport_low_latency.cmx
 ${OCAML_SITELIB}/async/async_rpc/import.ml
-${OCAML_SITELIB}/async/async_rpc/libasync_rpc_stubs.a
+${PLIST.ocaml-opt}${OCAML_SITELIB}/async/async_rpc/libasync_rpc_stubs.a
 ${OCAML_SITELIB}/async/async_rpc/rpc.ml
 ${OCAML_SITELIB}/async/async_rpc/rpc.mli
 ${OCAML_SITELIB}/async/async_rpc/rpc_transport.ml
@@ -94,8 +102,10 @@ ${OCAML_SITELIB}/async/async_rpc/rpc_transport_low_latency.mli
 ${OCAML_SITELIB}/async/deferred_or_error_expect_test_config.ml
 ${OCAML_SITELIB}/async/deferred_or_error_expect_test_config.mli
 ${OCAML_SITELIB}/async/dune-package
-${OCAML_SITELIB}/async/expect_test_config_with_unit_expect.ml
-${OCAML_SITELIB}/async/expect_test_config_with_unit_expect.mli
+${OCAML_SITELIB}/async/expect_test_config.ml
+${OCAML_SITELIB}/async/expect_test_config.mli
+${OCAML_SITELIB}/async/expect_test_config_or_error.ml
+${OCAML_SITELIB}/async/expect_test_config_or_error.mli
 ${OCAML_SITELIB}/async/lock_file_async/import.ml
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/async/lock_file_async/lock_file_async.a
 ${OCAML_SITELIB}/async/lock_file_async/lock_file_async.cma
@@ -147,6 +157,8 @@ ${OCAML_SITELIB}/async/persistent_connection/persistent_connection__Persistent_c
 ${OCAML_SITELIB}/async/persistent_connection/persistent_connection__Persistent_connection_intf.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/async/persistent_connection/persistent_connection__Persistent_connection_intf.cmx
 ${OCAML_SITELIB}/async/persistent_connection/persistent_connection_intf.ml
+${OCAML_SITELIB}/async/ppx_log_syntax.ml
+${OCAML_SITELIB}/async/ppx_log_syntax.mli
 ${OCAML_SITELIB}/async/unpack_sequence/import.ml
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/async/unpack_sequence/unpack_sequence.a
 ${OCAML_SITELIB}/async/unpack_sequence/unpack_sequence.cma
@@ -169,3 +181,4 @@ ${OCAML_SITELIB}/stublibs/dllasync_rpc_stubs.so
 share/doc/async/CHANGES.md
 share/doc/async/LICENSE.md
 share/doc/async/README.md
+share/doc/async/odoc-pages/index.mld
