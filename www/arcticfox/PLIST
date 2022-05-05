@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/05/01 00:36:10 manu Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/05/05 09:36:03 nia Exp $
 bin/arcticfox
 include/${PKGNAME}/AbstractMediaDecoder.h
 include/${PKGNAME}/ActiveLayerTracker.h
@@ -255,7 +255,7 @@ include/${PKGNAME}/SharedDecoderManager.h
 include/${PKGNAME}/SharedSurface.h
 include/${PKGNAME}/SharedSurfaceEGL.h
 include/${PKGNAME}/SharedSurfaceGL.h
-${PLIST.nopowerpc}include/${PKGNAME}/SkiaGLGlue.h
+${PLIST.skia}include/${PKGNAME}/SkiaGLGlue.h
 include/${PKGNAME}/SoftwareVsyncSource.h
 include/${PKGNAME}/SoftwareWebMVideoDecoder.h
 include/${PKGNAME}/SourceBufferContentManager.h
@@ -2289,7 +2289,7 @@ include/${PKGNAME}/mozilla/gfx/DrawTargetTiled.h
 include/${PKGNAME}/mozilla/gfx/Filters.h
 include/${PKGNAME}/mozilla/gfx/Helpers.h
 include/${PKGNAME}/mozilla/gfx/HelpersCairo.h
-${PLIST.nopowerpc}include/${PKGNAME}/mozilla/gfx/HelpersSkia.h
+${PLIST.skia}include/${PKGNAME}/mozilla/gfx/HelpersSkia.h
 include/${PKGNAME}/mozilla/gfx/Logging.h
 include/${PKGNAME}/mozilla/gfx/Matrix.h
 include/${PKGNAME}/mozilla/gfx/NumericTools.h
