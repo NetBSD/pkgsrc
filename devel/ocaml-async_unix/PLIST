@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/04/08 11:08:59 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/05/05 09:35:33 jaapb Exp $
 ${OCAML_SITELIB}/async_unix/META
 ${OCAML_SITELIB}/async_unix/assign_try_with_log_exn.ml
 ${OCAML_SITELIB}/async_unix/assign_try_with_log_exn.mli
@@ -34,10 +34,6 @@ ${OCAML_SITELIB}/async_unix/async_unix__Backing_out_channel.cmi
 ${OCAML_SITELIB}/async_unix/async_unix__Backing_out_channel.cmt
 ${OCAML_SITELIB}/async_unix/async_unix__Backing_out_channel.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/async_unix/async_unix__Backing_out_channel.cmx
-${OCAML_SITELIB}/async_unix/async_unix__Busy_pollers.cmi
-${OCAML_SITELIB}/async_unix/async_unix__Busy_pollers.cmt
-${OCAML_SITELIB}/async_unix/async_unix__Busy_pollers.cmti
-${PLIST.ocaml-opt}${OCAML_SITELIB}/async_unix/async_unix__Busy_pollers.cmx
 ${OCAML_SITELIB}/async_unix/async_unix__Clock.cmi
 ${OCAML_SITELIB}/async_unix/async_unix__Clock.cmt
 ${OCAML_SITELIB}/async_unix/async_unix__Clock.cmti
@@ -97,10 +93,6 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/async_unix/async_unix__Raw_scheduler.cmx
 ${OCAML_SITELIB}/async_unix/async_unix__Raw_signal_manager.cmi
 ${OCAML_SITELIB}/async_unix/async_unix__Raw_signal_manager.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/async_unix/async_unix__Raw_signal_manager.cmx
-${OCAML_SITELIB}/async_unix/async_unix__Read_write.cmi
-${OCAML_SITELIB}/async_unix/async_unix__Read_write.cmt
-${OCAML_SITELIB}/async_unix/async_unix__Read_write.cmti
-${PLIST.ocaml-opt}${OCAML_SITELIB}/async_unix/async_unix__Read_write.cmx
 ${OCAML_SITELIB}/async_unix/async_unix__Reader.cmi
 ${OCAML_SITELIB}/async_unix/async_unix__Reader.cmt
 ${OCAML_SITELIB}/async_unix/async_unix__Reader.cmti
@@ -164,8 +156,6 @@ ${OCAML_SITELIB}/async_unix/async_unix__Writer0.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/async_unix/async_unix__Writer0.cmx
 ${OCAML_SITELIB}/async_unix/backing_out_channel.ml
 ${OCAML_SITELIB}/async_unix/backing_out_channel.mli
-${OCAML_SITELIB}/async_unix/busy_pollers.ml
-${OCAML_SITELIB}/async_unix/busy_pollers.mli
 ${OCAML_SITELIB}/async_unix/clock.ml
 ${OCAML_SITELIB}/async_unix/clock.mli
 ${OCAML_SITELIB}/async_unix/config.ml
@@ -187,7 +177,7 @@ ${OCAML_SITELIB}/async_unix/interruptor.ml
 ${OCAML_SITELIB}/async_unix/interruptor.mli
 ${OCAML_SITELIB}/async_unix/io_stats.ml
 ${OCAML_SITELIB}/async_unix/io_stats.mli
-${OCAML_SITELIB}/async_unix/libasync_unix_stubs.a
+${PLIST.ocaml-opt}${OCAML_SITELIB}/async_unix/libasync_unix_stubs.a
 ${OCAML_SITELIB}/async_unix/log.ml
 ${OCAML_SITELIB}/async_unix/log.mli
 ${OCAML_SITELIB}/async_unix/opam
@@ -196,8 +186,6 @@ ${OCAML_SITELIB}/async_unix/process.mli
 ${OCAML_SITELIB}/async_unix/raw_fd.ml
 ${OCAML_SITELIB}/async_unix/raw_scheduler.ml
 ${OCAML_SITELIB}/async_unix/raw_signal_manager.ml
-${OCAML_SITELIB}/async_unix/read_write.ml
-${OCAML_SITELIB}/async_unix/read_write.mli
 ${OCAML_SITELIB}/async_unix/reader.ml
 ${OCAML_SITELIB}/async_unix/reader.mli
 ${OCAML_SITELIB}/async_unix/reader0.ml
