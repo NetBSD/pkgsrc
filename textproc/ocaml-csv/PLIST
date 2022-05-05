@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2019/03/05 19:40:33 jaapb Exp $
-bin/csvtool
+@comment $NetBSD: PLIST,v 1.9 2022/05/05 12:00:47 jaapb Exp $
 ${PLIST.lwt}${OCAML_SITELIB}/csv-lwt/META
 ${PLIST.lwt}${PLIST.ocaml-opt}${OCAML_SITELIB}/csv-lwt/csv_lwt.a
 ${PLIST.lwt}${OCAML_SITELIB}/csv-lwt/csv_lwt.cma
