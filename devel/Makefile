@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3731 2022/05/05 06:20:08 jaapb Exp $
+# $NetBSD: Makefile,v 1.3732 2022/05/05 06:30:49 jaapb Exp $
 #
 
 COMMENT=	Development utilities
@@ -1153,10 +1153,12 @@ SUBDIR+=	ocaml-ppx_compare
 SUBDIR+=	ocaml-ppx_custom_printf
 SUBDIR+=	ocaml-ppx_derivers
 SUBDIR+=	ocaml-ppx_deriving
+SUBDIR+=	ocaml-ppx_disable_unused_warnings
 SUBDIR+=	ocaml-ppx_enumerate
 SUBDIR+=	ocaml-ppx_expect
 SUBDIR+=	ocaml-ppx_fail
 SUBDIR+=	ocaml-ppx_fields_conv
+SUBDIR+=	ocaml-ppx_fixed_literal
 SUBDIR+=	ocaml-ppx_hash
 SUBDIR+=	ocaml-ppx_here
 SUBDIR+=	ocaml-ppx_ignore_instrumentation
