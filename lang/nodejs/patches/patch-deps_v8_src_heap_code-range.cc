@@ -1,19 +1,20 @@
-$NetBSD: patch-deps_v8_src_heap_code-range.cc,v 1.2 2022/05/02 18:59:24 adam Exp $
+$NetBSD: patch-deps_v8_src_heap_code-range.cc,v 1.3 2022/05/05 07:08:06 adam Exp $
 
 nodejs: disable "near code ranges" on NetBSD/evbarm-aarch64 for now.
 It results in mmap(2) errors of the PR kern/55533 variety.
 
---- deps/v8/src/heap/code-range.cc.orig	2022-03-17 21:59:26.000000000 +0000
+--- deps/v8/src/heap/code-range.cc.orig	2022-05-03 08:18:09.000000000 +0000
 +++ deps/v8/src/heap/code-range.cc
-@@ -33,7 +33,11 @@ Address CodeRangeAddressHint::GetAddress
-   base::MutexGuard guard(&mutex_);
-   auto it = recently_freed_.find(code_range_size);
-   if (it == recently_freed_.end() || it->second.empty()) {
+@@ -59,8 +59,12 @@ Address CodeRangeAddressHint::GetAddress
+       // with a higher chances to point to the free address space range.
+       return RoundUp(preferred_region.begin(), alignment);
+     }
 +#if V8_OS_NETBSD
 +    return 0;
 +#else
-     return FUNCTION_ADDR(&FunctionInStaticBinaryForAddressHint);
+     return RoundUp(FUNCTION_ADDR(&FunctionInStaticBinaryForAddressHint),
+                    alignment);
 +#endif
    }
-   Address result = it->second.back();
-   it->second.pop_back();
+ 
+   // Try to reuse near code range first.
