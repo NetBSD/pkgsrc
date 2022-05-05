@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2364 2022/05/05 07:04:49 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.2365 2022/05/05 07:09:06 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3701,4 +3701,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/felix to 0.8.1 [pin 2022-05-05]
 	Updated sysutils/xplr to 0.17.6 [pin 2022-05-05]
 	Updated chat/swirc to 3.3.4 [fcambus 2022-05-05]
+	Added devel/ocaml-int_repr version 0.15.0 [jaapb 2022-05-05]
 	Updated devel/wabt to 1.0.29 [fcambus 2022-05-05]
