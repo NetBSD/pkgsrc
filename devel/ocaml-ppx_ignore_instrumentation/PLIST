@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2022/05/05 06:01:03 jaapb Exp $
+${OCAML_SITELIB}/ppx_ignore_instrumentation/META
+${OCAML_SITELIB}/ppx_ignore_instrumentation/dune-package
+${OCAML_SITELIB}/ppx_ignore_instrumentation/opam
+${OCAML_SITELIB}/ppx_ignore_instrumentation/ppx.exe
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_ignore_instrumentation/ppx_ignore_instrumentation.a
+${OCAML_SITELIB}/ppx_ignore_instrumentation/ppx_ignore_instrumentation.cma
+${OCAML_SITELIB}/ppx_ignore_instrumentation/ppx_ignore_instrumentation.cmi
+${OCAML_SITELIB}/ppx_ignore_instrumentation/ppx_ignore_instrumentation.cmt
+${OCAML_SITELIB}/ppx_ignore_instrumentation/ppx_ignore_instrumentation.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_ignore_instrumentation/ppx_ignore_instrumentation.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_ignore_instrumentation/ppx_ignore_instrumentation.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_ignore_instrumentation/ppx_ignore_instrumentation.cmxs
+${OCAML_SITELIB}/ppx_ignore_instrumentation/ppx_ignore_instrumentation.ml
+${OCAML_SITELIB}/ppx_ignore_instrumentation/ppx_ignore_instrumentation.mli
+share/doc/ppx_ignore_instrumentation/LICENSE.md
+share/doc/ppx_ignore_instrumentation/README.md

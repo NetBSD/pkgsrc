@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/05 06:01:03 jaapb Exp $
+
+BLAKE2s (ppx_ignore_instrumentation-0.15.0.tar.gz) = 75ca510513aa07bd28ca25d402d5e31850b74f4deaeb206159f9e4d4ee57a8eb
+SHA512 (ppx_ignore_instrumentation-0.15.0.tar.gz) = ec411cb7a191fcb36f9a29f8ff3839db6f4031e30fa3444896a07235950ca04562a701b3bc7bc5df95e3ff82cfe8996be75bd5dce4bcce8a491898df1bffc50d
+Size (ppx_ignore_instrumentation-0.15.0.tar.gz) = 3679 bytes
