@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2022/04/18 19:10:35 adam Exp $
+# $NetBSD: Makefile,v 1.78 2022/05/05 13:18:51 nia Exp $
 
 DISTNAME=		apache-couchdb-2.3.1
 PKGNAME=		${DISTNAME:S/apache-//}
@@ -80,9 +80,16 @@ INSTALLATION_DIRS+=	couchdb/share/server couchdb/share/www/docs
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	share/examples/couchdb
 
-CTF_FILES_SKIP+=	couchdb/erts*/bin/*
-CTF_FILES_SKIP+=	couchdb/lib/*/priv/bin/*
-CTF_FILES_SKIP+=	couchdb/lib/*/priv/lib/*.so
+COUCHDB_BIN_FILES+=	couchdb/erts*/bin/*
+COUCHDB_BIN_FILES+=	couchdb/lib/*/priv/bin/*
+COUCHDB_BIN_FILES+=	couchdb/lib/*/priv/lib/*.so
+
+.for binpath in ${COUCHDB_BIN_FILES}
+CHECK_PIE_SKIP+=	${binpath}
+CHECK_RELRO_SKIP+=	${binpath}
+CHECK_SHLIBS_SKIP+=	${binpath}
+CTF_FILES_SKIP+=	${binpath}
+.endfor
 
 RCD_SCRIPTS+=		couchdb
 
