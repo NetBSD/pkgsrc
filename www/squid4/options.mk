@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2020/06/21 16:05:55 taca Exp $
+# $NetBSD: options.mk,v 1.5 2022/05/05 08:36:30 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.squid4
 PKG_SUPPORTED_OPTIONS=		inet6 snmp squid-backend-aufs \
@@ -33,7 +33,7 @@ PKG_SUPPORTED_OPTIONS+=	squid-netfilter
 .endif
 
 # some release of NetBSD lacks <ipl.h> header of IP Filter 4.x
-.if ${OPSYS} != "NetBSD" || ${OS_VERSION:M[01].*} || exists(/usr/include/netinet/ipl.h)
+.if ${OPSYS} != "NetBSD" || exists(/usr/include/netinet/ipl.h)
 PKG_SUPPORTED_OPTIONS+=	squid-ipf
 .endif
 
