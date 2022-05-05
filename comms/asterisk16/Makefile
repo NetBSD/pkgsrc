@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2022/04/18 19:10:33 adam Exp $
+# $NetBSD: Makefile,v 1.88 2022/05/05 08:20:09 nia Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
@@ -50,8 +50,7 @@ CONFIGURE_ARGS+=	--without-gtk2
 CONFIGURE_ARGS+=	--without-lua
 
 PLIST_VARS+=		srtp
-.if (${OPSYS} == "NetBSD" && \
-    (empty(OS_VERSION:M6.99.[4-9]?) && empty(OS_VERSION:M[7-9].*)))
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 069900
 CONFIGURE_ARGS+=	--without-srtp
 .else
 CONFIGURE_ARGS+=	--with-srtp
