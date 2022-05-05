@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/05 09:19:34 jaapb Exp $
+
+BLAKE2s (timezone-0.15.0.tar.gz) = e166d20237e6db4e771ef4984b93dbe4b18c15fc3c32233d4b561acbab0df4bd
+SHA512 (timezone-0.15.0.tar.gz) = d50cd1e8f116f9121383b2d20d5dcbf99b5388a2fed915302f0566c6f2d93bdf1480c2f998fac6b81a636be52b601b38981b3083adaaf405a1154b63c0b0d6da
+Size (timezone-0.15.0.tar.gz) = 9480 bytes
