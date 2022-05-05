@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/04/29 06:45:45 fcambus Exp $
+# $NetBSD: Makefile,v 1.13 2022/05/05 21:11:55 fcambus Exp $
 
 DISTNAME=	mold-1.2.1
 CATEGORIES=	devel
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/rui314/mold/
 COMMENT=	High performance drop-in replacement for existing Unix linkers
 LICENSE=	gnu-agpl-v3
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++20
 
 MAKE_FLAGS+=	CFLAGS="${CFLAGS}"
