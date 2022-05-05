@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2346 2022/05/04 19:09:37 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.2347 2022/05/05 00:44:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3638,3 +3638,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ocaml-typerep to 0.15.0 [jaapb 2022-05-04]
 	Updated devel/ocaml-ppx_typerep_conv to 0.15.0 [jaapb 2022-05-04]
 	Updated devel/binaryen to 107 [fcambus 2022-05-04]
+	Updated security/clamav to 0.103.6 [taca 2022-05-05]
