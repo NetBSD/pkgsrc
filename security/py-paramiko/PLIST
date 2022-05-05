@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2019/06/10 08:42:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2022/05/05 17:59:35 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -136,6 +136,9 @@ ${PYSITELIB}/paramiko/transport.pyo
 ${PYSITELIB}/paramiko/util.py
 ${PYSITELIB}/paramiko/util.pyc
 ${PYSITELIB}/paramiko/util.pyo
+${PYSITELIB}/paramiko/win_openssh.py
+${PYSITELIB}/paramiko/win_openssh.pyc
+${PYSITELIB}/paramiko/win_openssh.pyo
 ${PYSITELIB}/paramiko/win_pageant.py
 ${PYSITELIB}/paramiko/win_pageant.pyc
 ${PYSITELIB}/paramiko/win_pageant.pyo

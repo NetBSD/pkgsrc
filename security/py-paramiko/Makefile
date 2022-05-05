@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2022/04/21 11:00:01 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2022/05/05 17:59:35 adam Exp $
 
-DISTNAME=	paramiko-2.8.1
+DISTNAME=	paramiko-2.10.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/paramiko/}
 
@@ -13,7 +12,8 @@ LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	${PYPKGPREFIX}-bcrypt>=3.1.3:../../security/py-bcrypt
 DEPENDS+=	${PYPKGPREFIX}-nacl>=1.0.1:../../security/py-nacl
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+DEPENDS+=	${PYPKGPREFIX}-six>0:../../lang/py-six
+#TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-relaxed-[0-9]*:../../devel/py-test-relaxed
 
 PYTHON_VERSIONED_DEPENDENCIES+=	test:test
