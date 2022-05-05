@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2022/05/05 06:25:51 jaapb Exp $
+${OCAML_SITELIB}/ppx_fixed_literal/META
+${OCAML_SITELIB}/ppx_fixed_literal/dune-package
+${OCAML_SITELIB}/ppx_fixed_literal/opam
+${OCAML_SITELIB}/ppx_fixed_literal/ppx.exe
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_fixed_literal/ppx_fixed_literal.a
+${OCAML_SITELIB}/ppx_fixed_literal/ppx_fixed_literal.cma
+${OCAML_SITELIB}/ppx_fixed_literal/ppx_fixed_literal.cmi
+${OCAML_SITELIB}/ppx_fixed_literal/ppx_fixed_literal.cmt
+${OCAML_SITELIB}/ppx_fixed_literal/ppx_fixed_literal.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_fixed_literal/ppx_fixed_literal.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_fixed_literal/ppx_fixed_literal.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_fixed_literal/ppx_fixed_literal.cmxs
+${OCAML_SITELIB}/ppx_fixed_literal/ppx_fixed_literal.ml
+${OCAML_SITELIB}/ppx_fixed_literal/ppx_fixed_literal.mli
+share/doc/ppx_fixed_literal/LICENSE.md
