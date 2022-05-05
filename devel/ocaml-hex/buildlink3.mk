@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2019/11/03 10:39:23 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2022/05/05 11:45:46 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-hex
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	ocaml-hex
 OCAML_HEX_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-hex+=	ocaml-hex>=1.3.0
+BUILDLINK_ABI_DEPENDS.ocaml-hex+=	ocaml-hex>=1.5.0
 BUILDLINK_PKGSRCDIR.ocaml-hex?=		../../devel/ocaml-hex
 
 .endif	# OCAML_HEX_BUILDLINK3_MK
