@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/19 10:43:19 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/05/05 08:31:12 jaapb Exp $
 ${OCAML_SITELIB}/async_rpc_kernel/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/async_rpc_kernel/async_rpc_kernel.a
 ${OCAML_SITELIB}/async_rpc_kernel/async_rpc_kernel.cma
@@ -38,6 +38,10 @@ ${OCAML_SITELIB}/async_rpc_kernel/async_rpc_kernel__Nat0.cmi
 ${OCAML_SITELIB}/async_rpc_kernel/async_rpc_kernel__Nat0.cmt
 ${OCAML_SITELIB}/async_rpc_kernel/async_rpc_kernel__Nat0.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/async_rpc_kernel/async_rpc_kernel__Nat0.cmx
+${OCAML_SITELIB}/async_rpc_kernel/async_rpc_kernel__On_exception.cmi
+${OCAML_SITELIB}/async_rpc_kernel/async_rpc_kernel__On_exception.cmt
+${OCAML_SITELIB}/async_rpc_kernel/async_rpc_kernel__On_exception.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/async_rpc_kernel/async_rpc_kernel__On_exception.cmx
 ${OCAML_SITELIB}/async_rpc_kernel/async_rpc_kernel__Persistent_connection.cmi
 ${OCAML_SITELIB}/async_rpc_kernel/async_rpc_kernel__Persistent_connection.cmt
 ${OCAML_SITELIB}/async_rpc_kernel/async_rpc_kernel__Persistent_connection.cmti
@@ -70,6 +74,7 @@ ${OCAML_SITELIB}/async_rpc_kernel/async_rpc_kernel__Transport_intf.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/async_rpc_kernel/async_rpc_kernel__Transport_intf.cmx
 ${OCAML_SITELIB}/async_rpc_kernel/async_rpc_kernel__Util.cmi
 ${OCAML_SITELIB}/async_rpc_kernel/async_rpc_kernel__Util.cmt
+${OCAML_SITELIB}/async_rpc_kernel/async_rpc_kernel__Util.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/async_rpc_kernel/async_rpc_kernel__Util.cmx
 ${OCAML_SITELIB}/async_rpc_kernel/async_rpc_kernel__Versioned_rpc.cmi
 ${OCAML_SITELIB}/async_rpc_kernel/async_rpc_kernel__Versioned_rpc.cmt
@@ -92,6 +97,8 @@ ${OCAML_SITELIB}/async_rpc_kernel/implementations.ml
 ${OCAML_SITELIB}/async_rpc_kernel/implementations.mli
 ${OCAML_SITELIB}/async_rpc_kernel/nat0.ml
 ${OCAML_SITELIB}/async_rpc_kernel/nat0.mli
+${OCAML_SITELIB}/async_rpc_kernel/on_exception.ml
+${OCAML_SITELIB}/async_rpc_kernel/on_exception.mli
 ${OCAML_SITELIB}/async_rpc_kernel/opam
 ${OCAML_SITELIB}/async_rpc_kernel/persistent_connection.ml
 ${OCAML_SITELIB}/async_rpc_kernel/persistent_connection.mli
@@ -108,9 +115,11 @@ ${OCAML_SITELIB}/async_rpc_kernel/transport.ml
 ${OCAML_SITELIB}/async_rpc_kernel/transport.mli
 ${OCAML_SITELIB}/async_rpc_kernel/transport_intf.ml
 ${OCAML_SITELIB}/async_rpc_kernel/util.ml
+${OCAML_SITELIB}/async_rpc_kernel/util.mli
 ${OCAML_SITELIB}/async_rpc_kernel/versioned_rpc.ml
 ${OCAML_SITELIB}/async_rpc_kernel/versioned_rpc.mli
 ${OCAML_SITELIB}/async_rpc_kernel/writer_with_length.ml
 ${OCAML_SITELIB}/async_rpc_kernel/writer_with_length.mli
 share/doc/async_rpc_kernel/CHANGES.md
 share/doc/async_rpc_kernel/LICENSE.md
+share/doc/async_rpc_kernel/README.md
