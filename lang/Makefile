@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.647 2022/05/03 08:57:33 nikita Exp $
+# $NetBSD: Makefile,v 1.648 2022/05/05 07:02:24 adam Exp $
 #
 
 COMMENT=	Programming languages
@@ -179,6 +179,7 @@ SUBDIR+=	njs
 SUBDIR+=	nodejs
 SUBDIR+=	nodejs12
 SUBDIR+=	nodejs14
+SUBDIR+=	nodejs16
 SUBDIR+=	npm
 SUBDIR+=	nqp
 SUBDIR+=	nuitka
