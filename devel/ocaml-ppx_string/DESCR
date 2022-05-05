@@ -1,0 +1,6 @@
+This extension provides a syntax for string interpolation.
+
+In essence, this functions like printf, but at a higher level.
+The resulting string can then be easier to understand, and the
+potential mistake of passing the arguments in the wrong order
+can be avoided.
