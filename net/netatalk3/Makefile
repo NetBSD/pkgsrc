@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2022/03/22 08:25:37 hauke Exp $
+# $NetBSD: Makefile,v 1.47 2022/05/05 08:23:27 nia Exp $
 
 DISTNAME=	netatalk-3.1.13
 PKGNAME=	${DISTNAME:C/-/3-/}
@@ -62,7 +62,7 @@ REPLACE_PYTHON+=	libevent/event_rpcgen.py
 PLIST_VARS+=		ea
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly" \
 	|| ${OPSYS} == "SunOS" || ${OPSYS} == "Linux" \
-	|| (${OPSYS} == "NetBSD" && empty(OS_VERSION:M[0-6].[0-8].*))
+	|| (${OPSYS} == "NetBSD" && ${OPSYS_VERSION} >= 070000)
 PLIST.ea=		yes
 .endif
 
