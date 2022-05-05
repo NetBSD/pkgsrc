@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:15:52 nia Exp $
+$NetBSD: distinfo,v 1.12 2022/05/05 11:52:00 jaapb Exp $
 
-BLAKE2s (ppx_deriving-4.5.tar.gz) = da8339b5cb56810e5a43d544c0fc7a9bf14de6c2310090b7a9c0aa4b2f9f254c
-SHA512 (ppx_deriving-4.5.tar.gz) = f79153c5231ba1e03a3491fde95ca82ecb62fe05b60a649a374d2fbc5ea5dd9242126de7dfbe917c22fd7077c026c940e18c6b36c5ce0ec4bb6e07f11d2b710b
-Size (ppx_deriving-4.5.tar.gz) = 45886 bytes
+BLAKE2s (ppx_deriving-5.2.1.tar.gz) = 6955b6cb645abd1a3dd20a5db369548a7e9a81913ccbf5257a4ab8b50bd4c962
+SHA512 (ppx_deriving-5.2.1.tar.gz) = 01d2eb920f3375960a9228138ccb5f2af49bfba1111894795c24b3c37d5a021d6bc95e9de1d867c35d03645334300ccc89f1fca0cb75007ec62e5620f328e078
+Size (ppx_deriving-5.2.1.tar.gz) = 46148 bytes
