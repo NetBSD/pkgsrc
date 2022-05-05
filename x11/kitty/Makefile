@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2022/04/14 07:20:39 pin Exp $
+# $NetBSD: Makefile,v 1.31 2022/05/05 12:07:28 nia Exp $
 
 DISTNAME=	kitty-0.25.0
 CATEGORIES=	x11
@@ -43,6 +43,7 @@ do-install:
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/kitty.conf.5 || ${TRUE}
 # pkgsrc framwork only handles optimization level 1 files correctly
 	${FIND} ${DESTDIR} -type f -name *.opt-2.pyc -print0 | ${XARGS} -0 ${RM} -rf
+	${FIND} ${DESTDIR} -name '*.orig' -exec rm -rf '{}' ';'
 
 .include "../../mk/bsd.prefs.mk"
 
