@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.45 2022/03/30 06:52:33 adam Exp $
+# $NetBSD: Makefile.common,v 1.46 2022/05/05 07:08:06 adam Exp $
 # used by lang/nodejs/Makefile
-# used by lang/nodejs10/Makefile
 # used by lang/nodejs12/Makefile
 # used by lang/nodejs14/Makefile
+# used by lang/nodejs16/Makefile
 
 CATEGORIES=	lang
 MASTER_SITES=	https://nodejs.org/dist/${DISTNAME:S/node-//}/
