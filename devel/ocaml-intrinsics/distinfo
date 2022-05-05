@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/05 09:02:05 jaapb Exp $
+
+BLAKE2s (ocaml_intrinsics-0.15.2.tar.gz) = dcb99359ed24b6a4d3b4738070d62f72c1ef9e18b8ad1bfe34c873ca6ff15dce
+SHA512 (ocaml_intrinsics-0.15.2.tar.gz) = 21539fecd8b40420bdb45a3fe79f65cf4ff0deb103c3cb2b28bad24fddce159bdfab3f7aa6ade0028bebef1602f860b1f6cdf2cc06db1a89e232b221d8ff592b
+Size (ocaml_intrinsics-0.15.2.tar.gz) = 24977 bytes
