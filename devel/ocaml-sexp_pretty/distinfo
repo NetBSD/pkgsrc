@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/05 08:46:43 jaapb Exp $
+
+BLAKE2s (sexp_pretty-0.15.0.tar.gz) = 93196029665895c36debdeb0aee7aeba375ab4a79ca5e3347e4a41b31745d254
+SHA512 (sexp_pretty-0.15.0.tar.gz) = bc2a7aecfc3ae379a56e8940b9cc80ece686009c9f67233e7993e25ebbe251d62559601923db718a0f967cf42fc84024597c069659842760bb2ac5ce0eab8df2
+Size (sexp_pretty-0.15.0.tar.gz) = 22407 bytes
