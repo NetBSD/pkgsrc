@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21823 2022/05/05 11:43:08 jaapb Exp $
+$NetBSD: TODO,v 1.21824 2022/05/05 11:48:27 jaapb Exp $
 
 Suggested new packages
 ======================
@@ -1203,7 +1203,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-eqaf-0.7
 	o ocaml-expat-1.1.0
 	o ocaml-fpath-0.7.3
-	o ocaml-hex-1.4.0
 	o ocaml-ipaddr-5.0.1
 	o ocaml-lru-0.3.0
 	o ocaml-magic-mime-1.1.3
