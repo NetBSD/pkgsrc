@@ -1,11 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:44 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/05/05 11:33:13 jaapb Exp $
 
-BLAKE2s (async-0.13.0.tar.gz) = 1d6bd403a612f22235095dc5230722880d73d87745b570d4af95c8dda906aca9
-SHA512 (async-0.13.0.tar.gz) = 57ece285157d838f1ce725181953be4c091fa6864824393bdfdbd7ffd4c4eea685ddf36f0ec8aa99c17bef5b1f9ee960a0add98cefd7bdd66ec8eab6a948c42b
-Size (async-0.13.0.tar.gz) = 63888 bytes
-SHA1 (patch-async__command_src_dune) = ed2142fb78460fa5310208d059bf09103e419d63
-SHA1 (patch-async__rpc_src_dune) = 0c02590583dfdbf0118e52d60c8a62d01430f114
-SHA1 (patch-async__rpc_test-bin_dune) = 4b9709e81ab80699cfaedfa9c4d5ac8db035c255
-SHA1 (patch-bench_dune) = 5061281b7d7555d62ab8428ff853a835b8066734
-SHA1 (patch-src_dune) = bb53ebfe65aa2de5f794c5c8260a73bba3e5c5cb
-SHA1 (patch-unpack__sequence_src_dune) = eff1d30189a336930109194d686c1ec96d8bccda
+BLAKE2s (async-0.15.0.tar.gz) = 7143082e846591dafecdbbc45980974eb29740d3ca1e59382cbaa9c0c665dbdf
+SHA512 (async-0.15.0.tar.gz) = 61d83e23394f819f02df0e4702a7cd6f82418da3a8ef62513d99fb7c9c1052fcf80f90f95ab41977aebf3b54e09a0595768131a9b61a5d28f47a920492bca0bb
+Size (async-0.15.0.tar.gz) = 73958 bytes
