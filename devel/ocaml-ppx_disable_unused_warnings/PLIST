@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2022/05/05 06:36:25 jaapb Exp $
+${OCAML_SITELIB}/ppx_disable_unused_warnings/META
+${OCAML_SITELIB}/ppx_disable_unused_warnings/dune-package
+${OCAML_SITELIB}/ppx_disable_unused_warnings/opam
+${OCAML_SITELIB}/ppx_disable_unused_warnings/ppx.exe
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_disable_unused_warnings/ppx_disable_unused_warnings.a
+${OCAML_SITELIB}/ppx_disable_unused_warnings/ppx_disable_unused_warnings.cma
+${OCAML_SITELIB}/ppx_disable_unused_warnings/ppx_disable_unused_warnings.cmi
+${OCAML_SITELIB}/ppx_disable_unused_warnings/ppx_disable_unused_warnings.cmt
+${OCAML_SITELIB}/ppx_disable_unused_warnings/ppx_disable_unused_warnings.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_disable_unused_warnings/ppx_disable_unused_warnings.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_disable_unused_warnings/ppx_disable_unused_warnings.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_disable_unused_warnings/ppx_disable_unused_warnings.cmxs
+${OCAML_SITELIB}/ppx_disable_unused_warnings/ppx_disable_unused_warnings.ml
+${OCAML_SITELIB}/ppx_disable_unused_warnings/ppx_disable_unused_warnings.mli
+share/doc/ppx_disable_unused_warnings/LICENSE.md
+share/doc/ppx_disable_unused_warnings/README.md

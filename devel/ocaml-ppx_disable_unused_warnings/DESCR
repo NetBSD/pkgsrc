@@ -1,0 +1,4 @@
+This extension adds an annotation that disables the many
+OCaml compiler warnings that have to do with something
+being used (variable, constructor, declaration, open, rec,
+keyword, etc.)
