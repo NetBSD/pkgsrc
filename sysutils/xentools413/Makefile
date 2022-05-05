@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2021/12/19 09:47:59 maya Exp $
+# $NetBSD: Makefile,v 1.27 2022/05/05 08:27:13 nia Exp $
 #
 VERSION=	4.13.4
 
@@ -208,8 +208,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/misc/$f ${DESTDIR}${PREFIX}/share/doc/xen
 .endfor
 
-.if (${OPSYS} == "NetBSD" && \
-    (empty(OS_VERSION:M6.99.[3-9]?) && empty(OS_VERSION:M[7-9].*)))
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 069900
 CPPFLAGS+=	-Dshm_open=open -Dshm_unlink=unlink
 .endif
 
