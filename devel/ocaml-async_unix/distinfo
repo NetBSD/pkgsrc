@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:15:45 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/05/05 09:35:33 jaapb Exp $
 
-BLAKE2s (async_unix-0.13.1.tar.gz) = fa9ccfbd0c58c5f7b3aae43e17f7a6ceb1a4b525246672ebd56ab41087d111e1
-SHA512 (async_unix-0.13.1.tar.gz) = bd847acbb63a7c1d4c37b13831f0020640db94091b6d07d1b727c0a83aeccc35a1e60fe3dd96ae6fb6154a7da204885473e5abafae095205c2a6c705ec125810
-Size (async_unix-0.13.1.tar.gz) = 169271 bytes
-SHA1 (patch-src_dune) = 4b9b0b4f70f3de9d968b928549dec7de9b6c12f5
-SHA1 (patch-thread__pool_src_dune) = 49342110282b4d66258b706913ea8d768f00b311
-SHA1 (patch-thread__safe__ivar_src_dune) = 045c1a56270333b688ff63e820429e873da24c2a
-SHA1 (patch-thread__safe__pipe_src_dune) = 7d5810cdc22eec92dc428a663478ea25fe25e8fe
+BLAKE2s (async_unix-0.15.0.tar.gz) = 2f0457a6058413ba87d0ff0a57210a77acfe5dc133b2e34afb222c5e11d5ab15
+SHA512 (async_unix-0.15.0.tar.gz) = d6bb561ca06b3232c11c10bfe9dbd689020d52dc90f13f01751abf31f968649c7c8664f5f58de95c89f012de00c789efa9c0ca230ba32b9105c609d1afca2a51
+Size (async_unix-0.15.0.tar.gz) = 178320 bytes
