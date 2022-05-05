@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.34 2021/10/26 10:06:00 nia Exp $
+$NetBSD: distinfo,v 1.35 2022/05/05 13:37:07 nia Exp $
 
 BLAKE2s (hylafax-6.0.7.tar.gz) = f70778040fdf08fd33da6d8648fd722655c74414eb2cb8800e5b0563595aafd5
 SHA512 (hylafax-6.0.7.tar.gz) = fc57feb416772a7a4bfaf5c3c76a0c2254ead2f63a72b3dfa465444327d440345a0402b7c7dad14f6d03029302ef39cf160c8ef5bfdee2c966fd15fbaac230a3
@@ -8,8 +8,8 @@ SHA1 (patch-ab) = 5ee930814178223fa66dd308f365ff400559fd1d
 SHA1 (patch-ac) = b2051ac2e43d0635797043605d96f128e535c976
 SHA1 (patch-ad) = a7e361980c94a025be0b326c1cf694cce3cbff72
 SHA1 (patch-ae) = 5e5d1f36af88b215baf109ecd1c5f3c12571162d
-SHA1 (patch-af) = f1dd817fcd086bfdd354351dc0b92027250edcba
-SHA1 (patch-ag) = 52024e0184e2607c6cfb2c6c19c9f31b3c37ec95
+SHA1 (patch-af) = 9ec5625f52527e6e78cbe47d1ecfed563e0f32f3
+SHA1 (patch-ag) = 4faf87821e02b97d4d14b5f1e214165df58de58b
 SHA1 (patch-ah) = 8558a0f9d970ce1cddbeb76fc87a1c450bd0941d
 SHA1 (patch-ai) = 85ae0baa95f012593b908b3394280e49ba3b7f24
 SHA1 (patch-al) = a0f006412918c047176945d911042264aa050fc0

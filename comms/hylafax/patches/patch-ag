@@ -1,7 +1,19 @@
-$NetBSD: patch-ag,v 1.6 2014/03/14 15:59:29 adam Exp $
+$NetBSD: patch-ag,v 1.7 2022/05/05 13:37:07 nia Exp $
 
---- etc/Makefile.in.orig	2012-06-06 00:58:38.000000000 +0000
+--- etc/Makefile.in.orig	2018-09-18 18:51:17.000000000 +0000
 +++ etc/Makefile.in
+@@ -70,9 +70,9 @@ xferfaxlog:
+ config.fax:
+ 	${ECHO} on >config.fax
+ lockname: ${SRCDIR}/lockname.c
+-	${CCF} -o $@ ${SRCDIR}/lockname.c
++	${CCF} -o $@ ${SRCDIR}/lockname.c ${LDFLAGS}
+ ondelay: ${SRCDIR}/ondelay.c
+-	${CCF} -o $@ ${SRCDIR}/ondelay.c
++	${CCF} -o $@ ${SRCDIR}/ondelay.c ${LDFLAGS}
+ 
+ PUTSERVER	= ${INSTALL} -idb ${PRODUCT}.sw.server
+ PUTSAMPLE	= ${PUTSERVER} -u ${FAXUSER} -g ${FAXGROUP} \
 @@ -86,25 +86,25 @@ install: default
  		-src ${SRCDIR}/faxsetup.$$i -O faxsetup.$$i; \
  	done
