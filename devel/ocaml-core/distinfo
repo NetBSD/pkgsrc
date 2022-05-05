@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:15:47 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/05/05 07:58:36 jaapb Exp $
 
-BLAKE2s (core-0.13.0.tar.gz) = 33f0e85c05a3ee9053c60408b0c023257d0387d8e83373fb150e371886b95d89
-SHA512 (core-0.13.0.tar.gz) = b5bfcf1d13717d108c67219e15d852d6ae976150ccb9bdcbb1d93c565c08a1c315fa842d4f71a834e490c9862730a124a825481ed736420b56f4083b5953e7d5
-Size (core-0.13.0.tar.gz) = 694942 bytes
+BLAKE2s (core-0.15.0.tar.gz) = bd0df1c9cecec4b35286b941cd29018701bfc6d329b5067cf0cf0cb26267c95d
+SHA512 (core-0.15.0.tar.gz) = a73a3c1c6f0ade9a9e49917bb896e62afc4fda44dd90ffa99ef9ba24debe7166b4fe1b374500a044cad8318d12f250de7fe2dd935015efde379cf91a2241f51b
+Size (core-0.15.0.tar.gz) = 522984 bytes
