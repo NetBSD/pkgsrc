@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:22:23 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/05/05 12:00:47 jaapb Exp $
 
-BLAKE2s (ocaml-csv-2.2.tar.gz) = b4a1ad900c881b2095f118ce218722248d423813e1ad2d1e51bfefb146e14967
-SHA512 (ocaml-csv-2.2.tar.gz) = 733f33482d4b26f3046a205808dbbb66e0414ebc0c32fa9529b647828f9ed15cfdee00634d61959ae33ad99a41ac9193c25e6ecf154edf99a8344a5ddde75ccf
-Size (ocaml-csv-2.2.tar.gz) = 45069 bytes
+BLAKE2s (ocaml-csv-2.4.tar.gz) = cdb2baf04a549690ee4fd753cf262813424809d21e8905809dab2e2dfb19fbc2
+SHA512 (ocaml-csv-2.4.tar.gz) = 618c900d8fc3c9d09e45178e2794e1d5907c6a2d8344a3af066496cbc344e6203e5c1de4119ebef8fd58ff1537f8b832882294bdbffb220dcb5b78efb8d526b3
+Size (ocaml-csv-2.4.tar.gz) = 45975 bytes
