@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2021/09/17 07:14:17 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.41 2022/05/05 13:54:29 nia Exp $
 bin/pa-info
 bin/pacat
 bin/pacmd
@@ -60,7 +60,7 @@ lib/pkgconfig/libpulse-simple.pc
 lib/pkgconfig/libpulse.pc
 ${PLIST.alsa}lib/pulse-${PULSELIBVER}/modules/libalsa-util.${SOEXT}
 ${PLIST.avahi}lib/pulse-${PULSELIBVER}/modules/libavahi-wrap.${SOEXT}
-lib/pulse-${PKGVERSION}/modules/libavahi-wrap.${SOEXT}
+${PLIST.avahi}lib/pulse-${PKGVERSION}/modules/libavahi-wrap.${SOEXT}
 lib/pulse-${PKGVERSION}/modules/libcli.${SOEXT}
 ${PLIST.oss}lib/pulse-${PULSELIBVER}/modules/liboss-util.${SOEXT}
 lib/pulse-${PKGVERSION}/modules/libprotocol-cli.${SOEXT}
