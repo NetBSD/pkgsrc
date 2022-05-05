@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2022/02/10 14:03:07 fcambus Exp $
+# $NetBSD: Makefile,v 1.105 2022/05/05 08:34:35 nia Exp $
 
 DISTNAME=	binutils-2.38
 CATEGORIES=	devel
@@ -80,7 +80,7 @@ PLIST.ld=	yes
 .if ${OPSYS} == DragonFly \
 	|| (${OPSYS} == FreeBSD && empty(OS_VERSION:M[12345678].*)) \
 	|| (${OPSYS} == OpenBSD && empty(OS_VERSION:M[1234].*)) \
-	|| (${OPSYS} == NetBSD && empty(OS_VERSION:M[12345].*)) \
+	|| (${OPSYS} == NetBSD && ${OPSYS_VERSION} > 050000) \
 	|| ${OPSYS} == Linux
 PLIST.gold=		yes
 USE_TOOLS+=		bison
