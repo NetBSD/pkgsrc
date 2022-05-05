@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2350 2022/05/05 02:24:54 mef Exp $
+$NetBSD: CHANGES-2022,v 1.2351 2022/05/05 03:10:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3642,3 +3642,14 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/R-broom to 0.8.0 [mef 2022-05-05]
 	Updated math/R-vctrs to 0.4.1 [mef 2022-05-05]
 	Updated www/R-bslib to 0.3.1 [mef 2022-05-05]
+	Updated devel/ruby-activesupport52 to 5.2.7.1 [taca 2022-05-05]
+	Updated devel/ruby-activemodel52 to 5.2.7.1 [taca 2022-05-05]
+	Updated devel/ruby-activejob52 to 5.2.7.1 [taca 2022-05-05]
+	Updated www/ruby-actionview52 to 5.2.7.1 [taca 2022-05-05]
+	Updated www/ruby-actionpack52 to 5.2.7.1 [taca 2022-05-05]
+	Updated www/ruby-actioncable52 to 5.2.7.1 [taca 2022-05-05]
+	Updated databases/ruby-activerecord52 to 5.2.7.1 [taca 2022-05-05]
+	Updated devel/ruby-activestorage52 to 5.2.7.1 [taca 2022-05-05]
+	Updated mail/ruby-actionmailer52 to 5.2.7.1 [taca 2022-05-05]
+	Updated devel/ruby-railties52 to 5.2.7.1 [taca 2022-05-05]
+	Updated www/ruby-rails52 to 5.2.7.1 [taca 2022-05-05]
