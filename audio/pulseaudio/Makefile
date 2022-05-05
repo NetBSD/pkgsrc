@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.169 2022/03/28 10:43:38 tnn Exp $
+# $NetBSD: Makefile,v 1.170 2022/05/05 08:25:30 nia Exp $
 
 DISTNAME=	pulseaudio-15.0
 PKGREVISION=	2
@@ -54,7 +54,7 @@ REPLACE_BASH+=	src/utils/pa-info
 .include "../../mk/bsd.prefs.mk"
 
 # broken test for TLS
-.if ((${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[45].*)) || \
+.if ((${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 060000) || \
      (${OPSYS} == "Darwin" && !empty(PKGSRC_COMPILER:Mclang)))
 CONFIGURE_ENV+=		ac_cv_tls=none
 .endif
