@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:45 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/05/05 08:20:45 jaapb Exp $
 
-BLAKE2s (async_kernel-0.13.0.tar.gz) = 72e493df8edcc14ab0adf616d901a14c82073807021895b8581e89ae294a4779
-SHA512 (async_kernel-0.13.0.tar.gz) = dcf2d46b3755080dadacaadcc75679359c8fe98423bf27948ce0dce55dcc03c7b812b1bdfa75f7df45f3c28c7da45e901d1a7038a28191805b0dc42b1f46d78d
-Size (async_kernel-0.13.0.tar.gz) = 136422 bytes
-SHA1 (patch-src_dune) = 387320865f6280b49b240080f298270210c466ae
+BLAKE2s (async_kernel-0.15.0.tar.gz) = 68902768791cdaa5c577f6a30b84a2066e38f5506ff9fafb7398ee3ba8d9878f
+SHA512 (async_kernel-0.15.0.tar.gz) = 35bf6561b0dfcfd1bfd786de9f47a78deee5718fb449de648f9b1cfd2568c00cd7044b33dce12ce48d1ed704e61fefe3f2d2b1681c9f73c6fced0aefb0423b63
+Size (async_kernel-0.15.0.tar.gz) = 148527 bytes
