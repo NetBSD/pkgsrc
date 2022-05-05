@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2021/03/08 08:12:47 jaapb Exp $
+# $NetBSD: Makefile,v 1.19 2022/05/05 12:11:18 jaapb Exp $
 
-GITHUB_PROJECT=	pgocaml
-#GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	${GITHUB_PROJECT}-4.2.2
-PKGREVISION=	1
+DISTNAME=	${GITHUB_PROJECT}-4.3.0
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=darioteixeira/}
+GITHUB_PROJECT=	pgocaml
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://pgocaml.forge.ocamlcore.org/
@@ -29,7 +27,7 @@ OPAM_INSTALL_FILES=	${DUNE_BUILD_PACKAGES}
 .include "../../devel/ocaml-ppx_sexp_conv/buildlink3.mk"
 BUILDLINK_DEPMETHOD.ocaml-ppx_tools=	build
 .include "../../devel/ocaml-ppx_tools/buildlink3.mk"
-.include "../../devel/ocaml-ppx_tools_versioned/buildlink3.mk"
+.include "../../devel/ocaml-ppxlib/buildlink3.mk"
 .include "../../devel/ocaml-re/buildlink3.mk"
 BUILDLINK_DEPMETHOD.ocaml-rresult=	build
 .include "../../devel/ocaml-rresult/buildlink3.mk"
