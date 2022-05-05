@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:48:40 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/05/05 13:37:18 nia Exp $
 
 BLAKE2s (tlf-0.9.31-2.tar.gz) = 13aaff43d448c6deff3ffafede6e051b6c0a19b09538c49092c063743cad2da7
 SHA512 (tlf-0.9.31-2.tar.gz) = 18340b6b580bd63b76c848ea8e92466dc2833b1fb693c5960e707325cd3220c3f269624d99de8d7a4a10f7df3331ee2d19ca68d9e34ca4dda2c5af4e8dd2581e
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = 4cb7a8ed026d2a9bfed5dbe3ea6ce3d275ffc621
 SHA1 (patch-ac) = dca763b7c9da4ed936fe686972d93f139d99c2e7
 SHA1 (patch-ad) = 8d980f329644f91c2a2b33bd7af9f7f1f75e22c5
 SHA1 (patch-ae) = 4b9203a3e20bba5a074c681dc6b02f827aceca75
+SHA1 (patch-src_sendqrg.c) = 1dba63621e4e78c24292e552c0a3068818478428
