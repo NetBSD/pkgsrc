@@ -1,4 +1,4 @@
-# $NetBSD: resolv.buildlink3.mk,v 1.5 2011/02/13 16:17:54 taca Exp $
+# $NetBSD: resolv.buildlink3.mk,v 1.6 2022/05/05 08:30:43 nia Exp $
 #
 # This Makefile fragment is included by package Makefiles and
 # buildlink3.mk files for the packages that need a thread-safe
@@ -29,7 +29,7 @@ CHECK_BUILTIN.resolv=	no
 USE_BUILTIN.resolv?=	yes
 
 BUILDLINK_LDFLAGS.resolv=	# empty, in libc
-.elif (${OPSYS} == "NetBSD" && empty(OS_VERSION:M[012].*)) || \
+.elif (${OPSYS} == "NetBSD" && ${OPSYS_VERSION} > 030000) || \
     (${OPSYS} == "Darwin" && empty(OS_VERSION:M[0123467].*))
 USE_BUILTIN.resolv?=	yes
 
