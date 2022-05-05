@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.858 2022/04/26 08:18:54 adam Exp $
+# $NetBSD: Makefile,v 1.859 2022/05/05 12:23:06 nia Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -416,7 +416,6 @@ SUBDIR+=	portsentry
 SUBDIR+=	prelude-correlator
 SUBDIR+=	prelude-lml
 SUBDIR+=	prelude-manager
-SUBDIR+=	prelude-pflogger
 SUBDIR+=	priv
 SUBDIR+=	prngd
 SUBDIR+=	pscan
