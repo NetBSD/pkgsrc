@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/05/05 21:11:55 fcambus Exp $
+# $NetBSD: Makefile,v 1.14 2022/05/05 21:22:29 fcambus Exp $
 
 DISTNAME=	mold-1.2.1
 CATEGORIES=	devel
@@ -27,8 +27,11 @@ GCC_REQD+=	10
 DL_AUTO_VARS=		yes
 PTHREAD_AUTO_VARS=	yes
 
+PYTHON_FOR_BUILD_ONLY=	yes
+
 .include "../../devel/mimalloc/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../parallel/threadingbuildingblocks/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
