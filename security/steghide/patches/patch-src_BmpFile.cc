@@ -1,4 +1,4 @@
-$NetBSD: patch-src_BmpFile.cc,v 1.2 2022/04/25 15:01:53 tnn Exp $
+$NetBSD: patch-src_BmpFile.cc,v 1.3 2022/05/05 12:20:34 nia Exp $
 
 avoid ambiguous math functions
 
@@ -8,7 +8,7 @@ avoid ambiguous math functions
  #include "common.h"
  #include "error.h"
  
-+using std:sqrt;
++using std::sqrt;
 +
  BmpFile::BmpFile (BinaryIO *io)
  	: CvrStgFile()
