@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.179 2022/04/18 19:11:11 adam Exp $
+# $NetBSD: Makefile,v 1.180 2022/05/05 08:29:00 nia Exp $
 
 DISTNAME=	wesnoth-1.16.2
 PKGREVISION=	2
@@ -51,12 +51,9 @@ REPLACE_PYTHON+=	data/tools/wesnoth_addon_manager
 REPLACE_PYTHON+=	utils/ai_test/*.py
 REPLACE_PYTHON+=	utils/*.py
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M4.*)
-USE_TOOLS+=		gmake
-.endif
-
 PLIST_VARS+=		icons
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Darwin" && ${OPSYS} != "Cygwin"
 PLIST.icons=		yes
