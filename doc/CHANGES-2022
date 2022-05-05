@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2397 2022/05/05 14:03:52 taca Exp $
+$NetBSD: CHANGES-2022,v 1.2398 2022/05/05 14:07:50 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3737,3 +3737,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/pgocaml to 4.3.0 [jaapb 2022-05-05]
 	Removed security/prelude-pflogger [nia 2022-05-05]
 	Updated www/ruby-erubis to 2.7.0nb1 [taca 2022-05-05]
+	Updated www/arcticfox to 39.1 [nia 2022-05-05]
