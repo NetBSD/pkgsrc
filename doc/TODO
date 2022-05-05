@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21816 2022/05/05 08:33:54 jaapb Exp $
+$NetBSD: TODO,v 1.21817 2022/05/05 09:16:34 nia Exp $
 
 Suggested new packages
 ======================
@@ -1903,6 +1903,9 @@ Suggested cleanups in pkgsrc
 	o Convert packages to use mk/curses.buildlink3.mk instead of
 	  devel/ncurses/buildlink3.mk and devel/ncursesw/buildlink3.mk,
 	  test with NetBSD curses.
+
+	o Convert packages to use OPSYS_VERSION and numeric comparisons
+	  instead of OS_VERSION and string-based comparisons.
 
 	o Convert packages to use VARBASE instead of hardcoding /var.
 
