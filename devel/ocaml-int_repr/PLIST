@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2022/05/05 07:02:21 jaapb Exp $
+${OCAML_SITELIB}/int_repr/META
+${OCAML_SITELIB}/int_repr/dune-package
+${PLIST.ocaml-opt}${OCAML_SITELIB}/int_repr/int_repr.a
+${OCAML_SITELIB}/int_repr/int_repr.cma
+${OCAML_SITELIB}/int_repr/int_repr.cmi
+${OCAML_SITELIB}/int_repr/int_repr.cmt
+${OCAML_SITELIB}/int_repr/int_repr.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/int_repr/int_repr.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/int_repr/int_repr.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/int_repr/int_repr.cmxs
+${OCAML_SITELIB}/int_repr/int_repr.ml
+${OCAML_SITELIB}/int_repr/int_repr.mli
+${OCAML_SITELIB}/int_repr/opam
+share/doc/int_repr/LICENSE.md
