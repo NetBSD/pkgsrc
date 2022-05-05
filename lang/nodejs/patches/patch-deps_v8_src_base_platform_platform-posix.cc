@@ -1,4 +1,4 @@
-$NetBSD: patch-deps_v8_src_base_platform_platform-posix.cc,v 1.8 2022/05/02 18:59:24 adam Exp $
+$NetBSD: patch-deps_v8_src_base_platform_platform-posix.cc,v 1.9 2022/05/05 07:08:06 adam Exp $
 
 Use sysconf(_SC_THREAD_STACK_MIN) instead of PTHREAD_STACK_MIN.
 Cast explicitly.
@@ -6,9 +6,9 @@ Cast explicitly.
 Avoid using a random hint, some low numbers cause spurious ENOMEM on netbsd
 (PR port-arm/55533)
 
---- deps/v8/src/base/platform/platform-posix.cc.orig	2021-04-07 04:42:14.000000000 +0900
-+++ deps/v8/src/base/platform/platform-posix.cc	2021-04-24 07:39:15.080548801 +0900
-@@ -323,6 +323,10 @@ void* OS::GetRandomMmapAddr() {
+--- deps/v8/src/base/platform/platform-posix.cc.orig	2022-05-03 08:18:09.000000000 +0000
++++ deps/v8/src/base/platform/platform-posix.cc
+@@ -384,6 +384,10 @@ void* OS::GetRandomMmapAddr() {
  #endif
  #endif
  #endif
@@ -19,7 +19,7 @@ Avoid using a random hint, some low numbers cause spurious ENOMEM on netbsd
    return reinterpret_cast<void*>(raw_addr);
  }
  
-@@ -564,6 +568,8 @@ int OS::GetCurrentThreadId() {
+@@ -733,6 +737,8 @@ int OS::GetCurrentThreadId() {
    return static_cast<int>(syscall(__NR_gettid));
  #elif V8_OS_ANDROID
    return static_cast<int>(gettid());
@@ -28,26 +28,24 @@ Avoid using a random hint, some low numbers cause spurious ENOMEM on netbsd
  #elif V8_OS_AIX
    return static_cast<int>(thread_self());
  #elif V8_OS_FUCHSIA
-@@ -756,8 +762,13 @@ Thread::Thread(const Options& options)
+@@ -1000,7 +1006,11 @@ Thread::Thread(const Options& options)
      : data_(new PlatformData),
        stack_size_(options.stack_size()),
        start_semaphore_(nullptr) {
 +#if V8_OS_NETBSD
-+  if (stack_size_ > 0 && static_cast<size_t>(stack_size_) < sysconf(_SC_THREAD_STACK_MIN)) {
-+    stack_size_ = sysconf(_SC_THREAD_STACK_MIN);
++  const int min_stack_size = sysconf(_SC_THREAD_STACK_MIN);
 +#else
-   if (stack_size_ > 0 && static_cast<size_t>(stack_size_) < PTHREAD_STACK_MIN) {
-     stack_size_ = PTHREAD_STACK_MIN;
+   const int min_stack_size = static_cast<int>(PTHREAD_STACK_MIN);
 +#endif
-   }
+   if (stack_size_ > 0) stack_size_ = std::max(stack_size_, min_stack_size);
    set_name(options.name());
  }
-@@ -773,7 +784,7 @@ static void SetThreadName(const char* na
+@@ -1016,7 +1026,7 @@ static void SetThreadName(const char* na
    pthread_set_name_np(pthread_self(), name);
  #elif V8_OS_NETBSD
    STATIC_ASSERT(Thread::kMaxThreadNameLength <= PTHREAD_MAX_NAMELEN_NP);
 -  pthread_setname_np(pthread_self(), "%s", name);
 +  pthread_setname_np(pthread_self(), "%s", (void *)name);
- #elif V8_OS_MACOSX
+ #elif V8_OS_DARWIN
    // pthread_setname_np is only available in 10.6 or later, so test
    // for it at runtime.
