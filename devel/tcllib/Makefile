@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2022/04/24 17:20:34 tnn Exp $
+# $NetBSD: Makefile,v 1.20 2022/05/05 07:17:02 tnn Exp $
 
 DISTNAME=		tcllib-1.20
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=tcltk/}
-GITHUB_TAG=		${DISTNAME:S/./-/}
+#GITHUB_TAG=		${DISTNAME:S/./-/}
+GITHUB_TAG=		391b141933ec0b7331d2f203064d941f1b724576
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://core.tcl-lang.org/tcllib/
