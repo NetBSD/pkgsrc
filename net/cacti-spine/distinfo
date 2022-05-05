@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.9 2022/02/20 20:43:31 gavan Exp $
+$NetBSD: distinfo,v 1.10 2022/05/05 14:31:35 nia Exp $
 
 BLAKE2s (cacti-spine-1.2.2.tar.gz) = 8f1c26909fdcba748abbb658bd02a0ec92c4784a66e3624a236f3c0415df025b
 SHA512 (cacti-spine-1.2.2.tar.gz) = ef2f839f7b247439a8576d49e311546cfd2346eea06cfb26b7a05d4757ae28334e6ed6ea00396027dc6c0c6e107121ed38f356ba62d8202003553fea3b5d139e
 Size (cacti-spine-1.2.2.tar.gz) = 2310298 bytes
+SHA1 (patch-common.h) = b879113c3330606782bed1ef656f643abce90889
+SHA1 (patch-ping.c) = 785c0c6fe7d15b17238b136ba3ae69e8db5a5b49
 SHA1 (patch-spine.h) = 87775016517bfae923b619e1cd0bc084b399dbfd
 SHA1 (patch-sql.c) = 4effef9bda2c49aeb707c8bc25dfa8cfe520b050
