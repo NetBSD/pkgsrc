@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3733 2022/05/05 07:01:51 jaapb Exp $
+# $NetBSD: Makefile,v 1.3734 2022/05/05 08:44:01 jaapb Exp $
 #
 
 COMMENT=	Development utilities
@@ -1190,6 +1190,7 @@ SUBDIR+=	ocaml-resource-pooling
 SUBDIR+=	ocaml-result
 SUBDIR+=	ocaml-rresult
 SUBDIR+=	ocaml-seq
+SUBDIR+=	ocaml-sexp_pretty
 SUBDIR+=	ocaml-sexplib
 SUBDIR+=	ocaml-sexplib0
 SUBDIR+=	ocaml-spawn
