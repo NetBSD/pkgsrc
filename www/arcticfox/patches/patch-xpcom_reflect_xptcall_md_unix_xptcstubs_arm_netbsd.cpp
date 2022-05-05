@@ -1,11 +1,10 @@
-$NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcstubs_arm_netbsd.cpp,v 1.1 2022/05/01 00:36:11 manu Exp $
+$NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcstubs_arm_netbsd.cpp,v 1.2 2022/05/05 14:07:39 nia Exp $
 
 Update to fit current code
 
---- xpcom/reflect/xptcall/md/unix/xptcstubs_arm_netbsd.cpp.orig	2022-04-18 02:30:50.518733769 +0000
-+++ xpcom/reflect/xptcall/md/unix/xptcstubs_arm_netbsd.cpp	2022-04-18 01:57:51.824233012 +0000
-@@ -5,29 +5,28 @@
- 
+--- xpcom/reflect/xptcall/md/unix/xptcstubs_arm_netbsd.cpp.orig	2022-02-03 04:20:33.000000000 +0000
++++ xpcom/reflect/xptcall/md/unix/xptcstubs_arm_netbsd.cpp
+@@ -6,6 +6,7 @@
  /* Implement shared vtbl methods. */
  
  #include "xptcprivate.h"
@@ -13,8 +12,7 @@ Update to fit current code
  
  nsresult ATTRIBUTE_USED
  PrepareAndDispatch(nsXPTCStubBase* self, uint32_t methodIndex, uint32_t* args)
- {
- #define PARAM_BUFFER_COUNT     16
+@@ -14,19 +15,17 @@ PrepareAndDispatch(nsXPTCStubBase* self,
  
      nsXPTCMiniVariant paramBuffer[PARAM_BUFFER_COUNT];
      nsXPTCMiniVariant* dispatchParams = nullptr;
@@ -39,9 +37,7 @@ Update to fit current code
  
      paramCount = info->GetParamCount();
  
-     // setup variant array pointer
-@@ -70,11 +69,9 @@
-             break;
+@@ -71,9 +70,7 @@ PrepareAndDispatch(nsXPTCStubBase* self,
          }
      }
  
@@ -52,4 +48,3 @@ Update to fit current code
  
      if(dispatchParams != paramBuffer)
          delete [] dispatchParams;
- 
