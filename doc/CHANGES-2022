@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2368 2022/05/05 07:21:01 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2369 2022/05/05 07:25:50 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3707,3 +3707,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/nodejs to 18.1.0 [adam 2022-05-05]
 	Updated devel/ocaml-ppx_jane to 0.15.0 [jaapb 2022-05-05]
 	Updated devel/ocaml-base_bigstring to 0.15.0 [jaapb 2022-05-05]
+	Updated devel/ocaml-spawn to 0.15.1 [jaapb 2022-05-05]
