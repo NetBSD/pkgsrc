@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/05 09:26:58 jaapb Exp $
+
+BLAKE2s (core_unix-0.15.0.tar.gz) = 4c2a4fdf1a4fcc9967f4eb6e86c5b081968110fdd4acec4b81ce7981a315a969
+SHA512 (core_unix-0.15.0.tar.gz) = eeb53bd0c06a7d1facfb133f0a45a232d57941eff644d4ed6c2d5002acd4e6b323376ec9c05838f760ebd9da3fbc39332989ed50b3921191c175811c947fcbfe
+Size (core_unix-0.15.0.tar.gz) = 377928 bytes
