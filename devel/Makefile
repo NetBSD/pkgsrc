@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3734 2022/05/05 08:44:01 jaapb Exp $
+# $NetBSD: Makefile,v 1.3735 2022/05/05 08:47:20 jaapb Exp $
 #
 
 COMMENT=	Development utilities
@@ -1117,6 +1117,7 @@ SUBDIR+=	ocaml-dune
 SUBDIR+=	ocaml-dune-configurator
 SUBDIR+=	ocaml-encore
 SUBDIR+=	ocaml-eqaf
+SUBDIR+=	ocaml-expect_test_helpers_core
 SUBDIR+=	ocaml-extlib
 SUBDIR+=	ocaml-fieldslib
 SUBDIR+=	ocaml-findlib
