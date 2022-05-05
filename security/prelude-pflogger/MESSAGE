@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2007/09/03 13:50:49 shannonjr Exp $
-
-You need to ensure that the permissions on /dev/bpf0 are set to allow
-read access by ${PRELUDE_USER}:${PRELUDE_GROUP}.
-
-===========================================================================
