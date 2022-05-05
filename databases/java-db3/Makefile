@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2019/07/10 10:37:13 nia Exp $
+# $NetBSD: Makefile,v 1.34 2022/05/05 13:14:21 nia Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	java-db3-3.11.2
@@ -16,6 +16,10 @@ PATCH_DIST_ARGS=	-d ${WRKSRC}/.. --forward --quiet
 
 DISTINFO_FILE?=		${.CURDIR}/../db3/distinfo
 PATCHDIR?=		${.CURDIR}/../db3/patches
+
+PKG_JVMS_ACCEPTED=	openjdk8
+
+.include "../../mk/java-vm.mk"
 
 JAVAC=			${PKG_JAVA_HOME}/bin/javac
 JAR=			${PKG_JAVA_HOME}/bin/jar
@@ -50,5 +54,4 @@ USE_JAVA2=		yes
 .endif
 
 .include "../../databases/db3/buildlink3.mk"
-.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
