@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2021/12/08 16:02:38 adam Exp $
+# $NetBSD: Makefile,v 1.109 2022/05/05 08:31:16 nia Exp $
 .include "Makefile.common"
 
 PKGREVISION=		47
@@ -16,7 +16,7 @@ USE_TOOLS+=		pkg-config
 
 # NetBSD 3.99.1 and above don't have to be installed setgid.
 .if (${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "DragonFly" || \
-    (${OPSYS} == "NetBSD" && (!empty(OS_VERSION:M[123].*) && empty(OS_VERSION:M3.99.*))))
+    (${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 039900))
 SPECIAL_PERMS+=		${PREFIX}/bin/gkrellm ${BINOWN} kmem 2555
 .endif
 
