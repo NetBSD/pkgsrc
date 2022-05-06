@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2015/02/11 13:29:42 pho Exp $
+# $NetBSD: Makefile,v 1.29 2022/05/06 06:55:59 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -15,6 +15,8 @@ TEST_TARGET=		check
 # ${WRKSRC}/Makefile defines different targets for each non-ELF
 # platforms. And for Cygwin, there is no installation target...
 BROKEN_ON_PLATFORM+=	Cygwin-*-*
+
+MAKE_ENV.SunOS+=	ARFLAGS="-rcv"
 
 .include "../../mk/bsd.prefs.mk"
 
