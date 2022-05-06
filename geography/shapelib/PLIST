@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:57:16 joerg Exp $
-include/libshp/shapefil.h
+@comment $NetBSD: PLIST,v 1.3 2022/05/06 00:30:33 gdt Exp $
+include/shapefil.h
 lib/libshp.la
+lib/pkgconfig/shapelib.pc
