@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2022/05/07 06:00:17 wiz Exp $
+
+BLAKE2s (minimodem-0.24.tar.gz) = e625176fcb04c852d3cfe260e34a8640705ae6e2a55b8b5ae40a3d502c070f56
+SHA512 (minimodem-0.24.tar.gz) = 5c3a5e6f185d4b09c5f24d776393f2e2d5d787c097c44490905119513b9b39db53b7f2f7e624a4b527e8e8e827a5b99af6b0df5ca525046f60b49fe9ba2b0ceb
+Size (minimodem-0.24.tar.gz) = 159508 bytes
+SHA1 (patch-configure) = 51c686781707e34f29126f53d98e6b1f1abffb69
+SHA1 (patch-src_simpleaudio-alsa.c) = 02c80a9c528fc01c8620e70507558492d0647022
