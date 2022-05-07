@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/12/12 23:26:01 fox Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/05/07 07:26:41 fox Exp $
 bin/din
 share/applications/din.desktop
 share/din/factory/2600
@@ -32,6 +32,7 @@ share/din/factory/circler_radius.crv
 share/din/factory/circler_radius.ed
 share/din/factory/circler_sin.crv
 share/din/factory/circler_sin.ed
+share/din/factory/color-sliders
 share/din/factory/coml.crv
 share/din/factory/compressor.ed
 share/din/factory/comr.crv
@@ -388,6 +389,8 @@ share/din/factory/microtonal-keyboard-waveform.ed
 share/din/factory/midimap.help.tcl
 share/din/factory/midimap.patch.tcl
 share/din/factory/modulation.ed
+share/din/factory/modv.crv
+share/din/factory/modv.ed
 share/din/factory/mondrian.ed
 share/din/factory/mondrian.hlp
 share/din/factory/mondrian_attack.crv
