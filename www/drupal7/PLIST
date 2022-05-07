@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2022/01/27 13:38:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.29.2.1 2022/05/07 10:16:54 bsiegert Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -786,8 +786,12 @@ share/drupal/modules/simpletest/tests/system_incompatible_module_version_depende
 share/drupal/modules/simpletest/tests/system_incompatible_module_version_dependencies_test.module
 share/drupal/modules/simpletest/tests/system_incompatible_module_version_test.info
 share/drupal/modules/simpletest/tests/system_incompatible_module_version_test.module
+share/drupal/modules/simpletest/tests/system_null_version_test.info
+share/drupal/modules/simpletest/tests/system_null_version_test.module
 share/drupal/modules/simpletest/tests/system_project_namespace_test.info
 share/drupal/modules/simpletest/tests/system_project_namespace_test.module
+share/drupal/modules/simpletest/tests/system_requires_null_version_test.info
+share/drupal/modules/simpletest/tests/system_requires_null_version_test.module
 share/drupal/modules/simpletest/tests/system_test.info
 share/drupal/modules/simpletest/tests/system_test.install
 share/drupal/modules/simpletest/tests/system_test.module
