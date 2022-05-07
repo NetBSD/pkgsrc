@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2411 2022/05/07 07:48:13 fox Exp $
+$NetBSD: CHANGES-2022,v 1.2412 2022/05/07 08:11:21 fox Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3755,3 +3755,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/fasttracker2 to 1.54 [fox 2022-05-07]
 	Updated editors/nano to 6.3 [wiedi 2022-05-07]
 	Updated security/wolfssl to 5.3.0 [fox 2022-05-07]
+	Updated sysutils/py-Glances to 3.2.5 [fox 2022-05-07]
