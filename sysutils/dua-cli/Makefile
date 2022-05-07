@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2022/03/20 16:24:01 pin Exp $
+# $NetBSD: Makefile,v 1.10 2022/05/07 04:19:07 pin Exp $
 
-DISTNAME=	dua-cli-2.17.1
+DISTNAME=	dua-cli-2.17.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Byron/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,8 +14,11 @@ LICENSE=	mit
 
 INSTALLATION_DIRS=	bin
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "Linux"
 CARGO_NO_DEFAULT_FEATURES=	YES
 CARGO_FEATURES+=		tui-unix
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/dua ${DESTDIR}${PREFIX}/bin
