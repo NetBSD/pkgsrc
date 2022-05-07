@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.271 2022/05/05 10:54:27 adam Exp $
+# $NetBSD: Makefile,v 1.272 2022/05/07 14:14:13 wiz Exp $
 
 DISTNAME=	wireshark-3.6.5
 CATEGORIES=	net
@@ -25,13 +25,13 @@ USE_TOOLS+=		gmake perl pkg-config bison lex
 PKGCONFIG_OVERRIDE+=	wireshark.pc.in
 
 CHECK_PORTABILITY_SKIP+=	packaging/macosx/*/*
+CHECK_PORTABILITY_SKIP+=	packaging/macosx/osx-app.sh.in
 CHECK_PORTABILITY_SKIP+=	tools/bsd-setup.sh
 
 PTHREAD_OPTS+=		require
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # Python 2.7 is not supported
 PYTHON_FOR_BUILD_ONLY=		yes
-REPLACE_PYTHON+=		help/faq.py
 REPLACE_PYTHON+=		tools/asn2deb
 REPLACE_PYTHON+=		tools/asn2wrs.py
 REPLACE_PYTHON+=		tools/html2text.py
