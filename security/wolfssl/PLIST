@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/02/26 06:52:46 fox Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/05/07 07:47:36 fox Exp $
 bin/wolfssl-config
 include/cyassl/callbacks.h
 include/cyassl/certs_test.h
@@ -123,6 +123,7 @@ include/wolfssl/openssl/err.h
 include/wolfssl/openssl/evp.h
 include/wolfssl/openssl/fips_rand.h
 include/wolfssl/openssl/hmac.h
+include/wolfssl/openssl/kdf.h
 include/wolfssl/openssl/lhash.h
 include/wolfssl/openssl/md4.h
 include/wolfssl/openssl/md5.h
