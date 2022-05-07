@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2409 2022/05/07 07:43:05 fox Exp $
+$NetBSD: CHANGES-2022,v 1.2410 2022/05/07 07:46:10 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3753,3 +3753,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added comms/minimodem version 0.24 [wiz 2022-05-07]
 	Updated audio/din to 54 [fox 2022-05-07]
 	Updated audio/fasttracker2 to 1.54 [fox 2022-05-07]
+	Updated editors/nano to 6.3 [wiedi 2022-05-07]
