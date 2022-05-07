@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2022/01/21 16:49:00 bsiegert Exp $
+# $NetBSD: Makefile,v 1.132 2022/05/07 06:00:37 wiz Exp $
 #
 
 COMMENT=	Telephony and serial communication utilities
@@ -45,6 +45,7 @@ SUBDIR+=	lrzsz
 SUBDIR+=	malsync
 SUBDIR+=	mgetty+sendfax
 SUBDIR+=	minicom
+SUBDIR+=	minimodem
 SUBDIR+=	modemd
 SUBDIR+=	msynctool
 SUBDIR+=	multisync-gui
