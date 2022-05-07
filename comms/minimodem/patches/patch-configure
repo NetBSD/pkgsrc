@@ -1,0 +1,42 @@
+$NetBSD: patch-configure,v 1.1 2022/05/07 06:00:17 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- configure.orig	2016-04-23 17:48:01.000000000 +0000
++++ configure
+@@ -3596,7 +3596,7 @@ if test "${with_alsa+set}" = set; then :
+   withval=$with_alsa;
+ fi
+ 
+-if test "x$with_alsa" == "xno"; then :
++if test "x$with_alsa" = "xno"; then :
+ 
+     use_alsa=0
+ 
+@@ -3619,7 +3619,7 @@ if test "${with_pulseaudio+set}" = set; 
+   withval=$with_pulseaudio;
+ fi
+ 
+-if test "x$with_pulseaudio" == "xno"; then :
++if test "x$with_pulseaudio" = "xno"; then :
+ 
+     use_pulseaudio=0
+ 
+@@ -3642,7 +3642,7 @@ if test "${with_sndfile+set}" = set; the
+   withval=$with_sndfile;
+ fi
+ 
+-if test "x$with_sndfile" == "xno"; then :
++if test "x$with_sndfile" = "xno"; then :
+ 
+     use_sndfile=0
+ 
+@@ -3665,7 +3665,7 @@ if test "${with_benchmarks+set}" = set; 
+   withval=$with_benchmarks;
+ fi
+ 
+-if test "x$with_benchmarks" == "xno"; then :
++if test "x$with_benchmarks" = "xno"; then :
+ 
+     use_benchmarks=0
+ 
