@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2021/12/31 17:28:11 plunky Exp $
+$NetBSD: distinfo,v 1.2 2022/05/07 17:52:26 wiz Exp $
 
-BLAKE2s (libtree-2.0.0.tar.gz) = 7fbbb975e701060ec8c13d836d09912e58ef96fa2dac3165c1346712e42c17ca
-SHA512 (libtree-2.0.0.tar.gz) = 9272afd8540110f43ade864a2df58d8b8a7690c79cd29a9804b43e7e550bc05a4da530a763a27bd85a474673055e7a5ba63c0aa0bcaf8b246fbfc73a4f36c870
-Size (libtree-2.0.0.tar.gz) = 161133 bytes
+BLAKE2s (libtree-3.1.0.tar.gz) = c4462840396c8731a0116c29a6d9fd2bdffee0412e19ef15498e3e4dcdb5c7fb
+SHA512 (libtree-3.1.0.tar.gz) = c4d030c693736009a42388fc6e12cf4a696ccd922ab5afbd5d05010392cc7410b0fb9205d89163fff14f8bffd6a73da49c069fd3fd6ea3cf3ae3f4f11b1f532c
+Size (libtree-3.1.0.tar.gz) = 79936 bytes
