@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2022/05/02 14:54:16 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/05/07 15:45:09 mef Exp $
 ${OCAML_SITELIB}/stdlib-shims/META
 ${OCAML_SITELIB}/stdlib-shims/dune-package
 ${OCAML_SITELIB}/stdlib-shims/opam
 ${OCAML_SITELIB}/stdlib-shims/stdlib_shims.cma
+${OCAML_SITELIB}/stdlib-shims/stdlib_shims.a
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/stdlib-shims/stdlib_shims.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/stdlib-shims/stdlib_shims.cmxs
 share/doc/stdlib-shims/CHANGES.md
