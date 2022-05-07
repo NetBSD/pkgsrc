@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.238 2022/05/05 08:32:50 nia Exp $
+# $NetBSD: Makefile,v 1.239 2022/05/07 06:30:40 nia Exp $
 
 DISTNAME=	wine-5.0.5
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	emulators
 MASTER_SITES=	https://dl.winehq.org/wine/source/${PKGVERSION_NOREV:R}/
 MASTER_SITES+=	http://mirrors.ibiblio.org/wine/source/${PKGVERSION_NOREV:R}/
@@ -30,6 +30,8 @@ CONFIGURE_ARGS+=	--without-capi
 CONFIGURE_ARGS+=	--without-gphoto
 CONFIGURE_ARGS+=	--without-gssapi
 CONFIGURE_ARGS+=	--without-hal
+# LDAP causes build failures on NetBSD 9.99.x and newer.
+CONFIGURE_ARGS+=	--without-ldap
 CONFIGURE_ARGS+=	--without-krb5
 CONFIGURE_ARGS+=	--without-opencl
 CONFIGURE_ARGS+=	--without-udev
