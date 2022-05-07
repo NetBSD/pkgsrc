@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/07/25 16:47:46 fox Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/05/07 08:06:51 fox Exp $
 bin/glances-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -171,6 +171,9 @@ ${PYSITELIB}/glances/outputs/glances_stdout_csv.pyo
 ${PYSITELIB}/glances/outputs/glances_stdout_issue.py
 ${PYSITELIB}/glances/outputs/glances_stdout_issue.pyc
 ${PYSITELIB}/glances/outputs/glances_stdout_issue.pyo
+${PYSITELIB}/glances/outputs/glances_unicode.py
+${PYSITELIB}/glances/outputs/glances_unicode.pyc
+${PYSITELIB}/glances/outputs/glances_unicode.pyo
 ${PYSITELIB}/glances/password.py
 ${PYSITELIB}/glances/password.pyc
 ${PYSITELIB}/glances/password.pyo
@@ -291,6 +294,9 @@ ${PYSITELIB}/glances/ports_list.pyo
 ${PYSITELIB}/glances/processes.py
 ${PYSITELIB}/glances/processes.pyc
 ${PYSITELIB}/glances/processes.pyo
+${PYSITELIB}/glances/programs.py
+${PYSITELIB}/glances/programs.pyc
+${PYSITELIB}/glances/programs.pyo
 ${PYSITELIB}/glances/secure.py
 ${PYSITELIB}/glances/secure.pyc
 ${PYSITELIB}/glances/secure.pyo
