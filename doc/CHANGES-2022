@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2404 2022/05/06 04:02:53 khorben Exp $
+$NetBSD: CHANGES-2022,v 1.2405 2022/05/07 04:18:01 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3748,3 +3748,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated geography/shapelib to 1.5.0 [gdt 2022-05-06]
 	Updated textproc/libxml2 to 2.9.14 [gutteridge 2022-05-06]
 	Updated chat/prosody to 0.11.13 [khorben 2022-05-06]
+	Updated sysutils/broot to 1.12.0 [pin 2022-05-07]
