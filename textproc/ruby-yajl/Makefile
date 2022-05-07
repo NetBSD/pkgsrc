@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2018/09/23 16:43:10 taca Exp $
+# $NetBSD: Makefile,v 1.7.30.1 2022/05/07 10:01:18 bsiegert Exp $
 
-DISTNAME=	yajl-ruby-1.4.1
+DISTNAME=	yajl-ruby-1.4.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
 CATEGORIES=	textproc
 
