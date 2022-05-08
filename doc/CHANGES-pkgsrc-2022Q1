@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q1,v 1.1.2.6 2022/05/08 14:58:27 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q1,v 1.1.2.7 2022/05/08 15:29:10 bsiegert Exp $
 
 Changes to packages and infrastructure on the 2022Q1 branch:
 
@@ -66,4 +66,7 @@ www/drupal7: security fix
 Pullup tickets #6626 and #6627 - requested by taca
 ruby30-base: build fix
 ruby31-base: build fix
+
+Pullup ticket #6625 - requested by taca
+security/clamav: security fix
 
