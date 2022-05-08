@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/08 22:47:16 khorben Exp $
+
+BLAKE2s (lualdap-1.3.0.tar.gz) = a746da976c896e8d8c8a9baf9dd2101e77331c658556e87dc676e13c00050760
+SHA512 (lualdap-1.3.0.tar.gz) = dea4282928c5138a327cd97d3d8049341fac17b5e853440f5b0a6e115e3400bac908f24827d48e36bfe81720c7d2bacdc50ae189953ecbcdfb27cb23b78d0de8
+Size (lualdap-1.3.0.tar.gz) = 81987 bytes
