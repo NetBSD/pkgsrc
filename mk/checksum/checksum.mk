@@ -1,4 +1,4 @@
-# $NetBSD: checksum.mk,v 1.25 2021/10/26 09:06:06 nia Exp $
+# $NetBSD: checksum.mk,v 1.26 2022/05/08 12:25:18 jperkin Exp $
 #
 # See bsd.checksum.mk for helpful comments.
 #
@@ -88,6 +88,7 @@ distinfo:
 		${RM} -f $$newfile;					\
 		${ECHO_MSG} "=> distinfo: unchanged.";			\
 	else								\
+		${RM} -f ${DISTINFO_FILE};				\
 		${MV} -f $$newfile ${DISTINFO_FILE};			\
 	fi
 
@@ -100,6 +101,7 @@ makesum:
 		${RM} -f $$newfile;					\
 		${ECHO_MSG} "=> distinfo: distfiles part unchanged.";	\
 	else								\
+		${RM} -f ${DISTINFO_FILE};				\
 		${MV} -f $$newfile ${DISTINFO_FILE};			\
 	fi
 
@@ -112,6 +114,7 @@ makepatchsum:
 		${RM} -f $$newfile;					\
 		${ECHO_MSG} "=> distinfo: patches part unchanged.";	\
 	else								\
+		${RM} -f ${DISTINFO_FILE};				\
 		${MV} -f $$newfile ${DISTINFO_FILE};			\
 	fi
 
