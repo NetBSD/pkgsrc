@@ -1,0 +1,2 @@
+pdu (parallel-disk-usage) is a CLI program that renders a graphical chart for
+disk usages of files and directories.
