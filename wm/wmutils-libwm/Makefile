@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/02/16 14:12:57 pin Exp $
+# $NetBSD: Makefile,v 1.3 2022/05/08 13:17:47 jperkin Exp $
 
 DISTNAME=	wmutils-libwm-1.3
 CATEGORIES=	wm
@@ -11,8 +11,10 @@ HOMEPAGE=	https://github.com/wmutils/libwm/
 COMMENT=	Small library for X windows manipulation
 LICENSE=	isc
 
+USE_TOOLS+=	gmake
+
 SUBST_CLASSES+=		configmk
-SUBST_MESSAGE.configmk=	Adjust comfig.mk
+SUBST_MESSAGE.configmk=	Adjust config.mk
 SUBST_STAGE.configmk=	pre-configure
 SUBST_FILES.configmk+=	config.mk
 SUBST_SED.configmk+=	-e 's,/usr/local,${PREFIX},g'
