@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.661 2022/04/25 07:55:18 wiz Exp $
+# $NetBSD: Makefile,v 1.662 2022/05/08 22:47:51 khorben Exp $
 
 COMMENT=	Databases
 
@@ -90,6 +90,7 @@ SUBDIR+=	lua-dbi
 SUBDIR+=	lua-dbi-mysql
 SUBDIR+=	lua-dbi-postgresql
 SUBDIR+=	lua-dbi-sqlite3
+SUBDIR+=	lua-ldap
 SUBDIR+=	lua-lsqlite3
 SUBDIR+=	lua-sql-mysql
 SUBDIR+=	lua-sql-postgres
