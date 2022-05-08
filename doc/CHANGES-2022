@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2424 2022/05/08 12:47:37 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.2425 2022/05/08 15:02:40 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3771,3 +3771,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated pkgtools/pkgdiff to 1.10 [jperkin 2022-05-08]
 	Updated geography/py-gdal to 3.4.3 [gdt 2022-05-08]
 	Updated geography/gdal-lib to 3.4.3 [gdt 2022-05-08]
+	Updated net/unison to 2.52.1 [gdt 2022-05-08]
