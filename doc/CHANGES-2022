@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2428 2022/05/08 21:24:27 khorben Exp $
+$NetBSD: CHANGES-2022,v 1.2429 2022/05/08 22:47:30 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3775,3 +3775,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added net/lua-unbound version 1.0.0 [khorben 2022-05-08]
 	Updated pkgtools/pkg_comp to 2.1nb1 [buildbox 2022-05-08]
 	Updated chat/prosody to 0.12.0 [khorben 2022-05-08]
+	Added databases/lua-ldap version 1.3.0 [khorben 2022-05-08]
