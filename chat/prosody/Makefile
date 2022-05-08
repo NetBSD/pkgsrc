@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2022/05/06 04:02:11 khorben Exp $
+# $NetBSD: Makefile,v 1.37 2022/05/08 21:24:12 khorben Exp $
 
-DISTNAME=		prosody-0.11.13
+DISTNAME=		prosody-0.12.0
 CATEGORIES=		chat
 MASTER_SITES=		https://prosody.im/downloads/source/
 
@@ -13,6 +13,7 @@ DEPENDS+=		${LUA_PKGPREFIX}-expat>=1.2:../../textproc/lua-expat
 DEPENDS+=		${LUA_PKGPREFIX}-filesystem>=1.6.2:../../devel/lua-filesystem
 DEPENDS+=		${LUA_PKGPREFIX}-sec>=0.3.3:../../security/lua-sec
 DEPENDS+=		${LUA_PKGPREFIX}-socket>=2.0:../../net/lua-socket
+DEPENDS+=		${LUA_PKGPREFIX}-unbound-[0-9]*:../../net/lua-unbound
 
 HAS_CONFIGURE=		yes
 USE_LANGUAGES=		c99
@@ -51,8 +52,8 @@ REPLACE_LUA+=		prosody prosodyctl
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixing default paths
 SUBST_STAGE.path=	pre-configure
-SUBST_FILES.path=	makefile man/prosodyctl.man prosody.cfg.lua.dist
-SUBST_SED.path=		-e 's,/etc/prosody,${PKG_SYSCONFDIR},g'
+SUBST_FILES.path=	makefile prosody.cfg.lua.dist
+SUBST_SED.path=		-e 's,$$(CONFIG),$$(DESTDIR)$(EGDIR),g'
 SUBST_VARS.path=	EGDIR PROSODY_DATA PROSODY_LOG PROSODY_RUN
 
 CONFIGURE_ARGS+=	--cflags=${CFLAGS:Q}
@@ -76,4 +77,5 @@ TEST_TARGET=		test
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
