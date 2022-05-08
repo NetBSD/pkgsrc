@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1460 2022/05/05 06:48:51 wiz Exp $
+# $NetBSD: Makefile,v 1.1461 2022/05/08 20:33:36 khorben Exp $
 #
 
 COMMENT=	Networking tools
@@ -358,6 +358,7 @@ SUBDIR+=	llnlxftp
 SUBDIR+=	lopster
 SUBDIR+=	lua-copas
 SUBDIR+=	lua-socket
+SUBDIR+=	lua-unbound
 SUBDIR+=	mDNSResponder
 SUBDIR+=	mDNSResponder-nss
 SUBDIR+=	mangos
