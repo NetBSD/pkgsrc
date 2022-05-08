@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2421 2022/05/08 12:10:40 rhialto Exp $
+$NetBSD: CHANGES-2022,v 1.2422 2022/05/08 12:30:01 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3768,3 +3768,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated games/openttd to 12.2 [triaxx 2022-05-08]
 	Updated games/openttd-data to 7.1 [triaxx 2022-05-08]
 	Updated emulators/simh to 4.0.0.20220501 [rhialto 2022-05-08]
+	Updated pkgtools/pkgdiff to 1.10 [jperkin 2022-05-08]
