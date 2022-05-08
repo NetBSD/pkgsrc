@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2419 2022/05/08 12:06:22 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.2420 2022/05/08 12:06:46 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3766,3 +3766,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/lemon to 1.0.3.38.5 [adam 2022-05-08]
 	Added sysutils/parallel-disk-usage version 0.7.1 [pin 2022-05-08]
 	Updated games/openttd to 12.2 [triaxx 2022-05-08]
+	Updated games/openttd-data to 7.1 [triaxx 2022-05-08]
