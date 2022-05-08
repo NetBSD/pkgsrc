@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1001 2022/04/12 22:22:26 nikita Exp $
+# $NetBSD: Makefile,v 1.1002 2022/05/08 09:10:59 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -524,6 +524,7 @@ SUBDIR+=	p5-Unix-Processors
 SUBDIR+=	p5-Unix-Statgrab
 SUBDIR+=	p5-Unix-Syslog
 SUBDIR+=	p5-collectd
+SUBDIR+=	parallel-disk-usage
 SUBDIR+=	pciutils
 SUBDIR+=	pcmanfm
 SUBDIR+=	pcmanfm-qt
