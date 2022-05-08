@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2415 2022/05/07 17:52:35 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2416 2022/05/08 03:51:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3759,3 +3759,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/ruby31-base to 3.1.2nb2 [taca 2022-05-07]
 	Updated sysutils/htop to 3.2.0 [fox 2022-05-07]
 	Updated sysutils/libtree to 3.1.0 [wiz 2022-05-07]
+	Updated net/yt-dlp to 2022.4.8 [wiz 2022-05-08]
