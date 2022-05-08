@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:44:18 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/05/08 12:06:34 triaxx Exp $
 
-BLAKE2s (opengfx-0.6.0-all.zip) = fe304acd1ce97207802d76440f6acb769b4b6761ea79f88d5ebf7b4db8f9f4ef
-SHA512 (opengfx-0.6.0-all.zip) = 712812744b7d4dea4d704b179cc6d2078626f1582e73283ff8b512a1fbe46bdf4e293e8ed678965d280ad9fe3665d7cd291dc89b65212ee01451034f356f9d57
-Size (opengfx-0.6.0-all.zip) = 3551230 bytes
-BLAKE2s (openmsx-0.3.1-all.zip) = 93d80d04226d0e22109a59a5ca815c51d638aac9e0059807e238593b99232a65
-SHA512 (openmsx-0.3.1-all.zip) = d17856fc70796eadb798b133af8a987ff9887c7f0d736e48bd27e9451eb122935271779b65e098e061c1316def455f56da6caa1d448e2bf111ecf8c189d3fbc8
-Size (openmsx-0.3.1-all.zip) = 136981 bytes
-BLAKE2s (opensfx-0.2.3-all.zip) = f19230a7453c4222cc1b814df3244d495da9b197f00626fed295f3160187910d
-SHA512 (opensfx-0.2.3-all.zip) = ee4f4659201f1b6829fcea3c66416573d11e50988ef33452c2e9867bee8e68ddbf978ca805802b2b4188c624e814816300e69c8b78bb80c9604841be706c96cc
-Size (opensfx-0.2.3-all.zip) = 11359588 bytes
+BLAKE2s (opengfx-7.1-all.zip) = b8834b037ad68b89275d438f8c1da5d800daf7cf00ef8a6bb694fe6aedf8bd1c
+SHA512 (opengfx-7.1-all.zip) = 89dbb5cb45f3d720290d78904611ee3173617d97f4f49176fb10949b7d78bb0348b1aa7e12743c0cf3834b09ed73c1e161e04ae7532f2baffe4f1259bc8df04c
+Size (opengfx-7.1-all.zip) = 3547160 bytes
+BLAKE2s (openmsx-0.4.2-all.zip) = c6f1a41ec81a6b7cd013fb9a212ac40f4f47b0287a951118e30863eebbc8d3e1
+SHA512 (openmsx-0.4.2-all.zip) = 6fdcec91ffcfa68ef367ff1733011a472caeb53f26fe07623ac510db80890789475919192317e6d5cddd6f3acea5bd58d8b174c23d506efcbd868392e418ed2f
+Size (openmsx-0.4.2-all.zip) = 140204 bytes
+BLAKE2s (opensfx-1.0.3-all.zip) = a12b7ad2d9e51ce77e51f8aa425cd7c0393c47918df424071879295d5e0dfa8b
+SHA512 (opensfx-1.0.3-all.zip) = 4a3f0d19efe97729a1918101b8cb59a01a84aae43e432d697c9ca9af38296e1de0665b705dba0b3a29b8b04df6629c98eb8690534c7e70566f573ce72cab30b0
+Size (opensfx-1.0.3-all.zip) = 11566000 bytes
