@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21828 2022/05/07 07:46:10 wiedi Exp $
+$NetBSD: TODO,v 1.21829 2022/05/08 12:39:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -361,11 +361,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o GNUMail-1.2.2
 	o Gorm-1.2.26
 	o HElib-2.1.0
+	o ImageMagick-7.1.0.33
 	o ImageMagick6-6.9.12.8
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o Mesa-22.0.1
-	o MesaLib-22.0.2
+	o MesaLib-22.0.3
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o Pantomime-1.2.2
@@ -735,6 +736,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gimp-docs-sv-2.10.0
 	o gimp-docs-zh_CN-2.10.0
 	o gindent-2.2.12
+	o git-2.36.1
 	o gitolite-3.6.12
 	o gjs-1.70.1
 	o gkrellm-2.3.11
@@ -820,11 +822,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o graphene-1.10.6
 	o greed-4.2
 	o gromacs-2021.1
-	o grpc-1.45.2
+	o grpc-1.46.0
 	o grub2-2.06
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gst-rtsp-server-1.18.5
+	o gstreamer1-1.20.2
 	o gthumb-3.4.0
 	o gtk-gnutella-1.2.0
 	o gtk4+-4.4
@@ -1014,6 +1017,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libaacs-0.11.0
 	o libarchive-3.5.2
 	o libasr-1.0.4
+	o libatomic-12.1.0
 	o libbaloo4-21.04.0
 	o libbpg-0.9.8
 	o libbsd-0.11.5
@@ -1175,6 +1179,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nickle-2.90
 	o nios2-binutils-2.36.1
 	o node_exporter-1.1.2
+	o npm-8.9.0
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
 	o nsm-2.4.12
@@ -1371,6 +1376,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o podcastdl-0.3.3
 	o policyd-weight-0.1.15.2
 	o poppass-4.0.14
+	o poppler-22.05.0
 	o posh-0.14.1
 	o postal-0.72
 	o postfix-3.7.1
@@ -1426,16 +1432,20 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-gammu-3.1
 	o py-gcovr-4.2
 	o py-goocalendar-0.7.2
+	o py-gstreamer1-1.20.2
 	o py-gsutil-5.6
 	o py-hgview-1.9.0
 	o py-hyperscan-0.2.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.2
+	o py-mercurial-6.1.2
+	o py-more-itertools-8.13.0
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
 	o py-newt-0.52.21
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
+	o py-pip-audit-2.2.1
 	o py-postgresql-5.1.2
 	o py-ptt-1.10.2
 	o py-py3c-1.3.1
@@ -1522,7 +1532,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rubber-1.5.1
 	o rudiments-1.4.2
 	o rump-20131213
-	o rust-analyzer-0.0.20220425 [needs rust 1.60.0]
+	o rust-analyzer-0.0.20220502 [needs rust 1.60.0]
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
@@ -1806,6 +1816,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o zoneminder-1.34.21
 	o zookeeper-3.7.0
 	o zopeedit-0.8
+	o zxing-cpp-1.3.0
 
 Licenses of packages
 ====================
