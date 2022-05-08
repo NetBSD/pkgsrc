@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/05/08 22:47:16 khorben Exp $
+${LUA_CDIR}/lualdap.so
