@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q1,v 1.1.2.5 2022/04/23 19:04:59 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q1,v 1.1.2.6 2022/05/08 14:58:27 bsiegert Exp $
 
 Changes to packages and infrastructure on the 2022Q1 branch:
 
@@ -53,4 +53,17 @@ multimedia/pitivi: build fix
 
 Pullup ticket #6621 - requested by nia
 devel/afl++: ARM build fix
+
+Pullup ticket #6622 - requested by taca
+textproc/ruby-yajl: security fix
+
+Pullup ticket #6623 - requested by taca
+www/ruby-puma: security fix
+
+Pullup ticket #6624 - requested by taca
+www/drupal7: security fix
+
+Pullup tickets #6626 and #6627 - requested by taca
+ruby30-base: build fix
+ruby31-base: build fix
 
