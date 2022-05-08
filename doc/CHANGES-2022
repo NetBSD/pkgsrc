@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2426 2022/05/08 20:33:11 khorben Exp $
+$NetBSD: CHANGES-2022,v 1.2427 2022/05/08 20:35:25 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3773,3 +3773,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated geography/gdal-lib to 3.4.3 [gdt 2022-05-08]
 	Updated net/unison to 2.52.1 [gdt 2022-05-08]
 	Added net/lua-unbound version 1.0.0 [khorben 2022-05-08]
+	Updated pkgtools/pkg_comp to 2.1nb1 [buildbox 2022-05-08]
