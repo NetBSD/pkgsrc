@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2019/01/14 10:53:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.62 2022/05/08 20:26:52 schmonz Exp $
 
 DISTNAME=	pkg_comp-2.1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jmmv/}pkg_comp/releases/download/pkg_comp-2.1/
 
@@ -32,6 +33,11 @@ SUBST_STAGE.sandboxctl=	pre-configure
 SUBST_FILES.sandboxctl=	sandbox.conf.in
 SUBST_SED.sandboxctl=	-e 's,__PKG_COMP_BASESYSCONFDIR__/sandboxctl/,${SANDBOXCTL_SYSCONFDIR}/,g'
 SANDBOXCTL_SYSCONFDIR=	${PKG_SYSCONFDIR.sandboxctl:U${PKG_SYSCONFBASE}/sandboxctl}
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	pkg_comp.sh
+SUBST_VARS.paths=	PREFIX
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pkg_comp
 PKG_SUPPORTED_OPTIONS=	tests
