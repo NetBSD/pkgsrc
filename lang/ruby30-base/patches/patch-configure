@@ -1,15 +1,15 @@
-$NetBSD: patch-configure,v 1.1 2021/02/14 14:32:41 taca Exp $
+$NetBSD: patch-configure,v 1.1.10.1 2022/05/08 14:53:38 bsiegert Exp $
 
 * Adding Interix support.
 * Ignore doxygen.
 * Ignore VCS.
 * Handle SSP in pkgsrc.
-* Put -std= in CFLAGS not CPPFLAGS.
+* Retain _XOPEN_SOURCE, fixes eventmachine.
 * Fix argument for pthread_self() on NetBSD.
 
---- configure.orig	2020-12-08 09:02:33.000000000 +0000
+--- configure.orig	2022-04-12 11:48:57.000000000 +0000
 +++ configure
-@@ -7991,7 +7991,7 @@ else
+@@ -8381,7 +8381,7 @@ else
      if test x"$target_alias" = x; then :
  
  	case "$target_os" in #(
@@ -18,7 +18,7 @@ $NetBSD: patch-configure,v 1.1 2021/02/14 14:32:41 taca Exp $
  
  	    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for real target cpu" >&5
  $as_echo_n "checking for real target cpu... " >&6; }
-@@ -10048,6 +10048,7 @@ fi
+@@ -10094,6 +10094,7 @@ fi
  	stack_protector=no
       ;; #(
    *) :
@@ -26,7 +26,26 @@ $NetBSD: patch-configure,v 1.1 2021/02/14 14:32:41 taca Exp $
       ;;
  esac
      if test -z "${stack_protector+set}"; then :
-@@ -11912,6 +11913,10 @@ esac
+@@ -11794,18 +11795,6 @@ fi
+      CPPFLAGS="$CPPFLAGS ${rb_opt}" ;;
+ esac
+ 	done
+-		    # _XOPEN_SOURCE should not be defined for C++ on Solaris.
+-		    # RUBY_APPEND_OPTIONS(CXXFLAGS)
+-	for rb_opt in -U_XOPEN_SOURCE; do
+-	case " ${CXXFLAGS-} " in #(
+-  *" ${rb_opt} "*) :
+-     ;; #(
+-  '  ') :
+-     CXXFLAGS="${rb_opt}" ;; #(
+-  *) :
+-     CXXFLAGS="$CXXFLAGS ${rb_opt}" ;;
+-esac
+-	done
+ 
+ fi
+ 
+@@ -11970,6 +11959,10 @@ esac
  
  			ac_cv_func___builtin_setjmp=no
  		 ;; #(
@@ -37,7 +56,7 @@ $NetBSD: patch-configure,v 1.1 2021/02/14 14:32:41 taca Exp $
    *) :
       ;;
  esac
-@@ -23493,6 +23498,8 @@ else
+@@ -23324,6 +23317,8 @@ else
  # ifdef _MSC_VER
  #  include <malloc.h>
  #  define alloca _alloca
@@ -46,7 +65,7 @@ $NetBSD: patch-configure,v 1.1 2021/02/14 14:32:41 taca Exp $
  # else
  #  ifdef HAVE_ALLOCA_H
  #   include <alloca.h>
-@@ -28791,7 +28798,9 @@ fi
+@@ -28622,7 +28617,9 @@ fi
    interix*) :
      	: ${LDSHARED='$(CC) -shared'}
  			XLDFLAGS="$XLDFLAGS -Wl,-E"
@@ -56,7 +75,7 @@ $NetBSD: patch-configure,v 1.1 2021/02/14 14:32:41 taca Exp $
  			rb_cv_dlopen=yes ;; #(
    freebsd*|dragonfly*) :
  
-@@ -29988,7 +29997,7 @@ fi
+@@ -29890,7 +29887,7 @@ fi
  	 ;; #(
    freebsd*|dragonfly*) :
  
@@ -65,7 +84,7 @@ $NetBSD: patch-configure,v 1.1 2021/02/14 14:32:41 taca Exp $
  	LIBRUBY_SONAME='$(LIBRUBY_SO)'
  	if test "$rb_cv_binary_elf" != "yes" ; then :
  
-@@ -30067,9 +30076,10 @@ esac
+@@ -29969,9 +29966,10 @@ esac
  	 ;; #(
    darwin*) :
  
@@ -78,7 +97,7 @@ $NetBSD: patch-configure,v 1.1 2021/02/14 14:32:41 taca Exp $
  	if test "$load_relative" = yes; then :
  
  	    libprefix="@executable_path/../${libdir_basename}"
-@@ -30090,7 +30100,12 @@ fi
+@@ -29992,7 +29990,12 @@ fi
  	 ;; #(
    interix*) :
  
@@ -92,7 +111,7 @@ $NetBSD: patch-configure,v 1.1 2021/02/14 14:32:41 taca Exp $
  	 ;; #(
    mingw*|cygwin*|mswin*) :
  
-@@ -30272,7 +30287,7 @@ if test "$enable_rpath" = yes; then :
+@@ -30174,7 +30177,7 @@ if test "$enable_rpath" = yes; then :
  esac
      rpathflag=`IFS="$PATH_SEPARATOR"
          echo x "$rpathflag" |
@@ -101,7 +120,7 @@ $NetBSD: patch-configure,v 1.1 2021/02/14 14:32:41 taca Exp $
      `
      LIBRUBY_RPATHFLAGS="$LIBRUBY_RPATHFLAGS${rpathflag}"
      LIBRUBYARG_SHARED="$LIBRUBY_RPATHFLAGS $LIBRUBYARG_SHARED"
-@@ -32996,19 +33011,7 @@ which seems to be undefined.  Please mak
+@@ -32906,19 +32909,7 @@ which seems to be undefined.  Please mak
      "Makefile":F)
      tmpmk=confmk$$.tmp
      {

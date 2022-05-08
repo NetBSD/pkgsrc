@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.244.2.5 2022/04/16 09:41:21 spz Exp $
+# $NetBSD: rubyversion.mk,v 1.244.2.6 2022/05/08 14:53:37 bsiegert Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -617,6 +617,12 @@ RUBY_BUILD_DOCUMENT?=	Yes
 RUBY?=			${PREFIX}/bin/${RUBY_NAME}
 RAKE?=			${PREFIX}/bin/${RAKE_NAME}
 RDOC?=			${PREFIX}/bin/rdoc${RUBY_SUFFIX}
+
+# ruby31 helpfully changed the config triple...
+.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64) && ${RUBY_VER} >= 31
+RUBY_ARCH?=	arm64-${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}${APPEND_ABI}
+RUBY_EXTARCH?=	arm64-${LOWER_OPSYS}${APPEND_ELF}-${LOWER_OPSYS_VERSUFFIX}
+.endif
 
 RUBY_ARCH?=	${MACHINE_GNU_ARCH}-${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}${APPEND_ABI}
 
