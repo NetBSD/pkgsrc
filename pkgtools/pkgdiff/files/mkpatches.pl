@@ -1,6 +1,6 @@
 #!@PERL5@
 #
-# $NetBSD: mkpatches.pl,v 1.22 2019/08/21 13:00:06 hauke Exp $
+# $NetBSD: mkpatches.pl,v 1.23 2022/05/08 12:29:51 jperkin Exp $
 #
 # mkpatches: creates a set of patches patch-aa, patch-ab, ...
 #   in work/.newpatches by looking for *.orig files in and below
@@ -147,6 +147,7 @@ if ($opt_r) {
 	my $orig = $_;
 	my $new = $_;
 	$new =~ s/.orig$//;
+	unlink $new;
 	rename $orig, $new;
 	if (! -s $new) {
 	    unlink $new;
@@ -246,6 +247,7 @@ sub move_away_old_patches
 	chomp $filename;
 	next if $filename =~ m/.orig$/;
 	if (-f "$filename" and not -f "$filename.orig") {
+	    unlink "$filename.orig";
 	    rename "$filename", "$filename.orig";
 	}
     }
@@ -276,6 +278,7 @@ sub make_patch # new old patchfile diff
     if ("$diff" eq "") {
 	print "$old and $new don't differ\n";
 	if (-f "$patchdir/$patchfile.orig") {
+	    unlink "$patchdir/$patchfile";
 	    rename "$patchdir/$patchfile.orig", "$patchdir/$patchfile";
 	}
     }
@@ -319,6 +322,7 @@ sub make_patch # new old patchfile diff
 	# all fine, keep diff
     } else {
 	# restore previous version to get rid of uninteresting diffs
+	unlink "$patchdir/$patchfile";
 	rename "$patchdir/$patchfile.orig", "$patchdir/$patchfile";
     }
 
