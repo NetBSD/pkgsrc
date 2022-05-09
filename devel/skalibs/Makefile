@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2021/12/26 16:42:42 nros Exp $
+# $NetBSD: Makefile,v 1.16 2022/05/09 14:51:23 schmonz Exp $
 
-DISTNAME=		skalibs-2.11.1.0
+DISTNAME=		skalibs-2.11.2.0
 CATEGORIES=		devel
 MASTER_SITES=		${HOMEPAGE}
 
@@ -16,7 +16,15 @@ USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
-CPPFLAGS.NetBSD=	-D_NETBSD_SOURCE
+# for fdopendir
+CPPFLAGS.NetBSD+=	-D_NETBSD_SOURCE
+CPPFLAGS.SunOS+=	-D__EXTENSIONS__
+
+# from patch-for-solaris
+SUBST_CLASSES.SunOS+=	solaris
+SUBST_STAGE.solaris=	pre-configure
+SUBST_FILES.solaris=	configure
+SUBST_SED.solaris=	-e 's|XOPEN_SOURCE=700|XOPEN_SOURCE=600|g'
 
 INSTALLATION_DIRS=	include/skalibs lib/skalibs/sysdeps
 
