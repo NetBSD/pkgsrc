@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2018/04/14 08:26:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/05/09 11:16:27 adam Exp $
 bin/dltest
 bin/isql
 bin/iusql
@@ -13,28 +13,17 @@ include/sqlext.h
 include/sqlspi.h
 include/sqltypes.h
 include/sqlucode.h
-include/unixodbc_conf.h
+include/unixODBC/config.h
+include/unixODBC/unixodbc_conf.h
+include/unixodbc.h
 include/uodbc_extras.h
 include/uodbc_stats.h
+${UNIXODBC_DRIVERS_DIR}/libnn.la
+${UNIXODBC_DRIVERS_DIR}/libodbcpsql.la
+${UNIXODBC_DRIVERS_DIR}/libtemplate.la
 lib/libodbc.la
 lib/libodbccr.la
 lib/libodbcinst.la
-${UNIXODBC_DRIVERS_DIR}/libesoobS.la
-${UNIXODBC_DRIVERS_DIR}/libmimerS.la
-${UNIXODBC_DRIVERS_DIR}/libnn.la
-${UNIXODBC_DRIVERS_DIR}/libodbcdrvcfg1S.la
-${UNIXODBC_DRIVERS_DIR}/libodbcdrvcfg2S.la
-${UNIXODBC_DRIVERS_DIR}/libodbcminiS.la
-${UNIXODBC_DRIVERS_DIR}/libodbcmyS.la
-${UNIXODBC_DRIVERS_DIR}/libodbcnnS.la
-${UNIXODBC_DRIVERS_DIR}/libodbcpsql.la
-${UNIXODBC_DRIVERS_DIR}/libodbcpsqlS.la
-${UNIXODBC_DRIVERS_DIR}/libodbctxtS.la
-${UNIXODBC_DRIVERS_DIR}/liboplodbcS.la
-${UNIXODBC_DRIVERS_DIR}/liboraodbcS.la
-${UNIXODBC_DRIVERS_DIR}/libsapdbS.la
-${UNIXODBC_DRIVERS_DIR}/libtdsS.la
-${UNIXODBC_DRIVERS_DIR}/libtemplate.la
 lib/pkgconfig/odbc.pc
 lib/pkgconfig/odbccr.pc
 lib/pkgconfig/odbcinst.pc
