@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.66 2022/05/01 08:03:41 nia Exp $
+# $NetBSD: tools.Linux.mk,v 1.67 2022/05/09 16:44:40 schmonz Exp $
 #
 # System-supplied tools for the Linux operating system.
 #
@@ -62,6 +62,9 @@ TOOLS_PLATFORM.curl?=		${_path}/curl
 .  endif
 .  if exists(${_path}/cut)
 TOOLS_PLATFORM.cut?=		${_path}/cut
+.  endif
+.  if exists(${_path}/date)
+TOOLS_PLATFORM.date?=		${_path}/date
 .  endif
 .  if exists(${_path}/diff)
 TOOLS_PLATFORM.diff?=		${_path}/diff
