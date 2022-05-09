@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2021/12/22 16:00:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2022/05/09 14:53:12 schmonz Exp $
 
-DISTNAME=	execline-2.8.2.0
+DISTNAME=	execline-2.8.3.0
 CATEGORIES=	lang shells
 MASTER_SITES=	${HOMEPAGE}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${MANPAGES}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://skarnet.org/software/execline/
 COMMENT=	The execline scripting language
 LICENSE=	isc
 
-MANPAGES=		v2.8.1.0.4.tar.gz
+MANPAGES=		v2.8.3.0.2.tar.gz
 SITES.${MANPAGES}=	${MASTER_SITE_GITHUB:=flexibeast/execline-man-pages/archive/}
 
 USE_TOOLS+=		gmake
