@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2022/02/17 19:34:42 pin Exp $
+# $NetBSD: Makefile,v 1.4 2022/05/09 21:50:09 pin Exp $
 
 DISTNAME=	hcal-0.3.4
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=0xflotus/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/0xflotus/hcal/
 COMMENT=	Hexadecimal calendar in terminal for programmers
 LICENSE=	mit
@@ -15,7 +15,8 @@ LICENSE=	mit
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/hcal ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/hcal \
+		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
