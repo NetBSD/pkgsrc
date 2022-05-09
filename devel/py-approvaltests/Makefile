@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2022/04/25 15:11:53 schmonz Exp $
+# $NetBSD: Makefile,v 1.40 2022/05/09 14:48:08 schmonz Exp $
 
-DISTNAME=	approvaltests-5.0.1
+DISTNAME=	approvaltests-5.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/approvaltests/}
