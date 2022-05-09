@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.859 2022/05/05 12:23:06 nia Exp $
+# $NetBSD: Makefile,v 1.860 2022/05/09 00:38:43 khorben Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -217,6 +217,7 @@ SUBDIR+=	lsh
 SUBDIR+=	lua-arc4random
 SUBDIR+=	lua-argon2
 SUBDIR+=	lua-bcrypt
+SUBDIR+=	lua-cyrussasl
 SUBDIR+=	lua-ossl
 SUBDIR+=	lua-sec
 SUBDIR+=	lxqt-openssh-askpass
