@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2022/04/15 16:18:45 pin Exp $
+$NetBSD: distinfo,v 1.7 2022/05/09 21:47:01 pin Exp $
 
 BLAKE2s (ansi_term-0.12.1.crate) = 9d7961fca7b2680f17660048cf2d6171faa0def807ea66b5b5b9110f0623a12f
 SHA512 (ansi_term-0.12.1.crate) = b840e28b3e7700689a69a39659b1e066560078dd4a58326b91a028915819e7af883399ee53e920db68fd974c58d35bb1ddf8d427af5937d5f696f57c4376b671
@@ -12,9 +12,9 @@ Size (autocfg-1.0.1.crate) = 12908 bytes
 BLAKE2s (bitflags-1.2.1.crate) = d88eaeb22f47d784119fe5d2ecd3e09ef458afb28b23c53a23566144e1ee218d
 SHA512 (bitflags-1.2.1.crate) = ad89b3798845e23737a620bba581c2ff1ff3e15bac12555c765e201d2c0b90ecea0cdbc5b5b1a3fa9858c385e8e041f8226f5acfae5bbbe9925643fff2bf3f0b
 Size (bitflags-1.2.1.crate) = 16745 bytes
-BLAKE2s (bright-0.4.0.crate) = 12299c74a5cb67e2b4b95ab95eee3092afa7153d3a5db0636a71d1fc4ddc5f8d
-SHA512 (bright-0.4.0.crate) = 1777091bb134a29d39e7eed8fbb078084fb3966895441801adb6d3a58804ef698a417ec0ac5f20a304854c74e61c3e675682d9a28234a5f9f7b8894f5f42c9ea
-Size (bright-0.4.0.crate) = 4071 bytes
+BLAKE2s (bright-0.4.1.crate) = eda2f4f20986b87da5a7f40947cc8fd6f98696391882ce1f5ef4817225e6954d
+SHA512 (bright-0.4.1.crate) = ac639fdd27e71da8925e2d869164d94918ee231ad3e04691601d9563a7e3006c46d78eb0f84cf0a78f3cfbc6e7c6647dae9ff2cb95884da5dc6adb62af3775b3
+Size (bright-0.4.1.crate) = 4445 bytes
 BLAKE2s (cfg-if-1.0.0.crate) = fbb02f63b24cc224b045ff2aac3aefd0a77cf7b578df4d5f9da9517a59aaf9bb
 SHA512 (cfg-if-1.0.0.crate) = 0fb16a8882fd30e86b62c5143b1cb18ab564e84e75bd1f28fd12f24ffdc4a42e0d2e012a99abb606c12efe3c11061ff5bf8e24ab053e550ae083f7d90f6576ff
 Size (cfg-if-1.0.0.crate) = 7934 bytes
@@ -36,24 +36,18 @@ Size (crossbeam-utils-0.8.1.crate) = 35914 bytes
 BLAKE2s (glob-0.3.0.crate) = a60fa0dbb50f7da285b5ad2a74a36139efc9e6fe2f33c9ac81cf2c2db6b024f0
 SHA512 (glob-0.3.0.crate) = 87098ffdbc518442995c422120cef71f83069c8f88a1970ecec5105b0f284ddd92bcee929f5c230d5b90ae1ead7e1214c3eea26f4a8b26715a00c1ab8b09bc46
 Size (glob-0.3.0.crate) = 18724 bytes
-BLAKE2s (hermit-abi-0.1.3.crate) = 30ab865e829a7e651f94d4f9ae863a724a527acb7bfd3c7a42435db91da8a23e
-SHA512 (hermit-abi-0.1.3.crate) = ca85d69192ddd2c1cf0f12d6abc7eaa70a71956df5b55aaf1d3780c6e40207c33bb188a92a5f4769478c4ce13bd93cfd6b4134a21e245781b4ab4e3cb3eabe87
-Size (hermit-abi-0.1.3.crate) = 6741 bytes
 BLAKE2s (lazy_static-1.4.0.crate) = 0d5f7c2bcfe70610bc27bd6b339ea3e4ca3b7014149714db3a0c199ac6f07cd1
 SHA512 (lazy_static-1.4.0.crate) = e124c0521ec7c950f3c4a066821918da7a9c6e711115d98009ae7c351928fdddead852e7596fea5937a9c30e4e4ce8eee7099b20248b5d6e3b2494b6a6d88cb8
 Size (lazy_static-1.4.0.crate) = 10443 bytes
 BLAKE2s (libc-0.2.70.crate) = 43bbe9469f3e1aa0eb4940b9861f73417aa6c52910bbab6e932a97ebec141942
 SHA512 (libc-0.2.70.crate) = a543b972e73d5bf142988464cd62f4402b782796074aabf4ec9396e341050d545b83212c7e4c62c224d5e06de4d794c67fea91b83d605626df115b30d8f326de
 Size (libc-0.2.70.crate) = 472909 bytes
-BLAKE2s (lok-0.2.0.tar.gz) = 90578c5f40e2ddad17c885996cefee3034fea14d575aa73c70cfbe6cf968820b
-SHA512 (lok-0.2.0.tar.gz) = 6800d19fc31d498688ca15d72dd1abb659cc2e73ada2f3d22ed9e5d5365b673aedd0827e64b184deffbef584621247be759ad57f1055c3f76aaca0095f9ba416
-Size (lok-0.2.0.tar.gz) = 13035 bytes
+BLAKE2s (lok-0.2.1.tar.gz) = 78d86a872abc3877159cfab6ba0849a411d80c276322ebcba07c597f85695d5b
+SHA512 (lok-0.2.1.tar.gz) = fda12f23959f544d421472973f7c29972ff7479afd28702dc8ff1e6c9ef3cb59c8472833a2af48ceb4c48559648446b06262e344ed5df64add95b21e9b431500
+Size (lok-0.2.1.tar.gz) = 12971 bytes
 BLAKE2s (memoffset-0.6.1.crate) = 5b864adb907a191398a7e184d79986ce39544f49045035ed838c6698386a9a80
 SHA512 (memoffset-0.6.1.crate) = 74d081af00b7e442198b786d79e4ef35c243d2e78347ab9cb50e127569aed3fd77b47b95df6f361a716abce27c8cc6cb1dfa12c92b0b2208b21f9eb9527b61be
 Size (memoffset-0.6.1.crate) = 7706 bytes
-BLAKE2s (num_cpus-1.13.1.crate) = 62977ab8aa05325460f20f92921eb7952552495415936271fa5fdd1aff7ec9c7
-SHA512 (num_cpus-1.13.1.crate) = 91ffe0ec792228621d6c2d5cc544ef4744203d19fc9c86e0aad2610038c43aca0448b6c27d82979417a0f6c939ea73523303a44c28df0d1c1b8d09814d5306d9
-Size (num_cpus-1.13.1.crate) = 14752 bytes
 BLAKE2s (same-file-1.0.5.crate) = 163684cc3a1f66e9287e042773f37ef36eada9534bfd3b1a9ebce8f8e1ce39c9
 SHA512 (same-file-1.0.5.crate) = 33be985579210b64eed7e26f24a695e2a59992ae51723e5aa026ba34dbb05be4c377bb25db9797dca1f70aa4be58f33cae32a89b61fe6b9353de9fb902ba2dcc
 Size (same-file-1.0.5.crate) = 9861 bytes
