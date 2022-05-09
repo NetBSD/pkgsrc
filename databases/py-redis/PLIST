@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/04/04 18:18:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/05/09 05:42:55 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -13,12 +13,18 @@ ${PYSITELIB}/redis/asyncio/__init__.pyo
 ${PYSITELIB}/redis/asyncio/client.py
 ${PYSITELIB}/redis/asyncio/client.pyc
 ${PYSITELIB}/redis/asyncio/client.pyo
+${PYSITELIB}/redis/asyncio/cluster.py
+${PYSITELIB}/redis/asyncio/cluster.pyc
+${PYSITELIB}/redis/asyncio/cluster.pyo
 ${PYSITELIB}/redis/asyncio/connection.py
 ${PYSITELIB}/redis/asyncio/connection.pyc
 ${PYSITELIB}/redis/asyncio/connection.pyo
 ${PYSITELIB}/redis/asyncio/lock.py
 ${PYSITELIB}/redis/asyncio/lock.pyc
 ${PYSITELIB}/redis/asyncio/lock.pyo
+${PYSITELIB}/redis/asyncio/parser.py
+${PYSITELIB}/redis/asyncio/parser.pyc
+${PYSITELIB}/redis/asyncio/parser.pyo
 ${PYSITELIB}/redis/asyncio/retry.py
 ${PYSITELIB}/redis/asyncio/retry.pyc
 ${PYSITELIB}/redis/asyncio/retry.pyo
