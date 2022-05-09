@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2021/12/22 16:04:36 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2022/05/09 14:54:30 schmonz Exp $
 
-DISTNAME=	s6-portable-utils-2.2.3.4
+DISTNAME=	s6-portable-utils-2.2.4.0
 CATEGORIES=	misc
 MASTER_SITES=	${HOMEPAGE}
 
@@ -8,6 +8,9 @@ MAINTAINER=	cfkoch@edgebsd.org
 HOMEPAGE=	https://www.skarnet.org/software/s6-portable-utils/
 COMMENT=	Tiny portable generic utilties
 LICENSE=	isc
+
+MANPAGES=		v2.2.4.0.1.tar.gz
+SITES.${MANPAGES}=	${MASTER_SITE_GITHUB:=flexibeast/s6-portable-utils-man-pages/archive/}
 
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
