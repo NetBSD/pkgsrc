@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2022/05/01 16:01:01 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2022/05/09 21:44:20 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
 CARGO_CRATE_DEPENDS+=	anyhow-1.0.57
@@ -12,9 +12,9 @@ CARGO_CRATE_DEPENDS+=	cassowary-0.3.0
 CARGO_CRATE_DEPENDS+=	cc-1.0.73
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	chrono-0.4.19
-CARGO_CRATE_DEPENDS+=	clap-3.1.12
+CARGO_CRATE_DEPENDS+=	clap-3.1.17
 CARGO_CRATE_DEPENDS+=	clap_derive-3.1.7
-CARGO_CRATE_DEPENDS+=	clap_lex-0.1.1
+CARGO_CRATE_DEPENDS+=	clap_lex-0.2.0
 CARGO_CRATE_DEPENDS+=	comfy-table-5.0.1
 CARGO_CRATE_DEPENDS+=	convert_case-0.4.0
 CARGO_CRATE_DEPENDS+=	crossbeam-0.8.1
@@ -103,9 +103,9 @@ CARGO_CRATE_DEPENDS+=	rustversion-1.0.6
 CARGO_CRATE_DEPENDS+=	ryu-1.0.9
 CARGO_CRATE_DEPENDS+=	scopeguard-1.1.0
 CARGO_CRATE_DEPENDS+=	semver-1.0.7
-CARGO_CRATE_DEPENDS+=	serde-1.0.136
-CARGO_CRATE_DEPENDS+=	serde_derive-1.0.136
-CARGO_CRATE_DEPENDS+=	serde_json-1.0.79
+CARGO_CRATE_DEPENDS+=	serde-1.0.137
+CARGO_CRATE_DEPENDS+=	serde_derive-1.0.137
+CARGO_CRATE_DEPENDS+=	serde_json-1.0.81
 CARGO_CRATE_DEPENDS+=	signal-hook-0.3.13
 CARGO_CRATE_DEPENDS+=	signal-hook-mio-0.2.3
 CARGO_CRATE_DEPENDS+=	signal-hook-registry-1.4.0
@@ -119,8 +119,8 @@ CARGO_CRATE_DEPENDS+=	syn-1.0.91
 CARGO_CRATE_DEPENDS+=	termcolor-1.1.3
 CARGO_CRATE_DEPENDS+=	terminal_size-0.1.17
 CARGO_CRATE_DEPENDS+=	textwrap-0.15.0
-CARGO_CRATE_DEPENDS+=	thiserror-1.0.30
-CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.30
+CARGO_CRATE_DEPENDS+=	thiserror-1.0.31
+CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.31
 CARGO_CRATE_DEPENDS+=	time-0.1.44
 CARGO_CRATE_DEPENDS+=	tinyvec-1.6.0
 CARGO_CRATE_DEPENDS+=	tinyvec_macros-0.1.0
