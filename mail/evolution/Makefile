@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.260 2022/04/18 19:09:56 adam Exp $
+# $NetBSD: Makefile,v 1.261 2022/05/09 15:32:31 nia Exp $
 
 DISTNAME=	evolution-3.34.1
 PKGREVISION=	15
@@ -15,6 +15,8 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config itstool
 USE_TOOLS+=	intltool msgfmt msgmerge xgettext
 USE_TOOLS+=	gdbus-codegen
+
+BROKEN+=	"Incompatible with latest evolution-data-server, needs update"
 
 DEPENDS+=	highlight-[0-9]*:../../textproc/highlight
 
