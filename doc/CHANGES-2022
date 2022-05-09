@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2436 2022/05/09 12:01:18 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2437 2022/05/09 14:48:13 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3788,3 +3788,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/unixodbc to 2.3.11 [adam 2022-05-09]
 	Updated textproc/ugrep to 3.7.10 [adam 2022-05-09]
 	Updated devel/git to 2.36.1 [adam 2022-05-09]
+	Updated devel/py-approvaltests to 5.0.2 [schmonz 2022-05-09]
