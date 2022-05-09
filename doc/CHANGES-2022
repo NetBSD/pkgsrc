@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2445 2022/05/09 20:55:58 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.2446 2022/05/09 21:44:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3797,3 +3797,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated wm/cwm to 7.1 [nikita 2022-05-09]
 	Updated audio/schismtracker to 20220506 [fcambus 2022-05-09]
 	Updated devel/goredo to 1.25.0 [schmonz 2022-05-09]
+	Updated net/trippy to 0.3.1 [pin 2022-05-09]
