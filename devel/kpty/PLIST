@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/04/25 04:55:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/05/09 19:44:16 jperkin Exp $
 include/KF5/KPty/KPty
 include/KF5/KPty/KPtyDevice
 include/KF5/KPty/KPtyProcess
@@ -14,6 +14,7 @@ lib/cmake/KF5Pty/KF5PtyTargets.cmake
 lib/libKF5Pty.so
 lib/libKF5Pty.so.5
 lib/libKF5Pty.so.${PKGVERSION}
+${PLIST.grantpty}libexec/kf5/kgrantpty
 qt5/mkspecs/modules/qt_KPty.pri
 share/locale/af/LC_MESSAGES/kpty5.mo
 share/locale/ar/LC_MESSAGES/kpty5.mo
