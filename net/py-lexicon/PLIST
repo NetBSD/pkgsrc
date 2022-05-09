@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2022/05/02 07:51:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.42 2022/05/09 05:46:44 adam Exp $
 bin/lexicon-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -177,6 +177,9 @@ ${PYSITELIB}/lexicon/providers/mythicbeasts.pyo
 ${PYSITELIB}/lexicon/providers/namecheap.py
 ${PYSITELIB}/lexicon/providers/namecheap.pyc
 ${PYSITELIB}/lexicon/providers/namecheap.pyo
+${PYSITELIB}/lexicon/providers/namecom.py
+${PYSITELIB}/lexicon/providers/namecom.pyc
+${PYSITELIB}/lexicon/providers/namecom.pyo
 ${PYSITELIB}/lexicon/providers/namesilo.py
 ${PYSITELIB}/lexicon/providers/namesilo.pyc
 ${PYSITELIB}/lexicon/providers/namesilo.pyo
