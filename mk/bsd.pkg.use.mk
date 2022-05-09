@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.70 2021/08/28 08:07:39 nia Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.71 2022/05/09 15:35:31 nia Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -27,9 +27,11 @@ MAKE_ENV+=		NOCTF=yes
 .  endif
 .  if defined(HAVE_LLVM)
 MAKE_ENV+=		HAVE_LLVM=${HAVE_LLVM:Q}
+MAKE_ENV+=		NOCLANGERROR=1
 .  endif
 .  if defined(HAVE_GCC)
 MAKE_ENV+=		HAVE_GCC=${HAVE_GCC:Q}
+MAKE_ENV+=		NOGCCERROR=1
 .  endif
 .endif
 
