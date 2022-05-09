@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2021/12/22 16:03:27 schmonz Exp $
+# $NetBSD: Makefile,v 1.10 2022/05/09 14:54:03 schmonz Exp $
 
-DISTNAME=	s6-2.11.0.1
+DISTNAME=	s6-2.11.1.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${HOMEPAGE}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${MANPAGES}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://skarnet.org/software/s6/
 COMMENT=	The s6 supervision suite
 LICENSE=	isc
 
-MANPAGES=		v2.11.0.0.5.tar.gz
+MANPAGES=		v2.11.1.0.1.tar.gz
 SITES.${MANPAGES}=	${MASTER_SITE_GITHUB:=flexibeast/s6-man-pages/archive/}
 
 USE_TOOLS+=		gmake
