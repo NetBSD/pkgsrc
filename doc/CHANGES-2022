@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2447 2022/05/09 21:46:01 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2448 2022/05/09 21:47:19 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3799,3 +3799,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/goredo to 1.25.0 [schmonz 2022-05-09]
 	Updated net/trippy to 0.3.1 [pin 2022-05-09]
 	Updated audio/termusic to 0.6.15 [pin 2022-05-09]
+	Updated textproc/lok to 0.2.1 [pin 2022-05-09]
