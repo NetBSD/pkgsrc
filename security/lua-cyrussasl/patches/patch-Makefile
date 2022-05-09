@@ -1,0 +1,31 @@
+$NetBSD: patch-Makefile,v 1.1 2022/05/09 00:37:59 khorben Exp $
+
+Allow using the right compilation flags and installation path
+
+--- Makefile.orig	2015-08-21 22:24:54.000000000 +0000
++++ Makefile
+@@ -17,11 +17,11 @@
+ #CPATH=/usr/local/lib/lua/5.1
+ 
+ # MacOS (tested with 10.6, 10.7, 10.8)
+-CFLAGS=-g -Wall -O2
+-LDFLAGS=-bundle -undefined dynamic_lookup -lsasl2
+-MACOSX_VERSION=10.5
+-LUAPATH=/usr/local/share/lua/5.1
+-CPATH=/usr/local/lib/lua/5.1
++#CFLAGS=-g -Wall -O2
++#LDFLAGS=-bundle -undefined dynamic_lookup -lsasl2
++#MACOSX_VERSION=10.5
++#LUAPATH=/usr/local/share/lua/5.1
++#CPATH=/usr/local/lib/lua/5.1
+ 
+ #########################################################
+ #
+@@ -40,6 +40,7 @@ OBJS=cyrussasl.o luaabstract.o context.o
+ all: $(TARGET)
+ 
+ install: $(TARGET)
++	mkdir -p $(CPATH)
+ 	cp $(TARGET) $(CPATH)
+ 
+ clean:

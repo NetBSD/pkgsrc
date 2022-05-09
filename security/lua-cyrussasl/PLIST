@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/05/09 00:37:58 khorben Exp $
+${LUA_CDIR}/cyrussasl.so
