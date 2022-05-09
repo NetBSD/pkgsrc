@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2021/11/23 20:55:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.33 2022/05/09 11:52:44 adam Exp $
 bin/analyze-build
 bin/c-index-test
 bin/clang
@@ -850,7 +850,7 @@ lib/cmake/clang/ClangConfig.cmake
 lib/cmake/clang/ClangTargets-release.cmake
 lib/cmake/clang/ClangTargets.cmake
 lib/libclang-cpp.${SOEXT}
-lib/libclang-cpp.so.13
+${PLIST.notdylib}lib/libclang-cpp.so.13
 lib/libclang.${SOEXT}
 ${PLIST.notdylib}lib/libclang.${SOEXT}.13
 ${PLIST.notdylib}lib/libclang.${SOEXT}.${PKGVERSION}
