@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/11/26 08:40:40 pin Exp $
+# $NetBSD: Makefile,v 1.4 2022/05/09 15:21:19 nia Exp $
 
 DISTNAME=	opendoas-6.8.1
 CATEGORIES=	security
@@ -13,6 +13,9 @@ LICENSE=	isc
 CONFLICTS=	doas-[0-9]*
 
 WRKSRC=		${WRKDIR}/OpenDoas-${PKGVERSION_NOREV}
+
+CFLAGS.NetBSD+=		-D_OPENBSD_SOURCE
+LDFLAGS.NetBSD+=	-lutil
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
