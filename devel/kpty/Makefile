@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2022/04/25 04:55:47 markd Exp $
+# $NetBSD: Makefile,v 1.34 2022/05/09 19:44:16 jperkin Exp $
 
 DISTNAME=	kpty-${KF5VER}
 CATEGORIES=	devel
@@ -10,6 +10,16 @@ LICENSE=	gnu-lgpl-v2.1
 .include "../../meta-pkgs/kde/kf5.mk"
 
 USE_TOOLS+=	msgmerge
+
+CFLAGS.SunOS+=	-D__EXTENSIONS__
+
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=	grantpty
+
+.if ${OPSYS} == "SunOS"
+PLIST.grantpty=	yes
+.endif
 
 .include "../../lang/python/tool.mk"
 .include "../../devel/kcoreaddons/buildlink3.mk"
