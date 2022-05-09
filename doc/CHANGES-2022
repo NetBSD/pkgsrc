@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2434 2022/05/09 08:45:52 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.2435 2022/05/09 11:19:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3785,3 +3785,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-xmltodict to 0.13.0 [adam 2022-05-09]
 	Updated textproc/yq to 2.14.0 [adam 2022-05-09]
 	Updated textproc/guile-json to 4.7.1 [nikita 2022-05-09]
+	Updated databases/unixodbc to 2.3.11 [adam 2022-05-09]
+	Updated textproc/ugrep to 3.7.10 [adam 2022-05-09]
