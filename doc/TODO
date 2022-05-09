@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21830 2022/05/09 12:01:19 adam Exp $
+$NetBSD: TODO,v 1.21831 2022/05/09 15:57:17 nia Exp $
 
 Suggested new packages
 ======================
@@ -1693,7 +1693,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o udunits-2.2.28
 	o ufoai-2.3.1
 	o uhttpmock-0.5.3
-	o unicap-0.9.8
 	o unicode-screensaver-0.5.2
 	o units-2.21
 	o upower-0.99.17 [switches to build with meson]
