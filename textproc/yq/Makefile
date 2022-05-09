@@ -1,31 +1,32 @@
-# $NetBSD: Makefile,v 1.7 2022/02/20 12:48:48 fcambus Exp $
+# $NetBSD: Makefile,v 1.8 2022/05/09 08:21:22 adam Exp $
 
-DISTNAME=	yq-2.13.0
-CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GITHUB:=kislyuk/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+DISTNAME=	yq-2.14.0
+CATEGORIES=	textproc python
+MASTER_SITES=	${MASTER_SITE_PYPI:=y/yq/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://kislyuk.github.io/yq/
 COMMENT=	Command-line YAML and XML processor
 LICENSE=	apache-2.0
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	jq-[0-9]*:../../devel/jq
-
-DEPENDS+=	${PYPKGPREFIX}-argcomplete-[0-9]*:../../devel/py-argcomplete
-DEPENDS+=	${PYPKGPREFIX}-xmltodict-[0-9]*:../../textproc/py-xmltodict
-DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
-DEPENDS+=	${PYPKGPREFIX}-toml-[0-9]*:../../textproc/py-toml
-
-# XXX test dysfunctional
-TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-argcomplete>=1.8.1:../../devel/py-argcomplete
+DEPENDS+=	${PYPKGPREFIX}-toml>=0.10.0:../../textproc/py-toml
+DEPENDS+=	${PYPKGPREFIX}-xmltodict>=0.11.0:../../textproc/py-xmltodict
+DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3.1:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
+TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
+TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
-PYTHON_VERSIONED_DEPENDENCIES+=	flake8:test
+USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
 
-.include "../../lang/python/application.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} test/test.py
+
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
