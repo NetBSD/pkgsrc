@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/02/20 12:48:48 fcambus Exp $
+$NetBSD: distinfo,v 1.5 2022/05/09 08:21:22 adam Exp $
 
-BLAKE2s (yq-2.13.0.tar.gz) = e8db0011b617cf471c0bd37f16081b253baf9cc8b42a441a7a000ce0c8270f42
-SHA512 (yq-2.13.0.tar.gz) = 1eff64ae59fc079bff9db24492e47fde97e81fb28f1d0ad7ecffd788793d709450bb3bfe9a0587eb12c996b3b87dadff90d73757db28cb2ded3b1975294dbd87
-Size (yq-2.13.0.tar.gz) = 23127 bytes
+BLAKE2s (yq-2.14.0.tar.gz) = 91c84d2f52461e0c15bdbcba620d54b52761d3480b160275aa59763c87f03856
+SHA512 (yq-2.14.0.tar.gz) = 77d5d9cefc70fae9f2606434e11c3b14facb68113f6f99017f87acc860684a1b7a94ecf01514e8fa85a6d9cc860df926e13d1ac5bec160e7d057074d758d1d34
+Size (yq-2.14.0.tar.gz) = 28030 bytes
