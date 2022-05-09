@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2020/09/14 17:46:39 adam Exp $
+# $NetBSD: Makefile,v 1.44 2022/05/09 11:16:27 adam Exp $
 
-DISTNAME=	unixODBC-2.3.9
+DISTNAME=	unixODBC-2.3.11
 PKGNAME=	${DISTNAME:S/ODBC/odbc/}
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.unixodbc.org/pub/unixODBC/
@@ -18,7 +18,6 @@ GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # has sub-configures
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--disable-gui
-CONFIGURE_ARGS+=	--enable-driverc
 CONFIGURE_ARGS+=	--enable-drivers
 CONFIGURE_ARGS+=	--enable-threads
 PKGCONFIG_OVERRIDE+=	DriverManager/odbc.pc.in
