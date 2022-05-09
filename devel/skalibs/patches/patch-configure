@@ -1,20 +1,10 @@
-$NetBSD: patch-configure,v 1.4 2021/01/11 18:11:32 schmonz Exp $
+$NetBSD: patch-configure,v 1.5 2022/05/09 14:51:23 schmonz Exp $
 
-Lower _XOPEN_SOURCE to fix SmartOS build.
 Libtoolize for shared libraries on Darwin.
 
---- configure.orig	2020-11-26 09:18:34.000000000 +0000
+--- configure.orig	2022-01-24 11:42:21.000000000 +0000
 +++ configure
-@@ -337,7 +337,7 @@ trylibs () {
- 
- # Initialize variables
- CC_AUTO=
--CPPFLAGS_AUTO="-D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -Isrc/include"
-+CPPFLAGS_AUTO="-D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=600 -Isrc/include"
- CPPFLAGS_POST="$CPPFLAGS"
- CPPFLAGS=
- CFLAGS_AUTO="-pipe -Wall"
-@@ -694,7 +694,7 @@ else
+@@ -697,7 +697,7 @@ else
    echo "STATIC_LIBS :="
  fi
  if $shared ; then
