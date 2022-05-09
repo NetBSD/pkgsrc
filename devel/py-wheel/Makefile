@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/01/05 15:41:09 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2022/05/09 14:37:31 gdt Exp $
 
 DISTNAME=	wheel-0.37.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wheel/}
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	https://github.com/pypa/wheel
 COMMENT=	Built-package format for Python
 LICENSE=	mit
