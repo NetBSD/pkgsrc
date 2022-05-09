@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2442 2022/05/09 15:56:34 nia Exp $
+$NetBSD: CHANGES-2022,v 1.2443 2022/05/09 17:07:19 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3794,3 +3794,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/s6 to 2.11.1.0 [buildbox 2022-05-09]
 	Updated misc/s6-portable-utils to 2.2.4.0 [buildbox 2022-05-09]
 	Removed graphics/unicap [nia 2022-05-09]
+	Updated wm/cwm to 7.1 [nikita 2022-05-09]
