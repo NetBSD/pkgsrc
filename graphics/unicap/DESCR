@@ -1,2 +1,0 @@
-unicap provides a uniform interface to video capture devices. It allows
-applications to use any supported video capture device via a single API.
