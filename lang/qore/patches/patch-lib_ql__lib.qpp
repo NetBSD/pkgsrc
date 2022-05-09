@@ -1,0 +1,17 @@
+$NetBSD: patch-lib_ql__lib.qpp,v 1.1 2022/05/09 12:51:04 jperkin Exp $
+
+Avoid Linux-specific AF_* interfaces.
+
+--- lib/ql_lib.qpp.orig	2022-01-03 08:32:26.000000000 +0000
++++ lib/ql_lib.qpp
+@@ -67,6 +67,10 @@
+ #include <ifaddrs.h>
+ #include <sys/socket.h>
+ #include <sys/types.h>
++#if defined(__sun)
++#undef AF_LINK
++#undef AF_PACKET
++#endif
+ #ifdef AF_LINK
+ #include <net/if_dl.h>
+ #endif
