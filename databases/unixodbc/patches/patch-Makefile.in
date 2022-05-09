@@ -1,16 +1,14 @@
-$NetBSD: patch-Makefile.in,v 1.1 2018/08/14 13:04:24 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2022/05/09 11:16:27 adam Exp $
 
 Do not create empty files nor directories in /etc.
 
---- Makefile.in.orig	2018-08-14 12:57:27.000000000 +0000
+--- Makefile.in.orig	2022-05-04 17:02:55.000000000 +0000
 +++ Makefile.in
-@@ -961,9 +961,6 @@ uninstall-am: uninstall-pkgconfigDATA
+@@ -955,7 +955,6 @@ info-am:
+ install-data-am: install-includeHEADERS install-pkgconfigDATA \
+ 	install-pkgincludeHEADERS
+ 	@$(NORMAL_INSTALL)
+-	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
+ install-dvi: install-dvi-recursive
  
- 
- install-data-am: install-pkgconfigDATA
--	-mkdir -p $(DESTDIR)${sysconfdir}/ODBCDataSources
--	-touch $(DESTDIR)${sysconfdir}/odbcinst.ini
--	-touch $(DESTDIR)${sysconfdir}/odbc.ini
- 	cp unixodbc_conf.h $(DESTDIR)${includedir}/unixodbc_conf.h
- 
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ install-dvi-am:
