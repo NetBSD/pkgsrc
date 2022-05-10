@@ -1,16 +1,18 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: saslauthd.sh,v 1.3 2004/08/04 20:08:38 jlam Exp $
+# $NetBSD: saslauthd.sh,v 1.4 2022/05/10 03:34:16 khorben Exp $
 #
 # The saslauthd daemon allows cleartext UNIX password authentication via
 # several authentication mechanisms with Cyrus SASL.
 #
 # PROVIDE: saslauthd
 # REQUIRE: DAEMON
+#
+# You will need to set some variables in @SYSCONFBASE@/rc.conf to start saslauthd:
+#
+# saslauthd=YES
 
-if [ -f /etc/rc.subr ]; then
-	. /etc/rc.subr
-fi
+$_rc_subr_loaded . @SYSCONFBASE@/rc.subr
 
 name="saslauthd"
 rcvar="${name}"
@@ -30,7 +32,7 @@ saslauthd_precmd()
         fi
 }
 
-if [ -f /etc/rc.subr ]; then
+if [ -f @SYSCONFBASE@/rc.subr ]; then
 	load_rc_config $name
 	run_rc_command "$1"
 else
