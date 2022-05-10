@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.6 2022/05/07 04:19:07 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.7 2022/05/10 08:50:29 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ansi_term-0.12.1
 CARGO_CRATE_DEPENDS+=	anyhow-1.0.57
@@ -9,7 +9,7 @@ CARGO_CRATE_DEPENDS+=	byte-unit-4.0.14
 CARGO_CRATE_DEPENDS+=	cassowary-0.3.0
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	chrono-0.4.19
-CARGO_CRATE_DEPENDS+=	clap-3.1.15
+CARGO_CRATE_DEPENDS+=	clap-3.1.17
 CARGO_CRATE_DEPENDS+=	clap_derive-3.1.7
 CARGO_CRATE_DEPENDS+=	clap_lex-0.2.0
 CARGO_CRATE_DEPENDS+=	colored-2.0.0
@@ -66,7 +66,7 @@ CARGO_CRATE_DEPENDS+=	petgraph-0.6.0
 CARGO_CRATE_DEPENDS+=	pretty_assertions-1.2.1
 CARGO_CRATE_DEPENDS+=	proc-macro-error-1.0.4
 CARGO_CRATE_DEPENDS+=	proc-macro-error-attr-1.0.4
-CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.37
+CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.38
 CARGO_CRATE_DEPENDS+=	quote-1.0.18
 CARGO_CRATE_DEPENDS+=	rayon-1.5.2
 CARGO_CRATE_DEPENDS+=	rayon-core-1.9.2
@@ -86,7 +86,7 @@ CARGO_CRATE_DEPENDS+=	textwrap-0.15.0
 CARGO_CRATE_DEPENDS+=	time-0.1.44
 CARGO_CRATE_DEPENDS+=	tinyvec-1.6.0
 CARGO_CRATE_DEPENDS+=	tinyvec_macros-0.1.0
-CARGO_CRATE_DEPENDS+=	trash-2.1.0
+CARGO_CRATE_DEPENDS+=	trash-2.1.1
 CARGO_CRATE_DEPENDS+=	tui-0.17.0
 CARGO_CRATE_DEPENDS+=	tui-react-0.17.0
 CARGO_CRATE_DEPENDS+=	unicode-bidi-0.3.8
