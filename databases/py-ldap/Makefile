@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2022/01/04 20:52:42 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2022/05/10 16:58:03 adam Exp $
 
-DISTNAME=	python-ldap-3.3.1
+DISTNAME=	python-ldap-3.4.0
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
-PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-ldap/}
 
@@ -10,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.python-ldap.org/
 COMMENT=	LDAP client API for Python
 LICENSE=	python-software-foundation
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../mk/bsd.prefs.mk"
 .if !empty(MACHINE_PLATFORM:MNetBSD-[56789].*) && \
