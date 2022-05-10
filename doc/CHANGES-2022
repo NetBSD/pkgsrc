@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2467 2022/05/10 13:06:14 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2468 2022/05/10 14:34:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3825,3 +3825,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/js_of_ocaml to 4.0.0 [jaapb 2022-05-10]
 	Updated devel/py-bitarray to 2.5.0 [adam 2022-05-10]
 	Updated devel/py-more-itertools to 8.13.0 [adam 2022-05-10]
+	Updated lang/openjdk11 to 1.11.0.15.10 [ryoon 2022-05-10]
