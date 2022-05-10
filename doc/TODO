@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21835 2022/05/10 07:01:49 triaxx Exp $
+$NetBSD: TODO,v 1.21836 2022/05/10 07:06:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1436,7 +1436,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-hyperscan-0.2.0
 	o py-input-pad-1.4.2
 	o py-keybinder-0.3.2
-	o py-mercurial-6.1.2
 	o py-more-itertools-8.13.0
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
