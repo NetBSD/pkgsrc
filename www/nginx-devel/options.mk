@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2022/05/10 17:40:58 nia Exp $
+# $NetBSD: options.mk,v 1.5 2022/05/10 18:08:52 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx-devel
 PKG_SUPPORTED_OPTIONS=	array-var auth-request cache-purge dav debug
@@ -9,7 +9,8 @@ PKG_SUPPORTED_OPTIONS+=	naxsi njs perl push realip rtmp
 PKG_SUPPORTED_OPTIONS+=	secure-link set-misc slice ssl status
 PKG_SUPPORTED_OPTIONS+=	stream-ssl-preread sub uwsgi
 
-PKG_SUGGESTED_OPTIONS=	http2 pcre ssl
+PKG_SUGGESTED_OPTIONS=	auth-request gzip http2 memcache pcre realip
+PKG_SUGGESTED_OPTIONS+=	slice status ssl uwsgi
 
 PKG_OPTIONS_LEGACY_OPTS+=	v2:http2
 
