@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.72 2020/08/17 20:20:16 leot Exp $
+# $NetBSD: Makefile.common,v 1.73 2022/05/10 11:50:55 nia Exp $
 #
 # used by wm/icewm/Makefile
 # used by wm/icewm-imlib/Makefile
@@ -48,16 +48,7 @@ SUBST_SED.apm=		-e 's,define CONFIG_APPLET_APM 1,undef CONFIG_APPLET_APM,'
 SUBST_MESSAGE.apm=	Disable APM applet.
 .endif
 
-.if ${OPSYS} == "NetBSD"
-.  if !empty(OS_VERSION:M1.*)
-CONFIGURE_ARGS+=	--disable-i18n
-.  else
-CONFIGURE_ARGS+=	--with-unicode-set=utf-32
-.    include "../../converters/libiconv/buildlink3.mk"
-.  endif
-.else
-.  include "../../converters/libiconv/buildlink3.mk"
-.endif
+CONFIGURE_ARGS.NetBSD+=	--with-unicode-set=utf-32
 LIBS.SunOS+=		-lintl
 
 DOCDIR=			${PREFIX}/share/doc/icewm
@@ -76,6 +67,7 @@ post-install:
 	done
 	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${DESTDIR}${HTMLDIR}
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
