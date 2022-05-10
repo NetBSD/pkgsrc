@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.161 2021/12/08 16:06:17 adam Exp $
+# $NetBSD: Makefile,v 1.162 2022/05/10 11:50:55 nia Exp $
 
 DISTNAME=	gnupg-1.4.23
 PKGREVISION=	14
@@ -23,9 +23,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 .include "options.mk"
 
-.if ${OPSYS} == "SunOS" || (${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.[0-6]*))
-CONFIGURE_ARGS+=	--disable-gnupg-iconv
-.endif
+CONFIGURE_ARGS.SunOS+=	--disable-gnupg-iconv
 
 .if (${OPSYS} == "AIX" || ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS") \
     && defined(ABI) && ${ABI} == 64
