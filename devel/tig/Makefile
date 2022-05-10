@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/01/12 21:39:33 fcambus Exp $
+# $NetBSD: Makefile,v 1.21 2022/05/10 13:10:29 fcambus Exp $
 
 DISTNAME=	tig-2.5.5
 CATEGORIES=	devel scm
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake gsed
 USE_NCURSES=	yes	# Display issues with NetBSD curses(3)
 
 CONF_FILES=	${EGDIR}/tigrc ${PKG_SYSCONFDIR}/tigrc
