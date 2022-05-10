@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2010/01/30 15:19:26 tnn Exp $
+@comment $NetBSD: PLIST,v 1.17 2022/05/10 11:50:55 nia Exp $
 bin/cube3d
 bin/ggiteleserver
 bin/monitest
@@ -75,7 +75,7 @@ lib/ggi/display/multi.la
 lib/ggi/display/palemu.la
 lib/ggi/display/sub.la
 lib/ggi/display/tele.la
-${PLIST.terminfo}lib/ggi/display/terminfo.la
+lib/ggi/display/terminfo.la
 lib/ggi/display/tile.la
 lib/ggi/display/trueemu.la
 ${PLIST.libvgl}lib/ggi/display/vgl.la
