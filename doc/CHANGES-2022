@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2461 2022/05/10 08:11:15 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2462 2022/05/10 08:14:10 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3818,3 +3818,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-rst2pdf to 0.99 [adam 2022-05-10]
 	Updated net/py-tldextract to 3.3.0 [adam 2022-05-10]
 	Updated devel/ocaml-react to 1.2.2 [jaapb 2022-05-10]
+	Updated devel/ocaml-reactiveData to 0.3 [jaapb 2022-05-10]
