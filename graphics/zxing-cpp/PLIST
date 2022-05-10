@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/02/05 04:34:17 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/05/10 05:50:32 wiz Exp $
 include/ZXing/BarcodeFormat.h
 include/ZXing/BinaryBitmap.h
 include/ZXing/BitArray.h
@@ -21,12 +21,11 @@ include/ZXing/Flags.h
 include/ZXing/GTIN.h
 include/ZXing/GenericGF.h
 include/ZXing/GenericGFPoly.h
-include/ZXing/GenericLuminanceSource.h
 include/ZXing/GlobalHistogramBinarizer.h
 include/ZXing/GridSampler.h
 include/ZXing/HybridBinarizer.h
+include/ZXing/ImageView.h
 include/ZXing/LogMatrix.h
-include/ZXing/LuminanceSource.h
 include/ZXing/Matrix.h
 include/ZXing/MultiFormatReader.h
 include/ZXing/MultiFormatWriter.h
@@ -40,7 +39,6 @@ include/ZXing/ReedSolomonDecoder.h
 include/ZXing/ReedSolomonEncoder.h
 include/ZXing/RegressionLine.h
 include/ZXing/Result.h
-include/ZXing/ResultMetadata.h
 include/ZXing/ResultPoint.h
 include/ZXing/Scope.h
 include/ZXing/StructuredAppend.h
@@ -129,7 +127,6 @@ include/ZXing/qrcode/QRCodecMode.h
 include/ZXing/qrcode/QRDataBlock.h
 include/ZXing/qrcode/QRDataMask.h
 include/ZXing/qrcode/QRDecoder.h
-include/ZXing/qrcode/QRDecoderMetadata.h
 include/ZXing/qrcode/QRDetector.h
 include/ZXing/qrcode/QRECB.h
 include/ZXing/qrcode/QREncodeResult.h
