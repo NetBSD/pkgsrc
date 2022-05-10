@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: smartd.sh,v 1.4 2006/07/17 17:01:32 wiz Exp $
+# $NetBSD: smartd.sh,v 1.5 2022/05/10 07:01:28 triaxx Exp $
 #
 # PROVIDE: smartd
 # REQUIRE: DAEMON
@@ -11,6 +11,7 @@ name="smartd"
 rcvar=$name
 command="@PREFIX@/sbin/${name}"
 pidfile="@VARBASE@/run/${name}.pid"
+required_dirs="@VARBASE@/run"
 required_files="@PKG_SYSCONFDIR@/${name}.conf"
 command_args="-p $pidfile"
 extra_commands="reload check"
