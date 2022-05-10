@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2022/02/06 13:22:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2022/05/10 05:50:32 wiz Exp $
 
-GITHUB_PROJECT=	zxing-cpp
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	zxing-cpp-1.2.0
+DISTNAME=	zxing-cpp-1.3.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nu-book/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/nu-book/zxing-cpp/
