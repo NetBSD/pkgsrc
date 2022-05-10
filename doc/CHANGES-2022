@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2452 2022/05/10 05:43:28 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2453 2022/05/10 05:43:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3808,3 +3808,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/py-dbf to 0.99.2 [adam 2022-05-10]
 	Updated devel/py-aenum to 3.1.11 [adam 2022-05-10]
 	Updated filesystems/py-fs to 2.4.16 [adam 2022-05-10]
+	Updated security/openssl to 1.1.1o [wiz 2022-05-10]
