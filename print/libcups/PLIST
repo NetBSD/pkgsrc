@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/05/16 18:07:56 maya Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/05/10 20:47:38 markd Exp $
 bin/cups-config
 include/cups/adminutil.h
 include/cups/array.h
@@ -17,8 +17,10 @@ include/cups/transcode.h
 include/cups/versioning.h
 lib/libcups.la
 lib/libcupsimage.la
+lib/pkgconfig/cups.pc
 share/locale/ca/cups_ca.po
 share/locale/cs/cups_cs.po
+share/locale/da/cups_da.po
 share/locale/de/cups_de.po
 share/locale/en/cups_en.po
 share/locale/es/cups_es.po

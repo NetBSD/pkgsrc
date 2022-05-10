@@ -1,4 +1,4 @@
-$NetBSD: patch-config-scripts_cups-directories.m4,v 1.3 2021/03/14 08:43:31 wiz Exp $
+$NetBSD: patch-config-scripts_cups-directories.m4,v 1.4 2022/05/10 20:47:37 markd Exp $
 
 The '$' while loops expand the variables as long as possible so that no
 references to other variables occur. This is necessary because fontpath
@@ -9,22 +9,22 @@ loop.
 I'm also sure that this is not the Right Way to fix it, but at least it
 works.
 
---- config-scripts/cups-directories.m4.orig	2021-02-01 21:10:25.000000000 +0000
+--- config-scripts/cups-directories.m4.orig	2022-01-27 11:11:42.000000000 +0000
 +++ config-scripts/cups-directories.m4
-@@ -97,7 +97,7 @@ dnl Fix "libdir" variable...
- if test "$libdir" = "\${exec_prefix}/lib"; then
- 	case "$host_os_name" in
- 		linux*)
--			if test -d /usr/lib64 -a ! -d /usr/lib64/fakeroot; then
-+			if test -d /usr/lib64 -a ! -d /usr/lib64/fakeroot && false; then
- 				libdir="$exec_prefix/lib64"
- 			fi
- 			;;
-@@ -174,7 +174,15 @@ AC_SUBST(CUPS_CACHEDIR)
+@@ -95,7 +95,7 @@ AS_IF([test "$sysconfdir" = "\${prefix}/
+ dnl Fix "libdir" variable...
+ AS_IF([test "$libdir" = "\${exec_prefix}/lib"], [
+     AS_CASE(["$host_os_name"], [linux*], [
+-	AS_IF([test -d /usr/lib64 -a ! -d /usr/lib64/fakeroot], [
++	AS_IF([test -d /usr/lib64 -a ! -d /usr/lib64/fakeroot && false], [
+ 	    libdir="$exec_prefix/lib64"
+ 	], [
+ 	    libdir="$exec_prefix/lib"
+@@ -132,7 +132,15 @@ AC_SUBST([CUPS_CACHEDIR])
  
  # Data files
  CUPS_DATADIR="$datadir/cups"
--AC_DEFINE_UNQUOTED(CUPS_DATADIR, "$datadir/cups")
+-AC_DEFINE_UNQUOTED([CUPS_DATADIR], ["$datadir/cups"], [Location of data files.])
 +done=no
 +while test $done = no; do
 +	case "$CUPS_DATADIR" in
@@ -33,41 +33,40 @@ works.
 +	esac
 +done
 +
-+AC_DEFINE_UNQUOTED(CUPS_DATADIR, "$CUPS_DATADIR")
- AC_SUBST(CUPS_DATADIR)
++AC_DEFINE_UNQUOTED([CUPS_DATADIR], ["$CUPS_DATADIR"], [Location of data files.])
+ AC_SUBST([CUPS_DATADIR])
  
  # Icon directory
-@@ -183,7 +191,11 @@ AC_ARG_WITH(icondir, [  --with-icondir  
- if test "x$icondir" = x -a -d /usr/share/icons; then
- 	ICONDIR="/usr/share/icons"
- else
--	ICONDIR="$icondir"
-+	if test "x$icondir" = xno; then
-+		ICONDIR=""
-+	else
-+		ICONDIR="$icondir"
-+	fi
- fi
+@@ -145,7 +153,11 @@ AC_ARG_WITH([icondir], AS_HELP_STRING([-
+ AS_IF([test "x$icondir" = x], [
+     ICONDIR="/usr/share/icons"
+ ], [
+-    ICONDIR="$icondir"
++    if test "x$icondir" = xno; then
++            ICONDIR=""
++    else
++            ICONDIR="$icondir"
++    fi
+ ])
  
- AC_SUBST(ICONDIR)
-@@ -194,7 +206,11 @@ AC_ARG_WITH(menudir, [  --with-menudir  
- if test "x$menudir" = x -a -d /usr/share/applications; then
- 	MENUDIR="/usr/share/applications"
- else
--	MENUDIR="$menudir"
-+	if test "x$menudir" = xno; then
-+		MENUDIR=""
-+	else
-+		MENUDIR="$menudir"
-+	fi
- fi
+ AC_SUBST([ICONDIR])
+@@ -160,6 +172,11 @@ AC_ARG_WITH([menudir], AS_HELP_STRING([-
+ AS_IF([test "x$menudir" = x], [
+     MENUDIR="/usr/share/applications"
+ ], [
++    if test "x$menudir" = xno; then
++           MENUDIR=""
++    else
++           MENUDIR="$menudir"
++    fi
+     MENUDIR="$menudir"
+ ])
  
- AC_SUBST(MENUDIR)
-@@ -209,7 +225,15 @@ else
- 	CUPS_DOCROOT="$docdir"
- fi
+@@ -179,7 +196,15 @@ AS_IF([test x$docdir = x], [
+     CUPS_DOCROOT="$docdir"
+ ])
  
--AC_DEFINE_UNQUOTED(CUPS_DOCROOT, "$docdir")
+-AC_DEFINE_UNQUOTED([CUPS_DOCROOT], ["$docdir"], [Location of documentation files.])
 +done=no
 +while test $done = no; do
 +	case "$CUPS_DOCROOT" in
@@ -76,31 +75,13 @@ works.
 +	esac
 +done
 +
-+AC_DEFINE_UNQUOTED(CUPS_DOCROOT, "$CUPS_DOCROOT")
- AC_SUBST(CUPS_DOCROOT)
- 
- # Fonts
-@@ -221,8 +245,16 @@ else
- 	CUPS_FONTPATH="$fontpath"
- fi
- 
--AC_SUBST(CUPS_FONTPATH)
-+done=no
-+while test $done = no; do
-+	case "$CUPS_FONTPATH" in
-+	*'$'*) eval "CUPS_FONTPATH=$CUPS_FONTPATH";;
-+	*) done=yes;;
-+	esac
-+done
-+
- AC_DEFINE_UNQUOTED(CUPS_FONTPATH, "$CUPS_FONTPATH")
-+AC_SUBST(CUPS_FONTPATH)
++AC_DEFINE_UNQUOTED([CUPS_DOCROOT], ["$CUPS_DOCROOT"], [Location of documentation files.])
+ AC_SUBST([CUPS_DOCROOT])
  
  # Locale data
- if test "$localedir" = "\${datarootdir}/locale"; then
-@@ -240,6 +272,14 @@ else
- 	CUPS_LOCALEDIR="$localedir"
- fi
+@@ -194,6 +219,14 @@ AS_IF([test "$localedir" = "\${datarootd
+     CUPS_LOCALEDIR="$localedir"
+ ])
  
 +done=no
 +while test $done = no; do
@@ -110,49 +91,46 @@ works.
 +	esac
 +done
 +
- AC_DEFINE_UNQUOTED(CUPS_LOCALEDIR, "$CUPS_LOCALEDIR")
- AC_SUBST(CUPS_LOCALEDIR)
+ AC_DEFINE_UNQUOTED([CUPS_LOCALEDIR], ["$CUPS_LOCALEDIR"], [Location of localization files.])
+ AC_SUBST([CUPS_LOCALEDIR])
  
-@@ -248,7 +288,6 @@ AC_ARG_WITH(logdir, [  --with-logdir    
- 
- if test x$logdir = x; then
- 	CUPS_LOGDIR="$localstatedir/log/cups"
--	AC_DEFINE_UNQUOTED(CUPS_LOGDIR, "$localstatedir/log/cups")
- else
- 	CUPS_LOGDIR="$logdir"
- fi
-@@ -257,10 +296,13 @@ AC_SUBST(CUPS_LOGDIR)
+@@ -232,10 +265,18 @@ AC_SUBST([CUPS_LOGDIR])
  
  # Longer-term spool data
  CUPS_REQUESTS="$localstatedir/spool/cups"
--AC_DEFINE_UNQUOTED(CUPS_REQUESTS, "$localstatedir/spool/cups")
-+AC_DEFINE_UNQUOTED(CUPS_REQUESTS, "$CUPS_REQUESTS")
- AC_SUBST(CUPS_REQUESTS)
+-AC_DEFINE_UNQUOTED([CUPS_REQUESTS], ["$localstatedir/spool/cups"], [Location of spool directory.])
++AC_DEFINE_UNQUOTED([CUPS_REQUESTS], ["$CUPS_REQUESTS"], [Location of spool directory.])
+ AC_SUBST([CUPS_REQUESTS])
  
  # Server executables...
-+AC_ARG_WITH(serverbindir, [  --with-serverbindir     set path for server helper programs],serverbindir="$withval",serverbindir="")
++AC_ARG_WITH([serverbindir], AS_HELP_STRING([--with-serverbindir], [set path for server helper programs]), [
++    serverbindir="$withval"
++], [
++    serverbindir=""
++])
 +
 +if test x$serverbindir = x; then
- case "$host_os_name" in
- 	*-gnu)
- 		# GNUs
-@@ -278,6 +320,10 @@ case "$host_os_name" in
- 		CUPS_SERVERBIN="$exec_prefix/lib/cups"
- 		;;
- esac
++
+ AS_CASE(["$host_os_name"], [*-gnu], [
+     # GNUs
+     INSTALL_SYSV="install-sysv"
+@@ -250,13 +291,18 @@ AS_CASE(["$host_os_name"], [*-gnu], [
+     CUPS_SERVERBIN="$exec_prefix/lib/cups"
+ ])
+ 
 +else
 +	INSTALL_SYSV=""
 +	CUPS_SERVERBIN="$serverbindir"
 +fi
- 
- AC_DEFINE_UNQUOTED(CUPS_SERVERBIN, "$CUPS_SERVERBIN")
- AC_SUBST(CUPS_SERVERBIN)
-@@ -285,7 +331,7 @@ AC_SUBST(INSTALL_SYSV)
++
+ AC_DEFINE_UNQUOTED([CUPS_SERVERBIN], ["$CUPS_SERVERBIN"], [Location of server programs.])
+ AC_SUBST([CUPS_SERVERBIN])
+ AC_SUBST([INSTALL_SYSV])
  
  # Configuration files
  CUPS_SERVERROOT="$sysconfdir/cups"
--AC_DEFINE_UNQUOTED(CUPS_SERVERROOT, "$sysconfdir/cups")
-+AC_DEFINE_UNQUOTED(CUPS_SERVERROOT, "$CUPS_SERVERROOT")
- AC_SUBST(CUPS_SERVERROOT)
+-AC_DEFINE_UNQUOTED([CUPS_SERVERROOT], ["$sysconfdir/cups"], [Location of server configuration files.])
++AC_DEFINE_UNQUOTED([CUPS_SERVERROOT], ["$CUPS_SERVERROOT"], [Location of server configuration files.])
+ AC_SUBST([CUPS_SERVERROOT])
  
  # Transient run-time state

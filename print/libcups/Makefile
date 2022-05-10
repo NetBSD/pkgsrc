@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.14 2021/12/08 16:02:32 adam Exp $
+# $NetBSD: Makefile,v 1.15 2022/05/10 20:47:38 markd Exp $
 
-PKGREVISION= 4
 .include "../../print/cups/Makefile.common"
 
 PKGNAME=	libcups-${CUPS_VERS}
@@ -32,9 +31,6 @@ CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/cups
 CONFIGURE_ARGS+=	--with-serverbindir=${PREFIX}/libexec/cups
 CONFIGURE_ARGS+=	--with-components=libcups
 CONFIGURE_ARGS+=	--enable-libpaper
-CONFIGURE_ARGS+=	--enable-ssl
-CONFIGURE_ARGS+=	--enable-gnutls
-CONFIGURE_ARGS+=	--disable-cdsassl
 CONFIGURE_ARGS+=	--with-exe-file-perm=0755
 
 CONFIGURE_ENV+=		DSOFLAGS=${LDFLAGS:M*:Q}
@@ -64,6 +60,9 @@ SUBST_MESSAGE.piefix=	Removing PIE flags
 SUBST_SED.piefix=	-e 's|@PIEFLAGS@||g'
 SUBST_STAGE.piefix=	pre-configure
 .endif
+
+PKGCONFIG_OVERRIDE+=		cups.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 pre-configure:
 	cd ${WRKSRC} && aclocal && autoconf
