@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:47:21 nia Exp $
-
-BLAKE2s (ucview-0.22.tar.gz) = 35794d4e88bc8d3bd0bc87ea7615a1d535600c9103587085b21dea379aa7a181
-SHA512 (ucview-0.22.tar.gz) = 51798c67bd8a517d16c6abbe24d063db92fc91e15300db01b82937091d2de3a12a6545b439efbcda2c18e6fa34f97ef9333ab0dbcbc7c7667c93c0994ec875f7
-Size (ucview-0.22.tar.gz) = 527712 bytes
-SHA1 (patch-aa) = 89d146b187a384125632539fdfa3583ca5202d92
-SHA1 (patch-src_client-bindings_h) = ea7a5c86424655791f1a9f8a0b72540c657d8bf6
-SHA1 (patch-src_ucview-client-bindings_h) = f14284a2aa4fadaccbe7b7362893a5164d204369
