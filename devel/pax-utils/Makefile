@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/04/25 13:09:08 fcambus Exp $
+# $NetBSD: Makefile,v 1.3 2022/05/10 13:07:50 fcambus Exp $
 
 DISTNAME=	pax-utils-1.3.4
 CATEGORIES=	devel
@@ -10,7 +10,7 @@ HOMEPAGE=	https://wiki.gentoo.org/wiki/Hardened/PaX_Utilities
 COMMENT=	ELF related utils for ELF 32/64 binaries
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=		bash:run gmake
+USE_TOOLS+=		bash:run gmake gsed
 REPLACE_BASH+=		symtree.sh
 REPLACE_PYTHON+=	lddtree.py
 
