@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2465 2022/05/10 08:50:47 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2466 2022/05/10 08:51:15 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3822,3 +3822,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/menhir to 20220210 [jaapb 2022-05-10]
 	Updated devel/ocaml-base to 0.15.0 [jaapb 2022-05-10]
 	Updated sysutils/dua-cli to 2.17.3 [pin 2022-05-10]
+	Updated devel/js_of_ocaml to 4.0.0 [jaapb 2022-05-10]
