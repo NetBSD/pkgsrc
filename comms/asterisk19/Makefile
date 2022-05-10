@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/05/05 08:20:09 nia Exp $
+# $NetBSD: Makefile,v 1.7 2022/05/10 11:49:04 nia Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
@@ -146,7 +146,8 @@ PLIST.timerfd=	yes
 
 PLIST_VARS+=	unbound
 # unbound 1.5 or later is required.`
-.if exists(/usr/include/unbound.h) && !empty(OS_VERSION:M8.*)
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} > 090000 && \
+    exists(/usr/include/unbound.h)
 CONFIGURE_ARGS+=	--without-unbound
 .else
 PLIST.unbound=	yes
