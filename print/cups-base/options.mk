@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2021/01/04 14:32:17 prlw1 Exp $
+# $NetBSD: options.mk,v 1.6 2022/05/10 20:47:37 markd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cups-base
 PKG_SUPPORTED_OPTIONS=	acl dnssd kerberos pam tcpwrappers
@@ -38,11 +38,9 @@ CONFIGURE_ARGS+=	--disable-acl
 
 .if !empty(PKG_OPTIONS:Mavahi)
 .include "../../net/avahi/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-avahi
+CONFIGURE_ARGS+=	--with-dnssd=avahi
 PLIST.ippfind=		yes
 PLIST.dnssd-backend=	yes
-.else
-CONFIGURE_ARGS+=	--disable-avahi
 .endif
 
 .if !empty(PKG_OPTIONS:Mdbus)
@@ -55,12 +53,10 @@ CONFIGURE_ARGS+=	--disable-dbus
 
 .if !empty(PKG_OPTIONS:Mdnssd)
 .include "../../net/mDNSResponder/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-dnssd
+CONFIGURE_ARGS+=	--with-dnssd=yes
 PLIST.dnssd=		yes
 PLIST.dnssd-backend=	yes
 PLIST.ippfind=		yes
-.else
-CONFIGURE_ARGS+=	--disable-dnssd
 .endif
 
 .if !empty(PKG_OPTIONS:Mkerberos)

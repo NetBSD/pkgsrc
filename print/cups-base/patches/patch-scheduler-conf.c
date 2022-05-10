@@ -1,18 +1,18 @@
-$NetBSD: patch-scheduler-conf.c,v 1.2 2019/11/17 21:22:03 leot Exp $
+$NetBSD: patch-scheduler-conf.c,v 1.3 2022/05/10 20:47:38 markd Exp $
 
 Add a PidFile configuration directive to write a PID file.
 
---- scheduler/conf.c.orig	2019-11-17 12:21:47.927540703 +0000
+--- scheduler/conf.c.orig	2022-04-29 10:12:16.516789874 +0000
 +++ scheduler/conf.c
-@@ -142,6 +142,7 @@ static const cupsd_var_t	cupsfiles_vars[
+@@ -140,6 +140,7 @@ static const cupsd_var_t	cupsfiles_vars[
    { "CreateSelfSignedCerts",	&CreateSelfSignedCerts,	CUPSD_VARTYPE_BOOLEAN },
- #endif /* HAVE_SSL */
+ #endif /* HAVE_TLS */
    { "DataDir",			&DataDir,		CUPSD_VARTYPE_STRING },
 +  { "PidFile",			&PidFile,		CUPSD_VARTYPE_STRING },
    { "DocumentRoot",		&DocumentRoot,		CUPSD_VARTYPE_STRING },
    { "ErrorLog",			&ErrorLog,		CUPSD_VARTYPE_STRING },
    { "FileDevice",		&FileDevice,		CUPSD_VARTYPE_BOOLEAN },
-@@ -579,6 +580,7 @@ cupsdReadConfiguration(void)
+@@ -574,6 +575,7 @@ cupsdReadConfiguration(void)
    cupsdSetString(&RequestRoot, CUPS_REQUESTS);
    cupsdSetString(&CacheDir, CUPS_CACHEDIR);
    cupsdSetString(&DataDir, CUPS_DATADIR);
@@ -20,7 +20,7 @@ Add a PidFile configuration directive to write a PID file.
    cupsdSetString(&DocumentRoot, CUPS_DOCROOT);
    cupsdSetString(&AccessLog, CUPS_LOGDIR "/access_log");
    cupsdClearString(&ErrorLog);
-@@ -3375,6 +3377,7 @@ read_cupsd_conf(cups_file_t *fp)	/* I - 
+@@ -3397,6 +3399,7 @@ read_cupsd_conf(cups_file_t *fp)	/* I - 
               !_cups_strcasecmp(line, "CacheDir") ||
               !_cups_strcasecmp(line, "ConfigFilePerm") ||
               !_cups_strcasecmp(line, "DataDir") ||
