@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:52:42 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/05/10 05:39:00 adam Exp $
 
-DISTNAME=	dbf-0.99.1
+DISTNAME=	dbf-0.99.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dbf/}
 
