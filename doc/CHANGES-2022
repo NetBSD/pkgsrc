@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2469 2022/05/10 14:45:56 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.2470 2022/05/10 17:00:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3827,3 +3827,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-more-itertools to 8.13.0 [adam 2022-05-10]
 	Updated lang/openjdk11 to 1.11.0.15.10 [ryoon 2022-05-10]
 	Updated multimedia/libva to 2.14.0nb1 [ryoon 2022-05-10]
+	Updated databases/py-ldap to 3.4.0 [adam 2022-05-10]
+	Updated devel/py-jupyter_client to 7.3.1 [adam 2022-05-10]
