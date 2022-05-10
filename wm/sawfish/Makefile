@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2022/04/04 01:26:39 gutteridge Exp $
+# $NetBSD: Makefile,v 1.103 2022/05/10 11:50:55 nia Exp $
 
 DISTNAME=	sawfish_1.13.0
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -34,7 +34,7 @@ SUBST_SED.env=		-e 's,exec rep,exec env ${REP_ENV_PKGSRC} rep,g'
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD" && empty(OS_VERSION:M1.*)
+.if ${OPSYS} == "NetBSD"
 REP_ENV_PKGSRC=		LD_PRELOAD=/usr/lib/libpthread.so
 .else
 REP_ENV_PKGSRC=

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2020/08/16 22:38:55 tnn Exp $
+# $NetBSD: Makefile,v 1.61 2022/05/10 11:50:55 nia Exp $
 
 DISTNAME=	libggi-2.2.2.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -33,15 +33,7 @@ CONF_FILES=		${EGDIR}/libggi.conf ${PKG_SYSCONFDIR}/libggi.conf
 CONF_FILES+=	${EGDIR}/fbdev.conf ${PKG_SYSCONFDIR}/ggi/ggi/targets/fbdev.conf
 .endif
 
-PLIST_VARS+=		libvgl terminfo xf86dga
-
-.if ${OPSYS} == "NetBSD"
-.  if empty(OS_VERSION:M1.[56].*)
-PLIST.terminfo=		yes
-.  endif
-.else
-PLIST.terminfo=		yes
-.endif
+PLIST_VARS+=		libvgl xf86dga
 
 .if ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD"
 PLIST.libvgl=		yes
