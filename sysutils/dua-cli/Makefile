@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2022/05/07 04:19:07 pin Exp $
+# $NetBSD: Makefile,v 1.11 2022/05/10 08:50:29 pin Exp $
 
-DISTNAME=	dua-cli-2.17.2
+DISTNAME=	dua-cli-2.17.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Byron/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -21,7 +21,8 @@ CARGO_FEATURES+=		tui-unix
 .endif
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/dua ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/dua \
+		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
