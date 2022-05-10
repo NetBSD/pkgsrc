@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.9 2015/09/24 22:30:29 tnn Exp $
+$NetBSD: patch-aa,v 1.10 2022/05/10 07:01:28 triaxx Exp $
 
 Don't install Linux init.d files nor CONF_FILES.
 
---- Makefile.in.orig	2015-06-04 16:30:22.000000000 +0000
+--- Makefile.in.orig	2022-02-28 16:34:38.000000000 +0000
 +++ Makefile.in
-@@ -189,11 +189,10 @@ mkinstalldirs = $(install_sh) -d
+@@ -206,11 +206,10 @@ mkinstalldirs = $(install_sh) -d
  CONFIG_HEADER = config.h
  CONFIG_CLEAN_FILES =
  CONFIG_CLEAN_VPATH_FILES =
@@ -12,12 +12,12 @@ Don't install Linux init.d files nor CONF_FILES.
 +am__installdirs = "$(DESTDIR)$(sbindir)" \
  	"$(DESTDIR)$(sbindir)" "$(DESTDIR)$(smartdscriptdir)" \
  	"$(DESTDIR)$(man5dir)" "$(DESTDIR)$(man8dir)" \
- 	"$(DESTDIR)$(docsdir)" "$(DESTDIR)$(drivedbdir)" \
+ 	"$(DESTDIR)$(docsdir)" "$(DESTDIR)$(drivedbinstdir)" \
 -	"$(DESTDIR)$(examplesdir)" "$(DESTDIR)$(initddir)" \
  	"$(DESTDIR)$(sysconfdir)" "$(DESTDIR)$(systemdsystemunitdir)"
  PROGRAMS = $(sbin_PROGRAMS)
  am__smartctl_SOURCES_DIST = smartctl.cpp smartctl.h atacmdnames.cpp \
-@@ -595,8 +594,7 @@ docs_DATA = \
+@@ -669,8 +668,7 @@ docs_DATA = \
          INSTALL \
          NEWS \
          README \
@@ -27,10 +27,10 @@ Don't install Linux init.d files nor CONF_FILES.
  
  examplesdir = $(exampledir)
  examples_DATA = \
-@@ -1686,7 +1684,7 @@ info-am:
+@@ -1896,7 +1894,7 @@ info-am:
  
  install-data-am: install-data-local install-docsDATA \
- 	install-drivedbDATA install-examplesDATA \
+ 	install-drivedbinstDATA install-examplesDATA \
 -	install-examplesSCRIPTS install-initdDATA install-man \
 +	install-examplesSCRIPTS install-man \
  	install-smartdscriptSCRIPTS install-systemdsystemunitDATA
