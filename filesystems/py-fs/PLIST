@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/12/13 11:22:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/05/10 05:42:57 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -17,12 +17,18 @@ ${PYSITELIB}/fs/_fscompat.pyo
 ${PYSITELIB}/fs/_ftp_parse.py
 ${PYSITELIB}/fs/_ftp_parse.pyc
 ${PYSITELIB}/fs/_ftp_parse.pyo
+${PYSITELIB}/fs/_pathcompat.py
+${PYSITELIB}/fs/_pathcompat.pyc
+${PYSITELIB}/fs/_pathcompat.pyo
 ${PYSITELIB}/fs/_repr.py
 ${PYSITELIB}/fs/_repr.pyc
 ${PYSITELIB}/fs/_repr.pyo
 ${PYSITELIB}/fs/_typing.py
 ${PYSITELIB}/fs/_typing.pyc
 ${PYSITELIB}/fs/_typing.pyo
+${PYSITELIB}/fs/_tzcompat.py
+${PYSITELIB}/fs/_tzcompat.pyc
+${PYSITELIB}/fs/_tzcompat.pyo
 ${PYSITELIB}/fs/_url_tools.py
 ${PYSITELIB}/fs/_url_tools.pyc
 ${PYSITELIB}/fs/_url_tools.pyo
