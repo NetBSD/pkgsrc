@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.69 2022/04/24 15:00:42 nia Exp $
+# $NetBSD: options.mk,v 1.70 2022/05/10 14:18:48 ryoon Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -28,7 +28,7 @@ PKG_SUPPORTED_OPTIONS+=		faad
 
 # Set options based on the specific package being built.
 .  if !empty(PKGNAME:M*mplayer*)
-PKG_SUPPORTED_OPTIONS+=	aalib alsa caca ggi gnutls jack ladspa mplayer-menu nas
+PKG_SUPPORTED_OPTIONS+=	aalib alsa caca ggi jack ladspa mplayer-menu nas
 PKG_SUPPORTED_OPTIONS+=	openal pulseaudio sdl
 
 .    if ${VDPAU_AVAILABLE} == "yes"
