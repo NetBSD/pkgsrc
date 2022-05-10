@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2450 2022/05/09 22:08:20 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2451 2022/05/10 05:28:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3802,3 +3802,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/lok to 0.2.1 [pin 2022-05-09]
 	Added textproc/hck version 0.7.2 [pin 2022-05-09]
 	Updated devel/py-virtualenv to 20.14.1 [wiz 2022-05-09]
+	Updated databases/py-redis to 4.3.1 [adam 2022-05-10]
+	Updated www/py-nbclient to 0.6.3 [adam 2022-05-10]
