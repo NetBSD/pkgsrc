@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/04/18 19:10:06 adam Exp $
+# $NetBSD: Makefile,v 1.13 2022/05/10 09:37:38 jperkin Exp $
 
 DISTNAME=	tracker-3.0.1
 PKGNAME=	gnome-${DISTNAME}
@@ -17,12 +17,16 @@ USE_TOOLS+=	pkg-config xgettext
 TOOL_DEPENDS+=	asciidoc>=10.1.4:../../textproc/asciidoc
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt # xsltproc
 
+TEST_DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+
 MESON_ARGS+=	-Ddocs=false
 MESON_ARGS+=	-Dsystemd_user_services=false
 
 # workaround for build failure
 # https://gitlab.gnome.org/GNOME/json-glib/issues/35
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/src:${WRKSRC}/output/src/libtracker-sparql/
+
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/tests/common
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -48,7 +52,6 @@ PKGCONFIG_OVERRIDE+=		output/meson-private/tracker-testutils-3.0.pc
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection?=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
-BUILDLINK_DEPMETHOD.vala?=	build
 .include "../../lang/vala/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
