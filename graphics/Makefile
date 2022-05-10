@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.971 2022/05/09 15:56:08 nia Exp $
+# $NetBSD: Makefile,v 1.972 2022/05/10 18:21:45 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -810,7 +810,6 @@ SUBDIR+=	tkpiechart
 SUBDIR+=	tuxpaint
 SUBDIR+=	tuxpaint-config
 SUBDIR+=	tuxpaint-stamps
-SUBDIR+=	ucview
 SUBDIR+=	urt
 SUBDIR+=	vcg
 SUBDIR+=	veusz
