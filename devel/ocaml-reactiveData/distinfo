@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:15:55 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/05/10 08:14:02 jaapb Exp $
 
-BLAKE2s (reactiveData-0.2.2.tar.gz) = 3b2fa789ec2b2eaa9c7e396b8424d1f1ac51b5b07e57bfb87587922719d41297
-SHA512 (reactiveData-0.2.2.tar.gz) = 56c03d528feec769718c92075c49759dac287b93fe97d816da5cfadb26836d3855176cd81d4cec4441591dd9314e881045912a37edf584ad149ebd048016a4bf
-Size (reactiveData-0.2.2.tar.gz) = 23512 bytes
+BLAKE2s (reactiveData-0.3.tar.gz) = 0334fe430e1c0b4b7efc83f9f64a6cc05c990ef4b2004d4a282594219250dd90
+SHA512 (reactiveData-0.3.tar.gz) = ed3e1057f457b4c76060a7f6aad2a555b5a2baebe3d2b8938f2e6f5acad448d09a20b7b82fe8bb3ebb97e5c5946d70214d5bd062311af564752e40b880f75603
+Size (reactiveData-0.3.tar.gz) = 12559 bytes

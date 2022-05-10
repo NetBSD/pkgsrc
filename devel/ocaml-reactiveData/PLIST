@@ -1,9 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/20 15:19:54 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/05/10 08:14:02 jaapb Exp $
 ${OCAML_SITELIB}/reactiveData/META
+${OCAML_SITELIB}/reactiveData/dune-package
+${OCAML_SITELIB}/reactiveData/opam
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/reactiveData/reactiveData.a
 ${OCAML_SITELIB}/reactiveData/reactiveData.cma
 ${OCAML_SITELIB}/reactiveData/reactiveData.cmi
+${OCAML_SITELIB}/reactiveData/reactiveData.cmt
+${OCAML_SITELIB}/reactiveData/reactiveData.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/reactiveData/reactiveData.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/reactiveData/reactiveData.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/reactiveData/reactiveData.cmxs
+${OCAML_SITELIB}/reactiveData/reactiveData.ml
 ${OCAML_SITELIB}/reactiveData/reactiveData.mli
+share/doc/reactiveData/CHANGES.md
+share/doc/reactiveData/LICENSE
+share/doc/reactiveData/README.md
