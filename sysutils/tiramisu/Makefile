@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2021/12/08 16:06:38 adam Exp $
+# $NetBSD: Makefile,v 1.11 2022/05/10 08:51:45 pin Exp $
 
 DISTNAME=	tiramisu-2.0.20211107
 PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Sweets/}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Sweets/tiramisu/
 COMMENT=	Desktop notifications, the UNIX way
 LICENSE=	mit
