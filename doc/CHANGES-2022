@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2459 2022/05/10 07:07:37 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2460 2022/05/10 07:25:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3815,3 +3815,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/smartmontools to 7.3 [triaxx 2022-05-10]
 	Updated devel/py-mercurial to 6.1.2 [wiz 2022-05-10]
 	Updated devel/py-hg-evolve to 10.5.1 [wiz 2022-05-10]
+	Updated textproc/py-rst2pdf to 0.99 [adam 2022-05-10]
+	Updated net/py-tldextract to 3.3.0 [adam 2022-05-10]
