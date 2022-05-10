@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.26 2022/05/09 05:42:55 adam Exp $
+# $NetBSD: Makefile,v 1.27 2022/05/10 05:25:58 adam Exp $
 
-DISTNAME=	redis-4.3.0
+DISTNAME=	redis-4.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/redis/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/andymccurdy/redis-py
+HOMEPAGE=	https://github.com/redis/redis-py
 COMMENT=	Redis Python client
 LICENSE=	mit
 
