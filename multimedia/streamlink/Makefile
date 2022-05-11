@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2022/01/05 15:41:15 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2022/05/11 18:07:28 bouyer Exp $
 
-DISTNAME=	streamlink-2.3.0
+DISTNAME=	streamlink-4.0.1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=streamlink/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
-PKGREVISION=	3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://streamlink.github.io/
@@ -18,17 +17,22 @@ USE_PKG_RESOURCES=	yes
 .include "../../lang/python/egg.mk"
 
 DEPENDS+=	${PYPKGPREFIX}-cryptodome>=3.4.3:../../security/py-cryptodome
-DEPENDS+=	${PYPKGPREFIX}-requests>=2.26.0:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata4>=4.0.0:../../devel/py-importlib-metadata4
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.25.0:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-versioningit>=1.1.1:../../devel/py-versioningit
 DEPENDS+=	${PYPKGPREFIX}-isodate-[0-9]*:../../time/py-isodate
 DEPENDS+=	${PYPKGPREFIX}-iso-639-[0-9]*:../../devel/py-iso-639
 DEPENDS+=	${PYPKGPREFIX}-iso3166-[0-9]*:../../devel/py-iso3166
-DEPENDS+=	${PYPKGPREFIX}-websocket-client-[0-9]*:../../www/py-websocket-client
+DEPENDS+=	${PYPKGPREFIX}-country-[0-9]*:../../geography/py-country
+DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
+DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
+DEPENDS+=	${PYPKGPREFIX}-websocket-client>=1.2.1*:../../www/py-websocket-client
 DEPENDS+=	${PYPKGPREFIX}-Socks-[0-9]*:../../net/py-Socks
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-mock-[0-9]*:../../devel/py-requests-mock
 
-
-EGG_NAME=	${PKGNAME_NOREV}
+EGG_NAME=	streamlink-0.0.0+unknown
 
 REPLACE_PYTHON+=	src/streamlink/packages/flashmedia/flv.py
 REPLACE_PYTHON+=	src/streamlink/packages/flashmedia/tag.py
