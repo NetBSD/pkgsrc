@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2494 2022/05/11 11:10:21 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2495 2022/05/11 11:27:47 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3862,3 +3862,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/py-barman to 2.19 [adam 2022-05-11]
 	Updated net/py-pypiserver to 1.5.0 [adam 2022-05-11]
 	Updated security/ocaml-cryptokit to 1.17 [jaapb 2022-05-11]
+	Added devel/ocaml-hmap version 0.8.1 [jaapb 2022-05-11]
