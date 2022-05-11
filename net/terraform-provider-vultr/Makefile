@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.18 2022/04/13 07:50:52 bsiegert Exp $
+# $NetBSD: Makefile,v 1.19 2022/05/11 18:15:09 tpaul Exp $
 
-DISTNAME=	terraform-provider-vultr-2.9.1
-PKGREVISION=	2
+DISTNAME=	terraform-provider-vultr-2.11.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vultr/}
 GITHUB_PROJECT=	${PKGBASE}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	tpaul@NetBSD.org
 HOMEPAGE=	https://www.terraform.io/docs/providers/vultr/
 COMMENT=	Terraform provider for Vultr
 LICENSE=	mpl-2.0
