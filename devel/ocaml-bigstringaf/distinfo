@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:46 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/05/11 09:52:09 jaapb Exp $
 
-BLAKE2s (bigstringaf-0.6.0.tar.gz) = 14681c470608272fb1ec9a36265616d595659394bce48769765c50c259a5f678
-SHA512 (bigstringaf-0.6.0.tar.gz) = f9dc0a5d1601d65ad3d0f8f0eea6235d39d38913158209b2f76af2e6589c1e241011dddbdcbcdbce52dd82bb6070475a65813324231df769532853fdf4683193
-Size (bigstringaf-0.6.0.tar.gz) = 11859 bytes
+BLAKE2s (bigstringaf-0.9.0.tar.gz) = 102a600294e7e38bc62b1f7917e0be893cacc7dbd2dfdf04803ede0cd3571fdc
+SHA512 (bigstringaf-0.9.0.tar.gz) = c5148d967beef15bba21a706009cb8443fe6afd76b949d6a6bcf4fc6c6d410bd0ca4c86b4ef6897cad73c51449e5387ee0173347b8d43c49f1a62024a8aa4db5
+Size (bigstringaf-0.9.0.tar.gz) = 12431 bytes
