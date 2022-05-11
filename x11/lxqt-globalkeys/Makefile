@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2022/04/24 15:28:13 pin Exp $
+# $NetBSD: Makefile,v 1.17 2022/05/11 00:57:32 gutteridge Exp $
 
 DISTNAME=	lxqt-globalkeys-1.1.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
