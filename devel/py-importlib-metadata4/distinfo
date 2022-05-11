@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2022/05/11 17:50:12 bouyer Exp $
-
-BLAKE2s (importlib_metadata-4.11.3.tar.gz) = c9f89595f4b21583088624db461afb09140d86a12c4352fb637df9c9ce25ede1
-SHA512 (importlib_metadata-4.11.3.tar.gz) = d33efa2abba5f6f770615f133c940a61948ce5091d59526ee2c7e3866aebd74d79ac464f72602404c2b56fe284a93a9cd1b0cac251ceea53666019485bdddf23
-Size (importlib_metadata-4.11.3.tar.gz) = 43607 bytes
