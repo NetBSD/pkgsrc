@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2476 2022/05/11 00:38:17 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.2477 2022/05/11 00:57:51 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3839,3 +3839,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added x11/qtxdg-tools version 3.9.1 [gutteridge 2022-05-11]
 	Updated x11/libqtxdg to 3.9.1 [gutteridge 2022-05-11]
 	Updated x11/lxqt-session to 1.1.1 [gutteridge 2022-05-11]
+	Updated meta-pkgs/lxqt to 1.1.0nb1 [gutteridge 2022-05-11]
