@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2508 2022/05/11 18:40:01 bsiegert Exp $
+$NetBSD: CHANGES-2022,v 1.2509 2022/05/11 19:01:24 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3878,3 +3878,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/streamlink to 4.0.1 [bouyer 2022-05-11]
 	Updated net/terraform-provider-vultr to 2.11.0 [tpaul 2022-05-11]
 	Updated lang/go117 to 1.17.10 [bsiegert 2022-05-11]
+	Updated lang/go118 to 1.18.2 [bsiegert 2022-05-11]
