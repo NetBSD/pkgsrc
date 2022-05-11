@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2485 2022/05/11 09:16:37 msaitoh Exp $
+$NetBSD: CHANGES-2022,v 1.2486 2022/05/11 09:24:01 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3850,3 +3850,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/ocaml-domain-name to 0.4.0 [jaapb 2022-05-11]
 	Updated net/ocaml-ipaddr to 5.3.0 [jaapb 2022-05-11]
 	Updated sysutils/intel-microcode-netbsd to 20220510 [msaitoh 2022-05-11]
+	Updated multimedia/vlc to 3.0.17.4 [jperkin 2022-05-11]
