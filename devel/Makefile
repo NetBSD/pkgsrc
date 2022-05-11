@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3739 2022/05/11 17:52:44 bouyer Exp $
+# $NetBSD: Makefile,v 1.3740 2022/05/11 22:28:38 bouyer Exp $
 #
 
 COMMENT=	Development utilities
@@ -2508,7 +2508,6 @@ SUBDIR+=	py-ijson
 SUBDIR+=	py-immutabledict
 SUBDIR+=	py-importlib-metadata
 SUBDIR+=	py-importlib-metadata2
-SUBDIR+=	py-importlib-metadata4
 SUBDIR+=	py-importlib-resources
 SUBDIR+=	py-incremental
 SUBDIR+=	py-iniconfig
