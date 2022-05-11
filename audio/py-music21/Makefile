@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.18 2022/04/09 21:55:17 gutteridge Exp $
+# $NetBSD: Makefile,v 1.19 2022/05/11 23:34:04 gutteridge Exp $
 
-VERSION=	7.3.1
+VERSION=	7.3.3
 DISTNAME=	music21-noCorpus-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-music21-${VERSION}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cuthbertLab/}
 GITHUB_PROJECT=	music21
-# A bug fix 7.3.1 release was made, but tagged as release 7.3.0.
-GITHUB_RELEASE=	v${VERSION:R}.0
+GITHUB_RELEASE=	v${VERSION}
 
 MAINTAINER=	gutteridge@NetBSD.org
 HOMEPAGE=	https://github.com/cuthbertLab/music21
