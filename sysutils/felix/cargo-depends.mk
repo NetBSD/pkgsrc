@@ -1,8 +1,8 @@
-# $NetBSD: cargo-depends.mk,v 1.7 2022/03/29 21:11:29 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.8 2022/05/11 20:58:10 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
 CARGO_CRATE_DEPENDS+=	atty-0.2.14
-CARGO_CRATE_DEPENDS+=	autocfg-1.0.1
+CARGO_CRATE_DEPENDS+=	autocfg-1.1.0
 CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	chrono-0.4.19
