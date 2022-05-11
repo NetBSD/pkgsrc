@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2473 2022/05/10 21:00:39 markd Exp $
+$NetBSD: CHANGES-2022,v 1.2474 2022/05/11 00:21:45 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3836,3 +3836,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/cups-base to 2.4.1 [markd 2022-05-10]
 	Updated print/libcups to 2.4.1 [markd 2022-05-10]
 	Updated print/cups-filters to 1.28.15 [markd 2022-05-10]
+	Added x11/qtxdg-tools version 3.9.1 [gutteridge 2022-05-11]
