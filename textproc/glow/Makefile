@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/04/17 20:11:15 sjmulder Exp $
+# $NetBSD: Makefile,v 1.2 2022/05/11 19:26:21 bsiegert Exp $
 
 DISTNAME=	glow-1.4.1
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=charmbracelet/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
