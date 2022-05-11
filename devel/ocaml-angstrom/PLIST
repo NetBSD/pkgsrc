@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/19 11:07:40 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/05/11 10:25:18 jaapb Exp $
 ${OCAML_SITELIB}/angstrom/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/angstrom/angstrom.a
 ${OCAML_SITELIB}/angstrom/angstrom.cma
@@ -18,6 +18,9 @@ ${OCAML_SITELIB}/angstrom/angstrom__Buffering.cmi
 ${OCAML_SITELIB}/angstrom/angstrom__Buffering.cmt
 ${OCAML_SITELIB}/angstrom/angstrom__Buffering.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/angstrom/angstrom__Buffering.cmx
+${OCAML_SITELIB}/angstrom/angstrom__Exported_state.cmi
+${OCAML_SITELIB}/angstrom/angstrom__Exported_state.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/angstrom/angstrom__Exported_state.cmx
 ${OCAML_SITELIB}/angstrom/angstrom__Input.cmi
 ${OCAML_SITELIB}/angstrom/angstrom__Input.cmt
 ${OCAML_SITELIB}/angstrom/angstrom__Input.cmti
@@ -32,6 +35,7 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/angstrom/angstrom__Parser.cmx
 ${OCAML_SITELIB}/angstrom/buffering.ml
 ${OCAML_SITELIB}/angstrom/buffering.mli
 ${OCAML_SITELIB}/angstrom/dune-package
+${OCAML_SITELIB}/angstrom/exported_state.ml
 ${OCAML_SITELIB}/angstrom/input.ml
 ${OCAML_SITELIB}/angstrom/input.mli
 ${OCAML_SITELIB}/angstrom/more.ml
