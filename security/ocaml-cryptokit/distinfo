@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:17:21 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/05/11 11:07:39 jaapb Exp $
 
-BLAKE2s (cryptokit-1.13.tar.gz) = 3bbc8dfe46604ef39eb7330c4b155cd47021373b06b537988b4441b29ef0ee22
-SHA512 (cryptokit-1.13.tar.gz) = b739e88660ee7cc5883293554d78006d3b4ba705ae4af52f6402f1c721310b68c46003016b2e16fab4fea86542afa69acc7193c7186771f4a5ad29723a6901f9
-Size (cryptokit-1.13.tar.gz) = 165723 bytes
+BLAKE2s (cryptokit-1.17.tar.gz) = bc6c26bca995daebe6b91040a26aec7d19bab1cee0646766e05b93d6cead7782
+SHA512 (cryptokit-1.17.tar.gz) = b58bd5da8285fccd9ad15d9230afd1aae689d381f05a2c351207932bea21f1f8d2d7581edd6c109da74462caf8aae912a84c6c7f6b974e9df0b39a0b609bc5c1
+Size (cryptokit-1.17.tar.gz) = 137696 bytes
