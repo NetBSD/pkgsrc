@@ -1,1 +1,7 @@
-User tools for libqtxdg.
+User tools for libqtxdg. qtxdg-tools contains a CLI MIME tool, qtxdg-mat,
+for handling file associations and opening files with their default
+applications.
+
+It is maintained by the LXQt project and needed by LXQt Session, in
+order to be used by xdg-utils. Yet it can be used independently from
+LXQt, too.
