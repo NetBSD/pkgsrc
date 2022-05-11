@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.169 2022/05/11 22:10:50 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.170 2022/05/11 22:48:43 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1783,11 +1783,11 @@ package is built and then pkgsrc is updated. This situation can provoke
 various hard to diagnose build errors. To clean up the situation:</para>
 
 <programlisting>
-&uprompt; (cd ../../ && test -f mk/bsd.pkg.mk && rm -rf */*/work)
+&uprompt; (cd ../../ && cat mk/bsd.pkg.mk >/dev/null && rm -rf */*/work)
 </programlisting>
 
-<para>(The test for <filename>bsd.pkg.mk</filename> just prevents running
-this command in the wrong directory.)</para>
+<para>(The only purpose of the <filename>bsd.pkg.mk</filename> is to
+prevent running this command in the wrong directory.)</para>
 
 <para>If you have set <varname>WRKOBJDIR</varname> in &mk.conf;, remove
 that directory as well.</para>
@@ -1841,14 +1841,14 @@ far and what any error messages were.</para>
       </tgroup>
     </informaltable>
 
-    <para>To fix these linker errors, it is often sufficient to say
+    <para>To fix these linker errors, it is often sufficient to add
     <literal>LIBS.<replaceable>OperatingSystem</replaceable>+=
     -l<replaceable>foo</replaceable></literal> to the package
-    <filename>Makefile</filename> and then say <command>bmake clean;
+    <filename>Makefile</filename> and then run <command>bmake clean;
     bmake</command>.</para>
 
 <sect3 id="undefined-reference-sunpro">
-<title>Special issue: The SunPro compiler</title>
+<title>The SunPro compiler and inline functions</title>
 
 <para>When you are using the SunPro compiler, there is another
 possibility. That compiler cannot handle the following code:</para>
@@ -1884,9 +1884,12 @@ of functions.</para>
     <para>Sometimes packages fail to build because the compiler runs
     into an operating system specific soft limit.  With the
     <varname>UNLIMIT_RESOURCES</varname> variable pkgsrc can be told
-    to unlimit the resources.  Currently, the allowed values are any combination of
-    <quote>cputime</quote>, <quote>datasize</quote>,
-    <quote>memorysize</quote>, and <quote>stacksize</quote>.
+    to unlimit the resources.  The allowed values are any combination of
+    <quote>cputime</quote>,
+    <quote>datasize</quote>,
+    <quote>memorysize</quote>,
+    <quote>stacksize</quote> and
+    <quote>virtualsize</quote>.
     Setting this variable is similar to running the shell builtin
     <command>ulimit</command> command to raise the maximum data
     segment size or maximum stack size of a process, respectively, to
@@ -1910,10 +1913,10 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir1
 ${INSTALL_DATA_DIR} ${PREFIX}/dir2
 </programlisting>
 
-    <para>You can also just append <quote><literal>dir1
-    dir2</literal></quote> to the
-    <varname>INSTALLATION_DIRS</varname> variable, which will
-    automatically do the right thing.</para>
+    <para>Instead of running the <command>install</command> commands
+    directly, you can also append <quote><literal>dir1
+    dir2</literal></quote> to the <varname>INSTALLATION_DIRS</varname>
+    variable, which will automatically do the right thing.</para>
 
   </sect2>
   <sect2 id="where-to-install-documentation">
@@ -1921,15 +1924,16 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
 
     <para>In general, documentation should be installed into
     <filename>${PREFIX}/share/doc/${PKGBASE}</filename> or
-    <filename>${PREFIX}/share/doc/${PKGNAME}</filename> (the latter
+    <filename>${PREFIX}/share/doc/${PKGNAME_NOREV}</filename> (the latter
     includes the version number of the package).</para>
 
     <para>Many modern packages using GNU autoconf allow to set the
     directory where HTML documentation is installed with the
-    <quote>--with-html-dir</quote> option. Sometimes using this flag
-    is needed because otherwise the documentation ends up in
-    <filename>${PREFIX}/share/doc/html</filename> or other
-    places.</para>
+    <quote>--with-html-dir</quote> option. Sometimes using this flag is
+    needed because otherwise the documentation ends up in
+    <filename>${PREFIX}/share/doc/html</filename> or other places. In
+    pkgsrc, the HTML documentation should go into the package-specific
+    directory, just like any other documentation.</para>
 
     <para>An exception to the above is that library API documentation
     generated with the <filename
@@ -2052,10 +2056,6 @@ REPLACE.tcl.new=        ${PREFIX}/bin/tclsh
 REPLACE_FILES.tcl=      # list of tcl scripts which need to be fixed,
 # relative to ${WRKSRC}, just as in REPLACE_PERL
 </programlisting>
-
-    <note><para>Before March 2006, these variables were called
-    <varname>_REPLACE.*</varname> and
-    <varname>_REPLACE_FILES.*</varname>.</para></note>
 
   </sect2>
 

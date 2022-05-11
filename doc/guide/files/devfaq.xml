@@ -1,4 +1,4 @@
-<!-- $NetBSD: devfaq.xml,v 1.16 2020/02/24 21:13:56 rillig Exp $ -->
+<!-- $NetBSD: devfaq.xml,v 1.17 2022/05/11 22:48:43 rillig Exp $ -->
 
 <chapter id="devfaq"> <?dbhtml filename="devfaq.html"?>
 <title>Frequently Asked Questions</title>
@@ -17,10 +17,15 @@
 	<varname>MAKE_FLAGS</varname>?</para></question>
 
 	<answer><para><varname>MAKEFLAGS</varname> are the flags passed
-	to the pkgsrc-internal invocations of &man.make.1;, while
-	<varname>MAKE_FLAGS</varname> are the flags that are passed to
-	the <varname>MAKE_PROGRAM</varname> when building the
-	package. [FIXME: What is .MAKEFLAGS for?]</para></answer>
+	to the pkgsrc-internal invocations of &man.make.1;.</para>
+
+	<para><varname>MAKE_FLAGS</varname> are the flags that are
+	passed to the <varname>MAKE_PROGRAM</varname> when building the
+	package.</para>
+
+	<para><varname>.MAKEFLAGS</varname> is an internal variable of
+	<command>bmake</command> and should not be used by
+	packages.</para></answer>
 
 </qandaentry>
 <qandaentry id="devfaq.make">
@@ -31,11 +36,14 @@
 
 	<answer><para><varname>MAKE</varname> is the path to the
 	&man.make.1; program that is used in the pkgsrc
-	infrastructure. <varname>GMAKE</varname> is the path to GNU
-	Make, but you need to say <varname>USE_TOOLS+=gmake</varname> to
-	use that. <varname>MAKE_PROGRAM</varname> is the path to the
-	Make program that is used for building the
-	package.</para></answer>
+	infrastructure.</para>
+
+	<para><varname>GMAKE</varname> is the path to GNU Make, but you
+	need to say <varname>USE_TOOLS+=gmake</varname> to use
+	that.</para>
+
+	<para><varname>MAKE_PROGRAM</varname> is the path to the Make
+	program that is used for building the package.</para></answer>
 
 </qandaentry>
 <qandaentry id="devfaq.cc">
@@ -45,22 +53,16 @@
 	<varname>PKGSRC_COMPILER</varname>?</para></question>
 
 	<answer><para><varname>CC</varname> is the path to the real C
-	compiler, which can be configured by the pkgsrc user.
-	<varname>PKG_CC</varname> is the path to the compiler wrapper.
-	<varname>PKGSRC_COMPILER</varname> is <emphasis>not</emphasis> a
-	path to a compiler, but the type of compiler that should be
-	used. See <filename>mk/compiler.mk</filename> for more
-	information about the latter variable.</para></answer>
+	compiler, which can be configured by the pkgsrc user.</para>
 
-</qandaentry>
-<qandaentry id="devfaq.bl3flags">
+	<para><varname>PKG_CC</varname> is the path to the compiler
+	wrapper.</para>
 
-	<question id="devfaq.bl3flags.q"><para>What is the difference between
-	<varname>BUILDLINK_LDFLAGS</varname>,
-	<varname>BUILDLINK_LDADD</varname> and
-	<varname>BUILDLINK_LIBS</varname>?</para></question>
-
-	<answer><para>[FIXME]</para></answer>
+	<para><varname>PKGSRC_COMPILER</varname> is
+	<emphasis>not</emphasis> a path to a compiler, but the type of
+	compiler that should be used. See
+	<filename>mk/compiler.mk</filename> for more information about
+	the latter variable.</para></answer>
 
 </qandaentry>
 <qandaentry id="devfaq.bl3prefix">
@@ -83,8 +85,8 @@
 	don't understand the <code>:=</code> inside
 	it.</para></question>
 
-	<answer><para>The <code>:=</code> is not really an
-	assignment operator, although it looks like it.
+	<answer><para>The <code>:=</code> is not an
+	assignment operator, even though it may look like one.
 	Instead, it is a degenerate form of
 	<code>${LIST:<replaceable>old_string</replaceable>=<replaceable>new_string</replaceable>}</code>,
 	which is documented in the &man.make.1; man page and which is
@@ -181,7 +183,7 @@
 </qandaentry>
 
 <qandaentry id="devfaq.too-much-time">
-<question id="devfaq.too-much-time.q"><para>I have a little time to kill. 
+<question id="devfaq.too-much-time.q"><para>I have a little time to kill.
 What shall I do?</para></question>
 
 <answer><para>This is not really an FAQ yet, but here's the answer
