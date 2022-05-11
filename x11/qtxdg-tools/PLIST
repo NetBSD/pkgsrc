@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2022/05/11 00:19:30 gutteridge Exp $
+bin/qtxdg-mat
+share/cmake/qtxdg-tools/qtxdg-tools-config-version.cmake
+share/cmake/qtxdg-tools/qtxdg-tools-config.cmake
+share/cmake/qtxdg-tools/qtxdg-tools-targets-release.cmake
+share/cmake/qtxdg-tools/qtxdg-tools-targets.cmake
