@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:12 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/05/11 08:31:33 adam Exp $
 
-DISTNAME=	jaraco.envs-2.2.0
+DISTNAME=	jaraco.envs-2.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jaraco.envs/}
 
@@ -12,8 +11,14 @@ COMMENT=	Classes for orchestrating Python (virtual) environments
 LICENSE=	mit
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
+BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel>0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-path-[0-9]*:../../devel/py-path
-#TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
+DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
+# TODO: import py-test-checkdocs, py-test-enable
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6:../../devel/py-test
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
 
 USE_LANGUAGES=	# none
 
@@ -22,7 +27,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 #TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 #
 #do-test:
-#	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} py.test-${PYVERSSUFFIX}
+#	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
