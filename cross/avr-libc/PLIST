@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2021/09/08 12:20:35 micha Exp $
+@comment $NetBSD: PLIST,v 1.28 2022/05/11 12:19:47 micha Exp $
 avr/include/alloca.h
 avr/include/assert.h
 avr/include/avr/boot.h
@@ -764,6 +764,18 @@ avr/lib/avrxmega2/libprintf_flt.a
 avr/lib/avrxmega2/libprintf_min.a
 avr/lib/avrxmega2/libscanf_flt.a
 avr/lib/avrxmega2/libscanf_min.a
+avr/lib/avrxmega3/libc.a
+avr/lib/avrxmega3/libm.a
+avr/lib/avrxmega3/libprintf_flt.a
+avr/lib/avrxmega3/libprintf_min.a
+avr/lib/avrxmega3/libscanf_flt.a
+avr/lib/avrxmega3/libscanf_min.a
+avr/lib/avrxmega3/short-calls/libc.a
+avr/lib/avrxmega3/short-calls/libm.a
+avr/lib/avrxmega3/short-calls/libprintf_flt.a
+avr/lib/avrxmega3/short-calls/libprintf_min.a
+avr/lib/avrxmega3/short-calls/libscanf_flt.a
+avr/lib/avrxmega3/short-calls/libscanf_min.a
 avr/lib/avrxmega4/crtatxmega64a3.o
 avr/lib/avrxmega4/crtatxmega64a3u.o
 avr/lib/avrxmega4/crtatxmega64a4u.o
@@ -983,9 +995,7 @@ ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/globals_defs_d.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/globals_defs_e.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/globals_defs_f.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/globals_defs_g.html
-${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/globals_defs_h.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/globals_defs_i.html
-${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/globals_defs_l.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/globals_defs_m.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/globals_defs_n.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/globals_defs_o.html
@@ -1143,10 +1153,8 @@ ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/stdiodemo-setup.jpg
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/stdlib_8h.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/stdlib_8h_source.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/stdlib__private_8h_source.html
-${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/strdup_8c.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/string_8h.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/string_8h_source.html
-${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/strtok_8c.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/structdiv__t.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/structldiv__t.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/structtm.html
@@ -1259,8 +1267,10 @@ ${PLIST.doc}share/doc/avr-libc/man/man3/ISR.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/ISR_ALIAS.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/ISR_ALIASOF.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/ISR_BLOCK.3
+${PLIST.doc}share/doc/avr-libc/man/man3/ISR_FLATTEN.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/ISR_NAKED.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/ISR_NOBLOCK.3
+${PLIST.doc}share/doc/avr-libc/man/man3/ISR_NOICF.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/M_1_PI.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/M_2_PI.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/M_2_SQRTPI.3
@@ -1489,6 +1499,7 @@ ${PLIST.doc}share/doc/avr-libc/man/man3/_NOP.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/_PROTECTED_WRITE.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/_VECTOR.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/_WEEK_DAYS_.3
+${PLIST.doc}share/doc/avr-libc/man/man3/__ASM_ALIAS.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/__AVR_LIBC_DATE_.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/__AVR_LIBC_DATE_STRING__.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/__AVR_LIBC_MAJOR__.3
@@ -1586,6 +1597,7 @@ ${PLIST.doc}share/doc/avr-libc/man/man3/calloc.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/cbi.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/cbrt.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/cbrtf.3
+${PLIST.doc}share/doc/avr-libc/man/man3/ccp_write_io.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/ceil.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/ceilf.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/clearerr.3
@@ -1911,7 +1923,6 @@ ${PLIST.doc}share/doc/avr-libc/man/man3/strcpy_PF.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/strcspn.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/strcspn_P.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/strdup.3
-${PLIST.doc}share/doc/avr-libc/man/man3/strdup.c.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/strftime.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/string.h.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/strlcat.3
@@ -1953,7 +1964,6 @@ ${PLIST.doc}share/doc/avr-libc/man/man3/strstr_P.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/strstr_PF.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/strtod.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/strtok.3
-${PLIST.doc}share/doc/avr-libc/man/man3/strtok.c.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/strtok_P.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/strtok_r.3
 ${PLIST.doc}share/doc/avr-libc/man/man3/strtok_rP.3

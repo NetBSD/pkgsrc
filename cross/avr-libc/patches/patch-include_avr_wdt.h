@@ -1,4 +1,4 @@
-$NetBSD: patch-include_avr_wdt.h,v 1.1 2021/09/08 12:20:35 micha Exp $
+$NetBSD: patch-include_avr_wdt.h,v 1.2 2022/05/11 12:19:47 micha Exp $
 
 Fix comments for ATmega324PA.
 
@@ -13,7 +13,7 @@ Fix comments for ATmega324PA.
      ATmega640, ATmega1280, ATmega1281, ATmega2560, ATmega2561,
      ATmega8HVA, ATmega16HVA, ATmega32HVB,
      ATmega406, ATmega1284P,
-@@ -570,7 +570,7 @@ void wdt_disable (void)
+@@ -574,7 +574,7 @@ void wdt_disable (void)
      ATtiny261, ATtiny461, ATtiny861, 
      ATmega48, ATmega48A, ATmega48PA, ATmega88, ATmega168,
      ATmega48P, ATmega88P, ATmega168P, ATmega328P,
