@@ -1,4 +1,4 @@
-$NetBSD: patch-m4_dolt.m4,v 1.1 2019/07/02 20:52:13 nia Exp $
+$NetBSD: patch-m4_dolt.m4,v 1.2 2022/05/11 09:23:48 jperkin Exp $
 
 Add NetBSD to dolt.m4. The fallback using libtool does not work
 correctly.
@@ -9,7 +9,7 @@ correctly.
  
  AS_CASE([$host],
      [*-*-linux*|*-*-freebsd*], [pic_options='-fPIC'],
-+    [*-*-netbsd*],             [pic_options='-fPIC -DPIC'],
++    [*-*-netbsd*|*solaris*],   [pic_options='-fPIC -DPIC'],
      [*-apple-darwin*],         [pic_options='-fno-common'],
      [*mingw*|*nacl*],          [pic_options='']
      [*],                       [dolt_supported=no]
