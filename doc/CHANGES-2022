@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2500 2022/05/11 13:48:16 mef Exp $
+$NetBSD: CHANGES-2022,v 1.2501 2022/05/11 14:03:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3868,3 +3868,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ocaml-base64 to 3.5.0 [jaapb 2022-05-11]
 	Updated security/R-argon2 to 0.4.0 [mef 2022-05-11]
 	Updated security/R-digest to 0.6.29 [mef 2022-05-11]
+	Updated security/R-openssl to 2.0.0 [mef 2022-05-11]
