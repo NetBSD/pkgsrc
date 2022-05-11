@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2021/03/08 08:13:05 jaapb Exp $
+# $NetBSD: Makefile,v 1.25 2022/05/11 11:07:39 jaapb Exp $
 #
 
-VERSION=	1.13
+VERSION=	1.17
 GITHUB_PROJECT=	cryptokit
 GITHUB_TAG=	release${VERSION:S/.//}
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xavierleroy/}
 
@@ -15,12 +14,10 @@ HOMEPAGE=	https://github.com/xavierleroy/cryptokit
 COMMENT=	Cryptographic primitives library for Objective Caml
 LICENSE=	gnu-lgpl-v2 # with static compilation exception
 
-OCAML_USE_OASIS=	yes
+OCAML_USE_DUNE=	yes
 
 .include "../../mk/ocaml.mk"
-
-USE_TOOLS+=	gmake
-
+.include "../../devel/ocaml-dune-configurator/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../math/ocaml-zarith/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

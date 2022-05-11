@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2017/07/11 12:34:22 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/05/11 11:07:39 jaapb Exp $
 ${OCAML_SITELIB}/cryptokit/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/cryptokit/cryptokit.a
-${OCAML_SITELIB}/cryptokit/cryptokit.annot
 ${OCAML_SITELIB}/cryptokit/cryptokit.cma
 ${OCAML_SITELIB}/cryptokit/cryptokit.cmi
 ${OCAML_SITELIB}/cryptokit/cryptokit.cmt
@@ -9,12 +8,17 @@ ${OCAML_SITELIB}/cryptokit/cryptokit.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/cryptokit/cryptokit.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/cryptokit/cryptokit.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/cryptokit/cryptokit.cmxs
+${OCAML_SITELIB}/cryptokit/cryptokit.ml
 ${OCAML_SITELIB}/cryptokit/cryptokit.mli
-${OCAML_SITELIB}/cryptokit/cryptokitBignum.annot
 ${OCAML_SITELIB}/cryptokit/cryptokitBignum.cmi
 ${OCAML_SITELIB}/cryptokit/cryptokitBignum.cmt
 ${OCAML_SITELIB}/cryptokit/cryptokitBignum.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/cryptokit/cryptokitBignum.cmx
+${OCAML_SITELIB}/cryptokit/cryptokitBignum.ml
 ${OCAML_SITELIB}/cryptokit/cryptokitBignum.mli
-${OCAML_SITELIB}/cryptokit/dllcryptokit_stubs.so
+${OCAML_SITELIB}/cryptokit/dune-package
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/cryptokit/libcryptokit_stubs.a
+${OCAML_SITELIB}/cryptokit/opam
+${OCAML_SITELIB}/stublibs/dllcryptokit_stubs.so
+share/doc/cryptokit/LICENSE
+share/doc/cryptokit/README.md
