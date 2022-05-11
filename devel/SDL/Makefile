@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.146 2022/04/02 07:17:55 nia Exp $
+# $NetBSD: Makefile,v 1.147 2022/05/11 10:14:29 nia Exp $
 
 DISTNAME=	SDL-1.2.15
-PKGREVISION=	37
+PKGREVISION=	38
 CATEGORIES=	devel games
 MASTER_SITES=	http://www.libsdl.org/release/
 
@@ -17,6 +17,10 @@ GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
 
 CONFLICTS+=		sdl12-compat-[0-9]*
+
+# Fixes skippy audio output in pygame. Also matches SDL2 where the
+# non-blocking audio code was removed.
+CPPFLAGS.NetBSD+=	-DUSE_BLOCKING_WRITES
 
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
 CPPFLAGS+=		-DX11BASE="\"${X11BASE}\""
