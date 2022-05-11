@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/12 18:09:29 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/05/11 09:52:09 jaapb Exp $
 ${OCAML_SITELIB}/bigstringaf/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/bigstringaf/bigstringaf.a
 ${OCAML_SITELIB}/bigstringaf/bigstringaf.cma
@@ -11,7 +11,8 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/bigstringaf/bigstringaf.cmxs
 ${OCAML_SITELIB}/bigstringaf/bigstringaf.ml
 ${OCAML_SITELIB}/bigstringaf/bigstringaf.mli
 ${OCAML_SITELIB}/bigstringaf/dune-package
-${OCAML_SITELIB}/bigstringaf/libbigstringaf_stubs.a
+${PLIST.ocaml-opt}${OCAML_SITELIB}/bigstringaf/libbigstringaf_freestanding_stubs.a
+${PLIST.ocaml-opt}${OCAML_SITELIB}/bigstringaf/libbigstringaf_stubs.a
 ${OCAML_SITELIB}/bigstringaf/opam
 ${OCAML_SITELIB}/bigstringaf/runtime.js
 ${OCAML_SITELIB}/stublibs/dllbigstringaf_stubs.so
