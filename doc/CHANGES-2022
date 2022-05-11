@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2484 2022/05/11 09:00:48 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2485 2022/05/11 09:16:37 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3849,3 +3849,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/js_of_ocaml to 4.0.0nb1 [jaapb 2022-05-11]
 	Updated net/ocaml-domain-name to 0.4.0 [jaapb 2022-05-11]
 	Updated net/ocaml-ipaddr to 5.3.0 [jaapb 2022-05-11]
+	Updated sysutils/intel-microcode-netbsd to 20220510 [msaitoh 2022-05-11]
