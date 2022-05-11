@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2479 2022/05/11 07:56:55 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2480 2022/05/11 08:29:10 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3843,3 +3843,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/curl to 7.83.1 [wiz 2022-05-11]
 	Updated devel/yarn to 1.22.19 [adam 2022-05-11]
 	Updated textproc/ugrep to 3.7.11 [adam 2022-05-11]
+	Updated devel/ocaml-astring to 0.8.5 [jaapb 2022-05-11]
