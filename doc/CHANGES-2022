@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2492 2022/05/11 10:43:45 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2493 2022/05/11 11:02:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3859,3 +3859,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/ocaml-angstrom to 0.15.0 [jaapb 2022-05-11]
 	Updated www/ocaml-uri to 4.2.0 [jaapb 2022-05-11]
 	Updated net/ocaml-conduit to 5.1.0 [jaapb 2022-05-11]
+	Updated databases/py-barman to 2.19 [adam 2022-05-11]
+	Updated net/py-pypiserver to 1.5.0 [adam 2022-05-11]
