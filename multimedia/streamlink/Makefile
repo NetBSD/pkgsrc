@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2022/05/11 18:07:28 bouyer Exp $
+# $NetBSD: Makefile,v 1.32 2022/05/11 22:30:17 bouyer Exp $
 
 DISTNAME=	streamlink-4.0.1
 CATEGORIES=	multimedia
@@ -17,7 +17,7 @@ USE_PKG_RESOURCES=	yes
 .include "../../lang/python/egg.mk"
 
 DEPENDS+=	${PYPKGPREFIX}-cryptodome>=3.4.3:../../security/py-cryptodome
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata4>=4.0.0:../../devel/py-importlib-metadata4
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.0.0:../../devel/py-importlib-metadata
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.25.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-versioningit>=1.1.1:../../devel/py-versioningit
