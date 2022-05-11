@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2022/05/11 11:25:03 jaapb Exp $
+${OCAML_SITELIB}/hmap/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/hmap/hmap.a
+${OCAML_SITELIB}/hmap/hmap.cma
+${OCAML_SITELIB}/hmap/hmap.cmi
+${OCAML_SITELIB}/hmap/hmap.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/hmap/hmap.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/hmap/hmap.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/hmap/hmap.cmxs
+${OCAML_SITELIB}/hmap/hmap.mli
+${OCAML_SITELIB}/hmap/opam
+share/doc/hmap/CHANGES.md
+share/doc/hmap/LICENSE.md
+share/doc/hmap/README.md

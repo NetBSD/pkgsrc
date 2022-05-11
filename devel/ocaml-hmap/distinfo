@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/11 11:25:03 jaapb Exp $
+
+BLAKE2s (hmap-0.8.1.tbz) = 4086b72c036ac79f2c93ab962ea2ab12d96776536f8aaa6c926838c5d2d80ced
+SHA512 (hmap-0.8.1.tbz) = 9c476d9cf4acc16332e646ed67086d680d14dad76b1e7d3bfbbe22ddb96c55469efba1e2f006f89ef4816b26b68a9aa8094308967bda44283ed4384554fa9bb5
+Size (hmap-0.8.1.tbz) = 4801 bytes
