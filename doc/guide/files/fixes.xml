@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.168 2022/01/24 23:18:33 gutteridge Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.169 2022/05/11 22:10:50 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1466,9 +1466,9 @@ pre-configure:
       <command>make clean && make patch && make show-go-modules >
       go-modules.mk</command>.</para></listitem>
 
-      <listitem><para>Prepend <programlisting>.include
-      "go-modules.mk"</programlisting> to any other
-      <programlisting>.include</programlisting>s.</para></listitem>
+      <listitem><para>Prepend
+      <literal>.include "go-modules.mk"</literal> to any other
+      <literal>.include</literal>s.</para></listitem>
 
       <listitem><para>Incorporate these modules in
       <filename>distinfo</filename> with <command>make
