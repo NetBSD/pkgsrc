@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21846 2022/05/11 13:28:46 jaapb Exp $
+$NetBSD: TODO,v 1.21847 2022/05/11 13:48:16 mef Exp $
 
 Suggested new packages
 ======================
@@ -381,7 +381,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-bbmle-1.0.23.1
 	o R-blob-1.2.1
 	o R-coda-0.19.4
-	o R-digest-0.6.27
 	o R-effects-4.2.0
 	o R-emdbook-1.3.12
 	o R-fBasics-3042.89.1
