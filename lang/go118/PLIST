@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/04/13 07:46:56 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/05/11 19:00:55 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go118/AUTHORS
@@ -1869,6 +1869,7 @@ go118/src/cmd/compile/internal/types2/testdata/fixedbugs/issue51578.go2
 go118/src/cmd/compile/internal/types2/testdata/fixedbugs/issue51593.go2
 go118/src/cmd/compile/internal/types2/testdata/fixedbugs/issue51607.go2
 go118/src/cmd/compile/internal/types2/testdata/fixedbugs/issue51658.go2
+go118/src/cmd/compile/internal/types2/testdata/fixedbugs/issue52529.go2
 go118/src/cmd/compile/internal/types2/testdata/fixedbugs/issue6977.src
 go118/src/cmd/compile/internal/types2/testdata/manual.go2
 go118/src/cmd/compile/internal/types2/testdata/spec/assignability.go2
@@ -2413,6 +2414,7 @@ go118/src/cmd/go/testdata/script/bug.txt
 go118/src/cmd/go/testdata/script/build_GOTMPDIR.txt
 go118/src/cmd/go/testdata/script/build_acl_windows.txt
 go118/src/cmd/go/testdata/script/build_arm.txt
+go118/src/cmd/go/testdata/script/build_buildvcs_auto.txt
 go118/src/cmd/go/testdata/script/build_cache_arch_mode.txt
 go118/src/cmd/go/testdata/script/build_cache_compile.txt
 go118/src/cmd/go/testdata/script/build_cache_disabled.txt
@@ -2836,6 +2838,7 @@ go118/src/cmd/go/testdata/script/mod_retract_rationale.txt
 go118/src/cmd/go/testdata/script/mod_retract_rename.txt
 go118/src/cmd/go/testdata/script/mod_retract_replace.txt
 go118/src/cmd/go/testdata/script/mod_retract_versions.txt
+go118/src/cmd/go/testdata/script/mod_run_issue52331.txt
 go118/src/cmd/go/testdata/script/mod_run_nonmain.txt
 go118/src/cmd/go/testdata/script/mod_run_path.txt
 go118/src/cmd/go/testdata/script/mod_run_pkg_version.txt
@@ -5496,6 +5499,7 @@ go118/src/go/types/testdata/fixedbugs/issue51578.go2
 go118/src/go/types/testdata/fixedbugs/issue51593.go2
 go118/src/go/types/testdata/fixedbugs/issue51658.go2
 go118/src/go/types/testdata/fixedbugs/issue52031.go
+go118/src/go/types/testdata/fixedbugs/issue52529.go2
 go118/src/go/types/testdata/fixedbugs/issue6977.src
 go118/src/go/types/testdata/manual.go2
 go118/src/go/types/testdata/spec/assignability.go2
@@ -7299,8 +7303,8 @@ go118/src/runtime/example_test.go
 go118/src/runtime/export_aix_test.go
 go118/src/runtime/export_arm_test.go
 go118/src/runtime/export_darwin_test.go
-go118/src/runtime/export_debug_regabiargs_off_test.go
-go118/src/runtime/export_debug_regabiargs_on_test.go
+go118/src/runtime/export_debug_amd64_test.go
+go118/src/runtime/export_debug_arm64_test.go
 go118/src/runtime/export_debug_test.go
 go118/src/runtime/export_debuglog_test.go
 go118/src/runtime/export_linux_test.go
@@ -10769,6 +10773,7 @@ go118/test/fixedbugs/issue5162.go
 go118/test/fixedbugs/issue5172.go
 go118/test/fixedbugs/issue51839.go
 go118/test/fixedbugs/issue5231.go
+go118/test/fixedbugs/issue52438.go
 go118/test/fixedbugs/issue5244.go
 go118/test/fixedbugs/issue5259.dir/bug.go
 go118/test/fixedbugs/issue5259.dir/main.go
@@ -10776,6 +10781,7 @@ go118/test/fixedbugs/issue5259.go
 go118/test/fixedbugs/issue5260.dir/a.go
 go118/test/fixedbugs/issue5260.dir/b.go
 go118/test/fixedbugs/issue5260.go
+go118/test/fixedbugs/issue52612.go
 go118/test/fixedbugs/issue5291.dir/pkg1.go
 go118/test/fixedbugs/issue5291.dir/prog.go
 go118/test/fixedbugs/issue5291.go
@@ -11612,12 +11618,18 @@ go118/test/typeparam/issue51423.dir/b.go
 go118/test/typeparam/issue51423.go
 go118/test/typeparam/issue51522a.go
 go118/test/typeparam/issue51522b.go
+go118/test/typeparam/issue51700.go
 go118/test/typeparam/issue51733.go
 go118/test/typeparam/issue51765.go
 go118/test/typeparam/issue51836.dir/a.go
 go118/test/typeparam/issue51836.dir/aa.go
 go118/test/typeparam/issue51836.dir/p.go
 go118/test/typeparam/issue51836.go
+go118/test/typeparam/issue52026.go
+go118/test/typeparam/issue52117.dir/a.go
+go118/test/typeparam/issue52117.dir/b.go
+go118/test/typeparam/issue52117.go
+go118/test/typeparam/issue52228.go
 go118/test/typeparam/list.go
 go118/test/typeparam/list2.go
 go118/test/typeparam/listimp.dir/a.go
