@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/05/05 21:22:29 fcambus Exp $
+# $NetBSD: Makefile,v 1.15 2022/05/11 07:02:11 fcambus Exp $
 
 DISTNAME=	mold-1.2.1
 CATEGORIES=	devel
@@ -28,6 +28,10 @@ DL_AUTO_VARS=		yes
 PTHREAD_AUTO_VARS=	yes
 
 PYTHON_FOR_BUILD_ONLY=	yes
+
+pre-configure:
+	# install phase uses python3 command
+	[ -h "${BUILDLINK_DIR}/bin/python3" ] || ${LN} -s ${PYTHONBIN} "${BUILDLINK_DIR}/bin/python3"
 
 .include "../../devel/mimalloc/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
