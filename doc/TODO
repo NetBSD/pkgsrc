@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21845 2022/05/11 11:59:35 jaapb Exp $
+$NetBSD: TODO,v 1.21846 2022/05/11 13:28:46 jaapb Exp $
 
 Suggested new packages
 ======================
@@ -1189,7 +1189,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o oath-toolkit-2.6.6
 	o objc-3.3.24
 	o ocaml-4.14.0
-	o ocaml-base64-3.5.0
 	o ocaml-batteries-3.3.0
 	o ocaml-cohttp-4.0.0
 	o ocaml-cryptokit-116.1
