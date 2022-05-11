@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/02/17 16:02:40 tpaul Exp $
+$NetBSD: distinfo,v 1.7 2022/05/11 18:15:09 tpaul Exp $
 
-BLAKE2s (terraform-provider-vultr-2.9.1.tar.gz) = 29e60aeca9e887c538eff800ae8d5905694dcaf306b64c148d27bfcfa2e431f0
-SHA512 (terraform-provider-vultr-2.9.1.tar.gz) = 555ce54aae0e9fe157518f655a19e9724b9a0aec2914e8c1f2e9acc7e103255fac48cbb4d62c688203a310a47a2aef0dab9bb92564b686810f2b2f6ce17fb616
-Size (terraform-provider-vultr-2.9.1.tar.gz) = 4030224 bytes
+BLAKE2s (terraform-provider-vultr-2.11.0.tar.gz) = eb71bf68349978f487874ad8d5e00e4da988ae5b80a49d16bea2b2d61381d6fe
+SHA512 (terraform-provider-vultr-2.11.0.tar.gz) = b4e0d9b1733e884231fa2290e00a0bc3f03aee13a76fd23557fb864c46fc28a6ffad9472197b396785f0192e3db6bb3a8f11295f5c98c924df2374cc3cf39d9e
+Size (terraform-provider-vultr-2.11.0.tar.gz) = 3991405 bytes
