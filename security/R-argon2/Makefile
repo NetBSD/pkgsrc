@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/02/08 11:16:26 mef Exp $
+# $NetBSD: Makefile,v 1.2 2022/05/11 13:35:27 mef Exp $
 
 R_PKGNAME=	argon2
-R_PKGVER=	0.2-0
+R_PKGVER=	0.4-0
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
