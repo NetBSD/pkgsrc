@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2482 2022/05/11 08:45:31 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2483 2022/05/11 08:52:36 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3847,3 +3847,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-jaraco.envs to 2.4.0 [adam 2022-05-11]
 	Updated devel/py-setuptools to 62.2.0 [adam 2022-05-11]
 	Updated devel/js_of_ocaml to 4.0.0nb1 [jaapb 2022-05-11]
+	Updated net/ocaml-domain-name to 0.4.0 [jaapb 2022-05-11]
