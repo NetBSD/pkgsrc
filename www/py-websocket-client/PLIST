@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2021/05/05 04:45:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/05/11 17:57:24 bouyer Exp $
 bin/wsdump-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/websocket/__init__.py
@@ -44,12 +45,18 @@ ${PYSITELIB}/websocket/_url.pyo
 ${PYSITELIB}/websocket/_utils.py
 ${PYSITELIB}/websocket/_utils.pyc
 ${PYSITELIB}/websocket/_utils.pyo
+${PYSITELIB}/websocket/_wsdump.py
+${PYSITELIB}/websocket/_wsdump.pyc
+${PYSITELIB}/websocket/_wsdump.pyo
 ${PYSITELIB}/websocket/tests/__init__.py
 ${PYSITELIB}/websocket/tests/__init__.pyc
 ${PYSITELIB}/websocket/tests/__init__.pyo
 ${PYSITELIB}/websocket/tests/data/header01.txt
 ${PYSITELIB}/websocket/tests/data/header02.txt
 ${PYSITELIB}/websocket/tests/data/header03.txt
+${PYSITELIB}/websocket/tests/echo-server.py
+${PYSITELIB}/websocket/tests/echo-server.pyc
+${PYSITELIB}/websocket/tests/echo-server.pyo
 ${PYSITELIB}/websocket/tests/test_abnf.py
 ${PYSITELIB}/websocket/tests/test_abnf.pyc
 ${PYSITELIB}/websocket/tests/test_abnf.pyo
