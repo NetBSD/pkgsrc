@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2022/04/18 19:10:18 adam Exp $
+# $NetBSD: Makefile,v 1.138 2022/05/11 10:29:48 jperkin Exp $
 
 DISTNAME=		xscreensaver-6.03
 PKGREVISION=		1
@@ -30,7 +30,7 @@ CONFIGURE_ARGS+=	--without-motif
 CONFIGURE_ARGS.NetBSD+=	--without-kerberos
 
 #CONFIGURE_ARGS+=	--with-pthread
-#CONFIGURE_ENV+=	ac_cv_x_app_defaults="${PREFIX}/lib/X11/app-defaults"
+CONFIGURE_ENV+=		ac_cv_x_app_defaults="${PREFIX}/lib/X11/app-defaults"
 #CONFIGURE_ENV+=	ac_cv_perl_version="${PERL_VERSION_cmd:sh}"
 #CONFIGURE_ENV+=	INTLTOOL_PERL=${PERL5:Q}
 #.if defined(PKGREVISION)

@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.54 2022/03/08 07:27:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.55 2022/05/11 10:29:48 jperkin Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-demo
 bin/xscreensaver-settings
+lib/X11/app-defaults/XScreenSaver
 libexec/xscreensaver/abstractile
 libexec/xscreensaver/anemone
 libexec/xscreensaver/anemotaxis
