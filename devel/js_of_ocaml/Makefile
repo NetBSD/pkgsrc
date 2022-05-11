@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2022/05/10 08:51:06 jaapb Exp $
+# $NetBSD: Makefile,v 1.40 2022/05/11 08:42:37 jaapb Exp $
 #
 
 DISTNAME=	${GITHUB_PROJECT}-4.0.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 GITHUB_PROJECT=	js_of_ocaml
@@ -24,6 +25,7 @@ DUNE_BUILD_PACKAGES=	${OPAM_INSTALL_FILES}
 .include "options.mk"
 .include "../../devel/menhir/buildlink3.mk"
 .include "../../devel/ocaml-cmdliner/buildlink3.mk"
+.include "../../devel/ocaml-lwt_log/buildlink3.mk"
 .include "../../devel/ocaml-ppx_expect/buildlink3.mk"
 .include "../../devel/ocaml-ppxlib/buildlink3.mk"
 .include "../../devel/ocaml-yojson/buildlink3.mk"
