@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2496 2022/05/11 11:59:35 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2497 2022/05/11 12:21:08 micha Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3864,3 +3864,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/ocaml-cryptokit to 1.17 [jaapb 2022-05-11]
 	Added devel/ocaml-hmap version 0.8.1 [jaapb 2022-05-11]
 	Updated misc/ocaml-magic-mime to 1.2.0 [jaapb 2022-05-11]
+	Updated cross/avr-libc to 2.1.0 [micha 2022-05-11]
