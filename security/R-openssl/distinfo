@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:16:58 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/05/11 14:03:37 mef Exp $
 
-BLAKE2s (R/openssl_1.4.3.tar.gz) = 3221162da3b90bd62fbbcd67f29031aaba6853408704a3667fe28e754638dcb8
-SHA512 (R/openssl_1.4.3.tar.gz) = 8e138f7ce31c5c596bb42da36772488e47163d867fecfe44fc191c47a1d1fad562fdcbc42280c5d331b37be8538765502dad524d7f57ad90baa9161119bdbd72
-Size (R/openssl_1.4.3.tar.gz) = 1207708 bytes
+BLAKE2s (R/openssl_2.0.0.tar.gz) = e0d94a36bdd0edcda739fd47410a52d9a69eecb72a28004dd63ecb70e1744697
+SHA512 (R/openssl_2.0.0.tar.gz) = c432910e880e2297bbe4da91ae5043e75d9c356eb086ff314f0bf4994185158f332907b887891ed8666ad20b438c0316c893c6d8b4f6d38e0fd1b4094a0b9aed
+Size (R/openssl_2.0.0.tar.gz) = 1200448 bytes
