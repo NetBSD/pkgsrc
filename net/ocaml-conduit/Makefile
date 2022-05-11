@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2021/03/08 08:13:04 jaapb Exp $
+# $NetBSD: Makefile,v 1.6 2022/05/11 10:40:58 jaapb Exp $
 
 GITHUB_PROJECT=	ocaml-conduit
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	${GITHUB_PROJECT}-2.1.0
-PKGREVISION=	2
+DISTNAME=	${GITHUB_PROJECT}-5.1.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
 
@@ -16,13 +15,14 @@ USE_LANGUAGES=	# none
 
 OCAML_USE_DUNE=		yes
 DUNE_BUILD_PACKAGES=	conduit
-OPAM_INSTALL_FILES=	conduit
+OPAM_INSTALL_FILES=	${DUNE_BUILD_PACKAGES}
+OCAML_FINDLIB_DIRS=	${DUNE_BUILD_PACKAGES}
 
 .include "options.mk"
 .include "../../devel/ocaml-astring/buildlink3.mk"
 .include "../../devel/ocaml-logs/buildlink3.mk"
 .include "../../devel/ocaml-ppx_sexp_conv/buildlink3.mk"
-.include "../../devel/ocaml-result/buildlink3.mk"
+#.include "../../devel/ocaml-result/buildlink3.mk"
 .include "../../devel/ocaml-sexplib/buildlink3.mk"
 .include "../../net/ocaml-ipaddr/buildlink3.mk"
 .include "../../www/ocaml-uri/buildlink3.mk"
