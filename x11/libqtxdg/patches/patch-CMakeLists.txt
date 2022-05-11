@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2022/05/11 00:30:42 gutteridge Exp $
+
+Install config files to pkgsrc standard location.
+
+--- CMakeLists.txt.orig	2022-05-10 19:59:47.077468288 +0000
++++ CMakeLists.txt
+@@ -68,7 +68,7 @@ message(STATUS "Building ${PROJECT_NAME}
+ if (QTXDG_INSTALL_DEFAPPS_CONFIG)
+     file(GLOB QTXDG_CONFIG_FILES config/*.conf)
+     set(QTXDG_DEFAPPS_CONF_INSTALL_DIR
+-        "${LXQT_ETC_XDG_DIR}" CACHE PATH "Path to qtxdg default apps conf files install dir")
++        "${CMAKE_INSTALL_FULL_DATADIR}/lxqt" CACHE PATH "Path to qtxdg default apps conf files install dir")
+     mark_as_advanced(QTXDG_DEFAPPS_CONF_INSTALL_DIR)
+ endif()
+ 

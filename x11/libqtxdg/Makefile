@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2022/04/24 15:00:00 pin Exp $
+# $NetBSD: Makefile,v 1.20 2022/05/11 00:30:42 gutteridge Exp $
 
-DISTNAME=	libqtxdg-3.9.0
+DISTNAME=	libqtxdg-3.9.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -18,6 +18,7 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
+QTXDG_CONF=		share/lxqt
 PKG_SYSCONFSUBDIR=	xdg
 
 SUBST_CLASSES+=		prefix
@@ -26,6 +27,11 @@ SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	src/qtxdg/xdgdirs.cpp
 SUBST_SED.prefix=	-e 's,/etc/xdg,${PKG_SYSCONFDIR},g'
 SUBST_SED.prefix+=	-e 's,/usr/share,${PREFIX}/share,g'
+
+CONF_FILES=	${QTXDG_CONF}/lxqt-qtxdg.conf \
+		${PKG_SYSCONFDIR}/lxqt-qtxdg.conf
+CONF_FILES+=	${QTXDG_CONF}/qtxdg.conf \
+		${PKG_SYSCONFDIR}/qtxdg.conf
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-Bsymbolic
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-Bsymbolic-functions
