@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2022/04/25 05:56:44 pin Exp $
+# $NetBSD: Makefile,v 1.13 2022/05/11 00:57:30 gutteridge Exp $
 
 PKGNAME=	lxqt-1.1.0
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,7 +14,8 @@ META_PACKAGE=	yes
 
 TOOL_DEPENDS+=	lxqt-build-tools>=0.11.0:../../devel/lxqt-build-tools
 
-DEPENDS+=	libqtxdg>=3.9.0:../../x11/libqtxdg
+DEPENDS+=	libqtxdg>=3.9.1:../../x11/libqtxdg
+DEPENDS+=	qtxdg-tools>=3.9.1:../../x11/qtxdg-tools
 DEPENDS+=	liblxqt>=1.1.0:../../x11/liblxqt
 DEPENDS+=	libfm-qt>=1.1.0:../../x11/libfm-qt
 DEPENDS+=	lxqt-themes>=1.1.0:../../graphics/lxqt-themes
@@ -29,7 +31,7 @@ DEPENDS+=	lxqt-openssh-askpass>=1.1.0:../../security/lxqt-openssh-askpass
 DEPENDS+=	lxqt-notificationd>=1.1.0:../../x11/lxqt-notificationd
 DEPENDS+=	lxqt-powermanagement>=1.1.0:../../sysutils/lxqt-powermanagement
 DEPENDS+=	lxqt-qtplugin>=1.1.0:../../x11/lxqt-qtplugin
-DEPENDS+=	lxqt-session>=1.1.0:../../x11/lxqt-session
+DEPENDS+=	lxqt-session>=1.1.1:../../x11/lxqt-session
 DEPENDS+=	lxqt-sudo>=1.1.0:../../security/lxqt-sudo
 DEPENDS+=	pcmanfm-qt>=1.1.0:../../sysutils/pcmanfm-qt
 DEPENDS+=	qterminal>=1.1.0:../../x11/qterminal
