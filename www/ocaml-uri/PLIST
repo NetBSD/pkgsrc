@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/04/21 11:21:47 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/05/11 10:27:50 jaapb Exp $
 ${OCAML_SITELIB}/uri-sexp/META
 ${OCAML_SITELIB}/uri-sexp/dune-package
 ${OCAML_SITELIB}/uri-sexp/opam
