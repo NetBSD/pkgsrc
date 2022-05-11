@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.265 2022/04/18 19:11:47 adam Exp $
+# $NetBSD: Makefile,v 1.266 2022/05/11 09:23:48 jperkin Exp $
 
-DISTNAME=		vlc-3.0.16
-PKGREVISION=		10
+DISTNAME=		vlc-3.0.17.4
+#PKGREVISION=		10
 CATEGORIES=		multimedia
 MASTER_SITES=		https://download.videolan.org/pub/videolan/vlc/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=		.tar.xz
@@ -28,7 +28,8 @@ PLIST_VARS+=		altivec cdrom egl oss v4l2 x86simd
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-CONFIGURE_ENV=		LUAC=${PREFIX}/bin/luac5.2
+CONFIGURE_ENV+=		BUILDCC=${CC:Q}
+CONFIGURE_ENV+=		LUAC=${PREFIX}/bin/luac5.2
 
 # Avoid codec duplication with ffmpeg, etc
 
@@ -173,7 +174,8 @@ SUBST_MESSAGE.fnt=	Fixing hardcoded font paths.
 CHECK_WRKREF_SKIP=	lib/libvlccore.a \
 			lib/libvlccore.so*
 
-MAKE_FLAGS+=	BUILDCC=${CC:Q}
+CPPFLAGS.SunOS+=	-D__EXTENSIONS__ -D_XOPEN_SOURCE=600
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 # The sed expression is a workaround for accepting NetBSD's libintl instead of gettext-lib
 pre-configure:
