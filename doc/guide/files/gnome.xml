@@ -1,4 +1,4 @@
-<!-- $NetBSD: gnome.xml,v 1.14 2021/06/11 15:09:51 nia Exp $ -->
+<!-- $NetBSD: gnome.xml,v 1.15 2022/05/11 22:48:43 rillig Exp $ -->
 
 <chapter id="gnome"> <?dbhtml filename="gnome.html"?>
 <title>GNOME packaging and porting</title>
@@ -31,18 +31,6 @@ under this operating system.</para>
 interested in helping our GNOME porting and packaging efforts.  It
 provides instructions on how to manage the existing packages and some
 important information regarding their internals.</para>
-
-<note>
-  <title>We need your help!</title>
-
-  <para>Should you have some spare cycles to devote to NetBSD, pkgsrc
-  and GNOME and are willing to learn new exciting stuff, please jump
-  straight to the <ulink
-  url="https://www.NetBSD.org/contrib/projects.html#gnome">pending
-  work</ulink> list!  There is still a long way to go to get a
-  fully-functional GNOME desktop under NetBSD and we need your help to
-  achieve it!</para>
-</note>
 
 <sect1 id="meta-packages">
 <title>Meta packages</title>
@@ -106,9 +94,9 @@ give you a general idea on the minimum required tools:</para>
     package:</para>
 
 <programlisting>
-GNU_CONFIGURE=yes
-USE_LIBTOOL=yes
-USE_TOOLS+=gmake
+GNU_CONFIGURE=  yes
+USE_LIBTOOL=    yes
+USE_TOOLS+=     gmake
 </programlisting>
   </listitem>
 
@@ -117,7 +105,7 @@ USE_TOOLS+=gmake
     tool to the list of required utilities:</para>
 
 <programlisting>
-USE_TOOLS+=pkg-config
+USE_TOOLS+=     pkg-config
 </programlisting>
 
     <para>Also use <filename role="pkg">pkgtools/verifypc</filename> at
@@ -142,7 +130,7 @@ USE_TOOLS+=pkg-config
     the default):</para>
 
 <programlisting>
-CONFIGURE_ARGS+=--disable-gtk-doc
+CONFIGURE_ARGS+=        --disable-gtk-doc
 </programlisting>
 
     <para>The default location of installed HTML files
@@ -153,7 +141,7 @@ CONFIGURE_ARGS+=--disable-gtk-doc
     do that with an entry similar to:</para>
 
 <programlisting>
-CONFIGURE_ARGS+=--with-html-dir=${PREFIX}/share/gtk-doc/...
+CONFIGURE_ARGS+=        --with-html-dir=${PREFIX}/share/gtk-doc/...
 </programlisting>
 
   </listitem>
