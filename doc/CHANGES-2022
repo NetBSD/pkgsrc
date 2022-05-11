@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2487 2022/05/11 09:28:22 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2488 2022/05/11 09:34:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3853,3 +3853,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/vlc to 3.0.17.4 [jperkin 2022-05-11]
 	Updated mail/dovecot2 to 2.3.19 [adam 2022-05-11]
 	Updated mail/dovecot2-pigeonhole to 0.5.19 [adam 2022-05-11]
+	Updated textproc/py-jsonschema to 4.5.1 [adam 2022-05-11]
+	Updated devel/py-ipython to 8.3.0 [adam 2022-05-11]
