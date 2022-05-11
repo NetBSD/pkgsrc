@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2490 2022/05/11 10:23:02 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2491 2022/05/11 10:30:31 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3857,3 +3857,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-ipython to 8.3.0 [adam 2022-05-11]
 	Updated devel/ocaml-bigstringaf to 0.9.0 [jaapb 2022-05-11]
 	Updated devel/ocaml-angstrom to 0.15.0 [jaapb 2022-05-11]
+	Updated www/ocaml-uri to 4.2.0 [jaapb 2022-05-11]
