@@ -1,0 +1,5 @@
+versioningit is yet another setuptools plugin for automatically determining
+your package's version based on your version control repository's tags.
+Unlike others, it allows easy customization of the version format and even
+lets you easily override the separate functions used for version
+extraction & calculation.
