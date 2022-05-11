@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2020/12/21 14:46:02 mef Exp $
+# $NetBSD: Makefile,v 1.2 2022/05/11 14:22:23 mef Exp $
 
 R_PKGNAME=	credentials
-R_PKGVER=	1.3.0
+R_PKGVER=	1.3.2
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,6 +13,8 @@ DEPENDS+=	R-openssl>=1.3:../../security/R-openssl
 DEPENDS+=	R-sys>=2.1:../../sysutils/R-sys
 DEPENDS+=	R-jsonlite>=1.7.1:../../textproc/R-jsonlite
 DEPENDS+=	R-curl>=4.3:../../www/R-curl
+
+TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 
 USE_LANGUAGES=	# none
 
