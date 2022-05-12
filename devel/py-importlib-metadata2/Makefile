@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/01/25 08:55:50 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/05/12 08:17:53 adam Exp $
 
 DISTNAME=	importlib_metadata-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,15 +11,12 @@ HOMEPAGE=	https://importlib-metadata.readthedocs.io/
 COMMENT=	Read metadata from Python packages (python 2.x)
 LICENSE=	apache-2.0
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm5
 DEPENDS+=	${PYPKGPREFIX}-configparser>=3.5:../../devel/py-configparser
 DEPENDS+=	${PYPKGPREFIX}-contextlib2-[0-9]*:../../devel/py-contextlib2
 DEPENDS+=	${PYPKGPREFIX}-pathlib2-[0-9]*:../../devel/py-pathlib2
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging2
 DEPENDS+=	${PYPKGPREFIX}-zipp-[0-9]*:../../archivers/py-zipp1
-BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm5
-TEST_DEPENDS+=	${PYPKGPREFIX}-fakefs-[0-9]*:../../devel/py-fakefs
-TEST_DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=1.3:../../devel/py-importlib-resources
-TEST_DEPENDS+=	${PYPKGPREFIX}-pep517-[0-9]*:../../devel/py-pep517
 
 PYTHON_VERSIONS_ACCEPTED=	27
 
@@ -27,6 +24,10 @@ USE_LANGUAGES=	# none
 
 post-extract:
 	${FIND} ${WRKSRC} -type f -exec ${CHMOD} go-w {} +
+
+# Disable tests as py-fakefs is not available for Python 2.7 anymore.
+do-test:
+	${DO_NADA}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
