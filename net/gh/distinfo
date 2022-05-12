@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2022/05/12 11:15:14 kim Exp $
+$NetBSD: distinfo,v 1.23 2022/05/12 15:41:05 kim Exp $
 
 BLAKE2s (cloud.google.com_go_@v_v0.26.0.mod) = 53d181aacbf96ec4f9cdd051466576dbb6959ca71a825bc6672046c7c53a2b43
 SHA512 (cloud.google.com_go_@v_v0.26.0.mod) = 5132f3438533427c0ab0fbb7a12112a7830ea9122662ed46019ff89c71d9cf80c02edc32dd5c892da572031b5a2cce100f2602fa6a19bea6be7c02781f701273
@@ -252,9 +252,12 @@ Size (github.com_cncf_udpa_go_@v_v0.0.0-20191209042840-269d4d468f6f.zip) = 21230
 BLAKE2s (github.com_cpuguy83_go-md2man_v2_@v_v2.0.1.mod) = 5d28aa7bd4d3be65c094ff1eff00044ed7a895928d188f7a279b5bd9a596d393
 SHA512 (github.com_cpuguy83_go-md2man_v2_@v_v2.0.1.mod) = d39412bb14c058291d07276337f802547bfb1a682cc65199cb04334f8089b6ea5d4d73587c2765c518f9e27fa3421c276eaea616d7cfbe36a2a244326edf1cb5
 Size (github.com_cpuguy83_go-md2man_v2_@v_v2.0.1.mod) = 100 bytes
-BLAKE2s (github.com_cpuguy83_go-md2man_v2_@v_v2.0.1.zip) = 6f0ce1b510d23976eebdc98ca1b52465902d9bfdd5b751037edc7963957ebe84
-SHA512 (github.com_cpuguy83_go-md2man_v2_@v_v2.0.1.zip) = ff2673f81d7fab4ab07edd3b3fddba2243931ddbb0dfd104ca389eee137e56fa33f23a4bb8fdd6ccdf325fcaf134adc16dce9e89c9105783afc0fc4ef1419892
-Size (github.com_cpuguy83_go-md2man_v2_@v_v2.0.1.zip) = 12383 bytes
+BLAKE2s (github.com_cpuguy83_go-md2man_v2_@v_v2.0.2.mod) = 5d28aa7bd4d3be65c094ff1eff00044ed7a895928d188f7a279b5bd9a596d393
+SHA512 (github.com_cpuguy83_go-md2man_v2_@v_v2.0.2.mod) = d39412bb14c058291d07276337f802547bfb1a682cc65199cb04334f8089b6ea5d4d73587c2765c518f9e27fa3421c276eaea616d7cfbe36a2a244326edf1cb5
+Size (github.com_cpuguy83_go-md2man_v2_@v_v2.0.2.mod) = 100 bytes
+BLAKE2s (github.com_cpuguy83_go-md2man_v2_@v_v2.0.2.zip) = 7f5fbbc9f0fbf2427d07c23c257d64746e06ab20abcfdcd50fadf5f0c01f5307
+SHA512 (github.com_cpuguy83_go-md2man_v2_@v_v2.0.2.zip) = 311a471e5080d971d5dd3f353367d5e370a22e0e0c6134de8f5d5a4574e6e0be2e303d81fb3054d5298e695dfa8d15b973450ae71c8167fda8a7daffb01d4190
+Size (github.com_cpuguy83_go-md2man_v2_@v_v2.0.2.zip) = 12539 bytes
 BLAKE2s (github.com_creack_pty_@v_v1.1.17.mod) = 19b33a84ea62506eb4da7226657fea56d1c17f128a045f166d91db907c32c93e
 SHA512 (github.com_creack_pty_@v_v1.1.17.mod) = b825d82c81fd02f7dc8be5be8d4f0e3b9bf39a75e453857ab3f4d8d17129d2214f6b4dddd18cd613cb4d29dbd5adc59f43c1f65d218e7f3b67f0a8e33e62f5a6
 Size (github.com_creack_pty_@v_v1.1.17.mod) = 38 bytes
@@ -444,9 +447,12 @@ Size (github.com_google_go-cmp_@v_v0.5.4.mod) = 105 bytes
 BLAKE2s (github.com_google_go-cmp_@v_v0.5.7.mod) = a52896592ad76206ba05a7353d4d216425c1bbd705757dd4b5f62f5cac0b85a2
 SHA512 (github.com_google_go-cmp_@v_v0.5.7.mod) = 731d289da30616cc638958da98fbaed6eba9cd7b325c845bafa8f8a316c5fbfdf2eada196a0e25a50512c18d2a6aaa771d63cec0d42a25e9c8a2c7bc3d3f1cb3
 Size (github.com_google_go-cmp_@v_v0.5.7.mod) = 106 bytes
-BLAKE2s (github.com_google_go-cmp_@v_v0.5.7.zip) = 95bb1d0e88b5ff354e12ba0755feb1498fba986181fc469be0b4598ea5ea54d4
-SHA512 (github.com_google_go-cmp_@v_v0.5.7.zip) = 60e409c8210c4accc315004a674a397c4aa1d0fa150627756047ca3e87cbed4dd78509e76a490f7cd6989760ac0ad71fe8c712dfbf9009070a110290c2cb3126
-Size (github.com_google_go-cmp_@v_v0.5.7.zip) = 132348 bytes
+BLAKE2s (github.com_google_go-cmp_@v_v0.5.8.mod) = becdef0764c43b119969e6c10646c6fafece1f936110eaa977757d2e2e381cd0
+SHA512 (github.com_google_go-cmp_@v_v0.5.8.mod) = 89e0014b0c3ffa2578ab38c237fee3d2280d6955e810c83e426d4924cec07cfc796adc45074fc237629c5ff88a93044dc406472febf1adf73deae82cb1b24b80
+Size (github.com_google_go-cmp_@v_v0.5.8.mod) = 41 bytes
+BLAKE2s (github.com_google_go-cmp_@v_v0.5.8.zip) = 7addfca60d0b67977d8f3d650cc9d5a8db78509eb2f1672fbb0d47f390cfd418
+SHA512 (github.com_google_go-cmp_@v_v0.5.8.zip) = 608936142ed0583ccd79d921f29cc039cd84c926ab4daa7f8ecb024ef27f0c9c685d9c97f259cce56dacabfaa86033c1b3b4b199fd051c47f20906e3bc278368
+Size (github.com_google_go-cmp_@v_v0.5.8.zip) = 131550 bytes
 BLAKE2s (github.com_google_martian_@v_v2.1.0+incompatible.mod) = 50fbcf00e2fabe446d1e13e31e0049c38ee01415e25f6bc20595b926a111f92e
 SHA512 (github.com_google_martian_@v_v2.1.0+incompatible.mod) = cffb5dc1c6531ae9d5998b3a57ba14de5dd8631a36dd48975da07ce5ec052d97b6f632c5d30ab9ab695f178758837aae8a6344c67d57c7a39ca8e9243f8211df
 Size (github.com_google_martian_@v_v2.1.0+incompatible.mod) = 33 bytes
