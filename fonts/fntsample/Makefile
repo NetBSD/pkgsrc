@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.43 2022/02/18 20:46:44 fcambus Exp $
-#
+# $NetBSD: Makefile,v 1.44 2022/05/12 06:10:31 wiz Exp $
 
-VERSION=	5.4
-DISTNAME=	fntsample-${VERSION}
+DISTNAME=	fntsample-5.4
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=eugmes/}
-GITHUB_TAG=	release/${VERSION}
+GITHUB_TAG=	release/${PKGVERSION_NOREV}
 
-BLOCKS_TXT=		Blocks-20190308.txt
+BLOCKS_TXT=		Blocks-20220122.txt
 DISTFILES=		${DEFAULT_DISTFILES} ${BLOCKS_TXT}
 SITES.${BLOCKS_TXT}=	-http://unicode.org/Public/UNIDATA/Blocks.txt
 
