@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2022/05/12 08:05:28 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2022/05/12 08:20:36 wiz Exp $
 
 DISTNAME=	Babel-2.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -17,7 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 .include "../../lang/python/pyversion.mk"
 
-.if ${_PYTHON_VERSION} == 27
+.if ${_PYTHON_VERSION} != 27
 # freezegun is only available for python 3
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 .endif
