@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/05/12 19:39:00 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2022/05/12 19:55:54 tnn Exp $
 
 DISTNAME=	modular-xorg-xquartz-1.20.99.1.20210408
 CATEGORIES=	x11
@@ -84,12 +84,16 @@ MAKE_ENV+=		OSX_SDK_PATH=${XCODE_SDK_PATH}
 
 MESSAGE_SUBST+=		PREFIX=${PREFIX}
 
+CHECK_PORTABILITY_SKIP+=	test/scripts/*
+CHECK_PORTABILITY_SKIP+=	hw/xquartz/bundle/*
+
 pre-configure:
 	cd ${WRKSRC} && autoreconf -vif
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../fonts/font-util/buildlink3.mk"
 .include "../../fonts/libfontenc/buildlink3.mk"
 .include "../../graphics/libepoxy/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
