@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2022/05/12 06:50:16 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2022/05/12 19:37:39 adam Exp $
 
 DISTNAME=	importlib_metadata-4.11.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/importlib-metadata/}
 
@@ -31,5 +32,8 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.6.4:../../devel/py-typing-extensio
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
-.include "../../lang/python/wheel.mk"
+# IMPORTANT: as long as there is Python 3.7, do not use wheel.mk;
+# it requires devel/py-build which depends on this package.
+PYSETUP=	-c 'from setuptools import setup; setup()'
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
