@@ -1,0 +1,24 @@
+$NetBSD: patch-opendmarc_opendmarc.conf.5.in,v 1.1 2022/05/12 13:49:28 jperkin Exp $
+
+Add RequiredFrom option to reject messages that lack a From header from which
+a valid domain can be extracted.
+
+Submitted upstream https://github.com/trusteddomainproject/OpenDMARC/pull/147
+
+--- opendmarc/opendmarc.conf.5.in.orig	2021-12-20 06:40:37.000000000 +0000
++++ opendmarc/opendmarc.conf.5.in
+@@ -288,6 +288,14 @@ failing this test are rejected without f
+ field from which no domain name could be extracted will also be rejected.
+ 
+ .TP
++.I RequiredFrom (Boolean)
++If set, the filter will reject without further processing messages that lack a
++From: field from which a domain name could be extracted. This options is
++without effect if
++.I RequiredHeaders
++is set to "true".
++
++.TP
+ .I Socket (string)
+ Specifies the socket that should be established by the filter to receive
+ connections from

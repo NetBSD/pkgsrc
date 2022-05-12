@@ -1,7 +1,6 @@
-$NetBSD: patch-opendmarc_parse.c,v 1.1 2021/05/27 16:52:00 manu Exp $
+$NetBSD: patch-opendmarc_parse.c,v 1.2 2022/05/12 13:49:28 jperkin Exp $
 
-Make sure a trailing brackets corresponds to a leading one
-aaa98f5
+Make sure a trailing brackets corresponds to a leading one.
 
 This fixes the case where the sender e-mail address is user@example.net>
 Without this fix, OpenDMARC parses the domain as example.net> and skip
@@ -12,10 +11,9 @@ own, letting forged e-mail passing through to user mailboxes.
 
 Submitted upstream https://github.com/trusteddomainproject/OpenDMARC/pull/174
 
---- opendmarc/parse.c.orig	2021-05-27 09:45:40.873727663 +0200
-+++ opendmarc/parse.c	2021-05-27 09:45:27.545312746 +0200
-@@ -444,8 +444,13 @@
- 					*w++ = '\0';
+--- opendmarc/parse.c.orig	2021-12-20 06:40:37.000000000 +0000
++++ opendmarc/parse.c
+@@ -454,6 +454,11 @@ dmarcf_mail_parse(unsigned char *line, u
  					*domain_out = w;
  					ws = 0;
  				}
@@ -27,4 +25,3 @@ Submitted upstream https://github.com/trusteddomainproject/OpenDMARC/pull/174
  				else
  				{
  
- 					if (*user_out == NULL)
