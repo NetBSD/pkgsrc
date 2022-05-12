@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/05/08 09:12:21 pin Exp $
+# $NetBSD: Makefile,v 1.4 2022/05/12 09:34:31 pin Exp $
 
 DISTNAME=	angle-grinder-0.18.0
 CATEGORIES=	textproc
@@ -13,7 +13,7 @@ LICENSE=	mit
 .include "cargo-depends.mk"
 
 USE_LANGUAGES+=		c c++
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		gmake pkg-config
 
 INSTALLATION_DIRS=	bin
 
