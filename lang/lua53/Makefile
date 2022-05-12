@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/07/02 10:15:20 nia Exp $
+# $NetBSD: Makefile,v 1.7 2022/05/12 12:32:49 gdt Exp $
 
 DISTNAME=	lua-${LUA_VERSION}
 PKGNAME=	lua53-${LUA_VERSION}
@@ -10,6 +10,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.lua.org/
 COMMENT=	Lightweight, embeddable scripting language (v5.3)
 LICENSE=	mit
+
+# Note that there is no builtin.mk for lua on purpose, roughly because
+# installing extension modules from pkgsrc would not work well with
+# base system lua.
 
 .include "../../lang/lua53/version.mk"
 
