@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.16 2022/04/03 18:37:02 bsiegert Exp $
+# $NetBSD: go-modules.mk,v 1.17 2022/05/12 15:41:05 kim Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.34.0.mod
@@ -83,7 +83,8 @@ GO_MODULE_FILES+=	github.com/client9/misspell/@v/v0.3.4.zip
 GO_MODULE_FILES+=	github.com/cncf/udpa/go/@v/v0.0.0-20191209042840-269d4d468f6f.mod
 GO_MODULE_FILES+=	github.com/cncf/udpa/go/@v/v0.0.0-20191209042840-269d4d468f6f.zip
 GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.1.mod
-GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.1.zip
+GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.2.mod
+GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.2.zip
 GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.17.mod
 GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.18.mod
 GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.18.zip
@@ -147,7 +148,8 @@ GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.5.0.mod
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.5.1.mod
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.5.4.mod
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.5.7.mod
-GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.5.7.zip
+GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.5.8.mod
+GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.5.8.zip
 GO_MODULE_FILES+=	github.com/google/martian/@v/v2.1.0+incompatible.mod
 GO_MODULE_FILES+=	github.com/google/martian/@v/v2.1.0+incompatible.zip
 GO_MODULE_FILES+=	github.com/google/martian/v3/@v/v3.0.0.mod
