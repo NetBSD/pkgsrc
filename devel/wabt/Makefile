@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/05/05 07:04:29 fcambus Exp $
+# $NetBSD: Makefile,v 1.11 2022/05/12 08:10:30 fcambus Exp $
 
 DISTNAME=	wabt-1.0.29
 CATEGORIES=	devel
@@ -13,7 +13,7 @@ CONFIGURE_DIRS=	${WRKDIR}/build
 CMAKE_ARG_PATH=	${WRKSRC}
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++17
 
 CMAKE_ARGS+=	-DBUILD_TESTS=OFF -DBUILD_LIBWASM=OFF
 
