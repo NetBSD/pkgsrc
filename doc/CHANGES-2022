@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2519 2022/05/12 08:11:02 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2520 2022/05/12 09:33:30 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3890,3 +3890,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added sysutils/py-ansible-compat version 2.0.3 [adam 2022-05-12]
 	Added textproc/py-yamllint version 1.26.3 [adam 2022-05-12]
 	Updated devel/py-freezegun to 1.2.1 [wiz 2022-05-12]
+	Updated sysutils/dua-cli to 2.17.4 [pin 2022-05-12]
