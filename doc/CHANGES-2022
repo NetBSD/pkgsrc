@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2528 2022/05/12 19:04:27 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2529 2022/05/12 19:40:06 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3906,3 +3906,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/postgresql12 to 12.11 [adam 2022-05-12]
 	Updated databases/postgresql13 to 13.7 [adam 2022-05-12]
 	Updated databases/postgresql14 to 14.3 [adam 2022-05-12]
+	Updated x11/modular-xorg-xquartz to 1.20.99.1.20210408 [tnn 2022-05-12]
