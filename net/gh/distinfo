@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2022/04/03 18:37:02 bsiegert Exp $
+$NetBSD: distinfo,v 1.22 2022/05/12 11:15:14 kim Exp $
 
 BLAKE2s (cloud.google.com_go_@v_v0.26.0.mod) = 53d181aacbf96ec4f9cdd051466576dbb6959ca71a825bc6672046c7c53a2b43
 SHA512 (cloud.google.com_go_@v_v0.26.0.mod) = 5132f3438533427c0ab0fbb7a12112a7830ea9122662ed46019ff89c71d9cf80c02edc32dd5c892da572031b5a2cce100f2602fa6a19bea6be7c02781f701273
@@ -117,9 +117,9 @@ Size (dmitri.shuralyov.com_gpu_mtl_@v_v0.0.0-20190408044501-666a987793e9.mod) = 
 BLAKE2s (dmitri.shuralyov.com_gpu_mtl_@v_v0.0.0-20190408044501-666a987793e9.zip) = d95edcd2894a7a7dbe0b36fc5d188fd3b887c65cdd8ff589b7bfe60348b8025d
 SHA512 (dmitri.shuralyov.com_gpu_mtl_@v_v0.0.0-20190408044501-666a987793e9.zip) = 4206fa50ea8f056656804388954562efcc78a14ed8f249801c601ccd399f70ea101e5299e07bd9b86e6e137a3cd2103209ef186193a1129e108b224ee5497432
 Size (dmitri.shuralyov.com_gpu_mtl_@v_v0.0.0-20190408044501-666a987793e9.zip) = 33828 bytes
-BLAKE2s (gh-2.7.0.tar.gz) = f33fd7894661fab748c9c24b9c772f6094d20b6105ab1884dd9ddb460fd305f7
-SHA512 (gh-2.7.0.tar.gz) = 5be8075d2eede5d4b38ca0de03f9aca03add41f9d9d4ab9ac77834ea8f051709e0673094d851e2720177da4a3a1fb579256fb9cde9366a2b0cb79d0b76141734
-Size (gh-2.7.0.tar.gz) = 694408 bytes
+BLAKE2s (gh-2.10.1.tar.gz) = 9c50f8ac6ac03e71a437a2d05c9a57c3aee93ddd2cfea118c1adf1d28d9997fe
+SHA512 (gh-2.10.1.tar.gz) = 4d80e0dd7bf9fc4216b680b3d221600a9d2ee1e1e45962480964341c4a4fa40b93ff812719eee1567b6c8059261c54f60f12bd4f2fda24013fae59667cdcc533
+Size (gh-2.10.1.tar.gz) = 712763 bytes
 BLAKE2s (github.com__alec_aivazis_survey_v2_@v_v2.3.4.mod) = 96bde62d5cb0328ac5d83b64f4f16eb8c1509ccbdb01e52e874c06e81728be02
 SHA512 (github.com__alec_aivazis_survey_v2_@v_v2.3.4.mod) = b69dc9ec295640230cb1578d54b60080572081d1628d5ca44c87f15e5e3c76ae375076491018935c31f7cec5c0d1861b23d64f2472c81ac0cd6e981488abc74a
 Size (github.com__alec_aivazis_survey_v2_@v_v2.3.4.mod) = 595 bytes
