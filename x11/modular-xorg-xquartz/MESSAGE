@@ -1,15 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2015/10/01 12:55:09 tnn Exp $
+$NetBSD: MESSAGE,v 1.2 2022/05/12 19:39:00 tnn Exp $
 
 To finish the installation of pkgsrc X11 on your Mac:
 
-$ sudo mv /Applications/Utilities/X11.app /Applications/Utilities/X11.app.bak
-$ sudo ln -s ${PREFIX}/Applications/Utilities/X11.app /Applications/Utilities
+$ ln -sf ${PREFIX}/Applications/Utilities/X11.app ~/Applications/X11.app
 
-$ echo "${PREFIX}/bin/xterm &" > ~/.xinitrc
-$ echo ${PREFIX}/bin/quartz-wm >> ~/.xinitrc
-$ ${PREFIX}/bin/startx -- ${PREFIX}/bin/Xquartz
-
-You can also launch X11.app from finder instead of the last step.
+Then click on ~/Applications/X11 in Finder.
 
 ===========================================================================
