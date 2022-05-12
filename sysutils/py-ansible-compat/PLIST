@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2022/05/12 08:07:34 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/ansible_compat/__init__.py
+${PYSITELIB}/ansible_compat/__init__.pyc
+${PYSITELIB}/ansible_compat/config.py
+${PYSITELIB}/ansible_compat/config.pyc
+${PYSITELIB}/ansible_compat/constants.py
+${PYSITELIB}/ansible_compat/constants.pyc
+${PYSITELIB}/ansible_compat/errors.py
+${PYSITELIB}/ansible_compat/errors.pyc
+${PYSITELIB}/ansible_compat/loaders.py
+${PYSITELIB}/ansible_compat/loaders.pyc
+${PYSITELIB}/ansible_compat/ports.py
+${PYSITELIB}/ansible_compat/ports.pyc
+${PYSITELIB}/ansible_compat/prerun.py
+${PYSITELIB}/ansible_compat/prerun.pyc
+${PYSITELIB}/ansible_compat/py.typed
+${PYSITELIB}/ansible_compat/runtime.py
+${PYSITELIB}/ansible_compat/runtime.pyc
