@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2522 2022/05/12 11:15:36 kim Exp $
+$NetBSD: CHANGES-2022,v 1.2523 2022/05/12 11:27:12 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3894,3 +3894,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed games/genecys-client [wiz 2022-05-12]
 	Removed games/genecys-data [wiz 2022-05-12]
 	Updated net/gh to 2.10.1 [kim 2022-05-12]
+	Updated www/php-nextcloud to 23.0.4 [khorben 2022-05-12]
