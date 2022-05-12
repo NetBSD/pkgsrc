@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2022/01/05 15:41:01 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2022/05/12 08:05:28 wiz Exp $
 
 DISTNAME=	Babel-2.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -12,9 +12,15 @@ COMMENT=	Collection of tools for internationalizing Python applications
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-pytz>=2015.7:../../time/py-pytz
-TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+
+.include "../../lang/python/pyversion.mk"
+
+.if ${_PYTHON_VERSION} == 27
+# freezegun is only available for python 3
+TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
+.endif
 
 USE_LANGUAGES=	# none
 
