@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.15 2022/03/10 10:09:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2022/05/12 19:39:00 tnn Exp $
 
-DISTNAME=	xorg-server-1.17.2
-PKGNAME=	${DISTNAME:S/xorg-server/modular-xorg-xquartz/}
-PKGREVISION=	6
+DISTNAME=	modular-xorg-xquartz-1.20.99.1.20210408
 CATEGORIES=	x11
-MASTER_SITES=	https://www.x.org/releases/individual/xserver/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=XQuartz/}
+GITHUB_PROJECT=	xorg-server
+GITHUB_TAG=	199f278a1b7570b1cb6e24b8bedb4d721b3c9938
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.x.org/releases/individual/xserver/
+HOMEPAGE=	https://www.xquartz.org/
 COMMENT=	X11 server for Mac OS X
 LICENSE=	mit
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	gmake pkg-config autoconf automake autoreconf
 USE_LANGUAGES=	c c++ objc
 
 ONLY_FOR_PLATFORM=	Darwin-*-*
@@ -85,6 +84,9 @@ MAKE_ENV+=		OSX_SDK_PATH=${XCODE_SDK_PATH}
 
 MESSAGE_SUBST+=		PREFIX=${PREFIX}
 
+pre-configure:
+	cd ${WRKSRC} && autoreconf -vif
+
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
@@ -98,7 +100,7 @@ MESSAGE_SUBST+=		PREFIX=${PREFIX}
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
-.include "../../x11/libXfont/buildlink3.mk"
+.include "../../x11/libXfont2/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
