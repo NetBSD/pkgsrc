@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2022/05/12 12:37:54 wiz Exp $
+
+Build fix from arch linux package.
+
+--- CMakeLists.txt.orig	2017-08-30 11:48:37.000000000 +0000
++++ CMakeLists.txt
+@@ -46,6 +46,8 @@ ecm_setup_version(${LIBMEDIAWIKI_LIBVERS
+ find_package(Qt5 ${REQUIRED_QT_VERSION} NO_MODULE REQUIRED Core Network)
+ find_package(KF5CoreAddons ${KF5_VERSION} REQUIRED)
+ 
++remove_definitions(-DQT_NO_CAST_FROM_ASCII)
++
+ # Subdirectories
+ add_subdirectory(src)
+ add_subdirectory(autotests)
