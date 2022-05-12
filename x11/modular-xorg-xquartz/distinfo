@@ -1,20 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:34:15 nia Exp $
+$NetBSD: distinfo,v 1.6 2022/05/12 19:39:00 tnn Exp $
 
-BLAKE2s (xorg-server-1.17.2.tar.bz2) = ba8a8b288ee5e968ee74b364dbf09a3433a80ed7127540fc0cef2653c17c2495
-SHA512 (xorg-server-1.17.2.tar.bz2) = 7e7b7620890cc8db696695758fa22fa879f9d3c33946663611ec0b37f02116e9c6f08779f9eece59907b430d3df93f0c0548939683ea156b3c4cbe02571b7551
-Size (xorg-server-1.17.2.tar.bz2) = 5767983 bytes
-SHA1 (patch-fb_fb.h) = 82099b0982da0d9d64e3ae8f03393ec0df22f916
-SHA1 (patch-fb_fbpict.c) = 101645f653665c917c0f899b0eb771e7ff1280c4
-SHA1 (patch-fb_fbpict.h) = 686d6634e0cee9b56660787b616435c8134f8c61
-SHA1 (patch-fb_fbscreen.c) = 6bc92e7002f215430e8647337d596bfe99d3d63a
-SHA1 (patch-fb_fbtrap.c) = 60e74d8d6f86dfb24491b17170e02a6040ad9abb
-SHA1 (patch-hw_xfree86_Makefile.am) = 0388fa2a2cb08194def579c014848eaf66f02b24
-SHA1 (patch-hw_xquartz_GL_indirect.c) = f915ce2f6043c21cbaf6a656b7339776156b609e
-SHA1 (patch-hw_xquartz_X11Application.m) = b97759b8e81b582dcf3600a1c3a0b387d2ae24f8
-SHA1 (patch-hw_xquartz_X11Controller.m) = d25fb8915d6ee9b1214a346d3042b47a43ee46f8
-SHA1 (patch-hw_xquartz_pbproxy_Makefile.in) = a877cf56033544b46169757c1ceda5f17fe7a224
-SHA1 (patch-mi_miexpose.c) = e53cbee2330300ef016aae5a5ee9fe8a65efc46b
-SHA1 (patch-render_mipict.c) = fa9058f76d69d9227c41f16094a9ee9926214337
-SHA1 (patch-render_mipict.h) = 11ee673c750ce7860670110ce792ad9f0094d4ad
-SHA1 (patch-render_mitrap.c) = d31fdb56b129b4d5c131dd8caaac41cc37df9f99
-SHA1 (patch-render_mitri.c) = dfb0061cb39bfadea0ac32f77f03e988f958d14c
+BLAKE2s (modular-xorg-xquartz-1.20.99.1.20210408-199f278a1b7570b1cb6e24b8bedb4d721b3c9938.tar.gz) = bbc49d4841aadc00b5a286ae861e2624e55a123094c32d21af2bc2cd196ce566
+SHA512 (modular-xorg-xquartz-1.20.99.1.20210408-199f278a1b7570b1cb6e24b8bedb4d721b3c9938.tar.gz) = 2c543487de54ef94d528efca3263d0a3fd2fc95e20a2d8ae4c7eb4f8adc52f16b072d56024a8ad072bf703c9939bb08e45368c5c7fdc7d27662ba95b4eb9ecb2
+Size (modular-xorg-xquartz-1.20.99.1.20210408-199f278a1b7570b1cb6e24b8bedb4d721b3c9938.tar.gz) = 5849819 bytes
