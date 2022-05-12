@@ -1,0 +1,1 @@
+bin/yamllint @PREFIX@/bin/yamllint-@PYVERSSUFFIX@
