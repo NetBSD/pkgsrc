@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/05/11 17:51:43 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2022/05/12 06:07:02 wiz Exp $
 
 DISTNAME=	versioningit-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/versioningit/}
 
@@ -10,13 +11,28 @@ HOMEPAGE=	https://github.com/jwodder/versioningit
 COMMENT=	Use version control tags to discover version numbers
 LICENSE=	isc
 
+DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-wheel>=0.32:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-tomli>=1.2:../../textproc/py-tomli
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.32:../../devel/py-wheel
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
+#TEST_DEPENDS+=	${PYPKGPREFIX}-dantic-[0-9]*:../../wip/py-dantic
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
-post-extract: setuppy
-.PHONY: setuppy
-setuppy:
-	${CP} ${FILESDIR}/setup.py ${WRKSRC}/
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/pyversion.mk"
+
+.if ${_PYTHON_VERSION} < 310
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
+.endif
+
+# as of 1.1.1
+# 8 failed, 319 passed, 88 skipped
+TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
