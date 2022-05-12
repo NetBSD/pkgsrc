@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1002 2022/05/08 09:10:59 pin Exp $
+# $NetBSD: Makefile,v 1.1003 2022/05/12 08:07:34 adam Exp $
 #
 
 COMMENT=	System utilities
@@ -548,6 +548,7 @@ SUBDIR+=	pv
 SUBDIR+=	pwgen
 SUBDIR+=	py-Glances
 SUBDIR+=	py-Send2Trash
+SUBDIR+=	py-ansible-compat
 SUBDIR+=	py-appnope
 SUBDIR+=	py-augeas
 SUBDIR+=	py-borgbackup
@@ -577,6 +578,7 @@ SUBDIR+=	py-setproctitle
 SUBDIR+=	py-sh
 SUBDIR+=	py-stack-data
 SUBDIR+=	py-structlog
+SUBDIR+=	py-subprocess-tee
 SUBDIR+=	py-supervisor
 SUBDIR+=	py-syslog-ng
 SUBDIR+=	py-watchdog
