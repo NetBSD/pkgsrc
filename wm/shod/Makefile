@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2022/03/14 10:22:49 pin Exp $
+# $NetBSD: Makefile,v 1.6 2022/05/12 09:37:44 pin Exp $
 
 DISTNAME=	shod-2.4.0
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=phillbush/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/phillbush/shod/
 COMMENT=	Hybrid (floating and tiling) tabbed window manager
 LICENSE=	mit
