@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2021/10/08 10:23:43 adam Exp $
+# $NetBSD: options.mk,v 1.2 2022/05/12 13:03:57 abs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql14
-PKG_SUPPORTED_OPTIONS=	bonjour dtrace icu llvm gssapi ldap nls pam
-PKG_SUGGESTED_OPTIONS=	gssapi nls
+PKG_SUPPORTED_OPTIONS=	bonjour dtrace icu llvm gssapi ldap nls pam lz4
+PKG_SUGGESTED_OPTIONS=	gssapi nls lz4
 
 PLIST_VARS+=		gssapi llvm nls
 
@@ -50,6 +50,13 @@ CONFIGURE_ARGS+=	--with-ldap
 CONFIGURE_ARGS+=	--with-llvm
 CONFIGURE_ENV+=		CLANG=${CC}	# XXX: make it be better
 PLIST.llvm=		yes
+.endif
+
+# lz4 support
+.if !empty(PKG_OPTIONS:Mlz4)
+.  include "../../archivers/lz4/buildlink3.mk"
+USE_TOOLS+=		pkg-config
+CONFIGURE_ARGS+=	--with-lz4
 .endif
 
 # NLS support
