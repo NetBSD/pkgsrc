@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/03/16 17:00:40 fcambus Exp $
+# $NetBSD: Makefile,v 1.5 2022/05/12 08:39:48 fcambus Exp $
 
 DISTNAME=	qodem-1.0.1
 CATEGORIES=	comms
@@ -11,13 +11,7 @@ LICENSE=	cc0-1.0-universal
 
 GNU_CONFIGURE=	yes
 
-CONFIGURE_ARGS+=	--disable-sdl --disable-upnp
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} != "Linux"
-CONFIGURE_ARGS+=	--disable-gpm
-.endif
+CONFIGURE_ARGS+=	--disable-gpm --disable-sdl --disable-upnp
 
 .include "../../devel/ncursesw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
