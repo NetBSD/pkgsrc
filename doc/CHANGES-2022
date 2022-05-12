@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2516 2022/05/12 07:44:00 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2517 2022/05/12 07:57:33 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3885,3 +3885,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/fntsample to 5.4nb1 [wiz 2022-05-12]
 	Updated devel/py-fakefs to 4.5.6 [adam 2022-05-12]
 	Updated net/py-zeroconf to 0.38.6 [adam 2022-05-12]
+	Updated devel/binaryen to 108 [fcambus 2022-05-12]
