@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2515 2022/05/12 06:10:40 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2516 2022/05/12 07:44:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3883,3 +3883,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-importlib-metadata to 4.11.3 [adam 2022-05-12]
 	Updated devel/py-versioningit to 1.1.1nb1 [wiz 2022-05-12]
 	Updated fonts/fntsample to 5.4nb1 [wiz 2022-05-12]
+	Updated devel/py-fakefs to 4.5.6 [adam 2022-05-12]
+	Updated net/py-zeroconf to 0.38.6 [adam 2022-05-12]
