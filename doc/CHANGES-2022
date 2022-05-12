@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2524 2022/05/12 13:16:36 abs Exp $
+$NetBSD: CHANGES-2022,v 1.2525 2022/05/12 13:49:38 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3896,3 +3896,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/gh to 2.10.1 [kim 2022-05-12]
 	Updated www/php-nextcloud to 23.0.4 [khorben 2022-05-12]
 	Updated devel/visualvm to 2.1.3 [abs 2022-05-12]
+	Updated mail/opendmarc to 1.4.2 [jperkin 2022-05-12]
