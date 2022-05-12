@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2022/05/05 12:07:28 nia Exp $
+# $NetBSD: Makefile,v 1.32 2022/05/12 12:52:55 wiz Exp $
 
 DISTNAME=	kitty-0.25.0
 CATEGORIES=	x11
@@ -25,6 +25,8 @@ BUILDLINK_TRANSFORM+=	rm:-pedantic-errors
 # kitty's homegrown packaging expects the functionality of tic(1) that
 # comes with ncurses.
 USE_NCURSES=	yes
+
+CHECK_INTERPRETER_SKIP=	lib/kitty/shell-integration/ssh/askpass.py
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
