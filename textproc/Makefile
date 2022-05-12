@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1315 2022/05/09 21:53:38 pin Exp $
+# $NetBSD: Makefile,v 1.1316 2022/05/12 08:10:26 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1160,6 +1160,7 @@ SUBDIR+=	py-xmlschema
 SUBDIR+=	py-xmltodict
 SUBDIR+=	py-yamcha
 SUBDIR+=	py-yaml
+SUBDIR+=	py-yamllint
 SUBDIR+=	py27-cssselect2
 SUBDIR+=	py27-jinja2
 SUBDIR+=	py27-markupsafe
