@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2526 2022/05/12 14:03:55 taca Exp $
+$NetBSD: CHANGES-2022,v 1.2527 2022/05/12 14:53:51 kim Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3898,3 +3898,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/visualvm to 2.1.3 [abs 2022-05-12]
 	Updated mail/opendmarc to 1.4.2 [jperkin 2022-05-12]
 	Updated lang/php80 to 8.0.19 [taca 2022-05-12]
+	Updated shells/tcsh to 6.24.01 [kim 2022-05-12]
+	Updated shells/standalone-tcsh to 6.24.01 [kim 2022-05-12]
+	Updated shells/static-tcsh to 6.24.01 [kim 2022-05-12]
