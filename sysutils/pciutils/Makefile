@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2022/01/09 22:31:57 tnn Exp $
+# $NetBSD: Makefile,v 1.50 2022/05/13 11:41:56 wiz Exp $
 
-DISTNAME=	pciutils-3.7.0
-PKGREVISION=	2
+DISTNAME=	pciutils-3.8.0
 CATEGORIES=	sysutils
 MASTER_SITES+=	https://www.kernel.org/pub/software/utils/pciutils/
 
