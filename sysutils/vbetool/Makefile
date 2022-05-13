@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2021/12/19 09:47:59 maya Exp $
-#
+# $NetBSD: Makefile,v 1.13 2022/05/13 15:46:09 wiz Exp $
 
 DISTNAME=	vbetool_0.7-1
 PKGNAME=	vbetool-0.7.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.codon.org.uk/~mjg59/vbetool/download/
 
@@ -25,5 +24,6 @@ CONFIGURE_ARGS=	--with-x86emu
 # This gives us libi386 and libx86_64.
 LIBS.NetBSD+=	-l${MACHINE_ARCH}
 
+BUILDLINK_API_DEPENDS.pciutils+=	pciutils>=3.8
 .include "../../sysutils/pciutils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
