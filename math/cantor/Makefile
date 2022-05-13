@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2022/05/04 21:05:43 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2022/05/13 19:50:30 jperkin Exp $
 
 DISTNAME=	cantor-${KAPPSVER}
 PKGREVISION=	15
@@ -40,6 +40,7 @@ SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 .include "../../print/libspectre/buildlink3.mk"
 .include "../../print/poppler-qt5/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../textproc/discount/buildlink3.mk"
+# Requires bundled copy with custom mkd_latextext()
+#.include "../../textproc/discount/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
