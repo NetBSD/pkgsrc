@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2534 2022/05/13 07:34:29 jperkin Exp $
+$NetBSD: CHANGES-2022,v 1.2535 2022/05/13 07:36:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3913,3 +3913,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/libass to 0.16.0 [adam 2022-05-13]
 	Updated devel/py-faker to 13.11.0 [adam 2022-05-13]
 	Updated devel/zlib to 1.2.12nb1 [jperkin 2022-05-13]
+	Updated net/grpc to 1.46.1 [adam 2022-05-13]
+	Updated net/py-grpcio to 1.46.1 [adam 2022-05-13]
+	Updated net/py-grpcio-testing to 1.46.1 [adam 2022-05-13]
+	Updated net/py-grpcio-tools to 1.46.1 [adam 2022-05-13]
