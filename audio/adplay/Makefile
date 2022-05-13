@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/03/28 10:43:29 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2022/05/13 13:22:58 fcambus Exp $
 
 DISTNAME=	adplay-1.8.1
 PKGREVISION=	4
@@ -8,7 +8,7 @@ GITHUB_PROJECT=	adplay-unix
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	fcambus@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/adplug/adplay-unix
 COMMENT=	Console-based OPL2 audio player
 LICENSE=	gnu-gpl-v2
