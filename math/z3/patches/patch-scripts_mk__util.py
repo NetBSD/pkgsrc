@@ -1,4 +1,6 @@
-$NetBSD: patch-scripts_mk__util.py,v 1.6 2020/05/31 20:49:34 joerg Exp $
+$NetBSD: patch-scripts_mk__util.py,v 1.7 2022/05/13 10:41:38 jperkin Exp $
+
+Try to at least be slightly more portable.
 
 --- scripts/mk_util.py.orig	2018-11-19 20:21:17.000000000 +0000
 +++ scripts/mk_util.py
@@ -31,7 +33,17 @@ $NetBSD: patch-scripts_mk__util.py,v 1.6 2020/05/31 20:49:34 joerg Exp $
          EXE_EXT = ''
          LIB_EXT = '.a'
          if GPROF:
-@@ -2822,6 +2824,7 @@ def mk_config():
+@@ -2778,7 +2780,8 @@ def mk_config():
+             EXE_EXT        = '.exe'
+             LIB_EXT        = '.lib'
+         else:
+-            raise MKException('Unsupported platform: %s' % sysname)
++            SO_EXT         = '.so'
++            SLIBFLAGS      = '-shared'
+         if is64():
+             if not sysname.startswith('CYGWIN') and not sysname.startswith('MSYS') and not sysname.startswith('MINGW'):
+                 CXXFLAGS     = '%s -fPIC' % CXXFLAGS
+@@ -2822,6 +2825,7 @@ def mk_config():
          config.write('SLINK_FLAGS=%s\n' % SLIBFLAGS)
          config.write('SLINK_EXTRA_FLAGS=%s\n' % SLIBEXTRAFLAGS)
          config.write('SLINK_OUT_FLAG=-o \n')
