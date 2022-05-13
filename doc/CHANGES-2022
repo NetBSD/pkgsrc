@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2547 2022/05/13 14:26:55 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.2548 2022/05/13 15:03:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3929,3 +3929,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/firefox to 100.0 [ryoon 2022-05-13]
 	Updated www/firefox-l10n to 100.0 [ryoon 2022-05-13]
 	Added lang/openjdk17 version 1.17.0.3.7 [ryoon 2022-05-13]
+	Updated lang/php81 to 8.1.6 [taca 2022-05-13]
