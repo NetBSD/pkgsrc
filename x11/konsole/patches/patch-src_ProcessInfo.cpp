@@ -1,6 +1,6 @@
-$NetBSD: patch-src_ProcessInfo.cpp,v 1.5 2021/04/07 12:28:32 markd Exp $
+$NetBSD: patch-src_ProcessInfo.cpp,v 1.6 2022/05/13 15:00:04 jperkin Exp $
 
-NetBSD support
+NetBSD support and QT fixes.
 
 --- src/ProcessInfo.cpp.orig	2021-02-24 23:11:38.000000000 +0000
 +++ src/ProcessInfo.cpp
@@ -169,7 +169,41 @@ NetBSD support
  #elif defined(Q_OS_OPENBSD)
  class OpenBSDProcessInfo : public UnixProcessInfo
  {
-@@ -937,6 +1095,8 @@ ProcessInfo *ProcessInfo::newInstance(in
+@@ -879,7 +1037,7 @@ protected:
+     // version uses readlink.
+     bool readCurrentDir(int pid) override
+     {
+-        QFileInfo info(QString("/proc/%1/path/cwd").arg(pid));
++        QFileInfo info(QStringLiteral("/proc/%1/path/cwd").arg(pid));
+         const bool readable = info.isReadable();
+ 
+         if (readable && info.isSymLink()) {
+@@ -899,7 +1057,7 @@ protected:
+ private:
+     bool readProcInfo(int pid) override
+     {
+-        QFile psinfo(QString("/proc/%1/psinfo").arg(pid));
++        QFile psinfo(QStringLiteral("/proc/%1/psinfo").arg(pid));
+         if (psinfo.open(QIODevice::ReadOnly)) {
+             struct psinfo info;
+             if (psinfo.read((char *)&info, sizeof(info)) != sizeof(info)) {
+@@ -908,12 +1066,13 @@ private:
+ 
+             setParentPid(info.pr_ppid);
+             setForegroundPid(info.pr_pgid);
+-            setName(info.pr_fname);
++            //setName(info.pr_fname);
++            setName(QString::fromUtf8(info.pr_fname));
+             setPid(pid);
+ 
+             // Bogus, because we're treating the arguments as one single string
+             info.pr_psargs[PRARGSZ - 1] = 0;
+-            addArgument(info.pr_psargs);
++            addArgument(QString::fromUtf8(info.pr_psargs));
+         }
+         return true;
+     }
+@@ -937,6 +1096,8 @@ ProcessInfo *ProcessInfo::newInstance(in
      info = new MacProcessInfo(pid);
  #elif defined(Q_OS_FREEBSD)
      info = new FreeBSDProcessInfo(pid);
