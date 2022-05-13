@@ -1,15 +1,20 @@
-# $NetBSD: options.mk,v 1.65 2022/05/05 08:21:33 nia Exp $
+# $NetBSD: options.mk,v 1.66 2022/05/13 14:12:53 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
 PKG_SUPPORTED_OPTIONS+=	debug debug-info mozilla-jemalloc webrtc
-PKG_SUPPORTED_OPTIONS+=	alsa pulseaudio dbus
+PKG_SUPPORTED_OPTIONS+=	dbus
+PKG_SUPPORTED_OPTIONS+=	alsa pulseaudio sunaudio jack
+
+PKG_SUGGESTED_OPTIONS+=	dbus
 
 .if ${OPSYS} == "Linux"
-PKG_SUGGESTED_OPTIONS+=	pulseaudio mozilla-jemalloc dbus webrtc
-.else
-PKG_SUGGESTED_OPTIONS+=	dbus
+PKG_SUGGESTED_OPTIONS+=	pulseaudio mozilla-jemalloc webrtc
+.endif
+
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
+PKG_SUGGESTED_OPTIONS+=	sunaudio
 .endif
 
 .if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} >= 090000
@@ -19,10 +24,8 @@ PKG_SUGGESTED_OPTIONS+=	webrtc
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Malsa)
-CONFIGURE_ARGS+=	--enable-alsa
+AUDIO_BACKENDS+=	alsa
 .include "../../audio/alsa-lib/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-alsa
 .endif
 
 .if !empty(PKG_OPTIONS:Mmozilla-jemalloc)
@@ -51,10 +54,8 @@ CONFIGURE_ARGS+=	--disable-debug
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
+AUDIO_BACKENDS+=	pulseaudio
 .include "../../audio/pulseaudio/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-pulseaudio
-.else
-CONFIGURE_ARGS+=	--disable-pulseaudio
 .endif
 
 .if !empty(PKG_OPTIONS:Mdbus)
@@ -74,9 +75,20 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 CONFIGURE_ARGS+=	--with-branding=browser/branding/unofficial
 .endif
 
+.if !empty(PKG_OPTIONS:Msunaudio)
+AUDIO_BACKENDS+=	sunaudio
+.endif
+
+.if !empty(PKG_OPTIONS:Mjack)
+AUDIO_BACKENDS+=	jack
+.include "../../audio/jack/buildlink3.mk"
+.endif
+
 .if !empty(PKG_OPTIONS:Mwebrtc)
 .include "../../graphics/libv4l/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-webrtc
 .else
 CONFIGURE_ARGS+=	--disable-webrtc
 .endif
+
+CONFIGURE_ARGS+=	--audio-backends=${AUDIO_BACKENDS:ts,}
