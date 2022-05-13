@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.32 2021/10/21 19:44:30 schmonz Exp $
+# $NetBSD: options.mk,v 1.33 2022/05/13 21:33:16 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.graphviz
 PKG_SUPPORTED_OPTIONS=	gd ghostscript gtk lua ocaml perl poppler svg tcl x11 # guile does not build with guile20
@@ -76,6 +76,7 @@ CONFIGURE_ARGS+=	--without-rsvg
 
 .if !empty(PKG_OPTIONS:Mx11)
 .  include "../../mk/xaw.buildlink3.mk"
+.  include "../../x11/libXrender/buildlink3.mk"
 PLIST.x11=		yes
 CONFIGURE_ENV+=		X11BASE=${X11BASE}
 CONFIGURE_ARGS+=	--enable-lefty
