@@ -1,6 +1,7 @@
-$NetBSD: patch-src_fping.c,v 1.2 2020/07/12 19:31:03 adam Exp $
+$NetBSD: patch-src_fping.c,v 1.3 2022/05/13 04:51:38 wiz Exp $
 
 Fix for NetBSD-alpha.
+https://github.com/schweikert/fping/pull/255
 
 --- src/fping.c.orig	2020-07-11 14:27:36.000000000 +0000
 +++ src/fping.c
