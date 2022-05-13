@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2021/12/08 16:05:02 adam Exp $
+# $NetBSD: Makefile,v 1.49 2022/05/13 15:36:49 wiz Exp $
 
 DISTNAME=	nvtv-0.4.7
-PKGREVISION=	39
+PKGREVISION=	40
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nv-tv-out/}
 
@@ -29,9 +29,9 @@ post-install:
 		${WRKSRC}/doc/overview.txt ${WRKSRC}/doc/timing.txt \
 		${DESTDIR}${PREFIX}/share/doc/nvtv
 
+BUILDLINK_API_DEPENDS.pciutils+=	pciutils>=3.8
 .include "../../sysutils/pciutils/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
