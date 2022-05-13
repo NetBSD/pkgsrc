@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2022/05/13 17:32:37 tnn Exp $
+# $NetBSD: Makefile,v 1.101 2022/05/13 18:42:05 tnn Exp $
 
 .include "dist.mk"
 
@@ -104,7 +104,11 @@ PLIST.extra-so=	yes
 # modules will not be built.
 .if ${OPSYS} == "Darwin"
 .  if exists(${OSX_SDK_PATH}/usr/include)
-CFLAGS+=	-isysroot ${OSX_SDK_PATH:Q}
+CFLAGS+=		-I${OSX_SDK_PATH:Q}
+SUBST_CLASSES+=		sdkpath
+SUBST_STAGE.sdkpath=	pre-configure
+SUBST_FILES.sdkpath=	Lib/distutils/unixccompiler.py
+SUBST_VARS.sdkpath=	OSX_SDK_PATH
 .  endif
 .  if exists(${OSX_SDK_PATH}/System/Library/Frameworks/QuickTime.framework)
 PLIST.qt=	yes
