@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:20:06 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/05/13 05:05:07 wiz Exp $
 
-BLAKE2s (qdirstat-1.7.tar.gz) = c46219e0095b09278bc021601ca026edd376d57722ffd50c746d3d98d2a77744
-SHA512 (qdirstat-1.7.tar.gz) = 9af03c110663eab0df48f69f7d949421feebfdca1299205d25a216587cf2c9e472cbe99ad98f3cd6c783be2b02e0308cdbc2f5549bf662b3061ff5e059317b01
-Size (qdirstat-1.7.tar.gz) = 8057173 bytes
+BLAKE2s (qdirstat-1.8.tar.gz) = 4ff747a56746d74fd4f26d137930596abf1588116133ed5c0aa64b206e8fd501
+SHA512 (qdirstat-1.8.tar.gz) = fb7b757cf08c6b6ec0c14be9b08b8b6784a36e100c3ac89dbaef176ef908e43c47c2788fc4002a5e5f7308c990518cb3a104166e12cec605ff1a586bd7a4af10
+Size (qdirstat-1.8.tar.gz) = 8720791 bytes
