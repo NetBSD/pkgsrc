@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2022/04/18 11:18:18 adam Exp $
+$NetBSD: distinfo,v 1.6 2022/05/13 18:08:07 wiz Exp $
 
 BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.3.tar.xz) = 3eea494991a48b3029627944eb1518860e69566d60440f8270bc9696231ce037
 SHA512 (qtwebengine-everywhere-opensource-src-5.15.3.tar.xz) = d4d10f2f95437042dfc67cc9826e8e27d390f986a1202f1bd5a765ea1b985e93158bde3068410f0a84b268de50c3e6fc9f67c4419224caa6b87b940d70d0869c
@@ -508,7 +508,6 @@ SHA1 (patch-src_3rdparty_chromium_third__party_angle_BUILD.gn) = 76c669faabc074c
 SHA1 (patch-src_3rdparty_chromium_third__party_angle_gni_angle.gni) = 1c6627e7651d814d6e4c6859c30f8fcc40a61d4f
 SHA1 (patch-src_3rdparty_chromium_third__party_angle_src_compiler_translator_InfoSink.h) = 5455d2c6f4f063603735edda3c8b432d074235b4
 SHA1 (patch-src_3rdparty_chromium_third__party_angle_src_gpu__info__util_SystemInfo__internal.h) = f873dc1df4a386b742036db862f943f6a17ef2c6
-SHA1 (patch-src_3rdparty_chromium_third__party_angle_src_gpu__info__util_SystemInfo__libpci.cpp) = 44cc4436bd0f981dccec3b530239962d9eb1dc13
 SHA1 (patch-src_3rdparty_chromium_third__party_angle_src_gpu__info__util_SystemInfo__linux.cpp) = dcd8c06bd337887ceffd3ab156188083ccc5ed83
 SHA1 (patch-src_3rdparty_chromium_third__party_angle_src_gpu__info__util_SystemInfo__x11.cpp) = 4e7c974e89e21e9376a5c8c852e5e356f59015f6
 SHA1 (patch-src_3rdparty_chromium_third__party_angle_src_libANGLE_Display.cpp) = 6a6a3aeee60c980eb0f68754badcd564572bf598

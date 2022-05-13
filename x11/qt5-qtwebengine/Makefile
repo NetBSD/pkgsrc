@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2022/05/04 21:05:45 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2022/05/13 18:08:07 wiz Exp $
 
 DISTNAME=	qtwebengine-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtwebengine-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Chromium-based web engine for Qt5
 
 MAKE_ENV+=		QTDIR=${QTDIR}
@@ -99,6 +99,7 @@ PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../lang/python/tool.mk"
 .include "../../print/libcups/buildlink3.mk"
 .include "../../print/poppler-cpp/buildlink3.mk"
+BUILDLINK_API_DEPENDS.pciutils+=	pciutils>=3.8
 .include "../../sysutils/pciutils/buildlink3.mk"
 .include "../../sysutils/pciutils/libname.mk"
 # Use -lpciutils instead of -lpci for pkgsrc.
