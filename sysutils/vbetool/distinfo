@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:20:21 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/05/13 15:46:09 wiz Exp $
 
 BLAKE2s (vbetool_0.7-1.tar.gz) = c7fb3da174b77b34517a3cc7a05babab0bdd7d30793ff5393b2ed01bac36a908
 SHA512 (vbetool_0.7-1.tar.gz) = 38d4ac1294a38147a75047804646fd98b8afa15555532647e5353692314c88fb871aab704267135773b8d771146a6769ecfe215c170421b3aae81fc0e71f6c24
 Size (vbetool_0.7-1.tar.gz) = 176277 bytes
 SHA1 (patch-aa) = d27a3dd8eb1943c3f30351996483a01638521e90
-SHA1 (patch-ab) = 16e42e95d69b98b5ec5886a84bbc294aea942056
+SHA1 (patch-ab) = e0fff500f5dec6e270879064b6139426593b3528
 SHA1 (patch-ac) = 89b24bd2fadbf40ab614186b53dc339653029919
