@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/12/31 10:57:03 nia Exp $
+# $NetBSD: Makefile,v 1.6 2022/05/13 10:39:35 tnn Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	cpu_features-0.6.0
-PKGREVISION=	1
+DISTNAME=	cpu_features-0.7.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 
@@ -13,7 +12,8 @@ LICENSE=	apache-2.0
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-CMAKE_ARGS+=	-DBUILD_PIC=ON
+CMAKE_ARGS+=	-DCMAKE_POSITION_INDEPENDENT_CODE=ON
+CMAKE_ARGS+=	-DBUILD_TESTING=OFF
 
 .include "../../mk/bsd.prefs.mk"
 
