@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2022/02/16 12:05:00 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2022/05/13 12:05:59 tnn Exp $
 
 DISTNAME=	gobject-introspection-1.70.0
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -39,7 +40,9 @@ SUBST_SED.timet+=	-e 's,@TIMET_CTYPE@,glong,g'
 SUBST_CLASSES+=		libdirs
 SUBST_STAGE.libdirs=	pre-configure
 SUBST_FILES.libdirs=	giscanner/ccompiler.py
+SUBST_FILES.libdirs+=	girepository/gitypelib.c
 SUBST_VARS.libdirs=	_OPSYS_LIB_DIRS
+SUBST_VARS.libdirs+=	PREFIX
 
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/girepository
 # For Darwin
