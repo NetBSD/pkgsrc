@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2022/04/25 08:19:44 markd Exp $
+# $NetBSD: Makefile,v 1.62 2022/05/13 21:41:35 jperkin Exp $
 
 DISTNAME=	khtml-${KF5VER}
 CATEGORIES=	www
@@ -12,13 +12,15 @@ MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/${KF5VER:R}/portingAids/}
 
 USE_TOOLS+=	perl msgfmt
 
+CMAKE_ARGS.SunOS+=	-DHAVE_ALLOCA_H=1
+
 # generation of kded.moc fails when ${PREFIX}/include in the moc include path
 SUBST_CLASSES+=		fix-moc
 SUBST_STAGE.fix-moc=	post-configure
 SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
-SUBST_FILES.fix-moc=	_KDE_build/src/CMakeFiles/khtmlpart_autogen.dir/AutogenInfo.json 
-SUBST_FILES.fix-moc+=	_KDE_build/src/CMakeFiles/khtmlimagepart_autogen.dir/AutogenInfo.json 
-SUBST_FILES.fix-moc+=	_KDE_build/src/kmultipart/CMakeFiles/kmultipart_autogen.dir/AutogenInfo.json 
+SUBST_FILES.fix-moc=	_KDE_build/src/CMakeFiles/khtmlpart_autogen.dir/AutogenInfo.json
+SUBST_FILES.fix-moc+=	_KDE_build/src/CMakeFiles/khtmlimagepart_autogen.dir/AutogenInfo.json
+SUBST_FILES.fix-moc+=	_KDE_build/src/kmultipart/CMakeFiles/kmultipart_autogen.dir/AutogenInfo.json
 SUBST_NOOP_OK.fix-moc=	yes
 SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
