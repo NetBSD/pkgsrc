@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2538 2022/05/13 10:54:46 jperkin Exp $
+$NetBSD: CHANGES-2022,v 1.2539 2022/05/13 10:56:13 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3920,3 +3920,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/cpu_features to 0.7.0 [tnn 2022-05-13]
 	Updated lang/npm to 8.8.0nb1 [jperkin 2022-05-13]
 	Updated devel/yarn to 1.22.19nb1 [jperkin 2022-05-13]
+	Updated lang/ruby-execjs to 2.8.1nb1 [jperkin 2022-05-13]
