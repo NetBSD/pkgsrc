@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.6 2022/05/13 10:39:35 tnn Exp $
+$NetBSD: distinfo,v 1.7 2022/05/13 18:19:07 tnn Exp $
 
 BLAKE2s (cpu_features-0.7.0.tar.gz) = b442c655fd0e0d8d92a8559459585c73bac39c976fbfbc475089088f155c90fc
 SHA512 (cpu_features-0.7.0.tar.gz) = e602c88c4a104d69dff0297a4c4f8e26d02d548fc35ce2616429ff8280f2a37e9eaa99451a38b7c302907352cf15bdf8c09c2e0e52b09bf4cd3b7e2b21f8ddb0
 Size (cpu_features-0.7.0.tar.gz) = 85986 bytes
 SHA1 (patch-CMakeLists.txt) = 7e8c409b6a4fcb3f98153d33be658d501c17b1c7
 SHA1 (patch-include_cpu__features__macros.h) = 5bef216cceab5442b89351f96c78aa9d1a69ae1f
-SHA1 (patch-src_impl__aarch64__linux__or__android.c) = f4ef0a8273fe403658fd79c80f615e5c3d6b4e5d
+SHA1 (patch-src_impl__aarch64__linux__or__android.c) = a5f8648dd5b53b6e5925be14a96c1e5c20fcda6b
+SHA1 (patch-src_impl__arm__linux__or__android.c) = 18bf1e9df82d8b4b6ce3a6c8f0c5f693e31ace3f
 SHA1 (patch-src_impl__x86__linux__or__android.c) = a9b7c73c1d25302c4986f8a732f3ae01ea902f1b
