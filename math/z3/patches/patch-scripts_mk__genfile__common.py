@@ -1,4 +1,6 @@
-$NetBSD: patch-scripts_mk__genfile__common.py,v 1.1 2020/05/31 20:49:34 joerg Exp $
+$NetBSD: patch-scripts_mk__genfile__common.py,v 1.2 2022/05/13 10:41:38 jperkin Exp $
+
+Python 3 compat.
 
 --- scripts/mk_genfile_common.py.orig	2018-11-19 20:21:17.000000000 +0000
 +++ scripts/mk_genfile_common.py
