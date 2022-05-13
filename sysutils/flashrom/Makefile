@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2021/12/19 09:47:58 maya Exp $
+# $NetBSD: Makefile,v 1.15 2022/05/13 15:43:19 wiz Exp $
 
 DISTNAME=	flashrom-v1.2
 PKGNAME=	${DISTNAME:S/-v/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://download.flashrom.org/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -26,9 +26,9 @@ SUBST_FILES.pciutils=	Makefile
 SUBST_FILES.pciutils+=	hwaccess.h
 SUBST_MESSAGE.pciutils=	adjusting pciutils headers
 SUBST_STAGE.pciutils=	pre-configure
-SUBST_SED.pciutils+=	-e 's,<pci/pci.h>,<pciutils/pci.h>,g'
+SUBST_SED.pciutils+=	-e 's,<pciutils/pci.h>,<pci/pci.h>,g'
 
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
+.if ${OPSYS} == "SunOS"
 LDFLAGS+=	-lpci
 CPPFLAGS+=	-I/${PREFIX}/include
 .endif
@@ -45,5 +45,6 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/flashrom.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/flashrom.8
 
 .include "../../devel/libftdi1/buildlink3.mk"
+BUILDLINK_API_DEPENDS.pciutils+=	pciutils>=3.8
 .include "../../sysutils/pciutils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
