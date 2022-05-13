@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2531 2022/05/13 04:51:52 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2532 2022/05/13 05:05:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3909,3 +3909,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/modular-xorg-xquartz to 1.20.99.1.20210408 [tnn 2022-05-12]
 	Updated textproc/molybdenum to 0.1.8 [pin 2022-05-12]
 	Updated net/fping to 5.1 [wiz 2022-05-13]
+	Updated sysutils/qdirstat to 1.8 [wiz 2022-05-13]
