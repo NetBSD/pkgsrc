@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.65 2021/10/26 10:09:55 nia Exp $
+$NetBSD: distinfo,v 1.66 2022/05/13 11:24:27 wiz Exp $
 
-BLAKE2s (redis-6.2.6.tar.gz) = b86de3ec07ea4ad62d78a65e28fb7dfc76102a9d88b0af0acbe9d3ccac9c7792
-SHA512 (redis-6.2.6.tar.gz) = 9b947d26fd9e208627ed22d318ab3d0775ab0be46d98db1c1d158feac671b984e75ce33e647d196face9643f80768af47e678be1b4e1ddd3eb56dff467c46022
-Size (redis-6.2.6.tar.gz) = 2476542 bytes
+BLAKE2s (redis-6.2.7.tar.gz) = 07fed6643f55bce72e5b2ca80d6f0aeaad287c1cca56db9a065d941de7563310
+SHA512 (redis-6.2.7.tar.gz) = d113094b8e31754915db7f0317d9b7969e034af3a7bac2ae0cbfad6cc61ba3aae35e9709c435abc1024a96f914df7a760b3cd18d06c375b541cfa837d1c5b953
+Size (redis-6.2.7.tar.gz) = 2487287 bytes
 SHA1 (patch-redis.conf) = ee657a9d82711263ceb0fb8f7d8059ed23528fe9
 SHA1 (patch-src_Makefile) = 0b6f68bbb2cbf9aad655611bdd9aee8f3ed4e850
 SHA1 (patch-src_hyperloglog.c) = e9bdd3c630024a6fbe02c2c1d85e26131ad938cf
