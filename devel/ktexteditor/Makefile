@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2022/04/25 05:21:46 markd Exp $
+# $NetBSD: Makefile,v 1.64 2022/05/13 17:51:10 jperkin Exp $
 
 DISTNAME=	ktexteditor-${KF5VER}
 CATEGORIES=	devel
@@ -12,6 +12,8 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 USE_TOOLS+=	gmake msgmerge pkg-config perl
 
 CMAKE_ARGS+=	-DKAUTH_DBUS_DIR=${PREFIX}/share/examples/ktexteditor
+
+LDFLAGS.SunOS+=	-mimpure-text
 
 CONF_FILES+=	${PREFIX}/share/examples/ktexteditor/org.kde.ktexteditor.katetextbuffer.conf \
 		${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.ktexteditor.katetextbuffer.conf
