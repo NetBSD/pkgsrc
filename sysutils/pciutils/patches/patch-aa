@@ -1,19 +1,19 @@
-$NetBSD: patch-aa,v 1.27 2021/12/17 20:07:24 maya Exp $
+$NetBSD: patch-aa,v 1.28 2022/05/13 11:41:57 wiz Exp $
 
 Adapt the Makefile to make it compliant with pkgsrc.
 
---- Makefile.orig	2020-05-30 22:17:26.000000000 +0000
+--- Makefile.orig	2022-04-18 16:47:28.000000000 +0000
 +++ Makefile
 @@ -1,8 +1,7 @@
  # Makefile for The PCI Utilities
- # (c) 1998--2020 Martin Mares <mj@ucw.cz>
+ # (c) 1998--2022 Martin Mares <mj@ucw.cz>
  
 -OPT=-O2
 -CFLAGS=$(OPT) -Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
 +CFLAGS=-Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
  
- VERSION=3.7.0
- DATE=2020-05-31
+ VERSION=3.8.0
+ DATE=2022-04-18
 @@ -13,7 +12,7 @@ RELEASE=
  CROSS_COMPILE=
  
@@ -23,20 +23,20 @@ Adapt the Makefile to make it compliant with pkgsrc.
  
  # Support for resolving ID's by DNS (yes/no, default: detect)
  DNS=
-@@ -32,20 +31,20 @@ HWDB=
+@@ -32,25 +31,25 @@ HWDB=
  ABI_VERSION=.3
  
  # Installation directories
 -PREFIX=/usr/local
 +#PREFIX=/usr/local
+ BINDIR=$(PREFIX)/bin
  SBINDIR=$(PREFIX)/sbin
 -SHAREDIR=$(PREFIX)/share
 +SHAREDIR=$(PREFIX)/share/pciutils
  IDSDIR=$(SHAREDIR)
 -MANDIR:=$(shell if [ -d $(PREFIX)/share/man ] ; then echo $(PREFIX)/share/man ; else echo $(PREFIX)/man ; fi)
--INCDIR=$(PREFIX)/include
+ INCDIR=$(PREFIX)/include
 +MANDIR=$(PREFIX)/$(PKGMANDIR)
-+INCDIR=$(PREFIX)/include/pciutils
  LIBDIR=$(PREFIX)/lib
  PKGCFDIR=$(LIBDIR)/pkgconfig
  
@@ -44,43 +44,53 @@ Adapt the Makefile to make it compliant with pkgsrc.
 -INSTALL=install
 -DIRINSTALL=install -d
 -STRIP=-s
+-ifdef CROSS_COMPILE
 -CC=$(CROSS_COMPILE)gcc
+-else
+-CC=cc
+-endif
 +#INSTALL=install
 +#DIRINSTALL=install -d
 +#STRIP=-s
++#ifdef CROSS_COMPILE
 +#CC=$(CROSS_COMPILE)gcc
++#else
++#CC=cc
++#endif
  AR=$(CROSS_COMPILE)ar
  RANLIB=$(CROSS_COMPILE)ranlib
  
-@@ -118,13 +117,20 @@ distclean: clean
+@@ -130,14 +129,21 @@ distclean: clean
  
  install: all
  # -c is ignored on Linux, but required on FreeBSD
--	$(DIRINSTALL) -m 755 $(DESTDIR)$(SBINDIR) $(DESTDIR)$(IDSDIR) $(DESTDIR)$(MANDIR)/man8 $(DESTDIR)$(MANDIR)/man7 $(DESTDIR)/$(MANDIR)/man5
--	$(INSTALL) -c -m 755 $(STRIP) lspci setpci $(DESTDIR)$(SBINDIR)
+-	$(DIRINSTALL) -m 755 $(DESTDIR)$(BINDIR) $(DESTDIR)$(SBINDIR) $(DESTDIR)$(IDSDIR) $(DESTDIR)$(MANDIR)/man8 $(DESTDIR)$(MANDIR)/man7 $(DESTDIR)/$(MANDIR)/man5
+-	$(INSTALL) -c -m 755 $(STRIP) lspci$(EXEEXT) $(DESTDIR)$(LSPCIDIR)
+-	$(INSTALL) -c -m 755 $(STRIP) setpci$(EXEEXT) $(DESTDIR)$(SBINDIR)
 -	$(INSTALL) -c -m 755 update-pciids $(DESTDIR)$(SBINDIR)
 -	$(INSTALL) -c -m 644 $(PCI_IDS) $(DESTDIR)$(IDSDIR)
 -	$(INSTALL) -c -m 644 lspci.8 setpci.8 update-pciids.8 $(DESTDIR)$(MANDIR)/man8
 -	$(INSTALL) -c -m 644 pcilib.7 $(DESTDIR)$(MANDIR)/man7
 -	$(INSTALL) -c -m 644 pci.ids.5 $(DESTDIR)$(MANDIR)/man5
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(BINDIR)
 +	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(SBINDIR)
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(IDSDIR)
 +	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(MANDIR)/man8
 +	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(MANDIR)/man7
 +	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)/$(MANDIR)/man5
-+	$(BSD_INSTALL_PROGRAM) lspci $(DESTDIR)$(SBINDIR)
++	$(BSD_INSTALL_PROGRAM) lspci $(DESTDIR)$(LSPCIDIR)
 +	$(BSD_INSTALL_PROGRAM) setpci $(DESTDIR)$(SBINDIR)
 +	$(BSD_INSTALL_SCRIPT) update-pciids $(DESTDIR)$(SBINDIR)
 +	$(BSD_INSTALL_DATA) $(PCI_IDS) $(DESTDIR)$(IDSDIR)
 +	for fn in lspci.8 setpci.8 update-pciids.8; do \
-+		$(BSD_INSTALL_MAN) $$fn $(DESTDIR)$(MANDIR)/man8;	\
++		$(BSD_INSTALL_MAN) $$fn $(DESTDIR)$(MANDIR)/man8;       \
 +	done
 +	$(BSD_INSTALL_MAN) pcilib.7 $(DESTDIR)$(MANDIR)/man7
 +	$(BSD_INSTALL_MAN) pci.ids.5 $(DESTDIR)$(MANDIR)/man5
  ifeq ($(SHARED),yes)
  ifeq ($(LIBEXT),dylib)
  	ln -sf $(PCILIB) $(DESTDIR)$(LIBDIR)/$(LIBNAME)$(ABI_VERSION).$(LIBEXT)
-@@ -138,13 +144,14 @@ install: install-pcilib
+@@ -151,13 +157,14 @@ install: install-pcilib
  endif
  
  install-pcilib: lib/$(PCILIB)
@@ -89,14 +99,14 @@ Adapt the Makefile to make it compliant with pkgsrc.
 +	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(LIBDIR)
 +	$(BSD_INSTALL_LIB) lib/$(PCILIB) $(DESTDIR)$(LIBDIR)
  
- install-lib: $(PCIINC_INS) lib/$(PCILIBPC) install-pcilib
+ install-lib: $(PCIINC_INS) install-pcilib
 -	$(DIRINSTALL) -m 755 $(DESTDIR)$(INCDIR)/pci $(DESTDIR)$(PKGCFDIR)
 -	$(INSTALL) -c -m 644 $(PCIINC_INS) $(DESTDIR)$(INCDIR)/pci
 -	$(INSTALL) -c -m 644 lib/$(PCILIBPC) $(DESTDIR)$(PKGCFDIR)
-+	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(INCDIR) 
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(INCDIR)/pci
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(PKGCFDIR)
-+	$(BSD_INSTALL_DATA) $(PCIINC_INS) $(DESTDIR)$(INCDIR)
++	$(BSD_INSTALL_DATA) $(PCIINC_INS) $(DESTDIR)$(INCDIR)/pci
 +	$(BSD_INSTALL_DATA) lib/$(PCILIBPC) $(DESTDIR)$(PKGCFDIR)
  ifeq ($(SHARED),yes)
  ifeq ($(LIBEXT),dylib)
- 	ln -sf $(LIBNAME)$(ABI_VERSION).$(LIBEXT) $(DESTDIR)$(LIBDIR)/$(LIBNAME).$(LIBEXT)
+ 	ln -sf $(PCILIB) $(DESTDIR)$(LIBDIR)/$(LIBNAME)$(ABI_VERSION).$(LIBEXT)
