@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2022/05/05 08:27:13 nia Exp $
+# $NetBSD: Makefile,v 1.33 2022/05/13 15:53:08 wiz Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
-PKGREVISION=	7
+PKGREVISION=	8
 .include	"version.mk"
 
 DIST_IPXE=	ipxe-git-${VERSION_IPXE}.tar.gz
@@ -238,6 +238,7 @@ MAKE_ENV+=	EXTRA_HOSTCFLAGS=${EXTRA_HOSTCFLAGS:Q} EXTRA_CFLAGS=${EXTRA_CFLAGS:M*
 #.include "../../devel/SDL/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../devel/ocaml-findlib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.pciutils+=	pciutils>=3.8
 .include "../../sysutils/pciutils/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/yajl/buildlink3.mk"
