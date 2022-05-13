@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2022/04/18 19:11:16 adam Exp $
+# $NetBSD: Makefile,v 1.106 2022/05/13 20:56:09 tnn Exp $
 
 DISTNAME=	gegl-0.4.36
 PKGREVISION=	2
@@ -29,10 +29,14 @@ PKGCONFIG_OVERRIDE+=	gegl.pc.in
 PYTHON_FOR_BUILD_ONLY=	tool
 
 .include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=		darwin notdarwin
 .if ${OPSYS} == "Darwin"
 PLIST_SUBST+=		SOEXT="dylib"
+PLIST.darwin=		yes
 .else
 PLIST_SUBST+=		SOEXT="so"
+PLIST.notdarwin=	yes
 .endif
 
 PLIST_VARS+=		x86_64
