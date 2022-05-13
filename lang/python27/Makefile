@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2022/02/25 22:41:32 gutteridge Exp $
+# $NetBSD: Makefile,v 1.100 2022/05/13 17:32:37 tnn Exp $
 
 .include "dist.mk"
 
@@ -104,7 +104,7 @@ PLIST.extra-so=	yes
 # modules will not be built.
 .if ${OPSYS} == "Darwin"
 .  if exists(${OSX_SDK_PATH}/usr/include)
-CFLAGS+=	-I${OSX_SDK_PATH:Q}/usr/include
+CFLAGS+=	-isysroot ${OSX_SDK_PATH:Q}
 .  endif
 .  if exists(${OSX_SDK_PATH}/System/Library/Frameworks/QuickTime.framework)
 PLIST.qt=	yes
