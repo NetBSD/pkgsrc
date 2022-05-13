@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2545 2022/05/13 14:13:35 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.2546 2022/05/13 14:14:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3927,3 +3927,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/libatomic to 12.1.0 [wiz 2022-05-13]
 	Updated geography/gdal-lib to 3.5.0 [gdt 2022-05-13]
 	Updated www/firefox to 100.0 [ryoon 2022-05-13]
+	Updated www/firefox-l10n to 100.0 [ryoon 2022-05-13]
