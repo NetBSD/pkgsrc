@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2021/12/17 20:09:34 maya Exp $
+# $NetBSD: options.mk,v 1.12 2022/05/13 15:35:17 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.hexchat
 PKG_SUPPORTED_OPTIONS=	dbus gtk2 libcanberra libpci
@@ -38,6 +38,7 @@ MESON_ARGS+=		-Dlibcanberra=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibpci)
+BUILDLINK_API_DEPENDS.pciutils+=	pciutils>=3.8
 .include "../../sysutils/pciutils/buildlink3.mk"
 .include "../../sysutils/pciutils/libname.mk"
 LIBS+=			-l${PCIUTILS_LIBNAME}
