@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2022/04/18 19:11:12 adam Exp $
+# $NetBSD: Makefile,v 1.14 2022/05/13 13:47:35 gdt Exp $
 
 R_PKGNAME=	rgdal
 R_PKGVER=	1.5-27
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
