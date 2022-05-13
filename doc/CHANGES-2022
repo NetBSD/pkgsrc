@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2543 2022/05/13 11:52:08 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2544 2022/05/13 13:29:11 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3925,3 +3925,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/redis to 6.2.7 [wiz 2022-05-13]
 	Updated sysutils/pciutils to 3.8.0 [wiz 2022-05-13]
 	Updated devel/libatomic to 12.1.0 [wiz 2022-05-13]
+	Updated geography/gdal-lib to 3.5.0 [gdt 2022-05-13]
