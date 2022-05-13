@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2542 2022/05/13 11:42:06 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2543 2022/05/13 11:52:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3924,3 +3924,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-cfscrape to 2.0.8nb2 [jperkin 2022-05-13]
 	Updated databases/redis to 6.2.7 [wiz 2022-05-13]
 	Updated sysutils/pciutils to 3.8.0 [wiz 2022-05-13]
+	Updated devel/libatomic to 12.1.0 [wiz 2022-05-13]
