@@ -1,17 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2007/10/29 18:41:24 joerg Exp $
+$NetBSD: patch-ab,v 1.5 2022/05/13 15:46:09 wiz Exp $
 
---- vbetool.c.orig	2006-07-26 03:27:21.000000000 +0200
+--- vbetool.c.orig	2006-07-26 01:27:21.000000000 +0000
 +++ vbetool.c
-@@ -8,19 +8,39 @@ This program is released under the terms
- version 2
- */
- 
--#include <pci/pci.h>
- #include <assert.h>
-+#include <pciutils/pci.h>
- #include <stdio.h>
- #include <stdlib.h>
- #include <string.h>
+@@ -16,11 +16,31 @@ version 2
  #include <unistd.h>
  #include <sys/ioctl.h>
  #include <sys/types.h>
