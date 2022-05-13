@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2533 2022/05/13 05:24:14 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2534 2022/05/13 07:34:29 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3912,3 +3912,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/qdirstat to 1.8 [wiz 2022-05-13]
 	Updated multimedia/libass to 0.16.0 [adam 2022-05-13]
 	Updated devel/py-faker to 13.11.0 [adam 2022-05-13]
+	Updated devel/zlib to 1.2.12nb1 [jperkin 2022-05-13]
