@@ -1,8 +1,19 @@
-$NetBSD: patch-ab,v 1.5 2020/01/23 04:26:41 msaitoh Exp $
+$NetBSD: patch-ab,v 1.6 2022/05/13 23:50:46 tnn Exp $
 
---- lib/configure.orig	2018-03-21 05:36:30.000000000 +0900
-+++ lib/configure	2019-01-25 13:38:50.273095384 +0900
-@@ -266,7 +267,7 @@ else
+lspci on Linux is unprivileged and wants to go in bin, not sbin.
+But that breaks our PLIST so let's not bother with that.
+
+--- lib/configure.orig	2022-04-15 21:57:59.000000000 +0000
++++ lib/configure
+@@ -80,7 +80,6 @@ case $sys in
+ 						;;
+ 		esac
+ 		echo >>$c '#define PCI_HAVE_64BIT_ADDRESS'
+-		LSPCIDIR=BINDIR
+ 		;;
+ 	sunos)
+ 		case $cpu in
+@@ -301,7 +300,7 @@ else
  		echo >>$m 'SONAME=-Wl,-soname,$(LIBNAME).$(LIBEXT)$(ABI_VERSION)'
  	fi
  fi
