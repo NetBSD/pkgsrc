@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2022/05/11 07:52:29 adam Exp $
+# $NetBSD: Makefile,v 1.20 2022/05/13 10:54:37 jperkin Exp $
 
 DISTNAME=	yarn-v1.22.19
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yarnpkg/}
@@ -10,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://yarnpkg.com/
 COMMENT=	JavaScript package manager
 LICENSE=	2-clause-bsd
-
-DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
 
 USE_LANGUAGES=	# none
 
@@ -33,4 +32,5 @@ do-install:
 		${DESTDIR}${PREFIX}/bin/yarnpkg
 
 .include "../../lang/nodejs/application.mk"
+.include "../../lang/nodejs/nodeversion.mk"
 .include "../../mk/bsd.pkg.mk"
