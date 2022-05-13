@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 11:20:25 nia Exp $
+$NetBSD: distinfo,v 1.15 2022/05/13 15:58:54 wiz Exp $
 
 BLAKE2s (xen413/ipxe-1dd56dbd11082fb622c2ed21cfaced4f47d798a6.tar.gz) = d2e88c1705b34d2d6ce59106702343e927686942f54b65ce047d29269fbdb393
 SHA512 (xen413/ipxe-1dd56dbd11082fb622c2ed21cfaced4f47d798a6.tar.gz) = 0d96236385d241fdddafc88e8b4dac37298f2371b0c61055b78d6ce794166559127de2c110409c55738ca16c4a9e9e1834b03f7a2de85729d0a66cf5c313c9e8
@@ -69,8 +69,6 @@ SHA1 (patch-tools_qemu-xen-traditional_configure) = 6a42dcac010f90439a347c0f6e88
 SHA1 (patch-tools_qemu-xen-traditional_hw_e1000.c) = ec86584529cc743ea27768ad1fab523ee9fb6bea
 SHA1 (patch-tools_qemu-xen-traditional_hw_ide.c) = b541546390c6d142bc6079dbd51cfd65b5223e9e
 SHA1 (patch-tools_qemu-xen-traditional_hw_pass-through.c) = 45848fb5038bdd6def218b35dd0a6496a14102f1
-SHA1 (patch-tools_qemu-xen-traditional_hw_pass-through.h) = 6edb7a9a03d99b84801bf595c4d68acbc361bb4b
-SHA1 (patch-tools_qemu-xen-traditional_hw_piix4acpi.c) = 280265db035e239b173efd9d63b629201d2c0cfa
 SHA1 (patch-tools_qemu-xen-traditional_hw_pt-graphics.c) = b9c18042f40ccacb3f24ab0f1e3c6e1a5bf5521a
 SHA1 (patch-tools_qemu-xen-traditional_hw_pt-msi.c) = a953380dbc3e64528c39e26d2c45c0cbd3e4d738
 SHA1 (patch-tools_qemu-xen-traditional_hw_pt-msi.h) = 787447cc24518fe5ae16942d72d3038db612419d
