@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2022/04/25 09:31:13 markd Exp $
+# $NetBSD: Makefile,v 1.55 2022/05/13 15:55:34 jperkin Exp $
 
 DISTNAME=	plasma-framework-${KF5VER}
 CATEGORIES=	x11
@@ -20,8 +20,13 @@ SUBST_FILES.fix-moc=	_KDE_build/src/scriptengines/qml/CMakeFiles/plasma_appletsc
 SUBST_NOOP_OK.fix-moc=	yes
 SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 
+.include "../../devel/wayland/platform.mk"
+
+.if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
+.  include "../../devel/kwayland/buildlink3.mk"
+.endif
+
 .include "../../devel/kdeclarative/buildlink3.mk"
-.include "../../devel/kwayland/buildlink3.mk"
 .include "../../x11/kactivities5/buildlink3.mk"
 .include "../../x11/kirigami2/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
