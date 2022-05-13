@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2022/05/05 08:27:13 nia Exp $
+# $NetBSD: Makefile,v 1.13 2022/05/13 16:04:23 wiz Exp $
 #
 VERSION=	4.15.2
 
 DIST_SUBDIR=		xen415
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools415-${VERSION}
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		https://downloads.xenproject.org/release/xen/${VERSION}/
 
@@ -17,7 +18,7 @@ SITES.${SEABIOS_DIST}=	-http://xenbits.xen.org/gitweb/?p=seabios.git;a=snapshot;
 
 IPXE_VERSION=		988d2c13cdf0f0b4140685af35ced70ac5b3283c
 IPXE_DIST=		ipxe-${IPXE_VERSION}.tar.gz
-DISTFILES+=		${IPXE_DIST}	
+DISTFILES+=		${IPXE_DIST}
 SITES.${IPXE_DIST}=	-https://github.com/ipxe/ipxe/archive/${IPXE_VERSION}.tar.gz
 
 MAINTAINER=		bouyer@NetBSD.org
@@ -40,7 +41,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-9.[1-9]_*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-9.0_STABLE-x86_64
 
 SSP_SUPPORTED=		no
-MKPIE_SUPPORTED= 	no
+MKPIE_SUPPORTED=	no
 
 CONFLICTS+=		libxen-[0-9]*
 CONFLICTS+=		xenstoretools-[0-9]*
@@ -66,7 +67,7 @@ MAKE_ENV+=		APPEND_LIB=${LDFLAGS:Q}
 MAKE_ENV+=		XEN_EXAMPLES_DIR=${EGDIR}
 MAKE_ENV+=		MV=${MV:Q} CP=${CP:Q}
 MAKE_ENV+=		PYTHON=${PYTHONBIN:Q} PYTHON_COMMAND=${PYTHONBIN:Q}
-MAKE_ENV+=		SED=${SED:Q}  
+MAKE_ENV+=		SED=${SED:Q}
 MAKE_ENV+=		V=YES
 MAKE_ENV+=		BARE_CPP="gcc -E"
 #MAKE_ENV+=		NO_WERROR=1
@@ -102,11 +103,11 @@ SUBST_MESSAGE.getopt=	Fixing getopt_long_only
 SUBST_FILES.getopt+=	tools/fuzz/x86_instruction_emulator/afl-harness.c
 SUBST_SED.getopt+=	-e 's,getopt_long_only,getopt_long,'
 
-SUBST_CLASSES+=		rpath-link
-SUBST_STAGE.rpath-link=	pre-configure
-SUBST_MESSAGE.rpath-link= Fixing rpath-link syntax
-SUBST_FILES.rpath-link+= tools/Rules.mk
-SUBST_SED.rpath-link+=	-e 's/-rpath-link=/-rpath-link,/g'
+SUBST_CLASSES+=			rpath-link
+SUBST_STAGE.rpath-link=		pre-configure
+SUBST_MESSAGE.rpath-link=	Fixing rpath-link syntax
+SUBST_FILES.rpath-link+=	tools/Rules.mk
+SUBST_SED.rpath-link+=		-e 's/-rpath-link=/-rpath-link,/g'
 
 OPSYSVARS+=		PROCPATH
 PROCPATH.NetBSD=	/kern
@@ -238,6 +239,7 @@ MAKE_ENV+=	EXTRA_HOSTCFLAGS=${EXTRA_HOSTCFLAGS:Q} EXTRA_CFLAGS=${EXTRA_CFLAGS:M*
 #.include "../../devel/SDL/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../devel/ocaml-findlib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.pciutils+=	pciutils>=3.8
 .include "../../sysutils/pciutils/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/yajl/buildlink3.mk"
