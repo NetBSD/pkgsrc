@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2532 2022/05/13 05:05:16 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2533 2022/05/13 05:24:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3910,3 +3910,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/molybdenum to 0.1.8 [pin 2022-05-12]
 	Updated net/fping to 5.1 [wiz 2022-05-13]
 	Updated sysutils/qdirstat to 1.8 [wiz 2022-05-13]
+	Updated multimedia/libass to 0.16.0 [adam 2022-05-13]
+	Updated devel/py-faker to 13.11.0 [adam 2022-05-13]
