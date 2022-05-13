@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2022/05/09 11:16:27 adam Exp $
+# $NetBSD: Makefile,v 1.45 2022/05/13 06:45:11 jperkin Exp $
 
 DISTNAME=	unixODBC-2.3.11
 PKGNAME=	${DISTNAME:S/ODBC/odbc/}
@@ -31,6 +31,7 @@ CONFIGURE_ARGS+=	--enable-gnuthreads
 CONFIGURE_ARGS+=	--with-pth=${PTHREADBASE:Q}
 .endif
 
+CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 LIBS.SunOS+=		-lsocket -lnsl
 
 # Override the local definitions that point to the self-contained libtool
