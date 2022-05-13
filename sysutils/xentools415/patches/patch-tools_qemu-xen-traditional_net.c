@@ -1,4 +1,6 @@
-$NetBSD: patch-tools_qemu-xen-traditional_net.c,v 1.1 2021/04/18 12:31:26 bouyer Exp $
+$NetBSD: patch-tools_qemu-xen-traditional_net.c,v 1.2 2022/05/13 16:04:23 wiz Exp $
+
+
 --- tools/qemu-xen-traditional/net.c.orig	2016-11-29 17:36:38.000000000 +0100
 +++ tools/qemu-xen-traditional/net.c	2017-03-29 18:16:54.000000000 +0200
 @@ -990,6 +990,7 @@
