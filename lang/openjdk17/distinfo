@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2022/05/14 12:02:56 tnn Exp $
+$NetBSD: distinfo,v 1.3 2022/05/14 15:23:02 tnn Exp $
 
 BLAKE2s (bootstrap-jdk-1.17.0.2.8-netbsd-10-amd64-20220401.tar.xz) = afd8e5dcbfa3d8fe397e97f713d24a1437936dcffbe79f3f0c3e9bfb58bce36d
 SHA512 (bootstrap-jdk-1.17.0.2.8-netbsd-10-amd64-20220401.tar.xz) = f9ddd27ac0ccf77eb72e2c1fe5a06c6431a74b4feeea495233cba058dd8346f215861c59b5228e33729dccdc7f557a29e881123d8592f0cc304536fd5cc3609a
@@ -20,6 +20,8 @@ SHA1 (patch-make_autoconf_lib-x11.m4) = 38038e6d7cfc2d15fb3537a52f11d2961cc2ec99
 SHA1 (patch-make_common_NativeCompilation.gmk) = fc97a952ba87efb450f59e87f19fb4c47558ae1d
 SHA1 (patch-make_data_fontconfig_bsd.fontconfig.properties) = 3172d8d76e0e79b127605429fb70dccd164b33c8
 SHA1 (patch-make_lib_Awt2dLibraries.gmk) = d69fa8c5cab173be2f41cfbd6479dad60a6337db
+SHA1 (patch-src_hotspot_os__cpu_bsd__aarch64_bytes__bsd__aarch64.hpp) = 9748f3c6efeb96fb3654965bbe1f005dbd64f778
+SHA1 (patch-src_hotspot_os__cpu_bsd__aarch64_os__bsd__aarch64.cpp) = 33d53951a3f80a2a4c0f62717cf72b93711a4fc5
 SHA1 (patch-src_hotspot_os_bsd_os__bsd.cpp) = 0a772045ad967cbd0a1342d124c47927f4a57bfe
 SHA1 (patch-src_hotspot_os_bsd_os__perf__bsd.cpp) = b70e14728e426a9f79c2c1ee735849fb53dfc1bd
 SHA1 (patch-src_hotspot_os_posix_os__posix.cpp) = a58d5eb59181d68d46272e15d47b94c6790ed00a
