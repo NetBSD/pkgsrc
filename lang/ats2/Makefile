@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/04/14 20:13:19 nikita Exp $
+# $NetBSD: Makefile,v 1.3 2022/05/14 22:25:38 dholland Exp $
 
 DISTNAME=	ATS2-Postiats-0.4.2
 PKGNAME=	${DISTNAME:S/ATS2-Postiats/ats2/}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ats2-lang/}
 EXTRACT_SUFX=	.tgz

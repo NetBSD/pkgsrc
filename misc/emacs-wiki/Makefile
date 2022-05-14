@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2019/11/03 17:04:21 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2022/05/14 22:25:40 dholland Exp $
 #
 
 DISTNAME=	${EMACSWIKI}-${EMACSWIKIVERSION}
 PKGNAME=	emacs-wiki-${EMACSWIKIVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://www.mwolson.org/static/dist/emacs-wiki/
 #EXTRACT_SUFX=	.gz

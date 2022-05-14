@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2013/02/17 19:18:06 dholland Exp $
+# $NetBSD: Makefile,v 1.15 2022/05/14 22:25:39 dholland Exp $
 #
 
 DISTNAME=	rmail-mime-1.13.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/semi/rmail-mime/
 

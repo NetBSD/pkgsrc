@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2017/08/01 14:58:54 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2022/05/14 22:25:35 dholland Exp $
 
 DISTNAME=	cobol-mode.el
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}-0.0.20150505
+PKGREVISION=	1
 CATEGORIES=	devel editors
 MASTER_SITES=	http://www.emacswiki.org/emacs/download/
 EXTRACT_SUFX=	# empty

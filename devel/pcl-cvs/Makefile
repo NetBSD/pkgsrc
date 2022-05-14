@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2013/04/06 20:27:19 rodent Exp $
+# $NetBSD: Makefile,v 1.28 2022/05/14 22:25:34 dholland Exp $
 #
 
 DISTNAME=	pcl-cvs-2.9.9
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel scm
 MASTER_SITES=	# ftp://rum.cs.yale.edu/pub/monnier/pcl-cvs/
 
