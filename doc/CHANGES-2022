@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2554 2022/05/14 14:33:47 tsutsui Exp $
+$NetBSD: CHANGES-2022,v 1.2555 2022/05/14 15:14:46 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3941,3 +3941,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated archivers/unrar to 6.1.7 [adam 2022-05-14]
 	Updated devel/lxqt-build-tools to 0.11.0nb1 [jperkin 2022-05-14]
 	Updated textproc/ruby-nokogiri to 1.13.6 [tsutsui 2022-05-14]
+	Updated misc/s6-portable-utils to 2.2.4.0nb1 [schmonz 2022-05-14]
