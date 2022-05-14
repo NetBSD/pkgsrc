@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 22:35:24 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2022/05/14 21:38:09 schmonz Exp $
 
 GITHUB_PROJECT=		httpfile
 GITHUB_TAG=		20220101
@@ -11,6 +11,8 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://mojzis.com/software/httpfile/
 COMMENT=		Secure HTTP server derived from publicfile
 LICENSE=		djb-nonlicense
+
+LDFLAGS.SunOS+=		-lsocket
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
