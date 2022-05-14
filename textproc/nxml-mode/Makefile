@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2017/09/29 12:40:28 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/05/14 22:25:41 dholland Exp $
 
 DISTNAME=		nxml-mode-20041004
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		textproc editors
 MASTER_SITES=		http://www.thaiopensource.com/download/
 

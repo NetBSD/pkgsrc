@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/04/04 03:44:57 mef Exp $
+# $NetBSD: Makefile,v 1.3 2022/05/14 22:25:35 dholland Exp $
 
 DISTNAME=	ecb-2.50
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ecb-home/}

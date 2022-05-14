@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2019/11/02 22:56:54 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2022/05/14 22:25:37 dholland Exp $
 #
 
 DISTNAME=	IIIMECF-0.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}iiimecf-0.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	http://unit.aist.go.jp/itri/itri-gist/ftp.m17n.org/pub/mule/IIIM/
 
