@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.464 2022/05/13 14:12:53 ryoon Exp $
+$NetBSD: distinfo,v 1.465 2022/05/14 10:30:26 tnn Exp $
 
 BLAKE2s (firefox-100.0.source.tar.xz) = 4812f3e0fb74292ce21fa024ae27e8f3aa534b58cd0bbac8e01f67d7ccc42196
 SHA512 (firefox-100.0.source.tar.xz) = 29c56391c980209ff94c02a9aba18fe27bea188bdcbcf7fe0c0f27f61e823f4507a3ec343b27cb5285cf3901843e9cc4aca8e568beb623c4b69b7282e662b2aa
@@ -34,6 +34,7 @@ SHA1 (patch-modules_fdlibm_src_math__private.h) = 6ae3b0077b4a8c6088c35769fa1972
 SHA1 (patch-mozglue_misc_Uptime.cpp) = daefe25ef1ebc8e4d3735017b9e8ac68c4710a00
 SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 13e512c7ee9fa1e14ba415d62fa853e5fbfc91c0
 SHA1 (patch-security_nss_lib_freebl_mpi_mpi.c) = a7cd867916524770609d1c307a65b315b88456f4
+SHA1 (patch-third__party_js_cfworker_build.sh) = 46cdf97b99cf01080f290ae8d9a33b5f869fc3e4
 SHA1 (patch-third__party_libwebrtc_system__wrappers_source_cpu__features__linux.cc) = b90e22b50879f7adcc1da3a993f52c0701b720f8
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = 1c1397f6177728cf9deb2b74708069b9d09509c3
 SHA1 (patch-toolkit_modules_subprocess_subprocess__shared__unix.js) = 22a39e54e042ab2270a3cb54e4e307c8900cad12
