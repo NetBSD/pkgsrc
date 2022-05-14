@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2017/09/03 08:37:01 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2022/05/14 22:25:41 dholland Exp $
 
 DISTNAME=		psgml-1.3.2
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME:S/-/-mode-/}
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		textproc editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=psgml/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/04/14 13:51:45 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2022/05/14 22:25:36 dholland Exp $
 
 DISTNAME=	zig-mode-0.0.20220105
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ziglang/}
 GITHUB_TAG=	aa20d630b8c413dab8d6bd120ec3ed5db5c9da70

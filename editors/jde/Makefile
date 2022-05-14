@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2019/06/08 10:40:55 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2022/05/14 22:25:36 dholland Exp $
 #
 
 DISTNAME=	jde-2.3.2
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel editors java
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 # The "real" site has silly naming conventions:
