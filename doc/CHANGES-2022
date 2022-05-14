@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2550 2022/05/14 04:49:53 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2551 2022/05/14 04:56:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3935,3 +3935,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed sysutils/ansible-base successor sysutils/ansible-core [adam 2022-05-14]
 	Updated sysutils/ansible to 5.7.1 [adam 2022-05-14]
 	Updated sysutils/ansible-lint to 6.1.0 [adam 2022-05-14]
+	Updated devel/py-filelock to 3.7.0 [adam 2022-05-14]
+	Updated devel/py-bitarray to 2.5.1 [adam 2022-05-14]
