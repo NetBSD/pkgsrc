@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/05/12 19:39:00 tnn Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/05/14 21:32:33 schmonz Exp $
 Applications/Utilities/X11.app/Contents/Info.plist
 Applications/Utilities/X11.app/Contents/MacOS/X11
 Applications/Utilities/X11.app/Contents/MacOS/X11.bin
@@ -102,4 +102,3 @@ lib/xorg/protocol.txt
 man/man1/Xquartz.1
 man/man1/Xserver.1
 share/doc/xorg-server/Xserver-DTrace.xml
-var/db/xkb/README.compiled
