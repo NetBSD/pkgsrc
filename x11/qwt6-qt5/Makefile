@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/05/14 16:18:30 tnn Exp $
+# $NetBSD: Makefile,v 1.24 2022/05/14 18:26:26 tnn Exp $
 
 DISTNAME=	qwt-6.1.5
 PKGNAME=	qwt6-qt5-6.1.5
@@ -40,8 +40,8 @@ CHECK_SHLIBS_SKIP+=	qt5/plugins/designer/libqwt_designer_plugin.dylib
 post-install:
 .if ${OPSYS} == "Darwin"
 	install_name_tool	\
-	  -id       ${PREFIX}/qwt-${PKGVERSION_NOREV}/lib/qwt-${PKGVERSION_NOREV}/lib/libqwt.${PKGVERSION_NOREV}.dylib	\
-	  ${DESTDIR}${PREFIX}/qwt-${PKGVERSION_NOREV}/lib/qwt-${PKGVERSION_NOREV}/lib/libqwt.${PKGVERSION_NOREV}.dylib
+	  -id       ${PREFIX}/qwt-${PKGVERSION_NOREV}/lib/libqwt.${PKGVERSION_NOREV}.dylib	\
+	  ${DESTDIR}${PREFIX}/qwt-${PKGVERSION_NOREV}/lib/libqwt.${PKGVERSION_NOREV}.dylib
 .endif
 
 .include "../../x11/qt5-qttools/buildlink3.mk"
