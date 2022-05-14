@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.70 2022/04/16 14:28:18 tsutsui Exp $
+# $NetBSD: Makefile,v 1.71 2022/05/14 14:33:31 tsutsui Exp $
 
-DISTNAME=	nokogiri-1.13.4
+DISTNAME=	nokogiri-1.13.6
 CATEGORIES=	textproc
 
 MAINTAINER=	tsutsui@NetBSD.org
@@ -14,7 +14,7 @@ USE_GCC_RUNTIME=	yes
 USE_TOOLS+=		pkg-config
 MAKE_ENV+=		NOKOGIRI_USE_SYSTEM_LIBRARIES=yes
 RUBYGEM_OPTIONS+=	--format-executable
-OVERRIDE_GEMSPEC+=	:files ports/archives/libxml2-2.9.13.tar.gz= \
+OVERRIDE_GEMSPEC+=	:files ports/archives/libxml2-2.9.14.tar.gz= \
 			ports/archives/libxslt-1.1.35.tar.gz=
 
 # XXX: work around bug in bootstrap-mk-files, remove when fixed
