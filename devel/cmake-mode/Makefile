@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2013/02/17 19:17:57 dholland Exp $
+# $NetBSD: Makefile,v 1.8 2022/05/14 22:25:33 dholland Exp $
 #
 
 DISTNAME=	cmake-mode
 PKGNAME=	cmake-mode-20080606
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cmake.org/CMakeDocs/
 EXTRACT_SUFX=	.el

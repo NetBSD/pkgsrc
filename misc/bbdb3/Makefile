@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/04/20 18:07:19 nikita Exp $
+# $NetBSD: Makefile,v 1.4 2022/05/14 22:25:40 dholland Exp $
 
 DISTNAME=		bbdb-3.2.2a
-PKGREVISION=		1
+PKGREVISION=		2
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=		misc mail news
 MASTER_SITES=		http://git.savannah.nongnu.org/cgit/bbdb.git/snapshot/
