@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/05/04 21:05:45 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2022/05/14 11:10:14 jperkin Exp $
 
 DISTNAME=	tracker-miners-3.0.1
 PKGNAME=	gnome-${DISTNAME}
@@ -22,19 +22,17 @@ MESON_ARGS+=	-Dnetwork_manager=disabled
 MESON_ARGS+=	-Dminer_rss=false
 MESON_ARGS+=	-Dsystemd_user_services=false
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-SUBST_CLASSES+=		sha shabuild
+SUBST_CLASSES+=		sha
 SUBST_STAGE.sha=	pre-configure
 SUBST_MESSAGE.sha=	Fixing the name of the SHA256 tool.
 SUBST_FILES.sha+=	src/tracker-extract/calculate-hash.sh
 SUBST_SED.sha+=		-e "s,sha256sum,shasum -a 256,g"
+
+SUBST_CLASSES+=		shabuild
 SUBST_STAGE.shabuild=	pre-configure
 SUBST_MESSAGE.shabuild=	Fixing the name of the SHA256 tool.
 SUBST_FILES.shabuild+=	meson.build
 SUBST_SED.shabuild+=	-e "s,sha256sum,shasum,g"
-.endif
 
 .include "../../lang/python/pyversion.mk"
 
