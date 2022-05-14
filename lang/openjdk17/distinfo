@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2022/05/13 14:24:19 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2022/05/14 12:02:56 tnn Exp $
 
 BLAKE2s (bootstrap-jdk-1.17.0.2.8-netbsd-10-amd64-20220401.tar.xz) = afd8e5dcbfa3d8fe397e97f713d24a1437936dcffbe79f3f0c3e9bfb58bce36d
 SHA512 (bootstrap-jdk-1.17.0.2.8-netbsd-10-amd64-20220401.tar.xz) = f9ddd27ac0ccf77eb72e2c1fe5a06c6431a74b4feeea495233cba058dd8346f215861c59b5228e33729dccdc7f557a29e881123d8592f0cc304536fd5cc3609a
@@ -24,9 +24,6 @@ SHA1 (patch-src_hotspot_os_bsd_os__bsd.cpp) = 0a772045ad967cbd0a1342d124c47927f4
 SHA1 (patch-src_hotspot_os_bsd_os__perf__bsd.cpp) = b70e14728e426a9f79c2c1ee735849fb53dfc1bd
 SHA1 (patch-src_hotspot_os_posix_os__posix.cpp) = a58d5eb59181d68d46272e15d47b94c6790ed00a
 SHA1 (patch-src_hotspot_os_posix_signals__posix.cpp) = 05486d931f294066e0cc04a389ce6cb038bb1b6d
-SHA1 (patch-src_java.base_bsd_native_libjava_ProcessHandleImpl__bsd.c) = 8c6f9cab9dca7bfab9e2e8f95059f702e1ce8a81
-SHA1 (patch-src_java.base_unix_native_libjava_ProcessHandleImpl__unix.c) = 39c7afb3c36fa9557d2a660c4b4068b5684c552f
-SHA1 (patch-src_java.base_unix_native_libjava_ProcessHandleImpl__unix.h) = 121357cb76b4a96c06cc2bf670579e0b27f66fc1
 SHA1 (patch-src_java.base_unix_native_libnio_ch_Net.c) = 2bdb089f7d4f708fb750793b7e0bfa7796fb1694
 SHA1 (patch-src_java.desktop_unix_native_common_awt_fontpath.c) = d7bd8839ecd84459fbd3e7d14ac0e2f48b8b4032
 SHA1 (patch-src_jdk.jdwp.agent_share_native_libdt__socket_socketTransport.c) = c06b49fbc9d34cb839f3bd7821779c79b763a629
