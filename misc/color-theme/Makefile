@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/01/18 23:33:02 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2022/05/14 22:25:39 dholland Exp $
 #
 
 DISTNAME=	color-theme-6.6.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://download.savannah.gnu.org/releases/${PKGBASE}/
 

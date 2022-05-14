@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2018/07/04 13:40:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2022/05/14 22:25:40 dholland Exp $
 
 DISTNAME=	twittering-mode-3.0.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES+=	http://sourceforge.net/projects/twmode/files/twittering-mode-3.0.0/
 

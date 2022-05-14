@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2020/01/18 23:30:12 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2022/05/14 22:25:33 dholland Exp $
 #
 
 DISTNAME=	riece-9.0.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat japanese
 MASTER_SITES=	http://download.savannah.gnu.org/releases/riece/
 LICENSE=	gnu-gpl-v3
