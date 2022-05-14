@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2022/05/04 21:05:45 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2022/05/14 16:08:58 jperkin Exp $
 
 DISTNAME=	kfilemetadata-${KF5VER}
 PKGNAME=	${DISTNAME:S/-/5-/}
@@ -15,6 +15,12 @@ USE_TOOLS+=	msgmerge pkg-config
 
 DEPENDS+=	catdoc-[0-9]*:../../textproc/catdoc
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "SunOS"
+.include "../../sysutils/attr/buildlink3.mk"
+.endif
+
 .include "../../lang/python/tool.mk"
 .include "../../archivers/karchive/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
@@ -24,7 +30,6 @@ DEPENDS+=	catdoc-[0-9]*:../../textproc/catdoc
 .include "../../graphics/kdegraphics-mobipocket/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../print/poppler-qt5/buildlink3.mk"
-.include "../../sysutils/attr/buildlink3.mk"
 .include "../../textproc/ebook-tools/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
