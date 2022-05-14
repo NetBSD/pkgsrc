@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2022/01/04 20:54:46 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2022/05/14 04:42:28 adam Exp $
 
-DISTNAME=	ansible-3.4.0
-PKGREVISION=	1
+DISTNAME=	ansible-5.7.1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible/}
 
@@ -12,7 +11,7 @@ LICENSE=	gnu-gpl-v3
 
 PREV_PKGPATH=	sysutils/ansible2
 
-DEPENDS+=	ansible-base>=2.10.5:../../sysutils/ansible-base
+DEPENDS+=	ansible-core>=2.12.5:../../sysutils/ansible-core
 
 USE_LANGUAGES=	# none
 
@@ -21,9 +20,12 @@ REPLACE_PYTHON+=	ansible_collections/*/*/tests/*/*.py
 REPLACE_PYTHON+=	ansible_collections/*/*/tests/*/*/*.py
 REPLACE_PYTHON+=	ansible_collections/*/*/tests/*/*/*/*.py
 REPLACE_PYTHON+=	ansible_collections/community/digitalocean/scripts/inventory/*.py
+REPLACE_PYTHON+=	ansible_collections/community/dns/update-docs-fragments.py
 REPLACE_PYTHON+=	ansible_collections/community/general/scripts/inventory/*.py
 REPLACE_PYTHON+=	ansible_collections/community/general/scripts/vault/*.py
 REPLACE_PYTHON+=	ansible_collections/community/general/tests/integration/targets/django_manage/files/base_test/*/*/*.py
+REPLACE_PYTHON+=	ansible_collections/community/hashi_vault/.github/actions/ansible-codecov/process.py
+REPLACE_PYTHON+=	ansible_collections/community/hashi_vault/.github/actions/docker-image-versions/versions.py
 REPLACE_PYTHON+=	ansible_collections/community/okd/ci/downstream_fragments.py
 REPLACE_PYTHON+=	ansible_collections/ngine_io/cloudstack/scripts/inventory/cloudstack.py
 REPLACE_PYTHON+=	ansible_collections/ovirt/ovirt/roles/disaster_recovery/files/*.py
@@ -36,6 +38,7 @@ CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/*/*/tests/*/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/*/*/tests/*/*/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/*/*/tests/*/*/*/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/netbox/netbox/hacking/*.sh
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/hashi_vault/docs/preview/build.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/kubernetes/utils/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/okd/ci/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/vmware/check-ignores-order
