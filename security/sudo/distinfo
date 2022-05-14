@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.119 2021/10/26 11:18:04 nia Exp $
+$NetBSD: distinfo,v 1.120 2022/05/14 05:41:00 adam Exp $
 
-BLAKE2s (sudo-1.9.7p1.tar.gz) = 1fead28a67e338e6d517d62d36f837f188376c4e55676d3878069288771d9b2d
-SHA512 (sudo-1.9.7p1.tar.gz) = bc85d9de1566de24883375edd1c4cd24b1f24437bb16d181bfa3c9c94cead220c69ad00d6727560ca195765ced970e95d69b9ce01dbea448de39afac9a902fb4
-Size (sudo-1.9.7p1.tar.gz) = 4197591 bytes
+BLAKE2s (sudo-1.9.10.tar.gz) = ebb57832c11e2ebc608ba5f293c1df59228e0bca2ddc2b79ffdb46ae19dc5426
+SHA512 (sudo-1.9.10.tar.gz) = 65cf92b67b64413cb807da8b9602fc90b75e5b30dd1402d682ca36f276a3d6209a8a59c14e463898abc9856bc56263e5ba4bb6d44774f56a2885a9eea4a35375
+Size (sudo-1.9.10.tar.gz) = 4516568 bytes
 SHA1 (patch-Makefile.in) = 1a83c55d27829013e2e23073046c5c39b020fafe
-SHA1 (patch-configure) = 375f43b8555f4e8fe2c4c1529c20abc1f550fa5c
+SHA1 (patch-configure) = f8ca2d1902ff5878a219ec754cf5e608e00c5ef3
 SHA1 (patch-examples_Makefile.in) = a20967ecd88eb5e4a8b47e6a3b80bc18be713409
 SHA1 (patch-logsrvd_Makefile.in) = b3672406368384dfbfe7ef3e6fcd141d43cbc026
 SHA1 (patch-plugins_sudoers_Makefile.in) = d2981bb9841f6bb4b1c80f5c2f2727fbf9579501

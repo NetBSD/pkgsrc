@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2021/01/18 14:32:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.20 2022/05/14 05:41:00 adam Exp $
 bin/cvtsudoers
 bin/sudo
 bin/sudoedit
@@ -28,19 +28,22 @@ man/man8/visudo.8
 sbin/sudo_logsrvd
 sbin/sudo_sendlog
 sbin/visudo
-share/doc/sudo/CONTRIBUTORS
+share/doc/sudo/CONTRIBUTING.md
+share/doc/sudo/CONTRIBUTORS.md
 share/doc/sudo/ChangeLog
-share/doc/sudo/HISTORY
-share/doc/sudo/LICENSE
+share/doc/sudo/HISTORY.md
+share/doc/sudo/LICENSE.md
 share/doc/sudo/NEWS
-share/doc/sudo/README
-${PLIST.ldap}share/doc/sudo/README.LDAP
-share/doc/sudo/TROUBLESHOOTING
-share/doc/sudo/UPGRADE
+share/doc/sudo/README.LDAP.md
+share/doc/sudo/README.md
+share/doc/sudo/SECURITY.md
+share/doc/sudo/TROUBLESHOOTING.md
+share/doc/sudo/UPGRADE.md
 ${PLIST.ldap}share/doc/sudo/schema.ActiveDirectory
 ${PLIST.ldap}share/doc/sudo/schema.OpenLDAP
 ${PLIST.ldap}share/doc/sudo/schema.iPlanet
 ${PLIST.ldap}share/doc/sudo/schema.olcSudo
+share/examples/sudo/cvtsudoers.conf
 share/examples/sudo/pam.conf
 share/examples/sudo/sudo.conf
 share/examples/sudo/sudo_logsrvd.conf
@@ -60,8 +63,10 @@ ${PLIST.nls}share/locale/el/LC_MESSAGES/sudoers.mo
 ${PLIST.nls}share/locale/eo/LC_MESSAGES/sudo.mo
 ${PLIST.nls}share/locale/eo/LC_MESSAGES/sudoers.mo
 ${PLIST.nls}share/locale/es/LC_MESSAGES/sudo.mo
+${PLIST.nls}share/locale/es/LC_MESSAGES/sudoers.mo
 ${PLIST.nls}share/locale/eu/LC_MESSAGES/sudo.mo
 ${PLIST.nls}share/locale/eu/LC_MESSAGES/sudoers.mo
+${PLIST.nls}share/locale/fa/LC_MESSAGES/sudo.mo
 ${PLIST.nls}share/locale/fi/LC_MESSAGES/sudo.mo
 ${PLIST.nls}share/locale/fi/LC_MESSAGES/sudoers.mo
 ${PLIST.nls}share/locale/fr/LC_MESSAGES/sudo.mo
