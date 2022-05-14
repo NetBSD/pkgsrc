@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2022/05/14 05:41:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2022/05/14 06:48:11 adam Exp $
 bin/cvtsudoers
 bin/sudo
 bin/sudoedit
@@ -34,7 +34,7 @@ share/doc/sudo/ChangeLog
 share/doc/sudo/HISTORY.md
 share/doc/sudo/LICENSE.md
 share/doc/sudo/NEWS
-share/doc/sudo/README.LDAP.md
+${PLIST.ldap}share/doc/sudo/README.LDAP.md
 share/doc/sudo/README.md
 share/doc/sudo/SECURITY.md
 share/doc/sudo/TROUBLESHOOTING.md
