@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/10/10 10:01:38 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2022/05/14 21:56:42 schmonz Exp $
 
 DISTNAME=		Qsmtp-0.38
 CATEGORIES=		mail
@@ -12,6 +12,8 @@ LICENSE=		gnu-gpl-v2
 
 USE_CMAKE=		yes
 CMAKE_ARGS+=		-DAUTOQMAIL=${QMAILDIR}
+
+CFLAGS.SunOS+=		-D__EXTENSIONS__
 
 BUILD_DEFS+=		QMAILDIR
 
