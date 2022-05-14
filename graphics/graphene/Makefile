@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/12/08 16:02:09 adam Exp $
+# $NetBSD: Makefile,v 1.5 2022/05/14 15:31:50 jperkin Exp $
 
 DISTNAME=	graphene-1.10.2
 PKGREVISION=	1
@@ -18,6 +18,8 @@ MESON_ARGS+=	-Dgobject_types=true
 MESON_ARGS+=	-Dintrospection=true
 MESON_ARGS+=	-Dtests=false
 MESON_ARGS+=	-Dinstalled_tests=false
+
+CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
