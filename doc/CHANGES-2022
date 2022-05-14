@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2552 2022/05/14 05:43:21 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2553 2022/05/14 13:45:34 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3939,3 +3939,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-bitarray to 2.5.1 [adam 2022-05-14]
 	Updated security/sudo to 1.9.10 [adam 2022-05-14]
 	Updated archivers/unrar to 6.1.7 [adam 2022-05-14]
+	Updated devel/lxqt-build-tools to 0.11.0nb1 [jperkin 2022-05-14]
