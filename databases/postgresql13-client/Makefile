@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/05/12 19:02:45 adam Exp $
+# $NetBSD: Makefile,v 1.16 2022/05/14 13:59:27 jperkin Exp $
 
 PKGNAME=	${DISTNAME:S/-/13-client-/}
 COMMENT=	PostgreSQL database client programs
@@ -48,6 +48,11 @@ INSTALL_DIRS+=	src/bin
 BUILD_DIRS+=	${INSTALL_DIRS}
 # Without this, the Darwin build fails (related to -bundle_loader).
 BUILD_DIRS+=	src/backend
+
+# ld: fatal: library -lpgfeutils: not found
+# ld: fatal: file processing errors. No output written to pg_verifybackup
+# ld: fatal: file processing errors. No output written to initdb
+MAKE_JOBS_SAFE=	no
 
 .for f in pg_service.conf psqlrc
 CONF_FILES+=	share/postgresql/${f}.sample ${PKG_SYSCONFDIR}/${f}
