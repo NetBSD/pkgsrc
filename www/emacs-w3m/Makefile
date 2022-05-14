@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2019/11/04 22:09:54 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2022/05/14 22:25:42 dholland Exp $
 
 DISTNAME=	emacs-w3m-1.4.4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	${HOMEPAGE}
 

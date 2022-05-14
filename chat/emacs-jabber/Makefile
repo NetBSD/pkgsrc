@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/01/26 05:26:16 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2022/05/14 22:25:32 dholland Exp $
 
 DISTNAME=		emacs-jabber-0.8.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=emacs-jabber/}
 EXTRACT_SUFX=		.tar.bz2

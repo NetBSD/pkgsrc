@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/04/15 09:48:19 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2022/05/14 22:25:40 dholland Exp $
 
 DISTNAME=	emacs-neotree-0.5.2.98fe213
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jaypei/}
 GITHUB_TAG=	98fe21334affaffe2334bf7c987edaf1980d2d0b

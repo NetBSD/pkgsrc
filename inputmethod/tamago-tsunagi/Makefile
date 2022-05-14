@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/12/09 03:28:49 taca Exp $
+# $NetBSD: Makefile,v 1.2 2022/05/14 22:25:38 dholland Exp $
 
 DISTNAME=	tamago-tsunagi-5.0.7.1
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_OSDN:=tamago-tsunagi/62701/}
 
