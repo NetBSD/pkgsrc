@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/05/11 19:26:26 bsiegert Exp $
+# $NetBSD: Makefile,v 1.11 2022/05/14 21:46:35 schmonz Exp $
 
 DISTNAME=		goredo-1.25.0
 PKGREVISION=		1
@@ -10,6 +10,8 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://www.goredo.cypherpunks.ru/
 COMMENT=		Go implementation of djb's redo
 LICENSE=		gnu-gpl-v3
+
+EXTRACT_USING=		bsdtar
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 
