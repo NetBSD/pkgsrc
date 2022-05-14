@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/05/14 12:02:56 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2022/05/14 18:17:50 tnn Exp $
 
 DISTNAME=	jdk17u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk17-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
@@ -154,6 +154,7 @@ PLIST.internal_vm_compiler=	yes
 PLIST.jvmci=			yes
 .endif
 .if ${MACHINE_ARCH} == "aarch64"
+PLIST.internal_vm_compiler=	yes
 PLIST.jvmci=			yes
 .endif
 
