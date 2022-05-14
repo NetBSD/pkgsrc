@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.75 2021/05/30 23:41:05 khorben Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.76 2022/05/14 21:48:51 dholland Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -624,7 +624,7 @@ ${_INSTALL_FILES_FILE}: ../../mk/pkginstall/files
 #	is used the same way but the package admin isn't prompted to remove
 #	the directory at post-deinstall time if it isn't empty.
 #	REQD_DIRS_PERMS is like MAKE_DIRS_PERMS but the value of PKG_CONFIG is
-#	ignored; however, all directories listed in REQD_DIRS should be
+#	ignored; however, all directories listed in REQD_DIRS_PERMS should be
 #	under ${PREFIX}.
 #
 # PKG_SYSCONFDIR_PERMS contains a list of "owner group mode" for
