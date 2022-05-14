@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.187 2021/10/21 07:46:38 wiz Exp $
+# $NetBSD: Makefile,v 1.188 2022/05/14 05:40:59 adam Exp $
 
-DISTNAME=	sudo-1.9.7p1
-PKGREVISION=	1
+DISTNAME=	sudo-1.9.10
 CATEGORIES=	security
 MASTER_SITES=	https://www.sudo.ws/dist/
 MASTER_SITES+=	ftp://ftp.sudo.ws/pub/sudo/
@@ -16,6 +15,7 @@ LICENSE=	isc AND modified-bsd
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-intercept
 CONFIGURE_ARGS+=	--disable-path-info
 CONFIGURE_ARGS+=	--disable-root-mailer
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -53,7 +53,6 @@ CFLAGS+=	-D_INCOMPLETE_XOPEN_C063=1
 OWN_DIRS+=		${VARBASE}/run
 BUILD_DEFS+=		VARBASE
 
-DOCDIR=			share/doc/${PKGBASE}
 EGDIR=			share/examples/${PKGBASE}
 CONF_FILES_PERMS=	${EGDIR}/sudo.conf ${PKG_SYSCONFDIR}/sudo.conf \
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0440
@@ -66,13 +65,11 @@ OWN_DIRS+=		${PKG_SYSCONFDIR}/sudoers.d
 SPECIAL_PERMS+=		bin/sudo ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=		bin/sudoreplay ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 511
 
-INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
+INSTALLATION_DIRS+=	${EGDIR}
 NOT_FOR_UNPRIVILEGED=	yes
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/UPGRADE ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/plugins/sudoers/sudoers ${DESTDIR}${PREFIX}/${EGDIR}/sudoers
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/${DOCDIR}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
