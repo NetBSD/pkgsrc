@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.30 2022/04/07 10:35:28 ryoon Exp $
+# $NetBSD: modules.mk,v 1.31 2022/05/14 21:57:01 dholland Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -12,8 +12,9 @@
 #		XEmacs
 #			->${PREFIX}/lib/xemacs/site-packages/lisp/foo/...
 #
-#	* You can't install an ELP for both Emacs and XEmacs
-#	  simultaneously.
+#	* You can't necessarily install an ELP for both Emacs and XEmacs
+#	  simultaneously, though because of the above path difference many
+#	  do not conflict with one another.
 #
 #	* XEmacs packages' names are prefixed by "xemacs-".
 #
@@ -259,13 +260,11 @@ _EMACS_ETCDIR.emacs=		share
 _EMACS_INFODIR.emacs=		${PKGINFODIR}
 _EMACS_LISPDIR.emacs=		share/emacs/site-lisp
 _EMACS_PKGNAME_PREFIX.emacs=
-_EMACS_CONFLICTS.emacs=		xemacs-${PKGBASE}-[0-9]*
 
 _EMACS_ETCDIR.xemacs=		lib/xemacs/site-packages/etc
 _EMACS_INFODIR.xemacs=		lib/xemacs/site-packages/info
 _EMACS_LISPDIR.xemacs=		lib/xemacs/site-packages/lisp
 _EMACS_PKGNAME_PREFIX.xemacs=	xemacs-
-_EMACS_CONFLICTS.xemacs=	${PKGBASE:C|^xemacs-||}-[0-9]*
 
 #
 # Version decision
@@ -299,7 +298,6 @@ _EMACS_PKGDIR=	${_EMACS_PKGDIR_MAP:M${_EMACS_TYPE}@*:C|${_EMACS_TYPE}@||}
 #
 
 DEPENDS+=	${_EMACS_REQD}:${_EMACS_PKGDIR}
-CONFLICTS+=	${_EMACS_CONFLICTS.${_EMACS_FLAVOR}}
 
 EMACS_MODULES?=
 .for _mod_ in ${EMACS_MODULES}
