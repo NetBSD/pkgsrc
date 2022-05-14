@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/04/18 19:12:24 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/05/14 17:00:25 tnn Exp $
 
 VERSION=	1.02.00
 DISTNAME=	pyqt-qwt-${VERSION}
@@ -37,6 +37,17 @@ do-configure:
 	  --qmake=${PREFIX}/qt5/bin/qmake				\
 	  --pyqt-sipdir=${PREFIX}/share/sip${PYVERSSUFFIX}/PyQt5	\
 	  --verbose
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+# clang: error: invalid argument '-bundle' not allowed with '-dynamiclib'
+BUILDLINK_TRANSFORM+=	rm:-bundle
+post-install:
+	install_name_tool	\
+	        -id ${PREFIX}/${PYSITELIB}/PyQt5/Qwt.so	\
+	  ${DESTDIR}${PREFIX}/${PYSITELIB}/PyQt5/Qwt.so
+.endif
 
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-qt5/buildlink3.mk"
