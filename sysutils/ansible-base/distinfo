@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.14 2022/02/08 16:41:06 adam Exp $
-
-BLAKE2s (ansible-base-2.10.17.tar.gz) = 49baa68fe75a591c1d8a9246ddbbade61796f4465feb1298e1ec8727f15183c0
-SHA512 (ansible-base-2.10.17.tar.gz) = 9efa1a67d7cfc678dc72d06763799a092b6a49c3e0953bdcf95519b00feed5b4792b72d7a6238f182b822d448c98d471dfa659b2ab73def3f9c9d3ea44fcbe39
-Size (ansible-base-2.10.17.tar.gz) = 6135744 bytes
-SHA1 (patch-lib_ansible_module__utils_facts_hardware_netbsd.py) = cdc41b104bffab7badd00446a9d0cdecba32cca2
