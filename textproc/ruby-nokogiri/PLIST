@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2022/03/06 17:14:34 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.37 2022/05/14 14:33:31 tsutsui Exp $
 bin/nokogiri${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -175,6 +175,5 @@ ${GEM_LIBDIR}/patches/libxml2/0005-avoid-isnan-isinf.patch
 ${GEM_LIBDIR}/patches/libxml2/0006-update-automake-files-for-arm64.patch
 ${GEM_LIBDIR}/patches/libxml2/0008-htmlParseComment-handle-abruptly-closed-comments.patch
 ${GEM_LIBDIR}/patches/libxml2/0009-allow-wildcard-namespaces.patch
-${GEM_LIBDIR}/patches/libxml2/0010-Revert-Different-approach-to-fix-quadratic-behavior.patch
 ${GEM_LIBDIR}/patches/libxslt/0001-update-automake-files-for-arm64.patch
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
