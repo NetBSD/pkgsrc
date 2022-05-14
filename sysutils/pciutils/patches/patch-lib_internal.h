@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_internal.h,v 1.1 2022/01/09 22:31:57 tnn Exp $
+$NetBSD: patch-lib_internal.h,v 1.2 2022/05/14 16:47:48 jperkin Exp $
 
 no symbol versioning available on SunOS
 
@@ -13,12 +13,12 @@ no symbol versioning available on SunOS
 +#define DEFINE_ALIAS(_decl, _for)
 +#define SYMBOL_VERSION(_int, _ext)
 +#define pci_fill_info_v35 pci_fill_info
-+#define pci_filter_init_v33 pci_filter_init
-+#define pci_fill_info_v35 pci_fill_info
++#define pci_filter_init_v38 pci_filter_init
++#define pci_fill_info_v38 pci_fill_info
 +#define pci_init_v35 pci_init
-+#define pci_filter_parse_slot_v33 pci_filter_parse_slot
-+#define pci_filter_parse_id_v33 pci_filter_parse_id
-+#define pci_filter_match_v33 pci_filter_match
++#define pci_filter_parse_slot_v38 pci_filter_parse_slot
++#define pci_filter_parse_id_v38 pci_filter_parse_id
++#define pci_filter_match_v38 pci_filter_match
  #else
  #define STATIC_ALIAS(_decl, _for)
  #define DEFINE_ALIAS(_decl, _for) extern _decl __attribute__((alias(#_for)))
