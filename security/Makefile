@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.860 2022/05/09 00:38:43 khorben Exp $
+# $NetBSD: Makefile,v 1.861 2022/05/15 04:49:15 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -96,7 +96,6 @@ SUBDIR+=	erlang-pkix
 SUBDIR+=	fail2ban
 SUBDIR+=	flawfinder
 SUBDIR+=	fprint-demo
-SUBDIR+=	fragroute
 SUBDIR+=	fsh
 SUBDIR+=	fwbuilder
 SUBDIR+=	gcr

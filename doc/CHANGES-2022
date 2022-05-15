@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2558 2022/05/15 04:48:20 markd Exp $
+$NetBSD: CHANGES-2022,v 1.2559 2022/05/15 04:49:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3963,3 +3963,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/tex-roboto-doc to 2022 [markd 2022-05-15]
 	Updated print/tex-siunitx to 3.1.1 [markd 2022-05-15]
 	Updated print/tex-siunitx-doc to 3.1.1 [markd 2022-05-15]
+	Removed security/fragroute [wiz 2022-05-15]
