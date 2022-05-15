@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2022/04/14 01:55:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.16 2022/05/15 04:28:28 markd Exp $
 share/texmf-dist/doc/latex/koma-script/INSTALL.txt
 share/texmf-dist/doc/latex/koma-script/INSTALLD.txt
 share/texmf-dist/doc/latex/koma-script/README
@@ -45,6 +45,7 @@ share/texmf-dist/source/latex/koma-script/doc/english/common-compatibility.tex
 share/texmf-dist/source/latex/koma-script/doc/english/common-dictum.tex
 share/texmf-dist/source/latex/koma-script/doc/english/common-draftmode.tex
 share/texmf-dist/source/latex/koma-script/doc/english/common-fontsize.tex
+share/texmf-dist/source/latex/koma-script/doc/english/common-footnotes-experts.tex
 share/texmf-dist/source/latex/koma-script/doc/english/common-footnotes.tex
 share/texmf-dist/source/latex/koma-script/doc/english/common-headfootheight.tex
 share/texmf-dist/source/latex/koma-script/doc/english/common-interleafpage.tex
@@ -100,6 +101,7 @@ share/texmf-dist/source/latex/koma-script/doc/ngerman/common-compatibility.tex
 share/texmf-dist/source/latex/koma-script/doc/ngerman/common-dictum.tex
 share/texmf-dist/source/latex/koma-script/doc/ngerman/common-draftmode.tex
 share/texmf-dist/source/latex/koma-script/doc/ngerman/common-fontsize.tex
+share/texmf-dist/source/latex/koma-script/doc/ngerman/common-footnotes-experts.tex
 share/texmf-dist/source/latex/koma-script/doc/ngerman/common-footnotes.tex
 share/texmf-dist/source/latex/koma-script/doc/ngerman/common-headfootheight.tex
 share/texmf-dist/source/latex/koma-script/doc/ngerman/common-interleafpage.tex
@@ -168,15 +170,16 @@ share/texmf-dist/source/latex/koma-script/doc/scrwfile.html
 share/texmf-dist/source/latex/koma-script/doc/tocbasic.html
 share/texmf-dist/source/latex/koma-script/doc/typearea.html
 share/texmf-dist/source/latex/koma-script/japanlco.dtx
+share/texmf-dist/source/latex/koma-script/koma-script-source-doc.dtx
 share/texmf-dist/source/latex/koma-script/scraddr.dtx
 share/texmf-dist/source/latex/koma-script/scrdoc.dtx
 share/texmf-dist/source/latex/koma-script/scrdocstrip.tex
 share/texmf-dist/source/latex/koma-script/scrextend.dtx
 share/texmf-dist/source/latex/koma-script/scrhack.dtx
 share/texmf-dist/source/latex/koma-script/scrjura.dtx
+share/texmf-dist/source/latex/koma-script/scrkernel-addressfiles.dtx
 share/texmf-dist/source/latex/koma-script/scrkernel-basics.dtx
 share/texmf-dist/source/latex/koma-script/scrkernel-bibliography.dtx
-share/texmf-dist/source/latex/koma-script/scrkernel-circularletters.dtx
 share/texmf-dist/source/latex/koma-script/scrkernel-compatibility.dtx
 share/texmf-dist/source/latex/koma-script/scrkernel-floats.dtx
 share/texmf-dist/source/latex/koma-script/scrkernel-fonts.dtx
@@ -230,6 +233,7 @@ share/texmf-dist/tex/latex/koma-script/UScommercial9DW.lco
 share/texmf-dist/tex/latex/koma-script/float.hak
 share/texmf-dist/tex/latex/koma-script/floatrow.hak
 share/texmf-dist/tex/latex/koma-script/hyperref.hak
+share/texmf-dist/tex/latex/koma-script/koma-script-source-doc.cls
 share/texmf-dist/tex/latex/koma-script/listings.hak
 share/texmf-dist/tex/latex/koma-script/lscape.hak
 share/texmf-dist/tex/latex/koma-script/nomencl.hak
