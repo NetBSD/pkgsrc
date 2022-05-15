@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2565 2022/05/15 12:12:30 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.2566 2022/05/15 12:28:50 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3972,3 +3972,6 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/tuc to 0.6.0 [pin 2022-05-15]
 	Removed ham/gr-fcdproplus [wiz 2022-05-15]
 	Updated ham/chirp to 20220515 [gdt 2022-05-15]
+	Updated graphics/fna3d to 22.05 [tnn 2022-05-15]
+	Updated audio/faudio to 22.05 [tnn 2022-05-15]
+	Updated games/fna to 22.05 [tnn 2022-05-15]
