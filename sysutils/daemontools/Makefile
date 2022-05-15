@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2020/11/19 09:35:43 schmonz Exp $
+# $NetBSD: Makefile,v 1.47 2022/05/15 17:26:31 schmonz Exp $
 
 DISTNAME=		daemontools-0.76
 PKGREVISION=		3
@@ -18,6 +18,7 @@ CONFLICTS+=		daemontools-encore-[0-9]*
 
 WRKSRC=			${WRKDIR}/admin/${PKGNAME_NOREV}
 DJB_SLASHPACKAGE=	YES
+TEST_TARGET=		rts
 
 CMDDIR=			${WRKSRC}/command
 

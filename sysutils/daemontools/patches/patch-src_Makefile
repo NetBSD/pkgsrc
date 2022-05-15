@@ -1,14 +1,31 @@
-$NetBSD: patch-src_Makefile,v 1.1 2017/10/03 00:21:44 schmonz Exp $
+$NetBSD: patch-src_Makefile,v 1.2 2022/05/15 17:26:31 schmonz Exp $
 
 Use a pkgsrc-capable shell on all platforms.
+Run the tests separately from the build.
+Skip creating sysdeps, nothing uses it.
 
 --- src/Makefile.orig	2001-07-12 16:49:49.000000000 +0000
 +++ src/Makefile
-@@ -265,7 +265,7 @@ readproctitle.o: compile error.h readpro
- rts: envdir envuidgid fghack matchtest multilog pgrphack \
- readproctitle rts.tests setlock setuidgid softlimit supervise svc \
- svok svscan svscanboot svstat tai64n tai64nlocal
+@@ -177,7 +177,9 @@ iopause.h: choose compile iopause.h1 iop
+ iopause.o: compile iopause.c iopause.h select.h tai.h taia.h uint64.h
+ 	./compile iopause.c
+ 
+-it: rts sysdeps
++it: envdir envuidgid fghack matchtest multilog pgrphack \
++readproctitle rts.tests setlock setuidgid softlimit supervise svc \
++svok svscan svscanboot svstat tai64n tai64nlocal
+ 
+ load: conf-ld print-ld.sh systype warn-auto.sh
+ 	rm -f load
+@@ -262,10 +264,8 @@ readproctitle: byte.a load readproctitle
+ readproctitle.o: compile error.h readproctitle.c
+ 	./compile readproctitle.c
+ 
+-rts: envdir envuidgid fghack matchtest multilog pgrphack \
+-readproctitle rts.tests setlock setuidgid softlimit supervise svc \
+-svok svscan svscanboot svstat tai64n tai64nlocal
 -	env - /bin/sh rts.tests 2>&1 | cat -v > rts
++rts:
 +	env - ${PKGSRC_SHELL} rts.tests 2>&1 | cat -v > rts
  
  scan_ulong.o: compile scan.h scan_ulong.c
