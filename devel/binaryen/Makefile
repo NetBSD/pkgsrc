@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/05/12 07:57:22 fcambus Exp $
+# $NetBSD: Makefile,v 1.11 2022/05/15 17:22:12 fcambus Exp $
 
 VERSION=	108
 DISTNAME=	binaryen-${VERSION}
@@ -12,7 +12,7 @@ COMMENT=	Compiler and toolchain infrastructure library for WebAssembly
 LICENSE=	apache-2.0
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c c++14
+USE_LANGUAGES=	c c++17
 
 WRKSRC=		${WRKDIR}/binaryen-${GITHUB_TAG}
 
