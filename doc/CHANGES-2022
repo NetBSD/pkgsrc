@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2569 2022/05/15 18:37:45 nia Exp $
+$NetBSD: CHANGES-2022,v 1.2570 2022/05/15 18:42:10 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3979,3 +3979,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated games/oshu to 2.0.2 [nia 2022-05-15]
 	Updated emulators/stella to 6.6 [nia 2022-05-15]
 	Updated emulators/libretro-stella to 6.6 [nia 2022-05-15]
+	Updated games/frotz to 2.54 [nia 2022-05-15]
