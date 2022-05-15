@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2022/04/11 16:33:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2022/05/15 19:29:25 adam Exp $
 bin/xmlschema-json2xml-${PYVERSSUFFIX}
 bin/xmlschema-validate-${PYVERSSUFFIX}
 bin/xmlschema-xml2json-${PYVERSSUFFIX}
@@ -70,6 +70,12 @@ ${PYSITELIB}/xmlschema/helpers.pyo
 ${PYSITELIB}/xmlschema/limits.py
 ${PYSITELIB}/xmlschema/limits.pyc
 ${PYSITELIB}/xmlschema/limits.pyo
+${PYSITELIB}/xmlschema/locale/en/LC_MESSAGES/xmlschema.mo
+${PYSITELIB}/xmlschema/locale/en/LC_MESSAGES/xmlschema.po
+${PYSITELIB}/xmlschema/locale/it/LC_MESSAGES/xmlschema.mo
+${PYSITELIB}/xmlschema/locale/it/LC_MESSAGES/xmlschema.po
+${PYSITELIB}/xmlschema/locale/ru/LC_MESSAGES/xmlschema.mo
+${PYSITELIB}/xmlschema/locale/ru/LC_MESSAGES/xmlschema.po
 ${PYSITELIB}/xmlschema/names.py
 ${PYSITELIB}/xmlschema/names.pyc
 ${PYSITELIB}/xmlschema/names.pyo
@@ -113,6 +119,9 @@ ${PYSITELIB}/xmlschema/testing/_helpers.pyo
 ${PYSITELIB}/xmlschema/testing/_observers.py
 ${PYSITELIB}/xmlschema/testing/_observers.pyc
 ${PYSITELIB}/xmlschema/testing/_observers.pyo
+${PYSITELIB}/xmlschema/translation.py
+${PYSITELIB}/xmlschema/translation.pyc
+${PYSITELIB}/xmlschema/translation.pyo
 ${PYSITELIB}/xmlschema/validators/__init__.py
 ${PYSITELIB}/xmlschema/validators/__init__.pyc
 ${PYSITELIB}/xmlschema/validators/__init__.pyo
