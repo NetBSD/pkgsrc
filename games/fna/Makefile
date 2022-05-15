@@ -1,23 +1,18 @@
-# $NetBSD: Makefile,v 1.7 2022/04/18 19:09:50 adam Exp $
+# $NetBSD: Makefile,v 1.8 2022/05/15 12:17:49 tnn Exp $
 
-GITHUB_PROJECT=	FNA
-GITHUB_TAG=	21.01
-DISTNAME=	21.01
-PKGNAME=	${GITHUB_PROJECT:tl}-${DISTNAME}
-PKGREVISION=	5
+DISTNAME=	FNA-22.05
+PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FNA-XNA/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://fna-xna.github.io/
 COMMENT=	Reimplementation of Microsoft XNA Game Studio 4.0 Refresh Libraries
 LICENSE=	ms-pl AND gnu-lgpl-v2.1 AND mit
 
-
-SDL2_CS=	1e01bc8eebb501bf6df24ec98784c32843308e0a.tar.gz
-FAUDIO=		0f3f1e6df74da481d466dd97aa4345ea9fe56ca4.tar.gz
-THEORAFILE=	0c5504658a3108919e53b625287786a87529de42.tar.gz
+SDL2_CS=	34338dfab2be370b3aa3d3ebbd8bd6cb7f5c1148.tar.gz
+FAUDIO=		0a90c02a86495b93b3ce08768d572d3f1cfef3cc.tar.gz
+THEORAFILE=	23d47a4c3dc15ec92c147ea27627759c67b03664.tar.gz
 NETSTUB=	ebff244074bb3c28aeeb8cf7b383b5a029d7e28d.tar.gz
 DISTFILES+=	${DEFAULT_DISTFILES} ${THEORAFILE} ${FAUDIO} ${SDL2_CS} ${NETSTUB}
 
@@ -26,7 +21,6 @@ SITES.${FAUDIO}+=	${MASTER_SITE_GITHUB:=FNA-XNA/}Faudio/archive/
 SITES.${THEORAFILE}+=	${MASTER_SITE_GITHUB:=FNA-XNA/}Theorafile/archive/
 SITES.${NETSTUB}+=	${MASTER_SITE_GITHUB:=FNA-XNA/}FNA.NetStub/archive/
 
-WRKSRC=		${WRKDIR}/FNA-21.01
 USE_LANGUAGES=	# none
 
 post-extract:
@@ -36,7 +30,6 @@ post-extract:
 	${LN} -sf ${WRKDIR}/FAudio-${FAUDIO:S/${EXTRACT_SUFX}//} ${WRKSRC}/lib/FAudio
 	${LN} -sf ${WRKDIR}/Theorafile-${THEORAFILE:S/${EXTRACT_SUFX}//} ${WRKSRC}/lib/Theorafile
 	${LN} -sf ${WRKDIR}/SDL2-CS-${SDL2_CS:S/${EXTRACT_SUFX}//} ${WRKSRC}/lib/SDL2-CS
-
 
 # need to rm bin,obj before FNA.sln to build with FNA.Settings.props
 do-build:
