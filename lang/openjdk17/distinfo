@@ -1,14 +1,11 @@
-$NetBSD: distinfo,v 1.3 2022/05/14 15:23:02 tnn Exp $
+$NetBSD: distinfo,v 1.4 2022/05/15 20:29:00 tnn Exp $
 
-BLAKE2s (bootstrap-jdk-1.17.0.2.8-netbsd-10-amd64-20220401.tar.xz) = afd8e5dcbfa3d8fe397e97f713d24a1437936dcffbe79f3f0c3e9bfb58bce36d
-SHA512 (bootstrap-jdk-1.17.0.2.8-netbsd-10-amd64-20220401.tar.xz) = f9ddd27ac0ccf77eb72e2c1fe5a06c6431a74b4feeea495233cba058dd8346f215861c59b5228e33729dccdc7f557a29e881123d8592f0cc304536fd5cc3609a
-Size (bootstrap-jdk-1.17.0.2.8-netbsd-10-amd64-20220401.tar.xz) = 320259572 bytes
-BLAKE2s (bootstrap-jdk-1.17.0.2.8-netbsd-9-amd64-20220408.tar.xz) = 8a805fb72760eed42d76b12e6fd655e5af73d6825eb7aeb3acd2201d21f43575
-SHA512 (bootstrap-jdk-1.17.0.2.8-netbsd-9-amd64-20220408.tar.xz) = 8878e31782352316a2777aeb7262c6e01e994b9ec5d73b9d155bfa015dfc14b15e9cbace127e361778e3aec09b4995a35b9df448a94bf50eb2860469396b7b9e
-Size (bootstrap-jdk-1.17.0.2.8-netbsd-9-amd64-20220408.tar.xz) = 288701712 bytes
-BLAKE2s (bootstrap-jdk-1.17.0.2.8-netbsd-9-i386-20220506.tar.xz) = c7468a1619819ac0fa387e011a2b5b8547c4f93b39728a3194f827a2121e1e55
-SHA512 (bootstrap-jdk-1.17.0.2.8-netbsd-9-i386-20220506.tar.xz) = c687698cdd8d593e7f4a791b8f8abd85eee61b8800ad819e8d71b8fa4c44485bf4351459c56d933073c6af73cb915a284a3862df331f31659db9426bd163ed05
-Size (bootstrap-jdk-1.17.0.2.8-netbsd-9-i386-20220506.tar.xz) = 277103744 bytes
+BLAKE2s (bootstrap-jdk-1.17.0.3.7-netbsd-9-amd64-20220515.tar.xz) = 5da928c9ad945b0be6eebdada9788fe0f837a52d1e50ffa3535ef4115700f20a
+SHA512 (bootstrap-jdk-1.17.0.3.7-netbsd-9-amd64-20220515.tar.xz) = 785a6f203e7e5a31f48c708e6a33aa28f00b742226248e2757564d521c580f78070145e4a5dedf3eac1801531781143550c1c127ef6f8d310b88e864d42f4279
+Size (bootstrap-jdk-1.17.0.3.7-netbsd-9-amd64-20220515.tar.xz) = 105391720 bytes
+BLAKE2s (bootstrap-jdk-1.17.0.3.7-netbsd-9-i386-20220515.tar.xz) = a8e6a44e1470cf2e8845f6b5a6edff142d06c76e12a793b5991b1bf05cf36a98
+SHA512 (bootstrap-jdk-1.17.0.3.7-netbsd-9-i386-20220515.tar.xz) = 9fc54d9a31270cbec5e0454bbf1ddf3bb99ab5c916660e1f5e89163b384368a7f1fd5311db71b21c1638eb916899199a1080e90cc1f9615bfdbd871bb94a3216
+Size (bootstrap-jdk-1.17.0.3.7-netbsd-9-i386-20220515.tar.xz) = 103902136 bytes
 BLAKE2s (jdk17u-jdk-17.0.3-7-1.tar.gz) = d080a7513b3e1d431e24673fff10695adf0154b97fd45be7307be09e929e78a6
 SHA512 (jdk17u-jdk-17.0.3-7-1.tar.gz) = ddbe9c6e2c48c320247e023070de9f4b770a58d6eaf763f6331d6cccfd4bd5591445994174d5196392e5a4f0bb398d6b309e37dc5079c823458ac7fc4d9b6a9d
 Size (jdk17u-jdk-17.0.3-7-1.tar.gz) = 104898973 bytes
