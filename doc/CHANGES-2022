@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2576 2022/05/15 19:30:23 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2577 2022/05/15 20:01:25 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3990,3 +3990,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-pylint to 2.13.9 [adam 2022-05-15]
 	Updated net/py-lexicon to 3.11.1 [adam 2022-05-15]
 	Updated textproc/py-xmlschema to 1.11.0 [adam 2022-05-15]
+	Updated chat/profanity to 0.12.1 [nia 2022-05-15]
