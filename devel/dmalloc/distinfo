@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:14:33 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/05/15 04:39:56 wiz Exp $
 
 BLAKE2s (dmalloc-5.5.2.tgz) = 00fac9ac9fbcfc770be3a31d1340945daf3e9e6744ffa7dae7c6622f38ae7ea8
 SHA512 (dmalloc-5.5.2.tgz) = 96bb94aeb2bc3220f652b5294bdf8592b984cb2a53e5f02b2b8d52450c3396d18651f334644cdfff9c85a8c0d0cedc7f6a18b9d70497b2c6b5f85dbd1e827b93
 Size (dmalloc-5.5.2.tgz) = 666608 bytes
-SHA1 (patch-aa) = 04ce2571172eb7ed60aa9d4fa98a5cad0e88aec8
+SHA1 (patch-aa) = 2a3345949c6f3a09f2176a0f615038226b5e818d
