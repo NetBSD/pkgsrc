@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/03/04 09:16:05 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/05/15 20:01:14 nia Exp $
 bin/profanity
 include/profapi.h
 lib/libprofanity.la
@@ -24,6 +24,7 @@ man/man1/profanity-cmd.1
 man/man1/profanity-color.1
 man/man1/profanity-connect.1
 man/man1/profanity-console.1
+man/man1/profanity-correct-editor.1
 man/man1/profanity-correct.1
 man/man1/profanity-correction.1
 man/man1/profanity-disco.1
@@ -48,6 +49,7 @@ man/man1/profanity-log.1
 man/man1/profanity-logging.1
 man/man1/profanity-mainwin.1
 man/man1/profanity-mam.1
+man/man1/profanity-mood.1
 man/man1/profanity-msg.1
 man/man1/profanity-nick.1
 man/man1/profanity-notify.1
@@ -68,6 +70,7 @@ man/man1/profanity-privileges.1
 man/man1/profanity-quit.1
 man/man1/profanity-receipts.1
 man/man1/profanity-reconnect.1
+man/man1/profanity-register.1
 man/man1/profanity-reload.1
 man/man1/profanity-resource.1
 man/man1/profanity-role.1
@@ -122,6 +125,7 @@ share/profanity/themes/original
 share/profanity/themes/original_bright
 share/profanity/themes/shade
 share/profanity/themes/simple
+share/profanity/themes/snikket
 share/profanity/themes/solarized-dark
 share/profanity/themes/solarized-light
 share/profanity/themes/spawn
