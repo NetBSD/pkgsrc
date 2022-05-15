@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.13 2020/12/31 20:04:13 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.14 2022/05/15 00:37:26 dholland Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -90,7 +90,7 @@ CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}js/src/build/autoconf/config.sub
 CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}nsprpub/build/autoconf/config.sub
 CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}/js/ctypes/libffi/config.sub
 
-CONFIGURE_ENV+=		CPP=${CPP}
+CONFIGURE_ENV+=		CPP=${CPP:Q}
 ALL_ENV+=		SHELL=${CONFIG_SHELL:Q}
 
 # Build outside ${WRKSRC}
