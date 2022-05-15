@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2021/11/08 14:50:12 taca Exp $
+# $NetBSD: Makefile,v 1.7 2022/05/15 04:46:32 wiz Exp $
 
 .include "../../security/clamav/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/clamav/clamav-doc/}
+PKGREVISION=	1
 COMMENT=	Anti-virus toolkit documents
 
 NO_BUILD=	yes
