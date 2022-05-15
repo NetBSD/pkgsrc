@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21861 2022/05/15 04:30:10 wiz Exp $
+$NetBSD: TODO,v 1.21862 2022/05/15 06:16:00 dholland Exp $
 
 Suggested new packages
 ======================
@@ -317,6 +317,11 @@ Suggested new packages
 	Barbie Seahorse Adventures
 	http://www.imitationpickles.org/barbie/
 	You're a seahorse - and you want to go to the moon!
+
+	Greenbone Vulnerability Management
+	https://greenbone.github.io/docs/
+	Network security scanner and management tools, successor to OpenVAS.
+	Some notes in PR 56687.
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
