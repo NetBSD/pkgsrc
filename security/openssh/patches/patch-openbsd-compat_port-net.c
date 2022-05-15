@@ -1,4 +1,4 @@
-$NetBSD: patch-openbsd-compat_port-tun.c,v 1.5 2020/09/29 15:17:42 ryoon Exp $
+$NetBSD: patch-openbsd-compat_port-net.c,v 1.1 2022/05/15 19:21:56 wiz Exp $
 
 if_tun.h can be found in net/tun
 
