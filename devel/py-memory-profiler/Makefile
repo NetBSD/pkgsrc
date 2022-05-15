@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/01/05 15:41:06 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2022/05/15 10:26:26 nia Exp $
 
 DISTNAME=	memory_profiler-0.60.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-matplotlib
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-matplotlib
 
 USE_PKG_RESOURCES=	yes
 
