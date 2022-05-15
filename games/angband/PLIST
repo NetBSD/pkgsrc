@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2020/07/07 13:17:46 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/05/15 18:54:44 nia Exp $
 bin/angband
 share/angband/customize/font-gcu.prf
 share/angband/customize/font-sdl.prf
+share/angband/customize/font-sdl2.prf
 share/angband/customize/font-win.prf
 share/angband/customize/font-x11.prf
 share/angband/customize/font.prf
@@ -55,6 +56,8 @@ share/angband/gamedata/visuals.txt
 share/angband/gamedata/world.txt
 share/angband/help/commands.txt
 share/angband/help/index.txt
+share/angband/help/r_comm.txt
+share/angband/help/r_index.txt
 share/angband/help/symbols.txt
 share/angband/screens/crown.txt
 share/angband/screens/dead.txt

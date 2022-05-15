@@ -1,15 +1,42 @@
-$NetBSD: patch-configure.ac,v 1.1 2021/08/31 08:23:15 nia Exp $
+$NetBSD: patch-configure.ac,v 1.2 2022/05/15 18:54:44 nia Exp $
 
 Shell portability.
 
---- configure.ac.orig	2021-07-31 22:28:01.000000000 +0000
+--- configure.ac.orig	2022-02-21 22:18:55.000000000 +0000
 +++ configure.ac
-@@ -217,7 +217,7 @@ AC_DEFINE_UNQUOTED([DEFAULT_DATA_PATH], 
+@@ -238,7 +238,7 @@ AC_ARG_WITH(gamedata_in_lib,
+ 	[AS_HELP_STRING([--with-gamedata-in-lib], [store the game data in the lib path.])])
  
- NOINSTALL="$with_noinstall"; AC_SUBST(NOINSTALL)
+ GAMEDATA_IN_LIB="false"
+-if test "x$with_gamedata_in_lib" == "xyes"; then
++if test "x$with_gamedata_in_lib" = "xyes"; then
+ 	GAMEDATA_IN_LIB="true"
+ 	AC_DEFINE(GAMEDATA_IN_LIB, 1, [Define to store the game data in the lib path.])
+ fi
+@@ -256,7 +256,7 @@ AC_DEFINE_UNQUOTED([DEFAULT_DATA_PATH], 
+ 
+ NOINSTALL="$with_no_install"; AC_SUBST(NOINSTALL)
  SETEGID="$with_setgid";      AC_SUBST(SETEGID)
 -if test "x$wsetgid" == "xyes"; then
 +if test "x$wsetgid" = "xyes"; then
  	AC_DEFINE(SETGID, 1, [Define if running as a central install on a multiuser system that has setresgid or setegid support.])
  fi
  
+@@ -572,7 +572,7 @@ echo "  config path:                    
+ echo "  lib path:                               ${displayedlibdatadir}"
+ echo "  doc path:                               ${displayeddocdir}"
+ echo "  var path:                               ${displayedvardatadir}"
+-if test "x$with_gamedata_in_lib" == "xyes"; then
++if test "x$with_gamedata_in_lib" = "xyes"; then
+ 	echo "  gamedata path:                          ${displayedlibdatadir}"
+ else
+ 	echo "  gamedata path:                          ${displayedconfigdir}"
+@@ -582,7 +582,7 @@ if test "x$wsetgid" = "xyes"; then
+ elif test "x$with_private_dirs" = "xyes" && test ! "x$enable_win" = "xyes"; then
+ 	echo "  (with private save and score files in ~/.angband/Angband/)"
+ fi
+-if test "x$with_sphinx" == "xyes"; then
++if test "x$with_sphinx" = "xyes"; then
+ 	echo "  documentation:                          Yes"
+ else
+ 	echo "  documentation:                          No"
