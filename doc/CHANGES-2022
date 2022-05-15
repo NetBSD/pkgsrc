@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2572 2022/05/15 18:55:49 nia Exp $
+$NetBSD: CHANGES-2022,v 1.2573 2022/05/15 19:12:24 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3983,3 +3983,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated converters/cbmconvert to 2.1.5 [rhialto 2022-05-15]
 	Updated games/angband to 4.2.4 [nia 2022-05-15]
 	Updated games/angband-sdl to 4.2.4 [nia 2022-05-15]
+	Added chat/libstrophe version 0.12.0 [nia 2022-05-15]
