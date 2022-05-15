@@ -1,7 +1,11 @@
-# $NetBSD: bootstrap.mk,v 1.4 2022/05/15 22:30:49 tnn Exp $
+# $NetBSD: bootstrap.mk,v 1.5 2022/05/15 22:44:24 tnn Exp $
 
 .if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 090000
-PKG_SKIP_REASON+=		"Only supports NetBSD >= 9"
+PKG_FAIL_REASON+=		"Only supports NetBSD >= 9"
+.endif
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) && ${OPSYS_VERSION} < 099983
+PKG_FAIL_REASON+=		"PR 55248: please update to NetBSD >= 9.99.83 to use this package"
 .endif
 
 ONLY_FOR_PLATFORM+=		NetBSD-*-i386
