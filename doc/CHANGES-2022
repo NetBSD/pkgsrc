@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2575 2022/05/15 19:23:52 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2576 2022/05/15 19:30:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3986,3 +3986,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Added chat/libstrophe version 0.12.0 [nia 2022-05-15]
 	Updated security/openssh to 9.0.1 [wiz 2022-05-15]
 	Updated devel/libuv to 1.44.1nb1 [wiz 2022-05-15]
+	Updated graphics/openjpeg to 2.5.0 [adam 2022-05-15]
+	Updated devel/py-pylint to 2.13.9 [adam 2022-05-15]
+	Updated net/py-lexicon to 3.11.1 [adam 2022-05-15]
+	Updated textproc/py-xmlschema to 1.11.0 [adam 2022-05-15]
