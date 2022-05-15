@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2022/01/04 20:54:06 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2022/05/15 10:27:07 nia Exp $
 
 DISTNAME=	matplotlib-3.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,7 +25,7 @@ USE_TOOLS+=	pkg-config
 
 PYSETUPTESTTARGET=	pytest
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-numpy
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-numpy
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
