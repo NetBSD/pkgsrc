@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.271 2022/04/20 10:19:26 js Exp $
+# $NetBSD: Makefile,v 1.272 2022/05/15 19:12:11 nia Exp $
 #
 
 COMMENT=	Communication programs
@@ -73,6 +73,7 @@ SUBDIR+=	libmsn
 SUBDIR+=	libotr
 SUBDIR+=	libpurple
 SUBDIR+=	libsignal-protocol-c
+SUBDIR+=	libstrophe
 SUBDIR+=	libtelepathy
 SUBDIR+=	libtlen
 SUBDIR+=	loudmouth
