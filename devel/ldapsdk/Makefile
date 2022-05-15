@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2021/05/24 19:49:59 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2022/05/15 02:19:36 dholland Exp $
 
 DISTNAME=	ldapsdk_12311998
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -33,6 +33,8 @@ AUTO_MKDIRS=			yes
 
 post-extract:
 	${LN} -s FreeBSD.mk ${WRKSRC}/config/DragonFly.mk
+	# copy rather than link this as it'll need to be patched
+	cp ${WRKSRC}/config/Rhapsody.mk ${WRKSRC}/config/Darwin.mk
 
 do-configure:
 	${ECHO} "PKG_SYSCONFDIR=${PKG_SYSCONFDIR}" >> ${WRKSRC}/config/rules.mk
