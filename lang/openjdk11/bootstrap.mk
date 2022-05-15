@@ -1,5 +1,12 @@
-# $NetBSD: bootstrap.mk,v 1.4 2020/05/09 00:55:44 tnn Exp $
+# $NetBSD: bootstrap.mk,v 1.5 2022/05/15 22:44:24 tnn Exp $
 
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 080000
+PKG_FAIL_REASON+=		"Only supports NetBSD >= 8"
+.endif
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) && ${OPSYS_VERSION} < 099983
+PKG_FAIL_REASON+=		"PR 55248: please update to NetBSD >= 9.99.83 to use this package"
+.endif
 
 ONLY_FOR_PLATFORM+=		NetBSD-*-i386
 BOOT.nb7-i386=			bootstrap-jdk-1.11.0.5.8-netbsd-7-i386-20190928.tar.xz
