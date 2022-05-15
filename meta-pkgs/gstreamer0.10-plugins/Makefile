@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2020/01/21 09:40:06 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2022/05/15 02:26:34 dholland Exp $
 
 DISTNAME=	# empty
 PKGNAME=	gstreamer0.10-plugins-1.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	meta-pkgs multimedia
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -14,8 +14,10 @@ COMMENT=	Open-source multimedia framework (plug-in meta-package)
 META_PACKAGE=	yes
 
 DEPENDS+=	gst-plugins0.10-a52-[0-9]*:../../audio/gst-plugins0.10-a52
+DEPENDS+=	gst-plugins0.10-alsa-[0-9]*:../../audio/gst-plugins0.10-alsa
 DEPENDS+=	gst-plugins0.10-cdparanoia-[0-9]*:../../audio/gst-plugins0.10-cdparanoia
 DEPENDS+=	gst-plugins0.10-dts-[0-9]*:../../audio/gst-plugins0.10-dts
+DEPENDS+=	gst-plugins0.10-faac-[0-9]*:../../audio/gst-plugins0.10-faac
 DEPENDS+=	gst-plugins0.10-faad-[0-9]*:../../audio/gst-plugins0.10-faad
 DEPENDS+=	gst-ffmpeg-[0-9]*:../../multimedia/gst-plugins0.10-ffmpeg
 DEPENDS+=	gst-fluendo-mp3-[0-9]*:../../audio/gst-plugins0.10-fluendo-mp3
@@ -33,6 +35,7 @@ DEPENDS+=	gst-plugins0.10-vorbis-[0-9]*:../../audio/gst-plugins0.10-vorbis
 DEPENDS+=	gst-plugins0.10-wavpack-[0-9]*:../../audio/gst-plugins0.10-wavpack
 DEPENDS+=	gst-plugins0.10-pango-[0-9]*:../../devel/gst-plugins0.10-pango
 DEPENDS+=	gst-plugins0.10-cairo-[0-9]*:../../graphics/gst-plugins0.10-cairo
+DEPENDS+=	gst-plugins0.10-jpeg-[0-9]*:../../graphics/gst-plugins0.10-jpeg
 DEPENDS+=	gst-plugins0.10-png-[0-9]*:../../graphics/gst-plugins0.10-png
 DEPENDS+=	gst-plugins0.10-dvdread-[0-9]*:../../multimedia/gst-plugins0.10-dvdread
 DEPENDS+=	gst-gnonlin-[0-9]*:../../multimedia/gst-plugins0.10-gnonlin
@@ -42,6 +45,7 @@ DEPENDS+=	gst-plugins0.10-resindvd-[0-9]*:../../multimedia/gst-plugins0.10-resin
 DEPENDS+=	gst-plugins0.10-theora-[0-9]*:../../multimedia/gst-plugins0.10-theora
 DEPENDS+=	gst-plugins0.10-x264-[0-9]*:../../multimedia/gst-plugins0.10-x264
 DEPENDS+=	gst-plugins0.10-xvid-[0-9]*:../../multimedia/gst-plugins0.10-xvid
+DEPENDS+=	gst-plugins0.10-soup-[0-9]*:../../net/gst-plugins0.10-soup
 DEPENDS+=	gst-plugins0.10-gnomevfs-[0-9]*:../../sysutils/gst-plugins0.10-gnomevfs
 DEPENDS+=	gst-plugins0.10-x11-[0-9]*:../../x11/gst-plugins0.10-x11
 
