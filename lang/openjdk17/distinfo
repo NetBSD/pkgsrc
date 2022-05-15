@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.4 2022/05/15 20:29:00 tnn Exp $
+$NetBSD: distinfo,v 1.5 2022/05/15 22:30:49 tnn Exp $
 
+BLAKE2s (bootstrap-jdk-1.17.0.3.7-netbsd-9-aarch64-20220516.tar.xz) = b632092d25292e795a2d7567ec55d03f21021dbba27eab3e81a48aed5e5bdd68
+SHA512 (bootstrap-jdk-1.17.0.3.7-netbsd-9-aarch64-20220516.tar.xz) = fb86749d56be94cc1509f92d8fbdec481b0c7f6fdd5e731826098e6eaa668539052571ffd09125346c1920262b07857ea675799ab8476fcff53c03e158536c1d
+Size (bootstrap-jdk-1.17.0.3.7-netbsd-9-aarch64-20220516.tar.xz) = 105121752 bytes
 BLAKE2s (bootstrap-jdk-1.17.0.3.7-netbsd-9-amd64-20220515.tar.xz) = 5da928c9ad945b0be6eebdada9788fe0f837a52d1e50ffa3535ef4115700f20a
 SHA512 (bootstrap-jdk-1.17.0.3.7-netbsd-9-amd64-20220515.tar.xz) = 785a6f203e7e5a31f48c708e6a33aa28f00b742226248e2757564d521c580f78070145e4a5dedf3eac1801531781143550c1c127ef6f8d310b88e864d42f4279
 Size (bootstrap-jdk-1.17.0.3.7-netbsd-9-amd64-20220515.tar.xz) = 105391720 bytes
