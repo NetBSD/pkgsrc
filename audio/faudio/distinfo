@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/12/03 13:29:42 adam Exp $
+$NetBSD: distinfo,v 1.15 2022/05/15 12:09:49 tnn Exp $
 
-BLAKE2s (faudio-21.12.tar.gz) = 9d96d02a170c0581b95d93617de3a2da8456f0fbba9e33a5ecd81aeccf06264f
-SHA512 (faudio-21.12.tar.gz) = 63a6db1dab37fa2c562f8ab94fa61f489eddcb5d362fdba00bc513cceeff18b8411c7d83233f4836934d9fe315cbfdb079f2a31ff7b77028fd2496a0fa4a6a75
-Size (faudio-21.12.tar.gz) = 1117029 bytes
+BLAKE2s (faudio-22.05.tar.gz) = f18f102f22f90cc3d6562107a82e0438d9689e1c5d7a25faa86e67dec5146992
+SHA512 (faudio-22.05.tar.gz) = 7feee4d63ca51d899e170fb9ca5ec55337b6881fc18af0ff5b3b26b12d3c05b831a4c665b1635534c5115230146026430c20196d8cc3b732b57123a7ea96c006
+Size (faudio-22.05.tar.gz) = 1109259 bytes
