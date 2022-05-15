@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/01/05 15:41:25 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2022/05/15 10:05:15 nia Exp $
 
 DISTNAME=	nltk-3.6.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -54,7 +54,7 @@ TEST_DEPENDS+=	nltk_data-words-[0-9]*:../../textproc/nltk_data-words
 
 REPLACE_PYTHON=		nltk/corpus/reader/knbc.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # matplotlib
 
 USE_PKG_RESOURCES=	yes
 
