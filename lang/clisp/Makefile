@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2021/12/08 16:05:20 adam Exp $
+# $NetBSD: Makefile,v 1.120 2022/05/15 17:26:39 fcambus Exp $
 
 DISTNAME=		clisp-2.49
 PKGREVISION=		28
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=clisp/}
 #EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		asau@inbox.ru
-HOMEPAGE=		http://clisp.cons.org/
+HOMEPAGE=		https://clisp.sourceforge.io/
 COMMENT=		CLISP, a Common Lisp implementation
 LICENSE=		gnu-gpl-v2
 
