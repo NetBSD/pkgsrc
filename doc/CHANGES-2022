@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2556 2022/05/14 15:41:46 fox Exp $
+$NetBSD: CHANGES-2022,v 1.2557 2022/05/15 04:43:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3943,3 +3943,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/ruby-nokogiri to 1.13.6 [tsutsui 2022-05-14]
 	Updated misc/s6-portable-utils to 2.2.4.0nb1 [schmonz 2022-05-14]
 	Updated textproc/bat to 0.21.0 [fox 2022-05-14]
+	Removed devel/sfslite [wiz 2022-05-15]
