@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/05/14 18:17:50 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2022/05/15 20:29:00 tnn Exp $
 
 DISTNAME=	jdk17u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk17-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
@@ -163,10 +163,13 @@ TOOLS_PLATFORM.unzip=
 .endif
 
 post-extract:
-# These libs are bundled w/ the netbsd-7 bootstrap to facilitate building with
+# These libs are bundled w/ the netbsd-9 bootstrap to facilitate building with
 # MKLLVM=yes / MKGCC=no. Nuke them from bootstrap if they are present in base.
 .if exists(/lib/libgcc_s.so.1)
-	${RM} -f ${ALT_BOOTDIR}/lib/libgcc_s.so*
+	${RM} -f ${ALT_BOOTDIR}/lib/libgcc_s.so.1
+.endif
+.if exists(/usr/lib/libstdc++.so.9)
+	${RM} -f ${ALT_BOOTDIR}/lib/libstdc++.so.9
 .endif
 
 pre-configure: ${WRKDIR}/cacerts.out
