@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.12 2022/03/08 13:50:23 gdt Exp $
-@comment $NetBSD: PLIST,v 1.12 2022/03/08 13:50:23 gdt Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/05/15 12:12:20 gdt Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/05/15 12:12:20 gdt Exp $
 bin/chirpw
 bin/rpttool
 ${PYSITELIB}/${EGG_INFODIR}
@@ -171,6 +171,9 @@ ${PYSITELIB}/chirp/drivers/generic_tpe.pyo
 ${PYSITELIB}/chirp/drivers/gmrsuv1.py
 ${PYSITELIB}/chirp/drivers/gmrsuv1.pyc
 ${PYSITELIB}/chirp/drivers/gmrsuv1.pyo
+${PYSITELIB}/chirp/drivers/gmrsv2.py
+${PYSITELIB}/chirp/drivers/gmrsv2.pyc
+${PYSITELIB}/chirp/drivers/gmrsv2.pyo
 ${PYSITELIB}/chirp/drivers/h777.py
 ${PYSITELIB}/chirp/drivers/h777.pyc
 ${PYSITELIB}/chirp/drivers/h777.pyo
