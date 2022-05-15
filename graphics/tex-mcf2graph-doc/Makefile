@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2022/04/14 02:27:18 markd Exp $
+# $NetBSD: Makefile,v 1.17 2022/05/15 04:31:27 markd Exp $
 
 DISTNAME=	mcf2graph.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-4.83
-TEXLIVE_REV=	62936
+PKGNAME=	tex-${DISTNAME:S/./-/}-4.84
+TEXLIVE_REV=	63258
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/mcf2graph
