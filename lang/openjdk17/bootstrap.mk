@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.3 2022/05/15 20:29:00 tnn Exp $
+# $NetBSD: bootstrap.mk,v 1.4 2022/05/15 22:30:49 tnn Exp $
 
 .if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 090000
 PKG_SKIP_REASON+=		"Only supports NetBSD >= 9"
@@ -21,12 +21,12 @@ EXTRACT_ONLY+=			${BOOT.nb9-amd64}
 .endif
 
 ONLY_FOR_PLATFORM+=		NetBSD-*-aarch64
-#BOOT.nb9-aarch64=		bootstrap-jdk-1.17.0.3.7-netbsd-9-aarch64-20220515.tar.xz
-#SITES.${BOOT.nb9-aarch64}=	${MASTER_SITE_LOCAL:=openjdk17/}
-#.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo)
-#DISTFILES+=			${BOOT.nb9-aarch64}
-#EXTRACT_ONLY+=			${BOOT.nb9-aarch64}
-#.endif
+BOOT.nb9-aarch64=		bootstrap-jdk-1.17.0.3.7-netbsd-9-aarch64-20220516.tar.xz
+SITES.${BOOT.nb9-aarch64}=	${MASTER_SITE_LOCAL:=openjdk17/}
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo)
+DISTFILES+=			${BOOT.nb9-aarch64}
+EXTRACT_ONLY+=			${BOOT.nb9-aarch64}
+.endif
 
 CONFIGURE_ENV+=		LD_LIBRARY_PATH=${ALT_BOOTDIR}/lib
 
