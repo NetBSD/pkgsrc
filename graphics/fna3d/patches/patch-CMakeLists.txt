@@ -1,9 +1,9 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2021/01/24 19:03:47 maya Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2022/05/15 11:50:53 tnn Exp $
 
 set correct library version
 disable bundled mojoshader in favor of the one from pkgsrc
 
---- CMakeLists.txt.orig	2021-01-01 16:22:56.000000000 +0000
+--- CMakeLists.txt.orig	2022-05-01 15:39:21.000000000 +0000
 +++ CMakeLists.txt
 @@ -3,6 +3,9 @@
  cmake_minimum_required(VERSION 2.8.12)
@@ -14,10 +14,10 @@ disable bundled mojoshader in favor of the one from pkgsrc
 +
  # Options
  option(BUILD_SHARED_LIBS "Build shared library" ON)
- option(DISABLE_D3D11 "Disable D3D11 backend")
-@@ -105,28 +108,11 @@ add_library(FNA3D
- 	src/FNA3D_Image.c
+ option(TRACING_SUPPORT "Build with tracing enabled" OFF)
+@@ -100,18 +103,7 @@ add_library(FNA3D
  	src/FNA3D_PipelineCache.c
+ 	src/FNA3D_Tracing.c
  )
 -add_library(mojoshader STATIC
 -	MojoShader/mojoshader.c
@@ -25,16 +25,17 @@ disable bundled mojoshader in favor of the one from pkgsrc
 -	MojoShader/mojoshader_common.c
 -	MojoShader/mojoshader_d3d11.c
 -	MojoShader/mojoshader_opengl.c
--	MojoShader/mojoshader_metal.c
 -	MojoShader/mojoshader_vulkan.c
 -	MojoShader/profiles/mojoshader_profile_common.c
 -	MojoShader/profiles/mojoshader_profile_glsl.c
 -	MojoShader/profiles/mojoshader_profile_hlsl.c
--	MojoShader/profiles/mojoshader_profile_metal.c
 -	MojoShader/profiles/mojoshader_profile_spirv.c
 -)
- 
- # Build flags
++
+ if(TRACING_SUPPORT)
+ 	add_executable(fna3d_replay replay/replay.c)
+ 	target_link_libraries(fna3d_replay FNA3D)
+@@ -124,9 +116,6 @@ endif()
  if(NOT MSVC)
  	set_property(TARGET FNA3D PROPERTY COMPILE_FLAGS "-std=gnu99 -Wall -Wno-strict-aliasing -pedantic")
  endif()
@@ -44,10 +45,10 @@ disable bundled mojoshader in favor of the one from pkgsrc
  
  # FNA3D folders as includes, for other targets to consume
  target_include_directories(FNA3D PUBLIC
-@@ -134,10 +120,6 @@ target_include_directories(FNA3D PUBLIC
- 	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
- 	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/Vulkan-Headers/include>
- )
+@@ -147,10 +136,6 @@ if(BUILD_DXVK_NATIVE)
+ 		$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../dxvk-native/include/native/wsi>
+ 	)
+ endif()
 -target_include_directories(mojoshader PUBLIC
 -	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/MojoShader>
 -	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/Vulkan-Headers/include>
@@ -55,7 +56,7 @@ disable bundled mojoshader in favor of the one from pkgsrc
  
  # MinGW builds should statically link libgcc
  if(MINGW)
-@@ -165,7 +147,6 @@ else()
+@@ -178,7 +163,6 @@ else()
  	if (TARGET SDL2::SDL2)
  		message(STATUS "using TARGET SDL2::SDL2")
  		target_link_libraries(FNA3D PUBLIC SDL2::SDL2)
