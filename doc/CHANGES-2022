@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2563 2022/05/15 06:45:27 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2564 2022/05/15 08:29:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3970,3 +3970,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/libogg to 1.3.5nb1 [dholland 2022-05-15]
 	Updated net/castor to 0.9.0 [pin 2022-05-15]
 	Updated textproc/tuc to 0.6.0 [pin 2022-05-15]
+	Removed ham/gr-fcdproplus [wiz 2022-05-15]
