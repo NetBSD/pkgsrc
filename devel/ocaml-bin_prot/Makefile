@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/05/04 17:52:52 jaapb Exp $
+# $NetBSD: Makefile,v 1.5 2022/05/15 02:19:31 mef Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-0.14.1
 PKGNAME=	ocaml-${DISTNAME}
@@ -19,6 +19,7 @@ OCAML_USE_DUNE=	yes
 .include "../../devel/ocaml-ppx_compare/buildlink3.mk"
 .include "../../devel/ocaml-ppx_custom_printf/buildlink3.mk"
 .include "../../devel/ocaml-ppx_fields_conv/buildlink3.mk"
+.include "../../devel/ocaml-ppx_optcomp/buildlink3.mk"
 .include "../../devel/ocaml-ppx_sexp_conv/buildlink3.mk"
 .include "../../devel/ocaml-ppx_variants_conv/buildlink3.mk"
 
