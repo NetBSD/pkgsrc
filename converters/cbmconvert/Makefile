@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2021/12/05 16:22:44 rhialto Exp $
+# $NetBSD: Makefile,v 1.21 2022/05/15 18:39:30 rhialto Exp $
 
-DISTNAME=	cbmconvert-2.1.4
+DISTNAME=	cbmconvert-2.1.5
 CATEGORIES=	converters archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dr-m/}
 GITHUB_PROJECT=	cbmconvert
