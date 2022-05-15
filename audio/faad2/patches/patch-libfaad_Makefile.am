@@ -1,9 +1,19 @@
-$NetBSD: patch-libfaad_Makefile.am,v 1.2 2017/12/01 11:17:51 adam Exp $
+$NetBSD: patch-libfaad_Makefile.am,v 1.3 2022/05/15 02:35:33 dholland Exp $
+
+Use -I instead of -iquote, which is gratuitously gcc-specific.
 
 Separate includes from source files.
 
---- libfaad/Makefile.am.orig	2017-10-07 09:02:02.000000000 +0000
+--- libfaad/Makefile.am.orig	2020-10-20 06:24:05.000000000 +0000
 +++ libfaad/Makefile.am
+@@ -1,6 +1,6 @@
+ lib_LTLIBRARIES = libfaad.la libfaad_drm.la
+ 
+-AM_CPPFLAGS	= -iquote $(top_srcdir)/include
++AM_CPPFLAGS	= -I$(top_srcdir)/include
+ include_HEADERS = $(top_srcdir)/include/faad.h \
+ 		  $(top_srcdir)/include/neaacdec.h
+ 
 @@ -15,7 +15,8 @@ libfaad_la_SOURCES = bits.c cfft.c decod
  		     pulse.c specrec.c syntax.c tns.c hcr.c huffman.c \
  		     rvlc.c ssr.c ssr_fb.c ssr_ipqf.c common.c \
