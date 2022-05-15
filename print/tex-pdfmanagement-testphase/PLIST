@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2022/04/14 03:05:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/05/15 04:34:24 markd Exp $
 share/texmf-dist/tex/latex/pdfmanagement-testphase/color-ltx.sty
+share/texmf-dist/tex/latex/pdfmanagement-testphase/colorspace-patches-tmp-ltx.sty
 share/texmf-dist/tex/latex/pdfmanagement-testphase/hgeneric-testphase.def
 share/texmf-dist/tex/latex/pdfmanagement-testphase/hyperref-colorschemes.def
 share/texmf-dist/tex/latex/pdfmanagement-testphase/hyperxmp-patches-tmp-ltx.sty
