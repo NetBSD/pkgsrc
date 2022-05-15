@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2022/03/28 10:43:32 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2022/05/15 12:09:49 tnn Exp $
 
-DISTNAME=	faudio-21.12
-PKGREVISION=	2
+DISTNAME=	faudio-22.05
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FNA-XNA/}
 GITHUB_PROJECT=	FAudio
