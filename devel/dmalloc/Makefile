@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2019/11/03 10:39:10 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2022/05/15 04:39:56 wiz Exp $
 
 DISTNAME=		dmalloc-5.5.2
+PKGREVISION=		1
 CATEGORIES=		devel
 #MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dmalloc/}
 MASTER_SITES=		http://dmalloc.com/releases/
