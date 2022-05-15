@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/05/15 12:17:49 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2022/05/15 13:41:11 tnn Exp $
 
 DISTNAME=	FNA-22.05
 PKGNAME=	${DISTNAME:tl}
@@ -23,13 +23,15 @@ SITES.${NETSTUB}+=	${MASTER_SITE_GITHUB:=FNA-XNA/}FNA.NetStub/archive/
 
 USE_LANGUAGES=	# none
 
+WRKSRC=	${WRKDIR}/FNA
+
 post-extract:
-	${LN} -sf ${WRKDIR}/FNA.NetStub-${NETSTUB:S/${EXTRACT_SUFX}//} ${WRKDIR}/FNA.NetStub
-	${LN} -sf ${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME} ${WRKDIR}/FNA
+	${MV} ${WRKDIR}/FNA-${PKGVERSION_NOREV} ${WRKDIR}/FNA
+	${MV} ${WRKDIR}/FNA.NetStub-${NETSTUB:S/${EXTRACT_SUFX}//} ${WRKDIR}/FNA.NetStub
 	${RM} -r ${WRKSRC}/lib/FAudio ${WRKSRC}/lib/Theorafile ${WRKSRC}/lib/SDL2-CS
-	${LN} -sf ${WRKDIR}/FAudio-${FAUDIO:S/${EXTRACT_SUFX}//} ${WRKSRC}/lib/FAudio
-	${LN} -sf ${WRKDIR}/Theorafile-${THEORAFILE:S/${EXTRACT_SUFX}//} ${WRKSRC}/lib/Theorafile
-	${LN} -sf ${WRKDIR}/SDL2-CS-${SDL2_CS:S/${EXTRACT_SUFX}//} ${WRKSRC}/lib/SDL2-CS
+	${MV} ${WRKDIR}/FAudio-${FAUDIO:S/${EXTRACT_SUFX}//} ${WRKSRC}/lib/FAudio
+	${MV} ${WRKDIR}/Theorafile-${THEORAFILE:S/${EXTRACT_SUFX}//} ${WRKSRC}/lib/Theorafile
+	${MV} ${WRKDIR}/SDL2-CS-${SDL2_CS:S/${EXTRACT_SUFX}//} ${WRKSRC}/lib/SDL2-CS
 
 # need to rm bin,obj before FNA.sln to build with FNA.Settings.props
 do-build:
