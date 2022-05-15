@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2566 2022/05/15 12:28:50 tnn Exp $
+$NetBSD: CHANGES-2022,v 1.2567 2022/05/15 17:01:59 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3975,3 +3975,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/fna3d to 22.05 [tnn 2022-05-15]
 	Updated audio/faudio to 22.05 [tnn 2022-05-15]
 	Updated games/fna to 22.05 [tnn 2022-05-15]
+	Updated games/quakespasm to 0.94.4 [nia 2022-05-15]
