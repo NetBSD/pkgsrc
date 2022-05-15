@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2022/03/04 09:16:05 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/05/15 20:01:14 nia Exp $
 
-BLAKE2s (profanity-0.11.1.tar.gz) = 4cea0de13a5a851dd1b128bf00e1a37658da48d5f7ea5507acdf93aae689de26
-SHA512 (profanity-0.11.1.tar.gz) = 8ba627c8c5390414d2afdf31f3ff82821db108f952d562529c28b23f2d1904014c683b016ddef5a4d90ae50ac5cff8e46eab31aab517bbe02042d6837af7bb2c
-Size (profanity-0.11.1.tar.gz) = 888794 bytes
+BLAKE2s (profanity-0.12.1.tar.gz) = 3b8a808a93cfc2aefd737c988acc84f44754bb908780f18bf6ac7363f9fd1f21
+SHA512 (profanity-0.12.1.tar.gz) = ca3ea92fd439336cd0bf0be42afdda464e25be85b910aef837738b8d1787ac174ac93ccee4fb2fb385228ed7be8e9bac5e96a1f89a68df162785b17d7671463f
+Size (profanity-0.12.1.tar.gz) = 895566 bytes
 SHA1 (patch-src_config_preferences.c) = 17bf3adea60a4934a655e59a48551724506e158b

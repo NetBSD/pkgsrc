@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2022/04/18 19:10:31 adam Exp $
+# $NetBSD: Makefile,v 1.15 2022/05/15 20:01:14 nia Exp $
 
-DISTNAME=	profanity-0.11.1
-PKGREVISION=	1
+DISTNAME=	profanity-0.12.1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=profanity-im/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -11,21 +10,20 @@ HOMEPAGE=	https://profanity-im.github.io/
 COMMENT=	Console based XMPP client inspired by irssi
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	autoconf pkg-config
-
-AUTOCONF_REQD=	2.69
-
 FAKE_NCURSES=	yes
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config gmake
 
 USE_CURSES=	wide
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure
-SUBST_FILES.python=	configure.ac
-SUBST_SED.python=	-e 's,python-config,python${PYVERSSUFFIX}-config,g'
+SUBST_FILES.python=	configure
+SUBST_SED.python=	-e 's,"python",\"python-${PYVERSSUFFIX}\",g'
+SUBST_SED.python+=	-e 's,"python-embed",\"python-${PYVERSSUFFIX}-embed\",g'
+SUBST_SED.python+=	-e 's,\"python\",\"python-${PYVERSSUFFIX}\",g'
+SUBST_SED.python+=	-e 's,\"python-embed\",\"python-${PYVERSSUFFIX}-embed\",g'
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
@@ -39,12 +37,7 @@ CONFIGURE_ARGS+=	--enable-python-plugins
 CONFIGURE_ARGS+=	--enable-omemo
 
 .include "options.mk"
-
-pre-configure:
-	cd ${WRKSRC} && autoconf
-
-BUILDLINK_API_DEPENDS.libmesode+=	libmesode>=0.10.0
-.include "../../chat/libmesode/buildlink3.mk"
+.include "../../chat/libstrophe/buildlink3.mk"
 .include "../../chat/libotr/buildlink3.mk"
 .include "../../chat/libsignal-protocol-c/buildlink3.mk"
 BUILDLINK_API_DEPENDS.sqlite3+=		sqlite3>=3.22.0
