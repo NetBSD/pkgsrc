@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3740 2022/05/11 22:28:38 bouyer Exp $
+# $NetBSD: Makefile,v 1.3741 2022/05/15 04:43:49 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3180,7 +3180,6 @@ SUBDIR+=	sdl12-compat
 SUBDIR+=	semantic
 SUBDIR+=	semi
 SUBDIR+=	sfsexp
-SUBDIR+=	sfslite
 SUBDIR+=	sgb
 SUBDIR+=	shtk
 SUBDIR+=	shunit2
