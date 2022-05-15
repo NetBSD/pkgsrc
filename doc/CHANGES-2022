@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2557 2022/05/15 04:43:49 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2558 2022/05/15 04:48:20 markd Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3944,3 +3944,22 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/s6-portable-utils to 2.2.4.0nb1 [schmonz 2022-05-14]
 	Updated textproc/bat to 0.21.0 [fox 2022-05-14]
 	Removed devel/sfslite [wiz 2022-05-15]
+	Updated print/tex-babel to 3.74 [markd 2022-05-15]
+	Updated print/tex-babel-doc to 3.74 [markd 2022-05-15]
+	Updated print/tex-changebar to 3.6d [markd 2022-05-15]
+	Updated print/tex-changebar-doc to 3.6d [markd 2022-05-15]
+	Updated graphics/tex-circuitikz to 1.5.2 [markd 2022-05-15]
+	Updated graphics/tex-circuitikz-doc to 1.5.2 [markd 2022-05-15]
+	Updated devel/tex-doclicense to 3.1.0 [markd 2022-05-15]
+	Updated devel/tex-doclicense-doc to 3.1.0 [markd 2022-05-15]
+	Updated print/tex-fancyhdr to 4.0.2 [markd 2022-05-15]
+	Updated print/tex-fancyhdr-doc to 4.0.2 [markd 2022-05-15]
+	Updated print/tex-koma-script to 3.36 [markd 2022-05-15]
+	Updated graphics/tex-mcf2graph to 4.84 [markd 2022-05-15]
+	Updated graphics/tex-mcf2graph-doc to 4.84 [markd 2022-05-15]
+	Updated print/tex-pdfmanagement-testphase to 0.95o [markd 2022-05-15]
+	Updated print/tex-pdfmanagement-testphase-doc to 0.95o [markd 2022-05-15]
+	Updated fonts/tex-roboto to 2022 [markd 2022-05-15]
+	Updated fonts/tex-roboto-doc to 2022 [markd 2022-05-15]
+	Updated print/tex-siunitx to 3.1.1 [markd 2022-05-15]
+	Updated print/tex-siunitx-doc to 3.1.1 [markd 2022-05-15]
