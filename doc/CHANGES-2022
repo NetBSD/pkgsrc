@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2571 2022/05/15 18:53:38 rhialto Exp $
+$NetBSD: CHANGES-2022,v 1.2572 2022/05/15 18:55:49 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3981,3 +3981,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated emulators/libretro-stella to 6.6 [nia 2022-05-15]
 	Updated games/frotz to 2.54 [nia 2022-05-15]
 	Updated converters/cbmconvert to 2.1.5 [rhialto 2022-05-15]
+	Updated games/angband to 4.2.4 [nia 2022-05-15]
+	Updated games/angband-sdl to 4.2.4 [nia 2022-05-15]
