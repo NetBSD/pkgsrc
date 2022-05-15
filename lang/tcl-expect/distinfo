@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.22 2021/10/26 10:51:57 nia Exp $
+$NetBSD: distinfo,v 1.23 2022/05/15 01:56:24 dholland Exp $
 
 BLAKE2s (expect5.45.tar.gz) = 38c440ed0868322b6ec7438decaa036a636e7d700191b754c1e4a7dc0fdd0c46
 SHA512 (expect5.45.tar.gz) = be991c68241e607b3a689eae7e7966056dbfb577e857331d54a4911bd178c1816425217603b43918ad1b6d2e966271a0f01e79d7028a22e223562d59d10c8c51
 Size (expect5.45.tar.gz) = 628808 bytes
 SHA1 (patch-Makefile.in) = 24efcbdb0a21985cb8a0fb7812c5f45f67de7c30
 SHA1 (patch-configure) = a16c833e61d23f63abff1413522b99cd2251bc34
+SHA1 (patch-exp__chan.c) = 5af6bf31fa87a4d9951be6bc978ede5440380981
