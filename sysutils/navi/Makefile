@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2022/01/19 10:53:37 pin Exp $
+# $NetBSD: Makefile,v 1.13 2022/05/15 21:27:10 pin Exp $
 
-DISTNAME=	navi-2.19.0
+DISTNAME=	navi-2.20.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=denisidoro/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,7 +17,8 @@ DEPENDS+=	fzf-[0-9]*:../../sysutils/fzf
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/navi ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/navi \
+		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
