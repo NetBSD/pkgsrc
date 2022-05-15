@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.861 2022/04/19 03:11:48 markd Exp $
+# $NetBSD: Makefile,v 1.862 2022/05/15 05:15:52 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -79,7 +79,6 @@ SUBDIR+=	kpathsea
 SUBDIR+=	lacheck
 SUBDIR+=	latex-mk
 SUBDIR+=	latexmk
-SUBDIR+=	lgrind
 SUBDIR+=	libcups
 SUBDIR+=	libgxps
 SUBDIR+=	libharu
