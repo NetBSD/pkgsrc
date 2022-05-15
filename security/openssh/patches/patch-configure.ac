@@ -1,8 +1,8 @@
-$NetBSD: patch-configure.ac,v 1.8 2019/05/01 17:59:56 maya Exp $
+$NetBSD: patch-configure.ac,v 1.9 2022/05/15 19:21:56 wiz Exp $
 
---- configure.ac.orig	2019-04-17 22:52:57.000000000 +0000
+--- configure.ac.orig	2022-04-06 00:47:48.000000000 +0000
 +++ configure.ac
-@@ -294,6 +294,9 @@ AC_ARG_WITH([rpath],
+@@ -340,6 +340,9 @@ AC_ARG_WITH([rpath],
  	]
  )
  
@@ -12,7 +12,7 @@ $NetBSD: patch-configure.ac,v 1.8 2019/05/01 17:59:56 maya Exp $
  # Allow user to specify flags
  AC_ARG_WITH([cflags],
  	[  --with-cflags           Specify additional flags to pass to compiler],
-@@ -387,6 +390,7 @@ AC_CHECK_HEADERS([ \
+@@ -434,6 +437,7 @@ AC_CHECK_HEADERS([ \
  	maillock.h \
  	ndir.h \
  	net/if_tun.h \
@@ -20,7 +20,7 @@ $NetBSD: patch-configure.ac,v 1.8 2019/05/01 17:59:56 maya Exp $
  	netdb.h \
  	netgroup.h \
  	pam/pam_appl.h \
-@@ -1494,6 +1507,62 @@ else
+@@ -1601,6 +1605,62 @@ else
  	AC_MSG_RESULT([no])
  fi
  
@@ -83,7 +83,7 @@ $NetBSD: patch-configure.ac,v 1.8 2019/05/01 17:59:56 maya Exp $
  # Check whether user wants to use ldns
  LDNS_MSG="no"
  AC_ARG_WITH(ldns,
-@@ -5129,9 +5198,17 @@ AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
+@@ -5480,9 +5540,17 @@ AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
  ])
  if test -z "$conf_wtmpx_location"; then
  	if test x"$system_wtmpx_path" = x"no" ; then
@@ -103,7 +103,7 @@ $NetBSD: patch-configure.ac,v 1.8 2019/05/01 17:59:56 maya Exp $
  	AC_DEFINE_UNQUOTED([CONF_WTMPX_FILE], ["$conf_wtmpx_location"],
  		[Define if you want to specify the path to your wtmpx file])
  fi
-@@ -5223,7 +5300,7 @@ echo "OpenSSH has been configured with t
+@@ -5580,7 +5648,7 @@ echo "OpenSSH has been configured with t
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"
@@ -112,11 +112,11 @@ $NetBSD: patch-configure.ac,v 1.8 2019/05/01 17:59:56 maya Exp $
  echo "                      Manual pages: $F"
  echo "                          PID file: $G"
  echo "  Privilege separation chroot path: $H"
-@@ -5245,6 +5322,7 @@ echo "                       PAM support
+@@ -5602,6 +5670,7 @@ echo "                       PAM support
  echo "                   OSF SIA support: $SIA_MSG"
  echo "                 KerberosV support: $KRB5_MSG"
  echo "                   SELinux support: $SELINUX_MSG"
 +echo "              TCP Wrappers support: $TCPW_MSG"
- echo "              MD5 password support: $MD5_MSG"
  echo "                   libedit support: $LIBEDIT_MSG"
  echo "                   libldns support: $LDNS_MSG"
+ echo "  Solaris process contract support: $SPC_MSG"
