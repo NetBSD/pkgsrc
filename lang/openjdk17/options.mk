@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2022/05/13 14:24:19 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2022/05/16 12:29:33 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openjdk17
 PKG_OPTIONS_OPTIONAL_GROUPS=	variant
@@ -99,10 +99,12 @@ CONFIGURE_ARGS+=	--with-stdc++lib=dynamic
 #
 # Build variant. Zero VM builds a portable JVM without assembly optimization.
 #
+PLIST_VARS+=		hotspot
 .if !empty(PKG_OPTIONS:Mjdk-zero-vm)
 BUILD_VARIANT=		zero
 .include "../../devel/libffi/buildlink3.mk"
 .elif !empty(PKG_OPTIONS:Mjdk-hotspot-vm)
 BUILD_VARIANT=		server
+PLIST.hotspot=		yes
 .endif
 CONFIGURE_ARGS+=	--with-jvm-variants=${BUILD_VARIANT}
