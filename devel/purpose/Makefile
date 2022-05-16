@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/04/25 05:30:17 markd Exp $
+# $NetBSD: Makefile,v 1.9 2022/05/16 13:29:05 jperkin Exp $
 
 DISTNAME=	purpose-${KF5VER}
 CATEGORIES=	devel
@@ -6,6 +6,8 @@ CATEGORIES=	devel
 HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Providing abstractions to get the developer's purposes fulfilled
 LICENSE=	gnu-lgpl-v2.1
+
+USE_TOOLS+=	msgmerge
 
 .include "../../meta-pkgs/kde/kf5.mk"
 
