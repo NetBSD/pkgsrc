@@ -1,4 +1,4 @@
-$NetBSD: patch-zebra_kernel__socket.c,v 1.3 2021/08/15 14:54:31 kardel Exp $
+$NetBSD: patch-zebra_kernel__socket.c,v 1.4 2022/05/16 11:54:20 kardel Exp $
 
 	Pass IFP interface index if known (normal case) to make
 	interface specific routes work such as in
@@ -10,7 +10,7 @@ $NetBSD: patch-zebra_kernel__socket.c,v 1.3 2021/08/15 14:54:31 kardel Exp $
 	routing socket returns ENOBUFS. ensure at least a bit more
 	socket buffer space by increasing SO_RCVBUF.
 
---- zebra/kernel_socket.c.orig	2021-07-21 13:06:19.000000000 +0000
+--- zebra/kernel_socket.c.orig	2022-03-13 15:59:48.000000000 +0000
 +++ zebra/kernel_socket.c
 @@ -39,6 +39,7 @@
  #include "privs.h"
@@ -20,7 +20,7 @@ $NetBSD: patch-zebra_kernel__socket.c,v 1.3 2021/08/15 14:54:31 kardel Exp $
  
  #include "zebra/rt.h"
  #include "zebra/interface.h"
-@@ -1243,6 +1244,20 @@ int rtm_write(int message, union sockuni
+@@ -1249,6 +1250,20 @@ int rtm_write(int message, union sockuni
  #ifdef __OpenBSD__
  	SOCKADDRSET(mpls, RTA_SRC);
  #endif
@@ -41,7 +41,7 @@ $NetBSD: patch-zebra_kernel__socket.c,v 1.3 2021/08/15 14:54:31 kardel Exp $
  
  	msg.rtm.rtm_msglen = pnt - (caddr_t)&msg;
  
-@@ -1425,6 +1440,9 @@ static void routing_socket(struct zebra_
+@@ -1434,6 +1449,9 @@ static void routing_socket(struct zebra_
  		return;
  	}
  
