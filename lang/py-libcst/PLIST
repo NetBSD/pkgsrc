@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/02/23 11:32:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/05/16 19:20:04 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -455,6 +455,9 @@ ${PYSITELIB}/libcst/codemod/commands/__init__.pyo
 ${PYSITELIB}/libcst/codemod/commands/add_pyre_directive.py
 ${PYSITELIB}/libcst/codemod/commands/add_pyre_directive.pyc
 ${PYSITELIB}/libcst/codemod/commands/add_pyre_directive.pyo
+${PYSITELIB}/libcst/codemod/commands/add_trailing_commas.py
+${PYSITELIB}/libcst/codemod/commands/add_trailing_commas.pyc
+${PYSITELIB}/libcst/codemod/commands/add_trailing_commas.pyo
 ${PYSITELIB}/libcst/codemod/commands/convert_format_to_fstring.py
 ${PYSITELIB}/libcst/codemod/commands/convert_format_to_fstring.pyc
 ${PYSITELIB}/libcst/codemod/commands/convert_format_to_fstring.pyo
@@ -494,6 +497,9 @@ ${PYSITELIB}/libcst/codemod/commands/tests/__init__.pyo
 ${PYSITELIB}/libcst/codemod/commands/tests/test_add_pyre_directive.py
 ${PYSITELIB}/libcst/codemod/commands/tests/test_add_pyre_directive.pyc
 ${PYSITELIB}/libcst/codemod/commands/tests/test_add_pyre_directive.pyo
+${PYSITELIB}/libcst/codemod/commands/tests/test_add_trailing_commas.py
+${PYSITELIB}/libcst/codemod/commands/tests/test_add_trailing_commas.pyc
+${PYSITELIB}/libcst/codemod/commands/tests/test_add_trailing_commas.pyo
 ${PYSITELIB}/libcst/codemod/commands/tests/test_convert_format_to_fstring.py
 ${PYSITELIB}/libcst/codemod/commands/tests/test_convert_format_to_fstring.pyc
 ${PYSITELIB}/libcst/codemod/commands/tests/test_convert_format_to_fstring.pyo
@@ -537,9 +543,6 @@ ${PYSITELIB}/libcst/codemod/tests/__init__.py
 ${PYSITELIB}/libcst/codemod/tests/__init__.pyc
 ${PYSITELIB}/libcst/codemod/tests/__init__.pyo
 ${PYSITELIB}/libcst/codemod/tests/codemod_formatter_error_input.py.txt
-${PYSITELIB}/libcst/codemod/tests/test_cli.py
-${PYSITELIB}/libcst/codemod/tests/test_cli.pyc
-${PYSITELIB}/libcst/codemod/tests/test_cli.pyo
 ${PYSITELIB}/libcst/codemod/tests/test_codemod.py
 ${PYSITELIB}/libcst/codemod/tests/test_codemod.pyc
 ${PYSITELIB}/libcst/codemod/tests/test_codemod.pyo
@@ -567,6 +570,9 @@ ${PYSITELIB}/libcst/codemod/visitors/_gather_comments.pyo
 ${PYSITELIB}/libcst/codemod/visitors/_gather_exports.py
 ${PYSITELIB}/libcst/codemod/visitors/_gather_exports.pyc
 ${PYSITELIB}/libcst/codemod/visitors/_gather_exports.pyo
+${PYSITELIB}/libcst/codemod/visitors/_gather_global_names.py
+${PYSITELIB}/libcst/codemod/visitors/_gather_global_names.pyc
+${PYSITELIB}/libcst/codemod/visitors/_gather_global_names.pyo
 ${PYSITELIB}/libcst/codemod/visitors/_gather_imports.py
 ${PYSITELIB}/libcst/codemod/visitors/_gather_imports.pyc
 ${PYSITELIB}/libcst/codemod/visitors/_gather_imports.pyo
@@ -597,6 +603,9 @@ ${PYSITELIB}/libcst/codemod/visitors/tests/test_gather_comments.pyo
 ${PYSITELIB}/libcst/codemod/visitors/tests/test_gather_exports.py
 ${PYSITELIB}/libcst/codemod/visitors/tests/test_gather_exports.pyc
 ${PYSITELIB}/libcst/codemod/visitors/tests/test_gather_exports.pyo
+${PYSITELIB}/libcst/codemod/visitors/tests/test_gather_global_names.py
+${PYSITELIB}/libcst/codemod/visitors/tests/test_gather_global_names.pyc
+${PYSITELIB}/libcst/codemod/visitors/tests/test_gather_global_names.pyo
 ${PYSITELIB}/libcst/codemod/visitors/tests/test_gather_imports.py
 ${PYSITELIB}/libcst/codemod/visitors/tests/test_gather_imports.pyc
 ${PYSITELIB}/libcst/codemod/visitors/tests/test_gather_imports.pyo
@@ -612,9 +621,6 @@ ${PYSITELIB}/libcst/codemod/visitors/tests/test_remove_imports.pyo
 ${PYSITELIB}/libcst/helpers/__init__.py
 ${PYSITELIB}/libcst/helpers/__init__.pyc
 ${PYSITELIB}/libcst/helpers/__init__.pyo
-${PYSITELIB}/libcst/helpers/_statement.py
-${PYSITELIB}/libcst/helpers/_statement.pyc
-${PYSITELIB}/libcst/helpers/_statement.pyo
 ${PYSITELIB}/libcst/helpers/_template.py
 ${PYSITELIB}/libcst/helpers/_template.pyc
 ${PYSITELIB}/libcst/helpers/_template.pyo
@@ -636,9 +642,6 @@ ${PYSITELIB}/libcst/helpers/tests/test_expression.pyo
 ${PYSITELIB}/libcst/helpers/tests/test_module.py
 ${PYSITELIB}/libcst/helpers/tests/test_module.pyc
 ${PYSITELIB}/libcst/helpers/tests/test_module.pyo
-${PYSITELIB}/libcst/helpers/tests/test_statement.py
-${PYSITELIB}/libcst/helpers/tests/test_statement.pyc
-${PYSITELIB}/libcst/helpers/tests/test_statement.pyo
 ${PYSITELIB}/libcst/helpers/tests/test_template.py
 ${PYSITELIB}/libcst/helpers/tests/test_template.pyc
 ${PYSITELIB}/libcst/helpers/tests/test_template.pyo
