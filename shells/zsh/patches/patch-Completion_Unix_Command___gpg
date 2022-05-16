@@ -1,4 +1,4 @@
-$NetBSD: patch-Completion_Unix_Command___gpg,v 1.1 2021/11/23 19:42:43 pho Exp $
+$NetBSD: patch-Completion_Unix_Command___gpg,v 1.2 2022/05/16 14:58:30 ryoon Exp $
 
 Fix an issue in _gpg. Simply typing "gpg2 [TAB]" fails with an error:
 
@@ -11,13 +11,13 @@ assignment? Creating arrays with unquoted values is a bad idea anyway,
 because they can easily cause shell expansions in a totally unexpected
 way.
 
---- Completion/Unix/Command/_gpg.orig	2018-12-16 01:39:51.000000000 +0000
+--- Completion/Unix/Command/_gpg.orig	2022-05-08 06:18:22.000000000 +0000
 +++ Completion/Unix/Command/_gpg
 @@ -173,8 +173,8 @@ fi
    '--dump-options[show all options]'
  )
  
--extra=( ${${${args#\([^\)]#\)}#\*}%%[:=\[]*} )
+-extra=( ${${${args#\([^\)]#\)}#\*}%%[=:\[]*} )
 -extra=( ${allopts:|extra} )
 +extra=( "${(@)${(@)${(@)args#\([^\)]#\)}#\*}%%[:=\[]*}" )
 +extra=( "${(@)allopts:|extra}" )
