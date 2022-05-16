@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/05/13 14:24:19 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/05/16 12:29:33 tnn Exp $
 bin/openjdk17-jar
 bin/openjdk17-jarsigner
 bin/openjdk17-java
@@ -520,7 +520,7 @@ java/openjdk17/legal/jdk.xml.dom/LICENSE
 java/openjdk17/legal/jdk.zipfs/ADDITIONAL_LICENSE_INFO
 java/openjdk17/legal/jdk.zipfs/ASSEMBLY_EXCEPTION
 java/openjdk17/legal/jdk.zipfs/LICENSE
-java/openjdk17/lib/classlist
+${PLIST.hotspot}java/openjdk17/lib/classlist
 java/openjdk17/lib/ct.sym
 java/openjdk17/lib/fontconfig.bfc
 java/openjdk17/lib/fontconfig.properties.src
