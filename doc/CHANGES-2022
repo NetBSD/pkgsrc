@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2584 2022/05/16 19:22:37 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2585 2022/05/16 21:16:13 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3998,3 +3998,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-flask-login to 0.6.1 [kleink 2022-05-16]
 	Added net/vultr-cli version 2.14.0 [tpaul 2022-05-16]
 	Updated lang/py-libcst to 0.4.3 [adam 2022-05-16]
+	Updated www/firefox91 to 91.9.0 [nia 2022-05-16]
