@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2582 2022/05/16 15:35:43 kleink Exp $
+$NetBSD: CHANGES-2022,v 1.2583 2022/05/16 18:08:18 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3996,3 +3996,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated shells/zsh to 5.9 [ryoon 2022-05-16]
 	Updated www/py-flask-admin to 1.6.0 [kleink 2022-05-16]
 	Updated www/py-flask-login to 0.6.1 [kleink 2022-05-16]
+	Added net/vultr-cli version 2.14.0 [tpaul 2022-05-16]
