@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2020/05/10 13:11:58 kleink Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/05/16 15:35:29 kleink Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/flask_login/__about__.py
@@ -11,9 +10,6 @@ ${PYSITELIB}/flask_login/__about__.pyo
 ${PYSITELIB}/flask_login/__init__.py
 ${PYSITELIB}/flask_login/__init__.pyc
 ${PYSITELIB}/flask_login/__init__.pyo
-${PYSITELIB}/flask_login/_compat.py
-${PYSITELIB}/flask_login/_compat.pyc
-${PYSITELIB}/flask_login/_compat.pyo
 ${PYSITELIB}/flask_login/config.py
 ${PYSITELIB}/flask_login/config.pyc
 ${PYSITELIB}/flask_login/config.pyo
