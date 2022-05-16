@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.102 2022/03/12 06:07:48 kim Exp $
+# $NetBSD: Makefile,v 1.103 2022/05/16 14:58:30 ryoon Exp $
 
-DISTNAME=	zsh-5.8.1
+DISTNAME=	zsh-5.9
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zsh/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://zsh.sourceforge.net/
+HOMEPAGE=	https://zsh.sourceforge.io/
 COMMENT=	The Z shell
 LICENSE=	gnu-gpl-v2 AND zsh
 
@@ -63,6 +63,7 @@ REPLACE.zsh.new=	${PREFIX}/bin/zsh
 REPLACE_FILES.zsh=	Functions/Calendar/*
 REPLACE_FILES.zsh+=	Functions/Example/*
 REPLACE_FILES.zsh+=	Functions/Misc/*
+REPLACE_FILES.zsh+=	Functions/VCS_Info/*
 REPLACE_FILES.zsh+=	Misc/globtests*
 REPLACE_FILES.zsh+=	Test/runtests.zsh Test/ztst.zsh
 REPLACE_FILES.zsh+=	Util/check-tmux-state Util/reporter

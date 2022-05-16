@@ -1,9 +1,9 @@
-$NetBSD: patch-Completion_BSD_Command___bsd__pkg,v 1.3 2022/02/18 09:48:44 pho Exp $
+$NetBSD: patch-Completion_BSD_Command___bsd__pkg,v 1.4 2022/05/16 14:58:30 ryoon Exp $
 
 * Better Darwin support.
 * Use pkgsrc PKG_DBDIR as the default database directory.
 
---- Completion/BSD/Command/_bsd_pkg.orig	2019-05-06 03:42:37.000000000 +0000
+--- Completion/BSD/Command/_bsd_pkg.orig	2022-05-08 06:18:22.000000000 +0000
 +++ Completion/BSD/Command/_bsd_pkg
 @@ -15,6 +15,10 @@ _bsd_pkg_pkgfiles() {
      pkgsdir=${${(M)${(f)"$(</etc/mk.conf)"}:#PACKAGE_REPOSITORY*}#*=[[:blank:]]#}
@@ -34,16 +34,16 @@ $NetBSD: patch-Completion_BSD_Command___bsd__pkg,v 1.3 2022/02/18 09:48:44 pho E
        flags+=(
          '-A[do not record packages as installed manually]'
          '-C[specify configuration file]:config file:_files'
-@@ -141,7 +145,7 @@ _bsd_pkg() {
+@@ -139,7 +143,7 @@ _bsd_pkg() {
      )
  
      case "$OSTYPE" in
 -    netbsd*)
 +    netbsd*|darwin*)
        flags+=(
-         '(:)-a[delete all installed packages]'
+         '(:)-A[remove automatically installed packages that are no longer required]'
          "-D[don't execute deinstallation scripts]"
-@@ -202,7 +206,7 @@ _bsd_pkg() {
+@@ -203,7 +207,7 @@ _bsd_pkg() {
      )
  
      case "$OSTYPE" in
