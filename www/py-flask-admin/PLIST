@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2020/10/26 15:00:21 kleink Exp $
+@comment $NetBSD: PLIST,v 1.19 2022/05/16 15:26:17 kleink Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -1715,7 +1715,7 @@ ${PYSITELIB}/flask_admin/static/vendor/fontawesome-free-5.1.0-web/webfonts/fa-so
 ${PYSITELIB}/flask_admin/static/vendor/fontawesome-free-5.1.0-web/webfonts/fa-solid-900.ttf
 ${PYSITELIB}/flask_admin/static/vendor/fontawesome-free-5.1.0-web/webfonts/fa-solid-900.woff
 ${PYSITELIB}/flask_admin/static/vendor/fontawesome-free-5.1.0-web/webfonts/fa-solid-900.woff2
-${PYSITELIB}/flask_admin/static/vendor/jquery-3.3.1.slim.min.js
+${PYSITELIB}/flask_admin/static/vendor/jquery-3.5.1.slim.min.js
 ${PYSITELIB}/flask_admin/static/vendor/jquery.min.js
 ${PYSITELIB}/flask_admin/static/vendor/leaflet/images/layers-2x.png
 ${PYSITELIB}/flask_admin/static/vendor/leaflet/images/layers.png
