@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/05/15 20:29:00 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2022/05/16 12:29:33 tnn Exp $
 
 DISTNAME=	jdk17u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk17-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
@@ -149,11 +149,7 @@ SUBST_SED.kqueue+=		-e 's/static final int EV_CLEAR   = 0x0020;/static final int
 .endif
 
 PLIST_VARS+=			internal_vm_compiler jvmci
-.if ${MACHINE_ARCH} == "x86_64"
-PLIST.internal_vm_compiler=	yes
-PLIST.jvmci=			yes
-.endif
-.if ${MACHINE_ARCH} == "aarch64"
+.if (${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "aarch64") && !empty(PKG_OPTIONS:Mjdk-hotspot-vm)
 PLIST.internal_vm_compiler=	yes
 PLIST.jvmci=			yes
 .endif
