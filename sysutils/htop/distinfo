@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2022/05/07 16:37:49 fox Exp $
+$NetBSD: distinfo,v 1.21 2022/05/16 12:14:22 jperkin Exp $
 
 BLAKE2s (htop-3.2.0.tar.gz) = e165b7b4baf45df3e1b8c826a4b04262987b11abad79ff3992dd74e5e030a676
 SHA512 (htop-3.2.0.tar.gz) = 174eaa7333fa60e40f67148560c53125e7aaf46a48e7f3ecfa2daa68553c94b3d076d03320afd479dcee07e739c0ff286a81b67cbc994782c33e798d3ed4605c
@@ -6,3 +6,4 @@ Size (htop-3.2.0.tar.gz) = 393712 bytes
 SHA1 (patch-netbsd_Platform.c) = a84e3a0c4c66e0da8df9825cdee3edb756dda2eb
 SHA1 (patch-openbsd_Platform.c) = 0b4a7022a2b5be4f9ec7b8e11bff86835e86a951
 SHA1 (patch-solaris_Platform.c) = b61123345578f36d0859db28ee9183cd23e889ce
+SHA1 (patch-solaris_Platform.h) = c23c6cf20607dd69e626be716337471fffd70d86
