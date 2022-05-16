@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2580 2022/05/16 14:59:16 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.2581 2022/05/16 15:26:38 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3994,3 +3994,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/navi to 2.20.0 [pin 2022-05-15]
 	Updated net/frr to 8.2.2 [kardel 2022-05-16]
 	Updated shells/zsh to 5.9 [ryoon 2022-05-16]
+	Updated www/py-flask-admin to 1.6.0 [kleink 2022-05-16]
