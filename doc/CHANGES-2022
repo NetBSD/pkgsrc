@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2578 2022/05/15 21:27:32 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2579 2022/05/16 11:57:31 kardel Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -3992,3 +3992,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-xmlschema to 1.11.0 [adam 2022-05-15]
 	Updated chat/profanity to 0.12.1 [nia 2022-05-15]
 	Updated sysutils/navi to 2.20.0 [pin 2022-05-15]
+	Updated net/frr to 8.2.2 [kardel 2022-05-16]
