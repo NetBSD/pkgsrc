@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.23 2021/10/26 10:54:11 nia Exp $
+$NetBSD: distinfo,v 1.24 2022/05/16 19:12:19 jperkin Exp $
 
 BLAKE2s (opendkim-2.10.3.tar.gz) = b790b2fdcffd16372460f0d686845019c85d21e3530202792c5d601801030dc7
 SHA512 (opendkim-2.10.3.tar.gz) = 97923e533d072c07ae4d16a46cbed95ee799aa50f19468d8bc6d1dc534025a8616c3b4b68b5842bc899b509349a2c9a67312d574a726b048c0ea46dd4fcc45d8
 Size (opendkim-2.10.3.tar.gz) = 1210224 bytes
 SHA1 (patch-configure.ac) = c9ae182ed2c5c2ec3018fe4c6066ed7fa0d3686f
-SHA1 (patch-libopendkim_dkim-canon.c) = 82dc322f86981feddc2ad0100b33ce1eca7435d6
+SHA1 (patch-libopendkim_dkim-canon.c) = 3d15386a114639f2479505bc3b12c1de67dbb18a
 SHA1 (patch-opendkim_opendkim-crypto.c) = d7d08fda3dba5bf9cb834123218b1e89b78878e5
