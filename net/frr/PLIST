@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/08/15 14:54:31 kardel Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/05/16 11:54:19 kardel Exp $
 bin/mtracebis
 bin/vtysh
 include/frr/agg_table.h
@@ -92,6 +92,7 @@ include/frr/qobj.h
 include/frr/queue.h
 include/frr/resolver.h
 include/frr/ringbuf.h
+include/frr/route_opaque.h
 include/frr/route_types.h
 include/frr/routemap.h
 include/frr/routing_nb.h
@@ -134,6 +135,7 @@ include/frr/zlog.h
 include/frr/zlog_targets.h
 ${PLIST.doc}info/frr.info
 lib/frr/modules/bgpd_bmp.la
+lib/frr/modules/dplane_sample_plugin.la
 lib/frr/modules/pathd_pcep.la
 lib/frr/modules/zebra_fpm.la
 lib/libfrr.la
@@ -164,6 +166,7 @@ sbin/fabricd
 sbin/frr
 sbin/frr-reload
 sbin/frr-reload.py
+sbin/frr_babeltrace.py
 sbin/frrcommon.sh
 sbin/frrinit.sh
 sbin/generate_support_bundle.py
@@ -192,6 +195,9 @@ ${PLIST.doc}share/doc/frr/html/_images/fig-vnc-redundant-route-reflectors.png
 ${PLIST.doc}share/doc/frr/html/_images/fig_dmvpn_topologies.png
 ${PLIST.doc}share/doc/frr/html/_images/fig_topologies_full.png
 ${PLIST.doc}share/doc/frr/html/_images/fig_topologies_rs.png
+${PLIST.doc}share/doc/frr/html/_images/pathd_config.png
+${PLIST.doc}share/doc/frr/html/_images/pathd_general.png
+${PLIST.doc}share/doc/frr/html/_images/pathd_initiated_multi.png
 ${PLIST.doc}share/doc/frr/html/_sources/babeld.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/basic.rst.txt
 ${PLIST.doc}share/doc/frr/html/_sources/bfd.rst.txt
@@ -307,13 +313,14 @@ share/yang/frr-bgp.yang
 share/yang/frr-deviations-bgp-datacenter.yang
 share/yang/frr-eigrpd.yang
 share/yang/frr-filter.yang
-share/yang/frr-igmp.yang
+share/yang/frr-gmp.yang
 share/yang/frr-interface.yang
 share/yang/frr-isisd.yang
 share/yang/frr-module-translator.yang
 share/yang/frr-nexthop.yang
 share/yang/frr-ospf-route-map.yang
 share/yang/frr-ospf6-route-map.yang
+share/yang/frr-ospfd.yang
 share/yang/frr-pathd.yang
 share/yang/frr-pim-rp.yang
 share/yang/frr-pim.yang
