@@ -1,4 +1,8 @@
-$NetBSD: patch-libopendkim_dkim-canon.c,v 1.1 2021/03/19 09:50:21 manu Exp $
+$NetBSD: patch-libopendkim_dkim-canon.c,v 1.2 2022/05/16 19:12:19 jperkin Exp $
+
+Fix DKIM canonization of headers formatted as Name:\r\n\tValue
+
+Submitted upstream as https://github.com/trusteddomainproject/OpenDKIM/pull/119
 
 --- libopendkim/dkim-canon.c.orig	2021-03-18 09:50:14.195951232 +0100
 +++ libopendkim/dkim-canon.c	2021-03-19 09:49:52.141301747 +0100
