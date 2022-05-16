@@ -1,6 +1,7 @@
-$NetBSD: patch-src_unix_kqueue.c,v 1.1 2022/05/15 19:23:43 wiz Exp $
+$NetBSD: patch-src_unix_kqueue.c,v 1.2 2022/05/16 07:21:35 wiz Exp $
 
 Fix cmake hang.
+https://github.com/libuv/libuv/pull/3629
 
 --- src/unix/kqueue.c.orig	2022-03-09 17:54:54.000000000 +0000
 +++ src/unix/kqueue.c
