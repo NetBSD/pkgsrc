@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1461 2022/05/08 20:33:36 khorben Exp $
+# $NetBSD: Makefile,v 1.1462 2022/05/16 18:08:00 tpaul Exp $
 #
 
 COMMENT=	Networking tools
@@ -995,6 +995,7 @@ SUBDIR+=	vpnc
 SUBDIR+=	vpnc-script
 SUBDIR+=	vsftpd
 SUBDIR+=	vtun
+SUBDIR+=	vultr-cli
 SUBDIR+=	wakeup
 SUBDIR+=	walker
 SUBDIR+=	wap-utils
