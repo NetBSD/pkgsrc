@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/16 18:08:00 tpaul Exp $
+
+BLAKE2s (vultr-cli-2.14.0/vultr-cli-2.14.0.tar.gz) = 6fe08fcb6cea0f4ec2bc98bd24714e638decee81adbac0cc08e26d15847fae4d
+SHA512 (vultr-cli-2.14.0/vultr-cli-2.14.0.tar.gz) = 13d5102978160b50f248183612a1e3c94e9bf8410cc0e0a4e7d5dd3676e58d6b4920834c7fe7bff51ec486ea8511929a455abbe652dc5d0e275ce4f9846f4b66
+Size (vultr-cli-2.14.0/vultr-cli-2.14.0.tar.gz) = 2229512 bytes
