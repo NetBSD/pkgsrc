@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2021/12/08 16:06:05 adam Exp $
+# $NetBSD: Makefile,v 1.15 2022/05/17 12:04:30 jperkin Exp $
 #
 
 DISTNAME=	ortp-0.16.1
@@ -20,6 +20,8 @@ PKGCONFIG_OVERRIDE+=	ortp.pc.in
 
 CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -D__EXTENSIONS__ -DBSD_COMP
 LDFLAGS.SunOS+=	-lsocket -lnsl
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "options.mk"
 
