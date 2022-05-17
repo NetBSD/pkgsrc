@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2596 2022/05/17 17:44:50 khorben Exp $
+$NetBSD: CHANGES-2022,v 1.2597 2022/05/17 18:01:39 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4012,3 +4012,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated misc/libreoffice to 7.3.3.2 [ryoon 2022-05-17]
 	Updated graphics/qr-code-generator to 1.8.0 [ryoon 2022-05-17]
 	Updated sysutils/deforaos-browser to 0.5.5 [khorben 2022-05-17]
+	Updated x11/deforaos-panel to 0.4.2 [khorben 2022-05-17]
