@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2600 2022/05/17 18:37:09 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2601 2022/05/17 21:44:37 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4016,3 +4016,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated wm/sdorfehs to 1.4 [pin 2022-05-17]
 	Updated www/wiki-tui to 0.4.8 [pin 2022-05-17]
 	Updated net/yaydl to 0.7.1 [pin 2022-05-17]
+	Updated multimedia/libaom to 3.3.0 [nia 2022-05-17]
