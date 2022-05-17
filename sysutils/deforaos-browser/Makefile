@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2021/12/08 16:02:37 adam Exp $
+# $NetBSD: Makefile,v 1.38 2022/05/17 17:44:27 khorben Exp $
 #
 
-DISTNAME=	Browser-0.5.4
-PKGNAME=	deforaos-browser-0.5.4
-PKGREVISION=	2
+DISTNAME=	Browser-0.5.5
+PKGNAME=	deforaos-browser-0.5.5
 CATEGORIES=	sysutils
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Browser/
 
@@ -54,6 +53,7 @@ post-install:
 
 .include "options.mk"
 
+.include "../../devel/deforaos-configure/deforaos-configure.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

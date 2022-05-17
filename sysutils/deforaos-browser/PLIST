@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/04/11 03:07:42 khorben Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/05/17 17:44:27 khorben Exp $
 bin/browser
 bin/copy
 bin/delete
@@ -48,10 +48,10 @@ man/man1/move.1
 man/man1/open.1
 man/man1/properties.1
 man/man1/view.1
-share/applications/deforaos-browser-folder.desktop
-share/applications/deforaos-browser.desktop
-share/applications/deforaos-desktop-settings.desktop
-share/applications/deforaos-view.desktop
+share/applications/org.defora.browser-folder.desktop
+share/applications/org.defora.browser.desktop
+share/applications/org.defora.desktop-settings.desktop
+share/applications/org.defora.view.desktop
 share/doc/Browser/COPYING
 share/doc/Browser/README.md
 share/doc/Browser/pinentry-sudo-askpass
