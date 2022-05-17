@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2022/04/25 06:31:34 markd Exp $
+# $NetBSD: Makefile,v 1.33 2022/05/17 17:03:47 jperkin Exp $
 
 DISTNAME=	kdesu-${KF5VER}
 CATEGORIES=	security
@@ -12,6 +12,9 @@ LICENSE=	gnu-lgpl-v2.1
 USE_TOOLS+=	msgmerge
 
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
+
+CFLAGS.SunOS+=	-D__EXTENSIONS__
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 SPECIAL_PERMS+=	${PREFIX}/libexec/kf5/kdesud ${REAL_ROOT_USER} nogroup 2555
 
