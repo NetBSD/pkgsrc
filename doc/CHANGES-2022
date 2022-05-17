@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2594 2022/05/17 13:37:49 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.2595 2022/05/17 14:10:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4010,3 +4010,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-nbconvert to 6.5.0nb1 [ryoon 2022-05-17]
 	Updated multimedia/mpv to 0.34.1nb4 [ryoon 2022-05-17]
 	Updated misc/libreoffice to 7.3.3.2 [ryoon 2022-05-17]
+	Updated graphics/qr-code-generator to 1.8.0 [ryoon 2022-05-17]
