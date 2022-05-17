@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 10:46:08 nia Exp $
+$NetBSD: distinfo,v 1.18 2022/05/17 21:54:50 nia Exp $
 
-BLAKE2s (freeglut-3.2.1.tar.gz) = dbc214e87d838971946bb33f36063f3a53cf224b51cb1c463eabf325f40a7a13
-SHA512 (freeglut-3.2.1.tar.gz) = aced4bbcd36269ce6f4ee1982e0f9e3fffbf18c94f785d3215ac9f4809b992e166c7ada496ed6174e13d77c0f7ef3ca4c57d8a282e96cbbe6ff086339ade3b08
-Size (freeglut-3.2.1.tar.gz) = 440228 bytes
+BLAKE2s (freeglut-3.2.2.tar.gz) = fcb5d0377d725be35663dab97349ec6be137e1d0ab36ea7e5647745c6da40daf
+SHA512 (freeglut-3.2.2.tar.gz) = 190231951d314f854c244bd27f7c20488403bd0eecffc342097a2e3d1621cec87f6c209a77b4c153aabcf44697b4070227930e295ab74fb88953cbbf94fc81d9
+Size (freeglut-3.2.2.tar.gz) = 397203 bytes
 SHA1 (patch-src_fg__joystick.c) = 56a07514b89ff748d5a273f12eb756d475d9de0e
-SHA1 (patch-src_wayland_fg__internal__wl.h) = c1bc21cf6fa7fcb37395db172a805e60071cbbd6
-SHA1 (patch-src_x11_fg__internal__x11.h) = 3a7cfc4b274f5c8d6da2c3ce109877ffac6c0bfa
 SHA1 (patch-src_x11_fg__joystick__x11.c) = c48f1651f136c7fe45385dfe9d03ae5a0517a938
