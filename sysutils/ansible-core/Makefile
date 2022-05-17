@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/05/14 04:36:26 adam Exp $
+# $NetBSD: Makefile,v 1.2 2022/05/17 09:29:54 adam Exp $
 
-DISTNAME=	ansible-core-2.12.5
+DISTNAME=	ansible-core-2.13.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-core/}
 
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 CONFLICTS+=	ansible<2.10
 
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
-DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0.0:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
 DEPENDS+=	${PYPKGPREFIX}-resolvelib>=0.5.3:../../devel/py-resolvelib
@@ -36,7 +36,6 @@ CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_test/_data/sanity/validate-modules
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths+=	docs/man/man1/*.1
 SUBST_FILES.paths+=	examples/hosts
 SUBST_FILES.paths+=	lib/ansible/config/base.yml
 SUBST_FILES.paths+=	lib/ansible/module_utils/urls.py
@@ -54,10 +53,6 @@ CONF_FILES+=		${EGDIR}/hosts ${PKG_SYSCONFDIR}/hosts
 CHECK_WRKREF_SKIP+=	*/ansible/module_utils/facts/system/pkg_mgr.py
 
 post-install:
-.for f in ansible-console.1 ansible-doc.1 ansible-galaxy.1 ansible-inventory.1 \
-	ansible-playbook.1 ansible-pull.1 ansible-vault.1 ansible.1
-	${INSTALL_MAN} ${WRKSRC}/docs/man/man1/${f} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
-.endfor
 .for f in ansible.cfg hosts
 	${INSTALL_DATA} ${WRKSRC}/examples/${f} ${DESTDIR}/${EGDIR}
 .endfor
