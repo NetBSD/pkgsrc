@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/04/18 19:10:52 adam Exp $
+# $NetBSD: Makefile,v 1.15 2022/05/17 18:25:09 jperkin Exp $
 
 DISTNAME=	kio-extras-${KAPPSVER}
 PKGREVISION=	11
@@ -27,6 +27,14 @@ SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
 SUBST_FILES.fix-moc=	_KDE_build/*/CMakeFiles/*_autogen.dir/AutogenInfo.json
 SUBST_NOOP_OK.fix-moc=	yes
 SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+TOOL_DEPENDS+=		coreutils>=0:../../sysutils/coreutils
+TOOLS_CREATE+=		md5sum
+TOOLS_PATH.md5sum=	${PREFIX}/bin/gmd5sum
+.endif
 
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
