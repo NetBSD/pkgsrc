@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2021/08/15 13:36:40 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2022/05/17 14:09:38 ryoon Exp $
 
-DISTNAME=	QR-Code-generator-1.7.0
+DISTNAME=	QR-Code-generator-1.8.0
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nayuki/}

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:46:49 nia Exp $
+$NetBSD: distinfo,v 1.8 2022/05/17 14:09:38 ryoon Exp $
 
-BLAKE2s (QR-Code-generator-1.7.0.tar.gz) = 15152441f5e85b096e81fd4666893d1c47e20005975e18895824c0985d6b9915
-SHA512 (QR-Code-generator-1.7.0.tar.gz) = 34efa40c382b6e7d060a764936c4e2faa4fbbecd5ea4730492a2cb1960656ed67242d84e20a42400ffdee063ed6bcf3b860fef309d09ee71303f44abaafe9328
-Size (QR-Code-generator-1.7.0.tar.gz) = 130540 bytes
+BLAKE2s (QR-Code-generator-1.8.0.tar.gz) = 9869617d472874f2c73efdbfa2e12554fc97fdac53dfe1e01f0245187b6e168f
+SHA512 (QR-Code-generator-1.8.0.tar.gz) = 0cdf0873e71aed124fc7357da86fb26f23fd26432f94c9752fa5a044085b26e5aece2115134d0e50213ff24be7c55818e7dec31205a68751065bc82ab0c2c6ac
+Size (QR-Code-generator-1.8.0.tar.gz) = 193288 bytes
