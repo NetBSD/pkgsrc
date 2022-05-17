@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2587 2022/05/16 22:45:44 tron Exp $
+$NetBSD: CHANGES-2022,v 1.2588 2022/05/17 07:44:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4001,3 +4001,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/firefox91 to 91.9.0 [nia 2022-05-16]
 	Updated www/firefox91-l10n to 91.9.0 [nia 2022-05-16]
 	Updated mail/mutt to 2.2.5 [tron 2022-05-16]
+	Updated net/haproxy to 2.5.7 [adam 2022-05-17]
+	Updated devel/py-setuptools to 62.3.0 [adam 2022-05-17]
