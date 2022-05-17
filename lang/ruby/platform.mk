@@ -1,4 +1,4 @@
-# $NetBSD: platform.mk,v 1.12 2022/05/07 09:36:16 taca Exp $
+# $NetBSD: platform.mk,v 1.13 2022/05/17 00:42:33 gutteridge Exp $
 #
 
 #
@@ -47,8 +47,8 @@ SUBST_MESSAGE.conf=	Fixing configuration files.
 SUBST_NOOP_OK.conf=	yes # not needed for ruby-base>=2.6
 
 #
-# Don't reference pkgsrc's INSTALL macro since Ruby expect it could
-# execute by unprivileged user.
+# Don't reference pkgsrc's INSTALL macro since Ruby expects it could
+# be executed by an unprivileged user.
 #
 CONFIGURE_ENV+=	INSTALL="${INSTALL} ${COPY}" \
 		INSTALL_DATA= INSTALL_PROGRAM= INSTALL_SCRIPT=
@@ -80,7 +80,7 @@ USE_BUILTIN.openssl=	no
 # DragonFly
 #
 #
-# Work around for getucontext(3)
+# Workaround for getucontext(3)
 #
 .if ${OPSYS} == "DragonFly" && ${OS_VERSION} == "1.8.0"
 CONFIGURE_ENV+=	ac_cv_header_ucontext_h=no
@@ -98,8 +98,7 @@ CONFIGURE_ARGS+=	--disable-dtrace
 #
 # NetBSD
 #
-# dtrace support has problem on i386.  (No official NetBSD release is
-# built with dtrace enabled yet, so this problem is on 7.99.* only.)
+# dtrace support has a problem on i386. XXX is this still an issue?
 #
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
 CONFIGURE_ARGS+=	--disable-dtrace
@@ -179,7 +178,7 @@ PLIST.win32=	yes
 .endif
 
 #
-# IRIX work around which should be fixed.
+# IRIX workaround which should be fixed.
 #
 PLIST_VARS+=	io
 .if ${OPSYS} != "IRIX"

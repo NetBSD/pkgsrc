@@ -1,4 +1,4 @@
-# $NetBSD: rails.mk,v 1.122 2022/05/05 03:39:02 taca Exp $
+# $NetBSD: rails.mk,v 1.123 2022/05/17 00:42:33 gutteridge Exp $
 
 .if !defined(_RUBY_RAILS_MK)
 _RUBY_RAILS_MK=	# defined
@@ -108,9 +108,9 @@ _RAILS_MINOR=	${RAILS_VERSION:C/([0-9]+)\.([0-9]+)\..*/\2/}
 _RAILS_TEENY=	${RAILS_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+).*/\3/}
 
 #
-# If RUBY_RAILS_STRICT_DEP is defined, match exact current Ruby no Rails
-# version.
-# Otherwise allow greater minor version.
+# If RUBY_RAILS_STRICT_DEP is defined, match exact current Ruby on Rails
+# version. Otherwise allow greater minor version.
+#
 
 .if !empty(RUBY_RAILS_STRICT_DEP:M[yY][eE][sS])
 _RAILS_NEXT!=	${EXPR} ${_RAILS_TEENY} + 1
