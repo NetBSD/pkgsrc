@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2598 2022/05/17 18:35:06 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2599 2022/05/17 18:35:58 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4014,3 +4014,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/deforaos-browser to 0.5.5 [khorben 2022-05-17]
 	Updated x11/deforaos-panel to 0.4.2 [khorben 2022-05-17]
 	Updated wm/sdorfehs to 1.4 [pin 2022-05-17]
+	Updated www/wiki-tui to 0.4.8 [pin 2022-05-17]
