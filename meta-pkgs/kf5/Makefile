@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/04/25 09:38:16 markd Exp $
+# $NetBSD: Makefile,v 1.23 2022/05/17 17:55:53 jperkin Exp $
 
 DISTNAME=	kf5-${KF5VER}
 CATEGORIES=	meta-pkgs x11 kde
@@ -10,6 +10,8 @@ HOMEPAGE=	https://www.kde.org/
 COMMENT=	"meta-package" for the KDE Frameworks 5
 
 KF5VER=		5.93.0
+
+.include "../../devel/wayland/platform.mk"
 
 DEPENDS+=	attica-qt5>=${KF5VER}:../../misc/attica-qt5
 DEPENDS+=	baloo5>=${KF5VER}:../../sysutils/baloo5
@@ -71,7 +73,9 @@ DEPENDS+=	ktexteditor>=${KF5VER}:../../devel/ktexteditor
 DEPENDS+=	ktextwidgets>=${KF5VER}:../../x11/ktextwidgets
 DEPENDS+=	kunitconversion>=${KF5VER}:../../misc/kunitconversion
 DEPENDS+=	kwallet>=${KF5VER}:../../security/kwallet
+.if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
 DEPENDS+=	kwayland>=${KF5VER}:../../devel/kwayland
+.endif
 DEPENDS+=	kwidgetsaddons>=${KF5VER}:../../x11/kwidgetsaddons
 DEPENDS+=	kwindowsystem>=${KF5VER}:../../x11/kwindowsystem
 DEPENDS+=	kxmlgui>=${KF5VER}:../../x11/kxmlgui
