@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/05/08 20:32:14 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2022/05/17 11:31:16 nia Exp $
 
 DISTNAME=	luaunbound-1.0.0
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/lua//}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://code.zash.se/dl/luaunbound/
 COMMENT=	Binding of libunbound for the Lua language
 LICENSE=	modified-bsd
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 MAKE_FILE=	GNUmakefile
 
 LUA_VERSIONS_ACCEPTED=	52
