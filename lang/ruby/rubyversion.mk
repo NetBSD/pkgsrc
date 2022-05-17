@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.251 2022/05/05 10:15:17 jperkin Exp $
+# $NetBSD: rubyversion.mk,v 1.252 2022/05/17 00:42:33 gutteridge Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -8,13 +8,13 @@
 # === User-settable variables ===
 #
 # RUBY_VERSION_DEFAULT
-#	The preferered Ruby version to use.
+#	The preferred Ruby version to use.
 #
 #		Possible values: 26 27 30 31
 #		Default: 27
 #
 # RUBY_BUILD_DOCUMENT
-#	Build documentation of this package and so that install formated
+#	Build documentation of this package so that installs formatted
 #	documentation.  It is also used in each package.
 #
 #		Possible values: Yes No
@@ -45,8 +45,8 @@
 #
 # RUBY_NOVERSION
 #	If "Yes", the package dosen't depend on any version of Ruby, such
-#	as editing mode for emacs.  In this case, package's name would begin
-#	with "ruby-".  Otherwise, the package's name is begin with
+#	as an editing mode for Emacs.  In this case, package's name would begin
+#	with "ruby-".  Otherwise, the package's name begins with
 #	${RUBY_PKGPREFIX}.
 #
 #		Possible values: Yes No
@@ -59,7 +59,7 @@
 #
 # RUBY_ENCODING_ARG
 #
-#	Optional encoding argument for shbang line.
+#	Optional encoding argument for shebang line.
 #
 #	Default: (empty)
 #
@@ -73,9 +73,9 @@
 #	Use this variable in pkgsrc's Makefile
 #
 # RUBY_PKGPREFIX
-#	Prefix part for ruby based packages.  It is recommended that to
-#	use RUBY_PKGPREFIX with ruby related packages since you can supply
-#	different binary packages as each version of Ruby.
+#	Prefix part for Ruby-based packages.  It is recommended to
+#	use RUBY_PKGPREFIX with Ruby-related packages since you can supply
+#	different binary packages for each version of Ruby.
 #
 #		Possible values: ruby26 ruby27 ruby30 ruby31
 #
@@ -583,7 +583,7 @@ MULTI+=	RUBY_VER=${RUBY_VERS:U${RUBY_VERSION_DEFAULT}}
 # RUBY_NOVERSION should be set to "Yes" if the package dosen't depend on
 #	any specific version of ruby command.  In this case, package's
 #	name begin with "ruby-".
-#	If RUBY_NOVERSION is "No" (default), the package's name is begin
+#	If RUBY_NOVERSION is "No" (default), the package's name begins
 #	with ${RUBY_NAME}; "ruby26", "ruby27" and so on.
 #
 #	It also affects to RUBY_DOC, RUBY_EG...
