@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2589 2022/05/17 09:31:13 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2590 2022/05/17 12:50:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4005,3 +4005,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-setuptools to 62.3.0 [adam 2022-05-17]
 	Updated sysutils/ansible-core to 2.13.0 [adam 2022-05-17]
 	Updated sysutils/py-ansible-compat to 2.0.4 [adam 2022-05-17]
+	Updated www/firefox to 100.0.1 [ryoon 2022-05-17]
