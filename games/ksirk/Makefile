@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2022/04/18 19:11:08 adam Exp $
+# $NetBSD: Makefile,v 1.53 2022/05/17 09:54:20 jperkin Exp $
 
 DISTNAME=	ksirk-${KAPPSVER}
 PKGREVISION=	6
@@ -13,6 +13,8 @@ LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
+
+LDFLAGS.SunOS+=	-lsocket -lnsl -lresolv
 
 .include "../../games/libkdegames/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
