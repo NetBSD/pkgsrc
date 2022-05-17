@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2022/04/18 19:11:51 adam Exp $
+# $NetBSD: Makefile,v 1.55 2022/05/17 13:52:09 jperkin Exp $
 
 DISTNAME=	krdc-${KAPPSVER}
 PKGREVISION=	8
@@ -13,6 +13,8 @@ LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 BUILD_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../devel/kcmutils/buildlink3.mk"
 .include "../../devel/knotifyconfig/buildlink3.mk"
