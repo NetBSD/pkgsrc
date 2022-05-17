@@ -1,4 +1,6 @@
-$NetBSD: patch-lib_libv4lconvert_libv4lsyscall-priv.h,v 1.1 2020/09/02 09:54:33 ryoon Exp $
+$NetBSD: patch-lib_libv4lconvert_libv4lsyscall-priv.h,v 1.2 2022/05/17 11:55:23 jperkin Exp $
+
+Support NetBSD and SunOS.
 
 --- lib/libv4lconvert/libv4lsyscall-priv.h.orig	2017-01-22 17:33:34.000000000 +0000
 +++ lib/libv4lconvert/libv4lsyscall-priv.h
@@ -15,13 +17,34 @@ $NetBSD: patch-lib_libv4lconvert_libv4lsyscall-priv.h,v 1.1 2020/09/02 09:54:33 
  #include <sys/syscall.h>
  #include <sys/types.h>
  #include <sys/ioctl.h>
-@@ -111,6 +110,10 @@ register_t __syscall(quad_t, ...);
+@@ -72,6 +71,16 @@
+ #define	MMAP2_PAGE_SHIFT 0
+ #endif
+ 
++#if defined(__sun)
++#include <sys/syscall.h>
++#include <sys/types.h>
++#include <sys/ioccom.h>
++#include <sys/ioctl.h>
++#define	_IOC_NR(cmd) ((cmd) & 0x100)
++#define	_IOC_TYPE(cmd) 'V' /* XXX: hack */
++#define	MMAP2_PAGE_SHIFT 0
++#endif
++
+ #undef SYS_OPEN
+ #undef SYS_CLOSE
+ #undef SYS_IOCTL
+@@ -111,6 +120,14 @@ register_t __syscall(quad_t, ...);
  #define SYS_MMAP(addr, len, prot, flags, fd, offset) \
  	__syscall((quad_t)SYS_mmap, (void *)(addr), (size_t)(len), \
  			(int)(prot), (int)(flags), (int)(fd), 0, (off_t)(offset))
 +#elif defined(__NetBSD__)
 +#define SYS_MMAP(addr, len, prot, flags, fd, offset) \
 +	__syscall((quad_t)SYS_mmap, (void *)(addr), (size_t)(len), \
++			(int)(prot), (int)(flags), (int)(fd), 0, (off_t)(offset))
++#elif defined(__sun)
++#define SYS_MMAP(addr, len, prot, flags, fd, offset) \
++	syscall(SYS_mmap, (void *)(addr), (size_t)(len), \
 +			(int)(prot), (int)(flags), (int)(fd), 0, (off_t)(offset))
  #else
  #define SYS_MMAP(addr, len, prot, flags, fd, off) \
