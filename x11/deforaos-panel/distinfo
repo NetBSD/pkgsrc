@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2021/10/26 11:33:45 nia Exp $
+$NetBSD: distinfo,v 1.20 2022/05/17 18:01:28 khorben Exp $
 
-BLAKE2s (Panel-0.4.1.tar.gz) = 76c3a96243ea39a4daa00b97ccd563eb778c7d6f651dc34a34f39ed984b8856e
-SHA512 (Panel-0.4.1.tar.gz) = 2af6c8a61fd17a606dd32a481099d49e655382e96f26bd48f6e9029e44f5c7151d521ec039912f7bbec92e5e9e07b84499633316e41860b2d897aa3276fd6217
-Size (Panel-0.4.1.tar.gz) = 158083 bytes
+BLAKE2s (Panel-0.4.2.tar.gz) = 6f9c4c10a54dd5e80cda40f06759ce1ee717bf3373c07f447c2fe09f7b27f43d
+SHA512 (Panel-0.4.2.tar.gz) = 52c53ba0abdb4d89c0cf8d87d1e5fcdf497809361342ef55066a20d30e382216bcc74a88ead30d243161be12f94b7a518f53730094f3cbc6302d2094e49c42f9
+Size (Panel-0.4.2.tar.gz) = 158202 bytes
