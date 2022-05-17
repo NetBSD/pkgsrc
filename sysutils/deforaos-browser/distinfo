@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 11:19:29 nia Exp $
+$NetBSD: distinfo,v 1.18 2022/05/17 17:44:27 khorben Exp $
 
-BLAKE2s (Browser-0.5.4.tar.gz) = acf7ae7e9764e8ee00dcce51b51d270f788f57b77338ccbdc2543681b3b392fb
-SHA512 (Browser-0.5.4.tar.gz) = da5363481c7ef35bf5a12aa21e8203640bc005db49599139593579d362e7164cbf0ac3aebc4fc618d850cef805404f89ac1693f087dd3fce648bb2f49ca43474
-Size (Browser-0.5.4.tar.gz) = 176341 bytes
+BLAKE2s (Browser-0.5.5.tar.gz) = d6e46dd30c8fb048122d0de2b89faadfe54d6f0595ceef29301edfe140c05b1d
+SHA512 (Browser-0.5.5.tar.gz) = d58eae1d536e76fcb255120a24a0a0e366d5984c2609d1c8e62c37230b9b8c9073014ca3ea62c8dde0e2a510bb8ece69295ac1835bab434a5232b7741043f8d9
+Size (Browser-0.5.5.tar.gz) = 174164 bytes
