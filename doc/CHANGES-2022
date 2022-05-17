@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2591 2022/05/17 12:51:06 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.2592 2022/05/17 12:57:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4007,3 +4007,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/py-ansible-compat to 2.0.4 [adam 2022-05-17]
 	Updated www/firefox to 100.0.1 [ryoon 2022-05-17]
 	Updated www/firefox-l10n to 100.0.1 [ryoon 2022-05-17]
+	Updated www/py-nbconvert to 6.5.0nb1 [ryoon 2022-05-17]
