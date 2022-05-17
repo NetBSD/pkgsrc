@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2021/11/01 20:35:16 wiz Exp $
+$NetBSD: distinfo,v 1.24 2022/05/17 11:55:23 jperkin Exp $
 
 BLAKE2s (v4l-utils-1.22.1.tar.bz2) = 3cf8ea5dc9b3ea40ab80a866134c209e479e8518d4bfc0ad4ead2f7f9db0265d
 SHA512 (v4l-utils-1.22.1.tar.bz2) = 8a634d8995d13f453dfaf90ca5d0dfb26f2f4b10a0d200d76a949c46f77040d12fc0a5b35e05d7b1ba68bcfc85a445be5a5ab1d4a7d4eabfe3a254038ccc6170
@@ -8,11 +8,11 @@ SHA1 (patch-lib_include_libv4l1-videodev.h) = 84256cb64dd755b8a12edd9844bc362c35
 SHA1 (patch-lib_include_libv4l2rds.h) = ca375e9bac291c8cc295a3393e0497eb12a01cb9
 SHA1 (patch-lib_include_libv4lconvert.h) = e5807fa26d4e73a001f829640902cf22c14b6dfe
 SHA1 (patch-lib_libv4l-mplane_libv4l-mplane.c) = df0d6f863ce3b7ff4b2ad87b8cd348785d0200c7
-SHA1 (patch-lib_libv4l1_libv4l1.c) = 9aa0fd6dccd372f81e409c6ac0768be94957ab31
-SHA1 (patch-lib_libv4l2_libv4l2.c) = f086f39fd25684f91be773637d1922416d224dc4
+SHA1 (patch-lib_libv4l1_libv4l1.c) = f495eedb0efc9cb1e088984aa0fb06d65ffe3841
+SHA1 (patch-lib_libv4l2_libv4l2.c) = 14146c0b195d1ab3edbde39156478d4b4c146a73
 SHA1 (patch-lib_libv4l2_log.c) = bcab0be4b49a38271bbc2b4a1d56f9289a471d40
 SHA1 (patch-lib_libv4l2_v4l2convert.c) = f5fefb20f83005b0f91010af6ec9b7f9f76fabe0
-SHA1 (patch-lib_libv4l2rds_libv4l2rds.c) = f6779f323a64bb12ea14829241363f2fc0f9ee2c
+SHA1 (patch-lib_libv4l2rds_libv4l2rds.c) = 004cd1a91a6212d2458518166654d2269106eb04
 SHA1 (patch-lib_libv4lconvert_control_libv4lcontrol.c) = e4a96570f22d837bbf7248231464a143c339e8ea
-SHA1 (patch-lib_libv4lconvert_libv4lsyscall-priv.h) = 2795b366f05365bf7a7caa142ff4b93b38603787
+SHA1 (patch-lib_libv4lconvert_libv4lsyscall-priv.h) = c6dfcc4d84fb1553ebd0396e1b4a9e7e4f43417a
 SHA1 (patch-lib_libv4lconvert_processing_libv4lprocessing.h) = ecb02a055df546eb0f4bcea96f1a55e312495cdd
