@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2021/11/01 20:35:16 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2022/05/17 11:55:23 jperkin Exp $
 
 LIBV4L_VERS=	1.22.1
 DISTNAME=	v4l-utils-${LIBV4L_VERS}
@@ -41,10 +41,15 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/videoio.h ${DESTDIR}${PREFIX}/include/sys
 
 .elif (${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly") && ${NEWHEADER} == "no"
-
 pre-configure:
 	${MKDIR} ${BUILDLINK_DIR}/include/sys
 	cp ${FILESDIR}/videoio.h ${BUILDLINK_DIR}/include/sys
+
+.elif ${OPSYS} == "SunOS"
+pre-configure:
+	${MKDIR} ${BUILDLINK_DIR}/include/linux
+	cp ${FILESDIR}/videodev2.h ${BUILDLINK_DIR}/include/linux
+	cp ${FILESDIR}/v4l2-controls.h ${BUILDLINK_DIR}/include/linux
 
 .elif ${OPSYS} == "Linux" && !exists(/usr/include/linux/videodev.h)
 pre-configure:
