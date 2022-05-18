@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2619 2022/05/18 14:17:34 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2620 2022/05/18 15:06:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4040,3 +4040,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-lexicon to 3.11.2 [adam 2022-05-18]
 	Updated sysutils/navi to 2.20.1 [pin 2022-05-18]
 	Removed security/netramet [wiz 2022-05-18]
+	Updated net/bind916 to 9.16.29 [taca 2022-05-18]
