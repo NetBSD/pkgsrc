@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/03/28 10:44:05 tnn Exp $
+# $NetBSD: Makefile,v 1.23 2022/05/18 00:27:48 charlotte Exp $
 
 DISTNAME=	7kaa-2.15.4p1
 PKGREVISION=	6
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=the3dfxdude/}
 EXTRACT_SUFX=	.tar.xz
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	cfkoch@edgebsd.org
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://7kfans.com/
 COMMENT=	Seven Kingdoms: Ancient Adversaries
 LICENSE=	gnu-gpl-v2
