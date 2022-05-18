@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/12/14 00:47:01 mef Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/05/18 20:34:05 fcambus Exp $
 share/fonts/X11/OTF/PublicSans-Black.otf
 share/fonts/X11/OTF/PublicSans-BlackItalic.otf
 share/fonts/X11/OTF/PublicSans-Bold.otf
@@ -28,6 +28,7 @@ share/fonts/X11/TTF/PublicSans-ExtraBoldItalic.ttf
 share/fonts/X11/TTF/PublicSans-ExtraLight.ttf
 share/fonts/X11/TTF/PublicSans-ExtraLightItalic.ttf
 share/fonts/X11/TTF/PublicSans-Italic.ttf
+share/fonts/X11/TTF/PublicSans-Italic[wght].ttf
 share/fonts/X11/TTF/PublicSans-Light.ttf
 share/fonts/X11/TTF/PublicSans-LightItalic.ttf
 share/fonts/X11/TTF/PublicSans-Medium.ttf
@@ -37,3 +38,4 @@ share/fonts/X11/TTF/PublicSans-SemiBold.ttf
 share/fonts/X11/TTF/PublicSans-SemiBoldItalic.ttf
 share/fonts/X11/TTF/PublicSans-Thin.ttf
 share/fonts/X11/TTF/PublicSans-ThinItalic.ttf
+share/fonts/X11/TTF/PublicSans[wght].ttf
