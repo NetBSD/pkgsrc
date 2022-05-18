@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2607 2022/05/18 08:43:16 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2608 2022/05/18 08:50:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4025,3 +4025,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/python39 to 3.9.13 [adam 2022-05-18]
 	Updated lang/py39-html-docs to 3.9.13 [adam 2022-05-18]
 	Updated audio/musicpd to 0.23.7 [wiz 2022-05-18]
+	Updated devel/py-pyparsing to 3.0.9 [wiz 2022-05-18]
