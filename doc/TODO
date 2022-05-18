@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21870 2022/05/18 08:50:50 wiz Exp $
+$NetBSD: TODO,v 1.21871 2022/05/18 18:29:28 adam Exp $
 
 Suggested new packages
 ======================
@@ -777,7 +777,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gnu-crypto-2.1.0
 	o gnucap-20210107
 	o gnutime-1.9
-	o gnutls-3.7.5
 	o go-afero-1.6.0
 	o go-appengine-1.6.7
 	o go-asn1-ber-1.5.3
