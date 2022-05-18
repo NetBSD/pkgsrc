@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2613 2022/05/18 12:05:46 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2614 2022/05/18 12:06:47 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4033,3 +4033,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ddgr to 2.0 [pin 2022-05-18]
 	Updated textproc/git-delta to 0.13.0 [pin 2022-05-18]
 	Updated benchmarks/hyperfine to 1.14.0 [pin 2022-05-18]
+	Updated graphics/kvantum to 1.0.2 [pin 2022-05-18]
