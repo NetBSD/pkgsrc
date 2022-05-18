@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:25:09 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/05/18 19:48:23 nikita Exp $
 
-BLAKE2s (9wm-1.4.1.tar.gz) = 08d01902333427f9869e5d764da6afbb92c7952b1ff3ba1ffa34af8b2552acea
-SHA512 (9wm-1.4.1.tar.gz) = 6d07ac44ba1b5171e24bfc2acfebf33207e030bdfd2ed5c18e2a5c9e59f4bf215d6e6148874bcfa95f50fbb218af48cfaeb7604dbb651d35cefe83860ae3fcb9
-Size (9wm-1.4.1.tar.gz) = 22021 bytes
+BLAKE2s (9wm-1.4.2.tar.gz) = c0b70605bae374d6bdb8603b1e064bdf95291331425d2bec753697bf9ccfe191
+SHA512 (9wm-1.4.2.tar.gz) = 4ea27b4a0851519fd1a8ccbd9e4c19addd592a2cd0a5dd1b077661564594b1ceb653cd8ec304ee56654cefa922514a02b041ad3d3639ef43efdb830cdec7485e
+Size (9wm-1.4.2.tar.gz) = 22099 bytes
 SHA1 (patch-9wm.c) = 0e3c31b6cd872426a9be8b9e27294eee83da9712
+SHA1 (patch-grab.c) = 931076087bb8ee4b83c7a52ef52ac36ce7b69d22
