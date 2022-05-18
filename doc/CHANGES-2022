@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2605 2022/05/18 05:44:34 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2606 2022/05/18 08:07:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4022,3 +4022,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/bozohttpd to 20220517 [mrg 2022-05-18]
 	Updated devel/py-setuptools to 62.3.1 [adam 2022-05-18]
 	Updated textproc/py-elementpath to 2.5.2 [adam 2022-05-18]
+	Updated lang/python39 to 3.9.13 [adam 2022-05-18]
+	Updated lang/py39-html-docs to 3.9.13 [adam 2022-05-18]
