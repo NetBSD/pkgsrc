@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.255 2022/04/30 21:02:39 nia Exp $
+# $NetBSD: Makefile,v 1.256 2022/05/18 20:57:28 he Exp $
 
 DISTNAME=	rustc-1.59.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
-PKGREVISION=	1
+PKGREVISION=	2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.rust-lang.org/
@@ -386,6 +386,10 @@ SUBST_VARS.rpath=	PREFIX
 #CKSUM_CRATES+=	vendor/cc
 #CKSUMS+=	6dde684bdcc1bb03a808784ce8ccc0721f53bfdf87b84c607045aada916730ba
 #CKSUMS+=	1244e301c58e7f693f14ad23b02713cdd38259928a6ca905336891e869e6743e
+
+CKSUM_CRATES+=	vendor/libc-0.2.108
+CKSUMS+=	ddbdc8526a0267ffeb0ab9bb5f01ebb38a14cf759c025b5c0b0ff1178fec889b
+CKSUMS+=	b8330ddc0af8fa8d57f715eebabf0b0e4bcbef85894eee4a0f7aa0f748c29106
 
 CKSUM_CRATES+=	vendor/rustc-ap-rustc_target
 CKSUMS+=	673ac3b6875d487ace59b01725d83d2fab4af60615d1f8edd95bf21295947433
