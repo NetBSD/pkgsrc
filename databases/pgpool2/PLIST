@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/04/28 09:18:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/05/18 11:20:35 adam Exp $
 bin/pcp_attach_node
 bin/pcp_detach_node
 bin/pcp_health_check_stats
@@ -24,6 +24,12 @@ include/pcp.h
 include/pool_process_reporting.h
 include/pool_type.h
 lib/libpcp.la
+lib/postgresql/bitcode/pgpool-recovery.index.bc
+lib/postgresql/bitcode/pgpool-recovery/pgpool-recovery.bc
+lib/postgresql/bitcode/pgpool-regclass.index.bc
+lib/postgresql/bitcode/pgpool-regclass/pgpool-regclass.bc
+lib/postgresql/bitcode/pgpool_adm.index.bc
+lib/postgresql/bitcode/pgpool_adm/pgpool_adm.bc
 lib/postgresql/pgpool-recovery.so
 lib/postgresql/pgpool-regclass.so
 lib/postgresql/pgpool_adm.so
@@ -32,17 +38,12 @@ share/examples/pgpool2/failover.sh.sample
 share/examples/pgpool2/follow_primary.sh.sample
 share/examples/pgpool2/pcp.conf.sample
 share/examples/pgpool2/pgpool.conf.sample
-share/examples/pgpool2/pgpool.conf.sample-logical
-share/examples/pgpool2/pgpool.conf.sample-raw
-share/examples/pgpool2/pgpool.conf.sample-replication
-share/examples/pgpool2/pgpool.conf.sample-slony
-share/examples/pgpool2/pgpool.conf.sample-snapshot
-share/examples/pgpool2/pgpool.conf.sample-stream
 share/examples/pgpool2/pgpool_remote_start.sample
 share/examples/pgpool2/pool_hba.conf.sample
 share/examples/pgpool2/pool_passwd
 share/examples/pgpool2/recovery_1st_stage.sample
-share/examples/pgpool2/recovery_2nd_stage.sample
+share/examples/pgpool2/replication_mode_recovery_1st_stage.sample
+share/examples/pgpool2/replication_mode_recovery_2nd_stage.sample
 share/pgpool2/insert_lock.sql
 share/pgpool2/pgpool.pam
 share/postgresql/extension/pgpool-recovery.sql
@@ -53,13 +54,17 @@ share/postgresql/extension/pgpool_adm--1.1--1.2.sql
 share/postgresql/extension/pgpool_adm--1.1.sql
 share/postgresql/extension/pgpool_adm--1.2--1.3.sql
 share/postgresql/extension/pgpool_adm--1.2.sql
+share/postgresql/extension/pgpool_adm--1.3--1.4.sql
 share/postgresql/extension/pgpool_adm--1.3.sql
+share/postgresql/extension/pgpool_adm--1.4.sql
 share/postgresql/extension/pgpool_adm.control
 share/postgresql/extension/pgpool_recovery--1.1--1.2.sql
 share/postgresql/extension/pgpool_recovery--1.1.sql
 share/postgresql/extension/pgpool_recovery--1.2--1.3.sql
 share/postgresql/extension/pgpool_recovery--1.2.sql
+share/postgresql/extension/pgpool_recovery--1.3--1.4.sql
 share/postgresql/extension/pgpool_recovery--1.3.sql
+share/postgresql/extension/pgpool_recovery--1.4.sql
 share/postgresql/extension/pgpool_recovery.control
 share/postgresql/extension/pgpool_regclass--1.0.sql
 share/postgresql/extension/pgpool_regclass.control

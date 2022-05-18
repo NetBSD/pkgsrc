@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2021/04/28 09:18:55 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2022/05/18 11:20:35 adam Exp $
 
-DISTNAME=	pgpool-II-4.2.2
-PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME:S/pgpool-II/pgpool2/}
+DISTNAME=	pgpool-II-4.3.1
+PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME:S/-II/2/}
 CATEGORIES=	databases
 MASTER_SITES=	https://www.pgpool.net/mediawiki/images/
 
@@ -12,9 +12,10 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL_VERSION}-server
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	bash:run gmake
+USE_LIBTOOL=		yes
+USE_TOOLS+=		bash:run gmake
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+GNU_CONFIGURE=		yes
 
 .include "options.mk"
 .include "../../mk/bsd.prefs.mk"
@@ -25,8 +26,6 @@ EGDIR=			share/examples/pgpool2
 
 PGPOOL_USER?=		pgpool
 PGPOOL_GROUP?=		${PGGROUP}
-PGGROUP?=		pgsql
-PGHOME?=		${PREFIX}/${PGGROUP}
 
 PKG_GROUPS=			${PGPOOL_GROUP}
 PKG_USERS=			${PGPOOL_USER}:${PGPOOL_GROUP}
@@ -47,16 +46,10 @@ SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	src/sample/pgpool.conf.sample src/include/pool.h
 SUBST_VARS.path=	PGPOOL_LOGDIR PGPOOL_PIDDIR
 
-SUBST_CLASSES+=		bash
-SUBST_MESSAGE.bash=	Fixing bash path
-SUBST_STAGE.bash=	pre-configure
-SUBST_FILES.bash=	src/test/pgpool_setup.in src/test/watchdog_setup.in
-SUBST_SED.bash=		-e 's|/usr/bin/env bash|${PREFIX}/bin/bash|'
-
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+REPLACE_BASH+=		src/test/pgpool_setup.in
+REPLACE_BASH+=		src/test/watchdog_setup.in
 
 BUILD_DIRS=		. src/sql
-
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/${EGDIR}
 
 RCD_SCRIPTS+=		pgpool2
