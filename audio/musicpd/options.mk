@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.39 2021/11/01 21:51:20 wiz Exp $
+# $NetBSD: options.mk,v 1.40 2022/05/18 08:43:06 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
 
@@ -206,6 +206,7 @@ MESON_ARGS+=	-Dshine=disabled
 #.endif
 
 .if !empty(PKG_OPTIONS:Mshout)
+BUILDLINK_API_DEPENDS.libshout+=	libshout>=2.4.0
 .  include "../../audio/libshout/buildlink3.mk"
 .  include "../../audio/lame/buildlink3.mk"
 .else
