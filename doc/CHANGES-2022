@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2627 2022/05/18 20:45:52 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.2628 2022/05/18 20:58:03 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4050,3 +4050,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-setuptools to 62.3.2 [adam 2022-05-18]
 	Updated sysutils/ansible-lint to 6.2.1 [adam 2022-05-18]
 	Updated net/syncthing to 1.20.1 [triaxx 2022-05-18]
+	Updated lang/rust to 1.59.0nb2 [he 2022-05-18]
