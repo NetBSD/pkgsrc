@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2022/05/17 18:01:28 khorben Exp $
+# $NetBSD: Makefile,v 1.43 2022/05/18 00:28:35 khorben Exp $
 #
 
-DISTNAME=	Panel-0.4.2
-PKGNAME=	deforaos-panel-0.4.2
+DISTNAME=	Panel-0.4.3
+PKGNAME=	deforaos-panel-0.4.3
 CATEGORIES=	x11
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Panel/
 
@@ -56,4 +56,6 @@ post-install:
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../sysutils/deforaos-browser/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk-doc+=	gtk-doc>=1.20
+.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
