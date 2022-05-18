@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2022/05/09 17:07:08 nikita Exp $
+# $NetBSD: Makefile,v 1.27 2022/05/18 00:23:57 charlotte Exp $
 
 DISTNAME=	cwm-7.1
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leahneukirchen/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	cfkoch@edgebsd.org
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://github.com/leahneukirchen/cwm
 COMMENT=	Portable version of the window manager from OpenBSD
 LICENSE=	isc
