@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2621 2022/05/18 18:21:30 tpaul Exp $
+$NetBSD: CHANGES-2022,v 1.2622 2022/05/18 18:29:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4042,3 +4042,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed security/netramet [wiz 2022-05-18]
 	Updated net/bind916 to 9.16.29 [taca 2022-05-18]
 	Updated net/terraform-provider-vultr to 2.11.1 [tpaul 2022-05-18]
+	Updated security/gnutls to 3.7.5 [adam 2022-05-18]
+	Updated lang/nodejs to 18.2.0 [adam 2022-05-18]
