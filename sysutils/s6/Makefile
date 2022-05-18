@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2022/05/09 14:54:03 schmonz Exp $
+# $NetBSD: Makefile,v 1.11 2022/05/18 00:24:18 charlotte Exp $
 
 DISTNAME=	s6-2.11.1.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${HOMEPAGE}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${MANPAGES}
 
-MAINTAINER=	cfkoch@edgebsd.org
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://skarnet.org/software/s6/
 COMMENT=	The s6 supervision suite
 LICENSE=	isc
