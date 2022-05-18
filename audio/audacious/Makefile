@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2022/04/18 19:09:40 adam Exp $
+# $NetBSD: Makefile,v 1.74 2022/05/18 15:09:55 nia Exp $
 
 DISTNAME=	audacious-4.1
 PKGREVISION=	3
@@ -25,6 +25,4 @@ LDFLAGS.Darwin+=	-flat_namespace -undefined suppress
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
