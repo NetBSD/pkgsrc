@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/05/09 21:44:20 pin Exp $
+# $NetBSD: Makefile,v 1.3 2022/05/18 12:08:44 pin Exp $
 
-DISTNAME=	trippy-0.3.1
+DISTNAME=	trippy-0.4.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fujiapple852/}
 
