@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.4 2017/07/09 05:44:01 maya Exp $
-
-For getting the most out of libwmf, consider installing TrueType
-fonts, such as the fonts/ms-ttf, fonts/vera-ttf, and fonts/dbz-ttf
-packages.
-
-===========================================================================
