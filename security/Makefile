@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.861 2022/05/15 04:49:15 wiz Exp $
+# $NetBSD: Makefile,v 1.862 2022/05/18 14:17:34 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -245,7 +245,6 @@ SUBDIR+=	munge
 SUBDIR+=	nacl
 SUBDIR+=	netpgp
 SUBDIR+=	netpgpverify
-SUBDIR+=	netramet
 SUBDIR+=	nettle
 SUBDIR+=	nfsbug
 SUBDIR+=	nikto
