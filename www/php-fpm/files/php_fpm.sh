@@ -1,11 +1,17 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: php_fpm.sh,v 1.2 2021/08/29 17:49:44 khorben Exp $
+# $NetBSD: php_fpm.sh,v 1.3 2022/05/18 20:40:32 triaxx Exp $
 #
 # PROVIDE: php_fpm
 # REQUIRE: DAEMON
+#
+# Consider installing pkgtools/rc.subr in unprivileged.
+#
+# You will need to set some variables in @SYSCONFBASE@/rc.conf to start php-fpm:
+#
+# php_fpm=YES
 
-. @SYSCONFBASE@/rc.subr
+$_rc_subr_loaded . @SYSCONFBASE@/rc.subr
 
 name="php_fpm"
 rcvar=${name}
