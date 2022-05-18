@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2616 2022/05/18 12:09:03 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2617 2022/05/18 13:21:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4036,3 +4036,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/kvantum to 1.0.2 [pin 2022-05-18]
 	Updated shells/starship to 1.6.3 [pin 2022-05-18]
 	Updated net/trippy to 0.4.0 [pin 2022-05-18]
+	Updated www/py-sanic to 22.3.2 [adam 2022-05-18]
+	Updated net/py-lexicon to 3.11.2 [adam 2022-05-18]
