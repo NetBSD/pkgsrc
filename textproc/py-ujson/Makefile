@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2022/04/06 09:24:43 adam Exp $
+# $NetBSD: Makefile,v 1.14 2022/05/18 21:52:39 wiz Exp $
 
-DISTNAME=	ujson-5.2.0
+DISTNAME=	ujson-5.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/ujson/}
@@ -16,6 +16,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 USE_LANGUAGES=	c c++
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
