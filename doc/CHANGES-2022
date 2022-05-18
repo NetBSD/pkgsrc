@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2625 2022/05/18 20:34:17 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.2626 2022/05/18 20:36:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4047,3 +4047,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/gitea to 1.16.8 [khorben 2022-05-18]
 	Updated wm/9wm to 1.4.2 [nikita 2022-05-18]
 	Updated fonts/public-sans to v2.001 [fcambus 2022-05-18]
+	Updated devel/py-setuptools to 62.3.2 [adam 2022-05-18]
+	Updated sysutils/ansible-lint to 6.2.1 [adam 2022-05-18]
