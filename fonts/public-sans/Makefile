@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/11/06 18:04:26 maya Exp $
+# $NetBSD: Makefile,v 1.5 2022/05/18 20:34:05 fcambus Exp $
 
-VERSION=	1.008
+VERSION=	2.001
 DISTNAME=	public-sans-v${VERSION}
 PKGNAME=	${DISTNAME:S/v1/1/}
 CATEGORIES=	fonts
