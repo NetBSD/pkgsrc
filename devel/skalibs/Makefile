@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2022/05/09 14:51:23 schmonz Exp $
+# $NetBSD: Makefile,v 1.17 2022/05/18 00:28:02 charlotte Exp $
 
 DISTNAME=		skalibs-2.11.2.0
 CATEGORIES=		devel
 MASTER_SITES=		${HOMEPAGE}
 
-MAINTAINER=		cfkoch@edgebsd.org
+MAINTAINER=		charlotte@NetBSD.org
 HOMEPAGE=		https://skarnet.org/software/skalibs/
 COMMENT=		The skarnet.org C system programming library
 LICENSE=		isc
