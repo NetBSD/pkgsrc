@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/05/14 04:49:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/05/18 11:34:56 adam Exp $
 bin/ansible-lint
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
@@ -73,6 +73,8 @@ ${PYSITELIB}/ansiblelint/rules/ignore_errors.py
 ${PYSITELIB}/ansiblelint/rules/ignore_errors.pyc
 ${PYSITELIB}/ansiblelint/rules/inline_env_var.py
 ${PYSITELIB}/ansiblelint/rules/inline_env_var.pyc
+${PYSITELIB}/ansiblelint/rules/key_order.py
+${PYSITELIB}/ansiblelint/rules/key_order.pyc
 ${PYSITELIB}/ansiblelint/rules/literal_compare.py
 ${PYSITELIB}/ansiblelint/rules/literal_compare.pyc
 ${PYSITELIB}/ansiblelint/rules/meta_incorrect.py
@@ -129,12 +131,25 @@ ${PYSITELIB}/ansiblelint/rules/var_naming.py
 ${PYSITELIB}/ansiblelint/rules/var_naming.pyc
 ${PYSITELIB}/ansiblelint/rules/var_spacing.py
 ${PYSITELIB}/ansiblelint/rules/var_spacing.pyc
+${PYSITELIB}/ansiblelint/rules/yaml.md
 ${PYSITELIB}/ansiblelint/rules/yaml.py
 ${PYSITELIB}/ansiblelint/rules/yaml.pyc
 ${PYSITELIB}/ansiblelint/runner.py
 ${PYSITELIB}/ansiblelint/runner.pyc
 ${PYSITELIB}/ansiblelint/schemas/__init__.py
 ${PYSITELIB}/ansiblelint/schemas/__init__.pyc
+${PYSITELIB}/ansiblelint/schemas/ansible-lint-config.json
+${PYSITELIB}/ansiblelint/schemas/ansible-navigator-config.json
+${PYSITELIB}/ansiblelint/schemas/arg_specs.json
+${PYSITELIB}/ansiblelint/schemas/execution-environment.json
+${PYSITELIB}/ansiblelint/schemas/galaxy.json
+${PYSITELIB}/ansiblelint/schemas/inventory.json
+${PYSITELIB}/ansiblelint/schemas/meta-runtime.json
+${PYSITELIB}/ansiblelint/schemas/meta.json
+${PYSITELIB}/ansiblelint/schemas/playbook.json
+${PYSITELIB}/ansiblelint/schemas/requirements.json
+${PYSITELIB}/ansiblelint/schemas/tasks.json
+${PYSITELIB}/ansiblelint/schemas/vars.json
 ${PYSITELIB}/ansiblelint/skip_utils.py
 ${PYSITELIB}/ansiblelint/skip_utils.pyc
 ${PYSITELIB}/ansiblelint/testing/__init__.py
