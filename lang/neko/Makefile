@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/04/18 19:11:31 adam Exp $
+# $NetBSD: Makefile,v 1.14 2022/05/18 00:25:44 charlotte Exp $
 
 DISTNAME=	neko-2.3.0
 PKGREVISION=	10
@@ -6,7 +6,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=HaxeFoundation/}
 GITHUB_TAG=	v${PKGVERSION_NOREV:S/./-/g}
 
-MAINTAINER=	cfkoch@edgebsd.org
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://nekovm.org/
 COMMENT=	High-level dynamically typed programming language
 LICENSE=	mit
