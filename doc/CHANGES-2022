@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2602 2022/05/17 21:55:02 nia Exp $
+$NetBSD: CHANGES-2022,v 1.2603 2022/05/18 00:28:46 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4018,3 +4018,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/yaydl to 0.7.1 [pin 2022-05-17]
 	Updated multimedia/libaom to 3.3.0 [nia 2022-05-17]
 	Updated graphics/freeglut to 3.2.2 [nia 2022-05-17]
+	Updated x11/deforaos-panel to 0.4.3 [khorben 2022-05-18]
