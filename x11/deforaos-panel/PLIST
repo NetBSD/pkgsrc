@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/05/17 18:01:28 khorben Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/05/18 00:28:35 khorben Exp $
 bin/panel
 bin/panel-embed
 bin/panel-message
@@ -68,6 +68,21 @@ share/applications/org.defora.wifibrowser.desktop
 share/doc/Panel/COPYING
 share/doc/Panel/README.md
 share/doc/Panel/wpa_supplicant.conf
+share/gtk-doc/html/Panel/Panel-applet.html
+share/gtk-doc/html/Panel/Panel-panel.html
+share/gtk-doc/html/Panel/Panel-window.html
+share/gtk-doc/html/Panel/Panel.devhelp2
+share/gtk-doc/html/Panel/api-index-full.html
+share/gtk-doc/html/Panel/ch01.html
+share/gtk-doc/html/Panel/home.png
+share/gtk-doc/html/Panel/index.html
+share/gtk-doc/html/Panel/left-insensitive.png
+share/gtk-doc/html/Panel/left.png
+share/gtk-doc/html/Panel/right-insensitive.png
+share/gtk-doc/html/Panel/right.png
+share/gtk-doc/html/Panel/style.css
+share/gtk-doc/html/Panel/up-insensitive.png
+share/gtk-doc/html/Panel/up.png
 share/icons/hicolor/16x16/apps/panel-applet-bluetooth.png
 share/icons/hicolor/16x16/apps/panel-applet-desktop.png
 share/icons/hicolor/16x16/apps/panel-applet-usb.png
@@ -86,5 +101,6 @@ share/icons/hicolor/48x48/apps/panel-applet-bluetooth.png
 share/icons/hicolor/48x48/apps/panel-applet-desktop.png
 share/icons/hicolor/48x48/apps/panel-settings.png
 share/icons/hicolor/scalable/apps/panel-applet-bluetooth.svg
+share/locale/de/LC_MESSAGES/Panel.mo
 share/locale/es/LC_MESSAGES/Panel.mo
 share/locale/fr/LC_MESSAGES/Panel.mo
