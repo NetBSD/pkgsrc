@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2603 2022/05/18 00:28:46 khorben Exp $
+$NetBSD: CHANGES-2022,v 1.2604 2022/05/18 00:47:31 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4019,3 +4019,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/libaom to 3.3.0 [nia 2022-05-17]
 	Updated graphics/freeglut to 3.2.2 [nia 2022-05-17]
 	Updated x11/deforaos-panel to 0.4.3 [khorben 2022-05-18]
+	Updated www/bozohttpd to 20220517 [mrg 2022-05-18]
