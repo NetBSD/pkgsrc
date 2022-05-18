@@ -1,8 +1,8 @@
-$NetBSD: patch-src_auth_pool__hba.c,v 1.1 2021/04/28 09:18:55 wiz Exp $
+$NetBSD: patch-src_auth_pool__hba.c,v 1.2 2022/05/18 11:20:35 adam Exp $
 
---- src/auth/pool_hba.c.orig	2021-04-24 00:32:29.786972517 +0300
-+++ src/auth/pool_hba.c	2021-04-24 00:33:47.296429745 +0300
-@@ -30,9 +30,9 @@
+--- src/auth/pool_hba.c.orig	2022-02-17 01:45:01.000000000 +0000
++++ src/auth/pool_hba.c
+@@ -30,9 +30,8 @@
  #include <errno.h>
  #include <netdb.h>
  
@@ -10,7 +10,6 @@ $NetBSD: patch-src_auth_pool__hba.c,v 1.1 2021/04/28 09:18:55 wiz Exp $
 +#include <sys/types.h>
  #include <netinet/in.h>
 -#endif
-+#include <netinet6/in6.h>
  
  #include "pool.h"
  #include "auth/pool_hba.h"
