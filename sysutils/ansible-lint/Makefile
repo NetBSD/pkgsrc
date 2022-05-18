@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/05/14 04:49:06 adam Exp $
+# $NetBSD: Makefile,v 1.6 2022/05/18 11:34:56 adam Exp $
 
-DISTNAME=	ansible-lint-6.1.0
+DISTNAME=	ansible-lint-6.2.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-lint/}
 
@@ -10,14 +10,15 @@ COMMENT=	Checks playbooks for practices and behaviour that could be improved
 LICENSE=	gnu-gpl-v3 AND mit
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15.0:../../devel/py-setuptools_scm
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm_git_archive>=1.0:../../devel/py-setuptools_scm_git_archive
+BUILD_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	ansible-core>=2.12.0:../../sysutils/ansible-core
-DEPENDS+=	${PYPKGPREFIX}-ansible-compat>=2.0.2:../../sysutils/py-ansible-compat
+DEPENDS+=	${PYPKGPREFIX}-ansible-compat>=2.0.4:../../sysutils/py-ansible-compat
 DEPENDS+=	${PYPKGPREFIX}-enrich>=1.2.6:../../comms/py-enrich
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.5.1:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-rich>=9.5.1:../../comms/py-rich
 DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.15.37:../../devel/py-ruamel-yaml
-DEPENDS+=	${PYPKGPREFIX}-tenacity-[0-9]*:../../devel/py-tenacity
 DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 DEPENDS+=	${PYPKGPREFIX}-wcmatch>=7.0:../../textproc/py-wcmatch
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
