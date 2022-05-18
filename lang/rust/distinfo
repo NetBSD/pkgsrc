@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.143 2022/04/15 14:00:37 he Exp $
+$NetBSD: distinfo,v 1.144 2022/05/18 20:57:28 he Exp $
 
 BLAKE2s (rust-1.58.1-aarch64-apple-darwin.tar.gz) = 7b463dcd407f7281ad6f9418c26f4360685a6d49549165a7b76b41c1a4f39864
 SHA512 (rust-1.58.1-aarch64-apple-darwin.tar.gz) = 66e58a3efe201c1c954bf7f382c8a6a6a52399451ff6e3abd6ad797de32cbc8f01bb92f8512b93bacc2091554afd7de08f7900cfd68bd2e5cf99b68362e26de5
@@ -108,6 +108,8 @@ SHA1 (patch-compiler_rustc__target_src_spec_aarch64__be__unknown__netbsd.rs) = a
 SHA1 (patch-compiler_rustc__target_src_spec_i586__unknown__netbsd.rs) = efae710b37c089702802c3d5aa678d1cc5f88cc2
 SHA1 (patch-compiler_rustc__target_src_spec_mod.rs) = 8f1b5ced49fa66a646327a19f9eb0501fa2b01c7
 SHA1 (patch-compiler_rustc__target_src_spec_netbsd__base.rs) = 18e3cb9f32c4170679459b2c63c856abe0fac6a3
+SHA1 (patch-library_backtrace_src_symbolize_gimli.rs) = 94b6bf51fac39d3e28a261855fd747ad1e96b286
+SHA1 (patch-library_backtrace_src_symbolize_gimli_elf.rs) = a22d78f12ebb25fe3e549ce86e363acc095635ae
 SHA1 (patch-library_std_src_sys_unix_mod.rs) = f8669d680f169137ac2891af2977909619366a97
 SHA1 (patch-library_std_src_sys_unix_thread.rs) = e5f661b3dd00058e874fe60cd89d9e919325e99b
 SHA1 (patch-library_unwind_build.rs) = df092d5c07fa0be63a9510f1d6a77e5094ca3b15
@@ -125,7 +127,10 @@ SHA1 (patch-src_tools_cargo_tests_testsuite_build.rs) = 60713699c968f3e389f486e7
 SHA1 (patch-src_tools_rls_rls_src_cmd.rs) = 8174664b7bce2e60e690bc20ab688606b60c55dc
 SHA1 (patch-src_tools_rls_rls_src_server_io.rs) = 5236eda97fa686b5661e4e5832102e2f010def7b
 SHA1 (patch-src_tools_rust-installer_install-template.sh) = ca769db07986ded26d92957e1055961895def546
+SHA1 (patch-vendor_backtrace_src_symbolize_gimli.rs) = c5f4217146483389fe664c8cbe70796ca601ab4d
+SHA1 (patch-vendor_backtrace_src_symbolize_gimli_elf.rs) = 9527dd4e72f951f55f31a87bdef803fc5d252b38
 SHA1 (patch-vendor_cc_src_lib.rs) = 2f6b0ad800b31cd33334f194651981491ecf7641
+SHA1 (patch-vendor_libc-0.2.108_src_unix_bsd_netbsdlike_netbsd_mod.rs) = a75d2729b96bd8a68c3ecf2e03f2daace737a229
 SHA1 (patch-vendor_libc_src_unix_solarish_mod.rs) = 8364e19ea09203d32494c37ff3db19fe3d6b9d8a
 SHA1 (patch-vendor_lzma-sys_config.h) = b654c7e129fa02697734bc87173f89b3056a5437
 SHA1 (patch-vendor_openssl-src_src_lib.rs) = e62697daa7e7fa3d7b89f338c3a26066b93d7b34
