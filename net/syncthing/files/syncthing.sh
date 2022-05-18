@@ -1,11 +1,17 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: syncthing.sh,v 1.2 2019/07/17 01:37:11 nia Exp $
+# $NetBSD: syncthing.sh,v 1.3 2022/05/18 20:45:36 triaxx Exp $
 #
 # PROVIDE: syncthing
 # REQUIRE: DAEMON
+#
+# Consider installing pkgtools/rc.subr in unprivileged.
+#
+# You will need to set some variables in @SYSCONFBASE@/rc.conf to start syncthing:
+#
+# syncthing=YES
 
-. /etc/rc.subr
+$_rc_subr_loaded . @SYSCONFBASE@/rc.subr
 
 name="syncthing"
 rcvar=${name}
