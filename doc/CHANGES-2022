@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2623 2022/05/18 18:38:47 khorben Exp $
+$NetBSD: CHANGES-2022,v 1.2624 2022/05/18 19:48:39 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4045,3 +4045,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/gnutls to 3.7.5 [adam 2022-05-18]
 	Updated lang/nodejs to 18.2.0 [adam 2022-05-18]
 	Updated www/gitea to 1.16.8 [khorben 2022-05-18]
+	Updated wm/9wm to 1.4.2 [nikita 2022-05-18]
