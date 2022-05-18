@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.75 2022/03/17 21:16:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.76 2022/05/18 18:26:14 adam Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -74,6 +74,7 @@ man/man3/gnutls_aead_cipher_encrypt.3
 man/man3/gnutls_aead_cipher_encryptv.3
 man/man3/gnutls_aead_cipher_encryptv2.3
 man/man3/gnutls_aead_cipher_init.3
+man/man3/gnutls_aead_cipher_set_key.3
 man/man3/gnutls_alert_get.3
 man/man3/gnutls_alert_get_name.3
 man/man3/gnutls_alert_get_strname.3
