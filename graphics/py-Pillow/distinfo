@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.51 2022/04/26 17:50:11 adam Exp $
+$NetBSD: distinfo,v 1.52 2022/05/18 11:23:52 adam Exp $
 
-BLAKE2s (Pillow-9.1.0.tar.gz) = e0e620d6da2b9d5d93d94b8ccb86c0b4c693ba30fe7b2ffa47a18b70c937e726
-SHA512 (Pillow-9.1.0.tar.gz) = 89c22f01959e3e558e79568f4cff618c6592a730aea3d28d276acd1bbeada6e1409a471db50cad3b31dbc64413d3b2a71a9e8ce953afda9b290c9bda6cea23de
-Size (Pillow-9.1.0.tar.gz) = 49760285 bytes
+BLAKE2s (Pillow-9.1.1.tar.gz) = 059adde5122af2dd1afb0b9716b62b9a39e6ffdf7582a88341f1dae63d5fa377
+SHA512 (Pillow-9.1.1.tar.gz) = 5fbb94cb3046c002e996f61bfbfaca0b30e9e068aa7ab13083cd2ff8c3e9cc18c5aab04ecc3de5a83eb985186f90dacbd42bad1905b0e89f0e34238af54b304e
+Size (Pillow-9.1.1.tar.gz) = 49764564 bytes
 SHA1 (patch-setup.py) = 11d48f7a21088eeb304fb88571d6c0f6eccffdb6
