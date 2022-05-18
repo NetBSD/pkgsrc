@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/05/17 17:55:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.24 2022/05/18 16:04:24 jperkin Exp $
 
 DISTNAME=	kf5-${KF5VER}
 CATEGORIES=	meta-pkgs x11 kde
@@ -10,6 +10,8 @@ HOMEPAGE=	https://www.kde.org/
 COMMENT=	"meta-package" for the KDE Frameworks 5
 
 KF5VER=		5.93.0
+
+META_PACKAGE=	yes
 
 .include "../../devel/wayland/platform.mk"
 
@@ -92,7 +94,5 @@ DEPENDS+=	sonnet>=${KF5VER}:../../textproc/sonnet
 DEPENDS+=	syndication>=${KF5VER}:../../www/syndication
 DEPENDS+=	syntax-highlighting>=${KF5VER}:../../textproc/syntax-highlighting
 DEPENDS+=	threadweaver>=${KF5VER}:../../devel/threadweaver
-
-META_PACKAGE=	yes
 
 .include "../../mk/bsd.pkg.mk"
