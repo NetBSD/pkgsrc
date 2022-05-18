@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2618 2022/05/18 13:27:54 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2619 2022/05/18 14:17:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4039,3 +4039,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/py-sanic to 22.3.2 [adam 2022-05-18]
 	Updated net/py-lexicon to 3.11.2 [adam 2022-05-18]
 	Updated sysutils/navi to 2.20.1 [pin 2022-05-18]
+	Removed security/netramet [wiz 2022-05-18]
