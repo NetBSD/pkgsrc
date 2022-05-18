@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/03/28 10:44:19 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2022/05/18 00:26:17 charlotte Exp $
 
 DISTNAME=	xonotic-0.8.2
 PKGREVISION=	6
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	https://dl.xonotic.org/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	cfkoch@edgebsd.org
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://xonotic.org/
 COMMENT=	Fast arena-style FPS
 LICENSE=	gnu-gpl-v2
