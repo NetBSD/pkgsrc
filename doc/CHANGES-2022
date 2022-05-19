@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2632 2022/05/19 08:22:42 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2633 2022/05/19 08:53:38 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4056,3 +4056,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-google-i18n-address to 2.5.1 [adam 2022-05-19]
 	Updated security/py-google-reauth to 0.1.1 [adam 2022-05-19]
 	Updated textproc/ocaml-csv to 2.4nb1 [jaapb 2022-05-19]
+	Updated sysutils/zoxide to 0.8.1nb1 [pin 2022-05-19]
