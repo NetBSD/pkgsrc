@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2022/05/05 12:00:47 jaapb Exp $
+# $NetBSD: Makefile,v 1.26 2022/05/19 08:22:33 jaapb Exp $
 
 VERSION=	2.4
+PKGREVISION=	1
 GITHUB_PROJECT=	ocaml-csv
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 CATEGORIES=	textproc
@@ -15,8 +16,9 @@ LICENSE=	gnu-lgpl-v2.1
 USE_LANGUAGES=	c
 
 OCAML_USE_DUNE=		yes
-OPAM_INSTALL_FILES=	csv
-OCAML_FINDLIB_DIRS=	csv
+DUNE_BUILD_PACKAGES=	csv
+OPAM_INSTALL_FILES=	${DUNE_BUILD_PACKAGES}
+OCAML_FINDLIB_DIRS=	${DUNE_BUILD_PACKAGES}
 
 .include "options.mk"
 .include "../../mk/ocaml.mk"
