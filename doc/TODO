@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21872 2022/05/19 13:34:09 nia Exp $
+$NetBSD: TODO,v 1.21873 2022/05/19 15:37:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -370,7 +370,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o Mesa-21.3.8
-	o Mesa-22.0.1
+	o Mesa-22.1
 	o MesaLib-22.0.3
 	o OdfConverter-4.0
 	o PACK-0.0.4
@@ -642,6 +642,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o epubcheck-4.0.2
 	o erfa-1.7.3
 	o eric5-5.4.6
+	o erlang-25.0
 	o errcheck-1.6.0
 	o es-0.83
 	o esh-0.8.5
@@ -882,6 +883,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o influxdb-2.0.4
 	o inform-6.34
 	o ingo-3.2.8
+	o inkscape-1.2
 	o inn-2.6.4
 	o input-pad-1.4.2
 	o iozone-3.490
