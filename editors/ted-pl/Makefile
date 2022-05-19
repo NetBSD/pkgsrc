@@ -1,38 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2020/01/26 17:31:07 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2022/05/19 13:32:49 nia Exp $
 
-DISTNAME=	Ted_pl_PL
-PKGNAME=	ted-pl-2.16
-PKGREVISION=	1
-CATEGORIES=	editors
-MASTER_SITES=	ftp://ftp.nluug.nl/pub/editors/ted/
+LANGNAME=	Polish
+LANGCODE=	pl_PL
+PKG_LANGCODE=	pl
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.nllgg.nl/Ted/
-COMMENT=	Polish spelling dictionary for the Ted word processor
-
-DEPENDS+=	ted>=2.6:../../editors/ted
-
-WRKSRC=		${WRKDIR}
-
-DIST_SUBDIR=	Ted-2.16
-NO_BUILD=	YES
-
-INSTALLATION_DIRS=	share/Ted/ind
-
-post-extract:
-	cd ${WRKSRC};tar xvf Ted/ad/Ted_pl_PL.ad.tar
-
-post-patch:
-	${ECHO} "Ted*fontList:		-adobe-helvetica-medium-r-*-*-*-100-*-*-*-*-iso8859-2" \
-		>>${WRKSRC}/usr/lib/X11/pl_PL/app-defaults/Ted
-	${ECHO} "Ted.documentFileName:	${PREFIX}/share/doc/Ted/TedDocument-en_US.rtf" \
-		>>${WRKSRC}/usr/lib/X11/pl_PL/app-defaults/Ted
-
-do-install:
-	${INSTALL_DATA} ${WRKSRC}/ind/Polish.ind \
-		${DESTDIR}${PREFIX}/share/Ted/ind
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/X11/app-defaults/pl_PL
-	${INSTALL_DATA} ${WRKSRC}/usr/lib/X11/pl_PL/app-defaults/Ted \
-		${DESTDIR}${PREFIX}/lib/X11/app-defaults/pl_PL/
-
+.include "../../editors/ted/dictionary.mk"
 .include "../../mk/bsd.pkg.mk"

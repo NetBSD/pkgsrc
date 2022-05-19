@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2022/05/19 13:32:49 nia Exp $
+share/Ted/dfa/et_EE.dfa
