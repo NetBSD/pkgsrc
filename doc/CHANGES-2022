@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2634 2022/05/19 13:19:55 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2635 2022/05/19 13:34:09 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4059,3 +4059,22 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/zoxide to 0.8.1nb1 [pin 2022-05-19]
 	Updated www/py-asgiref to 3.5.2 [adam 2022-05-19]
 	Updated net/py-minio to 7.1.8 [adam 2022-05-19]
+	Added editors/ted-bg version 2.23 [nia 2022-05-19]
+	Added editors/ted-et version 2.23 [nia 2022-05-19]
+	Added editors/ted-hr version 2.23 [nia 2022-05-19]
+	Added editors/ted-ru version 2.23 [nia 2022-05-19]
+	Added editors/ted-sk version 2.23 [nia 2022-05-19]
+	Added editors/ted-sl version 2.23 [nia 2022-05-19]
+	Updated editors/ted-cs to 2.23 [nia 2022-05-19]
+	Updated editors/ted-da to 2.23 [nia 2022-05-19]
+	Updated editors/ted-en-gb to 2.23 [nia 2022-05-19]
+	Updated editors/ted-es to 2.23 [nia 2022-05-19]
+	Updated editors/ted-fr to 2.23 [nia 2022-05-19]
+	Updated editors/ted-it to 2.23 [nia 2022-05-19]
+	Updated editors/ted-nl to 2.23 [nia 2022-05-19]
+	Updated editors/ted-no to 2.23 [nia 2022-05-19]
+	Updated editors/ted-pl to 2.23 [nia 2022-05-19]
+	Updated editors/ted-pt to 2.23 [nia 2022-05-19]
+	Updated editors/ted-sv to 2.23 [nia 2022-05-19]
+	Removed editors/ted-en-us [nia 2022-05-19]
+	Updated editors/ted to 2.23 [nia 2022-05-19]
