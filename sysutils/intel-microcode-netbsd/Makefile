@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2022/05/11 09:14:46 msaitoh Exp $
+# $NetBSD: Makefile,v 1.51 2022/05/19 04:29:21 gutteridge Exp $
 
 VERSION=	20220510
 DISTNAME=	microcode-${VERSION}
@@ -16,7 +16,9 @@ LICENSE=	intel-microcode-license
 ONLY_FOR_PLATFORM+=	NetBSD-6.99.*-i386 \
 			NetBSD-6.99.*-x86_64 \
 			NetBSD-[7-9].*-i386 \
-			NetBSD-[7-9].*-x86_64
+			NetBSD-[7-9].*-x86_64 \
+			NetBSD-1[0-9].*-i386 \
+			NetBSD-1[0-9].*-x86_64
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	c
