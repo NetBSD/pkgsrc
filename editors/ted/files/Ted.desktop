@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Ted RTF text processor
+GenericName=RTF text processor
+omment=A lightweight RTF text processor
+Icon=Ted
+Exec=Ted %F
+Terminal=false
+MimeType=application/rtf;text/rtf;
+Categories=Office;WordProcessor;
