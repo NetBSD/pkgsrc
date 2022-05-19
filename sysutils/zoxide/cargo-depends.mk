@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.10 2022/04/22 21:55:05 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.11 2022/05/19 08:53:19 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
 CARGO_CRATE_DEPENDS+=	anyhow-1.0.57
@@ -12,9 +12,8 @@ CARGO_CRATE_DEPENDS+=	autocfg-1.1.0
 CARGO_CRATE_DEPENDS+=	bincode-1.3.3
 CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
 CARGO_CRATE_DEPENDS+=	bstr-0.2.17
-CARGO_CRATE_DEPENDS+=	cc-1.0.73
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
-CARGO_CRATE_DEPENDS+=	clap-3.1.10
+CARGO_CRATE_DEPENDS+=	clap-3.1.12
 CARGO_CRATE_DEPENDS+=	clap_complete-3.1.2
 CARGO_CRATE_DEPENDS+=	clap_complete_fig-3.1.5
 CARGO_CRATE_DEPENDS+=	clap_derive-3.1.7
@@ -46,7 +45,7 @@ CARGO_CRATE_DEPENDS+=	memoffset-0.6.5
 CARGO_CRATE_DEPENDS+=	mime-0.3.16
 CARGO_CRATE_DEPENDS+=	mime_guess-2.0.4
 CARGO_CRATE_DEPENDS+=	minimal-lexical-0.2.1
-CARGO_CRATE_DEPENDS+=	nix-0.23.1
+CARGO_CRATE_DEPENDS+=	nix-0.24.1
 CARGO_CRATE_DEPENDS+=	nom-7.1.1
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.14
 CARGO_CRATE_DEPENDS+=	once_cell-1.10.0
