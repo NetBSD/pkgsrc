@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2631 2022/05/19 07:42:21 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2632 2022/05/19 08:22:42 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4055,3 +4055,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/nim to 1.6.6 [charlotte 2022-05-18]
 	Updated devel/py-google-i18n-address to 2.5.1 [adam 2022-05-19]
 	Updated security/py-google-reauth to 0.1.1 [adam 2022-05-19]
+	Updated textproc/ocaml-csv to 2.4nb1 [jaapb 2022-05-19]
