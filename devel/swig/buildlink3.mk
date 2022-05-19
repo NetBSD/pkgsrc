@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2012/11/09 15:49:03 gdt Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2022/05/19 09:03:53 jperkin Exp $
 
 BUILDLINK_TREE+=	swig
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.swig?=	../../devel/swig
 # only contains a static library
 BUILDLINK_DEPMETHOD.swig?=	build
 
-BUILDLINK_FILES.swig+=		share/swig/1.3/* share/swig/1.3/*/*
+BUILDLINK_FILES.swig+=		share/swig/1.3/*.* share/swig/1.3/*/*.*
 .endif # SWIG_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-swig
