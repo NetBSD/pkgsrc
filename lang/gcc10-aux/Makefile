@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/03/27 15:06:11 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2022/05/19 15:57:23 ryoon Exp $
 
 GCC_PKGNAME=		gcc10-aux
 .include		"version.mk"
@@ -16,6 +16,9 @@ LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 DISTFILES=		${DEFAULT_DISTFILES}
 EXTRACT_ONLY=		${DEFAULT_DISTFILES}
+
+# Add gcc6-aux as an explicit dependency. It is needed to bootstrap.
+BUILD_DEPENDS+=		gcc6-aux-[0-9]*:../../lang/gcc6-aux
 
 # Relocations result in a linker error on AArch64, but not x86.
 MKPIE_SUPPORTED=	no
@@ -209,8 +212,6 @@ CONFIGURE_ARGS+=	--with-system-zlib
 .else
 CONFIGURE_ARGS+=	--without-system-zlib
 .endif
-# Add gcc6-aux as an explicit dependency. It is needed to bootstrap.
-.include "../../lang/gcc6-aux/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
