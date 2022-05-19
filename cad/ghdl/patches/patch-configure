@@ -1,0 +1,14 @@
+$NetBSD: patch-configure,v 1.1 2022/05/19 16:05:12 ryoon Exp $
+
+* Support NetBSD for mcode backend. (not used)
+
+--- configure.orig	2022-02-28 18:46:53.000000000 +0000
++++ configure
+@@ -379,6 +379,7 @@ if test $backend = mcode; then
+     *mingw32*) ortho_flags="Flags_Windows${mcode64}" ;;
+     *linux*)   ortho_flags="Flags_Linux${mcode64}" ;;
+     *openbsd*) ortho_flags="Flags_Macosx${mcode64}" ;;
++    *netbsd*) ortho_flags="Flags_Macosx${mcode64}" ;;
+     *) echo "Unsupported $build build for mcode"; exit 1;;
+   esac
+   echo "Generate ortho_code-x86-flags.ads"
