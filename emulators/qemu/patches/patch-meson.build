@@ -1,12 +1,12 @@
-$NetBSD: patch-meson.build,v 1.10 2021/12/16 12:59:43 tnn Exp $
+$NetBSD: patch-meson.build,v 1.11 2022/05/19 16:10:15 ryoon Exp $
 
 * Detect iconv in libc properly for pkgsrc (pkgsrc removes -liconv)
   to fix qemu-system-aarch64 link.
 * Detect curses (non-ncurses{,w} too)
 
---- meson.build.orig	2021-12-14 20:42:02.000000000 +0000
+--- meson.build.orig	2022-04-19 19:10:27.000000000 +0000
 +++ meson.build
-@@ -722,7 +722,7 @@ if have_system and not get_option('curse
+@@ -768,7 +768,7 @@ if have_system and get_option('curses').
        has_curses_h = cc.has_header('curses.h', args: curses_compile_args)
      endif
      if has_curses_h
@@ -15,10 +15,10 @@ $NetBSD: patch-meson.build,v 1.10 2021/12/16 12:59:43 tnn Exp $
        foreach curses_libname : curses_libname_list
          libcurses = cc.find_library(curses_libname,
                                      required: false,
-@@ -740,7 +740,7 @@ if have_system and not get_option('curse
+@@ -786,7 +786,7 @@ if have_system and get_option('curses').
      endif
    endif
-   if not get_option('iconv').disabled()
+   if get_option('iconv').allowed()
 -    foreach link_args : [ ['-liconv'], [] ]
 +    foreach link_args : [ [], ['-liconv'] ]
        # Programs will be linked with glib and this will bring in libiconv on FreeBSD.
