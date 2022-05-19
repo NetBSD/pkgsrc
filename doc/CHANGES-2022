@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2635 2022/05/19 13:34:09 nia Exp $
+$NetBSD: CHANGES-2022,v 1.2636 2022/05/19 16:05:50 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4078,3 +4078,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/ted-sv to 2.23 [nia 2022-05-19]
 	Removed editors/ted-en-us [nia 2022-05-19]
 	Updated editors/ted to 2.23 [nia 2022-05-19]
+	Updated cad/ghdl to 2.0.0 [ryoon 2022-05-19]
