@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2633 2022/05/19 08:53:38 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2634 2022/05/19 13:19:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4057,3 +4057,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-google-reauth to 0.1.1 [adam 2022-05-19]
 	Updated textproc/ocaml-csv to 2.4nb1 [jaapb 2022-05-19]
 	Updated sysutils/zoxide to 0.8.1nb1 [pin 2022-05-19]
+	Updated www/py-asgiref to 3.5.2 [adam 2022-05-19]
+	Updated net/py-minio to 7.1.8 [adam 2022-05-19]
