@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkginstall.xml,v 1.21 2016/11/15 13:48:52 wiz Exp $ -->
+<!-- $NetBSD: pkginstall.xml,v 1.22 2022/05/19 23:48:53 khorben Exp $ -->
 
 <chapter id="pkginstall"> <?dbhtml filename="pkginstall.html"?>
 <title>The pkginstall framework</title>
@@ -378,8 +378,8 @@ to:</para>
   <listitem>
     <para>Store the script inside <filename>${FILESDIR}</filename>, with
     the <literal>.sh</literal> suffix appended.  Considering the
-    <filename role="pkg">print/cups</filename> package as an example, it has a
-    <filename>cupsd.sh</filename> in its files directory.</para>
+    <filename role="pkg">print/cups-base</filename> package as an example, it
+    has a <filename>cupsd.sh</filename> in its files directory.</para>
   </listitem>
 
   <listitem>
