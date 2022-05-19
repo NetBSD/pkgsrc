@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2010/06/14 09:55:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/05/19 13:32:47 nia Exp $
 bin/Ted
-lib/X11/app-defaults/Ted
+man/man1/Ted.1
 share/Ted/afm/AvantGarde-Book.afm
 share/Ted/afm/AvantGarde-BookOblique.afm
 share/Ted/afm/AvantGarde-Demi.afm
@@ -36,5 +36,7 @@ share/Ted/afm/Times-Italic.afm
 share/Ted/afm/Times-Roman.afm
 share/Ted/afm/ZapfChancery-MediumItalic.afm
 share/Ted/afm/ZapfDingbats.afm
-share/Ted/ind/README.ind
+share/Ted/dfa/en_US.dfa
+share/applications/Ted.desktop
 share/doc/Ted/TedDocument-en_US.rtf
+share/pixmaps/Ted.png
