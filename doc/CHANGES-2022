@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2638 2022/05/19 17:44:42 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.2639 2022/05/19 20:00:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4081,3 +4081,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated cad/ghdl to 2.0.0 [ryoon 2022-05-19]
 	Updated emulators/qemu to 7.0.0 [ryoon 2022-05-19]
 	Updated textproc/py-feedparser to 6.0.9 [schmonz 2022-05-19]
+	Updated devel/py-dulwich to 0.20.40 [adam 2022-05-19]
+	Updated devel/pango to 1.50.7 [adam 2022-05-19]
