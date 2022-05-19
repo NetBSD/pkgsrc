@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:21:40 nia Exp $
+$NetBSD: distinfo,v 1.10 2022/05/19 13:32:48 nia Exp $
 
-BLAKE2s (Ted-2.16/Ted_cs_CZ.tar.gz) = 66e903e425a45f6d048a0167c5c02b87c1da5faa30a6886bf8da9580185c64e5
-SHA512 (Ted-2.16/Ted_cs_CZ.tar.gz) = 5754c0fe2d2a9e825e485a51ac020597fd31de47717a5e2cced03dbdb4a9c3ce92fe045fe9010a6c255d3b88f3a7bea80b6052ca5c77d7fdc475a3d0f18593e0
-Size (Ted-2.16/Ted_cs_CZ.tar.gz) = 1066230 bytes
+BLAKE2s (ted_cs_CZ-2.23-1.noarch.rpm) = 22ec897348505f8b4231e4136774c31c152d3bcf9832821d701d1cdb2950ea86
+SHA512 (ted_cs_CZ-2.23-1.noarch.rpm) = 5a7b881fd1f12ae44dbd5a0d25cb43dc9ef584959d2e49f28de98fb0ef5531c134eb9663619517bafa44e8bd5e9ef90a62bb7f6b152aa2745847cb176c8f0dbb
+Size (ted_cs_CZ-2.23-1.noarch.rpm) = 3413986 bytes
