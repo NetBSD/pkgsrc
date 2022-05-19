@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:26 rillig Exp $
-lib/X11/app-defaults/pl_PL/Ted
-share/Ted/ind/Polish.ind
+@comment $NetBSD: PLIST,v 1.3 2022/05/19 13:32:49 nia Exp $
+share/Ted/dfa/pl_PL.dfa

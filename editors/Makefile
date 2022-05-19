@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.224 2022/04/20 18:32:32 nia Exp $
+# $NetBSD: Makefile,v 1.225 2022/05/19 13:32:47 nia Exp $
 #
 
 COMMENT=	Text and binary editors
@@ -144,18 +144,23 @@ SUBDIR+=	ssam
 SUBDIR+=	tamago
 SUBDIR+=	tea
 SUBDIR+=	ted
+SUBDIR+=	ted-bg
 SUBDIR+=	ted-cs
 SUBDIR+=	ted-da
 SUBDIR+=	ted-de
 SUBDIR+=	ted-en-gb
-SUBDIR+=	ted-en-us
 SUBDIR+=	ted-es
+SUBDIR+=	ted-et
 SUBDIR+=	ted-fr
+SUBDIR+=	ted-hr
 SUBDIR+=	ted-it
 SUBDIR+=	ted-nl
 SUBDIR+=	ted-no
 SUBDIR+=	ted-pl
 SUBDIR+=	ted-pt
+SUBDIR+=	ted-ru
+SUBDIR+=	ted-sk
+SUBDIR+=	ted-sl
 SUBDIR+=	ted-sv
 SUBDIR+=	tepl4
 SUBDIR+=	texmaker

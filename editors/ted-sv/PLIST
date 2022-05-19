@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:23:57 zuntum Exp $
-share/Ted/ind/Swedish.ind
+@comment $NetBSD: PLIST,v 1.2 2022/05/19 13:32:50 nia Exp $
+share/Ted/dfa/sv_SE.dfa

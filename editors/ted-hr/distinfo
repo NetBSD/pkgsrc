@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/19 13:32:49 nia Exp $
+
+BLAKE2s (ted_hr_HR-2.23-1.noarch.rpm) = 6fa8aaef96776ce1f07d7ee4ab34a05e09323b25975ea1883ed3171135b01caf
+SHA512 (ted_hr_HR-2.23-1.noarch.rpm) = 730fdd090f341a623ffa74303337c80b155e503ca32971f1dfd0ccb950fc8bd02152baec68c7ea9bf5aee562ea6219af1558d3cafb4c1d1b3e330d9587233f94
+Size (ted_hr_HR-2.23-1.noarch.rpm) = 1397265 bytes
