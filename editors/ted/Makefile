@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2022/05/19 13:32:47 nia Exp $
+# $NetBSD: Makefile,v 1.67 2022/05/19 13:35:10 nia Exp $
 
 DISTNAME=	ted-2.23.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -53,7 +53,7 @@ INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/pixmaps
 
 post-extract:
-	@cd ${WRKSRC} ; tar xf tedPackage/TedDatadir.tar
+	cd ${WRKSRC} && tar xf tedPackage/TedDatadir.tar
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Ted/Ted ${DESTDIR}${PREFIX}/bin/Ted
@@ -75,6 +75,7 @@ do-install:
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
