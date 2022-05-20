@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.33 2022/05/13 09:49:31 tnn Exp $
+$NetBSD: distinfo,v 1.34 2022/05/20 12:09:01 adam Exp $
 
-BLAKE2s (scipy-1.8.0.tar.gz) = 45a8dad311d6c459a748f31a7df37ce49ee611c8d4c258649288fd624e5a3a05
-SHA512 (scipy-1.8.0.tar.gz) = 674652728ae76479d17189e6974895bb838a8e83b17b9fb91c5f86faebf2a1387e1466555ac5b51d05c293f9b31b9a72e634f5858105ea984ca94bd2f05bbb4c
-Size (scipy-1.8.0.tar.gz) = 38313602 bytes
+BLAKE2s (scipy-1.8.1.tar.gz) = 364d6645a49d897429094a406e6073e124c1ebca01f4be63ebe401b660d8df38
+SHA512 (scipy-1.8.1.tar.gz) = f6fc71c209991fe82baa4b10d8ade0deb1057f6f5942a91dfb7ae45f3eb78a4535efa2861badf5e2d37239fa99dbd99de760aa7e4854b95991ade0263004e7ea
+Size (scipy-1.8.1.tar.gz) = 38196215 bytes
 SHA1 (patch-scipy_special___logit.h) = c729c2b73de00cad4c9ad834a79b80dea7b05af3
 SHA1 (patch-scipy_special___round.h) = bc05a935e6423ce8395450ad3b30e88826939422
-SHA1 (patch-scipy_stats___hypotests__pythran.cpp) = e5d70b810ca020ccd25b9ad7068ce44487d8da60
