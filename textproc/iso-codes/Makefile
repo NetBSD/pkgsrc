@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.62 2019/04/25 07:33:24 maya Exp $
+# $NetBSD: Makefile,v 1.63 2022/05/20 11:01:15 fcambus Exp $
 
 DISTNAME=	iso-codes-3.77
 PKGREVISION=	1
 CATEGORIES=	textproc
-MASTER_SITES=	https://pkg-isocodes.alioth.debian.org/downloads/
+#MASTER_SITES=	https://pkg-isocodes.alioth.debian.org/downloads/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pkg-isocodes.alioth.debian.org/
+HOMEPAGE=	https://salsa.debian.org/iso-codes-team/iso-codes
 COMMENT=	List of country, language and currency names
 LICENSE=	gnu-lgpl-v2.1
 
