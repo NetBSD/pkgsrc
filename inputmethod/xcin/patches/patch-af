@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1 2006/01/28 03:03:11 rxg Exp $
+$NetBSD: patch-af,v 1.2 2022/05/20 13:38:45 rxg Exp $
 
 --- src/Cinput/chewing/Makefile.in.orig	2006-01-21 20:23:07.000000000 +0800
 +++ src/Cinput/chewing/Makefile.in
@@ -9,7 +9,7 @@ $NetBSD: patch-af,v 1.1 2006/01/28 03:03:11 rxg Exp $
 +
 +INC		= $(xcininc) $(intl_inc) $(x_includes) \
 +		-I$(top_srcdir) \
-+		-DCHEWING_DATA_DIR="\"$(LOCALBASE)/share/chewing\""
++		-DCHEWING_DATA_PREFIX="\"$(LOCALBASE)/share/libchewing\""
 +LIB		= $(xcinlib) -lchewing
 +TARGET		= chewing.la
 +
