@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/12/06 10:22:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2022/05/20 12:03:08 wiz Exp $
 bin/geeqie
 lib/geeqie/geeqie-camera-import
 lib/geeqie/geeqie-camera-import-hook-script
@@ -9,7 +9,6 @@ lib/geeqie/geeqie-rotate
 lib/geeqie/geeqie-symlink
 lib/geeqie/geeqie-tethered-photography
 lib/geeqie/geeqie-tethered-photography-hook-script
-lib/geeqie/geeqie-ufraw
 lib/geeqie/geocode-parameters.awk
 lib/geeqie/lensID
 man/man1/geeqie.1
@@ -23,9 +22,6 @@ share/doc/${PKGNAME}/README.md
 share/doc/${PKGNAME}/TODO
 share/geeqie/applications/camera-import.desktop
 share/geeqie/applications/export-jpeg.desktop
-share/geeqie/applications/geeqie-ufraw-id.desktop
-share/geeqie/applications/geeqie-ufraw-recursive.desktop
-share/geeqie/applications/geeqie-ufraw.desktop
 share/geeqie/applications/image-crop.desktop
 share/geeqie/applications/random-image.desktop
 share/geeqie/applications/rotate.desktop
