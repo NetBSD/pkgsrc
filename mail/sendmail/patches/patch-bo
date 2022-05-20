@@ -1,8 +1,12 @@
-$NetBSD: patch-bo,v 1.4 2021/07/04 07:57:13 jnemeth Exp $
+$NetBSD: patch-bo,v 1.4.6.1 2022/05/20 12:58:37 bsiegert Exp $
+
+Add blacklist support.
+Pull up SMTP AUTH fix from 8.17.1.9 as per:
+	https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262935
 
 --- sendmail/sendmail.h.orig	2020-07-02 05:00:37.000000000 +0000
-+++ sendmail/sendmail.h
-@@ -63,6 +63,10 @@ SM_UNUSED(static char SmailId[]) = "@(#)
++++ sendmail/sendmail.h	2022-05-10 09:51:29.162720330 +0000
+@@ -63,6 +63,10 @@
  #endif
  
  #include "bf.h"
@@ -13,7 +17,16 @@ $NetBSD: patch-bo,v 1.4 2021/07/04 07:57:13 jnemeth Exp $
  #include "timers.h"
  #include <sm/exc.h>
  #include <sm/heap.h>
-@@ -2576,6 +2580,8 @@ EXTERN int Hacks;	/* bit field of run-ti
+@@ -706,7 +710,7 @@
+ # define SASL_IS_AUTH	2		/* authenticated */
+ 
+ /* SASL options */
+-# define SASL_AUTH_AUTH	0x1000		/* use auth= only if authenticated */
++# define SASL_AUTH_AUTH	0x10000		/* use auth= only if authenticated */
+ # if SASL >= 20101
+ #  define SASL_SEC_MASK	SASL_SEC_MAXIMUM /* mask for SASL_SEC_* values: sasl.h */
+ # else /* SASL >= 20101 */
+@@ -2576,6 +2580,8 @@
  
  EXTERN int ConnectionRateWindowSize;
  
