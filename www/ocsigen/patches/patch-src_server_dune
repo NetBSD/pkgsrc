@@ -1,0 +1,12 @@
+$NetBSD: patch-src_server_dune,v 1.1 2022/05/20 07:04:07 jaapb Exp $
+
+Ssl library needs to be included as a dependency
+
+--- src/server/dune.orig	2022-01-21 16:20:49.000000000 +0000
++++ src/server/dune
+@@ -2,4 +2,4 @@
+   (name ocsigenserver)
+   (public_name ocsigenserver)
+   (wrapped false)
+-  (libraries xml-light cohttp-lwt-unix hmap polytables ocsigen_cookie_map baselib http))
++  (libraries xml-light cohttp-lwt-unix hmap polytables ocsigen_cookie_map baselib http ssl))
