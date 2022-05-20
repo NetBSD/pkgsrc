@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2640 2022/05/20 06:50:13 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2641 2022/05/20 07:06:46 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4084,3 +4084,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-dulwich to 0.20.40 [adam 2022-05-19]
 	Updated devel/pango to 1.50.7 [adam 2022-05-19]
 	Added databases/ocsipersist version 1.1.0 [jaapb 2022-05-20]
+	Updated www/ocsigen to 5.0.1 [jaapb 2022-05-20]
