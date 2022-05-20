@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2021/05/24 19:52:29 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2022/05/20 13:38:45 rxg Exp $
 
 DISTNAME=	xcin-2.5.3.pre2
 PKGNAME=	xcin-2.5.3rc2
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	chinese x11
 #MASTER_SITES=	ftp://xcin.linux.org.tw/pub/xcin/xcin/devel/
 
@@ -58,6 +58,9 @@ PLIST_SUBST+=	GBK_ENC=${GBK_ENC}
 post-extract:
 	${CP} ${FILESDIR}/xcinrc.DRAGONFLY ${WRKSRC}/etc
 
+post-patch:
+	${CP} ${FILESDIR}/xcin_chewing.c ${WRKSRC}/src/Cinput/chewing
+
 post-install:
 	cd ${WRKSRC}/doc && pax -rw	\
 		-s ',^\./man$$,,' -s ',^\./man/.*,,'	\
@@ -72,7 +75,7 @@ BUILDLINK_TRANSFORM+=	l:db:${BDB_TYPE}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../inputmethod/libchewing02/buildlink3.mk"
+.include "../../inputmethod/libchewing/buildlink3.mk"
 .include "../../inputmethod/libtabe/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
