@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.225 2022/05/19 13:32:47 nia Exp $
+# $NetBSD: Makefile,v 1.226 2022/05/20 16:35:03 pin Exp $
 #
 
 COMMENT=	Text and binary editors
@@ -166,6 +166,7 @@ SUBDIR+=	tepl4
 SUBDIR+=	texmaker
 SUBDIR+=	texstudio
 SUBDIR+=	texworks
+SUBDIR+=	tp-note
 SUBDIR+=	tweak
 SUBDIR+=	uemacs
 SUBDIR+=	ve
