@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2641 2022/05/20 07:06:46 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2642 2022/05/20 12:03:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4085,3 +4085,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/pango to 1.50.7 [adam 2022-05-19]
 	Added databases/ocsipersist version 1.1.0 [jaapb 2022-05-20]
 	Updated www/ocsigen to 5.0.1 [jaapb 2022-05-20]
+	Updated graphics/geeqie to 1.7.3 [wiz 2022-05-20]
