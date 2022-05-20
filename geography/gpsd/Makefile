@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2022/04/28 11:43:14 gdt Exp $
+# $NetBSD: Makefile,v 1.64 2022/05/20 19:52:41 khorben Exp $
 
 DISTNAME=	gpsd-3.24
+PKGREVISION=	1
 CATEGORIES=	geography
 MASTER_SITES=	http://download-mirror.savannah.gnu.org/releases/gpsd/
 # will probably switch to https://gitlab.com/gpsd/gpsd/releases
@@ -45,6 +46,8 @@ SCONS_ARGS+=	manbuild=yes
 SCONS_ARGS+=	leapfetch=no
 # scons is hard to understand, so enable debugging always
 SCONS_ARGS+=	--debug=explain,prepare
+
+RCD_SCRIPTS=	gpsd
 
 SUBST_CLASSES+=		pyenv
 SUBST_MESSAGE.pyenv=	Fixing Python path in test script
