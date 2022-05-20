@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.6 2021/01/11 18:18:58 gdt Exp $
+$NetBSD: patch-ac,v 1.7 2022/05/20 12:03:08 wiz Exp $
 
 * first hunk
 
@@ -9,22 +9,17 @@ Comment from 2009/07/24:
 
 This is not known to be reported upstream.
 
-* second hunk
-
-Avoid clutter crash.  Cherrypicked from upstream:
-  https://github.com/BestImageViewer/geeqie/commit/f34ea0700048c27319a2256408171adda32a7580
-
---- src/main.c.orig	2020-11-20 21:36:33.000000000 +0000
+--- src/main.c.orig	2022-04-12 09:46:17.000000000 +0000
 +++ src/main.c
-@@ -873,6 +873,7 @@ void exit_program(void)
+@@ -1223,6 +1223,7 @@ void exit_program(void)
   */
- /* FIXME: this probably needs some better ifdefs. Please report any compilation problems */
+ /** @FIXME this probably needs some better ifdefs. Please report any compilation problems */
  
 +#if 0
  #if defined(SIGBUS) && defined(SA_SIGINFO)
  static void sigbus_handler_cb(int signum, siginfo_t *info, void *context)
  {
-@@ -881,9 +882,11 @@ static void sigbus_handler_cb(int signum
+@@ -1231,9 +1232,11 @@ static void sigbus_handler_cb(int signum
  	mmap((void *)(((unsigned long)info->si_addr / pagesize) * pagesize), pagesize, PROT_READ | PROT_WRITE, MAP_FIXED | MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
  }
  #endif
@@ -36,23 +31,11 @@ Avoid clutter crash.  Cherrypicked from upstream:
  #if defined(SIGBUS) && defined(SA_SIGINFO)
  	struct sigaction sigbus_action;
  	sigfillset(&sigbus_action.sa_mask);
-@@ -892,6 +895,7 @@ static void setup_sigbus_handler(void)
+@@ -1242,6 +1245,7 @@ static void setup_sigbus_handler(void)
  
  	sigaction(SIGBUS, &sigbus_action, NULL);
  #endif
 +#endif /* 0 */
  }
  
- gint main(gint argc, gchar *argv[])
-@@ -905,11 +909,6 @@ gint main(gint argc, gchar *argv[])
- #if !GLIB_CHECK_VERSION(2,32,0)
- 	g_thread_init(NULL);
- #endif
--#ifdef HAVE_CLUTTER
--/* FIXME: see below */
--	putenv("LIBGL_ALWAYS_INDIRECT=1");
--	XInitThreads();
--#endif
- 	gdk_threads_init();
- 	gdk_threads_enter();
- 
+ static void set_theme_bg_color()
