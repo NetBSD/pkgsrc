@@ -1,0 +1,4 @@
+Ocsipersist is a collection of libraries defining a
+unified frontend for a number of key/value storage
+implementations. Implementations of the following
+backends currently exist: DBM, PostgreSQL, SQLite.
