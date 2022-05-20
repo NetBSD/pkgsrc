@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2639 2022/05/19 20:00:58 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2640 2022/05/20 06:50:13 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4083,3 +4083,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-feedparser to 6.0.9 [schmonz 2022-05-19]
 	Updated devel/py-dulwich to 0.20.40 [adam 2022-05-19]
 	Updated devel/pango to 1.50.7 [adam 2022-05-19]
+	Added databases/ocsipersist version 1.1.0 [jaapb 2022-05-20]
