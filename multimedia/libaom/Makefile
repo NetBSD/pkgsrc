@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2021/11/13 11:27:34 nia Exp $
+# $NetBSD: Makefile,v 1.21.4.1 2022/05/20 13:05:56 bsiegert Exp $
 
-DISTNAME=	libaom-3.2.0
+DISTNAME=	libaom-3.3.0
 CATEGORIES=	multimedia
 MASTER_SITES=	https://storage.googleapis.com/aom-releases/
 
@@ -11,7 +11,6 @@ LICENSE=	2-clause-bsd
 
 MAKE_JOBS_SAFE=	no
 
-WRKSRC=		${WRKDIR}
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	perl
