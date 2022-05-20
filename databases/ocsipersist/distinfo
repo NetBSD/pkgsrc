@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/20 06:47:28 jaapb Exp $
+
+BLAKE2s (ocsipersist-1.1.0.tar.gz) = d92da4dceae445aa088aafcd54ff5a09a95b8da9afd333bdbb7a53ec83531aa8
+SHA512 (ocsipersist-1.1.0.tar.gz) = 82d82f854af3d6708c571d0c586a5abbba35a9c9e7482b81fdce5207e1f3f98dde3823550d3661714e7faa586888a0b6e4d5ae64f36983575079a9820d5d11ee
+Size (ocsipersist-1.1.0.tar.gz) = 26735 bytes
