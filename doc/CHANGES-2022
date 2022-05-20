@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2645 2022/05/20 16:32:23 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2646 2022/05/20 16:35:36 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4090,3 +4090,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/py-asyncssh to 2.10.1 [adam 2022-05-20]
 	Updated sysutils/felix to 0.9.2 [pin 2022-05-20]
 	Updated audio/spotify-player to 0.7.0 [pin 2022-05-20]
+	Added editors/tp-note version 1.16.6 [pin 2022-05-20]
