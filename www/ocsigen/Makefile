@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2021/03/08 08:13:09 jaapb Exp $
+# $NetBSD: Makefile,v 1.42 2022/05/20 07:04:06 jaapb Exp $
 #
 
-VERSION=	2.16.1
+VERSION=	5.0.1
 GITHUB_PROJECT=	ocsigenserver
 PKGNAME=	ocsigen-${VERSION}
-PKGREVISION=	1
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
@@ -17,9 +16,7 @@ LICENSE=	gnu-lgpl-v2.1
 # ln: ./ocsipersist.mli: File exists
 # Makefile:42: recipe for target 'ocsipersist.mli' failed
 MAKE_JOBS_SAFE=	no
-
-DEPENDS+=	ocaml-react-[0-9]*:../../devel/ocaml-react
-DEPENDS+=	ocaml-text-[0-9]*:../../textproc/ocaml-text
+USE_TOOLS+=	sed gmake
 
 OCSIGEN_USER?=		${APACHE_USER}
 OCSIGEN_GROUP?=		${APACHE_GROUP}
@@ -34,8 +31,7 @@ FILES_SUBST+=	OCSIGEN_USER=${OCSIGEN_USER:Q} \
 		VARBASE=${VARBASE:Q}
 
 HAS_CONFIGURE=	yes
-CONFIGURE_ARGS=	--disable-debug \
-		--temproot ${DESTDIR} \
+CONFIGURE_ARGS=	--temproot ${DESTDIR} \
 		--prefix ${PREFIX} \
 		--bindir ${PREFIX}/bin \
 		--libdir ${PREFIX}/lib/ocaml/site-lib \
@@ -50,36 +46,47 @@ CONFIGURE_ARGS=	--disable-debug \
 		--datadir ${VARBASE}/lib/ocsigen \
 		--commandpipe ${VARBASE}/run/ocsigen_command
 
-CONF_FILES+=	${DESTDIR}${PREFIX}/share/examples/ocsigen/ocsigenserver.conf.sample \
+#CONF_FILES+=	${DESTDIR}${PREFIX}/share/examples/ocsigen/ocsigenserver.conf.sample \
 		${PKG_SYSCONFDIR}/ocsigenserver/ocsigenserver.conf
-USE_TOOLS+=	gmake
 
 OCAML_USE_FINDLIB=	yes
 OCAML_FINDLIB_DIRS=	ocsigenserver
+OCAML_USE_DUNE=		yes
+OPAM_INSTALL_FILES=	ocsigenserver
+INSTALL_UNSTRIPPED=	yes
 
 .include "../../mk/ocaml.mk"
 
-.if ${OCAML_USE_OPT_COMPILER} == "yes"
-CONFIGURE_ARGS+=		--enable-natdynlink
-BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.12.0
-.else
-CONFIGURE_ARGS+=		--disable-natdynlink
-.endif
+#.if ${OCAML_USE_OPT_COMPILER} == "yes"
+#CONFIGURE_ARGS+=		--enable-natdynlink
+#BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.12.0
+#.else
+#CONFIGURE_ARGS+=		--disable-natdynlink
+#.endif
 
 post-extract:
 	${RUN} ${CP} ${FILESDIR}/ocsigen_getcommandline.mli ${WRKSRC}/src/baselib/commandline
 	${RUN} ${CP} ${FILESDIR}/ocsigen_getcommandline.mli ${WRKSRC}/src/baselib/nocommandline
 
-.include "options.mk"
+post-configure:
+	${RUN} cd ${WRKSRC} && gmake -C src confs
+
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../archivers/ocaml-zip/buildlink3.mk"
+.include "../../devel/ocaml-dune/buildlink3.mk"
+.include "../../devel/ocaml-hmap/buildlink3.mk"
 .include "../../devel/ocaml-lwt_log/buildlink3.mk"
 .include "../../devel/ocaml-lwt_react/buildlink3.mk"
 .include "../../devel/ocaml-lwt_ssl/buildlink3.mk"
+.include "../../devel/ocaml-lwt/buildlink3.mk"
+.include "../../devel/ocaml-react/buildlink3.mk"
 .include "../../devel/pcre-ocaml/buildlink3.mk"
+.include "../../net/ocaml-conduit/buildlink3.mk"
 .include "../../net/ocaml-ipaddr/buildlink3.mk"
-.include "../../net/ocamlnet/buildlink3.mk"
+#.include "../../net/ocamlnet/buildlink3.mk"
 .include "../../security/ocaml-cryptokit/buildlink3.mk"
 .include "../../security/ocaml-ssl/buildlink3.mk"
-.include "../../textproc/ocaml-tyxml/buildlink3.mk"
+#.include "../../textproc/ocaml-tyxml/buildlink3.mk"
 .include "../../textproc/ocaml-xml-light/buildlink3.mk"
+.include "../../www/ocaml-cohttp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
