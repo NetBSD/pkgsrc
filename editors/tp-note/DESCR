@@ -1,0 +1,15 @@
+Tp-Note is a note-taking-tool and a template system that consistently
+synchronizes the notes meta-data with its filename.
+
+If you like to keep your notes next to your files and you care about expressive
+filenames, then Tp-Note might be the tool of your choice.
+Tp-Note collects various information about its environment and the clipboard
+and stores them in variables.
+New notes are created by filling these variables in predefined and customizable
+Tera-templates.
+
+TP-Note's default templates are written in Markdown and can be easily adapted
+to any other markup language if needed. After creating a new note, TP-Note
+launches the system file editor (or any other of your choice, e.g. MarkText
+or Typora) and connects the default web browser to Tp-Note's
+internal Markdown/RestructuredText renderer and web server.
