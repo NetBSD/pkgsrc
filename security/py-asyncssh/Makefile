@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2022/01/24 12:50:27 adam Exp $
+# $NetBSD: Makefile,v 1.30 2022/05/20 12:09:48 adam Exp $
 
-DISTNAME=	asyncssh-2.9.0
+DISTNAME=	asyncssh-2.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asyncssh/}
