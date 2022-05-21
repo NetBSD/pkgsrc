@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2022/04/18 19:11:02 adam Exp $
+# $NetBSD: Makefile,v 1.50 2022/05/21 07:51:53 nia Exp $
 
 DISTNAME=	bitcoin-22.0
 PKGREVISION=	5
@@ -12,8 +12,8 @@ LICENSE=	mit
 
 RCD_SCRIPTS=	bitcoind
 
-# bitcoin-core requires c++11 (but does not need manual -std=c++11).
 USE_LANGUAGES=		c c++
+GCC_REQD+=		7 # C++17
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf automake gmake pkg-config
 GNU_CONFIGURE=		yes
@@ -24,6 +24,15 @@ PKGCONFIG_OVERRIDE=	libbitcoinconsensus.pc.in
 TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
+
+# This package will link against libstdc++.so from the pkgsrc GCC when the
+# base OS GCC doesn't meet the minimum requirement. Thus we do this so the
+# appropriate gcc-libs package will be captured as a dependency, otherwise
+# binary packages will be broken.
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 090000
+USE_PKGSRC_GCC=		yes
+USE_PKGSRC_GCC_RUNTIME=	yes
+.endif
 
 .if ${OS_VARIANT} == "SmartOS"
 CONFIGURE_ARGS+=	--disable-tests
