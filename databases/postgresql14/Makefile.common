@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2022/05/12 19:02:46 adam Exp $
+# $NetBSD: Makefile.common,v 1.5 2022/05/21 07:25:35 nia Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -87,6 +87,9 @@ CONFIGURE_ENV+=		pgac_cv_prog_cc_ldflags__Wl___as_needed=no
 # and is "unlikely to work correctly".
 # https://www.postgresql.org/message-id/E1X0yaj-000753-N6%40gemulon.postgresql.org
 BROKEN_ON_PLATFORM+=	*-*-alpha
+
+# "fatal error: catalog/pg_type_d.h: No such file or directory"
+MAKE_JOBS_SAFE=		no
 
 .if ${MACHINE_ARCH} == "sparc"
 CFLAGS.NetBSD+=		-D__sparc_v8__
