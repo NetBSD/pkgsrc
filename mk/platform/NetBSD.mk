@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.71 2022/03/03 07:30:06 nia Exp $
+# $NetBSD: NetBSD.mk,v 1.72 2022/05/21 07:37:39 nia Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -15,6 +15,10 @@ TYPE?=		type				# Shell builtin
 
 # pax-as-tar, found on <=8, and optionally later, fails on many archives.
 EXTRACT_USING?=	bsdtar
+
+.if ${OPSYS_VERSION} < 090000
+EXTRACT_ENV+=	LC_CTYPE=en_US.UTF-8
+.endif
 
 USERADD?=	/usr/sbin/useradd
 GROUPADD?=	/usr/sbin/groupadd
