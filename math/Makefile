@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.544 2022/05/04 12:26:19 mef Exp $
+# $NetBSD: Makefile,v 1.545 2022/05/21 13:42:23 mef Exp $
 
 COMMENT=	Mathematics
 
@@ -35,6 +35,7 @@ SUBDIR+=	R-akima
 SUBDIR+=	R-aplpack
 SUBDIR+=	R-backports
 SUBDIR+=	R-bbmle
+SUBDIR+=	R-bdsmatrix
 SUBDIR+=	R-bitops
 SUBDIR+=	R-broom
 SUBDIR+=	R-car
