@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2022/03/28 10:43:31 tnn Exp $
+# $NetBSD: Makefile,v 1.30 2022/05/21 08:00:42 nia Exp $
 #
 
 DISTNAME=	darkice-1.4
@@ -13,8 +13,9 @@ COMMENT=	IceCast, IceCast2, and ShoutCast live audio streamer
 LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 USE_TOOLS+=	gmake pkg-config
+GCC_REQD+=	4.7 # C++11
 
 EGDIR=		${PREFIX}/share/examples/darkice
 HTMLDIR=	${PREFIX}/share/doc/darkice
