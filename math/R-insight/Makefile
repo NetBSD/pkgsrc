@@ -1,23 +1,25 @@
-# $NetBSD: Makefile,v 1.1 2021/09/20 02:48:37 mef Exp $
+# $NetBSD: Makefile,v 1.2 2022/05/21 15:27:28 mef Exp $
 
 R_PKGNAME=	insight
-R_PKGVER=	0.14.4
+R_PKGVER=	0.17.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Easy Access to Model Information for Various Model Objects
 LICENSE=	gnu-gpl-v3
 
 # Packages suggested but not available:
-#   'AER', 'afex', 'aod', 'BayesFactor', 'bayestestR', 'bdsmatrix',
-#   'betareg', 'biglm', 'blavaan', 'blme', 'brms', 'censReg', 'cgam',
-#   'clubSandwich', 'coxme', 'cplm', 'crch', 'effectsize', 'emmeans',
-#   'epiR', 'estimatr', 'feisr', 'fixest', 'fungible', 'gam', 'gamlss',
-#   'gamm4', 'gbm', 'gee', 'geepack', 'GLMMadaptive', 'glmmTMB', 'gmnl',
-#   'gt', 'ivreg', 'JM', 'lavaan', 'lfe', 'logistf', 'mclust',
-#   'MCMCglmm', 'merTools', 'metaBMA', 'mice', 'mlogit', 'multgee',
-#   'nonnest2', 'ordinal', 'panelr', 'parameters', 'parsnip',
-#   'performance', 'plm', 'pscl', 'rms', 'robustlmm', 'rstanarm',
-#   'rstantools', 'speedglm', 'tripack', 'truncreg'
+#   'AER', 'afex', 'aod', 'BayesFactor', 'bayestestR', 'betareg', 'bife',
+#   'biglm', 'blavaan', 'blme', 'brms', 'censReg', 'cgam',
+#   'clubSandwich', 'coxme', 'cplm', 'crch', 'datawizard', 'effectsize',
+#   'emmeans', 'epiR', 'estimatr', 'feisr', 'fixest', 'fungible', 'gam',
+#   'gamlss', 'gamm4', 'gbm', 'gee', 'geepack', 'GLMMadaptive',
+#   'glmmTMB', 'gmnl', 'gt', 'ivreg', 'JM', 'lavaan', 'lfe', 'lmerTest',
+#   'logistf', 'marginaleffects', 'mclust', 'MCMCglmm', 'merTools',
+#   'metaBMA', 'mice', 'mlogit', 'mhurdle', 'multgee', 'nonnest2',
+#   'ordinal', 'panelr', 'parameters', 'parsnip', 'pbkrtest',
+#   'performance', 'plm', 'poorman', 'pscl', 'rms', 'robustlmm',
+#   'rstanarm', 'rstantools', 'speedglm', 'tripack', 'truncreg',
+#   'tweedie'
 
 
 TEST_DEPENDS+=	R-VGAM-[0-9]*:../../math/R-VGAM
