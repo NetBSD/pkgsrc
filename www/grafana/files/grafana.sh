@@ -1,11 +1,19 @@
 #!@RCD_SCRIPTS_SHELL@
-
+#
+# $NetBSD: grafana.sh,v 1.5 2022/05/21 07:41:46 triaxx Exp $
+#
 # PROVIDE: grafana
 # REQUIRE: DAEMON
 # KEYWORD: shutdown
+#
+# Consider installing pkgtools/rc.subr in unprivileged.
+#
+# You will need to set some variables in @SYSCONFBASE@/rc.conf to start grafana:
+#
+# grafana=YES
 
-if [ -f /etc/rc.subr ]; then
-	. /etc/rc.subr
+if [ -f @SYSCONFBASE@/etc/rc.subr ]; then
+	$_rc_subr_loaded . @SYSCONFBASE@/etc/rc.subr
 fi
 
 name="grafana"
@@ -26,12 +34,12 @@ grafana_precmd() {
 	fi
 }
 
-if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
+if [ -f @SYSCONFBASE@/etc/rc.subr -a -d @SYSCONFBASE@/etc/rc.d -a -f @SYSCONFBASE@/etc/rc.d/DAEMON ]; then
 	load_rc_config $name
 	run_rc_command "$1"
 else
-	if [ -f /etc/rc.conf ]; then
-		. /etc/rc.conf
+	if [ -f @SYSCONFBASE@/etc/rc.conf ]; then
+		. @SYSCONFBASE@/etc/rc.conf
 	fi
 	case "$1" in
 	start)
