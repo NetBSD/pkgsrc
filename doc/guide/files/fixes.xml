@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.176 2022/05/21 11:40:06 nia Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.177 2022/05/21 11:56:14 nia Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1367,7 +1367,12 @@ pre-configure:
 </programlisting>
 
     <para>Packages which use GNU Automake will sometimes
-    require GNU Make, but not always.</para>
+    require GNU Make (<literal>gmake</literal> in
+    <varname>USE_TOOLS</varname>),
+    but not always.  Note that autoreconf
+    only needs to be executed if <filename>configure.ac</filename>
+    or Makefiles are modified, or <filename>configure</filename>
+    is not present.</para>
 
     <para>There are times when the configure process makes
     additional changes to the generated files, which then causes
@@ -1377,6 +1382,35 @@ pre-configure:
     <varname>AUTOMAKE_OVERRIDE=NO</varname> in the package
     Makefile.</para>
   </sect2>
+
+  <sect2 id="meson">
+    <title>Meson / ninja</title>
+
+    <para>Packages using Meson to configure need to include:
+
+<programlisting>
+.include "../../devel/meson/build.mk"
+</programlisting></para>
+
+    <para>In nearly all cases (any program with dependencies),
+    pkg-config needs to be added to
+    <varname>USE_TOOLS</varname>.  If the package installs
+    translation files for non-English languages, also
+    add msgfmt and xgettext:
+
+<programlisting>
+USE_TOOLS+=	pkg-config msgfmt xgettext
+</programlisting></para>
+
+    <para>If any options need to be passed to Meson, use
+    <varname>MESON_ARGS</varname> instead of
+    <varname>CONFIGURE_ARGS</varname>:
+
+<programlisting>
+MESON_ARGS+=	-Dx11=false
+</programlisting></para>
+  </sect2>
+
 </sect1>
 
 <sect1 id="programming-languages">
