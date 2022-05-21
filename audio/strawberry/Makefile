@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2022/04/18 19:10:26 adam Exp $
+# $NetBSD: Makefile,v 1.35 2022/05/21 07:55:39 nia Exp $
 
 DISTNAME=	strawberry-1.0.4
 PKGREVISION=	1
@@ -17,6 +17,7 @@ TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
+GCC_REQD+=	7 # std::optional
 
 DEPENDS+=	gst-plugins1-flac-[0-9]*:../../audio/gst-plugins1-flac
 DEPENDS+=	gst-plugins1-mpg123-[0-9]*:../../audio/gst-plugins1-mpg123
@@ -39,6 +40,14 @@ DEPENDS+=	gst-plugins1-oss-[0-9]*:../../audio/gst-plugins1-oss
 
 .if ${OPSYS} == "NetBSD"
 PREFER.sqlite3=	pkgsrc # fts5
+# This package will link against libstdc++.so from the pkgsrc GCC when the
+# base OS GCC doesn't meet the minimum requirement. Thus we do this so the
+# appropriate gcc-libs package will be captured as a dependency, otherwise
+# binary packages will be broken.
+.  if ${OPSYS_VERSION} < 090000
+USE_PKGSRC_GCC=		yes
+USE_PKGSRC_GCC_RUNTIME=	yes
+.  endif
 .endif
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
