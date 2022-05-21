@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.172 2022/05/21 11:20:48 nia Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.173 2022/05/21 11:24:28 nia Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1349,39 +1349,25 @@ ${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} ${SOMELIB:.a=.la} ${PREFIX}/lib
     <title>GNU Autoconf/Automake</title>
 
     <para>If a package needs GNU autoconf or automake to be executed
-    to regenerate the configure script and Makefile.in makefile
-    templates, then they should be executed in a pre-configure
-    target.</para>
-
-    <para>For packages that need only autoconf:</para>
+    to regenerate the
+    <filename>configure</filename>
+    script and <filename>Makefile.in</filename> makefile
+    templates from <filename>configure.ac</filename> and
+    <filename>Makefile.am</filename>,
+    then they should be executed in a pre-configure target:</para>
 
 <programlisting>
-AUTOCONF_REQD=  2.50            # if default version is not good enough
-USE_TOOLS+=     autoconf        # use "autoconf213" for autoconf-2.13
+USE_TOOLS+=	autoconf automake autoreconf
+GNU_CONFIGURE=	yes
 ...
 
 pre-configure:
-        cd ${WRKSRC} &amp;&amp; autoconf
-
+        set -e; cd ${WRKSRC} && autoreconf -fi
 ...
 </programlisting>
 
-    <para>and for packages that need automake and autoconf:</para>
-
-<programlisting>
-AUTOMAKE_REQD=  1.7.1           # if default version is not good enough
-USE_TOOLS+=     automake        # use "automake14" for automake-1.4
-...
-
-pre-configure:
-        set -e; cd ${WRKSRC}; \
-        aclocal; autoheader; automake -a --foreign -i; autoconf
-
-...
-</programlisting>
-
-    <para>Packages which use GNU Automake will almost certainly
-    require GNU Make.</para>
+    <para>Packages which use GNU Automake will sometimes
+    require GNU Make, but not always.</para>
 
     <para>There are times when the configure process makes
     additional changes to the generated files, which then causes
