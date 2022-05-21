@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.171 2022/05/21 11:14:56 nia Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.172 2022/05/21 11:20:48 nia Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1488,6 +1488,28 @@ pre-configure:
 
       <listitem><para>Prepend
       <literal>.include "go-modules.mk"</literal> to any other
+      <literal>.include</literal>s.</para></listitem>
+
+      <listitem><para>Incorporate these modules in
+      <filename>distinfo</filename> with <command>make
+      makesum</command>.</para></listitem>
+    </orderedlist>
+  </sect2>
+
+  <sect2 id="rust-programming-language">
+    <title>Rust</title>
+
+    <para>If a program is written in Rust and uses Cargo to build,
+    have the package include
+    <filename>../../lang/rust/cargo.mk</filename>.</para>
+
+    <orderedlist>
+      <listitem><para>Generate a list of those dependencies with
+      <command>make CARGO_ARGS="build --release" build &&
+      make print-cargo-depends > cargo-depends.mk</command>.</para></listitem>
+
+      <listitem><para>Prepend
+      <literal>.include "cargo-depends.mk"</literal> to any other
       <literal>.include</literal>s.</para></listitem>
 
       <listitem><para>Incorporate these modules in
