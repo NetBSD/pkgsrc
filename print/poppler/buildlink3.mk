@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.89 2022/05/04 21:05:41 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.90 2022/05/21 07:43:57 nia Exp $
 
 BUILDLINK_TREE+=	poppler
 
@@ -9,7 +9,7 @@ BUILDLINK_API_DEPENDS.poppler+=	poppler>=0.5.1
 BUILDLINK_ABI_DEPENDS.poppler+=	poppler>=22.04.0
 BUILDLINK_PKGSRCDIR.poppler?=	../../print/poppler
 
-GCC_REQD+=	5
+GCC_REQD+=	7
 
 .include "../../devel/nss/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
