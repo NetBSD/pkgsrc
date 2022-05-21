@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.177 2021/08/31 11:33:04 markd Exp $
+# $NetBSD: sites.mk,v 1.178 2022/05/21 00:44:58 gutteridge Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -120,7 +120,8 @@ MASTER_SITE_XEMACS+=    \
 # http://www.ibiblio.org/pub/mirrors/apache/ returns 200 for missing
 # files, which is incompatible with resuming transfers.
 MASTER_SITE_APACHE+=    \
-	http://www.apache.org/dist/ \
+	https://downloads.apache.org/ \
+	https://archive.apache.org/dist/ \
 	http://www.eu.apache.org/dist/ \
 	http://apache.oregonstate.edu/ \
 	http://apache.mirrors.tds.net/ \
