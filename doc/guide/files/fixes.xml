@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.173 2022/05/21 11:24:28 nia Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.174 2022/05/21 11:30:57 nia Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1603,6 +1603,24 @@ pre-configure:
 <sect3 id="fixes.build.cpp.os">
 <title>C preprocessor macros to identify the operating system</title>
 
+        <para>To distinguish between specific NetBSD versions,
+        you should use the following code.</para>
+
+<programlisting>
+#ifdef __NetBSD__
+#include <sys/param.h>
+#if __NetBSD_Prereq__(9,99,17)
+/* use a newer feature */
+#else
+/* older code */
+#endif
+#endif
+
+#ifndef _WIN32
+/* Unix-like specific code */
+#endif
+</programlisting>
+
         <para>To distinguish between 4.4 BSD-derived systems and the
         rest of the world, you should use the following code.</para>
 
@@ -1615,8 +1633,7 @@ pre-configure:
 #endif
 </programlisting>
 
-        <para>If this distinction is not fine enough, you can also test
-	for the following macros.</para>
+        <para>You can also test for the following macros:</para>
 
 <programlisting>
 Cygwin      __CYGWIN__
@@ -1625,13 +1642,14 @@ FreeBSD     __FreeBSD__
 Haiku       __HAIKU__
 Interix     __INTERIX
 IRIX        __sgi (TODO: get a definite source for this)
-Linux       linux, __linux, __linux__
+Linux       __linux
 Mac OS X    __APPLE__
 MirBSD      __MirBSD__ (__OpenBSD__ is also defined)
 Minix3      __minix
 NetBSD      __NetBSD__
 OpenBSD     __OpenBSD__
 Solaris     sun, __sun
+Unix(-like) __unix
 </programlisting>
 
 </sect3>
