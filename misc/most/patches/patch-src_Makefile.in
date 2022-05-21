@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2008/08/09 21:32:39 bjs Exp $
+$NetBSD: patch-src_Makefile.in,v 1.1 2022/05/21 21:38:36 fcambus Exp $
 
---- src/Makefile.in.orig	2007-09-09 12:14:17.000000000 -0400
+--- src/Makefile.in.orig	2018-10-29 07:55:02.000000000 +0000
 +++ src/Makefile.in
 @@ -22,7 +22,7 @@ prefix		= @prefix@
  exec_prefix	= @exec_prefix@
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.2 2008/08/09 21:32:39 bjs Exp $
  DOC_DIR		= $(datarootdir)/doc/most
  SYS_INITFILE	= @sysconfdir@/most.conf
  MKINSDIR	= ../autoconf/mkinsdir.sh
-@@ -79,21 +79,21 @@ clean:
+@@ -79,20 +79,20 @@ clean:
  distclean: clean
  	/bin/rm -rf $(OBJDIR) Makefile sysconf.h
  installdirs:
@@ -23,23 +23,21 @@ $NetBSD: patch-ab,v 1.2 2008/08/09 21:32:39 bjs Exp $
 +	$(BSD_INSTALL_PROGRAM_DIR) $(DEST_BINDIR)
  install: all installdirs
 -	$(INSTALL) -s $(OBJDIR)/most $(DEST_BINDIR)
--	$(INSTALL_DATA) ../most.1 $(DEST_MANDIR)/man1
+-	$(INSTALL_DATA) ../doc/most.1 $(DEST_MANDIR)/man1
 -	@for i in $(DOC_FILES); \
 -	do \
--		i=../$$i; \
--		echo $(INSTALL_DATA) $$i $(DEST_DOCDIR); \
--		$(INSTALL_DATA) $$i $(DEST_DOCDIR); \
+-		echo $(INSTALL_DATA) $$i $(DEST_DOCDIR)/; \
+-		$(INSTALL_DATA) $$i $(DEST_DOCDIR)/; \
 -		if [ "$$?" != "0" ]; then \
 -		  exit 1; \
 -		fi; \
 -	done
 +	$(BSD_INSTALL_PROGRAM) $(OBJDIR)/most $(DEST_BINDIR)
-+	$(BSD_INSTALL_MAN) ../most.1 $(DEST_MANDIR)/man1
++	$(BSD_INSTALL_MAN) ../doc/most.1 $(DEST_MANDIR)/man1
 +	#@for i in $(DOC_FILES); \
 +	#do \
-+	#	i=../$$i; \
-+	#	echo $(INSTALL_DATA) $$i $(DEST_DOCDIR); \
-+	#	$(INSTALL_DATA) $$i $(DEST_DOCDIR); \
++	#	echo $(INSTALL_DATA) $$i $(DEST_DOCDIR)/; \
++	#	$(INSTALL_DATA) $$i $(DEST_DOCDIR)/; \
 +	#	if [ "$$?" != "0" ]; then \
 +	#	  exit 1; \
 +	#	fi; \
