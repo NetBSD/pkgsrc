@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2647 2022/05/21 00:08:10 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.2648 2022/05/21 07:42:12 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4092,3 +4092,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/spotify-player to 0.7.0 [pin 2022-05-20]
 	Added editors/tp-note version 1.16.6 [pin 2022-05-20]
 	Updated geography/qgis to 3.22.7 [gdt 2022-05-21]
+	Updated www/grafana to 8.5.3 [triaxx 2022-05-21]
