@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/07/18 19:59:14 martin Exp $
+$NetBSD: patch-ac,v 1.2 2022/05/21 21:41:09 rillig Exp $
 
 --- Configure.orig	Sun Jun  4 17:21:26 2000
 +++ Configure	Sun Jun  4 17:22:17 2000
-@@ -15,7 +15,7 @@
+@@ -16,7 +16,7 @@
  PATH=".:$PATH:/bin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/ucb:/usr/local:/usr/lbin:/etc:/usr/new:/usr/new/bin:/usr/nbin"
  export PATH || (echo "OOPS, this isn't sh.  Desperation time.  I will feed myself to sh."; sh $0; kill $$)
  
