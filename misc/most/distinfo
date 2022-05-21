@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:59:15 nia Exp $
+$NetBSD: distinfo,v 1.9 2022/05/21 21:38:36 fcambus Exp $
 
-BLAKE2s (most-5.0.0a.tar.gz) = 082aab7df5bee3a238dce9a340a9cfc742cf0265f797e040ada56fc181714bff
-SHA512 (most-5.0.0a.tar.gz) = 8487895d736ea19a7a635dc67c974104a0c469a88a74f8b757a0509b9dee4534fd70b966054624be71734ac7de9a9daa1efb56827ff176b9468ce5a0b1ed2349
-Size (most-5.0.0a.tar.gz) = 155233 bytes
-SHA1 (patch-ab) = 7d8a6519856fe05dcc94f745059dc321e5e4d625
+BLAKE2s (most-5.1.0.tar.gz) = 90f1a71b55f383305ffe370b432c8e44f6de41a3f42d298bf74981babc77561c
+SHA512 (most-5.1.0.tar.gz) = cbc090283bbaafb8ffee9d6d1abc7b49cd58d54b742cf8dc86274351dee6398d1f24841bd1631ac40f861ad9e23569646133d3297317d9d514a7a38dd74533d2
+Size (most-5.1.0.tar.gz) = 162172 bytes
+SHA1 (patch-src_Makefile.in) = 4ba2e9219593b00333acea6eda21e3cda3988a5b
