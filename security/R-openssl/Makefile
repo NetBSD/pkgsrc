@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/05/11 14:03:37 mef Exp $
+# $NetBSD: Makefile,v 1.6 2022/05/21 12:48:58 mef Exp $
 
 R_PKGNAME=	openssl
-R_PKGVER=	2.0.0
+R_PKGVER=	2.0.1
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,6 +10,8 @@ LICENSE=	mit
 
 DEPENDS+=	R-askpass>=1.1:../../security/R-askpass
 
+
+# Packages suggested but not available: 'jose', 'sodium'
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
 TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
