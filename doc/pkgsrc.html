@@ -333,15 +333,17 @@ builds)</a></span></dt>
 <dt><span class="sect2"><a href="#fixes.libtool">21.3.1. Shared libraries - libtool</a></span></dt>
 <dt><span class="sect2"><a href="#using-libtool">21.3.2. Using libtool on GNU packages that already support libtool</a></span></dt>
 <dt><span class="sect2"><a href="#autoconf-automake">21.3.3. GNU Autoconf/Automake</a></span></dt>
+<dt><span class="sect2"><a href="#meson">21.3.4. Meson / ninja</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#programming-languages">21.4. Programming languages</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#basic-programming-languages">21.4.1. C, C++, and Fortran</a></span></dt>
 <dt><span class="sect2"><a href="#java-programming-language">21.4.2. Java</a></span></dt>
 <dt><span class="sect2"><a href="#go-programming-language">21.4.3. Go</a></span></dt>
-<dt><span class="sect2"><a href="#perl-scripts">21.4.4. Packages containing Perl scripts</a></span></dt>
-<dt><span class="sect2"><a href="#shell-scripts">21.4.5. Packages containing shell scripts</a></span></dt>
-<dt><span class="sect2"><a href="#other-programming-languages">21.4.6. Other programming languages</a></span></dt>
+<dt><span class="sect2"><a href="#rust-programming-language">21.4.4. Rust</a></span></dt>
+<dt><span class="sect2"><a href="#perl-scripts">21.4.5. Packages containing Perl scripts</a></span></dt>
+<dt><span class="sect2"><a href="#shell-scripts">21.4.6. Packages containing shell scripts</a></span></dt>
+<dt><span class="sect2"><a href="#other-programming-languages">21.4.7. Other programming languages</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#fixes.build">21.5. The <span class="emphasis"><em>build</em></span> phase</a></span></dt>
 <dd><dl>
@@ -3302,15 +3304,17 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dt><span class="sect2"><a href="#fixes.libtool">21.3.1. Shared libraries - libtool</a></span></dt>
 <dt><span class="sect2"><a href="#using-libtool">21.3.2. Using libtool on GNU packages that already support libtool</a></span></dt>
 <dt><span class="sect2"><a href="#autoconf-automake">21.3.3. GNU Autoconf/Automake</a></span></dt>
+<dt><span class="sect2"><a href="#meson">21.3.4. Meson / ninja</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#programming-languages">21.4. Programming languages</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#basic-programming-languages">21.4.1. C, C++, and Fortran</a></span></dt>
 <dt><span class="sect2"><a href="#java-programming-language">21.4.2. Java</a></span></dt>
 <dt><span class="sect2"><a href="#go-programming-language">21.4.3. Go</a></span></dt>
-<dt><span class="sect2"><a href="#perl-scripts">21.4.4. Packages containing Perl scripts</a></span></dt>
-<dt><span class="sect2"><a href="#shell-scripts">21.4.5. Packages containing shell scripts</a></span></dt>
-<dt><span class="sect2"><a href="#other-programming-languages">21.4.6. Other programming languages</a></span></dt>
+<dt><span class="sect2"><a href="#rust-programming-language">21.4.4. Rust</a></span></dt>
+<dt><span class="sect2"><a href="#perl-scripts">21.4.5. Packages containing Perl scripts</a></span></dt>
+<dt><span class="sect2"><a href="#shell-scripts">21.4.6. Packages containing shell scripts</a></span></dt>
+<dt><span class="sect2"><a href="#other-programming-languages">21.4.7. Other programming languages</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#fixes.build">21.5. The <span class="emphasis"><em>build</em></span> phase</a></span></dt>
 <dd><dl>
@@ -4121,10 +4125,10 @@ FILESDIR=       ../../editors/xemacs/files
 	where the current pkg will be installed.  When referring to a
 	pkg's own installation path, use
 	<span class="quote">&#8220;<span class="quote">${PREFIX}</span>&#8221;</span>.</p></li>
-<li class="listitem"><p><code class="varname">LOCALBASE</code> is where all non-X11 pkgs
+<li class="listitem"><p><code class="varname">LOCALBASE</code> is where all pkgs
 	are installed.  If you need to construct a -I or -L argument
 	to the compiler to find includes and libraries installed by
-	another non-X11 pkg, use <span class="quote">&#8220;<span class="quote">${LOCALBASE}</span>&#8221;</span>. The name
+	another pkg, use <span class="quote">&#8220;<span class="quote">${LOCALBASE}</span>&#8221;</span>. The name
 	<code class="varname">LOCALBASE</code> stems from FreeBSD, which
 	installed all packages in <code class="filename">/usr/local</code>. As
 	pkgsrc leaves <code class="filename">/usr/local</code> for the system
@@ -7137,8 +7141,8 @@ to:</p>
 <div class="orderedlist"><ol class="orderedlist" type="1">
 <li class="listitem"><p>Store the script inside <code class="filename">${FILESDIR}</code>, with
     the <code class="literal">.sh</code> suffix appended.  Considering the
-    <a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/print/cups/index.html" target="_top"><code class="filename">print/cups</code></a> package as an example, it has a
-    <code class="filename">cupsd.sh</code> in its files directory.</p></li>
+    <a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/print/cups-base/index.html" target="_top"><code class="filename">print/cups-base</code></a> package as an example, it
+    has a <code class="filename">cupsd.sh</code> in its files directory.</p></li>
 <li class="listitem">
 <p>Tell pkginstall to handle it, appending the name of the script,
     without its extension, to the <code class="varname">RCD_SCRIPTS</code> variable.
@@ -7291,15 +7295,17 @@ environment variable to <code class="literal">NO</code>.</p>
 <dt><span class="sect2"><a href="#fixes.libtool">21.3.1. Shared libraries - libtool</a></span></dt>
 <dt><span class="sect2"><a href="#using-libtool">21.3.2. Using libtool on GNU packages that already support libtool</a></span></dt>
 <dt><span class="sect2"><a href="#autoconf-automake">21.3.3. GNU Autoconf/Automake</a></span></dt>
+<dt><span class="sect2"><a href="#meson">21.3.4. Meson / ninja</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#programming-languages">21.4. Programming languages</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#basic-programming-languages">21.4.1. C, C++, and Fortran</a></span></dt>
 <dt><span class="sect2"><a href="#java-programming-language">21.4.2. Java</a></span></dt>
 <dt><span class="sect2"><a href="#go-programming-language">21.4.3. Go</a></span></dt>
-<dt><span class="sect2"><a href="#perl-scripts">21.4.4. Packages containing Perl scripts</a></span></dt>
-<dt><span class="sect2"><a href="#shell-scripts">21.4.5. Packages containing shell scripts</a></span></dt>
-<dt><span class="sect2"><a href="#other-programming-languages">21.4.6. Other programming languages</a></span></dt>
+<dt><span class="sect2"><a href="#rust-programming-language">21.4.4. Rust</a></span></dt>
+<dt><span class="sect2"><a href="#perl-scripts">21.4.5. Packages containing Perl scripts</a></span></dt>
+<dt><span class="sect2"><a href="#shell-scripts">21.4.6. Packages containing shell scripts</a></span></dt>
+<dt><span class="sect2"><a href="#other-programming-languages">21.4.7. Other programming languages</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#fixes.build">21.5. The <span class="emphasis"><em>build</em></span> phase</a></span></dt>
 <dd><dl>
@@ -8422,34 +8428,28 @@ ${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} ${SOMELIB:.a=.la} ${PREFIX}/lib
 <div class="titlepage"><div><div><h3 class="title">
 <a name="autoconf-automake"></a>21.3.3. GNU Autoconf/Automake</h3></div></div></div>
 <p>If a package needs GNU autoconf or automake to be executed
-    to regenerate the configure script and Makefile.in makefile
-    templates, then they should be executed in a pre-configure
-    target.</p>
-<p>For packages that need only autoconf:</p>
+    to regenerate the
+    <code class="filename">configure</code>
+    script and <code class="filename">Makefile.in</code> makefile
+    templates from <code class="filename">configure.ac</code> and
+    <code class="filename">Makefile.am</code>,
+    then they should be executed in a pre-configure target:</p>
 <pre class="programlisting">
-AUTOCONF_REQD=  2.50            # if default version is not good enough
-USE_TOOLS+=     autoconf        # use "autoconf213" for autoconf-2.13
+USE_TOOLS+=	autoconf automake autoreconf
+GNU_CONFIGURE=	yes
 ...
 
 pre-configure:
-        cd ${WRKSRC} &amp;&amp; autoconf
-
+        set -e; cd ${WRKSRC} &amp;&amp; autoreconf -fi
 ...
 </pre>
-<p>and for packages that need automake and autoconf:</p>
-<pre class="programlisting">
-AUTOMAKE_REQD=  1.7.1           # if default version is not good enough
-USE_TOOLS+=     automake        # use "automake14" for automake-1.4
-...
-
-pre-configure:
-        set -e; cd ${WRKSRC}; \
-        aclocal; autoheader; automake -a --foreign -i; autoconf
-
-...
-</pre>
-<p>Packages which use GNU Automake will almost certainly
-    require GNU Make.</p>
+<p>Packages which use GNU Automake will sometimes
+    require GNU Make (<code class="literal">gmake</code> in
+    <code class="varname">USE_TOOLS</code>),
+    but not always.  Note that autoreconf
+    only needs to be executed if <code class="filename">configure.ac</code>
+    or Makefiles are modified, or <code class="filename">configure</code>
+    is not present.</p>
 <p>There are times when the configure process makes
     additional changes to the generated files, which then causes
     the build process to try to re-execute the automake sequence.
@@ -8458,6 +8458,34 @@ pre-configure:
     <code class="varname">AUTOMAKE_OVERRIDE=NO</code> in the package
     Makefile.</p>
 </div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="meson"></a>21.3.4. Meson / ninja</h3></div></div></div>
+<p>Packages using Meson to configure need to include:
+
+</p>
+<pre class="programlisting">
+.include "../../devel/meson/build.mk"
+</pre>
+<p>In nearly all cases (any program with dependencies),
+    pkg-config needs to be added to
+    <code class="varname">USE_TOOLS</code>.  If the package installs
+    translation files for non-English languages, also
+    add msgfmt and xgettext:
+
+</p>
+<pre class="programlisting">
+USE_TOOLS+=	pkg-config msgfmt xgettext
+</pre>
+<p>If any options need to be passed to Meson, use
+    <code class="varname">MESON_ARGS</code> instead of
+    <code class="varname">CONFIGURE_ARGS</code>:
+
+</p>
+<pre class="programlisting">
+MESON_ARGS+=	-Dx11=false
+</pre>
+</div>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -8465,7 +8493,7 @@ pre-configure:
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="basic-programming-languages"></a>21.4.1. C, C++, and Fortran</h3></div></div></div>
-<p>Compilers for the C, C++, and Fortran languages comes with
+<p>Compilers for the C and C++ languages comes with
     the NetBSD base system.  By default, pkgsrc assumes that a package
     is written in C and will hide all other compilers (via the wrapper
     framework, see <a class="xref" href="#buildlink" title="Chapter 18. Buildlink methodology">Chapter 18, <i>Buildlink methodology</i></a>).</p>
@@ -8483,6 +8511,24 @@ pre-configure:
     <span class="quote">&#8220;<span class="quote">c</span>&#8221;</span>.  Packages using GNU configure scripts, even if
     written in C++, usually need a C compiler for the configure
     phase.</p>
+<p>To express a general requirement on a specific C or C++
+    version, normally only <code class="varname">GCC_REQD</code> needs to be set.
+    For example, GCC 7 includes support for C++17, so if the package uses
+    C++17 it should specify:
+
+    </p>
+<pre class="programlisting">
+	GCC_REQD+=	7
+    </pre>
+<p>Language variants like <code class="literal">c++11</code> for
+    <code class="varname">USE_LANGUAGES</code> should only be specified
+    if the package does not explicitly set <code class="literal">-std=...</code>
+    when compiling (i.e. the package assumes the compiler defaults to
+    C++11 or some other standard).  This is usually a bug in the
+    upstream build system.</p>
+<p>GCC version 5 includes support for C++14, while GCC 4.7 includes
+    more-or-less complete support for C++11.  For more information, consult
+    <a class="ulink" href="https://gcc.gnu.org/projects/cxx-status.html" target="_top">GCC's own documentation on programming language support.</a></p>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
@@ -8523,15 +8569,9 @@ pre-configure:
 <li class="listitem"><p>Generate a list of those dependencies with
       <span class="command"><strong>make clean &amp;&amp; make patch &amp;&amp; make show-go-modules &gt;
       go-modules.mk</strong></span>.</p></li>
-<li class="listitem">
-<p>Prepend </p>
-<pre class="programlisting">.include
-      "go-modules.mk"</pre>
-<p> to any other
-      </p>
-<pre class="programlisting">.include</pre>
-<p>s.</p>
-</li>
+<li class="listitem"><p>Prepend
+      <code class="literal">.include "go-modules.mk"</code> to any other
+      <code class="literal">.include</code>s.</p></li>
 <li class="listitem"><p>Incorporate these modules in
       <code class="filename">distinfo</code> with <span class="command"><strong>make
       makesum</strong></span>.</p></li>
@@ -8539,7 +8579,25 @@ pre-configure:
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="perl-scripts"></a>21.4.4. Packages containing Perl scripts</h3></div></div></div>
+<a name="rust-programming-language"></a>21.4.4. Rust</h3></div></div></div>
+<p>If a program is written in Rust and uses Cargo to build,
+    have the package include
+    <code class="filename">../../lang/rust/cargo.mk</code>.</p>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem"><p>Generate a list of those dependencies with
+      <span class="command"><strong>make CARGO_ARGS="build --release" build &amp;&amp;
+      make print-cargo-depends &gt; cargo-depends.mk</strong></span>.</p></li>
+<li class="listitem"><p>Prepend
+      <code class="literal">.include "cargo-depends.mk"</code> to any other
+      <code class="literal">.include</code>s.</p></li>
+<li class="listitem"><p>Incorporate these modules in
+      <code class="filename">distinfo</code> with <span class="command"><strong>make
+      makesum</strong></span>.</p></li>
+</ol></div>
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="perl-scripts"></a>21.4.5. Packages containing Perl scripts</h3></div></div></div>
 <p>If your package contains interpreted Perl scripts, add
     <span class="quote">&#8220;<span class="quote">perl</span>&#8221;</span> to the <code class="varname">USE_TOOLS</code> variable
     and set <code class="varname">REPLACE_PERL</code> to ensure that the proper
@@ -8558,7 +8616,7 @@ pre-configure:
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="shell-scripts"></a>21.4.5. Packages containing shell scripts</h3></div></div></div>
+<a name="shell-scripts"></a>21.4.6. Packages containing shell scripts</h3></div></div></div>
 <p><code class="varname">REPLACE_SH</code>,
     <code class="varname">REPLACE_BASH</code>, <code class="varname">REPLACE_CSH</code>,
     and <code class="varname">REPLACE_KSH</code> can be used to replace shell
@@ -8573,7 +8631,7 @@ pre-configure:
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="other-programming-languages"></a>21.4.6. Other programming languages</h3></div></div></div>
+<a name="other-programming-languages"></a>21.4.7. Other programming languages</h3></div></div></div>
 <p>There are further similar REPLACE variables available, e.g.,
     <code class="varname">REPLACE_AWK</code> for packages containing awk scripts,
     and <code class="varname">REPLACE_R</code> for R. These two, like the others
@@ -8626,6 +8684,22 @@ pre-configure:
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
 <a name="fixes.build.cpp.os"></a>21.5.1.1. C preprocessor macros to identify the operating system</h4></div></div></div>
+<p>To distinguish between specific NetBSD versions,
+        you should use the following code.</p>
+<pre class="programlisting">
+#ifdef __NetBSD__
+#include &lt;sys/param.h&gt;
+#if __NetBSD_Prereq__(9,99,17)
+/* use a newer feature */
+#else
+/* older code */
+#endif
+#endif
+
+#ifndef _WIN32
+/* Unix-like specific code */
+#endif
+</pre>
 <p>To distinguish between 4.4 BSD-derived systems and the
         rest of the world, you should use the following code.</p>
 <pre class="programlisting">
@@ -8636,8 +8710,7 @@ pre-configure:
 /* non-BSD-specific code goes here */
 #endif
 </pre>
-<p>If this distinction is not fine enough, you can also test
-	for the following macros.</p>
+<p>You can also test for the following macros:</p>
 <pre class="programlisting">
 Cygwin      __CYGWIN__
 DragonFly   __DragonFly__
@@ -8645,13 +8718,14 @@ FreeBSD     __FreeBSD__
 Haiku       __HAIKU__
 Interix     __INTERIX
 IRIX        __sgi (TODO: get a definite source for this)
-Linux       linux, __linux, __linux__
+Linux       __linux
 Mac OS X    __APPLE__
 MirBSD      __MirBSD__ (__OpenBSD__ is also defined)
 Minix3      __minix
 NetBSD      __NetBSD__
 OpenBSD     __OpenBSD__
 Solaris     sun, __sun
+Unix(-like) __unix
 </pre>
 </div>
 <div class="sect3">
@@ -8659,8 +8733,11 @@ Solaris     sun, __sun
 <a name="fixes.build.cpp.arch"></a>21.5.1.2. C preprocessor macros to identify the hardware architecture</h4></div></div></div>
 <pre class="programlisting">
 i386        i386, __i386, __i386__
+x86-64      __amd64__, __x86_64__
+ARM         __arm__
 MIPS        __mips
 SPARC       sparc, __sparc
+PowerPC     __powerpc
 </pre>
 </div>
 <div class="sect3">
@@ -8797,10 +8874,10 @@ the actual cause.</p>
 package is built and then pkgsrc is updated. This situation can provoke
 various hard to diagnose build errors. To clean up the situation:</p>
 <pre class="programlisting">
-<code class="prompt">$</code> (cd ../../ &amp;&amp; test -f mk/bsd.pkg.mk &amp;&amp; rm -rf */*/work)
+<code class="prompt">$</code> (cd ../../ &amp;&amp; cat mk/bsd.pkg.mk &gt;/dev/null &amp;&amp; rm -rf */*/work)
 </pre>
-<p>(The test for <code class="filename">bsd.pkg.mk</code> just prevents running
-this command in the wrong directory.)</p>
+<p>(The only purpose of the <code class="filename">bsd.pkg.mk</code> is to
+prevent running this command in the wrong directory.)</p>
 <p>If you have set <code class="varname">WRKOBJDIR</code> in <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>, remove
 that directory as well.</p>
 </div>
@@ -8881,14 +8958,14 @@ far and what any error messages were.</p>
 </tbody>
 </table>
 </div>
-<p>To fix these linker errors, it is often sufficient to say
+<p>To fix these linker errors, it is often sufficient to add
     <code class="literal">LIBS.<em class="replaceable"><code>OperatingSystem</code></em>+=
     -l<em class="replaceable"><code>foo</code></em></code> to the package
-    <code class="filename">Makefile</code> and then say <span class="command"><strong>bmake clean;
+    <code class="filename">Makefile</code> and then run <span class="command"><strong>bmake clean;
     bmake</strong></span>.</p>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
-<a name="undefined-reference-sunpro"></a>21.5.4.1. Special issue: The SunPro compiler</h4></div></div></div>
+<a name="undefined-reference-sunpro"></a>21.5.4.1. The SunPro compiler and inline functions</h4></div></div></div>
 <p>When you are using the SunPro compiler, there is another
 possibility. That compiler cannot handle the following code:</p>
 <pre class="programlisting">
@@ -8918,9 +8995,12 @@ of functions.</p>
 <p>Sometimes packages fail to build because the compiler runs
     into an operating system specific soft limit.  With the
     <code class="varname">UNLIMIT_RESOURCES</code> variable pkgsrc can be told
-    to unlimit the resources.  Currently, the allowed values are any combination of
-    <span class="quote">&#8220;<span class="quote">cputime</span>&#8221;</span>, <span class="quote">&#8220;<span class="quote">datasize</span>&#8221;</span>,
-    <span class="quote">&#8220;<span class="quote">memorysize</span>&#8221;</span>, and <span class="quote">&#8220;<span class="quote">stacksize</span>&#8221;</span>.
+    to unlimit the resources.  The allowed values are any combination of
+    <span class="quote">&#8220;<span class="quote">cputime</span>&#8221;</span>,
+    <span class="quote">&#8220;<span class="quote">datasize</span>&#8221;</span>,
+    <span class="quote">&#8220;<span class="quote">memorysize</span>&#8221;</span>,
+    <span class="quote">&#8220;<span class="quote">stacksize</span>&#8221;</span> and
+    <span class="quote">&#8220;<span class="quote">virtualsize</span>&#8221;</span>.
     Setting this variable is similar to running the shell builtin
     <span class="command"><strong>ulimit</strong></span> command to raise the maximum data
     segment size or maximum stack size of a process, respectively, to
@@ -8941,24 +9021,25 @@ of functions.</p>
 ${INSTALL_DATA_DIR} ${PREFIX}/dir1
 ${INSTALL_DATA_DIR} ${PREFIX}/dir2
 </pre>
-<p>You can also just append <span class="quote">&#8220;<span class="quote"><code class="literal">dir1
-    dir2</code></span>&#8221;</span> to the
-    <code class="varname">INSTALLATION_DIRS</code> variable, which will
-    automatically do the right thing.</p>
+<p>Instead of running the <span class="command"><strong>install</strong></span> commands
+    directly, you can also append <span class="quote">&#8220;<span class="quote"><code class="literal">dir1
+    dir2</code></span>&#8221;</span> to the <code class="varname">INSTALLATION_DIRS</code>
+    variable, which will automatically do the right thing.</p>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="where-to-install-documentation"></a>21.6.2. Where to install documentation</h3></div></div></div>
 <p>In general, documentation should be installed into
     <code class="filename">${PREFIX}/share/doc/${PKGBASE}</code> or
-    <code class="filename">${PREFIX}/share/doc/${PKGNAME}</code> (the latter
+    <code class="filename">${PREFIX}/share/doc/${PKGNAME_NOREV}</code> (the latter
     includes the version number of the package).</p>
 <p>Many modern packages using GNU autoconf allow to set the
     directory where HTML documentation is installed with the
-    <span class="quote">&#8220;<span class="quote">--with-html-dir</span>&#8221;</span> option. Sometimes using this flag
-    is needed because otherwise the documentation ends up in
-    <code class="filename">${PREFIX}/share/doc/html</code> or other
-    places.</p>
+    <span class="quote">&#8220;<span class="quote">--with-html-dir</span>&#8221;</span> option. Sometimes using this flag is
+    needed because otherwise the documentation ends up in
+    <code class="filename">${PREFIX}/share/doc/html</code> or other places. In
+    pkgsrc, the HTML documentation should go into the package-specific
+    directory, just like any other documentation.</p>
 <p>An exception to the above is that library API documentation
     generated with the <a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/textproc/gtk-doc/index.html" target="_top"><code class="filename">textproc/gtk-doc</code></a> tools, for use by special
     browsers (devhelp) should be left at their default location, which
@@ -9063,12 +9144,6 @@ REPLACE.tcl.new=        ${PREFIX}/bin/tclsh
 REPLACE_FILES.tcl=      # list of tcl scripts which need to be fixed,
 # relative to ${WRKSRC}, just as in REPLACE_PERL
 </pre>
-<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Note</h3>
-<p>Before March 2006, these variables were called
-    <code class="varname">_REPLACE.*</code> and
-    <code class="varname">_REPLACE_FILES.*</code>.</p>
-</div>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
@@ -9435,15 +9510,6 @@ under this operating system.</p>
 interested in helping our GNOME porting and packaging efforts.  It
 provides instructions on how to manage the existing packages and some
 important information regarding their internals.</p>
-<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">We need your help!</h3>
-<p>Should you have some spare cycles to devote to NetBSD, pkgsrc
-  and GNOME and are willing to learn new exciting stuff, please jump
-  straight to the <a class="ulink" href="https://www.NetBSD.org/contrib/projects.html#gnome" target="_top">pending
-  work</a> list!  There is still a long way to go to get a
-  fully-functional GNOME desktop under NetBSD and we need your help to
-  achieve it!</p>
-</div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="meta-packages"></a>22.1. Meta packages</h2></div></div></div>
@@ -9491,16 +9557,16 @@ give you a general idea on the minimum required tools:</p>
     build system.  As a general rule you will need to tell this to your
     package:</p>
 <pre class="programlisting">
-GNU_CONFIGURE=yes
-USE_LIBTOOL=yes
-USE_TOOLS+=gmake
+GNU_CONFIGURE=  yes
+USE_LIBTOOL=    yes
+USE_TOOLS+=     gmake
 </pre>
 </li>
 <li class="listitem">
 <p>If the package uses pkg-config to detect dependencies, add this
     tool to the list of required utilities:</p>
 <pre class="programlisting">
-USE_TOOLS+=pkg-config
+USE_TOOLS+=     pkg-config
 </pre>
 <p>Also use <a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/verifypc/index.html" target="_top"><code class="filename">pkgtools/verifypc</code></a> at
     the end of the build process to ensure that you did not miss to
@@ -9519,7 +9585,7 @@ USE_TOOLS+=pkg-config
     report.  For such packages you should disable gtk-doc (unless it is
     the default):</p>
 <pre class="programlisting">
-CONFIGURE_ARGS+=--disable-gtk-doc
+CONFIGURE_ARGS+=        --disable-gtk-doc
 </pre>
 <p>The default location of installed HTML files
     (<code class="filename">share/gtk-doc/&lt;package-name&gt;</code>) is correct
@@ -9528,7 +9594,7 @@ CONFIGURE_ARGS+=--disable-gtk-doc
     <span class="command"><strong>devhelp</strong></span> will not be able to open them.  You can
     do that with an entry similar to:</p>
 <pre class="programlisting">
-CONFIGURE_ARGS+=--with-html-dir=${PREFIX}/share/gtk-doc/...
+CONFIGURE_ARGS+=        --with-html-dir=${PREFIX}/share/gtk-doc/...
 </pre>
 </li>
 </ul></div>
@@ -9980,27 +10046,22 @@ place.</p></li>
 	CC, PKG_CC and
 	PKGSRC_COMPILER?</a>
 </dt>
-<dt>24.4. <a href="#devfaq.bl3flags">What is the difference between
-	BUILDLINK_LDFLAGS,
-	BUILDLINK_LDADD and
-	BUILDLINK_LIBS?</a>
-</dt>
-<dt>24.5. <a href="#devfaq.bl3prefix">Why does make show-var
+<dt>24.4. <a href="#devfaq.bl3prefix">Why does make show-var
 	VARNAME=BUILDLINK_PREFIX.foo
 	say it's empty?</a>
 </dt>
-<dt>24.6. <a href="#devfaq.master_sites">What does
+<dt>24.5. <a href="#devfaq.master_sites">What does
 	${MASTER_SITE_SOURCEFORGE:=package/} mean? I
 	don't understand the := inside
 	it.</a>
 </dt>
-<dt>24.7. <a href="#devfaq.mailinglists">Which mailing lists are there for package
+<dt>24.6. <a href="#devfaq.mailinglists">Which mailing lists are there for package
 	developers?</a>
 </dt>
-<dt>24.8. <a href="#devfaq.documentation">Where is the pkgsrc
+<dt>24.7. <a href="#devfaq.documentation">Where is the pkgsrc
 	documentation?</a>
 </dt>
-<dt>24.9. <a href="#devfaq.too-much-time">I have a little time to kill. 
+<dt>24.8. <a href="#devfaq.too-much-time">I have a little time to kill.
 What shall I do?</a>
 </dt>
 </dl>
@@ -10020,11 +10081,16 @@ What shall I do?</a>
 </tr>
 <tr class="answer">
 <td align="left" valign="top"></td>
-<td align="left" valign="top"><p><code class="varname">MAKEFLAGS</code> are the flags passed
-	to the pkgsrc-internal invocations of <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>, while
-	<code class="varname">MAKE_FLAGS</code> are the flags that are passed to
-	the <code class="varname">MAKE_PROGRAM</code> when building the
-	package. [FIXME: What is .MAKEFLAGS for?]</p></td>
+<td align="left" valign="top">
+<p><code class="varname">MAKEFLAGS</code> are the flags passed
+	to the pkgsrc-internal invocations of <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>.</p>
+<p><code class="varname">MAKE_FLAGS</code> are the flags that are
+	passed to the <code class="varname">MAKE_PROGRAM</code> when building the
+	package.</p>
+<p><code class="varname">.MAKEFLAGS</code> is an internal variable of
+	<span class="command"><strong>bmake</strong></span> and should not be used by
+	packages.</p>
+</td>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
@@ -10036,13 +10102,16 @@ What shall I do?</a>
 </tr>
 <tr class="answer">
 <td align="left" valign="top"></td>
-<td align="left" valign="top"><p><code class="varname">MAKE</code> is the path to the
+<td align="left" valign="top">
+<p><code class="varname">MAKE</code> is the path to the
 	<a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> program that is used in the pkgsrc
-	infrastructure. <code class="varname">GMAKE</code> is the path to GNU
-	Make, but you need to say <code class="varname">USE_TOOLS+=gmake</code> to
-	use that. <code class="varname">MAKE_PROGRAM</code> is the path to the
-	Make program that is used for building the
-	package.</p></td>
+	infrastructure.</p>
+<p><code class="varname">GMAKE</code> is the path to GNU Make, but you
+	need to say <code class="varname">USE_TOOLS+=gmake</code> to use
+	that.</p>
+<p><code class="varname">MAKE_PROGRAM</code> is the path to the Make
+	program that is used for building the package.</p>
+</td>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
@@ -10054,30 +10123,21 @@ What shall I do?</a>
 </tr>
 <tr class="answer">
 <td align="left" valign="top"></td>
-<td align="left" valign="top"><p><code class="varname">CC</code> is the path to the real C
-	compiler, which can be configured by the pkgsrc user.
-	<code class="varname">PKG_CC</code> is the path to the compiler wrapper.
-	<code class="varname">PKGSRC_COMPILER</code> is <span class="emphasis"><em>not</em></span> a
-	path to a compiler, but the type of compiler that should be
-	used. See <code class="filename">mk/compiler.mk</code> for more
-	information about the latter variable.</p></td>
-</tr>
-<tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="devfaq.bl3flags.q"></a><p><b>24.4.</b></p>
+<p><code class="varname">CC</code> is the path to the real C
+	compiler, which can be configured by the pkgsrc user.</p>
+<p><code class="varname">PKG_CC</code> is the path to the compiler
+	wrapper.</p>
+<p><code class="varname">PKGSRC_COMPILER</code> is
+	<span class="emphasis"><em>not</em></span> a path to a compiler, but the type of
+	compiler that should be used. See
+	<code class="filename">mk/compiler.mk</code> for more information about
+	the latter variable.</p>
 </td>
-<td align="left" valign="top"><p>What is the difference between
-	<code class="varname">BUILDLINK_LDFLAGS</code>,
-	<code class="varname">BUILDLINK_LDADD</code> and
-	<code class="varname">BUILDLINK_LIBS</code>?</p></td>
-</tr>
-<tr class="answer">
-<td align="left" valign="top"></td>
-<td align="left" valign="top"><p>[FIXME]</p></td>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="devfaq.bl3prefix.q"></a><p><b>24.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="devfaq.bl3prefix.q"></a><p><b>24.4.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -10093,7 +10153,7 @@ What shall I do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="devfaq.master_sites.q"></a><p><b>24.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="devfaq.master_sites.q"></a><p><b>24.5.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="code">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -10102,8 +10162,8 @@ What shall I do?</a>
 </tr>
 <tr class="answer">
 <td align="left" valign="top"></td>
-<td align="left" valign="top"><p>The <code class="code">:=</code> is not really an
-	assignment operator, although it looks like it.
+<td align="left" valign="top"><p>The <code class="code">:=</code> is not an
+	assignment operator, even though it may look like one.
 	Instead, it is a degenerate form of
 	<code class="code">${LIST:<em class="replaceable"><code>old_string</code></em>=<em class="replaceable"><code>new_string</code></em>}</code>,
 	which is documented in the <a class="citerefentry" href="https://man.NetBSD.org/NetBSD-9.2/i386/make.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> man page and which is
@@ -10117,7 +10177,7 @@ What shall I do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="devfaq.mailinglists.q"></a><p><b>24.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="devfaq.mailinglists.q"></a><p><b>24.6.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -10142,7 +10202,7 @@ What shall I do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="devfaq.documentation.q"></a><p><b>24.8.</b></p>
+<a name="devfaq.documentation"></a><a name="devfaq.documentation.q"></a><p><b>24.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -10190,9 +10250,9 @@ What shall I do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="devfaq.too-much-time.q"></a><p><b>24.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="devfaq.too-much-time.q"></a><p><b>24.8.</b></p>
 </td>
-<td align="left" valign="top"><p>I have a little time to kill. 
+<td align="left" valign="top"><p>I have a little time to kill.
 What shall I do?</p></td>
 </tr>
 <tr class="answer">
@@ -11733,112 +11793,116 @@ source packages</h2></div></div></div>
 <td>ALL_ENV</td>
 </tr>
 <tr>
+<td>ALSA_PC</td>
 <td>ALTERNATIVES_SRC</td>
+</tr>
+<tr>
 <td>AMANDA_TMP</td>
-</tr>
-<tr>
 <td>AMANDA_USER</td>
+</tr>
+<tr>
 <td>AMANDA_VAR</td>
-</tr>
-<tr>
 <td>APACHE_GROUP</td>
+</tr>
+<tr>
 <td>APACHE_MODULE_NAME</td>
-</tr>
-<tr>
 <td>APACHE_MODULE_SRC</td>
+</tr>
+<tr>
 <td>APACHE_MODULE_SRCDIR</td>
-</tr>
-<tr>
 <td>APACHE_PKG_PREFIX</td>
+</tr>
+<tr>
 <td>APACHE_SUEXEC_CONFIGURE_ARGS</td>
-</tr>
-<tr>
 <td>APACHE_SUEXEC_DOCROOT</td>
+</tr>
+<tr>
 <td>APACHE_USER</td>
-</tr>
-<tr>
 <td>APPEND_ABI</td>
+</tr>
+<tr>
 <td>APPEND_ELF</td>
-</tr>
-<tr>
 <td>ARLA_CACHE</td>
+</tr>
+<tr>
 <td>AUDIT_PACKAGES_FLAGS</td>
-</tr>
-<tr>
 <td>AUTOCONF_REQD</td>
+</tr>
+<tr>
 <td>AUTOMAKE_OVERRIDE</td>
-</tr>
-<tr>
 <td>AUTOMAKE_REQD</td>
+</tr>
+<tr>
 <td>AUTO_MKDIRS</td>
-</tr>
-<tr>
 <td>BDB185_DEFAULT</td>
+</tr>
+<tr>
 <td>BDBBASE</td>
-</tr>
-<tr>
 <td>BDB_ACCEPTED</td>
+</tr>
+<tr>
 <td>BDB_DEFAULT</td>
-</tr>
-<tr>
 <td>BDB_LIBS</td>
+</tr>
+<tr>
 <td>BDB_TYPE</td>
-</tr>
-<tr>
 <td>BINCIMAP_GROUP</td>
+</tr>
+<tr>
 <td>BINCIMAP_USER</td>
-</tr>
-<tr>
 <td>BIND_DIR</td>
+</tr>
+<tr>
 <td>BIND_GROUP</td>
-</tr>
-<tr>
 <td>BIND_USER</td>
+</tr>
+<tr>
 <td>BINOWN</td>
-</tr>
-<tr>
 <td>BINPKG_SITES</td>
+</tr>
+<tr>
 <td>BIN_INSTALL_FLAGS</td>
-</tr>
-<tr>
 <td>BISON_PKGDATADIR</td>
+</tr>
+<tr>
 <td>BLAS</td>
-</tr>
-<tr>
 <td>BLAS_ACCEPTED</td>
+</tr>
+<tr>
 <td>BLAS_C_INTERFACE</td>
-</tr>
-<tr>
 <td>BLAS_INCLUDES</td>
+</tr>
+<tr>
 <td>BLAS_INDEX64</td>
-</tr>
-<tr>
 <td>BLAS_LIBS</td>
+</tr>
+<tr>
 <td>BLAS_TYPE</td>
-</tr>
-<tr>
 <td>BOOTSTRAP_DEPENDS</td>
+</tr>
+<tr>
 <td>BROKEN</td>
-</tr>
-<tr>
 <td>BROKEN_EXCEPT_ON_PLATFORM</td>
+</tr>
+<tr>
 <td>BROKEN_ON_PLATFORM</td>
-</tr>
-<tr>
 <td>BSDSRCDIR</td>
+</tr>
+<tr>
 <td>BSDXSRCDIR</td>
-</tr>
-<tr>
 <td>BSD_MAKE_ENV</td>
+</tr>
+<tr>
 <td>BUILDLINK_AUTO_DIRS</td>
-</tr>
-<tr>
 <td>BUILDLINK_AUTO_VARS</td>
-<td>BUILDLINK_CFLAGS</td>
 </tr>
 <tr>
+<td>BUILDLINK_CFLAGS</td>
 <td>BUILDLINK_CONTENTS_FILTER</td>
+</tr>
+<tr>
 <td>BUILDLINK_CPPFLAGS</td>
+<td>BUILDLINK_DEPMETHOD</td>
 </tr>
 <tr>
 <td>BUILDLINK_FILES</td>
@@ -11930,95 +11994,107 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>CDROM_PKG_URL_HOST</td>
+<td>CHECKOUT_DATE</td>
+</tr>
+<tr>
 <td>CHECK_COMPILER</td>
-</tr>
-<tr>
 <td>CHECK_FAKEHOME</td>
+</tr>
+<tr>
 <td>CHECK_FILES</td>
-</tr>
-<tr>
 <td>CHECK_FILES_SKIP</td>
+</tr>
+<tr>
 <td>CHECK_FILES_STRICT</td>
-</tr>
-<tr>
 <td>CHECK_HEADERS</td>
+</tr>
+<tr>
 <td>CHECK_HEADERS_SKIP</td>
-</tr>
-<tr>
 <td>CHECK_INTERPRETER</td>
+</tr>
+<tr>
 <td>CHECK_INTERPRETER_SKIP</td>
-</tr>
-<tr>
 <td>CHECK_PERMS</td>
+</tr>
+<tr>
 <td>CHECK_PERMS_AUTOFIX</td>
-</tr>
-<tr>
 <td>CHECK_PERMS_SKIP</td>
+</tr>
+<tr>
 <td>CHECK_PIE</td>
-</tr>
-<tr>
 <td>CHECK_PIE_SKIP</td>
+</tr>
+<tr>
 <td>CHECK_PIE_SUPPORTED</td>
-</tr>
-<tr>
 <td>CHECK_PORTABILITY</td>
+</tr>
+<tr>
 <td>CHECK_PORTABILITY_EXPERIMENTAL</td>
-</tr>
-<tr>
 <td>CHECK_PORTABILITY_SKIP</td>
+</tr>
+<tr>
 <td>CHECK_RELRO</td>
-</tr>
-<tr>
 <td>CHECK_RELRO_SKIP</td>
+</tr>
+<tr>
 <td>CHECK_RELRO_SUPPORTED</td>
-</tr>
-<tr>
 <td>CHECK_SHLIBS</td>
+</tr>
+<tr>
 <td>CHECK_SHLIBS_SKIP</td>
-</tr>
-<tr>
 <td>CHECK_SHLIBS_SUPPORTED</td>
+</tr>
+<tr>
 <td>CHECK_SHLIBS_TOXIC</td>
-</tr>
-<tr>
 <td>CHECK_SSP</td>
+</tr>
+<tr>
 <td>CHECK_SSP_SKIP</td>
-</tr>
-<tr>
 <td>CHECK_SSP_SUPPORTED</td>
+</tr>
+<tr>
 <td>CHECK_STRIPPED</td>
-</tr>
-<tr>
 <td>CHECK_STRIPPED_SKIP</td>
+</tr>
+<tr>
 <td>CHECK_WRKREF</td>
-</tr>
-<tr>
 <td>CHECK_WRKREF_EXTRA_DIRS</td>
+</tr>
+<tr>
 <td>CHECK_WRKREF_SKIP</td>
-</tr>
-<tr>
 <td>CLAMAV_DBDIR</td>
+</tr>
+<tr>
 <td>CLAMAV_GROUP</td>
-</tr>
-<tr>
 <td>CLAMAV_USER</td>
+</tr>
+<tr>
 <td>CLANGBASE</td>
-</tr>
-<tr>
 <td>CLEANDEPENDS</td>
+</tr>
+<tr>
 <td>CMAKE_DEPENDENCIES_REWRITE</td>
-</tr>
-<tr>
 <td>CMAKE_INSTALL_NAME_DIR</td>
+</tr>
+<tr>
 <td>CMAKE_INSTALL_PREFIX</td>
-</tr>
-<tr>
 <td>CMAKE_MODULE_PATH_OVERRIDE</td>
-<td>CMAKE_PKGSRC_BUILD_FLAGS</td>
 </tr>
 <tr>
+<td>CMAKE_PKGSRC_BUILD_FLAGS</td>
 <td>CMAKE_PREFIX_PATH</td>
+</tr>
+<tr>
 <td>CMAKE_USE_GNU_INSTALL_DIRS</td>
+<td>COMMON_LISP_DOCFILES</td>
+</tr>
+<tr>
+<td>COMMON_LISP_EXAMPLES</td>
+<td>COMMON_LISP_EXTRAFILES</td>
+</tr>
+<tr>
+<td>COMMON_LISP_PACKAGES</td>
+<td>COMMON_LISP_SYSTEM</td>
 </tr>
 <tr>
 <td>COMPILER_RPATH_FLAG</td>
@@ -12081,232 +12157,260 @@ source packages</h2></div></div></div>
 <td>CURSES_TYPE</td>
 </tr>
 <tr>
+<td>CVS_EXTRACTDIR</td>
+<td>CVS_MODULE</td>
+</tr>
+<tr>
+<td>CVS_PROJECT</td>
+<td>CVS_REPOSITORIES</td>
+</tr>
+<tr>
+<td>CVS_ROOT</td>
+<td>CVS_ROOT_GNU</td>
+</tr>
+<tr>
+<td>CVS_ROOT_NONGNU</td>
+<td>CVS_ROOT_SOURCEFORGE</td>
+</tr>
+<tr>
+<td>CVS_TAG</td>
 <td>CXX</td>
+</tr>
+<tr>
 <td>CYRUS_GROUP</td>
-</tr>
-<tr>
 <td>CYRUS_IDLE</td>
+</tr>
+<tr>
 <td>CYRUS_USER</td>
-</tr>
-<tr>
 <td>DAEMONTOOLS_GROUP</td>
+</tr>
+<tr>
 <td>DAEMONTOOLS_LOG_USER</td>
-</tr>
-<tr>
 <td>DARWIN_NO_SYSTEM_LIBS</td>
+</tr>
+<tr>
 <td>DARWIN_REQUIRES_FILTER</td>
-</tr>
-<tr>
 <td>DBUS_GROUP</td>
+</tr>
+<tr>
 <td>DBUS_USER</td>
-</tr>
-<tr>
 <td>DEFANG_GROUP</td>
+</tr>
+<tr>
 <td>DEFANG_USER</td>
-</tr>
-<tr>
 <td>DEFAULT_ACCEPTABLE_LICENSES</td>
+</tr>
+<tr>
 <td>DEFAULT_DISTFILES</td>
-</tr>
-<tr>
 <td>DEFAULT_IRC_SERVER</td>
+</tr>
+<tr>
 <td>DEFAULT_SERIAL_DEVICE</td>
-</tr>
-<tr>
 <td>DEF_UMASK</td>
+</tr>
+<tr>
 <td>DEINSTALLDEPENDS</td>
-</tr>
-<tr>
 <td>DEINSTALL_SRC</td>
+</tr>
+<tr>
 <td>DEINSTALL_TEMPLATES</td>
-</tr>
-<tr>
 <td>DELAYED_ERROR_MSG</td>
+</tr>
+<tr>
 <td>DELAYED_WARNING_MSG</td>
-</tr>
-<tr>
 <td>DEPENDS</td>
+</tr>
+<tr>
 <td>DEPENDS_TARGET</td>
-</tr>
-<tr>
 <td>DEPENDS_TYPE</td>
+</tr>
+<tr>
 <td>DESTDIR</td>
-</tr>
-<tr>
 <td>DESTDIR_VARNAME</td>
+</tr>
+<tr>
 <td>DIALER_GROUP</td>
-</tr>
-<tr>
 <td>DIGEST_REQD</td>
+</tr>
+<tr>
 <td>DISTDIR</td>
-</tr>
-<tr>
 <td>DISTFILES</td>
+</tr>
+<tr>
 <td>DISTINFO_FILE</td>
-</tr>
-<tr>
 <td>DISTNAME</td>
+</tr>
+<tr>
 <td>DIST_PATH</td>
-</tr>
-<tr>
 <td>DIST_SUBDIR</td>
+</tr>
+<tr>
 <td>DJBDNS_AXFR_USER</td>
-</tr>
-<tr>
 <td>DJBDNS_CACHE_USER</td>
+</tr>
+<tr>
 <td>DJBDNS_DJBDNS_GROUP</td>
-</tr>
-<tr>
 <td>DJBDNS_LOG_USER</td>
+</tr>
+<tr>
 <td>DJBDNS_RBL_USER</td>
-</tr>
-<tr>
 <td>DJBDNS_TINY_USER</td>
+</tr>
+<tr>
 <td>DLOPEN_REQUIRE_PTHREADS</td>
-</tr>
-<tr>
 <td>DL_AUTO_VARS</td>
+</tr>
+<tr>
 <td>DL_CFLAGS</td>
-</tr>
-<tr>
 <td>DL_LDFLAGS</td>
+</tr>
+<tr>
 <td>DL_LIBS</td>
-</tr>
-<tr>
 <td>DNS</td>
+</tr>
+<tr>
 <td>DOCOWN</td>
-</tr>
-<tr>
 <td>DOWNLOADED_DISTFILE</td>
+</tr>
+<tr>
 <td>DQCACHE_GROUP</td>
-</tr>
-<tr>
 <td>DQCACHE_USER</td>
+</tr>
+<tr>
 <td>DT_LAYOUT</td>
-</tr>
-<tr>
 <td>DYNAMIC_SITES_CMD</td>
+</tr>
+<tr>
 <td>DYNAMIC_SITES_SCRIPT</td>
-</tr>
-<tr>
 <td>ECHO</td>
+</tr>
+<tr>
 <td>ECHO_N</td>
-</tr>
-<tr>
 <td>ELK_GUI</td>
+</tr>
+<tr>
 <td>EMACS_TYPE</td>
-</tr>
-<tr>
 <td>EMULDIR</td>
+</tr>
+<tr>
 <td>EMULSUBDIR</td>
-</tr>
-<tr>
 <td>EMULSUBDIRSLASH</td>
+</tr>
+<tr>
 <td>EMUL_ARCH</td>
-</tr>
-<tr>
 <td>EMUL_DISTRO</td>
+</tr>
+<tr>
 <td>EMUL_EXEC_FMT</td>
-</tr>
-<tr>
 <td>EMUL_IS_NATIVE</td>
+</tr>
+<tr>
 <td>EMUL_MODULES</td>
-</tr>
-<tr>
 <td>EMUL_OPSYS</td>
+</tr>
+<tr>
 <td>EMUL_PKG_FMT</td>
-</tr>
-<tr>
 <td>EMUL_PLATFORM</td>
+</tr>
+<tr>
 <td>EMUL_PLATFORMS</td>
-</tr>
-<tr>
 <td>EMUL_PREFER</td>
+</tr>
+<tr>
 <td>EMUL_REQD</td>
-</tr>
-<tr>
 <td>EMUL_TYPE</td>
+</tr>
+<tr>
 <td>ERROR_MSG</td>
-</tr>
-<tr>
 <td>EXIM_GROUP</td>
+</tr>
+<tr>
 <td>EXIM_USER</td>
-</tr>
-<tr>
 <td>EXPORT_SYMBOLS_LDFLAGS</td>
+</tr>
+<tr>
 <td>EXTRACTOR</td>
-</tr>
-<tr>
 <td>EXTRACT_CMD</td>
+</tr>
+<tr>
 <td>EXTRACT_CMD_DEFAULT</td>
-</tr>
-<tr>
 <td>EXTRACT_DIR</td>
+</tr>
+<tr>
 <td>EXTRACT_ELEMENTS</td>
-</tr>
-<tr>
 <td>EXTRACT_ENV</td>
+</tr>
+<tr>
 <td>EXTRACT_ONLY</td>
-</tr>
-<tr>
 <td>EXTRACT_OPTS</td>
+</tr>
+<tr>
 <td>EXTRACT_SUFX</td>
-</tr>
-<tr>
 <td>EXTRACT_USING</td>
+</tr>
+<tr>
 <td>FAIL</td>
-</tr>
-<tr>
 <td>FAILOVER_FETCH</td>
+</tr>
+<tr>
 <td>FAIL_MSG</td>
-</tr>
-<tr>
 <td>FAKE_NCURSES</td>
+</tr>
+<tr>
 <td>FAM</td>
-</tr>
-<tr>
 <td>FAM_ACCEPTED</td>
+</tr>
+<tr>
 <td>FAM_DEFAULT</td>
-</tr>
-<tr>
 <td>FAM_SERVER</td>
+</tr>
+<tr>
 <td>FCPATH</td>
-</tr>
-<tr>
 <td>FEATURE_CPPFLAGS</td>
+</tr>
+<tr>
 <td>FEATURE_LDFLAGS</td>
-</tr>
-<tr>
 <td>FEATURE_LIBS</td>
+</tr>
+<tr>
 <td>FETCH_AFTER_ARGS</td>
-</tr>
-<tr>
 <td>FETCH_BEFORE_ARGS</td>
+</tr>
+<tr>
 <td>FETCH_CMD</td>
-</tr>
-<tr>
 <td>FETCH_OUTPUT_ARGS</td>
+</tr>
+<tr>
 <td>FETCH_PROXY</td>
-</tr>
-<tr>
 <td>FETCH_RESUME_ARGS</td>
+</tr>
+<tr>
 <td>FETCH_TIMEOUT</td>
-</tr>
-<tr>
 <td>FETCH_USE_IPV4_ONLY</td>
+</tr>
+<tr>
 <td>FETCH_USING</td>
-</tr>
-<tr>
 <td>FILES_SUBST</td>
-<td>FILES_SUBST_SED</td>
 </tr>
 <tr>
+<td>FILES_SUBST_SED</td>
 <td>FIX_SYSTEM_HEADERS</td>
+</tr>
+<tr>
+<td>FONTDIR</td>
 <td>FONTS_DIRS</td>
 </tr>
 <tr>
 <td>FONTS_VERBOSE</td>
 <td>FOO_HACKS_MK</td>
+</tr>
+<tr>
+<td>FOSSIL_EXTRACTDIR</td>
+<td>FOSSIL_REPO</td>
+</tr>
+<tr>
+<td>FOSSIL_REPOSITORIES</td>
+<td>FOSSIL_VERSION</td>
 </tr>
 <tr>
 <td>FOX_USE_XUNICODE</td>
@@ -12385,6 +12489,26 @@ source packages</h2></div></div></div>
 <td>GITHUB_TYPE</td>
 </tr>
 <tr>
+<td>GITLAB_PROJECT</td>
+<td>GITLAB_TAG</td>
+</tr>
+<tr>
+<td>GITLAB_TYPE</td>
+<td>GIT_BRANCH</td>
+</tr>
+<tr>
+<td>GIT_ENV</td>
+<td>GIT_EXTRACTDIR</td>
+</tr>
+<tr>
+<td>GIT_REPO</td>
+<td>GIT_REPOSITORIES</td>
+</tr>
+<tr>
+<td>GIT_REVISION</td>
+<td>GIT_TAG</td>
+</tr>
+<tr>
 <td>GNU</td>
 <td>GNU_CONFIGURE</td>
 </tr>
@@ -12422,19 +12546,27 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>GZIP</td>
+<td>HASKELL_COMPILER</td>
+</tr>
+<tr>
 <td>HASKELL_ENABLE_DYNAMIC_EXECUTABLE</td>
-</tr>
-<tr>
 <td>HASKELL_ENABLE_HADDOCK_DOCUMENTATION</td>
+</tr>
+<tr>
 <td>HASKELL_ENABLE_LIBRARY_PROFILING</td>
-</tr>
-<tr>
 <td>HASKELL_ENABLE_SHARED_LIBRARY</td>
-<td>HASKELL_OPTIMIZATION_LEVEL</td>
 </tr>
 <tr>
+<td>HASKELL_OPTIMIZATION_LEVEL</td>
 <td>HAS_CONFIGURE</td>
+</tr>
+<tr>
 <td>HEADER_TEMPLATES</td>
+<td>HG_REPO</td>
+</tr>
+<tr>
+<td>HG_REPOSITORIES</td>
+<td>HG_TAG</td>
 </tr>
 <tr>
 <td>HOMEPAGE</td>
@@ -12533,6 +12665,10 @@ source packages</h2></div></div></div>
 <td>JABBERD_USER</td>
 </tr>
 <tr>
+<td>JAVA_APP_PATH</td>
+<td>JAVA_APP_TARGETS</td>
+</tr>
+<tr>
 <td>JAVA_BINPREFIX</td>
 <td>JAVA_CLASSPATH</td>
 </tr>
@@ -12605,68 +12741,76 @@ source packages</h2></div></div></div>
 <td>LINK_RPATH_FLAG</td>
 </tr>
 <tr>
+<td>LINUX_BASE_NODEPS</td>
+<td>LINUX_BASE_PREFERRED</td>
+</tr>
+<tr>
+<td>LINUX_BASE_REQUIRED</td>
 <td>LINUX_LOCALES</td>
+</tr>
+<tr>
 <td>LOCALBASE</td>
-</tr>
-<tr>
 <td>LOCALBASE_LOCKTYPE</td>
+</tr>
+<tr>
 <td>LOCALPATCHES</td>
-</tr>
-<tr>
 <td>LOVE_DATA</td>
+</tr>
+<tr>
 <td>LOVE_GAME</td>
-</tr>
-<tr>
 <td>LOVE_VERSION</td>
+</tr>
+<tr>
 <td>LP32PLATFORMS</td>
-</tr>
-<tr>
 <td>LP64PLATFORMS</td>
+</tr>
+<tr>
 <td>LUA_BUSTED_ARGS</td>
-</tr>
-<tr>
 <td>LUA_CDIR</td>
+</tr>
+<tr>
 <td>LUA_COMPILER</td>
-</tr>
-<tr>
 <td>LUA_DOCDIR</td>
+</tr>
+<tr>
 <td>LUA_EXAMPLESDIR</td>
-</tr>
-<tr>
 <td>LUA_INCDIR</td>
+</tr>
+<tr>
 <td>LUA_INTERPRETER</td>
-</tr>
-<tr>
 <td>LUA_LDIR</td>
+</tr>
+<tr>
 <td>LUA_LINKER_MAGIC</td>
-</tr>
-<tr>
 <td>LUA_PKGPREFIX</td>
+</tr>
+<tr>
 <td>LUA_SELF_CONFLICT</td>
-</tr>
-<tr>
 <td>LUA_USE_BUSTED</td>
+</tr>
+<tr>
 <td>LUA_VERSIONS_ACCEPTED</td>
-</tr>
-<tr>
 <td>LUA_VERSIONS_INCOMPATIBLE</td>
+</tr>
+<tr>
 <td>LUA_VERSION_DEFAULT</td>
-</tr>
-<tr>
 <td>LUA_VERSION_REQD</td>
+</tr>
+<tr>
 <td>Lua</td>
-</tr>
-<tr>
 <td>MACHINE_PLATFORM</td>
+</tr>
+<tr>
 <td>MAILAGENT_DOMAIN</td>
-</tr>
-<tr>
 <td>MAILAGENT_EMAIL</td>
-<td>MAILAGENT_FQDN</td>
 </tr>
 <tr>
+<td>MAILAGENT_FQDN</td>
 <td>MAILAGENT_ORGANIZATION</td>
+</tr>
+<tr>
 <td>MAJORDOMO_HOMEDIR</td>
+<td>MAJOR_OS_VERSION</td>
 </tr>
 <tr>
 <td>MAKEINFO_ARGS</td>
@@ -12753,155 +12897,163 @@ source packages</h2></div></div></div>
 <td>MTOOLS_ENABLE_FLOPPYD</td>
 </tr>
 <tr>
+<td>MUST</td>
 <td>MV</td>
+</tr>
+<tr>
 <td>MYSQL_CHARSET</td>
-</tr>
-<tr>
 <td>MYSQL_DATADIR</td>
+</tr>
+<tr>
 <td>MYSQL_EXTRA_CHARSET</td>
-</tr>
-<tr>
 <td>MYSQL_GROUP</td>
+</tr>
+<tr>
 <td>MYSQL_USER</td>
-</tr>
-<tr>
 <td>MYSQL_VERSION</td>
+</tr>
+<tr>
 <td>MYSQL_VERSIONS_ACCEPTED</td>
-</tr>
-<tr>
 <td>MYSQL_VERSIONS_ALL</td>
+</tr>
+<tr>
 <td>MYSQL_VERSION_DEFAULT</td>
-</tr>
-<tr>
 <td>NAGIOSCMD_GROUP</td>
+</tr>
+<tr>
 <td>NAGIOSDIR</td>
-</tr>
-<tr>
 <td>NAGIOS_GROUP</td>
+</tr>
+<tr>
 <td>NAGIOS_USER</td>
-</tr>
-<tr>
 <td>NATIVE_APPEND_ABI</td>
+</tr>
+<tr>
 <td>NATIVE_APPEND_ELF</td>
-</tr>
-<tr>
 <td>NATIVE_EXEC_FMT</td>
+</tr>
+<tr>
 <td>NATIVE_MACHINE_PLATFORM</td>
-</tr>
-<tr>
 <td>NATIVE_OBJECT_FMT</td>
+</tr>
+<tr>
 <td>NBPAX_PROGRAM_PREFIX</td>
-</tr>
-<tr>
 <td>NETBSD_LOGIN_NAME</td>
+</tr>
+<tr>
 <td>NMH_EDITOR</td>
-</tr>
-<tr>
 <td>NMH_MTA</td>
+</tr>
+<tr>
 <td>NMH_PAGER</td>
-</tr>
-<tr>
 <td>NODE_VERSIONS_ACCEPTED</td>
+</tr>
+<tr>
 <td>NODE_VERSIONS_INCOMPATIBLE</td>
-</tr>
-<tr>
 <td>NODE_VERSION_DEFAULT</td>
+</tr>
+<tr>
 <td>NODE_VERSION_REQD</td>
-</tr>
-<tr>
 <td>NOLOGIN</td>
+</tr>
+<tr>
 <td>NOTE</td>
-</tr>
-<tr>
 <td>NOT_FOR_PLATFORM</td>
+</tr>
+<tr>
 <td>NOT_PAX_ASLR_SAFE</td>
-</tr>
-<tr>
 <td>NOT_PAX_MPROTECT_SAFE</td>
+</tr>
+<tr>
 <td>NO_BUILD</td>
-</tr>
-<tr>
 <td>NO_CHECKSUM</td>
+</tr>
+<tr>
 <td>NO_CONFIGURE</td>
-</tr>
-<tr>
 <td>NO_SKIP</td>
+</tr>
+<tr>
 <td>NS_PREFERRED</td>
-</tr>
-<tr>
 <td>NULLMAILER_GROUP</td>
+</tr>
+<tr>
 <td>NULLMAILER_USER</td>
-</tr>
-<tr>
 <td>OASIS</td>
+</tr>
+<tr>
 <td>OASIS_BUILD_ARGS</td>
-</tr>
-<tr>
 <td>OBJHOSTNAME</td>
+</tr>
+<tr>
 <td>OBJMACHINE</td>
-</tr>
-<tr>
 <td>OCAML_FINDLIB_DIRS</td>
+</tr>
+<tr>
 <td>OCAML_FINDLIB_REGISTER</td>
-</tr>
-<tr>
 <td>OCAML_FINDLIB_REGISTER_VERBOSE</td>
+</tr>
+<tr>
 <td>OCAML_SITELIBDIR</td>
-</tr>
-<tr>
 <td>OCAML_TOPKG_DOCDIR</td>
+</tr>
+<tr>
 <td>OCAML_USE_DUNE</td>
-</tr>
-<tr>
 <td>OCAML_USE_FINDLIB</td>
+</tr>
+<tr>
 <td>OCAML_USE_OASIS</td>
-</tr>
-<tr>
 <td>OCAML_USE_OASIS_DYNRUN</td>
+</tr>
+<tr>
 <td>OCAML_USE_OPAM</td>
-</tr>
-<tr>
 <td>OCAML_USE_OPT_COMPILER</td>
+</tr>
+<tr>
 <td>OCAML_USE_TOPKG</td>
-</tr>
-<tr>
 <td>OMF</td>
+</tr>
+<tr>
 <td>ONLY_FOR_COMPILER</td>
-</tr>
-<tr>
 <td>ONLY_FOR_PLATFORM</td>
+</tr>
+<tr>
 <td>OPENSSH_CHROOT</td>
-</tr>
-<tr>
 <td>OPENSSH_GROUP</td>
+</tr>
+<tr>
 <td>OPENSSH_USER</td>
-</tr>
-<tr>
 <td>OPSYS</td>
+</tr>
+<tr>
 <td>OPSYS_EMULDIR</td>
-</tr>
-<tr>
 <td>OPSYS_VERSION</td>
+</tr>
+<tr>
 <td>OS</td>
-</tr>
-<tr>
 <td>OSS_TYPE</td>
+</tr>
+<tr>
 <td>OSX</td>
-</tr>
-<tr>
 <td>OSX_TOLERATE_SDK_SKEW</td>
+</tr>
+<tr>
+<td>OS_HAVE_ALSA</td>
+<td>OS_HAVE_RCD</td>
+</tr>
+<tr>
 <td>OS_VARIANT</td>
-</tr>
-<tr>
 <td>OS_VERSION</td>
+</tr>
+<tr>
 <td>OTF_FONTS_DIR</td>
-</tr>
-<tr>
 <td>OVERRIDE_DIRDEPTH</td>
-<td>OVERRIDE_GEMSPEC</td>
 </tr>
 <tr>
+<td>OVERRIDE_GEMSPEC</td>
 <td>OVERRIDE_GNU_CONFIG_SCRIPTS</td>
+</tr>
+<tr>
+<td>OVERRIDE_ROCKSPEC</td>
 <td>OWN_DIRS</td>
 </tr>
 <tr>
@@ -12947,6 +13099,14 @@ source packages</h2></div></div></div>
 <tr>
 <td>PATH</td>
 <td>PCCBASE</td>
+</tr>
+<tr>
+<td>PEAR</td>
+<td>PEAR_CHANNEL</td>
+</tr>
+<tr>
+<td>PEAR_CHANNEL_ALIAS</td>
+<td>PEAR_CHANNEL_VERSION</td>
 </tr>
 <tr>
 <td>PEAR_CMD</td>
@@ -13341,6 +13501,10 @@ source packages</h2></div></div></div>
 <td>RASMOL_DEPTH</td>
 </tr>
 <tr>
+<td>RCD_DIR</td>
+<td>RCD_ORDER</td>
+</tr>
+<tr>
 <td>RCD_SCRIPTS</td>
 <td>RCD_SCRIPTS_DIR</td>
 </tr>
@@ -13353,276 +13517,284 @@ source packages</h2></div></div></div>
 <td>RCD_SCRIPT_SRC</td>
 </tr>
 <tr>
+<td>RCD_SUBR</td>
 <td>RDOC</td>
+</tr>
+<tr>
 <td>READLINE_DEFAULT</td>
-</tr>
-<tr>
 <td>READLINE_TYPE</td>
+</tr>
+<tr>
 <td>REAL_ROOT_GROUP</td>
-</tr>
-<tr>
 <td>REAL_ROOT_USER</td>
+</tr>
+<tr>
 <td>RECURSIVE_MAKE</td>
-</tr>
-<tr>
 <td>RELAY_CTRL_DIR</td>
+</tr>
+<tr>
 <td>RELRO_SUPPORTED</td>
-</tr>
-<tr>
 <td>REPLACE_AWK</td>
+</tr>
+<tr>
 <td>REPLACE_BASH</td>
-</tr>
-<tr>
 <td>REPLACE_CSH</td>
+</tr>
+<tr>
 <td>REPLACE_KSH</td>
-</tr>
-<tr>
 <td>REPLACE_LUA</td>
+</tr>
+<tr>
 <td>REPLACE_NODEJS</td>
-</tr>
-<tr>
 <td>REPLACE_OCTAVE</td>
+</tr>
+<tr>
 <td>REPLACE_PERL</td>
-</tr>
-<tr>
 <td>REPLACE_PERL6</td>
+</tr>
+<tr>
 <td>REPLACE_PHP</td>
-</tr>
-<tr>
 <td>REPLACE_PYTHON</td>
+</tr>
+<tr>
 <td>REPLACE_QORE</td>
-</tr>
-<tr>
 <td>REPLACE_R</td>
+</tr>
+<tr>
 <td>REPLACE_RUBY</td>
-</tr>
-<tr>
 <td>REPLACE_RUBY_DIRS</td>
+</tr>
+<tr>
 <td>REPLACE_RUBY_PAT</td>
-</tr>
-<tr>
 <td>REPLACE_SH</td>
+</tr>
+<tr>
 <td>REPLACE_TEXLUA</td>
-</tr>
-<tr>
 <td>REPLACE_WISH</td>
+</tr>
+<tr>
 <td>REQD_DIRS</td>
-</tr>
-<tr>
 <td>REQD_DIRS_PERMS</td>
+</tr>
+<tr>
 <td>REQD_FILES</td>
-</tr>
-<tr>
 <td>REQD_FILES_MODE</td>
+</tr>
+<tr>
 <td>REQD_FILES_PERMS</td>
-</tr>
-<tr>
 <td>RESOLV_AUTO_VARS</td>
+</tr>
+<tr>
 <td>RESOLV_LDFLAGS</td>
-</tr>
-<tr>
 <td>RESOLV_LIBS</td>
+</tr>
+<tr>
 <td>RM</td>
+<td>ROCKSPEC_NAME</td>
 </tr>
 <tr>
+<td>ROCKSPEC_SPECFILE</td>
 <td>ROOT_CMD</td>
+</tr>
+<tr>
 <td>ROOT_GROUP</td>
-</tr>
-<tr>
 <td>ROOT_USER</td>
+</tr>
+<tr>
 <td>RPCGEN</td>
-</tr>
-<tr>
 <td>RPM</td>
+</tr>
+<tr>
 <td>RPM2PKG_PLIST</td>
-</tr>
-<tr>
 <td>RPM2PKG_PREFIX</td>
+</tr>
+<tr>
 <td>RPM2PKG_STAGE</td>
-</tr>
-<tr>
 <td>RPM2PKG_STRIP</td>
+</tr>
+<tr>
 <td>RPM2PKG_SUBPREFIX</td>
-</tr>
-<tr>
 <td>RPMFILES</td>
+</tr>
+<tr>
 <td>RPMIGNOREPATH</td>
-</tr>
-<tr>
 <td>RPM_DB_PREFIX</td>
+</tr>
+<tr>
 <td>RSSH_CVS_PATH</td>
-</tr>
-<tr>
 <td>RSSH_RDIST_PATH</td>
+</tr>
+<tr>
 <td>RSSH_RSYNC_PATH</td>
-</tr>
-<tr>
 <td>RSSH_SCP_PATH</td>
+</tr>
+<tr>
 <td>RSSH_SFTP_SERVER_PATH</td>
-</tr>
-<tr>
 <td>RUBY</td>
+</tr>
+<tr>
 <td>RUBYGEM</td>
-</tr>
-<tr>
 <td>RUBYGEM_NAME</td>
+</tr>
+<tr>
 <td>RUBYGEM_OPTIONS</td>
-</tr>
-<tr>
 <td>RUBYGEM_VERBOSE</td>
+</tr>
+<tr>
 <td>RUBY_ABI_VERSION</td>
-</tr>
-<tr>
 <td>RUBY_ARCH</td>
+</tr>
+<tr>
 <td>RUBY_ARCHINC</td>
-</tr>
-<tr>
 <td>RUBY_ARCHLIB</td>
+</tr>
+<tr>
 <td>RUBY_BASE</td>
-</tr>
-<tr>
 <td>RUBY_BASERIDIR</td>
+</tr>
+<tr>
 <td>RUBY_BUILD_DOCUMENT</td>
-</tr>
-<tr>
 <td>RUBY_DLEXT</td>
+</tr>
+<tr>
 <td>RUBY_DOC</td>
-</tr>
-<tr>
 <td>RUBY_DYNAMIC_DIRS</td>
+</tr>
+<tr>
 <td>RUBY_EG</td>
-</tr>
-<tr>
 <td>RUBY_ENCODING_ARG</td>
+</tr>
+<tr>
 <td>RUBY_EXTCONF</td>
-</tr>
-<tr>
 <td>RUBY_EXTCONF_CHECK</td>
+</tr>
+<tr>
 <td>RUBY_EXTCONF_DEBUG</td>
-</tr>
-<tr>
 <td>RUBY_EXTCONF_MAKEFILE</td>
+</tr>
+<tr>
 <td>RUBY_GEM_ARCH</td>
-</tr>
-<tr>
 <td>RUBY_GEM_BASE</td>
+</tr>
+<tr>
 <td>RUBY_INC</td>
-</tr>
-<tr>
 <td>RUBY_LIB</td>
+</tr>
+<tr>
 <td>RUBY_LIB_BASE</td>
-</tr>
-<tr>
 <td>RUBY_NAME</td>
+</tr>
+<tr>
 <td>RUBY_NOVERSION</td>
-</tr>
-<tr>
 <td>RUBY_PKGPREFIX</td>
+</tr>
+<tr>
 <td>RUBY_RAILS</td>
-</tr>
-<tr>
 <td>RUBY_RAILS52_VERSION</td>
+</tr>
+<tr>
 <td>RUBY_RAILS60_VERSION</td>
-</tr>
-<tr>
 <td>RUBY_RAILS61_VERSION</td>
+</tr>
+<tr>
 <td>RUBY_RAILS70_VERSION</td>
-</tr>
-<tr>
 <td>RUBY_RAILS_ACCEPTED</td>
+</tr>
+<tr>
 <td>RUBY_RAILS_DEFAULT</td>
-</tr>
-<tr>
 <td>RUBY_RAILS_REQD</td>
+</tr>
+<tr>
 <td>RUBY_RAILS_STRICT_DEP</td>
-</tr>
-<tr>
 <td>RUBY_RIDIR</td>
+</tr>
+<tr>
 <td>RUBY_SETUP</td>
-</tr>
-<tr>
 <td>RUBY_SHLIB</td>
+</tr>
+<tr>
 <td>RUBY_SHLIBALIAS</td>
-</tr>
-<tr>
 <td>RUBY_SHLIBVER</td>
+</tr>
+<tr>
 <td>RUBY_SIMPLE_INSTALL</td>
-</tr>
-<tr>
 <td>RUBY_SITEARCHLIB</td>
+</tr>
+<tr>
 <td>RUBY_SITELIB</td>
-</tr>
-<tr>
 <td>RUBY_SITELIB_BASE</td>
+</tr>
+<tr>
 <td>RUBY_SITERIDIR</td>
-</tr>
-<tr>
 <td>RUBY_SLEXT</td>
+</tr>
+<tr>
 <td>RUBY_SRCDIR</td>
-</tr>
-<tr>
 <td>RUBY_STATICLIB</td>
+</tr>
+<tr>
 <td>RUBY_SUFFIX</td>
-</tr>
-<tr>
 <td>RUBY_SYSRIDIR</td>
+</tr>
+<tr>
 <td>RUBY_USE_PTHREAD</td>
-</tr>
-<tr>
 <td>RUBY_VENDORARCHLIB</td>
+</tr>
+<tr>
 <td>RUBY_VENDORLIB</td>
-</tr>
-<tr>
 <td>RUBY_VENDORLIB_BASE</td>
+</tr>
+<tr>
 <td>RUBY_VER</td>
-</tr>
-<tr>
 <td>RUBY_VERSION</td>
+</tr>
+<tr>
 <td>RUBY_VERSIONS_ACCEPTED</td>
-</tr>
-<tr>
 <td>RUBY_VERSIONS_INCOMPATIBLE</td>
+</tr>
+<tr>
 <td>RUBY_VERSION_DEFAULT</td>
-</tr>
-<tr>
 <td>RUBY_VERSION_REQD</td>
+</tr>
+<tr>
 <td>RUBY_VER_DIR</td>
-</tr>
-<tr>
 <td>RUN</td>
+</tr>
+<tr>
 <td>RUN_LDCONFIG</td>
-</tr>
-<tr>
 <td>RUST_TYPE</td>
+</tr>
+<tr>
 <td>SCO</td>
-</tr>
-<tr>
 <td>SCREWS_GROUP</td>
+</tr>
+<tr>
 <td>SCREWS_USER</td>
-</tr>
-<tr>
 <td>SCRIPTS_ENV</td>
+</tr>
+<tr>
 <td>SCROLLKEEPER_DATADIR</td>
-</tr>
-<tr>
 <td>SCROLLKEEPER_REBUILDDB</td>
+</tr>
+<tr>
 <td>SCROLLKEEPER_UPDATEDB</td>
-</tr>
-<tr>
 <td>SDIST_PAWD</td>
+</tr>
+<tr>
 <td>SDL12_TYPE</td>
-</tr>
-<tr>
 <td>SERIAL_DEVICES</td>
+</tr>
+<tr>
 <td>SETGIDGAME</td>
-</tr>
-<tr>
 <td>SETGID_GAMES_PERMS</td>
-<td>SETUID_ROOT_PERMS</td>
 </tr>
 <tr>
+<td>SETUID_ROOT_PERMS</td>
 <td>SH</td>
+</tr>
+<tr>
 <td>SHLIB</td>
+<td>SHORTNAME</td>
 </tr>
 <tr>
 <td>SIGN_PACKAGES</td>
@@ -13707,6 +13879,14 @@ source packages</h2></div></div></div>
 <tr>
 <td>SUSE_PREFER</td>
 <td>SU_CMD</td>
+</tr>
+<tr>
+<td>SVN_EXTRACTDIR</td>
+<td>SVN_REPO</td>
+</tr>
+<tr>
+<td>SVN_REPOSITORIES</td>
+<td>SVN_REVISION</td>
 </tr>
 <tr>
 <td>SYSCONFBASE</td>
@@ -13794,158 +13974,162 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>TOOL_DEPENDS</td>
+<td>TTF_FONTDIR</td>
+</tr>
+<tr>
 <td>TTF_FONTS_DIR</td>
-</tr>
-<tr>
 <td>TYPE</td>
+</tr>
+<tr>
 <td>UAC_REQD_EXECS</td>
-</tr>
-<tr>
 <td>UCSPI_SSL_GROUP</td>
+</tr>
+<tr>
 <td>UCSPI_SSL_USER</td>
-</tr>
-<tr>
 <td>UNLIMIT_RESOURCES</td>
+</tr>
+<tr>
 <td>UNPRIVILEGED</td>
-</tr>
-<tr>
 <td>UNPRIVILEGED_GROUP</td>
+</tr>
+<tr>
 <td>UNPRIVILEGED_GROUPS</td>
-</tr>
-<tr>
 <td>UNPRIVILEGED_USER</td>
+</tr>
+<tr>
 <td>UNWRAP_FILES</td>
-</tr>
-<tr>
 <td>UNWRAP_PATTERNS</td>
+</tr>
+<tr>
 <td>UPDATE_GEMSPEC</td>
-</tr>
-<tr>
 <td>UPDATE_TARGET</td>
+</tr>
+<tr>
 <td>URI</td>
-</tr>
-<tr>
 <td>USERGROUP_PHASE</td>
+</tr>
+<tr>
 <td>USERPPP_GROUP</td>
-</tr>
-<tr>
 <td>USER_SPECIFIC_PKGS</td>
+</tr>
+<tr>
 <td>USE_ABI_DEPENDS</td>
-</tr>
-<tr>
 <td>USE_APR</td>
+</tr>
+<tr>
 <td>USE_BSD_MAKEFILE</td>
-</tr>
-<tr>
 <td>USE_BUILTIN</td>
+</tr>
+<tr>
 <td>USE_CROSS_COMPILE</td>
-</tr>
-<tr>
 <td>USE_CURSES</td>
+</tr>
+<tr>
 <td>USE_CWRAPPERS</td>
-</tr>
-<tr>
 <td>USE_DB185</td>
+</tr>
+<tr>
 <td>USE_FEATURES</td>
-</tr>
-<tr>
 <td>USE_GAMESGROUP</td>
+</tr>
+<tr>
 <td>USE_GCC_RUNTIME</td>
-</tr>
-<tr>
 <td>USE_IMAKE</td>
+</tr>
+<tr>
 <td>USE_JAVA</td>
-</tr>
-<tr>
 <td>USE_JAVA2</td>
+</tr>
+<tr>
 <td>USE_LANGUAGES</td>
-</tr>
-<tr>
 <td>USE_LIBTOOL</td>
+</tr>
+<tr>
 <td>USE_NATIVE_GCC</td>
-</tr>
-<tr>
 <td>USE_NETBSD_REPO</td>
+</tr>
+<tr>
 <td>USE_PKGSRC_GCC</td>
-</tr>
-<tr>
 <td>USE_PKGSRC_GCC_RUNTIME</td>
+</tr>
+<tr>
 <td>USE_PKGTASKS</td>
-</tr>
-<tr>
 <td>USE_PKG_ADMIN_DIGEST</td>
+</tr>
+<tr>
 <td>USE_RUBY_EXTCONF</td>
-</tr>
-<tr>
 <td>USE_RUBY_INSTALL</td>
+</tr>
+<tr>
 <td>USE_RUBY_SETUP</td>
-</tr>
-<tr>
 <td>USE_RUBY_SETUP_PKG</td>
+</tr>
+<tr>
 <td>USE_TOOLS</td>
-</tr>
-<tr>
 <td>UUCP_GROUP</td>
+</tr>
+<tr>
 <td>UUCP_USER</td>
-</tr>
-<tr>
 <td>VARBASE</td>
+</tr>
+<tr>
 <td>VARNAME</td>
-</tr>
-<tr>
 <td>VIM_EXTRA_OPTS</td>
+</tr>
+<tr>
 <td>WARNING_MSG</td>
-</tr>
-<tr>
 <td>WCALC_CGIDIR</td>
+</tr>
+<tr>
 <td>WCALC_CGIPATH</td>
-</tr>
-<tr>
 <td>WCALC_HTMLDIR</td>
+</tr>
+<tr>
 <td>WCALC_HTMLPATH</td>
-</tr>
-<tr>
 <td>WDM_MANAGERS</td>
+</tr>
+<tr>
 <td>WRAPPER_CC</td>
-</tr>
-<tr>
 <td>WRAPPER_REORDER_CMDS</td>
+</tr>
+<tr>
 <td>WRKDIR</td>
-</tr>
-<tr>
 <td>WRKDIR_BASENAME</td>
+</tr>
+<tr>
 <td>WRKDIR_LOCKTYPE</td>
-</tr>
-<tr>
 <td>WRKLOG</td>
+</tr>
+<tr>
 <td>WRKOBJDIR</td>
-</tr>
-<tr>
 <td>WRKSRC</td>
+</tr>
+<tr>
 <td>X10_PORT</td>
-</tr>
-<tr>
 <td>X11</td>
+</tr>
+<tr>
 <td>X11BASE</td>
-</tr>
-<tr>
 <td>X11_PKGSRCDIR</td>
+</tr>
+<tr>
 <td>X11_TYPE</td>
-</tr>
-<tr>
 <td>X509_CERTIFICATE</td>
+</tr>
+<tr>
 <td>X509_KEY</td>
-</tr>
-<tr>
 <td>XAW_TYPE</td>
+</tr>
+<tr>
 <td>XLOCK_DEFAULT_MODE</td>
-</tr>
-<tr>
 <td>XMKMF</td>
-<td>XMKMF_FLAGS</td>
 </tr>
 <tr>
+<td>XMKMF_FLAGS</td>
 <td>XXX</td>
+</tr>
+<tr>
+<td>XXXX</td>
 <td>YES</td>
 </tr>
 <tr>
@@ -14086,67 +14270,71 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>ctf</td>
+<td>cvs</td>
+</tr>
+<tr>
 <td>debug</td>
-</tr>
-<tr>
 <td>declaration</td>
+</tr>
+<tr>
 <td>declare</td>
-</tr>
-<tr>
 <td>defined</td>
+</tr>
+<tr>
 <td>depend</td>
-</tr>
-<tr>
 <td>dependencies</td>
+</tr>
+<tr>
 <td>depends</td>
-</tr>
-<tr>
 <td>depends-checksum</td>
+</tr>
+<tr>
 <td>depends-fetch</td>
-</tr>
-<tr>
 <td>deps</td>
+</tr>
+<tr>
 <td>describe</td>
-</tr>
-<tr>
 <td>destdir</td>
+</tr>
+<tr>
 <td>disable</td>
-</tr>
-<tr>
 <td>distclean</td>
+</tr>
+<tr>
 <td>distinfo</td>
-</tr>
-<tr>
 <td>dl</td>
+</tr>
+<tr>
 <td>dlopen</td>
-</tr>
-<tr>
 <td>do-buildlink</td>
+</tr>
+<tr>
 <td>do-clean</td>
-</tr>
-<tr>
 <td>do-configure</td>
+</tr>
+<tr>
 <td>do-configure-post-hook</td>
-</tr>
-<tr>
 <td>do-extract</td>
+</tr>
+<tr>
 <td>do-fetch</td>
-</tr>
-<tr>
 <td>do-install</td>
+</tr>
+<tr>
 <td>emul</td>
-</tr>
-<tr>
 <td>emul-distinfo</td>
+</tr>
+<tr>
 <td>emul-fetch</td>
-</tr>
-<tr>
 <td>emulation</td>
-<td>emulator</td>
 </tr>
 <tr>
+<td>emulator</td>
 <td>enable</td>
+</tr>
+<tr>
 <td>endian</td>
+<td>endif</td>
 </tr>
 <tr>
 <td>enomem</td>
@@ -14185,59 +14373,67 @@ source packages</h2></div></div></div>
 <td>fortify_source</td>
 </tr>
 <tr>
+<td>fossil</td>
 <td>friend</td>
+</tr>
+<tr>
 <td>fts</td>
-</tr>
-<tr>
 <td>fts_close</td>
+</tr>
+<tr>
 <td>fts_open</td>
-</tr>
-<tr>
 <td>fts_read</td>
+</tr>
+<tr>
 <td>fts_set</td>
-</tr>
-<tr>
 <td>gcc</td>
+</tr>
+<tr>
 <td>gethostbyaddr</td>
-</tr>
-<tr>
 <td>gethostbyname</td>
+</tr>
+<tr>
 <td>gethostbyname2</td>
-</tr>
-<tr>
 <td>getopt_long</td>
+</tr>
+<tr>
 <td>getprogname</td>
-</tr>
-<tr>
 <td>getservbyname</td>
-<td>getservbyport</td>
 </tr>
 <tr>
+<td>getservbyport</td>
 <td>getservent</td>
+</tr>
+<tr>
 <td>gettext</td>
+<td>git</td>
 </tr>
 <tr>
 <td>github</td>
+<td>gitlab</td>
+</tr>
+<tr>
 <td>glob</td>
-</tr>
-<tr>
 <td>gnu</td>
+</tr>
+<tr>
 <td>gnu_configure_strict</td>
-</tr>
-<tr>
 <td>go</td>
+</tr>
+<tr>
 <td>go-deps</td>
-</tr>
-<tr>
 <td>golang</td>
+</tr>
+<tr>
 <td>guess-license</td>
-</tr>
-<tr>
 <td>hashbang</td>
-<td>heimdal</td>
 </tr>
 <tr>
+<td>heimdal</td>
 <td>help</td>
+</tr>
+<tr>
+<td>hg</td>
 <td>imake</td>
 </tr>
 <tr>
@@ -14309,223 +14505,227 @@ source packages</h2></div></div></div>
 <td>memory</td>
 </tr>
 <tr>
+<td>mercurial</td>
 <td>meta</td>
+</tr>
+<tr>
 <td>meta-package</td>
-</tr>
-<tr>
 <td>meta_package</td>
+</tr>
+<tr>
 <td>mit-krb5</td>
-</tr>
-<tr>
 <td>mk.conf</td>
+</tr>
+<tr>
 <td>mkl</td>
-</tr>
-<tr>
 <td>mount</td>
+</tr>
+<tr>
 <td>mprotect</td>
-</tr>
-<tr>
 <td>mremap</td>
+</tr>
+<tr>
 <td>nb</td>
-</tr>
-<tr>
 <td>nbcompat</td>
+</tr>
+<tr>
 <td>netlib</td>
-</tr>
-<tr>
 <td>node</td>
+</tr>
+<tr>
 <td>node.js</td>
-</tr>
-<tr>
 <td>nodejs</td>
+</tr>
+<tr>
 <td>obstack</td>
-</tr>
-<tr>
 <td>obstack_ptr_grow</td>
+</tr>
+<tr>
 <td>occurs</td>
-</tr>
-<tr>
 <td>only</td>
+</tr>
+<tr>
 <td>openblas</td>
-</tr>
-<tr>
 <td>options</td>
+</tr>
+<tr>
 <td>options.mk</td>
-</tr>
-<tr>
 <td>order</td>
+</tr>
+<tr>
 <td>override</td>
-</tr>
-<tr>
 <td>override-intltool</td>
+</tr>
+<tr>
 <td>override-message-intltool</td>
-</tr>
-<tr>
 <td>package</td>
+</tr>
+<tr>
 <td>parallel</td>
-</tr>
-<tr>
 <td>path</td>
+</tr>
+<tr>
 <td>pax</td>
-</tr>
-<tr>
 <td>paxctl</td>
+</tr>
+<tr>
 <td>pbulk-index</td>
-</tr>
-<tr>
 <td>pc</td>
+</tr>
+<tr>
 <td>perl</td>
-</tr>
-<tr>
 <td>perl5</td>
+</tr>
+<tr>
 <td>perms</td>
-</tr>
-<tr>
 <td>php</td>
+</tr>
+<tr>
 <td>pkg-build-options</td>
-</tr>
-<tr>
 <td>pkg-config</td>
+</tr>
+<tr>
 <td>pkg_build_options</td>
-</tr>
-<tr>
 <td>platform</td>
+</tr>
+<tr>
 <td>plist</td>
-</tr>
-<tr>
 <td>post-extract</td>
+</tr>
+<tr>
 <td>post-fetch</td>
-</tr>
-<tr>
 <td>post-wrapper</td>
+</tr>
+<tr>
 <td>pre-build-checks-hook</td>
-</tr>
-<tr>
 <td>pre-configure</td>
+</tr>
+<tr>
 <td>pre-configure-checks-hook</td>
-</tr>
-<tr>
 <td>pre-extract</td>
+</tr>
+<tr>
 <td>pre-fetch</td>
-</tr>
-<tr>
 <td>print-go-deps</td>
+</tr>
+<tr>
 <td>print-plist</td>
-</tr>
-<tr>
 <td>print-summary-data</td>
+</tr>
+<tr>
 <td>privileged-install-hook</td>
-</tr>
-<tr>
 <td>pypi</td>
+</tr>
+<tr>
 <td>python</td>
-</tr>
-<tr>
 <td>r</td>
+</tr>
+<tr>
 <td>readme-all</td>
-</tr>
-<tr>
 <td>recursive</td>
+</tr>
+<tr>
 <td>recv</td>
-</tr>
-<tr>
 <td>recvfrom</td>
+</tr>
+<tr>
 <td>regcomp</td>
-</tr>
-<tr>
 <td>release-localbase-lock</td>
+</tr>
+<tr>
 <td>release-lock</td>
-</tr>
-<tr>
 <td>relro</td>
+</tr>
+<tr>
 <td>rename</td>
-</tr>
-<tr>
 <td>reorder</td>
+</tr>
+<tr>
 <td>replace</td>
-</tr>
-<tr>
 <td>replace_interpreter</td>
+</tr>
+<tr>
 <td>reproducible</td>
-</tr>
-<tr>
 <td>resolv</td>
+</tr>
+<tr>
 <td>root</td>
-</tr>
-<tr>
 <td>ruby</td>
+</tr>
+<tr>
 <td>send</td>
-</tr>
-<tr>
 <td>sendfile</td>
+</tr>
+<tr>
 <td>sendto</td>
-</tr>
-<tr>
 <td>setenv</td>
+</tr>
+<tr>
 <td>setgid</td>
-</tr>
-<tr>
 <td>setprogname</td>
+</tr>
+<tr>
 <td>setuid</td>
-</tr>
-<tr>
 <td>sh</td>
+</tr>
+<tr>
 <td>shebang</td>
-</tr>
-<tr>
 <td>show</td>
+</tr>
+<tr>
 <td>show-all</td>
-</tr>
-<tr>
 <td>show-build-defs</td>
-<td>show-depends</td>
 </tr>
 <tr>
-<td>show-depends-all</td>
+<td>show-depends</td>
 <td>show-depends-dirs</td>
 </tr>
 <tr>
 <td>show-depends-pkgpaths</td>
+<td>show-depends-recursive</td>
+</tr>
+<tr>
 <td>show-deps</td>
-</tr>
-<tr>
 <td>show-distfiles</td>
+</tr>
+<tr>
 <td>show-downlevel</td>
-</tr>
-<tr>
 <td>show-subdir-var</td>
+</tr>
+<tr>
 <td>show-tools</td>
-</tr>
-<tr>
 <td>show-var</td>
+</tr>
+<tr>
 <td>show-vars</td>
-</tr>
-<tr>
 <td>snprintf</td>
+</tr>
+<tr>
 <td>socket</td>
-</tr>
-<tr>
 <td>ssp</td>
+</tr>
+<tr>
 <td>st_mode</td>
-</tr>
-<tr>
 <td>stage-install</td>
+</tr>
+<tr>
 <td>strcasestr</td>
-</tr>
-<tr>
 <td>strict</td>
+</tr>
+<tr>
 <td>strip</td>
-</tr>
-<tr>
 <td>strndup</td>
+</tr>
+<tr>
 <td>strnlen</td>
-</tr>
-<tr>
 <td>strsep</td>
-<td>subst</td>
 </tr>
 <tr>
+<td>subst</td>
 <td>substitutions</td>
+</tr>
+<tr>
+<td>subversion</td>
 <td>sun</td>
 </tr>
 <tr>
@@ -14533,23 +14733,27 @@ source packages</h2></div></div></div>
 <td>sunwspro</td>
 </tr>
 <tr>
+<td>svn</td>
 <td>symlink</td>
+</tr>
+<tr>
 <td>test</td>
-</tr>
-<tr>
 <td>test-env</td>
+</tr>
+<tr>
 <td>tex</td>
-</tr>
-<tr>
 <td>texlive</td>
+</tr>
+<tr>
 <td>tmp</td>
-</tr>
-<tr>
 <td>tool</td>
-<td>tools</td>
 </tr>
 <tr>
+<td>tools</td>
 <td>tools-libtool-m4-override</td>
+</tr>
+<tr>
+<td>transitive</td>
 <td>type</td>
 </tr>
 <tr>
