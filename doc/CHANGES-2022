@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2652 2022/05/21 10:38:36 nia Exp $
+$NetBSD: CHANGES-2022,v 1.2653 2022/05/21 10:38:50 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4097,3 +4097,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/mariadb106-client to 10.6.8 [nia 2022-05-21]
 	Updated databases/mariadb106-server to 10.6.8 [nia 2022-05-21]
 	Updated databases/mariadb105-client to 10.5.16 [nia 2022-05-21]
+	Updated databases/mariadb105-server to 10.5.16 [nia 2022-05-21]
