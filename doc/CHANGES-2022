@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2667 2022/05/21 16:02:02 taca Exp $
+$NetBSD: CHANGES-2022,v 1.2668 2022/05/21 21:10:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4112,3 +4112,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated graphics/R-effects to 4.2.1 [mef 2022-05-21]
 	Updated lang/php80 to 8.0.19nb1 [taca 2022-05-21]
 	Updated lang/php81 to 8.1.6nb1 [taca 2022-05-21]
+	Updated textproc/tuc to 0.7.0 [pin 2022-05-21]
