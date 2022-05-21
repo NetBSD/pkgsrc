@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/05/21 13:22:57 mef Exp $
+# $NetBSD: Makefile,v 1.6 2022/05/21 13:29:45 mef Exp $
 
 R_PKGNAME=	bbmle
-R_PKGVER=	1.0.25
-CATEGORIES=	math
+R_PKGVER=	1.0.20
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Tools for general maximum likelihood estimation
