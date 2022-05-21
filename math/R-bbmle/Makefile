@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:47 brook Exp $
+# $NetBSD: Makefile,v 1.5 2022/05/21 13:22:57 mef Exp $
 
 R_PKGNAME=	bbmle
-R_PKGVER=	1.0.20
+R_PKGVER=	1.0.25
 CATEGORIES=	math
 
 MAINTAINER=	minskim@NetBSD.org
@@ -9,6 +9,12 @@ COMMENT=	Tools for general maximum likelihood estimation
 LICENSE=	gnu-gpl-v1 OR gnu-gpl-v2 OR gnu-gpl-v3
 
 DEPENDS+=	R-numDeriv>=2016.8.1:../../math/R-numDeriv
+# Packages required but not available: 'bdsmatrix', 'mvtnorm'
+#
+# Packages suggested but not available:
+#  'emdbook', 'rms', 'ggplot2', 'RUnit', 'MuMIn', 'AICcmodavg', 'Hmisc',
+#  'optimx', 'knitr', 'testthat'
+
 
 USE_LANGUAGES+=	# none
 
