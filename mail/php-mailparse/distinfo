@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:54:20 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/05/21 09:19:10 taca Exp $
 
-BLAKE2s (php-mailparse/mailparse-3.1.1.tgz) = 62f8682bb8d0d8380fc379b37315b150a555c2ceb85545fc89059254f99b1c9d
-SHA512 (php-mailparse/mailparse-3.1.1.tgz) = 01ddb8d4d27a74c14f70b02b49322c60fc79affab374205fee91b9da21e5148e08dba024f6bc620e4f26c2c937675e09092c52ca69172d2f7797c3e2bf374bee
-Size (php-mailparse/mailparse-3.1.1.tgz) = 941192 bytes
+BLAKE2s (php-mailparse/mailparse-3.1.3.tgz) = afcca266df7a1155431b8e24a36fcaf0010b52b0ba5c7ad16ff9d21d751645c6
+SHA512 (php-mailparse/mailparse-3.1.3.tgz) = 93659e479d8ab61ae473f6dc002b7198903eebdcfb4aa515e76952f5050fd1a815baccfcb57bd32fb9be6108dfed6dc73172067a58c9e6098058999bb3802000
+Size (php-mailparse/mailparse-3.1.3.tgz) = 943785 bytes
 SHA1 (patch-mailparse.c) = 4580b6bbcc60888a2dfbcf091ef6a4096bfd6617
