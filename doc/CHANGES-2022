@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2669 2022/05/21 21:11:17 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2670 2022/05/21 21:38:47 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4114,3 +4114,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/php81 to 8.1.6nb1 [taca 2022-05-21]
 	Updated textproc/tuc to 0.7.0 [pin 2022-05-21]
 	Updated sysutils/xplr to 0.18.0 [pin 2022-05-21]
+	Updated misc/most to 5.1.0 [fcambus 2022-05-21]
