@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.177 2022/05/21 11:56:14 nia Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.178 2022/05/21 15:38:19 nia Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1683,7 +1683,6 @@ Minix3      __minix
 NetBSD      __NetBSD__
 OpenBSD     __OpenBSD__
 Solaris     sun, __sun
-Unix(-like) __unix
 </programlisting>
 
 </sect3>
