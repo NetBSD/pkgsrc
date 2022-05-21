@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.240 2022/05/21 09:04:50 nia Exp $
+# $NetBSD: gcc.mk,v 1.241 2022/05/21 09:26:50 nia Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -272,7 +272,7 @@ _GCC_REQD=	${_GCC_STRICTEST_REQD}
 _NEED_GCC7?=	no
 .for _pattern_ in ${_GCC7_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
-.    if ${OPSYS} == "NetBSD"" && ${OPSYS_VERSION} < 089937
+.    if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 089937
 USE_PKGSRC_GCC=		yes
 USE_PKGSRC_GCC_RUNTIME=	yes
 .    endif
@@ -282,7 +282,7 @@ _NEED_GCC7=	yes
 _NEED_GCC8?=	no
 .for _pattern_ in ${_GCC8_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
-.    if ${OPSYS} == "NetBSD"" && ${OPSYS_VERSION} < 099917
+.    if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099917
 USE_PKGSRC_GCC=		yes
 USE_PKGSRC_GCC_RUNTIME=	yes
 .    endif
@@ -292,7 +292,7 @@ _NEED_GCC8=	yes
 _NEED_GCC9?=	no
 .for _pattern_ in ${_GCC9_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
-.    if ${OPSYS} == "NetBSD"" && ${OPSYS_VERSION} < 099976
+.    if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099976
 USE_PKGSRC_GCC=		yes
 USE_PKGSRC_GCC_RUNTIME=	yes
 .    endif
@@ -302,7 +302,7 @@ _NEED_GCC9=	yes
 _NEED_GCC10?=	no
 .for _pattern_ in ${_GCC10_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
-.    if ${OPSYS} == "NetBSD"" && ${OPSYS_VERSION} < 099982
+.    if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099982
 USE_PKGSRC_GCC=		yes
 USE_PKGSRC_GCC_RUNTIME=	yes
 .    endif
