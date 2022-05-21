@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/09/19 23:51:41 mef Exp $
+# $NetBSD: Makefile,v 1.4 2022/05/21 14:46:57 mef Exp $
 
 R_PKGNAME=	psych
-R_PKGVER=	2.1.6
+R_PKGVER=	2.2.5
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/psych/
@@ -10,8 +10,14 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	R-mnormt>=1.5.4:../../math/R-mnormt
 #Packages suggested but not available:
-#  'psychTools', 'GPArotation', 'lavaan', 'Rcsdp', 'graph', 'Rgraphviz'
+#  'psychTools', 'GPArotation', 'lavaan', 'Rcsdp'
 #TEST_DEPENDS+=	R-graph-[0-9]*:../../math/R-graph
+#EST_DEPENDS+=	R-psychTools-[0-9]*:
+#EST_DEPENDS+=	R-GPArotation-[0-9]*:
+#EST_DEPENDS+=	R-lavaan-[0-9]*:
+#EST_DEPENDS+=	R-Rcsdp-[0-9]*:
+#EST_DEPENDS+=	R-graph-[0-9]*:../../wip/R-graph
+#EST_DEPENDS+=	R-Rgraphviz-[0-9]*:../../wip/R-Rgraphviz
 
 
 .include "../../math/R/Makefile.extension"
