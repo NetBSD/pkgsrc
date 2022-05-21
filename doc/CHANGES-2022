@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2656 2022/05/21 13:23:09 mef Exp $
+$NetBSD: CHANGES-2022,v 1.2657 2022/05/21 13:31:04 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4101,3 +4101,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/R-openssl to 2.0.1 [mef 2022-05-21]
 	Updated math/R-VGAM to 1.1.6 [mef 2022-05-21]
 	Updated math/R-bbmle to 1.0.25 [mef 2022-05-21]
+	Updated math/R-bbmle to 1.0.20 [mef 2022-05-21]
