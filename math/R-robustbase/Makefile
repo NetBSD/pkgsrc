@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2021/09/20 00:10:53 mef Exp $
+# $NetBSD: Makefile,v 1.3 2022/05/21 15:14:19 mef Exp $
 
 R_PKGNAME=	robustbase
-R_PKGVER=	0.93-8
+R_PKGVER=	0.95-0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Basic robust statistics
