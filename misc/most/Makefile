@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2020/01/26 17:31:44 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2022/05/21 21:38:36 fcambus Exp $
 
-DISTNAME=	most-5.0.0a
-PKGREVISION=	6
+DISTNAME=	most-5.1.0
 CATEGORIES=	misc
-MASTER_SITES=	ftp://space.mit.edu/pub/davis/most/
+MASTER_SITES=	https://www.jedsoft.org/releases/most/
 
 MAINTAINER=	rhwang@bigpanda.com
 HOMEPAGE=	https://www.jedsoft.org/most/
