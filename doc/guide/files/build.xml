@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.86 2021/04/06 17:21:17 nia Exp $ -->
+<!-- $NetBSD: build.xml,v 1.87 2022/05/21 11:42:29 nia Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -64,10 +64,10 @@
       </listitem>
 
       <listitem>
-	<para><varname>LOCALBASE</varname> is where all non-X11 pkgs
+	<para><varname>LOCALBASE</varname> is where all pkgs
 	are installed.  If you need to construct a -I or -L argument
 	to the compiler to find includes and libraries installed by
-	another non-X11 pkg, use <quote>${LOCALBASE}</quote>. The name
+	another pkg, use <quote>${LOCALBASE}</quote>. The name
 	<varname>LOCALBASE</varname> stems from FreeBSD, which
 	installed all packages in <filename>/usr/local</filename>. As
 	pkgsrc leaves <filename>/usr/local</filename> for the system
