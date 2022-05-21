@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.175 2022/05/21 11:36:06 nia Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.176 2022/05/21 11:40:06 nia Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1658,8 +1658,11 @@ Unix(-like) __unix
 
 <programlisting>
 i386        i386, __i386, __i386__
+x86-64      __amd64__, __x86_64__
+ARM         __arm__
 MIPS        __mips
 SPARC       sparc, __sparc
+PowerPC     __powerpc
 </programlisting>
 
 </sect3>
