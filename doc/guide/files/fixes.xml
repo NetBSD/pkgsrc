@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.174 2022/05/21 11:30:57 nia Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.175 2022/05/21 11:36:06 nia Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1608,7 +1608,7 @@ pre-configure:
 
 <programlisting>
 #ifdef __NetBSD__
-#include <sys/param.h>
+#include &lt;sys/param.h&gt;
 #if __NetBSD_Prereq__(9,99,17)
 /* use a newer feature */
 #else
