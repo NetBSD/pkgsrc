@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2661 2022/05/21 14:46:47 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.2662 2022/05/21 14:47:06 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4106,3 +4106,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/R-bbmle to 1.0.25 [mef 2022-05-21]
 	Updated www/firefox to 100.0.2 [ryoon 2022-05-21]
 	Updated www/firefox-l10n to 100.0.2 [ryoon 2022-05-21]
+	Updated math/R-psych to 2.2.5 [mef 2022-05-21]
