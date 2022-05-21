@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2021/10/02 01:52:48 wen Exp $
+# $NetBSD: Makefile,v 1.87 2022/05/21 23:03:30 rillig Exp $
 
 DISTNAME=	mediawiki-${VER}.${PVER}
 CATEGORIES=	www
@@ -35,47 +35,6 @@ CONF_FILES=		${PREFIX}/${EGDIR}/mediawiki.conf \
 
 NO_CONFIGURE=		YES
 NO_BUILD=		YES
-
-SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	Fixing pathnames in configuration file.
-SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	../mediawiki.conf
-SUBST_VARS.paths=	MEDIAWIKI
-
-SUBST_CLASSES+=		sh
-SUBST_STAGE.sh=		pre-configure
-SUBST_MESSAGE.sh=	Fixing path to sh
-SUBST_FILES.sh+=	maintenance/storage/make-blobs
-SUBST_FILES.sh+=	maintenance/dev/install.sh maintenance/dev/installphp.sh
-SUBST_FILES.sh+=	maintenance/dev/installmw.sh maintenance/dev/start.sh
-SUBST_FILES.sh+=	includes/limit.sh
-SUBST_SED.sh=		-e "s|/bin/bash|${SH}|"
-
-SUBST_CLASSES+=		sh2
-SUBST_STAGE.sh2=	pre-configure
-SUBST_MESSAGE.sh2=	Fixing path to sh
-SUBST_FILES.sh2+=	maintenance/mwjsduck-gen
-SUBST_FILES.sh2+=	docs/kss/scripts/kss-node-check.sh
-SUBST_SED.sh2=		-e "s|/usr/bin/env bash|${SH}|"
-
-SUBST_CLASSES+=		perl
-SUBST_STAGE.perl=	pre-configure
-SUBST_MESSAGE.perl=	Fixing path to perl
-SUBST_FILES.perl+=	maintenance/postgres/compare_schemas.pl
-SUBST_FILES.perl+=	maintenance/postgres/mediawiki_mysql2postgres.pl
-SUBST_SED.perl=		-e "s|/usr/bin/perl|${PERL5}|"
-
-SUBST_CLASSES+=		python
-SUBST_STAGE.python=	pre-configure
-SUBST_MESSAGE.python=	Fixing python path
-SUBST_FILES.python+=	extensions/ConfirmEdit/captcha.py
-SUBST_SED.python=	-e "s,/usr/bin/python,${PYTHONBIN},"
-
-SUBST_CLASSES+=		python2
-SUBST_STAGE.python2=	pre-configure
-SUBST_MESSAGE.python2=	Fixing python path
-SUBST_FILES.python2+=	maintenance/language/zhtable/Makefile.py
-SUBST_SED.python2=	-e "s,/usr/bin/env python,${PYTHONBIN},"
 
 post-extract:
 	${CP} ${FILESDIR}/mediawiki.conf ${WRKDIR}/mediawiki.conf
