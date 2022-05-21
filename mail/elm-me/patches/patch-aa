@@ -1,17 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/07/18 19:59:14 martin Exp $
+$NetBSD: patch-aa,v 1.2 2022/05/21 21:41:09 rillig Exp $
 
-*** nls/LANGS.old	Sun Jun 28 04:32:25 1992
---- nls/LANGS	Fri Jul 28 06:48:31 1995
-***************
-*** 1,5 ****
-  # LANGS file
-  
-! C/C/C			/usr/local/nls/msg/C
-! english/us/ascii	/usr/local/nls/msg/english
-! french/canada/8859	/usr/local/nls/msg/french
---- 1,5 ----
-  # LANGS file
-  
-! C/C/C                   __PREFIX/share/nls/C
-! english/us/ascii        __PREFIX/share/nls/en_US.ISO_8859-1
-! french/canada/8859      __PREFIX/share/nls/fr_FR.ISO_8859-1
+--- nls/LANGS.orig	2001-06-19 17:03:18.000000000 +0000
++++ nls/LANGS
+@@ -1,5 +1,5 @@
+ # LANGS file
+ 
+-C/C/C			/usr/local/nls/msg/C
+-english/us/ascii	/usr/local/nls/msg/english
+-french/canada/8859	/usr/local/nls/msg/french
++C/C/C                   __PREFIX/share/nls/C
++english/us/ascii        __PREFIX/share/nls/en_US.ISO_8859-1
++french/canada/8859      __PREFIX/share/nls/fr_FR.ISO_8859-1

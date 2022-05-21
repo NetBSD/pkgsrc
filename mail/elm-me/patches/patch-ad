@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.3 2008/01/05 19:21:00 rillig Exp $
+$NetBSD: patch-ad,v 1.4 2022/05/21 21:41:09 rillig Exp $
 
 --- src/pgp.c.orig	Tue Jun 19 19:03:47 2001
 +++ src/pgp.c	Wed Jul 18 19:22:05 2001
-@@ -161,7 +159,7 @@ static int GetPGPKey (name, target, targ
+@@ -159,7 +159,7 @@ static int GetPGPKey (name, target, targ
  		char *path;
  	    case pgp2:	
  		
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.3 2008/01/05 19:21:00 rillig Exp $
  		      pgp2_path,"+verbose=0", "+language=en", "-kv", c, 
  		      (char *)0);
  		tmp = errno;
-@@ -169,14 +167,14 @@ static int GetPGPKey (name, target, targ
+@@ -167,14 +167,14 @@ static int GetPGPKey (name, target, targ
  		break;
  	    case pgp5:
  		path = elm_message(FRM("%s/pgpk"),pgp5_dir);
