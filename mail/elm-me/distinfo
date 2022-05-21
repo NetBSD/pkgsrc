@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:53:59 nia Exp $
+$NetBSD: distinfo,v 1.11 2022/05/21 21:41:09 rillig Exp $
 
 BLAKE2s (elm-2.4ME+93.tar.gz) = 8968bd2b8a9aa00ac64e1727652aa2d754ad6349c628ed2c1c965187c8937205
 SHA512 (elm-2.4ME+93.tar.gz) = cc1e3c2d5e12baae4b43426e9b7239ef460a4bc0bbbb6279cda716454fcb5042f5143312ce144d9b5cf3ad8fd0c1282a637748a2d1be3f90eb3ed9458b63d7f2
 Size (elm-2.4ME+93.tar.gz) = 1569204 bytes
-SHA1 (patch-aa) = 22f5b0219ada56c90cd26b47e9f5beac3af00c4a
+SHA1 (patch-aa) = 4c190411962ebaa990372b6ed179d27519c6db62
 SHA1 (patch-ab) = 6445b6573934c9497c15050917da6738e883c576
-SHA1 (patch-ac) = c76cbb5adc548bdc68fc860063e5280ff90d7e59
-SHA1 (patch-ad) = 73875671aa53548e1cbe1bfae56acb4792ee4b24
+SHA1 (patch-ac) = 3c1def372731a5f7bf35e8ead7a77026f94c7c92
+SHA1 (patch-ad) = af7d4b4e34dc1b5e5de61c7a066b82949a633b79
 SHA1 (patch-ae) = d8b63984cf2bc367e311904f6d98e2b8790d3592
 SHA1 (patch-bb) = d85e9625b327b766bcbea2d9063f76a7bc1ddd5d
 SHA1 (patch-bv) = dc11b6ef449d041ff63055924686d2da2138088f
