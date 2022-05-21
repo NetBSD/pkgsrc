@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.15 2022/02/19 09:57:51 nia Exp $
+# $NetBSD: Makefile.common,v 1.16 2022/05/21 10:38:25 nia Exp $
 #
 # used by databases/mariadb105-client/Makefile
 # used by databases/mariadb105-server/Makefile
 
-DISTNAME=	mariadb-10.5.15
+DISTNAME=	mariadb-10.5.16
 CATEGORIES=	databases
 MASTER_SITES=	https://archive.mariadb.org/${DISTNAME}/source/
 
