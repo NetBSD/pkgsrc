@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2651 2022/05/21 09:36:26 nia Exp $
+$NetBSD: CHANGES-2022,v 1.2652 2022/05/21 10:38:36 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4096,3 +4096,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/php-mailparse to 3.1.3 [taca 2022-05-21]
 	Updated databases/mariadb106-client to 10.6.8 [nia 2022-05-21]
 	Updated databases/mariadb106-server to 10.6.8 [nia 2022-05-21]
+	Updated databases/mariadb105-client to 10.5.16 [nia 2022-05-21]
