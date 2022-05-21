@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.48 2020/08/17 20:19:07 leot Exp $
+# $NetBSD: Makefile,v 1.49 2022/05/21 22:24:00 rillig Exp $
 
 MODNAME=		gd
+PKGREVISION=		2
 CATEGORIES+=		graphics
 COMMENT=		PHP extension for GD graphics library
-PKGREVISION=		1
+LICENSE=		php
 
 CONFLICTS=	php-gd-[0-9]*
 
@@ -25,8 +26,6 @@ CONFIGURE_ARGS+=	--with-external-gd
 .endif
 
 USE_PHP_EXT_PATCHES=	yes
-
-.include "options.mk"
 
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../lang/php/ext.mk"
