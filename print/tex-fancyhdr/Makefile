@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2022/05/15 04:26:08 markd Exp $
+# $NetBSD: Makefile,v 1.14 2022/05/22 21:05:52 markd Exp $
 
 DISTNAME=	fancyhdr
-PKGNAME=	tex-${DISTNAME}-4.0.2
-TEXLIVE_REV=	63277
+PKGNAME=	tex-${DISTNAME}-4.0.3
+TEXLIVE_REV=	63329
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/fancyhdr

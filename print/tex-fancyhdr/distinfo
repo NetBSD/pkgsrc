@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2022/05/15 04:26:08 markd Exp $
+$NetBSD: distinfo,v 1.12 2022/05/22 21:05:52 markd Exp $
 
-BLAKE2s (fancyhdr.r63277.tar.xz) = 2ea53e483880164b21f82a1e5b1c8a553c66aa1ad1e6a99e3d6484108e2c6ca3
-SHA512 (fancyhdr.r63277.tar.xz) = 12fc439f594ce021a8c46fefa2e815343a314b4a488c496c17d062d6b20c11fdd058d68fbc343ba9765f9a64225aeaed2df5541dc40574a2bd3dc339998e9025
-Size (fancyhdr.r63277.tar.xz) = 5116 bytes
+BLAKE2s (fancyhdr.r63329.tar.xz) = 5c1c7c1faaea0e0e19c77954e0ab010f911b41c5e5b58029175537d3757f2e33
+SHA512 (fancyhdr.r63329.tar.xz) = dc40ba397e7fe2975712984282e67c8b04253e6a9b70d8104af3540518bfebac859d761b21ba242bd04f02c04543515a3646c33f0a0215d96d1833c290859d98
+Size (fancyhdr.r63329.tar.xz) = 5140 bytes
