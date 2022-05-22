@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2673 2022/05/22 12:18:00 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2674 2022/05/22 12:24:22 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4119,3 +4119,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/R-XML to 3.99.0.9 [mef 2022-05-22]
 	Updated devel/py-llvmlite to 0.38.1 [adam 2022-05-22]
 	Updated security/py-gnupg to 0.4.9 [adam 2022-05-22]
+	Updated math/R-dplyr to 1.0.9 [mef 2022-05-22]
