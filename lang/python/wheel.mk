@@ -1,4 +1,4 @@
-# $NetBSD: wheel.mk,v 1.6 2022/02/07 15:39:35 wiz Exp $
+# $NetBSD: wheel.mk,v 1.7 2022/05/22 19:32:41 kleink Exp $
 #
 # Initial mk for building and installing python wheels
 #
@@ -54,6 +54,9 @@ _WHEEL_INFODIR=	${WHEEL_NAME}.dist-info
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PLIST_SUBST+=	WHEEL_INFODIR=${_WHEEL_INFODIR}
+
+# mostly for ALTERNATIVES files
+FILES_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 # from extension.mk
 
