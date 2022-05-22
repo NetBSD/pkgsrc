@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/05/05 11:38:09 mef Exp $
+# $NetBSD: Makefile,v 1.12 2022/05/22 13:39:56 taca Exp $
 #
 
 DISTNAME=	orangehrm-4.10.1
@@ -18,7 +18,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=5.2.0:../../databases/php-pdo_mysql
 PHP_VERSIONS_ACCEPTED=	56 74 80
 
 EXTRACT_USING=		bsdtar
-USE_TOOLS+=		pax
+USE_TOOLS+=		bash pax
 
 NO_BUILD=	yes
 
@@ -30,11 +30,14 @@ BUILD_DEFS+=		APACHE_GROUP APACHE_USER
 FILES_SUBST+=		WWWGRP=${APACHE_GROUP} WWWOWN=${APACHE_USER} \
 			OHRDIR=${OHRDIR}
 
-CHECK_INTERPRETER_SKIP+=	share/orangehrm/symfony/lib/vendor/symfony/data/bin/symfony
-CHECK_INTERPRETER_SKIP+=	share/orangehrm/symfony/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/test/functional/fixtures/symfony
-CHECK_INTERPRETER_SKIP+=	share/orangehrm/symfony/lib/vendor/symfony/lib/task/generator/skeleton/project/symfony
-CHECK_INTERPRETER_SKIP+=	share/orangehrm/symfony/symfony
+REPLACE_BASH=	installer/cli_common_commands.sh installer/cli_install.sh \
+		travis-config-files/seeddb.sh
+
+CHECK_INTERPRETER_SKIP+=	share/orangehrm/symfony/*
 CHECK_INTERPRETER_SKIP+=	share/orangehrm/upgrader/symfony
+
+pre-install:
+	${FIND} ${WRKSRC} -name "*.orig*" -exec ${RM} -f {} \;
 
 do-install:
 	${RM} -f symfony/lib/vendor/google/apiclient-services/generator/run_tests.sh.orig
