@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2022/04/29 11:56:45 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2022/05/22 16:06:45 kleink Exp $
 
-DISTNAME=	Flask-FlatPages-0.7.3
+DISTNAME=	Flask-FlatPages-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-FlatPages/}
 
@@ -12,8 +11,8 @@ COMMENT=	Provides flat static pages to a Flask application
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-flask>1.0:../../www/py-flask
-DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.10.2:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-markdown>=2.5:../../textproc/py-markdown
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-yaml>5.3.1:../../textproc/py-yaml
