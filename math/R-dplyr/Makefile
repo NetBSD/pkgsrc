@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2021/09/11 15:31:54 mef Exp $
+# $NetBSD: Makefile,v 1.6 2022/05/22 12:24:04 mef Exp $
 
 R_PKGNAME=	dplyr
-R_PKGVER=	1.0.7
+R_PKGVER=	1.0.9
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Grammar of data manipulation
@@ -19,19 +19,28 @@ DEPENDS+=	R-tidyselect>=1.1.0:../../devel/R-tidyselect
 DEPENDS+=	R-ellipsis>=0.3.0:../../math/R-ellipsis
 DEPENDS+=	R-generics>=0.0.2:../../math/R-generics
 DEPENDS+=	R-tibble>=2.1.3:../../math/R-tibble
-DEPENDS+=	R-vctrs>=0.3.0:../../math/R-vctrs
+DEPENDS+=	R-vctrs>=0.4.1:../../math/R-vctrs
 
 # Packages suggested but not available:
-#   'bench', 'broom', 'dbplyr', 'Lahman', 'lobstr', 'nycflights13',
-#   'RMySQL', 'RPostgreSQL'
+#   'bench', 'Lahman', 'lobstr', 'nycflights13', 'RMySQL'
 
-TEST_DEPENDS+=	R-RSQLite-[0-9]*:../../databases/R-RSQLite
+
+
+#TEST_DEPENDS+=	R-bench-[0-9]*:
+TEST_DEPENDS+=	R-broom-[0-9]*:../../math/R-broom
 TEST_DEPENDS+=	R-callr-[0-9]*:../../devel/R-callr
 TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
-TEST_DEPENDS+=	R-dplyr-[0-9]*:../../math/R-dplyr
+TEST_DEPENDS+=	R-dbplyr-[0-9]*:../../databases/R-dbplyr
+TEST_DEPENDS+=	R-ggplot2-[0-9]*:../../graphics/R-ggplot2
 TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
+#TEST_DEPENDS+=	R-Lahman-[0-9]*:
+#TEST_DEPENDS+=	R-lobstr-[0-9]*:
 TEST_DEPENDS+=	R-microbenchmark-[0-9]*:../../benchmarks/R-microbenchmark
+#TEST_DEPENDS+=	R-nycflights13-[0-9]*:
 TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
+#TEST_DEPENDS+=	R-RMySQL-[0-9]*:
+TEST_DEPENDS+=	R-RPostgreSQL-[0-9]*:../../math/R-RPostgreSQL
+TEST_DEPENDS+=	R-RSQLite-[0-9]*:../../databases/R-RSQLite
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 TEST_DEPENDS+=	R-tidyr-[0-9]*:../../math/R-tidyr
 TEST_DEPENDS+=	R-withr-[0-9]*:../../devel/R-withr
