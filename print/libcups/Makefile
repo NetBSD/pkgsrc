@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/05/11 16:21:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2022/05/22 00:54:00 rxg Exp $
 
 .include "../../print/cups/Makefile.common"
 
@@ -66,6 +66,7 @@ SUBST_STAGE.piefix=	pre-configure
 PKGCONFIG_OVERRIDE+=		cups.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
+AUTOCONF_REQD=		2.71
 pre-configure:
 	cd ${WRKSRC} && aclocal && autoconf
 
