@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2021/05/24 19:49:58 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2022/05/22 23:58:43 dholland Exp $
 
 DISTNAME=	jemalloc-5.2.1
 PKGREVISION=	3
@@ -21,6 +21,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-xmalloc
 CONFIGURE_ARGS+=	--with-xslroot=${PREFIX}/share/xsl/docbook/
 PKGCONFIG_OVERRIDE=	jemalloc.pc.in
+BUILD_MAKE_FLAGS+=	SHELL=${CONFIG_SHELL}
 
 REPLACE_PERL=		bin/jeprof.in
 
