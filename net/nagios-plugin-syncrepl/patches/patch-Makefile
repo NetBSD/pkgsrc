@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile,v 1.1 2022/05/22 22:50:42 dholland Exp $
+
+Honor pkgsrc CFLAGS, LDFLAGS, and LIBS.
+
+--- Makefile~	2018-05-20 02:35:50.000000000 +0000
++++ Makefile
+@@ -1,9 +1,9 @@
+-CFLAGS=	-DLDAP_DEPRECATED
+-LIBS=	-lldap
++CFLAGS+=	-DLDAP_DEPRECATED
++LIBS+=	-lldap
+ all:	check_syncrepl
+ 
+ check_syncrepl:	check_syncrepl.o
+-	$(CC) ${LIBS} -o check_syncrepl check_syncrepl.o
++	$(CC) ${LDFLAGS} ${LIBS} -o check_syncrepl check_syncrepl.o
+ 
+ clean:
+ 	rm -f *.o *.core check_syncrepl
