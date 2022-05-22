@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2021/08/06 12:29:23 nia Exp $
+# $NetBSD: Makefile,v 1.2 2022/05/22 02:41:47 charlotte Exp $
 
 DISTNAME=	libcyaml-1.2.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tlsa/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	dressupgeekout@gmail.com
+MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://github.com/tlsa/libcyaml
 COMMENT=	Schema-based YAML parsing and serialization
 LICENSE=	isc
