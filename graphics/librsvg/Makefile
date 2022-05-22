@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.140 2022/04/18 19:09:53 adam Exp $
+# $NetBSD: Makefile,v 1.141 2022/05/22 17:22:13 gutteridge Exp $
 
-DISTNAME=	librsvg-2.52.8
-PKGREVISION=	1
+DISTNAME=	librsvg-2.54.3
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -17,13 +16,24 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config gmake aclocal autoconf automake
 USE_LANGUAGES+=		c c++
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-tools
 #CONFIGURE_ARGS+=	--enable-Bsymbolic=auto
 CONFIGURE_ARGS+=	--disable-Bsymbolic
+
+PYTHON_FOR_BUILD_ONLY=	tool
+# Requires rst2man to generate rsvg-convert.1
+TOOL_DEPENDS+=		${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
+# Requires gi-docgen to generate HTML format API documentation
+TOOL_DEPENDS+=		${PYPKGPREFIX}-gi-docgen-[0-9]*:../../devel/py-gi-docgen
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.cairo-gobject}/lib
 
 PKGCONFIG_OVERRIDE=	librsvg.pc.in
+
+SUBST_CLASSES+=		rst2man
+SUBST_MESSAGE.rst2man=	Fixing rst2man name used by pkgsrc due to versioning.
+SUBST_STAGE.rst2man=	pre-configure
+SUBST_FILES.rst2man=	configure
+SUBST_SED.rst2man=	-e 's,rst2man.py,rst2man-${PYVERSSUFFIX},g'
 
 TEST_TARGET=		check
 
@@ -48,7 +58,7 @@ BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.50.0
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.pango+=	pango>=1.44
+BUILDLINK_API_DEPENDS.pango+=	pango>=1.48.11
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.0
@@ -59,6 +69,7 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.0
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.9
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-RUST_REQ=	1.52.0
+RUST_REQ=	1.56.0
 .include "../../lang/rust/cargo.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
