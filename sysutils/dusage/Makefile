@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/02/10 22:03:09 pin Exp $
+# $NetBSD: Makefile,v 1.5 2022/05/22 16:39:02 pin Exp $
 
-DISTNAME=	dusage-0.2.3
+DISTNAME=	dusage-0.3.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mihaigalos/}
 
@@ -14,7 +14,8 @@ LICENSE=	mit
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/dusage ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/dusage \
+		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
