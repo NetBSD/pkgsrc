@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2678 2022/05/22 16:37:37 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2679 2022/05/22 16:38:21 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4124,3 +4124,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-cssselect2 to 0.6.0 [kleink 2022-05-22]
 	Updated www/py-flask-flatpages to 0.8.1 [kleink 2022-05-22]
 	Updated audio/termusic to 0.6.16 [pin 2022-05-22]
+	Updated audio/librespot to 0.4.0 [pin 2022-05-22]
