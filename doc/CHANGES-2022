@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2671 2022/05/21 23:09:23 mef Exp $
+$NetBSD: CHANGES-2022,v 1.2672 2022/05/22 00:47:07 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4116,3 +4116,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/xplr to 0.18.0 [pin 2022-05-21]
 	Updated misc/most to 5.1.0 [fcambus 2022-05-21]
 	Updated math/R-car to 3.0.13 [mef 2022-05-21]
+	Updated math/R-XML to 3.99.0.9 [mef 2022-05-22]
