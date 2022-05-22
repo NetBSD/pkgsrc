@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2680 2022/05/22 16:39:22 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2681 2022/05/22 17:22:25 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4126,3 +4126,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/termusic to 0.6.16 [pin 2022-05-22]
 	Updated audio/librespot to 0.4.0 [pin 2022-05-22]
 	Updated sysutils/dusage to 0.3.0 [pin 2022-05-22]
+	Updated graphics/librsvg to 2.54.3 [gutteridge 2022-05-22]
