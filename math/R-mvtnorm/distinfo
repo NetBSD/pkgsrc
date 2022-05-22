@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:55:29 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/05/22 12:35:27 mef Exp $
 
-BLAKE2s (R/mvtnorm_1.1-2.tar.gz) = 749deff1f999d75dc6b24650d876d92db1fcf6cb5f5ff0b54cc774a9b8eb97ea
-SHA512 (R/mvtnorm_1.1-2.tar.gz) = 3368640679149be35e30fc630ba0e7965ad4ea42af4a213c91d344c0675f3fd426994b45397ff5d8fb431f3af64578b7ef4c39f3633c3839351b3023acaf0bf3
-Size (R/mvtnorm_1.1-2.tar.gz) = 166202 bytes
+BLAKE2s (R/mvtnorm_1.1-3.tar.gz) = 8e257f54c8fd070eed8a8a580fac0bd734969d3a3b1a7cc3602cc934acba5067
+SHA512 (R/mvtnorm_1.1-3.tar.gz) = aa6fabb25354607d1919f1f32a618f7004ce4ecea9bd1cdb7a7c9b5f0deb9ceba10c24d43c8cf670d93d61a0733b97b4cfe4e60d67743c8ae42c671aab9bded8
+Size (R/mvtnorm_1.1-3.tar.gz) = 166421 bytes
