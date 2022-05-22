@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2682 2022/05/22 17:32:13 schmonz Exp $
+$NetBSD: CHANGES-2022,v 1.2683 2022/05/22 19:14:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4128,3 +4128,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/dusage to 0.3.0 [pin 2022-05-22]
 	Updated graphics/librsvg to 2.54.3 [gutteridge 2022-05-22]
 	Updated textproc/py-feedparser to 6.0.10 [schmonz 2022-05-22]
+	Updated devel/py-xdis to 6.0.4 [adam 2022-05-22]
+	Updated math/py-numpy to 1.22.4 [adam 2022-05-22]
