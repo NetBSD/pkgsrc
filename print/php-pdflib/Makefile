@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2021/01/03 07:31:35 taca Exp $
+# $NetBSD: Makefile,v 1.31 2022/05/22 12:43:09 taca Exp $
 
 MODNAME=		pdflib
 PKGMODNAME=		pdf
@@ -6,6 +6,8 @@ PECL_VERSION=		4.1.4
 CATEGORIES+=		print
 COMMENT=		PHP extension for PDFlib on-the-fly PDF generation
 LICENSE=		php
+
+PHP_VERSIONS_ACCEPTED=	56 74
 
 CONFLICTS=	php-pdf-[0-9]*
 
