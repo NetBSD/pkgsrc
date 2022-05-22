@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:06:04 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/05/22 22:50:42 dholland Exp $
 
 BLAKE2s (check_syncrepl-0.5.tgz) = 1f29f8d61f548de30b44a372fce4f92ed5e1795794e668a8b91b3d61ee940a61
 SHA512 (check_syncrepl-0.5.tgz) = c2c108c4d7997401859ff5131bcfd926bdc36681a3bf3371b32538b6e9be4e90eba0681e94c908cbcd150c3949a056f478f855c8ee27681355335628679a7824
 Size (check_syncrepl-0.5.tgz) = 2412 bytes
+SHA1 (patch-Makefile) = a1680781768fd082662f389a71ef2bded04b87b6
