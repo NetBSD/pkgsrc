@@ -1,0 +1,15 @@
+$NetBSD: patch-libctf_Makefile.in,v 1.1 2022/05/23 11:56:35 micha Exp $
+
+Avoid installing info files (which duplicates with other CPU).
+
+--- libctf/Makefile.in.orig	2022-01-22 12:22:10.000000000 +0000
++++ libctf/Makefile.in
+@@ -306,7 +306,7 @@ am__v_texidevnull_ = $(am__v_texidevnull
+ am__v_texidevnull_0 = > /dev/null
+ am__v_texidevnull_1 = 
+ am__dirstamp = $(am__leading_dot)dirstamp
+-INFO_DEPS = doc/ctf-spec.info
++INFO_DEPS =
+ am__TEXINFO_TEX_DIR = $(srcdir)
+ DVIS = doc/ctf-spec.dvi
+ PDFS = doc/ctf-spec.pdf
