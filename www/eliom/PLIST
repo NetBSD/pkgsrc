@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/04/21 12:52:06 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/05/23 15:31:34 jaapb Exp $
 bin/eliom-distillery
 bin/eliombuild
 bin/eliomc
@@ -41,6 +41,7 @@ ${OCAML_SITELIB}/eliom/client/eliom_tools.cmi
 ${OCAML_SITELIB}/eliom/client/eliom_types.cmi
 ${OCAML_SITELIB}/eliom/client/eliom_unwrap.cmi
 ${OCAML_SITELIB}/eliom/client/eliom_uri.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/client/libeliom_stubs.a
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/ocamlbuild/ocamlbuild_eliom.a
 ${OCAML_SITELIB}/eliom/ocamlbuild/ocamlbuild_eliom.cma
 ${OCAML_SITELIB}/eliom/ocamlbuild/ocamlbuild_eliom.cmi
@@ -80,6 +81,7 @@ ${OCAML_SITELIB}/eliom/server/eliom_bus.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/server/eliom_bus.cmx
 ${OCAML_SITELIB}/eliom/server/eliom_client.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/server/eliom_client.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/server/eliom_client_main.cmx
 ${OCAML_SITELIB}/eliom/server/eliom_client_value.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/server/eliom_client_value.cmx
 ${OCAML_SITELIB}/eliom/server/eliom_comet.cmi
@@ -95,8 +97,6 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/server/eliom_content.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/server/eliom_content_.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/server/eliom_content_core.cmx
 ${OCAML_SITELIB}/eliom/server/eliom_content_sigs.cmi
-${OCAML_SITELIB}/eliom/server/eliom_cookie.cmi
-${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/server/eliom_cookie.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/server/eliom_cookies_base.cmx
 ${OCAML_SITELIB}/eliom/server/eliom_cscache.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/eliom/server/eliom_cscache.cmx
@@ -189,11 +189,12 @@ ${OCAML_SITELIB}/eliom/templates/basic.ppx/PROJECT_NAME.conf.in
 ${OCAML_SITELIB}/eliom/templates/basic.ppx/PROJECT_NAME.eliom
 ${OCAML_SITELIB}/eliom/templates/basic.ppx/README
 ${OCAML_SITELIB}/eliom/templates/basic.ppx/static!css!PROJECT_NAME.css
+${OCAML_SITELIB}/stublibs/dlleliom_stubs.so
 man/man1/eliom-distillery.1
 man/man1/eliomc.1
 man/man1/eliomcp.1
 man/man1/eliomdep.1
 man/man1/eliomopt.1
 man/man1/js_of_eliom.1
-share/doc/eliom/CHANGES
-share/doc/eliom/README.md
+share/doc/CHANGES
+share/doc/README.md
