@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2702 2022/05/23 17:10:25 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.2703 2022/05/23 17:17:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4156,3 +4156,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added devel/js_of_ocaml-ocamlbuild version 0.0.0.3693 [jaapb 2022-05-23]
 	Updated www/eliom to 10.0.0 [jaapb 2022-05-23]
 	Added fonts/ttf-meera to 7.0.3.20191223 [nikita 2022-05-23]
+	Updated editors/Sigil to 1.9.10 [wiz 2022-05-23]
