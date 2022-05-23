@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/04/06 06:02:34 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/05/23 14:58:37 ryoon Exp $
 
 DISTNAME=	gi-docgen-2022.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gi-docgen/}
 
@@ -20,6 +21,12 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_SELF_CONFLICT=		yes
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	pre-configure
+SUBST_MESSAGE.prefix=	Fixing PREFIX.
+SUBST_FILES.prefix+=	gidocgen/utils.py
+SUBST_SED.prefix+=	-e 's,/usr/local,${PREFIX},g'
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
