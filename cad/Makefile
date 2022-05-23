@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2022/01/02 15:51:03 tnn Exp $
+# $NetBSD: Makefile,v 1.103 2022/05/23 19:07:26 plunky Exp $
 #
 
 COMMENT=	Computer Aided Design tools
@@ -20,6 +20,7 @@ SUBDIR+=	fastcap
 SUBDIR+=	fasthenry
 SUBDIR+=	felt
 SUBDIR+=	freehdl
+SUBDIR+=	fstl
 SUBDIR+=	gdsreader
 SUBDIR+=	geda
 SUBDIR+=	gerbv
