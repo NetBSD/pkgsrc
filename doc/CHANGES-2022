@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2684 2022/05/22 21:08:54 markd Exp $
+$NetBSD: CHANGES-2022,v 1.2685 2022/05/23 02:23:00 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4134,3 +4134,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/tex-fancyhdr-doc to 4.0.3 [markd 2022-05-22]
 	Updated devel/tex-doclicense to 3.2.0 [markd 2022-05-22]
 	Updated devel/tex-doclicense-doc to 3.2.0 [markd 2022-05-22]
+	Updated net/nagios-plugin-syncrepl to 0.5nb1 [dholland 2022-05-22]
