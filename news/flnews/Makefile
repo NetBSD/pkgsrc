@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2022/01/10 11:55:09 micha Exp $
+# $NetBSD: Makefile,v 1.14 2022/05/23 09:38:14 micha Exp $
 
-FLNEWS_VERSION=	1.0.1
+FLNEWS_VERSION=	1.1.0
 
 DISTNAME=	flnews-${FLNEWS_VERSION}
 CATEGORIES=	news
