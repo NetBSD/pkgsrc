@@ -1,0 +1,62 @@
+$NetBSD: patch-src_gcad3d,v 1.1 2022/05/23 19:10:03 plunky Exp $
+
+rework the startup script to handle our pkgsrc layout
+
+--- src/gcad3d.orig	2021-07-18 06:38:57.000000000 +0000
++++ src/gcad3d
+@@ -3,46 +3,32 @@
+ # Startproc for gCAD3D.
+ # You can modify several directories; default is ${HOME}/gCAD3D/..
+ 
+-#osVer=`getconf LONG_BIT`
+-# 32|64
+-#osVer=${HOSTTYPE}
+-hTyp=`uname -s`_`uname -m`
+-
+-#export LD_LIBRARY_PATH=`dirname $0`
+-
+ # <gcad_dir_bin>                   executable, dll's     ReadOnly
+ # <gcad_dir_bin>plugins/           dll's                 ReadOnly
+-#export gcad_dir_bin=/usr/lib/gCAD3D/binLinux${osVer}/
+-export gcad_dir_bin=/usr/lib/gcad3d/${hTyp}/
++export gcad_dir_bin=@PREFIX@/lib/gcad3d/
+ 
+ # <gcad_dir_bas>examples.gz        local-setup           RO
+-# <gcad_dir_bas>icons/             icons                 RO
+-#export gcad_dir_bas=/usr/share/gcad3d/
++export gcad_dir_bas=@PREFIX@/share/gcad3d/
++
++# <gcad_dir_ico>                   icons                 RO
++export gcad_dir_ico=@PREFIX@/share/gcad3d/icons/
+ 
+ # <gcad_dir_doc>html/              helpfiles .htm        ReadOnly
+ # <gcad_dir_doc>msg/               helpfiles .txt        ReadOnly
+-#export gcad_dir_doc=/usr/share/doc/gcad3d/
++export gcad_dir_doc=@PREFIX@/share/doc/gcad3d/
+ 
+ # <gcad_dir_local>gCAD3D/tmp/      temp-files            ReadWrite
+ # <gcad_dir_local>gCAD3D/cfg/      local setup-files     ReadWrite
+ # <gcad_dir_local>gCAD3D/dat/      example-models        ReadWrite
+ # <gcad_dir_local>gCAD3D/prg/      script-parts          ReadWrite
+ # <gcad_dir_local>gCAD3D/ctlg/     catalog-parts         ReadWrite
+-#export gcad_dir_local=${HOME}/
++export gcad_dir_local=${HOME}/.config/
+ 
+ # <gcad_dir_dev>gCAD3D/dev/        sources plugins       ReadWrite
+ # <gcad_dir_dev>gCAD3D/plugins/    objects executables   ReadWriteExe
+-#export gcad_dir_dev=${HOME}/
+-
+-
+-## if menu is unvisible: (ubuntu 11):
+-#if [ -n "$UBUNTU_MENUPROXY" ]; then
+-#  echo "disactivate ubuntu-global-menu"
+-#  export UBUNTU_MENUPROXY=
+-#fi
++export gcad_dir_dev=${HOME}/.config/
+ 
+ # start it ..
+-#dirname $0`/gCAD3Dx32
+ export LD_LIBRARY_PATH=${gcad_dir_bin}
+-${gcad_dir_bin}/gCAD3D $*
++${gcad_dir_bin}gCAD3D $*
+ # eof
