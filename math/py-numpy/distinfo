@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.72 2022/05/22 19:14:00 adam Exp $
+$NetBSD: distinfo,v 1.73 2022/05/23 17:28:41 ryoon Exp $
 
 BLAKE2s (numpy-1.22.4.zip) = 020700e15b661d064377106b6c3ecd5959c524e32cc2f3d1b97739894bbbcff8
 SHA512 (numpy-1.22.4.zip) = bb2993459157c43f8c419de98be1c832f108b4eb6b96e1d20f406eccd782681ad8d0f8653637962ac592abe7d75719c17678ec97f035f6c87d4c7f939a1a8a48
 Size (numpy-1.22.4.zip) = 11458830 bytes
-SHA1 (patch-numpy_core_setup.py) = 9e2388dd0de7f31994d3b27c10e439acd3ca1a03
+SHA1 (patch-numpy_core_setup.py) = 9f5d5934112d533f44207c2106db75465170d605
 SHA1 (patch-numpy_core_src_npymath_npy__math__private.h) = e3b8e751fd0b6b6c6794d714aa5f60dfe9d7f421
+SHA1 (patch-numpy_distutils_command_config.py) = eb37d28482689703e0c1a264f9768409cf8bb4b6
 SHA1 (patch-numpy_distutils_fcompiler_____init____.py) = 49d070da5b48bd9818b37ac3254341fa68503c53
 SHA1 (patch-numpy_distutils_fcompiler_g95.py) = be73b64a3e551df998b6a904d6db762bf28a98ed
 SHA1 (patch-numpy_distutils_fcompiler_gnu.py) = 1ab3fd7b3f42328f4094f1b21a65c05ae4d975b7
