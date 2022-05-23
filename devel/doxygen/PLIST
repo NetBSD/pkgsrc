@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2022/03/30 16:35:27 micha Exp $
+@comment $NetBSD: PLIST,v 1.47 2022/05/23 13:08:02 micha Exp $
 bin/doxygen
 ${PLIST.qt}bin/doxywizard
 ${PLIST.latex}man/man1/doxygen.1
@@ -1152,5 +1152,6 @@ ${PLIST.latex}share/doc/doxygen/html/tab_h.png
 ${PLIST.latex}share/doc/doxygen/html/tab_s.png
 ${PLIST.latex}share/doc/doxygen/html/tables.html
 ${PLIST.latex}share/doc/doxygen/html/tabs.css
+${PLIST.latex}share/doc/doxygen/html/translator_report.txt
 ${PLIST.latex}share/doc/doxygen/html/trouble.html
 ${PLIST.latex}share/doc/doxygen/html/xmlcmds.html
