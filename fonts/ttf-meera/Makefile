@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2022/05/23 17:09:24 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2022/05/23 21:46:56 nikita Exp $
 
-DISTNAME=	ttf-meera-${GITLAB_TAG}
+DISTNAME=	meera-${GITLAB_TAG}
 PKGNAME=	ttf-meera-7.0.3.20191223
+PKGREVISION=	1
 CATEGORIES=	fonts
-MASTER_SITES=	https://gitlab.com/smc/fonts/${GITLAB_PROJECT}/-/archive/${GITLAB_TAG}/
+MASTER_SITES=	${MASTER_SITE_GITLAB:=smc/fonts/}
 GITLAB_PROJECT=	meera
-GITLAB_LONGTAG=	aebe37081332d93e02a83a8649120401967fc379
 GITLAB_TAG=	aebe3708
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,10 +13,10 @@ HOMEPAGE=	https://smc.org.in/fonts/meera
 COMMENT=	Malayalam font in TTF format
 LICENSE=	gnu-gpl-v3 OR ofl-v1.1 # gpl-v3 with font exception OR ofl 1.1
 
-USE_LANGUAGES=		# none
-PYTHON_FOR_BUILD_ONLY=	yes
+USE_LANGUAGES=			# none
+PYTHON_FOR_BUILD_ONLY=		yes
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-WRKSRC=		${WRKDIR}/${GITLAB_PROJECT}-${GITLAB_TAG}-${GITLAB_LONGTAG}
 USE_TOOLS+=	gmake
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-fonttools-[0-9]*:../../fonts/py-fonttools
