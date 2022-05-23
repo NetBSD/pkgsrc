@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/23 15:09:44 jaapb Exp $
+
+BLAKE2s (js_of_ocaml-ocamlbuild-0.0.0.3693-852302c.tar.gz) = f23a7eb88fb33e455bb135156b6a2eb66f60b88db4df7c24c4ba77f74497ee80
+SHA512 (js_of_ocaml-ocamlbuild-0.0.0.3693-852302c.tar.gz) = 0ba5dd90e8d5c00b988e09ebf8c005c14e2a0ecea29e524af13f161267ad3ce41bfb7afc2d9cf0185ca2ae8344df1156a5efda79e817c13c5f28a468ab1204c1
+Size (js_of_ocaml-ocamlbuild-0.0.0.3693-852302c.tar.gz) = 28465 bytes
