@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2689 2022/05/23 08:34:46 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2690 2022/05/23 09:19:21 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4140,3 +4140,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/xh to 0.16.1 [pin 2022-05-23]
 	Updated devel/py-pathlib2 to 2.3.7.1 [adam 2022-05-23]
 	Updated textproc/py-xmlschema to 1.11.1 [adam 2022-05-23]
+	Added net/amfora version 1.9.2 [pin 2022-05-23]
