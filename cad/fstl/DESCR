@@ -1,0 +1,3 @@
+fstl is a very fast .stl file viewer, designed to quickly load and
+render very high-polygon models; showing 2 million triangles at 60+
+FPS on a mid-range laptop.
