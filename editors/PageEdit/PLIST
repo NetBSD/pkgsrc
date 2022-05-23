@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/03/06 12:38:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/05/23 17:21:01 wiz Exp $
 bin/pageedit
 qt5/qtwebengine_dictionaries/de_DE.bdic
 qt5/qtwebengine_dictionaries/en_GB.bdic
@@ -11,7 +11,6 @@ share/icons/hicolor/256x256/apps/pageedit.png
 share/icons/hicolor/32x32/apps/pageedit.png
 share/icons/hicolor/48x48/apps/pageedit.png
 share/icons/hicolor/scalable/apps/pageedit.svg
-share/pageedit/translations/pageedit_ar.qm
 share/pageedit/translations/pageedit_cs.qm
 share/pageedit/translations/pageedit_da_DK.qm
 share/pageedit/translations/pageedit_de.qm
