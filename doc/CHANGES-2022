@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2688 2022/05/23 07:07:13 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2689 2022/05/23 08:34:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4138,3 +4138,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/py-weasyprint to 55.0 [kleink 2022-05-23]
 	Updated sysutils/hexyl to 0.10.0 [pin 2022-05-23]
 	Updated www/xh to 0.16.1 [pin 2022-05-23]
+	Updated devel/py-pathlib2 to 2.3.7.1 [adam 2022-05-23]
+	Updated textproc/py-xmlschema to 1.11.1 [adam 2022-05-23]
