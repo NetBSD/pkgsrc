@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2022/01/05 15:41:19 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2022/05/23 05:22:13 kleink Exp $
 
-DISTNAME=	weasyprint-53.4
+DISTNAME=	weasyprint-55.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/weasyprint/}
 
@@ -11,13 +10,14 @@ HOMEPAGE=	https://weasyprint.org/
 COMMENT=	Converts HTML/CSS documents to PDF
 LICENSE=	modified-bsd
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 DEPENDS+=	pango>=1.29.3:../../devel/pango
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=4.0.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-cffi>=0.6:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-cssselect2>=0.1:../../textproc/py-cssselect2
 DEPENDS+=	${PYPKGPREFIX}-fonttools>=4.0.0:../../fonts/py-fonttools
-DEPENDS+=	${PYPKGPREFIX}-html5lib>=1.0.1:../../textproc/py-html5lib
+DEPENDS+=	${PYPKGPREFIX}-html5lib>=1.1:../../textproc/py-html5lib
 DEPENDS+=	${PYPKGPREFIX}-pydyf>=0.0.3:../../print/py-pydyf
 DEPENDS+=	${PYPKGPREFIX}-pyphen>=0.9.1:../../textproc/py-pyphen
 DEPENDS+=	${PYPKGPREFIX}-tinycss2>=1.0.0:../../textproc/py-tinycss2
@@ -30,8 +30,6 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-fonttools
 
-USE_PKG_RESOURCES=	yes
-
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} weasyprint weasyprint-${PYVERSSUFFIX} || ${TRUE}
@@ -39,5 +37,5 @@ post-install:
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
