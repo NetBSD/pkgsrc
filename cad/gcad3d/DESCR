@@ -1,0 +1,9 @@
+3D - CADCAM - software
+
+gCAD3D has its own:
+    import and export-programs (Step, Iges, VRML, DXF, SVG ..),
+    integrated 3D-OpenGL viewer,
+    program interpreter for geometry and NC commands in 3D,
+    integrated NC processor.
+    programming interface for userprograms (plugins)
+    programming interface for RemoteControl

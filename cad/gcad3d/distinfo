@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1 2022/05/23 19:10:03 plunky Exp $
+
+BLAKE2s (gcad3d-2.46.24-ff33b206f158092dbac7f2b1236c3d38fee5d656.tar.gz) = 6d350b3ab362c71b6a68216e336ef99a51468083ffbffb5290bca0671340cb92
+SHA512 (gcad3d-2.46.24-ff33b206f158092dbac7f2b1236c3d38fee5d656.tar.gz) = 3e2cc58b4fbc8437a8f646c7004a9d3af2c60e24e891a873351c0ccd85b5d82230d45c9e13cc4d549a6d529078d8c1e3d5234edaf2848f309da2a35ece5cb55a
+Size (gcad3d-2.46.24-ff33b206f158092dbac7f2b1236c3d38fee5d656.tar.gz) = 3866713 bytes
+SHA1 (patch-src_APP_srcOS.mak) = 088fde697d0f9ccbcae7828561a1465b27076a91
+SHA1 (patch-src_gcad3d) = 40fd61d9bc9eb30dae6f63549cda8b1f4914ef7d
+SHA1 (patch-src_gui__version__set.sh) = 5bb9314665d43982cfa02e44fe62686361c8aabe
+SHA1 (patch-src_options.sh) = 9e3b35152a07b1d1ea5fb9290a91e9a58d18cb65
+SHA1 (patch-src_ut_ut__err.c) = c15b69b8a312369c49184655a4c20ba60eaf113d
+SHA1 (patch-src_ut_ut__os__aix.c) = 489113958dd750ce538556da7b78d98137a3d4f2
+SHA1 (patch-src_xa_xa.c) = 3d6f32c8c3464b3206f5d8d9c1a33d2f8cc35999
+SHA1 (patch-src_xa_xa__main.c) = 945ff97df65fbc704ea5ccca15222ecfbb459caf
+SHA1 (patch-src_xa_xa__msg.h) = 7adf71019b4a61f6e8ddccb13f58cf5cbdac6731
