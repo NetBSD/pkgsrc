@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/23 19:05:34 plunky Exp $
+
+BLAKE2s (fstl-0.9.4.tar.gz) = 0779c1d83e21d99051101cfeb41c215c39e58ee3e04cf21b1113171038873eb4
+SHA512 (fstl-0.9.4.tar.gz) = a56f9fcf18756b2fa610b9c0fcbbc3e738b32fa44b0b0f90a5e2c426e02df14f3316c6d565f1f5beab628c3e136b573ce429ca31c4f7594c7eb08c7669ae9315
+Size (fstl-0.9.4.tar.gz) = 117230 bytes
