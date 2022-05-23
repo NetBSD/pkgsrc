@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2695 2022/05/23 12:05:52 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2696 2022/05/23 13:09:12 micha Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4147,3 +4147,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated cross/avr-binutils to 2.38 [micha 2022-05-23]
 	Updated multimedia/mkvtoolnix to 68.0.0 [adam 2022-05-23]
 	Updated devel/py-cachecontrol to 0.12.11 [adam 2022-05-23]
+	Updated devel/doxygen to 1.9.4 [micha 2022-05-23]
