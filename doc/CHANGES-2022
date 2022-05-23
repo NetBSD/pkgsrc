@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2711 2022/05/23 21:06:45 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2712 2022/05/23 21:07:35 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4164,3 +4164,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added cad/fstl version 0.9.4 [plunky 2022-05-23]
 	Added cad/gcad3d version 2.46.24 [plunky 2022-05-23]
 	Updated net/yaydl to 0.8.0 [pin 2022-05-23]
+	Updated net/ncgopher to 0.4.0 [pin 2022-05-23]
