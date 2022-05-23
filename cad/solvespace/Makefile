@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2021/12/08 16:03:25 adam Exp $
+# $NetBSD: Makefile,v 1.16 2022/05/23 19:02:59 plunky Exp $
 #
 #
 # Both of these hashes need to be updated when the solvespace version
@@ -9,21 +9,20 @@
 # Solvespace has a private fork of libdxfrw which is stored in github
 # as a submodule, which is not included in the v2.3 archive.
 #
-LIBDXF_HASH=		8f958955f54668c142ded760dc951ffd16d9c71b
-SOLVESPACE_HASH=	7c1ca460769fc8cbef26d296338d4bbc6f2ef6d0
+LIBDXF_HASH=		0b7b7b709d9299565db603f878214656ef5e9ddf
+SOLVESPACE_HASH=	0e0b0252e23dd5bd4ae82ababcc54c44aee036d6
 
-DISTNAME=		solvespace-2.3
-PKGREVISION=		12
+DISTNAME=		solvespace-3.0
 CATEGORIES=		cad
-MASTER_SITES=		http://github.com/solvespace/solvespace/archive/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=solvespace/solvespace/archive/}
 DIST_SUBDIR=		${PKGNAME_NOREV}
 DISTFILES=		v${PKGVERSION_NOREV}.tar.gz
 DISTFILES+=		${LIBDXF_HASH}.tar.gz
 SITES.${LIBDXF_HASH}.tar.gz= \
-			http://github.com/solvespace/libdxfrw/archive/
+			${MASTER_SITE_GITHUB:=solvespace/libdxfrw/archive/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.solvespace.com/
+HOMEPAGE=		https://www.solvespace.com/
 COMMENT=		Parametric 2D/3D CAD
 LICENSE=		gnu-gpl-v3
 
@@ -37,18 +36,19 @@ USE_CMAKE=		yes
 
 CMAKE_ARGS+=		-DGIT_COMMIT_HASH=${SOLVESPACE_HASH}
 
-SUBST_CLASSES+=		desktop
-SUBST_STAGE.desktop=	pre-configure
-SUBST_MESSAGE.desktop=	Fixing absolute path in desktop file
-SUBST_FILES.desktop=	src/unix/solvespace.desktop
-SUBST_SED.desktop=	-e "s,/usr/bin,${PREFIX}/bin,"
-
 SUBST_CLASSES+=		libdxfrw
 SUBST_STAGE.libdxfrw=	pre-configure
 SUBST_MESSAGE.libdxfrw=	Set libdxfrw directory
 SUBST_FILES.libdxfrw=	CMakeLists.txt
 SUBST_SED.libdxfrw=	-e "s,extlib/libdxfrw,extlib/libdxfrw-${LIBDXF_HASH},"
 
+CONFIGURE_DIRS=		build
+CMAKE_ARG_PATH=		..
+
+pre-configure:
+	cd ${WRKSRC} && ${MKDIR} ${CONFIGURE_DIRS}
+
+.include "../../devel/mimalloc/buildlink3.mk"
 .include "../../devel/pangomm/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
@@ -60,5 +60,5 @@ SUBST_SED.libdxfrw=	-e "s,extlib/libdxfrw,extlib/libdxfrw-${LIBDXF_HASH},"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/json-c/buildlink3.mk"
-.include "../../x11/gtkmm/buildlink3.mk"
+.include "../../x11/gtkmm3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
