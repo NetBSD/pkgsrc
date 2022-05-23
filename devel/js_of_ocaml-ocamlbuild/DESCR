@@ -1,0 +1,2 @@
+This is a plugin to ocamlbuild that enables compilation from
+OCaml to Javascript using js_of_ocaml.
