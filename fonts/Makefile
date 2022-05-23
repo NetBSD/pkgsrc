@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.376 2022/04/18 05:08:47 markd Exp $
+# $NetBSD: Makefile,v 1.377 2022/05/23 17:09:24 nikita Exp $
 #
 
 COMMENT=	Fonts
@@ -865,6 +865,7 @@ SUBDIR+=	tex-zhmetrics-uptex-doc
 SUBDIR+=	tex-zlmtt
 SUBDIR+=	tex-zlmtt-doc
 SUBDIR+=	thaixfonts
+SUBDIR+=	ttf-meera
 SUBDIR+=	ttf-tlwg
 SUBDIR+=	ttf2pk
 SUBDIR+=	ttf2pt1
