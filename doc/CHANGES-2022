@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2707 2022/05/23 19:03:13 plunky Exp $
+$NetBSD: CHANGES-2022,v 1.2708 2022/05/23 19:05:53 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4161,3 +4161,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/py-numpy to 1.22.4nb1 [ryoon 2022-05-23]
 	Updated x11/xfce4-terminal to 1.0.3 [gutteridge 2022-05-23]
 	Updated cad/solvespace to 3.0 [plunky 2022-05-23]
+	Updated cad/fstl to 0.9.4 [plunky 2022-05-23]
