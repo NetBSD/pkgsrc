@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2713 2022/05/23 21:08:53 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2714 2022/05/23 21:47:07 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4166,3 +4166,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/yaydl to 0.8.0 [pin 2022-05-23]
 	Updated net/ncgopher to 0.4.0 [pin 2022-05-23]
 	Updated audio/librespot to 0.4.1 [pin 2022-05-23]
+	Updated fonts/ttf-meera to 7.0.3.20191223nb1 [nikita 2022-05-23]
