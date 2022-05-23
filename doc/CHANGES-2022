@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2686 2022/05/23 05:22:28 kleink Exp $
+$NetBSD: CHANGES-2022,v 1.2687 2022/05/23 07:06:00 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4136,3 +4136,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/tex-doclicense-doc to 3.2.0 [markd 2022-05-22]
 	Updated net/nagios-plugin-syncrepl to 0.5nb1 [dholland 2022-05-22]
 	Updated print/py-weasyprint to 55.0 [kleink 2022-05-23]
+	Updated sysutils/hexyl to 0.10.0 [pin 2022-05-23]
