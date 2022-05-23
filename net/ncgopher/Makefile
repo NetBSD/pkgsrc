@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2022/04/18 19:11:52 adam Exp $
+# $NetBSD: Makefile,v 1.9 2022/05/23 21:07:14 pin Exp $
 
-DISTNAME=	ncgopher-0.3.0
-PKGREVISION=	2
+DISTNAME=	ncgopher-0.4.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jansc/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -24,8 +23,10 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.ncursesw}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.sqlite3}/lib
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/ncgopher ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/ncgopher.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/ncgopher \
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/ncgopher.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
