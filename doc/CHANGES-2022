@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2698 2022/05/23 14:59:16 ryoon Exp $
+$NetBSD: CHANGES-2022,v 1.2699 2022/05/23 15:10:01 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4153,3 +4153,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/ffmpeg3 to 3.4.11 [adam 2022-05-23]
 	Updated multimedia/ffplay3 to 3.4.11 [adam 2022-05-23]
 	Updated devel/py-gi-docgen to 2022.1nb1 [ryoon 2022-05-23]
+	Added devel/js_of_ocaml-ocamlbuild version 0.0.0.3693 [jaapb 2022-05-23]
