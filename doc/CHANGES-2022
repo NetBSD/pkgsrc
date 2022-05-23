@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2704 2022/05/23 17:21:10 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2705 2022/05/23 17:30:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4158,3 +4158,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added fonts/ttf-meera to 7.0.3.20191223 [nikita 2022-05-23]
 	Updated editors/Sigil to 1.9.10 [wiz 2022-05-23]
 	Updated editors/PageEdit to 1.9.10 [wiz 2022-05-23]
+	Updated math/py-numpy to 1.22.4nb1 [ryoon 2022-05-23]
