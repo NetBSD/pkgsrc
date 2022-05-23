@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2693 2022/05/23 11:48:15 mef Exp $
+$NetBSD: CHANGES-2022,v 1.2694 2022/05/23 11:57:49 micha Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4144,3 +4144,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated news/flnews to 1.1.0 [micha 2022-05-23]
 	Updated shells/elvish to 0.18.0 [pin 2022-05-23]
 	Updated math/R-zoo to 1.8.10 [mef 2022-05-23]
+	Updated cross/avr-binutils to 2.38 [micha 2022-05-23]
