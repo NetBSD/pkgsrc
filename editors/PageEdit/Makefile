@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/04/18 19:10:56 adam Exp $
+# $NetBSD: Makefile,v 1.4 2022/05/23 17:21:01 wiz Exp $
 
-DISTNAME=	PageEdit-1.7.0
-PKGREVISION=	2
+DISTNAME=	PageEdit-1.9.10
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Sigil-Ebook/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
