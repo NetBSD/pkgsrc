@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2687 2022/05/23 07:06:00 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2688 2022/05/23 07:07:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4137,3 +4137,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/nagios-plugin-syncrepl to 0.5nb1 [dholland 2022-05-22]
 	Updated print/py-weasyprint to 55.0 [kleink 2022-05-23]
 	Updated sysutils/hexyl to 0.10.0 [pin 2022-05-23]
+	Updated www/xh to 0.16.1 [pin 2022-05-23]
