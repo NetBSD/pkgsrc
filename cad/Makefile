@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2022/05/23 19:07:26 plunky Exp $
+# $NetBSD: Makefile,v 1.104 2022/05/23 19:10:43 plunky Exp $
 #
 
 COMMENT=	Computer Aided Design tools
@@ -21,6 +21,7 @@ SUBDIR+=	fasthenry
 SUBDIR+=	felt
 SUBDIR+=	freehdl
 SUBDIR+=	fstl
+SUBDIR+=	gcad3d
 SUBDIR+=	gdsreader
 SUBDIR+=	geda
 SUBDIR+=	gerbv
