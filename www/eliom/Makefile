@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.34 2021/03/08 08:13:08 jaapb Exp $
+# $NetBSD: Makefile,v 1.35 2022/05/23 15:31:34 jaapb Exp $
 #
 
 GITHUB_PROJECT=	eliom
-DISTNAME=	${GITHUB_PROJECT}-6.12.4
-PKGREVISION=	1
+DISTNAME=	${GITHUB_PROJECT}-10.0.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	http://ocsigen.org/download/
+HOMEPAGE=	http://ocsigen.org/eliom/
 COMMENT=	Dynamic webpage generation library
 LICENSE=	gnu-lgpl-v2.1
 
@@ -17,31 +16,33 @@ USE_LANGUAGES=		c
 OCAML_USE_FINDLIB=	yes
 UNLIMIT_RESOURCES+=	stacksize
 
-DEPENDS+=	ocsigen>=2.16.1:../../www/ocsigen
+DEPENDS+=	ocsigen>=5.0.0:../../www/ocsigen
 
 .include "../../mk/ocaml.mk"
 
 .if ${OCAML_USE_OPT_COMPILER} == "yes"
-BUILD_TARGET=	all
+BUILD_TARGET=	native
 .else
 BUILD_TARGET=	byte
 .endif
 
 do-install:
-	cd ${WRKSRC} && opam-installer --install --prefix ${DESTDIR}${PREFIX} --libdir ${DESTDIR}${PREFIX}/${OCAML_SITELIBDIR} --docdir ${DESTDIR}${PREFIX}/share/doc eliom.install
+	cd ${WRKSRC} && opaline -install-cmd "${INSTALL_DATA}" \
+	-destdir ${DESTDIR} \
+	-prefix ${PREFIX} \
+	-libdir ${PREFIX}/${OCAML_SITELIBDIR} \
+	-docdir ${PREFIX}/share/doc \
+        eliom.install
 
+.include "../../devel/js_of_ocaml-ocamlbuild/buildlink3.mk"
 .include "../../devel/js_of_ocaml/buildlink3.mk"
 .include "../../devel/ocaml-lwt_log/buildlink3.mk"
 .include "../../devel/ocaml-lwt_ppx/buildlink3.mk"
-.include "../../devel/ocaml-ppx_tools/buildlink3.mk"
-.include "../../devel/ocaml-react/buildlink3.mk"
+.include "../../devel/ocaml-ppx_deriving/buildlink3.mk"
+.include "../../devel/ocaml-ppxlib/buildlink3.mk"
 .include "../../devel/ocaml-reactiveData/buildlink3.mk"
-.include "../../devel/ocamlbuild/buildlink3.mk"
-.include "../../misc/ocaml-opam/buildlink3.mk"
-BUILDLINK_DEPMETHOD.ocaml-opam?=    build
+.include "../../devel/ocaml-reactiveData/buildlink3.mk"
+.include "../../misc/ocaml-opaline/buildlink3.mk"
 .include "../../net/ocaml-ipaddr/buildlink3.mk"
-.include "../../net/ocamlnet/buildlink3.mk"
-.include "../../security/ocaml-ssl/buildlink3.mk"
 .include "../../textproc/ocaml-tyxml/buildlink3.mk"
-.include "../../time/ocaml-calendar/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
