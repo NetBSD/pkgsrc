@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2022/05/23 15:09:44 jaapb Exp $
+${OCAML_SITELIB}/js_of_ocaml-ocamlbuild/META
+${OCAML_SITELIB}/js_of_ocaml-ocamlbuild/dune-package
+${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-ocamlbuild/ocamlbuild_js_of_ocaml.a
+${OCAML_SITELIB}/js_of_ocaml-ocamlbuild/ocamlbuild_js_of_ocaml.cma
+${OCAML_SITELIB}/js_of_ocaml-ocamlbuild/ocamlbuild_js_of_ocaml.cmi
+${OCAML_SITELIB}/js_of_ocaml-ocamlbuild/ocamlbuild_js_of_ocaml.cmt
+${OCAML_SITELIB}/js_of_ocaml-ocamlbuild/ocamlbuild_js_of_ocaml.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-ocamlbuild/ocamlbuild_js_of_ocaml.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-ocamlbuild/ocamlbuild_js_of_ocaml.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml-ocamlbuild/ocamlbuild_js_of_ocaml.cmxs
+${OCAML_SITELIB}/js_of_ocaml-ocamlbuild/ocamlbuild_js_of_ocaml.ml
+${OCAML_SITELIB}/js_of_ocaml-ocamlbuild/ocamlbuild_js_of_ocaml.mli
+${OCAML_SITELIB}/js_of_ocaml-ocamlbuild/opam
+share/doc/js_of_ocaml-ocamlbuild/CHANGES.md
+share/doc/js_of_ocaml-ocamlbuild/LICENSE
+share/doc/js_of_ocaml-ocamlbuild/README.md
