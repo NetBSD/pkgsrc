@@ -1,10 +1,10 @@
-$NetBSD: patch-ld_Makefile.in,v 1.1 2021/09/08 12:03:00 micha Exp $
+$NetBSD: patch-ld_Makefile.in,v 1.2 2022/05/23 11:56:35 micha Exp $
 
 Avoid installing info and po (NLS) files.
 
 --- ld/Makefile.in.orig	2021-07-18 16:38:34.000000000 +0000
 +++ ld/Makefile.in
-@@ -298,7 +298,7 @@ AM_V_texidevnull = $(am__v_texidevnull_@
+@@ -299,7 +299,7 @@ AM_V_texidevnull = $(am__v_texidevnull_@
  am__v_texidevnull_ = $(am__v_texidevnull_@AM_DEFAULT_V@)
  am__v_texidevnull_0 = > /dev/null
  am__v_texidevnull_1 = 
@@ -13,7 +13,7 @@ Avoid installing info and po (NLS) files.
  am__TEXINFO_TEX_DIR = $(srcdir)/../texinfo
  DVIS = ld.dvi
  PDFS = ld.pdf
-@@ -540,7 +540,7 @@ zlibinc = @zlibinc@
+@@ -541,7 +541,7 @@ zlibinc = @zlibinc@
  AUTOMAKE_OPTIONS = dejagnu no-texinfo.tex no-dist foreign info-in-builddir
  ACLOCAL_AMFLAGS = -I .. -I ../config -I ../bfd
  TEXINFO_TEX = ../texinfo/texinfo.tex

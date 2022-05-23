@@ -1,10 +1,10 @@
-$NetBSD: patch-bfd_Makefile.in,v 1.1 2021/09/08 12:03:00 micha Exp $
+$NetBSD: patch-bfd_Makefile.in,v 1.2 2022/05/23 11:56:35 micha Exp $
 
 Avoid installing info and po (NLS) files.
 
 --- bfd/Makefile.in.orig	2021-07-18 16:36:53.000000000 +0000
 +++ bfd/Makefile.in
-@@ -1748,7 +1748,6 @@ installdirs-am:
+@@ -1788,7 +1788,6 @@ installdirs-am:
  	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
  	done
  install: $(BUILT_SOURCES)
