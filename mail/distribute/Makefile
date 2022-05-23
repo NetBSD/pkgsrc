@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2021/05/24 19:52:39 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2022/05/23 03:45:35 dholland Exp $
 
 DISTNAME=	distribute-2.1-pl19
 PKGNAME=	distribute-2.1.26
@@ -42,6 +42,13 @@ MAKE_ENV+=	DEFAULTCONFIG='-DDEF_SEQ_PATH="\"${MAILINGLIST_DIR}\"" \
 			-DDEF_ARCHIVE_PATH="\"${ARCHIVE_DIR}\""' \
 		INSTALL=${INSTALL:Q} \
 		INSTALL_MAN=${INSTALL_MAN:Q}
+
+.include "../../mk/bsd.prefs.mk"
+
+# Reported against Irix 5; assume all versions until proven otherwise
+.if ${OPSYS} == "IRIX"
+MAKE_ENV+=	MOREOPTIONS=-DSTRSEP_MISSING
+.endif
 
 pre-build:
 	${TOUCH} ${WRKSRC}/logging.h ${WRKSRC}/strsep.c

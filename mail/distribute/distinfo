@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:53:57 nia Exp $
+$NetBSD: distinfo,v 1.14 2022/05/23 03:45:35 dholland Exp $
 
 BLAKE2s (distribute/distribute-2.1-pl19.tar.gz) = 6d31f088c79d2a181790e852d2f98e723447e813a6a0b96dd62b8ccecbf31105
 SHA512 (distribute/distribute-2.1-pl19.tar.gz) = 1ece4fd98c86ce6a4087e25b35d46d8cb4d6d9882de13d210c2d4a6885385c38e2fbb31de529886ee3dd24ee3ef2f48858315324fd11e4add8e08b4653b30efa
@@ -24,7 +24,6 @@ Size (distribute/patch.25e.gz) = 7374 bytes
 BLAKE2s (distribute/patch.26e.gz) = 666bf899f71fd957125bd1e751eafd21949fa56cf053256b64ebb8988e5f4304
 SHA512 (distribute/patch.26e.gz) = c0c1de2467d1b28320585cb4933029182932345e7e8b38fda79eed513ec30e7dea7cef1bd8c7f2ca551aae7c1e5930fc361451f73ce5bd7d1027460df4bef81e
 Size (distribute/patch.26e.gz) = 12560 bytes
-SHA1 (patch-aa) = d3f11bc9ae82a6bb7c644ebba8f929e4ae13e3f3
-SHA1 (patch-ab) = 4c07a6ae9bb1e9dacd33db96624d2c2fefbb9240
+SHA1 (patch-aa) = fd8a98d613fbec3f057a2b9187306cc89eadd2bf
 SHA1 (patch-ac) = 89873e55470070a2ceff7bc06fa63d2673aee766
 SHA1 (patch-tmpl2c.pl) = 5cdf21381f98df64b37609173e35448427edf231
