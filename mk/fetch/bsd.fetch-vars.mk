@@ -1,4 +1,4 @@
-# $NetBSD: bsd.fetch-vars.mk,v 1.25 2021/03/30 16:47:03 ryoon Exp $
+# $NetBSD: bsd.fetch-vars.mk,v 1.26 2022/05/23 21:45:45 nikita Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -54,6 +54,11 @@ _DISTDIR=		${DISTDIR}/${DIST_SUBDIR}
 # distfile name. It would be better to use ${_GITHUB_DEFAULT_DISTFILES} here,
 # but that gets assigned much later.
 DEFAULT_DISTFILES=	${DISTNAME}-${GITHUB_TAG}${EXTRACT_SUFX}
+.  elif defined(GITLAB_TAG) && !empty(GITLAB_TAG:M[a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9][a-f0-9]*)
+# If the gitlab tag is a git hash (7 or more hex digits), encode it in the
+# distfile name. It would be better to use ${_GITLAB_DEFAULT_DISTFILES} here,
+# but that gets assigned much later.
+DEFAULT_DISTFILES=	${DISTNAME}-${GITLAB_TAG}${EXTRACT_SUFX}
 .  else
 DEFAULT_DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 .  endif
@@ -66,6 +71,11 @@ DISTFILES+=			${_GITHUB_SM_USER}-${_GITHUB_SM_PROJECT}-${_GITHUB_SM_TAG}${EXTRAC
 .  endfor
 .endif
 
+.if !empty(GITLAB_SUBMODULES)
+.  for _GITLAB_SM_USER _GITLAB_SM_PROJECT _GITLAB_SM_TAG _GITLAB_SM_PLACE in ${GITLAB_SUBMODULES}
+DISTFILES+=			${_GITLAB_SM_USER}-${_GITLAB_SM_PROJECT}-${_GITLAB_SM_TAG}${EXTRACT_SUFX}
+.  endfor
+.endif
 
 # File lists, defined early to allow tool dependencies.
 ALLFILES?=	${DISTFILES} ${PATCHFILES}
