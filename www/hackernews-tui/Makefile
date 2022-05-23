@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2022/01/17 12:28:58 pin Exp $
+# $NetBSD: Makefile,v 1.18 2022/05/23 07:08:34 pin Exp $
 
+# Do not update this package for now
+# Newer releases require Rust-1.61
 DISTNAME=	hackernews-TUI-0.9.1
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	www
