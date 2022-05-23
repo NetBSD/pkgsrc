@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2021/10/21 07:46:33 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2022/05/23 03:18:45 dholland Exp $
 
 DISTNAME=	cku302
 PKGNAME=	kermit-9.0.302
@@ -63,6 +63,8 @@ MAKE_ENV+=		HAVE_CURSES=-DCK_NCURSES
 .  endif
 .elif ${OPSYS} == "SunOS"
 BUILD_TARGET_OPSYS=	solaris11g
+.elif ${OPSYS} == "IRIX"
+BUILD_TARGET_OPSYS=	irix${OS_VERSION:C/\.//g}
 .else
 BUILD_TARGET_OPSYS=	netbsd
 .endif
