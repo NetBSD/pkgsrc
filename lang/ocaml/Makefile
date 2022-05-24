@@ -1,11 +1,7 @@
-# $NetBSD: Makefile,v 1.143 2022/03/26 19:19:07 jaapb Exp $
+# $NetBSD: Makefile,v 1.144 2022/05/24 18:25:38 jaapb Exp $
 
 .include "Makefile.common"
 
-#CONFIGURE_ENV+=	disable_x11=yes
-PKGREVISION=		1
-
-BUILD_TARGET=		world
 TEST_PROGRAM=		ocamltest
 MAKE_JOBS_SAFE=		no
 UNLIMIT_RESOURCES=	stacksize
@@ -17,63 +13,17 @@ USE_GNU_CONFIGURE_HOST=	no
 
 #USE_GCC_RUNTIME=	yes
 
-PLIST_VARS+=	ocaml-stub ocaml-prof ocaml-opt ocaml-nat ocaml-spacetime \
-		instrumented_runtime
-
 .include "options.mk"
-###
-### PLIST components
-###
+.include "native.mk"
 
-# Stub libraries for functions missing from base system.
-.if !empty(MACHINE_PLATFORM:MDarwin-*-powerpc) || \
-    !empty(MACHINE_PLATFORM:MDarwin-9.*-i386) || \
-    !empty(MACHINE_PLATFORM:MDarwin-1[0-9].*) || \
-    ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD" || \
-    ${OPSYS} == "FreeBSD" || ${OPSYS} == "SunOS" || \
-    ${OPSYS} == "Linux"
-PLIST.ocaml-stub=	yes
-.endif
+# Options
 
-# Optional components built only on certain platforms.
-.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
-    !empty(MACHINE_ARCH:M*arm*) || (${MACHINE_ARCH} == "aarch64") || \
-    (${MACHINE_ARCH} == "x86_64")
-BUILD_TARGET+=		opt opt.opt
-TEST_PROGRAM+=		ocamltest.opt
-PLIST.ocaml-opt=	yes
-.  if empty(MACHINE_PLATFORM:MDarwin-*-powerpc) && \
-      empty(MACHINE_PLATFORM:MSunOS-*-i386) && \
-      (${MACHINE_ARCH} != "aarch64")
-PLIST.ocaml-prof=	yes
-.  endif
-.endif
-
-# XXX This conditional is not complete.  It should match the
-# conditional in ocaml-x.y.z/configure.
-.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "x86_64") || \
-    (${MACHINE_ARCH} == "aarch64") || (${MACHINE_ARCH} == "powerpc") || \
-    !empty(MACHINE_ARCH:Mearm*)
-.  if !empty(MACHINE_PLATFORM:MLinux-*-*) || \
-      !empty(MACHINE_PLATFORM:MFreeBSD-*-*) || \
-      !empty(MACHINE_PLATFORM:MDragonFly-*-*) || \
-      !empty(MACHINE_PLATFORM:MNetBSD-*-*) || \
-      !empty(MACHINE_PLATFORM:MDarwin-*-*) || \
-      !empty(MACHINE_PLATFORM:MSunOS-*-*)
-PLIST.ocaml-nat=	yes
-.  endif
-.endif
-
-# Spacetime profiling is only available for native code on 64-bit targets.
-.if (${MACHINE_ARCH} == "x86_64") || (${MACHINE_ARCH} == "aarch64")
-PLIST.ocaml-spacetime=	yes
-.endif
-
-# clock_gettime(2), required by POSIX, is necessary for the
-# instrumented_runtime feature.
-# It is missing on macOS before 10.12.
-.if ${OPSYS} != "Darwin" || ${OPSYS_VERSION} >= 101200
-PLIST.instrumented_runtime=	yes
+.if ${OCAML_USE_OPT_COMPILER} == "yes"
+CONFIGURE_ARGS+=	--enable-native-compiler
+BUILD_TARGET=		world.opt
+.else
+CONFIGURE_ARGS+=	--disable-native-compiler
+BUILD_TARGET=		world
 .endif
 
 # This is needed because ${WRKSRC}/build/partial-install.sh uses
@@ -87,7 +37,7 @@ PLIST.instrumented_runtime=	yes
 INSTALL_MAKE_FLAGS+=	SHELL=${SH:Q}
 .endif
 
-#INSTALLATION_DIRS=	${PKGMANDIR}/man1
+INSTALLATION_DIRS=	share/doc/ocaml
 
 OPSYSVARS+=		EXTRA_RT_LIBS
 EXTRA_RT_LIBS.NetBSD=	-lcurses
@@ -108,13 +58,6 @@ fix-darwin-install-name:
 		install_name_tool -id `${ECHO} $$f | ${SED} -e 's,${DESTDIR},,g'` $$f; \
 	done
 .endif
-
-#post-install:
-#	set -e ; cd ${DESTDIR}${PREFIX}/lib/ocaml/${PKGMANDIR}/man1;	\
-#	for m in *; do							\
-#	  ln -sf ${PREFIX}/lib/ocaml/${PKGMANDIR}/man1/$$m		\
-#		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/$$m;		\
-#	done
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
