@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2022/05/04 12:55:21 jaapb Exp $
+# $NetBSD: Makefile,v 1.33 2022/05/24 18:59:20 jaapb Exp $
 #
 
 VERSION=	1.2.4
@@ -24,7 +24,7 @@ MAKE_JOBS_SAFE=		no
 # in parallel anyway
 OCAML_USE_FINDLIB=	yes
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 
 BUILD_TARGET=	all htdoc
 .if ${OCAML_USE_OPT_COMPILER} == "yes"

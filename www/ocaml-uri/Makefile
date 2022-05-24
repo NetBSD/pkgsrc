@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/05/11 10:27:50 jaapb Exp $
+# $NetBSD: Makefile,v 1.5 2022/05/24 18:59:36 jaapb Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-4.2.0
 CATEGORIES=	www
@@ -22,5 +22,5 @@ OPAM_INSTALL_FILES=	uri uri-sexp
 .include "../../devel/ocaml-re/buildlink3.mk"
 .include "../../devel/ocaml-sexplib0/buildlink3.mk"
 .include "../../devel/ocaml-stringext/buildlink3.mk"
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"

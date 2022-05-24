@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/05/03 19:11:52 jaapb Exp $
+# $NetBSD: Makefile,v 1.7 2022/05/24 18:59:27 jaapb Exp $
 
 DISTNAME=	optint-0.2.0
 PKGNAME=	ocaml-${DISTNAME}
@@ -16,5 +16,5 @@ OCAML_USE_DUNE=	yes
 
 USE_LANGUAGES=	# none
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
