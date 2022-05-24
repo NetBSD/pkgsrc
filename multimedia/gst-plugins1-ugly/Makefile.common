@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.36 2022/04/19 07:55:45 nia Exp $
+# $NetBSD: Makefile.common,v 1.37 2022/05/24 18:18:19 nia Exp $
 
-DISTNAME=	gst-plugins-ugly-1.20.1
+DISTNAME=	gst-plugins-ugly-1.20.2
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-plugins-ugly/
 EXTRACT_SUFX=	.tar.xz
 
