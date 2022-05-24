@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2022/02/25 09:14:41 pin Exp $
+# $NetBSD: Makefile,v 1.7 2022/05/24 10:19:36 nikita Exp $
 
 DISTNAME=	refi-3.1.1
 CATEGORIES=	sysutils
-MASTER_SITES=	https://gitlab.com/miicat/refi/-/archive/v${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITLAB:=miicat/}
+GITLAB_PROJECT=	refi
+GITLAB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.com/miicat/refi/
