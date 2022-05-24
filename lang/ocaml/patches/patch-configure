@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.43 2020/12/09 10:33:04 jaapb Exp $
+$NetBSD: patch-configure,v 1.44 2022/05/24 18:25:38 jaapb Exp $
 
 All kinds of OS-specific changes to configure
 Honor LDFLAGS.
@@ -7,9 +7,9 @@ Add SunOS -lnsl -lsocket
 Recognise SunOS/amd64 as amd64
 Recognise SunOS as having shared libraries
 
---- configure.orig	2020-09-01 12:47:58.000000000 +0000
+--- configure.orig	2022-02-21 15:57:25.000000000 +0000
 +++ configure
-@@ -13476,7 +13476,7 @@ sharedlib_cflags=''
+@@ -14081,7 +14081,7 @@ sharedlib_cflags=''
  mksharedlib='shared-libs-not-available'
  rpath=''
  mksharedlibrpath=''
@@ -18,20 +18,7 @@ Recognise SunOS as having shared libraries
  
  if test x"$enable_shared" != "xno"; then :
    case $host in #(
-@@ -13513,6 +13513,12 @@ esac ;; #(
-       mksharedlibrpath="-Wl,-rpath,"
-       natdynlinkopts="-Wl,-E"
-       shared_libraries_supported=true ;; #(
-+  *-*-solaris*)
-+    sharedlib_cflags="-fPIC"
-+    mksharedlib="$CC -shared"
-+    rpath="-Wl,-rpath,"
-+    mksharedlibrpath="-Wl,rpath,"
-+    shared_libraries_supported=true ;;
-   *) :
-      ;;
- esac
-@@ -13534,6 +13540,8 @@ if test x"$enable_shared" != "xno"; then
+@@ -14157,6 +14157,8 @@ if test x"$supports_shared_libraries" = 
      natdynlink=true ;; #(
    *-pc-windows) :
      natdynlink=true ;; #(
@@ -40,7 +27,7 @@ Recognise SunOS as having shared libraries
    i[3456]86-*-linux*) :
      natdynlink=true ;; #(
    i[3456]86-*-gnu*) :
-@@ -13562,6 +13570,8 @@ if test x"$enable_shared" != "xno"; then
+@@ -14191,6 +14193,8 @@ if test x"$supports_shared_libraries" = 
      natdynlink=true ;; #(
    i[3456]86-*-netbsd*) :
      natdynlink=true ;; #(
@@ -49,7 +36,7 @@ Recognise SunOS as having shared libraries
    x86_64-*-netbsd*) :
      natdynlink=true ;; #(
    i386-*-gnu0.3) :
-@@ -13572,12 +13582,16 @@ if test x"$enable_shared" != "xno"; then
+@@ -14201,12 +14205,16 @@ if test x"$supports_shared_libraries" = 
      natdynlink=true ;; #(
    arm*-*-freebsd*) :
      natdynlink=true ;; #(
@@ -63,10 +50,10 @@ Recognise SunOS as having shared libraries
      natdynlink=true ;; #(
 +  aarch64-*-netbsd*) :
 +    natdynlink=true ;; #(
-   riscv*-*-linux*) :
+   aarch64-*-openbsd*) :
      natdynlink=true ;; #(
-   *) :
-@@ -13649,6 +13663,8 @@ case $host in #(
+   riscv*-*-linux*) :
+@@ -14315,6 +14323,8 @@ case $host in #(
      arch=i386; system=beos ;; #(
    i[3456]86-*-cygwin) :
      arch=i386; system=cygwin ;; #(
@@ -75,7 +62,7 @@ Recognise SunOS as having shared libraries
    i[3456]86-*-gnu*) :
      arch=i386; system=gnu ;; #(
    i[3456]86-*-mingw32) :
-@@ -13665,6 +13681,8 @@ case $host in #(
+@@ -14331,6 +14341,8 @@ case $host in #(
  else
    model=ppc
  fi; system=elf ;; #(
@@ -83,8 +70,8 @@ Recognise SunOS as having shared libraries
 +    arch=power; model=ppc; system=netbsd ;; #(
    s390x*-*-linux*) :
      arch=s390x; model=z10; system=elf ;; #(
-   armv6*-*-linux-gnueabihf) :
-@@ -13683,6 +13701,10 @@ fi; system=elf ;; #(
+   # expected to match "gnueabihf" as well as "musleabihf"
+@@ -14350,6 +14362,10 @@ fi; system=elf ;; #(
      arch=arm; model=armv6; system=linux_eabi ;; #(
    armv6*-*-freebsd*) :
      arch=arm; model=armv6; system=freebsd ;; #(
@@ -95,54 +82,102 @@ Recognise SunOS as having shared libraries
    earmv6*-*-netbsd*) :
      arch=arm; model=armv6; system=netbsd ;; #(
    earmv7*-*-netbsd*) :
-@@ -13719,8 +13741,12 @@ fi; system=elf ;; #(
+@@ -14394,10 +14410,14 @@ fi; system=elf ;; #(
      arch=arm64; system=linux ;; #(
    aarch64-*-freebsd*) :
      arch=arm64; system=freebsd ;; #(
 +  aarch64-*-netbsd*) :
 +    arch=arm64; system=netbsd ;; #(
+   aarch64-*-openbsd*) :
+     arch=arm64; system=openbsd ;; #(
    x86_64-*-cygwin*) :
      arch=amd64; system=cygwin ;; #(
 +  x86_64-*-solaris*) :
-+    arch=amd64; system=solaris ;; #(
++    arch=arm64; system=solaris ;; #(
    riscv64-*-linux*) :
      arch=riscv; model=riscv64; system=linux
   ;; #(
-@@ -13851,8 +13877,6 @@ if test -z "$PARTIALLD"; then :
-   case "$arch,$CC,$system,$model" in #(
-   amd64,gcc*,macosx,*) :
-     PACKLD='ld -r -arch x86_64 -o $(EMPTY)' ;; #(
--  amd64,gcc*,solaris,*) :
--    PACKLD='ld -r -m elf_x86_64 -o $(EMPTY)' ;; #(
-   power,gcc*,elf,ppc) :
-     PACKLD='ld -r -m elf32ppclinux -o $(EMPTY)' ;; #(
-   power,gcc*,elf,ppc64) :
-@@ -13947,6 +13971,9 @@ esac ;; #(
+@@ -14613,6 +14633,9 @@ case $as_target,$ocaml_cv_cc_vendor in #
    *) :
       ;;
  esac ;; #(
 +  power,netbsd):
 +    default_as="${toolpref}as -mppc"
-+    default_aspp="${toolpref}gcc -c" ;; #(
-   s390x,elf) :
-     default_as="${toolpref}as -m 64 -march=$model"
-     default_aspp="${toolpref}gcc -c -Wa,-march=$model" ;; #(
-@@ -14028,7 +14055,7 @@ fi
- # for the moment, to be backward-compatible
++    default_aspp="${toolpref}gcc -c " ;; #(
+   i686-pc-windows,*) :
+     default_as="ml -nologo -coff -Cp -c -Fo"
+     default_aspp="$default_as" ;; #(
+@@ -15223,6 +15246,64 @@ if test "x$ac_cv_func_socketpair" = xyes
  
- case $host in #(
+ fi
+  ;; #(
++  *-*-solaris*) :
++    cclibs="$cclibs -lnsl -lsocket"
++    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing socket" >&5
++$as_echo_n "checking for library containing socket... " >&6; }
++if ${ac_cv_search_socket+:} false; then :
++  $as_echo_n "(cached) " >&6
++else
++  ac_func_search_save_LIBS=$LIBS
++cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++
++/* Override any GCC internal prototype to avoid an error.
++   Use char because int might match the return type of a GCC
++   builtin and then its argument prototype would still apply.  */
++#ifdef __cplusplus
++extern "C"
++#endif
++char socket ();
++int
++main ()
++{
++return socket ();
++  ;
++  return 0;
++}
++_ACEOF
++for ac_lib in '' ws2_32; do
++  if test -z "$ac_lib"; then
++    ac_res="none required"
++  else
++    ac_res=-l$ac_lib
++    LIBS="-l$ac_lib  $ac_func_search_save_LIBS"
++  fi
++  if ac_fn_c_try_link "$LINENO"; then :
++  ac_cv_search_socket=$ac_res
++fi
++rm -f core conftest.err conftest.$ac_objext \
++    conftest$ac_exeext
++  if ${ac_cv_search_socket+:} false; then :
++  break
++fi
++done
++if ${ac_cv_search_socket+:} false; then :
++
++else
++  ac_cv_search_socket=no
++fi
++rm conftest.$ac_ext
++LIBS=$ac_func_search_save_LIBS
++fi
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_search_socket" >&5
++$as_echo "$ac_cv_search_socket" >&6; }
++ac_res=$ac_cv_search_socket
++if test "$ac_res" != no; then :
++  test "$ac_res" = "none required" || LIBS="$ac_res $LIBS"
++
++fi
++ ;; #(
+   *-*-haiku) :
+     cclibs="$cclibs -lnetwork"
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing socket" >&5
+@@ -17374,7 +17455,7 @@ as_has_debug_prefix_map=false
+ asm_cfi_supported=false
+ if $native_compiler; then :
+   case $host in #(
 -  *-*-mingw32|*-pc-windows) :
 +  *-*-mingw32|*-pc-windows|*-*-netbsd*) :
       ;; #(
    *) :
-     has_c99_float_ops=true
-@@ -14317,6 +14344,9 @@ case $host in #(
-   *-*-mingw32|*-pc-windows) :
-     cclibs="$cclibs -lws2_32"
-     sockets=true ;; #(
-+  *-*-solaris*) :
-+    cclibs="$cclibs -lnsl -lsocket"
-+    sockets=true ;; #(
-   *-*-haiku) :
-     cclibs="$cclibs -lnetwork"
-     sockets=true ;; #(
+ 

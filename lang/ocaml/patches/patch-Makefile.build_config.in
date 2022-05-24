@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile.build_config.in,v 1.1 2022/05/24 18:25:38 jaapb Exp $
+
+USE BSD_INSTALL_*
+
+--- Makefile.build_config.in.orig	2022-02-08 16:50:12.000000000 +0000
++++ Makefile.build_config.in
+@@ -20,9 +20,9 @@
+ # $(ROOTDIR) has been defined.
+ 
+ include $(ROOTDIR)/Makefile.config
+-INSTALL ?= @INSTALL@
+-INSTALL_DATA ?= @INSTALL_DATA@
+-INSTALL_PROG ?= @INSTALL_PROGRAM@
++INSTALL ?= $(BSD_INSTALL)
++INSTALL_DATA ?= $(BSD_INSTALL_DATA)
++INSTALL_PROG ?= $(BSD_INSTALL_SCRIPT)
+ 
+ # Whether to install the native toplevel (ocamlnat)
+ INSTALL_OCAMLNAT = @install_ocamlnat@

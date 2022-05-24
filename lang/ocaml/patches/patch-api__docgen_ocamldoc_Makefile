@@ -1,0 +1,40 @@
+$NetBSD: patch-api__docgen_ocamldoc_Makefile,v 1.1 2022/05/24 18:25:38 jaapb Exp $
+
+Install manpages with correct suffix
+
+--- api_docgen/ocamldoc/Makefile.orig	2022-02-21 15:57:25.000000000 +0000
++++ api_docgen/ocamldoc/Makefile
+@@ -19,7 +19,7 @@ include ../../ocamldoc/Makefile.best_oca
+ vpath %.mli ../../stdlib $(DOC_COMPILERLIBS_DIRS)  $(DOC_STDLIB_DIRS)
+ 
+ 
+-man: build/man/Stdlib.3o
++man: build/man/Stdlib.3
+ latex: build/latex/Stdlib.tex
+ html: \
+   build/html/libref/Stdlib.html \
+@@ -34,7 +34,7 @@ DOC_ALL_INCLUDES = \
+ 
+ libref=$(stdlib_UNPREFIXED) $(otherlibref)
+ 
+-ALL_MAN= $(ALL_DOC:%=build/man/%.3o)
++ALL_MAN= $(ALL_DOC:%=build/man/%.3)
+ ALL_LATEX= $(ALL_DOC:%=build/latex/%.tex)
+ 
+ build/latex/ifocamldoc.tex: | build/latex
+@@ -60,7 +60,7 @@ build/libref/%.odoc: build/%.mld | build
+ 	$(OCAMLDOC_RUN) $(DOC_STDLIB_INCLUDES) -text $< -dump  $@
+ 
+ ALL_COMPILED_DOC=$(ALL_DOC:%=build/%.odoc)
+-build/man/Stdlib.3o: $(ALL_COMPILED_DOC) | build/man
++build/man/Stdlib.3: $(ALL_COMPILED_DOC) | build/man
+ 	$(OCAMLDOC_RUN) -man -d build/man -man-mini \
+ 	-nostdlib -hide Stdlib -lib Stdlib -t "OCaml library" \
+ 	$(addprefix -load , $(ALL_COMPILED_DOC))
+@@ -123,5 +123,5 @@ build/latex/compilerlibs_input.tex: | bu
+ install:
+ 	$(MKDIR) "$(INSTALL_LIBRARIES_MAN_DIR)"
+ 	if test -d build/man; then \
+-	  $(INSTALL_DATA) build/man/*.3o "$(INSTALL_LIBRARIES_MAN_DIR)"; \
++	  $(INSTALL_DATA) build/man/*.3 "$(INSTALL_LIBRARIES_MAN_DIR)"; \
+ 	fi
