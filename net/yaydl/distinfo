@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2022/05/23 21:06:26 pin Exp $
+$NetBSD: distinfo,v 1.12 2022/05/24 08:54:53 pin Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -621,6 +621,6 @@ Size (windows_x86_64_gnu-0.36.1.crate) = 790934 bytes
 BLAKE2s (windows_x86_64_msvc-0.36.1.crate) = e48ba38c24d831da6c6db4bb434ee7df10185932b0ef6136ae605062f25b6d0d
 SHA512 (windows_x86_64_msvc-0.36.1.crate) = 89c22ed51a74f531662d80ae0fa5e0215728db1e6caf3c13eaeba95a93548b43c00b8474f52553ac866ac83c203b6c22dc44fbc870e882a4c9c97ba54b87c631
 Size (windows_x86_64_msvc-0.36.1.crate) = 661999 bytes
-BLAKE2s (yaydl-7007a1d87d.tar.gz) = 239b77043455bf061966239f0c1ad72d824bdc2170c16b271bd49111a7c5e571
-SHA512 (yaydl-7007a1d87d.tar.gz) = df694ac0248f900f54708a987b7468a24a152bef7bf57282e6260ddf38887e477177b02ce3d4aaa2ec379359154de6a5ad8ce62680aec29db449bc5044665f7e
-Size (yaydl-7007a1d87d.tar.gz) = 30207 bytes
+BLAKE2s (yaydl-0b14ea41d0.tar.gz) = 7514cb4b540b69ef61b4fc576469d4c6d4d66272dc2fe5325c1f39f4a2e3ce68
+SHA512 (yaydl-0b14ea41d0.tar.gz) = b472abb0a40c7eccb9dbdfb2e51d75fa217daffaa5343759a18dfdcfea03b47b4d31abd86117c3cc289c7fad924ad9b9e5c066b97b60f6198b522ba3ecf6faaa
+Size (yaydl-0b14ea41d0.tar.gz) = 30448 bytes
