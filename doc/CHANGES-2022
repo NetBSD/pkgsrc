@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2718 2022/05/24 08:55:57 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2719 2022/05/24 11:52:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4171,3 +4171,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated cad/qcad to 3.27.6.0 [plunky 2022-05-24]
 	Updated net/yaydl to 0.9.0 [pin 2022-05-24]
 	Updated textproc/tuc to 0.8.0 [pin 2022-05-24]
+	Updated databases/pgpool2 to 4.3.2 [adam 2022-05-24]
+	Updated comms/py-rich to 12.4.4 [adam 2022-05-24]
