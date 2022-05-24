@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.188 2022/05/14 05:40:59 adam Exp $
+# $NetBSD: Makefile,v 1.189 2022/05/24 09:47:54 nia Exp $
 
 DISTNAME=	sudo-1.9.10
 CATEGORIES=	security
@@ -41,7 +41,7 @@ CONFIGURE_ENV+=		ax_cv_check_cflags___static_libgcc=no
 PLIST.noexec=		yes
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-[7-9].*-*)
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} > 070000
 CFLAGS+=	-D_OPENBSD_SOURCE=1
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-[5-6].*-*)
