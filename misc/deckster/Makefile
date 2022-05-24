@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2022/02/25 09:10:51 pin Exp $
+# $NetBSD: Makefile,v 1.4 2022/05/24 13:06:14 nikita Exp $
 
 DISTNAME=	deckster-0.2.1
 CATEGORIES=	misc
-MASTER_SITES=	https://gitlab.com/prince_bett/deckster/-/archive/v${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITLAB:=prince_bett/}
+GITLAB_PROJECT=	deckster
+GITLAB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.com/prince_bett/deckster/
