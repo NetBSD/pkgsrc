@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2022/05/10 16:58:03 adam Exp $
+# $NetBSD: Makefile,v 1.92 2022/05/24 09:41:44 nia Exp $
 
 DISTNAME=	python-ldap-3.4.0
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
@@ -13,8 +13,7 @@ LICENSE=	python-software-foundation
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../mk/bsd.prefs.mk"
-.if !empty(MACHINE_PLATFORM:MNetBSD-[56789].*) && \
-    empty(MACHINE_PLATFORM:MNetBSD-9.99.*)
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099907
 # Needs openldap>=2.4.48 for openldap.h.
 # Unfortunately, version detection on the native version fails.
 PREFER.openldap-client=	pkgsrc
