@@ -1,36 +1,37 @@
-$NetBSD: patch-otherlibs_systhreads_Makefile,v 1.12 2020/12/09 10:33:04 jaapb Exp $
+$NetBSD: patch-otherlibs_systhreads_Makefile,v 1.13 2022/05/24 18:25:38 jaapb Exp $
 
+Use BSD_INSTALL_* instead of mkdir
 Honor LDFLAGS.
 
---- otherlibs/systhreads/Makefile.orig	2020-01-10 16:10:46.000000000 +0000
+--- otherlibs/systhreads/Makefile.orig	2021-09-30 15:40:11.000000000 +0000
 +++ otherlibs/systhreads/Makefile
-@@ -29,6 +29,7 @@ NATIVE_CPPFLAGS = \
- CAMLRUN ?= $(ROOTDIR)/boot/ocamlrun
+@@ -30,6 +30,7 @@ NATIVE_CPPFLAGS = \
+   -DNATIVE_CODE -DTARGET_$(ARCH) -DMODEL_$(MODEL) -DSYS_$(SYSTEM)
  
  LIBS = -nostdlib -I $(ROOTDIR)/stdlib -I $(ROOTDIR)/otherlibs/$(UNIXLIB)
 +LDOPTS = -ldopt "$(LDFLAGS)"
  
  CAMLC=$(BEST_OCAMLC) $(LIBS)
  CAMLOPT=$(BEST_OCAMLOPT) $(LIBS)
-@@ -70,7 +71,7 @@ all: lib$(LIBNAME).$(A) $(LIBNAME).cma $
+@@ -66,7 +67,7 @@ all: lib$(LIBNAME).$(A) $(LIBNAME).cma $
  allopt: lib$(LIBNAME)nat.$(A) $(LIBNAME).cmxa $(CMIFILES)
  
  lib$(LIBNAME).$(A): $(BYTECODE_C_OBJS)
--	$(MKLIB_CMD) -o $(LIBNAME) $(BYTECODE_C_OBJS) $(PTHREAD_LINK)
-+	$(MKLIB_CMD) -o $(LIBNAME) $(BYTECODE_C_OBJS) $(PTHREAD_LINK) $(LDOPTS)
+-	$(MKLIB_CMD) -o $(LIBNAME) $(BYTECODE_C_OBJS) $(PTHREAD_LIBS)
++	$(MKLIB_CMD) -o $(LIBNAME) $(BYTECODE_C_OBJS) $(PTHREAD_LIBS) $(LDOPTS)
  
  lib$(LIBNAME)nat.$(A): $(NATIVECODE_C_OBJS)
  	$(MKLIB_CMD) -o $(LIBNAME)nat $^
-@@ -78,7 +79,7 @@ lib$(LIBNAME)nat.$(A): $(NATIVECODE_C_OB
+@@ -74,7 +75,7 @@ lib$(LIBNAME)nat.$(A): $(NATIVECODE_C_OB
  $(LIBNAME).cma: $(THREADS_BCOBJS)
  ifeq "$(UNIX_OR_WIN32)" "unix"
  	$(MKLIB) -o $(LIBNAME) -ocamlc '$(CAMLC)' -cclib -lunix -linkall \
--	  $(PTHREAD_CAML_LINK) $^
-+	  $(PTHREAD_CAML_LINK) $(LDOPTS) $^
+-	  $(PTHREAD_CAML_LIBS) $^
++	  $(PTHREAD_CAML_LIBS) $(LDOPTS) $^
  # TODO: Figure out why -cclib -lunix is used here.
  # It may be because of the threadsUnix module which is deprecated.
  # It may hence be good to figure out whether this module shouldn't be
-@@ -124,7 +125,7 @@ install:
+@@ -122,7 +123,7 @@ install:
  	fi
  	$(INSTALL_DATA) libthreads.$(A) "$(INSTALL_LIBDIR)"
  	cd "$(INSTALL_LIBDIR)"; $(RANLIB) libthreads.$(A)
