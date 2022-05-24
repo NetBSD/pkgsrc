@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2018/07/19 15:15:27 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2022/05/24 18:59:33 jaapb Exp $
 #
 
 BUILDLINK_TREE+=	scilab
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	scilab
 SCILAB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.scilab+=	scilab>=4.1
-BUILDLINK_ABI_DEPENDS.scilab+=	scilab>=4.1nb25
+BUILDLINK_ABI_DEPENDS.scilab+=	scilab>=4.1nb28
 BUILDLINK_PKGSRCDIR.scilab?=	../../math/scilab
 
 BUILDLINK_FILES.scilab+=	lib/scilab-${SCIVERSION}/Version.incl

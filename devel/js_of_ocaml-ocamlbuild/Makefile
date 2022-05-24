@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/05/23 15:09:44 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2022/05/24 18:59:21 jaapb Exp $
 #
 
 DISTNAME=	${GITHUB_PROJECT}-0.0.0.3693
@@ -23,6 +23,6 @@ OCAML_FINDLIB_DIRS=	${DUNE_INSTALL_PACKAGES}
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-852302c8f35b946e2ec275c529a79e46d8749be6
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../devel/ocamlbuild/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/05/02 14:12:12 jaapb Exp $
+# $NetBSD: Makefile,v 1.12 2022/05/24 18:59:26 jaapb Exp $
 
 .include "../../devel/ocaml-lwt/Makefile.common"
 
@@ -13,7 +13,7 @@ CONFLICTS=	ocaml-lwt<3.0.0
 
 DUNE_BUILD_PACKAGES=	lwt_react
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../devel/ocaml-lwt/buildlink3.mk"
 .include "../../devel/ocaml-react/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

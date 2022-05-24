@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2019/03/25 09:30:27 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2022/05/24 18:59:24 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-eqaf
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	ocaml-eqaf
 OCAML_EQAF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-eqaf+=	ocaml-eqaf>=0.2
+BUILDLINK_ABI_DEPENDS.ocaml-eqaf+=	ocaml-eqaf>=0.2nb2
 BUILDLINK_PKGSRCDIR.ocaml-eqaf?=	../../devel/ocaml-eqaf
 
 .endif	# OCAML_EQAF_BUILDLINK3_MK

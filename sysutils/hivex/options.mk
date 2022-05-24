@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2018/10/04 16:01:40 tnn Exp $
+# $NetBSD: options.mk,v 1.2 2022/05/24 18:59:34 jaapb Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.hivex
 PKG_SUPPORTED_OPTIONS=	ocaml perl python readline ruby
@@ -12,7 +12,7 @@ PLIST.ocaml=		yes
 INSTALL_ENV+=		OCAML_SITELIBDIR=${OCAML_SITELIBDIR}
 OCAML_USE_FINDLIB=	yes
 CONFIGURE_ARGS+=	--enable-ocaml
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .else
 CONFIGURE_ARGS+=	--disable-ocaml
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/05/02 15:04:06 jaapb Exp $
+# $NetBSD: Makefile,v 1.15 2022/05/24 18:59:31 jaapb Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-0.26.0
 PKGNAME=	ocaml-${DISTNAME}
@@ -28,5 +28,5 @@ SUPERSEDES=	ocaml-ppx_ast-[0-9]* \
 .include "../../devel/ocaml-ppx_derivers/buildlink3.mk"
 .include "../../devel/ocaml-sexplib0/buildlink3.mk"
 .include "../../devel/ocaml-stdlib-shims/buildlink3.mk"
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/05/11 11:56:46 jaapb Exp $
+# $NetBSD: Makefile,v 1.5 2022/05/24 18:59:33 jaapb Exp $
 
 GITHUB_PROJECT=	ocaml-magic-mime
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,5 +15,5 @@ USE_LANGUAGES=	# none
 
 OCAML_USE_DUNE=	yes
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"

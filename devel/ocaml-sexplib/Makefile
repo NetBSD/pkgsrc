@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/05/04 13:32:12 jaapb Exp $
+# $NetBSD: Makefile,v 1.24 2022/05/24 18:59:32 jaapb Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-0.15.0
 PKGNAME=	ocaml-${DISTNAME}
@@ -20,5 +20,5 @@ BUILD_TARGET=	default
 .include "../../devel/ocaml-parsexp/buildlink3.mk"
 .include "../../devel/ocaml-sexplib0/buildlink3.mk"
 .include "../../math/ocaml-num/buildlink3.mk"
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"

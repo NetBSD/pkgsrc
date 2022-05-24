@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2018/07/19 15:15:23 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2022/05/24 18:59:26 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-optcomp
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-optcomp
 OCAML_OPTCOMP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-optcomp+=	ocaml-optcomp>=1.6nb1
-BUILDLINK_ABI_DEPENDS.ocaml-optcomp+=	ocaml-optcomp>=1.6nb11
+BUILDLINK_ABI_DEPENDS.ocaml-optcomp+=	ocaml-optcomp>=1.6nb14
 BUILDLINK_PKGSRCDIR.ocaml-optcomp?=	../../devel/ocaml-optcomp
 
 .include "../../lang/camlp4/buildlink3.mk"
