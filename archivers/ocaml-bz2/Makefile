@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/05/03 18:29:18 jaapb Exp $
+# $NetBSD: Makefile,v 1.22 2022/05/24 18:59:20 jaapb Exp $
 
 PKGNAME=	ocaml-bz2-${VERSION}
 DISTNAME=	camlbz2-${VERSION}
@@ -19,7 +19,7 @@ OCAML_USE_FINDLIB=	yes
 pre-configure:
 	cd ${WRKSRC} && autoconf
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.prefs.mk"
 
 .include "../../archivers/bzip2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2022/05/02 14:02:09 jaapb Exp $
+# $NetBSD: Makefile,v 1.46 2022/05/24 18:59:26 jaapb Exp $
 #
 
 .include "Makefile.common"
@@ -17,7 +17,7 @@ CFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
 
 MAKE_ENV+=	LWT_DISCOVER_ARGUMENTS="--use-pthread true --use-libev true --verbose"
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/libev/buildlink3.mk"
 .include "../../devel/ocaml-cppo/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/05/02 12:46:54 jaapb Exp $
+# $NetBSD: Makefile,v 1.15 2022/05/24 18:59:34 jaapb Exp $
 
 VERSION=	2.1.4
 GITHUB_PROJECT=	opam-file-format
@@ -19,7 +19,7 @@ OCAML_USE_FINDLIB=	yes
 
 INSTALL_ENV+=	LIBDIR=${PREFIX}/${OCAML_SITELIBDIR}
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 
 .if ${OCAML_USE_OPT_COMPILER} == "yes"
 BUILD_TARGET=	all

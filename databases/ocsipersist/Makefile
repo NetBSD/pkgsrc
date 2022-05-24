@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/05/20 06:47:28 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2022/05/24 18:59:20 jaapb Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-1.1.0
 CATEGORIES=	databases
@@ -21,7 +21,7 @@ OCAML_FINDLIB_DIRS=	${DUNE_BUILD_PACKAGES}
 
 
 .include "options.mk"
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../databases/ocaml-dbm/buildlink3.mk"
 .include "../../devel/ocaml-lwt/buildlink3.mk"
 .include "../../devel/ocaml-lwt_ppx/buildlink3.mk"

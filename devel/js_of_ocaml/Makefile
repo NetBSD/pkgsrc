@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2022/05/11 08:42:37 jaapb Exp $
+# $NetBSD: Makefile,v 1.41 2022/05/24 18:59:21 jaapb Exp $
 #
 
 DISTNAME=	${GITHUB_PROJECT}-4.0.0
@@ -30,5 +30,5 @@ DUNE_BUILD_PACKAGES=	${OPAM_INSTALL_FILES}
 .include "../../devel/ocaml-ppxlib/buildlink3.mk"
 .include "../../devel/ocaml-yojson/buildlink3.mk"
 .include "../../math/ocaml-num/buildlink3.mk"
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
