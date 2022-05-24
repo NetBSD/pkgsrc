@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2725 2022/05/24 18:28:20 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2726 2022/05/24 21:35:57 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4185,3 +4185,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/gst-plugins1-libav to 1.20.2 [nia 2022-05-24]
 	Updated multimedia/gst-plugins1-ugly to 1.20.2 [nia 2022-05-24]
 	Updated lang/ocaml to 4.14.0 [jaapb 2022-05-24]
+	Updated www/htmldoc to 1.9.16 [fcambus 2022-05-24]
