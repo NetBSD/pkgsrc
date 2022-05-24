@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/08/16 21:22:13 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2022/05/24 12:58:54 nia Exp $
 #
 
 DISTNAME=	ibus-table-chinese-1.8.2
@@ -17,12 +17,12 @@ USE_TOOLS+=	pkg-config
 BUILD_DEPENDS+=	cmake-fedora>=2.0:../../devel/cmake-fedora
 
 # iconv: unexpected end of file; the last character is incomplete.
-MAKE_JOBS_SAFE=	noo
+MAKE_JOBS_SAFE=	no
 
 .include "../../mk/bsd.prefs.mk"
 
 # Illegal byte sequence in array30_ExtB.txt
-.if !empty(MACHINE_PLATFORM:MNetBSD-[0-5].*-*)
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 050000
 BUILD_DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
 CMAKE_ARGS+=		-DICONV_CMD:PATH=${LOCALBASE}/bin/iconv
 .endif
