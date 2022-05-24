@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2719 2022/05/24 11:52:22 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2720 2022/05/24 12:31:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4173,3 +4173,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/tuc to 0.8.0 [pin 2022-05-24]
 	Updated databases/pgpool2 to 4.3.2 [adam 2022-05-24]
 	Updated comms/py-rich to 12.4.4 [adam 2022-05-24]
+	Updated www/py-httpcore to 0.15.0 [adam 2022-05-24]
+	Updated www/py-httpx to 0.23.0 [adam 2022-05-24]
