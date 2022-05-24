@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2022/04/12 11:28:00 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2022/05/24 18:51:48 jaapb Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	jaapb@NetBSD.org
@@ -37,6 +38,6 @@ OPAM_INSTALL_FILES=	dune-glob \
 post-build:
 	${RUN} cd ${WRKSRC} && ./dune.exe build -p dune,dune-action-plugin,dune-build-info,dune-glob,dune-private-libs @install
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 
 .include "../../mk/bsd.pkg.mk"

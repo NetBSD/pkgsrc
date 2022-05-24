@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/05/24 17:55:23 jaapb Exp $
+# $NetBSD: Makefile,v 1.22 2022/05/24 18:51:53 jaapb Exp $
 #
 
 VERSION=	1.12
@@ -27,5 +27,5 @@ OCAML_USE_FINDLIB=	yes
 REPLACE_PERL+=	z_pp.pl
 
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"

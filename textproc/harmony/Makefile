@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2021/03/08 08:13:06 jaapb Exp $
+# $NetBSD: Makefile,v 1.29 2022/05/24 18:51:55 jaapb Exp $
 #
 
 DISTNAME=	harmony-stable-${VERSION}
 PKGNAME=	harmony-${VERSION}
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	misc
 MASTER_SITES=	https://alliance.seas.upenn.edu/~harmony/download/
 
@@ -47,7 +47,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/manual.pdf ${DESTDIR}${PREFIX}/share/doc/harmony
 	${INSTALL_DATA} ${WRKSRC}/doc/main.pdf ${DESTDIR}${PREFIX}/share/doc/harmony
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 
 .include "../../devel/pcre-ocaml/buildlink3.mk"
 .include "../../net/ocamlnet/buildlink3.mk"

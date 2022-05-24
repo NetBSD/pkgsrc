@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2021/03/08 08:13:07 jaapb Exp $
+# $NetBSD: Makefile,v 1.11 2022/05/24 18:51:55 jaapb Exp $
 
 VERSION=	0.0.2
 GITHUB_PROJECT=	uchar
 GITHUB_TAG=	v${VERSION}
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 
@@ -16,7 +16,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 INSTALLATION_DIRS=	${OCAML_SITELIBDIR}/uchar
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 
 .if ${OCAML_USE_OPT_COMPILER} == "yes"
 NATIVE=	true

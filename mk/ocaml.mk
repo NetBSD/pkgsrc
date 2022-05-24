@@ -1,16 +1,8 @@
-# $NetBSD: ocaml.mk,v 1.33 2022/04/12 11:27:13 tnn Exp $
+# $NetBSD: ocaml.mk,v 1.34 2022/05/24 18:51:54 jaapb Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
+# It should be included by every package that uses OCaml.
 #
-# Build def variables:
-# OCAML_USE_OPT_COMPILER 
-# if set to yes, will enable optimised (native code) compilation
-# default value: depends on architecture
-#
-# PLIST variable:
-# PLIST.ocaml-opt for files only installed when using the optimised compiler
-# Set based on OCAML_USE_OPT_COMPILER
-# 
 # Package-settable variables:
 # OCAML_USE_FINDLIB
 # package uses findlib infrastructure
@@ -43,10 +35,9 @@ OCAML_MK= # defined
 MKPIE_SUPPORTED=	no
 
 .include "../../mk/bsd.fast.prefs.mk"
+.include "../../wip/ocaml/native.mk"
 
-BUILD_DEFS+=	OCAML_USE_OPT_COMPILER
 
-_VARGROUPS+=	ocaml
 _PKG_VARS.ocaml=	\
 	OCAML_USE_FINDLIB \
 	OCAML_FINDLIB_DIRS \
@@ -61,9 +52,6 @@ _PKG_VARS.ocaml=	\
 	OCAML_TOPKG_FLAGS \
 	OCAML_TOPKG_TARGETS \
 	OCAML_TOPKG_OPTIONAL_TARGETS \
-	JBUILDER_BUILD_FLAGS \
-	JBUILDER_BUILD_PACKAGES \
-	JBUILDER_BUILD_TARGETS \
 	OCAML_USE_DUNE \
 	DUNE_BUILD_FLAGS \
 	DUNE_BUILD_PACKAGES \
@@ -71,8 +59,6 @@ _PKG_VARS.ocaml=	\
 	OCAML_BUILD_ARGS \
 	OPAM_INSTALL_DIR \
 	OPAM_INSTALL_FILES
-_DEF_VARS.ocaml=	\
-	OCAML_USE_OPT_COMPILER
 _SYS_VARS.ocaml=	\
 	OCAML_SITELIBDIR
 
@@ -99,24 +85,12 @@ OCAML_TOPKG_OPTIONAL_TARGETS?=	# empty
 OCAML_TOPKG_NATIVE_TARGETS?=	# empty
 
 OPAM_INSTALL_FILES?=	${OCAML_TOPKG_NAME}
-JBUILDER_BUILD_FLAGS?=	# empty
-JBUILDER_BUILD_TARGETS?=	@install
-JBUILDER_BUILD_PACKAGES?=	# empty
 DUNE_BUILD_FLAGS?=	# empty
 DUNE_BUILD_TARGETS?=	@install
 DUNE_BUILD_PACKAGES?=	# empty
 
 # Default value of OASIS_BUILD_ARGS
 OASIS_BUILD_ARGS?=	# empty
-
-# Default value of OCAML_USE_OPT_COMPILER
-.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
-    !empty(MACHINE_ARCH:M*arm*) || (${MACHINE_ARCH} == "aarch64") || \
-    (${MACHINE_ARCH} == "aarch64eb") || (${MACHINE_ARCH} == "x86_64")
-OCAML_USE_OPT_COMPILER?=	yes
-.else
-OCAML_USE_OPT_COMPILER?=	no
-.endif
 
 #
 # Configure stuff for OASIS_DYNRUN
@@ -188,18 +162,6 @@ OCAML_FINDLIB_REGISTER?=	yes
 #
 # Compiler stuff
 #
-
-# Things that get installed with the opt compiler
-PLIST_VARS+=	ocaml-opt
-
-.if ${OCAML_USE_OPT_COMPILER} == "yes"
-# The opt compiler needs the C compiler suite
-USE_LANGUAGES+=	c
-PLIST.ocaml-opt=	yes
-.else
-# If we're bytecode compiling, don't strip executables
-INSTALL_UNSTRIPPED=	yes
-.endif
 
 #
 # OASIS targets

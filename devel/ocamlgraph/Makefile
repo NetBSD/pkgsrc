@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2022/04/18 19:10:53 adam Exp $
+# $NetBSD: Makefile,v 1.58 2022/05/24 18:51:52 jaapb Exp $
 
 DISTNAME=	ocamlgraph-1.8.8
-PKGREVISION=	32
+PKGREVISION=	33
 CATEGORIES=	devel
 MASTER_SITES=	http://ocamlgraph.lri.fr/download/
 
@@ -19,7 +19,7 @@ OCAML_USE_FINDLIB=	yes
 
 MAKE_ENV+=	USE_LABLGTK="${USE_LABLGTK}"
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 
 .if ${OCAML_USE_OPT_COMPILER} == "yes"
 MAKE_ENV+=	OCAMLBEST="opt"

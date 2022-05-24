@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2021/03/08 08:13:03 jaapb Exp $
+# $NetBSD: Makefile,v 1.24 2022/05/24 18:51:53 jaapb Exp $
 
 DISTNAME=	pict-4.1
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	lang
 MASTER_SITES=	http://www.cis.upenn.edu/~bcpierce/papers/pict/pict-4.1/
 
@@ -24,7 +24,7 @@ MAKE_ENV+=		X11INCLUDE=${X11BASE}/include \
 
 TEST_TARGET=	test
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 
 .if !empty(OCAML_USE_OPT_COMPILER:Myes)
 MAKE_ENV+=		OCAMLOPT=yes

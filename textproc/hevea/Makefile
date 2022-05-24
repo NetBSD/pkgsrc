@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2021/05/20 13:53:28 tonio Exp $
+# $NetBSD: Makefile,v 1.32 2022/05/24 18:51:55 jaapb Exp $
 
 DISTNAME=	hevea-2.35
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://hevea.inria.fr/distri/
 
@@ -11,7 +12,7 @@ LICENSE=	qpl-v1.0
 
 MAKE_ENV+=	DESTDIR=${DESTDIR}
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .if !empty(OCAML_USE_OPT_COMPILER:M[Yy][Ee][Ss])
 MAKE_ENV+=	TARGET=opt
 .else

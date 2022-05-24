@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2022/03/01 09:50:00 jaapb Exp $
+# $NetBSD: Makefile,v 1.8 2022/05/24 18:51:53 jaapb Exp $
 
 GITHUB_PROJECT=	num
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	${GITHUB_PROJECT}-1.4
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 
@@ -21,5 +22,5 @@ INSTALLATION_DIRS+=	lib/ocaml/stublibs
 OCAML_USE_FINDLIB=	yes
 OCAML_FINDLIB_DIRS+=	num-top
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"

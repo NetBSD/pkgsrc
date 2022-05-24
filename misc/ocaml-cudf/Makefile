@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2021/03/08 08:13:04 jaapb Exp $
+# $NetBSD: Makefile,v 1.19 2022/05/24 18:51:53 jaapb Exp $
 
 DISTNAME=	cudf-0.9
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	misc
 MASTER_SITES=	https://gforge.inria.fr/frs/download.php/file/36602/
 
@@ -17,7 +17,7 @@ MAKE_JOBS_SAFE=		no
 
 PKGCONFIG_OVERRIDE+=	c-lib/cudf.pc.in
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 
 BUILD_TARGET=	all
 .if ${OCAML_USE_OPT_COMPILER} == "yes"
