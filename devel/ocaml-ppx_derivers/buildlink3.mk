@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2020/01/17 09:37:32 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2022/05/24 18:51:50 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-ppx_derivers
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-ppx_derivers
 OCAML_PPX_DERIVERS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-ppx_derivers+=	ocaml-ppx_derivers>=1.0
-BUILDLINK_ABI_DEPENDS.ocaml-ppx_derivers+=	ocaml-ppx_derivers>=1.2.1
+BUILDLINK_ABI_DEPENDS.ocaml-ppx_derivers+=	ocaml-ppx_derivers>=1.2.1nb2
 BUILDLINK_PKGSRCDIR.ocaml-ppx_derivers?=	../../devel/ocaml-ppx_derivers
 .endif	# OCAML_PPX_DERIVERS_BUILDLINK3_MK
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2021/03/28 12:30:19 mef Exp $
+# $NetBSD: Makefile,v 1.5 2022/05/24 18:51:49 jaapb Exp $
 
 DISTNAME=	fpath-0.7.2
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://erratique.ch/software/fpath/releases/
 EXTRACT_SUFX=	.tbz
@@ -20,5 +20,5 @@ OCAML_USE_OPAM=		yes
 .include "../../devel/ocaml-astring/buildlink3.mk"
 .include "../../devel/ocamlbuild/buildlink3.mk"
 .include "../../devel/ocaml-result/buildlink3.mk"
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
