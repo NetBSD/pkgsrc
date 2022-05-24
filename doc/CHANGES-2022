@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2724 2022/05/24 18:20:45 nia Exp $
+$NetBSD: CHANGES-2022,v 1.2725 2022/05/24 18:28:20 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4184,3 +4184,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated multimedia/gst-plugins1-good to 1.20.2 [nia 2022-05-24]
 	Updated multimedia/gst-plugins1-libav to 1.20.2 [nia 2022-05-24]
 	Updated multimedia/gst-plugins1-ugly to 1.20.2 [nia 2022-05-24]
+	Updated lang/ocaml to 4.14.0 [jaapb 2022-05-24]
