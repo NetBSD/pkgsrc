@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/10/21 13:16:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2022/05/24 12:31:21 adam Exp $
 bin/httpx-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -70,6 +70,9 @@ ${PYSITELIB}/httpx/_transports/wsgi.pyo
 ${PYSITELIB}/httpx/_types.py
 ${PYSITELIB}/httpx/_types.pyc
 ${PYSITELIB}/httpx/_types.pyo
+${PYSITELIB}/httpx/_urls.py
+${PYSITELIB}/httpx/_urls.pyc
+${PYSITELIB}/httpx/_urls.pyo
 ${PYSITELIB}/httpx/_utils.py
 ${PYSITELIB}/httpx/_utils.pyc
 ${PYSITELIB}/httpx/_utils.pyo
