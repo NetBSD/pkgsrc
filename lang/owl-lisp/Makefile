@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2022/04/23 23:27:55 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2022/05/24 12:54:27 nikita Exp $
 
 DISTNAME=	owl-v0.2
 PKGNAME=	${DISTNAME:S/owl-v/owl-lisp-/}
 CATEGORIES=	lang
-MASTER_SITES=	https://gitlab.com/owl-lisp/owl/-/archive/v${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITLAB:=owl-lisp/}
+GITLAB_PROJECT=	owl
+GITLAB_RELEASE=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
