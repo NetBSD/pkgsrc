@@ -1,4 +1,4 @@
-$NetBSD: patch-common_autoconf_spec.gmk.in,v 1.4 2015/06/10 13:29:57 tnn Exp $
+$NetBSD: patch-common_autoconf_spec.gmk.in,v 1.5 2022/05/24 21:32:43 tnn Exp $
 
 --- common/autoconf/spec.gmk.in.orig	2015-06-10 10:29:06.000000000 +0000
 +++ common/autoconf/spec.gmk.in
@@ -26,7 +26,7 @@ $NetBSD: patch-common_autoconf_spec.gmk.in,v 1.4 2015/06/10 13:29:57 tnn Exp $
  # Hotspot sets this variable before reading the SPEC when compiling sa-jdi.jar. Avoid
  # overriding that value by using ?=.
 -JAVAC_FLAGS?=@JAVAC_FLAGS@
-+JAVAC_FLAGS?=@JAVAC_FLAGS@ -encoding UTF-8 -verbose
++JAVAC_FLAGS?=@JAVAC_FLAGS@ -encoding UTF-8
  
  JAVAH=@FIXPATH@ $(BOOT_JDK)/bin/javah
  
