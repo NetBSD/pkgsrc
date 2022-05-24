@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.29 2021/10/06 10:25:32 jperkin Exp $
+# $NetBSD: cargo.mk,v 1.30 2022/05/24 09:51:51 nia Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -39,7 +39,7 @@ EXTRACT_DIR.${crate}.crate?=	${CARGO_VENDOR_DIR}
 .include "../../mk/bsd.prefs.mk"
 # Triggers NetBSD ld.so bug (PR toolchain/54192)
 # See Makefile for further information.
-.if ${MACHINE_PLATFORM:MNetBSD-[1-9].*} && !${MACHINE_PLATFORM:MNetBSD-9.99.*}
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099957
 MAKE_JOBS_SAFE=	no
 .endif
 
