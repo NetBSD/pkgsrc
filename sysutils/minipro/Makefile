@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2022/04/02 10:58:07 nia Exp $
+# $NetBSD: Makefile,v 1.3 2022/05/24 10:22:17 nikita Exp $
 
 MINIPRO_VERS=	0.5
 
 DISTNAME=	minipro-${MINIPRO_VERS}
 CATEGORIES=	sysutils
-MASTER_SITES=	https://gitlab.com/DavidGriffith/minipro/-/archive/${MINIPRO_VERS}/
+MASTER_SITES=	${MASTER_SITE_GITLAB:=DavidGriffith/}
+GITLAB_PROJECT=	minipro
+GITLAB_RELEASE=	${MINIPRO_VERS}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	thorpej@NetBSD.org
