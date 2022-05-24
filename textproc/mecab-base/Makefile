@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/08/28 19:04:42 fhajny Exp $
+# $NetBSD: Makefile,v 1.12 2022/05/24 13:03:25 nia Exp $
 #
 
 .include "../../textproc/mecab/Makefile.common"
@@ -44,7 +44,7 @@ SUBST_SED.pthread=	-e 's|-lpthread||g'
 PTHREAD_AUTO_VARS=	yes
 
 # No TLS support for NetBSD.
-.if !empty(MACHINE_PLATFORM:MNetBSD-[1-5].*-*)
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 060000
 SUBST_SED.pthread+=	-e 's|enable_tls=yes|enable_tls=no|g'
 .endif
 
