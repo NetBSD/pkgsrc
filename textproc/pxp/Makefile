@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2021/03/08 08:13:08 jaapb Exp $
+# $NetBSD: Makefile,v 1.25 2022/05/24 18:51:56 jaapb Exp $
 #
 
 DISTNAME=		pxp-1.2.8
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		textproc
 MASTER_SITES=		http://download.camlcity.org/download/
 
@@ -33,7 +33,7 @@ INSTALLATION_DIRS=	${OCAML_SITELIBDIR}/pxp
 OCAML_USE_FINDLIB=	yes
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 
 .if (${OCAML_USE_OPT_COMPILER} == "yes")
 BUILD_TARGET+=	opt

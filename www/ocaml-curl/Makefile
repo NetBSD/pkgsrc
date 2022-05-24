@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.43 2021/12/08 16:06:58 adam Exp $
+# $NetBSD: Makefile,v 1.44 2022/05/24 18:51:56 jaapb Exp $
 #
 
 DISTNAME=		ocurl-0.5.3
 PKGNAME=		ocaml-curl-0.5.3
 EXTRACT_SUFX=		.tgz
-PKGREVISION=		39
+PKGREVISION=		40
 CATEGORIES=		www net devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ocurl/}
 
@@ -27,5 +27,5 @@ WRKSRC=			${WRKDIR}/ocurl
 USE_LANGUAGES=		c
 
 .include "../../www/curl/buildlink3.mk"
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"

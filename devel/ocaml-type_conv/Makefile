@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2021/03/08 08:13:01 jaapb Exp $
+# $NetBSD: Makefile,v 1.18 2022/05/24 18:51:51 jaapb Exp $
 
 
 VERSION=	113.00.02
 GITHUB_PROJECT=	type_conv
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
 
@@ -20,5 +20,5 @@ OCAML_USE_FINDLIB=	yes
 
 .include "../../devel/ocamlbuild/buildlink3.mk"
 .include "../../lang/camlp4/buildlink3.mk"
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"

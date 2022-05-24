@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2021/03/08 08:13:07 jaapb Exp $
+# $NetBSD: Makefile,v 1.14 2022/05/24 18:51:55 jaapb Exp $
 
 DISTNAME=	jsonm-1.0.1
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	textproc
 MASTER_SITES=	http://erratique.ch/software/jsonm/releases/
 EXTRACT_SUFX=	.tbz
@@ -15,7 +15,7 @@ LICENSE=	isc
 OCAML_USE_TOPKG=	yes
 INSTALLATION_DIRS+=	bin share/doc/jsonm
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 
 # Normally, we'd do this using opam-installer, but that requires
 # this package.

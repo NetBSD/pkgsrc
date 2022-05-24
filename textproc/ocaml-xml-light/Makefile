@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2021/03/08 08:13:08 jaapb Exp $
+# $NetBSD: Makefile,v 1.3 2022/05/24 18:51:56 jaapb Exp $
 
 GITHUB_PROJECT=	xml-light
 DISTNAME=	${GITHUB_PROJECT}-2.4
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ncannasse/}
 DIST_SUBDIR=	ocaml-${GITHUB_PROJECT}
@@ -19,7 +19,7 @@ MAKE_JOBS_SAFE=	no
 
 OCAML_USE_FINDLIB=	yes
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 
 BUILD_TARGET=	all
 .if ${OCAML_USE_OPT_COMPILER} == "yes"

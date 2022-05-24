@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2021/03/08 08:12:50 jaapb Exp $
+# $NetBSD: Makefile,v 1.22 2022/05/24 18:51:48 jaapb Exp $
 #
 
 VERSION=	0.8.1
 GITHUB_PROJECT=	deriving
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PKGNAME=	ocaml-${GITHUB_PROJECT}-ocsigen-${VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	Extension to OCaml for deriving functions from type declarations
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
@@ -20,5 +20,5 @@ OCAML_FINDLIB_DIRS=	deriving
 
 .include "../../lang/camlp4/buildlink3.mk"
 .include "../../math/ocaml-num/buildlink3.mk"
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
