@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2716 2022/05/24 05:17:26 plunky Exp $
+$NetBSD: CHANGES-2022,v 1.2717 2022/05/24 08:55:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4169,3 +4169,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/ttf-meera to 7.0.3.20191223nb1 [nikita 2022-05-23]
 	Updated devel/guile-git to 0.5.2nb2 [nikita 2022-05-23]
 	Updated cad/qcad to 3.27.6.0 [plunky 2022-05-24]
+	Updated net/yaydl to 0.9.0 [pin 2022-05-24]
