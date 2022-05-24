@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2022/05/23 00:35:02 dholland Exp $
+# $NetBSD: Makefile.common,v 1.29 2022/05/24 09:50:46 nia Exp $
 # used by multimedia/ffmpeg4/Makefile
 # used by multimedia/ffplay4/Makefile
 
@@ -45,11 +45,6 @@ CONFIG_SHELL=	${TOOLS_PATH.bash}
 .endif
 
 CONFIGURE_ARGS+=	--enable-runtime-cpudetect
-
-# No posix_memalign() in NetBSD 4.0 and earlier
-.if !empty(MACHINE_PLATFORM:MNetBSD-[1-4].*-*)
-CONFIGURE_ARGS+=	--enable-memalign-hack
-.endif
 
 # Let's not put garbage into /tmp
 CONFIGURE_ENV+=		TMPDIR=${WRKSRC}/tmp
