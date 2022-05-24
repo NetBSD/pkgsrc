@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.102 2022/04/18 19:10:49 adam Exp $
+# $NetBSD: Makefile,v 1.103 2022/05/24 18:51:47 jaapb Exp $
 #
 
 DISTNAME=	frama-c-Phosphorus-20170501
 PKGNAME=	${DISTNAME:S/-Phosphorus//}
-PKGREVISION=	34
+PKGREVISION=	35
 CATEGORIES=	devel
 MASTER_SITES=	https://frama-c.com/download/
 
@@ -25,5 +25,5 @@ OCAML_USE_FINDLIB=	yes
 .include "../../devel/ocamlgraph/buildlink3.mk"
 .include "../../math/ocaml-zarith/buildlink3.mk"
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2021/03/08 08:12:59 jaapb Exp $
+# $NetBSD: Makefile,v 1.5 2022/05/24 18:51:51 jaapb Exp $
 
 GITHUB_PROJECT=	resource-pooling
 DISTNAME=	${GITHUB_PROJECT}-1.1
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
@@ -17,5 +17,5 @@ OCAML_USE_DUNE=	yes
 
 .include "../../devel/ocaml-lwt/buildlink3.mk"
 .include "../../devel/ocaml-lwt_log/buildlink3.mk"
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"

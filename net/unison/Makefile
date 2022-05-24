@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.140 2022/05/08 15:02:33 gdt Exp $
+# $NetBSD: Makefile,v 1.141 2022/05/24 18:51:54 jaapb Exp $
 
 DISTNAME=	unison-2.52.1
-#PKGREVISION=	0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bcpierce00/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,7 +16,7 @@ USE_TOOLS+=	gmake bash
 MAKE_FLAGS+=	CFLAGS=""
 MAKE_ENV+=	HOME=${WRKDIR:Q}
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 
 .if (${OCAML_USE_OPT_COMPILER} == "yes")
 MAKE_FLAGS+=	NATIVE=true

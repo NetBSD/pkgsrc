@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2022/04/18 19:10:56 adam Exp $
+# $NetBSD: Makefile,v 1.40 2022/05/24 18:51:52 jaapb Exp $
 
 DISTNAME=		verifast-18.02
-PKGREVISION=		27
+PKGREVISION=		28
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=verifast/}
 GITHUB_PROJECT=		verifast
@@ -38,7 +38,7 @@ do-install:
 		>> ${DESTDIR}${PREFIX}/bin/vfide
 	${CHMOD} 755 ${DESTDIR}${PREFIX}/bin/vfide
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 
 .include "../../lang/camlp4/buildlink3.mk"
 .include "../../math/ocaml-num/buildlink3.mk"
