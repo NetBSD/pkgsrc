@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/05/18 11:20:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/05/24 11:50:12 adam Exp $
 bin/pcp_attach_node
 bin/pcp_detach_node
 bin/pcp_health_check_stats
@@ -24,12 +24,12 @@ include/pcp.h
 include/pool_process_reporting.h
 include/pool_type.h
 lib/libpcp.la
-lib/postgresql/bitcode/pgpool-recovery.index.bc
-lib/postgresql/bitcode/pgpool-recovery/pgpool-recovery.bc
-lib/postgresql/bitcode/pgpool-regclass.index.bc
-lib/postgresql/bitcode/pgpool-regclass/pgpool-regclass.bc
-lib/postgresql/bitcode/pgpool_adm.index.bc
-lib/postgresql/bitcode/pgpool_adm/pgpool_adm.bc
+${PLIST.llvm}lib/postgresql/bitcode/pgpool-recovery.index.bc
+${PLIST.llvm}lib/postgresql/bitcode/pgpool-recovery/pgpool-recovery.bc
+${PLIST.llvm}lib/postgresql/bitcode/pgpool-regclass.index.bc
+${PLIST.llvm}lib/postgresql/bitcode/pgpool-regclass/pgpool-regclass.bc
+${PLIST.llvm}lib/postgresql/bitcode/pgpool_adm.index.bc
+${PLIST.llvm}lib/postgresql/bitcode/pgpool_adm/pgpool_adm.bc
 lib/postgresql/pgpool-recovery.so
 lib/postgresql/pgpool-regclass.so
 lib/postgresql/pgpool_adm.so

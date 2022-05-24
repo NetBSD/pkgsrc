@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.5 2022/05/18 11:20:35 adam Exp $
+$NetBSD: patch-configure,v 1.6 2022/05/24 11:50:12 adam Exp $
 
 Pick a better name for the package.
 
@@ -10,6 +10,6 @@ Pick a better name for the package.
  # Define the identity of the package.
 - PACKAGE='pgpool-II'
 + PACKAGE='pgpool2'
-  VERSION='4.3.1'
+  VERSION='4.3.2'
  
  

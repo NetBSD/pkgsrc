@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2022/05/18 11:20:35 adam Exp $
+$NetBSD: distinfo,v 1.8 2022/05/24 11:50:12 adam Exp $
 
-BLAKE2s (pgpool-II-4.3.1.tar.gz) = 780229c8c2adcf38a136641f849e0ef18bbf46a15dedf9bc2990cf85dcb48027
-SHA512 (pgpool-II-4.3.1.tar.gz) = a5417d9f5baa1b39e3645f7d44accf0a2f04d5fc5cb4d28089169aaebbd15c20b4cd280d09f15fa764c3b793117086fc03f5d7be584c0c5ff9c5f8e11ddb9ef8
-Size (pgpool-II-4.3.1.tar.gz) = 6034811 bytes
-SHA1 (patch-configure) = dc15a41b8f5d6572426514a155dc671ca2faa95c
+BLAKE2s (pgpool-II-4.3.2.tar.gz) = 11cae621379e32e1d16f4d738483d521b8b5bcc9404ad6a435983fe557131835
+SHA512 (pgpool-II-4.3.2.tar.gz) = 771426257eddb5c48504c80a2c8cccf44a18f7ea50df55654b7e9e017bda561a73a3e1f0db79785785ff6893d6df26f73b55310d0184ef3301838d12290d3d4c
+Size (pgpool-II-4.3.2.tar.gz) = 5846769 bytes
+SHA1 (patch-configure) = dcb361ee60f4cd3cdfad0ffb304ff4d4441ca6d3
 SHA1 (patch-src_Makefile.in) = 467e7b9a2acf5459b29141812dc0e1ad6d01f72f
 SHA1 (patch-src_auth_pool__hba.c) = e677effdc067273342adedfd0611661fc03ca059
 SHA1 (patch-src_include_pool.h) = eae2f78a996e3204d75d23378ad6e95333282926
