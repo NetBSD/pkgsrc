@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2022/05/18 11:20:35 adam Exp $
+# $NetBSD: Makefile,v 1.10 2022/05/24 11:50:12 adam Exp $
 
-DISTNAME=	pgpool-II-4.3.1
+DISTNAME=	pgpool-II-4.3.2
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME:S/-II/2/}
 CATEGORIES=	databases
 MASTER_SITES=	https://www.pgpool.net/mediawiki/images/
@@ -66,6 +66,11 @@ CONF_FILES_PERMS+=	${EGDIR}/pool_passwd ${PKG_SYSCONFDIR}/pool_passwd \
 post-install:
 	${TOUCH} ${DESTDIR}${PREFIX}/share/examples/pgpool2/pool_passwd
 
+PLIST_VARS+=	llvm
 .include "../../mk/pgsql.buildlink3.mk"
+.if !empty(PKG_OPTIONS.postgresql${PGSQL_VERSION}:Mllvm)
+PLIST.llvm=	yes
+.endif
+
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
