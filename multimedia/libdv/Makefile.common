@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2020/03/20 11:58:03 nia Exp $
+# $NetBSD: Makefile.common,v 1.19 2022/05/24 09:43:51 nia Exp $
 #
 # used by multimedia/libdv-tools/Makefile
 
@@ -23,10 +23,11 @@ PTHREAD_AUTO_VARS=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
+# Avoid text relocations.
 .if (${OPSYS} == "Darwin") || empty(MACHINE_PLATFORM:M*-*-i386) || \
     (${OPSYS} == "Interix") || (${OPSYS} == "SunOS") || \
     (${OPSYS} == "MirBSD") || \
-    !empty(MACHINE_PLATFORM:MNetBSD-[89].*-i386)
+    !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
 CONFIGURE_ARGS+=	--disable-asm
 .endif
 
