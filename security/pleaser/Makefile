@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2021/12/06 21:42:26 pin Exp $
+# $NetBSD: Makefile,v 1.15 2022/05/24 09:38:44 nikita Exp $
 
 DISTNAME=	please-0.5.1
 PKGNAME=	pleaser-0.5.1
 CATEGORIES=	security
-MASTER_SITES=	https://gitlab.com/edneville/please/-/archive/v${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITLAB:=edneville/}
+GITLAB_PROJECT=	please
+GITLAB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://gitlab.com/edneville/please/
