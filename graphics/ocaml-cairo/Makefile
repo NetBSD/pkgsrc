@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2022/04/18 19:11:22 adam Exp $
+# $NetBSD: Makefile,v 1.17 2022/05/24 18:51:52 jaapb Exp $
 
 GITHUB_PROJECT=	ocaml-cairo
 DISTNAME=	${GITHUB_PROJECT}-0.6.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Chris00/}
 
@@ -21,7 +21,7 @@ DUNE_BUILD_PACKAGES=	${OCAML_FINDLIB_DIRS}
 #   https://github.com/Chris00/ocaml-cairo/issues/29
 
 .include "options.mk"
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../devel/ocaml-dune-configurator/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

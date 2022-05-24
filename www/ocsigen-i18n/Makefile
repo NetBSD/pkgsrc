@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2021/03/08 08:13:09 jaapb Exp $
+# $NetBSD: Makefile,v 1.9 2022/05/24 18:51:56 jaapb Exp $
 
 GITHUB_PROJECT=	ocsigen-i18n
 DISTNAME=	${GITHUB_PROJECT}-3.7.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=besport/}
 
@@ -20,7 +20,7 @@ INSTALLATION_DIRS+=	bin
 OCAML_USE_FINDLIB=	yes
 OCAML_FINDLIB_DIRS=	# empty
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 
 .if ${OCAML_USE_OPT_COMPILER} == "yes"
 MAKE_ENV+=	OPTNESS=native

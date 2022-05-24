@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2022/02/02 14:45:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2022/05/24 18:51:49 jaapb Exp $
 bin/ocamlfind
 ${OCAML_SITELIB}/bigarray/META
 ${OCAML_SITELIB}/bytes/META
@@ -39,7 +39,6 @@ ${OCAML_SITELIB}/findlib/ocaml_args.cmi
 ${OCAML_SITELIB}/findlib/topfind.cmi
 ${OCAML_SITELIB}/findlib/topfind.mli
 ${OCAML_SITELIB}/ocamldoc/META
-${PLIST.ocaml-opt}${PLIST.64bit}${OCAML_SITELIB}/raw_spacetime/META
 ${OCAML_SITELIB}/stdlib/META
 ${OCAML_SITELIB}/str/META
 ${OCAML_SITELIB}/threads/META

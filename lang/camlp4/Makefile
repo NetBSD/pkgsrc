@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2021/03/08 08:13:02 jaapb Exp $
+# $NetBSD: Makefile,v 1.24 2022/05/24 18:51:53 jaapb Exp $
 
 GITHUB_PROJECT=	camlp4
 DISTNAME=	${GITHUB_PROJECT}-4.08+1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 
@@ -17,7 +17,7 @@ MAKE_JOBS_SAFE=	no
 
 BROKEN=		"Obsolete package, no longer supported by OCaml 4.09"
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 
 BUILD_TARGET=		byte camlp4/META
 .if ${OCAML_USE_OPT_COMPILER} == "yes"

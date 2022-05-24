@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2021/11/23 21:48:13 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2022/05/24 18:51:48 jaapb Exp $
 
 DISTNAME=	cppo-1.6.8
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml-community/}
 GITHUB_PROJECT=	cppo
@@ -23,7 +24,7 @@ OCAML_FINDLIB_DIRS+=	cppo_ocamlbuild
 DUNE_BUILD_PACKAGES=	cppo cppo_ocamlbuild
 OPAM_INSTALL_FILES=	cppo cppo_ocamlbuild
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 
 .include "../../devel/ocamlbuild/buildlink3.mk"
 BUILDLINK_DEPMETHOD.ocamlbuild=        full

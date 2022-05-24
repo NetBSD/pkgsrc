@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2022/01/31 12:04:19 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/05/24 18:51:54 jaapb Exp $
 
 DISTNAME=	topkg-1.0.5
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://erratique.ch/software/topkg/releases/
 EXTRACT_SUFX=	.tbz
@@ -16,7 +17,7 @@ OCAML_USE_OPAM=		yes
 
 INSTALLATION_DIRS+=	share/doc/topkg
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 
 .include "../../devel/ocamlbuild/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

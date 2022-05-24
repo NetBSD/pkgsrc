@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/05/24 17:39:15 jaapb Exp $
+# $NetBSD: Makefile,v 1.3 2022/05/24 18:51:48 jaapb Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-0.15.0
 PKGNAME=	ocaml-${DISTNAME}
@@ -37,7 +37,7 @@ do-install:
 		${OPAM_INSTALL_DIR}/$$i.install; \
 	done
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../devel/ocaml-core/buildlink3.mk"
 .include "../../devel/ocaml-core_kernel/buildlink3.mk"
 .include "../../devel/ocaml-expect_test_helpers_core/buildlink3.mk"

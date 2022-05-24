@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2021/03/08 08:13:09 jaapb Exp $
+# $NetBSD: Makefile,v 1.20 2022/05/24 18:51:56 jaapb Exp $
 #
 
 DISTNAME=	ocaml-http-0.1.5
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	www
 MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/545/
 
@@ -20,7 +20,7 @@ BUILD_TARGET=	all
 
 OCAML_USE_FINDLIB=	yes
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 
 .if (${OCAML_USE_OPT_COMPILER} == "yes")
 BUILD_TARGET+=	opt
