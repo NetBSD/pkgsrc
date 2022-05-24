@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2022/05/04 13:10:14 jaapb Exp $
+# $NetBSD: Makefile,v 1.54 2022/05/24 18:59:20 jaapb Exp $
 
 DISTNAME=	sqlite3-5.1.0
 PKGNAME=	ocaml-${DISTNAME}
@@ -16,7 +16,7 @@ LICENSE=	mit
 USE_TOOLS+=	gmake pkg-config
 OCAML_USE_DUNE=	yes
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/ocaml-base/buildlink3.mk"
 .include "../../devel/ocaml-stdio/buildlink3.mk"

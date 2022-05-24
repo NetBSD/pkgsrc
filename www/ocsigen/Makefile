@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2022/05/20 07:04:06 jaapb Exp $
+# $NetBSD: Makefile,v 1.43 2022/05/24 18:59:36 jaapb Exp $
 #
 
 VERSION=	5.0.1
@@ -55,7 +55,7 @@ OCAML_USE_DUNE=		yes
 OPAM_INSTALL_FILES=	ocsigenserver
 INSTALL_UNSTRIPPED=	yes
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 
 #.if ${OCAML_USE_OPT_COMPILER} == "yes"
 #CONFIGURE_ARGS+=		--enable-natdynlink

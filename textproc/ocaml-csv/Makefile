@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/05/19 08:22:33 jaapb Exp $
+# $NetBSD: Makefile,v 1.27 2022/05/24 18:59:35 jaapb Exp $
 
 VERSION=	2.4
 PKGREVISION=	1
@@ -21,5 +21,5 @@ OPAM_INSTALL_FILES=	${DUNE_BUILD_PACKAGES}
 OCAML_FINDLIB_DIRS=	${DUNE_BUILD_PACKAGES}
 
 .include "options.mk"
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
