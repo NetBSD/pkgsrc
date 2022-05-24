@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.13 2019/11/03 09:14:14 rillig Exp $
+# $NetBSD: hacks.mk,v 1.14 2022/05/24 09:55:02 nia Exp $
 #
 .if !defined(PIXMAN_HACKS_MK)
 PIXMAN_HACKS_MK=	# empty
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--disable-sse2 --disable-mmx --disable-ssse3
 
 CONFIGURE_ARGS.MirBSD+=	PTHREAD_LIBS=-pthread
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-[0-5].*-*)
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 060000
 CONFIGURE_ENV+=		ac_cv_tls=none
 CFLAGS+=		-DPIXMAN_NO_TLS
 .endif
