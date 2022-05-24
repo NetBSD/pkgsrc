@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.127 2022/05/13 14:28:29 ryoon Exp $
+# $NetBSD: java-vm.mk,v 1.128 2022/05/24 09:46:05 nia Exp $
 #
 # This Makefile fragment provides a Java VM, either at build-time or at
 # run-time, depending on the package's needs.
@@ -107,8 +107,8 @@ _PKG_JVM_DEFAULT=	${PKG_JVM_DEFAULT}
 .if !defined(_PKG_JVM_DEFAULT)
 .  if   !empty(MACHINE_PLATFORM:MNetBSD-[56].*-i386) || \
         !empty(MACHINE_PLATFORM:MNetBSD-[56].*-x86_64) || \
-        (!empty(MACHINE_PLATFORM:MNetBSD-9.*-aarch64) && \
-          empty(MACHINE_PLATFORM:MNetBSD-9.99.*-aarch64))
+        (!empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) && \
+          ${OPSYS_VERSION} < 099900)
 _PKG_JVM_DEFAULT?=	openjdk8
 .  elif !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || \
 	!empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || \
