@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2022/04/15 16:36:04 fcambus Exp $
+# $NetBSD: Makefile,v 1.91 2022/05/24 13:01:51 nia Exp $
 
 DISTNAME=	dialog-1.3-20220414
 PKGNAME=	${DISTNAME:C/-2/.2/}
@@ -25,8 +25,7 @@ SUBST_SED.rpath=	-e 's;-L\(.\);${_COMPILER_RPATH_FLAG}\1\{exec_prefix\}/lib -L\1
 SUBST_STAGE.rpath=	pre-configure
 
 .include "../../mk/bsd.prefs.mk"
-# curses from NetBSD 5 and earlier will coredump when displaying shadows
-.if !empty(MACHINE_PLATFORM:MNetBSD-[0-5].*)
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 060000
 CONFIGURE_ARGS+=	--disable-widec
 .endif
 
