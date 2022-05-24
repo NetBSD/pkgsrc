@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2020/07/22 10:25:24 micha Exp $
+# $NetBSD: Makefile,v 1.3 2022/05/24 10:07:06 nikita Exp $
 
 DISTNAME=	ajbsp-v1.01
 PKGNAME=	${DISTNAME:S/v//}
 PKGREVISION=	1
 CATEGORIES=	games
-MASTER_SITES=	https://gitlab.com/andwj/ajbsp/-/archive/v${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITLAB:=andwj/}
+GITLAB_PROJECT=	ajbsp
+GITLAB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://gitlab.com/andwj/ajbsp
