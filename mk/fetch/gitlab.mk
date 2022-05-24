@@ -1,4 +1,4 @@
-# $NetBSD: gitlab.mk,v 1.1 2022/05/23 21:45:45 nikita Exp $
+# $NetBSD: gitlab.mk,v 1.2 2022/05/24 13:05:37 nikita Exp $
 #
 # gitlab.com master site handling
 #
@@ -30,9 +30,9 @@
 #
 # Keywords: gitlab
 
-.if defined(MASTER_SITES) && !empty(MASTER_SITES:C,^https\://gitlab.com/[-a-zA-Z0-9]*/$,match,:Mmatch)
+.if defined(MASTER_SITES) && !empty(MASTER_SITES:C,^https\://gitlab.com/[-a-zA-Z0-9_]*/$,match,:Mmatch)
 _USE_GITLAB=		YES
-.elif defined(MASTER_SITES) && !empty(MASTER_SITES:C,^https\://gitlab.com/[-a-zA-Z0-9]*/[-a-zA-Z0-9]*/$,match,:Mmatch)
+.elif defined(MASTER_SITES) && !empty(MASTER_SITES:C,^https\://gitlab.com/[-a-zA-Z0-9_]*/[-a-zA-Z0-9_]*/$,match,:Mmatch)
 _USE_GITLAB=		YES
 .endif
 
