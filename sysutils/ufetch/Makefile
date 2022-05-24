@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2020/04/22 08:35:27 pin Exp $
+# $NetBSD: Makefile,v 1.5 2022/05/24 10:02:21 nikita Exp $
 
 DISTNAME=	ufetch-v0.2
 PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	sysutils
-MASTER_SITES=	https://gitlab.com/jschx/ufetch/-/archive/v${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITLAB:=jschx/}
+GITLAB_PROJECT=	ufetch
+GITLAB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://gitlab.com/jschx/ufetch/
