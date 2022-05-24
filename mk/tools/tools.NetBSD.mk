@@ -1,11 +1,11 @@
-# $NetBSD: tools.NetBSD.mk,v 1.71 2022/04/16 08:58:19 riastradh Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.72 2022/05/24 13:08:26 nia Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
 TOOLS_PLATFORM.[?=		[			# shell builtin
 TOOLS_PLATFORM.awk?=		/usr/bin/awk
 TOOLS_PLATFORM.basename?=	/usr/bin/basename
-.if empty(MACHINE_PLATFORM:MNetBSD-[0-8].*) || !empty(MKBSDTAR:U:Myes)
+.if ${OPSYS_VERSION} >= 090000 || !empty(MKBSDTAR:U:Myes)
 TOOLS_PLATFORM.bsdtar?=		/bin/tar
 .endif
 TOOLS_PLATFORM.byacc?=		/usr/bin/yacc
