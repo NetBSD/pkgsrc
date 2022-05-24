@@ -1,10 +1,10 @@
-$NetBSD: patch-src_run_main.cpp,v 1.3 2021/04/02 20:27:12 plunky Exp $
+$NetBSD: patch-src_run_main.cpp,v 1.4 2022/05/24 05:17:12 plunky Exp $
 
 don't overwrite the plugins directory: remove the applicationDir and add the pluginPaths
 
---- src/run/main.cpp.orig	2020-11-03 12:42:11.000000000 +0000
+--- src/run/main.cpp.orig	2021-10-11 12:27:59.000000000 +0000
 +++ src/run/main.cpp
-@@ -253,7 +253,11 @@ int main(int argc, char *argv[]) {
+@@ -268,7 +268,12 @@ int main(int argc, char *argv[]) {
          qWarning() << "No plugin paths found";
          return -1;
      }
@@ -14,6 +14,7 @@ don't overwrite the plugins directory: remove the applicationDir and add the plu
 +    app->removeLibraryPath(app->applicationDirPath());
 +    foreach (const QString &path, pluginPaths)
 +	app->addLibraryPath(path);
++
  
-     RMath::init();
-     RFontList::init();
+     // make sure basic entities are initialized before loading plugins:
+     RDimStyleData::initDefaults();
