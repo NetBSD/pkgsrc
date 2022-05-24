@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.43 2021/12/08 16:05:42 adam Exp $
+# $NetBSD: Makefile,v 1.44 2022/05/24 18:51:54 jaapb Exp $
 
 VERSION=	2.0.8
 GITHUB_PROJECT=	opam
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 
@@ -29,5 +29,5 @@ OPAM_INSTALL_FILES=	opam opam-installer opam-solver
 .include "../../misc/ocaml-opam-file-format/buildlink3.mk"
 .include "../../textproc/ocaml-jsonm/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"

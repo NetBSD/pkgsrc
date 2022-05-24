@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2021/12/26 05:09:45 dholland Exp $
+# $NetBSD: Makefile,v 1.42 2022/05/24 18:51:57 jaapb Exp $
 
 GITHUB_PROJECT=	graphics
 DISTNAME=	ocaml-${GITHUB_PROJECT}-2.0.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 
@@ -15,6 +15,6 @@ WRKSRC=	${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 
 OCAML_USE_DUNE=	yes
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

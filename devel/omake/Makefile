@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2021/03/08 08:13:02 jaapb Exp $
+# $NetBSD: Makefile,v 1.24 2022/05/24 18:51:52 jaapb Exp $
 #
 
 DISTNAME=	omake-0.10.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml-omake/}
 GITHUB_TAG=	${PKGNAME}

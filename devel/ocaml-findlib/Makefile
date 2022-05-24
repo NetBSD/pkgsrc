@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2022/02/02 14:45:18 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2022/05/24 18:51:49 jaapb Exp $
 
 DISTNAME=		findlib-1.9.3
 PKGNAME=		ocaml-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://download.camlcity.org/download/
 
@@ -13,7 +14,7 @@ LICENSE=		mit
 OCAML_FINDLIB_DIRS+=	bigarray bytes compiler-libs dynlink findlib \
 			ocamldoc stdlib str threads unix
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 
 # spacetime profiling is only available for native code on 64bit platforms
 PLIST_VARS+=		64bit

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2021/03/08 08:13:01 jaapb Exp $
+# $NetBSD: Makefile,v 1.16 2022/05/24 18:51:52 jaapb Exp $
 
 DISTNAME=	ocamlmod-0.0.8
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel
 MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1544/
 
@@ -13,5 +13,5 @@ LICENSE=	gnu-lgpl-v2.1
 OCAML_USE_OASIS=	yes
 OCAML_FINDLIB_REGISTER=	no
 
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
