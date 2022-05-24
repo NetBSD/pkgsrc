@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/05/05 06:27:39 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2022/05/24 18:59:20 jaapb Exp $
 #
 
 DISTNAME=	caml${GITHUB_PROJECT}-1.3
@@ -26,5 +26,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/META ${DESTDIR}${PREFIX}/lib/ocaml/site-lib/dbm
 
 .include "../../databases/gdbm/buildlink3.mk"
-.include "../../mk/ocaml.mk"
+.include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
