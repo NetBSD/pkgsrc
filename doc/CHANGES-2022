@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2723 2022/05/24 17:55:36 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2724 2022/05/24 18:20:45 nia Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4178,3 +4178,9 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated archivers/php-pecl-zip to 1.20.1 [taca 2022-05-24]
 	Updated devel/php-xdebug to 3.1.4 [taca 2022-05-24]
 	Updated math/ocaml-zarith to 1.12 [jaapb 2022-05-24]
+	Updated multimedia/gstreamer1 to 1.20.2 [nia 2022-05-24]
+	Updated multimedia/gst-plugins1-bad to 1.20.2 [nia 2022-05-24]
+	Updated multimedia/gst-plugins1-base to 1.20.2 [nia 2022-05-24]
+	Updated multimedia/gst-plugins1-good to 1.20.2 [nia 2022-05-24]
+	Updated multimedia/gst-plugins1-libav to 1.20.2 [nia 2022-05-24]
+	Updated multimedia/gst-plugins1-ugly to 1.20.2 [nia 2022-05-24]
