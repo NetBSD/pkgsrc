@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2022/02/25 09:08:03 pin Exp $
+# $NetBSD: Makefile,v 1.7 2022/05/24 11:25:23 nikita Exp $
 
 DISTNAME=	cesium-0.2.1
 CATEGORIES=	editors
-MASTER_SITES=	https://gitlab.com/NoahJelen/cesium/-/archive/${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITLAB:=NoahJelen/}
+GITLAB_PROJECT=	cesium
+GITLAB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.com/NoahJelen/cesium/
