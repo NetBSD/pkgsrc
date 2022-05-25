@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.862 2022/05/18 14:17:34 wiz Exp $
+# $NetBSD: Makefile,v 1.863 2022/05/25 21:39:58 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -97,7 +97,6 @@ SUBDIR+=	fail2ban
 SUBDIR+=	flawfinder
 SUBDIR+=	fprint-demo
 SUBDIR+=	fsh
-SUBDIR+=	fwbuilder
 SUBDIR+=	gcr
 SUBDIR+=	gnome-keyring
 SUBDIR+=	gnu-crypto
@@ -168,7 +167,6 @@ SUBDIR+=	libdecaf
 SUBDIR+=	libdes
 SUBDIR+=	libfido2
 SUBDIR+=	libfprint
-SUBDIR+=	libfwbuilder
 SUBDIR+=	libgabe
 SUBDIR+=	libgcrypt
 SUBDIR+=	libgfshare
