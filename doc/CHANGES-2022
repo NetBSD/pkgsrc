@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2730 2022/05/25 09:34:02 jperkin Exp $
+$NetBSD: CHANGES-2022,v 1.2731 2022/05/25 09:50:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4191,3 +4191,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed archivers/py-yuicompressor [adam 2022-05-25]
 	Updated devel/py-anyio to 3.6.1 [adam 2022-05-25]
 	Updated sysutils/dbus to 1.14.0nb3 [jperkin 2022-05-25]
+	Updated net/grpc to 1.46.3 [adam 2022-05-25]
+	Updated net/py-grpcio to 1.46.3 [adam 2022-05-25]
+	Updated net/py-grpcio-testing to 1.46.3 [adam 2022-05-25]
+	Updated net/py-grpcio-tools to 1.46.3 [adam 2022-05-25]
