@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.80 2022/05/25 10:48:47 osa Exp $
+# $NetBSD: options.mk,v 1.81 2022/05/25 13:57:02 osa Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	array-var auth-request cache-purge dav debug
 PKG_SUPPORTED_OPTIONS+=	dso echo encrypted-session flv form-input
 PKG_SUPPORTED_OPTIONS+=	geoip geoip2 gtools gzip headers-more http2
 PKG_SUPPORTED_OPTIONS+=	image-filter luajit mail-proxy memcache
-PKG_SUPPORTED_OPTIONS+=	naxsi njs pcre perl push realip rtmp
+PKG_SUPPORTED_OPTIONS+=	naxsi njs perl push realip rtmp
 PKG_SUPPORTED_OPTIONS+=	secure-link set-misc slice ssl status
 PKG_SUPPORTED_OPTIONS+=	stream-ssl-preread sub upload uwsgi
 
@@ -13,6 +13,9 @@ PKG_SUGGESTED_OPTIONS=	auth-request gzip http2 memcache pcre realip
 PKG_SUGGESTED_OPTIONS+=	slice status ssl uwsgi
 
 PKG_OPTIONS_LEGACY_OPTS+=	v2:http2
+
+PKG_OPTIONS_OPTIONAL_GROUPS=	pcre
+PKG_OPTIONS_GROUP.pcre=		pcre pcre2
 
 PLIST_VARS+=		arrayvar cprg dav dso echo encses forminput geoip2
 PLIST_VARS+=		headmore imagefilter lua mail naxsi nchan ndk njs
@@ -58,12 +61,26 @@ SUBST_NOOP_OK.fix-ssl=	yes
 
 .if !empty(PKG_OPTIONS:Mpcre)
 .include "../../devel/pcre/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-pcre
+CONFIGURE_ARGS+=	--without-pcre2
 SUBST_CLASSES+=		fix-pcre
 SUBST_STAGE.fix-pcre=	pre-configure
 SUBST_FILES.fix-pcre=	auto/lib/pcre/conf
 SUBST_SED.fix-pcre=	-e 's,/usr/pkg,${BUILDLINK_PREFIX.pcre},g'
 SUBST_NOOP_OK.fix-pcre=	yes
-.else
+.endif
+
+.if !empty(PKG_OPTIONS:Mpcre2)
+.include "../../devel/pcre2/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-pcre
+SUBST_CLASSES+=		fix-pcre2
+SUBST_STAGE.fix-pcre2=	pre-configure
+SUBST_FILES.fix-pcre2=	auto/lib/pcre/conf
+SUBST_SED.fix-pcre2=	-e 's,/usr/pkg,${BUILDLINK_PREFIX.pcre2},g'
+SUBST_NOOP_OK.fix-pcre2=yes
+.endif
+
+.if empty(PKG_OPTIONS:Mpcre) && empty(PKG_OPTIONS:Mpcre2)
 CONFIGURE_ARGS+=	--without-pcre
 CONFIGURE_ARGS+=	--without-http_rewrite_module
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2022/05/25 11:02:14 osa Exp $
+# $NetBSD: options.mk,v 1.7 2022/05/25 13:57:02 osa Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx-devel
 PKG_SUPPORTED_OPTIONS=	array-var auth-request cache-purge dav debug
@@ -7,7 +7,7 @@ PKG_SUPPORTED_OPTIONS+=	geoip geoip2 gtools gzip headers-more http2
 PKG_SUPPORTED_OPTIONS+=	image-filter luajit mail-proxy memcache
 PKG_SUPPORTED_OPTIONS+=	naxsi njs perl push realip rtmp
 PKG_SUPPORTED_OPTIONS+=	secure-link set-misc slice ssl status
-PKG_SUPPORTED_OPTIONS+=	stream-ssl-preread sub uwsgi
+PKG_SUPPORTED_OPTIONS+=	stream-ssl-preread sub upload uwsgi
 
 PKG_SUGGESTED_OPTIONS=	auth-request gzip http2 memcache pcre realip
 PKG_SUGGESTED_OPTIONS+=	slice status ssl uwsgi
@@ -337,6 +337,16 @@ DISTFILES+=		${NJS_DISTFILE}
 DSO_EXTMODS+=		njs
 NJS_SUBDIR=		/nginx
 PLIST.njs=		yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mupload) || make(makesum) || make(mdi) || make(distclean)
+UPLOAD_VERSION=		2.3.0
+UPLOAD_DISTNAME=		nginx-upload-module-${UPLOAD_VERSION}
+UPLOAD_DISTFILE=		${UPLOAD_DISTNAME}.tar.gz
+SITES.${UPLOAD_DISTFILE}=	-${MASTER_SITE_GITHUB:=vkholodkov/nginx-upload-module/archive/refs/tags/}${UPLOAD_VERSION}.tar.gz
+DISTFILES+=		${UPLOAD_DISTFILE}
+DSO_EXTMODS+=		upload
+PLIST.upload=		yes
 .endif
 
 .for mod in ${DSO_BASEMODS}
