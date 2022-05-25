@@ -1,10 +1,21 @@
-$NetBSD: patch-numpy_core_setup.py,v 1.8 2022/05/23 17:28:41 ryoon Exp $
+$NetBSD: patch-numpy_core_setup.py,v 1.9 2022/05/25 19:09:25 tnn Exp $
 
 Use C language (not F77 from blas_info); fixes library name on Darwin.
+Add configure test for HAVE_XLOCALE_H, used by numpyos.c.
 
---- numpy/core/setup.py.orig	2022-05-19 22:46:10.000000000 +0000
+--- numpy/core/setup.py.orig	2022-05-20 05:46:10.000000000 +0000
 +++ numpy/core/setup.py
-@@ -217,7 +217,7 @@ def check_math_capabilities(config, ext,
+@@ -208,6 +208,9 @@ def check_math_capabilities(config, ext,
+         # It didn't work with xlocale.h, maybe it will work with locale.h?
+         locale_headers[1] = "locale.h"
+         check_funcs(OPTIONAL_LOCALE_FUNCS, headers=locale_headers)
++    st = config.check_header('xlocale.h')
++    if st:
++        moredefs.append(('HAVE_XLOCALE_H', 1))
+ 
+     for tup in OPTIONAL_INTRINSICS:
+         headers = None
+@@ -217,7 +220,7 @@ def check_math_capabilities(config, ext,
              f, args, headers, m = tup[0], tup[1], [tup[2]], fname2def(tup[0])
          else:
              f, args, headers, m = tup[0], tup[1], [tup[2]], fname2def(tup[3])
@@ -13,7 +24,7 @@ Use C language (not F77 from blas_info); fixes library name on Darwin.
                               headers=headers):
              moredefs.append((m, 1))
  
-@@ -868,6 +868,7 @@ def configuration(parent_package='',top_
+@@ -868,6 +871,7 @@ def configuration(parent_package='',top_
  
      if have_blas:
          extra_info = blas_info
