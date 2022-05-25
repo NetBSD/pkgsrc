@@ -2,6 +2,7 @@
 # Collect the bootstrap kits in dist/
 
 VERSION!=	make show-var VARNAME=PKGVERSION
+V_NOREV!=	make show-var VARNAME=PKGVERSION_NOREV
 
 SHORT_TARGETS+=	armv7
 SHORT_TARGETS+=	sparc64
@@ -11,15 +12,18 @@ SHORT_TARGETS+=	arm64
 SHORT_TARGETS+=	arm64_be
 SHORT_TARGETS+=	i386
 
+# Conditional local overrides of ROOT.* variables:
+.sinclude "local-roots.mk"
+
 # Root of target directories.
 # Must have dest/ (build.sh's DESTDIR) and tools/ subdirectories
-ROOT.armv7=	/u/evbarm-armv7hf
-ROOT.sparc64=	/u/sparc64
-ROOT.powerpc=	/u/macppc
-ROOT.powerpc90=	/u/9.0-macppc
-ROOT.arm64=	/u/evbarm64
-ROOT.arm64_be=	/u/evbarm64eb
-ROOT.i386=	/u/i386
+ROOT.armv7?=	/u/evbarm-armv7hf
+ROOT.sparc64?=	/u/sparc64
+ROOT.powerpc?=	/u/macppc
+ROOT.powerpc90?=/u/9.0-macppc
+ROOT.arm64?=	/u/evbarm64
+ROOT.arm64_be?=	/u/evbarm64eb
+ROOT.i386?=	/u/i386
 
 # Mapping to GNU triple
 G_TGT.armv7=	armv7--netbsdelf-eabihf
@@ -77,16 +81,16 @@ do-${st}:
 	else \
 		TT=${TGT.${st}}; \
 	fi; \
-	distdir=${WRKDIR}/rustc-${VERSION}-src/build/dist; \
+	distdir=${WRKDIR}/rustc-${V_NOREV}-src/build/dist; \
 	for comp in rust rust-std; do \
-		src=$${distdir}/$${comp}-${VERSION}-${TGT.${st}}.tar.gz; \
-		tgt=dist/$${comp}-${VERSION}-$${TT}.tar.gz; \
+		src=$${distdir}/$${comp}-${V_NOREV}-${TGT.${st}}.tar.xz; \
+		tgt=dist/$${comp}-${VERSION}-$${TT}.tar.xz; \
 		if [ ! -f "$${tgt}" ]; then \
 			echo ln $${src} $${tgt}; \
 			${DEBUG} ln $${src} $${tgt}; \
 		fi; \
 	done; \
-	src_comp=rust-src-${VERSION}.tar.gz; \
+	src_comp=rust-src-${V_NOREV}.tar.xz; \
 	if [ ! -f dist/$${src_comp} ]; then \
 		echo ln $${distdir}/$${src_comp} dist; \
 		${DEBUG} ln $${distdir}/$${src_comp} dist; \
