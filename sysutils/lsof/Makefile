@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.140 2021/11/11 00:49:34 gutteridge Exp $
+# $NetBSD: Makefile,v 1.141 2022/05/25 09:33:37 tnn Exp $
 
 DISTNAME=		lsof_4.91
 PKGNAME=		${DISTNAME:S/_/-/}
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.mirrorservice.org/sites/lsof.itap.purdue.edu/pub/tools/unix/lsof/
 MASTER_SITES+=		ftp://ftp.mirrorservice.org/sites/lsof.itap.purdue.edu/pub/tools/unix/lsof/OLD/
@@ -74,6 +74,7 @@ post-extract:
 	fi ; \
 	${TOOLS_PATH.bsdtar} -xf ${SRCBALL_NAME}.tar
 	cd ${WRKSRC} ; ${ECHO} "y" | ./Inventory || exit 1
+	${CP} ${FILESDIR}/rnmt.c ${WRKSRC}/lib/rnmt.c
 
 SPECIAL_PERMS+=		${PREFIX}/sbin/lsof ${REAL_ROOT_USER} ${REAL_GROUP} 2755
 
