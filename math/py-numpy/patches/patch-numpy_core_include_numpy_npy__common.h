@@ -1,4 +1,4 @@
-$NetBSD: patch-numpy_core_include_numpy_npy__common.h,v 1.1 2022/05/25 19:09:25 tnn Exp $
+$NetBSD: patch-numpy_core_include_numpy_npy__common.h,v 1.2 2022/05/25 19:22:20 tnn Exp $
 
 Fix build on non-x86:
 The configure test for __builtin_prefetch is broken with clang.
@@ -11,7 +11,7 @@ _configtest.c:6:3: error: builtin functions must be directly called
  #endif
  
 -#ifdef HAVE___BUILTIN_PREFETCH
-+#if !defined(__i386__) && !defined(__x86_64__)
++#if 1
  /* unlike _mm_prefetch also works on non-x86 */
  #define NPY_PREFETCH(x, rw, loc) __builtin_prefetch((x), (rw), (loc))
  #else
