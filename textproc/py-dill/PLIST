@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/04/20 10:40:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2022/05/25 12:18:26 adam Exp $
 bin/get_objgraph-${PYVERSSUFFIX}
 bin/undill-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -19,12 +19,12 @@ ${PYSITELIB}/dill/_dill.pyo
 ${PYSITELIB}/dill/_objects.py
 ${PYSITELIB}/dill/_objects.pyc
 ${PYSITELIB}/dill/_objects.pyo
+${PYSITELIB}/dill/_shims.py
+${PYSITELIB}/dill/_shims.pyc
+${PYSITELIB}/dill/_shims.pyo
 ${PYSITELIB}/dill/detect.py
 ${PYSITELIB}/dill/detect.pyc
 ${PYSITELIB}/dill/detect.pyo
-${PYSITELIB}/dill/info.py
-${PYSITELIB}/dill/info.pyc
-${PYSITELIB}/dill/info.pyo
 ${PYSITELIB}/dill/objtypes.py
 ${PYSITELIB}/dill/objtypes.pyc
 ${PYSITELIB}/dill/objtypes.pyo
@@ -55,6 +55,9 @@ ${PYSITELIB}/dill/tests/test_classdef.pyo
 ${PYSITELIB}/dill/tests/test_detect.py
 ${PYSITELIB}/dill/tests/test_detect.pyc
 ${PYSITELIB}/dill/tests/test_detect.pyo
+${PYSITELIB}/dill/tests/test_dictviews.py
+${PYSITELIB}/dill/tests/test_dictviews.pyc
+${PYSITELIB}/dill/tests/test_dictviews.pyo
 ${PYSITELIB}/dill/tests/test_diff.py
 ${PYSITELIB}/dill/tests/test_diff.pyc
 ${PYSITELIB}/dill/tests/test_diff.pyo
@@ -100,6 +103,9 @@ ${PYSITELIB}/dill/tests/test_restricted.pyo
 ${PYSITELIB}/dill/tests/test_selected.py
 ${PYSITELIB}/dill/tests/test_selected.pyc
 ${PYSITELIB}/dill/tests/test_selected.pyo
+${PYSITELIB}/dill/tests/test_session.py
+${PYSITELIB}/dill/tests/test_session.pyc
+${PYSITELIB}/dill/tests/test_session.pyo
 ${PYSITELIB}/dill/tests/test_source.py
 ${PYSITELIB}/dill/tests/test_source.pyc
 ${PYSITELIB}/dill/tests/test_source.pyo
