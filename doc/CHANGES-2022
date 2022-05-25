@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2727 2022/05/24 21:36:19 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.2728 2022/05/25 09:06:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4187,3 +4187,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/ocaml to 4.14.0 [jaapb 2022-05-24]
 	Updated www/htmldoc to 1.9.16 [fcambus 2022-05-24]
 	Updated www/htmldoc-x11 to 1.9.16 [fcambus 2022-05-24]
+	Updated emulators/mame to 0.244 [wiz 2022-05-25]
