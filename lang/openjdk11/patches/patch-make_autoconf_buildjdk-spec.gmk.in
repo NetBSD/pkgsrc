@@ -1,0 +1,20 @@
+$NetBSD: patch-make_autoconf_buildjdk-spec.gmk.in,v 1.1 2022/05/25 06:05:34 tnn Exp $
+
+Use the same variant for the buildjdk as the target jdk.
+This is needed for native builds on platforms where hotspot is broken or not
+supported. In that case the buildjdk can't be hardcoded to "server" but must
+use "zero". This is fine for pkgsrc since we only ever build one variant.
+
+--- make/autoconf/buildjdk-spec.gmk.in.orig	2022-05-03 03:11:37.000000000 +0000
++++ make/autoconf/buildjdk-spec.gmk.in
+@@ -88,8 +88,8 @@ ENABLE_DEBUG_SYMBOLS := false
+ # Control wether Hotspot builds gtest tests
+ BUILD_GTEST := false
+ 
+-JVM_VARIANTS := server
+-JVM_VARIANT_MAIN := server
++JVM_VARIANTS := @JVM_VARIANTS@
++JVM_VARIANT_MAIN := @JVM_VARIANT_MAIN@
+ 
+ # Some users still set EXTRA_*FLAGS on the make command line. Must
+ # make sure to override that when building buildjdk.

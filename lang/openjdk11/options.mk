@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2021/06/28 23:12:22 tnn Exp $
+# $NetBSD: options.mk,v 1.8 2022/05/25 06:05:34 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openjdk11
 PKG_OPTIONS_OPTIONAL_GROUPS=	variant
@@ -6,7 +6,7 @@ PKG_OPTIONS_GROUP.variant=	jdk-zero-vm
 PKG_SUPPORTED_OPTIONS=		debug dtrace jre-jce x11 static-libstdcpp
 PKG_SUGGESTED_OPTIONS=		jre-jce x11
 
-.if ${MACHINE_ARCH} == "aarch64" || !empty(MACHINE_ARCH:M*arm*) || ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+.if ${MACHINE_ARCH} == "aarch64" || ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 PKG_OPTIONS_GROUP.variant+=	jdk-hotspot-vm
 PKG_SUGGESTED_OPTIONS+=		jdk-hotspot-vm
 .else
@@ -99,10 +99,12 @@ CONFIGURE_ARGS+=	--with-stdc++lib=dynamic
 #
 # Build variant. Zero VM builds a portable JVM without assembly optimization.
 #
+PLIST_VARS+=		hotspot
 .if !empty(PKG_OPTIONS:Mjdk-zero-vm)
 BUILD_VARIANT=		zero
 .include "../../devel/libffi/buildlink3.mk"
 .elif !empty(PKG_OPTIONS:Mjdk-hotspot-vm)
 BUILD_VARIANT=		server
+PLIST.hotspot=		yes
 .endif
 CONFIGURE_ARGS+=	--with-jvm-variants=${BUILD_VARIANT}
