@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.6 2022/05/25 19:41:49 tnn Exp $
+# $NetBSD: bootstrap.mk,v 1.7 2022/05/25 20:00:56 tnn Exp $
 
 .if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 090000
 PKG_FAIL_REASON+=		"Only supports NetBSD >= 9"
@@ -35,7 +35,7 @@ EXTRACT_ONLY+=			${BOOT.nb9-aarch64}
 ONLY_FOR_PLATFORM+=		NetBSD-*-earmv[67]hf
 BOOT.nb9-earmv6hf=		bootstrap-jdk-1.17.0.3.7-netbsd-9-earmv6hf-20220525.tar.xz
 SITES.${BOOT.nb9-earmv6hf}=	${MASTER_SITE_LOCAL:=openjdk17/}
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv6hf) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv[67]hf) || make(distinfo)
 DISTFILES+=			${BOOT.nb9-earmv6hf}
 EXTRACT_ONLY+=			${BOOT.nb9-earmv6hf}
 .endif
