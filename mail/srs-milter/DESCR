@@ -1,0 +1,6 @@
+This milter implemets SRS (Sender Rewriting Scheme) that can be used to
+fix envelope MAIL FROM for forwarded mails protected by SPF. It can be
+configured in two modes for:
+
+* Incoming mail -- rewrite RCPT TO addresses in SRS format back
+* Outgoing mail -- rewrite MAIL FROM address to SRS format
