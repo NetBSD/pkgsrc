@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.34 2022/05/24 18:51:54 jaapb Exp $
+# $NetBSD: ocaml.mk,v 1.35 2022/05/25 17:18:13 wiz Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 # It should be included by every package that uses OCaml.
@@ -35,7 +35,7 @@ OCAML_MK= # defined
 MKPIE_SUPPORTED=	no
 
 .include "../../mk/bsd.fast.prefs.mk"
-.include "../../wip/ocaml/native.mk"
+.include "../../lang/ocaml/native.mk"
 
 
 _PKG_VARS.ocaml=	\
