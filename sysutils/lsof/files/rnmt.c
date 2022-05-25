@@ -149,7 +149,7 @@ ncache_walk(KA_T ncp, KA_T pvp, const struct lnc *plnc)
 	right = (KA_T)nc.nc_tree.rb_nodes[1];
 	if (sanity_check_vnode_impl(&vi) == 0 && sanity_check_namecache(&nc) == 0) {
 		lnc = ncache_enter_local(vp, pvp, plnc, &nc);
-		if (vi.vi_vnode.v_type = VDIR && vi.vi_nc_tree.rbt_root != NULL) {
+		if (vi.vi_vnode.v_type == VDIR && vi.vi_nc_tree.rbt_root != NULL) {
 			ncache_walk((KA_T)vi.vi_nc_tree.rbt_root, ncp, lnc);
 		}
 	}
