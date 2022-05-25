@@ -1,0 +1,3 @@
+WTForms-Django is a fork of the wtforms.ext.django package from
+WTForms. The package has been renamed to wtforms_django but otherwise
+should function the same as wtforms.ext.django did.
