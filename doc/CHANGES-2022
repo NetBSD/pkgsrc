@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2729 2022/05/25 09:29:14 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2730 2022/05/25 09:34:02 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4190,3 +4190,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated emulators/mame to 0.244 [wiz 2022-05-25]
 	Removed archivers/py-yuicompressor [adam 2022-05-25]
 	Updated devel/py-anyio to 3.6.1 [adam 2022-05-25]
+	Updated sysutils/dbus to 1.14.0nb3 [jperkin 2022-05-25]
