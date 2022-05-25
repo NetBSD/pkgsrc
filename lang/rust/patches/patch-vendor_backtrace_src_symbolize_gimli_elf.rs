@@ -1,8 +1,8 @@
-$NetBSD: patch-vendor_backtrace_src_symbolize_gimli_elf.rs,v 1.2 2022/05/23 15:13:00 jperkin Exp $
+$NetBSD: patch-vendor_backtrace_src_symbolize_gimli_elf.rs,v 1.3 2022/05/25 21:31:26 he Exp $
 
 Make NetBSD also find its debug libraries, if present.
 
---- vendor/backtrace/src/symbolize/gimli/elf.rs.orig	2022-02-23 05:34:24.000000000 +0000
+--- vendor/backtrace/src/symbolize/gimli/elf.rs.orig	2022-04-04 11:10:55.000000000 +0000
 +++ vendor/backtrace/src/symbolize/gimli/elf.rs
 @@ -276,11 +276,16 @@ fn decompress_zlib(input: &[u8], output:
      }
@@ -16,7 +16,7 @@ Make NetBSD also find its debug libraries, if present.
  fn debug_path_exists() -> bool {
      cfg_if::cfg_if! {
 -        if #[cfg(any(target_os = "freebsd", target_os = "linux"))] {
-+        if #[cfg(any(target_os = "freebsd",
++        if #[cfg(any(target_os = "freebsd", 
 +                     target_os = "netbsd",
 +                     target_os = "linux"))] {
              use core::sync::atomic::{AtomicU8, Ordering};
