@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/25 15:33:21 kleink Exp $
+
+BLAKE2s (WTForms-dateutil-0.1.tar.gz) = ee06dc63fd6a587bbc1a0e0b01730199b4c9a95d5f80b8d7c6ab48d7afb84069
+SHA512 (WTForms-dateutil-0.1.tar.gz) = c64e2512e3db3c09b224fc5ba15af7c8a05fd8d12fde4d2708b9923d0dc71f45897e400c357f6581c46a540c5eee4d0b82d3a3debc1019fcc29672f72d3ecc01
+Size (WTForms-dateutil-0.1.tar.gz) = 3593 bytes
