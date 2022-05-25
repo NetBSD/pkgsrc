@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.578 2022/02/05 13:51:20 schmonz Exp $
+# $NetBSD: Makefile,v 1.579 2022/05/25 15:45:31 manu Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -380,6 +380,7 @@ SUBDIR+=	squirrelmail
 SUBDIR+=	squirrelmail-decode
 SUBDIR+=	squirrelmail-locales
 SUBDIR+=	sqwebmail
+SUBDIR+=	srs-milter
 SUBDIR+=	ssmtp
 SUBDIR+=	swaks
 SUBDIR+=	sylpheed
