@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2022/05/23 17:28:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.95 2022/05/25 19:09:25 tnn Exp $
 
 DISTNAME=	numpy-1.22.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -52,6 +52,9 @@ CPPFLAGS+=		${BLAS_INCLUDES}
 # fatal error: --sysroot=: must take a non-empty argument
 # Work around it on DragonFly by specifying the classic gnu linker
 MAKE_ENV.DragonFly+=	LDVER=ld.bfd
+
+pre-install:
+	${RM} -f ${WRKSRC}/numpy/core/include/numpy/npy_common.h.orig
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${RM} f2py || ${TRUE}
