@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2743 2022/05/25 21:32:07 he Exp $
+$NetBSD: CHANGES-2022,v 1.2744 2022/05/25 21:39:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4210,3 +4210,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Added www/py-wtforms-sqlalchemy version 0.3 [kleink 2022-05-25]
 	Added mail/srs-milter 20141121nb9 [manu 2022-05-25]
 	Updated lang/rust to 1.60.0 [he 2022-05-25]
+	Removed security/libfwbuilder [wiz 2022-05-25]
+	Removed security/fwbuilder [wiz 2022-05-25]
