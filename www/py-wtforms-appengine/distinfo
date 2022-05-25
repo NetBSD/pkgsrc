@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/25 15:28:50 kleink Exp $
+
+BLAKE2s (WTForms-Appengine-0.1.zip) = ca8b27f0b8b1a12beae80064cbfd2c6b750ee84ff9fbc39e190cc37f508fb9db
+SHA512 (WTForms-Appengine-0.1.zip) = 5792c08456f28f10059bb4a6b5118ebe91e9757c7a019bde4c6fdc8e8121dfe7d417830f74e058f06940c5a0108a97265358ccc8eaa70fb3a99c44bd1024b3fd
+Size (WTForms-Appengine-0.1.zip) = 115340 bytes

@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2022/05/25 15:28:50 kleink Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/wtforms_appengine/__init__.py
+${PYSITELIB}/wtforms_appengine/__init__.pyc
+${PYSITELIB}/wtforms_appengine/__init__.pyo
+${PYSITELIB}/wtforms_appengine/db.py
+${PYSITELIB}/wtforms_appengine/db.pyc
+${PYSITELIB}/wtforms_appengine/db.pyo
+${PYSITELIB}/wtforms_appengine/fields.py
+${PYSITELIB}/wtforms_appengine/fields.pyc
+${PYSITELIB}/wtforms_appengine/fields.pyo
+${PYSITELIB}/wtforms_appengine/ndb.py
+${PYSITELIB}/wtforms_appengine/ndb.pyc
+${PYSITELIB}/wtforms_appengine/ndb.pyo
