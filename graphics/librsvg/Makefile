@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2022/05/22 17:22:13 gutteridge Exp $
+# $NetBSD: Makefile,v 1.142 2022/05/25 10:55:30 gutteridge Exp $
 
 DISTNAME=	librsvg-2.54.3
 CATEGORIES=	graphics gnome
@@ -23,7 +23,7 @@ PYTHON_FOR_BUILD_ONLY=	tool
 # Requires rst2man to generate rsvg-convert.1
 TOOL_DEPENDS+=		${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 # Requires gi-docgen to generate HTML format API documentation
-TOOL_DEPENDS+=		${PYPKGPREFIX}-gi-docgen-[0-9]*:../../devel/py-gi-docgen
+TOOL_DEPENDS+=		${PYPKGPREFIX}-gi-docgen>=2022.1nb1:../../devel/py-gi-docgen
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.cairo-gobject}/lib
 
