@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1626 2022/05/25 15:33:49 kleink Exp $
+# $NetBSD: Makefile,v 1.1627 2022/05/25 15:36:26 kleink Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -859,6 +859,7 @@ SUBDIR+=	py-wtforms-alchemy
 SUBDIR+=	py-wtforms-appengine
 SUBDIR+=	py-wtforms-components
 SUBDIR+=	py-wtforms-dateutil
+SUBDIR+=	py-wtforms-django
 SUBDIR+=	py-wtforms-recaptcha
 SUBDIR+=	py-wtforms-test
 SUBDIR+=	py-yarl
