@@ -1,10 +1,10 @@
-# $NetBSD: bootstrap.mk,v 1.5 2022/05/15 22:44:24 tnn Exp $
+# $NetBSD: bootstrap.mk,v 1.6 2022/05/25 19:41:49 tnn Exp $
 
 .if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 080000
 PKG_FAIL_REASON+=		"Only supports NetBSD >= 8"
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) && ${OPSYS_VERSION} < 099983
+.if (!empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || !empty(MACHINE_PLATFORM:MNetBSD-*-*earm*)) && ${OPSYS_VERSION} < 099983
 PKG_FAIL_REASON+=		"PR 55248: please update to NetBSD >= 9.99.83 to use this package"
 .endif
 
@@ -30,6 +30,14 @@ SITES.${BOOT.nb9-aarch64}=	${MASTER_SITE_LOCAL:=openjdk11/}
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo)
 DISTFILES+=			${BOOT.nb9-aarch64}
 EXTRACT_ONLY+=			${BOOT.nb9-aarch64}
+.endif
+
+ONLY_FOR_PLATFORM+=		NetBSD-*-earmv[67]hf
+BOOT.nb8-earmv6hf=		bootstrap-jdk-1.11.0.7.10-netbsd-8-earmv6hf-20220525.tar.xz
+SITES.${BOOT.nb8-earmv6hf}=	${MASTER_SITE_LOCAL:=openjdk11/}
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv6hf) || make(distinfo)
+DISTFILES+=			${BOOT.nb8-earmv6hf}
+EXTRACT_ONLY+=			${BOOT.nb8-earmv6hf}
 .endif
 
 CONFIGURE_ENV+=		LD_LIBRARY_PATH=${ALT_BOOTDIR}/lib
