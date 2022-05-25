@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2737 2022/05/25 15:29:31 kleink Exp $
+$NetBSD: CHANGES-2022,v 1.2738 2022/05/25 15:30:33 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4204,4 +4204,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/nginx-devel to 1.22.0nb1 [osa 2022-05-25]
 	Updated www/py-wtforms to 3.0.1 [kleink 2022-05-25]
 	Updated www/py-flask-wtf to 1.0.1 [kleink 2022-05-25]
-	Updated www/py-wtforms-appengine to 0.1 [kleink 2022-05-25]
+	Added www/py-wtforms-appengine to 0.1 [kleink 2022-05-25]
