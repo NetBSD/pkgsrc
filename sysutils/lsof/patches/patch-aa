@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.28 2010/04/30 06:53:07 sbd Exp $
+$NetBSD: patch-aa,v 1.29 2022/05/25 09:33:37 tnn Exp $
 
---- dialects/n+obsd/machine.h.orig	2006-03-28 16:54:17.000000000 -0500
-+++ dialects/n+obsd/machine.h	2008-05-17 18:53:29.000000000 -0400
+--- dialects/n+obsd/machine.h.orig	2010-07-29 16:02:55.000000000 +0000
++++ dialects/n+obsd/machine.h
 @@ -41,6 +41,10 @@
  
  #include <sys/types.h>
@@ -13,3 +13,14 @@ $NetBSD: patch-aa,v 1.28 2010/04/30 06:53:07 sbd Exp $
  
  
  /*
+@@ -577,7 +581,9 @@
+ /* #define	USE_LIB_READMNT			1	   rmnt.c */
+ /* #define	USE_LIB_REGEX			1	   regex.c */
+ 
+-# if	(defined(OPENBSDV) && OPENBSDV>=2010) || (defined(NETBSDV) && NETBSDV>=1002000)
++#if (defined(NETBSDV) && NETBSDV>=9099000)
++#define	USE_LIB_RNMT				1	/* rnmt.c */
++# elif	(defined(OPENBSDV) && OPENBSDV>=2010) || (defined(NETBSDV) && NETBSDV>=1002000)
+ #define	USE_LIB_RNMH				1	/* rnmh.c */
+ # else	/* (defined(OPENBSDV) && OPENBSDV<2010) && (defined(NETBSDV) && NETBSDV<1002000) */
+ #define	USE_LIB_RNAM				1	/* rnam.c */
