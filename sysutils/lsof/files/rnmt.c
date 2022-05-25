@@ -35,7 +35,6 @@ static rb_tree_t lnc_rbtree;
 struct lnc {
 	struct rb_node lnc_tree;	/* red-black tree */
 	KA_T lnc_vp;			/* vnode address */
-	KA_T lnc_pvp;			/* parent vnode address */
 	const struct lnc *lnc_plnc;	/* parent lnc address */
 	int lnc_nlen;			/* name length */
 	char lnc_name[NCHNAMLEN + 1];	/* name */
@@ -81,7 +80,7 @@ lnc_compare_key(void *context, const void *node, const void *key)
 }
 
 static struct lnc *
-ncache_enter_local(KA_T vp, KA_T pvp, const struct lnc *plnc, const struct namecache *nc)
+ncache_enter_local(KA_T vp, const struct lnc *plnc, const struct namecache *nc)
 {
 	struct lnc *lnc;
 
@@ -90,7 +89,6 @@ ncache_enter_local(KA_T vp, KA_T pvp, const struct lnc *plnc, const struct namec
 		errx(1, "can't allocate local name cache entry\n");
 	}
 	lnc->lnc_vp = vp;
-	lnc->lnc_pvp = pvp;
 	lnc->lnc_plnc = plnc;
 	lnc->lnc_nlen = nc->nc_nlen;
 	memcpy(lnc->lnc_name, nc->nc_name, lnc->lnc_nlen);
@@ -129,7 +127,7 @@ sanity_check_namecache(const struct namecache *nc)
 }
 
 static void
-ncache_walk(KA_T ncp, KA_T pvp, const struct lnc *plnc)
+ncache_walk(KA_T ncp, const struct lnc *plnc)
 {
 	struct l_nch *lc;
 	static struct vnode_impl vi;
@@ -148,15 +146,15 @@ ncache_walk(KA_T ncp, KA_T pvp, const struct lnc *plnc)
 	left = (KA_T)nc.nc_tree.rb_nodes[0];
 	right = (KA_T)nc.nc_tree.rb_nodes[1];
 	if (sanity_check_vnode_impl(&vi) == 0 && sanity_check_namecache(&nc) == 0) {
-		lnc = ncache_enter_local(vp, pvp, plnc, &nc);
+		lnc = ncache_enter_local(vp, plnc, &nc);
 		if (vi.vi_vnode.v_type == VDIR && vi.vi_nc_tree.rbt_root != NULL) {
-			ncache_walk((KA_T)vi.vi_nc_tree.rbt_root, ncp, lnc);
+			ncache_walk((KA_T)vi.vi_nc_tree.rbt_root, lnc);
 		}
 	}
 	if (left)
-		ncache_walk(left, pvp, plnc);
+		ncache_walk(left, plnc);
 	if (right)
-		ncache_walk(right, pvp, plnc);
+		ncache_walk(right, plnc);
 }
 
 void
@@ -174,7 +172,7 @@ ncache_load()
 	}
 
 	rb_tree_init(&lnc_rbtree, &lnc_rbtree_ops);
-	ncache_walk((KA_T)vi.vi_nc_tree.rbt_root, 0, 0);
+	ncache_walk((KA_T)vi.vi_nc_tree.rbt_root, 0);
 }
 
 static void
