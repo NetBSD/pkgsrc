@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2732 2022/05/25 10:25:54 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2733 2022/05/25 12:21:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4196,3 +4196,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/py-grpcio-testing to 1.46.3 [adam 2022-05-25]
 	Updated net/py-grpcio-tools to 1.46.3 [adam 2022-05-25]
 	Updated shells/starship to 1.7.1 [pin 2022-05-25]
+	Updated textproc/py-dill to 0.3.5.1 [adam 2022-05-25]
+	Updated textproc/py-JWT to 2.4.0 [adam 2022-05-25]
