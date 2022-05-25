@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2744 2022/05/25 21:39:58 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2745 2022/05/25 21:55:33 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4212,3 +4212,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/rust to 1.60.0 [he 2022-05-25]
 	Removed security/libfwbuilder [wiz 2022-05-25]
 	Removed security/fwbuilder [wiz 2022-05-25]
+	Updated lang/rust-src to 1.60.0 [he 2022-05-25]
