@@ -192,8 +192,8 @@ build_path(char **buf, size_t *remaining, const struct lnc *lnc)
 	if (lnc->lnc_plnc != NULL) {
 		**buf = '/';
 		(*buf)++;
+		remaining--;
 	}
-	remaining--;
 	len = lnc->lnc_nlen;
 	if (*remaining < len)
 		len = *remaining;
