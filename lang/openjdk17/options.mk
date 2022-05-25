@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2022/05/16 12:29:33 tnn Exp $
+# $NetBSD: options.mk,v 1.3 2022/05/25 06:05:34 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openjdk17
 PKG_OPTIONS_OPTIONAL_GROUPS=	variant
@@ -6,7 +6,7 @@ PKG_OPTIONS_GROUP.variant=	jdk-zero-vm
 PKG_SUPPORTED_OPTIONS=		debug dtrace jre-jce x11 static-libstdcpp
 PKG_SUGGESTED_OPTIONS=		jre-jce x11
 
-.if ${MACHINE_ARCH} == "aarch64" || !empty(MACHINE_ARCH:M*arm*) || ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+.if ${MACHINE_ARCH} == "aarch64" || ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 PKG_OPTIONS_GROUP.variant+=	jdk-hotspot-vm
 PKG_SUGGESTED_OPTIONS+=		jdk-hotspot-vm
 .else
