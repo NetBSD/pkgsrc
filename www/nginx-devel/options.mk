@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2022/05/10 18:08:52 nia Exp $
+# $NetBSD: options.mk,v 1.6 2022/05/25 11:02:14 osa Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx-devel
 PKG_SUPPORTED_OPTIONS=	array-var auth-request cache-purge dav debug
@@ -160,7 +160,7 @@ DISTFILES+=		${NDK_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Mluajit) || make(makesum) || make(mdi) || make(distclean)
-LUA_VERSION=		0.10.20
+LUA_VERSION=		0.10.21
 LUA_DISTNAME=		lua-nginx-module-${LUA_VERSION}
 LUA_DISTFILE=		${LUA_DISTNAME}.tar.gz
 SITES.${LUA_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/lua-nginx-module/archive/}v${LUA_VERSION}.tar.gz
@@ -252,7 +252,7 @@ CONFIGURE_ARGS+=	--without-http_uwsgi_module
 .endif
 
 .if !empty(PKG_OPTIONS:Mpush) || make(makesum) || make(mdi) || make(distclean)
-PUSH_VERSION=		1.2.12
+PUSH_VERSION=		1.2.15
 PUSH_DISTNAME=		nchan-${PUSH_VERSION}
 PUSH_DISTFILE=		${PUSH_DISTNAME}.tar.gz
 SITES.${PUSH_DISTFILE}=	-${MASTER_SITE_GITHUB:=slact/nchan/archive/}v${PUSH_VERSION}.tar.gz
@@ -328,7 +328,7 @@ PLIST.rtmp=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mnjs) || make(makesum) || make(mdi) || make(distclean)
-NJS_VERSION=		0.7.3
+NJS_VERSION=		0.7.4
 NJS_DISTNAME=		njs-${NJS_VERSION}
 NJS_DISTFILE=		${NJS_DISTNAME}.tar.gz
 NJS_CONFIGURE_ARGS=	--no-pcre2
