@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/25 15:36:09 kleink Exp $
+
+BLAKE2s (WTForms-Django-0.1.zip) = 2e0cb09c3f9918c7dce63235acf3a12db9334883a7ea99af0e73368de4fb9fdc
+SHA512 (WTForms-Django-0.1.zip) = 8162f9a3d767372295f7d509041651f8a9a7055eb8a2bc1dd036412426e9668fd2731b67339337026e0e35a5f849cd5666c221e1b9dafb3cce909ba76679879c
+Size (WTForms-Django-0.1.zip) = 112130 bytes
