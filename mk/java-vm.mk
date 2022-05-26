@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.128 2022/05/24 09:46:05 nia Exp $
+# $NetBSD: java-vm.mk,v 1.129 2022/05/26 21:04:33 tnn Exp $
 #
 # This Makefile fragment provides a Java VM, either at build-time or at
 # run-time, depending on the package's needs.
@@ -105,18 +105,21 @@ _PKG_JVM_DEFAULT:=	${PKG_JVM}
 _PKG_JVM_DEFAULT=	${PKG_JVM_DEFAULT}
 .endif
 .if !defined(_PKG_JVM_DEFAULT)
-.  if   !empty(MACHINE_PLATFORM:MNetBSD-[56].*-i386) || \
-        !empty(MACHINE_PLATFORM:MNetBSD-[56].*-x86_64) || \
-        (!empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) && \
-          ${OPSYS_VERSION} < 099900)
+.  if	!empty(MACHINE_PLATFORM:MNetBSD-7.*-i386) || \
+	!empty(MACHINE_PLATFORM:MNetBSD-7.*-x86_64) || \
+	!empty(MACHINE_PLATFORM:MNetBSD-*-sparc64) || \
+	((!empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || \
+	  !empty(MACHINE_PLATFORM:MNetBSD-*-earmv[67]hf)) && \
+	  ${OPSYS_VERSION} < 099983)
 _PKG_JVM_DEFAULT?=	openjdk8
+.  elif !empty(MACHINE_PLATFORM:MNetBSD-8.*-i386) || \
+	!empty(MACHINE_PLATFORM:MNetBSD-8.*-x86_64)
+_PKG_JVM_DEFAULT?=	openjdk11
 .  elif !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || \
 	!empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || \
+	!empty(MACHINE_PLATFORM:MNetBSD-*-earmv[67]hf) || \
 	!empty(MACHINE_PLATFORM:MNetBSD-*-aarch64)
-_PKG_JVM_DEFAULT?=	openjdk11
-.  elif !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64) || \
-	!empty(MACHINE_PLATFORM:MNetBSD-*-earmv[67]hf)
-_PKG_JVM_DEFAULT?=	openjdk8
+_PKG_JVM_DEFAULT?=	openjdk17
 .  elif !empty(MACHINE_PLATFORM:MLinux-*-i[3456]86) || \
         !empty(MACHINE_PLATFORM:MLinux-*-x86_64) || \
         !empty(MACHINE_PLATFORM:MDarwin-1[2-9]*-x86_64)
@@ -138,18 +141,6 @@ _PKG_JVM_DEFAULT?=	kaffe
 _ONLY_FOR_PLATFORMS.kaffe= \
 	*-*-alpha *-*-arm *-*-arm32 *-*-i386 *-*-m68k \
 	*-*-mipsel* *-*-sparc *-*-powerpc
-_ONLY_FOR_PLATFORMS.openjdk8= \
-	DragonFly-*-* \
-	Linux-*-i[3-6]86 \
-	Linux-*-x86_64 \
-	NetBSD-*-aarch64 \
-	NetBSD-[5-9]*-i386 \
-	NetBSD-[5-9]*-x86_64 \
-	NetBSD-[7-9]*-sparc64 \
-	NetBSD-[7-9]*-earmv[67]hf \
-	SunOS-*-i386 \
-	SunOS-*-x86_64 \
-	FreeBSD-10.*-x86_64
 _ONLY_FOR_PLATFORMS.sun-jdk7= \
 	Darwin-9.*-i386 Darwin-9.*-x86_64 \
 	Darwin-[1-9][0-9].*-i386 Darwin-[1-9][0-9].*-x86_64 \
@@ -173,13 +164,22 @@ _ONLY_FOR_PLATFORMS.adoptopenjdk11-bin= \
 _ONLY_FOR_PLATFORMS.openjdk-bin= \
 	Linux-*-x86_64 \
 	NetBSD-[6-9]*-x86_64
+_ONLY_FOR_PLATFORMS.openjdk8= \
+	DragonFly-*-* \
+	Linux-*-x86_64			Linux-*-i[3-6]86		\
+	NetBSD-[7-9].*-x86_64		NetBSD-[7-9].*-i386		\
+	NetBSD-[7-9].*-sparc64		\
+	NetBSD-[8-9].*-aarch64		NetBSD-[8-9].*-earmv[67]hf	\
+	SunOS-*-x86_64			SunOS-*-i386			\
+	FreeBSD-10.*-x86_64
 _ONLY_FOR_PLATFORMS.openjdk11= \
-	NetBSD-[7-9]*-x86_64 \
-	NetBSD-[7-9]*-i386 \
-	NetBSD-*-aarch64
+	NetBSD-[8-9].*-x86_64		NetBSD-[8-9].*-i386		\
+	NetBSD-1[0-9].*-x86_64		NetBSD-1[0-9].*i386		\
+	NetBSD-1[0-9].*-aarch64		NetBSD-1[0-9].*-earmv[67]hf
 _ONLY_FOR_PLATFORMS.openjdk17= \
-	NetBSD-9*-x86_64 \
-	NetBSD-10*-x86_64
+	NetBSD-9.*-x86_64		NetBSD-9.*-i386			\
+	NetBSD-1[0-9].*-x86_64		NetBSD-1[0-9].*-i386		\
+	NetBSD-1[0-9].*-aarch64		NetBSD-1[0-9].*-earmv[67]hf
 
 # Set ONLY_FOR_PLATFORM based on accepted JVMs
 .for _jvm_ in ${PKG_JVMS_ACCEPTED}
