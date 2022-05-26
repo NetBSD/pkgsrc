@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/05/23 14:58:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2022/05/26 11:09:54 jperkin Exp $
 
 DISTNAME=	gi-docgen-2022.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -30,8 +30,12 @@ SUBST_SED.prefix+=	-e 's,/usr/local,${PREFIX},g'
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
+.include "../../mk/bsd.prefs.mk"
+
 post-install:
+.if ${PKGMANDIR} != "share/man"
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+.endif
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
