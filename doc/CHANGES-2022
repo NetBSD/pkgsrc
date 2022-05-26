@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2750 2022/05/26 08:54:19 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2751 2022/05/26 10:30:33 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4219,3 +4219,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/rust-bin to 1.60.0 [he 2022-05-26]
 	Updated databases/repmgr to 5.3.2 [adam 2022-05-26]
 	Updated devel/cmake to 3.23.2 [adam 2022-05-26]
+	Updated fonts/ttf-meera to 7.0.3.20191223nb2 [nikita 2022-05-26]
