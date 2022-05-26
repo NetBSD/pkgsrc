@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2755 2022/05/26 21:24:33 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2756 2022/05/26 21:25:58 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4224,3 +4224,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/php-dotclear to 2.22 [triaxx 2022-05-26]
 	Updated net/yaydl to 0.10.0 [pin 2022-05-26]
 	Updated editors/tp-note to 1.17.0 [pin 2022-05-26]
+	Updated graphics/pastel to 0.9.0 [pin 2022-05-26]
