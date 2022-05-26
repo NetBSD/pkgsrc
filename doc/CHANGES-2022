@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2749 2022/05/26 07:18:51 he Exp $
+$NetBSD: CHANGES-2022,v 1.2750 2022/05/26 08:54:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4217,3 +4217,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated mail/fetchmailconf to 6.4.30 [triaxx 2022-05-26]
 	Updated devel/nspr to 4.34 [wiz 2022-05-26]
 	Updated lang/rust-bin to 1.60.0 [he 2022-05-26]
+	Updated databases/repmgr to 5.3.2 [adam 2022-05-26]
+	Updated devel/cmake to 3.23.2 [adam 2022-05-26]
