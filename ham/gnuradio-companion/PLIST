@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2022/03/12 23:04:45 tnn Exp $
+@comment $NetBSD: PLIST,v 1.15 2022/05/26 15:20:08 mef Exp $
 bin/gnuradio-companion
 bin/grcc
 ${PYSITELIB}/gnuradio/grc/__init__.py
@@ -547,3 +547,5 @@ share/icons/hicolor/48x48/apps/gnuradio-grc.png
 share/icons/hicolor/64x64/apps/gnuradio-grc.png
 share/metainfo/org.gnuradio.grc.metainfo.xml
 share/mime/packages/gnuradio-grc.xml
+share/gnuradio/grc/blocks/json_config.block.yml
+share/gnuradio/grc/blocks/yaml_config.block.yml

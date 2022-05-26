@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2022/04/10 01:05:34 gutteridge Exp $
+# $NetBSD: Makefile.common,v 1.41 2022/05/26 15:20:09 mef Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -56,8 +56,13 @@ PATCHDIR=		${.CURDIR}/../../ham/gnuradio-core/patches
 # see CMakeLists.txt GR_PYTHON_MIN_VERSION
 PYTHON_VERSIONS_INCOMPATIBLE=	27 37 # py-scipy
 
+# three digit version number for shared library ex 3.10.2.0 -> 3.10.2
+PKGVER_MICRO=	${PKGVERSION_NOREV:C/([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)/\1.\2.\3/}
+
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
+# avoid using the name PKGVERSION in variable, see Nocore.mk
+PLIST_SUBST+=	PKGVER_MICRO=${PKGVER_MICRO}
 PY_PATCHPLIST=	yes
 
 CONFIGURE_DIRS=	build

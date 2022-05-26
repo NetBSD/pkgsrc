@@ -1,4 +1,4 @@
-# $NetBSD: Nocore.mk,v 1.9 2016/07/12 11:36:46 mef Exp $
+# $NetBSD: Nocore.mk,v 1.10 2022/05/26 15:20:09 mef Exp $
 
 DEPENDS+=	gnuradio-core-[0-9]*:../../ham/gnuradio-core
 
@@ -13,12 +13,16 @@ post-install:
 # Take care CONF_FILES stuff
 #	${MV}		    ${DESTDIR}${PREFIX}/etc/gnuradio/conf.d/* \
 #			    ${DESTDIR}${PREFIX}/${EGDIR}/
+#       ------------------------------------------------------------
+#       Generate the file .PLIST.minus  (note: it is before PLIST_SUBST applies)
+#       ------------------------------------------------------------
 	for i in ${PLIST_MINUS} ; do				\
 	  for p in PLIST PLIST.oss PLIST.${OPSYS} ; do		\
 	    f="${PKGDIR}/../../ham/gnuradio-$${i}/$${p}";	\
 	    if [ -f "$${f}" ]; then				\
 	      ${SED} -e 's,$${PYSITELIB},${PYSITELIB},'		\
 	       -e 's,$${PKGVERSION},${PKGVERSION_NOREV},'	\
+	       -e 's,$${PKGVER_MICRO},${PKGVER_MICRO},'		\
 	       -e '/^@comment/d'				\
 	       -e '/^@pkgdir/d'					\
 	       "$${f}";						\
@@ -27,8 +31,19 @@ post-install:
 	done							\
 	| ${PKGSRC_SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_SHLIB_AWK}				\
 	> ${WRKDIR}/.PLIST.minus;
-	(cd ${WRKDIR}/.destdir/${PREFIX};			\
-	${RM} -f $$(cat ${WRKDIR}/.PLIST.minus)	);
+#       ------------------------------------------------------------
+#       And then remove the files listed in .PLIST.minus
+#       ------------------------------------------------------------
+	(cd ${WRKDIR}/.destdir/${PREFIX};		\
+	${RM} -f $$(cat ${WRKDIR}/.PLIST.minus)	;	\
+	${RM} -f lib/libaudio.so.*		;	\
+	${RM} -f lib/libgnuradio-analog.so.*	;	\
+	${RM} -f lib/libgnuradio-blocks.so.*	;	\
+	${RM} -f lib/libgnuradio-filter.so.* 	;	\
+	${RM} -f lib/libgnuradio-fft.so.*    	;	\
+	${RM} -f lib/libgnuradio-pmt.so.*	;	\
+	${RM} -f lib/libgnuradio-runtime.so.*	;	\
+	${RM} -f lib/libgnuradio-audio.so.* 	; 	)
 # workaround for gnuradio-doxygen
 #  (the same target can't be set on gnuradio-doxygen side
 #
