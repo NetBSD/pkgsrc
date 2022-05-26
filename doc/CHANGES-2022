@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2751 2022/05/26 10:30:33 nikita Exp $
+$NetBSD: CHANGES-2022,v 1.2752 2022/05/26 15:20:39 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4220,3 +4220,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/repmgr to 5.3.2 [adam 2022-05-26]
 	Updated devel/cmake to 3.23.2 [adam 2022-05-26]
 	Updated fonts/ttf-meera to 7.0.3.20191223nb2 [nikita 2022-05-26]
+	Updated ham/gnuradio-core to 3.10.2.0 [mef 2022-05-26]
