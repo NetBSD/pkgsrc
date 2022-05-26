@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2021/06/28 16:29:12 tnn Exp $
+# $NetBSD: options.mk,v 1.7 2022/05/26 22:03:39 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openjdk8
 PKG_OPTIONS_OPTIONAL_GROUPS=	variant
@@ -6,16 +6,9 @@ PKG_OPTIONS_GROUP.variant=	jdk-zero-vm
 PKG_SUPPORTED_OPTIONS=		debug jre-jce x11
 PKG_SUGGESTED_OPTIONS=		jre-jce x11
 
-.if !empty(PKGSRC_COMPILER:Mclang)
-PKG_OPTIONS_GROUP.variant+=	jdk-zeroshark-vm
-.endif
-
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 PKG_OPTIONS_GROUP.variant+=	jdk-hotspot-vm
 PKG_SUGGESTED_OPTIONS+=		jdk-hotspot-vm
-#notyet
-#.elif !empty(PKGSRC_COMPILER:Mclang)
-#PKG_SUGGESTED_OPTIONS+		jdk-zeroshark-vm
 .else
 PKG_SUGGESTED_OPTIONS+=		jdk-zero-vm
 .endif
@@ -90,11 +83,6 @@ PLIST_VARS+=		native
 .if !empty(PKG_OPTIONS:Mjdk-zero-vm)
 BUILD_VARIANT=		zero
 .include "../../devel/libffi/buildlink3.mk"
-.elif !empty(PKG_OPTIONS:Mjdk-zeroshark-vm)
-BUILD_VARIANT=		zeroshark
-.include "../../devel/libffi/buildlink3.mk"
-.include "../../lang/libLLVM/buildlink3.mk"
-CONFIGURE_ENV+=		LLVM_CONFIG=${LLVM_CONFIG_PATH}
 .else
 BUILD_VARIANT=		server
 PLIST.native=		yes
