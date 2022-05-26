@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2745 2022/05/25 21:55:33 he Exp $
+$NetBSD: CHANGES-2022,v 1.2746 2022/05/26 06:18:38 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4213,3 +4213,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed security/libfwbuilder [wiz 2022-05-25]
 	Removed security/fwbuilder [wiz 2022-05-25]
 	Updated lang/rust-src to 1.60.0 [he 2022-05-25]
+	Updated mail/fetchmail to 6.4.30 [triaxx 2022-05-26]
