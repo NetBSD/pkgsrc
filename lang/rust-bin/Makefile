@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2022/04/30 21:12:17 nia Exp $
+# $NetBSD: Makefile,v 1.37 2022/05/26 07:17:30 he Exp $
 
-DISTNAME=	rust-1.59.0
+DISTNAME=	rust-1.60.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
