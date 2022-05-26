@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2022/05/26 15:20:09 mef Exp $
+@comment $NetBSD: PLIST,v 1.16 2022/05/26 15:43:37 mef Exp $
 include/gnuradio/digital/adaptive_algorithm.h
 include/gnuradio/digital/adaptive_algorithm_cma.h
 include/gnuradio/digital/adaptive_algorithm_lms.h
@@ -24,13 +24,10 @@ include/gnuradio/digital/correlate_access_code_tag_ff.h
 include/gnuradio/digital/costas_loop_cc.h
 include/gnuradio/digital/cpmmod_bc.h
 include/gnuradio/digital/crc.h
-include/gnuradio/digital/crc.h
 include/gnuradio/digital/crc16_async_bb.h
 include/gnuradio/digital/crc32_async_bb.h
 include/gnuradio/digital/crc32_bb.h
 include/gnuradio/digital/crc_append.h
-include/gnuradio/digital/crc_append.h
-include/gnuradio/digital/crc_check.h
 include/gnuradio/digital/crc_check.h
 include/gnuradio/digital/decision_feedback_equalizer.h
 include/gnuradio/digital/descrambler_bb.h
@@ -244,8 +241,6 @@ share/gnuradio/grc/blocks/digital_crc16_async_bb.block.yml
 share/gnuradio/grc/blocks/digital_crc32_async_bb.block.yml
 share/gnuradio/grc/blocks/digital_crc32_bb.block.yml
 share/gnuradio/grc/blocks/digital_crc_append.block.yml
-share/gnuradio/grc/blocks/digital_crc_append.block.yml
-share/gnuradio/grc/blocks/digital_crc_check.block.yml
 share/gnuradio/grc/blocks/digital_crc_check.block.yml
 share/gnuradio/grc/blocks/digital_decision_feedback_equalizer.block.yml
 share/gnuradio/grc/blocks/digital_descrambler_bb.block.yml
