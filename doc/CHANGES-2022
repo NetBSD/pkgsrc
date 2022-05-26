@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2747 2022/05/26 06:19:12 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.2748 2022/05/26 06:51:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4215,3 +4215,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/rust-src to 1.60.0 [he 2022-05-25]
 	Updated mail/fetchmail to 6.4.30 [triaxx 2022-05-26]
 	Updated mail/fetchmailconf to 6.4.30 [triaxx 2022-05-26]
+	Updated devel/nspr to 4.34 [wiz 2022-05-26]
