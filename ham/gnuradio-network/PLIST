@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/03/12 23:04:45 tnn Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/05/26 15:20:09 mef Exp $
 include/gnuradio/network/api.h
 include/gnuradio/network/packet_headers.h
 include/gnuradio/network/socket_pdu.h
@@ -11,7 +11,7 @@ lib/cmake/gnuradio/gnuradio-networkConfig.cmake
 lib/cmake/gnuradio/gnuradio-networkTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-networkTargets.cmake
 lib/libgnuradio-network.so
-lib/libgnuradio-network.so.3.10.1
+lib/libgnuradio-network.so.${PKGVER_MICRO}
 lib/libgnuradio-network.so.${PKGVERSION}
 lib/pkgconfig/gnuradio-network.pc
 ${PYSITELIB}/gnuradio/network/__init__.py
@@ -39,3 +39,4 @@ share/gnuradio/grc/blocks/network_tcp_source.block.yml
 share/gnuradio/grc/blocks/network_tuntap_pdu.block.yml
 share/gnuradio/grc/blocks/network_udp_sink.block.yml
 share/gnuradio/grc/blocks/network_udp_source.block.yml
+
