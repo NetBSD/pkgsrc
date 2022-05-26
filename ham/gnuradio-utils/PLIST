@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/01/16 18:06:27 tnn Exp $
+@comment $NetBSD: PLIST,v 1.7 2022/05/26 15:20:10 mef Exp $
 bin/gr_modtool
 bin/gr_plot
 bin/gr_plot_const
@@ -211,3 +211,4 @@ share/gnuradio/modtool/templates/gr-newmod/python/howto/bindings/bind_oot_file.p
 share/gnuradio/modtool/templates/gr-newmod/python/howto/bindings/docstrings/README.md
 share/gnuradio/modtool/templates/gr-newmod/python/howto/bindings/header_utils.py
 share/gnuradio/modtool/templates/gr-newmod/python/howto/bindings/python_bindings.cc
+
