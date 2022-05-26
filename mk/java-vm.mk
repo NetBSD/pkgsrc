@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.129 2022/05/26 21:04:33 tnn Exp $
+# $NetBSD: java-vm.mk,v 1.130 2022/05/26 21:29:37 tnn Exp $
 #
 # This Makefile fragment provides a Java VM, either at build-time or at
 # run-time, depending on the package's needs.
@@ -175,10 +175,12 @@ _ONLY_FOR_PLATFORMS.openjdk8= \
 _ONLY_FOR_PLATFORMS.openjdk11= \
 	NetBSD-[8-9].*-x86_64		NetBSD-[8-9].*-i386		\
 	NetBSD-1[0-9].*-x86_64		NetBSD-1[0-9].*i386		\
+	NetBSD-9.99.*-aarch64		NetBSD-9.99.*-earmv[67]hf	\
 	NetBSD-1[0-9].*-aarch64		NetBSD-1[0-9].*-earmv[67]hf
 _ONLY_FOR_PLATFORMS.openjdk17= \
 	NetBSD-9.*-x86_64		NetBSD-9.*-i386			\
 	NetBSD-1[0-9].*-x86_64		NetBSD-1[0-9].*-i386		\
+	NetBSD-9.99.*-aarch64		NetBSD-9.99.*-earmv[67]hf	\
 	NetBSD-1[0-9].*-aarch64		NetBSD-1[0-9].*-earmv[67]hf
 
 # Set ONLY_FOR_PLATFORM based on accepted JVMs
