@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2753 2022/05/26 21:08:57 triaxx Exp $
+$NetBSD: CHANGES-2022,v 1.2754 2022/05/26 21:23:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4222,3 +4222,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/ttf-meera to 7.0.3.20191223nb2 [nikita 2022-05-26]
 	Updated ham/gnuradio-core to 3.10.2.0 [mef 2022-05-26]
 	Updated www/php-dotclear to 2.22 [triaxx 2022-05-26]
+	Updated net/yaydl to 0.10.0 [pin 2022-05-26]
