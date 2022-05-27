@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2022/03/15 05:43:36 adam Exp $
+# $NetBSD: Makefile,v 1.39 2022/05/27 12:26:50 adam Exp $
 
-DISTNAME=	meson-0.61.3
+DISTNAME=	meson-0.62.1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/meson/}
 
@@ -41,7 +41,7 @@ REPLACE_PYTHON+=	test\ cases/windows/8\ find\ program/test-script
 REPLACE_PYTHON+=	tools/*.py
 
 do-test:
-	cd ${WRKSRC} && ${PYTHONBIN} run_tests.py
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} run_tests.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
