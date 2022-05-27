@@ -1,11 +1,11 @@
-$NetBSD: patch-base_gserrors_h,v 1.1 2013/03/16 22:25:21 dholland Exp $
+$NetBSD: patch-base_gserrors_h,v 1.2 2022/05/27 08:26:52 adam Exp $
 
 This suppresses the noisy warning that __func__ redefined.
 
---- base/gserrors.h.orig	2013-02-14 07:58:13.000000000 +0000
+--- base/gserrors.h.orig	2022-04-04 13:48:49.000000000 +0000
 +++ base/gserrors.h
-@@ -60,6 +60,9 @@ int gs_log_error(int, const char *, int)
- #endif
+@@ -136,6 +136,9 @@ int gs_log_error(int, const char *, int)
+ #define return_error(err) return gs_note_error(err)
  
  #if !defined(__STDC_VERSION__) || __STDC_VERSION__ < 199901L
 +#  if (defined(__func__))
