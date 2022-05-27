@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2022/04/23 21:10:39 pin Exp $
+$NetBSD: distinfo,v 1.11 2022/05/27 18:21:50 pin Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -192,9 +192,9 @@ Size (hashbrown-0.11.2.crate) = 85713 bytes
 BLAKE2s (hermit-abi-0.1.19.crate) = c731a42a9056a75a3ba26b5ab02c7c60c1fa2f21635d4152de66dc2eb407e097
 SHA512 (hermit-abi-0.1.19.crate) = 1c877fcd562b15d2de9c151fd6c5f3ea4bf48abcb799e6139a180ffad5d64b632f0000d5707bbd92ff23a0e5f349157b9e0f5be8b50f03680b0fa47315dbb78a
 Size (hermit-abi-0.1.19.crate) = 9979 bytes
-BLAKE2s (hgrep-0.2.5.tar.gz) = 7187ef430860687d22269c8b5861aa4312ce5badb2c8c9deec7d6efec6b92970
-SHA512 (hgrep-0.2.5.tar.gz) = 1bdbd5fdd595f56b22e8e74e380ea29a8efb14c00a8d351000c931751a20eb5f32b5bceeea0142d86ecb35a38d0f34a40e5ae1b96e2a6cf4eb9f0d091dd2c000
-Size (hgrep-0.2.5.tar.gz) = 862962 bytes
+BLAKE2s (hgrep-0.2.6.tar.gz) = e1920d8972725e86b7d12db2213a0fbb30a96e187ea38415f7172a2e0eb66415
+SHA512 (hgrep-0.2.6.tar.gz) = c16f17d75c236994f90ab444ef20866397f412d527e202251399a43ba6aef6533211f4a768a85a975fddfa58ce1576a0a27e82e9f75e29f3276282dddcf15071
+Size (hgrep-0.2.6.tar.gz) = 862861 bytes
 BLAKE2s (ignore-0.4.18.crate) = 8572ea3aa32efc6b519aaa1637d0bff67c2c75d5ca3a53f0c79c2b7af757b4ea
 SHA512 (ignore-0.4.18.crate) = 5d11a2415f015cce6ce72aa3d08a7cfb645ee7f1845b3445a924a92144438f209c992cc15d4ede3099d1eebe3fa28bde4e0eef1a3fbcb9dbced19a42051d21be
 Size (ignore-0.4.18.crate) = 53174 bytes
@@ -348,9 +348,6 @@ Size (remove_dir_all-0.5.3.crate) = 9184 bytes
 BLAKE2s (rgb-0.8.32.crate) = ea1b98d9f0058d14df9312cb547b6d48c9902c612dd3f4c990a26dbeebf4550a
 SHA512 (rgb-0.8.32.crate) = 91ace666e237088ee409f3c2935ca5ab07ff35e69ce4ba1003a81e72707b6ca05c20c495d649790c3a49de9d7d439df1efd7aed322c3bacd4fc86ef8d1b15606
 Size (rgb-0.8.32.crate) = 16213 bytes
-BLAKE2s (rgb2ansi256-0.1.1.crate) = 6ab3d43da4e5e80ab6fa065157cc6af3c5315b7e162948d5973720215bf8a40d
-SHA512 (rgb2ansi256-0.1.1.crate) = 3ab647d3341847169610affb8762d31279a6c984ba855597cc027897466123b39b79341576fff2f226851a43bd08bc4cb7ac57a2e33dd840ea5f41a15da1b2aa
-Size (rgb2ansi256-0.1.1.crate) = 6376 bytes
 BLAKE2s (rustc_version-0.4.0.crate) = 8244e9157b6b8811ae926fc0ed00edeb2b0a0f0f34d6e7b93ad236cbb6ffffba
 SHA512 (rustc_version-0.4.0.crate) = f66da7c6efe431db06cd01180d84ba67fcd38f8cd6ef693762957c00ccc2211f23c08079d7f184776e08f28d2d6ca3bdb5f5016f7de245c6193d4722891ba1db
 Size (rustc_version-0.4.0.crate) = 12175 bytes
