@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/12/06 03:57:49 mef Exp $
+$NetBSD: distinfo,v 1.15 2022/05/27 09:47:29 adam Exp $
 
-BLAKE2s (relatorio-0.10.0.tar.gz) = 41771a5cff4b3d0fa9596b70be1bafa3a8904d5f1d213fefd4ffc8cef3173047
-SHA512 (relatorio-0.10.0.tar.gz) = a154e1b462526f298c0a931e7e78ddcc3fbf3744a1a129a346e442502c3f056b87cc5b94f9c8375b32954755f9e0a6cb94ece83671fd77f2473e98d2a0ec42b1
-Size (relatorio-0.10.0.tar.gz) = 1109527 bytes
+BLAKE2s (relatorio-0.10.1.tar.gz) = fefdd05fee31ec5064ac66608b5156852bd599cf157b9d6e16fe37753e085156
+SHA512 (relatorio-0.10.1.tar.gz) = 460f446944e6d8dc156f8d0ae287d9c2805e0843dcb304088cee92093e84be7b884ede6b3696af7a33527cc633e5de73269e6003f644f0d2a5b1ad0196a9f607
+Size (relatorio-0.10.1.tar.gz) = 1109846 bytes
