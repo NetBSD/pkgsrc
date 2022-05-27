@@ -1,13 +1,13 @@
-$NetBSD: patch-configure,v 1.8 2021/09/29 19:19:23 adam Exp $
+$NetBSD: patch-configure,v 1.9 2022/05/27 08:26:52 adam Exp $
 
 Use system zlib for linking.
 Add rpath.
 Get all LDFLAGS for FreeType2.
 Use correct install_name with path on Darwin.
 
---- configure.orig	2021-09-27 07:44:02.000000000 +0000
+--- configure.orig	2022-04-04 13:48:49.000000000 +0000
 +++ configure
-@@ -4049,7 +4049,7 @@ CFLAGSAUX_STANDARDTMP="\$(CFLAGS_STANDAR
+@@ -4036,7 +4036,7 @@ CFLAGSAUX_STANDARDTMP="\$(CFLAGS_STANDAR
  CFLAGSAUX_DEBUGTMP="\$(CFLAGS_DEBUG)"
  CFLAGSAUX_PROFILETMP="\$(CFLAGS_PROFILE)"
  LDFLAGSAUXTMP="\$(LDFLAGS)"
@@ -16,18 +16,19 @@ Use correct install_name with path on Darwin.
  
  # purposefully do not include "help" output for this
  # Check whether --enable-save_confaux was given.
-@@ -4681,9 +4681,7 @@ case $host in
+@@ -4667,10 +4667,7 @@ case $host in
+         *-sun*|*-solaris*)
          CC_OPT_FLAGS_TO_TRY="-O2 -DNDEBUG"
          CFLAGS_LARGEFILE="-D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64"
-         # the trailing space is required!
+-        # the trailing space is required!
 -        if test $GCC = no; then
 -            SET_DT_SONAME="-h "
 -        fi
 +        SET_DT_SONAME="-h,"
-         if test $GCC = yes; then
+         if test x"$GCC" = x"yes"; then
              CC_OPT_FLAGS_TO_TRY="-O2 -DNDEBUG"
              CC_DBG_FLAGS_TO_TRY="-gdwarf-2 -g3 -O0"
-@@ -7627,7 +7625,7 @@ fi
+@@ -7605,7 +7602,7 @@ fi
  fi
  
  if test x$with_libpaper != xno; then
@@ -36,7 +37,7 @@ Use correct install_name with path on Darwin.
  
  $as_echo "#define USE_LIBPAPER 1" >>confdefs.h
  
-@@ -11587,11 +11585,11 @@ case $host in
+@@ -11530,11 +11527,11 @@ case $host in
      ;;
      *-darwin*)
        DYNAMIC_CFLAGS="-fPIC $DYNAMIC_CFLAGS"
@@ -53,7 +54,7 @@ Use correct install_name with path on Darwin.
        DYNAMIC_LIBS=""
        SO_LIB_EXT=".dylib"
      ;;
-@@ -11607,11 +11605,11 @@ case $host in
+@@ -11550,11 +11547,11 @@ case $host in
          #fi
          # ^^^ untested
        fi
