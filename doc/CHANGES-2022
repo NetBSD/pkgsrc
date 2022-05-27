@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2760 2022/05/27 09:47:48 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2761 2022/05/27 09:56:02 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4231,3 +4231,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/py-numba to 0.55.2 [adam 2022-05-27]
 	Updated sysutils/py-magic to 0.4.26 [adam 2022-05-27]
 	Updated textproc/py-relatorio to 0.10.1 [adam 2022-05-27]
+	Updated converters/bdf2psf to 1.208 [fcambus 2022-05-27]
