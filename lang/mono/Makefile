@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.202 2022/04/18 19:09:55 adam Exp $
+# $NetBSD: Makefile,v 1.203 2022/05/27 11:33:30 nia Exp $
 
 DISTNAME=	mono-6.12.0.122
 PKGREVISION=	5
@@ -27,6 +27,9 @@ EXTRACT_USING=	bsdtar
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # has sub-configures
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+gmake[8]: *** No rule to make target '../../build/deps/_xbuild_14__Microsoft.Build.Framework.dll.sources', needed by '../../build/deps/_xbuild_14__Microsoft.Build.Framework.dll.response'.  Stop.
+MAKE_JOBS_SAFE=		no
 
 # Requires a cwrappers change: http://mail-index.netbsd.org/tech-pkg/2019/08/16/msg021791.html
 USE_CWRAPPERS=		no
