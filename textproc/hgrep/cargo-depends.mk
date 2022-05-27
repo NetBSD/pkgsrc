@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.9 2022/04/17 22:56:22 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.10 2022/05/27 18:21:50 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.18
@@ -115,7 +115,6 @@ CARGO_CRATE_DEPENDS+=	regex-automata-0.1.10
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.6.25
 CARGO_CRATE_DEPENDS+=	remove_dir_all-0.5.3
 CARGO_CRATE_DEPENDS+=	rgb-0.8.32
-CARGO_CRATE_DEPENDS+=	rgb2ansi256-0.1.1
 CARGO_CRATE_DEPENDS+=	rustc_version-0.4.0
 CARGO_CRATE_DEPENDS+=	rustversion-1.0.6
 CARGO_CRATE_DEPENDS+=	ryu-1.0.9
