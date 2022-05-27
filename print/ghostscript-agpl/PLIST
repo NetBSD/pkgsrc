@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2021/09/29 19:19:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2022/05/27 08:26:52 adam Exp $
 bin/dvipdf
 bin/eps2eps
 bin/gs
@@ -33,7 +33,7 @@ include/ghostscript/iapi.h
 include/ghostscript/ierrors.h
 lib/libgs.so
 lib/libgs.so.9
-lib/libgs.so.9.55
+lib/libgs.so.9.56
 man/de/man1/dvipdf.1
 man/de/man1/eps2eps.1
 man/de/man1/gsnd.1
@@ -71,7 +71,6 @@ man/man1/ps2ps.1
 share/doc/ghostscript/${PKGVERSION}/API.htm
 share/doc/ghostscript/${PKGVERSION}/C-style.htm
 share/doc/ghostscript/${PKGVERSION}/COPYING
-share/doc/ghostscript/${PKGVERSION}/Commprod.htm
 share/doc/ghostscript/${PKGVERSION}/DLL.htm
 share/doc/ghostscript/${PKGVERSION}/Deprecated.htm
 share/doc/ghostscript/${PKGVERSION}/Develop.htm
@@ -97,17 +96,14 @@ share/doc/ghostscript/${PKGVERSION}/Use.htm
 share/doc/ghostscript/${PKGVERSION}/VectorDevices.htm
 share/doc/ghostscript/${PKGVERSION}/WhatIsGS.htm
 share/doc/ghostscript/${PKGVERSION}/gdevds32.c
-share/doc/ghostscript/${PKGVERSION}/gs-style.css
 share/doc/ghostscript/${PKGVERSION}/images/Artifex_logo.png
 share/doc/ghostscript/${PKGVERSION}/images/favicon.png
 share/doc/ghostscript/${PKGVERSION}/images/ghostscript_logo.png
 share/doc/ghostscript/${PKGVERSION}/images/hamburger-light.png
 share/doc/ghostscript/${PKGVERSION}/images/x-light.png
 share/doc/ghostscript/${PKGVERSION}/index.html
-share/doc/ghostscript/${PKGVERSION}/index.js
 share/doc/ghostscript/${PKGVERSION}/pscet_status.txt
 share/doc/ghostscript/${PKGVERSION}/sample_downscale_device.htm
-share/doc/ghostscript/${PKGVERSION}/style.css
 share/doc/ghostscript/${PKGVERSION}/subclass.htm
 share/doc/ghostscript/${PKGVERSION}/thirdparty.htm
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/CIDFSubst/DroidSansFallback.ttf
@@ -346,8 +342,8 @@ ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/URWGothic-BookO
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/URWGothic-Demi
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/URWGothic-DemiOblique
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Font/Z003-MediumItalic
-${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/IdiomSet/Pscript5Idiom
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/IdiomSet/PPI_CUtils
+${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/IdiomSet/Pscript5Idiom
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/FAPIcidfmap
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/FAPIconfig
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/FAPIfontmap
