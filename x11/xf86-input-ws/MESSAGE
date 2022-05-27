@@ -1,11 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2015/10/10 20:02:52 tnn Exp $
+$NetBSD: MESSAGE,v 1.2 2022/05/27 02:35:43 tnn Exp $
 
 To use this driver, your xorg.conf file should have an entry like this:
 
+Section "Device"
 	Identifier  	"Mouse0"
 	Driver      	"ws"
 	Option		"Device"	"/dev/wsmouse"
+EndSection
 
 This should work with many wscons pointing devices, especially the zaurus.
 Please see the ws(4) manual page for more information.
