@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2022/02/02 12:29:14 adam Exp $
+# $NetBSD: Makefile,v 1.16 2022/05/27 09:46:52 adam Exp $
 
-DISTNAME=	python-magic-0.4.25
+DISTNAME=	python-magic-0.4.26
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-magic/}
