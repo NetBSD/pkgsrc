@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/04/10 08:53:19 nia Exp $
+# $NetBSD: Makefile,v 1.8 2022/05/27 02:35:43 tnn Exp $
 
-DISTNAME=	xf86-input-ws-1.3.0.20151010
-PKGREVISION=	2
+DISTNAME=	xf86-input-ws-1.3.0.20220511
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
