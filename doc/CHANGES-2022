@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2763 2022/05/27 10:09:26 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.2764 2022/05/27 12:29:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4234,3 +4234,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated converters/bdf2psf to 1.208 [fcambus 2022-05-27]
 	Updated x11/kitty to 0.25.1 [wiz 2022-05-27]
 	Updated misc/dialog to 1.3.20220526 [fcambus 2022-05-27]
+	Updated devel/ninja-build to 1.11.0 [adam 2022-05-27]
+	Updated devel/meson to 0.62.1 [adam 2022-05-27]
+	Updated devel/glibmm2.68 to 2.68.2 [adam 2022-05-27]
+	Updated devel/pangomm2.48 to 2.48.2 [adam 2022-05-27]
