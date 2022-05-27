@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.213 2022/05/18 18:26:51 adam Exp $
+$NetBSD: distinfo,v 1.214 2022/05/27 17:02:36 tnn Exp $
 
 BLAKE2s (node-v18.2.0.tar.xz) = f21fc01f787369be3ee9a37ec61723b36a2ed3f58aca4d28866daf8dbb07137a
 SHA512 (node-v18.2.0.tar.xz) = 9d7d6017374bc14e9cd447bceb3ab9d3b4d421c30d422c6f4eb429c67f1deb2c04778216cccb11ecbe510f18b821891d9311c035f5a81cc6a5e8adae202e9b33
@@ -18,6 +18,7 @@ SHA1 (patch-deps_v8_src_compiler_types.h) = 2a212282ab9d71e98ae56827fdb1d9778a60
 SHA1 (patch-deps_v8_src_heap_code-range.cc) = b281f76f4e3d8e562f596235049a6be7c5ff4de2
 SHA1 (patch-deps_v8_tools_run-llprof.sh) = 39aa3faf77492ef8dd35b411b7b0e4605b469af3
 SHA1 (patch-node.gypi) = 4a104dba6c22702211009bc60a6be6f87554e2fa
+SHA1 (patch-src_crypto_crypto__rsa.cc) = 9ffd8de2fac76014696c8dfac7ba200eab56f6f6
 SHA1 (patch-src_inspector__agent.cc) = 3fd3d71f9d6013a6eb2a79e0442b31d2e2408a2f
 SHA1 (patch-src_node__postmortem__metadata.cc) = 9938482d724ad6636af5dc3fa719ec26ed8539ff
 SHA1 (patch-tools_gyp_pylib_gyp_generator_make.py) = 570fe9889767c555468a225cd7f0b398ea6a193c
