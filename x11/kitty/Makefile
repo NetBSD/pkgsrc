@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2022/05/12 12:52:55 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2022/05/27 10:02:19 wiz Exp $
 
-DISTNAME=	kitty-0.25.0
+DISTNAME=	kitty-0.25.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kovidgoyal/}
 GITHUB_PROJECT=	kitty
@@ -12,7 +12,7 @@ HOMEPAGE=	https://sw.kovidgoyal.net/kitty/index.html
 COMMENT=	GPU based terminal emulator
 LICENSE=	gnu-gpl-v3
 
-USE_LANGUAGES=	c99
+USE_LANGUAGES=	c
 EXTRACT_USING=	bsdtar
 USE_TOOLS+=	gmake pkg-config
 

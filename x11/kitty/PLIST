@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2022/04/14 07:20:39 pin Exp $
+@comment $NetBSD: PLIST,v 1.19 2022/05/27 10:02:19 wiz Exp $
 bin/kitty
 lib/kitty/__main__.py
 lib/kitty/__main__.pyc
@@ -173,6 +173,9 @@ lib/kitty/kittens/ssh/options/types.pyo
 lib/kitty/kittens/ssh/options/utils.py
 lib/kitty/kittens/ssh/options/utils.pyc
 lib/kitty/kittens/ssh/options/utils.pyo
+lib/kitty/kittens/ssh/utils.py
+lib/kitty/kittens/ssh/utils.pyc
+lib/kitty/kittens/ssh/utils.pyo
 lib/kitty/kittens/themes/__init__.py
 lib/kitty/kittens/themes/__init__.pyc
 lib/kitty/kittens/themes/__init__.pyo
@@ -516,6 +519,9 @@ lib/kitty/kitty/remote_control.pyo
 lib/kitty/kitty/rgb.py
 lib/kitty/kitty/rgb.pyc
 lib/kitty/kitty/rgb.pyo
+lib/kitty/kitty/search_query_parser.py
+lib/kitty/kitty/search_query_parser.pyc
+lib/kitty/kitty/search_query_parser.pyo
 lib/kitty/kitty/session.py
 lib/kitty/kitty/session.pyc
 lib/kitty/kitty/session.pyo
@@ -578,6 +584,7 @@ lib/kitty/shell-integration/zsh/.zshenv
 lib/kitty/shell-integration/zsh/completions/_kitty
 lib/kitty/shell-integration/zsh/kitty-integration
 lib/kitty/shell-integration/zsh/kitty.zsh
+lib/kitty/terminfo/kitty.termcap
 lib/kitty/terminfo/kitty.terminfo
 lib/kitty/terminfo/x/xterm-kitty
 man/man1/kitty.1
