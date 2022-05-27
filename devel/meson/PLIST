@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2022/02/15 10:00:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2022/05/27 12:26:50 adam Exp $
 bin/meson
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -75,12 +75,13 @@ ${PYSITELIB}/mesonbuild/build.pyo
 ${PYSITELIB}/mesonbuild/cmake/__init__.py
 ${PYSITELIB}/mesonbuild/cmake/__init__.pyc
 ${PYSITELIB}/mesonbuild/cmake/__init__.pyo
-${PYSITELIB}/mesonbuild/cmake/client.py
-${PYSITELIB}/mesonbuild/cmake/client.pyc
-${PYSITELIB}/mesonbuild/cmake/client.pyo
 ${PYSITELIB}/mesonbuild/cmake/common.py
 ${PYSITELIB}/mesonbuild/cmake/common.pyc
 ${PYSITELIB}/mesonbuild/cmake/common.pyo
+${PYSITELIB}/mesonbuild/cmake/data/__init__.py
+${PYSITELIB}/mesonbuild/cmake/data/__init__.pyc
+${PYSITELIB}/mesonbuild/cmake/data/__init__.pyo
+${PYSITELIB}/mesonbuild/cmake/data/preload.cmake
 ${PYSITELIB}/mesonbuild/cmake/executor.py
 ${PYSITELIB}/mesonbuild/cmake/executor.pyc
 ${PYSITELIB}/mesonbuild/cmake/executor.pyo
@@ -144,9 +145,6 @@ ${PYSITELIB}/mesonbuild/compilers/mixins/__init__.pyo
 ${PYSITELIB}/mesonbuild/compilers/mixins/arm.py
 ${PYSITELIB}/mesonbuild/compilers/mixins/arm.pyc
 ${PYSITELIB}/mesonbuild/compilers/mixins/arm.pyo
-${PYSITELIB}/mesonbuild/compilers/mixins/c2000.py
-${PYSITELIB}/mesonbuild/compilers/mixins/c2000.pyc
-${PYSITELIB}/mesonbuild/compilers/mixins/c2000.pyo
 ${PYSITELIB}/mesonbuild/compilers/mixins/ccrx.py
 ${PYSITELIB}/mesonbuild/compilers/mixins/ccrx.pyc
 ${PYSITELIB}/mesonbuild/compilers/mixins/ccrx.pyo
@@ -177,6 +175,9 @@ ${PYSITELIB}/mesonbuild/compilers/mixins/islinker.pyo
 ${PYSITELIB}/mesonbuild/compilers/mixins/pgi.py
 ${PYSITELIB}/mesonbuild/compilers/mixins/pgi.pyc
 ${PYSITELIB}/mesonbuild/compilers/mixins/pgi.pyo
+${PYSITELIB}/mesonbuild/compilers/mixins/ti.py
+${PYSITELIB}/mesonbuild/compilers/mixins/ti.pyc
+${PYSITELIB}/mesonbuild/compilers/mixins/ti.pyo
 ${PYSITELIB}/mesonbuild/compilers/mixins/visualstudio.py
 ${PYSITELIB}/mesonbuild/compilers/mixins/visualstudio.pyc
 ${PYSITELIB}/mesonbuild/compilers/mixins/visualstudio.pyo
@@ -222,6 +223,12 @@ ${PYSITELIB}/mesonbuild/dependencies/configtool.pyo
 ${PYSITELIB}/mesonbuild/dependencies/cuda.py
 ${PYSITELIB}/mesonbuild/dependencies/cuda.pyc
 ${PYSITELIB}/mesonbuild/dependencies/cuda.pyo
+${PYSITELIB}/mesonbuild/dependencies/data/CMakeLists.txt
+${PYSITELIB}/mesonbuild/dependencies/data/CMakeListsLLVM.txt
+${PYSITELIB}/mesonbuild/dependencies/data/CMakePathInfo.txt
+${PYSITELIB}/mesonbuild/dependencies/data/__init__.py
+${PYSITELIB}/mesonbuild/dependencies/data/__init__.pyc
+${PYSITELIB}/mesonbuild/dependencies/data/__init__.pyo
 ${PYSITELIB}/mesonbuild/dependencies/detect.py
 ${PYSITELIB}/mesonbuild/dependencies/detect.pyc
 ${PYSITELIB}/mesonbuild/dependencies/detect.pyo
@@ -450,9 +457,6 @@ ${PYSITELIB}/mesonbuild/modules/qt5.pyo
 ${PYSITELIB}/mesonbuild/modules/qt6.py
 ${PYSITELIB}/mesonbuild/modules/qt6.pyc
 ${PYSITELIB}/mesonbuild/modules/qt6.pyo
-${PYSITELIB}/mesonbuild/modules/rpm.py
-${PYSITELIB}/mesonbuild/modules/rpm.pyc
-${PYSITELIB}/mesonbuild/modules/rpm.pyo
 ${PYSITELIB}/mesonbuild/modules/sourceset.py
 ${PYSITELIB}/mesonbuild/modules/sourceset.pyc
 ${PYSITELIB}/mesonbuild/modules/sourceset.pyo
@@ -471,6 +475,9 @@ ${PYSITELIB}/mesonbuild/modules/unstable_rust.pyo
 ${PYSITELIB}/mesonbuild/modules/unstable_simd.py
 ${PYSITELIB}/mesonbuild/modules/unstable_simd.pyc
 ${PYSITELIB}/mesonbuild/modules/unstable_simd.pyo
+${PYSITELIB}/mesonbuild/modules/unstable_wayland.py
+${PYSITELIB}/mesonbuild/modules/unstable_wayland.pyc
+${PYSITELIB}/mesonbuild/modules/unstable_wayland.pyo
 ${PYSITELIB}/mesonbuild/modules/windows.py
 ${PYSITELIB}/mesonbuild/modules/windows.pyc
 ${PYSITELIB}/mesonbuild/modules/windows.pyo
@@ -514,6 +521,9 @@ ${PYSITELIB}/mesonbuild/scripts/cmake_run_ctgt.py
 ${PYSITELIB}/mesonbuild/scripts/cmake_run_ctgt.pyc
 ${PYSITELIB}/mesonbuild/scripts/cmake_run_ctgt.pyo
 ${PYSITELIB}/mesonbuild/scripts/cmd_or_ps.ps1
+${PYSITELIB}/mesonbuild/scripts/copy.py
+${PYSITELIB}/mesonbuild/scripts/copy.pyc
+${PYSITELIB}/mesonbuild/scripts/copy.pyo
 ${PYSITELIB}/mesonbuild/scripts/coverage.py
 ${PYSITELIB}/mesonbuild/scripts/coverage.pyc
 ${PYSITELIB}/mesonbuild/scripts/coverage.pyo
@@ -529,6 +539,9 @@ ${PYSITELIB}/mesonbuild/scripts/depscan.pyo
 ${PYSITELIB}/mesonbuild/scripts/dirchanger.py
 ${PYSITELIB}/mesonbuild/scripts/dirchanger.pyc
 ${PYSITELIB}/mesonbuild/scripts/dirchanger.pyo
+${PYSITELIB}/mesonbuild/scripts/env2mfile.py
+${PYSITELIB}/mesonbuild/scripts/env2mfile.pyc
+${PYSITELIB}/mesonbuild/scripts/env2mfile.pyo
 ${PYSITELIB}/mesonbuild/scripts/externalproject.py
 ${PYSITELIB}/mesonbuild/scripts/externalproject.pyc
 ${PYSITELIB}/mesonbuild/scripts/externalproject.pyo
@@ -541,6 +554,9 @@ ${PYSITELIB}/mesonbuild/scripts/gtkdochelper.pyo
 ${PYSITELIB}/mesonbuild/scripts/hotdochelper.py
 ${PYSITELIB}/mesonbuild/scripts/hotdochelper.pyc
 ${PYSITELIB}/mesonbuild/scripts/hotdochelper.pyo
+${PYSITELIB}/mesonbuild/scripts/itstool.py
+${PYSITELIB}/mesonbuild/scripts/itstool.pyc
+${PYSITELIB}/mesonbuild/scripts/itstool.pyo
 ${PYSITELIB}/mesonbuild/scripts/meson_exe.py
 ${PYSITELIB}/mesonbuild/scripts/meson_exe.pyc
 ${PYSITELIB}/mesonbuild/scripts/meson_exe.pyo
