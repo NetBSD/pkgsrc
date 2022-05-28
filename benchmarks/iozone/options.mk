@@ -1,5 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2019/11/03 11:55:29 rillig Exp $
-#
+# $NetBSD: options.mk,v 1.3 2022/05/28 11:39:57 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.iozone
 PKG_SUPPORTED_OPTIONS=	threads
