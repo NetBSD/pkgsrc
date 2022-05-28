@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2022/05/10 05:59:58 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2022/05/28 08:58:27 wiz Exp $
 
-DISTNAME=	pip-audit-2.2.1
+DISTNAME=	pip-audit-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 # pypi file does not include tests
@@ -14,6 +14,7 @@ HOMEPAGE=	https://pypi.org/project/pip-audit/
 COMMENT=	Scan Python environments for known vulnerabilities
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-cachecontrol>=0.12.10:../../devel/py-cachecontrol
 DEPENDS+=	${PYPKGPREFIX}-cyclonedx-python-lib>=1.0.0:../../security/py-cyclonedx-python-lib
 DEPENDS+=	${PYPKGPREFIX}-html5lib>=1.1:../../textproc/py-html5lib
@@ -26,20 +27,17 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-USE_PKG_RESOURCES=	yes
-
 USE_LANGUAGES=	# none
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
         ${MV} pip-audit pip-audit-${PYVERSSUFFIX} || ${TRUE}
-	${RM} -r ${DESTDIR}${PREFIX}/${PYSITELIB}/test
 
-# as of 2.0.0
-# 1 failed, 115 passed
+# as of 2.3.0
+# 1 failed, 133 passed
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib:${WRKSRC}/build/lib/test
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
