@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2022/03/07 22:47:33 leot Exp $
+# $NetBSD: Makefile,v 1.24 2022/05/28 18:42:30 leot Exp $
 
-DISTNAME=	sfeed-1.3
+DISTNAME=	sfeed-1.5
 CATEGORIES=	news
 MASTER_SITES=	https://codemadness.org/releases/sfeed/
 
