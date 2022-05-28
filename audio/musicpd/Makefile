@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.263 2022/05/18 08:43:06 wiz Exp $
+# $NetBSD: Makefile,v 1.264 2022/05/28 01:54:49 gutteridge Exp $
 
 DISTNAME=	mpd-0.23.7
 PKGNAME=	${DISTNAME:S/mpd/musicpd/}
@@ -21,8 +21,7 @@ USE_LANGUAGES=	c c++
 #
 # Please be cautious of raising this requirement - mpd seems to adopt new C++
 # standards quickly. Notably, gcc8 from pkgsrc doesn't have support for
-# NetBSD/earmv7hf. gcc10 should, but fails for other reasons (TODO:
-# investigate).
+# NetBSD/earmv7hf.
 GCC_REQD+=	7
 
 MESON_ARGS+=	-Ddocumentation=enabled
