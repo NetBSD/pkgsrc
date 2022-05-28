@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2018/08/10 10:41:20 leot Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/05/28 19:03:15 leot Exp $
+bin/geomyidae
 man/man8/geomyidae.8
-sbin/geomyidae
-share/doc/geomyidae/CGI
+share/doc/geomyidae/CGI.md
 share/doc/geomyidae/README
 share/examples/geomyidae/index.gph
