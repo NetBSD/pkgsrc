@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:17:37 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/05/28 10:14:22 taca Exp $
 
-BLAKE2s (php-mcrypt/mcrypt-1.0.4.tgz) = f7ed3a25e3986719f897e9f4b818233bb62a8795e78fa03d66a18274770dbe66
-SHA512 (php-mcrypt/mcrypt-1.0.4.tgz) = 6a8244761035640366041a5f26057ab14bb85eaaa973ddf604e152b786ef750ec775ae91d7582044700d6fdef902425f3a9d6839113a52e0a9f957bf9d0c189a
-Size (php-mcrypt/mcrypt-1.0.4.tgz) = 27056 bytes
+BLAKE2s (php-mcrypt/mcrypt-1.0.5.tgz) = 287df4e9831e0dc9b1d72028571c1938f8d856e8411641ab8b3886d296373fce
+SHA512 (php-mcrypt/mcrypt-1.0.5.tgz) = fe9afd0987ddbcbb0a9fc5e8313c08c65ac6afd606cce586fe30600ab149b4f4add917bb0319f803942833a88f520f65e2e94bbcc6c58e2075e829509e7dfac5
+Size (php-mcrypt/mcrypt-1.0.5.tgz) = 27056 bytes
