@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2765 2022/05/27 18:22:51 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2766 2022/05/28 03:27:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4239,3 +4239,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/glibmm2.68 to 2.68.2 [adam 2022-05-27]
 	Updated devel/pangomm2.48 to 2.48.2 [adam 2022-05-27]
 	Updated textproc/hgrep to 0.2.6 [pin 2022-05-27]
+	Updated security/p5-Crypt-SMIME to 0.28 [wen 2022-05-28]
