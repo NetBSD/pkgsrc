@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21898 2022/05/28 10:59:53 wiz Exp $
+$NetBSD: TODO,v 1.21899 2022/05/28 11:33:21 mef Exp $
 
 Suggested new packages
 ======================
@@ -464,7 +464,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
 	o asunder-2.9.7
-	o attica-qt5-5.81.0
 	o attr-2.5.1
 	o auctex-12.3
 	o audacity-3.1.3
@@ -478,7 +477,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o avr-gdb-10.1
 	o baci-20040415
 	o baloo-21.04.0
-	o baloo5-5.81.0
 	o basket-2.11b
 	o bbcim-1.0
 	o bbsload-0.2.8
@@ -508,7 +506,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bos-2.5
 	o botan-devel-2.18.0
 	o bottlerocket-0.05b3
-	o breeze-icons-5.81.0
 	o bugzilla3-3.6.13
 	o bwm-ng-0.6.3
 	o byobu-5.133
@@ -681,7 +678,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o fortunes-calvin-0.3
 	o fortunes-de-0.34
 	o fplll-5.4.0
-	o frameworkintegration-5.81.0
 	o freecell-solver-6.2.0
 	o freemint-binutils-2.30
 	o freemint-gcc-7.1.0
@@ -915,93 +911,30 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
 	o kactivities-5.81.0
-	o kactivities-stats-5.81.0
-	o kactivities5-5.81.0
 	o kaffe-1.1.9
-	o kapidox-5.81.0
 	o kapooka-0.3
-	o karchive-5.81.0
-	o kauth-5.81.0
-	o kbookmarks-5.81.0
 	o kbool-2.1 [kbool_2_1, next to boolean-7.1]
-	o kcalendarcore-5.81.0
-	o kcmutils-5.81.0
-	o kcodecs-5.81.0
-	o kcompletion-5.81.0
-	o kconfig-5.81.0
-	o kconfigwidgets-5.81.0
-	o kcontacts-5.81.0
-	o kcoreaddons-5.81.0
-	o kcrash-5.81.0
 	o kcron-21.04.0
-	o kdav-5.81.0
-	o kdbusaddons-5.81.0
-	o kdeclarative-5.81.0
-	o kded-5.81.0
-	o kdelibs4support-5.81.0
 	o kdenetwork-filesharing-20.12.3
 	o kdesdk-kioslaves-20.08.0
 	o kdesdk-thumbnailers-20.08.0
-	o kdesignerplugin-5.81.0
-	o kdesu-5.81.0
 	o kdevelop-5.6
 	o kdevelop4-4.7.2
 	o kdevplatform-1.7.1
-	o kdewebkit-5.81.0
-	o kdnssd-5.81.0
-	o kdoctools-5.81.0
 	o kdsoap-1.10.0
-	o kemoticons-5.81.0
 	o keybinder-0.3.2
-	o kfilemetadata-5.81.0
-	o kfilemetadata5-5.81.0
+	o kfilemetadata
 	o kgb-bot-1.55
-	o kglobalaccel-5.81.0
-	o kguiaddons-5.81.0
-	o kholidays-5.81.0
-	o khtml-5.81.0
-	o ki18n-5.81.0
-	o kiconthemes-5.81.0
-	o kidletime-5.81.0
-	o kimageformats-5.81.0
-	o kinit-5.81.0
-	o kio-5.81.0
-	o kirigami2-5.81.0
 	o kismet-2011.03r2 [pkg/45692]
 	o kismet-2016.07R1
-	o kitemmodels-5.81.0
-	o kitemviews-5.81.0
-	o kjobwidgets-5.81.0
-	o kjs-5.81.0
-	o kjsembed-5.81.0
-	o knewstuff-5.81.0
 	o knot-resolver-1.1.1
-	o knotifications-5.81.0
-	o knotifyconfig-5.81.0
 	o kodi-16.1
 	o konsole-21.04.0
 	o konversation-1.7.7
-	o kpackage-5.81.0
-	o kparts-5.81.0
-	o kpeople-5.81.0
-	o kplotting-5.81.0
-	o kpty-5.81.0
 	o kqtquickcharts4-20.12.3
 	o krita-5.0
 	o kronolith-4.2.14
-	o kross-5.81.0
-	o krunner-5.81.0
-	o kservice-5.81.0
-	o ktexteditor-5.81.0
-	o ktextwidgets-5.81.0
 	o ktorrent3-3.3.4
-	o kunitconversion-5.81.0
-	o kwallet-5.81.0
-	o kwayland-5.81.0
-	o kwidgetsaddons-5.81.0
-	o kwindowsystem-5.81.0
-	o kxmlgui-5.81.0
-	o kxmlrpcclient-5.81.0
 	o labltk-8.06.7
 	o lastpass-cli-1.3.3
 	o latexmk-472b
@@ -1348,7 +1281,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pks-0.9.6
 	o plan-1.10.1
 	o plasma-5.24
-	o plasma-framework-5.81.0
 	o plasma-wayland-protocols-1.2.0
 	o ploticus-examples-230
 	o ply-3.11
@@ -1381,7 +1313,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o prelude-correlator-3.1.0
 	o prelude-lml-3.1.0
 	o prelude-manager-3.1.0
-	o prison-5.81.0
 	o privoxy-3.0.33
 	o profit-2.5.3
 	o proj-8.0.0
@@ -1390,7 +1321,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pspp-1.4.1
 	o ptex-2.3.2
 	o ptlib-2.16.2
-	o purpose-5.81.0
 	o pvs-6.0
 	o pwlib-1.11.1
 	o pxp-1.2.9
@@ -1462,7 +1392,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qconf-2.5
 	o qemu-7.0
 	o qlandkartegt-1.8.1 [pkg/53376]
-	o qqc2-desktop-style-5.81.0
 	o qt5-5.15.4
 	o qt6-6.0
 	o qtcreator-6.0
@@ -1557,8 +1486,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o snort-2.9.17.1
 	o socket-1.2
 	o softhsm-2.6.1
-	o solid-5.81.0
-	o sonnet-5.81.0
 	o sparse-0.6.4
 	o sparsehash-2.0.4
 	o spatialindex-1.9.3
@@ -1592,8 +1519,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o swi-prolog-lite-8.3.22
 	o swi-prolog-packages-8.3.22
 	o sympa-6.2.60
-	o syndication-5.81.0
-	o syntax-highlighting-5.81.0
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
 	o systrace-1.6e
@@ -1630,7 +1555,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tetrinetx-1.40c
 	o texworks-0.6.6
 	o tfmxplay-1.1.6
-	o threadweaver-5.81.0
 	o thunderbird-91.3.0
 	o tightvnc-2.7.10
 	o tile-0.7.4
