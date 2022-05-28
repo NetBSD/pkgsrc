@@ -9,7 +9,7 @@ fi
 
 name="geomyidae"
 rcvar=$name
-command="@PREFIX@/sbin/geomyidae"
+command="@PREFIX@/bin/geomyidae"
 
 geomyidae_flags=${geomyidae_flags-"-u @GEOMYIDAE_USER@ -g @GEOMYIDAE_GROUP@ -b @GEOMYIDAE_ROOTDIR@"}
 
