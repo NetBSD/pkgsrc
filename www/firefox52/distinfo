@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2021/10/26 11:29:26 nia Exp $
+$NetBSD: distinfo,v 1.32 2022/05/28 18:31:13 martin Exp $
 
 BLAKE2s (firefox-52.9.0esr.source.tar.xz) = 68da851ecfe1b03231157bf79732865d3cf81b7c10128a2e2a9e6e7be3963348
 SHA512 (firefox-52.9.0esr.source.tar.xz) = bfca42668ca78a12a9fb56368f4aae5334b1f7a71966fbba4c32b9c5e6597aac79a6e340ac3966779d2d5563eb47c054ab33cc40bfb7306172138ccbd3adb2b9
@@ -35,6 +35,7 @@ SHA1 (patch-dom_media_platforms_ffmpeg_ffvpx_FFVPXRuntimeLinker.cpp) = 34c89f93b
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.cpp) = 9961e956016f274a1b9b52b489bd749e8e2bbcb6
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.h) = 15c01df2fa7f989b533ef769ce77438b5e9bfdb9
 SHA1 (patch-dom_system_OSFileConstants.cpp) = e932ca46cbc78eb8486b9ff704434a962645c6b2
+SHA1 (patch-gfx-ycbcr-chromium_types.h) = 769240a99b0e0425a33a0a95e8ddf1ee0ee1d771
 SHA1 (patch-gfx_2d_DataSurfaceHelpers.cpp) = e18b002f51fc0a191d579fa49025aac2c5000d81
 SHA1 (patch-gfx_2d_HelpersCairo.h) = f910d634624fdf288a042c2a0c636598103ef289
 SHA1 (patch-gfx_cairo_libpixman_src_pixman-arm-neon-asm.S) = 6e91ca436b73affe42ed4e683b3400beb28c4bc6
@@ -64,6 +65,7 @@ SHA1 (patch-ipc_chromium_src_base_time__posix.cc) = ba4e0872490f870e7d2f468e1fe8
 SHA1 (patch-ipc_chromium_src_build_build__config.h) = 9e4f15226c494f5015dbea3a0df6af851449ae15
 SHA1 (patch-ipc_chromium_src_chrome_common_transport__dib.h) = 33ea11a8c23f2fefcb318342ac9e94d3885cb3b1
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = b9c202645a4b6f691a6eb81ef0daf4278d10dcc4
+SHA1 (patch-js-src-jit-AtomicOperations.h) = 191c3a6711410a67e4dbcb953e2169a0524476cf
 SHA1 (patch-js_src_jit_ProcessExecutableMemory.cpp) = b2a34e470e4fc789f777aa101a5911e19d56dc26
 SHA1 (patch-js_src_jit_arm_Architecture-arm.cpp) = f0b554c169643b8447b4f29168d61ea257b18782
 SHA1 (patch-js_src_jit_none_AtomicOperations-sparc.h) = b44992a869d6d08809a9edc28f1ad6f40632d392
@@ -120,11 +122,10 @@ SHA1 (patch-toolkit_xre_nsEmbedFunctions.cpp) = 4db0dfc98ffeb09f524a471e6a727f2c
 SHA1 (patch-xpcom_base_nscore.h) = d7c96eda884d7f370442749c43caba50da61bbe4
 SHA1 (patch-xpcom_build_XPCOMInit.cpp) = 1e7cc3a7fd9515b10307fafa2b01ed689320bd54
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_Makefile.in) = 950874fbc255c93a828bddd84ffe8478094214cc
+SHA1 (patch-xpcom_reflect_xptcall_md_unix_moz.build) = b62af604ca0f409ecfba20c13a3deead54787192
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__arm__netbsd.cpp) = 493d1433ae72bbd0c65ab3f51de43fb864a6f58d
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__asm__mips.S) = f310105510bb5fa6c6de122ebdebbfa18423d8d3
-SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__asm__ppc__netbsd.s) = 8e367d4d0baf24714ee80449fc8d6849ff08ca1c
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__netbsd__m68k.cpp) = b6dc5d54eeaa908d914116429e61f4b65a6a5f8e
-SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__ppc__netbsd.cpp) = 71a33723a557a6153405f6baec8404b25f841608
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__sparc64__netbsd.cpp) = 0792c2c626d906e71c5183994cb32bf8cdb3e239
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcstubs__arm__netbsd.cpp) = 3a902eb9a23b3b5737f3c8cb5f96a5ad9a98a189
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcstubs__asm__mips.S) = 79a4686d368132aff804f217baa685b2e06bc396
