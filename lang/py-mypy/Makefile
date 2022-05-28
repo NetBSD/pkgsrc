@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2022/05/02 08:19:25 adam Exp $
+# $NetBSD: Makefile,v 1.31 2022/05/28 11:46:13 adam Exp $
 
-DISTNAME=	mypy-0.950
+DISTNAME=	mypy-0.960
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mypy/}
