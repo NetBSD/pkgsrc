@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.61 2021/05/24 19:49:09 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2022/05/28 11:39:57 adam Exp $
 
-DISTNAME=	iozone3_430
+DISTNAME=	iozone3_493
 PKGNAME=	${DISTNAME:S/3_/-3./}
-PKGREVISION=	5
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://www.iozone.org/src/current/
-EXTRACT_SUFX=	.tar
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.iozone.org/
@@ -17,7 +16,8 @@ NOT_FOR_PLATFORM=	Interix-*-* # has only 32-bit off_t
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src/current
 MAKE_FILE=		makefile
-USE_TOOLS+=		tee perl
+USE_TOOLS+=		gmake perl tee
+MAKE_JOBS_SAFE=		no
 
 CPPFLAGS.SunOS+=	-Dsolaris
 
@@ -45,17 +45,12 @@ BUILD_TARGET=		generic
 .endif
 
 REPLACE_PERL=		iozone_visualizer.pl report.pl
-SUBST_CLASSES+=		crlf
-SUBST_MESSAGE.crlf=	Stripping EOL CR in ${REPLACE_PERL}
-SUBST_STAGE.crlf=	post-extract
-SUBST_FILES.crlf=	${REPLACE_PERL}
-SUBST_FILTER_CMD.crlf=	${TR} -d '\r'
 
 EGDIR=			share/examples/IOzone
 DOCDIR=			share/doc/IOzone
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${EGDIR} ${DOCDIR}
 
-.include "options.mk"
+#.include "options.mk"
 
 IOZONE_TEST_ARGS=		-Ea
 .if !empty(PKG_OPTIONS:Mthreads)
@@ -83,7 +78,7 @@ do-install:
 .endfor
 
 benchmark:
-	cd ${WRKSRC}; ./iozone ${IOZONE_TEST_ARGS} | ${TEE} iozone.out
+	cd ${WRKSRC} && ./iozone ${IOZONE_TEST_ARGS} | ${TEE} iozone.out
 
 results:
 	${MKDIR} /tmp/benches/`domainname`
