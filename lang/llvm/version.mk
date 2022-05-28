@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.7 2022/02/03 20:38:39 adam Exp $
+# $NetBSD: version.mk,v 1.8 2022/05/28 01:51:16 gutteridge Exp $
 # used by devel/lld
 # used by devel/lldb
 # used by devel/polly
@@ -8,6 +8,8 @@
 # used by lang/libcxx
 # used by lang/libcxxabi
 # used by lang/libunwind
+# used by lang/wasi-compiler-rt
+# used by lang/wasi-libcxx
 # used by parallel/openmp
 
 LLVM_VERSION=	13.0.1
