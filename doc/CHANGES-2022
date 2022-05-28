@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2777 2022/05/28 09:12:11 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2778 2022/05/28 09:18:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4252,3 +4252,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/libxkbcommon to 1.4.1 [wiz 2022-05-28]
 	Updated security/py-pip-audit to 2.3.0 [wiz 2022-05-28]
 	Updated devel/gopls to 0.8.4 [wiz 2022-05-28]
+	Updated fonts/harfbuzz to 4.3.0 [wiz 2022-05-28]
