@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21890 2022/05/27 12:29:19 adam Exp $
+$NetBSD: TODO,v 1.21891 2022/05/28 07:31:50 wen Exp $
 
 Suggested new packages
 ======================
@@ -1264,7 +1264,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-Locale-Maketext-Gettext-1.32
 	o p5-Mac-AppleScript-Glue-0.06
 	o p5-Mac-SystemDirectory-0.13
-	o p5-Mail-Ezmlm-0.16
 	o p5-Math-Bezier-0.02
 	o p5-Math-Matrix-0.94
 	o p5-Module-Path-0.33
