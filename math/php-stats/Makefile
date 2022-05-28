@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2022/05/22 13:40:42 taca Exp $
+# $NetBSD: Makefile,v 1.9 2022/05/28 13:33:01 taca Exp $
 
 MODNAME=	stats
 PECL_VERSION=	2.0.3
 CATEGORIES+=	math
 COMMENT=	PHP extension for statistical computation
 
-PHP_VERSIONS_ACCEPTED=	56 74
+PHP_VERSIONS_ACCEPTED=	74
 
 CONFIGURE_ARGS+=	--enable-${MODNAME}
 
