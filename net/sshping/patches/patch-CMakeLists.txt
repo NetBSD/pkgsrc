@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2022/05/28 20:46:44 leot Exp $
+
+Use CMAKE_INSTALL_MANDIR instead of assuming man.
+
+--- CMakeLists.txt.orig	2018-03-19 21:48:55.000000000 +0000
++++ CMakeLists.txt
+@@ -27,7 +27,7 @@ add_custom_command(
+     COMMENT "Building manpage ${MAN_TGT}"
+     VERBATIM)
+ add_custom_target(man ALL DEPENDS ${MAN_TGT})
+-install(FILES ${MAN_TGT} DESTINATION ${CMAKE_INSTALL_PREFIX}/man/man8)
++install(FILES ${MAN_TGT} DESTINATION ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_MANDIR}/man8)
+ 
+ # Packaging for RPM or DEB
+ find_program(rpmbuild_path "rpmbuild" FALSE)
