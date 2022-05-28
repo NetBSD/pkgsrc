@@ -1,0 +1,15 @@
+$NetBSD: patch-crates_vfs-notify_Cargo.toml,v 1.1 2022/05/28 10:56:07 wiz Exp $
+
+https://github.com/rust-lang/rust-analyzer/commit/364dd5ff89d06c4d5dd802ae5af19b9fa62117b5
+
+--- crates/vfs-notify/Cargo.toml.orig	2022-05-22 18:16:57.000000000 +0000
++++ crates/vfs-notify/Cargo.toml
+@@ -14,7 +14,7 @@ tracing = "0.1.32"
+ jod-thread = "0.1.2"
+ walkdir = "2.3.2"
+ crossbeam-channel = "0.5.4"
+-notify = "=5.0.0-pre.14"
++notify = "=5.0.0-pre.15"
+ 
+ vfs = { path = "../vfs", version = "0.0.0" }
+ paths = { path = "../paths", version = "0.0.0" }
