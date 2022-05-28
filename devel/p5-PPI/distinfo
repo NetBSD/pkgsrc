@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2022/04/30 07:59:50 wen Exp $
+$NetBSD: distinfo,v 1.19 2022/05/28 07:26:11 wen Exp $
 
-BLAKE2s (PPI-1.273.tar.gz) = c3d2a37e94f5aaee1d83169103b4a0a4908b80bfe9c1d6e954d1c680d062da34
-SHA512 (PPI-1.273.tar.gz) = 2ee1c77e3009754e2940cfb359dc8a86e2f1312efb6cb03ebc2ab3fab1508a44b1b7ad389e8d16588fd6fa29d39abf4dd49ae465557fb18c62cf65e3ca5a609a
-Size (PPI-1.273.tar.gz) = 243707 bytes
+BLAKE2s (PPI-1.274.tar.gz) = e702817bea91484baa6e2062786abcef4afbdf40981259382e3f427ad598b7a7
+SHA512 (PPI-1.274.tar.gz) = 415a6bb64b79182134d543cb03f704166a06e7c4fab7ef7e5eacbf11afeb196ed1551de4c8dfbb7bf06ba699cdff6f7984ba362a3526158821884694d8271ea5
+Size (PPI-1.274.tar.gz) = 244239 bytes
