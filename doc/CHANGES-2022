@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2791 2022/05/28 17:52:22 tsutsui Exp $
+$NetBSD: CHANGES-2022,v 1.2792 2022/05/28 18:42:34 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4267,3 +4267,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/conftest to 0.32.0 [leot 2022-05-28]
 	Added net/sshping version 0.1.4 [leot 2022-05-28]
 	Updated wm/jwm to 2.4.2 [tsutsui 2022-05-28]
+	Updated news/sfeed to 1.5 [leot 2022-05-28]
