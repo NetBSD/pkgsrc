@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21901 2022/05/28 11:46:34 adam Exp $
+$NetBSD: TODO,v 1.21902 2022/05/28 14:34:33 wen Exp $
 
 Suggested new packages
 ======================
@@ -1255,7 +1255,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o php-mongo-1.6.16
 	o php-mongodb-1.12.0
 	o php-mrbs-1.10.0
-	o php-owncloud-10.8.0
 	o php-phrasea2-4.1.3
 	o php-piwigo-12.1.0
 	o php-psr-1.2.0
