@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2793 2022/05/28 18:44:46 leot Exp $
+$NetBSD: CHANGES-2022,v 1.2794 2022/05/28 19:03:21 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4269,3 +4269,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated wm/jwm to 2.4.2 [tsutsui 2022-05-28]
 	Updated news/sfeed to 1.5 [leot 2022-05-28]
 	Updated textproc/json2tsv to 0.9 [leot 2022-05-28]
+	Updated net/Geomyidae to 0.50.1 [leot 2022-05-28]
