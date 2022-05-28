@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2783 2022/05/28 10:56:16 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2784 2022/05/28 11:46:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4258,3 +4258,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ruby-rack to 2.2.3.1 [taca 2022-05-28]
 	Updated security/php-pecl-mcrypt to 1.0.5 [taca 2022-05-28]
 	Updated lang/rust-analyzer to 0.0.2022.05.23 [wiz 2022-05-28]
+	Updated benchmarks/iozone to 3.493 [adam 2022-05-28]
+	Updated lang/py-mypy to 0.960 [adam 2022-05-28]
