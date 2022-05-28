@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2769 2022/05/28 04:53:50 wen Exp $
+$NetBSD: CHANGES-2022,v 1.2770 2022/05/28 06:04:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4243,3 +4243,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/p5-CryptX to 0.076 [wen 2022-05-28]
 	Updated www/drupal9 to 9.3.14 [wen 2022-05-28]
 	Updated security/p5-Module-Signature to 0.88 [wen 2022-05-28]
+	Updated www/tinyproxy to 1.11.1 [adam 2022-05-28]
+	Updated security/gnutls to 3.7.6 [adam 2022-05-28]
