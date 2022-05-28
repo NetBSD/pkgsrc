@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2784 2022/05/28 11:46:34 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2785 2022/05/28 14:34:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4260,3 +4260,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/rust-analyzer to 0.0.2022.05.23 [wiz 2022-05-28]
 	Updated benchmarks/iozone to 3.493 [adam 2022-05-28]
 	Updated lang/py-mypy to 0.960 [adam 2022-05-28]
+	Updated www/php-owncloud to 10.9.1 [wen 2022-05-28]
