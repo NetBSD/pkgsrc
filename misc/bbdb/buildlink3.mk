@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2018/01/07 13:04:23 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2022/05/28 15:13:44 mef Exp $
 #
 
 .include "../../editors/emacs/modules.mk"
@@ -10,6 +10,7 @@ BUILDLINK_TREE+=	bbdb
 BBDB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.bbdb+=	${EMACS_PKGNAME_PREFIX}bbdb>=2
+BUILDLINK_API_DEPENDS.bbdb+=	${EMACS_PKGNAME_PREFIX}bbdb<3
 BUILDLINK_PKGSRCDIR.bbdb?=	../../misc/bbdb
 
 BUILDLINK_CONTENTS_FILTER.bbdb=	${EGREP} '.*\.el$$|.*\.elc$$'
