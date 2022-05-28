@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21903 2022/05/28 23:19:56 wen Exp $
+$NetBSD: TODO,v 1.21904 2022/05/28 23:47:19 wen Exp $
 
 Suggested new packages
 ======================
@@ -377,7 +377,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o QuantLib-1.22
 	o R-GRASS-0.3.9
 	o R-IRkernel-1.1.1
-	o R-R6-2.5.0
 	o R-RSQLite-2.6
 	o R-RcppArmadillo-0.10.4.0.0
 	o R-TTR-0.24.2
