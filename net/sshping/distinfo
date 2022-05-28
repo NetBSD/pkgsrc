@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2022/05/28 17:33:20 leot Exp $
+$NetBSD: distinfo,v 1.2 2022/05/28 20:46:44 leot Exp $
 
 BLAKE2s (sshping-0.1.4.tar.gz) = 2108dc5850f721ccde6a486689b4f8c3f6846345d019625ae1f5c8bbf0e17c6a
 SHA512 (sshping-0.1.4.tar.gz) = 16d72099b468c58d44835822a372f97863ba0b73282e8e64c20b0a0e6465e6f9efa634a85b0c7c13d03c470c547b08332820bf177f5bad59984270801ab74782
 Size (sshping-0.1.4.tar.gz) = 3536227 bytes
+SHA1 (patch-CMakeLists.txt) = 8d19570f316d37e08b8fab49ae747f0a2880edd8
