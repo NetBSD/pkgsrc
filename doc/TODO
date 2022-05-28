@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21900 2022/05/28 11:41:46 mef Exp $
+$NetBSD: TODO,v 1.21901 2022/05/28 11:46:34 adam Exp $
 
 Suggested new packages
 ======================
@@ -877,7 +877,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o inkscape-1.2
 	o inn-2.6.4
 	o input-pad-1.4.2
-	o iozone-3.490
 	o ipe-7.2.24
 	o ipopt-3.12.12
 	o ipv6-toolkit-2.0
