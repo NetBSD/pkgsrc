@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2021/06/14 21:08:06 nia Exp $
+# $NetBSD: Makefile,v 1.14 2022/05/28 19:03:15 leot Exp $
 
-DISTNAME=	geomyidae-v0.34
+DISTNAME=	geomyidae-v0.50.1
 PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	net
 MASTER_SITES=	ftp://bitreich.org/releases/geomyidae/
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	gopher://bitreich.org/1/scm/geomyidae
@@ -36,15 +35,16 @@ SUBST_STAGE.rootdir=	pre-configure
 SUBST_FILES.rootdir=	main.c
 SUBST_SED.rootdir=	-e 's;/var/gopher;${GEOMYIDAE_ROOTDIR};'
 
-INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8 ${EGDIR} ${DOCDIR}
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8 ${EGDIR} ${DOCDIR}
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/geomyidae ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/geomyidae ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/geomyidae.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/CGI ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/CGI.md ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/index.gph ${DESTDIR}${EGDIR}
 
+.include "../../security/libretls/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
