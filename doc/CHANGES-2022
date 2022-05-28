@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2772 2022/05/28 07:17:56 wen Exp $
+$NetBSD: CHANGES-2022,v 1.2773 2022/05/28 07:20:35 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4247,3 +4247,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/gnutls to 3.7.6 [adam 2022-05-28]
 	Updated mail/p5-Mail-DKIM to 1.20220520 [wen 2022-05-28]
 	Updated mail/p5-Mail-Message to 3.012 [wen 2022-05-28]
+	Updated mail/p5-Mail-POP3Client to 2.21 [wen 2022-05-28]
