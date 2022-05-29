@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.162 2022/02/17 16:55:16 leot Exp $
+$NetBSD: distinfo,v 1.163 2022/05/29 17:47:15 leot Exp $
 
-BLAKE2s (webkitgtk-2.34.6.tar.xz) = 117fe0ec529e03bc59ab091ca6e84e42b3491481ae0a874e90831f0ac67b26ef
-SHA512 (webkitgtk-2.34.6.tar.xz) = 57ab25af027ae39820622743c258f3e6d0af86376f2a4c3a8ede560ca6652c98c49056c716aace56291264c18164cb60395be9779a9d12455e6a0f7d2c197343
-Size (webkitgtk-2.34.6.tar.xz) = 24393340 bytes
+BLAKE2s (webkitgtk-2.36.3.tar.xz) = c0536c4edcb59ed28edcdaf309267d6c3c1e49e5eaae85b39fb29b49722977ad
+SHA512 (webkitgtk-2.36.3.tar.xz) = dfd02e22a58d0080d9bf6c7dd2a710bb9d8698ff8a4226653629294b74cc981a3e35d4d93eed5ebad35c81b339ec8b96755ad0b36c0238da151b359e07bcb692
+Size (webkitgtk-2.36.3.tar.xz) = 26600236 bytes
 SHA1 (patch-Source_JavaScriptCore_Scripts_check-xcfilelists.sh) = f4f117e6c1cd8eb8e4905f74946e0367156ed528
 SHA1 (patch-Source_JavaScriptCore_Scripts_generate-unified-sources.sh) = 308a7c8f687253b4fc75de0c66016dd18666e697
 SHA1 (patch-Source_JavaScriptCore_assembler_ARM64Assembler.h) = 79c282ca90d0ba2ef4769da40d4648f5f709951b
@@ -17,15 +17,16 @@ SHA1 (patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h) = ac07d
 SHA1 (patch-Source_WTF_wtf_Assertions.h) = 427de20eba4627578087feaa7de2f23e80b9debf
 SHA1 (patch-Source_WTF_wtf_FileSystem.cpp) = 2fe7b7755646d9a1cc022aec3d01091766378aba
 SHA1 (patch-Source_WTF_wtf_PlatformEnable.h) = eb5598c20c8453314daba7897066f15827bbede7
-SHA1 (patch-Source_WTF_wtf_PlatformHave.h) = 1c96cc094a4f62f17d11890a17f164d214fa0f1f
+SHA1 (patch-Source_WTF_wtf_PlatformHave.h) = 56cec19c923ccb6539f2d321abafa1e167735b6a
 SHA1 (patch-Source_WTF_wtf_PlatformOS.h) = 80aa6ff20f10407d447fdb41606d4bb4989351aa
 SHA1 (patch-Source_WTF_wtf_PlatformUse.h) = 595486b48e7d89378208c0a209a121ef136415e6
 SHA1 (patch-Source_WTF_wtf_StackBounds.cpp) = 22a71daac8443f079ad8bcc7285cfd7319c972b3
+SHA1 (patch-Source_WTF_wtf_posix_OSAllocatorPOSIX.cpp) = 73b3facb6912411a5767b05b7d7eebdbc9416ebf
 SHA1 (patch-Source_WebCore_Scripts_check-xcfilelists.sh) = b292baf2494bcd459d9af91386263123046c6615
 SHA1 (patch-Source_WebCore_Scripts_generate-unified-sources.sh) = 9b323aa1fa8e6e5599ac0a7ae08fbbed4348c70e
 SHA1 (patch-Source_WebCore_crypto_algorithms_CryptoAlgorithmAES__GCM.cpp) = 03337c5eec54d6974dfea1766b14cb2c1b9f7750
 SHA1 (patch-Source_WebCore_inspector_InspectorFrontendHost.cpp) = daf6351a1a0b5a49592a2bb6db0d54620c7b09e3
-SHA1 (patch-Source_WebCore_platform_graphics_filters_FEMorphology.cpp) = 16b36d2d91fd7f43156b9ee09bcafd19602ebbd9
+SHA1 (patch-Source_WebCore_platform_graphics_filters_FEMorphology.cpp) = 43f423af652533a64d0793ec6d15150b908da0f8
 SHA1 (patch-Source_WebCore_platform_network_DNS.h) = dd9fb67aae0029c6a452e7d8f09eeed1235d5700
 SHA1 (patch-Source_WebCore_rendering_RenderLayerBacking.h) = ecf722df1d1cca13573786b34fe1e3d85edf1e1e
 SHA1 (patch-Source_WebCore_rendering_shapes_RasterShape.cpp) = 551e47698dee50d097b11e3218f13bb3447edfea
@@ -37,10 +38,11 @@ SHA1 (patch-Source_WebKit_Platform_IPC_unix_ConnectionUnix.cpp) = f2ee81bf200fe1
 SHA1 (patch-Source_WebKit_Platform_classifier_ResourceLoadStatisticsClassifier.cpp) = 920376ec8697780637f376b2fff312b7e214a7f6
 SHA1 (patch-Source_WebKit_Scripts_check-xcfilelists.sh) = 22cc5ba1ababc6395aa0ef467db0c27c2fbf6878
 SHA1 (patch-Source_WebKit_Scripts_generate-unified-sources.sh) = def930cf3f706ac657b2f8835c8c0278ade8f663
+SHA1 (patch-Source_bmalloc_bmalloc_AvailableMemory.cpp) = 18915c691d6f4e2a8870f8fee0909bd1a609cc05
 SHA1 (patch-Source_bmalloc_bmalloc_BPlatform.h) = 28d1f657fde427062a729b26398e96825082fc4d
 SHA1 (patch-Source_bmalloc_bmalloc_VMAllocate.h) = 22c23689fa79c930145068ed7966844bbf92a6a9
-SHA1 (patch-Source_cmake_OptionsCommon.cmake) = b0f0070bb006081e5f609d07103cd8abf382d60e
-SHA1 (patch-Source_cmake_WebKitCommon.cmake) = 5f275eb75cf61b89a9168e4d72f9587dd5c732bc
+SHA1 (patch-Source_cmake_OptionsCommon.cmake) = 7db9d7b06e7f784000e66b0dab23e98f6298107a
+SHA1 (patch-Source_cmake_WebKitCommon.cmake) = 73a0da491ef93d5cc25214e7733b54bbdacd487e
 SHA1 (patch-Tools_TestWebKitAPI_Scripts_check-xcfilelists.sh) = 6e8327bf46150806910b21b298767f313e1eb3ce
 SHA1 (patch-Tools_TestWebKitAPI_Scripts_generate-unified-sources.sh) = 06747f279263558f05bb01c8da9c994a357ce74a
 SHA1 (patch-aj) = ec60907df4336b755d1d1924c026b3041805f431

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.88 2022/04/18 19:10:12 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.89 2022/05/29 17:47:15 leot Exp $
 
 BUILDLINK_TREE+=	webkit-gtk
 
