@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2809 2022/05/29 09:39:55 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2810 2022/05/29 09:50:31 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4285,3 +4285,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/waf to 2.0.24 [wiz 2022-05-29]
 	Updated finance/homebank to 5.5.5 [wen 2022-05-29]
 	Updated textproc/asciidoc to 10.2.0 [wiz 2022-05-29]
+	Updated math/R-lmtest to 0.9.40 [wen 2022-05-29]
