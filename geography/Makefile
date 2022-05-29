@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2022/03/28 19:33:14 bouyer Exp $
+# $NetBSD: Makefile,v 1.115 2022/05/29 17:30:23 wiz Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -98,7 +98,6 @@ SUBDIR+=	py-trytond-google-maps
 SUBDIR+=	qgis
 SUBDIR+=	qlandkartegt
 SUBDIR+=	qlandkartegt-garmindev
-SUBDIR+=	qlandkartem
 SUBDIR+=	shapelib
 SUBDIR+=	spatialindex
 SUBDIR+=	tex-pst-geo
