@@ -6,3 +6,6 @@ limited to them.
 In short, DocBook is an easy-to-understand and widely used DTD.
 Dozens of organizations use DocBook for millions of pages of
 documentation, in various print and online formats, worldwide.
+
+This package contains DocBook XML versions 4.2-4.5. SGML versions
+are in the docbook package.
