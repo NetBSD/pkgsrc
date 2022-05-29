@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.152 2022/03/25 09:32:49 nia Exp $
+# $NetBSD: Makefile,v 1.153 2022/05/29 12:24:16 gdt Exp $
 
-DISTNAME=	tiff-4.3.0
-PKGREVISION=	2
+VERSION_BASE=	4.4.0
+# Accomodate testing unreleased versions.
+#VERSION_RC=	rc1
+DISTNAME=	tiff-${VERSION_BASE}${VERSION_RC}
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.osgeo.org/libtiff/
 
@@ -9,6 +11,8 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://simplesystems.org/libtiff/
 COMMENT=	Library and tools for reading and writing TIFF data files
 LICENSE=	mit
+
+WRKSRC=		${WRKDIR}/tiff-${VERSION_BASE}
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
