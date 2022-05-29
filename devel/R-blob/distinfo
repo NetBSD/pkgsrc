@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:01 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/05/29 00:27:37 wen Exp $
 
-BLAKE2s (R/blob_1.2.0.tar.gz) = 8720613f3d6f8ae4c48cf7015d944a9684980eb5366771c15609713886474725
-SHA512 (R/blob_1.2.0.tar.gz) = 5a9130760fc032e52ae4604ec935d097aebab8ee368facbe5e70429ca05ab6c12624b0c08f48c12ef2db3d9af6c3bc6e0fe23f9142161a9a09753882e164fa1c
-Size (R/blob_1.2.0.tar.gz) = 9355 bytes
+BLAKE2s (R/blob_1.2.3.tar.gz) = 57732832eef242155e207aae7aae50699716b5f24c8674ed86ad398af7c9c16c
+SHA512 (R/blob_1.2.3.tar.gz) = 39a94f1471ee16d5c65f8eb19ef3cd4f22758c25e81847b80ce94287d1a72a24755bc45fa249d8e05d9b206f9cc0bc4a6f155978577d810c16e97569b4e47a20
+Size (R/blob_1.2.3.tar.gz) = 10543 bytes
