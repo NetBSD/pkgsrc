@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.68 2022/04/18 19:12:09 adam Exp $
+# $NetBSD: Makefile,v 1.69 2022/05/29 09:39:44 wiz Exp $
 
-DISTNAME=	asciidoc-10.1.4
-PKGREVISION=	1
+DISTNAME=	asciidoc-10.2.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=asciidoc/}
 GITHUB_PROJECT=	asciidoc-py3
@@ -35,8 +34,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "options.mk"
 
-# as of 10.1.2
-# 84 passed, 26 warnings
+# as of 10.2.0
+# 138 passed, 24 warnings
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
