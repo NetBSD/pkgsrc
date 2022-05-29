@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2819 2022/05/29 17:59:04 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.2820 2022/05/29 17:59:43 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4296,3 +4296,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/broot to 1.13.0 [pin 2022-05-29]
 	Updated www/webkit-gtk to 2.36.3 [leot 2022-05-29]
 	Updated www/links to 2.26 [fcambus 2022-05-29]
+	Updated www/links-gui to 2.26 [fcambus 2022-05-29]
