@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2811 2022/05/29 12:26:21 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.2812 2022/05/29 15:53:49 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4287,3 +4287,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/asciidoc to 10.2.0 [wiz 2022-05-29]
 	Updated math/R-lmtest to 0.9.40 [wen 2022-05-29]
 	Updated graphics/tiff to 4.4.0 [gdt 2022-05-29]
+	Updated net/iperf2 to 2.1.7 [gdt 2022-05-29]
