@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.2 2017/10/18 12:06:31 gavan Exp $
+$NetBSD: patch-ac,v 1.3 2022/05/29 19:53:59 gavan Exp $
 
---- imap/Makefile.in.orig	2010-10-19 03:08:28.000000000 +0000
+--- imap/Makefile.in.orig	2017-08-18 00:29:14.000000000 +0000
 +++ imap/Makefile.in
 @@ -179,6 +179,9 @@ mupdate_err.c: mupdate_err.et
  
@@ -33,3 +33,11 @@ $NetBSD: patch-ac,v 1.2 2017/10/18 12:06:31 gavan Exp $
  
  pop3d: pop3d.o proxy.o backend.o tls.o mutex_fake.o libimap.a \
  	$(DEPLIBS) $(SERVICE)
+@@ -369,6 +372,6 @@ distclean: clean
+ 	rm -f Makefile
+ 
+ depend: imap_err.h
+-	${MAKEDEPEND} $(CPPFLAGS) $(DEFS) $(CFLAGS) *.c $(srcdir)/*.c 1>makedepend.log 2>&1
++	${MAKEDEPEND} -- $(CPPFLAGS) $(DEFS) $(CFLAGS) -- *.c $(srcdir)/*.c 1>makedepend.log 2>&1
+ 
+ # DO NOT DELETE THIS LINE -- make depend depends on it.
