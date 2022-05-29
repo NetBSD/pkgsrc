@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/05/28 00:52:42 mef Exp $
+# $NetBSD: Makefile,v 1.7 2022/05/29 07:32:15 mef Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-0.9.0
 PKGNAME=	ocaml-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Bigstring intrinsics and fast blits based on memcpy/memmmove
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 OCAML_USE_DUNE=	yes
 
 .include "../../lang/ocaml/ocaml.mk"
