@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.225 2022/04/25 23:28:51 tnn Exp $
+# $NetBSD: Makefile,v 1.226 2022/05/29 17:47:15 leot Exp $
 
-DISTNAME=	webkitgtk-2.34.6
+DISTNAME=	webkitgtk-2.36.3
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://www.webkitgtk.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -20,7 +19,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++17
-USE_TOOLS+=	automake bash bison flex gmake perl pkg-config msgfmt
+USE_TOOLS+=	automake bash bison flex gdbus-codegen gmake perl pkg-config msgfmt
 
 # Enabling -gdwarf-2 hits GNU ar limits on file size.
 CTF_SUPPORTED=	no
@@ -40,10 +39,6 @@ USE_PKGSRC_GCC=		yes
 USE_PKGSRC_GCC_RUNTIME=	yes
 .endif
 
-# Using ld.gold subverts Pkgsrc wrappers, and this package also crashes buggy
-# versions of ld.gold.
-CMAKE_ARGS+=	-DUSE_LD_GOLD=OFF
-
 PKGCONFIG_OVERRIDE+=	Source/JavaScriptCore/javascriptcoregtk.pc.in
 PKGCONFIG_OVERRIDE+=	Source/WebKit/gtk/webkit2gtk-web-extension.pc.in
 PKGCONFIG_OVERRIDE+=	Source/WebKit/gtk/webkit2gtk.pc.in
@@ -54,12 +49,12 @@ CMAKE_ARGS+=		-DENABLE_X11_TARGET=ON
 CMAKE_ARGS+=		-DENABLE_MINIBROWSER=ON
 CMAKE_ARGS+=		-DENABLE_GAMEPAD=OFF
 CMAKE_ARGS+=		-DENABLE_GEOLOCATION=OFF
+CMAKE_ARGS+=		-DENABLE_JOURNALD_LOG=OFF
 CMAKE_ARGS+=		-DENABLE_BUBBLEWRAP_SANDBOX=OFF
 CMAKE_ARGS+=		-DUSE_GSTREAMER_GL=OFF
 CMAKE_ARGS+=		-DUSE_LIBHYPHEN=OFF
 CMAKE_ARGS+=		-DUSE_OPENJPEG=OFF
 CMAKE_ARGS+=		-DUSE_SOUP2=ON
-CMAKE_ARGS+=		-DUSE_SYSTEMD=OFF
 
 REPLACE_PERL+=	Source/JavaScriptCore/Scripts/*.pl
 REPLACE_PERL+=	Source/JavaScriptCore/create_hash_table
@@ -111,7 +106,7 @@ REPLACE_RUBY+=		Source/WebKit/Scripts/*.rb
 
 SUBST_CLASSES+=		python
 SUBST_FILES.python+=	Source/WebInspectorUI/Scripts/copy-user-interface-resources.pl
-SUBST_SED.python+=	-e 's,\(.\)python.;,\1${PYTHONBIN}\1;,'
+SUBST_SED.python+=	-e 's,"python3","${PYTHONBIN}",'
 SUBST_STAGE.python=	pre-configure
 SUBST_MESSAGE.python=	Fixing path to python binary.
 
