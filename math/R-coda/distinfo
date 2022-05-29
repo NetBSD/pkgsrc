@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:55:25 nia Exp $
+$NetBSD: distinfo,v 1.5 2022/05/29 00:35:45 wen Exp $
 
-BLAKE2s (R/coda_0.19-3.tar.gz) = 752d7cf23ec83f09e0cd2215b4ddfaeecd34bcc62bcc3b79dfe21de04fbc89f9
-SHA512 (R/coda_0.19-3.tar.gz) = 1833b7a8c7de5220455d101ce4f14348eb750deb245a82d994810fc16b4c01efdf6782ea6d6442ba325ba8cba57d8c0439892fdf15f4bae85b95f2a2eaf28221
-Size (R/coda_0.19-3.tar.gz) = 73555 bytes
+BLAKE2s (R/coda_0.19-4.tar.gz) = e543090153a0a7ee1a6c14308133796c6d5edcc89ed252a975725d0152f453fb
+SHA512 (R/coda_0.19-4.tar.gz) = f390a76658fc49da236dfbf04c920a9cf148ee6ecbb4ca595b6c5a20e8d87a749e67fe294ce63781a277b51b31741508197f9939b62b1edda03228022a02c950
+Size (R/coda_0.19-4.tar.gz) = 74239 bytes
