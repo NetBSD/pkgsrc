@@ -1,10 +1,10 @@
-$NetBSD: patch-x.c,v 1.2 2021/06/29 15:13:24 fcambus Exp $
+$NetBSD: patch-x.c,v 1.3 2022/05/29 17:58:53 fcambus Exp $
 
 Fix display for color depths lower than 4bpp.
 
---- x.c.orig	2021-01-27 20:31:20.000000000 +0000
+--- x.c.orig	2022-04-07 16:18:34.000000000 +0000
 +++ x.c
-@@ -1665,12 +1665,12 @@ static unsigned char *x_init_driver(unsi
+@@ -1667,12 +1667,12 @@ static unsigned char *x_init_driver(unsi
  
  	/* find best visual */
  	{
@@ -20,7 +20,7 @@ Fix display for color depths lower than 4bpp.
  				continue;
  			if (classes[b] == TrueColor && depths[a] <= 8)
  				continue;
-@@ -1698,11 +1698,13 @@ bytes_per_pixel_found:
+@@ -1700,11 +1700,13 @@ bytes_per_pixel_found:
  				/* test misordered flag */
  				/*debug("x_depth %d, x_bitmap_bpp %d %lx %lx %lx %s", x_depth, x_bitmap_bpp, vinfo.red_mask, vinfo.green_mask, vinfo.blue_mask, x_bitmap_bit_order == MSBFirst ? "MSBFirst" : "LSBFirst");*/
  				switch (x_depth) {
@@ -35,7 +35,7 @@ Fix display for color depths lower than 4bpp.
  							misordered = 0;
  							goto visual_found;
  						}
-@@ -1757,7 +1759,7 @@ visual_found:
+@@ -1759,7 +1761,7 @@ visual_found:
  	x_driver.flags &= ~GD_SWITCH_PALETTE;
  	x_have_palette = 0;
  	x_use_static_color_table = 0;
@@ -44,7 +44,7 @@ Fix display for color depths lower than 4bpp.
  		if (x_depth > 8)
  			return stracpy(cast_uchar "Static color supported for up to 8-bit depth.\n");
  		if ((err = x_query_palette()))
-@@ -2221,13 +2223,32 @@ static void x_translate_colors(unsigned 
+@@ -2223,13 +2225,32 @@ static void x_translate_colors(unsigned 
  		return;
  	}
  
