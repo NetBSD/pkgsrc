@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.36 2022/04/15 16:16:16 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.37 2022/05/29 17:37:28 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	adler32-1.2.0
@@ -186,7 +186,7 @@ CARGO_CRATE_DEPENDS+=	time-0.3.7
 CARGO_CRATE_DEPENDS+=	tinyvec-1.5.1
 CARGO_CRATE_DEPENDS+=	tinyvec_macros-0.1.0
 CARGO_CRATE_DEPENDS+=	toml-0.5.8
-CARGO_CRATE_DEPENDS+=	umask-1.0.1
+CARGO_CRATE_DEPENDS+=	umask-2.0.0
 CARGO_CRATE_DEPENDS+=	unicode-bidi-0.3.7
 CARGO_CRATE_DEPENDS+=	unicode-normalization-0.1.19
 CARGO_CRATE_DEPENDS+=	unicode-segmentation-1.9.0
