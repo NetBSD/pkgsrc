@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2807 2022/05/29 07:48:15 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2808 2022/05/29 09:38:44 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4283,3 +4283,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/cargo-audit to 0.17.0 [wiz 2022-05-29]
 	Updated security/py-pip-audit to 2.3.1 [wiz 2022-05-29]
 	Updated devel/waf to 2.0.24 [wiz 2022-05-29]
+	Updated finance/homebank to 5.5.5 [wen 2022-05-29]
