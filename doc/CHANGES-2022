@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2805 2022/05/29 07:36:43 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2806 2022/05/29 07:47:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4281,3 +4281,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated security/p5-Mozilla-CA to 20211001 [wen 2022-05-29]
 	Updated devel/p5-PPIx-Regexp to 0.085 [wen 2022-05-29]
 	Updated security/cargo-audit to 0.17.0 [wiz 2022-05-29]
+	Updated security/py-pip-audit to 2.3.1 [wiz 2022-05-29]
