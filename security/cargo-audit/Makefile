@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/04/21 07:57:30 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/05/29 07:36:34 wiz Exp $
 
-DISTNAME=	cargo-audit-0.16.0
+DISTNAME=	cargo-audit-0.17.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rustsec/}
 GITHUB_TAG=	cargo-audit/v${PKGVERSION_NOREV}
