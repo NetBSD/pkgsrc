@@ -1,0 +1,12 @@
+$NetBSD: patch-imtest_Makefile.in,v 1.1 2022/05/29 19:44:05 gavan Exp $
+
+--- imtest/Makefile.in.orig	2017-08-18 00:29:14.000000000 +0000
++++ imtest/Makefile.in
+@@ -98,6 +98,6 @@ distclean: clean
+ 	rm -f Makefile
+ 
+ depend: 
+-	${MAKEDEPEND} $(CPPFLAGS) $(DEFS) $(CFLAGS) *.c $(srcdir)/*.c 1> makedepend.log 2>&1
++	${MAKEDEPEND} -- $(CPPFLAGS) $(DEFS) $(CFLAGS) -- *.c $(srcdir)/*.c 1> makedepend.log 2>&1
+ 
+ # DO NOT DELETE THIS LINE -- make depend depends on it.

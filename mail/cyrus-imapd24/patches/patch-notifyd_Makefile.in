@@ -1,0 +1,13 @@
+$NetBSD: patch-notifyd_Makefile.in,v 1.1 2022/05/29 19:44:05 gavan Exp $
+
+--- notifyd/Makefile.in.orig	2017-08-18 00:29:14.000000000 +0000
++++ notifyd/Makefile.in
+@@ -107,7 +107,7 @@ distclean: clean
+ 	rm -f Makefile
+ 
+ depend:
+-	${MAKEDEPEND} $(CPPFLAGS) $(DEFS) -I$(srcdir) $(CFLAGS) *.c $(srcdir)/*.c 1>makedepend.log 2>&1
++	${MAKEDEPEND} -- $(CPPFLAGS) $(DEFS) -I$(srcdir) $(CFLAGS) -- *.c $(srcdir)/*.c 1>makedepend.log 2>&1
+ 
+ .c.o:
+ 	$(CC) -c $(CPPFLAGS) $(DEFS) $(CFLAGS) \

@@ -1,0 +1,13 @@
+$NetBSD: patch-sieve_Makefile.in,v 1.1 2022/05/29 19:44:05 gavan Exp $
+
+--- sieve/Makefile.in.orig	2017-08-18 00:29:14.000000000 +0000
++++ sieve/Makefile.in
+@@ -146,7 +146,7 @@ clobber:
+ 	rm -f $(BUILT_SOURCES)
+ 
+ depend:
+-	${MAKEDEPEND} $(CPPFLAGS) $(DEFS) -I$(srcdir) $(MAKEDEPEND_CFLAGS) *.c *.y $(srcdir)/*.y $(srcdir)/*.c 1>makedepend.log 2>&1
++	${MAKEDEPEND} -- $(CPPFLAGS) $(DEFS) -I$(srcdir) $(MAKEDEPEND_CFLAGS) -- *.c *.y $(srcdir)/*.y $(srcdir)/*.c 1>makedepend.log 2>&1
+ 
+ .c.o:
+ 	$(CC) -c $(CPPFLAGS) $(DEFS) $(CFLAGS) \
