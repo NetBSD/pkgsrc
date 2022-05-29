@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/08/08 19:53:48 brook Exp $
+# $NetBSD: Makefile,v 1.5 2022/05/29 00:35:45 wen Exp $
 
 R_PKGNAME=	coda
-R_PKGVER=	0.19-3
+R_PKGVER=	0.19-4
 CATEGORIES=	math
 
 MAINTAINER=	minskim@NetBSD.org
