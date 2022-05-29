@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2799 2022/05/29 00:17:06 wen Exp $
+$NetBSD: CHANGES-2022,v 1.2800 2022/05/29 00:28:40 wen Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4275,3 +4275,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/R-R6 to 2.5.1 [wen 2022-05-28]
 	Updated finance/R-quantmod to 0.4.20 [wen 2022-05-29]
 	Updated math/R-backports to 1.4.1 [wen 2022-05-29]
+	Updated devel/R-blob to 1.2.3 [wen 2022-05-29]
