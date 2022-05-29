@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21908 2022/05/29 00:48:26 wen Exp $
+$NetBSD: TODO,v 1.21909 2022/05/29 07:16:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -454,6 +454,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o arm-trusted-firmware-rk3399-2.4
 	o arm-trusted-firmware-sun50i_a64-2.4
 	o asapm-3.1
+	o asciidoc-10.2.0
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
@@ -518,6 +519,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o canu-2.1.1
 	o carbons-purple-0.2.3
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
+	o cargo-audit-0.17.0
 	o catdoc-1.1
 	o catdoc-tk-1.1
 	o ccache-4.2.1
@@ -803,7 +805,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
 	o gradle-7.0
-	o grafx2-2.8.3097
+	o grafx2-2.8.3128
 	o gramps5-5.1.4
 	o grantlee-5.0.0
 	o graphene-1.10.6
@@ -982,7 +984,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librdkafka-1.6.1
 	o librelp-1.10.0
-	o libressl-3.5.2
+	o libressl-3.5.3
 	o libretro-core-info-1.9.1
 	o libslang-2.2.4
 	o libslang2-2.3.2
@@ -1099,7 +1101,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nickle-2.90
 	o nios2-binutils-2.36.1
 	o node_exporter-1.1.2
-	o npm-8.10.0
+	o npm-8.11.0
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
 	o nsm-2.4.12
@@ -1232,6 +1234,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pdp11-aout-gcc-9.3.0
 	o pdsh-2.32
 	o pear-SOAP-0.14.0
+	o perl5-5.36.0
 	o pessulus-2.30.3
 	o pg_repack-1.4.6
 	o pgadmin4-1.0
@@ -1308,6 +1311,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o privoxy-3.0.33
 	o profit-2.5.3
 	o proj-8.0.0
+	o protobuf-21.1
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
@@ -1344,6 +1348,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-newt-0.52.21
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
+	o py-pip-audit-2.3.1
 	o py-postgresql-5.1.2
 	o py-ptt-1.10.2
 	o py-py3c-1.3.1
@@ -1545,9 +1550,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o terraform-provider-random-3.1.0
 	o tesseract-5.0
 	o tetrinetx-1.40c
+	o texlab-4.0.0
 	o texworks-0.6.6
 	o tfmxplay-1.1.6
 	o thunderbird-91.3.0
+	o tiff-4.4.0
 	o tightvnc-2.7.10
 	o tile-0.7.4
 	o tkcon-2.7.3
@@ -1605,6 +1612,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vnstat-2.6
 	o wMosaic-3.8.22
+	o waf-2.0.24
 	o wandio-4.2.3
 	o wap-utils-1.4.1
 	o wbm-cyrus-imapd-1.6.8
