@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2022/02/21 09:42:25 pin Exp $
+# $NetBSD: Makefile,v 1.21 2022/05/29 17:36:42 pin Exp $
 
-DISTNAME=	gpg-tui-0.8.3
+DISTNAME=	gpg-tui-0.9.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=orhun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -23,9 +23,12 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgpg-error}/l
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/gpg-tui ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/man/gpg-tui.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/man/gpg-tui.toml.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/gpg-tui \
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/man/gpg-tui.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/man/gpg-tui.toml.5 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
 .include "../../lang/rust/cargo.mk"
 .include "../../lang/python/tool.mk"
