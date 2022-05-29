@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.82 2022/02/17 16:55:16 leot Exp $
+@comment $NetBSD: PLIST,v 1.83 2022/05/29 17:47:15 leot Exp $
 bin/WebKitWebDriver
 include/webkitgtk-4.0/JavaScriptCore/JSBase.h
 include/webkitgtk-4.0/JavaScriptCore/JSContextRef.h
@@ -76,6 +76,7 @@ include/webkitgtk-4.0/webkit2/WebKitSettings.h
 include/webkitgtk-4.0/webkit2/WebKitURIRequest.h
 include/webkitgtk-4.0/webkit2/WebKitURIResponse.h
 include/webkitgtk-4.0/webkit2/WebKitURISchemeRequest.h
+include/webkitgtk-4.0/webkit2/WebKitURISchemeResponse.h
 include/webkitgtk-4.0/webkit2/WebKitURIUtilities.h
 include/webkitgtk-4.0/webkit2/WebKitUserContent.h
 include/webkitgtk-4.0/webkit2/WebKitUserContentFilterStore.h
@@ -220,10 +221,10 @@ ${PLIST.introspection}lib/girepository-1.0/WebKit2-4.0.typelib
 ${PLIST.introspection}lib/girepository-1.0/WebKit2WebExtension-4.0.typelib
 lib/libjavascriptcoregtk-4.0.so
 lib/libjavascriptcoregtk-4.0.so.18
-lib/libjavascriptcoregtk-4.0.so.18.19.11
+lib/libjavascriptcoregtk-4.0.so.18.20.7
 lib/libwebkit2gtk-4.0.so
 lib/libwebkit2gtk-4.0.so.37
-lib/libwebkit2gtk-4.0.so.37.55.9
+lib/libwebkit2gtk-4.0.so.37.56.7
 lib/pkgconfig/javascriptcoregtk-4.0.pc
 lib/pkgconfig/webkit2gtk-4.0.pc
 lib/pkgconfig/webkit2gtk-web-extension-4.0.pc
@@ -255,6 +256,7 @@ share/locale/gl/LC_MESSAGES/WebKit2GTK-4.0.mo
 share/locale/gu/LC_MESSAGES/WebKit2GTK-4.0.mo
 share/locale/he/LC_MESSAGES/WebKit2GTK-4.0.mo
 share/locale/hi/LC_MESSAGES/WebKit2GTK-4.0.mo
+share/locale/hr/LC_MESSAGES/WebKit2GTK-4.0.mo
 share/locale/hu/LC_MESSAGES/WebKit2GTK-4.0.mo
 share/locale/id/LC_MESSAGES/WebKit2GTK-4.0.mo
 share/locale/it/LC_MESSAGES/WebKit2GTK-4.0.mo
