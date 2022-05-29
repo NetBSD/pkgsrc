@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2814 2022/05/29 17:30:23 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2815 2022/05/29 17:35:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4290,3 +4290,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/iperf2 to 2.1.7 [gdt 2022-05-29]
 	Updated textproc/lowdown to 1.0.0 [fcambus 2022-05-29]
 	Removed geography/qlandkartem [wiz 2022-05-29]
+	Removed geography/qlandkartegt-garmindev [wiz 2022-05-29]
+	Removed geography/qlandkartegt [wiz 2022-05-29]
