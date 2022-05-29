@@ -1,0 +1,12 @@
+$NetBSD: patch-perl_sieve_lib_Makefile.in,v 1.1 2022/05/29 19:44:05 gavan Exp $
+
+--- perl/sieve/lib/Makefile.in.orig	2017-08-18 00:29:14.000000000 +0000
++++ perl/sieve/lib/Makefile.in
+@@ -89,6 +89,6 @@ distclean: clean
+ 	rm -f Makefile
+ 
+ depend: 
+-	${MAKEDEPEND} $(CPPFLAGS) $(DEFS) $(MAKEDEPEND_CFLAGS) *.c $(srcdir)/*.c 1> makedepend.log 2>&1
++	${MAKEDEPEND} -- $(CPPFLAGS) $(DEFS) $(MAKEDEPEND_CFLAGS) -- *.c $(srcdir)/*.c 1> makedepend.log 2>&1
+ 
+ # DO NOT DELETE THIS LINE -- make depend depends on it.
