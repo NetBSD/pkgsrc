@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2021/04/20 13:12:54 gdt Exp $
+@comment $NetBSD: PLIST,v 1.30 2022/05/29 12:24:16 gdt Exp $
 bin/fax2ps
 bin/fax2tiff
 bin/pal2rgb
@@ -237,4 +237,4 @@ share/doc/tiff/html/v4.0.8.html
 share/doc/tiff/html/v4.0.9.html
 share/doc/tiff/html/v4.1.0.html
 share/doc/tiff/html/v4.2.0.html
-share/doc/tiff/html/v${PKGVERSION}.html
+share/doc/tiff/html/v4.3.0.html
