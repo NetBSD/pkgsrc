@@ -1,0 +1,16 @@
+$NetBSD: patch-meson.build,v 1.1 2022/05/29 21:44:13 ryoon Exp $
+
+* Fix build failure with meson-0.62.1.
+  Upstream merge-request 45
+
+--- meson.build.orig	2022-02-21 21:30:17.000000000 +0000
++++ meson.build
+@@ -55,7 +55,7 @@ lib_name    = meson.project_name() + '-'
+ stability_version_number = (major_version != 0 ? minor_version : micro_version)
+ stable = (stability_version_number % 2 == 0)
+ 
+-conf.set10('BABL_UNSTABLE', not stable, Description:
++conf.set10('BABL_UNSTABLE', not stable, description:
+   'Define to 1 if this is an unstable version of BABL.')
+ 
+ conf.set       ('BABL_MAJOR_VERSION',    '@0@'.format(major_version))
