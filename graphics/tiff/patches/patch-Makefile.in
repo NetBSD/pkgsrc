@@ -1,14 +1,16 @@
-$NetBSD: patch-Makefile.in,v 1.1 2021/06/14 20:45:22 schmonz Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2022/05/29 12:24:16 gdt Exp $
 
 From MacPorts:
 Rename VERSION to VERSION.txt so that it does not collide with the C++
 version header on case-insensitive filesystems.
 
-<https://gitlab.com/libtiff/libtiff/-/issues/252>
+https://gitlab.com/libtiff/libtiff/-/issues/252
+\todo Upstream has resolved the problem a different way and we should
+likely drop this patch.
 
---- Makefile.in.orig	2021-04-16 10:56:02.000000000 +0000
+--- Makefile.in.orig	2022-05-20 16:11:32.000000000 +0000
 +++ Makefile.in
-@@ -424,7 +424,7 @@ docfiles = \
+@@ -425,7 +425,7 @@ docfiles = \
  	README.md \
  	RELEASE-DATE \
  	TODO \
@@ -16,7 +18,7 @@ version header on case-insensitive filesystems.
 +	VERSION.txt
  
  EXTRA_DIST = \
- 	cmake \
+ 	placeholder.h \
 @@ -992,7 +992,7 @@ distcheck-hook:
  
  release:
