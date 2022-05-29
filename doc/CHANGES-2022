@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2816 2022/05/29 17:37:01 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2817 2022/05/29 17:37:55 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4293,3 +4293,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed geography/qlandkartegt-garmindev [wiz 2022-05-29]
 	Removed geography/qlandkartegt [wiz 2022-05-29]
 	Updated security/gpg-tui to 0.9.0 [pin 2022-05-29]
+	Updated sysutils/broot to 1.13.0 [pin 2022-05-29]
