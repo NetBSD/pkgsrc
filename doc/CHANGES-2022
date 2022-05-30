@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2828 2022/05/30 15:11:47 mef Exp $
+$NetBSD: CHANGES-2022,v 1.2829 2022/05/30 15:18:36 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4305,3 +4305,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added benchmarks/R-profmem version 0.6.0 [mef 2022-05-30]
 	Added benchmarks/R-bench version 1.1.2 [mef 2022-05-30]
 	Updated devel/R-xfun to 0.31 [mef 2022-05-30]
+	Updated benchmarks/R-microbenchmark to 1.4.9 [mef 2022-05-30]
