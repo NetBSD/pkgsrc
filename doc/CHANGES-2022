@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2835 2022/05/30 21:28:18 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2836 2022/05/30 21:29:25 pin Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4314,3 +4314,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/py-approvaltests to 5.2.0 [schmonz 2022-05-30]
 	Updated geography/echomap to 0.7.2 [pin 2022-05-30]
 	Updated editors/ced to 0.1.6 [pin 2022-05-30]
+	Updated sysutils/broot to 1.13.1 [pin 2022-05-30]
