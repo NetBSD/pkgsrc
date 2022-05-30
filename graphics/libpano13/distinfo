@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:46:28 nia Exp $
+$NetBSD: distinfo,v 1.13 2022/05/30 16:32:44 adam Exp $
 
-BLAKE2s (libpano13-2.9.19.tar.gz) = 242f7b38752ccc85946e67512290de69b13886a3c3c6ded2d8282a6a8d7fa9a6
-SHA512 (libpano13-2.9.19.tar.gz) = f9f147426d44d8babac09cb1a1b5111f88b9c2fc079f33df80133492bcf24cbd1edd771e6bec7bed4b0256bf15c700139c0a83119d3adf296ae5c567e006d868
-Size (libpano13-2.9.19.tar.gz) = 3527845 bytes
+BLAKE2s (libpano13-2.9.21.tar.gz) = 1bbb32e83139b25a1ff42c1e30208ec0f3698949b61498fdfedf827f59a2e659
+SHA512 (libpano13-2.9.21.tar.gz) = d344b81b56ba6e7dd38c0826e7e085ad5e20f5d2b09b27369ffae1e30d8f5bc03ab00d656d472069429b843d2e1eeceb173eeac39ee31a3622ca851387daef04
+Size (libpano13-2.9.21.tar.gz) = 2801535 bytes
 SHA1 (patch-man_CMakeLists.txt) = 1179abddde7821d6fc52f5e2cb88d93e9c4f28c4
+SHA1 (patch-panorama.h) = f00f5182787ff5e1e6a0692dfeb621c9684ef0b7
