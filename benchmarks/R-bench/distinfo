@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/30 15:04:24 mef Exp $
+
+BLAKE2s (R/bench_1.1.2.tar.gz) = a7c3fb0a521408451d66459aa0cc6d322a1d96c490ac0bce270b9913a792d622
+SHA512 (R/bench_1.1.2.tar.gz) = 4ab792f5c296f0142553f1b332b3fe250c44b885e348dbdc73dc53d720ca14efc635104bde14697d18c73020bde05680c7eacce902620c1e144c94234cc6a402
+Size (R/bench_1.1.2.tar.gz) = 261032 bytes
