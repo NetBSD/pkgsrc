@@ -1,12 +1,18 @@
-@comment $NetBSD: PLIST,v 1.12 2015/12/27 12:31:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2022/05/30 16:00:14 adam Exp $
 bin/g-lensfun-update-data
 bin/lensfun-add-adapter
 bin/lensfun-update-data
 include/lensfun/lensfun.h
 lib/liblensfun.so
-lib/liblensfun.so.1
 lib/liblensfun.so.${PKGVERSION}
+lib/liblensfun.so.1
 lib/pkgconfig/lensfun.pc
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/lensfun/__init__.py
+${PYSITELIB}/lensfun/__init__.pyc
 share/lensfun/version_1/6x6.xml
 share/lensfun/version_1/actioncams.xml
 share/lensfun/version_1/compact-canon.xml
@@ -27,6 +33,7 @@ share/lensfun/version_1/contax.xml
 share/lensfun/version_1/generic.xml
 share/lensfun/version_1/mil-canon.xml
 share/lensfun/version_1/mil-fujifilm.xml
+share/lensfun/version_1/mil-leica.xml
 share/lensfun/version_1/mil-nikon.xml
 share/lensfun/version_1/mil-olympus.xml
 share/lensfun/version_1/mil-panasonic.xml
@@ -36,6 +43,7 @@ share/lensfun/version_1/mil-samyang.xml
 share/lensfun/version_1/mil-sigma.xml
 share/lensfun/version_1/mil-sony.xml
 share/lensfun/version_1/mil-tamron.xml
+share/lensfun/version_1/mil-tokina.xml
 share/lensfun/version_1/mil-zeiss.xml
 share/lensfun/version_1/misc.xml
 share/lensfun/version_1/rf-leica.xml
