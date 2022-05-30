@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 11:19:47 nia Exp $
+$NetBSD: distinfo,v 1.17 2022/05/30 15:58:30 adam Exp $
 
-BLAKE2s (libnotify-0.7.9.tar.xz) = a044935b6800cd6e16d756fbec9aa2bb7d5e2fc44b9cc211c464f9c362cabc4e
-SHA512 (libnotify-0.7.9.tar.xz) = 8a842b50777279efdb7d96a836a546c47decad158a4f03f7ffc818860d1f6276a657619e4f4a19a4e2f5ad55e0371c793420d50d802983700e8c342273b73874
-Size (libnotify-0.7.9.tar.xz) = 98148 bytes
+BLAKE2s (libnotify-0.7.12.tar.xz) = ba0bf65ef535f8b17b66b34a1e267c8b25e2406c0561d2fa64e34d947e6f8e8f
+SHA512 (libnotify-0.7.12.tar.xz) = 1ddbdc2ea7ba653ea54169db9ed3d471f6e3421ef29e486c9b8d36837a655bcd613d0f07a8cf1253b87c42a2651e2f1634145622d8624d91e4223452deb99f1b
+Size (libnotify-0.7.12.tar.xz) = 102032 bytes
 SHA1 (patch-meson.build) = f3196637712abebfd8abed59bdf04395c04fe099
