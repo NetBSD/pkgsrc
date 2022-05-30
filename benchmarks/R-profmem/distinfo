@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/30 14:54:19 mef Exp $
+
+BLAKE2s (R/profmem_0.6.0.tar.gz) = eb67419ef494d1405249a13ae2d9062a60cb94906cbd1979bd2f624151da0472
+SHA512 (R/profmem_0.6.0.tar.gz) = dfa196b1cb53ae416a838fa454b322bcdbb52d000cb8fbf9c63457fe7413d1f6353f8c774679a9dc483d39f0ba4b9af0da7623c9943cc95d10f1ee4fa2bccb6c
+Size (R/profmem_0.6.0.tar.gz) = 25664 bytes
