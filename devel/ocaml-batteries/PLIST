@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/03/12 11:12:45 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/05/30 09:52:47 jaapb Exp $
 ${OCAML_SITELIB}/batteries/META
 ${OCAML_SITELIB}/batteries/batArray.cmi
 ${OCAML_SITELIB}/batteries/batArray.cmt
@@ -49,10 +49,10 @@ ${OCAML_SITELIB}/batteries/batBytes.cmi
 ${OCAML_SITELIB}/batteries/batBytes.cmt
 ${OCAML_SITELIB}/batteries/batBytes.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/batteries/batBytes.cmx
+${OCAML_SITELIB}/batteries/batBytes.mli
 ${OCAML_SITELIB}/batteries/batBytesCompat.cmi
 ${OCAML_SITELIB}/batteries/batBytesCompat.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/batteries/batBytesCompat.cmx
-${OCAML_SITELIB}/batteries/batBytes.mli
 ${OCAML_SITELIB}/batteries/batCache.cmi
 ${OCAML_SITELIB}/batteries/batCache.cmt
 ${OCAML_SITELIB}/batteries/batCache.cmti
@@ -101,6 +101,11 @@ ${OCAML_SITELIB}/batteries/batDynArray.cmt
 ${OCAML_SITELIB}/batteries/batDynArray.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/batteries/batDynArray.cmx
 ${OCAML_SITELIB}/batteries/batDynArray.mli
+${OCAML_SITELIB}/batteries/batEither.cmi
+${OCAML_SITELIB}/batteries/batEither.cmt
+${OCAML_SITELIB}/batteries/batEither.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/batteries/batEither.cmx
+${OCAML_SITELIB}/batteries/batEither.mli
 ${OCAML_SITELIB}/batteries/batEnum.cmi
 ${OCAML_SITELIB}/batteries/batEnum.cmt
 ${OCAML_SITELIB}/batteries/batEnum.cmti
@@ -448,20 +453,20 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/batteries/batteries.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/batteries/batteries.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/batteries/batteries.cmxs
 ${OCAML_SITELIB}/batteries/batteriesConfig.cmi
-${OCAML_SITELIB}/batteries/batteriesConfig.cmt
 ${OCAML_SITELIB}/batteries/batteriesConfig.cmo
+${OCAML_SITELIB}/batteries/batteriesConfig.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/batteries/batteriesConfig.cmx
 ${OCAML_SITELIB}/batteries/batteriesExceptionless.cmi
 ${OCAML_SITELIB}/batteries/batteriesExceptionless.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/batteries/batteriesExceptionless.cmx
 ${OCAML_SITELIB}/batteries/batteriesHelp.cmi
+${OCAML_SITELIB}/batteries/batteriesHelp.cmo
 ${OCAML_SITELIB}/batteries/batteriesHelp.cmt
 ${OCAML_SITELIB}/batteries/batteriesHelp.cmti
-${OCAML_SITELIB}/batteries/batteriesHelp.cmo
 ${OCAML_SITELIB}/batteries/batteriesHelp.mli
 ${OCAML_SITELIB}/batteries/batteriesPrint.cmi
-${OCAML_SITELIB}/batteries/batteriesPrint.cmt
 ${OCAML_SITELIB}/batteries/batteriesPrint.cmo
+${OCAML_SITELIB}/batteries/batteriesPrint.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/batteries/batteriesPrint.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/batteries/batteriesThread.a
 ${OCAML_SITELIB}/batteries/batteriesThread.cma
