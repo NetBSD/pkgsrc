@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2822 2022/05/29 18:54:01 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2823 2022/05/30 09:11:26 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4299,3 +4299,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/links-gui to 2.26 [fcambus 2022-05-29]
 	Updated print/texlab to 4.0.0 [wiz 2022-05-29]
 	Updated devel/py-ipython to 8.4.0 [adam 2022-05-29]
+	Updated devel/ocaml-fpath to 0.7.3 [jaapb 2022-05-30]
