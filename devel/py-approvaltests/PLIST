@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2022/04/07 17:29:26 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.17 2022/05/30 20:08:56 schmonz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -43,6 +43,12 @@ ${PYSITELIB}/approvaltests/core/reporter.pyo
 ${PYSITELIB}/approvaltests/core/scenario_namer.py
 ${PYSITELIB}/approvaltests/core/scenario_namer.pyc
 ${PYSITELIB}/approvaltests/core/scenario_namer.pyo
+${PYSITELIB}/approvaltests/core/verifiable.py
+${PYSITELIB}/approvaltests/core/verifiable.pyc
+${PYSITELIB}/approvaltests/core/verifiable.pyo
+${PYSITELIB}/approvaltests/core/verify_parameters.py
+${PYSITELIB}/approvaltests/core/verify_parameters.pyc
+${PYSITELIB}/approvaltests/core/verify_parameters.pyo
 ${PYSITELIB}/approvaltests/core/writer.py
 ${PYSITELIB}/approvaltests/core/writer.pyc
 ${PYSITELIB}/approvaltests/core/writer.pyo
@@ -149,6 +155,24 @@ ${PYSITELIB}/approvaltests/storyboard.pyo
 ${PYSITELIB}/approvaltests/string_writer.py
 ${PYSITELIB}/approvaltests/string_writer.pyc
 ${PYSITELIB}/approvaltests/string_writer.pyo
+${PYSITELIB}/approvaltests/utilities/__init__.py
+${PYSITELIB}/approvaltests/utilities/__init__.pyc
+${PYSITELIB}/approvaltests/utilities/__init__.pyo
+${PYSITELIB}/approvaltests/utilities/exceptions/__init__.py
+${PYSITELIB}/approvaltests/utilities/exceptions/__init__.pyc
+${PYSITELIB}/approvaltests/utilities/exceptions/__init__.pyo
+${PYSITELIB}/approvaltests/utilities/exceptions/exception_collector.py
+${PYSITELIB}/approvaltests/utilities/exceptions/exception_collector.pyc
+${PYSITELIB}/approvaltests/utilities/exceptions/exception_collector.pyo
+${PYSITELIB}/approvaltests/utilities/exceptions/exception_utils.py
+${PYSITELIB}/approvaltests/utilities/exceptions/exception_utils.pyc
+${PYSITELIB}/approvaltests/utilities/exceptions/exception_utils.pyo
+${PYSITELIB}/approvaltests/utilities/exceptions/multiple_exceptions.py
+${PYSITELIB}/approvaltests/utilities/exceptions/multiple_exceptions.pyc
+${PYSITELIB}/approvaltests/utilities/exceptions/multiple_exceptions.pyo
+${PYSITELIB}/approvaltests/utilities/multiline_string_utils.py
+${PYSITELIB}/approvaltests/utilities/multiline_string_utils.pyc
+${PYSITELIB}/approvaltests/utilities/multiline_string_utils.pyo
 ${PYSITELIB}/approvaltests/utils.py
 ${PYSITELIB}/approvaltests/utils.pyc
 ${PYSITELIB}/approvaltests/utils.pyo
