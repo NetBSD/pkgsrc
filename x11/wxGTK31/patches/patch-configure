@@ -1,11 +1,19 @@
-$NetBSD: patch-configure,v 1.1 2021/04/02 10:06:27 wiz Exp $
+$NetBSD: patch-configure,v 1.2 2022/05/30 16:31:11 adam Exp $
 
 Fix shell script portability
 tweak SEARCH_LIB
 
---- configure.orig	2020-07-22 17:20:06.000000000 +0000
+--- configure.orig	2022-04-04 13:41:33.000000000 +0000
 +++ configure
-@@ -39240,7 +39240,8 @@ fi
+@@ -33861,7 +33861,6 @@ rm -f core conftest.err conftest.$ac_obj
+       *-*-darwin* )
+         install_name_tool=`which ${HOST_PREFIX}install_name_tool`
+         if test "$install_name_tool" -a -x "$install_name_tool"; then
+-            DYLIB_RPATH_POSTLINK="${HOST_PREFIX}install_name_tool -id \$@ \$@"
+             cat <<EOF >change-install-names
+ #!/bin/sh
+ libnames=\`cd \${1} ; ls -1 | grep '\.[0-9][0-9]*\.dylib\$'\`
+@@ -44075,7 +44074,8 @@ fi
        *-*-solaris2* )
          SONAME_FLAG="-h "
          USE_SOVERSION=1
