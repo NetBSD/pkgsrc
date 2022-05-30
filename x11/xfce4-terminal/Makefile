@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2022/05/23 18:44:26 gutteridge Exp $
+# $NetBSD: Makefile,v 1.68 2022/05/30 23:58:13 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -8,8 +8,6 @@ MASTER_SITES=	https://archive.xfce.org/src/apps/xfce4-terminal/1.0/
 
 HOMEPAGE=	https://docs.xfce.org/apps/terminal/start
 COMMENT=	Xfce terminal emulator
-
-MAKE_JOBS_SAFE=	no
 
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
