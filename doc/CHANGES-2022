@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2832 2022/05/30 16:34:47 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2833 2022/05/30 20:09:02 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4311,3 +4311,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added security/R-sodium version 1.2.0 [mef 2022-05-30]
 	Updated x11/wxGTK31 to 3.1.6 [adam 2022-05-30]
 	Updated graphics/libpano13 to 2.9.21 [adam 2022-05-30]
+	Updated devel/py-approvaltests to 5.2.0 [schmonz 2022-05-30]
