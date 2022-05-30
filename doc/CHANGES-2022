@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2831 2022/05/30 16:32:47 mef Exp $
+$NetBSD: CHANGES-2022,v 1.2832 2022/05/30 16:34:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4309,3 +4309,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/libnotify to 0.7.12 [adam 2022-05-30]
 	Updated graphics/lensfun to 0.3.3 [adam 2022-05-30]
 	Added security/R-sodium version 1.2.0 [mef 2022-05-30]
+	Updated x11/wxGTK31 to 3.1.6 [adam 2022-05-30]
+	Updated graphics/libpano13 to 2.9.21 [adam 2022-05-30]
