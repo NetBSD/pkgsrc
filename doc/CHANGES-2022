@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2830 2022/05/30 16:01:45 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2831 2022/05/30 16:32:47 mef Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4308,3 +4308,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated benchmarks/R-microbenchmark to 1.4.9 [mef 2022-05-30]
 	Updated sysutils/libnotify to 0.7.12 [adam 2022-05-30]
 	Updated graphics/lensfun to 0.3.3 [adam 2022-05-30]
+	Added security/R-sodium version 1.2.0 [mef 2022-05-30]
