@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2022/05/13 16:04:23 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2022/05/30 09:09:33 bouyer Exp $
 #
 VERSION=	4.15.2
+PKGREVISION=	1
 
 DIST_SUBDIR=		xen415
 DISTNAME=		xen-${VERSION}
