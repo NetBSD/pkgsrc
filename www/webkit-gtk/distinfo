@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.163 2022/05/29 17:47:15 leot Exp $
+$NetBSD: distinfo,v 1.164 2022/05/30 20:40:55 leot Exp $
 
 BLAKE2s (webkitgtk-2.36.3.tar.xz) = c0536c4edcb59ed28edcdaf309267d6c3c1e49e5eaae85b39fb29b49722977ad
 SHA512 (webkitgtk-2.36.3.tar.xz) = dfd02e22a58d0080d9bf6c7dd2a710bb9d8698ff8a4226653629294b74cc981a3e35d4d93eed5ebad35c81b339ec8b96755ad0b36c0238da151b359e07bcb692
@@ -21,7 +21,7 @@ SHA1 (patch-Source_WTF_wtf_PlatformHave.h) = 56cec19c923ccb6539f2d321abafa1e1677
 SHA1 (patch-Source_WTF_wtf_PlatformOS.h) = 80aa6ff20f10407d447fdb41606d4bb4989351aa
 SHA1 (patch-Source_WTF_wtf_PlatformUse.h) = 595486b48e7d89378208c0a209a121ef136415e6
 SHA1 (patch-Source_WTF_wtf_StackBounds.cpp) = 22a71daac8443f079ad8bcc7285cfd7319c972b3
-SHA1 (patch-Source_WTF_wtf_posix_OSAllocatorPOSIX.cpp) = 73b3facb6912411a5767b05b7d7eebdbc9416ebf
+SHA1 (patch-Source_WTF_wtf_posix_OSAllocatorPOSIX.cpp) = e3a5176efd45d12d52505b469a6fcb3de5c429f2
 SHA1 (patch-Source_WebCore_Scripts_check-xcfilelists.sh) = b292baf2494bcd459d9af91386263123046c6615
 SHA1 (patch-Source_WebCore_Scripts_generate-unified-sources.sh) = 9b323aa1fa8e6e5599ac0a7ae08fbbed4348c70e
 SHA1 (patch-Source_WebCore_crypto_algorithms_CryptoAlgorithmAES__GCM.cpp) = 03337c5eec54d6974dfea1766b14cb2c1b9f7750
