@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/05/30 09:33:00 jaapb Exp $
+# $NetBSD: Makefile,v 1.9 2022/05/30 09:47:34 jaapb Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-0.9.0
 PKGNAME=	ocaml-${DISTNAME}
@@ -12,9 +12,8 @@ HOMEPAGE=	https://github.com/inhabitedtype/bigstringaf/
 COMMENT=	Bigstring intrinsics and fast blits based on memcpy/memmmove
 LICENSE=	modified-bsd
 
-MAKE_JOBS_SAFE=	no # possible problem with building lib/freestanding
 USE_LANGUAGES=	# none
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	gmake pkg-config
 OCAML_USE_DUNE=	yes
 
 .include "../../lang/ocaml/ocaml.mk"
