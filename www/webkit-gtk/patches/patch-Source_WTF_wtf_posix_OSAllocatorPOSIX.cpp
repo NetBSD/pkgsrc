@@ -1,7 +1,7 @@
-$NetBSD: patch-Source_WTF_wtf_posix_OSAllocatorPOSIX.cpp,v 1.1 2022/05/29 17:47:15 leot Exp $
+$NetBSD: patch-Source_WTF_wtf_posix_OSAllocatorPOSIX.cpp,v 1.2 2022/05/30 20:40:55 leot Exp $
 
-For NetBSD use the same code paths of OS(LINUX) (there isn't anything
-that NetBSD does not support).
+Set protections for tryReserveUncommittedAligned() on platforms
+that have MAP_ALIGNED.
 
 This avoid a regression introduced by:
 
@@ -20,36 +20,24 @@ This avoid a regression introduced by:
  * heap/StructureAlignedMemoryAllocator.cpp:
    (JSC::StructureMemoryManager::StructureMemoryManager):
 
-Where probably the PROT_* are not readjusted.
-
-XXX: This is a wild-guess that should be double-checked!
-
 --- Source/WTF/wtf/posix/OSAllocatorPOSIX.cpp.orig	2022-02-23 11:41:47.560819000 +0000
 +++ Source/WTF/wtf/posix/OSAllocatorPOSIX.cpp
-@@ -115,7 +115,7 @@ void* OSAllocator::tryReserveAndCommit(s
- 
- void* OSAllocator::tryReserveUncommitted(size_t bytes, Usage usage, bool writable, bool executable, bool jitCageEnabled, bool includesGuardPages)
- {
--#if OS(LINUX)
-+#if OS(LINUX) || OS(NETBSD)
+@@ -183,11 +183,15 @@ void* OSAllocator::tryReserveUncommitted
+ #define MAP_NORESERVE 0
+ #endif
      UNUSED_PARAM(usage);
-     UNUSED_PARAM(writable);
-     UNUSED_PARAM(executable);
-@@ -225,7 +225,7 @@ void* OSAllocator::reserveAndCommit(size
- 
- void OSAllocator::commit(void* address, size_t bytes, bool writable, bool executable)
- {
--#if OS(LINUX)
-+#if OS(LINUX) || OS(NETBSD)
-     int protection = PROT_READ;
-     if (writable)
-         protection |= PROT_WRITE;
-@@ -249,7 +249,7 @@ void OSAllocator::commit(void* address, 
- 
- void OSAllocator::decommit(void* address, size_t bytes)
- {
--#if OS(LINUX)
-+#if OS(LINUX) || OS(NETBSD)
-     madvise(address, bytes, MADV_DONTNEED);
-     if (mprotect(address, bytes, PROT_NONE))
-         CRASH();
+-    UNUSED_PARAM(writable);
+-    UNUSED_PARAM(executable);
+     UNUSED_PARAM(jitCageEnabled);
+     UNUSED_PARAM(includesGuardPages);
+-    void* result = mmap(0, bytes, PROT_NONE, MAP_NORESERVE | MAP_PRIVATE | MAP_ANON | MAP_ALIGNED(getLSBSet(alignment)), -1, 0);
++    int protection = PROT_READ;
++    if (writable)
++        protection |= PROT_WRITE;
++    if (executable)
++        protection |= PROT_EXEC;
++
++    void* result = mmap(0, bytes, protection, MAP_NORESERVE | MAP_PRIVATE | MAP_ANON | MAP_ALIGNED(getLSBSet(alignment)), -1, 0);
+     if (result == MAP_FAILED)
+         return nullptr;
+     if (result)
