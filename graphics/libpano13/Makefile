@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2021/05/24 19:52:23 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2022/05/30 16:32:44 adam Exp $
 
-DISTNAME=	libpano13-2.9.19
-PKGREVISION=	3
+DISTNAME=	libpano13-2.9.21
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=panotools/}
 
@@ -14,6 +13,7 @@ MAKE_JOBS_SAFE=		no
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake
 TOOLS_BROKEN+=		perl
 PKGCONFIG_OVERRIDE=	libpano13.pc.in
 
