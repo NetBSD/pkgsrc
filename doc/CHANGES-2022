@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2823 2022/05/30 09:11:26 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2824 2022/05/30 09:33:14 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4300,3 +4300,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated print/texlab to 4.0.0 [wiz 2022-05-29]
 	Updated devel/py-ipython to 8.4.0 [adam 2022-05-29]
 	Updated devel/ocaml-fpath to 0.7.3 [jaapb 2022-05-30]
+	Updated devel/ocaml-bigstringaf to 0.9.0nb1 [jaapb 2022-05-30]
