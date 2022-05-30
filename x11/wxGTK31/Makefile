@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2021/12/08 16:03:03 adam Exp $
+# $NetBSD: Makefile,v 1.7 2022/05/30 16:31:10 adam Exp $
 
-DISTNAME=	wxWidgets-3.1.4
+DISTNAME=	wxWidgets-3.1.6
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK31/}
-PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wxWidgets/}
 GITHUB_PROJECT=	wxWidgets
@@ -61,6 +60,7 @@ CPPFLAGS+=		-D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=1
 .else
 CONFIGURE_ARGS+=	--with-gtk=3
 PLIST_SRC+=		PLIST.gtk3
+.include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .endif
 
@@ -75,10 +75,6 @@ post-build:
 		[ "$${lang}" = "wxstd.po" ] && continue; \
 		${TOOLS_PATH.msgfmt} -c -o "$${lang%.po}.mo" "$${lang}"; \
 	done
-	set -e; cd ${WRKSRC}/locale/msw; \
-	for lang in it; do \
-	    ${TOOLS_PATH.msgfmt} -c -o "$${lang}.mo" "$${lang}.po"; \
-	done
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/licence.txt ${DESTDIR}${PREFIX}/${DOCDIR}
@@ -91,8 +87,9 @@ post-install:
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+# XXX: built-in version gets configured
+#.include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
@@ -101,4 +98,8 @@ post-install:
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
+.if ${OPSYS} != "Darwin"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
