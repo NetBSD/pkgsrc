@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2845 2022/05/31 21:09:07 markd Exp $
+$NetBSD: CHANGES-2022,v 1.2846 2022/05/31 23:24:34 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4332,3 +4332,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added www/p5-HTML-FormatExternal version 26 [markd 2022-05-31]
 	Added devel/p5-Term-ANSIColor version 5.01 [markd 2022-05-31]
 	Added textproc/p5-Text-WordDiff version 0.09 [markd 2022-05-31]
+	Updated ham/chirp to 20220531 [gdt 2022-05-31]
