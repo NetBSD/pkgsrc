@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2022/05/15 04:44:23 markd Exp $
+# $NetBSD: Makefile,v 1.20 2022/05/31 21:20:55 markd Exp $
 
 DISTNAME=	collection-mathscience
 PKGNAME=	texlive-${DISTNAME}-2022pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	63241
+TEXLIVE_REV=	63426
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -99,6 +99,7 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend extpfeil
 # depend faktor
 # depend fascicules
+# depend fixdif
 # depend fnspe
 # depend formal-grammar
 # depend fouridx
