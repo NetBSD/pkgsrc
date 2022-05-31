@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/31 20:49:09 markd Exp $
+
+BLAKE2s (constant-defer-6.tar.gz) = 061fad1a566551a57ca780f4eb77159ed1fc0cdd86882f8d206e93895a64c369
+SHA512 (constant-defer-6.tar.gz) = 902916d32ed11737d34f8764af171ba1731de807ffbfd62e342f83bef05ab0a34ddaeec3f2c9b41814877b0568fc3e09fbf26e7ce2cd4a3dd6eeba75e6755b5f
+Size (constant-defer-6.tar.gz) = 43427 bytes
