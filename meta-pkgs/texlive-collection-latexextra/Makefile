@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.66 2022/05/01 20:45:29 markd Exp $
+# $NetBSD: Makefile,v 1.67 2022/05/31 21:19:28 markd Exp $
 
 DISTNAME=	collection-latexextra
 PKGNAME=	texlive-${DISTNAME}-2022pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	63140
+TEXLIVE_REV=	63430
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -1044,6 +1044,7 @@ DEPENDS+=	tex-prelim2e-[0-9]*:../../print/tex-prelim2e
 DEPENDS+=	tex-preprint-[0-9]*:../../print/tex-preprint
 # depend pressrelease
 # depend prettyref
+# depend prettytok
 DEPENDS+=	tex-preview-[0-9]*:../../print/tex-preview
 DEPENDS+=	tex-printlen-[0-9]*:../../print/tex-printlen
 DEPENDS+=	tex-probsoln-[0-9]*:../../print/tex-probsoln
@@ -1168,6 +1169,7 @@ DEPENDS+=	tex-showdim-[0-9]*:../../print/tex-showdim
 DEPENDS+=	tex-showlabels-[0-9]*:../../print/tex-showlabels
 DEPENDS+=	tex-sidecap-[0-9]*:../../print/tex-sidecap
 DEPENDS+=	tex-sidenotes-[0-9]*:../../print/tex-sidenotes
+# depend sidenotesplus
 DEPENDS+=	tex-silence-[0-9]*:../../print/tex-silence
 # depend sillypage
 # depend simplecd
