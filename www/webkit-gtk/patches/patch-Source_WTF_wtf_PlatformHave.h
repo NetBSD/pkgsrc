@@ -1,6 +1,8 @@
-$NetBSD: patch-Source_WTF_wtf_PlatformHave.h,v 1.3 2022/05/29 17:47:15 leot Exp $
+$NetBSD: patch-Source_WTF_wtf_PlatformHave.h,v 1.4 2022/05/31 12:52:14 leot Exp $
 
 Add support for NetBSD.
+
+Shared upstream via <https://bugs.webkit.org/show_bug.cgi?id=241125>
 
 --- Source/WTF/wtf/PlatformHave.h.orig	2022-02-23 08:58:57.000000000 +0000
 +++ Source/WTF/wtf/PlatformHave.h
