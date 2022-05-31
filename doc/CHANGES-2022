@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2841 2022/05/31 18:03:52 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.2842 2022/05/31 18:04:00 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4321,3 +4321,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated fonts/anjalioldlipi-ttf to 7.1.2nb1 [nikita 2022-05-31]
 	Updated emulators/ckmame to 2.0 [wiz 2022-05-31]
 	Updated net/openvpn to 2.5.7 [gdt 2022-05-31]
+	Updated net/openvpn-nagios to 20130210 [gdt 2022-05-31]
