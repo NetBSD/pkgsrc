@@ -1,0 +1,4 @@
+This module has two interfaces, one through color() and colored() and the
+other through constants. It also offers the utility functions uncolor(),
+colorstrip(), colorvalid(), and coloralias(), which have to be explicitly
+imported to be used.
