@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/05/31 08:27:13 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2022/05/31 11:39:08 nikita Exp $
 
 DISTNAME=	anjalioldlipi-${GITLAB_TAG}
-PKGNAME=	anjalioldlipi-${GITLAB_TAG:S/Version//}
+PKGREVISION=	1
+PKGNAME=	anjalioldlipi-ttf-${GITLAB_TAG:S/Version//}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITLAB:=smc/fonts/}
 GITLAB_PROJECT=	anjalioldlipi
