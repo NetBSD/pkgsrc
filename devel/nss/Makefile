@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.228 2022/04/28 11:15:55 wiz Exp $
+# $NetBSD: Makefile,v 1.229 2022/05/31 20:30:10 wiz Exp $
 #
 # release notes
 # https://firefox-source-docs.mozilla.org/security/nss/releases/index.html
 
 DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
-NSS_RELEASE=		3.78.0
+NSS_RELEASE=		3.79.0
 CATEGORIES=		devel security
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_DIST_DIR_VERSION:S/_0$//}_RTM/src/}
 
@@ -140,7 +140,7 @@ MOD_MINOR_VERSION=	${NSS_RELEASE:S/3.//:C/\.[0-9]*//}
 MOD_PATCH_VERSION=	${NSS_RELEASE:C/[0-9.]*\.//}
 NSS_DIST_DIR_VERSION=	${MOD_MAJOR_VERSION}_${MOD_MINOR_VERSION}_${MOD_PATCH_VERSION}
 
-NSPR_MINIMUM_VERSION=	4.32
+NSPR_MINIMUM_VERSION=	4.34
 
 PKGCONFIG_OVERRIDE=	nss.pc
 
