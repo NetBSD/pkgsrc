@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 10:46:08 nia Exp $
+$NetBSD: distinfo,v 1.16 2022/05/31 11:49:09 gdt Exp $
 
 BLAKE2s (FreeImage3180.zip) = 08cd435f40d668418a710a63bebdd02763d4d7abab1b2eb6958d58c35aab4f7f
 SHA512 (FreeImage3180.zip) = 9d9cc7e2d57552c3115e277aeb036e0455204d389026b17a3f513da5be1fd595421655488bb1ec2f76faebed66049119ca55e26e2a6d37024b3fb7ef36ad4818
@@ -20,7 +20,7 @@ SHA1 (patch-Source_FreeImage_PluginTIFF.cpp) = bfa869452929f62162c15982b58013b0d
 SHA1 (patch-Source_FreeImage_PluginWebP.cpp) = d7b57cfcb1379c6a849edb219c8a59edae83ff5c
 SHA1 (patch-Source_FreeImage_ZLibInterface.cpp) = 73211e8ecefb7972f1fcb579dc4a17409c81c480
 SHA1 (patch-Source_Metadata_TagConversion.cpp) = 0785cc5dd395bca538e9a82cadbb7ef450eebe86
-SHA1 (patch-Source_Metadata_XTIFF.cpp) = bfcafc31b8407258c52f30fa0c62d062ce108c00
+SHA1 (patch-Source_Metadata_XTIFF.cpp) = 60f8a0af9e2928a0675bc9dafae3c3741f8ae13e
 SHA1 (patch-Source_Utilities.h) = bb9cdd7d72c46e72cd3a636beb27541783609191
 SHA1 (patch-genfipsrclist.sh) = 9b22593e0ca5ff869ea22ddb91f46785ae45d5cd
 SHA1 (patch-gensrclist.sh) = 2582848736654138b3ebdda9d8469046e992745b
