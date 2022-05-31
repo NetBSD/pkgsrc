@@ -1,0 +1,2 @@
+This is a collection of formatter modules which turn HTML into plain text
+by dumping it through the respective external programs.
