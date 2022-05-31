@@ -1,0 +1,9 @@
+This is a module to handle the inflation and deflation of complex HTTP
+header types. In many cases header values are simple strings, but in some
+cases they are complex values with a lot of information encoded in them.
+The goal of this module is to make the parsing and analysis of these headers
+as easy as calling inflate on a compatible object.
+
+This top-level class is basically a Factory for creating instances of the
+other classes in this module. It contains a number of convenience methods to
+help make common cases easy to write.
