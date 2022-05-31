@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/31 08:27:13 nikita Exp $
+
+BLAKE2s (anjalioldlipi-Version7.1.2.tar.gz) = f4db5c189e9a50d6acfcab12643113129185ca41b93f4068640e538edfd0cd0c
+SHA512 (anjalioldlipi-Version7.1.2.tar.gz) = 099c4f59bf9e3c4439c7bc2e827c9dfb4c44f36308dc219457a4a22b9b2336f66e185a4b295b68ffb018201c0b4e896b5950f788198e124188c24b793ce3a34b
+Size (anjalioldlipi-Version7.1.2.tar.gz) = 780223 bytes
