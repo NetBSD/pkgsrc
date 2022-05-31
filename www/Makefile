@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1628 2022/05/25 15:38:39 kleink Exp $
+# $NetBSD: Makefile,v 1.1629 2022/05/31 20:56:34 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -259,6 +259,7 @@ SUBDIR+=	ocsigen-start
 SUBDIR+=	ocsigen-toolkit
 SUBDIR+=	otter-browser
 SUBDIR+=	p5-Alien-GvaScript
+SUBDIR+=	p5-Alien-LibGumbo
 SUBDIR+=	p5-Any-URI-Escape
 SUBDIR+=	p5-AnyEvent-HTTP
 SUBDIR+=	p5-AnyEvent-HTTPD
@@ -381,6 +382,8 @@ SUBDIR+=	p5-HTML-FillInForm
 SUBDIR+=	p5-HTML-Form
 SUBDIR+=	p5-HTML-FormFu
 SUBDIR+=	p5-HTML-Format
+SUBDIR+=	p5-HTML-FormatExternal
+SUBDIR+=	p5-HTML-Gumbo
 SUBDIR+=	p5-HTML-LinkExtractor
 SUBDIR+=	p5-HTML-Lint
 SUBDIR+=	p5-HTML-Mason
@@ -427,6 +430,7 @@ SUBDIR+=	p5-HTTP-Date
 SUBDIR+=	p5-HTTP-Entity-Parser
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-HTTP-HeaderParser-XS
+SUBDIR+=	p5-HTTP-Headers-ActionPack
 SUBDIR+=	p5-HTTP-Headers-Fast
 SUBDIR+=	p5-HTTP-Lite
 SUBDIR+=	p5-HTTP-Message
@@ -589,6 +593,7 @@ SUBDIR+=	p5-WWW-Pastebin-PastebinCom-Create
 SUBDIR+=	p5-WWW-Pastebin-RafbNet-Create
 SUBDIR+=	p5-WWW-RobotRules
 SUBDIR+=	p5-WWW-Shorten
+SUBDIR+=	p5-Web-Machine
 SUBDIR+=	p5-Web-Scraper
 SUBDIR+=	p5-WordPress-XMLRPC
 SUBDIR+=	p5-libapreq2
