@@ -1,6 +1,8 @@
-$NetBSD: patch-Source_JavaScriptCore_runtime_MachineContext.h,v 1.2 2021/05/13 08:20:58 leot Exp $
+$NetBSD: patch-Source_JavaScriptCore_runtime_MachineContext.h,v 1.3 2022/05/31 12:52:14 leot Exp $
 
 Add support for NetBSD.
+
+Shared upstream via <https://bugs.webkit.org/show_bug.cgi?id=241125>
 
 --- Source/JavaScriptCore/runtime/MachineContext.h.orig	2021-05-05 05:33:24.000000000 +0000
 +++ Source/JavaScriptCore/runtime/MachineContext.h
