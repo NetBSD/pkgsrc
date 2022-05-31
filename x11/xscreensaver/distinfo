@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.88 2022/03/08 07:27:11 wiz Exp $
+$NetBSD: distinfo,v 1.89 2022/05/31 08:14:44 abs Exp $
 
 BLAKE2s (xscreensaver/xscreensaver-6.03.tar.gz) = de81815922c9ae70ea281c694d414b0fa6d88a597755f68d96a596423641b0ce
 SHA512 (xscreensaver/xscreensaver-6.03.tar.gz) = 4aa30824c972a73dc09aeba478cad074f273839a4c7641cddd292da38fc75db10a3f6243cbe8619c5e39cad54c27d33e1e271dfed167458faa7747fb0a090630
 Size (xscreensaver/xscreensaver-6.03.tar.gz) = 25703584 bytes
 SHA1 (patch-configure) = 4821b6f4400976990b6042677960a53e25f03a24
+SHA1 (patch-driver_passwd-pwent.c) = 599a63eda4b890d4673b0e2763d980afb4d44a4e
