@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/31 20:44:36 markd Exp $
+
+BLAKE2s (Web-Machine-0.17.tar.gz) = 80f5fdb12845eb8849bc6f1a58586c17266b0f860b3c06217fdde5ec3c7d00ca
+SHA512 (Web-Machine-0.17.tar.gz) = be05338cba3a46b16d508518c9c4b67f88b1cd979a4354668b53898f6e03e40e1fd59ab46850668f2bb75d3927f07790d68cf57a1d7aabaa0ed9181c2db56410
+Size (Web-Machine-0.17.tar.gz) = 73528 bytes
