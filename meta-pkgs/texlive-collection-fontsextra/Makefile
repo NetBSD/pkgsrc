@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2022/05/01 20:39:59 markd Exp $
+# $NetBSD: Makefile,v 1.28 2022/05/31 21:17:43 markd Exp $
 
 DISTNAME=	collection-fontsextra
 PKGNAME=	texlive-${DISTNAME}-2022pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	63169
+TEXLIVE_REV=	63394
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -306,11 +306,13 @@ DEPENDS+=	tex-sauterfonts-[0-9]*:../../fonts/tex-sauterfonts
 DEPENDS+=	tex-schulschriften-[0-9]*:../../print/tex-schulschriften
 DEPENDS+=	tex-semaphor-[0-9]*:../../fonts/tex-semaphor
 # depend shobhika
+# depend simpleicons
 DEPENDS+=	tex-skull-[0-9]*:../../fonts/tex-skull
 DEPENDS+=	tex-sourcecodepro-[0-9]*:../../fonts/tex-sourcecodepro
 DEPENDS+=	tex-sourcesanspro-[0-9]*:../../fonts/tex-sourcesanspro
 DEPENDS+=	tex-sourceserifpro-[0-9]*:../../fonts/tex-sourceserifpro
 # depend spectral
+# depend srbtiks
 DEPENDS+=	tex-starfont-[0-9]*:../../fonts/tex-starfont
 DEPENDS+=	tex-staves-[0-9]*:../../fonts/tex-staves
 # depend step
@@ -321,6 +323,7 @@ DEPENDS+=	tex-stix2-otf-[0-9]*:../../fonts/tex-stix2-otf
 # depend stix2-type1
 DEPENDS+=	tex-superiors-[0-9]*:../../fonts/tex-superiors
 # depend svrsymbols
+# depend symbats3
 DEPENDS+=	tex-tapir-[0-9]*:../../fonts/tex-tapir
 # depend tempora
 DEPENDS+=	tex-tengwarscript-[0-9]*:../../fonts/tex-tengwarscript
