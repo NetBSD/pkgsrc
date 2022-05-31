@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1316 2022/05/12 08:10:26 adam Exp $
+# $NetBSD: Makefile,v 1.1317 2022/05/31 21:06:57 markd Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -844,6 +844,7 @@ SUBDIR+=	p5-Text-VisualWidth-PP
 SUBDIR+=	p5-Text-WagnerFischer
 SUBDIR+=	p5-Text-WikiCreole
 SUBDIR+=	p5-Text-WikiFormat
+SUBDIR+=	p5-Text-WordDiff
 SUBDIR+=	p5-Text-WrapI18N
 SUBDIR+=	p5-Text-Wrapper
 SUBDIR+=	p5-Text-Xslate
