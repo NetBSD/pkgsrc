@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2838 2022/05/31 09:11:36 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2839 2022/05/31 11:39:18 nikita Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4318,3 +4318,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added fonts/anjalioldlipi-ttf version 7.1.2 [nikita 2022-05-31]
 	Updated graphics/hugin to 2021.0.0 [adam 2022-05-31]
 	Updated textproc/ugrep to 3.8.0 [adam 2022-05-31]
+	Updated fonts/anjalioldlipi-ttf to 7.1.2nb1 [nikita 2022-05-31]
