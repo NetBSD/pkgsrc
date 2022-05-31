@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3743 2022/05/31 20:49:09 markd Exp $
+# $NetBSD: Makefile,v 1.3744 2022/05/31 21:03:08 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -2000,6 +2000,7 @@ SUBDIR+=	p5-Template-Plugin-HashMerge
 SUBDIR+=	p5-Template-Plugin-ListMoreUtils
 SUBDIR+=	p5-Template-Plugin-ListUtil
 SUBDIR+=	p5-Template-Plugin-VMethods
+SUBDIR+=	p5-Term-ANSIColor
 SUBDIR+=	p5-Term-Animation
 SUBDIR+=	p5-Term-Encoding
 SUBDIR+=	p5-Term-ProgressBar
