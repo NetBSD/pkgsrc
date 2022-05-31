@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/05/31 21:08:16 markd Exp $
+
+BLAKE2s (Text-WordDiff-0.09.tar.gz) = 8fcd2ce65fbc839d491169eb6849f40786b6e2022d1e1f1e0388e121940bf71d
+SHA512 (Text-WordDiff-0.09.tar.gz) = 4a3182a4b2ca8f904e88e59a6df3fb43607571af6c248b7c1063d1602e0ba93dd1baba0338ef1a1ba7aefcb9808e4c358880ac3f7fedd711e9001b6c9aa8341e
+Size (Text-WordDiff-0.09.tar.gz) = 26020 bytes
