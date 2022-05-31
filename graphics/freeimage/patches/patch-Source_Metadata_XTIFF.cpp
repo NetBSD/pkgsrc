@@ -1,10 +1,14 @@
-$NetBSD: patch-Source_Metadata_XTIFF.cpp,v 1.1 2020/05/14 16:42:14 nia Exp $
+$NetBSD: patch-Source_Metadata_XTIFF.cpp,v 1.2 2022/05/31 11:49:09 gdt Exp $
 
 Unbundle image libraries.
 
---- Source/Metadata/XTIFF.cpp.orig	2015-03-04 00:07:10.000000000 +0000
+Remediate upstream use of a tiff internal function, which no longer exists  in tiff 4.4.0.
+Upstream bug report (in forum; there is no issue tracker):
+  https://sourceforge.net/p/freeimage/discussion/36109/thread/2018fdc6e7/?limit=25
+
+--- Source/Metadata/XTIFF.cpp.orig	2015-03-04 05:07:10.000000000 +0000
 +++ Source/Metadata/XTIFF.cpp
-@@ -29,13 +29,18 @@
+@@ -29,7 +29,7 @@
  #pragma warning (disable : 4786) // identifier was truncated to 'number' characters
  #endif
  
@@ -13,18 +17,7 @@ Unbundle image libraries.
  
  #include "FreeImage.h"
  #include "Utilities.h"
- #include "FreeImageTag.h"
- #include "FIRational.h"
- 
-+extern "C"
-+{
-+    int _TIFFDataSize(TIFFDataType type);
-+}
-+
- // ----------------------------------------------------------
- //   Extended TIFF Directory GEO Tag Support
- // ----------------------------------------------------------
-@@ -224,6 +229,33 @@ tiff_write_geotiff_profile(TIFF *tif, FI
+@@ -224,6 +224,33 @@ tiff_write_geotiff_profile(TIFF *tif, FI
  //   TIFF EXIF tag reading & writing
  // ----------------------------------------------------------
  
@@ -58,7 +51,7 @@ Unbundle image libraries.
  /**
  Read a single Exif tag
  
-@@ -575,45 +607,11 @@ tiff_read_exif_tags(TIFF *tif, TagLib::M
+@@ -575,45 +602,11 @@ tiff_read_exif_tags(TIFF *tif, TagLib::M
  
  	// loop over all Core Directory Tags
  	// ### uses private data, but there is no other way
@@ -107,7 +100,7 @@ Unbundle image libraries.
  	}
  
  	return TRUE;
-@@ -723,10 +721,9 @@ tiff_write_exif_tags(TIFF *tif, TagLib::
+@@ -723,10 +716,9 @@ tiff_write_exif_tags(TIFF *tif, TagLib::
  	
  	TagLib& tag_lib = TagLib::instance();
  	
@@ -121,3 +114,12 @@ Unbundle image libraries.
  
  		if(skip_write_field(tif, tag_id)) {
  			// skip tags that are already handled by the LibTIFF writing process
+@@ -749,7 +741,7 @@ tiff_write_exif_tags(TIFF *tif, TagLib::
+ 				continue;
+ 			}
+ 			// type of storage may differ (e.g. rationnal array vs float array type)
+-			if((unsigned)_TIFFDataSize(tif_tag_type) != FreeImage_TagDataWidth(tag_type)) {
++			if(TIFFFieldSetGetSize(fld) != FreeImage_TagDataWidth(tag_type)) {
+ 				// skip tag or _TIFFmemcpy will fail
+ 				continue;
+ 			}
