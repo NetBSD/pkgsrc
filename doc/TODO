@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21920 2022/05/30 09:52:56 jaapb Exp $
+$NetBSD: TODO,v 1.21921 2022/05/31 23:46:31 gdt Exp $
 
 Suggested new packages
 ======================
@@ -322,6 +322,10 @@ Suggested new packages
 	https://greenbone.github.io/docs/
 	Network security scanner and management tools, successor to OpenVAS.
 	Some notes in PR 56687.
+
+	Bootstrap post-collapse technology
+	http://collapseos.org/
+	Toolchain to build AVR, running on old chips, cross-built from POSIX.
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
