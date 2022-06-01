@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2847 2022/06/01 10:47:42 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.2848 2022/06/01 10:48:58 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4334,3 +4334,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Added textproc/p5-Text-WordDiff version 0.09 [markd 2022-05-31]
 	Updated ham/chirp to 20220531 [gdt 2022-05-31]
 	Updated net/dbip-asn-lite to 2022.06 [fcambus 2022-06-01]
+	Updated net/dbip-city-lite to 2022.06 [fcambus 2022-06-01]
