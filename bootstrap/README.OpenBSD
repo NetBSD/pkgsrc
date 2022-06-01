@@ -1,6 +1,8 @@
-$NetBSD: README.OpenBSD,v 1.13 2022/04/07 17:39:42 schmonz Exp $
+$NetBSD: README.OpenBSD,v 1.14 2022/06/01 12:07:37 gdt Exp $
 
 Please read the general README file as well.
+
+# Instructions
 
 pkgsrc bootstrap installs several tools whose names happen to match
 programs already provided by OpenBSD. The two sets of package tools are
@@ -16,6 +18,8 @@ perhaps like so:
 But you probably don't want to do this, because it would (for instance)
 also prevent OpenBSD's pkg_add(1) from being invoked on purpose by
 fw_update(1).
+
+# Status
 
 pkgsrc bootstrap has been tested on OpenBSD 7.0 (amd64, i386) with the
 system-provided clang. Earlier version/platform/compiler combinations
