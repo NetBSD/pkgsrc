@@ -1,4 +1,4 @@
-$NetBSD: README.Linux,v 1.12 2022/06/01 12:12:20 gdt Exp $
+$NetBSD: README.Linux,v 1.13 2022/06/01 12:15:39 gdt Exp $
 
 # General
 
@@ -31,6 +31,10 @@ installed prior to attempting bootstrap:
 apt-get install cvs libncurses5 libncurses5-dev gcc g++ zlib1g-dev \
 			zlib1g libssl-dev libudev-dev
 
+# RedHat and derivatives
+
+In 2022, pkgsrc bootstrapped ok on RHEL 8.5, and packages generally worked.
+
 # NixOS
 
 stdenv.cc should be installed prior to attempting bootstrap.
@@ -46,23 +50,6 @@ Linux with musl was reported to work in 2022.
 # Termux (Android)
 
 In 2022, unprivileged bootstrap failed.
-
-#  RedHat and derivatives
-
-## Very old hints about libattr (2008)
-
-Some versions of Linux (RHEL3 Update 2 for i386 for example) have a
-/usr/lib/libacl.la libtool archive file that lists /lib/libattr.la as a
-dependency.  However, libattr.la does not exist in /lib/libattr.la.  If
-this is the case, the bootstrap will fail with
-
-grep: /lib/libattr.la: No such file or directory
-/usr/pkgsrc/bootstrap/work/wrk/pkgtools/pkg_install/work/.tools/bin/sed: can't read /lib/libattr.la: No such file or directory
-libtool: link: `/lib/libattr.la' is not a valid libtool archive
-
-The solution is to copy /usr/lib/libattr.la to /lib/libattr.la with:
-
-cp -p /usr/lib/libattr.la /lib
 
 # Very old information
 
