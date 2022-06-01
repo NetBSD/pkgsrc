@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.32 2022/04/06 00:24:05 schmonz Exp $
+$NetBSD: README,v 1.33 2022/06/01 12:26:04 gdt Exp $
 
 To try to get pkgsrc working on your system, please try the following
 as root:
@@ -92,24 +92,32 @@ Platforms with a * are believed to be non-working; see the README for
 the platform for perhaps more information.  A platform not having a
 README is a clue that it might not work.
 
-Platforms with active use and maintenance
------------------------------------------
+Platforms with active use, maintenance and published bulk builds
+----------------------------------------------------------------
 
 The following platforms have active users, and people that regularly
 fix problems.  They also have active bulk builds posted to
-`pkgsrc-bulk`.
+`pkgsrc-bulk`.  (Bulk build publication is a key quality indictor
+because anyone can tell how many packages build on the platform.)
 
-  macOS (perhaps also Darwin, if such still exists)
+  macOS
   Linux
   NetBSD
   Solaris (illumos, SmartOS, OmniOS)
 
-These platforms are active but lack published bulk builds.
+Platforms with active use, maintenance
+--------------------------------------
+
+The following platforms have active users and maintenance, but do not
+have published bulk builds.
 
   FreeBSD
 
-Platforms believed to have users
---------------------------------
+Platforms with active use
+-------------------------
+
+The following platforms have active users, but are not known to have
+active maintenance.
 
   OpenBSD
 
