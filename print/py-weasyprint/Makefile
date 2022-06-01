@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2022/05/23 05:22:13 kleink Exp $
+# $NetBSD: Makefile,v 1.37 2022/06/01 21:27:08 gutteridge Exp $
 
 DISTNAME=	weasyprint-55.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,8 +11,6 @@ COMMENT=	Converts HTML/CSS documents to PDF
 LICENSE=	modified-bsd
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
-DEPENDS+=	pango>=1.29.3:../../devel/pango
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=4.0.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-cffi>=0.6:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-cssselect2>=0.1:../../textproc/py-cssselect2
@@ -26,7 +24,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-isort-[0-9]*:../../devel/py-test-isort
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
-USE_LANGUAGES=	# none
+USE_LANGUAGES=	c
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-fonttools
 
@@ -37,5 +35,7 @@ post-install:
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
+BUILDLINK_API_DEPENDS.pango+=   pango>=1.44.0
+.include "../../devel/pango/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
