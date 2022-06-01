@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2852 2022/06/01 20:11:03 adam Exp $
+$NetBSD: CHANGES-2022,v 1.2853 2022/06/01 20:56:34 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4341,3 +4341,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/py-wcmatch to 8.4 [adam 2022-06-01]
 	Updated devel/mob to 3.1.4 [schmonz 2022-06-01]
 	Updated lang/nodejs14 to 14.19.3 [adam 2022-06-01]
+	Updated misc/tmux to 3.3 [leot 2022-06-01]
