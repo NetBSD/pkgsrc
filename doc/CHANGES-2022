@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2848 2022/06/01 10:48:58 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.2849 2022/06/01 10:50:23 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4335,3 +4335,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated ham/chirp to 20220531 [gdt 2022-05-31]
 	Updated net/dbip-asn-lite to 2022.06 [fcambus 2022-06-01]
 	Updated net/dbip-city-lite to 2022.06 [fcambus 2022-06-01]
+	Updated net/dbip-country-lite to 2022.06 [fcambus 2022-06-01]
