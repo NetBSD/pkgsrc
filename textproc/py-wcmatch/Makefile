@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:55:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2022/06/01 10:58:39 adam Exp $
 
-DISTNAME=	wcmatch-8.3
+DISTNAME=	wcmatch-8.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wcmatch/}
 
@@ -11,11 +10,12 @@ HOMEPAGE=	https://github.com/facelessuser/wcmatch
 COMMENT=	Wildcard/glob file name matcher
 LICENSE=	mit
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0.21.1:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-bracex>=2.1.1:../../textproc/py-bracex
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
