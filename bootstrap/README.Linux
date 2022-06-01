@@ -1,4 +1,4 @@
-$NetBSD: README.Linux,v 1.11 2022/05/01 08:06:46 nia Exp $
+$NetBSD: README.Linux,v 1.12 2022/06/01 12:12:20 gdt Exp $
 
 # General
 
@@ -20,7 +20,7 @@ There are no reports of success or failure with clang.
 
 ## icc
 
-Long ago, it was reported that icc (Intel C++ Compiler) 8.0 and 8.1
+It was reported in 2008 that icc (Intel C++ Compiler) 8.0 and 8.1
 have been tested on i386.  See the old section at the end.
 
 # Debian and derivatives
@@ -39,9 +39,17 @@ Please note that if you run the Nix garbage collector and it collects
 libc, every pkgsrc binary (including binaries generated during bootstrap)
 will need to be rebuilt.
 
+# musl
+
+Linux with musl was reported to work in 2022.
+
+# Termux (Android)
+
+In 2022, unprivileged bootstrap failed.
+
 #  RedHat and derivatives
 
-## Old, undated, information
+## Very old hints about libattr (2008)
 
 Some versions of Linux (RHEL3 Update 2 for i386 for example) have a
 /usr/lib/libacl.la libtool archive file that lists /lib/libattr.la as a
@@ -56,9 +64,9 @@ The solution is to copy /usr/lib/libattr.la to /lib/libattr.la with:
 
 cp -p /usr/lib/libattr.la /lib
 
-# General old, undated information
+# Very old information
 
-## Details of using icc
+## Details of using icc (last update 2005
 
 To bootstrap using icc, assuming the default icc installation
 directory:
