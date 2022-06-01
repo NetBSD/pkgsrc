@@ -1,11 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2021/05/28 04:22:58 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2022/06/01 10:57:09 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/INSTALLER
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/REQUESTED
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/direct_url.json
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/license_files/LICENSE.md
 ${PYSITELIB}/bracex/__init__.py
 ${PYSITELIB}/bracex/__init__.pyc
-${PYSITELIB}/bracex/__init__.pyo
+${PYSITELIB}/bracex/__main__.py
+${PYSITELIB}/bracex/__main__.pyc
 ${PYSITELIB}/bracex/__meta__.py
 ${PYSITELIB}/bracex/__meta__.pyc
-${PYSITELIB}/bracex/__meta__.pyo
+${PYSITELIB}/bracex/py.typed
