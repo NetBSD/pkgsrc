@@ -1,4 +1,4 @@
-# $NetBSD: pf.buildlink3.mk,v 1.3 2015/01/14 20:40:32 rumko Exp $
+# $NetBSD: pf.buildlink3.mk,v 1.4 2022/06/01 21:42:02 gutteridge Exp $
 #
 # Makefile fragment for packages using pf.
 #
@@ -15,8 +15,7 @@ PF_BUILDLINK3_MK=	#defined
 .include "../../mk/bsd.fast.prefs.mk"
 
 # Platforms where pf is available on.
-ONLY_FOR_PLATFORM?=	NetBSD-[3-9]*-* OpenBSD-[3-9]*-* FreeBSD-*-* \
-			DragonFly-*-*
+ONLY_FOR_PLATFORM?=	NetBSD-*-* OpenBSD-*-* FreeBSD-*-* DragonFly-*-*
 
 # Detect the pfvar.h header.
 .if exists(/usr/include/net/pfvar.h)
