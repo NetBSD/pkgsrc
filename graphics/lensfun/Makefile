@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2022/05/30 16:00:14 adam Exp $
+# $NetBSD: Makefile,v 1.40 2022/06/02 18:29:16 adam Exp $
 
 DISTNAME=	lensfun-0.3.3
 CATEGORIES=	graphics
@@ -14,6 +14,7 @@ USE_CMAKE=		yes
 USE_LANGUAGES=		c c++03
 USE_TOOLS+=		gmake pkg-config gsed
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools>0:../../devel/py-setuptools
 EGG_NAME=	${DISTNAME:C/-([^0-9])/_\1/g}
 EGG_INFODIR=	${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 PY_PATCHPLIST=	yes
