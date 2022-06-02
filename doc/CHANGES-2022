@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2863 2022/06/02 22:07:47 leot Exp $
+$NetBSD: CHANGES-2022,v 1.2864 2022/06/02 23:48:44 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4353,3 +4353,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated audio/spotify-player to 0.8.0 [pin 2022-06-02]
 	Updated net/trippy to 0.5.0 [pin 2022-06-02]
 	Updated net/yt-dlp to 2022.5.18 [leot 2022-06-02]
+	Updated sysutils/rcm to 1.3.5 [leot 2022-06-02]
