@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2854 2022/06/01 21:07:34 leot Exp $
+$NetBSD: CHANGES-2022,v 1.2855 2022/06/02 09:47:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4343,3 +4343,5 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/nodejs14 to 14.19.3 [adam 2022-06-01]
 	Updated misc/tmux to 3.3 [leot 2022-06-01]
 	Updated mail/fdm to 2.1 [leot 2022-06-01]
+	Updated lang/nodejs16 to 16.15.1 [adam 2022-06-02]
+	Updated lang/nodejs to 18.3.0 [adam 2022-06-02]
