@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2022/06/01 20:56:27 leot Exp $
+# $NetBSD: Makefile,v 1.60 2022/06/02 18:27:24 tnn Exp $
 
 DISTNAME=	tmux-3.3
 CATEGORIES=	misc
@@ -33,6 +33,11 @@ BUILDLINK_TRANSFORM+=	opt:-D_XPG4_2:-D_XPG6
 # https://trac.macports.org/changeset/127986
 .if !empty(MACHINE_PLATFORM:MDarwin-1[0-9].*)
 CPPFLAGS+=	-D__DARWIN_VERS_1050=0
+.endif
+
+.if ${OPSYS} == "Darwin"
+CONFIGURE_ARGS+=	--enable-utf8proc
+.include "../../converters/utf8proc/buildlink3.mk"
 .endif
 
 .include "../../devel/libevent/buildlink3.mk"
