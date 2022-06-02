@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/04/13 19:37:39 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.10 2022/06/02 18:19:26 bsiegert Exp $
 bin/go117
 bin/gofmt117
 go117/AUTHORS
@@ -1704,6 +1704,7 @@ go117/src/cmd/dist/buildgo.go
 go117/src/cmd/dist/buildruntime.go
 go117/src/cmd/dist/buildtool.go
 go117/src/cmd/dist/doc.go
+go117/src/cmd/dist/exec.go
 go117/src/cmd/dist/imports.go
 go117/src/cmd/dist/main.go
 go117/src/cmd/dist/sys_default.go
