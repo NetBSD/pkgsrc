@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.151 2022/05/18 20:45:36 triaxx Exp $
+# $NetBSD: Makefile,v 1.152 2022/06/02 18:52:02 bsiegert Exp $
 
 # Protocol breaks require tech-pkg@ discussion and MAINTAINER approval.
 DISTNAME=	syncthing-source-v1.20.1
 PKGNAME=	${DISTNAME:S,source-v,,}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
