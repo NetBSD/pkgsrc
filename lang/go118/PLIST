@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2022/05/11 19:00:55 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.4 2022/06/02 18:50:40 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go118/AUTHORS
@@ -10772,6 +10772,9 @@ go118/test/fixedbugs/issue51531.go
 go118/test/fixedbugs/issue5162.go
 go118/test/fixedbugs/issue5172.go
 go118/test/fixedbugs/issue51839.go
+go118/test/fixedbugs/issue52279.dir/lib.go
+go118/test/fixedbugs/issue52279.dir/main.go
+go118/test/fixedbugs/issue52279.go
 go118/test/fixedbugs/issue5231.go
 go118/test/fixedbugs/issue52438.go
 go118/test/fixedbugs/issue5244.go
@@ -11625,11 +11628,13 @@ go118/test/typeparam/issue51836.dir/a.go
 go118/test/typeparam/issue51836.dir/aa.go
 go118/test/typeparam/issue51836.dir/p.go
 go118/test/typeparam/issue51836.go
+go118/test/typeparam/issue51840.go
 go118/test/typeparam/issue52026.go
 go118/test/typeparam/issue52117.dir/a.go
 go118/test/typeparam/issue52117.dir/b.go
 go118/test/typeparam/issue52117.go
 go118/test/typeparam/issue52228.go
+go118/test/typeparam/issue52241.go
 go118/test/typeparam/list.go
 go118/test/typeparam/list2.go
 go118/test/typeparam/listimp.dir/a.go
