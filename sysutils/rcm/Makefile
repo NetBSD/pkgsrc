@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2020/08/29 21:27:23 leot Exp $
+# $NetBSD: Makefile,v 1.4 2022/06/02 23:48:39 leot Exp $
 
-DISTNAME=	rcm-1.3.4
+DISTNAME=	rcm-1.3.5
 CATEGORIES=	sysutils
 MASTER_SITES=	https://thoughtbot.github.io/rcm/dist/
 
