@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2022/05/31 23:19:28 gdt Exp $
+# $NetBSD: Makefile,v 1.47 2022/06/02 11:35:24 gdt Exp $
 
-DISTNAME=	chirp-daily-20220531
+DISTNAME=	chirp-daily-20220602
 PKGNAME=	${DISTNAME:S/-daily//}
 CATEGORIES=	ham
 MASTER_SITES=	https://trac.chirp.danplanet.com/chirp_daily/daily-${PKGVERSION_NOREV}/
