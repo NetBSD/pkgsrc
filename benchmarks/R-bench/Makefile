@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/05/30 15:04:24 mef Exp $
+# $NetBSD: Makefile,v 1.2 2022/06/02 11:48:57 mef Exp $
 
 R_PKGNAME=	bench
 R_PKGVER=	1.1.2
@@ -25,7 +25,8 @@ TEST_DEPENDS+=	R-scales-[0-9]*:../../graphics/R-scales
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 TEST_DEPENDS+=	R-tidyr-[0-9]*:../../math/R-tidyr
 TEST_DEPENDS+=	R-withr-[0-9]*:../../devel/R-withr
-USE_LANGUAGES=	# none
+
+USE_LANGUAGES=	c
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
