@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2022/05/11 19:26:24 bsiegert Exp $
+# $NetBSD: Makefile,v 1.18 2022/06/02 18:51:57 bsiegert Exp $
 
 GITHUB_PROJECT=	gomuks
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	gomuks-0.2.4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tulir/}
 
