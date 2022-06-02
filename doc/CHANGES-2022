@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2856 2022/06/02 11:35:32 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.2857 2022/06/02 13:39:20 he Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4346,3 +4346,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/nodejs16 to 16.15.1 [adam 2022-06-02]
 	Updated lang/nodejs to 18.3.0 [adam 2022-06-02]
 	Updated ham/chirp to 20220602 [gdt 2022-06-02]
+	Updated net/unbound to 1.16.0 [he 2022-06-02]
