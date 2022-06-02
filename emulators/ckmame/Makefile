@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2022/05/31 11:51:31 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2022/06/02 12:49:19 wiz Exp $
 
 DISTNAME=		ckmame-2.0
 CATEGORIES=		emulators
@@ -15,7 +15,7 @@ USE_TOOLS+=		pkg-config perl:test
 USE_CMAKE=		yes
 TEST_TARGET=		check
 
-GCC_REQD+=		8 # std::filesystem
+GCC_REQD+=		9 # std::filesystem
 USE_GCC_RUNTIME=	yes
 
 .include "../../mk/bsd.prefs.mk"
