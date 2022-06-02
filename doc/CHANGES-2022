@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2862 2022/06/02 19:57:52 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2863 2022/06/02 22:07:47 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4352,3 +4352,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated lang/go118 to 1.18.3 [bsiegert 2022-06-02]
 	Updated audio/spotify-player to 0.8.0 [pin 2022-06-02]
 	Updated net/trippy to 0.5.0 [pin 2022-06-02]
+	Updated net/yt-dlp to 2022.5.18 [leot 2022-06-02]
