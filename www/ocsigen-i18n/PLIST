@@ -1,4 +1,22 @@
-@comment $NetBSD: PLIST,v 1.2 2018/07/19 14:24:10 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2022/06/03 12:46:25 jaapb Exp $
 bin/ocsigen-i18n-checker
 bin/ocsigen-i18n-generator
 bin/ocsigen-i18n-rewriter
+${OCAML_SITELIB}/ocsigen-i18n/META
+${OCAML_SITELIB}/ocsigen-i18n/dune-package
+${OCAML_SITELIB}/ocsigen-i18n/i18n_ppx_rewriter.ml
+${OCAML_SITELIB}/ocsigen-i18n/opam
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-i18n/ppx.a
+${OCAML_SITELIB}/ocsigen-i18n/ppx.cma
+${OCAML_SITELIB}/ocsigen-i18n/ppx.cmi
+${OCAML_SITELIB}/ocsigen-i18n/ppx.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-i18n/ppx.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-i18n/ppx.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-i18n/ppx.cmxs
+${OCAML_SITELIB}/ocsigen-i18n/ppx.exe
+${OCAML_SITELIB}/ocsigen-i18n/ppx.ml
+${OCAML_SITELIB}/ocsigen-i18n/ppx__I18n_ppx_rewriter.cmi
+${OCAML_SITELIB}/ocsigen-i18n/ppx__I18n_ppx_rewriter.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-i18n/ppx__I18n_ppx_rewriter.cmx
+share/doc/ocsigen-i18n/LICENSE
+share/doc/ocsigen-i18n/README.MD

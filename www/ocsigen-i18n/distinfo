@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:29:42 nia Exp $
+$NetBSD: distinfo,v 1.7 2022/06/03 12:46:25 jaapb Exp $
 
-BLAKE2s (ocsigen-i18n-3.7.0.tar.gz) = 6d8e8203e2398d537fdd707ee7eb35e4a7fd56cf24bbc811b8de371e51273fb6
-SHA512 (ocsigen-i18n-3.7.0.tar.gz) = e16743070f1a15bb8850132f710aceda61102dea692da8b611c7d249602007400036c4944d7a2ff14ffdd7dfcc42504377fd8762a7fe40540051ee09b0d563c1
-Size (ocsigen-i18n-3.7.0.tar.gz) = 7851 bytes
-SHA1 (patch-Makefile) = 8bce216858ae0d8a6c43c7b958b63db6aea30038
+BLAKE2s (ocsigen-i18n-4.0.0.tar.gz) = 9b473961ff507478750d463e18f318987578e140a0e3196aee94d35896df1f16
+SHA512 (ocsigen-i18n-4.0.0.tar.gz) = f39fdcd4f1b4457b3398384743ab60edbd018b4f727c8d293e57d9a8d3ee7a925f009c7ccfe7be66833f3bb658d1b3275087e771472884505a4395d1fec96673
+Size (ocsigen-i18n-4.0.0.tar.gz) = 17055 bytes
