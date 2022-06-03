@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2868 2022/06/03 08:49:21 fcambus Exp $
+$NetBSD: CHANGES-2022,v 1.2869 2022/06/03 08:51:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4358,3 +4358,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated x11/libdrm to 2.4.111 [wiz 2022-06-03]
 	Removed devel/ocaml-ppxfind [wiz 2022-06-03]
 	Updated comms/tio to 1.38 [fcambus 2022-06-03]
+	Updated x11/labltk to 8.06.12 [wiz 2022-06-03]
