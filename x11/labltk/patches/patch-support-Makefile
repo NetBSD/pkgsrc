@@ -1,9 +1,10 @@
-$NetBSD: patch-suppert-Makefile,v 1.1 2014/11/16 18:08:36 hiramatsu Exp $
+$NetBSD: patch-support-Makefile,v 1.1 2022/06/03 08:51:22 wiz Exp $
 
 Install into DESTDIR.
---- support/Makefile.orig	2014-09-18 13:08:33.000000000 +0900
-+++ support/Makefile	2014-11-05 00:20:36.000000000 +0900
-@@ -43,9 +43,10 @@
+
+--- support/Makefile.orig	2022-03-30 02:19:07.000000000 +0000
++++ support/Makefile
+@@ -45,9 +45,10 @@ PUBX= $(PUBMLI:.mli=.cmx) camltkwrap.cmx
  
  ifeq ($(USE_FINDLIB),yes)
  install:
@@ -15,4 +16,4 @@ Install into DESTDIR.
 +	$(BSD_INSTALL_LIB) dll$(LIBNAME)$(EXT_DLL) $(DESTDIR)$(STUBLIBDIR)
  
  installopt:
- 	ocamlfind install labltk -add \
+ 	ocamlfind install labltk -add $(PUBX) \
