@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2877 2022/06/03 16:30:18 martin Exp $
+$NetBSD: CHANGES-2022,v 1.2878 2022/06/03 20:01:41 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4367,3 +4367,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ocsigen-start to 6.1.0 [jaapb 2022-06-03]
 	Updated net/vultr-cli to 2.14.1 [tpaul 2022-06-03]
 	Updated www/firefox52 to 52.9.0nb44 [martin 2022-06-03]
+	Updated geography/geos to 3.10.3 [gdt 2022-06-03]
