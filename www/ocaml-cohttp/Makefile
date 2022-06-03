@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/05/24 18:59:36 jaapb Exp $
+# $NetBSD: Makefile,v 1.8 2022/06/03 09:25:20 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-5.0.0
 CATEGORIES=	www
@@ -25,6 +25,7 @@ OCAML_FINDLIB_DIRS=	${DUNE_BUILD_PACKAGES}
 .include "../../devel/ocaml-re/buildlink3.mk"
 .include "../../devel/ocaml-sexplib0/buildlink3.mk"
 .include "../../devel/ocaml-stringext/buildlink3.mk"
+.include "../../textproc/ocaml-jsonm/buildlink3.mk"
 .include "../../www/ocaml-uri/buildlink3.mk"
 .include "../../lang/ocaml/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
