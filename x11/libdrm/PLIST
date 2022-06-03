@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2022/03/13 15:20:01 tnn Exp $
+@comment $NetBSD: PLIST,v 1.24 2022/06/03 08:30:34 wiz Exp $
 ${PLIST.arm}include/exynos/exynos_drm.h
 ${PLIST.arm}include/exynos/exynos_fimg2d.h
 ${PLIST.arm}include/freedreno/freedreno_drmif.h
@@ -49,7 +49,6 @@ ${PLIST.arm}include/libdrm/vc4_qpu_defines.h
 include/libdrm/via_drm.h
 include/libdrm/virtgpu_drm.h
 ${PLIST.intel}include/libdrm/vmwgfx_drm.h
-${PLIST.kms}include/libkms/libkms.h
 include/libsync.h
 ${PLIST.arm}include/omap/omap_drm.h
 include/xf86drm.h
@@ -84,9 +83,6 @@ lib/libdrm_radeon.so.1.0.1
 ${PLIST.arm}lib/libdrm_tegra.so
 ${PLIST.arm}lib/libdrm_tegra.so.0
 ${PLIST.arm}lib/libdrm_tegra.so.0.0.0
-${PLIST.kms}lib/libkms.so
-${PLIST.kms}lib/libkms.so.1
-${PLIST.kms}lib/libkms.so.1.0.0
 lib/pkgconfig/libdrm.pc
 lib/pkgconfig/libdrm_amdgpu.pc
 ${PLIST.arm}lib/pkgconfig/libdrm_etnaviv.pc
@@ -98,5 +94,4 @@ ${PLIST.arm}lib/pkgconfig/libdrm_omap.pc
 lib/pkgconfig/libdrm_radeon.pc
 ${PLIST.arm}lib/pkgconfig/libdrm_tegra.pc
 ${PLIST.arm}lib/pkgconfig/libdrm_vc4.pc
-${PLIST.kms}lib/pkgconfig/libkms.pc
 share/libdrm/amdgpu.ids
