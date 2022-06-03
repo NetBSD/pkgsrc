@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2870 2022/06/03 09:30:11 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2871 2022/06/03 11:17:44 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4360,3 +4360,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated comms/tio to 1.38 [fcambus 2022-06-03]
 	Updated x11/labltk to 8.06.12 [wiz 2022-06-03]
 	Updated devel/ocaml-duff to 0.5 [wiz 2022-06-03]
+	Removed devel/ocaml-ppx_tools_versioned [jaapb 2022-06-03]
