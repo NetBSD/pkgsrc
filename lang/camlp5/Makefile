@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2022/05/24 18:51:53 jaapb Exp $
-#
+# $NetBSD: Makefile,v 1.42 2022/06/03 08:10:56 wiz Exp $
 
 GITHUB_PROJECT=	camlp5
 DISTNAME=	${GITHUB_PROJECT}-7.13
@@ -12,6 +11,9 @@ MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	https://camlp5.github.io/
 COMMENT=	Preprocessor-pretty-printer for ocaml
 LICENSE=	modified-bsd
+
+# https://github.com/camlp5/camlp5/issues/92
+BROKEN=		"does not support ocaml 4.14"
 
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c # needed for optimised compiler
