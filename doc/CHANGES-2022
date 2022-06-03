@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2873 2022/06/03 12:51:40 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2874 2022/06/03 13:17:44 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4363,3 +4363,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Removed devel/ocaml-ppx_tools_versioned [jaapb 2022-06-03]
 	Updated www/ocsigen-i18n to 4.0.0 [jaapb 2022-06-03]
 	Updated www/ocsigen-toolkit to 3.2.0 [jaapb 2022-06-03]
+	Updated databases/pgocaml to 4.3.0nb1 [jaapb 2022-06-03]
