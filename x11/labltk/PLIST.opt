@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.opt,v 1.5 2014/11/16 18:08:36 hiramatsu Exp $
+@comment $NetBSD: PLIST.opt,v 1.6 2022/06/03 08:51:22 wiz Exp $
 lib/ocaml/site-lib/labltk/balloon.cmx
 lib/ocaml/site-lib/labltk/bell.cmx
 lib/ocaml/site-lib/labltk/button.cmx
@@ -42,6 +42,7 @@ lib/ocaml/site-lib/labltk/cToplevel.cmx
 lib/ocaml/site-lib/labltk/cWinfo.cmx
 lib/ocaml/site-lib/labltk/cWm.cmx
 lib/ocaml/site-lib/labltk/camltk.cmx
+lib/ocaml/site-lib/labltk/camltkwrap.cmx
 lib/ocaml/site-lib/labltk/canvas.cmx
 lib/ocaml/site-lib/labltk/checkbutton.cmx
 lib/ocaml/site-lib/labltk/clipboard.cmx
