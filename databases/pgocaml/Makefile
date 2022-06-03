@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2022/05/24 18:59:21 jaapb Exp $
+# $NetBSD: Makefile,v 1.21 2022/06/03 13:17:35 jaapb Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-4.3.0
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=darioteixeira/}
 GITHUB_PROJECT=	pgocaml
@@ -29,7 +30,6 @@ BUILDLINK_DEPMETHOD.ocaml-ppx_tools=	build
 .include "../../devel/ocaml-ppx_tools/buildlink3.mk"
 .include "../../devel/ocaml-ppxlib/buildlink3.mk"
 .include "../../devel/ocaml-re/buildlink3.mk"
-BUILDLINK_DEPMETHOD.ocaml-rresult=	build
 .include "../../devel/ocaml-rresult/buildlink3.mk"
 .include "../../devel/ocaml-sexplib/buildlink3.mk"
 .include "../../textproc/ocaml-csv/buildlink3.mk"
