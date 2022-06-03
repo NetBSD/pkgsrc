@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2022/05/24 18:51:57 jaapb Exp $
+# $NetBSD: Makefile,v 1.14 2022/06/03 13:23:06 jaapb Exp $
 
 GITHUB_PROJECT=	ocsigen-start
-DISTNAME=	${GITHUB_PROJECT}-2.21.1
-PKGREVISION=	2
+DISTNAME=	${GITHUB_PROJECT}-6.1.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
@@ -24,7 +23,7 @@ MAKE_ENV+=	NATIVE=yes
 MAKE_ENV+=	NATIVE=no
 .endif
 
-DEPENDS+=	eliom>=6.4:../../www/eliom
+DEPENDS+=	eliom>=10.0.0:../../www/eliom
 
 SUBST_CLASSES+=			fix-settings
 SUBST_STAGE.fix-settings=	pre-configure
@@ -47,11 +46,13 @@ pre-configure:
 
 .include "../../databases/pgocaml/buildlink3.mk"
 .include "../../devel/ocaml-lwt_log/buildlink3.mk"
+.include "../../devel/ocaml-re/buildlink3.mk"
 .include "../../devel/ocaml-resource-pooling/buildlink3.mk"
-.include "../../devel/ocaml-rresult/buildlink3.mk"
 .include "../../devel/ocaml-yojson/buildlink3.mk"
+.include "../../net/ocamlnet/buildlink3.mk"
 .include "../../security/ocaml-safepass/buildlink3.mk"
 .include "../../www/ocaml-cohttp/buildlink3.mk"
+.include "../../www/ocsigen-ppx-rpc/buildlink3.mk"
 .include "../../www/ocsigen-i18n/buildlink3.mk"
 .include "../../www/ocsigen-toolkit/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
