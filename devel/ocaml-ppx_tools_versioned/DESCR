@@ -1,2 +1,0 @@
-Tools for authors of syntactic tools (such as ppx rewriters). This particular
-version works with different versions of OCaml.
