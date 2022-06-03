@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.40 2022/05/24 18:51:57 jaapb Exp $
+# $NetBSD: Makefile,v 1.41 2022/06/03 08:51:22 wiz Exp $
 
-DISTNAME=	labltk-8.06.3
-PKGREVISION=	8
+DISTNAME=	labltk-8.06.12
 CATEGORIES=	x11
-# caution: it's the 1701, not the filename, that identifies the download
-MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1701/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=garrigue/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://forge.ocamlcore.org/projects/labltk/
+HOMEPAGE=	https://github.com/garrigue/labltk/
 COMMENT=	Tk bindings for ocaml
 LICENSE=	gnu-lgpl-v2.1
 
@@ -15,10 +13,7 @@ USE_TOOLS+=	gmake
 MAKE_JOBS_SAFE=	no
 MAKE_ENV+=	BYTECC='cc  -fPIC'
 
-
 HAS_CONFIGURE=		yes
-CONFIGURE_ARGS+=	-x11include ${X11BASE}/include
-CONFIGURE_ARGS+=	-x11lib ${X11BASE}/lib
 CONFIGURE_ARGS+=	-use-findlib
 CONFIGURE_ARGS+=	-tkdefs "-I${BUILDLINK_PREFIX.tk}/include  -I${BUILDLINK_PREFIX.tcl}/include"
 CONFIGURE_ARGS+=	-tklibs "`${SH} -c '. ${TCLCONFIG_SH}; . ${TKCONFIG_SH}; ${ECHO} $$TK_LD_FLAGS $$TCL_LD_FLAGS $$TK_LIBS $$TCL_LIBS'`"
