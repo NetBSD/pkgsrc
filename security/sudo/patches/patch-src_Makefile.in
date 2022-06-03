@@ -1,10 +1,20 @@
-$NetBSD: patch-src_Makefile.in,v 1.4 2019/12/28 20:43:56 kim Exp $
+$NetBSD: patch-src_Makefile.in,v 1.5 2022/06/03 07:58:34 wiz Exp $
 
+* fix unportable test(1) operator
 * install the suid sudo without write-bits
 
---- src/Makefile.in.orig	2019-12-10 15:11:46.000000000 +0200
-+++ src/Makefile.in	2019-12-28 21:51:27.794734242 +0200
-@@ -219,7 +219,7 @@
+--- src/Makefile.in.orig	2022-03-03 18:29:40.000000000 +0000
++++ src/Makefile.in
+@@ -200,7 +200,7 @@ $(devdir)/intercept.pb-c.c: $(srcdir)/in
+ 	    echo "$$cmd"; eval $$cmd; \
+ 	    cmd='$(scriptdir)/unanon $(devdir)/intercept.pb-c.h $(devdir)/intercept.pb-c.c'; \
+ 	    echo "$$cmd"; eval $$cmd; \
+-	    if [ "$(devdir)" == "$(srcdir)" ]; then \
++	    if [ "$(devdir)" = "$(srcdir)" ]; then \
+ 		cmd='mv -f $(devdir)/intercept.pb-c.h $(incdir)/intercept.pb-c.h'; \
+ 	    else \
+ 		cmd='mv -f $(devdir)/intercept.pb-c.h $(top_builddir)/intercept.pb-c.h'; \
+@@ -267,7 +267,7 @@ install-rc: install-dirs
  	fi
  
  install-binaries: install-dirs $(PROGS)
