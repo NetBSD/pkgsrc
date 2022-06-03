@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.101 2022/04/10 08:53:17 nia Exp $
+# $NetBSD: Makefile,v 1.102 2022/06/03 08:30:34 wiz Exp $
 
-DISTNAME=		libdrm-2.4.110
+DISTNAME=		libdrm-2.4.111
 CATEGORIES=		x11 graphics
 MASTER_SITES=		https://dri.freedesktop.org/libdrm/
 EXTRACT_SUFX=		.tar.xz
@@ -21,12 +21,10 @@ PKGCONFIG_OVERRIDE+=	etnaviv/libdrm_etnaviv.pc.in
 PKGCONFIG_OVERRIDE+=	exynos/libdrm_exynos.pc.in
 PKGCONFIG_OVERRIDE+=	freedreno/libdrm_freedreno.pc.in
 PKGCONFIG_OVERRIDE+=	intel/libdrm_intel.pc.in
-PKGCONFIG_OVERRIDE+=	libkms/libkms.pc.in
 PKGCONFIG_OVERRIDE+=	nouveau/libdrm_nouveau.pc.in
 PKGCONFIG_OVERRIDE+=	omap/libdrm_omap.pc.in
 PKGCONFIG_OVERRIDE+=	radeon/libdrm_radeon.pc.in
 PKGCONFIG_OVERRIDE+=	tegra/libdrm_tegra.pc.in
-PKGCONFIG_OVERRIDE+=	vc4/libdrm_vc4.pc.in
 PKGCONFIG_OVERRIDE+=	libdrm.pc.in
 
 .include "../../mk/bsd.prefs.mk"
@@ -44,16 +42,7 @@ ATOMIC_OPS_CHECK=	1
 .  include "../../devel/libatomic_ops/buildlink3.mk"
 .endif
 
-PLIST_VARS+=	intel arm kms
-
-.if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD"
-MESON_ARGS+=	-Dlibkms=true
-PLIST.kms=	yes
-.else
-MESON_ARGS+=	-Dlibkms=false
-.endif
-
-PLIST_VARS+=	intel arm kms
+PLIST_VARS+=	intel arm
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 MESON_ARGS+=	-Dintel=true
 MESON_ARGS+=	-Dvmwgfx=true
