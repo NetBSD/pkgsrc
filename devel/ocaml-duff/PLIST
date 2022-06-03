@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/19 11:31:30 jaapb Exp $
-bin/xduff
+@comment $NetBSD: PLIST,v 1.2 2022/06/03 09:30:01 wiz Exp $
 ${OCAML_SITELIB}/duff/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/duff/duff.a
 ${OCAML_SITELIB}/duff/duff.cma
