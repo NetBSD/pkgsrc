@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2875 2022/06/03 13:23:16 jaapb Exp $
+$NetBSD: CHANGES-2022,v 1.2876 2022/06/03 14:41:13 tpaul Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4365,3 +4365,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/ocsigen-toolkit to 3.2.0 [jaapb 2022-06-03]
 	Updated databases/pgocaml to 4.3.0nb1 [jaapb 2022-06-03]
 	Updated www/ocsigen-start to 6.1.0 [jaapb 2022-06-03]
+	Updated net/vultr-cli to 2.14.1 [tpaul 2022-06-03]
