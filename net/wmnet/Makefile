@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/10/25 21:51:02 khorben Exp $
+# $NetBSD: Makefile,v 1.24 2022/06/03 18:41:44 wiz Exp $
 
 DISTNAME=	wmnet-1.06
 PKGREVISION=	5
@@ -20,6 +20,10 @@ MAKE_FLAGS+=	CCOPTIONS=${CFLAGS:Q}
 MAKE_FLAGS+=	LOCAL_LDFLAGS=${LDFLAGS:Q}
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} > 099944
+BROKEN=		"Needs to be converted to SIOCGIFDATA ioctl instead of kmem."
+.endif
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "MirBSD"
 MAKE_FLAGS+=	INSTPGMFLAGS=""
