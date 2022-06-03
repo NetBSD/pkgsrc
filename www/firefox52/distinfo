@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2022/05/28 18:31:13 martin Exp $
+$NetBSD: distinfo,v 1.33 2022/06/03 16:30:00 martin Exp $
 
 BLAKE2s (firefox-52.9.0esr.source.tar.xz) = 68da851ecfe1b03231157bf79732865d3cf81b7c10128a2e2a9e6e7be3963348
 SHA512 (firefox-52.9.0esr.source.tar.xz) = bfca42668ca78a12a9fb56368f4aae5334b1f7a71966fbba4c32b9c5e6597aac79a6e340ac3966779d2d5563eb47c054ab33cc40bfb7306172138ccbd3adb2b9
@@ -71,7 +71,7 @@ SHA1 (patch-js_src_jit_arm_Architecture-arm.cpp) = f0b554c169643b8447b4f29168d61
 SHA1 (patch-js_src_jit_none_AtomicOperations-sparc.h) = b44992a869d6d08809a9edc28f1ad6f40632d392
 SHA1 (patch-js_src_moz.build) = ce9110506086d15a011d0985b58dd4e7d1b6ec5f
 SHA1 (patch-js_src_vm_ArrayBufferObject.cpp) = 6196d576b98126bbbab2014c373c7a442ee6dc12
-SHA1 (patch-js_src_vm_StructuredClone.cpp) = 7e992825e996c43419318893b704a2aa380b0d2a
+SHA1 (patch-js_src_vm_StructuredClone.cpp) = e4b1d6e0dd440dafdb2c5a74e8463e0e2b18996a
 SHA1 (patch-js_xpconnect_src_XPCConvert.cpp) = 915777e9bb5366be41866cdb6ea0ad2b1c006dde
 SHA1 (patch-js_xpconnect_src_XPCWrappedNative.cpp) = 6630b8cb20a2a2b8337e8c1250e741fd65be1e54
 SHA1 (patch-js_xpconnect_src_xpcprivate.h) = e09e37819961bae40a9f276ae1ee510d2956c23e
