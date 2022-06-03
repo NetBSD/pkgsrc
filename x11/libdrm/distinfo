@@ -1,15 +1,14 @@
-$NetBSD: distinfo,v 1.100 2022/03/13 15:20:01 tnn Exp $
+$NetBSD: distinfo,v 1.101 2022/06/03 08:30:34 wiz Exp $
 
-BLAKE2s (libdrm-2.4.110.tar.xz) = 3f45410c126cfb5ad5d8166270faa108751c1476c5f3926cc9b471b341147d0b
-SHA512 (libdrm-2.4.110.tar.xz) = 52f92ef1fe4c218a1d7dba53ef43334dbfca80e3209afe59f3a32c4bf67473126534e990df07a931a12d46a3b997c21ef17c1c4d8a0c88d44d5c6c040e3b6be3
-Size (libdrm-2.4.110.tar.xz) = 436372 bytes
+BLAKE2s (libdrm-2.4.111.tar.xz) = 59cab153dd99160dc5e0208bcaf7b2230737cd3ffcd61321b0712b2de36c1b06
+SHA512 (libdrm-2.4.111.tar.xz) = 17e92e9e4ded8031ac222764bed7e9ff430a1a377f5e435f6b62b4a7f45cb4c4b769b3b79fbcba11512c1ac973abf8cdcca8e0b9659ae095e915d3d5efcf5516
+Size (libdrm-2.4.111.tar.xz) = 447388 bytes
 SHA1 (patch-ac) = 67c998df7dfc0dabc86320ea6d015cede3e464ea
 SHA1 (patch-amdgpu_amdgpu__cs.c) = 125eca62cd3e00a6e039066152780174dcde0705
 SHA1 (patch-etnaviv_etnaviv__device.c) = 236b2df05a918c35c4decfee416ff5bfe9c073d4
 SHA1 (patch-exynos_exynos__drm.c) = 3fa4c8a592a5f4e0c4001eb6fa1bc7811e398605
 SHA1 (patch-exynos_exynos__fimg2d.c) = 298438b128bdb4ff57a8c0d7d6a081485e64e49a
 SHA1 (patch-include_drm_drm.h) = 48a912f40bf2b2a1c23edbe4446fa7869212f17b
-SHA1 (patch-libkms_vmwgfx.c) = d2204c0b79098c6c36b7f282b486c58c6354bd1d
 SHA1 (patch-libsync.h) = 1e0603e72a54a069fc9d2ab2c9559d22381a69d3
 SHA1 (patch-meson.build) = b9ebb763a807da931f83f4d5c02925ab5498ef69
 SHA1 (patch-omap_omap__drm.c) = a23eefa9a57315d3ae77e528fd29de70ff9b2648
