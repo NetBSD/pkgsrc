@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2022/05/11 14:16:37 jaapb Exp $
+# $NetBSD: options.mk,v 1.4 2022/06/03 09:25:20 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ocaml-cohttp
 PKG_SUPPORTED_OPTIONS=	lwt js_of_ocaml # async
@@ -21,7 +21,7 @@ PLIST_VARS+=	lwt jsoo # async
 #.include "../../devel/ocaml-base/buildlink3.mk"
 #.include "../../devel/ocaml-core_unix/buildlink3.mk"
 #.include "../../net/ocaml-ipaddr/buildlink3.mk"
-#PLIST.async=	yes
+#PLIST.async=		yes
 #DUNE_BUILD_PACKAGES+=	cohttp-async
 #OPAM_INSTALL_FILES+=	cohttp-async
 #OCAML_FINDLIB_DIRS+=	cohttp-async
