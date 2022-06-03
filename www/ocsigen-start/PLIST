@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/12/11 09:49:37 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.5 2022/06/03 13:23:06 jaapb Exp $
 ${OCAML_SITELIB}/eliom/templates/os.pgocaml/.eliomignore
 ${OCAML_SITELIB}/eliom/templates/os.pgocaml/.eliomreserve
 ${OCAML_SITELIB}/eliom/templates/os.pgocaml/.eliomverbatim
@@ -16,6 +16,7 @@ ${OCAML_SITELIB}/eliom/templates/os.pgocaml/Makefile.os
 ${OCAML_SITELIB}/eliom/templates/os.pgocaml/Makefile.style
 ${OCAML_SITELIB}/eliom/templates/os.pgocaml/PROJECT_NAME.conf.in
 ${OCAML_SITELIB}/eliom/templates/os.pgocaml/PROJECT_NAME.eliom
+${OCAML_SITELIB}/eliom/templates/os.pgocaml/PROJECT_NAME.opam
 ${OCAML_SITELIB}/eliom/templates/os.pgocaml/PROJECT_NAME.sql
 ${OCAML_SITELIB}/eliom/templates/os.pgocaml/PROJECT_NAME_base.eliom
 ${OCAML_SITELIB}/eliom/templates/os.pgocaml/PROJECT_NAME_config.eliom
