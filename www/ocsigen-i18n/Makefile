@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2022/05/24 18:51:56 jaapb Exp $
+# $NetBSD: Makefile,v 1.10 2022/06/03 12:46:25 jaapb Exp $
 
 GITHUB_PROJECT=	ocsigen-i18n
-DISTNAME=	${GITHUB_PROJECT}-3.7.0
-PKGREVISION=	2
+DISTNAME=	${GITHUB_PROJECT}-4.0.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=besport/}
 
@@ -12,21 +11,8 @@ COMMENT=	I18n package for Ocsigen
 LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=		# none
-USE_TOOLS=		gmake
-BUILD_TARGET=		build
-MAKE_ENV=		bindir=${DESTDIR}${PREFIX}/bin
-INSTALLATION_DIRS+=	bin
-
-OCAML_USE_FINDLIB=	yes
-OCAML_FINDLIB_DIRS=	# empty
+OCAML_USE_DUNE=		yes
 
 .include "../../lang/ocaml/ocaml.mk"
-
-.if ${OCAML_USE_OPT_COMPILER} == "yes"
-MAKE_ENV+=	OPTNESS=native
-.else
-MAKE_ENV+=	OPTNESS=byte
-.endif
-
 .include "../../devel/ocaml-ppx_tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
