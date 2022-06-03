@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2022/05/24 18:59:36 jaapb Exp $
+# $NetBSD: Makefile,v 1.37 2022/06/03 12:40:12 jaapb Exp $
 #
 
 GITHUB_PROJECT=	eliom
@@ -17,6 +17,7 @@ OCAML_USE_FINDLIB=	yes
 UNLIMIT_RESOURCES+=	stacksize
 
 DEPENDS+=	ocsigen>=5.0.0:../../www/ocsigen
+DEPENDS+=	ocsipersist>=1.0:../../databases/ocsipersist
 
 .include "../../lang/ocaml/ocaml.mk"
 
