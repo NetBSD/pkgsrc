@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_protobuf-c_Makefile.in,v 1.1 2022/06/03 07:58:34 wiz Exp $
+
+* fix unportable test(1) operator
+
+--- lib/protobuf-c/Makefile.in.orig	2022-03-03 18:29:40.000000000 +0000
++++ lib/protobuf-c/Makefile.in
+@@ -111,7 +111,7 @@ $(devdir)/log_server.pb-c.c: $(srcdir)/l
+ 	    echo "$$cmd"; eval $$cmd; \
+ 	    cmd='$(scriptdir)/unanon $(devdir)/log_server.pb-c.h $(devdir)/log_server.pb-c.c'; \
+ 	    echo "$$cmd"; eval $$cmd; \
+-	    if [ "$(devdir)" == "$(srcdir)" ]; then \
++	    if [ "$(devdir)" = "$(srcdir)" ]; then \
+ 		cmd='mv -f $(devdir)/log_server.pb-c.h $(incdir)/log_server.pb-c.h'; \
+ 	    else \
+ 		cmd='mv -f $(devdir)/log_server.pb-c.h $(top_builddir)/log_server.pb-c.h'; \
