@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/11/16 18:08:36 hiramatsu Exp $
+@comment $NetBSD: PLIST,v 1.8 2022/06/03 08:51:22 wiz Exp $
 bin/labltk
 bin/ocamlbrowser
 lib/ocaml/site-lib/labltk/META
@@ -86,6 +86,7 @@ lib/ocaml/site-lib/labltk/cWinfo.mli
 lib/ocaml/site-lib/labltk/cWm.cmi
 lib/ocaml/site-lib/labltk/cWm.mli
 lib/ocaml/site-lib/labltk/camltk.cmi
+lib/ocaml/site-lib/labltk/camltkwrap.cmi
 lib/ocaml/site-lib/labltk/canvas.cmi
 lib/ocaml/site-lib/labltk/canvas.mli
 lib/ocaml/site-lib/labltk/checkbutton.cmi
