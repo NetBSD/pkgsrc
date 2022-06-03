@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.143 2022/05/01 09:45:42 wiz Exp $
+# $NetBSD: Makefile,v 1.144 2022/06/03 08:21:55 wiz Exp $
 
 DISTNAME=	coq-8.12.2
 PKGREVISION=	4
@@ -12,6 +12,8 @@ COMMENT=	Theorem prover which extracts programs from proofs
 LICENSE=	gnu-lgpl-v2.1
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV:S/+/-/}
+
+BROKEN=		"does not support ocaml 4.14"
 
 USE_TOOLS+=		bash
 USE_TOOLS+=		gmake
