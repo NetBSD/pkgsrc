@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1629 2022/05/31 20:56:34 markd Exp $
+# $NetBSD: Makefile,v 1.1630 2022/06/04 10:01:47 jaapb Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -255,6 +255,7 @@ SUBDIR+=	ocaml-http
 SUBDIR+=	ocaml-uri
 SUBDIR+=	ocsigen
 SUBDIR+=	ocsigen-i18n
+SUBDIR+=	ocsigen-ppx-rpc
 SUBDIR+=	ocsigen-start
 SUBDIR+=	ocsigen-toolkit
 SUBDIR+=	otter-browser
