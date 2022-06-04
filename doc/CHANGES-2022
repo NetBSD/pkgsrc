@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2884 2022/06/04 10:44:42 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2885 2022/06/04 13:22:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4374,3 +4374,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated math/kalker to 2.0.0 [pin 2022-06-04]
 	Added www/ocsigen-ppx-rpc version 1.0 [jaapb 2022-06-04]
 	Updated devel/coccinelle to 1.1.1 [wiz 2022-06-04]
+	Updated textproc/docbook-xsl to 1.79.2nb6 [wiz 2022-06-04]
