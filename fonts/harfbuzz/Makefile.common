@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2022/05/28 09:17:52 wiz Exp $
+# $NetBSD: Makefile.common,v 1.20 2022/06/04 13:49:15 wiz Exp $
 # used by fonts/harfbuzz-icu/Makefile
 
 DISTNAME=	harfbuzz-4.3.0
@@ -38,7 +38,7 @@ PLIST.graphite2=	yes
 MESON_ARGS+=		-Dgraphite=disabled
 .endif
 
-PLIST_SUBST=	SOVER=${PKGVERSION_NOREV:S/./0/g}
+PLIST_SUBST=		SOVER=${PKGVERSION_NOREV:S/./0/g}
 PKGCONFIG_OVERRIDE+=	output/meson-private/*.pc
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
