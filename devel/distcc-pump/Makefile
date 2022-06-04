@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2022/03/29 18:16:25 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2022/06/04 18:54:38 adam Exp $
 
-PKGNAME=	${DISTNAME:S/-/-pump-/:S/rc1//}
-PKGREVISION=	3
+PKGNAME=	${DISTNAME:S/-/-pump-/}
 COMMENT=	Accelerated remote compilation with distcc
 
 .include "../../devel/distcc/Makefile.common"
@@ -12,7 +11,7 @@ PY_PATCHPLIST=		yes
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# check patch-ae for build and install targets
+# check patch-Makefile.in for build and install targets
 BUILD_TARGET=		pump include-server
 INSTALL_TARGET=		install-include-server
 
