@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/03/03 14:51:57 taca Exp $
+# $NetBSD: Makefile,v 1.1.26.1 2022/06/04 09:00:31 spz Exp $
 
 DISTNAME=	actionpack-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-actionpack${RUBY_RAILS}-${RAILS_VERSION}
@@ -13,7 +13,7 @@ DEPENDS+=	${RUBY_ACTIONVIEW_DEPENDS}
 DEPENDS+=	${RUBY_PKGPREFIX}-rack>=2.0:../../www/ruby-rack
 DEPENDS+=	${RUBY_PKGPREFIX}-rack-test>=0.6.3:../../www/ruby-rack-test
 # ruby-actionview already depends them.
-#DEPENDS+=	${RUBY_PKGPREFIX}-rails-dom-testing1>=2.0:../../textproc/ruby-rails-dom-testing
+#DEPENDS+=	${RUBY_PKGPREFIX}-rails-dom-testing>=2.0:../../textproc/ruby-rails-dom-testing
 #DEPENDS+=	${RUBY_PKGPREFIX}-rails-html-sanitizer>=1.0.2:../../www/ruby-rails-html-sanitizer
 
 USE_LANGUAGES=	# none
