@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2022/04/18 11:18:17 adam Exp $
+$NetBSD: distinfo,v 1.11 2022/06/04 06:07:27 adam Exp $
 
-BLAKE2s (qtscxml-everywhere-opensource-src-5.15.3.tar.xz) = 23b7c7a9ed28c6b9b2e2fbe795aec8df605b374968066d2f0f4bcdc022c09d95
-SHA512 (qtscxml-everywhere-opensource-src-5.15.3.tar.xz) = 59b4f2f5bf86a6528cbcffa64a1f3d300fde8509f94c95956558f8643d8f4d093609f4f6d4c095a58e5ea639619f7fd0da6046b2cb72c3cf505859de83aa05d1
-Size (qtscxml-everywhere-opensource-src-5.15.3.tar.xz) = 434432 bytes
+BLAKE2s (qtscxml-everywhere-opensource-src-5.15.4.tar.xz) = 631649c767ff881121709662439765e2a041935b9eea92dbd7ac21448cc8b7a1
+SHA512 (qtscxml-everywhere-opensource-src-5.15.4.tar.xz) = 2664e4e707fd10aa2ef832fdfc133695da3f6f80c2a611dc94b4e22b34c3226d5baa1e5afc77db2115317c654460ebb60896c006aa93b324fe67d6860ae9b431
+Size (qtscxml-everywhere-opensource-src-5.15.4.tar.xz) = 435952 bytes

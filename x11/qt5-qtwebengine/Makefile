@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2022/05/13 18:08:07 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2022/06/04 06:07:28 adam Exp $
 
 DISTNAME=	qtwebengine-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtwebengine-${QTVERSION}
-PKGREVISION=	2
 COMMENT=	Chromium-based web engine for Qt5
 
 MAKE_ENV+=		QTDIR=${QTDIR}
@@ -22,7 +21,7 @@ TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 TOOL_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 TOOL_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
-BUILD_DEPENDS+=	nodejs>=14<16:../../lang/nodejs14
+BUILD_DEPENDS+=	nodejs>=14:../../lang/nodejs
 
 #JPEG_ACCEPTED=	libjpeg-turbo
 
@@ -92,11 +91,11 @@ post-install:
 #.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
-.include "../../multimedia/ffmpeg4/buildlink3.mk"
-.include "../../multimedia/libvpx/buildlink3.mk"
 PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../lang/python/tool.mk"
+.include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../print/libcups/buildlink3.mk"
 .include "../../print/poppler-cpp/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pciutils+=	pciutils>=3.8
