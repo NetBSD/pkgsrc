@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2882 2022/06/04 06:29:49 pin Exp $
+$NetBSD: CHANGES-2022,v 1.2883 2022/06/04 10:01:15 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4372,3 +4372,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated sysutils/xfce4-taskmanager to 1.5.4 [gutteridge 2022-06-04]
 	Updated x11/qt5 to 5.15.4 [adam 2022-06-04]
 	Updated math/kalker to 2.0.0 [pin 2022-06-04]
+	Added www/ocsigen-ppx-rpc version 1.0 [jaapb 2022-06-04]
