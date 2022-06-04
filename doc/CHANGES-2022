@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2887 2022/06/04 13:49:26 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2888 2022/06/04 19:02:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4377,3 +4377,7 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated textproc/docbook-xsl to 1.79.2nb6 [wiz 2022-06-04]
 	Updated textproc/gtk-doc to 1.32nb9 [wiz 2022-06-04]
 	Updated fonts/harfbuzz to 4.3.0nb1 [wiz 2022-06-04]
+	Updated devel/distcc to 3.4 [adam 2022-06-04]
+	Updated textproc/py-tomlkit to 0.11.0 [adam 2022-06-04]
+	Updated textproc/py-elementpath to 2.5.3 [adam 2022-06-04]
+	Updated www/py-nbclient to 0.6.4 [adam 2022-06-04]
