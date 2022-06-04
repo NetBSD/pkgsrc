@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2021/12/08 16:03:55 adam Exp $
+# $NetBSD: Makefile,v 1.47 2022/06/04 18:54:38 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-gtk-/}
-PKGREVISION=	7
 COMMENT=	Graphical monitor for distcc, the distributed C/C++ compiler
 
 .include "../../devel/distcc/Makefile.common"
@@ -21,10 +20,10 @@ INSTALLATION_DIRS+=	share/distcc
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/distccmon-gnome \
 		${DESTDIR}${PREFIX}/bin/distccmon-gtk
-	${INSTALL_DATA} ${WRKSRC}/gnome/distccmon-gnome-icon.png \
-		${DESTDIR}${PREFIX}/share/distcc/distccmon-gtk-icon.png
+	${INSTALL_DATA} ${WRKSRC}/gnome/distccmon-gnome.png \
+		${DESTDIR}${PREFIX}/share/distcc/distccmon-gtk.png
 	${INSTALL_DATA} ${WRKSRC}/gnome/distccmon-gnome.desktop \
 		${DESTDIR}${PREFIX}/share/distcc/distccmon-gtk.desktop
 
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
