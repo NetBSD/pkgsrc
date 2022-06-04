@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.76 2021/05/24 19:54:23 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2022/06/04 13:22:15 wiz Exp $
 
 DISTNAME=	docbook-xsl-nons-1.79.2
 PKGNAME=	${DISTNAME:S/-nons//}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=docbook/}
 GITHUB_PROJECT=	xslt10-stylesheets
