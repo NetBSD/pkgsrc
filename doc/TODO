@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21928 2022/06/04 10:44:42 wiz Exp $
+$NetBSD: TODO,v 1.21929 2022/06/04 19:02:42 adam Exp $
 
 Suggested new packages
 ======================
@@ -598,7 +598,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dikt-2s1
 	o direnv-2.28.0
 	o direvent-5.2
-	o distcc-3.3.5
 	o distcc-pump-3.3.5
 	o distccmon-gnome-3.3.5
 	o distccmon-gtk-3.3.5
