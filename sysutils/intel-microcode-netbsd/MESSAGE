@@ -1,7 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2018/08/28 03:48:25 ryoon Exp $
+$NetBSD: MESSAGE,v 1.4 2022/06/04 01:12:57 gutteridge Exp $
 
 To use ${PKGNAME} to update your system's microcode,
 be sure that sysctl hw.firmware.path includes your pkgsrc prefix.
+
+A sample rc.d file to apply updates during the boot process is found at:
+${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}
+You will likely want to add this to your system's rc.d configuration.
 
 ===========================================================================
