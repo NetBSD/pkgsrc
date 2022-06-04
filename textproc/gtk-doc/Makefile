@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.88 2022/04/18 19:12:10 adam Exp $
+# $NetBSD: Makefile,v 1.89 2022/06/04 13:35:20 wiz Exp $
 
 DISTNAME=	gtk-doc-1.32
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-doc/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.xz
@@ -12,7 +12,7 @@ COMMENT=	Tools for authors of the GTK+ reference documentation
 LICENSE=	gnu-gpl-v3 AND gnu-fdl-v1.1
 
 DEPENDS+=	docbook-xml>=4.4nb1:../../textproc/docbook-xml
-DEPENDS+=	docbook-xsl>=1.68.1:../../textproc/docbook-xsl
+DEPENDS+=	docbook-xsl>=1.79.2nb6:../../textproc/docbook-xsl
 DEPENDS+=	${PYPKGPREFIX}-anytree-[0-9]*:../../devel/py-anytree
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
