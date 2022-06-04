@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2879 2022/06/04 00:18:48 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.2880 2022/06/04 00:32:55 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4369,3 +4369,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated www/firefox52 to 52.9.0nb44 [martin 2022-06-03]
 	Updated geography/geos to 3.10.3 [gdt 2022-06-03]
 	Updated x11/xfce4-terminal to 1.0.4 [gutteridge 2022-06-04]
+	Updated sysutils/xfce4-taskmanager to 1.5.4 [gutteridge 2022-06-04]
