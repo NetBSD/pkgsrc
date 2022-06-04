@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2022/04/18 11:18:16 adam Exp $
+$NetBSD: distinfo,v 1.25 2022/06/04 06:07:26 adam Exp $
 
-BLAKE2s (qtmultimedia-everywhere-opensource-src-5.15.3.tar.xz) = fa4b88f0ad92efdbe057c6963c5465bad7640311e348620c607fdd206ca4c2e8
-SHA512 (qtmultimedia-everywhere-opensource-src-5.15.3.tar.xz) = 8206df23a84ce77d234a97cd4847f7185d7b5ca2c6bf1cd48dc19c833a302f92f85c53d8bccd4bcfbfb6cdc82c2246b2fb62400eefd5d4b152e95e378dded668
-Size (qtmultimedia-everywhere-opensource-src-5.15.3.tar.xz) = 3828384 bytes
+BLAKE2s (qtmultimedia-everywhere-opensource-src-5.15.4.tar.xz) = b76e7c315b91031eac966e6b04163ffd645e906adebaf806428459c1a5a2609b
+SHA512 (qtmultimedia-everywhere-opensource-src-5.15.4.tar.xz) = bb0ada7560093b89751b5b3c0e1a573de215a388d621d356bc3c0e1acfffc2d696230c67b7a7cef037b18c4da900c7eb3d315bd2e73ce12f9aedd0e340399117
+Size (qtmultimedia-everywhere-opensource-src-5.15.4.tar.xz) = 3833720 bytes

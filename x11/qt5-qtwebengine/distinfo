@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2022/05/13 18:08:07 wiz Exp $
+$NetBSD: distinfo,v 1.7 2022/06/04 06:07:28 adam Exp $
 
-BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.3.tar.xz) = 3eea494991a48b3029627944eb1518860e69566d60440f8270bc9696231ce037
-SHA512 (qtwebengine-everywhere-opensource-src-5.15.3.tar.xz) = d4d10f2f95437042dfc67cc9826e8e27d390f986a1202f1bd5a765ea1b985e93158bde3068410f0a84b268de50c3e6fc9f67c4419224caa6b87b940d70d0869c
-Size (qtwebengine-everywhere-opensource-src-5.15.3.tar.xz) = 316210908 bytes
+BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.4.tar.xz) = ac874d3d669f78aa55437664bd9dc2457ea03d93d869ad48118c277446fa87d1
+SHA512 (qtwebengine-everywhere-opensource-src-5.15.4.tar.xz) = 935c5a21ec2529d8cc3dbaf906e1f68f6e0879da212719d2da9fc1c97efd572563e8d12a6742a0a995efa5014ce5378235833eafb8d463ebe4060b60a590c476
+Size (qtwebengine-everywhere-opensource-src-5.15.4.tar.xz) = 316231408 bytes
 SHA1 (patch-mkspecs_features_functions.prf) = e9c7a9c348cc7b9d09232f4b03f0a8282e9bfeb5
 SHA1 (patch-src_3rdparty_chromium_BUILD.gn) = 97fbda3bd2dc44d4ae97b650240e61516cd108f4
 SHA1 (patch-src_3rdparty_chromium_base_BUILD.gn) = 839b97c34e0aaf1309c89af6c9f8e65ebf77a7e5
@@ -128,7 +128,7 @@ SHA1 (patch-src_3rdparty_chromium_chrome_browser_extensions_api_settings__privat
 SHA1 (patch-src_3rdparty_chromium_chrome_browser_extensions_api_webrtc__logging__private_webrtc__logging__private__api.cc) = 5d083f0af7ae053709e9c5fda6cf2d1994ffcb96
 SHA1 (patch-src_3rdparty_chromium_chrome_browser_media_webrtc_webrtc__event__log__uploader.cc) = b02078dbb09dc040da5d76ec2332fcae065e29c0
 SHA1 (patch-src_3rdparty_chromium_chrome_browser_media_webrtc_webrtc__log__uploader.cc) = d4bc7ce5ba141d22b4978888866ba390e6902e27
-SHA1 (patch-src_3rdparty_chromium_chrome_browser_media_webrtc_webrtc__logging__controller.cc) = b0366e19e438432633a5e34da40db12df5cb34f7
+SHA1 (patch-src_3rdparty_chromium_chrome_browser_media_webrtc_webrtc__logging__controller.cc) = b89be9162e5c1249b16039c71c24cfc142c1f77d
 SHA1 (patch-src_3rdparty_chromium_chrome_browser_media_webrtc_webrtc__logging__controller.h) = 05b732c7c3fcac347e75444741549070ca747bba
 SHA1 (patch-src_3rdparty_chromium_chrome_browser_net_system__network__context__manager.cc) = 9ed6c36b70f0a4db4e754fbd5c3865f988fdda90
 SHA1 (patch-src_3rdparty_chromium_chrome_browser_prefs_browser__prefs.cc) = 50c34144e19524f7357957f36e6617f4cc168c3d
@@ -591,7 +591,7 @@ SHA1 (patch-src_3rdparty_chromium_third__party_libpng_pnglibconf.h) = 131371c66b
 SHA1 (patch-src_3rdparty_chromium_third__party_libxml_BUILD.gn) = 3fb0071a56dcfcd8ea10640fd2f1d372dc2ec564
 SHA1 (patch-src_3rdparty_chromium_third__party_libxml_src_encoding.c) = 94eeadd0c4777fcd4597eed9550191b8500922ef
 SHA1 (patch-src_3rdparty_chromium_third__party_libxslt_BUILD.gn) = 9b5a87f7997f57cfefcf32e06b0ba171cc915821
-SHA1 (patch-src_3rdparty_chromium_third__party_libyuv_BUILD.gn) = 6409f4493f59ce8cc75ee747fd0246f357409951
+SHA1 (patch-src_3rdparty_chromium_third__party_libyuv_BUILD.gn) = 896dba64969d78f6f968bdbfc0bef2f42893f999
 SHA1 (patch-src_3rdparty_chromium_third__party_minigbm_BUILD.gn) = 6eebeab3d0fa62752c54435658610149e406ef18
 SHA1 (patch-src_3rdparty_chromium_third__party_nasm_config_config-linux.h) = 91d1feb0cc92cb3d8cdc398256418e64afd01562
 SHA1 (patch-src_3rdparty_chromium_third__party_node_node.py) = 84be875a18bf81b721c9b723c44ef0cbec2afb8c
