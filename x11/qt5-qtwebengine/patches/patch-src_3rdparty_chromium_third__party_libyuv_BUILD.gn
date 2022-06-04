@@ -1,31 +1,31 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_libyuv_BUILD.gn,v 1.1 2021/08/03 21:04:36 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_libyuv_BUILD.gn,v 1.2 2022/06/04 06:07:28 adam Exp $
 
---- src/3rdparty/chromium/third_party/libyuv/BUILD.gn.orig	2020-07-15 19:01:37.000000000 +0000
+--- src/3rdparty/chromium/third_party/libyuv/BUILD.gn.orig	2021-05-11 13:12:17.000000000 +0000
 +++ src/3rdparty/chromium/third_party/libyuv/BUILD.gn
-@@ -312,7 +312,7 @@ if (libyuv_include_tests) {
-     ]
+@@ -304,7 +304,7 @@ if (libyuv_include_tests) {
+     public_deps = [ "//testing/gtest" ]
      public_configs = [ ":libyuv_unittest_config" ]
  
--    if (is_linux) {
-+    if (is_linux || is_bsd) {
+-    if (is_linux || is_chromeos) {
++    if (is_linux || is_chromeos || is_bsd) {
        cflags = [ "-fexceptions" ]
      }
      if (is_ios) {
-@@ -352,7 +352,7 @@ if (libyuv_include_tests) {
-     deps = [
-       ":libyuv",
+@@ -342,7 +342,7 @@ if (libyuv_include_tests) {
+       "util/compare.cc",
      ]
--    if (is_linux) {
-+    if (is_linux || is_bsd) {
+     deps = [ ":libyuv" ]
+-    if (is_linux || is_chromeos) {
++    if (is_linux || is_chromeos || is_bsd) {
        cflags = [ "-fexceptions" ]
      }
    }
-@@ -365,7 +365,7 @@ if (libyuv_include_tests) {
-     deps = [
-       ":libyuv",
+@@ -353,7 +353,7 @@ if (libyuv_include_tests) {
+       "util/yuvconvert.cc",
      ]
--    if (is_linux) {
-+    if (is_linux || is_bsd) {
+     deps = [ ":libyuv" ]
+-    if (is_linux || is_chromeos) {
++    if (is_linux || is_chromeos || is_bsd) {
        cflags = [ "-fexceptions" ]
      }
    }
