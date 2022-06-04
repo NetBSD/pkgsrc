@@ -1,6 +1,7 @@
-$NetBSD: patch-configure.ac,v 1.1 2022/06/04 10:44:31 wiz Exp $
+$NetBSD: patch-configure.ac,v 1.2 2022/06/04 10:47:48 wiz Exp $
 
 Fix unportable test(1) operator.
+https://github.com/coccinelle/coccinelle/pull/280
 
 --- configure.ac.orig	2021-09-06 11:24:20.000000000 +0000
 +++ configure.ac
