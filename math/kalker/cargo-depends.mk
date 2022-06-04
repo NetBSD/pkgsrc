@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2022/01/03 12:19:38 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2022/06/04 06:29:28 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-0.7.15
 CARGO_CRATE_DEPENDS+=	ansi_term-0.12.1
@@ -17,7 +17,7 @@ CARGO_CRATE_DEPENDS+=	dirs-sys-next-0.1.1
 CARGO_CRATE_DEPENDS+=	fs2-0.4.3
 CARGO_CRATE_DEPENDS+=	getrandom-0.1.15
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.3
-CARGO_CRATE_DEPENDS+=	gmp-mpfr-sys-1.4.7
+CARGO_CRATE_DEPENDS+=	gmp-mpfr-sys-1.4.8
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.1.18
 CARGO_CRATE_DEPENDS+=	js-sys-0.3.46
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
