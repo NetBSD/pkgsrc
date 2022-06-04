@@ -1,16 +1,15 @@
-# $NetBSD: Makefile.common,v 1.13 2018/07/11 07:30:40 adam Exp $
+# $NetBSD: Makefile.common,v 1.14 2022/06/04 18:54:38 adam Exp $
 # used by devel/distcc-pump/Makefile
 # used by devel/distccmon-gnome/Makefile
 # used by devel/distccmon-gtk/Makefile
 
-DISTNAME=	distcc-3.3
+DISTNAME=	distcc-3.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=distcc/}
-GITHUB_PROJECT=	distcc
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/distcc/distcc
+HOMEPAGE=	https://www.distcc.org/
 LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=		${.CURDIR}/../../devel/distcc/distinfo
