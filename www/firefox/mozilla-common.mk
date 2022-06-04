@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.230 2022/05/19 10:20:16 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.231 2022/06/04 01:00:16 gutteridge Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -115,6 +115,8 @@ CONFIGURE_ARGS+=	--with-libclang-path=${PREFIX}/lib
 BUILD_DEPENDS+=		lld-[0-9]*:../../devel/lld
 .include "../../lang/wasi-libc/buildlink3.mk"
 .include "../../lang/wasi-libcxx/buildlink3.mk"
+# NB the exact versions of the clang and wasi-compiler-rt dependencies must
+# be kept in sync, or build failures will occur due to path mismatches.
 .include "../../lang/wasi-compiler-rt/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-wasi-sysroot=${PREFIX}/wasi
 CONFIGURE_ENV+=		WASM_CC=${PREFIX}/bin/clang
