@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2022/06/04 10:01:02 jaapb Exp $
+${OCAML_SITELIB}/ocsigen-ppx-rpc/META
+${OCAML_SITELIB}/ocsigen-ppx-rpc/dune-package
+${OCAML_SITELIB}/ocsigen-ppx-rpc/opam
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-ppx-rpc/ppx_rpc.a
+${OCAML_SITELIB}/ocsigen-ppx-rpc/ppx_rpc.cma
+${OCAML_SITELIB}/ocsigen-ppx-rpc/ppx_rpc.cmi
+${OCAML_SITELIB}/ocsigen-ppx-rpc/ppx_rpc.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-ppx-rpc/ppx_rpc.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-ppx-rpc/ppx_rpc.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigen-ppx-rpc/ppx_rpc.cmxs
+${OCAML_SITELIB}/ocsigen-ppx-rpc/ppx_rpc.ml
+share/doc/ocsigen-ppx-rpc/LICENSE
+share/doc/ocsigen-ppx-rpc/README.md
