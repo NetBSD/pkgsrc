@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:14:26 nia Exp $
+$NetBSD: distinfo,v 1.15 2022/06/04 10:44:31 wiz Exp $
 
-BLAKE2s (coccinelle-1.0.0-rc17.tgz) = 403042e1214e9700e2a098403fa07169c7ff41c9bf22d9bea75115c73979f138
-SHA512 (coccinelle-1.0.0-rc17.tgz) = 79f7b83458b5229e6a01e9e4a89a47862ca9a9f678e0e599b253449c07d8197194539623049920e8ce23af44d81a91d61052f542bacb40a0eda9c015b1b2e84d
-Size (coccinelle-1.0.0-rc17.tgz) = 2991126 bytes
-SHA1 (patch-Makefile) = 5708ac8ee4af869e8b9b03d309daf5ca67e3f162
+BLAKE2s (coccinelle-1.1.1.tar.gz) = 708c24fc57f1cebb3502c9503e7c0119318b0b5b37a6d7805f1cf3306f970e81
+SHA512 (coccinelle-1.1.1.tar.gz) = f935aef406d3356a8e3d08fa7dacd6dd8d49aeb3f00668b775a63881b8d8a259acbbaa21348cb32a8a1cc5cf13dcf10d7e871de0f7c0abb6e45eac24e892df98
+Size (coccinelle-1.1.1.tar.gz) = 2743457 bytes
+SHA1 (patch-configure.ac) = c0457178b96223e6237bde106fdfc018371435e6

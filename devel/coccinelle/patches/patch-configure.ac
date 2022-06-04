@@ -1,0 +1,19 @@
+$NetBSD: patch-configure.ac,v 1.1 2022/06/04 10:44:31 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- configure.ac.orig	2021-09-06 11:24:20.000000000 +0000
++++ configure.ac
+@@ -331,10 +331,10 @@ AS_IF([test "x$enable_pcre_syntax" != "x
+   ],
+   [dnl
+     AC_CHECK_COCCI_EXTPKG([pcre])  dnl  will set $enable_pcre to 'yes', 'no', or 'local'
+-    AS_IF([test "x$enable_pcre" == "xyes"],
++    AS_IF([test "x$enable_pcre" = "xyes"],
+     [dnl
+       AC_MSG_CHECKING([if pcre depends on bytes])
+-      AS_IF([test "x`$OCAMLFIND query -r -format '%p' pcre 2>/dev/null | grep bytes`" == "xbytes"],
++      AS_IF([test "x`$OCAMLFIND query -r -format '%p' pcre 2>/dev/null | grep bytes`" = "xbytes"],
+       [dnl
+         AC_MSG_RESULT([yes])
+         AC_MSG_CHECKING([if bytes is an actual module])
