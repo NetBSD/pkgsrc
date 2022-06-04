@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2022/06/04 10:01:02 jaapb Exp $
+
+BLAKE2s (ocsigen-ppx-rpc/ocsigen-ppx-rpc-1.0.tar.gz) = 79b4e9914558fc7787ab0609dee06bbfe1c55dc062d79f1d64cdfefedf039bfc
+SHA512 (ocsigen-ppx-rpc/ocsigen-ppx-rpc-1.0.tar.gz) = a4399b48b7ff0fc62a9ec69b0b982350b39cfb5b18d4a13f9aee3e68b78b4a61d65d02d5d8cd08745455a417a44f964c69b6b8709494cf4de57dbf2700cdef68
+Size (ocsigen-ppx-rpc/ocsigen-ppx-rpc-1.0.tar.gz) = 13980 bytes
