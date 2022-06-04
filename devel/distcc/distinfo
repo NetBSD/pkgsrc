@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.26 2021/10/26 10:14:33 nia Exp $
+$NetBSD: distinfo,v 1.27 2022/06/04 18:54:38 adam Exp $
 
-BLAKE2s (distcc-3.3.tar.gz) = afa92b9ece31c95050599a0f90cecc8e798902430bf378cc998bb29c9e82ab57
-SHA512 (distcc-3.3.tar.gz) = 459c175c8ac905bc70299e77ac11b6d24782bd69c9152126249c9af8fbb4c269e6f7317b02abf50cf6cc0405dd0f887e803320e19dc528a19c4c488640c615dc
-Size (distcc-3.3.tar.gz) = 1171281 bytes
-SHA1 (patch-Makefile.in) = c5da08b6269413857b04854592b0271d76337982
+BLAKE2s (distcc-3.4.tar.gz) = 40708a4d4ad89735599859bcddb1212cf81f1790b926970b4702e00a23932e0f
+SHA512 (distcc-3.4.tar.gz) = de09329fdfa25e08a9b9529190ddaa9ceccb34c8655692edb86f367a8db4a71b750c6e928cb8e5a670f51fbbc02fd1c8524f72e01b3ebaacc1106dc676d18eef
+Size (distcc-3.4.tar.gz) = 1239519 bytes
+SHA1 (patch-Makefile.in) = eab49edbb4a434e8bc9af11d0c873ce27757614c
 SHA1 (patch-aa) = f459c5e80a60b80f391d9d6c37d8ad2574740372
 SHA1 (patch-ab) = c3a306be0a3576b33f506bd6516d8242ceec07ca
 SHA1 (patch-ac) = 618015e2954dc54c6db3712381749feb17106647
