@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/05/24 18:51:53 jaapb Exp $
+# $NetBSD: Makefile,v 1.21 2022/06/04 09:03:51 wiz Exp $
 
 DISTNAME=	dose3-5.0.1
 PKGREVISION=	7
@@ -30,6 +30,5 @@ pre-configure:
 .include "../../devel/ocaml-re/buildlink3.mk"
 .include "../../devel/ocamlbuild/buildlink3.mk"
 .include "../../devel/ocamlgraph/buildlink3.mk"
-#.include "../../lang/camlp4/buildlink3.mk"
 .include "../../misc/ocaml-cudf/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
