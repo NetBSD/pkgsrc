@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2022/01/05 01:14:22 gutteridge Exp $
+# $NetBSD: Makefile,v 1.27 2022/06/04 00:32:33 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	1.5.2
+VERSION=	1.5.4
 DISTNAME=	xfce4-taskmanager-${VERSION}
 CATEGORIES=	sysutils
 MASTER_SITES=	https://archive.xfce.org/src/apps/xfce4-taskmanager/${VERSION:R}/
