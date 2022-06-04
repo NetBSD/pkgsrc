@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2886 2022/06/04 13:35:33 wiz Exp $
+$NetBSD: CHANGES-2022,v 1.2887 2022/06/04 13:49:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4376,3 +4376,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated devel/coccinelle to 1.1.1 [wiz 2022-06-04]
 	Updated textproc/docbook-xsl to 1.79.2nb6 [wiz 2022-06-04]
 	Updated textproc/gtk-doc to 1.32nb9 [wiz 2022-06-04]
+	Updated fonts/harfbuzz to 4.3.0nb1 [wiz 2022-06-04]
