@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2878 2022/06/03 20:01:41 gdt Exp $
+$NetBSD: CHANGES-2022,v 1.2879 2022/06/04 00:18:48 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4368,3 +4368,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated net/vultr-cli to 2.14.1 [tpaul 2022-06-03]
 	Updated www/firefox52 to 52.9.0nb44 [martin 2022-06-03]
 	Updated geography/geos to 3.10.3 [gdt 2022-06-03]
+	Updated x11/xfce4-terminal to 1.0.4 [gutteridge 2022-06-04]
