@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2022/06/05 14:17:27 adam Exp $
+include/botan-2/botan/certstor_macos.h
