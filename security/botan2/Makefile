@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/04/01 08:01:11 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2022/06/05 14:17:27 adam Exp $
 
 DISTNAME=	Botan-2.19.1
 PKGNAME=	${DISTNAME:tl}
@@ -26,7 +26,7 @@ REPLACE_PYTHON+=	*.py src/scripts/*.py
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
-CONFIGURE_ARGS+=	--cc-bin=${CXX} --cc=clang
+CONFIGURE_ARGS+=	--cc-bin=${CXX:Q} --cc=clang
 .else
 CONFIGURE_ARGS+=	--cc=gcc
 .endif
