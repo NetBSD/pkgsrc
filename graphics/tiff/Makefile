@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2022/05/29 12:24:16 gdt Exp $
+# $NetBSD: Makefile,v 1.154 2022/06/05 14:02:44 gdt Exp $
 
 VERSION_BASE=	4.4.0
 # Accomodate testing unreleased versions.
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/tiff-${VERSION_BASE}
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c99 c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-rpath
