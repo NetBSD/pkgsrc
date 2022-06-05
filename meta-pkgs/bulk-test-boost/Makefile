@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/05/24 07:27:25 nia Exp $
+# $NetBSD: Makefile,v 1.12 2022/06/05 14:18:39 adam Exp $
 
 DISTNAME=	bulk-test-boost-20220524
 CATEGORIES=	meta-pkgs
@@ -22,7 +22,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 BUILD_DEPENDS+=		abiword-[0-9]*:../../editors/abiword
 BUILD_DEPENDS+=		bitcoin-[0-9]*:../../finance/bitcoin
 BUILD_DEPENDS+=		blender-[0-9]*:../../graphics/blender
-BUILD_DEPENDS+=		botan>=2.11:../../security/botan-devel
+BUILD_DEPENDS+=		botan>=2.11:../../security/botan2
 BUILD_DEPENDS+=		dnsdist-[0-9]*:../../net/dnsdist
 BUILD_DEPENDS+=		emulationstation-[0-9]*:../../emulators/emulationstation
 BUILD_DEPENDS+=		gnucash-[0-9]*:../../finance/gnucash
