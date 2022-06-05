@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2022/03/10 16:43:11 nia Exp $
+# $NetBSD: Makefile,v 1.35.2.1 2022/06/05 13:25:24 spz Exp $
 
 GCC_PKGNAME=		gcc6
 .include		"version.mk"
@@ -21,6 +21,8 @@ LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 DISTFILES=		${DEFAULT_DISTFILES}
 EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 
+# RELRO not applied correctly (needs investigation)
+RELRO_SUPPORTED=	no
 # Relocations result in a linker error on AArch64, but not x86.
 MKPIE_SUPPORTED=	no
 CHECK_RELRO_SKIP+=	${GCC_PKGNAME}/lib/*
