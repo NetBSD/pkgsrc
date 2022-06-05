@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/06/29 23:38:01 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.6 2022/06/05 18:39:14 gutteridge Exp $
 lib/xfce4/panel/plugins/libeyes.la
 share/icons/hicolor/16x16/apps/xfce4-eyes.png
 share/icons/hicolor/22x22/apps/xfce4-eyes.png
@@ -17,6 +17,7 @@ share/locale/da/LC_MESSAGES/xfce4-eyes-plugin.mo
 share/locale/de/LC_MESSAGES/xfce4-eyes-plugin.mo
 share/locale/el/LC_MESSAGES/xfce4-eyes-plugin.mo
 share/locale/en_AU/LC_MESSAGES/xfce4-eyes-plugin.mo
+share/locale/en_CA/LC_MESSAGES/xfce4-eyes-plugin.mo
 share/locale/en_GB/LC_MESSAGES/xfce4-eyes-plugin.mo
 share/locale/eo/LC_MESSAGES/xfce4-eyes-plugin.mo
 share/locale/es/LC_MESSAGES/xfce4-eyes-plugin.mo
@@ -70,6 +71,9 @@ share/xfce4/eyes/themes/Bizarre/config
 share/xfce4/eyes/themes/Bloodshot/Bloodshot-eye.png
 share/xfce4/eyes/themes/Bloodshot/Bloodshot-pupil.png
 share/xfce4/eyes/themes/Bloodshot/config
+share/xfce4/eyes/themes/Chibi/chibi-eye.png
+share/xfce4/eyes/themes/Chibi/chibi-pupil.png
+share/xfce4/eyes/themes/Chibi/config
 share/xfce4/eyes/themes/Default-tiny/Default-tiny-eye.png
 share/xfce4/eyes/themes/Default-tiny/Default-tiny-pupil.png
 share/xfce4/eyes/themes/Default-tiny/config
