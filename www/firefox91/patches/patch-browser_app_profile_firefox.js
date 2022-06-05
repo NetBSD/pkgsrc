@@ -1,8 +1,11 @@
-$NetBSD: patch-browser_app_profile_firefox.js,v 1.1 2021/09/08 22:19:50 nia Exp $
+$NetBSD: patch-browser_app_profile_firefox.js,v 1.1.6.1 2022/06/05 06:09:37 spz Exp $
 
---- browser/app/profile/firefox.js.orig	2019-07-06 01:48:29.000000000 +0000
+This patch modifies default Firefox settings - see the comments above
+each one.
+
+--- browser/app/profile/firefox.js.orig	2022-04-28 23:01:46.000000000 +0000
 +++ browser/app/profile/firefox.js
-@@ -1851,6 +1851,12 @@ pref("fission.frontend.simulate-messages
+@@ -2205,6 +2205,20 @@ pref("fission.frontend.simulate-messages
  pref("toolkit.coverage.enabled", false);
  pref("toolkit.coverage.endpoint.base", "https://coverage.mozilla.org");
  
@@ -11,6 +14,14 @@ $NetBSD: patch-browser_app_profile_firefox.js,v 1.1 2021/09/08 22:19:50 nia Exp 
 +
 +// Enable system addons, for example langpacks from www/firefox-l10n
 +pref("extensions.autoDisableScopes", 11);
++
++// Firefox includes a complex mechanism for "blacklisting" GPUs that
++// appears to fail on a NetBSD system where the only available OpenGL
++// implementations are all from Mesa.  WebRender was supposed to be
++// enabled by default from Firefox 91 onwards and appears to greatly
++// improve performance even with acceleration disabled at the kernel
++// level.
++pref("gfx.webrender.all", true);
 +
  // Discovery prefs
  pref("browser.discovery.enabled", true);
