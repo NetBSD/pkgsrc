@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2019/11/03 10:39:30 rillig Exp $
+# $NetBSD: options.mk,v 1.7 2022/06/05 02:39:18 mef Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.semi
 PKG_SUPPORTED_OPTIONS=		semi-bbdb
@@ -11,7 +11,7 @@ PKG_SUGGESTED_OPTIONS=
 PLIST_VARS+=	bbdb w3
 
 .if !empty(PKG_OPTIONS:Msemi-bbdb)
-.include "../../misc/bbdb/buildlink3.mk"
+.include "../../misc/bbdb2/buildlink3.mk"
 PLIST.bbdb=	yes
 .endif
 
