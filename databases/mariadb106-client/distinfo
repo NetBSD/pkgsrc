@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.6 2022/02/19 09:13:21 nia Exp $
+$NetBSD: distinfo,v 1.6.2.1 2022/06/05 10:11:03 spz Exp $
 
-BLAKE2s (mariadb-10.6.7.tar.gz) = 5d4b482e6e06b337ff8180a2fe8b94b8e9f1cc1cea6b7dfe89eaa05c56eab701
-SHA512 (mariadb-10.6.7.tar.gz) = 2d26f56ea5f39b800a6f279c8411d4091b4f4d3acbf3ea1864068328d34a1437e7c46c08d3772009357fd89602e58f214266038e177c0a4fac914a5e5d01e3e6
-Size (mariadb-10.6.7.tar.gz) = 85882896 bytes
+BLAKE2s (mariadb-10.6.8.tar.gz) = cef1165c096ddb486ac4eba76720639d66cea9c844ab5702f5a8b1a213898380
+SHA512 (mariadb-10.6.8.tar.gz) = b4327000eb3e5fc75bbd78de9890b0464217a432c8aac744948af94e092ffeef1f101885b81ec49029900a92b0018838e46efcf225056a9b06f35a04ecf26aab
+Size (mariadb-10.6.8.tar.gz) = 88794744 bytes
 SHA1 (patch-BUILD_compile-pentium32-gcov) = 89a7da728f94f19c153b4d2d2d6ba5462acc941f
-SHA1 (patch-CMakeLists.txt) = ea2f334ff1743e1676fe73e9946d0759c68e1d31
+SHA1 (patch-CMakeLists.txt) = 042d9d361a5c3ff7e7df15f5de4a30eb7984cddd
 SHA1 (patch-client_CMakeLists.txt) = 8fdd8a182304f0b84e120ce95334ace23d02ce88
 SHA1 (patch-extra_wolfssl_wolfssl_certs_intermediate_genintcerts.sh) = cd9a982889b88f811c3e14ebdf9795b0fa5d1fad
 SHA1 (patch-include_my__global.h) = a3b831f91ba2efea9f78e70ab4f706da23b80403
@@ -14,7 +14,7 @@ SHA1 (patch-scripts_mysqld__safe.sh) = 4124e4c8df1527049f5eec9f3d2d4bbe80e7c33f
 SHA1 (patch-sql_mysqld.cc) = 19d325124cde1b45376c9710cdd104dc460f4bea
 SHA1 (patch-storage_connect_ioapi.c) = 804e2d9d3722fbe4d5ed773cc98a4114fe4cf8a3
 SHA1 (patch-storage_connect_tabvct.cpp) = 2e3c7cd7e4b0a86d443da47d3cc514b8b276d836
-SHA1 (patch-storage_innobase_include_transactional__lock__guard.h) = e47938072cdbd5c21d24622d8550b2c127fbb9df
+SHA1 (patch-storage_innobase_include_transactional__lock__guard.h) = d5ff507acdd21858791246ef5a2559e653cb7833
 SHA1 (patch-storage_rocksdb_rdb__io__watchdog.cc) = 85ee5007cfda0d3070ec20b2b774738b01f8e083
 SHA1 (patch-storage_rocksdb_rdb__io__watchdog.h) = d790c092d7d35d014c5ef209635c18614c3a8301
 SHA1 (patch-storage_rocksdb_rocksdb_Makefile) = 67ea4d154f4f623fdca739f50b236c973e118a12
