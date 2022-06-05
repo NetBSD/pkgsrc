@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2022/05/14 22:25:39 dholland Exp $
+# $NetBSD: Makefile,v 1.54 2022/06/05 02:36:41 mef Exp $
 
 DISTNAME=	wl-2.14.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -48,6 +48,6 @@ post-install:
 
 .include "../../devel/apel/buildlink3.mk"
 .include "../../devel/semi/buildlink3.mk"
-.include "../../misc/bbdb/buildlink3.mk"
+.include "../../misc/bbdb2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
