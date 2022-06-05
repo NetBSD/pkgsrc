@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2021/12/10 13:29:24 nia Exp $
+@comment $NetBSD: PLIST,v 1.9.4.1 2022/06/05 10:42:39 spz Exp $
 bin/aria_chk
 bin/aria_dump_log
 bin/aria_ftdump
@@ -47,6 +47,7 @@ bin/resolve_stack_dump
 bin/resolveip
 ${PLIST.rocksdb}bin/sst_dump
 ${PLIST.embedded}bin/test-connect-t
+bin/wsrep_sst_backup
 bin/wsrep_sst_common
 bin/wsrep_sst_mariabackup
 bin/wsrep_sst_mysqldump
@@ -352,6 +353,7 @@ share/doc/mysql/README-wsrep
 share/doc/mysql/README.md
 share/doc/mysql/THIRDPARTY
 ${PLIST.auth_pam}share/examples/mariadb_auth_pam/user_map.conf
+share/mysql/bulgarian/errmsg.sys
 share/mysql/charsets/Index.xml
 share/mysql/charsets/README
 share/mysql/charsets/armscii8.xml
@@ -378,6 +380,7 @@ share/mysql/charsets/latin7.xml
 share/mysql/charsets/macce.xml
 share/mysql/charsets/macroman.xml
 share/mysql/charsets/swe7.xml
+share/mysql/chinese/errmsg.sys
 share/mysql/czech/errmsg.sys
 share/mysql/danish/errmsg.sys
 share/mysql/dutch/errmsg.sys

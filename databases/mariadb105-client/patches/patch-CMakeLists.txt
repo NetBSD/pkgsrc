@@ -1,19 +1,19 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2021/05/23 15:32:47 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.1.8.1 2022/06/05 10:42:39 spz Exp $
 
 Allow building a server-only configuration.
 
---- CMakeLists.txt.orig	2021-05-05 21:00:18.000000000 +0000
+--- CMakeLists.txt.orig	2022-05-18 07:55:26.000000000 +0000
 +++ CMakeLists.txt
-@@ -421,8 +421,6 @@ ENDIF()
+@@ -432,8 +432,6 @@ ENDIF()
  
  UNSET (MYSQLD_STATIC_PLUGIN_LIBS CACHE)
  
 -INCLUDE(mariadb_connector_c) # this does ADD_SUBDIRECTORY(libmariadb)
 -
+ INCLUDE(cpack_tgz)
  INCLUDE(cpack_rpm)
  INCLUDE(cpack_deb)
- 
-@@ -432,13 +430,11 @@ MARK_AS_ADVANCED(PYTHON_SHEBANG)
+@@ -444,13 +442,11 @@ MARK_AS_ADVANCED(PYTHON_SHEBANG)
  # Add storage engines and plugins.
  CONFIGURE_PLUGINS()
  
@@ -27,7 +27,7 @@ Allow building a server-only configuration.
  ADD_SUBDIRECTORY(extra)
  ADD_SUBDIRECTORY(libservices)
  ADD_SUBDIRECTORY(sql/share)
-@@ -461,23 +457,26 @@ IF(NOT WITHOUT_SERVER)
+@@ -476,23 +472,26 @@ IF(NOT WITHOUT_SERVER)
      ADD_SUBDIRECTORY(win/upgrade_wizard)
      ADD_SUBDIRECTORY(win/packaging)
    ENDIF()
