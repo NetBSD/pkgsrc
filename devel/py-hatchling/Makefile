@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/06/02 18:35:35 adam Exp $
+# $NetBSD: Makefile,v 1.3 2022/06/05 02:56:20 mef Exp $
 
 DISTNAME=	hatchling-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,7 @@ COMMENT=	Modern, extensible Python build backend
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-pathspec>0:../../devel/py-pathspec
+DEPENDS+=	${PYPKGPREFIX}-pluggy-[0-9]*:../../devel/py-pluggy
 
 USE_LANGUAGES=	# none
 
