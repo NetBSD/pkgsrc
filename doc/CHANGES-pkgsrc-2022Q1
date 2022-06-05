@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2022Q1,v 1.1.2.8 2022/06/04 10:32:40 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2022Q1,v 1.1.2.9 2022/06/05 15:22:50 spz Exp $
 
 Changes to packages and infrastructure on the 2022Q1 branch:
 
@@ -131,4 +131,22 @@ www/ruby-actioncable70: security update
 www/ruby-actionpack70: security update
 www/ruby-actionview70: security update
 www/ruby-rails70: security update
+
+Pullup ticket #6635 - requested by nia
+www/firefox91: security update
+
+Pullup ticket #6636 - requested by nia
+www/firefox91-l10n: dependency update
+
+Pullup ticket #6639 - requested by nia
+print/poppler: build fix
+
+Pullup ticket #6640 - requested by nia
+databases/mariadb106-client: security update
+
+Pullup ticket #6641 - requested by nia
+databases/mariadb105-client: security update
+
+Pullup ticket #6642 - requested by nia
+lang/gcc6: build fix
 
