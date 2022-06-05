@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.132 2022/03/08 10:09:22 wiz Exp $
+# $NetBSD: Makefile.common,v 1.132.2.1 2022/06/05 08:24:08 spz Exp $
 #
 # used by print/poppler/Makefile
 # used by print/poppler-cpp/Makefile
@@ -23,7 +23,18 @@ PATCHDIR=	${.CURDIR}/../../print/poppler/patches
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++17
 USE_TOOLS+=		pkg-config
-GCC_REQD+=		5
+GCC_REQD+=		7 # std::optional
+
+.include "../../mk/bsd.prefs.mk"
+
+# This package will link against libstdc++.so from the pkgsrc GCC when the
+# base OS GCC doesn't meet the minimum requirement. Thus we do this so the
+# appropriate gcc-libs package will be captured as a dependency, otherwise
+# binary packages will be broken.
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 090000
+USE_PKGSRC_GCC=		yes
+USE_PKGSRC_GCC_RUNTIME=	yes
+.endif
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
