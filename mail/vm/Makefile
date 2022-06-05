@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2022/05/14 22:25:38 dholland Exp $
+# $NetBSD: Makefile,v 1.46 2022/06/05 02:36:41 mef Exp $
 
 DISTNAME=	vm-8.2.0b
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -31,5 +31,5 @@ PIXMAPDIR.xemacs=	${EMACS_LISPPREFIX:H}/etc/vm
 
 .include "../../editors/emacs/modules.mk"
 
-.include "../../misc/bbdb/buildlink3.mk"
+.include "../../misc/bbdb2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
