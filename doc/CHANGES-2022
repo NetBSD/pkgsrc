@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2891 2022/06/05 18:39:32 gutteridge Exp $
+$NetBSD: CHANGES-2022,v 1.2892 2022/06/05 21:15:51 leot Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4384,3 +4384,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/ced to 0.1.7 [pin 2022-06-04]
 	Moved misc/bbdb to misc/bbdb2 version 2.35 [mef 2022-06-05]
 	Updated x11/xfce4-eyes-plugin to 4.6.0 [gutteridge 2022-06-05]
+	Updated devel/conftest to 0.32.1 [leot 2022-06-05]
