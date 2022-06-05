@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2022/04/14 12:40:48 nikita Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2022/06/05 02:33:28 mef Exp $
 
 .include "../../editors/emacs/modules.mk"
 .if ${EMACS_FLAVOR} == "emacs"
@@ -9,7 +9,7 @@ BUILDLINK_TREE+=	bbdb3
 BBDB3_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.bbdb3+=	${EMACS_PKGNAME_PREFIX}bbdb3>=3.2
-BUILDLINK_PKGSRCDIR.bbdb3?=	../../misc/bbdb
+BUILDLINK_PKGSRCDIR.bbdb3?=	../../misc/bbdb3
 
 BUILDLINK_CONTENTS_FILTER.bbdb3=	${EGREP} '.*\.el$$|.*\.elc$$'
 
