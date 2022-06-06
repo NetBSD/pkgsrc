@@ -7,3 +7,10 @@ Bob Supnik's historical computer simulator, including:
 
 See http://www.netbsd.org/ports/vax/emulator-howto.html on how to
 install NetBSD/vax on simh!
+
+This version will not be updated further until questions regarding the
+change of the licence in later versions have been resolved.
+
+Alternatively, you can use emulators/open-simh, which forked off this
+version in May 2020, or emulators/simh3, maintained solely by
+Bob Supnik.
