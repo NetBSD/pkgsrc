@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2022/01/01 15:21:14 wiz Exp $
+$NetBSD: distinfo,v 1.19 2022/06/06 04:27:14 dholland Exp $
 
 BLAKE2s (BLT2.4z.tar.gz) = 21ffc805b1d2d90331a5a6ca37ae63bb09b7a79104fb579196e8f000646756c4
 SHA512 (BLT2.4z.tar.gz) = 6e59cc03c92b452ec3114675124c2095ed4206e7b9750452764f2b21b8c82dfc376a376f0fbc721c5d0e4b56734866cdc653f3d9888a5b36b0a7500da5f8942a
@@ -10,7 +10,21 @@ SHA1 (patch-aa) = 6a28cc2405adcc6037865f174bb48d81909c83d6
 SHA1 (patch-ab) = da9479d5de1053c45753eef611eae2764909f0ec
 SHA1 (patch-ac) = 696f90010831522f46d67052abc0c6068197cfd9
 SHA1 (patch-ad) = cc2579223a5a8a764d797fa16a146999cd4a796d
-SHA1 (patch-ae) = 279b10615ec55c4e403b9d998b4b3904c01173c0
+SHA1 (patch-ae) = c1c2dc9f319f9e0da7af42f2b5d24639b1b5afdf
 SHA1 (patch-af) = b82641d4aad426fbe9a6781fa828d8aa81f71253
-SHA1 (patch-src_bltNsUtil.h) = 949647e6ca4a4890a51917c268289384da98b7ca
+SHA1 (patch-src_bltArrayObj.c) = 1f6d86f7be49f72b06bf053d5321608c9efa3410
+SHA1 (patch-src_bltBgexec.c) = ba01243277c4272d6a86ca2b85e167f40beb93e8
+SHA1 (patch-src_bltConfig.c) = 573942b97bbb8b607651c80e46c04314ba57c9f7
+SHA1 (patch-src_bltInit.c) = a85c7bcdb6a6eb7b5844f1770eefd10aea2d60ca
+SHA1 (patch-src_bltList.c) = e5280bdcc7b90d55923467c828d1ff3bd8669460
+SHA1 (patch-src_bltList.h) = fe0f21675b9504b16958526bb3f78d2d930501d9
+SHA1 (patch-src_bltNsUtil.h) = 31b62c5e12486195cfb2eea74bd1304acedaa342
+SHA1 (patch-src_bltObjConfig.c) = b4fabf9e9439a9f2ee24623f07e2ac72f0d0d4b2
+SHA1 (patch-src_bltScrollbar.c) = 66e2736a5dd7fc4bd7be4176f35a6a2208ace53e
+SHA1 (patch-src_bltSwitch.c) = 18962bb1dc3aa14d7c5fa773eb05908ec1638332
+SHA1 (patch-src_bltTable.c) = 7a2561eaf23378ea3aee6c6b81a1d5786f0b8659
+SHA1 (patch-src_bltTree.c) = 1402687b1496d82a6b9b6602926cb023285b9a96
+SHA1 (patch-src_bltTreeCmd.c) = 6ae6ad1f239c632d42607e7a23fb31d15281ff9a
+SHA1 (patch-src_bltUnixPipe.c) = 6311e9c17e6327b96fd3dd507f47aebe9b26dcef
+SHA1 (patch-src_bltVecObjCmd.c) = d7c63f88cba0d7dbd5691d9df5a6e2e84692f300
 SHA1 (patch-src_tkButton.c) = 39132933914ee8d52389f5be72cbc02b21e7216e
