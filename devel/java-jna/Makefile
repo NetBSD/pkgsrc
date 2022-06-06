@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/12/08 16:03:58 adam Exp $
+# $NetBSD: Makefile,v 1.10 2022/06/06 01:12:56 gutteridge Exp $
 
 DISTNAME=	jna-5.2.0
 PKGNAME=	java-${DISTNAME}
@@ -9,7 +9,7 @@ GITHUB_PROJECT=	jna
 
 MAINTAINER=	nonakap@gmail.com
 HOMEPAGE=	https://github.com/java-native-access/jna
-COMMENT=	JNA provides Java programs easy access to native shared libraries.
+COMMENT=	JNA provides Java programs easy access to native shared libraries
 LICENSE=	gnu-lgpl-v2.1 OR apache-2.0
 
 EXTRACT_USING=	bsdtar
@@ -37,11 +37,13 @@ ONLY_FOR_PLATFORM+=	FreeBSD-*-i386 FreeBSD-*-x86_64
 ONLY_FOR_PLATFORM+=	OpenBSD-*-i386 OpenBSD-*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-*-i386 NetBSD-*-x86_64
 
-USE_LANGUAGES=	c
-USE_JAVA=	yes
-USE_JAVA2=	yes
-USE_TOOLS+=	autoreconf automake autoconf ggrep gmake pkg-config pax
-USE_LIBTOOL=	yes
+USE_LANGUAGES=		c
+USE_JAVA2=		yes
+# XXX temporary build fix, revisit build with openjdk17 on next update.
+PKG_JVMS_ACCEPTED=	openjdk11 openjdk8 oracle-jdk8 adoptopenjdk11-bin \
+			openjdk-bin sun-jdk7
+USE_TOOLS+=		autoreconf automake autoconf ggrep gmake pkg-config pax
+USE_LIBTOOL=		yes
 
 OPSYSVARS+=	JNIPFX JNISFX
 JNIPFX.Cygwin=	# empty
