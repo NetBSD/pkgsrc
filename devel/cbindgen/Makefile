@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2021/08/24 16:56:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2022/06/06 20:53:06 ryoon Exp $
 
-DISTNAME=	cbindgen-0.20.0
+DISTNAME=	cbindgen-0.23.0
 CATEGORIES=	devel
 EXTRACT_SUFX=	.crate
 
