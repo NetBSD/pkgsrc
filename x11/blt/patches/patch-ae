@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.8 2022/01/01 15:21:14 wiz Exp $
+$NetBSD: patch-ae,v 1.9 2022/06/06 04:27:14 dholland Exp $
 
 --- configure.orig	2002-10-04 05:33:59.000000000 +0000
 +++ configure
@@ -13,7 +13,7 @@ $NetBSD: patch-ae,v 1.8 2022/01/01 15:21:14 wiz Exp $
      ;;
  esac
  
-@@ -4072,7 +4071,8 @@ fi
+@@ -4072,7 +4072,8 @@ fi
      EXTRA_LIB_SPECS="-ldl"
      ;;
  
@@ -23,7 +23,7 @@ $NetBSD: patch-ae,v 1.8 2022/01/01 15:21:14 wiz Exp $
      # Not available on all versions:  check for include file.
      ac_safe=`echo "dlfcn.h" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for dlfcn.h""... $ac_c" 1>&6
-@@ -4109,9 +4109,10 @@ test_ok=no
+@@ -4109,9 +4110,10 @@ test_ok=no
  fi
  
      if test "$test_ok" = yes; then
@@ -35,7 +35,7 @@ $NetBSD: patch-ae,v 1.8 2022/01/01 15:21:14 wiz Exp $
      fi
      ;;
  
-@@ -4181,9 +4182,9 @@ fi
+@@ -4181,9 +4183,9 @@ fi
    *-solaris2*)
  
      SHLIB_CFLAGS="-KPIC"
