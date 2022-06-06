@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21929 2022/06/04 19:02:42 adam Exp $
+$NetBSD: TODO,v 1.21930 2022/06/06 01:16:16 gutteridge Exp $
 
 Suggested new packages
 ======================
@@ -895,6 +895,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ja-vfxdvik-22.40y1
 	o jack-1.9.20
 	o java-db3-3.87
+	o java-jna-5.11.0
 	o jcabc2ps-20181112
 	o jchkmail-2.6.2
 	o jdbc-mysql5-5.1.36
