@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2901 2022/06/06 14:20:25 rhialto Exp $
+$NetBSD: CHANGES-2022,v 1.2902 2022/06/06 20:53:44 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4395,3 +4395,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated databases/ruby-sequel to 5.57.0 [taca 2022-06-06]
 	Added emulators/simh3 version 3.12.2 [rhialto 2022-06-06]
 	Added emulators/open-simh version 4.0.0.20220531 [rhialto 2022-06-06]
+	Updated devel/cbindgen to 0.23.0 [ryoon 2022-06-06]
