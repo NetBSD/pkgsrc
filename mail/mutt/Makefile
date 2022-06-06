@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.261 2022/05/16 22:45:29 tron Exp $
+# $NetBSD: Makefile,v 1.262 2022/06/06 20:58:33 tron Exp $
 
-DISTNAME=		mutt-2.2.5
+DISTNAME=		mutt-2.2.6
 CATEGORIES=		mail
 MASTER_SITES=		http://ftp.mutt.org/pub/mutt/
 
