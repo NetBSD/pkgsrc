@@ -1,6 +1,9 @@
-$NetBSD: patch-aj,v 1.4 2014/02/22 07:53:47 obache Exp $
+$NetBSD: patch-aj,v 1.5 2022/06/06 05:11:58 dholland Exp $
 
---- libdesk/tixImgXpm.c.orig	2014-02-22 04:59:11.000000000 +0000
+- remove panic declaration (XXX: why?)
+- update for newer tcl
+
+--- libdesk/tixImgXpm.c.orig	2022-06-06 01:40:39.166611462 +0000
 +++ libdesk/tixImgXpm.c
 @@ -58,8 +58,6 @@
  #include "tkPort.h"*/
@@ -63,3 +66,16 @@ $NetBSD: patch-aj,v 1.4 2014/02/22 07:53:47 obache Exp $
      *clientDataPtr = (ClientData) masterPtr;
      return TCL_OK;
  }
+@@ -1152,9 +1158,11 @@ ImgXpmCmd(clientData, interp, argc, argv
+     size_t length;
+ 
+     if (argc < 2) {
+-	sprintf(interp->result,
++	char buf[128];
++	snprintf(buf, sizeof(buf),
+ 	    "wrong # args: should be \"%.50s option ?arg arg ...?\"",
+ 	    argv[0]);
++	Tcl_SetResult(interp, buf, TCL_VOLATILE);
+ 	return TCL_ERROR;
+     }
+     c = argv[1][0];
