@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2022,v 1.2894 2022/06/06 05:12:27 dholland Exp $
+$NetBSD: CHANGES-2022,v 1.2895 2022/06/06 08:47:21 fcambus Exp $
 
 Changes to the packages collection and infrastructure in 2022:
 
@@ -4388,3 +4388,4 @@ Changes to the packages collection and infrastructure in 2022:
 	Updated editors/xfce4-mousepad to 0.5.9 [gutteridge 2022-06-06]
 	Updated x11/blt to 2.4znb13 [dholland 2022-06-06]
 	Updated sysutils/tkdesk to 2.0p2nb5 [dholland 2022-06-06]
+	Added net/czds version 1.0.6 [fcambus 2022-06-06]
