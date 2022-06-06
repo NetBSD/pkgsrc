@@ -1,0 +1,32 @@
+$NetBSD: patch-makefile,v 1.1 2022/06/06 14:18:05 rhialto Exp $
+
+Fix finding the png16 library.
+Avoid using /usr/local.
+
+--- makefile.orig	2022-03-19 07:49:08.000000000 +0000
++++ makefile
+@@ -459,8 +459,8 @@ ifeq (${WIN32},)  #*nix Environments (&&
+               OS_CCDEFS += -I/usr/pkg/include
+             endif
+             ifeq (/usr/local/lib,$(findstring /usr/local/lib,${LIBPATH}))
+-              INCPATH += /usr/local/include
+-              OS_CCDEFS += -I/usr/local/include
++              #INCPATH += /usr/local/include
++              #OS_CCDEFS += -I/usr/local/include
+             endif
+             ifneq (,$(findstring NetBSD,$(OSTYPE))$(findstring FreeBSD,$(OSTYPE))$(findstring AIX,$(OSTYPE)))
+               LIBEXT = so
+@@ -598,10 +598,10 @@ ifeq (${WIN32},)  #*nix Environments (&&
+     OS_CCDEFS += -DHAVE_UTIME
+   endif
+   ifneq (,$(call find_include,png))
+-    ifneq (,$(call find_lib,png))
++    ifneq (,$(call find_lib,png16))
+       OS_CCDEFS += -DHAVE_LIBPNG
+-      OS_LDFLAGS += -lpng
+-      $(info using libpng: $(call find_lib,png) $(call find_include,png))
++      OS_LDFLAGS += -lpng16
++      $(info using libpng: $(call find_lib,png16) $(call find_include,png))
+       ifneq (,$(call find_include,zlib))
+         ifneq (,$(call find_lib,z))
+           OS_CCDEFS += -DHAVE_ZLIB
